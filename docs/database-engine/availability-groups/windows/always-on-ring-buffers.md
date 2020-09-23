@@ -6,16 +6,16 @@ ms.date: 06/13/2017
 ms.prod: sql
 ms.reviewer: ''
 ms.technology: high-availability
-ms.topic: conceptual
+ms.topic: how-to
 ms.assetid: 47bb7a1a-c0a5-473c-a7db-d9f4bf3ee650
 author: rothja
 ms.author: jroth
-ms.openlocfilehash: ed2db8f5d02174b41d6084d3d7593c7c8775ad16
-ms.sourcegitcommit: f7ac1976d4bfa224332edd9ef2f4377a4d55a2c9
+ms.openlocfilehash: 88f3d5cfb5fd7d7aae2b3d20c57bf2d1f7163c77
+ms.sourcegitcommit: cc23d8646041336d119b74bf239a6ac305ff3d31
 ms.translationtype: HT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 07/02/2020
-ms.locfileid: "85897493"
+ms.lasthandoff: 09/23/2020
+ms.locfileid: "91115769"
 ---
 # <a name="use-ring-buffers-to-obtain-health-information-about-always-on-availability-groups"></a>링 버퍼를 사용하여 Always On 가용성 그룹에 대한 상태 정보 얻기
 [!INCLUDE [SQL Server](../../../includes/applies-to-version/sqlserver.md)]

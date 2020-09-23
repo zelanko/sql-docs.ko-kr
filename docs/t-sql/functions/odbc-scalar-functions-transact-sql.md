@@ -53,19 +53,19 @@ ms.assetid: a0df1ac2-6699-4ac0-8f79-f362f23496f1
 author: julieMSFT
 ms.author: jrasnick
 monikerRange: '>=aps-pdw-2016||=azuresqldb-current||=azure-sqldw-latest||>=sql-server-2016||=sqlallproducts-allversions||>=sql-server-linux-2017||=azuresqldb-mi-current'
-ms.openlocfilehash: 4ce160465056b18c7f6f347b0587603dd489fa06
-ms.sourcegitcommit: e700497f962e4c2274df16d9e651059b42ff1a10
+ms.openlocfilehash: e6cc9b1df996d063a79f19982185950e52c4b059
+ms.sourcegitcommit: cc23d8646041336d119b74bf239a6ac305ff3d31
 ms.translationtype: HT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 08/17/2020
-ms.locfileid: "88445696"
+ms.lasthandoff: 09/23/2020
+ms.locfileid: "91116620"
 ---
 # <a name="odbc-scalar-functions-transact-sql"></a>ODBC 스칼라 함수(Transact-SQL)
 [!INCLUDE [sql-asdb-asdbmi-asa-pdw](../../includes/applies-to-version/sql-asdb-asdbmi-asa-pdw.md)]
 
   [ 문에서 ](https://go.microsoft.com/fwlink/?LinkID=88579)ODBC 스칼라 함수[!INCLUDE[tsql](../../includes/tsql-md.md)]를 사용할 수 있습니다. 이러한 문은 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]에서 해석되고, 저장 프로시저 및 사용자 정의 함수에 사용될 수 있습니다. 여기에는 문자열, 숫자, 시간, 날짜, 간격, 시스템 함수가 포함됩니다.  
   
-## <a name="usage"></a>사용량  
+## <a name="usage"></a>사용  
  `SELECT {fn <function_name> [ (<argument>,....n) ] }`  
   
 ## <a name="functions"></a>Functions  
@@ -108,7 +108,7 @@ ms.locfileid: "88445696"
 ### <a name="a-using-an-odbc-function-in-a-stored-procedure"></a>A. 저장 프로시저에서 ODBC 함수 사용  
  다음 예에서는 저장 프로시저에 ODBC 함수를 사용합니다.  
   
-```  
+```sql  
 CREATE PROCEDURE dbo.ODBCprocedure  
 (  
     @string_exp NVARCHAR(4000)  
@@ -120,7 +120,7 @@ SELECT {fn OCTET_LENGTH( @string_exp )};
 ### <a name="b-using-an-odbc-function-in-a-user-defined-function"></a>B. 사용자 정의 함수에서 ODBC 함수 사용  
  다음 예에서는 사용자 정의 함수에 ODBC 함수를 사용합니다.  
   
-```  
+```sql  
 CREATE FUNCTION dbo.ODBCudf  
 (  
     @string_exp NVARCHAR(4000)  
@@ -141,8 +141,8 @@ SELECT dbo.ODBCudf('Returns the length.');
 ### <a name="c-using-an-odbc-functions-in-select-statements"></a>C. SELECT 문에서 ODBC 함수 사용  
  다음 SELECT 문에서는 ODBC 함수를 사용합니다.  
   
-```  
-DECLARE @string_exp nvarchar(4000) = 'Returns the length.';  
+```sql 
+DECLARE @string_exp NVARCHAR(4000) = 'Returns the length.';  
 SELECT {fn BIT_LENGTH( @string_exp )};  
 -- Returns 304  
 SELECT {fn OCTET_LENGTH( @string_exp )};  
@@ -183,7 +183,7 @@ SELECT {fn WEEK( @date_exp )};
 ### <a name="d-using-an-odbc-function-in-a-stored-procedure"></a>D. 저장 프로시저에서 ODBC 함수 사용  
  다음 예에서는 저장 프로시저에 ODBC 함수를 사용합니다.  
   
-```  
+```sql  
 CREATE PROCEDURE dbo.ODBCprocedure  
 (  
     @string_exp NVARCHAR(4000)  
@@ -195,7 +195,7 @@ SELECT {fn BIT_LENGTH( @string_exp )};
 ### <a name="e-using-an-odbc-function-in-a-user-defined-function"></a>E. 사용자 정의 함수에서 ODBC 함수 사용  
  다음 예에서는 사용자 정의 함수에 ODBC 함수를 사용합니다.  
   
-```  
+```sql  
 CREATE FUNCTION dbo.ODBCudf  
 (  
     @string_exp NVARCHAR(4000)  
@@ -210,13 +210,12 @@ END ;
   
 SELECT dbo.ODBCudf('Returns the length in bits.');  
 --Returns 432  
-  
 ```  
   
 ### <a name="f-using-an-odbc-functions-in-select-statements"></a>F. SELECT 문에서 ODBC 함수 사용  
  다음 SELECT 문에서는 ODBC 함수를 사용합니다.  
   
-```  
+```sql  
 DECLARE @string_exp NVARCHAR(4000) = 'Returns the length.';  
 SELECT {fn BIT_LENGTH( @string_exp )};  
 -- Returns 304  

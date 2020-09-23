@@ -22,12 +22,12 @@ ms.assetid: e2ea7a6d-3e2f-472c-afbc-437d3b835c03
 author: markingmyname
 ms.author: maghan
 monikerRange: '>=aps-pdw-2016||=azuresqldb-current||=azure-sqldw-latest||>=sql-server-2016||=sqlallproducts-allversions||>=sql-server-linux-2017||=azuresqldb-mi-current'
-ms.openlocfilehash: e0dfabccec3d2d5e914a31c4464ff71c1136b685
-ms.sourcegitcommit: e700497f962e4c2274df16d9e651059b42ff1a10
+ms.openlocfilehash: bb8aca979735819200d8b03c2c2f77a30f2c8398
+ms.sourcegitcommit: cc23d8646041336d119b74bf239a6ac305ff3d31
 ms.translationtype: HT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 08/17/2020
-ms.locfileid: "88417579"
+ms.lasthandoff: 09/23/2020
+ms.locfileid: "91115610"
 ---
 # <a name="abs-transact-sql"></a>ABS(Transact-SQL)
 [!INCLUDE [sql-asdb-asdbmi-asa-pdw](../../includes/applies-to-version/sql-asdb-asdbmi-asa-pdw.md)]
@@ -60,7 +60,7 @@ SELECT ABS(-1.0), ABS(0.0), ABS(1.0);
   
 [!INCLUDE[ssResult](../../includes/ssresult-md.md)]
   
-```sql
+```
 ---- ---- ----  
 1.0  .0   1.0  
 ```  
@@ -68,7 +68,7 @@ SELECT ABS(-1.0), ABS(0.0), ABS(1.0);
 `ABS` 함수가 수의 절대값이 지정된 데이터 형식으로 나타낼 수 있는 최대 수를 초과하면 오버플로 오류가 발생할 수 있습니다. 예를 들어 `int` 데이터 형식은 `-2,147,483,648`에서 `2,147,483,647`의 값 범위를 갖습니다. 부호 있는 정수 `-2,147,483,648`에 대한 절대값을 계산하면 이 절대값이 `int` 데이터 형식의 양수 범위 제한을 초과하기 때문에 오버플로 오류가 발생합니다.
   
 ```sql
-DECLARE @i int;  
+DECLARE @i INT;  
 SET @i = -2147483648;  
 SELECT ABS(@i);  
 GO  

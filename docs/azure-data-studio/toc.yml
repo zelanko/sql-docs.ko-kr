@@ -35,11 +35,11 @@
     - name: 확장
       items:
         - name: 확장 개요
-          href: extensions.md
+          href: extensions/add-extensions.md
         - name: Azure Arc 확장
           href: extensions/azure-arc-extension.md
         - name: 데이터 가상화 확장
-          href: data-virtualization-extension.md
+          href: extensions/data-virtualization-extension.md
         - name: Kusto 확장
           href: extensions/kusto-extension.md
         - name: Machine Learning 확장
@@ -55,39 +55,39 @@
         - name: Managed Instance 확장
           href: extensions/azure-sql-managed-instance-extension.md
         - name: PostgreSQL 확장
-          href: postgres-extension.md
+          href: extensions/postgres-extension.md
         - name: PowerShell 확장
-          href: powershell-extension.md
+          href: extensions/powershell-extension.md
         - name: SandDance 확장
           href: sanddance-extension.md
         - name: 스키마 비교 확장
-          href: schema-compare-extension.md
+          href: extensions/schema-compare-extension.md
         - name: SQL Database Projects 확장
           items:
             - name: SQL Database Projects 확장 개요
-              href: sql-database-project-extension.md
+              href: extensions/sql-database-project-extension.md
             - name: SQL Database Projects 확장 시작
-              href: sql-database-project-extension-getting-started.md
+              href: extensions/sql-database-project-extension-getting-started.md
             - name: 프로젝트 빌드 및 게시
-              href: sql-database-project-extension-build.md
+              href: extensions/sql-database-project-extension-build.md
             - name: 명령줄에서 프로젝트 빌드
-              href: sql-database-project-extension-build-from-command-line.md
+              href: extensions/sql-database-project-extension-build-from-command-line.md
         - name: SQL Server 에이전트
-          href: sql-server-agent-extension.md
+          href: extensions/sql-server-agent-extension.md
         - name: SQL Server 중앙 관리 서버 확장
-          href: sql-server-cms-extension.md
+          href: extensions/sql-server-cms-extension.md
         - name: SQL Server dacpac 확장
-          href: sql-server-dacpac-extension.md
+          href: extensions/sql-server-dacpac-extension.md
         - name: SQL Server 가져오기
-          href: sql-server-import-extension.md
+          href: extensions/sql-server-import-extension.md
         - name: SQL Server Profiler
-          href: sql-server-profiler-extension.md
+          href: extensions/sql-server-profiler-extension.md
     - name: 확장 작성
       items:
         - name: 확장성 개요
           href: extensibility.md
         - name: 확장 작성
-          href: extension-authoring.md
+          href: extensions/extension-authoring.md
         - name: 확장성 API
           href: extensibility-apis.md
         - name: 키맵 확장

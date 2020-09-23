@@ -22,12 +22,12 @@ ms.assetid: da983c0a-06c5-4cf8-a6a4-7f9d66f34f2c
 author: VanMSFT
 ms.author: vanto
 monikerRange: '>=aps-pdw-2016||=azuresqldb-current||=azure-sqldw-latest||>=sql-server-2016||=sqlallproducts-allversions||>=sql-server-linux-2017||=azuresqldb-mi-current'
-ms.openlocfilehash: 7dbaf282383bfeb83efc1b7ccf6f74ad90ed1764
-ms.sourcegitcommit: e700497f962e4c2274df16d9e651059b42ff1a10
+ms.openlocfilehash: 121f3d656a0d40bf97fbf01a47b92e47be9c6adb
+ms.sourcegitcommit: cc23d8646041336d119b74bf239a6ac305ff3d31
 ms.translationtype: HT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 08/17/2020
-ms.locfileid: "88445312"
+ms.lasthandoff: 09/23/2020
+ms.locfileid: "91116641"
 ---
 # <a name="top-transact-sql"></a>TOP(Transact-SQL)
 [!INCLUDE [sql-asdb-asdbmi-asa-pdw](../../includes/applies-to-version/sql-asdb-asdbmi-asa-pdw.md)]
@@ -40,7 +40,7 @@ ms.locfileid: "88445312"
  
  SQL Server 및 Azure SQL Database에 대한 구문은 다음과 같습니다.
 
-```sql  
+```syntaxsql  
 [   
     TOP (expression) [PERCENT]  
     [ WITH TIES ]  
@@ -49,7 +49,7 @@ ms.locfileid: "88445312"
 
 Azure SQL Data Warehouse 및 병렬 데이터 웨어하우스에 대한 구문은 다음과 같습니다.
 
-```sql  
+```syntaxsql  
 [   
     TOP ( expression )   
     [ WITH TIES ]  
@@ -92,7 +92,7 @@ MERGE 문에 지정되는 경우 TOP 절은 전체 원본 테이블과 전체 �
 UNION, UNION ALL, EXCEPT 또는 INTERSECT 연산자가 포함된 쿼리에서 TOP 절을 지정할 때는 주의해야 합니다. 이러한 연산자가 SELECT 작업에 사용된 경우에는 TOP 및 ORDER BY 절이 논리적으로 처리되는 순서가 직관적이지 않을 수 있으므로 예기치 않은 결과를 반환하는 쿼리가 작성될 수 있습니다. 예를 들어 다음 테이블 및 데이터에서 가장 저렴한 빨간색 차와 가장 저렴한 파란색 차, 즉 red sedan과 blue van을 반환하려는 경우를 가정해 봅니다.  
   
 ```sql  
-CREATE TABLE dbo.Cars(Model varchar(15), Price money, Color varchar(10));  
+CREATE TABLE dbo.Cars(Model VARCHAR(15), Price MONEY, Color VARCHAR(10));  
 INSERT dbo.Cars VALUES  
     ('sedan', 10000, 'red'), ('convertible', 15000, 'blue'),   
     ('coupe', 20000, 'red'), ('van', 8000, 'blue');  
@@ -190,7 +190,7 @@ GO
 ```sql  
 USE AdventureWorks2012;  
 GO  
-DECLARE @p AS int = 10;  
+DECLARE @p AS INT = 10;  
 SELECT TOP(@p)JobTitle, HireDate, VacationHours  
 FROM HumanResources.Employee  
 ORDER BY VacationHours DESC;  
@@ -265,10 +265,10 @@ IF OBJECT_ID ('dbo.EmployeeSales', 'U') IS NOT NULL
     DROP TABLE dbo.EmployeeSales;  
 GO  
 CREATE TABLE dbo.EmployeeSales  
-( EmployeeID   nvarchar(11) NOT NULL,  
-  LastName     nvarchar(20) NOT NULL,  
-  FirstName    nvarchar(20) NOT NULL,  
-  YearlySales  money NOT NULL  
+( EmployeeID   NVARCHAR(11) NOT NULL,  
+  LastName     NVARCHAR(20) NOT NULL,  
+  FirstName    NVARCHAR(20) NOT NULL,  
+  YearlySales  MONEY NOT NULL  
  );  
 GO  
 INSERT TOP(5)INTO dbo.EmployeeSales  

@@ -21,12 +21,12 @@ helpviewer_keywords:
 ms.assetid: 2ac837c7-eca9-4d29-b06e-72e30450c68d
 author: VanMSFT
 ms.author: vanto
-ms.openlocfilehash: 82855e167f44106078e7e2e3589f349eb307e503
-ms.sourcegitcommit: e700497f962e4c2274df16d9e651059b42ff1a10
+ms.openlocfilehash: 239a48b378e186e6149a31012785835939d2cde7
+ms.sourcegitcommit: cc23d8646041336d119b74bf239a6ac305ff3d31
 ms.translationtype: HT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 08/17/2020
-ms.locfileid: "88417239"
+ms.lasthandoff: 09/23/2020
+ms.locfileid: "91115954"
 ---
 # <a name="object_definition-transact-sql"></a>OBJECT_DEFINITION(Transact-SQL)
 [!INCLUDE [SQL Server SQL Database](../../includes/applies-to-version/sql-asdb.md)]
@@ -37,8 +37,7 @@ ms.locfileid: "88417239"
   
 ## <a name="syntax"></a>구문  
   
-```  
-  
+```syntaxsql
 OBJECT_DEFINITION ( object_id )  
 ```  
   
@@ -89,7 +88,7 @@ OBJECT_DEFINITION ( object_id )
 ### <a name="a-returning-the-source-text-of-a-user-defined-object"></a>A. 사용자 정의 개체의 원본 텍스트 반환  
  다음 예에서는 `uAddress` 스키마의 사용자 정의 트리거인 `Person`에 대한 정의를 반환합니다. 기본 제공 함수 `OBJECT_ID`는 트리거의 개체 ID를 `OBJECT_DEFINITION` 문에 반환하는 데 사용됩니다.  
   
-```  
+```sql  
 USE AdventureWorks2012;  
 GO  
 SELECT OBJECT_DEFINITION (OBJECT_ID(N'Person.uAddress')) AS [Trigger Definition];   
@@ -99,7 +98,7 @@ GO
 ### <a name="b-returning-the-source-text-of-a-system-object"></a>B. 시스템 개체의 원본 텍스트 반환  
  다음 예에서는 시스템 저장 프로시저 `sys.sp_columns`의 정의를 반환합니다.  
   
-```  
+```sql  
 USE AdventureWorks2012;  
 GO  
 SELECT OBJECT_DEFINITION (OBJECT_ID(N'sys.sp_columns')) AS [Object Definition];  

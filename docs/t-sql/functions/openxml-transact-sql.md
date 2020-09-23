@@ -20,12 +20,12 @@ helpviewer_keywords:
 ms.assetid: 8088b114-7d01-435a-8e0d-b81abacc86d6
 author: julieMSFT
 ms.author: jrasnick
-ms.openlocfilehash: f081b224d80537943946b5d4e31eff43bbf88de1
-ms.sourcegitcommit: e700497f962e4c2274df16d9e651059b42ff1a10
+ms.openlocfilehash: ee78ea030b50ee6ab90c5df616f2bd49f163ded2
+ms.sourcegitcommit: cc23d8646041336d119b74bf239a6ac305ff3d31
 ms.translationtype: HT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 08/17/2020
-ms.locfileid: "88363639"
+ms.lasthandoff: 09/23/2020
+ms.locfileid: "91115891"
 ---
 # <a name="openxml-transact-sql"></a>OPENXML(Transact-SQL)
 [!INCLUDE [SQL Server SQL Database](../../includes/applies-to-version/sql-asdb.md)]
@@ -36,8 +36,7 @@ ms.locfileid: "88363639"
   
 ## <a name="syntax"></a>구문  
   
-```  
-  
+```syntaxsql
 OPENXML( idoc int [ in] , rowpattern nvarchar [ in ] , [ flags byte [ in ] ] )   
 [ WITH ( SchemaDeclaration | TableName ) ]  
 ```  
@@ -111,8 +110,8 @@ OPENXML( idoc int [ in] , rowpattern nvarchar [ in ] , [ flags byte [ in ] ] )
   
  `OPENXML` 행 집합 공급자는 `CustomerID` 문이 필수 열(이 경우에는 모든 열)을 검색하는 두 열(`ContactName`와 `SELECT`)로 된 행 집합을 만듭니다.  
   
-```  
-DECLARE @idoc int, @doc varchar(1000);  
+```sql  
+DECLARE @idoc INT, @doc VARCHAR(1000);  
 SET @doc ='  
 <ROOT>  
 <Customer CustomerID="VINET" ContactName="Paul Henriot">  
@@ -132,9 +131,8 @@ EXEC sp_xml_preparedocument @idoc OUTPUT, @doc;
 -- Execute a SELECT statement that uses the OPENXML rowset provider.  
 SELECT    *  
 FROM       OPENXML (@idoc, '/ROOT/Customer',1)  
-            WITH (CustomerID  varchar(10),  
-                  ContactName varchar(20));  
-  
+            WITH (CustomerID  VARCHAR(10),  
+                  ContactName VARCHAR(20));  
 ```  
   
  [!INCLUDE[ssResult](../../includes/ssresult-md.md)]  
@@ -168,8 +166,8 @@ NULL       NULL
   
  **요소 중심** 매핑이 *flags* 매개 변수에 지정되더라도 *ColPattern*에 지정된 매핑이 이 매핑을 덮어씁니다.  
   
-```  
-DECLARE @idoc int, @doc varchar(1000);   
+```sql  
+DECLARE @idoc INT, @doc VARCHAR(1000);   
 SET @doc ='  
 <ROOT>  
 <Customer CustomerID="VINET" ContactName="Paul Henriot">  
@@ -218,8 +216,8 @@ OrderID CustomerID           OrderDate                 ProdID    Qty
   
  마지막으로 `SELECT` 문은 **edge** 테이블의 모든 열을 검색합니다.  
   
-```  
-DECLARE @idoc int, @doc varchar(1000);   
+```sql  
+DECLARE @idoc INT, @doc VARCHAR(1000);   
 SET @doc ='  
 <ROOT>  
 <Customers CustomerID="VINET" ContactName="Paul Henriot">  
@@ -243,8 +241,7 @@ EXEC sp_xml_preparedocument @idoc OUTPUT, @doc;
 -- SELECT statement that uses the OPENXML rowset provider.  
 SELECT    *  
 FROM       OPENXML (@idoc, '/ROOT/Customers')   
-EXEC sp_xml_removedocument @idoc;  
-  
+EXEC sp_xml_removedocument @idoc;   
 ```  
   
 ## <a name="see-also"></a>관련 항목  

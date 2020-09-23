@@ -20,12 +20,12 @@ helpviewer_keywords:
 ms.assetid: ab66441f-e2d2-4e3a-bcae-bcc09e12f3c1
 author: VanMSFT
 ms.author: vanto
-ms.openlocfilehash: 6368b5a1e030a8abd5bc1512a653d5f05631ccda
-ms.sourcegitcommit: e700497f962e4c2274df16d9e651059b42ff1a10
+ms.openlocfilehash: cbfb3932f86f7fc120ed9d2c2693848e769d2aa3
+ms.sourcegitcommit: cc23d8646041336d119b74bf239a6ac305ff3d31
 ms.translationtype: HT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 08/17/2020
-ms.locfileid: "88459751"
+ms.lasthandoff: 09/23/2020
+ms.locfileid: "91116074"
 ---
 # <a name="encryptbycert-transact-sql"></a>ENCRYPTBYCERT(Transact-SQL)
 [!INCLUDE [SQL Server SQL Database](../../includes/applies-to-version/sql-asdb.md)]
@@ -37,7 +37,6 @@ ms.locfileid: "88459751"
 ## <a name="syntax"></a>구문  
   
 ```syntaxsql
-  
 EncryptByCert ( certificate_ID , { 'cleartext' | @cleartext } )  
 ```  
   
@@ -69,7 +68,7 @@ _일반 텍스트(cleartext)_
 ## <a name="examples"></a>예  
 다음 예에서는 `@cleartext`에 저장된 일반 텍스트를 `JanainaCert02`라는 인증서로 암호화합니다. 암호화된 데이터는 `ProtectedData04` 테이블에 삽입됩니다.  
   
-```  
+```sql  
 INSERT INTO [AdventureWorks2012].[ProtectedData04]   
     VALUES ( N'Data encrypted by certificate ''Shipping04''',  
     EncryptByCert(Cert_ID('JanainaCert02'), @cleartext) );  

@@ -20,12 +20,12 @@ helpviewer_keywords:
 ms.assetid: 912e4485-683c-41c2-97b3-8831c0289ee4
 author: VanMSFT
 ms.author: vanto
-ms.openlocfilehash: d4c3f909144846292acf1247411582e7d9d638bf
-ms.sourcegitcommit: e700497f962e4c2274df16d9e651059b42ff1a10
+ms.openlocfilehash: eff66d795dce39c21ee6a4354e8f34a62ed15d6c
+ms.sourcegitcommit: cc23d8646041336d119b74bf239a6ac305ff3d31
 ms.translationtype: HT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 08/17/2020
-ms.locfileid: "88365389"
+ms.lasthandoff: 09/23/2020
+ms.locfileid: "91115480"
 ---
 # <a name="x40x40identity-transact-sql"></a>&#x40;&#x40;IDENTITY (Transact-SQL)
 [!INCLUDE [SQL Server SQL Database](../../includes/applies-to-version/sql-asdb.md)]
@@ -36,7 +36,7 @@ ms.locfileid: "88365389"
   
 ## <a name="syntax"></a>구문  
   
-```  
+```syntaxsql  
 @@IDENTITY  
 ```  
   
@@ -66,7 +66,7 @@ ms.locfileid: "88365389"
 ## <a name="examples"></a>예제  
  다음 예에서는 ID 열(`LocationID`)이 있는 테이블에 행을 삽입하고 `@@IDENTITY`를 사용하여 새 행에 사용된 ID 값을 표시합니다.  
   
-```  
+```sql  
 USE AdventureWorks2012;  
 GO  
 --Display the value of LocationID in the last row in the table.  

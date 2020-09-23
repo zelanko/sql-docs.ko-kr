@@ -23,12 +23,12 @@ helpviewer_keywords:
 ms.assetid: eaf8cc82-1047-4144-9e77-0e1095df6143
 author: VanMSFT
 ms.author: vanto
-ms.openlocfilehash: e2fa743ae09dc8a09a8edbc8e4a6e3b5cf8415db
-ms.sourcegitcommit: e700497f962e4c2274df16d9e651059b42ff1a10
+ms.openlocfilehash: c2240ad1cbc9bb8c9fd252eefd6633e81e4ab2f8
+ms.sourcegitcommit: cc23d8646041336d119b74bf239a6ac305ff3d31
 ms.translationtype: HT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 08/17/2020
-ms.locfileid: "88417349"
+ms.lasthandoff: 09/23/2020
+ms.locfileid: "91115230"
 ---
 # <a name="has_perms_by_name-transact-sql"></a>HAS_PERMS_BY_NAME(Transact-SQL)
 [!INCLUDE [SQL Server SQL Database](../../includes/applies-to-version/sql-asdb.md)]
@@ -40,7 +40,6 @@ ms.locfileid: "88417349"
 ## <a name="syntax"></a>구문  
   
 ```syntaxsql
-  
 HAS_PERMS_BY_NAME ( securable , securable_class , permission    
     [ , sub-securable ] [ , sub-securable_class ] )  
 ```  
@@ -110,7 +109,7 @@ SELECT class_desc FROM sys.fn_builtin_permissions(default);
   
 **적용 대상**: [!INCLUDE[ssKatmai](../../includes/sskatmai-md.md)] 이상
   
-```  
+```sql  
 SELECT HAS_PERMS_BY_NAME(null, null, 'VIEW SERVER STATE');  
 ```  
   
@@ -118,20 +117,20 @@ SELECT HAS_PERMS_BY_NAME(null, null, 'VIEW SERVER STATE');
   
 **적용 대상**: [!INCLUDE[ssKatmai](../../includes/sskatmai-md.md)] 이상
   
-```  
+```sql  
 SELECT HAS_PERMS_BY_NAME('Ps', 'LOGIN', 'IMPERSONATE');  
 ```  
   
 ### <a name="c-do-i-have-any-permissions-in-the-current-database"></a>C. 현재 데이터베이스에서 사용 권한이 있는지 확인  
   
-```  
+```sql  
 SELECT HAS_PERMS_BY_NAME(db_name(), 'DATABASE', 'ANY');  
 ```  
   
 ### <a name="d-does-database-principal-pd-have-any-permission-in-the-current-database"></a>D. 현재 데이터베이스에서 Pd 데이터베이스 보안 주체에 부여된 사용 권한 확인  
  `Pd` 보안 주체에 대한 IMPERSONATE 권한이 호출자에게 있다고 가정합니다.  
   
-```  
+```sql  
 EXECUTE AS user = 'Pd'  
 GO  
 SELECT HAS_PERMS_BY_NAME(db_name(), 'DATABASE', 'ANY');  
@@ -143,7 +142,7 @@ GO
 ### <a name="e-can-i-create-procedures-and-tables-in-schema-s"></a>E. S 스키마에서 프로시저와 테이블을 만들 수 있는지 확인  
  다음 예에는 `ALTER`에 대한 `S` 권한과 데이터베이스에 대한 `CREATE PROCEDURE` 권한이 필요합니다. 테이블의 경우에도 비슷합니다.  
   
-```  
+```sql  
 SELECT HAS_PERMS_BY_NAME(db_name(), 'DATABASE', 'CREATE PROCEDURE')  
     & HAS_PERMS_BY_NAME('S', 'SCHEMA', 'ALTER') AS _can_create_procs,  
     HAS_PERMS_BY_NAME(db_name(), 'DATABASE', 'CREATE TABLE') &  
@@ -152,7 +151,7 @@ SELECT HAS_PERMS_BY_NAME(db_name(), 'DATABASE', 'CREATE PROCEDURE')
   
 ### <a name="f-which-tables-do-i-have-select-permission-on"></a>F. 어떤 테이블에 대해 SELECT 권한이 있는지 확인  
   
-```  
+```sql  
 SELECT HAS_PERMS_BY_NAME  
 (QUOTENAME(SCHEMA_NAME(schema_id)) + '.' + QUOTENAME(name),   
     'OBJECT', 'SELECT') AS have_select, * FROM sys.tables  
@@ -161,20 +160,20 @@ SELECT HAS_PERMS_BY_NAME
 ### <a name="g-do-i-have-insert-permission-on-the-salesperson-table-in-adventureworks2012"></a>G. AdventureWorks2012의 SalesPerson 테이블에 대한 INSERT 권한이 있는지 확인  
  다음 예에서는 `AdventureWorks2012`가 현재 데이터베이스 컨텍스트이고 두 부분으로 된 이름을 사용한다고 가정합니다.  
   
-```  
+```sql  
 SELECT HAS_PERMS_BY_NAME('Sales.SalesPerson', 'OBJECT', 'INSERT');  
 ```  
   
  다음 예에서는 현재 데이터베이스 컨텍스트에 대한 가정을 하지 않고 세 부분으로 된 이름을 사용합니다.  
   
-```  
+```sql  
 SELECT HAS_PERMS_BY_NAME('AdventureWorks2012.Sales.SalesPerson',   
     'OBJECT', 'INSERT');  
 ```  
   
 ### <a name="h-which-columns-of-table-t-do-i-have-select-permission-on"></a>H. T 테이블의 어떤 열에 대해 SELECT 권한이 있는지 확인  
   
-```  
+```sql  
 SELECT name AS column_name,   
     HAS_PERMS_BY_NAME('T', 'OBJECT', 'SELECT', name, 'COLUMN')   
     AS can_select   

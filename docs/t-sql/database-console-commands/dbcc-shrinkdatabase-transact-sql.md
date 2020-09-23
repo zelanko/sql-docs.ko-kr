@@ -29,12 +29,12 @@ ms.assetid: fc976afd-1edb-4341-bf41-c4a42a69772b
 author: pmasl
 ms.author: umajay
 monikerRange: = azuresqldb-current ||>= sql-server-2016 ||>= sql-server-linux-2017||=azure-sqldw-latest||= sqlallproducts-allversions
-ms.openlocfilehash: 57cab52a5edfde4e7469243d7d57ede2e22c0161
-ms.sourcegitcommit: 1126792200d3b26ad4c29be1f561cf36f2e82e13
+ms.openlocfilehash: 82a558d445d93e007b9402425426815922c7043b
+ms.sourcegitcommit: cc23d8646041336d119b74bf239a6ac305ff3d31
 ms.translationtype: HT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 09/14/2020
-ms.locfileid: "90076618"
+ms.lasthandoff: 09/23/2020
+ms.locfileid: "91115590"
 ---
 # <a name="dbcc-shrinkdatabase-transact-sql"></a>DBCC SHRINKDATABASE(Transact-SQL)
 [!INCLUDE [sql-asdb-asa.md](../../includes/applies-to-version/sql-asdb-asa.md)]
@@ -152,7 +152,7 @@ DBCC SHRINKDATABASE는 즉시 각 물리적 로그 파일을 대상 크기로 �
 ## <a name="troubleshooting"></a>문제 해결  
 [행 버전 관리 기반 격리 수준](../../t-sql/statements/set-transaction-isolation-level-transact-sql.md)에서 실행 중인 트랜잭션에 의해 축소 작업이 차단될 수 있습니다. 예를 들어 DBCC SHRINK DATABASE 작업을 실행할 때 행 버전 관리 기반 격리 수준에서 실행되는 대규모 삭제 작업이 진행 중입니다. 이 상황이 발생하면 축소 작업은 삭제 작업이 완료될 때까지 기다렸다가 파일을 축소합니다. 축소 작업이 대기할 때 DBCC SHRINKFILE 및 DBCC SHRINKDATABASE 작업은 정보 메시지(SHRINKDATABASE의 경우 5202, SHRINKFILE의 경우 5203)를 인쇄합니다. 이 메시지는 처음 시간에는 5분마다, 그리고 다가오는 시간마다 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 오류 로그에 인쇄됩니다. 예를 들어 오류 로그에 다음과 같은 오류 메시지가 있습니다.  
   
-```sql
+```
 DBCC SHRINKDATABASE for database ID 9 is waiting for the snapshot   
 transaction with timestamp 15 and other snapshot transactions linked to   
 timestamp 15 or with timestamps older than 109 to finish.  
@@ -186,7 +186,7 @@ DBCC SHRINKDATABASE (AdventureWorks2012, TRUNCATEONLY);
 ```  
 ### <a name="c-shrinking-an-azure-synapse-analytics-database"></a>C. Azure Synapse Analytics 데이터베이스 축소
 
-```
+```sql
 DBCC SHRINKDATABASE (database_A);
 DBCC SHRINKDATABASE (database_B, 10); 
 

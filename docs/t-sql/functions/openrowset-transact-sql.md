@@ -26,12 +26,12 @@ ms.assetid: f47eda43-33aa-454d-840a-bb15a031ca17
 author: julieMSFT
 ms.author: jrasnick
 monikerRange: =azuresqldb-mi-current||>=sql-server-2016||=sqlallproducts-allversions||>=sql-server-linux-2017
-ms.openlocfilehash: ea89fc76512a848dd0a2cd3cbfbc01c69c37d3c9
-ms.sourcegitcommit: e700497f962e4c2274df16d9e651059b42ff1a10
+ms.openlocfilehash: 0c60e9fb687ffc4cc17626b75462c29a91cdb075
+ms.sourcegitcommit: cc23d8646041336d119b74bf239a6ac305ff3d31
 ms.translationtype: HT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 08/17/2020
-ms.locfileid: "88459664"
+ms.lasthandoff: 09/23/2020
+ms.locfileid: "91115944"
 ---
 # <a name="openrowset-transact-sql"></a>OPENROWSET(Transact-SQL)
 
@@ -390,8 +390,8 @@ FROM Northwind.dbo.Customers AS c
  다음 예에서는 데모용으로 작은 테이블을 만들고 `Text1.txt` 루트 디렉터리에 있는 `C:`라는 파일의 파일 데이터를 `varbinary(max)` 열에 삽입합니다.
 
 ```sql
-CREATE TABLE myTable(FileName nvarchar(60),
-  FileType nvarchar(60), Document varbinary(max));
+CREATE TABLE myTable(FileName NVARCHAR(60),
+  FileType NVARCHAR(60), Document VARBINARY(max));
 GO
 
 INSERT INTO myTable(FileName, FileType, Document)
@@ -410,7 +410,7 @@ GO
 
 다음 예에서는 서식 파일을 사용하여 다음 데이터가 들어 있는 탭으로 분리된 텍스트 파일인 `values.txt`에서 행을 검색합니다.
 
-```sql
+```
 1     Data Item 1
 2     Data Item 2
 3     Data Item 3
@@ -418,7 +418,7 @@ GO
 
 서식 파일인 `values.fmt`는 `values.txt`의 열을 설명합니다.
 
-```sql
+```
 9.0
 2  
 1  SQLCHAR  0  10 "\t"        1  ID                      SQL_Latin1_General_Cp437_BIN
@@ -469,8 +469,8 @@ SELECT * FROM OPENROWSET(
 ```
 
 ```sql
-select *
-from openrowset
+SELECT *
+FROM OPENROWSET
    (  'MSDASQL'
      ,'Driver={Microsoft Access Text Driver (*.txt, *.csv)}'
      ,'select * from E:\Tlog\TerritoryData.csv')

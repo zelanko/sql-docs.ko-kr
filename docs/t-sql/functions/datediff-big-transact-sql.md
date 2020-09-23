@@ -21,12 +21,12 @@ helpviewer_keywords:
 ms.assetid: 19ac1693-3cfa-400d-bf83-20a9cb46599a
 author: markingmyname
 ms.author: maghan
-ms.openlocfilehash: 59e4facf304f48be289d6c00c6dca3b92b04dc70
-ms.sourcegitcommit: 331b8495e4ab37266945c81ff5b93d250bdaa6da
+ms.openlocfilehash: e5a4e30f949a08ef358c777af61972bcfd59c2ef
+ms.sourcegitcommit: cc23d8646041336d119b74bf239a6ac305ff3d31
 ms.translationtype: HT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 08/20/2020
-ms.locfileid: "88646713"
+ms.lasthandoff: 09/23/2020
+ms.locfileid: "91116458"
 ---
 # <a name="datediff_big-transact-sql"></a>DATEDIFF_BIG(Transact-SQL)
 
@@ -40,7 +40,7 @@ ms.locfileid: "88646713"
   
 ## <a name="syntax"></a>구문  
   
-```
+```syntaxsql
 DATEDIFF_BIG ( datepart , startdate , enddate )  
 ```  
 

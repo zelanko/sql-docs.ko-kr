@@ -20,12 +20,12 @@ helpviewer_keywords:
 ms.assetid: 91b69853-1381-4306-8343-afdb73105738
 author: VanMSFT
 ms.author: vanto
-ms.openlocfilehash: 5dead43fef139eec23cc219c30d5ef567f2fda0a
-ms.sourcegitcommit: e700497f962e4c2274df16d9e651059b42ff1a10
+ms.openlocfilehash: eb8409640e89724a0e5b369ca7a6ee83122551ca
+ms.sourcegitcommit: cc23d8646041336d119b74bf239a6ac305ff3d31
 ms.translationtype: HT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 08/17/2020
-ms.locfileid: "88459123"
+ms.lasthandoff: 09/23/2020
+ms.locfileid: "91115915"
 ---
 # <a name="readtext-transact-sql"></a>READTEXT(Transact-SQL)
 [!INCLUDE [SQL Server SQL Database](../../includes/applies-to-version/sql-asdb.md)]
@@ -40,7 +40,6 @@ ms.locfileid: "88459123"
 ## <a name="syntax"></a>구문  
   
 ```syntaxsql
-  
 READTEXT { table.column text_ptr offset size } [ HOLDLOCK ]  
 ```  
   
@@ -77,10 +76,10 @@ HOLDLOCK
 > [!NOTE]  
 >  이 예를 실행하려면 [**pubs**](https://github.com/microsoft/sql-server-samples/tree/master/samples/databases) 샘플 데이터베이스를 설치해야 합니다.  
   
-```  
+```sql
 USE pubs;  
 GO  
-DECLARE @ptrval varbinary(16);  
+DECLARE @ptrval VARBINARY(16);  
 SELECT @ptrval = TEXTPTR(pr_info)   
    FROM pub_info pr INNER JOIN publishers p  
       ON pr.pub_id = p.pub_id   

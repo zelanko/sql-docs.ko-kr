@@ -21,12 +21,12 @@ helpviewer_keywords:
 ms.assetid: 36ba56d4-20d7-4cd1-aa2a-e40a6c0a4e39
 author: VanMSFT
 ms.author: vanto
-ms.openlocfilehash: 80d5129d2b3165c69b4738414ad5354a324cded1
-ms.sourcegitcommit: e700497f962e4c2274df16d9e651059b42ff1a10
+ms.openlocfilehash: 099026a22a03c563b8ea176d5fed14d7d936ffc6
+ms.sourcegitcommit: cc23d8646041336d119b74bf239a6ac305ff3d31
 ms.translationtype: HT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 08/17/2020
-ms.locfileid: "88417329"
+ms.lasthandoff: 09/23/2020
+ms.locfileid: "91116346"
 ---
 # <a name="host_id-transact-sql"></a>HOST_ID(Transact-SQL)
 [!INCLUDE [SQL Server](../../includes/applies-to-version/sqlserver.md)]
@@ -37,8 +37,7 @@ ms.locfileid: "88417329"
   
 ## <a name="syntax"></a>구문  
   
-```  
-  
+```syntaxsql
 HOST_ID ()  
 ```  
   
@@ -52,17 +51,17 @@ HOST_ID ()
   
  시스템 함수는 선택 목록, WHERE 절 및 식이 허용되는 모든 곳에서 사용될 수 있습니다.  
   
-## <a name="examples"></a>예  
+## <a name="examples"></a>예제  
  다음 예에서는 주문 정보를 기록하는 테이블을 만들고 컴퓨터의 터미널 ID를 기록하는 행의 `HOST_ID()` 정의에 `DEFAULT`를 사용합니다.  
   
-```  
+```sql  
 CREATE TABLE Orders  
-   (OrderID     int       PRIMARY KEY,  
-    CustomerID  nchar(5)  REFERENCES Customers(CustomerID),  
-    TerminalID  char(8)   NOT NULL DEFAULT HOST_ID(),  
-    OrderDate   datetime  NOT NULL,  
-    ShipDate    datetime  NULL,  
-    ShipperID   int       NULL REFERENCES Shippers(ShipperID));  
+   (OrderID     INT       PRIMARY KEY,  
+    CustomerID  NCHAR(5)  REFERENCES Customers(CustomerID),  
+    TerminalID  CHAR(8)   NOT NULL DEFAULT HOST_ID(),  
+    OrderDate   DATETIME  NOT NULL,  
+    ShipDate    DATETIME  NULL,  
+    ShipperID   INT       NULL REFERENCES Shippers(ShipperID));  
 GO  
 ```  
   

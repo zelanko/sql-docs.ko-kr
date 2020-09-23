@@ -22,12 +22,12 @@ helpviewer_keywords:
 ms.assetid: 4db1fb3b-e46f-43fb-b269-a5b6e8b39ed0
 author: markingmyname
 ms.author: maghan
-ms.openlocfilehash: 29f6feeb045e3c8418bfb63fd28e784113dc629f
-ms.sourcegitcommit: e700497f962e4c2274df16d9e651059b42ff1a10
+ms.openlocfilehash: e84cc199c94775a38268ab486712c5f5982bdb26
+ms.sourcegitcommit: cc23d8646041336d119b74bf239a6ac305ff3d31
 ms.translationtype: HT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 08/17/2020
-ms.locfileid: "88364929"
+ms.lasthandoff: 09/23/2020
+ms.locfileid: "91115451"
 ---
 # <a name="index_col-transact-sql"></a>INDEX_COL(Transact-SQL)
 [!INCLUDE [SQL Server SQL Database](../../includes/applies-to-version/sql-asdb.md)]
@@ -38,8 +38,7 @@ ms.locfileid: "88364929"
   
 ## <a name="syntax"></a>구문  
   
-```  
-  
+```syntaxsql
 INDEX_COL ( '[ database_name . [ schema_name ] .| schema_name ]  
     table_or_view_name', index_id , key_id )   
 ```  
@@ -75,7 +74,7 @@ INDEX_COL ( '[ database_name . [ schema_name ] .| schema_name ]
 ### <a name="a-using-index_col-to-return-an-index-column-name"></a>A. INDEX_COL을 사용하여 인덱스 열 이름 반환  
  다음 예에서는 `PK_SalesOrderDetail_SalesOrderID_LineNumber` 인덱스에 있는 2개의 키 열 이름을 반환합니다.  
   
-```  
+```sql  
 USE AdventureWorks2012;  
 GO  
 SELECT   

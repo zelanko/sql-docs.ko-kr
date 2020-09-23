@@ -22,12 +22,12 @@ ms.assetid: ffacf45e-a488-48d0-9bb0-dcc7fd365299
 author: MikeRayMSFT
 ms.author: mikeray
 monikerRange: '>=aps-pdw-2016||=azuresqldb-current||=azure-sqldw-latest||>=sql-server-2016||=sqlallproducts-allversions||>=sql-server-linux-2017||=azuresqldb-mi-current'
-ms.openlocfilehash: e778bdf4adc24b95d5ffa1d8eb438222117c07c3
-ms.sourcegitcommit: e700497f962e4c2274df16d9e651059b42ff1a10
+ms.openlocfilehash: 2b99cb9371269b70dc36eae6361f2d6a805da774
+ms.sourcegitcommit: cc23d8646041336d119b74bf239a6ac305ff3d31
 ms.translationtype: HT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 08/17/2020
-ms.locfileid: "88368559"
+ms.lasthandoff: 09/23/2020
+ms.locfileid: "91115041"
 ---
 # <a name="data-type-conversion-database-engine"></a>데이터 형식 변환(데이터베이스 엔진)
 [!INCLUDE [sql-asdb-asdbmi-asa-pdw](../../includes/applies-to-version/sql-asdb-asdbmi-asa-pdw.md)]
@@ -64,7 +64,7 @@ CAST ( $157.27 AS VARCHAR(10) )
 예를 들어 다음 스크립트는 `varchar` 형식 변수를 정의하고 변수에 `int` 형식 값을 할당한 다음 문자열과 변수의 연결을 선택합니다.
 
 ```sql
-DECLARE @string varchar(10);
+DECLARE @string VARCHAR(10);
 SET @string = 1;
 SELECT @string + ' is a string.'
 ```
@@ -74,7 +74,7 @@ SELECT @string + ' is a string.'
 다음 예에서는 대신 `int` 변수를 사용하는 유사한 스크립트를 보여 줍니다.
 
 ```sql
-DECLARE @notastring int;
+DECLARE @notastring INT;
 SET @notastring = '1';
 SELECT @notastring + ' is not a string.'
 ```
@@ -87,7 +87,7 @@ SELECT @notastring + ' is not a string.'
 `@notastring + ' is not a string.'` 식을 평가하기 위해 SQL Server는 데이터 형식 우선 순위 규칙에 따라 식 결과를 계산하기 전에 암시적 변환을 완료합니다. `int`는 `varchar`보다 우선 순위가 높기 때문에 SQL Server는 문자열을 정수로 변환하려고 시도하지만 이 문자열을 정수로 변환할 수 없으므로 실패합니다. 식이 변환할 수 있는 문자열을 제공하는 경우 다음 예제와 같이 문이 성공합니다.
 
 ```sql
-DECLARE @notastring int;
+DECLARE @notastring INT;
 SET @notastring = '1';
 SELECT @notastring + '1'
 ```

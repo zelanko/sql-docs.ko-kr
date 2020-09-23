@@ -22,12 +22,12 @@ ms.assetid: f47e2f3f-9302-4711-9d66-16b1a2a7ffe3
 author: VanMSFT
 ms.author: vanto
 monikerRange: '>=aps-pdw-2016||=azuresqldb-current||=azure-sqldw-latest||>=sql-server-2016||=sqlallproducts-allversions||>=sql-server-linux-2017||=azuresqldb-mi-current'
-ms.openlocfilehash: 362909e9cd98536d97751787820a5df0c08ed101
-ms.sourcegitcommit: e700497f962e4c2274df16d9e651059b42ff1a10
+ms.openlocfilehash: 93981415431e8f42e653f5538ca8dd164f482ba2
+ms.sourcegitcommit: cc23d8646041336d119b74bf239a6ac305ff3d31
 ms.translationtype: HT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 08/17/2020
-ms.locfileid: "88459161"
+ms.lasthandoff: 09/23/2020
+ms.locfileid: "91116304"
 ---
 # <a name="option-clause-transact-sql"></a>OPTION 절(Transact-SQL)
 [!INCLUDE [sql-asdb-asdbmi-asa-pdw](../../includes/applies-to-version/sql-asdb-asdbmi-asa-pdw.md)]
@@ -74,7 +74,7 @@ OPTION ( <query_option> [ ,...n ] )
 ### <a name="a-using-an-option-clause-with-a-group-by-clause"></a>A. GROUP BY 절과 함께 OPTION 절 사용  
  다음 예에서는 `OPTION` 절과 함께 `GROUP BY` 절을 사용하는 방법을 보여 줍니다.  
   
-```  
+```sql
 USE AdventureWorks2012;  
 GO  
 SELECT ProductID, OrderQty, SUM(LineTotal) AS Total  
@@ -91,7 +91,7 @@ GO
 ### <a name="b-select-statement-with-a-label-in-the-option-clause"></a>B. OPTION 절에서 레이블을 사용하는 SELECT 문  
  다음 예제에서는 OPTION 절에서 레이블을 사용하는 간단한 [!INCLUDE[ssDW](../../includes/ssdw-md.md)] SELECT 문을 보여 줍니다.  
   
-```  
+```sql
 -- Uses AdventureWorks  
   
 SELECT * FROM FactResellerSales  
@@ -101,7 +101,7 @@ SELECT * FROM FactResellerSales
 ### <a name="c-select-statement-with-a-query-hint-in-the-option-clause"></a>C. OPTION 절에서 쿼리 힌트를 사용하는 SELECT 문  
  다음 예제에서는 OPTION 절에서 HASH JOIN 쿼리 힌트를 사용하는 SELECT 문을 보여 줍니다.  
   
-```  
+```sql
 -- Uses AdventureWorks  
   
 SELECT COUNT (*) FROM dbo.DimCustomer a  
@@ -113,7 +113,7 @@ OPTION (HASH JOIN);
 ### <a name="d-select-statement-with-a-label-and-multiple-query-hints-in-the-option-clause"></a>D. OPTION 절에서 레이블 및 여러 쿼리 힌트를 사용하는 SELECT 문  
  다음 예제는 레이블 및 여러 쿼리 힌트를 포함하는 [!INCLUDE[ssDW](../../includes/ssdw-md.md)] SELECT 문입니다. 쿼리가 컴퓨팅 노드에서 실행될 때 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]는 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]에서 결정하는 가장 적합한 전략에 따라 해시 조인 또는 병합 조인을 적용합니다.  
   
-```  
+```sql
 -- Uses AdventureWorks  
   
 SELECT COUNT (*) FROM dbo.DimCustomer a  
@@ -125,7 +125,7 @@ OPTION ( Label = 'CustJoin', HASH JOIN, MERGE JOIN);
 ### <a name="e-using-a-query-hint-when-querying-a-view"></a>E. 뷰를 쿼리할 때 쿼리 힌트 사용  
  다음 예제에서는 CustomerView라는 뷰를 만든 다음, 뷰 및 테이블을 참조하는 쿼리에서 HASH JOIN 쿼리 힌트를 사용합니다.  
   
-```  
+```sql
 -- Uses AdventureWorks  
   
 CREATE VIEW CustomerView  
@@ -137,14 +137,13 @@ INNER JOIN dbo.FactInternetSales b
 ON (a.CustomerKey = b.CustomerKey)  
 OPTION (HASH JOIN);  
   
-DROP VIEW CustomerView;  
-  
+DROP VIEW CustomerView;
 ```  
   
 ### <a name="f-query-with-a-subselect-and-a-query-hint"></a>F. 하위 select 및 쿼리 힌트가 있는 쿼리  
  다음 예제에서는 하위 select 및 쿼리 힌트 모두를 포함하는 쿼리를 보여 줍니다. 쿼리 힌트는 전역적으로 적용됩니다. 쿼리 힌트는 하위 select 문에 추가되도록 허용되지 않습니다.  
   
-```  
+```sql
 -- Uses AdventureWorks  
   
 CREATE VIEW CustomerView AS  
@@ -160,7 +159,7 @@ OPTION (HASH JOIN);
 ### <a name="g-force-the-join-order-to-match-the-order-in-the-query"></a>G. 쿼리의 순서와 일치하도록 조인 순서 강제 적용  
  다음 예제에서는 FORCE ORDER 힌트를 사용하여 쿼리에서 지정된 조인 순서를 사용하도록 쿼리 계획을 강제로 적용합니다. 모든 쿼리가 아닌 일부 쿼리에서 성능을 향상시킵니다.  
   
-```  
+```sql
 -- Uses AdventureWorks  
   
 -- Obtain partition numbers, boundary values, boundary value types, and rows per boundary  
@@ -181,7 +180,7 @@ OPTION ( FORCE ORDER )
 ### <a name="h-using-externalpushdown"></a>H. EXTERNALPUSHDOWN 사용  
  다음 예제에서는 외부 Hadoop 테이블의 MapReduce 작업에 WHERE 절의 푸시다운을 강제로 적용합니다.  
   
-```  
+```sql
 SELECT ID FROM External_Table_AS A   
 WHERE ID < 1000000  
 OPTION (FORCE EXTERNALPUSHDOWN);  
@@ -189,7 +188,7 @@ OPTION (FORCE EXTERNALPUSHDOWN);
   
  다음 예제에서는 외부 Hadoop 테이블의 MapReduce 작업에 WHERE 절의 푸시다운을 강제로 방지합니다. WHERE 절이 적용되는 PDW에 모든 행이 반환됩니다.  
   
-```  
+```sql
 SELECT ID FROM External_Table_AS A   
 WHERE ID < 10  
 OPTION (DISABLE EXTERNALPUSHDOWN);  

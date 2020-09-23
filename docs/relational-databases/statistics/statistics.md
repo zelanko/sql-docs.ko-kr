@@ -24,12 +24,12 @@ ms.assetid: b86a88ba-4f7c-4e19-9fbd-2f8bcd3be14a
 author: julieMSFT
 ms.author: jrasnick
 monikerRange: '>=aps-pdw-2016||=azuresqldb-current||=azure-sqldw-latest||>=sql-server-2016||=sqlallproducts-allversions||>=sql-server-linux-2017||=azuresqldb-mi-current'
-ms.openlocfilehash: 3b2a5d4a4e88e1d0cb3a342395ebb3642d5d2dd8
-ms.sourcegitcommit: e4c36570c34cd7d7ae258061351bce6e54ea49f6
+ms.openlocfilehash: fbe55bf680ffbb80dca592d9bbdf63d86aaa793c
+ms.sourcegitcommit: cc23d8646041336d119b74bf239a6ac305ff3d31
 ms.translationtype: HT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 08/12/2020
-ms.locfileid: "88147744"
+ms.lasthandoff: 09/23/2020
+ms.locfileid: "91116571"
 ---
 # <a name="statistics"></a>통계
 
@@ -61,7 +61,7 @@ ms.locfileid: "88147744"
 
 다음 다이어그램에서는 6단계의 히스토그램을 보여 줍니다. 첫 번째 상한 값 왼쪽의 영역이 1단계입니다.
   
-![히스토그램](../../relational-databases/system-dynamic-management-views/media/histogram_2.gif "히스토그램") 
+![히스토그램](../../relational-databases/system-dynamic-management-views/media/histogram-2.svg "히스토그램") 
   
 위의 각 히스토그램 단계를 살펴보면 다음과 같습니다.
 -   굵은 선은 상한 값(*range_high_key*)과 발생한 횟수(*equal_rows*)를 나타냅니다.  

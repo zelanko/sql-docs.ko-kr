@@ -22,12 +22,12 @@ helpviewer_keywords:
 ms.assetid: ddfb0991-cde3-4b97-a5b7-ee450133f160
 author: VanMSFT
 ms.author: vanto
-ms.openlocfilehash: f2df0bdf310b0096d1bad89d6815ed4dd1aa65bb
-ms.sourcegitcommit: e700497f962e4c2274df16d9e651059b42ff1a10
+ms.openlocfilehash: eea845c7ebe9b40db0d5dfc2b09a7f69d94321f2
+ms.sourcegitcommit: cc23d8646041336d119b74bf239a6ac305ff3d31
 ms.translationtype: HT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 08/17/2020
-ms.locfileid: "88363819"
+ms.lasthandoff: 09/23/2020
+ms.locfileid: "91115864"
 ---
 # <a name="original_login-transact-sql"></a>ORIGINAL_LOGIN(Transact-SQL)
 [!INCLUDE [SQL Server SQL Database](../../includes/applies-to-version/sql-asdb.md)]
@@ -38,8 +38,7 @@ ms.locfileid: "88363819"
   
 ## <a name="syntax"></a>구문  
   
-```  
-  
+```syntaxsql
 ORIGINAL_LOGIN( )  
 ```  
   
@@ -58,7 +57,7 @@ ORIGINAL_LOGIN( )
   >[!NOTE]
   > ORIGINAL_LOGIN 함수는 Azure SQL Database에서 지원되지만, *로그인으로 실행*은 Azure SQL Database에서 지원되지 않으므로 다음 스크립트가 실패합니다. 
   
-```  
+```sql  
 USE AdventureWorks2012;  
 GO  
 --Create a temporary login and user.  

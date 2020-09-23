@@ -19,12 +19,12 @@ helpviewer_keywords:
 ms.assetid: 4b8b0705-c083-4b07-b954-c83ee73b2ebb
 author: VanMSFT
 ms.author: vanto
-ms.openlocfilehash: f646812ed6f6b4198987ebbe0f9961b626fb6e9d
-ms.sourcegitcommit: 331b8495e4ab37266945c81ff5b93d250bdaa6da
+ms.openlocfilehash: 3dbd0179163a13989308f1c01ba350b37bf959ea
+ms.sourcegitcommit: cc23d8646041336d119b74bf239a6ac305ff3d31
 ms.translationtype: HT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 08/20/2020
-ms.locfileid: "88646291"
+ms.lasthandoff: 09/23/2020
+ms.locfileid: "91116684"
 ---
 # <a name="host_name-transact-sql"></a>HOST_NAME(Transact-SQL)
 
@@ -37,7 +37,6 @@ ms.locfileid: "88646291"
 ## <a name="syntax"></a>구문  
   
 ```syntaxsql
-  
 HOST_NAME ()  
 ```  
 
@@ -55,14 +54,14 @@ HOST_NAME ()
 ## <a name="examples"></a>예제  
  다음 예에서는 `HOST_NAME()` 정의에 `DEFAULT`을 사용하는 테이블을 만들고 주문 기록 테이블에 행을 삽입하는 컴퓨터의 워크스테이션 이름을 새로 만든 테이블에 기록합니다.  
   
-```  
+```sql  
 CREATE TABLE Orders  
-   (OrderID     int        PRIMARY KEY,  
-    CustomerID  nchar(5)   REFERENCES Customers(CustomerID),  
-    Workstation nchar(30)  NOT NULL DEFAULT HOST_NAME(),  
-    OrderDate   datetime   NOT NULL,  
-    ShipDate    datetime   NULL,  
-    ShipperID   int        NULL REFERENCES Shippers(ShipperID));  
+   (OrderID     INT        PRIMARY KEY,  
+    CustomerID  NCHAR(5)   REFERENCES Customers(CustomerID),  
+    Workstation NCHAR(30)  NOT NULL DEFAULT HOST_NAME(),  
+    OrderDate   DATETIME   NOT NULL,  
+    ShipDate    DATETIME   NULL,  
+    ShipperID   INT        NULL REFERENCES Shippers(ShipperID));  
 GO  
 ```  
   

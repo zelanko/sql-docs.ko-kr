@@ -26,12 +26,12 @@ helpviewer_keywords:
 ms.assetid: 8c70bf34-7570-4eb6-877a-e35064a1380a
 author: pmasl
 ms.author: umajay
-ms.openlocfilehash: 15b156950ff752e96dc332c4071dbc748013aa3f
-ms.sourcegitcommit: e700497f962e4c2274df16d9e651059b42ff1a10
+ms.openlocfilehash: 4b7a386f058a442a984ba45b3be58bba5e9bb2e1
+ms.sourcegitcommit: cc23d8646041336d119b74bf239a6ac305ff3d31
 ms.translationtype: HT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 08/17/2020
-ms.locfileid: "88459898"
+ms.lasthandoff: 09/23/2020
+ms.locfileid: "91116152"
 ---
 # <a name="dbcc-checkfilegroup-transact-sql"></a>DBCC CHECKFILEGROUP(Transact-SQL)
 [!INCLUDE [SQL Server SQL Database](../../includes/applies-to-version/sql-asdb.md)]
@@ -41,7 +41,6 @@ ms.locfileid: "88459898"
 ## <a name="syntax"></a>구문  
   
 ```syntaxsql
-  
 DBCC CHECKFILEGROUP   
 [  
     [ ( { filegroup_name | filegroup_id | 0 }   
@@ -156,7 +155,7 @@ DBCC CHECKFILEGROUP은 다음 결과 집합을 반환합니다. 값은 다를 �
 -   ESTIMATEONLY 또는 NO_INFOMSGS가 지정된 경우는 제외합니다.  
 -   데이터베이스가 지정되지 않은 경우에는 옵션(NOINDEX 제외) 지정 여부에 관계없이 현재 데이터베이스에 해당됩니다.  
   
-```sql
+```
 DBCC results for 'master'.  
 DBCC results for 'sys.sysrowsetcolumns'.  
 There are 630 rows in 7 pages for object 'sys.sysrowsetcolumns'.  
@@ -174,12 +173,12 @@ DBCC execution completed. If DBCC printed error messages, contact your system ad
   
 NO_INFOMSGS가 지정된 경우 DBCC CHECKFILEGROUP은 다음을 반환합니다.
   
-```sql
+```
 DBCC execution completed. If DBCC printed error messages, contact your system administrator.  
 ```  
  ESTIMATEONLY가 지정된 경우 DBCC CHECKFILEGROUP은 다음을 반환합니다. 값은 다를 수 있습니다.  
 
-```sql
+```
 Estimated TEMPDB space needed for CHECKALLOC (KB)
 -------------------------------------------------   
 15  
@@ -202,8 +201,7 @@ DBCC execution completed. If DBCC printed error messages, contact your system ad
 ### <a name="a-checking-the-primary-filegroup-in-the-a-database"></a>A. 데이터베이스의 PRIMARY 파일 그룹 검사  
 다음 예에서는 현재 데이터베이스의 주 파일 그룹을 검사합니다.
   
-```sql  
-  
+```sql
 DBCC CHECKFILEGROUP;  
 GO  
 ```  
@@ -211,7 +209,7 @@ GO
 ### <a name="b-checking-the-adventureworks-primary-filegroup-without-nonclustered-indexes"></a>B. 비클러스터형 인덱스를 제외한 AdventureWorks PRIMARY 파일 그룹 검사  
 다음 예제에서는 PRIMARY 파일 그룹의 ID 번호 및 `NOINDEX`를 지정하여 `AdventureWorks2012` 데이터베이스의 PRIMARY 파일 그룹(비클러스터형 인덱스 제외)을 검사합니다.
   
-```sql  
+```sql
 USE AdventureWorks2012;  
 GO  
 DBCC CHECKFILEGROUP (1, NOINDEX);  
@@ -221,7 +219,7 @@ GO
 ### <a name="c-checking-the-primary-filegroup-with-options"></a>C. 옵션을 사용하여 PRIMARY 파일 그룹 검사  
 다음 예에서는 `master` 옵션을 지정하여 `ESTIMATEONLY` 데이터베이스의 PRIMARY 파일 그룹을 검사합니다.
   
-```sql  
+```sql
 USE master;  
 GO  
 DBCC CHECKFILEGROUP (1)  

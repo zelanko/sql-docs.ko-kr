@@ -23,12 +23,12 @@ helpviewer_keywords:
 ms.assetid: 09069f4a-f2e3-4717-80e1-c0110058efc4
 author: VanMSFT
 ms.author: vanto
-ms.openlocfilehash: 728805a8e4d8bfdbee198f30e26a9228b62b894c
-ms.sourcegitcommit: e700497f962e4c2274df16d9e651059b42ff1a10
+ms.openlocfilehash: 37f988a345bcc4280f6e76f039049ca56a4f6a81
+ms.sourcegitcommit: cc23d8646041336d119b74bf239a6ac305ff3d31
 ms.translationtype: HT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 08/17/2020
-ms.locfileid: "88360949"
+ms.lasthandoff: 09/23/2020
+ms.locfileid: "91116316"
 ---
 # <a name="hints-transact-sql---join"></a>힌트 (Transact-SQL) - 조인
 [!INCLUDE [SQL Server SQL Database](../../includes/applies-to-version/sql-asdb.md)]
@@ -51,7 +51,6 @@ ms.locfileid: "88360949"
 ## <a name="syntax"></a>구문  
   
 ```syntaxsql
-  
 <join_hint> ::=   
      { LOOP | HASH | MERGE | REMOTE }  
 ```  
@@ -79,7 +78,7 @@ ms.locfileid: "88360949"
 ### <a name="a-using-hash"></a>A. HASH 사용  
  다음 예에서는 쿼리의 `JOIN` 연산이 `HASH` 조인에 의해 수행되도록 지정합니다. 이 예에서는 [!INCLUDE[ssSampleDBnormal](../../includes/sssampledbnormal-md.md)] 데이터베이스를 사용합니다.  
   
-```  
+```sql
 SELECT p.Name, pr.ProductReviewID  
 FROM Production.Product AS p  
 LEFT OUTER HASH JOIN Production.ProductReview AS pr  
@@ -90,7 +89,7 @@ ORDER BY ProductReviewID DESC;
 ### <a name="b-using-loop"></a>B. LOOP 사용  
  다음 예에서는 쿼리의 `JOIN` 연산이 `LOOP` 조인에 의해 수행되도록 지정합니다. 이 예에서는 [!INCLUDE[ssSampleDBnormal](../../includes/sssampledbnormal-md.md)] 데이터베이스를 사용합니다.  
   
-```  
+```sql
 DELETE FROM Sales.SalesPersonQuotaHistory   
 FROM Sales.SalesPersonQuotaHistory AS spqh  
     INNER LOOP JOIN Sales.SalesPerson AS sp  
@@ -102,7 +101,7 @@ GO
 ### <a name="c-using-merge"></a>C. MERGE 사용  
  다음 예에서는 쿼리의 `JOIN` 연산이 `MERGE` 조인에 의해 수행되도록 지정합니다. 이 예에서는 [!INCLUDE[ssSampleDBnormal](../../includes/sssampledbnormal-md.md)] 데이터베이스를 사용합니다.  
   
-```  
+```sql
 SELECT poh.PurchaseOrderID, poh.OrderDate, pod.ProductID, pod.DueDate, poh.VendorID   
 FROM Purchasing.PurchaseOrderHeader AS poh  
 INNER MERGE JOIN Purchasing.PurchaseOrderDetail AS pod   

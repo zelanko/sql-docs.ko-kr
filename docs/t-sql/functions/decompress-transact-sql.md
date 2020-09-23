@@ -16,12 +16,12 @@ helpviewer_keywords:
 ms.assetid: 738d56be-3870-4774-b112-3dce27becc11
 author: markingmyname
 ms.author: maghan
-ms.openlocfilehash: f6390d157ab7d352e7ecb355fec4c16114333ea0
-ms.sourcegitcommit: e700497f962e4c2274df16d9e651059b42ff1a10
+ms.openlocfilehash: 9d6851056673a896e1b07a26ee5d50142272a31a
+ms.sourcegitcommit: cc23d8646041336d119b74bf239a6ac305ff3d31
 ms.translationtype: HT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 08/17/2020
-ms.locfileid: "88479715"
+ms.lasthandoff: 09/23/2020
+ms.locfileid: "91116426"
 ---
 # <a name="decompress-transact-sql"></a>DECOMPRESS(Transact-SQL)
 [!INCLUDE [sqlserver2016-asdb-asdbmi-asa](../../includes/applies-to-version/sqlserver2016-asdb-asdbmi-asa.md)]
@@ -32,7 +32,7 @@ ms.locfileid: "88479715"
   
 ## <a name="syntax"></a>구문  
   
-```  
+```syntaxsql  
 DECOMPRESS ( expression )  
 ```  
   
@@ -50,7 +50,7 @@ DECOMPRESS ( expression )
 ### <a name="a-decompress-data-at-query-time"></a>A. 쿼리 시간에 데이터 압축 해제  
 이 예제에서는 압축된 테이블 데이터를 반환하는 방법을 보여줍니다.  
   
-```  
+```sql  
 SELECT _id, name, surname, datemodified,  
              CAST(DECOMPRESS(info) AS NVARCHAR(MAX)) AS info  
 FROM player;  
@@ -59,13 +59,13 @@ FROM player;
 ### <a name="b-display-compressed-data-using-computed-column"></a>B. 계산 열을 사용하여 압축된 데이터 표시  
 이 예에서는 압축 해제된 데이터 스토리지에 대한 테이블을 만드는 방법을 보여줍니다.  
   
-```  
+```sql  
 CREATE TABLE example_table (  
-    _id int primary key identity,  
-    name nvarchar(max),  
-    surname nvarchar(max),  
-    info varbinary(max),  
-    info_json as CAST(decompress(info) as nvarchar(max))  
+    _id INT PRIMARY KEY IDENTITY,  
+    name NVARCHAR(max),  
+    surname NVARCHAR(max),  
+    info VARBINARY(max),  
+    info_json as CAST(DECOMPRESS(info) as NVARCHAR(max))  
 );  
 ```  
   

@@ -33,12 +33,12 @@ ms.assetid: 58ae3ff3-b1d5-41b2-9a2f-fc7ab8c83e0e
 author: MikeRayMSFT
 ms.author: mikeray
 monikerRange: '>=aps-pdw-2016||=azuresqldb-current||=azure-sqldw-latest||>=sql-server-2016||=sqlallproducts-allversions||>=sql-server-linux-2017||=azuresqldb-mi-current'
-ms.openlocfilehash: 0b8b68b99fa522b69401eab47d54e40cdf8621c2
-ms.sourcegitcommit: 780a81c02bc469c6e62a9c307e56a973239983b6
+ms.openlocfilehash: 0a715f64c0d6c1adf8ec3bc55b851848dfd1ae2e
+ms.sourcegitcommit: cc23d8646041336d119b74bf239a6ac305ff3d31
 ms.translationtype: HT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 09/11/2020
-ms.locfileid: "90027284"
+ms.lasthandoff: 09/23/2020
+ms.locfileid: "91115374"
 ---
 # <a name="constants-transact-sql"></a>상수(Transact-SQL)
 [!INCLUDE [sql-asdb-asdbmi-asa-pdw](../../includes/applies-to-version/sql-asdb-asdbmi-asa-pdw.md)]
@@ -57,7 +57,7 @@ ms.locfileid: "90027284"
   
 다음은 문자열의 예입니다.
   
-```sql
+```
 'Cincinnati'  
 'O''Brien'  
 'Process X is 50% complete.'  
@@ -90,7 +90,7 @@ ms.locfileid: "90027284"
   
 다음은 이진 문자열의 예입니다.
   
-```sql
+```
 0xAE  
 0x12Ef  
 0x69048AEFDD010E  
@@ -108,7 +108,7 @@ ms.locfileid: "90027284"
   
 다음은 **datetime** 상수의 예입니다.
   
-```sql
+```
 'December 5, 1985'  
 '5 December, 1985'  
 '851205'  
@@ -117,7 +117,7 @@ ms.locfileid: "90027284"
   
 datetime 상수의 예는 다음과 같습니다.
   
-```sql
+```
 '14:30:24'  
 '04:24 PM'  
 ```  
@@ -127,7 +127,7 @@ datetime 상수의 예는 다음과 같습니다.
   
 다음은 **integer** 상수의 예입니다.
   
-```sql
+```
 1894  
 2  
 ```  
@@ -137,7 +137,7 @@ datetime 상수의 예는 다음과 같습니다.
   
 다음은 **십진수** 상수의 예입니다.
   
-```sql
+```
 1894.1204  
 2.0  
 ```  
@@ -147,7 +147,7 @@ datetime 상수의 예는 다음과 같습니다.
   
 다음은 **float** 또는 **real** 값의 예입니다.
   
-```sql
+```
 101.5E5  
 0.5E-2  
 ```  
@@ -162,7 +162,7 @@ datetime 상수의 예는 다음과 같습니다.
   
 다음은 **money** 상수의 예입니다.
   
-```sql
+```
 $12  
 $542023.14  
 ```  
@@ -172,7 +172,7 @@ $542023.14
   
 다음 두 가지 예는 모두 같은 GUID를 지정합니다.
   
-```sql
+```
 '6F9619FF-8B86-D011-B42D-00C04FC964FF'  
 0xff19966f868b11d0b42d00c04fc964ff  
 ```  
@@ -182,27 +182,27 @@ $542023.14
   
 부호 있는 **정수** 식:  
   
-```sql
+```
 +145345234
 -2147483648
 ```
 부호 있는 **10진수** 식:  
   
-```sql
+```
 +145345234.2234
 -2147483648.10
 ```
   
 부호 있는 **float** 식:  
   
-```sql
+```
 +123E-3
 -12E5
 ```
   
 부호 있는 **money** 식:  
   
-```sql
+```
 -$45.56
 +$423456.99
 ```

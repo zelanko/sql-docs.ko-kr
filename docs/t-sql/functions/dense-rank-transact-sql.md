@@ -22,12 +22,12 @@ ms.assetid: 03871fc6-9592-4016-b0b2-ff543f132b20
 author: markingmyname
 ms.author: maghan
 monikerRange: '>=aps-pdw-2016||=azuresqldb-current||=azure-sqldw-latest||>=sql-server-2016||=sqlallproducts-allversions||>=sql-server-linux-2017||=azuresqldb-mi-current'
-ms.openlocfilehash: 0354d701b2f6037fa9f7489dcc67f344e987dbdc
-ms.sourcegitcommit: e700497f962e4c2274df16d9e651059b42ff1a10
+ms.openlocfilehash: 07e79295f8beab364037a6ef7143d95745d3fb30
+ms.sourcegitcommit: cc23d8646041336d119b74bf239a6ac305ff3d31
 ms.translationtype: HT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 08/17/2020
-ms.locfileid: "88459873"
+ms.lasthandoff: 09/23/2020
+ms.locfileid: "91116764"
 ---
 # <a name="dense_rank-transact-sql"></a>DENSE_RANK(Transact-SQL)
 [!INCLUDE [sql-asdb-asdbmi-asa-pdw](../../includes/applies-to-version/sql-asdb-asdbmi-asa-pdw.md)]
@@ -38,7 +38,7 @@ ms.locfileid: "88459873"
   
 ## <a name="syntax"></a>구문  
   
-```  
+```syntaxsql  
 DENSE_RANK ( ) OVER ( [ <partition_by_clause> ] < order_by_clause > )  
 ```  
   
@@ -66,7 +66,7 @@ DENSE_RANK ( ) OVER ( [ <partition_by_clause> ] < order_by_clause > )
 ### <a name="a-ranking-rows-within-a-partition"></a>A. 파티션 내의 행 순위 지정  
 이 예에서는 재고 수량을 기준으로 지정한 인벤토리 위치의 제품에 순위를 부여합니다. `DENSE_RANK`는 `LocationID`로 결과 집합을 분할하고 `Quantity`로 논리적으로 결과 집합의 순서를 정합니다. 제품 494와 495는 수량이 동일합니다. 모두가 동일한 수량 값을 갖기 때문에 모두가 1의 순위 값을 갖습니다.  
   
-```  
+```sql  
 USE AdventureWorks2012;  
 GO  
 SELECT i.ProductID, p.Name, i.LocationID, i.Quantity  
@@ -103,7 +103,7 @@ ProductID   Name                               LocationID Quantity Rank
 ### <a name="b-ranking-all-rows-in-a-result-set"></a>B. 결과 집합의 모든 행 순위 지정  
 이 예제에서는 연봉이 상위 10위권에 들어가는 직원을 반환합니다. `SELECT` 문이 `PARTITION BY` 절을 지정하지 않았기 때문에 `DENSE_RANK` 함수가 모든 결과 집합 행에 적용됐습니다.  
   
-```  
+```sql  
 USE AdventureWorks2012;  
 GO  
 SELECT TOP(10) BusinessEntityID, Rate,   
@@ -138,7 +138,7 @@ BusinessEntityID Rate                  RankBySalary
 
 같은 쿼리에서 사용됩니다. 함수별 예에 대한 자세한 내용은 각 순위 함수를 참조하십시오.  
   
-```  
+```sql  
 USE AdventureWorks2012;  
 GO  
 SELECT p.FirstName, p.LastName  
@@ -180,7 +180,7 @@ WHERE TerritoryID IS NOT NULL AND SalesYTD <> 0;
 ### <a name="d-ranking-rows-within-a-partition"></a>D: 파티션 내의 행 순위 지정  
 이 예는 총 판매액에 따라 각 영업 지역에서 영업 담당자의 순위를 매깁니다. `DENSE_RANK`는 `SalesTerritoryGroup`으로 행 집합을 분할하고 `SalesAmountQuota`로 결과 집합을 정렬합니다.  
   
-```  
+```sql  
 -- Uses AdventureWorks  
   
 SELECT LastName, SUM(SalesAmountQuota) AS TotalSales, SalesTerritoryGroup,  

@@ -15,12 +15,12 @@ helpviewer_keywords:
 ms.assetid: 298a7361-dc9a-4902-9b1e-49a093cd831d
 author: MightyPen
 ms.author: genemi
-ms.openlocfilehash: 2299352c6047dd177c900fe0747245b27037d2ab
-ms.sourcegitcommit: e700497f962e4c2274df16d9e651059b42ff1a10
+ms.openlocfilehash: ce7382722999e7120cafc3fcc7aeff496d1b97c8
+ms.sourcegitcommit: cc23d8646041336d119b74bf239a6ac305ff3d31
 ms.translationtype: HT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 08/17/2020
-ms.locfileid: "88496344"
+ms.lasthandoff: 09/23/2020
+ms.locfileid: "91116552"
 ---
 # <a name="value-method-xml-data-type"></a>value() 메서드(xml 데이터 형식)
 [!INCLUDE [SQL Server SQL Database](../../includes/applies-to-version/sql-asdb.md)]
@@ -31,8 +31,7 @@ ms.locfileid: "88496344"
   
 ## <a name="syntax"></a>구문  
   
-```  
-  
+```syntaxsql
 value (XQuery, SQLType)  
 ```  
   
@@ -55,9 +54,9 @@ value (XQuery, SQLType)
 ### <a name="a-using-the-value-method-against-an-xml-type-variable"></a>A. xml 유형 변수에 대해 value() 메서드 사용  
  다음 예에서 XML 인스턴스는 `xml` 유형의 변수에 저장됩니다. `value()` 메서드는 XML에서 `ProductID` 특성 값을 검색합니다. 그런 다음 이 값은 `int` 변수에 할당됩니다.  
   
-```  
-DECLARE @myDoc xml  
-DECLARE @ProdID int  
+```sql
+DECLARE @myDoc XML  
+DECLARE @ProdID INT  
 SET @myDoc = '<Root>  
 <ProductDescription ProductID="1" ProductName="Road Bike">  
 <Features>  
@@ -78,13 +77,13 @@ SELECT @ProdID
 ### <a name="b-using-the-value-method-to-retrieve-a-value-from-an-xml-type-column"></a>B. value() 메서드를 사용하여 xml 유형 열에서 값 검색  
  `AdventureWorks` 데이터베이스의 **xml** 유형 열(`CatalogDescription`)에 대해서는 다음 쿼리가 지정됩니다. 이 쿼리는 열에 저장된 각 XML 인스턴스로부터 `ProductModelID` 특성 값을 검색합니다.  
   
-```  
+```sql
 SELECT CatalogDescription.value('             
     declare namespace PD="https://schemas.microsoft.com/sqlserver/2004/07/adventure-works/ProductModelDescription";             
        (/PD:ProductDescription/@ProductModelID)[1]', 'int') AS Result             
 FROM Production.ProductModel             
 WHERE CatalogDescription IS NOT NULL             
-ORDER BY Result desc             
+ORDER BY Result DESC             
 ```  
   
  이전 쿼리에서 다음을 유의하세요.  
@@ -107,10 +106,10 @@ ORDER BY Result desc
   
  이 쿼리는 여러 기능 중 하나로 보증 정보(<`Warranty`> 요소)가 포함된 제품 모델 ID를 XML 인스턴스로부터 검색합니다. `WHERE` 절의 조건에서는 `exist()` 메서드를 사용하여 이 조건을 만족하는 행만 검색합니다.  
   
-```  
+```sql
 SELECT CatalogDescription.value('  
      declare namespace PD="https://schemas.microsoft.com/sqlserver/2004/07/adventure-works/ProductModelDescription";  
-           (/PD:ProductDescription/@ProductModelID)[1] ', 'int') as Result  
+           (/PD:ProductDescription/@ProductModelID)[1] ', 'int') AS Result  
 FROM  Production.ProductModel  
 WHERE CatalogDescription.exist('  
      declare namespace PD="https://schemas.microsoft.com/sqlserver/2004/07/adventure-works/ProductModelDescription";  
@@ -140,8 +139,8 @@ Result
 ### <a name="d-using-the-exist-method-instead-of-the-value-method"></a>D. value() 메서드 대신 exist() 메서드 사용  
  성능상의 이유로 조건자에서 `value()` 메서드를 사용하여 관계형 값과 비교하는 대신 `exist()`에서 `sql:column()`를 사용하세요. 예를 들면 다음과 같습니다.  
   
-```  
-CREATE TABLE T (c1 int, c2 varchar(10), c3 xml)  
+```sql
+CREATE TABLE T (c1 INT, c2 VARCHAR(10), c3 XML)  
 GO  
   
 SELECT c1, c2, c3   
@@ -152,7 +151,7 @@ GO
   
  다음은 이에 대한 예입니다.  
   
-```  
+```sql
 SELECT c1, c2, c3   
 FROM T  
 WHERE c3.exist( '/root[@a=sql:column("c1")]') = 1  

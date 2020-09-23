@@ -6,16 +6,16 @@ ms.date: 06/13/2017
 ms.prod: sql
 ms.reviewer: ''
 ms.technology: high-availability
-ms.topic: conceptual
+ms.topic: how-to
 ms.assetid: c1862d8a-5f82-4647-a280-3e588b82a6dc
 author: rothja
 ms.author: jroth
-ms.openlocfilehash: 379d95973ebfad021fec8aa89cf9e06b392c19f4
-ms.sourcegitcommit: f7ac1976d4bfa224332edd9ef2f4377a4d55a2c9
+ms.openlocfilehash: bfdb3ac79186285164650387e5fa295978eb09ab
+ms.sourcegitcommit: cc23d8646041336d119b74bf239a6ac305ff3d31
 ms.translationtype: HT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 07/02/2020
-ms.locfileid: "85900953"
+ms.lasthandoff: 09/23/2020
+ms.locfileid: "91115809"
 ---
 # <a name="sql-server-resource-dll-health-diagnostic-logs-for-availability-groups"></a>가용성 그룹에 대한 SQL Server 리소스 DLL 상태 진단 로그
 [!INCLUDE [SQL Server](../../../includes/applies-to-version/sqlserver.md)]

@@ -27,12 +27,12 @@ helpviewer_keywords:
 ms.assetid: 2616d800-4853-4cf1-af77-d32d68d8c2ef
 author: VanMSFT
 ms.author: vanto
-ms.openlocfilehash: 265e4692930874fb7458a4dd7e193ec1c0851c18
-ms.sourcegitcommit: e700497f962e4c2274df16d9e651059b42ff1a10
+ms.openlocfilehash: 84099c48344e27070433483eeac829640c3ce4c2
+ms.sourcegitcommit: cc23d8646041336d119b74bf239a6ac305ff3d31
 ms.translationtype: HT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 08/17/2020
-ms.locfileid: "88459104"
+ms.lasthandoff: 09/23/2020
+ms.locfileid: "91115901"
 ---
 # <a name="select-clause-transact-sql"></a>SELECT 절(Transact-SQL)
 [!INCLUDE [SQL Server SQL Database](../../includes/applies-to-version/sql-asdb.md)]
@@ -44,7 +44,6 @@ ms.locfileid: "88459104"
 ## <a name="syntax"></a>구문  
   
 ```syntaxsql
-  
 SELECT [ ALL | DISTINCT ]  
 [ TOP ( expression ) [ PERCENT ] [ WITH TIES ] ]   
 <select_list>   
@@ -122,13 +121,13 @@ SELECT [ ALL | DISTINCT ]
   
  다음 예에서는 `Location`라는 메서드를 호출하여 `point` 테이블에서 `Cities` 형식으로 정의되는 `Distance` 열에 대한 값을 선택하는 방법을 보여 줍니다.  
   
-```  
+```sql
 CREATE TABLE dbo.Cities (  
-     Name varchar(20),  
-     State varchar(20),  
-     Location point );  
+     Name VARCHAR(20),  
+     State VARCHAR(20),  
+     Location POINT);  
 GO  
-DECLARE @p point (32, 23), @distance float;  
+DECLARE @p POINT (32, 23), @distance FLOAT;  
 GO  
 SELECT Location.Distance (@p)  
 FROM Cities;  

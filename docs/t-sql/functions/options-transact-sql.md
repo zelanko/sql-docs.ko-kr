@@ -20,12 +20,12 @@ helpviewer_keywords:
 ms.assetid: 3d5c7f6e-157b-4231-bbb4-4645a11078b3
 author: julieMSFT
 ms.author: jrasnick
-ms.openlocfilehash: 12e2d3418a021a3ffee5db530d35f0fc8522dec1
-ms.sourcegitcommit: e700497f962e4c2274df16d9e651059b42ff1a10
+ms.openlocfilehash: aba9b19dd9788eef4f322db198dd7f8f3789a8c8
+ms.sourcegitcommit: cc23d8646041336d119b74bf239a6ac305ff3d31
 ms.translationtype: HT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 08/17/2020
-ms.locfileid: "88417229"
+ms.lasthandoff: 09/23/2020
+ms.locfileid: "91115873"
 ---
 # <a name="x40x40options-transact-sql"></a>&#x40;&#x40;옵션(Transact-SQL)
 [!INCLUDE [SQL Server SQL Database](../../includes/applies-to-version/sql-asdb.md)]
@@ -36,7 +36,7 @@ ms.locfileid: "88417229"
   
 ## <a name="syntax"></a>구문  
   
-```  
+```syntaxsql  
 @@OPTIONS  
 ```  
   
@@ -59,7 +59,7 @@ ms.locfileid: "88417229"
 ### <a name="a-demonstration-of-how-changes-affect-behavior"></a>A. 변경이 동작에 미치는 영향 설명  
  다음 예에서는 두 가지 **CONCAT_NULL_YIELDS_NULL** 옵션 설정으로 연결 동작의 차이점을 설명합니다.  
   
-```  
+```sql  
 SELECT @@OPTIONS AS OriginalOptionsValue;  
 SET CONCAT_NULL_YIELDS_NULL OFF;  
 SELECT 'abc' + NULL AS ResultWhen_OFF, @@OPTIONS AS OptionsValueWhen_OFF;  
@@ -71,7 +71,7 @@ SELECT 'abc' + NULL AS ResultWhen_ON, @@OPTIONS AS OptionsValueWhen_ON;
 ### <a name="b-testing-a-client-nocount-setting"></a>B. 클라이언트 NOCOUNT 설정 테스트  
  다음 예에서는 `NOCOUNT``ON`을 설정한 후 `@@OPTIONS`의 값을 테스트합니다. `NOCOUNT``ON` 옵션은 세션 내의 모든 문 실행 시 영향 받은 행의 수를 표시하는 메시지를 요청 클라이언트로 다시 보내지 않도록 합니다. `@@OPTIONS`의 값은 `512`(0x0200)로 설정되며 이는 NOCOUNT 옵션을 나타냅니다. 이 예에서는 클라이언트에서 NOCOUNT 옵션을 사용할 수 있는지 테스트합니다. 이러한 방법은 예를 들어 클라이언트에서 성능 차이를 추적하는 데 도움이 될 수 있습니다.  
   
-```  
+```sql  
 SET NOCOUNT ON  
 IF @@OPTIONS & 512 > 0   
 RAISERROR ('Current user has SET NOCOUNT turned on.', 1, 1)  

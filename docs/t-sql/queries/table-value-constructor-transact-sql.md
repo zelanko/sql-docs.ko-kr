@@ -18,12 +18,12 @@ helpviewer_keywords:
 ms.assetid: e57cd31d-140e-422f-8178-2761c27b9deb
 author: VanMSFT
 ms.author: vanto
-ms.openlocfilehash: 9ac95b5d2fc71636ca55a29e0d82a2a35f13b816
-ms.sourcegitcommit: e700497f962e4c2274df16d9e651059b42ff1a10
+ms.openlocfilehash: c82909bb5a128ee0a1dff9fa48b0a213a3c931e4
+ms.sourcegitcommit: cc23d8646041336d119b74bf239a6ac305ff3d31
 ms.translationtype: HT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 08/17/2020
-ms.locfileid: "88306746"
+ms.lasthandoff: 09/23/2020
+ms.locfileid: "91115411"
 ---
 # <a name="table-value-constructor-transact-sql"></a>테이블 값 생성자(Transact-SQL)
 [!INCLUDE [SQL Server SQL Database](../../includes/applies-to-version/sql-asdb.md)]
@@ -35,7 +35,6 @@ ms.locfileid: "88306746"
 ## <a name="syntax"></a>구문  
   
 ```syntaxsql
-  
 VALUES ( <row value expression list> ) [ ,...n ]   
   
 <row value expression list> ::=  
@@ -75,7 +74,7 @@ VALUES ( <row value expression list> ) [ ,...n ]
 ```sql
 USE AdventureWorks2012;  
 GO  
-CREATE TABLE dbo.MyProducts (Name varchar(50), ListPrice money);  
+CREATE TABLE dbo.MyProducts (Name VARCHAR(50), ListPrice MONEY);  
 GO  
 -- This statement fails because the third values list contains multiple columns in the subquery.  
 INSERT INTO dbo.MyProducts (Name, ListPrice)  
@@ -100,7 +99,7 @@ GO
  다중 행 INSERT  문에 지정되는 값은 UNION  ALL  구문의 데이터 형식 변환 속성에 따릅니다. 그 결과 일치하지 않는 형식은 [우선 순위](../../t-sql/data-types/data-type-precedence-transact-sql.md)가 높은 형식으로 암시적으로 변환됩니다. 이때 변환이 암시적으로 지원되지 않으면 오류가 반환됩니다. 예를 들어 다음 명령문은 **char** 형식의 열에 정수 값과 문자 값을 하나씩 삽입합니다.  
   
 ```sql
-CREATE TABLE dbo.t (a int, b char);  
+CREATE TABLE dbo.t (a INT, b CHAR);  
 GO  
 INSERT INTO dbo.t VALUES (1,'a'), (2, 1);  
 GO  
@@ -185,7 +184,7 @@ GROUP BY Change;
   다음 예제에서는 테이블 값 생성자를 파생 테이블로 사용하는 방법을 보여줍니다. 이를 통해 단일 테이블 값 생성자에서 1,000개가 넘는 행을 삽입할 수 있습니다.
   
 ```sql
-CREATE TABLE dbo.Test ([Value] int);  
+CREATE TABLE dbo.Test ([Value] INT);  
   
 INSERT INTO dbo.Test ([Value])  
   SELECT drvd.[NewVal]

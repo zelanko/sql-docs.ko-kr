@@ -33,12 +33,12 @@ ms.assetid: cdc45cd8-e9b6-4648-8417-892fbeab15af
 author: VanMSFT
 ms.author: vanto
 monikerRange: '>=aps-pdw-2016||=azuresqldb-current||=azure-sqldw-latest||>=sql-server-2016||=sqlallproducts-allversions||>=sql-server-linux-2017||=azuresqldb-mi-current'
-ms.openlocfilehash: 38add99e2bbb16aa0d71394317a06c4850fe21a2
-ms.sourcegitcommit: e700497f962e4c2274df16d9e651059b42ff1a10
+ms.openlocfilehash: 8cd51d8b728fd12bfcab2a853c6bf3a8a2b7c214
+ms.sourcegitcommit: cc23d8646041336d119b74bf239a6ac305ff3d31
 ms.translationtype: HT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 08/17/2020
-ms.locfileid: "88459211"
+ms.lasthandoff: 09/23/2020
+ms.locfileid: "91116292"
 ---
 # <a name="is-null-transact-sql"></a>IS NULL(Transact-SQL)
 [!INCLUDE [sql-asdb-asdbmi-asa-pdw](../../includes/applies-to-version/sql-asdb-asdbmi-asa-pdw.md)]
@@ -49,7 +49,7 @@ ms.locfileid: "88459211"
   
 ## <a name="syntax"></a>구문  
   
-```  
+```syntaxsql
 expression IS [ NOT ] NULL  
 ```  
   
@@ -76,7 +76,7 @@ expression IS [ NOT ] NULL
 ## <a name="examples"></a>예제  
  다음 예에서는 무게가 `10`파운드 미만이거나 색상을 알 수 없는 모든 제품에 대해 이름과 무게를 반환하거나 `NULL`을 반환합니다.  
   
-```  
+```sql
 USE AdventureWorks2012;  
 GO  
 SELECT Name, Weight, Color  
@@ -89,7 +89,7 @@ GO
 ## <a name="examples-sssdwfull-and-sspdw"></a>예: [!INCLUDE[ssSDWfull](../../includes/sssdwfull-md.md)] 및 [!INCLUDE[ssPDW](../../includes/sspdw-md.md)]  
  다음 예제에서는 중간 이니셜이 있는 모든 직원의 전체 이름을 반환합니다.  
   
-```  
+```sql
 -- Uses AdventureWorks  
   
 SELECT FirstName, LastName, MiddleName  

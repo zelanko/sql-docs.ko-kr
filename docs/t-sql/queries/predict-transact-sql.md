@@ -19,12 +19,12 @@ helpviewer_keywords:
 author: dphansen
 ms.author: davidph
 monikerRange: '>=sql-server-2017||=azuresqldb-current||>=sql-server-linux-2017||=azuresqldb-mi-current||>=azure-sqldw-latest||=sqlallproducts-allversions'
-ms.openlocfilehash: be453944791a479e12f6723c1ad6f5abded12204
-ms.sourcegitcommit: e700497f962e4c2274df16d9e651059b42ff1a10
+ms.openlocfilehash: 6a21506caf12537eb8acab96c97fa53c62b7fadf
+ms.sourcegitcommit: cc23d8646041336d119b74bf239a6ac305ff3d31
 ms.translationtype: HT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 08/17/2020
-ms.locfileid: "88459105"
+ms.lasthandoff: 09/23/2020
+ms.locfileid: "91116278"
 ---
 # <a name="predict-transact-sql"></a>PREDICT(Transact-SQL)
 
@@ -174,7 +174,7 @@ WITH 절을 사용하여 `PREDICT` 함수에서 반환되는 출력의 스키마
 ```sql
 SELECT d.*, p.Score
 FROM PREDICT(MODEL = @model,
-    DATA = dbo.mytable AS d) WITH (Score float) AS p;
+    DATA = dbo.mytable AS d) WITH (Score FLOAT) AS p;
 ```
 
 :::moniker-end
@@ -182,11 +182,11 @@ FROM PREDICT(MODEL = @model,
 ::: moniker range=">=azure-sqldw-latest||=sqlallproducts-allversions"
 
 ```sql
-DECLARE @model varbinary(max) = (SELECT test_model FROM scoring_model WHERE model_id = 1);
+DECLARE @model VARBINARY(max) = (SELECT test_model FROM scoring_model WHERE model_id = 1);
 
 SELECT d.*, p.Score
 FROM PREDICT(MODEL = @model,
-    DATA = dbo.mytable AS d) WITH (Score float) AS p;
+    DATA = dbo.mytable AS d) WITH (Score FLOAT) AS p;
 ```
 
 ::: moniker-end
@@ -207,7 +207,7 @@ CREATE VIEW predictions
 AS
 SELECT d.*, p.Score
 FROM PREDICT(MODEL = (SELECT test_model FROM scoring_model WHERE model_id = 1),
-             DATA = dbo.mytable AS d) WITH (Score float) AS p;
+             DATA = dbo.mytable AS d) WITH (Score FLOAT) AS p;
 ```
 
 :::moniker-end
@@ -217,11 +217,11 @@ FROM PREDICT(MODEL = (SELECT test_model FROM scoring_model WHERE model_id = 1),
 예측에 대한 일반적인 사용 사례는 입력 데이터에 대한 점수를 생성한 다음, 예측된 값을 테이블에 삽입하는 것입니다. 다음 예제에서는 호출 애플리케이션이 저장 프로시저를 사용하여 예측 값이 포함된 행을 테이블에 삽입하는 것으로 가정합니다.
 
 ```sql
-DECLARE @model varbinary(max) = (SELECT model FROM scoring_model WHERE model_name = 'ScoringModelV1');
+DECLARE @model VARBINARY(max) = (SELECT model FROM scoring_model WHERE model_name = 'ScoringModelV1');
 
 INSERT INTO loan_applications (c1, c2, c3, c4, score)
 SELECT d.c1, d.c2, d.c3, d.c4, p.score
-FROM PREDICT(MODEL = @model, DATA = dbo.mytable AS d) WITH(score float) AS p;
+FROM PREDICT(MODEL = @model, DATA = dbo.mytable AS d) WITH(score FLOAT) AS p;
 ```
 
 - `PREDICT`의 결과는 PredictionResults라는 테이블에 저장됩니다. 
