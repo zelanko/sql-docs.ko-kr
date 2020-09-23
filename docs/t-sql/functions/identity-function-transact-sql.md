@@ -22,12 +22,12 @@ helpviewer_keywords:
 ms.assetid: ebec77eb-fc02-4feb-b6c5-f0098d43ccb6
 author: VanMSFT
 ms.author: vanto
-ms.openlocfilehash: 6f8cd22140dd78ace01d685498306885b0081f21
-ms.sourcegitcommit: e700497f962e4c2274df16d9e651059b42ff1a10
+ms.openlocfilehash: 364bcd6eb68ca7c529c56fae70109b79cbc1dc18
+ms.sourcegitcommit: cc23d8646041336d119b74bf239a6ac305ff3d31
 ms.translationtype: HT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 08/17/2020
-ms.locfileid: "88365239"
+ms.lasthandoff: 09/23/2020
+ms.locfileid: "91114734"
 ---
 # <a name="identity-function-transact-sql"></a>IDENTITY(함수)(Transact-SQL)
 [!INCLUDE [SQL Server](../../includes/applies-to-version/sqlserver.md)]
@@ -42,7 +42,6 @@ ms.locfileid: "88365239"
 ## <a name="syntax"></a>구문  
   
 ```syntaxsql
-  
 IDENTITY (data_type [ , seed , increment ] ) AS column_name  
 ```  
   
@@ -67,7 +66,7 @@ IDENTITY (data_type [ , seed , increment ] ) AS column_name
 ## <a name="remarks"></a>설명  
  이 함수는 테이블에 열을 만들기 때문에 다음 방법 중 하나를 사용하여 선택 목록에서 열 이름을 지정해야 합니다.  
   
-```  
+```sql  
 --(1)  
 SELECT IDENTITY(int, 1,1) AS ID_Num  
 INTO NewTable  
@@ -77,13 +76,12 @@ FROM OldTable;
 SELECT ID_Num = IDENTITY(int, 1, 1)  
 INTO NewTable  
 FROM OldTable;  
-  
 ```  
   
 ## <a name="examples"></a>예제  
  다음 예는 [!INCLUDE[ssSampleDBnormal](../../includes/sssampledbnormal-md.md)] 데이터베이스의 `Contact` 테이블에 있는 모든 행을 `NewContact`라는 새 테이블에 삽입합니다. IDENTITY 함수는 `NewContact` 테이블에서 ID를 1 대신 100부터 시작하는 데 사용됩니다.  
   
-```  
+```sql  
 USE AdventureWorks2012;  
 GO  
 IF OBJECT_ID (N'Person.NewContact', N'U') IS NOT NULL  
@@ -101,7 +99,6 @@ ALTER DATABASE AdventureWorks2012 SET RECOVERY FULL;
 GO  
 SELECT ContactNum, First, Last FROM Person.NewContact;  
 GO  
-  
 ```  
   
 ## <a name="see-also"></a>참고 항목  

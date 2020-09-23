@@ -1,20 +1,20 @@
 ---
 title: 사용자 및 작업 영역 설정
 description: 설정을 사용하여 Azure Data Studio의 편집기, 사용자 인터페이스 및 기능 동작을 원하는 대로 사용자 지정하는 방법을 알아봅니다.
-ms.custom: seodec18
-ms.date: 09/24/2018
 ms.prod: azure-data-studio
 ms.technology: azure-data-studio
-ms.reviewer: alayu, maghan, sstein
 ms.topic: conceptual
 author: yualan
 ms.author: alayu
-ms.openlocfilehash: 2196bd9c4445f700fd1a697db3edcb5879b1f44b
-ms.sourcegitcommit: dc8a30a4a27e15fc6671ca2674da9b7c637ec255
+ms.reviewer: maghan, sstein
+ms.custom: seodec18
+ms.date: 09/24/2018
+ms.openlocfilehash: 05ed5f644b26c970383197376bce481a96ba5742
+ms.sourcegitcommit: cc23d8646041336d119b74bf239a6ac305ff3d31
 ms.translationtype: HT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 08/21/2020
-ms.locfileid: "88746163"
+ms.lasthandoff: 09/23/2020
+ms.locfileid: "91114518"
 ---
 # <a name="modify-user-and-workspace-settings"></a>사용자 및 작업 영역 설정 수정
 
@@ -55,7 +55,6 @@ Azure Data Studio는 설정에 대해 두 가지 범위를 제공합니다.
 Azure Data Studio는 기본적으로 종료될 때 저장하지 않은 파일 변경 내용을 기억합니다. 이 기능은 Visual Studio Code의 Hot Exit 기능과 동일합니다.
 
 기본적으로 Hot Exit는 해제되어 있습니다. `files.hotExit` 설정을 편집하여 Hot Exit를 사용하도록 설정합니다. 자세한 내용은 [Hot Exit(Visual Studio Code 설명서)](https://code.visualstudio.com/docs/editor/codebasics#_hot-exit)를 참조하세요.
-
 
 ## <a name="tab-color"></a>탭 색
 

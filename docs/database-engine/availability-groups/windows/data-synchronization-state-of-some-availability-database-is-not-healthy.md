@@ -6,7 +6,7 @@ ms.date: 05/17/2016
 ms.prod: sql
 ms.reviewer: ''
 ms.technology: high-availability
-ms.topic: conceptual
+ms.topic: end-user-help
 f1_keywords:
 - sql13.swb.agdashboard.drp3datasynchealthy.issues.f1
 helpviewer_keywords:
@@ -14,12 +14,12 @@ helpviewer_keywords:
 ms.assetid: 89f95d15-33c6-4768-bccd-9dbf8c4f49a9
 author: MashaMSFT
 ms.author: mathoma
-ms.openlocfilehash: 0acd1eb801ac96b0d95eb6a9c0ce8371b802aa16
-ms.sourcegitcommit: f7ac1976d4bfa224332edd9ef2f4377a4d55a2c9
+ms.openlocfilehash: 38b2a286e7a42c0cc3ad255d66225dea10caca79
+ms.sourcegitcommit: cc23d8646041336d119b74bf239a6ac305ff3d31
 ms.translationtype: HT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 07/02/2020
-ms.locfileid: "85899864"
+ms.lasthandoff: 09/23/2020
+ms.locfileid: "91113263"
 ---
 # <a name="data-synchronization-state-of-some-availability-database-is-not-healthy"></a>일부 가용성 데이터베이스의 데이터 동기화 상태가 정상이 아님
 [!INCLUDE [SQL Server](../../../includes/applies-to-version/sqlserver.md)]

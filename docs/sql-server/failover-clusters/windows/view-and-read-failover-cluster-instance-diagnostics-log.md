@@ -6,16 +6,16 @@ ms.date: 03/04/2017
 ms.prod: sql
 ms.reviewer: ''
 ms.technology: high-availability
-ms.topic: conceptual
+ms.topic: how-to
 ms.assetid: 68074bd5-be9d-4487-a320-5b51ef8e2b2d
 author: MashaMSFT
 ms.author: mathoma
-ms.openlocfilehash: e2f84b38751b57e1fe9ebba525e636da45a59954
-ms.sourcegitcommit: f7ac1976d4bfa224332edd9ef2f4377a4d55a2c9
+ms.openlocfilehash: 811b996732dac0f8c6bc0c71e9c8976dc3244085
+ms.sourcegitcommit: cc23d8646041336d119b74bf239a6ac305ff3d31
 ms.translationtype: HT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 07/02/2020
-ms.locfileid: "85896672"
+ms.lasthandoff: 09/23/2020
+ms.locfileid: "91114621"
 ---
 # <a name="view-and-read-failover-cluster-instance-diagnostics-log"></a>장애 조치(failover) 클러스터 인스턴스 진단 로그 보기 및 읽기
 [!INCLUDE [SQL Server](../../../includes/applies-to-version/sqlserver.md)]

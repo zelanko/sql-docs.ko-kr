@@ -6,7 +6,7 @@ ms.date: 06/30/2020
 ms.prod: sql
 ms.reviewer: ''
 ms.technology: high-availability
-ms.topic: conceptual
+ms.topic: how-to
 helpviewer_keywords:
 - failover modes [SQL Server]
 - Availability Groups [SQL Server], deploying
@@ -15,12 +15,12 @@ helpviewer_keywords:
 ms.assetid: 619a826f-8e65-48eb-8c34-39497d238279
 author: MashaMSFT
 ms.author: mathoma
-ms.openlocfilehash: 8a56789831d79d33d071eb493c76af8ffbd58ad3
-ms.sourcegitcommit: f7ac1976d4bfa224332edd9ef2f4377a4d55a2c9
+ms.openlocfilehash: 85baad8d5885def543cda38d5f0c7e923990d62b
+ms.sourcegitcommit: cc23d8646041336d119b74bf239a6ac305ff3d31
 ms.translationtype: HT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 07/02/2020
-ms.locfileid: "85896184"
+ms.lasthandoff: 09/23/2020
+ms.locfileid: "91114558"
 ---
 # <a name="change-the-failover-mode-for-a-replica-within-an-always-on-availability-group"></a>Always On 가용성 그룹 내의 복제본에 대한 장애 조치(failover) 모드 변경
 [!INCLUDE [SQL Server](../../../includes/applies-to-version/sqlserver.md)]

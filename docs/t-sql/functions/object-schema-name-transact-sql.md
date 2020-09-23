@@ -22,12 +22,12 @@ helpviewer_keywords:
 ms.assetid: 5ba90bb9-d045-4164-963e-e9e96c0b1e8b
 author: julieMSFT
 ms.author: jrasnick
-ms.openlocfilehash: f68dea4c08218aeafd60c8cb4d951b60c8e1cdfa
-ms.sourcegitcommit: e700497f962e4c2274df16d9e651059b42ff1a10
+ms.openlocfilehash: f38e7c67fc458373e7887865de1b48bdd9324d0f
+ms.sourcegitcommit: cc23d8646041336d119b74bf239a6ac305ff3d31
 ms.translationtype: HT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 08/17/2020
-ms.locfileid: "88479674"
+ms.lasthandoff: 09/23/2020
+ms.locfileid: "91114748"
 ---
 # <a name="object_schema_name-transact-sql"></a>OBJECT_SCHEMA_NAME(Transact-SQL)
 [!INCLUDE [sql-asdb-asdbmi-asa-pdw](../../includes/applies-to-version/sql-asdb-asdbmi-asa.md)]
@@ -39,7 +39,6 @@ ms.locfileid: "88479674"
 ## <a name="syntax"></a>구문  
   
 ```syntaxsql
-  
 OBJECT_SCHEMA_NAME ( object_id [, database_id ] )  
 ```  
   
@@ -73,15 +72,13 @@ OBJECT_SCHEMA_NAME ( object_id [, database_id ] )
 ```sql
 SELECT DISTINCT OBJECT_SCHEMA_NAME(object_id)  
 FROM master.sys.objects;  
-  
 ```  
   
  다음 예에서는 `master` 함수에서 `OBJECT_SCHEMA_NAME` 데이터베이스에 대한 데이터베이스 ID를 지정하고 올바른 결과를 반환합니다.  
   
 ```sql
 SELECT DISTINCT OBJECT_SCHEMA_NAME(object_id, 1) AS schema_name  
-FROM master.sys.objects;  
-  
+FROM master.sys.objects;   
 ```  
   
 ## <a name="examples"></a>예제  

@@ -6,7 +6,7 @@ ms.date: 05/17/2016
 ms.prod: sql
 ms.reviewer: ''
 ms.technology: high-availability
-ms.topic: conceptual
+ms.topic: reference
 helpviewer_keywords:
 - Availability Groups [SQL Server], deploying
 - Availability Groups [SQL Server], configuring
@@ -14,12 +14,12 @@ helpviewer_keywords:
 ms.assetid: 7f89fab8-6ee2-4273-9de0-e594bfb9407f
 author: MashaMSFT
 ms.author: mathoma
-ms.openlocfilehash: cda9004b2725d19949a5fb94fc4add43960aa7ca
-ms.sourcegitcommit: 827ad02375793090fa8fee63cc372d130f11393f
+ms.openlocfilehash: 1857f6e61a6ab1cdde155b0111bf201aa557bc26
+ms.sourcegitcommit: cc23d8646041336d119b74bf239a6ac305ff3d31
 ms.translationtype: HT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 09/04/2020
-ms.locfileid: "89480915"
+ms.lasthandoff: 09/23/2020
+ms.locfileid: "91113439"
 ---
 # <a name="reference-for-the-creation-and-configuration-of-always-on-availability-groups"></a>Always On 가용성 그룹 생성 및 구성에 대한 참조
 [!INCLUDE [SQL Server](../../../includes/applies-to-version/sqlserver.md)]

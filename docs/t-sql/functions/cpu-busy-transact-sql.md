@@ -24,12 +24,12 @@ helpviewer_keywords:
 ms.assetid: 81ae0e64-79fa-4a74-9aa5-37045c4cd211
 author: markingmyname
 ms.author: maghan
-ms.openlocfilehash: ec94c40f39d2fe0dedfeef6d0b1edd37f40af5c1
-ms.sourcegitcommit: e700497f962e4c2274df16d9e651059b42ff1a10
+ms.openlocfilehash: 8d921cdb5e8550942ade08f0e68d0337864d2e38
+ms.sourcegitcommit: cc23d8646041336d119b74bf239a6ac305ff3d31
 ms.translationtype: HT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 08/17/2020
-ms.locfileid: "88366479"
+ms.lasthandoff: 09/23/2020
+ms.locfileid: "91114850"
 ---
 # <a name="x40x40cpu_busy-transact-sql"></a>&#x40;&#x40;CPU_BUSY(Transact-SQL)
 
@@ -61,7 +61,7 @@ CPU 활동을 포함하여 여러 [!INCLUDE[ssNoVersion](../../includes/ssnovers
 이 예제에서는 현재 날짜 및 시간으로 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] CPU 작업을 반환합니다. 이 예제에서는 값 중 하나를 `float` 데이터 형식으로 변환합니다. 그러면 마이크로초 단위로 값을 계산할 때 산술 오버플로 문제를 방지합니다.
   
 ```sql
-SELECT @@CPU_BUSY * CAST(@@TIMETICKS AS float) AS 'CPU microseconds',   
+SELECT @@CPU_BUSY * CAST(@@TIMETICKS AS FLOAT) AS 'CPU microseconds',   
    GETDATE() AS 'As of' ;  
 ```  
   

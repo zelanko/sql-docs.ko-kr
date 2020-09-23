@@ -40,12 +40,12 @@ ms.assetid: bb394abe-cae6-4905-b5c6-8daaded77742
 author: VanMSFT
 ms.author: vanto
 monikerRange: '>=aps-pdw-2016||=azuresqldb-current||=azure-sqldw-latest||>=sql-server-2016||=sqlallproducts-allversions||>=sql-server-linux-2017||=azuresqldb-mi-current'
-ms.openlocfilehash: 8fe16aee48a1fac52943559c2f35e3fb5a2b20ac
-ms.sourcegitcommit: e700497f962e4c2274df16d9e651059b42ff1a10
+ms.openlocfilehash: 244931d2f04a893e91a0fa85c1c0158a181b4996
+ms.sourcegitcommit: cc23d8646041336d119b74bf239a6ac305ff3d31
 ms.translationtype: HT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 08/17/2020
-ms.locfileid: "88459129"
+ms.lasthandoff: 09/23/2020
+ms.locfileid: "91114786"
 ---
 # <a name="select---order-by-clause-transact-sql"></a>SELECT - ORDER BY 절(Transact-SQL)
 
@@ -235,7 +235,6 @@ GO
 SELECT ProductID, Name, Color  
 FROM Production.Product  
 ORDER BY ListPrice;  
-  
 ```  
   
 #### <a name="c-specifying-an-alias-as-the-sort-column"></a>C. 별칭을 정렬 열로 지정  
@@ -248,7 +247,6 @@ SELECT name, SCHEMA_NAME(schema_id) AS SchemaName
 FROM sys.objects  
 WHERE type = 'U'  
 ORDER BY SchemaName;  
-  
 ```  
   
 #### <a name="d-specifying-an-expression-as-the-sort-column"></a>D. 식을 정렬 열로 지정  
@@ -260,7 +258,6 @@ GO
 SELECT BusinessEntityID, JobTitle, HireDate  
 FROM HumanResources.Employee  
 ORDER BY DATEPART(year, HireDate);  
-  
 ```  
   
 ###  <a name="specifying-ascending-and-descending-sort-order"></a><a name="SortOrder"></a> 오름차순 또는 내림차순 정렬 지정  
@@ -274,7 +271,6 @@ GO
 SELECT ProductID, Name FROM Production.Product  
 WHERE Name LIKE 'Lock Washer%'  
 ORDER BY ProductID DESC;  
-  
 ```  
   
 #### <a name="b-specifying-an-ascending-order"></a>B. 오름차순 지정  
@@ -286,7 +282,6 @@ GO
 SELECT ProductID, Name FROM Production.Product  
 WHERE Name LIKE 'Lock Washer%'  
 ORDER BY Name ASC ;  
-  
 ```  
   
 #### <a name="c-specifying-both-ascending-and-descending-order"></a>C. 오름차순과 내림차순 둘 다 지정  
@@ -298,7 +293,6 @@ GO
 SELECT LastName, FirstName FROM Person.Person  
 WHERE LastName LIKE 'R%'  
 ORDER BY FirstName ASC, LastName DESC ;  
-  
 ```  
   
 ###  <a name="specifying-a-collation"></a><a name="Collation"></a> 데이터 정렬 지정  
@@ -307,7 +301,7 @@ ORDER BY FirstName ASC, LastName DESC ;
 ```sql
 USE tempdb;  
 GO  
-CREATE TABLE #t1 (name nvarchar(15) COLLATE Latin1_General_CI_AI)  
+CREATE TABLE #t1 (name NVARCHAR(15) COLLATE Latin1_General_CI_AI)  
 GO  
 INSERT INTO #t1 VALUES(N'Sánchez'),(N'Sanchez'),(N'sánchez'),(N'sanchez');  
   
@@ -319,7 +313,6 @@ ORDER BY name;
 SELECT name  
 FROM #t1  
 ORDER BY name COLLATE Latin1_General_CS_AS;  
-  
 ```  
   
 ###  <a name="specifying-a-conditional-order"></a><a name="Case"></a> 조건부 순서 지정  
@@ -331,7 +324,6 @@ FROM HumanResources.Employee
 ORDER BY CASE SalariedFlag WHEN 1 THEN BusinessEntityID END DESC  
         ,CASE WHEN SalariedFlag = 0 THEN BusinessEntityID END;  
 GO  
-  
 ```  
   
 ```sql
@@ -340,7 +332,6 @@ FROM Sales.vSalesPerson
 WHERE TerritoryName IS NOT NULL  
 ORDER BY CASE CountryRegionName WHEN 'United States' THEN TerritoryName  
          ELSE CountryRegionName END;  
-  
 ```  
   
 ###  <a name="using-order-by-in-a-ranking-function"></a><a name="Rank"></a> 순위 함수에 ORDER BY 사용  
@@ -361,7 +352,6 @@ FROM Sales.SalesPerson AS s
     INNER JOIN Person.Address AS a   
         ON a.AddressID = p.BusinessEntityID  
 WHERE TerritoryID IS NOT NULL AND SalesYTD <> 0;  
-  
 ```  
   
 ###  <a name="limiting-the-number-of-rows-returned"></a><a name="Offset"></a> 반환되는 행 수 제한  
@@ -391,7 +381,6 @@ FROM HumanResources.Department
 ORDER BY DepartmentID   
     OFFSET 0 ROWS  
     FETCH NEXT 10 ROWS ONLY;  
-  
 ```  
   
 #### <a name="b-specifying-variables-for-offset-and-fetch-values"></a>B. 변수를 사용하여 OFFSET 및 FETCH 값 지정  
@@ -401,8 +390,8 @@ ORDER BY DepartmentID
 USE AdventureWorks2012;  
 GO  
 -- Specifying variables for OFFSET and FETCH values    
-DECLARE @RowsToSkip tinyint = 2
-      , @FetchRows tinyint = 8;  
+DECLARE @RowsToSkip TINYINT = 2
+      , @FetchRows TINYINT = 8;  
 SELECT DepartmentID, Name, GroupName  
 FROM HumanResources.Department  
 ORDER BY DepartmentID ASC   
@@ -418,15 +407,14 @@ USE AdventureWorks2012;
 GO  
   
 -- Specifying expressions for OFFSET and FETCH values      
-DECLARE @StartingRowNumber tinyint = 1  
-      , @EndingRowNumber tinyint = 8;  
+DECLARE @StartingRowNumber TINYINT = 1  
+      , @EndingRowNumber TINYINT = 8;  
 SELECT DepartmentID, Name, GroupName  
 FROM HumanResources.Department  
 ORDER BY DepartmentID ASC   
     OFFSET @StartingRowNumber - 1 ROWS   
     FETCH NEXT @EndingRowNumber - @StartingRowNumber + 1 ROWS ONLY  
 OPTION ( OPTIMIZE FOR (@StartingRowNumber = 1, @EndingRowNumber = 20) );  
-  
 ```  
   
 #### <a name="d-specifying-a-constant-scalar-subquery-for-offset-and-fetch-values"></a>D. 상수 스칼라 하위 쿼리를 사용하여 OFFSET 및 FETCH 값 지정  
@@ -436,11 +424,11 @@ OPTION ( OPTIMIZE FOR (@StartingRowNumber = 1, @EndingRowNumber = 20) );
 -- Specifying a constant scalar subquery  
 USE AdventureWorks2012;  
 GO  
-CREATE TABLE dbo.AppSettings (AppSettingID int NOT NULL, PageSize int NOT NULL);  
+CREATE TABLE dbo.AppSettings (AppSettingID INT NOT NULL, PageSize INT NOT NULL);  
 GO  
 INSERT INTO dbo.AppSettings VALUES(1, 10);  
 GO  
-DECLARE @StartingRowNumber tinyint = 1;  
+DECLARE @StartingRowNumber TINYINT = 1;  
 SELECT DepartmentID, Name, GroupName  
 FROM HumanResources.Department  
 ORDER BY DepartmentID ASC   
@@ -468,8 +456,8 @@ GO
 BEGIN TRANSACTION;  
 GO  
 -- Declare and set the variables for the OFFSET and FETCH values.  
-DECLARE @StartingRowNumber int = 1  
-      , @RowCountPerPage int = 3;  
+DECLARE @StartingRowNumber INT = 1  
+      , @RowCountPerPage INT = 3;  
   
 -- Create the condition to stop the transaction after all rows have been returned.  
 WHILE (SELECT COUNT(*) FROM HumanResources.Department) >= @StartingRowNumber  

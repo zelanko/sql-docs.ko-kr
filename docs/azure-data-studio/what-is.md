@@ -9,12 +9,12 @@ ms.author: maghan
 ms.reviewer: alayu, maghan, sstein
 ms.custom: seodec18, sqlfreshmay19
 ms.date: 01/15/2020
-ms.openlocfilehash: b58a54e99c269db113bdd1e1821ba55ce3d83ff5
-ms.sourcegitcommit: 7345e4f05d6c06e1bcd73747a4a47873b3f3251f
+ms.openlocfilehash: ae2f5e45d9de660c8c03bd3b71a9e18864df5aa8
+ms.sourcegitcommit: cc23d8646041336d119b74bf239a6ac305ff3d31
 ms.translationtype: HT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 08/24/2020
-ms.locfileid: "88765512"
+ms.lasthandoff: 09/23/2020
+ms.locfileid: "91114416"
 ---
 # <a name="what-is-azure-data-studio"></a>Azure Data Studio란?
 
@@ -24,7 +24,7 @@ Azure Data Studio는 IntelliSense, 코드 조각, 원본 제어 통합 및 통�
 
 Azure Data Studio와 데이터 공급자의 소스 코드는 GitHub에서 소프트웨어를 수정 및 사용할 수 있지만 클라우드 서비스에서 재배포하거나 호스트할 수는 없도록 하는 소스 코드 EULA에 따라 사용할 수 있습니다. 자세한 내용은 [Azure Data Studio FAQ](faq.md)를 참조하세요.
 
-**[Azure Data Studio 다운로드 및 설치](./download-azure-data-studio.md?view=sql-server-ver15)**
+**[Azure Data Studio 다운로드 및 설치](./download-azure-data-studio.md)**
 
 ## <a name="sql-code-editor-with-intellisense"></a>IntelliSense를 포함하는 SQL 코드 편집기
 
@@ -53,7 +53,7 @@ Azure Data Studio 사용자 인터페이스 안에 있는 통합 터미널 창�
 기본 설치의 기능을 확장하여 Azure Data Studio 환경을 향상시킬 수 있습니다. Azure Data Studio는 데이터 관리 작업을 위한 확장성 지점과 확장 작성 지원을 제공합니다.
 
 Azure Data Studio 확장성에 대해 자세히 알아보려면 [확장성](extensibility.md)을 참조하세요.
-확장 작성에 대한 자세한 내용은 [확장 작성](extension-authoring.md)을 참조하세요.
+확장 작성에 대한 자세한 내용은 [확장 작성](extensions/extension-authoring.md)을 참조하세요.
 
 ## <a name="feature-comparison-with-sql-server-management-studio-ssms"></a>SSMS(SQL Server Management Studio)와의 기능 비교
 
@@ -165,7 +165,7 @@ Azure Data Studio 확장성에 대해 자세히 알아보려면 [확장성](exte
 
 ## <a name="next-steps"></a>다음 단계
 
-- [Azure Data Studio 다운로드 및 설치](./download-azure-data-studio.md?view=sql-server-ver15)
+- [Azure Data Studio 다운로드 및 설치](./download-azure-data-studio.md)
 - [SQL Server 연결 및 쿼리](quickstart-sql-server.md)
 - [Azure SQL Database 연결 및 쿼리](quickstart-sql-database.md)
 
