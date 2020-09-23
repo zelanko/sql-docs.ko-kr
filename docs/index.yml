@@ -6,12 +6,12 @@ metadata:
   title: Microsoft SQL 문서 | Microsoft Docs
   description: 'SQL Server 및 Azure SQL을 사용하여 온-프레미스 및 클라우드에서 데이터베이스 요구 사항을 관리하는 방법을 알아보세요. (빠른 연결: https://aka.ms/sqldocs)'
   ms.topic: hub-page
-  ms.openlocfilehash: 5d7a6ef891d85b55c75af35e26712765f662e9c2
-  ms.sourcegitcommit: 21bedbae28840e2f96f5e8b08bcfc794f305c8bc
+  ms.openlocfilehash: 5d6fffc9d875b0581e2358f86cd5e612df5adec9
+  ms.sourcegitcommit: d56f1eca807c55cf606a6316f3872585f014fec1
   ms.translationtype: HT
   ms.contentlocale: ko-KR
-  ms.lasthandoff: 08/06/2020
-  ms.locfileid: "87864544"
+  ms.lasthandoff: 09/22/2020
+  ms.locfileid: "90916407"
 highlightedContent:
   items:
   - title: SQL Server 2019를 사용해 보세요
@@ -90,6 +90,9 @@ conceptualContent:
       itemType: whats-new
     - text: SQL Server Machine Learning 서비스
       url: machine-learning/index.yml
+      itemType: whats-new
+    - text: SQL Server 지원 Azure Arc(미리 보기)
+      url: sql-server/azure-arc/overview.md
       itemType: whats-new
   - title: 설치
     links:

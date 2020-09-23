@@ -34,8 +34,14 @@
   items:
     - name: 확장
       items:
-        - name: 확장
+        - name: 확장 개요
           href: extensions.md
+        - name: Azure Arc 확장
+          href: extensions/azure-arc-extension.md
+        - name: 데이터 가상화 확장
+          href: data-virtualization-extension.md
+        - name: Kusto 확장
+          href: extensions/kusto-extension.md
         - name: Machine Learning 확장
           items:
             - name: Machine Learning 확장 개요
@@ -46,10 +52,16 @@
               href: machine-learning-extension-predictions.md
             - name: 모델 가져오기 및 보기
               href: machine-learning-extension-import-view-models.md
+        - name: Managed Instance 확장
+          href: extensions/azure-sql-managed-instance-extension.md
         - name: PostgreSQL 확장
           href: postgres-extension.md
-        - name: 데이터 가상화 확장
-          href: data-virtualization-extension.md
+        - name: PowerShell 확장
+          href: powershell-extension.md
+        - name: SandDance 확장
+          href: sanddance-extension.md
+        - name: 스키마 비교 확장
+          href: schema-compare-extension.md
         - name: SQL Database Projects 확장
           items:
             - name: SQL Database Projects 확장 개요
@@ -70,14 +82,6 @@
           href: sql-server-import-extension.md
         - name: SQL Server Profiler
           href: sql-server-profiler-extension.md
-        - name: 스키마 비교 확장
-          href: schema-compare-extension.md
-        - name: PowerShell 확장
-          href: powershell-extension.md
-        - name: Managed Instance 확장
-          href: extensions/azure-sql-managed-instance-extension.md
-        - name: SandDance 확장
-          href: sanddance-extension.md
     - name: 확장 작성
       items:
         - name: 확장성 개요
@@ -114,8 +118,14 @@
           href: notebooks-tutorial-sql-kernel.md
         - name: Python 커널 사용
           href: notebooks-tutorial-python-kernel.md
+        - name: Kusto 커널 사용
+          href: notebooks/notebooks-kusto-kernel.md
         - name: Kqlmagic 확장
           href: notebooks-kqlmagic.md
+    - name: 배포
+      items:
+        - name: Azure SQL Edge 배포
+          href: deploy-azure-sql-edge.md
     - name: 대시보드 및 정보 위젯
       href: insight-widgets.md
     - name: 코드 조각

@@ -37,7 +37,7 @@
       href: ../machine-learning/install/sql-pretrained-models-install.md
     - name: 기본 Python 및 R 런타임 변경
       href: ../machine-learning/install/change-default-language-runtime-version.md
-    - name: Python 및 R 업그레이드
+    - name: 바인딩을 사용하여 Python 및 R 런타임 업그레이드
       href: ../machine-learning/install/upgrade-r-and-python.md
     - name: Azure Data Studio Notebook
       href: ../machine-learning/install/sql-machine-learning-azure-data-studio.md
