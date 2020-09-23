@@ -15,12 +15,12 @@ helpviewer_keywords:
 ms.assetid: 1a483aa1-42de-4c88-a4b8-c518def3d496
 author: MightyPen
 ms.author: genemi
-ms.openlocfilehash: 25452e6ae26e8375799a344f459473db446c2d5e
-ms.sourcegitcommit: e700497f962e4c2274df16d9e651059b42ff1a10
+ms.openlocfilehash: e8a429071f406be0309d89bbb9ea0253b86905a8
+ms.sourcegitcommit: cc23d8646041336d119b74bf239a6ac305ff3d31
 ms.translationtype: HT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 08/17/2020
-ms.locfileid: "88355969"
+ms.lasthandoff: 09/23/2020
+ms.locfileid: "91112314"
 ---
 # <a name="guidelines-for-using-xml-data-type-methods"></a>xml 데이터 형식 메서드를 사용하기 위한 지침
 
@@ -33,7 +33,7 @@ ms.locfileid: "88355969"
 **xml** 데이터 형식 메서드는 다음 예에 표시된 것과 같이 PRINT 문에서 사용할 수 없습니다. **xml** 데이터 형식 메서드는 하위 쿼리로 취급되며 하위 쿼리는 PRINT 문에 허용되지 않습니다. 따라서 다음 예는 오류를 반환합니다.
 
 ```sql
-DECLARE @x xml
+DECLARE @x XML
 SET @x = '<root>Hello</root>'
 PRINT @x.value('/root[1]', 'varchar(20)') -- will not work because this is treated as a subquery (select top 1 col from table)
 ```
@@ -41,10 +41,10 @@ PRINT @x.value('/root[1]', 'varchar(20)') -- will not work because this is treat
 이에 대한 해결 방법은 먼저 **value()** 메서드의 결과를 **xml** 형식의 변수에 할당한 다음, 쿼리에서 변수를 지정하는 것입니다.
 
 ```sql
-DECLARE @x xml
-DECLARE @c varchar(max)
+DECLARE @x XML
+DECLARE @c VARCHAR(max)
 SET @x = '<root>Hello</root>'
-SET @c = @x.value('/root[1]', 'varchar(11)')
+SET @c = @x.value('/root[1]', 'VARCHAR(11)')
 PRINT @c
 ```
 
@@ -77,8 +77,8 @@ XQuery [xmldb_test.xmlcol.query()]: Attribute may not appear outside of an eleme
 이 예에서 **nodes()** 메서드는 각 `<book>` 요소에 대해 별개의 행을 생성합니다. `<book>` 노드에서 평가되는 **value()** 메서드는 `@genre`의 값을 추출하고 싱글톤 특성이 됩니다.
 
 ```sql
-SELECT nref.value('@genre', 'varchar(max)') LastName
-FROM   T CROSS APPLY xCol.nodes('//book') AS R(nref)
+SELECT nref.value('@genre', 'VARCHAR(max)') LastName
+FROM T CROSS APPLY xCol.nodes('//book') AS R(nref)
 ```
 
 형식화된 XML의 유형 검사에는 XML 스키마가 사용됩니다. XML 스키마의 단일 항목으로 노드가 지정된 경우 컴파일러는 이 정보를 사용하며 오류가 발생하지 않습니다. 그렇지 않으면 단일 노드를 선택하는 서수가 필요합니다. 특히 `/book//title`에서와 같이 하위 항목 또는 자체 축(//)을 사용하면 XML 스키마에 지정되어 있더라도 `<title>` 요소에 대한 싱글톤 카디널리티 추론이 손실됩니다. 따라서 `(/book//title)[1]`로 다시 작성해야 합니다.
@@ -90,22 +90,22 @@ FROM   T CROSS APPLY xCol.nodes('//book') AS R(nref)
 형식화되지 않은 XML 열에서 다음 쿼리를 실행하면 정적 컴파일 오류가 발생합니다. 그 이유는 **value()** 에 첫 번째 인수로 싱글톤 노드가 필요한데 런타임 시 하나의 `<last-name>` 노드만 발생하는지 여부를 컴파일러에서 확인할 수 없기 때문입니다.
 
 ```sql
-SELECT xCol.value('//author/last-name', 'nvarchar(50)') LastName
-FROM   T
+SELECT xCol.value('//author/last-name', 'NVARCHAR(50)') LastName
+FROM T
 ```
 
 다음은 고려할 수 있는 해결 방법입니다.
 
 ```sql
-SELECT xCol.value('//author/last-name[1]', 'nvarchar(50)') LastName
-FROM   T
+SELECT xCol.value('//author/last-name[1]', 'NVARCHAR(50)') LastName
+FROM T
 ```
 
 하지만 이 해결 방법은 각 XML 인스턴스에 여러 `<author>` 노드가 발생할 수 있기 때문에 오류를 해결하지 않습니다. 다음과 같이 쿼리를 다시 작성하면 도움이 됩니다.
 
 ```sql
-SELECT xCol.value('(//author/last-name/text())[1]', 'nvarchar(50)') LastName
-FROM   T
+SELECT xCol.value('(//author/last-name/text())[1]', 'NVARCHAR(50)') LastName
+FROM T
 ```
 
 이 쿼리는 각 XML 인스턴스에서 첫 번째 `<last-name>` 요소의 값을 반환합니다.

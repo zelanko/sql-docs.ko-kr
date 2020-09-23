@@ -3,18 +3,18 @@ title: 키맵 확장 만들기
 description: 이 자습서에서는 Azure Data Studio에 사용자 지정 기능을 추가하는 키맵 확장을 만드는 방법을 보여 줍니다.
 ms.prod: azure-data-studio
 ms.technology: azure-data-studio
-ms.reviewer: alayu, maghan
 ms.topic: how-to
 author: markingmyname
 ms.author: maghan
-ms.custom: seodec18
+ms.reviewer: alayu
+ms.custom: ''
 ms.date: 08/28/2020
-ms.openlocfilehash: 45aeb2a27b74f62af711843db6d3cb1727bb093d
-ms.sourcegitcommit: 5da46e16b2c9710414fe36af9670461fb07555dc
+ms.openlocfilehash: b1e1b5fb4d21e153133e76ff612f54c8153e0772
+ms.sourcegitcommit: cc23d8646041336d119b74bf239a6ac305ff3d31
 ms.translationtype: HT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 09/01/2020
-ms.locfileid: "89285083"
+ms.lasthandoff: 09/23/2020
+ms.locfileid: "91111664"
 ---
 # <a name="create-an-azure-data-studio-keymap-extension"></a>Azure Data Studio 키맵 확장 만들기
 

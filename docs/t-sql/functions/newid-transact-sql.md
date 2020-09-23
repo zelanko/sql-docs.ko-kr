@@ -20,12 +20,12 @@ ms.assetid: f7014e60-96d5-457e-afc3-72b60ba20c0f
 author: julieMSFT
 ms.author: jrasnick
 monikerRange: =azure-sqldw-latest||>=sql-server-2016||=sqlallproducts-allversions||>=sql-server-linux-2017||=azuresqldb-mi-current
-ms.openlocfilehash: b478b8ea685a5e8cf5399c5ca429936be9a18784
-ms.sourcegitcommit: e700497f962e4c2274df16d9e651059b42ff1a10
+ms.openlocfilehash: eb2e8c2d00ef42a43ea32ab55df6b14cb13d5dc1
+ms.sourcegitcommit: cc23d8646041336d119b74bf239a6ac305ff3d31
 ms.translationtype: HT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 08/17/2020
-ms.locfileid: "88445708"
+ms.lasthandoff: 09/23/2020
+ms.locfileid: "91111076"
 ---
 # <a name="newid-transact-sql"></a>NEWID(Transact-SQL)
 
@@ -82,15 +82,15 @@ CREATE TABLE cust
 (  
  CustomerID uniqueidentifier NOT NULL  
    DEFAULT newid(),  
- Company varchar(30) NOT NULL,  
- ContactName varchar(60) NOT NULL,   
- Address varchar(30) NOT NULL,   
- City varchar(30) NOT NULL,  
- StateProvince varchar(10) NULL,  
- PostalCode varchar(10) NOT NULL,   
- CountryRegion varchar(20) NOT NULL,   
- Telephone varchar(15) NOT NULL,  
- Fax varchar(15) NULL  
+ Company VARCHAR(30) NOT NULL,  
+ ContactName VARCHAR(60) NOT NULL,   
+ Address VARCHAR(30) NOT NULL,   
+ City VARCHAR(30) NOT NULL,  
+ StateProvince VARCHAR(10) NULL,  
+ PostalCode VARCHAR(10) NOT NULL,   
+ CountryRegion VARCHAR(20) NOT NULL,   
+ Telephone VARCHAR(15) NOT NULL,  
+ Fax VARCHAR(15) NULL  
 );  
 GO  
 -- Inserting 5 rows into cust table.  
@@ -114,7 +114,7 @@ GO
 ### <a name="c-using-uniqueidentifier-and-variable-assignment"></a>C. uniqueidentifier 및 변수 할당 사용  
  다음 예에서는 `@myid`라는 로컬 변수를 **uniqeidentifier** 데이터 형식의 변수로 선언합니다. 그런 다음 `SET` 문을 사용하여 변수에 값을 할당합니다.  
   
-```  
+```sql  
 DECLARE @myid uniqueidentifier ;  
 SET @myid = 'A972C577-DFB0-064E-1189-0154C99310DAAC12';  
 SELECT @myid;  

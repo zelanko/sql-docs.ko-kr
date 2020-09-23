@@ -24,12 +24,12 @@ helpviewer_keywords:
 ms.assetid: da6c9cee-6687-46e8-b504-738551f9068b
 author: pmasl
 ms.author: umajay
-ms.openlocfilehash: 98388d74f1cf4eb90af2eccaa0d0cf71595167f2
-ms.sourcegitcommit: e700497f962e4c2274df16d9e651059b42ff1a10
+ms.openlocfilehash: c9599042d8cab079c155496be1fb4e0194bc66fe
+ms.sourcegitcommit: cc23d8646041336d119b74bf239a6ac305ff3d31
 ms.translationtype: HT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 08/17/2020
-ms.locfileid: "88459926"
+ms.lasthandoff: 09/23/2020
+ms.locfileid: "91111145"
 ---
 # <a name="dbcc-checkconstraints-transact-sql"></a>DBCC CHECKCONSTRAINTS(Transact-SQL)
 
@@ -118,7 +118,7 @@ DBCC CHECKCONSTRAINTS는 다음 열이 있는 행 집합을 반환합니다.
 ## <a name="permissions"></a>사용 권한  
 **sysadmin** 고정 서버 역할의 멤버 또는 **db_owner** 고정 데이터베이스 역할의 멤버여야 합니다.
   
-## <a name="examples"></a>예  
+## <a name="examples"></a>예제  
   
 ### <a name="a-checking-a-table"></a>A. 테이블 검사  
 다음은 `Table1` 데이터베이스에 있는 `AdventureWorks` 테이블의 제약 조건 무결성을 검사하는 예입니다.
@@ -126,7 +126,7 @@ DBCC CHECKCONSTRAINTS는 다음 열이 있는 행 집합을 반환합니다.
 ```sql  
 USE AdventureWorks2012;  
 GO  
-CREATE TABLE Table1 (Col1 int, Col2 char (30));  
+CREATE TABLE Table1 (Col1 INT, Col2 CHAR(30));  
 GO  
 INSERT INTO Table1 VALUES (100, 'Hello');  
 GO  

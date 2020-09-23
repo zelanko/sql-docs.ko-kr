@@ -19,12 +19,12 @@ helpviewer_keywords:
 ms.assetid: e06d2cab-f1ff-42f1-8550-6aaec57be36f
 author: julieMSFT
 ms.author: jrasnick
-ms.openlocfilehash: b3d0648e3e017179ff91ae7e2d951967cb7517cc
-ms.sourcegitcommit: e700497f962e4c2274df16d9e651059b42ff1a10
+ms.openlocfilehash: 4fe754848be676d40387d4887a5a7e519da697f7
+ms.sourcegitcommit: cc23d8646041336d119b74bf239a6ac305ff3d31
 ms.translationtype: HT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 08/17/2020
-ms.locfileid: "88445719"
+ms.lasthandoff: 09/23/2020
+ms.locfileid: "91111056"
 ---
 # <a name="newsequentialid-transact-sql"></a>NEWSEQUENTIALID(Transact-SQL)
 [!INCLUDE [SQL Server SQL Database](../../includes/applies-to-version/sql-asdb.md)]
@@ -54,15 +54,15 @@ NEWSEQUENTIALID ( )
  **uniqueidentifier**  
   
 ## <a name="remarks"></a>설명  
- NEWSEQUENTIALID()는 **uniqueidentifier** 형식의 테이블 열에서 DEFAULT 제약 조건과 함께만 사용할 수 있습니다. 예를 들면 다음과 같습니다.  
+ NEWSEQUENTIALID()는 **uniqueidentifier** 형식의 테이블 열에서 DEFAULT 제약 조건과 함께만 사용할 수 있습니다. 다음은 그 예입니다.  
   
-```  
+```sql  
 CREATE TABLE myTable (ColumnA uniqueidentifier DEFAULT NEWSEQUENTIALID());   
 ```  
   
  DEFAULT 식에서 NEWSEQUENTIALID()를 사용하면 다른 스칼라 연산자와 함께 사용할 수 없습니다. 예를 들어 다음을 실행할 수 없습니다.  
   
-```  
+```sql 
 CREATE TABLE myTable (ColumnA uniqueidentifier DEFAULT dbo.myfunction(NEWSEQUENTIALID()));  
 ```  
   

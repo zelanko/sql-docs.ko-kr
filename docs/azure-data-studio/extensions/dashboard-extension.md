@@ -3,18 +3,18 @@ title: 대시보드 확장 만들기
 description: 이 자습서에서는 Azure Data Studio에 사용자 지정 기능을 추가하는 대시보드 확장을 만드는 방법을 보여 줍니다.
 ms.prod: azure-data-studio
 ms.technology: azure-data-studio
-ms.reviewer: alayu, maghan
 ms.topic: how-to
 author: yualan
 ms.author: alayu
+ms.reviewer: alayu, maghan
 ms.custom: ''
 ms.date: 08/28/2020
-ms.openlocfilehash: b28b3cd043d6564da7d644bb44469671c9ffa147
-ms.sourcegitcommit: c5f0c59150c93575bb2bd6f1715b42716001126b
+ms.openlocfilehash: 835b1fd4687dc5fd86afe300d7c6ed56dc2ed6ea
+ms.sourcegitcommit: cc23d8646041336d119b74bf239a6ac305ff3d31
 ms.translationtype: HT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 09/02/2020
-ms.locfileid: "89392156"
+ms.lasthandoff: 09/23/2020
+ms.locfileid: "91111642"
 ---
 # <a name="create-an-azure-data-studio-dashboard-extension"></a>Azure Data Studio 대시보드 확장 만들기
 

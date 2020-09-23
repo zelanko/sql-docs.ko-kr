@@ -18,12 +18,12 @@ helpviewer_keywords:
 ms.assetid: 240b70f1-eeda-44ab-b4bb-9e4af80fa7c0
 author: MikeRayMSFT
 ms.author: mikeray
-ms.openlocfilehash: cdefe46b9e2baa546b76375af4c6a2272fe1f584
-ms.sourcegitcommit: e700497f962e4c2274df16d9e651059b42ff1a10
+ms.openlocfilehash: 5db6206cd555705ec5b167dc023f585293f45bf8
+ms.sourcegitcommit: cc23d8646041336d119b74bf239a6ac305ff3d31
 ms.translationtype: HT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 08/17/2020
-ms.locfileid: "88445936"
+ms.lasthandoff: 09/23/2020
+ms.locfileid: "91111231"
 ---
 # <a name="getroot-database-engine"></a>GetRoot(데이터베이스 엔진)
 
@@ -33,12 +33,12 @@ ms.locfileid: "88445936"
   
 ## <a name="syntax"></a>구문  
   
-```sql
+```syntaxsql
 -- Transact-SQL syntax  
 hierarchyid::GetRoot ( )   
 ```  
   
-```sql
+```syntaxsql
 -- CLR syntax  
 static SqlHierarchyId GetRoot ( )   
 ```  

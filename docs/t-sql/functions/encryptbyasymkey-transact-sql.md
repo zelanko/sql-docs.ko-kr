@@ -20,12 +20,12 @@ helpviewer_keywords:
 ms.assetid: 86bb2588-ab13-4db2-8f3c-42c9f572a67b
 author: VanMSFT
 ms.author: vanto
-ms.openlocfilehash: e2a0031163de085d6de07aaf7a0e707a5e5ac5dc
-ms.sourcegitcommit: e700497f962e4c2274df16d9e651059b42ff1a10
+ms.openlocfilehash: 42ffb61535beefeee149124adf7873cce78c1535
+ms.sourcegitcommit: cc23d8646041336d119b74bf239a6ac305ff3d31
 ms.translationtype: HT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 08/17/2020
-ms.locfileid: "88459783"
+ms.lasthandoff: 09/23/2020
+ms.locfileid: "91111090"
 ---
 # <a name="encryptbyasymkey-transact-sql"></a>ENCRYPTBYASYMKEY(Transact-SQL)
 [!INCLUDE [SQL Server SQL Database](../../includes/applies-to-version/sql-asdb.md)]
@@ -93,7 +93,7 @@ EncryptByAsymKey ( Asym_Key_ID , { 'plaintext' | @plaintext } )
 ## <a name="examples"></a>예  
 이 예에서는 `@cleartext`에 저장된 텍스트를 비대칭 키 `JanainaAsymKey02`로 암호화합니다. 이 명령문은 암호화된 데이터를 `ProtectedData04` 테이블에 삽입합니다.  
   
-```  
+```sql  
 INSERT INTO AdventureWorks2012.Sales.ProtectedData04   
     VALUES( N'Data encrypted by asymmetric key ''JanainaAsymKey02''',  
     EncryptByAsymKey(AsymKey_ID('JanainaAsymKey02'), @cleartext) );  
