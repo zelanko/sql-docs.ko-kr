@@ -1,20 +1,20 @@
 ---
 title: Azure Arc 확장(미리 보기)
 description: Azure Arc 확장을 설치하고 사용하여 Azure Arc 데이터 서비스를 체험하는 방법을 알아봅니다.
-ms.custom: seodec18
-ms.date: 09/22/2020
-ms.reviewer: alayu, maghan, sstein
 ms.prod: azure-data-studio
 ms.technology: azure-data-studio
 ms.topic: conceptual
 author: yualan
 ms.author: alayu
-ms.openlocfilehash: 53adb48f8ee83213fe99eee1148173d20c6276c7
-ms.sourcegitcommit: d56f1eca807c55cf606a6316f3872585f014fec1
+ms.reviewer: maghan, sstein
+ms.custom: ''
+ms.date: 09/22/2020
+ms.openlocfilehash: a541b994b33355fb5df8ebf856681d588e82cc2d
+ms.sourcegitcommit: cc23d8646041336d119b74bf239a6ac305ff3d31
 ms.translationtype: HT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 09/22/2020
-ms.locfileid: "90942853"
+ms.lasthandoff: 09/23/2020
+ms.locfileid: "91111737"
 ---
 # <a name="azure-arc-extension-for-azure-data-studio-preview"></a>Azure Data Studio용 Azure Arc 확장(미리 보기)
 
