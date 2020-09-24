@@ -15,12 +15,12 @@ helpviewer_keywords:
 ms.assetid: a55b75e0-0a17-4787-a525-9b095410f7af
 author: MightyPen
 ms.author: genemi
-ms.openlocfilehash: f79e3aed7926b8cd3d123139d317735bc6d94abe
-ms.sourcegitcommit: e700497f962e4c2274df16d9e651059b42ff1a10
+ms.openlocfilehash: 1788db3b0baec4f9ab7279f13ff792e6d7764ea6
+ms.sourcegitcommit: cc23d8646041336d119b74bf239a6ac305ff3d31
 ms.translationtype: HT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 08/17/2020
-ms.locfileid: "88356389"
+ms.lasthandoff: 09/23/2020
+ms.locfileid: "91117213"
 ---
 # <a name="exist-method-xml-data-type"></a>exist() 메서드(xml 데이터 형식)
 [!INCLUDE [SQL Server SQL Database](../../includes/applies-to-version/sql-asdb.md)]
@@ -35,8 +35,7 @@ ms.locfileid: "88356389"
   
 ## <a name="syntax"></a>구문  
   
-```  
-  
+```syntaxsql
 exist (XQuery)   
 ```  
   
@@ -51,10 +50,10 @@ exist (XQuery)
 > [!NOTE]  
 >  **exist()** 메서드는 비어 있지 않은 결과를 반환하는 XQuery 식에 대해 1을 반환합니다. **exist()** 메서드 내에서 **true()** 또는 **false()** 함수를 지정하면 **true()** 및 **false()** 함수가 각각 부울 값인 True와 False를 반환하기 때문에 **exist()** 메서드가 1을 반환합니다. 즉, 이들 함수는 비어 있지 않은 결과를 반환합니다. 따라서 **exist()** 는 다음 예에서와 같이 1(True)을 반환합니다.  
   
-```  
-declare @x xml;  
-set @x='';  
-select @x.exist('true()');   
+```sql
+DECLARE @x XML;  
+SET @x='';  
+SELECT @x.exist('true()');   
 ```  
   
 ## <a name="examples"></a>예제  
@@ -63,12 +62,12 @@ select @x.exist('true()');
 ### <a name="example-specifying-the-exist-method-against-an-xml-type-variable"></a>예제: xml 형식의 변수에 대해 exist() 메서드 지정  
  다음 예에서 @x는 **xml** 형식 변수(형식화되지 않은 xml)이고 @f는 **exist()** 메서드에서 반환한 값을 저장하는 정수 형식 변수입니다. XML 인스턴스에 저장된 날짜 값이 `2002-01-01`이면 **exist()** 메서드가 True(1)를 반환합니다.  
   
-```  
-declare @x xml;  
-declare @f bit;  
-set @x = '<root Somedate = "2002-01-01Z"/>';  
-set @f = @x.exist('/root[(@Somedate cast as xs:date?) eq xs:date("2002-01-01Z")]');  
-select @f;  
+```sql  
+DECLARE @x XML;  
+DECLARE @f BIT;  
+SET @x = '<root Somedate = "2002-01-01Z"/>';  
+SET @f = @x.exist('/root[(@Somedate cast as xs:date?) eq xs:date("2002-01-01Z")]');  
+SELECT @f;  
 ```  
   
  **exist()** 메서드의 날짜를 비교할 때 다음에 유의하세요.  
@@ -81,9 +80,9 @@ select @f;
   
  다음 예제는 <`Somedate`> 요소가 있다는 점을 제외하고 앞의 예와 비슷합니다.  
   
-```  
-DECLARE @x xml;  
-DECLARE @f bit;  
+```sql
+DECLARE @x XML;  
+DECLARE @f BIT;  
 SET @x = '<Somedate>2002-01-01Z</Somedate>';  
 SET @f = @x.exist('/Somedate[(text()[1] cast as xs:date ?) = xs:date("2002-01-01Z") ]')  
 SELECT @f;  
@@ -100,13 +99,13 @@ SELECT @f;
   
  제조 지침 문서에 `LocationID=50`을 가진 <`Location`> 요소가 포함되면 @x 변수에 대해 지정된 **exist()** 메서드가 1(True)을 반환합니다. 그렇지 않으면 메서드가 0(False)을 반환합니다.  
   
-```  
-DECLARE @x xml (Production.ManuInstructionsSchemaCollection);  
+```sql
+DECLARE @x XML (Production.ManuInstructionsSchemaCollection);  
 SELECT @x=Instructions  
 FROM Production.ProductModel  
 WHERE ProductModelID=67;  
 --SELECT @x  
-DECLARE @f int;  
+DECLARE @f INT;  
 SET @f = @x.exist(' declare namespace AWMI="https://schemas.microsoft.com/sqlserver/2004/07/adventure-works/ProductModelManuInstructions";  
     /AWMI:root/AWMI:Location[@LocationID=50]  
 ');  
@@ -116,7 +115,7 @@ SELECT @f;
 ### <a name="example-specifying-the-exist-method-against-an-xml-type-column"></a>예제: xml 형식 열에 대해 exist() 메서드 지정  
  다음 쿼리에서는 카탈로그 설명에 사양 <`Specifications`> 요소가 없는 제품 모델 ID를 검색합니다.  
   
-```  
+```sql
 SELECT ProductModelID, CatalogDescription.query('  
 declare namespace pd="https://schemas.microsoft.com/sqlserver/2004/07/adventure-works/ProductModelDescription";  
     <Product   
@@ -142,7 +141,7 @@ WHERE CatalogDescription.exist('
   
  쿼리에서 xml 데이터 형식의 **query()** 및 **exist()** 메서드를 지정하고 두 메서드는 쿼리 프롤로그에 같은 네임스페이스를 선언합니다. 이 경우 WITH XMLNAMESPACES를 사용하여 접두사를 선언하고 이 접두사를 쿼리에 사용할 수 있습니다.  
   
-```  
+```sql
 WITH XMLNAMESPACES ('https://schemas.microsoft.com/sqlserver/2004/07/adventure-works/ProductModelDescription' AS pd)  
 SELECT ProductModelID, CatalogDescription.query('  
     <Product   

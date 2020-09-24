@@ -18,12 +18,12 @@ author: jovanpop-msft
 ms.author: jovanpop
 ms.reviewer: jroth
 monikerRange: = azuresqldb-current||= azure-sqldw-latest||>= sql-server-2016||>= sql-server-linux-2017||= sqlallproducts-allversions
-ms.openlocfilehash: dcfdfec2bb179d6182df1306ffc5b46dbd86bf59
-ms.sourcegitcommit: 173dbecfe78fd1bcc13a922b579a2bb9ad37b713
+ms.openlocfilehash: 93113a42ca267f9d5c241636dfbf49aa8e75ae90
+ms.sourcegitcommit: cc23d8646041336d119b74bf239a6ac305ff3d31
 ms.translationtype: HT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 08/26/2020
-ms.locfileid: "88942316"
+ms.lasthandoff: 09/23/2020
+ms.locfileid: "91117075"
 ---
 # <a name="openjson-transact-sql"></a>OPENJSON(Transact-SQL)
 
@@ -75,7 +75,7 @@ JSON 텍스트를 포함하는 유니코드 문자 식입니다.
 OPENJSON은 JSON 식에 있는 배열의 요소 또는 개체의 속성을 반복하고 각 요소 또는 속성마다 하나의 행을 반환합니다. 다음 예제에서는 *jsonExpression*으로 제공된 개체의 각 속성을 반환합니다.  
 
 ```sql
-DECLARE @json NVarChar(2048) = N'{
+DECLARE @json NVARCHAR(2048) = N'{
    "String_value": "John",
    "DoublePrecisionFloatingPoint_value": 45,
    "DoublePrecisionFloatingPoint_value": 2.3456,
@@ -204,11 +204,11 @@ DECLARE @json NVARCHAR(MAX) = N'[
 SELECT *
 FROM OPENJSON ( @json )  
 WITH (   
-              Number   varchar(200)   '$.Order.Number',  
-              Date     datetime       '$.Order.Date',  
-              Customer varchar(200)   '$.AccountNumber',  
-              Quantity int            '$.Item.Quantity',  
-              [Order]  nvarchar(MAX)  AS JSON  
+              Number   VARCHAR(200)   '$.Order.Number',  
+              Date     DATETIME       '$.Order.Date',  
+              Customer VARCHAR(200)   '$.AccountNumber',  
+              Quantity INT            '$.Item.Quantity',  
+              [Order]  NVARCHAR(MAX)  AS JSON  
  )
 ```  
   
@@ -326,7 +326,7 @@ CROSS APPLY OPENJSON(SalesReasons)
 ```sql  
 SELECT SalesOrderID, OrderDate, value AS Reason  
 FROM Sales.SalesOrderHeader  
-     CROSS APPLY OPENJSON (SalesReasons) WITH (value nvarchar(100) '$')
+     CROSS APPLY OPENJSON (SalesReasons) WITH (value NVARCHAR(100) '$')
 ```  
   
 이 예에서 `$` 경로는 배열에 있는 각 요소를 참조합니다. 반환된 값을 명시적으로 캐스팅하려는 경우 이러한 형식의 쿼리를 사용할 수 있습니다.  
@@ -339,7 +339,7 @@ FROM Sales.SalesOrderHeader
 SELECT store.title, location.street, location.lat, location.long  
 FROM store  
 CROSS APPLY OPENJSON(store.jsonCol, 'lax $.location')   
-     WITH (street varchar(500) ,  postcode  varchar(500) '$.postcode' ,  
+     WITH (street VARCHAR(500) ,  postcode VARCHAR(500) '$.postcode' ,  
      lon int '$.geo.longitude', lat int '$.geo.latitude')  
      AS location
 ```  
@@ -369,10 +369,10 @@ DECLARE @json NVARCHAR(max)  = N'{
   INSERT INTO Person  
   SELECT *   
   FROM OPENJSON(@json)  
-  WITH (id int,  
-        firstName nvarchar(50), lastName nvarchar(50),   
-        isAlive bit, age int,  
-        dateOfBirth datetime2, spouse nvarchar(50))
+  WITH (id INT,  
+        firstName NVARCHAR(50), lastName NVARCHAR(50),   
+        isAlive BIT, age INT,  
+        dateOfBirth DATETIME, spouse NVARCHAR(50))
 ```  
 
 ### <a name="example-6---simple-example-with-json-content"></a>예 6 - JSON 콘텐츠를 사용하는 간단한 예제

@@ -1,5 +1,5 @@
 ---
-description: sys.dm_db_stats_histogram (Transact-SQL)
+description: sys.dm_db_stats_histogram(Transact-SQL)
 title: sys. dm_db_stats_histogram (Transact-sql) | Microsoft Docs
 ms.custom: ''
 ms.date: 03/14/2017
@@ -21,14 +21,14 @@ ms.assetid: 1897fd4a-8d51-461e-8ef2-c60be9e563f2
 author: markingmyname
 ms.author: maghan
 monikerRange: =azuresqldb-current||>=sql-server-2016||=sqlallproducts-allversions||>=sql-server-linux-2017||=azuresqldb-mi-current
-ms.openlocfilehash: 330053f10b6b57b184d2be26d4181997ed19ba7b
-ms.sourcegitcommit: dd36d1cbe32cd5a65c6638e8f252b0bd8145e165
+ms.openlocfilehash: af4e3e3739475ff3beac61802606499874fdff58
+ms.sourcegitcommit: cc23d8646041336d119b74bf239a6ac305ff3d31
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 09/08/2020
-ms.locfileid: "89543973"
+ms.lasthandoff: 09/23/2020
+ms.locfileid: "91117004"
 ---
-# <a name="sysdm_db_stats_histogram-transact-sql"></a>sys.dm_db_stats_histogram (Transact-SQL)
+# <a name="sysdm_db_stats_histogram-transact-sql"></a>sys.dm_db_stats_histogram(Transact-SQL)
 
 [!INCLUDE [sqlserver2016-asdb-asdbmi](../../includes/applies-to-version/sqlserver2016-asdb-asdbmi.md)]
 
@@ -77,7 +77,7 @@ sys.dm_db_stats_histogram (object_id, stats_id)
   
  다음 다이어그램에서는 6단계의 히스토그램을 보여 줍니다. 첫 번째 상한 값 왼쪽의 영역이 1단계입니다.  
   
- ![히스토그램](../../relational-databases/system-dynamic-management-views/media/histogram_2.gif "히스토그램")  
+ ![히스토그램](../../relational-databases/system-dynamic-management-views/media/histogram-2.svg "히스토그램")  
   
  각 히스토그램 단계를 살펴보면 다음과 같습니다.  
   
