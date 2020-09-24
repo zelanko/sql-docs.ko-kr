@@ -45,13 +45,13 @@
         - name: Machine Learning 확장
           items:
             - name: Machine Learning 확장 개요
-              href: machine-learning-extension.md
+              href: extensions/machine-learning-extension.md
             - name: 데이터베이스의 패키지 관리
-              href: machine-learning-extension-manage-packages.md
+              href: extensions/machine-learning-extension-manage-packages.md
             - name: 예측 만들기
-              href: machine-learning-extension-predictions.md
+              href: extensions/machine-learning-extension-predictions.md
             - name: 모델 가져오기 및 보기
-              href: machine-learning-extension-import-view-models.md
+              href: extensions/machine-learning-extension-import-view-models.md
         - name: Managed Instance 확장
           href: extensions/azure-sql-managed-instance-extension.md
         - name: PostgreSQL 확장
@@ -113,15 +113,15 @@
     - name: Notebooks
       items:
         - name: Notebooks 개요
-          href: notebooks-guidance.md
+          href: notebooks/notebooks-guidance.md
         - name: SQL 커널 사용
-          href: notebooks-tutorial-sql-kernel.md
+          href: notebooks/notebooks-sql-kernel.md
         - name: Python 커널 사용
-          href: notebooks-tutorial-python-kernel.md
+          href: notebooks/notebooks-python-kernel.md
         - name: Kusto 커널 사용
           href: notebooks/notebooks-kusto-kernel.md
-        - name: Kqlmagic 확장
-          href: notebooks-kqlmagic.md
+        - name: Kqlmagic 사용
+          href: notebooks/notebooks-kqlmagic.md
     - name: 배포
       items:
         - name: Azure SQL Edge 배포
