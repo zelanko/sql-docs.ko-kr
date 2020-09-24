@@ -1,7 +1,7 @@
 ---
 title: pip를 사용하여 azdata 설치
-titleSuffix: SQL Server big data clusters
-description: pip를 사용하여 빅 데이터 클러스터를 설치하고 관리할 수 있는 azdata 도구 설치 방법을 알아봅니다.
+titleSuffix: ''
+description: pip를 사용하여 azdata 도구를 설치하는 방법을 알아봅니다.
 author: MikeRayMSFT
 ms.author: mikeray
 ms.reviewer: mihaelab
@@ -9,16 +9,16 @@ ms.date: 01/07/2020
 ms.topic: conceptual
 ms.prod: sql
 ms.technology: big-data-cluster
-ms.openlocfilehash: 51faf26a6414854ad3b2b1c2d205304e9b3dfb36
-ms.sourcegitcommit: 883435b4c7366f06ac03579752093737b098feab
+ms.openlocfilehash: 6bf2bbff5f1d048895515f18b600cd05acd8ae6f
+ms.sourcegitcommit: d56f1eca807c55cf606a6316f3872585f014fec1
 ms.translationtype: HT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 08/28/2020
-ms.locfileid: "89734073"
+ms.lasthandoff: 09/22/2020
+ms.locfileid: "90914948"
 ---
 # <a name="install-azdata-with-pip"></a>`pip`를 사용하여 `azdata` 설치
 
-[!INCLUDE[SQL Server 2019](../../includes/applies-to-version/sqlserver2019.md)]
+[!INCLUDE[SQL Server 2019](../../includes/applies-to-version/azdata.md)]
 
 이 문서에서는 `pip`를 사용하여 `azdata` 도구 Windows 또는 Linux를 설치하는 방법을 설명합니다.
 
@@ -26,7 +26,7 @@ Windows 및 Linux(Ubuntu 배포판)의 경우 [패키지 관리자](./deploy-ins
 
 ## <a name="prerequisites"></a><a id="prerequisites"></a> 필수 조건
 
-`azdata`는 Python으로 작성된 명령줄 유틸리티로, 클러스터 관리자가 REST API를 통해 빅 데이터 클러스터를 부트스트랩하고 관리할 수 있게 해줍니다. 필요한 최소 Python 버전은 v3.5입니다. `pip`는 `azdata` 도구를 다운로드하고 설치하는 데 필요합니다. 아래 지침에서는 Windows 및 Ubuntu용 예제를 제공합니다. 다른 플랫폼에서 Python을 설치하는 경우 [Python 설명서](https://wiki.python.org/moin/BeginnersGuide/Download)를 참조하세요.
+`azdata`는 클러스터 관리자가 REST API를 통해 데이터를 부트스트랩하고 관리할 수 있도록 Python으로 작성된 명령줄 유틸리티입니다. 필요한 최소 Python 버전은 v3.5입니다. `pip`는 `azdata` 도구를 다운로드하고 설치하는 데 필요합니다. 아래 지침에서는 Windows 및 Ubuntu용 예제를 제공합니다. 다른 플랫폼에서 Python을 설치하는 경우 [Python 설명서](https://wiki.python.org/moin/BeginnersGuide/Download)를 참조하세요.
 그리고 최신 버전의 `requests` Python 패키지를 설치하고 업데이트합니다.
 
 ```bash
@@ -143,3 +143,5 @@ macOS 또는 OS X에 `azdata`를 설치하려면 다음 단계를 완료합니�
 ## <a name="next-steps"></a>다음 단계
 
 빅 데이터 클러스터에 대한 자세한 내용은 [[!INCLUDE[big-data-clusters-2019](../../includes/ssbigdataclusters-ver15.md)]란?](../../big-data-cluster/big-data-cluster-overview.md)을 참조하세요.
+
+[Azure Arc 지원 데이터 서비스](/azure/azure-arc/data/)와 함께 azdata 사용

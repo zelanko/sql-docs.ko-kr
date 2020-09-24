@@ -1,7 +1,7 @@
 ---
-title: azdata bdc app 참조
+title: azdata arc postgres backup 참조
 titleSuffix: SQL Server big data clusters
-description: azdata bdc app 명령에 대한 참조 문서입니다.
+description: azdata arc postgres backup 명령에 대한 참조 문서입니다.
 author: MikeRayMSFT
 ms.author: mikeray
 ms.reviewer: seanw
@@ -9,14 +9,14 @@ ms.date: 09/22/2020
 ms.topic: reference
 ms.prod: sql
 ms.technology: big-data-cluster
-ms.openlocfilehash: ae9dbfc61b1b900c8f8733cc90b9c54905eaa5fe
+ms.openlocfilehash: c21db5764e425a7de31dec4000904b998ca176a1
 ms.sourcegitcommit: d56f1eca807c55cf606a6316f3872585f014fec1
 ms.translationtype: HT
 ms.contentlocale: ko-KR
 ms.lasthandoff: 09/22/2020
-ms.locfileid: "90914665"
+ms.locfileid: "90942909"
 ---
-# <a name="azdata-bdc-app"></a>azdata bdc app
+# <a name="azdata-arc-postgres-backup"></a>azdata arc postgres backup
 
 `azdata`에 적용됩니다.
 
@@ -26,7 +26,6 @@ ms.locfileid: "90914665"
 
 |명령|설명|
 | --- | --- |
-[azdata bdc app status](reference-azdata-bdc-app-status.md) | App 서비스 상태 명령입니다.
 
 ## <a name="next-steps"></a>다음 단계
 

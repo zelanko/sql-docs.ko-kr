@@ -4,26 +4,27 @@ titleSuffix: SQL Server big data clusters
 description: azdata context 명령에 대한 참조 문서입니다.
 author: MikeRayMSFT
 ms.author: mikeray
-ms.reviewer: mihaelab
-ms.date: 06/22/2020
+ms.reviewer: seanw
+ms.date: 09/22/2020
 ms.topic: reference
 ms.prod: sql
 ms.technology: big-data-cluster
-ms.openlocfilehash: d3506d3ab1b2fad9d07496d1041773d26aae6d68
-ms.sourcegitcommit: 883435b4c7366f06ac03579752093737b098feab
+ms.openlocfilehash: 1d48ef786389c5ef32b1f3fd49c88b0a9d3aac18
+ms.sourcegitcommit: d56f1eca807c55cf606a6316f3872585f014fec1
 ms.translationtype: HT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 08/28/2020
-ms.locfileid: "89733704"
+ms.lasthandoff: 09/22/2020
+ms.locfileid: "90914735"
 ---
 # <a name="azdata-context"></a>azdata context
 
-[!INCLUDE[SQL Server 2019](../../includes/applies-to-version/sqlserver2019.md)]
+`azdata`에 적용됩니다.
 
-다음 문서에서는 `azdata` 도구의 `sql` 명령에 대한 참조를 제공합니다. 다른 `azdata` 명령에 대한 자세한 내용은 [azdata 참조](reference-azdata.md)를 참조하세요.
+다음 문서에서는 **azdata** 도구의 **sql** 명령에 대한 참조를 제공합니다. 다른 **azdata** 명령에 대한 자세한 내용은 [azdata 참조](reference-azdata.md)를 참조하세요.
 
 ## <a name="commands"></a>명령
-| 명령 | 설명 |
+
+|명령|설명|
 | --- | --- |
 [azdata context list](#azdata-context-list) | 사용자 프로필에서 사용할 수 있는 컨텍스트를 나열합니다.
 [azdata context delete](#azdata-context-delete) | 사용자 프로필에서 특정 네임스페이스가 있는 컨텍스트를 삭제합니다.
@@ -60,7 +61,7 @@ JMESPath 쿼리 문자열입니다. 자세한 내용 및 예제는 [http://jmesp
 ## <a name="azdata-context-delete"></a>azdata context delete
 삭제된 컨텍스트가 활성 상태이면 사용자가 새 활성 컨텍스트를 설정해야 합니다. 설정하거나 삭제할 수 있는 컨텍스트를 확인하려면 `azdata context list`를 사용합니다.
 ```bash
-azdata context delete --namespace -n 
+azdata context delete --namespace -ns 
                       
 ```
 ### <a name="examples"></a>예제
@@ -69,7 +70,7 @@ azdata context delete --namespace -n
 azdata context delete -n contextNamespace
 ```
 ### <a name="required-parameters"></a>필수 매개 변수
-#### `--namespace -n`
+#### `--namespace -ns`
 삭제하려는 컨텍스트의 네임스페이스입니다.
 ### <a name="global-arguments"></a>전역 인수
 #### `--debug`
@@ -85,7 +86,7 @@ JMESPath 쿼리 문자열입니다. 자세한 내용 및 예제는 [http://jmesp
 ## <a name="azdata-context-set"></a>azdata context set
 설정할 수 있는 컨텍스트를 확인하려면 `azdata context list`를 사용합니다. 나열된 컨텍스트가 없으면 로그인하여 사용자 프로필 `azdata login`에 컨텍스트를 만들어야 합니다. 로그인하는 컨텍스트는 활성 컨텍스트가 됩니다. 여러 엔터티에 로그인하는 경우 이 명령을 사용하여 활성 컨텍스트 간에 전환할 수 있습니다. 현재 활성 컨텍스트를 보려면 `azdata context list --active`를 사용합니다.
 ```bash
-azdata context set --namespace -n 
+azdata context set --namespace -ns 
                    
 ```
 ### <a name="examples"></a>예제
@@ -94,7 +95,7 @@ contextNamespace를 사용자 프로필의 활성 컨텍스트로 설정합니�
 azdata context set -n contextNamespace
 ```
 ### <a name="required-parameters"></a>필수 매개 변수
-#### `--namespace -n`
+#### `--namespace -ns`
 설정하려는 컨텍스트의 네임스페이스입니다.
 ### <a name="global-arguments"></a>전역 인수
 #### `--debug`
@@ -110,4 +111,7 @@ JMESPath 쿼리 문자열입니다. 자세한 내용 및 예제는 [http://jmesp
 
 ## <a name="next-steps"></a>다음 단계
 
-다른 `azdata` 명령에 대한 자세한 내용은 [azdata 참조](reference-azdata.md)를 참조하세요. `azdata` 도구를 설치하는 방법에 대한 자세한 내용은 [azdata를 설치하여 SQL Server 2019 빅 데이터 클러스터 관리](../install/deploy-install-azdata.md)를 참조하세요.
+다른 **azdata** 명령에 대한 자세한 내용은 [azdata 참조](reference-azdata.md)를 참조하세요. 
+
+**azdata** 도구를 설치하는 방법에 대한 자세한 내용은 [azdata 설치](..\install\deploy-install-azdata.md)를 참조하세요.
+

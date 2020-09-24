@@ -5,16 +5,16 @@ description: Active Directory 도메인에서 SQL Server 빅 데이터 클러스
 author: mihaelablendea
 ms.author: mihaelab
 ms.reviewer: mikeray
-ms.date: 08/04/2020
+ms.date: 09/15/2020
 ms.topic: conceptual
 ms.prod: sql
 ms.technology: big-data-cluster
-ms.openlocfilehash: 345002bdf21ee13fc6d33c9cbc1e9938a8b58377
-ms.sourcegitcommit: 1126792200d3b26ad4c29be1f561cf36f2e82e13
+ms.openlocfilehash: 92c170e16a05d67f21931479f82f5edb1856b12f
+ms.sourcegitcommit: ac9feb0b10847b369b77f3c03f8200c86ee4f4e0
 ms.translationtype: HT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 09/14/2020
-ms.locfileid: "90076660"
+ms.lasthandoff: 09/16/2020
+ms.locfileid: "90687809"
 ---
 # <a name="deploy-big-data-clusters-2019-in-active-directory-mode"></a>Active Directory 모드에서 [!INCLUDE[big-data-clusters-2019](../includes/ssbigdataclusters-ss-nover.md)] 배포
 
@@ -24,12 +24,31 @@ ms.locfileid: "90076660"
 
 >[!Note]
 >SQL Server 2019 CU5 릴리스 전까지는 빅 데이터 클러스터에 하나의 Active Directory 도메인에 하나의 클러스터만 배포될 수 있도록 하는 제한이 있었습니다. 이 제한은 CU5 릴리스부터 제거되었습니다. 새로운 기능에 대한 자세한 내용은 [개념: Active Directory 모드에서 [!INCLUDE[big-data-clusters-2019](../includes/ssbigdataclusters-ss-nover.md)] 배포](active-directory-deployment-background.md)를 참조하세요. 이 문서의 예는 두 가지 배포 사용 사례를 모두 수용하도록 수정되었습니다.
+>
 
 ## <a name="background"></a>배경
 
-AD(Active Directory) 인증을 사용하도록 설정하려면 BDC에서 클러스터의 다양한 서비스에 필요한 사용자, 그룹, 머신 계정 및 SPN(서비스 사용자 이름)을 자동으로 만듭니다. 이러한 계정을 일부 포함하고 범위 지정 권한을 허용하려면 배포하는 동안 모든 BDC 관련 AD 개체가 만들어지는 OU(조직 구성 단위)를 선택합니다. 이 OU는 클러스터를 배포하기 전에 만듭니다.
+AD(Active Directory) 인증을 사용하도록 설정하려면 BDC에서 클러스터의 다양한 서비스에 필요한 사용자, 그룹, 머신 계정 및 SPN(서비스 사용자 이름)을 자동으로 만듭니다. 이러한 계정을 일부 포함하고 범위 지정 권한을 허용하려면 클러스터를 배포하기 전에 OU(조직 구성 단위)를 만드는 것이 좋습니다. 모든 BDC 관련 AD 개체는 배포 중에 생성됩니다. 
 
-Active Directory에 필요한 모든 개체를 자동으로 만들려면 배포하는 동안 BDC에 AD 계정이 필요합니다. 이 계정에는 제공된 OU 내에 사용자, 그룹 및 머신 계정을 만들 수 있는 권한이 있어야 합니다.
+## <a name="pre-requisites"></a>필수 구성 요소
+
+### <a name="organizational-unit-ou"></a>OU(조직 구성 단위)
+OU(조직 구성 단위)는 사용자, 그룹 및 기타 OU를 배치할 수 있는 Active Directory 내 하위 단위입니다. 큰 그림 OU는 조직의 기능 또는 비즈니스 구조를 미러링하는 데 사용할 수 있습니다. 이 문서에서는 예시로 `bdc`라는 OU를 만듭니다. 
+
+>[!NOTE]
+>OU(조직 구성 단위)는 관리 경계를 나타내며 고객이 데이터 관리자의 권한 범위를 제어할 수 있도록 합니다. 
+
+
+[OU 디자인 원칙](/windows-server/identity/ad-ds/plan/reviewing-ou-design-concepts)을 따르면 조직 내에서 OU를 사용하여 작업하는 데 가장 적합한 구조를 결정할 수 있습니다. 
+
+### <a name="ad-account-for-bdc-domain-service-account"></a>BDC 도메인 서비스 계정의 AD 계정
+
+Active Directory에 필요한 모든 개체를 자동으로 만들 수 있으려면 BDC에는 제공된 OU(조직 구성 단위) 내에서 사용자, 그룹 및 컴퓨터 계정을 만들 수 있는 특정 권한이 있는 AD 계정이 필요합니다. 이 문서에서 이 AD 계정의 권한을 구성하는 방법을 설명합니다. 이 문서에서는 예시로 `bdcDSA`라는 AD 계정을 사용합니다.
+
+### <a name="auto-generated-active-directory-objects"></a>자동 생성된 Active Directory 개체
+BDC 배포에서 자동으로 계정 및 그룹 이름을 생성합니다. 각 계정은 BDC의 서비스를 나타내며 BDC 클러스터가 사용되는 수명 내내 BDC를 통해 관리됩니다. 이때 계정은 각 서비스에 필요한 SPN(서비스 사용자 이름)을 소유합니다.  관리되는 AD 자동 생성 계정, 그룹 및 서비스의 전체 목록은 [자동 생성된 Active Directory 개체](active-directory-objects.md)를 참조하세요.
+
+
 
 >[!IMPORTANT]
 >도메인 컨트롤러에 설정된 암호 만료 정책에 따라 이러한 계정의 암호는 만료될 수 있습니다. 기본 만료 정책은 42일입니다. BDC의 모든 계정에 대한 자격 증명을 회전하는 메커니즘은 없으므로 만료 기간이 경과하면 클러스터가 작동하지 않게 됩니다. 이 문제를 해결하려면 도메인 컨트롤러에서 BDC 서비스 계정의 만료 정책을 "암호 사용 기간 제한 없음"으로 업데이트합니다. 이 작업은 만료 이전 또는 이후에 수행할 수 있습니다. 후자의 경우 만료된 암호를 Active Directory가 다시 활성화합니다.
@@ -38,16 +57,16 @@ Active Directory에 필요한 모든 개체를 자동으로 만들려면 배포�
 >
 >:::image type="content" source="media/deploy-active-directory/image25.png" alt-text="암호 만료 정책 설정":::
 
-AD 계정 및 그룹 목록은 [자동 생성된 Active Directory 개체](active-directory-objects.md)를 참조하세요.
 
 아래 단계에서는 Active Directory 도메인 컨트롤러가 이미 있다고 가정합니다. 도메인 컨트롤러가 없는 경우 도움이 될 수 있는 단계는 이 [가이드](https://social.technet.microsoft.com/wiki/contents/articles/37528.create-and-configure-active-directory-domain-controller-in-azure-windows-server.aspx)에 포함되어 있습니다.
+
 
 ## <a name="create-ad-objects"></a>AD 개체 만들기
 
 AD 통합을 사용하여 BDC를 배포하기 전에 다음 작업을 수행합니다.
 
-1. 모든 BDC AD 개체가 저장되는 OU(조직 구성 단위)를 만듭니다. 또는 배포 시에 기존 OU를 선택할 수도 있습니다.
-1. BDC에 대한 AD 계정을 만들거나, 기존 BDC AD 계정을 사용하여 올바른 권한을 이 계정에 제공합니다.
+1. 모든 BDC 관련 AD 개체가 저장되는 OU(조직 구성 단위)를 만듭니다. 또는 배포 시에 기존 OU를 선택할 수도 있습니다.
+1. BDC에 대한 AD 계정을 만들거나, 기존 BDC AD 계정을 사용하여 제공된 OU 내에서 올바른 권한을 이 계정에 제공합니다.
 
 ### <a name="create-a-user-in-ad-for-bdc-domain-service-account"></a>AD에서 BDC 도메인 서비스 계정에 대한 사용자 만들기
 

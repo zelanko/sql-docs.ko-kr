@@ -1,7 +1,7 @@
 ---
 title: macOS용 azdata 설치
-titleSuffix: SQL Server big data clusters
-description: macOS용 빅 데이터 클러스터를 설치하고 관리할 수 있는 azdata 도구의 설치 방법을 알아봅니다.
+titleSuffix: ''
+description: macOS에 azdata 도구를 설치하는 방법을 알아봅니다.
 author: MikeRayMSFT
 ms.author: mikeray
 ms.reviewer: mihaelab
@@ -9,12 +9,12 @@ ms.date: 01/07/2020
 ms.topic: conceptual
 ms.prod: sql
 ms.technology: big-data-cluster
-ms.openlocfilehash: f6662a5ff7ced4c260e2b1a3fbd1efe5a285cf4a
-ms.sourcegitcommit: 883435b4c7366f06ac03579752093737b098feab
+ms.openlocfilehash: c812600394546cba8adb0eacab59fa450b7c4bd2
+ms.sourcegitcommit: d56f1eca807c55cf606a6316f3872585f014fec1
 ms.translationtype: HT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 08/28/2020
-ms.locfileid: "89734078"
+ms.lasthandoff: 09/22/2020
+ms.locfileid: "90914905"
 ---
 # <a name="install-azdata-on-macos"></a>macOS에 `azdata` 설치
 
@@ -62,3 +62,5 @@ brew uninstall azdata-cli
 ## <a name="next-steps"></a>다음 단계
 
 빅 데이터 클러스터에 대한 자세한 내용은 [[!INCLUDE[big-data-clusters-2019](../../includes/ssbigdataclusters-ver15.md)]란?](../../big-data-cluster/big-data-cluster-overview.md)을 참조하세요.
+
+[Azure Arc 지원 데이터 서비스](/azure/azure-arc/data/)와 함께 azdata 사용

@@ -1,7 +1,7 @@
 ---
-title: azdata bdc app 참조
+title: azdata arc 참조
 titleSuffix: SQL Server big data clusters
-description: azdata bdc app 명령에 대한 참조 문서입니다.
+description: azdata arc 명령에 대한 참조 문서입니다.
 author: MikeRayMSFT
 ms.author: mikeray
 ms.reviewer: seanw
@@ -9,14 +9,14 @@ ms.date: 09/22/2020
 ms.topic: reference
 ms.prod: sql
 ms.technology: big-data-cluster
-ms.openlocfilehash: ae9dbfc61b1b900c8f8733cc90b9c54905eaa5fe
+ms.openlocfilehash: af556ee76bbd2ea08f6ec483171d9cf9d8744e8b
 ms.sourcegitcommit: d56f1eca807c55cf606a6316f3872585f014fec1
 ms.translationtype: HT
 ms.contentlocale: ko-KR
 ms.lasthandoff: 09/22/2020
-ms.locfileid: "90914665"
+ms.locfileid: "90942808"
 ---
-# <a name="azdata-bdc-app"></a>azdata bdc app
+# <a name="azdata-arc"></a>azdata arc
 
 `azdata`에 적용됩니다.
 
@@ -26,7 +26,11 @@ ms.locfileid: "90914665"
 
 |명령|설명|
 | --- | --- |
-[azdata bdc app status](reference-azdata-bdc-app-status.md) | App 서비스 상태 명령입니다.
+[azdata arc sql](reference-azdata-arc-sql.md) | SQL 리소스를 만들고, 삭제하고, 관리합니다.
+[azdata arc dc](reference-azdata-arc-dc.md) | 데이터 컨트롤러를 만들고, 삭제하고, 관리합니다.
+[azdata arc resource-kind](reference-azdata-arc-resource-kind.md) | 클러스터에 사용자 지정 리소스를 정의하고 템플릿으로 만들기 위한 리소스 종류 명령입니다.
+[azdata arc resource](reference-azdata-arc-resource.md) | 클러스터에 사용자 지정 리소스를 만들고 관리하기 위한 리소스 명령입니다.
+[azdata arc postgres](reference-azdata-arc-postgres.md) | PostgreSQL 서버 그룹을 만들고, 삭제하고, 관리합니다.
 
 ## <a name="next-steps"></a>다음 단계
 

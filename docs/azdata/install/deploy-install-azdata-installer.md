@@ -1,7 +1,7 @@
 ---
 title: Windows Installer를 사용하여 azdata 설치
-titleSuffix: SQL Server big data clusters
-description: 설치 프로그램을 사용하여 SQL Server 빅 데이터 클러스터를 설치 및 관리하기 위한 azdata 도구를 설치하는 방법을 알아봅니다.
+titleSuffix: ''
+description: 설치 관리자를 사용하여 azdata 도구를 설치하는 방법을 알아봅니다.
 author: MikeRayMSFT
 ms.author: mikeray
 ms.reviewer: mihaelab
@@ -9,18 +9,18 @@ ms.date: 11/04/2019
 ms.topic: conceptual
 ms.prod: sql
 ms.technology: big-data-cluster
-ms.openlocfilehash: 60d3b60f98a93cb6b724cd569fb2871adec3f1ce
-ms.sourcegitcommit: 883435b4c7366f06ac03579752093737b098feab
+ms.openlocfilehash: a33e43386c44ec2ab60166ef57a502fc592c8d73
+ms.sourcegitcommit: d56f1eca807c55cf606a6316f3872585f014fec1
 ms.translationtype: HT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 08/28/2020
-ms.locfileid: "89734084"
+ms.lasthandoff: 09/22/2020
+ms.locfileid: "90914962"
 ---
 # <a name="install-azdata-to-manage-big-data-clusters-2019-with-windows-installer"></a>Windows Installer를 사용하여 `azdata`를 설치하고 [!INCLUDE[big-data-clusters-2019](../../includes/ssbigdataclusters-ss-nover.md)] 관리
 
-[!INCLUDE[SQL Server 2019](../../includes/applies-to-version/sqlserver2019.md)]
+[!INCLUDE[SQL Server 2019](../../includes/applies-to-version/azdata.md)]
 
-이 문서에서는 Windows에서 SQL Server 2019 빅 데이터 클러스터용 `azdata`를 설치하는 방법을 설명합니다. Windows 설치가 지원되기 전에는 `azdata`를 설치하려면 `pip`가 필요했습니다.
+이 문서에서는 Windows에 `azdata`를 설치하는 방법을 설명합니다. Windows 설치가 지원되기 전에는 `azdata`를 설치하려면 `pip`가 필요했습니다.
 
 >Linux(Ubuntu)는 [설치 프로그램을 사용하여 `azdata` 설치](./deploy-install-azdata-linux-package.md)를 참조하세요.
 
@@ -70,3 +70,5 @@ Windows Installer를 사용하여 `azdata`를 제거하려면 아래에서 해�
 ## <a name="next-steps"></a>다음 단계
 
 빅 데이터 클러스터에 대한 자세한 내용은 [[!INCLUDE[big-data-clusters-2019](../../includes/ssbigdataclusters-ver15.md)]란?](../../big-data-cluster/big-data-cluster-overview.md)을 참조하세요.
+
+[Azure Arc 지원 데이터 서비스](/azure/azure-arc/data/)와 함께 azdata 사용

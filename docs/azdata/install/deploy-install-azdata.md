@@ -1,26 +1,25 @@
 ---
 title: Azdata 설치
-titleSuffix: SQL Server big data clusters
-description: 빅 데이터 클러스터를 설치하고 관리할 수 있는 azdata 도구 설치 방법을 알아봅니다.
+titleSuffix: ''
+description: azdata 도구를 설치하는 방법을 알아봅니다.
 author: MikeRayMSFT
 ms.author: mikeray
 ms.reviewer: mihaelab
 ms.date: 01/07/2020
 ms.topic: conceptual
 ms.prod: sql
-ms.technology: big-data-cluster
-ms.openlocfilehash: 408dec76480a36ff2280926147b948859fa7088d
-ms.sourcegitcommit: 883435b4c7366f06ac03579752093737b098feab
+ms.openlocfilehash: 7939aa1575aaeec8edff33a9a9f7101a1014abc2
+ms.sourcegitcommit: d56f1eca807c55cf606a6316f3872585f014fec1
 ms.translationtype: HT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 08/28/2020
-ms.locfileid: "89734097"
+ms.lasthandoff: 09/22/2020
+ms.locfileid: "90914937"
 ---
 # <a name="install-azdata"></a>`azdata` 설치
 
-[!INCLUDE[SQL Server 2019](../../includes/applies-to-version/sqlserver2019.md)]
+[!INCLUDE[SQL Server 2019](../../includes/applies-to-version/azdata.md)]
 
-`azdata`는 REST API를 통해 빅 데이터 클러스터를 부트스트랩하고 관리할 수 있도록 Python으로 작성된 명령줄 유틸리티입니다. 
+`azdata`는 REST API를 통해 데이터 서비스를 부트스트랩하고 관리할 수 있도록 Python으로 작성된 명령줄 유틸리티입니다. 
 
 ## <a name="find-latest-version"></a>최신 버전 찾기
 
@@ -42,4 +41,6 @@ ms.locfileid: "89734097"
 
 ## <a name="next-steps"></a>다음 단계
 
-빅 데이터 클러스터에 대한 자세한 내용은 [[!INCLUDE[big-data-clusters-2019](../../includes/ssbigdataclusters-ver15.md)]란?](../../big-data-cluster/big-data-cluster-overview.md)을 참조하세요.
+빅 데이터 클러스터와 함께 azdata를 사용하는 방법에 대한 자세한 내용은 [[!INCLUDE[big-data-clusters-2019](../../includes/ssbigdataclusters-ver15.md)]란?](../../big-data-cluster/big-data-cluster-overview.md)을 참조하세요.
+
+[Azure Arc 지원 데이터 서비스](/azure/azure-arc/data/)와 함께 azdata 사용

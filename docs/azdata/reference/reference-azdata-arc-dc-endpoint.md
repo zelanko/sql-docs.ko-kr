@@ -1,7 +1,7 @@
 ---
-title: azdata bdc spark status 참조
+title: azdata arc dc endpoint 참조
 titleSuffix: SQL Server big data clusters
-description: azdata bdc spark status 명령에 대한 참조 문서입니다.
+description: azdata arc dc endpoint 명령에 대한 참조 문서입니다.
 author: MikeRayMSFT
 ms.author: mikeray
 ms.reviewer: seanw
@@ -9,14 +9,14 @@ ms.date: 09/22/2020
 ms.topic: reference
 ms.prod: sql
 ms.technology: big-data-cluster
-ms.openlocfilehash: da13babdf51bc1b4f7e1afa297e7712994932c64
+ms.openlocfilehash: 12454dfd9ca4cb4f7489bf3586517b91c44fe671
 ms.sourcegitcommit: d56f1eca807c55cf606a6316f3872585f014fec1
 ms.translationtype: HT
 ms.contentlocale: ko-KR
 ms.lasthandoff: 09/22/2020
-ms.locfileid: "90914567"
+ms.locfileid: "90942824"
 ---
-# <a name="azdata-bdc-spark-status"></a>azdata bdc spark status
+# <a name="azdata-arc-dc-endpoint"></a>azdata arc dc endpoint
 
 `azdata`에 적용됩니다.
 
@@ -26,31 +26,21 @@ ms.locfileid: "90914567"
 
 |명령|설명|
 | --- | --- |
-[azdata bdc spark status 표시](#azdata-bdc-spark-status-show) | Spark 서비스 상태입니다.
-## <a name="azdata-bdc-spark-status-show"></a>azdata bdc spark status 표시
-Spark 서비스 상태입니다.
+[azdata arc dc endpoint list](#azdata-arc-dc-endpoint-list) | 데이터 컨트롤러 엔드포인트를 나열합니다.
+## <a name="azdata-arc-dc-endpoint-list"></a>azdata arc dc endpoint list
+데이터 컨트롤러 엔드포인트를 나열합니다.
 ```bash
-azdata bdc spark status show [--resource -r] 
-                             [--all -a]
+azdata arc dc endpoint list [--endpoint-name -e] 
+                            
 ```
-### <a name="examples"></a>예제
-spark 서비스의 상태를 가져옵니다.
+### <a name="examples"></a>예
+특정 네임스페이스의 데이터 컨트롤러 엔드포인트를 나열합니다.
 ```bash
-azdata bdc spark status show
-```
-모든 인스턴스에서 spark 서비스 상태를 가져옵니다.
-```bash
-azdata bdc spark status show --all
-```
-spark 서비스 내에서 스토리지 리소스의 상태를 가져옵니다.
-```bash
-azdata bdc spark status show --resource storage-0
+azdata arc dc endpoint list --namespace <ns>
 ```
 ### <a name="optional-parameters"></a>선택적 매개 변수
-#### `--resource -r`
-이 서비스에서 이 리소스를 가져옵니다.
-#### `--all -a`
-서비스 내에서 각 리소스의 모든 인스턴스를 표시합니다.
+#### `--endpoint-name -e`
+arc 데이터 컨트롤러 엔드포인트 이름입니다.
 ### <a name="global-arguments"></a>전역 인수
 #### `--debug`
 로깅의 자세한 정도를 늘려 모든 디버그 로그를 표시합니다.

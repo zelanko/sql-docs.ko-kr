@@ -1,7 +1,7 @@
 ---
 title: zypper를 사용하여 azdata 설치
-titleSuffix: SQL Server big data clusters
-description: zypper를 사용하여 빅 데이터 클러스터를 설치하고 관리할 수 있는 azdata 도구 설치 방법을 알아봅니다.
+titleSuffix: ''
+description: zypper를 사용하여 azdata 도구를 설치하는 방법을 알아봅니다.
 author: MikeRayMSFT
 ms.author: mikeray
 ms.reviewer: mihaelab
@@ -9,12 +9,12 @@ ms.date: 01/07/2020
 ms.topic: conceptual
 ms.prod: sql
 ms.technology: big-data-cluster
-ms.openlocfilehash: 2445fecc554ff9f7816bbf75483ab49bbee542c1
-ms.sourcegitcommit: 883435b4c7366f06ac03579752093737b098feab
+ms.openlocfilehash: 8fdde8b6229bd2fc98005025e17efe97104d2fc1
+ms.sourcegitcommit: d56f1eca807c55cf606a6316f3872585f014fec1
 ms.translationtype: HT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 08/28/2020
-ms.locfileid: "89734096"
+ms.lasthandoff: 09/22/2020
+ms.locfileid: "90914888"
 ---
 # <a name="install-azdata-with-zypper"></a>zypper를 사용하여 `azdata` 설치
 
@@ -44,7 +44,7 @@ ms.locfileid: "89734096"
 1. 로컬 리포지토리 정보 만들기
 
    ```bash
-   sudo zypper addrepo -fc https://packages.microsoft.com/config/sles/12/mssql-server-2019.repo
+   sudo zypper addrepo -fc https://packages.microsoft.com/config/sles/12/prod.repo
    ```
 
 1. 설치
@@ -80,3 +80,5 @@ ms.locfileid: "89734096"
 ## <a name="next-steps"></a>다음 단계
 
 빅 데이터 클러스터에 대한 자세한 내용은 [[!INCLUDE[big-data-clusters-2019](../../includes/ssbigdataclusters-ver15.md)]란?](../../big-data-cluster/big-data-cluster-overview.md)을 참조하세요.
+
+[Azure Arc 지원 데이터 서비스](/azure/azure-arc/data/)와 함께 azdata 사용

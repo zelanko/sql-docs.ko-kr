@@ -1,7 +1,7 @@
 ---
 title: Linux에서 설치 관리자를 사용하여 azdata 설치
-titleSuffix: SQL Server big data clusters
-description: 설치 관리자(Linux)를 사용하여 SQL Server 빅 데이터 클러스터를 설치 및 관리하기 위한 azdata 도구를 설치하는 방법을 알아봅니다.
+titleSuffix: ''
+description: 설치 관리자(Linux)를 사용하여 azdata 도구를 설치하는 방법을 알아봅니다.
 author: MikeRayMSFT
 ms.author: mikeray
 ms.reviewer: mihaelab
@@ -9,18 +9,18 @@ ms.date: 01/07/2020
 ms.topic: conceptual
 ms.prod: sql
 ms.technology: big-data-cluster
-ms.openlocfilehash: 767268e11519d6ec3a4c3af4325870361a92cfc7
-ms.sourcegitcommit: 883435b4c7366f06ac03579752093737b098feab
+ms.openlocfilehash: 2dc1c3d58ee5f7b6ea032a2e41f7c18431229881
+ms.sourcegitcommit: d56f1eca807c55cf606a6316f3872585f014fec1
 ms.translationtype: HT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 08/28/2020
-ms.locfileid: "89734079"
+ms.lasthandoff: 09/22/2020
+ms.locfileid: "90914970"
 ---
 # <a name="install-azdata-with-apt"></a>apt를 사용하여 `azdata` 설치
 
-[!INCLUDE[SQL Server 2019](../../includes/applies-to-version/sqlserver2019.md)]
+[!INCLUDE[SQL Server 2019](../../includes/applies-to-version/azdata.md)]
 
-이 문서에서는 Linux에서 SQL Server 2019 빅 데이터 클러스터용 `azdata`를 설치하는 방법을 설명합니다. 패키지 관리자가 출시되기 전에는 `azdata`를 설치하려면 `pip`가 필요했습니다.
+이 문서에서는 Linux에 `azdata`를 설치하는 방법을 설명합니다. 패키지 관리자가 출시되기 전에는 `azdata`를 설치하려면 `pip`가 필요했습니다.
 
 [!INCLUDE [azdata-package-installation-remove-pip-install](../../includes/azdata-package-installation-remove-pip-install.md)]
 
@@ -52,12 +52,12 @@ ms.locfileid: "89734079"
 
    Ubuntu 16.04 클라이언트 실행의 경우:
     ```bash
-    sudo add-apt-repository "$(wget -qO- https://packages.microsoft.com/config/ubuntu/16.04/mssql-server-2019.list)"
+    sudo add-apt-repository "$(wget -qO- https://packages.microsoft.com/config/ubuntu/16.04/prod.list)"
     ```
 
    Ubuntu 18.04 클라이언트 실행의 경우:
     ```bash
-    sudo add-apt-repository "$(wget -qO- https://packages.microsoft.com/config/ubuntu/18.04/mssql-server-2019.list)"
+    sudo add-apt-repository "$(wget -qO- https://packages.microsoft.com/config/ubuntu/18.04/prod.list)"
     ```
 
 4. 리포지토리 정보를 업데이트하고 `azdata`를 설치합니다.
@@ -113,3 +113,5 @@ sudo apt-get update && sudo apt-get install --only-upgrade -y azdata-cli
 ## <a name="next-steps"></a>다음 단계
 
 빅 데이터 클러스터에 대한 자세한 내용은 [[!INCLUDE[big-data-clusters-2019](../../includes/ssbigdataclusters-ver15.md)]란?](../../big-data-cluster/big-data-cluster-overview.md)을 참조하세요.
+
+[Azure Arc 지원 데이터 서비스](/azure/azure-arc/data/)와 함께 azdata 사용

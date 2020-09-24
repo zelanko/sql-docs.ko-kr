@@ -3,7 +3,7 @@ title: ALTER DATABASE SCOPED CONFIGURATION
 description: 개별 데이터베이스 수준에서 여러 데이터베이스 구성 설정을 사용하도록 설정합니다.
 titleSuffix: SQL Server (Transact-SQL)
 ms.custom: seo-lt-2019
-ms.date: 10/31/2019
+ms.date: 09/15/2020
 ms.prod: sql
 ms.prod_service: database-engine, sql-database
 ms.reviewer: ''
@@ -24,12 +24,12 @@ ms.assetid: 63373c2f-9a0b-431b-b9d2-6fa35641571a
 author: markingmyname
 ms.author: maghan
 monikerRange: = azuresqldb-current || = azuresqldb-mi-current || >= sql-server-2016 || >= sql-server-linux-2017 ||=azure-sqldw-latest|| = sqlallproducts-allversions
-ms.openlocfilehash: f395ef15f82b4975a3df677abea227e181835e83
-ms.sourcegitcommit: dd36d1cbe32cd5a65c6638e8f252b0bd8145e165
+ms.openlocfilehash: 9b3710606df63baaf85134be47fb0fe1643c72f3
+ms.sourcegitcommit: 6d9b6eb2437e780c7881cc516e03c1182fb6892e
 ms.translationtype: HT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 09/08/2020
-ms.locfileid: "89537093"
+ms.lasthandoff: 09/15/2020
+ms.locfileid: "90565088"
 ---
 # <a name="alter-database-scoped-configuration-transact-sql"></a>ALTER DATABASE SCOPED CONFIGURATION(Transact-SQL)
 
@@ -153,7 +153,7 @@ MAXDOP 옵션을 사용하여 병렬 계획 실행에 사용되도록 프로세�
 인스턴스 수준에서 이 옵션을 설정하려면 [max degree of parallelism 서버 구성 옵션 구성](../../database-engine/configure-windows/configure-the-max-degree-of-parallelism-server-configuration-option.md)을 참조하세요.
 
 > [!NOTE]
-> [!INCLUDE[ssSDSfull](../../includes/sssdsfull-md.md)]에서 서버 수준의 **max degree of parallelism** 구성은 항상 0으로 설정됩니다. 현재 문서에 설명된 대로 각 데이터베이스에 대해 MAXDOP를 구성할 수 있습니다. MAXDOP를 최적으로 구성하는 방법에 대한 권장 사항은 [추가 리소스](#additional-resources) 섹션을 참조하세요.
+> [!INCLUDE[ssSDSfull](../../includes/sssdsfull-md.md)]에서 새로운 단일 탄력적 풀 데이터베이스의 MAXDOP 데이터베이스 범위 구성은 기본적으로 8로 설정됩니다. 현재 문서에 설명된 대로 각 데이터베이스에 대해 MAXDOP를 구성할 수 있습니다. MAXDOP를 최적으로 구성하는 방법에 대한 권장 사항은 [추가 리소스](#additional-resources) 섹션을 참조하세요.
 
 > [!TIP]
 > 쿼리 수준에서 이 작업을 수행하려면 **MAXDOP** [쿼리 힌트](../../t-sql/queries/hints-transact-sql-query.md)를 사용합니다.    

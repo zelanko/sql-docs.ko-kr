@@ -1,7 +1,7 @@
 ---
-title: azdata bdc spark status 참조
+title: azdata arc postgres endpoint 참조
 titleSuffix: SQL Server big data clusters
-description: azdata bdc spark status 명령에 대한 참조 문서입니다.
+description: azdata arc postgres endpoint 명령에 대한 참조 문서입니다.
 author: MikeRayMSFT
 ms.author: mikeray
 ms.reviewer: seanw
@@ -9,14 +9,14 @@ ms.date: 09/22/2020
 ms.topic: reference
 ms.prod: sql
 ms.technology: big-data-cluster
-ms.openlocfilehash: da13babdf51bc1b4f7e1afa297e7712994932c64
+ms.openlocfilehash: 42e5144ca4cfd3544e9a93a5464bea531af21187
 ms.sourcegitcommit: d56f1eca807c55cf606a6316f3872585f014fec1
 ms.translationtype: HT
 ms.contentlocale: ko-KR
 ms.lasthandoff: 09/22/2020
-ms.locfileid: "90914567"
+ms.locfileid: "90942912"
 ---
-# <a name="azdata-bdc-spark-status"></a>azdata bdc spark status
+# <a name="azdata-arc-postgres-endpoint"></a>azdata arc postgres endpoint
 
 `azdata`에 적용됩니다.
 
@@ -26,31 +26,24 @@ ms.locfileid: "90914567"
 
 |명령|설명|
 | --- | --- |
-[azdata bdc spark status 표시](#azdata-bdc-spark-status-show) | Spark 서비스 상태입니다.
-## <a name="azdata-bdc-spark-status-show"></a>azdata bdc spark status 표시
-Spark 서비스 상태입니다.
+[azdata arc postgres endpoint list](#azdata-arc-postgres-endpoint-list) | PostgreSQL 서버 그룹 엔드포인트를 나열합니다.
+## <a name="azdata-arc-postgres-endpoint-list"></a>azdata arc postgres endpoint list
+PostgreSQL 서버 그룹 엔드포인트를 나열합니다.
 ```bash
-azdata bdc spark status show [--resource -r] 
-                             [--all -a]
+azdata arc postgres endpoint list --name -n 
+                                  [--engine-version -ev]
 ```
-### <a name="examples"></a>예제
-spark 서비스의 상태를 가져옵니다.
+### <a name="examples"></a>예
+PostgreSQL 서버 그룹 엔드포인트를 나열합니다.
 ```bash
-azdata bdc spark status show
+azdata arc postgres endpoint list -n postgres01
 ```
-모든 인스턴스에서 spark 서비스 상태를 가져옵니다.
-```bash
-azdata bdc spark status show --all
-```
-spark 서비스 내에서 스토리지 리소스의 상태를 가져옵니다.
-```bash
-azdata bdc spark status show --resource storage-0
-```
+### <a name="required-parameters"></a>필수 매개 변수
+#### `--name -n`
+PostgreSQL 서버 그룹의 이름입니다.
 ### <a name="optional-parameters"></a>선택적 매개 변수
-#### `--resource -r`
-이 서비스에서 이 리소스를 가져옵니다.
-#### `--all -a`
-서비스 내에서 각 리소스의 모든 인스턴스를 표시합니다.
+#### `--engine-version -ev`
+엔진 버전이 다른 두 서버 그룹의 이름이 같은 경우 --name과 함께 --engine-version을 사용하여 PostgreSQL 하이퍼스케일 서버 그룹을 식별할 수 있습니다. --engine-version은 선택 사항으로, 서버 그룹을 식별하는 데 사용할 경우 11 또는 12여야 합니다.
 ### <a name="global-arguments"></a>전역 인수
 #### `--debug`
 로깅의 자세한 정도를 늘려 모든 디버그 로그를 표시합니다.
