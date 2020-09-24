@@ -10,12 +10,12 @@ metadata:
   author: dphansen
   ms.author: davidph
   ms.date: 05/27/2020
-  ms.openlocfilehash: 72f9fc36ace86dda5c38b7713376d83dbe1e8230
-  ms.sourcegitcommit: edba1c570d4d8832502135bef093aac07e156c95
+  ms.openlocfilehash: 226eb1c5afe9812cf5bcc29de47289b865ac0c3c
+  ms.sourcegitcommit: e3460309b301a77d0babec032f53de330da001a9
   ms.translationtype: HT
   ms.contentlocale: ko-KR
-  ms.lasthandoff: 07/20/2020
-  ms.locfileid: "86485304"
+  ms.lasthandoff: 09/24/2020
+  ms.locfileid: "91136371"
 landingContent:
 - title: SQL Server의 Machine Learning
   linkLists:
@@ -96,15 +96,15 @@ landingContent:
   - linkListType: overview
     links:
     - text: Azure Data Studio용 Machine Learning 확장은 무엇인가요?
-      url: ../azure-data-studio/machine-learning-extension.md
+      url: ../azure-data-studio/extensions/machine-learning-extension.md
   - linkListType: how-to-guide
     links:
     - text: 데이터베이스의 패키지 관리
-      url: ../azure-data-studio/machine-learning-extension-manage-packages.md
+      url: ../azure-data-studio/extensions/machine-learning-extension-manage-packages.md
     - text: 예측 만들기
-      url: ../azure-data-studio/machine-learning-extension-predictions.md
+      url: ../azure-data-studio/extensions/machine-learning-extension-predictions.md
     - text: 모델 가져오기 또는 보기
-      url: ../azure-data-studio/machine-learning-extension-import-view-models.md
+      url: ../azure-data-studio/extensions/machine-learning-extension-import-view-models.md
 - title: SQL Server 빅 데이터 클러스터
   linkLists:
   - linkListType: overview
