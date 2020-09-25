@@ -14,18 +14,18 @@ ms.assetid: 5ff02a32-e8d3-479c-ae8b-07581e41f5f8
 author: VanMSFT
 ms.author: vanto
 monikerRange: '>=aps-pdw-2016||=azuresqldb-current||=azure-sqldw-latest||>=sql-server-2016||=sqlallproducts-allversions||>=sql-server-linux-2017||=azuresqldb-mi-current'
-ms.openlocfilehash: 921d626eaacb0cdfd6f14988cd41e39efc35339b
-ms.sourcegitcommit: e700497f962e4c2274df16d9e651059b42ff1a10
+ms.openlocfilehash: 41b99ede74cb7e8213fb50e95f1a9160b4d947af
+ms.sourcegitcommit: 8f062015c2a033f5a0d805ee4adabbe15e7c8f94
 ms.translationtype: HT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 08/17/2020
-ms.locfileid: "88459136"
+ms.lasthandoff: 09/25/2020
+ms.locfileid: "91226917"
 ---
 # <a name="queries"></a>쿼리
 
 [!INCLUDE [sql-asdb-asdbmi-asa-pdw](../../includes/applies-to-version/sql-asdb-asdbmi-asa-pdw.md)]
 
-  DML(데이터 조작 언어)은 [!INCLUDE[ssCurrent](../../includes/sscurrent-md.md)] 및 SQL Database에서 데이터를 검색하고 데이터로 작업하는 데 사용하는 어휘입니다. 대부분 SQL Data Warehouse 및 PDW에서도 작동합니다(자세한 내용은 각 개별 문을 검토). 이러한 DML 문을 사용하여 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 데이터베이스에서 데이터를 추가, 수정, 쿼리 또는 제거할 수 있습니다.  
+  DML(데이터 조작 언어)은 [!INCLUDE[ssCurrent](../../includes/sscurrent-md.md)] 및 SQL Database에서 데이터를 검색하고 데이터로 작업하는 데 사용하는 어휘입니다. 대부분 [!INCLUDE[ssSDW](../../includes/sssdwfull-md.md)] 및 [!INCLUDE[ssPDW](../../includes/sspdw-md.md)]에서도 작동합니다(자세한 내용은 개별 명령문을 검토). 이러한 DML 문을 사용하여 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 데이터베이스에서 데이터를 추가, 수정, 쿼리 또는 제거할 수 있습니다.  
   
 ## <a name="in-this-section"></a>섹션 내용  
  다음 표에서는 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]에서 사용하는 DML 문을 나열합니다.  

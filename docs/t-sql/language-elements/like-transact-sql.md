@@ -32,12 +32,12 @@ ms.assetid: 581fb289-29f9-412b-869c-18d33a9e93d5
 author: juliemsft
 ms.author: jrasnick
 monikerRange: '>=aps-pdw-2016||=azuresqldb-current||=azure-sqldw-latest||>=sql-server-2016||=sqlallproducts-allversions||>=sql-server-linux-2017||=azuresqldb-mi-current'
-ms.openlocfilehash: f8886fbf2a94df7fd338572f2156e66ee6fc50ba
-ms.sourcegitcommit: e700497f962e4c2274df16d9e651059b42ff1a10
+ms.openlocfilehash: 41702e9236ba7e3a7f065363998ff27e41aa5c64
+ms.sourcegitcommit: 8f062015c2a033f5a0d805ee4adabbe15e7c8f94
 ms.translationtype: HT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 08/17/2020
-ms.locfileid: "88467675"
+ms.lasthandoff: 09/25/2020
+ms.locfileid: "91227510"
 ---
 # <a name="like-transact-sql"></a>LIKE(Transact-SQL)
 [!INCLUDE [sql-asdb-asdbmi-asa-pdw](../../includes/applies-to-version/sql-asdb-asdbmi-asa-pdw.md)]
@@ -55,12 +55,12 @@ match_expression [ NOT ] LIKE pattern [ ESCAPE escape_character ]
 ```  
   
 ```syntaxsql
--- Syntax for Azure SQL Data Warehouse and Parallel Data Warehouse  
+-- Syntax for Azure Synapse Analytics and Parallel Data Warehouse  
   
 match_expression [ NOT ] LIKE pattern  
 ```  
 >[!NOTE]
-> 현재 ESCAPE 및 STRING_ESCAPE는 Azure SQL Data Warehouse 또는 병렬 데이터 웨어하우스에서 지원되지 않습니다.
+> 현재 ESCAPE 및 STRING_ESCAPE는 [!INCLUDE[ssSDW](../../includes/sssdwfull-md.md)] 또는 [!INCLUDE[ssPDW](../../includes/sspdw-md.md)]에서 지원되지 않습니다.
 
 [!INCLUDE[sql-server-tsql-previous-offline-documentation](../../includes/sql-server-tsql-previous-offline-documentation.md)]
 

@@ -22,12 +22,12 @@ ms.assetid: 919158f2-38d0-4f68-82ab-e1633bd0d308
 author: markingmyname
 ms.author: maghan
 monikerRange: '>=aps-pdw-2016||=azuresqldb-current||=azure-sqldw-latest||>=sql-server-2016||=sqlallproducts-allversions||>=sql-server-linux-2017||=azuresqldb-mi-current'
-ms.openlocfilehash: 422dfd6eee199f1b1fa2732bf5bf14759a071787
-ms.sourcegitcommit: dd36d1cbe32cd5a65c6638e8f252b0bd8145e165
+ms.openlocfilehash: c338ebb3f64dc1752c4e68e33f6954e554d6d4e6
+ms.sourcegitcommit: 8f062015c2a033f5a0d805ee4adabbe15e7c8f94
 ms.translationtype: HT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 09/08/2020
-ms.locfileid: "89547687"
+ms.lasthandoff: 09/25/2020
+ms.locfileid: "91227439"
 ---
 # <a name="update-statistics-transact-sql"></a>UPDATE STATISTICS(Transact-SQL)
 [!INCLUDE [sql-asdb-asdbmi-asa-pdw](../../includes/applies-to-version/sql-asdb-asdbmi-asa-pdw.md)]
@@ -73,7 +73,7 @@ UPDATE STATISTICS table_or_indexed_view_name
 ```  
   
 ```syntaxsql
--- Syntax for Azure SQL Data Warehouse and Parallel Data Warehouse  
+-- Syntax for Azure Synapse Analytics and Parallel Data Warehouse  
   
 UPDATE STATISTICS [ schema_name . ] table_name   
     [ ( { statistics_name | index_name } ) ]  
@@ -211,8 +211,8 @@ EXEC sp_updatestats;
 ### <a name="determining-the-last-statistics-update"></a>마지막 통계 업데이트 확인  
  통계가 마지막으로 업데이트된 시점을 확인하려면 [STATS_DATE](../../t-sql/functions/stats-date-transact-sql.md) 함수를 사용합니다.  
   
-### <a name="pdw--sql-data-warehouse"></a>PDW / SQL Data Warehouse  
- 다음 구문은 PDW / SQL Data Warehouse에서 지원되지 않음  
+### <a name="pdw--azure-synapse-analytics"></a>PDW/Azure Synapse Analytics  
+ 다음 구문은 [!INCLUDE[ssPDW](../../includes/sspdw-md.md)] / [!INCLUDE[ssSDW](../../includes/sssdwfull-md.md)]에서 지원되지 않습니다.  
   
 ```syntaxsql
 UPDATE STATISTICS t1 (a,b);   

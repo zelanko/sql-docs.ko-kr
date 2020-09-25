@@ -6,18 +6,18 @@ ms.date: 09/25/2017
 ms.prod: sql
 ms.reviewer: ''
 ms.technology: high-availability
-ms.topic: conceptual
+ms.topic: how-to
 helpviewer_keywords:
 - Availability Groups [SQL Server], domain independent
 ms.assetid: ''
 author: MashaMSFT
 ms.author: mathoma
-ms.openlocfilehash: b50f2cda111a38ffd6ba67dbbf0fb9fc74192168
-ms.sourcegitcommit: f7ac1976d4bfa224332edd9ef2f4377a4d55a2c9
+ms.openlocfilehash: ac2fe67316f32d372c4f8faddef32af1bcc7f805
+ms.sourcegitcommit: cc23d8646041336d119b74bf239a6ac305ff3d31
 ms.translationtype: HT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 07/02/2020
-ms.locfileid: "85894490"
+ms.lasthandoff: 09/23/2020
+ms.locfileid: "91116233"
 ---
 # <a name="create-a-domain-independent-availability-group"></a>도메인 독립 가용성 그룹 만들기
 [!INCLUDE [SQL Server](../../../includes/applies-to-version/sqlserver.md)]

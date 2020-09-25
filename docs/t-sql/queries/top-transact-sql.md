@@ -22,12 +22,12 @@ ms.assetid: da983c0a-06c5-4cf8-a6a4-7f9d66f34f2c
 author: VanMSFT
 ms.author: vanto
 monikerRange: '>=aps-pdw-2016||=azuresqldb-current||=azure-sqldw-latest||>=sql-server-2016||=sqlallproducts-allversions||>=sql-server-linux-2017||=azuresqldb-mi-current'
-ms.openlocfilehash: 121f3d656a0d40bf97fbf01a47b92e47be9c6adb
-ms.sourcegitcommit: cc23d8646041336d119b74bf239a6ac305ff3d31
+ms.openlocfilehash: 5795e27e7ff97de361161d4f703d8691b3c8405e
+ms.sourcegitcommit: 8f062015c2a033f5a0d805ee4adabbe15e7c8f94
 ms.translationtype: HT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 09/23/2020
-ms.locfileid: "91116641"
+ms.lasthandoff: 09/25/2020
+ms.locfileid: "91227197"
 ---
 # <a name="top-transact-sql"></a>TOP(Transact-SQL)
 [!INCLUDE [sql-asdb-asdbmi-asa-pdw](../../includes/applies-to-version/sql-asdb-asdbmi-asa-pdw.md)]
@@ -47,7 +47,7 @@ ms.locfileid: "91116641"
 ]  
 ```  
 
-Azure SQL Data Warehouse 및 병렬 데이터 웨어하우스에 대한 구문은 다음과 같습니다.
+다음은 [!INCLUDE[ssSDW](../../includes/sssdwfull-md.md)] 및 [!INCLUDE[ssPDW](../../includes/sspdw-md.md)]에 대한 구문입니다.
 
 ```syntaxsql  
 [   

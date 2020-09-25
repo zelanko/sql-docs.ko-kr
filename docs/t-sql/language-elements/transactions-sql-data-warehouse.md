@@ -1,6 +1,6 @@
 ---
-description: 트랜잭션(SQL Data Warehouse)
-title: 트랜잭션(SQL Data Warehouse) | Microsoft Docs
+title: 트랜잭션(Azure Synapse Analytics)
+description: 트랜잭션은 완전히 커밋되거나 롤백되는 하나 이상의 데이터베이스 문 그룹입니다.
 ms.custom: ''
 ms.date: 03/14/2017
 ms.prod: sql
@@ -13,14 +13,15 @@ ms.assetid: 87e5e593-a121-4428-9d3c-3af876224e35
 author: ronortloff
 ms.author: rortloff
 monikerRange: '>= aps-pdw-2016 || = azure-sqldw-latest || = sqlallproducts-allversions'
-ms.openlocfilehash: 4928358ca724108611f91e36a480a7bade6d747e
-ms.sourcegitcommit: ac9feb0b10847b369b77f3c03f8200c86ee4f4e0
+ms.openlocfilehash: 4898ed6ddf50e75565d13be5f35b6f833f78d929
+ms.sourcegitcommit: 8f062015c2a033f5a0d805ee4adabbe15e7c8f94
 ms.translationtype: HT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 09/16/2020
-ms.locfileid: "90688343"
+ms.lasthandoff: 09/25/2020
+ms.locfileid: "91227479"
 ---
-# <a name="transactions-sql-data-warehouse"></a>트랜잭션(SQL Data Warehouse)
+# <a name="transactions-azure-synapse-analytics"></a>트랜잭션(Azure Synapse Analytics)
+
 [!INCLUDE[applies-to-version/asa-pdw](../../includes/applies-to-version/asa-pdw.md)]
 
   트랜잭션은 완전히 커밋되거나 롤백되는 하나 이상의 데이터베이스 문 그룹입니다. 각각의 트랜잭션은 ACID(원자성, 일관성, 격리성 및 내구성)입니다. 트랜잭션이 성공하면 그 안의 모든 문이 커밋됩니다. 트랜잭션이 실패하면 그룹의 문 중 하나 이상이 실패하는 것이며 전체 그룹이 롤백됩니다.  
@@ -93,7 +94,7 @@ SET IMPLICIT_TRANSACTIONS { ON | OFF } [;]
 ## <a name="limitations-and-restrictions"></a>제한 사항  
  COMMIT 문을 실행한 후에는 데이터 수정 내용이 데이터베이스에 영구적으로 반영되므로 트랜잭션을 롤백할 수 없습니다.  
   
- [CREATE DATABASE &#40;Azure SQL Data Warehouse&#41;](../../t-sql/statements/create-database-azure-sql-data-warehouse.md) 및 [DROP DATABASE &#40;Transact-SQL&#41;](../../t-sql/statements/drop-database-transact-sql.md) 명령은 명시적 트랜잭션 안에서 사용할 수 없습니다.  
+ [CREATE DATABASE &#40;Azure Synapse Analytics&#41;](../../t-sql/statements/create-database-azure-sql-data-warehouse.md) 및 [DROP DATABASE &#40;Transact-SQL&#41;](../../t-sql/statements/drop-database-transact-sql.md) 명령은 명시적 트랜잭션 내에서 사용할 수 없습니다.  
   
  [!INCLUDE[ssSDW](../../includes/sssdw-md.md)]에는 트랜잭션 공유 메커니즘이 없습니다. 즉 어느 특정 시점에 시스템에서 한 세션만 트랜잭션에 대한 작업을 수행할 수 있습니다.  
   
@@ -114,8 +115,7 @@ COMMIT;
 ### <a name="b-rolling-back-a-transaction"></a>B. 트랜잭션 롤백  
  다음 예제에서는 트랜잭션 롤백의 결과를 보여 줍니다.  이 예제에서는 ROLLBACK 문이 INSERT 문을 롤백하지만 만들어진 테이블은 그대로 있습니다.  
   
-
-```sql
+```sql  
 CREATE TABLE ValueTable (id INT);  
 BEGIN TRANSACTION;  
        INSERT INTO ValueTable VALUES(1);  

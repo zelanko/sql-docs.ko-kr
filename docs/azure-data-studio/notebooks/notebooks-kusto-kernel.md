@@ -9,12 +9,12 @@ ms.author: maghan
 ms.reviewer: jukoesma
 ms.custom: ''
 ms.date: 09/22/2020
-ms.openlocfilehash: ab2f062e6dd712e7f001556bb60c10c9ea4fad83
-ms.sourcegitcommit: d56f1eca807c55cf606a6316f3872585f014fec1
+ms.openlocfilehash: efcea597a431d33cfbd2978e36f3b95d27986772
+ms.sourcegitcommit: 8f062015c2a033f5a0d805ee4adabbe15e7c8f94
 ms.translationtype: HT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 09/22/2020
-ms.locfileid: "90942733"
+ms.lasthandoff: 09/25/2020
+ms.locfileid: "91226963"
 ---
 # <a name="create-and-run-a-kusto-kql-notebook-preview"></a>Kusto(KQL) Notebook(미리 보기) 만들기 및 실행
 
@@ -38,7 +38,7 @@ Azure 구독이 아직 없는 경우 시작하기 전에 [Azure 체험 계정](h
 
 1. Azure Data Studio에서 Azure Data Explorer 클러스터에 연결합니다.
 
-2. **연결** 창으로 이동한 다음, **서버** 창에서 Kusto 데이터베이스를 마우스 오른쪽 단추로 클릭하고 ‘새 노트북’을 선택합니다.
+2. **연결** 창으로 이동한 다음, **서버** 창에서 Kusto 데이터베이스를 마우스 오른쪽 단추로 클릭하고 ‘새 노트북’을 선택합니다. **파일** > **새 Notebook**으로 이동해도 됩니다.
 
    :::image type="content" source="media/notebooks-kusto-kernel/kusto-new-notebook.png" alt-text="Notebook 열기":::
 
@@ -103,6 +103,12 @@ Notebook의 Kusto 연결을 변경하려면 다음을 수행합니다.
 ```
 
 :::image type="content" source="media/notebooks-kusto-kernel/run-notebook-save-results.png" alt-text="결과 저장":::
+
+## <a name="limitations-and-considerations"></a>제한 사항 및 고려 사항
+
+- Kusto 쿼리를 실행하기 전에 Azure Data Explorer 클러스터에 대한 데이터베이스를 선택해야 합니다.
+- Azure Data Explorer 클러스터를 너무 오랫동안 유휴 상태로 두면 연결이 끊어질 수 있습니다.
+    - 해결 방법: 클러스터에서 연결을 끊고 다시 연결합니다.
 
 ## <a name="next-steps"></a>다음 단계
 

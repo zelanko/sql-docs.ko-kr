@@ -19,12 +19,12 @@ author: jaszymas
 ms.author: jaszymas
 ms.reviewer: vanto
 monikerRange: '>=aps-pdw-2016||=azuresqldb-current||=azure-sqldw-latest||>=sql-server-2016||=sqlallproducts-allversions||>=sql-server-linux-2017||=azuresqldb-mi-current'
-ms.openlocfilehash: 8d1ba3c44a911130a4f86eb5be3789657b24288b
-ms.sourcegitcommit: b2ab989264dd9d23c184f43fff2ec8966793a727
+ms.openlocfilehash: 8cf9e3f2273cf4b85365d7c44f9587e02c62b984
+ms.sourcegitcommit: 8f062015c2a033f5a0d805ee4adabbe15e7c8f94
 ms.translationtype: HT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 07/14/2020
-ms.locfileid: "86380886"
+ms.lasthandoff: 09/25/2020
+ms.locfileid: "91227059"
 ---
 # <a name="transparent-data-encryption-tde"></a>TDE(투명한 데이터 암호화)
 
@@ -119,7 +119,7 @@ GO
 암호화 및 암호 해독 작업은 [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)]에 의해 백그라운드 스레드로 예약됩니다. 이러한 작업의 상태를 보려면 이 문서의 뒷부분에 나오는 표의 카탈로그 뷰 및 동적 관리 뷰를 사용합니다.
 
 > [!CAUTION]
-> TDE가 사용된 백업 데이터베이스 파일도 데이터베이스 암호화 키를 사용하여 암호화됩니다. 따라서 이러한 백업 파일을 복원하려면 데이터베이스 암호화 키를 보호하는 인증서를 사용할 수 있어야 합니다. 따라서 데이터베이스를 백업하는 것 외에도 서버 인증서의 백업도 유지 관리해야 합니다. 인증서를 더 이상 사용할 수 없을 경우 데이터 손실이 발생합니다.
+> TDE가 설정된 데이터베이스의 백업 파일도 데이터베이스 암호화 키를 사용하여 암호화됩니다. 따라서 이러한 백업 파일을 복원하려면 데이터베이스 암호화 키를 보호하는 인증서를 사용할 수 있어야 합니다. 따라서 데이터베이스를 백업하는 것 외에도 서버 인증서의 백업도 유지 관리해야 합니다. 인증서를 더 이상 사용할 수 없을 경우 데이터 손실이 발생합니다.
 >
 > 자세한 내용은 [SQL Server Certificates and Asymmetric Keys](../../../relational-databases/security/sql-server-certificates-and-asymmetric-keys.md)을 참조하세요.
 

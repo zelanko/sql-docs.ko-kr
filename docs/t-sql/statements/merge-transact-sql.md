@@ -25,12 +25,12 @@ helpviewer_keywords:
 ms.assetid: c17996d6-56a6-482f-80d8-086a3423eecc
 author: markingmyname
 ms.author: maghan
-ms.openlocfilehash: 63770bce9243775e8c9c218371f016a23555b146
-ms.sourcegitcommit: dd36d1cbe32cd5a65c6638e8f252b0bd8145e165
+ms.openlocfilehash: c0e716d7405580dcda3cd4f3aa4d175141469b2b
+ms.sourcegitcommit: 8f062015c2a033f5a0d805ee4adabbe15e7c8f94
 ms.translationtype: HT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 09/08/2020
-ms.locfileid: "89549025"
+ms.lasthandoff: 09/25/2020
+ms.locfileid: "91227306"
 ---
 # <a name="merge-transact-sql"></a>MERGE(Transact-SQL)
 
@@ -483,6 +483,9 @@ GO
 ### <a name="e-using-merge-to-do-insert-or-update-on-a-target-edge-table-in-a-graph-database"></a>E. MERGE를 사용하여 그래프 데이터베이스의 대상 에지 테이블에 대해 INSERT 또는 UPDATE 수행
 
 이 예제에서는 노드 테이블 `Person` 및 `City`와 에지 테이블 `livesIn`을 만듭니다. `livesIn` 에지가 `Person` 및 `City` 사이에 아직 없으면 이 에지에 대해 MERGE 문을 사용하여 새 행을 삽입합니다. 에지가 이미 있는 경우 `livesIn` 에지에 대해 StreetAddress 특성만 업데이트하면 됩니다.
+
+> [!NOTE]
+> 다음 예제는 SQL Server 2019 이상에 적용됩니다.
 
 ```sql
 -- CREATE node and edge tables

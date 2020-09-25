@@ -26,12 +26,12 @@ ms.assetid: dc85caea-54d1-49af-b166-f3aa2f3a93d0
 author: VanMSFT
 ms.author: vanto
 monikerRange: '>=aps-pdw-2016||=azuresqldb-current||=azure-sqldw-latest||>=sql-server-2016||=sqlallproducts-allversions||>=sql-server-linux-2017||=azuresqldb-mi-current'
-ms.openlocfilehash: 575cff8e61661fc9fccb973b7ab83f455c2ec074
-ms.sourcegitcommit: e700497f962e4c2274df16d9e651059b42ff1a10
+ms.openlocfilehash: 1d3bc17bec08636983f5a8c85395da758720a3e0
+ms.sourcegitcommit: 8f062015c2a033f5a0d805ee4adabbe15e7c8f94
 ms.translationtype: HT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 08/17/2020
-ms.locfileid: "88422447"
+ms.lasthandoff: 09/25/2020
+ms.locfileid: "91227207"
 ---
 # <a name="select-transact-sql"></a>SELECT (Transact-SQL)
 [!INCLUDE [sql-asdb-asdbmi-asa-pdw](../../includes/applies-to-version/sql-asdb-asdbmi-asa-pdw.md)]
@@ -82,7 +82,7 @@ SELECT [ ALL | DISTINCT ]
 ```  
   
 ```syntaxsql
--- Syntax for Azure SQL Data Warehouse and Parallel Data Warehouse  
+-- Syntax for Azure Synapse Analytics and Parallel Data Warehouse  
   
 [ WITH <common_table_expression> [ ,...n ] ]  
 SELECT <select_criteria>  
@@ -191,7 +191,7 @@ SELECT <select_criteria>
 > 예를 들어 뷰에 클라스터형 인덱스가 있고 이 뷰가 일부 테이블 행을 제외하며 이 뷰의 SELECT 열 목록에서 *varchar* 데이터 형식을 *정수*로 바꾸는 CONVERT를 사용한다고 가정해 봅니다. 이런 상황에서 CONVERT는 WHERE 문이 실행되기 전에 실행될 수 있습니다. 물론 일반적이지 않습니다. 필요한 상황에서 다른 순서를 방지하기 위해 뷰를 수정하는 방법이 있는 경우가 종종 있습니다. 
 
 ## <a name="permissions"></a>사용 권한  
- 데이터를 선택하려면 테이블이나 뷰에 대한 **SELECT** 권한이 있어야 합니다. 이 권한은 스키마에 대한 **SELECT** 권한이나 테이블에 대한 **CONTROL** 권한과 같은 상위 범위에서 상속할 수 있습니다. 또는 **db_datareader** 또는 **db_owner** 고정 데이터베이스 역할이거나 **sysadmin** 고정 서버 역할의 멤버 자격이 필요합니다. **SELECTINTO**를 사용하여 새 테이블을 만들려면 **CREATETABLE** 권한과 새 테이블을 소유하는 스키마에 대한 **ALTERSCHEMA** 권한이 둘 다 있어야 합니다.  
+ 데이터를 선택하려면 테이블이나 뷰에 대한 **SELECT** 권한이 있어야 합니다. 이 권한은 스키마에 대한 **SELECT** 권한이나 테이블에 대한 **CONTROL** 권한과 같은 상위 범위에서 상속할 수 있습니다. 또는 **db_datareader** 또는 **db_owner** 고정 데이터베이스 역할이거나 **sysadmin** 고정 서버 역할의 멤버 자격이 필요합니다. **SELECT INTO**를 사용하여 새 테이블을 만들려면 **CREATE TABLE** 권한과 새 테이블을 소유하는 스키마에 대한 **ALTER SCHEMA** 권한이 모두 있어야 합니다.  
   
 ## <a name="examples"></a>예제:   
 다음 예에서는 [!INCLUDE[ssawPDW](../../includes/ssawpdw-md.md)] 데이터베이스를 사용합니다.

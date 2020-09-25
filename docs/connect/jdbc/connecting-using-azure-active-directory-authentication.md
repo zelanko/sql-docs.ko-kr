@@ -2,7 +2,7 @@
 title: Azure Active Directory 인증을 사용하여 연결
 description: Microsoft JDBC Driver for SQL Server에서 Azure Active Directory 인증 기능을 사용하는 Java 애플리케이션을 개발하는 방법을 알아봅니다.
 ms.custom: ''
-ms.date: 06/17/2020
+ms.date: 09/23/2020
 ms.reviewer: ''
 ms.prod: sql
 ms.prod_service: connectivity
@@ -11,12 +11,12 @@ ms.topic: conceptual
 ms.assetid: 9c9d97be-de1d-412f-901d-5d9860c3df8c
 author: David-Engel
 ms.author: v-daenge
-ms.openlocfilehash: ae19b292788af43226de12a342e870768ad2ac26
-ms.sourcegitcommit: a4ee6957708089f7d0dda15668804e325b8a240c
+ms.openlocfilehash: 04e52a1a84bb37fccd90f9ff32e0fdadde8fb2af
+ms.sourcegitcommit: cc23d8646041336d119b74bf239a6ac305ff3d31
 ms.translationtype: HT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 08/06/2020
-ms.locfileid: "87899014"
+ms.lasthandoff: 09/23/2020
+ms.locfileid: "91117134"
 ---
 # <a name="connecting-using-azure-active-directory-authentication"></a>Azure Active Directory 인증을 사용하여 연결
 
@@ -33,7 +33,7 @@ Microsoft JDBC Driver for SQL Server에서 Azure Active Directory 인증을 지�
     * **ActiveDirectoryIntegrated**
         * 드라이버 버전 **v6.0**부터 지원되며, `authentication=ActiveDirectoryIntegrated`를 사용하여 통합 인증을 통해 Azure SQL Database/Data Warehouse에 연결할 수 있습니다. 이 인증 모드를 사용하려면 온-프레미스 ADFS(Active Directory Federation Services)를 클라우드의 Azure Active Directory와 페더레이션해야 합니다. 설정되면 네이티브 라이브러리 ‘mssql-jdbc_auth-\<version>-\<arch>.dll’을 Windows OS의 애플리케이션 클래스 경로에 추가하거나 플랫폼 간 인증 지원을 위한 Kerberos 티켓을 설정하여 연결할 수 있습니다. 도메인 가입 컴퓨터에 로그인하는 경우 자격 증명을 묻는 메시지가 표시되지 않고 Azure SQL Database/SQL Data Warehouse에 액세스할 수 있습니다.
     * **ActiveDirectoryPassword**
-        * 드라이버 버전 **v6.0**부터 지원되며, `authentication=ActiveDirectoryPassword`를 사용하여 Azure AD 보안 주체 이름 및 암호를 통해 Azure SQL Database/Data Warehouse에 연결할 수 있습니다.
+        * 드라이버 버전 **v6.0**부터 지원되며, `authentication=ActiveDirectoryPassword`를 사용하여 Azure AD 사용자 이름 및 암호를 통해 Azure SQL Database/Data Warehouse에 연결할 수 있습니다.
     * **SqlPassword**
         * `authentication=SqlPassword`를 사용하여 사용자 이름/사용자 및 암호 속성을 사용하여 SQL Server에 연결합니다.
     * **NotSpecified**
@@ -113,7 +113,7 @@ Microsoft JDBC Driver는 버전 6.4에서 여러 플랫폼(Windows, Linux 및 ma
 > [!NOTE]
 >  이전 버전의 드라이버를 사용하는 경우 이 인증 모드를 사용하는 데 필요한 각 종속성에 대한 이 [링크](feature-dependencies-of-microsoft-jdbc-driver-for-sql-server.md)를 확인하세요. 
 
-다음 예제에서는 `authentication=ActiveDirectoryIntegrated` 모드를 사용하는 방법을 보여줍니다. Azure Active Directory와 페더레이션된 도메인 가입 컴퓨터에서 이 예제를 실행합니다. Azure AD 보안 주체를 나타내거나 사용자가 속한 그룹 중 하나를 나타내는 포함된 데이터베이스 사용자가 데이터베이스에 존재해야 하며 CONNECT 권한이 있어야 합니다. 
+다음 예제에서는 `authentication=ActiveDirectoryIntegrated` 모드를 사용하는 방법을 보여줍니다. Azure Active Directory와 페더레이션된 도메인 가입 컴퓨터에서 이 예제를 실행합니다. Azure AD 사용자를 나타내거나 사용자가 속한 그룹 중 하나를 나타내는 포함된 데이터베이스 사용자가 데이터베이스에 존재해야 하며 CONNECT 권한이 있어야 합니다. 
 
 예제를 빌드하고 실행하기 전에 예제를 실행하려는 클라이언트 컴퓨터에서 [azure-activedirectory-library-for-java library](https://github.com/AzureAD/azure-activedirectory-library-for-java) 및 해당 종속성을 다운로드하여 Java 빌드 경로에 포함합니다.
 

@@ -10,12 +10,12 @@ ms.assetid: 0907cfd9-33a6-4fa6-91da-7d6679fee878
 author: ronortloff
 ms.author: rortloff
 monikerRange: '>= aps-pdw-2016 || = azure-sqldw-latest || = sqlallproducts-allversions'
-ms.openlocfilehash: 3959d2bbf06cbb5ab106cc805e37f700d3be624f
-ms.sourcegitcommit: e700497f962e4c2274df16d9e651059b42ff1a10
+ms.openlocfilehash: 97cabcda2e5b680e9fe2d5d6a4f0ce2130e19a27
+ms.sourcegitcommit: 8f062015c2a033f5a0d805ee4adabbe15e7c8f94
 ms.translationtype: HT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 08/17/2020
-ms.locfileid: "88357519"
+ms.lasthandoff: 09/25/2020
+ms.locfileid: "91226883"
 ---
 # <a name="rename-transact-sql"></a>RENAME(Transact-SQL)
 [!INCLUDE[applies-to-version/asa-pdw](../../includes/applies-to-version/asa-pdw.md)]
@@ -23,12 +23,12 @@ ms.locfileid: "88357519"
 [!INCLUDE[ssSDW](../../includes/sssdw-md.md)]에서 사용자가 만든 테이블의 이름을 바꿉니다. [!INCLUDE[ssPDW](../../includes/sspdw-md.md)]에서 사용자가 만든 테이블, 사용자가 만든 테이블의 열 또는 데이터베이스의 이름을 바꿉니다.
 
 > [!NOTE]
-> [!INCLUDE[ssSDW](../../includes/sssdw-md.md)]에서 데이터베이스의 이름을 바꾸려면 [ALTER DATABASE(Azure SQL Data Warehouse](alter-database-transact-sql.md?view=aps-pdw-2016-au7)를 사용합니다. Azure SQL Database에서 데이터베이스의 이름을 바꾸려면 [ALTER DATABASE(Azure SQL Database)](alter-database-transact-sql.md?view=azuresqldb-mi-current) 문을 사용합니다. [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]에서 데이터베이스의 이름을 바꾸려면 저장 프로시저 [sp_renamedb](../../relational-databases/system-stored-procedures/sp-renamedb-transact-sql.md)를 사용합니다.
+> [!INCLUDE[ssSDW](../../includes/sssdw-md.md)]에서 데이터베이스의 이름을 바꾸려면 [ALTER DATABASE([!INCLUDE[ssSDW](../../includes/sssdwfull-md.md)])](alter-database-transact-sql.md?view=aps-pdw-2016-au7&preserve-view=true)를 사용합니다. Azure SQL Database에서 데이터베이스의 이름을 바꾸려면 [ALTER DATABASE(Azure SQL Database)](alter-database-transact-sql.md?view=azuresqldb-mi-current&preserve-view=true) 문을 사용합니다. [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]에서 데이터베이스의 이름을 바꾸려면 저장 프로시저 [sp_renamedb](../../relational-databases/system-stored-procedures/sp-renamedb-transact-sql.md)를 사용합니다.
 
 ## <a name="syntax"></a>구문
 
 ```syntaxsql
--- Syntax for Azure SQL Data Warehouse
+-- Syntax for Azure Synapse Analytics
 
 -- Rename a table.
 RENAME OBJECT [::] [ [ database_name . [schema_name ] ] . ] | [schema_name . ] ] table_name TO new_table_name
@@ -61,7 +61,7 @@ RENAME OBJECT [::] [ [*database_name* . [ *schema_name* ] . ] | [ *schema_name* 
 RENAME DATABASE [::] [ *database_name* TO *new_database_name*
 **적용 대상:** [!INCLUDE[ssPDW](../../includes/sspdw-md.md)]
 
-*database_name*에서 사용자 정의 데이터베이스의 이름을 *new_database_name*으로 변경합니다. 데이터베이스 이름은 이러한 [!INCLUDE[ssPDW](../../includes/sspdw-md.md)]예약된 데이터베이스 이름으로 바꿀 수 없습니다.
+*database_name*에서 사용자 정의 데이터베이스의 이름을 *new_database_name*으로 변경합니다. 데이터베이스 이름을 다음과 같은 [!INCLUDE[ssPDW](../../includes/sspdw-md.md)]예약된 데이터베이스 이름으로 바꿀 수 없습니다.
 
 - master
 - model
@@ -93,7 +93,7 @@ RENAME OBJECT [::] [ [*database_name* . [ *schema_name* ] . ] | [ *schema_name* 
 
 ### <a name="cannot-rename-a-table-in-use"></a>사용 중인 테이블 이름을 바꿀 수 없음
 
-사용 중일 때는 테이블 또는 데이터베이스 이름을 바꿀 수 없습니다. 테이블 이름을 변경하려면 테이블에 대해 배타적 잠금이 필요합니다. 테이블이 사용 중인 경우 테이블을 사용 중인 세션을 종료해야 합니다. KILL 명령을 사용하여 세션을 종료할 수 있습니다. 세션이 종료될 때 커밋되지 않은 모든 작업은 롤백될 수 있으므로 KILL은 신중하게 사용합니다. SQL Data Warehouse의 세션 앞에 ‘SID’를 붙입니다. KILL 명령을 호출할 때 'SID'와 세션 수를 포함합니다. 이 예제에서는 활성 또는 유휴 세션의 목록을 본 다음, ‘SID1234’ 세션을 종료합니다.
+사용 중일 때는 테이블 또는 데이터베이스 이름을 바꿀 수 없습니다. 테이블 이름을 변경하려면 테이블에 대해 배타적 잠금이 필요합니다. 테이블이 사용 중인 경우 테이블을 사용 중인 세션을 종료해야 합니다. KILL 명령을 사용하여 세션을 종료할 수 있습니다. 세션이 종료될 때 커밋되지 않은 모든 작업은 롤백될 수 있으므로 KILL은 신중하게 사용합니다. [!INCLUDE[ssSDW](../../includes/sssdwfull-md.md)]의 세션에는 접두사 'SID'가 붙습니다. KILL 명령을 호출할 때 'SID'와 세션 수를 포함합니다. 이 예제에서는 활성 또는 유휴 세션의 목록을 본 다음, ‘SID1234’ 세션을 종료합니다.
 
 ### <a name="rename-column-restrictions"></a>열 이름 바꾸기 제한 사항
 
@@ -156,7 +156,7 @@ ALTER SCHEMA dbo TRANSFER OBJECT::product.item;
 
 **적용 대상:** [!INCLUDE[ssSDW](../../includes/sssdw-md.md)], [!INCLUDE[ssPDW](../../includes/sspdw-md.md)]
 
-테이블은 사용하는 동안에는 이름을 바꿀 수 없습니다. 테이블의 이름을 변경하려면 테이블에 대해 배타적 잠금이 필요합니다. 테이블이 사용 중인 경우 테이블을 사용 중인 세션을 종료해야 합니다. KILL 명령을 사용하여 세션을 종료할 수 있습니다. 세션이 종료될 때 커밋되지 않은 모든 작업은 롤백될 수 있으므로 KILL은 신중하게 사용합니다. SQL Data Warehouse의 세션 앞에 ‘SID’를 붙입니다. KILL 명령을 호출할 때 'SID'와 세션 수를 포함해야 합니다. 이 예제에서는 활성 또는 유휴 세션의 목록을 본 다음, ‘SID1234’ 세션을 종료합니다.
+사용 중인 동안에는 테이블 이름을 바꿀 수 없습니다. 테이블의 이름을 변경하려면 테이블에 대해 배타적 잠금이 필요합니다. 테이블이 사용 중인 경우 테이블을 사용 중인 세션을 종료해야 합니다. KILL 명령을 사용하여 세션을 종료할 수 있습니다. 세션이 종료될 때 커밋되지 않은 모든 작업은 롤백될 수 있으므로 KILL은 신중하게 사용합니다. [!INCLUDE[ssSDW](../../includes/sssdwfull-md.md)]의 세션에는 접두사 'SID'가 붙습니다. KILL 명령을 호출할 때 'SID'와 세션 수를 포함해야 합니다. 이 예제에서는 활성 또는 유휴 세션의 목록을 본 다음, ‘SID1234’ 세션을 종료합니다.
 
 ```sql
 -- View a list of the current sessions

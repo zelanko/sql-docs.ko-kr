@@ -33,12 +33,12 @@ ms.assetid: 40075914-6385-4692-b4a5-62fe44ae6cb6
 author: shkale-msft
 ms.author: shkale
 monikerRange: '>=aps-pdw-2016||=azuresqldb-current||=azure-sqldw-latest||>=sql-server-2016||=sqlallproducts-allversions||>=sql-server-linux-2017||=azuresqldb-mi-current'
-ms.openlocfilehash: bdb2964f3881f5f31c451860d4330c05c3c346a0
-ms.sourcegitcommit: cc23d8646041336d119b74bf239a6ac305ff3d31
+ms.openlocfilehash: 9368fcb80240ddf1520ef1ac0f4d145d20d10ab2
+ms.sourcegitcommit: 8f062015c2a033f5a0d805ee4adabbe15e7c8f94
 ms.translationtype: HT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 09/23/2020
-ms.locfileid: "91115840"
+ms.lasthandoff: 09/25/2020
+ms.locfileid: "91226950"
 ---
 # <a name="select---group-by--transact-sql"></a>SELECT - GROUP BY- Transact-SQL
 [!INCLUDE [sql-asdb-asdbmi-asa-pdw](../../includes/applies-to-version/sql-asdb-asdbmi-asa-pdw.md)]
@@ -86,7 +86,7 @@ GROUP BY
 ```  
   
 ```syntaxsql
--- Syntax for Azure SQL Data Warehouse 
+-- Syntax for Azure Synapse Analytics 
   
 GROUP BY {
       column-name [ WITH (DISTRIBUTED_AGG) ]  
@@ -288,11 +288,11 @@ GROUP BY ALL:
 - FILESTREAM 특성이 있는 열에서 실패합니다.
   
 ### <a name="with-distributed_agg"></a>WITH (DISTRIBUTED_AGG)
-적용 대상: Azure SQL Data Warehouse 및 병렬 Data Warehouse
+적용 대상: [!INCLUDE[ssSDW](../../includes/sssdwfull-md.md)] 및 [!INCLUDE[ssPDW](../../includes/sspdw-md.md)]
 
 DISTRIBUTED_AGG 쿼리 힌트는 집계를 수행하기 전에 MPP(Massively Parallel Processing) 시스템에서 특정 열에 테이블을 다시 배포하도록 합니다. GROUP BY 절에 있는 하나의 열만 DISTRIBUTED_AGG 쿼리 힌트를 가질 수 있습니다. 쿼리가 완료되면 다시 배포된 테이블이 삭제됩니다. 원래 테이블은 변경되지 않습니다.  
 
-참고:  DISTRIBUTED_AGG 쿼리 힌트는 이전 버전의 병렬 데이터 웨어하우스와의 호환성을 위해 제공되며, 대부분의 쿼리에 대한 성능이 향상되지 않습니다. 기본적으로 MPP는 집계 성능을 향상시키기 위해 이미 필요에 따라 데이터를 다시 배포합니다. 
+참고:  DISTRIBUTED_AGG 쿼리 힌트는 이전 버전 [!INCLUDE[ssPDW](../../includes/sspdw-md.md)]와의 호환성을 위해 제공되며, 대부분의 쿼리 성능은 향상되지 않습니다. 기본적으로 MPP는 집계 성능을 향상시키기 위해 이미 필요에 따라 데이터를 다시 배포합니다. 
   
 ## <a name="general-remarks"></a>일반적인 주의 사항
 
@@ -315,7 +315,7 @@ NULL 값:
   
 ## <a name="limitations-and-restrictions"></a>제한 사항
 
-적용 대상: SQL Server(2008부터) 및 Azure SQL Data Warehouse
+적용 대상: SQL Server(2008 이상) 및 [!INCLUDE[ssSDW](../../includes/sssdwfull-md.md)]
 
 ### <a name="maximum-capacity"></a>최대 용량
 
@@ -416,7 +416,7 @@ HAVING DATEPART(yyyy,OrderDate) >= N'2003'
 ORDER BY DATEPART(yyyy,OrderDate);  
 ```  
   
-## <a name="examples-sql-data-warehouse-and-parallel-data-warehouse"></a>예제: SQL Data Warehouse 및 병렬 데이터 웨어하우스  
+## <a name="examples-azure-synapse-analytics-and-parallel-data-warehouse"></a>예제: Azure Synapse Analytics 및 병렬 데이터 웨어하우스  
   
 ### <a name="e-basic-use-of-the-group-by-clause"></a>E. GROUP BY 절의 기본적인 사용  
  다음 예제에서는 일별 총 판매액을 모두 찾습니다. 일일 판매의 합계가 모두 포함된 하나의 행이 반환됩니다.  

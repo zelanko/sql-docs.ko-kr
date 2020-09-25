@@ -16,12 +16,12 @@ helpviewer_keywords:
 ms.assetid: af457ecd-523e-4809-9652-bdf2e81bd876
 author: stevestein
 ms.author: sstein
-ms.openlocfilehash: 439c723463516ad046c6a37a6d327b289efc9eb6
-ms.sourcegitcommit: e700497f962e4c2274df16d9e651059b42ff1a10
+ms.openlocfilehash: 6d263df7b2b76684f121ce9e699fc619370e3ee1
+ms.sourcegitcommit: c0f92739c81221fbcdb7c40b53a71038105df44f
 ms.translationtype: HT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 08/17/2020
-ms.locfileid: "88471176"
+ms.lasthandoff: 09/24/2020
+ms.locfileid: "91210628"
 ---
 # <a name="rebuild-system-databases"></a>시스템 데이터베이스 다시 작성
  [!INCLUDE [SQL Server](../../includes/applies-to-version/sqlserver.md)]
@@ -29,21 +29,23 @@ ms.locfileid: "88471176"
   
  **항목 내용**  
   
--   **시작하기 전 주의 사항:**  
+   - **시작하기 전 주의 사항:**  
   
      [제한 사항](#Restrictions)  
   
      [필수 구성 요소](#Prerequisites)  
   
--   **절차:**  
+   - **절차:**  
   
      [시스템 데이터베이스 다시 작성](#RebuildProcedure)  
   
      [리소스 데이터베이스 다시 작성](#Resource)  
   
-     [새 msdb 데이터베이스 만들기](#CreateMSDB)  
+     [새 msdb 데이터베이스 만들기](#CreateMSDB) 
+
+     [tempdb 데이터베이스 다시 빌드](#RebuildTempdb)  
   
--   **후속 작업:**  
+   - **후속 작업:**  
   
      [다시 작성 오류 문제 해결](#Troubleshoot)  
   
@@ -55,15 +57,15 @@ ms.locfileid: "88471176"
 ###  <a name="prerequisites"></a><a name="Prerequisites"></a> 필수 조건  
  시스템 데이터베이스를 다시 작성하기 전에 다음 태스크를 수행하면 시스템 데이터베이스를 현재 설정으로 복원할 수 있습니다.  
   
-1.  서버 차원의 모든 구성 값을 기록합니다.  
+1. 서버 차원의 모든 구성 값을 기록합니다.  
   
-    ```  
+    ```SQL  
     SELECT * FROM sys.configurations;  
     ```  
   
 2.  [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 인스턴스와 현재 데이터 정렬에 적용된 모든 핫픽스를 기록합니다. 시스템 데이터베이스를 다시 빌드한 후에는 관련 핫픽스를 다시 적용해야 합니다.  
   
-    ```  
+    ```SQL  
     SELECT  
     SERVERPROPERTY('ProductVersion ') AS ProductVersion,  
     SERVERPROPERTY('ProductLevel') AS ProductLevel,  
@@ -74,7 +76,7 @@ ms.locfileid: "88471176"
   
 3.  시스템 데이터베이스의 모든 데이터와 로그 파일의 현재 위치를 기록합니다. 시스템 데이터베이스를 다시 작성하면 모든 시스템 데이터베이스가 원래 위치에 설치됩니다. 시스템 데이터베이스 데이터나 로그 파일을 다른 위치로 이동한 경우 해당 파일을 다시 이동해야 합니다.  
   
-    ```  
+    ```SQL  
     SELECT name, physical_name AS current_file_location  
     FROM sys.master_files  
     WHERE database_id IN (DB_ID('master'), DB_ID('model'), DB_ID('msdb'), DB_ID('tempdb'));  
@@ -158,6 +160,7 @@ ms.locfileid: "88471176"
 6.  **복구 준비** 페이지에서 **복구**를 클릭합니다. 완료 페이지에서 작업이 완료되었음을 알려 줍니다.  
   
 ##  <a name="create-a-new-msdb-database"></a><a name="CreateMSDB"></a> 새 msdb 데이터베이스 만들기  
+
  **msdb** 데이터베이스가 손상되고 **msdb** 데이터베이스 백업이 없는 경우 **instmsdb** 스크립트를 사용하여 새 **msdb** 를 만들 수 있습니다.  
   
 > [!WARNING]  
@@ -186,6 +189,33 @@ ms.locfileid: "88471176"
 9. 작업, 경고 등의 **msdb** 데이터베이스에 저장된 사용자 콘텐츠를 다시 만듭니다.  
   
 10. **msdb** 데이터베이스를 백업합니다.  
+
+##  <a name="rebuild-the-tempdb-database"></a><a name="RebuildTempdb"></a> tempdb 데이터베이스 다시 빌드  
+
+**tempdb** 데이터베이스가 손상되고 데이터베이스 엔진이 시작되지 않으면 모든 시스템 데이터베이스를 다시 빌드할 필요 없이 **tempdb**만 다시 빌드할 수 있습니다.
+  
+1. 현재 Tempdb.mdf 및 Templog.ldf 파일이 있다면 이름을 바꿉니다. 
+1. 명령 프롬프트에서 다음 명령을 사용하여 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]을 시작합니다. 
+
+   ```sql
+   sqlservr -c -f -T3608 -T4022 -s <instance> -mSQLCMD
+   ```
+
+   기본 인스턴스 이름으로 MSSQLSERVER를 사용하고, 명명된 인스턴스에는 MSSQL$<instance_name>을 사용합니다. 추적 플래그 4022는 시작 저장 프로시저의 실행을 해제합니다. -mSQLCMD는 [sqlcmd.exe](../../ssms/scripting/sqlcmd-use-the-utility.md)만 서버에 연결할 수 있도록 허용합니다([다른 시작 옵션](../../database-engine/configure-windows/database-engine-service-startup-options.md#other-startup-options) 참조).
+
+   > [!Note] 
+   > [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]이 시작된 후에도 명령 프롬프트 창이 계속 열려 있어야 합니다. 명령 프롬프트 창을 닫으면 프로세스가 종료됩니다.
+
+1. **sqlcmd**를 사용하여 서버에 연결하고, 다음 저장 프로시저를 사용하여 tempdb 데이터베이스의 상태를 초기화합니다.
+
+   ```sql
+   exec master..sp_resetstatus Tempdb
+   ```
+
+1. 명령 프롬프트 창에서 CTRL+C를 눌러 서버를 종료합니다.
+
+1. [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 서비스를 다시 시작합니다. 이렇게 하면 새로운 tempdb 데이터베이스 파일 세트가 생성되고 tempdb 데이터베이스가 복구됩니다.
+
   
 ##  <a name="troubleshoot-rebuild-errors"></a><a name="Troubleshoot"></a> 다시 작성 오류 문제 해결  
  구문 및 기타 런타임 오류는 명령 프롬프트 창에 표시됩니다. 설치 문에 다음과 같은 구문 오류가 없는지 확인합니다.  

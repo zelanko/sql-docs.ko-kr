@@ -22,12 +22,12 @@ ms.assetid: 1485c375-921a-42af-a871-bb333cc08d3e
 author: rothja
 ms.author: jroth
 monikerRange: '>=aps-pdw-2016||=azuresqldb-current||=azure-sqldw-latest||>=sql-server-2016||=sqlallproducts-allversions||>=sql-server-linux-2017||=azuresqldb-mi-current'
-ms.openlocfilehash: f19c8184168b2fd553062d1a888aa619ee164483
-ms.sourcegitcommit: e700497f962e4c2274df16d9e651059b42ff1a10
+ms.openlocfilehash: 3588c21ff18120c390c6ecb4484d02bc7f83dbb9
+ms.sourcegitcommit: 8f062015c2a033f5a0d805ee4adabbe15e7c8f94
 ms.translationtype: HT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 08/17/2020
-ms.locfileid: "88307227"
+ms.lasthandoff: 09/25/2020
+ms.locfileid: "91227497"
 ---
 # <a name="transactions-transact-sql"></a>트랜잭션(Transact-SQL)
 [!INCLUDE [sql-asdb-asdbmi-asa-pdw](../../includes/applies-to-version/sql-asdb-asdbmi-asa-pdw.md)]
@@ -49,7 +49,7 @@ ms.locfileid: "88307227"
  MARS(Multiple Active Result Sets)에만 해당되며, MARS 세션에서 시작되는 [!INCLUDE[tsql](../../includes/tsql-md.md)] 명시적 또는 암시적 트랜잭션이 일괄 처리 범위 트랜잭션이 됩니다. 일괄 처리가 완료될 때 커밋되거나 롤백되지 않은 일괄 처리 범위의 트랜잭션은 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]에서 자동으로 롤백합니다.  
 
 > [!NOTE] 
-> 데이터 웨어하우스 제품과 관련된 특별한 고려 사항은 [트랜잭션(SQL 데이터 웨어하우스)](transactions-sql-data-warehouse.md)를 참조합니다.   
+> 데이터 웨어하우스 제품과 관련된 특별한 고려 사항은 [트랜잭션(Azure Synapse Analytics)](transactions-sql-data-warehouse.md)을 참조하세요.   
 
 ## <a name="in-this-section"></a>섹션 내용  
  [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]에서는 다음과 같은 트랜잭션 문을 제공합니다.  

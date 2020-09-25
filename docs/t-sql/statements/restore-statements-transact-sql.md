@@ -41,12 +41,12 @@ ms.assetid: 877ecd57-3f2e-4237-890a-08f16e944ef1
 author: MikeRayMSFT
 ms.author: mikeray
 monikerRange: '>=sql-server-2016||>=sql-server-linux-2017||=azuresqldb-mi-current||>=aps-pdw-2016||=sqlallproducts-allversions'
-ms.openlocfilehash: ea50c64985b67dfbc4221f65dc1f4cc5daaab721
-ms.sourcegitcommit: e700497f962e4c2274df16d9e651059b42ff1a10
+ms.openlocfilehash: 12d218ea2075e861b04eb7e3718d630eb19ffe28
+ms.sourcegitcommit: 8f062015c2a033f5a0d805ee4adabbe15e7c8f94
 ms.translationtype: HT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 08/17/2020
-ms.locfileid: "88478655"
+ms.lasthandoff: 09/25/2020
+ms.locfileid: "91227277"
 ---
 # <a name="restore-statements-transact-sql"></a>RESTORE 문(Transact-SQL)
 
@@ -65,10 +65,10 @@ BACKUP 명령을 사용하여 만든 SQL 데이터베이스 백업을 복원합�
         **_\* SQL Server \*_** &nbsp;
     :::column-end:::
     :::column:::
-        [SQL Database<br />Managed Instance](restore-statements-transact-sql.md?view=azuresqldb-mi-current)
+        [SQL Database<br />Managed Instance](restore-statements-transact-sql.md?view=azuresqldb-mi-current&preserve-view=true)
     :::column-end:::
     :::column:::
-        [Analytics Platform<br />System(PDW)](restore-statements-transact-sql.md?view=aps-pdw-2016)
+        [Analytics Platform<br />System(PDW)](restore-statements-transact-sql.md?view=aps-pdw-2016&preserve-view=true)
     :::column-end:::
 :::row-end:::
 
@@ -737,13 +737,13 @@ RESTORE DATABASE Sales
 
 :::row:::
     :::column:::
-        [SQL Server](restore-statements-transact-sql.md?view=sql-server-2017)
+        [SQL Server](restore-statements-transact-sql.md?view=sql-server-2017&preserve-view=true)
     :::column-end:::
     :::column:::
         **_\* SQL Database<br />Managed Instance \*_**
     :::column-end:::
     :::column:::
-        [Analytics Platform<br />System(PDW)](restore-statements-transact-sql.md?view=aps-pdw-2016)
+        [Analytics Platform<br />System(PDW)](restore-statements-transact-sql.md?view=aps-pdw-2016&preserve-view=true)
     :::column-end:::
 :::row-end:::
 
@@ -956,8 +956,8 @@ RESTORE HEADERONLY 결과는 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-m
 백업 디렉터리에 액세스하고 읽을 수 있는 권한이 있는 Windows 계정이 필요합니다. 또한 Windows 계정 이름 및 암호를 [!INCLUDE[ssPDW](../../includes/sspdw-md.md)]에 저장해야 합니다.
 
 - 자격 증명이 이미 있는지 확인하려면 [sys.dm_pdw_network_credentials](../../relational-databases/system-dynamic-management-views/sys-dm-pdw-network-credentials-transact-sql.md)를 사용합니다.
-- 자격 증명을 추가하거나 업데이트하려면 [sp_pdw_add_network_credentials - SQL Data Warehouse](../../relational-databases/system-stored-procedures/sp-pdw-add-network-credentials-sql-data-warehouse.md)를 사용합니다.
-- [!INCLUDE[ssPDW](../../includes/sspdw-md.md)]에서 자격 증명을 제거하려면 [sp_pdw_remove_network_credentials - SQL Data Warehouse](../../relational-databases/system-stored-procedures/sp-pdw-remove-network-credentials-sql-data-warehouse.md)를 사용합니다.
+- 자격 증명을 추가하거나 업데이트하려면 [sp_pdw_add_network_credentials - [!INCLUDE[ssSDW](../../includes/sssdwfull-md.md)]](../../relational-databases/system-stored-procedures/sp-pdw-add-network-credentials-sql-data-warehouse.md)를 사용합니다.
+- [!INCLUDE[ssPDW](../../includes/sspdw-md.md)]에서 자격 증명을 제거하려면 [sp_pdw_remove_network_credentials - [!INCLUDE[ssSDW](../../includes/sssdwfull-md.md)]](../../relational-databases/system-stored-procedures/sp-pdw-remove-network-credentials-sql-data-warehouse.md)를 사용합니다.
 
 ## <a name="error-handling"></a>오류 처리
 
@@ -980,13 +980,13 @@ RESTORE DATABASE 명령은 다음과 같은 조건에서 오류를 발생시킵�
 
 ## <a name="restoring-to-an-appliance-with-a-larger-number-of-compute-nodes"></a>컴퓨팅 노드 수가 더 많은 어플라이언스에 복원
 
-재배포하면 트랜잭션 로그가 증가하므로 작은 어플라이언스에서 큰 어플라이언스로 데이터베이스를 복원한 후 [DBCC SHRINKLOG(Azure SQL Data Warehouse)](../../t-sql/database-console-commands/dbcc-shrinklog-azure-sql-data-warehouse.md)를 실행합니다.
+재배포하면 트랜잭션 로그가 증가하므로 작은 어플라이언스에서 큰 어플라이언스로 데이터베이스를 복원한 후 [DBCC SHRINKLOG([!INCLUDE[ssSDW](../../includes/sssdwfull-md.md)])](../../t-sql/database-console-commands/dbcc-shrinklog-azure-sql-data-warehouse.md)를 실행합니다.
 
 컴퓨팅 노드 수가 많은 어플라이언스로 백업을 복원하면 컴퓨팅 노드 수에 비례하여 할당된 데이터베이스 크기가 커집니다.
 
 예를 들어 60GB의 데이터베이스를 2개 노드 어플라이언스(노드당 30GB)에서 6개 노드 어플라이언스로 복원하는 경우 [!INCLUDE[ssPDW](../../includes/sspdw-md.md)]는 6개 노드 어플라이언스에서 180GB 데이터베이스(노드당 30GB의 6개 노드)를 만듭니다. [!INCLUDE[ssPDW](../../includes/sspdw-md.md)]는 처음에 데이터베이스를 원본 구성에 일치하도록 2개 노드로 복원한 다음, 6개 노드 모두에 데이터를 다시 배포합니다.
 
-재배포 후 각 컴퓨팅 노드는 더 작은 원본 어플라이언스에서 각 컴퓨팅 노드에 비해 더 적은 실제 데이터와 더 많은 여유 공간을 포함하게 됩니다. 데이터베이스에 더 많은 데이터를 추가하려면 추가 공간을 사용합니다. 복원된 데이터베이스 크기가 필요한 것보다 더 큰 경우 [ALTER DATABASE - PDW](../../t-sql/statements/alter-database-transact-sql.md?view=aps-pdw-2016-au7)를 사용하여 데이터베이스 파일 크기를 축소할 수 있습니다.
+재배포 후 각 컴퓨팅 노드는 더 작은 원본 어플라이언스에서 각 컴퓨팅 노드에 비해 더 적은 실제 데이터와 더 많은 여유 공간을 포함하게 됩니다. 데이터베이스에 더 많은 데이터를 추가하려면 추가 공간을 사용합니다. 복원된 데이터베이스 크기가 필요한 것보다 더 큰 경우 [ALTER DATABASE - PDW](../../t-sql/statements/alter-database-transact-sql.md?view=aps-pdw-2016-au7&preserve-view=true)를 사용하여 데이터베이스 파일 크기를 축소할 수 있습니다.
 
 ## <a name="limitations-and-restrictions"></a>제한 사항
 
@@ -1038,6 +1038,6 @@ RESTORE HEADERONLY
 헤더 정보를 사용하여 백업 복원을 시도하기 전에 백업의 콘텐츠를 확인하거나 대상 복원 어플라이언스가 원본 백업 어플라이언스와 호환되는지 확인할 수 있습니다.
 
 ## <a name="see-also"></a>참고 항목
-[BACKUP DATABASE - Analytics Platform System](../../t-sql/statements/backup-transact-sql.md?view=aps-pdw-2016-au7)     
+[BACKUP DATABASE - Analytics Platform System](../../t-sql/statements/backup-transact-sql.md?view=aps-pdw-2016-au7&preserve-view=true)     
 
 ::: moniker-end

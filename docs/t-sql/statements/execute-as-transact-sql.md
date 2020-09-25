@@ -24,12 +24,12 @@ ms.assetid: 613b8271-7f7d-4378-b7a2-5a7698551dbd
 author: markingmyname
 ms.author: maghan
 monikerRange: = azuresqldb-current || >= sql-server-2016 || >= sql-server-linux-2017 || = sqlallproducts-allversions||=azure-sqldw-latest
-ms.openlocfilehash: 1ae261b89d375ac13914c87674bdfc43cd0751e9
-ms.sourcegitcommit: dd36d1cbe32cd5a65c6638e8f252b0bd8145e165
+ms.openlocfilehash: d263f8db7e95cbc5e961d5b4d3879ce53ce99d47
+ms.sourcegitcommit: 8f062015c2a033f5a0d805ee4adabbe15e7c8f94
 ms.translationtype: HT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 09/08/2020
-ms.locfileid: "89547726"
+ms.lasthandoff: 09/25/2020
+ms.locfileid: "91227333"
 ---
 # <a name="execute-as-transact-sql"></a>EXECUTE AS(Transact-SQL)
 [!INCLUDE [sql-asdb-asdbmi-asa-pdw](../../includes/applies-to-version/sql-asdb-asdbmi-asa.md)]
@@ -63,7 +63,7 @@ ms.locfileid: "89547726"
  가장할 실행 컨텍스트를 로그인으로 지정합니다. 가장의 범위는 서버 수준입니다.  
   
 > [!NOTE]  
->  이 옵션은 포함된 데이터베이스 또는 SQL Database 또는 SQL Data Warehouse에서 사용할 수 없습니다.  
+>  이 옵션은 포함된 데이터베이스, SQL 데이터베이스 또는 [!INCLUDE[ssSDW](../../includes/sssdwfull-md.md)]에서 사용할 수 없습니다.  
   
  USER  
  가장할 컨텍스트를 현재 데이터베이스의 사용자로 지정합니다. 가장의 범위는 현재 데이터베이스로 제한됩니다. 데이터베이스 사용자로 컨텍스트 전환 시 해당 사용자의 서버 수준 사용 권한은 상속되지 않습니다.  
@@ -96,7 +96,7 @@ ms.locfileid: "89547726"
  모듈 내에서 사용된 경우 모듈 내의 문이 모듈 호출자의 컨텍스트에서 실행되도록 지정합니다.
 모듈 외부에서 사용된 경우에는 문이 아무런 동작도 수행하지 않습니다.
  > [!NOTE]  
->  SQL Data Warehouse에서는 이 옵션을 사용할 수 없습니다.  
+>  [!INCLUDE[ssSDW](../../includes/sssdwfull-md.md)]에서는 이 옵션을 사용할 수 없습니다.  
   
 ## <a name="remarks"></a>설명  
  실행 컨텍스트의 변경은 다음 조건 중 하나가 발생할 때까지 유효합니다.  
@@ -146,7 +146,7 @@ ms.locfileid: "89547726"
 ###  <a name="a-using-execute-as-and-revert-to-switch-context"></a><a name="_exampleA"></a> 1. EXECUTE AS 및 REVERT를 사용하여 컨텍스트 전환  
  다음 예에서는 여러 보안 주체를 사용하여 컨텍스트 실행 스택을 만듭니다. 그런 다음 `REVERT` 문을 사용하여 실행 컨텍스트를 이전 호출자로 다시 설정합니다. `REVERT` 문은 실행 컨텍스트가 원래 호출자로 설정될 때까지 스택 위로 이동하면서 여러 번 실행됩니다.  
   
-```  
+```sql
 USE AdventureWorks2012;  
 GO  
 --Create two temporary principals  
@@ -190,7 +190,7 @@ GO
 ### <a name="b-using-the-with-cookie-clause"></a>B. WITH COOKIE 절 사용  
  다음 예에서는 세션 실행 컨텍스트를 지정한 사용자로 설정하고 WITH NO REVERT COOKIE = @*varbinary_variabl*e 절을 지정합니다. 컨텍스트를 호출자로 되돌리려면 `REVERT` 문에 `@cookie` 문의 `EXECUTE AS` 변수로 전달되는 값을 지정해야 합니다. 이 예를 실행하려면 예 1에서 생성된 `login1` 로그인 및 `user1` 사용자가 있어야 합니다.  
   
-```  
+```sql
 DECLARE @cookie varbinary(8000);  
 EXECUTE AS USER = 'user1' WITH COOKIE INTO @cookie;  
 -- Store the cookie in a safe location in your application.  

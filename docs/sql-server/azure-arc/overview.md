@@ -8,12 +8,13 @@ ms.reviewer: mikeray
 ms.date: 09/10/2020
 ms.topic: conceptual
 ms.prod: sql
-ms.openlocfilehash: 59cbdd31d32014d54240b4c20937918aaa2c0770
-ms.sourcegitcommit: d56f1eca807c55cf606a6316f3872585f014fec1
+ms.custom: references_regions
+ms.openlocfilehash: 8312ab1f13d5a85c6dfb43cd29d0ba734846a512
+ms.sourcegitcommit: c0f92739c81221fbcdb7c40b53a71038105df44f
 ms.translationtype: HT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 09/22/2020
-ms.locfileid: "90943016"
+ms.lasthandoff: 09/24/2020
+ms.locfileid: "91210585"
 ---
 # <a name="azure-arc-enabled-sql-server-preview"></a>Azure Arc 지원 SQL Server(미리 보기)
 
@@ -25,7 +26,7 @@ Azure 서비스를 사용하려면 Azure Portal 및 등록 스크립트를 통�
 
 Azure Arc 지원 SQL Server 퍼블릭 미리 보기에서는 데이터 수집 및 보고를 위해 MMA(Microsoft Monitoring Agent) 서버 확장을 설치하고 Azure Log Analytics 작업 영역에 연결해야 하는 솔루션 세트를 지원합니다. 해당 솔루션에는 Azure Security Center 및 Azure Sentinel을 사용하는 고급 데이터 보안과 주문형 SQL 평가 기능을 사용하는 SQL 환경 상태 검사가 포함됩니다.
 
-다음 다이어그램은 가상화된 환경을 사용하는 Azure Arc 지원 SQL Server의 아키텍처를 보여 줍니다.
+다음 다이어그램은 Azure Arc 지원 SQL Server의 아키텍처를 보여줍니다.
 
 ![퍼블릭 미리 보기 아키텍처](media/overview/pubic-preview-architecture.png)
 

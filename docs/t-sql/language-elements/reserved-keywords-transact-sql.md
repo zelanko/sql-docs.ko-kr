@@ -19,19 +19,19 @@ ms.assetid: ed8b3e27-6796-40f0-aef3-0cac5e0e2418
 author: rothja
 ms.author: jroth
 monikerRange: '>=aps-pdw-2016||=azuresqldb-current||=azure-sqldw-latest||>=sql-server-2016||=sqlallproducts-allversions||>=sql-server-linux-2017||=azuresqldb-mi-current'
-ms.openlocfilehash: 70b2e52af1ae87f4cacdb2189609c3ead2e3bc4e
-ms.sourcegitcommit: e700497f962e4c2274df16d9e651059b42ff1a10
+ms.openlocfilehash: 9c0264ccc6e2f083b61b4c80c98248be80e33675
+ms.sourcegitcommit: 8f062015c2a033f5a0d805ee4adabbe15e7c8f94
 ms.translationtype: HT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 08/17/2020
-ms.locfileid: "88417109"
+ms.lasthandoff: 09/25/2020
+ms.locfileid: "91227364"
 ---
 # <a name="reserved-keywords-transact-sql"></a>예약어(Transact-SQL)
 [!INCLUDE [sql-asdb-asdbmi-asa-pdw](../../includes/applies-to-version/sql-asdb-asdbmi-asa-pdw.md)]
 
   [!INCLUDE[msCoName](../../includes/msconame-md.md)] [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]에서는 데이터베이스를 정의, 조작 및 액세스할 때 예약된 키워드를 사용합니다. 예약된 키워드는 [!INCLUDE[tsql](../../includes/tsql-md.md)]에서 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 문과 일괄 처리를 구문 분석하고 이해하는 데 사용하는 [!INCLUDE[tsql](../../includes/tsql-md.md)] 언어 문법의 일부입니다. 구문상으로는 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 예약된 키워드를 [!INCLUDE[tsql](../../includes/tsql-md.md)] 스크립트에서 식별자와 개체 이름으로 사용할 수 있지만 구분 기호로 분리된 식별자를 사용한 경우에만 가능합니다.  
   
- 다음 표에는 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 및 Azure SQL Data Warehouse의 예약 키워드가 나와 있습니다.  
+ 다음 표에는 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 및 [!INCLUDE[ssSDW](../../includes/sssdwfull-md.md)] 예약 키워드가 나열되어 있습니다.  
 
 :::row:::
     :::column:::
@@ -716,7 +716,7 @@ ms.locfileid: "88417109"
 :::row-end:::
 
   
-다음 표에는 **Azure SQL Data Warehouse**에만 사용되는 예약 키워드가 나와 있습니다.
+다음 표에는 **[!INCLUDE[ssSDW](../../includes/sssdwfull-md.md)]** 에만 사용되는 예약 키워드가 나열되어 있습니다.
   
 :::row:::
     :::column:::

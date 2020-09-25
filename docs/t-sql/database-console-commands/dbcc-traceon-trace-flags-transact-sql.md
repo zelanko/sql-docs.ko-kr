@@ -21,12 +21,12 @@ helpviewer_keywords:
 ms.assetid: b971b540-1ac2-435b-b191-24399eb88265
 author: pmasl
 ms.author: pelopes
-ms.openlocfilehash: 826960263f60a1b9d76e2eb7fb738111613678fc
-ms.sourcegitcommit: 6d9b6eb2437e780c7881cc516e03c1182fb6892e
+ms.openlocfilehash: 99dd26d2eec49212ae1603cc2acb8e7464dfbd2b
+ms.sourcegitcommit: c0f92739c81221fbcdb7c40b53a71038105df44f
 ms.translationtype: HT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 09/15/2020
-ms.locfileid: "90565058"
+ms.lasthandoff: 09/24/2020
+ms.locfileid: "91210608"
 ---
 # <a name="dbcc-traceon---trace-flags-transact-sql"></a>DBCC TRACEON - 추적 플래그(Transact-SQL)
 
@@ -132,6 +132,7 @@ ms.locfileid: "90565058"
 |**3625**|'\*\*\*\*\*\*'를 사용하여 일부 오류 메시지의 매개 변수를 마스킹하여 sysadmin 고정 서버 역할의 멤버가 아닌 사용자에게 반환되는 정보의 양을 제한합니다. 이렇게 하면 중요한 정보의 노출을 막을 수 있습니다.<br /><br />**범위**: 전역만|  
 |**3656**|Windows용 디버깅 도구가 설치된 경우 스택 덤프에서 기호 확인을 사용하도록 설정합니다. <br /><br />**경고:** 이는 디버깅 추적 플래그이며 프로덕션 환경용으로 사용되지 않습니다.<br /><br />**참고:** [!INCLUDE[sql-server-2019](../../includes/sssqlv15-md.md)]부터 추적 플래그 [2592](#2592)는 추적 플래그 3656과 함께 활성화하여 기호 확인을 활성화해야 합니다. <br/><br/>**범위**: 전역 및 세션|
 |**3924**|SPID=-2인 분리된 DTC 트랜잭션을 자동으로 제거할 수 있습니다. 이는 일부 타사 트랜잭션 모니터의 문제입니다. 자세한 내용은 이 [Microsoft 지원 문서](https://support.microsoft.com/help/4519668) 및 [Microsoft 지원 문서](https://support.microsoft.com/help/4511816)를 참조하세요.<br /><br />**범위**: 전역만|  
+|**4022**|[!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]이 시작되면 저장 프로시저 자동 실행을 해제합니다. 시작 저장 프로시저의 자동 실행에 대한 자세한 내용은 [sp_procoption](../../relational-databases/system-stored-procedures/sp-procoption-transact-sql.md)을 참조하세요. <br /><br />**범위**: 전역만|  
 |**4136**|OPTION(RECOMPILE), WITH RECOMPILE 또는 OPTIMIZE FOR \<value>가 사용되지 않으면 매개 변수 검색(sniffing)을 사용하지 않도록 설정합니다. 자세한 내용은 이 [Microsoft 지원 문서](https://support.microsoft.com/kb/980653)를 참조하세요.<br /><br />[!INCLUDE[ssSQL15](../../includes/sssql15-md.md)]부터 데이터베이스 수준에서 이를 수행하려면, [ALTER DATABASE SCOPED CONFIGURATION &#40;Transact-SQL&#41;](../../t-sql/statements/alter-database-scoped-configuration-transact-sql.md)의 PARAMETER_SNIFFING 옵션을 참조하세요.<br /><br />쿼리 수준에서 동일한 결과를 얻으려면 OPTIMIZE FOR UNKNOWN [쿼리 힌트](../../t-sql/queries/hints-transact-sql-query.md)를 추가합니다. OPTIMIZE FOR UNKNOWN 힌트는 매개 변수 스니핑 메커니즘을 비활성화하지 않고 효과적으로 무시하여 동일한 결과를 얻습니다.<br />[!INCLUDE[ssSQL15](../../includes/sssql15-md.md)] SP1부터 쿼리 수준에서 이 작업을 수행하는 두 번째 옵션은 이 추적 플래그를 사용하는 대신 USE HINT 'DISABLE_PARAMETER_SNIFFING' [쿼리 힌트](../../t-sql/queries/hints-transact-sql-query.md)를 추가하는 것입니다.<br /><br />**참고:** 프로덕션 환경에 배포하기 전에 이 옵션을 철저히 테스트하세요.<br /><br />**범위**: 전역 또는 세션|  
 |**4137**|[!INCLUDE[ssSQL11](../../includes/sssql11-md.md)] 및 이전 버전의 쿼리 최적화 프로그램 카디널리티 추정 모델(70)에서 독립성 대신 부분 상관관계를 설명하기 위해 필터에 대한 AND 조건자를 추정할 때 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]에서 최소 선택도를 사용하여 플랜을 생성하도록 합니다. 자세한 내용은 이 [Microsoft 지원 문서](https://support.microsoft.com/kb/2658214)를 참조하세요.<br /><br />[!INCLUDE[ssSQL15](../../includes/sssql15-md.md)] SP1부터 쿼리 수준에서 이 작업을 수행하려면, CE 70을 사용할 때 이 추적 플래그를 사용하는 대신 USE HINT ‘ASSUME_MIN_SELECTIVITY_FOR_FILTER_ESTIMATES’ [쿼리 힌트](../../t-sql/queries/hints-transact-sql-query.md)를 추가합니다.<br /><br />**참고:** 프로덕션 환경에 배포하기 전에 이 옵션을 철저히 테스트하세요.<br /><br />**참고:** 이 추적 플래그는 CE 버전 120 이상에 적용되지 않습니다. 대신 9471 추적 플래그를 사용하세요.<br /><br />**범위**: 전역, 세션 또는 쿼리(QUERYTRACEON)| 
 |**4138**|[!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]에서 TOP, OPTION (FAST N), IN 또는 EXISTS 키워드가 포함된 쿼리에 행 목표 조정을 사용하지 않는 계획을 생성하도록 합니다. 자세한 내용은 이 [Microsoft 지원 문서](https://support.microsoft.com/kb/2667211)를 참조하세요.<br /><br />[!INCLUDE[ssSQL15](../../includes/sssql15-md.md)] SP1부터 쿼리 수준에서 이 작업을 수행하려면, 이 추적 플래그를 사용하는 대신 USE HINT 'DISABLE_OPTIMIZER_ROWGOAL' [쿼리 힌트](../../t-sql/queries/hints-transact-sql-query.md)를 추가합니다.<br /><br />**참고:** 프로덕션 환경에 배포하기 전에 이 옵션을 철저히 테스트하세요.<br /><br />**범위**: 전역, 세션 또는 쿼리(QUERYTRACEON)| 
@@ -165,7 +166,7 @@ ms.locfileid: "90565058"
 |**8048**|NUMA 분할 메모리 개체를 CPU 분할로 변환합니다. 자세한 내용은 이 [Microsoft 지원 문서](https://support.microsoft.com/kb/2809338)를 참조하세요.<br /><br />**참고:** [!INCLUDE[ssSQL14](../../includes/sssql14-md.md)] SP2 및 [!INCLUDE[ssSQL15](../../includes/sssql15-md.md)]부터 이 동작은 동적이며 엔진에서 제어됩니다.<br /><br />**범위**: 전역만|  
 |**8075**|64비트 [!INCLUDE[ssSQL11](../../includes/sssql11-md.md)] 또는 [!INCLUDE[ssSQL14](../../includes/sssql14-md.md)]에서 메모리 페이지 할당 오류가 발생하면 [VAS](../../relational-databases/memory-management-architecture-guide.md#changes-to-memory-management-starting-2012-11x-gm) 조각화가 감소합니다. 자세한 내용은 이 [Microsoft 지원 문서](https://support.microsoft.com/kb/3074434)를 참조하세요.<br /><br />**참고:** 이 추적 플래그는 [!INCLUDE[ssSQL11](../../includes/sssql11-md.md)], [!INCLUDE[ssSQL14](../../includes/sssql14-md.md)] RTM CU10 및 [!INCLUDE[ssSQL14](../../includes/sssql14-md.md)] SP1 CU3에 적용됩니다. [!INCLUDE[ssSQL15](../../includes/sssql15-md.md)]부터 이 동작은 엔진에서 제어되며, 8075 추적 플래그는 아무 효과가 없습니다.<br /><br />**범위**: 전역만|
 |**8079**|[!INCLUDE[ssSQL14](../../includes/sssql14-md.md)] SP2에서 하드웨어 레이아웃을 조사하고 NUMA 노드당 8개 이상의 CPU를 보고하는 시스템에 Soft-NUMA를 자동으로 구성할 수 있도록 허용합니다. 자동 Soft-NUMA 동작은 하이퍼스레드(HT/논리 프로세서)를 인식합니다. 추가 노드를 분할하고 만드는 경우 수신기 수, 크기 조정, 네트워크 및 암호화 기능을 늘려서 백그라운드 처리의 크기를 조정합니다.<br /><br />**참고:** 이 추적 플래그는 [!INCLUDE[ssSQL14](../../includes/sssql14-md.md)] SP2에 적용됩니다. [!INCLUDE[ssSQL15](../../includes/sssql15-md.md)]부터 이 동작은 엔진에서 제어되며, 8079 추적 플래그는 아무 효과가 없습니다.<br /><br />**범위**: 전역만| 
-|**8099**|많은 동시 사용자에게 서비스를 제공하는 [!INCLUDE[sql-server-2019](../../includes/sssqlv15-md.md)]를 실행하는 고성능 시스템에 대해 spinlock 경합 픽스를 사용하도록 설정합니다.<br /><br />**참고:** 이 추적 플래그는 [!INCLUDE[sql-server-2019](../../includes/sssqlv15-md.md)] CU2 이상의 빌드에 적용됩니다. 자세한 내용은 이 [Microsoft 지원 문서](https://support.microsoft.com/kb/4538688)를 참조하세요.<br /><br />**범위**: 전역만| 
+|**8099**|많은 동시 사용자에게 서비스를 제공하는 [!INCLUDE[sql-server-2019](../../includes/sssqlv15-md.md)]를 실행하는 고성능 시스템에 대해 spinlock 경합 픽스를 사용하도록 설정합니다.<br /><br />**참고:** 이 추적 플래그는 [!INCLUDE[sql-server-2019](../../includes/sssqlv15-md.md)] CU2 및 CU3에만 적용됩니다. [!INCLUDE[sql-server-2019](../../includes/sssqlv15-md.md)] CU4부터 이 동작은 기본적으로 사용하도록 설정됩니다. 자세한 내용은 이 [Microsoft 지원 문서](https://support.microsoft.com/kb/4538688)를 참조하세요.<br /><br />**범위**: 전역만| 
 |**8207**|트랜잭션 복제 및 CDC에 대한 싱글톤 업데이트를 설정할 수 있습니다. 구독자에 대한 업데이트는 DELETE 및 INSERT 쌍으로 복제할 수 있습니다. 이렇게 하면 UPDATE 트리거 실행과 같은 비즈니스 규칙이 충족되지 않을 수 있습니다. 8207 추적 플래그를 사용하면 단일 행(싱글톤 업데이트)에만 영향을 주는 고유 열에 대한 업데이트가 DELETE 또는 INSERT 쌍이 아닌 UPDATE로 복제됩니다. 업데이트가 unique 제약 조건이 있는 열에 영향을 주거나 업데이트가 여러 행에 영향을 주는 경우에도 업데이트는 여전히 DELETE 또는 INSERT 쌍으로 복제됩니다. 자세한 내용은 이 [Microsoft 지원 문서](https://support.microsoft.com/kb/302341)를 참조하세요.<br /><br />**범위**: 전역만|
 |**8721**|통계 자동 업데이트를 실행할 때 오류 로그에 보고합니다. 자세한 내용은 이 [Microsoft 지원 문서](https://support.microsoft.com/kb/195565)를 참조하세요.<br /><br />**참고:** 이 추적 플래그가 작동하려면 추적 플래그 [3605](#3605)를 사용하도록 설정해야 합니다.<br /><br />**범위**: 전역만|
 |**8744**|[중첩 루프](../../relational-databases/performance/joins.md#nested_loops) 연산자에 대해 프리페치를 사용하지 않도록 설정합니다.<br /><br />**경고:** 이 추적 플래그를 잘못 사용하면 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]에서 중첩 루프 연산자가 포함된 계획을 실행할 때 추가 물리적 읽기가 발생할 수 있습니다.<br /><br />**범위**: 전역 및 세션|
@@ -201,7 +202,7 @@ ms.locfileid: "90565058"
 |**11064**|`SELECT` 문과 `INSERT` 문 간의 메모리 분산을 최적화하여 columnstore 인덱스로 데이터를 로드하는 작업의 확장성을 개선합니다. columnstore 인덱스로의 데이터 로드에 대한 자세한 내용은 [Columnstore 인덱스 - 데이터 로드 지침](../../relational-databases/indexes/columnstore-indexes-data-loading-guidance.md)을 참조하세요.<br /><br />**참고:** 이 추적 플래그는 [!INCLUDE[sql-server-2019](../../includes/sssqlv15-md.md)] 이상의 빌드에 적용됩니다.<br /><br />**범위**: 전역만| 
 |**11068**|columnstore 인덱스 삽입 작업에 대해 서버, 데이터베이스 또는 리소스 풀에 의해 구성된 최대 병렬 처리 수준(MAXDOP) 값을 사용합니다. 병렬 처리 수준 재정의에 대한 자세한 내용은 [쿼리 처리 아키텍처 가이드](../../relational-databases/query-processing-architecture-guide.md#overriding-degrees-of-parallelism)를 참조하세요.<br /><br />**중요:** 이 추적 플래그는 추적 플래그 11064도 사용하도록 설정된 경우에만 적용됩니다.<br /><br />**중요:** [columnstore 세그먼트](../../relational-databases/indexes/columnstore-indexes-overview.md#column-segment) 품질을 유지하는 것보다 더 빠른 데이터 로드 속도가 선호되는 경우 이 추적 플래그를 사용합니다. 예를 들어, columnstore에 1,048,577개의 행을 로드할 때 이 추적 플래그를 사용할 경우, 삽입 작업이 병렬 모드로 실행된다면 압축된 행 그룹이 2개 이상 생성될 수 있습니다. 이 추적 플래그를 사용하지 않을 경우, 삽입 작업의 결과 압축된 행 그룹이 1개 생성됩니다.<br /><br />**참고:** 이 추적 플래그는 [!INCLUDE[sql-server-2019](../../includes/sssqlv15-md.md)] 이상의 빌드에 적용됩니다.<br /><br />**범위**: 전역만| 
   
-## <a name="examples"></a>예  
+## <a name="examples"></a>예제  
  다음 예제에서는 DBCC TRACEON을 사용하여 서버 수준의 모든 세션에 대해 3205 추적 플래그를 설정합니다.  
   
 ```sql  

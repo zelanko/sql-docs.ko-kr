@@ -1,8 +1,8 @@
 ---
 title: 하위 쿼리
-description: Azure SQL Data Warehouse 및 병렬 데이터 웨어하우스의 하위 쿼리
+description: Azure Synapse Analytics 및 병렬 데이터 웨어하우스의 하위 쿼리
 ms.custom: seo-lt-2019
-titleSuffix: Azure SQL Data Warehouse
+titleSuffix: Azure Synapse Analytics
 ms.date: 03/03/2017
 ms.prod: sql
 ms.reviewer: ''
@@ -12,14 +12,14 @@ ms.assetid: 0e8ebd60-1936-48c9-b2b9-e099c8269fcf
 author: shkale-msft
 ms.author: shkale
 monikerRange: '>= aps-pdw-2016 || = azure-sqldw-latest || = sqlallproducts-allversions'
-ms.openlocfilehash: 946a36987b72f145af5e9c34eecaed9e8853033c
-ms.sourcegitcommit: cc23d8646041336d119b74bf239a6ac305ff3d31
+ms.openlocfilehash: 3b60dc6b14b6161849a0e50b3de149946427568f
+ms.sourcegitcommit: 8f062015c2a033f5a0d805ee4adabbe15e7c8f94
 ms.translationtype: HT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 09/23/2020
-ms.locfileid: "91115418"
+ms.lasthandoff: 09/25/2020
+ms.locfileid: "91227438"
 ---
-# <a name="subqueries-azure-sql-data-warehouse-parallel-data-warehouse"></a>하위 쿼리(Azure SQL Data Warehouse, 병렬 데이터 웨어하우스)
+# <a name="subqueries-azure-synapse-analytics-parallel-data-warehouse"></a>하위 쿼리(Azure Synapse Analytics, 병렬 데이터 웨어하우스)
 [!INCLUDE[applies-to-version/asa-pdw](../../includes/applies-to-version/asa-pdw.md)]
 
   이 항목에는 [!INCLUDE[ssSDW](../../includes/sssdw-md.md)] 또는 [!INCLUDE[ssPDW](../../includes/sspdw-md.md)]에서 하위 쿼리를 사용한 예제가 나와 있습니다.  
@@ -30,7 +30,7 @@ ms.locfileid: "91115418"
   
 -   [기본 사항](#Basics)  
   
--   [예: SQL Data Warehouse 및 병렬 데이터 웨어하우스](#Examples)  
+-   [예제: Azure Synapse Analytics 및 병렬 데이터 웨어하우스](#Examples)  
   
 ##  <a name="basics"></a><a name="Basics"></a> 기본 사항  
  하위 쿼리  

@@ -11,18 +11,18 @@ ms.assetid: 4846a576-57ea-4068-959c-81e69e39ddc1
 author: XiaoyuMSFT
 ms.author: xiaoyul
 monikerRange: = azure-sqldw-latest || = sqlallproducts-allversions
-ms.openlocfilehash: 187dcb7ca6da6802b60b36e2ae7f0fa5c66b0df1
-ms.sourcegitcommit: c95f3ef5734dec753de09e07752a5d15884125e2
+ms.openlocfilehash: 315960092f6c27c881a000c2c6a26f0b850f3072
+ms.sourcegitcommit: 8f062015c2a033f5a0d805ee4adabbe15e7c8f94
 ms.translationtype: HT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 08/25/2020
-ms.locfileid: "88858107"
+ms.lasthandoff: 09/25/2020
+ms.locfileid: "91227287"
 ---
 # <a name="explain-transact-sql"></a>EXPLAIN(Transact-SQL) 
 
 [!INCLUDE [asa](../../includes/applies-to-version/asa.md)]
 
-  문을 실행하지 않고 [!INCLUDE[ssDW](../../includes/ssdw-md.md)] [!INCLUDE[DWsql](../../includes/dwsql-md.md)] 문에 대한 쿼리 계획을 반환합니다. EXPLAIN을 사용하여 데이터 이동이 필요한 작업을 미리 보고 쿼리 작업의 예상 비용을 표시합니다. `WITH RECOMMENDATIONS`는 Azure SQL Data Warehouse에 적용됩니다.
+  문을 실행하지 않고 [!INCLUDE[ssDW](../../includes/ssdw-md.md)] [!INCLUDE[DWsql](../../includes/dwsql-md.md)] 문에 대한 쿼리 계획을 반환합니다. EXPLAIN을 사용하여 데이터 이동이 필요한 작업을 미리 보고 쿼리 작업의 예상 비용을 표시합니다. `WITH RECOMMENDATIONS`는 [!INCLUDE[ssSDW](../../includes/sssdwfull-md.md)]에 적용됩니다.
   
 ## <a name="syntax"></a>구문  
   
@@ -43,7 +43,7 @@ SQL 문의 성능을 최적화하기 위한 권장 사항이 포함된 쿼리 �
   
 ## <a name="permissions"></a>사용 권한
 
- **SHOWPLAN** 권한 및 *SQL_statement*를 실행할 수 있는 권한이 필요합니다. [권한: GRANT, DENY, REVOKE &#40;Azure SQL Data Warehouse, 병렬 Data Warehouse&#41;](../../t-sql/statements/permissions-grant-deny-revoke-azure-sql-data-warehouse-parallel-data-warehouse.md)를 참조하세요.  
+ **SHOWPLAN** 권한 및 *SQL_statement*를 실행할 수 있는 권한이 필요합니다. [권한: GRANT, DENY, REVOKE &#40;Azure Synapse Analytics, 병렬 데이터 웨어하우스&#41;](../../t-sql/statements/permissions-grant-deny-revoke-azure-sql-data-warehouse-parallel-data-warehouse.md).  
   
 ## <a name="return-value"></a>Return Value
 
@@ -621,6 +621,6 @@ FROM   (SELECT CONVERT (INT, [T2_1].[col], 0) AS [col]
 [sys.pdw_materialized_view_distribution_properties &#40;Transact-SQL&#41;](/sql/relational-databases/system-catalog-views/sys-pdw-materialized-view-distribution-properties-transact-sql?view=azure-sqldw-latest)   
 [sys.pdw_materialized_view_mappings &#40;Transact-SQL&#41;](/sql/relational-databases/system-catalog-views/sys-pdw-materialized-view-mappings-transact-sql?view=azure-sqldw-latest)   
 [DBCC PDW_SHOWMATERIALIZEDVIEWOVERHEAD &#40;Transact-SQL&#41;](/sql/t-sql/database-console-commands/dbcc-pdw-showmaterializedviewoverhead-transact-sql?view=azure-sqldw-latest)   
-[SQL Data Warehouse 및 병렬 Data Warehouse 카탈로그 뷰](../../relational-databases/system-catalog-views/sql-data-warehouse-and-parallel-data-warehouse-catalog-views.md)   
-[Azure SQL Data Warehouse에서 지원되는 시스템 뷰](/azure/sql-data-warehouse/sql-data-warehouse-reference-tsql-system-views)   
-[Azure SQL Data Warehouse에서 지원되는 T-SQL 문](/azure/sql-data-warehouse/sql-data-warehouse-reference-tsql-statements)
+[Azure Synapse Analytics 및 병렬 데이터 웨어하우스 카탈로그 뷰](../../relational-databases/system-catalog-views/sql-data-warehouse-and-parallel-data-warehouse-catalog-views.md)   
+[Azure Synapse Analytics에서 지원되는 시스템 뷰](/azure/sql-data-warehouse/sql-data-warehouse-reference-tsql-system-views)   
+[Azure Synapse Analytics에서 지원되는 T-SQL 문](/azure/sql-data-warehouse/sql-data-warehouse-reference-tsql-statements)

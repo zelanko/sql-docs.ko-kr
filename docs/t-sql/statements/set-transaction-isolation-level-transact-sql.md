@@ -28,12 +28,12 @@ ms.assetid: 016fb05e-a702-484b-bd2a-a6eabd0d76fd
 author: markingmyname
 ms.author: maghan
 monikerRange: '>=aps-pdw-2016||=azuresqldb-current||=azure-sqldw-latest||>=sql-server-2016||=sqlallproducts-allversions||>=sql-server-linux-2017||=azuresqldb-mi-current'
-ms.openlocfilehash: 977ebc69d15e88de11e5906bb1e283f7e73d072a
-ms.sourcegitcommit: dd36d1cbe32cd5a65c6638e8f252b0bd8145e165
+ms.openlocfilehash: 88cbb1203595203af88cf9e9da6e122cc7db5322
+ms.sourcegitcommit: 8f062015c2a033f5a0d805ee4adabbe15e7c8f94
 ms.translationtype: HT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 09/08/2020
-ms.locfileid: "89540580"
+ms.lasthandoff: 09/25/2020
+ms.locfileid: "91227468"
 ---
 # <a name="set-transaction-isolation-level-transact-sql"></a>SET TRANSACTION ISOLATION LEVEL(Transact-SQL)
 [!INCLUDE [sql-asdb-asdbmi-asa-pdw](../../includes/applies-to-version/sql-asdb-asdbmi-asa-pdw.md)]
@@ -58,13 +58,13 @@ SET TRANSACTION ISOLATION LEVEL
 ```
 
 ```syntaxsql
--- Syntax for Azure SQL Data Warehouse and Parallel Data Warehouse
+-- Syntax for Azure Synapse Analytics and Parallel Data Warehouse
   
 SET TRANSACTION ISOLATION LEVEL READ UNCOMMITTED
 ```
 
 >[!NOTE]
-> SQL Data Warehouse는 ACID 트랜잭션을 구현합니다. 트랜잭션 지원의 격리 수준은 기본적으로 READ UNCOMMITTED로 설정되어 있습니다.  master 데이터베이스에 연결된 경우 사용자 데이터베이스의 READ_COMMITTED_SNAPSHOT 데이터베이스 옵션을 ON으로 설정하여 이 기본값을 READ COMMITTED SNAPSHOT ISOLATION으로 변경할 수 있습니다.  사용하도록 설정한 경우 이 데이터베이스의 모든 트랜잭션이 READ COMMITTED SNAPSHOT ISOLATION으로 실행되고 세션 수준의 READ UNCOMMITTED 설정은 적용되지 않습니다. 자세한 내용은 [ALTER DATABASE SET 옵션(Transact-SQL)](../../t-sql/statements/alter-database-transact-sql-set-options.md)을 참조하세요.  
+> [!INCLUDE[ssSDW](../../includes/sssdwfull-md.md)]는 ACID 트랜잭션을 구현합니다. 트랜잭션 지원의 격리 수준은 기본적으로 READ UNCOMMITTED로 설정되어 있습니다.  master 데이터베이스에 연결된 경우 사용자 데이터베이스의 READ_COMMITTED_SNAPSHOT 데이터베이스 옵션을 ON으로 설정하여 이 기본값을 READ COMMITTED SNAPSHOT ISOLATION으로 변경할 수 있습니다.  사용하도록 설정한 경우 이 데이터베이스의 모든 트랜잭션이 READ COMMITTED SNAPSHOT ISOLATION으로 실행되고 세션 수준의 READ UNCOMMITTED 설정은 적용되지 않습니다. 자세한 내용은 [ALTER DATABASE SET 옵션(Transact-SQL)](../../t-sql/statements/alter-database-transact-sql-set-options.md)을 참조하세요.  
 
 [!INCLUDE[sql-server-tsql-previous-offline-documentation](../../includes/sql-server-tsql-previous-offline-documentation.md)]
 

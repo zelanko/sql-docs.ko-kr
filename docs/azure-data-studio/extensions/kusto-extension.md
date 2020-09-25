@@ -9,12 +9,12 @@ ms.author: maghan
 ms.reviewer: jukoesma
 ms.custom: ''
 ms.date: 09/22/2020
-ms.openlocfilehash: eed9e8681ac8b4d0b9bbbe8c8e4f7d7104900bd1
-ms.sourcegitcommit: cc23d8646041336d119b74bf239a6ac305ff3d31
+ms.openlocfilehash: 3df020725458318aa1c3936b2b4430582ace8997
+ms.sourcegitcommit: 8f062015c2a033f5a0d805ee4adabbe15e7c8f94
 ms.translationtype: HT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 09/23/2020
-ms.locfileid: "91111650"
+ms.lasthandoff: 09/25/2020
+ms.locfileid: "91226828"
 ---
 # <a name="kusto-kql-extension-for-azure-data-studio-preview"></a>Azure Data Studio용 Kusto(KQL) 확장(미리 보기)
 
@@ -125,6 +125,12 @@ Kusto 확장 설정을 변경하려면 아래 단계를 수행합니다.
 Azure Data Studio의 KQL(Kusto) 확장을 사용하는 [SandDance 확장](https://docs.microsoft.com/sql/azure-data-studio/sanddance-extension)은 다양한 대화형 시각화를 결합합니다. KQL 쿼리 결과 집합에서 **시각화 도우미** 단추를 선택하여 [SandDance](https://sanddance.js.org/)를 시작합니다.
 
 :::image type="content" source="media/kusto-extension/kusto-extension-sanddance-demo.gif" alt-text="SandDance 시각화":::
+
+## <a name="limitations-and-considerations"></a>제한 사항 및 고려 사항
+
+- Kusto 쿼리를 실행하기 전에 Azure Data Explorer 클러스터에 대한 데이터베이스를 선택해야 합니다.
+- Azure Data Explorer 클러스터를 너무 오랫동안 유휴 상태로 두면 연결이 끊어질 수 있습니다.
+    - 해결 방법: 클러스터에서 연결을 끊고 다시 연결합니다.
 
 ## <a name="next-steps"></a>다음 단계
 

@@ -2,7 +2,7 @@
 title: 스레드 및 태스크 아키텍처 가이드 | Microsoft 문서
 description: 태스크 예약, Hot Add CPU, CPU 64개 이상을 사용하는 컴퓨터에서의 모범 사례를 포함한 SQL Server에서의 스레드 및 태스크 아키텍처에 대해 알아봅니다.
 ms.custom: ''
-ms.date: 07/06/2020
+ms.date: 09/23/2020
 ms.prod: sql
 ms.prod_service: database-engine, sql-database
 ms.reviewer: ''
@@ -11,16 +11,24 @@ ms.topic: conceptual
 helpviewer_keywords:
 - guide, thread and task architecture
 - thread and task architecture guide
+- task scheduling
+- working threads
+- Large Deficit First scheduling
+- LDF scheduling
+- scheduling, SQL Server
+- tasks, SQL Server
+- threads, SQL Server
+- quantum, SQL Server
 ms.assetid: 925b42e0-c5ea-4829-8ece-a53c6cddad3b
 author: pmasl
 ms.author: jroth
 monikerRange: =azuresqldb-current||>=sql-server-2016||=sqlallproducts-allversions||>=sql-server-linux-2017||=azuresqldb-mi-current
-ms.openlocfilehash: 3efda2f67cc2772739a7eaf0a8f1b0dbf947d421
-ms.sourcegitcommit: 1126792200d3b26ad4c29be1f561cf36f2e82e13
+ms.openlocfilehash: f2500a95946ee1a8226763ebd7983edd2a9f81c6
+ms.sourcegitcommit: cc23d8646041336d119b74bf239a6ac305ff3d31
 ms.translationtype: HT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 09/14/2020
-ms.locfileid: "90076808"
+ms.lasthandoff: 09/23/2020
+ms.locfileid: "91114596"
 ---
 # <a name="thread-and-task-architecture-guide"></a>스레드 및 태스크 아키텍처 가이드
 [!INCLUDE [SQL Server Azure SQL Database](../includes/applies-to-version/sql-asdb.md)]
@@ -59,6 +67,14 @@ ms.locfileid: "90076808"
 **스케줄러**(SOS 스케줄러라고도 함)는 태스크를 대신하여 작업을 수행하기 위해 처리 시간이 필요한 작업자 스레드를 관리합니다. 각 스케줄러는 개별 프로세서(CPU)에 매핑됩니다. 작업자가 스케줄러에서 활성 상태를 유지할 수 있는 시간을 OS 퀀텀이라고 하며 최대 4ms입니다. 퀀텀 시간이 만료된 후 작업자는 CPU 리소스에 액세스해야 하는 다른 작업자에게 시간을 양보하고 상태를 변경합니다. 이와 같이 CPU 리소스에 대한 액세스를 최대화하기 위한 작업자 간 협력을 **협조적 예약**(비선점형 예약)이라고 합니다. 작업자 상태 변경은 해당 작업자와 연결된 태스크, 그리고 해당 태스크와 연결된 요청에 전파됩니다. 작업자 상태에 대한 자세한 내용은 [sys.dm_os_workers](../relational-databases/system-dynamic-management-views/sys-dm-os-workers-transact-sql.md)를 참조하세요. 스케줄러에 대한 자세한 내용은 [sys.dm_os_schedulers ](../relational-databases/system-dynamic-management-views/sys-dm-os-schedulers-transact-sql.md)를 참조하세요. 
 
 요약하면 **요청**은 하나 이상의 **태스크**를 생성하여 작업 단위를 실행합니다. 각 태스크는 태스크 완료를 담당하는 **작업자 스레드**에 할당됩니다. 태스크 활성 실행을 위해 각 작업자 스레드는 예약되어야 합니다(**스케줄러**에 배치되어야 합니다). 
+
+> [!NOTE]
+> 다음 시나리오를 고려하세요.   
+> -  작업자 1은 메모리 내 기반 테이블에 대한 미리 읽기를 사용하는 읽기 쿼리처럼 오래 실행되는 작업입니다. 작업자 1은 필요한 데이터 페이지가 이미 버퍼 풀에 있기 때문에 I/O 작업을 기다릴 필요 없이 결과 생성 전에 전체 퀀텀을 사용할 수 있다는 것을 확인합니다.   
+> -  작업자 2는 밀리초 미만의 더 짧은 작업을 수행하므로 전체 퀀텀이 고갈되기 전에 결과를 생성해야 합니다.     
+>
+> 이 시나리오 및 최대 [!INCLUDE[ssSQL14](../includes/sssql14-md.md)]에서 작업자 1은 기본적으로 전체 퀀텀 시간을 늘려서 스케줄러를 독점할 수 있습니다.   
+> [!INCLUDE[ssSQL15](../includes/sssql15-md.md)]부터 협조적 일정 예약에 LDF(Large Deficit First) 일정이 포함됩니다. LDF 일정을 사용하면 퀀텀 사용 패턴이 모니터링되고 한 작업자 스레드가 스케줄러를 독점하지 않습니다. 동일한 시나리오에서 작업자 2는 작업자 1에게 더 많은 퀀텀이 허용되기 전에 반복 퀀텀을 사용할 수 있으므로, 작업자 1이 생소한 패턴의 스케줄러를 독점할 수 없습니다.
 
 ### <a name="scheduling-parallel-tasks"></a>병렬 작업 예약
 MaxDOP 8로 [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)]를 구성하고 CPU 선호도가 NUMA 노드 0 및 1에서 CPU 24개(스케줄러)를 대상으로 구성했다고 상상해 보세요. 스케줄러 0~11은 NUMA 노드 0에 속하며 스케줄러 12~23은 NUMA 노드 1에 속합니다. 애플리케이션은 [!INCLUDE[ssde_md](../includes/ssde_md.md)]에 다음 쿼리(요청)를 보냅니다.
@@ -228,8 +244,8 @@ CPU가 여러 개인 컴퓨터에서 데이터베이스의 복구 모델을 임�
 > [!NOTE]
 > Analysis Services 워크로드에는 [!INCLUDE[ssSqlProfiler](../includes/sssqlprofiler-md.md)]가 계속 사용되며 지원됩니다.
 
-### <a name="setting-the-number-of-tempdb-data-files"></a>TempDB 데이터 파일 수 설정
-파일의 수는 컴퓨터의 논리 프로세서 수에 따라 달라집니다. 일반적으로 논리 프로세서의 수가 8 이하인 경우 논리 프로세서와 같은 수의 데이터 파일을 사용합니다. 논리 프로세서의 수가 8보다 클 경우 8개의 데이터 파일을 사용합니다. 그런 다음에도 경합이 계속될 경우 경합이 허용 가능한 수준으로 감소할 때까지 데이터 파일의 수를 4의 배수로 늘리거나 작업/코드를 변경합니다. 또한 [SQL Server에서 TempDB 성능 최적화](../relational-databases/databases/tempdb-database.md#optimizing-tempdb-performance-in-sql-server)에 나와 있는 TempDB에 대한 다른 권장 사항도 염두에 두어야 합니다. 
+### <a name="setting-the-number-of-tempdb-data-files"></a>tempdb 데이터 파일 수 설정
+파일의 수는 컴퓨터의 논리 프로세서 수에 따라 달라집니다. 일반적으로 논리 프로세서의 수가 8 이하인 경우 논리 프로세서와 같은 수의 데이터 파일을 사용합니다. 논리 프로세서의 수가 8보다 클 경우 8개의 데이터 파일을 사용합니다. 그런 다음에도 경합이 계속될 경우 경합이 허용 가능한 수준으로 감소할 때까지 데이터 파일의 수를 4의 배수로 늘리거나 작업/코드를 변경합니다. 또한 [SQL Server에서 tempdb 성능 최적화](../relational-databases/databases/tempdb-database.md#optimizing-tempdb-performance-in-sql-server)에 나와 있는 tempdb에 대한 다른 권장 사항도 염두에 두어야 합니다. 
 
 하지만 tempdb에 대한 동시성 요구를 신중하게 고려하면 데이터베이스 관리 오버헤드를 줄일 수 있습니다. 예를 들어 시스템에 64개의 CPU가 있고 일반적으로 32개의 쿼리에서만 tempdb를 사용하는 경우 tempdb 파일의 수를 64개로 늘려도 성능이 개선되지 않습니다.
 

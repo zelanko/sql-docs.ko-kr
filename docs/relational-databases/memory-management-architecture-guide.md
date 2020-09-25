@@ -11,16 +11,28 @@ ms.topic: conceptual
 helpviewer_keywords:
 - guide, memory management architecture
 - memory management architecture guide
+- PMO
+- Partitioned Memory Objects
+- cmemthread
+- AWE
+- SPA, Single Page Allocator
+- MPA, Multi Page Allocator
+- memory allocation, SQL Server
+- memory pressure, SQL Server
+- stack size, SQL Server
+- buffer manager, SQL Server
+- buffer pool, SQL Server
+- resource monitor, SQL Server
 ms.assetid: 7b0d0988-a3d8-4c25-a276-c1bdba80d6d5
 author: rothja
 ms.author: jroth
 monikerRange: '>=aps-pdw-2016||=azuresqldb-current||=azure-sqldw-latest||>=sql-server-2016||=sqlallproducts-allversions||>=sql-server-linux-2017||=azuresqldb-mi-current'
-ms.openlocfilehash: 4681cdb7dbca293501902caec456a3e08eac5ba7
-ms.sourcegitcommit: 216f377451e53874718ae1645a2611cdb198808a
+ms.openlocfilehash: 8677c1e3fff32a5ea2ae43f6437f0d219180123c
+ms.sourcegitcommit: cc23d8646041336d119b74bf239a6ac305ff3d31
 ms.translationtype: HT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 07/28/2020
-ms.locfileid: "87243712"
+ms.lasthandoff: 09/23/2020
+ms.locfileid: "91116218"
 ---
 # <a name="memory-management-architecture-guide"></a>메모리 관리 아키텍처 가이드
 
@@ -62,7 +74,7 @@ AWE와 Lock Pages in Memory 권한을 사용하면 [!INCLUDE[ssNoVersion](../inc
 |메모리의 페이지 잠금 운영 체제(OS) 권한(실제 메모리 잠금을 허용하여 잠긴 메모리의 OS 페이징 방지) <sup>6</sup> |[!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)] Standard, Enterprise 및 Developer 버전: [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)] 프로세스에서 AWE 메커니즘을 사용하는 데 필요합니다. AWE 메커니즘을 통해 할당된 메모리는 페이징할 수 없습니다. <br> AWE를 사용하지 않고 이 권한을 부여하면 서버에 영향을 주지 않습니다. | 필요한 경우, 즉 sqlservr 프로세스가 페이징 아웃되고 있다는 징후가 있는 경우에만 사용됩니다. 이 경우 오류 17890이 다음 예제와 유사한 Errorlog에 보고됩니다.`A significant part of sql server process memory has been paged out. This may result in a performance degradation. Duration: #### seconds. Working set (KB): ####, committed (KB): ####, memory utilization: ##%.`|
 
 <sup>1</sup> 32비트 버전은 [!INCLUDE[ssSQL14](../includes/sssql14-md.md)]부터 사용할 수 없습니다.  
-<sup>2</sup> /3gb는 운영 체제 부팅 매개 변수입니다. 자세한 내용은 MSDN 라이브러리를 참조하세요.  
+<sup>2</sup> /3gb는 운영 체제 부팅 매개 변수입니다.  
 <sup>3</sup> WOW64(Windows on Windows 64)는 32비트 [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)] 가 64비트 운영 체제에서 실행되는 모드입니다.  
 <sup>4</sup> [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)] Standard Edition은 최대 128GB를 지원합니다. [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)] Enterprise Edition은 운영 체제가 지원하는 최대 크기를 지원합니다.  
 <sup>5</sup> sp_configure awe enabled 옵션은 64비트 [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)]에 있지만 무시됩니다.    
@@ -94,8 +106,8 @@ AWE와 Lock Pages in Memory 권한을 사용하면 [!INCLUDE[ssNoVersion](../inc
 |단일 페이지 할당|예|예, "임의 크기" 페이지 할당에 통합됨|
 |다중 페이지 할당|예|예, "임의 크기" 페이지 할당에 통합됨|
 |CLR 할당|아니요|예|
-|스레드 스택 메모리|예|아니요|
-|Windows에서 직접 할당|예|아니요|
+|스레드 스택 메모리|예|예|
+|Windows에서 직접 할당|예|예|
 
 [!INCLUDE[ssSQL11](../includes/sssql11-md.md)]부터 [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)]는 max server memory 설정에 지정된 값보다 많은 메모리를 할당할 수 있습니다. 이 동작은 **_Total Server Memory (KB)_** 값이 이미 max server memory에 지정된 **_Target Server Memory (KB)_** 설정에 도달했을 때 발생할 수 있습니다. 메모리 조각화로 인해 다중 페이지 메모리 요청(8KB 이상)의 요구를 충족시키기에 연속 여유 메모리가 충분하지 않은 경우 [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)]은 메모리 요청을 거부하는 대신 과도한 커밋을 수행할 수 있습니다. 
 
@@ -121,7 +133,7 @@ AWE와 Lock Pages in Memory 권한을 사용하면 [!INCLUDE[ssNoVersion](../inc
 |-------|-------|-------|
 |단일 페이지 할당|예|아니요, "임의 크기" 페이지 할당에 통합됨|
 |다중 페이지 할당|예|아니요, "임의 크기" 페이지 할당에 통합됨|
-|CLR 할당|예|yes|
+|CLR 할당|예|예|
 |스레드 스택 메모리|예|예|
 |Windows에서 직접 할당|예|예|
 
@@ -319,6 +331,19 @@ min server memory 및 max server memory 둘 모두에 같은 값이 지정된 �
 
 ## <a name="understanding-non-uniform-memory-access"></a>NUMA(Non-Uniform Memory Access) 이해
 [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)] 는 NUMA(Non-Uniform Memory Access)를 인식하며 특수한 구성 없이 NUMA 하드웨어에서 원활하게 작동합니다. 클럭 속도와 프로세서 수가 증가할수록 이러한 추가 처리 능력을 사용하는 데 필요한 메모리 대기 시간을 줄이기가 더 어려워집니다. 이러한 문제를 피하기 위해 하드웨어 공급업체에서는 대용량의 L3 캐시를 제공하지만 이는 제한적인 해결책입니다. NUMA 아키텍처는 확장성 있는 솔루션으로 이 문제를 해결합니다. [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)] 는 애플리케이션을 변경할 필요 없이 NUMA 기반 컴퓨터를 활용하도록 설계되었습니다. 자세한 내용은 [방법: 소프트 NUMA를 사용하도록 SQL Server 구성](../database-engine/configure-windows/soft-numa-sql-server.md)을 참조하세요.
+
+## <a name="dynamic-partition-of-memory-objects"></a>메모리 개체의 동적 파티션
+[!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)]에서는 메모리 개체라고 하는 힙 할당자를 사용하면 [!INCLUDE[ssde_md](../includes/ssde_md.md)]에서 힙의 메모리를 할당할 수 있습니다. 메모리 개체는 [sys.dm_os_memory_objects](../relational-databases/system-dynamic-management-views/sys-dm-os-memory-objects-transact-sql.md) DMV를 사용하여 추적할 수 있습니다. CMemThread는 스레드로부터 안전한 메모리 개체 형식으로, 여러 스레드의 메모리를 동시에 할당할 수 있습니다. 올바른 추적을 위해 CMemThread 개체는 동기화 구문(뮤텍스)을 사용하여 한 번에 하나의 스레드만 중요한 정보를 업데이트하게 합니다. 
+
+> [!NOTE]
+> CMemThread 개체 형식은 다양한 할당의 [!INCLUDE[ssde_md](../includes/ssde_md.md)] 코드 베이스 전체에서 사용되며, 노드 또는 CPU를 기준으로 전역적으로 분할할 수 있습니다.   
+
+그러나 뮤텍스를 사용하면 여러 스레드가 동일한 메모리 개체에서 동시에 할당할 때 경합이 발생할 수 있습니다. 따라서 [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)]에는 PMO(분할된 메모리 개체) 개념이 있으며 각 파티션은 단일 CMemThread 개체로 표시됩니다. 메모리 개체의 분할은 정적으로 정의되며 생성 후에는 변경할 수 없습니다. 메모리 할당 패턴은 하드웨어 및 메모리 사용량과 같은 요소에 따라 크게 달라지므로 처음부터 완벽한 분할 패턴을 사용하는 것은 불가능합니다. 대부분의 경우 단일 파티션을 사용해도 충분하지만, 이로 인해 일부 시나리오에서는 고도로 분할된 메모리 개체만 방지할 수 있는 경합이 발생할 수도 있습니다. 파티션이 많을수록 다른 비효율성이 발생하고 메모리 조각화가 증가할 수 있으므로 각 메모리 개체를 분할하는 것은 바람직하지 않습니다.
+
+> [!NOTE]
+> [!INCLUDE[ssSQL15](../includes/sssql15-md.md)] 전에는 추적 플래그 8048을 사용하여 노드 기반 PMO가 CPU 기반 PMO가 되도록 강제할 수 있었습니다. [!INCLUDE[ssSQL14](../includes/sssql14-md.md)] SP2 및 [!INCLUDE[ssSQL15](../includes/sssql15-md.md)]부터 이 동작은 동적이며 엔진을 통해 제어됩니다.
+
+[!INCLUDE[ssSQL14](../includes/sssql14-md.md)] SP2 및 [!INCLUDE[ssSQL15](../includes/sssql15-md.md)]부터 [!INCLUDE[ssde_md](../includes/ssde_md.md)]는 특정 CMemThread 개체의 경합을 동적으로 검색하고 개체를 노드당 또는 CPU당 기반 구현으로 승격할 수 있습니다. 승격된 PMO는 [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)] 프로세스가 다시 시작될 때까지 승격된 상태로 유지됩니다. CMemThread 경합은 [sys.dm_os_wait_stats](../relational-databases/system-dynamic-management-views/sys-dm-os-wait-stats-transact-sql.md) DMV에서 대기 중인 여러 CMEMTHREAD의 존재 여부와 [sys.dm_os_memory_objects](../relational-databases/system-dynamic-management-views/sys-dm-os-memory-objects-transact-sql.md) DMV 열 *contention_factor*, *partition_type*, *exclusive_allocations_count* 및 *waiting_tasks_count*를 관찰하여 검색할 수 있습니다.
 
 ## <a name="see-also"></a>참고 항목
 [서버 메모리 서버 구성 옵션](../database-engine/configure-windows/server-memory-server-configuration-options.md)   

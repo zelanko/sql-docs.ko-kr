@@ -11,12 +11,12 @@ ms.topic: conceptual
 ms.assetid: f222b1d5-d2fa-4269-8294-4575a0e78636
 author: markingmyname
 ms.author: maghan
-ms.openlocfilehash: b51ae675af9c37cf7a347830520f0782d801cfea
-ms.sourcegitcommit: dd36d1cbe32cd5a65c6638e8f252b0bd8145e165
+ms.openlocfilehash: ff3d2de93c28d106cf24cd72b72c5d2e3346d287
+ms.sourcegitcommit: cc23d8646041336d119b74bf239a6ac305ff3d31
 ms.translationtype: HT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 09/08/2020
-ms.locfileid: "89537749"
+ms.lasthandoff: 09/23/2020
+ms.locfileid: "91111002"
 ---
 # <a name="bind-a-database-with-memory-optimized-tables-to-a-resource-pool"></a>메모리 액세스에 최적화된 테이블이 있는 데이터베이스를 리소스 풀에 바인딩
  [!INCLUDE [SQL Server](../../includes/applies-to-version/sqlserver.md)]
@@ -166,7 +166,7 @@ GO
 ##  <a name="percent-of-memory-available-for-memory-optimized-tables-and-indexes"></a><a name="bkmk_PercentAvailable"></a> 메모리 최적화 테이블 및 인덱스에 사용 가능한 메모리 비율  
  메모리 최적화 테이블과 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 작업을 동일한 리소스 풀에 매핑하면 리소스 관리자는 풀 사용자가 풀 사용에서 충돌을 일으키지 않도록 [!INCLUDE[hek_2](../../includes/hek-2-md.md)] 사용에 대한 내부 임계값을 설정합니다. 일반적으로 [!INCLUDE[hek_2](../../includes/hek-2-md.md)] 사용에 대한 임계값은 풀의 약 80%입니다. 다음 표에서는 다양한 메모리 크기에 대한 실제 임계값을 보여 줍니다.  
   
- [!INCLUDE[hek_2](../../includes/hek-2-md.md)] 데이터베이스의 전용 리소스 풀을 만드는 경우 행 버전과 데이터 증가율을 고려한 후 메모리 내 테이블에 필요한 물리적 메모리 양을 추정해야 합니다. 필요한 메모리를 추정했으면 DMV `sys.dm_os_sys_info`에서 ‘committed_target_kb’ 열에 반영된 대로 SQL 인스턴스의 커밋 대상 메모리 비율을 사용하여 리소스 풀을 만듭니다([sys.dm_os_sys_info](../../relational-databases/system-dynamic-management-views/sys-dm-os-sys-info-transact-sql.md) 참조). 예를 들어, 인스턴스에 사용할 수 있는 총 메모리의 40%로 리소스 풀 P1을 만들 수 있습니다. 이 40%에서 [!INCLUDE[hek_2](../../includes/hek-2-md.md)] 엔진은 더 적은 비율을 사용하여 [!INCLUDE[hek_2](../../includes/hek-2-md.md)] 데이터를 저장합니다.  이는 [!INCLUDE[hek_2](../../includes/hek-2-md.md)] 에서 이 풀의 메모리를 모두 사용하지 않도록 하기 위한 것입니다.  이 비율 값은 대상에 커밋된 메모리에 따라 다릅니다. 다음 테이블은 OOM 오류가 발생하기 전 리소스 풀(명명된 또는 기본값)의 [!INCLUDE[hek_2](../../includes/hek-2-md.md)] 데이터베이스에서 사용할 수 있는 메모리에 대해 설명합니다.  
+ [!INCLUDE[hek_2](../../includes/hek-2-md.md)] 데이터베이스의 전용 리소스 풀을 만드는 경우 행 버전과 데이터 증가율을 고려한 후 메모리 내 테이블에 필요한 물리적 메모리 양을 추정해야 합니다. 필요한 메모리를 추정했으면 DMV [`sys.dm_os_sys_info`](../../relational-databases/system-dynamic-management-views/sys-dm-os-sys-info-transact-sql.md)에서 ‘committed_target_kb’ 열에 반영된 대로 SQL 인스턴스의 커밋 대상 메모리 비율을 사용하여 리소스 풀을 만듭니다. 예를 들어, 인스턴스에 사용할 수 있는 총 메모리의 40%로 리소스 풀 P1을 만들 수 있습니다. 이 40%에서 [!INCLUDE[hek_2](../../includes/hek-2-md.md)] 엔진은 더 적은 비율을 사용하여 [!INCLUDE[hek_2](../../includes/hek-2-md.md)] 데이터를 저장합니다.  이는 [!INCLUDE[hek_2](../../includes/hek-2-md.md)] 에서 이 풀의 메모리를 모두 사용하지 않도록 하기 위한 것입니다.  이 비율 값은 대상에 커밋된 메모리에 따라 다릅니다. 다음 테이블은 OOM 오류가 발생하기 전 리소스 풀(명명된 또는 기본값)의 [!INCLUDE[hek_2](../../includes/hek-2-md.md)] 데이터베이스에서 사용할 수 있는 메모리에 대해 설명합니다.  
   
 |대상에 커밋된 메모리|메모리 내 테이블에서 사용할 수 있는 비율|  
 |-----------------------------|---------------------------------------------|  
