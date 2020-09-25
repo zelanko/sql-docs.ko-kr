@@ -12,12 +12,12 @@ ms.assetid: 065296fe-6711-4837-965e-252ef6c13a0f
 author: MightyPen
 ms.author: genemi
 monikerRange: =azuresqldb-current||>=sql-server-2016||=sqlallproducts-allversions||>=sql-server-linux-2017||=azuresqldb-mi-current
-ms.openlocfilehash: 0c62f1f2ef34bd5ba1a59a642ac8d07db2dbe259
-ms.sourcegitcommit: 216f377451e53874718ae1645a2611cdb198808a
+ms.openlocfilehash: ed9bec3042903f22c4a4c71ac4f07520062e60c9
+ms.sourcegitcommit: c74bb5944994e34b102615b592fdaabe54713047
 ms.translationtype: HT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 07/28/2020
-ms.locfileid: "87247082"
+ms.lasthandoff: 09/22/2020
+ms.locfileid: "90989906"
 ---
 # <a name="a-guide-to-query-processing-for-memory-optimized-tables"></a>메모리 액세스에 최적화된 테이블에 대한 쿼리 처리 가이드
 [!INCLUDE [SQL Server Azure SQL Database](../../includes/applies-to-version/sql-asdb.md)]
@@ -273,35 +273,31 @@ GO
 |Stream Aggregate|`SELECT count(CustomerID) FROM dbo.Customer`|Hash Match 연산자는 집계가 지원되지 않습니다. 따라서 해석된 [!INCLUDE[tsql](../../includes/tsql-md.md)] 의 동일 쿼리에 대한 계획에 Hash Match 연산자가 사용되더라도 고유하게 컴파일된 저장 프로시저의 모든 집계에는 Stream Aggregate 연산자가 사용됩니다.|  
   
 ## <a name="column-statistics-and-joins"></a>열 통계 및 조인  
- [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 는 index scan 및 index seek와 같은 특정 작업의 비용을 예측할 수 있도록 인덱스 키 열에 값 통계를 유지 관리합니다. (인덱스가 아닌 키 열을 사용자가 명시적으로 만들거나 쿼리 최적화 프로그램에서 조건자가 있는 쿼리에 대한 응답으로 만드는 경우 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]에서 그에 대한 통계도 만듭니다.) 비용 예측의 기본 메트릭은 단일 연산자에서 처리되는 행 수입니다. 디스크 기반 테이블의 경우에는 특정 연산자에서 액세스되는 페이지 수가 비용 예측에서 중요한 요소입니다. 하지만 메모리 최적화 테이블의 경우에는 페이지 수가 항상 0이므로 중요하지 않습니다. 이 문서에서는 행 수에 대해 중점적으로 설명합니다. 예측은 계획에서 index seek 및 scan 연산자로 시작해서 조인 연산자와 같은 다른 연산자를 포함하도록 확장됩니다. 조인 연산자에서 처리될 것으로 예상되는 행 수는 기본 index, seek 및 scan 연산자의 예측을 기반으로 결정됩니다. 메모리 최적화 테이블에 대한 해석된 [!INCLUDE[tsql](../../includes/tsql-md.md)] 액세스의 경우 실제 실행 계획을 관찰하면 계획에서 연산자에 대한 예측 및 실제 행 수 간의 차이를 볼 수 있습니다.  
+
+[!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 는 index scan 및 index seek와 같은 특정 작업의 비용을 예측할 수 있도록 인덱스 키 열에 값 통계를 유지 관리합니다. (인덱스가 아닌 키 열을 사용자가 명시적으로 만들거나 쿼리 최적화 프로그램에서 조건자가 있는 쿼리에 대한 응답으로 만드는 경우 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]에서 그에 대한 통계도 만듭니다.) 비용 예측의 기본 메트릭은 단일 연산자에서 처리되는 행 수입니다. 디스크 기반 테이블의 경우에는 특정 연산자에서 액세스되는 페이지 수가 비용 예측에서 중요한 요소입니다. 하지만 메모리 최적화 테이블의 경우에는 페이지 수가 항상 0이므로 중요하지 않습니다. 이 문서에서는 행 수에 대해 중점적으로 설명합니다. 예측은 계획에서 index seek 및 scan 연산자로 시작해서 조인 연산자와 같은 다른 연산자를 포함하도록 확장됩니다. 조인 연산자에서 처리될 것으로 예상되는 행 수는 기본 index, seek 및 scan 연산자의 예측을 기반으로 결정됩니다. 메모리 최적화 테이블에 대한 해석된 [!INCLUDE[tsql](../../includes/tsql-md.md)] 액세스의 경우 실제 실행 계획을 관찰하면 계획에서 연산자에 대한 예측 및 실제 행 수 간의 차이를 볼 수 있습니다.  
   
- 그림 1 예의 경우,  
+그림 1 예의 경우,  
   
--   Customer에 대한 클러스터형 인덱스 검색의 예측은 91이고, 실제도 91입니다.  
+- Customer에 대한 클러스터형 인덱스 검색의 예측은 91이고, 실제도 91입니다.  
+- CustomerID에 대한 비클러스터형 인덱스 검색의 예측은 830이고 실제도 830입니다.  
+- Merge Join 연산자의 예측은 815이고 실제는 830입니다.  
   
--   CustomerID에 대한 비클러스터형 인덱스 검색의 예측은 830이고 실제도 830입니다.  
+인덱스 검색에 대한 예측은 정확합니다. [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 는 디스크 기반 테이블에 대한 행 수를 유지 관리합니다. 전체 테이블 및 인덱스 검색에 대한 예측은 항상 정확합니다. 조인에 대한 예측도 상당히 정확한 편입니다.  
   
--   Merge Join 연산자의 예측은 815이고 실제는 830입니다.  
+이러한 예측이 변경될 경우 각각의 계획 대안에 대한 비용 고려도 함께 변경됩니다. 예를 들어, 조인의 어느 한쪽에 대한 예측 행 수가 1개 또는 몇 개 정도뿐이라면 중첩 루프 조인을 사용하는 것이 비용이 낮습니다. 다음과 같은 쿼리를 고려해 보세요.  
   
- 인덱스 검색에 대한 예측은 정확합니다. [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 는 디스크 기반 테이블에 대한 행 수를 유지 관리합니다. 전체 테이블 및 인덱스 검색에 대한 예측은 항상 정확합니다. 조인에 대한 예측도 상당히 정확한 편입니다.  
-  
- 이러한 예측이 변경될 경우 각각의 계획 대안에 대한 비용 고려도 함께 변경됩니다. 예를 들어, 조인의 어느 한쪽에 대한 예측 행 수가 1개 또는 몇 개 정도뿐이라면 중첩 루프 조인을 사용하는 것이 비용이 낮습니다.  
-  
- 다음은 쿼리에 대한 계획입니다.  
-  
-```  
+```sql
 SELECT o.OrderID, c.* FROM dbo.[Customer] c INNER JOIN dbo.[Order] o ON c.CustomerID = o.CustomerID  
 ```  
   
- Customer 테이블에서 행을 하나만 남겨두고 모두 삭제한 후에는 다음과 같이 됩니다.  
+`Customer` 테이블에서 행 1개를 제외한 모든 행을 삭제하면 다음 쿼리 계획이 생성됩니다.  
   
- ![열 통계 및 조인.](../../relational-databases/in-memory-oltp/media/hekaton-query-plan-9.png "열 통계 및 조인.")  
+![열 통계 및 조인.](../../relational-databases/in-memory-oltp/media/hekaton-query-plan-9.png "열 통계 및 조인.")  
   
- 이 쿼리 계획에 대한 설명은 다음과 같습니다.  
+이 쿼리 계획에 대한 설명은 다음과 같습니다.  
   
--   Hash Match가 Nested Loops 물리적 조인 연산자로 바뀌었습니다.  
-  
--   IX_CustomerID에 대한 전체 인덱스 검색은 index seek로 바뀌었습니다. 그 결과 전체 인덱스 검색에 필요한 830개 행 대신 5개 행이 검색되었습니다.  
+- Hash Match가 Nested Loops 물리적 조인 연산자로 바뀌었습니다.  
+- IX_CustomerID에 대한 전체 인덱스 검색은 index seek로 바뀌었습니다. 그 결과 전체 인덱스 검색에 필요한 830개 행 대신 5개 행이 검색되었습니다.  
   
 ## <a name="see-also"></a>참고 항목  
  [메모리 최적화 테이블](../../relational-databases/in-memory-oltp/memory-optimized-tables.md)  

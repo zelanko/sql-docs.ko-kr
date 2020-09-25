@@ -2,7 +2,7 @@
 title: 작업 로깅
 description: Microsoft Drivers for PHP for SQL Server를 사용할 때 다양한 조합의 로깅 옵션을 구성하는 방법을 알아봅니다.
 ms.custom: ''
-ms.date: 08/10/2020
+ms.date: 09/22/2020
 ms.prod: sql
 ms.prod_service: connectivity
 ms.reviewer: ''
@@ -13,20 +13,20 @@ helpviewer_keywords:
 ms.assetid: a777b3d9-2262-4e82-bc82-b62ad60d0e55
 author: David-Engel
 ms.author: v-daenge
-ms.openlocfilehash: 6301b429191b0f563a5f1dea08bd6e8d92a0c46a
-ms.sourcegitcommit: d1051f05a7db81ec62d9785bb6af572408f3d4e0
+ms.openlocfilehash: 0d5da2aa33741e0c93b067bd942958ca70137d0b
+ms.sourcegitcommit: 3efd8bbf91f4f78dce3a4ac03348037d8c720e6a
 ms.translationtype: HT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 08/20/2020
-ms.locfileid: "88680548"
+ms.lasthandoff: 09/23/2020
+ms.locfileid: "91024512"
 ---
 # <a name="logging-activity"></a>작업 로깅
 [!INCLUDE[Driver_PHP_Download](../../includes/driver_php_download.md)]
 
-기본적으로 [!INCLUDE[ssDriverPHP](../../includes/ssdriverphp_md.md)] 에서 생성된 오류 및 경고는 기록되지 않습니다. 이 항목에서는 작업 로깅을 구성하는 방법을 설명합니다.  
+기본적으로 [!INCLUDE[ssDriverPHP](../../includes/ssdriverphp_md.md)] 에서 생성된 오류 및 경고는 PHP 시스템 로그에 기록되지 않습니다. 이 항목에서는 드라이버 로깅 작업을 구성하는 방법을 설명합니다. 드라이버에 한정되지 않는 PHP 오류 처리 설정을 구성하는 방법에 대 한 자세한 내용은 [PHP 설명서](https://www.php.net/manual/en/errorfunc.configuration.php)를 참조하세요.  
   
 ## <a name="logging-activity-using-the-pdo_sqlsrv-driver"></a>PDO_SQLSRV 드라이버를 사용하여 작업 로깅  
-PDO_SQLSRV 드라이버에 사용할 수 있는 유일한 구성은 php.ini 파일의 pdo_sqlsrv.log_severity 항목입니다.  
+PDO_SQLSRV 드라이버에 사용할 수 있는 유일한 로깅 구성은 php.ini 파일의 pdo_sqlsrv.log_severity 항목입니다.  
   
 php.ini 파일의 끝에 다음을 추가합니다.  
   
@@ -53,7 +53,7 @@ PHP가 초기화에서 구성 파일을 읽고 데이터를 캐시에 저장합�
 로깅을 설정하려면 [sqlsrv_configure](../../connect/php/sqlsrv-configure.md) 함수를 사용하거나 php.ini 파일을 변경하면 됩니다. 초기화, 연결, 문 또는 오류 함수에서 작업을 기록할 수 있습니다. 또한 오류, 경고, 알림 또는 세 가지 모두를 기록할지 여부를 지정할 수도 있습니다.  
   
 > [!NOTE]  
-> php.ini 파일에서 로그 파일의 위치를 구성할 수 있습니다.  
+> php.ini 파일에서 로그 파일의 위치를 구성할 수 있습니다. 자세한 내용은 [PHP 설명서](https://www.php.net/manual/en/errorfunc.configuration.php)를 참조하세요.  
   
 ### <a name="turning-logging-on"></a>로깅 설정  
 [sqlsrv_configure](../../connect/php/sqlsrv-configure.md) 함수를 사용하여 로깅을 설정하면 **LogSubsystems** 설정에 대한 값을 지정할 수 있습니다. 예를 들어 다음 코드 줄은 연결에서 작업을 기록하기 위해 드라이버를 구성합니다.  

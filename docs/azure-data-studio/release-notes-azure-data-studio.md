@@ -8,17 +8,33 @@ author: yualan
 ms.author: alayu
 ms.reviewer: maghan
 ms.custom: seodec18
-ms.date: 08/12/2020
-ms.openlocfilehash: 39deeb94ffa5fb3292f3402c836ec55eb826ebd3
-ms.sourcegitcommit: 7345e4f05d6c06e1bcd73747a4a47873b3f3251f
+ms.date: 09/22/2020
+ms.openlocfilehash: 1eaeb177fbd4cdc16190cbbc40efc76a3b468ac5
+ms.sourcegitcommit: c74bb5944994e34b102615b592fdaabe54713047
 ms.translationtype: HT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 08/24/2020
-ms.locfileid: "88766192"
+ms.lasthandoff: 09/22/2020
+ms.locfileid: "90989986"
 ---
 # <a name="release-notes-for-azure-data-studio"></a>Azure Data Studio의 릴리스 정보
 
-**[최신 릴리스 다운로드 및 설치](./download-azure-data-studio.md?view=sql-server-ver15)**
+**[최신 릴리스 다운로드 및 설치](./download-azure-data-studio.md)**
+
+## <a name="september-2020"></a>2020년 9월
+
+2020년 9월 22일 &nbsp; / &nbsp; 버전: 1.22.0
+
+&nbsp;
+
+| 변경 | 세부 정보 |
+| ------ | ------- |
+| 새로운 Notebook 기능 | <br/> &bull; &nbsp; 다양한 텍스트 서식 및 markdown으로의 원활한 변환을 기반으로 하며 WYSIWYG(What You See Is What You Get) 도구 모음이라고도 하는 새로운 텍스트 셀 편집 환경을 지원합니다. <br/> &bull; &nbsp; Kusto 커널을 지원합니다. <br/> &bull; &nbsp; Notebook 고정을 지원합니다. <br/> &bull; &nbsp; 새 버전의 Jupyter Book 지원을 추가했습니다. <br/> &bull; &nbsp; Jupyter 바로 가기를 개선했습니다. <br/> &bull; &nbsp; 로드 성능 개선 사항을 도입했습니다. |
+| SQL Database Projects 확장 | SQL Database Projects 확장은 프로젝트 기반 데이터베이스 개발을 Azure Data Studio로 가져옵니다. 이 미리 보기 릴리스에서는 Azure Data Studio를 통해 SQL 프로젝트를 만들고 게시할 수 있습니다. |
+| Kusto(KQL) 확장 | Azure Data Explorer에 저장된 대량 실시간 스트리밍 데이터에 대한 데이터 탐색 및 데이터 분석을 위해 Azure Data Studio에 기본 Kusto 환경을 구현합니다. 이 미리 보기 릴리스에서는 Azure Data Explorer 클러스터를 연결하고 찾아볼 수 있을 뿐 아니라 KQL 쿼리를 작성하고 Kusto 커널을 사용하여 Notebook을 작성할 수 있습니다. |
+| Azure Arc 확장 | 사용자는 Azure Data Studio를 통해 Azure Arc 퍼블릭 미리 보기를 사용해 볼 수 있습니다. 다음 내용이 포함됩니다. <br/> &bull; &nbsp; 데이터 컨트롤러 배포 <br/> &bull; &nbsp; Postgres 배포 <br/> &bull; &nbsp; Azure Arc용 Managed Instance 배포 <br/> &bull; &nbsp; 데이터 컨트롤러에 연결 <br/> &bull; &nbsp; 데이터 서비스 대시보드 액세스 <br/> &bull; &nbsp; Azure Arc Jupyter Book |
+| 배포 옵션 | <br/> &bull; &nbsp; Azure SQL Database Edge <br/> (Edge를 사용하려면 Azure SQL Edge 배포 확장이 필요함) |
+| SQL Server 가져오기 확장 GA(일반 공급) | SQL Server 가져오기 확장의 GA와 더 이상 미리 보기로 제공되지 않는 기능을 발표합니다. 이 확장을 통해 csv/txt 파일을 쉽게 가져올 수 있습니다. [관련 문서](sql-server-import-extension.md)에서 확장에 대해 자세히 알아보세요. |
+| 버그 및 이슈 해결 | 전체 수정 목록은 [GitHub의 버그 및 이슈](https://github.com/microsoft/azuredatastudio/issues?q=is%3Aissue+milestone%3A%22September+2020+Release%22+is%3Aclosed)를 참조하세요. |
 
 ## <a name="august-2020"></a>2020년 8월
 
@@ -29,7 +45,7 @@ ms.locfileid: "88766192"
 | 변경 | 세부 정보 |
 | :----- | :------ |
 | 새로운 Notebook 기능 | &bull; &nbsp; 셀 위치 이동 <br/> &bull; &nbsp; 셀을 텍스트 셀 또는 코드 셀로 변환
-| Jupyter Book 선택기 | 이제 사용자가 Github 릴리스의 Jupyter Book을 선택하여 Azure Data Studio에서 원활하게 열 수 있습니다. |
+| Jupyter Book 선택기 | 이제 사용자가 GitHub 릴리스의 Jupyter Book을 선택하여 Azure Data Studio에서 원활하게 열 수 있습니다. |
 | Notebook 뷰렛에 검색 추가 | 사용자가 해당 Notebook 및 Jupyter Book에서 콘텐츠를 쉽게 검색할 수 있습니다. |
 | 버그 및 이슈 해결 | 전체 수정 목록은 [GitHub의 버그 및 이슈](https://github.com/microsoft/azuredatastudio/issues?q=is%3Aissue+milestone%3A%22August+2020+Release%22+is%3Aclosed)를 참조하세요. |
 | &nbsp; | &nbsp; |
@@ -76,7 +92,7 @@ ms.locfileid: "88766192"
 | :----- | :------ |
 | Azure Portal 통합에 Azure Data Studio가 추가됨 | 이제 사용자는 Azure SQL Database 연결과 Azure Postgres 등에서 Azure Portal을 바로 열 수 있습니다. |
 | 새로운 Notebook 기능 | &bull; &nbsp; 새로운 Notebook 도구 모음 <br/> &bull; &nbsp; 새로운 셀 편집 도구 모음 <br/> &bull; &nbsp; Python 종속성 마법사 UX 업데이트 <br/> &bull; &nbsp; Notebook에서의 간격 개선 |
-| SQL 평가 API 확장 발표 | 이 확장은 ADS에 SQL Server 모범 사례 평가를 추가합니다. 이전에는 PowerShell SqlServer 모듈과 SMO에서만 사용할 수 있었던 SQL 평가 API를 노출하여 사용자가 SQL Server 인스턴스를 평가하고 SQL Server 팀의 추천을 받을 수 있게 합니다. SQL 평가 API와 관련 기능에 관한 자세한 내용은 [이 문서를 참조하세요.](../tools/sql-assessment-api/sql-assessment-api-overview.md?view=sql-server-ver15) |
+| SQL 평가 API 확장 발표 | 이 확장은 ADS에 SQL Server 모범 사례 평가를 추가합니다. 이전에는 PowerShell SqlServer 모듈과 SMO에서만 사용할 수 있었던 SQL 평가 API를 노출하여 사용자가 SQL Server 인스턴스를 평가하고 SQL Server 팀의 추천을 받을 수 있게 합니다. SQL 평가 API와 관련 기능에 관한 자세한 내용은 [이 문서를 참조하세요.](../tools/sql-assessment-api/sql-assessment-api-overview.md) |
 | [Machine Learning 확장 개선](https://go.microsoft.com/fwlink/?linkid=2129918) | 이제 Azure SQL Managed Instance를 지원합니다. |
 | 데이터 가상화 확장 개선 | 이제 MongoDB 및 Teradata를 지원합니다. |
 | Postgres 확장 버그 수정 | Azure MFA를 수정했습니다. |
@@ -417,10 +433,10 @@ ms.locfileid: "88766192"
 | :----- | :------ |
 | [Azure Data Studio용 PostgreSQL 확장](postgres-extension.md)이 추가됨 | 지원되는 기능: <br/>&bull; &nbsp; 연결 대화 상자 <br/>&bull; &nbsp; 개체 탐색기 <br/>&bull; &nbsp; 쿼리 편집기 <br/>&bull; &nbsp; 차트 작성 <br/>&bull; &nbsp; 대시보드 <br/>&bull; &nbsp; 코드 조각 <br/>&bull; &nbsp; 데이터 편집 <br/>&bull; &nbsp; Notebooks |
 | SQL Notebook이 추가됨 | 기본 제공 Notebook 뷰어에 SQL 커널 지원을 추가했습니다. <br/>&bull; &nbsp; T-SQL 지원 <br/>&bull; &nbsp; PGSQL 지원 |
-| PowerShell 확장이 추가됨  | VS Code에서 [PowerShell 확장](https://marketplace.visualstudio.com/items?itemName=ms-vscode.PowerShell) 환경을 가져옵니다.  |
+| PowerShell 확장이 추가됨 | VS Code에서 [PowerShell 확장](https://marketplace.visualstudio.com/items?itemName=ms-vscode.PowerShell) 환경을 가져옵니다.  |
 | SQL Server dacpac 확장이 추가됨  | SQL Server 가져오기 확장의 데이터 계층 애플리케이션 마법사를 제거하고 새 확장으로 대체합니다.  |
 | 커뮤니티 확장 QueryPlan.show가 추가됨 | 통합 지원을 추가하여 쿼리 계획을 시각화합니다.  |
-| SQL Server 2019 미리 보기 확장이 업데이트됨 | &bull; &nbsp; Jupyter Notebook 지원, 특히 Python3 및 Spark 커널이 핵심 Azure Data Studio 도구로 이동되었습니다. <br/>&bull; &nbsp; 외부 데이터 마법사 버그 수정  |
+| SQL Server 2019 미리 보기 확장이 업데이트됨 | &bull; &nbsp; Jupyter Notebook 지원, 특히 Python3 및 Spark 커널이 핵심 Azure Data Studio 도구로 이동되었습니다. <br/>&bull; &nbsp; 외부 데이터 마법사 버그 수정 |
 | 버그 및 이슈 해결 | [GitHub의 버그 및 이슈](https://github.com/Microsoft/azuredatastudio/milestone/25?closed=1)를 참조하세요. |
 | &nbsp; | &nbsp; |
 
@@ -446,11 +462,11 @@ ms.locfileid: "88766192"
 
 | 변경 | 세부 정보 |
 | :----- | :------ |
-| **SQL Server 관리 팩** 확장 팩이 추가됨 | 이 확장 팩을 사용하면 보다 간편하게 SQL Server 관리 관련 확장을 설치할 수 있습니다. 다음 내용이 포함됩니다.<br/>&bull; &nbsp; [SQL Server 에이전트](sql-server-agent-extension.md?view=sql-server-2017)<br/>&bull; &nbsp; [SQL Server Profiler](./sql-server-profiler-extension.md)<br/>&bull; &nbsp; [SQL Server 가져오기](sql-server-import-extension.md?view=sql-server-2017) |
+| **SQL Server 관리 팩** 확장 팩이 추가됨 | 이 확장 팩을 사용하면 보다 간편하게 SQL Server 관리 관련 확장을 설치할 수 있습니다. 다음 내용이 포함됩니다.<br/>&bull; &nbsp; [SQL Server 에이전트](sql-server-agent-extension.md)<br/>&bull; &nbsp; [SQL Server Profiler](./sql-server-profiler-extension.md)<br/>&bull; &nbsp; [SQL Server 가져오기](sql-server-import-extension.md) |
 | Profiler 확장에 확장 이벤트 필터링 지원이 추가됨 | &nbsp; |
 | T-SQL 결과를 XML로 저장할 수 있는 XML로 저장 기능이 추가됨 | &nbsp; |
 | 데이터 계층 애플리케이션 마법사 개선 사항이 추가됨 | &bull; &nbsp; 스크립트 생성 단추 추가됨<br/>&bull; &nbsp; 배포 중에 데이터가 손실될 수 있다는 경고를 표시하는 뷰 추가됨 |
-| SQL Server 2019 미리 보기 확장 업데이트 | [데이터 가상화 확장](data-virtualization-extension.md?view=sql-server-ver15)을 참조하세요. |
+| SQL Server 2019 미리 보기 확장 업데이트 | [데이터 가상화 확장](data-virtualization-extension.md)을 참조하세요. |
 | 장기 실행 쿼리에 대해 결과 스트리밍이 기본적으로 사용됨 | &nbsp; |
 | 버그 및 이슈 해결 | [GitHub의 버그 및 이슈](https://github.com/Microsoft/azuredatastudio/milestone/23?closed=1)를 참조하세요. |
 | &nbsp; | &nbsp; |
@@ -478,7 +494,7 @@ ms.locfileid: "88766192"
 | Azure Active Directory 인증 지원이 추가됨 | &nbsp; |
 | Idera SQL DM Performance Insights(미리 보기) 발표 | &nbsp; |
 | SQL Server 가져오기 확장의 데이터 계층 애플리케이션 마법사 지원 | &nbsp; |
-| SQL Server 2019 미리 보기 확장 업데이트 | [데이터 가상화 확장](data-virtualization-extension.md?view=sql-server-ver15)을 참조하세요. |
+| SQL Server 2019 미리 보기 확장 업데이트 | [데이터 가상화 확장](data-virtualization-extension.md)을 참조하세요. |
 | SQL Server Profiler 기능 개선 | &nbsp; |
 | 대규모 쿼리의 결과 스트리밍(미리 보기) | &nbsp; |
 | 커뮤니티 확장: SQL 및 새 데이터베이스에 대한 sp_executesql | &nbsp; |
@@ -493,7 +509,7 @@ ms.locfileid: "88766192"
 
 | 변경 | 세부 정보 |
 | :----- | :------ |
-| SQL Server 2019 미리 보기 확장 업데이트 | [데이터 가상화 확장](data-virtualization-extension.md?view=sql-server-ver15)을 참조하세요. |
+| SQL Server 2019 미리 보기 확장 업데이트 | [데이터 가상화 확장](data-virtualization-extension.md)을 참조하세요. |
 | 계획 붙여넣기 확장 도입 | &nbsp; |
 | SSMS 편집기 테마를 비롯한 하이 컬러 쿼리 확장 도입 | &nbsp; |
 | SQL Server 에이전트, Profiler 및 가져오기 확장 수정 | &nbsp; |
@@ -523,7 +539,7 @@ ms.locfileid: "88766192"
 | Azure SQL Database를 검색하기 위한 Azure Resource Explorer 도입 | &nbsp; |
 | 개체 탐색기와 쿼리 편집기 간의 연결이 강화됨 | &nbsp; |
 | SQL 에이전트 확장 기능 개선 | &nbsp; |
-| SQL Server 2019 미리 보기 확장 업데이트 | [데이터 가상화 확장](data-virtualization-extension.md?view=sql-server-ver15)을 참조하세요. |
+| SQL Server 2019 미리 보기 확장 업데이트 | [데이터 가상화 확장](data-virtualization-extension.md)을 참조하세요. |
 | &nbsp; | &nbsp; |
 
 ### <a name="bug-fixes-october-2018"></a>버그 수정, 2018년 10월

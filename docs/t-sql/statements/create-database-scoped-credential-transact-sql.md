@@ -23,12 +23,12 @@ ms.assetid: fe830577-11ca-44e5-953b-2d589d54d045
 author: VanMSFT
 ms.author: vanto
 monikerRange: =azuresqldb-current||=azure-sqldw-latest||>=sql-server-2016||=sqlallproducts-allversions||>=aps-pdw-2016||>=sql-server-linux-2017||=azuresqldb-mi-current
-ms.openlocfilehash: 72f2f72300982473696132d327881a2f2b867dd9
-ms.sourcegitcommit: e700497f962e4c2274df16d9e651059b42ff1a10
+ms.openlocfilehash: ce8bbe0982d193a871f89023f803e5719b74771b
+ms.sourcegitcommit: 3efd8bbf91f4f78dce3a4ac03348037d8c720e6a
 ms.translationtype: HT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 08/17/2020
-ms.locfileid: "88426835"
+ms.lasthandoff: 09/23/2020
+ms.locfileid: "91024377"
 ---
 # <a name="create-database-scoped-credential-transact-sql"></a>CREATE DATABASE SCOPED CREDENTIAL(Transact-SQL)
 
@@ -53,7 +53,7 @@ WITH IDENTITY = 'identity_name'
 
 *credential_name* 만들려는 데이터베이스 범위 자격 증명의 이름을 지정합니다. *credential_name*은 번호(#) 기호로 시작할 수 없습니다. 시스템 자격 증명은 ##으로 시작합니다.
 
-IDENTITY **=’** _identity\_name_ **’** 서버 외부에 연결할 때 사용할 계정의 이름을 지정합니다. Azure Blob Storage에서 공유 키를 사용하여 파일을 가져오려면 ID 이름이 `SHARED ACCESS SIGNATURE`여야 합니다. SQL DW로 데이터를 로드하기 위해 ID에 모든 유효한 값을 사용할 수 있습니다. 공유 액세스 서명에 대한 자세한 내용은 [SAS(공유 액세스 서명) 사용](https://docs.microsoft.com/azure/storage/storage-dotnet-shared-access-signature-part-1)을 참조하세요.
+IDENTITY **=’** _identity\_name_ **’** 서버 외부에 연결할 때 사용할 계정의 이름을 지정합니다. Azure Blob Storage에서 공유 키를 사용하여 파일을 가져오려면 ID 이름이 `SHARED ACCESS SIGNATURE`여야 합니다. SQL DW로 데이터를 로드하기 위해 ID에 모든 유효한 값을 사용할 수 있습니다. 공유 액세스 서명에 대한 자세한 내용은 [SAS(공유 액세스 서명) 사용](https://docs.microsoft.com/azure/storage/storage-dotnet-shared-access-signature-part-1)을 참조하세요. Kerberos(Windows Active Directory 또는 MIT KDC)를 사용하는 경우에는 IDENTITY 인수에 도메인 이름을 사용하지 않습니다. 계정 이름만 사용해야 합니다.
 
 > [!NOTE]
 > Azure Blob Storage의 컨테이너가 익명 액세스를 사용하도록 설정된 경우에는 WITH IDENTITY가 필요하지 않습니다. Azure Blob Storage를 쿼리하는 예제는 [Azure Blob Storage에 저장된 파일에서 테이블로 가져오기](../functions/openrowset-transact-sql.md#j-importing-into-a-table-from-a-file-stored-on-azure-blob-storage)를 참조하세요.
@@ -90,7 +90,7 @@ IDENTITY가 Windows 사용자인 경우 암호는 해당 사용자의 암호일 
 
 데이터베이스에 대한 **CONTROL** 권한이 필요합니다.
 
-## <a name="examples"></a>예제
+## <a name="examples"></a>예
 
 ### <a name="a-creating-a-database-scoped-credential-for-your-application"></a>A. 애플리케이션에 대한 데이터베이스 범위 자격 증명 만들기
 
@@ -121,7 +121,7 @@ SECRET = 'QLYMgmSXMklt%2FI1U6DcVrQixnlU5Sgbtk1qDRakUBGs%3D';
 
 ### <a name="c-creating-a-database-scoped-credential-for-polybase-connectivity-to-azure-data-lake-store"></a>C. Azure Data Lake Store에 대한 PolyBase 연결을 위한 데이터베이스 범위 자격 증명 만들기
 
-다음 예에서는 Azure SQL Data Warehouse에서 PolyBase에 사용될 수 있는 [외부 데이터 원본](../../t-sql/statements/create-external-data-source-transact-sql.md)을 만드는 데 사용할 수 있는 데이터베이스 범위 자격 증명을 만듭니다.
+다음 예제에서는 [!INCLUDE[ssSDW](../../includes/sssdwfull-md.md)]의 PolyBase에서 사용되는 [외부 데이터 원본](../../t-sql/statements/create-external-data-source-transact-sql.md)을 만드는 데 사용할 수 있는 데이터베이스 범위 자격 증명을 만듭니다.
 
 Azure Data Lake Store는 서비스 간 인증에 Azure Active Directory 애플리케이션을 사용합니다.
 데이터베이스 범위 자격 증명을 만들려면 그 전에 [AAD 애플리케이션을 만들고](https://docs.microsoft.com/azure/data-lake-store/data-lake-store-authenticate-using-active-directory) client_id, OAuth_2.0_Token_EndPoint 및 Key를 문서화하십시오.

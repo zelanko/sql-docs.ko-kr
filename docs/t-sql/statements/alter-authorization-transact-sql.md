@@ -27,12 +27,12 @@ ms.assetid: 8c805ae2-91ed-4133-96f6-9835c908f373
 author: VanMSFT
 ms.author: vanto
 monikerRange: '>=aps-pdw-2016||=azuresqldb-current||=azure-sqldw-latest||>=sql-server-2016||=sqlallproducts-allversions||>=sql-server-linux-2017||=azuresqldb-mi-current'
-ms.openlocfilehash: a2e3c5df24d4d4e5897ad8f48384ac1bc5d49f9e
-ms.sourcegitcommit: ac9feb0b10847b369b77f3c03f8200c86ee4f4e0
+ms.openlocfilehash: e1f3c3e7cf586cfe70fc1e8d4198a6708c36d68b
+ms.sourcegitcommit: 3efd8bbf91f4f78dce3a4ac03348037d8c720e6a
 ms.translationtype: HT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 09/16/2020
-ms.locfileid: "90688281"
+ms.lasthandoff: 09/23/2020
+ms.locfileid: "91024395"
 ---
 # <a name="alter-authorization-transact-sql"></a>ALTER AUTHORIZATION(Transact-SQL)
 
@@ -81,7 +81,7 @@ ALTER AUTHORIZATION
 
     
 ```syntaxsql
--- Syntax for Azure SQL Data Warehouse  
+-- Syntax for Azure Synapse Analytics  
   
 ALTER AUTHORIZATION ON    
     [ <class_type> :: ] <entity_name>     
@@ -129,7 +129,7 @@ ALTER AUTHORIZATION ON
     
 |클래스|Product|    
 |-|-|    
-|OBJECT|**적용 대상**: [!INCLUDE[ssKatmai](../../includes/sskatmai-md.md)] 이상, [!INCLUDE[ssSDSfull](../../includes/sssdsfull-md.md)], Azure SQL Data Warehouse, [!INCLUDE[ssPDW](../../includes/sspdw-md.md)].|    
+|OBJECT|**적용 대상**: [!INCLUDE[ssKatmai](../../includes/sskatmai-md.md)] 이상, [!INCLUDE[ssSDSfull](../../includes/sssdsfull-md.md)], [!INCLUDE[ssSDW](../../includes/sssdwfull-md.md)], [!INCLUDE[ssPDW](../../includes/sspdw-md.md)]|    
 |ASSEMBLY|**적용 대상**: [!INCLUDE[ssKatmai](../../includes/sskatmai-md.md)] 이상, [!INCLUDE[ssSDSfull](../../includes/sssdsfull-md.md)].|    
 |ASYMMETRIC KEY|**적용 대상**: [!INCLUDE[ssKatmai](../../includes/sskatmai-md.md)] 이상, [!INCLUDE[ssSDSfull](../../includes/sssdsfull-md.md)].|    
 |AVAILABILITY GROUP |**적용 대상**: SQL Server 2012 이상|
@@ -143,7 +143,7 @@ ALTER AUTHORIZATION ON
 |REMOTE SERVICE BINDING|**적용 대상**: [!INCLUDE[ssKatmai](../../includes/sskatmai-md.md)] 이상|    
 |ROLE|**적용 대상**: [!INCLUDE[ssKatmai](../../includes/sskatmai-md.md)] 이상, [!INCLUDE[ssSDSfull](../../includes/sssdsfull-md.md)].|    
 |ROUTE|**적용 대상**: [!INCLUDE[ssKatmai](../../includes/sskatmai-md.md)] 이상|    
-|SCHEMA|**적용 대상**: [!INCLUDE[ssKatmai](../../includes/sskatmai-md.md)] 이상, [!INCLUDE[ssSDSfull](../../includes/sssdsfull-md.md)], Azure SQL Data Warehouse, [!INCLUDE[ssPDW](../../includes/sspdw-md.md)].|    
+|SCHEMA|**적용 대상**: [!INCLUDE[ssKatmai](../../includes/sskatmai-md.md)] 이상, [!INCLUDE[ssSDSfull](../../includes/sssdsfull-md.md)], [!INCLUDE[ssSDW](../../includes/sssdwfull-md.md)], [!INCLUDE[ssPDW](../../includes/sspdw-md.md)]|    
 |SEARCH PROPERTY LIST|**적용 대상**: [!INCLUDE[ssSQL11](../../includes/sssql11-md.md)] 이상, [!INCLUDE[ssSDSfull](../../includes/sssdsfull-md.md)].|    
 |SERVER ROLE|**적용 대상**: [!INCLUDE[ssKatmai](../../includes/sskatmai-md.md)] 이상|    
 |SERVICE|**적용 대상**: [!INCLUDE[ssKatmai](../../includes/sskatmai-md.md)] 이상|    
@@ -216,7 +216,7 @@ ALTER AUTHORIZATION ON
 -   Azure AD에 있는 애플리케이션 또는 관리 사용자(그룹이 아닌)입니다.    
 
 > [!NOTE]  
-> 새 소유자는 Azure Active Directory 사용자인 경우 새 소유자가 새 DBO가 될 데이터베이스에서 사용자로 존재할 수 없습니다. 이러한 Azure AD 사용자는 새 사용자에게 데이터베이스 소유권을 변경하는 ALTER AUTHORIZATION 문을 실행하기 전에 먼저 데이터베이스에서 제거되어야 합니다. SQL Database를 사용하여 Azure Active Directory 사용자 구성에 대한 자세한 내용은 [Azure Active Directory 인증을 사용하여 SQL Database 또는 SQL Data Warehouse에 연결](https://azure.microsoft.com/documentation/articles/sql-database-aad-authentication/)을 참조하세요.   
+> 새 소유자는 Azure Active Directory 사용자인 경우 새 소유자가 새 DBO가 될 데이터베이스에서 사용자로 존재할 수 없습니다. 이러한 Azure AD 사용자는 새 사용자에게 데이터베이스 소유권을 변경하는 ALTER AUTHORIZATION 문을 실행하기 전에 먼저 데이터베이스에서 제거되어야 합니다. SQL Database를 사용하여 Azure Active Directory 사용자를 구성하는 방법에 대한 자세한 내용은 [Azure Active Directory 인증을 사용하여 SQL Database 또는 [!INCLUDE[ssSDW](../../includes/sssdwfull-md.md)]에 연결](https://azure.microsoft.com/documentation/articles/sql-database-aad-authentication/)을 참조하세요.   
   
 **ALTER AUTHORIZATION 문을 실행하는 사용자 요구 사항:**  
 해당 데이터베이스의 소유자를 변경하려면 대상 데이터베이스에 연결해야 합니다.  

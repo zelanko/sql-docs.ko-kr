@@ -23,12 +23,12 @@ author: dphansen
 ms.author: davidph
 manager: cgronlund
 monikerRange: '>=sql-server-2016||>=sql-server-linux-ver15||=sqlallproducts-allversions'
-ms.openlocfilehash: 59a754655eff7c701a91013e686e7ff1105a4cfe
-ms.sourcegitcommit: 5da46e16b2c9710414fe36af9670461fb07555dc
+ms.openlocfilehash: 8a0f2d13c26e6b19b30e551560d11be58ff71e48
+ms.sourcegitcommit: c74bb5944994e34b102615b592fdaabe54713047
 ms.translationtype: HT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 09/01/2020
-ms.locfileid: "89283704"
+ms.lasthandoff: 09/22/2020
+ms.locfileid: "90990056"
 ---
 # <a name="create-external-resource-pool-transact-sql"></a>CREATE EXTERNAL RESOURCE POOL(Transact-SQL)
 [!INCLUDE [SQL Server 2016 and later](../../includes/applies-to-version/sqlserver2016.md)]
@@ -95,7 +95,7 @@ CREATE EXTERNAL RESOURCE POOL pool_name
 
 ::: moniker range=">=sql-server-ver15||>=sql-server-linux-ver15||=sqlallproducts-allversions"
 MAX_CPU_PERCENT =*value*  
-CPU 경합이 있을 때 외부 리소스 풀의 모든 요청이 받을 수 있는 최대 평균 CPU 대역폭입니다. *값*은 정수입니다. 허용되는 *value*의 범위는 1에서 100까지입니다.
+CPU 경합이 있을 때 외부 리소스 풀의 받을 수 있는 모든 요청의 최대 평균 CPU 대역폭입니다. *값*은 정수입니다. 허용되는 *value*의 범위는 1에서 100까지입니다.
 
 
 MAX_MEMORY_PERCENT =*value*  
@@ -107,7 +107,7 @@ MAX_PROCESSES =*value*
 
 ::: moniker range="=sql-server-2016||=sql-server-2017||=sqlallproducts-allversions"
 MAX_CPU_PERCENT =*value*  
-CPU 경합이 있을 때 외부 리소스 풀의 모든 요청이 받을 수 있는 최대 평균 CPU 대역폭입니다. *값*은 정수입니다. 허용되는 *value*의 범위는 1에서 100까지입니다.
+CPU 경합이 있을 때 외부 리소스 풀의 받을 수 있는 모든 요청의 최대 평균 CPU 대역폭입니다. *값*은 정수입니다. 허용되는 *value*의 범위는 1에서 100까지입니다.
 
 AFFINITY {CPU = AUTO | ( <CPU_range_spec>) | NUMANODE = (\<NUMA_node_range_spec>)} 외부 리소스 풀을 특정 CPU에 연결합니다.
 

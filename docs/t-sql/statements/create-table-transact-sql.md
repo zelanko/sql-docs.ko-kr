@@ -2,7 +2,7 @@
 description: CREATE TABLE(Transact-SQL)
 title: CREATE TABLE(Transact-SQL)
 ms.custom: ''
-ms.date: 09/04/2020
+ms.date: 09/22/2020
 ms.prod: sql
 ms.prod_service: database-engine, sql-database
 ms.reviewer: ''
@@ -48,12 +48,12 @@ helpviewer_keywords:
 ms.assetid: 1e068443-b9ea-486a-804f-ce7b6e048e8b
 author: markingmyname
 ms.author: maghan
-ms.openlocfilehash: 6b55f70cd23047de6fa1b344cbe1c9c89ab3a94c
-ms.sourcegitcommit: 780a81c02bc469c6e62a9c307e56a973239983b6
+ms.openlocfilehash: 1f7e6cc805953007bb83eb5a50db5a39aea9e37b
+ms.sourcegitcommit: 3efd8bbf91f4f78dce3a4ac03348037d8c720e6a
 ms.translationtype: HT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 09/11/2020
-ms.locfileid: "90027314"
+ms.lasthandoff: 09/23/2020
+ms.locfileid: "91024582"
 ---
 # <a name="create-table-transact-sql"></a>CREATE TABLE(Transact-SQL)
 
@@ -62,13 +62,13 @@ ms.locfileid: "90027314"
 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 및 [!INCLUDE[ssSDSfull](../../includes/sssdsfull-md.md)]에서 새 테이블을 만듭니다.
 
 > [!NOTE]
-> [!INCLUDE[ssSDW](../../includes/sssdw-md.md)] 구문은 [CREATE TABLE(Azure SQL Data Warehouse)](../../t-sql/statements/create-table-azure-sql-data-warehouse.md)를 참조하세요.
+> [!INCLUDE[ssSDW](../../includes/sssdw-md.md)] 구문의 경우 [CREATE TABLE ([!INCLUDE[ssSDW](../../includes/sssdwfull-md.md)])](../../t-sql/statements/create-table-azure-sql-data-warehouse.md)을 참조하세요.
 
 ![항목 링크 아이콘](../../database-engine/configure-windows/media/topic-link.gif "항목 링크 아이콘") [Transact-SQL 구문 표기 규칙](../../t-sql/language-elements/transact-sql-syntax-conventions-transact-sql.md)
 
 ## <a name="simple-syntax"></a>간단한 구문
 
-```
+```syntaxsql
 -- Simple CREATE TABLE Syntax (common if not using options)
 CREATE TABLE
     { database_name.schema_name.table_name | schema_name.table_name | table_name }
@@ -78,7 +78,7 @@ CREATE TABLE
 
 ## <a name="full-syntax"></a>전체 구문
 
-```
+```syntaxsql
 -- Disk-Based CREATE TABLE Syntax
 CREATE TABLE
     { database_name.schema_name.table_name | schema_name.table_name | table_name }
@@ -239,12 +239,12 @@ column_set_name XML COLUMN_SET FOR ALL_SPARSE_COLUMNS
         | OFF ( MIGRATION_STATE = PAUSED )
       }
     ]   
-    [ DATA_DELETION =  {OFF | ON }  
-          [(    
-              [ FILTER_COLUMN = column_name ],   
-              [ RETENTION_PERIOD = { INFINITE | number {DAY | DAYS | WEEK | WEEKS 
-                      | MONTH | MONTHS | YEAR | YEARS }}]    
-          )]
+    [ DATA_DELETION = ON  
+          {( 
+             FILTER_COLUMN = column_name,   
+             RETENTION_PERIOD = { INFINITE | number {DAY | DAYS | WEEK | WEEKS 
+                              | MONTH | MONTHS | YEAR | YEARS }
+        )}  
      ]
 }
   
@@ -803,13 +803,9 @@ MIGRATION_STATE = { OUTBOUND | INBOUND | PAUSED } **적용 대상**: [!INCLUDE[s
 
 - `PAUSED`를 지정하여 데이터 마이그레이션을 일시 중지하거나 연기합니다. 자세한 내용은 [데이터 마이그레이션 일시 중지 및 다시 계속 - Stretch Database](../../sql-server/stretch-database/pause-and-resume-data-migration-stretch-database.md)를 참조하세요.
 
-[ DATA_DELETION =  {OFF | ON }  
-          [(  
-              [ FILTER_COLUMN = column_name ],   
-              [ RETENTION_PERIOD = { INFINITE | number {DAY | DAYS | WEEK | WEEKS | MONTH | MONTHS | YEAR | YEARS }}]    
-          )]  
-     ]  
-**적용 대상:** Azure SQL Edge‘만’
+[DATA_DELETION = ON  
+    {( FILTER_COLUMN = column_name,   
+           RETENTION_PERIOD = { INFINITE | number {DAY | DAYS | WEEK | WEEKS | MONTH | MONTHS | YEAR | YEARS } )}] **적용 대상:** Azure SQL Edge‘만’
 
 데이터베이스 내의 테이블에서 오래된 데이터의 보존 정책 기반 정리를 사용하도록 설정합니다. 자세한 내용은 [데이터 보존 사용 및 사용 안 함](https://docs.microsoft.com/azure/azure-sql-edge/data-retention-enable-disable)을 참조하세요. 데이터 보존을 사용하도록 설정하려면 다음 매개 변수를 지정해야 합니다. 
 

@@ -1,31 +1,31 @@
 ---
 title: azdata bdc hdfs 참조
 titleSuffix: SQL Server big data clusters
-description: 이 참조 문서를 사용하여 azdata 도구의 SQL 명령, 특히 bdc hdfs 명령을 이해할 수 있습니다.
+description: azdata bdc hdfs 명령에 대한 참조 문서입니다.
 author: MikeRayMSFT
 ms.author: mikeray
-ms.reviewer: mihaelab
-ms.date: 06/22/2020
+ms.reviewer: seanw
+ms.date: 09/22/2020
 ms.topic: reference
 ms.prod: sql
 ms.technology: big-data-cluster
-ms.openlocfilehash: 17cac3a31309402d01442b598785908cbf345bba
-ms.sourcegitcommit: 883435b4c7366f06ac03579752093737b098feab
+ms.openlocfilehash: 4cc99df7ada4ff4e0aced35c4cbcf4c39e8ca5c5
+ms.sourcegitcommit: d56f1eca807c55cf606a6316f3872585f014fec1
 ms.translationtype: HT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 08/28/2020
-ms.locfileid: "89733982"
+ms.lasthandoff: 09/22/2020
+ms.locfileid: "90914818"
 ---
 # <a name="azdata-bdc-hdfs"></a>azdata bdc hdfs
 
-[!INCLUDE[SQL Server 2019](../../includes/applies-to-version/sqlserver2019.md)]
+`azdata`에 적용됩니다.
 
-다음 문서에서는 `azdata` 도구의 `sql` 명령에 대한 참조를 제공합니다. 다른 `azdata` 명령에 대한 자세한 내용은 [azdata 참조](reference-azdata.md)를 참조하세요.
+다음 문서에서는 **azdata** 도구의 **sql** 명령에 대한 참조를 제공합니다. 다른 **azdata** 명령에 대한 자세한 내용은 [azdata 참조](reference-azdata.md)를 참조하세요.
 
 ## <a name="commands"></a>명령
-| 명령 | 설명 |
+
+|명령|설명|
 | --- | --- |
-[azdata bdc hdfs status](reference-azdata-bdc-hdfs-status.md) | Hdfs 서비스 상태 명령입니다.
 [azdata bdc hdfs shell](#azdata-bdc-hdfs-shell) | HDFS 셸은 HDFS 파일 시스템을 위한 간단한 대화형 명령 셸입니다.
 [azdata bdc hdfs ls](#azdata-bdc-hdfs-ls) | 지정된 파일 또는 디렉터리의 상태를 나열합니다.
 [azdata bdc hdfs exists](#azdata-bdc-hdfs-exists) | 파일 또는 디렉터리가 있는지 확인합니다.  있으면 True를 반환하고, 없으면 False를 반환합니다.
@@ -39,6 +39,7 @@ ms.locfileid: "89733982"
 [azdata bdc hdfs chown](#azdata-bdc-hdfs-chown) | 지정된 파일의 소유자 또는 그룹을 변경합니다.
 [azdata bdc hdfs cp](#azdata-bdc-hdfs-cp) | 로컬 머신과 HDFS 간에 파일 또는 디렉터리를 복사합니다.
 [azdata bdc hdfs mount](reference-azdata-bdc-hdfs-mount.md) | HDFS에서 원격 저장소의 탑재를 관리합니다.
+[azdata bdc hdfs status](reference-azdata-bdc-hdfs-status.md) | Hdfs 서비스 상태 명령입니다.
 ## <a name="azdata-bdc-hdfs-shell"></a>azdata bdc hdfs shell
 HDFS 셸은 HDFS 파일 시스템을 위한 간단한 대화형 명령 셸입니다.
 ```bash
@@ -69,7 +70,7 @@ azdata bdc hdfs ls --path -p
 ### <a name="examples"></a>예제
 상태를 나열합니다.
 ```bash
-azdata bdc hdfs ls --path tmp/
+azdata bdc hdfs ls --path "tmp/"
 ```
 ### <a name="required-parameters"></a>필수 매개 변수
 #### `--path -p`
@@ -94,7 +95,7 @@ azdata bdc hdfs exists --path -p
 ### <a name="examples"></a>예제
 파일 또는 디렉터리가 있는지 확인합니다.
 ```bash
-azdata bdc hdfs exists --path tmp/
+azdata bdc hdfs exists --path "tmp/"
 ```
 ### <a name="required-parameters"></a>필수 매개 변수
 #### `--path -p`
@@ -119,7 +120,7 @@ azdata bdc hdfs mkdir --path -p
 ### <a name="examples"></a>예제
 디렉터리를 만듭니다.
 ```bash
-azdata bdc hdfs mkdir --path tmp/
+azdata bdc hdfs mkdir --path "tmp/"
 ```
 ### <a name="required-parameters"></a>필수 매개 변수
 #### `--path -p`
@@ -144,7 +145,7 @@ azdata bdc hdfs mv --source-path -s
 ### <a name="examples"></a>예제
 파일 또는 디렉터리를 이동합니다.
 ```bash
-azdata bdc hdfs mv --source-path tmp/ --target-path "dest/"
+azdata bdc hdfs mv --source-path "tmp/" --target-path "dest/"
 ```
 ### <a name="required-parameters"></a>필수 매개 변수
 #### `--source-path -s`
@@ -229,7 +230,7 @@ azdata bdc hdfs rm --path -p
 ### <a name="examples"></a>예제
 파일 또는 디렉터리를 제거합니다.
 ```bash
-azdata bdc hdfs rm --path tmp/
+azdata bdc hdfs rm --path "tmp/"
 ```
 ### <a name="required-parameters"></a>필수 매개 변수
 #### `--path -p`
@@ -254,7 +255,7 @@ azdata bdc hdfs rmr --path -p
 ### <a name="examples"></a>예제
 디렉터리를 재귀적으로 제거합니다.
 ```bash
-azdata bdc hdfs rmr --path tmp/
+azdata bdc hdfs rmr --path "tmp/"
 ```
 ### <a name="required-parameters"></a>필수 매개 변수
 #### `--path -p`
@@ -358,4 +359,7 @@ JMESPath 쿼리 문자열입니다. 자세한 내용 및 예제는 [http://jmesp
 
 ## <a name="next-steps"></a>다음 단계
 
-다른 `azdata` 명령에 대한 자세한 내용은 [azdata 참조](reference-azdata.md)를 참조하세요. `azdata` 도구를 설치하는 방법에 대한 자세한 내용은 [azdata를 설치하여 SQL Server 2019 빅 데이터 클러스터 관리](../install/deploy-install-azdata.md)를 참조하세요.
+다른 **azdata** 명령에 대한 자세한 내용은 [azdata 참조](reference-azdata.md)를 참조하세요. 
+
+**azdata** 도구를 설치하는 방법에 대한 자세한 내용은 [azdata 설치](..\install\deploy-install-azdata.md)를 참조하세요.
+

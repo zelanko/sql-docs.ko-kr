@@ -47,18 +47,18 @@ ms.assetid: afe3d86d-c9ab-44e4-b74d-4e3dbd9cc58c
 author: markingmyname
 ms.author: maghan
 monikerRange: '>=aps-pdw-2016||=azuresqldb-current||=azure-sqldw-latest||>=sql-server-2016||=sqlallproducts-allversions||>=sql-server-linux-2017||=azuresqldb-mi-current'
-ms.openlocfilehash: c9c3e3ed1b5a1ff774215af7008b3a6636543ba7
-ms.sourcegitcommit: dd36d1cbe32cd5a65c6638e8f252b0bd8145e165
+ms.openlocfilehash: 6d766d1efaefb4bbc7178b2f0ec0bd70b0b2f45e
+ms.sourcegitcommit: 3efd8bbf91f4f78dce3a4ac03348037d8c720e6a
 ms.translationtype: HT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 09/08/2020
-ms.locfileid: "89549419"
+ms.lasthandoff: 09/23/2020
+ms.locfileid: "91024545"
 ---
 # <a name="create-procedure-transact-sql"></a>CREATE PROCEDURE(Transact-SQL)
 
 [!INCLUDE [sql-asdb-asdbmi-asa-pdw](../../includes/applies-to-version/sql-asdb-asdbmi-asa-pdw.md)]
 
-[!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)], [!INCLUDE[ssSDSfull](../../includes/sssdsfull-md.md)], Azure SQL Data Warehouse 및 병렬 데이터 웨어하우스에 [!INCLUDE[tsql](../../includes/tsql-md.md)] 또는 CLR(공용 언어 런타임) 저장 프로시저를 만듭니다. 저장 프로시저는 다음과 같은 점에서 다른 프로그래밍 언어의 프로시저와 유사합니다.
+[!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)], [!INCLUDE[ssSDSfull](../../includes/sssdsfull-md.md)], [!INCLUDE[ssPDW](../../includes/sspdw-md.md)], [!INCLUDE[ssPDW](../../includes/sspdw-md.md)]에서 [!INCLUDE[tsql](../../includes/tsql-md.md)] 또는 CLR(공용 언어 런타임) 저장 프로시저를 만듭니다. 저장 프로시저는 다음과 같은 점에서 다른 프로그래밍 언어의 프로시저와 유사합니다.
 
 - 입력 매개 변수를 받아 여러 값을 출력 매개 변수의 형태로 호출하는 프로시저 또는 일괄 처리에 반환합니다.
 - 다른 프로시저 호출을 비롯하여 데이터베이스에서 작업을 수행하는 프로그래밍 문이 포함되어 있습니다.
@@ -132,7 +132,7 @@ sql_statement [;] [ ... n ]
 ```
 
 ```syntaxsql
--- Transact-SQL Syntax for Stored Procedures in Azure SQL Data Warehouse
+-- Transact-SQL Syntax for Stored Procedures in Azure Synapse Analytics
 -- and Parallel Data Warehouse
 
 -- Create a stored procedure
@@ -344,7 +344,7 @@ SELECT DB_NAME() AS ThisDB;
 
 `EXEC What_DB_is_this;` 문으로 저장 프로시저 호출
 
-좀더 복잡한 방법은 입력 매개 변수를 제공하여 프로시저의 유연성을 높이는 것입니다. 예를 들면 다음과 같습니다.
+좀더 복잡한 방법은 입력 매개 변수를 제공하여 프로시저의 유연성을 높이는 것입니다. 다음은 그 예입니다.
 
 ```sql
 CREATE PROC What_DB_is_that @ID INT
@@ -488,7 +488,7 @@ GO
 
 ## <a name="examples"></a><a name="Examples"></a> 예
 
-|Category|중요한 구문 요소|
+|범주|중요한 구문 요소|
 |--------------|------------------------------|
 |[기본 구문](#BasicSyntax)|CREATE PROCEDURE|
 |[매개 변수 전달](#Parameters)|@parameter <br> &nbsp;&nbsp;• = default <br> &nbsp;&nbsp; • OUTPUT <br> &nbsp;&nbsp; • 테이블 반환 매개 변수 <br> &nbsp;&nbsp; • CURSOR VARYING|

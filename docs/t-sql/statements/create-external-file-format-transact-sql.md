@@ -21,12 +21,12 @@ ms.assetid: abd5ec8c-1a0e-4d38-a374-8ce3401bc60c
 author: markingmyname
 ms.author: maghan
 monikerRange: '>=aps-pdw-2016||=azure-sqldw-latest||>=sql-server-2016||=sqlallproducts-allversions||>=sql-server-linux-2017||=azuresqldb-mi-current'
-ms.openlocfilehash: b8a9c656e63ca975550d0ccffbfb93235f060621
-ms.sourcegitcommit: dd36d1cbe32cd5a65c6638e8f252b0bd8145e165
+ms.openlocfilehash: c1beca4564978fc069a896eadd42ed257dc28414
+ms.sourcegitcommit: 3efd8bbf91f4f78dce3a4ac03348037d8c720e6a
 ms.translationtype: HT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 09/08/2020
-ms.locfileid: "89547523"
+ms.lasthandoff: 09/23/2020
+ms.locfileid: "91024368"
 ---
 # <a name="create-external-file-format-transact-sql"></a>CREATE EXTERNAL FILE FORMAT(Transact-SQL)
 [!INCLUDE [sqlserver2016-asdbmi-asa-pdw](../../includes/applies-to-version/sqlserver2016-asdbmi-asa-pdw.md)]
@@ -321,7 +321,7 @@ PolyBase 로드 중에 모든 파일에서 첫 번째로 읽을 행 번호를 �
 #### <a name="encoding"></a>ENCODING
    `Encoding = {'UTF8' | 'UTF16'}`
    
- Azure SQL Data Warehouse 및 PDW(APS CU7.4)에서 PolyBase는 UTF8 및 UTF16-LE로 인코딩된 구분 기호로 분리된 텍스트 파일을 읽을 수 있습니다. SQL Server에서는 PolyBase가 UTF16 인코딩 파일 읽기를 지원하지 않습니다.
+ [!INCLUDE[ssSDW](../../includes/sssdwfull-md.md)] 및 [!INCLUDE[ssPDW](../../includes/sspdw-md.md)](APS CU7.4)에서 PolyBase는 UTF8 및 UTF16-LE로 인코딩되어 있는 분리된 텍스트 파일을 읽을 수 있습니다. SQL Server에서는 PolyBase가 UTF16 인코딩 파일 읽기를 지원하지 않습니다.
 
 
 ## <a name="permissions"></a>사용 권한  
@@ -352,7 +352,7 @@ PolyBase 로드 중에 모든 파일에서 첫 번째로 읽을 행 번호를 �
 ## <a name="performance"></a>성능
  압축 파일을 사용할 때는 항상 외부 데이터 원본과 SQL Server 간에 전송되는 데이터가 더 적다는 점과, 데이터 압축 및 압축 풀기를 위한 CPU 사용량이 증대한다는 점 사이의 상호 절충이 따릅니다.
   
- Gzip 압축 텍스트 파일은 분할할 수 없습니다. Gzip 압축 텍스트 파일의 성능을 높이기 위해 외부 데이터 원본 내에서 모두 동일한 디렉터리에 저장되는 여러 파일을 생성하는 ㄱ서이 좋습니다. 이 파일 구조를 통해 PolyBase가 여러 Reader 및 압축 풀기 프로세스를 사용하여 데이터를 더 빠르게 읽고 압축을 풀 수 있습니다. 이상적인 압축 파일의 수는 컴퓨팅 노드당 최대 데이터 Reader 프로세스 수입니다. [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 및 [!INCLUDE[ssPDW](../../includes/sspdw-md.md)]에서 최대 데이터 Reader 프로세스 수는 노드당 20개 Reader에 해당하는 Azure SQL Data Warehouse Gen2를 제외하고 노드당 8개입니다. [!INCLUDE[ssSDW](../../includes/sssdw-md.md)]에서 노드당 최대 데이터 Reader 프로세서 수는 SLO마다 다릅니다. 자세한 내용은 [Azure SQL Data Warehouse 로드 패턴 및 전략](https://blogs.msdn.microsoft.com/sqlcat/2017/05/17/azure-sql-data-warehouse-loading-patterns-and-strategies/)을 참조하세요.  
+ Gzip 압축 텍스트 파일은 분할할 수 없습니다. Gzip 압축 텍스트 파일의 성능을 높이기 위해 외부 데이터 원본 내에서 모두 동일한 디렉터리에 저장되는 여러 파일을 생성하는 ㄱ서이 좋습니다. 이 파일 구조를 통해 PolyBase가 여러 Reader 및 압축 풀기 프로세스를 사용하여 데이터를 더 빠르게 읽고 압축을 풀 수 있습니다. 이상적인 압축 파일의 수는 컴퓨팅 노드당 최대 데이터 Reader 프로세스 수입니다. [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 및 [!INCLUDE[ssPDW](../../includes/sspdw-md.md)]에서 데이터 판독기 프로세스의 최대 개수는 노드당 8개입니다. 단, [!INCLUDE[ssSDW](../../includes/sssdwfull-md.md)] Gen2는 노드당 20개 판독기입니다. [!INCLUDE[ssSDW](../../includes/sssdw-md.md)]에서 노드당 최대 데이터 Reader 프로세서 수는 SLO마다 다릅니다. 자세한 내용은 [[!INCLUDE[ssSDW](../../includes/sssdwfull-md.md)] 로드 패턴 및 전략](https://blogs.msdn.microsoft.com/sqlcat/2017/05/17/azure-sql-data-warehouse-loading-patterns-and-strategies/)을 참조하세요.  
   
 ## <a name="examples"></a>예제  
   
@@ -433,5 +433,5 @@ WITH (
  [CREATE EXTERNAL DATA SOURCE&#40;Transact-SQL&#41;](../../t-sql/statements/create-external-data-source-transact-sql.md)   
  [CREATE EXTERNAL TABLE&#40;Transact-SQL&#41;](../../t-sql/statements/create-external-table-transact-sql.md)   
  [CREATE EXTERNAL TABLE AS SELECT &#40;Transact-SQL&#41;](../../t-sql/statements/create-external-table-as-select-transact-sql.md)   
- [CREATE TABLE AS SELECT&#40;Azure SQL Data Warehouse&#41;](../../t-sql/statements/create-table-as-select-azure-sql-data-warehouse.md)   
+ [CREATE TABLE AS SELECT&#40;Azure Synapse Analytics&#41;](../../t-sql/statements/create-table-as-select-azure-sql-data-warehouse.md)   
  [sys.external_file_formats&#40;Transact-SQL&#41;](../../relational-databases/system-catalog-views/sys-external-file-formats-transact-sql.md)  

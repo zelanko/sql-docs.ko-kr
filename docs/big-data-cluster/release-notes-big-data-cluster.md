@@ -9,12 +9,12 @@ ms.date: 09/02/2020
 ms.topic: conceptual
 ms.prod: sql
 ms.technology: big-data-cluster
-ms.openlocfilehash: 32cfd85d1b07a315a196c2728c776297c4d85d9d
-ms.sourcegitcommit: c5f0c59150c93575bb2bd6f1715b42716001126b
+ms.openlocfilehash: d9c08893006e0b2edf093477259ebed788d49097
+ms.sourcegitcommit: c74bb5944994e34b102615b592fdaabe54713047
 ms.translationtype: HT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 09/02/2020
-ms.locfileid: "89392177"
+ms.lasthandoff: 09/22/2020
+ms.locfileid: "90989996"
 ---
 # <a name="sql-server-2019-big-data-clusters-release-notes"></a>SQL Server 2019 빅 데이터 클러스터 릴리스 정보
 
@@ -62,18 +62,19 @@ ms.locfileid: "89392177"
 
 다음 표에는 [!INCLUDE[big-data-clusters-2019](../includes/ssbigdataclusters-ver15.md)]의 릴리스 기록이 나와 있습니다.
 
-| 해제          | BDC 버전    | `azdata` 버전| 릴리스 날짜 |
-|------------------|----------------|-----------------|--------------|
-| [CU6](#cu6)      | 15.0.4053.23   | 20.0.1          | 2020-08-04   |
-| [CU5](#cu5)      | 15.0.4043.16   | 20.0.0          | 2020-06-22   |
-| [CU4](#cu4)      | 15.0.4033.1    | 15.0.4033       | 2020-03-31   |
-| [CU3](#cu3)      | 15.0.4023.6    | 15.0.4023       | 2020-03-12   |
-| [CU2](#cu2)      | 15.0.4013.40   | 15.0.4013       | 2020-02-13   |
-| [CU1](#cu1)      | 15.0.4003.23   | 15.0.4003       | 2020-01-07   |
-| [GDR1](#rtm)     | 15.0.2070.34   | 15.0.2070       | 2019-11-04   |
+| 릴리스 <sup>1</sup> | BDC 버전  | `azdata` 버전 <sup>2</sup> | 릴리스 날짜 |
+|----------------------|--------------|-------------------------------|--------------|
+| [CU6](#cu6)          | 15.0.4053.23 | 20.0.1                        | 2020-08-04   |
+| [CU5](#cu5)          | 15.0.4043.16 | 20.0.0                        | 2020-06-22   |
+| [CU4](#cu4)          | 15.0.4033.1  | 15.0.4033                     | 2020-03-31   |
+| [CU3](#cu3)          | 15.0.4023.6  | 15.0.4023                     | 2020-03-12   |
+| [CU2](#cu2)          | 15.0.4013.40 | 15.0.4013                     | 2020-02-13   |
+| [CU1](#cu1)          | 15.0.4003.23 | 15.0.4003                     | 2020-01-07   |
+| [GDR1](#rtm)         | 15.0.2070.34 | 15.0.2070                     | 2019-11-04   |
 
-> [!NOTE]
-> CU7에는 SQL Server 2019 빅 데이터 클러스터 업데이트가 없습니다.
+<sup>1</sup> CU7에 대한 SQL Server 2019 빅 데이터 클러스터 업데이트가 없습니다.
+
+<sup>2</sup> `azdata` 버전은 CU 릴리스 시점의 도구 버전을 반영합니다. `azdata`는 서버 릴리스와 별개로 릴리스할 수도 있으므로 최신 패키지를 설치하면 최신 버전을 가져올 수 있습니다. 최신 버전은 이전에 릴리스된 CU와 호환됩니다.
 
 ## <a name="how-to-install-updates"></a>업데이트 설치 방법
 
@@ -176,7 +177,7 @@ SQL Server 2019 GDR1(일반 배포 릴리스 1) - [!INCLUDE[big-data-clusters-20
 
 - **해결 방법**: BDC를 업그레이드하기 전에 활성 Livy 세션 또는 일괄 처리 작업이 없는지 확인합니다. 이 문제를 방지하려면 [지원되는 릴리스에서 업그레이드](deployment-upgrade.md#upgrade-from-supported-release)의 지침을 따르세요. 
 
-   업그레이드 프로세스 중에 Livy에서 404 오류를 반환하는 경우 두 sparkhead 노드 모두에서 Livy 서버를 다시 시작합니다. 예를 들어:
+   업그레이드 프로세스 중에 Livy에서 404 오류를 반환하는 경우 두 sparkhead 노드 모두에서 Livy 서버를 다시 시작합니다. 다음은 그 예입니다. 
 
    ```console
    kubectl -n <clustername> exec -it sparkhead-0/sparkhead-1 -c hadoop-livy-sparkhistory -- exec supervisorctl restart livy

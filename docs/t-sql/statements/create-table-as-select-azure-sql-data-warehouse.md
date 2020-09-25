@@ -1,6 +1,6 @@
 ---
-description: CREATE TABLE AS SELECT(Azure SQL Data Warehouse)
-title: CREATE TABLE AS SELECT(Azure SQL Data Warehouse) | Microsoft Docs
+description: CREATE TABLE AS SELECT(Azure Synapse Analytics)
+title: CREATE TABLE AS SELECT(Azure Synapse Analytics) | Microsoft Docs
 ms.custom: ''
 ms.date: 10/07/2016
 ms.service: sql-data-warehouse
@@ -12,14 +12,14 @@ ms.assetid: d1e08f88-64ef-4001-8a66-372249df2533
 author: julieMSFT
 ms.author: jrasnick
 monikerRange: '>= aps-pdw-2016 || = azure-sqldw-latest || = sqlallproducts-allversions'
-ms.openlocfilehash: fb060b4a5f42cdc526bbb2a3737fd728c9ac3b71
-ms.sourcegitcommit: ac9feb0b10847b369b77f3c03f8200c86ee4f4e0
+ms.openlocfilehash: ab6d2ce34991dfaf4d2266ca0b0d900eb93fdde6
+ms.sourcegitcommit: c74bb5944994e34b102615b592fdaabe54713047
 ms.translationtype: HT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 09/16/2020
-ms.locfileid: "90688678"
+ms.lasthandoff: 09/22/2020
+ms.locfileid: "90990156"
 ---
-# <a name="create-table-as-select-azure-sql-data-warehouse"></a>CREATE TABLE AS SELECT(Azure SQL Data Warehouse)
+# <a name="create-table-as-select-azure-synapse-analytics"></a>CREATE TABLE AS SELECT(Azure Synapse Analytics)
 [!INCLUDE[applies-to-version/asa-pdw](../../includes/applies-to-version/asa-pdw.md)]
 
 CREATE TABLE AS SELECT(CTAS)는 사용할 수 있는 매우 중요한 T-SQL 기능 중 하나이며 SELECT 문의 출력을 기반으로 새 테이블을 만드는 완전히 병렬화된 작업입니다. CTAS는 테이블의 복사본을 만드는 가장 간단하고 빠른 방법입니다.   
@@ -32,7 +32,7 @@ CREATE TABLE AS SELECT(CTAS)는 사용할 수 있는 매우 중요한 T-SQL 기�
 -   외부 데이터를 쿼리하거나 가져옵니다.  
 
 > [!NOTE]  
-> CTAS는 테이블을 만드는 기능에 추가되므로 이 토픽에서는 CREATE TABLE 토픽을 반복하지 않으려고 합니다. 그 대신, CTAS와 CREATE TABLE 문의 차이점을 설명합니다. CREATE TABLE 세부 정보는 [CREATE TABLE(Azure SQL Data Warehouse)](https://msdn.microsoft.com/library/mt203953/) 문을 참조하세요. 
+> CTAS는 테이블을 만드는 기능에 추가되므로 이 토픽에서는 CREATE TABLE 토픽을 반복하지 않으려고 합니다. 그 대신, CTAS와 CREATE TABLE 문의 차이점을 설명합니다. CREATE TABLE 세부 정보는 [CREATE TABLE(Azure Synapse Analytics)](https://msdn.microsoft.com/library/mt203953/) 문을 참조하세요. 
   
  ![항목 링크 아이콘](../../database-engine/configure-windows/media/topic-link.gif "항목 링크 아이콘") [Transact-SQL 구문 표기 규칙](../../t-sql/language-elements/transact-sql-syntax-conventions-transact-sql.md)  
   
@@ -60,7 +60,7 @@ CREATE TABLE { database_name.schema_name.table_name | schema_name.table_name | t
 
 <table_option> ::= 
     {   
-        CLUSTERED COLUMNSTORE INDEX --default for SQL Data Warehouse 
+        CLUSTERED COLUMNSTORE INDEX --default for Synapse Analytics 
       | CLUSTERED COLUMNSTORE INDEX ORDER (column[,...n])
       | HEAP --default for Parallel Data Warehouse   
       | CLUSTERED INDEX ( { index_column_name [ ASC | DESC ] } [ ,...n ] ) --default is ASC 
@@ -138,7 +138,7 @@ CTAS를 사용하려면 *select_criteria*에 참조된 임의의 개체에 대�
 
 ## <a name="limitations-and-restrictions"></a>제한 사항  
 
-정렬된 클러스터형 columnstore 인덱스는 문자열 열을 제외하고 Azure SQL Data Warehouse에서 지원되는 모든 데이터 형식의 열에서 만들 수 있습니다.  
+문자열 열을 제외하고 [!INCLUDE[ssSDW](../../includes/sssdwfull-md.md)]에서 지원되는 모든 데이터 형식의 열에 순서가 지정된 클러스터형 columnstore 인덱스를 만들 수 있습니다.  
 
 [SET ROWCOUNT &#40;Transact-SQL&#41;](../../t-sql/statements/set-rowcount-transact-sql.md)은 CTAS에 아무런 영향도 주지 않습니다. 비슷한 동작을 얻으려면 [TOP&#40;Transact-SQL&#41;](../../t-sql/queries/top-transact-sql.md)를 사용합니다.  
  
@@ -167,7 +167,7 @@ CTAS를 사용하여 테이블을 만드는데 성능이 중요하지 않은 경
 <a name="ctas-copy-table-bk"></a>
 
 ### <a name="a-use-ctas-to-copy-a-table"></a>A. CTAS를 사용하여 테이블 복사 
-적용 대상: Azure SQL Data Warehouse 및 병렬 Data Warehouse
+적용 대상: [!INCLUDE[ssSDW](../../includes/sssdwfull-md.md)] 및 [!INCLUDE[ssPDW](../../includes/sspdw-md.md)]
 
 `CTAS`의 매우 일반적인 사용 중 하나는 아마도 DDL(데이터 정의 언어)을 변경할 수 있도록 테이블의 복사본을 만드는 작업일 것입니다. 예를 들어 원래 테이블을 `ROUND_ROBIN`으로 만들었는데 이제 이 테이블을 열에 배포된 테이블로 만들려고 하는 경우 `CTAS`를 사용하여 분포 열을 변경합니다. 또한 `CTAS`를 사용하여 분할, 인덱싱 또는 열 형식을 변경할 수도 있습니다.
 
@@ -239,7 +239,7 @@ DROP TABLE FactInternetSales_old;
 <a name="ctas-change-column-attributes-bk"></a>
 
 ### <a name="b-use-ctas-to-change-column-attributes"></a>B. CTAS를 사용하여 열 특성 변경 
-적용 대상: Azure SQL Data Warehouse 및 병렬 Data Warehouse
+적용 대상: [!INCLUDE[ssSDW](../../includes/sssdwfull-md.md)] 및 [!INCLUDE[ssPDW](../../includes/sspdw-md.md)]
 
 이 예제에서는 CTAS를 사용하여 DimCustomer2 테이블의 여러 열에 대해 데이터 형식, NULL 허용 여부 및 데이터 정렬을 변경합니다.  
   
@@ -300,13 +300,13 @@ DROP TABLE DimCustomer2_old;
 <a name="ctas-change-distribution-method-bk"></a>
 
 ### <a name="c-use-ctas-to-change-the-distribution-method-for-a-table"></a>C. CTAS를 사용하여 테이블에 대한 배포 방법 변경
-적용 대상: Azure SQL Data Warehouse 및 병렬 Data Warehouse
+적용 대상: [!INCLUDE[ssSDW](../../includes/sssdwfull-md.md)] 및 [!INCLUDE[ssPDW](../../includes/sspdw-md.md)]
 
 이 간단한 예제에서는 테이블에 대한 배포 방법을 변경하는 방법을 보여줍니다. 이 작업을 수행하는 방법의 원리를 보여주기 위해 해시 배포 테이블을 라운드 로빈으로 변경한 다음, 라운드 로빈 테이블을 다시 해시 배포로 변경해 보겠습니다. 마지막 테이블은 원본 테이블과 일치합니다. 
 
 대부분의 경우 해시 테이블을 라운드 로빈 테이블로 변경할 필요가 없을 것입니다. 오히려 라운드 로빈 테이블을 해시 배포 테이블로 변경해야 할 경우가 더 많습니다. 예를 들어 조인 성능을 개선하기 위해 처음에 새 테이블을 라운드 로빈으로 로드한 다음, 나중에 해당 테이블을 해시 배포 테이블로 변경할 수 있습니다.
 
-이 예에서는 AdventureWorksDW 예제 데이터베이스를 사용합니다. SQL Data Warehouse 버전을 로드하는 방법은 [SQL Data Warehouse에 샘플 데이터 로드](https://azure.microsoft.com/documentation/articles/sql-data-warehouse-load-sample-databases/)를 참조하세요.
+이 예에서는 AdventureWorksDW 예제 데이터베이스를 사용합니다. [!INCLUDE[ssSDW](../../includes/sssdwfull-md.md)] 버전을 로드하려면 [[!INCLUDE[ssSDW](../../includes/sssdwfull-md.md)]에 샘플 데이터 로드](https://azure.microsoft.com/documentation/articles/sql-data-warehouse-load-sample-databases/)를 참조하세요.
  
 ```sql
 -- DimSalesTerritory is hash-distributed.
@@ -350,7 +350,7 @@ DROP TABLE [dbo].[DimSalesTerritory_old];
 <a name="ctas-change-to-replicated-bk"></a>
 
 ### <a name="d-use-ctas-to-convert-a-table-to-a-replicated-table"></a>D. CTAS를 사용하여 테이블을 복제된 테이블로 변환  
-적용 대상: Azure SQL Data Warehouse 및 병렬 Data Warehouse 
+적용 대상: [!INCLUDE[ssSDW](../../includes/sssdwfull-md.md)] 및 [!INCLUDE[ssPDW](../../includes/sspdw-md.md)]
 
 이 예제는 라운드 로빈 또는 해시 배포 테이블을 복제된 테이블로 변환하는 경우에 적용됩니다. 이 특정 예제에서는 이전의 배포 유형 변경 방법을 선택하고 한 단계를 더 실행합니다.  DimSalesTerritory는 하나의 차원이고 더 작은 테이블일 가능성이 있으므로 다른 테이블에 조인할 때 데이터 이동을 방지하기 위해 테이블을 복제본으로 다시 만드는 방법을 선택할 수 있습니다. 
 
@@ -374,7 +374,7 @@ DROP TABLE [dbo].[DimSalesTerritory_old];
 ```
  
 ### <a name="e-use-ctas-to-create-a-table-with-fewer-columns"></a>E. CTAS를 사용하여 열 수가 적은 테이블 만들기
-적용 대상: Azure SQL Data Warehouse 및 병렬 Data Warehouse 
+적용 대상: [!INCLUDE[ssSDW](../../includes/sssdwfull-md.md)] 및 [!INCLUDE[ssPDW](../../includes/sspdw-md.md)]
 
 다음 예제에서는 `myTable (c, ln)`이라는 라운드 로빈 배포 테이블을 만듭니다. 새 테이블은 열을 두 개만 포함하며 SELECT 문에 열 이름으로 열 별칭을 사용합니다.  
   
@@ -396,7 +396,7 @@ AS SELECT CustomerKey AS c, LastName AS ln
 <a name="ctas-query-hint-bk"></a>
 
 ### <a name="f-use-a-query-hint-with-create-table-as-select-ctas"></a>F. CREATE TABLE AS SELECT(CTAS)와 함께 쿼리 힌트 사용  
-적용 대상: Azure SQL Data Warehouse 및 병렬 Data Warehouse
+적용 대상: [!INCLUDE[ssSDW](../../includes/sssdwfull-md.md)] 및 [!INCLUDE[ssPDW](../../includes/sspdw-md.md)]
   
 이 쿼리는 CTAS 문에 쿼리 조인 힌트를 사용하는 기본 구문을 보여줍니다. 쿼리가 제출된 후 [!INCLUDE[ssSDW](../../includes/sssdw-md.md)]는 각 개별 배포에 대한 쿼리 계획을 생성할 때 해시 조인 방법을 적용합니다. 해시 조인 쿼리 힌트에 대한 자세한 내용은 [OPTION 절 &#40;Transact-SQL&#41;](../../t-sql/queries/option-clause-transact-sql.md)을 참조하세요.  
   
@@ -419,7 +419,7 @@ OPTION ( HASH JOIN );
 <a name="ctas-azure-blob-storage-bk"></a>
 
 ### <a name="g-use-ctas-to-import-data-from-azure-blob-storage"></a>G. CTAS를 사용하여 Azure Blob Storage에서 데이터 가져오기  
-적용 대상: Azure SQL Data Warehouse 및 병렬 Data Warehouse  
+적용 대상: [!INCLUDE[ssSDW](../../includes/sssdwfull-md.md)] 및 [!INCLUDE[ssPDW](../../includes/sspdw-md.md)]  
 
 외부 테이블에서 데이터를 가져오려면 CREATE TABLE AS SELECT를 사용하여 외부 테이블에서 선택합니다. 외부 테이블에서 [!INCLUDE[ssSDW](../../includes/sssdw-md.md)]로 가져올 데이터를 선택하는 구문은 일반 테이블에서 데이터를 선택하는 구문과 같습니다.  
   
@@ -440,7 +440,7 @@ WITH (
 ;  
   
 --Use CREATE TABLE AS SELECT to import the Azure blob storage data into a new   
---SQL Data Warehouse table called ClickStreamData  
+--Synapse Analytics table called ClickStreamData  
 CREATE TABLE ClickStreamData   
 WITH  
   (  
@@ -501,7 +501,7 @@ CTAS를 사용하여 몇몇 지원되지 않는 기능을 해결합니다. 기�
 <a name="ctas-replace-select-into-bk"></a>
 
 ### <a name="i-use-ctas-instead-of-selectinto"></a>9\. SELECT..INTO 대신에 CTAS 사용  
-적용 대상: Azure SQL Data Warehouse 및 병렬 Data Warehouse
+적용 대상: [!INCLUDE[ssSDW](../../includes/sssdwfull-md.md)] 및 [!INCLUDE[ssPDW](../../includes/sspdw-md.md)]
 
 SQL Server 코드는 일반적으로 SELECT..INTO를 사용하여 테이블을 SELECT 문의 결과로 채웁니다. 다음은 SQL Server SELECT..INTO 문의 예입니다.
 
@@ -511,7 +511,7 @@ INTO    #tmp_fct
 FROM    [dbo].[FactInternetSales]
 ```
 
-이 구문은 Azure SQL Data Warehouse 및 병렬 데이터 웨어하우스에서 지원되지 않습니다. 이 예제에서는 이전의 SELECT..INTO 문을 CTAS 문으로 다시 작성하는 방법을 보여줍니다. CTAS 구문에서 설명한 임의의 DISTRIBUTION 옵션을 선택할 수 있습니다. 이 예제에서는 ROUND_ROBIN 배포 방법을 사용합니다.
+이 구문은 [!INCLUDE[ssSDW](../../includes/sssdwfull-md.md)] 및 병렬 데이터 웨어하우스에서 지원되지 않습니다. 이 예제에서는 이전의 SELECT..INTO 문을 CTAS 문으로 다시 작성하는 방법을 보여줍니다. CTAS 구문에서 설명한 임의의 DISTRIBUTION 옵션을 선택할 수 있습니다. 이 예제에서는 ROUND_ROBIN 배포 방법을 사용합니다.
 
 ```sql
 CREATE TABLE #tmp_fct
@@ -528,7 +528,7 @@ FROM    [dbo].[FactInternetSales]
 <a name="ctas-replace-implicit-joins-bk"></a>
 
 ### <a name="j-use-ctas-and-implicit-joins-to-replace-ansi-joins-in-the-from-clause-of-an-update-statement"></a>J. CTAS 및 암시적 조인을 사용하여 `UPDATE` 문의 `FROM` 절에서 ANSI 조인 바꾸기  
-적용 대상: Azure SQL Data Warehouse 및 병렬 Data Warehouse  
+적용 대상: [!INCLUDE[ssSDW](../../includes/sssdwfull-md.md)] 및 [!INCLUDE[ssPDW](../../includes/sspdw-md.md)]  
 
 ANSI 조인 구문을 사용하여 UPDATE 또는 DELETE를 수행하여 두 개 이상의 테이블을 함께 조인하는 복잡한 업데이트 작업이 있을 수 있습니다.
 
@@ -572,7 +572,7 @@ AND [acs].[CalendarYear]                = [fis].[CalendarYear]
 ;
 ```
 
-SQL Data Warehouse는 `UPDATE` 문의 `FROM` 절에서 ANSI 조인을 지원하지 않으므로 이 SQL Server 코드는 조금 변경해야 사용할 수 있습니다.
+[!INCLUDE[ssSDW](../../includes/sssdwfull-md.md)]는 `UPDATE` 문의 `FROM` 절에서 ANSI 조인을 지원하지 않으므로 SQL Server 코드를 약간 변경해야 사용할 수 있습니다.
 
 `CTAS`와 암시적 조인의 조합을 사용하여 이 코드를 대체할 수 있습니다.
 
@@ -611,9 +611,9 @@ DROP TABLE CTAS_acs
 <a name="ctas-replace-ansi-joins-bk"></a>
 
 ### <a name="k-use-ctas-to-specify-which-data-to-keep-instead-of-using-ansi-joins-in-the-from-clause-of-a-delete-statement"></a>11. DELETE 문의 FROM 절에 ANSI 조인을 사용하는 대신에 CTAS를 사용하여 보관할 데이터 지정  
-적용 대상: Azure SQL Data Warehouse 및 병렬 Data Warehouse  
+적용 대상: [!INCLUDE[ssSDW](../../includes/sssdwfull-md.md)] 및 [!INCLUDE[ssPDW](../../includes/sspdw-md.md)]  
 
-`CTAS`를 사용하는 것이 데이터를 삭제하기 위한 최선의 방법일 때가 있습니다. 단순히 데이터를 삭제하는 것이 아니라 보관할 데이터를 선택합니다. SQL Data Warehouse는 `DELETE` 문의 `FROM` 절에 ANSI 조인을 지원하지 않으므로 이 방법은 ANSI 조인 구문을 사용하는 `DELETE` 문에 특히 유용합니다.
+`CTAS`를 사용하는 것이 데이터를 삭제하기 위한 최선의 방법일 때가 있습니다. 단순히 데이터를 삭제하는 것이 아니라 보관할 데이터를 선택합니다. [!INCLUDE[ssSDW](../../includes/sssdwfull-md.md)]는 `DELETE` 문의 `FROM` 절에서 ANSI 조인을 지원하지 않으므로 이 방법은 ANSI 조인 구문을 사용하는 `DELETE` 문에 특히 유용합니다.
 
 변환된 DELETE 문의 예를 아래에 제공합니다.
 
@@ -639,7 +639,7 @@ RENAME OBJECT dbo.DimProduct_upsert TO DimProduct;
 <a name="ctas-simplify-merge-bk"></a>
 
 ### <a name="l-use-ctas-to-simplify-merge-statements"></a>12. CTAS를 사용하여 MERGE 문 단순화  
-적용 대상: Azure SQL Data Warehouse 및 병렬 Data Warehouse  
+적용 대상: [!INCLUDE[ssSDW](../../includes/sssdwfull-md.md)] 및 [!INCLUDE[ssPDW](../../includes/sspdw-md.md)]  
 
 `CTAS`을 사용하여 MERGE 문을 적어도 부분적으로 대체할 수 있습니다. `INSERT`과 `UPDATE`를 단일 명령문으로 통합할 수 있습니다. 삭제된 레코드는 두 번째 문에서 닫혀야 합니다.
 
@@ -678,9 +678,9 @@ RENAME OBJECT dbo.[DimProduct_upsert]  TO [DimProduct];
 <a name="ctas-data-type-and-nullability-bk"></a>
 
 ### <a name="m-explicitly-state-data-type-and-nullability-of-output"></a>13. 데이터 형식 및 출력의 null 허용 여부를 명시적으로 지정  
-적용 대상: Azure SQL Data Warehouse 및 병렬 Data Warehouse  
+적용 대상: [!INCLUDE[ssSDW](../../includes/sssdwfull-md.md)] 및 [!INCLUDE[ssPDW](../../includes/sspdw-md.md)]  
 
-SQL Server 코드를 SQL Data Warehouse로 마이그레이션하는 경우 이 형식의 코딩 패턴을 발견할 것입니다.
+SQL Server 코드를 [!INCLUDE[ssSDW](../../includes/sssdwfull-md.md)]로 마이그레이션할 때 다음 유형의 코딩 패턴을 발견할 수도 있습니다.
 
 ```sql
 DECLARE @d DECIMAL(7,2) = 85.455
@@ -844,7 +844,7 @@ OPTION (MAXDOP 1);
  [CREATE EXTERNAL FILE FORMAT&#40;Transact-SQL&#41;](../../t-sql/statements/create-external-file-format-transact-sql.md)   
  [CREATE EXTERNAL TABLE&#40;Transact-SQL&#41;](../../t-sql/statements/create-external-table-transact-sql.md)   
  [CREATE EXTERNAL TABLE AS SELECT &#40;Transact-SQL&#41;](../../t-sql/statements/create-external-table-as-select-transact-sql.md)   
- [CREATE TABLE&#40;Azure SQL Data Warehouse&#41;](../../t-sql/statements/create-table-azure-sql-data-warehouse.md) [DROP TABLE&#40;Transact-SQL&#41;](../../t-sql/statements/drop-table-transact-sql.md)   
+ [CREATE TABLE&#40;Azure Synapse Analytics&#41;](../../t-sql/statements/create-table-azure-sql-data-warehouse.md) [DROP TABLE&#40;Transact-SQL&#41;](../../t-sql/statements/drop-table-transact-sql.md)   
  [DROP EXTERNAL TABLE &#40;Transact-SQL&#41;](../../t-sql/statements/drop-external-table-transact-sql.md)   
  [ALTER TABLE&#40;Transact-SQL&#41;](../../t-sql/statements/alter-table-transact-sql.md)   
  [ALTER EXTERNAL TABLE &#40;Transact-SQL&#41;](https://msdn.microsoft.com/library/4ae1b23c-67f6-41d0-b614-7a8de914d145)  

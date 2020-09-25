@@ -38,18 +38,18 @@ ms.assetid: aecc2f73-2ab5-4db9-b1e6-2f9e3c601fb9
 author: XiaoyuMSFT
 ms.author: xiaoyul
 monikerRange: =azure-sqldw-latest||=sqlallproducts-allversions
-ms.openlocfilehash: 8d9dce220699fcdc2448ac19727d34ddd1bdad67
-ms.sourcegitcommit: e700497f962e4c2274df16d9e651059b42ff1a10
+ms.openlocfilehash: a63931e71983b0ae5bba99fb13081cc75c93b2cd
+ms.sourcegitcommit: 3efd8bbf91f4f78dce3a4ac03348037d8c720e6a
 ms.translationtype: HT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 08/17/2020
-ms.locfileid: "88444848"
+ms.lasthandoff: 09/23/2020
+ms.locfileid: "91024534"
 ---
 # <a name="create-materialized-view-as-select-transact-sql"></a>CREATE MATERIALIZED VIEW AS SELECT(Transact-SQL)  
 
 [!INCLUDE [asa](../../includes/applies-to-version/asa.md)]
 
-이 문서에서는 솔루션 개발을 위한 Azure SQL Data Warehouse의 CREATE MATERIALIZED VIEW AS SELECT T-SQL 문에 대해 설명합니다. 코드 예제도 제공합니다.
+이 문서에서는 솔루션 개발을 위한 [!INCLUDE[ssSDW](../../includes/sssdwfull-md.md)]의 CREATE MATERIALIZED VIEW AS SELECT T-SQL 문에 대해 설명합니다. 코드 예제도 제공합니다.
 
 구체화된 뷰는 뷰 정의 쿼리에서 반환되는 데이터를 유지하고 기본 테이블에서 데이터가 변경될 때 자동으로 업데이트됩니다.   간단한 유지 관리 작업을 제공하면서 복잡한 쿼리(일반적으로 조인 및 집계를 사용한 쿼리)의 성능을 향상시킵니다.   실행 계획 자동 일치 기능을 사용할 경우 최적화 프로그램에서 뷰의 대체를 고려할 때 쿼리에서 구체화된 뷰를 참조할 필요가 없습니다.  이 기능을 통해 데이터 엔지니어는 쿼리를 변경하지 않고도 쿼리 응답 시간을 개선하기 위한 메커니즘으로 구체화된 뷰를 구현할 수 있습니다.  
   
@@ -131,7 +131,7 @@ ALTER TABLE SWITCH는 구체화된 뷰에서 참조되는 테이블에서 지원
 |사용자가 구체화된 뷰 정의의 SELECT 목록에서 STDEV(a)를 지정합니다. 여기서 ‘a’는 식입니다.|SUM(a), COUNT_BIG(a), SUM(square(a))|구체화된 뷰를 만들면 자동으로 추가됩니다.  추가적인 조치가 필요하지 않습니다. |
 | | | |
 
-만들고 나면, 구체화된 뷰는 Azure SQL Data Warehouse 인스턴스의 뷰 폴더 아래에 있는 SQL Server Management Studio 내에 표시됩니다.
+만들어진 구체화된 뷰는 SQL Server Management Studio에서 [!INCLUDE[ssSDW](../../includes/sssdwfull-md.md)] 인스턴스의 views 폴더 아래에 표시됩니다.
 
 사용자는 [SP_SPACEUSED](/sql/relational-databases/system-stored-procedures/sp-spaceused-transact-sql?view=azure-sqldw-latest) 및 [DBCC PDW_SHOWSPACEUSED](/sql/t-sql/database-console-commands/dbcc-pdw-showspaceused-transact-sql?view=azure-sqldw-latest)를 실행하여 구체화된 뷰에서 사용되는 공간을 확인할 수 있습니다.  
 
@@ -156,6 +156,6 @@ SQL 문이 새 구체화된 뷰로 인해 개선될 수 있는지 확인하려�
 [sys.pdw_materialized_view_distribution_properties &#40;Transact-SQL&#41;](/sql/relational-databases/system-catalog-views/sys-pdw-materialized-view-distribution-properties-transact-sql?view=azure-sqldw-latest)   
 [sys.pdw_materialized_view_mappings &#40;Transact-SQL&#41;](/sql/relational-databases/system-catalog-views/sys-pdw-materialized-view-mappings-transact-sql?view=azure-sqldw-latest)   
 [DBCC PDW_SHOWMATERIALIZEDVIEWOVERHEAD &#40;Transact-SQL&#41;](/sql/t-sql/database-console-commands/dbcc-pdw-showmaterializedviewoverhead-transact-sql?view=azure-sqldw-latest)   
-[SQL Data Warehouse 및 병렬 Data Warehouse 카탈로그 뷰](../../relational-databases/system-catalog-views/sql-data-warehouse-and-parallel-data-warehouse-catalog-views.md)   
-[Azure SQL Data Warehouse에서 지원되는 시스템 뷰](/azure/sql-data-warehouse/sql-data-warehouse-reference-tsql-system-views)   
-[Azure SQL Data Warehouse에서 지원되는 T-SQL 문](/azure/sql-data-warehouse/sql-data-warehouse-reference-tsql-statements)
+[[!INCLUDE[ssSDW](../../includes/sssdwfull-md.md)] 및 [!INCLUDE[ssPDW](../../includes/sspdw-md.md)] 카탈로그 뷰](../../relational-databases/system-catalog-views/sql-data-warehouse-and-parallel-data-warehouse-catalog-views.md)   
+[Azure [!INCLUDE[ssSDW](../../includes/sssdwfull-md.md)]에서 지원되는 시스템 뷰](/azure/sql-data-warehouse/sql-data-warehouse-reference-tsql-system-views)   
+[Azure [!INCLUDE[ssSDW](../../includes/sssdwfull-md.md)]에서 지원되는 T-SQL 문](/azure/sql-data-warehouse/sql-data-warehouse-reference-tsql-statements)

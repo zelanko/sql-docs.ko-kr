@@ -11,12 +11,12 @@ ms.topic: tutorial
 ms.assetid: 442c841d-d528-4bf0-8724-7156f909ee50
 author: chugugrace
 ms.author: chugu
-ms.openlocfilehash: ebfca5c6b25f16bb4f86ca692b09bbc5d0beaaa9
-ms.sourcegitcommit: e700497f962e4c2274df16d9e651059b42ff1a10
+ms.openlocfilehash: 8c30d9c27550913f5c83334ff33ff3a1cc08e1bc
+ms.sourcegitcommit: c74bb5944994e34b102615b592fdaabe54713047
 ms.translationtype: HT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 08/17/2020
-ms.locfileid: "88462068"
+ms.lasthandoff: 09/22/2020
+ms.locfileid: "90990414"
 ---
 # <a name="lesson-1-7-add-and-configure-the-ole-db-destination"></a>1-7단원: OLE DB 대상 추가 및 구성
 
@@ -43,20 +43,22 @@ ms.locfileid: "88462068"
 6.  **OLE DB 대상 편집기** 대화 상자의 **OLE DB 연결 관리자** 상자에서 **localhost.AdventureWorksDW2012**가 선택되어 있는지 확인합니다.  
   
 7.  **테이블 또는 보기 이름** 상자에서 **[dbo].[FactCurrencyRate]** 를 입력하거나 선택합니다.  
+ 
+8.  **NewFactCurrencyRate**라는 테이블이 현재 있는 경우 지금 삭제합니다. 다음 단계에서 해당 테이블을 만듭니다.
+ 
+9.  새 테이블을 만들려면 **새로 만들기** 단추를 선택합니다.  스크립트의 테이블의 이름을 **Sample OLE DB Destination**에서 **NewFactCurrencyRate**로 변경합니다.  **확인**을 선택합니다.  
+ 
+10. **확인**을 선택하면 대화 상자가 닫히고 **테이블 또는 보기 이름**이 **NewFactCurrencyRate**로 자동으로 변경됩니다.  
   
-8.  새 테이블을 만들려면 **새로 만들기** 단추를 선택합니다.  스크립트의 테이블의 이름을 **Sample OLE DB Destination**에서 **NewFactCurrencyRate**로 변경합니다.  **확인**을 선택합니다.  
+11. **매핑**을 선택합니다.  
   
-9. **확인**을 선택하면 대화 상자가 닫히고 **테이블 또는 보기 이름**이 **NewFactCurrencyRate**로 자동으로 변경됩니다.  
+12. **AverageRate**, **CurrencyKey**, **EndOfDayRate**및 **DateKey** 입력 열이 대상 열에 올바르게 매핑되어 있는지 확인합니다. 서로 같은 이름의 열이 매핑되어 있는 경우 매핑이 올바른 것입니다.  
   
-10. **매핑**을 선택합니다.  
+13. **확인**을 선택합니다.  
   
-11. **AverageRate**, **CurrencyKey**, **EndOfDayRate**및 **DateKey** 입력 열이 대상 열에 올바르게 매핑되어 있는지 확인합니다. 서로 같은 이름의 열이 매핑되어 있는 경우 매핑이 올바른 것입니다.  
+14. **Sample OLE DB Destination** 대상을 마우스 오른쪽 단추로 클릭하고 **속성**을 선택합니다.  
   
-12. **확인**을 선택합니다.  
-  
-13. **Sample OLE DB Destination** 대상을 마우스 오른쪽 단추로 클릭하고 **속성**을 선택합니다.  
-  
-14. **속성** 창에서 **LocaleID** 속성이 **영어(미국)** 로 설정되어 있고 **DefaultCodePage** 속성이 **1252**로 설정되어 있는지 확인합니다.  
+15. **속성** 창에서 **LocaleID** 속성이 **영어(미국)** 로 설정되어 있고 **DefaultCodePage** 속성이 **1252**로 설정되어 있는지 확인합니다.  
   
 ## <a name="go-to-next-task"></a>다음 작업으로 이동
 [8단계: 1단원 패키지 주석 달기 및 형식](../integration-services/lesson-1-8-making-the-lesson-1-package-easier-to-understand.md)  

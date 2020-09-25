@@ -30,12 +30,12 @@ ms.assetid: 7e1793b3-5383-4e3d-8cef-027c0c8cb5b1
 author: markingmyname
 ms.author: maghan
 monikerRange: '>=aps-pdw-2016||=azuresqldb-current||=azure-sqldw-latest||>=sql-server-2016||=sqlallproducts-allversions||>=sql-server-linux-2017||=azuresqldb-mi-current'
-ms.openlocfilehash: bb9080044b0ded77b023d6700be4bba7fd260b2b
-ms.sourcegitcommit: dd36d1cbe32cd5a65c6638e8f252b0bd8145e165
+ms.openlocfilehash: d879b6a7be0b279ab34dfa9a66bf3a8cbe58330e
+ms.sourcegitcommit: 3efd8bbf91f4f78dce3a4ac03348037d8c720e6a
 ms.translationtype: HT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 09/08/2020
-ms.locfileid: "89549434"
+ms.lasthandoff: 09/23/2020
+ms.locfileid: "91024387"
 ---
 # <a name="create-columnstore-index-transact-sql"></a>CREATE COLUMNSTORE INDEX(Transact-SQL)
 [!INCLUDE [sql-asdb-asdbmi-asa-pdw](../../includes/applies-to-version/sql-asdb-asdbmi-asa-pdw.md)]
@@ -103,7 +103,7 @@ CREATE [NONCLUSTERED]  COLUMNSTORE INDEX index_name
 ```  
   
 ```syntaxsql
--- Syntax for Azure SQL Data Warehouse and Parallel Data Warehouse  
+-- Syntax for Azure Synapse Analytics and Parallel Data Warehouse  
   
 CREATE CLUSTERED COLUMNSTORE INDEX index_name
     ON { database_name.schema_name.table_name | schema_name.table_name | table_name } 
@@ -301,7 +301,7 @@ CREATE COLUMNSTORE INDEX ncci ON Sales.OrderLines (StockItemID, Quantity, UnitPr
 ##  <a name="general-remarks"></a><a name="GenRemarks"></a> 일반적인 주의 사항  
 임시 테이블에 대한 columnstore 인덱스를 만들 수 있습니다. 테이블이 삭제되거나 세션이 종료되면 인덱스도 삭제됩니다.  
 
-정렬된 클러스터형 columnstore 인덱스는 문자열 열을 제외하고 Azure SQL Data Warehouse에서 지원되는 모든 데이터 형식의 열에서 만들 수 있습니다.  
+문자열 열을 제외하고 [!INCLUDE[ssSDW](../../includes/sssdwfull-md.md)]에서 지원되는 모든 데이터 형식의 열에 순서가 지정된 클러스터형 columnstore 인덱스를 만들 수 있습니다.  
  
 ## <a name="filtered-indexes"></a>필터링된 인덱스  
 필터링된 인덱스는 테이블에서 적은 비율의 행을 선택하는 쿼리에 적합한 최적화된 비클러스터형 인덱스입니다. 이 인덱스에서는 필터 조건자를 사용하여 테이블의 일부 데이터를 인덱싱합니다. 잘 디자인된 필터링된 인덱스는 쿼리 성능을 개선하고 스토리지 비용과 유지 관리 비용을 줄일 수 있습니다.  

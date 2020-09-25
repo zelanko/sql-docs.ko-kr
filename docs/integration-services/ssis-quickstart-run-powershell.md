@@ -1,7 +1,7 @@
 ---
 description: PowerShell을 사용하여 SSIS 패키지 실행
 title: PowerShell을 사용하여 SSIS 패키지 실행 | Microsoft Docs
-ms.date: 05/21/2018
+ms.date: 09/17/2020
 ms.topic: quickstart
 ms.prod: sql
 ms.prod_service: integration-services
@@ -9,12 +9,12 @@ ms.custom: ''
 ms.technology: integration-services
 author: chugugrace
 ms.author: chugu
-ms.openlocfilehash: 659fb23619eeb8f4f74c43307a03b082dfca1919
-ms.sourcegitcommit: e700497f962e4c2274df16d9e651059b42ff1a10
+ms.openlocfilehash: a876164579679802c5dc0335d01dd5ec8839e95b
+ms.sourcegitcommit: c74bb5944994e34b102615b592fdaabe54713047
 ms.translationtype: HT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 08/17/2020
-ms.locfileid: "88422177"
+ms.lasthandoff: 09/22/2020
+ms.locfileid: "90989926"
 ---
 # <a name="run-an-ssis-package-with-powershell"></a>PowerShell을 사용하여 SSIS 패키지 실행
 
@@ -33,7 +33,7 @@ Azure SQL Database 서버는 포트 1433에서 수신 대기합니다. 회사 �
 
 -   Windows의 SQL Server
 
--   Azure SQL Database. Azure에서 패키지를 배포하고 실행하는 방법에 대한 자세한 내용은 [SQL Server Integration Services 워크로드를 클라우드로 리프트 앤 시프트](lift-shift/ssis-azure-lift-shift-ssis-packages-overview.md)를 참조하세요.
+-   Azure SQL MI(Managed Instance)가 SSIS 카탈로그(SSISDB)를 호스트하는 ADF(Azure Data Factory)의 SSIS IR(통합 런타임). Azure에서 패키지를 배포하고 실행하는 방법에 대한 자세한 내용은 [SQL Server Integration Services 워크로드를 클라우드로 리프트 앤 시프트](lift-shift/ssis-azure-lift-shift-ssis-packages-overview.md)를 참조하세요.
 
 이 빠른 시작의 정보를 사용하여 Linux에서 SSIS 패키지를 실행할 수 없습니다. Linux에서 패키지를 실행하는 방법에 대한 자세한 내용은 [Linux에서 SSIS를 사용하여 데이터 추출, 변환 및 로드](../linux/sql-server-linux-migrate-ssis.md)를 참조하세요.
 

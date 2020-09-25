@@ -1,6 +1,6 @@
 ---
-title: 확장성에 대한 보안 개요
-description: SQL Server Machine Learning Services의 확장성 프레임워크에 대한 보안 개요. 로그인 및 사용자 계정, SQL Server 실행 패드 서비스, 작업자 계정, 여러 스크립트 실행 및 파일 권한에 대한 보안
+title: 확장성을 위한 보안 아키텍처
+description: 이 문서에서는 SQL Server Machine Learning Services 확장성 프레임워크의 보안 아키텍처에 대해 설명합니다. 여기에는 로그인 및 사용자 계정, SQL Server 실행 패드 서비스, 작업자 계정, 여러 스크립트 실행, 파일 사용 권한에 대한 보안이 포함됩니다.
 ms.prod: sql
 ms.technology: machine-learning-services
 ms.date: 07/14/2020
@@ -8,24 +8,26 @@ ms.topic: conceptual
 author: garyericson
 ms.author: garye
 ms.reviewer: davidph
-ms.custom: seo-lt-2019
+ms.custom: contperfq1, seo-lt-2019
 monikerRange: '>=sql-server-2016||>=sql-server-linux-ver15||=sqlallproducts-allversions'
-ms.openlocfilehash: 5110f96b654847a0288471d28c72afa37d3df8c2
-ms.sourcegitcommit: 9b41725d6db9957dd7928a3620fe4db41eb51c6e
+ms.openlocfilehash: 61294897524a0e260e457cbf98e892cad940ca54
+ms.sourcegitcommit: c74bb5944994e34b102615b592fdaabe54713047
 ms.translationtype: HT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 08/13/2020
-ms.locfileid: "88179852"
+ms.lasthandoff: 09/22/2020
+ms.locfileid: "90989842"
 ---
-# <a name="security-overview-for-the-extensibility-framework-in-sql-server-machine-learning-services"></a>SQL Server Machine Learning Services의 확장성 프레임워크에 대한 보안 개요
+# <a name="security-architecture-for-the-extensibility-framework-in-sql-server-machine-learning-services"></a>SQL Server Machine Learning Services 확장성 프레임워크의 보안 아키텍처
 
 [!INCLUDE [SQL Server 2016 and later](../../includes/applies-to-version/sqlserver2016.md)]
 
-이 문서에서는 [SQL Server Machine Learning Services](../sql-server-machine-learning-services.md)에서 SQL Server 데이터베이스 엔진 및 관련 구성 요소를 확장성 프레임워크와 통합하는 데 사용되는 전체 보안 아키텍처에 대해 설명합니다. 또한 보안 개체, 서비스, 프로세스 ID 및 사용 권한을 살펴봅니다. SQL Server 확장성의 주요 개념 및 구성 요소에 대한 자세한 내용은 [SQL Server Machine Learning Services의 확장성 아키텍처](extensibility-framework.md)를 참조하세요.
+이 문서에서는 [SQL Server Machine Learning Services](../sql-server-machine-learning-services.md)의 확장성 프레임워크와 SQL Server 데이터베이스 엔진 및 관련 구성 요소를 통합하는 데 사용되는 보안 아키텍처에 대해 설명합니다. 또한 보안 개체, 서비스, 프로세스 ID 및 사용 권한을 살펴봅니다. 실행 패드의 용도, SQLRUserGroup 및 작업자 계정, 외부 스크립트의 프로세스 격리, 사용자 ID가 작업자 계정에 매핑되는 방식을 중점적으로 설명했습니다.
+
+SQL Server 확장성의 주요 개념 및 구성 요소에 대한 자세한 내용은 [SQL Server Machine Learning Services의 확장성 아키텍처](extensibility-framework.md)를 참조하세요.
 
 ## <a name="securables-for-external-script"></a>외부 스크립트에 대한 보안 개체
 
-R, Python 또는 외부 언어(예: Java, .NET)로 작성된 외부 스크립트는 이 목적으로 만든 [시스템 저장 프로시저](../../relational-databases/system-stored-procedures/sp-execute-external-script-transact-sql.md)에 입력 매개 변수로 제출되거나 사용자가 정의한 저장 프로시저에 래핑됩니다. T-SQL [PREDICT](../../t-sql/queries/predict-transact-sql.md) 함수에서 호출할 수 있으며 미리 학습되고 데이터베이스 테이블에 이진 형식으로 저장되는 모델이 있을 수도 있습니다.
+외부 스크립트는 이 용도로 생성된 [시스템 저장 프로시저](../../relational-databases/system-stored-procedures/sp-execute-external-script-transact-sql.md)에 대한 입력 매개 변수로 제출되거나 사용자가 정의한 저장 프로시저에 래핑됩니다. R, Python 또는 외부 언어(예: Java 또는 .NET)로 스크립트를 작성할 수 있습니다. T-SQL [PREDICT](../../t-sql/queries/predict-transact-sql.md) 함수에서 호출할 수 있으며 미리 학습되고 데이터베이스 테이블에 이진 형식으로 저장되는 모델이 있을 수도 있습니다.
 
 기존 데이터베이스 스키마 개체, 저장 프로시저 및 테이블을 통해 스크립트가 제공되므로 SQL Server Machine Learning Services를 위한 새로운 [보안 개체](../../relational-databases/security/securables.md)가 없습니다.
 
@@ -35,7 +37,7 @@ R, Python 또는 외부 언어(예: Java, .NET)로 작성된 외부 스크립트
 
 ## <a name="permissions"></a>사용 권한
 
-데이터베이스 로그인 및 역할에 대한 SQL Server의 데이터 보안 모델이 외부 스크립트로 확장됩니다. SQL Server 데이터를 사용하거나 SQL Server에서 컴퓨팅 컨텍스트로 실행되는 외부 스크립트를 실행하려면 SQL Server 로그인 또는 Windows 사용자 계정이 필요합니다. 임시 쿼리를 실행할 권한이 있는 데이터베이스 사용자는 외부 스크립트에서 동일한 데이터에 액세스할 수 있습니다.
+데이터베이스 로그인 및 역할의 SQL Server 데이터 보안 모델이 외부 스크립트로 확장됩니다. SQL Server 데이터를 사용하거나 SQL Server에서 컴퓨팅 컨텍스트로 실행되는 외부 스크립트를 실행하려면 SQL Server 로그인 또는 Windows 사용자 계정이 필요합니다. 쿼리를 실행할 수 있는 권한이 있는 데이터베이스 사용자는 외부 스크립트에서 동일한 데이터에 액세스할 수 있습니다.
 
 다음과 같은 외부 스크립트 요구 사항에 따라 로그인 또는 사용자 계정에서 여러 수준의 액세스가 필요할 수 있는 *보안 주체*를 식별합니다.
 
@@ -78,7 +80,7 @@ SQL Server를 실행 컨텍스트로 사용하여 외부 스크립트를 실행�
 확장성 프레임워크는 SQL Server 설치의 [서비스 목록](../../database-engine/configure-windows/configure-windows-service-accounts-and-permissions.md#Service_Details)에 하나의 새 NT 서비스를 추가합니다. [**SQL Server 실행 패드(MSSSQLSERVER)** ](extensibility-framework.md#launchpad).
 
 데이터베이스 엔진은 SQL Server **실행 패드** 서비스를 사용하여 외부 스크립트 세션을 별도의 프로세스로 인스턴스화합니다. 
-SQL Server, 실행 패드 자체 및 저장 프로시저나 호스트 쿼리 실행에 사용된 사용자 ID와 별개인 권한이 낮은 계정으로 프로세스가 실행됩니다. SQL Server의 외부 스크립트에 대한 보안 및 격리 모델에서는 기본적으로 별도의 프로세스에서 권한이 낮은 계정으로 스크립트를 실행합니다.
+해당 프로세스는 낮은 권한 계정으로 실행됩니다. 이 계정은 저장 프로시저 또는 호스트 쿼리 실행에 사용된 사용자 ID, SQL Server, 실행 패드 자체와는 별개입니다. SQL Server의 외부 스크립트 보안 및 격리 모델은 별도의 프로세스에서 낮은 권한 계정으로 스크립트를 실행하는 것을 기반으로 합니다.
 
 SQL Server는 위성 프로세스를 시작하는 데 사용되는 권한이 낮은 작업자 계정과 호출 사용자 ID 간의 매핑도 유지 관리합니다. 데이터와 작업을 위해 스크립트나 코드에서 SQL Server를 콜백하는 일부 시나리오에서는 SQL Server가 ID 전송을 원활하게 관리할 수 있습니다. 호출하는 사용자에게 충분한 사용 권한이 있는 경우 SELECT 문 또는 호출 함수와 기타 프로그래밍 개체가 포함된 스크립트는 대개 성공합니다.
 
@@ -127,13 +129,13 @@ SQL Server는 위성 프로세스를 시작하는 데 사용되는 권한이 낮
 
 + 사용자 계정 풀의 크기는 정적이고 기본값은 20으로, 20개의 동시 세션을 지원합니다. 동시에 시작될 수 있는 외부 런타임 세션 수는 이 사용자 계정 풀의 크기에 따라 제한됩니다. 
 
-+ 풀의 작업자 계정 이름은 SQLInstanceName*nn* 형식입니다. 예를 들어, 기본 인스턴스에서 **SQLRUserGroup**은 이름이MSSQLSERVER01, MSSQLSERVER02......MSSQLSERVER20인 계정을 포함합니다.
++ 풀의 작업자 계정 이름은 SQLInstanceName*nn* 형식입니다. 예를 들어 기본 인스턴스에서 **SQLRUserGroup**은 이름이 MSSQLSERVER01에서 MSSQLSERVER20까지인 계정을 포함합니다.
 
 병렬화된 작업은 추가 계정을 사용하지 않습니다. 예를 들어, 사용자가 병렬 처리를 사용하는 채점 작업을 실행하는 경우 모든 스레드에 동일한 작업자 계정이 다시 사용됩니다. 기계 학습을 많이 사용하려는 경우 외부 스크립트를 실행하는 데 사용되는 계정 수를 늘릴 수 있습니다. 자세한 내용은 [SQL Server Machine Learning Services에서 외부 스크립트의 동시 실행 확장](../../machine-learning/administration/scale-concurrent-execution-external-scripts.md)을 참조하세요.
 
 ### <a name="permissions-granted-to-sqlrusergroup"></a>SQLRUserGroup에 부여된 사용 권한
 
-기본적으로 **SQLRUserGroup**의 구성원에게는 SQL Server와 함께 설치되는 R 및 Python 배포의 실행 파일, 라이브러리 및 기본 제공 데이터 세트에 대한 액세스 권한과 함께 SQL Server **Binn**, **R_SERVICES** 및 **PYTHON_SERVICES** 디렉터리의 파일에 대한 읽기 및 실행 권한이 있습니다. 
+기본적으로 **SQLRUserGroup**의 멤버는 SQL Server **Binn**, **R_SERVICES**, **PYTHON_SERVICES** 디렉터리의 파일에 대한 읽기 및 실행 권한을 갖습니다. 여기에는 SQL Server와 함께 설치된 R 및 Python 배포의 실행 파일, 라이브러리, 기본 제공 데이터 세트에 대한 액세스 권한이 포함됩니다. 
 
 SQL Server의 중요한 리소스를 보호하기 위해 필요에 따라 **SQLRUserGroup**에 대한 액세스를 거부하는 ACL(액세스 제어 목록)을 정의할 수 있습니다. 반대로, SQL Server 자체와 별도로 호스트 컴퓨터에 있는 로컬 데이터 리소스에 대한 사용 권한을 부여할 수도 있습니다. 
 
@@ -192,13 +194,13 @@ print(system("ls -al /var/opt/mssql-extensibility/data/*/*"))
 
 ## <a name="implied-authentication-loopback-requests"></a>암시적 인증(루프백 요청)
 
-‘암시적 인증’은 데이터 또는 작업에 대한 루프백 요청에서 권한이 낮은 작업자 계정으로 실행되는 외부 프로세스가 SQL Server에 신뢰할 수 있는 사용자 ID로 제공되는 연결 요청 동작을 설명합니다.  개념적으로 묵시적 인증은 R 또는 Python 스크립트와 같은 외부 프로세스에서 요청이 시작되는 경우 신뢰할 수 있는 연결을 지정하는 SQL Server 연결 문자열의 Windows 인증에 고유합니다. ‘루프백’이라고도 합니다.
+‘암시적 인증’은 데이터 또는 작업에 대한 루프백 요청에서 권한이 낮은 작업자 계정으로 실행되는 외부 프로세스가 SQL Server에 신뢰할 수 있는 사용자 ID로 제공되는 연결 요청 동작을 설명합니다.  개념적으로 묵시적 인증은 R 또는 Python 스크립트와 같은 외부 프로세스에서 요청이 시작되는 경우 신뢰할 수 있는 연결을 지정하는 SQL Server 연결 문자열의 Windows 인증에 고유합니다. ‘루프백’이라고도 합니다. 
 
 신뢰할 수 있는 연결은 외부 스크립트에서 작업할 수 있지만 추가 구성이 필요합니다. 확장성 아키텍처에서 외부 프로세스는 작업자 계정으로 실행되며, 부모 **SQLRUserGroup**에서 사용 권한을 상속합니다. 연결 문자열에서 `Trusted_Connection=True`를 지정하면 연결 요청에서 작업자 계정의 ID가 제공되지만 SQL Sever에서는 기본적으로 이를 알 수 없습니다.
 
 신뢰할 수 있는 연결이 성공하려면 **SQLRUserGroup**에 대한 로그인을 만들어야 합니다. 그러면 **SQLRUserGroup** 구성원의 신뢰할 수 있는 연결에 SQL Server에 대한 로그인 권한이 부여됩니다. 단계별 지침은 [데이터베이스 로그인에 SQLRUserGroup 추가](../../machine-learning/security/create-a-login-for-sqlrusergroup.md)를 참조하세요.
 
-신뢰할 수 있는 연결이 가장 널리 사용되는 연결 요청 구성은 아닙니다. 외부 스크립트에서 연결을 지정할 때는 SQL 로그인 또는 ODBC 데이터 원본에 연결하는 경우 정규화된 사용자 이름과 암호를 사용하는 것이 더 일반적입니다.
+신뢰할 수 있는 연결이 가장 널리 사용되는 연결 요청 구성은 아닙니다. 외부 스크립트에서 연결을 지정할 때는 SQL 로그인 또는 ODBC 데이터 원본에 연결해야 하는 경우 정규화된 사용자 이름과 암호를 사용하는 것이 더 일반적입니다.
 
 ### <a name="how-implied-authentication-works-for-external-script-sessions"></a>외부 스크립트 세션에서 암시적 인증의 작동 방식
 

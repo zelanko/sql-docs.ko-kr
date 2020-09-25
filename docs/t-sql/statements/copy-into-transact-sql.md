@@ -1,7 +1,7 @@
 ---
 title: COPY INTO(Transact-SQL)(미리 보기)
-titleSuffix: (SQL Data Warehouse) - SQL Server
-description: 외부 스토리지 계정에서 로드하려면 Azure SQL Data Warehouse의 COPY 문을 사용합니다.
+titleSuffix: (Azure Synapse Analytics) - SQL Server
+description: Azure Synapse Analytics의 COPY 문을 사용하여 외부 스토리지 계정에서 로드할 수 있습니다.
 ms.date: 08/05/2020
 ms.prod: sql
 ms.prod_service: database-engine, sql-data-warehouse
@@ -18,18 +18,18 @@ dev_langs:
 author: kevinvngo
 ms.author: kevin
 monikerRange: =sqlallproducts-allversions||=azure-sqldw-latest
-ms.openlocfilehash: e2f225a66be811b3cafe13c0ccf89eb81700a1aa
-ms.sourcegitcommit: 6d53ecfdc463914f045c20eda96da39dec22acca
+ms.openlocfilehash: 68c4e1d526a1385dee1a5868bbf382b25e21d797
+ms.sourcegitcommit: 3efd8bbf91f4f78dce3a4ac03348037d8c720e6a
 ms.translationtype: HT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 08/26/2020
-ms.locfileid: "88901570"
+ms.lasthandoff: 09/23/2020
+ms.locfileid: "91024562"
 ---
-# <a name="copy-transact-sql-preview"></a>COPY(Transact-SQL)(미리 보기)
+# <a name="copy-transact-sql"></a>COPY(Transact-SQL)
 
 [!INCLUDE [asa](../../includes/applies-to-version/asa.md)]
 
-이 문서에서는 외부 스토리지 계정에서 로드하기 위해 Azure SQL Data Warehouse의 COPY 문을 사용하는 방법을 설명합니다. COPY 문은 SQL Data Warehouse에 대한 처리량이 높은 데이터 수집을 위한 가장 뛰어난 유연성을 제공합니다. 다음 기능에 COPY를 사용합니다.
+이 문서에서는 [!INCLUDE[ssSDW](../../includes/sssdwfull-md.md)]의 COPY 문을 사용하여 외부 스토리지 계정에서 로드하는 방법을 설명합니다. COPY 문은 높은 처리량으로 데이터를 [!INCLUDE[ssSDW](../../includes/sssdwfull-md.md)]로 수집할 수 있도록 가장 뛰어난 유연성을 제공합니다. 다음 기능에 COPY를 사용합니다.
 
 - 권한이 낮은 사용자를 사용하여 데이터 웨어하우스에 대한 엄격한 제어 권한 없이 로드
 - 추가 데이터베이스 개체를 만들 필요 없이 단일 T-SQL 문을 실행
@@ -40,9 +40,6 @@ ms.locfileid: "88901570"
 - CSV 파일에 대한 사용자 지정 행 종결자 지정
 - CSV 파일에 대한 SQL Server 날짜 형식 활용
 - 스토리지 위치 경로에 와일드카드 및 여러 파일 지정
-
-> [!NOTE]  
-> COPY 문은 현재 공개 미리 보기로 제공됩니다.
 
 COPY 문을 사용하는 포괄적인 예제 및 빠른 시작은 다음 설명서를 참조하세요.
 
@@ -274,9 +271,9 @@ IDENTITY_INSERT는 가져온 데이터 파일의 ID 값 또는 값을 ID 열에 
 - [ADMINISTER DATABASE BULK OPERATIONS](grant-database-permissions-transact-sql.md?view=azure-sqldw-latest#remarks)
 - [INSERT ](grant-database-permissions-transact-sql.md?view=azure-sqldw-latest#remarks)
 
-INSERT 및 ADMINISTER BULK OPERATIONS 권한이 필요합니다. Azure SQL Data Warehouse에서는 INSERT 및 ADMINISTER DATABASE BULK OPERATIONS 권한이 필요합니다.
+INSERT 및 ADMINISTER BULK OPERATIONS 권한이 필요합니다. [!INCLUDE[ssSDW](../../includes/sssdwfull-md.md)]에서는 INSERT 및 ADMINISTER DATABASE BULK OPERATIONS 권한이 필요합니다.
 
-## <a name="examples"></a>예제  
+## <a name="examples"></a>예  
 
 ### <a name="a-load-from-a-public-storage-account"></a>A. 퍼블릭 스토리지 계정에서 로드
 
@@ -398,7 +395,7 @@ WITH (
 ## <a name="faq"></a>FAQ
 
 ### <a name="what-is-the-performance-of-the-copy-command-compared-to-polybase"></a>PolyBase 대비 COPY 명령의 성능은 어떤가요?
-COPY 명령은 워크로드에 따라 성능이 향상됩니다. 퍼블릭 미리 보기 중에 최상의 로드 성능을 얻으려면 CSV를 로드할 때 입력을 여러 개의 파일로 분할하는 것이 좋습니다. 미리 보기 기간 동안 Microsoft 팀과 성능 결과를 공유하세요! sqldwcopypreview@service.microsoft.com
+COPY 명령은 워크로드에 따라 성능이 향상됩니다. 최적의 로드 성능을 위해, CSV를 로드할 때는 입력 파일을 여러 개의 파일로 분할하는 것이 좋습니다.
 
 ### <a name="what-is-the-file-splitting-guidance-for-the-copy-command-loading-csv-files"></a>CSV 파일을 로드하는 COPY 명령의 파일 분할 지침은 무엇인가요?
 파일 수에 대한 지침은 아래 표에 나와 있습니다. 권장 파일 수에 도달하면 파일이 클수록 성능이 향상됩니다. 간단한 파일 분할 환경을 보려면 다음 [설명서](https://techcommunity.microsoft.com/t5/azure-synapse-analytics/how-to-maximize-copy-load-throughput-with-file-splits/ba-p/1314474)를 참조하세요. 
@@ -446,4 +443,4 @@ COPY 명령은 올해(2020년) 말에 출시될 예정입니다.
 
 ## <a name="see-also"></a>참고 항목  
 
- [SQL Data Warehouse를 사용하여 개요 로드](/azure/sql-data-warehouse/design-elt-data-loading)
+ [[!INCLUDE[ssSDW](../../includes/sssdwfull-md.md)]를 사용한 로드 개요](/azure/sql-data-warehouse/design-elt-data-loading)

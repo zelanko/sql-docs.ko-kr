@@ -3,31 +3,29 @@ title: Python 및 R 런타임 업그레이드(바인딩)
 description: sqlbindr.exe를 사용해서 Machine Learning Server에 바인딩하여 SQL Server Machine Learning Services 또는 SQL Server R Services에서 Python 및 R 런타임을 업그레이드합니다.
 ms.prod: sql
 ms.technology: machine-learning-services
-ms.date: 08/17/2020
+ms.date: 09/16/2020
 ms.topic: how-to
 author: cawrites
 ms.author: chadam
 monikerRange: =sql-server-2016||=sql-server-2017||=sqlallproducts-allversions
-ms.openlocfilehash: 63bd14d9229d276966a3e118d097316a3ab58a4f
-ms.sourcegitcommit: 5f658b286f56001b055a8898d97e74906516dc99
+ms.openlocfilehash: f6b7d5b0dbff20961b6f719e0e0f3360433712f8
+ms.sourcegitcommit: c74bb5944994e34b102615b592fdaabe54713047
 ms.translationtype: HT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 09/11/2020
-ms.locfileid: "90009379"
+ms.lasthandoff: 09/22/2020
+ms.locfileid: "90990117"
 ---
 # <a name="upgrade-python-and-r-runtime-with-binding-in-sql-server-machine-learning-services"></a>SQL Server Machine Learning Services에서 바인딩을 사용하여 Python 및 R 런타임 업그레이드
 [!INCLUDE [SQL Server 2016 and 2017](../../includes/applies-to-version/sqlserver2016-2017-only.md)]
 
-이 문서에서는 **바인딩**이라는 설치 프로세스를 사용하여 [SQL Server 2016 R Services](../r/sql-server-r-services.md) 또는 [SQL Server 2017 Machine Learning Services](../sql-server-machine-learning-services.md)에서 R 또는 Python 런타임을 업그레이드하는 방법을 설명합니다.
+이 문서에서는 **바인딩**이라는 설치 프로세스를 사용하여 [SQL Server 2016 R Services](../r/sql-server-r-services.md) 또는 [SQL Server 2017 Machine Learning Services](../sql-server-machine-learning-services.md)에서 R 또는 Python 런타임을 업그레이드하는 방법을 설명합니다. [Microsoft Machine Learning Server](https://docs.microsoft.com/machine-learning-server)에 *바인딩*하여 [최신 버전의 Python 및 R](#version-map)을 가져올 수 있습니다.
 
 > [!IMPORTANT]
 > 이 문서에서는 바인딩이라고 하는 R 및 Python 런타임을 업그레이드하는 이전 방법을 설명합니다. **SQL Server 2016 SP(서비스 팩) 2에 대한 CU(누적 업데이트) 14 이상** 또는 **SQL Server 2017에 대한 CU(누적 업데이트) 22 이상**을 설치한 경우에는 대신 [기본 R 또는 Python 언어 런타임을 이후 버전으로 변경](change-default-language-runtime-version.md)하는 방법을 참조하세요.
 
-Microsoft Machine Learning Server에 바인딩하여 [최신 버전의 Python 및 R](#version-map)을 가져올 수 있습니다. 버전은 SQL Server Machine Learning Services(데이터베이스 내) 및 SQL Server R Services(데이터베이스 내) 모두에 적용됩니다.
-
 ## <a name="what-is-binding"></a>바인딩이란?
 
-바인딩은 **R_SERVICES** 및 **PYTHON_SERVICES** 폴더 내용을 [Microsoft Machine Learning Server](https://docs.microsoft.com/machine-learning-server/index)에서 제공되는 새로운 실행 파일, 라이브러리 및 도구들로 바꾸는 설치 프로세스입니다.
+바인딩은 **R_SERVICES** 및 **PYTHON_SERVICES** 폴더 내용을 [Microsoft Machine Learning Server](https://docs.microsoft.com/machine-learning-server)에서 제공되는 새로운 실행 파일, 라이브러리 및 도구들로 바꾸는 설치 프로세스입니다.
 
 서비스 모델에 포함된 업로드된 구성 요소가 변경되었습니다. 서비스 업데이트는 [최신 수명 주기](https://support.microsoft.com/help/30881/modern-lifecycle-policy)에서 [Microsoft R Server & Machine Learning Server 지원 타임라인](https://docs.microsoft.com/machine-learning-server/resources-servicing-support)과 일치합니다.
 

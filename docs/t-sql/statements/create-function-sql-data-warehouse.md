@@ -1,6 +1,6 @@
 ---
-description: CREATE FUNCTION(SQL Data Warehouse)
-title: CREATE FUNCTION(SQL Data Warehouse) | Microsoft Docs
+description: CREATE FUNCTION(Azure Synapse Analytics)
+title: CREATE FUNCTION(Azure Synapse Analytics) | Microsoft Docs
 ms.custom: ''
 ms.date: 08/10/2017
 ms.prod: sql
@@ -14,14 +14,14 @@ ms.assetid: 8cad1b2c-5ea0-4001-9060-2f6832ccd057
 author: juliemsft
 ms.author: jrasnick
 monikerRange: '>= aps-pdw-2016 || = azure-sqldw-latest || = sqlallproducts-allversions'
-ms.openlocfilehash: 2715fe9bd9586105a498660c146e252669268aba
-ms.sourcegitcommit: e700497f962e4c2274df16d9e651059b42ff1a10
+ms.openlocfilehash: 4d9466a41f8b8d6e8f1743e74f55a3b29ca6c79b
+ms.sourcegitcommit: 3efd8bbf91f4f78dce3a4ac03348037d8c720e6a
 ms.translationtype: HT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 08/17/2020
-ms.locfileid: "88426655"
+ms.lasthandoff: 09/23/2020
+ms.locfileid: "91024335"
 ---
-# <a name="create-function-sql-data-warehouse"></a>CREATE FUNCTION(SQL Data Warehouse)
+# <a name="create-function-azure-synapse-analytics"></a>CREATE FUNCTION(Azure Synapse Analytics)
 [!INCLUDE[applies-to-version/asa-pdw](../../includes/applies-to-version/asa-pdw.md)]
 
   [!INCLUDE[ssSDW](../../includes/sssdw-md.md)]에서 사용자 정의 함수를 만듭니다. 사용자 정의 함수는 매개 변수를 허용하고 복잡한 계산 등의 동작을 수행하며 해당 동작의 결과를 값으로 반환하는 [!INCLUDE[tsql](../../includes/tsql-md.md)] 루틴입니다. 반환 값은 스칼라(단일) 값이어야 합니다. 이 문을 사용하여 다음과 같은 상황에서 다시 사용할 수 있는 루틴을 만들 수 있습니다.  

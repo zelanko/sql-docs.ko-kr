@@ -8,12 +8,12 @@ ms.topic: conceptual
 ms.prod: sql
 ms.technology: linux
 ms.assetid: 31ddfb80-f75c-4f51-8540-de6213cb68b8
-ms.openlocfilehash: 6aff6f8a35a28b76ad3bbfb92079bbaa9659cd7b
-ms.sourcegitcommit: 04fb4c2d7ccddd30745b334b319d9d2dd34325d6
+ms.openlocfilehash: 1d917c3f205f6b4b8d5872cf0b853316ed6e913d
+ms.sourcegitcommit: c74bb5944994e34b102615b592fdaabe54713047
 ms.translationtype: HT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 09/09/2020
-ms.locfileid: "89569953"
+ms.lasthandoff: 09/22/2020
+ms.locfileid: "90990136"
 ---
 # <a name="quickstart-install-sql-server-and-create-a-database-on-suse-linux-enterprise-server"></a>빠른 시작: SQL Server 설치 및 SUSE Linux Enterprise Server에 데이터베이스 만들기
 
@@ -145,6 +145,12 @@ SLES에서 SQL Server을 구성하려면 터미널에서 다음 명령을 실행
 
    ```bash
    sudo zypper --gpg-auto-import-keys refresh 
+   ```
+   
+   Microsoft 패키지 서명 키가 시스템에 설치되어 있는지 확인하려면 다음 명령을 사용하여 키를 가져옵니다. 
+   
+   ```bash
+   sudo rpm --import https://packages.microsoft.com/keys/microsoft.asc
    ```
    
 3. 다음 명령을 실행하여 SQL Server를 설치합니다.

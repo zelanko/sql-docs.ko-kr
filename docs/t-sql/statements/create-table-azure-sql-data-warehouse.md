@@ -1,6 +1,6 @@
 ---
-description: CREATE TABLE(Azure SQL Data Warehouse)
-title: CREATE TABLE(Azure SQL Data Warehouse) | Microsoft Docs
+description: CREATE TABLE(Azure Synapse Analytics)
+title: CREATE TABLE(Azure Synapse Analytics) | Microsoft Docs
 ms.custom: ''
 ms.date: 07/03/2019
 ms.service: sql-data-warehouse
@@ -12,23 +12,23 @@ ms.assetid: ea21c73c-40e8-4c54-83d4-46ca36b2cf73
 author: julieMSFT
 ms.author: jrasnick
 monikerRange: '>= aps-pdw-2016 || = azure-sqldw-latest || = sqlallproducts-allversions'
-ms.openlocfilehash: df8d395f6d799f817a02943e59f98a29ac79aa29
-ms.sourcegitcommit: e700497f962e4c2274df16d9e651059b42ff1a10
+ms.openlocfilehash: 106be8b84605016e3fa0d9217d75355f7109221e
+ms.sourcegitcommit: c74bb5944994e34b102615b592fdaabe54713047
 ms.translationtype: HT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 08/17/2020
-ms.locfileid: "88467246"
+ms.lasthandoff: 09/22/2020
+ms.locfileid: "90989825"
 ---
-# <a name="create-table-azure-sql-data-warehouse"></a>CREATE TABLE(Azure SQL Data Warehouse)
+# <a name="create-table-azure-synapse-analytics"></a>CREATE TABLE(Azure Synapse Analytics)
 
 [!INCLUDE[applies-to-version/asa-pdw](../../includes/applies-to-version/asa-pdw.md)]
 
   [!INCLUDE[ssSDW](../../includes/sssdw-md.md)] 또는 [!INCLUDE[ssPDW](../../includes/sspdw-md.md)]에서 새 테이블을 만듭니다.  
 
-테이블 및 사용 방법을 이해하려면 [SQL Data Warehouse의 테이블](https://azure.microsoft.com/documentation/articles/sql-data-warehouse-tables-overview/)을 참조하세요.
+테이블 및 테이블 사용 방법을 알아보려면 [[!INCLUDE[ssSDW](../../includes/sssdwfull-md.md)]의 테이블](https://azure.microsoft.com/documentation/articles/sql-data-warehouse-tables-overview/)을 참조하세요.
 
 > [!NOTE]
->  이 문서에서 SQL Data Warehouse에 대한 토론은 다른 언급이 없는 경우 SQL Data Warehouse 및 병렬 데이터 웨어하우스 모두에 적용됩니다.
+>  다른 설명이 없는 한, 이 문서의 [!INCLUDE[ssSDW](../../includes/sssdwfull-md.md)] 관련 내용은 [!INCLUDE[ssSDW](../../includes/sssdwfull-md.md)] 및 [!INCLUDE[ssPDW](../../includes/sspdw-md.md)]에 모두 적용됩니다.
 
  ![문서 링크 아이콘](../../database-engine/configure-windows/media/topic-link.gif "문서 링크 아이콘") [Transact-SQL 구문 규칙](../../t-sql/language-elements/transact-sql-syntax-conventions-transact-sql.md)  
 
@@ -59,14 +59,14 @@ CREATE TABLE { database_name.schema_name.table_name | schema_name.table_name | t
 
 <table_option> ::=
     {
-       CLUSTERED COLUMNSTORE INDEX --default for SQL Data Warehouse 
+       CLUSTERED COLUMNSTORE INDEX --default for Azure Synapse Analytics 
       | CLUSTERED COLUMNSTORE INDEX ORDER (column [,...n])  
       | HEAP --default for Parallel Data Warehouse
       | CLUSTERED INDEX ( { index_column_name [ ASC | DESC ] } [ ,...n ] ) -- default is ASC
     }  
     {
         DISTRIBUTION = HASH ( distribution_column_name )
-      | DISTRIBUTION = ROUND_ROBIN -- default for SQL Data Warehouse
+      | DISTRIBUTION = ROUND_ROBIN -- default for Azure Synapse Analytics
       | DISTRIBUTION = REPLICATE -- default for Parallel Data Warehouse
     }
     | PARTITION ( partition_column_name RANGE [ LEFT | RIGHT ] -- default is LEFT  
@@ -90,11 +90,11 @@ CREATE TABLE { database_name.schema_name.table_name | schema_name.table_name | t
     | smallint  
     | tinyint  
     | bit  
-    | nvarchar [ ( n | max ) ]  -- max applies only to SQL Data Warehouse 
+    | nvarchar [ ( n | max ) ]  -- max applies only to Azure Synapse Analytics 
     | nchar [ ( n ) ]  
-    | varchar [ ( n | max )  ] -- max applies only to SQL Data Warehouse  
+    | varchar [ ( n | max )  ] -- max applies only to Azure Synapse Analytics  
     | char [ ( n ) ]  
-    | varbinary [ ( n | max ) ] -- max applies only to SQL Data Warehouse  
+    | varbinary [ ( n | max ) ] -- max applies only to Azure Synapse Analytics  
     | binary [ ( n ) ]  
     | uniqueidentifier  
 ```  
@@ -109,7 +109,7 @@ CREATE TABLE { database_name.schema_name.table_name | schema_name.table_name | t
  테이블의 스키마입니다. *schema* 지정은 선택 사항입니다. 공백이면 기본 스키마가 사용됩니다.  
   
  *table_name*  
- 새 테이블의 이름입니다. 로컬 임시 테이블을 만들려면 테이블 이름 앞에 #을 붙입니다.  임시 테이블에 대한 설명 및 지침의 경우 [Azure SQL Data Warehouse의 임시 테이블](https://azure.microsoft.com/documentation/articles/sql-data-warehouse-tables-temporary/)을 참조하세요. 
+ 새 테이블의 이름입니다. 로컬 임시 테이블을 만들려면 테이블 이름 앞에 #을 붙입니다.  임시 테이블에 대한 설명 및 지침은 [[!INCLUDE[ssSDW](../../includes/sssdwfull-md.md)]의 임시 테이블](https://azure.microsoft.com/documentation/articles/sql-data-warehouse-tables-temporary/)을 참조하세요. 
 
  *column_name*  
  테이블 열의 이름입니다.
@@ -132,7 +132,7 @@ CREATE TABLE { database_name.schema_name.table_name | schema_name.table_name | t
   
 ### <a name="table-structure-options"></a><a name="TableOptions"></a> 테이블 구조 옵션
 
-테이블의 형식 선택에 대한 지침은 [Azure SQL Data Warehouse의 테이블 인덱싱](https://docs.microsoft.com/azure/sql-data-warehouse/sql-data-warehouse-tables-index/)을 참조하세요.
+테이블 형식 선택 방법에 대한 지침은 [[!INCLUDE[ssSDW](../../includes/sssdwfull-md.md)]에서 테이블 인덱싱](https://docs.microsoft.com/azure/sql-data-warehouse/sql-data-warehouse-tables-index/)을 참조하세요.
   
  `CLUSTERED COLUMNSTORE INDEX` 
  
@@ -147,7 +147,7 @@ CREATE TABLE { database_name.schema_name.table_name | schema_name.table_name | t
   
 ### <a name="table-distribution-options"></a><a name="TableDistributionOptions"></a> 테이블 배포 옵션
 
-최상의 배포 방법을 선택하고 분산된 테이블을 사용하는 방법을 알아보려면 [Azure SQL Data Warehouse에서 테이블 배포](https://azure.microsoft.com/documentation/articles/sql-data-warehouse-tables-distribute/)를 참조하세요.
+최적의 배포 방법을 선택하고 분산 테이블을 사용하는 방법을 알아보려면 [[!INCLUDE[ssSDW](../../includes/sssdwfull-md.md)]에서 테이블 배포](https://azure.microsoft.com/documentation/articles/sql-data-warehouse-tables-distribute/)를 참조하세요.
 
 `DISTRIBUTION = HASH`( *distribution_column_name* ) *distribution_column_name*에 저장된 값을 해시하여 각 행을 하나의 배포에 할당합니다. 알고리즘은 결정적입니다. 즉, 항상 동일한 값을 동일한 배포에 해시한다는 뜻입니다.  NULL이 있는 모든 행은 동일한 분산에 할당되므로 배포 열은 NOT NULL로 정의되어야 합니다.
 
@@ -156,7 +156,7 @@ CREATE TABLE { database_name.schema_name.table_name | schema_name.table_name | t
 `DISTRIBUTION = REPLICATE`은 각 컴퓨팅 노드에 테이블의 복사본 하나를 저장합니다. [!INCLUDE[ssSDW](../../includes/sssdw-md.md)]의 경우 테이블은 각 컴퓨팅 노드에 있는 배포 데이터베이스에 저장됩니다. [!INCLUDE[ssPDW](../../includes/sspdw-md.md)]의 경우 테이블은 컴퓨팅 노드에 걸쳐 있는 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 파일 그룹에 저장됩니다 이 동작은 [!INCLUDE[ssPDW](../../includes/sspdw-md.md)]의 기본값입니다.
   
 ### <a name="table-partition-options"></a><a name="TablePartitionOptions"></a> 테이블 파티션 옵션
-테이블 파티션 사용에 대한 지침은 [SQL Data Warehouse의 테이블 분할](https://azure.microsoft.com/documentation/articles/sql-data-warehouse-tables-partition/)을 참조하세요.
+테이블 파티션 사용 방법에 대한 지침은 [[!INCLUDE[ssSDW](../../includes/sssdwfull-md.md)]에서 테이블 분할](https://azure.microsoft.com/documentation/articles/sql-data-warehouse-tables-partition/)을 참조하세요.
 
  `PARTITION` ( *partition_column_name* `RANGE` [ `LEFT` | `RIGHT` ] `FOR VALUES` ( [ *boundary_value* [,...*n*] ] ))   
 하나 이상의 테이블 파티션을 만듭니다. 이 파티션은 힙, 클러스터형 인덱스 또는 클러스터형 columnstore 인덱스에 테이블을 저장하는지 여부에 관계 없이 행의 하위 집합에 작업을 적용할 수 있도록 하는 가로 테이블 조각입니다. 배포 열과 달리 테이블 파티션은 각 행이 저장된 배포를 결정하지 않습니다. 대신, 테이블 파티션은 행이 그룹화되고 각 배포 내에 저장되는 방식을 결정합니다.  
@@ -172,9 +172,9 @@ CREATE TABLE { database_name.schema_name.table_name | schema_name.table_name | t
 
 ### <a name="ordered-clustered-columnstore-index-option"></a>순서가 지정된 클러스터형 columnstore 인덱스 옵션 
 
-CCI(클러스터형 columnstore 인덱스)는 Azure SQL Data Warehouse에서 테이블을 만들기 위한 기본값입니다.  CCI의 데이터는 columnstore 세그먼트로 압축되기 전에 정렬되지 않습니다.  ORDER를 사용하여 CCI를 만드는 경우, 데이터가 인덱스 세그먼트에 추가되기 전에 정렬되며, 쿼리 성능이 향상될 수 있습니다. 자세한 내용은 [순서가 지정된 클러스터형 Columnstore 인덱스를 사용한 성능 튜닝](/azure/sql-data-warehouse/performance-tuning-ordered-cci?view=azure-sqldw-latest)을 참조하세요.  
+CCI(클러스터형 columnstore 인덱스)는 [!INCLUDE[ssSDW](../../includes/sssdwfull-md.md)]에서 테이블을 만들기 위한 기본값입니다.  CCI의 데이터는 columnstore 세그먼트로 압축되기 전에 정렬되지 않습니다.  ORDER를 사용하여 CCI를 만드는 경우, 데이터가 인덱스 세그먼트에 추가되기 전에 정렬되며, 쿼리 성능이 향상될 수 있습니다. 자세한 내용은 [순서가 지정된 클러스터형 Columnstore 인덱스를 사용한 성능 튜닝](/azure/sql-data-warehouse/performance-tuning-ordered-cci?view=azure-sqldw-latest)을 참조하세요.  
 
-정렬된 CCI는 문자열 열을 제외하고 Azure SQL Data Warehouse에서 지원되는 모든 데이터 형식의 열에서 만들 수 있습니다.  
+문자열 열을 제외하고 [!INCLUDE[ssSDW](../../includes/sssdwfull-md.md)]에서 지원되는 모든 데이터 형식의 열에 순서가 지정된 CCI를 만들 수 있습니다.  
 
 사용자는 **sys.index_columns**의 **column_store_order_ordinal** 열에서 테이블이 정렬되고 정렬에 순서가 있는 열을 쿼리할 수 있습니다.  
 
@@ -182,7 +182,7 @@ CCI(클러스터형 columnstore 인덱스)는 Azure SQL Data Warehouse에서 테
 
 ### <a name="data-type"></a><a name="DataTypes"></a> 데이터 형식
 
-[!INCLUDE[ssSDW](../../includes/sssdw-md.md)]는 가장 일반적으로 사용되는 데이터 형식을 지원합니다. 다음은 세부 정보 및 스토리지 바이트가 포함된 지원되는 데이터 형식의 목록입니다. 데이터 형식 및 사용 방법을 더 잘 이해하려면 [SQL Data Warehouse의 테이블에 대한 데이터 형식](https://azure.microsoft.com/documentation/articles/sql-data-warehouse-tables-data-types)을 참조하세요.
+[!INCLUDE[ssSDW](../../includes/sssdw-md.md)]는 가장 일반적으로 사용되는 데이터 형식을 지원합니다. 다음은 세부 정보 및 스토리지 바이트가 포함된 지원되는 데이터 형식의 목록입니다. 데이터 형식 및 데이터 형식 사용 방법을 자세히 알아보려면 [[!INCLUDE[ssSDW](../../includes/sssdwfull-md.md)]의 테이블 데이터 형식](https://azure.microsoft.com/documentation/articles/sql-data-warehouse-tables-data-types)을 참조하세요.
 
 데이터 형식 변환의 테이블의 경우 [CAST 및 CONVERT(Transact-SQL)](https://msdn.microsoft.com/library/ms187928/)에 있는 암시적 변환 섹션을 참조하세요.
 
@@ -306,14 +306,14 @@ CCI(클러스터형 columnstore 인덱스)는 Azure SQL Data Warehouse에서 테
 <a name="GeneralRemarks"></a>  
 ## <a name="general-remarks"></a>일반적인 주의 사항  
  
-최소 및 최대 제한의 경우 [SQL Data Warehouse 용량 제한](https://azure.microsoft.com/documentation/articles/sql-data-warehouse-service-capacity-limits/)을 참조하세요. 
+최소 및 최대 한도는 [[!INCLUDE[ssSDW](../../includes/sssdwfull-md.md)] 용량 한도](https://azure.microsoft.com/documentation/articles/sql-data-warehouse-service-capacity-limits/)를 참조하세요. 
  
 ### <a name="determining-the-number-of-table-partitions"></a>테이블 파티션 수 확인
 각 사용자 정의 테이블은 배포라고 하는 개별 위치에 저장된 더 작은 테이블 여러 개로 나누어집니다. [!INCLUDE[ssSDW](../../includes/sssdw-md.md)]는 60개 배포를 사용합니다. [!INCLUDE[ssPDW](../../includes/sspdw-md.md)]에서 배포 수는 컴퓨팅 노드 수에 따라 다릅니다.
  
 각 배포에는 모든 테이블 파티션이 포함됩니다. 예를 들어 배포 60개 및 테이블 파티션 4개와 빈 파티션 1개가 있으면 300개의 파티션이 있는 것입니다(5 x 60= 300). 테이블이 클러스터형 columnstore 인덱스인 경우 파티션당 하나의 columnstore 인덱스가 됩니다. 즉, 300개의 columnstore 인덱스를 가지게 됩니다.
 
-columnstore 인덱스의 이점 활용하기 위해 더 적은 테이블 파티션을 사용하여 각 columnstore 인덱스에 충분한 행이 있는지 확인하는 것이 좋습니다. 자세한 내용은 [SQL Data Warehouse에서 테이블 분할](https://azure.microsoft.com/documentation/articles/sql-data-warehouse-tables-partition/) 및 [SQL Data Warehouse에서 테이블 인덱싱](https://azure.microsoft.com/documentation/articles/sql-data-warehouse-tables-index/)을 참조하세요.  
+columnstore 인덱스의 이점 활용하기 위해 더 적은 테이블 파티션을 사용하여 각 columnstore 인덱스에 충분한 행이 있는지 확인하는 것이 좋습니다. 자세한 내용은 [[!INCLUDE[ssSDW](../../includes/sssdwfull-md.md)]에서 테이블 분할](https://azure.microsoft.com/documentation/articles/sql-data-warehouse-tables-partition/) 및 [[!INCLUDE[ssSDW](../../includes/sssdwfull-md.md)]에서 테이블 인덱싱](https://azure.microsoft.com/documentation/articles/sql-data-warehouse-tables-index/)을 참조하세요.  
 
 ### <a name="rowstore-table-heap-or-clustered-index"></a>rowstore 테이블(힙 또는 클러스터형 인덱스)
 
@@ -327,7 +327,7 @@ rowstore 테이블을 columnstore 테이블로 변경하려면 테이블에서 �
 
 자세한 내용은 다음 문서를 참조하세요.
 - [버전이 지정된 columnstore 인덱스 기능 요약](https://msdn.microsoft.com/library/dn934994/)
-- [SQL Data Warehouse에서 테이블 인덱싱](https://azure.microsoft.com/documentation/articles/sql-data-warehouse-tables-index/)
+- [[!INCLUDE[ssSDW](../../includes/sssdwfull-md.md)]에서 테이블 인덱싱](https://azure.microsoft.com/documentation/articles/sql-data-warehouse-tables-index/)
 - [Columnstore 인덱스 가이드](~/relational-databases/indexes/columnstore-indexes-overview.md) 
 
 <a name="LimitationsRestrictions"></a>  
@@ -593,7 +593,7 @@ WITH
 <a name="SeeAlso"></a>
 ## <a name="see-also"></a>참고 항목
  
-[CREATE TABLE AS SELECT&#40;Azure SQL Data Warehouse&#41;](../../t-sql/statements/create-table-as-select-azure-sql-data-warehouse.md)   
+[CREATE TABLE AS SELECT&#40;Azure Synapse Analytics&#41;](../../t-sql/statements/create-table-as-select-azure-sql-data-warehouse.md)   
 [DROP TABLE&#40;Transact-SQL&#41;](../../t-sql/statements/drop-table-transact-sql.md)   
 [ALTER TABLE&#40;Transact-SQL&#41;](../../t-sql/statements/alter-table-transact-sql.md)   
 [sys.index_columns&#40;Transact-SQL&#41;](/sql/relational-databases/system-catalog-views/sys-index-columns-transact-sql?view=azure-sqldw-latest) 

@@ -2,7 +2,7 @@
 description: SSIS 카탈로그
 title: SSIS 카탈로그 | Microsoft Docs
 ms.custom: ''
-ms.date: 11/12/2018
+ms.date: 09/17/2020
 ms.prod: sql
 ms.prod_service: integration-services
 ms.reviewer: ''
@@ -15,12 +15,12 @@ f1_keywords:
 ms.assetid: 24bd987e-164a-48fd-b4f2-cbe16a3cd95e
 author: chugugrace
 ms.author: chugu
-ms.openlocfilehash: c2050734b89c8b5ae74aa40316c9b1f980705dc3
-ms.sourcegitcommit: 827ad02375793090fa8fee63cc372d130f11393f
+ms.openlocfilehash: 8a821c49ba80ce3e51c4a12f0c0d7dee660384d3
+ms.sourcegitcommit: c74bb5944994e34b102615b592fdaabe54713047
 ms.translationtype: HT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 09/04/2020
-ms.locfileid: "89480295"
+ms.lasthandoff: 09/22/2020
+ms.locfileid: "90990392"
 ---
 # <a name="ssis-catalog"></a>SSIS 카탈로그
 
@@ -450,21 +450,19 @@ ms.locfileid: "89480295"
     ```  
   
 2.  SSISDB 카탈로그가 만들어지지 않은 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 인스턴스로 SSISDB 데이터베이스를 복원할 경우 비대칭 키를 만들고 비대칭 키로부터 로그인한 후 해당 로그인에 UNSAFE 권한을 부여합니다.  
-  
+
     ```  
-    Create Asymmetric key MS_SQLEnableSystemAssemblyLoadingKey  
-           FROM Executable File = 'C:\Program Files\Microsoft SQL Server\110\DTS\Binn\Microsoft.SqlServer.IntegrationServices.Server.dll'  
-  
+    Create Asymmetric Key MS_SQLEnableSystemAssemblyLoadingKey  
+           FROM Executable File = 'C:\Program Files\Microsoft SQL Server\YourSQLServerDefaultCompatibilityLevel\DTS\Binn\Microsoft.SqlServer.IntegrationServices.Server.dll'  
     ```  
+
+    [SQL Server 기본 호환성 수준 목록](https://docs.microsoft.com/sql/t-sql/statements/alter-database-transact-sql-compatibility-level?view=sql-server-ver15#arguments)에서 `YourSQLServerDefaultCompatibilityLevel` 값을 찾을 수 있습니다.
   
-     [!INCLUDE[ssISnoversion](../../includes/ssisnoversion-md.md)] CLR 저장 프로시저를 사용하려면 해당 로그인에 UNSAFE 권한을 부여해야 합니다. UNSAFE 코드 권한에 대한 자세한 내용은 [Creating an Assembly](../../relational-databases/clr-integration/assemblies/creating-an-assembly.md)를 참조하십시오.  
-  
+    [!INCLUDE[ssISnoversion](../../includes/ssisnoversion-md.md)] CLR 저장 프로시저를 사용하려면 해당 로그인에 UNSAFE 권한을 부여해야 합니다. UNSAFE 코드 권한에 대한 자세한 내용은 [Creating an Assembly](../../relational-databases/clr-integration/assemblies/creating-an-assembly.md)를 참조하십시오.  
+
     ```  
-    Create Login MS_SQLEnableSystemAssemblyLoadingUser  
-           FROM Asymmetric key MS_SQLEnableSystemAssemblyLoadingKey   
-  
-           Grant unsafe Assembly to MS_SQLEnableSystemAssemblyLoadingUser  
-  
+    Create Login ##MS_SQLEnableSystemAssemblyLoadingUser## FROM Asymmetric Key MS_SQLEnableSystemAssemblyLoadingKey   
+    Grant Unsafe Assembly to ##MS_SQLEnableSystemAssemblyLoadingUser##    
     ```  
   
 3.  **에서** 데이터베이스 복원 [!INCLUDE[ssManStudioFull](../../includes/ssmanstudiofull-md.md)]대화 상자를 사용하여 백업에서 SSISDB 데이터베이스를 복원합니다. 자세한 내용은 아래 항목을 참조하세요.  

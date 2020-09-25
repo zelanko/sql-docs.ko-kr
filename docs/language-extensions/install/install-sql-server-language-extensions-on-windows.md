@@ -4,17 +4,17 @@ titleSuffix: ''
 description: SQL Server 설치 마법사를 실행하여 Windows 기반 SQL Server에 언어 확장 기능을 설치하는 방법을 알아봅니다.
 author: dphansen
 ms.author: davidph
-ms.date: 11/06/2019
+ms.date: 09/17/2020
 ms.topic: conceptual
 ms.prod: sql
 ms.technology: language-extensions
 monikerRange: '>=sql-server-ver15||=sqlallproducts-allversions'
-ms.openlocfilehash: 62a4b97216f990d207070e76eaf38d12154757bf
-ms.sourcegitcommit: 9b41725d6db9957dd7928a3620fe4db41eb51c6e
+ms.openlocfilehash: 41f0e9f1c4040e9d26432d8635667f045694e314
+ms.sourcegitcommit: c74bb5944994e34b102615b592fdaabe54713047
 ms.translationtype: HT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 08/13/2020
-ms.locfileid: "88173564"
+ms.lasthandoff: 09/22/2020
+ms.locfileid: "90989862"
 ---
 # <a name="install-sql-server-language-extensions-on-windows"></a>Windows에 SQL Server 언어 확장 설치
 
@@ -150,8 +150,11 @@ SQL Server에 포함된 기본 Zulu Open JRE를 설치하지 않고 Program File
 2. AppContainer 권한 부여
 
     ```cmd
-    icacls "<PATH to JRE>" /grant "ALL APPLICATION PACKAGES":(OI)(CI)RX /T
+    icacls “<PATH to JRE>” /grant *S-1-15-2-1:(OI)(CI)RX /T
     ```
+    
+    > [!NOTE]
+    > 위의 명령은 컴퓨터 SID **S-1-15-2-1**에 권한을 부여하며 이는 영어 버전 Windows에서의 **ALL APPLICATION PACKAGES**와 같습니다. 또는 영어 버전 Windows에서 `icacls "<PATH to JRE>" /grant "ALL APPLICATION PACKAGES":(OI)(CI)RX /T`를 사용할 수도 있습니다.
     
 ## <a name="enable-script-execution"></a>스크립트 실행 사용
 

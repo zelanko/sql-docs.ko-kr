@@ -16,12 +16,12 @@ ms.assetid: baa8a304-5713-4cfe-a699-345e819ce6df
 author: julieMSFT
 ms.author: jrasnick
 monikerRange: =azuresqldb-current||>=sql-server-2016||=sqlallproducts-allversions||>=sql-server-linux-2017||=azuresqldb-mi-current
-ms.openlocfilehash: 3806092674dde608bed9a962bcf939ac0379b374
-ms.sourcegitcommit: 9470c4d1fc8d2d9d08525c4f811282999d765e6e
+ms.openlocfilehash: 571d611fe49e590d65f0f9749660844328f6c9c1
+ms.sourcegitcommit: c74bb5944994e34b102615b592fdaabe54713047
 ms.translationtype: HT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 07/17/2020
-ms.locfileid: "86457709"
+ms.lasthandoff: 09/22/2020
+ms.locfileid: "90990176"
 ---
 # <a name="cardinality-estimation-sql-server"></a>카디널리티 추정(SQL Server)
 
@@ -85,7 +85,7 @@ GO
   
 호환성 수준 120 이상으로 설정된 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 데이터베이스의 경우 [추적 플래그 9481](../../t-sql/database-console-commands/dbcc-traceon-trace-flags-transact-sql.md)을 활성화하면 시스템에서 CE 버전 70이 사용됩니다.  
   
-**레거시 CE:** 호환성 수준 120 이상으로 설정된 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 데이터베이스의 경우 [데이터베이스 범위 구성 변경](../../t-sql/statements/alter-database-scoped-configuration-transact-sql.md)을 사용하여 데이터베이스 수준에서 CE 버전 70을 활성화할 수 있습니다.
+**레거시 CE:** 호환성 수준 120 이상으로 설정된 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 데이터베이스의 경우 [ALTER DATABASE SCOPED CONFIGURATION](../../t-sql/statements/alter-database-scoped-configuration-transact-sql.md)을 사용하여 데이터베이스 수준에서 CE 버전 70을 활성화할 수 있습니다.
   
 ```sql  
 ALTER DATABASE SCOPED CONFIGURATION 

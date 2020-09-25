@@ -19,17 +19,17 @@ helpviewer_keywords:
 ms.assetid: a34b9e90-199d-46d0-817a-a7e69387bf5f
 author: markingmyname
 ms.author: maghan
-ms.openlocfilehash: 5d90bacf17953eee4874343fadf2e9daf97a8664
-ms.sourcegitcommit: ac9feb0b10847b369b77f3c03f8200c86ee4f4e0
+ms.openlocfilehash: a47daa3926f8b6718a459aab203b0e902bf7dafd
+ms.sourcegitcommit: 3efd8bbf91f4f78dce3a4ac03348037d8c720e6a
 ms.translationtype: HT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 09/16/2020
-ms.locfileid: "90688419"
+ms.lasthandoff: 09/23/2020
+ms.locfileid: "91024482"
 ---
 # <a name="alter-external-data-source-transact-sql"></a>ALTER EXTERNAL DATA SOURCE(Transact-SQL)
 [!INCLUDE [sqlserver2016-asdbmi-asa-pdw](../../includes/applies-to-version/sqlserver2016-asdbmi-asa-pdw.md)]
 
-  외부 테이블을 만드는데 사용되는 외부 데이터 원본을 수정합니다. 외부 데이터 원본은 SQL SERVER용 Hadoop 또는 Azure Blob Storage (WASBS)이거나 Azure SQL Data Warehouse용 Azure Blob Storage (WASBS) 또는 Azure Data Lake 스토리지(ABFSS/ADL)일 수 있습니다. 
+  외부 테이블을 만드는데 사용되는 외부 데이터 원본을 수정합니다. 외부 데이터 원본은 SQL Server용 Hadoop 또는 Azure Blob Storage(WASBS) 및 [!INCLUDE[ssSDW](../../includes/sssdwfull-md.md)]용 Azure Blob Storage(WASBS) 또는 Azure Data Lake 스토리지(ABFSS/ADL)일 수 있습니다. 
 
 ## <a name="syntax"></a>구문  
 
@@ -52,7 +52,7 @@ ALTER EXTERNAL DATA SOURCE data_source_name
         [, CREDENTIAL = credential_name ] 
 
 -- Modify an external data source pointing to Azure Blob storage or Azure Data Lake storage
--- Applies to: Azure SQL Data Warehouse
+-- Applies to: Azure Synapse Analytics
 ALTER EXTERNAL DATA SOURCE data_source_name
     SET
         [LOCATION = '<location prefix>://<location path>']
@@ -64,7 +64,7 @@ ALTER EXTERNAL DATA SOURCE data_source_name
 
  LOCATION = '<prefix>://<path>[:<port>]' 외부 데이터 원본에 대한 연결 프로토콜, 경로 및 포트를 제공합니다. 유효한 위치 옵션은 [CREATE EXTERNAL DATA SOURCE &#40;Transact-SQL&#41;](create-external-data-source-transact-sql.md#location--prefixpathport)을 참조하세요.
 
- RESOURCE_MANAGER_LOCATION = '\<IP address;Port>'(Azure SQL Data Warehouse에 적용되지 않음) Hadoop Resource Manager 위치를 지정합니다. 지정된 경우 쿼리 최적화 프로그램은 Hadoop의 계산 기능을 사용하여 PolyBase 쿼리의 데이터를 사전 처리하도록 선택할 수 있습니다. 이것은 비용 기반 결정입니다. 조건자 푸시 다운이라는 이 기능은 Hadoop과 SQL 간에 전송되는 데이터 양을 크게 줄여 쿼리 성능을 향상시킬 수 있습니다.
+ RESOURCE_MANAGER_LOCATION = ‘\<IP address;Port>’([!INCLUDE[ssSDW](../../includes/sssdwfull-md.md)]에는 적용되지 않음) Hadoop Resource Manager 위치를 지정합니다. 지정된 경우 쿼리 최적화 프로그램은 Hadoop의 계산 기능을 사용하여 PolyBase 쿼리의 데이터를 사전 처리하도록 선택할 수 있습니다. 이것은 비용 기반 결정입니다. 조건자 푸시 다운이라는 이 기능은 Hadoop과 SQL 간에 전송되는 데이터 양을 크게 줄여 쿼리 성능을 향상시킬 수 있습니다.
 
  CREDENTIAL = Credential_Name은 명명된 자격 증명을 지정합니다. [CREATE DATABASE SCOPED CREDENTIAL &#40;Transact-SQL&#41;](../../t-sql/statements/create-database-scoped-credential-transact-sql.md)을 참조하세요.
 
@@ -102,7 +102,7 @@ ALTER EXTERNAL DATA SOURCE hadoop_eds SET
     ;
 ```
 
- 다음 예제에서는 자격 증명을 새 위치로 변경 합니다. 이 예제는 Azure SQL Data Warehouse에 대해 생성되는 외부 데이터 원본입니다. 
+ 다음 예제에서는 자격 증명을 새 위치로 변경 합니다. 이 예제는 [!INCLUDE[ssSDW](../../includes/sssdwfull-md.md)]에 대해 생성된 외부 데이터 원본입니다. 
 
 ```sql  
 ALTER EXTERNAL DATA SOURCE AzureStorage_west SET

@@ -4,16 +4,16 @@ description: 이 문서에서는 SQL Server on Linux를 실행하기 위한 성�
 author: tejasaks
 ms.author: tejasaks
 ms.reviewer: vanto
-ms.date: 09/14/2017
+ms.date: 09/16/2020
 ms.topic: conceptual
 ms.prod: sql
 ms.technology: linux
-ms.openlocfilehash: 4c3b0715547e8658f83d544578e91b554854a5ad
-ms.sourcegitcommit: f7ac1976d4bfa224332edd9ef2f4377a4d55a2c9
+ms.openlocfilehash: 1b2a4f55908f249d9f574d392dea26932648e58d
+ms.sourcegitcommit: c74bb5944994e34b102615b592fdaabe54713047
 ms.translationtype: HT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 07/02/2020
-ms.locfileid: "85887835"
+ms.lasthandoff: 09/22/2020
+ms.locfileid: "90989916"
 ---
 # <a name="performance-best-practices-and-configuration-guidelines-for-sql-server-on-linux"></a>SQL Server on Linux의 성능 모범 사례 및 구성 지침
 
@@ -85,7 +85,7 @@ sysctl -w kernel.numa_balancing=0
 
 ### <a name="kernel-settings-for-virtual-address-space"></a>가상 주소 공간의 커널 설정
 
-**vm.max_map_count**의 기본 설정(65536)이 SQL Server 설치에 충분히 높지 않을 수 있습니다. 이 값(상한)을 256K로 변경합니다.
+**vm.max_map_count**의 기본 설정(65536)이 SQL Server 설치에 충분히 높지 않을 수 있습니다. 이런 이유로, SQL Server 배포의 경우 **vm.max_map_count** 값을 262144로 변경합니다. 커널 매개 변수의 추가 튜닝에 대해서는 [튜닝된 mssql 프로필을 사용하는 권장 Linux 설정](#proposed-linux-settings-using-a-tuned-mssql-profile) 섹션을 참조하세요. vm.max_map_count의 최댓값은 2147483647입니다.
 
 ```bash
 sysctl -w vm.max_map_count=262144
@@ -112,7 +112,7 @@ vm.dirty_ratio = 80
 vm.dirty_expire_centisecs = 500
 vm.dirty_writeback_centisecs = 100
 vm.transparent_hugepages=always
-# For , use
+# For multi-instance SQL deployments, use
 # vm.transparent_hugepages=madvice
 vm.max_map_count=1600000
 net.core.rmem_default = 262144
@@ -152,12 +152,12 @@ SQL Server 데이터와 로그 파일을 저장하는 데 사용되는 모든 �
 대부분의 Linux 설치에서는 이 옵션이 기본적으로 설정되어 있어야 합니다. 가장 일관된 성능을 유지하려면 이 구성 옵션을 사용 상태로 유지하는 것이 좋습니다. 그러나 예를 들어 여러 인스턴스와 함께 SQL Server를 배포하거나 서버에서 메모리 요구 사항이 높은 애플리케이션과 함께 SQL Server를 실행해야 하므로 메모리 페이징 활동이 많은 경우 다음 명령을 실행한 후 애플리케이션 성능을 태스트하는 것이 좋습니다. 
 
 ```bash
-echo madvice > /sys/kernel/mm/transparent_hugepage/enabled
+echo madvise > /sys/kernel/mm/transparent_hugepage/enabled
 ```
 또는 다음 줄을 사용하여 조정된 mssql 프로필을 수정합니다.
 
 ```bash
-vm.transparent_hugepages=madvice
+vm.transparent_hugepages=madvise
 ```
 그리고 수정 이후 mssql 프로필을 활성 상태로 만듭니다.
 ```bash

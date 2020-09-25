@@ -47,12 +47,12 @@ ms.assetid: 89a4658a-62f1-4289-8982-f072229720a1
 author: MikeRayMSFT
 ms.author: mikeray
 monikerRange: '>=sql-server-2016||>=sql-server-linux-2017||=azuresqldb-mi-current||>=aps-pdw-2016||=sqlallproducts-allversions'
-ms.openlocfilehash: 7b2c1984b18596a8c1c527113232c7637d309359
-ms.sourcegitcommit: 827ad02375793090fa8fee63cc372d130f11393f
+ms.openlocfilehash: afcf2e560b5fd4300c02ddf6bcc548ef68fdc05b
+ms.sourcegitcommit: 3efd8bbf91f4f78dce3a4ac03348037d8c720e6a
 ms.translationtype: HT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 09/04/2020
-ms.locfileid: "89480861"
+ms.lasthandoff: 09/23/2020
+ms.locfileid: "91024572"
 ---
 # <a name="backup-transact-sql"></a>BACKUP(Transact-SQL)
 
@@ -309,7 +309,7 @@ ENCRYPTION 백업에 대한 암호화를 지정하는 데 사용됩니다. 백�
 - `TRIPLE_DES_3KEY`
 - `NO_ENCRYPTION`
 
-암호화하도록 선택하는 경우 암호기 옵션을 사용하여 암호기도 지정해야 합니다.
+암호화하도록 선택한 경우 암호기 옵션을 사용하여 암호기도 지정해야 합니다.
 
 - `SERVER CERTIFICATE` = Encryptor_Name
 - `SERVER ASYMMETRIC KEY` = Encryptor_Name
@@ -1209,7 +1209,7 @@ DIFFERENTIAL 사용자 데이터베이스의 차등 백업을 수행하도록 �
 
 **db_backupoperator** 고정 데이터베이스 역할에서 **BACKUP DATABASE** 권한 또는 멤버 자격이 필요합니다. master 데이터베이스는 백업할 수 없지만 **db_backupoperator** 고정 데이터베이스 역할에 추가된 일반 사용자의 경우 할 수 있습니다. master 데이터베이스는 **sa**, 패브릭 관리자 또는 **sysadmin** 고정 서버 역할을 하는 멤버만이 백업할 수 있습니다.
 
-백업 디렉토리에 액세스하고, 만들고, 쓸 수 있는 권한이 있는 Windows 계정이 필요합니다. 또한 Windows 계정 이름 및 암호를 [!INCLUDE[ssPDW](../../includes/sspdw-md.md)]에 저장해야 합니다. 이 네트워크 자격 증명을 [!INCLUDE[ssPDW](../../includes/sspdw-md.md)]에 추가하려면 [sp_pdw_add_network_credentials - SQL Data Warehouse](../../relational-databases/system-stored-procedures/sp-pdw-add-network-credentials-sql-data-warehouse.md) 저장 프로시저를 사용합니다.
+백업 디렉토리에 액세스하고, 만들고, 쓸 수 있는 권한이 있는 Windows 계정이 필요합니다. 또한 Windows 계정 이름 및 암호를 [!INCLUDE[ssPDW](../../includes/sspdw-md.md)]에 저장해야 합니다. 해당 네트워크 자격 증명을 [!INCLUDE[ssPDW](../../includes/sspdw-md.md)]에 추가하려면 [sp_pdw_add_network_credentials - [!INCLUDE[ssSDW](../../includes/sssdwfull-md.md)]](../../relational-databases/system-stored-procedures/sp-pdw-add-network-credentials-sql-data-warehouse.md) 저장 프로시저를 사용합니다.
 
 [!INCLUDE[ssPDW](../../includes/sspdw-md.md)]에서의 자격 증명 관리에 대한 자세한 내용은 [보안](#Security) 섹션을 참조하세요.
 
@@ -1222,14 +1222,14 @@ DIFFERENTIAL 사용자 데이터베이스의 차등 백업을 수행하도록 �
 - 데이터베이스가 없습니다.
 - 대상 디렉터리가 네트워크 공유에 이미 있습니다.
 - 대상 네트워크 공유를 사용할 수 없습니다.
-- 대상 네트워크 공유에 백업을 위한 충분한 공간이 없습니다. BACKUP DATABASE 명령은 백업을 시작하기에 앞서 디스크 공간이 충분한지 확인하지 않으므로 BACKUP DATABASE를 실행하는 동안 디스크 공간 부족 오류가 일어날 수 있습니다. 디스크 공간이 부족하면 [!INCLUDE[ssPDW](../../includes/sspdw-md.md)]은 BACKUP DATABASE 명령을 롤백합니다. 데이터베이스의 크기를 줄이려면 [DBCC SHRINKLOG(Azure SQL Data Warehouse)](../../t-sql/database-console-commands/dbcc-shrinklog-azure-sql-data-warehouse.md)를 실행합니다.
+- 대상 네트워크 공유에 백업을 위한 충분한 공간이 없습니다. BACKUP DATABASE 명령은 백업을 시작하기에 앞서 디스크 공간이 충분한지 확인하지 않으므로 BACKUP DATABASE를 실행하는 동안 디스크 공간 부족 오류가 일어날 수 있습니다. 디스크 공간이 부족하면 [!INCLUDE[ssPDW](../../includes/sspdw-md.md)]은 BACKUP DATABASE 명령을 롤백합니다. 데이터베이스 크기를 줄이려면 [DBCC SHRINKLOG([!INCLUDE[ssSDW](../../includes/sssdwfull-md.md)])](../../t-sql/database-console-commands/dbcc-shrinklog-azure-sql-data-warehouse.md)를 실행합니다.
 - 트랜잭션 내에서 백업을 시작하려고 시도합니다.
 
 ::: moniker-end
 ::: moniker range=">=aps-pdw-2016||>=sql-server-2016||>=sql-server-linux-2017||=sqlallproducts-allversions"
 ## <a name="general-remarks"></a>일반적인 주의 사항
 
-데이터베이스 백업을 수행하기 전에 [DBCC SHRINKLOG (Azure SQL Data Warehouse)](../../t-sql/database-console-commands/dbcc-shrinklog-azure-sql-data-warehouse.md)를 사용하여 데이터베이스의 크기를 줄입니다.
+데이터베이스 백업을 수행하기 전에 [DBCC SHRINKLOG([!INCLUDE[ssPDW](../../includes/sspdw-md.md)])](../../t-sql/database-console-commands/dbcc-shrinklog-azure-sql-data-warehouse.md)를 사용하여 데이터베이스 크기를 줄입니다. 
 
 [!INCLUDE[ssPDW](../../includes/sspdw-md.md)] 백업은 동일한 디렉토리에 여러 파일의 집합으로 저장됩니다.
 
@@ -1288,9 +1288,9 @@ DATABASE 개체에서 ExclusiveUpdate 잠금을 얻습니다.
 > [!IMPORTANT]
 > 데이터의 보안 위험을 줄이려면 Windows 계정 하나를 전적으로 백업 및 복원 작업을 수행할 목적으로 지정하는 것이 좋습니다. 이 계정에 전적으로 백업 위치에 대해서만 권한을 갖도록 허용합니다.
 
-[sp_pdw_add_network_credentials - SQL Data Warehouse](../../relational-databases/system-stored-procedures/sp-pdw-add-network-credentials-sql-data-warehouse.md) 저장 프로시저를 실행하여 [!INCLUDE[ssPDW](../../includes/sspdw-md.md)]에 사용자 이름 및 암호를 저장해야 합니다. [!INCLUDE[ssPDW](../../includes/sspdw-md.md)]은 Windows Credential Manager를 사용하여 사용자 이름과 암호를 제어 노드와 컴퓨팅 노드에 저장하고 암호화합니다. 자격 증명은 BACKUP DATABASE 명령으로 백업되지 않습니다.
+[sp_pdw_add_network_credentials - [!INCLUDE[ssSDW](../../includes/sssdwfull-md.md)]](../../relational-databases/system-stored-procedures/sp-pdw-add-network-credentials-sql-data-warehouse.md) 저장 프로시저를 실행하여 사용자 이름과 암호를 [!INCLUDE[ssPDW](../../includes/sspdw-md.md)]에 저장해야 합니다. [!INCLUDE[ssPDW](../../includes/sspdw-md.md)]은 Windows Credential Manager를 사용하여 사용자 이름과 암호를 제어 노드와 컴퓨팅 노드에 저장하고 암호화합니다. 자격 증명은 BACKUP DATABASE 명령으로 백업되지 않습니다.
 
-[!INCLUDE[ssPDW](../../includes/sspdw-md.md)]에서 네트워크 자격 증명을 제거하려면 [sp_pdw_remove_network_credentials - SQL Data Warehouse](../../relational-databases/system-stored-procedures/sp-pdw-remove-network-credentials-sql-data-warehouse.md)를 참조하세요.
+[!INCLUDE[ssPDW](../../includes/sspdw-md.md)]에서 네트워크 자격 증명을 제거하려면 [sp_pdw_remove_network_credentials - [!INCLUDE[ssSDW](../../includes/sssdwfull-md.md)]](../../relational-databases/system-stored-procedures/sp-pdw-remove-network-credentials-sql-data-warehouse.md)를 참조하세요.
 
 [!INCLUDE[ssPDW](../../includes/sspdw-md.md)]에 저장된 모든 네트워크 자격 증명을 나열하려면 [sys.dm_pdw_network_credentials](../../relational-databases/system-dynamic-management-views/sys-dm-pdw-network-credentials-transact-sql.md) 동적 관리 뷰를 사용합니다.
 

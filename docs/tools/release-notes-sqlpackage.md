@@ -10,12 +10,12 @@ ms.topic: conceptual
 author: pensivebrian
 ms.author: broneill
 manager: kenvh
-ms.openlocfilehash: 84a7a8261e2fc3d2031b1b38b8ee7709ad015e39
-ms.sourcegitcommit: 48d60fe6b6991303a88936fb32322c005dfca2d8
+ms.openlocfilehash: 67e30169af049cbf9c3ac7ee3d06d779b77f67c6
+ms.sourcegitcommit: c74bb5944994e34b102615b592fdaabe54713047
 ms.translationtype: HT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 06/25/2020
-ms.locfileid: "85353100"
+ms.lasthandoff: 09/22/2020
+ms.locfileid: "90989436"
 ---
 # <a name="release-notes-for-sqlpackageexe"></a>SqlPackage.exe에 대한 릴리스 정보
 
@@ -34,6 +34,41 @@ Or, if there is no relationship, remove 'DacFx' from the metadata 'title:'.
 I discussed this with SStein (SteveStein).
 Thanks.  GeneMi (MightyPen in GitHub).  2019-03-27
 -->
+
+## <a name="186-sqlpackage"></a>18.6 sqlpackage
+
+|플랫폼|다운로드|릴리스 날짜|버전|빌드
+|:---|:---|:---|:---|:---|
+|Windows|[MSI 설치 관리자](https://go.microsoft.com/fwlink/?linkid=2143544)|2020년 9월 18일|18.6|15.0.4897.1|
+|macOS .NET Core |[zip 파일](https://go.microsoft.com/fwlink/?linkid=2143659)|2020년 9월 18일| 18.6|15.0.4897.1|
+|Linux .NET Core |[zip 파일](https://go.microsoft.com/fwlink/?linkid=2143497)|2020년 9월 18일| 18.6|15.0.4897.1|
+|Windows .NET Core |[zip 파일](https://go.microsoft.com/fwlink/?linkid=2143496)|2020년 9월 18일| 18.6|15.0.4897.1|
+
+### <a name="features"></a>기능
+| 기능 | 세부 정보 |
+| :------ | :------ |
+| 플랫폼 | .NET Core 버전의 sqlpackage를 .NET Core 3.1로 업데이트했습니다. |
+| Always Encrypted | SQL Server 2019에서 보안 Enclave 가져오기 및 내보내기 지원을 추가했습니다. |
+| 배포 | Azure SQL Database에서 내보낼 때 변경 데이터 캡처 사용 테이블을 무시하는 지원을 추가했습니다. |
+| 배포 | Azure SQL Database에서 OPTIMIZE_FOR_SEQUENTIAL_KEY 인덱스 옵션 지원을 추가했습니다. |
+| 배포 | Azure SQL Data Warehouse에서 ID 열 지원을 추가했습니다. | 
+| 도움말 | 도움말(/?)에 sqlpackage 버전을 출력하고 /version 매개 변수를 지원합니다. | 
+
+### <a name="fixes"></a>수정 프로그램
+| 기능 | 세부 정보 |
+| :------ | :------ | 
+| 배포 | sysadmin이 아닌 사용자로 Azure SQL Database Managed Instance를 대상으로 지정할 때 생성되는 잘못된 배포 스크립트를 수정했습니다.  | 
+| 배포 | 스크립트 작업 실행 시 배포 기여자 로드를 수정했습니다. | 
+| 도움말 | 작업이 1일보다 오래 걸리는 경우 sqlpackage에 경과된 시간을 올바르게 출력합니다. | 
+| 배포 | .NET Core에 대해 배포 시 dacpac 등록을 수정했습니다. | 
+| 배포 | /accessToken(/at) 매개 변수의 .NET Core 처리에 대해 sqlpackage를 수정했습니다. | 
+| 배포 | 저장 프로시저의 ALTER TABLE 문을 최상위가 아닌 문으로 허용합니다. | 
+| 배포 | 대/소문자를 구분하지 않도록 구체화된 뷰의 Azure SQL Data Warehouse 유효성 검사를 수정했습니다. | 
+
+### <a name="known-issues"></a>알려진 문제
+| 기능 | 세부 정보 |
+| :------ | :------ |
+| 배포 | Azure SQL Data Warehouse 워크로드 관리 기능(워크로드 그룹 및 워크로드 분류자)은 아직 지원되지 않습니다. | 
 
 ## <a name="1851-sqlpackage"></a>18.5.1 sqlpackage
 
@@ -133,7 +168,7 @@ Thanks.  GeneMi (MightyPen in GitHub).  2019-03-27
 | 플랫폼 | macOS, Linux 및 Windows용 sqlpackage .NET Core GA. | 
 | 보안 | SHA1 코드 서명을 제거합니다. |
 | 배포 | 새 Azure 데이터베이스 버전에 대한 지원을 추가합니다. GeneralPurpose, BusinessCritical, Hyperscale |
-| 배포 | AAD 사용자 및 그룹에 대한 Managed Instance 지원을 추가합니다. |
+| 배포 | Azure Active Directory 사용자 및 그룹에 대한 Managed Instance 지원을 추가합니다. |
 | 배포 | .NET Core에서 sqlpackage에 대한 /AccessToken 매개 변수를 지원합니다. |
 | &nbsp; | &nbsp; |
 

@@ -47,12 +47,12 @@ ms.assetid: b796c829-ef3a-405c-a784-48286d4fb2b9
 author: pmasl
 ms.author: maghan
 monikerRange: '>=aps-pdw-2016||=azuresqldb-current||=azure-sqldw-latest||>=sql-server-2016||=sqlallproducts-allversions||>=sql-server-linux-2017||=azuresqldb-mi-current'
-ms.openlocfilehash: ce5edfba05262da83060030aa00117a81e730e24
-ms.sourcegitcommit: dd36d1cbe32cd5a65c6638e8f252b0bd8145e165
+ms.openlocfilehash: d7d731d320c51b70bf73ea76361f9dba283ea38c
+ms.sourcegitcommit: 3efd8bbf91f4f78dce3a4ac03348037d8c720e6a
 ms.translationtype: HT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 09/08/2020
-ms.locfileid: "89544391"
+ms.lasthandoff: 09/23/2020
+ms.locfileid: "91024492"
 ---
 # <a name="alter-index-transact-sql"></a>ALTER INDEX(Transact-SQL)
 
@@ -149,7 +149,7 @@ ALTER INDEX { index_name | ALL } ON <object>
 ```  
   
 ```syntaxsql
--- Syntax for SQL Data Warehouse and Parallel Data Warehouse 
+-- Syntax for Azure Synapse Analytics and Parallel Data Warehouse 
   
 ALTER INDEX { index_name | ALL }  
     ON   [ schema_name. ] table_name  
@@ -663,7 +663,7 @@ WAIT_AT_LOW_PRIORITY는 **RESUMABLE=ON** 및 **ONLINE = ON** 상태에서만 사
 자세한 내용은 [인덱스 다시 구성 및 다시 작성](../../relational-databases/indexes/reorganize-and-rebuild-indexes.md)을 참조하세요.  
 
 > [!IMPORTANT]
-> 순서가 지정된 클러스터형 columnstore 인덱스를 통한 Azure SQL Data Warehouse 테이블의 경우 `ALTER INDEX REORGANIZE`가 데이터를 다시 정렬하지 않습니다. 데이터를 다시 정렬하려면 `ALTER INDEX REBUILD`를 사용하세요.
+> 순서가 지정된 클러스터형 columnstore 인덱스가 있는 [!INCLUDE[ssSDW](../../includes/sssdwfull-md.md)] 테이블의 경우 `ALTER INDEX REORGANIZE`를 실행해도 데이터가 다시 정렬되지 않습니다. 데이터를 다시 정렬하려면 `ALTER INDEX REBUILD`를 사용하세요.
   
 ## <a name="disabling-indexes"></a><a name="disabling-indexes"></a> 인덱스 비활성화  
 인덱스를 비활성화하면 사용자가 인덱스에 액세스할 수 없으며 클러스터형 인덱스의 경우 기본 테이블 데이터에도 액세스할 수 없습니다. 인덱스 정의는 시스템 카탈로그에 유지됩니다. 뷰의 비클러스터형 인덱스 또는 클러스터형 인덱스를 비활성화하면 인덱스 데이터가 물리적으로 삭제됩니다. 클러스터형 인덱스를 비활성화하면 데이터에 액세스할 수 없지만 인덱스가 삭제되거나 다시 작성될 때까지는 데이터가 B-트리에서 유지 관리되지 않는 상태로 남아 있습니다. 활성 또는 비활성 인덱스의 상태를 보려면 **sys.indexes** 카탈로그 뷰의 **is_disabled** 열을 쿼리합니다.  

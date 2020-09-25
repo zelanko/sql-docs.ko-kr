@@ -2,7 +2,7 @@
 title: tempdb 데이터베이스 | Microsoft Docs
 description: 이 항목에서는 SQL Server 및 Azure SQL Database의 구성과 사용에 관한 세부 정보를 제공합니다.
 ms.custom: P360
-ms.date: 04/17/2020
+ms.date: 09/16/2020
 ms.prod: sql
 ms.prod_service: database-engine
 ms.technology: ''
@@ -16,12 +16,12 @@ ms.assetid: ce4053fb-e37a-4851-b711-8e504059a780
 author: stevestein
 ms.author: sstein
 monikerRange: =azuresqldb-current||>=sql-server-2016||=sqlallproducts-allversions||>=sql-server-linux-2017||=azuresqldb-mi-current
-ms.openlocfilehash: 5090a021f1402c88abf84d502ae3538eeced5bd1
-ms.sourcegitcommit: 1126792200d3b26ad4c29be1f561cf36f2e82e13
+ms.openlocfilehash: 30e481590a41e5c5670360bac265a0d7656fff9f
+ms.sourcegitcommit: 3efd8bbf91f4f78dce3a4ac03348037d8c720e6a
 ms.translationtype: HT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 09/14/2020
-ms.locfileid: "90076828"
+ms.lasthandoff: 09/23/2020
+ms.locfileid: "91024345"
 ---
 # <a name="tempdb-database"></a>tempdb 데이터베이스
 
@@ -115,6 +115,8 @@ ms.locfileid: "90076828"
 
 ### <a name="tempdb-sizes-for-dtu-based-service-tiers"></a>DTU 기반 서비스 계층에 대한 tempdb 크기
 
+<!-- tempdb being larger for Basic and 50 eDTU pools than for 100-400 eDTU pools reflects actual config (historical reasons) --> 
+
 |서비스 수준 목표|`tempdb` 데이터 파일 최대 크기(GB)|`tempdb` 데이터 파일 수|`tempdb` 데이터 최대 크기(GB)|
 |---|---:|---:|---:|
 |Basic|13.9|1|13.9|
@@ -133,10 +135,16 @@ ms.locfileid: "90076828"
 |P6|13.9|12|166.7|
 |P11|13.9|12|166.7|
 |P15|13.9|12|166.7|
-|프리미엄 Elastic Database 풀(모든 DTU 구성)|13.9|12|166.7|
-|표준 Elastic Database 풀(S0~S2)|13.9|12|166.7|
-|표준 Elastic Database 풀(S3 이상) |32|12|384|
-|기본 Elastic Database 풀(모든 DTU 구성)|13.9|12|166.7|
+|기본 탄력적 풀(모든 DTU 구성)|13.9|12|166.7|
+|표준 탄력적 풀(50 eDTU)|13.9|12|166.7|
+|표준 탄력적 풀(100 eDTU)|32|1|32|
+|표준 탄력적 풀(200 eDTU)|32|2|64|
+|표준 탄력적 풀(300 eDTU)|32|3|96|
+|표준 탄력적 풀(400 eDTU)|32|3|96|
+|표준 탄력적 풀(800 eDTU)|32|6|192|
+|표준 탄력적 풀(1200 eDTU)|32|10|320|
+|표준 탄력적 풀(1600-3000 eDTU)|32|12|384|
+|프리미엄 탄력적 풀(모든 DTU 구성)|13.9|12|166.7|
 ||||
 
 ### <a name="tempdb-sizes-for-vcore-based-service-tiers"></a>vCore 기반 서비스 계층에 대한 tempdb 크기

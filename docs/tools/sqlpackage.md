@@ -10,12 +10,12 @@ author: pensivebrian
 ms.author: broneill
 ms.reviewer: drswkier; sstein
 ms.date: 07/06/2020
-ms.openlocfilehash: 3d162630d029fcde31275ce4d09cfe05bdf78c36
-ms.sourcegitcommit: a9f16d7819ed0e2b7ad8f4a7d4d2397437b2bbb2
+ms.openlocfilehash: dbf4c4de7e8bdcb945f2c11c0b63f7cf75ce318b
+ms.sourcegitcommit: c74bb5944994e34b102615b592fdaabe54713047
 ms.translationtype: HT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 08/21/2020
-ms.locfileid: "88714251"
+ms.lasthandoff: 09/22/2020
+ms.locfileid: "90989446"
 ---
 # <a name="sqlpackageexe"></a>SqlPackage.exe
 
@@ -68,6 +68,13 @@ sqlpackage.exe /TargetFile:"C:\sqlpackageoutput\output_current_version.dacpac" /
 ```
 sqlpackage.exe /Action:Script /SourceFile:"C:\sqlpackageoutput\output_current_version.dacpac" /TargetFile:"C:\sqlpackageoutput\output_target.dacpac" /TargetDatabaseName:"Contoso.Database" /OutputPath:"C:\sqlpackageoutput\output.sql"
  ```
+
+sqlpackage 버전을 표시합니다.
+
+```
+sqlpackage.exe /Version
+ ```
+
 
 ## <a name="extract-parameters-and-properties"></a>매개 변수 및 속성 추출
 SqlPackage.exe 추출 작업은 SQL Server 또는 Azure SQL Database에서 DACPAC 패키지(.dacpac 파일)로 라이브 데이터베이스 스키마를 만듭니다. 기본적으로 데이터는 .dacpac 파일에 포함되지 않습니다. 데이터를 포함하려면 [내보내기 작업](#export-parameters-and-properties)을 사용합니다. 

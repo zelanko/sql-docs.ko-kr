@@ -5,22 +5,22 @@ description: 고가용성을 사용하여 SQL Server 빅 데이터 클러스터�
 author: mihaelablendea
 ms.author: mihaelab
 ms.reviewer: mikeray
-ms.date: 08/04/2020
+ms.date: 09/18/2020
 ms.topic: conceptual
 ms.prod: sql
 ms.technology: big-data-cluster
-ms.openlocfilehash: 2ed7a1b5169c7104ea089410d244095cd953aaf2
-ms.sourcegitcommit: 6ab28d954f3a63168463321a8bc6ecced099b247
+ms.openlocfilehash: 17aaed99c8adb73b88a2d81482fcdefc7d8f68fd
+ms.sourcegitcommit: c74bb5944994e34b102615b592fdaabe54713047
 ms.translationtype: HT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 08/05/2020
-ms.locfileid: "87790281"
+ms.lasthandoff: 09/22/2020
+ms.locfileid: "90990024"
 ---
 # <a name="deploy-sql-server-big-data-cluster-with-high-availability"></a>고가용성을 사용하여 SQL Server 빅 데이터 클러스터 배포
 
 [!INCLUDE[SQL Server 2019](../includes/applies-to-version/sqlserver2019.md)]
 
-SQL Server 빅 데이터 클러스터는 Kubernetes에 컨테이너화된 애플리케이션으로 제공되고 상태 저장 세트 및 영구 스토리지와 같은 기능을 사용하므로, 이 인프라에는 클러스터 구성 요소에서 서비스 상태를 유지하는 데 활용하는 기본적으로 제공되는 상태 모니터링, 실패 검색 및 장애 조치 메커니즘이 있습니다. 안정성을 높이기 위해 고가용성 구성에서 추가 복제본과 함께 배포하도록 SQL Server 마스터 인스턴스 또는 HDFS 이름 노드 및 Spark 공유 서비스를 구성할 수도 있습니다. 모니터링, 실패 검색 및 자동 장애 조치는 빅 데이터 클러스터 관리 서비스, 즉 제어 서비스를 통해 관리됩니다. 이 서비스는 사용자 개입 없이 가용성 그룹 설정, 데이터베이스 미러링 엔드포인트 구성에서 가용성 그룹에 데이터베이스 추가 또는 장애 조치(failover) 및 업그레이드 조정에 이르기까지 모든 기능을 제공합니다. 
+SQL Server 빅 데이터 클러스터는 Kubernetes에 컨테이너화된 애플리케이션으로 제공되고 상태 저장 세트 및 영구 스토리지와 같은 기능을 사용하므로, 이 인프라에는 클러스터 구성 요소에서 서비스 상태를 유지하는 데 활용하는 기본적으로 제공되는 상태 모니터링, 실패 검색 및 장애 조치 메커니즘이 있습니다. 안정성을 높이기 위해 고가용성 구성에서 추가 복제본과 함께 배포하도록 SQL Server 마스터 인스턴스 및/또는 HDFS 이름 노드 및 Spark 공유 서비스를 구성할 수도 있습니다. 모니터링, 실패 검색 및 자동 장애 조치는 빅 데이터 클러스터 관리 서비스, 즉 제어 서비스를 통해 관리됩니다. 이 서비스는 사용자 개입 없이 가용성 그룹 설정, 데이터베이스 미러링 엔드포인트 구성에서 가용성 그룹에 데이터베이스 추가 또는 장애 조치(failover) 및 업그레이드 조정에 이르기까지 모든 기능을 제공합니다. 
 
 다음 이미지는 SQL Server 빅 데이터 클러스터에서 가용성 그룹을 배포하는 방법을 나타냅니다.
 
@@ -32,7 +32,7 @@ SQL Server 빅 데이터 클러스터는 Kubernetes에 컨테이너화된 애플
 - 모든 사용자 및 시스템 데이터베이스(예: `master` 및 `msdb`)를 포함하여 모든 데이터베이스가 가용성 그룹에 자동으로 추가됩니다. 이 기능은 가용성 그룹 복제본 전체에서 단일 시스템 보기를 제공합니다. 추가 모델 데이터베이스(`model_replicatedmaster` 및 `model_msdb`)는 시스템 데이터베이스의 복제된 부분을 시드하는 데 사용됩니다. 이러한 데이터베이스 외에도 인스턴스에 직접 연결하면 `containedag_master` 및 `containedag_msdb` 데이터베이스가 표시됩니다. `containedag` 데이터베이스는 가용성 그룹 내의 `master` 및 `msdb`를 나타냅니다.
 
   > [!IMPORTANT]
-  > SQL Server 2019 CU1 릴리스 시점에는 CREATE DATABASE 문의 결과로 만들어진 데이터베이스만 가용성 그룹에 자동으로 추가됩니다. 데이터베이스 연결 등의 다른 워크플로 결과로 인스턴스에 생성된 데이터베이스는 아직 가용성 그룹에 추가되지 않았으며, 빅 데이터 클러스터 관리자가 수동으로 추가해야 합니다. 자세한 내용은 [SQL Server 인스턴스에 연결](#instance-connect) 섹션을 참조하세요. SQL Server 2019 CU2 릴리스 이전에는 RESTORE 문의 결과로 생성된 데이터베이스에도 동일한 동작이 적용되어, 포함된 가용성 그룹에 데이터베이스를 수동으로 추가해야 했습니다.
+  > 데이터베이스 연결과 같은 워크플로 결과로 인스턴스에 생성된 데이터베이스는 가용성 그룹에 자동으로 추가되지 않으며, 빅 데이터 클러스터 관리자가 수동으로 추가해야 합니다. SQL Server 인스턴스 master 데이터베이스에 임시 엔드포인트를 사용하도록 설정하는 방법에 대한 지침은 [SQL Server 인스턴스에 연결](#instance-connect) 섹션을 참조하세요. SQL Server 2019 CU2 릴리스 이전에는 RESTORE 문의 결과로 생성된 데이터베이스에도 동일한 동작이 적용되어, 포함된 가용성 그룹에 데이터베이스를 수동으로 추가해야 했습니다.
   >
 - Polybase 구성 데이터베이스는 각 복제본과 관련된 인스턴스 수준 메타데이터를 포함하므로 가용성 그룹에 포함되지 않습니다.
 - 외부 엔드포인트는 가용성 그룹 내의 데이터베이스에 연결하기 위해 자동으로 프로비저닝됩니다. 이 `master-svc-external` 엔드포인트는 가용성 그룹 수신기의 역할을 수행합니다.
@@ -201,13 +201,17 @@ SQL Server Master Readable Secondary Replicas  11.11.111.11,11111  sql-server-ma
 
 ## <a name="known-limitations"></a>알려진 제한 사항
 
-빅 데이터 클러스터의 SQL Server 마스터에 대한 가용성 그룹과 관련된 알려진 문제 및 제한 사항은 다음과 같습니다.
+빅 데이터 클러스터의 SQL Server 마스터에 대하여 포함된 가용성 그룹 관련 알려진 문제 및 제한 사항은 다음과 같습니다.
 
-- SQL Server 2019 CU2 이전에는 `CREATE DATABASE` 및 `RESTORE DATABASE`(예: `CREATE DATABASE FROM SNAPSHOT`) 이외의 워크플로 결과로 생성된 데이터베이스가 가용성 그룹에 자동으로 추가되지 않았습니다. [인스턴스에 연결](#instance-connect)하고, 데이터베이스를 가용성 그룹에 수동으로 추가합니다.
+- 빅 데이터 클러스터가 배포될 때 고가용성 구성을 만들어야 합니다. 배포 후에는 가용성 그룹을 사용하여 고가용성 구성을 사용하도록 설정할 수 없습니다. 지금은 동기 커밋 복제본에 대한 구성만 사용하도록 설정됩니다.
+
+> [!WARNING]
+> 쿼럼 커밋의 모든 복제본에 대한 비동기 커밋으로 동기화 모드를 업데이트하면 고가용성 구성이 잘못 생성됩니다. 이러한 구성에서 실행하면 실패 이벤트가 주 복제본에 영향을 미칠 때 자동 장애 조치(failover)가 트리거되지 않으므로 데이터 손실의 위험이 있으며, 수동 장애 조치(failover) 사용 시 데이터 손실 위험을 감수해야 합니다.
+
 - 다른 서버에 생성된 백업에서 TDE 사용 데이터베이스를 복원하려면 SQL Server 인스턴스 마스터와 포함된 AG 마스터에서 모두 [필수 인증서](../relational-databases/security/encryption/move-a-tde-protected-database-to-another-sql-server.md)를 복원해야 합니다. 인증서를 백업하고 복원하는 방법에 대한 예제는 [여기](https://www.sqlshack.com/restoring-transparent-data-encryption-tde-enabled-databases-on-a-different-server/)를 참조하세요.
 - `sp_configure`를 사용하여 서버 구성 설정을 실행하는 것과 같은 특정 작업을 수행하려면 `master` 가용성 그룹이 아니라 SQL Server 인스턴스 `master` 데이터베이스에 연결해야 합니다. 해당 기본 엔드포인트는 사용할 수 없습니다. [지침](#instance-connect)에 따라 엔드포인트를 공개하고, SQL Server 인스턴스에 연결하고, `sp_configure`를 실행합니다. 엔드포인트를 수동으로 공개하여 SQL Server 인스턴스 `master` 데이터베이스에 연결하는 경우에만 SQL 인증을 사용할 수 있습니다.
-- 빅 데이터 클러스터가 배포될 때 고가용성 구성을 만들어야 합니다. 배포 후에는 가용성 그룹을 사용하여 고가용성 구성을 사용하도록 설정할 수 없습니다.
-- 포함된 msdb 데이터베이스는 가용성 그룹에 포함되어 있고 SQL 에이전트 작업은 두루 복제되지만 일정에 따라 작업이 트리거되지 않습니다. 해결 방법은 [각 SQL Server 인스턴스에 연결](#instance-connect)하고 인스턴스 msdb에서 작업을 만드는 것입니다. SQL Server 2019 CU2를 기준으로, 마스터 인스턴스의 각 복제본에 생성된 작업만 지원됩니다.
+- 포함된 msdb 데이터베이스는 가용성 그룹에 포함되어 있고 SQL 에이전트 작업은 두루 복제되지만 일정에 따라서만 주 복제본에서 실행됩니다.
+- SQL Server 2019 CU2 이전에는 `CREATE DATABASE` 및 `RESTORE DATABASE`(예: `CREATE DATABASE FROM SNAPSHOT`) 이외의 워크플로 결과로 생성된 데이터베이스가 가용성 그룹에 자동으로 추가되지 않았습니다. [인스턴스에 연결](#instance-connect)하고, 데이터베이스를 가용성 그룹에 수동으로 추가합니다.
 
 ## <a name="next-steps"></a>다음 단계
 

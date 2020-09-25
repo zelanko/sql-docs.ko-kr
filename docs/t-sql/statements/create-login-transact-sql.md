@@ -28,12 +28,12 @@ ms.assetid: eb737149-7c92-4552-946b-91085d8b1b01
 author: VanMSFT
 ms.author: vanto
 monikerRange: '>=aps-pdw-2016||=azuresqldb-current||=azuresqldb-current||=azure-sqldw-latest||>=sql-server-2016||=sqlallproducts-allversions||>=sql-server-linux-2017||=azuresqldb-mi-current'
-ms.openlocfilehash: 75866a02dee75aaaccb77e2f870b38222471d8c1
-ms.sourcegitcommit: e700497f962e4c2274df16d9e651059b42ff1a10
+ms.openlocfilehash: 6b21487a6cfbe896dd81194710784a6cc148d389
+ms.sourcegitcommit: 3efd8bbf91f4f78dce3a4ac03348037d8c720e6a
 ms.translationtype: HT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 08/17/2020
-ms.locfileid: "88444813"
+ms.lasthandoff: 09/23/2020
+ms.locfileid: "91024265"
 ---
 # <a name="create-login-transact-sql"></a>CREATE LOGIN(Transact-SQL)
 
@@ -316,7 +316,7 @@ CREATE LOGIN login_name
 
 ## <a name="arguments"></a>인수
 
-*login_name* 만들 로그인 이름을 지정합니다. Azure SQL Database의 단일 데이터베이스와 풀링된 데이터베이스와 Azure Synapse Analytics(이전의 Azure SQL Data Warehouse)의 데이터베이스는 SQL 로그인만 지원합니다. Azure Active Directory 사용자의 계정을 만들거나 로그인과 연결되지 않은 사용자 계정을 만들려면 [CREATE USER](create-user-transact-sql.md) 문을 사용합니다. 자세한 내용은 [Azure SQL Database에서 로그인 관리](https://docs.microsoft.com/azure/sql-database/sql-database-manage-logins)를 참조하세요.
+*login_name* 만들 로그인 이름을 지정합니다. Azure SQL Database의 단일 및 풀링된 데이터베이스와 [!INCLUDE[ssSDW](../../includes/sssdwfull-md.md)]의 데이터베이스는 SQL 로그인만 지원합니다. Azure Active Directory 사용자의 계정을 만들거나 로그인과 연결되지 않은 사용자 계정을 만들려면 [CREATE USER](create-user-transact-sql.md) 문을 사용합니다. 자세한 내용은 [Azure SQL Database에서 로그인 관리](https://docs.microsoft.com/azure/sql-database/sql-database-manage-logins)를 참조하세요.
 
 PASSWORD **='** password* *'* 만들 SQL 로그인의 암호를 지정합니다. 강력한 암호를 사용하세요. 자세한 내용은 [강력한 암호](../../relational-databases/security/strong-passwords.md) 및 [암호 정책](../../relational-databases/security/password-policy.md)을 참조하세요. [!INCLUDE[ssSQL11](../../includes/sssql11-md.md)]부터 저장된 암호 정보는 솔트 암호의 SHA-512를 사용하여 계산됩니다.
 

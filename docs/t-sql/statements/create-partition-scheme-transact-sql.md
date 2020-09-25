@@ -29,12 +29,12 @@ helpviewer_keywords:
 ms.assetid: 5b21c53a-b4f4-4988-89a2-801f512126e4
 author: markingmyname
 ms.author: maghan
-ms.openlocfilehash: 2985351da1e1b0f1c0215df95c3e61440773e9c3
-ms.sourcegitcommit: ac9feb0b10847b369b77f3c03f8200c86ee4f4e0
+ms.openlocfilehash: ea6018e34db8ddc07a1e30cec6089994e402b9e6
+ms.sourcegitcommit: 3efd8bbf91f4f78dce3a4ac03348037d8c720e6a
 ms.translationtype: HT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 09/16/2020
-ms.locfileid: "90688449"
+ms.lasthandoff: 09/23/2020
+ms.locfileid: "91024552"
 ---
 # <a name="create-partition-scheme-transact-sql"></a>CREATE PARTITION SCHEME(Transact-SQL)
 [!INCLUDE [SQL Server SQL Database](../../includes/applies-to-version/sql-asdb.md)]
@@ -160,7 +160,7 @@ TO (test1fg, test2fg, test3fg, test4fg, test5fg)
   
  파티션을 추가하도록 `myRangePF4` 파티션 함수를 변경한 경우 `test5fg` 파일 그룹이 새로 만들어진 파티션을 받습니다.  
 
-### <a name="e-creating-a-partition-schema-only-on-primary---only-primary-is-supported-for-sqldbesa"></a>E. PRIMARY에서만 파티션 스키마 만들기 - [!INCLUDE[sqldbesa](../../includes/sqldbesa-md.md)]에 대해 PRIMARY만 지원됨
+### <a name="e-creating-a-partition-scheme-only-on-primary---only-primary-is-supported-for-sqldbesa"></a>E. PRIMARY에서만 파티션 구성표 만들기 - [!INCLUDE[sqldbesa](../../includes/sqldbesa-md.md)]에서는 PRIMARY만 지원됨
 
  다음 예에서는 테이블이나 인덱스를 4개의 파티션으로 분할하는 파티션 함수를 만듭니다. 그러면 모든 파티션이 PRIMARY 파일 그룹에 만들어지도록 지정하는 파티션 구성표가 만들어집니다.  
   

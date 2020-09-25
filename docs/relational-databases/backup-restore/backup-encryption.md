@@ -11,12 +11,12 @@ ms.topic: conceptual
 ms.assetid: 334b95a8-6061-4fe0-9e34-b32c9f1706ce
 author: MikeRayMSFT
 ms.author: mikeray
-ms.openlocfilehash: 502feae1c94b905069b567bcf62d82fc128299a4
-ms.sourcegitcommit: da88320c474c1c9124574f90d549c50ee3387b4c
+ms.openlocfilehash: a73fde3a0d1c254709d63a85f7a7028c8da30891
+ms.sourcegitcommit: c74bb5944994e34b102615b592fdaabe54713047
 ms.translationtype: HT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 07/01/2020
-ms.locfileid: "85728492"
+ms.lasthandoff: 09/22/2020
+ms.locfileid: "90989836"
 ---
 # <a name="backup-encryption"></a>백업 암호화
  [!INCLUDE [SQL Server](../../includes/applies-to-version/sqlserver.md)]
@@ -35,8 +35,14 @@ ms.locfileid: "85728492"
 > 인증서나 비대칭 키를 백업하는 것이 매우 중요하며, 이때 가급적이면 인증서나 비대칭 키를 사용하여 암호화한 백업 파일과 다른 위치에 백업하는 것이 좋습니다. 인증서나 비대칭 키가 없으면 백업을 복원할 수 없으므로 백업 파일을 사용할 수 없게 됩니다.  
   
  **암호화된 백업 복원:** SQL Server 복원에서는 복원 중에 암호화 매개 변수를 지정할 필요가 없습니다. 또한 복원할 대상 인스턴스에서 백업 파일을 암호화하는 데 사용된 인증서나 비대칭 키를 사용할 수 없어도 됩니다. 복원을 수행하는 사용자 계정에는 인증서나 키에 대한 **VIEW DEFINITION** 권한이 있어야 합니다. 암호화된 백업을 다른 인스턴스로 복원하는 경우 해당 인스턴스에서 인증서를 사용할 수 있는지 확인해야 합니다.  
-  
- TDE로 암호화된 데이터베이스에서 백업을 복원하는 경우에는 복원할 대상 인스턴스에서 TDE 인증서를 사용할 수 있어야 합니다.  
+암호화된 데이터베이스를 새 위치로 복원하는 순서는 다음과 같습니다.
+
+1. 이전 데이터베이스에서 [BACKUP CERTIFICATE(Transact-SQL)](../../t-sql/statements/backup-certificate-transact-sql.md) 수행
+1. 새 위치 master 데이터베이스에서 [CREATE MASTER KEY(Transact-SQL)](../../t-sql/statements/create-master-key-transact-sql.md) 수행
+1. 새 서버의 위치로 가져온 이전 데이터베이스의 백업 인증서에서 [CREATE CERTIFICATE(Transact-SQL)](../../t-sql/statements/create-certificate-transact-sql.md) 수행
+1. [데이터베이스를 새 위치로 복원(SQL Server)](../../relational-databases/backup-restore/restore-a-database-to-a-new-location-sql-server.md)
+
+ TDE로 암호화된 데이터베이스에서 백업을 복원하는 경우에는 복원할 대상 인스턴스에서 TDE 인증서를 사용할 수 있어야 합니다. 자세한 내용은 [다른 SQL Server로 TDE 보호 데이터베이스 이동](../../relational-databases/security/encryption/move-a-tde-protected-database-to-another-sql-server.md)을 참조하세요.
   
 ##  <a name="benefits"></a><a name="Benefits"></a> 이점  
   

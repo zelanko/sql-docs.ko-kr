@@ -1,36 +1,37 @@
 ---
 title: azdata bdc debug 참조
 titleSuffix: SQL Server big data clusters
-description: 이 참조 문서를 사용하여 azdata 도구의 SQL 명령, 특히 bdc debug 명령을 이해할 수 있습니다.
+description: azdata bdc debug 명령에 대한 참조 문서입니다.
 author: MikeRayMSFT
 ms.author: mikeray
-ms.reviewer: mihaelab
-ms.date: 06/22/2020
+ms.reviewer: seanw
+ms.date: 09/22/2020
 ms.topic: reference
 ms.prod: sql
 ms.technology: big-data-cluster
-ms.openlocfilehash: e9d1f561666bf6aefdef6abf4b1daf568a5a89d8
-ms.sourcegitcommit: 883435b4c7366f06ac03579752093737b098feab
+ms.openlocfilehash: fe9f79373bd26ab4b010c63487ffa38de44dae3b
+ms.sourcegitcommit: d56f1eca807c55cf606a6316f3872585f014fec1
 ms.translationtype: HT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 08/28/2020
-ms.locfileid: "89734031"
+ms.lasthandoff: 09/22/2020
+ms.locfileid: "90914578"
 ---
 # <a name="azdata-bdc-debug"></a>azdata bdc debug
 
-[!INCLUDE[SQL Server 2019](../../includes/applies-to-version/sqlserver2019.md)]
+`azdata`에 적용됩니다.
 
-다음 문서에서는 `azdata` 도구의 `sql` 명령에 대한 참조를 제공합니다. 다른 `azdata` 명령에 대한 자세한 내용은 [azdata 참조](reference-azdata.md)를 참조하세요.
+다음 문서에서는 **azdata** 도구의 **sql** 명령에 대한 참조를 제공합니다. 다른 **azdata** 명령에 대한 자세한 내용은 [azdata 참조](reference-azdata.md)를 참조하세요.
 
 ## <a name="commands"></a>명령
-| 명령 | 설명 |
+
+|명령|설명|
 | --- | --- |
 [azdata bdc debug copy-logs](#azdata-bdc-debug-copy-logs) | 로그를 복사합니다.
 [azdata bdc debug dump](#azdata-bdc-debug-dump) | 메모리 덤프를 트리거합니다.
 ## <a name="azdata-bdc-debug-copy-logs"></a>azdata bdc debug copy-logs
 빅 데이터 클러스터에서 디버그 로그를 복사합니다. 시스템에 Kubernetes 구성이 있어야 합니다.
 ```bash
-azdata bdc debug copy-logs --namespace -n 
+azdata bdc debug copy-logs --namespace -ns 
                            [--container -c]  
                            
 [--target-folder -d]  
@@ -44,7 +45,7 @@ azdata bdc debug copy-logs --namespace -n
 [--exclude-dumps -ed]
 ```
 ### <a name="required-parameters"></a>필수 매개 변수
-#### `--namespace -n`
+#### `--namespace -ns`
 Kubernetes 네임스페이스에 사용되는 빅 데이터 클러스터 이름입니다.
 ### <a name="optional-parameters"></a>선택적 매개 변수
 #### `--container -c`
@@ -73,13 +74,13 @@ JMESPath 쿼리 문자열입니다. 자세한 내용 및 예제는 [http://jmesp
 ## <a name="azdata-bdc-debug-dump"></a>azdata bdc debug dump
 메모리 덤프를 트리거하고 컨테이너에서 복사합니다. 시스템에 Kubernetes 구성이 있어야 합니다.
 ```bash
-azdata bdc debug dump --namespace -n 
+azdata bdc debug dump --namespace -ns 
                       [--container -c]  
                       
 [--target-folder -d]
 ```
 ### <a name="required-parameters"></a>필수 매개 변수
-#### `--namespace -n`
+#### `--namespace -ns`
 Kubernetes 네임스페이스에 사용되는 빅 데이터 클러스터 이름입니다.
 ### <a name="optional-parameters"></a>선택적 매개 변수
 #### `--container -c`
@@ -100,4 +101,7 @@ JMESPath 쿼리 문자열입니다. 자세한 내용 및 예제는 [http://jmesp
 
 ## <a name="next-steps"></a>다음 단계
 
-다른 `azdata` 명령에 대한 자세한 내용은 [azdata 참조](reference-azdata.md)를 참조하세요. `azdata` 도구를 설치하는 방법에 대한 자세한 내용은 [azdata를 설치하여 SQL Server 2019 빅 데이터 클러스터 관리](../install/deploy-install-azdata.md)를 참조하세요.
+다른 **azdata** 명령에 대한 자세한 내용은 [azdata 참조](reference-azdata.md)를 참조하세요. 
+
+**azdata** 도구를 설치하는 방법에 대한 자세한 내용은 [azdata 설치](..\install\deploy-install-azdata.md)를 참조하세요.
+

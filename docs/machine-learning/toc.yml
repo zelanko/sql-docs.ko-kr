@@ -35,6 +35,12 @@
       href: ../machine-learning/install/sql-ml-component-commandline-install.md
     - name: 미리 학습된 모델 설치
       href: ../machine-learning/install/sql-pretrained-models-install.md
+    - name: 사용자 지정 런타임 설치
+      items:
+        - name: Python 사용자 지정 런타임 설치
+          href: ../machine-learning/install/custom-runtime-python.md
+        - name: R 사용자 지정 런타임 설치
+          href: ../machine-learning/install/custom-runtime-r.md
     - name: 기본 Python 및 R 런타임 변경
       href: ../machine-learning/install/change-default-language-runtime-version.md
     - name: 바인딩을 사용하여 Python 및 R 런타임 업그레이드
