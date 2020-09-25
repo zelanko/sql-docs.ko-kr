@@ -21,12 +21,12 @@ ms.assetid: 46c288c1-3410-4d68-a027-3bbf33239289
 author: markingmyname
 ms.author: maghan
 monikerRange: '>=aps-pdw-2016||=azuresqldb-current||=azure-sqldw-latest||>=sql-server-2016||=sqlallproducts-allversions||>=sql-server-linux-2017||=azuresqldb-mi-current'
-ms.openlocfilehash: ab1c584d736208ba871983a6169684607dcb5627
-ms.sourcegitcommit: dd36d1cbe32cd5a65c6638e8f252b0bd8145e165
+ms.openlocfilehash: 9e298052726e033724d20d6b1695b1accda4c6ec
+ms.sourcegitcommit: 8f062015c2a033f5a0d805ee4adabbe15e7c8f94
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 09/08/2020
-ms.locfileid: "89550583"
+ms.lasthandoff: 09/25/2020
+ms.locfileid: "91227135"
 ---
 # <a name="sysdatabases-transact-sql"></a>sys.databases(Transact-SQL)
 
@@ -115,7 +115,7 @@ ms.locfileid: "89550583"
 |**is_federation_member**|**bit**|데이터베이스가 페더레이션의 멤버인지 여부를 나타냅니다.<br /> **적용 대상**: [!INCLUDE[ssSDSfull](../../includes/sssdsfull-md.md)]|  
 |**is_remote_data_archive_enabled**|**bit**|데이터베이스를 스트레치 하는지 여부를 나타냅니다.<br /> 0 = 스트레치를 사용 하지 않는 데이터베이스입니다.<br /> 1 = 스트레치를 사용 하도록 설정 된 데이터베이스입니다.<br /> **적용 대상**: [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] (부터 [!INCLUDE[ssSQL15](../../includes/sssql15-md.md)] )<br /> 자세한 내용은 [Stretch Database](../../sql-server/stretch-database/stretch-database.md)를 참조하세요.|  
 |**is_mixed_page_allocation_on**|**bit**|데이터베이스의 테이블 및 인덱스가 혼합 익스텐트의 초기 페이지를 할당할 수 있는지 여부를 나타냅니다.<br /> 0 = 데이터베이스의 테이블 및 인덱스는 항상 단일 익스텐트의 초기 페이지를 할당 합니다.<br /> 1 = 데이터베이스의 테이블 및 인덱스는 혼합 익스텐트의 초기 페이지를 할당할 수 있습니다.<br /> 자세한 내용은 `SET MIXED_PAGE_ALLOCATION` [ALTER Database SET Options &#40;transact-sql&#41;](../../t-sql/statements/alter-database-transact-sql-set-options.md)의 옵션을 참조 하세요.<br /> **적용 대상**: [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] (부터 [!INCLUDE[ssSQL15](../../includes/sssql15-md.md)] )|  
-|**is_temporal_retention_enabled**|**bit**|임시 보존 정책 정리 태스크를 사용할 수 있는지 여부를 나타냅니다.<br /><br />1 = 임시 보존이 사용 됩니다.<br />0 = 임시 보존이 사용 하지 않도록 설정 됨<br />**적용 대상**: [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]([!INCLUDE[ssSQL17](../../includes/sssql17-md.md)]부터) 및 [!INCLUDE[ssSDSfull](../../includes/sssdsfull-md.md)]|
+|**is_temporal_history_retention_enabled**|**bit**|임시 보존 정책 정리 태스크를 사용할 수 있는지 여부를 나타냅니다.<br /><br />1 = 임시 보존이 사용 됩니다.<br />0 = 임시 보존이 사용 하지 않도록 설정 됨<br />**적용 대상**: [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]([!INCLUDE[ssSQL17](../../includes/sssql17-md.md)]부터) 및 [!INCLUDE[ssSDSfull](../../includes/sssdsfull-md.md)]|
 |**catalog_collation_type**|**int**|카탈로그 데이터 정렬 설정:<br />0 = DATABASE_DEFAULT<br />2 = SQL_Latin_1_General_CP1_CI_AS<br /> **적용 대상**: [!INCLUDE[ssSDSfull](../../includes/sssdsfull-md.md)]|
 |**catalog_collation_type_desc**|**nvarchar(60)**|카탈로그 데이터 정렬 설정:<br />COLLATE<br />SQL_Latin_1_General_CP1_CI_AS<br /> **적용 대상**: [!INCLUDE[ssSDSfull](../../includes/sssdsfull-md.md)]|
 |**physical_database_name**|**nvarchar(128)**|의 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 경우 데이터베이스의 물리적 이름입니다. 의 경우 [!INCLUDE[ssSDSfull](../../includes/sssdsfull-md.md)] 서버의 데이터베이스에 대 한 일반 id입니다. <br />**적용 대상**: [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]([!INCLUDE[sql-server-2019](../../includes/sssqlv15-md.md)]부터) 및 [!INCLUDE[ssSDSfull](../../includes/sssdsfull-md.md)]|

@@ -1,5 +1,6 @@
 ---
 title: R 패키지 사용 팁
+titleSuffix: SQL machine learning
 description: R 또는 SQL Server를 처음 접하는 사용자를 위해 제공되는 SQL Server에서 R 패키지를 사용하는 방법에 대한 유용한 팁을 알아보세요.
 ms.prod: sql
 ms.technology: machine-learning
@@ -9,12 +10,12 @@ author: garyericson
 ms.author: garye
 ms.reviewer: davidph
 monikerRange: '>=sql-server-2016||>=sql-server-linux-ver15||=azuresqldb-mi-current||=sqlallproducts-allversions'
-ms.openlocfilehash: 67071e8a13f0f7935064daa6dabdd857a3644d92
-ms.sourcegitcommit: 9b41725d6db9957dd7928a3620fe4db41eb51c6e
+ms.openlocfilehash: 632b380b1935d380661903f18d56fe09aa9eff77
+ms.sourcegitcommit: 8f062015c2a033f5a0d805ee4adabbe15e7c8f94
 ms.translationtype: HT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 08/13/2020
-ms.locfileid: "88178940"
+ms.lasthandoff: 09/25/2020
+ms.locfileid: "91227148"
 ---
 # <a name="tips-for-using-r-packages"></a>R 패키지 사용 팁
 

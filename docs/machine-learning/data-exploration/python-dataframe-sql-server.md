@@ -1,19 +1,20 @@
 ---
 title: SQL 테이블에 Python 데이터 프레임 삽입
+titleSuffix: SQL machine learning
 description: 데이터 프레임에서 SQL 테이블로 데이터를 삽입하는 방법입니다.
 author: cawrites
 ms.author: chadam
 ms.date: 07/23/2020
-ms.topic: conceptual
+ms.topic: how-to
 ms.prod: sql
 ms.technology: machine-learning
 monikerRange: '>=sql-server-2017||>=sql-server-linux-ver15||=azuresqldb-mi-current||=azuresqldb-current||=sqlallproducts-allversions'
-ms.openlocfilehash: 6ea7df0bf0e869e1ed70357b0f3aaa4517187254
-ms.sourcegitcommit: 9b41725d6db9957dd7928a3620fe4db41eb51c6e
+ms.openlocfilehash: 2700e40bafa2d1283b4a998362eca88f9bbf0459
+ms.sourcegitcommit: 8f062015c2a033f5a0d805ee4adabbe15e7c8f94
 ms.translationtype: HT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 08/13/2020
-ms.locfileid: "88179827"
+ms.lasthandoff: 09/25/2020
+ms.locfileid: "91226853"
 ---
 # <a name="insert-python-dataframe-into-sql-table"></a>SQL 테이블에 Python 데이터 프레임 삽입
 [!INCLUDE[SQL Server SQL DB SQL MI](../../includes/applies-to-version/sql-asdb-asdbmi.md)]

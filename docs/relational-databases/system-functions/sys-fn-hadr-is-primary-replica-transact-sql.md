@@ -21,12 +21,12 @@ helpviewer_keywords:
 ms.assetid: c9b1969f-be1d-4dfb-a33d-551f380b9e27
 author: MikeRayMSFT
 ms.author: mikeray
-ms.openlocfilehash: 1c7bc3d91eafbfa72149c5c228afe409b044b089
-ms.sourcegitcommit: e700497f962e4c2274df16d9e651059b42ff1a10
+ms.openlocfilehash: d3a7142e60b1abb4f820caf2f75f8ebdec3a0d8a
+ms.sourcegitcommit: 8f062015c2a033f5a0d805ee4adabbe15e7c8f94
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 08/17/2020
-ms.locfileid: "88427845"
+ms.lasthandoff: 09/25/2020
+ms.locfileid: "91227399"
 ---
 # <a name="sysfn_hadr_is_primary_replica-transact-sql"></a>sys.fn_hadr_is_primary_replica(Transact-SQL)
 [!INCLUDE[sqlserver](../../includes/applies-to-version/sqlserver.md)]
@@ -37,8 +37,7 @@ ms.locfileid: "88427845"
   
 ## <a name="syntax"></a>구문  
   
-```  
-  
+```syntaxsql
 sys.fn_hadr_is_primary_replica ( 'dbname' )  
 ```  
   
@@ -52,13 +51,12 @@ sys.fn_hadr_is_primary_replica ( 'dbname' )
 ## <a name="remarks"></a>설명  
  이 함수를 사용하여 로컬 인스턴스에서 지정된 가용성 데이터베이스의 주 복제본을 호스팅하는지 여부를 편리하게 확인합니다. 예제 코드는 다음과 비슷할 수 있습니다.  
   
-```  
+```sql
 If sys.fn_hadr_is_primary_replica ( @dbname ) <> 1   
 BEGIN  
 -- If this is not the primary replica, exit (probably without error).  
 END  
 -- If this is the primary replica, continue to do the backup.  
-  
 ```  
   
 ## <a name="examples"></a>예제  
@@ -66,7 +64,7 @@ END
 ### <a name="a-using-sysfn_hadr_is_primary_replica"></a>A. sys.fn_hadr_is_primary_replica 사용  
  다음 예에서는 로컬 인스턴스에 지정된 데이터베이스가 주 복제본인 경우 1을 반환합니다.  
   
-```  
+```sql
 SELECT sys.fn_hadr_is_primary_replica ('TestDB');  
 GO  
 ```    

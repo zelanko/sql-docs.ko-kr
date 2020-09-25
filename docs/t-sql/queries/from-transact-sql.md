@@ -35,12 +35,12 @@ ms.assetid: 36b19e68-94f6-4539-aeb1-79f5312e4263
 author: VanMSFT
 ms.author: vanto
 monikerRange: '>=aps-pdw-2016||=azuresqldb-current||=azure-sqldw-latest||>=sql-server-2016||=sqlallproducts-allversions||>=sql-server-linux-2017||=azuresqldb-mi-current'
-ms.openlocfilehash: 810a61f438f88420829bb9656b328b2d93c7ef7b
-ms.sourcegitcommit: e700497f962e4c2274df16d9e651059b42ff1a10
+ms.openlocfilehash: 93397f5529a30cb0de1ac82ed36ea07fb0dd6c26
+ms.sourcegitcommit: 8f062015c2a033f5a0d805ee4adabbe15e7c8f94
 ms.translationtype: HT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 08/17/2020
-ms.locfileid: "88445381"
+ms.lasthandoff: 09/25/2020
+ms.locfileid: "91227237"
 ---
 # <a name="from-clause-plus-join-apply-pivot-transact-sql"></a>FROM 절과 JOIN, APPLY, PIVOT(Transact-SQL)
 
@@ -138,7 +138,7 @@ Transact-SQL에서 FROM 절은 다음 명령문에서 사용할 수 있습니다
 ```  
   
 ```syntaxsql
--- Syntax for Azure SQL Data Warehouse and Parallel Data Warehouse  
+-- Syntax for Azure Synapse Analytics and Parallel Data Warehouse  
   
 FROM { <table_source> [ ,...n ] }  
   
@@ -151,7 +151,7 @@ FROM { <table_source> [ ,...n ] }
 }  
   
 <tablesample_clause> ::=
-    TABLESAMPLE ( sample_number [ PERCENT ] ) -- SQL Data Warehouse only  
+    TABLESAMPLE ( sample_number [ PERCENT ] ) -- Azure Synapse Analytics only  
  
 <joined_table> ::=   
 {  
@@ -270,12 +270,12 @@ FROM { <table_source> [ ,...n ] }
  난수를 생성하기 위해 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]에서 사용하는 상수 식입니다. *repeat_seed*는 **bigint**입니다. *repeat_seed*를 지정하지 않으면 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]에서 임의로 값을 할당합니다. 테이블에 변경내용이 적용되지 않은 경우 특정 *repeat_seed* 값에 대한 샘플링 결과는 항상 동일합니다. *repeat_seed* 식은 0보다 큰 정수로 계산되어야 합니다.  
   
 ### <a name="tablesample-clause"></a>Tablesample 절
-**적용 대상:** SQL Data Warehouse
+**적용 대상:** [!INCLUDE[ssSDW](../../includes/sssdwfull-md.md)]
 
  테이블의 데이터 샘플이 반환되도록 지정합니다. 샘플은 근사치일 수 있습니다. 이 절은 SELECT 또는 UPDATE 문에서 기본 테이블 또는 조인된 테이블에 사용될 수 있습니다. 뷰를 대상으로 TABLESAMPLE을 지정할 수는 없습니다. 
 
  PERCENT  
- 테이블에서 테이블 행의 *sample_number*%를 검색하도록 지정합니다. PERCENT를 지정하면 SQL Data Warehouse는 지정된 비율에 가장 가까운 결과를 반환합니다. PERCENT가 지정되면 *sample_number* 식은 0부터 100까지의 값으로 계산되어야 합니다.  
+ 테이블에서 테이블 행의 *sample_number*%를 검색하도록 지정합니다. PERCENT를 지정하면 [!INCLUDE[ssSDW](../../includes/sssdwfull-md.md)]는 지정된 비율에 가장 가까운 결과를 반환합니다. PERCENT가 지정되면 *sample_number* 식은 0부터 100까지의 값으로 계산되어야 합니다.  
 
 
 ### <a name="joined-table"></a>조인된 테이블 
