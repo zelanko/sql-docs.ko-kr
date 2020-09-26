@@ -3,18 +3,18 @@ title: 바로 가기 키 만들기 및 사용자 지정
 description: Visual Studio Code의 기능을 기반으로 Azure Data Studio에서 바로 가기 키를 보고 편집하고 만드는 방법을 알아봅니다.
 ms.prod: azure-data-studio
 ms.technology: azure-data-studio
-ms.topic: conceptual
+ms.topic: how-to
 author: markingmyname
 ms.author: maghan
 ms.reviewer: alayu, maghan, sstein
 ms.custom: seodec18
 ms.date: 09/24/2018
-ms.openlocfilehash: e8f5e60d0a8f5c578e27dfb283459882d58a0195
-ms.sourcegitcommit: dc8a30a4a27e15fc6671ca2674da9b7c637ec255
+ms.openlocfilehash: fa4b5bc766b6d9bf269f08a1f00e2ef4d8c52b0e
+ms.sourcegitcommit: 63aef5a96905f0b026322abc9ccb862ee497eebe
 ms.translationtype: HT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 08/21/2020
-ms.locfileid: "88746123"
+ms.lasthandoff: 09/25/2020
+ms.locfileid: "91363971"
 ---
 # <a name="keyboard-shortcuts-in-azure-data-studio"></a>Azure Data Studio에서의 바로 가기 키
 

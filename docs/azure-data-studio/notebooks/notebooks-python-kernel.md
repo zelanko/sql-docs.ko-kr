@@ -1,7 +1,7 @@
 ---
 title: Azure Data Studio에서 Python 커널을 사용하여 Notebook 만들기
 description: 이 자습서에서는 Python Notebook을 만들고 실행하는 방법을 보여 줍니다.
-ms.topic: tutorial
+ms.topic: how-to
 ms.prod: azure-data-studio
 ms.technology: azure-data-studio
 author: garyericson
@@ -9,12 +9,12 @@ ms.author: garye
 ms.reviewer: mikeray, alayu, maghan
 ms.custom: ''
 ms.date: 07/01/2020
-ms.openlocfilehash: 38223789b149f0302005c39a42fdd18eb73ec2f6
-ms.sourcegitcommit: e3460309b301a77d0babec032f53de330da001a9
+ms.openlocfilehash: e019777c629084c5265cac1cd531ee01bdede01f
+ms.sourcegitcommit: 63aef5a96905f0b026322abc9ccb862ee497eebe
 ms.translationtype: HT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 09/24/2020
-ms.locfileid: "91136810"
+ms.lasthandoff: 09/25/2020
+ms.locfileid: "91364220"
 ---
 # <a name="create-and-run-a-python-notebook"></a>Python 노트북 만들기 및 실행
 

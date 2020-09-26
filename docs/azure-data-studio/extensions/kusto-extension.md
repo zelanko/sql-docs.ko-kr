@@ -1,20 +1,20 @@
 ---
 title: Azure Data Studio용 Kusto(KQL) 확장
 description: 이 문서에서는 Azure Data Studio를 사용하여 Azure Data Explorer 클러스터에 연결하고 쿼리하는 방법을 설명합니다.
-ms.topic: conceptual
 ms.prod: azure-data-studio
 ms.technology: azure-data-studio
+ms.topic: conceptual
 author: markingmyname
 ms.author: maghan
 ms.reviewer: jukoesma
 ms.custom: ''
 ms.date: 09/22/2020
-ms.openlocfilehash: 3df020725458318aa1c3936b2b4430582ace8997
-ms.sourcegitcommit: 8f062015c2a033f5a0d805ee4adabbe15e7c8f94
+ms.openlocfilehash: 52f8bb103aad960750a74be1a4e35b0d1d5be5d7
+ms.sourcegitcommit: 63aef5a96905f0b026322abc9ccb862ee497eebe
 ms.translationtype: HT
 ms.contentlocale: ko-KR
 ms.lasthandoff: 09/25/2020
-ms.locfileid: "91226828"
+ms.locfileid: "91364070"
 ---
 # <a name="kusto-kql-extension-for-azure-data-studio-preview"></a>Azure Data Studio용 Kusto(KQL) 확장(미리 보기)
 

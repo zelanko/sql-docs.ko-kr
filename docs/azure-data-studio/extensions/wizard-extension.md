@@ -3,24 +3,24 @@ title: 마법사 확장 만들기
 description: 이 자습서에서는 Azure Data Studio에 사용자 지정 기능을 추가하는 마법사 확장을 만드는 방법을 보여 줍니다.
 ms.prod: azure-data-studio
 ms.technology: azure-data-studio
-ms.reviewer: alayu, maghan
-ms.topic: how-to
+ms.topic: conceptual
 author: yualan
 ms.author: alayu
+ms.reviewer: maghan
 ms.custom: ''
 ms.date: 08/28/2020
-ms.openlocfilehash: 1ae3fe6606c926fedf7ff8c60a729c17d70b96be
-ms.sourcegitcommit: b6ee0d434b3e42384b5d94f1585731fd7d0eff6f
+ms.openlocfilehash: 50440aca120dad6cfd165262bd4bfd2e139393cf
+ms.sourcegitcommit: 63aef5a96905f0b026322abc9ccb862ee497eebe
 ms.translationtype: HT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 09/02/2020
-ms.locfileid: "89288145"
+ms.lasthandoff: 09/25/2020
+ms.locfileid: "91364060"
 ---
 # <a name="create-an-azure-data-studio-wizard-extension"></a>Azure Data Studio 마법사 확장 만들기
 
 이 자습서에서는 새 **Azure Data Studio 마법사 확장**을 만드는 방법을 보여 줍니다. 확장은 Azure Data Studio에서 사용자와 상호 작용할 수 있는 마법사를 기여합니다.
 
-이 자습서에서는 다음 방법을 알아봅니다.
+이 문서에서는 다음 방법을 알아봅니다.
 > [!div class="checklist"]
 > - 확장 생성기 설치
 > - 확장 만들기

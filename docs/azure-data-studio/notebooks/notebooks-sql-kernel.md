@@ -1,7 +1,7 @@
 ---
 title: Azure Data Studio의 SQL 커널 사용 Notebook
 description: 이 자습서에서는 SQL Server Notebook을 만들고 실행하는 방법을 보여 줍니다.
-ms.topic: tutorial
+ms.topic: how-to
 ms.prod: azure-data-studio
 ms.technology: azure-data-studio
 author: markingmyname
@@ -9,12 +9,12 @@ ms.author: maghan
 ms.reviewer: mikeray, alayu
 ms.custom: ''
 ms.date: 07/01/2020
-ms.openlocfilehash: d235b4acf40a2711d5935c34f72c5e97996fbc5c
-ms.sourcegitcommit: e3460309b301a77d0babec032f53de330da001a9
+ms.openlocfilehash: cd71a160036bdcb5768e7a2ca51529989f733eeb
+ms.sourcegitcommit: 63aef5a96905f0b026322abc9ccb862ee497eebe
 ms.translationtype: HT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 09/24/2020
-ms.locfileid: "91136842"
+ms.lasthandoff: 09/25/2020
+ms.locfileid: "91364210"
 ---
 # <a name="create-and-run-a-sql-server-notebook"></a>SQL Server Notebook 만들기 및 실행
 

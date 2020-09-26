@@ -102,8 +102,6 @@
           href: extensions/wizard-extension.md
     - name: '통합된 터미널(PowerShell, Bash)'
       href: integrated-terminal.md
-    - name: 바로 가기 키
-      href: keyboard-shortcuts.md
     - name: 서버 그룹
       href: server-groups.md
     - name: 원본 제어
@@ -132,14 +130,14 @@
       href: code-snippets.md
     - name: 탐색기 Azure SQL 리소스
       href: azure-resource-explorer.md
+    - name: 바로 가기 키
+      href: keyboard-shortcuts.md
     - name: 사용량 현황 데이터 수집
       href: usage-data-collection.md
-    - name: 작업 영역 및 사용자 설정
-      href: settings.md
     - name: Windows 인증(Kerberos)
       href: enable-kerberos.md
-    - name: 사용량 현황 데이터 수집
-      href: usage-data-collection.md
+    - name: 작업 영역 및 사용자 설정
+      href: settings.md
 - name: 참조
   items:
     - name: SQL 도구
