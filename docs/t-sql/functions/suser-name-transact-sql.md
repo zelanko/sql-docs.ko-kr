@@ -25,12 +25,12 @@ ms.assetid: ae598d9f-9baa-49b8-b1c1-042854206de4
 author: VanMSFT
 ms.author: vanto
 monikerRange: =azure-sqldw-latest||>=sql-server-2016||=sqlallproducts-allversions||>=sql-server-linux-2017||=azuresqldb-mi-current
-ms.openlocfilehash: b47d97f42c1da9420a79f3ed45bd4fb5d6071220
-ms.sourcegitcommit: e700497f962e4c2274df16d9e651059b42ff1a10
+ms.openlocfilehash: 1044f594889c8d7a6698c0ffc5a09692ed734a47
+ms.sourcegitcommit: 197a6ffb643f93592edf9e90b04810a18be61133
 ms.translationtype: HT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 08/17/2020
-ms.locfileid: "88307979"
+ms.lasthandoff: 09/26/2020
+ms.locfileid: "91379784"
 ---
 # <a name="suser_name-transact-sql"></a>SUSER_NAME(Transact-SQL)
 [!INCLUDE[tsql-appliesto-ss2008-xxxx-asdw-xxx-md](../../includes/tsql-appliesto-ss2008-xxxx-asdw-xxx-md.md)]
@@ -41,8 +41,7 @@ ms.locfileid: "88307979"
   
 ## <a name="syntax"></a>구문  
   
-```  
-  
+```syntaxsql
 SUSER_NAME ( [ server_user_id ] )   
 ```  
   
@@ -68,7 +67,7 @@ SUSER_NAME은 SELECT 목록이나 WHERE 절, 그리고 식이 사용되는 모�
 ## <a name="examples"></a>예제  
 다음 예에서는 로그인 ID가 `1`인 사용자의 로그인 ID 이름을 반환합니다.  
   
-```  
+```sql
 SELECT SUSER_NAME(1);  
 ```  
   

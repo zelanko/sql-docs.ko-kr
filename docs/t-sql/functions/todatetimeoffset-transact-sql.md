@@ -25,12 +25,12 @@ ms.assetid: b5fafc08-efd4-4a3b-a0b3-068981a0a685
 author: julieMSFT
 ms.author: jrasnick
 monikerRange: '>=aps-pdw-2016||=azuresqldb-current||=azure-sqldw-latest||>=sql-server-2016||=sqlallproducts-allversions||>=sql-server-linux-2017||=azuresqldb-mi-current'
-ms.openlocfilehash: b5274a17e4de005c3947aba96956b62b5d200409
-ms.sourcegitcommit: e700497f962e4c2274df16d9e651059b42ff1a10
+ms.openlocfilehash: 204cdfe73791ef1cf7e6d3b66ed20735b61e9b09
+ms.sourcegitcommit: 197a6ffb643f93592edf9e90b04810a18be61133
 ms.translationtype: HT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 08/17/2020
-ms.locfileid: "88459545"
+ms.lasthandoff: 09/26/2020
+ms.locfileid: "91380458"
 ---
 # <a name="todatetimeoffset-transact-sql"></a>TODATETIMEOFFSET(Transact-SQL)
 [!INCLUDE [sql-asdb-asdbmi-asa-pdw](../../includes/applies-to-version/sql-asdb-asdbmi-asa-pdw.md)]
@@ -41,7 +41,7 @@ ms.locfileid: "88459545"
   
 ## <a name="syntax"></a>구문  
   
-```  
+```syntaxsql
 TODATETIMEOFFSET ( expression , time_zone )  
 ```  
   
@@ -69,7 +69,7 @@ TODATETIMEOFFSET ( expression , time_zone )
  다음 예에서는 현재 날짜 및 시간의 표준 시간대 오프셋을 표준 시간대 `-07:00`으로 변경합니다.  
   
 ```sql  
-DECLARE @todaysDateTime datetime2;  
+DECLARE @todaysDateTime DATETIME2;  
 SET @todaysDateTime = GETDATE();  
 SELECT TODATETIMEOFFSET (@todaysDateTime, '-07:00');  
 -- RETURNS 2019-04-22 16:23:51.7666667 -07:00  

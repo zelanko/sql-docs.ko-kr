@@ -22,12 +22,12 @@ helpviewer_keywords:
 ms.assetid: 4308a7b9-8e8f-49e9-8246-8224e32f4953
 author: julieMSFT
 ms.author: jrasnick
-ms.openlocfilehash: 349ef2067c50a9955643c02cb8ba5226a1f15ddc
-ms.sourcegitcommit: e700497f962e4c2274df16d9e651059b42ff1a10
+ms.openlocfilehash: ac628c06693b46aec49654541723937ff317b18c
+ms.sourcegitcommit: 197a6ffb643f93592edf9e90b04810a18be61133
 ms.translationtype: HT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 08/17/2020
-ms.locfileid: "88422567"
+ms.lasthandoff: 09/26/2020
+ms.locfileid: "91380488"
 ---
 # <a name="x40x40textsize-transact-sql"></a>&#x40;&#x40;TEXTSIZE (Transact-SQL)
 [!INCLUDE [SQL Server SQL Database](../../includes/applies-to-version/sql-asdb.md)]
@@ -38,7 +38,7 @@ ms.locfileid: "88422567"
   
 ## <a name="syntax"></a>구문  
   
-```  
+```syntaxsql
 @@TEXTSIZE  
 ```  
   
@@ -50,7 +50,7 @@ ms.locfileid: "88422567"
 ## <a name="examples"></a>예제  
  다음 예에서는 `SELECT`를 사용하여 `SET``TEXTSIZE` 문을 통해 값이 변경되기 이전과 이후의 `@@TEXTSIZE` 값을 표시합니다.  
   
-```  
+```sql
 -- Set the TEXTSIZE option to the default size of 4096 bytes.  
 SET TEXTSIZE 0  
 SELECT @@TEXTSIZE AS 'Text Size'  

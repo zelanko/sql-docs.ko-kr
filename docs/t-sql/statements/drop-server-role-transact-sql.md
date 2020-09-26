@@ -20,12 +20,12 @@ ms.assetid: a2a1e6e6-e40c-4d6a-81be-d197b80bf226
 author: VanMSFT
 ms.author: vanto
 monikerRange: '>=aps-pdw-2016||>=sql-server-2016||=sqlallproducts-allversions||>=sql-server-linux-2017||=azuresqldb-mi-current'
-ms.openlocfilehash: 40e9be1315ee89990d6cfec8dc5e6ac7042bdbc5
-ms.sourcegitcommit: e700497f962e4c2274df16d9e651059b42ff1a10
+ms.openlocfilehash: 5a8f5b2204323c0da73371ba1298bc2b0f636e1a
+ms.sourcegitcommit: 197a6ffb643f93592edf9e90b04810a18be61133
 ms.translationtype: HT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 08/17/2020
-ms.locfileid: "88496738"
+ms.lasthandoff: 09/26/2020
+ms.locfileid: "91379666"
 ---
 # <a name="drop-server-role-transact-sql"></a>DROP SERVER ROLE(Transact-SQL)
 [!INCLUDE[tsql-appliesto-ss2012-xxxx-xxxx-pdw-md](../../includes/tsql-appliesto-ss2012-xxxx-xxxx-pdw-md.md)]
@@ -38,7 +38,7 @@ ms.locfileid: "88496738"
   
 ## <a name="syntax"></a>구문  
   
-```  
+```syntaxsql  
 DROP SERVER ROLE role_name  
 ```  
   
@@ -63,7 +63,7 @@ DROP SERVER ROLE role_name
 ### <a name="a-to-drop-a-server-role"></a>A. 서버 역할 삭제  
  다음 예에서는 서버 역할 `purchasing`을 삭제합니다.  
   
-```  
+```sql  
 DROP SERVER ROLE purchasing;  
 GO  
 ```  
@@ -71,7 +71,7 @@ GO
 ### <a name="b-to-view-role-membership"></a>B. 역할 멤버 자격 보기  
  역할 멤버 자격을 보려면 [!INCLUDE[ssManStudioFull](../../includes/ssmanstudiofull-md.md)]에서 **서버 역할(멤버**) 페이지를 사용하거나 다음 쿼리를 실행합니다.  
   
-```  
+```sql  
 SELECT SRM.role_principal_id, SP.name AS Role_Name,   
 SRM.member_principal_id, SP2.name  AS Member_Name  
 FROM sys.server_role_members AS SRM  
@@ -85,7 +85,7 @@ ORDER BY  SP.name,  SP2.name
 ### <a name="c-to-view-role-membership"></a>C. 역할 멤버 자격 보기  
  서버 역할이 다른 서버 역할을 소유하는지 여부를 확인하려면 다음 쿼리를 실행하십시오.  
   
-```  
+```sql  
 SELECT SP1.name AS RoleOwner, SP2.name AS Server_Role  
 FROM sys.server_principals AS SP1  
 JOIN sys.server_principals AS SP2  

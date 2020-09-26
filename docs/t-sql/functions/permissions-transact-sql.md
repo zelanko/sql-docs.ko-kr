@@ -25,12 +25,12 @@ helpviewer_keywords:
 ms.assetid: 81625a56-b160-4424-91c5-1ce8b259a8e6
 author: VanMSFT
 ms.author: vanto
-ms.openlocfilehash: 0681d22c6a48d8680c7b44e767558f02e2a4c251
-ms.sourcegitcommit: e700497f962e4c2274df16d9e651059b42ff1a10
+ms.openlocfilehash: 1bbd07982bc45b3fbd32b140f74a9a0f32fa3c3a
+ms.sourcegitcommit: 197a6ffb643f93592edf9e90b04810a18be61133
 ms.translationtype: HT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 08/17/2020
-ms.locfileid: "88467942"
+ms.lasthandoff: 09/26/2020
+ms.locfileid: "91380749"
 ---
 # <a name="permissions-transact-sql"></a>PERMISSIONS(Transact-SQL)
 [!INCLUDE [SQL Server SQL Database](../../includes/applies-to-version/sql-asdb.md)]
@@ -44,7 +44,6 @@ ms.locfileid: "88467942"
 ## <a name="syntax"></a>구문  
   
 ```syntaxsql
-  
 PERMISSIONS ( [ objectid [ , 'column' ] ] )  
 ```  
   
@@ -118,7 +117,7 @@ PERMISSIONS ( [ objectid [ , 'column' ] ] )
 ### <a name="a-using-the-permissions-function-with-statement-permissions"></a>A. 문 사용 권한과 함께 PERMISSIONS 함수 사용  
  다음 예는 현재 사용자가 `CREATE TABLE` 문을 실행할 수 있는지 여부를 확인합니다.  
   
-```  
+```sql  
 IF PERMISSIONS()&2=2  
    CREATE TABLE test_table (col1 INT)  
 ELSE  
@@ -128,7 +127,7 @@ ELSE
 ### <a name="b-using-the-permissions-function-with-object-permissions"></a>B. 개체 사용 권한과 함께 PERMISSIONS 함수 사용  
  다음 예에서는 현재 사용자가 `Address` 데이터베이스의 `AdventureWorks2012` 테이블에 데이터 행을 삽입할 수 있는지 여부를 확인합니다.  
   
-```  
+```sql  
 IF PERMISSIONS(OBJECT_ID('AdventureWorks2012.Person.Address','U'))&8=8   
    PRINT 'The current user can insert data into Person.Address.'  
 ELSE  
@@ -138,7 +137,7 @@ ELSE
 ### <a name="c-using-the-permissions-function-with-grantable-permissions"></a>C. 부여할 수 있는 권한과 함께 PERMISSIONS 함수 사용  
  다음 예에서는 현재 사용자가 `Address` 데이터베이스의 `AdventureWorks2012` 테이블에 대한 INSERT 권한을 다른 사용자에게 부여할 수 있는지 여부를 확인합니다.  
   
-```  
+```sql  
 IF PERMISSIONS(OBJECT_ID('AdventureWorks2012.Person.Address','U'))&0x80000=0x80000  
    PRINT 'INSERT on Person.Address is grantable.'  
 ELSE  

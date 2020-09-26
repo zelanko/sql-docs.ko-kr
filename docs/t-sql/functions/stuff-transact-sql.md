@@ -25,12 +25,12 @@ ms.assetid: abb0afa9-44f6-42a2-a871-5f471dfb222b
 author: julieMSFT
 ms.author: jrasnick
 monikerRange: '>=aps-pdw-2016||=azuresqldb-current||=azure-sqldw-latest||>=sql-server-2016||=sqlallproducts-allversions||>=sql-server-linux-2017||=azuresqldb-mi-current'
-ms.openlocfilehash: e14a1a07537ee9ec99d2eb54de4ec636621cce80
-ms.sourcegitcommit: e700497f962e4c2274df16d9e651059b42ff1a10
+ms.openlocfilehash: d798e00eccd5252c5142c0e6e19ac842b02d500d
+ms.sourcegitcommit: 197a6ffb643f93592edf9e90b04810a18be61133
 ms.translationtype: HT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 08/17/2020
-ms.locfileid: "88467804"
+ms.lasthandoff: 09/26/2020
+ms.locfileid: "91379822"
 ---
 # <a name="stuff-transact-sql"></a>STUFF(Transact-SQL)
 [!INCLUDE [sql-asdb-asdbmi-asa-pdw](../../includes/applies-to-version/sql-asdb-asdbmi-asa-pdw.md)]
@@ -74,7 +74,7 @@ STUFF ( character_expression , start , length , replaceWith_expression )
 ## <a name="examples"></a>예제  
  다음 예에서는 첫 문자열 `abcdef`에서 `2` 위치의 `b`부터 세 문자를 삭제하고 삭제 지점에 두 번째 문자열을 삽입하여 만든 문자열을 반환합니다.  
   
-```  
+```sql  
 SELECT STUFF('abcdef', 2, 3, 'ijklmn');  
 GO  
 ```  

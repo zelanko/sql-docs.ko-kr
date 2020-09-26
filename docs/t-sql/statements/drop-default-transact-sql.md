@@ -19,12 +19,12 @@ helpviewer_keywords:
 ms.assetid: d2d3af25-8877-46ba-95d9-1844961d97ee
 author: markingmyname
 ms.author: maghan
-ms.openlocfilehash: ab8d8b67ecc262269e1aa322735ac152329bc36b
-ms.sourcegitcommit: dd36d1cbe32cd5a65c6638e8f252b0bd8145e165
+ms.openlocfilehash: 2bb618bfc53e481e2ea7d86749aaf093d3ec2542
+ms.sourcegitcommit: 197a6ffb643f93592edf9e90b04810a18be61133
 ms.translationtype: HT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 09/08/2020
-ms.locfileid: "89539888"
+ms.lasthandoff: 09/26/2020
+ms.locfileid: "91380048"
 ---
 # <a name="drop-default-transact-sql"></a>DROP DEFAULT(Transact-SQL)
 [!INCLUDE [SQL Server](../../includes/applies-to-version/sqlserver.md)]
@@ -69,7 +69,7 @@ DROP DEFAULT [ IF EXISTS ] { [ schema_name . ] default_name } [ ,...n ] [ ; ]
 ### <a name="a-dropping-a-default"></a>A. 기본값 삭제  
  기본값이 열 또는 별칭 데이터 형식에 바인딩되지 않은 경우 단순히 DROP DEFAULT를 사용하여 삭제할 수 있습니다. 다음은 사용자가 만든 `datedflt`라는 기본값을 제거하는 예입니다.  
   
-```  
+```sql  
 USE AdventureWorks2012;  
 GO  
 IF EXISTS (SELECT name FROM sys.objects  
@@ -81,7 +81,7 @@ GO
   
  [!INCLUDE[ssSQL15](../../includes/sssql15-md.md)]부터는 다음 구문을 사용할 수 있습니다.  
   
-```  
+```sql  
 DROP DEFAULT IF EXISTS datedflt;  
 GO  
 ```  
@@ -89,7 +89,7 @@ GO
 ### <a name="b-dropping-a-default-that-has-been-bound-to-a-column"></a>B. 열에 바인딩된 기본값 삭제  
  다음은 `EmergencyContactPhone` 테이블의 `Contact` 열과 연결된 기본값의 바인딩을 해제하고 `phonedflt`라는 기본값을 삭제하는 예입니다.  
   
-```  
+```sql  
 USE AdventureWorks2012;  
 GO  
    BEGIN   

@@ -22,12 +22,12 @@ helpviewer_keywords:
 ms.assetid: f7da1b80-5cbe-42fa-be71-40c6af16383a
 author: VanMSFT
 ms.author: vanto
-ms.openlocfilehash: 214f6cff39f520de9a155625f910486cbf237ffa
-ms.sourcegitcommit: e700497f962e4c2274df16d9e651059b42ff1a10
+ms.openlocfilehash: 1470d95dd12134abf0e097e4c56f7eb908c807f0
+ms.sourcegitcommit: 197a6ffb643f93592edf9e90b04810a18be61133
 ms.translationtype: HT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 08/17/2020
-ms.locfileid: "88363479"
+ms.lasthandoff: 09/26/2020
+ms.locfileid: "91380828"
 ---
 # <a name="x40x40packet_errors-transact-sql"></a>&#x40;&#x40;PACKET_ERRORS (Transact-SQL)
 [!INCLUDE [SQL Server](../../includes/applies-to-version/sqlserver.md)]
@@ -38,8 +38,7 @@ ms.locfileid: "88363479"
   
 ## <a name="syntax"></a>구문  
   
-```  
-  
+```syntaxsql
 @@PACKET_ERRORS  
 ```  
   
@@ -54,7 +53,7 @@ ms.locfileid: "88363479"
 ## <a name="examples"></a>예제  
  다음 예에서는 `@@PACKET_ERRORS`를 사용하는 방법을 보여 줍니다.  
   
-```  
+```sql  
 SELECT @@PACKET_ERRORS AS 'Packet Errors';  
 ```  
   

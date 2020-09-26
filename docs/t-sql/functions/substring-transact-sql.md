@@ -24,12 +24,12 @@ ms.assetid: a19c808f-aaf9-4a69-af59-b1a5fc3e5c4c
 author: julieMSFT
 ms.author: jrasnick
 monikerRange: '>=aps-pdw-2016||=azuresqldb-current||=azure-sqldw-latest||>=sql-server-2016||=sqlallproducts-allversions||>=sql-server-linux-2017||=azuresqldb-mi-current'
-ms.openlocfilehash: 571cd20813376fd3ed25bb89cf49890f8d75f718
-ms.sourcegitcommit: 768f046107642f72693514f51bf2cbd00f58f58a
+ms.openlocfilehash: 39c6ae00a1416727740d09f2aab3436f8ef616e7
+ms.sourcegitcommit: 197a6ffb643f93592edf9e90b04810a18be61133
 ms.translationtype: HT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 07/23/2020
-ms.locfileid: "87111858"
+ms.lasthandoff: 09/26/2020
+ms.locfileid: "91379798"
 ---
 # <a name="substring-transact-sql"></a>SUBSTRING(Transact-SQL)
 [!INCLUDE [sql-asdb-asdbmi-asa-pdw](../../includes/applies-to-version/sql-asdb-asdbmi-asa-pdw.md)]
@@ -40,7 +40,7 @@ ms.locfileid: "87111858"
   
 ## <a name="syntax"></a>구문  
   
-```  
+```syntaxsql
 SUBSTRING ( expression ,start , length )  
 ```  
   
@@ -78,7 +78,7 @@ SUBSTRING ( expression ,start , length )
 ### <a name="a-using-substring-with-a-character-string"></a>A. 문자열과 SUBSTRING 사용  
  다음 예에서는 문자열의 일부를 반환하는 방법을 보여 줍니다. 이 쿼리는 `sys.databases` 테이블에서 첫 번째 열에 시스템 데이터베이스 이름, 두 번째 열에 데이터베이스의 첫 번째 문자, 마지막 열에 세 번째 및 네 번째 문자를 반환합니다.  
   
-```  
+```sql
 SELECT name, SUBSTRING(name, 1, 1) AS Initial ,
 SUBSTRING(name, 3, 2) AS ThirdAndFourthCharacters
 FROM sys.databases  
@@ -98,7 +98,7 @@ WHERE database_id < 5;
   
  다음 예에서는 문자열 상수 `abcdef`의 둘째, 셋째, 넷째 문자를 표시하는 방법을 보여 줍니다.  
   
-```  
+```sql
 SELECT x = SUBSTRING('abcdef', 2, 3);  
 ```  
   
@@ -119,7 +119,7 @@ bcd
   
  다음 예에서는 `pubs` 데이터베이스의 `pub_info` 테이블에 있는 각각의 **text** 및 **image** 데이터 열에서 처음 10자를 반환하는 방법을 보여 줍니다. **text** 데이터는 **varchar**로 반환되며 **image** 데이터는 **varbinary**로 반환됩니다.  
   
-```  
+```sql
 USE pubs;  
 SELECT pub_id, SUBSTRING(logo, 1, 10) AS logo,   
    SUBSTRING(pr_info, 1, 10) AS pr_info  
@@ -139,7 +139,7 @@ WHERE pub_id = '1756';
   
  다음 예에서는 **text** 및 **ntext** 데이터에 SUBSTRING을 사용한 결과를 보여 줍니다. 이 예제는 먼저 `pubs` 데이터베이스에서 `npub_info`라는 새 테이블을 만듭니다. 다음 `pr_info` 열의 처음 80자로 `npub_info` 테이블의 `pub_info.pr_info` 열을 만들고 `ü`를 첫 번째 문자로 추가합니다. 마지막으로 `INNER JOIN`을 사용해 모든 게시자 ID와 **text** 및 **ntext** 게시자 정보 열의 `SUBSTRING`을 검색합니다.  
   
-```  
+```sql
 IF EXISTS (SELECT table_name FROM INFORMATION_SCHEMA.TABLES   
       WHERE table_name = 'npub_info')  
    DROP TABLE npub_info;  
@@ -149,7 +149,7 @@ USE pubs;
 GO  
 CREATE TABLE npub_info  
 (  
- pub_id char(4) NOT NULL  
+ pub_id CHAR(4) NOT NULL  
     REFERENCES publishers(pub_id)  
     CONSTRAINT UPKCL_npubinfo PRIMARY KEY CLUSTERED,  
 pr_info ntext NULL  
@@ -184,7 +184,7 @@ ORDER BY pr.pub_id ASC;
 ### <a name="c-using-substring-with-a-character-string"></a>C. 문자열과 SUBSTRING 사용  
  다음 예에서는 문자열의 일부를 반환하는 방법을 보여 줍니다. 이 쿼리는 `dbo.DimEmployee` 테이블에서 첫 번째 열에 이름을 반환하고 두 번째 열에 머리글자를 반환합니다.  
   
-```  
+```sql
 -- Uses AdventureWorks  
   
 SELECT LastName, SUBSTRING(FirstName, 1, 1) AS Initial  
@@ -205,7 +205,7 @@ Barreto de Mattos    P
   
  다음 예는 문자열 상수 `abcdef`의 두 번째, 세 번째, 네 번째 문자를 반환하는 방법을 보여줍니다.  
   
-```  
+```sql
 USE ssawPDW;  
   
 SELECT TOP 1 SUBSTRING('abcdef', 2, 3) AS x FROM dbo.DimCustomer;  

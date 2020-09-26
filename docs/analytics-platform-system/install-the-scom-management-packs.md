@@ -9,18 +9,18 @@ ms.date: 04/17/2018
 ms.author: murshedz
 ms.reviewer: martinle
 ms.custom: seo-dt-2019
-ms.openlocfilehash: 666eb33667f9badc2c09e4f7afa872622bedb67f
-ms.sourcegitcommit: 827ad02375793090fa8fee63cc372d130f11393f
+ms.openlocfilehash: d44e90493c905764eaceea86b5cc3c3311091726
+ms.sourcegitcommit: 197a6ffb643f93592edf9e90b04810a18be61133
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 09/04/2020
-ms.locfileid: "89480307"
+ms.lasthandoff: 09/26/2020
+ms.locfileid: "91379415"
 ---
 # <a name="install-sql-server-operations-manager-scom-management-packs-for-analytics-platform-system"></a>분석 플랫폼 시스템용 SCOM (SQL Server Operations Manager) 관리 팩 설치
 SQL Server PDW System Center Operations Manager (SCOM) 관리 팩을 다운로드 하 여 설치 하려면 다음 단계를 따르세요. 관리 팩은 SCOM의 SQL Server PDW를 모니터링 하는 데 필요 합니다.  
   
 ## <a name="before-you-begin"></a><a name="BeforeBegin"></a>시작하기 전 주의 사항  
-**전제 조건**  
+**필수 구성 요소**  
   
 System Center Operations Manager를 설치 하 고 실행 해야 합니다. SQL Server PDW 2012에 System Center Operations Manager 2007 R2, System Center Operations Manager 2012 또는 System Center Operations Manager 2012 Service Pack 1이 필요 합니다.  
   
@@ -29,7 +29,7 @@ APS PDW 워크 로드의 경우 [Microsoft Analytics Platform System 용 System 
   
 어플라이언스 관리의 경우 [SQL Server 어플라이언스 기본 관리 팩](/previous-versions/system-center/packs/gg602398(v=technet.10))을 다운로드 합니다.  
   
-APS가 없는 이전 버전의 PDW의 경우[Microsoft SQL Server 2012 병렬 데이터 웨어하우스 어플라이언스 용 System Center 모니터링 팩](https://docs.microsoft.com/sql/analytics-platform-system/download-and-apply-microsoft-updates?view=aps-pdw-2016-au7)을 다운로드 합니다.  
+APS가 없는 이전 버전의 PDW의 경우[Microsoft SQL Server 2012 병렬 데이터 웨어하우스 어플라이언스 용 System Center 모니터링 팩](./download-and-apply-microsoft-updates.md?view=aps-pdw-2016-au7)을 다운로드 합니다.  
   
 <!-- MISSING LINKS - For the HDInsight workload, download the [System Center Management Pack for HDInsight](https://go.microsoft.com/fwlink/?LinkId=390208).  -->
   
@@ -79,4 +79,4 @@ APS가 없는 이전 버전의 PDW의 경우[Microsoft SQL Server 2012 병렬 �
 관리 팩을 설치 했으므로 다음 단계를 계속 진행 합니다. [PDW 용 SCOM 관리 팩 가져오기 &#40;분석 플랫폼 시스템&#41;](import-the-scom-management-pack-for-pdw.md)합니다.  
   
 <!-- MISSING LINKS ## See Also  
-[Common Metadata Query Examples &#40;SQL Server PDW&#41;](../sqlpdw/common-metadata-query-examples-sql-server-pdw.md)  -->  
+[Common Metadata Query Examples &#40;SQL Server PDW&#41;](../sqlpdw/common-metadata-query-examples-sql-server-pdw.md)  -->

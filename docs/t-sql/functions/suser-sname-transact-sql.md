@@ -27,12 +27,12 @@ ms.assetid: 11ec7d86-d429-4004-a436-da25df9f8761
 author: julieMSFT
 ms.author: jrasnick
 monikerRange: '>=aps-pdw-2016||=azuresqldb-current||=azure-sqldw-latest||>=sql-server-2016||=sqlallproducts-allversions||>=sql-server-linux-2017||=azuresqldb-mi-current'
-ms.openlocfilehash: 570372e0ca0f40284f89e862eee75e5a3d419440
-ms.sourcegitcommit: e700497f962e4c2274df16d9e651059b42ff1a10
+ms.openlocfilehash: 5d441cba0f070f4d93210000f3b497e88ebf9011
+ms.sourcegitcommit: 197a6ffb643f93592edf9e90b04810a18be61133
 ms.translationtype: HT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 08/17/2020
-ms.locfileid: "88308419"
+ms.lasthandoff: 09/26/2020
+ms.locfileid: "91380068"
 ---
 # <a name="suser_sname-transact-sql"></a>SUSER_SNAME(Transact-SQL)
 [!INCLUDE [sql-asdb-asdbmi-asa-pdw](../../includes/applies-to-version/sql-asdb-asdbmi-asa-pdw.md)]
@@ -43,7 +43,7 @@ ms.locfileid: "88308419"
   
 ## <a name="syntax"></a>구문  
   
-```  
+```syntaxsql
 SUSER_SNAME ( [ server_user_sid ] )   
 ```  
   
@@ -73,7 +73,7 @@ SUSER_SNAME ( [ server_user_sid ] )
 ### <a name="a-using-suser_sname"></a>A. SUSER_SNAME 사용  
  다음 예에서는 현재 보안 컨텍스트의 로그인 이름을 반환합니다.  
   
-```  
+```sql
 SELECT SUSER_SNAME();  
 GO  
 ```  
@@ -83,7 +83,7 @@ GO
   
 **적용 대상**: [!INCLUDE[ssKatmai](../../includes/sskatmai-md.md)] 이상
   
-```  
+```sql
 SELECT SUSER_SNAME(0x010500000000000515000000a065cf7e784b9b5fe77c87705a2e0000);  
 GO  
 ```  
@@ -91,7 +91,7 @@ GO
 ### <a name="c-using-suser_sname-as-a-default-constraint"></a>C. DEFAULT 제약 조건으로 SUSER_SNAME 사용  
  다음 예에서는 `SUSER_SNAME`를 `DEFAULT` 문의 `CREATE TABLE` 제약 조건으로 사용합니다.  
   
-```  
+```sql
 USE AdventureWorks2012;  
 GO  
 CREATE TABLE sname_example  
@@ -110,7 +110,7 @@ GO
   
 **적용 대상**: [!INCLUDE[ssKatmai](../../includes/sskatmai-md.md)] 이상
   
-```  
+```sql
 SELECT SUSER_SNAME();  
 GO  
 EXECUTE AS LOGIN = 'WanidaBenShoof';  
@@ -118,8 +118,7 @@ SELECT SUSER_SNAME();
 REVERT;  
 GO  
 SELECT SUSER_SNAME();  
-GO  
-  
+GO 
 ```  
   
  결과는 다음과 같습니다.  
@@ -135,7 +134,7 @@ sa
 ### <a name="e-using-suser_sname"></a>E. SUSER_SNAME 사용  
  다음 예에서는 `0x01` 값을 갖는 SID에 대한 로그인 이름을 반환합니다.  
   
-```  
+```sql
 SELECT SUSER_SNAME(0x01);  
 GO  
 ```  
@@ -143,7 +142,7 @@ GO
 ### <a name="f-returning-the-current-login"></a>F. 현재 로그인 반환  
  다음 예에서는 현재 로그인의 로그인 이름을 반환합니다.  
   
-```  
+```sql
 SELECT SUSER_SNAME() AS CurrentLogin;  
 GO  
 ```  

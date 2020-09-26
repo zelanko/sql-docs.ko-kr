@@ -23,12 +23,12 @@ helpviewer_keywords:
 ms.assetid: df22c826-317d-45a6-b078-186acb65f71e
 author: VanMSFT
 ms.author: vanto
-ms.openlocfilehash: 1b28f91129bccf4c8005cd840d87f14f2a84b25e
-ms.sourcegitcommit: e700497f962e4c2274df16d9e651059b42ff1a10
+ms.openlocfilehash: 9f50d075b23df010e1a79a6b83283e8a6bcdb9b0
+ms.sourcegitcommit: 197a6ffb643f93592edf9e90b04810a18be61133
 ms.translationtype: HT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 08/17/2020
-ms.locfileid: "88416549"
+ms.lasthandoff: 09/26/2020
+ms.locfileid: "91380110"
 ---
 # <a name="drop-credential-transact-sql"></a>DROP CREDENTIAL(Transact-SQL)
 [!INCLUDE [SQL Server](../../includes/applies-to-version/sqlserver.md)]
@@ -39,8 +39,7 @@ ms.locfileid: "88416549"
   
 ## <a name="syntax"></a>구문  
   
-```  
-  
+```syntaxsql
 DROP CREDENTIAL credential_name  
 ```  
   
@@ -64,7 +63,7 @@ DROP CREDENTIAL credential_name
 ## <a name="examples"></a>예제  
  다음 예에서는 `Saddles`라는 자격 증명을 제거합니다.  
   
-```  
+```sql  
 DROP CREDENTIAL Saddles;  
 GO  
 ```  

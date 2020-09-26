@@ -21,12 +21,12 @@ ms.assetid: b4fac3b8-2d47-4c11-a6a6-009e5a538f40
 author: julieMSFT
 ms.author: jrasnick
 monikerRange: '>=aps-pdw-2016||=azuresqldb-current||=azure-sqldw-latest||>=sql-server-2016||=sqlallproducts-allversions||>=sql-server-linux-2017||=azuresqldb-mi-current'
-ms.openlocfilehash: 8f2d02a2ff302b88c8af676200997978e750cf49
-ms.sourcegitcommit: e700497f962e4c2274df16d9e651059b42ff1a10
+ms.openlocfilehash: 11eb965ba1917d413e212ecca49a8abddc231379
+ms.sourcegitcommit: 197a6ffb643f93592edf9e90b04810a18be61133
 ms.translationtype: HT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 08/17/2020
-ms.locfileid: "88467852"
+ms.lasthandoff: 09/26/2020
+ms.locfileid: "91379918"
 ---
 # <a name="space-transact-sql"></a>SPACE(Transact-SQL)
 [!INCLUDE [sql-asdb-asdbmi-asa-pdw](../../includes/applies-to-version/sql-asdb-asdbmi-asa-pdw.md)]
@@ -58,7 +58,7 @@ SPACE ( integer_expression )
 ## <a name="examples"></a>예제  
  다음 예에서는 성을 없애고 쉼표 하나, 공백 두 개 및 `Person`의 `AdventureWorks2012` 테이블에 나열된 사람의 이름을 연결합니다.  
   
-```  
+```sql  
 USE AdventureWorks2012;  
 GO  
 SELECT RTRIM(LastName) + ',' + SPACE(2) +  LTRIM(FirstName)  
@@ -70,7 +70,7 @@ GO
 ## <a name="examples-sssdwfull-and-sspdw"></a>예: [!INCLUDE[ssSDWfull](../../includes/sssdwfull-md.md)] 및 [!INCLUDE[ssPDW](../../includes/sspdw-md.md)]  
  다음 예에서는 성을 없애고 쉼표 하나, 공백 두 개 및 `DimCustomer`의 `AdventureWorksPDW2012` 테이블에 나열된 사람의 이름을 연결합니다.  
   
-```  
+```sql  
 -- Uses AdventureWorks  
   
 SELECT RTRIM(LastName) + ',' + SPACE(2) +  LTRIM(FirstName)  

@@ -21,12 +21,12 @@ ms.assetid: 29f2a906-d084-4464-abc3-4b275ed19442
 author: julieMSFT
 ms.author: jrasnick
 monikerRange: '>=aps-pdw-2016||=azuresqldb-current||=azure-sqldw-latest||>=sql-server-2016||=sqlallproducts-allversions||>=sql-server-linux-2017||=azuresqldb-mi-current'
-ms.openlocfilehash: fb6db4504d3861c036547778ce6c8c9e16995990
-ms.sourcegitcommit: e700497f962e4c2274df16d9e651059b42ff1a10
+ms.openlocfilehash: b529dc24269b7e2b57f68ec22e81beed31d7dc03
+ms.sourcegitcommit: 197a6ffb643f93592edf9e90b04810a18be61133
 ms.translationtype: HT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 08/17/2020
-ms.locfileid: "88479603"
+ms.lasthandoff: 09/26/2020
+ms.locfileid: "91379848"
 ---
 # <a name="stdevp-transact-sql"></a>STDEVP(Transact-SQL)
 [!INCLUDE [sql-asdb-asdbmi-asa-pdw](../../includes/applies-to-version/sql-asdb-asdbmi-asa-pdw.md)]
@@ -37,8 +37,7 @@ ms.locfileid: "88479603"
   
 ## <a name="syntax"></a>구문  
   
-```  
-  
+```syntaxsql
 -- Aggregate Function Syntax   
 STDEVP ( [ ALL | DISTINCT ] expression )  
   
@@ -74,7 +73,7 @@ STDEVP ([ ALL ] expression) OVER ( [ partition_by_clause ] order_by_clause)
 ### <a name="a-using-stdevp"></a>A: STDEVP 사용  
  다음은 [!INCLUDE[ssSampleDBnormal](../../includes/sssampledbnormal-md.md)] 데이터베이스의 `SalesPerson` 테이블에 있는 모든 보너스 값의 모집단에 대한 표준 편차를 반환하는 예입니다.  
   
-```  
+```sql  
 SELECT STDEVP(Bonus)  
 FROM Sales.SalesPerson;  
 GO  
@@ -85,7 +84,7 @@ GO
 ### <a name="b-using-stdevp"></a>B: STDEVP 사용  
  다음 예에서는 `dbo.FactSalesQuota` 테이블의 판매 할당량 값의 `STDEVP`를 반환합니다. 첫 번째 열은 모든 고유 값의 표준 편차를 포함하고 두 번째 열은 중복 값을 포함한 모든 값의 표준 편차를 포함합니다.  
   
-```  
+```sql  
 -- Uses AdventureWorks  
   
 SELECT STDEVP(DISTINCT SalesAmountQuota)AS Distinct_Values, STDEVP(SalesAmountQuota) AS All_Values  
@@ -104,7 +103,7 @@ Distinct_Values   All_Values
 ### <a name="c-using-stdevp-with-over"></a>C. OVER와 함께 STDEVP 사용  
  다음 예에서는 한 해의 각 분기에 대한 판매 할당량 값 중 `STDEVP`를 반환합니다. `ORDER BY` 절의 `OVER`는 `STDEVP`을 정렬하고 `ORDER BY` 문의 `SELECT`는 결과 집합을 정렬합니다.  
   
-```  
+```sql  
 -- Uses AdventureWorks  
   
 SELECT CalendarYear AS Year, CalendarQuarter AS Quarter, SalesAmountQuota AS SalesQuota,  

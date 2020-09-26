@@ -24,12 +24,12 @@ helpviewer_keywords:
 ms.assetid: 4e041f33-60c4-4190-91c7-220d51dd6c8f
 author: VanMSFT
 ms.author: vanto
-ms.openlocfilehash: 433ff155da65471abe8b3ebde3df437b0a3f55ad
-ms.sourcegitcommit: e700497f962e4c2274df16d9e651059b42ff1a10
+ms.openlocfilehash: 2524b2e828615ee1e413f36bd77cd8ebc3fa8b77
+ms.sourcegitcommit: 197a6ffb643f93592edf9e90b04810a18be61133
 ms.translationtype: HT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 08/17/2020
-ms.locfileid: "88362059"
+ms.lasthandoff: 09/26/2020
+ms.locfileid: "91380563"
 ---
 # <a name="verifysignedbycert-transact-sql"></a>VERIFYSIGNEDBYCERT(Transact-SQL)
 [!INCLUDE [SQL Server SQL Database](../../includes/applies-to-version/sql-asdb.md)]
@@ -40,8 +40,7 @@ ms.locfileid: "88362059"
   
 ## <a name="syntax"></a>구문  
   
-```  
-  
+```syntaxsql
 VerifySignedByCert( Cert_ID , signed_data , signature )  
 ```  
   
@@ -73,7 +72,7 @@ VerifySignedByCert( Cert_ID , signed_data , signature )
 ### <a name="a-verifying-that-signed-data-has-not-been-tampered-with"></a>A. 서명된 데이터가 변경되지 않았는지 확인  
  다음 예에서는 `Signed_Data`의 정보가 `Shipping04`라는 인증서로 서명된 후 변경되었는지 테스트합니다. 서명은 `DataSignature`에 저장됩니다. 인증서 `Shipping04`는 데이터베이스 내의 인증서 ID를 반환하는 `Cert_ID`로 전달됩니다. `VerifySignedByCert`가 1을 반환하면 서명이 올바른 것입니다. `VerifySignedByCert`가 0을 반환하면 `Signed_Data`의 데이터는 `DataSignature`를 생성하는 데 사용된 데이터와 다릅니다. 이 경우 `Signed_Data`가 서명된 후 변경되었거나 `Signed_Data`가 다른 인증서로 서명된 것입니다.  
   
-```  
+```sql
 SELECT Data, VerifySignedByCert( Cert_Id( 'Shipping04' ),  
     Signed_Data, DataSignature ) AS IsSignatureValid  
 FROM [AdventureWorks2012].[SignedData04]   
@@ -84,7 +83,7 @@ GO
 ### <a name="b-returning-only-records-that-have-a-valid-signature"></a>B. 유효한 서명을 가진 레코드만 반환  
  이 쿼리에서는 인증서 `Shipping04`를 사용하여 서명된 이후 변경되지 않은 레코드만 반환합니다.  
   
-```  
+```sql
 SELECT Data FROM [AdventureWorks2012].[SignedData04]   
 WHERE VerifySignedByCert( Cert_Id( 'Shipping04' ), Data,   
     DataSignature ) = 1   

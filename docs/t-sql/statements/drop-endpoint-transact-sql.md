@@ -22,12 +22,12 @@ helpviewer_keywords:
 ms.assetid: 6aca7412-66a5-4fa4-86b2-061512ff2080
 author: markingmyname
 ms.author: maghan
-ms.openlocfilehash: a33cf6c43f2f01e3a897a0491954b98e5739db6e
-ms.sourcegitcommit: dd36d1cbe32cd5a65c6638e8f252b0bd8145e165
+ms.openlocfilehash: 1ebeeee770fc161d289a10f246559ca353446618
+ms.sourcegitcommit: 197a6ffb643f93592edf9e90b04810a18be61133
 ms.translationtype: HT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 09/08/2020
-ms.locfileid: "89539832"
+ms.lasthandoff: 09/26/2020
+ms.locfileid: "91380034"
 ---
 # <a name="drop-endpoint-transact-sql"></a>DROP ENDPOINT(Transact-SQL)
 [!INCLUDE [SQL Server](../../includes/applies-to-version/sqlserver.md)]
@@ -38,8 +38,7 @@ ms.locfileid: "89539832"
   
 ## <a name="syntax"></a>구문  
   
-```  
-  
+```syntaxsql
 DROP ENDPOINT endPointName  
 ```  
   
@@ -55,10 +54,10 @@ DROP ENDPOINT endPointName
 ## <a name="permissions"></a>사용 권한  
  **sysadmin** 고정 서버 역할의 멤버 또는 엔드포인트 소유자이거나 엔드포인트에 대한 CONTROL 권한을 부여받아야 합니다.  
   
-## <a name="examples"></a>예  
+## <a name="examples"></a>예제  
  다음 예에서는 이전에 만든 `sql_endpoint`라는 엔드포인트를 제거합니다.  
   
-```  
+```sql  
 DROP ENDPOINT sql_endpoint;  
 ```  
   

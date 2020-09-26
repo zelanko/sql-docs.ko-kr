@@ -20,12 +20,12 @@ helpviewer_keywords:
 ms.assetid: 0bb451a9-3866-4064-963d-b74a2f864049
 author: julieMSFT
 ms.author: jrasnick
-ms.openlocfilehash: 385f492a91e740dfea04f83b1da8c8a67861f05b
-ms.sourcegitcommit: e700497f962e4c2274df16d9e651059b42ff1a10
+ms.openlocfilehash: 65ab8cab274a4fa70aa70898725431a4d59bcd11
+ms.sourcegitcommit: 197a6ffb643f93592edf9e90b04810a18be61133
 ms.translationtype: HT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 08/17/2020
-ms.locfileid: "88417209"
+ms.lasthandoff: 09/26/2020
+ms.locfileid: "91380629"
 ---
 # <a name="x40x40remserver-transact-sql"></a>&#x40;&#x40;REMSERVER (Transact-SQL)
 [!INCLUDE [SQL Server](../../includes/applies-to-version/sqlserver.md)]
@@ -40,7 +40,7 @@ ms.locfileid: "88417209"
   
 ## <a name="syntax"></a>구문  
   
-```  
+```syntaxsql  
 @@REMSERVER  
 ```  
 
@@ -55,7 +55,7 @@ ms.locfileid: "88417209"
 ## <a name="examples"></a>예제  
  다음 예에서는 원격 서버의 이름을 반환하는 `usp_CheckServer` 프로시저를 만듭니다.  
   
-```  
+```sql  
 CREATE PROCEDURE usp_CheckServer  
 AS  
 SELECT @@REMSERVER;  
@@ -63,7 +63,7 @@ SELECT @@REMSERVER;
   
  다음 저장 프로시저는 `SEATTLE1` 로컬 서버에서 생성됩니다. 사용자는 `LONDON2` 원격 서버에 로그온하고 `usp_CheckServer`를 실행합니다.  
   
-```  
+```sql  
 EXEC SEATTLE1...usp_CheckServer;  
 ```  
   

@@ -22,12 +22,12 @@ ms.assetid: de03531b-d9e7-4c3c-9604-14e582ac20c6
 author: julieMSFT
 ms.author: jrasnick
 monikerRange: '>=aps-pdw-2016||=azuresqldb-current||=azure-sqldw-latest||>=sql-server-2016||=sqlallproducts-allversions||>=sql-server-linux-2017||=azuresqldb-mi-current'
-ms.openlocfilehash: 365ef62b6b5437956e6dd2753b3f83de300d32b3
-ms.sourcegitcommit: e700497f962e4c2274df16d9e651059b42ff1a10
+ms.openlocfilehash: 5d34379bacee3a8d01f8f28c11930aefc5c00ab5
+ms.sourcegitcommit: 197a6ffb643f93592edf9e90b04810a18be61133
 ms.translationtype: HT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 08/17/2020
-ms.locfileid: "88467813"
+ms.lasthandoff: 09/26/2020
+ms.locfileid: "91379838"
 ---
 # <a name="str-transact-sql"></a>STR(Transact-SQL)
 [!INCLUDE [sql-asdb-asdbmi-asa-pdw](../../includes/applies-to-version/sql-asdb-asdbmi-asa-pdw.md)]
@@ -66,7 +66,7 @@ STR ( float_expression [ , length [ , decimal ] ] )
 ## <a name="examples"></a>예제  
  다음 예에서는 다섯 자리의 숫자와 소수점으로 구성된 식을 여섯 자리 문자열로 변환합니다. 숫자의 소수 부분은 소수 첫째 자리로 반올림됩니다.  
   
-```  
+```sql
 SELECT STR(123.45, 6, 1);  
 GO  
 ```  
@@ -82,7 +82,7 @@ GO
   
  식이 지정한 길이를 초과하면 문자열이 지정된 길이만큼 `**`를 반환합니다.  
   
-```  
+```sql
 SELECT STR(123.45, 2, 2);  
 GO  
 ```  
@@ -98,7 +98,7 @@ GO
   
  숫자 데이터가 `STR` 내에서 중첩되어도 결과는 지정된 형식의 문자 데이터입니다.  
   
-```  
+```sql
 SELECT STR (FLOOR (123.45), 8, 3);
 GO  
 ```  

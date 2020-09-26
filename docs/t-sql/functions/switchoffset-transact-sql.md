@@ -25,12 +25,12 @@ ms.assetid: 32a48e36-0aa4-4260-9fe9-cae9197d16c5
 author: julieMSFT
 ms.author: jrasnick
 monikerRange: '>=aps-pdw-2016||=azuresqldb-current||=azure-sqldw-latest||>=sql-server-2016||=sqlallproducts-allversions||>=sql-server-linux-2017||=azuresqldb-mi-current'
-ms.openlocfilehash: f8cffc510ca7d089be5326abf3d3823807b416e6
-ms.sourcegitcommit: e700497f962e4c2274df16d9e651059b42ff1a10
+ms.openlocfilehash: 0e266c23c0fdc712f5bab15173e187043fede5de
+ms.sourcegitcommit: 197a6ffb643f93592edf9e90b04810a18be61133
 ms.translationtype: HT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 08/17/2020
-ms.locfileid: "88417199"
+ms.lasthandoff: 09/26/2020
+ms.locfileid: "91380848"
 ---
 # <a name="switchoffset-transact-sql"></a>SWITCHOFFSET(Transact-SQL)
 [!INCLUDE [sql-asdb-asdbmi-asa-pdw](../../includes/applies-to-version/sql-asdb-asdbmi-asa-pdw.md)]
@@ -43,7 +43,7 @@ ms.locfileid: "88417199"
   
 ## <a name="syntax"></a>구문  
   
-```  
+```syntaxsql
 SWITCHOFFSET ( DATETIMEOFFSET, time_zone )   
 ```  
   
@@ -66,17 +66,16 @@ SWITCHOFFSET ( DATETIMEOFFSET, time_zone )
   
  GETDATE() 함수에 SWITCHOFFSET을 사용하면 쿼리 실행이 느려질 수 있습니다. 이는 쿼리 최적화 프로그램에서 datetime 값에 대한 정확한 카디널리티 예측을 구할 수 없기 때문입니다. 이 문제를 해결하려면 OPTION (RECOMPILE) 쿼리 힌트를 사용하여 다음에 동일한 쿼리를 실행할 때 쿼리 최적화 프로그램에서 쿼리 계획을 다시 컴파일하도록 하세요. 그러면 최적화 프로그램에서 정확한 카디널리티 예측을 구해 더 효율적인 쿼리 계획을 생성합니다. RECOMPILE 쿼리 힌트에 대한 자세한 내용은 [쿼리 힌트&#40;Transact-SQL&#41;](../../t-sql/queries/hints-transact-sql-query.md)를 참조하세요.  
   
-```  
+```sql
 DECLARE @dt datetimeoffset = switchoffset (CONVERT(datetimeoffset, GETDATE()), '-04:00');   
 SELECT * FROM t    
 WHERE c1 > @dt OPTION (RECOMPILE);  
-  
 ```  
   
 ## <a name="examples"></a>예제  
  다음 예에서는 `SWITCHOFFSET`을 사용하여 데이터베이스에 저장된 값과 다른 표준 시간대 오프셋을 표시합니다.  
   
-```  
+```sql  
 CREATE TABLE dbo.test   
     (  
     ColDatetimeoffset datetimeoffset  

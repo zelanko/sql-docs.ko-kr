@@ -21,12 +21,12 @@ helpviewer_keywords:
 ms.assetid: 2672b8cb-f747-46f3-9358-9b49b3583b8e
 author: julieMSFT
 ms.author: jrasnick
-ms.openlocfilehash: 510f2e6f0097b79cd458907a73ae094ff5cc637d
-ms.sourcegitcommit: e700497f962e4c2274df16d9e651059b42ff1a10
+ms.openlocfilehash: 83e8edcea68c22bdd14154203c9bf13b84b42156
+ms.sourcegitcommit: 197a6ffb643f93592edf9e90b04810a18be61133
 ms.translationtype: HT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 08/17/2020
-ms.locfileid: "88422597"
+ms.lasthandoff: 09/26/2020
+ms.locfileid: "91380508"
 ---
 # <a name="text-and-image-functions---textptr-transact-sql"></a>텍스트 및 이미지 함수 - TEXTPTR (Transact-SQL)
 [!INCLUDE [SQL Server](../../includes/applies-to-version/sqlserver.md)]
@@ -40,8 +40,7 @@ ms.locfileid: "88422597"
   
 ## <a name="syntax"></a>구문  
   
-```  
-  
+```syntaxsql
 TEXTPTR ( column )  
 ```  
   
@@ -78,10 +77,10 @@ TEXTPTR ( column )
 ### <a name="a-using-textptr"></a>A. TEXTPTR 사용  
  다음 예에서는 `TEXTPTR` 함수를 사용하여 `pubs` 데이터베이스의 `pub_info` 테이블에서 `New Moon Books`와 관련된 **image** 열 `logo`를 찾는 방법을 보여 줍니다. 텍스트 포인터는 지역 변수인 `@ptrval.`로 설정합니다.  
   
-```  
+```sql
 USE pubs;  
 GO  
-DECLARE @ptrval varbinary(16);  
+DECLARE @ptrval VARBINARY(16);  
 SELECT @ptrval = TEXTPTR(logo)  
 FROM pub_info pr, publishers p  
 WHERE p.pub_id = pr.pub_id   
@@ -92,8 +91,8 @@ GO
 ### <a name="b-using-textptr-with-in-row-text"></a>B. 행 내부 텍스트와 함께 TEXTPTR 사용  
  [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]에서는 다음 예와 같이 트랜잭션 내에서 행 내부 텍스트 포인터를 사용해야 합니다.  
   
-```  
-CREATE TABLE t1 (c1 int, c2 text);  
+```sql
+CREATE TABLE t1 (c1 INT, c2 TEXT);  
 EXEC sp_tableoption 't1', 'text in row', 'on';  
 INSERT t1 VALUES ('1', 'This is text.');  
 GO  
@@ -109,7 +108,7 @@ COMMIT;
 ### <a name="c-returning-text-data"></a>C. 텍스트 데이터 반환  
  다음 예에서는 `pub_id` 테이블에서 `pr_info` 열 및 `pub_info` 열의 16바이트 텍스트 포인터를 선택하는 방법을 보여 줍니다.  
   
-```  
+```sql
 USE pubs;  
 GO  
 SELECT pub_id, TEXTPTR(pr_info)  
@@ -137,7 +136,7 @@ pub_id
   
  다음 예에서는 TEXTPTR를 사용하지 않고 텍스트의 처음 `8000`바이트를 반환하는 방법을 보여 줍니다.  
   
-```  
+```sql
 USE pubs;  
 GO  
 SET TEXTSIZE 8000;  
@@ -168,10 +167,10 @@ This is sample text data for Lucerne Publishing, publisher 9999 in the pubs data
 ### <a name="d-returning-specific-text-data"></a>D. 특정 텍스트 데이터 반환  
  다음 예에서는 `pubs` 데이터베이스의 `pub_info` 테이블에서 `pub_id``0736`과 연관된 `text` 열(`pr_info`)을 찾는 방법을 보여 줍니다. 먼저 지역 변수 `@val`을 선언하고 텍스트 포인터(긴 이진 문자열)를 `@val`로 설정한 다음 `READTEXT` 문에 대한 매개 변수로 제공합니다. 이 문은 5번째 바이트(오프셋 4)에서 시작하여 10바이트를 반환합니다.  
   
-```  
+```sql
 USE pubs;  
 GO  
-DECLARE @val varbinary(16);  
+DECLARE @val VARBINARY(16);  
 SELECT @val = TEXTPTR(pr_info)   
 FROM pub_info  
 WHERE pub_id = '0736';  

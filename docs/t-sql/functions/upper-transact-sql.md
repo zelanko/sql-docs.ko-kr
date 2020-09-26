@@ -24,12 +24,12 @@ ms.assetid: 5ced55f7-ac89-4cf2-9465-f63f4dc480db
 author: julieMSFT
 ms.author: jrasnick
 monikerRange: '>=aps-pdw-2016||=azuresqldb-current||=azure-sqldw-latest||>=sql-server-2016||=sqlallproducts-allversions||>=sql-server-linux-2017||=azuresqldb-mi-current'
-ms.openlocfilehash: f95a25d11862141b484df1d1b3bc45330dd17983
-ms.sourcegitcommit: e700497f962e4c2274df16d9e651059b42ff1a10
+ms.openlocfilehash: 487bf5de7633cd792d63d89c7656596ddceb931d
+ms.sourcegitcommit: 197a6ffb643f93592edf9e90b04810a18be61133
 ms.translationtype: HT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 08/17/2020
-ms.locfileid: "88479522"
+ms.lasthandoff: 09/26/2020
+ms.locfileid: "91379459"
 ---
 # <a name="upper-transact-sql"></a>UPPER(Transact-SQL)
 [!INCLUDE [sql-asdb-asdbmi-asa-pdw](../../includes/applies-to-version/sql-asdb-asdbmi-asa-pdw.md)]
@@ -58,7 +58,7 @@ UPPER ( character_expression )
 ## <a name="examples"></a>예제  
  다음 예에서는 `UPPER` 및 `RTRIM` 함수를 사용하여 `dbo.DimEmployee` 테이블에 있는 사람의 성을 반환합니다. 성은 대문자로 변환되고 잘린 다음, 이름 부분과 연결됩니다.  
   
-```  
+```sql
 -- Uses AdventureWorks  
   
 SELECT UPPER(RTRIM(LastName)) + ', ' + FirstName AS Name  

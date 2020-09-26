@@ -25,12 +25,12 @@ ms.assetid: df955d32-8194-438e-abee-387eebebcbb7
 author: julieMSFT
 ms.author: jrasnick
 monikerRange: '>=aps-pdw-2016||=azuresqldb-current||=azure-sqldw-latest||>=sql-server-2016||=sqlallproducts-allversions||>=sql-server-linux-2017||=azuresqldb-mi-current'
-ms.openlocfilehash: 465398c82d3720b3af19750aaa8c4cefeaa09665
-ms.sourcegitcommit: e700497f962e4c2274df16d9e651059b42ff1a10
+ms.openlocfilehash: 88cdc4c31f94e4f09f73c37993005acb80e5942b
+ms.sourcegitcommit: 197a6ffb643f93592edf9e90b04810a18be61133
 ms.translationtype: HT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 08/17/2020
-ms.locfileid: "88422677"
+ms.lasthandoff: 09/26/2020
+ms.locfileid: "91379913"
 ---
 # <a name="x40x40spid-transact-sql"></a>&#x40;&#x40;SPID (Transact-SQL)
 [!INCLUDE [sql-asdb-asdbmi-asa-pdw](../../includes/applies-to-version/sql-asdb-asdbmi-asa-pdw.md)]
@@ -41,7 +41,7 @@ ms.locfileid: "88422677"
   
 ## <a name="syntax"></a>구문  
   
-```  
+```syntaxsql
 @@SPID  
 ```  
   
@@ -56,7 +56,7 @@ ms.locfileid: "88422677"
 ## <a name="examples"></a>예제  
  다음 예에서는 현재 사용자 프로세스의 세션 ID, 로그인 이름 및 사용자 이름을 반환합니다.  
   
-```  
+```sql  
 SELECT @@SPID AS 'ID', SYSTEM_USER AS 'Login Name', USER AS 'User Name';  
 ```  
   
@@ -71,7 +71,7 @@ ID     Login Name                     User Name
 ## <a name="examples-sssdwfull-and-sspdw"></a>예: [!INCLUDE[ssSDWfull](../../includes/sssdwfull-md.md)] 및 [!INCLUDE[ssPDW](../../includes/sspdw-md.md)]  
  다음 예에서는 현재 사용자 프로세스의 [!INCLUDE[ssDW](../../includes/ssdw-md.md)] 세션 ID, [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 제어 노드 세션 ID, 로그인 이름 및 사용자 이름을 반환합니다.  
   
-```  
+```sql  
 SELECT SESSION_ID() AS ID, @@SPID AS 'Control ID', SYSTEM_USER AS 'Login Name', USER AS 'User Name';  
 ```  
   

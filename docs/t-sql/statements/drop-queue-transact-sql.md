@@ -22,12 +22,12 @@ helpviewer_keywords:
 ms.assetid: fd866520-ca00-477d-b2e9-0110e9610ed4
 author: markingmyname
 ms.author: maghan
-ms.openlocfilehash: 736b413affafc1a75ff3b08ffaa686aff7893cbd
-ms.sourcegitcommit: dd36d1cbe32cd5a65c6638e8f252b0bd8145e165
+ms.openlocfilehash: 4bf41bb420ddaaccd0f1899c641a30a17bbb8fcd
+ms.sourcegitcommit: 197a6ffb643f93592edf9e90b04810a18be61133
 ms.translationtype: HT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 09/08/2020
-ms.locfileid: "89544215"
+ms.lasthandoff: 09/26/2020
+ms.locfileid: "91380348"
 ---
 # <a name="drop-queue-transact-sql"></a>DROP QUEUE(Transact-SQL)
 [!INCLUDE [SQL Server - ASDBMI](../../includes/applies-to-version/sql-asdbmi.md)]
@@ -39,7 +39,6 @@ ms.locfileid: "89544215"
 ## <a name="syntax"></a>구문  
   
 ```syntaxsql
-  
 DROP QUEUE <object>  
 [ ; ]  
   
@@ -68,9 +67,8 @@ DROP QUEUE <object>
 ## <a name="examples"></a>예제  
  다음 예에서는 현재 데이터베이스에서 **ExpenseQueue** 큐를 삭제합니다.  
   
-```  
+```sql  
 DROP QUEUE ExpenseQueue ;  
-  
 ```  
   
 ## <a name="see-also"></a>참고 항목  
