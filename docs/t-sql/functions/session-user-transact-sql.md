@@ -24,12 +24,12 @@ ms.assetid: 3dbe8532-31b6-4862-8b2a-e58b00b964de
 author: VanMSFT
 ms.author: vanto
 monikerRange: '>=aps-pdw-2016||=azuresqldb-current||=azure-sqldw-latest||>=sql-server-2016||=sqlallproducts-allversions||>=sql-server-linux-2017||=azuresqldb-mi-current'
-ms.openlocfilehash: 5b5c75b95d32905e6cd2fa7ff30cb0440cca0dd9
-ms.sourcegitcommit: ac9feb0b10847b369b77f3c03f8200c86ee4f4e0
+ms.openlocfilehash: 4de45bdd147626832f932f5bd619c3a89860d68a
+ms.sourcegitcommit: 197a6ffb643f93592edf9e90b04810a18be61133
 ms.translationtype: HT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 09/16/2020
-ms.locfileid: "90688819"
+ms.lasthandoff: 09/26/2020
+ms.locfileid: "91379418"
 ---
 # <a name="session_user-transact-sql"></a>SESSION_USER(Transact-SQL)
 [!INCLUDE [sql-asdb-asdbmi-asa-pdw](../../includes/applies-to-version/sql-asdb-asdbmi-asa-pdw.md)]
@@ -40,7 +40,7 @@ ms.locfileid: "90688819"
   
 ## <a name="syntax"></a>구문  
   
-```  
+```syntaxsql  
 SESSION_USER  
 ```  
   
@@ -59,7 +59,7 @@ SESSION_USER
 ### <a name="a-using-session_user-to-return-the-user-name-of-the-current-session"></a>A. SESSION_USER를 사용하여 현재 세션의 사용자 이름 반환  
  다음 예에서는 변수를 `nchar`로 선언하고 이 변수에 `SESSION_USER`의 현재 값을 할당한 다음 텍스트 설명과 함께 변수를 인쇄합니다.  
   
-```  
+```sql  
 DECLARE @session_usr NCHAR(30);  
 SET @session_usr = SESSION_USER;  
 SELECT 'This session''s current user is: '+ @session_usr;  
@@ -78,7 +78,7 @@ This session's current user is: Surya
 ### <a name="b-using-session_user-with-default-constraints"></a>B. DEFAULT 제약 조건으로 SESSION_USER 사용  
  다음 예에서는 배송물 수령을 기록하는 사람의 이름에 대한 `SESSION_USER` 제약 조건으로 `DEFAULT`를 사용하는 테이블을 만듭니다.  
   
-```  
+```sql  
 USE AdventureWorks2012;  
 GO  
 CREATE TABLE deliveries3  
@@ -95,7 +95,7 @@ GO
   
  테이블에 추가된 레코드에는 현재 사용자의 사용자 이름이 표시됩니다. 이 예에서 `Wanida`, `Sylvester` 및 `Alejandro`이 배송물 수령을 확인합니다. 이것은 `EXECUTE AS`를 통해 사용자 컨텍스트를 전환하여 에뮬레이트할 수 있습니다.  
   
-```  
+```sql
 EXECUTE AS USER = 'Wanida'  
 INSERT deliveries3 (cust_id)  
 VALUES (7510);  
@@ -117,7 +117,7 @@ GO
   
  다음 쿼리는 `deliveries3` 테이블에서 모든 정보를 선택합니다.  
   
-```  
+```sql
 SELECT order_id AS 'Order #', cust_id AS 'Customer #',   
    delivery_date AS 'When Delivered', received_shipment   
    AS 'Received By'  
@@ -145,7 +145,7 @@ Order #   Customer #  When Delivered       Received By
 ### <a name="c-using-session_user-to-return-the-user-name-of-the-current-session"></a>3. SESSION_USER를 사용하여 현재 세션의 사용자 이름 반환  
  다음 예에서는 현재 세션의 세션 사용자를 반환합니다.  
   
-```  
+```sql
 SELECT SESSION_USER;  
 ```  
   

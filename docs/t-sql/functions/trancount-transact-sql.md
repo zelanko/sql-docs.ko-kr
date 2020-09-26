@@ -22,12 +22,12 @@ ms.assetid: b2638410-e410-4bd0-9b54-90096182b2b6
 author: julieMSFT
 ms.author: jrasnick
 monikerRange: '>=aps-pdw-2016||=azuresqldb-current||=azure-sqldw-latest||>=sql-server-2016||=sqlallproducts-allversions||>=sql-server-linux-2017||=azuresqldb-mi-current'
-ms.openlocfilehash: 7b6447931645647185b105659943325b47f317a7
-ms.sourcegitcommit: e700497f962e4c2274df16d9e651059b42ff1a10
+ms.openlocfilehash: 6264a73164784461f32ecb3b9d9651005cbb7380
+ms.sourcegitcommit: 197a6ffb643f93592edf9e90b04810a18be61133
 ms.translationtype: HT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 08/17/2020
-ms.locfileid: "88459525"
+ms.lasthandoff: 09/26/2020
+ms.locfileid: "91379588"
 ---
 # <a name="x40x40trancount-transact-sql"></a>&#x40;&#x40;TRANCOUNT (Transact-SQL)
 [!INCLUDE [sql-asdb-asdbmi-asa-pdw](../../includes/applies-to-version/sql-asdb-asdbmi-asa-pdw.md)]
@@ -38,7 +38,7 @@ ms.locfileid: "88459525"
   
 ## <a name="syntax"></a>구문  
   
-```  
+```syntaxsql
 @@TRANCOUNT  
 ```  
   
@@ -55,7 +55,7 @@ ms.locfileid: "88459525"
 ### <a name="a-showing-the-effects-of-the-begin-and-commit-statements"></a>A. BEGIN 및 COMMIT 문의 영향  
  다음 예에서는 중첩된 `BEGIN` 및 `COMMIT` 문이 `@@TRANCOUNT` 변수에 주는 영향을 보여 줍니다.  
   
-```  
+```sql
 PRINT @@TRANCOUNT  
 --  The BEGIN TRAN statement will increment the  
 --  transaction count by 1.  
@@ -79,7 +79,7 @@ PRINT @@TRANCOUNT
 ### <a name="b-showing-the-effects-of-the-begin-and-rollback-statements"></a>B. BEGIN 및 ROLLBACK 문의 영향  
  다음 예에서는 중첩된 `BEGIN TRAN` 및 `ROLLBACK` 문이 `@@TRANCOUNT` 변수에 주는 영향을 보여 줍니다.  
   
-```  
+```sql
 PRINT @@TRANCOUNT  
 --  The BEGIN TRAN statement will increment the  
 --  transaction count by 1.  

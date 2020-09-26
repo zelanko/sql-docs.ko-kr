@@ -22,12 +22,12 @@ helpviewer_keywords:
 ms.assetid: 2351bba7-0f2a-4cda-b3b2-6a88b8747c53
 author: markingmyname
 ms.author: maghan
-ms.openlocfilehash: f4c717421fcee62984f7df03cd99dc0af1e8f1ef
-ms.sourcegitcommit: dd36d1cbe32cd5a65c6638e8f252b0bd8145e165
+ms.openlocfilehash: c996ceed0048602d177be0fc909082c8438c52bd
+ms.sourcegitcommit: 197a6ffb643f93592edf9e90b04810a18be61133
 ms.translationtype: HT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 09/08/2020
-ms.locfileid: "89549300"
+ms.lasthandoff: 09/26/2020
+ms.locfileid: "91379715"
 ---
 # <a name="drop-service-transact-sql"></a>DROP SERVICE(Transact-SQL)
 [!INCLUDE [SQL Server - ASDBMI](../../includes/applies-to-version/sql-asdbmi.md)]
@@ -39,7 +39,6 @@ ms.locfileid: "89549300"
 ## <a name="syntax"></a>구문  
   
 ```syntaxsql
-  
 DROP SERVICE service_name  
 [ ; ]  
 ```  
@@ -61,7 +60,7 @@ DROP SERVICE service_name
 ## <a name="examples"></a>예제  
  다음 예에서는 `//Adventure-Works.com/Expenses` 서비스를 삭제합니다.  
   
-```  
+```sql  
 DROP SERVICE [//Adventure-Works.com/Expenses] ;  
 ```  
   

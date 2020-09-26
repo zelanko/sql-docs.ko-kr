@@ -9,17 +9,17 @@ ms.date: 04/17/2018
 ms.author: murshedz
 ms.reviewer: martinle
 ms.custom: seo-dt-2019
-ms.openlocfilehash: 089b76d7167b8561c93b01837dc2189c833362fd
-ms.sourcegitcommit: e042272a38fb646df05152c676e5cbeae3f9cd13
+ms.openlocfilehash: 6882700208e165464261f236cadd00b30503b81f
+ms.sourcegitcommit: 197a6ffb643f93592edf9e90b04810a18be61133
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 04/27/2020
-ms.locfileid: "76761907"
+ms.lasthandoff: 09/26/2020
+ms.locfileid: "91379581"
 ---
 # <a name="configure-windows-server-update-services-wsus-in-analytics-platform-system"></a>분석 플랫폼 시스템에서 Windows Server Update Services (WSUS) 구성
 이 지침에서는 WSUS (Windows Server Update Services) 구성 마법사를 사용 하 여 분석 플랫폼 시스템용 WSUS를 구성 하는 단계를 안내 합니다. 어플라이언스에 소프트웨어 업데이트를 적용 하려면 먼저 WSUS를 구성 해야 합니다. WSUS가 이미 어플라이언스의 VMM 가상 컴퓨터에 설치 되어 있습니다.  
   
-Wsus를 구성 하는 방법에 대 한 자세한 내용은 wsus 웹 사이트에서 [Wsus 단계별 설치 가이드](https://go.microsoft.com/fwlink/?LinkId=202417) 를 참조 하세요. WSUS를 구성한 후 업데이트를 시작 하려면 [Microsoft 업데이트 &#40;분석 플랫폼 시스템&#41;다운로드 및 적용](download-and-apply-microsoft-updates.md) 을 참조 하세요.  
+Wsus를 구성 하는 방법에 대 한 자세한 내용은 wsus 웹 사이트에서 [Wsus 단계별 설치 가이드](/windows/deployment/deploy-whats-new) 를 참조 하세요. WSUS를 구성한 후 업데이트를 시작 하려면 [Microsoft 업데이트 &#40;분석 플랫폼 시스템&#41;다운로드 및 적용 ](download-and-apply-microsoft-updates.md) 을 참조 하세요.  
   
 > [!WARNING]  
 > 이 구성 프로세스 중에 오류가 발생 하면를 중지 하 고 지원 서비스에 문의 하십시오. 오류를 받은 후 오류를 무시 하거나 프로세스에서 계속 합니다.  
@@ -61,7 +61,7 @@ WSUS를 구성 하려면 다음을 수행 해야 합니다.
   
         ![서버 관리자 대시보드 메뉴](./media/configure-windows-server-update-services-wsus/WSUS_Wiz0.png "WSUS_Wiz0")  
   
-    4.  WSUS 마법사를 처음 실행 하는 경우 업데이트를 저장할 디렉터리를 구성 하 라는 메시지가 표시 될 수 있습니다. `C:\wsus`는 적절 한 위치입니다. 그러나 다른 경로를 제공할 수도 있습니다.  
+    4.  WSUS 마법사를 처음 실행 하는 경우 업데이트를 저장할 디렉터리를 구성 하 라는 메시지가 표시 될 수 있습니다. `C:\wsus` 는 적절 한 위치입니다. 그러나 다른 경로를 제공할 수도 있습니다.  
   
         ![WSUS 경로](./media/configure-windows-server-update-services-wsus/WSUS_Wiz1.png "WSUS_Wiz1")  
   
@@ -170,13 +170,13 @@ WSUS를 구성 하려면 다음을 수행 해야 합니다.
   
 12. 마치고.  
   
-    **마침**을 클릭합니다.  
+    **Finish**를 클릭합니다.  
   
 ## <a name="group-the-appliance-servers-in-wsus"></a><a name="bkmk_WSUSGroup"></a>WSUS에서 어플라이언스 서버 그룹화  
 분석 플랫폼 시스템에 대해 WSUS를 구성한 후 다음 단계는 어플라이언스 서버를 그룹화 하는 것입니다. 모든 어플라이언스 서버를 그룹에 추가 하면 WSUS는 기기의 모든 서버에 소프트웨어 업데이트를 적용할 수 있습니다.  
   
 > [!NOTE]  
-> WSUS 시스템은 비동기식으로 실행 되도록 설계 되었습니다. 작업을 시작 하면 즉시 업데이트가 발생 하지 않습니다. 따라서 WSUS 대화 상자에 컴퓨터가 표시 될 때까지 잠시 기다려야 할 수도 있습니다. 항목의 `setup.exe /action=ReportMicrosoftUpdateClientStatus /DomainAdminPassword="<password>"` 끝에 설명 된 명령을 실행 하 여 [Microsoft 업데이트를 다운로드 하 고 적용 &#40;분석 플랫폼 시스템&#41;](download-and-apply-microsoft-updates.md) 를 통해 대화 상자를 새로 고칠 수 있습니다.  
+> WSUS 시스템은 비동기식으로 실행 되도록 설계 되었습니다. 작업을 시작 하면 즉시 업데이트가 발생 하지 않습니다. 따라서 WSUS 대화 상자에 컴퓨터가 표시 될 때까지 잠시 기다려야 할 수도 있습니다. `setup.exe /action=ReportMicrosoftUpdateClientStatus /DomainAdminPassword="<password>"`항목의 끝에 설명 된 명령을 실행 하 여 [Microsoft 업데이트를 다운로드 하 고 적용 &#40;분석 플랫폼 시스템&#41;](download-and-apply-microsoft-updates.md) 를 통해 대화 상자를 새로 고칠 수 있습니다.  
   
 #### <a name="to-group-the-appliance-servers"></a>어플라이언스 서버를 그룹화 하려면  
   
@@ -203,4 +203,3 @@ WSUS를 구성 하려면 다음을 수행 해야 합니다.
 6.  새 컴퓨터 그룹을 선택 하 고, **상태** 를 **Any**로 변경한 다음, **새로 고침**을 클릭 합니다. 이제 모든 컴퓨터가이 그룹에 할당 되 고 오른쪽 창에 나열 됩니다. 일반적으로 노드에 **이 노드가 아직 상태를 보고 하지**않은 등의 경고가 표시 되는 경우 계속 안전 합니다.  
   
     ![상태를 임의로 변경하고 새로 고침을 클릭합니다.](./media/configure-windows-server-update-services-wsus/SQL_Server_PDW_WSUSChangeStatusAnyRefresh.png "SQL_Server_PDW_WSUSChangeStatusAnyRefresh")  
-  

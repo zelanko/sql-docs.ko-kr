@@ -13,12 +13,12 @@ dev_langs:
 author: VanMSFT
 ms.author: vanto
 monikerRange: '>= aps-pdw-2016 || = azure-sqldw-latest || = sqlallproducts-allversions'
-ms.openlocfilehash: 0bb9580073a6d344f5a8455ba3941c59ac94c2ef
-ms.sourcegitcommit: 1126792200d3b26ad4c29be1f561cf36f2e82e13
+ms.openlocfilehash: c2d0e0e8e49cc190931295e2b00fbb2486e39f1d
+ms.sourcegitcommit: 197a6ffb643f93592edf9e90b04810a18be61133
 ms.translationtype: HT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 09/14/2020
-ms.locfileid: "90076625"
+ms.lasthandoff: 09/26/2020
+ms.locfileid: "91379088"
 ---
 # <a name="session_id-transact-sql"></a>SESSION_ID(Transact-SQL)
 [!INCLUDE[applies-to-version/asa-pdw](../../includes/applies-to-version/asa-pdw.md)]
@@ -29,7 +29,7 @@ ms.locfileid: "90076625"
   
 ## <a name="syntax"></a>구문  
   
-```  
+```syntaxsql  
 -- Azure Synapse Analytics and Parallel Data Warehouse  
 SESSION_ID ( )  
 ```  
@@ -47,7 +47,7 @@ SESSION_ID ( )
 ## <a name="examples"></a>예제  
  다음 예제에서는 현재 세션 ID를 반환합니다.  
   
-```  
+```sql  
 SELECT SESSION_ID();  
 ```  
   

@@ -25,12 +25,12 @@ ms.assetid: c3a98b52-6fbe-4127-a5c9-8a4922e83e28
 author: julieMSFT
 ms.author: jrasnick
 monikerRange: '>=aps-pdw-2016||=azuresqldb-current||=azure-sqldw-latest||>=sql-server-2016||=sqlallproducts-allversions||>=sql-server-linux-2017||=azuresqldb-mi-current'
-ms.openlocfilehash: cdd71beb5099fe6704199aaa92dd608534bed93a
-ms.sourcegitcommit: e700497f962e4c2274df16d9e651059b42ff1a10
+ms.openlocfilehash: 3baafa663bab7930201ec02ca2996a83cd199692
+ms.sourcegitcommit: 197a6ffb643f93592edf9e90b04810a18be61133
 ms.translationtype: HT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 08/17/2020
-ms.locfileid: "88467915"
+ms.lasthandoff: 09/26/2020
+ms.locfileid: "91379192"
 ---
 # <a name="sign-transact-sql"></a>SIGN(Transact-SQL)
 [!INCLUDE [sql-asdb-asdbmi-asa-pdw](../../includes/applies-to-version/sql-asdb-asdbmi-asa-pdw.md)]
@@ -41,7 +41,7 @@ ms.locfileid: "88467915"
   
 ## <a name="syntax"></a>구문  
   
-```  
+```syntaxsql  
 SIGN ( numeric_expression )  
 ```  
   
@@ -65,8 +65,8 @@ SIGN ( numeric_expression )
 ## <a name="examples"></a>예제  
  다음 예에서는 SIGN 값을 -1에서 1까지의 숫자로 반환합니다.  
   
-```  
-DECLARE @value real  
+```sql  
+DECLARE @value REAL  
 SET @value = -1  
 WHILE @value < 2  
    BEGIN  
@@ -103,7 +103,7 @@ GO
 ## <a name="examples-sssdwfull-and-sspdw"></a>예: [!INCLUDE[ssSDWfull](../../includes/sssdwfull-md.md)] 및 [!INCLUDE[ssPDW](../../includes/sspdw-md.md)]  
  다음 예에서는 세 개의 숫자로 된 SIGN 값을 반환합니다.  
   
-```  
+```sql  
 SELECT SIGN(-125), SIGN(0), SIGN(564);  
 ```  
   

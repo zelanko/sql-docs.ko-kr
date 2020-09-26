@@ -23,12 +23,12 @@ helpviewer_keywords:
 ms.assetid: 9411c349-b59b-4740-a270-92f91d81ad23
 author: julieMSFT
 ms.author: jrasnick
-ms.openlocfilehash: b82f9cd337a28801d7daf352e370652ce37cde1d
-ms.sourcegitcommit: e700497f962e4c2274df16d9e651059b42ff1a10
+ms.openlocfilehash: 244865ca12b85076ef00d9187dc1ea8f01e9aa06
+ms.sourcegitcommit: 197a6ffb643f93592edf9e90b04810a18be61133
 ms.translationtype: HT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 08/17/2020
-ms.locfileid: "88422557"
+ms.lasthandoff: 09/26/2020
+ms.locfileid: "91380498"
 ---
 # <a name="text-and-image-functions---textvalid-transact-sql"></a>텍스트 및 이미지 함수 - TEXTVALID (Transact-SQL)
 [!INCLUDE [SQL Server](../../includes/applies-to-version/sqlserver.md)]
@@ -42,8 +42,7 @@ ms.locfileid: "88422557"
   
 ## <a name="syntax"></a>구문  
   
-```  
-  
+```syntaxsql
 TEXTVALID ( 'table.column' ,text_ ptr )  
 ```  
   
@@ -79,7 +78,7 @@ TEXTVALID ( 'table.column' ,text_ ptr )
 > [!NOTE]  
 >  이 예를 실행하려면 **pubs** 데이터베이스를 설치해야 합니다.  
   
-```  
+```sql
 USE pubs;  
 GO  
 SELECT pub_id, 'Valid (if 1) Text data'   

@@ -19,15 +19,15 @@ ms.assetid: ed295312-e586-4fc2-9e80-806b490ee7bd
 author: VanMSFT
 ms.author: vanto
 monikerRange: = azuresqldb-current || = sqlallproducts-allversions
-ms.openlocfilehash: 087b1128615b13baddf46a5632f9d152080143e6
-ms.sourcegitcommit: e700497f962e4c2274df16d9e651059b42ff1a10
+ms.openlocfilehash: 191ad1687b5be623616821dbde338495304d70a6
+ms.sourcegitcommit: 197a6ffb643f93592edf9e90b04810a18be61133
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 08/17/2020
-ms.locfileid: "88447295"
+ms.lasthandoff: 09/26/2020
+ms.locfileid: "91379755"
 ---
 # <a name="sp_delete_database_firewall_rule-azure-sql-database"></a>sp_delete_database_firewall_rule(Azure SQL Database)
-[!INCLUDE[Azure SQL Database Azure SQL Managed Instance](../../includes/applies-to-version/asdb-asdbmi.md)]
+[!INCLUDE[Azure SQL Database](../../includes/applies-to-version/asdb.md)]
 
   에서 데이터베이스 수준 방화벽 설정을 제거 [!INCLUDE[ssSDSfull](../../includes/sssdsfull-md.md)] 합니다. 데이터베이스 방화벽 규칙은 master 데이터베이스 및의 사용자 데이터베이스에 대해 구성 및 삭제할 수 있습니다 [!INCLUDE[ssSDS_md](../../includes/sssds-md.md)] .   
   

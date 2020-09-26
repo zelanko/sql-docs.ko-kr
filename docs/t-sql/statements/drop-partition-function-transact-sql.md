@@ -22,12 +22,12 @@ helpviewer_keywords:
 ms.assetid: a4bb055a-a538-4db9-a6fb-550d1eabfa18
 author: markingmyname
 ms.author: maghan
-ms.openlocfilehash: f28c11fce8f52beda23c50b5053400820d10b00a
-ms.sourcegitcommit: dd36d1cbe32cd5a65c6638e8f252b0bd8145e165
+ms.openlocfilehash: 4491f35570a4f60d2a3deb9e4c3271c34f699369
+ms.sourcegitcommit: 197a6ffb643f93592edf9e90b04810a18be61133
 ms.translationtype: HT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 09/08/2020
-ms.locfileid: "89547743"
+ms.lasthandoff: 09/26/2020
+ms.locfileid: "91380378"
 ---
 # <a name="drop-partition-function-transact-sql"></a>DROP PARTITION FUNCTION(Transact-SQL)
 [!INCLUDE [SQL Server SQL Database](../../includes/applies-to-version/sql-asdb.md)]
@@ -38,8 +38,7 @@ ms.locfileid: "89547743"
   
 ## <a name="syntax"></a>구문  
   
-```syntaxsql
-  
+```syntaxsql 
 DROP PARTITION FUNCTION partition_function_name [ ; ]  
 ```  
   
@@ -64,7 +63,7 @@ DROP PARTITION FUNCTION partition_function_name [ ; ]
 ## <a name="examples"></a>예제  
  다음 예에서는 현재 데이터베이스에 파티션 함수 `myRangePF`가 이미 있는 것으로 가정합니다.  
   
-```  
+```sql 
 DROP PARTITION FUNCTION myRangePF;  
 ```  
   

@@ -22,12 +22,12 @@ helpviewer_keywords:
 ms.assetid: 7443a4ab-1d43-4a22-bbba-a07f620892cb
 author: markingmyname
 ms.author: maghan
-ms.openlocfilehash: 98d7d4fb82ee030afe623a9873be14963632f7c1
-ms.sourcegitcommit: dd36d1cbe32cd5a65c6638e8f252b0bd8145e165
+ms.openlocfilehash: 7883bb6eab65b2877e08c9ad9c0e9c869d4988af
+ms.sourcegitcommit: 197a6ffb643f93592edf9e90b04810a18be61133
 ms.translationtype: HT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 09/08/2020
-ms.locfileid: "89541306"
+ms.lasthandoff: 09/26/2020
+ms.locfileid: "91380440"
 ---
 # <a name="drop-fulltext-index-transact-sql"></a>DROP FULLTEXT INDEX(Transact-SQL)
 [!INCLUDE [SQL Server SQL Database](../../includes/applies-to-version/sql-asdb.md)]
@@ -38,8 +38,7 @@ ms.locfileid: "89541306"
   
 ## <a name="syntax"></a>구문  
   
-```  
-  
+```syntaxsql
 DROP FULLTEXT INDEX ON table_name  
 ```  
   
@@ -58,7 +57,7 @@ DROP FULLTEXT INDEX ON table_name
 ## <a name="examples"></a>예제  
  다음 예에서는 `JobCandidate` 테이블에 있는 전체 텍스트 인덱스를 삭제합니다.  
   
-```  
+```sql  
 USE AdventureWorks2012;  
 GO  
 DROP FULLTEXT INDEX ON HumanResources.JobCandidate;  

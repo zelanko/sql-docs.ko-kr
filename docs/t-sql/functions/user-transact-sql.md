@@ -24,12 +24,12 @@ ms.assetid: 82bbbd94-870c-4c43-9ed9-d9abc767a6be
 author: julieMSFT
 ms.author: jrasnick
 monikerRange: '>=aps-pdw-2016||=azuresqldb-current||=azure-sqldw-latest||>=sql-server-2016||=sqlallproducts-allversions||>=sql-server-linux-2017||=azuresqldb-mi-current'
-ms.openlocfilehash: c4b1e652bfeff0646fb28da125a46b3ff222f54f
-ms.sourcegitcommit: e700497f962e4c2274df16d9e651059b42ff1a10
+ms.openlocfilehash: 500010c11f80bf36341631a90cf8dfcf49f49c5b
+ms.sourcegitcommit: 197a6ffb643f93592edf9e90b04810a18be61133
 ms.translationtype: HT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 08/17/2020
-ms.locfileid: "88362639"
+ms.lasthandoff: 09/26/2020
+ms.locfileid: "91380578"
 ---
 # <a name="user-transact-sql"></a>USER(Transact-SQL)
 [!INCLUDE [sql-asdb-asdbmi-asa-pdw](../../includes/applies-to-version/sql-asdb-asdbmi-asa-pdw.md)]
@@ -40,7 +40,7 @@ ms.locfileid: "88362639"
   
 ## <a name="syntax"></a>구문  
   
-```  
+```syntaxsql  
 USER  
 ```  
   
@@ -63,8 +63,8 @@ USER
 ### <a name="a-using-user-to-return-the-database-user-name"></a>A. USER를 사용하여 데이터베이스 사용자 이름 반환  
  다음 예에서는 변수를 `char`로 선언하고 USER의 현재 값을 변수에 할당한 다음 텍스트 설명과 함께 변수를 인쇄합니다.  
   
-```  
-DECLARE @usr char(30)  
+```sql
+DECLARE @usr CHAR(30)  
 SET @usr = user  
 SELECT 'The current user''s database username is: '+ @usr  
 GO  
@@ -82,14 +82,14 @@ The current user's database username is: dbo
 ### <a name="b-using-user-with-default-constraints"></a>B. DEFAULT 제약 조건으로 USER 사용  
  다음 예에서는 판매 행의 판매원에 대한 `USER` 제약 조건으로 `DEFAULT`를 사용하여 테이블을 만듭니다.  
   
-```  
+```sql
 USE AdventureWorks2012;  
 GO  
 CREATE TABLE inventory22  
 (  
- part_id int IDENTITY(100, 1) NOT NULL,  
- description varchar(30) NOT NULL,  
- entry_person varchar(30) NOT NULL DEFAULT USER   
+ part_id INT IDENTITY(100, 1) NOT NULL,  
+ description VARCHAR(30) NOT NULL,  
+ entry_person VARCHAR(30) NOT NULL DEFAULT USER   
 )  
 GO  
 INSERT inventory22 (description)  
@@ -107,7 +107,7 @@ GO
   
  다음은 `inventory22` 테이블에서 모든 정보를 선택하는 쿼리입니다.  
   
-```  
+```sql
 SELECT * FROM inventory22 ORDER BY part_id;  
 GO  
 ```  
@@ -129,7 +129,7 @@ part_id     description                    entry_person
 ### <a name="c-using-user-in-combination-with-execute-as"></a>C. EXECUTE AS와 함께 USER 사용  
  다음 예에서는 가장된 세션 내부에서 호출된 `USER`의 동작을 보여 줍니다.  
   
-```  
+```sql
 SELECT USER;  
 GO  
 EXECUTE AS USER = 'Mario';  

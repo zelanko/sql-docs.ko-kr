@@ -22,12 +22,12 @@ ms.assetid: 52fd6e8d-650c-4f66-abcf-67765aa5aa83
 author: julieMSFT
 ms.author: jrasnick
 monikerRange: '>=aps-pdw-2016||=azuresqldb-current||=azure-sqldw-latest||>=sql-server-2016||=sqlallproducts-allversions||>=sql-server-linux-2017||=azuresqldb-mi-current'
-ms.openlocfilehash: c32ad6071198cdb37f4f7c30310f6bc75400b2be
-ms.sourcegitcommit: e700497f962e4c2274df16d9e651059b42ff1a10
+ms.openlocfilehash: 33451df732cc2fec3ffedd8d8893034b1b24d1a4
+ms.sourcegitcommit: 197a6ffb643f93592edf9e90b04810a18be61133
 ms.translationtype: HT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 08/17/2020
-ms.locfileid: "88422617"
+ms.lasthandoff: 09/26/2020
+ms.locfileid: "91379994"
 ---
 # <a name="rtrim-transact-sql"></a>RTRIM(Transact-SQL)
 [!INCLUDE [sql-asdb-asdbmi-asa-pdw](../../includes/applies-to-version/sql-asdb-asdbmi-asa-pdw.md)]
@@ -81,7 +81,7 @@ SELECT RTRIM('Four spaces are after the period in this sentence.    ') + 'Next s
  다음 예에서는 `RTRIM`을 사용하여 문자 변수에서 후행 공백을 제거하는 방법을 보여 줍니다.  
   
 ```sql  
-DECLARE @string_to_trim varchar(60);  
+DECLARE @string_to_trim VARCHAR(60);  
 SET @string_to_trim = 'Four spaces are after the period in this sentence.    ';  
 SELECT @string_to_trim + ' Next string.';  
 SELECT RTRIM(@string_to_trim) + ' Next string.';  

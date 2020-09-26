@@ -15,12 +15,12 @@ dev_langs:
 ms.assetid: 4779ae84-e5f4-4d04-8fc1-e24a6631b428
 author: MightyPen
 ms.author: genemi
-ms.openlocfilehash: 8e1fef3ee6a379501f45d825b90fc232aa4c718e
-ms.sourcegitcommit: e700497f962e4c2274df16d9e651059b42ff1a10
+ms.openlocfilehash: 0520dab52c67d0b4c48abcffc1dd87ad18e222cc
+ms.sourcegitcommit: 197a6ffb643f93592edf9e90b04810a18be61133
 ms.translationtype: HT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 08/17/2020
-ms.locfileid: "88444596"
+ms.lasthandoff: 09/26/2020
+ms.locfileid: "91380388"
 ---
 # <a name="drop-index-selective-xml-indexes"></a>DROP INDEX(선택적 XML 인덱스)
 [!INCLUDE [SQL Server Azure SQL Database ](../../includes/applies-to-version/sql-asdb.md)]
@@ -69,7 +69,7 @@ DROP INDEX index_name ON <object>
 ## <a name="example"></a>예제  
  다음 예에서는 DROP INDEX 문을 보여 줍니다.  
   
-```  
+```sql  
 DROP INDEX sxi_index ON tbl;  
 ```  
   

@@ -22,12 +22,12 @@ helpviewer_keywords:
 ms.assetid: 377789b4-bf94-488f-8c20-687d0bae447a
 author: markingmyname
 ms.author: maghan
-ms.openlocfilehash: 41d98ef2c415eb70e408217656979e3093269071
-ms.sourcegitcommit: dd36d1cbe32cd5a65c6638e8f252b0bd8145e165
+ms.openlocfilehash: b7ab90d0f74170b37af4c546474828e047cc73db
+ms.sourcegitcommit: 197a6ffb643f93592edf9e90b04810a18be61133
 ms.translationtype: HT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 09/08/2020
-ms.locfileid: "89540673"
+ms.lasthandoff: 09/26/2020
+ms.locfileid: "91380317"
 ---
 # <a name="drop-remote-service-binding-transact-sql"></a>DROP REMOTE SERVICE BINDING(Transact-SQL)
 [!INCLUDE [SQL Server](../../includes/applies-to-version/sqlserver.md)]
@@ -39,7 +39,6 @@ ms.locfileid: "89540673"
 ## <a name="syntax"></a>구문  
   
 ```syntaxsql
-  
 DROP REMOTE SERVICE BINDING binding_name  
 [ ; ]  
 ```  
@@ -56,7 +55,7 @@ DROP REMOTE SERVICE BINDING binding_name
 ## <a name="examples"></a>예제  
  다음 예에서는 원격 서비스 바인딩 `APBinding`을 데이터베이스에서 삭제합니다.  
   
-```  
+```sql 
 DROP REMOTE SERVICE BINDING APBinding ;  
 ```  
   

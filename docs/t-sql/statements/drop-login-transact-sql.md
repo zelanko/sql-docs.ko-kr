@@ -23,12 +23,12 @@ ms.assetid: acb5c3dc-7aa2-49f6-9330-573227ba9b1a
 author: VanMSFT
 ms.author: vanto
 monikerRange: '>=aps-pdw-2016||=azuresqldb-current||=azure-sqldw-latest||>=sql-server-2016||=sqlallproducts-allversions||>=sql-server-linux-2017||=azuresqldb-mi-current'
-ms.openlocfilehash: c841d8ec30915cd1494624c34eba77f893e4d901
-ms.sourcegitcommit: e700497f962e4c2274df16d9e651059b42ff1a10
+ms.openlocfilehash: 9159d0d122c61fd8b1f4cc19978c704216494e3b
+ms.sourcegitcommit: 197a6ffb643f93592edf9e90b04810a18be61133
 ms.translationtype: HT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 08/17/2020
-ms.locfileid: "88478943"
+ms.lasthandoff: 09/26/2020
+ms.locfileid: "91380398"
 ---
 # <a name="drop-login-transact-sql"></a>DROP LOGIN(Transact-SQL)
 [!INCLUDE [sql-asdb-asdbmi-asa-pdw](../../includes/applies-to-version/sql-asdb-asdbmi-asa-pdw.md)]
@@ -39,7 +39,7 @@ ms.locfileid: "88478943"
   
 ## <a name="syntax"></a>구문  
   
-```  
+```syntaxsql  
 DROP LOGIN login_name  
 ```  
   
@@ -64,7 +64,7 @@ DROP LOGIN login_name
 ### <a name="a-dropping-a-login"></a>A. 로그인 매핑  
  다음 예에서는 `WilliJo` 로그인을 삭제합니다.  
   
-```  
+```sql  
 DROP LOGIN WilliJo;  
 GO 
 ```  

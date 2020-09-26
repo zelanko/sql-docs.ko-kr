@@ -27,12 +27,12 @@ ms.assetid: 565984cd-60c6-4df7-83ea-2349b838ccb2
 author: julieMSFT
 ms.author: jrasnick
 monikerRange: '>=aps-pdw-2016||=azure-sqldw-latest||>=sql-server-2016||=sqlallproducts-allversions||>=sql-server-linux-2017||=azuresqldb-mi-current'
-ms.openlocfilehash: 02877aa808d53a586ae9191154dc0bfe3f9a785e
-ms.sourcegitcommit: e700497f962e4c2274df16d9e651059b42ff1a10
+ms.openlocfilehash: 72742435218a6925ced607b6ad5ff2da68f58820
+ms.sourcegitcommit: 197a6ffb643f93592edf9e90b04810a18be61133
 ms.translationtype: HT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 08/17/2020
-ms.locfileid: "88459552"
+ms.lasthandoff: 09/26/2020
+ms.locfileid: "91380553"
 ---
 # <a name="system_user-transact-sql"></a>SYSTEM_USER(Transact-SQL)
 [!INCLUDE [sql-asdbmi-asa-pdw](../../includes/applies-to-version/sql-asdbmi-asa-pdw.md)]
@@ -43,7 +43,7 @@ ms.locfileid: "88459552"
   
 ## <a name="syntax"></a>구문  
   
-```  
+```syntaxsql
 SYSTEM_USER  
 ```  
 
@@ -68,8 +68,8 @@ SYSTEM_USER
 ### <a name="a-using-system_user-to-return-the-current-system-user-name"></a>A. SYSTEM_USER를 사용하여 현재 시스템 사용자 이름 반환  
  다음 예에서는 `char` 변수를 선언하고 변수에 `SYSTEM_USER`의 현재 값을 저장한 다음에 변수에 저장된 값을 출력합니다.  
   
-```  
-DECLARE @sys_usr char(30);  
+```sql
+DECLARE @sys_usr CHAR(30);  
 SET @sys_usr = SYSTEM_USER;  
 SELECT 'The current system user is: '+ @sys_usr;  
 GO  
@@ -87,15 +87,15 @@ The current system user is: WillisJo
 ### <a name="b-using-system_user-with-default-constraints"></a>B. DEFAULT 제약 조건으로 SYSTEM_USER 사용  
  다음 예에서는 `SYSTEM_USER` 열에 대한 `DEFAULT` 제약 조건으로 `SRep_tracking_user`를 사용하는 테이블을 만듭니다.  
   
-```  
+```sql
 USE AdventureWorks2012;  
 GO  
 CREATE TABLE Sales.Sales_Tracking  
 (  
-    Territory_id int IDENTITY(2000, 1) NOT NULL,  
-    Rep_id  int NOT NULL,  
-    Last_sale datetime NOT NULL DEFAULT GETDATE(),  
-    SRep_tracking_user varchar(30) NOT NULL DEFAULT SYSTEM_USER  
+    Territory_id INT IDENTITY(2000, 1) NOT NULL,  
+    Rep_id INT NOT NULL,  
+    Last_sale DATETIME NOT NULL DEFAULT GETDATE(),  
+    SRep_tracking_user VARCHAR(30) NOT NULL DEFAULT SYSTEM_USER  
 );  
 GO  
 INSERT Sales.Sales_Tracking (Rep_id)  
@@ -113,7 +113,7 @@ GO
   
  다음 쿼리는 `Sales_Tracking` 테이블에서 모든 정보를 선택합니다.  
   
-```  
+```sql
 SELECT * FROM Sales_Tracking ORDER BY Rep_id;  
 GO  
 ```  
@@ -137,7 +137,7 @@ Territory_id Rep_id Last_sale            SRep_tracking_user
 ### <a name="c-using-system_user-to-return-the-current-system-user-name"></a>3. SYSTEM_USER를 사용하여 현재 시스템 사용자 이름 반환  
  다음 예에서는 `SYSTEM_USER`의 현재 값을 반환합니다.  
   
-```  
+```sql
 SELECT SYSTEM_USER;  
 ```  
   

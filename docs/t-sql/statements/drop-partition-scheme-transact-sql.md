@@ -22,12 +22,12 @@ helpviewer_keywords:
 ms.assetid: 6efbc87c-1c92-4e43-96a7-e0f30f1db185
 author: markingmyname
 ms.author: maghan
-ms.openlocfilehash: a670facd072a81ba3788e861af4ffabffd4ad59f
-ms.sourcegitcommit: dd36d1cbe32cd5a65c6638e8f252b0bd8145e165
+ms.openlocfilehash: 02aa1e5d8bae0949c58bd94af07589260e55af1d
+ms.sourcegitcommit: 197a6ffb643f93592edf9e90b04810a18be61133
 ms.translationtype: HT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 09/08/2020
-ms.locfileid: "89547724"
+ms.lasthandoff: 09/26/2020
+ms.locfileid: "91380332"
 ---
 # <a name="drop-partition-scheme-transact-sql"></a>DROP PARTITION SCHEME(Transact-SQL)
 [!INCLUDE[tsql-appliesto-ss2008-asdb-xxxx-xxx-md](../../includes/applies-to-version/sqlserver.md)]
@@ -39,7 +39,6 @@ ms.locfileid: "89547724"
 ## <a name="syntax"></a>구문  
   
 ```syntaxsql
-  
 DROP PARTITION SCHEME partition_scheme_name [ ; ]  
 ```  
   
@@ -64,7 +63,7 @@ DROP PARTITION SCHEME partition_scheme_name [ ; ]
 ## <a name="examples"></a>예제  
  다음 예에서는 현재 데이터베이스에서 `myRangePS1` 파티션 스키마를 삭제하는 방법을 보여 줍니다.  
   
-```  
+```sql  
 DROP PARTITION SCHEME myRangePS1;  
 ```  
   

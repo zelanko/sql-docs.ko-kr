@@ -25,12 +25,12 @@ ms.assetid: 5ccef797-408f-4964-80da-965d8e1ccba7
 author: VanMSFT
 ms.author: vanto
 monikerRange: '>=aps-pdw-2016||=azure-sqldw-latest||>=sql-server-2016||=sqlallproducts-allversions||>=sql-server-linux-2017||=azuresqldb-mi-current'
-ms.openlocfilehash: 78c981c7ecefa48ed38dee3d523ff2fbf991504e
-ms.sourcegitcommit: e700497f962e4c2274df16d9e651059b42ff1a10
+ms.openlocfilehash: 4e930f02d02c45732f4617d0a91ddac44531e90c
+ms.sourcegitcommit: 197a6ffb643f93592edf9e90b04810a18be61133
 ms.translationtype: HT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 08/17/2020
-ms.locfileid: "88415579"
+ms.lasthandoff: 09/26/2020
+ms.locfileid: "91380371"
 ---
 # <a name="drop-master-key-transact-sql"></a>DROP MASTER KEY(Transact-SQL)
 [!INCLUDE[tsql-appliesto-ss2008-asdb-asdw-pdw-md](../../includes/tsql-appliesto-ss2008-xxxx-asdw-pdw-md.md)]
@@ -41,7 +41,7 @@ ms.locfileid: "88415579"
   
 ## <a name="syntax"></a>구문  
   
-```  
+```syntaxsql  
 DROP MASTER KEY  
 ```  
   
@@ -57,7 +57,7 @@ DROP MASTER KEY
 ## <a name="examples"></a>예제  
  다음 예에서는 `AdventureWorks2012` 데이터베이스에서 마스터 키를 제거합니다.  
   
-```  
+```sql  
 USE AdventureWorks2012;  
 DROP MASTER KEY;  
 GO  
@@ -66,7 +66,7 @@ GO
 ## <a name="examples-sssdwfull-and-sspdw"></a>예: [!INCLUDE[ssSDWfull](../../includes/sssdwfull-md.md)] 및 [!INCLUDE[ssPDW](../../includes/sspdw-md.md)]  
  다음 예에서는 마스터 키를 제거합니다.  
   
-```  
+```sql  
 USE master;  
 DROP MASTER KEY;  
 GO  

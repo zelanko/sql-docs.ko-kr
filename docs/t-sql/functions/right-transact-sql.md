@@ -21,12 +21,12 @@ ms.assetid: 43f1fe1f-aa18-47e3-ba20-e03e32254a6d
 author: julieMSFT
 ms.author: jrasnick
 monikerRange: '>=aps-pdw-2016||=azuresqldb-current||=azure-sqldw-latest||>=sql-server-2016||=sqlallproducts-allversions||>=sql-server-linux-2017||=azuresqldb-mi-current'
-ms.openlocfilehash: 219d071b6cb85dad1014a1cdf5b40926aaba634a
-ms.sourcegitcommit: e700497f962e4c2274df16d9e651059b42ff1a10
+ms.openlocfilehash: 2dee02959fae06b67779b400c778bd2a465f5e87
+ms.sourcegitcommit: 197a6ffb643f93592edf9e90b04810a18be61133
 ms.translationtype: HT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 08/17/2020
-ms.locfileid: "88422627"
+ms.lasthandoff: 09/26/2020
+ms.locfileid: "91380608"
 ---
 # <a name="right-transact-sql"></a>RIGHT(Transact-SQL)
 [!INCLUDE [sql-asdb-asdbmi-asa-pdw](../../includes/applies-to-version/sql-asdb-asdbmi-asa-pdw.md)]
@@ -66,7 +66,7 @@ RIGHT ( character_expression , integer_expression )
 ### <a name="a-using-right-with-a-column"></a>A: 열에서 RIGHT 사용  
  다음 예에서는 [!INCLUDE[ssSampleDBnormal](../../includes/sssampledbnormal-md.md)] 데이터베이스에 각 사람의 이름에서 이 가장 오른쪽 다섯 문자를 반환합니다.  
   
-```  
+```sql  
 SELECT RIGHT(FirstName, 5) AS 'First Name'  
 FROM Person.Person  
 WHERE BusinessEntityID < 5  
@@ -93,7 +93,7 @@ Rob
 ### <a name="b-using-right-with-a-column"></a>B. 열에서 RIGHT 사용  
  다음 예는 각 성에서 가장 오른쪽 다섯 문자를 `DimEmployee` 표에 반환합니다.  
   
-```  
+```sql  
 -- Uses AdventureWorks  
   
 SELECT RIGHT(LastName, 5) AS Name  
@@ -115,7 +115,7 @@ lters
 ### <a name="c-using-right-with-a-character-string"></a>C. 문자열에서 RIGHT 사용  
  다음 예는 `RIGHT`를 사용하여 `abcdefg` 문자열의 가장 오른쪽 두 문자를 반환합니다.  
   
-```  
+```sql  
 SELECT RIGHT('abcdefg', 2); 
 ```  
   

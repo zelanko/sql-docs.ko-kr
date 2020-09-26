@@ -25,12 +25,12 @@ helpviewer_keywords:
 ms.assetid: 092d0d71-9f1e-4e38-a1c4-2487adfa5b4e
 author: markingmyname
 ms.author: maghan
-ms.openlocfilehash: 1ebbd18eda53dcedcfd0118c16bb5b16066c8fa7
-ms.sourcegitcommit: dd36d1cbe32cd5a65c6638e8f252b0bd8145e165
+ms.openlocfilehash: d800de4adea71523c3ae05bed53c97697c718d70
+ms.sourcegitcommit: 197a6ffb643f93592edf9e90b04810a18be61133
 ms.translationtype: HT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 09/08/2020
-ms.locfileid: "89539903"
+ms.lasthandoff: 09/26/2020
+ms.locfileid: "91379649"
 ---
 # <a name="drop-trigger-transact-sql"></a>DROP TRIGGER(Transact-SQL)
 [!INCLUDE [SQL Server SQL Database](../../includes/applies-to-version/sql-asdb.md)]
@@ -109,7 +109,7 @@ ON ALL SERVER
 ### <a name="a-dropping-a-dml-trigger"></a>A. DML 트리거 삭제  
  다음 예에서는 [!INCLUDE[ssSampleDBnormal](../../includes/sssampledbnormal-md.md)] 데이터베이스에서 `employee_insupd` 트리거를 삭제합니다. ([!INCLUDE[ssSQL15](../../includes/sssql15-md.md)]부터는 DROP TRIGGER IF EXISTS 구문을 사용할 수 있습니다.)  
   
-```  
+```sql  
 IF OBJECT_ID ('employee_insupd', 'TR') IS NOT NULL  
    DROP TRIGGER employee_insupd;  
 ```  
@@ -120,7 +120,7 @@ IF OBJECT_ID ('employee_insupd', 'TR') IS NOT NULL
 > [!IMPORTANT]  
 >  DDL 트리거는 스키마 범위가 아니고 따라서 **sys.objects** 카탈로그 뷰에 표시되지 않기 때문에 OBJECT_ID 함수를 사용하여 데이터베이스에 DDL 트리거가 있는지 여부를 쿼리할 수 없습니다. 스키마 범위가 아닌 개체는 해당 카탈로그 뷰를 사용하여 쿼리해야 합니다. DDL 트리거의 경우 **sys.triggers**를 사용합니다.  
   
-```  
+```sql  
 DROP TRIGGER safety  
 ON DATABASE;  
 ```  

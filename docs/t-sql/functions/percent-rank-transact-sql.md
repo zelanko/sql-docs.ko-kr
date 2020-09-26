@@ -20,12 +20,12 @@ ms.assetid: e361c2d4-c01f-4da4-8e89-1ddc724a2629
 author: julieMSFT
 ms.author: jrasnick
 monikerRange: =azuresqldb-current||=azure-sqldw-latest||>=sql-server-2016||=sqlallproducts-allversions||>=sql-server-linux-2017||=azuresqldb-mi-current
-ms.openlocfilehash: 36f8d4e87ad6e3b92f71ae45dab6e7020c9d8c72
-ms.sourcegitcommit: e700497f962e4c2274df16d9e651059b42ff1a10
+ms.openlocfilehash: 40422b7ea89dd6a62ea3f59f3d08d8eb48107a98
+ms.sourcegitcommit: 197a6ffb643f93592edf9e90b04810a18be61133
 ms.translationtype: HT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 08/17/2020
-ms.locfileid: "88363049"
+ms.lasthandoff: 09/26/2020
+ms.locfileid: "91380794"
 ---
 # <a name="percent_rank-transact-sql"></a>PERCENT_RANK(Transact-SQL)
 [!INCLUDE [sql-asdb-asdbmi-asa](../../includes/applies-to-version/sql-asdb-asdbmi-asa.md)]
@@ -34,10 +34,9 @@ ms.locfileid: "88363049"
   
 ## <a name="syntax"></a>구문  
   
-```  
+```syntaxsql  
 PERCENT_RANK( )  
     OVER ( [ partition_by_clause ] order_by_clause )  
-  
 ```  
   
 [!INCLUDE[sql-server-tsql-previous-offline-documentation](../../includes/sql-server-tsql-previous-offline-documentation.md)]
@@ -57,7 +56,7 @@ PERCENT_RANK( )
 ## <a name="examples"></a>예  
  다음 예에서는 CUME_DIST 함수를 사용하여 지정한 부서 내 각 직원의 연봉을 백분율로 컴퓨팅합니다. CUME_DIST 함수가 반환하는 값은 같은 동일 부서 내에서 현재 직원보다 연봉이 적거나 같은 직원의 백분율을 나타냅니다. PERCENT_RANK 함수는 부서 내 직원의 연봉 순위를 백분율로 계산합니다. 결과 집합의 행을 부서별로 분할하기 위해 PARTITION BY 절이 지정되었습니다. OVER 절에서 ORDER BY 절은 각 파티션의 행을 정렬합니다. SELECT 문의 ORDER BY 절은 전체 결과 집합의 행을 정렬합니다.  
   
-```  
+```sql  
 USE AdventureWorks2012;  
 GO  
 SELECT Department, LastName, Rate,   

@@ -24,12 +24,12 @@ helpviewer_keywords:
 ms.assetid: 6150bc67-08cb-402e-9c24-b04c9654b434
 author: VanMSFT
 ms.author: vanto
-ms.openlocfilehash: 2e931d371bd117d82d4cd1725acb3fc5f64890ce
-ms.sourcegitcommit: e700497f962e4c2274df16d9e651059b42ff1a10
+ms.openlocfilehash: e18319e45c3d397e4283013ec31bb3c98424c892
+ms.sourcegitcommit: 197a6ffb643f93592edf9e90b04810a18be61133
 ms.translationtype: HT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 08/17/2020
-ms.locfileid: "88444603"
+ms.lasthandoff: 09/26/2020
+ms.locfileid: "91379685"
 ---
 # <a name="drop-symmetric-key-transact-sql"></a>DROP SYMMETRIC KEY(Transact-SQL)
 [!INCLUDE [SQL Server SQL Database](../../includes/applies-to-version/sql-asdb.md)]
@@ -40,8 +40,7 @@ ms.locfileid: "88444603"
   
 ## <a name="syntax"></a>구문  
   
-```  
-  
+```syntaxsql  
 DROP SYMMETRIC KEY symmetric_key_name [REMOVE PROVIDER KEY]  
 ```  
   
@@ -65,7 +64,7 @@ DROP SYMMETRIC KEY symmetric_key_name [REMOVE PROVIDER KEY]
 ## <a name="examples"></a>예제  
  다음 예에서는 현재 데이터베이스에서 `GailSammamishKey6`이라는 대칭 키를 제거합니다.  
   
-```  
+```sql  
 CLOSE SYMMETRIC KEY GailSammamishKey6;  
 DROP SYMMETRIC KEY GailSammamishKey6;  
 GO  

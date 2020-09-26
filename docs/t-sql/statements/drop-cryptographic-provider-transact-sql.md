@@ -18,12 +18,12 @@ helpviewer_keywords:
 ms.assetid: 71c55c20-439e-4897-aef5-f20e556d668f
 author: VanMSFT
 ms.author: vanto
-ms.openlocfilehash: 80c6b61bbded237a0eedb0ee39fc8d4a6f55700f
-ms.sourcegitcommit: e700497f962e4c2274df16d9e651059b42ff1a10
+ms.openlocfilehash: bba9c26443e04bdd1373827fdc11eb5a536e06be
+ms.sourcegitcommit: 197a6ffb643f93592edf9e90b04810a18be61133
 ms.translationtype: HT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 08/17/2020
-ms.locfileid: "88416389"
+ms.lasthandoff: 09/26/2020
+ms.locfileid: "91380128"
 ---
 # <a name="drop-cryptographic-provider-transact-sql"></a>DROP CRYPTOGRAPHIC PROVIDER(Transact-SQL)
 [!INCLUDE [SQL Server](../../includes/applies-to-version/sqlserver.md)]
@@ -34,8 +34,7 @@ ms.locfileid: "88416389"
   
 ## <a name="syntax"></a>구문  
   
-```  
-  
+```syntaxsql
 DROP CRYPTOGRAPHIC PROVIDER provider_name   
 ```  
   
@@ -58,7 +57,7 @@ DROP CRYPTOGRAPHIC PROVIDER provider_name
 ## <a name="examples"></a>예제  
  다음 예에서는 `SecurityProvider`라는 암호화 공급자를 삭제합니다.  
   
-```  
+```sql  
 /* First, disable provider to perform the upgrade.  
 This will terminate all open cryptographic sessions. */  
 ALTER CRYPTOGRAPHIC PROVIDER SecurityProvider   

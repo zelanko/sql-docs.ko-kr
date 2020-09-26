@@ -20,12 +20,12 @@ ms.assetid: d019419e-5297-4994-97d5-e9c8fc61bbf4
 author: julieMSFT
 ms.author: jrasnick
 monikerRange: '>=aps-pdw-2016||=azuresqldb-current||=azure-sqldw-latest||>=sql-server-2016||=sqlallproducts-allversions||>=sql-server-linux-2017||=azuresqldb-mi-current'
-ms.openlocfilehash: 9ce8fc1fd71a6ba64e9c289c9a5af4dec4585cb4
-ms.sourcegitcommit: e700497f962e4c2274df16d9e651059b42ff1a10
+ms.openlocfilehash: 5d32b6d0c737df791022f0bc7814a627a2ba1b78
+ms.sourcegitcommit: 197a6ffb643f93592edf9e90b04810a18be61133
 ms.translationtype: HT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 08/17/2020
-ms.locfileid: "88459605"
+ms.lasthandoff: 09/26/2020
+ms.locfileid: "91380768"
 ---
 # <a name="percentile_cont-transact-sql"></a>PERCENTILE_CONT(Transact-SQL)
 [!INCLUDE [sql-asdb-asdbmi-asa-pdw](../../includes/applies-to-version/sql-asdb-asdbmi-asa-pdw.md)]
@@ -70,7 +70,7 @@ PERCENTILE_CONT ( numeric_literal )
 ### <a name="a-basic-syntax-example"></a>A. 기본 구문 예제  
  다음 예에서는 PERCENTILE_CONT 및 PERCENTILE_DISC를 사용하여 각 부서에서 직원 급여의 중앙값을 찾습니다. 이러한 함수는 같은 값을 반환하지 않을 수 있습니다. PERCENTILE_CONT는 데이터 세트에 있거나 없을 수 있는 적절한 값을 보간하는 반면, PERCENTILE_DISC는 항상 해당 세트에서 실제 값을 반환합니다.  
   
-```  
+```sql  
 USE AdventureWorks2012;  
   
 SELECT DISTINCT Name AS DepartmentName  
@@ -100,7 +100,7 @@ Human Resources        17.427850    16.5865
 ### <a name="b-basic-syntax-example"></a>B. 기본 구문 예제  
  다음 예에서는 PERCENTILE_CONT 및 PERCENTILE_DISC를 사용하여 각 부서에서 직원 급여의 중앙값을 찾습니다. 이러한 함수는 같은 값을 반환하지 않을 수 있습니다. PERCENTILE_CONT는 데이터 세트에 있거나 없을 수 있는 적절한 값을 보간하는 반면, PERCENTILE_DISC는 항상 해당 세트에서 실제 값을 반환합니다.  
   
-```  
+```sql  
 -- Uses AdventureWorks  
   
 SELECT DISTINCT DepartmentName  
@@ -108,8 +108,7 @@ SELECT DISTINCT DepartmentName
     OVER (PARTITION BY DepartmentName) AS MedianCont  
 ,PERCENTILE_DISC(0.5) WITHIN GROUP (ORDER BY BaseRate)  
     OVER (PARTITION BY DepartmentName) AS MedianDisc  
-FROM dbo.DimEmployee;  
-  
+FROM dbo.DimEmployee; 
 ```  
   
  다음은 결과 집합의 일부입니다.  

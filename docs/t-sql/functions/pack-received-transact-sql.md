@@ -20,12 +20,12 @@ helpviewer_keywords:
 ms.assetid: 5c0b3d36-bfad-4f0b-abb8-e8f6391b32cd
 author: VanMSFT
 ms.author: vanto
-ms.openlocfilehash: 3fea7af807dee5ff6307817992fe2f034ca00e78
-ms.sourcegitcommit: e700497f962e4c2274df16d9e651059b42ff1a10
+ms.openlocfilehash: 7b3bb37af363727d1eb41922979ee6f78a9fd008
+ms.sourcegitcommit: 197a6ffb643f93592edf9e90b04810a18be61133
 ms.translationtype: HT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 08/17/2020
-ms.locfileid: "88363489"
+ms.lasthandoff: 09/26/2020
+ms.locfileid: "91380825"
 ---
 # <a name="x40x40pack_received-transact-sql"></a>&#x40;&#x40;PACK_RECEIVED (Transact-SQL)
 [!INCLUDE [SQL Server](../../includes/applies-to-version/sqlserver.md)]
@@ -36,7 +36,7 @@ ms.locfileid: "88363489"
   
 ## <a name="syntax"></a>구문  
   
-```  
+```syntaxsql  
 @@PACK_RECEIVED  
 ```  
   
@@ -51,7 +51,7 @@ ms.locfileid: "88363489"
 ## <a name="examples"></a>예제  
  다음 예에서는 `@@PACK_RECEIVED`의 사용법을 보여 줍니다.  
   
-```  
+```sql  
 SELECT @@PACK_RECEIVED AS 'Packets Received';   
 ```  
   

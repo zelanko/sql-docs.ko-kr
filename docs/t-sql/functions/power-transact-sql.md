@@ -19,12 +19,12 @@ ms.assetid: 0fd34494-90b9-4559-8011-a8c1b9f40239
 author: julieMSFT
 ms.author: jrasnick
 monikerRange: '>=aps-pdw-2016||=azuresqldb-current||=azure-sqldw-latest||>=sql-server-2016||=sqlallproducts-allversions||>=sql-server-linux-2017||=azuresqldb-mi-current'
-ms.openlocfilehash: 857ad909b2f471edaebf661ccab4cca0077bc099
-ms.sourcegitcommit: e700497f962e4c2274df16d9e651059b42ff1a10
+ms.openlocfilehash: 3fbed016f7c4126f937fd2c376126ebd9f8e5f7b
+ms.sourcegitcommit: 197a6ffb643f93592edf9e90b04810a18be61133
 ms.translationtype: HT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 08/17/2020
-ms.locfileid: "88417319"
+ms.lasthandoff: 09/26/2020
+ms.locfileid: "91380740"
 ---
 # <a name="power-transact-sql"></a>POWER(Transact-SQL)
 [!INCLUDE [sql-asdb-asdbmi-asa-pdw](../../includes/applies-to-version/sql-asdb-asdbmi-asa-pdw.md)]
@@ -35,7 +35,7 @@ ms.locfileid: "88417319"
   
 ## <a name="syntax"></a>구문  
   
-```  
+```syntaxsql  
 POWER ( float_expression , y )  
 ```  
   
@@ -67,7 +67,7 @@ POWER ( float_expression , y )
 ### <a name="a-using-power-to-return-the-cube-of-a-number"></a>A. POWER를 사용하여 숫자의 세제곱 반환  
  다음 예에서는 3의 승수로 거듭 제곱한 수(숫자의 세제곱)를 보여줍니다.  
   
-```  
+```sql  
 DECLARE @input1 FLOAT;  
 DECLARE @input2 FLOAT;  
 SET @input1= 2;  
@@ -88,7 +88,7 @@ Result1                Result2
 ### <a name="b-using-power-to-show-results-of-data-type-conversion"></a>B. POWER를 사용하여 데이터 형식 자동 변환 표시  
  다음 예에서는 *float_expression*에서 예기치 않은 결과를 반환할 수 있는 데이터 형식을 유지하는 방법을 보여 줍니다.  
   
-```  
+```sql 
 SELECT   
 POWER(CAST(2.0 AS FLOAT), -100.0) AS FloatResult,  
 POWER(2, -100.0) AS IntegerResult,  
@@ -110,7 +110,7 @@ FloatResult            IntegerResult IntegerResult Decimal1Result Decimal2Result
 ### <a name="c-using-power"></a>C. POWER 사용  
  다음 예에서는 `POWER`에 대한 `2` 결과를 반환합니다.  
   
-```  
+```sql  
 DECLARE @value INT, @counter INT;  
 SET @value = 2;  
 SET @counter = 1;  
@@ -154,7 +154,7 @@ GO
 ### <a name="d-using-power-to-return-the-cube-of-a-number"></a>4. POWER를 사용하여 숫자의 세제곱 반환  
  다음 예에서는 `2.0`의 세제곱에 대한 `POWER` 결과를 반환합니다.  
   
-```  
+```sql  
 SELECT POWER(2.0, 3);  
 ```  
   

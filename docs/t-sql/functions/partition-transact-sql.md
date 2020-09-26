@@ -19,12 +19,12 @@ helpviewer_keywords:
 ms.assetid: abc865d0-57a8-49da-8821-29457c808d2a
 author: julieMSFT
 ms.author: jrasnick
-ms.openlocfilehash: 241eb35a882350a982177da3bcc94f4154f25e6d
-ms.sourcegitcommit: e700497f962e4c2274df16d9e651059b42ff1a10
+ms.openlocfilehash: 95f101b79978c86e2b963891d495ff5a067b5fd9
+ms.sourcegitcommit: 197a6ffb643f93592edf9e90b04810a18be61133
 ms.translationtype: HT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 08/17/2020
-ms.locfileid: "88459599"
+ms.lasthandoff: 09/26/2020
+ms.locfileid: "91380781"
 ---
 # <a name="partition-transact-sql"></a>$PARTITION(Transact-SQL)
 [!INCLUDE [SQL Server](../../includes/applies-to-version/sqlserver.md)]
@@ -35,8 +35,7 @@ ms.locfileid: "88459599"
   
 ## <a name="syntax"></a>구문  
   
-```  
-  
+```syntaxsql
 [ database_name. ] $PARTITION.partition_function_name(expression)  
 ```  
   
@@ -65,10 +64,10 @@ ms.locfileid: "88459599"
 ### <a name="a-getting-the-partition-number-for-a-set-of-partitioning-column-values"></a>A. 분할 열 값 집합에 대한 파티션 번호 가져오기  
  다음 예에서는 테이블이나 인덱스를 4개의 파티션으로 분할하는 파티션 함수 `RangePF1`을 만듭니다. $PARTITION은 `10`의 분할 열을 나타내는 `RangePF1` 값이 테이블의 파티션 1에 포함되는지 확인하는 데 사용됩니다.  
   
-```  
+```sql  
 USE AdventureWorks2012;  
 GO  
-CREATE PARTITION FUNCTION RangePF1 ( int )  
+CREATE PARTITION FUNCTION RangePF1 ( INT )  
 AS RANGE FOR VALUES (10, 100, 1000) ;  
 GO  
 SELECT $PARTITION.RangePF1 (10) ;  
@@ -80,7 +79,7 @@ GO
   
  이 예를 실행하려면 먼저 [!INCLUDE[ssSampleDBobject](../../includes/sssampledbobject-md.md)] 예 데이터베이스에 대해 PartitionAW.sql 스크립트를 실행해야 합니다. 자세한 내용은 [PartitioningScript](https://go.microsoft.com/fwlink/?LinkId=201015)를 참조하세요.  
   
-```  
+```sql
 USE AdventureWorks2012;  
 GO  
 SELECT $PARTITION.TransactionRangePF1(TransactionDate) AS Partition,   
@@ -96,7 +95,7 @@ GO
 > [!NOTE]  
 >  이 예를 실행하려면 먼저 [!INCLUDE[ssSampleDBobject](../../includes/sssampledbobject-md.md)] 예 데이터베이스에 대해 PartitionAW.sql 스크립트를 실행해야 합니다. 자세한 내용은 [PartitioningScript](https://go.microsoft.com/fwlink/?LinkId=201015)를 참조하세요.  
   
-```  
+```sql  
 SELECT * FROM Production.TransactionHistory  
 WHERE $PARTITION.TransactionRangePF1(TransactionDate) = 5 ;  
 ```  

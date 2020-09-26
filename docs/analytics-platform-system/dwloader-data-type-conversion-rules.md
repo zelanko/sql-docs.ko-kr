@@ -9,12 +9,12 @@ ms.date: 04/17/2018
 ms.author: murshedz
 ms.reviewer: martinle
 ms.custom: seo-dt-2019
-ms.openlocfilehash: fe5d8790b5adb8477c994d265f458cdb1ceda61a
-ms.sourcegitcommit: e042272a38fb646df05152c676e5cbeae3f9cd13
+ms.openlocfilehash: c1ce48c3352ffbd0a1c112f7fd60db2f0d85c6e6
+ms.sourcegitcommit: 197a6ffb643f93592edf9e90b04810a18be61133
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 04/27/2020
-ms.locfileid: "74401187"
+ms.lasthandoff: 09/26/2020
+ms.locfileid: "91379562"
 ---
 # <a name="data-type-conversion-rules-for-dwloader---parallel-data-warehouse"></a>Dwloader-병렬 데이터 웨어하우스의 데이터 형식 변환 규칙
 이 항목에서는 데이터를 PDW로 로드할 때 [dwloader 명령줄 로더가](dwloader.md) 지 원하는 입력 데이터 형식 및 암시적 데이터 형식 변환에 대해 설명 합니다. 암시적 데이터 변환은 입력 데이터가 SQL Server PDW 대상 테이블의 데이터 형식과 일치 하지 않는 경우에 발생 합니다. 로드 프로세스를 설계할 때이 정보를 사용 하 여 데이터가 성공적으로 SQL Server PDW 로드 되는지 확인 합니다.  
@@ -129,7 +129,7 @@ Dwloader는 SQL Server PDW 로드 되는 입력 데이터에 대해 다음과 �
 |10 진 리터럴|fffnn .fff<br /><br />예: 1234.5678|1 보다 크거나 0 보다 작은 값은 1로 변환 됩니다. 예를 들어 123.45 및-123.45 값은 1로 변환 됩니다.|  
   
 ### <a name="decimal-data-type"></a>decimal 데이터 형식  
-다음 표에서는 리터럴 값을 **decimal** (*p, s*) 형식의 열로 로드 하는 규칙을 정의 합니다. 데이터 변환 규칙은 SQL Server와 동일 합니다. 자세한 내용은 MSDN의 [데이터 형식 변환 (데이터베이스 엔진)](https://go.microsoft.com/fwlink/?LinkId=202128) 을 참조 하십시오.  
+다음 표에서는 리터럴 값을 **decimal** (*p, s*) 형식의 열로 로드 하는 규칙을 정의 합니다. 데이터 변환 규칙은 SQL Server와 동일 합니다. 자세한 내용은 MSDN의 [데이터 형식 변환 (데이터베이스 엔진)](/previous-versions/sql/sql-server-2008-r2/ms191530(v=sql.105)) 을 참조 하십시오.  
   
 |입력 데이터 형식|입력 데이터 예제|  
 |-------------------|-----------------------|  
@@ -185,4 +185,3 @@ Money 리터럴 값은 선택적 소수점이 있는 숫자의 문자열로 표�
 [Common Metadata Query Examples &#40;SQL Server PDW&#41;](../sqlpdw/common-metadata-query-examples-sql-server-pdw.md)  
 
 -->
-  

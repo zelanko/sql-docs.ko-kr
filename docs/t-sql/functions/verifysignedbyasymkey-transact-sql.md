@@ -23,12 +23,12 @@ helpviewer_keywords:
 ms.assetid: 9f7c6e0b-5ba4-4dbb-994d-5bd59f4908de
 author: VanMSFT
 ms.author: vanto
-ms.openlocfilehash: 0257bd8b66a915ec5d7f0b59e3aa85f197f38867
-ms.sourcegitcommit: e700497f962e4c2274df16d9e651059b42ff1a10
+ms.openlocfilehash: 4f2a75cf3da8220e861d8320b2454683c3b65a1f
+ms.sourcegitcommit: 197a6ffb643f93592edf9e90b04810a18be61133
 ms.translationtype: HT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 08/17/2020
-ms.locfileid: "88362249"
+ms.lasthandoff: 09/26/2020
+ms.locfileid: "91380598"
 ---
 # <a name="verifysignedbyasymkey-transact-sql"></a>VERIFYSIGNEDBYASYMKEY(Transact-SQL)
 [!INCLUDE [SQL Server SQL Database](../../includes/applies-to-version/sql-asdb.md)]
@@ -39,8 +39,7 @@ ms.locfileid: "88362249"
   
 ## <a name="syntax"></a>구문  
   
-```  
-  
+```syntaxsql
 VerifySignedByAsymKey( Asym_Key_ID , clear_text , signature )  
 ```  
   
@@ -72,7 +71,7 @@ VerifySignedByAsymKey( Asym_Key_ID , clear_text , signature )
 ### <a name="a-testing-for-data-with-a-valid-signature"></a>A. 유효한 서명이 있는 데이터 테스트  
  다음 예에서는 선택한 데이터가 `WillisKey74` 비대칭 키로 서명된 후 변경되지 않은 경우 1을 반환하고 데이터가 손상된 경우에는 0을 반환합니다.  
   
-```  
+```sql
 SELECT Data,  
      VerifySignedByAsymKey( AsymKey_Id( 'WillisKey74' ), SignedData,  
      DataSignature ) as IsSignatureValid  
@@ -85,7 +84,7 @@ RETURN;
 ### <a name="b-returning-a-result-set-that-contains-data-with-a-valid-signature"></a>B. 유효한 서명이 있는 데이터가 포함된 결과 집합 반환  
  다음 예에서는 `SignedData04` 비대칭 키로 서명된 후 변경되지 않은 데이터가 포함된 `WillisKey74`의 행을 반환합니다. 이 예에서는 `AsymKey_ID` 함수를 호출하여 데이터베이스에서 비대칭 키의 ID를 가져옵니다.  
   
-```  
+```sql
 SELECT Data   
 FROM [AdventureWorks2012].[SignedData04]   
 WHERE VerifySignedByAsymKey( AsymKey_Id( 'WillisKey74' ), Data,  
