@@ -9,12 +9,12 @@ author: cawrites
 ms.author: chadam
 ms.custom: seo-lt-2019
 monikerRange: '>=sql-server-ver15||>=sql-server-linux-ver15||=sqlallproducts-allversions'
-ms.openlocfilehash: 9e945d07f357055904fe31bb54746e94e69a7d46
-ms.sourcegitcommit: e3460309b301a77d0babec032f53de330da001a9
+ms.openlocfilehash: ca8827f5dcee9b25d873ac7fed83679480bedb44
+ms.sourcegitcommit: 8f062015c2a033f5a0d805ee4adabbe15e7c8f94
 ms.translationtype: HT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 09/24/2020
-ms.locfileid: "91137032"
+ms.lasthandoff: 09/25/2020
+ms.locfileid: "91227267"
 ---
 # <a name="install-a-python-custom-runtime-for-sql-server"></a>SQL Server용 Python 사용자 지정 런타임 설치
 [!INCLUDE [SQL Server 2019 and later](../../includes/applies-to-version/sqlserver2019.md)]
@@ -117,7 +117,7 @@ PYTHONHOME이 이미 있는 경우 **편집**을 선택하여 Python 3.7 설치 
 2. Give permissions to **SID S-1-15-2-1**.
     ```cmd
     icacls "%PYTHONHOME%" /grant *S-1-15-2-1:(OI)(CI)RX /T
-    
+
 >[!NOTE]
 >The preceding command grants permissions to the computer **SID S-1-15-2-1**, which is equivalent to ALL APPLICATION PACKAGES on an English version of Windows. Alternatively, you can use `icacls "%R_HOME%" /grant "ALL APPLICATION PACKAGES":(OI)(CI)RX /T` on an English version of Windows.
 
@@ -134,7 +134,7 @@ net start MSSQLLAUNCHPAD$MSSQLSERVER
 
 ## <a name="download-python-language-extension"></a>Python 언어 확장 다운로드
 
-Python 언어 확장 [python-lang-extension.zip](https://go.microsoft.com/fwlink/?linkid=2143952)이 들어 있는 Zip 파일을 다운로드합니다.
+[Windows용 Python 언어 확장 Zip 파일](https://github.com/microsoft/sql-server-language-extensions/releases)을 다운로드합니다. 프로덕션에서 릴리스 버전을 사용하는 것이 좋습니다. 오류를 조사하기 위해 자세한 로깅 정보를 제공하는 개발 중이거나 테스트 중인 디버그 버전을 사용합니다.
 
 ## <a name="register-external-language"></a>외부 언어 등록
 
@@ -280,7 +280,7 @@ sudo systemctl restart mssql-launchpadd
 ```
 ## <a name="download-python-language-extension"></a><a name="download-python-linux"></a> Python 언어 확장 다운로드
 
-Python 언어 확장 [python-lang-extension.zip](https://go.microsoft.com/fwlink/?linkid=2143793)이 들어 있는 Zip 파일을 다운로드합니다.
+[Linux용 Python 언어 확장 Zip 파일](https://github.com/microsoft/sql-server-language-extensions/releases)을 다운로드합니다. 프로덕션에서 릴리스 버전을 사용하는 것이 좋습니다. 오류를 조사하기 위해 자세한 로깅 정보를 제공하는 개발 중이거나 테스트 중인 디버그 버전을 사용합니다.
 
 ## <a name="register-external-language"></a>외부 언어 등록
 

@@ -61,12 +61,12 @@ ms.assetid: f1745145-182d-4301-a334-18f799d361d1
 author: markingmyname
 ms.author: maghan
 monikerRange: '>=aps-pdw-2016||=azuresqldb-current||=azure-sqldw-latest||>=sql-server-2016||=sqlallproducts-allversions||>=sql-server-linux-2017||=azuresqldb-mi-current'
-ms.openlocfilehash: 35c55f7a989899e46c1189909fd4d90041ac8165
-ms.sourcegitcommit: 3efd8bbf91f4f78dce3a4ac03348037d8c720e6a
+ms.openlocfilehash: df75737944bb7d21bf4a3f8884688915eca52827
+ms.sourcegitcommit: 8f062015c2a033f5a0d805ee4adabbe15e7c8f94
 ms.translationtype: HT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 09/23/2020
-ms.locfileid: "91024451"
+ms.lasthandoff: 09/25/2020
+ms.locfileid: "91227415"
 ---
 # <a name="alter-table-transact-sql"></a>ALTER TABLE(Transact-SQL)
 
@@ -1110,11 +1110,11 @@ ALTER TABLE 권한은 ALTER TABLE SWITCH 문과 관련된 두 테이블에 모�
 
 ALTER TABLE 문의 열을 CLR(공용 언어 런타임) 사용자 정의 형식 또는 별칭 데이터 형식으로 정의하면 해당 형식에 대한 REFERENCES 권한이 필요합니다.
 
-테이블의 행을 업데이트하는 열을 추가하려면 테이블에 대한 **UPDATE** 권한이 있어야 합니다. 예를 들어 테이블이 비어 있지 않은 경우 **NOT NULL** 열을 기본값으로 추가하거나 ID 열을 추가합니다.
+테이블의 행을 업데이트하는 열을 추가하거나 변경하려면 테이블에 대한 **UPDATE** 권한이 있어야 합니다. 예를 들어 테이블이 비어 있지 않은 경우 **NOT NULL** 열을 기본값으로 추가하거나 ID 열을 추가합니다.
 
 ## <a name="examples"></a><a name="Example_Top"></a> 예
 
-|범주|중요한 구문 요소|
+|Category|중요한 구문 요소|
 |--------------|------------------------------|
 |[열 및 제약 조건 추가](#add)|ADD * 인덱스 옵션이 있는 PRIMARY KEY * 스파스 열과 열 집합 *|
 |[열 및 제약 조건 삭제](#Drop)|DROP|

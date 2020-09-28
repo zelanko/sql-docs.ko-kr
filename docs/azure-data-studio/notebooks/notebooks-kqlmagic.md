@@ -9,12 +9,12 @@ ms.author: maghan
 ms.reviewer: jukoesma
 ms.custom: ''
 ms.date: 04/27/2020
-ms.openlocfilehash: f927f2259c96b0b42e184d0f4b0ee7e49cd5df01
-ms.sourcegitcommit: e3460309b301a77d0babec032f53de330da001a9
+ms.openlocfilehash: 61b87d2dae44f30f84b513f6809ba8597de7712f
+ms.sourcegitcommit: 8f062015c2a033f5a0d805ee4adabbe15e7c8f94
 ms.translationtype: HT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 09/24/2020
-ms.locfileid: "91136858"
+ms.lasthandoff: 09/25/2020
+ms.locfileid: "91226973"
 ---
 # <a name="kqlmagic-in-azure-data-studio"></a>Azure Data Studio의 Kqlmagic
 
@@ -107,6 +107,10 @@ ms.locfileid: "91136858"
    ```python
    %kql azureDataExplorer://code;cluster='help';database='Samples'
    ```
+
+    > [!Note]
+    > 고유의 ADX 클러스터를 사용하는 경우 다음과 같이 연결 문자열에서 지역을 포함해야 합니다.   
+    ```%kql azuredataexplorer://code;cluster='mycluster.westus';database='mykustodb'```
 
    인증에는 디바이스 로그인을 사용합니다. 출력에서 코드를 복사하고 **인증**을 선택하면 열리는 브라우저에 코드를 붙여넣습니다. 인증에 성공하면 Azure Data Studio로 돌아가서 스크립트의 나머지 부분을 계속 진행할 수 있습니다.
 

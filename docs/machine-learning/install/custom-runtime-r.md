@@ -9,12 +9,12 @@ author: cawrites
 ms.author: chadam
 ms.custom: seo-lt-2019
 monikerRange: '>=sql-server-ver15||>=sql-server-linux-ver15||=sqlallproducts-allversions'
-ms.openlocfilehash: a147dc29131e8764b723bc981567faae9593f369
-ms.sourcegitcommit: e3460309b301a77d0babec032f53de330da001a9
+ms.openlocfilehash: 8d9ba741433cf5e010861dd3096ac9bf8b4f1707
+ms.sourcegitcommit: 8f062015c2a033f5a0d805ee4adabbe15e7c8f94
 ms.translationtype: HT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 09/24/2020
-ms.locfileid: "91136984"
+ms.lasthandoff: 09/25/2020
+ms.locfileid: "91227165"
 ---
 # <a name="install-an-r-custom-runtime-for-sql-server"></a>SQL Server용 R 사용자 지정 런타임 설치
 
@@ -164,7 +164,7 @@ net start MSSQLLAUNCHPAD$MSSQLSERVER
 
 ## <a name="download-r-language-extension"></a>R 언어 확장 다운로드
 
-R 언어 확장 [R-lang-extension.zip](https://go.microsoft.com/fwlink/?linkid=2143953)이 들어 있는 Zip 파일을 다운로드합니다.
+[Windows용 R 언어 확장이 들어 있는 Zip 파일](https://github.com/microsoft/sql-server-language-extensions/releases)을 다운로드합니다. 프로덕션에서 릴리스 버전을 사용하는 것이 좋습니다. 오류를 조사하기 위해 자세한 로깅 정보를 제공하는 개발 중이거나 테스트 중인 디버그 버전을 사용합니다.
 
 ## <a name="register-external-language"></a>외부 언어 등록
 
@@ -343,7 +343,7 @@ sudo systemctl restart mssql-launchpadd
 
 ## <a name="download-r-language-extension"></a>R 언어 확장 다운로드
 
-R 언어 확장 [R-lang-extension.zip](https://go.microsoft.com/fwlink/?linkid=2143954)이 들어 있는 Zip 파일을 다운로드합니다.
+[Linux용 R 언어 확장이 들어 있는 Zip 파일](https://github.com/microsoft/sql-server-language-extensions/releases)을 다운로드합니다. 프로덕션에서 릴리스 버전을 사용하는 것이 좋습니다. 오류를 조사하기 위해 자세한 로깅 정보를 제공하는 개발 중이거나 테스트 중인 디버그 버전을 사용합니다.
 
 ## <a name="register-external-language"></a>외부 언어 등록
 
