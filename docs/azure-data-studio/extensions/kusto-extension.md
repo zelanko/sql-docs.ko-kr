@@ -9,18 +9,20 @@ ms.author: maghan
 ms.reviewer: jukoesma
 ms.custom: ''
 ms.date: 09/22/2020
-ms.openlocfilehash: 52f8bb103aad960750a74be1a4e35b0d1d5be5d7
-ms.sourcegitcommit: 63aef5a96905f0b026322abc9ccb862ee497eebe
+ms.openlocfilehash: fe620c08da690a61d41a0fef5f18132c246ef739
+ms.sourcegitcommit: 197a6ffb643f93592edf9e90b04810a18be61133
 ms.translationtype: HT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 09/25/2020
-ms.locfileid: "91364070"
+ms.lasthandoff: 09/26/2020
+ms.locfileid: "91379618"
 ---
 # <a name="kusto-kql-extension-for-azure-data-studio-preview"></a>Azure Data Studio용 Kusto(KQL) 확장(미리 보기)
 
 [Azure Data Studio](../what-is.md)용 Kusto(KQL) 확장을 사용하면 [Azure Data Explorer](https://docs.microsoft.com/azure/data-explorer/data-explorer-overview) 클러스터에 연결하고 쿼리할 수 있습니다.
 
-이제 사용자가 Azure Data Explorer 클러스터에 연결하여 찾아보고, KQL 쿼리를 작성하여 실행하고, Kusto 커널 및 IntelliSense를 사용하여 Notebook을 작성할 수 있습니다. Azure Data Studio에서 네이티브 Kusto(KQL) 환경을 사용하도록 설정하면 데이터 엔지니어, 데이터 과학자, 데이터 분석가가 Azure Data Explorer에 저장된 방대한 데이터에서 추세와 변칙을 빠르게 관찰할 수 있습니다.
+사용자는 IntelliSense가 포함된 [Kusto 커널](../notebooks/notebooks-kusto-kernel.md)을 사용하여 KQL 쿼리를 작성 및 실행하고 Notebooks를 제작할 수 있습니다.
+
+Azure Data Studio에서 네이티브 Kusto(KQL) 환경을 사용하도록 설정하면 데이터 엔지니어, 데이터 과학자, 데이터 분석가가 Azure Data Explorer에 저장된 방대한 데이터에서 추세와 변칙을 빠르게 관찰할 수 있습니다.
 
 이 확장은 현재 미리 보기로 제공됩니다.
 
@@ -126,16 +128,23 @@ Azure Data Studio의 KQL(Kusto) 확장을 사용하는 [SandDance 확장](https:
 
 :::image type="content" source="media/kusto-extension/kusto-extension-sanddance-demo.gif" alt-text="SandDance 시각화":::
 
-## <a name="limitations-and-considerations"></a>제한 사항 및 고려 사항
+## <a name="known-issues"></a>알려진 문제
 
-- Kusto 쿼리를 실행하기 전에 Azure Data Explorer 클러스터에 대한 데이터베이스를 선택해야 합니다.
-- Azure Data Explorer 클러스터를 너무 오랫동안 유휴 상태로 두면 연결이 끊어질 수 있습니다.
-    - 해결 방법: 클러스터에서 연결을 끊고 다시 연결합니다.
+| 세부 정보 | 해결 방법 |
+|---------|------------|
+| [다시 로드 후 kusto 연결 Viewlet이 작동하지 않습니다](https://github.com/microsoft/azuredatastudio/issues/12475). | 해당 없음 |
+| [자동으로 다시 연결할 수 없습니다.](https://github.com/microsoft/azuredatastudio/issues/11830) | Azure Data Explorer 클러스터에 연결을 끊었다가 다시 연결합니다. |
+| [Kusto 클러스터 새로 고침이 제대로 다시 연결되지 않는 것 같습니다](https://github.com/microsoft/azuredatastudio/issues/11824). | Azure Data Explorer 클러스터에 연결을 끊었다가 다시 연결합니다. |
+| [클러스터에 연결하면 데이터베이스 대신 클러스터 대시보드가 표시됨](https://github.com/microsoft/azuredatastudio/issues/12549) | 해당 없음 |
+| Azure 데이터 클러스터 데이터베이스의 각 테이블에는 **TAKE 10** 대신 **SELECT TOP 1000** 옵션만 있습니다. | 해당 없음 |
+
+[기능 요청](https://github.com/microsoft/azuredatastudio/issues/new?assignees=&labels=&template=feature_request.md&title=)을 제출하여 제품 팀에 피드백을 제공할 수 있습니다.  
+[버그](https://github.com/microsoft/azuredatastudio/issues/new?assignees=&labels=&template=bug_report.md&title=)를 제출하여 제품 팀에 피드백을 제공할 수 있습니다.
 
 ## <a name="next-steps"></a>다음 단계
 
 - [Kusto Notebook 만들기 및 실행](../notebooks/notebooks-kusto-kernel.md)
-- [Azure Data Studio의 Kqlmagic Notebook](../notebooks-kqlmagic.md)
+- [Azure Data Studio의 Kqlmagic Notebook](../notebooks/notebooks-kqlmagic.md)
 - [SQL 대 Kusto 참고 자료](https://docs.microsoft.com/azure/data-explorer/kusto/query/sqlcheatsheet)
 - [Azure 데이터 탐색기란?](https://docs.microsoft.com/azure/data-explorer/data-explorer-overview)
 - [SandDance 시각화 사용](https://sanddance.js.org/)

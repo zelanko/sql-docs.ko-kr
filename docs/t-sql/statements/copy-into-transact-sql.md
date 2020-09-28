@@ -2,7 +2,7 @@
 title: COPY INTO(Transact-SQL)(미리 보기)
 titleSuffix: (Azure Synapse Analytics) - SQL Server
 description: Azure Synapse Analytics의 COPY 문을 사용하여 외부 스토리지 계정에서 로드할 수 있습니다.
-ms.date: 08/05/2020
+ms.date: 09/25/2020
 ms.prod: sql
 ms.prod_service: database-engine, sql-data-warehouse
 ms.reviewer: jrasnick
@@ -18,12 +18,12 @@ dev_langs:
 author: kevinvngo
 ms.author: kevin
 monikerRange: =sqlallproducts-allversions||=azure-sqldw-latest
-ms.openlocfilehash: 68c4e1d526a1385dee1a5868bbf382b25e21d797
-ms.sourcegitcommit: 3efd8bbf91f4f78dce3a4ac03348037d8c720e6a
+ms.openlocfilehash: 28711d123d4084c973d301f7fa93c9f5d598986f
+ms.sourcegitcommit: 197a6ffb643f93592edf9e90b04810a18be61133
 ms.translationtype: HT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 09/23/2020
-ms.locfileid: "91024562"
+ms.lasthandoff: 09/26/2020
+ms.locfileid: "91380838"
 ---
 # <a name="copy-transact-sql"></a>COPY(Transact-SQL)
 
@@ -136,13 +136,19 @@ WITH
 *CREDENTIAL (IDENTITY = ‘’, SECRET = ‘’)*</br>
 *자격 증명*은 외부 스토리지 계정에 액세스하기 위한 인증 메커니즘을 지정합니다. 인증 방법은 다음과 같습니다.
 
-|                          |                CSV                |              Parquet               |                ORC                 |
-| :----------------------: | :-------------------------------: | :-------------------------------:  | :-------------------------------:  |
-|  **Azure Blob 스토리지**  | SAS/MSI/SERVICE PRINCIPAL/KEY/AAD |              SAS/KEY               |              SAS/KEY               |
-| **Azure Data Lake Gen2** | SAS/MSI/SERVICE PRINCIPAL/KEY/AAD | SAS(Blob 엔드포인트)/MSI(dfs 엔드포인트)/SERVICE PRINCIPAL/KEY/AAD | SAS(Blob 엔드포인트)/MSI(dfs 엔드포인트)/SERVICE PRINCIPAL/KEY/AAD |
+|                          |                CSV                |                      Parquet                       |                        ORC                         |
+| :----------------------: | :-------------------------------: | :------------------------------------------------: | :------------------------------------------------: |
+|  **Azure Blob 스토리지**  | SAS/MSI/SERVICE PRINCIPAL/KEY/AAD |                      SAS/KEY                       |                      SAS/KEY                       |
+| **Azure Data Lake Gen2** | SAS/MSI/SERVICE PRINCIPAL/KEY/AAD | SAS(blob<sup>1</sup>)/MSI(dfs<sup>2</sup>)/SERVICE PRINCIPAL/KEY/AAD | SAS(blob<sup>1</sup>)/MSI(dfs<sup>2</sup>)/SERVICE PRINCIPAL/KEY/AAD |
 
+1: 외부 위치 경로에서 Blob 엔드포인트( **.blob**.core.windows.net)를 사용해야 합니다.
 
-AAD 또는 퍼블릭 스토리지 계정을 사용하여 인증할 때는 자격 증명을 지정할 필요가 없습니다. 
+2: 외부 위치 경로에서 dfs 엔드포인트( **.dfs**.core.windows.net)를 사용해야 합니다.
+
+> [!NOTE]  
+>
+> - AAD 또는 퍼블릭 스토리지 계정을 사용하여 인증할 때는 자격 증명을 지정할 필요가 없습니다. 
+>  - 스토리지 계정이 VNet과 연결된 경우 MSI(관리 ID)를 사용하여 인증해야 합니다.
 
 - SAS(공유 액세스 서명)를 사용하여 인증
   

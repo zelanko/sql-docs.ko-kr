@@ -14,19 +14,19 @@ ms.assetid: 1379605c-1242-4ac8-ab1b-e2a2b5b1f895
 author: stevestein
 ms.author: sstein
 monikerRange: =azuresqldb-current||>=sql-server-2016||=sqlallproducts-allversions||>=sql-server-linux-2017||=azuresqldb-mi-current
-ms.openlocfilehash: 22c6da8545c07424f95b83a56d406fceffeb6d1f
-ms.sourcegitcommit: e700497f962e4c2274df16d9e651059b42ff1a10
+ms.openlocfilehash: e2103871e039484a12234a7e26a2783125e9ffae
+ms.sourcegitcommit: 63aef5a96905f0b026322abc9ccb862ee497eebe
 ms.translationtype: HT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 08/17/2020
-ms.locfileid: "88465579"
+ms.lasthandoff: 09/25/2020
+ms.locfileid: "91364230"
 ---
 # <a name="set-or-change-the-database-collation"></a>데이터베이스 데이터 정렬 설정 또는 변경
  [!INCLUDE [SQL Server](../../includes/applies-to-version/sqlserver.md)]
-  이 항목에서는 [!INCLUDE[ssCurrent](../../includes/sscurrent-md.md)] 또는 [!INCLUDE[ssManStudioFull](../../includes/ssmanstudiofull-md.md)] 을 사용하여 [!INCLUDE[tsql](../../includes/tsql-md.md)]에서 데이터베이스 데이터 정렬을 설정하고 변경하는 방법에 대해 설명합니다. 데이터 정렬을 지정하지 않으면 서버 데이터 정렬이 사용됩니다.  
+  이 항목에서는 [!INCLUDE[ssManStudioFull](../../includes/ssmanstudiofull-md.md)] 또는 [!INCLUDE[tsql](../../includes/tsql-md.md)]을 사용하여 데이터베이스 데이터 정렬을 설정하고 변경하는 방법에 대해 설명합니다. 데이터 정렬을 지정하지 않으면 서버 데이터 정렬이 사용됩니다.  
   
 > [!IMPORTANT]
-> 데이터베이스 데이터 정렬 변경은 Azure SQL Database에서 명시적으로 금지되지 않습니다. 그러나 데이터베이스 데이터 정렬을 변경하려면 데이터베이스 및 기타 사용자에 대한 배타적 잠금이 필요하며, 없는 경우 백그라운드 프로세스(예: 백업을 수행하는 백그라운드)에서 데이터베이스 잠금을 유지하여 데이터 정렬이 변경되지 않을 수 있습니다. `ALTER DATABASE COLLATE`Azure SQL Database의 문은 지원되지 않습니다.
+> `ALTER DATABASE COLLATE`Azure SQL Database의 문은 지원되지 않습니다.
 
  **항목 내용**  
   

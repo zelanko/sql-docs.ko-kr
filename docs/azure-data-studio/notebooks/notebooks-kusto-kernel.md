@@ -9,16 +9,16 @@ ms.author: maghan
 ms.reviewer: jukoesma
 ms.custom: ''
 ms.date: 09/22/2020
-ms.openlocfilehash: efcea597a431d33cfbd2978e36f3b95d27986772
-ms.sourcegitcommit: 8f062015c2a033f5a0d805ee4adabbe15e7c8f94
+ms.openlocfilehash: 416fd5aabb07db3deed1d4d78769249a99113216
+ms.sourcegitcommit: 197a6ffb643f93592edf9e90b04810a18be61133
 ms.translationtype: HT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 09/25/2020
-ms.locfileid: "91226963"
+ms.lasthandoff: 09/26/2020
+ms.locfileid: "91379598"
 ---
 # <a name="create-and-run-a-kusto-kql-notebook-preview"></a>Kusto(KQL) Notebook(미리 보기) 만들기 및 실행
 
-이 문서에서는 [Kusto(KQL) 확장](../extensions/kusto-extension.md)을 사용하고 Azure Data Explorer 클러스터에 연결하여 [Azure Data Studio Notebook](../notebooks-guidance.md)을 만들고 실행하는 방법을 보여 줍니다.
+이 문서에서는 [Kusto(KQL) 확장](../extensions/kusto-extension.md)을 사용하고 Azure Data Explorer 클러스터에 연결하여 [Azure Data Studio Notebook](./notebooks-guidance.md)을 만들고 실행하는 방법을 보여 줍니다.
 
 Kusto(KQL) 확장을 사용하면 커널 옵션을 **Kusto**로 변경할 수 있습니다.
 
@@ -104,11 +104,14 @@ Notebook의 Kusto 연결을 변경하려면 다음을 수행합니다.
 
 :::image type="content" source="media/notebooks-kusto-kernel/run-notebook-save-results.png" alt-text="결과 저장":::
 
-## <a name="limitations-and-considerations"></a>제한 사항 및 고려 사항
+## <a name="known-issues"></a>알려진 문제
 
-- Kusto 쿼리를 실행하기 전에 Azure Data Explorer 클러스터에 대한 데이터베이스를 선택해야 합니다.
-- Azure Data Explorer 클러스터를 너무 오랫동안 유휴 상태로 두면 연결이 끊어질 수 있습니다.
-    - 해결 방법: 클러스터에서 연결을 끊고 다시 연결합니다.
+| 세부 정보 | 해결 방법 |
+|---------|------------|
+| [쿼리 결과는 열 머리글만 표시](https://github.com/microsoft/azuredatastudio/issues/12565)합니다. | 해당 없음 |
+
+[기능 요청](https://github.com/microsoft/azuredatastudio/issues/new?assignees=&labels=&template=feature_request.md&title=)을 제출하여 제품 팀에 피드백을 제공할 수 있습니다.  
+[버그](https://github.com/microsoft/azuredatastudio/issues/new?assignees=&labels=&template=bug_report.md&title=)를 제출하여 제품 팀에 피드백을 제공할 수 있습니다.
 
 ## <a name="next-steps"></a>다음 단계
 

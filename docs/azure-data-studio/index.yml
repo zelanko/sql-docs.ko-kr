@@ -10,12 +10,12 @@ metadata:
   author: markingmyname
   ms.author: maghan
   ms.date: 05/09/2020
-  ms.openlocfilehash: c17887d2415fa5e7ea072426a1825aa7a51f73b0
-  ms.sourcegitcommit: cc23d8646041336d119b74bf239a6ac305ff3d31
+  ms.openlocfilehash: dfa93f660ca6e5a70dc81da3be4cbd25834b28d8
+  ms.sourcegitcommit: 63aef5a96905f0b026322abc9ccb862ee497eebe
   ms.translationtype: HT
   ms.contentlocale: ko-KR
-  ms.lasthandoff: 09/23/2020
-  ms.locfileid: "91111192"
+  ms.lasthandoff: 09/25/2020
+  ms.locfileid: "91364030"
 landingContent:
 - title: Azure Data Studio 정보
   linkLists:
@@ -56,13 +56,15 @@ landingContent:
   - linkListType: how-to-guide
     links:
     - text: Azure Data Studio의 Notebook
-      url: notebooks-guidance.md
-    - text: SQL 커널을 사용하는 방법
-      url: notebooks-tutorial-sql-kernel.md
-    - text: Python 커널을 사용하는 방법
-      url: notebooks-tutorial-python-kernel.md
-    - text: Azure Data Studio의 Kqlmagic 확장
-      url: notebooks-kqlmagic.md
+      url: notebooks/notebooks-guidance.md
+    - text: SQL 커널
+      url: notebooks/notebooks-sql-kernel.md
+    - text: Python 커널
+      url: notebooks/notebooks-python-kernel.md
+    - text: Kusto 커널
+      url: notebooks/notebooks-kusto-kernel.md
+    - text: Azure Data Studio의 Kqlmagic
+      url: notebooks/notebooks-kqlmagic.md
 - title: 확장
   linkLists:
   - linkListType: concept
@@ -71,13 +73,15 @@ landingContent:
       url: extensions/add-extensions.md
     - text: Azure Data Studio 확장을 만들어 기능 확장
       url: extensions/extension-authoring.md
+    - text: Jupyter Book 확장
+      url: extensions/jupyter-book-extension.md
+    - text: Kusto(KQL)
+      url: extensions/kusto-extension.md
+    - text: Notebook 확장
+      url: extensions/notebook-extension.md
     - text: PostgreSQL 확장
       url: extensions/postgres-extension.md
     - text: PowerShell 편집기 지원
       url: extensions/powershell-extension.md
-    - text: Azure Data Explorer
-      url: extensions/kusto-extension.md
-    - text: Notebook 확장
-      url: extensions/notebook-extension.md
-    - text: Jupyter Book 확장
-      url: extensions/jupyter-book-extension.md
+    - text: 마법사 확장
+      url: extensions/wizard-extension.md

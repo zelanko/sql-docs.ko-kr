@@ -3,24 +3,24 @@ title: 키맵 확장 만들기
 description: 이 자습서에서는 Azure Data Studio에 사용자 지정 기능을 추가하는 키맵 확장을 만드는 방법을 보여 줍니다.
 ms.prod: azure-data-studio
 ms.technology: azure-data-studio
-ms.topic: how-to
+ms.topic: conceptual
 author: markingmyname
 ms.author: maghan
 ms.reviewer: alayu
 ms.custom: ''
 ms.date: 08/28/2020
-ms.openlocfilehash: b1e1b5fb4d21e153133e76ff612f54c8153e0772
-ms.sourcegitcommit: cc23d8646041336d119b74bf239a6ac305ff3d31
+ms.openlocfilehash: 76fd809993b47f3ae3dad363887eb9ac735e6b0b
+ms.sourcegitcommit: 63aef5a96905f0b026322abc9ccb862ee497eebe
 ms.translationtype: HT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 09/23/2020
-ms.locfileid: "91111664"
+ms.lasthandoff: 09/25/2020
+ms.locfileid: "91364080"
 ---
 # <a name="create-an-azure-data-studio-keymap-extension"></a>Azure Data Studio 키맵 확장 만들기
 
 이 자습서에서는 새 Azure Data Studio 확장을 만드는 방법을 보여 줍니다. 이 확장은 Azure Data Studio에서 친숙한 SSMS 키 바인딩을 만듭니다.
 
-이 자습서에서는 다음 방법을 알아봅니다.
+이 문서에서는 다음 방법을 알아봅니다.
 > [!div class="checklist"]
 > - 확장 프로젝트 만들기
 > - 확장 생성기 설치
@@ -41,7 +41,7 @@ Azure Data Studio는 Visual Studio Code와 동일한 프레임워크를 기준�
 
 ## <a name="install-the-extension-generator"></a>확장 생성기 설치
 
-확장을 만드는 과정을 간소화하기 위해 Yeoman을 사용하여 [확장 생성기](https://code.visualstudio.com/docs/extensions/yocode)를 빌드했습니다. 설치하려면 명령 프롬프트에서 다음을 실행합니다.
+확장을 만드는 과정을 간소화하기 위해 Yeoman을 사용하여 [확장 생성기](https://code.visualstudio.com/docs/extensions/yocode)를 빌드했습니다. 설치하려면 아래 명령 프롬프트에서 코드를 실행합니다.
 
 ```console
 `npm install -g yo generator-azuredatastudio`
@@ -85,7 +85,7 @@ Azure Data Studio는 Visual Studio Code와 동일한 프레임워크를 기준�
 
 **2단계: 확장에 바로 가기 추가**
 
-확장에 바로 가기를 추가하려면 *package.json* 파일(확장에 있음)을 열고 `contributes` 섹션을 다음으로 바꿉니다.
+확장에 바로 가기를 추가하려면 *package.json* 파일(확장명에 있음)을 열고 `contributes` 섹션을 아래 코드로 바꿉니다.
 
 ```json
 "contributes": {
@@ -158,7 +158,7 @@ Azure Data Studio 디버그 확장이 Visual Studio Code에 설치되어 있는�
 
 ## <a name="publish-your-extension-to-the-marketplace"></a>Marketplace에 확장 게시
 
-Azure Data Studio 확장 Marketplace는 아직 완전히 구현되지 않았지만 현재, 임의의 위치(예: GitHub 릴리스 페이지)에 확장 VSIX를 호스트하는 과정이 진행 중입니다. 따라서 [이 JSON 파일](https://github.com/Microsoft/azuredatastudio/blob/release/extensions/extensionsGallery.json)을 확장 정보로 업데이트하는 PR을 제출합니다.
+Azure Data Studio 확장 Marketplace는 구축 중이지만, 현재 임의의 위치(예: GitHub 릴리스 페이지)에 확장 VSIX를 호스트하는 과정이 진행 중입니다. 따라서 [이 JSON 파일](https://github.com/Microsoft/azuredatastudio/blob/release/extensions/extensionsGallery.json)을 확장 정보로 업데이트하는 PR을 제출합니다.
 
 ## <a name="next-steps"></a>다음 단계
 
@@ -174,7 +174,7 @@ Azure Data Studio 확장 Marketplace는 아직 완전히 구현되지 않았지�
 
 이 내용을 읽으면 Azure Data Studio에 대한 고유한 확장을 빌드하는 데 도움이 될 것입니다. 대시보드 인사이트(SQL Server에 대해 실행되는 그래프), 다양한 SQL 관련 API 및 Visual Studio Code에서 상속된 기존의 방대한 확장 지점 세트가 지원됩니다.
 
-생각은 있지만 시작하는 방법을 모를 경우 [azuredatastudio](https://twitter.com/azuredatastudio) 팀에서 이슈를 열거나 트윗하세요.
+아이디어가 있지만 시작하는 방법을 모를 경우 이슈를 열거나 [azuredatastudio](https://twitter.com/azuredatastudio) 팀에 트윗하세요.
 
 [Visual Studio Code 확장 가이드](https://code.visualstudio.com/docs/extensions/overview)는 기존의 모든 API 및 패턴을 포함하므로 항상 참조할 수 있습니다.
 
