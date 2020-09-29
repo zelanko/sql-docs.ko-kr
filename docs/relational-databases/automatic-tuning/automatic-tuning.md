@@ -2,7 +2,7 @@
 title: 자동 조정 | Microsoft Docs
 description: SQL Server 및 Azure SQL Database의 자동 조정에 대해 알아봅니다.
 ms.custom: fasttrack-edit
-ms.date: 08/16/2017
+ms.date: 09/28/2020
 ms.prod: sql
 ms.prod_service: database-engine, sql-database
 ms.reviewer: ''
@@ -10,28 +10,33 @@ ms.technology: ''
 ms.topic: conceptual
 helpviewer_keywords:
 - performance tuning [SQL Server]
+- automatic tuning
+- aprc
+- automatic plan regression correction
+- last known good plan
 ms.assetid: ''
 author: jovanpop-msft
 ms.author: jovanpop
 monikerRange: =azuresqldb-current||>=sql-server-2017||=sqlallproducts-allversions||>=sql-server-linux-2017||=azuresqldb-mi-current
-ms.openlocfilehash: 5617630853a700c906949cfa9a9bc2acf719c2ee
-ms.sourcegitcommit: da88320c474c1c9124574f90d549c50ee3387b4c
+ms.openlocfilehash: f59aee58735b3b38cf8de3a47461cad1c59f6b81
+ms.sourcegitcommit: b93beb4f03aee2c1971909cb1d15f79cd479a35c
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 07/01/2020
-ms.locfileid: "85727912"
+ms.lasthandoff: 09/29/2020
+ms.locfileid: "91497959"
 ---
 # <a name="automatic-tuning"></a>자동 조정
 [!INCLUDE[sqlserver2017-asdb](../../includes/applies-to-version/sqlserver2017-asdb.md)]
 
 자동 튜닝은 잠재적 쿼리 성능 문제에 대한 정보를 제공하고, 솔루션을 권장하며, 식별된 문제를 자동으로 해결하는 데이터베이스 기능입니다.
 
-에서 자동 조정은 [!INCLUDE[sssqlv14-md](../../includes/sssqlv14-md.md)] 잠재적 성능 문제가 감지 될 때마다 사용자에 게 알리고 정정 작업을 적용 하거나에서 [!INCLUDE[ssde_md](../../includes/ssde_md.md)] 성능 문제를 자동으로 해결할 수 있도록 합니다. 의 자동 조정 [!INCLUDE[sssqlv14-md](../../includes/sssqlv14-md.md)] 기능을 사용 하면 **쿼리 실행 계획 선택 재발**으로 인 한 성능 문제를 식별 하 고 해결할 수 있습니다. 또한의 자동 조정은 [!INCLUDE[ssazure_md](../../includes/ssazure_md.md)] 필요한 인덱스를 만들고 사용 하지 않는 인덱스를 삭제 합니다. 쿼리 실행 계획에 대 한 자세한 내용은 [실행 계획](../../relational-databases/performance/execution-plans.md)을 참조 하세요.
+에서 도입 된 자동 조정은 [!INCLUDE[sssqlv14-md](../../includes/sssqlv14-md.md)] 잠재적 성능 문제가 감지 될 때마다 사용자에 게 알리고 정정 작업을 적용 하거나에서 [!INCLUDE[ssde_md](../../includes/ssde_md.md)] 성능 문제를 자동으로 해결할 수 있도록 합니다. 자동 조정을 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 사용 하면 **쿼리 실행 계획 선택 재발**으로 인 한 성능 문제를 식별 하 고 해결할 수 있습니다. 또한의 자동 조정은 [!INCLUDE[ssazure_md](../../includes/ssazure_md.md)] 필요한 인덱스를 만들고 사용 하지 않는 인덱스를 삭제 합니다. 쿼리 실행 계획에 대 한 자세한 내용은 [실행 계획](../../relational-databases/performance/execution-plans.md)을 참조 하세요.
 
 는 [!INCLUDE[ssDEnoversion](../../includes/ssdenoversion-md.md)] 데이터베이스에서 실행 되는 쿼리를 모니터링 하 고 자동으로 작업의 성능을 향상 시킵니다. 에는 [!INCLUDE[ssde_md](../../includes/ssde_md.md)] 데이터베이스를 작업에 동적으로 적용 하 여 쿼리 성능을 자동으로 조정 하 고 향상 시킬 수 있는 기본 제공 인텔리전스 메커니즘이 있습니다. 다음과 같은 두 가지 자동 조정 기능을 사용할 수 있습니다.
 
- -  **자동 계획 수정** 은 문제가 있는 쿼리 실행 계획을 식별 하 고 쿼리 실행 계획 성능 문제를 해결 합니다. **적용 대상**: [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] ([!INCLUDE[sssqlv14-md](../../includes/sssqlv14-md.md)]부터 시작) 및 [!INCLUDE[ssSDSfull](../../includes/sssdsfull-md.md)]
- -  **자동 인덱스 관리** 는 데이터베이스에 추가 되어야 하는 인덱스 및 제거 되어야 하는 인덱스를 식별 합니다. **적용 대상**: [!INCLUDE[ssSDSfull](../../includes/sssdsfull-md.md)]
+-   **자동 계획 수정** 은 [매개 변수 민감도 또는 매개 변수 스니핑](../../relational-databases/query-processing-architecture-guide.md#ParamSniffing) 문제와 같은 문제를 일으키는 쿼리 실행 계획을 식별 하 고, 회귀를 발생 하기 전에 마지막으로 알려진 좋은 계획을 적용 하 여 쿼리 실행 계획 관련 성능 문제를 해결 합니다. **적용 대상**: [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] ([!INCLUDE[sssqlv14-md](../../includes/sssqlv14-md.md)]부터 시작) 및 [!INCLUDE[ssSDSfull](../../includes/sssdsfull-md.md)]
+
+-   **자동 인덱스 관리** 는 데이터베이스에 추가 되어야 하는 인덱스 및 제거 되어야 하는 인덱스를 식별 합니다. **적용 대상**: [!INCLUDE[ssSDSfull](../../includes/sssdsfull-md.md)]
 
 ## <a name="why-automatic-tuning"></a>자동 조정을 사용하는 이유는 무엇입니까?
 
@@ -45,17 +50,23 @@ ms.locfileid: "85727912"
 
 이 프로세스를 통해 워크 로드의 성능을 향상 시킬 수 있는 인덱스 및 계획과 워크 로드에 영향을 주는 인덱스를 검색 하 여 데이터베이스를 작업에 동적으로 적용할 수 있습니다. 이러한 결과를 바탕으로 자동 조정은 워크 로드의 성능을 향상 시키는 튜닝 작업을 적용 합니다. 또한 자동 조정은 변경 사항을 구현한 후 데이터베이스의 성능을 지속적으로 모니터링 하 여 워크 로드의 성능을 향상 시킵니다. 성능을 향상 시 키 지 않는 작업은 자동으로 되돌려집니다. 이 확인 프로세스는 자동 조정에서 변경한 내용이 작업의 전체 성능을 저하 시 키 지 않도록 하는 주요 기능입니다.
 
-## <a name="automatic-plan-correction"></a>자동 계획 수정
+## <a name="automatic-plan-correction"></a>자동 플랜 수정
 
 자동 계획 수정은 **실행 계획 선택 회귀** 를 식별 하 고 마지막으로 성공한 계획을 적용 하 여 문제를 자동으로 해결 하는 자동 조정 기능입니다. 쿼리 실행 계획 및 쿼리 최적화 프로그램에 대 한 자세한 내용은 [쿼리 처리 아키텍처 가이드](../../relational-databases/query-processing-architecture-guide.md)를 참조 하세요.
 
+> [!IMPORTANT]
+> 자동 계획 수정은 데이터베이스에서 작업을 추적 하는 쿼리 저장소에 따라 달라 집니다. 
+
 ### <a name="what-is-execution-plan-choice-regression"></a>실행 계획 선택 회귀 란 무엇 인가요?
 
-는 [!INCLUDE[ssdenoversion_md](../../includes/ssdenoversion_md.md)] 다른 실행 계획을 사용 하 여 쿼리를 실행할 수 있습니다 [!INCLUDE[tsql_md](../../includes/tsql-md.md)] . 쿼리 계획은 통계, 인덱스 및 기타 요인에 따라 달라 집니다. 쿼리를 실행 하는 데 사용 해야 하는 최적의 계획은 [!INCLUDE[tsql_md](../../includes/tsql-md.md)] 이러한 요인의 변경 내용에 따라 시간이 지남에 따라 변경 될 수 있습니다. 경우에 따라 새 계획이 이전 계획 보다 더 좋을 수도 있고 새 계획으로 인해 성능 재발이 발생할 수도 있습니다.
+는 [!INCLUDE[ssdenoversion_md](../../includes/ssdenoversion_md.md)] 다른 실행 계획을 사용 하 여 쿼리를 실행할 수 있습니다 [!INCLUDE[tsql_md](../../includes/tsql-md.md)] . 쿼리 계획은 통계, 인덱스 및 기타 요인에 따라 달라 집니다. 쿼리를 실행 하는 데 사용 해야 하는 최적의 계획은 [!INCLUDE[tsql_md](../../includes/tsql-md.md)] 이러한 요인의 변경 내용에 따라 시간이 지남에 따라 변경 될 수 있습니다. 경우에 따라 새 계획이 이전 계획 보다 더 좋을 수도 있고, 새 계획으로 인해 [매개 변수 민감도 또는 매개 변수 스니핑](../../relational-databases/query-processing-architecture-guide.md#ParamSniffing) 관련 문제 등의 성능 재발이 발생할 수도 있습니다. 
 
  ![쿼리 실행 계획 선택 회귀](media/plan-choice-regression.png "쿼리 실행 계획 선택 회귀") 
 
 계획 선택 재발이 발생 한 것을 확인할 때마다 이전 좋은 계획을 찾아 현재 계획 대신 사용 하도록 강제 해야 합니다. 프로시저를 사용 하 여이 작업을 수행할 수 있습니다 `sp_query_store_force_plan` . 의에서는 재발 된 [!INCLUDE[ssde_md](../../includes/ssde_md.md)] [!INCLUDE[sssqlv14-md](../../includes/sssqlv14-md.md)] 계획 및 권장 되는 정정 작업에 대 한 정보를 제공 합니다. 또한를 [!INCLUDE[ssde_md](../../includes/ssde_md.md)] 사용 하 여이 프로세스를 완전히 자동화 하 고 [!INCLUDE[ssde_md](../../includes/ssde_md.md)] 계획 변경과 관련 된 모든 문제를 해결할 수 있습니다.
+
+> [!IMPORTANT]
+> 자동 계획 수정은 데이터베이스 호환성 수준 업그레이드의 범위에서 사용 되어야 합니다 .이는 기준이 캡처된 후 작업 업그레이드 위험을 자동으로 완화 하기 위한 것입니다. 이 사용 사례에 대 한 자세한 내용은 [최신 SQL Server으로 업그레이드 하는 동안 성능 안정성 유지](../../relational-databases/performance/query-store-usage-scenarios.md#CEUpgrade)를 참조 하세요. 
 
 ### <a name="automatic-plan-choice-correction"></a>자동 계획 선택 수정
 
@@ -63,10 +74,10 @@ ms.locfileid: "85727912"
 
 ![쿼리 실행 계획 선택 수정](media/force-last-good-plan.png "쿼리 실행 계획 선택 수정") 
 
-는 [!INCLUDE[ssde_md](../../includes/ssde_md.md)] 잘못 된 계획 대신 사용 해야 하는 계획을 포함 하 여 잠재적인 계획 선택 회귀를 자동으로 검색 합니다. 가 [!INCLUDE[ssde_md](../../includes/ssde_md.md)] 마지막으로 성공한 계획을 적용 하는 경우 강제 계획의 성능을 자동으로 모니터링 합니다. 강제 계획이 재발 된 계획 보다 더 적합 하지 않은 경우 새 계획이 강제로 적용 되지 않으며에서 [!INCLUDE[ssde_md](../../includes/ssde_md.md)] 새 계획을 컴파일합니다. 에서 [!INCLUDE[ssde_md](../../includes/ssde_md.md)] 강제 계획이 회귀 된 계획 보다 더 좋은지 확인 하는 경우 강제 계획이 보존 됩니다. 재컴파일이 발생할 때까지 유지 됩니다 (예: 다음 통계 업데이트 또는 스키마 변경).
+는 [!INCLUDE[ssde_md](../../includes/ssde_md.md)] 잘못 된 계획 대신 사용 해야 하는 계획을 포함 하 여 잠재적인 계획 선택 회귀를 자동으로 검색 합니다. 회귀를 [!INCLUDE[ssde_md](../../includes/ssde_md.md)] 발생 하기 전에 마지막으로 알려진 좋은 계획을 적용 하는 경우 강제 계획의 성능을 자동으로 모니터링 합니다. 강제 계획이 재발 된 계획 보다 더 적합 하지 않은 경우 새 계획이 강제로 적용 되지 않으며에서 [!INCLUDE[ssde_md](../../includes/ssde_md.md)] 새 계획을 컴파일합니다. 에서 [!INCLUDE[ssde_md](../../includes/ssde_md.md)] 강제 계획이 회귀 된 계획 보다 더 좋은지 확인 하는 경우 강제 계획이 보존 됩니다. 재컴파일이 발생할 때까지 유지 됩니다 (예: 다음 통계 업데이트 또는 스키마 변경). 계획 강제 적용 및 강제 적용할 수 있는 계획 유형에 대 한 자세한 내용은 [강제 제한 계획](../../relational-databases/system-catalog-views/sys-query-store-plan-transact-sql.md#plan-forcing-limitations)을 참조 하세요.
 
 > [!NOTE]
-> 계획 강제 적용 작업이 확인 되기 전에 SQL Server 인스턴스를 다시 시작 하는 경우에는 해당 계획이 자동으로 강제 적용 되지 않습니다. 그렇지 않으면 계획 강제 적용이 SQL Server 다시 시작 시 지속 됩니다.
+> [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]계획 강제 적용 작업이 확인 되기 전에 인스턴스를 다시 시작 하는 경우에는 해당 계획이 자동으로 강제 적용 되지 않습니다. 그렇지 않으면 다시 시작할 때 계획 강제 적용이 지속 됩니다 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] .
 
 ### <a name="enabling-automatic-plan-choice-correction"></a>자동 계획 선택 수정 사용
 
@@ -86,21 +97,21 @@ SET AUTOMATIC_TUNING ( FORCE_LAST_GOOD_PLAN = ON );
 > [!TIP]
 > 또는 **강제 계획이 포함 된 쿼리** 쿼리 저장소 보기를 사용 하 여 계획을 찾고 해제 합니다.
 
-[!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]쿼리 저장소에서 성능을 모니터링 하 고 문제를 해결 하는 데 필요한 모든 보기 및 절차를 제공 합니다.
+[!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 쿼리 저장소에서 성능을 모니터링 하 고 문제를 해결 하는 데 필요한 모든 보기 및 절차를 제공 합니다.
 
-에서 [!INCLUDE[sssql15-md](../../includes/sssql15-md.md)] 쿼리 저장소 시스템 뷰를 사용 하 여 계획 선택 회귀를 찾을 수 있습니다. 에서 [!INCLUDE[sssqlv14-md](../../includes/sssqlv14-md.md)] 는 [!INCLUDE[ssde_md](../../includes/ssde_md.md)] 잠재적 계획 선택 재발 및 [dm_db_tuning_recommendations &#40;transact-sql&#41;](../../relational-databases/system-dynamic-management-views/sys-dm-db-tuning-recommendations-transact-sql.md) 뷰에 적용 해야 하는 권장 작업을 검색 하 고 표시 합니다. 이 보기에는 문제에 대 한 정보, 문제의 중요성, 식별 된 쿼리, 재발 된 계획의 ID, 비교 시 기준선으로 사용 된 계획의 ID 및 [!INCLUDE[tsql_md](../../includes/tsql-md.md)] 문제를 해결 하기 위해 실행할 수 있는 문이 표시 됩니다.
+에서 [!INCLUDE[sssql15-md](../../includes/sssql15-md.md)] 쿼리 저장소 시스템 뷰를 사용 하 여 계획 선택 회귀를 찾을 수 있습니다. 부터 [!INCLUDE[sssqlv14-md](../../includes/sssqlv14-md.md)] 은 [!INCLUDE[ssde_md](../../includes/ssde_md.md)] 잠재적 계획 선택 재발 및 [dm_db_tuning_recommendations &#40;transact-sql&#41;](../../relational-databases/system-dynamic-management-views/sys-dm-db-tuning-recommendations-transact-sql.md) DMV에 적용 해야 하는 권장 작업을 검색 하 고 표시 합니다. DMV에는 문제에 대 한 정보, 문제의 중요성, 식별 된 쿼리, 회귀 된 계획의 ID, 비교할 기준으로 사용 된 계획의 ID, [!INCLUDE[tsql_md](../../includes/tsql-md.md)] 문제를 해결 하기 위해 실행할 수 있는 문이 표시 됩니다.
 
-| type | description | Datetime | score | 자세히 | ... |
+| 형식 | description | Datetime | score | 자세히 | ... |
 | --- | --- | --- | --- | --- | --- |
 | `FORCE_LAST_GOOD_PLAN` | CPU 시간이 4 밀리초에서 14 밀리초로 변경 되었습니다. | 3/17/2017 | 83 | `queryId` `recommendedPlanId` `regressedPlanId` `T-SQL` |   |
 | `FORCE_LAST_GOOD_PLAN` | CPU 시간이 37 밀리초에서 84 밀리초로 변경 되었습니다. | 3/16/2017 | 26 | `queryId` `recommendedPlanId` `regressedPlanId` `T-SQL` |   |
 
 이 보기의 일부 열은 다음 목록에 설명 되어 있습니다.
- - 권장 작업의 유형-`FORCE_LAST_GOOD_PLAN`
+ - 권장 작업의 유형입니다 `FORCE_LAST_GOOD_PLAN` .
  - 이 계획의 변경으로 인해 [!INCLUDE[ssde_md](../../includes/ssde_md.md)] 잠재적인 성능 저하가 발생 하는 것으로 간주 되는 정보를 포함 하는 설명입니다.
- - 잠재적 재발이 검색 된 날짜/시간
- - 이 권장 사항의 점수
- - 검색 된 계획의 ID, 재발 된 계획의 ID, 문제를 해결 하기 위해 강제로 적용 해야 하는 계획의 ID, [!INCLUDE[tsql_md](../../includes/tsql-md.md)] 문제를 해결 하기 위해 적용 될 수 있는 스크립트 등의 문제에 대 한 세부 정보입니다. 세부 정보는 [JSON 형식](../../relational-databases/json/index.md) 으로 저장 됩니다.
+ - 잠재적 회귀가 검색 된 날짜/시간입니다.
+ - 이 권장 사항의 점수입니다.
+ - 검색 된 계획의 ID, 재발 된 계획의 ID, 문제를 해결 하기 위해 강제로 적용 해야 하는 계획의 ID, [!INCLUDE[tsql_md](../../includes/tsql-md.md)] 문제를 해결 하기 위해 적용 될 수 있는 스크립트 등의 문제에 대 한 세부 정보입니다. 세부 정보는 [JSON 형식](../../relational-databases/json/index.md)으로 저장 됩니다.
 
 다음 쿼리를 사용 하 여 문제를 해결 하는 스크립트와 예상 된 이득에 대 한 추가 정보를 얻을 수 있습니다.
 
@@ -127,7 +138,7 @@ CROSS APPLY OPENJSON (Details, '$.planForceDetails')
 
 [!INCLUDE[ssresult-md](../../includes/ssresult-md.md)]     
 
-| reason | score | script | 쿼리 \_ id | 현재 계획 \_ id | 권장 계획 \_ id | 예상 \_ 이득 | 오류가 발생 하기 \_ 쉽습니다.
+| reason | score | 스크립트 | 쿼리 \_ id | 현재 계획 \_ id | 권장 계획 \_ id | 예상 \_ 이득 | 오류가 발생 하기 \_ 쉽습니다.
 | --- | --- | --- | --- | --- | --- | --- | --- | --- |
 | CPU 시간이 3 밀리초에서 46 밀리초로 변경 되었습니다. | 36 | EXEC sp \_ 쿼리 \_ 저장소 \_ 강제 \_ 요금제 12, 17; | 12 | 28 | 17 | 11.59 | 0
 
@@ -136,7 +147,7 @@ CROSS APPLY OPENJSON (Details, '$.planForceDetails')
 는 [!INCLUDE[ssde_md](../../includes/ssde_md.md)] 계획 선택 재발을 식별 하는 데 필요한 모든 정보를 제공 하지만 지속적으로 모니터링 하 고 성능 문제를 해결 하는 것은 지루한 프로세스가 될 수 있습니다. 자동 조정 기능을 사용 하면이 프로세스를 훨씬 더 쉽게 수행할 수 있습니다.
 
 > [!NOTE]
-> Dm_db_tuning_recommendations DMV의 데이터는 인스턴스를 다시 시작할 때마다 지속 되지 않습니다. [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]
+> DMV의 데이터 `sys.dm_db_tuning_recommendations` 는 인스턴스를 다시 시작할 때마다 지속 되지 않습니다 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] .
 
 ## <a name="automatic-index-management"></a>자동 인덱스 관리
 
@@ -151,7 +162,7 @@ CROSS APPLY OPENJSON (Details, '$.planForceDetails')
 
 테이블에서 데이터를 읽는 쿼리의 성능을 개선하고 업데이트에 최소의 영향을 주는 인덱스의 최적 집합을 찾는 데 지속적이고 복잡한 분석이 필요할 수 있습니다.
 
-[!INCLUDE[ssazure_md](../../includes/ssazure_md.md)]는 쿼리를 분석 하 고, 현재 작업에 가장 적합 한 인덱스를 식별 하 고, 제거 해야 할 수 있는 인덱스를 식별 하는 기본 제공 인텔리전스 및 고급 규칙을 사용 합니다. Azure SQL Database는 다른 쿼리에 대 한 영향을 최소화 하면서 데이터를 읽는 쿼리를 최적화 하는 최소한의 필수 인덱스 집합이 있는지 확인 합니다.
+[!INCLUDE[ssazure_md](../../includes/ssazure_md.md)] 는 쿼리를 분석 하 고, 현재 작업에 가장 적합 한 인덱스를 식별 하 고, 제거 해야 할 수 있는 인덱스를 식별 하는 기본 제공 인텔리전스 및 고급 규칙을 사용 합니다. Azure SQL Database는 다른 쿼리에 대 한 영향을 최소화 하면서 데이터를 읽는 쿼리를 최적화 하는 최소한의 필수 인덱스 집합이 있는지 확인 합니다.
 
 ### <a name="automatic-index-management"></a>자동 인덱스 관리
 
@@ -163,13 +174,13 @@ CROSS APPLY OPENJSON (Details, '$.planForceDetails')
 
 ### <a name="automatic-index-management-considerations"></a>자동 인덱스 관리 고려 사항
 
-에서 필요한 인덱스를 만드는 데 필요한 동작은 [!INCLUDE[ssazure_md](../../includes/ssazure_md.md)] 리소스를 소비 하 고 일시적으로는 워크 로드 성능에 영향을 줄 수 있습니다. 인덱스 생성이 워크 로드 성능에 미치는 영향을 최소화 하기 위해는 [!INCLUDE[ssSDSfull](../../includes/sssdsfull-md.md)] 인덱스 관리 작업을 위한 적절 한 시간 창을 찾습니다. 데이터베이스에 워크 로드를 실행 하는 데 필요한 리소스가 필요 하 고 데이터베이스에 유지 관리 작업에 사용할 수 있는 리소스가 충분 하지 않은 경우 다시 시작 되는 경우 튜닝 작업이 연기 됩니다. 자동 인덱스 관리에서 중요한 기능 중 하나는 작업의 확인입니다. [!INCLUDE[ssSDSfull](../../includes/sssdsfull-md.md)]에서 인덱스를 만들거나 삭제 하는 경우 모니터링 프로세스는 작업의 성능을 분석 하 여 작업의 전반적인 성능이 향상 되었는지 확인 합니다. 크게 향상 되지 않은 경우에는 작업이 즉시 되돌려집니다. 이렇게 하면 [!INCLUDE[ssSDSfull](../../includes/sssdsfull-md.md)] 자동 조정 작업이 작업 성능에 부정적인 영향을 주지 않습니다. 자동 조정으로 만든 인덱스는 기본 스키마에서 유지 관리 작업에 대해 투명합니다. 열 삭제 또는 이름 바꾸기와 같은 스키마 변경 내용은 자동으로 만들어진 인덱스에 의해 차단되지 않습니다. 에서 자동으로 만드는 인덱스는 [!INCLUDE[ssSDSfull](../../includes/sssdsfull-md.md)] 관련 테이블이 삭제 될 때 즉시 삭제 됩니다.
+에서 필요한 인덱스를 만드는 데 필요한 동작은 [!INCLUDE[ssazure_md](../../includes/ssazure_md.md)] 리소스를 소비 하 고 일시적으로는 워크 로드 성능에 영향을 줄 수 있습니다. 인덱스 생성이 워크 로드 성능에 미치는 영향을 최소화 하기 위해는 [!INCLUDE[ssSDSfull](../../includes/sssdsfull-md.md)]  인덱스 관리 작업을 위한 적절 한 시간 창을 찾습니다. 데이터베이스에 워크 로드를 실행 하는 데 필요한 리소스가 필요 하 고 데이터베이스에 유지 관리 작업에 사용할 수 있는 리소스가 충분 하지 않은 경우 다시 시작 되는 경우 튜닝 작업이 연기 됩니다. 자동 인덱스 관리에서 중요한 기능 중 하나는 작업의 확인입니다. [!INCLUDE[ssSDSfull](../../includes/sssdsfull-md.md)]에서 인덱스를 만들거나 삭제 하는 경우 모니터링 프로세스는 작업의 성능을 분석 하 여 작업의 전반적인 성능이 향상 되었는지 확인 합니다. 크게 향상 되지 않은 경우에는 작업이 즉시 되돌려집니다. 이렇게 하면 [!INCLUDE[ssSDSfull](../../includes/sssdsfull-md.md)]  자동 조정 작업이 작업 성능에 부정적인 영향을 주지 않습니다. 자동 조정으로 만든 인덱스는 기본 스키마에서 유지 관리 작업에 대해 투명합니다. 열 삭제 또는 이름 바꾸기와 같은 스키마 변경 내용은 자동으로 만들어진 인덱스에 의해 차단되지 않습니다. 에서 자동으로 만드는 인덱스는 [!INCLUDE[ssSDSfull](../../includes/sssdsfull-md.md)]  관련 테이블이 삭제 될 때 즉시 삭제 됩니다.
 
 ### <a name="alternative---manual-index-management"></a>대체-수동 인덱스 관리
 
 자동 인덱스 관리가 없는 사용자 또는 DBA는 [dm_db_missing_index_details &#40;transact-sql&#41;](../../relational-databases/system-dynamic-management-views/sys-dm-db-missing-index-details-transact-sql.md) 보거나에서 성능 대시보드 보고서를 사용 하 여 [!INCLUDE[ssManStudio](../../includes/ssManStudio-md.md)] 성능을 향상 시킬 수 있는 인덱스를 찾고,이 뷰에 제공 된 세부 정보를 사용 하 여 인덱스를 만들고, 쿼리 성능을 수동으로 모니터링 해야 합니다. 삭제할 인덱스를 찾기 위해 사용자는 인덱스에 대 한 운영 사용 통계를 모니터링 하 여 자주 사용 하지 않는 인덱스를 찾아야 합니다.
 
-[!INCLUDE[ssazure_md](../../includes/ssazure_md.md)]이 프로세스를 간소화 합니다. [!INCLUDE[ssazure_md](../../includes/ssazure_md.md)]작업을 분석 하 고, 새 인덱스를 사용 하 여 더 빠르게 실행 될 수 있는 쿼리를 식별 하 고, 사용 하지 않거나 중복 된 인덱스를 식별 합니다. [Azure Portal에서 인덱스 찾기 권장 사항](https://docs.microsoft.com/azure/sql-database/sql-database-advisor-portal)에서 변경되어야 하는 인덱스의 ID에 대한 자세한 정보를 찾아보세요.
+[!INCLUDE[ssazure_md](../../includes/ssazure_md.md)] 이 프로세스를 간소화 합니다. [!INCLUDE[ssazure_md](../../includes/ssazure_md.md)] 작업을 분석 하 고, 새 인덱스를 사용 하 여 더 빠르게 실행 될 수 있는 쿼리를 식별 하 고, 사용 하지 않거나 중복 된 인덱스를 식별 합니다. [Azure Portal에서 인덱스 찾기 권장 사항](https://docs.microsoft.com/azure/sql-database/sql-database-advisor-portal)에서 변경되어야 하는 인덱스의 ID에 대한 자세한 정보를 찾아보세요.
 
 ## <a name="see-also"></a>참고 항목  
  [ALTER DATABASE SET AUTOMATIC_TUNING &#40;Transact-sql&#41;](../../t-sql/statements/alter-database-transact-sql-set-options.md)   

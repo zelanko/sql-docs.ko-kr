@@ -19,12 +19,12 @@ helpviewer_keywords:
 ms.assetid: 4aa32d54-2ae1-437e-bbaa-7f1df1404b44
 author: markingmyname
 ms.author: maghan
-ms.openlocfilehash: b31883200fdbee9aa4039fca75e4b034ab75cebf
-ms.sourcegitcommit: dd36d1cbe32cd5a65c6638e8f252b0bd8145e165
+ms.openlocfilehash: 2138e06195e8f8c34a5f8f9abde96306c2d92cc5
+ms.sourcegitcommit: b93beb4f03aee2c1971909cb1d15f79cd479a35c
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 09/08/2020
-ms.locfileid: "89543839"
+ms.lasthandoff: 09/29/2020
+ms.locfileid: "91498162"
 ---
 # <a name="sysdm_server_audit_status-transact-sql"></a>sys.dm_server_audit_status(Transact-SQL)
 [!INCLUDE [SQL Server - ASDBMI](../../includes/applies-to-version/sql-asdbmi.md)]
@@ -42,8 +42,8 @@ ms.locfileid: "89543839"
 |**audit_file_path**|**nvarchar(256)**|현재 사용되고 있는 감사 파일 대상의 전체 경로 및 파일 이름입니다. 파일 감사에 대해서만 채워집니다.|  
 |**audit_file_size**|**bigint**|감사 파일의 대략적인 크기(바이트)입니다. 파일 감사에 대해서만 채워집니다.|  
   
-## <a name="permissions"></a>사용 권한  
- 보안 주체에 **VIEW SERVER STATE** 및 **SELECT** 권한이 있어야 합니다.  
+## <a name="permissions"></a>권한  
+ 보안 주체에 **VIEW SERVER STATE** 권한이 있어야 합니다.  
   
  [!INCLUDE[ssCatViewPerm](../../includes/sscatviewperm-md.md)] 자세한 내용은 [Metadata Visibility Configuration](../../relational-databases/security/metadata-visibility-configuration.md)을 참조하세요.  
   

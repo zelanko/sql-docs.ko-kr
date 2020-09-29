@@ -21,12 +21,12 @@ helpviewer_keywords:
 ms.assetid: 0a06e9b6-a1e4-4293-867b-5c3f5a8ff62c
 author: markingmyname
 ms.author: maghan
-ms.openlocfilehash: 645d927a66deba3d19c44872a28abc16b2054fd7
-ms.sourcegitcommit: dd36d1cbe32cd5a65c6638e8f252b0bd8145e165
+ms.openlocfilehash: fc41c7e1a848ffd7b57012f0fbb1093a9115da3e
+ms.sourcegitcommit: b93beb4f03aee2c1971909cb1d15f79cd479a35c
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 09/08/2020
-ms.locfileid: "89539744"
+ms.lasthandoff: 09/29/2020
+ms.locfileid: "91498266"
 ---
 # <a name="sysavailability_replicas-transact-sql"></a>sys.availability_replicas(Transact-SQL)
 [!INCLUDE [SQL Server](../../includes/applies-to-version/sqlserver.md)]
@@ -57,8 +57,8 @@ WSFC 장애 조치(failover) 클러스터의 모든 Always On 가용성 그룹�
 |**modify_date**|**datetime**|복제본이 마지막으로 수정된 날짜입니다.<br /><br /> NULL  =  복제본이 이 서버 인스턴스에 없습니다.|  
 |**backup_priority**|**int**|이 복제본에 대한 백업을 수행하기 위한 사용자 지정 우선 순위를 나타내며 동일한 가용성 그룹의 다른 복제본을 기준으로 합니다. 이 값은 0에서 100  사이의 정수입니다.<br /><br /> 자세한 내용은 [활성 보조 복제본: 보조 복제본에 백업&#40;Always On 가용성 그룹&#41;](../../database-engine/availability-groups/windows/active-secondaries-backup-on-secondary-replicas-always-on-availability-groups.md)을 참조하세요.|  
 |**read_only_routing_url**|**nvarchar(256)**|읽기 전용 가용성 복제본의 연결 엔드포인트(URL)입니다. 자세한 내용은 이 항목 뒷부분에 있는 [가용성 그룹에 대한 읽기 전용 라우팅 구성&#40;SQL Server&#41;](../../database-engine/availability-groups/windows/configure-read-only-routing-for-an-availability-group-sql-server.md)와 같은 시스템 데이터베이스, 사용자 데이터베이스를 비롯하여 보조 복제본을 호스트하는 서버 인스턴스의 읽기/쓰기 데이터베이스에는 데이터를 쓸 수 있습니다.|  
-|**seeding_mode**|**tinyint**|다음 중 하나: </br></br> 0: 수동 </br></br> 1: 자동|
-|**seeding_mode_desc**|**nvarchar(60)**|시드 모드에 대해 설명 합니다. </br></br> MANUAL </br></br> AUTOMATIC|
+|**seeding_mode**|**tinyint**|다음 중 하나: </br></br> 0: 자동 </br></br> 1: 수동|
+|**seeding_mode_desc**|**nvarchar(60)**|시드 모드에 대해 설명 합니다. </br></br> AUTOMATIC </br></br>MANUAL|
   
 ## <a name="security"></a>보안  
   

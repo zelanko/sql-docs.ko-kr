@@ -4,22 +4,39 @@ description: 각 릴리스에 대 한 Oracle (OracleToSQL)에 대 한 변경 SQL
 author: nahk-ivanov
 ms.prod: sql
 ms.custom: ''
-ms.date: 7/31/2020
+ms.date: 9/28/2020
 ms.reviewer: ''
 ms.technology: ssma
 ms.topic: conceptual
 ms.assetid: f305ebb6-7393-4a43-abb3-6332b739d690
 ms.author: alexiva
-ms.openlocfilehash: c456c383625f43a5fef7f675edcd86ede6ca2515
-ms.sourcegitcommit: 21bedbae28840e2f96f5e8b08bcfc794f305c8bc
+ms.openlocfilehash: 0c2ab60111951167bffb4d3bafd04bca27f23a4d
+ms.sourcegitcommit: b93beb4f03aee2c1971909cb1d15f79cd479a35c
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 08/06/2020
-ms.locfileid: "87862404"
+ms.lasthandoff: 09/29/2020
+ms.locfileid: "91497969"
 ---
 # <a name="whats-new-in-ssma-for-oracle-oracletosql"></a>Oracle 용 SSMA의 새로운 기능 (OracleToSQL)
 
 이 문서에서는 각 릴리스의 Oracle 변경 내용에 대 한 SSMA (SQL Server Migration Assistant)를 나열 합니다.
+
+## <a name="ssma-v814"></a>SSMA v 8.14
+
+장애가 있는 사용자에 게 더 많은 접근성을 보장 하기 위해 몇 가지 개선 사항 외에도 Oracle 용 SSMA의 v 8.14 릴리스에는 다음과 같은 변경 내용이 포함 되어 있습니다.
+
+* 프로젝트 메타 데이터에 전체 원본/대상 서버 버전을 저장 합니다 (프로젝트 업그레이드 필요).
+* 가능한 경우 개체 검색에 DBA 데이터 사전 사용
+* 여러 파서 문제 해결 ( `PIVOT` / `UNPIVOT` , `MERGE` , 대체 따옴표)
+* `INSERTING` / `DELETING` / `UPDATING` 트리거의 특수 함수 변환 수정
+
+## <a name="ssma-v813"></a>SSMA v 8.13
+
+Oracle 용 SSMA의 v 8.13 릴리스에는 다음과 같은 변경 내용이 포함 되어 있습니다.
+
+* `SQLCODE`로컬 프로시저의 변환과 `SQLERRM` 특수 함수를 수정 합니다.
+* 프로시저 및 함수 호출을 변환할 때 암시적 형식 캐스팅 고려
+* 연결 문제를 해결 하는 데 도움이 되도록 원본 연결 문자열에 대 한 로깅 개선
 
 ## <a name="ssma-v812"></a>SSMA v 8.12
 
@@ -206,7 +223,7 @@ Oracle 용 SSMA의 v 7.8 릴리스에는 다음과 같은 변경 내용이 포�
 * 지원:
   * 절에 대 한 행 식 `IN` 입니다.
   * 암시적 형식 캐스트입니다.
-  * `UID`Azure SQL Database에 대 한 변환입니다.
+  * `UID` Azure SQL Database에 대 한 변환입니다.
 * **프로젝트 설정**에서 강조 표시 된 형식 매핑을 변경 합니다.
 * 사용자가 원격 분석을 사용 하지 않도록 설정할 수 있는 기능입니다.
 
@@ -403,10 +420,10 @@ Oracle 용 SSMA의 6 월 2008 릴리스에는 다음과 같은 변경 내용이 
   * 각 필드에 대 한 별도의 변수를 통해 릴리스된 간단한 사례에서 레코드 변환, 컬렉션 및 레코드 변환의 수정
   * 레코드 및 컬렉션 구현의 향상 된 기능.
   * 창 고 집계 함수를 추가 했습니다.
-  * `ROLLUP`/`CUBE`절이 추가 되었습니다.
+  * `ROLLUP`/`CUBE` 절이 추가 되었습니다.
   * 개선 `NEXTVAL` / `CURVAL` .
   * `SET`절, 그룹화 집합 및 그룹화 ID의 열 그룹화가 추가 되었습니다.
-  * `MERGE`문이 추가 되었습니다.
+  * `MERGE` 문이 추가 되었습니다.
   * CLR 데이터 형식이 추가 된 새 datetime 형식 및 레코드와 컬렉션의 변환을 지원 합니다.
 * 테스터의 새 기능을 추가 했습니다. 이제 테스터를 사용 하 여 테이블을 개체로 테스트할 수 있습니다. 테스트 사례에서 여러 테스트 가능한 개체의 호출 순서를 변경할 수 있으며, 사용자는 매개 변수 및 반환 값으로 레코드 및 컬렉션을 사용 하 여 프로시저와 함수를 테스트 하 고 사용 된 테이블만 검사 하도록 종속성 분석기를 추가할 수 있습니다.
   

@@ -4,22 +4,33 @@ description: 각 릴리스에 대 한 Sybase (SybaseToSQL)의 SQL Server Migrati
 author: nahk-ivanov
 ms.prod: sql
 ms.custom: ''
-ms.date: 7/31/2020
+ms.date: 9/28/2020
 ms.reviewer: ''
 ms.technology: ssma
 ms.topic: conceptual
 ms.assetid: 2be0cf8d-6dbe-443a-abbd-036249922205
 ms.author: alexiva
-ms.openlocfilehash: 8391c9642bb7ee0849ea4627b42ac580c4d44d20
-ms.sourcegitcommit: 21bedbae28840e2f96f5e8b08bcfc794f305c8bc
+ms.openlocfilehash: fdbe37ddb915e64c5f947a64078e574a8eed8bbd
+ms.sourcegitcommit: b93beb4f03aee2c1971909cb1d15f79cd479a35c
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 08/06/2020
-ms.locfileid: "87864710"
+ms.lasthandoff: 09/29/2020
+ms.locfileid: "91497798"
 ---
 # <a name="whats-new-in-ssma-for-sap-ase-sybasetosql"></a>SAP ASE 용 SSMA의 새로운 기능 (SybaseToSQL)
 
 이 문서에서는 각 릴리스의 SAP ASE (이전에는 Sybase 용 SSMA) 변경 내용에 대 한 SSMA (SQL Server Migration Assistant)를 나열 합니다.
+
+## <a name="ssma-v814"></a>SSMA v 8.14
+
+장애가 있는 사용자에 게 더 많은 접근성을 보장 하기 위해 몇 가지 향상 된 기능 외에도, SAP ASE 용 SSMA의 v 8.14 릴리스에는 이제 프로젝트 메타 데이터에 전체 원본/대상 서버 버전이 저장 되므로 프로젝트 업그레이드가 필요 합니다.
+
+## <a name="ssma-v813"></a>SSMA v 8.13
+
+SAP ASE 용 SSMA의 v 8.13 릴리스에는 다음과 같은 변경 내용이 포함 되어 있습니다.
+
+* 프로시저 및 함수 호출을 변환할 때 암시적 형식 캐스팅 고려
+* 연결 문제를 해결 하는 데 도움이 되도록 원본 연결 문자열에 대 한 로깅 개선
 
 ## <a name="ssma-v812"></a>SSMA v 8.12
 
@@ -328,7 +339,7 @@ Sybase 용 SSMA의 11 월 2006 릴리스에는 다음과 같은 변경 내용이
   * 같음 식에서 null 값을 확인 합니다.
   * 프록시 테이블
   * 의 사용자 메시지 오류 번호 `RAISERROR` 입니다.
-  * `UPDATE`확인 되지 않은 식별자를 포함 하는 문입니다.
+  * `UPDATE` 확인 되지 않은 식별자를 포함 하는 문입니다.
 * 에서 날짜 범위 밖에 있는 날짜를 처리 하는 방법을 지정할 수 있는 새로운 마이그레이션 옵션을 추가 했습니다 [!INCLUDE [ssNoVersion](../../includes/ssnoversion-md.md)] .
 * 가독성 향상을 위해 코드의 형식을 지정 하는 **sql** 탭에 **형식이 지정 된 sql** 설정이 추가 되었습니다.
 * 다음을 포함 한 버그 수정
@@ -342,4 +353,4 @@ SSMA for Sybase의 2006년 7월 릴리스가 첫 버전입니다.
 
 ## <a name="see-also"></a>참고 항목
 
-[Sybase &#40;SybaseToSQL&#41;용 SSMA 시작](../../ssma/sybase/getting-started-with-ssma-for-sybase-sybasetosql.md)
+[Sybase &#40;SybaseToSQL&#41;용 SSMA 시작 ](../../ssma/sybase/getting-started-with-ssma-for-sybase-sybasetosql.md)

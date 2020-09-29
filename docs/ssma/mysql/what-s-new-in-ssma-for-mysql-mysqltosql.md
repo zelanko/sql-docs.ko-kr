@@ -4,22 +4,33 @@ description: 각 릴리스에 대 한 MySQL (MySQLToSQL)에 대 한 변경 SQL S
 author: nahk-ivanov
 ms.prod: sql
 ms.custom: ''
-ms.date: 7/31/2020
+ms.date: 9/28/2020
 ms.reviewer: ''
 ms.technology: ssma
 ms.topic: conceptual
 ms.assetid: 1451a0b0-6713-4d0c-954f-ea3d8fce1d31
 ms.author: alexiva
-ms.openlocfilehash: 7c9b0a65da5038f2b8871ae9ae680d3a8bd9bf33
-ms.sourcegitcommit: 21bedbae28840e2f96f5e8b08bcfc794f305c8bc
+ms.openlocfilehash: 75a82f8f87997dfa028a5e0b1ee7bae73c3913e6
+ms.sourcegitcommit: b93beb4f03aee2c1971909cb1d15f79cd479a35c
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 08/06/2020
-ms.locfileid: "87863469"
+ms.lasthandoff: 09/29/2020
+ms.locfileid: "91497886"
 ---
 # <a name="whats-new-in-ssma-for-mysql-mysqltosql"></a>MySQL용 SSMA의 새로운 기능(MySQLToSql)
 
 이 문서에서는 각 릴리스의 MySQL 변경 내용에 대 한 SSMA (SQL Server Migration Assistant)를 나열 합니다.
+
+## <a name="ssma-v814"></a>SSMA v 8.14
+
+장애가 있는 사용자에 게 더 많은 접근성을 보장 하기 위해 몇 가지 개선 사항 외에도, MySQL 용 SSMA의 v 8.14 릴리스에는 프로젝트를 업그레이드 해야 합니다. 이제 프로젝트 메타 데이터에 전체 원본/대상 서버 버전이 저장 됩니다.
+
+## <a name="ssma-v813"></a>SSMA v 8.13
+
+MySQL 용 SSMA의 v 8.13 릴리스에는 다음과 같은 변경 내용이 포함 되어 있습니다.
+
+* 프로시저 및 함수 호출을 변환할 때 암시적 형식 캐스팅 고려
+* 연결 문제를 해결 하는 데 도움이 되도록 원본 연결 문자열에 대 한 로깅 개선
 
 ## <a name="ssma-v812"></a>SSMA v 8.12
 

@@ -4,22 +4,34 @@ description: 각 릴리스에 대 한 DB2 (DB2ToSQL)에 대 한 변경 SQL Serve
 author: nahk-ivanov
 ms.prod: sql
 ms.custom: ''
-ms.date: 7/31/2020
+ms.date: 9/28/2020
 ms.reviewer: ''
 ms.technology: ssma
 ms.topic: conceptual
 ms.assetid: 1cc38f85-3caa-42d0-8c76-a380c1d15c67
 ms.author: alexiva
-ms.openlocfilehash: 9706f1f2313594ded00cc0fa7e1335bb194b8313
-ms.sourcegitcommit: 21bedbae28840e2f96f5e8b08bcfc794f305c8bc
+ms.openlocfilehash: 8f84892230de6e7070933657cd25636a2fc697d8
+ms.sourcegitcommit: b93beb4f03aee2c1971909cb1d15f79cd479a35c
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 08/06/2020
-ms.locfileid: "87862480"
+ms.lasthandoff: 09/29/2020
+ms.locfileid: "91498223"
 ---
 # <a name="whats-new-in-ssma-for-db2-db2tosql"></a>D b 2 용 SSMA의 새로운 기능 (DB2ToSQL)
 
 이 문서에서는 각 릴리스의 DB2 변경에 대 한 SSMA (SQL Server Migration Assistant)를 나열 합니다.
+
+## <a name="ssma-v814"></a>SSMA v 8.14
+
+장애가 있는 사용자에 게 더 많은 접근성을 보장 하기 위해 몇 가지 개선 사항 외에도, d b 2 용 SSMA의 v 8.14 릴리스에는 프로젝트를 업그레이드 해야 합니다. 이제 프로젝트 메타 데이터에 전체 원본/대상 서버 버전이 저장 됩니다.
+
+## <a name="ssma-v813"></a>SSMA v 8.13
+
+D b 2 용 SSMA의 v 8.13 릴리스에는 다음과 같은 변경 내용이 포함 되어 있습니다.
+
+* 필터링 된 고유 인덱스 지원
+* 프로시저 및 함수 호출을 변환할 때 암시적 형식 캐스팅 고려
+* 연결 문제를 해결 하는 데 도움이 되도록 원본 연결 문자열에 대 한 로깅 개선
 
 ## <a name="ssma-v812"></a>SSMA v 8.12
 

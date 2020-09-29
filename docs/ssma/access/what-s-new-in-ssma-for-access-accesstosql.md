@@ -4,22 +4,34 @@ description: 각 릴리스에 대 한 AccessToSQL (액세스)에 대 한 변경 
 author: nahk-ivanov
 ms.prod: sql
 ms.custom: ''
-ms.date: 7/31/2020
+ms.date: 9/28/2020
 ms.reviewer: ''
 ms.technology: ssma
 ms.topic: conceptual
 ms.assetid: a24d3fc0-6911-4bfa-828a-197abf222e02
 ms.author: alexiva
-ms.openlocfilehash: 1175a66a0d87296204825542dfb4021b568c30e6
-ms.sourcegitcommit: 21bedbae28840e2f96f5e8b08bcfc794f305c8bc
+ms.openlocfilehash: 5aaa4ad6a29d9582a8c62a94fbb94c18f79bfcff
+ms.sourcegitcommit: b93beb4f03aee2c1971909cb1d15f79cd479a35c
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 08/06/2020
-ms.locfileid: "87863855"
+ms.lasthandoff: 09/29/2020
+ms.locfileid: "91497917"
 ---
 # <a name="whats-new-in-ssma-for-access-accesstosql"></a>Access 용 SSMA의 새로운 기능 (AccessToSQL)
 
 이 문서에서는 각 릴리스의 액세스 변경에 대 한 SSMA (SQL Server Migration Assistant)를 나열 합니다.
+
+## <a name="ssma-v814"></a>SSMA v 8.14
+
+장애가 있는 사용자에 게 더 많은 접근성을 보장 하기 위해 몇 가지 개선 사항 외에도, Access 용 SSMA의 v 8.14 릴리스에는 이제 프로젝트를 업그레이드 해야 합니다. 이제 프로젝트 메타 데이터에 전체 원본/대상 서버 버전이 저장 됩니다.
+
+## <a name="ssma-v813"></a>SSMA v 8.13
+
+Access 용 SSMA의 v 8.13 릴리스에는 다음과 같은 변경 내용이 포함 되어 있습니다.
+
+* `ORDER BY`절을 사용 하 여 변환 수정 `UNION`
+* 필터링 된 고유 인덱스 지원
+* 프로시저 및 함수 호출을 변환할 때 암시적 형식 캐스팅 고려
 
 ## <a name="ssma-v812"></a>SSMA v 8.12
 
