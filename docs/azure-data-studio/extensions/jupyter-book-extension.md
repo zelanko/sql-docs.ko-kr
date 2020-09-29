@@ -28,7 +28,7 @@ ms.locfileid: "91364090"
 > - Jupyter Book 확장을 만듭니다.
 > - 확장을 실행합니다.
 > - 확장을 패키지합니다.
-> - 확장을 마켓플레이스에 게시합니다.
+> - 마켓플레이스에 확장 게시
 
 ## <a name="apis-used"></a>사용되는 API
 
@@ -80,13 +80,13 @@ Azure Data Studio는 Visual Studio Code와 동일한 프레임워크를 기반�
 
 이미 만든 Book을 전달하려면 Book 콘텐츠가 있는 폴더의 절대 파일 경로를 제공합니다. 그런 다음, 확장에 대한 학습과 전달 준비를 할 수 있습니다.
 
-:::image type="content" source="media/jupyter-book-extension/jupyter-book-existing-book.png" alt-text="기존 Book을 보여 주는 스크린샷":::
+:::image type="content" source="media/jupyter-book-extension/jupyter-book-existing-book.png" alt-text="확장 생성기를 보여 주는 스크린샷":::
 
 ### <a name="use-the-sample-book"></a>Book 샘플 사용
 
 기존 Book 또는 Notebook이 없는 경우 생성기에서 제공된 샘플을 사용할 수 있습니다.
 
-:::image type="content" source="media/jupyter-book-extension/jupyter-book-sample-path.png" alt-text="Jupyter Book 샘플을 보여 주는 스크린샷":::
+:::image type="content" source="media/jupyter-book-extension/jupyter-book-sample-path.png" alt-text="확장 생성기를 보여 주는 스크린샷":::
 
 샘플 Book은 간단한 Jupyter Book의 모습을 보여 줍니다. Jupyter Book을 사용자 지정하는 방법에 대해 알아보려면 기존 Notebook을 사용하여 새 Book을 만드는 방법에 대한 다음 섹션을 참조하세요.
 
@@ -94,7 +94,7 @@ Azure Data Studio는 Visual Studio Code와 동일한 프레임워크를 기반�
 
 Jupyter Book에 패키지하려는 Notebook이 있는 경우 Book을 만들 수 있습니다. 생성기에는 챕터가 Book에 필요한지 여부와 필요한 경우 챕터의 수와 제목을 묻는 메시지가 표시됩니다. 선택 프로세스는 아래와 같습니다. 스페이스바를 사용하여 각 챕터에 배치하려는 Notebook을 선택합니다.
 
-:::image type="content" source="media/jupyter-book-extension/jupyter-book-create-book.png" alt-text="Jupyter Book을 만드는 프로세스를 보여 주는 스크린샷":::
+:::image type="content" source="media/jupyter-book-extension/jupyter-book-create-book.png" alt-text="확장 생성기를 보여 주는 스크린샷":::
 
 이전 단계를 완료하면 새 Jupyter Book이 포함된 새 폴더가 만들어집니다. Visual Studio Code에서 폴더를 엽니다. 이제 Jupyter Book 확장을 전달할 준비가 되었습니다.
 
@@ -102,7 +102,7 @@ Jupyter Book에 패키지하려는 Notebook이 있는 경우 Book을 만들 수 
 
 현재 프로젝트는 다음과 같을 것입니다.
 
-   :::image type="content" source="media/jupyter-book-extension/jupyter-book-file-structure-generator.png" alt-text="확장 파일 구조를 보여 주는 스크린샷":::
+   :::image type="content" source="media/jupyter-book-extension/jupyter-book-file-structure-generator.png" alt-text="확장 생성기를 보여 주는 스크린샷":::
 
 `vsc-extension-quickstart.md` 파일은 중요한 파일에 대한 참조를 제공합니다. `README.md` 파일은 새 확장에 대한 설명서를 제공할 수 있습니다. `package.json`, `jupyter-book.ts`, `content` 및 `toc.yml` 파일이 있습니다. `content` 폴더는 모든 Notebook 또는 markdown 파일을 보유합니다. `toc.yml`은 Jupyter Book을 구성하며, 확장 생성기를 통해 사용자 지정 Jupyter Book을 만들도록 선택한 경우 자동으로 만들어집니다.
 
@@ -169,11 +169,11 @@ export function activate(context: vscode.ExtensionContext) {
 
 확장을 실행하고 테스트하려면 Azure Data Studio를 열고, **Ctrl+Shift+P**를 선택하여 명령 팔레트를 엽니다. **확장: VSIX에서 설치** 명령을 찾고, 새 확장이 포함된 폴더로 이동합니다. 이제 Azure Data Studio의 확장 패널에 해당 확장이 표시될 것입니다.
 
-   :::image type="content" source="media/jupyter-book-extension/install-vsix.png" alt-text="VSIX 설치를 보여 주는 스크린샷":::
+   :::image type="content" source="media/jupyter-book-extension/install-vsix.png" alt-text="확장 생성기를 보여 주는 스크린샷":::
 
 명령 팔레트를 다시 열고, 등록한 명령인 **Book 시작: Notebook 테스트**를 찾습니다. 실행 시 확장을 사용하여 패키지한 Jupyter Book을 열어야 합니다.
 
-   :::image type="content" source="media/jupyter-book-extension/jupyter-book-launch-ads.png" alt-text="Notebook 명령을 보여 주는 스크린샷":::
+   :::image type="content" source="media/jupyter-book-extension/jupyter-book-launch-ads.png" alt-text="확장 생성기를 보여 주는 스크린샷":::
 
 지금까지 첫 번째 Jupyter Book 확장을 빌드했고, 이제 이 확장을 전달할 수 있습니다. Jupyter Book에 대한 자세한 내용은 [Jupyter를 사용한 Book](https://jupyterbook.org/intro.html)을 참조하세요.
 
@@ -189,7 +189,7 @@ Azure Data Studio 확장 마켓플레이스는 생성 중에 있습니다. 게�
 > - 확장 생성기를 설치합니다.
 > - Jupyter Book 확장을 만듭니다.
 > - 확장을 패키지합니다.
-> - 확장을 마켓플레이스에 게시합니다.
+> - 마켓플레이스에 확장 게시
 
 이 문서를 읽은 후에 Azure Data Studio 커뮤니티와 공유하려는 Jupyter Book에 대한 아이디어가 있기를 바랍니다.
 
