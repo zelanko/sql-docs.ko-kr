@@ -19,12 +19,12 @@ helpviewer_keywords:
 ms.assetid: b987c2b9-998a-4a5f-a82d-280dc6963cbe
 author: markingmyname
 ms.author: maghan
-ms.openlocfilehash: 10bf743f0c09ab423dfef16da30730d80017896e
-ms.sourcegitcommit: dd36d1cbe32cd5a65c6638e8f252b0bd8145e165
+ms.openlocfilehash: 897d83dcf6c85606ac513d9075cca9ebc316a6cf
+ms.sourcegitcommit: 27f95e50f11a98164e9e7a5130a3e00ac06b4cea
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 09/08/2020
-ms.locfileid: "89544864"
+ms.lasthandoff: 09/28/2020
+ms.locfileid: "91412824"
 ---
 # <a name="sysdm_audit_actions-transact-sql"></a>sys.dm_audit_actions(Transact-SQL)
 [!INCLUDE [sql-asdb-asdbmi-asa-pdw](../../includes/applies-to-version/sql-asdb-asdbmi-asa.md)]
@@ -43,7 +43,7 @@ ms.locfileid: "89544864"
 |**containing_group_name**|**nvarchar(120)**|지정된 동작이 포함된 감사 그룹의 이름입니다. 이름의 값이 그룹인 경우 NULL입니다.|  
   
 ## <a name="permissions"></a>사용 권한  
- 보안 주체에 **SELECT** 권한이 있어야 합니다. 기본적으로 이 권한은 Public에 부여됩니다.  
+이 보기는 공용에 표시 됩니다.
   
  [!INCLUDE[ssCatViewPerm](../../includes/sscatviewperm-md.md)]. 자세한 내용은 [Metadata Visibility Configuration](../../relational-databases/security/metadata-visibility-configuration.md)을 참조하세요.  
   
