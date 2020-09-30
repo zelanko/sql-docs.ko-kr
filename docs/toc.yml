@@ -1792,7 +1792,7 @@
       items:
         - name: 관리
           items:
-            - name: 만들기
+            - name: 생성
               href: relational-databases/tables/create-tables-database-engine.md
             - name: DELETE
               href: relational-databases/tables/delete-tables-database-engine.md
@@ -4819,6 +4819,10 @@
     - name: Azure Migration Services >
       displayName: 'DMS, Data Migration Service, Azure Data Migration Service'
       href: /azure/dms/dms-overview
+    - name: 마이그레이션 가이드
+      items:
+        - name: DB2에서
+          href: sql-server/migrate/guides/db2-to-sql-server.md
     - name: DQS(Data Quality Services)
       items:
         - name: 개요
