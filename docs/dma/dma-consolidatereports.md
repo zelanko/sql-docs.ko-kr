@@ -14,12 +14,12 @@ ms.assetid: ''
 author: rajeshsetlem
 ms.author: rajpo
 ms.custom: seo-lt-2019
-ms.openlocfilehash: dd3b2d26b79cf612c18a201a2b077323b1b68420
-ms.sourcegitcommit: 777704aefa7e574f4b7d62ad2a4c1b10ca1731ff
+ms.openlocfilehash: b16ed1f153259f1301f78d82291c677337677643
+ms.sourcegitcommit: c4d6804bde7eaf72d9233d6d43f77d77d1b17c4e
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 08/06/2020
-ms.locfileid: "87823245"
+ms.lasthandoff: 10/01/2020
+ms.locfileid: "91624800"
 ---
 # <a name="assess-an-enterprise-and-consolidate-assessment-reports-with-dma"></a>엔터프라이즈 평가 및 DMA에 평가 보고서 통합
 
@@ -36,7 +36,7 @@ ms.locfileid: "87823245"
   - [데스크톱을 Power BI](/power-bi/fundamentals/desktop-get-the-desktop)합니다.
   - [Azure PowerShell 모듈](https://docs.microsoft.com/powershell/azure/install-az-ps?view=azps-1.0.0)
 - 다운로드 및 추출:
-  - [DMA 보고서 Power BI 템플릿입니다](https://techcommunity.microsoft.com/gxcuf89792/attachments/gxcuf89792/MicrosoftDataMigration/161/2/PowerBI-Reports.zip).
+  - [DMA 보고서 Power BI 템플릿입니다](https://techcommunity.microsoft.com/gxcuf89792/attachments/gxcuf89792/MicrosoftDataMigration/161/4/PowerBI-Reports.zip).
   - [Loadwarehouse 스크립트](https://techcommunity.microsoft.com/gxcuf89792/attachments/gxcuf89792/MicrosoftDataMigration/161/3/LoadWarehouse1.zip)입니다.
 
 ## <a name="loading-the-powershell-modules"></a>PowerShell 모듈 로드
@@ -64,7 +64,7 @@ Powershell 모듈을 PowerShell 모듈 디렉터리에 저장 하면 사용 하�
 
     이제 PowerShell은 새 PowerShell 세션이 시작 될 때 이러한 모듈을 자동으로 로드 해야 합니다.
 
-## <a name="create-an-inventory-of-sql-servers"></a><a name="create-inventory"></a>SQL Server 인벤토리 만들기
+## <a name="create-an-inventory-of-sql-servers"></a><a name="create-inventory"></a> SQL Server 인벤토리 만들기
 
 PowerShell 스크립트를 실행 하 여 SQL Server를 평가 하기 전에 평가 하려는 SQL Server의 인벤토리를 작성 해야 합니다.
 
@@ -127,11 +127,11 @@ DmaDataCollector 함수와 연결 된 매개 변수는 다음 표에 설명 되�
 |---------|---------|
 |**getServerListFrom** | 사용자의 인벤토리에 있습니다. 가능한 값은 **SqlServer** 및 **CSV**입니다.<br/>자세한 내용은 [SQL server 인벤토리 만들기](#create-inventory)를 참조 하세요. |
 |**csvPath** | CSV 인벤토리 파일의 경로입니다.  **Getserverlistfrom** 이 **CSV**로 설정 된 경우에만 사용 됩니다. |
-|**서버** | **Getserverlistfrom** 매개 변수에서 **SqlServer** 를 사용 하는 경우 인벤토리의 SQL Server 인스턴스 이름입니다. |
+|**serverName** | **Getserverlistfrom** 매개 변수에서 **SqlServer** 를 사용 하는 경우 인벤토리의 SQL Server 인스턴스 이름입니다. |
 |**databaseName** | 인벤토리 테이블을 호스트 하는 데이터베이스입니다. |
 |**useInstancesOnly** | 평가를 위해 인스턴스 목록을 사용할지 여부를 지정 하는 비트 플래그입니다.  0으로 설정 하면 DatabaseInventory 테이블이 평가 대상 목록을 작성 하는 데 사용 됩니다. |
 |**AssessmentName** | DMA 평가의 이름입니다. |
-|**TargetPlatform** | 수행 하려는 평가 대상 유형입니다.  가능한 값은 **AzureSQLDatabase**, **managedsqlserver**, **SQLServer2012**, **SQLServer2014**, **sqlserver2016-ssei-expr**, **SQLServerLinux2017**, **SQLServerWindows2017**, **SqlServerWindows2019**및 **SqlServerLinux2019**입니다.  |
+|**TargetPlatform** | 수행 하려는 평가 대상 유형입니다.  가능한 값은 **AzureSQLDatabase**, **managedsqlserver**, **SQLServer2012**, **SQLServer2014**, **sqlserver2016-ssei-expr**, **SQLServerLinux2017**, **SQLServerWindows2017**,  **SqlServerWindows2019**및 **SqlServerLinux2019**입니다.  |
 |**AuthenticationMethod** | 평가 하려는 SQL Server 대상에 연결 하기 위한 인증 방법입니다. 가능한 값은 **sqlauth** 및 **windowsauth**입니다. |
 |**OutputLocation** | JSON 평가 출력 파일을 저장할 디렉터리입니다. 평가 되는 데이터베이스의 수와 데이터베이스 내의 개체 수에 따라 평가에 매우 긴 시간이 걸릴 수 있습니다. 모든 평가가 완료 된 후에 파일이 기록 됩니다. |
 
@@ -150,7 +150,7 @@ DmaProcessor 함수와 연결 된 매개 변수는 다음 표에 설명 되어 �
 |매개 변수  |설명 |
 |---------|---------|
 |**processTo** | JSON 파일을 처리 하는 위치입니다. 가능한 값은 **SQLServer** 및 **AzureSQLDatabase**입니다. |
-|**서버** | 데이터가 처리 될 SQL Server 인스턴스입니다.  **Processto** 매개 변수에 대해 **AzureSQLDatabase** 를 지정 하는 경우 SQL Server 이름만 포함 합니다 (database.windows.net는 포함 하지 않음). Azure SQL Database를 대상으로 지정 하는 경우 두 개의 로그인을 묻는 메시지가 표시 됩니다. 첫 번째는 Azure 테 넌 트 자격 증명 이며, 두 번째는 Azure SQL Server에 대 한 관리자 로그인입니다. |
+|**serverName** | 데이터가 처리 될 SQL Server 인스턴스입니다.  **Processto** 매개 변수에 대해 **AzureSQLDatabase** 를 지정 하는 경우 SQL Server 이름만 포함 합니다 (database.windows.net는 포함 하지 않음). Azure SQL Database를 대상으로 지정 하는 경우 두 개의 로그인을 묻는 메시지가 표시 됩니다. 첫 번째는 Azure 테 넌 트 자격 증명 이며, 두 번째는 Azure SQL Server에 대 한 관리자 로그인입니다. |
 |**CreateDMAReporting** | JSON 파일을 처리 하기 위해 만들 준비 데이터베이스입니다.  지정한 데이터베이스가 이미 존재 하 고이 매개 변수를 1로 설정 하면 개체가 생성 되지 않습니다.  이 매개 변수는 삭제 된 단일 개체를 다시 만드는 데 유용 합니다. |
 |**CreateDataWarehouse** | Power BI 보고서에서 사용할 데이터 웨어하우스를 만듭니다. |
 |**databaseName** | DMAReporting 데이터베이스의 이름입니다. |

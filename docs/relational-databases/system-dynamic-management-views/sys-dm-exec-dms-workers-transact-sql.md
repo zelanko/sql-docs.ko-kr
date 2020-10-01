@@ -23,12 +23,12 @@ ms.assetid: f468da29-78c3-4f10-8a3c-17905bbf46f2
 author: markingmyname
 ms.author: maghan
 monikerRange: '>=aps-pdw-2016||=azure-sqldw-latest||>=sql-server-2016||=sqlallproducts-allversions||>=sql-server-linux-2017||=azuresqldb-mi-current'
-ms.openlocfilehash: c14c26591e16c423564acafd9aeb33be6940002f
-ms.sourcegitcommit: dd36d1cbe32cd5a65c6638e8f252b0bd8145e165
+ms.openlocfilehash: 677ad00bd29d3f689c1722e1fc1abd65374426a5
+ms.sourcegitcommit: c4d6804bde7eaf72d9233d6d43f77d77d1b17c4e
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 09/08/2020
-ms.locfileid: "89548556"
+ms.lasthandoff: 10/01/2020
+ms.locfileid: "91624780"
 ---
 # <a name="sysdm_exec_dms_workers-transact-sql"></a>sys. dm_exec_dms_workers (Transact-sql)
 [!INCLUDE [sqlserver2016-asa-pdw](../../includes/applies-to-version/sqlserver2016-asa-pdw.md)]
@@ -39,12 +39,12 @@ ms.locfileid: "89548556"
   
 |열 이름|데이터 형식|Description|범위|  
 |-----------------|---------------|-----------------|-----------|  
-|execution_id|`nvarchar(32)`|이 DMS worker가 속한 쿼리입니다. request_id, step_index 및 dms_step_index이 뷰에 대 한 키를 구성 합니다.||  
+|execution_id|`nvarchar(32)`|이 DMS 작업자를 포함 하는 쿼리입니다. <br /><br /> 이 보기의 키를 execution_id, step_index 및 dms_step_index 구성 합니다.||  
 |step_index|`int`|이 DMS 작업자의 일부인 쿼리 단계입니다.|[Dm_exec_distributed_request_steps &#40;transact-sql&#41;](../../relational-databases/system-dynamic-management-views/sys-dm-exec-distributed-request-steps-transact-sql.md)에서 단계 인덱스를 참조 하십시오.|  
 |dms_step_index|`int`|이 작업자를 실행 하는 DMS 계획의 단계입니다.|[Dm_exec_dms_workers (transact-sql)을](../../relational-databases/system-dynamic-management-views/sys-dm-exec-dms-workers-transact-sql.md) 참조 하세요.|  
 |compute_node_id|`int`|Worker가 실행 되는 노드입니다.|[Dm_exec_compute_nodes &#40;transact-sql&#41;](../../relational-databases/system-dynamic-management-views/sys-dm-exec-compute-nodes-transact-sql.md)을 참조 하십시오.|  
 |distribution_id|`int`|||  
-|형식|`nvarcha(32)`|||  
+|형식|`nvarchar(32)`|이 항목이 나타내는 DMS 작업자 스레드의 형식입니다.|' DIRECT_CONVERTER ', ' DIRECT_READER ', ' FILE_READER ', ' HASH_CONVERTER ', ' HASH_READER ', ' ROUNDROBIN_CONVERTER ', ' EXPORT_READER ', ' EXTERNAL_READER ', ' EXTERNAL_WRITER ', ' PARALLEL_COPY_READER ', ' REJECT_WRITER ', ' WRITER '|  
 |상태|`nvarchar(32)`|이 단계의 상태|' Pending ', ' Running ', ' Complete ', ' Failed ', ' 작업 취소 실패 ', ' PendingCancel ', ' 취소 됨 ', ' 실행 취소 됨 ', ' 중단 됨 '|  
 |bytes_per_sec|`bigint`|||  
 |bytes_processed|`bigint`|||  
