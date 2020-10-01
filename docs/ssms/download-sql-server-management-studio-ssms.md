@@ -24,13 +24,13 @@ ms.author: drskwier
 manager: viharp
 ms.reviewer: maghan
 ms.custom: seo-lt-2019
-ms.date: 07/22/2020
-ms.openlocfilehash: 2d1eb8e37de9956352dad852d74760fecdc8086b
-ms.sourcegitcommit: 591bbf4c7e4e2092f8abda6a2ffed263cb61c585
+ms.date: 09/28/2020
+ms.openlocfilehash: 502e9674d97addf23c89f4e24eb676c36f1d36fd
+ms.sourcegitcommit: b93beb4f03aee2c1971909cb1d15f79cd479a35c
 ms.translationtype: HT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 07/22/2020
-ms.locfileid: "86943085"
+ms.lasthandoff: 09/29/2020
+ms.locfileid: "91497740"
 ---
 # <a name="download-sql-server-management-studio-ssms"></a>SSMS(SQL Server Management Studio) 다운로드
 
@@ -82,6 +82,9 @@ SQL Server Management Studio 18.6:
 ## <a name="previous-versions"></a>이전 버전
 
 이 문서는 SSMS의 최신 버전에만 적용됩니다. 이전 버전의 SSMS를 다운로드하려면 [이전 SSMS 릴리스](../ssms/release-notes-ssms.md#previous-ssms-releases)를 참조하세요.
+
+> [!NOTE]
+> 2021년 12월부터 18.6 이전 SSMS 릴리스는 MFA가 있는 Azure Active Directory를 통해 더 이상 인증되지 않습니다. MFA가 있는 Azure Active Directory 인증을 계속 사용하려면 SSMS 18.6 이상 버전을 설치하거나 업데이트하세요.
 
 ## <a name="unattended-install"></a>무인 설치
 
@@ -145,12 +148,12 @@ SSMS를 제거한 후에도 설치된 상태로 유지되는 공유 구성 요�
 
 지원되는 하드웨어:
 
-- 1.8GHz 이상의 프로세서 듀얼 코어 이상 권장
+- 1.8GHz 이상의 x86(Intel, AMD) 프로세서. 듀얼 코어 이상 권장
 - RAM 2GB. 4GB의 RAM을 권장함(가상 머신에서 실행하는 경우 최소 2.5GB)
 - 하드 디스크 공간: 최소 2GB에서 최대 10GB의 사용 가능한 공간
 
 > [!NOTE]
-> SSMS는 Windows(AMD 또는 Intel)에서만 실행됩니다. Windows 이외의 플랫폼에서 실행되는 도구가 필요한 경우 Azure Data Studio를 살펴보세요. Azure Data Studio는 macOS, Linux 및 Windows를 실행하는 새로운 플랫폼 간 도구입니다. 자세한 내용은 [Azure Data Studio](../azure-data-studio/what-is.md)를 참조하세요.
+> SSMS는 Windows에서만 실행됩니다. Windows 이외의 운영 체제에서 실행되는 도구가 필요한 경우 Azure Data Studio를 권장합니다. Azure Data Studio는 macOS, Linux 및 Windows에서 실행되는 플랫폼 간 도구입니다. 자세한 내용은 [Azure Data Studio](../azure-data-studio/what-is.md)를 참조하세요.
 
 [!INCLUDE[get-help-sql-tools](../includes/paragraph-content/get-help-sql-tools.md)]
 
