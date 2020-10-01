@@ -25,12 +25,12 @@ manager: viharp
 ms.reviewer: maghan
 ms.custom: seo-lt-2019
 ms.date: 09/28/2020
-ms.openlocfilehash: 502e9674d97addf23c89f4e24eb676c36f1d36fd
-ms.sourcegitcommit: b93beb4f03aee2c1971909cb1d15f79cd479a35c
+ms.openlocfilehash: 23137d46453189bb5a04c2860ab79c0c66e8d78f
+ms.sourcegitcommit: 2600a414c321cfd6dc6daf5b9bcbc9a99c049dc4
 ms.translationtype: HT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 09/29/2020
-ms.locfileid: "91497740"
+ms.lasthandoff: 09/30/2020
+ms.locfileid: "91603466"
 ---
 # <a name="download-sql-server-management-studio-ssms"></a>SSMS(SQL Server Management Studio) 다운로드
 
@@ -83,8 +83,7 @@ SQL Server Management Studio 18.6:
 
 이 문서는 SSMS의 최신 버전에만 적용됩니다. 이전 버전의 SSMS를 다운로드하려면 [이전 SSMS 릴리스](../ssms/release-notes-ssms.md#previous-ssms-releases)를 참조하세요.
 
-> [!NOTE]
-> 2021년 12월부터 18.6 이전 SSMS 릴리스는 MFA가 있는 Azure Active Directory를 통해 더 이상 인증되지 않습니다. MFA가 있는 Azure Active Directory 인증을 계속 사용하려면 SSMS 18.6 이상 버전을 설치하거나 업데이트하세요.
+[!INCLUDE[ssms-connect-azure-ad](../includes/ssms-connect-azure-ad.md)]
 
 ## <a name="unattended-install"></a>무인 설치
 

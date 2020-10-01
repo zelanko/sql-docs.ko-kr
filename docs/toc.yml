@@ -4378,11 +4378,7 @@
         - name: 사용량 및 진단 데이터 수집
           items:
             - name: SQL Server 개인 정보 제공
-              items:
-                - name: SQL Server 2017 이전
-                  href: sql-server/sql-server-privacy.md
-                - name: SQL Server 2019
-                  href: sql-server/sql-server-privacy-ver15.md
+              href: sql-server/sql-server-privacy.md
             - name: SQL Server 사용량 및 진단 데이터 구성
               href: sql-server/usage-and-diagnostic-data-configuration-for-sql-server.md
             - name: 도구 사용량 및 진단 데이터 구성

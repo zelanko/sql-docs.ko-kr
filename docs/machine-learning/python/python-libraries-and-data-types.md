@@ -9,12 +9,12 @@ author: dphansen
 ms.author: davidph
 ms.custom: seo-lt-2019
 monikerRange: '>=sql-server-2017||>=sql-server-linux-ver15||=sqlallproducts-allversions'
-ms.openlocfilehash: ee493ec09c5cfc8a5198239cd5cafcb2579f50d8
-ms.sourcegitcommit: 9b41725d6db9957dd7928a3620fe4db41eb51c6e
+ms.openlocfilehash: 0d1cfed615144b947281b87f88965474e88031d1
+ms.sourcegitcommit: d56a834269132a83e5fe0a05b033936776cda8bb
 ms.translationtype: HT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 08/13/2020
-ms.locfileid: "88178636"
+ms.lasthandoff: 09/29/2020
+ms.locfileid: "91529490"
 ---
 # <a name="data-type-mappings-between-python-and-sql-server"></a>Python과 SQL Server 간의 데이터 형식 매핑
 [!INCLUDE [SQL Server 2017 and later](../../includes/applies-to-version/sqlserver2017.md)]
@@ -25,7 +25,7 @@ SQL Server Machine Learning Services의 Python 통합 기능에서 실행되는 
 
 RevoScaleR 기능의 하위 집합(rxLinMod, rxLogit, rxPredict, rxDTrees, rxBTrees 등)은 새 Python 패키지 **revoscalepy**를 사용하여 Python API를 통해 제공됩니다. 이 패키지를 사용하여 Pandas 데이터 프레임, XDF 파일 또는 SQL 데이터 쿼리를 통해 데이터 작업을 수행할 수 있습니다.
 
-자세한 내용은 [SQL Server의 revoscalepy 모듈](ref-py-revoscalepy.md) 및 [revoscalepy 함수 참조](https://docs.microsoft.com/r-server/python-reference/revoscalepy/revoscalepy-package)를 참조하세요.
+자세한 내용은 [SQL Server의 revoscalepy 모듈](ref-py-revoscalepy.md) 및 [revoscalepy 함수 참조](https://docs.microsoft.com/machine-learning-server/python-reference/revoscalepy/revoscalepy-package)를 참조하세요.
 
 Python은 SQL Server에 비해 제한된 수의 데이터 형식을 지원합니다. 결과적으로 Python 스크립트에서 SQL Server의 데이터를 사용할 때마다 데이터는 암시적으로 호환되는 데이터 형식으로 변환될 수 있습니다. 그러나 정확한 변환이 자동으로 수행되지 않고 오류가 반환되는 경우가 많습니다.
 

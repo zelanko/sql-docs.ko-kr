@@ -7,13 +7,13 @@ ms.prod: reporting-services
 ms.prod_service: reporting-services-native
 ms.topic: conceptual
 ms.custom: seodec18
-ms.date: 12/16/2019
-ms.openlocfilehash: a0ff8c253af6165602b626da9aedbba09bb819f8
-ms.sourcegitcommit: ff82f3260ff79ed860a7a58f54ff7f0594851e6b
+ms.date: 9/2/2020
+ms.openlocfilehash: a955c552ab3e78cd34cbb80269e1910b3a63a560
+ms.sourcegitcommit: 2600a414c321cfd6dc6daf5b9bcbc9a99c049dc4
 ms.translationtype: HT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 03/29/2020
-ms.locfileid: "75253310"
+ms.lasthandoff: 09/30/2020
+ms.locfileid: "91603386"
 ---
 # <a name="create-a-report-server-database-ssrs-configuration-manager"></a>보고서 서버 데이터베이스 만들기, SSRS 구성 관리자  
 
@@ -84,8 +84,6 @@ SQL Server [!INCLUDE[ssRSnoversion](../../includes/ssrsnoversion-md.md)] **Share
 - [!INCLUDE[ssSQL14](../../includes/sssql14-md.md)]  
   
 - [!INCLUDE[ssSQL11](../../includes/sssql11-md.md)]  
-  
-- [!INCLUDE[ssKilimanjaro](../../includes/sskilimanjaro-md.md)]  
 
 원격 컴퓨터에 보고서 서버 데이터베이스를 만드는 경우, 네트워크 액세스 권한이 있는 서비스 계정 또는 도메인 사용자 계정을 사용하도록 연결을 구성하세요. 원격 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 인스턴스를 사용하는 경우, 보고서 서버가 인스턴스에 연결할 때 사용해야 하는 자격 증명을 선택하세요. 자세한 내용은 [보고서 서버 데이터베이스 연결 구성&#40;SSRS Configuration Manager&#41;](../../reporting-services/install-windows/configure-a-report-server-database-connection-ssrs-configuration-manager.md)을 참조하세요.  
   
