@@ -1,6 +1,6 @@
 ---
 description: sys.dm_cryptographic_provider_sessions(Transact-SQL)
-title: sys. dm_cryptographic_provider_sessions (Transact-sql) | Microsoft Docs
+title: sys.dm_cryptographic_provider_sessions (Transact-sql) | Microsoft Docs
 ms.custom: ''
 ms.date: 06/10/2016
 ms.prod: sql
@@ -19,12 +19,12 @@ helpviewer_keywords:
 ms.assetid: 9a4de02b-1a07-4850-979a-0861fddb7f9d
 author: markingmyname
 ms.author: maghan
-ms.openlocfilehash: 223d3b1ebac4230436f069c2ec9415e7d57feb3f
-ms.sourcegitcommit: dd36d1cbe32cd5a65c6638e8f252b0bd8145e165
+ms.openlocfilehash: e7a9aba28efb9367d6dc935a8bf97141aff22b2c
+ms.sourcegitcommit: 9386ae1b90705a39d37d5541b70c5e8a6564f253
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 09/08/2020
-ms.locfileid: "89542300"
+ms.lasthandoff: 10/02/2020
+ms.locfileid: "91662162"
 ---
 # <a name="sysdm_cryptographic_provider_sessions-transact-sql"></a>sys.dm_cryptographic_provider_sessions(Transact-SQL)
 [!INCLUDE [SQL Server](../../includes/applies-to-version/sqlserver.md)]
@@ -55,8 +55,8 @@ sys.dm_cryptographic_provider_sessions(session_identifier)
 |**identity**|**nvarchar(128)**|암호화 공급자로 인증하는 데 사용되는 ID입니다.|  
 |**spid**|**short**|연결의 세션 ID SPID입니다. 자세한 내용은 [@@SPID&#40;Transact-SQL&#41;](../../t-sql/functions/spid-transact-sql.md)을 참조하세요.|  
   
-## <a name="remarks"></a>설명  
- 현재 연결에 대 한 **dm_cryptographic_provider_sessions** 뷰가 public에 표시 됩니다. 모든 암호화 연결을 보려면 **CONTROL** server 권한이 있어야 합니다.  
+## <a name="permissions"></a>사용 권한  
+ Public 서버 역할의 멤버는 **sys.dm_cryptographic_provider_sessions** 를 사용 하 여 현재 연결에 대 한 정보를 반환할 수 있습니다. 모든 암호화 연결을 보려면 **CONTROL** server 권한이 필요 합니다.  
   
 ## <a name="see-also"></a>참고 항목  
  [보안 카탈로그 뷰&#40;Transact-SQL&#41;](../../relational-databases/system-catalog-views/security-catalog-views-transact-sql.md)   
