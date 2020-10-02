@@ -12,12 +12,12 @@ ms.topic: conceptual
 author: pochiraju
 ms.author: rajpo
 ms.reviewer: mathoma
-ms.openlocfilehash: 8df03adc67cb4ae97e099ad31d4af42c34a8533c
-ms.sourcegitcommit: e8f6c51d4702c0046aec1394109bc0503ca182f0
+ms.openlocfilehash: fa37fb348aa94e59ac3816d523cc5a30bc314713
+ms.sourcegitcommit: 71d2389cf27156fa0404a6e6f65fb7a61c40789a
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 08/07/2020
-ms.locfileid: "87951228"
+ms.lasthandoff: 10/01/2020
+ms.locfileid: "91636173"
 ---
 # <a name="replay-a-trace-in-database-experimentation-assistant"></a>데이터베이스 실험 도우미에서 추적 재생
 
@@ -122,7 +122,7 @@ SQL Server은 상태 저장 관계형 데이터베이스 관리 시스템입니�
 
 **Q: 재생 하는 동안 DEA에서 수집 하는 추적 이벤트는 무엇입니까?**
 
-DEA는 성능 관련 정보를 포함 하는 추적 이벤트를 캡처합니다. 캡처 구성은 StartReplayCaptureTrace 스크립트에 있습니다. 이러한 이벤트는 [sp_trace_setevent (transact-sql) 참조 설명서](https://docs.microsoft.com/sql/relational-databases/system-stored-procedures/sp-trace-setevent-transact-sql)에 나열 된 추적 이벤트 SQL Server 일반적인 이벤트입니다.
+DEA는 성능 관련 정보를 포함 하는 추적 이벤트를 캡처합니다. 캡처 구성은 StartReplayCaptureTrace 스크립트에 있습니다. 이러한 이벤트는 [sp_trace_setevent (transact-sql) 참조 설명서](../relational-databases/system-stored-procedures/sp-trace-setevent-transact-sql.md)에 나열 된 추적 이벤트 SQL Server 일반적인 이벤트입니다.
 
 ## <a name="troubleshoot-trace-replay"></a>추적 재생 문제 해결
 
@@ -139,7 +139,7 @@ DEA는 성능 관련 정보를 포함 하는 추적 이벤트를 캡처합니다
 
 - 컨트롤러 컴퓨터에서 Distributed Replay controller 서비스가 실행 중인지 확인 합니다. 확인 하려면 Distributed Replay 관리 도구 (명령 실행)를 사용 `dreplay.exe status -f 1` 합니다.
 - 재생이 원격으로 시작 되는 경우:
-  - DEA를 실행 하는 컴퓨터가 컨트롤러를 성공적으로 ping 할 수 있는지 확인 합니다. **재생 환경 구성** 페이지의 지침에 따라 방화벽 설정에서 연결을 허용 하는지 확인 합니다. 자세한 내용은 [SQL Server Distributed Replay](https://docs.microsoft.com/sql/tools/distributed-replay/sql-server-distributed-replay?view=sql-server-2017)문서를 참조 하세요.
+  - DEA를 실행 하는 컴퓨터가 컨트롤러를 성공적으로 ping 할 수 있는지 확인 합니다. **재생 환경 구성** 페이지의 지침에 따라 방화벽 설정에서 연결을 허용 하는지 확인 합니다. 자세한 내용은 [SQL Server Distributed Replay](../tools/distributed-replay/sql-server-distributed-replay.md?view=sql-server-2017)문서를 참조 하세요.
   - Distributed Replay 컨트롤러의 사용자에 대해 DCOM 원격 시작 및 원격 활성화가 허용 되는지 확인 합니다.
   - Distributed Replay 컨트롤러의 사용자에 대해 DCOM 원격 액세스 사용자 권한이 허용 되는지 확인 합니다.
 
@@ -163,6 +163,6 @@ UNC 경로는 Distributed Replay와 호환 되지 않습니다. Distributed Repl
   
 SQL Server 2017에 대 한 최신 누적 업데이트 1에서이 문제가 해결 되었습니다. [SQL Server 2017에 대 한 최신 버전의 누적 업데이트 1](https://support.microsoft.com/help/4038634/cumulative-update-1-for-sql-server-2017)을 다운로드 합니다.
 
-## <a name="see-also"></a>참고 항목
+## <a name="see-also"></a>참조
 
 - 제안 된 변경 내용에 대 한 정보를 얻는 데 도움이 되는 분석 보고서를 만들려면 [보고서 만들기](database-experimentation-assistant-create-report.md)를 참조 하세요.

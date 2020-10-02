@@ -12,12 +12,12 @@ ms.topic: conceptual
 author: pochiraju
 ms.author: rajpo
 ms.reviewer: mathoma
-ms.openlocfilehash: 4caf97a9afb4a40ba82e2fe6730d46dbdcbea7f6
-ms.sourcegitcommit: e8f6c51d4702c0046aec1394109bc0503ca182f0
+ms.openlocfilehash: 67b427e7d1d73b072ce2ec319bfc3cbcbbcfddf9
+ms.sourcegitcommit: 71d2389cf27156fa0404a6e6f65fb7a61c40789a
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 08/07/2020
-ms.locfileid: "87951538"
+ms.lasthandoff: 10/01/2020
+ms.locfileid: "91636103"
 ---
 # <a name="capture-a-trace-in-database-experimentation-assistant"></a>데이터베이스 실험 도우미에서 추적 캡처
 
@@ -133,20 +133,20 @@ DEA를 사용 하 여 서버 또는 단일 데이터베이스의 모든 데이�
 
 - SQL Server를 실행 하는 컴퓨터의 이름이 유효 합니다. 확인 하려면 SSMS (SQL Server Management Studio)를 사용 하 여 SQL Server를 실행 하는 컴퓨터에 연결을 시도 합니다.
 - 방화벽 구성은 SQL Server를 실행 하는 컴퓨터에 대 한 연결을 차단 하지 않습니다.
-- 사용자에 게 [재생 FAQ](https://docs.microsoft.com/sql/dea/database-experimentation-assistant-replay-trace?view=sql-server-ver15#frequently-asked-questions-about-trace-replay)에 나열 된 사용 권한이 있습니다.
+- 사용자에 게 [재생 FAQ](./database-experimentation-assistant-replay-trace.md?view=sql-server-ver15#frequently-asked-questions-about-trace-replay)에 나열 된 사용 권한이 있습니다.
 - 추적 이름은 표준 롤오버 규칙 (캡처 1)을 따르지 않습니다 \_ . 대신 Capture 1a 또는 Capture1와 같은 추적 이름을 사용해 보세요 \_ .
 
 다음은 표시 될 수 있는 몇 가지 오류와 해결 방법입니다.
 
-|가능한 오류|해결 방법|  
+|가능한 오류|솔루션|  
 |---|---|  
 |대상 SQL Server에서 추적을 시작할 수 없습니다. 필요한 권한이 있는지 확인 하 고 SQL Server 계정에 지정 된 추적 파일 경로 Sql 오류 코드 (53)에 대 한 쓰기 권한이 있는지 확인 하십시오.|DEA 도구를 실행 하는 사용자는 SQL Server를 실행 하는 컴퓨터에 액세스할 수 있어야 합니다. 사용자에 게 sysadmin 역할이 할당 되어야 합니다.|  
 |대상 SQL Server에서 추적을 시작할 수 없습니다. 필요한 권한이 있는지 확인 하 고 SQL Server 계정에 지정 된 추적 파일 경로 Sql 오류 코드 (19062)에 대 한 쓰기 권한이 있는지 확인 하십시오.|지정 된 추적 경로가 없거나, 해당 폴더에 SQL Server 서비스가 실행 중인 계정에 대 한 쓰기 권한이 없는 경우 (예: 네트워크 서비스) 경로가 있어야 하 고 추적을 시작 하는 데 필요한 권한이 있어야 합니다.|  
 |DEA 추적이 현재 대상 서버에서 실행 되 고 있습니다.|활성 추적이 대상 서버에서 이미 실행 중입니다. 서버 차원 추적이 이미 실행 중인 경우에는 새 추적을 시작할 수 없습니다.|  
 |추적을 캡처하기 위해 요청 된 데이터베이스를 열 수 없습니다. 이 오류는 잘못 된 데이터베이스 이름으로 인해 발생할 수 있습니다.|지정 된 데이터베이스가 존재 하지 않거나 현재 사용자가 액세스할 수 없습니다. 올바른 데이터베이스 이름을 사용 하십시오.|  
 
-*Sql 오류 코드*라는 다른 오류가 표시 되는 경우 자세한 설명은 [데이터베이스 엔진 오류](https://docs.microsoft.com/sql/relational-databases/errors-events/database-engine-events-and-errors) 를 참조 하세요.
+*Sql 오류 코드*라는 다른 오류가 표시 되는 경우 자세한 설명은 [데이터베이스 엔진 오류](../relational-databases/errors-events/database-engine-events-and-errors.md) 를 참조 하세요.
 
-## <a name="see-also"></a>참고 항목
+## <a name="see-also"></a>참조
 
 - 캡처된 추적을 재생 하기 전에 SQL Server에서 Distributed Replay 도구를 구성 하는 방법을 알아보려면 [데이터베이스 실험 도우미에 대 한 Distributed Replay 구성](database-experimentation-assistant-configure-replay.md)을 참조 하세요.

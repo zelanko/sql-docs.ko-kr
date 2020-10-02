@@ -12,12 +12,12 @@ ms.topic: conceptual
 author: pochiraju
 ms.author: rajpo
 ms.reviewer: mathoma
-ms.openlocfilehash: 7519b35bb89704acad32f3dfe46c2f916b4dc441
-ms.sourcegitcommit: e8f6c51d4702c0046aec1394109bc0503ca182f0
+ms.openlocfilehash: 2e3490f1a381bbe3a27f9860df2884c759387c39
+ms.sourcegitcommit: 71d2389cf27156fa0404a6e6f65fb7a61c40789a
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 08/07/2020
-ms.locfileid: "87951358"
+ms.lasthandoff: 10/01/2020
+ms.locfileid: "91636093"
 ---
 # <a name="configure-distributed-replay-for-database-experimentation-assistant"></a>데이터베이스 실험 도우미에 대 한 Distributed Replay 구성
 
@@ -53,7 +53,7 @@ Distributed Replay 컴퓨터 간에 공통 계정을 사용 해야 합니다. �
    `NET STOP "SQL Server Distributed Replay Controller"`</br>
    `NET START "SQL Server Distributed Replay Controller"`
 
-추가 구성 옵션은 [Configure Distributed Replay](https://docs.microsoft.com/sql/tools/distributed-replay/configure-distributed-replay)를 참조 하세요.
+추가 구성 옵션은 [Configure Distributed Replay](../tools/distributed-replay/configure-distributed-replay.md)를 참조 하세요.
 
 ## <a name="configure-dcom"></a>DCOM 구성
 
@@ -93,7 +93,7 @@ Distributed Replay 컴퓨터 간에 공통 계정을 사용 해야 합니다. �
 
     구성에 성공 하면 컨트롤러 **<컨트롤러 이름 \> 에 등록**된 메시지가 로그에 표시 됩니다.
 
-추가 구성 옵션은 [Configure Distributed Replay](https://docs.microsoft.com/sql/tools/distributed-replay/configure-distributed-replay)를 참조 하세요.
+추가 구성 옵션은 [Configure Distributed Replay](../tools/distributed-replay/configure-distributed-replay.md)를 참조 하세요.
 
 ## <a name="set-up-distributed-replay-administration-tools"></a>Distributed Replay 관리 도구 설정
 
@@ -126,6 +126,6 @@ A/B 테스트 또는 실험을 실행 하려면 두 번 재생 해야 합니다.
 2. 클라이언트 서비스 계정 사용자가 SQL Server 인스턴스의 데이터베이스에 액세스할 수 있는 권한을 제공 합니다. SQL Server 인스턴스에서 쿼리를 실행 하려면 권한이 필요 합니다.
 3. 재생을 시작 합니다.
 
-## <a name="see-also"></a>참고 항목
+## <a name="see-also"></a>참조
 
 - 업그레이드 된 테스트 환경에서 캡처된 추적을 재생 하는 방법을 알아보려면 [데이터베이스 실험 도우미에서 추적 재생](database-experimentation-assistant-replay-trace.md)을 참조 하세요.
