@@ -8457,10 +8457,18 @@
           items:
             - name: SSMS(SQL Server Management Studio)
               href: ssms/sql-server-management-studio-ssms.md
-        - name: 자습서
+        - name: 빠른 시작
           items:
             - name: SQL Server 연결 및 쿼리
-              href: ssms/tutorials/connect-query-sql-server.md
+              href: ssms/quickstarts/connect-query-sql-server.md
+        - name: 자습서
+          items:
+            - name: SSMS 구성
+              href: ssms/tutorials/ssms-configuration.md
+            - name: 다른 팁 및 트릭 사용
+              href: ssms/tutorials/ssms-tricks.md
+            - name: 스크립트 개체
+              href: ssms/tutorials/scripting-ssms.md
             - name: 플랫 파일 가져오기
               href: relational-databases/import-export/import-flat-file-wizard.md
         - name: 개념
@@ -8747,12 +8755,6 @@
               href: ssms/install-other-languages.md
             - name: SSMS의 템플릿 사용
               href: ssms/template/templates-ssms.md
-            - name: 스크립트 개체
-              href: ssms/tutorials/scripting-ssms.md
-            - name: SSMS 구성
-              href: ssms/tutorials/ssms-configuration.md
-            - name: 다른 팁 및 트릭 사용
-              href: ssms/tutorials/ssms-tricks.md
             - name: 메뉴 및 바로 가기 키 사용자 지정
               href: ssms/customize-menus-and-shortcut-keys.md
             - name: WMI를 구성하여 SQL Server 도구에 서버 상태 표시
