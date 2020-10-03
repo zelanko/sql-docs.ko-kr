@@ -19,12 +19,12 @@ ms.assetid: 0bb6495f-258a-47ec-9f74-fd16671d23b8
 author: markingmyname
 ms.author: maghan
 monikerRange: '>=aps-pdw-2016||=azuresqldb-current||=azure-sqldw-latest||>=sql-server-2016||=sqlallproducts-allversions||>=sql-server-linux-2017||=azuresqldb-mi-current'
-ms.openlocfilehash: 7e4b24a8b2a825c5754d7cd1ec3f1c9594896eed
-ms.sourcegitcommit: dd36d1cbe32cd5a65c6638e8f252b0bd8145e165
+ms.openlocfilehash: 06182bbd036fd746920f6e164b73321a170acc4f
+ms.sourcegitcommit: 2f868a77903c1f1c4cecf4ea1c181deee12d5b15
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 09/08/2020
-ms.locfileid: "89551248"
+ms.lasthandoff: 10/02/2020
+ms.locfileid: "91670106"
 ---
 # <a name="sp_statistics-transact-sql"></a>sp_statistics(Transact-SQL)
 [!INCLUDE [sql-asdb-asdbmi-asa-pdw](../../includes/applies-to-version/sql-asdb-asdbmi-asa-pdw.md)]
@@ -45,7 +45,9 @@ sp_statistics [ @table_name = ] 'table_name'
      [ , [ @is_unique = ] 'is_unique' ]  
      [ , [ @accuracy = ] 'accuracy' ]  
 ```  
-  
+
+[!INCLUDE[synapse-analytics-od-unsupported-syntax](../../includes/synapse-analytics-od-unsupported-syntax.md)]
+
 ## <a name="arguments"></a>인수  
 `[ @table_name = ] 'table_name'` 카탈로그 정보를 반환 하는 데 사용 되는 테이블을 지정 합니다. *table_name* 는 **sysname**이며 기본값은 없습니다. 와일드카드 패턴 일치는 지원되지 않습니다.  
   
@@ -79,7 +81,7 @@ sp_statistics [ @table_name = ] 'table_name'
 |**SEQ_IN_INDEX**|**smallint**|인덱스 내의 열 위치입니다.|  
 |**COLUMN_NAME**|**sysname**|반환 된 **TABLE_NAME** 의 각 열에 대 한 열 이름입니다. 이 열은 항상 값을 반환합니다.|  
 |**COLLATION**|**char(1)**|데이터 정렬에 사용되는 순서입니다. 다음 값 중 하나일 수 있습니다.<br /><br /> A = 오름차순<br /><br /> D = 내림차순<br /><br /> NULL = 해당 사항 없음|  
-|**카디널리티**|**int**|테이블의 행 수 또는 인덱스의 고유한 값입니다.|  
+|**CARDINALITY**|**int**|테이블의 행 수 또는 인덱스의 고유한 값입니다.|  
 |**마주보**|**int**|인덱스 또는 테이블을 저장할 페이지의 번호입니다.|  
 |**FILTER_CONDITION**|**varchar(128)**|[!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]는 값을 반환하지 않습니다.|  
   

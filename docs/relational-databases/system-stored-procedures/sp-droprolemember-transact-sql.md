@@ -19,12 +19,12 @@ ms.assetid: c2f19ab1-e742-4d56-ba8e-8ffd40cf4925
 ms.author: vanto
 author: VanMSFT
 monikerRange: '>=aps-pdw-2016||=azuresqldb-current||=azure-sqldw-latest||>=sql-server-2016||=sqlallproducts-allversions||>=sql-server-linux-2017||=azuresqldb-mi-current'
-ms.openlocfilehash: 1bbd0dfdeedb0954bb82f97dae6419a9a7f2d852
-ms.sourcegitcommit: e700497f962e4c2274df16d9e651059b42ff1a10
+ms.openlocfilehash: af77dc8f8ac53b650b0c04de3ffc46e00df97483
+ms.sourcegitcommit: 2f868a77903c1f1c4cecf4ea1c181deee12d5b15
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 08/17/2020
-ms.locfileid: "88469565"
+ms.lasthandoff: 10/02/2020
+ms.locfileid: "91670376"
 ---
 # <a name="sp_droprolemember-transact-sql"></a>sp_droprolemember(Transact-SQL)
 
@@ -52,6 +52,8 @@ sp_droprolemember [ @rolename = ] 'role' ,
 sp_droprolemember 'role' ,  
      'security_account'  
 ```  
+
+[!INCLUDE[synapse-analytics-od-unsupported-syntax](../../includes/synapse-analytics-od-unsupported-syntax.md)]
   
 ## <a name="arguments"></a>인수  
 `[ @rolename = ] 'role'` 멤버가 제거 되는 역할의 이름입니다. *role* 은 **sysname**이며 기본값은 없습니다. 현재 데이터베이스에 *역할이* 있어야 합니다.  
@@ -71,7 +73,7 @@ sp_droprolemember 'role' ,
 ## <a name="permissions"></a>사용 권한  
  역할에 대한 ALTER 권한이 필요합니다.  
   
-## <a name="examples"></a>예제  
+## <a name="examples"></a>예  
  다음 예에서는 `JonB` 역할에서 `Sales`라는 사용자를 제거합니다.  
   
 ```sql
@@ -85,10 +87,10 @@ EXEC sp_droprolemember 'Sales', 'Jonb';
 EXEC sp_droprolemember 'Sales', 'JonB'  
 ```  
   
-## <a name="see-also"></a>참고 항목  
- [Transact-sql&#41;&#40;보안 저장 프로시저 ](../../relational-databases/system-stored-procedures/security-stored-procedures-transact-sql.md)   
- [Transact-sql&#41;sp_addrolemember &#40;](../../relational-databases/system-stored-procedures/sp-addrolemember-transact-sql.md)   
- [Transact-sql&#41;sp_droprole &#40;](../../relational-databases/system-stored-procedures/sp-droprole-transact-sql.md)   
+## <a name="see-also"></a>관련 항목  
+ [Security Stored Procedures &#40;Transact-SQL&#41;](../../relational-databases/system-stored-procedures/security-stored-procedures-transact-sql.md)   
+ [sp_addrolemember&#40;Transact-SQL&#41;](../../relational-databases/system-stored-procedures/sp-addrolemember-transact-sql.md)   
+ [sp_droprole&#40;Transact-SQL&#41;](../../relational-databases/system-stored-procedures/sp-droprole-transact-sql.md)   
  [Transact-sql&#41;sp_dropsrvrolemember &#40;](../../relational-databases/system-stored-procedures/sp-dropsrvrolemember-transact-sql.md)   
  [Transact-sql&#41;sp_helpuser &#40;](../../relational-databases/system-stored-procedures/sp-helpuser-transact-sql.md)   
  [시스템 저장 프로시저&#40;Transact-SQL&#41;](../../relational-databases/system-stored-procedures/system-stored-procedures-transact-sql.md)  

@@ -12,12 +12,12 @@ ms.assetid: 1d043964-dc6e-4c3e-ab61-bc444d5e25ae
 author: ronortloff
 ms.author: rortloff
 monikerRange: '>= aps-pdw-2016 || = azure-sqldw-latest || = sqlallproducts-allversions'
-ms.openlocfilehash: d86602d1bbbc308abe13cf2daac8429207d28d4e
-ms.sourcegitcommit: e700497f962e4c2274df16d9e651059b42ff1a10
+ms.openlocfilehash: 3834e4f86933a41b4951c80fe7b8a1e9e91e6709
+ms.sourcegitcommit: 2f868a77903c1f1c4cecf4ea1c181deee12d5b15
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 08/17/2020
-ms.locfileid: "88447327"
+ms.lasthandoff: 10/02/2020
+ms.locfileid: "91670576"
 ---
 # <a name="sp_datatype_info_90-sql-data-warehouse"></a>sp_datatype_info_90 (SQL Data Warehouse)
 [!INCLUDE[applies-to-version/asa-pdw](../../includes/applies-to-version/asa-pdw.md)]
@@ -34,6 +34,8 @@ ms.locfileid: "88447327"
 sp_datatype_info_90 [ [ @data_type = ] data_type ]   
      [ , [ @ODBCVer = ] odbc_version ]   
 ```  
+
+[!INCLUDE[synapse-analytics-od-unsupported-syntax](../../includes/synapse-analytics-od-unsupported-syntax.md)]
   
 ## <a name="arguments"></a>인수  
 `[ @data_type = ] data_type` 지정 된 데이터 형식에 대 한 코드 번호입니다. 모든 데이터 형식의 목록을 가져오려면 이 매개 변수를 생략하세요. *data_type* 은 **int**이며 기본값은 0입니다.  
@@ -55,7 +57,7 @@ sp_datatype_info_90 [ [ @data_type = ] data_type ]
 |CREATE_PARAMS|**varchar (** 32 **)**|해당 데이터 형식에 대한 매개 변수 만들기에 대한 설명입니다. 예를 들어 **10 진수** 는 "precision, scale", **float** 는 NULL, **varchar** 는 "max_length"입니다.|  
 |NULLABLE|**smallint**|NULL 허용 여부를 지정합니다.<br /><br /> 1 = NULL 값을 허용합니다.<br /><br /> 0 = NULL 값을 허용하지 않습니다.|  
 |CASE_SENSITIVE|**smallint**|대/소문자 구분 여부를 지정합니다.<br /><br /> 1 = 이 형식의 열은 모두 데이터 정렬 시 대/소문자를 구분합니다.<br /><br /> 0 = 이 형식의 열은 모두 대/소문자를 구분하지 않습니다.|  
-|검색 가능|**smallint**|열 형식에 대한 검색 기능을 지정합니다.<br /><br /> 1 = 검색할 수 없습니다.<br /><br /> 2 = LIKE를 사용하여 검색할 수 있습니다.<br /><br /> 3 = WHERE를 사용하여 검색할 수 있습니다.<br /><br /> 4 = WHERE 또는 LIKE를 사용하여 검색할 수 있습니다.|  
+|SEARCHABLE|**smallint**|열 형식에 대한 검색 기능을 지정합니다.<br /><br /> 1 = 검색할 수 없습니다.<br /><br /> 2 = LIKE를 사용하여 검색할 수 있습니다.<br /><br /> 3 = WHERE를 사용하여 검색할 수 있습니다.<br /><br /> 4 = WHERE 또는 LIKE를 사용하여 검색할 수 있습니다.|  
 |UNSIGNED_ATTRIBUTE|**smallint**|데이터 형식의 서명 여부를 지정합니다.<br /><br /> 1 = 서명되지 않은 데이터 형식입니다.<br /><br /> 0 = 서명된 데이터 형식입니다.|  
 |MONEY|**smallint**|**Money** 데이터 형식을 지정 합니다.<br /><br /> 1 = **money** 데이터 형식입니다.<br /><br /> 0 = **money** 데이터 형식이 아닙니다.|  
 |AUTO_INCREMENT|**smallint**|자동 증가를 지정합니다.<br /><br /> 1 = 자동 증가입니다.<br /><br /> 0 = 자동 증가가 아닙니다.<br /><br /> NULL = 특성이 적용되지 않습니다.<br /><br /> 애플리케이션은 이 특성을 가진 열에 값을 삽입할 수는 있으나 열에 있는 값을 업데이트할 수 없습니다. **Bit** 데이터 형식을 제외 하 고 AUTO_INCREMENT은 정확한 수치 및 근사치 숫자 데이터 형식 범주에 속하는 데이터 형식에 대해서만 유효 합니다.|  

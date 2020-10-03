@@ -19,12 +19,12 @@ ms.assetid: a583c087-bdb3-46d2-b9e5-3921b3e6d10b
 author: VanMSFT
 ms.author: vanto
 monikerRange: '>=aps-pdw-2016||=azuresqldb-current||=azure-sqldw-latest||>=sql-server-2016||=sqlallproducts-allversions||>=sql-server-linux-2017||=azuresqldb-mi-current'
-ms.openlocfilehash: 59193e08c71a7827e347be5b06bbe4cc81ffa826
-ms.sourcegitcommit: e700497f962e4c2274df16d9e651059b42ff1a10
+ms.openlocfilehash: a5531450e79b036138e581aa0fb8083ebb121c6f
+ms.sourcegitcommit: 2f868a77903c1f1c4cecf4ea1c181deee12d5b15
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 08/17/2020
-ms.locfileid: "88486365"
+ms.lasthandoff: 10/02/2020
+ms.locfileid: "91670866"
 ---
 # <a name="sp_addrolemember-transact-sql"></a>sp_addrolemember(Transact-SQL)
 [!INCLUDE [sql-asdb-asdbmi-asa-pdw](../../includes/applies-to-version/sql-asdb-asdbmi-asa-pdw.md)]
@@ -41,6 +41,8 @@ ms.locfileid: "88486365"
 ```syntaxsql
 sp_addrolemember [ @rolename = ] 'role', [ @membername = ] 'security_account'  
 ```    
+
+[!INCLUDE[synapse-analytics-od-unsupported-syntax](../../includes/synapse-analytics-od-unsupported-syntax.md)]
   
 ## <a name="arguments"></a>인수  
  [ @rolename =] '*role*'  
@@ -72,7 +74,7 @@ sp_addrolemember [ @rolename = ] 'role', [ @membername = ] 'security_account'
   
  고정 데이터베이스 역할에 멤버를 추가하려면 db_owner 고정 데이터베이스 역할의 멤버 자격이 필요합니다.  
   
-## <a name="examples"></a>예제  
+## <a name="examples"></a>예  
   
 ### <a name="a-adding-a-windows-login"></a>A. Windows 로그인 추가  
  다음 예에서는 Windows 로그인을 `Contoso\Mary5` `AdventureWorks2012` 사용자로 데이터베이스에 추가 합니다 `Mary5` . 그런 다음 `Mary5` 사용자를 `Production` 역할에 추가합니다.  
@@ -118,11 +120,11 @@ EXEC sp_addrolemember 'Production', 'UserMary'
 ```  
   
 ## <a name="see-also"></a>관련 항목  
- [Transact-sql&#41;&#40;보안 저장 프로시저 ](../../relational-databases/system-stored-procedures/security-stored-procedures-transact-sql.md)   
- [Transact-sql&#41;sp_addsrvrolemember &#40;](../../relational-databases/system-stored-procedures/sp-addsrvrolemember-transact-sql.md)   
+ [Security Stored Procedures &#40;Transact-SQL&#41;](../../relational-databases/system-stored-procedures/security-stored-procedures-transact-sql.md)   
+ [sp_addsrvrolemember&#40;Transact-SQL&#41;](../../relational-databases/system-stored-procedures/sp-addsrvrolemember-transact-sql.md)   
  [Transact-sql&#41;sp_droprolemember &#40;](../../relational-databases/system-stored-procedures/sp-droprolemember-transact-sql.md)   
- [Transact-sql&#41;sp_grantdbaccess &#40;](../../relational-databases/system-stored-procedures/sp-grantdbaccess-transact-sql.md)   
- [Transact-sql&#41;&#40;시스템 저장 프로시저 ](../../relational-databases/system-stored-procedures/system-stored-procedures-transact-sql.md)   
+ [sp_grantdbaccess&#40;Transact-SQL&#41;](../../relational-databases/system-stored-procedures/sp-grantdbaccess-transact-sql.md)   
+ [시스템 저장 프로시저&#40;Transact-SQL&#41;](../../relational-databases/system-stored-procedures/system-stored-procedures-transact-sql.md)   
  [데이터베이스 수준 역할](../../relational-databases/security/authentication-access/database-level-roles.md)  
   
   
