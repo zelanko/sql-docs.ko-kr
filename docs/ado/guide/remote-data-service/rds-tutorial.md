@@ -13,12 +13,12 @@ helpviewer_keywords:
 ms.assetid: 6e3305a0-7bc7-40d1-9122-235c15d23ab2
 author: rothja
 ms.author: jroth
-ms.openlocfilehash: 0781d75d20254582a3a887cf92a54c8e32848289
-ms.sourcegitcommit: 18a98ea6a30d448aa6195e10ea2413be7e837e94
+ms.openlocfilehash: 70f91e85010abb784291c3c9eca52b9a74ed6286
+ms.sourcegitcommit: c7f40918dc3ecdb0ed2ef5c237a3996cb4cd268d
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 08/27/2020
-ms.locfileid: "88977834"
+ms.lasthandoff: 10/05/2020
+ms.locfileid: "91721394"
 ---
 # <a name="rds-tutorial"></a>RDS 자습서
 이 자습서에서는 RDS 프로그래밍 모델을 사용 하 여 데이터 원본을 쿼리하고 업데이트 하는 방법을 보여 줍니다. 먼저이 작업을 수행 하는 데 필요한 단계를 설명 합니다. 그런 다음 자습서는 Microsoft® Visual Basic Scripting Edition (ADO/WFC 클래스의 ADO)에서 반복 됩니다.  
@@ -30,7 +30,7 @@ ms.locfileid: "88977834"
 -   특정 RDS 기능에 대해 잘 모르는 경우 다른 언어를 알고 있다면 다른 언어로 표시 된 것과 동일한 기능을 찾아 문제를 해결할 수 있습니다.  
   
 > [!IMPORTANT]
->  Windows 8 및 Windows Server 2012부터 RDS 서버 구성 요소는 더 이상 Windows 운영 체제에 포함 되지 않습니다 (자세한 내용은 Windows 8 및 [Windows Server 2012 Compatibility Cookbook](https://www.microsoft.com/download/details.aspx?id=27416) 참조). 이후 버전의 Windows에서는 RDS 클라이언트 구성 요소가 제거 됩니다. 새 개발 작업에서는 이 기능을 사용하지 않도록 하고, 현재 이 기능을 사용하는 애플리케이션은 수정하세요. RDS를 사용 하는 응용 프로그램은 [WCF Data Service](https://go.microsoft.com/fwlink/?LinkId=199565)로 마이그레이션해야 합니다.  
+>  Windows 8 및 Windows Server 2012부터 RDS 서버 구성 요소는 더 이상 Windows 운영 체제에 포함 되지 않습니다 (자세한 내용은 Windows 8 및 [Windows Server 2012 Compatibility Cookbook](https://www.microsoft.com/download/details.aspx?id=27416) 참조). 이후 버전의 Windows에서는 RDS 클라이언트 구성 요소가 제거 됩니다. 새 개발 작업에서는 이 기능을 사용하지 않도록 하고, 현재 이 기능을 사용하는 애플리케이션은 수정하세요. RDS를 사용 하는 응용 프로그램은 [WCF Data Service](/dotnet/framework/wcf/)로 마이그레이션해야 합니다.  
   
 ## <a name="how-the-tutorial-is-presented"></a>자습서를 표시 하는 방법  
  이 자습서는 RDS 프로그래밍 모델을 기반으로 합니다. 프로그래밍 모델의 각 단계를 개별적으로 설명 합니다. 또한 Visual Basic 코드 조각으로 각 단계를 설명 합니다.  

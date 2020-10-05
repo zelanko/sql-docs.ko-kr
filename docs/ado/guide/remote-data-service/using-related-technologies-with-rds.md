@@ -13,12 +13,12 @@ helpviewer_keywords:
 ms.assetid: a98a7245-06a7-455c-82ef-950807b9f1e7
 author: rothja
 ms.author: jroth
-ms.openlocfilehash: f137abb4d65a523b1926dc6455b7e68c1e39043c
-ms.sourcegitcommit: 18a98ea6a30d448aa6195e10ea2413be7e837e94
+ms.openlocfilehash: f974241847a916086312d8d6671dba9748756771
+ms.sourcegitcommit: c7f40918dc3ecdb0ed2ef5c237a3996cb4cd268d
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 08/27/2020
-ms.locfileid: "88977364"
+ms.lasthandoff: 10/05/2020
+ms.locfileid: "91721264"
 ---
 # <a name="using-related-technologies-with-rds"></a>RDS에서 관련 기술 사용
 이 섹션에서는 다음 항목을 다룹니다.  
@@ -28,7 +28,7 @@ ms.locfileid: "88977364"
 -   [구성 요소 서비스에서 비즈니스 개체 실행](./running-business-objects-in-component-services.md)  
   
 > [!IMPORTANT]
->  Windows 8 및 Windows Server 2012부터 RDS 서버 구성 요소는 더 이상 Windows 운영 체제에 포함 되지 않습니다 (자세한 내용은 Windows 8 및 [Windows Server 2012 Compatibility Cookbook](https://www.microsoft.com/download/details.aspx?id=27416) 참조). 이후 버전의 Windows에서는 RDS 클라이언트 구성 요소가 제거 됩니다. 새 개발 작업에서는 이 기능을 사용하지 않도록 하고, 현재 이 기능을 사용하는 애플리케이션은 수정하세요. RDS를 사용 하는 응용 프로그램은 [WCF Data Service](https://go.microsoft.com/fwlink/?LinkId=199565)로 마이그레이션해야 합니다.  
+>  Windows 8 및 Windows Server 2012부터 RDS 서버 구성 요소는 더 이상 Windows 운영 체제에 포함 되지 않습니다 (자세한 내용은 Windows 8 및 [Windows Server 2012 Compatibility Cookbook](https://www.microsoft.com/download/details.aspx?id=27416) 참조). 이후 버전의 Windows에서는 RDS 클라이언트 구성 요소가 제거 됩니다. 새 개발 작업에서는 이 기능을 사용하지 않도록 하고, 현재 이 기능을 사용하는 애플리케이션은 수정하세요. RDS를 사용 하는 응용 프로그램은 [WCF Data Service](/dotnet/framework/wcf/)로 마이그레이션해야 합니다.  
   
  다른 많은 기술은 원격 데이터 서비스와 상호 작용 하거나 구현에 사용 됩니다.  
   

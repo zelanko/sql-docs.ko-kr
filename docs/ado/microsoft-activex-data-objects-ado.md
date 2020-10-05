@@ -13,12 +13,12 @@ helpviewer_keywords:
 ms.assetid: 2fa6237b-44b8-4b6c-9952-5acd80a54e20
 author: rothja
 ms.author: jroth
-ms.openlocfilehash: eb313ceb6217bf9400fda05622c7505c8067d2c1
-ms.sourcegitcommit: 18a98ea6a30d448aa6195e10ea2413be7e837e94
+ms.openlocfilehash: a63b254397e45fdba56f3d86cdcf45069f9265fb
+ms.sourcegitcommit: c7f40918dc3ecdb0ed2ef5c237a3996cb4cd268d
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 08/27/2020
-ms.locfileid: "88977354"
+ms.lasthandoff: 10/05/2020
+ms.locfileid: "91721244"
 ---
 # <a name="microsoft-activex-data-objects-ado"></a>Microsoft ADO(ActiveX Data Objects)
 
@@ -42,14 +42,14 @@ ADO(ActiveX Data Objects)은 지정 된 백 엔드 엔진에 종속 되지 않�
  RDS (원격 데이터 서비스)는 ADO의 기능으로, 서버에서 클라이언트 응용 프로그램이 나 웹 페이지로 데이터를 이동 하 고, 클라이언트에서 데이터를 조작 하 고, 단일 왕복으로 서버에 업데이트를 반환할 수 있습니다.  
   
 > [!IMPORTANT]
->  Windows 8 및 Windows Server 2012부터 RDS 서버 구성 요소는 더 이상 Windows 운영 체제에 포함 되지 않습니다 (자세한 내용은 Windows 8 및 [Windows Server 2012 Compatibility Cookbook](https://www.microsoft.com/download/details.aspx?id=27416) 참조). 이후 버전의 Windows에서는 RDS 클라이언트 구성 요소가 제거 됩니다. 새 개발 작업에서는 이 기능을 사용하지 않도록 하고, 현재 이 기능을 사용하는 애플리케이션은 수정하세요. RDS를 사용 하는 응용 프로그램은  [WCF Data Service](https://go.microsoft.com/fwlink/?LinkId=199565)로 마이그레이션해야 합니다.  
+>  Windows 8 및 Windows Server 2012부터 RDS 서버 구성 요소는 더 이상 Windows 운영 체제에 포함 되지 않습니다 (자세한 내용은 Windows 8 및 [Windows Server 2012 Compatibility Cookbook](https://www.microsoft.com/download/details.aspx?id=27416) 참조). 이후 버전의 Windows에서는 RDS 클라이언트 구성 요소가 제거 됩니다. 새 개발 작업에서는 이 기능을 사용하지 않도록 하고, 현재 이 기능을 사용하는 애플리케이션은 수정하세요. RDS를 사용 하는 응용 프로그램은  [WCF Data Service](/dotnet/framework/wcf/)로 마이그레이션해야 합니다.  
   
 ## <a name="adox"></a>ADOX  
  ADOX (데이터 정의 언어 및 보안)에 대 한 Microsoft ADO(ActiveX Data Objects) 확장은 ADO 개체 및 프로그래밍 모델에 대 한 확장입니다. ADOX에는 스키마를 만들고 수정할 뿐만 아니라 보안을 위한 개체가 포함 되어 있습니다. 스키마 조작을 위한 개체 기반 방법 이므로 네이티브 구문의 차이점에 관계 없이 다양 한 데이터 원본에 대해 작동 하는 코드를 작성할 수 있습니다.  
   
  ADOX는 핵심 ADO 개체에 대 한 도우미 라이브러리입니다. 테이블, 프로시저 등의 스키마 개체를 만들고 수정 하 고 삭제 하기 위한 추가 개체를 제공 합니다. 또한 사용자 및 그룹을 유지 관리 하 고 개체에 대 한 사용 권한을 부여 하 고 취소 하는 보안 개체를 포함 합니다.  
   
-## <a name="documentation"></a>문서화  
+## <a name="documentation"></a>설명서  
  [ADO 보안 디자인 문제](./guide/ado-security-design-issues.md)  
   
  [ADO 프로그래머 가이드](./guide/ado-programmer-s-guide.md)  

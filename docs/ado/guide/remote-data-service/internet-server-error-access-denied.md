@@ -13,12 +13,12 @@ helpviewer_keywords:
 ms.assetid: e5b43cfa-da8d-430d-a2ab-5443dda47a16
 author: rothja
 ms.author: jroth
-ms.openlocfilehash: d5902892fa850808afe69e0795c485ce5e46a604
-ms.sourcegitcommit: 18a98ea6a30d448aa6195e10ea2413be7e837e94
+ms.openlocfilehash: 9cf9b2010fdbb20522c774d4c54ce2773cf817c5
+ms.sourcegitcommit: c7f40918dc3ecdb0ed2ef5c237a3996cb4cd268d
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 08/27/2020
-ms.locfileid: "88978064"
+ms.lasthandoff: 10/05/2020
+ms.locfileid: "91721564"
 ---
 # <a name="internet-server-error-access-denied"></a>인터넷 서버 오류: 액세스가 거부되었습니다.
 이 오류가 발생 하는 경우 일반적으로 Microsoft 인터넷 정보 서비스 (IIS)에서 다음 상태를 반환 했음을 의미 합니다.  
@@ -28,7 +28,7 @@ ms.locfileid: "88978064"
  IIS에서 액세스 하는 디렉터리에 적절 한 사용 권한이 있는지 확인 합니다. RDS는 세 가지 암호 인증 모드인 익명, 기본 또는 NT 챌린지/Response (Windows 2000의 windows 통합 인증 이라고 함) 중 하나에서 실행 되는 IIS 웹 서버와 통신할 수 있습니다. 또한 Windows NT/Windows 2000 컴퓨터인 경우에는 웹 서버에 데이터 원본 컴퓨터에 대 한 사용 권한이 있어야 합니다.  
   
 > [!IMPORTANT]
->  Windows 8 및 Windows Server 2012부터 RDS 서버 구성 요소는 더 이상 Windows 운영 체제에 포함 되지 않습니다 (자세한 내용은 Windows 8 및 [Windows Server 2012 Compatibility Cookbook](https://www.microsoft.com/download/details.aspx?id=27416) 참조). 이후 버전의 Windows에서는 RDS 클라이언트 구성 요소가 제거 됩니다. 새 개발 작업에서는 이 기능을 사용하지 않도록 하고, 현재 이 기능을 사용하는 애플리케이션은 수정하세요. RDS를 사용 하는 응용 프로그램은 [WCF Data Service](https://go.microsoft.com/fwlink/?LinkId=199565)로 마이그레이션해야 합니다.  
+>  Windows 8 및 Windows Server 2012부터 RDS 서버 구성 요소는 더 이상 Windows 운영 체제에 포함 되지 않습니다 (자세한 내용은 Windows 8 및 [Windows Server 2012 Compatibility Cookbook](https://www.microsoft.com/download/details.aspx?id=27416) 참조). 이후 버전의 Windows에서는 RDS 클라이언트 구성 요소가 제거 됩니다. 새 개발 작업에서는 이 기능을 사용하지 않도록 하고, 현재 이 기능을 사용하는 애플리케이션은 수정하세요. RDS를 사용 하는 응용 프로그램은 [WCF Data Service](/dotnet/framework/wcf/)로 마이그레이션해야 합니다.  
   
 ## <a name="see-also"></a>참고 항목  
  [RDS 기본 사항](./rds-fundamentals.md)

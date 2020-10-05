@@ -13,16 +13,16 @@ helpviewer_keywords:
 ms.assetid: 0be98d1a-ab3d-4dce-a166-dacda10d154a
 author: rothja
 ms.author: jroth
-ms.openlocfilehash: 2cbbfaba540f5349fb7cc0291b8259eeda5b0d68
-ms.sourcegitcommit: 18a98ea6a30d448aa6195e10ea2413be7e837e94
+ms.openlocfilehash: 6681a0b40890db9c344a91adc26694f3e122710d
+ms.sourcegitcommit: c7f40918dc3ecdb0ed2ef5c237a3996cb4cd268d
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 08/27/2020
-ms.locfileid: "88978054"
+ms.lasthandoff: 10/05/2020
+ms.locfileid: "91721505"
 ---
 # <a name="marking-business-objects-as-safe-for-scripting"></a>비즈니스 개체를 스크립팅하기에 안전하다고 표시
 > [!IMPORTANT]
->  Windows 8 및 Windows Server 2012부터 RDS 서버 구성 요소는 더 이상 Windows 운영 체제에 포함 되지 않습니다 (자세한 내용은 Windows 8 및 [Windows Server 2012 Compatibility Cookbook](https://www.microsoft.com/download/details.aspx?id=27416) 참조). 이후 버전의 Windows에서는 RDS 클라이언트 구성 요소가 제거 됩니다. 새 개발 작업에서는 이 기능을 사용하지 않도록 하고, 현재 이 기능을 사용하는 애플리케이션은 수정하세요. RDS를 사용 하는 응용 프로그램은 [WCF Data Service](https://go.microsoft.com/fwlink/?LinkId=199565)로 마이그레이션해야 합니다.  
+>  Windows 8 및 Windows Server 2012부터 RDS 서버 구성 요소는 더 이상 Windows 운영 체제에 포함 되지 않습니다 (자세한 내용은 Windows 8 및 [Windows Server 2012 Compatibility Cookbook](https://www.microsoft.com/download/details.aspx?id=27416) 참조). 이후 버전의 Windows에서는 RDS 클라이언트 구성 요소가 제거 됩니다. 새 개발 작업에서는 이 기능을 사용하지 않도록 하고, 현재 이 기능을 사용하는 애플리케이션은 수정하세요. RDS를 사용 하는 응용 프로그램은 [WCF Data Service](/dotnet/framework/wcf/)로 마이그레이션해야 합니다.  
   
  안전한 인터넷 환경을 보장 하려면 RDS를 사용 하 여 인스턴스화된 비즈니스 개체를 표시 해야 [합니다. 공간](../../reference/rds-api/dataspace-object-rds.md) 개체의 [CreateObject](../../reference/rds-api/createobject-method-rds.md) 메서드는 "스크립팅에 안전 합니다."입니다. 이러한 항목은 DCOM에서 사용 하기 전에 시스템 레지스트리의 라이선스 영역에 있는 것으로 표시 되어야 합니다.  
   

@@ -15,16 +15,16 @@ helpviewer_keywords:
 ms.assetid: 88b6d05c-d4eb-4ab1-bbe2-95d146237f94
 author: rothja
 ms.author: jroth
-ms.openlocfilehash: b9cc1c6a53a3b541fb59caad456c9818254c7f45
-ms.sourcegitcommit: 18a98ea6a30d448aa6195e10ea2413be7e837e94
+ms.openlocfilehash: 2556a8a748e3ff6d3ad2b36546a27cb0a77e6d23
+ms.sourcegitcommit: c7f40918dc3ecdb0ed2ef5c237a3996cb4cd268d
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 08/27/2020
-ms.locfileid: "88981994"
+ms.lasthandoff: 10/05/2020
+ms.locfileid: "91721894"
 ---
 # <a name="internettimeout-property-example-vc"></a>InternetTimeout 속성 예제(VC++)
 > [!IMPORTANT]
->  Windows 8 및 Windows Server 2012부터 RDS 서버 구성 요소는 더 이상 Windows 운영 체제에 포함 되지 않습니다 (자세한 내용은 Windows 8 및 [Windows Server 2012 Compatibility Cookbook](https://www.microsoft.com/download/details.aspx?id=27416) 참조). 이후 버전의 Windows에서는 RDS 클라이언트 구성 요소가 제거 됩니다. 새 개발 작업에서는 이 기능을 사용하지 않도록 하고, 현재 이 기능을 사용하는 애플리케이션은 수정하세요. RDS를 사용 하는 응용 프로그램은 [WCF Data Service](https://go.microsoft.com/fwlink/?LinkId=199565)로 마이그레이션해야 합니다.  
+>  Windows 8 및 Windows Server 2012부터 RDS 서버 구성 요소는 더 이상 Windows 운영 체제에 포함 되지 않습니다 (자세한 내용은 Windows 8 및 [Windows Server 2012 Compatibility Cookbook](https://www.microsoft.com/download/details.aspx?id=27416) 참조). 이후 버전의 Windows에서는 RDS 클라이언트 구성 요소가 제거 됩니다. 새 개발 작업에서는 이 기능을 사용하지 않도록 하고, 현재 이 기능을 사용하는 애플리케이션은 수정하세요. RDS를 사용 하는 응용 프로그램은 [WCF Data Service](/dotnet/framework/wcf/)로 마이그레이션해야 합니다.  
   
  이 예제에서는 [DataControl](./datacontrol-object-rds.md) 및 [스페이스](./dataspace-object-rds.md) 개체에 존재 하는 [internettimeout](./internettimeout-property-rds.md) 속성을 보여 줍니다. 이 경우에는 **internettimeout** 속성이 **DataControl** 개체에서 표시 되 고 timeout은 20 초로 설정 됩니다.  
   

@@ -14,23 +14,23 @@ helpviewer_keywords:
 ms.assetid: 62a4fd88-afc3-4f1f-b978-40710a30c4e9
 author: rothja
 ms.author: jroth
-ms.openlocfilehash: c363333e7e88fa0bedbb8cddc126d7ad62f0e2d3
-ms.sourcegitcommit: 18a98ea6a30d448aa6195e10ea2413be7e837e94
+ms.openlocfilehash: 8fe38de33ea0b5f0784af27f031d2a93759d15aa
+ms.sourcegitcommit: c7f40918dc3ecdb0ed2ef5c237a3996cb4cd268d
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 08/27/2020
-ms.locfileid: "88982254"
+ms.lasthandoff: 10/05/2020
+ms.locfileid: "91722359"
 ---
 # <a name="executeoptions-property-rds"></a>ExecuteOptions 속성(RDS)
 비동기 실행을 사용 하는지 여부를 나타냅니다.  
   
 > [!IMPORTANT]
->  Windows 8 및 Windows Server 2012부터 RDS 서버 구성 요소는 더 이상 Windows 운영 체제에 포함 되지 않습니다 (자세한 내용은 Windows 8 및 [Windows Server 2012 Compatibility Cookbook](https://www.microsoft.com/download/details.aspx?id=27416) 참조). 이후 버전의 Windows에서는 RDS 클라이언트 구성 요소가 제거 됩니다. 새 개발 작업에서는 이 기능을 사용하지 않도록 하고, 현재 이 기능을 사용하는 애플리케이션은 수정하세요. RDS를 사용 하는 응용 프로그램은 [WCF Data Service](https://go.microsoft.com/fwlink/?LinkId=199565)로 마이그레이션해야 합니다.  
+>  Windows 8 및 Windows Server 2012부터 RDS 서버 구성 요소는 더 이상 Windows 운영 체제에 포함 되지 않습니다 (자세한 내용은 Windows 8 및 [Windows Server 2012 Compatibility Cookbook](https://www.microsoft.com/download/details.aspx?id=27416) 참조). 이후 버전의 Windows에서는 RDS 클라이언트 구성 요소가 제거 됩니다. 새 개발 작업에서는 이 기능을 사용하지 않도록 하고, 현재 이 기능을 사용하는 애플리케이션은 수정하세요. RDS를 사용 하는 응용 프로그램은 [WCF Data Service](/dotnet/framework/wcf/)로 마이그레이션해야 합니다.  
   
 ## <a name="settings-and-return-values"></a>설정 및 반환 값  
  다음 값 중 하나를 설정 하거나 반환 합니다.  
   
-|상수|설명|  
+|상수|Description|  
 |--------------|-----------------|  
 |**adcExecSync**|[레코드 집합](../ado-api/recordset-object-ado.md) 의 다음 새로 고침을 동기적으로 실행 합니다.|  
 |**adcExecAsync**|기본값 **레코드 집합** 의 다음 새로 고침을 비동기적으로 실행 합니다.|  

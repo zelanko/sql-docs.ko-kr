@@ -16,16 +16,16 @@ helpviewer_keywords:
 ms.assetid: 753a4a3d-0fba-40b8-86e7-50b34182ca69
 author: rothja
 ms.author: jroth
-ms.openlocfilehash: 3730b5f9fbadb36db449033d8d0c9167c3a035c9
-ms.sourcegitcommit: 18a98ea6a30d448aa6195e10ea2413be7e837e94
+ms.openlocfilehash: 0bb4b99b268397ff34d6e4c1a022407379dc1409
+ms.sourcegitcommit: c7f40918dc3ecdb0ed2ef5c237a3996cb4cd268d
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 08/27/2020
-ms.locfileid: "88982274"
+ms.lasthandoff: 10/05/2020
+ms.locfileid: "91722348"
 ---
 # <a name="executeoptions-and-fetchoptions-properties-example-vbscript"></a>ExecuteOptions 및 FetchOptions 속성 예제(VBScript)
 > [!IMPORTANT]
->  Windows 8 및 Windows Server 2012부터 RDS 서버 구성 요소는 더 이상 Windows 운영 체제에 포함 되지 않습니다 (자세한 내용은 Windows 8 및 [Windows Server 2012 Compatibility Cookbook](https://www.microsoft.com/download/details.aspx?id=27416) 참조). 이후 버전의 Windows에서는 RDS 클라이언트 구성 요소가 제거 됩니다. 새 개발 작업에서는 이 기능을 사용하지 않도록 하고, 현재 이 기능을 사용하는 애플리케이션은 수정하세요. RDS를 사용 하는 응용 프로그램은 [WCF Data Service](https://go.microsoft.com/fwlink/?LinkId=199565)로 마이그레이션해야 합니다.  
+>  Windows 8 및 Windows Server 2012부터 RDS 서버 구성 요소는 더 이상 Windows 운영 체제에 포함 되지 않습니다 (자세한 내용은 Windows 8 및 [Windows Server 2012 Compatibility Cookbook](https://www.microsoft.com/download/details.aspx?id=27416) 참조). 이후 버전의 Windows에서는 RDS 클라이언트 구성 요소가 제거 됩니다. 새 개발 작업에서는 이 기능을 사용하지 않도록 하고, 현재 이 기능을 사용하는 애플리케이션은 수정하세요. RDS를 사용 하는 응용 프로그램은 [WCF Data Service](/dotnet/framework/wcf/)로 마이그레이션해야 합니다.  
   
  다음 코드에서는 디자인 타임에 [executeoptions](./executeoptions-property-rds.md) 및 [fetchoptions](./fetchoptions-property-rds.md) 속성을 설정 하는 방법을 보여 줍니다. 설정 하지 않은 경우 **Executeoptions** 의 기본값은 **Adcexecsync**입니다. 이 설정은 RDS를 사용할 때를 나타냅니다 **. Refresh** 메서드가 호출 되 고, 현재 호출 스레드에서 실행 됩니다. 즉, 동기적으로 실행 됩니다. 다음 코드를 잘라내어 메모장 또는 다른 텍스트 편집기에 붙여넣고,이를 **Executeoptionsdesignvbs**로 저장 합니다.  
   

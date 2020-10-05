@@ -20,18 +20,18 @@ helpviewer_keywords:
 ms.assetid: 6840b1e5-c04d-4d3e-9dcc-42128c83492f
 author: rothja
 ms.author: jroth
-ms.openlocfilehash: a459ddea3716bb918ed18a49d632e20a9e4557fd
-ms.sourcegitcommit: 18a98ea6a30d448aa6195e10ea2413be7e837e94
+ms.openlocfilehash: ad1c9b0f36922f29ce015fd459a1be3e788e07f5
+ms.sourcegitcommit: c7f40918dc3ecdb0ed2ef5c237a3996cb4cd268d
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 08/27/2020
-ms.locfileid: "88982524"
+ms.lasthandoff: 10/05/2020
+ms.locfileid: "91721204"
 ---
 # <a name="createrecordset-method-rds"></a>CreateRecordset 메서드(RDS)
 연결 되지 않은 빈 [레코드 집합](../ado-api/recordset-object-ado.md)을 만듭니다.  
   
 > [!IMPORTANT]
->  Windows 8 및 Windows Server 2012부터 RDS 서버 구성 요소는 더 이상 Windows 운영 체제에 포함 되지 않습니다 (자세한 내용은 Windows 8 및 [Windows Server 2012 Compatibility Cookbook](https://www.microsoft.com/download/details.aspx?id=27416) 참조). 이후 버전의 Windows에서는 RDS 클라이언트 구성 요소가 제거 됩니다. 새 개발 작업에서는 이 기능을 사용하지 않도록 하고, 현재 이 기능을 사용하는 애플리케이션은 수정하세요. RDS를 사용 하는 응용 프로그램은 [WCF Data Service](https://go.microsoft.com/fwlink/?LinkId=199565)로 마이그레이션해야 합니다.  
+>  Windows 8 및 Windows Server 2012부터 RDS 서버 구성 요소는 더 이상 Windows 운영 체제에 포함 되지 않습니다 (자세한 내용은 Windows 8 및 [Windows Server 2012 Compatibility Cookbook](https://www.microsoft.com/download/details.aspx?id=27416) 참조). 이후 버전의 Windows에서는 RDS 클라이언트 구성 요소가 제거 됩니다. 새 개발 작업에서는 이 기능을 사용하지 않도록 하고, 현재 이 기능을 사용하는 애플리케이션은 수정하세요. RDS를 사용 하는 응용 프로그램은 [WCF Data Service](/dotnet/framework/wcf/)로 마이그레이션해야 합니다.  
   
 ## <a name="syntax"></a>구문  
   
@@ -47,7 +47,7 @@ object.CreateRecordset(ColumnInfos)
  *ColumnsInfos*  
  만든 **레코드 집합** 의 각 열을 정의 하는 특성의 **변형** 배열입니다. 각 열 정의에는 네 개의 필수 특성과 하나의 선택적 특성 배열을 포함 합니다.  
   
-|attribute|설명|  
+|attribute|Description|  
 |---------------|-----------------|  
 |Name|열 머리글의 이름입니다.|  
 |Type|데이터 형식의 정수입니다.|  
@@ -66,7 +66,7 @@ object.CreateRecordset(ColumnInfos)
   
  일부 변수 데이터 형식의 경우이 형식은 대체 열에 기록 된 형식으로 강제 변환할 수 있습니다. **레코드 집합** 을 만들고 채울 때까지 대체가 표시 되지 않습니다. 그런 다음 필요한 경우 실제 데이터 형식을 확인할 수 있습니다.  
   
-|길이|상수|Number|대체|  
+|길이|상수|숫자|대체|  
 |------------|--------------|------------|------------------|  
 |고정|**adTinyInt**|16||  
 |고정|**adSmallInt**|2||  
