@@ -1,1 +1,1 @@
-[Managed Instance](https://docs.microsoft.com/azure/sql-database/sql-database-managed-instance) Azure SQL Database의 게시자 및 배포자 데이터베이스에 대 한 자세한 내용은 [Azure SQL Database를 사용 하 여 복제](https://docs.microsoft.com/sql/relational-databases/replication/replication-to-sql-database)를 참조 하세요.
+[Managed Instance](/azure/sql-database/sql-database-managed-instance) Azure SQL Database의 게시자 및 배포자 데이터베이스에 대 한 자세한 내용은 [Azure SQL Database를 사용 하 여 복제](/azure/azure-sql/database/replication-to-sql-database)를 참조 하세요.

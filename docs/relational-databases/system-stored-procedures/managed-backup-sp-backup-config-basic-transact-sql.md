@@ -1,6 +1,6 @@
 ---
 description: managed_backup.sp_backup_config_basic(Transact-SQL)
-title: managed_backup. sp_backup_config_basic (Transact-sql) | Microsoft Docs
+title: managed_backup managed_backup.sp_backup_config_basic (transact-sql) | Microsoft Docs
 ms.custom: ''
 ms.date: 10/03/2016
 ms.prod: sql
@@ -21,12 +21,12 @@ helpviewer_keywords:
 ms.assetid: 3ad73051-ae9a-4e41-a889-166146e5508f
 author: markingmyname
 ms.author: maghan
-ms.openlocfilehash: d738a7cf10801366abaebe4ef7857475cd2aad5e
-ms.sourcegitcommit: dd36d1cbe32cd5a65c6638e8f252b0bd8145e165
+ms.openlocfilehash: 428dff3f22b5a924f7a208a988334c14ece752a3
+ms.sourcegitcommit: 968969b62bc158b9843aba5034c9d913519bc4a7
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 09/08/2020
-ms.locfileid: "89550006"
+ms.lasthandoff: 10/06/2020
+ms.locfileid: "91753737"
 ---
 # <a name="managed_backupsp_backup_config_basic-transact-sql"></a>managed_backup.sp_backup_config_basic(Transact-SQL)
 [!INCLUDE [sqlserver2016](../../includes/applies-to-version/sqlserver2016.md)]
@@ -34,7 +34,7 @@ ms.locfileid: "89550006"
   [!INCLUDE[ss_smartbackup](../../includes/ss-smartbackup-md.md)]특정 데이터베이스 또는 인스턴스에 대 한 기본 설정을 구성 합니다 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] .  
   
 > [!NOTE]  
->  이 절차를 자체적으로 호출 하 여 기본 관리 되는 백업 구성을 만들 수 있습니다. 그러나 고급 기능 또는 사용자 지정 일정을 추가 하려는 경우 먼저 managed_backup를 사용 하 여 해당 설정을 구성 하십시오 [. sp_backup_config_advanced &#40;transact-sql&#41;](../../relational-databases/system-stored-procedures/managed-backup-sp-backup-config-advanced-transact-sql.md) 및 [managed_backup sp_backup_config_schedule transact-sql &#40;](../../relational-databases/system-stored-procedures/managed-backup-sp-backup-config-schedule-transact-sql.md) 를 사용 하 여이 절차를 통해 관리 되는 백업을 사용 하도록 설정 합니다.  
+>  이 절차를 자체적으로 호출 하 여 기본 관리 되는 백업 구성을 만들 수 있습니다. 그러나 고급 기능 또는 사용자 지정 일정을 추가 하려는 경우 먼저 [managed_backup. sp_backup_config_advanced ](../../relational-databases/system-stored-procedures/managed-backup-sp-backup-config-advanced-transact-sql.md) [&#41;&#40;](../../relational-databases/system-stored-procedures/managed-backup-sp-backup-config-schedule-transact-sql.md)&#41;&#40;사용 하 여이 절차를 통해 관리 되는 백업을 사용 하도록 설정 하기 전에 해당 설정을 구성 합니다.  
    
  ![항목 링크 아이콘](../../database-engine/configure-windows/media/topic-link.gif "항목 링크 아이콘") [Transact-SQL 구문 표기 규칙](../../t-sql/language-elements/transact-sql-syntax-conventions-transact-sql.md)  
   
@@ -54,7 +54,7 @@ EXEC managed_backup.sp_backup_config_basic
  특정 데이터베이스에서 관리 되는 백업을 사용 하도록 설정 하기 위한 데이터베이스 이름입니다.  
   
  @container_url  
- 백업 위치를 나타내는 URL입니다. @credential_name가 NULL 인 경우이 url은 Azure Storage blob 컨테이너에 대 한 SAS (공유 액세스 서명) url이 고, 백업에서는 새 백업을 사용 하 여 blob 기능을 차단 합니다. 자세한 내용은 [SAS 이해](https://azure.microsoft.com/documentation/articles/storage-dotnet-shared-access-signature-part-1/)를 참조 하세요. @credential_name이 지정 된 경우이는 저장소 계정 URL 이며 백업은 사용 되지 않는 백업 페이지 blob 기능을 사용 합니다.  
+ 백업 위치를 나타내는 URL입니다. @credential_name가 NULL 인 경우이 url은 Azure Storage blob 컨테이너에 대 한 SAS (공유 액세스 서명) url이 고, 백업에서는 새 백업을 사용 하 여 blob 기능을 차단 합니다. 자세한 내용은 [SAS 이해](/azure/storage/common/storage-sas-overview)를 참조 하세요. @credential_name이 지정 된 경우이는 저장소 계정 URL 이며 백업은 사용 되지 않는 백업 페이지 blob 기능을 사용 합니다.  
   
 > [!NOTE]  
 >  지금은이 매개 변수에 SAS URL만 지원 됩니다.  
@@ -76,7 +76,7 @@ EXEC managed_backup.sp_backup_config_basic
 ### <a name="permissions"></a>사용 권한  
  **ALTER ANY CREDENTIAL** 권한 및 **sp_delete_backuphistory** 저장 프로시저에 대 한 **EXECUTE** 권한이 있는 **db_backupoperator** 데이터베이스 역할의 멤버 자격이 필요 합니다.  
   
-## <a name="examples"></a>예제  
+## <a name="examples"></a>예  
  최신 Azure PowerShell 명령을 사용 하 여 저장소 계정 컨테이너와 SAS URL을 모두 만들 수 있습니다. 다음 예제에서는 mystorageaccount 저장소 계정에 새 컨테이너 mycontainer를 만든 다음 모든 권한을 사용 하 여이 컨테이너에 대 한 SAS URL을 가져옵니다.  
   
 ```powershell  
@@ -110,7 +110,6 @@ GO
 ```  
   
 ## <a name="see-also"></a>참고 항목  
- [managed_backup. sp_backup_config_advanced &#40;Transact-sql&#41;](../../relational-databases/system-stored-procedures/managed-backup-sp-backup-config-advanced-transact-sql.md)   
+ [transact-sql&#41;&#40;managed_backup.sp_backup_config_advanced managed_backup ](../../relational-databases/system-stored-procedures/managed-backup-sp-backup-config-advanced-transact-sql.md)   
  [managed_backup.sp_backup_config_schedule&#40;Transact-SQL&#41;](../../relational-databases/system-stored-procedures/managed-backup-sp-backup-config-schedule-transact-sql.md)  
-  
   

@@ -15,12 +15,12 @@ helpviewer_keywords:
 ms.assetid: 48066431-fed2-4a8a-85af-ac704689e183
 author: markingmyname
 ms.author: maghan
-ms.openlocfilehash: 53db2ff3554c095832a6fa21accb061f2575c3d6
-ms.sourcegitcommit: dd36d1cbe32cd5a65c6638e8f252b0bd8145e165
+ms.openlocfilehash: fe56373e9f80ce88c647458444655bea60ac431c
+ms.sourcegitcommit: 968969b62bc158b9843aba5034c9d913519bc4a7
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 09/08/2020
-ms.locfileid: "89548390"
+ms.lasthandoff: 10/06/2020
+ms.locfileid: "91753893"
 ---
 # <a name="sp_polybase_join_group-transact-sql"></a>sp_polybase_join_group (Transact-sql)
 [!INCLUDE [sqlserver2016](../../includes/applies-to-version/sqlserver2016.md)]
@@ -57,7 +57,7 @@ sp_polybase_join_group (@head_node_address = N'head_node_address',
  CONTROL SERVER 권한이 필요합니다.  
   
 ## <a name="remarks"></a>설명  
- 저장 프로시저를 실행 한 후 PolyBase 엔진을 종료 하 고 컴퓨터에서 PolyBase 데이터 이동 서비스를 다시 시작 합니다. 헤드 노드에서 실행 하는 다음 DMV를 확인 하려면 **dm_exec_compute_nodes**합니다.  
+ 저장 프로시저를 실행 한 후 PolyBase 엔진을 종료 하 고 컴퓨터에서 PolyBase 데이터 이동 서비스를 다시 시작 합니다. 헤드 노드에서 다음 DMV를 실행 하는지 확인 하려면 **sys.dm_exec_compute_nodes**합니다.  
   
 ## <a name="example"></a>예제  
  이 예에서는 현재 컴퓨터를 계산 노드로 PolyBase 그룹에 조인 합니다.  헤드 노드의 이름은 **HST01** 이 고 헤드 노드의 SQL Server 인스턴스 이름은 **MSSQLSERVER**입니다.  
@@ -67,7 +67,6 @@ EXEC sp_polybase_join_group N'HST01', 16450, N'MSSQLSERVER'
 ```  
   
 ## <a name="see-also"></a>관련 항목  
- [PolyBase 시작하기](../../relational-databases/polybase/get-started-with-polybase.md)   
+ [PolyBase 시작하기](../polybase/polybase-guide.md)   
  [시스템 저장 프로시저&#40;Transact-SQL&#41;](../../relational-databases/system-stored-procedures/system-stored-procedures-transact-sql.md)  
-  
   

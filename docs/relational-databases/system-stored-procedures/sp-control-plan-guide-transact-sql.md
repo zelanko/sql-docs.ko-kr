@@ -18,12 +18,12 @@ helpviewer_keywords:
 ms.assetid: c96d43d5-6507-4d66-b3f5-f44c0617cb5c
 author: markingmyname
 ms.author: maghan
-ms.openlocfilehash: 596ebe11f6fb455993add8c80da83e2c1f1ffca9
-ms.sourcegitcommit: dd36d1cbe32cd5a65c6638e8f252b0bd8145e165
+ms.openlocfilehash: 5a66806fa3c4865da7486a7ada3c46a9691be6d7
+ms.sourcegitcommit: 968969b62bc158b9843aba5034c9d913519bc4a7
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 09/08/2020
-ms.locfileid: "89539058"
+ms.lasthandoff: 10/06/2020
+ms.locfileid: "91753906"
 ---
 # <a name="sp_control_plan_guide-transact-sql"></a>sp_control_plan_guide(Transact-SQL)
 [!INCLUDE [SQL Server](../../includes/applies-to-version/sqlserver.md)]
@@ -77,12 +77,12 @@ sp_control_plan_guide [ @operation = ] N'<control_option>'
   
  비활성화된 계획 지침을 비활성화하거나 활성화된 계획 지침을 활성화하면 아무런 영향을 미치지 않고 오류 없이 실행됩니다.  
   
- 계획 지침은 일부 버전에서 사용할 수 없습니다 [!INCLUDE[msCoName](../../includes/msconame-md.md)] [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] . [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 버전에서 지원되는 기능 목록은 [SQL Server 2016 버전에 대한 버전 및 지원하는 기능](../../sql-server/editions-and-supported-features-for-sql-server-2016.md)을 참조하세요. 그러나 모든 버전에서 DROP 또는 DROP ALL 옵션을 사용 하 여 **sp_control_plan_guide** 를 실행할 수 있습니다 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] .  
+ 계획 지침은 일부 버전에서 사용할 수 없습니다 [!INCLUDE[msCoName](../../includes/msconame-md.md)] [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] . [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 버전에서 지원되는 기능 목록은 [SQL Server 2016 버전에 대한 버전 및 지원하는 기능](../../sql-server/editions-and-components-of-sql-server-2016.md)을 참조하세요. 그러나 모든 버전에서 DROP 또는 DROP ALL 옵션을 사용 하 여 **sp_control_plan_guide** 를 실행할 수 있습니다 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] .  
   
 ## <a name="permissions"></a>사용 권한  
  ** @type = '** Object **'** 를 지정 하 여 만든 개체 유형의 계획 지침에서 **sp_control_plan_guide** 를 실행 하려면 계획 지침에서 참조 하는 개체에 대 한 ALTER 권한이 필요 합니다. 다른 모든 계획 지침에는 ALTER DATABASE 권한이 필요합니다.  
   
-## <a name="examples"></a>예제  
+## <a name="examples"></a>예  
   
 ### <a name="a-enabling-disabling-and-dropping-a-plan-guide"></a>A. 계획 지침 활성화, 비활성화 및 삭제  
  다음 예에서는 계획 지침을 만들고 비활성화하고 활성화하고 삭제합니다.  
@@ -140,5 +140,4 @@ EXEC sp_control_plan_guide N'DISABLE ALL';
  [sp_create_plan_guide&#40;Transact-SQL&#41;](../../relational-databases/system-stored-procedures/sp-create-plan-guide-transact-sql.md)   
  [sys.plan_guides&#40;Transact-SQL&#41;](../../relational-databases/system-catalog-views/sys-plan-guides-transact-sql.md)   
  [계획 지침](../../relational-databases/performance/plan-guides.md)  
-  
   

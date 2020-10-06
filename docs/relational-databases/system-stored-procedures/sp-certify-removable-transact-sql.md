@@ -18,19 +18,19 @@ helpviewer_keywords:
 ms.assetid: ca12767f-0ae5-4652-b523-c23473f100a1
 author: markingmyname
 ms.author: maghan
-ms.openlocfilehash: cebbe2f8b2e4787f0291244e08f04e30a814dded
-ms.sourcegitcommit: dd36d1cbe32cd5a65c6638e8f252b0bd8145e165
+ms.openlocfilehash: 5c80828117bfa4219d6f7377c4ed0123dec977aa
+ms.sourcegitcommit: 968969b62bc158b9843aba5034c9d913519bc4a7
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 09/08/2020
-ms.locfileid: "89541929"
+ms.lasthandoff: 10/06/2020
+ms.locfileid: "91753530"
 ---
 # <a name="sp_certify_removable-transact-sql"></a>sp_certify_removable(Transact-SQL)
 [!INCLUDE [SQL Server](../../includes/applies-to-version/sqlserver.md)]
 
   이동식 미디어에 배포할 수 있도록 데이터베이스가 제대로 구성되었는지 확인하고 사용자에게 발생한 모든 문제를 보고합니다.  
   
-> **중요!!** [! 대신[ssnotedepfutureavoid&lt](../../t-sql/statements/create-database-sql-server-transact-sql.md) 를 포함 합니다.  
+> **중요!!** [! 대신[ssnotedepfutureavoid&lt](../../t-sql/statements/create-database-transact-sql.md) 를 포함 합니다.  
   
   
  ![항목 링크 아이콘](../../database-engine/configure-windows/media/topic-link.gif "항목 링크 아이콘") [Transact-SQL 구문 표기 규칙](../../t-sql/language-elements/transact-sql-syntax-conventions-transact-sql.md)  
@@ -83,7 +83,7 @@ sp_certify_removable [ @dbname= ] 'dbname'
 ## <a name="permissions"></a>사용 권한  
  Execute 권한은 **sysadmin** 고정 서버 역할의 멤버로 제한 됩니다.  
   
-## <a name="examples"></a>예제  
+## <a name="examples"></a>예  
  다음 예에서는 `inventory` 데이터베이스를 제거할 준비가 되었음을 증명합니다.  
   
 ```  
@@ -96,5 +96,4 @@ EXEC sp_certify_removable inventory, AUTO;
  [ALTER DATABASE &#40;Transact-SQL &#41;](../../t-sql/statements/alter-database-transact-sql.md)   
  [Transact-sql&#41;sp_dbremove &#40;](../../relational-databases/system-stored-procedures/sp-dbremove-transact-sql.md)   
  [시스템 저장 프로시저&#40;Transact-SQL&#41;](../../relational-databases/system-stored-procedures/system-stored-procedures-transact-sql.md)  
-  
   

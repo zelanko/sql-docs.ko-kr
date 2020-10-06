@@ -18,12 +18,12 @@ helpviewer_keywords:
 ms.assetid: 9060aae3-3ddd-40a5-83bb-3ea7ab1ffbd7
 author: markingmyname
 ms.author: maghan
-ms.openlocfilehash: a3255e54b961effa6581875a332dc6651b7e1dce
-ms.sourcegitcommit: dd36d1cbe32cd5a65c6638e8f252b0bd8145e165
+ms.openlocfilehash: ee456f7be6d59ded32a67908d69bf59028e931c6
+ms.sourcegitcommit: 968969b62bc158b9843aba5034c9d913519bc4a7
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 09/08/2020
-ms.locfileid: "89542014"
+ms.lasthandoff: 10/06/2020
+ms.locfileid: "91753840"
 ---
 # <a name="sp_add_schedule-transact-sql"></a>sp_add_schedule(Transact-SQL)
 [!INCLUDE [SQL Server - ASDBMI](../../includes/applies-to-version/sql-asdbmi.md)]
@@ -69,7 +69,7 @@ sp_add_schedule [ @schedule_name = ] 'schedule_name'
 |**16**|매월|  
 |**32**|매월, *freq_interval* 기준|  
 |**64**|SQL 에이전트 서비스를 시작할 때 실행|  
-|**128**|컴퓨터가 유휴 상태일 때 실행 ( [AZURE SQL Managed Instance](https://docs.microsoft.com/azure/sql-database/sql-database-managed-instance-transact-sql-information#sql-server-agent)에서 지원 되지 않음) |  
+|**128**|컴퓨터가 유휴 상태일 때 실행 ( [AZURE SQL Managed Instance](/azure/sql-database/sql-database-managed-instance-transact-sql-information#sql-server-agent)에서 지원 되지 않음) |  
   
 `[ @freq_interval = ] freq_interval` 작업이 실행 되는 요일입니다. *freq_interval* 은 **int**이며 기본값은 **1**이 고 *freq_type*의 값에 따라 달라 집니다.  
   
@@ -146,7 +146,7 @@ sp_add_schedule [ @schedule_name = ] 'schedule_name'
   
  이러한 역할의 사용 권한에 대한 자세한 내용은 [SQL Server 에이전트 고정 데이터베이스 역할](../../ssms/agent/sql-server-agent-fixed-database-roles.md)을 참조하세요.  
   
-## <a name="examples"></a>예제  
+## <a name="examples"></a>예  
   
 ### <a name="a-creating-a-schedule"></a>A. 일정 만들기  
  다음 예에서는 `RunOnce`라는 일정을 만듭니다. 일정은 일정이 생성된 날짜의 `23:30`에 한 번 실행됩니다.  
@@ -201,5 +201,4 @@ GO
  [Transact-sql&#41;sp_delete_schedule &#40;](../../relational-databases/system-stored-procedures/sp-delete-schedule-transact-sql.md)   
  [Transact-sql&#41;sp_help_schedule &#40;](../../relational-databases/system-stored-procedures/sp-help-schedule-transact-sql.md)   
  [sp_attach_schedule&#40;Transact-SQL&#41;](../../relational-databases/system-stored-procedures/sp-attach-schedule-transact-sql.md)  
-  
   

@@ -18,12 +18,12 @@ helpviewer_keywords:
 ms.assetid: 516ef311-e83b-45c9-b9cd-0e0641774c04
 author: VanMSFT
 ms.author: vanto
-ms.openlocfilehash: 648ac83b7c0af68e0ead64ed7a0868ea5777c389
-ms.sourcegitcommit: e700497f962e4c2274df16d9e651059b42ff1a10
+ms.openlocfilehash: dc4f29dba1a922b5adae32e0fc42cf714afc292f
+ms.sourcegitcommit: 968969b62bc158b9843aba5034c9d913519bc4a7
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 08/17/2020
-ms.locfileid: "88481560"
+ms.lasthandoff: 10/06/2020
+ms.locfileid: "91753488"
 ---
 # <a name="sp_changedbowner-transact-sql"></a>sp_changedbowner(Transact-SQL)
 [!INCLUDE [SQL Server](../../includes/applies-to-version/sqlserver.md)]
@@ -67,20 +67,19 @@ sp_changedbowner [ @loginame = ] 'login'
 ## <a name="permissions"></a>사용 권한  
  데이터베이스에 대한 TAKE OWNERSHIP 권한이 필요합니다. 새 소유자에 상응하는 사용자가 데이터베이스에 있으면 로그인에 대한 IMPERSONATE 권한이 필요하고, 그렇지 않으면 서버에 대한 CONTROL SERVER 권한이 필요합니다.  
   
-## <a name="examples"></a>예제  
+## <a name="examples"></a>예  
  다음 예에서는 `Albert` 로그인을 현재 데이터베이스의 소유자로 만듭니다.  
   
 ```  
 EXEC sp_changedbowner 'Albert';  
 ```  
   
-## <a name="see-also"></a>참고 항목  
- [Transact-sql&#41;&#40;보안 저장 프로시저 ](../../relational-databases/system-stored-procedures/security-stored-procedures-transact-sql.md)   
- [CREATE DATABASE&#40;SQL Server Transact-SQL&#41;](../../t-sql/statements/create-database-sql-server-transact-sql.md)   
- [Transact-sql&#41;sp_dropalias &#40;](../../relational-databases/system-stored-procedures/sp-dropalias-transact-sql.md)   
+## <a name="see-also"></a>관련 항목  
+ [Security Stored Procedures &#40;Transact-SQL&#41;](../../relational-databases/system-stored-procedures/security-stored-procedures-transact-sql.md)   
+ [CREATE DATABASE&#40;SQL Server Transact-SQL&#41;](../../t-sql/statements/create-database-transact-sql.md)   
+ [Transact-sql&#41;sp_dropalias &#40;](./system-stored-procedures-transact-sql.md)   
  [sp_dropuser&#40;Transact-SQL&#41;](../../relational-databases/system-stored-procedures/sp-dropuser-transact-sql.md)   
  [Transact-sql&#41;sp_helpdb &#40;](../../relational-databases/system-stored-procedures/sp-helpdb-transact-sql.md)   
  [Transact-sql&#41;sp_helplogins &#40;](../../relational-databases/system-stored-procedures/sp-helplogins-transact-sql.md)   
  [시스템 저장 프로시저&#40;Transact-SQL&#41;](../../relational-databases/system-stored-procedures/system-stored-procedures-transact-sql.md)  
-  
   

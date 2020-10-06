@@ -20,12 +20,12 @@ ms.assetid: 723a9e63-8f6e-4d6e-b570-468cfaf03201
 author: markingmyname
 ms.author: maghan
 monikerRange: '>=aps-pdw-2016||=azuresqldb-current||=azure-sqldw-latest||>=sql-server-2016||=sqlallproducts-allversions||>=sql-server-linux-2017||=azuresqldb-mi-current'
-ms.openlocfilehash: d2879f58b53be571be8527ace6c4a7340e700f0d
-ms.sourcegitcommit: dd36d1cbe32cd5a65c6638e8f252b0bd8145e165
+ms.openlocfilehash: 244be615f5748a480a224f3cc7b1eb41cbc13a2f
+ms.sourcegitcommit: 968969b62bc158b9843aba5034c9d913519bc4a7
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 09/08/2020
-ms.locfileid: "89550150"
+ms.lasthandoff: 10/06/2020
+ms.locfileid: "91753595"
 ---
 # <a name="tables-transact-sql"></a>TABLES(Transact-SQL)
 [!INCLUDE [sql-asdb-asdbmi-asa-pdw](../../includes/applies-to-version/sql-asdb-asdbmi-asa-pdw.md)]
@@ -42,9 +42,8 @@ ms.locfileid: "89550150"
 |**TABLE_TYPE**|**varchar (** 10 **)**|테이블 유형입니다. VIEW 또는 BASE TABLE이 될 수 있습니다.|  
   
 ## <a name="see-also"></a>참고 항목  
- [Transact-sql&#41;&#40;시스템 뷰 ](https://msdn.microsoft.com/library/35a6161d-7f43-4e00-bcd3-3091f2015e90)   
+ [Transact-sql&#41;&#40;시스템 뷰 ](../../t-sql/language-reference.md)   
  [Transact-sql&#41;&#40;정보 스키마 뷰 ](~/relational-databases/system-information-schema-views/system-information-schema-views-transact-sql.md)   
  [sys.objects&#40;Transact-SQL&#41;](../../relational-databases/system-catalog-views/sys-objects-transact-sql.md)   
  [sys.tables&#40;Transact-SQL&#41;](../../relational-databases/system-catalog-views/sys-tables-transact-sql.md)  
-  
   

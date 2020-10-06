@@ -23,12 +23,12 @@ ms.assetid: 4523ae15-4260-40a7-a53c-8df15e1fee79
 author: MikeRayMSFT
 ms.author: mikeray
 monikerRange: =azuresqldb-current||>=sql-server-2016||=sqlallproducts-allversions||>=sql-server-linux-2017||=azuresqldb-mi-current
-ms.openlocfilehash: 76829bf7e49fe198dd6d1dd022aaad5a6a5e1ac2
-ms.sourcegitcommit: e700497f962e4c2274df16d9e651059b42ff1a10
+ms.openlocfilehash: 0f44a757695d067f518de22f9d3bc59af455a67c
+ms.sourcegitcommit: 968969b62bc158b9843aba5034c9d913519bc4a7
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 08/17/2020
-ms.locfileid: "88474664"
+ms.lasthandoff: 10/06/2020
+ms.locfileid: "91753775"
 ---
 # <a name="freetexttable-transact-sql"></a>FREETEXTTABLE(Transact-SQL)
 [!INCLUDE [SQL Server SQL Database](../../includes/applies-to-version/sql-asdb.md)]
@@ -102,7 +102,7 @@ FREETEXTTABLE (table , { column_name | (column_list) | * }
 ## <a name="permissions"></a>사용 권한  
  FREETEXTTABLE은 지정된 테이블이나 테이블에서 참조되는 열에 대해 적절한 SELECT 권한이 있는 사용자만 호출할 수 있습니다.  
   
-## <a name="examples"></a>예제  
+## <a name="examples"></a>예  
   
 ### <a name="a-simple-example"></a>A. 간단한 예  
  다음 예에서는 3 개의 군을 나열 하 고 플래그에 색을 나열 하는 두 개의 열로 이루어진 간단한 테이블을 만들고 채웁니다. 이 예제에서는 테이블에 대 한 전체 텍스트 카탈로그 및 인덱스를 만들고 채웁니다. 그런 다음 **FREETEXTTABLE** 구문을 보여 줍니다.  
@@ -172,13 +172,12 @@ GO
  [CREATE FULLTEXT INDEX&#40;Transact-SQL&#41;](../../t-sql/statements/create-fulltext-index-transact-sql.md)   
  [전체 텍스트 인덱스 만들기 및 관리](../../relational-databases/search/create-and-manage-full-text-indexes.md)   
  [전체 텍스트 검색을 사용한 쿼리](../../relational-databases/search/query-with-full-text-search.md)   
- [전체 텍스트 검색 쿼리 만들기&#40;Visual Database Tools&#41;](https://msdn.microsoft.com/library/537fa556-390e-4c88-9b8e-679848d94abc)   
+ [전체 텍스트 검색 쿼리 만들기&#40;Visual Database Tools&#41;](../../ssms/visual-db-tools/create-full-text-search-queries-visual-database-tools.md)   
  [CONTAINS&#40;Transact-SQL&#41;](../../t-sql/queries/contains-transact-sql.md)   
  [CONTAINSTABLE&#40;Transact-SQL&#41;](../../relational-databases/system-functions/containstable-transact-sql.md)   
  [FREETEXT&#40;Transact-SQL&#41;](../../t-sql/queries/freetext-transact-sql.md)   
- [행 집합 함수 &#40;Transact-sql&#41;](../../t-sql/functions/rowset-functions-transact-sql.md)   
+ [행 집합 함수 &#40;Transact-sql&#41;](../../t-sql/functions/opendatasource-transact-sql.md)   
  [SELECT&#40;Transact-SQL&#41;](../../t-sql/queries/select-transact-sql.md)   
  [WHERE&#40;Transact-SQL&#41;](../../t-sql/queries/where-transact-sql.md)   
  [precompute rank 서버 구성 옵션](../../database-engine/configure-windows/precompute-rank-server-configuration-option.md)  
-  
   

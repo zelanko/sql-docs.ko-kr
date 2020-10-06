@@ -20,12 +20,12 @@ ms.assetid: c75561b2-c9a1-48a1-9afa-a5896b6454cf
 author: markingmyname
 ms.author: maghan
 monikerRange: '>=aps-pdw-2016||=azuresqldb-current||=azure-sqldw-latest||>=sql-server-2016||=sqlallproducts-allversions||>=sql-server-linux-2017||=azuresqldb-mi-current'
-ms.openlocfilehash: 71985db395bd1574e40e1769093c30ec972f90a0
-ms.sourcegitcommit: dd36d1cbe32cd5a65c6638e8f252b0bd8145e165
+ms.openlocfilehash: aad968588ff8e7ed454b35d74ce992cae0f9d836
+ms.sourcegitcommit: 968969b62bc158b9843aba5034c9d913519bc4a7
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 09/08/2020
-ms.locfileid: "89536848"
+ms.lasthandoff: 10/06/2020
+ms.locfileid: "91753995"
 ---
 # <a name="routines-transact-sql"></a>ROUTINES(Transact-SQL)
 [!INCLUDE [sql-asdb-asdbmi-asa-pdw](../../includes/applies-to-version/sql-asdb-asdbmi-asa-pdw.md)]
@@ -76,7 +76,7 @@ ms.locfileid: "89536848"
 |MAXIMUM_CARDINALITY|**bigint**|NULL 나중에 사용하기 위해 예약되어 있습니다.|  
 |DTD_IDENTIFIER|**nvarchar (** 128 **)**|NULL 나중에 사용하기 위해 예약되어 있습니다.|  
 |ROUTINE_BODY|**nvarchar (** 30 **)**|[!INCLUDE[tsql](../../includes/tsql-md.md)] 함수의 경우에는 SQL을, 외부에서 작성된 함수의 경우에는 EXTERNAL을 반환합니다.<br /><br /> 함수는 항상 SQL이 됩니다.|  
-|ROUTINE_DEFINITION|**nvarchar (** 4000 **)**|함수 또는 저장 프로시저가 암호화되지 않은 경우 함수 또는 저장 프로시저의 정의 텍스트 중 처음 4000자를 반환합니다. 다른 데이터 형식에 대해서는 NULL을 반환합니다.<br /><br /> 전체 정의를 얻으려면 [OBJECT_DEFINITION](../../t-sql/functions/object-definition-transact-sql.md) 함수나 [sql_modules](../../relational-databases/system-catalog-views/sys-sql-modules-transact-sql.md) 카탈로그 뷰의 정의 열을 쿼리 합니다.|  
+|ROUTINE_DEFINITION|**nvarchar (** 4000 **)**|함수 또는 저장 프로시저가 암호화되지 않은 경우 함수 또는 저장 프로시저의 정의 텍스트 중 처음 4000자를 반환합니다. 다른 데이터 형식에 대해서는 NULL을 반환합니다.<br /><br /> 전체 정의를 얻으려면 [sys.sql_modules](../../relational-databases/system-catalog-views/sys-sql-modules-transact-sql.md) 카탈로그 뷰에서 [OBJECT_DEFINITION](../../t-sql/functions/object-definition-transact-sql.md) 함수 또는 정의 열을 쿼리 합니다.|  
 |EXTERNAL_NAME|**nvarchar (** 128 **)**|NULL 나중에 사용하기 위해 예약되어 있습니다.|  
 |EXTERNAL_LANGUAGE|**nvarchar (** 30 **)**|NULL 나중에 사용하기 위해 예약되어 있습니다.|  
 |PARAMETER_STYLE|**nvarchar (** 30 **)**|NULL 나중에 사용하기 위해 예약되어 있습니다.|  
@@ -92,11 +92,10 @@ ms.locfileid: "89536848"
 |LAST_ALTERED|**datetime**|함수를 마지막으로 수정한 시간입니다.|  
   
 ## <a name="see-also"></a>참고 항목  
- [Transact-sql&#41;&#40;시스템 뷰 ](https://msdn.microsoft.com/library/35a6161d-7f43-4e00-bcd3-3091f2015e90)   
+ [Transact-sql&#41;&#40;시스템 뷰 ](../../t-sql/language-reference.md)   
  [Transact-sql&#41;&#40;정보 스키마 뷰 ](~/relational-databases/system-information-schema-views/system-information-schema-views-transact-sql.md)   
  [sys.columns&#40;Transact-SQL&#41;](../../relational-databases/system-catalog-views/sys-columns-transact-sql.md)   
  [sys.objects&#40;Transact-SQL&#41;](../../relational-databases/system-catalog-views/sys-objects-transact-sql.md)   
  [sys.procedures&#40;Transact-SQL&#41;](../../relational-databases/system-catalog-views/sys-procedures-transact-sql.md)   
  [sys.sql_modules&#40;Transact-SQL&#41;](../../relational-databases/system-catalog-views/sys-sql-modules-transact-sql.md)  
-  
   

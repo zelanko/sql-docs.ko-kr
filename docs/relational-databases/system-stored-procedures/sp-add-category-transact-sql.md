@@ -18,22 +18,22 @@ helpviewer_keywords:
 ms.assetid: 6cca32cd-d941-4378-aed6-a7c90cb7520a
 author: MashaMSFT
 ms.author: mathoma
-ms.openlocfilehash: 40ce855f929a19f9dbcd757b0e1ea8774fbe2cb3
-ms.sourcegitcommit: e700497f962e4c2274df16d9e651059b42ff1a10
+ms.openlocfilehash: 845801380e1047dc9c44bf597a5fbea21e9d8dc4
+ms.sourcegitcommit: 968969b62bc158b9843aba5034c9d913519bc4a7
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 08/17/2020
-ms.locfileid: "88481695"
+ms.lasthandoff: 10/06/2020
+ms.locfileid: "91753715"
 ---
 # <a name="sp_add_category-transact-sql"></a>sp_add_category(Transact-SQL)
 [!INCLUDE [SQL Server - ASDBMI](../../includes/applies-to-version/sql-asdbmi.md)]
 
-  작업, 경고 또는 운영자의 지정된 범주를 서버에 추가합니다. 대체 방법은 [SQL Server Management Studio를 사용 하 여 작업 범주 만들기](/sql/ssms/agent/create-a-job-category)를 참조 하세요.
+  작업, 경고 또는 운영자의 지정된 범주를 서버에 추가합니다. 대체 방법은 [SQL Server Management Studio를 사용 하 여 작업 범주 만들기](../../ssms/agent/create-a-job-category.md)를 참조 하세요.
   
  ![항목 링크 아이콘](../../database-engine/configure-windows/media/topic-link.gif "항목 링크 아이콘") [Transact-SQL 구문 표기 규칙](../../t-sql/language-elements/transact-sql-syntax-conventions-transact-sql.md)  
   
  > [!IMPORTANT]  
- > [AZURE SQL Managed Instance](https://docs.microsoft.com/azure/sql-database/sql-database-managed-instance)에서 대부분의 SQL Server 에이전트 기능은 현재 지원 되지 않습니다. 자세한 내용은 [AZURE sql Managed Instance SQL Server에서 t-sql 차이점](https://docs.microsoft.com/azure/sql-database/sql-database-managed-instance-transact-sql-information#sql-server-agent) 을 참조 하세요.
+ > 현재 [Azure SQL Managed Instance](/azure/sql-database/sql-database-managed-instance)에서는 SQL Server 에이전트 기능이 대부분 지원됩니다. 자세한 내용은 [SQL Server와 Azure SQL Managed Instance 간의 T-SQL 차이점](/azure/sql-database/sql-database-managed-instance-transact-sql-information#sql-server-agent)을 참조하세요.
   
 ## <a name="syntax"></a>구문  
   
@@ -76,7 +76,7 @@ sp_add_category
 ## <a name="permissions"></a>사용 권한  
  **Sysadmin** 고정 서버 역할의 멤버만 **sp_add_category**를 실행할 수 있습니다.  
   
-## <a name="examples"></a>예제  
+## <a name="examples"></a>예  
  다음 예에서는 `AdminJobs`라는 로컬 작업 범주를 만듭니다.  
   
 ```  
@@ -97,5 +97,4 @@ GO
  [ Transact-sql&#41;&#40;작업dbo.sys](../../relational-databases/system-tables/dbo-sysjobs-transact-sql.md)   
  [dbo.sysjobservers &#40;Transact-sql&#41;](../../relational-databases/system-tables/dbo-sysjobservers-transact-sql.md)   
  [시스템 저장 프로시저&#40;Transact-SQL&#41;](../../relational-databases/system-stored-procedures/system-stored-procedures-transact-sql.md)  
-  
   

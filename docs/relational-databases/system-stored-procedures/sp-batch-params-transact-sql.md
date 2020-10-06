@@ -18,12 +18,12 @@ helpviewer_keywords:
 ms.assetid: 7b92fe9e-e755-4b7a-8a15-822c58a813d3
 author: markingmyname
 ms.author: maghan
-ms.openlocfilehash: d385c34f58e7796d7ed09fe5d5ba644f32a6eff1
-ms.sourcegitcommit: dd36d1cbe32cd5a65c6638e8f252b0bd8145e165
+ms.openlocfilehash: 201541b36ff441fc6b2942b546105f256cb457dd
+ms.sourcegitcommit: 968969b62bc158b9843aba5034c9d913519bc4a7
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 09/08/2020
-ms.locfileid: "89548303"
+ms.lasthandoff: 10/06/2020
+ms.locfileid: "91753506"
 ---
 # <a name="sp_batch_params-transact-sql"></a>sp_batch_params(Transact-SQL)
 [!INCLUDE [SQL Server](../../includes/applies-to-version/sqlserver.md)]
@@ -66,7 +66,7 @@ sp_batch_params [ [ @tsqlbatch = ] 'tsqlbatch' ]
 ## <a name="permissions"></a>사용 권한  
  **Sp_batch_params** 를 실행할 수 있는 권한은 **public**에 부여 됩니다.  
   
-## <a name="examples"></a>예제  
+## <a name="examples"></a>예  
  다음 예에서는 `sp_batch_params`로 전달되는 쿼리를 보여 줍니다. 결과 집합에는 포함된 매개 변수 값의 목록이 나열됩니다.  
   
 ```  
@@ -80,7 +80,6 @@ EXECUTE sp_batch_params @SQLString;
   
 ## <a name="see-also"></a>참고 항목  
  [저장 프로시저 실행](../../relational-databases/native-client-odbc-stored-procedures/running-stored-procedures.md)   
- [저장 프로시저 실행 방법 항목 ODBC&#41;&#40;](https://msdn.microsoft.com/library/c2220182-a23d-4475-b353-77a77ab613d6)   
+ [저장 프로시저 실행 방법 항목 ODBC&#41;&#40;](../native-client-odbc-how-to/running-stored-procedures-call-stored-procedures.md)   
  [저장 프로시저&#40;OLE DB&#41; 실행](../../relational-databases/native-client/ole-db/stored-procedures-running.md)  
-  
   

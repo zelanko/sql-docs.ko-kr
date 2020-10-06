@@ -18,17 +18,17 @@ author: VanMSFT
 ms.author: vanto
 ms.custom: seo-dt-2019
 monikerRange: = azuresqldb-current || = azure-sqldw-latest || = sqlallproducts-allversions
-ms.openlocfilehash: 06909fec18be239f1f416c074fa444a14705f0ec
-ms.sourcegitcommit: e700497f962e4c2274df16d9e651059b42ff1a10
+ms.openlocfilehash: e6a14687e8210133e2a80c0f678aebe7c9b31194
+ms.sourcegitcommit: 968969b62bc158b9843aba5034c9d913519bc4a7
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 08/17/2020
-ms.locfileid: "88486357"
+ms.lasthandoff: 10/06/2020
+ms.locfileid: "91753820"
 ---
 # <a name="firewall-rules-stored-procedures-azure-sql-database"></a>방화벽 규칙 저장 프로시저 (Azure SQL Database)
 [!INCLUDE [asdb-asa](../../includes/applies-to-version/asdb-asa.md)]
 
-  이 섹션에는 방화벽 규칙을 설정 또는 삭제하는 다음과 같은 저장 프로시저가 있습니다. [!INCLUDE[tsql_md](../../includes/tsql-md.md)] 방화벽 규칙은 및와 함께 사용할 수 있습니다 [!INCLUDE[ssSDS_md](../../includes/sssds-md.md)] [!INCLUDE[ssSDW_md](../../includes/sssdw-md.md)] . 자세한 내용은 [Azure SQL Database 방화벽 규칙 구성-개요](https://azure.microsoft.com/documentation/articles/sql-database-firewall-configure/)를 참조 하세요.
+  이 섹션에는 방화벽 규칙을 설정 또는 삭제하는 다음과 같은 저장 프로시저가 있습니다. [!INCLUDE[tsql_md](../../includes/tsql-md.md)] 방화벽 규칙은 및와 함께 사용할 수 있습니다 [!INCLUDE[ssSDS_md](../../includes/sssds-md.md)] [!INCLUDE[ssSDW_md](../../includes/sssdw-md.md)] . 자세한 내용은 [Azure SQL Database 방화벽 규칙 구성-개요](/azure/azure-sql/database/firewall-configure)를 참조 하세요.
 
 :::row:::
     :::column:::
@@ -50,6 +50,3 @@ ms.locfileid: "88486357"
 &nbsp;
   
 의 [!INCLUDE[ssNoVersion_md](../../includes/ssnoversion-md.md)] 경우 Window 방화벽 규칙을 사용 합니다. 자세한 내용은 [데이터베이스 엔진 액세스에 대한 Windows 방화벽 구성](../../database-engine/configure-windows/configure-a-windows-firewall-for-database-engine-access.md)을 참조하세요.   
-  
-
-

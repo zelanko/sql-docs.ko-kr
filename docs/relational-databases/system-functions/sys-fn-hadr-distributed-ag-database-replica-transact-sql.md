@@ -1,6 +1,6 @@
 ---
-description: sys. fn_hadr_distributed_ag_database_replica (Transact-sql)
-title: sys. fn_hadr_distributed_ag_database_replica (Transact-sql) | Microsoft Docs
+description: sys.fn_hadr_distributed_ag_database_replica (Transact-sql)
+title: sys.fn_hadr_distributed_ag_database_replica (Transact-sql) | Microsoft Docs
 ms.custom: ''
 ms.date: 06/14/2016
 ms.prod: sql
@@ -20,14 +20,14 @@ helpviewer_keywords:
 ms.assetid: 0e6202a1-e872-4f53-99d7-c16b6f712efc
 author: MikeRayMSFT
 ms.author: mikeray
-ms.openlocfilehash: f54cfdf987474435b452421620246b6432892a36
-ms.sourcegitcommit: e700497f962e4c2274df16d9e651059b42ff1a10
+ms.openlocfilehash: b87e98f49941cfa9da555d54a10185d21e36d47e
+ms.sourcegitcommit: 968969b62bc158b9843aba5034c9d913519bc4a7
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 08/17/2020
-ms.locfileid: "88419507"
+ms.lasthandoff: 10/06/2020
+ms.locfileid: "91753685"
 ---
-# <a name="sysfn_hadr_distributed_ag_database_replica-transact-sql"></a>sys. fn_hadr_distributed_ag_database_replica (Transact-sql)
+# <a name="sysfn_hadr_distributed_ag_database_replica-transact-sql"></a>sys.fn_hadr_distributed_ag_database_replica (Transact-sql)
 [!INCLUDE [sqlserver2016](../../includes/applies-to-version/sqlserver2016.md)]
 
   로컬 가용성 그룹의 데이터베이스에 분산 가용성 그룹의 데이터베이스를 매핑하는 데 사용 됩니다.  
@@ -55,9 +55,9 @@ sys.fn_hadr_distributed_ag_database_replica( lag_Id, database_id )
 |-----------------|---------------|-----------------|  
 |**group_database_id**|**uniqueidentifier**|로컬 가용성 그룹에 있는 데이터베이스의 ID입니다.|  
   
-## <a name="examples"></a>예제  
+## <a name="examples"></a>예  
   
-### <a name="using-sysfn_hadr_distributed_ag_database_replica"></a>Sys. fn_hadr_distributed_ag_database_replica 사용  
+### <a name="using-sysfn_hadr_distributed_ag_database_replica"></a>Sys.fn_hadr_distributed_ag_database_replica 사용  
  다음 예에서는 분산형 가용성 그룹의 데이터베이스 ID를 전달 합니다. 로컬 가용성 그룹에 연결 된 데이터베이스 ID를 사용 하 여 테이블을 반환 합니다.  
   
 ```  
@@ -71,8 +71,7 @@ GO
 ## <a name="see-also"></a>참고 항목  
  [Transact-sql&#41;를 사용 하 여 가용성 그룹 함수 Always On &#40;](../../relational-databases/system-functions/always-on-availability-groups-functions-transact-sql.md)   
  [Always On 가용성 그룹&#40;SQL Server&#41;](../../database-engine/availability-groups/windows/always-on-availability-groups-sql-server.md)   
- [Always On 가용성 그룹 &#40;분산 가용성 그룹&#41;](../../database-engine/availability-groups/windows/distributed-availability-groups-always-on-availability-groups.md)   
+ [Always On 가용성 그룹 &#40;분산 가용성 그룹&#41;](../../database-engine/availability-groups/windows/distributed-availability-groups.md)   
  [CREATE AVAILABILITY GROUP&#40;Transact-SQL&#41;](../../t-sql/statements/create-availability-group-transact-sql.md)   
  [ALTER AVAILABILITY GROUP&#40;Transact-SQL&#41;](../../t-sql/statements/alter-availability-group-transact-sql.md)  
-  
   

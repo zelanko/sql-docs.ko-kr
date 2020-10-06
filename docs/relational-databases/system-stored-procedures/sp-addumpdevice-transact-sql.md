@@ -19,17 +19,17 @@ helpviewer_keywords:
 ms.assetid: c2d2ae49-0808-46d8-8444-db69a69d0ec3
 author: markingmyname
 ms.author: maghan
-ms.openlocfilehash: 91af8d735fb27f5009d4c7067805523f02413ba4
-ms.sourcegitcommit: dd36d1cbe32cd5a65c6638e8f252b0bd8145e165
+ms.openlocfilehash: 1f17681ffbb922b25cffc6b21ecf2f6317d400db
+ms.sourcegitcommit: 968969b62bc158b9843aba5034c9d913519bc4a7
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 09/08/2020
-ms.locfileid: "89550014"
+ms.lasthandoff: 10/06/2020
+ms.locfileid: "91753796"
 ---
 # <a name="sp_addumpdevice-transact-sql"></a>sp_addumpdevice(Transact-SQL)
 [!INCLUDE [SQL Server](../../includes/applies-to-version/sqlserver.md)]
   
-**적용 대상**: [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] ([!INCLUDE[ssKatmai](../../includes/sskatmai-md.md)] ~ [현재 버전](https://go.microsoft.com/fwlink/p/?LinkId=299658)).  
+**적용 대상**: [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] ([!INCLUDE[ssKatmai](../../includes/sskatmai-md.md)] ~ [현재 버전](../../sql-server/what-s-new-in-sql-server-2016.md)).  
 
 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]의 인스턴스에 백업 디바이스를 추가합니다.  
   
@@ -50,7 +50,7 @@ sp_addumpdevice [ @devtype = ] 'device_type'
 ## <a name="arguments"></a>인수  
 `[ @devtype = ] 'device_type'` 백업 장치의 유형입니다. *device_type* 는 **varchar (20)** 이며 기본값은 없고 다음 값 중 하나일 수 있습니다.  
   
-|값|Description|  
+|값|설명|  
 |-----------|-----------------|  
 |**디스크로**|백업 디바이스로서의 하드 디스크 파일입니다.|  
 |**테이프가**|[!INCLUDE[msCoName](../../includes/msconame-md.md)] Windows에서 지원되는 테이프 디바이스입니다.<br /><br /> 참고: 테이프 백업 디바이스에 대한 지원은 이후 버전의 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]에서 제거될 예정입니다. 새 개발 작업에서는 이 기능을 사용하지 않도록 하고, 현재 이 기능을 사용하는 애플리케이션은 수정하세요.|  
@@ -77,7 +77,7 @@ sp_addumpdevice [ @devtype = ] 'device_type'
  None  
   
 ## <a name="remarks"></a>설명  
- **sp_addumpdevice** 백업 장치를 **backup_devices** 카탈로그 뷰에 추가 합니다. 그런 다음 BACKUP 및 RESTORE 문에서 해당 디바이스를 논리적으로 참조할 수 있습니다. **sp_addumpdevice** 은 물리적 장치에 대 한 액세스를 수행 하지 않습니다. BACKUP 또는 RESTORE 문을 수행하는 경우에만 지정한 디바이스에 액세스합니다. 논리적 백업 디바이스를 만들면 &quot;TAPE =&quot; 또는 &quot;DISK =&quot; 절 대신 디바이스 이름을 사용하여 디바이스 경로를 지정할 수 있으므로 BACKUP 및 RESTORE 문이 간단해집니다.  
+ **sp_addumpdevice** **sys.backup_devices** 카탈로그 뷰에 백업 장치를 추가 합니다. 그런 다음 BACKUP 및 RESTORE 문에서 해당 디바이스를 논리적으로 참조할 수 있습니다. **sp_addumpdevice** 은 물리적 장치에 대 한 액세스를 수행 하지 않습니다. BACKUP 또는 RESTORE 문을 수행하는 경우에만 지정한 디바이스에 액세스합니다. 논리적 백업 디바이스를 만들면 &quot;TAPE =&quot; 또는 &quot;DISK =&quot; 절 대신 디바이스 이름을 사용하여 디바이스 경로를 지정할 수 있으므로 BACKUP 및 RESTORE 문이 간단해집니다.  
   
  소유권 및 사용 권한 문제가 디스크 또는 파일 백업 디바이스 사용을 방해하는 경우가 있습니다. 따라서 [!INCLUDE[ssDE](../../includes/ssde-md.md)]이 시작된 Windows 계정에 대해 적절한 파일 사용 권한을 부여하십시오.  
   
@@ -94,7 +94,7 @@ sp_addumpdevice [ @devtype = ] 'device_type'
   
  디스크에 대한 쓰기 권한이 필요합니다.  
   
-## <a name="examples"></a>예제  
+## <a name="examples"></a>예  
   
 ### <a name="a-adding-a-disk-dump-device"></a>A. 디스크 덤프 디바이스 추가  
  다음 예에서는 `mydiskdump`이라는 물리적 이름으로 `c:\dump\dump1.bak`라는 디스크 백업 디바이스를 추가합니다.  
@@ -148,5 +148,4 @@ GO
  [sp_dropdevice&#40;Transact-SQL&#41;](../../relational-databases/system-stored-procedures/sp-dropdevice-transact-sql.md)   
  [sys.backup_devices&#40;Transact-SQL&#41;](../../relational-databases/system-catalog-views/sys-backup-devices-transact-sql.md)   
  [시스템 저장 프로시저&#40;Transact-SQL&#41;](../../relational-databases/system-stored-procedures/system-stored-procedures-transact-sql.md)  
-  
   

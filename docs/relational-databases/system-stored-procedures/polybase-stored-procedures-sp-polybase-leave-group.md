@@ -14,12 +14,12 @@ helpviewer_keywords:
 ms.assetid: ef87a8f1-5407-47b5-b8bf-bd7d08c0f0fe
 author: markingmyname
 ms.author: maghan
-ms.openlocfilehash: 2ce2e2ad16277c6ae5e21939976ede8ac89c8843
-ms.sourcegitcommit: dd36d1cbe32cd5a65c6638e8f252b0bd8145e165
+ms.openlocfilehash: 3d909da06b0f8cf4520d92a9ba8cb8652a6b2a5a
+ms.sourcegitcommit: 968969b62bc158b9843aba5034c9d913519bc4a7
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 09/08/2020
-ms.locfileid: "89546254"
+ms.lasthandoff: 10/06/2020
+ms.locfileid: "91753894"
 ---
 # <a name="sp_polybase_leave_group-transact-sql"></a>sp_polybase_leave_group (Transact-sql)
 [!INCLUDE [sqlserver2016](../../includes/applies-to-version/sqlserver2016.md)]
@@ -47,7 +47,7 @@ sp_polybase_leave_group;
 ## <a name="remarks"></a>설명  
  그룹에서 계산 노드만 제거할 수 있습니다.  
   
- 저장 프로시저를 실행 한 후 PolyBase 엔진을 다시 시작 하 고 컴퓨터에서 서비스를 PolyBase 데이터 이동 합니다. 헤드 노드에서 실행 하는 다음 DMV를 확인 하려면 **dm_exec_compute_nodes**합니다.  
+ 저장 프로시저를 실행 한 후 PolyBase 엔진을 다시 시작 하 고 컴퓨터에서 서비스를 PolyBase 데이터 이동 합니다. 헤드 노드에서 다음 DMV를 실행 하는지 확인 하려면 **sys.dm_exec_compute_nodes**합니다.  
   
 ## <a name="example"></a>예제  
  이 예에서는 PolyBase 그룹에서 현재 컴퓨터를 제거 합니다.  
@@ -57,7 +57,6 @@ EXEC sp_polybase_leave_group ;
 ```  
   
 ## <a name="see-also"></a>관련 항목  
- [PolyBase 시작하기](../../relational-databases/polybase/get-started-with-polybase.md)   
+ [PolyBase 시작하기](../polybase/polybase-guide.md)   
  [시스템 저장 프로시저&#40;Transact-SQL&#41;](../../relational-databases/system-stored-procedures/system-stored-procedures-transact-sql.md)  
-  
   

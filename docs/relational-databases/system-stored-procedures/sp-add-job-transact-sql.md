@@ -18,12 +18,12 @@ helpviewer_keywords:
 ms.assetid: 6ca8fe2c-7b1c-4b59-b4c7-e3b7485df274
 author: markingmyname
 ms.author: maghan
-ms.openlocfilehash: 632d9a16af35f5b889a03892c92cb7836e3f9d50
-ms.sourcegitcommit: dd36d1cbe32cd5a65c6638e8f252b0bd8145e165
+ms.openlocfilehash: 89f90d460287fadc9cdda97c020ccef7a47ceccd
+ms.sourcegitcommit: 968969b62bc158b9843aba5034c9d913519bc4a7
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 09/08/2020
-ms.locfileid: "89539210"
+ms.lasthandoff: 10/06/2020
+ms.locfileid: "91753865"
 ---
 # <a name="sp_add_job-transact-sql"></a>sp_add_job(Transact-SQL)
 [!INCLUDE [SQL Server - ASDBMI](../../includes/applies-to-version/sql-asdbmi.md)]
@@ -33,7 +33,7 @@ ms.locfileid: "89539210"
  ![항목 링크 아이콘](../../database-engine/configure-windows/media/topic-link.gif "항목 링크 아이콘") [Transact-SQL 구문 표기 규칙](../../t-sql/language-elements/transact-sql-syntax-conventions-transact-sql.md)  
  
  > [!IMPORTANT]  
- > [AZURE SQL Managed Instance](https://docs.microsoft.com/azure/sql-database/sql-database-managed-instance)에서 대부분의 SQL Server 에이전트 기능은 현재 지원 되지 않습니다. 자세한 내용은 [AZURE sql Managed Instance SQL Server에서 t-sql 차이점](https://docs.microsoft.com/azure/sql-database/sql-database-managed-instance-transact-sql-information#sql-server-agent) 을 참조 하세요.
+ > 현재 [Azure SQL Managed Instance](/azure/sql-database/sql-database-managed-instance)에서는 SQL Server 에이전트 기능이 대부분 지원됩니다. 자세한 내용은 [SQL Server와 Azure SQL Managed Instance 간의 T-SQL 차이점](/azure/sql-database/sql-database-managed-instance-transact-sql-information#sql-server-agent)을 참조하세요.
  
 ## <a name="syntax"></a>구문  
   
@@ -74,7 +74,7 @@ sp_add_job [ @job_name = ] 'job_name'
   
 `[ @notify_level_eventlog = ] eventlog_level` Microsoft Windows 응용 프로그램 로그에서이 작업에 대 한 항목을 저장할 시간을 나타내는 값입니다. *eventlog_level*은 **int**이며 다음 값 중 하나일 수 있습니다.  
   
-|값|Description|  
+|값|설명|  
 |-----------|-----------------|  
 |**0**|안 함|  
 |**1**|성공한 경우|  
@@ -128,7 +128,7 @@ sp_add_job [ @job_name = ] 'job_name'
   
  **Sysadmin** 고정 서버 역할의 멤버만 ** \@ owner_login_name**에 대 한 값을 설정 하거나 변경할 수 있습니다. **Sysadmin** 역할의 멤버가 아닌 사용자가 ** \@ owner_login_name**값을 설정 하거나 변경 하는 경우이 저장 프로시저의 실행이 실패 하 고 오류가 반환 됩니다.  
   
-## <a name="examples"></a>예제  
+## <a name="examples"></a>예  
   
 ### <a name="a-adding-a-job"></a>A. 작업 추가  
  다음 예에서는 `NightlyBackups`라는 새 작업을 추가합니다.  
@@ -180,5 +180,4 @@ GO
  [Transact-sql&#41;sp_help_jobstep &#40;](../../relational-databases/system-stored-procedures/sp-help-jobstep-transact-sql.md)   
  [Transact-sql&#41;sp_update_job &#40;](../../relational-databases/system-stored-procedures/sp-update-job-transact-sql.md)   
  [시스템 저장 프로시저&#40;Transact-SQL&#41;](../../relational-databases/system-stored-procedures/system-stored-procedures-transact-sql.md)  
-  
   

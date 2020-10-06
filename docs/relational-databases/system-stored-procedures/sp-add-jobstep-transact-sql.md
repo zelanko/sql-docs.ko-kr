@@ -16,12 +16,12 @@ author: markingmyname
 ms.author: maghan
 ms.custom: ''
 ms.date: 03/15/2017
-ms.openlocfilehash: bb8a754ee5e477f0bccce286f8f93193136276e4
-ms.sourcegitcommit: e700497f962e4c2274df16d9e651059b42ff1a10
+ms.openlocfilehash: 8e4b24e5fcab13083c06f53868f462c3b45cc497
+ms.sourcegitcommit: 968969b62bc158b9843aba5034c9d913519bc4a7
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 08/17/2020
-ms.locfileid: "88464742"
+ms.lasthandoff: 10/06/2020
+ms.locfileid: "91753805"
 ---
 # <a name="sp_add_jobstep-transact-sql"></a>sp_add_jobstep(Transact-SQL)
 
@@ -32,7 +32,7 @@ SQL 에이전트 작업에 단계 (작업)를 추가 합니다.
 ![항목 링크 아이콘](../../database-engine/configure-windows/media/topic-link.gif "항목 링크 아이콘") [Transact-SQL 구문 표기 규칙](../../t-sql/language-elements/transact-sql-syntax-conventions-transact-sql.md)
 
 > [!IMPORTANT]
-> [AZURE SQL Managed Instance](https://docs.microsoft.com/azure/sql-database/sql-database-managed-instance)에서는 대부분의 SQL Server 에이전트 작업 유형이 지원 되지 않습니다. 자세한 내용은 [AZURE sql Managed Instance SQL Server에서 t-sql 차이점](https://docs.microsoft.com/azure/sql-database/sql-database-managed-instance-transact-sql-information#sql-server-agent) 을 참조 하세요.
+> [AZURE SQL Managed Instance](/azure/sql-database/sql-database-managed-instance)에서는 대부분의 SQL Server 에이전트 작업 유형이 지원 되지 않습니다. 자세한 내용은 [SQL Server와 Azure SQL Managed Instance 간의 T-SQL 차이점](/azure/sql-database/sql-database-managed-instance-transact-sql-information#sql-server-agent)을 참조하세요.
 
 ## <a name="syntax"></a>구문
 
@@ -93,14 +93,14 @@ sp_add_jobstep [ @job_id = ] job_id | [ @job_name = ] 'job_name'
 `[ @command = ] 'command'`*하위 시스템*을 통해 **SQLServerAgent** 서비스에서 실행할 명령입니다. *명령은* **nvarchar (max)** 이며 기본값은 NULL입니다. SQL Server 에이전트에는 소프트웨어 프로그램 작성 시 변수를 사용하는 것과 같은 유연성을 제공하는 토큰 대체 기능이 있습니다.
 
 > [!IMPORTANT]
-> 작업 단계에서 사용되는 모든 토큰에 이스케이프 매크로를 사용해야 하며 그렇지 않으면 작업 단계가 실패합니다. 또한 이제 토큰 이름을 괄호로 묶고 토큰 구문의 시작 부분에 달러 기호(`$`)를 사용해야 합니다. 예를 들어 다음과 같은 가치를 제공해야 합니다.
+> 작업 단계에서 사용되는 모든 토큰에 이스케이프 매크로를 사용해야 하며 그렇지 않으면 작업 단계가 실패합니다. 또한 이제 토큰 이름을 괄호로 묶고 토큰 구문의 시작 부분에 달러 기호(`$`)를 사용해야 합니다. 예를 들면 다음과 같습니다.
 >
 > `$(ESCAPE_` *macro name* `(DATE))`  
 
 이러한 토큰에 대 한 자세한 내용과 새로운 토큰 구문을 사용 하도록 작업 단계를 업데이트 하는 방법에 대 한 자세한 내용은 [작업 단계에서 토큰 사용](../../ssms/agent/use-tokens-in-job-steps.md)을 참조 하세요.
 
 > [!IMPORTANT]
-> Windows 이벤트 로그에 대한 쓰기 권한이 있는 모든 Windows 사용자는 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 에이전트 경고 또는 WMI 경고로 활성화되는 작업 단계에 액세스할 수 있습니다. 이러한 보안상 위험을 방지하기 위해 경고로 활성화되는 작업에 사용할 수 있는 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 에이전트 토큰은 기본적으로 해제됩니다. 이러한 토큰에는 **a-dbn**, **a**- **ERR**, a- **심각도**, **-MSG**및 **WMI (**_속성_**)** 가 있습니다. 이번 릴리스에서는 모든 경고에 토큰을 사용할 수 있습니다.
+> Windows 이벤트 로그에 대한 쓰기 권한이 있는 모든 Windows 사용자는 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 에이전트 경고 또는 WMI 경고로 활성화되는 작업 단계에 액세스할 수 있습니다. 이러한 보안상 위험을 방지하기 위해 경고로 활성화되는 작업에 사용할 수 있는 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 에이전트 토큰은 기본적으로 해제됩니다. 이러한 토큰은 다음과 같습니다. **A-DBN**, **A-SVR**, **A-ERR**, **A-SEV**, **A-MSG**. 및 **WMI(** _property_ **)** 가 있습니다. 이번 릴리스에서는 모든 경고에 토큰을 사용할 수 있습니다.
 >
 > 이러한 토큰을 사용해야 하는 경우 먼저 Administrators 그룹과 같은 트러스트된 Windows 보안 그룹의 멤버만 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 가 설치된 컴퓨터의 이벤트 로그에 대한 쓰기 권한이 있는지 확인합니다. 그런 다음 개체 탐색기에서 **SQL Server 에이전트** 를 마우스 오른쪽 단추로 클릭한 다음 **속성**을 선택하고 **경고 시스템** 페이지에서 **경고에 대한 모든 응답 작업에 대해 토큰 바꾸기** 를 선택하여 이러한 토큰을 설정합니다.
 
@@ -192,7 +192,7 @@ SQL Server Management Studio는 작업 구조를 만들고 관리할 수 있는 
 
 작업 단계의 생성자는 작업 단계에 대한 프록시에 액세스할 수 있어야 합니다. **Sysadmin** 고정 서버 역할의 멤버는 모든 프록시에 액세스할 수 있습니다. 다른 사용자에게는 프록시에 대한 액세스 권한을 명시적으로 부여해야 합니다.
 
-## <a name="examples"></a>예제
+## <a name="examples"></a>예
 
 다음 예에서는 Sales 데이터베이스에 대한 액세스 권한을 읽기 전용으로 변경하는 작업 단계를 만듭니다. 또한 이 예에서는 다시 시도 횟수를 5로 지정하고 각 다시 시도는 5분 대기한 후에 발생하도록 지정합니다.
 

@@ -1,6 +1,6 @@
 ---
 description: sys.fn_get_audit_file(Transact-SQL)
-title: sys. fn_get_audit_file (Transact-sql) | Microsoft Docs
+title: sys.fn_get_audit_file (Transact-sql) | Microsoft Docs
 ms.custom: ''
 ms.date: 02/19/2020
 ms.prod: sql
@@ -22,12 +22,12 @@ ms.assetid: d6a78d14-bb1f-4987-b7b6-579ddd4167f5
 author: rothja
 ms.author: jroth
 monikerRange: =azuresqldb-current||>=sql-server-2016||=sqlallproducts-allversions||>=sql-server-linux-2017||=azuresqldb-mi-current||=azure-sqldw-latest
-ms.openlocfilehash: cda66aed0e3ddea4bcb14bc30ca5805bf943afb4
-ms.sourcegitcommit: e700497f962e4c2274df16d9e651059b42ff1a10
+ms.openlocfilehash: 6b631c6a8139304bd716e4eb1f3969de706f31d6
+ms.sourcegitcommit: 968969b62bc158b9843aba5034c9d913519bc4a7
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 08/17/2020
-ms.locfileid: "88321799"
+ms.lasthandoff: 10/06/2020
+ms.locfileid: "91753768"
 ---
 # <a name="sysfn_get_audit_file-transact-sql"></a>sys.fn_get_audit_file(Transact-SQL)
 [!INCLUDE [SQL Server SQL Database](../../includes/applies-to-version/sql-asdb-asdbmi-asa.md)]    
@@ -50,7 +50,7 @@ fn_get_audit_file ( file_pattern,
  
  - **SQL Server**:
     
-    이 인수에는 경로와 파일 이름이 모두 포함되어야 합니다. 드라이브 문자나 네트워크 공유를 경로로 사용할 수 있으며, 파일 이름에 와일드카드를 사용할 수 있습니다. 단일 별표 (*)를 사용 하 여 감사 파일 집합에서 여러 파일을 수집할 수 있습니다. 예를 들어 다음과 같은 가치를 제공해야 합니다.  
+    이 인수에는 경로와 파일 이름이 모두 포함되어야 합니다. 드라이브 문자나 네트워크 공유를 경로로 사용할 수 있으며, 파일 이름에 와일드카드를 사용할 수 있습니다. 단일 별표 (*)를 사용 하 여 감사 파일 집합에서 여러 파일을 수집할 수 있습니다. 예를 들면 다음과 같습니다.  
   
     -   **\<path>\\\*** -지정 된 위치에 있는 모든 감사 파일을 수집 합니다.  
   
@@ -60,7 +60,7 @@ fn_get_audit_file ( file_pattern,
   
  - **Azure SQL Database**:
  
-    이 인수는 blob URL (저장소 끝점 및 컨테이너 포함)을 지정 하는 데 사용 됩니다. 별표 와일드 카드를 지원 하지 않는 경우 전체 blob 이름 대신 부분 파일 (blob) 이름 접두사를 사용 하 여이 접두사로 시작 하는 여러 파일 (blob)을 수집할 수 있습니다. 예를 들어 다음과 같은 가치를 제공해야 합니다.
+    이 인수는 blob URL (저장소 끝점 및 컨테이너 포함)을 지정 하는 데 사용 됩니다. 별표 와일드 카드를 지원 하지 않는 경우 전체 blob 이름 대신 부분 파일 (blob) 이름 접두사를 사용 하 여이 접두사로 시작 하는 여러 파일 (blob)을 수집할 수 있습니다. 예를 들면 다음과 같습니다.
  
       - **\<Storage_endpoint\>/\<Container\>/\<ServerName\>/\<DatabaseName\>/** -특정 데이터베이스에 대 한 모든 감사 파일 (blob)을 수집 합니다.    
       
@@ -95,7 +95,7 @@ fn_get_audit_file ( file_pattern,
 | class_type | **varchar(2)** | 감사가 수행되는 감사 가능한 엔터티의 형식입니다. Null을 허용하지 않습니다. |  
 | client_ip | **nvarchar(128)** | **적용 대상**: Azure SQL Database + SQL Server (2017부터 시작)<br /><br />  클라이언트 응용 프로그램의 원본 IP |  
 | connection_id | GUID | **적용**대상: AZURE SQL DATABASE 및 SQL Managed Instance<br /><br /> 서버에 있는 연결의 ID입니다. |
-| data_sensitivity_information | nvarchar(4000) | **적용 대상**: Azure SQL Database에만<br /><br /> 데이터베이스의 분류 된 열을 기반으로 감사 된 쿼리에서 반환 되는 정보 유형 및 민감도 레이블입니다. [Azure SQL Database 데이터 검색 및 분류](https://docs.microsoft.com/azure/sql-database/sql-database-data-discovery-and-classification) 에 대 한 자세한 정보 |
+| data_sensitivity_information | nvarchar(4000) | **적용 대상**: Azure SQL Database에만<br /><br /> 데이터베이스의 분류 된 열을 기반으로 감사 된 쿼리에서 반환 되는 정보 유형 및 민감도 레이블입니다. [Azure SQL Database 데이터 검색 및 분류](/azure/sql-database/sql-database-data-discovery-and-classification) 에 대 한 자세한 정보 |
 | database_name | **sysname** | 동작이 수행된 데이터베이스 컨텍스트입니다. Null을 허용합니다. 서버 수준에서 발생 하는 감사에 대해 NULL을 반환 합니다. |  
 | database_principal_id | **int** |동작을 수행한 데이터베이스 사용자 컨텍스트의 ID입니다. Null을 허용하지 않습니다. 이것이 적용되지 않으면 0을 반환합니다(예: 서버 작업).|
 | database_principal_name | **sysname** | 현재 사용자입니다. Null을 허용합니다. 사용할 수 없으면 NULL을 반환합니다. |  
@@ -103,8 +103,8 @@ fn_get_audit_file ( file_pattern,
 | event_time | **datetime2** | 감사 가능한 동작이 발생한 날짜 및 시간입니다. Null을 허용하지 않습니다. |  
 | file_name | **varchar(260)** | 레코드를 가져온 감사 로그 파일의 경로 및 이름입니다. Null을 허용하지 않습니다. |
 | is_column_permission | **bit** | 열 수준 사용 권한임을 나타내는 플래그입니다. Null을 허용하지 않습니다. permission_bitmask가 0이면 0을 반환합니다.<br /> 1 = true<br /> 0 = false |
-| object_id | **int** | 감사가 수행된 대상 엔터티의 ID입니다. 여기에는 다음이 포함됩니다.<br /> 서버 개체<br /> 데이터베이스<br /> 데이터베이스 개체<br /> 스키마 개체<br /> Null을 허용하지 않습니다. 엔터티가 서버 자체이거나 개체 수준에서 감사가 수행되지 않으면 0을 반환합니다(예: 인증). |  
-| object_name | **sysname** | 감사가 수행된 대상 엔터티의 이름입니다. 여기에는 다음이 포함됩니다.<br /> 서버 개체<br /> 데이터베이스<br /> 데이터베이스 개체<br /> 스키마 개체<br /> Null을 허용합니다. 엔터티가 서버 자체이거나 개체 수준에서 감사가 수행되지 않으면 Null을 반환합니다(예: 인증). |
+| object_id | **int** | 감사가 수행된 대상 엔터티의 ID입니다. 여기에는 다음과 같은 사항이 포함됩니다.<br /> 서버 개체<br /> 데이터베이스<br /> 데이터베이스 개체<br /> 스키마 개체<br /> Null을 허용하지 않습니다. 엔터티가 서버 자체이거나 개체 수준에서 감사가 수행되지 않으면 0을 반환합니다(예: 인증). |  
+| object_name | **sysname** | 감사가 수행된 대상 엔터티의 이름입니다. 여기에는 다음과 같은 사항이 포함됩니다.<br /> 서버 개체<br /> 데이터베이스<br /> 데이터베이스 개체<br /> 스키마 개체<br /> Null을 허용합니다. 엔터티가 서버 자체이거나 개체 수준에서 감사가 수행되지 않으면 Null을 반환합니다(예: 인증). |
 | permission_bitmask | **varbinary(16)** | 일부 동작에서 이는 허용, 거부 또는 취소된 사용 권한입니다. |
 | response_rows | **bigint** | **적용**대상: AZURE SQL DATABASE 및 SQL Managed Instance<br /><br /> 결과 집합에 반환 되는 행의 수입니다. |  
 | schema_name | **sysname** | 동작이 수행된 스키마 컨텍스트입니다. Null을 허용합니다. 스키마 외부에서 발생 하는 감사에 대해 NULL을 반환 합니다. |  
@@ -139,7 +139,7 @@ fn_get_audit_file ( file_pattern,
   - 이외 서버 관리자는 현재 데이터베이스의 감사 로그에만 액세스할 수 있습니다.
   - 위의 조건을 충족 하지 않는 blob은 건너뜁니다 (건너뛴 blob 목록이 쿼리 출력 메시지에 표시 됨) .이 함수는 액세스가 허용 된 blob 에서만 로그를 반환 합니다.  
   
-## <a name="examples"></a>예제
+## <a name="examples"></a>예
 
 - **SQL Server**
 
@@ -177,10 +177,10 @@ fn_get_audit_file ( file_pattern,
 
 감사를 만드는 방법에 대한 전체 예에 대해서는 [SQL Server Audit &#40;Database Engine&#41;](../../relational-databases/security/auditing/sql-server-audit-database-engine.md)를 참조하십시오.
 
-Azure SQL Database 감사를 설정 하는 방법에 대 한 자세한 내용은 [SQL Database 감사 시작](https://docs.microsoft.com/azure/sql-database/sql-database-auditing)을 참조 하세요.
+Azure SQL Database 감사를 설정 하는 방법에 대 한 자세한 내용은 [SQL Database 감사 시작](/azure/sql-database/sql-database-auditing)을 참조 하세요.
   
-## <a name="see-also"></a>참고 항목  
- [서버 감사 &#40;Transact-sql&#41;만들기 ](../../t-sql/statements/create-server-audit-transact-sql.md)   
+## <a name="see-also"></a>관련 항목  
+ [CREATE SERVER AUDIT &#40;Transact-SQL&#41;](../../t-sql/statements/create-server-audit-transact-sql.md)   
  [ALTER SERVER AUDIT  &#40;Transact-SQL&#41;](../../t-sql/statements/alter-server-audit-transact-sql.md)   
  [DROP SERVER AUDIT  &#40;Transact-SQL&#41;](../../t-sql/statements/drop-server-audit-transact-sql.md)   
  [CREATE SERVER AUDIT SPECIFICATION &#40;Transact-SQL&#41;](../../t-sql/statements/create-server-audit-specification-transact-sql.md)   
@@ -200,5 +200,4 @@ Azure SQL Database 감사를 설정 하는 방법에 대 한 자세한 내용은
  [sys.dm_audit_actions &#40;Transact-SQL&#41;](../../relational-databases/system-dynamic-management-views/sys-dm-audit-actions-transact-sql.md)   
  [sys.dm_audit_class_type_map &#40;Transact-SQL&#41;](../../relational-databases/system-dynamic-management-views/sys-dm-audit-class-type-map-transact-sql.md)   
  [서버 감사 및 서버 감사 사양 만들기](../../relational-databases/security/auditing/create-a-server-audit-and-server-audit-specification.md)  
-  
   

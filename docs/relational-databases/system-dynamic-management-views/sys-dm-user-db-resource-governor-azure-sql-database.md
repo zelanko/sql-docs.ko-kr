@@ -1,6 +1,6 @@
 ---
-description: sys. dm_user_db_resource_governance (Transact-sql)
-title: sys. dm_user_db_resource_governance (Transact-sql) | Microsoft Docs
+description: sys.dm_user_db_resource_governance (Transact-sql)
+title: sys.dm_user_db_resource_governance (Transact-sql) | Microsoft Docs
 ms.custom: ''
 ms.date: 11/17/2019
 ms.prod: sql
@@ -21,14 +21,14 @@ ms.assetid: ''
 author: joesackmsft
 ms.author: josack
 monikerRange: =azuresqldb-current||=sqlallproducts-allversions
-ms.openlocfilehash: 869a5d802e36e74c22a88e599065b04df35c62a7
-ms.sourcegitcommit: e700497f962e4c2274df16d9e651059b42ff1a10
+ms.openlocfilehash: 2038883693288a75f9e2dbe17d80b6b9c7474343
+ms.sourcegitcommit: 968969b62bc158b9843aba5034c9d913519bc4a7
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 08/17/2020
-ms.locfileid: "88498260"
+ms.lasthandoff: 10/06/2020
+ms.locfileid: "91753729"
 ---
-# <a name="sysdm_user_db_resource_governance-transact-sql"></a>sys. dm_user_db_resource_governance (Transact-sql)
+# <a name="sysdm_user_db_resource_governance-transact-sql"></a>sys.dm_user_db_resource_governance (Transact-sql)
 
 [!INCLUDE[appliesto-xx-asdb-xxxx-xxx-md](../../includes/appliesto-xx-asdb-xxxx-xxx-md.md)]
 
@@ -44,23 +44,23 @@ ms.locfileid: "88498260"
 |**slo_name**|nvarchar|하드웨어 생성을 포함 한 서비스 수준 목표입니다.|
 |**dtu_limit**|int|데이터베이스의 DTU 한도 (vCore의 경우 NULL)입니다.|
 |**cpu_limit**|int|데이터베이스의 vCore 제한 (DTU 데이터베이스의 경우 NULL)입니다.|
-|**min_cpu**|tinyint|사용자 작업 리소스 풀의 MIN_CPU_PERCENT 값입니다. [리소스 풀 개념](https://docs.microsoft.com/sql/relational-databases/resource-governor/resource-governor-resource-pool?#resource-pool-concepts)을 참조 하세요.|
-|**max_cpu**|tinyint|사용자 작업 리소스 풀의 MAX_CPU_PERCENT 값입니다. [리소스 풀 개념](https://docs.microsoft.com/sql/relational-databases/resource-governor/resource-governor-resource-pool?#resource-pool-concepts)을 참조 하세요.|
-|**cap_cpu**|tinyint|사용자 작업 리소스 풀의 CAP_CPU_PERCENT 값입니다. [리소스 풀 개념](https://docs.microsoft.com/sql/relational-databases/resource-governor/resource-governor-resource-pool?#resource-pool-concepts)을 참조 하세요.|
+|**min_cpu**|tinyint|사용자 작업 리소스 풀의 MIN_CPU_PERCENT 값입니다. [리소스 풀 개념](../resource-governor/resource-governor-resource-pool.md#resource-pool-concepts)을 참조 하세요.|
+|**max_cpu**|tinyint|사용자 작업 리소스 풀의 MAX_CPU_PERCENT 값입니다. [리소스 풀 개념](../resource-governor/resource-governor-resource-pool.md#resource-pool-concepts)을 참조 하세요.|
+|**cap_cpu**|tinyint|사용자 작업 리소스 풀의 CAP_CPU_PERCENT 값입니다. [리소스 풀 개념](../resource-governor/resource-governor-resource-pool.md#resource-pool-concepts)을 참조 하세요.|
 |**min_cores**|smallint|내부적으로만 사용됩니다.|
-|**max_dop**|smallint|사용자 작업 그룹의 MAX_DOP 값입니다. [작업 그룹 만들기](https://docs.microsoft.com/sql/t-sql/statements/create-workload-group-transact-sql)를 참조 하세요.|
-|**min_memory**|int|사용자 작업 리소스 풀의 MIN_MEMORY_PERCENT 값입니다. [리소스 풀 개념](https://docs.microsoft.com/sql/relational-databases/resource-governor/resource-governor-resource-pool?#resource-pool-concepts)을 참조 하세요.|
-|**max_memory**|int|사용자 작업 리소스 풀의 MAX_MEMORY_PERCENT 값입니다. [리소스 풀 개념](https://docs.microsoft.com/sql/relational-databases/resource-governor/resource-governor-resource-pool?#resource-pool-concepts)을 참조 하세요.|
+|**max_dop**|smallint|사용자 작업 그룹의 MAX_DOP 값입니다. [작업 그룹 만들기](../../t-sql/statements/create-workload-group-transact-sql.md)를 참조 하세요.|
+|**min_memory**|int|사용자 작업 리소스 풀의 MIN_MEMORY_PERCENT 값입니다. [리소스 풀 개념](../resource-governor/resource-governor-resource-pool.md#resource-pool-concepts)을 참조 하세요.|
+|**max_memory**|int|사용자 작업 리소스 풀의 MAX_MEMORY_PERCENT 값입니다. [리소스 풀 개념](../resource-governor/resource-governor-resource-pool.md#resource-pool-concepts)을 참조 하세요.|
 |**max_sessions**|int|사용자 작업 그룹에 허용 되는 최대 세션 수입니다.|
-|**max_memory_grant**|int|사용자 작업 그룹의 REQUEST_MAX_MEMORY_GRANT_PERCENT 값입니다. [작업 그룹 만들기](https://docs.microsoft.com/sql/t-sql/statements/create-workload-group-transact-sql)를 참조 하세요.|
+|**max_memory_grant**|int|사용자 작업 그룹의 REQUEST_MAX_MEMORY_GRANT_PERCENT 값입니다. [작업 그룹 만들기](../../t-sql/statements/create-workload-group-transact-sql.md)를 참조 하세요.|
 |**max_db_memory**|int|내부적으로만 사용됩니다.|
 |**govern_background_io**|bit|내부적으로만 사용됩니다.|
-|**min_db_max_size_in_mb**|bigint|데이터 파일의 최소 max_size 값 (MB)입니다. [Database_files](https://docs.microsoft.com/sql/relational-databases/system-catalog-views/sys-database-files-transact-sql)를 참조 하세요.|
-|**max_db_max_size_in_mb**|bigint|데이터 파일의 최대 max_size 값 (MB)입니다. [Database_files](https://docs.microsoft.com/sql/relational-databases/system-catalog-views/sys-database-files-transact-sql)를 참조 하세요.|
-|**default_db_max_size_in_mb**|bigint|데이터 파일에 대 한 기본 max_size 값 (MB)입니다. [Database_files](https://docs.microsoft.com/sql/relational-databases/system-catalog-views/sys-database-files-transact-sql)를 참조 하세요.|
-|**db_file_growth_in_mb**|bigint|데이터 파일의 기본 증가분 (MB)입니다. [Database_files](https://docs.microsoft.com/sql/relational-databases/system-catalog-views/sys-database-files-transact-sql)를 참조 하세요.|
-|**initial_db_file_size_in_mb**|bigint|새 데이터 파일의 기본 크기 (MB)입니다. [Database_files](https://docs.microsoft.com/sql/relational-databases/system-catalog-views/sys-database-files-transact-sql)를 참조 하세요.|
-|**log_size_in_mb**|bigint|새 로그 파일의 기본 크기 (MB)입니다. [Database_files](https://docs.microsoft.com/sql/relational-databases/system-catalog-views/sys-database-files-transact-sql)를 참조 하세요.|
+|**min_db_max_size_in_mb**|bigint|데이터 파일의 최소 max_size 값 (MB)입니다. [Sys.database_files](../system-catalog-views/sys-database-files-transact-sql.md)를 참조 하세요.|
+|**max_db_max_size_in_mb**|bigint|데이터 파일의 최대 max_size 값 (MB)입니다. [Sys.database_files](../system-catalog-views/sys-database-files-transact-sql.md)를 참조 하세요.|
+|**default_db_max_size_in_mb**|bigint|데이터 파일에 대 한 기본 max_size 값 (MB)입니다. [Sys.database_files](../system-catalog-views/sys-database-files-transact-sql.md)를 참조 하세요.|
+|**db_file_growth_in_mb**|bigint|데이터 파일의 기본 증가분 (MB)입니다. [Sys.database_files](../system-catalog-views/sys-database-files-transact-sql.md)를 참조 하세요.|
+|**initial_db_file_size_in_mb**|bigint|새 데이터 파일의 기본 크기 (MB)입니다. [Sys.database_files](../system-catalog-views/sys-database-files-transact-sql.md)를 참조 하세요.|
+|**log_size_in_mb**|bigint|새 로그 파일의 기본 크기 (MB)입니다. [Sys.database_files](../system-catalog-views/sys-database-files-transact-sql.md)를 참조 하세요.|
 |**instance_cap_cpu**|int|내부적으로만 사용됩니다.|
 |**instance_max_log_rate**|bigint|SQL Server 인스턴스의 로그 생성 률 한도 (바이트/초)입니다. 및 기타 시스템 데이터베이스를 포함 하 여 인스턴스에 의해 생성 된 모든 로그에 적용 됩니다 `tempdb` . 탄력적 풀에서는 풀에 있는 모든 데이터베이스에 의해 생성 된 로그에 적용 됩니다.|
 |**instance_max_worker_threads**|int|SQL Server 인스턴스에 대 한 작업자 스레드 제한입니다.|
@@ -97,12 +97,12 @@ ms.locfileid: "88498260"
 
 ## <a name="remarks"></a>설명
 
-Azure SQL Database의 리소스 관리에 대 한 설명은 [리소스 제한 SQL Database](https://docs.microsoft.com/azure/sql-database/sql-database-resource-limits-database-server)을 참조 하세요.
+Azure SQL Database의 리소스 관리에 대 한 설명은 [리소스 제한 SQL Database](/azure/sql-database/sql-database-resource-limits-database-server)을 참조 하세요.
 
 > [!IMPORTANT]
 > 이 DMV에서 반환 하는 대부분의 데이터는 내부 사용을 위한 것 이며 언제 든 지 변경 될 수 있습니다.
 
-## <a name="examples"></a>예제
+## <a name="examples"></a>예
 
 사용자 데이터베이스의 컨텍스트에서 실행 되는 다음 쿼리는 사용자 작업 그룹 및 리소스 풀 수준에서 최대 로그 속도 및 최대 IOPS를 반환 합니다. 단일 데이터베이스의 경우 하나의 행이 반환 됩니다. 탄력적 풀의 데이터베이스에 대해 풀의 각 데이터베이스에 대해 행이 반환 됩니다.
 
@@ -118,11 +118,11 @@ ORDER BY database_name;
 
 ## <a name="see-also"></a>참고 항목
 
-- [리소스 관리자](https://docs.microsoft.com/sql/relational-databases/resource-governor/resource-governor)
-- [sys.dm_resource_governor_resource_pools(Transact-SQL)](https://docs.microsoft.com/sql/relational-databases/system-dynamic-management-views/sys-dm-resource-governor-resource-pools-transact-sql)
-- [sys.dm_resource_governor_workload_groups(Transact-SQL)](https://docs.microsoft.com/sql/relational-databases/system-dynamic-management-views/sys-dm-resource-governor-workload-groups-transact-sql)
-- [sys. dm_resource_governor_resource_pools_history_ex (Transact-sql)](https://docs.microsoft.com/sql/relational-databases/system-dynamic-management-views/sys-dm-resource-governor-resource-pools-history-ex-azure-sql-database)
-- [sys.dm_resource_governor_workload_groups_history_ex(Azure SQL Database)](https://docs.microsoft.com/sql/relational-databases/system-dynamic-management-views/sys-dm-resource-governor-workload-groups-history-ex-azure-sql-database)
-- [트랜잭션 로그 요금 거 버 넌 스](https://docs.microsoft.com/azure/sql-database/sql-database-resource-limits-database-server#transaction-log-rate-governance)
-- [단일 데이터베이스 DTU 리소스 제한](https://docs.microsoft.com/azure/sql-database/sql-database-dtu-resource-limits-single-databases)
-- [단일 데이터베이스 vCore 리소스 제한](https://docs.microsoft.com/azure/sql-database/sql-database-vcore-resource-limits-single-databases)
+- [리소스 관리자](../resource-governor/resource-governor.md)
+- [sys.dm_resource_governor_resource_pools(Transact-SQL)](./sys-dm-resource-governor-resource-pools-transact-sql.md)
+- [sys.dm_resource_governor_workload_groups(Transact-SQL)](./sys-dm-resource-governor-workload-groups-transact-sql.md)
+- [sys.dm_resource_governor_resource_pools_history_ex (Transact-sql)](./sys-dm-resource-governor-resource-pools-history-ex-azure-sql-database.md)
+- [sys.dm_resource_governor_workload_groups_history_ex(Azure SQL Database)](./sys-dm-resource-governor-workload-groups-history-ex-azure-sql-database.md)
+- [트랜잭션 로그 요금 거 버 넌 스](/azure/sql-database/sql-database-resource-limits-database-server#transaction-log-rate-governance)
+- [단일 데이터베이스 DTU 리소스 제한](/azure/sql-database/sql-database-dtu-resource-limits-single-databases)
+- [단일 데이터베이스 vCore 리소스 제한](/azure/sql-database/sql-database-vcore-resource-limits-single-databases)

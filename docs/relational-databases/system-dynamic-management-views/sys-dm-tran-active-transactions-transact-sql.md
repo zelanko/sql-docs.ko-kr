@@ -1,6 +1,6 @@
 ---
 description: sys.dm_tran_active_transactions(Transact-SQL)
-title: sys. dm_tran_active_transactions (Transact-sql) | Microsoft Docs
+title: sys.dm_tran_active_transactions (Transact-sql) | Microsoft Docs
 ms.custom: ''
 ms.date: 03/30/2017
 ms.prod: sql
@@ -21,12 +21,12 @@ ms.assetid: 154ad6ae-5455-4ed2-b014-e443abe2c6ee
 author: markingmyname
 ms.author: maghan
 monikerRange: '>=aps-pdw-2016||=azuresqldb-current||=azure-sqldw-latest||>=sql-server-2016||=sqlallproducts-allversions||>=sql-server-linux-2017||=azuresqldb-mi-current'
-ms.openlocfilehash: c42556306a8e3fc48446ada4f8bee1e499f2f53a
-ms.sourcegitcommit: dd36d1cbe32cd5a65c6638e8f252b0bd8145e165
+ms.openlocfilehash: 7980a8013f43083498e5147cad39a60471b681ec
+ms.sourcegitcommit: 968969b62bc158b9843aba5034c9d913519bc4a7
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 09/08/2020
-ms.locfileid: "89539267"
+ms.lasthandoff: 10/06/2020
+ms.locfileid: "91753785"
 ---
 # <a name="sysdm_tran_active_transactions-transact-sql"></a>sys.dm_tran_active_transactions(Transact-SQL)
 [!INCLUDE [sql-asdb-asdbmi-asa-pdw](../../includes/applies-to-version/sql-asdb-asdbmi-asa-pdw.md)]
@@ -34,7 +34,7 @@ ms.locfileid: "89539267"
   [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 인스턴스에 대한 트랜잭션 정보를 반환합니다.  
   
 > [!NOTE]  
->  또는에서이를 호출 하려면 [!INCLUDE[ssSDWfull](../../includes/sssdwfull-md.md)] [!INCLUDE[ssPDW](../../includes/sspdw-md.md)] 이름 **sys. dm_pdw_nodes_tran_active_transactions**을 사용 합니다.  
+>  또는에서이를 호출 하려면 [!INCLUDE[ssSDWfull](../../includes/sssdwfull-md.md)] [!INCLUDE[ssPDW](../../includes/sspdw-md.md)] **sys.dm_pdw_nodes_tran_active_transactions**이름을 사용 합니다.  
   
 |열 이름|데이터 형식|Description|  
 |-----------------|---------------|-----------------|  
@@ -46,10 +46,10 @@ ms.locfileid: "89539267"
 |transaction_state|**int**|0 = 트랜잭션이 아직 완전히 초기화되지 않았습니다.<br /><br /> 1 = 트랜잭션을 초기화했지만 시작하지 않았습니다.<br /><br /> 2 = 트랜잭션이 활성 상태입니다.<br /><br /> 3 = 트랜잭션을 종료했습니다. 이것은 읽기 전용 트랜잭션에 사용됩니다.<br /><br /> 4 = 분산 트랜잭션에서 커밋 프로세스가 시작되었습니다. 이것은 분산 트랜잭션에만 사용됩니다. 분산 트랜잭션이 여전히 활성 상태지만 더 이상은 처리할 수 없습니다.<br /><br /> 5 = 트랜잭션이 준비된 상태이며 해결을 기다리고 있습니다.<br /><br /> 6 = 트랜잭션이 커밋 되었습니다.<br /><br /> 7 = 트랜잭션을 롤백하고 있습니다.<br /><br /> 8 = 트랜잭션을 롤백합니다.|  
 |transaction_status|**int**|[!INCLUDE[ssInternalOnly](../../includes/ssinternalonly-md.md)]|  
 |transaction_status2|**int**|[!INCLUDE[ssInternalOnly](../../includes/ssinternalonly-md.md)]|  
-|dtc_state|**int**|**적용 대상**: [!INCLUDE[ssSDSfull](../../includes/sssdsfull-md.md)] (초기 릴리스- [현재 릴리스](https://go.microsoft.com/fwlink/p/?LinkId=299659)).<br /><br /> 1 = 활성<br /><br /> 2 = 준비됨<br /><br /> 3 = 커밋됨<br /><br /> 4 = 중단됨<br /><br /> 5 = 복구됨|  
+|dtc_state|**int**|**적용 대상**: [!INCLUDE[ssSDSfull](../../includes/sssdsfull-md.md)] (초기 릴리스- [현재 릴리스](/previous-versions/azure/ee336279(v=azure.100))).<br /><br /> 1 = 활성<br /><br /> 2 = 준비됨<br /><br /> 3 = 커밋됨<br /><br /> 4 = 중단됨<br /><br /> 5 = 복구됨|  
 |dtc_status|**int**|[!INCLUDE[ssInternalOnly](../../includes/ssinternalonly-md.md)]|  
 |dtc_isolation_level|**int**|[!INCLUDE[ssInternalOnly](../../includes/ssinternalonly-md.md)]|  
-|filestream_transaction_id|**varbinary(128)**|**적용 대상**: [!INCLUDE[ssSDSfull](../../includes/sssdsfull-md.md)] (초기 릴리스- [현재 릴리스](https://go.microsoft.com/fwlink/p/?LinkId=299659)).<br /><br /> [!INCLUDE[ssInternalOnly](../../includes/ssinternalonly-md.md)]|  
+|filestream_transaction_id|**varbinary(128)**|**적용 대상**: [!INCLUDE[ssSDSfull](../../includes/sssdsfull-md.md)] (초기 릴리스- [현재 릴리스](/previous-versions/azure/ee336279(v=azure.100))).<br /><br /> [!INCLUDE[ssInternalOnly](../../includes/ssinternalonly-md.md)]|  
 |pdw_node_id|**int**|**적용 대상**: [!INCLUDE[ssSDWfull](../../includes/sssdwfull-md.md)] , [!INCLUDE[ssPDW](../../includes/sspdw-md.md)]<br /><br /> 이 배포가 설정 된 노드의 식별자입니다.|  
   
 ## <a name="permissions"></a>사용 권한
@@ -58,11 +58,8 @@ ms.locfileid: "89539267"
 [!INCLUDE[ssSDS_md](../../includes/sssds-md.md)]Premium 계층에서는 데이터베이스에 대 한 권한이 필요 합니다 `VIEW DATABASE STATE` . [!INCLUDE[ssSDS_md](../../includes/sssds-md.md)]표준 및 기본 계층에서는 **서버 관리자** 또는 **Azure Active Directory 관리자** 계정이 필요 합니다.   
   
 ## <a name="see-also"></a>참고 항목  
- [dm_tran_session_transactions &#40;Transact-sql&#41;](../../relational-databases/system-dynamic-management-views/sys-dm-tran-session-transactions-transact-sql.md)   
- [dm_tran_database_transactions &#40;Transact-sql&#41;](../../relational-databases/system-dynamic-management-views/sys-dm-tran-database-transactions-transact-sql.md)   
+ [Transact-sql&#41;sys.dm_tran_session_transactions &#40;](../../relational-databases/system-dynamic-management-views/sys-dm-tran-session-transactions-transact-sql.md)   
+ [Transact-sql&#41;sys.dm_tran_database_transactions &#40;](../../relational-databases/system-dynamic-management-views/sys-dm-tran-database-transactions-transact-sql.md)   
  [동적 관리 뷰 및 함수&#40;Transact-SQL&#41;](~/relational-databases/system-dynamic-management-views/system-dynamic-management-views.md)   
  [트랜잭션 관련 동적 관리 뷰 및 함수&#40;Transact-SQL&#41;](../../relational-databases/system-dynamic-management-views/transaction-related-dynamic-management-views-and-functions-transact-sql.md)  
   
-  
-
-

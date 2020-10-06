@@ -34,12 +34,12 @@ ms.assetid: e580c210-cf57-419d-9544-7f650f2ab814
 author: MikeRayMSFT
 ms.author: mikeray
 monikerRange: =azuresqldb-current||>=sql-server-2016||=sqlallproducts-allversions||>=sql-server-linux-2017||=azuresqldb-mi-current
-ms.openlocfilehash: ae9077610031075f71564eb5938b2a1415842827
-ms.sourcegitcommit: e700497f962e4c2274df16d9e651059b42ff1a10
+ms.openlocfilehash: b012aa98d5dd1042a8e6a02ab4e91747ab512667
+ms.sourcegitcommit: 968969b62bc158b9843aba5034c9d913519bc4a7
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 08/17/2020
-ms.locfileid: "88454800"
+ms.lasthandoff: 10/06/2020
+ms.locfileid: "91753709"
 ---
 # <a name="containstable-transact-sql"></a>CONTAINSTABLE(Transact-SQL)
 [!INCLUDE [SQL Server SQL Database](../../includes/applies-to-version/sql-asdb.md)]
@@ -148,7 +148,7 @@ CONTAINSTABLE
 ## <a name="remarks"></a>설명  
  전체 텍스트 조건자와 함수는 단일 테이블에서 작동합니다. 이 사실은 FROM 조건자에 표시됩니다. 여러 테이블을 검색하려면 FROM 절에 조인된 테이블을 사용하여 두 개 이상의 테이블을 합한 결과 집합을 대상으로 검색 작업을 수행합니다.  
   
- 반환 된 테이블에는 전체 텍스트 키 값을 포함 하는 **key** 라는 열이 있습니다. 각 전체 텍스트 인덱싱된 테이블에는 값이 고유 하도록 보장 되는 열이 있고 **키** 열에 반환 된 값은 contains 검색 조건에 지정 된 선택 조건과 일치 하는 행의 전체 텍스트 키 값입니다. OBJECTPROPERTYEX 함수에서 가져온 **TableFulltextKeyColumn** 속성은이 고유 키 열의 id를 제공 합니다. 전체 텍스트 인덱스의 전체 텍스트 키와 연결 된 열의 ID를 가져오려면 **fulltext_indexes**를 사용 합니다. 자세한 내용은 [fulltext_indexes &#40;transact-sql&#41;](../../relational-databases/system-catalog-views/sys-fulltext-indexes-transact-sql.md)을 참조 하십시오.  
+ 반환 된 테이블에는 전체 텍스트 키 값을 포함 하는 **key** 라는 열이 있습니다. 각 전체 텍스트 인덱싱된 테이블에는 값이 고유 하도록 보장 되는 열이 있고 **키** 열에 반환 된 값은 contains 검색 조건에 지정 된 선택 조건과 일치 하는 행의 전체 텍스트 키 값입니다. OBJECTPROPERTYEX 함수에서 가져온 **TableFulltextKeyColumn** 속성은이 고유 키 열의 id를 제공 합니다. 전체 텍스트 인덱스의 전체 텍스트 키와 연결 된 열의 ID를 가져오려면 **sys.fulltext_indexes**를 사용 합니다. 자세한 내용은 [sys.fulltext_indexes &#40;transact-sql&#41;](../../relational-databases/system-catalog-views/sys-fulltext-indexes-transact-sql.md)를 참조 하세요.  
   
  원래 테이블에서 원하는 행을 얻으려면 CONTAINSTABLE 행과 조인을 지정합니다. 일반적인 SELECT 문의 FROM 절에서 CONTAINSTABLE을 사용한 예는 다음과 같습니다.  
   
@@ -168,7 +168,7 @@ FROM table AS FT_TBL INNER JOIN
 ## <a name="permissions"></a>사용 권한  
  테이블이나 참조되는 테이블의 열에 대해 SELECT 권한이 있는 사용자만 실행 권한이 있습니다.  
   
-## <a name="examples"></a>예제  
+## <a name="examples"></a>예  
   
 ### <a name="a-simple-example"></a>A. 간단한 예  
  다음 예에서는 3 개의 군을 나열 하 고 플래그에 색을 나열 하는 두 개의 열로 이루어진 간단한 테이블을 만들고 채웁니다. 이 예제에서는 테이블에 대 한 전체 텍스트 카탈로그 및 인덱스를 만들고 채웁니다. 그런 다음 **CONTAINSTABLE** 구문을 보여 줍니다. 이 예에서는 검색 값이 여러 번 충족 될 때 순위 값이 증가 하는 방식을 보여 줍니다. 마지막 쿼리에서 녹색 및 검정을 모두 포함 하는 탄자니아는 쿼리 된 색 중 하나만 포함 하는 이탈리아 보다 더 높은 순위를 갖습니다.  
@@ -284,10 +284,9 @@ GO
 ## <a name="see-also"></a>참고 항목  
  [RANK를 사용 하 여 검색 결과 제한](../../relational-databases/search/limit-search-results-with-rank.md)   
  [전체 텍스트 검색을 사용한 쿼리](../../relational-databases/search/query-with-full-text-search.md)   
- [전체 텍스트 검색 쿼리 만들기&#40;Visual Database Tools&#41;](https://msdn.microsoft.com/library/537fa556-390e-4c88-9b8e-679848d94abc)   
+ [전체 텍스트 검색 쿼리 만들기&#40;Visual Database Tools&#41;](../../ssms/visual-db-tools/create-full-text-search-queries-visual-database-tools.md)   
  [CONTAINS&#40;Transact-SQL&#41;](../../t-sql/queries/contains-transact-sql.md)   
  [전체 텍스트 검색을 사용한 쿼리](../../relational-databases/search/query-with-full-text-search.md)   
  [SELECT&#40;Transact-SQL&#41;](../../t-sql/queries/select-transact-sql.md)   
  [FROM&#40;Transact-SQL&#41;](../../t-sql/queries/from-transact-sql.md)  
-  
   

@@ -25,12 +25,12 @@ ms.assetid: cf893ecb-0bf6-4cbf-ac00-8a1099e405b1
 author: markingmyname
 ms.author: maghan
 monikerRange: '>=aps-pdw-2016||=azuresqldb-current||=azure-sqldw-latest||>=sql-server-2016||=sqlallproducts-allversions||>=sql-server-linux-2017||=azuresqldb-mi-current'
-ms.openlocfilehash: 94ac37d2e2a908d25c9c4b90c8517d127086ed68
-ms.sourcegitcommit: dd36d1cbe32cd5a65c6638e8f252b0bd8145e165
+ms.openlocfilehash: 34d184b3605cd10d9ca9313028640a5821367e02
+ms.sourcegitcommit: 968969b62bc158b9843aba5034c9d913519bc4a7
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 09/08/2020
-ms.locfileid: "89536953"
+ms.lasthandoff: 10/06/2020
+ms.locfileid: "91753875"
 ---
 # <a name="system-dynamic-management-views"></a>시스템 동적 관리 뷰
 [!INCLUDE [sql-asdb-asdbmi-asa-pdw](../../includes/applies-to-version/sql-asdb-asdbmi-asa-pdw.md)]
@@ -110,13 +110,13 @@ FROM sys.dm_os_wait_stats;
 
         [Service Broker 관련 동적 관리 뷰&#40;Transact-SQL&#41;](../../relational-databases/system-dynamic-management-views/service-broker-related-dynamic-management-views-transact-sql.md)
 
-        [Transact-sql&#41;&#40;공간 데이터 관련 동적 관리 뷰 및 함수 ](https://msdn.microsoft.com/library/c542ac38-451f-43a5-bf8c-4edd38bb738e)
+        [Transact-sql&#41;&#40;공간 데이터 관련 동적 관리 뷰 및 함수 ](./spatial-data-sys-dm-db-objects-disabled-on-compatibility-level-change.md)
 
         [Transact-sql&#41;&#40;SQL Data Warehouse 및 병렬 데이터 웨어하우스 동적 관리 뷰 ](../../relational-databases/system-dynamic-management-views/sql-and-parallel-data-warehouse-dynamic-management-views.md)
 
         [Transact-sql&#41;&#40;운영 체제 관련 동적 관리 뷰 SQL Server ](../../relational-databases/system-dynamic-management-views/sql-server-operating-system-related-dynamic-management-views-transact-sql.md)
 
-        [Stretch Database 동적 관리 뷰 &#40;Transact-sql&#41;](https://msdn.microsoft.com/library/1193efce-a105-49a9-a8b8-26b063485567)
+        [Stretch Database 동적 관리 뷰 &#40;Transact-sql&#41;]()
 
         [트랜잭션 관련 동적 관리 뷰 및 함수&#40;Transact-SQL&#41;](../../relational-databases/system-dynamic-management-views/transaction-related-dynamic-management-views-and-functions-transact-sql.md)
     :::column-end:::
@@ -125,6 +125,5 @@ FROM sys.dm_os_wait_stats;
 ## <a name="see-also"></a>참고 항목  
  [Transact-sql&#41;&#40;서버 사용 권한 부여 ](../../t-sql/statements/grant-server-permissions-transact-sql.md)   
  [GRANT 데이터베이스 사용 권한&#40;Transact-SQL&#41;](../../t-sql/statements/grant-database-permissions-transact-sql.md)   
- [Transact-sql&#41;&#40;시스템 뷰 ](https://msdn.microsoft.com/library/35a6161d-7f43-4e00-bcd3-3091f2015e90)  
-  
+ [Transact-sql&#41;&#40;시스템 뷰 ](../../t-sql/language-reference.md)  
   

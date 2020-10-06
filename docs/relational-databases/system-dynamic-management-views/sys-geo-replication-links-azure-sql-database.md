@@ -1,6 +1,6 @@
 ---
 description: sys.geo_replication_links(Azure SQL Database)
-title: geo_replication_links (Azure SQL Database) | Microsoft Docs
+title: sys.geo_replication_links (Azure SQL Database) | Microsoft Docs
 ms.custom: ''
 ms.date: 01/28/2019
 ms.service: sql-database
@@ -18,12 +18,12 @@ ms.assetid: 58911798-1d60-4f28-87ab-2def2bfc3de7
 author: markingmyname
 ms.author: maghan
 monikerRange: = azuresqldb-current || = sqlallproducts-allversions
-ms.openlocfilehash: 36849d6fc285839ebf99b75452735ddf5073f4ec
-ms.sourcegitcommit: dd36d1cbe32cd5a65c6638e8f252b0bd8145e165
+ms.openlocfilehash: 568cda98a1bbb55e5c4f3e07bd53592ff642f0bd
+ms.sourcegitcommit: 968969b62bc158b9843aba5034c9d913519bc4a7
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 09/08/2020
-ms.locfileid: "89543757"
+ms.lasthandoff: 10/06/2020
+ms.locfileid: "91753695"
 ---
 # <a name="sysgeo_replication_links-azure-sql-database"></a>sys.geo_replication_links(Azure SQL Database)
 
@@ -44,7 +44,7 @@ ms.locfileid: "89543757"
 |역할(role)|**tinyint**|지역에서 복제 역할, 다음 중 하나입니다.<br /><br /> 0 = 기본 Database_id는 지역에서 복제 파트너 관계에서 주 데이터베이스를 참조 합니다.<br /><br /> 1 = 보조  Database_id는 지역에서 복제 파트너 관계에서 주 데이터베이스를 참조 합니다.|  
 |role_desc|**nvarchar(256)**|PRIMARY<br /><br /> SECONDARY|  
 |secondary_allow_connections|**tinyint**|보조 유형이 며 다음 중 하나입니다.<br /><br /> 0 = 아니요 장애 조치 (failover) 될 때까지 보조 데이터베이스에 액세스할 수 없습니다.<br /><br /> 1 = 읽기 전용입니다. 보조 데이터베이스는 ApplicationIntent = ReadOnly 인 클라이언트 연결에만 액세스할 수 있습니다.<br /><br /> 2  =  모두. 보조 데이터베이스는 모든 클라이언트 연결에 액세스할 수 있습니다.|  
-|secondary_allow_connections _desc|**nvarchar(256)**|아니요<br /><br /> 모두<br /><br /> 읽기 전용|  
+|secondary_allow_connections _desc|**nvarchar(256)**|예<br /><br /> 모두<br /><br /> 읽기 전용|  
   
 ## <a name="permissions"></a>사용 권한
 
@@ -68,6 +68,6 @@ FROM sys.geo_replication_links;
 
 ## <a name="see-also"></a>참고 항목
 
- [ALTER DATABASE(Azure SQL Database)](../../t-sql/statements/alter-database-azure-sql-database.md)   
- [dm_geo_replication_link_status &#40;Azure SQL Database&#41;](../../relational-databases/system-dynamic-management-views/sys-dm-geo-replication-link-status-azure-sql-database.md)   
- [dm_operation_status &#40;Azure SQL Database&#41;](../../relational-databases/system-dynamic-management-views/sys-dm-operation-status-azure-sql-database.md)  
+ [ALTER DATABASE(Azure SQL Database)](../../t-sql/statements/alter-database-transact-sql.md)   
+ [sys.dm_geo_replication_link_status &#40;Azure SQL Database&#41;](../../relational-databases/system-dynamic-management-views/sys-dm-geo-replication-link-status-azure-sql-database.md)   
+ [sys.dm_operation_status &#40;Azure SQL Database&#41;](../../relational-databases/system-dynamic-management-views/sys-dm-operation-status-azure-sql-database.md)
