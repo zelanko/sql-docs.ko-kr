@@ -14,12 +14,12 @@ helpviewer_keywords:
 ms.assetid: 1fac7831-a187-4b15-9b43-aad380c5556c
 author: rothja
 ms.author: jroth
-ms.openlocfilehash: a982f08323a9e852f555732b290d598412d3a802
-ms.sourcegitcommit: 18a98ea6a30d448aa6195e10ea2413be7e837e94
+ms.openlocfilehash: c20132fe933d232d38ee843a706e9ad923d0d376
+ms.sourcegitcommit: c7f40918dc3ecdb0ed2ef5c237a3996cb4cd268d
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 08/27/2020
-ms.locfileid: "88979614"
+ms.lasthandoff: 10/05/2020
+ms.locfileid: "91724934"
 ---
 # <a name="shape-commands-in-general"></a>일반적인 셰이핑 명령
 데이터 셰이핑은 셰이프 **레코드 집합**의 열, 열이 나타내는 엔터티 간의 관계 및 **레코드 집합이** 데이터로 채워지는 방식을 정의 합니다.  
@@ -46,7 +46,7 @@ ms.locfileid: "88979614"
   
  프로그래밍 방식으로 또는 적절 한 시각적 컨트롤을 통해 모양을 지정 하는 **레코드** **집합의 구성 요소** 에 액세스할 수 있습니다.  
   
- Microsoft는 shape 명령을 생성 하는 시각적 도구를 제공 합니다 (Visual Basic 6 설명서의 [데이터 환경 디자이너](https://go.microsoft.com/fwlink/?LinkId=5689) 참조). 그리고 계층적 커서를 표시 하는 다른 도구를 제공 합니다 (Visual Basic 6 설명서의 "Microsoft 계층적 Flexgrid 컨트롤 사용" 참조).  
+ Microsoft는 shape 명령을 생성 하는 시각적 도구를 제공 합니다 (Visual Basic 6 설명서의 [데이터 환경 디자이너](/previous-versions/visualstudio/aa445793(v=vs.60)) 참조). 그리고 계층적 커서를 표시 하는 다른 도구를 제공 합니다 (Visual Basic 6 설명서의 "Microsoft 계층적 Flexgrid 컨트롤 사용" 참조).  
   
  계층적 **레코드 집합**을 탐색 하는 방법에 대 한 자세한 내용은 [계층적 레코드 집합의 행에 액세스](../../../ado/guide/data/accessing-rows-in-a-hierarchical-recordset.md)를 참조 하세요.  
   

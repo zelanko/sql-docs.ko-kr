@@ -9,12 +9,12 @@ ms.topic: reference
 ms.author: owend
 ms.reviewer: owend
 author: minewiskan
-ms.openlocfilehash: 52b28158c59e12886f8058883c65654b23ece9e0
-ms.sourcegitcommit: e700497f962e4c2274df16d9e651059b42ff1a10
+ms.openlocfilehash: 968b1c10f8eb054f6527253bd358e97eaa396637
+ms.sourcegitcommit: c7f40918dc3ecdb0ed2ef5c237a3996cb4cd268d
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 08/17/2020
-ms.locfileid: "88466548"
+ms.lasthandoff: 10/05/2020
+ms.locfileid: "91727724"
 ---
 # <a name="modeling-flags-dmx"></a>모델링 플래그(DMX)
 [!INCLUDE[ssas](../includes/applies-to-version/ssas.md)]
@@ -23,7 +23,7 @@ ms.locfileid: "88466548"
   
  [!INCLUDE[ssASnoversion](../includes/ssasnoversion-md.md)]에서는 다음과 같은 모델링 플래그를 지원합니다.  
   
- **NULL이 아님**  
+ **NOT NULL**  
  특성 열 값에는 Null 값을 포함할 수 없습니다. [!INCLUDE[ssASnoversion](../includes/ssasnoversion-md.md)] 의 모델 학습 프로세스 중 이 특성 열에 Null 값이 있는 경우에는 오류가 발생합니다. 이 플래그는 마이닝 구조 열에 정의됩니다.  
   
  **회귀 변수**  
@@ -49,10 +49,10 @@ WHERE SERVICE_NAME = 'Microsoft_Linear_Regression'
   
  마이닝 모델 열에서 모델링 플래그를 지정 하는 구문에 대 한 예는 [ALTER 마이닝 STRUCTURE &#40;DMX&#41;](../dmx/alter-mining-structure-dmx.md)를 참조 하세요.  
   
- 마이닝 모델 열을 사용 하는 방법에 대 한 자세한 내용은 [마이닝 모델 열](https://docs.microsoft.com/analysis-services/data-mining/mining-model-columns)을 참조 하세요.  
+ 마이닝 모델 열을 사용 하는 방법에 대 한 자세한 내용은 [마이닝 모델 열](/analysis-services/data-mining/mining-model-columns)을 참조 하세요.  
   
 ## <a name="see-also"></a>참고 항목  
- [데이터 마이닝 알고리즘 &#40;Analysis Services 데이터 마이닝&#41;](https://docs.microsoft.com/analysis-services/data-mining/data-mining-algorithms-analysis-services-data-mining)   
+ [데이터 마이닝 알고리즘 &#40;Analysis Services 데이터 마이닝&#41;](/analysis-services/data-mining/data-mining-algorithms-analysis-services-data-mining)   
  [DMX&#41; 참조 &#40;데이터 마이닝 확장](../dmx/data-mining-extensions-dmx-reference.md)   
  [데이터 마이닝 확장 &#40;DMX&#41; 구문 요소](../dmx/data-mining-extensions-dmx-syntax-elements.md)   
  [데이터 마이닝 확장 &#40;DMX&#41; 함수 참조](../dmx/data-mining-extensions-dmx-function-reference.md)   
@@ -62,5 +62,4 @@ WHERE SERVICE_NAME = 'Microsoft_Linear_Regression'
  [DMX&#41;일반 예측 함수 &#40;](../dmx/general-prediction-functions-dmx.md)   
  [DMX 예측 쿼리의 구조 및 사용법](../dmx/structure-and-usage-of-dmx-prediction-queries.md)   
  [DMX Select 문 이해](../dmx/understanding-the-dmx-select-statement.md)  
-  
   

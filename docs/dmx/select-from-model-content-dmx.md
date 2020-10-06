@@ -9,12 +9,12 @@ ms.topic: reference
 ms.author: owend
 ms.reviewer: owend
 author: minewiskan
-ms.openlocfilehash: 02e95e2620799e596bc5deaeb203bbc8c2c1a4e1
-ms.sourcegitcommit: e700497f962e4c2274df16d9e651059b42ff1a10
+ms.openlocfilehash: df70a8726e9abc56d677c48ba8f3f995814866d4
+ms.sourcegitcommit: c7f40918dc3ecdb0ed2ef5c237a3996cb4cd268d
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 08/17/2020
-ms.locfileid: "88496295"
+ms.lasthandoff: 10/05/2020
+ms.locfileid: "91727644"
 ---
 # <a name="select-from-ltmodelgtcontent-dmx"></a>모델에서 &lt; 선택 &gt; 합니다. 콘텐츠 (DMX)
 [!INCLUDE[ssas](../includes/applies-to-version/ssas.md)]
@@ -32,7 +32,7 @@ SELECT [FLATTENED] [TOP <n>] <expression list> FROM <model>.CONTENT
   
 ## <a name="arguments"></a>인수  
  *n*  
- (선택 사항) 반환할 행의 수를 지정하는 정수입니다.  
+ 선택 사항입니다. 반환할 행의 수를 지정하는 정수입니다.  
   
  *식 목록*  
  Content 스키마 행 집합에서 파생된 열의 쉼표로 구분된 목록입니다.  
@@ -41,10 +41,10 @@ SELECT [FLATTENED] [TOP <n>] <expression list> FROM <model>.CONTENT
  모델 식별자입니다.  
   
  *조건 식*  
- (선택 사항) 열 목록에서 반환되는 값을 제한하는 조건입니다.  
+ 선택 사항입니다. 열 목록에서 반환되는 값을 제한하는 조건입니다.  
   
  *expression*  
- (선택 사항) 스칼라 값을 반환하는 식입니다.  
+ 선택 사항입니다. 스칼라 값을 반환하는 식입니다.  
   
 ## <a name="remarks"></a>설명  
  **SELECT FROM** _\<model>_ **입니다. CONTENT** 문은 각 알고리즘과 관련 된 콘텐츠를 반환 합니다. 예를 들어 사용자 지정 애플리케이션에서 연결 규칙 모델의 모든 규칙 설명을 사용하려는 경우 SELECT FROM를 사용할 수 있습니다 ** \<model> . ** 모델의 NODE_RULE 열에서 값을 반환 하는 내용 문입니다.  
@@ -52,9 +52,9 @@ SELECT [FLATTENED] [TOP <n>] <expression list> FROM <model>.CONTENT
  다음 표에서는 마이닝 모델 콘텐츠에 포함된 열을 나열합니다.  
   
 > [!NOTE]  
->  알고리즘은 콘텐츠를 올바르게 표시하기 위해 열을 다르게 해석할 수 있습니다. 각 알고리즘에 대 한 마이닝 모델 콘텐츠 및 각 모델 유형에 대 한 마이닝 모델 콘텐츠를 해석 하 고 쿼리 하는 방법에 대 한 설명은 [마이닝 모델 콘텐츠 &#40;Analysis Services-데이터 마이닝&#41;](https://docs.microsoft.com/analysis-services/data-mining/mining-model-content-analysis-services-data-mining)를 참조 하세요.  
+>  알고리즘은 콘텐츠를 올바르게 표시하기 위해 열을 다르게 해석할 수 있습니다. 각 알고리즘에 대 한 마이닝 모델 콘텐츠 및 각 모델 유형에 대 한 마이닝 모델 콘텐츠를 해석 하 고 쿼리 하는 방법에 대 한 설명은 [마이닝 모델 콘텐츠 &#40;Analysis Services-데이터 마이닝&#41;](/analysis-services/data-mining/mining-model-content-analysis-services-data-mining)를 참조 하세요.  
   
-|CONTENT 행 집합 열|설명|  
+|CONTENT 행 집합 열|Description|  
 |---------------------------|-----------------|  
 |MODEL_CATALOG|카탈로그 이름입니다. 공급자가 카탈로그를 지원하지 않을 경우 NULL입니다.|  
 |MODEL_SCHEMA|정규화되지 않은 스키마 이름입니다. 공급자가 스키마를 지원하지 않을 경우 NULL입니다.|  
@@ -102,7 +102,7 @@ WHERE ISDESCENDANT('0')
   
  예상 결과:  
   
- 모델이 의사 결정 트리 모델이므로 모델 부모 노드의 하위 항목에는 예측 가능한 특성을 나타내는 한계 통계 노드 하나와 입력 특성 및 값이 들어 있는 여러 노드가 포함되어 있습니다. 자세한 내용은 [의사 결정 트리 모델에 대한 마이닝 모델 콘텐츠&#40;Analysis Services - 데이터 마이닝&#41;](https://docs.microsoft.com/analysis-services/data-mining/mining-model-content-for-decision-tree-models-analysis-services-data-mining)를 참조하세요.  
+ 모델이 의사 결정 트리 모델이므로 모델 부모 노드의 하위 항목에는 예측 가능한 특성을 나타내는 한계 통계 노드 하나와 입력 특성 및 값이 들어 있는 여러 노드가 포함되어 있습니다. 자세한 내용은 [의사 결정 트리 모델에 대한 마이닝 모델 콘텐츠&#40;Analysis Services - 데이터 마이닝&#41;](/analysis-services/data-mining/mining-model-content-for-decision-tree-models-analysis-services-data-mining)를 참조하세요.  
   
 ## <a name="using-the-flattened-keyword"></a>FLATTENED 키워드 사용  
  마이닝 모델 콘텐츠의 중첩 테이블 열에는 모델에 대한 유용한 정보가 들어 있는 경우가 많습니다. FLATTENED 키워드를 사용하면 계층적 행 집합을 지원하는 공급자를 사용하지 않아도 중첩 테이블 열에서 데이터를 검색할 수 있습니다.  
@@ -147,5 +147,4 @@ WHERE NODE_TYPE = 26
  [DMX &#40;선택&#41;](../dmx/select-dmx.md)   
  [데이터 마이닝 확장 &#40;DMX&#41; 데이터 조작 문](../dmx/dmx-statements-data-manipulation.md)   
  [DMX&#40;Data Mining Extensions&#41; 문 참조](../dmx/data-mining-extensions-dmx-statements.md)  
-  
   

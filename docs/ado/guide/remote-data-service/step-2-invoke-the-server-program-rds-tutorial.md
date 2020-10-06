@@ -13,18 +13,18 @@ helpviewer_keywords:
 ms.assetid: 5e74c2da-65ee-4de4-8b41-6eac45c3632e
 author: rothja
 ms.author: jroth
-ms.openlocfilehash: 4771957c1895f6ac861d04f63a43e32a77e3d931
-ms.sourcegitcommit: 18a98ea6a30d448aa6195e10ea2413be7e837e94
+ms.openlocfilehash: a9238fa208a5ce415986fee05045dc7ea34e0d67
+ms.sourcegitcommit: c7f40918dc3ecdb0ed2ef5c237a3996cb4cd268d
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 08/27/2020
-ms.locfileid: "88977594"
+ms.lasthandoff: 10/05/2020
+ms.locfileid: "91723004"
 ---
 # <a name="step-2-invoke-the-server-program-rds-tutorial"></a>2단계: 서버 프로그램 호출(RDS 자습서)
 클라이언트 *프록시에서*메서드를 호출 하면 서버의 실제 프로그램이 메서드를 실행 합니다. 이 단계에서는 서버에서 쿼리를 실행 합니다.  
   
 > [!IMPORTANT]
->  Windows 8 및 Windows Server 2012부터 RDS 서버 구성 요소는 더 이상 Windows 운영 체제에 포함 되지 않습니다 (자세한 내용은 Windows 8 및 [Windows Server 2012 Compatibility Cookbook](https://www.microsoft.com/download/details.aspx?id=27416) 참조). 이후 버전의 Windows에서는 RDS 클라이언트 구성 요소가 제거 됩니다. 새 개발 작업에서는 이 기능을 사용하지 않도록 하고, 현재 이 기능을 사용하는 애플리케이션은 수정하세요. RDS를 사용 하는 응용 프로그램은 [WCF Data Service](https://go.microsoft.com/fwlink/?LinkId=199565)로 마이그레이션해야 합니다.  
+>  Windows 8 및 Windows Server 2012부터 RDS 서버 구성 요소는 더 이상 Windows 운영 체제에 포함 되지 않습니다 (자세한 내용은 Windows 8 및 [Windows Server 2012 Compatibility Cookbook](https://www.microsoft.com/download/details.aspx?id=27416) 참조). 이후 버전의 Windows에서는 RDS 클라이언트 구성 요소가 제거 됩니다. 새 개발 작업에서는 이 기능을 사용하지 않도록 하고, 현재 이 기능을 사용하는 애플리케이션은 수정하세요. RDS를 사용 하는 응용 프로그램은 [WCF Data Service](/dotnet/framework/wcf/)로 마이그레이션해야 합니다.  
   
  **A 부** 이 자습서에서 [RDSServer. DataFactory](../../reference/rds-api/datafactory-object-rdsserver.md) 를 사용 하지 않은 경우이 단계를 수행 하는 가장 편리한 방법은 RDS를 사용 하는 것입니다. [ DataControl](../../reference/rds-api/datacontrol-object-rds.md) 개체입니다. **RDS. DataControl** 은 프록시를 만드는 이전 단계를 결합 합니다 .이 단계에서는 쿼리를 실행 합니다.  
   

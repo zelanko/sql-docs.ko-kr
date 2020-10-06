@@ -14,12 +14,12 @@ helpviewer_keywords:
 ms.assetid: ''
 author: rajeshsetlem
 ms.author: rajpo
-ms.openlocfilehash: a4fdc0343d1346833fd58c4e2fa0240e1a2af668
-ms.sourcegitcommit: e8f6c51d4702c0046aec1394109bc0503ca182f0
+ms.openlocfilehash: 846c44ff4655fbdc9d508b59b7d637023b4c4ca5
+ms.sourcegitcommit: c7f40918dc3ecdb0ed2ef5c237a3996cb4cd268d
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 08/07/2020
-ms.locfileid: "87950978"
+ms.lasthandoff: 10/05/2020
+ms.locfileid: "91726276"
 ---
 # <a name="run-data-migration-assistant-from-the-command-line"></a>명령줄에서 Data Migration Assistant 실행
 
@@ -40,31 +40,31 @@ DmaCmd.exe /AssessmentName="string"
 /AssessmentResultJson="file"|/AssessmentResultCsv="file"
 ```
 
-|인수  |설명  | 필수 (Y/N)
+|인수  |Description  | 필수 (Y/N)
 |---------|---------|---------------|
 | `/help or /?`     | dmacmd.exe 도움말 텍스트를 사용 하는 방법        | N
-|`/AssessmentName`     |   평가 프로젝트의 이름입니다.   | 지원
-|`/AssessmentDatabases`     | 공백으로 구분 된 연결 문자열 목록입니다. 데이터베이스 이름 (초기 카탈로그)은 대/소문자를 구분 합니다. | 지원
+|`/AssessmentName`     |   평가 프로젝트의 이름입니다.   | Y
+|`/AssessmentDatabases`     | 공백으로 구분 된 연결 문자열 목록입니다. 데이터베이스 이름 (초기 카탈로그)은 대/소문자를 구분 합니다. | Y
 |`/AssessmentSourcePlatform`     | 평가를 위한 원본 플랫폼: <br>평가에 대해 지원 되는 값: SqlOnPrem, RdsSqlServer (기본값) <br>대상 준비 평가에 대해 지원 되는 값: SqlOnPrem, RdsSqlServer (기본값), Cassandra (미리 보기)   | N
 |`/AssessmentTargetPlatform`     | 평가를 위한 대상 플랫폼:  <br> 평가에 대해 지원 되는 값: AzureSqlDatabase, ManagedSqlServer, SqlServer2012, SqlServer2014, Sqlserver2016-ssei-expr, SqlServerLinux2017 및 SqlServerWindows2017 (기본값)  <br> 대상 준비 평가에 대해 지원 되는 값: ManagedSqlServer (기본값), CosmosDB (미리 보기)   | N
 |`/AssessmentEvaluateFeatureParity`  | 기능 패리티 규칙을 실행 합니다. 원본 플랫폼이 RdsSqlServer 인 경우 대상 플랫폼 AzureSqlDatabase에 대해 기능 패리티 평가가 지원 되지 않습니다.  | N
-|`/AssessmentEvaluateCompatibilityIssues`     | 호환성 규칙 실행  | 지원 <br> AssessmentEvaluateCompatibilityIssues 또는 AssessmentEvaluateRecommendations가 필요 합니다.
-|`/AssessmentEvaluateRecommendations`     | 기능 권장 사항 실행        | 지원 <br> (AssessmentEvaluateCompatibilityIssues 또는 AssessmentEvaluateRecommendations가 필요 합니다.)
+|`/AssessmentEvaluateCompatibilityIssues`     | 호환성 규칙 실행  | Y <br> AssessmentEvaluateCompatibilityIssues 또는 AssessmentEvaluateRecommendations가 필요 합니다.
+|`/AssessmentEvaluateRecommendations`     | 기능 권장 사항 실행        | Y <br> (AssessmentEvaluateCompatibilityIssues 또는 AssessmentEvaluateRecommendations가 필요 합니다.)
 |`/AssessmentOverwriteResult`     | 결과 파일 덮어쓰기    | N
-|`/AssessmentResultJson`     | JSON 결과 파일의 전체 경로입니다.     | 지원 <br> (AssessmentResultJson 또는 AssessmentResultCsv가 필요 합니다.)
-|`/AssessmentResultCsv`    | CSV 결과 파일의 전체 경로입니다.   | 지원 <br> (AssessmentResultJson 또는 AssessmentResultCsv가 필요 합니다.)
+|`/AssessmentResultJson`     | JSON 결과 파일의 전체 경로입니다.     | Y <br> (AssessmentResultJson 또는 AssessmentResultCsv가 필요 합니다.)
+|`/AssessmentResultCsv`    | CSV 결과 파일의 전체 경로입니다.   | Y <br> (AssessmentResultJson 또는 AssessmentResultCsv가 필요 합니다.)
 |`/AssessmentResultDma`    | Dma 결과 파일의 전체 경로입니다.   | N
 |`/Action`    | SKU 권장 사항을 얻으려면 [이상]을 사용 하세요. <br> AssessTargetReadiness를 사용 하 여 대상 준비 평가를 수행 합니다. <br> AzureMigrateUpload를 사용 하 여 Azure Migrate에 대량 업로드할 AzzessmentResultInputFolder의 모든 DMA 평가 파일을 업로드 합니다. 동작 유형 사용/Action = AzureMigrateUpload   | N
-|`/SourceConnections`    | 공백으로 구분 된 연결 문자열 목록입니다. 데이터베이스 이름 (초기 카탈로그)은 선택 사항입니다. 데이터베이스 이름을 제공 하지 않으면 원본의 모든 데이터베이스가 평가 됩니다.   | 지원 <br> (작업이 ' AssessTargetReadiness ' 인 경우 필수)
-|`/TargetReadinessConfiguration`    | 이름, 원본 연결 및 결과 파일에 대 한 값을 설명 하는 XML 파일의 전체 경로입니다.   | 지원 <br> TargetReadinessConfiguration 또는 SourceConnections가 필요 합니다.
+|`/SourceConnections`    | 공백으로 구분 된 연결 문자열 목록입니다. 데이터베이스 이름 (초기 카탈로그)은 선택 사항입니다. 데이터베이스 이름을 제공 하지 않으면 원본의 모든 데이터베이스가 평가 됩니다.   | Y <br> (작업이 ' AssessTargetReadiness ' 인 경우 필수)
+|`/TargetReadinessConfiguration`    | 이름, 원본 연결 및 결과 파일에 대 한 값을 설명 하는 XML 파일의 전체 경로입니다.   | Y <br> TargetReadinessConfiguration 또는 SourceConnections가 필요 합니다.
 |`/FeatureDiscoveryReportJson`    | 기능 검색 JSON 보고서의 경로입니다. 이 파일이 생성 되 면 원본에 연결 하지 않고 대상 준비 평가를 다시 실행 하는 데 사용할 수 있습니다. | N
 |`/ImportFeatureDiscoveryReportJson`    | 이전에 만든 기능 검색 JSON 보고서의 경로입니다. 원본 연결 대신이 파일이 사용 됩니다.   | N
 |`/EnableAssessmentUploadToAzureMigrate`    | Azure Migrate에 대 한 평가 결과를 업로드 하 고 게시할 수 있습니다.   | N
 |`/AzureCloudEnvironment`    |연결할 Azure 클라우드 환경을 선택 합니다. 기본값은 Azure 공용 클라우드입니다. 지원 되는 값: Azure (기본값), AzureChina, AzureGermany, Azureus정부.   | N 
-|`/SubscriptionId`    |Azure 구독 ID입니다.   | 지원 <br> (EnableAssessmentUploadToAzureMigrate 인수가 지정 된 경우 필수)
-|`/AzureMigrateProjectName`    |평가 결과를 업로드할 Azure Migrate 프로젝트 이름입니다.   | 지원 <br> (EnableAssessmentUploadToAzureMigrate 인수가 지정 된 경우 필수)
-|`/ResourceGroupName`    |리소스 그룹 이름을 Azure Migrate 합니다.   | 지원 <br> (EnableAssessmentUploadToAzureMigrate 인수가 지정 된 경우 필수)
-|`/AssessmentResultInputFolder`    |을 포함 하는 입력 폴더 경로입니다. Azure Migrate에 업로드할 DMA 평가 파일입니다.   | 지원 <br> (작업이 AzureMigrateUpload 경우 필수)
+|`/SubscriptionId`    |Azure 구독 ID입니다.   | Y <br> (EnableAssessmentUploadToAzureMigrate 인수가 지정 된 경우 필수)
+|`/AzureMigrateProjectName`    |평가 결과를 업로드할 Azure Migrate 프로젝트 이름입니다.   | Y <br> (EnableAssessmentUploadToAzureMigrate 인수가 지정 된 경우 필수)
+|`/ResourceGroupName`    |리소스 그룹 이름을 Azure Migrate 합니다.   | Y <br> (EnableAssessmentUploadToAzureMigrate 인수가 지정 된 경우 필수)
+|`/AssessmentResultInputFolder`    |을 포함 하는 입력 폴더 경로입니다. Azure Migrate에 업로드할 DMA 평가 파일입니다.   | Y <br> (작업이 AzureMigrateUpload 경우 필수)
 
 
 
@@ -290,25 +290,25 @@ DmaCmd.exe
 /SkuRecommendationPreventPriceRefresh=true 
 ```
 
-|인수  |설명  | 필수 (Y/N)
+|인수  |Description  | 필수 (Y/N)
 |---------|---------|---------------|
-|`/Action=SkuRecommendation` | DMA 명령줄을 사용 하 여 SKU 평가 실행 | 지원
-|`/SkuRecommendationInputDataFilePath` | 데이터베이스를 호스트 하는 컴퓨터에서 수집 된 성능 카운터 파일의 전체 경로입니다. | 지원
-|`/SkuRecommendationTsvOutputResultsFilePath` | TSV 결과 파일의 전체 경로입니다. | 지원 <br> TSV 또는 JSON 또는 HTML 파일 경로 중 하나를 사용 해야 합니다.
-|`/SkuRecommendationJsonOutputResultsFilePath` | JSON 결과 파일의 전체 경로입니다. | 지원 <br> TSV 또는 JSON 또는 HTML 파일 경로 중 하나를 사용 해야 합니다.
-|`/SkuRecommendationHtmlResultsFilePath` | HTML 결과 파일의 전체 경로입니다. | 지원 <br> TSV 또는 JSON 또는 HTML 파일 경로 중 하나를 사용 해야 합니다.
-|`/SkuRecommendationPreventPriceRefresh` | 가격 새로 고침이 발생 하지 않도록 합니다. 오프 라인 모드에서 실행 하는 경우 (예: true)을 사용 합니다. | 지원 <br> (정적 가격에 대 한이 인수 또는 모든 인수를 선택 해야 최신 가격을 가져올 수 있습니다.)
-|`/SkuRecommendationCurrencyCode` | 가격 (예: "USD")을 표시할 통화입니다. | 지원 <br> (최신 가격)
-|`/SkuRecommendationOfferName` | 제품 이름 (예: "MS-AZR-0017P-0003P")입니다. 자세한 내용은 [Microsoft Azure 제품 세부 정보](https://azure.microsoft.com/support/legal/offer-details/) 페이지를 참조 하세요. | 지원 <br> (최신 가격)
-|`/SkuRecommendationRegionName` | 영역 이름 (예: "WestUS") | 지원 <br> (최신 가격)
-|`/SkuRecommendationSubscriptionId` | 구독 ID입니다. | 지원 <br> (최신 가격)
+|`/Action=SkuRecommendation` | DMA 명령줄을 사용 하 여 SKU 평가 실행 | Y
+|`/SkuRecommendationInputDataFilePath` | 데이터베이스를 호스트 하는 컴퓨터에서 수집 된 성능 카운터 파일의 전체 경로입니다. | Y
+|`/SkuRecommendationTsvOutputResultsFilePath` | TSV 결과 파일의 전체 경로입니다. | Y <br> TSV 또는 JSON 또는 HTML 파일 경로 중 하나를 사용 해야 합니다.
+|`/SkuRecommendationJsonOutputResultsFilePath` | JSON 결과 파일의 전체 경로입니다. | Y <br> TSV 또는 JSON 또는 HTML 파일 경로 중 하나를 사용 해야 합니다.
+|`/SkuRecommendationHtmlResultsFilePath` | HTML 결과 파일의 전체 경로입니다. | Y <br> TSV 또는 JSON 또는 HTML 파일 경로 중 하나를 사용 해야 합니다.
+|`/SkuRecommendationPreventPriceRefresh` | 가격 새로 고침이 발생 하지 않도록 합니다. 오프 라인 모드에서 실행 하는 경우 (예: true)을 사용 합니다. | Y <br> (정적 가격에 대 한이 인수 또는 모든 인수를 선택 해야 최신 가격을 가져올 수 있습니다.)
+|`/SkuRecommendationCurrencyCode` | 가격 (예: "USD")을 표시할 통화입니다. | Y <br> (최신 가격)
+|`/SkuRecommendationOfferName` | 제품 이름 (예: "MS-AZR-0017P-0003P")입니다. 자세한 내용은 [Microsoft Azure 제품 세부 정보](https://azure.microsoft.com/support/legal/offer-details/) 페이지를 참조 하세요. | Y <br> (최신 가격)
+|`/SkuRecommendationRegionName` | 영역 이름 (예: "WestUS") | Y <br> (최신 가격)
+|`/SkuRecommendationSubscriptionId` | 구독 ID입니다. | Y <br> (최신 가격)
 |`/SkuRecommendationDatabasesToRecommend` | 권장 되는 데이터베이스의 공백으로 구분 된 목록입니다 (예: "Database1" "Database2" "Database3"). 이름은 대/소문자를 구분 하며 큰따옴표로 묶어야 합니다. 생략 하는 경우 모든 데이터베이스에 대 한 권장 사항이 제공 됩니다. | N
-|`/AzureAuthenticationTenantId` | 인증 테 넌 트입니다. | 지원 <br> (최신 가격)
-|`/AzureAuthenticationClientId` | 인증에 사용 되는 Azure AD 앱의 클라이언트 ID입니다. | 지원 <br> (최신 가격)
-|`/AzureAuthenticationInteractiveAuthentication` | 창을 팝업 하려면 true로 설정 합니다. | 지원 <br> (최신 가격) <br>3 인증 옵션 중 하나를 선택 합니다.-옵션 1
-|`/AzureAuthenticationCertificateStoreLocation` | 인증서 저장소 위치 (예: "CurrentUser")로 설정 합니다. | 지원 <br>(최신 가격) <br> (3 인증 옵션 중 하나 선택-옵션 2)
-|`/AzureAuthenticationCertificateThumbprint` | 인증서 지 문으로 설정 합니다. | 지원 <br> (최신 가격) <br>(3 인증 옵션 중 하나 선택-옵션 2)
-|`/AzureAuthenticationToken` | 인증서 토큰으로 설정 합니다. | 지원 <br> (최신 가격) <br>(3 개의 인증 옵션 중 하나 선택-옵션 3)
+|`/AzureAuthenticationTenantId` | 인증 테 넌 트입니다. | Y <br> (최신 가격)
+|`/AzureAuthenticationClientId` | 인증에 사용 되는 Azure AD 앱의 클라이언트 ID입니다. | Y <br> (최신 가격)
+|`/AzureAuthenticationInteractiveAuthentication` | 창을 팝업 하려면 true로 설정 합니다. | Y <br> (최신 가격) <br>3 인증 옵션 중 하나를 선택 합니다.-옵션 1
+|`/AzureAuthenticationCertificateStoreLocation` | 인증서 저장소 위치 (예: "CurrentUser")로 설정 합니다. | Y <br>(최신 가격) <br> (3 인증 옵션 중 하나 선택-옵션 2)
+|`/AzureAuthenticationCertificateThumbprint` | 인증서 지 문으로 설정 합니다. | Y <br> (최신 가격) <br>(3 인증 옵션 중 하나 선택-옵션 2)
+|`/AzureAuthenticationToken` | 인증서 토큰으로 설정 합니다. | Y <br> (최신 가격) <br>(3 개의 인증 옵션 중 하나 선택-옵션 3)
 
 ## <a name="examples-of-sku-assessments-using-the-cli"></a>CLI를 사용 하는 SKU 평가 예
 
@@ -381,4 +381,4 @@ DmaCmd.exe
 
 ## <a name="see-also"></a>참고 항목
 - 다운로드를 [Data Migration Assistant](https://aka.ms/get-dma) 합니다.
-- 이 문서에서는 [온-프레미스 데이터베이스에 적합 한 AZURE SQL DATABASE SKU를 식별](https://aka.ms/dma-sku-recommend-sqldb)합니다.
+- 이 문서에서는 [온-프레미스 데이터베이스에 적합 한 AZURE SQL DATABASE SKU를 식별](./dma-sku-recommend-sql-db.md)합니다.

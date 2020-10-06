@@ -14,16 +14,16 @@ ms.assetid: ''
 author: chugugrace
 ms.author: chugu
 ms.custom: seo-lt-2019
-ms.openlocfilehash: 9a7b077c3046b2f0c7e50b7ec20f68a5544e91e1
-ms.sourcegitcommit: 777704aefa7e574f4b7d62ad2a4c1b10ca1731ff
+ms.openlocfilehash: 1dcae45aef82859a961202ff30c3daca18e909b8
+ms.sourcegitcommit: c7f40918dc3ecdb0ed2ef5c237a3996cb4cd268d
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 08/06/2020
-ms.locfileid: "87822198"
+ms.lasthandoff: 10/05/2020
+ms.locfileid: "91726316"
 ---
 # <a name="perform-a-sql-server-integration-service-migration-assessment-with-data-migration-assistant"></a>Data Migration Assistant를 사용 하 여 SQL Server Integration Service 마이그레이션 평가 수행
 
-## <a name="prerequisites"></a>필수 구성 요소
+## <a name="prerequisites"></a>사전 요구 사항
 
 SSIS (SQL Server Integration Service) 패키지를 평가 하려면 아래 구성 요소를 Data Migration Assistant와 함께 설치 해야 합니다.
 
@@ -73,6 +73,6 @@ SSIS (SQL Server Integration Service) 패키지를 평가 하려면 아래 구�
 
 ## <a name="next-steps"></a>다음 단계
 
-- [ADF에서 SSIS로 온-프레미스 SSIS 작업 마이그레이션 개요](https://docs.microsoft.com/azure/data-factory/scenario-ssis-migration-overview)
-- [SQL Server Integration Services 패키지를 Azure SQL Managed Instance로 마이그레이션](https://docs.microsoft.com/azure/dms/how-to-migrate-ssis-packages-managed-instance)
-- [SQL Server Integration Services 패키지를 Azure SQL Database에 다시 배포](https://docs.microsoft.com/azure/dms/how-to-migrate-ssis-packages)
+- [ADF에서 SSIS로 온-프레미스 SSIS 작업 마이그레이션 개요](/azure/data-factory/scenario-ssis-migration-overview)
+- [SQL Server Integration Services 패키지를 Azure SQL Managed Instance로 마이그레이션](/azure/dms/how-to-migrate-ssis-packages-managed-instance)
+- [SQL Server Integration Services 패키지를 Azure SQL Database에 다시 배포](/azure/dms/how-to-migrate-ssis-packages)

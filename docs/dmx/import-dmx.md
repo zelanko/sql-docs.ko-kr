@@ -9,12 +9,12 @@ ms.topic: reference
 ms.author: owend
 ms.reviewer: owend
 author: minewiskan
-ms.openlocfilehash: 5da00163792b18bfd62ed0db4be0945f358115e3
-ms.sourcegitcommit: e700497f962e4c2274df16d9e651059b42ff1a10
+ms.openlocfilehash: fc96fb7dad5d7f6c4e555b133a0b3eaa02f91025
+ms.sourcegitcommit: c7f40918dc3ecdb0ed2ef5c237a3996cb4cd268d
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 08/17/2020
-ms.locfileid: "88352689"
+ms.lasthandoff: 10/05/2020
+ms.locfileid: "91726174"
 ---
 # <a name="import-dmx"></a>IMPORT(DMX)
 [!INCLUDE[ssas](../includes/applies-to-version/ssas.md)]
@@ -49,6 +49,5 @@ IMPORT FROM 'C:\TEMP\Association_NEW.dmb'
  [데이터 마이닝 확장 &#40;DMX&#41; 데이터 조작 문](../dmx/dmx-statements-data-manipulation.md)   
  [데이터 마이닝 확장 &#40;DMX&#41; 문 참조](../dmx/data-mining-extensions-dmx-statements.md)   
  [DMX &#40;&#41;내보내기 ](../dmx/export-dmx.md)   
- [데이터 마이닝 개체 내보내기 및 가져오기](https://docs.microsoft.com/analysis-services/data-mining/export-and-import-data-mining-objects)  
-  
+ [데이터 마이닝 개체 내보내기 및 가져오기](/analysis-services/data-mining/export-and-import-data-mining-objects)  
   

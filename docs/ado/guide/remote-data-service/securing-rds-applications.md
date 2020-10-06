@@ -13,18 +13,18 @@ helpviewer_keywords:
 ms.assetid: 82fb1330-d6c6-4c17-ad3e-d417ff822b25
 author: rothja
 ms.author: jroth
-ms.openlocfilehash: 588a18179c15f27c00c7e47d871d0c0a9bbddc44
-ms.sourcegitcommit: 18a98ea6a30d448aa6195e10ea2413be7e837e94
+ms.openlocfilehash: 5dbeffea507c857aec6554a8f98096d7752fe9fc
+ms.sourcegitcommit: c7f40918dc3ecdb0ed2ef5c237a3996cb4cd268d
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 08/27/2020
-ms.locfileid: "88977634"
+ms.lasthandoff: 10/05/2020
+ms.locfileid: "91723090"
 ---
 # <a name="securing-rds-applications"></a>RDS 애플리케이션 보안
 이 항목에서는 RDS에 대 한 보안 정보를 제공 합니다.  
   
 > [!IMPORTANT]
->  Windows 8 및 Windows Server 2012부터 RDS 서버 구성 요소는 더 이상 Windows 운영 체제에 포함 되지 않습니다 (자세한 내용은 Windows 8 및 [Windows Server 2012 Compatibility Cookbook](https://www.microsoft.com/download/details.aspx?id=27416) 참조). 이후 버전의 Windows에서는 RDS 클라이언트 구성 요소가 제거 됩니다. 새 개발 작업에서는 이 기능을 사용하지 않도록 하고, 현재 이 기능을 사용하는 애플리케이션은 수정하세요. RDS를 사용 하는 응용 프로그램은 [WCF Data Service](https://go.microsoft.com/fwlink/?LinkId=199565)로 마이그레이션해야 합니다.  
+>  Windows 8 및 Windows Server 2012부터 RDS 서버 구성 요소는 더 이상 Windows 운영 체제에 포함 되지 않습니다 (자세한 내용은 Windows 8 및 [Windows Server 2012 Compatibility Cookbook](https://www.microsoft.com/download/details.aspx?id=27416) 참조). 이후 버전의 Windows에서는 RDS 클라이언트 구성 요소가 제거 됩니다. 새 개발 작업에서는 이 기능을 사용하지 않도록 하고, 현재 이 기능을 사용하는 애플리케이션은 수정하세요. RDS를 사용 하는 응용 프로그램은 [WCF Data Service](/dotnet/framework/wcf/)로 마이그레이션해야 합니다.  
   
 ## <a name="microsoft-internet-explorer-security-issues"></a>Microsoft Internet Explorer 보안 문제  
  Microsoft Internet Explorer에 새로운 보안 기능이 추가 됨에 따라 일부 ADO 및 RDS 개체는 "안전" 모드 환경 에서만 실행 되도록 제한 됩니다. 이를 위해서는 여러 영역, 보안 수준, 제한적인 동작, 안전 하지 않은 작업 및 사용자 지정 된 보안 설정을 포함 하 여 이러한 문제를 알고 있어야 합니다.  

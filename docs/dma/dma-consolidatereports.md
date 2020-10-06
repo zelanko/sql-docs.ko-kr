@@ -14,27 +14,27 @@ ms.assetid: ''
 author: rajeshsetlem
 ms.author: rajpo
 ms.custom: seo-lt-2019
-ms.openlocfilehash: b16ed1f153259f1301f78d82291c677337677643
-ms.sourcegitcommit: c4d6804bde7eaf72d9233d6d43f77d77d1b17c4e
+ms.openlocfilehash: e989e524a35763927ac949a88592b38c28a18dc5
+ms.sourcegitcommit: c7f40918dc3ecdb0ed2ef5c237a3996cb4cd268d
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 10/01/2020
-ms.locfileid: "91624800"
+ms.lasthandoff: 10/05/2020
+ms.locfileid: "91727804"
 ---
 # <a name="assess-an-enterprise-and-consolidate-assessment-reports-with-dma"></a>엔터프라이즈 평가 및 DMA에 평가 보고서 통합
 
 다음 단계별 지침은 Data Migration Assistant를 사용 하 여 온-프레미스 SQL Server 또는 Azure Vm에서 실행 되는 SQL Server를 업그레이드 하거나 Azure SQL Database로 마이그레이션하기 위한 성공적으로 확장 된 평가를 수행 하는 데 도움이 됩니다.
 
-## <a name="prerequisites"></a>필수 구성 요소
+## <a name="prerequisites"></a>사전 요구 사항
 
 - DMA가 시작 되는 네트워크의 도구 컴퓨터를 지정 합니다. 이 컴퓨터가 SQL Server 대상에 연결 되어 있는지 확인 합니다.
 - 다운로드 및 설치:
   - [Data Migration Assistant](https://www.microsoft.com/download/details.aspx?id=53595) v 3.6 이상
   - [PowerShell](https://aka.ms/wmf5download) v 5.0 이상
   - [.NET Framework](https://www.microsoft.com/download/details.aspx?id=30653) v 4.5 이상
-  - [SSMS](https://docs.microsoft.com/sql/ssms/download-sql-server-management-studio-ssms) 17.0 이상.
+  - [SSMS](../ssms/download-sql-server-management-studio-ssms.md) 17.0 이상.
   - [데스크톱을 Power BI](/power-bi/fundamentals/desktop-get-the-desktop)합니다.
-  - [Azure PowerShell 모듈](https://docs.microsoft.com/powershell/azure/install-az-ps?view=azps-1.0.0)
+  - [Azure PowerShell 모듈](/powershell/azure/install-az-ps?view=azps-1.0.0)
 - 다운로드 및 추출:
   - [DMA 보고서 Power BI 템플릿입니다](https://techcommunity.microsoft.com/gxcuf89792/attachments/gxcuf89792/MicrosoftDataMigration/161/4/PowerBI-Reports.zip).
   - [Loadwarehouse 스크립트](https://techcommunity.microsoft.com/gxcuf89792/attachments/gxcuf89792/MicrosoftDataMigration/161/3/LoadWarehouse1.zip)입니다.
@@ -123,7 +123,7 @@ CSV 파일에 SQL Server 테이블을 사용 하면 평가 플래그 열을 사�
 
 DmaDataCollector 함수와 연결 된 매개 변수는 다음 표에 설명 되어 있습니다.
 
-|매개 변수  |설명 |
+|매개 변수  |Description |
 |---------|---------|
 |**getServerListFrom** | 사용자의 인벤토리에 있습니다. 가능한 값은 **SqlServer** 및 **CSV**입니다.<br/>자세한 내용은 [SQL server 인벤토리 만들기](#create-inventory)를 참조 하세요. |
 |**csvPath** | CSV 인벤토리 파일의 경로입니다.  **Getserverlistfrom** 이 **CSV**로 설정 된 경우에만 사용 됩니다. |
@@ -147,7 +147,7 @@ DmaDataCollector 함수와 연결 된 매개 변수는 다음 표에 설명 되�
 
 DmaProcessor 함수와 연결 된 매개 변수는 다음 표에 설명 되어 있습니다.
 
-|매개 변수  |설명 |
+|매개 변수  |Description |
 |---------|---------|
 |**processTo** | JSON 파일을 처리 하는 위치입니다. 가능한 값은 **SQLServer** 및 **AzureSQLDatabase**입니다. |
 |**serverName** | 데이터가 처리 될 SQL Server 인스턴스입니다.  **Processto** 매개 변수에 대해 **AzureSQLDatabase** 를 지정 하는 경우 SQL Server 이름만 포함 합니다 (database.windows.net는 포함 하지 않음). Azure SQL Database를 대상으로 지정 하는 경우 두 개의 로그인을 묻는 메시지가 표시 됩니다. 첫 번째는 Azure 테 넌 트 자격 증명 이며, 두 번째는 Azure SQL Server에 대 한 관리자 로그인입니다. |

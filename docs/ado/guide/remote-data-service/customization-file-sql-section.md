@@ -14,18 +14,18 @@ helpviewer_keywords:
 ms.assetid: e65c2871-9986-44ff-b8b7-7f5eda91b3fa
 author: rothja
 ms.author: jroth
-ms.openlocfilehash: 210363a1a852aa3c059c7929af1c07a9fe32c6ae
-ms.sourcegitcommit: 18a98ea6a30d448aa6195e10ea2413be7e837e94
+ms.openlocfilehash: d17fa12aa0b07b265fb8f26b6ac1b6c584015d1e
+ms.sourcegitcommit: c7f40918dc3ecdb0ed2ef5c237a3996cb4cd268d
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 08/27/2020
-ms.locfileid: "88978234"
+ms.lasthandoff: 10/05/2020
+ms.locfileid: "91724764"
 ---
 # <a name="customization-file-sql-section"></a>사용자 지정 파일 SQL 섹션
 **Sql** 섹션에는 클라이언트 명령 문자열을 대체 하는 새 sql 문자열이 포함 될 수 있습니다. 섹션에 SQL 문자열이 없는 경우 섹션은 무시 됩니다.  
   
 > [!IMPORTANT]
->  Windows 8 및 Windows Server 2012부터 RDS 서버 구성 요소는 더 이상 Windows 운영 체제에 포함 되지 않습니다 (자세한 내용은 Windows 8 및 [Windows Server 2012 Compatibility Cookbook](https://www.microsoft.com/download/details.aspx?id=27416) 참조). 이후 버전의 Windows에서는 RDS 클라이언트 구성 요소가 제거 됩니다. 새 개발 작업에서는 이 기능을 사용하지 않도록 하고, 현재 이 기능을 사용하는 애플리케이션은 수정하세요. RDS를 사용 하는 응용 프로그램은 [WCF Data Service](https://go.microsoft.com/fwlink/?LinkId=199565)로 마이그레이션해야 합니다.  
+>  Windows 8 및 Windows Server 2012부터 RDS 서버 구성 요소는 더 이상 Windows 운영 체제에 포함 되지 않습니다 (자세한 내용은 Windows 8 및 [Windows Server 2012 Compatibility Cookbook](https://www.microsoft.com/download/details.aspx?id=27416) 참조). 이후 버전의 Windows에서는 RDS 클라이언트 구성 요소가 제거 됩니다. 새 개발 작업에서는 이 기능을 사용하지 않도록 하고, 현재 이 기능을 사용하는 애플리케이션은 수정하세요. RDS를 사용 하는 응용 프로그램은 [WCF Data Service](/dotnet/framework/wcf/)로 마이그레이션해야 합니다.  
   
  새 SQL 문자열은 *매개 변수화*될 수 있습니다. 즉, **sql** 섹션 sql 문자열 ('? ' 문자에 의해 지정 됨)의 매개 변수는 클라이언트 명령 문자열 (괄호 안의 쉼표로 구분 된 목록으로 지정)의 *식별자* 에서 해당 인수로 바꿀 수 있습니다. 식별자 및 인수 목록은 함수 호출 처럼 동작 합니다.  
   

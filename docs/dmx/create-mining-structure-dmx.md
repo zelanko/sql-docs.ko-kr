@@ -9,12 +9,12 @@ ms.topic: reference
 ms.author: owend
 ms.reviewer: owend
 author: minewiskan
-ms.openlocfilehash: 06f013ccb5c33dfbaba2fe0a0e102a448c17e036
-ms.sourcegitcommit: e700497f962e4c2274df16d9e651059b42ff1a10
+ms.openlocfilehash: ab738433380302e0f3d8bc70113aa2a8d13f7ac8
+ms.sourcegitcommit: c7f40918dc3ecdb0ed2ef5c237a3996cb4cd268d
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 08/17/2020
-ms.locfileid: "88414029"
+ms.lasthandoff: 10/05/2020
+ms.locfileid: "91726284"
 ---
 # <a name="create-mining-structure-dmx"></a>CREATE MINING STRUCTURE(DMX)
 [!INCLUDE[ssas](../includes/applies-to-version/ssas.md)]
@@ -65,7 +65,7 @@ CREATE [SESSION] MINING STRUCTURE <structure>
 ## <a name="remarks"></a>설명  
  마이닝 구조 정의는 열 목록을 지정하고 필요에 따라 열 간의 계층 관계를 지정한 다음 역시 필요에 따라 마이닝 구조를 학습 및 테스트 데이터 집합으로 분할하는 작업으로 구성됩니다.  
   
- 선택적인 SESSION 키워드는 구조가 현재 세션 기간에만 사용할 수 있는 임시 구조임을 나타냅니다. 세션이 종료될 때 구조 및 구조를 기반으로 하는 모든 모델이 삭제됩니다. 임시 마이닝 구조 및 모델을 만들려면 먼저 데이터베이스 속성인 AllowSessionMiningModels를 설정 해야 합니다. 자세한 내용은 [Data Mining Properties](https://docs.microsoft.com/analysis-services/server-properties/data-mining-properties)을 참조하세요.  
+ 선택적인 SESSION 키워드는 구조가 현재 세션 기간에만 사용할 수 있는 임시 구조임을 나타냅니다. 세션이 종료될 때 구조 및 구조를 기반으로 하는 모든 모델이 삭제됩니다. 임시 마이닝 구조 및 모델을 만들려면 먼저 데이터베이스 속성인 AllowSessionMiningModels를 설정 해야 합니다. 자세한 내용은 [Data Mining Properties](/analysis-services/server-properties/data-mining-properties)을 참조하세요.  
   
 ## <a name="column-definition-list"></a>열 정의 목록  
  열 정의 목록에서 각 열에 대해 다음과 같은 정보를 포함하여 마이닝 구조를 정의합니다.  
@@ -96,13 +96,13 @@ CREATE [SESSION] MINING STRUCTURE <structure>
   
  구조 열을 정의하는 데 사용할 수 있는 데이터 형식, 내용 유형, 열 배포 및 모델링 플래그의 목록은 다음 항목을 참조하십시오.  
   
--   [데이터 형식&#40;데이터 마이닝&#41;](https://docs.microsoft.com/analysis-services/data-mining/data-types-data-mining)  
+-   [데이터 형식&#40;데이터 마이닝&#41;](/analysis-services/data-mining/data-types-data-mining)  
   
--   [콘텐츠 형식&#40;데이터 마이닝&#41;](https://docs.microsoft.com/analysis-services/data-mining/content-types-data-mining)  
+-   [콘텐츠 형식&#40;데이터 마이닝&#41;](/analysis-services/data-mining/content-types-data-mining)  
   
--   [열 배포&#40;데이터 마이닝&#41;](https://docs.microsoft.com/analysis-services/data-mining/column-distributions-data-mining)  
+-   [열 배포&#40;데이터 마이닝&#41;](/analysis-services/data-mining/column-distributions-data-mining)  
   
--   [모델링 플래그&#40;데이터 마이닝&#41;](https://docs.microsoft.com/analysis-services/data-mining/modeling-flags-data-mining)  
+-   [모델링 플래그&#40;데이터 마이닝&#41;](/analysis-services/data-mining/modeling-flags-data-mining)  
   
  열 하나에 대해 여러 개의 모델링 플래그 값을 정의할 수 있습니다. 단, 하나의 열에는 각각 하나의 내용 유형과 데이터 형식만 있을 수 있습니다.  
   
@@ -113,7 +113,7 @@ CREATE [SESSION] MINING STRUCTURE <structure>
  값 계층 구조를 나타냅니다. RELATED TO 열의 대상은 중첩 테이블의 키 열, 사례 행의 불연속 값 열 또는 RELATED TO 절이 있는 다른 열(중첩된 열을 나타냄)일 수 있습니다.  
   
 ## <a name="holdout-parameters"></a>홀드아웃 매개 변수  
- 홀드아웃 매개 변수를 지정할 때 구조 데이터의 파티션이 만들어집니다. 홀드아웃에 지정하는 크기는 테스트용으로 예약되며 남은 데이터는 학습에 사용됩니다. 기본적으로 [!INCLUDE[ssBIDevStudioFull](../includes/ssbidevstudiofull-md.md)]를 사용하여 마이닝 구조를 만드는 경우 30%의 테스트 데이터와 70%의 학습 데이터를 포함하는 홀드아웃 파티션이 만들어집니다. 자세한 내용은 [Training and Testing Data Sets](https://docs.microsoft.com/analysis-services/data-mining/training-and-testing-data-sets)을 참조하세요.  
+ 홀드아웃 매개 변수를 지정할 때 구조 데이터의 파티션이 만들어집니다. 홀드아웃에 지정하는 크기는 테스트용으로 예약되며 남은 데이터는 학습에 사용됩니다. 기본적으로 [!INCLUDE[ssBIDevStudioFull](../includes/ssbidevstudiofull-md.md)]를 사용하여 마이닝 구조를 만드는 경우 30%의 테스트 데이터와 70%의 학습 데이터를 포함하는 홀드아웃 파티션이 만들어집니다. 자세한 내용은 [Training and Testing Data Sets](/analysis-services/data-mining/training-and-testing-data-sets)을 참조하세요.  
   
  DMX(Data Mining Extensions)를 사용하여 마이닝 구조를 만드는 경우에는 홀드아웃 파티션이 만들어지도록 수동으로 지정해야 합니다.  
   
@@ -182,5 +182,4 @@ WITH HOLDOUT(25 PERCENT OR 2000 CASES) REPEATABLE(0)
  [데이터 마이닝 확장 &#40;DMX&#41; 데이터 정의 문](../dmx/dmx-statements-data-definition.md)   
  [데이터 마이닝 확장 &#40;DMX&#41; 데이터 조작 문](../dmx/dmx-statements-data-manipulation.md)   
  [DMX&#40;Data Mining Extensions&#41; 문 참조](../dmx/data-mining-extensions-dmx-statements.md)  
-  
   

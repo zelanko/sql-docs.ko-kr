@@ -12,12 +12,12 @@ f1_keywords:
 ms.assetid: 8a3c88ca-31d6-4f75-9aca-cf027c6d9845
 author: swinarko
 ms.author: sawinark
-ms.openlocfilehash: 73ec65fc7de346ada1232bee7a03dce2aedffa68
-ms.sourcegitcommit: e700497f962e4c2274df16d9e651059b42ff1a10
+ms.openlocfilehash: a229aacb9110bdd5eefa9dc3987ce39fec8a1e66
+ms.sourcegitcommit: c7f40918dc3ecdb0ed2ef5c237a3996cb4cd268d
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 08/17/2020
-ms.locfileid: "88466643"
+ms.lasthandoff: 10/05/2020
+ms.locfileid: "91726625"
 ---
 # <a name="set-domain-properties"></a>도메인 속성 설정
 
@@ -41,7 +41,7 @@ ms.locfileid: "88466643"
   
 2.  [Create a Domain](../data-quality-services/create-a-domain.md)에 설명된 대로 새 도메인을 만든 후 속성을 설정합니다.  
   
-3.  **마침** 을 클릭하여 [도메인 관리 작업 종료](https://msdn.microsoft.com/library/ab6505ad-3090-453b-bb01-58435e7fa7c0)에 설명된 대로 도메인 관리 작업을 완료합니다.  
+3.  **마침** 을 클릭하여 [도메인 관리 작업 종료](/previous-versions/sql/sql-server-2016/hh510411(v=sql.130))에 설명된 대로 도메인 관리 작업을 완료합니다.  
   
 ##  <a name="follow-up-after-setting-domain-properties"></a><a name="FollowUp"></a> 후속 작업: 도메인 속성을 설정한 후  
  도메인 속성을 설정한 후 도메인에 대해 다른 도메인 관리 태스크를 수행하거나, 기술 자료 검색을 수행하여 도메인에 정보를 추가하거나, 도메인에 일치 정책을 추가할 수 있습니다. 자세한 내용은 [기술 자료 검색 수행](../data-quality-services/perform-knowledge-discovery.md), [도메인 관리](../data-quality-services/managing-a-domain.md) 또는 [일치 정책 만들기](../data-quality-services/create-a-matching-policy.md)를 참조하세요.  
@@ -90,5 +90,4 @@ ms.locfileid: "88466643"
   
 ###  <a name="disable-syntax-error-algorithms"></a><a name="Syntax"></a> 구문 오류 알고리즘 사용 안 함  
  데이터 형식이 **문자열**인 경우 정리 작업 시 DQS에서 도메인의 구문 오류를 식별하지 않도록 지정하려면 선택합니다. 해당 도메인의 구문 오류 식별이 무의미한 경우 이 확인란을 선택합니다. 예를 들어 일련 번호의 경우 구문 오류 식별이 중요하지 않을 수 있습니다. 이 컨트롤은 문자열 데이터 형식에만 사용할 수 있습니다. DQS는 문자열이 아닌 데이터 형식에서 구문 오류를 검사하지 않습니다.  
-  
   

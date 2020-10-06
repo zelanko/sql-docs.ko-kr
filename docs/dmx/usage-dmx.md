@@ -9,12 +9,12 @@ ms.topic: reference
 ms.author: owend
 ms.reviewer: owend
 author: minewiskan
-ms.openlocfilehash: 3886cd500282d34ef07145913e036a6ab4ad4852
-ms.sourcegitcommit: e700497f962e4c2274df16d9e651059b42ff1a10
+ms.openlocfilehash: 4e9108fc9bc53361a15d144f1f11afa62f9d5a97
+ms.sourcegitcommit: c7f40918dc3ecdb0ed2ef5c237a3996cb4cd268d
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 08/17/2020
-ms.locfileid: "88394859"
+ms.lasthandoff: 10/05/2020
+ms.locfileid: "91726051"
 ---
 # <a name="usage-dmx"></a>사용법(DMX)
 [!INCLUDE[ssas](../includes/applies-to-version/ssas.md)]
@@ -37,10 +37,10 @@ ms.locfileid: "88394859"
   
  **Predict** 유형으로 지정 된 열은 입력 및 출력 열 모두로 사용 됩니다. **Predictonly** 로 지정 된 열은 출력 열로만 사용 됩니다. 특정 알고리즘에서는 Predict 열을 다른 방식으로 처리할 수 있습니다.  
   
- 에서 지 원하는 열 사용 유형에 대 한 자세한 내용은 [!INCLUDE[ssASnoversion](../includes/ssasnoversion-md.md)] [마이닝 모델 열](https://docs.microsoft.com/analysis-services/data-mining/mining-model-columns)을 참조 하세요.  
+ 에서 지 원하는 열 사용 유형에 대 한 자세한 내용은 [!INCLUDE[ssASnoversion](../includes/ssasnoversion-md.md)] [마이닝 모델 열](/analysis-services/data-mining/mining-model-columns)을 참조 하세요.  
   
 ## <a name="see-also"></a>참고 항목  
- [데이터 마이닝 알고리즘 &#40;Analysis Services 데이터 마이닝&#41;](https://docs.microsoft.com/analysis-services/data-mining/data-mining-algorithms-analysis-services-data-mining)   
+ [데이터 마이닝 알고리즘 &#40;Analysis Services 데이터 마이닝&#41;](/analysis-services/data-mining/data-mining-algorithms-analysis-services-data-mining)   
  [DMX&#41; 참조 &#40;데이터 마이닝 확장](../dmx/data-mining-extensions-dmx-reference.md)   
  [데이터 마이닝 확장 &#40;DMX&#41; 구문 요소](../dmx/data-mining-extensions-dmx-syntax-elements.md)   
  [데이터 마이닝 확장 &#40;DMX&#41; 함수 참조](../dmx/data-mining-extensions-dmx-function-reference.md)   
@@ -50,5 +50,4 @@ ms.locfileid: "88394859"
  [DMX&#41;일반 예측 함수 &#40;](../dmx/general-prediction-functions-dmx.md)   
  [DMX 예측 쿼리의 구조 및 사용법](../dmx/structure-and-usage-of-dmx-prediction-queries.md)   
  [DMX Select 문 이해](../dmx/understanding-the-dmx-select-statement.md)  
-  
   

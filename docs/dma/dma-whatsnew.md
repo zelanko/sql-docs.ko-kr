@@ -14,12 +14,12 @@ helpviewer_keywords:
 ms.assetid: ''
 author: rajeshsetlem
 ms.author: rajpo
-ms.openlocfilehash: 19753cddaba236d0de75e492962bd6c8ad2675e2
-ms.sourcegitcommit: 822d4b3cfa53269535500a3db5877a82b5076728
+ms.openlocfilehash: 11bbf0a39ed9a9bbaa19992f98e4e23d50d6fbe9
+ms.sourcegitcommit: c7f40918dc3ecdb0ed2ef5c237a3996cb4cd268d
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 08/07/2020
-ms.locfileid: "87988500"
+ms.lasthandoff: 10/05/2020
+ms.locfileid: "91727762"
 ---
 # <a name="whats-new-in-data-migration-assistant"></a>Data Migration Assistant의 새로운 기능
 
@@ -83,7 +83,7 @@ Data Migration Assistant의 v 4.1 릴리스에는 SQL Managed Instance로 마이
   - 동작 변경: 보고 된 스키마 개체는 계속 작동할 수 있지만 성능 저하와 같은 다른 동작을 나타낼 수 있습니다.
   - 정보 문제: 이러한 개체는 마이그레이션에 영향을 주지 않지만 기능 SQL Server 릴리스에서는 사용 되지 않을 수 있습니다.
 
-평가가 완료 되 면 [Azure Database Migration Service](https://azure.microsoft.com/services/database-migration/) (DMS)를 사용 하 여 SQL Managed Instance SQL Server 데이터베이스 마이그레이션을 수행 합니다.  DMS는 SQL Managed Instance에 대 한 [오프 라인](https://docs.microsoft.com/azure/dms/tutorial-sql-server-to-managed-instance) (일회성) 및 [온라인](https://docs.microsoft.com/azure/dms/tutorial-sql-server-managed-instance-online) (최소 가동 중지 시간) 데이터베이스 마이그레이션을 모두 지원 합니다.
+평가가 완료 되 면 [Azure Database Migration Service](https://azure.microsoft.com/services/database-migration/) (DMS)를 사용 하 여 SQL Managed Instance SQL Server 데이터베이스 마이그레이션을 수행 합니다.  DMS는 SQL Managed Instance에 대 한 [오프 라인](/azure/dms/tutorial-sql-server-to-managed-instance) (일회성) 및 [온라인](/azure/dms/tutorial-sql-server-managed-instance-online) (최소 가동 중지 시간) 데이터베이스 마이그레이션을 모두 지원 합니다.
 
 ## <a name="data-migration-assistant-v40"></a>Data Migration Assistant v 4.0
 
@@ -141,7 +141,7 @@ Linux 및 Windows는 서로 다른 경로 형식을 사용 합니다. 따라서 
 
 ### <a name="migrating-windows-logins"></a>Windows 로그인 마이그레이션
 
-AD (Active Directory) 로그인의 마이그레이션은 Linux의 SQL Server 2017에서 공식적으로 지원 되지만 성공적으로 작동 하려면 추가 구성이 필요 합니다. Linux에서 SQL Server 2017에 Active Directory 로그인을 설정 하는 방법에 대 한 자세한 내용은 [SQL Server on Linux 인증 Active Directory](https://docs.microsoft.com/sql/linux/sql-server-linux-active-directory-authentication) 문서를 참조 하세요. 필요한 구성을 수행한 후에는 설치가 완료 되 고 평소와 같이 Active Directory 로그인을 마이그레이션할 수 있습니다. 표준 SQL 인증은 추가 설정 없이 정상적으로 작동 합니다.
+AD (Active Directory) 로그인의 마이그레이션은 Linux의 SQL Server 2017에서 공식적으로 지원 되지만 성공적으로 작동 하려면 추가 구성이 필요 합니다. Linux에서 SQL Server 2017에 Active Directory 로그인을 설정 하는 방법에 대 한 자세한 내용은 [SQL Server on Linux 인증 Active Directory](../linux/sql-server-linux-active-directory-authentication.md) 문서를 참조 하세요. 필요한 구성을 수행한 후에는 설치가 완료 되 고 평소와 같이 Active Directory 로그인을 마이그레이션할 수 있습니다. 표준 SQL 인증은 추가 설정 없이 정상적으로 작동 합니다.
 
 ## <a name="data-migration-assistant-v32"></a>Data Migration Assistant v 3.2
 

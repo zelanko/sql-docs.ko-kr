@@ -9,12 +9,12 @@ ms.topic: reference
 ms.author: owend
 ms.reviewer: owend
 author: minewiskan
-ms.openlocfilehash: a2b810d2b268e12c97857475e474d3ed597978ec
-ms.sourcegitcommit: e700497f962e4c2274df16d9e651059b42ff1a10
+ms.openlocfilehash: 24a19fc748da4ef521bb9781941911efb08e0132
+ms.sourcegitcommit: c7f40918dc3ecdb0ed2ef5c237a3996cb4cd268d
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 08/17/2020
-ms.locfileid: "88431175"
+ms.lasthandoff: 10/05/2020
+ms.locfileid: "91727752"
 ---
 # <a name="bottomcount-dmx"></a>BottomCount(DMX)
 [!INCLUDE[ssas](../includes/applies-to-version/ssas.md)]
@@ -38,7 +38,7 @@ BottomCount(<table expression>, <rank expression>, <count>)
  인수에 의해 제공 되는 값은 \<rank expression> 인수에 제공 된 행의 차수를 늘리고 \<table expression> 인수에 지정 된 최하위 행의 수를 \<count> 반환 합니다.  
   
 ## <a name="examples"></a>예제  
- 다음 예에서는 [기본 데이터 마이닝 자습서](https://msdn.microsoft.com/library/6602edb6-d160-43fb-83c8-9df5dddfeb9c)를 사용 하 여 작성 하는 연결 모델에 대 한 예측 쿼리를 만듭니다.  
+ 다음 예에서는 [기본 데이터 마이닝 자습서](/previous-versions/sql/sql-server-2016/ms167167(v=sql.130))를 사용 하 여 작성 하는 연결 모델에 대 한 예측 쿼리를 만듭니다.  
   
  BottomCount이 어떻게 작동 하는지 이해 하려면 먼저 중첩 테이블만 반환 하는 예측 쿼리를 실행 하는 것이 유용할 수 있습니다.  
   
@@ -51,7 +51,7 @@ SELECT (SELECT 'Women''s Mountain Shorts' as [Model]) AS [v Assoc Seq Line Items
 ```  
   
 > [!NOTE]  
->  이 예에서 입력으로 제공된 값에는 작은따옴표가 들어 있으므로 작은따옴표를 앞에 추가하여 이스케이프해야 합니다. 이스케이프 문자를 삽입하는 구문을 모르는 경우 예측 쿼리 작성기를 사용하여 쿼리를 만들 수 있습니다. 드롭다운 목록에서 값을 선택하면 필요한 이스케이프 문자가 자동으로 삽입됩니다. 자세한 내용은 [데이터 마이닝 디자이너에서 단일 쿼리 만들기](https://docs.microsoft.com/analysis-services/data-mining/create-a-singleton-query-in-the-data-mining-designer)를 참조 하세요.  
+>  이 예에서 입력으로 제공된 값에는 작은따옴표가 들어 있으므로 작은따옴표를 앞에 추가하여 이스케이프해야 합니다. 이스케이프 문자를 삽입하는 구문을 모르는 경우 예측 쿼리 작성기를 사용하여 쿼리를 만들 수 있습니다. 드롭다운 목록에서 값을 선택하면 필요한 이스케이프 문자가 자동으로 삽입됩니다. 자세한 내용은 [데이터 마이닝 디자이너에서 단일 쿼리 만들기](/analysis-services/data-mining/create-a-singleton-query-in-the-data-mining-designer)를 참조 하세요.  
   
  결과 예:  
   
@@ -105,5 +105,4 @@ NATURAL PREDICTION JOIN
  [BottomPercent &#40;DMX&#41;](../dmx/bottompercent-dmx.md)   
  [BottomSum &#40;DMX&#41;](../dmx/bottomsum-dmx.md)   
  [TopCount &#40;DMX&#41;](../dmx/topcount-dmx.md)  
-  
   

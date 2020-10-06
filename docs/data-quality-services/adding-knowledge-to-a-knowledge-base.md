@@ -10,12 +10,12 @@ ms.topic: conceptual
 ms.assetid: da148a7f-55bc-4990-a157-e61968b831d7
 author: swinarko
 ms.author: sawinark
-ms.openlocfilehash: 393d9d10fd882f1dedfbaac012b2dbd0ec200a3b
-ms.sourcegitcommit: e700497f962e4c2274df16d9e651059b42ff1a10
+ms.openlocfilehash: bffd325b4c940302ebcc4fef67c17f5f76c03a00
+ms.sourcegitcommit: c7f40918dc3ecdb0ed2ef5c237a3996cb4cd268d
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 08/17/2020
-ms.locfileid: "88450019"
+ms.lasthandoff: 10/05/2020
+ms.locfileid: "91724665"
 ---
 # <a name="adding-knowledge-to-a-knowledge-base"></a>기술 자료에 정보 추가
 
@@ -44,14 +44,14 @@ ms.locfileid: "88450019"
   
 -   자세한 내용은 설명서에서 [Perform Knowledge Discovery](../data-quality-services/perform-knowledge-discovery.md)을 참조하십시오.  
   
--   기술 자료 검색을 수행하는 방법에 대한 데모 비디오를 보려면 [여기](https://msdn.microsoft.com/sqlserver/hh323825.aspx)를 클릭하십시오.  
+-   기술 자료 검색을 수행하는 방법에 대한 데모 비디오를 보려면 [여기](../sql-server/index.yml)를 클릭하십시오.  
   
 ##  <a name="manage-data-values-in-a-domain"></a><a name="ManageDomain"></a> 도메인의 데이터 값 관리  
  DQS에서는 컴퓨터 기반 기술 자료 검색 작업으로 생성된 메타데이터를 대화형으로 변경 및 보강할 수 있습니다. 이 작업은 도메인 관리 작업에서 수행할 수 있으며, 특정 데이터 값에 변경 내용을 적용할 수 있습니다.  
   
 -   자세한 내용은 설명서에서 [Change Domain Values](../data-quality-services/change-domain-values.md)을 참조하십시오.  
   
--   도메인 관리를 수행하는 방법에 대한 데모 비디오를 보려면 [여기](https://msdn.microsoft.com/sqlserver/hh323825.aspx)를 클릭하십시오. 이 비디오에서는 기술 자료 검색 마법사의 도메인 값 관리 페이지에서 도메인 값을 변경합니다. 또한 도메인 관리 작업의 도메인 값 페이지에서 이러한 단계를 수행할 수도 있습니다.  
+-   도메인 관리를 수행하는 방법에 대한 데모 비디오를 보려면 [여기](../sql-server/index.yml)를 클릭하십시오. 이 비디오에서는 기술 자료 검색 마법사의 도메인 값 관리 페이지에서 도메인 값을 변경합니다. 또한 도메인 관리 작업의 도메인 값 페이지에서 이러한 단계를 수행할 수도 있습니다.  
   
 ##  <a name="import-knowledge-from-a-dqs-file"></a><a name="DQSFile"></a> Dqs 파일에서 정보 가져오기  
  .dqs 데이터 파일에서 기존 기술 자료로 도메인을 가져오거나 .dqs에서 새 기술 자료로 전체 기술 자료를 가져올 수 있습니다. 이렇게 하려면 먼저 기존 도메인 또는 기술 자료를 .dqs 파일로 내보내야 합니다. 도메인이 포함된 .dqs 파일은 모든 도메인 파일을 포함하고, 기술 자료가 포함된 .dqs 파일은 도메인 및 일치 정책을 비롯하여 모든 기술 자료 정보를 포함합니다.  
@@ -72,5 +72,4 @@ ms.locfileid: "88450019"
  DQS에서는 미국 회사 및 주소 데이터에 대한 도메인이 포함된 DQS 데이터라는 미리 구축된 기술 자료를 제공합니다. 이 기술 자료를 사용하면 기술 자료를 새로 만들 필요 없이 빠르게 프로젝트를 시작할 수 있습니다. DQS 데이터 기술 자료는 읽기 전용이지만 데이터 관리자가 이를 기반으로 새로운 기술 자료를 만들 수 있습니다.  
   
 -   자세한 내용은 설명서에서 [Using the DQS Default Knowledge Base](../data-quality-services/using-the-dqs-default-knowledge-base.md)을 참조하십시오.  
-  
   

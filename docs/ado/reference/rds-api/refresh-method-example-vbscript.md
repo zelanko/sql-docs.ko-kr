@@ -15,16 +15,16 @@ helpviewer_keywords:
 ms.assetid: f2926578-bc60-464b-916e-ddfdb8014253
 author: rothja
 ms.author: jroth
-ms.openlocfilehash: 3ab5056926fcda98ef0f60449eb5b19d75105e35
-ms.sourcegitcommit: 18a98ea6a30d448aa6195e10ea2413be7e837e94
+ms.openlocfilehash: 0e8d73b1c0a07ea127e0d4bad880b82c08ca24a5
+ms.sourcegitcommit: c7f40918dc3ecdb0ed2ef5c237a3996cb4cd268d
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 08/27/2020
-ms.locfileid: "88981364"
+ms.lasthandoff: 10/05/2020
+ms.locfileid: "91724287"
 ---
 # <a name="refresh-method-example-vbscript"></a>Refresh 메서드 예제(VBScript)
 > [!IMPORTANT]
->  Windows 8 및 Windows Server 2012부터 RDS 서버 구성 요소는 더 이상 Windows 운영 체제에 포함 되지 않습니다 (자세한 내용은 Windows 8 및 [Windows Server 2012 Compatibility Cookbook](https://www.microsoft.com/download/details.aspx?id=27416) 참조). 이후 버전의 Windows에서는 RDS 클라이언트 구성 요소가 제거 됩니다. 새 개발 작업에서는 이 기능을 사용하지 않도록 하고, 현재 이 기능을 사용하는 애플리케이션은 수정하세요. RDS를 사용 하는 응용 프로그램은 [WCF Data Service](https://go.microsoft.com/fwlink/?LinkId=199565)로 마이그레이션해야 합니다.  
+>  Windows 8 및 Windows Server 2012부터 RDS 서버 구성 요소는 더 이상 Windows 운영 체제에 포함 되지 않습니다 (자세한 내용은 Windows 8 및 [Windows Server 2012 Compatibility Cookbook](https://www.microsoft.com/download/details.aspx?id=27416) 참조). 이후 버전의 Windows에서는 RDS 클라이언트 구성 요소가 제거 됩니다. 새 개발 작업에서는 이 기능을 사용하지 않도록 하고, 현재 이 기능을 사용하는 애플리케이션은 수정하세요. RDS를 사용 하는 응용 프로그램은 [WCF Data Service](/dotnet/framework/wcf/)로 마이그레이션해야 합니다.  
   
  다음 예에서는 RDS의 필수 매개 변수를 설정 하는 방법을 보여 줍니다 [. 런타임에.](./datacontrol-object-rds.md) [Refresh](../ado-api/refresh-method-ado.md) 메서드를 사용 하 여 [레코드 집합](../ado-api/recordset-object-ado.md) 을 검색 하는 방식은 [executeoptions](./executeoptions-property-rds.md) 및 [fetchoptions](./fetchoptions-property-rds.md) 속성의 설정에 따라 결정 됩니다. 이 예를 테스트 하려면 다음 코드를 잘라내어 일반 ASP 문서에 붙여넣고 이름을 **Refreshvbs**로 만듭니다. **찾기** 를 사용 하 여 Adovbs 파일을 찾은 다음 사용 하려는 디렉터리에 배치 합니다. ASP 스크립트는 서버를 식별 합니다.  
   

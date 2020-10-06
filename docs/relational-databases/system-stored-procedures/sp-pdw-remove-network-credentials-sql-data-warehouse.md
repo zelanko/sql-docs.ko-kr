@@ -15,12 +15,12 @@ author: ronortloff
 ms.author: rortloff
 monikerRange: '>= aps-pdw-2016 || = azure-sqldw-latest || = sqlallproducts-allversions'
 ms.custom: seo-dt-2019
-ms.openlocfilehash: f6ff98a4f17aa39f1b7b85959a68c0f54973a41e
-ms.sourcegitcommit: e700497f962e4c2274df16d9e651059b42ff1a10
+ms.openlocfilehash: 2e05c41cfa226fc2cdc6d2050657b607430f4ef7
+ms.sourcegitcommit: c7f40918dc3ecdb0ed2ef5c237a3996cb4cd268d
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 08/17/2020
-ms.locfileid: "88473905"
+ms.lasthandoff: 10/05/2020
+ms.locfileid: "91723991"
 ---
 # <a name="sp_pdw_remove_network_credentials-sql-data-warehouse"></a>sp_pdw_remove_network_credentials (SQL Data Warehouse)
 [!INCLUDE[applies-to-version/asa-pdw](../../includes/applies-to-version/asa-pdw.md)]
@@ -35,7 +35,9 @@ ms.locfileid: "88473905"
 -- Syntax for Azure SQL Data Warehouse and Parallel Data Warehouse  
   
 sp_pdw_remove_network_credentials 'target_server_name'  
-```  
+```
+
+[!INCLUDE[synapse-analytics-od-unsupported-syntax](../../includes/synapse-analytics-od-unsupported-syntax.md)]
   
 ## <a name="arguments"></a>인수  
  '*target_server_name*'  
@@ -56,7 +58,7 @@ sp_pdw_remove_network_credentials 'target_server_name'
  이 저장 프로시저는에 대 한 NetworkService 계정에서 네트워크 자격 증명을 제거 [!INCLUDE[ssSDW](../../includes/sssdw-md.md)] 합니다. NetworkService 계정은 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 제어 노드와 계산 노드에서 SMP의 각 인스턴스를 실행 합니다. 예를 들어 백업 작업이 실행 될 때 제어 노드와 각 계산 노드는 NetworkService 계정 자격 증명을 사용 하 여 대상 서버에 액세스 합니다.  
   
 ## <a name="metadata"></a>메타데이터  
- 모든 자격 증명을 나열 하 고 자격 증명이 제거 되었는지 확인 하려면 [dm_pdw_network_credentials &#40;transact-sql&#41;](../../relational-databases/system-dynamic-management-views/sys-dm-pdw-network-credentials-transact-sql.md)를 사용 합니다.  
+ 모든 자격 증명을 나열 하 고 자격 증명이 제거 되었는지 확인 하려면 [transact-sql&#41;&#40;sys.dm_pdw_network_credentials ](../../relational-databases/system-dynamic-management-views/sys-dm-pdw-network-credentials-transact-sql.md)을 사용 합니다.  
   
  자격 증명을 추가 하려면 [sp_pdw_add_network_credentials &#40;SQL Data Warehouse&#41;](../../relational-databases/system-stored-procedures/sp-pdw-add-network-credentials-sql-data-warehouse.md)를 사용 합니다.  
   

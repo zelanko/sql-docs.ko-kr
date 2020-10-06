@@ -9,12 +9,12 @@ ms.topic: reference
 ms.author: owend
 ms.reviewer: owend
 author: minewiskan
-ms.openlocfilehash: 2c87da38fb2f13c0c79dfc777b52e19139db584c
-ms.sourcegitcommit: e700497f962e4c2274df16d9e651059b42ff1a10
+ms.openlocfilehash: 0dfcf7804455ecb3b16a29a8cab2f61d91df6b1f
+ms.sourcegitcommit: c7f40918dc3ecdb0ed2ef5c237a3996cb4cd268d
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 08/17/2020
-ms.locfileid: "88431135"
+ms.lasthandoff: 10/05/2020
+ms.locfileid: "91726354"
 ---
 # <a name="clusterdistance-dmx"></a>ClusterDistance(DMX)
 [!INCLUDE[ssas](../includes/applies-to-version/ssas.md)]
@@ -32,12 +32,12 @@ ClusterDistance([<ClusterID expression>])
  이 함수는 기본 데이터 마이닝 모델이 클러스터링을 지원할 때만 사용할 수 있습니다. 이 함수는 EM과 K-Means를 비롯한 모든 종류의 클러스터링 모델과 함께 사용할 수 있지만 알고리즘에 따라 결과가 달라집니다.  
   
 ## <a name="return-type"></a>반환 형식  
- 스칼라 값  
+ 스칼라 값입니다.  
   
 ## <a name="remarks"></a>설명  
  **Clusterdistance** 함수는 입력 사례에 대해 확률이 가장 높은 클러스터와 입력 사례 사이의 거리를 반환 합니다.  
   
- K-Means 클러스터링의 경우 모든 사례는 멤버 자격 가중치가 1.0인 하나의 클러스터에만 속할 수 있으므로 클러스터 거리는 항상 0입니다. 그러나 K-Means에서는 각 클러스터에 중심이 있는 것으로 간주됩니다. 마이닝 모델 콘텐츠에서 NODE_DISTRIBUTION 중첩 테이블을 쿼리하거나 탐색하면 중심 값을 가져올 수 있습니다. 자세한 내용은 [클러스터링 모델에 대한 마이닝 모델 콘텐츠&#40;Analysis Services - 데이터 마이닝&#41;](https://docs.microsoft.com/analysis-services/data-mining/mining-model-content-for-clustering-models-analysis-services-data-mining)를 참조하세요.  
+ K-Means 클러스터링의 경우 모든 사례는 멤버 자격 가중치가 1.0인 하나의 클러스터에만 속할 수 있으므로 클러스터 거리는 항상 0입니다. 그러나 K-Means에서는 각 클러스터에 중심이 있는 것으로 간주됩니다. 마이닝 모델 콘텐츠에서 NODE_DISTRIBUTION 중첩 테이블을 쿼리하거나 탐색하면 중심 값을 가져올 수 있습니다. 자세한 내용은 [클러스터링 모델에 대한 마이닝 모델 콘텐츠&#40;Analysis Services - 데이터 마이닝&#41;](/analysis-services/data-mining/mining-model-content-for-clustering-models-analysis-services-data-mining)를 참조하세요.  
   
  기본 EM 클러스터링 모델의 경우 클러스터 내부에 있는 모든 점의 확률이 같은 것으로 간주되므로 클러스터에 중심이 없습니다. 특정 사례와 특정 클러스터 *N* 사이의 **clusterdistance** 값은 다음과 같이 계산 됩니다.  
   
@@ -129,6 +129,5 @@ NATURAL PREDICTION JOIN
  [클러스터 &#40;DMX&#41;](../dmx/cluster-dmx.md)   
  [데이터 마이닝 확장 &#40;DMX&#41; 함수 참조](../dmx/data-mining-extensions-dmx-function-reference.md)   
  [DMX &#40;함수&#41;](../dmx/functions-dmx.md)   
- [클러스터링 모델에 대한 마이닝 모델 콘텐츠&#40;Analysis Services - 데이터 마이닝&#41;](https://docs.microsoft.com/analysis-services/data-mining/mining-model-content-for-clustering-models-analysis-services-data-mining)  
-  
+ [클러스터링 모델에 대한 마이닝 모델 콘텐츠&#40;Analysis Services - 데이터 마이닝&#41;](/analysis-services/data-mining/mining-model-content-for-clustering-models-analysis-services-data-mining)  
   

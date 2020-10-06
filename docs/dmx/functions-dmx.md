@@ -9,12 +9,12 @@ ms.topic: reference
 ms.author: owend
 ms.reviewer: owend
 author: minewiskan
-ms.openlocfilehash: 70e448c9d47dbffd4bc37e7b4dfd6e96bf0de9dd
-ms.sourcegitcommit: e700497f962e4c2274df16d9e651059b42ff1a10
+ms.openlocfilehash: 4b8e5d887195e27f706ef995ff92e32aa41b9149
+ms.sourcegitcommit: c7f40918dc3ecdb0ed2ef5c237a3996cb4cd268d
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 08/17/2020
-ms.locfileid: "88353559"
+ms.lasthandoff: 10/05/2020
+ms.locfileid: "91726198"
 ---
 # <a name="functions-dmx"></a>함수(DMX)
 [!INCLUDE[ssas](../includes/applies-to-version/ssas.md)]
@@ -49,7 +49,7 @@ FROM [TM_Decision_Tree].CONTENT
 ## <a name="stored-procedures"></a>저장 프로시저  
  공용 언어 런타임 프로그래밍 언어를 사용하여 DMX 기능을 확장하는 저장 프로시저를 만들 수 있습니다. 예를 들어 회귀 트리 마이닝 모델은 회귀 수식을 설명 하는 A, B 등의 계수를 반환 하지만 모델은 A + Bx = y와 같은 수식 자체를 반환 하지 않습니다. 그러나 데이터 마이닝 모델 개체를 사용하여 내용 스키마를 탐색하고 회귀 수식을 출력으로 반환하는 저장 프로시저를 만들 수 있습니다. 즉 DMX 문에서는 회귀 수식 목록을 쿼리 결과의 일부로 반환할 수 있습니다.  
   
- **자세한 내용:** [다차원 모델 어셈블리 관리](https://docs.microsoft.com/analysis-services/multidimensional-models/multidimensional-model-assemblies-management)  
+ **자세한 내용:** [다차원 모델 어셈블리 관리](/analysis-services/multidimensional-models/multidimensional-model-assemblies-management)  
   
 ## <a name="see-also"></a>참고 항목  
  [DMX&#41; 참조 &#40;데이터 마이닝 확장](../dmx/data-mining-extensions-dmx-reference.md)   
@@ -61,5 +61,4 @@ FROM [TM_Decision_Tree].CONTENT
  [DMX&#41;일반 예측 함수 &#40;](../dmx/general-prediction-functions-dmx.md)   
  [DMX 예측 쿼리의 구조 및 사용법](../dmx/structure-and-usage-of-dmx-prediction-queries.md)   
  [DMX Select 문 이해](../dmx/understanding-the-dmx-select-statement.md)  
-  
   

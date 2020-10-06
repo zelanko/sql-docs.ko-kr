@@ -13,18 +13,18 @@ helpviewer_keywords:
 ms.assetid: e851a22d-01bc-4eb0-bc42-92b8f65d1c63
 author: rothja
 ms.author: jroth
-ms.openlocfilehash: d34e53f62b66197c7aaedcc0df57e489763c1dd0
-ms.sourcegitcommit: 18a98ea6a30d448aa6195e10ea2413be7e837e94
+ms.openlocfilehash: 990dbb2295397870c88af55be06c4635c948589e
+ms.sourcegitcommit: c7f40918dc3ecdb0ed2ef5c237a3996cb4cd268d
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 08/27/2020
-ms.locfileid: "88978094"
+ms.lasthandoff: 10/05/2020
+ms.locfileid: "91724711"
 ---
 # <a name="granting-guest-privileges-to-a-web-server-computer"></a>웹 서버 컴퓨터에 게스트 권한 부여
 익명 웹 서버 계정 (IUSR_*ComputerName*)을 웹 서버 컴퓨터의 게스트 로컬 그룹에 추가 하 여 RDS를 사용 해야 합니다.  
   
 > [!IMPORTANT]
->  Windows 8 및 Windows Server 2012부터 RDS 서버 구성 요소는 더 이상 Windows 운영 체제에 포함 되지 않습니다 (자세한 내용은 Windows 8 및 [Windows Server 2012 Compatibility Cookbook](https://www.microsoft.com/download/details.aspx?id=27416) 참조). 이후 버전의 Windows에서는 RDS 클라이언트 구성 요소가 제거 됩니다. 새 개발 작업에서는 이 기능을 사용하지 않도록 하고, 현재 이 기능을 사용하는 애플리케이션은 수정하세요. RDS를 사용 하는 응용 프로그램은 [WCF Data Service](https://go.microsoft.com/fwlink/?LinkId=199565)로 마이그레이션해야 합니다.  
+>  Windows 8 및 Windows Server 2012부터 RDS 서버 구성 요소는 더 이상 Windows 운영 체제에 포함 되지 않습니다 (자세한 내용은 Windows 8 및 [Windows Server 2012 Compatibility Cookbook](https://www.microsoft.com/download/details.aspx?id=27416) 참조). 이후 버전의 Windows에서는 RDS 클라이언트 구성 요소가 제거 됩니다. 새 개발 작업에서는 이 기능을 사용하지 않도록 하고, 현재 이 기능을 사용하는 애플리케이션은 수정하세요. RDS를 사용 하는 응용 프로그램은 [WCF Data Service](/dotnet/framework/wcf/)로 마이그레이션해야 합니다.  
   
 ### <a name="to-grant-guest-privileges-to-a-web-server-computer"></a>웹 서버 컴퓨터에 게스트 권한을 부여 하려면  
   
@@ -39,5 +39,3 @@ ms.locfileid: "88978094"
 5.  **사용자 또는 그룹 선택** 대화 상자의 목록에 익명 웹 서버 계정이 표시 되지 않는 경우 아래쪽의 빈 상자에 이름 (IUSR_*ComputerName*)을 입력 한 다음 **추가**를 클릭 합니다.  
   
 6.  **확인**을 클릭합니다.
-
-

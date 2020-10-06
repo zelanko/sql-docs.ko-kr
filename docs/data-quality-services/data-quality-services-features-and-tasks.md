@@ -10,12 +10,12 @@ ms.topic: conceptual
 ms.assetid: 84928476-3a98-4bac-bb47-6346142752d0
 author: swinarko
 ms.author: sawinark
-ms.openlocfilehash: 68ac5a3101426d159b75035b6203ff4f8b8f6cda
-ms.sourcegitcommit: e700497f962e4c2274df16d9e651059b42ff1a10
+ms.openlocfilehash: a9eb5f94809fd2a9472df520d1c5559e28dfdf3b
+ms.sourcegitcommit: c7f40918dc3ecdb0ed2ef5c237a3996cb4cd268d
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 08/17/2020
-ms.locfileid: "88462175"
+ms.lasthandoff: 10/05/2020
+ms.locfileid: "91725394"
 ---
 # <a name="data-quality-services-features-and-tasks"></a>Data Quality Services 기능 및 태스크
 
@@ -23,14 +23,14 @@ ms.locfileid: "88462175"
 
   데이터 관리자, Data Quality Services 관리자 또는 SQL Server 관리자가 데이터 품질 프로젝트를 준비하고 실행하는 데 필요한 정보를 찾을 수 있습니다.  
   
- ![작은 파일 폴더 아이콘](https://docs.microsoft.com/analysis-services/analysis-services/media/filefolder-small.png "작은 파일 폴더 아이콘") **데이터 품질 솔루션 디자인 및 구현**  
+ ![작은 파일 폴더 아이콘](/analysis-services/analysis-services/media/filefolder-small.png "작은 파일 폴더 아이콘") **데이터 품질 솔루션 디자인 및 구현**  
  [데이터 품질 클라이언트 애플리케이션](../data-quality-services/data-quality-client-application.md)  
   
  [DQS 기술 자료 및 도메인](../data-quality-services/dqs-knowledge-bases-and-domains.md)  
   
  [데이터 품질 프로젝트&#40;DQS&#41;](../data-quality-services/data-quality-projects-dqs.md)  
   
- [데이터 정리](../data-quality-services/data-cleansing.md)  
+ [Data Cleansing](../data-quality-services/data-cleansing.md)  
   
  [데이터 일치](../data-quality-services/data-matching.md)  
   
@@ -38,9 +38,8 @@ ms.locfileid: "88462175"
   
  [DQS의 데이터 프로파일링 및 알림](../data-quality-services/data-profiling-and-notifications-in-dqs.md)  
   
- ![작은 파일 폴더 아이콘](https://docs.microsoft.com/analysis-services/analysis-services/media/filefolder-small.png "작은 파일 폴더 아이콘") **Data Quality Services 관리**  
+ ![작은 파일 폴더 아이콘](/analysis-services/analysis-services/media/filefolder-small.png "작은 파일 폴더 아이콘") **Data Quality Services 관리**  
  [dqs 관리](../data-quality-services/dqs-administration.md)  
   
  [DQS 보안](../data-quality-services/dqs-security.md)  
-  
   

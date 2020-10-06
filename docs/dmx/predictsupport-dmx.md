@@ -9,12 +9,12 @@ ms.topic: reference
 ms.author: owend
 ms.reviewer: owend
 author: minewiskan
-ms.openlocfilehash: cea4913bf3668c89fb0c1c66632359a372f3d54b
-ms.sourcegitcommit: e700497f962e4c2274df16d9e651059b42ff1a10
+ms.openlocfilehash: 180375f77251adaab9a8d30462267b043ed6e946
+ms.sourcegitcommit: c7f40918dc3ecdb0ed2ef5c237a3996cb4cd268d
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 08/17/2020
-ms.locfileid: "88422257"
+ms.lasthandoff: 10/05/2020
+ms.locfileid: "91727699"
 ---
 # <a name="predictsupport-dmx"></a>PredictSupport(DMX)
 [!INCLUDE[ssas](../includes/applies-to-version/ssas.md)]
@@ -40,7 +40,7 @@ PredictSupport(<scalar column reference>, [<predicted state>])
  누락 된 상태에 대 한 지원을 반환 하려면를 \<predicted state> NULL로 설정 합니다.  
   
 > [!NOTE]  
->  쿼리하는 모델 유형에 따라 지원 값이 다르게 계산되거나 다르게 해석될 수 있습니다. 특정 모델 유형에 대해 지원이 계산 되는 방법에 대 한 자세한 내용은 [마이닝 모델 콘텐츠 &#40;Analysis Services-데이터 마이닝&#41;](https://docs.microsoft.com/analysis-services/data-mining/mining-model-content-analysis-services-data-mining)에서 개별 알고리즘 유형을 참조 하세요.  
+>  쿼리하는 모델 유형에 따라 지원 값이 다르게 계산되거나 다르게 해석될 수 있습니다. 특정 모델 유형에 대해 지원이 계산 되는 방법에 대 한 자세한 내용은 [마이닝 모델 콘텐츠 &#40;Analysis Services-데이터 마이닝&#41;](/analysis-services/data-mining/mining-model-content-analysis-services-data-mining)에서 개별 알고리즘 유형을 참조 하세요.  
   
 ## <a name="examples"></a>예제  
  다음 예에서는 단일 쿼리를 사용하여 개별 고객이 자전거를 구입할 가능성이 있는지 여부를 예측하고 TM Decision Tree 마이닝 모델을 기반으로 하는 예측을 지원하는지 여부를 확인합니다.  
@@ -63,5 +63,4 @@ NATURAL PREDICTION JOIN
  [데이터 마이닝 확장 &#40;DMX&#41; 함수 참조](../dmx/data-mining-extensions-dmx-function-reference.md)   
  [DMX &#40;함수&#41;](../dmx/functions-dmx.md)   
  [DMX&#41;일반 예측 함수 &#40;](../dmx/general-prediction-functions-dmx.md)  
-  
   

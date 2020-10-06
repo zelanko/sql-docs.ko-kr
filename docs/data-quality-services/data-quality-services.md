@@ -1,6 +1,6 @@
 ---
 description: 데이터베이스 엔진 서비스
-title: Data Quality Services
+title: 데이터베이스 엔진 서비스
 ms.date: 10/12/2013
 ms.prod: sql
 ms.prod_service: data-quality-services
@@ -10,14 +10,14 @@ ms.topic: conceptual
 ms.assetid: 9c6b996c-e768-4bf5-837f-5436ed9cea1d
 author: swinarko
 ms.author: sawinark
-ms.openlocfilehash: dc765b9cca33e249e4efda60bad08781eee35b15
-ms.sourcegitcommit: e700497f962e4c2274df16d9e651059b42ff1a10
+ms.openlocfilehash: bea20a1eb563df3d2af9cddf640359673b05dc57
+ms.sourcegitcommit: c7f40918dc3ecdb0ed2ef5c237a3996cb4cd268d
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 08/17/2020
-ms.locfileid: "88462155"
+ms.lasthandoff: 10/05/2020
+ms.locfileid: "91725393"
 ---
-# <a name="data-quality-services"></a>Data Quality Services
+# <a name="data-quality-services"></a>데이터베이스 엔진 서비스
 
 [!INCLUDE [SQL Server - Windows only ASDBMI  ](../includes/applies-to-version/sqlserver.md)]
 
@@ -28,28 +28,27 @@ ms.locfileid: "88462155"
  DQS 설치에 대한 자세한 내용은 [Install Data Quality Services](../data-quality-services/install-windows/install-data-quality-services.md)를 참조하십시오. 기존 버전의 DQS를 [!INCLUDE[ssCurrent](../includes/sscurrent-md.md)]로 업그레이드하려면 [Data Quality Services 업그레이드](../database-engine/install-windows/upgrade-data-quality-services.md)를 참조하세요.  
   
  **영역별 내용 찾아보기**  
- [응용 프로그램 Data Quality Client](../data-quality-services/data-quality-client-application.md) ![작은 파일 폴더 아이콘](https://docs.microsoft.com/analysis-services/analysis-services/media/filefolder-small.png "작은 파일 폴더 아이콘")  
+ [응용 프로그램 Data Quality Client](../data-quality-services/data-quality-client-application.md) ![작은 파일 폴더 아이콘](/analysis-services/analysis-services/media/filefolder-small.png "작은 파일 폴더 아이콘")  
   
- ![작은 파일 폴더 아이콘](https://docs.microsoft.com/analysis-services/analysis-services/media/filefolder-small.png "작은 파일 폴더 아이콘") [DQS 기술 자료 및 도메인](../data-quality-services/dqs-knowledge-bases-and-domains.md)  
+ ![작은 파일 폴더 아이콘](/analysis-services/analysis-services/media/filefolder-small.png "작은 파일 폴더 아이콘") [DQS 기술 자료 및 도메인](../data-quality-services/dqs-knowledge-bases-and-domains.md)  
   
- ![작은 파일 폴더 아이콘](https://docs.microsoft.com/analysis-services/analysis-services/media/filefolder-small.png "작은 파일 폴더 아이콘") [데이터 품질 프로젝트](../data-quality-services/data-quality-projects-dqs.md)  
+ ![작은 파일 폴더 아이콘](/analysis-services/analysis-services/media/filefolder-small.png "작은 파일 폴더 아이콘") [데이터 품질 프로젝트](../data-quality-services/data-quality-projects-dqs.md)  
   
- ![작은 파일 폴더 아이콘](https://docs.microsoft.com/analysis-services/analysis-services/media/filefolder-small.png "작은 파일 폴더 아이콘") [데이터 정리](../data-quality-services/data-cleansing.md)  
+ ![작은 파일 폴더 아이콘](/analysis-services/analysis-services/media/filefolder-small.png "작은 파일 폴더 아이콘") [데이터 정리](../data-quality-services/data-cleansing.md)  
   
- ![작은 파일 폴더 아이콘](https://docs.microsoft.com/analysis-services/analysis-services/media/filefolder-small.png "작은 파일 폴더 아이콘") [데이터 일치](../data-quality-services/data-matching.md)  
+ ![작은 파일 폴더 아이콘](/analysis-services/analysis-services/media/filefolder-small.png "작은 파일 폴더 아이콘") [데이터 일치](../data-quality-services/data-matching.md)  
   
- DQS의 ![작은 파일 폴더 아이콘](https://docs.microsoft.com/analysis-services/analysis-services/media/filefolder-small.png "작은 파일 폴더 아이콘") [참조 Data Services](../data-quality-services/reference-data-services-in-dqs.md)  
+ DQS의 ![작은 파일 폴더 아이콘](/analysis-services/analysis-services/media/filefolder-small.png "작은 파일 폴더 아이콘") [참조 Data Services](../data-quality-services/reference-data-services-in-dqs.md)  
   
- ![작은 파일 폴더 아이콘](https://docs.microsoft.com/analysis-services/analysis-services/media/filefolder-small.png "작은 파일 폴더 아이콘") [DQS의 데이터 프로 파일링 및 알림](../data-quality-services/data-profiling-and-notifications-in-dqs.md)  
+ ![작은 파일 폴더 아이콘](/analysis-services/analysis-services/media/filefolder-small.png "작은 파일 폴더 아이콘") [DQS의 데이터 프로 파일링 및 알림](../data-quality-services/data-profiling-and-notifications-in-dqs.md)  
   
- ![작은 파일 폴더 아이콘](https://docs.microsoft.com/analysis-services/analysis-services/media/filefolder-small.png "작은 파일 폴더 아이콘") [DQS 관리](../data-quality-services/dqs-administration.md)  
+ ![작은 파일 폴더 아이콘](/analysis-services/analysis-services/media/filefolder-small.png "작은 파일 폴더 아이콘") [DQS 관리](../data-quality-services/dqs-administration.md)  
   
- ![작은 파일 폴더 아이콘](https://docs.microsoft.com/analysis-services/analysis-services/media/filefolder-small.png "작은 파일 폴더 아이콘") [DQS 보안](../data-quality-services/dqs-security.md)  
+ ![작은 파일 폴더 아이콘](/analysis-services/analysis-services/media/filefolder-small.png "작은 파일 폴더 아이콘") [DQS 보안](../data-quality-services/dqs-security.md)  
   
 ## <a name="see-also"></a>참고 항목  
  [Data Quality Services 소개](../data-quality-services/introduction-to-data-quality-services.md)   
  [Data Quality Services 개념](../data-quality-services/data-quality-services-concepts.md)   
- [DQS 리소스](https://technet.microsoft.com/sqlserver/hh780961)   
- [SQL Server 리소스 센터](https://go.microsoft.com/fwlink/?linkID=219676)  
-  
+ [DQS 리소스](../sql-server/index.yml)   
+ [SQL Server 리소스 센터](/previous-versions/sql/sql-server-2012/hh231622(v=sql.110))  
   

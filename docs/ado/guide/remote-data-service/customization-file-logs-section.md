@@ -14,18 +14,18 @@ helpviewer_keywords:
 ms.assetid: a368e264-865c-41ee-be00-d9097255c2ea
 author: rothja
 ms.author: jroth
-ms.openlocfilehash: 890ba32615cdd78d9b999958f3ce3cb1e0755b81
-ms.sourcegitcommit: 18a98ea6a30d448aa6195e10ea2413be7e837e94
+ms.openlocfilehash: cc65c6d9ad0b97f6d7f98a26fec173fc0fd630c3
+ms.sourcegitcommit: c7f40918dc3ecdb0ed2ef5c237a3996cb4cd268d
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 08/27/2020
-ms.locfileid: "88978244"
+ms.lasthandoff: 10/05/2020
+ms.locfileid: "91724774"
 ---
 # <a name="customization-file-logs-section"></a>사용자 지정 파일 로그 섹션
 **Logs** 섹션에는 **DataFactory**작업 중에 오류를 기록 하는 파일의 이름을 지정 하는 로그 파일 항목이 포함 되어 있습니다.  
   
 > [!IMPORTANT]
->  Windows 8 및 Windows Server 2012부터 RDS 서버 구성 요소는 더 이상 Windows 운영 체제에 포함 되지 않습니다 (자세한 내용은 Windows 8 및 [Windows Server 2012 Compatibility Cookbook](https://www.microsoft.com/download/details.aspx?id=27416) 참조). 이후 버전의 Windows에서는 RDS 클라이언트 구성 요소가 제거 됩니다. 새 개발 작업에서는 이 기능을 사용하지 않도록 하고, 현재 이 기능을 사용하는 애플리케이션은 수정하세요. RDS를 사용 하는 응용 프로그램은 [WCF Data Service](https://go.microsoft.com/fwlink/?LinkId=199565)로 마이그레이션해야 합니다.  
+>  Windows 8 및 Windows Server 2012부터 RDS 서버 구성 요소는 더 이상 Windows 운영 체제에 포함 되지 않습니다 (자세한 내용은 Windows 8 및 [Windows Server 2012 Compatibility Cookbook](https://www.microsoft.com/download/details.aspx?id=27416) 참조). 이후 버전의 Windows에서는 RDS 클라이언트 구성 요소가 제거 됩니다. 새 개발 작업에서는 이 기능을 사용하지 않도록 하고, 현재 이 기능을 사용하는 애플리케이션은 수정하세요. RDS를 사용 하는 응용 프로그램은 [WCF Data Service](/dotnet/framework/wcf/)로 마이그레이션해야 합니다.  
   
 ## <a name="syntax"></a>구문  
  로그 파일 항목의 형식은 다음과 같습니다.  
@@ -39,7 +39,7 @@ FileName
   
 ## <a name="remarks"></a>설명  
   
-|부분|설명|  
+|부분|Description|  
 |----------|-----------------|  
 |**err**|로그 파일 항목 임을 나타내는 리터럴 문자열입니다.|  
 |*FileName*|전체 경로 및 파일 이름입니다. 일반적인 파일 이름은 **c:\msdfmap.log**입니다.|  

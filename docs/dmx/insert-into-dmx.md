@@ -9,17 +9,17 @@ ms.topic: reference
 ms.author: owend
 ms.reviewer: owend
 author: minewiskan
-ms.openlocfilehash: 5388b3a4d59a80f3e4b030313cde4a5ea9361a3d
-ms.sourcegitcommit: e700497f962e4c2274df16d9e651059b42ff1a10
+ms.openlocfilehash: 37a7a0e8be59136eb3ab6e0454c7910b9c9e3198
+ms.sourcegitcommit: c7f40918dc3ecdb0ed2ef5c237a3996cb4cd268d
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 08/17/2020
-ms.locfileid: "88352919"
+ms.lasthandoff: 10/05/2020
+ms.locfileid: "91726164"
 ---
 # <a name="insert-into-dmx"></a>INSERT INTO(DMX)
 [!INCLUDE[ssas](../includes/applies-to-version/ssas.md)]
 
-  지정한 데이터 마이닝 개체를 처리합니다. 마이닝 모델 및 마이닝 구조를 처리 하는 방법에 대 한 자세한 내용은 [데이터 마이닝&#41;&#40;처리 요구 사항 및 고려 사항 ](https://docs.microsoft.com/analysis-services/data-mining/processing-requirements-and-considerations-data-mining)을 참조 하세요.  
+  지정한 데이터 마이닝 개체를 처리합니다. 마이닝 모델 및 마이닝 구조를 처리 하는 방법에 대 한 자세한 내용은 [데이터 마이닝&#41;&#40;처리 요구 사항 및 고려 사항 ](/analysis-services/data-mining/processing-requirements-and-considerations-data-mining)을 참조 하세요.  
   
  마이닝 구조가 지정된 경우 이 문은 마이닝 구조 및 연결된 모든 마이닝 모델을 처리합니다. 마이닝 모델이 지정된 경우 이 문은 마이닝 모델만 처리합니다.  
   
@@ -49,7 +49,7 @@ INSERT INTO [MINING MODEL]|[MINING STRUCTURE] <model>|<structure>.COLUMN_VALUES 
   
  두 번째 구문 형식을 사용 하 여를에 삽입 *\<object>* 합니다. COLUMN_VALUES 모델을 학습 하지 않고 모델 열에 직접 데이터를 삽입할 수 있습니다. 이렇게 하면 간결하게 정렬된 방식으로 모델에 열 데이터가 제공되므로 계층 구조나 정렬된 열이 포함된 데이터 세트으로 작업할 때 유용합니다.  
   
- 마이닝 모델 또는 마이닝 구조와 함께 **INSERT INTO** 를 사용 하 고 \<mapped model columns> 및 \<source data query> 인수를 벗어나면 문이 이미 존재 하는 바인딩을 사용 하 여 **processdefault**와 같이 동작 합니다. 바인딩이 없는 경우에는 오류가 반환됩니다. **Processdefault**에 대 한 자세한 내용은 [처리 옵션 및 설정 &#40;Analysis Services&#41;](https://docs.microsoft.com/analysis-services/multidimensional-models/processing-options-and-settings-analysis-services)를 참조 하세요. 다음 예에서는 구문을 보여 줍니다.  
+ 마이닝 모델 또는 마이닝 구조와 함께 **INSERT INTO** 를 사용 하 고 \<mapped model columns> 및 \<source data query> 인수를 벗어나면 문이 이미 존재 하는 바인딩을 사용 하 여 **processdefault**와 같이 동작 합니다. 바인딩이 없는 경우에는 오류가 반환됩니다. **Processdefault**에 대 한 자세한 내용은 [처리 옵션 및 설정 &#40;Analysis Services&#41;](/analysis-services/multidimensional-models/processing-options-and-settings-analysis-services)를 참조 하세요. 다음 예에서는 구문을 보여 줍니다.  
   
 ```  
 INSERT INTO [MINING MODEL] <model>  
@@ -59,7 +59,7 @@ INSERT INTO [MINING MODEL] <model>
   
  다음 표에서는 개체의 상태에 따라 여러 가지 형식의 문을 실행한 결과를 설명합니다.  
   
-|인수를 제거합니다.|개체의 상태|결과|  
+|문|개체의 상태|결과|  
 |---------------|----------------------|------------|  
 |마이닝 모델에 삽입*\<model>*|마이닝 구조가 처리됩니다.|마이닝 모델이 처리됩니다.|  
 ||마이닝 구조가 처리되지 않습니다.|마이닝 모델 및 마이닝 구조가 처리됩니다.|  
@@ -124,5 +124,4 @@ AS [Models]
  [데이터 마이닝 확장 &#40;DMX&#41; 데이터 정의 문](../dmx/dmx-statements-data-definition.md)   
  [데이터 마이닝 확장 &#40;DMX&#41; 데이터 조작 문](../dmx/dmx-statements-data-manipulation.md)   
  [DMX&#40;Data Mining Extensions&#41; 문 참조](../dmx/data-mining-extensions-dmx-statements.md)  
-  
   

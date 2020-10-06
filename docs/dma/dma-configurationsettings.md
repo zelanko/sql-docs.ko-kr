@@ -14,26 +14,26 @@ helpviewer_keywords:
 ms.assetid: ''
 author: rajeshsetlem
 ms.author: rajpo
-ms.openlocfilehash: bc6805426251e87a8db3dcf4ad9da6343ac0ea12
-ms.sourcegitcommit: fb1430aedbb91b55b92f07934e9b9bdfbbd2b0c5
+ms.openlocfilehash: 64c18c32cde0c29c120c8cb1b2d976bd983c774a
+ms.sourcegitcommit: c7f40918dc3ecdb0ed2ef5c237a3996cb4cd268d
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 05/07/2020
-ms.locfileid: "82886000"
+ms.lasthandoff: 10/05/2020
+ms.locfileid: "91727794"
 ---
 # <a name="configure-settings-for-data-migration-assistant"></a>Data Migration Assistant에 대 한 설정 구성
 
-Dma .exe .config 파일에서 구성 값을 설정 하 여 Data Migration Assistant의 특정 동작을 미세 조정할 수 있습니다. 이 문서에서는 키 구성 값에 대해 설명 합니다.
+dma.exe.config 파일에서 구성 값을 설정 하 여 Data Migration Assistant의 특정 동작을 미세 조정할 수 있습니다. 이 문서에서는 키 구성 값에 대해 설명 합니다.
 
-컴퓨터의 다음 폴더에서 Data Migration Assistant 데스크톱 응용 프로그램 및 명령줄 유틸리티에 대 한 dma .exe .config 파일을 찾을 수 있습니다.
+컴퓨터의 다음 폴더에서 Data Migration Assistant 데스크톱 응용 프로그램 및 명령줄 유틸리티에 대 한 dma.exe.config 파일을 찾을 수 있습니다.
 
 - 데스크톱 응용 프로그램
 
-  % ProgramFiles% \\ Microsoft Data Migration Assistant \\ ping.exe .config
+  % ProgramFiles% \\ Microsoft Data Migration Assistant \\dma.exe.config
 
 - 명령줄 유틸리티
 
-  % ProgramFiles% \\ Microsoft Data Migration Assistant \\ 
+  % ProgramFiles% \\ Microsoft Data Migration Assistant \\dmacmd.exe.config 
 
 변경 하기 전에 원래 구성 파일의 복사본을 저장 해야 합니다. 변경 후 새 구성 값을 적용 하려면 Data Migration Assistant을 다시 시작 합니다.
 
@@ -111,7 +111,7 @@ maxDataReaderDegreeOfParallelism="8"/>
 
 ## <a name="stretch-database-recommendation-threshold"></a>Stretch Database: 권장 사항 임계값
 
-[SQL Server Stretch Database](https://docs.microsoft.com/sql/sql-server/stretch-database/stretch-database)를 사용 하면 Microsoft SQL Server 2016에서 Azure로 웜 및 콜드 트랜잭션 데이터를 동적으로 확장할 수 있습니다. Stretch Database은 많은 양의 콜드 데이터를 포함 하는 트랜잭션 데이터베이스를 대상으로 합니다. Stretch Database 권장 사항은 저장소 기능 권장 사항에서 먼저이 기능을 사용 하는 것으로 간주 되는 테이블을 식별 한 다음이 기능에 대해 테이블을 사용 하도록 설정 하기 위해 수행 해야 하는 변경 내용을 식별 합니다.
+[SQL Server Stretch Database](../sql-server/stretch-database/stretch-database.md)를 사용 하면 Microsoft SQL Server 2016에서 Azure로 웜 및 콜드 트랜잭션 데이터를 동적으로 확장할 수 있습니다. Stretch Database은 많은 양의 콜드 데이터를 포함 하는 트랜잭션 데이터베이스를 대상으로 합니다. Stretch Database 권장 사항은 저장소 기능 권장 사항에서 먼저이 기능을 사용 하는 것으로 간주 되는 테이블을 식별 한 다음이 기능에 대해 테이블을 사용 하도록 설정 하기 위해 수행 해야 하는 변경 내용을 식별 합니다.
 
 Data Migration Assistant v2.0부터 recommendedNumberOfRows 구성 값을 사용 하 여 Stretch Database 기능을 사용할 수 있도록 테이블에 대해이 임계값을 제어할 수 있습니다. 기본값은 10만 행입니다. 더 작은 테이블에 대 한 스트레치 기능을 분석 하려면 적절 한 값을 낮춥니다.
 
@@ -130,7 +130,7 @@ Data Migration Assistant v2.0부터 recommendedNumberOfRows 구성 값을 사용
 
 ## <a name="sql-connection-timeout"></a>SQL 연결 제한 시간
 
-연결 제한 시간 값을 지정 된 시간 (초)으로 설정 하 여 평가 또는 마이그레이션을 실행 하는 동안 원본 및 대상 인스턴스의 [SQL 연결 시간 제한을](https://msdn.microsoft.com/library/system.data.sqlclient.sqlconnection.connectiontimeout(v=vs.110).aspx) 제어할 수 있습니다. 기본값은 15초입니다.
+연결 제한 시간 값을 지정 된 시간 (초)으로 설정 하 여 평가 또는 마이그레이션을 실행 하는 동안 원본 및 대상 인스턴스의 [SQL 연결 시간 제한을](/dotnet/api/system.data.sqlclient.sqlconnection.connectiontimeout) 제어할 수 있습니다. 기본값은 15초입니다.
 
 ```
 <appSettings>

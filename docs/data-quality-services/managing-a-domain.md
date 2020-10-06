@@ -10,12 +10,12 @@ ms.topic: conceptual
 ms.assetid: c5ab71a3-0dac-45b1-be8e-93bf7e0e03ce
 author: swinarko
 ms.author: sawinark
-ms.openlocfilehash: 5083a23b8e29bfcbf1a4fc343cc8535667b0af89
-ms.sourcegitcommit: e700497f962e4c2274df16d9e651059b42ff1a10
+ms.openlocfilehash: fb3e35b7ad6809eef6fec9bf8e390f36f6572cdf
+ms.sourcegitcommit: c7f40918dc3ecdb0ed2ef5c237a3996cb4cd268d
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 08/17/2020
-ms.locfileid: "88496342"
+ms.lasthandoff: 10/05/2020
+ms.locfileid: "91724636"
 ---
 # <a name="managing-a-domain"></a>도메인 관리
 
@@ -53,7 +53,7 @@ ms.locfileid: "88496342"
 |기술 자료의 값 변경 또는 보강|[도메인 값 변경](../data-quality-services/change-domain-values.md)|  
 |유효성 검사 및 표준화 규칙 사용|[도메인 규칙 만들기](../data-quality-services/create-a-domain-rule.md)|  
 |관계를 사용하여 도메인 값에 포함된 용어 수정|[용어 기반 관계 만들기](../data-quality-services/create-term-based-relations.md)|  
-|도메인 관리 작업 완료, 닫기 또는 취소|[도메인 관리 작업 종료](https://msdn.microsoft.com/library/ab6505ad-3090-453b-bb01-58435e7fa7c0)|  
+|도메인 관리 작업 완료, 닫기 또는 취소|[도메인 관리 작업 종료](/previous-versions/sql/sql-server-2016/hh510411(v=sql.130))|  
   
 ## <a name="related-tasks"></a>관련 작업  
   
@@ -62,5 +62,4 @@ ms.locfileid: "88496342"
 |기술 자료 검색을 실행하고 대화식으로 정보를 관리하여 기술 자료 구축|[기술 자료 구축](../data-quality-services/building-a-knowledge-base.md)|  
 |기술 자료로 정보 가져오기 또는 기술 자료에서 정보 내보내기|[기술 자료 가져오기 및 내보내기](../data-quality-services/importing-and-exporting-knowledge.md)|  
 |복합 도메인 만들기 및 단일 도메인에 정보 추가|[복합 도메인 관리](../data-quality-services/managing-a-composite-domain.md)|  
-  
   

@@ -15,18 +15,18 @@ helpviewer_keywords:
 ms.assetid: a4360ed4-b70f-4734-9041-4025d033346b
 author: rothja
 ms.author: jroth
-ms.openlocfilehash: 860d151bb0071db6086629c8893795cadd47b821
-ms.sourcegitcommit: 18a98ea6a30d448aa6195e10ea2413be7e837e94
+ms.openlocfilehash: 6a4e4fcec5217a9a9475f11d3a386c7436892ea6
+ms.sourcegitcommit: c7f40918dc3ecdb0ed2ef5c237a3996cb4cd268d
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 08/27/2020
-ms.locfileid: "88990994"
+ms.lasthandoff: 10/05/2020
+ms.locfileid: "91724874"
 ---
 # <a name="microsoft-ole-db-remoting-provider-overview"></a>Microsoft OLE DB Remoting 공급자 개요
 Microsoft OLE DB Remoting 공급자는 클라이언트 컴퓨터의 로컬 사용자가 원격 컴퓨터에서 데이터 공급자를 호출할 수 있도록 합니다. 원격 컴퓨터의 로컬 사용자 인 경우와 같이 원격 컴퓨터에 대 한 데이터 공급자 매개 변수를 지정 합니다. 원격 컴퓨터에 액세스 하기 위해 원격 공급자에서 사용 하는 매개 변수를 지정 합니다. 그런 다음 로컬 사용자 인 것 처럼 원격 컴퓨터에 액세스할 수 있습니다.
 
 > [!IMPORTANT]
->  Windows 8 및 Windows Server 2012부터 RDS 서버 구성 요소는 더 이상 Windows 운영 체제에 포함 되지 않습니다 (자세한 내용은 Windows 8 및 [Windows Server 2012 Compatibility Cookbook](https://www.microsoft.com/download/details.aspx?id=27416) 참조). 이후 버전의 Windows에서는 RDS 클라이언트 구성 요소가 제거 됩니다. 새 개발 작업에서는 이 기능을 사용하지 않도록 하고, 현재 이 기능을 사용하는 애플리케이션은 수정하세요. RDS를 사용 하는 응용 프로그램은  [WCF Data Service](https://go.microsoft.com/fwlink/?LinkId=199565)로 마이그레이션해야 합니다.
+>  Windows 8 및 Windows Server 2012부터 RDS 서버 구성 요소는 더 이상 Windows 운영 체제에 포함 되지 않습니다 (자세한 내용은 Windows 8 및 [Windows Server 2012 Compatibility Cookbook](https://www.microsoft.com/download/details.aspx?id=27416) 참조). 이후 버전의 Windows에서는 RDS 클라이언트 구성 요소가 제거 됩니다. 새 개발 작업에서는 이 기능을 사용하지 않도록 하고, 현재 이 기능을 사용하는 애플리케이션은 수정하세요. RDS를 사용 하는 응용 프로그램은  [WCF Data Service](/dotnet/framework/wcf/)로 마이그레이션해야 합니다.
 
 ## <a name="provider-keyword"></a>Provider 키워드
  OLE DB Remoting 공급자를 호출 하려면 연결 문자열에 다음 키워드 및 값을 지정 합니다. 공급자 이름의 빈 공간을 확인 합니다.
@@ -38,14 +38,14 @@ Microsoft OLE DB Remoting 공급자는 클라이언트 컴퓨터의 로컬 사�
 ## <a name="additional-keywords"></a>추가 키워드
  이 서비스 공급자를 호출 하면 다음과 같은 추가 키워드가 관련 됩니다.
 
-|키워드|설명|
+|키워드|Description|
 |-------------|-----------------|
 |**데이터 원본**|원격 데이터 원본의 이름을 지정 합니다. 처리를 위해 OLE DB 원격 공급자로 전달 됩니다.<br /><br /> 이 키워드는 RDS와 동일 합니다 [. DataControl](../../reference/rds-api/datacontrol-object-rds.md) 개체의 [Connect](../../reference/rds-api/connect-property-rds.md) 속성입니다.|
 
 ## <a name="dynamic-properties"></a>동적 속성
  이 서비스 공급자를 호출 하면 다음과 같은 동적 속성이 [Connection](../../reference/ado-api/connection-object-ado.md)개체의 [properties](../../reference/ado-api/properties-collection-ado.md) 컬렉션에 추가 됩니다.
 
-|동적 속성 이름|설명|
+|동적 속성 이름|Description|
 |---------------------------|-----------------|
 |**DFMode**|DataFactory 모드를 나타냅니다. 서버에서 [DataFactory](../../reference/rds-api/datafactory-object-rdsserver.md) 개체의 원하는 버전을 지정 하는 문자열입니다. 특정 버전의 **DataFactory**를 요청 하려면 연결을 열기 전에이 속성을 설정 합니다. 요청 된 버전을 사용할 수 없는 경우 이전 버전을 사용 하려고 시도 합니다. 이전 버전이 없는 경우 오류가 발생 합니다. **DFMode** 가 사용 가능한 버전 보다 작은 경우 오류가 발생 합니다. 연결이 설정 된 후에는이 속성이 읽기 전용입니다.<br /><br /> 다음 유효한 문자열 값 중 하나일 수 있습니다.<br /><br /> -"25"-버전 2.5 (기본값)<br />-"21"-버전 2.1<br />-"20"-버전 2.0<br />-"15"-버전 1.5|
 |**명령 속성**|MS 원격 공급자에 의해 서버에 전송 되는 명령 (행 집합) 속성의 문자열에 추가 되는 값을 나타냅니다. 이 문자열의 기본값은 vt_empty입니다.|

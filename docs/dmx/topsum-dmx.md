@@ -9,12 +9,12 @@ ms.topic: reference
 ms.author: owend
 ms.reviewer: owend
 author: minewiskan
-ms.openlocfilehash: 2406141d9ffe5846e4dd26e75d471391992d1490
-ms.sourcegitcommit: e700497f962e4c2274df16d9e651059b42ff1a10
+ms.openlocfilehash: cc9127339e23443ea76c8f68820a96261991556c
+ms.sourcegitcommit: c7f40918dc3ecdb0ed2ef5c237a3996cb4cd268d
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 08/17/2020
-ms.locfileid: "88395189"
+ms.lasthandoff: 10/05/2020
+ms.locfileid: "91726086"
 ---
 # <a name="topsum-dmx"></a>TopSum(DMX)
 [!INCLUDE[ssas](../includes/applies-to-version/ssas.md)]
@@ -38,7 +38,7 @@ TopSum(<table expression>, <rank expression>, <sum>)
  **TopSum** 함수는 각 행에 대해 계산 된 인수의 값을 기준으로 최상위 행을 내림차순으로 반환 합니다 \<rank expression> .이 값의 합계는 인수에 지정 된 합계 이상이 되도록 합니다 \<rank expression> \<sum> . **TopSum** 는 지정 된 sum 값을 충족 하는 동안 가능한 가장 작은 수의 요소를 반환 합니다.  
   
 ## <a name="examples"></a>예제  
- 다음 예에서는 [기본 데이터 마이닝 자습서](https://msdn.microsoft.com/library/6602edb6-d160-43fb-83c8-9df5dddfeb9c)를 사용 하 여 작성 하는 연결 모델에 대 한 예측 쿼리를 만듭니다.  
+ 다음 예에서는 [기본 데이터 마이닝 자습서](/previous-versions/sql/sql-server-2016/ms167167(v=sql.130))를 사용 하 여 작성 하는 연결 모델에 대 한 예측 쿼리를 만듭니다.  
   
  TopPercent이 어떻게 작동 하는지 이해 하려면 먼저 중첩 테이블만 반환 하는 예측 쿼리를 실행 하는 것이 유용할 수 있습니다.  
   
@@ -51,7 +51,7 @@ SELECT (SELECT 'Women''s Mountain Shorts' as [Model]) AS [v Assoc Seq Line Items
 ```  
   
 > [!NOTE]  
->  이 예에서 입력으로 제공된 값에는 작은따옴표가 들어 있으므로 작은따옴표를 앞에 추가하여 이스케이프해야 합니다. 이스케이프 문자를 삽입하는 구문을 모르는 경우 예측 쿼리 작성기를 사용하여 쿼리를 만들 수 있습니다. 드롭다운 목록에서 값을 선택하면 필요한 이스케이프 문자가 자동으로 삽입됩니다. 자세한 내용은 [데이터 마이닝 디자이너에서 단일 쿼리 만들기](https://docs.microsoft.com/analysis-services/data-mining/create-a-singleton-query-in-the-data-mining-designer)를 참조 하세요.  
+>  이 예에서 입력으로 제공된 값에는 작은따옴표가 들어 있으므로 작은따옴표를 앞에 추가하여 이스케이프해야 합니다. 이스케이프 문자를 삽입하는 구문을 모르는 경우 예측 쿼리 작성기를 사용하여 쿼리를 만들 수 있습니다. 드롭다운 목록에서 값을 선택하면 필요한 이스케이프 문자가 자동으로 삽입됩니다. 자세한 내용은 [데이터 마이닝 디자이너에서 단일 쿼리 만들기](/analysis-services/data-mining/create-a-singleton-query-in-the-data-mining-designer)를 참조 하세요.  
   
  결과 예:  
   
@@ -103,5 +103,4 @@ NATURAL PREDICTION JOIN
  [DMX &#40;함수&#41;](../dmx/functions-dmx.md)   
  [DMX&#41;일반 예측 함수 &#40;](../dmx/general-prediction-functions-dmx.md)   
  [TopPercent &#40;DMX&#41;](../dmx/toppercent-dmx.md)  
-  
   

@@ -10,12 +10,12 @@ ms.topic: conceptual
 ms.assetid: 655a67aa-d662-42f2-b982-c6217125ada8
 author: swinarko
 ms.author: sawinark
-ms.openlocfilehash: 2384aab12163f54aa458c857c5b006861572f3fa
-ms.sourcegitcommit: e700497f962e4c2274df16d9e651059b42ff1a10
+ms.openlocfilehash: ec9540ae9d2b8317cbd49b947345e811b70896a7
+ms.sourcegitcommit: c7f40918dc3ecdb0ed2ef5c237a3996cb4cd268d
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 08/17/2020
-ms.locfileid: "88462151"
+ms.lasthandoff: 10/05/2020
+ms.locfileid: "91724714"
 ---
 # <a name="manage-dqs-databases"></a>Manage DQS Databases
 
@@ -42,7 +42,7 @@ ms.locfileid: "88462151"
 -   DQS 데이터베이스의 기본 복구 모델은 **단순**으로 설정됩니다. 단순 복구 모델에서 트랜잭션은 최소한으로 기록되며, 로그 잘림은 트랜잭션 로그(.ldf 파일)에서 공간을 확보하기 위해 트랜잭션이 완료된 후에 자동으로 발생합니다. 단순 복구 모델에 대한 자세한 내용은 [전체 데이터베이스 백업&#40;SQL Server&#41;](../relational-databases/backup-restore/full-database-backups-sql-server.md)을 참조하세요.  
   
 > [!IMPORTANT]
->  -   단순 복구 모델에서는 오랜 시간 동안 로그 레코드가 활성 상태로 유지되는 경우(예: 길고 시간이 많이 소요되는 트랜잭션) 로그 잘림이 지연될 수 있으므로 트랜잭션 로그가 가득 찰 수 있습니다. 또한 로그 잘림을 수행하더라도 물리적 로그 파일(.ldf 파일)의 크기는 줄어들지 않습니다. 물리적 로그 파일의 크기를 줄이려면 로그 파일을 축소해야 합니다. 트랜잭션 로그와 관련된 문제를 해결하는 방법에 대한 자세한 내용은 [https://go.microsoft.com/fwlink/?LinkId=237446](https://go.microsoft.com/fwlink/?LinkId=237446)의 [트랜잭션 로그&#40;SQL Server&#41;](../relational-databases/logs/the-transaction-log-sql-server.md) 또는 Microsoft 지원 아티클을 참조하세요.  
+>  -   단순 복구 모델에서는 오랜 시간 동안 로그 레코드가 활성 상태로 유지되는 경우(예: 길고 시간이 많이 소요되는 트랜잭션) 로그 잘림이 지연될 수 있으므로 트랜잭션 로그가 가득 찰 수 있습니다. 또한 로그 잘림을 수행하더라도 물리적 로그 파일(.ldf 파일)의 크기는 줄어들지 않습니다. 물리적 로그 파일의 크기를 줄이려면 로그 파일을 축소해야 합니다. 트랜잭션 로그와 관련된 문제를 해결하는 방법에 대한 자세한 내용은 [https://go.microsoft.com/fwlink/?LinkId=237446](../relational-databases/logs/troubleshoot-a-full-transaction-log-sql-server-error-9002.md)의 [트랜잭션 로그&#40;SQL Server&#41;](../relational-databases/logs/the-transaction-log-sql-server.md) 또는 Microsoft 지원 아티클을 참조하세요.  
 > -   데이터에 대해 지정 시간 복구를 수행하려면 DQS 데이터베이스에 대해 전체 백업 또는 차등 백업을 정기적으로 수행하고 트랜잭션 로그도 백업해야 합니다. 자세한 내용은 [전체 데이터베이스 백업&#40;SQL Server&#41;](../relational-databases/backup-restore/full-database-backups-sql-server.md) 및 [트랜잭션 로그 백업&#40;SQL Server&#41;](../relational-databases/backup-restore/back-up-a-transaction-log-sql-server.md)을 참조하세요.  
   
 ##  <a name="detachattach-the-dqs-databases"></a><a name="DetachAttach"></a> DQS 데이터베이스 분리/연결  
@@ -59,5 +59,4 @@ ms.locfileid: "88462151"
   
 ## <a name="see-also"></a>참고 항목  
  [dqs 관리](../data-quality-services/dqs-administration.md)  
-  
   

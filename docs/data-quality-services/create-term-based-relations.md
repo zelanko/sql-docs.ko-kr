@@ -12,12 +12,12 @@ f1_keywords:
 ms.assetid: 66db9277-d892-4dae-8a82-060fd3ba6949
 author: swinarko
 ms.author: sawinark
-ms.openlocfilehash: 29d8da0efeb42d554353fa25395b3058e82e3dbf
-ms.sourcegitcommit: e700497f962e4c2274df16d9e651059b42ff1a10
+ms.openlocfilehash: 0dfc837238d20e58b04b66ae4ea998e60ee80247
+ms.sourcegitcommit: c7f40918dc3ecdb0ed2ef5c237a3996cb4cd268d
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 08/17/2020
-ms.locfileid: "88487858"
+ms.lasthandoff: 10/05/2020
+ms.locfileid: "91725402"
 ---
 # <a name="create-term-based-relations"></a>용어 기반 관계 만들기
 
@@ -100,9 +100,8 @@ ms.locfileid: "88487858"
   
 6.  **변경 사항 적용** 을 클릭하여 도메인에 용어 기반 관계를 적용합니다.  
   
-7.  **마침** 을 클릭하여 [도메인 관리 작업 종료](https://msdn.microsoft.com/library/ab6505ad-3090-453b-bb01-58435e7fa7c0)에 설명된 대로 도메인 관리 작업을 완료합니다.  
+7.  **마침** 을 클릭하여 [도메인 관리 작업 종료](/previous-versions/sql/sql-server-2016/hh510411(v=sql.130))에 설명된 대로 도메인 관리 작업을 완료합니다.  
   
 ##  <a name="follow-up-after-creating-term-based-relations"></a><a name="FollowUp"></a> 후속 작업: 용어 기반 관계를 만든 후  
  용어 기반 관계를 만든 후 도메인에 대해 다른 도메인 관리 태스크를 수행하거나, 기술 자료 검색을 수행하여 도메인에 정보를 추가하거나, 도메인에 일치 정책을 추가할 수 있습니다. 자세한 내용은 [기술 자료 검색 수행](../data-quality-services/perform-knowledge-discovery.md), [도메인 관리](../data-quality-services/managing-a-domain.md) 또는 [일치 정책 만들기](../data-quality-services/create-a-matching-policy.md)를 참조하세요.  
-  
   

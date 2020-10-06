@@ -12,12 +12,12 @@ f1_keywords:
 ms.assetid: 8c90ab70-3aea-4eaf-a174-4159485c87d3
 author: swinarko
 ms.author: sawinark
-ms.openlocfilehash: eb96c88be0b92752e514eb34ac59233d4fae36a3
-ms.sourcegitcommit: e700497f962e4c2274df16d9e651059b42ff1a10
+ms.openlocfilehash: bf85cb8b432dcc6bf72208c12b934291bc72b049
+ms.sourcegitcommit: c7f40918dc3ecdb0ed2ef5c237a3996cb4cd268d
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 08/17/2020
-ms.locfileid: "88450035"
+ms.lasthandoff: 10/05/2020
+ms.locfileid: "91724655"
 ---
 # <a name="change-domain-values"></a>도메인 값 변경
 
@@ -101,7 +101,7 @@ ms.locfileid: "88450035"
   
 11. **선택한 도메인 값 삭제**: 하나 이상의 기존 값을 도메인에서 제거하려면 값 테이블에서 값을 선택한 다음 **선택한 도메인 값 삭제** 아이콘을 클릭합니다. DQS_NULL 항목은 삭제할 수 없으므로 삭제할 값을 여러 개 선택한 경우 그중 DQS_NULL 항목이 포함되어 있으면 작업이 실패합니다.  
   
-12. **마침** 을 클릭하여 [도메인 관리 작업 종료](https://msdn.microsoft.com/library/ab6505ad-3090-453b-bb01-58435e7fa7c0)에 설명된 대로 도메인 관리 작업을 완료합니다.  
+12. **마침** 을 클릭하여 [도메인 관리 작업 종료](/previous-versions/sql/sql-server-2016/hh510411(v=sql.130))에 설명된 대로 도메인 관리 작업을 완료합니다.  
   
 ##  <a name="follow-up-after-changing-domain-values"></a><a name="FollowUp"></a> 후속 작업: 도메인 값 변경 후  
  도메인 값을 변경한 후 도메인에 대해 다른 도메인 관리 태스크를 수행하거나, 기술 자료 검색을 수행하여 도메인에 정보를 추가하거나, 도메인에 일치 정책을 추가할 수 있습니다. 자세한 내용은 [기술 자료 검색 수행](../data-quality-services/perform-knowledge-discovery.md), [도메인 관리](../data-quality-services/managing-a-domain.md) 또는 [일치 정책 만들기](../data-quality-services/create-a-matching-policy.md)를 참조하세요.  
@@ -136,5 +136,4 @@ ms.locfileid: "88450035"
   
 ##  <a name="how-to-handle-null-equivalents"></a><a name="Null"></a> 해당 하는 Null을 처리 하는 방법  
  **도메인 값** 탭의 각 값 테이블에 DQS_NULL 값이 포함되어 있습니다. 데이터 원본의 null은 값 테이블에서 SQL_NULL로 표시됩니다. null에 해당하는 값 하나 이상을 DQS_NULL에 대한 동의어로 설정할 수 있습니다. 이렇게 하면 모든 null 및 null에 해당하는 값이 DQS_NULL로 처리됩니다.  
-  
   

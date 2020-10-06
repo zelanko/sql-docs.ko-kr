@@ -11,12 +11,12 @@ ms.topic: conceptual
 ms.assetid: b36af13b-9fcc-4168-bb92-214d600b1c93
 author: swinarko
 ms.author: sawinark
-ms.openlocfilehash: 1954d4d732e239c4506f92ca3a5411201717e09a
-ms.sourcegitcommit: e700497f962e4c2274df16d9e651059b42ff1a10
+ms.openlocfilehash: a6967254559dda05fcedd1224a8b8769b08f10ed
+ms.sourcegitcommit: c7f40918dc3ecdb0ed2ef5c237a3996cb4cd268d
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 08/17/2020
-ms.locfileid: "88466585"
+ms.lasthandoff: 10/05/2020
+ms.locfileid: "91724663"
 ---
 # <a name="using-the-dqs-default-knowledge-base"></a>DQS 기본 기술 자료 사용
 
@@ -49,9 +49,8 @@ ms.locfileid: "88466585"
   
 -   기본 기술 자료를 사용하여 새 기술 자료를 만듭니다. 기존 기술 자료를 토대로 기술 자료를 만들려면 [Create a Knowledge Base](../data-quality-services/create-a-knowledge-base.md)를 참조하십시오.  
   
--   [Integration Services의 DQS 정리 구성 요소](https://go.microsoft.com/fwlink/?LinkId=238830) 및 [Excel용 Master Data Services 추가 기능](../master-data-services/microsoft-excel-add-in/data-quality-matching-in-the-mds-add-in-for-excel.md)에서 기술 자료를 사용합니다.  
+-   [Integration Services의 DQS 정리 구성 요소](/previous-versions/sql/sql-server-2012/ee677619(v=sql.110)) 및 [Excel용 Master Data Services 추가 기능](../master-data-services/microsoft-excel-add-in/data-quality-matching-in-the-mds-add-in-for-excel.md)에서 기술 자료를 사용합니다.  
   
 ## <a name="see-also"></a>참고 항목  
  [DQS 기술 자료 및 도메인](../data-quality-services/dqs-knowledge-bases-and-domains.md)  
-  
   

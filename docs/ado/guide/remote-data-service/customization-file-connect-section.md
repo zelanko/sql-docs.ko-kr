@@ -14,12 +14,12 @@ helpviewer_keywords:
 ms.assetid: d50eb3cc-a822-486f-b80b-65bb50547ecd
 author: rothja
 ms.author: jroth
-ms.openlocfilehash: 19dfe6f81293234d3615d0c3acaae83c50febc1d
-ms.sourcegitcommit: 18a98ea6a30d448aa6195e10ea2413be7e837e94
+ms.openlocfilehash: c4350cb9aad6e2ef1d9381cffb6e05b13d09c43c
+ms.sourcegitcommit: c7f40918dc3ecdb0ed2ef5c237a3996cb4cd268d
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 08/27/2020
-ms.locfileid: "88978274"
+ms.lasthandoff: 10/05/2020
+ms.locfileid: "91724784"
 ---
 # <a name="customization-file-connect-section"></a>사용자 지정 파일 연결 섹션
 처리기의 기본 동작은 모든 연결을 거부 하는 것입니다. **Connect** 섹션에서는 해당 동작에 대 한 예외를 지정 합니다. 예를 들어 모든 **connect** 섹션이 없거나 비어 있는 경우 기본적으로 연결을 설정할 수 없습니다.  
@@ -31,7 +31,7 @@ ms.locfileid: "88978274"
 -   클라이언트 연결 문자열을 대체 하는 새 연결 문자열입니다.  
   
 > [!IMPORTANT]
->  Windows 8 및 Windows Server 2012부터 RDS 서버 구성 요소는 더 이상 Windows 운영 체제에 포함 되지 않습니다 (자세한 내용은 Windows 8 및 [Windows Server 2012 Compatibility Cookbook](https://www.microsoft.com/download/details.aspx?id=27416) 참조). 이후 버전의 Windows에서는 RDS 클라이언트 구성 요소가 제거 됩니다. 새 개발 작업에서는 이 기능을 사용하지 않도록 하고, 현재 이 기능을 사용하는 애플리케이션은 수정하세요. RDS를 사용 하는 응용 프로그램은 [WCF Data Service](https://go.microsoft.com/fwlink/?LinkId=199565)로 마이그레이션해야 합니다.  
+>  Windows 8 및 Windows Server 2012부터 RDS 서버 구성 요소는 더 이상 Windows 운영 체제에 포함 되지 않습니다 (자세한 내용은 Windows 8 및 [Windows Server 2012 Compatibility Cookbook](https://www.microsoft.com/download/details.aspx?id=27416) 참조). 이후 버전의 Windows에서는 RDS 클라이언트 구성 요소가 제거 됩니다. 새 개발 작업에서는 이 기능을 사용하지 않도록 하고, 현재 이 기능을 사용하는 애플리케이션은 수정하세요. RDS를 사용 하는 응용 프로그램은 [WCF Data Service](/dotnet/framework/wcf/)로 마이그레이션해야 합니다.  
   
 ## <a name="syntax"></a>구문  
  기본 액세스 항목의 형식은 다음과 같습니다.  
@@ -54,7 +54,7 @@ connectionString
   
 ## <a name="remarks"></a>설명  
   
-|부분|설명|  
+|부분|Description|  
 |----------|-----------------|  
 |**연결**|연결 문자열 항목 임을 나타내는 리터럴 문자열입니다.|  
 |**_connectionString_**|전체 클라이언트 연결 문자열을 대체 하는 문자열입니다.|  

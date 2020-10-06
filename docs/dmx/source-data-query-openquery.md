@@ -9,12 +9,12 @@ ms.topic: reference
 ms.author: owend
 ms.reviewer: owend
 author: minewiskan
-ms.openlocfilehash: fd654bf63cfbb961b6aaa3c6369358db25371846
-ms.sourcegitcommit: e700497f962e4c2274df16d9e651059b42ff1a10
+ms.openlocfilehash: 62d638b6b6028ffa861460e07f2283cb7380e129
+ms.sourcegitcommit: c7f40918dc3ecdb0ed2ef5c237a3996cb4cd268d
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 08/17/2020
-ms.locfileid: "88500882"
+ms.lasthandoff: 10/05/2020
+ms.locfileid: "91726112"
 ---
 # <a name="ltsource-data-querygt---openquery"></a>&lt;원본 데이터 쿼리 &gt; -OPENQUERY
 [!INCLUDE[ssas](../includes/applies-to-version/ssas.md)]
@@ -36,9 +36,9 @@ OPENQUERY(<named datasource>, <query syntax>)
  행 집합을 반환하는 쿼리 구문입니다.  
   
 ## <a name="remarks"></a>설명  
- **OPENQUERY** 는 데이터 원본 사용 권한을 지원 하 여 외부 데이터에 보다 안전 하 게 액세스할 수 있는 방법을 제공 합니다. 연결 문자열은 데이터 원본에 저장되어 있으므로 관리자는 데이터 원본의 속성을 사용하여 데이터에 대한 액세스를 관리할 수 있습니다. 데이터 원본에 대 한 자세한 내용은 [지원 되는 데이터 원본 &#40;SSAS-다차원&#41;](https://docs.microsoft.com/analysis-services/multidimensional-models/supported-data-sources-ssas-multidimensional)를 참조 하세요.  
+ **OPENQUERY** 는 데이터 원본 사용 권한을 지원 하 여 외부 데이터에 보다 안전 하 게 액세스할 수 있는 방법을 제공 합니다. 연결 문자열은 데이터 원본에 저장되어 있으므로 관리자는 데이터 원본의 속성을 사용하여 데이터에 대한 액세스를 관리할 수 있습니다. 데이터 원본에 대 한 자세한 내용은 [지원 되는 데이터 원본 &#40;SSAS-다차원&#41;](/analysis-services/multidimensional-models/supported-data-sources-ssas-multidimensional)를 참조 하세요.  
   
- **MDSCHEMA_INPUT_DATASOURCES** 스키마 행 집합을 쿼리하여 서버에서 사용할 수 있는 데이터 원본 목록을 가져올 수 있습니다. **MDSCHEMA_INPUT_DATASOURCES**사용에 대 한 자세한 내용은 [MDSCHEMA_INPUT_DATASOURCES 행 집합](https://docs.microsoft.com/previous-versions/sql/sql-server-2012/ms126243(v=sql.110))을 참조 하세요.  
+ **MDSCHEMA_INPUT_DATASOURCES** 스키마 행 집합을 쿼리하여 서버에서 사용할 수 있는 데이터 원본 목록을 가져올 수 있습니다. **MDSCHEMA_INPUT_DATASOURCES**사용에 대 한 자세한 내용은 [MDSCHEMA_INPUT_DATASOURCES 행 집합](/previous-versions/sql/sql-server-2012/ms126243(v=sql.110))을 참조 하세요.  
   
  다음 DMX 쿼리를 사용하여 현재 Analysis Services 데이터베이스의 데이터 원본 목록을 반환할 수도 있습니다.  
   
@@ -55,5 +55,4 @@ OPENQUERY (MyDS,'SELECT TOP 1000 * FROM vTargetMail')
  [&#60;원본 데이터 쿼리&#62;](../dmx/source-data-query.md)   
  [데이터 마이닝 확장 &#40;DMX&#41; 데이터 조작 문](../dmx/dmx-statements-data-manipulation.md)   
  [DMX&#40;Data Mining Extensions&#41; 문 참조](../dmx/data-mining-extensions-dmx-statements.md)  
-  
   

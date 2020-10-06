@@ -13,18 +13,18 @@ helpviewer_keywords:
 ms.assetid: 86d77985-a0d0-405a-8587-c85a20540a0e
 author: rothja
 ms.author: jroth
-ms.openlocfilehash: 014341cc860e9db53447abc5db08169ba0e0b5b4
-ms.sourcegitcommit: 18a98ea6a30d448aa6195e10ea2413be7e837e94
+ms.openlocfilehash: ad2204beb3d6c4abd9b1f68ff6814dc99ded6738
+ms.sourcegitcommit: c7f40918dc3ecdb0ed2ef5c237a3996cb4cd268d
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 08/27/2020
-ms.locfileid: "88978204"
+ms.lasthandoff: 10/05/2020
+ms.locfileid: "91724744"
 ---
 # <a name="datafactory-customization"></a>DataFactory 사용자 지정
 RDS (원격 데이터 서비스)는 3 계층 클라이언트/서버 시스템에서 데이터 액세스를 쉽게 수행할 수 있는 방법을 제공 합니다. 클라이언트 데이터 컨트롤은 원격 데이터 원본에 대 한 쿼리를 수행 하는 연결 및 명령 문자열 매개 변수 또는 업데이트를 수행 하기 위해 연결 문자열 및 [레코드 집합](../../reference/ado-api/recordset-object-ado.md) 개체 매개 변수를 지정 합니다.  
   
 > [!IMPORTANT]
->  Windows 8 및 Windows Server 2012부터 RDS 서버 구성 요소는 더 이상 Windows 운영 체제에 포함 되지 않습니다 (자세한 내용은 Windows 8 및 [Windows Server 2012 Compatibility Cookbook](https://www.microsoft.com/download/details.aspx?id=27416) 참조). 이후 버전의 Windows에서는 RDS 클라이언트 구성 요소가 제거 됩니다. 새 개발 작업에서는 이 기능을 사용하지 않도록 하고, 현재 이 기능을 사용하는 애플리케이션은 수정하세요. RDS를 사용 하는 응용 프로그램은 [WCF Data Service](https://go.microsoft.com/fwlink/?LinkId=199565)로 마이그레이션해야 합니다.  
+>  Windows 8 및 Windows Server 2012부터 RDS 서버 구성 요소는 더 이상 Windows 운영 체제에 포함 되지 않습니다 (자세한 내용은 Windows 8 및 [Windows Server 2012 Compatibility Cookbook](https://www.microsoft.com/download/details.aspx?id=27416) 참조). 이후 버전의 Windows에서는 RDS 클라이언트 구성 요소가 제거 됩니다. 새 개발 작업에서는 이 기능을 사용하지 않도록 하고, 현재 이 기능을 사용하는 애플리케이션은 수정하세요. RDS를 사용 하는 응용 프로그램은 [WCF Data Service](/dotnet/framework/wcf/)로 마이그레이션해야 합니다.  
   
  매개 변수는 원격 데이터 원본에 대 한 데이터 액세스 작업을 수행 하는 서버 프로그램에 전달 됩니다. RDS는 [RDSServer DataFactory](../../reference/rds-api/datafactory-object-rdsserver.md) 개체 라는 기본 서버 프로그램을 제공 합니다. **RDSServer** 개체는 쿼리에 의해 생성 된 모든 **레코드 집합** 개체를 클라이언트에 반환 합니다.  
   

@@ -9,12 +9,12 @@ ms.topic: reference
 ms.author: owend
 ms.reviewer: owend
 author: minewiskan
-ms.openlocfilehash: 11795005d0a2a7cf97a515278a30a586ff640ef0
-ms.sourcegitcommit: e700497f962e4c2274df16d9e651059b42ff1a10
+ms.openlocfilehash: c0bc9e4ffe7da1f81bbd246e9cbfa7398bfec50e
+ms.sourcegitcommit: c7f40918dc3ecdb0ed2ef5c237a3996cb4cd268d
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 08/17/2020
-ms.locfileid: "88352279"
+ms.lasthandoff: 10/05/2020
+ms.locfileid: "91726150"
 ---
 # <a name="istestcase-dmx"></a>IsTestCase(DMX)
 [!INCLUDE[ssas](../includes/applies-to-version/ssas.md)]
@@ -37,12 +37,12 @@ IsTestCase()
  <xref:Microsoft.AnalysisServices.MiningStructure.HoldoutMaxCases%2A> 및 <xref:Microsoft.AnalysisServices.MiningStructure.HoldoutMaxPercent%2A> 속성의 값을 통해 테스트 집합이 특정 마이닝 구조에 대해 만들어졌는지 여부를 확인할 수 있습니다.  
   
 > [!NOTE]  
->  IsTrainingCase 또는 IsTestCase 함수를 사용 하 여 특정 모델의 사례에 대 한 세부 정보를 반환 하려는 경우 모델에서 드릴스루를 사용 하도록 설정 해야 합니다. 자세한 내용은 [마이닝 모델에 드릴스루 사용](https://docs.microsoft.com/analysis-services/data-mining/enable-drillthrough-for-a-mining-model)을 참조하세요.  
+>  IsTrainingCase 또는 IsTestCase 함수를 사용 하 여 특정 모델의 사례에 대 한 세부 정보를 반환 하려는 경우 모델에서 드릴스루를 사용 하도록 설정 해야 합니다. 자세한 내용은 [마이닝 모델에 드릴스루 사용](/analysis-services/data-mining/enable-drillthrough-for-a-mining-model)을 참조하세요.  
   
  학습 데이터 집합의 일부인 사례를 반환 하려면 [IsTrainingCase &#40;DMX&#41;](../dmx/istrainingcase-dmx.md)함수를 사용 합니다.  
   
 ## <a name="examples"></a>예제  
- 다음 예에서는 `Targeted Mailing` [기본 데이터 마이닝 자습서](https://msdn.microsoft.com/library/6602edb6-d160-43fb-83c8-9df5dddfeb9c)에서 만든 마이닝 구조를 사용 합니다. 쿼리는 테스트에 사용된 구조의 모든 사례를 반환합니다.  
+ 다음 예에서는 `Targeted Mailing` [기본 데이터 마이닝 자습서](/previous-versions/sql/sql-server-2016/ms167167(v=sql.130))에서 만든 마이닝 구조를 사용 합니다. 쿼리는 테스트에 사용된 구조의 모든 사례를 반환합니다.  
   
 ```  
 SELECT *  
@@ -54,7 +54,6 @@ WHERE IsTestCase()
   
 ## <a name="see-also"></a>참고 항목  
  [DMX &#40;함수&#41;](../dmx/functions-dmx.md)   
- [데이터 마이닝 쿼리](https://docs.microsoft.com/analysis-services/data-mining/data-mining-queries)   
- [데이터 집합 학습 및 테스트](https://docs.microsoft.com/analysis-services/data-mining/training-and-testing-data-sets)  
-  
+ [데이터 마이닝 쿼리](/analysis-services/data-mining/data-mining-queries)   
+ [데이터 집합 학습 및 테스트](/analysis-services/data-mining/training-and-testing-data-sets)  
   

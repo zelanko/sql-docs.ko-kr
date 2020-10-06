@@ -12,12 +12,12 @@ f1_keywords:
 ms.assetid: fd99d422-c53d-4d7c-9cdd-303c703683b6
 author: swinarko
 ms.author: sawinark
-ms.openlocfilehash: b2fb5b1a57b39a91735e213385c7756a7bb05984
-ms.sourcegitcommit: e700497f962e4c2274df16d9e651059b42ff1a10
+ms.openlocfilehash: 6dbe71b94bfc71cca727f34bb6a4fd4e532455bd
+ms.sourcegitcommit: c7f40918dc3ecdb0ed2ef5c237a3996cb4cd268d
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 08/17/2020
-ms.locfileid: "88487879"
+ms.lasthandoff: 10/05/2020
+ms.locfileid: "91725401"
 ---
 # <a name="create-a-linked-domain"></a>연결된 도메인 만들기
 
@@ -63,7 +63,7 @@ ms.locfileid: "88487879"
   
 6.  필요한 경우 도메인 속성 탭에서 연결된 도메인의 이름 또는 설명을 변경할 수 있습니다.  
   
-7.  **마침** 을 클릭하여 [도메인 관리 작업 종료](https://msdn.microsoft.com/library/ab6505ad-3090-453b-bb01-58435e7fa7c0)에 설명된 대로 도메인 관리 작업을 완료합니다.  
+7.  **마침** 을 클릭하여 [도메인 관리 작업 종료](/previous-versions/sql/sql-server-2016/hh510411(v=sql.130))에 설명된 대로 도메인 관리 작업을 완료합니다.  
   
 ##  <a name="map-two-fields-to-linked-domains"></a><a name="Map"></a> Map two fields to linked domains  
   
@@ -100,5 +100,4 @@ ms.locfileid: "88487879"
 -   복합 도메인에 대한 연결된 도메인 또는 연결된 복합 도메인을 만들 수 없습니다.  
   
 -   도메인 관리 탭 중 하나에서 연결된 도메인을 두 번 클릭하면 도메인이 편집할 수 있도록 열리고 이름 문자열에 해당 도메인이 연결된 도메인임을 알리는 표시가 나타납니다.  
-  
   

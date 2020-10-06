@@ -9,12 +9,12 @@ ms.topic: reference
 ms.author: owend
 ms.reviewer: owend
 author: minewiskan
-ms.openlocfilehash: 689ab632604d26a349dbb3f2a40d5f1b7cf8d702
-ms.sourcegitcommit: e700497f962e4c2274df16d9e651059b42ff1a10
+ms.openlocfilehash: 2c7f2f5e8e3f46fc8e6301cf2e93afa709207dd0
+ms.sourcegitcommit: c7f40918dc3ecdb0ed2ef5c237a3996cb4cd268d
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 08/17/2020
-ms.locfileid: "88353229"
+ms.lasthandoff: 10/05/2020
+ms.locfileid: "91726204"
 ---
 # <a name="export-dmx"></a>EXPORT(DMX)
 [!INCLUDE[ssas](../includes/applies-to-version/ssas.md)]
@@ -33,7 +33,7 @@ EXPORT <object type> <object name>[, <object name>] [<object type> <object name>
  선택 사항입니다. 마이닝 모델 또는 마이닝 구조 중 내보낼 개체의 유형입니다.  
   
  *개체 이름*  
- (선택 사항) 내보낼 개체 이름입니다.  
+ 선택 사항입니다. 내보낼 개체 이름입니다.  
   
  *filename*  
  문자열로 내보낼 파일의 이름과 위치입니다.  
@@ -62,6 +62,5 @@ EXPORT MINING MODEL [Association] TO 'C:\Association_NEW.abf' WITH DEPENDENCIES
  [데이터 마이닝 확장 &#40;DMX&#41; 데이터 조작 문](../dmx/dmx-statements-data-manipulation.md)   
  [데이터 마이닝 확장 &#40;DMX&#41; 문 참조](../dmx/data-mining-extensions-dmx-statements.md)   
  [DMX &#40;&#41;가져오기 ](../dmx/import-dmx.md)   
- [데이터 마이닝 개체 내보내기 및 가져오기](https://docs.microsoft.com/analysis-services/data-mining/export-and-import-data-mining-objects)  
-  
+ [데이터 마이닝 개체 내보내기 및 가져오기](/analysis-services/data-mining/export-and-import-data-mining-objects)  
   

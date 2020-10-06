@@ -15,18 +15,18 @@ ms.assetid: ''
 author: rajeshsetlem
 ms.author: rajpo
 ms.custom: seo-lt-2019
-ms.openlocfilehash: 4a4b9567865132d355a6285ecc046bfe6b4a3f7a
-ms.sourcegitcommit: 21bedbae28840e2f96f5e8b08bcfc794f305c8bc
+ms.openlocfilehash: 095c14150a3f78f49a8e1dd6d711b5fefc617d49
+ms.sourcegitcommit: c7f40918dc3ecdb0ed2ef5c237a3996cb4cd268d
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 08/06/2020
-ms.locfileid: "87864940"
+ms.lasthandoff: 10/05/2020
+ms.locfileid: "91726344"
 ---
 # <a name="assess-the-readiness-of-a-sql-server-data-estate-migrating-to-azure-sql-database-using-the-data-migration-assistant"></a>Data Migration Assistant를 사용 하 여 Azure SQL Database으로 마이그레이션하는 SQL Server 데이터 공간 준비 상태를 평가 합니다.
 
 수백 개의 SQL Server 인스턴스와 수천 개의 데이터베이스를 Azure SQL Database으로 마이그레이션하는 것은 PaaS (Platform as a Service) 제품으로 서 상당한 작업을 합니다. 최대한 많은 프로세스를 간소화 하려면 마이그레이션에 대 한 상대적 준비 상태를 알고 있어야 합니다. 완전히 준비 되었거나 마이그레이션을 준비 하기 위해 최소한의 노력을 해야 하는 서버 및 데이터베이스를 포함 하 여 낮은 수준의 과일을 식별 합니다.
 
-이 문서에서는 [Data Migration Assistant](https://docs.microsoft.com/sql/dma/dma-overview?view=sql-server-2017) 를 활용 하 여 준비 결과를 요약 하 고 [Azure Migrate](https://portal.azure.com/?feature.customPortal=false#blade/Microsoft_Azure_Migrate/AmhResourceMenuBlade/overview) 허브에 노출 하는 방법에 대 한 단계별 지침을 제공 합니다.
+이 문서에서는 [Data Migration Assistant](./dma-overview.md?view=sql-server-2017) 를 활용 하 여 준비 결과를 요약 하 고 [Azure Migrate](https://portal.azure.com/?feature.customPortal=false#blade/Microsoft_Azure_Migrate/AmhResourceMenuBlade/overview) 허브에 노출 하는 방법에 대 한 단계별 지침을 제공 합니다.
 
 >
 > [!VIDEO https://channel9.msdn.com/Shows/Data-Exposed/Data-Migration-Assistant/player?WT.mc_id=dataexposed-c9-niner]
@@ -180,6 +180,6 @@ Azure Migrate 프로젝트는 평가 하거나 마이그레이션하는 환경�
 
 ## <a name="see-also"></a>참고 항목
 
-* [Data Migration Assistant(DMA)](../dma/dma-overview.md)
+* [DMA(Data Migration Assistant)](../dma/dma-overview.md)
 * [Data Migration Assistant: 구성 설정](../dma/dma-configurationsettings.md)
 * [Data Migration Assistant: 모범 사례](../dma/dma-bestpractices.md)

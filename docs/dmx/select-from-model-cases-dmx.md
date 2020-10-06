@@ -9,12 +9,12 @@ ms.topic: reference
 ms.author: owend
 ms.reviewer: owend
 author: minewiskan
-ms.openlocfilehash: 6d20c04b6771b0f6a5893868d7484d2cae6ae47f
-ms.sourcegitcommit: e700497f962e4c2274df16d9e651059b42ff1a10
+ms.openlocfilehash: 289a25088c61988382093f50526546bf5036a510
+ms.sourcegitcommit: c7f40918dc3ecdb0ed2ef5c237a3996cb4cd268d
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 08/17/2020
-ms.locfileid: "88466531"
+ms.lasthandoff: 10/05/2020
+ms.locfileid: "91727664"
 ---
 # <a name="select-from-ltmodelgtcases-dmx"></a>모델에서 &lt; 선택 &gt; 합니다. 사례 (DMX)
 [!INCLUDE[ssas](../includes/applies-to-version/ssas.md)]
@@ -38,7 +38,7 @@ SELECT [FLATTENED] [TOP <n>] <expression list> FROM <model>.CASES
   
 ## <a name="arguments"></a>인수  
  *n*  
- (선택 사항) 반환할 행의 수를 지정하는 정수입니다.  
+ 선택 사항입니다. 반환할 행의 수를 지정하는 정수입니다.  
   
  *식 목록*  
  쉼표로 구분된 식 목록입니다. 식은 열 식별자, UDF(사용자 정의 함수), VBA 함수 등을 포함할 수 있습니다.  
@@ -52,7 +52,7 @@ SELECT [FLATTENED] [TOP <n>] <expression list> FROM <model>.CASES
  열 목록에서 반환되는 값을 제한하는 조건입니다.  
   
  *expression*  
- (선택 사항) 스칼라 값을 반환하는 식입니다.  
+ 선택 사항입니다. 스칼라 값을 반환하는 식입니다.  
   
 ## <a name="remarks"></a>설명  
  마이닝 모델과 마이닝 구조 모두에 드릴스루가 사용되도록 설정되어 있으면 모델과 구조에 대해 드릴스루 권한을 가지는 역할의 멤버인 사용자는 마이닝 모델에 포함되지 않은 마이닝 구조 열에 액세스할 수 있습니다. 따라서 중요 한 데이터 나 개인 정보를 보호 하려면 개인 정보를 마스킹 하도록 데이터 원본 뷰를 생성 하 고 필요한 경우에만 마이닝 구조에 대 한 **Allowdrillthrough** 권한을 부여 해야 합니다.  
@@ -62,7 +62,7 @@ SELECT [FLATTENED] [TOP <n>] <expression list> FROM <model>.CASES
  **Where** 절에서 [IsInNode &#40;DMX&#41;](../dmx/isinnode-dmx.md) 함수를 사용 하면 스키마 행 집합의 NODE_UNIQUE_NAME 열에 지정 된 노드와 연결 된 사례만 반환 됩니다.  
   
 ## <a name="examples"></a>예제  
- 다음 예는 [!INCLUDE[ssSampleDBDWobject](../includes/sssampledbdwobject-md.md)] 데이터베이스 및 연결 된 마이닝 모델을 기반으로 하는 마이닝 구조 대상 메일링을 기반으로 합니다. 자세한 내용은 [기본 데이터 마이닝 자습서](https://msdn.microsoft.com/library/6602edb6-d160-43fb-83c8-9df5dddfeb9c)를 참조 하세요.  
+ 다음 예는 [!INCLUDE[ssSampleDBDWobject](../includes/sssampledbdwobject-md.md)] 데이터베이스 및 연결 된 마이닝 모델을 기반으로 하는 마이닝 구조 대상 메일링을 기반으로 합니다. 자세한 내용은 [기본 데이터 마이닝 자습서](/previous-versions/sql/sql-server-2016/ms167167(v=sql.130))를 참조 하세요.  
   
 ### <a name="example-1-drillthrough-to-model-cases-and-structure-columns"></a>예 1: 모델 사례 및 구조 열로 드릴스루  
  다음 예에서는 대상 메일 모델을 테스트하는 데 사용된 모든 사례에 대해 열을 반환합니다. 모델이 작성되는 마이닝 구조에 홀드아웃 테스트 데이터 집합이 없으면 이 쿼리는 0개의 사례를 반환합니다. 식 목록을 사용하여 필요한 열만 반환할 수 있습니다.  
@@ -85,12 +85,11 @@ AND IsInNode('002')
  구조 열을 반환하려면 마이닝 모델과 마이닝 구조 모두에 드릴스루 권한이 설정되어 있어야 합니다.  
   
 > [!NOTE]  
->  모든 마이닝 모델 유형이 드릴스루를 지원하지는 않습니다. 드릴스루를 지 원하는 모델에 대 한 자세한 내용은 [드릴스루 쿼리 &#40;데이터 마이닝&#41;](https://docs.microsoft.com/analysis-services/data-mining/drillthrough-queries-data-mining)를 참조 하세요.  
+>  모든 마이닝 모델 유형이 드릴스루를 지원하지는 않습니다. 드릴스루를 지 원하는 모델에 대 한 자세한 내용은 [드릴스루 쿼리 &#40;데이터 마이닝&#41;](/analysis-services/data-mining/drillthrough-queries-data-mining)를 참조 하세요.  
   
 ## <a name="see-also"></a>참고 항목  
  [DMX &#40;선택&#41;](../dmx/select-dmx.md)   
  [데이터 마이닝 확장 &#40;DMX&#41; 데이터 정의 문](../dmx/dmx-statements-data-definition.md)   
  [데이터 마이닝 확장 &#40;DMX&#41; 데이터 조작 문](../dmx/dmx-statements-data-manipulation.md)   
  [DMX&#40;Data Mining Extensions&#41; 문 참조](../dmx/data-mining-extensions-dmx-statements.md)  
-  
   

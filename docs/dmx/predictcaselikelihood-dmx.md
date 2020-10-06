@@ -9,12 +9,12 @@ ms.topic: reference
 ms.author: owend
 ms.reviewer: owend
 author: minewiskan
-ms.openlocfilehash: b182e4a3a842065152b050ed1b428d71b7d0cf07
-ms.sourcegitcommit: e700497f962e4c2274df16d9e651059b42ff1a10
+ms.openlocfilehash: a08ec4809b281205386abad429afe339e0dbb1d1
+ms.sourcegitcommit: c7f40918dc3ecdb0ed2ef5c237a3996cb4cd268d
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 08/17/2020
-ms.locfileid: "88426125"
+ms.lasthandoff: 10/05/2020
+ms.locfileid: "91727714"
 ---
 # <a name="predictcaselikelihood-dmx"></a>PredictCaseLikelihood(DMX)
 [!INCLUDE[ssas](../includes/applies-to-version/ssas.md)]
@@ -81,9 +81,8 @@ NATURAL PREDICTION JOIN
  이러한 결과 간의 차이는 정규화의 효과를 보여 줍니다. **CaseLikelihood** 에 대 한 원시 값은 사례의 확률이 약 20% 임을 나타냅니다. 그러나 결과를 정규화 하면 사례의 가능성이 매우 낮을 수 있습니다.  
   
 ## <a name="see-also"></a>참고 항목  
- [데이터 마이닝 알고리즘 &#40;Analysis Services 데이터 마이닝&#41;](https://docs.microsoft.com/analysis-services/data-mining/data-mining-algorithms-analysis-services-data-mining)   
+ [데이터 마이닝 알고리즘 &#40;Analysis Services 데이터 마이닝&#41;](/analysis-services/data-mining/data-mining-algorithms-analysis-services-data-mining)   
  [데이터 마이닝 확장 &#40;DMX&#41; 함수 참조](../dmx/data-mining-extensions-dmx-function-reference.md)   
  [DMX &#40;함수&#41;](../dmx/functions-dmx.md)   
  [DMX&#41;일반 예측 함수 &#40;](../dmx/general-prediction-functions-dmx.md)  
-  
   

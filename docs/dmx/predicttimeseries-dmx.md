@@ -9,12 +9,12 @@ ms.topic: reference
 ms.author: owend
 ms.reviewer: owend
 author: minewiskan
-ms.openlocfilehash: 13655aadf5f95b776b83e48791e4f423d6ccc355
-ms.sourcegitcommit: e700497f962e4c2274df16d9e651059b42ff1a10
+ms.openlocfilehash: 02b85cc4197b0ffafef7a83566e4041a7d290548
+ms.sourcegitcommit: c7f40918dc3ecdb0ed2ef5c237a3996cb4cd268d
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 08/17/2020
-ms.locfileid: "88422267"
+ms.lasthandoff: 10/05/2020
+ms.locfileid: "91727679"
 ---
 # <a name="predicttimeseries-dmx"></a>PredictTimeSeries(DMX)
 [!INCLUDE[ssas](../includes/applies-to-version/ssas.md)]
@@ -85,7 +85,7 @@ PredictTimeSeries(<scalar column reference>, n-start, n-end, REPLACE_MODEL_CASES
   
 -   세 번째 예는 EXTEND_MODEL_CASES 매개 변수를 사용하여 마이닝 모델을 새 데이터로 업데이트하는 방법을 보여 줍니다.  
   
- 시계열 모델을 사용 하는 방법에 대 한 자세한 내용은 데이터 마이닝 자습서, [2 단원: 예측 시나리오 빌드 &#40;중급 데이터 마이닝 자습서&#41;](https://msdn.microsoft.com/library/9a988156-c900-4c22-97fa-f6b0c1aea9e2) 및 [시계열 예측 DMX 자습서](https://msdn.microsoft.com/library/38ea7c03-4754-4e71-896a-f68cc2c98ce2)를 참조 하세요.  
+ 시계열 모델을 사용 하는 방법에 대 한 자세한 내용은 데이터 마이닝 자습서, [2 단원: 예측 시나리오 빌드 &#40;중급 데이터 마이닝 자습서&#41;](/previous-versions/sql/sql-server-2016/ms169846(v=sql.130)) 및 [시계열 예측 DMX 자습서](/previous-versions/sql/sql-server-2016/cc879270(v=sql.130))를 참조 하세요.  
   
 > [!NOTE]  
 >  사용자 모델의 결과는 다를 수 있습니다. 아래 예의 결과는 결과 형식을 보여 주기 위한 것입니다.  
@@ -119,7 +119,7 @@ OR [Model Region] = 'M200 Pacific'
 ### <a name="example-2-adding-new-data-and-using-replace_model_cases"></a>예제 2: 새 데이터 추가 및 REPLACE_MODEL_CASES 사용  
  특정 지역에 대한 데이터가 잘못된 것을 발견하고 모델의 패턴을 사용하여 새 데이터와 일치하도록 예측을 조정하려 한다고 가정합니다. 다른 지역의 추세가 더 안정적이라는 것을 발견하고 가장 안정적인 모델을 여러 지역의 데이터에 적용하려고 할 수도 있습니다.  
   
- 이러한 시나리오에서는 REPLACE_MODEL_CASES 매개 변수를 사용하고 기록 데이터로 사용할 새 데이터 집합을 지정할 수 있습니다. 이렇게 하면 프로젝션이 지정된 모델의 패턴을 기반으로 하지만 새 데이터 요소의 끝에서 부드럽게 이어집니다. 이 시나리오에 대 한 전체 연습은 [고급 시계열 예측 &#40;중급 데이터 마이닝 자습서&#41;](https://msdn.microsoft.com/library/b614ebdb-07ca-44af-a0ff-893364bd4b71)를 참조 하세요.  
+ 이러한 시나리오에서는 REPLACE_MODEL_CASES 매개 변수를 사용하고 기록 데이터로 사용할 새 데이터 집합을 지정할 수 있습니다. 이렇게 하면 프로젝션이 지정된 모델의 패턴을 기반으로 하지만 새 데이터 요소의 끝에서 부드럽게 이어집니다. 이 시나리오에 대 한 전체 연습은 [고급 시계열 예측 &#40;중급 데이터 마이닝 자습서&#41;](/previous-versions/sql/sql-server-2016/cc879290(v=sql.130))를 참조 하세요.  
   
  다음 PREDICTION JOIN 쿼리에서는 데이터를 바꾸고 새 예측을 만드는 구문을 보여 줍니다. 데이터를 바꾸기 위해 이 예에서는 Amount 및 Quantity 열의 값을 검색하여 각 값에 2를 곱합니다.  
   
@@ -254,7 +254,6 @@ OR [Model Region] = 'M200 North America'
   
 ## <a name="see-also"></a>참고 항목  
  [데이터 마이닝 확장 &#40;DMX&#41; 함수 참조](../dmx/data-mining-extensions-dmx-function-reference.md)   
- [시계열 모델 쿼리 예제](https://docs.microsoft.com/analysis-services/data-mining/time-series-model-query-examples)   
+ [시계열 모델 쿼리 예제](/analysis-services/data-mining/time-series-model-query-examples)   
  [예측&#40;DMX&#41;](../dmx/predict-dmx.md)  
-  
   

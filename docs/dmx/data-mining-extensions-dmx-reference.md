@@ -9,12 +9,12 @@ ms.topic: reference
 ms.author: owend
 ms.reviewer: owend
 author: minewiskan
-ms.openlocfilehash: 6197fc8508e1334e5f8afdcb14aeaf7488890159
-ms.sourcegitcommit: e700497f962e4c2274df16d9e651059b42ff1a10
+ms.openlocfilehash: bd6830e46f10ba20642d1975f293b72b768f7e5b
+ms.sourcegitcommit: c7f40918dc3ecdb0ed2ef5c237a3996cb4cd268d
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 08/17/2020
-ms.locfileid: "88414089"
+ms.lasthandoff: 10/05/2020
+ms.locfileid: "91726255"
 ---
 # <a name="data-mining-extensions-dmx-reference"></a>DMX(Data Mining Extensions) 참조
 [!INCLUDE[ssas](../includes/applies-to-version/ssas.md)]
@@ -32,7 +32,7 @@ ms.locfileid: "88414089"
   
  이 사양에서는 데이터 마이닝의 기초를 데이터 마이닝 모델 가상 개체로 정의합니다. 데이터 마이닝 모델 개체에는 특정 마이닝 모델에 대해 알려진 모든 내용이 포함됩니다. 데이터 마이닝 모델 개체는 모델을 설명하는 열, 데이터 형식 및 메타 정보가 포함된 SQL 테이블과 같은 구조로 구성됩니다. 이 구조에서는 SQL의 확장 기능인 DMX 언어를 사용하여 모델을 만들고 사용할 수 있습니다.  
   
- **자세한 내용:** [마이닝 구조 &#40;Analysis Services 데이터 마이닝&#41;](https://docs.microsoft.com/analysis-services/data-mining/mining-structures-analysis-services-data-mining)  
+ **자세한 내용:** [마이닝 구조 &#40;Analysis Services 데이터 마이닝&#41;](/analysis-services/data-mining/mining-structures-analysis-services-data-mining)  
   
 ##  <a name="dmx-statements"></a><a name="BKMK_DMXStatements"></a> DMX 문  
  DMX 문을 사용하여 데이터 마이닝 모델을 작성, 처리, 삭제, 복사, 검색 및 예측할 수 있습니다. DMX에는 두 가지 유형의 문인 데이터 정의 문과 데이터 조작 문이 있습니다. 이 두 가지 유형의 문을 사용하여 다양한 태스크를 수행할 수 있습니다.  
@@ -109,5 +109,4 @@ ms.locfileid: "88414089"
  [DMX&#41;일반 예측 함수 &#40;](../dmx/general-prediction-functions-dmx.md)   
  [DMX 예측 쿼리의 구조 및 사용법](../dmx/structure-and-usage-of-dmx-prediction-queries.md)   
  [DMX Select 문 이해](../dmx/understanding-the-dmx-select-statement.md)  
-  
   

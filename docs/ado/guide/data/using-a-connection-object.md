@@ -13,15 +13,15 @@ helpviewer_keywords:
 ms.assetid: 4b34f971-5699-43e7-9b15-137d334fa66e
 author: rothja
 ms.author: jroth
-ms.openlocfilehash: b63c3925fd70f6075ab1131c275fa5e52a6e3ac8
-ms.sourcegitcommit: 18a98ea6a30d448aa6195e10ea2413be7e837e94
+ms.openlocfilehash: 41652f73868380d4902c7c6815a7ee53868c0969
+ms.sourcegitcommit: c7f40918dc3ecdb0ed2ef5c237a3996cb4cd268d
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 08/27/2020
-ms.locfileid: "88979124"
+ms.lasthandoff: 10/05/2020
+ms.locfileid: "91724864"
 ---
 # <a name="using-a-connection-object"></a>연결 개체 사용
-**연결** 개체를 열기 전에 데이터 원본 및 연결 유형에 대 한 특정 정보를 정의 해야 합니다. 이러한 정보의 대부분은 **connection** 개체에서 [Open 메서드의](../../../ado/reference/ado-api/open-method-ado-connection.md) *connectionstring* 매개 변수 또는 **connection** 개체의 [connectionstring 속성](../../../ado/reference/ado-api/connectionstring-property-ado.md) 에 의해 유지 됩니다. 연결 문자열은 세미콜론으로 구분 된 인수/값 쌍의 목록으로 구성 됩니다. 값은 작은따옴표로 묶여 있습니다. 예를 들어:  
+**연결** 개체를 열기 전에 데이터 원본 및 연결 유형에 대 한 특정 정보를 정의 해야 합니다. 이러한 정보의 대부분은 **connection** 개체에서 [Open 메서드의](../../../ado/reference/ado-api/open-method-ado-connection.md) *connectionstring* 매개 변수 또는 **connection** 개체의 [connectionstring 속성](../../../ado/reference/ado-api/connectionstring-property-ado.md) 에 의해 유지 됩니다. 연결 문자열은 세미콜론으로 구분 된 인수/값 쌍의 목록으로 구성 됩니다. 값은 작은따옴표로 묶여 있습니다. 예를 들면 다음과 같습니다.  
   
 ```  
 Dim sConn As String  
@@ -30,7 +30,7 @@ sConn = "Provider='SQLOLEDB';Data Source='MySqlServer';" & _
 ```  
   
 > [!NOTE]
->  ODBC DSN (데이터 원본 이름) 또는 연결 문자열에 있는 데이터 연결 (UDL) 파일을 지정할 수도 있습니다. Dsn에 대 한 자세한 내용은 ODBC 프로그래머 참조에서 [데이터 원본 관리](../../../odbc/admin/managing-data-sources.md) 를 참조 하십시오. Udl에 대 한 자세한 내용은 OLE DB 프로그래머 참조에서 [데이터 연결 API 개요](https://msdn.microsoft.com/95c180ea-bd4f-4dca-b95a-576afd135bbc) 를 참조 하세요.  
+>  ODBC DSN (데이터 원본 이름) 또는 연결 문자열에 있는 데이터 연결 (UDL) 파일을 지정할 수도 있습니다. Dsn에 대 한 자세한 내용은 ODBC 프로그래머 참조에서 [데이터 원본 관리](../../../odbc/admin/managing-data-sources.md) 를 참조 하십시오. Udl에 대 한 자세한 내용은 OLE DB 프로그래머 참조에서 [데이터 연결 API 개요](/previous-versions/windows/desktop/ms718102(v=vs.85)) 를 참조 하세요.  
   
  일반적으로 적절 한 연결 *문자열* 을 매개 변수로 사용 하 여 **connection. Open** 메서드를 호출 하 여 연결을 설정 합니다. 다음 Visual Basic 코드 조각에 예제가 나와 있습니다.  
   

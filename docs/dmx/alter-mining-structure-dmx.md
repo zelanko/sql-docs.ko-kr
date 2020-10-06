@@ -9,12 +9,12 @@ ms.topic: reference
 ms.author: owend
 ms.reviewer: owend
 author: minewiskan
-ms.openlocfilehash: ba2a5e81b7ae19b431f35b3fe0eac291718c4df3
-ms.sourcegitcommit: e700497f962e4c2274df16d9e651059b42ff1a10
+ms.openlocfilehash: 6169d898479637d8f8c0a74aececd56cf1f62eb7
+ms.sourcegitcommit: c7f40918dc3ecdb0ed2ef5c237a3996cb4cd268d
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 08/17/2020
-ms.locfileid: "88431185"
+ms.lasthandoff: 10/05/2020
+ms.locfileid: "91727814"
 ---
 # <a name="alter-mining-structure-dmx"></a>ALTER MINING STRUCTURE(DMX)
 [!INCLUDE[ssas](../includes/applies-to-version/ssas.md)]
@@ -56,10 +56,10 @@ USING <algorithm> [(<parameter list>)]
  공급자가 정의한 데이터 마이닝 알고리즘의 이름입니다.  
   
 > [!NOTE]  
->  [DMSCHEMA_MINING_SERVICES 행 집합](https://docs.microsoft.com/previous-versions/sql/sql-server-2012/ms126251(v=sql.110))을 사용 하 여 현재 공급자가 지 원하는 알고리즘 목록을 검색할 수 있습니다. 현재 인스턴스에서 지원 되는 알고리즘을 보려면 [!INCLUDE[ssASnoversion](../includes/ssasnoversion-md.md)] [데이터 마이닝 속성](https://docs.microsoft.com/analysis-services/server-properties/data-mining-properties)을 참조 하세요.  
+>  [DMSCHEMA_MINING_SERVICES 행 집합](/previous-versions/sql/sql-server-2012/ms126251(v=sql.110))을 사용 하 여 현재 공급자가 지 원하는 알고리즘 목록을 검색할 수 있습니다. 현재 인스턴스에서 지원 되는 알고리즘을 보려면 [!INCLUDE[ssASnoversion](../includes/ssasnoversion-md.md)] [데이터 마이닝 속성](/analysis-services/server-properties/data-mining-properties)을 참조 하세요.  
   
  *매개 변수 목록*  
- (선택 사항) 알고리즘에 대해 공급자가 정의한 매개 변수의 쉼표로 구분된 목록입니다.  
+ 선택 사항입니다. 알고리즘에 대해 공급자가 정의한 매개 변수의 쉼표로 구분된 목록입니다.  
   
  *필터 조건*  
  사례 테이블의 열에 적용되는 필터 식입니다.  
@@ -97,7 +97,7 @@ USING <algorithm> [(<parameter list>)]
 ```  
   
 ### <a name="column-name-and-alias"></a>열 이름 및 별칭  
- 열 정의 목록에 사용하는 열 이름은 마이닝 구조에 사용된 열 이름이어야 합니다. 그러나 필요에 따라 마이닝 모델의 구조 열을 나타내는 별칭을 정의할 수 있습니다. 또한 같은 구조 열에 대한 열 정의를 여러 개 만든 다음 각각의 열 복사본에 서로 다른 별칭과 예측 사용을 할당할 수 있습니다. 기본적으로 구조 열 이름은 별칭을 정의하지 않은 경우에 사용됩니다. 자세한 내용은 [모델 열에 대 한 별칭 만들기](https://docs.microsoft.com/analysis-services/data-mining/create-an-alias-for-a-model-column)를 참조 하세요.  
+ 열 정의 목록에 사용하는 열 이름은 마이닝 구조에 사용된 열 이름이어야 합니다. 그러나 필요에 따라 마이닝 모델의 구조 열을 나타내는 별칭을 정의할 수 있습니다. 또한 같은 구조 열에 대한 열 정의를 여러 개 만든 다음 각각의 열 복사본에 서로 다른 별칭과 예측 사용을 할당할 수 있습니다. 기본적으로 구조 열 이름은 별칭을 정의하지 않은 경우에 사용됩니다. 자세한 내용은 [모델 열에 대 한 별칭 만들기](/analysis-services/data-mining/create-an-alias-for-a-model-column)를 참조 하세요.  
   
  중첩 테이블 열에 대해 중첩 테이블의 이름을 지정 하 고, 데이터 형식을 **table**로 지정한 다음 모델에 포함할 중첩 열 목록을 괄호로 묶습니다.  
   
@@ -121,7 +121,7 @@ USING <algorithm> [(<parameter list>)]
   
 |절|Description|  
 |-|-|  
-|**예측**|모델에서 이 열을 예측할 수 있으며 열 값은 다른 예측 가능한 열의 값을 예측하기 위한 입력으로 사용할 수 있습니다.|  
+|**PREDICT**|모델에서 이 열을 예측할 수 있으며 열 값은 다른 예측 가능한 열의 값을 예측하기 위한 입력으로 사용할 수 있습니다.|  
 |**PREDICT_ONLY**|이 열은 모델에 의해 예측될 수 있지만 이 열의 값을 입력 사례에 사용하여 다른 예측 가능 열 값을 예측할 수는 없습니다.|  
   
 ## <a name="filter-criteria-expressions"></a>필터 조건 식  
@@ -129,15 +129,15 @@ USING <algorithm> [(<parameter list>)]
   
  필터 조건 식은 간단한 DMX 조건자로서 WHERE 절과 비슷합니다. 필터 식은 기본 수치 연산자, 스칼라 및 열 이름을 사용하는 수식으로 제한됩니다. 단, EXISTS 연산자는 예외입니다. 이 연산자는 하위 쿼리에 대해 반환되는 행이 한 개 이상일 경우 True로 평가됩니다. 조건자는 AND, OR, NOT 등의 공통 논리 연산자를 사용 하 여 결합할 수 있습니다.  
   
- 마이닝 모델에 사용 되는 필터에 대 한 자세한 내용은 [데이터 마이닝&#41;Analysis Services &#40;마이닝 모델에 대 한 필터 ](https://docs.microsoft.com/analysis-services/data-mining/filters-for-mining-models-analysis-services-data-mining)를 참조 하세요.  
+ 마이닝 모델에 사용 되는 필터에 대 한 자세한 내용은 [데이터 마이닝&#41;Analysis Services &#40;마이닝 모델에 대 한 필터 ](/analysis-services/data-mining/filters-for-mining-models-analysis-services-data-mining)를 참조 하세요.  
   
 > [!NOTE]  
 >  필터의 열은 마이닝 구조 열이어야 합니다. 모델 열이나 별칭이 지정된 열에 대한 필터는 만들 수 없습니다.  
   
- DMX 연산자 및 구문에 대 한 자세한 내용은 [마이닝 모델 열](https://docs.microsoft.com/analysis-services/data-mining/mining-model-columns)을 참조 하세요.  
+ DMX 연산자 및 구문에 대 한 자세한 내용은 [마이닝 모델 열](/analysis-services/data-mining/mining-model-columns)을 참조 하세요.  
   
 ## <a name="parameter-definition-list"></a>매개 변수 정의 목록  
- 매개 변수 목록에 알고리즘 매개 변수를 추가하여 모델의 성능과 기능을 조정할 수 있습니다. 사용할 수 있는 매개 변수는 USING 절에 지정한 알고리즘에 따라 달라집니다. 각 알고리즘과 연결 된 매개 변수 목록은 [데이터 마이닝 알고리즘 &#40;Analysis Services 데이터 마이닝&#41;](https://docs.microsoft.com/analysis-services/data-mining/data-mining-algorithms-analysis-services-data-mining)를 참조 하세요.  
+ 매개 변수 목록에 알고리즘 매개 변수를 추가하여 모델의 성능과 기능을 조정할 수 있습니다. 사용할 수 있는 매개 변수는 USING 절에 지정한 알고리즘에 따라 달라집니다. 각 알고리즘과 연결 된 매개 변수 목록은 [데이터 마이닝 알고리즘 &#40;Analysis Services 데이터 마이닝&#41;](/analysis-services/data-mining/data-mining-algorithms-analysis-services-data-mining)를 참조 하세요.  
   
  매개 변수 목록의 구문은 다음과 같습니다.  
   
@@ -204,5 +204,4 @@ USING Microsoft_Decision Trees
  [데이터 마이닝 확장 &#40;DMX&#41; 데이터 정의 문](../dmx/dmx-statements-data-definition.md)   
  [데이터 마이닝 확장 &#40;DMX&#41; 데이터 조작 문](../dmx/dmx-statements-data-manipulation.md)   
  [DMX&#40;Data Mining Extensions&#41; 문 참조](../dmx/data-mining-extensions-dmx-statements.md)  
-  
   

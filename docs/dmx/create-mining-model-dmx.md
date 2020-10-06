@@ -9,12 +9,12 @@ ms.topic: reference
 ms.author: owend
 ms.reviewer: owend
 author: minewiskan
-ms.openlocfilehash: 76cddca642fd25bb7e67ec7817c3fe3d1d9da9d7
-ms.sourcegitcommit: e700497f962e4c2274df16d9e651059b42ff1a10
+ms.openlocfilehash: 35382c7d1d7301d35d8517b62bac352a4ae9fb47
+ms.sourcegitcommit: c7f40918dc3ecdb0ed2ef5c237a3996cb4cd268d
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 08/17/2020
-ms.locfileid: "88462049"
+ms.lasthandoff: 10/05/2020
+ms.locfileid: "91726325"
 ---
 # <a name="create-mining-model-dmx"></a>CREATE MINING MODEL(DMX)
 [!INCLUDE[ssas](../includes/applies-to-version/ssas.md)]
@@ -48,10 +48,10 @@ CREATE MINING MODEL <model> FROM PMML <xml string>
  현재 공급자가 정의한 데이터 마이닝 알고리즘 이름입니다.  
   
 > [!NOTE]  
->  [DMSCHEMA_MINING_SERVICES 행 집합](https://docs.microsoft.com/previous-versions/sql/sql-server-2012/ms126251(v=sql.110))을 사용 하 여 현재 공급자가 지 원하는 알고리즘 목록을 검색할 수 있습니다. 현재 인스턴스에서 지원 되는 알고리즘을 보려면 [!INCLUDE[ssASnoversion](../includes/ssasnoversion-md.md)] [데이터 마이닝 속성](https://docs.microsoft.com/analysis-services/server-properties/data-mining-properties)을 참조 하세요.  
+>  [DMSCHEMA_MINING_SERVICES 행 집합](/previous-versions/sql/sql-server-2012/ms126251(v=sql.110))을 사용 하 여 현재 공급자가 지 원하는 알고리즘 목록을 검색할 수 있습니다. 현재 인스턴스에서 지원 되는 알고리즘을 보려면 [!INCLUDE[ssASnoversion](../includes/ssasnoversion-md.md)] [데이터 마이닝 속성](/analysis-services/server-properties/data-mining-properties)을 참조 하세요.  
   
  *매개 변수 목록*  
- (선택 사항) 알고리즘에 대해 공급자가 정의한 매개 변수의 쉼표로 구분된 목록입니다.  
+ 선택 사항입니다. 알고리즘에 대해 공급자가 정의한 매개 변수의 쉼표로 구분된 목록입니다.  
   
  *XML 문자열*  
  (고급 사용에만 해당) XML로 인코딩된 모델 (PMML)입니다. 문자열을 작은따옴표(')로 묶어야 합니다.  
@@ -95,13 +95,13 @@ CREATE MINING MODEL <model> FROM PMML <xml string>
   
  열을 정의하는 데 사용할 수 있는 데이터 형식, 내용 유형, 열 배포 및 모델링 플래그 목록은 다음 항목을 참조하십시오.  
   
--   [데이터 형식&#40;데이터 마이닝&#41;](https://docs.microsoft.com/analysis-services/data-mining/data-types-data-mining)  
+-   [데이터 형식&#40;데이터 마이닝&#41;](/analysis-services/data-mining/data-types-data-mining)  
   
--   [콘텐츠 형식&#40;데이터 마이닝&#41;](https://docs.microsoft.com/analysis-services/data-mining/content-types-data-mining)  
+-   [콘텐츠 형식&#40;데이터 마이닝&#41;](/analysis-services/data-mining/content-types-data-mining)  
   
--   [열 배포&#40;데이터 마이닝&#41;](https://docs.microsoft.com/analysis-services/data-mining/column-distributions-data-mining)  
+-   [열 배포&#40;데이터 마이닝&#41;](/analysis-services/data-mining/column-distributions-data-mining)  
   
--   [모델링 플래그&#40;데이터 마이닝&#41;](https://docs.microsoft.com/analysis-services/data-mining/modeling-flags-data-mining)  
+-   [모델링 플래그&#40;데이터 마이닝&#41;](/analysis-services/data-mining/modeling-flags-data-mining)  
   
  문에 절을 추가하여 두 열 간의 관계를 설명할 수 있습니다. [!INCLUDE[ssASnoversion](../includes/ssasnoversion-md.md)] 에서는 다음 절의 사용을 지원 합니다 \<Column relationship> .  
   
@@ -110,9 +110,9 @@ CREATE MINING MODEL <model> FROM PMML <xml string>
   
  예측 절을 사용하여 예측 열의 사용 방법을 설명합니다. 다음 표에서는 사용 가능한 두 가지 절을 설명합니다.  
   
-|\<prediction> clause|설명|  
+|\<prediction> clause|Description|  
 |---------------------------|-----------------|  
-|**예측**|이 열은 모델에 의해 예측될 수 있으며 다른 예측 가능 열 값을 예측하기 위해 입력 사례에 제공될 수 있습니다.|  
+|**PREDICT**|이 열은 모델에 의해 예측될 수 있으며 다른 예측 가능 열 값을 예측하기 위해 입력 사례에 제공될 수 있습니다.|  
 |**PREDICT_ONLY**|이 열은 모델에 의해 예측될 수 있지만 이 열의 값을 입력 사례에 사용하여 다른 예측 가능 열 값을 예측할 수는 없습니다.|  
   
 ### <a name="parameter-definition-list"></a>매개 변수 정의 목록  
@@ -122,12 +122,12 @@ CREATE MINING MODEL <model> FROM PMML <xml string>
 [<parameter> = <value>, <parameter> = <value>,...]  
 ```  
   
- 각 알고리즘과 연결 된 매개 변수 목록은 [데이터 마이닝 알고리즘 &#40;Analysis Services 데이터 마이닝&#41;](https://docs.microsoft.com/analysis-services/data-mining/data-mining-algorithms-analysis-services-data-mining)를 참조 하세요.  
+ 각 알고리즘과 연결 된 매개 변수 목록은 [데이터 마이닝 알고리즘 &#40;Analysis Services 데이터 마이닝&#41;](/analysis-services/data-mining/data-mining-algorithms-analysis-services-data-mining)를 참조 하세요.  
   
 ## <a name="remarks"></a>설명  
  기본 제공 테스트 데이터 집합이 있는 모델을 만들려는 경우 CREATE MINING STRUCTURE 문과 ALTER MINING STRUCTURE 문을 차례로 사용해야 합니다. 그러나 모든 모델 유형이 홀드아웃 데이터 집합을 지원하는 것은 아닙니다. 자세한 내용은 [CREATE MINING STRUCTURE&#40;DMX&#41;](../dmx/create-mining-structure-dmx.md)를 참조하세요.  
   
- CREATEMODEL 문을 사용 하 여 마이닝 모델을 만드는 방법에 대 한 연습은 [시계열 예측 DMX 자습서](https://msdn.microsoft.com/library/38ea7c03-4754-4e71-896a-f68cc2c98ce2)를 참조 하세요.  
+ CREATEMODEL 문을 사용 하 여 마이닝 모델을 만드는 방법에 대 한 연습은 [시계열 예측 DMX 자습서](/previous-versions/sql/sql-server-2016/cc879270(v=sql.130))를 참조 하세요.  
   
 ## <a name="naive-bayes-example"></a>Naive Bayes 예  
  다음 예에서는 [!INCLUDE[msCoName](../includes/msconame-md.md)] Naive Bayes 알고리즘을 사용하여 새 마이닝 모델을 만듭니다. Bike Buyer 열은 예측 가능한 특성으로 정의됩니다.  
@@ -191,5 +191,4 @@ USING Microsoft_Time_Series (PERIODICITY_HINT = '{12}', FORECAST_METHOD = 'ARTXP
  [데이터 마이닝 확장 &#40;DMX&#41; 데이터 정의 문](../dmx/dmx-statements-data-definition.md)   
  [데이터 마이닝 확장 &#40;DMX&#41; 데이터 조작 문](../dmx/dmx-statements-data-manipulation.md)   
  [DMX&#40;Data Mining Extensions&#41; 문 참조](../dmx/data-mining-extensions-dmx-statements.md)  
-  
   
