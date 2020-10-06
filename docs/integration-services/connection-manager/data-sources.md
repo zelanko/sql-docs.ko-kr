@@ -13,12 +13,12 @@ helpviewer_keywords:
 ms.assetid: 7ac81612-9822-470f-8d0f-a1dc96142fe3
 author: chugugrace
 ms.author: chugu
-ms.openlocfilehash: 6d622a00995ec8a371ef531994e4f18c61173a20
-ms.sourcegitcommit: e700497f962e4c2274df16d9e651059b42ff1a10
+ms.openlocfilehash: 25c17b0d61c5e1f58932eb6abc035e7862dcbe6e
+ms.sourcegitcommit: c7f40918dc3ecdb0ed2ef5c237a3996cb4cd268d
 ms.translationtype: HT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 08/17/2020
-ms.locfileid: "88477993"
+ms.lasthandoff: 10/05/2020
+ms.locfileid: "91728069"
 ---
 # <a name="data-sources-for-ssisnoversion-packages"></a>[!INCLUDE[ssISnoversion](../../includes/ssisnoversion-md.md)] 패키지용 데이터 원본
 
@@ -31,7 +31,7 @@ ms.locfileid: "88477993"
   
 > **참고:** 패키지 배포 모델을 사용하도록 구성된 프로젝트에만 데이터 원본을 추가할 수 있습니다. 프로젝트가 프로젝트 배포 모델을 사용하도록 구성된 경우 데이터 원본을 사용하는 대신 프로젝트 수준에서 만든 연결 관리자를 사용하여 연결을 공유합니다.  
 >   
->  배포 모델에 대한 자세한 내용은 [Deployment of Projects and Packages](../packages/deploy-integration-services-ssis-projects-and-packages.md)를 참조하십시오. 프로젝트를 프로젝트 배포 모델로 변환하는 방법은 [Deploy Projects to Integration Services Server](https://msdn.microsoft.com/library/hh231102.aspx)를 참조하십시오.  
+>  배포 모델에 대한 자세한 내용은 [Deployment of Projects and Packages](../packages/deploy-integration-services-ssis-projects-and-packages.md)를 참조하십시오. 프로젝트를 프로젝트 배포 모델로 변환하는 방법은 [Deploy Projects to Integration Services Server](../packages/deploy-integration-services-ssis-projects-and-packages.md)를 참조하십시오.  
   
  [!INCLUDE[ssISnoversion](../../includes/ssisnoversion-md.md)] 패키지에서 데이터 원본을 사용하면 다음과 같은 이점이 있습니다.  
   
@@ -47,5 +47,4 @@ ms.locfileid: "88477993"
  데이터 원본 개체는 데이터 원본에 대한 간단한 연결을 나타내며 데이터 저장소에서 참조되는 개체에 대한 액세스를 제공합니다. 예를 들어 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]AdventureWorks 샘플 데이터베이스에 연결하는 데이터 원본 개체에는 데이터베이스의 60개 테이블이 모두 포함됩니다.  
   
  데이터 원본과 이를 참조하는 연결 관리자 사이에는 종속성이 없습니다. 데이터 원본이 더 이상 프로젝트에 속하지 않는 경우에도 패키지는 계속 유효한 상태로 남습니다. 그 이유는 연결 형식과 연결 문자열과 같은 데이터 원본에 대한 정보가 패키지 정의에 포함되기 때문입니다.  
-  
   

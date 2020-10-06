@@ -16,12 +16,12 @@ helpviewer_keywords:
 ms.assetid: e5748836-b4ce-4e17-ab6b-617a336f02f4
 author: chugugrace
 ms.author: chugu
-ms.openlocfilehash: 2287bb2e429eba74f7ca98dcdf2b18b8d11cfda2
-ms.sourcegitcommit: e700497f962e4c2274df16d9e651059b42ff1a10
+ms.openlocfilehash: 2db38d2ad6c102b47b2a9f3349a3877a9d55a4c4
+ms.sourcegitcommit: c7f40918dc3ecdb0ed2ef5c237a3996cb4cd268d
 ms.translationtype: HT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 08/17/2020
-ms.locfileid: "88349989"
+ms.lasthandoff: 10/05/2020
+ms.locfileid: "91727600"
 ---
 # <a name="analysis-services-processing-task"></a>Analysis Services 처리 태스크
 
@@ -75,7 +75,7 @@ ms.locfileid: "88349989"
   
  [!INCLUDE[ssIS](../../includes/ssis-md.md)] 디자이너에서 이러한 속성을 설정하는 방법을 보려면 다음 항목을 클릭하십시오.  
   
--   [태스크 또는 컨테이너의 속성 설정](https://msdn.microsoft.com/library/52d47ca4-fb8c-493d-8b2b-48bb269f859b)  
+-   [태스크 또는 컨테이너의 속성 설정](./add-or-delete-a-task-or-a-container-in-a-control-flow.md)  
   
 ## <a name="programmatic-configuration-of-the-analysis-services-processing-task"></a>Analysis Services 처리 태스크의 프로그래밍 방식 구성  
  이러한 속성을 프로그래밍 방식으로 설정하는 방법을 보려면 다음 항목을 클릭하십시오.  
@@ -123,7 +123,7 @@ ms.locfileid: "88349989"
 |--------------|-----------------|  
 |**개체 이름**|지정한 개체 이름을 나열합니다.|  
 |**유형**|지정한 개체의 유형을 나열합니다.|  
-|**처리 옵션**|목록에서 처리 옵션을 선택합니다.<br /><br /> **관련 항목**: [다차원 모델 처리&#40;Analysis Services&#41;](https://docs.microsoft.com/analysis-services/multidimensional-models/processing-a-multidimensional-model-analysis-services)|  
+|**처리 옵션**|목록에서 처리 옵션을 선택합니다.<br /><br /> **관련 항목**: [다차원 모델 처리&#40;Analysis Services&#41;](/analysis-services/multidimensional-models/processing-a-multidimensional-model-analysis-services)|  
 |**설정**|지정한 개체에 대한 처리 설정을 나열합니다.|  
   
  **추가**  
@@ -135,7 +135,7 @@ ms.locfileid: "88349989"
  **영향 분석**  
  선택한 개체에 대한 영향 분석을 수행합니다.  
   
- **관련 항목:** [영향 분석 대화 상자&#40;Analysis Services - 다차원 데이터&#41;](https://msdn.microsoft.com/library/208268eb-4e14-44db-9c64-6f74b776adb6)  
+ **관련 항목:** [영향 분석 대화 상자&#40;Analysis Services - 다차원 데이터&#41;](/analysis-services/analysis-services-overview?viewFallbackFrom=sql-server-ver15)  
   
  **일괄 처리 설정 요약**  
  
@@ -150,4 +150,4 @@ ms.locfileid: "88349989"
  **설정 변경**  
  처리 옵션 및 차원 키의 오류 처리를 변경합니다.  
   
- **관련 항목:** [설정 변경 대화 상자&#40;Analysis Services - 다차원 데이터&#41;](https://msdn.microsoft.com/library/0041e042-d7ce-48f9-a690-a6dc65471ff3)  
+ **관련 항목:** [설정 변경 대화 상자&#40;Analysis Services - 다차원 데이터&#41;](/analysis-services/analysis-services-overview?viewFallbackFrom=sql-server-ver15)

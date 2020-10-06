@@ -13,12 +13,12 @@ dev_langs:
 author: pmasl
 ms.author: umajay
 monikerRange: '>= aps-pdw-2016 || = azure-sqldw-latest || = sqlallproducts-allversions'
-ms.openlocfilehash: 63a08f85aab7a92699564486d3d31103118fc01c
-ms.sourcegitcommit: cc23d8646041336d119b74bf239a6ac305ff3d31
+ms.openlocfilehash: 67eea4a666519ec5a9dd1dce7e1e33e3c8da4831
+ms.sourcegitcommit: c7f40918dc3ecdb0ed2ef5c237a3996cb4cd268d
 ms.translationtype: HT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 09/23/2020
-ms.locfileid: "91114991"
+ms.lasthandoff: 10/05/2020
+ms.locfileid: "91722494"
 ---
 # <a name="dbcc-pdw_showexecutionplan-transact-sql"></a>DBCC PDW_SHOWEXECUTIONPLAN(Transact-SQL)
 
@@ -44,6 +44,8 @@ DBCC PDW_SHOWEXECUTIONPLAN ( distribution_id, spid )
 DBCC PDW_SHOWEXECUTIONPLAN ( pdw_node_id, spid )  
 [ ; ]  
 ```  
+
+[!INCLUDE[synapse-analytics-od-unsupported-syntax](../../includes/synapse-analytics-od-unsupported-syntax.md)]
 
 ## <a name="arguments"></a>인수  
  *distribution_id*  

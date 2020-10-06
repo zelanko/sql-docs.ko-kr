@@ -16,12 +16,12 @@ helpviewer_keywords:
 ms.assetid: b9043428-ce26-45bb-910c-588d07579565
 author: chugugrace
 ms.author: chugu
-ms.openlocfilehash: a2ee5f6f01a098c2e8a67b09e915a947010d5758
-ms.sourcegitcommit: e700497f962e4c2274df16d9e651059b42ff1a10
+ms.openlocfilehash: 19b96ce10fc5579e86fde10b4c3331b0da060050
+ms.sourcegitcommit: c7f40918dc3ecdb0ed2ef5c237a3996cb4cd268d
 ms.translationtype: HT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 08/17/2020
-ms.locfileid: "88484655"
+ms.lasthandoff: 10/05/2020
+ms.locfileid: "91724964"
 ---
 # <a name="data-profile-viewer"></a>데이터 프로필 뷰어(Data Profile Viewer)
 
@@ -69,7 +69,7 @@ ms.locfileid: "88484655"
 >   
 >  최근에 만들어지지 않은 출력 파일에서 드릴다운하는 경우 드릴다운 쿼리에서 원래 출력이 계산된 행 집합과 다른 행 집합을 반환할 수도 있습니다.  
   
- 데이터 프로필 뷰어의 사용자 인터페이스에 대한 자세한 내용은 [Data Profile Viewer F1 Help](../../integration-services/control-flow/data-profile-viewer-f1-help.md)을 참조하십시오.  
+ 데이터 프로필 뷰어의 사용자 인터페이스에 대한 자세한 내용은 [Data Profile Viewer F1 Help]()을 참조하십시오.  
   
 ## <a name="data-profile-viewer-f1-help"></a>데이터 프로필 뷰어 F1 도움말
   데이터 프로필 뷰어를 사용하여 데이터 프로파일링 태스크의 출력을 볼 수 있습니다.  
@@ -246,4 +246,3 @@ ms.locfileid: "88484655"
   
  **Count**  
  지정된 열에 첫 번째 열에 표시된 값이 있는 행 수를 표시합니다.  
-  

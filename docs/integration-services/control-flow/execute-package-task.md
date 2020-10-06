@@ -20,12 +20,12 @@ helpviewer_keywords:
 ms.assetid: 042d4ec0-0668-401c-bb3a-a25fe2602eac
 author: chugugrace
 ms.author: chugu
-ms.openlocfilehash: 3307c81165731907f8252c99ebb03b057ca6af74
-ms.sourcegitcommit: e700497f962e4c2274df16d9e651059b42ff1a10
+ms.openlocfilehash: ab1215ca58f64c6e28f78e423bdee5a66b4c46b2
+ms.sourcegitcommit: c7f40918dc3ecdb0ed2ef5c237a3996cb4cd268d
 ms.translationtype: HT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 08/17/2020
-ms.locfileid: "88457555"
+ms.lasthandoff: 10/05/2020
+ms.locfileid: "91725938"
 ---
 # <a name="execute-package-task"></a>패키지 실행 태스크
 
@@ -67,7 +67,7 @@ ms.locfileid: "88457555"
  기본적으로 패키지 실행 태스크의 ExecuteOutOfProcess 속성은 **False**로 설정되고 자식 패키지는 부모 패키지와 같은 프로세스에서 실행됩니다. 이 속성을 **True**로 설정하면 하위 패키지가 개별 프로세스로 실행됩니다. 이렇게 하면 하위 패키지의 실행 속도가 느려집니다. 또한 속성을 **True**로 설정하면 도구만 설치로 패키지를 디버그할 수 없습니다. [!INCLUDE[ssISnoversion](../../includes/ssisnoversion-md.md)]를 설치해야 합니다. 자세한 내용은 [Integration Services 설치](../../integration-services/install-windows/install-integration-services.md)를 참조하세요.  
   
 ## <a name="extending-transactions"></a>트랜잭션 확장  
- 부모 패키지가 사용하는 트랜잭션은 자식 패키지로 확장될 수 있으므로 두 패키지가 수행한 작업을 모두 커밋하거나 롤백할 수 있습니다. 예를 들어 자식 패키지가 수행한 데이터베이스 삽입에 따라 부모 패키지가 수행한 데이터베이스 삽입을 커밋하거나 롤백할 수 있고 그 반대의 경우도 마찬가지로 적용됩니다. 자세한 내용은 [Inherited Transactions](https://msdn.microsoft.com/library/90db5564-d41e-4cfe-8c9e-4e68d41eff1c)을 참조하세요.  
+ 부모 패키지가 사용하는 트랜잭션은 자식 패키지로 확장될 수 있으므로 두 패키지가 수행한 작업을 모두 커밋하거나 롤백할 수 있습니다. 예를 들어 자식 패키지가 수행한 데이터베이스 삽입에 따라 부모 패키지가 수행한 데이터베이스 삽입을 커밋하거나 롤백할 수 있고 그 반대의 경우도 마찬가지로 적용됩니다. 자세한 내용은 [Inherited Transactions](../integration-services-transactions.md)을 참조하세요.  
   
 ## <a name="propagating-logging-details"></a>로깅 세부 정보 전달  
  패키지 실행 태스크에서 실행하는 자식 패키지가 로깅을 사용하도록 구성될 수도 있고 그렇지 않을 수도 있지만 자식 패키지는 항상 로그 세부 정보를 부모 패키지로 전달합니다. 로깅을 사용하도록 패키지 실행 태스크를 구성하면 자식 패키지에서 전달된 로그 세부 정보가 기록됩니다. 자세한 내용은 [Integration Services&#40;SSIS&#41; 로깅](../../integration-services/performance/integration-services-ssis-logging.md)을 참조하세요.  
@@ -89,7 +89,7 @@ ms.locfileid: "88457555"
   
 -   **매개 변수**  
   
-     부모 패키지 변수나 매개 변수 또는 프로젝트 매개 변수를 자식 패키지 매개 변수에 매핑하도록 패키지 실행 태스크를 구성할 수 있습니다. 프로젝트에서 프로젝트 배포 모델을 사용해야 하며 자식 패키지는 부모 패키지와 동일한 프로젝트에 포함되어 있어야 합니다. 자세한 내용은 [Execute Package Task Editor](../../integration-services/control-flow/execute-package-task-editor.md)을 참조하세요.  
+     부모 패키지 변수나 매개 변수 또는 프로젝트 매개 변수를 자식 패키지 매개 변수에 매핑하도록 패키지 실행 태스크를 구성할 수 있습니다. 프로젝트에서 프로젝트 배포 모델을 사용해야 하며 자식 패키지는 부모 패키지와 동일한 프로젝트에 포함되어 있어야 합니다. 자세한 내용은 [Execute Package Task Editor]()을 참조하세요.  
   
     > [!NOTE]  
     >  자식 패키지 매개 변수가 중요한 정보가 아니고 중요한 부모 매개 변수에 매핑된 경우 자식 패키지가 실행되지 않습니다.  
@@ -118,7 +118,7 @@ ms.locfileid: "88457555"
   
  [!INCLUDE[ssIS](../../includes/ssis-md.md)] 디자이너에서 이러한 속성을 설정하는 방법을 보려면 다음 항목을 클릭하십시오.  
   
--   [태스크 또는 컨테이너의 속성 설정](https://msdn.microsoft.com/library/52d47ca4-fb8c-493d-8b2b-48bb269f859b)  
+-   [태스크 또는 컨테이너의 속성 설정](./add-or-delete-a-task-or-a-container-in-a-control-flow.md)  
   
 ## <a name="configuring-the-execute-package-task-programmatically"></a>프로그래밍 방식으로 패키지 실행 태스크 구성  
  이러한 속성을 프로그래밍 방식으로 설정하는 방법을 보려면 다음 항목을 클릭하십시오.  
@@ -224,5 +224,4 @@ ms.locfileid: "88457555"
   
  **제거**  
  매개 변수나 변수와 자식 패키지 매개 변수 간의 매핑을 제거하려면 클릭합니다.  
-  
   

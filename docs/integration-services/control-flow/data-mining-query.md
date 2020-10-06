@@ -13,12 +13,12 @@ f1_keywords:
 ms.assetid: 948e358a-6245-429f-82c7-4cedc5e048fd
 author: chugugrace
 ms.author: chugu
-ms.openlocfilehash: 0ac57f5f3e064df60c0fc885765fcbc445be9e22
-ms.sourcegitcommit: e700497f962e4c2274df16d9e651059b42ff1a10
+ms.openlocfilehash: 4c3e798ca968230aa0a554189076281a886bff3e
+ms.sourcegitcommit: c7f40918dc3ecdb0ed2ef5c237a3996cb4cd268d
 ms.translationtype: HT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 08/17/2020
-ms.locfileid: "88457557"
+ms.lasthandoff: 10/05/2020
+ms.locfileid: "91727634"
 ---
 # <a name="data-mining-query"></a>데이터 마이닝 쿼리
 
@@ -68,7 +68,6 @@ ms.locfileid: "88457557"
  열에 적용되는 조건 또는 사용자 식을 지정합니다. 마이닝 모델과 입력 열이 포함된 테이블에서 셀로 열을 끌 수 있습니다.  
   
 ## <a name="see-also"></a>참고 항목  
- [데이터 마이닝 쿼리 도구](https://docs.microsoft.com/analysis-services/data-mining/data-mining-query-tools)   
+ [데이터 마이닝 쿼리 도구](/analysis-services/data-mining/data-mining-query-tools)   
  [DMX&#40;Data Mining Extensions&#41; 문 참조](../../dmx/data-mining-extensions-dmx-statements.md)  
-  
   

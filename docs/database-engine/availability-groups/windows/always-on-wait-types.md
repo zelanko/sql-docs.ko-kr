@@ -10,18 +10,18 @@ ms.topic: how-to
 ms.assetid: afa8caff-f325-48d9-a8ef-a30beab60389
 author: rothja
 ms.author: jroth
-ms.openlocfilehash: 50886885852fd9ffe2d759be779989cb221cf76f
-ms.sourcegitcommit: cc23d8646041336d119b74bf239a6ac305ff3d31
+ms.openlocfilehash: 2a04953b5881362dbae6a83ea874dc9ed0207a7a
+ms.sourcegitcommit: c7f40918dc3ecdb0ed2ef5c237a3996cb4cd268d
 ms.translationtype: HT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 09/23/2020
-ms.locfileid: "91115804"
+ms.lasthandoff: 10/05/2020
+ms.locfileid: "91724559"
 ---
 # <a name="identify-waits-associated-with-availability-groups"></a>가용성 그룹과 연결된 대기 식별
 [!INCLUDE [SQL Server](../../../includes/applies-to-version/sqlserver.md)]
   Always On 가용성 그룹 대기 시간의 문제를 해결할 때 DMV(동적 관리 뷰) [sys.dm_os_wait_stats&#40;Transact-SQL&#41;](~/relational-databases/system-dynamic-management-views/sys-dm-os-wait-stats-transact-sql.md)에서 가용성 그룹 관련 대기 유형을 사용하여 누적에 대해 대기 통계를 모니터링할 수 있습니다.  
   
- 대기 통계 사용에 대한 일반적인 정보는 [SQL Server 2005 대기 및 큐](https://technet.microsoft.com/library/cc966413.aspx)를 참조하세요. 해당 문서는 SQL Server 2005에 대해 작성되었지만 해당 정보는 SQL Server 이후 버전에 적용될 수 있습니다.  
+ 대기 통계 사용에 대한 일반적인 정보는 [SQL Server 2005 대기 및 큐](/previous-versions/sql/sql-server-2005/administrator/cc966413(v=technet.10))를 참조하세요. 해당 문서는 SQL Server 2005에 대해 작성되었지만 해당 정보는 SQL Server 이후 버전에 적용될 수 있습니다.  
   
 ## <a name="query-for-availability-groups-wait-types"></a>가용성 그룹 대기 유형에 대한 쿼리  
  다음 T-SQL 쿼리를 사용하여 가용성 그룹 대기 유형을 사용하여 모든 대기 통계를 검색할 수 있습니다.  
@@ -53,5 +53,4 @@ ORDER BY map_key ASC
   
 ## <a name="next-steps"></a>다음 단계  
  [대기 유형](~/relational-databases/system-dynamic-management-views/sys-dm-os-wait-stats-transact-sql.md#WaitTypes)  
-  
   

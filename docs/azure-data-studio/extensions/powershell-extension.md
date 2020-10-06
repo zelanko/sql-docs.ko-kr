@@ -9,12 +9,12 @@ ms.author: aanelson
 ms.reviewer: alayu, maghan, sstein
 ms.custom: ''
 ms.date: 04/19/2019
-ms.openlocfilehash: 522f6c862f4c136afb0c7794d90ed83c83169d0c
-ms.sourcegitcommit: cc23d8646041336d119b74bf239a6ac305ff3d31
+ms.openlocfilehash: ede862fe5bbfe975e7c8694782960ced974122b6
+ms.sourcegitcommit: c7f40918dc3ecdb0ed2ef5c237a3996cb4cd268d
 ms.translationtype: HT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 09/23/2020
-ms.locfileid: "91123340"
+ms.lasthandoff: 10/05/2020
+ms.locfileid: "91725138"
 ---
 # <a name="powershell-editor-support-for-azure-data-studio"></a>Azure Data Studio에 대한 PowerShell 편집기 지원
 
@@ -62,8 +62,8 @@ macOS 또는 Linux에서 Azure Data Studio를 실행하는 경우 PowerShell Cor
 PowerShell Core는 [GitHub](https://github.com/powershell/powershell)의 오픈 소스 프로젝트입니다.
 macOS 또는 Linux 플랫폼에 PowerShell Core를 설치하는 방법에 대한 자세한 내용은 다음 문서를 참조하세요.
 
-- [Linux에서 PowerShell Core 설치](https://docs.microsoft.com/powershell/scripting/install/installing-powershell-core-on-linux)
-- [macOS에서 PowerShell Core 설치](https://docs.microsoft.com/powershell/scripting/install/installing-powershell-core-on-macos)
+- [Linux에서 PowerShell Core 설치](/powershell/scripting/install/installing-powershell-core-on-linux)
+- [macOS에서 PowerShell Core 설치](/powershell/scripting/install/installing-powershell-core-on-macos)
 
 ## <a name="example-scripts"></a>예제 스크립트
 

@@ -9,12 +9,12 @@ ms.author: jovanpop
 ms.reviewer: alanyu, maghan, sstein
 ms.custom: ''
 ms.date: 10/07/2019
-ms.openlocfilehash: e31895f09b06e51f76c745a9b00a1dfe7c41d759
-ms.sourcegitcommit: cc23d8646041336d119b74bf239a6ac305ff3d31
+ms.openlocfilehash: bc4a01ce30d05853c08b59b720452a3e09cb6417
+ms.sourcegitcommit: c7f40918dc3ecdb0ed2ef5c237a3996cb4cd268d
 ms.translationtype: HT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 09/23/2020
-ms.locfileid: "91111753"
+ms.lasthandoff: 10/05/2020
+ms.locfileid: "91725204"
 ---
 # <a name="azure-sql-managed-instance-dashboard-for-azure-data-studio-preview"></a>Azure Data Studio용 Azure SQL Managed Instance 대시보드(미리 보기)
 
@@ -28,7 +28,7 @@ Azure SQL Managed Instance 확장은 [Azure Data Studio](https://github.com/Micr
 
 ## <a name="install"></a>설치
 
-이 확장의 공식 릴리스를 설치할 수 있습니다. [Azure Data Studio 설명서](../extensions.md)의 단계를 수행합니다.
+이 확장의 공식 릴리스를 설치할 수 있습니다. [Azure Data Studio 설명서](./add-extensions.md)의 단계를 수행합니다.
 **확장** 창에서 “Managed Instance”를 검색하여 설치합니다. 이 확장을 설치하면 후속 확장 업데이트에 대한 알림이 자동으로 제공됩니다.
 
 그리고 Azure Data Studio에 **관리되는 인스턴스** 탭이 표시됩니다. 이 탭에서 관리되는 인스턴스 관련 정보를 찾을 수 있습니다.
@@ -50,7 +50,7 @@ Azure SQL Managed Instance 확장은 [Azure Data Studio](https://github.com/Micr
 
 **관리되는 인스턴스** 탭에서 두 번째 창을 선택하면 관리되는 인스턴스를 최적화하는 데 도움이 되는 권장 사항 및 경고가 표시됩니다.
 
-:::image type="content" source="media/azure-sql-managed-instance-extension/azure-sql-managed-instance-extension-tab-6.png" alt-text="Managed Instance 권장 사항":::
+:::image type="content" source="media/azure-sql-managed-instance-extension/azure-sql-managed-instance-extension-tab-6.png" alt-text="Managed Instance 속성":::
 
 다음과 같은 권장 사항이 표시될 수 있습니다.
 
@@ -67,7 +67,7 @@ Azure SQL Managed Instance 확장은 [Azure Data Studio](https://github.com/Micr
 
 **관리되는 인스턴스** 탭의 세 번째 창에서는 관리되는 인스턴스의 데이터베이스 복제본 상태를 보여 줍니다.
 
-:::image type="content" source="media/azure-sql-managed-instance-extension/azure-sql-managed-instance-extension-tab-7.png" alt-text="Managed Instance 복제본":::
+:::image type="content" source="media/azure-sql-managed-instance-extension/azure-sql-managed-instance-extension-tab-7.png" alt-text="Managed Instance 속성":::
 
 범용 서비스 계층에서 모든 데이터베이스에는 단일 (기본) 복제본이 있습니다. 중요 비즈니스용 계층 인스턴스에서 모든 데이터베이스에는 기본 복제본 1개와 보조 복제본 3개가 있으며, 이 중 하나는 읽기 전용 작업에 사용됩니다. **복제본** 창에서 동기화 프로세스를 모니터링하고 모든 보조 복제본이 주 복제본과 동기화되었는지 확인할 수 있습니다.
 
@@ -75,7 +75,7 @@ Azure SQL Managed Instance 확장은 [Azure Data Studio](https://github.com/Micr
 
 **관리되는 인스턴스**의 네 번째 창에는 최신 및 관련 SQL 오류 로그 항목이 표시됩니다.
 
-:::image type="content" source="media/azure-sql-managed-instance-extension/azure-sql-managed-instance-extension-tab-8.png" alt-text="Managed Instance 로그 항목":::
+:::image type="content" source="media/azure-sql-managed-instance-extension/azure-sql-managed-instance-extension-tab-8.png" alt-text="Managed Instance 속성":::
 
 관리되는 인스턴스는 수많은 로그 항목을 생성하지만, 대부분은 내부/시스템 정보입니다. 또한 일부 로그 항목은 논리적 데이터베이스 이름 대신 실제 데이터베이스 이름(`GUID` 값)을 표시합니다.
 

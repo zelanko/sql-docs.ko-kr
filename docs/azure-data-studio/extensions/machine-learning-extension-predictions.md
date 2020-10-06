@@ -9,12 +9,12 @@ ms.author: davidph
 ms.reviewer: sstein
 ms.custom: ''
 ms.date: 06/09/2020
-ms.openlocfilehash: ad98cd8d9cdeb282a13ff35c278fd1c2a26df2b4
-ms.sourcegitcommit: e3460309b301a77d0babec032f53de330da001a9
+ms.openlocfilehash: 2b68f15f69d3efb0a773022e87615d298da07706
+ms.sourcegitcommit: c7f40918dc3ecdb0ed2ef5c237a3996cb4cd268d
 ms.translationtype: HT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 09/24/2020
-ms.locfileid: "91137023"
+ms.lasthandoff: 10/05/2020
+ms.locfileid: "91725159"
 ---
 # <a name="make-predictions-with-machine-learning-extension-for-azure-data-studio-preview"></a>Azure Data Studio용 Machine Learning 확장(미리 보기)을 사용하여 예측 수행
 
@@ -55,7 +55,7 @@ Azure Data Studio가 [PREDICT](../../t-sql/queries/predict-transact-sql.md)를 �
 - [Azure Data Studio의 Machine Learning 확장](machine-learning-extension.md)
 - [데이터베이스에서 패키지 관리](machine-learning-extension-manage-packages.md)
 - [모델 가져오기 또는 보기](machine-learning-extension-import-view-models.md)
-- [Azure Data Studio의 Notebook](../notebooks-guidance.md)
+- [Azure Data Studio의 Notebook](../notebooks/notebooks-guidance.md)
 - [SQL Machine Learning 설명서](../../machine-learning/index.yml)
 - [Azure SQL Managed Instance의 Machine Learning Services](/azure/azure-sql/managed-instance/machine-learning-services-overview)
 - [SQL Edge(미리 보기)에서 Open Neural Network Exchange를 통한 기계 학습 및 AI](/azure/azure-sql-edge/onnx-overview)

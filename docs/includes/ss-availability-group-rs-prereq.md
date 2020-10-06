@@ -106,4 +106,4 @@ GRANT CONNECT ON ENDPOINT::[Hadr_endpoint] TO [<service account or user>];
 
 방화벽의 TCP 포트를 수신기 포트용으로 열어 두어야 합니다.
 
-자세한 내용은 [데이터베이스 미러링 엔드포인트(SQL Server)](https://docs.microsoft.com/sql/database-engine/database-mirroring/the-database-mirroring-endpoint-sql-server?view=sql-server-2017)를 참조하세요.
+자세한 내용은 [데이터베이스 미러링 엔드포인트(SQL Server)](../database-engine/database-mirroring/the-database-mirroring-endpoint-sql-server.md?view=sql-server-2017)를 참조하세요.

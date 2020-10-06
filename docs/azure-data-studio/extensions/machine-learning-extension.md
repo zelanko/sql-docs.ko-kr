@@ -9,12 +9,12 @@ ms.author: davidph
 ms.reviewer: sstein
 ms.custom: ''
 ms.date: 05/19/2020
-ms.openlocfilehash: bc3039207e083d2afc8f0850a6328facd1f1916f
-ms.sourcegitcommit: e3460309b301a77d0babec032f53de330da001a9
+ms.openlocfilehash: 77cb3141a27fa8e68f8cdfb556784cc63fd07543
+ms.sourcegitcommit: c7f40918dc3ecdb0ed2ef5c237a3996cb4cd268d
 ms.translationtype: HT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 09/24/2020
-ms.locfileid: "91137016"
+ms.lasthandoff: 10/05/2020
+ms.locfileid: "91725148"
 ---
 # <a name="machine-learning-extension-for-azure-data-studio-preview"></a>Azure Data Studio용 Machine Learning 확장(미리 보기)
 
@@ -24,7 +24,7 @@ ms.locfileid: "91137016"
 
 Azure Data Studio를 실행하는 컴퓨터에 다음 필수 구성 요소를 설치해야 합니다.
 
-- [Python 3](https://www.python.org/downloads/). Python 설치가 끝나면 [확장 설정](#settings)에서 Python 설치의 로컬 경로를 지정해야 합니다. Azure Data Studio에서 [Python 커널 notebook](../notebooks-tutorial-python-kernel.md)을 사용한다면 이 확장은 기본적으로 notebook의 경로를 사용합니다.
+- [Python 3](https://www.python.org/downloads/). Python 설치가 끝나면 [확장 설정](#settings)에서 Python 설치의 로컬 경로를 지정해야 합니다. Azure Data Studio에서 [Python 커널 notebook](../notebooks/notebooks-python-kernel.md)을 사용한다면 이 확장은 기본적으로 notebook의 경로를 사용합니다.
 
 - Windows, macOS 또는 Linux용 [Microsoft ODBC driver 17 for SQL Server](../../connect/odbc/download-odbc-driver-for-sql-server.md).
 
@@ -87,7 +87,7 @@ Machine Learning 확장 설정을 변경하려면 다음 단계를 수행하세�
 
 1. **Machine Learning: Python 사용 설정**이 활성화되어 있는지 확인합니다. 이 설정은 기본적으로 사용하도록 설정됩니다.
 
-1. **Machine Learning: Python 경로**에 기존 Python 설치 경로를 입력합니다. Python 실행 파일의 전체 경로이거나 실행 파일이 있는 폴더일 수 있습니다. Azure Data Studio에서 [Python 커널 notebook](../notebooks-tutorial-python-kernel.md)을 사용한다면 이 확장은 기본적으로 notebook의 경로를 사용합니다.
+1. **Machine Learning: Python 경로**에 기존 Python 설치 경로를 입력합니다. Python 실행 파일의 전체 경로이거나 실행 파일이 있는 폴더일 수 있습니다. Azure Data Studio에서 [Python 커널 notebook](../notebooks/notebooks-python-kernel.md)을 사용한다면 이 확장은 기본적으로 notebook의 경로를 사용합니다.
 
 ### <a name="enable-r"></a>R 사용 설정
 
@@ -114,6 +114,6 @@ Azure Data Studio에서 Machine Learning 확장을 사용하려면 다음 단계
 - [데이터베이스의 패키지 관리](machine-learning-extension-manage-packages.md)
 - [예측 만들기](machine-learning-extension-predictions.md)
 - [모델 가져오기 또는 보기](machine-learning-extension-import-view-models.md)
-- [Azure Data Studio의 Notebook](../notebooks-guidance.md)
+- [Azure Data Studio의 Notebook](../notebooks/notebooks-guidance.md)
 - [SQL Machine Learning 설명서](../../machine-learning/index.yml)
 - [SQL Edge(미리 보기)에서 ONNX를 통한 기계 학습 및 AI](/azure/azure-sql-edge/onnx-overview)

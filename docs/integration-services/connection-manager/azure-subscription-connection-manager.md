@@ -14,12 +14,12 @@ f1_keywords:
 ms.assetid: e1225327-c308-4c50-8f44-c411f52ef378
 author: chugugrace
 ms.author: chugu
-ms.openlocfilehash: 5940e7b45288913bbda4930c267f1f806ed4937d
-ms.sourcegitcommit: e700497f962e4c2274df16d9e651059b42ff1a10
+ms.openlocfilehash: da836cc7f53f4a4d83aae28ea2a41ec646ca3bd0
+ms.sourcegitcommit: c7f40918dc3ecdb0ed2ef5c237a3996cb4cd268d
 ms.translationtype: HT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 08/17/2020
-ms.locfileid: "88477992"
+ms.lasthandoff: 10/05/2020
+ms.locfileid: "91728074"
 ---
 # <a name="azure-subscription-connection-manager"></a>Azure 구독 연결 관리자
 
@@ -40,12 +40,11 @@ ms.locfileid: "88477992"
   
 3.  드롭다운 목록에서 **관리 인증서 저장소 위치** 및 **관리 인증서 저장소 이름** 을 선택합니다.  
   
-4.  **관리 인증서 지문**을 입력하거나 **찾아보기...** 를 클릭하여 선택한 저장소에서 인증서를 선택합니다. 인증서는 구독용 관리 인증서로 업로드해야 합니다. 이렇게 하려면 Azure Portal의 다음 페이지에서 **업로드**를 클릭합니다. 자세한 내용은 이 [MSDN 게시물](https://msdn.microsoft.com/library/azure/gg551722.aspx)을 참조하세요.  
+4.  **관리 인증서 지문**을 입력하거나 **찾아보기...** 를 클릭하여 선택한 저장소에서 인증서를 선택합니다. 인증서는 구독용 관리 인증서로 업로드해야 합니다. 이렇게 하려면 Azure Portal의 다음 페이지에서 **업로드**를 클릭합니다. 자세한 내용은 이 [MSDN 게시물](/previous-versions/azure/gg551722(v=azure.100))을 참조하세요.  
   
      ![SSIS-AzureSettings-ManagementCertificate](../../integration-services/connection-manager/media/ssis-azuresettings-managementcertificate.png "SSIS-AzureSettings-ManagementCertificate")  
   
 5.  **연결 테스트** 를 클릭하여 연결을 테스트합니다.  
   
 6.  **확인** 을 클릭하여 대화 상자를 닫습니다.  
-  
   

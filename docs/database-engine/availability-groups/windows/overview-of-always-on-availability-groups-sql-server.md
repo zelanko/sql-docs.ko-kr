@@ -16,12 +16,12 @@ helpviewer_keywords:
 ms.assetid: 04fd9d95-4624-420f-a3be-1794309b3a47
 author: MashaMSFT
 ms.author: mathoma
-ms.openlocfilehash: f24efc5f72b0be5b362e3af12ce8b7f21fd7d51b
-ms.sourcegitcommit: 827ad02375793090fa8fee63cc372d130f11393f
+ms.openlocfilehash: 41bb72eefbfac24da8c390cea2bb9fa741e7255f
+ms.sourcegitcommit: c7f40918dc3ecdb0ed2ef5c237a3996cb4cd268d
 ms.translationtype: HT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 09/04/2020
-ms.locfileid: "89480260"
+ms.lasthandoff: 10/05/2020
+ms.locfileid: "91727837"
 ---
 # <a name="what-is-an-always-on-availability-group"></a>Always On 가용성 그룹이란?
 [!INCLUDE [SQL Server](../../../includes/applies-to-version/sqlserver.md)]
@@ -100,7 +100,7 @@ ms.locfileid: "89480260"
   
     -   **자동 장애 조치(Failover)** (데이터가 손실되지 않음)  
   
-         자동 장애 조치(Failover)는 동기화된 보조 복제본이 주 역할(데이터 보호 보장)로 전환되는 오류에 대응하여 수행됩니다. 이전의 주 복제본을 사용할 수 있게 되면 이 복제본은 보조 역할로 전환됩니다. 자동 장애 조치(Failover)를 수행하려면 장애 조치(Failover) 모드가 "자동"으로 설정된 상태로 주 복제본과 대상 보조 복제본이 모두 동기-커밋 모드에서 실행 중이어야 합니다. 또한 보조 복제본이 이미 동기화되고, WSFC 쿼럼이 있으며, 가용성 그룹의 [유연한 장애 조치(Failover) 정책](../../../database-engine/availability-groups/windows/flexible-automatic-failover-policy-availability-group.md)에서 지정된 조건과 일치해야 합니다.  
+         자동 장애 조치(Failover)는 동기화된 보조 복제본이 주 역할(데이터 보호 보장)로 전환되는 오류에 대응하여 수행됩니다. 이전의 주 복제본을 사용할 수 있게 되면 이 복제본은 보조 역할로 전환됩니다. 자동 장애 조치(Failover)를 수행하려면 장애 조치(Failover) 모드가 "자동"으로 설정된 상태로 주 복제본과 대상 보조 복제본이 모두 동기-커밋 모드에서 실행 중이어야 합니다. 또한 보조 복제본이 이미 동기화되고, WSFC 쿼럼이 있으며, 가용성 그룹의 [유연한 장애 조치(Failover) 정책](./configure-flexible-automatic-failover-policy.md)에서 지정된 조건과 일치해야 합니다.  
   
         > [!IMPORTANT]  
         >  SQL Server FCI(장애 조치(Failover) 클러스터 인스턴스)는 가용성 그룹에 따라 AlwaysOn 자동 장애 조치(Failover)를 지원하지 않으므로 FCI에서 호스팅하는 모든 가용성 복제본은 수동 장애 조치(Failover)에 대해서만 구성될 수 있습니다.  
@@ -156,11 +156,11 @@ ms.locfileid: "89480260"
   
 -   **블로그:**  
   
-     [Always On - HADRON 학습 시리즈: HADRON 사용 데이터베이스의 작업자 풀 사용](https://docs.microsoft.com/archive/blogs/psssql/alwayson-hadron-learning-series-worker-pool-usage-for-hadron-enabled-databases)  
+     [Always On - HADRON 학습 시리즈: HADRON 사용 데이터베이스의 작업자 풀 사용](/archive/blogs/psssql/alwayson-hadron-learning-series-worker-pool-usage-for-hadron-enabled-databases)  
   
-     [SQL Server Always On 팀 블로그: 공식 SQL Server Always On 팀 블로그](https://blogs.msdn.microsoft.com/sqlalwayson/)  
+     [SQL Server Always On 팀 블로그: 공식 SQL Server Always On 팀 블로그](/archive/blogs/sqlalwayson/)  
   
-     [CSS SQL Server 엔지니어 블로그](https://docs.microsoft.com/archive/blogs/psssql/)  
+     [CSS SQL Server 엔지니어 블로그](/archive/blogs/psssql/)  
   
 -   **비디오:**  
   
@@ -170,9 +170,9 @@ ms.locfileid: "89480260"
   
 -   **백서:**  
   
-     [고가용성 및 재해 복구를 위한 Microsoft SQL Server Always On 솔루션 가이드](https://go.microsoft.com/fwlink/?LinkId=227600)  
+     [고가용성 및 재해 복구를 위한 Microsoft SQL Server Always On 솔루션 가이드](/previous-versions/sql/sql-server-2012/hh781257(v=msdn.10))  
   
-     [SQL Server 2012에 대한 Microsoft 백서](https://msdn.microsoft.com/library/hh403491.aspx)  
+     [SQL Server 2012에 대한 Microsoft 백서](https://social.technet.microsoft.com/wiki/contents/articles/13146.white-paper-gallery-for-sql-server.aspx#[Category]SQLServer2012)  
   
      [SQL Server 고객 자문 팀 백서](https://techcommunity.microsoft.com/t5/DataCAT/bg-p/DataCAT/)  
   
@@ -188,4 +188,3 @@ ms.locfileid: "89480260"
  [활성 보조 복제본: 보조 복제본에 백업&#40;Always On 가용성 그룹&#41;](../../../database-engine/availability-groups/windows/active-secondaries-backup-on-secondary-replicas-always-on-availability-groups.md)   
  [가용성 그룹 수신기, 클라이언트 연결 및 애플리케이션 장애 조치(failover)&#40;SQL Server&#41;](../../../database-engine/availability-groups/windows/listeners-client-connectivity-application-failover.md)  
   
-   

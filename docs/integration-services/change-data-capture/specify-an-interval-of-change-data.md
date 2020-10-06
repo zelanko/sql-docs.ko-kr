@@ -13,12 +13,12 @@ helpviewer_keywords:
 ms.assetid: 17899078-8ba3-4f40-8769-e9837dc3ec60
 author: chugugrace
 ms.author: chugu
-ms.openlocfilehash: 7f82a0fe161a12f4a7d20b24218bd0347cdf6187
-ms.sourcegitcommit: e700497f962e4c2274df16d9e651059b42ff1a10
+ms.openlocfilehash: 960567c1278f1ed4e5da60a018c330591cd3627d
+ms.sourcegitcommit: c7f40918dc3ecdb0ed2ef5c237a3996cb4cd268d
 ms.translationtype: HT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 08/17/2020
-ms.locfileid: "88457650"
+ms.lasthandoff: 10/05/2020
+ms.locfileid: "91724979"
 ---
 # <a name="specify-an-interval-of-change-data"></a>변경 데이터의 간격 지정
 
@@ -113,9 +113,8 @@ ms.locfileid: "88457650"
  **다음 항목:** [변경 데이터의 준비 여부 확인](../../integration-services/change-data-capture/determine-whether-the-change-data-is-ready.md)  
   
 ## <a name="see-also"></a>참고 항목  
- [패키지에서 변수 사용](https://msdn.microsoft.com/library/7742e92d-46c5-4cc4-b9a3-45b688ddb787)   
+ [패키지에서 변수 사용](../integration-services-ssis-variables.md)   
  [Integration Services&#40;SSIS&#41; 식](../../integration-services/expressions/integration-services-ssis-expressions.md)   
  [SQL 실행 태스크](../../integration-services/control-flow/execute-sql-task.md)   
  [스크립트 태스크](../../integration-services/control-flow/script-task.md)  
-  
   

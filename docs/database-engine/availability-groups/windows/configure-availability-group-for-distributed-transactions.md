@@ -16,12 +16,12 @@ helpviewer_keywords:
 ms.assetid: ''
 author: MashaMSFT
 ms.author: mathoma
-ms.openlocfilehash: bfa584b5b6debf497438dc7b50f513e5da1b6d4e
-ms.sourcegitcommit: cc23d8646041336d119b74bf239a6ac305ff3d31
+ms.openlocfilehash: 797885368b0aa8abfd2d367d4dbaf9b1b6942b41
+ms.sourcegitcommit: c7f40918dc3ecdb0ed2ef5c237a3996cb4cd268d
 ms.translationtype: HT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 09/23/2020
-ms.locfileid: "91114029"
+ms.lasthandoff: 10/05/2020
+ms.locfileid: "91726474"
 ---
 # <a name="configure-distributed-transactions-for-an-always-on-availability-group"></a>Always On 가용성 그룹에 대한 분산 트랜잭션 구성
 [!INCLUDE [SQL Server](../../../includes/applies-to-version/sqlserver.md)]
@@ -193,16 +193,16 @@ following the guideline for Troubleshooting DTC Transactions.
    ALTER DATABASE [DB1] SET ONLINE
    ```
 
-미결 트랜잭션을 해결하는 방법에 대한 자세한 내용은 [수동으로 트랜잭션 해결(영문)](https://technet.microsoft.com/library/cc754134.aspx)을 참조하세요.
+미결 트랜잭션을 해결하는 방법에 대한 자세한 내용은 [수동으로 트랜잭션 해결(영문)](/previous-versions/windows/it-pro/windows-server-2008-R2-and-2008/cc754134(v=ws.10))을 참조하세요.
 
 ## <a name="next-steps"></a>다음 단계  
 
-[분산 트랜잭션](https://docs.microsoft.com/dotnet/framework/data/adonet/distributed-transactions)
+[분산 트랜잭션](/dotnet/framework/data/adonet/distributed-transactions)
 
 [Always On 가용성 그룹: 상호 운용성 &#40;SQL Server&#41;](../../../database-engine/availability-groups/windows/always-on-availability-groups-interoperability-sql-server.md)  
   
 [트랜잭션 - Always On 가용성 그룹 및 데이터베이스 미러링](transactions-always-on-availability-and-database-mirroring.md)  
 
-[XA 트랜잭션 지원(영문)](https://technet.microsoft.com/library/cc753563(v=ws.10).aspx)
+[XA 트랜잭션 지원(영문)](/previous-versions/windows/it-pro/windows-server-2008-R2-and-2008/cc753563(v=ws.10))
 
-[작동 방식: DTC 트랜잭션에 대한 세션/SPID(-2)](https://blogs.msdn.microsoft.com/bobsql/2016/08/04/how-it-works-sessionspid-2-for-dtc-transactions/)
+[작동 방식: DTC 트랜잭션에 대한 세션/SPID(-2)](/archive/blogs/bobsql/how-it-works-sessionspid-2-for-dtc-transactions)

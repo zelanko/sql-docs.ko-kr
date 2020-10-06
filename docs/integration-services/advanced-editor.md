@@ -17,12 +17,12 @@ f1_keywords:
 ms.assetid: 5ad0ac71-fa8b-4c26-bd42-e6ef00c87571
 author: chugugrace
 ms.author: chugu
-ms.openlocfilehash: 343ebe85334869f97b374e5386c05b47fbc8b48e
-ms.sourcegitcommit: e700497f962e4c2274df16d9e651059b42ff1a10
+ms.openlocfilehash: ca689a290e266c3e8476034ba0c8e7ec4737cef4
+ms.sourcegitcommit: c7f40918dc3ecdb0ed2ef5c237a3996cb4cd268d
 ms.translationtype: HT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 08/17/2020
-ms.locfileid: "88478079"
+ms.lasthandoff: 10/05/2020
+ms.locfileid: "91724314"
 ---
 # <a name="advanced-editor"></a>고급 편집기
 
@@ -47,11 +47,11 @@ ms.locfileid: "88478079"
   
  구성 요소에 따라 다른 속성이 표시됩니다. **고급 편집기**에 표시될 수 있는 속성에 대한 자세한 내용은 다음 항목을 참조하세요.  
   
--   [Common Properties](https://msdn.microsoft.com/library/51973502-5cc6-4125-9fce-e60fa1b7b796)  
+-   [Common Properties](./data-flow/set-the-properties-of-a-data-flow-component.md)  
   
 -   [변환 사용자 지정 속성](../integration-services/data-flow/transformations/transformation-custom-properties.md)  
   
--   [경로 속성](https://msdn.microsoft.com/library/89b1e347-9579-4f6b-af74-c6519ea08eea)  
+-   [경로 속성](./data-flow/integration-services-paths.md)  
   
  편집하는 특정 구성 요소에 대한 자세한 내용은 [!INCLUDE[ssISnoversion](../includes/ssisnoversion-md.md)] 개체 및 개념 설명서의 데이터 흐름 요소 섹션에서 구성 요소 설명을 참조하세요.  
   
@@ -59,5 +59,4 @@ ms.locfileid: "88478079"
   
 ## <a name="see-also"></a>참고 항목  
  [Integration Services 오류 및 메시지 참조](../integration-services/integration-services-error-and-message-reference.md)  
-  
   

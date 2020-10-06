@@ -109,7 +109,7 @@ Linux에 SQL Server를 설치한 후에는 프로덕션 시나리오에 대한 �
 | 도구 | 설명 |
 | ---- | ----------- |
 | [Azure Data Studio](../azure-data-studio/index.yml) | 플랫폼 간 GUI 데이터베이스 관리 유틸리티입니다. |
-| [Visual Studio Code](../linux/sql-server-linux-develop-use-vscode.md) | mssql 확장을 사용하여 Transact-SQL 문을 실행하는 플랫폼 간 GUI 코드 편집기입니다. |
+| [Visual Studio Code](../tools/visual-studio-code/sql-server-develop-use-vscode.md) | mssql 확장을 사용하여 Transact-SQL 문을 실행하는 플랫폼 간 GUI 코드 편집기입니다. |
 | [PowerShell Core](../linux/sql-server-linux-manage-powershell-core.md) | cmdlet을 기준으로 하는 플랫폼 간 자동화 및 구성 도구입니다. |
 | [mssql-cli](https://github.com/dbcli/mssql-cli/tree/master/doc) | Transact-SQL 명령을 실행하기 위한 플랫폼 간 명령줄 인터페이스입니다. |
 

@@ -12,16 +12,16 @@ helpviewer_keywords:
 ms.assetid: ''
 author: MashaMSFT
 ms.author: mathoma
-ms.openlocfilehash: 5d14e41c0650043febdddb904813d76be4d7c714
-ms.sourcegitcommit: f7ac1976d4bfa224332edd9ef2f4377a4d55a2c9
+ms.openlocfilehash: dac452cc825cef7099cd2f0f27c7d2045f6811ff
+ms.sourcegitcommit: c7f40918dc3ecdb0ed2ef5c237a3996cb4cd268d
 ms.translationtype: HT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 07/02/2020
-ms.locfileid: "85894500"
+ms.lasthandoff: 10/05/2020
+ms.locfileid: "91727941"
 ---
 # <a name="distributed-availability-groups"></a>분산 가용성 그룹
 [!INCLUDE [SQL Server](../../../includes/applies-to-version/sqlserver.md)]
-분산 가용성 그룹은 기존의 Always On 가용성 그룹 기능의 변형으로서 SQL Server 2016에서 도입된 새로운 기능입니다. 이 문서에서는 분산 가용성 그룹의 몇 가지 측면을 명확히 하고 기존 [SQL Server 설명서](https://docs.microsoft.com/sql/sql-server/)를 보완합니다.
+분산 가용성 그룹은 기존의 Always On 가용성 그룹 기능의 변형으로서 SQL Server 2016에서 도입된 새로운 기능입니다. 이 문서에서는 분산 가용성 그룹의 몇 가지 측면을 명확히 하고 기존 [SQL Server 설명서](../../../sql-server/index.yml)를 보완합니다.
 
 > [!NOTE]
 > "DAG"는 Exchange 데이터베이스 가용성 그룹 기능에 대한 약어로 이미 사용되고 있으므로 *분산 가용성 그룹*에 대한 공식적인 약어가 아닙니다. 이 Exchange 기능은 SQL Server 가용성 그룹 또는 분산 가용성 그룹과는 관련이 없습니다.
@@ -89,7 +89,7 @@ SQL Server 2012 또는 2014에는 분산 가용성 그룹 기능이 없으므로
 
 두 WSFC 클러스터가 모두 동일한 도메인(트러스트된 도메인이 아님)에 가입된 경우 분산 가용성 그룹을 만들 때 별도의 작업을 수행할 필요가 없습니다. 동일한 도메인에 가입되지 않은 가용성 그룹 및 WSFC 클러스터의 경우, 도메인 독립 가용성 그룹에 대한 가용성 그룹을 만드는 방식과 같이 인증서를 사용하여 분산 가용성 그룹을 작동하도록 합니다. 분산 가용성 그룹에 대한 인증서를 구성하는 방법을 알아보려면 [도메인 독립 가용성 그룹 만들기](domain-independent-availability-groups.md)의 3-13 단계를 수행합니다.
 
-분산 가용성 그룹을 사용하는 경우 주 가용성 그룹 각각의 주 복제본에는 서로의 인증서가 있어야 합니다. 인증서를 사용하지 않는 엔드포인트가 이미 있는 경우 [ALTER ENDPOINT](https://docs.microsoft.com/sql/t-sql/statements/alter-endpoint-transact-sql)를 사용하여 인증서 사용을 반영하도록 해당 엔드포인트를 재구성합니다.
+분산 가용성 그룹을 사용하는 경우 주 가용성 그룹 각각의 주 복제본에는 서로의 인증서가 있어야 합니다. 인증서를 사용하지 않는 엔드포인트가 이미 있는 경우 [ALTER ENDPOINT](../../../t-sql/statements/alter-endpoint-transact-sql.md)를 사용하여 인증서 사용을 반영하도록 해당 엔드포인트를 재구성합니다.
 
 ## <a name="distributed-availability-group-usage-scenarios"></a>분산 가용성 그룹 사용 시나리오
 
@@ -156,7 +156,7 @@ SQL Server 2012 또는 2014에는 분산 가용성 그룹 기능이 없으므로
 
 ## <a name="initialize-secondary-availability-groups-in-a-distributed-availability-group"></a>분산 가용성 그룹의 보조 가용성 그룹 초기화
 
-분산 가용성 그룹은 두 번째 가용성 그룹의 주 복제본을 초기화하는 데 사용되는 중요한 방법인 [자동 시드](https://docs.microsoft.com/sql/database-engine/availability-groups/windows/automatically-initialize-always-on-availability-group)로 설계되었습니다. 다음을 수행하면 두 번째 가용성 그룹의 주 복제본에 대한 전체 데이터베이스 복원이 가능합니다.
+분산 가용성 그룹은 두 번째 가용성 그룹의 주 복제본을 초기화하는 데 사용되는 중요한 방법인 [자동 시드](./automatically-initialize-always-on-availability-group.md)로 설계되었습니다. 다음을 수행하면 두 번째 가용성 그룹의 주 복제본에 대한 전체 데이터베이스 복원이 가능합니다.
 
 1. WITH NORECOVERY를 사용하여 데이터베이스 백업을 복원합니다.
 2. 필요한 경우 WITH NORECOVERY를 사용하여 적절한 트랜잭션 로그 백업을 복원합니다.
@@ -167,7 +167,7 @@ SQL Server 2012 또는 2014에는 분산 가용성 그룹 기능이 없으므로
 
 * 두 번째 가용성 그룹의 주 복제본에 있는 `sys.dm_hadr_automatic_seeding`에 표시된 출력에는 "Seeding Check Message Timeout(시드 중 확인 메시지 시간 초과)"라는 이유로 `current_state`가 FAILED(실패)로 표시됩니다.
 
-* 두 번째 가용성 그룹의 주 복제본에 있는 현재 SQL Server 로그에는 시드가 작동하고 [LSN](https://docs.microsoft.com/sql/relational-databases/sql-server-transaction-log-architecture-and-management-guide)이 동기화되었다고 표시됩니다.
+* 두 번째 가용성 그룹의 주 복제본에 있는 현재 SQL Server 로그에는 시드가 작동하고 [LSN](../../../relational-databases/sql-server-transaction-log-architecture-and-management-guide.md)이 동기화되었다고 표시됩니다.
 
 * 첫 번째 가용성 그룹의 주 복제본에 있는 `sys.dm_hadr_automatic_seeding`에 표시된 출력에는 current_state가 COMPLETED(완료)로 표시됩니다. 
 

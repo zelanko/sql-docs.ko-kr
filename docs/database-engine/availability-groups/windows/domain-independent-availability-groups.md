@@ -12,24 +12,24 @@ helpviewer_keywords:
 ms.assetid: ''
 author: MashaMSFT
 ms.author: mathoma
-ms.openlocfilehash: ac2fe67316f32d372c4f8faddef32af1bcc7f805
-ms.sourcegitcommit: cc23d8646041336d119b74bf239a6ac305ff3d31
+ms.openlocfilehash: a0bcf32babdb30c59a43305edffd3f1718354ac0
+ms.sourcegitcommit: c7f40918dc3ecdb0ed2ef5c237a3996cb4cd268d
 ms.translationtype: HT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 09/23/2020
-ms.locfileid: "91116233"
+ms.lasthandoff: 10/05/2020
+ms.locfileid: "91727896"
 ---
 # <a name="create-a-domain-independent-availability-group"></a>도메인 독립 가용성 그룹 만들기
 [!INCLUDE [SQL Server](../../../includes/applies-to-version/sqlserver.md)]
 
-Always On AG(가용성 그룹)에는 기본 WSFC(Windows Server 장애 조치 클러스터)가 필요합니다. Windows Server 2012 R2를 통해 WSFC를 배포하는 경우 노드라고도 하는 WSFC에 참여하는 서버가 반드시 동일한 도메인에 가입되어야 합니다. AD DS(Active Directory Domain Services)에 대한 자세한 내용은 [여기](https://technet.microsoft.com/library/cc759073(v=ws.10).aspx)를 참조하세요.
+Always On AG(가용성 그룹)에는 기본 WSFC(Windows Server 장애 조치 클러스터)가 필요합니다. Windows Server 2012 R2를 통해 WSFC를 배포하는 경우 노드라고도 하는 WSFC에 참여하는 서버가 반드시 동일한 도메인에 가입되어야 합니다. AD DS(Active Directory Domain Services)에 대한 자세한 내용은 [여기](/previous-versions/windows/it-pro/windows-server-2003/cc759073(v=ws.10))를 참조하세요.
 
 AD DS 및 WSFC 종속성은 DBM(데이터베이스 미러링) 구성으로 이전에 배포된 것보다 더 복잡합니다. 이는 이러한 종속성 없이 인증서를 사용하여 여러 데이터 센터에 DBM을 배포할 수 있기 때문입니다.  둘 이상의 데이터 센터에 걸쳐 있는 기존 가용성 그룹에서는 모든 서버가 동일한 Active Directory 도메인에 가입되어야 하며, 다른 도메인, 심지어 트러스트된 도메인에서는 작동하지 않아야 합니다. 모든 서버는 동일한 WSFC의 노드 여야 합니다. 다음 그림에서는 이 구성을 보여 줍니다. 또한 SQL Server 2016에는 여러 가지 방식으로 이 목표를 달성할 수 있는 분산 가용성 그룹이 있습니다.
 
 
 ![동일한 도메인에 연결된 두 데이터 센터에 걸쳐 있는 WSFC][1]
 
-Windows Server 2012 R2에서는 가용성 그룹과 함께 사용할 수 있는 특수한 형태의 Windows Server 장애 조치 클러스터인 [Active Directory 분리 클러스터](https://technet.microsoft.com/library/dn265970.aspx)를 도입했습니다. 이 유형의 WSFC에서는 노드가 동일한 Active Directory 도메인에 여전히 가입되어야 하지만, 이 경우 WSFC는 도메인이 아니라 DNS를 사용합니다. 도메인이 여전히 관련되어 있으므로 Active Directory 분리 클러스터에서도 도메인이 전혀 필요하지 않은 환경을 제공하지 않습니다.
+Windows Server 2012 R2에서는 가용성 그룹과 함께 사용할 수 있는 특수한 형태의 Windows Server 장애 조치 클러스터인 [Active Directory 분리 클러스터](/previous-versions/windows/it-pro/windows-server-2012-R2-and-2012/dn265970(v=ws.11))를 도입했습니다. 이 유형의 WSFC에서는 노드가 동일한 Active Directory 도메인에 여전히 가입되어야 하지만, 이 경우 WSFC는 도메인이 아니라 DNS를 사용합니다. 도메인이 여전히 관련되어 있으므로 Active Directory 분리 클러스터에서도 도메인이 전혀 필요하지 않은 환경을 제공하지 않습니다.
 
 Windows Server 2016에서는 Active Directory 분리 클러스터(작업 그룹 클러스터)를 기반으로 하여 새로운 종류의 Windows Server 장애 조치 클러스터를 도입했습니다. 작업 그룹 클러스터를 사용하면 SQL Server 2016에서 AD DS가 필요하지 않은 WSFC에 기반하여 가용성 그룹을 배포할 수 있습니다. SQL Server에서는 데이터베이스 미러링 시나리오에서 인증서가 필요한 것처럼 엔드포인트 보안에 인증서를 사용해야 합니다.  이런 유형의 가용성 그룹을 도메인 독립 가용성 그룹이라고 합니다. 기본 작업 그룹 클러스터가 있는 가용성 그룹을 배포하면 WSFC를 구성할 노드에 대해 다음과 같은 조합을 지원할 수 있습니다.
 - 노드가 도메인에 가입되어 있지 않습니다.
@@ -47,7 +47,7 @@ Windows Server 2016에서는 Active Directory 분리 클러스터(작업 그룹 
 ![Standard Edition에서 AG의 상위 수준 보기][3]
 
 도메인 독립 가용성 그룹 배포에는 알려진 몇 가지 주의 사항이 있습니다.
-- 쿼럼과 함께 사용할 수 있는 유일한 미러링 모니터 서버 유형은 디스크 및 [클라우드](https://technet.microsoft.com/windows-server-docs/failover-clustering/deploy-cloud-witness)이며, 이는 Windows Server 2016의 새로운 기능입니다. 가용성 그룹에서 공유 디스크를 사용할 가능성이 거의 없으므로 디스크에 문제가 있습니다.
+- 쿼럼과 함께 사용할 수 있는 유일한 미러링 모니터 서버 유형은 디스크 및 [클라우드](/windows-server/failover-clustering/deploy-cloud-witness)이며, 이는 Windows Server 2016의 새로운 기능입니다. 가용성 그룹에서 공유 디스크를 사용할 가능성이 거의 없으므로 디스크에 문제가 있습니다.
 - WSFC의 기본 작업 그룹 클러스터 변형은 PowerShell만 사용하여 만들 수 있는 한편, 장애 조치 클러스터 관리자를 사용하여 관리할 수 있습니다.
 - Kerberos가 필요한 경우 Active Directory 도메인에 연결된 표준 WSFC를 배포해야 하며 도메인 독립 가용성 그룹은 아마도 옵션이 아닐 수 있습니다.
 - 수신기는 구성할 수 있지만, 사용할 수 있도록 하려면 DNS에 등록해야 합니다. 위에서 설명한 대로 수신기에 대한 Kerberos 지원은 없습니다.
@@ -80,7 +80,7 @@ Windows Server 2016에서는 Active Directory 분리 클러스터(작업 그룹 
 도메인 독립 가용성 그룹은 현재 SQL Server Management Studio를 사용하여 만들 수는 없습니다. 도메인 독립 가용성 그룹을 만드는 것은 기본적으로 일반적인 가용성 그룹을 만드는 것과 동일하지만 인증서 생성과 같은 특정 측면은 Transact-SQL에서만 가능합니다. 아래 예제에서는 두 개의 복제본, 즉 주 복제본 하나와 보조 복제본 하나가 있는 가용성 그룹 구성을 가정하고 있습니다. 
 
 1. [이 링크에 있는 지침을 사용](https://techcommunity.microsoft.com/t5/Failover-Clustering/Workgroup-and-Multi-domain-clusters-in-Windows-Server-2016/ba-p/372059)하여 가용성 그룹에 참여할 모든 서버로 구성된 작업 그룹 클러스터를 배포합니다. 작업 그룹 클러스터를 구성하기 전에 공통 DNS 접미사가 이미 구성되어 있는지 확인합니다.
-2. 가용성 그룹에 참여할 각 인스턴스에서 [Always On 가용성 그룹 기능을 사용하도록 설정합니다](https://docs.microsoft.com/sql/database-engine/availability-groups/windows/enable-and-disable-always-on-availability-groups-sql-server). 이렇게 하려면 각각의 SQL Server 인스턴스를 다시 시작해야 합니다.
+2. 가용성 그룹에 참여할 각 인스턴스에서 [Always On 가용성 그룹 기능을 사용하도록 설정합니다](./enable-and-disable-always-on-availability-groups-sql-server.md). 이렇게 하려면 각각의 SQL Server 인스턴스를 다시 시작해야 합니다.
 3. 주 복제본을 호스팅할 각 인스턴스에는 데이터베이스 마스터 키가 필요합니다. 마스터 키가 아직 없으면 다음 명령을 실행합니다.
 
    ```sql
@@ -172,4 +172,4 @@ Windows Server 2016에서는 Active Directory 분리 클러스터(작업 그룹 
 [1]: ./media/diag-wsfc-two-data-centers-same-domain.png
 [2]: ./media/diag-workgroup-cluster-two-nodes-joined.png
 [3]: ./media/diag-high-level-view-ag-standard-edition.png
-[4]: ./media/diag-successful-dns-suffix.png 
+[4]: ./media/diag-successful-dns-suffix.png

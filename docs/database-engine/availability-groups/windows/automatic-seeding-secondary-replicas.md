@@ -12,12 +12,12 @@ helpviewer_keywords:
 ms.assetid: ''
 author: MashaMSFT
 ms.author: mathoma
-ms.openlocfilehash: 67d111336f6ce2d674e4ac4f6aa31f62878718a2
-ms.sourcegitcommit: cc23d8646041336d119b74bf239a6ac305ff3d31
+ms.openlocfilehash: 36568ea6c9358954e390767e8f49e49d5e7f7b40
+ms.sourcegitcommit: c7f40918dc3ecdb0ed2ef5c237a3996cb4cd268d
 ms.translationtype: HT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 09/23/2020
-ms.locfileid: "91114663"
+ms.lasthandoff: 10/05/2020
+ms.locfileid: "91726555"
 ---
 # <a name="use-automatic-seeding-to-initialize-a-secondary-replica-for-an-always-on-availability-group"></a>자동 시드를 사용하여 Always On 가용성 그룹의 보조 복제본을 초기화합니다.
 [!INCLUDE [SQL Server](../../../includes/applies-to-version/sqlserver.md)]
@@ -249,11 +249,11 @@ GO
 
 ## <a name="see-also"></a>참고 항목
 
-[ALTER AVAILABILITY GROUP(Transact-SQL)](/sql/t-sql/statements/alter-availability-group-transact-sql)
+[ALTER AVAILABILITY GROUP(Transact-SQL)](../../../t-sql/statements/alter-availability-group-transact-sql.md)
 
 [CREATE AVAILABILITY GROUP(Transact-SQL)](../../../t-sql/statements/create-availability-group-transact-sql.md)
 
-[Always On 가용성 그룹 문제 해결 및 모니터링 가이드](https://technet.microsoft.com/library/dn135328.aspx)
+[Always On 가용성 그룹 문제 해결 및 모니터링 가이드](/previous-versions/sql/sql-server-guides/dn135328(v=sql.110))
 
 <!--Image references-->
 [1]: ./media/auto-seed-new-availability-group.png

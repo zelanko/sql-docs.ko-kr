@@ -10,12 +10,12 @@ ms.topic: how-to
 ms.assetid: 01a9e3c1-2a5f-4b98-a424-0ffc15d312cf
 author: rothja
 ms.author: jroth
-ms.openlocfilehash: 1240bc202344762a48f4dde8e32b69789f1c0f46
-ms.sourcegitcommit: cc23d8646041336d119b74bf239a6ac305ff3d31
+ms.openlocfilehash: 754169b501dbc468e0e48f04e71534db61d80192
+ms.sourcegitcommit: c7f40918dc3ecdb0ed2ef5c237a3996cb4cd268d
 ms.translationtype: HT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 09/23/2020
-ms.locfileid: "91114134"
+ms.lasthandoff: 10/05/2020
+ms.locfileid: "91726496"
 ---
 # <a name="generate-and-analyze-the-clusterlog-for-an-always-on-availability-group"></a>Always On 가용성 그룹에 대한 CLUSTER.LOG 생성 및 분석
 [!INCLUDE [SQL Server](../../../includes/applies-to-version/sqlserver.md)]
@@ -26,7 +26,7 @@ ms.locfileid: "91114134"
   
 1.  명령 프롬프트에서 `cluster /log /g` 명령을 사용합니다. 이 명령은 각 WSFC 노드의 \windows\cluster\reports 디렉터리에 클러스터 로그를 생성합니다. 이 방법의 장점은 `/level` 옵션을 사용하여 생성된 로그의 세부 수준을 지정할 수 있다는 것입니다. 단점은 생성된 클러스터 로그에 대한 대상 디렉터리를 지정할 수 없다는 것입니다. 자세한 내용은 [Windows Server 2008 장애 조치(failover) 클러스터링에서 cluster.log를 만드는 방법](https://techcommunity.microsoft.com/t5/failover-clustering/how-to-create-the-cluster-log-in-windows-server-2008-failover/ba-p/371283)을 참조하세요.  
   
-2.  [Get-ClusterLog](https://technet.microsoft.com/library/ee461045.aspx) PowerShell cmdlet을 사용합니다. 이 방법의 장점은 cmdlet에서 실행하는 노드의 모든 노드에서 한 대상 디렉터리까지 클러스터 로그를 생성할 수 있다는 것입니다. 단점은 생성된 로그의 세부 수준을 지정할 수 없다는 것입니다.  
+2.  [Get-ClusterLog](/previous-versions/windows/it-pro/windows-server-2008-R2-and-2008/ee461045(v=technet.10)) PowerShell cmdlet을 사용합니다. 이 방법의 장점은 cmdlet에서 실행하는 노드의 모든 노드에서 한 대상 디렉터리까지 클러스터 로그를 생성할 수 있다는 것입니다. 단점은 생성된 로그의 세부 수준을 지정할 수 없다는 것입니다.  
   
  다음 PowerShell 명령은 최근 15분의 모든 클러스터 노드에서 클러스터 로그를 생성하고 현재 디렉터리에 저장합니다. 관리자 권한으로 PowerShell 창에서 명령을 실행합니다.  
   
@@ -55,7 +55,7 @@ Get-ClusterLog -TimeSpan 15 -Destination .
 8.  가용성 그룹 리소스를 다시 마우스 오른쪽 단추로 클릭하고 **이 리소스를 온라인으로 만들기**를 클릭합니다.  
   
 ## <a name="availability-group-resource-events"></a>가용성 그룹 리소스 이벤트  
- 아래 표는 가용성 그룹 리소스에 속하는 CLUSTER.LOG에서 볼 수 있는 다양한 이벤트 유형을 보여 줍니다. WSFC의 RHS(Resource Hosting Subsystem) 및 RCM(Resource Control Monitor)에 대한 자세한 내용은 [Windows Server 2008 장애 조치 클러스터의 RHS(Resource Hosting Subsystem)](https://blogs.technet.com/b/askcore/archive/2009/11/23/resource-hosting-subsystem-rhs-in-windows-server-2008-failover-clusters.aspx)를 참조하세요.  
+ 아래 표는 가용성 그룹 리소스에 속하는 CLUSTER.LOG에서 볼 수 있는 다양한 이벤트 유형을 보여 줍니다. WSFC의 RHS(Resource Hosting Subsystem) 및 RCM(Resource Control Monitor)에 대한 자세한 내용은 [Windows Server 2008 장애 조치 클러스터의 RHS(Resource Hosting Subsystem)](/archive/blogs/askcore/resource-hosting-subsystem-rhs-in-windows-server-2008-failover-clusters)를 참조하세요.  
   
 |ID|원본|CLUSTER.LOG의 예|  
 |----------------|------------|------------------------------|  
@@ -76,5 +76,4 @@ Get-ClusterLog -TimeSpan 15 -Destination .
 3.  **SeparateMonitor** 값을 **1**로 변경합니다.  
   
 4.  WSFC 클러스터에서 가용성 그룹에 대한 클러스터형 서비스를 다시 시작합니다.  
-  
   

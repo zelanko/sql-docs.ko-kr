@@ -9,16 +9,16 @@ ms.author: maghan
 ms.reviewer: jukoesma
 ms.custom: ''
 ms.date: 09/22/2020
-ms.openlocfilehash: fe620c08da690a61d41a0fef5f18132c246ef739
-ms.sourcegitcommit: 197a6ffb643f93592edf9e90b04810a18be61133
+ms.openlocfilehash: 2ffe3945f8dd7e8c0ce9cf504c09622ca1a20331
+ms.sourcegitcommit: c7f40918dc3ecdb0ed2ef5c237a3996cb4cd268d
 ms.translationtype: HT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 09/26/2020
-ms.locfileid: "91379618"
+ms.lasthandoff: 10/05/2020
+ms.locfileid: "91725192"
 ---
 # <a name="kusto-kql-extension-for-azure-data-studio-preview"></a>Azure Data Studio용 Kusto(KQL) 확장(미리 보기)
 
-[Azure Data Studio](../what-is.md)용 Kusto(KQL) 확장을 사용하면 [Azure Data Explorer](https://docs.microsoft.com/azure/data-explorer/data-explorer-overview) 클러스터에 연결하고 쿼리할 수 있습니다.
+[Azure Data Studio](../what-is.md)용 Kusto(KQL) 확장을 사용하면 [Azure Data Explorer](/azure/data-explorer/data-explorer-overview) 클러스터에 연결하고 쿼리할 수 있습니다.
 
 사용자는 IntelliSense가 포함된 [Kusto 커널](../notebooks/notebooks-kusto-kernel.md)을 사용하여 KQL 쿼리를 작성 및 실행하고 Notebooks를 제작할 수 있습니다.
 
@@ -33,7 +33,7 @@ Azure 구독이 아직 없는 경우 시작하기 전에 [Azure 체험 계정](h
 다음과 같은 필수 조건도 필요합니다.
 
 - [Azure Data Studio가 설치되어 있음](../download-azure-data-studio.md)
-- [Azure Data Explorer 클러스터 및 데이터베이스](https://docs.microsoft.com/azure/data-explorer/create-cluster-database-portal).
+- [Azure Data Explorer 클러스터 및 데이터베이스](/azure/data-explorer/create-cluster-database-portal).
 
 ## <a name="install-the-kusto-kql-extension"></a>Kusto(KQL) 확장 설치
 
@@ -55,7 +55,7 @@ Azure Data Studio에서 Kusto(KQL) 확장을 설치하려면 아래 단계를 �
 
 [Azure Portal](https://ms.portal.azure.com/#home)에서 Azure Data Explorer 클러스터를 찾은 다음, 클러스터의 URI를 찾습니다.
 
-:::image type="content" source="media/kusto-extension/kusto-extension-adx-cluster-uri.png" alt-text="URI":::
+:::image type="content" source="media/kusto-extension/kusto-extension-adx-cluster-uri.png" alt-text="Kusto 확장":::
 
 그러나 *help.kusto.windows.net* 클러스터를 사용하여 즉시 시작할 수 있습니다.
 
@@ -82,7 +82,7 @@ Azure Data Studio에서 Kusto(KQL) 확장을 설치하려면 아래 단계를 �
     7. **이름(선택 사항)** 은 비워 둡니다.
         1. 이 필드를 사용하여 서버에 별칭을 지정할 수 있습니다.
 
-    :::image type="content" source="media/kusto-extension/kusto-extension-connection-details.png" alt-text="연결 세부 정보":::
+    :::image type="content" source="media/kusto-extension/kusto-extension-connection-details.png" alt-text="Kusto 확장":::
 
 ## <a name="how-to-query-an-azure-data-explorer-database-in-azure-data-studio"></a>Azure Data Studio에서 Azure Data Explorer 데이터베이스를 쿼리하는 방법
 
@@ -104,7 +104,7 @@ StormEvents
 | where EventType == "Waterspout"
 ```
 
-KQL 쿼리를 작성하는 방법에 대한 자세한 내용은 [Azure Data Explorer에 대한 쿼리 작성](https://docs.microsoft.com/azure/data-explorer/write-queries#overview-of-the-query-language)을 참조하세요.
+KQL 쿼리를 작성하는 방법에 대한 자세한 내용은 [Azure Data Explorer에 대한 쿼리 작성](/azure/data-explorer/write-queries#overview-of-the-query-language)을 참조하세요.
 
 ## <a name="view-extension-settings"></a>확장 설정 보기
 
@@ -120,13 +120,13 @@ Kusto 확장 설정을 변경하려면 아래 단계를 수행합니다.
 
 확장 설정은 다음과 같이 표시됩니다.
 
-:::image type="content" source="media/kusto-extension/kusto-extension-settings.png" alt-text="Kusto(KQL) 확장 설정":::
+:::image type="content" source="media/kusto-extension/kusto-extension-settings.png" alt-text="Kusto 확장":::
 
 ## <a name="sanddance-visualization"></a>SandDance 시각화
 
-Azure Data Studio의 KQL(Kusto) 확장을 사용하는 [SandDance 확장](https://docs.microsoft.com/sql/azure-data-studio/sanddance-extension)은 다양한 대화형 시각화를 결합합니다. KQL 쿼리 결과 집합에서 **시각화 도우미** 단추를 선택하여 [SandDance](https://sanddance.js.org/)를 시작합니다.
+Azure Data Studio의 KQL(Kusto) 확장을 사용하는 [SandDance 확장](../sanddance-extension.md)은 다양한 대화형 시각화를 결합합니다. KQL 쿼리 결과 집합에서 **시각화 도우미** 단추를 선택하여 [SandDance](https://sanddance.js.org/)를 시작합니다.
 
-:::image type="content" source="media/kusto-extension/kusto-extension-sanddance-demo.gif" alt-text="SandDance 시각화":::
+:::image type="content" source="media/kusto-extension/kusto-extension-sanddance-demo.gif" alt-text="Kusto 확장":::
 
 ## <a name="known-issues"></a>알려진 문제
 
@@ -145,6 +145,6 @@ Azure Data Studio의 KQL(Kusto) 확장을 사용하는 [SandDance 확장](https:
 
 - [Kusto Notebook 만들기 및 실행](../notebooks/notebooks-kusto-kernel.md)
 - [Azure Data Studio의 Kqlmagic Notebook](../notebooks/notebooks-kqlmagic.md)
-- [SQL 대 Kusto 참고 자료](https://docs.microsoft.com/azure/data-explorer/kusto/query/sqlcheatsheet)
-- [Azure 데이터 탐색기란?](https://docs.microsoft.com/azure/data-explorer/data-explorer-overview)
+- [SQL 대 Kusto 참고 자료](/azure/data-explorer/kusto/query/sqlcheatsheet)
+- [Azure 데이터 탐색기란?](/azure/data-explorer/data-explorer-overview)
 - [SandDance 시각화 사용](https://sanddance.js.org/)

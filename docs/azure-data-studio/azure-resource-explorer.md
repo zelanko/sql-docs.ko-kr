@@ -9,19 +9,19 @@ ms.author: yanacai
 ms.reviewer: alayu, maghan, sstein
 ms.custom: seodec18
 ms.date: 09/24/2018
-ms.openlocfilehash: 5b4081d98a30daa61a1e10ecf4faa6000a0fe11c
-ms.sourcegitcommit: 63aef5a96905f0b026322abc9ccb862ee497eebe
+ms.openlocfilehash: 972e715de4ec8504c488ce70c47fecc3f04b3fca
+ms.sourcegitcommit: c7f40918dc3ecdb0ed2ef5c237a3996cb4cd268d
 ms.translationtype: HT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 09/25/2020
-ms.locfileid: "91364163"
+ms.lasthandoff: 10/05/2020
+ms.locfileid: "91725234"
 ---
 # <a name="explore-and-manage-azure-sql-resources-with-azure-resource-explorer"></a>Azure Resource Explorer를 사용하여 Azure SQL 리소스 살펴보기 및 관리
 
 이 문서에서는 [!INCLUDE [Azure Data Studio](../includes/name-sos-short.md)]에서 Azure Resource Explorer를 통해 Azure SQL Server, Azure SQL Database 및 Azure SQL Managed Instance 리소스를 살펴보고 관리하는 방법을 알아봅니다.
 
 >[!NOTE]
->Azure Resource Explorer는 SQL Server 2019에서 지원됩니다. 그런 다음, [확장 관리자](extensions.md) 또는 **파일** > **VSIX 패키지에서 파일 설치**를 통해 확장을 설치할 수 있습니다.
+>Azure Resource Explorer는 SQL Server 2019에서 지원됩니다. 그런 다음, [확장 관리자](./extensions/add-extensions.md) 또는 **파일** > **VSIX 패키지에서 파일 설치**를 통해 확장을 설치할 수 있습니다.
 
 ## <a name="connect-to-azure"></a>Azure에 연결
 

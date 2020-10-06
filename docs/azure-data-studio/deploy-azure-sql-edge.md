@@ -9,16 +9,16 @@ ms.author: drskwier
 ms.reviewer: maghan
 ms.custom: ''
 ms.date: 09/22/2020
-ms.openlocfilehash: 89732af2b2fc5926193519b4a6508b97ac998c88
-ms.sourcegitcommit: 63aef5a96905f0b026322abc9ccb862ee497eebe
+ms.openlocfilehash: 74901a5360e4b9badcc7569211bfaea90d2b94a3
+ms.sourcegitcommit: c7f40918dc3ecdb0ed2ef5c237a3996cb4cd268d
 ms.translationtype: HT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 09/25/2020
-ms.locfileid: "91364120"
+ms.lasthandoff: 10/05/2020
+ms.locfileid: "91725224"
 ---
 # <a name="deploy-azure-sql-edge-with-azure-data-studio-preview"></a>Azure Data Studio를 사용하여 Azure SQL Edge 배포(미리 보기)
 
-[Azure SQL Edge](https://docs.microsoft.com/azure/azure-sql-edge/overview)는 IoT 및 Azure IoT Edge 배포에 최적화된 관계형 데이터베이스 엔진으로, IoT 애플리케이션과 솔루션을 위한 고성능 데이터 스토리지 및 처리 계층을 만드는 기능을 제공합니다. 이 문서에서는 Azure Data Studio를 사용하여 Azure SQL Edge 인스턴스를 배포하는 방법과 배포 마법사에서 지원되는 배포 시나리오를 보여 줍니다.  
+[Azure SQL Edge](/azure/azure-sql-edge/overview)는 IoT 및 Azure IoT Edge 배포에 최적화된 관계형 데이터베이스 엔진으로, IoT 애플리케이션과 솔루션을 위한 고성능 데이터 스토리지 및 처리 계층을 만드는 기능을 제공합니다. 이 문서에서는 Azure Data Studio를 사용하여 Azure SQL Edge 인스턴스를 배포하는 방법과 배포 마법사에서 지원되는 배포 시나리오를 보여 줍니다.  
 
 Azure Data Studio의 배포 마법사에서 지원되는 시나리오는 다음과 같습니다.
 
@@ -76,11 +76,11 @@ Azure SQL Edge 배포 마법사는 Azure IoT 허브에 연결된 Edge 사용 VM(
 
 ## <a name="multiple-devices-of-an-azure-iot-hub"></a>Azure IoT 허브의 여러 디바이스
 
-기존 IoT 허브 및 연결된 디바이스가 있는 경우 리소스 그룹, IoT 허브 이름, 디바이스 선택 [대상 조건](https://docs.microsoft.com/azure/iot-edge/module-deployment-monitoring#target-condition)에 따라 Azure SQL Edge를 디바이스에 배포할 수 있습니다.
+기존 IoT 허브 및 연결된 디바이스가 있는 경우 리소스 그룹, IoT 허브 이름, 디바이스 선택 [대상 조건](/azure/iot-edge/module-deployment-monitoring#target-condition)에 따라 Azure SQL Edge를 디바이스에 배포할 수 있습니다.
 배포 마법사에서 입력된 IP 주소를 활용하여 Notebook 맨 아래에 빠른 연결 링크가 생성됩니다.
 
 필요에 따라 프로세스의 일부로 폴더의 dacpac 파일을 압축하여 새 Azure SQL Edge 인스턴스에 배포할 수 있습니다.  dacpac 파일을 제공하면 동일한 리소스 그룹에 Azure Blob Storage 계정이 생성됩니다.
 
 ## <a name="next-steps"></a>다음 단계
 
-- [Azure SQL Edge에 대한 자세한 정보](https://docs.microsoft.com/azure/azure-sql-edge/)
+- [Azure SQL Edge에 대한 자세한 정보](/azure/azure-sql-edge/)

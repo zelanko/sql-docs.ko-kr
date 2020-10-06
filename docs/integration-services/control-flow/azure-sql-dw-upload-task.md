@@ -14,12 +14,12 @@ f1_keywords:
 ms.assetid: eef82c89-228a-4dc7-9bd0-ea00f57692f5
 author: Lingxi-Li
 ms.author: lingxl
-ms.openlocfilehash: 643de07ff630c5f36147aac5c7721297236fc728
-ms.sourcegitcommit: e700497f962e4c2274df16d9e651059b42ff1a10
+ms.openlocfilehash: a374a5eaa64eb69d96ddfe609fb8561a1dc983b6
+ms.sourcegitcommit: c7f40918dc3ecdb0ed2ef5c237a3996cb4cd268d
 ms.translationtype: HT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 08/17/2020
-ms.locfileid: "88350019"
+ms.lasthandoff: 10/05/2020
+ms.locfileid: "91725987"
 ---
 # <a name="azure-sql-dw-upload-task"></a>Azure SQL DW 업로드 태스크
 
@@ -28,7 +28,7 @@ ms.locfileid: "88350019"
 
 
 **Azure SQL DW 업로드 태스크**를 사용하면 SSIS 패키지가 파일 시스템이나 Azure Blob Storage에서 Azure SQL DW(Data Warehouse)로 테이블 형식 데이터를 복사할 수 있습니다.
-이 태스크는 [Azure SQL Data Warehouse 로딩 패턴 및 전략](https://blogs.msdn.microsoft.com/sqlcat/2017/05/17/azure-sql-data-warehouse-loading-patterns-and-strategies/) 문서에 설명된 대로 PolyBase를 활용하여 성능을 향상합니다.
+이 태스크는 [Azure SQL Data Warehouse 로딩 패턴 및 전략](/archive/blogs/sqlcat/azure-sql-data-warehouse-loading-patterns-and-strategies) 문서에 설명된 대로 PolyBase를 활용하여 성능을 향상합니다.
 현재 지원되는 원본 데이터 파일 형식은 UTF8 인코딩 방식의 구분 기호로 분리된 텍스트입니다.
 파일 시스템에서 복사할 때는 먼저 준비를 위해 데이터가 Azure Blob Storage에 업로드된 후 Azure SQL DW로 업로드됩니다. 따라서 Azure Blob Storage 계정이 필요합니다.
 

@@ -9,12 +9,12 @@ ms.author: raajmera
 ms.reviewer: alayu, sstein, maghan
 ms.custom: ''
 ms.date: 11/04/2019
-ms.openlocfilehash: 9e2d1adbd092bd221399a642ce8f299613c7095c
-ms.sourcegitcommit: cc23d8646041336d119b74bf239a6ac305ff3d31
+ms.openlocfilehash: 2d0e508cc509f0c2e8d758684545e189c71dd928
+ms.sourcegitcommit: c7f40918dc3ecdb0ed2ef5c237a3996cb4cd268d
 ms.translationtype: HT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 09/23/2020
-ms.locfileid: "91123435"
+ms.lasthandoff: 10/05/2020
+ms.locfileid: "91725182"
 ---
 # <a name="data-virtualization-extension-for-azure-data-studio"></a>Azure Data Studio용 데이터 가상화 확장
 
@@ -22,7 +22,7 @@ Azure Data Studio용 데이터 가상화 확장은 [ODBC 데이터 원본을 사
 
 ## <a name="install-the-data-virtualization-extension"></a>데이터 가상화 확장 설치
 
-데이터 가상화 확장을 설치하려면 [Azure Data Studio의 기능 확장](../extensions.md)을 방문하세요.
+데이터 가상화 확장을 설치하려면 [Azure Data Studio의 기능 확장](./add-extensions.md)을 방문하세요.
 
 ## <a name="changes-in-release-10"></a>릴리스 1.0의 변경 내용
 

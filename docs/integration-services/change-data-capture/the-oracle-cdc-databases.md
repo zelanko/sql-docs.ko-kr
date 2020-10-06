@@ -11,12 +11,12 @@ ms.topic: conceptual
 ms.assetid: a96486e9-f79b-4b24-bfaf-56203dd0e435
 author: chugugrace
 ms.author: chugu
-ms.openlocfilehash: b54697ebaad053c4fa7a598fa5407d150c6a51d6
-ms.sourcegitcommit: e700497f962e4c2274df16d9e651059b42ff1a10
+ms.openlocfilehash: 5eba08dc813e869a6ce412dd185757d6b533407a
+ms.sourcegitcommit: c7f40918dc3ecdb0ed2ef5c237a3996cb4cd268d
 ms.translationtype: HT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 08/17/2020
-ms.locfileid: "88496173"
+ms.lasthandoff: 10/05/2020
+ms.locfileid: "91724990"
 ---
 # <a name="the-oracle-cdc-databases"></a>Oracle CDC 데이터베이스
 
@@ -35,7 +35,7 @@ ms.locfileid: "88496173"
   
 -   SQL Server CDC 메커니즘에 의해 생성되고 Oracle 이외의 일반 SQL Server CDC에서 사용되는 것과 동일한 변경 테이블 및 변경 액세스 기능 집합  
   
- 처음에는 `cdc` dbowner **고정 데이터베이스 역할의 멤버만** 스키마에 액세스할 수 있습니다. 변경 테이블 및 변경 기능에 대한 액세스는 SQL Server CDC와 동일한 보안 모델에 의해 결정됩니다. 보안 모델에 대한 자세한 내용은 [보안 모델](https://go.microsoft.com/fwlink/?LinkId=231151)을 참조하세요.  
+ 처음에는 `cdc` dbowner **고정 데이터베이스 역할의 멤버만** 스키마에 액세스할 수 있습니다. 변경 테이블 및 변경 기능에 대한 액세스는 SQL Server CDC와 동일한 보안 모델에 의해 결정됩니다. 보안 모델에 대한 자세한 내용은 [보안 모델](/previous-versions/sql/sql-server-2008-r2/cc645961(v=sql.105))을 참조하세요.  
   
 ## <a name="creating-the-cdc-database"></a>CDC 데이터베이스 만들기  
  대부분의 경우 CDC 데이터베이스는 CDC Designer 콘솔을 사용하여 만들지만, CDC Designer 콘솔을 사용하여 생성되는 CDC 배포 스크립트를 사용하여 만들 수도 있습니다. [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 시스템 관리자는 필요한 경우 항목(예: 스토리지, 보안 또는 가용성)에 대한 데이터베이스 설정을 변경할 수 있습니다.  
@@ -55,11 +55,11 @@ ms.locfileid: "88496173"
  미러 테이블은 비어 있고 데이터가 저장되어 있지 않습니다. 미러 테이블은 Oracle CDC 인스턴스에 사용되는 표준 SQL Server CDC 인프라를 사용하도록 설정하는 데 사용됩니다. 미러 테이블에서 데이터가 삽입되거나 업데이트되지 않도록 모든 UPDATE, DELETE 및 INSERT 작업이 PUBLIC에 대해 거부됩니다. 따라서 미러 테이블에서 데이터를 수정할 수 없습니다.  
   
 ## <a name="access-to-change-data"></a>변경 데이터 액세스  
- 캡처 인스턴스에 연결된 변경 데이터에 액세스하는 데 사용되는 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 보안 모델 때문에 연결된 미러 테이블의 모든 캡처된 열에 대한 `select` 권한을 사용자에게 부여해야 합니다. 원본 Oracle 테이블에 대한 액세스 권한으로는 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]의 변경 테이블에 액세스할 수 없습니다. [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 보안 모델에 대한 자세한 내용은 [보안 모델](https://go.microsoft.com/fwlink/?LinkId=231151)을 참조하세요.  
+ 캡처 인스턴스에 연결된 변경 데이터에 액세스하는 데 사용되는 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 보안 모델 때문에 연결된 미러 테이블의 모든 캡처된 열에 대한 `select` 권한을 사용자에게 부여해야 합니다. 원본 Oracle 테이블에 대한 액세스 권한으로는 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]의 변경 테이블에 액세스할 수 없습니다. [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 보안 모델에 대한 자세한 내용은 [보안 모델](/previous-versions/sql/sql-server-2008-r2/cc645961(v=sql.105))을 참조하세요.  
   
  또한 캡처 인스턴스를 만들 때 제어 역할을 지정한 경우 호출자도 지정된 제어 역할의 멤버여야 합니다. 메타데이터에 액세스하는 다른 일반적인 변경 데이터 캡처 함수에 모든 데이터베이스 사용자가 PUBLIC 역할을 통해 액세스할 수 있습니다. 물론 반환된 메타데이터에 대한 액세스는 기본 원본 테이블에 대한 선택적 액세스 권한을 사용하거나 정의된 제어 역할의 멤버 자격을 통해 일반적으로 제어됩니다.  
   
- 캡처 인스턴스를 만들 때 SQL Server CDC 구성 요소에 의해 생성된 특수 테이블 기반 함수를 호출하여 변경 데이터를 읽을 수 있습니다. 이 함수에 대한 자세한 내용은 [변경 데이터 캡처 함수(Transact-SQL)](https://go.microsoft.com/fwlink/?LinkId=231152)를 참조하세요.  
+ 캡처 인스턴스를 만들 때 SQL Server CDC 구성 요소에 의해 생성된 특수 테이블 기반 함수를 호출하여 변경 데이터를 읽을 수 있습니다. 이 함수에 대한 자세한 내용은 [변경 데이터 캡처 함수(Transact-SQL)](../../relational-databases/system-functions/change-data-capture-functions-transact-sql.md)를 참조하세요.  
   
  [!INCLUDE[ssISnoversion](../../includes/ssisnoversion-md.md)] CDC 원본 구성 요소를 통한 CDC 데이터 액세스에도 동일한 규칙이 적용됩니다.  
   
@@ -85,7 +85,7 @@ ms.locfileid: "88496173"
   
  `<schema-name>.<table-name>`테이블에 캡처를 처음 사용하는 경우 기본 캡처 인스턴스 이름은 `<schema-name>_<table-name>`입니다. 예를 들어 Oracle HR.EMPLOYEES 테이블에 대한 기본 캡처 인스턴스 이름은 HR_EMPLOYEES이고 연결된 변경 테이블은 [cdc]입니다. [HR_EMPLOYEES_CT].  
   
- 캡처 테이블은 Oracle CDC 인스턴스에 의해 기록됩니다. 캡처 인스턴스를 만들 때 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 에 의해 생성되는 특수 테이블 반환 함수를 사용하여 캡처 테이블을 읽습니다. `fn_cdc_get_all_changes_HR_EMPLOYEES`)을 입력합니다. 이러한 CDC 함수에 대한 자세한 내용은 [변경 데이터 캡처 함수(Transact-SQL)](https://go.microsoft.com/fwlink/?LinkId=231152)를 참조하세요.  
+ 캡처 테이블은 Oracle CDC 인스턴스에 의해 기록됩니다. 캡처 인스턴스를 만들 때 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 에 의해 생성되는 특수 테이블 반환 함수를 사용하여 캡처 테이블을 읽습니다. `fn_cdc_get_all_changes_HR_EMPLOYEES`)을 입력합니다. 이러한 CDC 함수에 대한 자세한 내용은 [변경 데이터 캡처 함수(Transact-SQL)](../../relational-databases/system-functions/change-data-capture-functions-transact-sql.md)를 참조하세요.  
   
 ###  <a name="cdclsn_time_mapping"></a><a name="BKMK_cdclsn_time_mapping"></a> cdc.lsn_time_mapping  
  **[cdc].[lsn_time_mapping]** 테이블은 SQL Server CDC 구성 요소에 의해 생성됩니다. Oracle CDC에서의 캡처 테이블 사용은 일반적인 사용과는 다릅니다.  
@@ -192,5 +192,4 @@ ms.locfileid: "88496173"
   
 ## <a name="see-also"></a>참고 항목  
  [Attunity Oracle CDC Designer](../../integration-services/change-data-capture/change-data-capture-designer-for-oracle-by-attunity.md)  
-  
   

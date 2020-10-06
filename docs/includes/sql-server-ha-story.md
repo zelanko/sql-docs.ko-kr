@@ -2,7 +2,7 @@
 
 SQL Server를 배포하는 모든 사람들이 공통적으로 해야 할 작업 중 하나는 모든 중요한 SQL Server 인스턴스와 그 안에 포함된 데이터베이스를 비즈니스 및 최종 사용자가 필요로 할 때(예: 9~5시 사이 또는 24시간 내내) 사용할 수 있도록 하는 것입니다. 목표는 중단을 최소화하거나 중단 없이 비즈니스를 계속 운영하는 것입니다. 이러한 개념은 비즈니스 연속성이라고도 합니다.
 
-SQL Server 2017은 기존 기능에 새롭거나 향상된 기능을 많이 도입했으며 그 중 일부는 가용성을 위한 것입니다. SQL Server 2017에서 가장 크게 추가된 기능은 Linux 배포판에서 SQL Server를 지원하는 것입니다. SQL Server 2017 새로운 기능의 전체 목록은 [SQL Server의 새로운 기능](https://docs.microsoft.com/sql/sql-server/what-s-new-in-sql-server-2017)을 참조하십시오.
+SQL Server 2017은 기존 기능에 새롭거나 향상된 기능을 많이 도입했으며 그 중 일부는 가용성을 위한 것입니다. SQL Server 2017에서 가장 크게 추가된 기능은 Linux 배포판에서 SQL Server를 지원하는 것입니다. SQL Server 2017 새로운 기능의 전체 목록은 [SQL Server의 새로운 기능](../sql-server/what-s-new-in-sql-server-2017.md)을 참조하십시오.
 
 이 문서는 SQL Server 2017의 가용성 시나리오와 SQL Server 2017의 새롭고 향상된 가용성 기능을 설명하는 데 중점을 두고 있습니다. 이 시나리오에는 Windows Server 및 Linux에서 SQL Server 배포를 확장할 수 있을 뿐만 아니라 데이터베이스의 읽기 가능한 복사본 수를 늘릴 수 있는 하이브리드 시나리오도 포함됩니다. 이 문서에서는 가상화에서 제공되는 것과 같은 SQL Server 외부의 가용성 옵션에 대해서는 설명하지 않지만, 여기에 언급된 모든 내용은 퍼블릭 클라우드의 게스트 가상 머신이나 온-프레미스 하이퍼바이저 서버가 호스트하는 게스트 가상 머신 내부의 SQL Server 설치에 적용됩니다.
 
@@ -15,7 +15,7 @@ SQL Server 2017은 기존 기능에 새롭거나 향상된 기능을 많이 도�
 * 마이그레이션 및 업그레이드
 * 하나 이상의 데이터베이스에서 읽을 수 있는 복사본 확장
 
-각 섹션에서는 특정 시나리오에 사용할 수 있는 관련 기능에 대해 설명합니다. 다루지 않는 한 가지 기능은 [SQL Server 복제](https://docs.microsoft.com/sql/relational-databases/replication/sql-server-replication)입니다. Always On 내에 가용성 기능으로 공식 지정되지는 않았지만 특정 시나리오에서 데이터 중복을 위해 종종 사용됩니다. 복제는 향후 릴리스에서 Linux의 SQL Server에 추가될 예정입니다.
+각 섹션에서는 특정 시나리오에 사용할 수 있는 관련 기능에 대해 설명합니다. 다루지 않는 한 가지 기능은 [SQL Server 복제](../relational-databases/replication/sql-server-replication.md)입니다. Always On 내에 가용성 기능으로 공식 지정되지는 않았지만 특정 시나리오에서 데이터 중복을 위해 종종 사용됩니다. 복제는 향후 릴리스에서 Linux의 SQL Server에 추가될 예정입니다.
 
 > [!IMPORTANT] 
 > SQL Server 가용성 기능을 사용하더라도 가용성 솔루션의 가장 근본적인 구성 요소인 충분한 테스트를 거친 강력한 백업 및 복원 전략이 꼭 필요합니다.
@@ -144,7 +144,7 @@ FCI에서는 데이터 손실이 거의 없지만 데이터 복사본이 하나�
 
 ![가용성 그룹](media/sql-server-ha-story/image6.png)
  
-클러스터 유형이 없음인 가용성 그룹 외부에서 가용성 그룹은 모든 복제본이 동일한 기본 클러스터(WSFC 또는 Pacemaker)의 일부가 될 것을 요구합니다. 즉, 위의 그림에서 WSFC는 두 개의 서로 다른 데이터 센터에서 작동하도록 확장되어 복잡성이 추가됩니다. 플랫폼(Windows Server 또는 Linux)과 관계없이 적용됩니다. 멀리 떨어져있는 클러스터를 스트레치하면 복잡성이 추가됩니다. SQL Server 2016에 도입된 분산형 가용성 그룹을 사용하면 가용성 그룹을 여러 클러스터에 구성된 가용성 그룹으로 확장할 수 있습니다. 이렇게 하면 모든 노드가 동일한 클러스터에 참여해야 하는 요구 사항이 완화되므로 재난 복구가 훨씬 쉬워집니다. 분산형 가용성 그룹에 대한 자세한 내용은 [분산형 가용성 그룹](https://docs.microsoft.com/sql/database-engine/availability-groups/windows/distributed-availability-groups)을 참조하세요.
+클러스터 유형이 없음인 가용성 그룹 외부에서 가용성 그룹은 모든 복제본이 동일한 기본 클러스터(WSFC 또는 Pacemaker)의 일부가 될 것을 요구합니다. 즉, 위의 그림에서 WSFC는 두 개의 서로 다른 데이터 센터에서 작동하도록 확장되어 복잡성이 추가됩니다. 플랫폼(Windows Server 또는 Linux)과 관계없이 적용됩니다. 멀리 떨어져있는 클러스터를 스트레치하면 복잡성이 추가됩니다. SQL Server 2016에 도입된 분산형 가용성 그룹을 사용하면 가용성 그룹을 여러 클러스터에 구성된 가용성 그룹으로 확장할 수 있습니다. 이렇게 하면 모든 노드가 동일한 클러스터에 참여해야 하는 요구 사항이 완화되므로 재난 복구가 훨씬 쉬워집니다. 분산형 가용성 그룹에 대한 자세한 내용은 [분산형 가용성 그룹](../database-engine/availability-groups/windows/distributed-availability-groups.md)을 참조하세요.
 
 ![분산형 가용성 그룹](media/sql-server-ha-story/image11.png)
  
@@ -180,12 +180,12 @@ FCI는 재해 복구에 사용될 수 있습니다. 일반 가용성 그룹과 �
 
 가용성 그룹은 패치 적용이 완료되는 동안 주 복제본을 보조 복제본으로 수동 장애 조치(failover)하여 기본 OS의 패치 적용으로 인한 가동 중지 시간을 최소화할 수 있습니다. 운영 체제 측면에서 볼 때 이렇게 하는 것이 Windows Server에서 더 일반적일 수 있습니다. 그 이유는 자주는 아니지만 종종 기본 OS를 서비스하는 경우 재부팅이 필요하기 때문입니다. Linux에 패치를 적용할 때 가끔 재부팅이 필요하지만 드물게 발생할 수 있습니다. 
 
-[가용성 그룹에 참여하는 SQL Server 인스턴스에 패치를 적용하면](https://docs.microsoft.com/sql/database-engine/availability-groups/windows/upgrading-always-on-availability-group-replica-instances) 가용성 그룹 아키텍처의 복잡성에 따라 가동 중지 시간을 최소화할 수 있습니다. 가용성 그룹에 참여하는 서버에 패치를 적용하려면 보조 복제본에 패치가 먼저 적용됩니다. 적절한 수의 복제본에 패치가 적용되면 주 복제본을 다른 노드로 수동으로 장애 조치(failover)하여 업그레이드를 수행합니다. 그 시점에 남아있는 보조 복제본도 업그레이드할 수 있습니다. 
+[가용성 그룹에 참여하는 SQL Server 인스턴스에 패치를 적용하면](../database-engine/availability-groups/windows/upgrading-always-on-availability-group-replica-instances.md) 가용성 그룹 아키텍처의 복잡성에 따라 가동 중지 시간을 최소화할 수 있습니다. 가용성 그룹에 참여하는 서버에 패치를 적용하려면 보조 복제본에 패치가 먼저 적용됩니다. 적절한 수의 복제본에 패치가 적용되면 주 복제본을 다른 노드로 수동으로 장애 조치(failover)하여 업그레이드를 수행합니다. 그 시점에 남아있는 보조 복제본도 업그레이드할 수 있습니다. 
 
 ### <a name="always-on-failover-cluster-instances"></a>Always On 장애 조치(failover) 클러스터 인스턴스
 
 FCI는 자체적으로 기존 마이그레이션 또는 업그레이드를 지원할 수 없습니다. 가용성 그룹 또는 로그 전달은 FCI의 데이터베이스와 다른 모든 개체가 처리될 수 있도록 구성되어야 합니다. 그러나 Windows Server 기반 FCI는 기본 Windows Server에 패치를 적용해야 하는 경우 여전히 많이 사용되는 옵션입니다. 수동 장애 조치를 시작할 수 있습니다. 즉, Windows Server에 패치가 적용되는 동안 인스턴스를 완전히 사용할 수 없게 되는 대신 일시적인 중단을 할 수 있습니다.
-FCI를 SQL Server 2017로 업그레이드할 수 있습니다. 자세한 내용은 [SQL Server 장애 조치(failover) 클러스터 인스턴스 업그레이드](https://docs.microsoft.com/sql/sql-server/failover-clusters/windows/upgrade-a-sql-server-failover-cluster-instance)를 참조하세요.
+FCI를 SQL Server 2017로 업그레이드할 수 있습니다. 자세한 내용은 [SQL Server 장애 조치(failover) 클러스터 인스턴스 업그레이드](../sql-server/failover-clusters/windows/upgrade-a-sql-server-failover-cluster-instance.md)를 참조하세요.
 
 ### <a name="log-shipping"></a>로그 전달
 
@@ -197,7 +197,7 @@ FCI를 SQL Server 2017로 업그레이드할 수 있습니다. 자세한 내용�
 
 Linux에서 SQL Server에 대한 다른 두 가지 배포 방법은 컨테이너 및 Azure(또는 다른 퍼블릭 클라우드 공급자)를 사용하는 것입니다. 이 문서에 제시된 가용성에 대한 일반적인 필요성은 SQL Server 배포 방법에 관계없이 존재합니다. 이 두 가지 방법은 SQL Server의 가용성을 높이는 데 있어 특별한 고려 사항이 있습니다.
 
-[Docker를 사용하는 컨테이너](https://docs.microsoft.com/sql/linux/quickstart-install-connect-docker)는 Windows Server 또는 Linux용 SQL Server를 배포하는 새로운 방법입니다. 컨테이너는 실행 준비가 되어 있는 SQL Server의 전체 이미지입니다. 그러나 클러스터링에 대한 기본 지원이 없으므로 직접적인 고가용성 또는 재해 복구는 없습니다. 현재 컨테이너를 사용하여 SQL Server 데이터베이스를 사용할 수 있도록 만드는 옵션은 로그 전달 및 백업 및 복원입니다. 클러스터 유형이 없음인 가용성 그룹을 구성할 수 있지만 앞에서 설명한 것처럼 실제 가용성 구성으로 간주되지는 않습니다. Microsoft는 컨테이너를 사용하여 가용성 그룹 또는 FCI를 사용하도록 설정하는 방법을 모색하고 있습니다. 
+[Docker를 사용하는 컨테이너](../linux/quickstart-install-connect-docker.md)는 Windows Server 또는 Linux용 SQL Server를 배포하는 새로운 방법입니다. 컨테이너는 실행 준비가 되어 있는 SQL Server의 전체 이미지입니다. 그러나 클러스터링에 대한 기본 지원이 없으므로 직접적인 고가용성 또는 재해 복구는 없습니다. 현재 컨테이너를 사용하여 SQL Server 데이터베이스를 사용할 수 있도록 만드는 옵션은 로그 전달 및 백업 및 복원입니다. 클러스터 유형이 없음인 가용성 그룹을 구성할 수 있지만 앞에서 설명한 것처럼 실제 가용성 구성으로 간주되지는 않습니다. Microsoft는 컨테이너를 사용하여 가용성 그룹 또는 FCI를 사용하도록 설정하는 방법을 모색하고 있습니다. 
 
 현재 컨테이너를 사용하는 경우 컨테이너가 손실되면 컨테이너 플랫폼에 따라 다시 배포하고 사용했던 공유 스토리지에 연결할 수 있습니다. 이 메커니즘 중 일부는 컨테이너 조정자가 제공합니다. 이 기능은 약간의 복원력을 제공하지만 데이터베이스 복구와 관련된 가동 중지 시간이 있을 수 있으며 가용성 그룹 또는 FCI를 사용하는 경우처럼 실제로 가용성이 높지는 않습니다. 
 
@@ -226,7 +226,7 @@ Azure를 사용하여 SQL Server를 설치하면 Linux IaaS 가상 컴퓨터를 
 
 ## <a name="read-scale"></a><a name = "ReadScaleOut"></a> 읽기 확장
 
-SQL Server 2012에서 도입된 이후, 보조 복제본은 읽기 전용 쿼리에 사용될 수 있습니다. 가용성 그룹으로 작업을 수행할 수 있는 방법은 두 가지 입니다. 보조 복제본에 직접 액세스를 허용하는 방법과 [읽기 전용 라우팅을 구성](https://docs.microsoft.com/sql/database-engine/availability-groups/windows/configure-read-only-routing-for-an-availability-group-sql-server)하는 방법입니다. 후자 경우 수신기를 사용해야 합니다.  SQL Server 2016에는 읽기 가능한 모든 복제본에 읽기 전용 요청을 분산할 수 있는 라운드 로빈 알고리즘을 사용하여 수신기를 통해 읽기 전용 연결의 부하를 분산할 수 있는 기능이 도입되었습니다. 
+SQL Server 2012에서 도입된 이후, 보조 복제본은 읽기 전용 쿼리에 사용될 수 있습니다. 가용성 그룹으로 작업을 수행할 수 있는 방법은 두 가지 입니다. 보조 복제본에 직접 액세스를 허용하는 방법과 [읽기 전용 라우팅을 구성](../database-engine/availability-groups/windows/configure-read-only-routing-for-an-availability-group-sql-server.md)하는 방법입니다. 후자 경우 수신기를 사용해야 합니다.  SQL Server 2016에는 읽기 가능한 모든 복제본에 읽기 전용 요청을 분산할 수 있는 라운드 로빈 알고리즘을 사용하여 수신기를 통해 읽기 전용 연결의 부하를 분산할 수 있는 기능이 도입되었습니다. 
 
 > [!NOTE]
 > 읽기 가능한 보조 복제본은 Enterprise Edition에만 포함되는 기능이며 읽기 가능한 복제본을 호스트하는 각 인스턴스에는 SQL Server 라이선스가 필요합니다.

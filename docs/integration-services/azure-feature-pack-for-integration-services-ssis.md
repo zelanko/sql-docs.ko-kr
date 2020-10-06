@@ -14,12 +14,12 @@ f1_keywords:
 ms.assetid: 31de555f-ae62-4f2f-a6a6-77fea1fa8189
 author: chugugrace
 ms.author: chugu
-ms.openlocfilehash: fe5c1f52cb17b721efb1d3083a0679040d858343
-ms.sourcegitcommit: 173dbecfe78fd1bcc13a922b579a2bb9ad37b713
+ms.openlocfilehash: e1a3bcdf7a5ade98e659b376e7ad3845e64875c3
+ms.sourcegitcommit: c7f40918dc3ecdb0ed2ef5c237a3996cb4cd268d
 ms.translationtype: HT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 08/26/2020
-ms.locfileid: "88942326"
+ms.lasthandoff: 10/05/2020
+ms.locfileid: "91727619"
 ---
 # <a name="azure-feature-pack-for-integration-services-ssis"></a>Integration Services에 대한 Azure 기능 팩(SSIS)
 
@@ -130,7 +130,7 @@ Java 빌드의 아키텍처(32/64비트)는 사용할 SSIS 런타임과 일치�
 
 ### <a name="set-up-zulus-openjdk-on-azure-ssis-integration-runtime"></a>Azure-SSIS Integration Runtime에서 Zulu OpenJDK 설정
 
-이 작업은 Azure-SSIS Integration Runtime에 대한 [사용자 지정 설정 인터페이스](https://docs.microsoft.com/azure/data-factory/how-to-configure-azure-ssis-ir-custom-setup)를 통해 수행해야 합니다.
+이 작업은 Azure-SSIS Integration Runtime에 대한 [사용자 지정 설정 인터페이스](/azure/data-factory/how-to-configure-azure-ssis-ir-custom-setup)를 통해 수행해야 합니다.
 `zulu8.33.0.1-jdk8.0.192-win_x64.zip`을 사용한다고 가정합니다.
 Blob 컨테이너는 다음과 같이 구성할 수 있습니다.
 

@@ -9,12 +9,12 @@ ms.date: 05/24/2018
 ms.topic: how-to
 ms.prod: sql
 ms.technology: high-availability
-ms.openlocfilehash: 1eef940dd30ab0d5b9f987edf6f68c7d777c6a90
-ms.sourcegitcommit: cc23d8646041336d119b74bf239a6ac305ff3d31
+ms.openlocfilehash: 25ef257560a04c6e9df341fce8470ea1e7a992fb
+ms.sourcegitcommit: c7f40918dc3ecdb0ed2ef5c237a3996cb4cd268d
 ms.translationtype: HT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 09/23/2020
-ms.locfileid: "91111042"
+ms.lasthandoff: 10/05/2020
+ms.locfileid: "91726439"
 ---
 # <a name="configure-read-scale-for-an-always-on-availability-group"></a>Always On 가용성 그룹에 대한 읽기 확장 구성
 
@@ -87,6 +87,6 @@ ALTER AVAILABILITY GROUP [ag1] GRANT CREATE ANY DATABASE;
 
 ## <a name="next-steps"></a>다음 단계
 
-* [분산 가용성 그룹 구성](distributed-availability-groups-always-on-availability-groups.md)
+* [분산 가용성 그룹 구성](./distributed-availability-groups.md)
 * [가용성 그룹에 대한 자세한 정보](overview-of-always-on-availability-groups-sql-server.md)
 * [강제 수동 장애 조치(failover) 수행](perform-a-forced-manual-failover-of-an-availability-group-sql-server.md)

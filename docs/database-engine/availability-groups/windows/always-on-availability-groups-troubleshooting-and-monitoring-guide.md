@@ -10,12 +10,12 @@ ms.topic: reference
 ms.assetid: 8d6d9954-ff6b-4e58-882e-eff0174f0d07
 author: rothja
 ms.author: jroth
-ms.openlocfilehash: 28d57d973f0c1c33e46930c8fb0277aec70dc89f
-ms.sourcegitcommit: cc23d8646041336d119b74bf239a6ac305ff3d31
+ms.openlocfilehash: e3ca428410760ac224cccf513aa8e8ed2a3060e4
+ms.sourcegitcommit: c7f40918dc3ecdb0ed2ef5c237a3996cb4cd268d
 ms.translationtype: HT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 09/23/2020
-ms.locfileid: "91115054"
+ms.lasthandoff: 10/05/2020
+ms.locfileid: "91726550"
 ---
 # <a name="monitor-and-troubleshoot-availability-groups"></a>가용성 그룹 모니터링 및 문제 해결
  이 가이드에서는 Always On 가용성 그룹 모니터링 및 가용성 그룹의 일반적인 문제 중 일부의 문제 해결을 시작하도록 돕습니다. 원래 콘텐츠 뿐만 아니라 다른 곳에서 게시된 유용한 정보의 방문 페이지를 제공합니다. 이 가이드는 가용성 그룹의 넓은 영역에서 발생할 수 있는 모든 문제를 완벽하게 논의할 수 없지만 근본 원인 분석 및 문제 해결의 올바른 방향을 안내할 수 있습니다. 
@@ -35,7 +35,7 @@ ms.locfileid: "91115054"
 |[문제 해결: 가용성 그룹 초과 RTO](troubleshoot-availability-group-exceeded-rto.md)|성능|데이터 손실 없이 자동 장애 조치(failover) 또는 계획된 수동 장애 조치 후 장애 조치 시간이 RTO를 초과합니다. 또는 동기 커밋 보조 복제본(예: 자동 장애 조치(failover) 파트너)의 장애 조치 시간을 예측할 때 RTO 초과를 발견할 수 있습니다.|  
 |[문제 해결: 가용성 그룹 초과 RPO](troubleshoot-availability-group-exceeded-rpo.md)|성능|강제 수동 장애 조치(failover)를 수행한 후 데이터 손실이 RPO보다 많습니다. 또는 비동기 커밋 보조 복제본의 잠재적 데이터 손실을 계산할 때 RPO 초과를 발견합니다.|  
 |[문제 해결: 보조 복제본에 반영되지 않은 주 복제본의 변경 내용](troubleshoot-primary-changes-not-reflected-on-secondary.md)|성능|클라이언트 애플리케이션에서 주 복제본에 대한 업데이트를 성공적으로 완료하지만 보조 복제본 쿼리는 변경 내용이 반영되지 않았음을 보여줍니다.|  
-|[문제 해결: Always On 가용성 그룹을 사용하여 높은 HADR_SYNC_COMMIT 대기 유형](https://blogs.msdn.microsoft.com/sql_server_team/troubleshooting-high-hadr_sync_commit-wait-type-with-always-on-availability-groups/)|성능|HADR_SYNC_COMMIT가 비정상적으로 긴 경우 데이터 이동 흐름 또는 보조 복제본 로그 강화에 성능 문제가 있습니다.|  
+|[문제 해결: Always On 가용성 그룹을 사용하여 높은 HADR_SYNC_COMMIT 대기 유형](/archive/blogs/sql_server_team/troubleshooting-high-hadr_sync_commit-wait-type-with-always-on-availability-groups)|성능|HADR_SYNC_COMMIT가 비정상적으로 긴 경우 데이터 이동 흐름 또는 보조 복제본 로그 강화에 성능 문제가 있습니다.|  
 
 ##  <a name="useful-tools-for-troubleshooting"></a><a name="BKMK_TOOLS"></a> 문제 해결에 유용한 도구  
  가용성 그룹을 구성 또는 실행하는 경우 다양한 도구는 서로 다른 유형의 문제를 진단하는 데 유용합니다. 다음 표에서 도구에 대한 유용한 정보에 대한 링크를 제공합니다.  
@@ -64,15 +64,14 @@ ms.locfileid: "91115054"
 |-----------|-----------------|  
 |[Always On 가용성 그룹에 대한 성능 모니터링](monitor-performance-for-always-on-availability-groups.md)|가용성 그룹에 대한 데이터 동기화 프로세스, 흐름 제어 게이트 및 가용성 그룹을 모니터링할 때 유용한 메트릭을 설명하고 RTO 및 RPO 메트릭을 수집하는 방법을 보여줍니다.|  
 |[가용성 그룹 모니터링&#40;SQL Server&#41;](monitoring-of-availability-groups-sql-server.md)|가용성 그룹 모니터링을 위한 도구의 정보를 제공합니다.|  
-|[Always On 상태 모델, 파트 1: 상태 모델 아키텍처](https://docs.microsoft.com/archive/blogs/sqlalwayson/the-alwayson-health-model-part-1-health-model-architecture)|Always On 상태 모델의 개요를 제공합니다.|  
-|[Always On 상태 모델, 파트 2: 상태 모델 확장](https://docs.microsoft.com/archive/blogs/sqlalwayson/the-alwayson-health-model-part-2-extending-the-health-model)|Always On 상태 모델을 사용자 지정하고 Always On 대시보드를 사용자 지정하여 추가 정보를 표시하는 방법을 보여줍니다.|  
-|[PowerShell을 사용하여 Always On 상태 모니터링, 1부: 기본 cmdlet 개요](https://docs.microsoft.com/archive/blogs/sqlalwayson/monitoring-alwayson-health-with-powershell-part-1-basic-cmdlet-overview)|가용성 그룹의 상태를 모니터링하는 데 사용할 수 있는 Always On PowerShell cmdlet의 기본적인 개요를 제공합니다.|  
-|[PowerShell을 사용하여 Always On 상태 모니터링, 2부: 고급 cmdlet 사용](https://docs.microsoft.com/archive/blogs/sqlalwayson/monitoring-alwayson-health-with-powershell-part-2-advanced-cmdlet-usage)|가용성 그룹의 상태를 모니터링하는 Always On PowerShell cmdlet의 고급 사용에 대한 정보를 제공합니다.|  
-|[PowerShell을 사용하여 Always On 상태 모니터링, 3부: 간단한 모니터링 애플리케이션](https://docs.microsoft.com/archive/blogs/sqlalwayson/monitoring-alwayson-health-with-powershell-part-3-a-simple-monitoring-application)|애플리케이션을 사용하여 가용성 그룹을 자동으로 모니터링하는 방법을 보여줍니다.|  
-|[PowerShell을 사용하여 Always On 상태 모니터링, 4부: SQL Server 에이전트와의 통합](https://docs.microsoft.com/archive/blogs/sqlalwayson/monitoring-alwayson-health-with-powershell-part-4-integration-with-sql-server-agent)|SQL Server 에이전트를 사용하여 가용성 그룹 모니터링을 통합하고 문제가 발생하는 경우 적절한 대상에 대한 알림을 구성하는 방법에 대한 정보를 제공합니다.|  
+|[Always On 상태 모델, 파트 1: 상태 모델 아키텍처](/archive/blogs/sqlalwayson/the-alwayson-health-model-part-1-health-model-architecture)|Always On 상태 모델의 개요를 제공합니다.|  
+|[Always On 상태 모델, 파트 2: 상태 모델 확장](/archive/blogs/sqlalwayson/the-alwayson-health-model-part-2-extending-the-health-model)|Always On 상태 모델을 사용자 지정하고 Always On 대시보드를 사용자 지정하여 추가 정보를 표시하는 방법을 보여줍니다.|  
+|[PowerShell을 사용하여 Always On 상태 모니터링, 1부: 기본 cmdlet 개요](/archive/blogs/sqlalwayson/monitoring-alwayson-health-with-powershell-part-1-basic-cmdlet-overview)|가용성 그룹의 상태를 모니터링하는 데 사용할 수 있는 Always On PowerShell cmdlet의 기본적인 개요를 제공합니다.|  
+|[PowerShell을 사용하여 Always On 상태 모니터링, 2부: 고급 cmdlet 사용](/archive/blogs/sqlalwayson/monitoring-alwayson-health-with-powershell-part-2-advanced-cmdlet-usage)|가용성 그룹의 상태를 모니터링하는 Always On PowerShell cmdlet의 고급 사용에 대한 정보를 제공합니다.|  
+|[PowerShell을 사용하여 Always On 상태 모니터링, 3부: 간단한 모니터링 애플리케이션](/archive/blogs/sqlalwayson/monitoring-alwayson-health-with-powershell-part-3-a-simple-monitoring-application)|애플리케이션을 사용하여 가용성 그룹을 자동으로 모니터링하는 방법을 보여줍니다.|  
+|[PowerShell을 사용하여 Always On 상태 모니터링, 4부: SQL Server 에이전트와의 통합](/archive/blogs/sqlalwayson/monitoring-alwayson-health-with-powershell-part-4-integration-with-sql-server-agent)|SQL Server 에이전트를 사용하여 가용성 그룹 모니터링을 통합하고 문제가 발생하는 경우 적절한 대상에 대한 알림을 구성하는 방법에 대한 정보를 제공합니다.|  
 
 ## <a name="next-steps"></a>다음 단계  
- [SQL Server Always On 팀 블로그](https://docs.microsoft.com/archive/blogs/sqlalwayson/)   
- [CSS SQL Server 엔지니어 블로그](https://docs.microsoft.com/archive/blogs/psssql/)  
-  
+ [SQL Server Always On 팀 블로그](/archive/blogs/sqlalwayson/)   
+ [CSS SQL Server 엔지니어 블로그](/archive/blogs/psssql/)  
   

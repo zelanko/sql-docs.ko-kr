@@ -10,12 +10,12 @@ ms.topic: conceptual
 ms.assetid: dfd2b639-8fd4-4cb9-b134-768a3898f9e6
 author: rothja
 ms.author: jroth
-ms.openlocfilehash: 08ef8be56e34d7f0e62a02c5a9819f0f5c41344b
-ms.sourcegitcommit: 99f61724de5edf6640efd99916d464172eb23f92
+ms.openlocfilehash: 03c89633fa5b61a8d08e78bd90a06a5f8497be75
+ms.sourcegitcommit: c7f40918dc3ecdb0ed2ef5c237a3996cb4cd268d
 ms.translationtype: HT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 07/28/2020
-ms.locfileid: "87362696"
+ms.lasthandoff: 10/05/2020
+ms.locfileid: "91727869"
 ---
 # <a name="monitor-performance-for-always-on-availability-groups"></a>Always On 가용성 그룹에 대한 성능 모니터링
 [!INCLUDE [SQL Server](../../../includes/applies-to-version/sqlserver.md)]
@@ -59,7 +59,7 @@ ms.locfileid: "87362696"
 > [!IMPORTANT]  
 >  가용성 그룹이 가용성 데이터베이스를 두 개 이상 포함하는 경우 Tfailover가 가장 높은 가용성 데이터베이스가 RTO 준수를 위한 제한 값이 됩니다.  
   
- 오류 검색 시간 Tdetection은 시스템이 오류를 검색하는 데 걸리는 시간입니다. 이 시간은 클러스터 수준 설정에 따라 달라지며 개별 가용성 복제본에 의존하지 않습니다. 구성된 자동 장애 조치(failover) 조건에 따라 분리된 스핀 잠금 같은 중요 SQL Server 내부 오류에 대한 순간 응답으로 장애 조치(failover)가 트리거될 수 있습니다. 이 경우 검색은 [sp_server_diagnostics &#40;Transact-SQL&#41;만큼 빠를 수 있으며](~/relational-databases/system-stored-procedures/sp-server-diagnostics-transact-sql.md) 오류 보고가 WSFC 클러스터로 보내집니다. (기본 간격은 상태 확인 시간 제한의 1/3입니다.) 장애 조치(failover)는 클러스터 상태 확인 시간 제한이 만료했거나(기본적으로 30초) 리소스 DLL과 SQL Server 인스턴스 간의 임대 기간이 만료한(기본적으로 20초) 것과 같은 시간 제한 때문에 트리거될 수도 있습니다. 이 경우 검색 시간은 시간 제한 간격만큼 깁니다. 자세한 내용은 [가용성 그룹 자동 장애 조치(failover)에 대한 유연한 장애 조치 정책&#40;SQL Server&#41;](https://msdn.microsoft.com/library/hh710061(SQL.120).aspx)을 참조하세요.  
+ 오류 검색 시간 Tdetection은 시스템이 오류를 검색하는 데 걸리는 시간입니다. 이 시간은 클러스터 수준 설정에 따라 달라지며 개별 가용성 복제본에 의존하지 않습니다. 구성된 자동 장애 조치(failover) 조건에 따라 분리된 스핀 잠금 같은 중요 SQL Server 내부 오류에 대한 순간 응답으로 장애 조치(failover)가 트리거될 수 있습니다. 이 경우 검색은 [sp_server_diagnostics &#40;Transact-SQL&#41;만큼 빠를 수 있으며](~/relational-databases/system-stored-procedures/sp-server-diagnostics-transact-sql.md) 오류 보고가 WSFC 클러스터로 보내집니다. (기본 간격은 상태 확인 시간 제한의 1/3입니다.) 장애 조치(failover)는 클러스터 상태 확인 시간 제한이 만료했거나(기본적으로 30초) 리소스 DLL과 SQL Server 인스턴스 간의 임대 기간이 만료한(기본적으로 20초) 것과 같은 시간 제한 때문에 트리거될 수도 있습니다. 이 경우 검색 시간은 시간 제한 간격만큼 깁니다. 자세한 내용은 [가용성 그룹 자동 장애 조치(failover)에 대한 유연한 장애 조치 정책&#40;SQL Server&#41;](./configure-flexible-automatic-failover-policy.md?viewFallbackFrom=sql-server-2014)을 참조하세요.  
   
  보조 복제본이 장애 조치(failover)에 대해 준비되도록 수행해야 하는 유일한 한 가지 작업은 로그의 끝까지 캡처하기 위한 다시 실행입니다. 다시 실행 시간 Tredo는 다음 수식을 사용하여 계산됩니다.  
   
@@ -310,7 +310,7 @@ DMV [sys.dm_hadr_database_replica_states](../../../relational-databases/system-d
 
   
 ##  <a name="monitoring-for-rto-and-rpo"></a>RTO 및 RPO 모니터링  
- 이 섹션에서는 가용성 그룹의 RTO 및 RPO 메트릭을 모니터링하는 방법을 보여 줍니다. 이 데모는 [Always On 상태 모델, 2부: 상태 모델 확장](https://docs.microsoft.com/archive/blogs/sqlalwayson/the-alwayson-health-model-part-2-extending-the-health-model)에 지정된 GUI 자습서와 유사합니다.  
+ 이 섹션에서는 가용성 그룹의 RTO 및 RPO 메트릭을 모니터링하는 방법을 보여 줍니다. 이 데모는 [Always On 상태 모델, 2부: 상태 모델 확장](/archive/blogs/sqlalwayson/the-alwayson-health-model-part-2-extending-the-health-model)에 지정된 GUI 자습서와 유사합니다.  
   
  [예상 장애 조치(failover) 시간(RTO)](#estimating-failover-time-rto) 및 [예상 잠재적 데이터 손실(RPO)](#estimating-potential-data-loss-rpo)에서 장애 조치(failover) 시간과 잠재적 데이터 손실 계산의 요소는 편의상 정책 관리 패싯 **데이터베이스 복제본 상태**의 성능 메트릭으로 제공됩니다([SQL Server 개체에 대한 정책 기반 관리 패싯 보기](~/relational-databases/policy-based-management/view-the-policy-based-management-facets-on-a-sql-server-object.md) 참조). 이러한 두 메트릭을 일정에 따라 모니터링하고 메트릭이 각각 RTO 및 RPO를 초과하는 경우 경고할 수 있습니다.  
   
@@ -454,4 +454,4 @@ DMV [sys.dm_hadr_database_replica_states](../../../relational-databases/system-d
 |hadr_worker_pool_task|`alwayson`|디버그|주|  
 |hadr_dump_primary_progress|`alwayson`|디버그|주|  
 |hadr_dump_log_progress|`alwayson`|디버그|주|  
-|hadr_undo_of_redo_log_scan|`alwayson`|Analytic|보조|  
+|hadr_undo_of_redo_log_scan|`alwayson`|Analytic|보조|

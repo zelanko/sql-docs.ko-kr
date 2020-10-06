@@ -17,12 +17,12 @@ helpviewer_keywords:
 ms.assetid: 76fb3eca-6b08-4610-8d79-64019dd56c44
 author: MashaMSFT
 ms.author: mathoma
-ms.openlocfilehash: 4ff79d4838b5982edf658dbb35cc40fa3d29e803
-ms.sourcegitcommit: cc23d8646041336d119b74bf239a6ac305ff3d31
+ms.openlocfilehash: 36828d66fb91f60bf920c18324c7e7ace479452b
+ms.sourcegitcommit: c7f40918dc3ecdb0ed2ef5c237a3996cb4cd268d
 ms.translationtype: HT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 09/23/2020
-ms.locfileid: "91116938"
+ms.lasthandoff: 10/05/2020
+ms.locfileid: "91727872"
 ---
 # <a name="connect-to-an-always-on-availability-group-listener"></a>Always On 가용성 그룹 수신기에 연결 
 [!INCLUDE [SQL Server](../../../includes/applies-to-version/sqlserver.md)]
@@ -68,7 +68,7 @@ _읽기 전용 라우팅_은 읽기 전용 워크로드를 허용하도록 구�
  
 -   하나 이상의 보조 복제본이 읽기 전용 액세스로 설정되었으며 각 읽기 전용 보조 복제본과 주 복제본은 [읽기 전용 라우팅을 지원하도록 구성](configure-read-only-routing-for-an-availability-group-sql-server.md)되었습니다. 
 
--   연결 문자열은 가용성 그룹에 포함된 데이터베이스를 참조합니다. 이 방법의 대안으로, 연결에 사용되는 로그인에는 데이터베이스가 기본 데이터베이스로 구성되어 있습니다. 자세한 내용은 [알고리즘이 읽기 전용 라우팅을 사용하는 방법에 대한 문서](https://blogs.msdn.microsoft.com/mattn/2012/04/25/calculating-read_only_routing_url-for-alwayson/)를 참조하세요.
+-   연결 문자열은 가용성 그룹에 포함된 데이터베이스를 참조합니다. 이 방법의 대안으로, 연결에 사용되는 로그인에는 데이터베이스가 기본 데이터베이스로 구성되어 있습니다. 자세한 내용은 [알고리즘이 읽기 전용 라우팅을 사용하는 방법에 대한 문서](/archive/blogs/mattn/calculating-read_only_routing_url-for-alwayson)를 참조하세요.
 
 -   연결 문자열은 가용성 그룹 수신기를 참조하며 들어오는 연결의 애플리케이션 의도는 ODBC 또는 OLEDB 연결 문자열이나 연결 특성 또는 속성에서 **Application Intent=ReadOnly** 키워드를 사용하는 등과 같은 방법으로 읽기 전용으로 설정됩니다. 
 
@@ -198,4 +198,4 @@ setspn -A MSSQLSvc/AG1listener.Adventure-Works.com:1433 corp\svclogin2
 
 수신기에 연결되면 [읽기 전용 워크로드](overview-of-always-on-availability-groups-sql-server.md) 및 [백업](configure-backup-on-availability-replicas-sql-server.md)을 보조 복제본으로 오프로드하여 성능을 향상하는 것이 좋습니다. 다양한 [가용성 그룹 모니터링 전략](monitoring-of-availability-groups-sql-server.md)을 검토하여 가용성 그룹의 상태를 확인할 수도 있습니다. 
 
-가용성 그룹에 대한 자세한 내용은 [Always On 가용성 그룹 개요&#40;SQL Server&#41;](../../../database-engine/availability-groups/windows/overview-of-always-on-availability-groups-sql-server.md)를 참조하세요. 
+가용성 그룹에 대한 자세한 내용은 [Always On 가용성 그룹 개요&#40;SQL Server&#41;](../../../database-engine/availability-groups/windows/overview-of-always-on-availability-groups-sql-server.md)를 참조하세요.

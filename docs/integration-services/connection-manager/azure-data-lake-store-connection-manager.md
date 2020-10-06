@@ -13,12 +13,12 @@ ms.assetid: f4c44553-0f08-4731-ac47-7534990b8c8d
 author: Lingxi-Li
 ms.author: lingxl
 ms.reviewer: maghan
-ms.openlocfilehash: e128b510c9bd40eedd89f7750c65bbd03a7d8670
-ms.sourcegitcommit: e700497f962e4c2274df16d9e651059b42ff1a10
+ms.openlocfilehash: aff32d53b663aa34b036fcfdb9202f7dadcd1ff5
+ms.sourcegitcommit: c7f40918dc3ecdb0ed2ef5c237a3996cb4cd268d
 ms.translationtype: HT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 08/17/2020
-ms.locfileid: "88477987"
+ms.lasthandoff: 10/05/2020
+ms.locfileid: "91724550"
 ---
 # <a name="azure-data-lake-store-connection-manager"></a>Azure Data Lake Store 연결 관리자
 
@@ -45,7 +45,7 @@ Azure Data Lake Store 연결 관리자는 [Azure용 SSIS(SQL Server Integration 
     1.  **Azure AD 사용자 ID** 인증 옵션을 선택한 경우 다음을 수행합니다.
         1. **사용자 이름** 및 **암호** 필드에 값을 제공합니다. 
     
-        2. 연결을 테스트하려면 **연결 테스트**를 선택합니다. 사용자 또는 테넌트 관리자가 SSIS를 Data Lake Storage Gen1 데이터에 액세스할 수 있도록 이전에 동의하지 않은 경우 메시지가 표시되면 **동의**를 선택합니다. 이 동의 환경에 대한 자세한 내용은 [Azure Active Directory와 애플리케이션 통합](https://docs.microsoft.com/azure/active-directory/manage-apps/plan-an-application-integration#integrating-applications-with-azure-ad)을 참조하세요.
+        2. 연결을 테스트하려면 **연결 테스트**를 선택합니다. 사용자 또는 테넌트 관리자가 SSIS를 Data Lake Storage Gen1 데이터에 액세스할 수 있도록 이전에 동의하지 않은 경우 메시지가 표시되면 **동의**를 선택합니다. 이 동의 환경에 대한 자세한 내용은 [Azure Active Directory와 애플리케이션 통합](/azure/active-directory/manage-apps/plan-an-application-integration#integrating-applications-with-azure-ad)을 참조하세요.
     
         > [!NOTE] 
         > **Azure AD 사용자 ID** 인증 옵션을 선택하는 경우 다단계 인증과 Microsoft 계정 인증이 지원되지 않습니다.
@@ -53,7 +53,7 @@ Azure Data Lake Store 연결 관리자는 [Azure용 SSIS(SQL Server Integration 
     2. **Azure AD 서비스 ID** 인증 옵션을 선택한 경우 다음을 수행합니다.
         1. Data Lake Storage Gen1 데이터에 액세스하기 위한 AAD(Azure Active Directory) 애플리케이션 및 서비스 사용자를 만듭니다.
     
-        2. 이 AAD 애플리케이션에 Data Lake Storage Gen1 리소스에 액세스할 수 있는 적절한 권한을 할당합니다. 이 인증 옵션에 대한 자세한 내용은 [Use portal to create Active Directory application and service principal that can access resources](https://docs.microsoft.com/azure/azure-resource-manager/resource-group-create-service-principal-portal)(리소스에 액세스할 수 있는 Active Directory 애플리케이션 및 서비스 사용자를 포털에서 만들기)를 참조하세요.
+        2. 이 AAD 애플리케이션에 Data Lake Storage Gen1 리소스에 액세스할 수 있는 적절한 권한을 할당합니다. 이 인증 옵션에 대한 자세한 내용은 [Use portal to create Active Directory application and service principal that can access resources](/azure/azure-resource-manager/resource-group-create-service-principal-portal)(리소스에 액세스할 수 있는 Active Directory 애플리케이션 및 서비스 사용자를 포털에서 만들기)를 참조하세요.
     
         3. **클라이언트 ID**, **비밀 키** 및 **테넌트 이름** 필드에 값을 제공합니다.
     
@@ -63,5 +63,4 @@ Azure Data Lake Store 연결 관리자는 [Azure용 SSIS(SQL Server Integration 
 
 ## <a name="view-the-properties-of-the-connection-manager"></a>연결 관리자의 속성 보기
 작성한 연결 관리자의 속성은 **속성** 창에서 확인할 수 있습니다.  
-  
   

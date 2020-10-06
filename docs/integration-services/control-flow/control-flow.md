@@ -15,12 +15,12 @@ helpviewer_keywords:
 ms.assetid: 0cc042a9-1a7f-49ed-9f47-091653d5ef6e
 author: chugugrace
 ms.author: chugu
-ms.openlocfilehash: c483cab97fe4eb218ef1e823f53ed4cb6a7fd5f2
-ms.sourcegitcommit: e700497f962e4c2274df16d9e651059b42ff1a10
+ms.openlocfilehash: 8ee2ebd23e6be8b78eee221b3e55485633b38786
+ms.sourcegitcommit: c7f40918dc3ecdb0ed2ef5c237a3996cb4cd268d
 ms.translationtype: HT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 08/17/2020
-ms.locfileid: "88457578"
+ms.lasthandoff: 10/05/2020
+ms.locfileid: "91724561"
 ---
 # <a name="control-flow"></a>제어 흐름
 
@@ -62,7 +62,7 @@ ms.locfileid: "88457578"
   
 -   연결 관리자 추가  
   
-     대부분의 태스크에는 데이터 원본에 대한 연결이 필요하며, 이를 위해서는 해당 태스크에 필요한 연결 관리자를 패키지에 추가해야 합니다. 사용되는 열거자 유형에 따라 Foreach 루프 컨테이너에도 연결 관리자가 필요할 수 있습니다. 연결 관리자는 제어 흐름을 항목별로 구성할 때나 제어 흐름 구성을 시작하기 전에 추가할 수 있습니다. 자세한 내용은 [Integration Services&#40;SSIS&#41; 연결](../../integration-services/connection-manager/integration-services-ssis-connections.md) 및 [연결 관리자 만들기](https://msdn.microsoft.com/library/6ca317b8-0061-4d9d-b830-ee8c21268345)를 참조하세요.  
+     대부분의 태스크에는 데이터 원본에 대한 연결이 필요하며, 이를 위해서는 해당 태스크에 필요한 연결 관리자를 패키지에 추가해야 합니다. 사용되는 열거자 유형에 따라 Foreach 루프 컨테이너에도 연결 관리자가 필요할 수 있습니다. 연결 관리자는 제어 흐름을 항목별로 구성할 때나 제어 흐름 구성을 시작하기 전에 추가할 수 있습니다. 자세한 내용은 [Integration Services&#40;SSIS&#41; 연결](../../integration-services/connection-manager/integration-services-ssis-connections.md) 및 [연결 관리자 만들기](../connection-manager/integration-services-ssis-connections.md)를 참조하세요.  
   
  [!INCLUDE[ssIS](../../includes/ssis-md.md)] 디자이너에는 디자인 화면을 관리하고 제어 흐름을 이해하기 쉽게 만드는 데 사용할 수 있는 여러 디자인 타임 기능도 포함됩니다.  
   
@@ -70,8 +70,7 @@ ms.locfileid: "88457578"
   
 -   [제어 흐름에서 태스크 또는 컨테이너 추가 또는 삭제](../../integration-services/control-flow/add-or-delete-a-task-or-a-container-in-a-control-flow.md)  
   
--   [태스크 또는 컨테이너의 속성 설정](https://msdn.microsoft.com/library/52d47ca4-fb8c-493d-8b2b-48bb269f859b)  
+-   [태스크 또는 컨테이너의 속성 설정](./add-or-delete-a-task-or-a-container-in-a-control-flow.md)  
   
 -   [구성 요소 그룹화 또는 그룹 해제](../../integration-services/group-or-ungroup-components.md)  
-  
   

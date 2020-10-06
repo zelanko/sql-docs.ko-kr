@@ -9,12 +9,12 @@ ms.reviewer: alayu, maghan, sstein
 ms.topic: quickstart
 author: rachel-msft
 ms.author: raagyema
-ms.openlocfilehash: 99e52735f317a538c9a11d3c048c513b153d5da7
-ms.sourcegitcommit: 7345e4f05d6c06e1bcd73747a4a47873b3f3251f
+ms.openlocfilehash: 5a66f349658c8470a3e4408953cc6121ffff74b4
+ms.sourcegitcommit: c7f40918dc3ecdb0ed2ef5c237a3996cb4cd268d
 ms.translationtype: HT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 08/24/2020
-ms.locfileid: "88766552"
+ms.lasthandoff: 10/05/2020
+ms.locfileid: "91725117"
 ---
 # <a name="quickstart-use-azure-data-studio-to-connect-and-query-postgresql"></a>빠른 시작: Azure Data Studio를 사용하여 PostgreSQL 연결 및 쿼리
 
@@ -25,7 +25,7 @@ ms.locfileid: "88766552"
 이 빠른 시작을 완료하려면 Azure Data Studio, Azure Data Studio용 PostgreSQL 확장 및 PostgreSQL 서버에 대한 액세스 권한이 필요합니다.
 
 - [Azure Data Studio를 설치합니다.](./download-azure-data-studio.md?view=sql-server-ver15)
-- [Azure Data Studio용 PostgreSQL 확장을 설치합니다](postgres-extension.md).
+- [Azure Data Studio용 PostgreSQL 확장을 설치합니다](./extensions/postgres-extension.md).
 - [PostgreSQL을 설치합니다](https://www.postgresql.org/download/). (또는 [az postgres up](/azure/postgresql/quickstart-create-server-up-azure-cli)을 사용하여 클라우드에서 Postgres 데이터베이스를 만들 수 있습니다). 
 
 ## <a name="connect-to-postgresql"></a>PostgreSQL에 연결
@@ -133,4 +133,4 @@ ms.locfileid: "88766552"
 
 ## <a name="next-steps"></a>다음 단계
 
-[Azure Data Studio에서 Postgres에 사용할 수 있는 시나리오](postgres-extension.md)에 대해 알아보세요.
+[Azure Data Studio에서 Postgres에 사용할 수 있는 시나리오](./extensions/postgres-extension.md)에 대해 알아보세요.

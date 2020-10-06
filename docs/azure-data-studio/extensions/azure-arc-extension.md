@@ -9,16 +9,16 @@ ms.author: alayu
 ms.reviewer: maghan, sstein
 ms.custom: ''
 ms.date: 09/22/2020
-ms.openlocfilehash: a541b994b33355fb5df8ebf856681d588e82cc2d
-ms.sourcegitcommit: cc23d8646041336d119b74bf239a6ac305ff3d31
+ms.openlocfilehash: 3bcdd76cf143c94dc1e200a21972d00419f26b96
+ms.sourcegitcommit: c7f40918dc3ecdb0ed2ef5c237a3996cb4cd268d
 ms.translationtype: HT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 09/23/2020
-ms.locfileid: "91111737"
+ms.lasthandoff: 10/05/2020
+ms.locfileid: "91725214"
 ---
 # <a name="azure-arc-extension-for-azure-data-studio-preview"></a>Azure Data Studio용 Azure Arc 확장(미리 보기)
 
-[Azure Arc 확장(미리 보기)](https://aka.ms/azurearcdata-docs)은 Azure Arc 데이터 서비스 리소스를 만들고 관리하기 위한 확장입니다.
+[Azure Arc 확장(미리 보기)](/azure/azure-arc/data/)은 Azure Arc 데이터 서비스 리소스를 만들고 관리하기 위한 확장입니다.
 
 **주요 작업은 다음과 같습니다.**
 - 리소스 만들기
@@ -61,4 +61,4 @@ azdata, Azure Portal 또는 Azure Data Studio에서 Azure Arc 데이터 컨트�
 대시보드는 Azure Portal에서 열 수 있는 옵션을 포함하여 리소스에 대한 추가 정보를 제공합니다.
 
 ## <a name="next-steps"></a>다음 단계
-Azure Arc 데이터 서비스에 대해 자세히 알아보려면 [설명서를 확인](https://aka.ms/azurearcdata-docs)하세요.
+Azure Arc 데이터 서비스에 대해 자세히 알아보려면 [설명서를 확인](/azure/azure-arc/data/)하세요.

@@ -9,12 +9,12 @@ ms.author: maghan
 ms.reviewer: jukoesma
 ms.custom: ''
 ms.date: 09/22/2020
-ms.openlocfilehash: 416fd5aabb07db3deed1d4d78769249a99113216
-ms.sourcegitcommit: 197a6ffb643f93592edf9e90b04810a18be61133
+ms.openlocfilehash: a8379e10e8c3e3af64381e9a4536b253e203964e
+ms.sourcegitcommit: c7f40918dc3ecdb0ed2ef5c237a3996cb4cd268d
 ms.translationtype: HT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 09/26/2020
-ms.locfileid: "91379598"
+ms.lasthandoff: 10/05/2020
+ms.locfileid: "91725127"
 ---
 # <a name="create-and-run-a-kusto-kql-notebook-preview"></a>Kusto(KQL) Notebook(미리 보기) 만들기 및 실행
 
@@ -28,7 +28,7 @@ Kusto(KQL) 확장을 사용하면 커널 옵션을 **Kusto**로 변경할 수 �
 
 Azure 구독이 아직 없는 경우 시작하기 전에 [Azure 체험 계정](https://azure.microsoft.com/free/)을 만듭니다.
 
-- [연결할 수 있는 데이터베이스를 사용하는 Azure Data Explorer 클러스터](https://docs.microsoft.com/azure/data-explorer/create-cluster-database-portal)
+- [연결할 수 있는 데이터베이스를 사용하는 Azure Data Explorer 클러스터](/azure/data-explorer/create-cluster-database-portal)
 - [Azure Data Studio](../download-azure-data-studio.md)
 - [Azure Data Studio용 Kusto(KQL) 확장](../extensions/kusto-extension.md)
 
@@ -44,7 +44,7 @@ Azure 구독이 아직 없는 경우 시작하기 전에 [Azure 체험 계정](h
 
 3. **커널**에서 *Kusto*를 선택합니다. **연결 대상** 메뉴가 클러스터 이름과 데이터베이스로 설정되어 있는지 확인합니다. 이 문서에서는 Samples 데이터베이스 데이터와 함께 help.kusto.windows.net 클러스터를 사용합니다.
 
-   :::image type="content" source="media/notebooks-kusto-kernel/set-kusto-kernel.png" alt-text="커널 및 연결 대상 설정":::
+   :::image type="content" source="media/notebooks-kusto-kernel/set-kusto-kernel.png" alt-text="Notebook 열기":::
 
 **파일** 메뉴의 **저장** 또는 **다른 이름으로 저장...** 명령을 사용하여 Notebook을 저장할 수 있습니다.
 
@@ -56,14 +56,14 @@ Notebook의 Kusto 연결을 변경하려면 다음을 수행합니다.
 
 1. Notebook 도구 모음에서 **연결 대상** 메뉴를 선택하고 **연결 변경**을 선택합니다.
 
-   :::image type="content" source="media/notebooks-kusto-kernel/kusto-select-attach-to-change-connections.png" alt-text="연결 변경":::
+   :::image type="content" source="media/notebooks-kusto-kernel/kusto-select-attach-to-change-connections.png" alt-text="Notebook 열기":::
 
    > [!Note]
    > 데이터베이스 값이 채워져 있는지 확인합니다. Kusto Notebook에 데이터베이스가 지정되어 있어야 합니다.
 
 2. 이제 최근 연결 서버를 선택하거나 새 연결 정보를 입력하여 연결할 수 있습니다.
 
-   :::image type="content" source="media/notebooks-kusto-kernel/kusto-change-connection-cluster.png" alt-text="다른 클러스터 선택":::
+   :::image type="content" source="media/notebooks-kusto-kernel/kusto-change-connection-cluster.png" alt-text="Notebook 열기":::
 
    > [!Note]
    > `https://` 없이 클러스터 이름을 지정합니다.
@@ -76,7 +76,7 @@ Notebook의 Kusto 연결을 변경하려면 다음을 수행합니다.
 
 1. 도구 모음에서 **+코드** 명령을 선택하여 새 코드 셀을 추가합니다.
 
-   :::image type="content" source="media/notebooks-kusto-kernel/kusto-kernel-code.png" alt-text="Kusto 커널 코드 블록":::
+   :::image type="content" source="media/notebooks-kusto-kernel/kusto-kernel-code.png" alt-text="Notebook 열기":::
 
 2. 다음 예제를 복사하여 셀에 붙여넣은 다음 **셀 실행**을 선택합니다. 이 예제에서는 특정 이벤트 유형에 대한 StormEvents 데이터를 쿼리합니다.
 
@@ -85,7 +85,7 @@ Notebook의 Kusto 연결을 변경하려면 다음을 수행합니다.
     | where EventType == "Waterspout"
    ```
 
-   :::image type="content" source="media/notebooks-kusto-kernel/run-kusto-notebook-cell.png" alt-text="셀 실행":::
+   :::image type="content" source="media/notebooks-kusto-kernel/run-kusto-notebook-cell.png" alt-text="Notebook 열기":::
 
 ## <a name="save-the-result-or-show-chart"></a>결과 저장 또는 차트 표시
 
@@ -102,7 +102,7 @@ Notebook의 Kusto 연결을 변경하려면 다음을 수행합니다.
     | limit 10
 ```
 
-:::image type="content" source="media/notebooks-kusto-kernel/run-notebook-save-results.png" alt-text="결과 저장":::
+:::image type="content" source="media/notebooks-kusto-kernel/run-notebook-save-results.png" alt-text="Notebook 열기":::
 
 ## <a name="known-issues"></a>알려진 문제
 
@@ -118,6 +118,6 @@ Notebook의 Kusto 연결을 변경하려면 다음을 수행합니다.
 Notebook에 대한 자세한 정보:
 
 - [Azure Data Studio용 Kusto(KQL) 확장](../extensions/kusto-extension.md)
-- [Azure Data Studio에서 Notebook을 사용하는 방법](../notebooks-guidance.md)
-- [Python 노트북 만들기 및 실행](../notebooks-tutorial-python-kernel.md)
-- [SQL Server Notebook 만들기 및 실행](../notebooks-tutorial-sql-kernel.md)
+- [Azure Data Studio에서 Notebook을 사용하는 방법](./notebooks-guidance.md)
+- [Python 노트북 만들기 및 실행](./notebooks-python-kernel.md)
+- [SQL Server Notebook 만들기 및 실행](./notebooks-sql-kernel.md)

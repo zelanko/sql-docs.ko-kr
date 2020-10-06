@@ -13,12 +13,12 @@ helpviewer_keywords:
 ms.assetid: 33f2f2d0-79e0-4107-9902-d67019b826aa
 author: MashaMSFT
 ms.author: mathoma
-ms.openlocfilehash: 9466f9434ff06d22b7dcabc1d42da6d1bae76014
-ms.sourcegitcommit: cc23d8646041336d119b74bf239a6ac305ff3d31
+ms.openlocfilehash: 0a180d924a4033b45bdcfe60746110bc560aa470
+ms.sourcegitcommit: c7f40918dc3ecdb0ed2ef5c237a3996cb4cd268d
 ms.translationtype: HT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 09/23/2020
-ms.locfileid: "91115066"
+ms.lasthandoff: 10/05/2020
+ms.locfileid: "91727880"
 ---
 # <a name="getting-started-with-always-on-availability-groups"></a>Always On 가용성 그룹 시작
 [!INCLUDE [SQL Server](../../../includes/applies-to-version/sqlserver.md)]
@@ -61,7 +61,7 @@ ms.locfileid: "91115066"
   
 |Task|링크|  
 |----------|----------|  
-|가용성 그룹의 [유연한 장애 조치(failover) 정책](../../../database-engine/availability-groups/windows/flexible-automatic-failover-policy-availability-group.md) 을 수정하여 자동 장애 조치를 수행해야 하는 상태를 제어합니다. 이 정책은 자동 장애 조치가 가능한 경우에만 유효합니다.|[가용성 그룹의 유연한 장애 조치(failover) 정책 구성](../../../database-engine/availability-groups/windows/configure-flexible-automatic-failover-policy.md)|  
+|가용성 그룹의 [유연한 장애 조치(failover) 정책](./configure-flexible-automatic-failover-policy.md) 을 수정하여 자동 장애 조치를 수행해야 하는 상태를 제어합니다. 이 정책은 자동 장애 조치가 가능한 경우에만 유효합니다.|[가용성 그룹의 유연한 장애 조치(failover) 정책 구성](../../../database-engine/availability-groups/windows/configure-flexible-automatic-failover-policy.md)|  
 |일반적으로 *강제 장애 조치(failover)* 라고 하는 강제 수동 장애 조치(failover)(데이터가 손실될 수 있음)나 계획된 수동 장애 조치(failover)를 수행합니다. 자세한 내용은 이 항목의 뒷부분에 나오는 [장애 조치(Failover) 및 장애 조치(Failover) 모드&#40;Always On 가용성 그룹&#41;](../../../database-engine/availability-groups/windows/failover-and-failover-modes-always-on-availability-groups.md)를 참조하세요.|[계획된 수동 장애 조치(failover) 수행](../../../database-engine/availability-groups/windows/perform-a-planned-manual-failover-of-an-availability-group-sql-server.md)<br /><br /> [강제 수동 장애 조치(failover) 수행](../../../database-engine/availability-groups/windows/perform-a-forced-manual-failover-of-an-availability-group-sql-server.md)|  
 |미리 정의된 일련의 정책을 사용하여 가용성 그룹과 해당 복제본 및 데이터베이스의 상태를 확인합니다.|[정책 기반 관리를 사용하여 가용성 그룹 상태 보기](../../../database-engine/availability-groups/windows/use-always-on-policies-to-view-the-health-of-an-availability-group-sql-server.md)<br /><br /> [Always On 그룹 대시보드 사용](../../../database-engine/availability-groups/windows/use-the-always-on-dashboard-sql-server-management-studio.md)|  
 |보조 복제본을 추가하거나 제거합니다.|[보조 복제본 추가](../../../database-engine/availability-groups/windows/add-a-secondary-replica-to-an-availability-group-sql-server.md)<br /><br /> [보조 복제본 제거](../../../database-engine/availability-groups/windows/remove-a-secondary-replica-from-an-availability-group-sql-server.md)|  
@@ -90,9 +90,9 @@ ms.locfileid: "91115066"
   
 -   **동영상 - Always On 심층 탐구:**  [Microsoft SQL Server 코드 이름 “Denali” Always On 시리즈, 2부: Always On을 사용하여 중요 업무용 고가용성 솔루션을 구축](https://channel9.msdn.com/Events/TechEd/NorthAmerica/2011/DBI404)  
   
--   **백서:**  [고가용성 및 재해 복구를 위한 Microsoft SQL Server Always On 솔루션 가이드](https://go.microsoft.com/fwlink/?LinkId=227600)  
+-   **백서:**  [고가용성 및 재해 복구를 위한 Microsoft SQL Server Always On 솔루션 가이드](/previous-versions/sql/sql-server-2012/hh781257(v=msdn.10))  
   
--   **블로그:**  [SQL Server Always On 팀 블로그: 공식 SQL Server Always On 팀 블로그](https://blogs.msdn.microsoft.com/sqlAlwaysOn/)  
+-   **블로그:**  [SQL Server Always On 팀 블로그: 공식 SQL Server Always On 팀 블로그](/archive/blogs/sqlalwayson/)  
   
 ## <a name="see-also"></a>참고 항목  
  [Always On 가용성 그룹&#40;SQL Server&#41;](../../../database-engine/availability-groups/windows/always-on-availability-groups-sql-server.md)   
@@ -102,5 +102,4 @@ ms.locfileid: "91115066"
  [가용성 그룹 모니터링&#40;SQL Server&#41;](../../../database-engine/availability-groups/windows/monitoring-of-availability-groups-sql-server.md)   
  [Always On 가용성 그룹에 대한 Transact-SQL 문 개요&#40;SQL Server&#41;](../../../database-engine/availability-groups/windows/transact-sql-statements-for-always-on-availability-groups.md)   
  [Always On 가용성 그룹에 대한 PowerShell Cmdlet 개요&#40;SQL Server&#41;](../../../database-engine/availability-groups/windows/overview-of-powershell-cmdlets-for-always-on-availability-groups-sql-server.md)  
-  
   

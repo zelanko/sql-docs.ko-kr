@@ -9,12 +9,12 @@ ms.author: davidph
 ms.reviewer: sstein
 ms.custom: ''
 ms.date: 05/19/2020
-ms.openlocfilehash: c965bc4bd9c6b235d192db58c82fac41f4f8b532
-ms.sourcegitcommit: e3460309b301a77d0babec032f53de330da001a9
+ms.openlocfilehash: 2977f25e09d3d634d479abd8371d010206edea90
+ms.sourcegitcommit: c7f40918dc3ecdb0ed2ef5c237a3996cb4cd268d
 ms.translationtype: HT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 09/24/2020
-ms.locfileid: "91137048"
+ms.lasthandoff: 10/05/2020
+ms.locfileid: "91725170"
 ---
 # <a name="manage-packages-in-database-with-machine-learning-extension-for-azure-data-studio-preview"></a>Azure Data Studio용 Machine Learning 확장(미리 보기)을 사용하여 데이터베이스의 패키지 관리
 
@@ -122,5 +122,5 @@ Machine Learning 확장을 사용하여 R 패키지를 설치하거나 제거할
 - [Azure Data Studio의 Machine Learning 확장](machine-learning-extension.md)
 - [예측 만들기](machine-learning-extension-predictions.md)
 - [모델 가져오기 또는 보기](machine-learning-extension-import-view-models.md)
-- [Azure Data Studio의 Notebook](../notebooks-guidance.md)
+- [Azure Data Studio의 Notebook](../notebooks/notebooks-guidance.md)
 - [SQL Machine Learning 설명서](../../machine-learning/index.yml)
