@@ -22,12 +22,12 @@ helpviewer_keywords:
 ms.assetid: 878c6c14-37ab-4b87-9854-7f8f42bac7dd
 author: markingmyname
 ms.author: maghan
-ms.openlocfilehash: 3b79e3a75f0b3590bcc0485a4d24b2a001bd8390
-ms.sourcegitcommit: dd36d1cbe32cd5a65c6638e8f252b0bd8145e165
+ms.openlocfilehash: b299ace817088af33732d9e4a9984d7978709f6c
+ms.sourcegitcommit: b93beb4f03aee2c1971909cb1d15f79cd479a35c
 ms.translationtype: HT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 09/08/2020
-ms.locfileid: "89548970"
+ms.lasthandoff: 09/29/2020
+ms.locfileid: "91498184"
 ---
 # <a name="receive-transact-sql"></a>RECEIVE(Transact-SQL)
 [!INCLUDE [SQL Server - ASDBMI](../../includes/applies-to-version/sql-asdbmi.md)]
@@ -39,7 +39,6 @@ ms.locfileid: "89548970"
 ## <a name="syntax"></a>구문  
   
 ```syntaxsql
-  
 [ WAITFOR ( ]  
     RECEIVE [ TOP ( n ) ]   
         <column_specifier> [ ,...n ]  
@@ -183,14 +182,14 @@ ms.locfileid: "89548970"
 ### <a name="a-receiving-all-columns-for-all-messages-in-a-conversation-group"></a>A. 대화 그룹의 모든 메시지에 대한 모든 열 받기  
  다음 예에서는 `ExpenseQueue` 큐에서 사용 가능한 다음 대화 그룹에 대한 모든 수신 가능한 메시지를 받습니다. 문은 결과 집합으로 메시지를 반환합니다.  
   
-```  
+```sql  
 RECEIVE * FROM ExpenseQueue ;  
 ```  
   
 ### <a name="b-receiving-specified-columns-for-all-messages-in-a-conversation-group"></a>B. 대화 그룹의 모든 메시지에 대해 지정된 열 받기  
  다음 예에서는 `ExpenseQueue` 큐에서 사용 가능한 다음 대화 그룹에 대한 모든 수신 가능한 메시지를 받습니다. 문은 `conversation_handle`, `message_type_name` 및 `message_body` 열을 포함하는 결과 집합으로 메시지를 반환합니다.  
   
-```  
+```sql  
 RECEIVE conversation_handle, message_type_name, message_body  
 FROM ExpenseQueue ;  
 ```  
@@ -198,14 +197,14 @@ FROM ExpenseQueue ;
 ### <a name="c-receiving-the-first-available-message-in-the-queue"></a>C. 큐에서 수신 가능한 첫 번째 메시지 받기  
  다음 예에서는 `ExpenseQueue` 큐에서 수신 가능한 첫 번째 메시지를 결과 집합으로 받습니다.  
   
-```  
+```sql  
 RECEIVE TOP (1) * FROM ExpenseQueue ;  
 ```  
   
 ### <a name="d-receiving-all-messages-for-a-specified-conversation"></a>D. 지정된 대화에 대한 모든 메시지 받기  
  다음 예에서는 `ExpenseQueue` 큐에서 지정된 대화에 대해 수신 가능한 모든 메시지를 결과 집합으로 받습니다.  
   
-```  
+```sql  
 DECLARE @conversation_handle UNIQUEIDENTIFIER ;  
   
 SET @conversation_handle = <retrieve conversation from database> ;  
@@ -218,7 +217,7 @@ WHERE conversation_handle = @conversation_handle ;
 ### <a name="e-receiving-messages-for-a-specified-conversation-group"></a>E. 지정된 대화 그룹에 대한 메시지 받기  
  다음 예에서는 `ExpenseQueue` 큐에서 지정된 대화 그룹에 대해 수신 가능한 모든 메시지를 결과 집합으로 받습니다.  
   
-```  
+```sql  
 DECLARE @conversation_group_id UNIQUEIDENTIFIER ;  
   
 SET @conversation_group_id =   
@@ -232,7 +231,7 @@ WHERE conversation_group_id = @conversation_group_id ;
 ### <a name="f-receiving-into-a-table-variable"></a>F. 테이블 변수로 받기  
  다음 예에서는 `ExpenseQueue` 큐에서 지정된 대화 그룹에 대해 수신 가능한 모든 메시지를 테이블 변수로 받습니다.  
   
-```  
+```sql  
 DECLARE @conversation_group_id UNIQUEIDENTIFIER ;  
   
 DECLARE @procTable TABLE(  
@@ -264,7 +263,7 @@ WHERE conversation_group_id = @conversation_group_id ;
 ### <a name="g-receiving-messages-and-waiting-indefinitely"></a>G. 메시지 받기 및 무기한 대기  
  다음 예에서는 `ExpenseQueue` 큐에서 사용 가능한 다음 대화 그룹에 대한 모든 수신 가능한 메시지를 받습니다. 문은 적어도 하나 이상의 메시지를 사용할 수 있을 때까지 대기한 다음 모든 메시지 열을 포함하는 결과 집합을 반환합니다.  
   
-```  
+```sql  
 WAITFOR (  
     RECEIVE *  
     FROM ExpenseQueue) ;  
@@ -273,7 +272,7 @@ WAITFOR (
 ### <a name="h-receiving-messages-and-waiting-for-a-specified-interval"></a>H. 메시지 받기 및 지정된 기간 동안 대기  
  다음 예에서는 `ExpenseQueue` 큐에서 사용 가능한 다음 대화 그룹에 대한 모든 수신 가능한 메시지를 받습니다. 문은 어떤 경우가 먼저 발생하는지에 관계없이 60초 동안 대기하거나 적어도 하나 이상의 메시지를 사용할 수 있을 때까지 대기합니다. 적어도 하나 이상의 메시지를 사용할 수 있으면 문은 모든 메시지 열을 포함하는 결과 집합을 반환합니다. 그렇지 않으면 빈 결과 집합을 반환합니다.  
   
-```  
+```sql  
 WAITFOR (  
     RECEIVE *  
     FROM ExpenseQueue ),  
@@ -283,7 +282,7 @@ TIMEOUT 60000 ;
 ### <a name="i-receiving-messages-modifying-the-type-of-a-column"></a>9\. 메시지 받기, 열의 유형 수정  
  다음 예에서는 `ExpenseQueue` 큐에서 사용 가능한 다음 대화 그룹에 대한 모든 수신 가능한 메시지를 받습니다. 메시지 유형이 메시지에 XML 문서가 포함되어 있음을 나타내면 문은 메시지 본문을 XML로 변환합니다.  
   
-```  
+```sql  
 WAITFOR (  
     RECEIVE message_type_name,  
         CASE  
@@ -297,7 +296,7 @@ TIMEOUT 60000 ;
 ### <a name="j-receiving-a-message-extracting-data-from-the-message-body-retrieving-conversation-state"></a>J. 메시지 받기, 메시지 본문에서 데이터 추출, 대화 상태 검색  
  다음 예에서는 `ExpenseQueue` 큐에서 사용 가능한 다음 대화 그룹에 대해 수신 가능한 다음 메시지를 받습니다. 메시지가 `//Adventure-Works.com/Expenses/SubmitExpense` 유형이면 문은 메시지 본문에서 직원 ID와 항목 목록을 추출합니다. 또한 문은 `ConversationState` 테이블에서 대화의 상태를 검색합니다.  
   
-```  
+```sql  
 WAITFOR(  
     RECEIVE   
     TOP(1)  

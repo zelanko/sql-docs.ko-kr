@@ -22,12 +22,12 @@ helpviewer_keywords:
 ms.assetid: 77158a9a-d638-4818-90a1-cb2eb57df514
 author: markingmyname
 ms.author: maghan
-ms.openlocfilehash: ec03d8cd7b6e29bf3241b1646ec7c2e92c41b39a
-ms.sourcegitcommit: da88320c474c1c9124574f90d549c50ee3387b4c
+ms.openlocfilehash: bb0fe13f5a15a726235c306c7b6b3c6b79bcef2c
+ms.sourcegitcommit: 2f868a77903c1f1c4cecf4ea1c181deee12d5b15
 ms.translationtype: HT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 07/01/2020
-ms.locfileid: "85789803"
+ms.lasthandoff: 10/02/2020
+ms.locfileid: "91669679"
 ---
 # <a name="logging-in-to-sql-server"></a>SQL Server로 로그인
  [!INCLUDE [SQL Server](../../includes/applies-to-version/sqlserver.md)]
@@ -86,13 +86,12 @@ WHERE session_id = @@SPID;
   
 -   [SQL Server 데이터베이스 엔진에 대한 연결 문제를 해결하는 방법](https://social.technet.microsoft.com/wiki/contents/articles/how-to-troubleshoot-connecting-to-the-sql-server-database-engine.aspx)  
   
--   [SQL 연결 문제를 해결하는 단계](https://docs.microsoft.com/archive/blogs/sql_protocols/steps-to-troubleshoot-sql-connectivity-issues)  
+-   [SQL 연결 문제를 해결하는 단계](/archive/blogs/sql_protocols/steps-to-troubleshoot-sql-connectivity-issues)  
   
 ## <a name="related-content"></a>관련 내용  
  [인증 모드 선택](../../relational-databases/security/choose-an-authentication-mode.md)  
   
- [sqlcmd 유틸리티 사용](../../relational-databases/scripting/sqlcmd-use-the-utility.md)  
+ [sqlcmd 유틸리티 사용](../../ssms/scripting/sqlcmd-use-the-utility.md)  
   
  [로그인 만들기](../../t-sql/lesson-2-configuring-permissions-on-database-objects.md)
-  
   

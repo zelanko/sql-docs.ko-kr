@@ -20,12 +20,12 @@ helpviewer_keywords:
 ms.assetid: c45e1086-c25b-48bb-a764-4a893e983db2
 author: VanMSFT
 ms.author: vanto
-ms.openlocfilehash: 8114ca6e50f28c4c603285affd05478c297bf881
-ms.sourcegitcommit: edba1c570d4d8832502135bef093aac07e156c95
+ms.openlocfilehash: 5926b71c2626ddea858190b6a135151abaa28586
+ms.sourcegitcommit: b93beb4f03aee2c1971909cb1d15f79cd479a35c
 ms.translationtype: HT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 07/20/2020
-ms.locfileid: "86485147"
+ms.lasthandoff: 09/29/2020
+ms.locfileid: "91497803"
 ---
 # <a name="revoke-database-principal-permissions-transact-sql"></a>REVOKE 데이터베이스 보안 주체 사용 권한(Transact-SQL)
 [!INCLUDE [SQL Server SQL Database](../../includes/applies-to-version/sql-asdb.md)]
@@ -37,7 +37,6 @@ ms.locfileid: "86485147"
 ## <a name="syntax"></a>구문  
   
 ```syntaxsql
-  
 REVOKE [ GRANT OPTION FOR ] permission [ ,...n ]    
     ON   
     {  [ USER :: database_user ]  
@@ -165,7 +164,7 @@ REVOKE [ GRANT OPTION FOR ] permission [ ,...n ]
 ### <a name="a-revoking-control-permission-on-a-user-from-another-user"></a>A. 다른 사용자로부터 사용자에 대한 CONTROL 권한 취소  
  다음 예에서는 사용자 `CONTROL`로부터 [!INCLUDE[ssSampleDBobject](../../includes/sssampledbobject-md.md)] 사용자 `Wanida`에 대한 `RolandX` 권한을 취소합니다.  
   
-```  
+```sql  
 USE AdventureWorks2012;  
 REVOKE CONTROL ON USER::Wanida FROM RolandX;  
 GO  
@@ -174,7 +173,7 @@ GO
 ### <a name="b-revoking-view-definition-permission-on-a-role-from-a-user-to-which-it-was-granted-with-grant-option"></a>B. WITH GRANT OPTION이 부여된 사용자로부터 역할에 대한 VIEW DEFINITION 권한 취소  
  다음 예에서는 데이터베이스 사용자 `VIEW DEFINITION`로부터 [!INCLUDE[ssSampleDBobject](../../includes/sssampledbobject-md.md)] 역할 `SammamishParking`에 대한 `JinghaoLiu` 권한을 취소합니다. 사용자 `CASCADE`에게 `JinghaoLiu` 권한 `VIEW DEFINITION`이 부여되었기 때문에 `WITH GRANT OPTION` 옵션이 지정됩니다.  
   
-```  
+```sql 
 USE AdventureWorks2012;  
 REVOKE VIEW DEFINITION ON ROLE::SammamishParking   
     FROM JinghaoLiu CASCADE;  
@@ -186,7 +185,7 @@ GO
   
 **적용 대상**: [!INCLUDE[ssKatmai](../../includes/sskatmai-md.md)] 이상, [!INCLUDE[sqldbesa](../../includes/sqldbesa-md.md)].
   
-```  
+```sql  
 USE AdventureWorks2012;  
 REVOKE IMPERSONATE ON USER::HamithaL FROM AccountsPayable17;  
 GO    

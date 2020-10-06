@@ -25,12 +25,12 @@ helpviewer_keywords:
 ms.assetid: 4415a126-cd22-4a5e-b84a-d8c68515c83b
 author: markingmyname
 ms.author: maghan
-ms.openlocfilehash: 6eafb66e4cc5f14803027d26f88dbf4baafbcd0c
-ms.sourcegitcommit: dd36d1cbe32cd5a65c6638e8f252b0bd8145e165
+ms.openlocfilehash: 94fcbdfe06b99e0fb66cb6d462512c7d2a283914
+ms.sourcegitcommit: b93beb4f03aee2c1971909cb1d15f79cd479a35c
 ms.translationtype: HT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 09/08/2020
-ms.locfileid: "89540637"
+ms.lasthandoff: 09/29/2020
+ms.locfileid: "91497933"
 ---
 # <a name="end-conversation-transact-sql"></a>END CONVERSATION(Transact-SQL)
 [!INCLUDE [SQL Server - ASDBMI](../../includes/applies-to-version/sql-asdbmi.md)]
@@ -42,7 +42,6 @@ ms.locfileid: "89540637"
 ## <a name="syntax"></a>구문  
   
 ```syntaxsql
-  
 END CONVERSATION conversation_handle  
    [   [ WITH ERROR = failure_code DESCRIPTION = 'failure_text' ]  
      | [ WITH CLEANUP ]  
@@ -96,14 +95,14 @@ END CONVERSATION conversation_handle
 ### <a name="a-ending-a-conversation"></a>A. 대화 종료  
  다음 예에서는 `@dialog_handle`로 지정된 대화를 종료합니다.  
   
-```  
+```sql 
 END CONVERSATION @dialog_handle ;  
 ```  
   
 ### <a name="b-ending-a-conversation-with-an-error"></a>B. 오류가 발생하여 대화 종료  
  다음 예에서는 처리 문이 오류를 보고할 경우 오류가 발생한 `@dialog_handle` 대화를 종료합니다. 이는 가장 간단한 오류 처리 방법이지만 일부 애플리케이션에는 적합하지 않을 수 있습니다.  
   
-```  
+```sql  
 DECLARE @dialog_handle UNIQUEIDENTIFIER,  
         @ErrorSave INT,  
         @ErrorDesc NVARCHAR(100) ;  
@@ -128,7 +127,7 @@ COMMIT TRANSACTION ;
 ### <a name="c-cleaning-up-a-conversation-that-cannot-complete-normally"></a>C. 정상적으로 완료할 수 없는 대화 정리  
  다음 예에서는 `@dialog_handle`로 지정된 대화를 종료합니다. [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]는 원격 서비스에게 알리지 않고 서비스 큐와 전송 큐에서 모든 메시지를 즉시 제거합니다. 정리를 사용하여 대화 상자를 종료하면 원격 서비스에 알리지 않으므로 이 방법은 원격 서비스가 **EndDialog** 또는 **Error** 메시지를 받을 수 없는 경우에만 사용해야 합니다.  
   
-```  
+```sql  
 END CONVERSATION @dialog_handle WITH CLEANUP ;  
 ```  
   

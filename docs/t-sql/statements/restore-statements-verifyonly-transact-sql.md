@@ -24,12 +24,12 @@ ms.assetid: cba3b6a0-b48e-4c94-812b-5b3cbb408bd6
 author: MikeRayMSFT
 ms.author: mikeray
 monikerRange: =azuresqldb-mi-current||>=sql-server-2016||=sqlallproducts-allversions||>=sql-server-linux-2017
-ms.openlocfilehash: cfa7ad3f583eea2253c29042e0be3fbe58026b33
-ms.sourcegitcommit: e700497f962e4c2274df16d9e651059b42ff1a10
+ms.openlocfilehash: d198e47b3faf8cb7efc81a4075d90407f75dfb59
+ms.sourcegitcommit: b93beb4f03aee2c1971909cb1d15f79cd479a35c
 ms.translationtype: HT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 08/17/2020
-ms.locfileid: "88303972"
+ms.lasthandoff: 09/29/2020
+ms.locfileid: "91498026"
 ---
 # <a name="restore-statements---verifyonly-transact-sql"></a>RESTORE 문 - VERIFYONLY(Transact-SQL)
 [!INCLUDE[tsql-appliesto-ss2008-asdbmi-xxxx-xxx-md](../../includes/tsql-appliesto-ss2008-asdbmi-xxxx-xxx-md.md )]
@@ -46,7 +46,6 @@ ms.locfileid: "88303972"
 ## <a name="syntax"></a>구문  
   
 ```syntaxsql
-  
 RESTORE VERIFYONLY  
 FROM <backup_device> [ ,...n ]  
 [ WITH    
@@ -125,7 +124,7 @@ FROM <backup_device> [ ,...n ]
 ## <a name="examples"></a>예제  
  다음 예제에서는 디스크에서 백업을 확인합니다.
   
-```  
+```sql  
 RESTORE VERIFYONLY FROM DISK = 'D:\AdventureWorks.bak';
 GO
 ```  

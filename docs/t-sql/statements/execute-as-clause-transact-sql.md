@@ -26,12 +26,12 @@ helpviewer_keywords:
 ms.assetid: bd517aa3-f06e-4356-87d8-70de5df4494a
 author: VanMSFT
 ms.author: vanto
-ms.openlocfilehash: 999773d8e8406dac20f86e9f19a2b886a4988619
-ms.sourcegitcommit: e700497f962e4c2274df16d9e651059b42ff1a10
+ms.openlocfilehash: e41272ce78e5bfb0dd1a0f746a11d6700ac11c59
+ms.sourcegitcommit: b93beb4f03aee2c1971909cb1d15f79cd479a35c
 ms.translationtype: HT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 08/17/2020
-ms.locfileid: "88358409"
+ms.lasthandoff: 09/29/2020
+ms.locfileid: "91498158"
 ---
 # <a name="execute-as-clause-transact-sql"></a>EXECUTE AS 절(Transact-SQL)
 [!INCLUDE [SQL Server SQL Database](../../includes/applies-to-version/sql-asdb.md)]
@@ -60,7 +60,6 @@ Queues
 ```  
   
 ```syntaxsql
-  
 -- Azure SQL Database Syntax  
 Functions (except inline table-valued functions), Stored Procedures, and DML Triggers  
   
@@ -155,7 +154,7 @@ DDL Triggers with Database Scope
   
  다음 `CREATE PROCEDURE` 문을 실행하면 `CompanyDomain\SqlUser1` 데이터베이스에서 `Sales`이 데이터베이스 보안 주체로 암시적으로 생성됩니다.  
   
-```  
+```sql  
 USE Sales;  
 GO  
 CREATE PROCEDURE dbo.usp_Demo  
@@ -170,7 +169,7 @@ GO
   
  `SqlUser2`가 다음 저장 프로시저를 호출한다고 가정합니다.  
   
-```  
+```sql  
 CREATE PROCEDURE dbo.usp_Demo  
 WITH EXECUTE AS 'SqlUser1'  
 AS  
@@ -202,7 +201,7 @@ GO
 ## <a name="examples"></a>예제  
  다음 예에서는 [!INCLUDE[ssSampleDBnormal](../../includes/sssampledbnormal-md.md)] 데이터베이스에 저장 프로시저를 만들고 실행 컨텍스트를 `OWNER`로 할당합니다.  
   
-```  
+```sql  
 CREATE PROCEDURE HumanResources.uspEmployeesInDepartment   
 @DeptValue int  
 WITH EXECUTE AS OWNER  
@@ -221,7 +220,6 @@ GO
 -- Execute the stored procedure by specifying department 5.  
 EXECUTE HumanResources.uspEmployeesInDepartment 5;  
 GO  
-  
 ```  
   
 ## <a name="see-also"></a>관련 항목  

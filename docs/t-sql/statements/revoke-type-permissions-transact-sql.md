@@ -17,12 +17,12 @@ helpviewer_keywords:
 ms.assetid: 3969c7e9-ca10-4c67-971b-25d2dfccf650
 author: VanMSFT
 ms.author: vanto
-ms.openlocfilehash: 3565cb96bc39b1f51cf5c1c64a25abf1766ad695
-ms.sourcegitcommit: e700497f962e4c2274df16d9e651059b42ff1a10
+ms.openlocfilehash: 3f2dc28c6d703102ef9d01797f1fe2127e0180ab
+ms.sourcegitcommit: b93beb4f03aee2c1971909cb1d15f79cd479a35c
 ms.translationtype: HT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 08/17/2020
-ms.locfileid: "88426485"
+ms.lasthandoff: 09/29/2020
+ms.locfileid: "91497861"
 ---
 # <a name="revoke-type-permissions-transact-sql"></a>REVOKE 유형 사용 권한(Transact-SQL)
 [!INCLUDE [SQL Server SQL Database](../../includes/applies-to-version/sql-asdb.md)]
@@ -34,7 +34,6 @@ ms.locfileid: "88426485"
 ## <a name="syntax"></a>구문  
   
 ```syntaxsql
-  
 REVOKE [ GRANT OPTION FOR ] permission [ ,...n ]   
     ON TYPE :: [ schema_name ]. type_name   
     { FROM | TO } <database_principal> [ ,...n ]   
@@ -133,7 +132,7 @@ REVOKE [ GRANT OPTION FOR ] permission [ ,...n ]
 ## <a name="examples"></a>예제  
  다음 예에서는 사용자 `VIEW DEFINITION`로부터 사용자 정의 형식 `PhoneNumber`에 대한 `KhalidR` 권한을 취소합니다. `CASCADE` 옵션은 `VIEW DEFINITION` 권한도 `KhalidR`이 부여한 보안 주체로부터 취소됨을 나타냅니다. `PhoneNumber`는 스키마 `Telemarketing`에 있습니다.  
   
-```  
+```sql  
 REVOKE VIEW DEFINITION ON TYPE::Telemarketing.PhoneNumber   
     FROM KhalidR CASCADE;  
 GO  

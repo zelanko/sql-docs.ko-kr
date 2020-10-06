@@ -15,12 +15,12 @@ ms.assetid: 5a3b7424-408e-4cb0-8957-667ebf4596fc
 author: VanMSFT
 ms.author: vanto
 monikerRange: '>= aps-pdw-2016 || = azure-sqldw-latest || = sqlallproducts-allversions'
-ms.openlocfilehash: 7704b286c89942ccb7b6345789514b11a9ec3765
-ms.sourcegitcommit: 8f062015c2a033f5a0d805ee4adabbe15e7c8f94
+ms.openlocfilehash: 113b8dfd288eccff391f9c72df3647955770b916
+ms.sourcegitcommit: b93beb4f03aee2c1971909cb1d15f79cd479a35c
 ms.translationtype: HT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 09/25/2020
-ms.locfileid: "91227164"
+ms.lasthandoff: 09/29/2020
+ms.locfileid: "91498066"
 ---
 # <a name="permissions-grant-deny-revoke-azure-synapse-analytics-parallel-data-warehouse"></a>사용 권한: GRANT, DENY, REVOKE(Azure Synapse Analytics, 병렬 데이터 웨어하우스)
 [!INCLUDE[applies-to-version/asa-pdw](../../includes/applies-to-version/asa-pdw.md)]
@@ -269,55 +269,55 @@ REVOKE
 ### <a name="a-granting-a-server-level-permission-to-a-login"></a>A. 로그인에 서버 수준 사용 권한 부여  
  다음 두 문은 로그인에 서버 수준 사용 권한을 부여합니다.  
   
-```  
+```sql  
 GRANT CONTROL SERVER TO [Ted];  
 ```  
   
-```  
+```sql  
 GRANT ALTER ANY DATABASE TO Mary;  
 ```  
   
 ### <a name="b-granting-a-server-level-permission-to-a-login"></a>B. 로그인에 서버 수준 사용 권한 부여  
  다음 예에서는 서버 보안 주체(다른 로그인)에 하는 로그인에 서버 수준 사용 권한을 부여합니다.  
   
-```  
+```sql  
 GRANT  VIEW DEFINITION ON LOGIN::Ted TO Mary;  
 ```  
   
 ### <a name="c-granting-a-database-level-permission-to-a-user"></a>C. 사용자에게 데이터베이스 수준 사용 권한 부여  
  다음 예에서는 데이터베이스 보안 주체(다른 사용자)의 사용자에게 데이터베이스 수준 사용 권한을 부여합니다.  
   
-```  
+```sql  
 GRANT VIEW DEFINITION ON USER::[Ted] TO Mary;  
 ```  
   
 ### <a name="d-granting-denying-and-revoking-a-schema-permission"></a>D. 스키마 사용 권한 부여, 거부 및 취소  
  다음 **GRANT** 문은 Yuen에게 dbo 스키마 내의 모든 테이블 또는 뷰에서 데이터를 선택할 수 있는 기능을 부여합니다.  
   
-```  
+```sql  
 GRANT SELECT ON SCHEMA::dbo TO [Yuen];  
 ```  
   
  다음 **DENY** 문은 Yuen에게 dbo 스키마 내의 모든 테이블 또는 뷰에서 데이터를 선택할 수 없도록 합니다. Yuen은 역할 멤버 자격과 같은 일부 다른 방법으로 사용 권한을 가졌다 하더라도 데이터를 읽을 수 없습니다.  
   
-```  
+```sql  
 DENY SELECT ON SCHEMA::dbo TO [Yuen];  
 ```  
   
  다음 **REVOKE** 문은 **DENY** 권한을 제거합니다. 현재 Yuen의 명시적 사용 권한은 중립적입니다. Yuen은 역할 멤버 자격과 같은 일부 다른 암시적 사용 권한을 통해 모든 테이블에서 데이터를 선택할 수 있습니다.  
   
-```  
+```sql  
 REVOKE SELECT ON SCHEMA::dbo TO [Yuen];  
 ```  
   
 ### <a name="e-demonstrating-the-optional-object-clause"></a>E. 선택적 OBJECT :: 절 표시  
  OBJECT는 사용 권한 문에 대한 기본 클래스이므로 다음 두 명령문은 동일합니다. **OBJECT::** 절은 선택 사항입니다.  
   
-```  
+```sql  
 GRANT UPDATE ON OBJECT::dbo.StatusTable TO [Ted];  
 ```  
   
-```  
+```sql  
 GRANT UPDATE ON dbo.StatusTable TO [Ted];  
 ```  
   

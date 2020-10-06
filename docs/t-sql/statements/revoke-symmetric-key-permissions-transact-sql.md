@@ -17,12 +17,12 @@ helpviewer_keywords:
 ms.assetid: 091da030-a768-4aa3-9509-cc23bd719cea
 author: VanMSFT
 ms.author: vanto
-ms.openlocfilehash: ac402c441a0640eb565e41697e89f6ab68a60df1
-ms.sourcegitcommit: e700497f962e4c2274df16d9e651059b42ff1a10
+ms.openlocfilehash: f2cf21933a4be93770fed34fb1600ab45409d40e
+ms.sourcegitcommit: b93beb4f03aee2c1971909cb1d15f79cd479a35c
 ms.translationtype: HT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 08/17/2020
-ms.locfileid: "88478699"
+ms.lasthandoff: 09/29/2020
+ms.locfileid: "91498017"
 ---
 # <a name="revoke-symmetric-key-permissions-transact-sql"></a>REVOKE 대칭 키 사용 권한(Transact-SQL)
 [!INCLUDE [SQL Server SQL Database](../../includes/applies-to-version/sql-asdb.md)]
@@ -34,7 +34,6 @@ ms.locfileid: "88478699"
 ## <a name="syntax"></a>구문  
   
 ```syntaxsql
-  
 REVOKE [ GRANT OPTION FOR ] permission [ ,...n ]    
     ON SYMMETRIC KEY :: symmetric_key_name   
         { TO | FROM } <database_principal> [ ,...n ]   
@@ -123,7 +122,7 @@ REVOKE [ GRANT OPTION FOR ] permission [ ,...n ]
 ## <a name="examples"></a>예제  
  다음 예에서는 사용자 `ALTER` 및 `SamInventory42`가 `HamidS` 권한을 부여한 다른 보안 주체로부터 대칭 키 `HamidS`에 대한 `ALTER` 권한을 취소합니다.  
   
-```  
+```sql  
 USE AdventureWorks2012;  
 REVOKE ALTER ON SYMMETRIC KEY::SamInventory42 TO HamidS CASCADE;  
 GO  

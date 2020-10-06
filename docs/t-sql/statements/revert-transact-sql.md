@@ -24,12 +24,12 @@ ms.assetid: 4688b17a-dfd1-4f03-8db4-273a401f879f
 author: VanMSFT
 ms.author: vanto
 monikerRange: = azuresqldb-current || = azuresqldb-mi-current || >= sql-server-2016 || >= sql-server-linux-2017 || = sqlallproducts-allversions||=azure-sqldw-latest
-ms.openlocfilehash: 1ac73076f7528b8c7fcb329540211cce9eee891e
-ms.sourcegitcommit: e700497f962e4c2274df16d9e651059b42ff1a10
+ms.openlocfilehash: e8ae0325029d458df85c3250e96002a075945f88
+ms.sourcegitcommit: b93beb4f03aee2c1971909cb1d15f79cd479a35c
 ms.translationtype: HT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 08/17/2020
-ms.locfileid: "88496694"
+ms.lasthandoff: 09/29/2020
+ms.locfileid: "91498030"
 ---
 # <a name="revert-transact-sql"></a>REVERT(Transact-SQL)
 [!INCLUDE [SQL Server SQL Database](../../includes/applies-to-version/sql-asdb-asdbmi-asa.md)]   
@@ -40,8 +40,7 @@ ms.locfileid: "88496694"
   
 ## <a name="syntax"></a>구문  
   
-```  
-  
+```syntaxsql
 REVERT  
     [ WITH COOKIE = @varbinary_variable ]  
 ```  
@@ -55,7 +54,7 @@ REVERT
 ## <a name="remarks"></a>설명  
  REVERT는 저장 프로시저 또는 사용자 정의 함수 같은 모듈 내에서 지정하거나 독립 실행형 문으로 지정할 수 있습니다. 모듈 내에서 지정하면 REVERT는 모듈에 정의된 EXECUTE AS 문에만 적용할 수 있습니다. 예를 들어 다음 저장 프로시저는 `EXECUTE AS` 문과 `REVERT` 문을 차례로 실행합니다.  
   
-```  
+```sql  
 CREATE PROCEDURE dbo.usp_myproc   
   WITH EXECUTE AS CALLER  
 AS   
@@ -69,7 +68,7 @@ GO
   
  저장 프로시저가 실행되는 세션에서 실행 컨텍스트는 다음 예와 같이 `login1`로 명시적으로 변경된다고 가정합니다.  
   
-```  
+```sql 
   -- Sets the execution context of the session to 'login1'.  
 EXECUTE AS LOGIN = 'login1';  
 GO  
@@ -93,7 +92,7 @@ EXECUTE dbo.usp_myproc;
 ### <a name="a-using-execute-as-and-revert-to-switch-context"></a>A. EXECUTE AS 및 REVERT를 사용하여 컨텍스트 전환  
  다음 예에서는 여러 보안 주체를 사용하여 컨텍스트 실행 스택을 만듭니다. 그런 다음 REVERT 문을 사용하여 실행 컨텍스트를 이전 호출자로 다시 설정합니다. REVERT 문은 실행 컨텍스트가 원래 호출자로 설정될 때까지 스택 위로 이동하면서 여러 번 실행됩니다.  
   
-```  
+```sql  
 USE AdventureWorks2012;  
 GO  
 -- Create two temporary principals.  
@@ -137,8 +136,8 @@ GO
 ### <a name="b-using-the-with-cookie-clause"></a>B. WITH COOKIE 절 사용  
  다음 예에서는 세션 실행 컨텍스트를 지정한 사용자로 설정하고 WITH NO REVERT COOKIE = @*varbinary_variable* 절을 지정합니다. 컨텍스트를 호출자로 되돌리려면 `REVERT` 문에 `@cookie` 문의 `EXECUTE AS` 변수로 전달되는 값을 지정해야 합니다. 이 예를 실행하려면 예 1에서 생성된 `login1` 로그인 및 `user1` 사용자가 있어야 합니다.  
   
-```  
-DECLARE @cookie varbinary(100);  
+```sql 
+DECLARE @cookie VARBINARY(100);  
 EXECUTE AS USER = 'user1' WITH COOKIE INTO @cookie;  
 -- Store the cookie somewhere safe in your application.  
 -- Verify the context switch.  
@@ -147,7 +146,7 @@ SELECT SUSER_NAME(), USER_NAME();
 SELECT @cookie;  
 GO  
 -- Use the cookie in the REVERT statement.  
-DECLARE @cookie varbinary(100);  
+DECLARE @cookie VARBINARY(100);  
 -- Set the cookie value to the one from the SELECT @cookie statement.  
 SET @cookie = <value from the SELECT @cookie statement>;  
 REVERT WITH COOKIE = @cookie;  

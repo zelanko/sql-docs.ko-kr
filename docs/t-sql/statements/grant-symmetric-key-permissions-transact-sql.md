@@ -20,12 +20,12 @@ helpviewer_keywords:
 ms.assetid: 5c61557f-67ae-4e55-b86d-713575b27cea
 author: VanMSFT
 ms.author: vanto
-ms.openlocfilehash: e9a9656d9e9b353bb66b93d58e226c052123c4b7
-ms.sourcegitcommit: e700497f962e4c2274df16d9e651059b42ff1a10
+ms.openlocfilehash: ac4d0a1f93cdda3bcc93569772795fe8141d5248
+ms.sourcegitcommit: b93beb4f03aee2c1971909cb1d15f79cd479a35c
 ms.translationtype: HT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 08/17/2020
-ms.locfileid: "88358189"
+ms.lasthandoff: 09/29/2020
+ms.locfileid: "91498246"
 ---
 # <a name="grant-symmetric-key-permissions-transact-sql"></a>GRANT 대칭 키 사용 권한(Transact-SQL)
 [!INCLUDE [SQL Server SQL Database](../../includes/applies-to-version/sql-asdb.md)]
@@ -37,7 +37,6 @@ ms.locfileid: "88358189"
 ## <a name="syntax"></a>구문  
   
 ```syntaxsql
-  
 GRANT permission [ ,...n ]    
     ON SYMMETRIC KEY :: symmetric_key_name   
     TO <database_principal> [ ,...n ] [ WITH GRANT OPTION ]  
@@ -131,7 +130,7 @@ GRANT permission [ ,...n ]
 ## <a name="examples"></a>예제  
  다음 예에서는 데이터베이스 사용자 `ALTER`에 대칭 키 `SamInventory42`에 대한 `HamidS` 권한을 부여합니다.  
   
-```  
+```sql
 USE AdventureWorks2012;  
 GRANT ALTER ON SYMMETRIC KEY::SamInventory42 TO HamidS;  
 GO  

@@ -21,12 +21,12 @@ ms.assetid: abd5ec8c-1a0e-4d38-a374-8ce3401bc60c
 author: markingmyname
 ms.author: maghan
 monikerRange: '>=aps-pdw-2016||=azure-sqldw-latest||>=sql-server-2016||=sqlallproducts-allversions||>=sql-server-linux-2017||=azuresqldb-mi-current'
-ms.openlocfilehash: c1beca4564978fc069a896eadd42ed257dc28414
-ms.sourcegitcommit: 3efd8bbf91f4f78dce3a4ac03348037d8c720e6a
+ms.openlocfilehash: 9f9db43b930baffc31529a3e36fb014225957a39
+ms.sourcegitcommit: d56a834269132a83e5fe0a05b033936776cda8bb
 ms.translationtype: HT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 09/23/2020
-ms.locfileid: "91024368"
+ms.lasthandoff: 09/29/2020
+ms.locfileid: "91529394"
 ---
 # <a name="create-external-file-format-transact-sql"></a>CREATE EXTERNAL FILE FORMAT(Transact-SQL)
 [!INCLUDE [sqlserver2016-asdbmi-asa-pdw](../../includes/applies-to-version/sqlserver2016-asdbmi-asa-pdw.md)]
@@ -322,7 +322,6 @@ PolyBase 로드 중에 모든 파일에서 첫 번째로 읽을 행 번호를 �
    `Encoding = {'UTF8' | 'UTF16'}`
    
  [!INCLUDE[ssSDW](../../includes/sssdwfull-md.md)] 및 [!INCLUDE[ssPDW](../../includes/sspdw-md.md)](APS CU7.4)에서 PolyBase는 UTF8 및 UTF16-LE로 인코딩되어 있는 분리된 텍스트 파일을 읽을 수 있습니다. SQL Server에서는 PolyBase가 UTF16 인코딩 파일 읽기를 지원하지 않습니다.
-
 
 ## <a name="permissions"></a>사용 권한  
  ALTER ANY EXTERNAL FILE FORMAT 권한이 필요합니다.

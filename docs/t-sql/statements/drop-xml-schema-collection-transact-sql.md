@@ -23,12 +23,12 @@ helpviewer_keywords:
 ms.assetid: d686f2f5-e03a-4ffe-a566-6036628f46f1
 author: MightyPen
 ms.author: genemi
-ms.openlocfilehash: f644ba5a1e42c309cc481d2ba7b42e6973d940e3
-ms.sourcegitcommit: e700497f962e4c2274df16d9e651059b42ff1a10
+ms.openlocfilehash: 77977886f4ccfca9fa41e4bdb685ac76ff96ff99
+ms.sourcegitcommit: b93beb4f03aee2c1971909cb1d15f79cd479a35c
 ms.translationtype: HT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 08/17/2020
-ms.locfileid: "88496722"
+ms.lasthandoff: 09/29/2020
+ms.locfileid: "91497859"
 ---
 # <a name="drop-xml-schema-collection-transact-sql"></a>DROP XML SCHEMA COLLECTION(Transact-SQL)
 [!INCLUDE [SQL Server](../../includes/applies-to-version/sqlserver.md)]
@@ -39,8 +39,7 @@ ms.locfileid: "88496722"
   
 ## <a name="syntax"></a>구문  
   
-```  
-  
+```syntaxsql
 DROP XML SCHEMA COLLECTION [ relational_schema. ]sql_identifier  
 ```  
   
@@ -64,7 +63,7 @@ XML 스키마 컬렉션을 삭제하는 것은 트랜잭션 작업입니다. 트
   
 -   스키마 바운드 함수 또는 저장 프로시저에서 참조하는 컬렉션. 예를 들어 다음 함수는 `WITH SCHEMABINDING`을 지정하기 때문에 `MyCollection` XML 스키마 컬렉션을 잠급니다. 이것을 제거하면 XML SCHEMA COLLECTION에 대한 잠금이 사라집니다.  
   
-    ```  
+    ```sql  
     CREATE FUNCTION dbo.MyFunction()  
     RETURNS int  
     WITH SCHEMABINDING  
@@ -82,7 +81,7 @@ XML SCHEMA COLLECTION을 삭제하려면 이 컬렉션에 대한 DROP 권한이 
 ## <a name="examples"></a>예제  
 다음 예에서는 XML 스키마 컬렉션을 제거하는 것을 보여 줍니다.  
   
-```  
+```sql  
 DROP XML SCHEMA COLLECTION ManuInstructionsSchemaCollection;  
 GO  
 ```  

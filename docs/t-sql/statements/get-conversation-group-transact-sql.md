@@ -25,12 +25,12 @@ helpviewer_keywords:
 ms.assetid: 4da8a855-33c0-43b2-a49d-527487cb3b5c
 author: markingmyname
 ms.author: maghan
-ms.openlocfilehash: 16b73d0d01f4507dfb1a53596ca6ed38c49fd78a
-ms.sourcegitcommit: dd36d1cbe32cd5a65c6638e8f252b0bd8145e165
+ms.openlocfilehash: e433b0ba5513396d732c1230f8e3ce43539e3976
+ms.sourcegitcommit: b93beb4f03aee2c1971909cb1d15f79cd479a35c
 ms.translationtype: HT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 09/08/2020
-ms.locfileid: "89548992"
+ms.lasthandoff: 09/29/2020
+ms.locfileid: "91497873"
 ---
 # <a name="get-conversation-group-transact-sql"></a>GET CONVERSATION GROUP(Transact-SQL)
 [!INCLUDE [SQL Server - ASDBMI](../../includes/applies-to-version/sql-asdbmi.md)]
@@ -41,8 +41,7 @@ ms.locfileid: "89548992"
   
 ## <a name="syntax"></a>구문  
   
-```syntaxsql
-  
+```syntaxsql 
 [ WAITFOR ( ]  
    GET CONVERSATION GROUP @conversation_group_id  
       FROM <queue>  
@@ -106,7 +105,7 @@ ms.locfileid: "89548992"
 ### <a name="a-getting-a-conversation-group-waiting-indefinitely"></a>A. 무한 대기하여 대화 그룹 가져오기  
  다음 예에서는 `@conversation_group_id`를 `ExpenseQueue`에 있는 사용 가능한 다음 메시지의 대화 그룹 식별자로 설정합니다. 명령은 메시지를 사용할 수 있게 될 때까지 대기합니다.  
   
-```  
+```sql  
 DECLARE @conversation_group_id UNIQUEIDENTIFIER ;  
   
 WAITFOR (  
@@ -118,7 +117,7 @@ WAITFOR (
 ### <a name="b-getting-a-conversation-group-waiting-one-minute"></a>B. 1분간 대기하여 대화 그룹 가져오기  
  다음 예에서는 `@conversation_group_id`를 `ExpenseQueue`에 있는 사용 가능한 다음 메시지의 대화 그룹 식별자로 설정합니다. 1분 이내에 사용 가능한 메시지가 없으면 GET CONVERSATION GROUP이 `@conversation_group_id` 값을 그대로 반환합니다.  
   
-```  
+```sql  
 DECLARE @conversation_group_id UNIQUEIDENTIFIER  
   
 WAITFOR (  
@@ -130,7 +129,7 @@ TIMEOUT 60000 ;
 ### <a name="c-getting-a-conversation-group-returning-immediately"></a>C. 즉시 실행하여 대화 그룹 가져오기  
  다음 예에서는 `@conversation_group_id`를 `ExpenseQueue`에 있는 사용 가능한 다음 메시지의 대화 그룹 식별자로 설정합니다. 사용 가능한 메시지가 없으면 `GET CONVERSATION GROUP`은 `@conversation_group_id`를 변경하지 않은 채 즉시 반환합니다.  
   
-```  
+```sql  
 DECLARE @conversation_group_id UNIQUEIDENTIFIER ;  
   
 GET CONVERSATION GROUP @conversation_group_id  

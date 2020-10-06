@@ -22,12 +22,12 @@ helpviewer_keywords:
 ms.assetid: 4cbed281-5e1e-4d8b-b410-4c18a6cd0205
 author: VanMSFT
 ms.author: vanto
-ms.openlocfilehash: e60093d5a81d01a88daac53593b2be721652df42
-ms.sourcegitcommit: e700497f962e4c2274df16d9e651059b42ff1a10
+ms.openlocfilehash: 76dd1d69fe66b5165bdf3cad21c3d5b513c6bbe5
+ms.sourcegitcommit: b93beb4f03aee2c1971909cb1d15f79cd479a35c
 ms.translationtype: HT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 08/17/2020
-ms.locfileid: "88472212"
+ms.lasthandoff: 09/29/2020
+ms.locfileid: "91498237"
 ---
 # <a name="grant-server-principal-permissions-transact-sql"></a>GRANT 서버 보안 주체 사용 권한(Transact-SQL)
 [!INCLUDE [SQL Server](../../includes/applies-to-version/sqlserver.md)]
@@ -39,7 +39,6 @@ ms.locfileid: "88472212"
 ## <a name="syntax"></a>구문  
   
 ```syntaxsql
-  
 GRANT permission [ ,...n ] }   
     ON   
     { [ LOGIN :: SQL_Server_login ]  
@@ -115,7 +114,7 @@ GRANT permission [ ,...n ] }
 ### <a name="a-granting-impersonate-permission-on-a-login"></a>A. 로그인에 IMPERSONATE 권한 부여  
  다음 예에서는 Windows 사용자 `AdvWorks\YoonM`에서 생성된 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 로그인에게 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 로그인 `WanidaBenshoof`에 대한 `IMPERSONATE` 권한을 부여합니다.  
   
-```  
+```sql  
 USE master;  
 GRANT IMPERSONATE ON LOGIN::WanidaBenshoof to [AdvWorks\YoonM];  
 GO  
@@ -124,7 +123,7 @@ GO
 ### <a name="b-granting-view-definition-permission-with-grant-option"></a>B. GRANT OPTION을 지정하여 VIEW DEFINITION 권한 부여  
  다음 예에서는 `VIEW DEFINITION`으로 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 로그인 `EricKurjan`에 대해 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 로그인 `RMeyyappan`에 대한 `GRANT OPTION`을 부여합니다.  
   
-```  
+```sql  
 USE master;  
 GRANT VIEW DEFINITION ON LOGIN::EricKurjan TO RMeyyappan   
     WITH GRANT OPTION;  
@@ -134,7 +133,7 @@ GO
 ### <a name="c-granting-view-definition-permission-on-a-server-role"></a>C. 서버 역할에 대한 VIEW DEFINITION 권한 부여  
  다음 예에서는 `VIEW DEFINITION` 서버 역할에 대한 `Sales`을 `Auditors` 서버 역할에 부여합니다.  
   
-```  
+```sql  
 USE master;  
 GRANT VIEW DEFINITION ON SERVER ROLE::Sales TO Auditors ;  
 GO   

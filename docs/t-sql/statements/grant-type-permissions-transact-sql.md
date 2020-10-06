@@ -18,12 +18,12 @@ helpviewer_keywords:
 ms.assetid: 14bd2fb3-1446-49c0-be87-c6a670317ed0
 author: VanMSFT
 ms.author: vanto
-ms.openlocfilehash: 1b9130d9da029cdd759a672de680270f0e2fb27b
-ms.sourcegitcommit: e700497f962e4c2274df16d9e651059b42ff1a10
+ms.openlocfilehash: 1eced05b0eb6a293a4bb2eb21880e2181effa750
+ms.sourcegitcommit: b93beb4f03aee2c1971909cb1d15f79cd479a35c
 ms.translationtype: HT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 08/17/2020
-ms.locfileid: "88426565"
+ms.lasthandoff: 09/29/2020
+ms.locfileid: "91498127"
 ---
 # <a name="grant-type-permissions-transact-sql"></a>GRANT 유형 사용 권한(Transact-SQL)
 [!INCLUDE [SQL Server SQL Database](../../includes/applies-to-version/sql-asdb.md)]
@@ -35,7 +35,6 @@ ms.locfileid: "88426565"
 ## <a name="syntax"></a>구문  
   
 ```syntaxsql
-  
 GRANT permission  [ ,...n ] ON TYPE :: [ schema_name . ] type_name  
     TO <database_principal> [ ,...n ]  
     [ WITH GRANT OPTION ]  
@@ -137,7 +136,7 @@ GRANT permission  [ ,...n ] ON TYPE :: [ schema_name . ] type_name
 ## <a name="examples"></a>예제  
  다음 예에서는 `VIEW DEFINITION`을 사용하여 사용자 `GRANT OPTION`에 대해 사용자 정의 형식 `PhoneNumber`에 대한 `KhalidR` 권한을 부여합니다. `PhoneNumber`는 `Telemarketing` 스키마에 있습니다.  
   
-```  
+```sql  
 GRANT VIEW DEFINITION ON TYPE::Telemarketing.PhoneNumber   
     TO KhalidR WITH GRANT OPTION;  
 GO  

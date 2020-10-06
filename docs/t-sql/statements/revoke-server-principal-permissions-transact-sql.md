@@ -21,12 +21,12 @@ helpviewer_keywords:
 ms.assetid: 75409024-f150-4326-af16-9d60e900df18
 author: VanMSFT
 ms.author: vanto
-ms.openlocfilehash: 03dc120975d50edb743911b3c9973b94a15b3ceb
-ms.sourcegitcommit: edba1c570d4d8832502135bef093aac07e156c95
+ms.openlocfilehash: 1e2b53af6fd42d77e2169862074ac61c63dc5042
+ms.sourcegitcommit: b93beb4f03aee2c1971909cb1d15f79cd479a35c
 ms.translationtype: HT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 07/20/2020
-ms.locfileid: "86485361"
+ms.lasthandoff: 09/29/2020
+ms.locfileid: "91498003"
 ---
 # <a name="revoke-server-principal-permissions-transact-sql"></a>REVOKE 서버 보안 주체 사용 권한(Transact-SQL)
 [!INCLUDE [SQL Server](../../includes/applies-to-version/sqlserver.md)]
@@ -38,7 +38,6 @@ ms.locfileid: "86485361"
 ## <a name="syntax"></a>구문  
   
 ```syntaxsql
-  
 REVOKE [ GRANT OPTION FOR ] permission [ ,...n ] }   
     ON   
     { [ LOGIN :: SQL_Server_login ]  
@@ -119,7 +118,7 @@ REVOKE [ GRANT OPTION FOR ] permission [ ,...n ] }
 ### <a name="a-revoking-impersonate-permission-on-a-login"></a>A. 로그인에 대한 IMPERSONATE 권한 취소  
  다음 예에서는 사용자 `AdvWorks\YoonM`에서 생성된 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 로그인에게 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 로그인 `WanidaBenshoof`에 대한 `IMPERSONATE` 권한을 취소합니다.  
   
-```  
+```sql  
 USE master;  
 REVOKE IMPERSONATE ON LOGIN::WanidaBenshoof FROM [AdvWorks\YoonM];  
 GO  
@@ -128,7 +127,7 @@ GO
 ### <a name="b-revoking-view-definition-permission-with-cascade"></a>B. CASCADE를 지정하여 VIEW DEFINITION 권한 취소  
  다음 예에서는 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 로그인 `VIEW DEFINITION`으로부터 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 로그인 `EricKurjan`에 대한 `RMeyyappan` 권한을 취소합니다. `CASCADE` 옵션은 `VIEW DEFINITION`에 대한 `EricKurjan` 권한도 `RMeyyappan`이 이 사용 권한을 부여한 보안 주체로부터 취소됨을 나타냅니다.  
   
-```  
+```sql  
 USE master;  
 REVOKE VIEW DEFINITION ON LOGIN::EricKurjan FROM RMeyyappan   
     CASCADE;  
@@ -138,7 +137,7 @@ GO
 ### <a name="c-revoking-view-definition-permission-on-a-server-role"></a>C. 서버 역할에 대한 VIEW DEFINITION 권한 취소  
  다음 예에서는 `VIEW DEFINITION` 서버 역할에 대한 `Sales`을 `Auditors` 서버 역할에서 취소합니다.  
   
-```  
+```sql  
 USE master;  
 REVOKE VIEW DEFINITION ON SERVER ROLE::Sales TO Auditors ;  
 GO   

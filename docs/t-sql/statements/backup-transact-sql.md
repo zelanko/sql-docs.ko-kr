@@ -47,12 +47,12 @@ ms.assetid: 89a4658a-62f1-4289-8982-f072229720a1
 author: MikeRayMSFT
 ms.author: mikeray
 monikerRange: '>=sql-server-2016||>=sql-server-linux-2017||=azuresqldb-mi-current||>=aps-pdw-2016||=sqlallproducts-allversions'
-ms.openlocfilehash: afcf2e560b5fd4300c02ddf6bcc548ef68fdc05b
-ms.sourcegitcommit: 3efd8bbf91f4f78dce3a4ac03348037d8c720e6a
+ms.openlocfilehash: d043d7613467381b0c19dfb2ac2ee2ee4ec0e523
+ms.sourcegitcommit: d56a834269132a83e5fe0a05b033936776cda8bb
 ms.translationtype: HT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 09/23/2020
-ms.locfileid: "91024572"
+ms.lasthandoff: 09/29/2020
+ms.locfileid: "91529424"
 ---
 # <a name="backup-transact-sql"></a>BACKUP(Transact-SQL)
 
@@ -1229,7 +1229,7 @@ DIFFERENTIAL 사용자 데이터베이스의 차등 백업을 수행하도록 �
 ::: moniker range=">=aps-pdw-2016||>=sql-server-2016||>=sql-server-linux-2017||=sqlallproducts-allversions"
 ## <a name="general-remarks"></a>일반적인 주의 사항
 
-데이터베이스 백업을 수행하기 전에 [DBCC SHRINKLOG([!INCLUDE[ssPDW](../../includes/sspdw-md.md)])](../../t-sql/database-console-commands/dbcc-shrinklog-azure-sql-data-warehouse.md)를 사용하여 데이터베이스 크기를 줄입니다. 
+데이터베이스 백업을 수행하기 전에 [DBCC SHRINKLOG([!INCLUDE[ssSDW](../../includes/sssdwfull-md.md)])](../../t-sql/database-console-commands/dbcc-shrinklog-azure-sql-data-warehouse.md)를 사용하여 데이터베이스 크기를 줄입니다.
 
 [!INCLUDE[ssPDW](../../includes/sspdw-md.md)] 백업은 동일한 디렉토리에 여러 파일의 집합으로 저장됩니다.
 

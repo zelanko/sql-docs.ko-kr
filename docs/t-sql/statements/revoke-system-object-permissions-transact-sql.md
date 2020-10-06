@@ -16,12 +16,12 @@ helpviewer_keywords:
 ms.assetid: 84983238-dd7d-45bd-99bb-52c9d8e96a87
 author: VanMSFT
 ms.author: vanto
-ms.openlocfilehash: 98a4987e056b8475216bfb4e99fa2fe81582f881
-ms.sourcegitcommit: e700497f962e4c2274df16d9e651059b42ff1a10
+ms.openlocfilehash: c7485325af023c264193fcc8ce8a449553dcb0b9
+ms.sourcegitcommit: b93beb4f03aee2c1971909cb1d15f79cd479a35c
 ms.translationtype: HT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 08/17/2020
-ms.locfileid: "88478733"
+ms.lasthandoff: 09/29/2020
+ms.locfileid: "91498045"
 ---
 # <a name="revoke-system-object-permissions-transact-sql"></a>REVOKE 시스템 개체 사용 권한(Transact-SQL)
 [!INCLUDE [SQL Server](../../includes/applies-to-version/sqlserver.md)]
@@ -33,7 +33,6 @@ ms.locfileid: "88478733"
 ## <a name="syntax"></a>구문  
   
 ```syntaxsql
-  
 REVOKE { SELECT | EXECUTE } ON [sys.]system_object FROM principal   
 ```  
   
@@ -69,7 +68,7 @@ REVOKE { SELECT | EXECUTE } ON [sys.]system_object FROM principal
 ## <a name="examples"></a>예  
  다음 예에서는 `EXECUTE`으로부터 `sp_addlinkedserver`에 대한 `public` 권한을 취소합니다.  
   
-```  
+```sql  
 REVOKE EXECUTE ON sys.sp_addlinkedserver FROM public;  
 GO  
 ```  
