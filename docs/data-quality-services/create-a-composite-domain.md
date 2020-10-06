@@ -13,12 +13,12 @@ f1_keywords:
 ms.assetid: c7f0bd84-a02e-4a81-885d-985e6415c499
 author: swinarko
 ms.author: sawinark
-ms.openlocfilehash: 2ea7a9297f7a2f5e05a23bcab32b10922847882b
-ms.sourcegitcommit: e700497f962e4c2274df16d9e651059b42ff1a10
+ms.openlocfilehash: 2da6f9cf82d189647d8b13ec864403134d6af571
+ms.sourcegitcommit: c7f40918dc3ecdb0ed2ef5c237a3996cb4cd268d
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 08/17/2020
-ms.locfileid: "88449899"
+ms.lasthandoff: 10/05/2020
+ms.locfileid: "91728034"
 ---
 # <a name="create-a-composite-domain"></a>복합 도메인 만들기
 
@@ -90,7 +90,7 @@ ms.locfileid: "88449899"
   
 5.  구문 분석 방법에 대해 **구분 기호** 를 선택한 경우 **기술 자료 구문 분석 사용**을 선택할 수도 있습니다. 자세한 내용은 [Knowledge-Based Parsing](#KnowledgeBaseParsing)을 참조하세요.  
   
-6.  **마침** 을 클릭하여 [도메인 관리 작업 종료](https://msdn.microsoft.com/library/ab6505ad-3090-453b-bb01-58435e7fa7c0)에 설명된 대로 도메인 관리 작업을 완료합니다.  
+6.  **마침** 을 클릭하여 [도메인 관리 작업 종료](/previous-versions/sql/sql-server-2016/hh510411(v=sql.130))에 설명된 대로 도메인 관리 작업을 완료합니다.  
   
 ##  <a name="follow-up-after-creating-a-composite-domain"></a><a name="FollowUp"></a> 후속 작업: 복합 도메인을 만든 후  
  복합 도메인을 만든 후 도메인에 대해 다른 도메인 관리 태스크를 수행하거나, 기술 자료 검색을 수행하여 도메인에 정보를 추가하거나, 도메인에 일치 정책을 추가할 수 있습니다. 자세한 내용은 [기술 자료 검색 수행](../data-quality-services/perform-knowledge-discovery.md), [도메인 관리](../data-quality-services/managing-a-domain.md) 또는 [일치 정책 만들기](../data-quality-services/create-a-matching-policy.md)를 참조하세요.  
@@ -103,5 +103,4 @@ ms.locfileid: "88449899"
  기술 자료 구문 분석은 복합 도메인이 문자열 도메인으로 구성되거나 여러 유형(int, date, time 등)이 혼합된 도메인으로 구성된 경우에 사용될 수 있습니다. 데이터 원본이 여러 데이터 형식으로 구성된 경우에는 먼저 문자열이 아닌 데이터 형식에 대한 구문 분석이 수행된 후 위에 설명된 대로 도메인 기술 자료에 따라 데이터의 나머지 부분에 대한 구문 분석이 수행됩니다.  
   
  기술 자료 구문 분석을 사용할 때 원본 데이터의 값 수가 복합 도메인의 도메인 수보다 적은 경우에는 DQS에서 누락된 도메인에 Null을 삽입합니다. 원본 데이터의 값 수가 복합 도메인의 도메인 수보다 많은 경우에는 DQS에서 열 중 하나에 추가 데이터를 추가합니다. 둘 이상의 도메인에 같은 값이 포함된 경우 데이터 원본은 첫 번째 일치하는 도메인으로 구문 분석됩니다.  
-  
   
