@@ -13,12 +13,12 @@ helpviewer_keywords:
 ms.assetid: 2738ce65-205e-4682-92d8-dc7e37c58b2b
 author: MashaMSFT
 ms.author: mathoma
-ms.openlocfilehash: a4ee9154593b5c1d2d3d1bdf083796134d441fad
-ms.sourcegitcommit: 827ad02375793090fa8fee63cc372d130f11393f
+ms.openlocfilehash: dd1fe3943fe3e5c36dc60df147a2c2ec77a4dac2
+ms.sourcegitcommit: 2f868a77903c1f1c4cecf4ea1c181deee12d5b15
 ms.translationtype: HT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 09/04/2020
-ms.locfileid: "89480820"
+ms.lasthandoff: 10/02/2020
+ms.locfileid: "91670136"
 ---
 # <a name="prerequisites-to-convert-log-shipping-to-always-on-availability-groups"></a>로그 전달을 Always On 가용성 그룹으로 변환하기 위한 필수 구성 요소
 [!INCLUDE [SQL Server](../../../includes/applies-to-version/sqlserver.md)]
@@ -59,7 +59,7 @@ ms.locfileid: "89480820"
   
  **자세한 내용은 다음을 참조하세요.**  
   
- [로그 전달 구성을 가용성 그룹으로 변환](https://blogs.msdn.microsoft.com/sqlalwayson/2012/01/09/converting-a-logshipping-configuration-to-availability-group/)(SQL Server 블로그)  
+ [로그 전달 구성을 가용성 그룹으로 변환](/archive/blogs/sqlalwayson/converting-a-logshipping-configuration-to-availability-group)(SQL Server 블로그)  
   
 ##  <a name="related-tasks"></a><a name="RelatedTasks"></a> 관련 작업  
  **로그 전달**  
@@ -86,19 +86,19 @@ ms.locfileid: "89480820"
   
 -   **블로그:**  
   
-     [로그 전달 구성을 가용성 그룹으로 변환](https://blogs.msdn.microsoft.com/sqlalwayson/2012/01/09/converting-a-logshipping-configuration-to-availability-group/)  
+     [로그 전달 구성을 가용성 그룹으로 변환](/archive/blogs/sqlalwayson/converting-a-logshipping-configuration-to-availability-group)  
   
-     [기존 가용성 그룹에 로그 전달 주 데이터베이스 및 보조 데이터베이스 추가](https://blogs.msdn.microsoft.com/sqlalwayson/2012/02/01/add-a-log-shipping-primary-database-and-secondary-databases-to-an-existing-availability-group/)  
+     [기존 가용성 그룹에 로그 전달 주 데이터베이스 및 보조 데이터베이스 추가](/archive/blogs/sqlalwayson/add-a-log-shipping-primary-database-and-secondary-databases-to-an-existing-availability-group)  
   
-     [SQL Server Always On 팀 블로그: 공식 SQL Server Always On 팀 블로그](https://blogs.msdn.microsoft.com/sqlalwayson/)  
+     [SQL Server Always On 팀 블로그: 공식 SQL Server Always On 팀 블로그](/archive/blogs/sqlalwayson/)  
   
-     [CSS SQL Server 엔지니어 블로그](https://docs.microsoft.com/archive/blogs/psssql/)  
+     [CSS SQL Server 엔지니어 블로그](/archive/blogs/psssql/)  
   
 -   **백서:**  
   
-     [마이그레이션 가이드: 데이터베이스 미러링 및 로그 전달을 조합하는 이전 배포에서 Always On 가용성 그룹으로 마이그레이션](https://msdn.microsoft.com/library/jj635217)  
+     [마이그레이션 가이드: 데이터베이스 미러링 및 로그 전달을 조합하는 이전 배포에서 Always On 가용성 그룹으로 마이그레이션](/previous-versions/sql/sql-server-2012/jj635217(v=msdn.10))  
   
-     [SQL Server 2012에 대한 Microsoft 백서](https://msdn.microsoft.com/library/hh403491.aspx)  
+     [SQL Server 2012에 대한 Microsoft 백서](https://social.technet.microsoft.com/wiki/contents/articles/13146.white-paper-gallery-for-sql-server.aspx#[Category]SQLServer2012)  
   
      [SQL Server 고객 자문 팀 백서](https://techcommunity.microsoft.com/t5/DataCAT/bg-p/DataCAT/)  
   
@@ -106,5 +106,4 @@ ms.locfileid: "89480820"
  [로그 전달 정보&#40;SQL Server&#41;](../../../database-engine/log-shipping/about-log-shipping-sql-server.md)   
  [Always On 가용성 그룹 개요&#40;SQL Server&#41;](../../../database-engine/availability-groups/windows/overview-of-always-on-availability-groups-sql-server.md)   
  [가용성 그룹 모니터링&#40;SQL Server&#41;](../../../database-engine/availability-groups/windows/monitoring-of-availability-groups-sql-server.md)  
-  
   

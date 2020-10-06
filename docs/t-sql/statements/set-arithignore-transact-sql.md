@@ -24,12 +24,12 @@ ms.assetid: 71b2c2a5-c83a-4dfe-8469-237987a6e503
 author: markingmyname
 ms.author: maghan
 monikerRange: '>=aps-pdw-2016||=azuresqldb-current||=azure-sqldw-latest||>=sql-server-2016||=sqlallproducts-allversions||>=sql-server-linux-2017||=azuresqldb-mi-current'
-ms.openlocfilehash: ba7569c7145fddd44a5ba8cd8138a5a16fab368a
-ms.sourcegitcommit: 8f062015c2a033f5a0d805ee4adabbe15e7c8f94
+ms.openlocfilehash: 1ca2f675704741c0bd48c8ffbf6be6037065075c
+ms.sourcegitcommit: 2f868a77903c1f1c4cecf4ea1c181deee12d5b15
 ms.translationtype: HT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 09/25/2020
-ms.locfileid: "91226787"
+ms.lasthandoff: 10/02/2020
+ms.locfileid: "91670852"
 ---
 # <a name="set-arithignore-transact-sql"></a>SET ARITHIGNORE(Transact-SQL)
 [!INCLUDE [sql-asdb-asdbmi-asa-pdw](../../includes/applies-to-version/sql-asdb-asdbmi-asa-pdw.md)]
@@ -53,6 +53,8 @@ SET ARITHIGNORE OFF
 ```
 
 [!INCLUDE[sql-server-tsql-previous-offline-documentation](../../includes/sql-server-tsql-previous-offline-documentation.md)]
+
+[!INCLUDE[synapse-analytics-od-unsupported-syntax](../../includes/synapse-analytics-od-unsupported-syntax.md)]
 
 ## <a name="remarks"></a>설명
  SET ARITHIGNORE 설정은 오류 메시지 반환 여부만 제어합니다. [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]는 이 설정에 관계없이 오버플로 또는 0으로 나누기 오류와 연관된 계산에서 NULL을 반환합니다. SET ARITHABORT 설정을 사용하여 쿼리 종료 여부를 결정할 수 있습니다. 그러나 이 설정은 INSERT, UPDATE, DELETE 문 실행 중에 발생한 오류에는 영향을 주지 않습니다.  

@@ -19,12 +19,12 @@ ms.assetid: 9d77af64-9084-4375-908a-d90f99535062
 author: MashaMSFT
 ms.author: mathoma
 monikerRange: '>=sql-server-2016||=sqlallproducts-allversions'
-ms.openlocfilehash: edeb881f5d589e0a2e09848cc4b4c7f7c958f9ba
-ms.sourcegitcommit: f7ac1976d4bfa224332edd9ef2f4377a4d55a2c9
+ms.openlocfilehash: 68efda5b93663c2980e10f49c9b8592d08ee02d6
+ms.sourcegitcommit: 2f868a77903c1f1c4cecf4ea1c181deee12d5b15
 ms.translationtype: HT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 07/02/2020
-ms.locfileid: "85900178"
+ms.lasthandoff: 10/02/2020
+ms.locfileid: "91670234"
 ---
 # <a name="view-and-read-sql-server-setup-log-files"></a>SQL Server 설치 로그 파일 보기 및 읽기
 
@@ -128,7 +128,7 @@ SQL Server 설치 프로그램은 기본적으로 **\%programfiles%\Microsoft SQ
 ## <a name="configurationfileini-file"></a>ConfigurationFile.ini 파일
   
 ### <a name="overview"></a>개요  
- 구성 파일은 설치 중에 제공된 입력 설정을 포함합니다. 이 파일을 사용하면 수동으로 설정을 입력하지 않고도 설치를 다시 시작할 수 있습니다. 그러나 계정의 암호, PID 및 일부 매개 변수는 구성 파일에 저장되지 않습니다. 이러한 설정은 파일에 추가하거나 명령줄 또는 설치 사용자 인터페이스를 사용하여 제공할 수 있습니다. 자세한 내용은 [구성 파일을 사용하여 SQL Server 2016 설치](../../database-engine/install-windows/install-sql-server-2016-using-a-configuration-file.md)를 참조하세요.  
+ 구성 파일은 설치 중에 제공된 입력 설정을 포함합니다. 이 파일을 사용하면 수동으로 설정을 입력하지 않고도 설치를 다시 시작할 수 있습니다. 그러나 계정의 암호, PID 및 일부 매개 변수는 구성 파일에 저장되지 않습니다. 이러한 설정은 파일에 추가하거나 명령줄 또는 설치 사용자 인터페이스를 사용하여 제공할 수 있습니다. 자세한 내용은 [구성 파일을 사용하여 SQL Server 2016 설치](./install-sql-server-using-a-configuration-file.md)를 참조하세요.  
   
 ### <a name="location"></a>위치  
  ConfigurationFile.ini는 %programfiles%\\[!INCLUDE[msCoName](../../includes/msconame-md.md)][!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]\\*nnn*\Setup Bootstrap\Log\\<YYYYMMDD_HHMM>\\에 있습니다.  

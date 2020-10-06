@@ -11,12 +11,12 @@ ms.assetid: 8b7810b2-637e-46a3-9fe1-d055898ba639
 author: MashaMSFT
 ms.author: mathoma
 monikerRange: '>=sql-server-2016||=sqlallproducts-allversions'
-ms.openlocfilehash: 98a7fefe85c953cfb186951ff69e287288fa0ac0
-ms.sourcegitcommit: dec2e2d3582c818cc9489e6a824c732b91ec3aeb
+ms.openlocfilehash: 1eafd49be2b0617f1e3d6b6b3c9309103097c00b
+ms.sourcegitcommit: 2f868a77903c1f1c4cecf4ea1c181deee12d5b15
 ms.translationtype: HT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 08/11/2020
-ms.locfileid: "88091994"
+ms.lasthandoff: 10/02/2020
+ms.locfileid: "91671079"
 ---
 # <a name="install-sql-server-with-smb-fileshare-storage"></a>SMB 파일 공유 스토리지를 사용하여 SQL Server 설치
 
@@ -36,7 +36,7 @@ ms.locfileid: "88091994"
   
 -   \\\ServerName\ShareName  
   
- 범용 명명 규칙에 대한 자세한 내용은 [UNC](https://msdn.microsoft.com/library/gg465305.aspx)를 참조하세요.  
+ 범용 명명 규칙에 대한 자세한 내용은 [UNC](/openspecs/windows_protocols/ms-dtyp/62e862f4-2a51-452e-8eeb-dc4ff5ee33cc)를 참조하세요.  
   
  루프백 UNC 경로(서버 이름이 localhost, 127.0.0.1또는 로컬 컴퓨터 이름인 UNC 경로)는 지원되지 않습니다. 특별한 경우이기는 하지만 같은 노드 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 에서 호스팅되는 파일 서버 클러스터를 사용한 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 실행도 지원되지 않습니다. 이러한 상황이 발생하지 않게 하려면 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 와 파일 서버 클러스터를 별도의 Windows 클러스터에 만드는 것이 좋습니다.  
   
@@ -53,7 +53,7 @@ ms.locfileid: "88091994"
 ### <a name="supported-data-definition-language-ddl-statements"></a>지원되는 DDL(데이터 정의 언어) 문  
  다음 [!INCLUDE[tsql](../../includes/tsql-md.md)] DDL 문과 데이터베이스 엔진 저장 프로시저는 SMB 파일 공유를 지원합니다.  
   
-1.  [CREATE DATABASE&#40;SQL Server Transact-SQL&#41;](../../t-sql/statements/create-database-sql-server-transact-sql.md)  
+1.  [CREATE DATABASE&#40;SQL Server Transact-SQL&#41;](../../t-sql/statements/create-database-transact-sql.md)  
   
 2.  [ALTER DATABASE&#40;Transact-SQL&#41;](../../t-sql/statements/alter-database-transact-sql.md)  
   
@@ -79,7 +79,7 @@ ms.locfileid: "88091994"
     setup.exe /q /ACTION=InstallFailoverCluster /InstanceName=MSSQLSERVER /INDICATEPROGRESS /ASSYSADMINACCOUNTS="<DomainName\UserName>" /ASDATADIR=<Drive>:\OLAP\Data /ASLOGDIR=<Drive>:\OLAP\Log /ASBACKUPDIR=<Drive>:\OLAP\Backup /ASCONFIGDIR=<Drive>:\OLAP\Config /ASTEMPDIR=<Drive>:\OLAP\Temp /FAILOVERCLUSTERDISKS="<Cluster Disk Resource Name - for example, 'Disk S:'" /FAILOVERCLUSTERNETWORKNAME="<Insert Network Name>" /FAILOVERCLUSTERIPADDRESSES="IPv4;xx.xxx.xx.xx;Cluster Network;xxx.xxx.xxx.x" /FAILOVERCLUSTERGROUP="MSSQLSERVER" /Features=AS,SQL /ASSVCACCOUNT="<DomainName\UserName>" /ASSVCPASSWORD="xxxxxxxxxxx" /AGTSVCACCOUNT="<DomainName\UserName>" /AGTSVCPASSWORD="xxxxxxxxxxx" /INSTALLSQLDATADIR="\\FileServer\Share1\" /SQLCOLLATION="SQL_Latin1_General_CP1_CS_AS" /SQLSVCACCOUNT="<DomainName\UserName>" /SQLSVCPASSWORD="xxxxxxxxxxx" /SQLSYSADMINACCOUNTS="<DomainName\UserName> /IACCEPTSQLSERVERLICENSETERMS  
     ```  
   
-     [!INCLUDE[ssCurrent](../../includes/sscurrent-md.md)]의 다양한 명령줄 매개 변수 옵션의 사용법에 대한 자세한 내용은 [명령 프롬프트에서 SQL Server 2016 설치](../../database-engine/install-windows/install-sql-server-2016-from-the-command-prompt.md)를 참조하세요.  
+     [!INCLUDE[ssCurrent](../../includes/sscurrent-md.md)]의 다양한 명령줄 매개 변수 옵션의 사용법에 대한 자세한 내용은 [명령 프롬프트에서 SQL Server 2016 설치](./install-sql-server-from-the-command-prompt.md)를 참조하세요.  
   
 ## <a name="operating-system-considerations-smb-protocol-vs-ssnoversion"></a>운영 체제 고려 사항(SMB 프로토콜 대 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)])  
  Windows 운영 체제마다 포함되어 있는 SMB 프로토콜 버전이 다르며 SMB 프로토콜 버전은 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]에 투명합니다. [!INCLUDE[ssCurrent](../../includes/sscurrent-md.md)]와 관련하여 다른 SMB 프로토콜 버전의 이점을 찾을 수 있습니다.  
@@ -87,13 +87,13 @@ ms.locfileid: "88091994"
 |운영 체제|SMB2 프로토콜 버전|이점 - [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]|  
 |----------------------|---------------------------|-------------------------------------------|  
 |[!INCLUDE[firstref_longhorn](../../includes/firstref-longhorn-md.md)] SP 2|2.0|이전 SMB 버전보다 성능이 향상되었습니다.<br /><br /> 내구성. 일시적인 네트워크 결함을 복구하는 데 도움이 됩니다.|  
-|[!INCLUDE[winserver2008r2](../../includes/winserver2008r2-md.md)] SP 1(Server Core 포함)|2.1|대형 MTU 지원. SQL 백업 및 복원과 같은 대량 데이터 전송에 유용합니다. 이 기능은 사용자가 사용하도록 설정해야 합니다. 이 기능을 사용하는 방법에 대한 자세한 내용은 [SMB의 새로운 기능](https://go.microsoft.com/fwlink/?LinkID=237319)(https://go.microsoft.com/fwlink/?LinkID=237319) 을 참조하세요.<br /><br /> 크게 향상된 성능(특히 SQL OLTP 스타일 작업의 경우) 이러한 향상된 성능을 활용하려면 핫픽스를 적용해야 합니다. 핫픽스에 대한 자세한 내용은 [이 항목](https://go.microsoft.com/fwlink/?LinkId=237320)(https://go.microsoft.com/fwlink/?LinkId=237320) )을 참조하세요.|  
-|[!INCLUDE[win8srv](../../includes/win8srv-md.md)](Server Core 포함)|3.0|파일 서버 클러스터 구성에서 SQL DBA 또는 파일 서버 관리자에게 필요한 관리자 개입이 없고 작동 중단 시간이 없는 파일 공유의 투명한 장애 조치(failover) 지원<br /><br /> 여러 네트워크 인터페이스를 동시에 사용할 뿐 아니라 네트워크 인터페이스 오류에 대한 허용 오차를 사용하는 IO 지원<br /><br /> RDMA 기능을 사용하는 네트워크 인터페이스 지원<br /><br /> 이러한 기능 및 서버 메시지 블록에 대한 자세한 내용은 [서버 메시지 블록 개요](https://go.microsoft.com/fwlink/?LinkId=253174)(https://go.microsoft.com/fwlink/?LinkId=253174) 를 참조하세요.<br /><br /> 지속적인 가용성과 함께 SoFS(Scale Out File Server) 지원.|  
-|[!INCLUDE[win8srv](../../includes/win8srv-md.md)] R2(Server Core 포함)|3.2|파일 서버 클러스터 구성에서 SQL DBA 또는 파일 서버 관리자에게 필요한 관리자 개입이 없고 작동 중단 시간이 없는 파일 공유의 투명한 장애 조치(failover) 지원<br /><br /> SMB 다중 채널을 사용해서 여러 네트워크 인터페이스를 동시에 사용할 뿐 아니라 네트워크 인터페이스 오류에 대한 허용 오차를 사용하는 IO 지원<br /><br /> SMB 다이렉트를 사용하여 RDMA 기능을 사용하는 네트워크 인터페이스 지원<br /><br /> 이러한 기능 및 서버 메시지 블록에 대한 자세한 내용은 [서버 메시지 블록 개요](https://go.microsoft.com/fwlink/?LinkId=253174)(https://go.microsoft.com/fwlink/?LinkId=253174) 를 참조하세요.<br /><br /> 지속적인 가용성과 함께 SoFS(Scale Out File Server) 지원.<br /><br /> [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] OLTP에 일반적인 작은 임의 읽기/쓰기 I/O에 최적화됨.<br /><br /> MTU(최대 전송 단위)는 기본적으로 설정되어 있으며, [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 데이터 웨어하우스 및 데이터베이스 백업 또는 복원과 같은 대규모 순차적 전송에서 성능을 크게 향상시켜 줍니다.|  
+|[!INCLUDE[winserver2008r2](../../includes/winserver2008r2-md.md)] SP 1(Server Core 포함)|2.1|대형 MTU 지원. SQL 백업 및 복원과 같은 대량 데이터 전송에 유용합니다. 이 기능은 사용자가 사용하도록 설정해야 합니다. 이 기능을 사용하는 방법에 대한 자세한 내용은 [SMB의 새로운 기능](/previous-versions/windows/it-pro/windows-server-2008-R2-and-2008/ff625695(v=ws.10))(https://go.microsoft.com/fwlink/?LinkID=237319) 을 참조하세요.<br /><br /> 크게 향상된 성능(특히 SQL OLTP 스타일 작업의 경우) 이러한 향상된 성능을 활용하려면 핫픽스를 적용해야 합니다. 핫픽스에 대한 자세한 내용은 [이 항목](https://go.microsoft.com/fwlink/?LinkId=237320)(https://go.microsoft.com/fwlink/?LinkId=237320) )을 참조하세요.|  
+|[!INCLUDE[win8srv](../../includes/win8srv-md.md)](Server Core 포함)|3.0|파일 서버 클러스터 구성에서 SQL DBA 또는 파일 서버 관리자에게 필요한 관리자 개입이 없고 작동 중단 시간이 없는 파일 공유의 투명한 장애 조치(failover) 지원<br /><br /> 여러 네트워크 인터페이스를 동시에 사용할 뿐 아니라 네트워크 인터페이스 오류에 대한 허용 오차를 사용하는 IO 지원<br /><br /> RDMA 기능을 사용하는 네트워크 인터페이스 지원<br /><br /> 이러한 기능 및 서버 메시지 블록에 대한 자세한 내용은 [서버 메시지 블록 개요](/previous-versions/windows/it-pro/windows-server-2012-R2-and-2012/hh831795(v=ws.11))(https://go.microsoft.com/fwlink/?LinkId=253174) 를 참조하세요.<br /><br /> 지속적인 가용성과 함께 SoFS(Scale Out File Server) 지원.|  
+|[!INCLUDE[win8srv](../../includes/win8srv-md.md)] R2(Server Core 포함)|3.2|파일 서버 클러스터 구성에서 SQL DBA 또는 파일 서버 관리자에게 필요한 관리자 개입이 없고 작동 중단 시간이 없는 파일 공유의 투명한 장애 조치(failover) 지원<br /><br /> SMB 다중 채널을 사용해서 여러 네트워크 인터페이스를 동시에 사용할 뿐 아니라 네트워크 인터페이스 오류에 대한 허용 오차를 사용하는 IO 지원<br /><br /> SMB 다이렉트를 사용하여 RDMA 기능을 사용하는 네트워크 인터페이스 지원<br /><br /> 이러한 기능 및 서버 메시지 블록에 대한 자세한 내용은 [서버 메시지 블록 개요](/previous-versions/windows/it-pro/windows-server-2012-R2-and-2012/hh831795(v=ws.11))(https://go.microsoft.com/fwlink/?LinkId=253174) 를 참조하세요.<br /><br /> 지속적인 가용성과 함께 SoFS(Scale Out File Server) 지원.<br /><br /> [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] OLTP에 일반적인 작은 임의 읽기/쓰기 I/O에 최적화됨.<br /><br /> MTU(최대 전송 단위)는 기본적으로 설정되어 있으며, [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 데이터 웨어하우스 및 데이터베이스 백업 또는 복원과 같은 대규모 순차적 전송에서 성능을 크게 향상시켜 줍니다.|  
   
 ## <a name="security-considerations"></a>보안 고려 사항  
   
--   [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 서비스 계정과 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 에이전트 서비스 계정은 SMB 공유 폴더에 대해 FULL CONTROL 공유 권한 및 NTFS 권한이 있어야 합니다. SMB 파일 서버가 사용되는 경우 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 서비스 계정은 도메인 계정 또는 시스템 계정일 수 있습니다. 공유 및 NTFS 권한에 대한 자세한 내용은 [파일 서버의 공유 및 NTFS 권한](https://go.microsoft.com/fwlink/?LinkId=245535)(https://go.microsoft.com/fwlink/?LinkId=245535) 을 참조하세요.  
+-   [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 서비스 계정과 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 에이전트 서비스 계정은 SMB 공유 폴더에 대해 FULL CONTROL 공유 권한 및 NTFS 권한이 있어야 합니다. SMB 파일 서버가 사용되는 경우 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 서비스 계정은 도메인 계정 또는 시스템 계정일 수 있습니다. 공유 및 NTFS 권한에 대한 자세한 내용은 [파일 서버의 공유 및 NTFS 권한](/previous-versions/windows/it-pro/windows-server-2008-R2-and-2008/cc754178(v=ws.11))(https://go.microsoft.com/fwlink/?LinkId=245535) 을 참조하세요.  
   
     > [!NOTE]  
     >  SMB 공유 폴더에 대한 FULL CONTROL 공유 권한 및 NTFS 권한은 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 서비스 계정, [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 에이전트 서비스 계정 및 관리자 서버 역할이 할당된 Windows 사용자에게만 부여되어야 합니다.  
@@ -127,5 +127,4 @@ ms.locfileid: "88091994"
 ## <a name="see-also"></a>참고 항목  
  [SQL Server 설치 계획](../../sql-server/install/planning-a-sql-server-installation.md)   
  [Windows 서비스 계정 및 권한 구성](../../database-engine/configure-windows/configure-windows-service-accounts-and-permissions.md)  
-  
   

@@ -15,12 +15,12 @@ ms.assetid: ''
 author: MikeRayMSFT
 ms.author: mikeray
 monikerRange: '>=sql-server-2017||=sqlallproducts-allversions||>=sql-server-linux-2017'
-ms.openlocfilehash: 42dcedd7eec5e69259fb32a3939e6a6c42598f4d
-ms.sourcegitcommit: c8e1553ff3fdf295e8dc6ce30d1c454d6fde8088
+ms.openlocfilehash: 91d1cd485341bcd5bd267aca606f6c12c562918e
+ms.sourcegitcommit: 2f868a77903c1f1c4cecf4ea1c181deee12d5b15
 ms.translationtype: HT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 07/22/2020
-ms.locfileid: "86919584"
+ms.lasthandoff: 10/02/2020
+ms.locfileid: "91670346"
 ---
 # <a name="breaking-changes-to-database-engine-in-sssqlv15-md"></a>[!INCLUDE[sssqlv15-md](../includes/sssqlv15-md.md)] 데이터베이스 엔진의 주요 변경 사항
 [!INCLUDE[sqlserver2019](../includes/applies-to-version/sqlserver2019.md)]
@@ -31,4 +31,4 @@ SQL Server 2019에는 주요 변경 사항이 도입되지 않았습니다.
 
 - [SQL Server 2019에서 사용되지 않는 데이터베이스 엔진 기능](../database-engine/deprecated-database-engine-features-in-sql-server-version-15.md)   
 - [SQL Server에서 중단된 데이터베이스 엔진 기능](../database-engine/discontinued-database-engine-functionality-in-sql-server.md)   
-- [SQL Server 데이터베이스 엔진의 이전 버전과의 호환성](../database-engine/sql-server-database-engine-backward-compatibility.md)
+- [SQL Server 데이터베이스 엔진의 이전 버전과의 호환성](./discontinued-database-engine-functionality-in-sql-server.md)

@@ -14,12 +14,12 @@ ms.assetid: cef118a5-a7ce-4bfa-8b9d-c81996284cfc
 author: MashaMSFT
 ms.author: mathoma
 monikerRange: '>=sql-server-2016||=sqlallproducts-allversions'
-ms.openlocfilehash: 9535f71c496cdb59120ea95d62f5fa903d57dbde
-ms.sourcegitcommit: f7ac1976d4bfa224332edd9ef2f4377a4d55a2c9
+ms.openlocfilehash: 27f8f9e04bc78fb382a2f40826bc67215839460d
+ms.sourcegitcommit: 2f868a77903c1f1c4cecf4ea1c181deee12d5b15
 ms.translationtype: HT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 07/02/2020
-ms.locfileid: "85900206"
+ms.lasthandoff: 10/02/2020
+ms.locfileid: "91670246"
 ---
 # <a name="upgrade-sql-server-using-the-installation-wizard-setup"></a>설치 마법사를 사용하여 SQL Server 업그레이드(설치 프로그램)
 
@@ -46,7 +46,7 @@ ms.locfileid: "85900206"
 관리자로 설치 프로그램을 실행해야 합니다. 원격 공유에서 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 를 설치하는 경우 원격 공유에 대한 읽기 및 실행 권한이 있으며 로컬 관리자인 도메인 계정을 사용해야 합니다.  
   
 > [!WARNING]  
->  업그레이드할 기능은 변경할 수 없으며, 업그레이드 작업 중에 기능을 추가할 수도 없습니다. 업그레이드 작업이 완료된 후 [!INCLUDE[ssnoversion](../../includes/ssnoversion-md.md)]의 업그레이드된 인스턴스에 기능을 추가하는 방법에 대한 자세한 내용은 [SQL Server 인스턴스에 기능 추가&#40;설치 프로그램&#41;](../../database-engine/install-windows/add-features-to-an-instance-of-sql-server-2016-setup.md)를 참조하세요.  
+>  업그레이드할 기능은 변경할 수 없으며, 업그레이드 작업 중에 기능을 추가할 수도 없습니다. 업그레이드 작업이 완료된 후 [!INCLUDE[ssnoversion](../../includes/ssnoversion-md.md)]의 업그레이드된 인스턴스에 기능을 추가하는 방법에 대한 자세한 내용은 [SQL Server 인스턴스에 기능 추가&#40;설치 프로그램&#41;](./add-features-to-an-instance-of-sql-server-setup.md)를 참조하세요.  
   
  [!INCLUDE[ssDE](../../includes/ssde-md.md)]을 업그레이드하는 경우에는 [데이터베이스 엔진 업그레이드 계획 및 테스트](../../database-engine/install-windows/plan-and-test-the-database-engine-upgrade-plan.md) 를 검토한 후에 다음 중 환경에 적합한 태스크를 수행합니다.  
   
@@ -120,7 +120,7 @@ ms.locfileid: "85900206"
   
      [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 서비스에 대한 로그인 정보 지정을 완료하면 **다음**을 클릭합니다.  
   
-15. 전체 텍스트 검색 업그레이드 옵션 페이지에서 업그레이드하려는 데이터베이스의 업그레이드 옵션을 지정합니다. 자세한 내용은 [전체 텍스트 검색 업그레이드](https://msdn.microsoft.com/library/16c9376b-5fbb-4495-a429-06a2493849c9)를 참조하세요.  
+15. 전체 텍스트 검색 업그레이드 옵션 페이지에서 업그레이드하려는 데이터베이스의 업그레이드 옵션을 지정합니다. 자세한 내용은 [전체 텍스트 검색 업그레이드](./install-sql-server.md)를 참조하세요.  
   
 16. 모든 규칙이 통과하면 기능 규칙 창이 자동으로 진행됩니다.  
   
@@ -143,6 +143,5 @@ ms.locfileid: "85900206"
   
 ## <a name="see-also"></a>참고 항목  
  [SQL Server 업그레이드](../../database-engine/install-windows/upgrade-sql-server.md)   
- [이전 버전과의 호환성_삭제됨](https://msdn.microsoft.com/library/15d9117e-e2fa-4985-99ea-66a117c1e9fd)  
-  
+ [이전 버전과의 호환성_삭제됨](/previous-versions/sql/sql-server-2016/cc280407(v=sql.130))  
   

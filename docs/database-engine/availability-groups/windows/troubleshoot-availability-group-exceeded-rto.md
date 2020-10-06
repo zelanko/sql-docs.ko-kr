@@ -10,12 +10,12 @@ ms.topic: conceptual
 ms.assetid: e83e4ef8-92f0-406f-bd0b-dc48dc210517
 author: rothja
 ms.author: jroth
-ms.openlocfilehash: 959361d64316618ce6b7ccc997f7ef958b1259f5
-ms.sourcegitcommit: f7ac1976d4bfa224332edd9ef2f4377a4d55a2c9
+ms.openlocfilehash: 391215275c97dba05fb7a3df0692a5a48e9fe58a
+ms.sourcegitcommit: 2f868a77903c1f1c4cecf4ea1c181deee12d5b15
 ms.translationtype: HT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 07/02/2020
-ms.locfileid: "85888020"
+ms.lasthandoff: 10/02/2020
+ms.locfileid: "91670676"
 ---
 # <a name="troubleshoot-availability-group-exceeded-rto"></a>문제 해결: 가용성 그룹 초과 RTO
 [!INCLUDE [SQL Server](../../../includes/applies-to-version/sqlserver.md)]
@@ -64,6 +64,5 @@ from sys.dm_hadr_database_replica_states
  다시 실행 스레드가 실제로 뒤처진 경우 보조 복제본에 대해 성능 저하의 근본 원인을 조사해야 합니다. 보고 워크로드와의 I/O 경합이 있는 경우 [Resource Governor](~/relational-databases/resource-governor/resource-governor.md)를 사용하여 보고 워크로드가 실행되는 I/O 사이클을 간접적으로 제어하는 데 사용되는 CPU 사이클을 어느 정도 제어할 수 있습니다. 예를 들어 보고 워크로드가 CPU의 10%를 사용하지만 워크로드가 I/O 경계인 경우 Resource Governor를 사용하여 CPU 리소스 사용량을 5%로 제한하면 읽기 워크로드를 제한하여 I/O에 대한 영향을 최소화할 수 있습니다.  
   
 ## <a name="next-steps"></a>다음 단계  
- [SQL Server의 성능 문제 해결(SQL Server 2012에 적용)](https://msdn.microsoft.com/library/dd672789(v=SQL.100).aspx)  
-  
+ [SQL Server의 성능 문제 해결(SQL Server 2012에 적용)](/previous-versions/sql/sql-server-2008/dd672789(v=sql.100))  
   

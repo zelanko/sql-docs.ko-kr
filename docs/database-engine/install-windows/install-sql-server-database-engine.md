@@ -13,12 +13,12 @@ ms.assetid: d0876e7f-aa52-4dd7-bd5c-029e2ffded5f
 author: MashaMSFT
 ms.author: mathoma
 monikerRange: '>=sql-server-2016||=sqlallproducts-allversions'
-ms.openlocfilehash: 79356d7b1a193b57625ceae1f545442b4ac80f23
-ms.sourcegitcommit: f7ac1976d4bfa224332edd9ef2f4377a4d55a2c9
+ms.openlocfilehash: 8638c87129cfcc567296c0cf20b6b4a9f2f2b08a
+ms.sourcegitcommit: 2f868a77903c1f1c4cecf4ea1c181deee12d5b15
 ms.translationtype: HT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 07/02/2020
-ms.locfileid: "85883253"
+ms.lasthandoff: 10/02/2020
+ms.locfileid: "91670460"
 ---
 # <a name="install-sql-server-database-engine"></a>SQL Server 데이터베이스 엔진 설치
 
@@ -73,13 +73,12 @@ ms.locfileid: "85883253"
   
 
 > [!NOTE]  
->  기본적으로 예제 데이터베이스와 예제 코드는 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 설치의 일부로 설치되지 않습니다. 예제 데이터베이스와 예제 코드를 설치하려면 [Microsoft SQL Server 예제](../../sample/microsoft-sql-server-samples.md)를 참조하세요. [CodePlex](https://go.microsoft.com/fwlink/?LinkId=87843)에서 이전 예제를 참조하세요.  
+>  기본적으로 예제 데이터베이스와 예제 코드는 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 설치의 일부로 설치되지 않습니다. 예제 데이터베이스와 예제 코드를 설치하려면 [Microsoft SQL Server 예제](../../samples/sql-samples-where-are.md)를 참조하세요. [CodePlex](https://go.microsoft.com/fwlink/?LinkId=87843)에서 이전 예제를 참조하세요.  
 
   
 ## <a name="see-also"></a>참고 항목  
  [버전 및 SQL Server 2017의 지원되는 기능](~/sql-server/editions-and-components-of-sql-server-2017.md)   
  [SQL Server 설치 계획](../../sql-server/install/planning-a-sql-server-installation.md)   
- [고가용성 솔루션&#40;SQL Server&#41;](../../sql-server/failover-clusters/high-availability-solutions-sql-server.md)   
+ [고가용성 솔루션&#40;SQL Server&#41;](../sql-server-business-continuity-dr.md)   
  [설치 마법사를 사용하여 SQL Server 업그레이드&#40;설치 프로그램&#41;](../../database-engine/install-windows/upgrade-sql-server-using-the-installation-wizard-setup.md)  
-  
   

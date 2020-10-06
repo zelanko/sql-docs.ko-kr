@@ -13,12 +13,12 @@ helpviewer_keywords:
 ms.assetid: f5de748d-1c55-4714-9661-38fe62e5095f
 author: markingmyname
 ms.author: maghan
-ms.openlocfilehash: fba193e5f6493e722bd1171c333b4aa2e700ff50
-ms.sourcegitcommit: da88320c474c1c9124574f90d549c50ee3387b4c
+ms.openlocfilehash: 62ed4ee20e7a17b291b09f895f7a558b91584ee9
+ms.sourcegitcommit: 2f868a77903c1f1c4cecf4ea1c181deee12d5b15
 ms.translationtype: HT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 07/01/2020
-ms.locfileid: "85785804"
+ms.lasthandoff: 10/02/2020
+ms.locfileid: "91670296"
 ---
 # <a name="configure-the-remote-access-server-configuration-option"></a>remote access 서버 구성 옵션 구성
  [!INCLUDE [SQL Server](../../includes/applies-to-version/sqlserver.md)]
@@ -31,21 +31,21 @@ ms.locfileid: "85785804"
   
 -   [시스템 관리자가 잠겨 있는 경우 SQL Server에 연결](../../database-engine/configure-windows/connect-to-sql-server-when-system-administrators-are-locked-out.md)  
   
--   [등록된 서버에 연결&#40;SQL Server Management Studio&#41;](../../tools/sql-server-management-studio/connect-to-a-registered-server-sql-server-management-studio.md)  
+-   [등록된 서버에 연결&#40;SQL Server Management Studio&#41;](../../ssms/register-servers/connect-to-a-registered-server-sql-server-management-studio.md)  
   
 -   [SQL Server Management Studio에서 SQL Server 구성 요소로 연결](../../ssms/f1-help/connect-to-any-sql-server-component-from-sql-server-management-studio.md)  
   
--   [sqlcmd를 사용하여 데이터베이스 엔진에 연결](../../relational-databases/scripting/sqlcmd-connect-to-the-database-engine.md)  
+-   [sqlcmd를 사용하여 데이터베이스 엔진에 연결](../../ssms/scripting/sqlcmd-connect-to-the-database-engine.md)  
   
 -   [SQL Server 데이터베이스 엔진에 대한 연결 문제를 해결하는 방법](https://social.technet.microsoft.com/wiki/contents/articles/2102.how-to-troubleshoot-connecting-to-the-sql-server-database-engine.aspx)  
   
  프로그래머는 다음 항목에 관심이 가질 수 있습니다.  
   
--   [방법: ASP.NET 2.0에서 SQL 인증을 사용하여 SQL Server에 연결](https://msdn.microsoft.com/library/ff648340.aspx)  
+-   [방법: ASP.NET 2.0에서 SQL 인증을 사용하여 SQL Server에 연결](/previous-versions/msp-n-p/ff648340(v=pandp.10))  
   
 -   [SQL Server 인스턴스에 연결](../../relational-databases/server-management-objects-smo/create-program/connecting-to-an-instance-of-sql-server.md)  
   
--   [방법: SQL Server 데이터베이스에 대한 연결 만들기](https://msdn.microsoft.com/library/s4yys16a.aspx)  
+-   [방법: SQL Server 데이터베이스에 대한 연결 만들기](/previous-versions/visualstudio/visual-studio-2008/s4yys16a(v=vs.90))  
   
  **이 항목의 본문은 여기에서 시작됩니다.**  
   
@@ -118,5 +118,4 @@ GO
  [RECONFIGURE&#40;Transact-SQL&#41;](../../t-sql/language-elements/reconfigure-transact-sql.md)   
  [서버 구성 옵션&#40;SQL Server&#41;](../../database-engine/configure-windows/server-configuration-options-sql-server.md)   
  [sp_configure &#40;Transact-SQL&#41;](../../relational-databases/system-stored-procedures/sp-configure-transact-sql.md)  
-  
   

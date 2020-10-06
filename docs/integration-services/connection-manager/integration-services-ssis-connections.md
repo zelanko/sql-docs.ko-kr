@@ -24,12 +24,12 @@ helpviewer_keywords:
 ms.assetid: 72f5afa3-d636-410b-9e81-2ffa27772a8c
 author: chugugrace
 ms.author: chugu
-ms.openlocfilehash: 9c80f16b6698b3190b3a32ebd48738a0be3eed6f
-ms.sourcegitcommit: 827ad02375793090fa8fee63cc372d130f11393f
+ms.openlocfilehash: 3b101ac6ab904543ab3e5a558ce2d50030df5adf
+ms.sourcegitcommit: c7f40918dc3ecdb0ed2ef5c237a3996cb4cd268d
 ms.translationtype: HT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 09/04/2020
-ms.locfileid: "89480938"
+ms.lasthandoff: 10/05/2020
+ms.locfileid: "91720844"
 ---
 # <a name="integration-services-ssis-connections"></a>Integration Services(SSIS) 연결
 
@@ -142,7 +142,7 @@ ms.locfileid: "89480938"
   
  런타임 시 올바른 버전이 사용되므로 디자인 타임에 32비트 버전의 공급자를 지정했어도 문제가 되지 않습니다. [!INCLUDE[ssBIDevStudioFull](../../includes/ssbidevstudiofull-md.md)]에서 패키지가 실행될 경우에도 64비트 버전의 공급자를 실행할 수 있습니다.  
   
-  두 버전의 공급자는 동일한 ID를 갖습니다. [!INCLUDE[ssISnoversion](../../includes/ssisnoversion-md.md)] 런타임에서 사용 가능한 64비트 버전의 공급자를 사용하도록 할지 여부를 지정하려면 [!INCLUDE[ssISnoversion](../../includes/ssisnoversion-md.md)] 프로젝트의 Run64BitRuntime 속성을 설정합니다. Run64BitRuntime 속성이 **true**로 설정되면 런타임에 64비트 공급자를 찾아 사용합니다. Run64BitRuntime 속성이 **false**로 설정되면 런타임에 32비트 공급자를 찾아 사용합니다. [!INCLUDE[ssISnoversion](../../includes/ssisnoversion-md.md)] 프로젝트에서 설정할 수 있는 속성에 대한 자세한 내용은 [SSIS(Integration Services) 및 Studio 환경](https://msdn.microsoft.com/library/ms140028.aspx)을 참조하세요.   
+  두 버전의 공급자는 동일한 ID를 갖습니다. [!INCLUDE[ssISnoversion](../../includes/ssisnoversion-md.md)] 런타임에서 사용 가능한 64비트 버전의 공급자를 사용하도록 할지 여부를 지정하려면 [!INCLUDE[ssISnoversion](../../includes/ssisnoversion-md.md)] 프로젝트의 Run64BitRuntime 속성을 설정합니다. Run64BitRuntime 속성이 **true**로 설정되면 런타임에 64비트 공급자를 찾아 사용합니다. Run64BitRuntime 속성이 **false**로 설정되면 런타임에 32비트 공급자를 찾아 사용합니다. [!INCLUDE[ssISnoversion](../../includes/ssisnoversion-md.md)] 프로젝트에서 설정할 수 있는 속성에 대한 자세한 내용은 [SSIS(Integration Services) 및 Studio 환경](../integration-services-ssis-development-and-management-tools.md)을 참조하세요.   
 
 ## <a name="add-a-connection-manager"></a>연결 관리자 추가
 ###  <a name="add-a-connection-manager-when-you-create-a-package"></a><a name="wizard"></a> 패키지를 만들 때 연결 관리자 추가  
@@ -171,23 +171,23 @@ ms.locfileid: "89480938"
   
     |ODBC 대상 편집기|옵션|  
     |------------------------|-------------|  
-    |[ADO 연결 관리자](../../integration-services/connection-manager/ado-connection-manager.md)|[OLE DB 연결 관리자 구성](../../integration-services/connection-manager/configure-ole-db-connection-manager.md)|  
-    |[ADO.NET 연결 관리자](../../integration-services/connection-manager/ado-net-connection-manager.md)|[ADO.NET 연결 관리자 구성](../../integration-services/connection-manager/configure-ado-net-connection-manager.md)|  
+    |[ADO 연결 관리자](../../integration-services/connection-manager/ado-connection-manager.md)|[OLE DB 연결 관리자 구성](./ole-db-connection-manager.md)|  
+    |[ADO.NET 연결 관리자](../../integration-services/connection-manager/ado-net-connection-manager.md)|[ADO.NET 연결 관리자 구성](./ado-net-connection-manager.md)|  
     |[Analysis Services 연결 관리자](../../integration-services/connection-manager/analysis-services-connection-manager.md)|[Analysis Services 연결 관리자 추가 대화 상자 UI 참조](../../integration-services/connection-manager/add-analysis-services-connection-manager-dialog-box-ui-reference.md)|  
-    |[Excel 연결 관리자](../../integration-services/connection-manager/excel-connection-manager.md)|[Excel 연결 관리자 편집기](../../integration-services/connection-manager/excel-connection-manager-editor.md)|  
-    |[파일 연결 관리자](../../integration-services/connection-manager/file-connection-manager.md)|[파일 연결 관리자 편집기](../../integration-services/connection-manager/file-connection-manager-editor.md)|  
+    |[Excel 연결 관리자](../../integration-services/connection-manager/excel-connection-manager.md)|[Excel 연결 관리자 편집기](./excel-connection-manager.md)|  
+    |[파일 연결 관리자](../../integration-services/connection-manager/file-connection-manager.md)|[파일 연결 관리자 편집기](./file-connection-manager.md)|  
     |[다중 파일 연결 관리자](../../integration-services/connection-manager/multiple-files-connection-manager.md)|[파일 연결 관리자 추가 대화 상자 UI 참조](../../integration-services/connection-manager/add-file-connection-manager-dialog-box-ui-reference.md)|  
-    |[플랫 파일 연결 관리자](../../integration-services/connection-manager/flat-file-connection-manager.md)|[플랫 파일 연결 관리자 편집기&#40;일반 페이지&#41;](../../integration-services/connection-manager/flat-file-connection-manager-editor-general-page.md)<br /><br /> [플랫 파일 연결 관리자 편집기&#40;열 페이지&#41;](../../integration-services/connection-manager/flat-file-connection-manager-editor-columns-page.md)<br /><br /> [플랫 파일 연결 관리자 편집기&#40;고급 페이지&#41;](../../integration-services/connection-manager/flat-file-connection-manager-editor-advanced-page.md)<br /><br /> [플랫 파일 연결 관리자 편집기&#40;미리 보기 페이지&#41;](../../integration-services/connection-manager/flat-file-connection-manager-editor-preview-page.md)|  
-    |[다중 플랫 파일 연결 관리자](../../integration-services/connection-manager/multiple-flat-files-connection-manager.md)|[다중 플랫 파일 연결 관리자 편집기&#40;일반 페이지&#41;](../../integration-services/connection-manager/multiple-flat-files-connection-manager-editor-general-page.md)<br /><br /> [다중 플랫 파일 연결 관리자 편집기&#40;열 페이지&#41;](../../integration-services/connection-manager/multiple-flat-files-connection-manager-editor-columns-page.md)<br /><br /> [다중 플랫 파일 연결 관리자 편집기&#40;고급 페이지&#41;](../../integration-services/connection-manager/multiple-flat-files-connection-manager-editor-advanced-page.md)<br /><br /> [다중 플랫 파일 연결 관리자 편집기&#40;미리 보기 페이지&#41;](../../integration-services/connection-manager/multiple-flat-files-connection-manager-editor-preview-page.md)|  
-    |[FTP 연결 관리자](../../integration-services/connection-manager/ftp-connection-manager.md)|[FTP 연결 관리자 편집기](../../integration-services/connection-manager/ftp-connection-manager-editor.md)|  
-    |[HTTP 연결 관리자](../../integration-services/connection-manager/http-connection-manager.md)|[HTTP 연결 관리자 편집기&#40;서버 페이지&#41;](../../integration-services/connection-manager/http-connection-manager-editor-server-page.md)<br /><br /> [HTTP 연결 관리자 편집기&#40;프록시 페이지&#41;](../../integration-services/connection-manager/http-connection-manager-editor-proxy-page.md)|  
-    |[MSMQ 연결 관리자](../../integration-services/connection-manager/msmq-connection-manager.md)|[MSMQ 연결 관리자 편집기](../../integration-services/connection-manager/msmq-connection-manager-editor.md)|  
-    |[ODBC 연결 관리자](../../integration-services/connection-manager/odbc-connection-manager.md)|[ODBC 연결 관리자 UI 참조](../../integration-services/connection-manager/odbc-connection-manager-ui-reference.md)|  
-    |[OLE DB 연결 관리자](../../integration-services/connection-manager/ole-db-connection-manager.md)|[OLE DB 연결 관리자 구성](../../integration-services/connection-manager/configure-ole-db-connection-manager.md)|  
-    |[SMO 연결 관리자](../../integration-services/connection-manager/smo-connection-manager.md)|[SMO 연결 관리자 편집기](../../integration-services/connection-manager/smo-connection-manager-editor.md)|  
-    |[SMTP 연결 관리자](../../integration-services/connection-manager/smtp-connection-manager.md)|[SMTP 연결 관리자 편집기](../../integration-services/connection-manager/smtp-connection-manager-editor.md)|  
-    |[SQL Server Compact Edition 연결 관리자](../../integration-services/connection-manager/sql-server-compact-edition-connection-manager.md)|[SQL Server Compact Edition 연결 관리자 편집기&#40;연결 페이지&#41;](../../integration-services/connection-manager/sql-server-compact-edition-connection-manager-editor-connection-page.md)<br /><br /> [SQL Server Compact Edition 연결 관리자 편집기&#40;모든 페이지&#41;](../../integration-services/connection-manager/sql-server-compact-edition-connection-manager-editor-all-page.md)|  
-    |[WMI 연결 관리자](../../integration-services/connection-manager/wmi-connection-manager.md)|[WMI 연결 관리자 편집기](../../integration-services/connection-manager/wmi-connection-manager-editor.md)|  
+    |[플랫 파일 연결 관리자](../../integration-services/connection-manager/flat-file-connection-manager.md)|[플랫 파일 연결 관리자 편집기&#40;일반 페이지&#41;](./flat-file-connection-manager.md)<br /><br /> [플랫 파일 연결 관리자 편집기&#40;열 페이지&#41;](./flat-file-connection-manager.md)<br /><br /> [플랫 파일 연결 관리자 편집기&#40;고급 페이지&#41;](./flat-file-connection-manager.md)<br /><br /> [플랫 파일 연결 관리자 편집기&#40;미리 보기 페이지&#41;](./flat-file-connection-manager.md)|  
+    |[다중 플랫 파일 연결 관리자](../../integration-services/connection-manager/multiple-flat-files-connection-manager.md)|[다중 플랫 파일 연결 관리자 편집기&#40;일반 페이지&#41;](./multiple-flat-files-connection-manager.md)<br /><br /> [다중 플랫 파일 연결 관리자 편집기&#40;열 페이지&#41;](./multiple-flat-files-connection-manager.md)<br /><br /> [다중 플랫 파일 연결 관리자 편집기&#40;고급 페이지&#41;](./multiple-flat-files-connection-manager.md)<br /><br /> [다중 플랫 파일 연결 관리자 편집기&#40;미리 보기 페이지&#41;](./multiple-flat-files-connection-manager.md)|  
+    |[FTP 연결 관리자](../../integration-services/connection-manager/ftp-connection-manager.md)|[FTP 연결 관리자 편집기](./ftp-connection-manager.md)|  
+    |[HTTP 연결 관리자](../../integration-services/connection-manager/http-connection-manager.md)|[HTTP 연결 관리자 편집기&#40;서버 페이지&#41;](./http-connection-manager.md)<br /><br /> [HTTP 연결 관리자 편집기&#40;프록시 페이지&#41;](./http-connection-manager.md)|  
+    |[MSMQ 연결 관리자](../../integration-services/connection-manager/msmq-connection-manager.md)|[MSMQ 연결 관리자 편집기](./msmq-connection-manager.md)|  
+    |[ODBC 연결 관리자](../../integration-services/connection-manager/odbc-connection-manager.md)|[ODBC 연결 관리자 UI 참조](./odbc-connection-manager.md)|  
+    |[OLE DB 연결 관리자](../../integration-services/connection-manager/ole-db-connection-manager.md)|[OLE DB 연결 관리자 구성](./ole-db-connection-manager.md)|  
+    |[SMO 연결 관리자](../../integration-services/connection-manager/smo-connection-manager.md)|[SMO 연결 관리자 편집기](./smo-connection-manager.md)|  
+    |[SMTP 연결 관리자](../../integration-services/connection-manager/smtp-connection-manager.md)|[SMTP 연결 관리자 편집기](./smtp-connection-manager.md)|  
+    |[SQL Server Compact Edition 연결 관리자](../../integration-services/connection-manager/sql-server-compact-edition-connection-manager.md)|[SQL Server Compact Edition 연결 관리자 편집기&#40;연결 페이지&#41;](./sql-server-compact-edition-connection-manager.md)<br /><br /> [SQL Server Compact Edition 연결 관리자 편집기&#40;모든 페이지&#41;](./sql-server-compact-edition-connection-manager.md)|  
+    |[WMI 연결 관리자](../../integration-services/connection-manager/wmi-connection-manager.md)|[WMI 연결 관리자 편집기](./wmi-connection-manager.md)|  
   
      **연결 관리자** 영역에 추가된 연결 관리자가 나열됩니다.  
   
@@ -207,23 +207,23 @@ ms.locfileid: "89480938"
   
     |ODBC 대상 편집기|옵션|  
     |------------------------|-------------|  
-    |[ADO 연결 관리자](../../integration-services/connection-manager/ado-connection-manager.md)|[OLE DB 연결 관리자 구성](../../integration-services/connection-manager/configure-ole-db-connection-manager.md)|  
-    |[ADO.NET 연결 관리자](../../integration-services/connection-manager/ado-net-connection-manager.md)|[ADO.NET 연결 관리자 구성](../../integration-services/connection-manager/configure-ado-net-connection-manager.md)|  
+    |[ADO 연결 관리자](../../integration-services/connection-manager/ado-connection-manager.md)|[OLE DB 연결 관리자 구성](./ole-db-connection-manager.md)|  
+    |[ADO.NET 연결 관리자](../../integration-services/connection-manager/ado-net-connection-manager.md)|[ADO.NET 연결 관리자 구성](./ado-net-connection-manager.md)|  
     |[Analysis Services 연결 관리자](../../integration-services/connection-manager/analysis-services-connection-manager.md)|[Analysis Services 연결 관리자 추가 대화 상자 UI 참조](../../integration-services/connection-manager/add-analysis-services-connection-manager-dialog-box-ui-reference.md)|  
-    |[Excel 연결 관리자](../../integration-services/connection-manager/excel-connection-manager.md)|[Excel 연결 관리자 편집기](../../integration-services/connection-manager/excel-connection-manager-editor.md)|  
-    |[파일 연결 관리자](../../integration-services/connection-manager/file-connection-manager.md)|[파일 연결 관리자 편집기](../../integration-services/connection-manager/file-connection-manager-editor.md)|  
+    |[Excel 연결 관리자](../../integration-services/connection-manager/excel-connection-manager.md)|[Excel 연결 관리자 편집기](./excel-connection-manager.md)|  
+    |[파일 연결 관리자](../../integration-services/connection-manager/file-connection-manager.md)|[파일 연결 관리자 편집기](./file-connection-manager.md)|  
     |[다중 파일 연결 관리자](../../integration-services/connection-manager/multiple-files-connection-manager.md)|[파일 연결 관리자 추가 대화 상자 UI 참조](../../integration-services/connection-manager/add-file-connection-manager-dialog-box-ui-reference.md)|  
-    |[플랫 파일 연결 관리자](../../integration-services/connection-manager/flat-file-connection-manager.md)|[플랫 파일 연결 관리자 편집기&#40;일반 페이지&#41;](../../integration-services/connection-manager/flat-file-connection-manager-editor-general-page.md)<br /><br /> [플랫 파일 연결 관리자 편집기&#40;열 페이지&#41;](../../integration-services/connection-manager/flat-file-connection-manager-editor-columns-page.md)<br /><br /> [플랫 파일 연결 관리자 편집기&#40;고급 페이지&#41;](../../integration-services/connection-manager/flat-file-connection-manager-editor-advanced-page.md)<br /><br /> [플랫 파일 연결 관리자 편집기&#40;미리 보기 페이지&#41;](../../integration-services/connection-manager/flat-file-connection-manager-editor-preview-page.md)|  
-    |[다중 플랫 파일 연결 관리자](../../integration-services/connection-manager/multiple-flat-files-connection-manager.md)|[다중 플랫 파일 연결 관리자 편집기&#40;일반 페이지&#41;](../../integration-services/connection-manager/multiple-flat-files-connection-manager-editor-general-page.md)<br /><br /> [다중 플랫 파일 연결 관리자 편집기&#40;열 페이지&#41;](../../integration-services/connection-manager/multiple-flat-files-connection-manager-editor-columns-page.md)<br /><br /> [다중 플랫 파일 연결 관리자 편집기&#40;고급 페이지&#41;](../../integration-services/connection-manager/multiple-flat-files-connection-manager-editor-advanced-page.md)<br /><br /> [다중 플랫 파일 연결 관리자 편집기&#40;미리 보기 페이지&#41;](../../integration-services/connection-manager/multiple-flat-files-connection-manager-editor-preview-page.md)|  
-    |[FTP 연결 관리자](../../integration-services/connection-manager/ftp-connection-manager.md)|[FTP 연결 관리자 편집기](../../integration-services/connection-manager/ftp-connection-manager-editor.md)|  
-    |[HTTP 연결 관리자](../../integration-services/connection-manager/http-connection-manager.md)|[HTTP 연결 관리자 편집기&#40;서버 페이지&#41;](../../integration-services/connection-manager/http-connection-manager-editor-server-page.md)<br /><br /> [HTTP 연결 관리자 편집기&#40;프록시 페이지&#41;](../../integration-services/connection-manager/http-connection-manager-editor-proxy-page.md)|  
-    |[MSMQ 연결 관리자](../../integration-services/connection-manager/msmq-connection-manager.md)|[MSMQ 연결 관리자 편집기](../../integration-services/connection-manager/msmq-connection-manager-editor.md)|  
-    |[ODBC 연결 관리자](../../integration-services/connection-manager/odbc-connection-manager.md)|[ODBC 연결 관리자 UI 참조](../../integration-services/connection-manager/odbc-connection-manager-ui-reference.md)|  
-    |[OLE DB 연결 관리자](../../integration-services/connection-manager/ole-db-connection-manager.md)|[OLE DB 연결 관리자 구성](../../integration-services/connection-manager/configure-ole-db-connection-manager.md)|  
-    |[SMO 연결 관리자](../../integration-services/connection-manager/smo-connection-manager.md)|[SMO 연결 관리자 편집기](../../integration-services/connection-manager/smo-connection-manager-editor.md)|  
-    |[SMTP 연결 관리자](../../integration-services/connection-manager/smtp-connection-manager.md)|[SMTP 연결 관리자 편집기](../../integration-services/connection-manager/smtp-connection-manager-editor.md)|  
-    |[SQL Server Compact Edition 연결 관리자](../../integration-services/connection-manager/sql-server-compact-edition-connection-manager.md)|[SQL Server Compact Edition 연결 관리자 편집기&#40;연결 페이지&#41;](../../integration-services/connection-manager/sql-server-compact-edition-connection-manager-editor-connection-page.md)<br /><br /> [SQL Server Compact Edition 연결 관리자 편집기&#40;모든 페이지&#41;](../../integration-services/connection-manager/sql-server-compact-edition-connection-manager-editor-all-page.md)|  
-    |[WMI 연결 관리자](../../integration-services/connection-manager/wmi-connection-manager.md)|[WMI 연결 관리자 편집기](../../integration-services/connection-manager/wmi-connection-manager-editor.md)|  
+    |[플랫 파일 연결 관리자](../../integration-services/connection-manager/flat-file-connection-manager.md)|[플랫 파일 연결 관리자 편집기&#40;일반 페이지&#41;](./flat-file-connection-manager.md)<br /><br /> [플랫 파일 연결 관리자 편집기&#40;열 페이지&#41;](./flat-file-connection-manager.md)<br /><br /> [플랫 파일 연결 관리자 편집기&#40;고급 페이지&#41;](./flat-file-connection-manager.md)<br /><br /> [플랫 파일 연결 관리자 편집기&#40;미리 보기 페이지&#41;](./flat-file-connection-manager.md)|  
+    |[다중 플랫 파일 연결 관리자](../../integration-services/connection-manager/multiple-flat-files-connection-manager.md)|[다중 플랫 파일 연결 관리자 편집기&#40;일반 페이지&#41;](./multiple-flat-files-connection-manager.md)<br /><br /> [다중 플랫 파일 연결 관리자 편집기&#40;열 페이지&#41;](./multiple-flat-files-connection-manager.md)<br /><br /> [다중 플랫 파일 연결 관리자 편집기&#40;고급 페이지&#41;](./multiple-flat-files-connection-manager.md)<br /><br /> [다중 플랫 파일 연결 관리자 편집기&#40;미리 보기 페이지&#41;](./multiple-flat-files-connection-manager.md)|  
+    |[FTP 연결 관리자](../../integration-services/connection-manager/ftp-connection-manager.md)|[FTP 연결 관리자 편집기](./ftp-connection-manager.md)|  
+    |[HTTP 연결 관리자](../../integration-services/connection-manager/http-connection-manager.md)|[HTTP 연결 관리자 편집기&#40;서버 페이지&#41;](./http-connection-manager.md)<br /><br /> [HTTP 연결 관리자 편집기&#40;프록시 페이지&#41;](./http-connection-manager.md)|  
+    |[MSMQ 연결 관리자](../../integration-services/connection-manager/msmq-connection-manager.md)|[MSMQ 연결 관리자 편집기](./msmq-connection-manager.md)|  
+    |[ODBC 연결 관리자](../../integration-services/connection-manager/odbc-connection-manager.md)|[ODBC 연결 관리자 UI 참조](./odbc-connection-manager.md)|  
+    |[OLE DB 연결 관리자](../../integration-services/connection-manager/ole-db-connection-manager.md)|[OLE DB 연결 관리자 구성](./ole-db-connection-manager.md)|  
+    |[SMO 연결 관리자](../../integration-services/connection-manager/smo-connection-manager.md)|[SMO 연결 관리자 편집기](./smo-connection-manager.md)|  
+    |[SMTP 연결 관리자](../../integration-services/connection-manager/smtp-connection-manager.md)|[SMTP 연결 관리자 편집기](./smtp-connection-manager.md)|  
+    |[SQL Server Compact Edition 연결 관리자](../../integration-services/connection-manager/sql-server-compact-edition-connection-manager.md)|[SQL Server Compact Edition 연결 관리자 편집기&#40;연결 페이지&#41;](./sql-server-compact-edition-connection-manager.md)<br /><br /> [SQL Server Compact Edition 연결 관리자 편집기&#40;모든 페이지&#41;](./sql-server-compact-edition-connection-manager.md)|  
+    |[WMI 연결 관리자](../../integration-services/connection-manager/wmi-connection-manager.md)|[WMI 연결 관리자 편집기](./wmi-connection-manager.md)|  
   
      추가한 연결 관리자가 **솔루션 탐색기** 의 **연결 관리자**노드에 표시됩니다. 이 연결 관리자는 프로젝트의 모든 패키지에 대한 **SSIS 디자이너** 창의 **연결 관리자** 탭에도 나타납니다. 이 프로젝트 수준 연결 관리자를 패키지 수준 연결 관리자와 구별하기 위해 이 탭의 연결 관리자 이름에는 **(프로젝트)** 라는 접두사가 붙습니다.  
   
@@ -248,7 +248,7 @@ ms.locfileid: "89480938"
   
 1.  **연결 관리자** 영역에서 매개 변수를 만들려는 연결 관리자를 마우스 오른쪽 단추로 클릭한 후 **매개 변수화**를 클릭합니다.  
   
-2.  **매개 변수화** 대화 상자에서 매개 변수 설정을 구성합니다. 자세한 내용은 [Parameterize Dialog Box](https://msdn.microsoft.com/library/fac02b6d-d247-447a-8940-e8700c7ac350)을 참조하세요.  
+2.  **매개 변수화** 대화 상자에서 매개 변수 설정을 구성합니다. 자세한 내용은 [Parameterize Dialog Box](../integration-services-ssis-package-and-project-parameters.md)을 참조하세요.  
 
 ## <a name="delete-a-connection-manager"></a>연결 관리자 삭제 
 ###  <a name="delete-a-connection-manager-from-a-package"></a><a name="DeletePackageLevel"></a> 패키지에서 연결 관리자 삭제  
@@ -316,36 +316,35 @@ ms.locfileid: "89480938"
   
     |ODBC 대상 편집기|옵션|  
     |------------------------|-------------|  
-    |[ADO 연결 관리자](../../integration-services/connection-manager/ado-connection-manager.md)|[OLE DB 연결 관리자 구성](../../integration-services/connection-manager/configure-ole-db-connection-manager.md)|  
-    |[ADO.NET 연결 관리자](../../integration-services/connection-manager/ado-net-connection-manager.md)|[ADO.NET 연결 관리자 구성](../../integration-services/connection-manager/configure-ado-net-connection-manager.md)|  
+    |[ADO 연결 관리자](../../integration-services/connection-manager/ado-connection-manager.md)|[OLE DB 연결 관리자 구성](./ole-db-connection-manager.md)|  
+    |[ADO.NET 연결 관리자](../../integration-services/connection-manager/ado-net-connection-manager.md)|[ADO.NET 연결 관리자 구성](./ado-net-connection-manager.md)|  
     |[Analysis Services 연결 관리자](../../integration-services/connection-manager/analysis-services-connection-manager.md)|[Analysis Services 연결 관리자 추가 대화 상자 UI 참조](../../integration-services/connection-manager/add-analysis-services-connection-manager-dialog-box-ui-reference.md)|  
-    |[Excel 연결 관리자](../../integration-services/connection-manager/excel-connection-manager.md)|[Excel 연결 관리자 편집기](../../integration-services/connection-manager/excel-connection-manager-editor.md)|  
-    |[파일 연결 관리자](../../integration-services/connection-manager/file-connection-manager.md)|[파일 연결 관리자 편집기](../../integration-services/connection-manager/file-connection-manager-editor.md)|  
+    |[Excel 연결 관리자](../../integration-services/connection-manager/excel-connection-manager.md)|[Excel 연결 관리자 편집기](./excel-connection-manager.md)|  
+    |[파일 연결 관리자](../../integration-services/connection-manager/file-connection-manager.md)|[파일 연결 관리자 편집기](./file-connection-manager.md)|  
     |[다중 파일 연결 관리자](../../integration-services/connection-manager/multiple-files-connection-manager.md)|[파일 연결 관리자 추가 대화 상자 UI 참조](../../integration-services/connection-manager/add-file-connection-manager-dialog-box-ui-reference.md)|  
-    |[플랫 파일 연결 관리자](../../integration-services/connection-manager/flat-file-connection-manager.md)|[플랫 파일 연결 관리자 편집기&#40;일반 페이지&#41;](../../integration-services/connection-manager/flat-file-connection-manager-editor-general-page.md)<br /><br /> [플랫 파일 연결 관리자 편집기&#40;열 페이지&#41;](../../integration-services/connection-manager/flat-file-connection-manager-editor-columns-page.md)<br /><br /> [플랫 파일 연결 관리자 편집기&#40;고급 페이지&#41;](../../integration-services/connection-manager/flat-file-connection-manager-editor-advanced-page.md)<br /><br /> [플랫 파일 연결 관리자 편집기&#40;미리 보기 페이지&#41;](../../integration-services/connection-manager/flat-file-connection-manager-editor-preview-page.md)|  
-    |[다중 플랫 파일 연결 관리자](../../integration-services/connection-manager/multiple-flat-files-connection-manager.md)|[다중 플랫 파일 연결 관리자 편집기&#40;일반 페이지&#41;](../../integration-services/connection-manager/multiple-flat-files-connection-manager-editor-general-page.md)<br /><br /> [다중 플랫 파일 연결 관리자 편집기&#40;열 페이지&#41;](../../integration-services/connection-manager/multiple-flat-files-connection-manager-editor-columns-page.md)<br /><br /> [다중 플랫 파일 연결 관리자 편집기&#40;고급 페이지&#41;](../../integration-services/connection-manager/multiple-flat-files-connection-manager-editor-advanced-page.md)<br /><br /> [다중 플랫 파일 연결 관리자 편집기&#40;미리 보기 페이지&#41;](../../integration-services/connection-manager/multiple-flat-files-connection-manager-editor-preview-page.md)|  
-    |[FTP 연결 관리자](../../integration-services/connection-manager/ftp-connection-manager.md)|[FTP 연결 관리자 편집기](../../integration-services/connection-manager/ftp-connection-manager-editor.md)|  
-    |[HTTP 연결 관리자](../../integration-services/connection-manager/http-connection-manager.md)|[HTTP 연결 관리자 편집기&#40;서버 페이지&#41;](../../integration-services/connection-manager/http-connection-manager-editor-server-page.md)<br /><br /> [HTTP 연결 관리자 편집기&#40;프록시 페이지&#41;](../../integration-services/connection-manager/http-connection-manager-editor-proxy-page.md)|  
-    |[MSMQ 연결 관리자](../../integration-services/connection-manager/msmq-connection-manager.md)|[MSMQ 연결 관리자 편집기](../../integration-services/connection-manager/msmq-connection-manager-editor.md)|  
-    |[ODBC 연결 관리자](../../integration-services/connection-manager/odbc-connection-manager.md)|[ODBC 연결 관리자 UI 참조](../../integration-services/connection-manager/odbc-connection-manager-ui-reference.md)|  
-    |[OLE DB 연결 관리자](../../integration-services/connection-manager/ole-db-connection-manager.md)|[OLE DB 연결 관리자 구성](../../integration-services/connection-manager/configure-ole-db-connection-manager.md)|  
-    |[SMO 연결 관리자](../../integration-services/connection-manager/smo-connection-manager.md)|[SMO 연결 관리자 편집기](../../integration-services/connection-manager/smo-connection-manager-editor.md)|  
-    |[SMTP 연결 관리자](../../integration-services/connection-manager/smtp-connection-manager.md)|[SMTP 연결 관리자 편집기](../../integration-services/connection-manager/smtp-connection-manager-editor.md)|  
-    |[SQL Server Compact Edition 연결 관리자](../../integration-services/connection-manager/sql-server-compact-edition-connection-manager.md)|[SQL Server Compact Edition 연결 관리자 편집기&#40;연결 페이지&#41;](../../integration-services/connection-manager/sql-server-compact-edition-connection-manager-editor-connection-page.md)<br /><br /> [SQL Server Compact Edition 연결 관리자 편집기&#40;모든 페이지&#41;](../../integration-services/connection-manager/sql-server-compact-edition-connection-manager-editor-all-page.md)|  
-    |[WMI 연결 관리자](../../integration-services/connection-manager/wmi-connection-manager.md)|[WMI 연결 관리자 편집기](../../integration-services/connection-manager/wmi-connection-manager-editor.md)|  
+    |[플랫 파일 연결 관리자](../../integration-services/connection-manager/flat-file-connection-manager.md)|[플랫 파일 연결 관리자 편집기&#40;일반 페이지&#41;](./flat-file-connection-manager.md)<br /><br /> [플랫 파일 연결 관리자 편집기&#40;열 페이지&#41;](./flat-file-connection-manager.md)<br /><br /> [플랫 파일 연결 관리자 편집기&#40;고급 페이지&#41;](./flat-file-connection-manager.md)<br /><br /> [플랫 파일 연결 관리자 편집기&#40;미리 보기 페이지&#41;](./flat-file-connection-manager.md)|  
+    |[다중 플랫 파일 연결 관리자](../../integration-services/connection-manager/multiple-flat-files-connection-manager.md)|[다중 플랫 파일 연결 관리자 편집기&#40;일반 페이지&#41;](./multiple-flat-files-connection-manager.md)<br /><br /> [다중 플랫 파일 연결 관리자 편집기&#40;열 페이지&#41;](./multiple-flat-files-connection-manager.md)<br /><br /> [다중 플랫 파일 연결 관리자 편집기&#40;고급 페이지&#41;](./multiple-flat-files-connection-manager.md)<br /><br /> [다중 플랫 파일 연결 관리자 편집기&#40;미리 보기 페이지&#41;](./multiple-flat-files-connection-manager.md)|  
+    |[FTP 연결 관리자](../../integration-services/connection-manager/ftp-connection-manager.md)|[FTP 연결 관리자 편집기](./ftp-connection-manager.md)|  
+    |[HTTP 연결 관리자](../../integration-services/connection-manager/http-connection-manager.md)|[HTTP 연결 관리자 편집기&#40;서버 페이지&#41;](./http-connection-manager.md)<br /><br /> [HTTP 연결 관리자 편집기&#40;프록시 페이지&#41;](./http-connection-manager.md)|  
+    |[MSMQ 연결 관리자](../../integration-services/connection-manager/msmq-connection-manager.md)|[MSMQ 연결 관리자 편집기](./msmq-connection-manager.md)|  
+    |[ODBC 연결 관리자](../../integration-services/connection-manager/odbc-connection-manager.md)|[ODBC 연결 관리자 UI 참조](./odbc-connection-manager.md)|  
+    |[OLE DB 연결 관리자](../../integration-services/connection-manager/ole-db-connection-manager.md)|[OLE DB 연결 관리자 구성](./ole-db-connection-manager.md)|  
+    |[SMO 연결 관리자](../../integration-services/connection-manager/smo-connection-manager.md)|[SMO 연결 관리자 편집기](./smo-connection-manager.md)|  
+    |[SMTP 연결 관리자](../../integration-services/connection-manager/smtp-connection-manager.md)|[SMTP 연결 관리자 편집기](./smtp-connection-manager.md)|  
+    |[SQL Server Compact Edition 연결 관리자](../../integration-services/connection-manager/sql-server-compact-edition-connection-manager.md)|[SQL Server Compact Edition 연결 관리자 편집기&#40;연결 페이지&#41;](./sql-server-compact-edition-connection-manager.md)<br /><br /> [SQL Server Compact Edition 연결 관리자 편집기&#40;모든 페이지&#41;](./sql-server-compact-edition-connection-manager.md)|  
+    |[WMI 연결 관리자](../../integration-services/connection-manager/wmi-connection-manager.md)|[WMI 연결 관리자 편집기](./wmi-connection-manager.md)|  
   
 5.  업데이트된 패키지를 저장하려면 **파일** 메뉴에서 **선택한 항목 저장** 을 클릭합니다.  
 
 ## <a name="related-content"></a>관련 내용  
   
--   technet.microsoft.com의 비디오 - [패키지 성능 향상을 위해 Microsoft Attunity Connector for Oracle 활용](https://technet.microsoft.com/sqlserver/gg598963.aspx)  
+-   technet.microsoft.com의 비디오 - [패키지 성능 향상을 위해 Microsoft Attunity Connector for Oracle 활용](/previous-versions/dn912438(v=msdn.10))  
   
 -   social.technet.microsoft.com의 Wiki 문서 - [SSIS 연결](https://social.technet.microsoft.com/wiki/contents/articles/sql-server-integration-services-ssis.aspx#Connectivity)  
   
 -   blogs.msdn.com의 블로그 항목 - [SSIS에서 MySQL에 연결](https://techcommunity.microsoft.com/t5/sql-server-integration-services/connecting-to-mysql-from-ssis/ba-p/387400)  
   
--   msdn.microsoft.com의 기술 문서 - [SQL Server Integration Services의 SharePoint 데이터 추출 및 로드](https://go.microsoft.com/fwlink/?LinkId=247826)  
+-   msdn.microsoft.com의 기술 문서 - [SQL Server Integration Services의 SharePoint 데이터 추출 및 로드](/previous-versions/sql/sql-server-2012/hh368261(v=msdn.10))  
   
 -   support.microsoft.com의 기술 자료 - [You get "DTS_E_CANNOTACQUIRECONNECTIONFROMCONNECTIONMANAGER" error message when using Oracle connection manager in SSIS](https://go.microsoft.com/fwlink/?LinkId=233696)(SSIS에서 Oracle 연결 관리자를 사용하는 경우 "DTS_E_CANNOTACQUIRECONNECTIONFROMCONNECTIONMANAGER" 오류 메시지가 발생합니다.)  
-  
   

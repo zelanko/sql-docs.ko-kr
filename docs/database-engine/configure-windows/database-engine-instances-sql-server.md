@@ -11,12 +11,12 @@ ms.topic: conceptual
 ms.assetid: af9ae643-9866-4014-b36f-11ab556a773e
 author: markingmyname
 ms.author: maghan
-ms.openlocfilehash: f5364e0120c6bb4cbd9d6f7bbf5dfa021a5591f2
-ms.sourcegitcommit: da88320c474c1c9124574f90d549c50ee3387b4c
+ms.openlocfilehash: 69d363980f09ecf0bd732bafc119bd5dd511d29f
+ms.sourcegitcommit: 2f868a77903c1f1c4cecf4ea1c181deee12d5b15
 ms.translationtype: HT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 07/01/2020
-ms.locfileid: "85772597"
+ms.lasthandoff: 10/02/2020
+ms.locfileid: "91670729"
 ---
 # <a name="database-engine-instances-sql-server"></a>데이터베이스 엔진 인스턴스(SQL Server)
  [!INCLUDE [SQL Server](../../includes/applies-to-version/sqlserver.md)]
@@ -38,7 +38,7 @@ ms.locfileid: "85772597"
 |[!INCLUDE[ssDE](../../includes/ssde-md.md)]인스턴스와 연결된 서비스를 관리하는 방법에 대해 설명합니다. 여기에는 서비스 시작 및 중지, 시작 옵션 구성 등과 같은 동작이 포함됩니다.|[데이터베이스 엔진 서비스 관리](../../database-engine/configure-windows/manage-the-database-engine-services.md)|  
 |프로토콜 설정, 프로토콜에서 사용하는 포트 또는 파이프 수정, 암호화 구성, SQL Server Browser 서비스 구성, 네트워크에서 SQL Server 데이터베이스 엔진 표시 또는 숨김 및 서버 보안 주체 이름 등록과 같은 서버 네트워크 구성 태스크를 수행하는 방법에 대해 설명합니다.|[서버 네트워크 구성](../../database-engine/configure-windows/server-network-configuration.md)|  
 |클라이언트 프로토콜 구성 및 만들기 또는 서버 별칭 삭제와 같은 클라이언트 네트워크 구성 태스크를 수행하는 방법에 대해 설명합니다.|[클라이언트 네트워크 구성](../../database-engine/configure-windows/client-network-configuration.md)|  
-|스크립트(예: [!INCLUDE[ssManStudioFull](../../includes/ssmanstudiofull-md.md)] 스크립트)를 디자인, 디버깅 및 실행하는 데 사용할 수 있는 [!INCLUDE[tsql](../../includes/tsql-md.md)] 편집기에 대해 설명합니다. 또한 SQL Server 구성 요소 작업을 위해 Windows PowerShell 스크립트를 코딩하는 방법에 대해 설명합니다.|[데이터베이스 엔진 스크립팅](../../relational-databases/scripting/database-engine-scripting.md)|  
+|스크립트(예: [!INCLUDE[ssManStudioFull](../../includes/ssmanstudiofull-md.md)] 스크립트)를 디자인, 디버깅 및 실행하는 데 사용할 수 있는 [!INCLUDE[tsql](../../includes/tsql-md.md)] 편집기에 대해 설명합니다. 또한 SQL Server 구성 요소 작업을 위해 Windows PowerShell 스크립트를 코딩하는 방법에 대해 설명합니다.|[데이터베이스 엔진 스크립팅](../../ssms/scripting/database-engine-scripting.md)|  
 |유지 관리 계획을 사용하여 인스턴스에 대한 일반 관리 태스크 워크플로를 지정하는 방법에 대해 설명합니다. 워크플로에는 성능 향상을 위한 데이터베이스 백업, 통계 업데이트 등과 같은 태스크가 포함됩니다.|[유지 관리 계획](../../relational-databases/maintenance-plans/maintenance-plans.md)|  
 |리소스 관리자를 통해 애플리케이션 요청에 사용할 수 있는 CPU 및 메모리의 양을 제한하여 리소스 소비와 작업을 관리하는 방법에 대해 설명합니다.|[리소스 관리자](../../relational-databases/resource-governor/resource-governor.md)|  
 |데이터베이스 애플리케이션에서 데이터베이스 메일을 사용하여 [!INCLUDE[ssDE](../../includes/ssde-md.md)]로부터 전자 메일 메시지를 보내는 방법에 대해 설명합니다.|[데이터베이스 메일](../../relational-databases/database-mail/database-mail.md)|  
@@ -55,7 +55,6 @@ ms.locfileid: "85772597"
   
 ## <a name="see-also"></a>참고 항목  
  [sqlservr 애플리케이션](../../tools/sqlservr-application.md)   
- [데이터베이스 기능](../../relational-databases/database-features.md)   
- [데이터베이스 엔진 인스턴스 간 기능](../../relational-databases/database-engine-cross-instance-features.md)  
-  
+ [데이터베이스 기능](../../relational-databases/databases/databases.md)   
+ [데이터베이스 엔진 인스턴스 간 기능](../../relational-databases/databases/databases.md)  
   

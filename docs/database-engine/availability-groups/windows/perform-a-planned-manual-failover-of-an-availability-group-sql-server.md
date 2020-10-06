@@ -15,12 +15,12 @@ helpviewer_keywords:
 ms.assetid: 419f655d-3f9a-4e7d-90b9-f0bab47b3178
 author: MashaMSFT
 ms.author: mathoma
-ms.openlocfilehash: 646db60d22175c298a686bed903fdd9246c2a59f
-ms.sourcegitcommit: f7ac1976d4bfa224332edd9ef2f4377a4d55a2c9
+ms.openlocfilehash: 43b80003afbb83090aa7575aa038f6bebe7958a4
+ms.sourcegitcommit: 2f868a77903c1f1c4cecf4ea1c181deee12d5b15
 ms.translationtype: HT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 07/02/2020
-ms.locfileid: "85897027"
+ms.lasthandoff: 10/02/2020
+ms.locfileid: "91670903"
 ---
 # <a name="perform-a-planned-manual-failover-of-an-always-on-availability-group-sql-server"></a>Always On 가용성 그룹의 계획된 수동 장애 조치(failover) 수행(SQL Server)
 [!INCLUDE [SQL Server](../../../includes/applies-to-version/sqlserver.md)]
@@ -94,7 +94,7 @@ ms.locfileid: "85897027"
 2. **Switch-SqlAvailabilityGroup** cmdlet을 사용합니다. 
   
     > [!NOTE] 
-    >  cmdlet의 구문을 보려면 **PowerShell 환경에서** Get-Help [!INCLUDE[ssCurrent](../../../includes/sscurrent-md.md)] cmdlet을 사용합니다. 자세한 내용은 [SQL Server PowerShell에 대한 도움말 보기](../../../relational-databases/scripting/get-help-sql-server-powershell.md)를 참조하세요. 
+    >  cmdlet의 구문을 보려면 **PowerShell 환경에서** Get-Help [!INCLUDE[ssCurrent](../../../includes/sscurrent-md.md)] cmdlet을 사용합니다. 자세한 내용은 [SQL Server PowerShell에 대한 도움말 보기](../../../powershell/sql-server-powershell.md)를 참조하세요. 
   
      다음 예에서는 지정한 경로를 사용하여 *MyAg* 가용성 그룹을 보조 복제본으로 수동으로 장애 조치합니다. 
   
@@ -104,8 +104,8 @@ ms.locfileid: "85897027"
   
     SQL Server PowerShell 공급자를 설정하고 사용하려면 
   
-    -   [SQL Server PowerShell 공급자](../../../relational-databases/scripting/sql-server-powershell-provider.md) 
-    -   [SQL Server PowerShell에 대한 도움말 보기](../../../relational-databases/scripting/get-help-sql-server-powershell.md) 
+    -   [SQL Server PowerShell 공급자](../../../powershell/sql-server-powershell-provider.md) 
+    -   [SQL Server PowerShell에 대한 도움말 보기](../../../powershell/sql-server-powershell.md) 
 
 ##  <a name="follow-up-after-you-manually-fail-over-an-availability-group"></a><a name="FollowUp"></a> 후속 작업: 가용성 그룹을 수동으로 장애 조치한 후 
  가용성 그룹의 [!INCLUDE[ssFosAuto](../../../includes/ssfosauto-md.md)] 외부로 장애 조치한 경우 새로운 가용성 그룹 구성을 반영하도록 Windows Server 장애 조치(Failover) 클러스터링 노드의 쿼럼 투표를 조정합니다. 자세한 내용은 [SQL Server의 WSFC&#40;Windows Server 장애 조치(Failover) 클러스터링&#41;](../../../sql-server/failover-clusters/windows/windows-server-failover-clustering-wsfc-with-sql-server.md)을 참조하세요. 
@@ -121,5 +121,4 @@ ms.locfileid: "85897027"
  * [AlwaysOn 가용성 그룹 개요&#40;SQL Server&#41;](../../../database-engine/availability-groups/windows/overview-of-always-on-availability-groups-sql-server.md) 
  * [장애 조치(Failover) 및 장애 조치(Failover) 모드&#40;AlwaysOn 가용성 그룹&#41;](../../../database-engine/availability-groups/windows/failover-and-failover-modes-always-on-availability-groups.md) 
  * [가용성 그룹의 강제 수동 장애 조치(Failover) 수행&#40;SQL Server&#41;](../../../database-engine/availability-groups/windows/perform-a-forced-manual-failover-of-an-availability-group-sql-server.md) 
-  
   

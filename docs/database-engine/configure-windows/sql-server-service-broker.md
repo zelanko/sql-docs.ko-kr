@@ -24,17 +24,17 @@ ms.assetid: 8b8b3b57-fd46-44de-9a4e-e3a8e3999c1e
 author: markingmyname
 ms.author: maghan
 monikerRange: =azuresqldb-mi-current||>=sql-server-2016||=sqlallproducts-allversions||>=sql-server-linux-2017
-ms.openlocfilehash: 2841f36d3f9e4498763f6b0862e2fa0cfaa2e4a9
-ms.sourcegitcommit: 21bedbae28840e2f96f5e8b08bcfc794f305c8bc
+ms.openlocfilehash: 5a22d4bf95b7d6bfc7c6a5e00c5613b04a80749e
+ms.sourcegitcommit: 2f868a77903c1f1c4cecf4ea1c181deee12d5b15
 ms.translationtype: HT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 08/06/2020
-ms.locfileid: "87863408"
+ms.lasthandoff: 10/02/2020
+ms.locfileid: "91670776"
 ---
 # <a name="service-broker"></a>Service Broker
 [!INCLUDE [SQL Server SQL MI](../../includes/applies-to-version/sql-asdbmi.md)]
 
-  [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] [!INCLUDE[ssSB](../../includes/sssb-md.md)]는 [!INCLUDE[ssDEnoversion](../../includes/ssdenoversion-md.md)] 및 [Azure SQL Managed Instance](https://docs.microsoft.com/azure/sql-database/sql-database-managed-instance-index)의 메시징 및 큐에 대한 기본 지원을 제공합니다. 개발자는 [!INCLUDE[ssDE](../../includes/ssde-md.md)] 구성 요소를 사용하여 서로 다른 데이터베이스 간에 통신하는 복잡한 애플리케이션을 쉽게 만들고, 안정적인 분산형 애플리케이션을 빌드할 수 있습니다.  
+  [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] [!INCLUDE[ssSB](../../includes/sssb-md.md)]는 [!INCLUDE[ssDEnoversion](../../includes/ssdenoversion-md.md)] 및 [Azure SQL Managed Instance](/azure/sql-database/sql-database-managed-instance-index)의 메시징 및 큐에 대한 기본 지원을 제공합니다. 개발자는 [!INCLUDE[ssDE](../../includes/ssde-md.md)] 구성 요소를 사용하여 서로 다른 데이터베이스 간에 통신하는 복잡한 애플리케이션을 쉽게 만들고, 안정적인 분산형 애플리케이션을 빌드할 수 있습니다.  
   
 ## <a name="when-to-use-service-broker"></a>Service Broker를 사용하는 경우
 
@@ -90,7 +90,7 @@ FROM ExpenseQueue;
   
 -   CREATE, ALTER 및 DROP 문에 대한 [DDL&#40;데이터 정의 언어&#41; 문&#40;Transact-SQL&#41;](../../t-sql/statements/statements.md)  
   
--   [Service Broker 문](../../t-sql/statements/service-broker-statements.md)  
+-   [Service Broker 문](../../t-sql/statements/statements.md)  
   
 -   [Service Broker 카탈로그 뷰&#40;Transact-SQL&#41;](../../relational-databases/system-catalog-views/service-broker-catalog-views-transact-sql.md)  
   
@@ -98,7 +98,7 @@ FROM ExpenseQueue;
   
 -   [ssbdiagnose 유틸리티&#40;Service Broker&#41;](../../tools/ssbdiagnose/ssbdiagnose-utility-service-broker.md)  
   
- [개념과 개발 및 관리 태스크에 대한 자세한 내용은](https://go.microsoft.com/fwlink/?LinkId=231312) 이전에 게시된 설명서 [!INCLUDE[ssSB](../../includes/sssb-md.md)] 를 참조하십시오. 이 설명서는 [!INCLUDE[ssCurrent](../../includes/sscurrent-md.md)] 에서 [!INCLUDE[ssSB](../../includes/sssb-md.md)] 의 변경 사항이 적기 때문에 [!INCLUDE[ssCurrent](../../includes/sscurrent-md.md)]설명서에서 다시 작성되지 않았습니다.  
+ [개념과 개발 및 관리 태스크에 대한 자세한 내용은](/previous-versions/sql/sql-server-2008-r2/bb522893(v=sql.105)) 이전에 게시된 설명서 [!INCLUDE[ssSB](../../includes/sssb-md.md)] 를 참조하십시오. 이 설명서는 [!INCLUDE[ssCurrent](../../includes/sscurrent-md.md)] 에서 [!INCLUDE[ssSB](../../includes/sssb-md.md)] 의 변경 사항이 적기 때문에 [!INCLUDE[ssCurrent](../../includes/sscurrent-md.md)]설명서에서 다시 작성되지 않았습니다.  
   
 ## <a name="whats-new-in-service-broker"></a>Service Broker의 새로운 기능  
  [!INCLUDE[ssCurrent](../../includes/sscurrent-md.md)]에 도입된 큰 변경 내용은 없습니다.  [!INCLUDE[ssSQL11](../../includes/sssql11-md.md)]에서의 변경 내용은 다음과 같습니다.  
@@ -107,7 +107,7 @@ FROM ExpenseQueue;
 
 - 인스턴스 간 Service Broker는 지원되지 않습니다. 
  - `sys.routes` - 필수 조건: sys.routes에서 주소를 선택합니다. 주소는 모든 경로에서 LOCAL이어야 합니다. [sys.routes](../../relational-databases/system-catalog-views/sys-routes-transact-sql.md)를 참조하세요.
- - `CREATE ROUTE` - `LOCAL` 이외의 `ADDRESS`가 포함된 `CREATE ROUTE`는 사용할 수 없습니다. [CREATE ROUTE](https://docs.microsoft.com/sql/t-sql/statements/create-route-transact-sql)를 참조하세요.
+ - `CREATE ROUTE` - `LOCAL` 이외의 `ADDRESS`가 포함된 `CREATE ROUTE`는 사용할 수 없습니다. [CREATE ROUTE](../../t-sql/statements/create-route-transact-sql.md)를 참조하세요.
  - `ALTER ROUTE`는 `LOCAL` 외에 `ADDRESS`와 함께 `ALTER ROUTE`를 사용할 수 없습니다. [ALTER ROUTE](../../t-sql/statements/alter-route-transact-sql.md)를 참조하세요.  
   
 ### <a name="messages-can-be-sent-to-multiple-target-services-multicast"></a>메시지를 여러 대상 서비스에 보낼 수 있음(멀티캐스트)  
@@ -125,6 +125,4 @@ FROM ExpenseQueue;
   
 ## <a name="next-steps"></a>다음 단계
 
-가장 일반적으로 사용되는 Service Broker는 [이벤트 알림](../../relational-databases/service-broker/event-notifications.md)에 대한 것입니다. [이벤트 알림을 구현](../../relational-databases/service-broker/implement-event-notifications.md)하거나 [대화 상자 보안을 구성](../../relational-databases/service-broker/configure-dialog-security-for-event-notifications.md)하거나 [추가 정보를 가져오는](../../relational-databases/service-broker/get-information-about-event-notifications.md) 방법을 알아봅니다. 
-
-
+가장 일반적으로 사용되는 Service Broker는 [이벤트 알림](../../relational-databases/service-broker/event-notifications.md)에 대한 것입니다. [이벤트 알림을 구현](../../relational-databases/service-broker/implement-event-notifications.md)하거나 [대화 상자 보안을 구성](../../relational-databases/service-broker/configure-dialog-security-for-event-notifications.md)하거나 [추가 정보를 가져오는](../../relational-databases/service-broker/get-information-about-event-notifications.md) 방법을 알아봅니다.

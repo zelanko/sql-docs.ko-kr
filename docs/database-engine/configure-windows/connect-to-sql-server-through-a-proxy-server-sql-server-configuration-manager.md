@@ -19,12 +19,12 @@ helpviewer_keywords:
 ms.assetid: 39714de0-2a1f-4179-9091-5c3fa4612545
 author: markingmyname
 ms.author: maghan
-ms.openlocfilehash: 7be0c8d6be720da45072922f2d5399f9ad0b6877
-ms.sourcegitcommit: da88320c474c1c9124574f90d549c50ee3387b4c
+ms.openlocfilehash: 0b8e6c54a7f496f06067bb0393f83899f8df4253
+ms.sourcegitcommit: 2f868a77903c1f1c4cecf4ea1c181deee12d5b15
 ms.translationtype: HT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 07/01/2020
-ms.locfileid: "85728627"
+ms.lasthandoff: 10/02/2020
+ms.locfileid: "91670279"
 ---
 # <a name="connect-to-sql-server-through-a-proxy-server-sql-server-configuration-manager"></a>프록시 서버를 통해 SQL Server에 연결(SQL Server 구성 관리자)
  [!INCLUDE [SQL Server](../../includes/applies-to-version/sqlserver.md)]
@@ -40,6 +40,4 @@ ms.locfileid: "85728627"
 2.  사용 중인 프록시 서버에서 수신 노드 주소가 LAT(로컬 주소 테이블) 항목의 범위 밖에 있도록 프록시 서버에 LAT를 정의합니다. 자세한 내용은 프록시 서버 설명서를 참조하십시오.  
   
 > [!NOTE]
->  이 항목은 온-프레미스 [!INCLUDE[ssNoVersion_md](../../includes/ssnoversion-md.md)]에 적용됩니다. [!INCLUDE[ssSDS_md](../../includes/sssds-md.md)]와 관련된 연결 문제의 경우 [Azure SQL Database에 대한 연결 문제 해결](https://docs.microsoft.com/azure/sql-database/sql-database-troubleshoot-common-connection-issues)을 참조하세요.  
-
-
+>  이 항목은 온-프레미스 [!INCLUDE[ssNoVersion_md](../../includes/ssnoversion-md.md)]에 적용됩니다. [!INCLUDE[ssSDS_md](../../includes/sssds-md.md)]와 관련된 연결 문제의 경우 [Azure SQL Database에 대한 연결 문제 해결](/azure/sql-database/sql-database-troubleshoot-common-connection-issues)을 참조하세요.

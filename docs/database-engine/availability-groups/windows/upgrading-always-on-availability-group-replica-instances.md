@@ -10,12 +10,12 @@ ms.topic: conceptual
 ms.assetid: f670af56-dbcc-4309-9119-f919dcad8a65
 author: MashaMSFT
 ms.author: mathoma
-ms.openlocfilehash: 0acb31fb6669213aed14721eb52c55b457ec1f2f
-ms.sourcegitcommit: f7ac1976d4bfa224332edd9ef2f4377a4d55a2c9
+ms.openlocfilehash: aa433db303e80610fb8f109d8a0905f888348c1b
+ms.sourcegitcommit: 2f868a77903c1f1c4cecf4ea1c181deee12d5b15
 ms.translationtype: HT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 07/02/2020
-ms.locfileid: "85894191"
+ms.lasthandoff: 10/02/2020
+ms.locfileid: "91671146"
 ---
 # <a name="upgrading-always-on-availability-group-replica-instances"></a>Always On 가용성 그룹 복제본 인스턴스 업그레이드
 [!INCLUDE [SQL Server](../../../includes/applies-to-version/sqlserver.md)]
@@ -23,7 +23,7 @@ ms.locfileid: "85894191"
 Always On AG(가용성 그룹)를 호스트하는 [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] 인스턴스를 신규 [!INCLUDE[ssCurrent](../../../includes/sscurrent-md.md)] 버전, 신규 [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] 서비스 팩 또는 누적 업데이트로 업그레이드하거나 신규 Windows 서비스 팩 또는 누적 업데이트를 설치하려는 경우 롤링 업그레이드를 수행하여 주 복제본을 단일 수동 장애 조치(failover)에만 적용하여 가동 중지 시간을 단축할 수 있습니다(또는 원본 주 복제본이 실패하는 경우 두 개의 수동 장애 조치(failover)). 업그레이드 프로세스 동안 읽기 전용 작업 또는 장애 조치(failover)에서는 보조 복제본을 사용할 수 없고 업그레이드 이후에는 주 복제본 노드에서의 작업 크기에 따라 보조 복제본이 주 복제본 노드를 따라잡기 위해서는 약간의 시간이 걸릴 수 있습니다(이로 인해 높은 네트워크 트래픽이 예상됨). 또한 최신 버전의 SQL Server를 실행하는 보조 복제본에 대한 초기 장애 조치(failover) 이후에, 가용성 그룹의 데이터베이스는 업그레이드 프로세스를 거쳐 최신 버전으로 업데이트됩니다. 이 기간 동안 이러한 데이터베이스에 대해 읽기가 가능한 복제본은 없습니다. 초기 장애 조치(failover) 후 가동 중지 시간은 가용성 그룹의 데이터베이스 수에 따라 달라집니다. 원래 주 데이터베이스로 장애 복구(failback)를 계획하는 경우, 이 단계는 장애 복구 시 반복되지 않습니다.
   
 >[!NOTE]  
->이 문서는 SQL Server 업그레이드에 대한 설명으로 제한됩니다. WSFC(Windows Server Failover Cluster) 클러스터를 포함하는 운영 체제 업그레이드를 다루지 않습니다. Windows Server 2012 R2 이전의 운영 체제에서는 장애 조치(Failover) 클러스터를 호스팅하는 Windows 운영 체제 업그레이드가 지원되지 않습니다. Windows Server 2012 R2에서 실행되는 클러스터 노드를 업그레이드하려면 [클러스터 운영 체제 롤링 업그레이드](https://docs.microsoft.com/windows-server/failover-clustering/cluster-operating-system-rolling-upgrade)를 참조하세요.  
+>이 문서는 SQL Server 업그레이드에 대한 설명으로 제한됩니다. WSFC(Windows Server Failover Cluster) 클러스터를 포함하는 운영 체제 업그레이드를 다루지 않습니다. Windows Server 2012 R2 이전의 운영 체제에서는 장애 조치(Failover) 클러스터를 호스팅하는 Windows 운영 체제 업그레이드가 지원되지 않습니다. Windows Server 2012 R2에서 실행되는 클러스터 노드를 업그레이드하려면 [클러스터 운영 체제 롤링 업그레이드](/windows-server/failover-clustering/cluster-operating-system-rolling-upgrade)를 참조하세요.  
   
 ## <a name="prerequisites"></a>필수 구성 요소  
 시작하기 전에 다음과 같은 중요한 정보를 검토하십시오.  
@@ -256,12 +256,11 @@ Always On AG(가용성 그룹)를 호스트하는 [!INCLUDE[ssNoVersion](../../.
 
 1. 원래 주 복제본이었던 인스턴스를 업그레이드합니다.
 
-자세한 내용은 [최신 CU로 업그레이드한 후 CDC 기능이 중단될 수 있음](https://blogs.msdn.microsoft.com/sql_server_team/cdc-functionality-may-break-after-upgrading-to-the-latest-cu-for-sql-server-2012-2014-and-2016/)을 참조하세요.
+자세한 내용은 [최신 CU로 업그레이드한 후 CDC 기능이 중단될 수 있음](/archive/blogs/sql_server_team/cdc-functionality-may-break-after-upgrading-to-the-latest-cu-for-sql-server-2012-2014-and-2016)을 참조하세요.
 
   
 ## <a name="see-also"></a>참고 항목  
  [설치 마법사를 사용하여 SQL Server 2016으로 업그레이드&#40;설치 프로그램&#41;](../../../database-engine/install-windows/upgrade-sql-server-using-the-installation-wizard-setup.md)   
 
- [명령 프롬프트에서 SQL Server 2016 설치](../../../database-engine/install-windows/install-sql-server-2016-from-the-command-prompt.md)  
-  
+ [명령 프롬프트에서 SQL Server 2016 설치](../../install-windows/install-sql-server-from-the-command-prompt.md)  
   

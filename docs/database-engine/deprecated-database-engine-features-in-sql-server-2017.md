@@ -17,12 +17,12 @@ ms.assetid: ''
 author: MikeRayMSFT
 ms.author: mikeray
 monikerRange: '>=sql-server-2017||=sqlallproducts-allversions||>=sql-server-linux-2017'
-ms.openlocfilehash: 7ff7a91230daff2aab0e031fa2b87803e379921b
-ms.sourcegitcommit: 216f377451e53874718ae1645a2611cdb198808a
+ms.openlocfilehash: 5285873c9fc81849d8da8b48140dfbb71281e1aa
+ms.sourcegitcommit: 2f868a77903c1f1c4cecf4ea1c181deee12d5b15
 ms.translationtype: HT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 07/28/2020
-ms.locfileid: "87244084"
+ms.lasthandoff: 10/02/2020
+ms.locfileid: "91670526"
 ---
 # <a name="deprecated-database-engine-features-in-sql-server-2017"></a>SQL Server 2017에서 사용되지 않는 데이터베이스 엔진 기능
 
@@ -62,7 +62,7 @@ WHERE object_name = 'SQLServer:Deprecated Features';
 
 | 사용되지 않는 기능 | 대체 기능 | 기능 이름 | 기능 ID |
 |--------------------|-------------|--------------|------------|
-버전 100에서 업그레이드합니다(SQL Server 2008 및 SQL Server 2008 R2). | SQL Server 버전이 더 이상 [지원](https://aka.ms/sqllifecycle)되지 않을 경우 연결된 데이터베이스 호환성 수준이 사용되지 않는 것으로 표시됩니다. 하지만 업그레이드를 더욱 용이하게 하기 위해, 지원되는 데이터베이스 호환성 수준에서 인증된 애플리케이션은 최대한 오래 지원할 예정입니다. 호환성 수준에 대한 자세한 내용은 [ALTER DATABASE 호환성 수준&#40;Transact-SQL&#41;](../t-sql/statements/alter-database-transact-sql-compatibility-level.md)을 참조하세요. | 데이터베이스 호환성 수준 100 | 108 |
+버전 100에서 업그레이드합니다(SQL Server 2008 및 SQL Server 2008 R2). | SQL Server 버전이 더 이상 [지원](/lifecycle/products/?products=sql-server)되지 않을 경우 연결된 데이터베이스 호환성 수준이 사용되지 않는 것으로 표시됩니다. 하지만 업그레이드를 더욱 용이하게 하기 위해, 지원되는 데이터베이스 호환성 수준에서 인증된 애플리케이션은 최대한 오래 지원할 예정입니다. 호환성 수준에 대한 자세한 내용은 [ALTER DATABASE 호환성 수준&#40;Transact-SQL&#41;](../t-sql/statements/alter-database-transact-sql-compatibility-level.md)을 참조하세요. | 데이터베이스 호환성 수준 100 | 108 |
 
 ### <a name="database-objects"></a>데이터베이스 개체
 
@@ -370,6 +370,4 @@ WHERE object_name = 'SQLServer:Deprecated Features';
 > 현재 **sp_setapprole** 에 대한 쿠키 **OUTPUT** 매개 변수는 정확한 최대 길이인 **varbinary(8000)** 로 정의되어 있습니다. 그러나 현재 구현은 **varbinary(50)** 입니다. 개발자가 **varbinary(50)** 를 할당할 경우 이후 릴리스에서 쿠키 반환 크기가 증가하면 애플리케이션을 변경해야 할 수 있습니다. 이 문제는 사용 중지에 관한 문제는 아니지만 애플리케이션 조정이 유사하기 때문에 이 항목에서 다룹니다. 자세한 내용은 [sp_setapprole&#40;Transact-SQL&#41;](../relational-databases/system-stored-procedures/sp-setapprole-transact-sql.md)을 참조하세요.  
   
 ## <a name="see-also"></a>참고 항목  
- [SQL Server 2016에서 지원되지 않는 데이터베이스 엔진 기능](../database-engine/discontinued-database-engine-functionality-in-sql-server-2016.md)  
-  
-
+ [SQL Server 2016에서 지원되지 않는 데이터베이스 엔진 기능](./discontinued-database-engine-functionality-in-sql-server.md)  

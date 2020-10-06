@@ -11,12 +11,12 @@ ms.assetid: 1dd294cc-5b69-4d0c-9005-3e307b75678b
 author: MashaMSFT
 ms.author: mathoma
 monikerRange: '>=sql-server-2016||=sqlallproducts-allversions'
-ms.openlocfilehash: 1cc02299cda600a9c82e121f8b588b49d9bd64b1
-ms.sourcegitcommit: 039fb38c583019b3fd06894160568387a19ba04e
+ms.openlocfilehash: 40114f51a3012f5f60564a57e63a2f3e0bc8bdab
+ms.sourcegitcommit: 2f868a77903c1f1c4cecf4ea1c181deee12d5b15
 ms.translationtype: HT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 07/30/2020
-ms.locfileid: "87442802"
+ms.lasthandoff: 10/02/2020
+ms.locfileid: "91670440"
 ---
 # <a name="install-sql-server-on-server-core"></a>Server Core에 SQL Server 설치
 
@@ -24,7 +24,7 @@ ms.locfileid: "87442802"
 
 Server Core 설치에는 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]를 설치할 수 있습니다.   
   
-Server Core 설치 옵션은 특정 서버 역할을 실행하기 위한 최소 환경을 제공합니다. 이렇게 하면 유지 관리 및 관리 요구 사항이 줄어들고 이러한 서버 역할에 대한 공격 노출 영역이 감소합니다. Server Core에 대한 자세한 내용은 [Server Core 설치](https://docs.microsoft.com/windows-server/get-started/getting-started-with-server-core)를 참조하세요. [!INCLUDE[win8srv](../../includes/win8srv-md.md)]에서 구현되는 Server Core에 대한 자세한 내용은 [Windows Server 2012용 Server Core](https://msdn.microsoft.com/library/hh846323\(VS.85\).aspx)(https://msdn.microsoft.com/library/hh846323(VS.85).aspx) 를 참조하세요.  
+Server Core 설치 옵션은 특정 서버 역할을 실행하기 위한 최소 환경을 제공합니다. 이렇게 하면 유지 관리 및 관리 요구 사항이 줄어들고 이러한 서버 역할에 대한 공격 노출 영역이 감소합니다. Server Core에 대한 자세한 내용은 [Server Core 설치](/windows-server/get-started/getting-started-with-server-core)를 참조하세요. [!INCLUDE[win8srv](../../includes/win8srv-md.md)]에서 구현되는 Server Core에 대한 자세한 내용은 [Windows Server 2012용 Server Core](https://msdn.microsoft.com/library/hh846323\(VS.85\).aspx)(https://msdn.microsoft.com/library/hh846323(VS.85).aspx) 를 참조하세요.  
   
  현재 지원되는 운영 체제 목록은 [SQL Server 설치를 위한 하드웨어 및 소프트웨어 요구 사항](../../sql-server/install/hardware-and-software-requirements-for-installing-sql-server.md)을 참조하세요.
 
@@ -77,7 +77,7 @@ Server Core 설치 옵션은 특정 서버 역할을 실행하기 위한 최소 
  Server Core 설치 시 [!INCLUDE[ssSQL14](../../includes/sssql14-md.md)] 에서 [!INCLUDE[ssSQL15](../../includes/sssql15-md.md)] 로 업그레이드는 지원됩니다.  
   
 ## <a name="install"></a>설치  
- [!INCLUDE[ssCurrent](../../includes/ssnoversion-md.md)] 는 Server  Core  운영 체제의 설치 마법사를 사용하는 설치를 지원하지 않습니다. Server Core에 설치할 때 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 설치는 /Q 매개 변수를 사용하는 완전 자동 모드 또는 /QS 매개 변수를 사용하는 단순 자동 모드를 지원합니다. 자세한 내용은 [명령 프롬프트에서 SQL Server 설치](../../database-engine/install-windows/install-sql-server-2016-from-the-command-prompt.md)를 참조하세요.  
+ [!INCLUDE[ssCurrent](../../includes/ssnoversion-md.md)] 는 Server  Core  운영 체제의 설치 마법사를 사용하는 설치를 지원하지 않습니다. Server Core에 설치할 때 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 설치는 /Q 매개 변수를 사용하는 완전 자동 모드 또는 /QS 매개 변수를 사용하는 단순 자동 모드를 지원합니다. 자세한 내용은 [명령 프롬프트에서 SQL Server 설치](./install-sql-server-from-the-command-prompt.md)를 참조하세요.  
   
  소프트웨어 사용이 [!INCLUDE[msCoName](../../includes/msconame-md.md)] 볼륨 라이선스 계약 또는 공급 업체와의 ISV  또는 OEM  계약과 같은 별도의 계약에 의해 관리되지 않는 한 설치 방법에 상관없이 개인 또는 업체 대표로서 소프트웨어 사용 조건에 대한 동의를 확인해야 합니다.  
   
@@ -324,13 +324,11 @@ Setup.exe /Q /Action=Uninstall /FEATURES=SQLEngine,AS,IS /INSTANCENAME=MSSQLSERV
 3.  **새 태스크 만들기** 대화 상자에서 **열기** 필드에 **cmd** 를 입력한 다음 [!INCLUDE[clickOK](../../includes/clickok-md.md)].  
   
 ## <a name="see-also"></a>참고 항목  
- [구성 파일을 사용하여 SQL Server 설치](../../database-engine/install-windows/install-sql-server-2016-using-a-configuration-file.md)   
- [명령 프롬프트에서 SQL Server 설치](../../database-engine/install-windows/install-sql-server-2016-from-the-command-prompt.md)   
+ [구성 파일을 사용하여 SQL Server 설치](./install-sql-server-using-a-configuration-file.md)   
+ [명령 프롬프트에서 SQL Server 설치](./install-sql-server-from-the-command-prompt.md)   
  [버전 및 SQL Server 2017의 지원되는 기능](../../sql-server/editions-and-components-of-sql-server-2017.md)   
- [Server Core 설치](https://technet.microsoft.com/windows-server-docs/get-started/getting-started-with-server-core)   
- [Sconfig.cmd로 Windows Server 2016의 Server Core 설치 구성](https://technet.microsoft.com/windows-server-docs/get-started/sconfig-on-ws2016)   
+ [Server Core 설치](/windows-server/get-started/getting-started-with-server-core)   
+ [Sconfig.cmd로 Windows Server 2016의 Server Core 설치 구성](/windows-server/get-started/sconfig-on-ws2016)   
  [Windows PowerShell의 장애 조치 클러스터 Cmdlet(영문)](/powershell/module/failoverclusters/)
 
   
-  
-

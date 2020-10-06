@@ -11,12 +11,12 @@ ms.assetid: 31d16820-d126-4c57-82cc-27701e4091bc
 author: MashaMSFT
 ms.author: mathoma
 monikerRange: '>=sql-server-2016||=sqlallproducts-allversions'
-ms.openlocfilehash: 67a68c2827fffcfd5be0af38cbc38f33fd9a09dd
-ms.sourcegitcommit: f7ac1976d4bfa224332edd9ef2f4377a4d55a2c9
+ms.openlocfilehash: 1bec1ae2badef02e407b4562732af9cda85fc989
+ms.sourcegitcommit: 2f868a77903c1f1c4cecf4ea1c181deee12d5b15
 ms.translationtype: HT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 07/02/2020
-ms.locfileid: "85900193"
+ms.lasthandoff: 10/02/2020
+ms.locfileid: "91670217"
 ---
 # <a name="upgrade-to-a-different-edition-of-sql-server-setup"></a>다른 SQL Server 버전으로 업그레이드(설치 프로그램)
 
@@ -90,6 +90,5 @@ setup.exe /q /ACTION=editionupgrade /InstanceName=MSSQLSERVER /PID=<appropriateP
 
 ## <a name="see-also"></a>참고 항목  
  [SQL Server 업그레이드](../../database-engine/install-windows/upgrade-sql-server.md)   
- [이전 버전과의 호환성_삭제됨](https://msdn.microsoft.com/library/15d9117e-e2fa-4985-99ea-66a117c1e9fd)  
-  
+ [이전 버전과의 호환성_삭제됨](/previous-versions/sql/sql-server-2016/cc280407(v=sql.130))  
   

@@ -11,12 +11,12 @@ ms.assetid: 7d6c962b-c8d0-49f7-a2ac-00ad8dca930a
 author: MashaMSFT
 ms.author: mathoma
 monikerRange: '>=sql-server-2016||=sqlallproducts-allversions'
-ms.openlocfilehash: 5067ed61243e777cd2d0a4f9fab76830f6207a6e
-ms.sourcegitcommit: f7ac1976d4bfa224332edd9ef2f4377a4d55a2c9
+ms.openlocfilehash: ee3b0fc253f0b3ff365e8d228d117dc602ed0789
+ms.sourcegitcommit: 2f868a77903c1f1c4cecf4ea1c181deee12d5b15
 ms.translationtype: HT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 07/02/2020
-ms.locfileid: "85899684"
+ms.lasthandoff: 10/02/2020
+ms.locfileid: "91671046"
 ---
 # <a name="install-sql-server-servicing-updates"></a>SQL Server 서비스 업데이트 설치
 
@@ -44,11 +44,11 @@ ms.locfileid: "85899684"
 설치 프로그램에서 최신 버전의 적용 가능한 업데이트를 찾으면 이를 다운로드하고 현재의 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 설치 프로세스와 통합합니다. 제품 업데이트에는 누적 업데이트, 서비스 팩 또는 서비스 팩과 누적 업데이트가 포함될 수 있습니다.  
   
 ## <a name="installing-updates-for-ssnoversion-after-it-has-already-been-installed"></a>설치 후 [!INCLUDE[ssNoVersion](../../includes/ssNoVersion-md.md)] 용 업데이트 설치  
-[!INCLUDE[ssNoVersion](../../includes/ssNoVersion-md.md)]인스턴스가 설치된 경우 GDR(General Distribution Release), SP(서비스 팩) 및 CU(누적 업데이트)를 포함한 최신 보안 업데이트와 중요 업데이트를 적용하는 것이 좋습니다. 자세한 내용은 [2016년 3월에 발표한 SQL Server ISM(증분 서비스 모델)](https://blogs.msdn.microsoft.com/sqlreleaseservices/announcing-updates-to-the-sql-server-incremental-servicing-model-ism/)을 참조하세요.
+[!INCLUDE[ssNoVersion](../../includes/ssNoVersion-md.md)]인스턴스가 설치된 경우 GDR(General Distribution Release), SP(서비스 팩) 및 CU(누적 업데이트)를 포함한 최신 보안 업데이트와 중요 업데이트를 적용하는 것이 좋습니다. 자세한 내용은 [2016년 3월에 발표한 SQL Server ISM(증분 서비스 모델)](/archive/blogs/sqlreleaseservices/announcing-updates-to-the-sql-server-incremental-servicing-model-ism)을 참조하세요.
 
 > [!NOTE]
 > [!INCLUDE[ssSQL17](../../includes/sssql17-md.md)]부터는 단순화되고 예측 가능한 일반 서비스 주기를 채택하고 있으며 SP(서비스 팩)는 더 이상 제공되지 않습니다. CU(누적 업데이트)만, 필요한 경우 GDR(General Distribution Release)
-> 자세한 내용은 [2017년 9월에 발표한 SQL Server에 대한 MSM(Modern Servicing Model)](https://blogs.msdn.microsoft.com/sqlreleaseservices/announcing-the-modern-servicing-model-for-sql-server/)을 참조하세요.
+> 자세한 내용은 [2017년 9월에 발표한 SQL Server에 대한 MSM(Modern Servicing Model)](/archive/blogs/sqlreleaseservices/announcing-the-modern-servicing-model-for-sql-server)을 참조하세요.
   
 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 업데이트는 MU( [!INCLUDE[msCoName](../../includes/msconame-md.md)] Update), WSUS(Windows Server Update Services) 및 Microsoft 다운로드 센터를 통해 제공됩니다. [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 용 보안 및 중요 업데이트는 [!INCLUDE[msCoName](../../includes/msconame-md.md)] Update를 통해 제공되며 이러한 업데이트를 보려면 제어판의 Windows Update 애플릿을 통해 MU를 선택해야 합니다.  
   
@@ -56,6 +56,5 @@ ms.locfileid: "85899684"
   
 ## <a name="see-also"></a>참고 항목  
 [설치 마법사에서 SQL Server 설치 &#40;Setup&#41;](../../database-engine/install-windows/install-sql-server-from-the-installation-wizard-setup.md)        
-[SQL Server 인스턴스에 기능 추가&#40;설치 프로그램&#41;](../../database-engine/install-windows/add-features-to-an-instance-of-sql-server-2016-setup.md)         
-[실패한 SQL Server 설치 복구](../../database-engine/install-windows/repair-a-failed-sql-server-installation.md)  
-
+[SQL Server 인스턴스에 기능 추가&#40;설치 프로그램&#41;](./add-features-to-an-instance-of-sql-server-setup.md)         
+[실패한 SQL Server 설치 복구](../../database-engine/install-windows/repair-a-failed-sql-server-installation.md)

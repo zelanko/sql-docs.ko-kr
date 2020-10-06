@@ -10,12 +10,12 @@ ms.topic: conceptual
 ms.assetid: c602fd39-db93-4717-8f3a-5a98b940f9cc
 author: MashaMSFT
 ms.author: mathoma
-ms.openlocfilehash: 67131a066a9885547e04ff58c80cd9f05d365051
-ms.sourcegitcommit: f7ac1976d4bfa224332edd9ef2f4377a4d55a2c9
+ms.openlocfilehash: 74014a2fe98646a5a25d337719636c3471562ff3
+ms.sourcegitcommit: 2f868a77903c1f1c4cecf4ea1c181deee12d5b15
 ms.translationtype: HT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 07/02/2020
-ms.locfileid: "85888003"
+ms.lasthandoff: 10/02/2020
+ms.locfileid: "91670659"
 ---
 # <a name="determine-why-changes-from-primary-replica-are-not-reflected-on-secondary-replica-for-an-always-on-availability-group"></a>주 복제본의 변경 내용이 Always On 가용성 그룹의 보조 복제본에 반영되지 않은 이유 확인
 [!INCLUDE [SQL Server](../../../includes/applies-to-version/sqlserver.md)]
@@ -127,6 +127,5 @@ from sys.dm_hadr_database_replica_states
  다시 실행 스레드가 실제로 뒤처진 경우 보조 복제본에 대해 성능 저하의 근본 원인을 조사해야 합니다. 보고 워크로드와의 I/O 경합이 있는 경우 [Resource Governor](~/relational-databases/resource-governor/resource-governor.md)를 사용하여 보고 워크로드가 실행되는 I/O 사이클을 간접적으로 제어하는 데 사용되는 CPU 사이클을 어느 정도 제어할 수 있습니다. 예를 들어 보고 워크로드가 CPU의 10%를 사용하지만 워크로드가 I/O 경계인 경우 Resource Governor를 사용하여 CPU 리소스 사용량을 5%로 제한하면 읽기 워크로드를 제한하여 I/O에 대한 영향을 최소화할 수 있습니다.  
   
 ## <a name="next-steps"></a>다음 단계  
- [SQL Server 2008의 성능 문제 해결](https://msdn.microsoft.com/library/dd672789(v=sql.100).aspx)
-  
+ [SQL Server 2008의 성능 문제 해결](/previous-versions/sql/sql-server-2008/dd672789(v=sql.100))
   

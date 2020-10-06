@@ -16,12 +16,12 @@ ms.assetid: 702359c4-6ca9-42a8-860c-a95a802898a1
 author: MashaMSFT
 ms.author: mathoma
 monikerRange: '>=sql-server-2016||=sqlallproducts-allversions'
-ms.openlocfilehash: 6f3f80b726b155f94851326660d47da5cbac1018
-ms.sourcegitcommit: f7ac1976d4bfa224332edd9ef2f4377a4d55a2c9
+ms.openlocfilehash: 784e005a9a7851c6e088255d8ff8b9e671796367
+ms.sourcegitcommit: 2f868a77903c1f1c4cecf4ea1c181deee12d5b15
 ms.translationtype: HT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 07/02/2020
-ms.locfileid: "85900281"
+ms.lasthandoff: 10/02/2020
+ms.locfileid: "91671006"
 ---
 # <a name="supported-version--edition-upgrades-sql-server-2016"></a>지원되는 버전 업그레이드(SQL Server 2016)
 
@@ -47,7 +47,7 @@ ms.locfileid: "85900281"
   
 -   [!INCLUDE[sssql15-md](../../includes/sssql15-md.md)]은 64비트 플랫폼에서만 사용할 수 있습니다. 플랫폼 간 업그레이드는 지원되지 않습니다. [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 설치 프로그램을 사용하여 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 의 32비트 인스턴스를 네이티브 64비트로 업그레이드할 수 없습니다. 하지만 데이터베이스를 복제에 게시하지 않은 경우 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]의 32비트 인스턴스에서 데이터베이스를 분리하거나 백업한 다음 이를 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] (64비트)의 새 인스턴스에 연결하거나 이 인스턴스로 복원할 수 있습니다. master, msdb 및 model 시스템 데이터베이스의 모든 로그인과 기타 사용자 개체를 다시 만들어야 합니다.  
   
--   기존 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]인스턴스를 업그레이드하는 동안에는 새 기능을 추가할 수 없습니다. [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 인스턴스를 [!INCLUDE[sssql15-md](../../includes/sssql15-md.md)]로 업그레이드한 후 [!INCLUDE[sssql15-md](../../includes/sssql15-md.md)] 설치 프로그램을 사용하여 기능을 추가할 수 있습니다. 자세한 내용은 [SQL Server 2016 인스턴스에 기능 추가&#40;설치 프로그램&#41;](../../database-engine/install-windows/add-features-to-an-instance-of-sql-server-2016-setup.md)를 참조하세요.  
+-   기존 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]인스턴스를 업그레이드하는 동안에는 새 기능을 추가할 수 없습니다. [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 인스턴스를 [!INCLUDE[sssql15-md](../../includes/sssql15-md.md)]로 업그레이드한 후 [!INCLUDE[sssql15-md](../../includes/sssql15-md.md)] 설치 프로그램을 사용하여 기능을 추가할 수 있습니다. 자세한 내용은 [SQL Server 2016 인스턴스에 기능 추가&#40;설치 프로그램&#41;](./add-features-to-an-instance-of-sql-server-setup.md)를 참조하세요.  
  
 -   WOW 모드에서는 장애 조치(Failover) 클러스터가 지원되지 않습니다.  
   
@@ -174,8 +174,7 @@ SQL Server 2016은 다음 버전의 SQL Server에서 업그레이드할 수 있�
   
 ## <a name="see-also"></a>참고 항목  
 
-[SQL Server 2016의 버전 및 지원하는 기능](../../sql-server/editions-and-supported-features-for-sql-server-2016.md)     
+[SQL Server 2016의 버전 및 지원하는 기능](../../sql-server/editions-and-components-of-sql-server-2016.md)     
 [SQL Server 2016 설치를 위한 하드웨어 및 소프트웨어 요구 사항](../../sql-server/install/hardware-and-software-requirements-for-installing-sql-server.md)     
 [SQL Server 2016으로 업그레이드](../../database-engine/install-windows/upgrade-sql-server.md)    
-  
   

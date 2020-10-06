@@ -15,12 +15,12 @@ helpviewer_keywords:
 ms.assetid: 0093b43c-c6b5-4574-9b30-3a0e91e1a1f9
 author: markingmyname
 ms.author: maghan
-ms.openlocfilehash: 815ecb54acf22b1ac28adae534847fa842b2e87a
-ms.sourcegitcommit: da88320c474c1c9124574f90d549c50ee3387b4c
+ms.openlocfilehash: c1d9b69cc55ab617eb3a4c5b4ed2ebb27726f35b
+ms.sourcegitcommit: 2f868a77903c1f1c4cecf4ea1c181deee12d5b15
 ms.translationtype: HT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 07/01/2020
-ms.locfileid: "85784141"
+ms.lasthandoff: 10/02/2020
+ms.locfileid: "91670006"
 ---
 # <a name="configure-a-windows-firewall-for-database-engine-access"></a>데이터베이스 엔진 액세스에 대한 Windows 방화벽 구성
  [!INCLUDE [SQL Server](../../includes/applies-to-version/sqlserver.md)]
@@ -97,6 +97,5 @@ ms.locfileid: "85784141"
 7.  **이름** 대화 상자에서 이 규칙의 이름 및 설명을 입력한 후 **마침**을 클릭합니다.  
   
 ## <a name="see-also"></a>참고 항목  
- [방법: 방화벽 설정 구성(Azure SQL Database)](https://azure.microsoft.com/documentation/articles/sql-database-configure-firewall-settings/)  
-  
+ [방법: 방화벽 설정 구성(Azure SQL Database)](/azure/azure-sql/database/firewall-configure)  
   

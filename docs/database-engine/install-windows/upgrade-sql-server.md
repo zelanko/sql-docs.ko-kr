@@ -13,19 +13,19 @@ ms.assetid: 5064e35b-b70d-4a0b-a9e9-fff04162f9d2
 author: MashaMSFT
 ms.author: mathoma
 monikerRange: '>=sql-server-2016||=sqlallproducts-allversions'
-ms.openlocfilehash: 8689e210cd0faf265fc1dcf96705a87cecccf5ed
-ms.sourcegitcommit: f7ac1976d4bfa224332edd9ef2f4377a4d55a2c9
+ms.openlocfilehash: dc4877a76b314baf13353e6fe979210244d81c48
+ms.sourcegitcommit: 2f868a77903c1f1c4cecf4ea1c181deee12d5b15
 ms.translationtype: HT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 07/02/2020
-ms.locfileid: "85900211"
+ms.lasthandoff: 10/02/2020
+ms.locfileid: "91670238"
 ---
 # <a name="upgrade-sql-server"></a>SQL Server 업그레이드
 [!INCLUDE [SQL Server -Windows Only](../../includes/applies-to-version/sql-windows-only.md)]
  
  [!INCLUDE[ssSQL11](../../includes/sssql11-md.md)], [!INCLUDE[ssSQL14](../../includes/sssql14-md.md)], [!INCLUDE[ss2016](../../includes/sssql15-md.md)] 또는 [!INCLUDE[ss2017](../../includes/sssqlv14-md.md)] 인스턴스를 [!INCLUDE[ssCurrent](../../includes/sscurrent-md.md)]로 직접 업그레이드할 수 있습니다. [!INCLUDE[ssKatmai](../../includes/sskatmai-md.md)] 및 [!INCLUDE[ssKilimanjaro](../../includes/sskilimanjaro-md.md)]의 경우, 지원되는 주요 운영 체제 간에 겹치는 공통부분이 없으므로 병렬 업그레이드 또는 마이그레이션을 수행하여 SQL Server 2019로 이동해야 합니다. [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 설치 프로그램을 실행하여 [!INCLUDE[ssCurrent](../../includes/sscurrent-md.md)]로 업그레이드하기 전에 업그레이드 프로세스 및 릴리스 정보에 대한 다음 문서를 검토하세요.  
   
-   - [!INCLUDE[ssVersion2005](../../includes/ssversion2005-md.md)]에서 업그레이드하는 방법은 [SQL Server 2005에서 업그레이드하나요?](../../database-engine/install-windows/are-you-upgrading-from-sql-server-2005.md)를 참조하세요.  
+   - [!INCLUDE[ssVersion2005](../../includes/ssversion2005-md.md)]에서 업그레이드하는 방법은 [SQL Server 2005에서 업그레이드하나요?](../../sql-server/end-of-support/sql-server-end-of-life-overview.md)를 참조하세요.  
    - [SQL Server 2016 릴리스 정보](../../sql-server/sql-server-2016-release-notes.md) 
    - [SQL Server 2017 릴리스 정보](../../sql-server/sql-server-2017-release-notes.md) 
   
@@ -34,7 +34,7 @@ ms.locfileid: "85900211"
   
 -   [지원되는 버전 및 에디션 업그레이드](../../database-engine/install-windows/supported-version-and-edition-upgrades.md)  
 -   [Data Migration Assistant를 실행하여 업그레이드 준비](../../database-engine/install-windows/prepare-for-upgrade-by-running-data-migration-assistant.md)  
--   [SQL Server 2005에서 업그레이드하나요?](../../database-engine/install-windows/are-you-upgrading-from-sql-server-2005.md)  
+-   [SQL Server 2005에서 업그레이드하나요?](../../sql-server/end-of-support/sql-server-end-of-life-overview.md)  
 -   [Analysis Services 업그레이드](../../database-engine/install-windows/upgrade-analysis-services.md)  
 -   [데이터베이스 엔진 업그레이드](../../database-engine/install-windows/upgrade-database-engine.md)  
 -   [Data Quality Services 업그레이드](../../database-engine/install-windows/upgrade-data-quality-services.md)  
@@ -55,6 +55,5 @@ ms.locfileid: "85900211"
  [복제된 데이터베이스 업그레이드](../../database-engine/install-windows/upgrade-replicated-databases.md)   
  [Master Data Services 업그레이드](../../database-engine/install-windows/upgrade-master-data-services.md)   
  [SQL Server 2008 R2 Best Practices Analyzer](https://www.microsoft.com/download/details.aspx?id=436)   
- [이전 버전과의 호환성](../../database-engine/sql-server-database-engine-backward-compatibility.md)  
-  
+ [이전 버전과의 호환성](../discontinued-database-engine-functionality-in-sql-server.md)  
   

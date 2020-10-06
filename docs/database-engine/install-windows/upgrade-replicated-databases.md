@@ -17,12 +17,12 @@ ms.assetid: 9926a4f7-bcd8-4b9b-9dcf-5426a5857116
 author: MashaMSFT
 ms.author: mathoma
 monikerRange: '>=sql-server-2016||=sqlallproducts-allversions'
-ms.openlocfilehash: 0c2d6d5fc367e66b7a5ca84e2d1c290203f61b8d
-ms.sourcegitcommit: f7ac1976d4bfa224332edd9ef2f4377a4d55a2c9
+ms.openlocfilehash: d7db0240ce9a94a5a7bb8431a79c9a66b468471d
+ms.sourcegitcommit: 2f868a77903c1f1c4cecf4ea1c181deee12d5b15
 ms.translationtype: HT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 07/02/2020
-ms.locfileid: "85900225"
+ms.lasthandoff: 10/02/2020
+ms.locfileid: "91670939"
 ---
 # <a name="upgrade-or-patch-replicated-databases"></a>복제된 데이터베이스 업그레이드 또는 패치
 
@@ -135,4 +135,4 @@ SQL Server 인스턴스를 SQL Server 2016 이상으로 업그레이드하려고
  [복제의 이전 버전과의 호환성](../../relational-databases/replication/replication-backward-compatibility.md)   
  [지원되는 버전 및 에디션 업그레이드](../../database-engine/install-windows/supported-version-and-edition-upgrades.md)   
  [SQL Server 업그레이드](../../database-engine/install-windows/upgrade-sql-server.md)  
- [SQL Server 2016으로 복제 토폴로지 업그레이드](https://blogs.msdn.microsoft.com/sql_server_team/upgrading-a-replication-topology-to-sql-server-2016/)
+ [SQL Server 2016으로 복제 토폴로지 업그레이드](/archive/blogs/sql_server_team/upgrading-a-replication-topology-to-sql-server-2016)

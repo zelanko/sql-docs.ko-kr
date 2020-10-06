@@ -13,12 +13,12 @@ helpviewer_keywords:
 ms.assetid: c4150e1b-bdff-4f7a-af4c-3401c34def83
 author: chugugrace
 ms.author: chugu
-ms.openlocfilehash: df4cde828997d68b15869000f111a99479369e55
-ms.sourcegitcommit: e700497f962e4c2274df16d9e651059b42ff1a10
+ms.openlocfilehash: 55a439be88d422130e8a511a5c1d2071ece7fc2c
+ms.sourcegitcommit: c7f40918dc3ecdb0ed2ef5c237a3996cb4cd268d
 ms.translationtype: HT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 08/17/2020
-ms.locfileid: "88394209"
+ms.lasthandoff: 10/05/2020
+ms.locfileid: "91719783"
 ---
 # <a name="lookup-transformation-full-cache-mode---ole-db-connection-manager"></a>조회 변환 전체 캐시 모드 - OLE DB 연결 관리자
 
@@ -82,7 +82,7 @@ ms.locfileid: "88394209"
   
     2.  **조회 작업** 목록에서 조회 열의 값으로 입력 열의 값을 교체하거나 새 열에 기록할지 여부를 지정합니다.  
   
-12. 오류 출력을 구성하려면 **오류 출력** 페이지를 클릭하고 오류 처리 옵션을 설정합니다. 자세한 내용은 [조회 변환 편집기&#40;오류 출력 페이지&#41;](../../integration-services/data-flow/transformations/lookup-transformation-editor-error-output-page.md)를 참조하세요.  
+12. 오류 출력을 구성하려면 **오류 출력** 페이지를 클릭하고 오류 처리 옵션을 설정합니다. 자세한 내용은 [조회 변환 편집기&#40;오류 출력 페이지&#41;](../data-flow/transformations/lookup-transformation.md)를 참조하세요.  
   
 13. 조회 변환의 변경 내용을 저장한 다음 패키지를 실행하려면 **확인** 을 클릭합니다.  
   
@@ -90,5 +90,4 @@ ms.locfileid: "88394209"
  [캐시 연결 관리자 변환을 사용하여 전체 캐시 모드에서 조회 변환 구현](../../integration-services/connection-manager/lookup-transformation-full-cache-mode-cache-connection-manager.md)   
  [캐시 없음 또는 부분 캐시 모드로 조회 구현](../../integration-services/data-flow/transformations/implement-a-lookup-in-no-cache-or-partial-cache-mode.md)   
  [Integration Services 변환](../../integration-services/data-flow/transformations/integration-services-transformations.md)  
-  
   

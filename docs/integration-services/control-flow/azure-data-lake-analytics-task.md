@@ -12,12 +12,12 @@ f1_keywords:
 author: yanancai
 ms.author: yanacai
 ms.reviewer: maghan
-ms.openlocfilehash: da776f4ccddcfaaa6c0f8e6af6363f2ef9a1f13d
-ms.sourcegitcommit: c8e1553ff3fdf295e8dc6ce30d1c454d6fde8088
+ms.openlocfilehash: d3fd592913164d92851ca738090de9dd200df66f
+ms.sourcegitcommit: c7f40918dc3ecdb0ed2ef5c237a3996cb4cd268d
 ms.translationtype: HT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 07/22/2020
-ms.locfileid: "86913899"
+ms.lasthandoff: 10/05/2020
+ms.locfileid: "91719355"
 ---
 # <a name="azure-data-lake-analytics-task"></a>Azure Data Lake Analytics 태스크
 
@@ -59,8 +59,8 @@ U-SQL 구성에는 두 개의 설정인 **SourceType** 및 **SourceType** 값을
 |SourceType|동적 옵션|  
 |-----------|-----------------|  
 |**SourceType = DirectInput**|옵션 상자에서 직접 제출할 U-SQL 쿼리를 입력하거나 [찾아보기] 단추(...)를 선택하여 **U-SQL 쿼리 입력** 대화 상자에 U-SQL 쿼리를 입력합니다.|  
-|**SourceType = FileConnection**|기존 파일 연결 관리자를 선택하거나 <**새 연결...** >을 선택하여 새 파일 연결을 만듭니다. 관련 내용은 [파일 연결 관리자](../../integration-services/connection-manager/file-connection-manager.md) 및 [파일 연결 관리자 편집기](../../integration-services/connection-manager/file-connection-manager-editor.md)를 참조하세요.|  
-|**SourceType = Variable**|기존 변수를 선택하거나 \<**New variable...**>를 선택하여 새 변수를 만듭니다. 관련 내용은 [Integration Services&#40;SSIS&#41; 변수](../../integration-services/integration-services-ssis-variables.md) 및 [변수 추가](https://msdn.microsoft.com/library/d09b5d31-433f-4f7c-8c68-9df3a97785d5)를 참조하세요.|
+|**SourceType = FileConnection**|기존 파일 연결 관리자를 선택하거나 <**새 연결...** >을 선택하여 새 파일 연결을 만듭니다. 관련 내용은 [파일 연결 관리자](../../integration-services/connection-manager/file-connection-manager.md) 및 [파일 연결 관리자 편집기](../connection-manager/file-connection-manager.md)를 참조하세요.|  
+|**SourceType = Variable**|기존 변수를 선택하거나 \<**New variable...**>를 선택하여 새 변수를 만듭니다. 관련 내용은 [Integration Services&#40;SSIS&#41; 변수](../../integration-services/integration-services-ssis-variables.md) 및 [변수 추가](../integration-services-ssis-variables.md)를 참조하세요.|
 | &nbsp; | &nbsp; |
 
 
@@ -137,4 +137,3 @@ OUTPUT @rs1
 - [Azure Data Lake Analytics 연결 관리자](../../integration-services/connection-manager/azure-data-lake-analytics-connection-manager.md)
 - [Azure Data Lake Store 파일 시스템 태스크](../../integration-services/control-flow/azure-data-lake-store-file-system-task.md)
 - [Azure Data Lake Store 연결 관리자](../../integration-services/connection-manager/azure-data-lake-store-connection-manager.md)
-

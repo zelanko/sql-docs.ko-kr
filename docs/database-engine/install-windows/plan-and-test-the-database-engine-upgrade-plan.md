@@ -11,12 +11,12 @@ ms.assetid: 19c5b725-7400-4881-af8f-fd232ca28234
 author: MashaMSFT
 ms.author: mathoma
 monikerRange: '>=sql-server-2016||=sqlallproducts-allversions'
-ms.openlocfilehash: 65614af22873f907363bd721ff5c364e9cca5ea7
-ms.sourcegitcommit: f7ac1976d4bfa224332edd9ef2f4377a4d55a2c9
+ms.openlocfilehash: 93fa8a3fa6346a9e93f8caae43aecc0ba49bb763
+ms.sourcegitcommit: 2f868a77903c1f1c4cecf4ea1c181deee12d5b15
 ms.translationtype: HT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 07/02/2020
-ms.locfileid: "85900346"
+ms.lasthandoff: 10/02/2020
+ms.locfileid: "91671036"
 ---
 # <a name="plan-and-test-the-database-engine-upgrade-plan"></a>데이터베이스 엔진 업그레이드 계획 및 테스트
 
@@ -29,7 +29,7 @@ ms.locfileid: "85900346"
 
 - [SQL Server 2017 릴리스 정보](../../sql-server/sql-server-2017-release-notes.md) 
 - [SQL Server 2016 릴리스 정보](../../sql-server/sql-server-2016-release-notes.md) 
-- [SQL Server 데이터베이스 엔진 이전 버전과의 호환성](../../database-engine/sql-server-database-engine-backward-compatibility.md) 문서.  
+- [SQL Server 데이터베이스 엔진 이전 버전과의 호환성](../discontinued-database-engine-functionality-in-sql-server.md) 문서.  
   
 ## <a name="pre-upgrade-planning-checklist"></a>사전 업그레이드 계획 검사 목록  
  [!INCLUDE[ssDE](../../includes/ssde-md.md)]을 업그레이드하기 전에 다음 검사 목록 및 연결된 문서를 검토하세요. 이러한 문서는 업그레이드 방법과 상관없이 모든 업그레이드에 적용되며 가장 적절한 업그레이드 방법을 결정하는 데 도움이 됩니다. 즉 롤링 업그레이드, 새 설치 업그레이드 또는 내부 업그레이드가 있습니다. 예를 들어 운영 체제를 업그레이드하거나 SQL Server 2005에서 업그레이드하거나 SQL Server의 32비트 버전에서 업그레이드하는 경우 내부 또는 롤링 업그레이드를 수행하지 못할 수 있습니다. 의사 결정 트리에 대해서는 [Choose a Database Engine Upgrade Method](../../database-engine/install-windows/choose-a-database-engine-upgrade-method.md)을 참조하세요.  
@@ -60,7 +60,7 @@ ms.locfileid: "85900346"
     > [!NOTE]  
     >  이전 버전의 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] Enterprise edition에서 [!INCLUDE[ssCurrent](../../includes/ssnoversion-md.md)]를 업그레이드하는 경우 엔터프라이즈 버전: 코어 기반 라이선스와 엔터프라이즈 버전 중에서 선택합니다. 이러한 엔터프라이즈 버전은 라이선스 모드와 관련해서만 다릅니다. 자세한 내용은 [Compute Capacity Limits by Edition of SQL Server](../../sql-server/compute-capacity-limits-by-edition-of-sql-server.md)를 참조하세요.  
   
--   **이전 버전과의 호환성:** [!INCLUDE[ssCurrent](../../includes/ssnoversion-md.md)] 데이터베이스 엔진의 이전 버전과의 호환성 문서를 검토하여 업그레이드 중인 [!INCLUDE[ssCurrent](../../includes/ssnoversion-md.md)] 및 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 버전 간의 동작 변화를 검토합니다. [SQL Server Database Engine Backward Compatibility](../../database-engine/sql-server-database-engine-backward-compatibility.md)을 참조하세요.  
+-   **이전 버전과의 호환성:** [!INCLUDE[ssCurrent](../../includes/ssnoversion-md.md)] 데이터베이스 엔진의 이전 버전과의 호환성 문서를 검토하여 업그레이드 중인 [!INCLUDE[ssCurrent](../../includes/ssnoversion-md.md)] 및 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 버전 간의 동작 변화를 검토합니다. [SQL Server Database Engine Backward Compatibility](../discontinued-database-engine-functionality-in-sql-server.md)을 참조하세요.  
   
 -   **Data Migration Assistant:** Data Migration Assistant를 실행하여 업그레이드 프로세스를 방해하거나 주요 변경 내용으로 인해 기존 스크립트 또는 애플리케이션의 수정이 필요할 수 있는 문제를 진단하는 데 도움을 줍니다.
     [여기](https://aka.ms/get-dma)에서 Data Migration Assistant를 다운로드할 수 있습니다.  
@@ -98,4 +98,4 @@ ms.locfileid: "85900346"
 [데이터베이스 엔진 업그레이드](../../database-engine/install-windows/upgrade-database-engine.md) 
   
 ## <a name="additional-resources"></a>추가 리소스 
-[데이터베이스 마이그레이션 가이드](https://aka.ms/datamigration)  
+[데이터베이스 마이그레이션 가이드](https://aka.ms/datamigration)

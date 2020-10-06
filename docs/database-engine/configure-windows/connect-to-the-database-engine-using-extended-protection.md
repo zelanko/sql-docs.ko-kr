@@ -18,12 +18,12 @@ helpviewer_keywords:
 ms.assetid: ecfd783e-7dbb-4a6c-b5ab-c6c27d5dd57f
 author: VanMSFT
 ms.author: vanto
-ms.openlocfilehash: 9f54a62d7110f86087f796b6dc1f9a6c688d89d6
-ms.sourcegitcommit: da88320c474c1c9124574f90d549c50ee3387b4c
+ms.openlocfilehash: 22b1d58bac2433f9f5bae7dac5a6568050e38daf
+ms.sourcegitcommit: 2f868a77903c1f1c4cecf4ea1c181deee12d5b15
 ms.translationtype: HT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 07/01/2020
-ms.locfileid: "85772632"
+ms.lasthandoff: 10/02/2020
+ms.locfileid: "91670286"
 ---
 # <a name="connect-to-the-database-engine-using-extended-protection"></a>확장된 보호를 사용하여 데이터베이스 엔진에 연결
  [!INCLUDE [SQL Server](../../includes/applies-to-version/sqlserver.md)]
@@ -55,7 +55,7 @@ ms.locfileid: "85772632"
 ### <a name="operating-system-support"></a>운영 체제 지원  
  다음 링크에서는 Windows에서 **확장된 보호**를 지원하는 방법에 대해 자세히 설명합니다.  
   
--   [확장된 보호를 사용하는 Windows 통합 인증(Integrated Windows Authentication with Extended Protection)](https://msdn.microsoft.com/library/dd639324.aspx)  
+-   [확장된 보호를 사용하는 Windows 통합 인증(Integrated Windows Authentication with Extended Protection)](/previous-versions/visualstudio/visual-studio-2008/dd639324(v=vs.90))  
   
 -   [Microsoft 보안 공지(973811), 인증에 대한 확장된 보호.](/security-updates/SecurityAdvisories/2009/973811)
   
@@ -100,12 +100,11 @@ ms.locfileid: "85772632"
 ## <a name="configuring-other-sql-server-components"></a>다른 SQL Server 구성 요소 구성  
  [!INCLUDE[ssRSnoversion](../../includes/ssrsnoversion-md.md)]를 구성하는 방법은 [Reporting Services 인증에 대한 확장된 보호](../../reporting-services/security/extended-protection-for-authentication-with-reporting-services.md)를 참조하세요.  
   
- IIS를 사용하여 HTTP 또는 HTTPs 연결을 통해 [!INCLUDE[ssASnoversion](../../includes/ssasnoversion-md.md)] 데이터에 액세스할 때 [!INCLUDE[ssASnoversion](../../includes/ssasnoversion-md.md)] 에서는 IIS에서 제공하는 확장된 보호 기능을 사용할 수 있습니다. IIS에서 확장된 보호를 사용하도록 구성하는 방법에 대한 자세한 내용은 [IIS 7.5에서 확장된 보호 구성](https://go.microsoft.com/fwlink/?LinkId=181105)을 참조하십시오.  
+ IIS를 사용하여 HTTP 또는 HTTPs 연결을 통해 [!INCLUDE[ssASnoversion](../../includes/ssasnoversion-md.md)] 데이터에 액세스할 때 [!INCLUDE[ssASnoversion](../../includes/ssasnoversion-md.md)] 에서는 IIS에서 제공하는 확장된 보호 기능을 사용할 수 있습니다. IIS에서 확장된 보호를 사용하도록 구성하는 방법에 대한 자세한 내용은 [IIS 7.5에서 확장된 보호 구성](/previous-versions/windows/it-pro/windows-server-2008-R2-and-2008/ee909472(v=ws.10))을 참조하십시오.  
   
 ## <a name="see-also"></a>참고 항목  
  [서버 네트워크 구성](../../database-engine/configure-windows/server-network-configuration.md)   
  [클라이언트 네트워크 구성](../../database-engine/configure-windows/client-network-configuration.md)   
- [인증에 대한 확장된 보호 개요](https://go.microsoft.com/fwlink/?LinkID=177943)   
- [확장된 보호를 사용하는 Windows 통합 인증(Integrated Windows Authentication with Extended Protection)](https://go.microsoft.com/fwlink/?LinkId=179922)  
-  
+ [인증에 대한 확장된 보호 개요](/previous-versions/dotnet/netframework-3.5/dd767318(v=vs.90))   
+ [확장된 보호를 사용하는 Windows 통합 인증(Integrated Windows Authentication with Extended Protection)](/previous-versions/visualstudio/visual-studio-2008/dd639324(v=vs.90))  
   

@@ -18,12 +18,12 @@ ms.assetid: ''
 author: MikeRayMSFT
 ms.author: mikeray
 monikerRange: '>=sql-server-ver15||>=sql-server-linux-ver15||=sqlallproducts-allversions'
-ms.openlocfilehash: 2554a93ab1b7be6dc0a81c0ddb63797b8146a444
-ms.sourcegitcommit: 4b775a3ce453b757c7435cc2a4c9b35d0c5a8a9e
+ms.openlocfilehash: 4d3d1b76144de526146e4938ad655d990b443e1c
+ms.sourcegitcommit: 2f868a77903c1f1c4cecf4ea1c181deee12d5b15
 ms.translationtype: HT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 07/31/2020
-ms.locfileid: "87472453"
+ms.lasthandoff: 10/02/2020
+ms.locfileid: "91669906"
 ---
 # <a name="secondary-to-primary-replica-readwrite-connection-redirection-always-on-availability-groups"></a>보조-주 복제본 읽기/쓰기 연결 리디렉션(Always On 가용성 그룹)
 
@@ -155,7 +155,7 @@ GO
 
 ## <a name="sql-server-instance-offline"></a>SQL Server 인스턴스 오프라인
 
-연결 문자열에 지정된 SQL Server 인스턴스를 사용할 수 없는 경우(가동 중단의 경우) 대상 서버에서 해당 복제본의 역할에 관계없이 연결이 실패합니다. 애플리케이션이 장시간 가동 중지되는 것을 방지하려면 연결 문자열에 대체 `FailoverPartner`를 구성합니다. 애플리케이션은 실제 장애 조치(Failover) 동안 주 및 보조 복제본을 수용하기 위해 다시 시도 논리를 구현해야 합니다. 연결 문자열에 대한 자세한 내용은 [SqlConnection.ConnectionString Property](https://msdn.microsoft.com/library/system.data.sqlclient.sqlconnection.connectionstring.aspx)를 참조하세요.
+연결 문자열에 지정된 SQL Server 인스턴스를 사용할 수 없는 경우(가동 중단의 경우) 대상 서버에서 해당 복제본의 역할에 관계없이 연결이 실패합니다. 애플리케이션이 장시간 가동 중지되는 것을 방지하려면 연결 문자열에 대체 `FailoverPartner`를 구성합니다. 애플리케이션은 실제 장애 조치(Failover) 동안 주 및 보조 복제본을 수용하기 위해 다시 시도 논리를 구현해야 합니다. 연결 문자열에 대한 자세한 내용은 [SqlConnection.ConnectionString Property](/dotnet/api/system.data.sqlclient.sqlconnection.connectionstring)를 참조하세요.
 
 ## <a name="see-also"></a>참고 항목
 
@@ -163,4 +163,4 @@ GO
  
 [가용성 복제본에 대한 클라이언트 연결 액세스 정보&#40;SQL Server&#41;](../../../database-engine/availability-groups/windows/about-client-connection-access-to-availability-replicas-sql-server.md)   
 
-[가용성 그룹 수신기, 클라이언트 연결 및 애플리케이션 장애 조치(failover)&#40;SQL Server&#41;](../../../database-engine/availability-groups/windows/listeners-client-connectivity-application-failover.md) 
+[가용성 그룹 수신기, 클라이언트 연결 및 애플리케이션 장애 조치(failover)&#40;SQL Server&#41;](../../../database-engine/availability-groups/windows/listeners-client-connectivity-application-failover.md)

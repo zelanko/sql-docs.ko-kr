@@ -17,12 +17,12 @@ ms.assetid: c50ad078-060b-4a8d-ad45-9e31a8d85729
 author: MashaMSFT
 ms.author: mathoma
 monikerRange: '>=sql-server-2016||=sqlallproducts-allversions'
-ms.openlocfilehash: e5635065e77921b661d5b60e5ebcd0aad850295b
-ms.sourcegitcommit: f7ac1976d4bfa224332edd9ef2f4377a4d55a2c9
+ms.openlocfilehash: 199230f8438a93db64fd5e32ded526699c447a7b
+ms.sourcegitcommit: 2f868a77903c1f1c4cecf4ea1c181deee12d5b15
 ms.translationtype: HT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 07/02/2020
-ms.locfileid: "85883492"
+ms.lasthandoff: 10/02/2020
+ms.locfileid: "91670948"
 ---
 # <a name="install-sql-server-replication"></a>SQL Server 복제 설치
 
@@ -43,11 +43,10 @@ ms.locfileid: "85883492"
 ## <a name="installing-replication-from-the-command-prompt"></a>명령 프롬프트에서 복제 설치  
  **다음의 새 인스턴스를 설치할 때 복제를 설치하려면 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]**  
   
-- [명령 프롬프트에서 SQL Server 설치](../../database-engine/install-windows/install-sql-server-2016-from-the-command-prompt.md)를 참조하세요.  
+- [명령 프롬프트에서 SQL Server 설치](./install-sql-server-from-the-command-prompt.md)를 참조하세요.  
   
 ## <a name="see-also"></a>참고 항목  
  [SQL Server 설치](../../database-engine/install-windows/install-sql-server.md)   
- [명령 프롬프트에서 SQL Server 설치](../../database-engine/install-windows/install-sql-server-2016-from-the-command-prompt.md)   
+ [명령 프롬프트에서 SQL Server 설치](./install-sql-server-from-the-command-prompt.md)   
  [SQL Server 버전에서 지원하는 기능](../../sql-server/editions-and-components-of-sql-server-2017.md)  
-  
   

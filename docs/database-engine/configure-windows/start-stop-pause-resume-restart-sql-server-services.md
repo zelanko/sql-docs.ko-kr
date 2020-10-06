@@ -41,12 +41,12 @@ ms.assetid: 32660a02-e5a1-411a-9e57-7066ca459df6
 author: markingmyname
 ms.author: maghan
 ms.reviewer: ''
-ms.openlocfilehash: 385e0a0d6873f8480c3d99efe9700ef938fc3abf
-ms.sourcegitcommit: 99f61724de5edf6640efd99916d464172eb23f92
+ms.openlocfilehash: e971592b20dd2321e4265752cb8b01c38387b639
+ms.sourcegitcommit: 2f868a77903c1f1c4cecf4ea1c181deee12d5b15
 ms.translationtype: HT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 07/28/2020
-ms.locfileid: "87363033"
+ms.lasthandoff: 10/02/2020
+ms.locfileid: "91670756"
 ---
 # <a name="start-stop-pause-resume-restart-sql-server-services"></a>SQL Server 서비스 시작, 중지, 일시 중지, 계속 및 다시 시작
 
@@ -342,7 +342,7 @@ Microsoft Windows **net** 명령을 사용하여 Microsoft SQL Server 서비스�
   
 ##  <a name="using-service-controller-class"></a><a name="ServiceController"></a> ServiceController 클래스 사용
 
-ServiceController 클래스를 사용하여 SQL Server 서비스 또는 다른 Windows 서비스를 제어할 수 있습니다. 이 작업을 수행하는 방법에 대한 예제는 [ServiceController 클래스](https://docs.microsoft.com/dotnet/api/system.serviceprocess.servicecontroller?view=netframework-4.8)를 참조 하세요.
+ServiceController 클래스를 사용하여 SQL Server 서비스 또는 다른 Windows 서비스를 제어할 수 있습니다. 이 작업을 수행하는 방법에 대한 예제는 [ServiceController 클래스](/dotnet/api/system.serviceprocess.servicecontroller?view=netframework-4.8)를 참조 하세요.
 
 ## <a name="manage-the-sql-server-service-on-linux"></a>Linux에서 SQL Server 서비스 관리
 
@@ -366,7 +366,7 @@ ServiceController 클래스를 사용하여 SQL Server 서비스 또는 다른 W
 
 ## <a name="next-steps"></a>다음 단계
 
-- [SQL Server 설치 설명서 개요](https://msdn.microsoft.com/library/2620439a-f9d3-4b3c-9968-48f60b4bb9a5)
+- [SQL Server 설치 설명서 개요](../install-windows/install-sql-server.md)
 - [SQL Server 설치 로그 파일 보기 및 읽기](../../database-engine/install-windows/view-and-read-sql-server-setup-log-files.md)
 - [SQL Server 구성 관리자](../../relational-databases/sql-server-configuration-manager.md)
 - [최소 구성으로 SQL Server 시작](../../database-engine/configure-windows/start-sql-server-with-minimal-configuration.md)

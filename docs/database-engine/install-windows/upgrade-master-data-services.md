@@ -11,12 +11,12 @@ ms.assetid: 9c3543f3-3eb9-455d-a9bf-f17e9506ad21
 author: MashaMSFT
 ms.author: mathoma
 monikerRange: '>=sql-server-2016||=sqlallproducts-allversions'
-ms.openlocfilehash: e58b0ea07dc97ac7573934112dd3969cadb53c26
-ms.sourcegitcommit: f7ac1976d4bfa224332edd9ef2f4377a4d55a2c9
+ms.openlocfilehash: 90eb3c3e9565d25c3b17f1080923b26efad97196
+ms.sourcegitcommit: 2f868a77903c1f1c4cecf4ea1c181deee12d5b15
 ms.translationtype: HT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 07/02/2020
-ms.locfileid: "85900275"
+ms.lasthandoff: 10/02/2020
+ms.locfileid: "91670973"
 ---
 # <a name="upgrade-master-data-services"></a>MDS(Master Data Services) 업그레이드
 
@@ -98,7 +98,7 @@ ms.locfileid: "85900275"
         > [!IMPORTANT]  
         >  이전 버전의 SQL Server([!INCLUDE[ssKilimanjaro](../../includes/sskilimanjaro-md.md)], [!INCLUDE[ssSQL11](../../includes/sssql11-md.md)], [!INCLUDE[ssSQL14](../../includes/sssql14-md.md)] 또는 [!INCLUDE[ssSQL15](../../includes/sssql15-md.md)])에 있는 기존 MDS 웹 애플리케이션은 [!INCLUDE[ssCurrent](../../includes/sscurrent-md.md)] 버전의 Master Data Services 구성 관리자에서 선택할 수 있습니다. 기존 웹 애플리케이션을 선택하는 대신 MDS용 [!INCLUDE[ssSQL15](../../includes/sssql15-md.md)] 웹 애플리케이션을 만들어야 합니다. 이렇게 하지 않으면 웹 애플리케이션을 업그레이드된 MDS 데이터베이스와 연결하려고 할 때 요청된 페이지의 관련 구성 데이터가 잘못되었기 때문에 해당 페이지에 액세스할 수 없다는 오류 메시지가 나타납니다.  
         >   
-        >  MDS 웹 애플리케이션에 기존([!INCLUDE[ssKilimanjaro](../../includes/sskilimanjaro-md.md)], [!INCLUDE[ssSQL11](../../includes/sssql11-md.md)], [!INCLUDE[ssSQL14](../../includes/sssql14-md.md)] 또는 [!INCLUDE[ssSQL15](../../includes/sssql15-md.md)]) 웹 애플리케이션과 동일한 이름(별칭)을 사용하려면, 먼저 IIS에서 웹 애플리케이션과 관련 애플리케이션 풀을 삭제한 다음, [!INCLUDE[ssSQL15](../../includes/sssql15-md.md)] 버전의 Master Data Services 구성 관리자를 사용하여 동일한 이름의 웹 애플리케이션을 만들어야 합니다. 웹 애플리케이션과 애플리케이션 풀을 IIS에서 제거하는 방법은 [애플리케이션 제거(IIS)](https://go.microsoft.com/fwlink/?LinkId=323537) 및 [애플리케이션 풀 제거(IIS)](https://go.microsoft.com/fwlink/?LinkId=323538)를 참조하세요.  
+        >  MDS 웹 애플리케이션에 기존([!INCLUDE[ssKilimanjaro](../../includes/sskilimanjaro-md.md)], [!INCLUDE[ssSQL11](../../includes/sssql11-md.md)], [!INCLUDE[ssSQL14](../../includes/sssql14-md.md)] 또는 [!INCLUDE[ssSQL15](../../includes/sssql15-md.md)]) 웹 애플리케이션과 동일한 이름(별칭)을 사용하려면, 먼저 IIS에서 웹 애플리케이션과 관련 애플리케이션 풀을 삭제한 다음, [!INCLUDE[ssSQL15](../../includes/sssql15-md.md)] 버전의 Master Data Services 구성 관리자를 사용하여 동일한 이름의 웹 애플리케이션을 만들어야 합니다. 웹 애플리케이션과 애플리케이션 풀을 IIS에서 제거하는 방법은 [애플리케이션 제거(IIS)](/previous-versions/windows/it-pro/windows-server-2008-R2-and-2008/cc771205(v=ws.10)) 및 [애플리케이션 풀 제거(IIS)](/previous-versions/windows/it-pro/windows-server-2008-R2-and-2008/cc772406(v=ws.10))를 참조하세요.  
   
 4.  새 웹 애플리케이션을 업그레이드된 MDS 데이터베이스와 연결합니다.  
   
@@ -158,5 +158,4 @@ ms.locfileid: "85900275"
   
 ## <a name="see-also"></a>참고 항목  
  [MDS(Master Data Services) 설치](../../master-data-services/install-windows/install-master-data-services.md)  
-  
   

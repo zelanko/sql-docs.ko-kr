@@ -21,12 +21,12 @@ helpviewer_keywords:
 ms.assetid: 993e0820-17f2-4c43-880c-d38290bf7abc
 author: markingmyname
 ms.author: maghan
-ms.openlocfilehash: fcec8cc2395f22774b853407fe5959286e539e7e
-ms.sourcegitcommit: c8e1553ff3fdf295e8dc6ce30d1c454d6fde8088
+ms.openlocfilehash: 7ecd953c8c383ef78c6e84221282eda76a5f7fca
+ms.sourcegitcommit: 2f868a77903c1f1c4cecf4ea1c181deee12d5b15
 ms.translationtype: HT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 07/22/2020
-ms.locfileid: "86917134"
+ms.lasthandoff: 10/02/2020
+ms.locfileid: "91671141"
 ---
 # <a name="diagnostic-connection-for-database-administrators"></a>데이터베이스 관리자를 위한 진단 연결
 [!INCLUDE[sql-asdb](../../includes/applies-to-version/sql-asdb.md)]
@@ -43,7 +43,7 @@ ms.locfileid: "86917134"
   
  [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] sysadmin 역할의 멤버만이 DAC를 사용하여 연결할 수 있습니다.  
   
- DAC는 `sqlcmd` 명령 프롬프트 유틸리티에 특수 관리자 스위치(`-A`)를 사용하여 이용 가능하며 지원됩니다. `sqlcmd`를 사용하는 방법은 [스크립팅 변수와 함께 sqlcmd 사용](../../relational-databases/scripting/sqlcmd-use-with-scripting-variables.md)을 참조하세요. 또한 접두사 `admin:`을 `sqlcmd -S admin:<*instance_name*>` 형식으로 인스턴스 이름에 추가하여 연결할 수 있으며 `admin:\<*instance_name*>`에 연결하여 [!INCLUDE[ssManStudioFull](../../includes/ssmanstudiofull-md.md)] 쿼리 편집기에서 DAC를 시작할 수도 있습니다.
+ DAC는 `sqlcmd` 명령 프롬프트 유틸리티에 특수 관리자 스위치(`-A`)를 사용하여 이용 가능하며 지원됩니다. `sqlcmd`를 사용하는 방법은 [스크립팅 변수와 함께 sqlcmd 사용](../../ssms/scripting/sqlcmd-use-with-scripting-variables.md)을 참조하세요. 또한 접두사 `admin:`을 `sqlcmd -S admin:<*instance_name*>` 형식으로 인스턴스 이름에 추가하여 연결할 수 있으며 `admin:\<*instance_name*>`에 연결하여 [!INCLUDE[ssManStudioFull](../../includes/ssmanstudiofull-md.md)] 쿼리 편집기에서 DAC를 시작할 수도 있습니다.
 
 > [!Note]  
 > [!INCLUDE[ssManStudioFull](../../includes/ssmanstudiofull-md.md)]에서 DAC를 설정하려면
@@ -122,7 +122,7 @@ ms.locfileid: "86917134"
  `sqlcmd -S serverName.database.windows.net,1434 -U sa -P <xxx> -d AdventureWorks`  
   
 ## <a name="related-content"></a>관련 내용  
- [스크립팅 변수와 함께 sqlcmd 사용](../../relational-databases/scripting/sqlcmd-use-with-scripting-variables.md)  
+ [스크립팅 변수와 함께 sqlcmd 사용](../../ssms/scripting/sqlcmd-use-with-scripting-variables.md)  
  [sqlcmd 유틸리티](../../tools/sqlcmd-utility.md)  
  [SELECT&#40;Transact-SQL&#41;](../../t-sql/queries/select-transact-sql.md)  
  [sp_who&#40;Transact-SQL&#41;](../../relational-databases/system-stored-procedures/sp-who-transact-sql.md)  
@@ -136,5 +136,3 @@ ms.locfileid: "86917134"
  [트랜잭션 관련 동적 관리 뷰 및 함수&#40;Transact-SQL&#41;](../../relational-databases/system-dynamic-management-views/transaction-related-dynamic-management-views-and-functions-transact-sql.md)  
  [추적 플래그&#40;Transact-SQL&#41;](../../t-sql/database-console-commands/dbcc-traceon-trace-flags-transact-sql.md)  
   
-  
-

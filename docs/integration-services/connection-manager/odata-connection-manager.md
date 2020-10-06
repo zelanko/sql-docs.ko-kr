@@ -14,12 +14,12 @@ f1_keywords:
 - sql13.dts.designer.odataconnectionmanager.f1
 author: chugugrace
 ms.author: chugu
-ms.openlocfilehash: 37ebb31c408d20708d6398be95a30883cceb04d4
-ms.sourcegitcommit: e700497f962e4c2274df16d9e651059b42ff1a10
+ms.openlocfilehash: 68b556070ef8714bc793a333b2a7e6c5d392d882
+ms.sourcegitcommit: c7f40918dc3ecdb0ed2ef5c237a3996cb4cd268d
 ms.translationtype: HT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 08/17/2020
-ms.locfileid: "88496104"
+ms.lasthandoff: 10/05/2020
+ms.locfileid: "91719881"
 ---
 # <a name="odata-connection-manager"></a>OData 연결 관리자
 
@@ -55,7 +55,7 @@ ms.locfileid: "88496104"
 Microsoft Dynamics AX Online 또는 Microsoft Dynamics CRM Online에 연결하기 위해 **Microsoft 온라인 서비스** 인증 옵션을 사용할 수 없습니다. 또한 다단계 인증에 대해 구성된 모든 옵션을 사용할 수 없습니다. 현재 최신 인증은 지원되지 않습니다. 
   
 ### <a name="specifying-and-securing-credentials"></a>자격 증명 지정 및 보안  
- OData 서비스에 기본 인증이 필요한 경우 [OData Connection Manager Editor](../../integration-services/connection-manager/odata-connection-manager-editor.md)에서 사용자 이름과 암호를 지정할 수 있습니다. 편집기에 입력한 값은 패키지에서 유지됩니다. 암호 값은 패키지 보호 수준에 따라 암호화됩니다.  
+ OData 서비스에 기본 인증이 필요한 경우 [OData Connection Manager Editor]()에서 사용자 이름과 암호를 지정할 수 있습니다. 편집기에 입력한 값은 패키지에서 유지됩니다. 암호 값은 패키지 보호 수준에 따라 암호화됩니다.  
   
  여러 가지 방법으로 사용자 이름 및 암호 값을 매개 변수화하거나 패키지 외부에 저장할 수 있습니다. 예를 들어 SQL Server Management Studio에서 패키지를 실행할 때 매개 변수를 사용하거나 연결 관리자 속성을 직접 설정할 수 있습니다.  
   
@@ -92,4 +92,4 @@ Windows 인증 이외의 옵션을 선택하는 경우 **사용자 이름** 및 
 Microsoft Dynamics AX Online 또는 Microsoft Dynamics CRM Online에 연결하기 위해 **Microsoft 온라인 서비스** 인증 옵션을 사용할 수 없습니다. 또한 다단계 인증에 대해 구성된 모든 옵션을 사용할 수 없습니다.
 
  **연결 테스트**  
- OData 원본에 대한 연결을 테스트하려면 이 단추를 클릭합니다.  
+ OData 원본에 대한 연결을 테스트하려면 이 단추를 클릭합니다.

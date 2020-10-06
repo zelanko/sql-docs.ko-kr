@@ -17,12 +17,12 @@ helpviewer_keywords:
 ms.assetid: 9f7ed895-ad65-43e3-ba08-00d7bff1456d
 author: MashaMSFT
 ms.author: mathoma
-ms.openlocfilehash: a738c1eb308ccafa0c744a66d069cbefee46ad26
-ms.sourcegitcommit: e700497f962e4c2274df16d9e651059b42ff1a10
+ms.openlocfilehash: 804cf6d89a67441228caead33cbc8969db530d6c
+ms.sourcegitcommit: 2f868a77903c1f1c4cecf4ea1c181deee12d5b15
 ms.translationtype: HT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 08/17/2020
-ms.locfileid: "88500941"
+ms.lasthandoff: 10/02/2020
+ms.locfileid: "91671056"
 ---
 # <a name="transactions---availability-groups-and-database-mirroring"></a>트랜잭션 - Always On 가용성 그룹 및 데이터베이스 미러링
 [!INCLUDE [SQL Server](../../../includes/applies-to-version/sqlserver.md)]
@@ -42,9 +42,9 @@ SQL Server 2017은 가용성 그룹의 데이터베이스에 대한 분산 트�
 
 자세한 내용은 다음을 참조하세요.
 
-- [DTC 관리 가이드(영문)](https://msdn.microsoft.com/library/ms681291.aspx)
-- [DTC 개발자 가이드(영문)](https://msdn.microsoft.com/library/ms679938.aspx)
-- [DTC 프로그래머 참조(영문)](https://msdn.microsoft.com/library/ms686108.aspx)
+- [DTC 관리 가이드(영문)](/previous-versions/windows/desktop/ms681291(v=vs.85))
+- [DTC 개발자 가이드(영문)](/previous-versions/windows/desktop/ms679938(v=vs.85))
+- [DTC 프로그래머 참조(영문)](/previous-versions/windows/desktop/ms686108(v=vs.85))
 
 ## <a name="sql-server-2016-sp1-and-before-support-for-cross-database-transactions-within-the-same-sql-server-instance"></a>SQL Server 2016 SP1 이전 버전: 동일한 SQL Server 인스턴스 내의 데이터베이스 간 트랜잭션 지원  
 
@@ -93,5 +93,4 @@ SQL Server 2016에서는 트랜잭션에 포함된 하나 이상의 데이터베
   
 ## <a name="next-steps"></a>다음 단계  
  [Always On 가용성 그룹: 상호 운용성 &#40;SQL Server&#41;](../../../database-engine/availability-groups/windows/always-on-availability-groups-interoperability-sql-server.md)  
-  
   

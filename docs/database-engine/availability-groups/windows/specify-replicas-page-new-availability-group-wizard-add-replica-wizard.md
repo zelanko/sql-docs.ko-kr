@@ -14,12 +14,12 @@ f1_keywords:
 ms.assetid: 2d90fc12-a67b-4bd0-b0ab-899b73017196
 author: MashaMSFT
 ms.author: mathoma
-ms.openlocfilehash: 9a278ecf99626aef66dde768c18e8577dbb39c94
-ms.sourcegitcommit: f7ac1976d4bfa224332edd9ef2f4377a4d55a2c9
+ms.openlocfilehash: ea049ce576949df930aabafafb67adf56fe96c5c
+ms.sourcegitcommit: 2f868a77903c1f1c4cecf4ea1c181deee12d5b15
 ms.translationtype: HT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 07/02/2020
-ms.locfileid: "85898091"
+ms.lasthandoff: 10/02/2020
+ms.locfileid: "91671101"
 ---
 # <a name="specify-replicas-page-new-availability-group-wizard-add-replica-wizard"></a>복제본 페이지 지정(새 가용성 그룹 마법사: 복제본 추가 마법사)
 [!INCLUDE [SQL Server](../../../includes/applies-to-version/sqlserver.md)]
@@ -36,7 +36,7 @@ ms.locfileid: "85898091"
  **서버 인스턴스**  
  가용성 복제본을 호스팅할 서버 인스턴스의 이름을 표시합니다.  
   
- 보조 복제본을 호스팅하는 데 사용할 서버 인스턴스가 **가용성 복제본** 표에 나열되어 있지 않으면 **복제본 추가** 단추를 클릭합니다. 하이브리드 IT 환경에서 가용성 그룹을 구성하는 경우( [Azure Virtual Machines에서 SQL Server에 대한 고가용성 및 재해 복구](https://msdn.microsoft.com/library/windowsazure/jj870962.aspx) 참조) **Azure 복제본 추가** 단추를 클릭하여 Azure에서 보조 복제본을 사용하는 가상 머신을 만들 수 있습니다.  
+ 보조 복제본을 호스팅하는 데 사용할 서버 인스턴스가 **가용성 복제본** 표에 나열되어 있지 않으면 **복제본 추가** 단추를 클릭합니다. 하이브리드 IT 환경에서 가용성 그룹을 구성하는 경우( [Azure Virtual Machines에서 SQL Server에 대한 고가용성 및 재해 복구](/previous-versions/azure/jj870962(v=azure.100)) 참조) **Azure 복제본 추가** 단추를 클릭하여 Azure에서 보조 복제본을 사용하는 가상 머신을 만들 수 있습니다.  
   
  **초기 역할**  
  새 복제본이 처음에 수행할 역할(**주** 또는 **보조**)을 나타냅니다.  
@@ -67,7 +67,7 @@ ms.locfileid: "85898091"
  가용성 그룹에 보조 복제본을 추가하려면 클릭합니다.  
   
  **Azure 복제본 추가**  
- 가용성 그룹에서 보조 복제본을 실행하는 Azure 가상 머신을 만들려면 클릭합니다. 이 옵션은 하이브리드 IT에서 온-프레미스 복제본이 포함된 가용성 그룹에만 적용할 수 있습니다. 자세한 내용은 [Azure Virtual Machines에서 SQL Server에 대한 고가용성 및 재해 복구](https://msdn.microsoft.com/library/windowsazure/jj870962.aspx)를 참조하세요.  
+ 가용성 그룹에서 보조 복제본을 실행하는 Azure 가상 머신을 만들려면 클릭합니다. 이 옵션은 하이브리드 IT에서 온-프레미스 복제본이 포함된 가용성 그룹에만 적용할 수 있습니다. 자세한 내용은 [Azure Virtual Machines에서 SQL Server에 대한 고가용성 및 재해 복구](/previous-versions/azure/jj870962(v=azure.100))를 참조하세요.  
   
  **복제본 제거**  
  선택한 보조 복제본을 가용성 그룹에서 제거하려면 클릭합니다.  
@@ -213,5 +213,4 @@ ms.locfileid: "85898091"
  [Always On 가용성 그룹 개요&#40;SQL Server&#41;](../../../database-engine/availability-groups/windows/overview-of-always-on-availability-groups-sql-server.md)   
  [CREATE AVAILABILITY GROUP&#40;Transact-SQL&#41;](../../../t-sql/statements/create-availability-group-transact-sql.md)   
  [Always On 가용성 그룹에 대한 필수 조건, 제한 사항 및 권장 사항&#40;SQL Server&#41;](../../../database-engine/availability-groups/windows/prereqs-restrictions-recommendations-always-on-availability.md)  
-  
   

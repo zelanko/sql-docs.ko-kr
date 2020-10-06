@@ -9,12 +9,12 @@ ms.topic: conceptual
 ms.assetid: 7632769c-b246-4766-886f-7c60ec540be8
 author: MashaMSFT
 ms.author: mathoma
-ms.openlocfilehash: f8af4702abe127dc0bf5b53be7618515c21cd13c
-ms.sourcegitcommit: f7ac1976d4bfa224332edd9ef2f4377a4d55a2c9
+ms.openlocfilehash: 635a9534f12d8ac48eaa0c331371ac2875577a91
+ms.sourcegitcommit: 2f868a77903c1f1c4cecf4ea1c181deee12d5b15
 ms.translationtype: HT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 07/02/2020
-ms.locfileid: "85888009"
+ms.lasthandoff: 10/02/2020
+ms.locfileid: "91670406"
 ---
 # <a name="tune-compression-for-availability-group"></a>가용성 그룹에 대한 압축 조정
 [!INCLUDE [SQL Server](../../../includes/applies-to-version/sqlserver.md)]
@@ -45,6 +45,6 @@ ms.locfileid: "85888009"
 
 [데이터베이스 엔진 시작 옵션](../../../database-engine/configure-windows/database-engine-service-startup-options.md)
 
-[자동 시드](https://msdn.microsoft.com/library/mt735149(SQL.130).aspx)
+[자동 시드](./automatically-initialize-always-on-availability-group.md)
 
-[Always On 필수 조건](prereqs-restrictions-recommendations-always-on-availability.md) 
+[Always On 필수 조건](prereqs-restrictions-recommendations-always-on-availability.md)

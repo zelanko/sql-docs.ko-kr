@@ -17,12 +17,12 @@ ms.author: maghan
 ms.reviewer: ''
 ms.custom: ''
 ms.date: 08/12/2020
-ms.openlocfilehash: 242b87166035c8ffc0e01272b5910f85a66620e7
-ms.sourcegitcommit: bf5acef60627f77883249bcec4c502b0205300a4
+ms.openlocfilehash: 27e19a66912c220e8c407c4182c3241906af5ea5
+ms.sourcegitcommit: 2f868a77903c1f1c4cecf4ea1c181deee12d5b15
 ms.translationtype: HT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 08/13/2020
-ms.locfileid: "88200681"
+ms.lasthandoff: 10/02/2020
+ms.locfileid: "91670336"
 ---
 # <a name="register-a-service-principal-name-for-kerberos-connections"></a>Kerberos 연결의 서비스 사용자 이름 등록
 
@@ -68,7 +68,7 @@ Windows 인증은 사용자를 SQL Server에 인증하는 데 사용하는 기�
 > [!NOTE]  
 >  Windows 도메인이 Windows Server 2008 R2 기능 수준 이하에서 실행되도록 구성된 경우 관리형 서비스 계정에는 [!INCLUDE[ssDEnoversion](../../includes/ssdenoversion-md.md)] 서비스의 SPN을 등록하는 데 필요한 권한이 없습니다. Kerberos 인증이 필요한 경우 도메인 관리자가 관리형 서비스 계정으로 SQL Server SPN을 수동으로 등록해야 합니다.
 
-추가 정보는 [SQL Server 2008에서 Kerberos 제한된 위임을 구현하는 방법(How to Implement Kerberos Constrained Delegation with SQL Server 2008)](https://technet.microsoft.com/library/ee191523.aspx)에서 이용할 수 있습니다.  
+추가 정보는 [SQL Server 2008에서 Kerberos 제한된 위임을 구현하는 방법(How to Implement Kerberos Constrained Delegation with SQL Server 2008)](/previous-versions/sql/sql-server-2008/ee191523(v=sql.100))에서 이용할 수 있습니다.  
 
 ##  <a name="spn-formats"></a><a name="Formats"></a> SPN 형식
 
@@ -190,4 +190,4 @@ DAC(관리자 전용 연결)는 인스턴스 이름 기반 SPN을 사용합니�
 - [클라이언트 연결의 SPN&#40;서비스 사용자 이름&#41;&#40;OLE DB&#41;](../../relational-databases/native-client/ole-db/service-principal-names-spns-in-client-connections-ole-db.md)
 - [클라이언트 연결의 SPN&#40;서비스 사용자 이름&#41;&#40;ODBC&#41;](../../relational-databases/native-client/odbc/service-principal-names-spns-in-client-connections-odbc.md)
 - [SQL Server Native Client 기능](../../relational-databases/native-client/features/sql-server-native-client-features.md)
-- [Reporting Services 환경의 Kerberos 인증 문제 관리(영문)](https://technet.microsoft.com/library/ff679930.aspx)
+- [Reporting Services 환경의 Kerberos 인증 문제 관리(영문)](/previous-versions/sql/sql-server-2008/ff679930(v=sql.100))

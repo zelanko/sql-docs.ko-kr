@@ -16,12 +16,12 @@ ms.assetid: 702359c4-6ca9-42a8-860c-a95a802898a1
 author: MashaMSFT
 ms.author: mathoma
 monikerRange: '>=sql-server-2017||=sqlallproducts-allversions'
-ms.openlocfilehash: ec6c743ea40da4d7ee6846c3a1373d3912ec0dc9
-ms.sourcegitcommit: f7ac1976d4bfa224332edd9ef2f4377a4d55a2c9
+ms.openlocfilehash: 687f314e776dcc049f03cb4c8a164fb5fa84073e
+ms.sourcegitcommit: 2f868a77903c1f1c4cecf4ea1c181deee12d5b15
 ms.translationtype: HT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 07/02/2020
-ms.locfileid: "85900308"
+ms.lasthandoff: 10/02/2020
+ms.locfileid: "91670204"
 ---
 # <a name="supported-version--edition-upgrades-sql-server-2019"></a>지원되는 버전 업그레이드(SQL Server 2019)
 
@@ -44,7 +44,7 @@ ms.locfileid: "85900308"
   
 - [!INCLUDE[sssqlv15-md](../../includes/sssqlv15-md.md)]은 64비트 플랫폼에서만 사용할 수 있습니다. 플랫폼 간 업그레이드는 지원되지 않습니다. [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 설치 프로그램을 사용하여 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 의 32비트 인스턴스를 네이티브 64비트로 업그레이드할 수 없습니다. 하지만 데이터베이스를 복제에 게시하지 않은 경우 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]의 32비트 인스턴스에서 데이터베이스를 분리하거나 백업한 다음 이를 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] (64비트)의 새 인스턴스에 연결하거나 이 인스턴스로 복원할 수 있습니다. master, msdb 및 model 시스템 데이터베이스의 모든 로그인과 기타 사용자 개체를 다시 만들어야 합니다.  
   
-- 기존 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]인스턴스를 업그레이드하는 동안에는 새 기능을 추가할 수 없습니다. [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 인스턴스를 [!INCLUDE[sssqlv15-md](../../includes/sssqlv15-md.md)]로 업그레이드한 후 [!INCLUDE[sssqlv15-md](../../includes/sssqlv15-md.md)] 설치 프로그램을 사용하여 기능을 추가할 수 있습니다. 자세한 내용은 [SQL Server 인스턴스에 기능 추가&#40;설치 프로그램&#41;](../../database-engine/install-windows/add-features-to-an-instance-of-sql-server-2016-setup.md)를 참조하세요.  
+- 기존 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]인스턴스를 업그레이드하는 동안에는 새 기능을 추가할 수 없습니다. [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 인스턴스를 [!INCLUDE[sssqlv15-md](../../includes/sssqlv15-md.md)]로 업그레이드한 후 [!INCLUDE[sssqlv15-md](../../includes/sssqlv15-md.md)] 설치 프로그램을 사용하여 기능을 추가할 수 있습니다. 자세한 내용은 [SQL Server 인스턴스에 기능 추가&#40;설치 프로그램&#41;](./add-features-to-an-instance-of-sql-server-setup.md)를 참조하세요.  
  
 ## <a name="upgrades-from-earlier-versions-to-sssqlv15-md"></a>이전 버전에서 [!INCLUDE[sssqlv15-md](../../includes/sssqlv15-md.md)]로 업그레이드  
  
@@ -100,7 +100,7 @@ ms.locfileid: "85900308"
 
 다음은 마이그레이션을 계획하고 구현하는 데 도움이 되는 팁과 도구입니다.
 
-- 마이그레이션 도구: 마이그레이션은 [DMA(Data Migration Assistant)](https://aka.ms/dma)를 통해 지원됩니다.
+- 마이그레이션 도구: 마이그레이션은 [DMA(Data Migration Assistant)](../../dma/dma-overview.md)를 통해 지원됩니다.
 - 백업 및 복원: SQL Server 2008 또는 SQL Server 2008 R2에서 수행된 백업을 SQL Server 2019로 복원할 수 있습니다.
 - 로그 전달: 주 데이터베이스에서 SQL Server 2008 SP3 이상 또는 SQL Server 2008 R2 SP2 이상을 실행하고 보조 데이터베이스에서 SQL Server 2019를 실행하는 경우 로그 전달이 지원됩니다. 
 
@@ -149,4 +149,4 @@ ms.locfileid: "85900308"
 
  [SQL Server 설치를 위한 하드웨어 및 소프트웨어 요구 사항](../../sql-server/install/hardware-and-software-requirements-for-installing-sql-server-ver15.md)
 
- [SQL Server 업그레이드](../../database-engine/install-windows/upgrade-sql-server.md)  
+ [SQL Server 업그레이드](../../database-engine/install-windows/upgrade-sql-server.md)

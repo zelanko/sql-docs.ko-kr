@@ -14,12 +14,12 @@ helpviewer_keywords:
 ms.assetid: 4d733c99-28b3-42d8-b7f6-7b943b548173
 author: markingmyname
 ms.author: maghan
-ms.openlocfilehash: e6e301cd7dc29cc5e2a2cffc34066369ed67d57a
-ms.sourcegitcommit: da88320c474c1c9124574f90d549c50ee3387b4c
+ms.openlocfilehash: 1ae9ee2f231367ebf577f0c5c70e5e64ce32d6cc
+ms.sourcegitcommit: 2f868a77903c1f1c4cecf4ea1c181deee12d5b15
 ms.translationtype: HT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 07/01/2020
-ms.locfileid: "85763993"
+ms.lasthandoff: 10/02/2020
+ms.locfileid: "91670766"
 ---
 # <a name="start-sql-server-with-minimal-configuration"></a>최소 구성으로 SQL Server 시작
  [!INCLUDE [SQL Server](../../includes/applies-to-version/sqlserver.md)]
@@ -36,7 +36,7 @@ ms.locfileid: "85763993"
 
 -   `tempdb`는 가능한 최소 크기로 구성됩니다.
 
--   감사는 사용되지 않지만, 감사 DDL을 계속 실행할 수 있습니다. 실제로 SQL Server 감사 재구성이 필요한 대부분의 경우 **-m**만 사용하면 처리됩니다. 감사 구성의 보안에 대한 자세한 내용은 [SQL Server의 감사](https://docs.microsoft.com/previous-versions/sql/sql-server-2008/dd392015(v=sql.100)#security)를 참조하세요.
+-   감사는 사용되지 않지만, 감사 DDL을 계속 실행할 수 있습니다. 실제로 SQL Server 감사 재구성이 필요한 대부분의 경우 **-m**만 사용하면 처리됩니다. 감사 구성의 보안에 대한 자세한 내용은 [SQL Server의 감사](/previous-versions/sql/sql-server-2008/dd392015(v=sql.100)#security)를 참조하세요.
   
  서버를 최소 구성으로 시작한 후에는 해당 서버 옵션 값을 변경하고 서버를 중지한 다음 다시 시작해야 합니다.  
   
@@ -44,11 +44,10 @@ ms.locfileid: "85763993"
 >  **sqlcmd** 유틸리티 및 관리자 전용 연결(DAC)을 사용하여 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]에 연결할 수 있습니다. 일반 연결을 사용하는 경우 최소 구성 모드로 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 인스턴스에 연결하기 전에 SQL Server 에이전트 서비스를 중단하십시오. 그렇지 않으면 SQL Server 에이전트 서비스가 연결을 사용함으로써 차단합니다.  
   
 ## <a name="see-also"></a>참고 항목  
- [SQL Server 에이전트 서비스 시작, 중지 또는 일시 중지](https://msdn.microsoft.com/library/c95a9759-dd30-4ab6-9ab0-087bb3bfb97c)   
+ [SQL Server 에이전트 서비스 시작, 중지 또는 일시 중지](../../ssms/agent/start-stop-or-pause-the-sql-server-agent-service.md)   
  [데이터베이스 관리자를 위한 진단 연결](../../database-engine/configure-windows/diagnostic-connection-for-database-administrators.md)   
  [sqlcmd 유틸리티](../../tools/sqlcmd-utility.md)   
  [서버 구성 옵션&#40;SQL Server&#41;](../../database-engine/configure-windows/server-configuration-options-sql-server.md)   
  [sp_configure &#40;Transact-SQL&#41;](../../relational-databases/system-stored-procedures/sp-configure-transact-sql.md)   
  [데이터베이스 엔진 서비스 시작 옵션](../../database-engine/configure-windows/database-engine-service-startup-options.md)  
-  
   

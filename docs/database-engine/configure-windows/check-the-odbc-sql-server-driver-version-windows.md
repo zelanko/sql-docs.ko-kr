@@ -15,12 +15,12 @@ ms.assetid: 43451080-a562-4231-b1d4-1ba35ca0ea79
 author: markingmyname
 ms.author: maghan
 monikerRange: '>=aps-pdw-2016||=azuresqldb-current||=azure-sqldw-latest||>=sql-server-2016||=sqlallproducts-allversions||>=sql-server-linux-2017'
-ms.openlocfilehash: d127e7400238210d96b95adcba505cb2a1572cdd
-ms.sourcegitcommit: 6ab28d954f3a63168463321a8bc6ecced099b247
+ms.openlocfilehash: 3de893c474fbff853c16eaf537c14d64163835a4
+ms.sourcegitcommit: 2f868a77903c1f1c4cecf4ea1c181deee12d5b15
 ms.translationtype: HT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 08/05/2020
-ms.locfileid: "87790386"
+ms.lasthandoff: 10/02/2020
+ms.locfileid: "91670649"
 ---
 # <a name="check-the-odbc-sql-server-driver-version-windows"></a>ODBC SQL Server 드라이버 버전 검사(Windows)
 [!INCLUDE[SQL Server Azure SQL Database Synapse Analytics PDW ](../../includes/applies-to-version/sql-asdb-asdbmi-asa-pdw.md)]
@@ -37,10 +37,9 @@ ms.locfileid: "87790386"
 
 
 > [!NOTE]  
->  SQL Database용 Azure Active Directory 인증에 연결하려면 [SQL Server용 ODBC 드라이버 17](https://aka.ms/downloadmsodbcsql)과 같은 최신 드라이버를 설치합니다.   
+>  SQL Database용 Azure Active Directory 인증에 연결하려면 [SQL Server용 ODBC 드라이버 17](../../connect/odbc/download-odbc-driver-for-sql-server.md)과 같은 최신 드라이버를 설치합니다.   
 
   
 ## <a name="see-also"></a>참고 항목  
  [ODBC 데이터 원본 관리자 열기](../../database-engine/configure-windows/open-the-odbc-data-source-administrator.md)  
-  
   

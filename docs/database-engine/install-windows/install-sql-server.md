@@ -15,12 +15,12 @@ ms.assetid: 0300e777-d56b-4d10-9c33-c9ebd2489ee5
 author: MashaMSFT
 ms.author: mathoma
 monikerRange: '>=sql-server-2016||=sqlallproducts-allversions'
-ms.openlocfilehash: 426df300ba160d9a19ff8c29edb7e413d28e6ec6
-ms.sourcegitcommit: bf8cf755896a8c964774a438f2bd461a2a648c22
+ms.openlocfilehash: c981154462ec6b544d8dd877d1b6a41a6fa0ac2c
+ms.sourcegitcommit: 2f868a77903c1f1c4cecf4ea1c181deee12d5b15
 ms.translationtype: HT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 08/14/2020
-ms.locfileid: "88216725"
+ms.lasthandoff: 10/02/2020
+ms.locfileid: "91670596"
 ---
 # <a name="sql-server-installation-guide"></a>SQL Server 설치 가이드
 
@@ -31,7 +31,7 @@ ms.locfileid: "88216725"
 기타 배포 시나리오는 다음을 참조하세요.
 
 - [Linux](../../linux/sql-server-linux-setup.md)
-- [Docker 컨테이너](../../linux/sql-server-linux-configure-docker.md)
+- [Docker 컨테이너](../../linux/sql-server-linux-docker-container-deployment.md)
 - [Kubernetes - 빅 데이터 클러스터](../../big-data-cluster/deploy-get-started.md)
 
 [!INCLUDE[sssql15](../../includes/sssql15-md.md)]부터 [!INCLUDE[ssnoversion](../../includes/ssnoversion-md.md)]는 64비트 애플리케이션으로만 사용할 수 있습니다. 다음은 SQL Server 다운로드 및 설치 방법에 대한 중요한 세부 정보입니다.
@@ -86,12 +86,12 @@ ms.locfileid: "88216725"
 |아티클|Description|  
 |-----------|-----------------|  
 |[설치 마법사](../../database-engine/install-windows/install-sql-server-from-the-installation-wizard-setup.md)|setup.exe 설치 미디어에서 시작된 설치 마법사 GUI를 사용하여 SQL Server를 설치합니다. |  
-|[명령 프롬프트](../../database-engine/install-windows/install-sql-server-2016-from-the-command-prompt.md)|명령 프롬프트에서 SQL Server 설치를 실행하기 위한 샘플 구문 및 설치 매개 변수입니다. | 
+|[명령 프롬프트](./install-sql-server-from-the-command-prompt.md)|명령 프롬프트에서 SQL Server 설치를 실행하기 위한 샘플 구문 및 설치 매개 변수입니다. | 
 |[Server Core](../../database-engine/install-windows/install-sql-server-on-server-core.md)|Windows Server Core에 [!INCLUDE[ssnoversion](../../includes/ssnoversion-md.md)]를 설치합니다.|  
 |[시스템 구성 검사기의 검사 매개 변수](../../database-engine/install-windows/check-parameters-for-the-system-configuration-checker.md)|SCC(시스템 구성 검사기)의 기능에 대해 설명합니다.|   
-|[구성 파일](../../database-engine/install-windows/install-sql-server-2016-using-a-configuration-file.md)|구성 파일을 통해 설치 프로그램을 실행하기 위한 샘플 구문 및 설치 매개 변수입니다.|  
+|[구성 파일](./install-sql-server-using-a-configuration-file.md)|구성 파일을 통해 설치 프로그램을 실행하기 위한 샘플 구문 및 설치 매개 변수입니다.|  
 |[SysPrep](../../database-engine/install-windows/install-sql-server-using-sysprep.md)|SysPrep을 통해 설치 프로그램을 실행하기 위한 샘플 구문 및 설치 매개 변수입니다.|
-|[인스턴스에 기능 추가](../../database-engine/install-windows/add-features-to-an-instance-of-sql-server-2016-setup.md)|기존 [!INCLUDE[ssnoversion](../../includes/ssnoversion-md.md)] 인스턴스의 구성 요소를 업데이트합니다.|  
+|[인스턴스에 기능 추가](./add-features-to-an-instance-of-sql-server-setup.md)|기존 [!INCLUDE[ssnoversion](../../includes/ssnoversion-md.md)] 인스턴스의 구성 요소를 업데이트합니다.|  
 |[SQL Server 장애 조치(Failover) 클러스터 설치](../../sql-server/failover-clusters/install/sql-server-failover-cluster-installation.md)| SQL Server 장애 조치(failover) 클러스터 인스턴스를 설치합니다.  | 
 |[실패한 [!INCLUDE[ssnoversion](../../includes/ssnoversion-md.md)] 설치 복구](../../database-engine/install-windows/repair-a-failed-sql-server-installation.md)|손상된 [!INCLUDE[ssnoversion](../../includes/ssnoversion-md.md)] 설치를 복구합니다.|  
 |[SQL Server를 사용하여 컴퓨터 이름 바꾸기](../../database-engine/install-windows/rename-a-computer-that-hosts-a-stand-alone-instance-of-sql-server.md)|SQL Server 독립 실행형 인스턴스를 호스트하는 컴퓨터의 호스트 이름을 바꾼 후에는 sys.servers에 저장된 시스템 메타데이터를 업데이트합니다. |  
@@ -107,7 +107,7 @@ ms.locfileid: "88216725"
 |[SQL Server 데이터베이스 엔진](../../database-engine/install-windows/install-sql-server-database-engine.md)|[!INCLUDE[ssDEnoversion](../../includes/ssdenoversion-md.md)]를 설치하고 구성합니다.|  
 |[SQL Server 복제](../../database-engine/install-windows/install-sql-server-replication.md)|[!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 복제를 설치하고 구성합니다.|  
 |[Distributed Replay](../../tools/distributed-replay/install-distributed-replay-overview.md)|Distributed Replay 기능을 설치하는 아티클을 나열합니다.|  
-|[SSMS를 사용하는 SQL Server 관리 도구](https://msdn.microsoft.com/library/af68d59a-a04d-4f23-9967-ad4ee2e63381)|[!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 관리 도구를 설치하고 구성합니다.|  
+|[SSMS를 사용하는 SQL Server 관리 도구](../../ssms/download-sql-server-management-studio-ssms.md)|[!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 관리 도구를 설치하고 구성합니다.|  
 |[SQL Server PowerShell](../../database-engine/install-windows/install-sql-server-powershell.md)|[!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] PowerShell 구성 요소 설치 시 고려할 사항입니다.|  
   
 
@@ -116,7 +116,7 @@ ms.locfileid: "88216725"
 |아티클|Description|  
 |-----------|-----------------|  
 |[Windows 방화벽 구성(SQL Server)](../../sql-server/install/configure-the-windows-firewall-to-allow-sql-server-access.md)|방화벽 구성 및 SQL Server 액세스를 허용하도록 Windows 방화벽을 구성하는 방법의 개요입니다.|  
-|[Windows 방화벽 구성(SSAS)](https://docs.microsoft.com/analysis-services/instances/configure-the-windows-firewall-to-allow-analysis-services-access)|SharePoint용 [!INCLUDE[ssGemini](../../includes/ssgemini-md.md)] 또는 [!INCLUDE[ssASnoversion](../../includes/ssasnoversion-md.md)] 액세스를 허용하도록 포트 및 방화벽 설정을 모두 구성합니다.|  
+|[Windows 방화벽 구성(SSAS)](/analysis-services/instances/configure-the-windows-firewall-to-allow-analysis-services-access)|SharePoint용 [!INCLUDE[ssGemini](../../includes/ssgemini-md.md)] 또는 [!INCLUDE[ssASnoversion](../../includes/ssasnoversion-md.md)] 액세스를 허용하도록 포트 및 방화벽 설정을 모두 구성합니다.|  
 |[다중 홈 컴퓨터 구성](../../sql-server/install/configure-a-multi-homed-computer-for-sql-server-access.md)|다중 홈 환경에서 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 인스턴스에 대한 네트워크 연결을 위해 제공할 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 및 고급 보안이 포함된 Windows 방화벽을 구성합니다.|  
 
  
@@ -127,4 +127,4 @@ ms.locfileid: "88216725"
 [SSRS(SQL Server Reporting Services) 설치](../../reporting-services/install-windows/install-reporting-services.md)   
 [SSAS(SQL Server Analysis Services) 설치](/analysis-services/instances/install-windows/install-analysis-services)   
 [[!INCLUDE[ssnoversion](../../includes/ssnoversion-md.md)] Business Intelligence 기능 설치](../../sql-server/install/install-sql-server-business-intelligence-features.md)   
-[고가용성 솔루션&#40;SQL Server&#41;](../../sql-server/failover-clusters/high-availability-solutions-sql-server.md)  
+[고가용성 솔루션&#40;SQL Server&#41;](../sql-server-business-continuity-dr.md)

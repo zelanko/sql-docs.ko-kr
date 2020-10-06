@@ -11,12 +11,12 @@ ms.topic: conceptual
 author: randomnote1
 ms.author: dareist
 monikerRange: '>=sql-server-2016||=sqlallproducts-allversions'
-ms.openlocfilehash: f33fff4f29650e54803d47dc2188ec67d5594f89
-ms.sourcegitcommit: 4b775a3ce453b757c7435cc2a4c9b35d0c5a8a9e
+ms.openlocfilehash: 5a9770cd648fe804ee973878adee27b2d55080d0
+ms.sourcegitcommit: 2f868a77903c1f1c4cecf4ea1c181deee12d5b15
 ms.translationtype: HT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 07/31/2020
-ms.locfileid: "87472385"
+ms.lasthandoff: 10/02/2020
+ms.locfileid: "91671066"
 ---
 # <a name="install-sql-server-with-powershell-desired-state-configuration"></a>PowerShell Desired State Configuration을 사용하여 SQL Server 설치
 
@@ -44,7 +44,7 @@ SQL Server 설치 인터페이스를 통해 별생각 없이 같은 단추를 �
 
 ## <a name="install-the-sqlserverdsc-dsc-resource"></a>SqlServerDsc DSC 리소스 설치
 
-[Install-Module](https://docs.microsoft.com/powershell/module/powershellget/Install-Module?view=powershell-5.1) cmdlet을 사용하여 [PowerShell 갤러리](https://www.powershellgallery.com/)에서 [SqlServerDsc](https://www.powershellgallery.com/packages/SqlServerDsc) DSC 리소스를 다운로드합니다. 
+[Install-Module](/powershell/module/powershellget/Install-Module?view=powershell-5.1) cmdlet을 사용하여 [PowerShell 갤러리](https://www.powershellgallery.com/)에서 [SqlServerDsc](https://www.powershellgallery.com/packages/SqlServerDsc) DSC 리소스를 다운로드합니다. 
 
 > [!NOTE]
 > 모듈을 설치하려면 PowerShell이 **관리자 권한으로** 실행되고 있는지 확인하세요.
@@ -71,7 +71,7 @@ Dismount-DiskImage -ImagePath 'C:\en_sql_server_2017_enterprise_x64_dvd_11293666
 
 ### <a name="configuration"></a>구성
 
-[MOF(Managed Object Format)](https://docs.microsoft.com/windows/desktop/WmiSdk/managed-object-format--mof-) 문서를 생성하기 위해 호출될 구성 함수를 만듭니다.
+[MOF(Managed Object Format)](/windows/desktop/WmiSdk/managed-object-format--mof-) 문서를 생성하기 위해 호출될 구성 함수를 만듭니다.
 
 ```PowerShell
 Configuration SQLInstall
@@ -180,7 +180,7 @@ Start-DscConfiguration -Path C:\SQLInstall -Wait -Force -Verbose
 
 ### <a name="dsc"></a>DSC
 
-[Test-DscConfiguration](https://docs.microsoft.com/powershell/module/psdesiredstateconfiguration/test-dscconfiguration) cmdlet은 서버의 현재 상태가 원하는 상태를 충족하는지 확인할 수 있습니다. 이 경우 SQL Server 설치입니다. **Test-DscConfiguration**의 결과는 **True**이어야 합니다.
+[Test-DscConfiguration](/powershell/module/psdesiredstateconfiguration/test-dscconfiguration) cmdlet은 서버의 현재 상태가 원하는 상태를 충족하는지 확인할 수 있습니다. 이 경우 SQL Server 설치입니다. **Test-DscConfiguration**의 결과는 **True**이어야 합니다.
 
 ```PowerShell
 PS C:\> Test-DscConfiguration

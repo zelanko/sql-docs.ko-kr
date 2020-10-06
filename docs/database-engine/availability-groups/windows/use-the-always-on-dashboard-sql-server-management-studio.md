@@ -15,12 +15,12 @@ helpviewer_keywords:
 ms.assetid: c9ba2589-139e-42bc-99e1-94546717c64d
 author: MashaMSFT
 ms.author: mathoma
-ms.openlocfilehash: 848ac8820ec5150c8c3fc058f77ffa4261ed8aa2
-ms.sourcegitcommit: f7ac1976d4bfa224332edd9ef2f4377a4d55a2c9
+ms.openlocfilehash: 6b63ae0e77cc521d6d882eab340cbfa3b761e41d
+ms.sourcegitcommit: 2f868a77903c1f1c4cecf4ea1c181deee12d5b15
 ms.translationtype: HT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 07/02/2020
-ms.locfileid: "85902358"
+ms.lasthandoff: 10/02/2020
+ms.locfileid: "91670387"
 ---
 # <a name="use-the-always-on-availability-group-dashboard-sql-server-management-studio"></a>Always On 가용성 그룹 대시보드 사용(SQL Server Management Studio)
 [!INCLUDE [SQL Server](../../../includes/applies-to-version/sqlserver.md)]
@@ -331,7 +331,7 @@ ms.locfileid: "85902358"
 
 SQL 에이전트는 데이터 수집을 실행하고 주 복제본과 보조 복제본 중 하나 이상에서 사용할 수 있어야 합니다. SQL Server Management Studio의 **개체 탐색기**에서 가용성 그룹 > 보고서 > 표준 보고서를 마우스 오른쪽 단추로 클릭하여 보고서를 봅니다.  
 
-자세한 내용은 [Always On 가용성 그룹 대기 시간 보고서](https://blogs.msdn.microsoft.com/sql_server_team/new-in-ssms-always-on-availability-group-latency-reports/)를 참조하세요.
+자세한 내용은 [Always On 가용성 그룹 대기 시간 보고서](/archive/blogs/sql_server_team/new-in-ssms-always-on-availability-group-latency-reports)를 참조하세요.
 
 ## <a name="related-tasks"></a>관련 작업  
   
@@ -340,5 +340,4 @@ SQL 에이전트는 데이터 수집을 실행하고 주 복제본과 보조 복
 ## <a name="see-also"></a>참고 항목  
  [sys.dm_os_performance_counters&#40;Transact-SQL&#41;](../../../relational-databases/system-dynamic-management-views/sys-dm-os-performance-counters-transact-sql.md)   
  [가용성 그룹 모니터링&#40;SQL Server&#41;](../../../database-engine/availability-groups/windows/monitoring-of-availability-groups-sql-server.md)  
-  
   

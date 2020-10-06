@@ -10,12 +10,12 @@ ms.assetid: a832153a-6775-4bed-83f0-55790766d885
 author: MashaMSFT
 ms.author: mathoma
 monikerRange: '>=sql-server-2016||=sqlallproducts-allversions'
-ms.openlocfilehash: b187160fcc25119a5be65207138920969352b4aa
-ms.sourcegitcommit: 768f046107642f72693514f51bf2cbd00f58f58a
+ms.openlocfilehash: 8c2fb5fcd6c7f9902f52481a1e66350f4543a85a
+ms.sourcegitcommit: 2f868a77903c1f1c4cecf4ea1c181deee12d5b15
 ms.translationtype: HT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 07/23/2020
-ms.locfileid: "87110210"
+ms.lasthandoff: 10/02/2020
+ms.locfileid: "91670309"
 ---
 # <a name="install-sql-server-using-a-configuration-file"></a>구성 파일을 사용하여 SQL Server 설치
 
@@ -66,7 +66,7 @@ FEATURES=SQL,Tools
 3. 설치를 실제로 완료하지는 않고 INI 파일을 생성하기 위해 설치를 취소합니다. 
   
     > [!NOTE]  
-    >  설치 프로그램은 암호 등과 같은 기밀 정보를 제외하고 수행했던 동작에 적합한 모든 매개 변수를 기록합니다. /IAcceptSQLServerLicenseTerms 매개 변수도 구성 파일에 기록되지 않기 때문에 구성 파일을 수정하거나 명령 프롬프트에서 값을 제공해야 합니다. 자세한 내용은 [명령 프롬프트에서 SQL Server 설치](../../database-engine/install-windows/install-sql-server-2016-from-the-command-prompt.md)를 참조하세요. 또한 일반적으로 명령 프롬프트에서 값을 입력하지 않는 부울 매개 변수에 대한 값도 포함됩니다. 
+    >  설치 프로그램은 암호 등과 같은 기밀 정보를 제외하고 수행했던 동작에 적합한 모든 매개 변수를 기록합니다. /IAcceptSQLServerLicenseTerms 매개 변수도 구성 파일에 기록되지 않기 때문에 구성 파일을 수정하거나 명령 프롬프트에서 값을 제공해야 합니다. 자세한 내용은 [명령 프롬프트에서 SQL Server 설치](./install-sql-server-from-the-command-prompt.md)를 참조하세요. 또한 일반적으로 명령 프롬프트에서 값을 입력하지 않는 부울 매개 변수에 대한 값도 포함됩니다. 
   
 ## <a name="using-the-configuration-file-to-install-ssnoversion"></a>구성 파일을 사용하여 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 설치  
 
@@ -145,8 +145,7 @@ Setup.exe /SQLSVCPASSWORD="************" /AGTSVCPASSWORD="************" /ASSVCPA
 ```  
   
 ## <a name="see-also"></a>참고 항목  
- [명령 프롬프트에서 SQL Server 설치](../../database-engine/install-windows/install-sql-server-2016-from-the-command-prompt.md)   
+ [명령 프롬프트에서 SQL Server 설치](./install-sql-server-from-the-command-prompt.md)   
  [SQL Server 장애 조치(Failover) 클러스터 설치](../../sql-server/failover-clusters/install/sql-server-failover-cluster-installation.md)   
  [SQL Server 장애 조치(Failover) 클러스터 인스턴스 업그레이드](../../sql-server/failover-clusters/windows/upgrade-a-sql-server-failover-cluster-instance.md)  
-  
   

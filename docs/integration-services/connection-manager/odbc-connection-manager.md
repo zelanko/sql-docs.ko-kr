@@ -18,12 +18,12 @@ helpviewer_keywords:
 ms.assetid: e8c77aa7-6772-485e-918e-cef9eeb18c58
 author: chugugrace
 ms.author: chugu
-ms.openlocfilehash: a70375f6ad677dcec18fe0606d5a09cec8960f70
-ms.sourcegitcommit: e700497f962e4c2274df16d9e651059b42ff1a10
+ms.openlocfilehash: 7fe63ad503b49a760823635902b3744a1ae2d85a
+ms.sourcegitcommit: c7f40918dc3ecdb0ed2ef5c237a3996cb4cd268d
 ms.translationtype: HT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 08/17/2020
-ms.locfileid: "88496103"
+ms.lasthandoff: 10/05/2020
+ms.locfileid: "91719582"
 ---
 # <a name="odbc-connection-manager"></a>ODBC 연결 관리자
 
@@ -49,7 +49,7 @@ ms.locfileid: "88496103"
   
  [!INCLUDE[ssIS](../../includes/ssis-md.md)] 디자이너에서 설정할 수 있는 속성에 대한 자세한 내용을 보려면 다음 항목 중 하나를 클릭하십시오.  
   
--   [ODBC 연결 관리자 UI 참조](../../integration-services/connection-manager/odbc-connection-manager-ui-reference.md)  
+-   [ODBC 연결 관리자 UI 참조]()  
   
  연결 관리자를 프로그래밍 방식으로 구성하는 방법에 대한 자세한 내용은 <xref:Microsoft.SqlServer.Dts.Runtime.ConnectionManager> 및 [프로그래밍 방식으로 연결 추가](../../integration-services/building-packages-programmatically/adding-connections-programmatically.md)로 설정됩니다.  
   
@@ -72,5 +72,4 @@ ms.locfileid: "88496103"
  연결을 선택한 다음 **삭제** 단추를 사용하여 삭제합니다.  
 ## <a name="see-also"></a>관련 항목  
  [Integration Services&#40;SSIS&#41; 연결](../../integration-services/connection-manager/integration-services-ssis-connections.md)  
-  
   

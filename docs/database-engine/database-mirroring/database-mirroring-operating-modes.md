@@ -13,12 +13,12 @@ helpviewer_keywords:
 ms.assetid: f8a579c2-55d7-4278-8088-f1da1de5b2e6
 author: MikeRayMSFT
 ms.author: mikeray
-ms.openlocfilehash: 9fdcdc937ba8509f67b71352dd1b87d8f98f92d7
-ms.sourcegitcommit: da88320c474c1c9124574f90d549c50ee3387b4c
+ms.openlocfilehash: 505f09118b4c1b4598936e59c57ce2202a4ddd55
+ms.sourcegitcommit: 2f868a77903c1f1c4cecf4ea1c181deee12d5b15
 ms.translationtype: HT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 07/01/2020
-ms.locfileid: "85631416"
+ms.lasthandoff: 10/02/2020
+ms.locfileid: "91670857"
 ---
 # <a name="database-mirroring-operating-modes"></a>데이터베이스 미러링 운영 모드
  [!INCLUDE [SQL Server](../../includes/applies-to-version/sqlserver.md)]
@@ -47,7 +47,7 @@ ms.locfileid: "85631416"
  이 섹션에서는 비동기 데이터베이스 미러링의 작동 방식 및 성능 우선 모드를 사용하기에 적합한 경우에 대해 설명하고 주 서버 실패 시 어떻게 반응하는지에 대해 설명합니다.  
   
 > [!NOTE]  
->  대부분의 [!INCLUDE[ssCurrent](../../includes/sscurrent-md.md)] 버전에서는 동기 데이터베이스 미러링("Safety Full만")만 지원합니다. 데이터베이스 미러링을 완전히 지원하는 버전에 대한 내용은 [SQL Server 2016의 버전 및 지원하는 기능](../../sql-server/editions-and-supported-features-for-sql-server-2016.md)의 "고가용성(Always On)"을 참조하세요.
+>  대부분의 [!INCLUDE[ssCurrent](../../includes/sscurrent-md.md)] 버전에서는 동기 데이터베이스 미러링("Safety Full만")만 지원합니다. 데이터베이스 미러링을 완전히 지원하는 버전에 대한 내용은 [SQL Server 2016의 버전 및 지원하는 기능](../../sql-server/editions-and-components-of-sql-server-2016.md)의 "고가용성(Always On)"을 참조하세요.
   
  트랜잭션 보안을 OFF로 설정하면 데이터베이스 미러링 세션은 비동기적으로 작동합니다. 비동기 작업은 성능 우선 모드의 운영 모드만 지원합니다. 이 모드는 성능을 강화하지만 고가용성은 저하됩니다. 성능 우선 모드에서는 주 서버와 미러 서버만 사용됩니다. 미러 서버의 문제점은 주 서버에 영향을 주지 않습니다. 주 서버가 손실되면 미러 데이터베이스는 DISCONNECTED로 표시되지만 웜 대기로 사용할 수 있습니다.  
   
@@ -73,7 +73,7 @@ ms.locfileid: "85631416"
  성능 우선 모드는 주 서버와 미러 서버가 상당한 거리로 분리되어 있고 주 서버가 작은 오류의 영향을 받지 않도록 하려는 재해 복구 시나리오에서 유용할 수 있습니다.  
   
 > [!NOTE]  
->  로그 전달은 데이터베이스 미러링을 보완하며 비동기 데이터베이스 미러링의 대안으로 사용될 수 있습니다. 로그 전달의 장점에 대한 자세한 내용은 [고가용성 솔루션&#40;SQL Server&#41;](../../sql-server/failover-clusters/high-availability-solutions-sql-server.md)을 참조하세요. 데이터베이스 미러링을 통해 로그 전달을 사용하는 방법은 [데이터베이스 미러링 및 로그 전달&#40;SQL Server&#41;](../../database-engine/database-mirroring/database-mirroring-and-log-shipping-sql-server.md)을 참조하세요.  
+>  로그 전달은 데이터베이스 미러링을 보완하며 비동기 데이터베이스 미러링의 대안으로 사용될 수 있습니다. 로그 전달의 장점에 대한 자세한 내용은 [고가용성 솔루션&#40;SQL Server&#41;](../sql-server-business-continuity-dr.md)을 참조하세요. 데이터베이스 미러링을 통해 로그 전달을 사용하는 방법은 [데이터베이스 미러링 및 로그 전달&#40;SQL Server&#41;](../../database-engine/database-mirroring/database-mirroring-and-log-shipping-sql-server.md)을 참조하세요.  
   
 ###  <a name="the-impact-of-a-witness-on-high-performance-mode"></a><a name="WitnessImpactOnHighPerf"></a> 성능 우선 모드에 대한 미러링 모니터 서버의 영향  
  Transact-SQL을 사용하여 성능 우선 모드를 구성하는 경우 SAFETY 속성이 OFF로 설정되어 있으면 WITNESS 속성도 OFF로 설정하는 것이 좋습니다. 미러링 모니터 서버는 성능 우선 모드에서 작동할 수 있지만 어떤 이점도 제공하지 않으며 위험만 수반됩니다.  
@@ -287,5 +287,4 @@ SELECT mirroring_safety_level_desc, mirroring_witness_name, mirroring_witness_st
 ## <a name="see-also"></a>참고 항목  
  [데이터베이스 미러링 모니터링&#40;SQL Server&#41;](../../database-engine/database-mirroring/monitoring-database-mirroring-sql-server.md)   
  [데이터베이스 미러링 모니터 서버](../../database-engine/database-mirroring/database-mirroring-witness.md)  
-  
   

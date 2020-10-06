@@ -14,12 +14,12 @@ helpviewer_keywords:
 ms.assetid: 635ea361-a797-4971-bd05-e3415862bc5c
 author: markingmyname
 ms.author: maghan
-ms.openlocfilehash: 9197a6838b62c970f9c8b9fad624a7229766628c
-ms.sourcegitcommit: da88320c474c1c9124574f90d549c50ee3387b4c
+ms.openlocfilehash: d5463ac163271cf14f5b52167559bc8f3f53d805
+ms.sourcegitcommit: 2f868a77903c1f1c4cecf4ea1c181deee12d5b15
 ms.translationtype: HT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 07/01/2020
-ms.locfileid: "85772575"
+ms.lasthandoff: 10/02/2020
+ms.locfileid: "91671116"
 ---
 # <a name="default-sql-server-network-protocol-configuration"></a>기본 SQL Server 네트워크 프로토콜 구성
  [!INCLUDE [SQL Server](../../includes/applies-to-version/sqlserver.md)]
@@ -48,7 +48,7 @@ ms.locfileid: "85772575"
 > 인스턴스가 [!INCLUDE[ssNoVersion_md](../../includes/ssnoversion-md.md)] 장애 조치 클러스터에서 실행되고 있으면 [!INCLUDE[ssNoVersion_md](../../includes/ssnoversion-md.md)] 설치 중에 [!INCLUDE[ssNoVersion_md](../../includes/ssnoversion-md.md)]에 대해 선택된 각 IP 주소의 포트에서 수신 대기합니다.
  
 >[!NOTE]
-> 명령 프롬프트 인수를 사용하여 [!INCLUDE[ssNoVersion_md](../../includes/ssnoversion-md.md)] 를 설치하는 경우 `TCPENABLED` 및 `NPENABLED` 매개 변수를 사용하여 설정할 프로토콜을 지정할 수 있습니다. 자세한 내용은 [명령 프롬프트에서 SQL Server 설치](../../database-engine/install-windows/install-sql-server-2016-from-the-command-prompt.md)를 참조하세요.
+> 명령 프롬프트 인수를 사용하여 [!INCLUDE[ssNoVersion_md](../../includes/ssnoversion-md.md)] 를 설치하는 경우 `TCPENABLED` 및 `NPENABLED` 매개 변수를 사용하여 설정할 프로토콜을 지정할 수 있습니다. 자세한 내용은 [명령 프롬프트에서 SQL Server 설치](../install-windows/install-sql-server-from-the-command-prompt.md)를 참조하세요.
 
 ## <a name="creating-a-connection-string"></a>연결 문자열 만들기
 
@@ -72,7 +72,4 @@ ms.locfileid: "85772575"
 
 [SQL Server 2016 설치를 위한 하드웨어 및 소프트웨어 요구 사항](../../sql-server/install/hardware-and-software-requirements-for-installing-sql-server.md)
 
-[노출 영역 구성](../../relational-databases/security/surface-area-configuration.md)  
-
-
-
+[노출 영역 구성](../../relational-databases/security/surface-area-configuration.md)

@@ -24,12 +24,12 @@ helpviewer_keywords:
 ms.assetid: e1e55519-97ec-4404-81ef-881da3b42006
 author: VanMSFT
 ms.author: vanto
-ms.openlocfilehash: ba50d65054b0a72424955f5d669a15d2c1846b67
-ms.sourcegitcommit: 780a81c02bc469c6e62a9c307e56a973239983b6
+ms.openlocfilehash: d147177be88db5bba50955711a8585ff11d872d9
+ms.sourcegitcommit: 2f868a77903c1f1c4cecf4ea1c181deee12d5b15
 ms.translationtype: HT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 09/11/2020
-ms.locfileid: "90027294"
+ms.lasthandoff: 10/02/2020
+ms.locfileid: "91670976"
 ---
 # <a name="enable-encrypted-connections-to-the-database-engine"></a>데이터베이스 엔진에 암호화된 연결 사용
 
@@ -74,7 +74,7 @@ TLS 암호화를 사용하면 네트워크에서 [!INCLUDE[ssNoVersion](../../in
 > 장애 조치(Failover) 클러스터에 암호화를 사용하려면 장애 조치 클러스터의 모든 노드에 있는 가상 서버의 정규화된 DNS 이름으로 서버 인증서를 설치해야 합니다. 예를 들어 노드의 이름이 ***test1.\*\<your company>\*.com*** 및 ***test2.\*\<your company>\*.com***인 2 노드 클러스터와 ***virtsql***이라는 가상 서버가 있는 경우 ***virtsql.\*\<your company>\*.com***에 대한 인증서를 두 노드 모두에 설치해야 합니다. **SQL Server 네트워크 구성**의 **virtsql에 대한 프로토콜** 속성 상자에서 **ForceEncryption** 옵션 값을 **Yes**로 설정할 수 있습니다.
 
 > [!NOTE]
-> Azure VM에서 Azure Search 인덱서로부터 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]로의 암호화된 연결을 만드는 경우 [Azure VM에서 Azure Search 인덱서로부터 SQL Server로의 연결 구성](https://azure.microsoft.com/documentation/articles/search-howto-connecting-azure-sql-iaas-to-azure-search-using-indexers/)을 참조하세요. 
+> Azure VM에서 Azure Search 인덱서로부터 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]로의 암호화된 연결을 만드는 경우 [Azure VM에서 Azure Search 인덱서로부터 SQL Server로의 연결 구성](/azure/search/search-howto-connecting-azure-sql-iaas-to-azure-search-using-indexers)을 참조하세요. 
 
 ## <a name="certificate-requirements"></a>인증서 요구 사항
 
@@ -126,7 +126,7 @@ TLS 암호화를 사용하면 네트워크에서 [!INCLUDE[ssNoVersion](../../in
 
 > [!IMPORTANT]
 > 프로덕션 환경에서는 인증 기관의 신뢰할 수 있는 인증서를 얻는 것이 좋습니다.    
-> 테스트 목적으로 자체 서명된 인증서를 사용할 수도 있습니다. 자체 서명된 인증서를 만들려면 [PowerShell Cmdlet New-SelfSignedCertificate](https://docs.microsoft.com/powershell/module/pkiclient/new-selfsignedcertificate) 또는 [certreq 명령](https://docs.microsoft.com/windows-server/administration/windows-commands/certreq_1)을 참조하세요.
+> 테스트 목적으로 자체 서명된 인증서를 사용할 수도 있습니다. 자체 서명된 인증서를 만들려면 [PowerShell Cmdlet New-SelfSignedCertificate](/powershell/module/pkiclient/new-selfsignedcertificate) 또는 [certreq 명령](/windows-server/administration/windows-commands/certreq_1)을 참조하세요.
   
 ## <a name="install-across-multiple-servers"></a>여러 서버에 설치
 
@@ -187,4 +187,4 @@ TLS 암호화를 사용하면 네트워크에서 [!INCLUDE[ssNoVersion](../../in
 
 + [Microsoft SQL Server에 대한 TLS 1.2 지원](https://support.microsoft.com/kb/3135244)     
 + [SQL Server 액세스를 허용하도록 Windows 방화벽 구성](../../sql-server/install/configure-the-windows-firewall-to-allow-sql-server-access.md)     
-+ [PowerShell Cmdlet New-SelfSignedCertificate](https://docs.microsoft.com/powershell/module/pkiclient/new-selfsignedcertificate)
++ [PowerShell Cmdlet New-SelfSignedCertificate](/powershell/module/pkiclient/new-selfsignedcertificate)

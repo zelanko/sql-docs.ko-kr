@@ -10,18 +10,18 @@ ms.technology: configuration
 ms.topic: conceptual
 author: MladjoA
 ms.author: mlandzic
-ms.openlocfilehash: 73681a19df18a7bdae9c49b78c283a8345820322
-ms.sourcegitcommit: e700497f962e4c2274df16d9e651059b42ff1a10
+ms.openlocfilehash: 942dfc62bd55d1843babb78d89b95ad602f3d938
+ms.sourcegitcommit: 2f868a77903c1f1c4cecf4ea1c181deee12d5b15
 ms.translationtype: HT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 08/17/2020
-ms.locfileid: "88496242"
+ms.lasthandoff: 10/02/2020
+ms.locfileid: "91670746"
 ---
 # <a name="suppress-recovery-model-errors-server-configuration-option"></a>복구 모델 오류 표시 안 함 서버 구성 옵션
 
 [!INCLUDE[tsql-appliesto-xxxxxx-asdbmi-xxxx-xxx-md.md](../../includes/tsql-appliesto-xxxxxx-asdbmi-xxxx-xxx-md.md)]
 
-SQL Server [복구 모델](https://docs.microsoft.com/sql/relational-databases/backup-restore/recovery-models-sql-server)은 트랜잭션 로그 유지 관리를 제어합니다. 전체 복구 모델을 사용하면 데이터 파일의 손실 또는 손상으로 인해 어떠한 작업도 손실되지 않으며, 백업 보존 정책 내의 임의 시점으로의 복구가 지원됩니다. 전체 복구 모델은 SQL Managed Instance에서 지원되는 유일한 복구 모델이자 기본값입니다. SQL Managed Instance에서 복구 모델을 변경하려고 시도하면 오류 메시지가 반환됩니다.
+SQL Server [복구 모델](../../relational-databases/backup-restore/recovery-models-sql-server.md)은 트랜잭션 로그 유지 관리를 제어합니다. 전체 복구 모델을 사용하면 데이터 파일의 손실 또는 손상으로 인해 어떠한 작업도 손실되지 않으며, 백업 보존 정책 내의 임의 시점으로의 복구가 지원됩니다. 전체 복구 모델은 SQL Managed Instance에서 지원되는 유일한 복구 모델이자 기본값입니다. SQL Managed Instance에서 복구 모델을 변경하려고 시도하면 오류 메시지가 반환됩니다.
 
 **복구 모델 오류 표시 안 함** 고급 구성 옵션을 사용하여 SQL Managed Instance에서 실행되는 데이터베이스 복구 모델을 변경하는 명령이 오류와 경고 중 어느 것을 반환할지 지정할 수 있습니다. SQL Managed Instance에서 이 옵션을 1(ON)로 설정하면 ALTER DATABASE SET RECOVERY 명령을 실행해도 데이터베이스의 복구 모델이 변경되지 않지만 오류 대신 경고 메시지만 반환됩니다. SQL Managed Instance에서 이 옵션을 0(OFF)으로 설정하면 ALTER DATABASE SET RECOVERY 명령을 실행했을 때 오류 메시지가 반환됩니다.
 
