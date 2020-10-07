@@ -1831,7 +1831,7 @@
           items:
             - name: 생성
               href: relational-databases/tables/create-edge-constraints.md
-            - name: 삭제
+            - name: DELETE
               href: relational-databases/tables/delete-edge-constraint.md
             - name: 수정
               href: relational-databases/tables/modify-edge-constraint.md
@@ -6030,8 +6030,6 @@
       items:
         - name: 새로운 기능
           href: dma/dma-whatsnew.md
-        - name: SQL Database 평가
-          href: dma/dma-assesssqlonprem.md
         - name: SSIS(SQL Server Integration Services) 평가
           href: dma/dma-assess-ssis.md
         - name: 평가 저장 및 로드
@@ -6044,8 +6042,6 @@
           href: dma/dma-migrateonpremsqltosqldb.md
         - name: SQL Server 로그인 마이그레이션
           href: dma/dma-migrateserverlogins.md
-        - name: Azure SQL Database 준비를 위해 SQL Server 데이터 자산 평가
-          href: dma/dma-assess-sql-data-estate-to-sqldb.md
         - name: 모범 사례
           href: dma/dma-bestpractices.md
         - name: 평가 보고서 통합
@@ -6056,6 +6052,14 @@
           href: dma/dma-commandline.md
         - name: 설정 구성
           href: dma/dma-configurationsettings.md
+        - name: Azure SQL DB 준비 상태 평가
+          items:
+            - name: 평가 만들기
+              href: dma/dma-assesssqlonprem.md
+            - name: DMA GUI 사용
+              href: dma/dma-assess-sql-data-estate-to-sqldb.md
+            - name: DMA 명령줄 사용
+              href: dma/dma-assess-sql-data-estate-to-sqldb-commandline.md
     - name: SSMA(SQL Server Migration Assistant)
       href: ssma/toc.yml
 - name: '관리, 모니터링 및 튜닝'
