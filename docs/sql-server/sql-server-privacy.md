@@ -1,7 +1,7 @@
 ---
 description: SQL Server 개인 정보 제공
 title: SQL Server 개인 정보 제공 | Microsoft Docs
-ms.date: 01/19/2019
+ms.date: 09/30/2020
 ms.prod: sql
 ms.technology: release-landing
 ms.reviewer: mikeray
@@ -11,21 +11,23 @@ f1_keywords: ''
 helpviewer_keywords: ''
 author: jaszymas
 ms.author: jaszymas
-ms.openlocfilehash: 0a4675d04349da1a8b1e92ce62b8dde3cbabb542
-ms.sourcegitcommit: e700497f962e4c2274df16d9e651059b42ff1a10
+ms.openlocfilehash: e9e2619cf1bfc8994481c6f310977c77a7292911
+ms.sourcegitcommit: 2600a414c321cfd6dc6daf5b9bcbc9a99c049dc4
 ms.translationtype: HT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 08/17/2020
-ms.locfileid: "88480693"
+ms.lasthandoff: 09/30/2020
+ms.locfileid: "91603414"
 ---
 # <a name="sql-server-privacy-supplement"></a>SQL Server 개인 정보 제공
 
 [!INCLUDE[sqlserver](../includes/applies-to-version/sqlserver.md)]
 
-이 문서에서는 익명 기능 사용 및 진단 데이터를 수집하고 Microsoft에 보낼 수 있는 인터넷 사용 기능을 요약해서 설명합니다. SQL Server는 표준 컴퓨터 정보와 사용 및 성능 데이터를 수집할 수 있습니다. 이 데이터는 Microsoft로 전송되어 제품의 품질, 보안 및 안정성 개선을 위해 분석될 수 있습니다. Microsoft Azure 서비스의 가상 머신에 SQL Server를 설치하면 환경 정보가 Microsoft로 전송되므로 Microsoft에서 Azure 구독 내 리소스 공급자를 통해 SQL Server 가상 머신 리소스를 등록할 수 있습니다. 자세한 정보는 [여기](/azure/virtual-machines/windows/sql/virtual-machines-windows-sql-register-with-resource-provider)를 참조하세요. SQL Server 가상 머신 리소스 등록의 일부인 SQL Server IaaS Agent Extension는 [여기](/azure/virtual-machines/windows/sql/virtual-machines-windows-sql-server-agent-extension)에 자세히 설명된 대로 가상 머신에 설치할 수 있습니다. 이 문서는 전반적인 [Microsoft 개인정보처리방침](https://go.microsoft.com/fwlink/?LinkId=521839)에 대한 추록입니다. 이 문서에서 데이터 분류는 SQL Server 온-프레미스 제품의 버전에만 적용됩니다. 항목에 적용되지 않습니다.
+이 문서에서는 익명 기능 사용 및 진단 데이터를 수집하고 Microsoft에 보낼 수 있는 인터넷 사용 기능을 요약해서 설명합니다. SQL Server는 표준 컴퓨터 정보와 사용 및 성능 데이터를 수집할 수 있습니다. 이 데이터는 Microsoft로 전송되어 제품의 품질, 보안 및 안정성 개선을 위해 분석될 수 있습니다.
+
+이 문서는 전반적인 [Microsoft 개인정보처리방침](https://go.microsoft.com/fwlink/?LinkId=521839)에 대한 추록입니다. 이 문서에서 데이터 분류는 SQL Server 온-프레미스 제품의 버전에만 적용됩니다. 항목에 적용되지 않습니다.
 
 - Azure SQL Database
-- [SSMS(SQL Server Management Studio)](https://docs.microsoft.com/sql/ssms/sql-server-management-studio-telemetry-ssms?view=sql-server-2017)
+- [SSMS(SQL Server Management Studio)](../ssms/sql-server-management-studio-telemetry-ssms.md)
 - SQL Server Data Tools(SSDT)
 - Azure Data Studio
 - Database Migration Assistant
@@ -115,6 +117,20 @@ SQL Server EULA당 인터넷 기반 서비스를 제공하는 데 필요한 데�
 |동의하는 고객은 Microsoft에 고객 콘텐츠를 포함하는 사용자 피드백을 보낼 수 있습니다. |타사 액세스 권한 없이 Microsoft 내부 사용량을 제한합니다. |동의하는 고객은 Microsoft에 고객 콘텐츠를 포함하는 사용자 피드백을 보낼 수 있습니다. |
 |파워 뷰 및 SQL Reporting Services Map 항목은 Bing Maps를 사용하기 위해 데이터를 전송할 수 있습니다. |세션 데이터에 대한 제한 사항 |- |
 
+## <a name="organization-identifiable-information-oii"></a>OII(조직 식별 정보)
+
+조직으로부터 받거나 제품을 사용하여 생성된 데이터입니다.
+-   조직에 연결할 수 있습니다.
+-   콘텐츠를 포함하지 않습니다.
+
+### <a name="examples-of-organization-identifiable-information"></a>조직 식별 가능한 정보의 예
+-   조직 이름(예: Microsoft Corp.)
+
+### <a name="permitted-usage-scenarios"></a>허용된 사용 시나리오
+|시나리오  |액세스 제한  |보존 요구 사항|
+|---------|---------|---------|
+| Microsoft는 Azure Virtual Machines 내에서 SQL Server를 사용할 수 있도록 Azure에서 고객에게 선택적 혜택을 제공하는 명시적 목적으로 Azure Virtual Machines에서 실행되는 SQL Server 인스턴스의 일반 사용량 현황 데이터를 수집할 수 있습니다. | Microsoft는 Azure Portal 등을 통해 고객에게 데이터를 노출하여 Azure Virtual Machines에서 SQL Server를 실행하는 고객이 Azure에서 실행 중인 SQL Server와 관련된 혜택에 액세스할 수 있도록 지원합니다. </br></br>Microsoft는 고객의 사전 동의 없이는 라이선스 감사에 이 데이터를 사용하지 않습니다. | 최소 90일 - 최대 3년 |
+
 ## <a name="system-metadata"></a>시스템 메타데이터
 
 서버를 실행하는 과정에서 생성된 데이터입니다.  데이터에는 고객 콘텐츠가 포함되지 않습니다.
@@ -134,7 +150,7 @@ SQL Server EULA당 인터넷 기반 서비스를 제공하는 데 필요한 데�
 - 이벤트 이름 및 오류 코드
 - 하드웨어 설정 및 식별(예: OEM 제조업체)
 
-Microsoft는 SQL Server를 사용하는 다른 프로그램에서 설정한 애플리케이션 이름 값을 검사합니다. (예: Sharepoint 또는 타사 패키지 프로그램 및 사용량 데이터가 활성화되면 Microsoft에 전송되는 시스템 메타데이터에 이 정보가 포함됩니다.) 고객은 시스템 메타데이터 필드에서 최종 사용자 식별 가능 정보와 같은 개인 데이터를 배치하거나 이러한 필드에서 개인 데이터를 저장하도록 디자인된 애플리케이션을 만들지 않아야 합니다. 
+Microsoft는 SQL Server를 사용하는 다른 프로그램에서 설정된 애플리케이션 이름 값 집합을 검사합니다(예: Sharepoint 또는 타사 패키지 프로그램, 사용량 현황 데이터를 사용하는 경우 Microsoft에 전송되는 시스템 메타데이터 내 이 정보 포함). 고객은 시스템 메타데이터 필드에서 최종 사용자 식별 가능 정보와 같은 개인 데이터를 배치하거나 이러한 필드에서 개인 데이터를 저장하도록 디자인된 애플리케이션을 만들지 않아야 합니다. 
 
 ### <a name="permitted-usage-scenarios"></a>허용된 사용 시나리오
 

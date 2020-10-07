@@ -23,12 +23,12 @@ helpviewer_keywords:
 ms.assetid: f55c6a0e-b6bd-4803-b51a-f3a419803024
 author: markingmyname
 ms.author: maghan
-ms.openlocfilehash: dce5cf7e83be47bda2bcfef17b4602eb5f2fb49e
-ms.sourcegitcommit: 216f377451e53874718ae1645a2611cdb198808a
+ms.openlocfilehash: d6a8f6d48800dfd47454d92a7dca0a5a0b58b80f
+ms.sourcegitcommit: b93beb4f03aee2c1971909cb1d15f79cd479a35c
 ms.translationtype: HT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 07/28/2020
-ms.locfileid: "87238513"
+ms.lasthandoff: 09/29/2020
+ms.locfileid: "91497733"
 ---
 # <a name="configure-the-windows-firewall-to-allow-sql-server-access"></a>Configure the Windows Firewall to Allow SQL Server Access
 [!INCLUDE [SQL Server Windows Only - ASDBMI ](../../includes/applies-to-version/sql-windows-only-asdbmi.md)]
@@ -127,20 +127,20 @@ ms.locfileid: "87238513"
   
  고정 포트에서 수신하도록 명명된 인스턴스를 구성하는 또 다른 방법은 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] sqlservr.exe **와 같은** 프로그램에 대한 예외를 방화벽에서 만드는 것입니다( [!INCLUDE[ssDE](../../includes/ssde-md.md)]의 경우). 이 방법은 편리하지만 고급 보안이 설정된 Windows 방화벽 MMC 스냅인을 사용할 경우 **인바운드 규칙** 페이지의 **로컬 포트** 열에 포트 번호가 표시되지 않습니다. 따라서 어떤 포트가 열려 있는지 감사하기가 더 어려워집니다. 또 다른 고려 사항은 서비스 팩 또는 누적 업데이트로 인해 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 실행 파일에 대한 경로가 변경되어 방화벽 규칙이 무효화될 수 있다는 점입니다.  
   
-##### <a name="to-add-a-program-exception-to-the-firewall-using-windows-firewall-with-advanced-security"></a>고급 보안이 포함된 Windows 방화벽 항목을 사용하여 방화벽에 프로그램 예외를 추가하려면
+##### <a name="to-add-a-program-exception-to-the-firewall-using-windows-defender-firewall-with-advanced-security"></a>고급 보안이 포함된 Windows Defender 방화벽을 사용하여 방화벽에 프로그램 예외를 추가하려는 경우
   
-1. 시작 메뉴에서 *wf.msc*를 입력합니다. **고급 보안이 포함된 Windows 방화벽**을 선택합니다.
+1. 시작 메뉴에서 *wf.msc*를 입력합니다. Enter 키를 누르거나 검색 결과 wf.msc를 선택하여 **고급 보안이 포함된 Windows Defender 방화벽**을 엽니다.
 1. 왼쪽 창에서 **인바운드 규칙**을 선택합니다.
 1. 오른쪽 창의 **작업**에서 **새 규칙...** 을 선택합니다. **새 인바운드 규칙 마법사**가 열립니다.
 1. **규칙 유형**에서 **프로그램**을 선택합니다. **다음**을 선택합니다.
 1. **프로그램**에서 **다음 프로그램 경로**를 선택합니다. **찾아보기**를 선택하고 SQL Server의 인스턴스를 찾습니다. 이 프로그램을 sqlservr.exe라고 합니다. 파일은 일반적으로 다음 위치에 있습니다.
 
-   `C:\Program Files\Microsoft SQL Server\MSSQL13.<InstanceName>\MSSQL\Binn\sqlservr.exe`
+   `C:\Program Files\Microsoft SQL Server\MSSQL15.<InstanceName>\MSSQL\Binn\sqlservr.exe`
 
    **다음**을 선택합니다.
 
-1. **작업**에서 **연결 허용**을 클릭합니다.  
-1. 프로필에 세 개의 프로필을 모두 포함합니다. **다음**을 선택합니다.
+1. **작업**에서 **연결 허용**을 선택합니다. **다음**을 선택합니다.
+1. **프로필**에서 세 개의 프로필을 모두 포함합니다. **다음**을 선택합니다.
 1. **이름**에 규칙의 이름을 입력합니다. **마침**을 선택합니다.
 
 엔드포인트에 대한 자세한 내용은 [여러 TCP 포트에서 수신하도록 데이터베이스 엔진 구성](../../database-engine/configure-windows/configure-the-database-engine-to-listen-on-multiple-tcp-ports.md) 및 [엔드포인트 카탈로그 뷰&#40;Transact-SQL&#41;](../../relational-databases/system-catalog-views/endpoints-catalog-views-transact-sql.md)를 참조하세요. 

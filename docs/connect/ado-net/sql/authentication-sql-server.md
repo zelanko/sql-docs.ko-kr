@@ -1,6 +1,6 @@
 ---
 title: SQL Server에서 인증
-description: SQL Server의 로그인 및 인증에 대해 설명하고 추가 리소스에 대한 링크를 제공합니다.
+description: ADO.NET을 사용할 때 SQL Server의 로그인 및 인증을 알아보고 추가 리소스를 찾을 위치를 알아봅니다.
 ms.date: 09/26/2019
 dev_langs:
 - csharp
@@ -12,12 +12,12 @@ ms.topic: conceptual
 author: David-Engel
 ms.author: v-daenge
 ms.reviewer: v-kaywon
-ms.openlocfilehash: 3c12f3adacbf26cfe70e2f5993db0ace84460404
-ms.sourcegitcommit: fe5c45a492e19a320a1a36b037704bf132dffd51
+ms.openlocfilehash: 8bdcc51fad2bbc14499b60a1986bec5d2bcb6a1e
+ms.sourcegitcommit: 2600a414c321cfd6dc6daf5b9bcbc9a99c049dc4
 ms.translationtype: HT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 04/08/2020
-ms.locfileid: "80928924"
+ms.lasthandoff: 09/30/2020
+ms.locfileid: "91603484"
 ---
 # <a name="authentication-in-sql-server"></a>SQL Server에서 인증
 

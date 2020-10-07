@@ -9,18 +9,18 @@ ms.date: 09/10/2020
 ms.topic: conceptual
 ms.prod: sql
 ms.custom: references_regions
-ms.openlocfilehash: 8312ab1f13d5a85c6dfb43cd29d0ba734846a512
-ms.sourcegitcommit: c0f92739c81221fbcdb7c40b53a71038105df44f
+ms.openlocfilehash: c647a1cdf767b7dacef5b7e376d6e787af688469
+ms.sourcegitcommit: 764f90cf2eeca8451afdea2753691ae4cf032bea
 ms.translationtype: HT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 09/24/2020
-ms.locfileid: "91210585"
+ms.lasthandoff: 09/30/2020
+ms.locfileid: "91589302"
 ---
 # <a name="azure-arc-enabled-sql-server-preview"></a>Azure Arc 지원 SQL Server(미리 보기)
 
 Azure Arc 지원 SQL Server는 서버용 Azure Arc의 일부입니다. 고객 데이터 센터, 에지 또는 다중 클라우드 환경에서 Azure 외부에 호스트된 SQL Server 인스턴스로 Azure 서비스를 확장합니다.
 
-Azure 서비스를 사용하려면 Azure Portal 및 등록 스크립트를 통해 실행 중인 SQL Server 인스턴스를 Azure Arc에 등록해야 합니다. 등록한 인스턴스는 Azure에서 __SQL Server – Azure Arc__ 리소스로 표시됩니다. 이 리소스의 속성은 SQL Server 반증 설정의 하위 집합을 반영합니다.
+Azure 서비스를 사용하려면 Azure Portal 및 등록 스크립트를 통해 실행 중인 SQL Server 인스턴스를 Azure Arc에 등록해야 합니다. 등록한 인스턴스는 Azure에서 __SQL Server – Azure Arc__ 리소스로 표시됩니다. 이 리소스의 속성은 SQL Server 구성 설정의 하위 집합을 반영합니다.
 
 연결된 머신 에이전트를 통해 Azure Arc에 연결된, Windows 또는 Linux를 실행하는 가상 머신이나 물리적 머신에 SQL Server를 설치할 수 있습니다. 에이전트를 설치하면 머신이 SQL Server 인스턴스 등록의 일부로 자동으로 등록됩니다. 연결된 머신 에이전트는 TCP 포트 443을 통해 안전하게 Azure Arc로 아웃바운드 통신을 수행합니다. 머신이 인터넷 통신을 위해 방화벽 또는 HTTP 프록시 서버를 통해 연결하는 경우 [연결된 머신 에이전트의 네트워크 구성 요구 사항](/azure/azure-arc/servers/agent-overview#prerequisites)을 검토합니다.
 
@@ -38,7 +38,7 @@ Azure Arc 지원 SQL Server는 다음 버전의 Windows 또는 Linux 운영 체�
 
 - Windows Server 2012 R2 이상
 - Ubuntu 16.04 및 18.04(x64)
-- CentOS Linux 7(x64)
+- RHEL(Red Hat Enterprise Linux) 7(x64) 
 - SLES(SUSE Linux Enterprise Server) 15(x64)
 
 ### <a name="required-permissions"></a>필요한 사용 권한

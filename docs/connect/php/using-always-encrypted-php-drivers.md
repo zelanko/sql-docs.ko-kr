@@ -1,6 +1,6 @@
 ---
-description: SQL Server용 PHP 드라이버와 함께 Always Encrypted 사용
-title: SQL Server용 PHP 드라이버와 함께 Always Encrypted 사용 | Microsoft Docs
+title: SQL Server용 PHP 드라이버와 함께 Always Encrypted 사용
+description: SQL Server용 PHP 드라이버와 함께 Always Encrypted를 사용하여 애플리케이션의 중요한 데이터를 보호하는 방법을 알아봅니다.
 ms.date: 12/12/2019
 ms.prod: sql
 ms.prod_service: connectivity
@@ -11,12 +11,12 @@ ms.reviewer: v-kaywon
 ms.author: v-daenge
 author: David-Engel
 manager: v-mabarw
-ms.openlocfilehash: 7f0e4ece6031f4aba769a9b9fee04e249ef553e4
-ms.sourcegitcommit: e700497f962e4c2274df16d9e651059b42ff1a10
+ms.openlocfilehash: fc89f54ca7ab27aad141b8f1bd9bc386d613bcd5
+ms.sourcegitcommit: 2600a414c321cfd6dc6daf5b9bcbc9a99c049dc4
 ms.translationtype: HT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 08/17/2020
-ms.locfileid: "88466657"
+ms.lasthandoff: 09/30/2020
+ms.locfileid: "91603400"
 ---
 # <a name="using-always-encrypted-with-the-php-drivers-for-sql-server"></a>SQL Server용 PHP 드라이버와 함께 Always Encrypted 사용
 [!INCLUDE[Driver_PHP_Download](../../includes/driver_php_download.md)]

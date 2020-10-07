@@ -2,7 +2,7 @@
 title: XA 트랜잭션 이해
 description: Microsoft JDBC Driver for SQL Server는 Java Platform, Enterprise Edition/JDBC 2.0 분산 트랜잭션(옵션)을 지원합니다.
 ms.custom: ''
-ms.date: 08/12/2019
+ms.date: 09/29/2020
 ms.prod: sql
 ms.prod_service: connectivity
 ms.reviewer: ''
@@ -11,12 +11,12 @@ ms.topic: conceptual
 ms.assetid: 574e326f-0520-4003-bdf1-62d92c3db457
 author: David-Engel
 ms.author: v-daenge
-ms.openlocfilehash: ff48d23727c8dd48048293dd34127b6acbb3f005
-ms.sourcegitcommit: 59cda5a481cfdb4268b2744edc341172e53dede4
+ms.openlocfilehash: f64cbc7b054f6e60285b3a34921e3219ddd507ff
+ms.sourcegitcommit: d56a834269132a83e5fe0a05b033936776cda8bb
 ms.translationtype: HT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 06/02/2020
-ms.locfileid: "84294002"
+ms.lasthandoff: 09/29/2020
+ms.locfileid: "91529334"
 ---
 # <a name="understanding-xa-transactions"></a>XA 트랜잭션 이해
 
@@ -63,7 +63,7 @@ MS DTC(Microsoft Distributed Transaction Coordinator)와 XA 데이터 원본을 
 > JDBC 분산 트랜잭션 구성 요소는 JDBC 드라이버 설치의 xa 디렉터리에 있습니다. 이 구성 요소에는 xa_install.sql 및 sqljdbc_xa.dll 파일이 포함됩니다. 다른 클라이언트에 다른 버전의 JDBC 드라이버가 있는 경우 서버에서 최신 sqljdbc_xa.dll을 사용하는 것이 좋습니다.  
 
 > [!NOTE]  
-> SQL Server 2019 공개 미리 보기 CTP 2.0부터 JDBC XA 분산 트랜잭션 구성 요소는 SQL Server 엔진에 포함되며 시스템 저장 프로시저를 사용하여 사용하거나 사용하지 않도록 설정할 수 있습니다.
+> JDBC XA 분산 트랜잭션 구성 요소는 SQL Server 2017의 SQL Server 엔진(누적 업데이트 16부터) 및 SQL Server 2019에 포함되며 시스템 저장 프로시저를 사용하여 사용하거나 사용하지 않도록 설정할 수 있습니다.
 > JDBC 드라이버를 사용하여 XA 분산 트랜잭션을 수행하는 데 필요한 구성 요소를 사용하도록 설정하려면 다음 저장 프로시저를 실행합니다.
 >
 > EXEC sp_sqljdbc_xa_install
@@ -86,7 +86,7 @@ Windows Vista 이상:
   
 4. **로컬 DTC 속성** 대화 상자의 **보안** 탭을 클릭합니다.  
   
-5. **XA 트랜잭션 사용** 확인란을 선택하고 **확인**을 클릭합니다. 이렇게 하면 MS DTC 서비스가 다시 시작됩니다.
+5. **XA 트랜잭션 사용** 확인란을 선택하고 **확인**을 클릭합니다. 이 작업으로 MS DTC 서비스가 다시 시작됩니다.
   
 6. **확인**을 다시 클릭하여 **속성** 대화 상자를 닫은 후 **구성 요소 서비스**를 닫습니다.  
   
@@ -145,15 +145,15 @@ HKEY_LOCAL_MACHINE\SOFTWARE\Microsoft\Microsoft SQL Server\MSSQL<version>.<insta
   
 - `XADefaultTimeout = 60`, `XAMaxTimeout = 0`
   
-     클라이언트에서 시간 제한을 지정하지 않는 경우 모든 트랜잭션의 시간 제한이 60초가 됨을 의미합니다. 클라이언트에서 제한 시간을 지정하면 해당 제한 시간 값이 사용됩니다. 최대 제한 시간 값 없음이 적용됩니다.  
+     클라이언트에서 제한 시간을 지정하지 않는 경우 모든 트랜잭션의 제한 시간이 60초가 됨을 의미합니다. 클라이언트에서 제한 시간을 지정하면 해당 제한 시간 값이 사용됩니다. 최대 제한 시간 값 없음이 적용됩니다.  
   
 - `XADefaultTimeout = 30`, `XAMaxTimeout = 60`
   
-     클라이언트에서 시간 제한을 지정하지 않는 경우 모든 트랜잭션의 시간 제한이 30초가 됨을 의미합니다. 클라이언트에서 시간 제한을 지정하면 60초(최댓값)보다 작은 경우에 한해 클라이언트의 시간 제한이 적용됩니다.  
+     클라이언트에서 제한 시간을 지정하지 않는 경우 모든 트랜잭션의 제한 시간이 30초가 됨을 의미합니다. 클라이언트에서 시간 제한을 지정하면 60초(최댓값)보다 작은 경우에 한해 클라이언트의 시간 제한이 적용됩니다.  
   
 - `XADefaultTimeout = 0`, `XAMaxTimeout = 30`
   
-     클라이언트에서 제한 시간을 지정하지 않는 경우 모든 트랜잭션의 제한 시간이 30초(최대값)가 됨을 의미합니다. 클라이언트에서 시간 제한을 지정하면 30초(최댓값)보다 작은 경우에 한해 클라이언트의 시간 제한이 적용됩니다.  
+     클라이언트에서 제한 시간을 지정하지 않는 경우 모든 트랜잭션의 제한 시간이 30초(최댓값)가 됨을 의미합니다. 클라이언트에서 시간 제한을 지정하면 30초(최댓값)보다 작은 경우에 한해 클라이언트의 시간 제한이 적용됩니다.  
   
 ### <a name="upgrading-sqljdbc_xadll"></a>sqljdbc_xa.dll 업그레이드
 
@@ -170,14 +170,14 @@ HKEY_LOCAL_MACHINE\SOFTWARE\Microsoft\Microsoft SQL Server\MSSQL<version>.<insta
   
 ### <a name="configuring-the-user-defined-roles"></a>사용자 정의 역할 구성
 
-특정 사용자에게 JDBC 드라이버를 통해 분산 트랜잭션에 참여할 권한을 부여하려면 해당 사용자를 SqlJDBCXAUser 역할에 추가합니다. 예를 들어 다음과 같은 [!INCLUDE[tsql](../../includes/tsql-md.md)] 코드를 사용하여 이름이 'shelby'(SQL 표준 로그인 사용자 이름)인 사용자를 SqlJDBCXAUser 역할에 추가합니다.  
+특정 사용자에게 JDBC 드라이버를 통해 분산 트랜잭션에 참여할 권한을 부여하려면 해당 사용자를 SqlJDBCXAUser 역할에 추가합니다. 예를 들어 다음과 같은 [!INCLUDE[tsql](../../includes/tsql-md.md)] 코드를 사용하여 이름이 ‘shelly’인 사용자(이름이 ‘shelly’인 SQL 표준 로그인 사용자)를 SqlJDBCXAUser 역할에 추가합니다.  
 
 ```sql
 USE master  
 GO  
-EXEC sp_grantdbaccess 'shelby', 'shelby'  
+EXEC sp_grantdbaccess 'shelly', 'shelly'  
 GO  
-EXEC sp_addrolemember [SqlJDBCXAUser], 'shelby'  
+EXEC sp_addrolemember [SqlJDBCXAUser], 'shelly'  
 ```
 
 SQL 사용자 정의 역할은 데이터베이스별로 정의합니다. 보안을 위해 고유한 역할을 만들려면 각 데이터베이스마다 역할을 정의하고 각 데이터베이스의 방식대로 사용자를 추가해야 합니다. SqlJDBCXAUser 역할은 master에 상주하는 SQL JDBC 확장 저장 프로시저에 대한 액세스 권한을 부여하는 데 사용되므로 master 데이터베이스에서만 정의할 수 있습니다. 먼저 개별 사용자에게 master에 대한 액세스 권한을 부여한 다음, master 데이터베이스에 로그인된 상태에서 SqlJDBCXAUser 역할에 대한 액세스 권한을 부여해야 합니다.  

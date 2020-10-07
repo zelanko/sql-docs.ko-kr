@@ -1,6 +1,6 @@
 ---
-description: '3단계: Ruby를 사용하여 SQL과 연결된 개념 증명'
-title: '3단계: Ruby를 사용하여 SQL에 연결하는 개념 증명 | Microsoft Docs'
+title: '3단계: Ruby를 사용하여 SQL과 연결된 개념 증명'
+description: 3단계는 Ruby를 사용하여 SQL Server에 연결할 수 있는 방법을 보여 주는 개념 증명입니다. 기본 예제에서는 데이터를 선택하고 삽입하는 방법을 보여 줍니다.
 ms.custom: ''
 ms.date: 06/22/2020
 ms.prod: sql
@@ -11,12 +11,12 @@ ms.topic: conceptual
 ms.assetid: cac20b18-0a6d-4243-bbda-a5d1b9476441
 author: David-Engel
 ms.author: v-daenge
-ms.openlocfilehash: 3553f57191dc462067fc48dc1cf2394437912240
-ms.sourcegitcommit: e700497f962e4c2274df16d9e651059b42ff1a10
+ms.openlocfilehash: 2289009f4f0dc6d8e48dc5a6cccd58695d667da9
+ms.sourcegitcommit: 2600a414c321cfd6dc6daf5b9bcbc9a99c049dc4
 ms.translationtype: HT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 08/17/2020
-ms.locfileid: "88484776"
+ms.lasthandoff: 09/30/2020
+ms.locfileid: "91603314"
 ---
 # <a name="step-3-proof-of-concept-connecting-to-sql-using-ruby"></a>3단계: Ruby를 사용하여 SQL과 연결된 개념 증명
 

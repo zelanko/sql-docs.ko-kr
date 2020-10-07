@@ -9,13 +9,13 @@ ms.assetid: 198198e2-7cf4-4a21-bda4-51b36cb4284b
 author: pensivebrian
 ms.author: broneill
 ms.reviewer: drswkier; sstein
-ms.date: 07/06/2020
-ms.openlocfilehash: dbf4c4de7e8bdcb945f2c11c0b63f7cf75ce318b
-ms.sourcegitcommit: c74bb5944994e34b102615b592fdaabe54713047
+ms.date: 09/29/2020
+ms.openlocfilehash: 52a67ff5c77bebb1fb122af29759b9a440ef6931
+ms.sourcegitcommit: b93beb4f03aee2c1971909cb1d15f79cd479a35c
 ms.translationtype: HT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 09/22/2020
-ms.locfileid: "90989446"
+ms.lasthandoff: 09/29/2020
+ms.locfileid: "91498219"
 ---
 # <a name="sqlpackageexe"></a>SqlPackage.exe
 
@@ -136,7 +136,7 @@ SqlPackage.exe 게시 작업은 원본 데이터베이스의 구조와 일치하
 |---|---|---|---|
 |**/Action:**|**/a**|게시|수행할 작업을 지정합니다. |
 |**/AccessToken:**|**/at**|{string}| 대상 데이터베이스에 연결할 때 사용할 액세스 토큰 기반 인증 액세스 토큰을 지정합니다. |
-|**/AzureKeyVaultAuthMethod:**|**/akv**|{Interactive&#124;ClientIdSecret}|Azure KeyVault에 액세스할 때 어떤 인증 방법을 사용할지를 지정합니다. |
+|**/AzureKeyVaultAuthMethod:**|**/akv**|{Interactive&#124;ClientIdSecret}|게시 작업에 암호화된 테이블/열의 수정 내용이 포함된 경우 Azure KeyVault에 액세스하는 데 사용되는 인증 방법을 지정합니다. |
 |**/ClientId:**|**/cid**|{string}|필요한 경우 Azure KeyVault에 대해 인증 시 사용할 클라이언트 ID를 지정합니다. |
 |**/DeployScriptPath:**|**/dsp**|{string}|배포 스크립트를 출력할 선택적 파일 경로를 지정합니다. Azure 배포의 경우 master 데이터베이스를 만들거나 수정하는 TSQL 명령이 있을 경우 스크립트가 동일한 경로에 작성되지만 “Filename_Master.sql”을 출력 파일 이름으로 사용합니다. |
 |**/DeployReportPath:**|**/drp**|{string}|배포 보고서 xml 파일을 출력할 선택적 파일 경로를 지정합니다. |
@@ -313,7 +313,7 @@ SqlPackage.exe Export 작업은 SQL Server 또는 Azure SQL Database의 라이�
 |**/p:**|TableData=(STRING)|데이터를 추출할 테이블을 나타냅니다. schema_name.table_identifier 형식에서 이름 부분이 괄호로 묶이거나 묶이지 않은 형태로 테이블 이름을 지정하십시오. 이 옵션은 여러 번 지정할 수 있습니다.|
 |**/p:**|TempDirectoryForTableData=(STRING)|패키지 파일에 기록되기 전에 테이블 데이터를 버퍼링하는 데 사용되는 임시 디렉터리를 지정합니다.|
 |**/p:**|TargetEngineVersion=({Default&#124;Latest&#124;V11&#124;V12} 'Latest')|필요한 대상 엔진 버전을 지정합니다. 이 작업은 생성된 bacpac에서 V12 기능(예: 메모리 최적화 테이블)이 포함된 Azure SQL Database 서버가 지원하는 개체를 허용할지 여부에 영향을 줍니다.|
-|**/p:**|VerifyFullTextDocumentTypesSupported=(BOOLEAN)|Microsoft Azure SQL Database v12에 대해 지원되는 전체 텍스트 문서 유형을 확인할지 여부를 지정합니다.|
+|**/p:**|VerifyFullTextDocumentTypesSupported=(BOOLEAN)|Microsoft Azure SQL Database v12에 지원되는 전체 텍스트 문서 종류를 확인할지 여부를 지정합니다.|
   
 ## <a name="import-parameters-and-properties"></a>매개 변수 및 속성 가져오기
 

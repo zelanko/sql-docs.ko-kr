@@ -13,12 +13,12 @@ ms.reviewer: maghan
 ms.custom: seo-lt-2019
 ms.date: 02/20/2020
 monikerRange: '>=aps-pdw-2016||=azuresqldb-current||=azure-sqldw-latest||>=sql-server-2016||=sqlallproducts-allversions||=azuresqldb-mi-current'
-ms.openlocfilehash: eed51327477f40aa4e093d9b28cbaa641bfd4a86
-ms.sourcegitcommit: 827ad02375793090fa8fee63cc372d130f11393f
+ms.openlocfilehash: 292736c937a2345e88964521ea294c69595729e5
+ms.sourcegitcommit: 27f95e50f11a98164e9e7a5130a3e00ac06b4cea
 ms.translationtype: HT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 09/04/2020
-ms.locfileid: "89480535"
+ms.lasthandoff: 09/28/2020
+ms.locfileid: "91412891"
 ---
 # <a name="download-sql-server-data-tools-ssdt-for-visual-studio"></a>Visual Studio용 SSDT(SQL Server Data Tools) 다운로드
 
@@ -39,18 +39,24 @@ Visual Studio 2019에서는 Analysis Services, Integration Services 및 Reportin
 
 ### <a name="install-ssdt-with-visual-studio-2019"></a>Visual Studio 2019를 사용하여 SSDT 설치
 
-[Visual Studio 2019](https://docs.microsoft.com/visualstudio/install/install-visual-studio?view=vs-2019)가 이미 설치된 경우 워크로드 목록을 편집하여 SSDT를 포함할 수 있습니다. Visual Studio 2019가 설치되지 않은 경우 [Visual Studio 2019 Community](https://visualstudio.microsoft.com/downloads/)를 다운로드하고 설치할 수 있습니다.
+[Visual Studio 2019](https://docs.microsoft.com/visualstudio/install/install-visual-studio?view=vs-2019&preserve-view=true)가 이미 설치된 경우 워크로드 목록을 편집하여 SSDT를 포함할 수 있습니다. Visual Studio 2019가 설치되지 않은 경우 [Visual Studio 2019 Community](https://visualstudio.microsoft.com/downloads/)를 다운로드하고 설치할 수 있습니다.
 
-* SQL Database 프로젝트의 경우, 워크로드 목록의 **데이터 스토리지 및 처리**에서 **SQL Server Data Tools**를 선택합니다.
+SSDT를 포함하도록 설치된 Visual Studio 워크로드를 수정하려면 Visual Studio 설치 관리자를 사용합니다.
 
-   ![데이터 스토리지 및 처리 워크로드](../ssdt/media/download-sql-server-data-tools-ssdt/data-workload-2019.png)
+1. Visual Studio 설치 관리자를 시작합니다. Windows 시작 메뉴에서 “설치 관리자”를 검색할 수 있습니다.
 
-* Analysis Services, Integration Services 또는 Reporting Services 프로젝트의 경우 *도구 > 확장 및 업데이트*에서나 [Marketplace](https://marketplace.visualstudio.com/search?term=services&target=VS&category=All%20categories&vsVersion=&sortBy=Relevance)에서 적절한 [확장](https://docs.microsoft.com/visualstudio/ide/finding-and-using-visual-studio-extensions)을 설치할 수 있습니다.
+   ![Windows 시작 메뉴의 2019용 Visual Studio 설치 관리자](../ssdt/media/visual-studio-installer.png)
+
+2. 설치 관리자에서 SSDT를 추가하려는 Visual Studio 버전을 선택한 다음, **수정**을 선택합니다.
+
+3. 워크로드 목록의 **데이터 스토리지 및 처리**에서 **SQL Server Data Tools**를 선택합니다.
+
+   ![데이터 스토리지 및 처리 워크로드 2019](../ssdt/media/download-sql-server-data-tools-ssdt/data-workload-2019.png)
+
+Analysis Services, Integration Services 또는 Reporting Services 프로젝트의 경우 **확장** > **확장 관리**를 사용하여 Visual Studio 내에서 또는 [Marketplace](https://marketplace.visualstudio.com/search?term=services&target=VS&category=All%20categories&vsVersion=&sortBy=Relevance)에서 적절한 [확장](/visualstudio/ide/finding-and-using-visual-studio-extensions)을 설치할 수 있습니다.
 
 * [Analysis Services](https://marketplace.visualstudio.com/items?itemName=ProBITools.MicrosoftAnalysisServicesModelingProjects)
-
 * [Integration Services](https://marketplace.visualstudio.com/items?itemName=SSIS.SqlServerIntegrationServicesProjects)
-
 * [Reporting Services](https://marketplace.visualstudio.com/items?itemName=ProBITools.MicrosoftReportProjectsforVisualStudio)
 
 ## <a name="ssdt-for-visual-studio-2017"></a>Visual Studio 2017용 SSDT
@@ -63,11 +69,19 @@ Analysis Services, Integration Services 또는 Reporting Services 프로젝트�
 
 ### <a name="install-ssdt-with-visual-studio-2017"></a>Visual Studio 2017을 사용하여 SSDT 설치
 
-[Visual Studio를 설치](https://docs.microsoft.com/visualstudio/install/install-visual-studio)하는 동안 SSDT를 설치하려면 **데이터 스토리지 및 처리** 작업을 선택한 다음, **SQL Server Data Tools**를 선택합니다.
+[Visual Studio를 설치](/visualstudio/install/install-visual-studio)하는 동안 SSDT를 설치하려면 **데이터 스토리지 및 처리** 작업을 선택한 다음, **SQL Server Data Tools**를 선택합니다.
 
-Visual Studio가 이미 설치된 경우 [워크로드 목록을 편집](https://docs.microsoft.com/visualstudio/install/modify-visual-studio)하여 SSDT를 포함할 수 있습니다.
+Visual Studio가 이미 설치된 경우 Visual Studio 설치 관리자를 사용하여 SSDT를 포함하도록 설치된 워크로드를 수정합니다.
 
-![데이터 스토리지 및 처리 워크로드](../ssdt/media/download-sql-server-data-tools-ssdt/data-workload-2017.png)
+1. Visual Studio 설치 관리자를 시작합니다. Windows 시작 메뉴에서 “설치 관리자”를 검색할 수 있습니다.
+
+   ![Windows 시작 메뉴의 2017용 Visual Studio 설치 관리자](../ssdt/media/visual-studio-installer.png)
+
+2. 설치 관리자에서 SSDT를 추가하려는 Visual Studio 버전을 선택한 다음, **수정**을 선택합니다.
+
+3. 워크로드 목록의 **데이터 스토리지 및 처리**에서 **SQL Server Data Tools**를 선택합니다.
+
+   ![데이터 스토리지 및 처리 워크로드 2017](../ssdt/media/download-sql-server-data-tools-ssdt/data-workload-2017.png)
 
 ### <a name="install-analysis-services-integration-services-and-reporting-services-tools"></a>Analysis Services, Integration Services 및 Reporting Services 도구 설치
 
@@ -96,7 +110,7 @@ Analysis Services, Integration Services 및 Reporting Services 프로젝트 지�
 
 ### <a name="system-requirements"></a>시스템 요구 사항
 
-Visual Studio 2017용 SSDT는 Visual Studio와 동일한 [시스템 요구 사항](https://docs.microsoft.com/visualstudio/productinfo/vs2017-system-requirements-vs)을 갖습니다.
+Visual Studio 2017용 SSDT는 Visual Studio와 동일한 [시스템 요구 사항](/visualstudio/productinfo/vs2017-system-requirements-vs)을 갖습니다.
 
 ### <a name="available-languages---ssdt-for-vs-2017"></a>사용 가능한 언어 - VS 2017용 SSDT
 
@@ -122,7 +136,7 @@ Visual Studio 2017용 SSDT는 Visual Studio와 동일한 [시스템 요구 사�
 
 ## <a name="offline-install"></a>오프라인 설치
 
-인터넷에 연결되어 있지 않은 경우 SSDT를 설치하려면 이 섹션의 단계를 따르세요. 자세한 내용은 [Visual Studio 2017의 네트워크 설치 만들기](https://docs.microsoft.com/visualstudio/install/create-a-network-installation-of-visual-studio)를 참조하세요.
+인터넷에 연결되어 있지 않은 경우 SSDT를 설치하려면 이 섹션의 단계를 따르세요. 자세한 내용은 [Visual Studio 2017의 네트워크 설치 만들기](/visualstudio/install/create-a-network-installation-of-visual-studio)를 참조하세요.
 
 먼저 **온라인** 상태에서 다음 단계를 완료하세요.
 

@@ -1,6 +1,6 @@
 ---
 title: '1단계: Ruby 개발을 위한 개발 환경 구성'
-description: Ruby 개발을 위한 개발 환경을 구성하는 방법에 대해 알아봅니다.
+description: 이 시작 가이드의 1단계에서는 Ruby 및 SQL Server용 ODBC 드라이버를 개발 환경에 설치하는 과정을 설명합니다.
 ms.custom: ''
 ms.date: 01/19/2017
 ms.prod: sql
@@ -11,12 +11,12 @@ ms.topic: conceptual
 ms.assetid: 8cdbadeb-f640-406c-977c-d2d44b7b5368
 author: David-Engel
 ms.author: v-daenge
-ms.openlocfilehash: 700b0c1979b0eccc1544afb59296fba867e24c53
-ms.sourcegitcommit: 8ffc23126609b1cbe2f6820f9a823c5850205372
+ms.openlocfilehash: a6412015000a5f9dda09ea5d489c8080fd2e1c09
+ms.sourcegitcommit: 2600a414c321cfd6dc6daf5b9bcbc9a99c049dc4
 ms.translationtype: HT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 04/17/2020
-ms.locfileid: "81634586"
+ms.lasthandoff: 09/30/2020
+ms.locfileid: "91603365"
 ---
 # <a name="step-1-configure-development-environment-for-ruby-development"></a>1단계: Ruby 개발을 위한 개발 환경 구성
 SQL Server용 Ruby 드라이버로 애플리케이션을 개발하려면 개발 환경을 필수 구성 요소로 구성해야 합니다.    

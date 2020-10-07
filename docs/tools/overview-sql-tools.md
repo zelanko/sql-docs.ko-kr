@@ -12,12 +12,12 @@ ms.reviewer: ''
 ms.custom: seo-lt-2019
 ms.date: 02/04/2020
 monikerRange: '>=aps-pdw-2016||=azuresqldb-current||=azure-sqldw-latest||>=sql-server-2016||=sqlallproducts-allversions||>=sql-server-linux-2017'
-ms.openlocfilehash: 59a376b17c6e4b396dba24999a52bf37ecc27988
-ms.sourcegitcommit: f3321ed29d6d8725ba6378d207277a57cb5fe8c2
+ms.openlocfilehash: 1c46afa8b1edbbb548c5367197327de72e2acd27
+ms.sourcegitcommit: 2600a414c321cfd6dc6daf5b9bcbc9a99c049dc4
 ms.translationtype: HT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 07/06/2020
-ms.locfileid: "86009600"
+ms.lasthandoff: 09/30/2020
+ms.locfileid: "91603510"
 ---
 # <a name="sql-tools-overview"></a>SQL 도구 개요
 
@@ -37,7 +37,7 @@ ms.locfileid: "86009600"
 | 도구 | Description | 운영 체제 |
 |:--|:--|:--|
 | [ **![ADS 이미지](../tools/media/overview-sql-tools/azure-data-studio.svg)</br></br>Azure Data Studio**](../azure-data-studio/download.md) | 주문형 SQL 쿼리를 실행하고 텍스트, JSON 또는 Excel로 결과를 보고 저장할 수 있는 경량 편집기입니다. 데이터를 편집하고, 즐겨 사용하는 데이터베이스 연결을 구성하며, 익숙한 개체 검색 환경에서 데이터베이스 개체를 찾습니다. | **Windows</br>macOS</br>Linux** |
-| [ **![SSMS 이미지](../tools/media/overview-sql-tools/ssms.svg)</br></br>SQL Server Management Studio(SSMS)** ](../ssms/download-sql-server-management-studio-ssms.md) | 완벽한 GUI 지원으로 SQL Server 인스턴스 또는 데이터베이스를 관리합니다. SQL Server, Azure SQL Database 및 SQL Data Warehouse의 모든 구성 요소에 액세스하고, 이를 구성, 관리 및 개발할 수 있습니다. 기술 수준에 상관없이 모든 개발자와 데이터베이스 관리자가 SQl에 액세스할 수 있도록 수많은 서식 있는 스크립트 편집기와 광범위한 그래픽 도구 그룹을 결합하는 포괄적인 단일 유틸리티를 제공합니다. | **Windows** |
+| [ **![SSMS 이미지](../tools/media/overview-sql-tools/ssms.svg)</br></br>SQL Server Management Studio(SSMS)** ](../ssms/download-sql-server-management-studio-ssms.md) | 완벽한 GUI 지원으로 SQL Server 인스턴스 또는 데이터베이스를 관리합니다. SQL Server, Azure SQL Database 및 SQL Data Warehouse의 모든 구성 요소에 액세스하고, 이를 구성, 관리 및 개발할 수 있습니다. 다양한 기술 수준의 개발자와 데이터베이스 관리자가 SQL에 액세스할 수 있도록 여러 서식 있는 스크립트 편집기와 광범위한 그래픽 도구 그룹을 결합하는 포괄적인 단일 유틸리티를 제공합니다. | **Windows** |
 | [ **![SSDT 이미지](../tools/media/overview-sql-tools/ssdt.svg)</br>SQL Server Data Tools(SSDT)** ](../ssdt/download-sql-server-data-tools-ssdt.md) | SQL Server 관계형 데이터베이스, Azure SQL 데이터베이스, AS(Analysis Services) 데이터 모델, IS(Integration Services) 패키지 및 RS(Reporting Services) 보고서를 빌드하기 위한 최신형 개발 도구입니다. SSDT를 사용하면 **[Visual Studio](https://visualstudio.microsoft.com/downloads/)** 에서 애플리케이션을 개발할 때처럼 쉽게 SQL Server 콘텐츠 형식을 디자인 및 배포할 수 있습니다. | **Windows** |
 | [ **![VS Code 이미지](../tools/media/overview-sql-tools/visual-studio-code.svg)</br></br>Visual Studio Code**](https://code.visualstudio.com/) | Visual Studio Code용 **[mssql 확장](https://marketplace.visualstudio.com/items?itemName=ms-mssql.mssql)** 은 Visual Studio Code에서 SQL Server 연결과 T-SQL에 대한 풍부한 편집 환경을 지원하는 공식 SQL Server 확장 프로그램입니다. 경량 편집기에서 T-SQL 스크립트를 작성합니다. | **Windows</br>macOS</br>Linux** |
 

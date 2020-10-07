@@ -1,7 +1,7 @@
 ---
 title: 보고서 서버의 SPN(서비스 사용자 이름) 등록 | Microsoft Docs
 description: 네트워크에서 인증에 Kerberos를 사용하는 경우 도메인 사용자로 실행되는 보고서 서버 서비스에 대한 SPN을 만드는 방법을 알아봅니다.
-ms.date: 02/12/2020
+ms.date: 09/24/2020
 ms.prod: reporting-services
 ms.prod_service: reporting-services-native
 ms.technology: report-server
@@ -9,12 +9,12 @@ ms.topic: conceptual
 ms.assetid: dda91d4f-77cc-4898-ad03-810ece5f8e74
 author: maggiesMSFT
 ms.author: maggies
-ms.openlocfilehash: 5d5f52195deab514d4f7bcc03c77d9cb9a5c69b3
-ms.sourcegitcommit: f0772f614482e0b3cde3609e178689ce62ca3a19
+ms.openlocfilehash: 4fad93d5682a8e3cfdd6fdf5341944c4b4b58a83
+ms.sourcegitcommit: 2600a414c321cfd6dc6daf5b9bcbc9a99c049dc4
 ms.translationtype: HT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 06/09/2020
-ms.locfileid: "84544505"
+ms.lasthandoff: 09/30/2020
+ms.locfileid: "91603170"
 ---
 # <a name="register-a-service-principal-name-spn-for-a-report-server"></a>보고서 서버의 SPN(서비스 사용자 이름) 등록
   상호 인증에 Kerberos 프로토콜을 사용하는 네트워크에 [!INCLUDE[ssRSnoversion](../../includes/ssrsnoversion-md.md)] 를 배포하는 경우 도메인 사용자 계정으로 실행되도록 보고서 서버 서비스 SPN(서비스 사용자 이름)을 구성하려면 보고서 서버 서비스에 대한 SPN을 만들어야 합니다.  
@@ -32,10 +32,10 @@ ms.locfileid: "84544505"
   
 ## <a name="syntax"></a>구문  
 
-setspn을 사용하여 SPN을 조작하는 경우 SPN을 올바른 형식으로 입력해야 합니다. SPN의 형식은 `<serviceclass>/host:<por>`입니다. SetSPN 유틸리티를 사용하여 보고서 서버의 SPN을 만드는 명령 구문은 다음과 같습니다.  
+setspn을 사용하여 SPN을 조작하는 경우 SPN을 올바른 형식으로 입력해야 합니다. HTTP SPN의 형식은 `http/host`입니다. SetSPN 유틸리티를 사용하여 보고서 서버의 SPN을 만드는 명령 구문은 다음과 같습니다.  
   
 ```  
-Setspn -s http/<computer-name>.<domain-name>:<port> <domain-user-account>  
+Setspn -s http/<computer-name>.<domain-name> <domain-user-account>  
 ```  
   
  **SetSPN** 은 Windows Server에서 사용할 수 있습니다. **-s** 인수는 중복이 없는지 확인한 후 SPN을 추가합니다. **참고: -s** 는 Windows Server(Windows Server 2008부터)에서 사용할 수 있습니다.  
@@ -57,10 +57,10 @@ Setspn -s http/<computer-name>.<domain-name>:<port> <domain-user-account>
 4.  다음 명령을 복사하되 자리 표시자 값은 사용자의 네트워크에 유효한 실제 값으로 대체합니다.  
   
     ```  
-    Setspn -s http/<computer-name>.<domain-name>:<port> <domain-user-account>  
+    Setspn -s http/<computer-name>.<domain-name> <domain-user-account>  
     ```  
   
-    예: `Setspn -s http/MyReportServer.MyDomain.com:80 MyDomainUser`  
+    예: `Setspn -s http/MyReportServer.MyDomain.com MyDomainUser`  
   
 5.  명령을 실행합니다.  
   

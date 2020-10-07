@@ -3,22 +3,32 @@ title: 릴리스 정보
 description: 이 문서에는 2017년 11월부터 현재까지의 Azure Data Studio 릴리스에 대한 릴리스 정보가 안내되어 있습니다. 요약된 문제 중 다수에 추가 세부 정보로 연결되는 링크가 있습니다.
 ms.prod: azure-data-studio
 ms.technology: azure-data-studio
-ms.topic: overview
+ms.topic: conceptual
 author: yualan
 ms.author: alayu
 ms.reviewer: maghan
 ms.custom: seodec18
-ms.date: 09/22/2020
-ms.openlocfilehash: aa55d393955eecaa4ba9af947985622334c59141
-ms.sourcegitcommit: 63aef5a96905f0b026322abc9ccb862ee497eebe
+ms.date: 09/30/2020
+ms.openlocfilehash: fdcba98194643a823d7cef79dde0e8be335f056d
+ms.sourcegitcommit: 2600a414c321cfd6dc6daf5b9bcbc9a99c049dc4
 ms.translationtype: HT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 09/25/2020
-ms.locfileid: "91364196"
+ms.lasthandoff: 09/30/2020
+ms.locfileid: "91603474"
 ---
 # <a name="release-notes-for-azure-data-studio"></a>Azure Data Studio의 릴리스 정보
 
 **[최신 릴리스 다운로드 및 설치](./download-azure-data-studio.md)**
+
+## <a name="september-2020-hotfix"></a>2020년 9월(핫픽스)
+
+2020년 9월 30일 &nbsp; / &nbsp; 버전: 1.22.1
+
+&nbsp;
+
+| 변경 | 세부 정보 |
+| ------ | ------- |
+| 버그 및 이슈 해결 | 전체 수정 목록은 [GitHub의 버그 및 이슈](https://github.com/microsoft/azuredatastudio/releases/tag/untagged-ca77e3ca71bd29150699)를 참조하세요. |
 
 ## <a name="september-2020"></a>2020년 9월
 

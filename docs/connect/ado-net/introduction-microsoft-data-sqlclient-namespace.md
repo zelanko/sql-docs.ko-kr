@@ -1,7 +1,7 @@
 ---
 title: Microsoft.Data.SqlClient 네임스페이스 소개
-description: Microsoft.Data.SqlClient 네임스페이스의 소개 페이지입니다.
-ms.date: 06/23/2019
+description: Microsoft.Data.SqlClient 네임스페이스를 알아보고 어떻게 해당 네임스페이스가 .NET 애플리케이션용 SQL에 연결하는 기본 방법인지 알아봅니다.
+ms.date: 09/29/2020
 ms.assetid: c18b1fb1-2af1-4de7-80a4-95e56fd976cb
 ms.prod: sql
 ms.prod_service: connectivity
@@ -10,12 +10,12 @@ ms.topic: conceptual
 author: David-Engel
 ms.author: v-daenge
 ms.reviewer: v-kaywon
-ms.openlocfilehash: 3a4f0611d3708aba9557deb81ab702f29e7a7462
-ms.sourcegitcommit: 22f687e9e8b4f37b877b2d19c5090dade8fa26d0
+ms.openlocfilehash: c3af23cb3816ad45fa75516633749d1f011c930d
+ms.sourcegitcommit: d56a834269132a83e5fe0a05b033936776cda8bb
 ms.translationtype: HT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 06/24/2020
-ms.locfileid: "85334587"
+ms.lasthandoff: 09/29/2020
+ms.locfileid: "91529354"
 ---
 # <a name="introduction-to-microsoftdatasqlclient-namespace"></a>Microsoft.Data.SqlClient 네임스페이스 소개
 
@@ -206,11 +206,11 @@ namespace Microsoft.Data.SqlClient.DataClassification
 
 ### <a name="utf-8-support"></a>UTF-8 지원
 
-UTF-8 지원을 위해 애플리케이션 코드를 변경하지 않아도 됩니다. 이러한 SqlClient 변경에 따라, 서버에서 UTF-8을 지원하고 기본 열 데이터 정렬이 UTF-8인 경우 클라이언트-서버 통신이 최적화됩니다. [SQL Server 2019 미리 보기의 새로운 기능](../../sql-server/what-s-new-in-sql-server-ver15.md)에서 UTF-8 섹션을 참조하세요.
+UTF-8 지원을 위해 애플리케이션 코드를 변경하지 않아도 됩니다. 이러한 SqlClient 변경에 따라, 서버에서 UTF-8을 지원하고 기본 열 데이터 정렬이 UTF-8인 경우 클라이언트-서버 통신이 최적화됩니다. [SQL Server 2019의 새로운 기능](../../sql-server/what-s-new-in-sql-server-ver15.md)에서 UTF-8 섹션을 참조하세요.
 
 ### <a name="always-encrypted-with-enclaves"></a>Enclave를 사용한 상시 암호화
 
-일반적으로 .NET Framework **및 기본 제공 열 마스터 키 저장소 공급자**에 System.Data.SqlClient를 사용하는 기존 설명서는 이제 .NET Core에서도 작동합니다.
+일반적으로 .NET Framework **및 기본 제공 열 마스터 키 저장소 공급자**에서 System.Data.SqlClient를 사용하는 기존 설명서는 이제 .NET Core에도 적용됩니다.
 
  [.NET Framework 데이터 공급자와 Always Encrypted를 사용하여 개발](../../relational-databases/security/encryption/develop-using-always-encrypted-with-net-framework-data-provider.md)
 

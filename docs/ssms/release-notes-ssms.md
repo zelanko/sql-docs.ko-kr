@@ -10,13 +10,13 @@ author: dzsquared
 ms.author: drskwier
 ms.reviewer: maghan
 ms.custom: seo-lt-2019
-ms.date: 07/22/2020
-ms.openlocfilehash: 7df66b1102a315dc80eac9ac989f3cb8067e3a27
-ms.sourcegitcommit: 9b41725d6db9957dd7928a3620fe4db41eb51c6e
+ms.date: 09/28/2020
+ms.openlocfilehash: 46a8b73155fea5c22ef7d94acc3f128f42138410
+ms.sourcegitcommit: 2600a414c321cfd6dc6daf5b9bcbc9a99c049dc4
 ms.translationtype: HT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 08/13/2020
-ms.locfileid: "88180052"
+ms.lasthandoff: 09/30/2020
+ms.locfileid: "91603444"
 ---
 # <a name="release-notes-for-sql-server-management-studio-ssms"></a>SSMS(SQL Server Management Studio) 릴리스 정보
 
@@ -105,10 +105,11 @@ SSMS 18.6은 SSMS의 최신 GA(일반 공급) 릴리스입니다. 이전 버전�
 | Integration Services | Azure-SSIS Integration Runtime에서 패키지를 가져오거나 내보낼 때 Integration Services 스크립트 태스크/구성 요소가 포함된 패키지에 대한 스크립트가 손실됩니다. 해결 방법: “C:\Program Files (x86)\Microsoft SQL Server Management Studio 18\Common7\IDE\CommonExtensions\MSBuild” 폴더를 제거합니다. | 해당 없음|
 | Integration Services | 최신 운영 체제에서 Integration Services에 대한 원격 연결이 "지정된 서비스가 설치된 서비스로 존재하지 않습니다." 오류와 함께 실패할 수 있습니다. 해결 방법: Computer\HKEY_CLASSES_ROOT\AppID & Computer\HKEY_CLASSES_ROOT\ WOW6432Node\AppID에서 Integration Services 관련 레지스트리 위치를 확인하고, 이러한 하이브 내에서 연결하려는 특정 버전의 Integration Services에 대해 'LocalService'라는 레지스트리 키 이름을 'LocalService_A'로 바꿉니다. | 해당 없음|
 
-
 다른 알려진 문제를 확인하고 제품 팀에 피드백을 제공하려면 [SQL Server 사용자 피드백](https://feedback.azure.com/forums/908035-sql-server)을 참조하세요.
 
 ## <a name="previous-ssms-releases"></a>이전 SSMS 릴리스
+
+[!INCLUDE[ssms-connect-aazure-ad](../includes/ssms-connect-azure-ad.md)]
 
 관련 섹션에서 다운로드 링크를 선택하여 이전 SSMS 버전을 다운로드합니다.
 
@@ -147,7 +148,6 @@ SSMS 18.6은 SSMS의 최신 GA(일반 공급) 릴리스입니다. 이전 버전�
 
 | 새 항목 | 세부 정보 | 해결 방법 | |----------|---------||-----------| | 일반 SSMS | 다이어그램 디자인에 기존 다이어그램이 손상되도록 하는 알려진 버그가 있습니다. 예를 들어 SSMS 17.9.1을 사용하여 다이어그램 디자인을 만든 다음 SSMS 18.x를 사용하여 업데이트/저장한 후 나중에 17.9.1을 사용하여 엽니다. 자세한 내용은 [SQL Server 사용자 피드백](https://feedback.azure.com/forums/908035/suggestions/37992649)을 참조하세요. | N/A | | 일반 SSMS | 새 서버 감사 사양 대화 상자에서 SSMS가 액세스 위반 오류로 인해 충돌을 일으킬 수 있습니다. | N/A || | SMO/스크립팅 | SMO를 사용하는 SSMS 확장을 새로운 SMO v160을 대상으로 지정하여 다시 컴파일해야 합니다. | N/A | | Integration Services | Azure-SSIS Integration Runtime에서 패키지를 가져오거나 내보낼 때 Integration Services 스크립트 태스크/구성 요소가 포함된 패키지에 대한 스크립트가 손실됩니다. 해결 방법: | “C:\Program Files (x86)\Microsoft SQL Server Management Studio 18\Common7\IDE\CommonExtensions\MSBuild” 폴더를 제거합니다. |
 
-
 ### <a name="185"></a>18.5
 
 ![다운로드](media/download-icon.png) [SSMS 18.5 다운로드](https://go.microsoft.com/fwlink/?linkid=2125901)
@@ -175,8 +175,8 @@ SSMS 18.6은 SSMS의 최신 GA(일반 공급) 릴리스입니다. 이전 버전�
 | SMO/스크립팅 | *기능 제한*에 대한 지원이 제거되었습니다(이 미리 보기 기능은 SQL Azure 및 SQL 온-프레미스에서 제거됨). |
 | SMO/스크립팅 | 스크립트 생성 마법사에 대한 대상으로 *Notebook*을 추가했습니다. |
 | SMO/스크립팅 | *SQL On Demand*에 대한 지원을 추가했습니다. |
-| SMO/스크립팅 | [SQL 평가 API](../sql-assessment-api/sql-assessment-api-overview.md) - Platform, Name 및 engineEdition 필드에는 이제 일반적인 쉼표로 구분된 목록(*platform*: \[*Windows*, *Linux*\])뿐 아니라 정규식(*platform*: *\/Windows\|Linux\/* )도 포함될 수 있습니다.
-| SMO/스크립팅 | [SQL 평가 API](../sql-assessment-api/sql-assessment-api-overview.md) - 13개의 평가 규칙이 추가되었습니다. 자세한 내용은 [GitHub](https://github.com/microsoft/sql-server-samples/tree/master/samples/manage/sql-assessment-api))를 참조하세요. |
+| SMO/스크립팅 | [SQL 평가 API](../tools/sql-assessment-api/sql-assessment-api-overview.md) - Platform, Name 및 engineEdition 필드에는 이제 일반적인 쉼표로 구분된 목록(*platform*: \[*Windows*, *Linux*\])뿐 아니라 정규식(*platform*: *\/Windows\|Linux\/* )도 포함될 수 있습니다.
+| SMO/스크립팅 | [SQL 평가 API](../tools/sql-assessment-api/sql-assessment-api-overview.md) - 13개의 평가 규칙이 추가되었습니다. 자세한 내용은 [GitHub](https://github.com/microsoft/sql-server-samples/tree/master/samples/manage/sql-assessment-api))를 참조하세요. |
 
 ### <a name="bug-fixes-in-185"></a>18.5의 버그 수정
 
@@ -184,7 +184,7 @@ SSMS 18.6은 SSMS의 최신 GA(일반 공급) 릴리스입니다. 이전 버전�
 |----------|---------|
 | 접근성 | SSIS ADF/새 일정: *새 일정* 마법사에서 내레이터의 검색 모드에서 포커스 순서가 논리적이지 않은 문제를 해결했습니다. |
 | 접근성 | 스트레치 데이터베이스 마법사: 화면 판독기가 테이블에 대한 정보를 제공할 때 쿼리 테이블의 이름을 알리지 않는 문제를 해결했습니다. |
-| Analysis Services | AAD 연결을 사용하여 AS에서 스크립팅하는 경우 캐시된 연결을 수정합니다. |
+| Analysis Services | Azure AD 연결을 사용하여 AS에서 스크립팅하는 경우 캐시된 연결을 수정합니다. |
 | Always On | Always On AG에 추가된 첫 번째 데이터베이스가 올바르게 조인되지 않는 문제를 해결했습니다.
 | Always On | 빅 데이터 클러스터 엔드포인트에 연결될 때 대시보드를 표시하려고 하면 오류가 표시되는 문제를 해결했습니다. |
 | 감사 | 스토리지 계정의 루트 폴더에 빈 이름의 폴더가 있으면 감사 로그 병합 창이 충돌하는 문제를 해결했습니다. |
@@ -231,7 +231,7 @@ SSMS 18.6은 SSMS의 최신 GA(일반 공급) 릴리스입니다. 이전 버전�
 | SMO/스크립팅 | SQL Azure 인덱스에 대한 FILLFACTOR를 건너뛰는 문제를 해결했습니다. |
 | SMO/스크립팅 | 외부 개체 스크립팅과 관련된 문제를 해결했습니다. |
 | SMO/스크립팅 | 스크립트 생성이 SQL Database에 대해 확장 속성 스크립팅 옵션을 선택하는 것을 허용하지 않는 문제를 해결했습니다. 또한 이러한 확장 속성의 스크립팅도 수정했습니다. |
-| SMO/스크립팅 | [SQL 평가 API](../sql-assessment-api/sql-assessment-api-overview.md) - XTPHashAvgChainBuckets 규칙에서 도움말 링크가 잘못되었습니다. |
+| SMO/스크립팅 | [SQL 평가 API](../tools/sql-assessment-api/sql-assessment-api-overview.md) - XTPHashAvgChainBuckets 규칙에서 도움말 링크가 잘못되었습니다. |
 | XEvent UI | 표에서 마우스로 가리키면 항목이 선택되는 문제를 수정했습니다. [SQL Server 사용자 피드백](https://feedback.azure.com/forums/908035/suggestions/38262124) 및 [SQL Server 사용자 피드백](https://feedback.azure.com/forums/908035-sql-server/suggestions/37873921)을 참조하세요. |
 
 ### <a name="known-issues-185"></a>알려진 문제(18.5)
@@ -264,13 +264,13 @@ SSMS 18.6은 SSMS의 최신 GA(일반 공급) 릴리스입니다. 이전 버전�
 | 쿼리 저장소 | **대기 통계 캡처 모드**를 **쿼리 저장소** **데이터베이스 속성** 옵션에 추가했습니다. |
 | SMO/스크립팅 | SQL DW에서 구체화된 뷰의 스크립트를 지원합니다. |
 | SMO/스크립팅 | *SQL On Demand*에 대한 지원을 추가했습니다. |
-| SMO/스크립팅 | [SQL 평가 API](../sql-assessment-api/sql-assessment-api-overview.md) - 50개 평가 규칙을 추가했습니다(GitHub에서 세부 정보 참조). |
-| SMO/스크립팅 | [SQL 평가 API](../sql-assessment-api/sql-assessment-api-overview.md) - 규칙 조건에 기본 수학 식 및 비교를 추가했습니다. |
-| SMO/스크립팅 | [SQL 평가 API](../sql-assessment-api/sql-assessment-api-overview.md) - RegisteredServer 개체에 대한 지원을 추가했습니다. |
-| SMO/스크립팅 | [SQL 평가 API](../sql-assessment-api/sql-assessment-api-overview.md) - 규칙이 JSON 형식으로 저장되는 방식을 업데이트하고 재정의/사용자 지정을 적용하는 메커니즘도 업데이트했습니다. |
-| SMO/스크립팅 | [SQL 평가 API](../sql-assessment-api/sql-assessment-api-overview.md) - Linux에서 SQL을 지원하도록 규칙을 업데이트했습니다. |
-| SMO/스크립팅 | [SQL 평가 API](../sql-assessment-api/sql-assessment-api-overview.md) - 규칙 집합 JSON 형식을 업데이트하고 스키마 버전을 추가했습니다. |
-| SMO/스크립팅 | [SQL 평가 API](../sql-assessment-api/sql-assessment-api-overview.md) - cmdlet 출력을 업데이트하여 권장 사항의 가독성을 향상했습니다. |
+| SMO/스크립팅 | [SQL 평가 API](../tools/sql-assessment-api/sql-assessment-api-overview.md) - 50개 평가 규칙을 추가했습니다(GitHub에서 세부 정보 참조). |
+| SMO/스크립팅 | [SQL 평가 API](../tools/sql-assessment-api/sql-assessment-api-overview.md) - 규칙 조건에 기본 수학 식 및 비교를 추가했습니다. |
+| SMO/스크립팅 | [SQL 평가 API](../tools/sql-assessment-api/sql-assessment-api-overview.md) - RegisteredServer 개체에 대한 지원을 추가했습니다. |
+| SMO/스크립팅 | [SQL 평가 API](../tools/sql-assessment-api/sql-assessment-api-overview.md) - 규칙이 JSON 형식으로 저장되는 방식을 업데이트하고 재정의/사용자 지정을 적용하는 메커니즘도 업데이트했습니다. |
+| SMO/스크립팅 | [SQL 평가 API](../tools/sql-assessment-api/sql-assessment-api-overview.md) - Linux에서 SQL을 지원하도록 규칙을 업데이트했습니다. |
+| SMO/스크립팅 | [SQL 평가 API](../tools/sql-assessment-api/sql-assessment-api-overview.md) - 규칙 집합 JSON 형식을 업데이트하고 스키마 버전을 추가했습니다. |
+| SMO/스크립팅 | [SQL 평가 API](../tools/sql-assessment-api/sql-assessment-api-overview.md) - cmdlet 출력을 업데이트하여 권장 사항의 가독성을 향상했습니다. |
 | XEvent 프로파일러 | XEvent Profiler 세션에 *error_reported* 이벤트를 추가했습니다. |
 
 #### <a name="bug-fixes-in-184"></a>18.4의 버그 수정
@@ -320,10 +320,10 @@ SSMS 18.6은 SSMS의 최신 GA(일반 공급) 릴리스입니다. 이전 버전�
 | Integration Services | ADF 파이프라인에서 SSIS 패키지 실행 작업으로 Azure-SSIS Integration Runtime에서 SSIS 패키지 실행을 호출하는 새 선택 메뉴 항목 `Tools > Migrate to Azure > Configure Azure-enabled DTExec`가 추가되었습니다. |
 | SMO/스크립팅 | Azure SQL DW UNIQUE 제약 조건의 스크립팅 지원에 대한 지원이 추가되었습니다. |
 | SMO/스크립팅 | 데이터 분류 </br> - SQL 버전 10(SQL 2008) 이상에 대한 지원이 추가되었습니다. </br> - SQL 버전 15(SQL 2019) 이상 및 Azure SQL Database에 대한 새 민감도 특성 '순위'를 추가했습니다. |
-| SMO/스크립팅 | [SQL 평가 API](../sql-assessment-api/sql-assessment-api-overview.md) - 규칙 집합 형식에 대한 버전 관리를 추가했습니다. |
-| SMO/스크립팅 | [SQL 평가 API](../sql-assessment-api/sql-assessment-api-overview.md) - 새로운 검사를 추가했습니다. |
-| SMO/스크립팅 | [SQL 평가 API](../sql-assessment-api/sql-assessment-api-overview.md) - Azure SQL Managed Instance에 대한 지원을 추가했습니다. |
-| SMO/스크립팅 | [SQL 평가 API](../sql-assessment-api/sql-assessment-api-overview.md) - 결과를 테이블로 표시하는 cmdlet의 기본 보기가 업데이트되었습니다. |
+| SMO/스크립팅 | [SQL 평가 API](../tools/sql-assessment-api/sql-assessment-api-overview.md) - 규칙 집합 형식에 대한 버전 관리를 추가했습니다. |
+| SMO/스크립팅 | [SQL 평가 API](../tools/sql-assessment-api/sql-assessment-api-overview.md) - 새로운 검사를 추가했습니다. |
+| SMO/스크립팅 | [SQL 평가 API](../tools/sql-assessment-api/sql-assessment-api-overview.md) - Azure SQL Managed Instance에 대한 지원을 추가했습니다. |
+| SMO/스크립팅 | [SQL 평가 API](../tools/sql-assessment-api/sql-assessment-api-overview.md) - 결과를 테이블로 표시하는 cmdlet의 기본 보기가 업데이트되었습니다. |
 
 #### <a name="bug-fixes-in-1831"></a>18.3.1의 버그 수정
 
@@ -547,7 +547,7 @@ SSMS 18.6은 SSMS의 최신 GA(일반 공급) 릴리스입니다. 이전 버전�
 |Azure Data Studio 통합|OE에서 데이터베이스 노드를 마우스 오른쪽 단추로 클릭하면 사용자에게 쿼리를 실행하거나 Azure Data Studio에서 새 Notebook을 만들 수 있는 컨텍스트 메뉴가 나타납니다.|
 |Azure SQL 지원| 이제 SLO/Edition/MaxSize 데이터베이스 속성이 사용자 지정 이름을 허용하므로 더 쉽게 Azure SQL Database의 향후 버전을 지원할 수 있습니다.|
 |Azure SQL 지원| vCore SKU(범용 및 중요 비즈니스용)에 대한 지원 추가: Gen4_24 및 모든 Gen5.|
-|Azure SQL Managed Instance|Azure SQL Managed Instance에 연결되는 경우 새 "AAD 로그인"을 새 로그인 유형으로 SMO 및 SSMS에 추가할 수 있습니다.|
+|Azure SQL Managed Instance|Azure SQL Managed Instance에 연결할 때 새 “Azure AD 로그인”이 새 로그인 유형으로 SMO 및 SSMS에 추가되었습니다.|
 |Always On|SSMS Always on 대시보드에서 RTO(예상 복구 시간) 및 RPO(예상 데이터 손실)를 새로 고칩니다. [https://docs.microsoft.com/sql/database-engine/availability-groups/windows/monitor-performance-for-always-on-availability-groups](../database-engine/availability-groups/windows/monitor-performance-for-always-on-availability-groups.md)의 업데이트된 설명서를 참조하세요.|
 |Always Encrypted| 서버에 연결 상자의 Always Encrypted 탭에 있는 Always Encrypted 확인란을 선택하면 데이터베이스 연결에 대해 Always Encrypted를 활성화/비활성화하는 쉬운 방법이 제공됩니다.|
 |보안 Enclave를 사용한 Always Encrypted| SQL Server 2019의 보안 enclave를 사용하는 Always Encrypted를 지원하기 위해 몇 가지 기능을 개선했습니다.  서버에 연결 대화 상자에서 enclave 증명 URL을 지정하기 위한 텍스트 필드(새로운 Always Encrypted 탭).  새 열 마스터 키가 enclave 계산을 허용하는지 여부를 제어하는 새 열 마스터 키 대화 상자의 새로운 확인란.  기타 Always Encrypted 키 관리 대화 상자에는 enclave 계산을 허용하는 열 마스터 키에 대한 정보를 제공합니다.|
@@ -632,7 +632,7 @@ SSMS 18.6은 SSMS의 최신 GA(일반 공급) 릴리스입니다. 이전 버전�
 |Azure SQL Managed Instance 지원|데이터베이스 만들기 마법사가 CREATE DATABASE 문을 올바로 스크립팅하지 않습니다.|
 |Azure SQL Managed Instance 지원|관리되는 인스턴스에 연결하는 경우 SSMS 내의 SSIS 패키지를 특별 처리합니다.|
 |Azure SQL Managed Instance 지원|관리되는 인스턴스에 연결된 상태에서 “활동 모니터”를 사용하려 할 때 오류가 표시되는 문제를 해결했습니다.|
-|Azure SQL Managed Instance 지원|SSMS 탐색기의 AAD 로그인 지원이 향상되었습니다.|
+|Azure SQL Managed Instance 지원|SSMS 탐색기의 Azure AD 로그인 지원이 향상되었습니다.|
 |Azure SQL Managed Instance 지원|SMO 파일 그룹 개체의 스크립팅이 향상되었습니다.|
 |Azure SQL Managed Instance 지원|자격 증명에 대한 UI가 향상되었습니다.|
 |Azure SQL Managed Instance 지원|논리적 복제 지원이 추가되었습니다.|
@@ -648,7 +648,7 @@ SSMS 18.6은 SSMS의 최신 GA(일반 공급) 릴리스입니다. 이전 버전�
 |데이터베이스 복사 마법사|SQL Server 2017 및 SQL Server 2019에서 데이터베이스 전송 작업/데이터베이스 복사 마법사가 중단되었습니다.|""
 |데이터베이스 복사 마법사|연결된 외부 데이터 원본을 만들기 전에 스크립트 생성/전송/데이터베이스 복사 마법사 스크립트 테이블을 생성합니다.|
 |연결 대화 상자|DEL 키를 눌러 이전 사용자 이름 목록에서 사용자 이름을 제거할 수 있도록 했습니다. 자세한 내용은 [SSMS 로그인 창에서 사용자 삭제 허용](https://feedback.azure.com/forums/908035/suggestions/32897632)을 참조하세요.|
-|DAC 가져오기 마법사|AAD를 사용하여 연결할 때 DAC 가져오기 마법사가 작동하지 않는 문제가 해결되었습니다.|
+|DAC 가져오기 마법사|Azure AD(Azure Active Directory)를 사용하여 연결할 때 DAC 가져오기 마법사가 작동하지 않는 문제가 해결되었습니다.|
 |데이터 분류|다른 데이터베이스에 다른 데이터 분류 창이 열려 있는 동안 데이터 분류 창에 분류를 저장할 때의 문제를 해결했습니다.|
 |데이터 계층 애플리케이션 마법사|서버에 대한 액세스가 제한(예: 동일한 서버의 모든 데이터베이스에 액세스할 수 없음)되어 사용자가 데이터 계층 애플리케이션(.dacpac)을 가져올 수 없는 문제가 해결되었습니다.|
 |데이터 계층 애플리케이션 마법사|많은 데이터베이스가 동일한 Azure SQL 서버에 호스팅될 때 가져오기가 매우 느려지는 문제가 해결되었습니다.|
@@ -691,7 +691,7 @@ SSMS 18.6은 SSMS의 최신 GA(일반 공급) 릴리스입니다. 이전 버전�
 |개체 스크립팅|개체를 스크립팅할 때 기본값이 있는 DB 범위 지정 구성이 생략됩니다.|
 |개체 스크립팅|스크립팅 시 동적 T-SQL을 생성하지 마세요. 자세한 내용은 [https://feedback.azure.com/forums/908035-sql-server/suggestions/32898391](https://feedback.azure.com/forums/908035-sql-server/suggestions/32898391)를 참조하세요. |
 |개체 스크립팅|SQL Server 2016 및 그 이전 버전에서 테이블을 스크립팅할 때 그래프 구문 “as edge” 및 “as node”를 생략하세요.|
-|개체 스크립팅|MFA와 함께 AAD를 사용하여 Azure SQL Database에 연결할 때 데이터베이스 개체의 스크립팅이 실패한 문제를 해결했습니다.|
+|개체 스크립팅|MFA와 함께 Azure AD를 사용하여 Azure SQL Database에 연결할 때 데이터베이스 개체의 스크립팅에 실패하는 문제가 해결되었습니다.|
 |개체 스크립팅|Azure SQL Database에서 GEOMETRY_AUTO_GRID/GEOGRAPHY_AUTO_GRID를 사용하여 공간 인덱스를 스크립팅하려고 할 때 오류가 throw되는 문제를 해결했습니다.|
 |개체 스크립팅|“개체 탐색기” 스크립팅 설정이 원본과 일치하도록 설정되어 있는 경우에도 Azure SQL Database의 데이터베이스 스크립팅이 항상 온-프레미스 SQL을 대상으로 하는 문제를 해결했습니다.|
 |개체 스크립팅|클러스터형 및 비클러스터형 인덱스와 관련된 SQL DW 데이터베이스의 테이블을 스크립팅하려고 할 때 잘못된 T-SQL 문이 생성되는 문제가 해결되었습니다.|
@@ -717,7 +717,7 @@ SSMS 18.6은 SSMS의 최신 GA(일반 공급) 릴리스입니다. 이전 버전�
 |SMO|해당 이름에 중괄호가 있는 데이터베이스를 복원하려고 할 때 StringBuilder.FormatError가 발생하는 문제가 해결되었습니다.|
 |SMO|SMO의 Azure 데이터베이스가 데이터베이스에 대해 지정된 데이터 정렬을 사용하는 대신 모든 문자열 비교에 대해 대/소문자 구분 없는 데이터 정렬을 기본값으로 설정하는 문제가 해결되었습니다.|
 |SSMS 편집기|기본 색상을 복원하는 "SQL 시스템 테이블"이 기본 녹색이 아니라 라임 녹색으로 변경되어 흰색 배경에서 읽기가 어려워지는 문제가 해결되었습니다. 자세한 내용은 [SQL 시스템 테이블에 대한 잘못된 기본 색 복원](https://feedback.azure.com/forums/908035-sql-server/suggestions/32896906)을 참조하세요. 영어가 아닌 버전의 SSMS에서 문제가 여전히 발생합니다.|
-|SSMS 편집기|AAD 인증을 사용하여 Azure SQLDW에 연결할 때 intellisense가 작동하지 않는 문제를 해결했습니다.|
+|SSMS 편집기|Azure AD(Azure Active Directory) 인증을 사용하여 Azure SQLDW에 연결할 때 IntelliSense가 작동하지 않는 문제가 해결되었습니다.|
 |SSMS 편집기|사용자가 **마스터** 데이터베이스에 액세스할 수 없을 때 Azure의 intellisense에 발생하는 문제를 해결했습니다.|
 |SSMS 편집기|대상 데이터베이스의 데이터 정렬이 대/소문자를 구분할 때 손상되던 "임시 테이블"을 만드는 코드 조각이 수정되었습니다.|
 |SSMS 편집기|새 TRANSLATE 함수는 이제 intellisense에 의해 인식됩니다. 자세한 내용은 [https://feedback.azure.com/forums/908035-sql-server/suggestions/32898430](https://feedback.azure.com/forums/908035-sql-server/suggestions/32898430)를 참조하세요. |

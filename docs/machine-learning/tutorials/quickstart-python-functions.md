@@ -4,46 +4,33 @@ titleSuffix: SQL machine learning
 description: 이 빠른 시작에서는 SQL 기계 학습에서 Python 수학 및 유틸리티 함수를 사용하는 방법을 알아봅니다.
 ms.prod: sql
 ms.technology: machine-learning
-ms.date: 05/21/2020
+ms.date: 09/28/2020
 ms.topic: quickstart
 author: cawrites
 ms.author: chadam
 ms.reviewer: davidph
 ms.custom: seo-lt-2019
 monikerRange: '>=sql-server-2017||>=sql-server-linux-ver15||=azuresqldb-mi-current||=sqlallproducts-allversions'
-ms.openlocfilehash: a432ce08cb0c4e2f0788188dacf6676083e38990
-ms.sourcegitcommit: 9b41725d6db9957dd7928a3620fe4db41eb51c6e
+ms.openlocfilehash: a810a5dbc6e5d07f0926d99dd62c71e38dfacdff
+ms.sourcegitcommit: b93beb4f03aee2c1971909cb1d15f79cd479a35c
 ms.translationtype: HT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 08/13/2020
-ms.locfileid: "88178524"
+ms.lasthandoff: 09/29/2020
+ms.locfileid: "91497947"
 ---
 # <a name="quickstart-python-functions-with-sql-machine-learning"></a>빠른 시작: SQL 기계 학습에서 Python 함수 사용
 [!INCLUDE [SQL Server 2017 SQL MI](../../includes/applies-to-version/sqlserver2017-asdbmi.md)]
 
-::: moniker range=">=sql-server-ver15||>=sql-server-linux-ver15||=sqlallproducts-allversions"
-이 빠른 시작에서는 [SQL Server Machine Learning Services](../sql-server-machine-learning-services.md) 또는 [빅 데이터 클러스터](../../big-data-cluster/machine-learning-services.md)에서 Python 수학 및 유틸리티 함수를 사용하는 방법을 알아봅니다. 통계 함수는 T-SQL에서 구현하기에 복잡한 경우가 많으며 다만 몇 줄의 코드만으로 Python에서 수행할 수 있습니다.
-::: moniker-end
-::: moniker range="=sql-server-2017||=sqlallproducts-allversions"
-이 빠른 시작에서는 [SQL Server Machine Learning Services](../sql-server-machine-learning-services.md)에서 Python 수학 및 유틸리티 함수를 사용하는 방법을 알아봅니다. 통계 함수는 T-SQL에서 구현하기에 복잡한 경우가 많으며 다만 몇 줄의 코드만으로 Python에서 수행할 수 있습니다.
-::: moniker-end
-::: moniker range="=azuresqldb-mi-current||=sqlallproducts-allversions"
-이 빠른 시작에서는 [Azure SQL Managed Instance Machine Learning Services](/azure/azure-sql/managed-instance/machine-learning-services-overview)에서 Python 수학 및 유틸리티 함수를 사용하는 방법을 알아봅니다. 통계 함수는 T-SQL에서 구현하기에 복잡한 경우가 많으며 다만 몇 줄의 코드만으로 Python에서 수행할 수 있습니다.
-::: moniker-end
+이 빠른 시작에서는 [SQL Server Machine Learning Services](../sql-server-machine-learning-services.md), [Azure SQL Managed Instance Machine Learning Services](/azure/azure-sql/managed-instance/machine-learning-services-overview) 또는 [SQL Server 빅 데이터 클러스터](../../big-data-cluster/machine-learning-services.md)에서 Python 수학 및 유틸리티 함수를 사용하는 방법을 알아봅니다. 통계 함수는 T-SQL에서 구현하기에 복잡한 경우가 많으며 다만 몇 줄의 코드만으로 Python에서 수행할 수 있습니다.
 
 ## <a name="prerequisites"></a>사전 요구 사항
 
 이 빠른 시작을 실행하려면 다음과 같은 필수 구성 요소가 필요합니다.
 
-::: moniker range=">=sql-server-ver15||>=sql-server-linux-ver15||=sqlallproducts-allversions"
-- SQL Server Machine Learning Services. Machine Learning Services를 설치하는 방법은 [Windows 설치 가이드](../install/sql-machine-learning-services-windows-install.md) 또는 [Linux 설치 가이드](../../linux/sql-server-linux-setup-machine-learning.md?toc=%2Fsql%2Fmachine-learning%2Ftoc.json)를 참조하세요. [SQL Server 빅 데이터 클러스터에서 Machine Learning Services를 사용하도록 설정](../../big-data-cluster/machine-learning-services.md)할 수도 있습니다.
-::: moniker-end
-::: moniker range="=sql-server-2017||=sqlallproducts-allversions"
-- SQL Server Machine Learning Services. Machine Learning Services를 설치하는 방법은 [Windows 설치 가이드](../install/sql-machine-learning-services-windows-install.md)를 참조하세요. 
-::: moniker-end
-::: moniker range="=azuresqldb-mi-current||=sqlallproducts-allversions"
-- Azure SQL Managed Instance Machine Learning Services. 등록 방법은 [Azure SQL Managed Instance Machine Learning Services 개요](/azure/azure-sql/managed-instance/machine-learning-services-overview)를 참조하세요.
-::: moniker-end
+- 다음 플랫폼 중 하나에 있는 SQL 데이터베이스:
+  - [SQL Server Machine Learning Services](../sql-server-machine-learning-services.md). Machine Learning Services를 설치하는 방법은 [Windows 설치 가이드](../install/sql-machine-learning-services-windows-install.md) 또는 [Linux 설치 가이드](../../linux/sql-server-linux-setup-machine-learning.md?toc=%2Fsql%2Fmachine-learning%2Ftoc.json)를 참조하세요.
+  - SQL Server 빅 데이터 클러스터. [SQL Server 빅 데이터 클러스터에서 Machine Learning Services 사용](../../big-data-cluster/machine-learning-services.md)을 참조하세요.
+  - Azure SQL Managed Instance Machine Learning Services. 등록 방법은 [Azure SQL Managed Instance Machine Learning Services 개요](/azure/azure-sql/managed-instance/machine-learning-services-overview)를 참조하세요.
 
 - Python 스크립트가 포함된 SQL 쿼리를 실행하기 위한 도구. 이 빠른 시작에서는 [Azure Data Studio](../../azure-data-studio/what-is.md)를 사용합니다.
 
