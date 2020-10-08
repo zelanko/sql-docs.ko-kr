@@ -18,12 +18,12 @@ ms.assetid: ''
 author: jovanpop-msft
 ms.author: jovanpop
 monikerRange: =azuresqldb-current||>=sql-server-2017||=sqlallproducts-allversions||>=sql-server-linux-2017||=azuresqldb-mi-current
-ms.openlocfilehash: f59aee58735b3b38cf8de3a47461cad1c59f6b81
-ms.sourcegitcommit: b93beb4f03aee2c1971909cb1d15f79cd479a35c
+ms.openlocfilehash: 65fc7918a3e8064310757a2875e62d6e001f750c
+ms.sourcegitcommit: 04cf7905fa32e0a9a44575a6f9641d9a2e5ac0f8
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 09/29/2020
-ms.locfileid: "91497959"
+ms.lasthandoff: 10/07/2020
+ms.locfileid: "91808570"
 ---
 # <a name="automatic-tuning"></a>자동 조정
 [!INCLUDE[sqlserver2017-asdb](../../includes/applies-to-version/sqlserver2017-asdb.md)]
@@ -99,9 +99,9 @@ SET AUTOMATIC_TUNING ( FORCE_LAST_GOOD_PLAN = ON );
 
 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 쿼리 저장소에서 성능을 모니터링 하 고 문제를 해결 하는 데 필요한 모든 보기 및 절차를 제공 합니다.
 
-에서 [!INCLUDE[sssql15-md](../../includes/sssql15-md.md)] 쿼리 저장소 시스템 뷰를 사용 하 여 계획 선택 회귀를 찾을 수 있습니다. 부터 [!INCLUDE[sssqlv14-md](../../includes/sssqlv14-md.md)] 은 [!INCLUDE[ssde_md](../../includes/ssde_md.md)] 잠재적 계획 선택 재발 및 [dm_db_tuning_recommendations &#40;transact-sql&#41;](../../relational-databases/system-dynamic-management-views/sys-dm-db-tuning-recommendations-transact-sql.md) DMV에 적용 해야 하는 권장 작업을 검색 하 고 표시 합니다. DMV에는 문제에 대 한 정보, 문제의 중요성, 식별 된 쿼리, 회귀 된 계획의 ID, 비교할 기준으로 사용 된 계획의 ID, [!INCLUDE[tsql_md](../../includes/tsql-md.md)] 문제를 해결 하기 위해 실행할 수 있는 문이 표시 됩니다.
+에서 [!INCLUDE[sssql15-md](../../includes/sssql15-md.md)] 쿼리 저장소 시스템 뷰를 사용 하 여 계획 선택 회귀를 찾을 수 있습니다. 부터 [!INCLUDE[sssqlv14-md](../../includes/sssqlv14-md.md)] 은 [!INCLUDE[ssde_md](../../includes/ssde_md.md)] 잠재적 계획 선택 재발 및 [sys.dm_db_tuning_recommendations &#40;transact-sql&#41;](../../relational-databases/system-dynamic-management-views/sys-dm-db-tuning-recommendations-transact-sql.md) DMV에 적용 해야 하는 권장 작업을 검색 하 고 표시 합니다. DMV에는 문제에 대 한 정보, 문제의 중요성, 식별 된 쿼리, 회귀 된 계획의 ID, 비교할 기준으로 사용 된 계획의 ID, [!INCLUDE[tsql_md](../../includes/tsql-md.md)] 문제를 해결 하기 위해 실행할 수 있는 문이 표시 됩니다.
 
-| 형식 | description | Datetime | score | 자세히 | ... |
+| type | description | Datetime | score | 자세히 | ... |
 | --- | --- | --- | --- | --- | --- |
 | `FORCE_LAST_GOOD_PLAN` | CPU 시간이 4 밀리초에서 14 밀리초로 변경 되었습니다. | 3/17/2017 | 83 | `queryId` `recommendedPlanId` `regressedPlanId` `T-SQL` |   |
 | `FORCE_LAST_GOOD_PLAN` | CPU 시간이 37 밀리초에서 84 밀리초로 변경 되었습니다. | 3/16/2017 | 26 | `queryId` `recommendedPlanId` `regressedPlanId` `T-SQL` |   |
@@ -111,7 +111,7 @@ SET AUTOMATIC_TUNING ( FORCE_LAST_GOOD_PLAN = ON );
  - 이 계획의 변경으로 인해 [!INCLUDE[ssde_md](../../includes/ssde_md.md)] 잠재적인 성능 저하가 발생 하는 것으로 간주 되는 정보를 포함 하는 설명입니다.
  - 잠재적 회귀가 검색 된 날짜/시간입니다.
  - 이 권장 사항의 점수입니다.
- - 검색 된 계획의 ID, 재발 된 계획의 ID, 문제를 해결 하기 위해 강제로 적용 해야 하는 계획의 ID, [!INCLUDE[tsql_md](../../includes/tsql-md.md)] 문제를 해결 하기 위해 적용 될 수 있는 스크립트 등의 문제에 대 한 세부 정보입니다. 세부 정보는 [JSON 형식](../../relational-databases/json/index.md)으로 저장 됩니다.
+ - 검색 된 계획의 ID, 재발 된 계획의 ID, 문제를 해결 하기 위해 강제로 적용 해야 하는 계획의 ID, [!INCLUDE[tsql_md](../../includes/tsql-md.md)] 문제를 해결 하기 위해 적용 될 수 있는 스크립트 등의 문제에 대 한 세부 정보입니다. 세부 정보는 [JSON 형식](../json/json-data-sql-server.md)으로 저장 됩니다.
 
 다음 쿼리를 사용 하 여 문제를 해결 하는 스크립트와 예상 된 이득에 대 한 추가 정보를 얻을 수 있습니다.
 
@@ -178,19 +178,19 @@ CROSS APPLY OPENJSON (Details, '$.planForceDetails')
 
 ### <a name="alternative---manual-index-management"></a>대체-수동 인덱스 관리
 
-자동 인덱스 관리가 없는 사용자 또는 DBA는 [dm_db_missing_index_details &#40;transact-sql&#41;](../../relational-databases/system-dynamic-management-views/sys-dm-db-missing-index-details-transact-sql.md) 보거나에서 성능 대시보드 보고서를 사용 하 여 [!INCLUDE[ssManStudio](../../includes/ssManStudio-md.md)] 성능을 향상 시킬 수 있는 인덱스를 찾고,이 뷰에 제공 된 세부 정보를 사용 하 여 인덱스를 만들고, 쿼리 성능을 수동으로 모니터링 해야 합니다. 삭제할 인덱스를 찾기 위해 사용자는 인덱스에 대 한 운영 사용 통계를 모니터링 하 여 자주 사용 하지 않는 인덱스를 찾아야 합니다.
+자동 인덱스 관리를 사용 하지 않는 경우 사용자 또는 DBA는 [sys.dm_db_missing_index_details &#40;transact-sql&#41;](../../relational-databases/system-dynamic-management-views/sys-dm-db-missing-index-details-transact-sql.md) 보거나에서 성능 대시보드 보고서를 사용 하 여 [!INCLUDE[ssManStudio](../../includes/ssManStudio-md.md)] 성능을 향상 시킬 수 있는 인덱스를 찾고,이 뷰에 제공 된 세부 정보를 사용 하 여 인덱스를 만들고, 쿼리 성능을 수동으로 모니터링 해야 합니다. 삭제할 인덱스를 찾기 위해 사용자는 인덱스에 대 한 운영 사용 통계를 모니터링 하 여 자주 사용 하지 않는 인덱스를 찾아야 합니다.
 
-[!INCLUDE[ssazure_md](../../includes/ssazure_md.md)] 이 프로세스를 간소화 합니다. [!INCLUDE[ssazure_md](../../includes/ssazure_md.md)] 작업을 분석 하 고, 새 인덱스를 사용 하 여 더 빠르게 실행 될 수 있는 쿼리를 식별 하 고, 사용 하지 않거나 중복 된 인덱스를 식별 합니다. [Azure Portal에서 인덱스 찾기 권장 사항](https://docs.microsoft.com/azure/sql-database/sql-database-advisor-portal)에서 변경되어야 하는 인덱스의 ID에 대한 자세한 정보를 찾아보세요.
+[!INCLUDE[ssazure_md](../../includes/ssazure_md.md)] 이 프로세스를 간소화 합니다. [!INCLUDE[ssazure_md](../../includes/ssazure_md.md)] 작업을 분석 하 고, 새 인덱스를 사용 하 여 더 빠르게 실행 될 수 있는 쿼리를 식별 하 고, 사용 하지 않거나 중복 된 인덱스를 식별 합니다. [Azure Portal에서 인덱스 찾기 권장 사항](/azure/sql-database/sql-database-advisor-portal)에서 변경되어야 하는 인덱스의 ID에 대한 자세한 정보를 찾아보세요.
 
 ## <a name="see-also"></a>참고 항목  
  [ALTER DATABASE SET AUTOMATIC_TUNING &#40;Transact-sql&#41;](../../t-sql/statements/alter-database-transact-sql-set-options.md)   
- [database_automatic_tuning_options &#40;Transact-sql&#41;](../../relational-databases/system-catalog-views/sys-database-automatic-tuning-options-transact-sql.md)  
- [dm_db_tuning_recommendations &#40;Transact-sql&#41;](../../relational-databases/system-dynamic-management-views/sys-dm-db-tuning-recommendations-transact-sql.md)   
- [dm_db_missing_index_details &#40;Transact-sql&#41;](../../relational-databases/system-dynamic-management-views/sys-dm-db-missing-index-details-transact-sql.md)   
+ [Transact-sql&#41;sys.database_automatic_tuning_options &#40;](../../relational-databases/system-catalog-views/sys-database-automatic-tuning-options-transact-sql.md)  
+ [Transact-sql&#41;sys.dm_db_tuning_recommendations &#40;](../../relational-databases/system-dynamic-management-views/sys-dm-db-tuning-recommendations-transact-sql.md)   
+ [Transact-sql&#41;sys.dm_db_missing_index_details &#40;](../../relational-databases/system-dynamic-management-views/sys-dm-db-missing-index-details-transact-sql.md)   
  [Transact-sql&#41;sp_query_store_force_plan &#40;](../../relational-databases/system-stored-procedures/sp-query-store-force-plan-transact-sql.md)     
  [Transact-sql&#41;sp_query_store_unforce_plan &#40;](../../relational-databases/system-stored-procedures/sp-query-store-unforce-plan-transact-sql.md)           
- [database_query_store_options &#40;Transact-sql&#41;](../../relational-databases/system-catalog-views/sys-database-query-store-options-transact-sql.md)   
- [JSON 함수](../../relational-databases/json/index.md)    
+ [Transact-sql&#41;sys.database_query_store_options &#40;](../../relational-databases/system-catalog-views/sys-database-query-store-options-transact-sql.md)   
+ [JSON 함수](../json/json-data-sql-server.md)    
  [실행 계획](../../relational-databases/performance/execution-plans.md)    
  [성능 모니터링 및 튜닝](../../relational-databases/performance/monitor-and-tune-for-performance.md)     
  [성능 모니터링 및 튜닝 도구](../../relational-databases/performance/performance-monitoring-and-tuning-tools.md)     

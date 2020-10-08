@@ -1,6 +1,6 @@
 ---
-description: sys. dm_exec_compute_node_errors (Transact-sql)
-title: sys. dm_exec_compute_node_errors (Transact-sql) | Microsoft Docs
+description: sys.dm_exec_compute_node_errors (Transact-sql)
+title: sys.dm_exec_compute_node_errors (Transact-sql) | Microsoft Docs
 ms.custom: ''
 ms.date: 11/04/2019
 ms.prod: sql
@@ -23,14 +23,14 @@ ms.assetid: 9a03c039-70e4-4974-95d8-d3fa45984ffb
 author: markingmyname
 ms.author: maghan
 monikerRange: '>=aps-pdw-2016||=azure-sqldw-latest||>=sql-server-2016||=sqlallproducts-allversions||>=sql-server-linux-2017||=azuresqldb-mi-current'
-ms.openlocfilehash: a7e65469192e14c7a2cb9d3facf3be3730a08428
-ms.sourcegitcommit: dd36d1cbe32cd5a65c6638e8f252b0bd8145e165
+ms.openlocfilehash: 68f260aa547550d08c853b69cc6fb6e3e46d9a72
+ms.sourcegitcommit: 32135463a8494d9ed1600a58f51819359e3c09dc
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 09/08/2020
-ms.locfileid: "89546625"
+ms.lasthandoff: 10/08/2020
+ms.locfileid: "91833565"
 ---
-# <a name="sysdm_exec_compute_node_errors-transact-sql"></a>sys. dm_exec_compute_node_errors (Transact-sql)
+# <a name="sysdm_exec_compute_node_errors-transact-sql"></a>sys.dm_exec_compute_node_errors (Transact-sql)
 
 [!INCLUDE [sqlserver2016-asdbmi-asa-pdw](../../includes/applies-to-version/sqlserver2016-asa-pdw.md)]
 
@@ -40,9 +40,9 @@ ms.locfileid: "89546625"
 |-----------------|---------------|-----------------|-----------|  
 |error_id|`nvarchar(36)`|오류와 연결 된 고유 숫자 id입니다.|시스템의 모든 쿼리 오류에서 고유|  
 |source|`nvarchar(255)`|소스 스레드 또는 프로세스 설명||  
-|형식|`nvarchar(255)`|오류 유형입니다.||  
+|type|`nvarchar(255)`|오류 유형입니다.||  
 |create_time|`datetime`|오류가 발생 한 시간입니다.||  
-|compute_node_id|`int`|특정 계산 노드의 식별자입니다.|Compute_node_id의 [dm_exec_compute_nodes &#40;transact-sql](../../relational-databases/system-dynamic-management-views/sys-dm-exec-compute-nodes-transact-sql.md) 을 참조 하세요&#41;|  
+|compute_node_id|`int`|특정 계산 노드의 식별자입니다.|Compute_node_id [sys.dm_exec_compute_nodes &#40;transact-sql](../../relational-databases/system-dynamic-management-views/sys-dm-exec-compute-nodes-transact-sql.md) 을 참조 하세요&#41;|  
 |rexecution_id|`nvarchar(36)`|PolyBase 쿼리 (있는 경우)의 식별자입니다.||  
 |spid|`int`|SQL Server 세션의 식별자입니다.||  
 |thread_id|`int`|오류가 발생 한 스레드의 숫자 식별자입니다.||  
@@ -51,8 +51,7 @@ ms.locfileid: "89546625"
 
   
 ## <a name="see-also"></a>참고 항목  
- [동적 관리 뷰를 사용한 PolyBase 문제 해결](https://msdn.microsoft.com/library/ce9078b7-a750-4f47-b23e-90b83b783d80)   
+ [동적 관리 뷰를 사용한 PolyBase 문제 해결](/previous-versions/sql/sql-server-2016/mt146389(v=sql.130))   
  [동적 관리 뷰 및 함수&#40;Transact-SQL&#41;](~/relational-databases/system-dynamic-management-views/system-dynamic-management-views.md)   
  [Transact-sql&#41;&#40;데이터베이스 관련 동적 관리 뷰 ](../../relational-databases/system-dynamic-management-views/database-related-dynamic-management-views-transact-sql.md)  
-  
   

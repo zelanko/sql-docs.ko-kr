@@ -18,12 +18,12 @@ helpviewer_keywords:
 ms.assetid: 821d4127-3ce5-4474-8561-043404a20d81
 author: markingmyname
 ms.author: maghan
-ms.openlocfilehash: ef0113079e1bbbe0f82343eead26f8fca1609400
-ms.sourcegitcommit: dd36d1cbe32cd5a65c6638e8f252b0bd8145e165
+ms.openlocfilehash: 74b480c5c673ff4211437303011a3be5e2536593
+ms.sourcegitcommit: 04cf7905fa32e0a9a44575a6f9641d9a2e5ac0f8
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 09/08/2020
-ms.locfileid: "89546085"
+ms.lasthandoff: 10/07/2020
+ms.locfileid: "91810359"
 ---
 # <a name="sp_help_spatial_geography_index_xml-transact-sql"></a>sp_help_spatial_geography_index_xml(Transact-SQL)
 [!INCLUDE [SQL Server](../../includes/applies-to-version/sqlserver.md)]
@@ -77,11 +77,10 @@ select @x.value('(/Primary_Filter_Efficiency/text())[1]', 'float');
 ## <a name="requirements"></a>요구 사항  
   
 ## <a name="see-also"></a>참고 항목  
- [공간 인덱스 저장 프로시저](https://msdn.microsoft.com/library/1be0f34e-3d5a-4a1f-9299-bd482362ec7a)   
+ [공간 인덱스 저장 프로시저](./spatial-index-stored-procedures-arguments-and-properties.md)   
  [sp_help_spatial_geography_index](../../relational-databases/system-stored-procedures/sp-help-spatial-geography-index-transact-sql.md)   
  [공간 인덱스 개요](../../relational-databases/spatial/spatial-indexes-overview.md)   
  [공간 데이터&#40;SQL Server&#41;](../../relational-databases/spatial/spatial-data-sql-server.md)   
  [XQuery 기본 사항](../../xquery/xquery-basics.md)   
  [XQuery 언어 참조](../../xquery/xquery-language-reference-sql-server.md)  
-  
   

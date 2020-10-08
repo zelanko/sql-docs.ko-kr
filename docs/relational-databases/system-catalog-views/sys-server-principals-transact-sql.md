@@ -1,6 +1,6 @@
 ---
 description: sys.server_principals(Transact-SQL)
-title: sys. server_principals (Transact-sql) | Microsoft Docs
+title: sys.server_principals (Transact-sql) | Microsoft Docs
 ms.custom: ''
 ms.date: 03/15/2017
 ms.prod: sql
@@ -21,12 +21,12 @@ ms.assetid: c5dbe0d8-a1c8-4dc4-b9b1-22af20effd37
 author: VanMSFT
 ms.author: vanto
 monikerRange: '>=aps-pdw-2016||>=sql-server-2016||=sqlallproducts-allversions||>=sql-server-linux-2017||=azuresqldb-mi-current'
-ms.openlocfilehash: e3d8a54afa21c46a7881b95d100c4c7746c6e3f8
-ms.sourcegitcommit: e700497f962e4c2274df16d9e651059b42ff1a10
+ms.openlocfilehash: 8f7d0f7afb3d432bdf0c266ee3dfb66813102709
+ms.sourcegitcommit: 04cf7905fa32e0a9a44575a6f9641d9a2e5ac0f8
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 08/17/2020
-ms.locfileid: "88377299"
+ms.lasthandoff: 10/07/2020
+ms.locfileid: "91809339"
 ---
 # <a name="sysserver_principals-transact-sql"></a>sys.server_principals(Transact-SQL)
 [!INCLUDE [sql-asdbmi-pdw](../../includes/applies-to-version/sql-asdbmi-pdw.md)]
@@ -37,8 +37,9 @@ ms.locfileid: "88377299"
 |-----------------|---------------|-----------------|  
 |**name**|**sysname**|보안 주체의 이름입니다. 서버 내에서 고유합니다.|  
 |**principal_id**|**int**|보안 주체의 ID 번호입니다. 서버 내에서 고유합니다.|  
-|**sid**|**varbinary(85)**|보안 주체의 SID(보안 ID)입니다. Windows 보안 주체의 경우 Windows SID와 일치합니다.|  
-|**type**|**char (1)**|보안 주체 유형입니다.<br /><br /> S = SQL 로그인<br /><br /> U = Windows 로그인<br /><br /> G = Windows 그룹<br /><br /> R = 서버 역할<br /><br /> C = 인증서에 매핑된 로그인<br /><br /> K = 비대칭 키에 매핑된 로그인|  
+|**s**|**varbinary(85)**|보안 주체의 SID(보안 ID)입니다. Windows 보안 주체의 경우 Windows SID와 일치합니다.|  
+|**type**|**char(1)**|보안 주체 유형입니다.<br /><br /> S = SQL 로그인<br /><br /> U = Windows 로그인<br /><br /> G = Windows 그룹<br /><br /> R = 서버 역할<br /><br /> C = 인증서에 매핑된 로그인<br /><br /> E = Azure Active Directory의 외부 로그인<br /><br /> X = Azure Active Directory 그룹 또는 응용 프로그램의 외부 그룹
+<br /><br /> K = 비대칭 키에 매핑된 로그인|  
 |**type_desc**|**nvarchar(60)**|보안 주체 유형에 대한 설명입니다.<br /><br /> SQL_LOGIN<br /><br /> WINDOWS_LOGIN<br /><br /> WINDOWS_GROUP<br /><br /> SERVER_ROLE<br /><br /> CERTIFICATE_MAPPED_LOGIN<br /><br /> ASYMMETRIC_KEY_MAPPED_LOGIN|  
 |**is_disabled**|**int**|1 = 로그인을 사용할 수 없습니다.|  
 |**create_date**|**datetime**|보안 주체가 생성된 시간입니다.|  
@@ -54,11 +55,11 @@ ms.locfileid: "88377299"
   
  [!INCLUDE[ssCatViewPerm](../../includes/sscatviewperm-md.md)] 자세한 내용은 [Metadata Visibility Configuration](../../relational-databases/security/metadata-visibility-configuration.md)을 참조하세요.  
   
-## <a name="examples"></a>예제  
+## <a name="examples"></a>예  
  다음 쿼리는 서버 보안 주체에 대해 명시적으로 부여되거나 거부된 사용 권한을 나열합니다.  
   
 > [!IMPORTANT]  
->  고정 서버 역할의 사용 권한 (public이 아닌)은 server_permissions에 표시 되지 않습니다. 따라서 서버 보안 주체가 여기에 나열되지 않은 추가 사용 권한을 가질 수 있습니다.  
+>  고정 서버 역할의 사용 권한 (공용 이외의)은 sys.server_permissions에 표시 되지 않습니다. 따라서 서버 보안 주체가 여기에 나열되지 않은 추가 사용 권한을 가질 수 있습니다.  
   
 ```  
 SELECT pr.principal_id, pr.name, pr.type_desc,   

@@ -1,6 +1,6 @@
 ---
-description: sys. dm_os_spinlock_stats (Transact-sql)
-title: sys. dm_os_spinlock_stats (Transact-sql) | Microsoft Docs
+description: sys.dm_os_spinlock_stats (Transact-sql)
+title: sys.dm_os_spinlock_stats (Transact-sql) | Microsoft Docs
 ms.custom: ''
 ms.date: 06/03/2019
 ms.prod: sql-non-specified
@@ -23,14 +23,14 @@ author: bluefooted
 ms.author: pamela
 ms.reviewer: maghan
 manager: amitban
-ms.openlocfilehash: 053dc2ccc68a7e0479ad1e37a181a25b0cefcc53
-ms.sourcegitcommit: f7c9e562d6048f89d203d71685ba86f127d8d241
+ms.openlocfilehash: 31f89519a70612ba22c2fda79218d9d92153109f
+ms.sourcegitcommit: 04cf7905fa32e0a9a44575a6f9641d9a2e5ac0f8
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 09/12/2020
-ms.locfileid: "90042754"
+ms.lasthandoff: 10/07/2020
+ms.locfileid: "91810109"
 ---
-# <a name="sysdm_os_spinlock_stats-transact-sql"></a>sys. dm_os_spinlock_stats (Transact-sql)
+# <a name="sysdm_os_spinlock_stats-transact-sql"></a>sys.dm_os_spinlock_stats (Transact-sql)
 
 [!INCLUDE [SQL Server SQL Database](../../includes/applies-to-version/sql-asdb.md)]
 
@@ -53,9 +53,9 @@ ms.locfileid: "90042754"
   
 ## <a name="remarks"></a>설명  
  
- sys. dm_os_spinlock_stats를 사용 하 여 spinlock 경합의 원본을 식별할 수 있습니다. 경우에 따라 spinlock 경합을 해결 하거나 줄일 수 있습니다. 그러나 [!INCLUDE[msCoName](../../includes/msconame-md.md)] 고객 지원 서비스에 연락해야 할 경우도 있습니다.  
+ sys.dm_os_spinlock_stats은 spinlock 경합의 원본을 식별 하는 데 사용할 수 있습니다. 경우에 따라 spinlock 경합을 해결 하거나 줄일 수 있습니다. 그러나 [!INCLUDE[msCoName](../../includes/msconame-md.md)] 고객 지원 서비스에 연락해야 할 경우도 있습니다.  
   
- 다음과 같이를 사용 하 여 dm_os_spinlock_stats의 내용을 다시 설정할 수 있습니다. `DBCC SQLPERF`  
+ 다음과 같이를 사용 하 여 sys.dm_os_spinlock_stats의 내용을 다시 설정할 수 있습니다 `DBCC SQLPERF` .  
   
 ```  
 DBCC SQLPERF ('sys.dm_os_spinlock_stats', CLEAR);  
@@ -405,7 +405,7 @@ GO
  
 
   
-## <a name="see-also"></a>관련 항목  
+## <a name="see-also"></a>참고 항목  
  
  [DBCC SQLPERF&#40;Transact-SQL&#41;](../../t-sql/database-console-commands/dbcc-sqlperf-transact-sql.md)   
  
@@ -413,6 +413,7 @@ GO
 
  [가 SQL Server의 CPU 사용률에 대 한 상당한 영향을 주는 경우](https://techcommunity.microsoft.com/t5/SQL-Server-Support/When-is-Spinlock-a-Significant-Driver-of-CPU-utilization-in-SQL/ba-p/530142)
 
+ [SQL Server에서 Spinlock 경합 진단 및 해결](../diagnose-resolve-spinlock-contention.md)
   
   
 

@@ -19,12 +19,12 @@ helpviewer_keywords:
 ms.assetid: abcb1407-ff78-4c76-b02e-509c86574462
 author: markingmyname
 ms.author: maghan
-ms.openlocfilehash: b01c5eb34ca97c7682847cbf1cc6d87843d517b0
-ms.sourcegitcommit: dd36d1cbe32cd5a65c6638e8f252b0bd8145e165
+ms.openlocfilehash: 6829fff1f535a0e0d55b8dd849c67b0b197c4e48
+ms.sourcegitcommit: 04cf7905fa32e0a9a44575a6f9641d9a2e5ac0f8
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 09/08/2020
-ms.locfileid: "89548150"
+ms.lasthandoff: 10/07/2020
+ms.locfileid: "91810857"
 ---
 # <a name="sp_detach_db-transact-sql"></a>sp_detach_db(Transact-SQL)
 [!INCLUDE [SQL Server](../../includes/applies-to-version/sqlserver.md)]
@@ -69,7 +69,7 @@ sp_detach_db [ @dbname= ] 'database_name'
 > [!NOTE]  
 >  모든 로그인 계정의 기본 데이터베이스를 보는 방법에 대 한 자세한 내용은 [sp_helplogins &#40;transact-sql&#41;](../../relational-databases/system-stored-procedures/sp-helplogins-transact-sql.md)을 참조 하십시오. 필요한 권한이 있는 경우 [ALTER login](../../t-sql/statements/alter-login-transact-sql.md) 을 사용 하 여 새 기본 데이터베이스를 로그인에 할당할 수 있습니다.  
   
-## <a name="restrictions"></a>제한 사항  
+## <a name="restrictions"></a>제한  
  다음 중 하나라도 해당하는 경우 데이터베이스를 분리할 수 없습니다.  
   
 -   데이터베이스가 현재 사용되고 있는 경우. 자세한 내용은 이 항목의 뒷부분에 나오는 "배타적 액세스 권한 얻기"를 참조하십시오.  
@@ -121,7 +121,7 @@ GO
 ## <a name="permissions"></a>사용 권한  
  **Sysadmin** 고정 서버 역할의 멤버 자격 또는 데이터베이스의 **db_owner** 역할의 멤버 자격이 필요 합니다.  
   
-## <a name="examples"></a>예제  
+## <a name="examples"></a>예  
  다음 예에서는 [!INCLUDE[ssSampleDBnormal](../../includes/sssampledbnormal-md.md)] *skipchecks가* 가 true로 설정 된 데이터베이스를 분리 합니다.  
   
 ```  
@@ -138,7 +138,6 @@ exec sp_detach_db @dbname='AdventureWorks2012'
 ## <a name="see-also"></a>참고 항목  
  [ALTER DATABASE &#40;Transact-SQL &#41;](../../t-sql/statements/alter-database-transact-sql.md)   
  [데이터베이스 분리 및 연결&#40;SQL Server&#41;](../../relational-databases/databases/database-detach-and-attach-sql-server.md)   
- [CREATE DATABASE&#40;SQL Server Transact-SQL&#41;](../../t-sql/statements/create-database-sql-server-transact-sql.md)   
+ [CREATE DATABASE&#40;SQL Server Transact-SQL&#41;](../../t-sql/statements/create-database-transact-sql.md)   
  [데이터베이스 분리](../../relational-databases/databases/detach-a-database.md)  
-  
   

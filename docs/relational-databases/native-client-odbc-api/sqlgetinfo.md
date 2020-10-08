@@ -15,12 +15,12 @@ ms.assetid: f6215bac-ed3d-4c36-86d5-d56ffbc106aa
 author: markingmyname
 ms.author: maghan
 monikerRange: '>=aps-pdw-2016||=azuresqldb-current||=azure-sqldw-latest||>=sql-server-2016||=sqlallproducts-allversions||>=sql-server-linux-2017||=azuresqldb-mi-current'
-ms.openlocfilehash: 283839b12d70d732c3406b729fa166f5e9fbc9c9
-ms.sourcegitcommit: e700497f962e4c2274df16d9e651059b42ff1a10
+ms.openlocfilehash: 0d98baf95cbc3efac8c5bf36b53b6e0d88097e3a
+ms.sourcegitcommit: 04cf7905fa32e0a9a44575a6f9641d9a2e5ac0f8
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 08/17/2020
-ms.locfileid: "88494156"
+ms.lasthandoff: 10/07/2020
+ms.locfileid: "91810990"
 ---
 # <a name="sqlgetinfo"></a>SQLGetInfo
 [!INCLUDE[SQL Server Azure SQL Database Synapse Analytics PDW ](../../includes/applies-to-version/sql-asdb-asdbmi-asa-pdw.md)]
@@ -211,7 +211,6 @@ ms.locfileid: "88494156"
 |SQL_USER_NAME|현재 사용자 이름입니다.|  
   
 ## <a name="see-also"></a>참고 항목  
- [SQLGetInfo 함수](https://go.microsoft.com/fwlink/?LinkId=59354)   
+ [SQLGetInfo 함수](../../odbc/reference/syntax/sqlgetinfo-function.md)   
  [ODBC API 구현 정보](../../relational-databases/native-client-odbc-api/odbc-api-implementation-details.md)  
-  
   

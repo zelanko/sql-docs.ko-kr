@@ -1,6 +1,6 @@
 ---
 description: sys.event_log(Azure SQL Database)
-title: event_log (Azure SQL Database) | Microsoft Docs
+title: sys.event_log (Azure SQL Database) | Microsoft Docs
 ms.custom: ''
 ms.date: 01/28/2019
 ms.service: sql-database
@@ -21,12 +21,12 @@ ms.assetid: ad5496b5-e5c7-4a18-b5a0-3f985d7c4758
 author: markingmyname
 ms.author: maghan
 monikerRange: = azuresqldb-current || = sqlallproducts-allversions
-ms.openlocfilehash: d819bde874fb5e81a7b6b670ebdeca61d18f127c
-ms.sourcegitcommit: dd36d1cbe32cd5a65c6638e8f252b0bd8145e165
+ms.openlocfilehash: d75c8cb02c64b5965fd5a6fe084b065c3dc8ba65
+ms.sourcegitcommit: 04cf7905fa32e0a9a44575a6f9641d9a2e5ac0f8
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 09/08/2020
-ms.locfileid: "89539658"
+ms.lasthandoff: 10/07/2020
+ms.locfileid: "91809849"
 ---
 # <a name="sysevent_log-azure-sql-database"></a>sys.event_log(Azure SQL Database)
 
@@ -35,14 +35,14 @@ ms.locfileid: "89539658"
   성공적인 [!INCLUDE[ssSDSfull](../../includes/sssdsfull-md.md)] 데이터베이스 연결, 연결 실패 및 교착 상태를 반환 합니다. 이 정보를 사용하여 [!INCLUDE[ssSDS](../../includes/sssds-md.md)]가 있는 데이터베이스 활동을 추적하거나 문제 해결할 수 있습니다.  
   
 > [!CAUTION]  
-> 다 수의 데이터베이스 또는 많은 로그인을 포함 하는 설치의 경우에는 event_log의 작업으로 인해 성능 제한, 높은 CPU 사용량 및 로그인 실패가 발생할 수 있습니다. Event_log 쿼리는 문제에 기여할 수 있습니다. Microsoft에서이 문제를 해결 하기 위해 노력 하 고 있습니다. 그 동안에는이 문제의 영향을 줄이기 위해 event_log의 쿼리를 제한 합니다. NewRelic SQL Server 플러그인의 사용자는 추가 구성 정보에 대 한 [성능 조정 & Microsoft Azure SQL Database 플러그 인 튜닝](https://discuss.newrelic.com/t/microsoft-azure-sql-database-plugin-tuning-performance-tweaks/30729) 을 방문 해야 합니다.  
+> 다 수의 데이터베이스 또는 많은 로그인을 포함 하는 설치의 경우 sys.event_log의 작업으로 인해 성능 제한, 높은 CPU 사용량 및 로그인 실패가 발생할 수 있습니다. Sys.event_log 쿼리는 문제에 기여할 수 있습니다. Microsoft에서이 문제를 해결 하기 위해 노력 하 고 있습니다. 이 문제로 인 한 영향을 줄이기 위해 sys.event_log의 쿼리를 제한 합니다. NewRelic SQL Server 플러그인의 사용자는 추가 구성 정보에 대 한 [성능 조정 & Microsoft Azure SQL Database 플러그 인 튜닝](https://discuss.newrelic.com/t/microsoft-azure-sql-database-plugin-tuning-performance-tweaks/30729) 을 방문 해야 합니다.  
   
  `sys.event_log` 뷰는 다음 열을 포함합니다.  
   
 |열 이름|데이터 형식|Description|  
 |-----------------|---------------|-----------------|  
 |**database_name**|**sysname**|데이터베이스의 이름입니다. 연결이 실패하고 사용자가 데이터베이스 이름을 지정하지 않은 경우 이 열은 비어 있습니다.|  
-|**start_time**|**datetime2**|집계 간격 시작의 UTC 날짜 및 시간입니다. 집계 이벤트에 대해 시간은 항상 5분의 배수입니다. 예를 들면 다음과 같습니다.<br /><br /> '2011-09-28 16:00:00'<br />'2011-09-28 16:05:00'<br />'2011-09-28 16:10:00'|  
+|**start_time**|**datetime2**|집계 간격 시작의 UTC 날짜 및 시간입니다. 집계 이벤트에 대해 시간은 항상 5분의 배수입니다. 다음은 그 예입니다. <br /><br /> '2011-09-28 16:00:00'<br />'2011-09-28 16:05:00'<br />'2011-09-28 16:10:00'|  
 |**end_time**|**datetime2**|집계 간격 끝의 UTC 날짜 및 시간입니다. 집계 된 이벤트의 경우 **End_time** 은 항상 같은 행의 해당 **start_time** 보다 정확히 5 분 후입니다. 집계 되지 않은 이벤트의 경우 **start_time** 및 **end_time** 이벤트의 실제 UTC 날짜 및 시간과 같습니다.|  
 |**event_category**|**nvarchar (64)**|이 이벤트를 생성한 높은 수준의 구성 요소입니다.<br /><br /> 가능한 값 목록은 [이벤트 유형](../../relational-databases/system-catalog-views/sys-event-log-azure-sql-database.md#EventTypes) 을 참조 하세요.|  
 |**event_type**|**nvarchar (64)**|이벤트의 유형입니다.<br /><br /> 가능한 값 목록은 [이벤트 유형](../../relational-databases/system-catalog-views/sys-event-log-azure-sql-database.md#EventTypes) 을 참조 하세요.|  
@@ -57,7 +57,7 @@ ms.locfileid: "89539658"
 
  이 뷰의 각 행에서 기록 하는 이벤트는 범주 (**event_category**), 이벤트 유형 (**event_type**) 및 하위 유형 (**event_subtype**)으로 식별 됩니다. 다음 테이블에서는 이 뷰에 수집된 이벤트 유형을 나열합니다.  
   
- **연결** 범주의 이벤트의 경우에는 database_connection_stats 뷰에서 요약 정보를 사용할 수 있습니다.  
+ **연결** 범주의 이벤트의 경우 요약 정보를 sys.database_connection_stats 보기에서 사용할 수 있습니다.  
   
 > [!NOTE]  
 > 이 뷰에는 여기에 나와 있는 것 외에 발생할 수 있는 다른 [!INCLUDE[ssSDS](../../includes/sssds-md.md)] 데이터베이스 이벤트가 포함되어 있지 않습니다. [!INCLUDE[ssSDS](../../includes/sssds-md.md)]의 후속 릴리스에 범주, 이벤트 유형 및 하위 유형이 추가될 수 있습니다.  
@@ -77,12 +77,12 @@ ms.locfileid: "89539658"
 |**connectivity**|**connection_failed**|9|**다시**|2|*참고: Azure SQL Database V11 적용 됩니다.*<br /><br /> 당시에 데이터베이스가 재구성 중이었으므로 연결이 실패했습니다.|  
 |**connectivity**|**connection_terminated**|0|**idle_connection_timeout**|2|*참고: Azure SQL Database V11 적용 됩니다.*<br /><br /> 연결이 시스템에 정의된 임계값보다 오랫동안 유휴 상태였습니다.|  
 |**connectivity**|**connection_terminated**|1|**다시**|2|*참고: Azure SQL Database V11 적용 됩니다.*<br /><br /> 세션이 데이터베이스 재구성으로 인해 종료되었습니다.|  
-|**connectivity**|**조절은**|*\<reason code>*|**reason_code**|2|*참고: Azure SQL Database V11 적용 됩니다.*<br /><br /> 요청이 정체되었습니다.  제한 이유 코드: *\<reason code>* . 자세한 내용은 [엔진 제한](https://msdn.microsoft.com/library/windowsazure/dn338079.aspx)을 참조 하세요.|  
-|**connectivity**|**throttling_long_transaction**|40549|**long_transaction**|2|*참고: Azure SQL Database V11 적용 됩니다.*<br /><br /> 트랜잭션을 오래 실행하여 세션이 종료됩니다. 트랜잭션을 줄여 보세요. 자세한 내용은 [리소스 제한](https://msdn.microsoft.com/library/windowsazure/dn338081.aspx)을 참조 하세요.|  
-|**connectivity**|**throttling_long_transaction**|40550|**excessive_lock_usage**|2|*참고: Azure SQL Database V11 적용 됩니다.*<br /><br /> 잠금을 너무 많이 획득하여 세션이 종료되었습니다. 단일 트랜잭션에서 읽거나 수정하는 행 수를 줄여 보세요. 자세한 내용은 [리소스 제한](https://msdn.microsoft.com/library/windowsazure/dn338081.aspx)을 참조 하세요.|  
-|**connectivity**|**throttling_long_transaction**|40551|**excessive_tempdb_usage**|2|*참고: Azure SQL Database V11 적용 됩니다.*<br /><br /> TEMPDB 사용량이 너무 많아 세션이 종료되었습니다. 쿼리를 수정하여 임시 테이블 공간 사용량을 줄여 보세요. 자세한 내용은 [리소스 제한](https://msdn.microsoft.com/library/windowsazure/dn338081.aspx)을 참조 하세요.|  
-|**connectivity**|**throttling_long_transaction**|40552|**excessive_log_space_usage**|2|*참고: Azure SQL Database V11 적용 됩니다.*<br /><br /> 트랜잭션 로그 공간 사용량이 너무 많아 세션이 종료되었습니다. 단일 트랜잭션에서 수정하는 행 수를 줄여 보세요. 자세한 내용은 [리소스 제한](https://msdn.microsoft.com/library/windowsazure/dn338081.aspx)을 참조 하세요.|  
-|**connectivity**|**throttling_long_transaction**|40553|**excessive_memory_usage**|2|*참고: Azure SQL Database V11 적용 됩니다.*<br /><br /> 메모리 사용량이 너무 많아 세션이 종료되었습니다. 쿼리를 수정하여 처리할 행 수를 줄여 보세요. 자세한 내용은 [리소스 제한](https://msdn.microsoft.com/library/windowsazure/dn338081.aspx)을 참조 하세요.|  
+|**connectivity**|**조절은**|*\<reason code>*|**reason_code**|2|*참고: Azure SQL Database V11 적용 됩니다.*<br /><br /> 요청이 정체되었습니다.  제한 이유 코드: *\<reason code>* . 자세한 내용은 [엔진 제한](/previous-versions/azure/dn338079(v=azure.100))을 참조 하세요.|  
+|**connectivity**|**throttling_long_transaction**|40549|**long_transaction**|2|*참고: Azure SQL Database V11 적용 됩니다.*<br /><br /> 트랜잭션을 오래 실행하여 세션이 종료됩니다. 트랜잭션을 줄여 보세요. 자세한 내용은 [리소스 제한](/previous-versions/azure/dn338081(v=azure.100))을 참조 하세요.|  
+|**connectivity**|**throttling_long_transaction**|40550|**excessive_lock_usage**|2|*참고: Azure SQL Database V11 적용 됩니다.*<br /><br /> 잠금을 너무 많이 획득하여 세션이 종료되었습니다. 단일 트랜잭션에서 읽거나 수정하는 행 수를 줄여 보세요. 자세한 내용은 [리소스 제한](/previous-versions/azure/dn338081(v=azure.100))을 참조 하세요.|  
+|**connectivity**|**throttling_long_transaction**|40551|**excessive_tempdb_usage**|2|*참고: Azure SQL Database V11 적용 됩니다.*<br /><br /> TEMPDB 사용량이 너무 많아 세션이 종료되었습니다. 쿼리를 수정하여 임시 테이블 공간 사용량을 줄여 보세요. 자세한 내용은 [리소스 제한](/previous-versions/azure/dn338081(v=azure.100))을 참조 하세요.|  
+|**connectivity**|**throttling_long_transaction**|40552|**excessive_log_space_usage**|2|*참고: Azure SQL Database V11 적용 됩니다.*<br /><br /> 트랜잭션 로그 공간 사용량이 너무 많아 세션이 종료되었습니다. 단일 트랜잭션에서 수정하는 행 수를 줄여 보세요. 자세한 내용은 [리소스 제한](/previous-versions/azure/dn338081(v=azure.100))을 참조 하세요.|  
+|**connectivity**|**throttling_long_transaction**|40553|**excessive_memory_usage**|2|*참고: Azure SQL Database V11 적용 됩니다.*<br /><br /> 메모리 사용량이 너무 많아 세션이 종료되었습니다. 쿼리를 수정하여 처리할 행 수를 줄여 보세요. 자세한 내용은 [리소스 제한](/previous-versions/azure/dn338081(v=azure.100))을 참조 하세요.|  
 |**엔진**|**교착 상태**|0|**교착 상태**|2|교착 상태가 발생했습니다.|  
   
 ## <a name="permissions"></a>사용 권한
@@ -129,7 +129,7 @@ start_time                    end_time
 - 데이터 센터 내에 컴퓨터 오류가 발생 하면 [!INCLUDE[ssSDS](../../includes/sssds-md.md)] 이벤트 테이블에서 소량의 데이터가 누락 될 수 있습니다.  
 - DoSGuard를 통해 IP 주소를 차단하는 경우 해당 IP 주소로부터의 연결 시도 이벤트는 수집할 수 없으며 이 뷰에 나타나지 않습니다.  
   
-## <a name="examples"></a>예제  
+## <a name="examples"></a>예  
   
 ### <a name="simple-examples"></a>간단한 예제
 
@@ -231,5 +231,4 @@ SELECT * FROM CTE2;
 
 ## <a name="see-also"></a>참고 항목
 
- [Azure SQL Database 확장 이벤트](https://azure.microsoft.com/documentation/articles/sql-database-xevent-db-diff-from-svr/)  
- 
+ [Azure SQL Database 확장 이벤트](/azure/azure-sql/database/xevent-db-diff-from-svr)  

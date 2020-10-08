@@ -19,12 +19,12 @@ ms.assetid: 0bb6495f-258a-47ec-9f74-fd16671d23b8
 author: markingmyname
 ms.author: maghan
 monikerRange: '>=aps-pdw-2016||=azuresqldb-current||=azure-sqldw-latest||>=sql-server-2016||=sqlallproducts-allversions||>=sql-server-linux-2017||=azuresqldb-mi-current'
-ms.openlocfilehash: 06182bbd036fd746920f6e164b73321a170acc4f
-ms.sourcegitcommit: 2f868a77903c1f1c4cecf4ea1c181deee12d5b15
+ms.openlocfilehash: fd7e49443d6166b8a7da809b0b2e96fd2ddb927f
+ms.sourcegitcommit: 04cf7905fa32e0a9a44575a6f9641d9a2e5ac0f8
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 10/02/2020
-ms.locfileid: "91670106"
+ms.lasthandoff: 10/07/2020
+ms.locfileid: "91810757"
 ---
 # <a name="sp_statistics-transact-sql"></a>sp_statistics(Transact-SQL)
 [!INCLUDE [sql-asdb-asdbmi-asa-pdw](../../includes/applies-to-version/sql-asdb-asdbmi-asa-pdw.md)]
@@ -86,7 +86,7 @@ sp_statistics [ @table_name = ] 'table_name'
 |**FILTER_CONDITION**|**varchar(128)**|[!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]는 값을 반환하지 않습니다.|  
   
 ## <a name="return-code-values"></a>반환 코드 값  
- 없음  
+ None  
   
 ## <a name="remarks"></a>설명  
  결과 집합의 인덱스는 **NON_UNIQUE**, **형식**, **INDEX_NAME**및 **SEQ_IN_INDEX**열을 기준으로 오름차순으로 표시 됩니다.  
@@ -95,7 +95,7 @@ sp_statistics [ @table_name = ] 'table_name'
   
  해시됨 인덱스 유형은 정확하게 일치하는 항목 검색 또는 범위 검색을 허용하지만 패턴 일치 검색은 이 인덱스를 사용하지 않습니다.  
   
- **sp_statistics** 은 ODBC의 **SQLStatistics** 와 동일 합니다. 반환 되는 결과는 **NON_UNIQUE**, **형식**, **INDEX_QUALIFIER**, **INDEX_NAME**및 **SEQ_IN_INDEX**를 기준으로 정렬 됩니다. 자세한 내용은 [ODBC API 참조](https://go.microsoft.com/fwlink/?LinkId=68323)를 참조 하세요.  
+ **sp_statistics** 은 ODBC의 **SQLStatistics** 와 동일 합니다. 반환 되는 결과는 **NON_UNIQUE**, **형식**, **INDEX_QUALIFIER**, **INDEX_NAME**및 **SEQ_IN_INDEX**를 기준으로 정렬 됩니다. 자세한 내용은 [ODBC API 참조](../../odbc/reference/syntax/odbc-reference.md)를 참조 하세요.  
   
 ## <a name="permissions"></a>사용 권한  
  스키마에 대한 SELECT 권한이 필요합니다.  
@@ -113,5 +113,3 @@ EXEC sp_statistics DimEmployee;
  [Transact-sql&#41;카탈로그 저장 프로시저 &#40;](../../relational-databases/system-stored-procedures/catalog-stored-procedures-transact-sql.md)   
  [시스템 저장 프로시저&#40;Transact-SQL&#41;](../../relational-databases/system-stored-procedures/system-stored-procedures-transact-sql.md)  
   
-  
-

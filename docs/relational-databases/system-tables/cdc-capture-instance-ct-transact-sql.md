@@ -18,19 +18,19 @@ helpviewer_keywords:
 ms.assetid: 979c8110-3c54-4e76-953c-777194bc9751
 author: markingmyname
 ms.author: maghan
-ms.openlocfilehash: 0515c57b3c3249cc748c2ab96a12c2c1ef35d700
-ms.sourcegitcommit: dd36d1cbe32cd5a65c6638e8f252b0bd8145e165
+ms.openlocfilehash: 5d0a2dae85606a5e1cb0ffd5f86776e7aae25680
+ms.sourcegitcommit: 04cf7905fa32e0a9a44575a6f9641d9a2e5ac0f8
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 09/08/2020
-ms.locfileid: "89538385"
+ms.lasthandoff: 10/07/2020
+ms.locfileid: "91809788"
 ---
 # <a name="cdcltcapture_instancegt_ct-transact-sql"></a>cdc. &lt; capture_instance &gt; _CT (transact-sql)
 [!INCLUDE [SQL Server](../../includes/applies-to-version/sqlserver.md)]
 
   원본 테이블에서 변경 데이터 캡처를 활성화할 때 생성된 변경 테이블입니다. 이 테이블은 원본 테이블에 대해 수행된 각 삽입 및 삭제 작업당 한 개의 행을, 업데이트 작업당 두 개의 행을 반환합니다. 원본 테이블이 활성화될 때 변경 테이블의 이름이 지정되지 않을 경우 이름이 파생됩니다. 이름 형식은 cdc입니다. _CT *capture_instance* *capture_instance* 은 원본 테이블의 스키마 이름이 고 *schema_table*형식으로 된 원본 테이블 이름입니다. 예를 들어 **AdventureWorks** 예제 데이터베이스의 테이블 **Person 주소** 에 변경 데이터 캡처가 설정 되어 있으면 파생 된 변경 테이블 이름은 cdc가 됩니다 **. Person_Address_CT**.  
   
- **시스템 테이블을 직접 쿼리하지**않는 것이 좋습니다. 대신 [fn_cdc_get_all_changes_<capture_instance>](../../relational-databases/system-functions/cdc-fn-cdc-get-all-changes-capture-instance-transact-sql.md) 및 [cdc. ](../../relational-databases/system-functions/cdc-fn-cdc-get-net-changes-capture-instance-transact-sql.md) fn_cdc_get_net_changes_<capture_instance 함수를 실행 합니다.  
+ **시스템 테이블을 직접 쿼리하지**않는 것이 좋습니다. 대신 [>capture_instance<cdc.fn_cdc_get_all_changes_ ](../../relational-databases/system-functions/cdc-fn-cdc-get-all-changes-capture-instance-transact-sql.md) 를 실행 하 고 cdc.fn_cdc_get_net_changes_ [<함수를 capture_instance 합니다 ](../../relational-databases/system-functions/cdc-fn-cdc-get-net-changes-capture-instance-transact-sql.md) .  
   
 
   
@@ -46,7 +46,7 @@ ms.locfileid: "89538385"
   
 ## <a name="remarks"></a>설명  
 
-`__$command_id`열이 열은 2012 ~ 2016 버전의 누적 업데이트에서 도입 되었습니다. 버전 및 다운로드 정보는 기술 자료 문서 3030352의 [FIX: Microsoft SQL Server 데이터베이스에 대 한 변경 데이터 캡처를 사용 하도록 설정한 후 업데이트 된 행에 대해 변경 테이블을 잘못 정렬](https://support.microsoft.com/help/3030352/fix-the-change-table-is-ordered-incorrectly-for-updated-rows-after-you)합니다.  자세한 내용은 [SQL Server 2012, 2014 및 2016에 대 한 최신 CU로 업그레이드 한 후 CDC 기능이 중단 될 수 있음](https://blogs.msdn.microsoft.com/sql_server_team/cdc-functionality-may-break-after-upgrading-to-the-latest-cu-for-sql-server-2012-2014-and-2016/)을 참조 하세요.
+`__$command_id`열이 열은 2012 ~ 2016 버전의 누적 업데이트에서 도입 되었습니다. 버전 및 다운로드 정보는 기술 자료 문서 3030352의 [FIX: Microsoft SQL Server 데이터베이스에 대 한 변경 데이터 캡처를 사용 하도록 설정한 후 업데이트 된 행에 대해 변경 테이블을 잘못 정렬](https://support.microsoft.com/help/3030352/fix-the-change-table-is-ordered-incorrectly-for-updated-rows-after-you)합니다.  자세한 내용은 [SQL Server 2012, 2014 및 2016에 대 한 최신 CU로 업그레이드 한 후 CDC 기능이 중단 될 수 있음](/archive/blogs/sql_server_team/cdc-functionality-may-break-after-upgrading-to-the-latest-cu-for-sql-server-2012-2014-and-2016)을 참조 하세요.
 
 ## <a name="captured-column-data-types"></a>캡처된 열 데이터 형식  
  이 테이블에 포함된 캡처된 열의 데이터 형식과 값은 다음 항목을 제외하고 해당하는 원본 열과 동일합니다.  
@@ -63,9 +63,9 @@ ms.locfileid: "89538385"
  기본적으로 단일 INSERT, UPDATE, WRITETEXT 또는 UPDATETEXT 문에서 캡처된 열에 추가할 수 있는 최대 크기는 65,536바이트(64KB)입니다. 이 크기를 늘려 더 큰 LOB 데이터를 지원 하려면 최대 [텍스트 복제 크기 서버 구성 옵션](../../database-engine/configure-windows/configure-the-max-text-repl-size-server-configuration-option.md) 을 사용 하 여 최대 크기를 더 크게 지정 합니다. 자세한 내용은 [max text repl size 서버 구성 옵션 구성](../../database-engine/configure-windows/configure-the-max-text-repl-size-server-configuration-option.md)을 참조하세요.  
   
 ## <a name="data-definition-language-modifications"></a>데이터 정의 언어 수정  
- 열 추가 또는 삭제와 같은 원본 테이블에 대 한 DDL 수정은 [cdc. ddl_history](../../relational-databases/system-tables/cdc-ddl-history-transact-sql.md) 테이블에 기록 됩니다. 이러한 변경 내용은 변경 테이블에는 적용되지 않습니다. 즉 변경 테이블의 정의는 일정하게 유지됩니다. 변경 테이블에 열을 삽입할 때 캡처 프로세스는 원본 테이블과 연관된 캡처된 열 목록에 표시되지 않는 열은 무시합니다. 원본 테이블에 더 이상 없는 캡처된 열 목록에 열이 표시되는 경우 해당 열에는 Null 값이 할당됩니다.  
+ 열 추가 또는 삭제와 같은 원본 테이블에 대 한 DDL 수정 내용은 [cdc.ddl_history](../../relational-databases/system-tables/cdc-ddl-history-transact-sql.md) 테이블에 기록 됩니다. 이러한 변경 내용은 변경 테이블에는 적용되지 않습니다. 즉 변경 테이블의 정의는 일정하게 유지됩니다. 변경 테이블에 열을 삽입할 때 캡처 프로세스는 원본 테이블과 연관된 캡처된 열 목록에 표시되지 않는 열은 무시합니다. 원본 테이블에 더 이상 없는 캡처된 열 목록에 열이 표시되는 경우 해당 열에는 Null 값이 할당됩니다.  
   
- 원본 테이블에서 열의 데이터 형식 변경도 [cdc. ddl_history](../../relational-databases/system-tables/cdc-ddl-history-transact-sql.md) 테이블에 기록 됩니다. 이 변경은 변경 테이블의 정의를 바꿉니다. 캡처 프로세스에서 원본 테이블에 적용된 DDL 변경에 대한 로그 레코드가 발견되면 변경 테이블에 있는 캡처된 열의 데이터 형식이 수정됩니다.  
+ 원본 테이블에 있는 열의 데이터 형식을 변경 하는 작업도 [cdc.ddl_history](../../relational-databases/system-tables/cdc-ddl-history-transact-sql.md) 테이블에 기록 됩니다. 이 변경은 변경 테이블의 정의를 바꿉니다. 캡처 프로세스에서 원본 테이블에 적용된 DDL 변경에 대한 로그 레코드가 발견되면 변경 테이블에 있는 캡처된 열의 데이터 형식이 수정됩니다.  
   
  원본 테이블에 있는 캡처된 열의 데이터 형식을 수정할 때 데이터 형식의 크기가 줄어드는 경우에는 다음 절차에 따라 변경 테이블에서 해당 열이 성공적으로 수정될 수 있는지 확인하십시오.  
   
@@ -83,7 +83,6 @@ ms.locfileid: "89538385"
  삽입 및 삭제 작업의 경우 업데이트 마스크에 있는 모든 비트가 설정됩니다. 업데이트 작업의 경우 업데이트 이전 행 및 업데이트 이후 행에서 업데이트 마스크가 수정되어 업데이트 중 변경된 열을 반영합니다.  
   
 ## <a name="see-also"></a>참고 항목  
- [sp_cdc_enable_table &#40;Transact-sql&#41;](../../relational-databases/system-stored-procedures/sys-sp-cdc-enable-table-transact-sql.md)   
- [sp_cdc_get_ddl_history &#40;Transact-sql&#41;](../../relational-databases/system-stored-procedures/sys-sp-cdc-get-ddl-history-transact-sql.md)  
-  
+ [Transact-sql&#41;sys.sp_cdc_enable_table &#40;](../../relational-databases/system-stored-procedures/sys-sp-cdc-enable-table-transact-sql.md)   
+ [Transact-sql&#41;sys.sp_cdc_get_ddl_history &#40;](../../relational-databases/system-stored-procedures/sys-sp-cdc-get-ddl-history-transact-sql.md)  
   

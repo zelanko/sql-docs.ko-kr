@@ -17,12 +17,12 @@ helpviewer_keywords:
 ms.assetid: 20dcf802-c27d-4722-9cd3-206b1e77bee0
 author: rothja
 ms.author: jroth
-ms.openlocfilehash: e69f48867cc5dd66d72d30f6fa72b2d44d5fc54c
-ms.sourcegitcommit: da88320c474c1c9124574f90d549c50ee3387b4c
+ms.openlocfilehash: 7416b00b55ea680e25d80151957b3da0ccfc6351
+ms.sourcegitcommit: 04cf7905fa32e0a9a44575a6f9641d9a2e5ac0f8
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 07/01/2020
-ms.locfileid: "85719898"
+ms.lasthandoff: 10/07/2020
+ms.locfileid: "91810389"
 ---
 # <a name="clr-scalar-valued-functions"></a>CLR 스칼라 반환 함수
  [!INCLUDE [SQL Server](../../includes/applies-to-version/sqlserver.md)]
@@ -153,8 +153,7 @@ GO
   
 ## <a name="see-also"></a>참고 항목  
  [CLR 매개 변수 데이터 매핑](../../relational-databases/clr-integration-database-objects-types-net-framework/mapping-clr-parameter-data.md)   
- [CLR 통합 사용자 지정 특성 개요](https://msdn.microsoft.com/library/ecf5c097-0972-48e2-a9c0-b695b7dd2820)   
+ [CLR 통합 사용자 지정 특성 개요](../clr-integration/database-objects/clr-integration-custom-attributes-for-clr-routines.md)   
  [사용자 정의 함수](../../relational-databases/user-defined-functions/user-defined-functions.md)   
  [CLR 데이터베이스 개체에서 데이터 액세스](../../relational-databases/clr-integration/data-access/data-access-from-clr-database-objects.md)  
-  
   

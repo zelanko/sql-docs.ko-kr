@@ -1,6 +1,6 @@
 ---
 description: sys.sensitivity_classifications(Transact-SQL)
-title: sys. sensitivity_classifications (Transact-sql) | Microsoft Docs
+title: sys.sensitivity_classifications (Transact-sql) | Microsoft Docs
 ms.date: 03/25/2019
 ms.reviewer: ''
 ms.prod: sql
@@ -24,12 +24,12 @@ helpviewer_keywords:
 - information types
 - rank
 monikerRange: '>= sql-server-ver15 || = azuresqldb-current || = azure-sqldw-latest || = sqlallproducts-allversions'
-ms.openlocfilehash: 5f1dfa43dba7848732e57acf4abf8cfa915be255
-ms.sourcegitcommit: e700497f962e4c2274df16d9e651059b42ff1a10
+ms.openlocfilehash: d37eb7cd82ceeba6ae844c82dea5763564c689dd
+ms.sourcegitcommit: 04cf7905fa32e0a9a44575a6f9641d9a2e5ac0f8
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 08/17/2020
-ms.locfileid: "88475321"
+ms.lasthandoff: 10/07/2020
+ms.locfileid: "91809349"
 ---
 # <a name="syssensitivity_classifications-transact-sql"></a>sys.sensitivity_classifications(Transact-SQL)
 [!INCLUDE [SQL Server ASDB, ASDBMI, ASDW ](../../includes/applies-to-version/sql-asdb-asdbmi-asa.md)]
@@ -40,8 +40,8 @@ ms.locfileid: "88475321"
 |-----------------|---------------|-----------------|  
 |**class**|**int**|분류가 존재 하는 항목의 클래스를 식별 합니다. 항상 값 1 (열을 나타냄)이 있습니다.|  
 |**class_desc**|**varchar (16)**|분류가 존재 하는 항목의 클래스에 대 한 설명입니다. 에는 항상 값이 포함 됩니다 *OBJECT_OR_COLUMN*|  
-|**major_id**|**int**|All_objects에 해당 하는 분류 된 열을 포함 하는 테이블의 ID를 나타냅니다 object_id|  
-|**minor_id**|**int**|All_columns에 해당 하는 분류가 있는 열의 ID를 나타냅니다 column_id|   
+|**major_id**|**int**|Object_id에 해당 하는 분류 된 열을 포함 하는 테이블의 ID를 나타냅니다.|  
+|**minor_id**|**int**|Column_id에 해당 하는 분류가 있는 열의 ID를 나타냅니다.|   
 |**label**|**sysname**|민감도 분류에 할당 된 레이블 (사람이 읽을 수 있음)|  
 |**label_id**|**sysname**|레이블과 연결 된 ID입니다 .이 ID는 AIP (Azure Information Protection)와 같은 정보 보호 시스템에서 사용할 수 있습니다.|  
 |**information_type**|**sysname**|민감도 분류에 할당 된 정보 유형 (사람이 읽을 수 있음)|  
@@ -55,7 +55,7 @@ ms.locfileid: "88475321"
 - 이 보기는 데이터베이스의 분류 상태에 대 한 가시성을 제공 합니다. 데이터베이스 분류를 관리 하는 데 사용할 수 있으며 보고서를 생성 하는 데에도 사용할 수 있습니다.
 - 현재 데이터베이스 열의 분류만 지원 됩니다.
  
-## <a name="examples"></a>예제
+## <a name="examples"></a>예
 
 ### <a name="a-listing-all-classified-columns-and-their-corresponding-classification"></a>A. 모든 분류 된 열 및 해당 분류 나열
 
@@ -87,4 +87,4 @@ left join sys.all_columns on sys.sensitivity_classifications.major_id = sys.all_
 
 [DROP SENSITIVITY CLASSIFICATION(Transact-SQL)](../../t-sql/statements/drop-sensitivity-classification-transact-sql.md)
 
-[SQL Information Protection 시작](https://aka.ms/sqlip)
+[SQL Information Protection 시작](/azure/azure-sql/database/data-discovery-and-classification-overview)

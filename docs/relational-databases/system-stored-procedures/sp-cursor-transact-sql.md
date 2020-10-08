@@ -18,12 +18,12 @@ helpviewer_keywords:
 ms.assetid: 41ade0ca-5f11-469d-bd4d-c8302ccd93b3
 author: markingmyname
 ms.author: maghan
-ms.openlocfilehash: d087a160324ec84cbb94a73cba3ab45f36dfc29e
-ms.sourcegitcommit: dd36d1cbe32cd5a65c6638e8f252b0bd8145e165
+ms.openlocfilehash: 62a4904a608ccfd5ed02cbf21c3342619ea32e8f
+ms.sourcegitcommit: 04cf7905fa32e0a9a44575a6f9641d9a2e5ac0f8
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 09/08/2020
-ms.locfileid: "89536680"
+ms.lasthandoff: 10/07/2020
+ms.locfileid: "91810169"
 ---
 # <a name="sp_cursor-transact-sql"></a>sp_cursor(Transact-SQL)
 [!INCLUDE [SQL Server](../../includes/applies-to-version/sqlserver.md)]
@@ -32,7 +32,7 @@ ms.locfileid: "89536680"
   
 ||  
 |-|  
-|**적용 대상**: SQL Server ( [!INCLUDE[ssKatmai](../../includes/sskatmai-md.md)] ~ [현재 버전](https://go.microsoft.com/fwlink/p/?LinkId=299658)).|  
+|**적용 대상**: SQL Server ( [!INCLUDE[ssKatmai](../../includes/sskatmai-md.md)] ~ [현재 버전](../../sql-server/what-s-new-in-sql-server-2016.md)).|  
   
  ![항목 링크 아이콘](../../database-engine/configure-windows/media/topic-link.gif "항목 링크 아이콘") [Transact-SQL 구문 표기 규칙](../../t-sql/language-elements/transact-sql-syntax-conventions-transact-sql.md)  
   
@@ -51,7 +51,7 @@ sp_cursor  cursor, optype, rownum, table
  *optype*  
  커서가 수행할 작업을 지정하는 필수 매개 변수입니다. *optype* 에는 다음 **int** 입력 값 중 하나가 필요 합니다.  
   
-|값|Name|Description|  
+|값|이름|Description|  
 |-----------|----------|-----------------|  
 |0X0001|UPDATE|인출 버퍼에서 하나 이상의 행을 업데이트하는 데 사용됩니다.  *Rownum* 에 지정 된 행에 다시 액세스 하 여 업데이트 합니다.|  
 |0x0002|Delete|인출 버퍼에서 하나 이상의 행을 삭제하는 데 사용됩니다. *Rownum* 에 지정 된 행에 다시 액세스 하 여 삭제 합니다.|  
@@ -130,7 +130,7 @@ sp_cursor  cursor, optype, rownum, table
   
 2.  매개 변수를 사용 하 여 전체 UPDATE 또는 INSERT 문을 제출 하거나, 여러 매개 변수를 사용 하 여 UPDATE 또는 INSERT 문의 여러 부분을 제출할 수 있습니다. 그러면 SQL Server는 전체 문으로 작성 됩니다. 이 작업의 예는 이 항목 뒷부분의 예 섹션에 나와 있습니다.  
   
-## <a name="examples"></a>예제  
+## <a name="examples"></a>예  
   
 ### <a name="alternative-value-parameter-uses"></a>다른 value 매개 변수 사용 방식  
  UPDATE의 경우:  
@@ -178,5 +178,4 @@ sp_cursor  cursor, optype, rownum, table
  [Transact-sql&#41;sp_cursoropen &#40;](../../relational-databases/system-stored-procedures/sp-cursoropen-transact-sql.md)   
  [Transact-sql&#41;sp_cursorfetch &#40;](../../relational-databases/system-stored-procedures/sp-cursorfetch-transact-sql.md)   
  [시스템 저장 프로시저&#40;Transact-SQL&#41;](../../relational-databases/system-stored-procedures/system-stored-procedures-transact-sql.md)  
-  
   

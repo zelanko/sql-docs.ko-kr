@@ -15,12 +15,12 @@ ms.assetid: a5387d9e-a243-4cfe-b786-7fad5842b1d6
 author: markingmyname
 ms.author: maghan
 monikerRange: '>=aps-pdw-2016||=azuresqldb-current||=azure-sqldw-latest||>=sql-server-2016||=sqlallproducts-allversions||>=sql-server-linux-2017||=azuresqldb-mi-current'
-ms.openlocfilehash: 86590239e22f19ba0858af583193675bc711a0ae
-ms.sourcegitcommit: e700497f962e4c2274df16d9e651059b42ff1a10
+ms.openlocfilehash: f2d1ef030815e701f0b1b7cdeac02c4827641ff2
+ms.sourcegitcommit: 04cf7905fa32e0a9a44575a6f9641d9a2e5ac0f8
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 08/17/2020
-ms.locfileid: "88428345"
+ms.lasthandoff: 10/07/2020
+ms.locfileid: "91809892"
 ---
 # <a name="sqlcolattribute"></a>SQLColAttribute
 [!INCLUDE[SQL Server Azure SQL Database Synapse Analytics PDW ](../../includes/applies-to-version/sql-asdb-asdbmi-asa-pdw.md)]
@@ -30,7 +30,7 @@ ms.locfileid: "88428345"
 > [!NOTE]  
 >  일부 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 결과 집합에는 ODBC 열 식별자 특성을 사용할 수 없습니다.  
   
-|필드 식별자|설명|  
+|필드 식별자|Description|  
 |----------------------|-----------------|  
 |SQL_COLUMN_TABLE_NAME|서버 커서를 생성하는 문에서 검색된 결과 집합 또는 FOR BROWSE 절을 포함하는 실행된 SELECT 문에서 사용할 수 있습니다.|  
 |SQL_DESC_BASE_COLUMN_NAME|서버 커서를 생성하는 문에서 검색된 결과 집합 또는 FOR BROWSE 절을 포함하는 실행된 SELECT 문에서 사용할 수 있습니다.|  
@@ -79,7 +79,7 @@ ms.locfileid: "88428345"
   
  [!INCLUDE[ssVersion2005](../../includes/ssversion2005-md.md)] 에는 각각 XML 스키마 컬렉션 이름, 스키마 이름 및 카탈로그 이름을 나타내는 추가 정보를 제공 하는 드라이버별 설명자 필드가 도입 되었습니다. 이러한 속성에는 영숫자가 아닌 문자가 포함된 경우 따옴표나 이스케이프 문자가 필요하지 않습니다. 다음 표에는 새로 도입된 설명자 필드가 나와 있습니다.  
   
-|열 이름|Type|설명|  
+|열 이름|Type|Description|  
 |-----------------|----------|-----------------|  
 |SQL_CA_SS_XML_SCHEMACOLLECTION_CATALOG_NAME|CharacterAttributePtr|XML 스키마 컬렉션 이름이 정의된 카탈로그의 이름입니다. 카탈로그 이름을 찾을 수 없는 경우 이 변수에는 빈 문자열이 포함됩니다.<br /><br /> 이 정보는 읽기/쓰기 필드인 IRD의 SQL_DESC_SS_XML_SCHEMACOLLECTION_CATALOG_NAME 레코드 필드에서 반환됩니다.|  
 |SQL_CA_SS_XML_SCHEMACOLLECTION_SCHEMA_NAME|CharacterAttributePtr|XML 스키마 컬렉션 이름이 정의된 스키마의 이름입니다. 스키마 이름을 찾을 수 없는 경우 이 변수에는 빈 문자열이 포함됩니다.<br /><br /> 이 정보는 읽기/쓰기 필드인 IRD의 SQL_DESC_SS_XML_SCHEMACOLLECTION_SCHEMA_NAME 레코드 필드에서 반환됩니다.|  
@@ -87,7 +87,7 @@ ms.locfileid: "88428345"
   
  [!INCLUDE[ssVersion2005](../../includes/ssversion2005-md.md)]에는 결과 집합의 UDT(사용자 정의 형식) 열 또는 저장 프로시저나 매개 변수가 있는 쿼리의 UDT 매개 변수에 대한 추가 정보를 제공하기 위한 새 드라이버 관련 설명자 필드도 도입되었습니다. 이러한 속성에는 영숫자가 아닌 문자가 포함된 경우 따옴표나 이스케이프 문자가 필요하지 않습니다. 다음 표에는 새로 도입된 설명자 필드가 나와 있습니다.  
   
-|열 이름|Type|설명|  
+|열 이름|Type|Description|  
 |-----------------|----------|-----------------|  
 |SQL_CA_SS_UDT_CATALOG_NAME|CharacterAttributePtr|UDT가 포함된 카탈로그의 이름입니다.|  
 |SQL_CA_SS_UDT_SCHEMA_NAME|CharacterAttributePtr|UDT가 포함된 스키마의 이름입니다.|  
@@ -110,8 +110,7 @@ ms.locfileid: "88428345"
  자세한 내용은 [스파스 열 지원 &#40;ODBC&#41;](../../relational-databases/native-client/odbc/sparse-columns-support-odbc.md)를 참조 하세요.  
   
 ## <a name="see-also"></a>참고 항목  
- [SQLColAttribute 함수](https://go.microsoft.com/fwlink/?LinkId=59334)   
+ [SQLColAttribute 함수](../../odbc/reference/syntax/sqlcolattribute-function.md)   
  [ODBC API 구현 세부 정보](../../relational-databases/native-client-odbc-api/odbc-api-implementation-details.md)   
  [SQLSetStmtAttr](../../relational-databases/native-client-odbc-api/sqlsetstmtattr.md)  
-  
   

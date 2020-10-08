@@ -16,12 +16,12 @@ helpviewer_keywords:
 ms.assetid: 131395a5-cb18-4795-a7ae-fa09d8ff347f
 author: markingmyname
 ms.author: maghan
-ms.openlocfilehash: d9a0f2326951609a22dfe5647f8eceb7af28c581
-ms.sourcegitcommit: dd36d1cbe32cd5a65c6638e8f252b0bd8145e165
+ms.openlocfilehash: d6d8ea39fd9ccc48f96c838367d5f859226098d1
+ms.sourcegitcommit: 04cf7905fa32e0a9a44575a6f9641d9a2e5ac0f8
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 09/08/2020
-ms.locfileid: "89548008"
+ms.lasthandoff: 10/07/2020
+ms.locfileid: "91809839"
 ---
 # <a name="sp_helpmergeconflictrows-transact-sql"></a>sp_helpmergeconflictrows(Transact-SQL)
 [!INCLUDE [SQL Server](../../includes/applies-to-version/sqlserver.md)]
@@ -74,7 +74,6 @@ sp_helpmergeconflictrows [ [ @publication = ] 'publication' ]
  배포 데이터베이스의 **sysadmin** 고정 서버 역할, **db_owner** 고정 데이터베이스 역할 및 **replmonitor** 역할의 멤버만 **sp_helpmergeconflictrows**을 실행할 수 있습니다.  
   
 ## <a name="see-also"></a>참고 항목  
- [복제 Transact-sql 프로그래밍 &#40;병합 게시에 대 한 충돌 정보 보기&#41;](../../relational-databases/replication/view-conflict-information-for-merge-publications.md)   
+ [복제 Transact-sql 프로그래밍 &#40;병합 게시에 대 한 충돌 정보 보기&#41;](../replication/view-and-resolve-data-conflicts-for-merge-publications.md)   
  [복제 저장 프로시저&#40;Transact-SQL&#41;](../../relational-databases/system-stored-procedures/replication-stored-procedures-transact-sql.md)  
-  
   

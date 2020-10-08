@@ -1,6 +1,6 @@
 ---
-description: 확장 속성 카탈로그 뷰-sys. extended_properties
-title: sys. extended_properties (Transact-sql) | Microsoft Docs
+description: 확장 속성 카탈로그 뷰-sys.extended_properties
+title: sys.extended_properties (Transact-sql) | Microsoft Docs
 ms.custom: ''
 ms.date: 03/15/2017
 ms.prod: sql
@@ -21,14 +21,14 @@ ms.assetid: 439b7299-dce3-4d26-b1c7-61be5e0df82a
 author: markingmyname
 ms.author: maghan
 monikerRange: '>=aps-pdw-2016||=azure-sqldw-latest||>=sql-server-2016||=sqlallproducts-allversions||>=sql-server-linux-2017||=azuresqldb-mi-current'
-ms.openlocfilehash: 154fadb3b2f5fc1fe5654c2e8ec70b213651b10e
-ms.sourcegitcommit: dd36d1cbe32cd5a65c6638e8f252b0bd8145e165
+ms.openlocfilehash: 8095a1097f23b17dcfdaa88342d84ccd82a95eef
+ms.sourcegitcommit: 04cf7905fa32e0a9a44575a6f9641d9a2e5ac0f8
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 09/08/2020
-ms.locfileid: "89537545"
+ms.lasthandoff: 10/07/2020
+ms.locfileid: "91810073"
 ---
-# <a name="extended-properties-catalog-views---sysextended_properties"></a>확장 속성 카탈로그 뷰-sys. extended_properties
+# <a name="extended-properties-catalog-views---sysextended_properties"></a>확장 속성 카탈로그 뷰-sys.extended_properties
 [!INCLUDE[SQL Server Azure SQL Database Synapse Analytics PDW ](../../includes/applies-to-version/sql-asdb-asdbmi-asa-pdw.md)]
 
   현재 데이터베이스의 각 확장 속성당 한 개의 행을 반환합니다.  
@@ -47,10 +47,9 @@ ms.locfileid: "89537545"
   
 ## <a name="see-also"></a>참고 항목  
  [카탈로그 뷰&#40;Transact-SQL&#41;](../../relational-databases/system-catalog-views/catalog-views-transact-sql.md)   
- [Transact-sql&#41;&#40;확장 속성 카탈로그 뷰 ](https://msdn.microsoft.com/library/f39fd324-efd4-4468-884c-bf77ed1a026f)   
- [fn_listextendedproperty &#40;Transact-sql&#41;](../../relational-databases/system-functions/sys-fn-listextendedproperty-transact-sql.md)   
+ [Transact-sql&#41;&#40;확장 속성 카탈로그 뷰 ](./catalog-views-transact-sql.md)   
+ [Transact-sql&#41;sys.fn_listextendedproperty &#40;](../../relational-databases/system-functions/sys-fn-listextendedproperty-transact-sql.md)   
  [Transact-sql&#41;sp_addextendedproperty &#40;](../../relational-databases/system-stored-procedures/sp-addextendedproperty-transact-sql.md)   
  [Transact-sql&#41;sp_dropextendedproperty &#40;](../../relational-databases/system-stored-procedures/sp-dropextendedproperty-transact-sql.md)   
  [Transact-sql&#41;sp_updateextendedproperty &#40;](../../relational-databases/system-stored-procedures/sp-updateextendedproperty-transact-sql.md)  
-  
   

@@ -15,12 +15,12 @@ ms.assetid: f79d8b3c-521e-4e50-a564-21d73ae5767b
 author: markingmyname
 ms.author: maghan
 monikerRange: '>=aps-pdw-2016||=azuresqldb-current||=azure-sqldw-latest||>=sql-server-2016||=sqlallproducts-allversions||>=sql-server-linux-2017||=azuresqldb-mi-current'
-ms.openlocfilehash: 2f4f868d9e32aa553930929cc0f713c9cc29136c
-ms.sourcegitcommit: e700497f962e4c2274df16d9e651059b42ff1a10
+ms.openlocfilehash: 8a489dda3eab0028ab6c3d0d4fb16b82a10481d1
+ms.sourcegitcommit: 04cf7905fa32e0a9a44575a6f9641d9a2e5ac0f8
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 08/17/2020
-ms.locfileid: "88424035"
+ms.lasthandoff: 10/07/2020
+ms.locfileid: "91810944"
 ---
 # <a name="sqlnumresultcols"></a>SQLNumResultCols
 [!INCLUDE[SQL Server Azure SQL Database Synapse Analytics PDW ](../../includes/applies-to-version/sql-asdb-asdbmi-asa-pdw.md)]
@@ -32,7 +32,6 @@ ms.locfileid: "88424035"
  에서 시작 하는 데이터베이스 엔진의 향상 된 기능으로는 [!INCLUDE[ssSQL11](../../includes/sssql11-md.md)] SQLNumResultCols를 사용 하 여 예상 결과에 대 한 보다 정확한 설명을 얻을 수 있습니다. 이러한 보다 정확한 결과는 이전 버전의에서 SQLNumResultCols에서 반환 된 값과 다를 수 있습니다 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] . 자세한 내용은 [메타데이터 검색](../../relational-databases/native-client/features/metadata-discovery.md)을 참조하세요.  
   
 ## <a name="see-also"></a>참고 항목  
- [SQLNumResultCols 함수](https://go.microsoft.com/fwlink/?LinkId=59359)   
+ [SQLNumResultCols 함수](../../odbc/reference/syntax/sqlnumresultcols-function.md)   
  [ODBC API 구현 정보](../../relational-databases/native-client-odbc-api/odbc-api-implementation-details.md)  
-  
   

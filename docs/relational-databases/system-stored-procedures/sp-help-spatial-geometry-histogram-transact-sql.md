@@ -18,12 +18,12 @@ helpviewer_keywords:
 ms.assetid: 036aaf61-df3e-40f7-aa4e-62983c5a37bd
 author: markingmyname
 ms.author: maghan
-ms.openlocfilehash: b74fa91b13b3b7f432a4b647f063a91a76e8c56a
-ms.sourcegitcommit: dd36d1cbe32cd5a65c6638e8f252b0bd8145e165
+ms.openlocfilehash: d875178db938e92aa60e3396cee2242d6a54e3f7
+ms.sourcegitcommit: 04cf7905fa32e0a9a44575a6f9641d9a2e5ac0f8
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 09/08/2020
-ms.locfileid: "89535248"
+ms.lasthandoff: 10/07/2020
+ms.locfileid: "91810221"
 ---
 # <a name="sp_help_spatial_geometry_histogram-transact-sql"></a>sp_help_spatial_geometry_histogram(Transact-SQL)
 [!INCLUDE [SQL Server](../../includes/applies-to-version/sqlserver.md)]
@@ -80,7 +80,7 @@ sp_help_spatial_geometry_histogram [ @tabname =] 'tabname'
   
  경계 상자를 벗어나거나 경계 상자 테두리에 접해 있는 개체의 수가 포함된 결과 집합에 행이 추가로 삽입될 수 있습니다. 이 행의 **cellid** 은 0이 고이 행의 **셀** 에는 경계 상자를 나타내는 **LineString** 이 포함 됩니다. 이 행은 경계 상자 밖의 전체 공간을 나타냅니다.  
   
-## <a name="examples"></a>예제  
+## <a name="examples"></a>예  
  다음 예에서는 예제 테이블을 만든 다음 테이블에 대해 **sp_help_spatial_geometry_histogram** 를 호출 합니다.  
   
  `USE AdventureWorksDW2012`  
@@ -148,6 +148,5 @@ sp_help_spatial_geometry_histogram [ @tabname =] 'tabname'
  `GO`  
   
 ## <a name="see-also"></a>참고 항목  
- [Transact-sql&#41;공간 인덱스 저장 프로시저 &#40;](https://msdn.microsoft.com/library/1be0f34e-3d5a-4a1f-9299-bd482362ec7a)  
-  
+ [Transact-sql&#41;공간 인덱스 저장 프로시저 &#40;](./spatial-index-stored-procedures-arguments-and-properties.md)  
   

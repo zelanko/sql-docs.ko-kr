@@ -21,12 +21,12 @@ ms.assetid: 2818fa42-072d-4664-a2f7-7ec363b51d81
 author: markingmyname
 ms.author: maghan
 monikerRange: '>=aps-pdw-2016||>=sql-server-2016||=sqlallproducts-allversions||>=sql-server-linux-2017||=azuresqldb-mi-current'
-ms.openlocfilehash: 6c426c12b38adc491e42b9392d7a36c47f3fd46f
-ms.sourcegitcommit: dd36d1cbe32cd5a65c6638e8f252b0bd8145e165
+ms.openlocfilehash: cfac86a5cb8000203873f2434212bf2b50749a6d
+ms.sourcegitcommit: 04cf7905fa32e0a9a44575a6f9641d9a2e5ac0f8
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 09/08/2020
-ms.locfileid: "89536536"
+ms.lasthandoff: 10/07/2020
+ms.locfileid: "91810099"
 ---
 # <a name="sp_fulltext_keymappings-transact-sql"></a>sp_fulltext_keymappings(Transact-SQL)
 [!INCLUDE [sql-asdbmi-pdw](../../includes/applies-to-version/sql-asdbmi-pdw.md)]
@@ -50,7 +50,7 @@ sp_fulltext_keymappings { table_id | table_id, docid | table_id, NULL, key }
  키 값에 해당하는 내부 문서 ID(DocId)입니다. 잘못된 *docid* 값은 결과를 반환하지 않습니다.  
   
  *key*  
- 지정한 테이블의 전체 텍스트 키 값입니다. 잘못된 *key* 값은 결과를 반환하지 않습니다. 전체 텍스트 키 값에 대 한 자세한 내용은 [전체 텍스트 인덱스 관리](https://msdn.microsoft.com/library/28ff17dc-172b-4ac4-853f-990b5dc02fd1)를 참조 하세요.  
+ 지정한 테이블의 전체 텍스트 키 값입니다. 잘못된 *key* 값은 결과를 반환하지 않습니다. 전체 텍스트 키 값에 대 한 자세한 내용은 [전체 텍스트 인덱스 관리](../search/create-and-manage-full-text-indexes.md)를 참조 하세요.  
   
 > [!IMPORTANT]  
 >  한 개, 두 개 또는 세 개의 매개 변수를 사용하는 방법은 이 항목의 뒷부분에 나오는 "주의"를 참조하십시오.  
@@ -75,7 +75,7 @@ sp_fulltext_keymappings { table_id | table_id, docid | table_id, NULL, key }
   
 |이 매개 변수 목록 ...|다음 결과가 발생 했습니다.|  
 |--------------------------|----------------------|  
-|*table_id*|*Table_id* 매개 변수만 사용 하 여 호출 하는 경우 sp_fulltext_keymappings는 지정 된 기본 테이블의 모든 전체 텍스트 키 (키) 값과 각 키에 해당 하는 DocId를 반환 합니다. 여기에는 삭제가 보류된 키가 포함됩니다.<br /><br /> 이 함수는 다양한 문제를 해결하는 데 유용합니다. 특히, 선택한 전체 텍스트 키가 정수 데이터 형식이 아닐 경우 전체 텍스트 인덱스 내용을 보는 데 유용합니다. 여기에는 sp_fulltext_keymappings의 결과를 **sys. dm_fts_index_keywords_by_document**의 결과와 조인 하는 작업이 포함 됩니다. 자세한 내용은 [dm_fts_index_keywords_by_document &#40;transact-sql&#41;](../../relational-databases/system-dynamic-management-views/sys-dm-fts-index-keywords-by-document-transact-sql.md)을 참조 하십시오.<br /><br /> 그러나 일반적으로는 가능하면 sp_fulltext_keymappings를 특정 전체 텍스트 키나 DocId를 지정하는 매개 변수와 함께 실행하는 것이 좋습니다. 이 방법은 전체 키 맵을 반환하는 것보다 훨씬 효율적입니다. 특히 매우 큰 테이블의 경우 전체 키 맵을 반환하기 위한 성능 비용이 상당히 크므로 더욱 효율적입니다.|  
+|*table_id*|*Table_id* 매개 변수만 사용 하 여 호출 하는 경우 sp_fulltext_keymappings는 지정 된 기본 테이블의 모든 전체 텍스트 키 (키) 값과 각 키에 해당 하는 DocId를 반환 합니다. 여기에는 삭제가 보류된 키가 포함됩니다.<br /><br /> 이 함수는 다양한 문제를 해결하는 데 유용합니다. 특히, 선택한 전체 텍스트 키가 정수 데이터 형식이 아닐 경우 전체 텍스트 인덱스 내용을 보는 데 유용합니다. 여기에는 sp_fulltext_keymappings의 결과를 **sys.dm_fts_index_keywords_by_document**결과와 조인 하는 작업이 포함 됩니다. 자세한 내용은 [sys.dm_fts_index_keywords_by_document &#40;transact-sql&#41;](../../relational-databases/system-dynamic-management-views/sys-dm-fts-index-keywords-by-document-transact-sql.md)를 참조 하세요.<br /><br /> 그러나 일반적으로는 가능하면 sp_fulltext_keymappings를 특정 전체 텍스트 키나 DocId를 지정하는 매개 변수와 함께 실행하는 것이 좋습니다. 이 방법은 전체 키 맵을 반환하는 것보다 훨씬 효율적입니다. 특히 매우 큰 테이블의 경우 전체 키 맵을 반환하기 위한 성능 비용이 상당히 크므로 더욱 효율적입니다.|  
 |*table_id*, *docid*|*Table_id* 및 *docid* 만 지정 된 경우에는 *docid* 가 null이 아니어야 하 고 지정 된 테이블에 올바른 docid를 지정 해야 합니다. 이 함수는 특정 전체 텍스트 인덱스의 DocId에 해당하는 기본 테이블에서 사용자 지정 전체 텍스트 키를 분리하는 데 유용합니다.|  
 |*table_id*, NULL, *키*|세 개의 매개 변수가 있는 경우 두 번째 매개 변수는 NULL 이어야 하 고 *키는* null이 아니어야 하며 지정 된 테이블에서 유효한 전체 텍스트 키 값을 지정 해야 합니다. 이 함수는 특정 전체 텍스트 키에 해당하는 DocId를 기본 테이블에서 분리하는 데 유용합니다.|  
   
@@ -87,7 +87,7 @@ sp_fulltext_keymappings { table_id | table_id, docid | table_id, NULL, key }
   
 -   NULL이 아닐 수 있는 매개 변수에 대해 NULL이 발생한 경우  
   
-## <a name="examples"></a>예제  
+## <a name="examples"></a>예  
   
 > [!NOTE]  
 >  이 섹션의 예에서는 `Production.ProductReview` 예제 데이터베이스의 [!INCLUDE[ssSampleDBnormal](../../includes/sssampledbnormal-md.md)] 테이블을 사용합니다. `ProductReview` [Transact-sql&#41;&#40;전체 텍스트 인덱스 만들기 ](../../t-sql/statements/create-fulltext-index-transact-sql.md)에서 테이블에 대해 제공 된 예를 실행 하 여이 인덱스를 만들 수 있습니다.  
@@ -139,5 +139,4 @@ GO
   
 ## <a name="see-also"></a>참고 항목  
  [Transact-sql&#41;&#40;전체 텍스트 검색 및 의미 체계 검색 저장 프로시저 ](../../relational-databases/system-stored-procedures/full-text-search-and-semantic-search-stored-procedures-transact-sql.md)  
-  
   

@@ -15,12 +15,12 @@ helpviewer_keywords:
 ms.assetid: 3e090faf-085f-4c01-a565-79e3f1c36e3b
 author: rothja
 ms.author: jroth
-ms.openlocfilehash: 17a26c5897ff10ce636297151cef9f300f4f3056
-ms.sourcegitcommit: da88320c474c1c9124574f90d549c50ee3387b4c
+ms.openlocfilehash: 66b5478f23d771d9aa65f98f4bc7f29bcf885b25
+ms.sourcegitcommit: 04cf7905fa32e0a9a44575a6f9641d9a2e5ac0f8
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 07/01/2020
-ms.locfileid: "85765419"
+ms.lasthandoff: 10/07/2020
+ms.locfileid: "91810867"
 ---
 # <a name="sqlpipe-object"></a>SqlPipe 개체
  [!INCLUDE [SQL Server](../../includes/applies-to-version/sqlserver.md)]
@@ -142,7 +142,6 @@ EXEC uspGetProductLineVB 'T';
   
 ## <a name="see-also"></a>참고 항목  
  [SqlDataRecord 개체](../../relational-databases/clr-integration-data-access-in-process-ado-net/sqldatarecord-object.md)   
- [CLR 저장 프로시저](https://msdn.microsoft.com/library/bbdd51b2-a9b4-4916-ba6f-7957ac6c3f33)   
+ [CLR 저장 프로시저](/dotnet/framework/data/adonet/sql/clr-stored-procedures)   
  [ADO.NET에 대한 SQL Server In-Process 전용 확장](../../relational-databases/clr-integration-data-access-in-process-ado-net/sql-server-in-process-specific-extensions-to-ado-net.md)  
-  
   

@@ -1,6 +1,6 @@
 ---
-description: server_resource_stats (Azure SQL Database)
-title: server_resource_stats (Azure SQL Database) | Microsoft Docs
+description: sys.server_resource_stats (Azure SQL Database)
+title: sys.server_resource_stats (Azure SQL Database) | Microsoft Docs
 ms.custom: ''
 ms.date: 06/28/2018
 ms.service: sql-database
@@ -19,19 +19,19 @@ ms.assetid: ''
 author: jovanpop-msft
 ms.author: jovanpop
 monikerRange: =azuresqldb-current||=sqlallproducts-allversions
-ms.openlocfilehash: ed975dd768bc9d7979dd254fddec715ed07b3b2f
-ms.sourcegitcommit: dd36d1cbe32cd5a65c6638e8f252b0bd8145e165
+ms.openlocfilehash: 57d0a8e10eb79213de7eb29a2d18ea8837d7f908
+ms.sourcegitcommit: 04cf7905fa32e0a9a44575a6f9641d9a2e5ac0f8
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 09/08/2020
-ms.locfileid: "89542511"
+ms.lasthandoff: 10/07/2020
+ms.locfileid: "91809324"
 ---
-# <a name="sysserver_resource_stats-azure-sql-database"></a>server_resource_stats (Azure SQL Database)
+# <a name="sysserver_resource_stats-azure-sql-database"></a>sys.server_resource_stats (Azure SQL Database)
 [!INCLUDE[Azure SQL Database Azure SQL Managed Instance](../../includes/applies-to-version/asdb-asdbmi.md)]
 
 Azure SQL Managed Instance에 대 한 CPU 사용량, IO 및 저장소 데이터를 반환 합니다. 데이터는 5분 간격 이내로 수집 및 집계됩니다. 15 초 보고 마다 하나의 행이 있습니다. 반환 되는 데이터에는 CPU 사용량, 저장소 크기, IO 사용률 및 SKU가 포함 됩니다. 기록 데이터는 약 14일 동안 보존됩니다.
 
-**Server_resource_stats** 뷰는 데이터베이스가 연결 된 Azure SQL Managed Instance 버전에 따라 다른 정의가 있습니다. 이러한 차이점과 새 서버 버전으로 업그레이드할 경우 애플리케이션에 필요한 모든 수정 사항을 고려하세요.
+**Sys.server_resource_stats** 보기에는 데이터베이스가 연결 된 Azure SQL Managed Instance 버전에 따라 다른 정의가 있습니다. 이러한 차이점과 새 서버 버전으로 업그레이드할 경우 애플리케이션에 필요한 모든 수정 사항을 고려하세요.
  
   
  다음 표에는 v12 서버에서 사용할 수 있는 열이 설명되어 있습니다.  
@@ -54,15 +54,15 @@ Azure SQL Managed Instance에 대 한 CPU 사용량, IO 및 저장소 데이터�
 
  
 > [!TIP]  
->  이러한 제한 및 서비스 계층에 대 한 자세한 컨텍스트는 [서비스 계층 Managed Instance](https://docs.microsoft.com/azure/sql-database/sql-database-managed-instance#managed-instance-service-tiers)항목을 참조 하세요.  
+>  이러한 제한 및 서비스 계층에 대 한 자세한 컨텍스트는 [서비스 계층 Managed Instance](/azure/sql-database/sql-database-managed-instance#managed-instance-service-tiers)항목을 참조 하세요.  
     
 ## <a name="permissions"></a>사용 권한  
  이 보기는 **master** 데이터베이스에 연결할 수 있는 권한이 있는 모든 사용자 역할에 사용할 수 있습니다.  
   
 ## <a name="remarks"></a>설명  
- **Server_resource_stats** 에서 반환 되는 데이터는 실행 중인 서비스 계층/성능 수준에 대해 허용 되는 최대 한도의 백분율로 표시 되는 바이트 또는 메가바이트 (열 이름에 표시 됨 avg_cpu)에서 사용 되는 합계로 표시 됩니다.  
+ **Sys.server_resource_stats** 에서 반환 되는 데이터는 실행 중인 서비스 계층/성능 수준에 대해 허용 되는 최대 한도의 백분율로 표시 되는 바이트 또는 메가바이트 (열 이름에 표시 됨 avg_cpu)에서 사용 되는 합계로 표시 됩니다.  
  
-## <a name="examples"></a>예제  
+## <a name="examples"></a>예  
  다음 예에서는 지난 1주일 동안 평균적으로 컴퓨팅 활용률의 80% 이상을 사용한 모든 데이터베이스를 반환합니다.  
   
 ```sql  
@@ -78,4 +78,4 @@ HAVING AVG(avg_cpu_percent) >= 80
 ```  
     
 ## <a name="see-also"></a>참고 항목  
- [Managed Instance 서비스 계층](https://docs.microsoft.com/azure/sql-database/sql-database-managed-instance#managed-instance-service-tiers)
+ [Managed Instance 서비스 계층](/azure/sql-database/sql-database-managed-instance#managed-instance-service-tiers)

@@ -10,25 +10,24 @@ ms.topic: conceptual
 ms.assetid: 871fcccd-b726-4b13-9f95-d02b4b39d8ab
 author: rothja
 ms.author: jroth
-ms.openlocfilehash: dfa53b1f40402189a6dc7c316d3d366addbab963
-ms.sourcegitcommit: da88320c474c1c9124574f90d549c50ee3387b4c
+ms.openlocfilehash: eaf16cda98f019f6d378a3287e1068d78df88bac
+ms.sourcegitcommit: 04cf7905fa32e0a9a44575a6f9641d9a2e5ac0f8
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 07/01/2020
-ms.locfileid: "85789604"
+ms.lasthandoff: 10/07/2020
+ms.locfileid: "91809519"
 ---
 # <a name="clr-integration---what39s-new"></a>CLR 통합-새로운&#39;s
  [!INCLUDE [SQL Server](../../includes/applies-to-version/sqlserver.md)]
   [!INCLUDE[ssSQL11](../../includes/sssql11-md.md)]에서 CLR 통합에 새로 추가된 기능은 다음과 같습니다.  
   
--   CLR 버전 4에서는 CLR 데이터베이스 개체가 더 이상 손상된 상태 예외를 catch하지 않습니다. 이러한 예외는 이제 CLR 통합 호스팅 계층에서 catch됩니다. 이러한 예외는 CLR 데이터베이스 구성 요소에서 코드 특성 ([ \<legacyCorruptedStateExceptionsPolicy> 요소](https://go.microsoft.com/fwlink/?LinkId=204954))을 설정 하 여 계속 catch 할 수 있습니다. 그러나 손상된 상태 예외가 발생할 때 결과를 신뢰할 수 없으므로 이 방법은 사용하지 않는 것이 좋습니다.  
+-   CLR 버전 4에서는 CLR 데이터베이스 개체가 더 이상 손상된 상태 예외를 catch하지 않습니다. 이러한 예외는 이제 CLR 통합 호스팅 계층에서 catch됩니다. 이러한 예외는 CLR 데이터베이스 구성 요소에서 코드 특성 ([ \<legacyCorruptedStateExceptionsPolicy> 요소](/dotnet/framework/configure-apps/file-schema/runtime/legacycorruptedstateexceptionspolicy-element))을 설정 하 여 계속 catch 할 수 있습니다. 그러나 손상된 상태 예외가 발생할 때 결과를 신뢰할 수 없으므로 이 방법은 사용하지 않는 것이 좋습니다.  
   
 -   [!INCLUDE[ssSQL11](../../includes/sssql11-md.md)]의 엄격한 보안 요구 사항으로 인해 CLR 데이터베이스 구성 요소가 CLR 버전 2.0에 정의된 코드 액세스 보안 모델을 계속해서 사용합니다.  
   
--   CLR 버전 4에서 **timespan.zero** 값의 형식 오류는 **system.object 예외**를 생성 합니다. CLR 버전 4 이전에는 **TimeSpan** 값에 형식 오류가 무시 되었습니다. CLR 버전 4 이전의 동작에 의존 하는 데이터베이스 응용 프로그램은 데이터베이스 호환성 수준 (**ALTER Database Compatibility level**)에서 100 이하로 실행 해야 합니다. 자세한 내용은 [<TimeSpan_LegacyFormatMode> 요소](https://go.microsoft.com/fwlink/?LinkId=205109)를 참조 하세요.  
+-   CLR 버전 4에서 **timespan.zero** 값의 형식 오류는 **system.object 예외**를 생성 합니다. CLR 버전 4 이전에는 **TimeSpan** 값에 형식 오류가 무시 되었습니다. CLR 버전 4 이전의 동작에 의존 하는 데이터베이스 응용 프로그램은 데이터베이스 호환성 수준 (**ALTER Database Compatibility level**)에서 100 이하로 실행 해야 합니다. 자세한 내용은 [<TimeSpan_LegacyFormatMode> 요소](/dotnet/framework/configure-apps/file-schema/runtime/timespan-legacyformatmode-element)를 참조 하세요.  
   
--   CLR 버전 4는 유니코드 5.1을 지원하므로 일부 악센트 표시 및 기호가 관련된 정렬 작업이 개선됩니다. 애플리케이션이 레거시 정렬 동작에 의존하는 경우에는 호환성 문제가 발생할 수 있습니다. 레거시 정렬을 사용 하려면 데이터베이스 호환성 수준 (**ALTER Database 호환성 수준**)을 100 이하로 설정 해야 합니다. 이를 지원하기 위해 [!INCLUDE[ssSQL11](../../includes/sssql11-md.md)]에서는 .NET Framework 4 디렉터리(C:\Windows\Microsoft.NET\Framework\v4.0.30319)에 sort00001000.dll을 설치합니다. 자세한 내용은 [\<CompatSortNLSVersion> 요소](https://go.microsoft.com/fwlink/?LinkId=205110)를 참조하세요.  
+-   CLR 버전 4는 유니코드 5.1을 지원하므로 일부 악센트 표시 및 기호가 관련된 정렬 작업이 개선됩니다. 애플리케이션이 레거시 정렬 동작에 의존하는 경우에는 호환성 문제가 발생할 수 있습니다. 레거시 정렬을 사용 하려면 데이터베이스 호환성 수준 (**ALTER Database 호환성 수준**)을 100 이하로 설정 해야 합니다. 이를 지원하기 위해 [!INCLUDE[ssSQL11](../../includes/sssql11-md.md)]에서는 .NET Framework 4 디렉터리(C:\Windows\Microsoft.NET\Framework\v4.0.30319)에 sort00001000.dll을 설치합니다. 자세한 내용은 [\<CompatSortNLSVersion> 요소](/dotnet/framework/configure-apps/file-schema/runtime/compatsortnlsversion-element)를 참조하세요.  
   
--   다음 열이 [dm_clr_appdomains](../../relational-databases/system-dynamic-management-views/sys-dm-clr-appdomains-transact-sql.md)에 추가 되었습니다. **total_processor_time_ms**, **total_allocated_memory_kb**및 **survived_memory_kb**.  
-  
+-   **Total_processor_time_ms**, **total_allocated_memory_kb**및 **survived_memory_kb**열이 [sys.dm_clr_appdomains](../../relational-databases/system-dynamic-management-views/sys-dm-clr-appdomains-transact-sql.md)에 추가 되었습니다.  
   

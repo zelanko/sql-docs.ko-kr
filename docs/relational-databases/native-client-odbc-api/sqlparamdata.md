@@ -14,12 +14,12 @@ ms.assetid: 92349482-ea22-4a6a-8484-e9c6566794fa
 author: markingmyname
 ms.author: maghan
 monikerRange: '>=aps-pdw-2016||=azuresqldb-current||=azure-sqldw-latest||>=sql-server-2016||=sqlallproducts-allversions||>=sql-server-linux-2017||=azuresqldb-mi-current'
-ms.openlocfilehash: f1e81c4e02d0c16caa0cf46d99f731347a639960
-ms.sourcegitcommit: e700497f962e4c2274df16d9e651059b42ff1a10
+ms.openlocfilehash: af2f9651ad0bc8986df1c688e4d94084ddeac0df
+ms.sourcegitcommit: 04cf7905fa32e0a9a44575a6f9641d9a2e5ac0f8
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 08/17/2020
-ms.locfileid: "88424005"
+ms.lasthandoff: 10/07/2020
+ms.locfileid: "91810933"
 ---
 # <a name="sqlparamdata"></a>SQLParamData
 [!INCLUDE[SQL Server Azure SQL Database Synapse Analytics PDW ](../../includes/applies-to-version/sql-asdb-asdbmi-asa-pdw.md)]
@@ -29,7 +29,6 @@ ms.locfileid: "88424005"
  테이블 반환 매개 변수에 대 한 자세한 내용은 [ODBC&#41;&#40;테이블 반환 매개 변수 ](../../relational-databases/native-client-odbc-table-valued-parameters/table-valued-parameters-odbc.md)를 참조 하세요.  
   
 ## <a name="see-also"></a>참고 항목  
- [SQLParamData](https://go.microsoft.com/fwlink/?LinkId=80706)   
+ [SQLParamData](../../odbc/reference/syntax/sqlparamdata-function.md)   
  [ODBC API 구현 정보](../../relational-databases/native-client-odbc-api/odbc-api-implementation-details.md)  
-  
   

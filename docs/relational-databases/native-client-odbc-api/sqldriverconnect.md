@@ -15,11 +15,12 @@ ms.assetid: a1e38e2c-3a97-42d1-9c45-a0ca3282ffd1
 author: markingmyname
 ms.author: maghan
 monikerRange: '>=aps-pdw-2016||=azuresqldb-current||=azure-sqldw-latest||>=sql-server-2016||=sqlallproducts-allversions||>=sql-server-linux-2017||=azuresqldb-mi-current'
-ms.openlocfilehash: 92f4924433c5d577b8550a8d097a2802fda2f5f1
-ms.sourcegitcommit: f3321ed29d6d8725ba6378d207277a57cb5fe8c2
+ms.openlocfilehash: 76942f8367bb6c38da195c61fa8d428b877d0042
+ms.sourcegitcommit: 04cf7905fa32e0a9a44575a6f9641d9a2e5ac0f8
+ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 07/06/2020
-ms.locfileid: "86007187"
+ms.lasthandoff: 10/07/2020
+ms.locfileid: "91810079"
 ---
 # <a name="sqldriverconnect"></a>SQLDriverConnect
 [!INCLUDE[SQL Server Azure SQL Database Synapse Analytics PDW ](../../includes/applies-to-version/sql-asdb-asdbmi-asa-pdw.md)]
@@ -80,10 +81,9 @@ SQLDriverConnect(hdbc, hwnd,
 ```  
   
 ## <a name="see-also"></a>참고 항목  
- [SQLDriverConnect 함수](https://go.microsoft.com/fwlink/?LinkId=59340)   
+ [SQLDriverConnect 함수](../../odbc/reference/syntax/sqldriverconnect-function.md)   
  [ODBC API 구현 세부 정보](../../relational-databases/native-client-odbc-api/odbc-api-implementation-details.md)   
- [Transact-sql&#41;&#40;ANSI_NULLS 설정](../../t-sql/statements/set-ansi-nulls-transact-sql.md)   
- [Transact-sql&#41;&#40;ANSI_PADDING 설정](../../t-sql/statements/set-ansi-padding-transact-sql.md)   
+ [SET ANSI_NULLS&#40;Transact-SQL&#41;](../../t-sql/statements/set-ansi-nulls-transact-sql.md)   
+ [SET ANSI_PADDING&#40;Transact-SQL&#41;](../../t-sql/statements/set-ansi-padding-transact-sql.md)   
  [SET ANSI_WARNINGS&#40;Transact-SQL&#41;](../../t-sql/statements/set-ansi-warnings-transact-sql.md)  
-  
   

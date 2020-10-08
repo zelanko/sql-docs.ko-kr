@@ -1,6 +1,6 @@
 ---
-description: 변경 내용 추적 카탈로그 뷰-sys. change_tracking_tables
-title: sys. change_tracking_tables (Transact-sql) | Microsoft Docs
+description: 변경 내용 추적 카탈로그 뷰-sys.change_tracking_tables
+title: sys.change_tracking_tables (Transact-sql) | Microsoft Docs
 ms.custom: ''
 ms.date: 08/08/2016
 ms.prod: sql
@@ -22,14 +22,14 @@ ms.assetid: 97ec69b6-0d49-4d98-82f0-d3e77ba1ad2b
 author: markingmyname
 ms.author: maghan
 monikerRange: =azuresqldb-current||>=sql-server-2016||=sqlallproducts-allversions||>=sql-server-linux-2017||=azuresqldb-mi-current
-ms.openlocfilehash: 5b865d0d62f1029f3c8ebb976e8ed9cb5b8f0dd7
-ms.sourcegitcommit: dd36d1cbe32cd5a65c6638e8f252b0bd8145e165
+ms.openlocfilehash: 9f0fb1b5ad1c004f1f4aba688c29138282b71f38
+ms.sourcegitcommit: 04cf7905fa32e0a9a44575a6f9641d9a2e5ac0f8
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 09/08/2020
-ms.locfileid: "89537559"
+ms.lasthandoff: 10/07/2020
+ms.locfileid: "91809619"
 ---
-# <a name="change-tracking-catalog-views---syschange_tracking_tables"></a>변경 내용 추적 카탈로그 뷰-sys. change_tracking_tables
+# <a name="change-tracking-catalog-views---syschange_tracking_tables"></a>변경 내용 추적 카탈로그 뷰-sys.change_tracking_tables
 [!INCLUDE [SQL Server Azure SQL Database](../../includes/applies-to-version/sql-asdb.md)]
 
   변경 내용 추적이 설정된 현재 데이터베이스의 각 테이블에 대해 한 개의 행을 반환합니다.  
@@ -47,7 +47,6 @@ ms.locfileid: "89537559"
   
 ## <a name="see-also"></a>참고 항목  
  [CHANGE_TRACKING_MIN_VALID_VERSION&#40;Transact-SQL&#41;](../../relational-databases/system-functions/change-tracking-min-valid-version-transact-sql.md)   
- [Transact-sql&#41;&#40;카탈로그 뷰 변경 내용 추적 ](https://msdn.microsoft.com/library/6e8fd949-5560-4b34-879f-4e25aa24b183)   
+ [Transact-sql&#41;&#40;카탈로그 뷰 변경 내용 추적 ](./catalog-views-transact-sql.md)   
  [데이터 변경 내용 추적&#40;SQL Server&#41;](../../relational-databases/track-changes/track-data-changes-sql-server.md)  
-  
   

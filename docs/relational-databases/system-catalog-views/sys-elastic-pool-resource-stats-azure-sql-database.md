@@ -19,12 +19,12 @@ author: markingmyname
 ms.author: maghan
 ms.custom: seo-dt-2019
 monikerRange: = azuresqldb-current || = sqlallproducts-allversions
-ms.openlocfilehash: 485ba65479e002a960e3e15bf7ce8d0cc9032e0b
-ms.sourcegitcommit: c74bb5944994e34b102615b592fdaabe54713047
+ms.openlocfilehash: 39db2d1bd2d3525e1dc2902c11e362d70b212ebd
+ms.sourcegitcommit: 04cf7905fa32e0a9a44575a6f9641d9a2e5ac0f8
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 09/22/2020
-ms.locfileid: "90990166"
+ms.lasthandoff: 10/07/2020
+ms.locfileid: "91809869"
 ---
 # <a name="syselastic_pool_resource_stats-azure-sql-database"></a>sys.elastic_pool_resource_stats (Azure SQL Database)
 [!INCLUDE[Azure SQL Database Azure SQL Managed Instance](../../includes/applies-to-version/asdb-asdbmi.md)]
@@ -48,11 +48,11 @@ ms.locfileid: "90990166"
 |**max_session_percent**|**decimal (5, 2)**|풀의 한도에 따른 백분율로 최대 동시 세션|  
 |**elastic_pool_dtu_limit**|**int**|이 간격 중에 이 탄력적 풀에 대한 현재 최대 탄력적 풀 DTU 설정|  
 |**elastic_pool_storage_limit_mb**|**bigint**|이 간격 중에 이 탄력적 풀에 대한 현재 최대 탄력적 풀 스토리지 제한 설정(MB)|
-|**avg_allocated_storage_percent**|**decimal (5, 2)**|탄력적 풀의 모든 데이터베이스에서 할당 한 데이터 공간의 비율입니다.  탄력적 풀의 데이터 최대 크기에 할당 된 데이터 공간의 비율입니다.  자세한 내용은 [SQL Database 파일 공간 관리를](https://docs.microsoft.com/azure/sql-database/sql-database-file-space-management) 참조 하세요.|  
+|**avg_allocated_storage_percent**|**decimal (5, 2)**|탄력적 풀의 모든 데이터베이스에서 할당 한 데이터 공간의 비율입니다.  탄력적 풀의 데이터 최대 크기에 할당 된 데이터 공간의 비율입니다.  자세한 내용은 [SQL Database 파일 공간 관리를](/azure/sql-database/sql-database-file-space-management) 참조 하세요.|  
   
 ## <a name="remarks"></a>설명
 
- 이 보기는 SQL Database 서버의 master 데이터베이스에 있습니다. **Elastic_pool_resource_stats**를 쿼리하려면 master 데이터베이스에 연결 되어 있어야 합니다.  
+ 이 보기는 SQL Database 서버의 master 데이터베이스에 있습니다. **Sys.elastic_pool_resource_stats**를 쿼리하려면 master 데이터베이스에 연결 되어 있어야 합니다.  
   
 ## <a name="permissions"></a>사용 권한
 
@@ -80,9 +80,8 @@ ORDER BY end_time DESC;
 
 ## <a name="see-also"></a>참고 항목
 
- [탄력적 데이터베이스를 사용 하 여 끝날 때쯤 증가](https://azure.microsoft.com/documentation/articles/sql-database-elastic-pool/)   
- [SQL Database 탄력적 데이터베이스 풀 만들기 및 관리](https://azure.microsoft.com/documentation/articles/sql-database-elastic-pool-portal/)   
- [resource_stats &#40;Azure SQL Database&#41;](../../relational-databases/system-catalog-views/sys-resource-stats-azure-sql-database.md)   
- [dm_db_resource_stats &#40;Azure SQL Database&#41;](../../relational-databases/system-dynamic-management-views/sys-dm-db-resource-stats-azure-sql-database.md)  
-  
+ [탄력적 데이터베이스를 사용 하 여 끝날 때쯤 증가](/azure/azure-sql/database/elastic-pool-overview)   
+ [SQL Database 탄력적 데이터베이스 풀 만들기 및 관리](/azure/azure-sql/database/elastic-pool-overview)   
+ [sys.resource_stats &#40;Azure SQL Database&#41;](../../relational-databases/system-catalog-views/sys-resource-stats-azure-sql-database.md)   
+ [sys.dm_db_resource_stats &#40;Azure SQL Database&#41;](../../relational-databases/system-dynamic-management-views/sys-dm-db-resource-stats-azure-sql-database.md)  
   

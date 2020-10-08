@@ -16,19 +16,19 @@ ms.assetid: ca89aa4c-c4c1-4c46-8515-a6754667b3e5
 author: markingmyname
 ms.author: maghan
 monikerRange: = azuresqldb-current || = sqlallproducts-allversions
-ms.openlocfilehash: 1fbd97400ced46a70026b832ad4721d9f33cf690
-ms.sourcegitcommit: dd36d1cbe32cd5a65c6638e8f252b0bd8145e165
+ms.openlocfilehash: dd5b35e6c999f69b7adda16fd4590942cd2da63b
+ms.sourcegitcommit: 04cf7905fa32e0a9a44575a6f9641d9a2e5ac0f8
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 09/08/2020
-ms.locfileid: "89543467"
+ms.lasthandoff: 10/07/2020
+ms.locfileid: "91810249"
 ---
 # <a name="sp_execute_remote-azure-sql-database"></a>sp_execute_remote(Azure SQL Database)
 [!INCLUDE[Azure SQL Database Azure SQL Managed Instance](../../includes/applies-to-version/asdb-asdbmi.md)]
 
   [!INCLUDE[tsql](../../includes/tsql-md.md)]단일 원격 Azure SQL Database 또는 행 분할 체계에서 분할 역할을 하는 데이터베이스 집합에 대해 문을 실행 합니다.  
   
- 저장 프로시저는 탄력적 쿼리 기능의 일부입니다.  분할에 대 한 탄력적 [데이터베이스 쿼리 개요](https://azure.microsoft.com/documentation/articles/sql-database-elastic-query-overview/) 및 [탄력적 데이터베이스 쿼리 (행 분할)](https://azure.microsoft.com/documentation/articles/sql-database-elastic-query-horizontal-partitioning/)를 Azure SQL Database 참조 하세요.  
+ 저장 프로시저는 탄력적 쿼리 기능의 일부입니다.  분할에 대 한 탄력적 [데이터베이스 쿼리 개요](/azure/azure-sql/database/elastic-query-overview) 및 [탄력적 데이터베이스 쿼리 (행 분할)](/azure/azure-sql/database/elastic-query-horizontal-partitioning)를 Azure SQL Database 참조 하세요.  
   
  ![항목 링크 아이콘](../../database-engine/configure-windows/media/topic-link.gif "항목 링크 아이콘") [Transact-SQL 구문 표기 규칙](../../t-sql/language-elements/transact-sql-syntax-conventions-transact-sql.md)  
   
@@ -82,7 +82,7 @@ sp_execute_remote [ @data_source_name = ] datasourcename
   
  `sp_execute_remote`[sp_executesql &#40;transact-sql&#41;](../../relational-databases/system-stored-procedures/sp-executesql-transact-sql.md)와 유사 하 게 사용할 수 있습니다.  
   
-## <a name="examples"></a>예제  
+## <a name="examples"></a>예  
 ### <a name="simple-example"></a>간단한 예  
  다음 예에서는 원격 데이터베이스에 대해 간단한 SELECT 문을 만들고 실행 합니다.  
   
@@ -106,4 +106,3 @@ EXEC sp_execute_remote @data_source_name  = N'PointToMaster',
 
 [CREATE DATABASE SCOPED CREDENTIAL](../../t-sql/statements/create-database-scoped-credential-transact-sql.md)  
 [CREATE EXTERNAL DATA SOURCE(Transact-SQL)](../../t-sql/statements/create-external-data-source-transact-sql.md)  
-    

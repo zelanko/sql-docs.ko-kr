@@ -21,12 +21,12 @@ ms.assetid: de4e1fcd-0e1a-4af3-97ee-d1becc7f04df
 author: dphansen
 ms.author: davidph
 monikerRange: '>=sql-server-2016||>=sql-server-linux-ver15||=azuresqldb-mi-current||=sqlallproducts-allversions'
-ms.openlocfilehash: b820003b3039a8561dd299a7fb85c1d52b043bda
-ms.sourcegitcommit: e700497f962e4c2274df16d9e651059b42ff1a10
+ms.openlocfilehash: 27a1776382cf9a8acf86f08ed960578932ca9655
+ms.sourcegitcommit: 04cf7905fa32e0a9a44575a6f9641d9a2e5ac0f8
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 08/17/2020
-ms.locfileid: "88447206"
+ms.lasthandoff: 10/07/2020
+ms.locfileid: "91810197"
 ---
 # <a name="sp_execute_external_script-transact-sql"></a>sp_execute_external_script(Transact-SQL)
 [!INCLUDE [SQL Server 2016 SQL MI](../../includes/applies-to-version/sqlserver2016-asdbmi.md)]
@@ -165,14 +165,14 @@ sp_execute_external_script
 
 ### <a name="monitor-script-execution"></a>스크립트 실행 모니터링
 
-[Dm_external_script_requests](../../relational-databases/system-dynamic-management-views/sys-dm-external-script-requests.md) 및 [dm_external_script_execution_stats](../../relational-databases/system-dynamic-management-views/sys-dm-external-script-execution-stats.md)를 사용 하 여 스크립트 실행을 모니터링 합니다.
+[Sys.dm_external_script_requests](../../relational-databases/system-dynamic-management-views/sys-dm-external-script-requests.md) 및 [sys.dm_external_script_execution_stats](../../relational-databases/system-dynamic-management-views/sys-dm-external-script-execution-stats.md)를 사용 하 여 스크립트 실행을 모니터링 합니다.
 
 ::: moniker range=">=sql-server-ver15||>=sql-server-linux-ver15||=sqlallproducts-allversions"
 ### <a name="parameters-for-partition-modeling"></a>파티션 모델링에 대 한 매개 변수
 
 분할 된 데이터에 대 한 모델링을 가능 하 게 하는 두 개의 추가 매개 변수를 설정할 수 있습니다. 여기서 파티션은 데이터 집합을 스크립트 실행 중에만 생성 및 사용 되는 논리적 파티션으로 자연스럽 게 분할 하는 하나 이상의 열을 기반으로 합니다. 보존 기간, 성별, 지역, 날짜 또는 시간에 대 한 반복 값을 포함 하는 열은 분할 된 데이터 집합에 적합 한 몇 가지 예입니다.
 
-두 매개 변수는 **input_data_1_partition_by_columns** 및 **input_data_1_order_by_columns**이며 두 번째 매개 변수는 결과 집합의 순서를 정렬 하는 데 사용 됩니다. 매개 변수는 `sp_execute_external_script` 모든 파티션에 대해 한 번씩 실행 되는 외부 스크립트를 사용 하 여에 대 한 입력으로 전달 됩니다. 자세한 내용 및 예제는 [자습서: 파티션 기반 모델 만들기](https://docs.microsoft.com/sql/machine-learning/tutorials/r-tutorial-create-models-per-partition)를 참조 하세요.
+두 매개 변수는 **input_data_1_partition_by_columns** 및 **input_data_1_order_by_columns**이며 두 번째 매개 변수는 결과 집합의 순서를 정렬 하는 데 사용 됩니다. 매개 변수는 `sp_execute_external_script` 모든 파티션에 대해 한 번씩 실행 되는 외부 스크립트를 사용 하 여에 대 한 입력으로 전달 됩니다. 자세한 내용 및 예제는 [자습서: 파티션 기반 모델 만들기](../../machine-learning/tutorials/r-tutorial-create-models-per-partition.md)를 참조 하세요.
 
 를 지정 하 여 스크립트를 병렬로 실행할 수 있습니다 `@parallel=1` . 입력 쿼리를 병렬화 할 수 있는 경우 `@parallel=1` 인수의 일부로를로 설정 해야 합니다 `sp_execute_external_script` . 기본적으로 쿼리 최적화 프로그램은 `@parallel=1` 행이 256 개를 초과 하는 테이블에서 작동 하지만이를 명시적으로 처리 하려는 경우이 스크립트에는 매개 변수가 데모용으로 포함 됩니다.
 
@@ -225,7 +225,7 @@ Float 값 (예: `+Inf` , `-Inf` , `NaN` )은 두 언어 모두 IEEE 754를 사�
 
 **EXECUTE ANY EXTERNAL SCRIPT** database 권한이 필요 합니다.  
 
-## <a name="examples"></a>예제
+## <a name="examples"></a>예
 
 이 섹션에서는를 사용 하 여이 저장 프로시저를 사용 하 여 R 또는 Python 스크립트를 실행 하는 방법의 예를 보여 줍니다 [!INCLUDE[tsql](../../includes/tsql-md.md)] .
 
@@ -324,7 +324,7 @@ Python을 사용하여 비슷한 모델을 생성하려면 언어 식별자를 `
 
 ## <a name="see-also"></a>참고 항목
 
-+ [SQL machine learning](../../machine-learning/index.yml)
++ [SQL Machine Learning](../../machine-learning/index.yml)
 + [언어 확장을 SQL Server](../../language-extensions/language-extensions-overview.md)합니다. 
 + [시스템 저장 프로시저&#40;Transact-SQL&#41;](../../relational-databases/system-stored-procedures/system-stored-procedures-transact-sql.md)   
 + [Transact-sql&#41;&#40;외부 라이브러리 만들기 ](../../t-sql/statements/create-external-library-transact-sql.md)  
@@ -334,4 +334,4 @@ Python을 사용하여 비슷한 모델을 생성하려면 언어 식별자를 `
 + [SERVERPROPERTY&#40;Transact-SQL&#41;](../../t-sql/functions/serverproperty-transact-sql.md)   
 + [SQL Server, 외부 스크립트 개체](../../relational-databases/performance-monitor/sql-server-external-scripts-object.md)  
 + [sys.dm_external_script_requests](../../relational-databases/system-dynamic-management-views/sys-dm-external-script-requests.md)  
-+ [sys.dm_external_script_execution_stats](../../relational-databases/system-dynamic-management-views/sys-dm-external-script-execution-stats.md) 
++ [sys.dm_external_script_execution_stats](../../relational-databases/system-dynamic-management-views/sys-dm-external-script-execution-stats.md)

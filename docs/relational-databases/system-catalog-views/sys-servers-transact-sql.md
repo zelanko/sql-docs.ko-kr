@@ -21,12 +21,12 @@ ms.assetid: 4e774ed9-4e83-4726-9f1d-8efde8f9feff
 author: markingmyname
 ms.author: maghan
 monikerRange: =azuresqldb-mi-current||>=sql-server-2016||=sqlallproducts-allversions||>=sql-server-linux-2017
-ms.openlocfilehash: bcead6ebe4064dc43e97d0c0aa9d74920f69bbb8
-ms.sourcegitcommit: dd36d1cbe32cd5a65c6638e8f252b0bd8145e165
+ms.openlocfilehash: a3befa2740bd11fcd88233cef3000deec0d7006e
+ms.sourcegitcommit: 04cf7905fa32e0a9a44575a6f9641d9a2e5ac0f8
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 09/08/2020
-ms.locfileid: "89539584"
+ms.lasthandoff: 10/07/2020
+ms.locfileid: "91809329"
 ---
 # <a name="sysservers-transact-sql"></a>sys.servers(Transact-SQL)
 [!INCLUDE [SQL Server - ASDBMI](../../includes/applies-to-version/sql-asdbmi.md)]
@@ -37,7 +37,7 @@ ms.locfileid: "89539584"
 |-----------------|---------------|-----------------|  
 |**server_id**|**int**|연결된 서버의 로컬 ID입니다.|  
 |**name**|**sysname**|**Server_id** = 0 인 경우 반환 되는 값은 서버 이름입니다.<br /><br /> **Server_id** > 0 인 경우 반환 되는 값은 연결 된 서버의 로컬 이름입니다.|  
-|**제품은**|**sysname**|연결된 서버의 제품 이름입니다. "SQL Server" 값은의 다른 인스턴스를 나타냅니다 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] .|  
+|**product**|**sysname**|연결된 서버의 제품 이름입니다. "SQL Server" 값은의 다른 인스턴스를 나타냅니다 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] .|  
 |**공급자별**|**sysname**|연결된 서버에 연결하기 위한 OLE DB 공급자 이름입니다.<br /><br />부터 [!INCLUDE[sql-server-2019](../../includes/sssqlv15-md.md)] "SQLNCLI" 값은 기본적으로 [Microsoft OLE DB Driver for SQL SERVER (MSOLEDBSQL)](../../connect/oledb/oledb-driver-for-sql-server.md) 에 매핑됩니다. 이전 버전에서 값 "SQLNCLI"는 [SQLNCLI11 (SQL Server Native Client OLE DB 공급자)](../../relational-databases/native-client/sql-server-native-client.md)에 매핑됩니다.|  
 |**data_source**|**nvarchar(4000)**|OLE DB 데이터 원본 연결 속성입니다.|  
 |**location**|**nvarchar(4000)**|OLE DB 위치 연결 속성입니다. 이 속성이 없으면 NULL입니다.|  
@@ -60,7 +60,7 @@ ms.locfileid: "89539584"
 |**is_nonsql_subscriber**|**bit**|서버가 SQL Server 이외 복제 구독자입니다.|  
 |**is_remote_proc_transaction_promotion_enabled**|**bit**|1로 설정하면 원격 저장 프로시저를 호출하여 분산 트랜잭션이 시작하고 MS DTC를 사용하여 이 트랜잭션을 참여시킵니다. 자세한 내용은 [sp_serveroption&#40;Transact-SQL&#41;](../../relational-databases/system-stored-procedures/sp-serveroption-transact-sql.md)의 데이터에 액세스하는 방법을 보여 줍니다.|  
 |**modify_date**|**datetime**|서버 정보가 마지막으로 변경된 날짜입니다.|  
-|**is_rda_server**|**bit**|**적용 대상:** 부터 시작 [!INCLUDE[ssSQL15](../../includes/sssql15-md.md)] 합니다.<br /><br />서버에서 원격 데이터 보관 사용 (스트레치 사용)입니다. 자세한 내용은 [서버에서 Stretch Database 사용](https://docs.microsoft.com/sql/sql-server/stretch-database/enable-stretch-database-for-a-database#EnableTSQLServer)을 참조 하세요.|
+|**is_rda_server**|**bit**|**적용 대상:** 부터 시작 [!INCLUDE[ssSQL15](../../includes/sssql15-md.md)] 합니다.<br /><br />서버에서 원격 데이터 보관 사용 (스트레치 사용)입니다. 자세한 내용은 [서버에서 Stretch Database 사용](../../sql-server/stretch-database/enable-stretch-database-for-a-database.md#EnableTSQLServer)을 참조 하세요.|
   
 ## <a name="permissions"></a>사용 권한  
  호출자에 게 ALTER ANY 연결 된 서버 권한이 없으면 **provider_string** 의 값은 항상 NULL입니다.  
@@ -80,4 +80,3 @@ ms.locfileid: "89539584"
  [sp_addlinkedsrvlogin &#40;Transact-SQL&#41;](../../relational-databases/system-stored-procedures/sp-addlinkedsrvlogin-transact-sql.md)   
  [sp_addremotelogin&#40;Transact-SQL&#41;](../../relational-databases/system-stored-procedures/sp-addremotelogin-transact-sql.md)  
   
- 

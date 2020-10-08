@@ -1,6 +1,6 @@
 ---
-description: 변경 내용 추적 카탈로그 뷰-sys. change_tracking_databases
-title: sys. change_tracking_databases (Transact-sql) | Microsoft Docs
+description: 변경 내용 추적 카탈로그 뷰-sys.change_tracking_databases
+title: sys.change_tracking_databases (Transact-sql) | Microsoft Docs
 ms.custom: ''
 ms.date: 08/08/2016
 ms.prod: sql
@@ -22,14 +22,14 @@ ms.assetid: bb233baa-2991-4904-a0eb-3772b81121a4
 author: markingmyname
 ms.author: maghan
 monikerRange: =azuresqldb-current||>=sql-server-2016||=sqlallproducts-allversions||>=sql-server-linux-2017||=azuresqldb-mi-current
-ms.openlocfilehash: 653588e0fca8593305e70634029a54832264e8b7
-ms.sourcegitcommit: dd36d1cbe32cd5a65c6638e8f252b0bd8145e165
+ms.openlocfilehash: 05421e215b41fcf0f1be93b189873c3f0d2aa51c
+ms.sourcegitcommit: 04cf7905fa32e0a9a44575a6f9641d9a2e5ac0f8
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 09/08/2020
-ms.locfileid: "89545160"
+ms.lasthandoff: 10/07/2020
+ms.locfileid: "91810369"
 ---
-# <a name="change-tracking-catalog-views---syschange_tracking_databases"></a>변경 내용 추적 카탈로그 뷰-sys. change_tracking_databases
+# <a name="change-tracking-catalog-views---syschange_tracking_databases"></a>변경 내용 추적 카탈로그 뷰-sys.change_tracking_databases
 [!INCLUDE [SQL Server Azure SQL Database](../../includes/applies-to-version/sql-asdb.md)]
 
   변경 내용 추적이 설정된 각 데이터베이스에 대해 한 개의 행을 반환합니다.  
@@ -46,7 +46,6 @@ ms.locfileid: "89545160"
  sys.databases에 대한 권한 확인과 동일한 권한 확인이 sys.change_tracking_databases에 대해 수행됩니다. sys.change_tracking의 호출자가 데이터베이스의 소유자가 아니고 해당 행을 보는 데 필요한 최소 권한은 master 데이터베이스나 현재 데이터베이스의 ALTER ANY DATABASE나 VIEW ANY DATABASE 서버 수준 사용 권한 또는 CREATE DATABASE 권한입니다.  
   
 ## <a name="see-also"></a>참고 항목  
- [Transact-sql&#41;&#40;카탈로그 뷰 변경 내용 추적 ](https://msdn.microsoft.com/library/6e8fd949-5560-4b34-879f-4e25aa24b183)   
+ [Transact-sql&#41;&#40;카탈로그 뷰 변경 내용 추적 ](./catalog-views-transact-sql.md)   
  [데이터 변경 내용 추적&#40;SQL Server&#41;](../../relational-databases/track-changes/track-data-changes-sql-server.md)  
-  
   

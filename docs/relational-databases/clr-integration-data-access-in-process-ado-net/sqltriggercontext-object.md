@@ -14,21 +14,20 @@ helpviewer_keywords:
 ms.assetid: 472a2d0b-64ae-4877-8f11-a5620aa698b7
 author: rothja
 ms.author: jroth
-ms.openlocfilehash: 4634a0c95e64516b6364fbfd68edeb9cd6156511
-ms.sourcegitcommit: da88320c474c1c9124574f90d549c50ee3387b4c
+ms.openlocfilehash: c6f11eda2ef791eb8c987af8d82149507770d47a
+ms.sourcegitcommit: 04cf7905fa32e0a9a44575a6f9641d9a2e5ac0f8
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 07/01/2020
-ms.locfileid: "85765414"
+ms.lasthandoff: 10/07/2020
+ms.locfileid: "91809165"
 ---
 # <a name="sqltriggercontext-object"></a>SqlTriggerContext 개체
  [!INCLUDE [SQL Server](../../includes/applies-to-version/sqlserver.md)]
-  **SqlTriggerContext** 클래스는 트리거에 대한 컨텍스트 정보를 제공합니다. 이 컨텍스트 정보에는 트리거를 발생시킨 동작 유형, UPDATE 작업에서 수정된 열, DDL(데이터 정의 언어) 트리거의 경우 트리거 작업을 설명하는 **EventData** 구조가 포함됩니다. **Sqltriggercontext** 클래스를 사용 하는 방법에 대 한 자세한 내용 및 예제는 [CLR 트리거](https://msdn.microsoft.com/library/302a4e4a-3172-42b6-9cc0-4a971ab49c1c)를 참조 하세요.  
+  **SqlTriggerContext** 클래스는 트리거에 대한 컨텍스트 정보를 제공합니다. 이 컨텍스트 정보에는 트리거를 발생시킨 동작 유형, UPDATE 작업에서 수정된 열, DDL(데이터 정의 언어) 트리거의 경우 트리거 작업을 설명하는 **EventData** 구조가 포함됩니다. **Sqltriggercontext** 클래스를 사용 하는 방법에 대 한 자세한 내용 및 예제는 [CLR 트리거](/dotnet/framework/data/adonet/sql/clr-triggers)를 참조 하세요.  
   
  자세한 내용은 .NET Framework SDK 설명서에서 Microsoft. s s d. **SqlTriggerContext** 클래스 참조 설명서를 참조 하세요.  
   
 ## <a name="see-also"></a>참고 항목  
- [CLR 트리거](https://msdn.microsoft.com/library/302a4e4a-3172-42b6-9cc0-4a971ab49c1c)   
+ [CLR 트리거](/dotnet/framework/data/adonet/sql/clr-triggers)   
  [EVENTDATA&#40;Transact-SQL&#41;](../../t-sql/functions/eventdata-transact-sql.md)  
-  
   

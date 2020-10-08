@@ -15,12 +15,12 @@ ms.assetid: 26e4e69a-44fd-45e3-b47a-ae39184f041b
 author: markingmyname
 ms.author: maghan
 monikerRange: '>=aps-pdw-2016||=azuresqldb-current||=azure-sqldw-latest||>=sql-server-2016||=sqlallproducts-allversions||>=sql-server-linux-2017||=azuresqldb-mi-current'
-ms.openlocfilehash: 2c810f8dea740e18588b9c199733be3296423162
-ms.sourcegitcommit: e700497f962e4c2274df16d9e651059b42ff1a10
+ms.openlocfilehash: 966d76cd9d0582cc94d3419714c4368e24a68eac
+ms.sourcegitcommit: 04cf7905fa32e0a9a44575a6f9641d9a2e5ac0f8
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 08/17/2020
-ms.locfileid: "88428245"
+ms.lasthandoff: 10/07/2020
+ms.locfileid: "91810797"
 ---
 # <a name="sqlgetconnectattr"></a>SQLGetConnectAttr
 [!INCLUDE[SQL Server Azure SQL Database Synapse Analytics PDW ](../../includes/applies-to-version/sql-asdb-asdbmi-asa-pdw.md)]
@@ -35,7 +35,7 @@ ms.locfileid: "88428245"
 > [!NOTE]  
 >  표준 ODBC 연결 특성 SQL_ATTR_CONNECTION_DEAD는 가장 최근 연결 상태를 반환합니다. 이 상태는 현재 연결 상태가 아닐 수도 있습니다.  
   
-|값|설명|  
+|값|Description|  
 |-----------|-----------------|  
 |SQL_CD_TRUE|서버에 대한 연결이 손실되었습니다.|  
 |SQL_CD_FALSE|연결이 열려 있으며 문 처리에 사용할 수 있습니다.|  
@@ -51,7 +51,7 @@ ms.locfileid: "88428245"
   
  자세한 내용은 [확장 이벤트 로그에서 진단 정보에 액세스](../../relational-databases/native-client/features/accessing-diagnostic-information-in-the-extended-events-log.md)를 참조 하세요.  
   
-|값|설명|  
+|값|Description|  
 |-----------|-----------------|  
 |SQL_ERROR|연결하지 못했습니다.|  
 |SQL_SUCCESS|연결이 성공했습니다. 출력 버퍼에서 클라이언트 연결 ID를 찾습니다.|  
@@ -70,7 +70,7 @@ ms.locfileid: "88428245"
 ## <a name="sql_copt_ss_user_data"></a>SQL_COPT_SS_USER_DATA  
  SQL_COPT_SS_USER_DATA 특성은 사용자 데이터 포인터를 검색합니다. 사용자 데이터는 클라이언트 소유의 메모리에 저장되고 연결별로 기록됩니다. 사용자 데이터 포인터가 설정되지 않은 경우 NULL 포인터인 SQL_UD_NOTSET가 반환됩니다.  
   
-|값|설명|  
+|값|Description|  
 |-----------|-----------------|  
 |SQL_UD_NOTSET|사용자 데이터 포인터가 설정되어 있지 않습니다.|  
 |다른 모든 값|사용자 데이터에 대한 포인터입니다.|  
@@ -85,11 +85,10 @@ ms.locfileid: "88428245"
  Spn에 대 한 자세한 내용은 [클라이언트 연결 &#40;ODBC&#41;에서 spn&#41; &#40;서비스 사용자 이름 ](../../relational-databases/native-client/odbc/service-principal-names-spns-in-client-connections-odbc.md)을 참조 하세요.  
   
 ## <a name="see-also"></a>참고 항목  
- [SQLGetConnectAttr 함수](https://go.microsoft.com/fwlink/?LinkId=59347)   
+ [SQLGetConnectAttr 함수](../../odbc/reference/syntax/sqlgetconnectattr-function.md)   
  [ODBC API 구현 세부 정보](../../relational-databases/native-client-odbc-api/odbc-api-implementation-details.md)   
- [Transact-sql&#41;&#40;QUOTED_IDENTIFIER 설정 ](../../t-sql/statements/set-quoted-identifier-transact-sql.md)   
+ [SET QUOTED_IDENTIFIER&#40;Transact-SQL&#41;](../../t-sql/statements/set-quoted-identifier-transact-sql.md)   
  [SET ANSI_NULLS&#40;Transact-SQL&#41;](../../t-sql/statements/set-ansi-nulls-transact-sql.md)   
  [SET ANSI_PADDING&#40;Transact-SQL&#41;](../../t-sql/statements/set-ansi-padding-transact-sql.md)   
  [SET ANSI_WARNINGS&#40;Transact-SQL&#41;](../../t-sql/statements/set-ansi-warnings-transact-sql.md)  
-  
   

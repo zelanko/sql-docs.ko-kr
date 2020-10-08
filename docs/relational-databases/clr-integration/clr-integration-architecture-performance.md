@@ -14,12 +14,12 @@ helpviewer_keywords:
 ms.assetid: 7ce2dfc0-4b1f-4dcb-a979-2c4f95b4cb15
 author: rothja
 ms.author: jroth
-ms.openlocfilehash: 8199df81aca3688855b771923f6fa19a0e4f33db
-ms.sourcegitcommit: da88320c474c1c9124574f90d549c50ee3387b4c
+ms.openlocfilehash: e1d72f658cf957a9dfb78eae4186cdd35d6e9849
+ms.sourcegitcommit: 04cf7905fa32e0a9a44575a6f9641d9a2e5ac0f8
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 07/01/2020
-ms.locfileid: "85727632"
+ms.lasthandoff: 10/07/2020
+ms.locfileid: "91809584"
 ---
 # <a name="clr-integration-architecture----performance"></a>CLR 통합 아키텍처 - 성능
 [!INCLUDE [SQL Server SQL MI](../../includes/applies-to-version/sql-asdbmi.md)]
@@ -36,7 +36,7 @@ ms.locfileid: "85727632"
  컴파일 프로세스를 수행하면 런타임에 네이티브 코드에서 호출할 수 있는 함수 포인터가 생성됩니다. 스칼라 반환 사용자 정의 함수의 경우 이 함수 호출은 행 단위로 수행됩니다. [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]와 CLR 간의 전환 비용을 최소화하기 위해 관리되는 호출을 포함하는 문에는 대상 애플리케이션 도메인을 확인하는 시작 단계가 있습니다. 이러한 확인 단계를 통해 각 행에서 전환 비용을 줄일 수 있습니다.  
   
 ## <a name="performance-considerations"></a>성능 고려 사항  
- 다음 항목에서는 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]에 통합된 CLR과 관련된 성능 고려 사항에 대해 간략히 설명합니다. 자세한 내용은 MSDN 웹 사이트의 "[SQL Server 2005에서 CLR 통합 사용](https://go.microsoft.com/fwlink/?LinkId=50332)"을 참조 하십시오. 관리 코드 성능에 대 한 일반적인 정보는 MSDN 웹 사이트의 "[.Net 응용 프로그램 성능 및 확장성 향상](https://go.microsoft.com/fwlink/?LinkId=50333)"에서 찾을 수 있습니다.  
+ 다음 항목에서는 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]에 통합된 CLR과 관련된 성능 고려 사항에 대해 간략히 설명합니다. 자세한 내용은 MSDN 웹 사이트의 "[SQL Server 2005에서 CLR 통합 사용](/previous-versions/sql/sql-server-2005/administrator/ms345136(v=sql.90))"을 참조 하십시오. 관리 코드 성능에 대 한 일반적인 정보는 MSDN 웹 사이트의 "[.Net 응용 프로그램 성능 및 확장성 향상](/previous-versions/msp-n-p/ff649152(v=pandp.10))"에서 찾을 수 있습니다.  
   
 ### <a name="user-defined-functions"></a>사용자 정의 함수  
  CLR 함수는 [!INCLUDE[tsql](../../includes/tsql-md.md)] 사용자 정의 함수보다 호출 경로가 빠르다는 장점이 있습니다. 또한 관리 코드는 프로시저 코드, 계산 및 문자열 조작 부분에서 [!INCLUDE[tsql](../../includes/tsql-md.md)]보다 훨씬 성능이 뛰어납니다. 계산을 많이 수행하고 데이터 액세스는 수행하지 않는 CLR 함수는 관리 코드로 작성하는 것이 좋습니다. [!INCLUDE[tsql](../../includes/tsql-md.md)] 함수는 CLR 통합보다 데이터 액세스를 효율적으로 수행합니다.  
@@ -80,5 +80,4 @@ ms.locfileid: "85727632"
   
 ## <a name="see-also"></a>참고 항목  
  [CLR 사용자 정의 형식](../../relational-databases/clr-integration-database-objects-user-defined-types/clr-user-defined-types.md)  
-  
   

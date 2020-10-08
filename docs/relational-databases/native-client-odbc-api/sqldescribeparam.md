@@ -15,12 +15,12 @@ ms.assetid: 396e74b1-5d08-46dc-b404-2ef2003e4689
 author: markingmyname
 ms.author: maghan
 monikerRange: '>=aps-pdw-2016||=azuresqldb-current||=azure-sqldw-latest||>=sql-server-2016||=sqlallproducts-allversions||>=sql-server-linux-2017||=azuresqldb-mi-current'
-ms.openlocfilehash: 7ea15c94c0fa4231be4d34c486c4aaf139f083fb
-ms.sourcegitcommit: e700497f962e4c2274df16d9e651059b42ff1a10
+ms.openlocfilehash: 20463fcf61f5d9842f4e5a84814970c57d4712f3
+ms.sourcegitcommit: 04cf7905fa32e0a9a44575a6f9641d9a2e5ac0f8
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 08/17/2020
-ms.locfileid: "88428305"
+ms.lasthandoff: 10/07/2020
+ms.locfileid: "91809274"
 ---
 # <a name="sqldescribeparam"></a>SQLDescribeParam
 [!INCLUDE[SQL Server Azure SQL Database Synapse Analytics PDW ](../../includes/applies-to-version/sql-asdb-asdbmi-asa-pdw.md)]
@@ -29,7 +29,7 @@ ms.locfileid: "88428305"
   
  로 시작 하는 데이터베이스 엔진의 향상 된 기능 [!INCLUDE[ssSQL11](../../includes/sssql11-md.md)] 을 통해 SQLDescribeParam를 통해 예상 결과에 대 한 보다 정확한 설명을 얻을 수 있습니다. 이러한 더 정확한 결과는 이전 버전의에서 SQLDescribeParam에 의해 반환 된 값과 다를 수 있습니다 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] . 자세한 내용은 [메타데이터 검색](../../relational-databases/native-client/features/metadata-discovery.md)을 참조하세요.  
   
- 또한에서 새로 만들기 [!INCLUDE[ssSQL11](../../includes/sssql11-md.md)] , *ParameterSizePtr* 는 이제 [ODBC 사양](https://go.microsoft.com/fwlink/?LinkId=207044)에 정의 된 대로 해당 매개 변수 표식의 열 또는 식 크기 (문자 수)에 대 한 정의를 사용 하 여 정렬 하는 값을 반환 합니다. 이전 버전의 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] Native Client에서 *ParameterSizePtr* 은 형식에 대 한 **SQL_DESC_OCTET_LENGTH** 의 해당 값 또는 형식에 대해 SQLBindParameter에 제공 된 관련이 없는 열 크기 값 (예:**SQL_INTEGER**) 일 수 있습니다.  
+ 또한에서 새로 만들기 [!INCLUDE[ssSQL11](../../includes/sssql11-md.md)] , *ParameterSizePtr* 는 이제 [ODBC 사양](../../odbc/reference/appendixes/column-size.md)에 정의 된 대로 해당 매개 변수 표식의 열 또는 식 크기 (문자 수)에 대 한 정의를 사용 하 여 정렬 하는 값을 반환 합니다. 이전 버전의 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] Native Client에서 *ParameterSizePtr* 은 형식에 대 한 **SQL_DESC_OCTET_LENGTH** 의 해당 값 또는 형식에 대해 SQLBindParameter에 제공 된 관련이 없는 열 크기 값 (예:**SQL_INTEGER**) 일 수 있습니다.  
   
  드라이버는 다음과 같은 상황에서 SQLDescribeParam 호출을 지원 하지 않습니다.  
   
@@ -91,7 +91,6 @@ SQLPrepare(hstmt, "{call master..sp_who(?)}", SQL_NTS);
  **SQLDescribeParam** 는 많은 CLR udt (사용자 정의 형식)를 지원 합니다. 자세한 내용은 [ODBC&#41;&#40;LARGE CLR 사용자 정의 형식 ](../../relational-databases/native-client/odbc/large-clr-user-defined-types-odbc.md)을 참조 하세요.  
   
 ## <a name="see-also"></a>참고 항목  
- [SQLDescribeParam 함수](https://go.microsoft.com/fwlink/?LinkId=59339)   
+ [SQLDescribeParam 함수](../../odbc/reference/syntax/sqldescribeparam-function.md)   
  [ODBC API 구현 정보](../../relational-databases/native-client-odbc-api/odbc-api-implementation-details.md)  
-  
   
