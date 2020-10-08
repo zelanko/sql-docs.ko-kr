@@ -1,6 +1,6 @@
 ---
 description: sys.dm_db_xtp_index_stats(Transact-SQL)
-title: sys. dm_db_xtp_index_stats (Transact-sql) | Microsoft Docs
+title: sys.dm_db_xtp_index_stats (Transact-sql) | Microsoft Docs
 ms.custom: ''
 ms.date: 08/29/2016
 ms.prod: sql
@@ -21,19 +21,19 @@ ms.assetid: 8d0a50b8-2015-4576-930f-e3307dfc888e
 author: markingmyname
 ms.author: maghan
 monikerRange: =azure-sqldw-latest||>=sql-server-2016||=sqlallproducts-allversions||>=sql-server-linux-2017||=azuresqldb-mi-current
-ms.openlocfilehash: 6f407fcd44885f052368d34d6f2451794383bf51
-ms.sourcegitcommit: dd36d1cbe32cd5a65c6638e8f252b0bd8145e165
+ms.openlocfilehash: 3e6cf5401a48623df1a5b0c2338cf9d1c7287231
+ms.sourcegitcommit: 32135463a8494d9ed1600a58f51819359e3c09dc
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 09/08/2020
-ms.locfileid: "89542243"
+ms.lasthandoff: 10/08/2020
+ms.locfileid: "91833796"
 ---
 # <a name="sysdm_db_xtp_index_stats-transact-sql"></a>sys.dm_db_xtp_index_stats(Transact-SQL)
 [!INCLUDE[sql-asdb-asdbmi](../../includes/applies-to-version/sql-asdb-asdbmi.md)]
 
   데이터베이스를 마지막으로 다시 시작한 후 수집된 통계가 포함됩니다.  
   
- 자세한 내용은 메모리 내 [OLTP &#40;메모리 내 최적화&#41;](../../relational-databases/in-memory-oltp/in-memory-oltp-in-memory-optimization.md) 및 [메모리 최적화 테이블에서 인덱스 사용에 대 한 지침](https://msdn.microsoft.com/library/16ef63a4-367a-46ac-917d-9eebc81ab29b)을 참조 하세요.  
+ 자세한 내용은 메모리 내 [OLTP &#40;메모리 내 최적화&#41;](../../relational-databases/in-memory-oltp/in-memory-oltp-in-memory-optimization.md) 및 [메모리 최적화 테이블에서 인덱스 사용에 대 한 지침](/previous-versions/sql/sql-server-2016/dn133166(v=sql.130))을 참조 하세요.  
 
   
 |열 이름|데이터 형식|Description|  
@@ -62,5 +62,4 @@ ms.locfileid: "89542243"
   
 ## <a name="see-also"></a>참고 항목  
  [메모리 최적화 테이블 동적 관리 뷰 &#40;Transact-SQL&#41;](../../relational-databases/system-dynamic-management-views/memory-optimized-table-dynamic-management-views-transact-sql.md)  
-  
   

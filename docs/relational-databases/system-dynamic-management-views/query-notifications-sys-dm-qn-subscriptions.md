@@ -1,6 +1,6 @@
 ---
-description: 쿼리 알림-sys. dm_qn_subscriptions
-title: sys. dm_qn_subscriptions (Transact-sql) | Microsoft Docs
+description: 쿼리 알림-sys.dm_qn_subscriptions
+title: sys.dm_qn_subscriptions (Transact-sql) | Microsoft Docs
 ms.custom: ''
 ms.date: 03/15/2017
 ms.prod: sql
@@ -19,14 +19,14 @@ helpviewer_keywords:
 ms.assetid: a3040ce6-f5af-48fc-8835-c418912f830c
 author: markingmyname
 ms.author: maghan
-ms.openlocfilehash: 47bc6dae0c1164fefbffd0a799b5dbfcf7137bb6
-ms.sourcegitcommit: dd36d1cbe32cd5a65c6638e8f252b0bd8145e165
+ms.openlocfilehash: 197d3fd3ab4108c898c9377bbeed2f0e16e83d76
+ms.sourcegitcommit: 32135463a8494d9ed1600a58f51819359e3c09dc
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 09/08/2020
-ms.locfileid: "89542394"
+ms.lasthandoff: 10/08/2020
+ms.locfileid: "91834469"
 ---
-# <a name="query-notifications---sysdm_qn_subscriptions"></a>쿼리 알림-sys. dm_qn_subscriptions
+# <a name="query-notifications---sysdm_qn_subscriptions"></a>쿼리 알림-sys.dm_qn_subscriptions
 [!INCLUDE [SQL Server](../../includes/applies-to-version/sqlserver.md)]
 
   서버에서 활성 쿼리 알림 구독에 관한 정보를 반환합니다. 이 뷰를 사용하여 서버 또는 지정된 데이터베이스의 활성 구독을 확인하거나 지정된 서버 보안 주체를 확인할 수 있습니다.  
@@ -43,7 +43,7 @@ ms.locfileid: "89542394"
   
 ## <a name="relationship-cardinalities"></a>관계 카디널리티  
   
-|시작|대상|켜기|Type|  
+|From|받는 사람|켜기|유형|  
 |----------|--------|--------|----------|  
 |**sys.dm_qn_subscriptions**|**sys.databases**|**database_id**|다 대 일|  
 |**sys.dm_qn_subscriptions**|**sys.internal_tables**|**object_id**|다 대 일|  
@@ -56,7 +56,7 @@ ms.locfileid: "89542394"
 |코드|보조 상태|정보|  
 |----------|------------------|----------|  
 |65798|데이터가 변경되어 구독이 발생했습니다.|삽입으로 인해 구독이 트리거되었습니다.|  
-|65799|데이터가 변경되어 구독이 발생했습니다.|삭제|  
+|65799|데이터가 변경되어 구독이 발생했습니다.|DELETE|  
 |65800|데이터가 변경되어 구독이 발생했습니다.|업데이트|  
 |65801|데이터가 변경되어 구독이 발생했습니다.|병합|  
 |65802|데이터가 변경되어 구독이 발생했습니다.|테이블 자르기|  
@@ -97,7 +97,7 @@ ms.locfileid: "89542394"
 > [!NOTE]  
 >  사용자에게 VIEW SERVER STATE 권한이 없다면 이 뷰는 현재 사용자가 소유한 구독에 관한 정보를 반환합니다.  
   
-## <a name="examples"></a>예제  
+## <a name="examples"></a>예  
   
 ### <a name="a-return-active-query-notification-subscriptions-for-the-current-user"></a>A. 현재 사용자에 대한 활성 쿼리 알림 구독 반환  
  다음 예에서는 현재 사용자의 활성 쿼리 알림 구독을 반환합니다. 사용자에게 VIEW SERVER STATE 권한이 있을 경우 서버의 모든 활성 구독이 반환됩니다.  
@@ -133,7 +133,6 @@ GO
   
 ## <a name="see-also"></a>참고 항목  
  [동적 관리 뷰 및 함수&#40;Transact-SQL&#41;](~/relational-databases/system-dynamic-management-views/system-dynamic-management-views.md)   
- [쿼리 알림 관련 동적 관리 뷰 &#40;Transact-sql&#41;](https://msdn.microsoft.com/library/92eb22d8-33f3-4c17-b32e-e23acdfbd8f4)   
+ [쿼리 알림 관련 동적 관리 뷰 &#40;Transact-sql&#41;](./system-dynamic-management-views.md)   
  [KILL QUERY NOTIFICATION SUBSCRIPTION&#40;Transact-SQL&#41;](../../t-sql/language-elements/kill-query-notification-subscription-transact-sql.md)  
-  
   

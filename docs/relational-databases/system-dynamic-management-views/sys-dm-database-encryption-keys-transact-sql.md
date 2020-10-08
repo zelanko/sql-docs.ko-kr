@@ -1,6 +1,6 @@
 ---
 description: sys.dm_database_encryption_keys(Transact-SQL)
-title: sys. dm_database_encryption_keys (Transact-sql) | Microsoft Docs
+title: sys.dm_database_encryption_keys (Transact-sql) | Microsoft Docs
 ms.custom: ''
 ms.date: 03/27/2019
 ms.prod: sql
@@ -21,12 +21,12 @@ ms.assetid: 56fee8f3-06eb-4fff-969e-abeaa0c4b8e4
 author: markingmyname
 ms.author: maghan
 monikerRange: =azuresqldb-current||>=sql-server-2016||=sqlallproducts-allversions||>=sql-server-linux-2017||=azuresqldb-mi-current
-ms.openlocfilehash: 6795fed58b8c368e838746d107325c221c58fcf4
-ms.sourcegitcommit: dd36d1cbe32cd5a65c6638e8f252b0bd8145e165
+ms.openlocfilehash: b876db6159985e600536439f587004b33fd6fc6f
+ms.sourcegitcommit: 32135463a8494d9ed1600a58f51819359e3c09dc
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 09/08/2020
-ms.locfileid: "89546661"
+ms.lasthandoff: 10/08/2020
+ms.locfileid: "91834283"
 ---
 # <a name="sysdm_database_encryption_keys-transact-sql"></a>sys.dm_database_encryption_keys(Transact-SQL)
 [!INCLUDE [SQL Server SQL Database](../../includes/applies-to-version/sql-asdb.md)]
@@ -45,7 +45,7 @@ ms.locfileid: "89546661"
 |key_algorithm|**nvarchar(32)**|키에 사용된 알고리즘을 표시합니다.|  
 |key_length|**int**|키의 길이를 표시합니다.|  
 |encryptor_thumbprint|**varbinary(20)**|암호기의 손도장을 표시합니다.|  
-|encryptor_type|**nvarchar(32)**|**적용 대상**: [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] ([!INCLUDE[ssSQL11](../../includes/sssql11-md.md)] ~ [현재 버전](https://go.microsoft.com/fwlink/p/?LinkId=299658)).<br /><br /> 암호기를 설명합니다.|  
+|encryptor_type|**nvarchar(32)**|**적용 대상**: [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] ([!INCLUDE[ssSQL11](../../includes/sssql11-md.md)] ~ [현재 버전](../../sql-server/what-s-new-in-sql-server-2016.md)).<br /><br /> 암호기를 설명합니다.|  
 |percent_complete|**real**|데이터베이스 암호화 상태 변경의 완료 비율입니다. 상태 변경이 없으면 0이 됩니다.|
 |encryption_state_desc|**nvarchar(32)**|**적용 대상**: [!INCLUDE[sql-server-2019](../../includes/sssqlv15-md.md)] 이상<br><br> 데이터베이스가 암호화 되었는지 아니면 암호화 되지 않는지를 나타내는 문자열입니다.<br><br>없음<br><br>즉<br><br>됨<br><br>DECRYPTION_IN_PROGRESS<br><br>ENCRYPTION_IN_PROGRESS<br><br>KEY_CHANGE_IN_PROGRESS<br><br>PROTECTION_CHANGE_IN_PROGRESS|
 |encryption_scan_state|**int**|**적용 대상**: [!INCLUDE[sql-server-2019](../../includes/sssqlv15-md.md)] 이상<br><br>암호화 검색의 현재 상태를 나타냅니다. <br><br>0 = 검색이 시작 되지 않았습니다. TDE가 사용 하도록 설정 되어 있지 않습니다.<br><br>1 = 검사가 진행 중입니다.<br><br>2 = 검사가 진행 중이지만 일시 중단 되었습니다. 사용자를 다시 시작할 수 있습니다.<br><br>3 = 어떤 이유로 검사가 중단 되었으며 수동 작업이 필요 합니다. 자세한 내용은 Microsoft 지원를 문의 하세요.<br><br>4 = 검사가 성공적으로 완료 되었으며 TDE가 사용 하도록 설정 되 고 암호화가 완료 되었습니다.|
@@ -68,5 +68,4 @@ ms.locfileid: "89546661"
  [CREATE DATABASE ENCRYPTION KEY &#40;Transact-SQL&#41;](../../t-sql/statements/create-database-encryption-key-transact-sql.md)   
  [ALTER DATABASE ENCRYPTION KEY &#40;Transact-SQL&#41;](../../t-sql/statements/alter-database-encryption-key-transact-sql.md)   
  [DROP DATABASE ENCRYPTION KEY &#40;Transact-SQL&#41;](../../t-sql/statements/drop-database-encryption-key-transact-sql.md)  
-  
   

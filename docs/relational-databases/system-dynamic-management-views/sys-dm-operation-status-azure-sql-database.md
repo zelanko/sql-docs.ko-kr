@@ -1,6 +1,6 @@
 ---
 description: sys.dm_operation_status
-title: sys. dm_operation_status | Microsoft Docs
+title: sys.dm_operation_status | Microsoft Docs
 ms.custom: ''
 ms.date: 06/05/2017
 ms.service: sql-database
@@ -20,12 +20,12 @@ ms.assetid: cc847784-7f61-4c69-8b78-5f971bb24d61
 author: markingmyname
 ms.author: maghan
 monikerRange: = azuresqldb-current || = azure-sqldw-latest || = sqlallproducts-allversions
-ms.openlocfilehash: 201d7b1c0a15299817edfc663a0176f98ad72156
-ms.sourcegitcommit: dd36d1cbe32cd5a65c6638e8f252b0bd8145e165
+ms.openlocfilehash: 777dd89339ef2eefccdb5ee180178100a16b5216
+ms.sourcegitcommit: 32135463a8494d9ed1600a58f51819359e3c09dc
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 09/08/2020
-ms.locfileid: "89532013"
+ms.lasthandoff: 10/08/2020
+ms.locfileid: "91834148"
 ---
 # <a name="sysdm_operation_status"></a>sys.dm_operation_status
 
@@ -46,7 +46,7 @@ ms.locfileid: "89532013"
 |percent_complete|**int**|완료된 작업의 백분율입니다. 값은 연속 되지 않으며 유효한 값은 아래에 나열 됩니다. NULL이 아닙니다.<br/><br/>0 = 작업이 시작 되지 않음<br/>50 = 작업 진행 중<br/>100 = 작업 완료|  
 |error_code|**int**|실패한 작업 중에 발생한 오류를 나타내는 코드입니다. 값이 0이면 작업이 성공적으로 완료되었음을 나타냅니다.|  
 |error_desc|**nvarchar(2048)**|실패한 작업 중에 발생한 오류에 대한 설명입니다.|  
-|error_severity|**int**|실패한 작업 중에 발생한 오류의 심각도 수준입니다. 오류 심각도에 대 한 자세한 내용은 [데이터베이스 엔진 오류 심각도](https://go.microsoft.com/fwlink/?LinkId=251052)를 참조 하세요.|  
+|error_severity|**int**|실패한 작업 중에 발생한 오류의 심각도 수준입니다. 오류 심각도에 대 한 자세한 내용은 [데이터베이스 엔진 오류 심각도](../errors-events/database-engine-error-severities.md)를 참조 하세요.|  
 |error_state|**int**|나중에 사용하기 위해 예약되어 있습니다. 향후 호환성은 보장되지 않습니다.|  
 |start_time|**datetime**|작업이 시작된 타임스탬프입니다.|  
 |last_modify_time|**datetime**|장기 실행 작업에 대해 레코드가 마지막으로 수정된 타임스탬프입니다. 완료된 작업의 경우 이 필드에는 작업 완료 시간의 타임스탬프가 표시됩니다.|  
@@ -75,7 +75,7 @@ ms.locfileid: "89532013"
   
 -   데이터베이스 삭제  
 
-이 보기의 정보는 약 1 시간 동안 보존 됩니다. 최근 90 일 동안의 작업 세부 정보를 보려면 [Azure 활동 로그](https://docs.microsoft.com/azure/azure-monitor/platform/activity-log) 를 사용 하세요. 90 일 넘게 보존 하려면 Log Analytics 작업 영역에 [활동 로그](https://docs.microsoft.com/azure/azure-monitor/platform/activity-log#send-to-log-analytics-workspace) 항목을 전송 하는 것이 좋습니다.
+이 보기의 정보는 약 1 시간 동안 보존 됩니다. 최근 90 일 동안의 작업 세부 정보를 보려면 [Azure 활동 로그](/azure/azure-monitor/platform/activity-log) 를 사용 하세요. 90 일 넘게 보존 하려면 Log Analytics 작업 영역에 [활동 로그](/azure/azure-monitor/platform/activity-log#send-to-log-analytics-workspace) 항목을 전송 하는 것이 좋습니다.
 
 ## <a name="example"></a>예제  
  데이터베이스 ' mydb '와 연결 된 최근 지역 복제 작업을 표시 합니다.  
@@ -88,8 +88,7 @@ SELECT * FROM sys.dm_operation_status
   
 ## <a name="see-also"></a>참고 항목  
  [지역에서 복제 동적 관리 뷰 및 함수 &#40;Azure SQL Database&#41;](../../relational-databases/system-dynamic-management-views/geo-replication-dynamic-management-views-and-functions-azure-sql-database.md)   
- [dm_geo_replication_link_status &#40;Azure SQL Database&#41;](../../relational-databases/system-dynamic-management-views/sys-dm-geo-replication-link-status-azure-sql-database.md)   
- [geo_replication_links &#40;Azure SQL Database&#41;](../../relational-databases/system-dynamic-management-views/sys-geo-replication-links-azure-sql-database.md)   
- [ALTER DATABASE &#40;Azure SQL Database&#41;](../../t-sql/statements/alter-database-azure-sql-database.md)  
-  
+ [sys.dm_geo_replication_link_status &#40;Azure SQL Database&#41;](../../relational-databases/system-dynamic-management-views/sys-dm-geo-replication-link-status-azure-sql-database.md)   
+ [sys.geo_replication_links &#40;Azure SQL Database&#41;](../../relational-databases/system-dynamic-management-views/sys-geo-replication-links-azure-sql-database.md)   
+ [ALTER DATABASE &#40;Azure SQL Database&#41;](../../t-sql/statements/alter-database-transact-sql.md)  
   

@@ -1,5 +1,5 @@
 ---
-title: sys. dm_pdw_nodes_exec_query_profiles (Transact-sql) | Microsoft Docs
+title: sys.dm_pdw_nodes_exec_query_profiles (Transact-sql) | Microsoft Docs
 description: 쿼리가 실행 되는 동안 실시간 데이터 웨어하우스 쿼리 진행률을 모니터링 하는 데 사용할 수 있는 동적 관리 뷰입니다.
 ms.custom: ''
 ms.date: 10/14/2019
@@ -13,14 +13,14 @@ ms.assetid: ''
 author: XiaoyuMSFT
 ms.author: xiaoyul
 monikerRange: =azure-sqldw-latest || = sqlallproducts-allversions
-ms.openlocfilehash: cb63045fa1a34898e9c195e7a5c75bdf6b34b15a
-ms.sourcegitcommit: df1f0f2dfb9452f16471e740273cd1478ff3100c
+ms.openlocfilehash: cd4f8ad0ae52876015df815089733f49a37d2f35
+ms.sourcegitcommit: 32135463a8494d9ed1600a58f51819359e3c09dc
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 07/29/2020
-ms.locfileid: "87394351"
+ms.lasthandoff: 10/08/2020
+ms.locfileid: "91834336"
 ---
-# <a name="sysdm_pdw_nodes_exec_query_profiles-transact-sql"></a>sys. dm_pdw_nodes_exec_query_profiles (Transact-sql)
+# <a name="sysdm_pdw_nodes_exec_query_profiles-transact-sql"></a>sys.dm_pdw_nodes_exec_query_profiles (Transact-sql)
 [!INCLUDE [asa](../../includes/applies-to-version/asa.md)]
 
 쿼리가 실행 되는 동안 실시간 데이터 웨어하우스 쿼리 진행률을 모니터링 합니다.   
@@ -34,7 +34,7 @@ ms.locfileid: "87394351"
 |session_id|**smallint**|이 쿼리가 실행되는 세션을 식별합니다. dm_exec_sessions.session_id를 참조합니다.|  
 |request_id|**int**|대상 요청을 식별합니다. dm_exec_sessions.request_id를 참조합니다.|  
 |sql_handle|**varbinary(64)**|쿼리가 속하는 일괄 처리 또는 저장 프로시저를 고유 하 게 식별 하는 토큰입니다. dm_exec_query_stats.sql_handle을 참조합니다.|  
-|plan_handle|**varbinary(64)**|실행 된 일괄 처리에 대 한 쿼리 실행 계획을 고유 하 게 식별 하는 토큰 이며 계획 캐시에 있거나 현재 실행 중인 일괄 처리에 대 한 쿼리 실행 계획을 고유 하 게 식별 합니다. Plan_handle dm_exec_query_stats 참조 합니다.|  
+|plan_handle|**varbinary(64)**|실행 된 일괄 처리에 대 한 쿼리 실행 계획을 고유 하 게 식별 하는 토큰 이며 계획 캐시에 있거나 현재 실행 중인 일괄 처리에 대 한 쿼리 실행 계획을 고유 하 게 식별 합니다. Dm_exec_query_stats. plan_handle를 참조 하세요.|  
 |physical_operator_name|**nvarchar(256)**|물리적 연산자 이름입니다.|  
 |node_id|**int**|쿼리 트리에서 연산자 노드를 식별합니다.|  
 |thread_id|**int**|동일한 쿼리 연산자 노드에 속하는 (병렬 쿼리)에 대한 스레드를 구분합니다.|  
@@ -69,14 +69,14 @@ ms.locfileid: "87394351"
 |estimated_read_row_count|**bigint**|**적용 대상:** S p [!INCLUDE[ssSQL15_md](../../includes/sssql15-md.md)] 1 부터는 <br/>나머지 조건자가 적용 되기 전에 연산자에서 읽을 수 있는 것으로 예상 되는 행 수입니다.|  
   
 ## <a name="remarks"></a>설명  
-[Dm_exec_query_profiles](https://docs.microsoft.com/sql/relational-databases/system-dynamic-management-views/sys-dm-exec-query-profiles-transact-sql?view=sql-server-ver15) 적용 됩니다.  
+[Sys.dm_exec_query_profiles](./sys-dm-exec-query-profiles-transact-sql.md?view=sql-server-ver15) 에 동일한 설명이 적용 됩니다.  
 
 ## <a name="permissions"></a>사용 권한  
  서버에 대한 `VIEW SERVER STATE` 권한이 필요합니다.  
 
 ## <a name="see-also"></a>참고 항목  
- [Transact-sql&#41;&#40;SQL Data Warehouse 및 병렬 데이터 웨어하우스 동적 관리 뷰](../../relational-databases/system-dynamic-management-views/sql-and-parallel-data-warehouse-dynamic-management-views.md)  
+ [Transact-sql&#41;&#40;SQL Data Warehouse 및 병렬 데이터 웨어하우스 동적 관리 뷰 ](../../relational-databases/system-dynamic-management-views/sql-and-parallel-data-warehouse-dynamic-management-views.md)  
    
 
  ## <a name="next-steps"></a>다음 단계
- 더 많은 개발 팁은 [SQL Data Warehouse 개발 개요](https://docs.microsoft.com/azure/sql-data-warehouse/sql-data-warehouse-overview-develop)를 참조하세요.
+ 더 많은 개발 팁은 [SQL Data Warehouse 개발 개요](/azure/sql-data-warehouse/sql-data-warehouse-overview-develop)를 참조하세요.

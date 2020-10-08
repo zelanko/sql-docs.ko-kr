@@ -15,12 +15,12 @@ helpviewer_keywords:
 ms.assetid: aea07b33-f715-4b61-9d1e-8c77b03e9578
 author: markingmyname
 ms.author: maghan
-ms.openlocfilehash: a8c086e5d9cc08af95b027e4ea986845861005a5
-ms.sourcegitcommit: dd36d1cbe32cd5a65c6638e8f252b0bd8145e165
+ms.openlocfilehash: 2acd26b8fb88fa6cf51c6b8715eee9cdfca8ad49
+ms.sourcegitcommit: 32135463a8494d9ed1600a58f51819359e3c09dc
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 09/08/2020
-ms.locfileid: "89544890"
+ms.lasthandoff: 10/08/2020
+ms.locfileid: "91834304"
 ---
 # <a name="execution-related-dynamic-management-views-and-functions-transact-sql"></a>실행 관련 동적 관리 뷰 및 함수(Transact-SQL)
 [!INCLUDE [SQL Server](../../includes/applies-to-version/sqlserver.md)]
@@ -117,11 +117,9 @@ ms.locfileid: "89544890"
 :::row-end:::
 
 > [!NOTE]  
->  **Dm_exec_query_transformation_stats** 동적 관리 뷰는 정보를 제공 하기 위해서만 확인 됩니다. 지원 안 됨 향후 호환성은 보장되지 않습니다.  
+>  **Sys.dm_exec_query_transformation_stats** 동적 관리 뷰는 정보를 제공 하기 위해서만 확인 됩니다. 지원 안 됨 향후 호환성은 보장되지 않습니다.  
   
 ## <a name="see-also"></a>참고 항목  
  [동적 관리 뷰 및 함수&#40;Transact-SQL&#41;](~/relational-databases/system-dynamic-management-views/system-dynamic-management-views.md)   
- [Transact-sql&#41;&#40;시스템 뷰 ](https://msdn.microsoft.com/library/35a6161d-7f43-4e00-bcd3-3091f2015e90)  
+ [Transact-sql&#41;&#40;시스템 뷰 ](../../t-sql/language-reference.md)  
   
-  
-

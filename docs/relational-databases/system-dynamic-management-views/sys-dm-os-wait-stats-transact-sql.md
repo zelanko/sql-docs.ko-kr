@@ -1,6 +1,6 @@
 ---
 description: sys.dm_os_wait_stats(Transact-SQL)
-title: sys. dm_os_wait_stats (Transact-sql) | Microsoft Docs
+title: sys.dm_os_wait_stats (Transact-sql) | Microsoft Docs
 ms.custom: ''
 ms.date: 08/19/2020
 ms.prod: sql
@@ -21,20 +21,20 @@ ms.assetid: 568d89ed-2c96-4795-8a0c-2f3e375081da
 author: markingmyname
 ms.author: maghan
 monikerRange: '>=aps-pdw-2016||=azuresqldb-current||=azure-sqldw-latest||>=sql-server-2016||=sqlallproducts-allversions||>=sql-server-linux-2017||=azuresqldb-mi-current'
-ms.openlocfilehash: 678c6710e17d8383077be4acff8921268e9a0b6c
-ms.sourcegitcommit: dd36d1cbe32cd5a65c6638e8f252b0bd8145e165
+ms.openlocfilehash: bdf67ebe15b869cb295c3090fe24ed5cd4f50413
+ms.sourcegitcommit: 32135463a8494d9ed1600a58f51819359e3c09dc
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 09/08/2020
-ms.locfileid: "89532332"
+ms.lasthandoff: 10/08/2020
+ms.locfileid: "91834233"
 ---
 # <a name="sysdm_os_wait_stats-transact-sql"></a>sys.dm_os_wait_stats(Transact-SQL)
 [!INCLUDE [sql-asdb-asdbmi-asa-pdw](../../includes/applies-to-version/sql-asdb-asdbmi-asa-pdw.md)]
 
-실행 중인 스레드로 인해 발생한 모든 대기에 대한 정보를 반환합니다. 이 집계 뷰를 사용하여 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]와 관련된 성능 문제뿐 아니라 특정 쿼리 및 일괄 처리와 관련된 성능 문제도 진단할 수 있습니다. [dm_exec_session_wait_stats &#40;transact-sql&#41;](../../relational-databases/system-dynamic-management-views/sys-dm-exec-session-wait-stats-transact-sql.md) 는 세션과 유사한 정보를 제공 합니다.  
+실행 중인 스레드로 인해 발생한 모든 대기에 대한 정보를 반환합니다. 이 집계 뷰를 사용하여 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]와 관련된 성능 문제뿐 아니라 특정 쿼리 및 일괄 처리와 관련된 성능 문제도 진단할 수 있습니다. [sys.dm_exec_session_wait_stats &#40;transact-sql&#41;](../../relational-databases/system-dynamic-management-views/sys-dm-exec-session-wait-stats-transact-sql.md) 는 세션과 유사한 정보를 제공 합니다.  
   
 > [!NOTE] 
-> ** [!INCLUDE[ssSDWfull](../../includes/sssdwfull-md.md)] 또는 [!INCLUDE[ssPDW](../../includes/sspdw-md.md)] **에서이를 호출 하려면 이름 **sys. dm_pdw_nodes_os_wait_stats**을 사용 합니다.  
+> ** [!INCLUDE[ssSDWfull](../../includes/sssdwfull-md.md)] 또는 [!INCLUDE[ssPDW](../../includes/sspdw-md.md)] **에서이를 호출 하려면 **sys.dm_pdw_nodes_os_wait_stats**이름을 사용 합니다.  
   
 |열 이름|데이터 형식|Description|  
 |-----------------|---------------|-----------------|  
@@ -87,7 +87,7 @@ GO
   
  다음 표에서는 태스크에서 발생한 대기 유형을 나열합니다.  
 
-|형식 |Description| 
+|type |Description| 
 |-------------------------- |--------------------------| 
 |ABR |정보를 제공하기 위해서만 확인됩니다. 지원 안 됨 향후 호환성은 보장되지 않습니다.| | 
 |AM_INDBUILD_ALLOCATION |내부적으로만 사용됩니다. <br /><br /> **적용 대상**: [!INCLUDE[ssSQL12](../../includes/sssql11-md.md)] 이상| 
@@ -136,7 +136,7 @@ GO
 |BROKER_TRANSMISSION_OBJECT |내부적으로만 사용됩니다. <br /><br /> **적용 대상**: [!INCLUDE[ssSQL12](../../includes/sssql11-md.md)] 이상| 
 |BROKER_TRANSMISSION_TABLE |내부적으로만 사용됩니다. <br /><br /> **적용 대상**: [!INCLUDE[ssSQL12](../../includes/sssql11-md.md)] 이상| 
 |BROKER_TRANSMISSION_WORK |내부적으로만 사용됩니다. <br /><br /> **적용 대상**: [!INCLUDE[ssSQL12](../../includes/sssql11-md.md)] 이상| 
-|BROKER_TRANSMITTER |Service Broker 전송기가 작업을 기다리는 경우에 발생 합니다. Service Broker에는 여러 대화 상자에서 하나 이상의 연결 끝점을 통해 전송 되는 메시지를 예약 하는 전송기 라는 구성 요소가 있습니다. 전송기에는이 목적을 위한 2 개의 전용 스레드가 있습니다. 이러한 전송기 스레드가 전송 연결을 사용 하 여 대화 메시지를 보낼 때까지 대기 하는 경우이 대기 유형은 청구 됩니다. 이 대기 유형에 대 한 waiting_tasks_count 높은 값은 이러한 전송기 스레드에 대해 간헐적으로 작동 하며 성능 문제를 표시 하지 않습니다. Service broker가 전혀 사용 되지 않는 경우에는 2 (전송기 스레드의 경우) waiting_tasks_count 2 여야 하며, wait_time_ms 인스턴스가 시작 된 이후에 지속 되는 기간의 두 배가 되어야 합니다. [Service broker 대기 통계](https://blogs.msdn.microsoft.com/sql_service_broker/2008/12/01/service-broker-wait-types)를 참조 하십시오.|
+|BROKER_TRANSMITTER |Service Broker 전송기가 작업을 기다리는 경우에 발생 합니다. Service Broker에는 여러 대화 상자에서 하나 이상의 연결 끝점을 통해 전송 되는 메시지를 예약 하는 전송기 라는 구성 요소가 있습니다. 전송기에는이 목적을 위한 2 개의 전용 스레드가 있습니다. 이러한 전송기 스레드가 전송 연결을 사용 하 여 대화 메시지를 보낼 때까지 대기 하는 경우이 대기 유형은 청구 됩니다. 이 대기 유형에 대 한 waiting_tasks_count 높은 값은 이러한 전송기 스레드에 대해 간헐적으로 작동 하며 성능 문제를 표시 하지 않습니다. Service broker가 전혀 사용 되지 않는 경우에는 2 (전송기 스레드의 경우) waiting_tasks_count 2 여야 하며, wait_time_ms 인스턴스가 시작 된 이후에 지속 되는 기간의 두 배가 되어야 합니다. [Service broker 대기 통계](/archive/blogs/sql_service_broker/service-broker-wait-types)를 참조 하십시오.|
 |BUILTIN_HASHKEY_MUTEX |내부 데이터 구조를 초기화하는 동안 인스턴스 시작 후 발생할 수 있습니다. 데이터 구조가 초기화되면 되풀이되지 않습니다.| 
 |CHANGE_TRACKING_WAITFORCHANGES |내부적으로만 사용됩니다. <br /><br /> **적용 대상**: [!INCLUDE[ssSQL12](../../includes/sssql11-md.md)] 이상| 
 |CHECK_PRINT_RECORD |정보를 제공하기 위해서만 확인됩니다. 지원 안 됨 향후 호환성은 보장되지 않습니다.| 
@@ -331,7 +331,7 @@ GO
 |HADR_NOTIFICATION_WORKER_STARTUP_SYNC |백그라운드 태스크가 Windows Server 장애 조치(Failover) 클러스터링 알림을 처리하는 백그라운드 태스크가 시작될 때까지 기다리고 있습니다. 내부적으로만 사용됩니다. <br /><br /> **적용 대상**: [!INCLUDE[ssSQL12](../../includes/sssql11-md.md)] 이상| 
 |HADR_NOTIFICATION_WORKER_TERMINATION_SYNC |백그라운드 태스크가 Windows Server 장애 조치(Failover) 클러스터링 알림을 처리하는 백그라운드 태스크가 종료될 때까지 기다리고 있습니다. 내부적으로만 사용됩니다. <br /><br /> **적용 대상**: [!INCLUDE[ssSQL12](../../includes/sssql11-md.md)] 이상| 
 |HADR_PARTNER_SYNC |파트너 목록에 대한 동시성 제어 대기입니다. <br /><br /> **적용 대상**: [!INCLUDE[ssSQL12](../../includes/sssql11-md.md)] 이상| 
-|HADR_READ_ALL_NETWORKS |WSFC 네트워크 목록에 대한 읽기 또는 쓰기 액세스를 얻기 위해 기다립니다. 내부적으로만 사용됩니다. 참고: 엔진은 동적 관리 뷰 (예: dm_hadr_cluster_networks)에서 사용 되는 WSFC 네트워크 목록을 유지 하거나 WSFC 네트워크 정보를 참조 하는 Always On Transact-sql 문의 유효성을 검사 합니다. 이 목록은 엔진 시작, WSFC 관련 알림 및 내부 Always On 다시 시작 (예: WSFC 쿼럼을 손실 및 regaining) 될 때 업데이트 됩니다. 해당 목록에서 업데이트가 진행 중일 때는 일반적으로 태스크가 차단됩니다. <br /><br /> **적용 대상**: [!INCLUDE[ssSQL12](../../includes/sssql11-md.md)] 이상| 
+|HADR_READ_ALL_NETWORKS |WSFC 네트워크 목록에 대한 읽기 또는 쓰기 액세스를 얻기 위해 기다립니다. 내부적으로만 사용됩니다. 참고: 엔진은 동적 관리 뷰 (예: sys.dm_hadr_cluster_networks)에서 사용 되는 WSFC 네트워크 목록을 유지 하거나 WSFC 네트워크 정보를 참조 하는 Always On Transact-sql 문의 유효성을 검사 합니다. 이 목록은 엔진 시작, WSFC 관련 알림 및 내부 Always On 다시 시작 (예: WSFC 쿼럼을 손실 및 regaining) 될 때 업데이트 됩니다. 해당 목록에서 업데이트가 진행 중일 때는 일반적으로 태스크가 차단됩니다. <br /><br /> **적용 대상**: [!INCLUDE[ssSQL12](../../includes/sssql11-md.md)] 이상| 
 |HADR_RECOVERY_WAIT_FOR_CONNECTION |복구를 실행하기 전에 보조 데이터베이스가 주 데이터베이스에 연결될 때까지 기다립니다. 이는 주 데이터베이스에 대한 연결이 느린 경우 길어질 수 있는 예상되는 대기입니다. <br /><br /> **적용 대상**: [!INCLUDE[ssSQL12](../../includes/sssql11-md.md)] 이상| 
 |HADR_RECOVERY_WAIT_FOR_UNDO |데이터베이스 복구가 보조 데이터베이스에서 주 데이터베이스와의 공통 로그 지점으로 다시 설정하기 위해 되돌리기 및 초기화 단계를 완료할 때까지 기다립니다. 이는 장애 조치(failover) 후 예상되는 대기입니다. 실행 취소 진행률은 Windows 시스템 모니터(perfmon.exe) 및 동적 관리 뷰를 통해 추적할 수 있습니다. <br /><br /> **적용 대상**: [!INCLUDE[ssSQL12](../../includes/sssql11-md.md)] 이상| 
 |HADR_REPLICAINFO_SYNC |동시성 제어가 현재 복제본 상태를 업데이트할 때까지 기다립니다. <br /><br /> **적용 대상**: [!INCLUDE[ssSQL12](../../includes/sssql11-md.md)] 이상| 
@@ -381,12 +381,12 @@ GO
 |KTM_ENLISTMENT |정보를 제공하기 위해서만 확인됩니다. 지원 안 됨 향후 호환성은 보장되지 않습니다.| 
 |KTM_RECOVERY_MANAGER |정보를 제공하기 위해서만 확인됩니다. 지원 안 됨 향후 호환성은 보장되지 않습니다.| 
 |KTM_RECOVERY_RESOLUTION |정보를 제공하기 위해서만 확인됩니다. 지원 안 됨 향후 호환성은 보장되지 않습니다.| 
-|LATCH_DT |DT(삭제) 래치를 대기하는 경우에 발생합니다. 버퍼 래치 또는 트랜잭션 표시 래치를 포함하지 않습니다. 래치 \_ \* 대기 목록은 sys. dm_os_latch_stats에서 사용할 수 있습니다. sys.dm_os_latch_stats는 LATCH_NL, LATCH_SH, LATCH_UP, LATCH_EX 및 LATCH_DT 대기를 그룹화합니다.| 
-|LATCH_EX |EX(배타) 래치를 대기하는 경우에 발생합니다. 버퍼 래치 또는 트랜잭션 표시 래치를 포함하지 않습니다. 래치 \_ \* 대기 목록은 sys. dm_os_latch_stats에서 사용할 수 있습니다. sys.dm_os_latch_stats는 LATCH_NL, LATCH_SH, LATCH_UP, LATCH_EX 및 LATCH_DT 대기를 그룹화합니다.| 
-|LATCH_KP |KP(유지) 래치를 대기하는 경우에 발생합니다. 버퍼 래치 또는 트랜잭션 표시 래치를 포함하지 않습니다. 래치 \_ \* 대기 목록은 sys. dm_os_latch_stats에서 사용할 수 있습니다. sys.dm_os_latch_stats는 LATCH_NL, LATCH_SH, LATCH_UP, LATCH_EX 및 LATCH_DT 대기를 그룹화합니다.| 
+|LATCH_DT |DT(삭제) 래치를 대기하는 경우에 발생합니다. 버퍼 래치 또는 트랜잭션 표시 래치를 포함하지 않습니다. 래치 \_ \* 대기 목록은 sys.dm_os_latch_stats에서 사용할 수 있습니다. sys.dm_os_latch_stats는 LATCH_NL, LATCH_SH, LATCH_UP, LATCH_EX 및 LATCH_DT 대기를 그룹화합니다.| 
+|LATCH_EX |EX(배타) 래치를 대기하는 경우에 발생합니다. 버퍼 래치 또는 트랜잭션 표시 래치를 포함하지 않습니다. 래치 \_ \* 대기 목록은 sys.dm_os_latch_stats에서 사용할 수 있습니다. sys.dm_os_latch_stats는 LATCH_NL, LATCH_SH, LATCH_UP, LATCH_EX 및 LATCH_DT 대기를 그룹화합니다.| 
+|LATCH_KP |KP(유지) 래치를 대기하는 경우에 발생합니다. 버퍼 래치 또는 트랜잭션 표시 래치를 포함하지 않습니다. 래치 \_ \* 대기 목록은 sys.dm_os_latch_stats에서 사용할 수 있습니다. sys.dm_os_latch_stats는 LATCH_NL, LATCH_SH, LATCH_UP, LATCH_EX 및 LATCH_DT 대기를 그룹화합니다.| 
 |LATCH_NL |정보를 제공하기 위해서만 확인됩니다. 지원 안 됨 향후 호환성은 보장되지 않습니다.| 
-|LATCH_SH |SH(공유) 래치를 대기하는 경우에 발생합니다. 버퍼 래치 또는 트랜잭션 표시 래치를 포함하지 않습니다. 래치 \_ \* 대기 목록은 sys. dm_os_latch_stats에서 사용할 수 있습니다. sys.dm_os_latch_stats는 LATCH_NL, LATCH_SH, LATCH_UP, LATCH_EX 및 LATCH_DT 대기를 그룹화합니다.| 
-|LATCH_UP |UP(업데이트) 래치를 대기하는 경우에 발생합니다. 버퍼 래치 또는 트랜잭션 표시 래치를 포함하지 않습니다. 래치 \_ \* 대기 목록은 sys. dm_os_latch_stats에서 사용할 수 있습니다. sys.dm_os_latch_stats는 LATCH_NL, LATCH_SH, LATCH_UP, LATCH_EX 및 LATCH_DT 대기를 그룹화합니다.| 
+|LATCH_SH |SH(공유) 래치를 대기하는 경우에 발생합니다. 버퍼 래치 또는 트랜잭션 표시 래치를 포함하지 않습니다. 래치 \_ \* 대기 목록은 sys.dm_os_latch_stats에서 사용할 수 있습니다. sys.dm_os_latch_stats는 LATCH_NL, LATCH_SH, LATCH_UP, LATCH_EX 및 LATCH_DT 대기를 그룹화합니다.| 
+|LATCH_UP |UP(업데이트) 래치를 대기하는 경우에 발생합니다. 버퍼 래치 또는 트랜잭션 표시 래치를 포함하지 않습니다. 래치 \_ \* 대기 목록은 sys.dm_os_latch_stats에서 사용할 수 있습니다. sys.dm_os_latch_stats는 LATCH_NL, LATCH_SH, LATCH_UP, LATCH_EX 및 LATCH_DT 대기를 그룹화합니다.| 
 |LAZYWRITER_SLEEP |지연 기록기 태스크가 일시 중단 될 때 발생 합니다. 대기 중인 백그라운드 태스크에서 사용한 시간을 측정한 것입니다. 사용자 대기를 찾을 때 이 상태는 고려하지 마세요.| 
 |LCK_M_BU |태스크가 대량 업데이트(BU) 잠금을 획득하려고 대기하는 경우에 발생합니다.| 
 |LCK_M_BU_ABORT_BLOCKERS |태스크가 중단 블로커가 포함된 대량 업데이트(BU) 잠금을 획득하려고 대기하는 경우에 발생합니다. ALTER TABLE 및 ALTER INDEX의 낮은 우선 순위 대기 옵션과 관련 됩니다. <br /><br /> **적용 대상**: [!INCLUDE[ssSQL14](../../includes/sssql14-md.md)] 이상| 
@@ -1024,12 +1024,11 @@ GO
   
 -   ddl_with_wait_at_low_priority  
   
- 잠금 호환성 매트릭스는 [dm_tran_locks &#40;transact-sql&#41;](../../relational-databases/system-dynamic-management-views/sys-dm-tran-locks-transact-sql.md)를 참조 하세요.  
+ 잠금 호환성 매트릭스는 [sys.dm_tran_locks &#40;transact-sql&#41;](../../relational-databases/system-dynamic-management-views/sys-dm-tran-locks-transact-sql.md)를 참조 하세요.  
   
 ## <a name="see-also"></a>참고 항목  
     
  [Transact-sql&#41;&#40;운영 체제 관련 동적 관리 뷰 SQL Server ](../../relational-databases/system-dynamic-management-views/sql-server-operating-system-related-dynamic-management-views-transact-sql.md)   
- [dm_exec_session_wait_stats &#40;Transact-sql&#41;](../../relational-databases/system-dynamic-management-views/sys-dm-exec-session-wait-stats-transact-sql.md)   
- [dm_db_wait_stats &#40;Azure SQL Database&#41;](../../relational-databases/system-dynamic-management-views/sys-dm-db-wait-stats-azure-sql-database.md)  
-  
+ [Transact-sql&#41;sys.dm_exec_session_wait_stats &#40;](../../relational-databases/system-dynamic-management-views/sys-dm-exec-session-wait-stats-transact-sql.md)   
+ [sys.dm_db_wait_stats &#40;Azure SQL Database&#41;](../../relational-databases/system-dynamic-management-views/sys-dm-db-wait-stats-azure-sql-database.md)  
   

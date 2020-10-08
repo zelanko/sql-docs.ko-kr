@@ -19,12 +19,12 @@ author: markingmyname
 ms.author: maghan
 monikerRange: = azuresqldb-current || = sqlallproducts-allversions
 ms.custom: seo-dt-2019
-ms.openlocfilehash: 433bcea8a7d0a1f719aac9f76a782f666113189f
-ms.sourcegitcommit: dd36d1cbe32cd5a65c6638e8f252b0bd8145e165
+ms.openlocfilehash: 0d105ddedeafa8a82c068fce90f3e29bc4622f57
+ms.sourcegitcommit: 32135463a8494d9ed1600a58f51819359e3c09dc
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 09/08/2020
-ms.locfileid: "89548482"
+ms.lasthandoff: 10/08/2020
+ms.locfileid: "91834251"
 ---
 # <a name="sysdm_geo_replication_link_status-azure-sql-database"></a>sys.dm_geo_replication_link_status(Azure SQL Database)
 
@@ -44,14 +44,14 @@ ms.locfileid: "89548482"
 |역할(role)|**tinyint**|지역에서 복제 역할, 다음 중 하나입니다.<br /><br /> 0 = 기본 Database_id는 지역에서 복제 파트너 관계에서 주 데이터베이스를 참조 합니다.<br /><br /> 1 = 보조  Database_id는 지역에서 복제 파트너 관계에서 주 데이터베이스를 참조 합니다.|  
 |role_desc|**nvarchar(256)**|PRIMARY<br /><br /> SECONDARY|  
 |secondary_allow_connections|**tinyint**|보조 유형이 며 다음 중 하나입니다.<br /><br /> 0 = 보조 데이터베이스에 대 한 직접 연결이 허용 되지 않으며 읽기 액세스를 위해 데이터베이스를 사용할 수 없습니다.<br /><br /> 2 = 보조 repl의 데이터베이스에 대 한 모든 연결을 허용 하 고 읽기 전용 액세스를 허용 합니다.|  
-|secondary_allow_connections_desc|**nvarchar(256)**|아니요<br /><br /> 모두|  
+|secondary_allow_connections_desc|**nvarchar(256)**|예<br /><br /> 모두|  
 |last_commit|**datetimeoffset**|데이터베이스에 마지막으로 커밋된 트랜잭션 시간입니다. 주 데이터베이스에서 검색 된 경우 주 데이터베이스에 대 한 마지막 커밋 시간을 나타냅니다. 보조 데이터베이스에서 검색 된 경우 보조 데이터베이스의 마지막 커밋 시간을 나타냅니다. 복제 링크의 주 복제본이 다운 되 면 보조 데이터베이스에서 검색 된 경우 보조 데이터베이스에서 발견 된 지점을 나타냅니다.|
   
 > [!NOTE]  
->  보조 데이터베이스를 제거 하 여 복제 관계를 종료 하는 경우 (4.2 섹션) **dm_geo_replication_link_status** 뷰의 해당 데이터베이스에 대 한 행이 사라집니다.  
+>  보조 데이터베이스를 제거 하 여 복제 관계를 종료 하는 경우 (4.2 섹션) **sys.dm_geo_replication_link_status** 보기에서 해당 데이터베이스에 대 한 행이 사라집니다.  
   
 ## <a name="permissions"></a>사용 권한  
- View_database_state 권한이 있는 계정은 **dm_geo_replication_link_status**를 쿼리할 수 있습니다.  
+ View_database_state 권한이 있는 계정은 **sys.dm_geo_replication_link_status**를 쿼리할 수 있습니다.  
   
 ## <a name="example"></a>예제  
  보조 데이터베이스의 복제 지연 및 마지막 복제 시간을 표시 합니다.  
@@ -66,8 +66,7 @@ FROM sys.dm_geo_replication_link_status;
 ```  
   
 ## <a name="see-also"></a>참고 항목  
- [ALTER DATABASE &#40;Azure SQL Database&#41;](../../t-sql/statements/alter-database-azure-sql-database.md)   
- [geo_replication_links &#40;Azure SQL Database&#41;](../../relational-databases/system-dynamic-management-views/sys-geo-replication-links-azure-sql-database.md)   
- [dm_operation_status &#40;Azure SQL Database&#41;](../../relational-databases/system-dynamic-management-views/sys-dm-operation-status-azure-sql-database.md)   
+ [ALTER DATABASE &#40;Azure SQL Database&#41;](../../t-sql/statements/alter-database-transact-sql.md)   
+ [sys.geo_replication_links &#40;Azure SQL Database&#41;](../../relational-databases/system-dynamic-management-views/sys-geo-replication-links-azure-sql-database.md)   
+ [sys.dm_operation_status &#40;Azure SQL Database&#41;](../../relational-databases/system-dynamic-management-views/sys-dm-operation-status-azure-sql-database.md)   
  [sp_wait_for_database_copy_sync](../system-stored-procedures/active-geo-replication-sp-wait-for-database-copy-sync.md)
-  

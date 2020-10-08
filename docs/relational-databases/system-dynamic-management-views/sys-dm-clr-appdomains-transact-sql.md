@@ -1,6 +1,6 @@
 ---
 description: sys.dm_clr_appdomains(Transact-SQL)
-title: sys. dm_clr_appdomains (Transact-sql) | Microsoft Docs
+title: sys.dm_clr_appdomains (Transact-sql) | Microsoft Docs
 ms.custom: ''
 ms.date: 03/14/2017
 ms.prod: sql
@@ -19,12 +19,12 @@ helpviewer_keywords:
 ms.assetid: 9fe0d4fd-950a-4274-a493-85e776278045
 author: markingmyname
 ms.author: maghan
-ms.openlocfilehash: ac0a451dd88d79ab1847d4c5414fadeb01724e3d
-ms.sourcegitcommit: dd36d1cbe32cd5a65c6638e8f252b0bd8145e165
+ms.openlocfilehash: 7f1357535d22306f09f8378e8e71aef6801975ae
+ms.sourcegitcommit: 32135463a8494d9ed1600a58f51819359e3c09dc
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 09/08/2020
-ms.locfileid: "89545348"
+ms.lasthandoff: 10/08/2020
+ms.locfileid: "91834103"
 ---
 # <a name="sysdm_clr_appdomains-transact-sql"></a>sys.dm_clr_appdomains(Transact-SQL)
 [!INCLUDE [SQL Server](../../includes/applies-to-version/sqlserver.md)]
@@ -33,17 +33,17 @@ ms.locfileid: "89545348"
   
  CLR 통합의 관리되는 데이터베이스 개체 유형은 다양합니다. 이러한 개체에 대 한 일반적인 내용은 [CLR (공용 언어 런타임) 통합을 사용 하 여 데이터베이스 개체 작성](../../relational-databases/clr-integration/database-objects/building-database-objects-with-common-language-runtime-clr-integration.md)을 참조 하세요. 이러한 개체가 실행 될 때마다는 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 필요한 코드를 로드 하 고 실행할 수 있는 **AppDomain** 을 만듭니다. **Appdomain** 의 격리 수준은 데이터베이스당 데이터베이스당 하나의 **appdomain** 입니다. 즉, 사용자가 소유한 모든 CLR 개체는 항상 데이터베이스당 동일한 **AppDomain** 에서 실행 됩니다. 사용자가 다른 데이터베이스에 clr 데이터베이스 개체를 등록 하는 경우 clr 데이터베이스 개체는 다른 응용 프로그램 도메인에서 실행 됩니다. 코드 실행이 완료 된 후에는 **AppDomain** 이 제거 되지 않습니다. 나중에 실행하도록 메모리에 캐시됩니다. 이렇게 하면 성능이 향상됩니다.  
   
- 자세한 내용은 [응용 프로그램 도메인](https://go.microsoft.com/fwlink/p/?LinkId=299658)을 참조 하세요.  
+ 자세한 내용은 [응용 프로그램 도메인](../../sql-server/what-s-new-in-sql-server-2016.md)을 참조 하세요.  
   
 |열 이름|데이터 형식|Description|  
 |-----------------|---------------|-----------------|  
-|**appdomain_address**|**varbinary(8)**|**AppDomain**의 주소입니다. 사용자가 소유 하는 모든 관리 되는 데이터베이스 개체는 항상 동일한 **AppDomain**에 로드 됩니다. 이 열을 사용 하 여 **dm_clr_loaded_assemblies**에서이 **AppDomain** 에 현재 로드 된 모든 어셈블리를 조회할 수 있습니다.|  
+|**appdomain_address**|**varbinary(8)**|**AppDomain**의 주소입니다. 사용자가 소유 하는 모든 관리 되는 데이터베이스 개체는 항상 동일한 **AppDomain**에 로드 됩니다. 이 열을 사용 하 여 **sys.dm_clr_loaded_assemblies**에서 현재 **AppDomain** 에 로드 된 모든 어셈블리를 조회할 수 있습니다.|  
 |**appdomain_id**|**int**|**AppDomain**의 ID입니다. 각 **AppDomain** 에는 고유한 ID가 있습니다.|  
 |**appdomain_name**|**varchar (386)**|에 의해 할당 된 **AppDomain** 의 이름 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 입니다.|  
 |**creation_time**|**datetime**|**AppDomain** 이 생성 된 시간입니다. **Appdomain** 은 성능 향상을 위해 캐시 되 고 다시 사용 되기 때문에 **creation_time** 는 코드를 실행 하는 데 반드시 필요한 것은 아닙니다.|  
 |**db_id**|**int**|이 **AppDomain** 이 생성 된 데이터베이스의 ID입니다. 서로 다른 두 데이터베이스에 저장 된 코드는 하나의 **AppDomain**을 공유할 수 없습니다.|  
 |**user_id**|**int**|이 **AppDomain**에서 개체를 실행할 수 있는 사용자의 ID입니다.|  
-|**상태**|**nvarchar(128)**|**AppDomain**의 현재 상태에 대 한 설명자입니다. AppDomain은 생성부터 삭제까지 여러 가지 상태를 가질 수 있습니다. 자세한 내용은 이 항목의 주의 섹션을 참조하십시오.|  
+|**state**|**nvarchar(128)**|**AppDomain**의 현재 상태에 대 한 설명자입니다. AppDomain은 생성부터 삭제까지 여러 가지 상태를 가질 수 있습니다. 자세한 내용은 이 항목의 주의 섹션을 참조하십시오.|  
 |**strong_refcount**|**int**|이 **AppDomain**에 대 한 강력한 참조 수입니다. 이는이 **AppDomain**을 사용 하는 현재 실행 중인 일괄 처리의 수를 반영 합니다. 이 뷰를 실행 하면 **강력한 refcount**가 생성 됩니다. 가 현재 실행 중인 코드가 없는 경우에도 **strong_refcount** 값은 1입니다.|  
 |**weak_refcount**|**int**|이 **AppDomain**에 대 한 약한 참조 수입니다. 이는 **AppDomain** 내에서 캐시 되는 개체 수를 나타냅니다. 관리 되는 데이터베이스 개체를 실행 하는 경우는 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 나중에 다시 사용할 수 있도록 **AppDomain** 내부에 캐시 합니다. 이렇게 하면 성능이 향상됩니다.|  
 |**cost**|**int**|**AppDomain**의 비용입니다. 비용이 높을수록 메모리가 부족 하 여이 **AppDomain** 이 언로드될 가능성이 높아집니다. 비용은 일반적으로이 **AppDomain**을 다시 만드는 데 필요한 메모리 양에 따라 달라 집니다.|  
@@ -53,7 +53,7 @@ ms.locfileid: "89545348"
 |**survived_memory_kb**|**bigint**|마지막 전체 차단 수집 후에도 유지되고 현재 애플리케이션 도메인에서 참조하는 것으로 알려진 KB 수입니다. 이는 **MonitoringSurvivedMemorySize**에 해당 합니다.|  
   
 ## <a name="remarks"></a>설명  
- **Dm_clr_appdomains appdomain_address** 와 **dm_clr_loaded_assemblies appdomain_address**사이에 일 대 일 관계가 있습니다.  
+ **Dm_clr_appdomains와 appdomain_address** 간에는 일 대 일 관계가 **있습니다.**  
   
  다음 표에서는 가능한 **상태** 값, 해당 설명 및 **AppDomain** 수명 주기에서 발생 하는 시기를 나열 합니다. 이 정보를 사용 하 여 **appdomain** 의 수명 주기을 따르고 Windows 이벤트 로그를 구문 분석할 필요 없이 언로드 또는 반복적인 **AppDomain** 인스턴스 언로드를 감시할 수 있습니다.  
   
@@ -84,7 +84,7 @@ ms.locfileid: "89545348"
 ## <a name="permissions"></a>사용 권한  
  데이터베이스에 대한 VIEW SERVER STATE 권한이 필요합니다.  
   
-## <a name="examples"></a>예제  
+## <a name="examples"></a>예  
  다음 예제에서는 지정 된 어셈블리에 대 한 **AppDomain** 의 세부 정보를 보는 방법을 보여 줍니다.  
   
 ```  
@@ -110,7 +110,6 @@ where appdomain_id = 15);
 ```  
   
 ## <a name="see-also"></a>참고 항목  
- [dm_clr_loaded_assemblies &#40;Transact-sql&#41;](../../relational-databases/system-dynamic-management-views/sys-dm-clr-loaded-assemblies-transact-sql.md)   
+ [Transact-sql&#41;sys.dm_clr_loaded_assemblies &#40;](../../relational-databases/system-dynamic-management-views/sys-dm-clr-loaded-assemblies-transact-sql.md)   
  [공용 언어 런타임 관련 동적 관리 뷰 &#40;Transact-sql&#41;](../../relational-databases/system-dynamic-management-views/common-language-runtime-related-dynamic-management-views-transact-sql.md)  
-  
   

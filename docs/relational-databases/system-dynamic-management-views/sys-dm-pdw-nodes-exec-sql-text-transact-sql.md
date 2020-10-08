@@ -1,5 +1,5 @@
 ---
-title: sys. dm_pdw_nodes_exec_sql_text (Transact-sql) | Microsoft Docs
+title: sys.dm_pdw_nodes_exec_sql_text (Transact-sql) | Microsoft Docs
 description: 지정 된 sql_handle으로 식별 되는 SQL 일괄 처리의 텍스트를 반환 하는 동적 관리 뷰입니다.
 ms.custom: ''
 ms.date: 10/14/2019
@@ -13,14 +13,14 @@ ms.assetid: ''
 author: XiaoyuMSFT
 ms.author: xiaoyul
 monikerRange: =azure-sqldw-latest || = sqlallproducts-allversions
-ms.openlocfilehash: dcfa1bf254bc60ee1bd2c65ddb813851d0bd369e
-ms.sourcegitcommit: df1f0f2dfb9452f16471e740273cd1478ff3100c
+ms.openlocfilehash: b03cb78d4ccdfa7e7d70a82a1709fe961da0a93c
+ms.sourcegitcommit: 32135463a8494d9ed1600a58f51819359e3c09dc
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 07/29/2020
-ms.locfileid: "87394323"
+ms.lasthandoff: 10/08/2020
+ms.locfileid: "91834201"
 ---
-# <a name="syspdw_nodes_dm_exec_sql_text-transact-sql"></a>sys. pdw_nodes_dm_exec_sql_text (Transact-sql)
+# <a name="syspdw_nodes_dm_exec_sql_text-transact-sql"></a>sys.pdw_nodes_dm_exec_sql_text (Transact-sql)
 [!INCLUDE [asa](../../includes/applies-to-version/asa.md)]
 
 지정 된 *sql_handle*에 의해 식별 되는 SQL 일괄 처리의 텍스트를 반환 합니다. 이 테이블 반환 함수는 시스템 함수 **fn_get_sql**을 대체합니다.  
@@ -31,18 +31,18 @@ ms.locfileid: "87394323"
 |**pdw_node_id**|**int**|노드와 연결 된 고유 숫자 ID입니다.|
 |**dbid**|**smallint**|데이터베이스의 ID입니다.<br /><br /> 계획 되지 않은 SQL 문 및 준비 된 SQL 문의 경우 문이 컴파일된 데이터베이스의 ID입니다.|  
 |**objectid**|**int**|개체의 ID입니다.<br /><br /> 임시 및 준비된 SQL 문의 경우 NULL입니다.|  
-|**number**|**smallint**|번호가 있는 저장 프로시저의 경우 저장 프로시저의 번호가 이 열에 반환됩니다. 자세한 내용은 [numbered_procedures &#40;transact-sql&#41;](../../relational-databases/system-catalog-views/sys-numbered-procedures-transact-sql.md)을 참조 하십시오.<br /><br /> 임시 및 준비된 SQL 문의 경우 NULL입니다.|  
+|**number**|**smallint**|번호가 있는 저장 프로시저의 경우 저장 프로시저의 번호가 이 열에 반환됩니다. 자세한 내용은 [sys.numbered_procedures &#40;transact-sql&#41;](../../relational-databases/system-catalog-views/sys-numbered-procedures-transact-sql.md)를 참조 하세요.<br /><br /> 임시 및 준비된 SQL 문의 경우 NULL입니다.|  
 |**됨**|**bit**|1: SQL 텍스트가 암호화 됩니다.<br /><br /> 0: SQL 텍스트가 암호화 되지 않습니다.|  
 |**text**|**nvarchar(max)**|SQL 쿼리의 텍스트입니다.<br /><br /> 암호화된 개체의 경우 NULL입니다.|  
 
 ## <a name="remarks"></a>설명  
-[Dm_exec_sql_text](https://docs.microsoft.com/sql/relational-databases/system-dynamic-management-views/sys-dm-exec-sql-text-transact-sql?view=sql-server-ver15) 적용 됩니다.  
+[Sys.dm_exec_sql_text](./sys-dm-exec-sql-text-transact-sql.md?view=sql-server-ver15) 에 동일한 설명이 적용 됩니다.  
   
 ## <a name="permissions"></a>사용 권한  
  서버에 대 한 **sysadmin** 서버 역할 또는 `VIEW SERVER STATE` 권한이 필요 합니다.  
   
 ## <a name="see-also"></a>참고 항목  
- [Transact-sql&#41;&#40;SQL Data Warehouse 및 병렬 데이터 웨어하우스 동적 관리 뷰](../../relational-databases/system-dynamic-management-views/sql-and-parallel-data-warehouse-dynamic-management-views.md)  
+ [Transact-sql&#41;&#40;SQL Data Warehouse 및 병렬 데이터 웨어하우스 동적 관리 뷰 ](../../relational-databases/system-dynamic-management-views/sql-and-parallel-data-warehouse-dynamic-management-views.md)  
 
   ## <a name="next-steps"></a>다음 단계
- 더 많은 개발 팁은 [SQL Data Warehouse 개발 개요](https://docs.microsoft.com/azure/sql-data-warehouse/sql-data-warehouse-overview-develop)를 참조하세요.
+ 더 많은 개발 팁은 [SQL Data Warehouse 개발 개요](/azure/sql-data-warehouse/sql-data-warehouse-overview-develop)를 참조하세요.

@@ -1,6 +1,6 @@
 ---
 description: sys.dm_os_sys_info(Transact-SQL)
-title: sys. dm_os_sys_info (Transact-sql) | Microsoft Docs
+title: sys.dm_os_sys_info (Transact-sql) | Microsoft Docs
 ms.custom: ''
 ms.date: 04/24/2018
 ms.prod: sql
@@ -23,19 +23,19 @@ ms.assetid: 20f6bc9c-839a-4fa4-b3f3-a6c47d1b69af
 author: markingmyname
 ms.author: maghan
 monikerRange: '>=aps-pdw-2016||=azure-sqldw-latest||>=sql-server-2016||=sqlallproducts-allversions||>=sql-server-linux-2017||=azuresqldb-mi-current'
-ms.openlocfilehash: 56df59d84dafd1f19e74cadcca586e4da9e1c084
-ms.sourcegitcommit: dd36d1cbe32cd5a65c6638e8f252b0bd8145e165
+ms.openlocfilehash: 5419919b14c15615cb84d124387c98e9ba2e90a5
+ms.sourcegitcommit: 32135463a8494d9ed1600a58f51819359e3c09dc
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 09/08/2020
-ms.locfileid: "89539361"
+ms.lasthandoff: 10/08/2020
+ms.locfileid: "91834428"
 ---
 # <a name="sysdm_os_sys_info-transact-sql"></a>sys.dm_os_sys_info(Transact-SQL)
 [!INCLUDE [sql-asdb-asdbmi-asa-pdw](../../includes/applies-to-version/sql-asdb-asdbmi-asa-pdw.md)]
 
   [!INCLUDE[ssNoVersion_md](../../includes/ssnoversion-md.md)]에서 사용할 수 있고 소비하는 리소스 및 컴퓨터에 대한 기타 유용한 정보를 반환합니다.  
   
-> **참고:** 또는에서이를 호출 하려면 [!INCLUDE[ssSDWfull](../../includes/sssdwfull-md.md)] [!INCLUDE[ssPDW](../../includes/sspdw-md.md)] 이름 **sys. dm_pdw_nodes_os_sys_info**을 사용 합니다.  
+> **참고:** 또는에서이를 호출 하려면 [!INCLUDE[ssSDWfull](../../includes/sssdwfull-md.md)] [!INCLUDE[ssPDW](../../includes/sspdw-md.md)] **sys.dm_pdw_nodes_os_sys_info**이름을 사용 합니다.  
   
 |열 이름|데이터 형식|설명 및 버전별 참고 사항 |  
 |-----------------|---------------|-----------------|  
@@ -68,7 +68,7 @@ ms.locfileid: "89539361"
 |**process_kernel_time_ms**|**bigint**|**적용 대상:** [!INCLUDE[ssKilimanjaro](../../includes/sskilimanjaro-md.md)] 이상<br /><br /> 커널 모드에서 모든 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 스레드에 걸린 총 시간(밀리초)입니다. 이 값은 서버에 있는 모든 프로세서의 시간을 포함하므로 단일 프로세서 클럭보다 클 수 있습니다. Null을 허용하지 않습니다.|  
 |**process_user_time_ms**|**bigint**|**적용 대상:** [!INCLUDE[ssKilimanjaro](../../includes/sskilimanjaro-md.md)] 이상<br /><br /> 사용자 모드에서 모든 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 스레드에 걸린 총 시간(밀리초)입니다. 이 값은 서버에 있는 모든 프로세서의 시간을 포함하므로 단일 프로세서 클럭보다 클 수 있습니다. Null을 허용하지 않습니다.|  
 |**time_source**|**int**|**적용 대상:** [!INCLUDE[ssKilimanjaro](../../includes/sskilimanjaro-md.md)] 이상<br /><br /> [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]에서 벽시계 시간(wall clock time)을 검색하는 데 사용하는 API를 나타냅니다. Null을 허용하지 않습니다.<br /><br /> 0 = QUERY_PERFORMANCE_COUNTER<br /><br /> 1 = MULTIMEDIA_TIMER|  
-|**time_source_desc**|**nvarchar(60)**|**적용 대상:** [!INCLUDE[ssKilimanjaro](../../includes/sskilimanjaro-md.md)] 이상<br /><br /> **Time_source** 열에 대해 설명 합니다. Null을 허용하지 않습니다.<br /><br /> QUERY_PERFORMANCE_COUNTER = [Queryperformancecounter](https://go.microsoft.com/fwlink/?LinkId=163095) API는 벽 시계 시간을 검색 합니다.<br /><br /> MULTIMEDIA_TIMER = 벽 시계 시간을 검색 하는 [멀티미디어 타이머](https://go.microsoft.com/fwlink/?LinkId=163094) API입니다.|  
+|**time_source_desc**|**nvarchar(60)**|**적용 대상:** [!INCLUDE[ssKilimanjaro](../../includes/sskilimanjaro-md.md)] 이상<br /><br /> **Time_source** 열에 대해 설명 합니다. Null을 허용하지 않습니다.<br /><br /> QUERY_PERFORMANCE_COUNTER = [Queryperformancecounter](/windows/win32/api/profileapi/nf-profileapi-queryperformancecounter) API는 벽 시계 시간을 검색 합니다.<br /><br /> MULTIMEDIA_TIMER = 벽 시계 시간을 검색 하는 [멀티미디어 타이머](/previous-versions//ms713418(v=vs.85)) API입니다.|  
 |**virtual_machine_type**|**int**|**적용 대상:** [!INCLUDE[ssKilimanjaro](../../includes/sskilimanjaro-md.md)] 이상<br /><br /> [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]가 가상화된 환경에서 실행되고 있는지 여부를 나타냅니다.  Null을 허용하지 않습니다.<br /><br /> 0 = 없음<br /><br /> 1 = HYPERVISOR<br /><br /> 2 = OTHER|  
 |**virtual_machine_type_desc**|**nvarchar(60)**|**적용 대상:** [!INCLUDE[ssKilimanjaro](../../includes/sskilimanjaro-md.md)] 이상<br /><br /> **Virtual_machine_type** 열에 대해 설명 합니다. Null을 허용하지 않습니다.<br /><br /> NONE = [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 이 (가) 가상 머신 내에서 실행 되 고 있지 않습니다.<br /><br /> 하이퍼바이저 = [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 하이퍼바이저를 실행 하는 os (하드웨어 지원 가상화를 활용 하는 호스트 os)에서 호스트 되는 가상 컴퓨터 내에서 실행 되 고 있습니다.<br /><br /> 기타 = [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] Microsoft VIRTUAL PC와 같은 하드웨어 길잡이를 사용 하지 않는 OS에서 호스트 되는 가상 컴퓨터 내에서 실행 되 고 있습니다.|  
 |**softnuma_configuration**|**int**|**적용 대상:** [!INCLUDE[ssSQL15](../../includes/sssql15-md.md)] 이상<br /><br /> NUMA 노드를 구성 하는 방법을 지정 합니다. Null을 허용하지 않습니다.<br /><br /> 0 = OFF는 하드웨어 기본값을 나타냅니다.<br /><br /> 1 = 자동 소프트 NUMA<br /><br /> 2 = 레지스트리를 통한 수동 소프트 NUMA|  
@@ -90,7 +90,3 @@ ms.locfileid: "89539361"
  [동적 관리 뷰 및 함수&#40;Transact-SQL&#41;](~/relational-databases/system-dynamic-management-views/system-dynamic-management-views.md)   
  [Transact-sql&#41;&#40;운영 체제 관련 동적 관리 뷰 SQL Server ](../../relational-databases/system-dynamic-management-views/sql-server-operating-system-related-dynamic-management-views-transact-sql.md)  
   
-  
-
-
-

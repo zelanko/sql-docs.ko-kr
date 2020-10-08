@@ -1,6 +1,6 @@
 ---
 description: sys.dm_repl_traninfo(Transact-SQL)
-title: sys. dm_repl_traninfo (Transact-sql) | Microsoft Docs
+title: sys.dm_repl_traninfo (Transact-sql) | Microsoft Docs
 ms.custom: ''
 ms.date: 06/10/2016
 ms.prod: sql
@@ -19,12 +19,12 @@ helpviewer_keywords:
 ms.assetid: 5abe2605-0506-46ec-82b5-6ec08428ba13
 author: markingmyname
 ms.author: maghan
-ms.openlocfilehash: ccac1a54db0fb5395f76205713fe65c9cba3f8e1
-ms.sourcegitcommit: dd36d1cbe32cd5a65c6638e8f252b0bd8145e165
+ms.openlocfilehash: 6369fc0d1ee2c0b70cb3e6e13fd201fd718236dc
+ms.sourcegitcommit: 32135463a8494d9ed1600a58f51819359e3c09dc
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 09/08/2020
-ms.locfileid: "89542110"
+ms.lasthandoff: 10/08/2020
+ms.locfileid: "91834575"
 ---
 # <a name="sysdm_repl_traninfo-transact-sql"></a>sys.dm_repl_traninfo(Transact-SQL)
 [!INCLUDE [SQL Server](../../includes/applies-to-version/sqlserver.md)]
@@ -63,8 +63,8 @@ ms.locfileid: "89542110"
 |**max_cmds_in_tran**|**int**|논리적 트랜잭션의 최대 명령 수이며 로그 판독기 에이전트가 지정합니다.|  
 |**begin_time**|**datetime**|트랜잭션의 시작 시간입니다.|  
 |**commit_time**|**datetime**|트랜잭션이 커밋된 시간입니다.|  
-|**session_id**|**int**|변경 데이터 캡처 로그 스캔 세션의 ID입니다. 이 열은 [dm_cdc_logscan_sessions](../../relational-databases/system-dynamic-management-views/change-data-capture-sys-dm-cdc-log-scan-sessions.md)의 **session_id** 열에 매핑됩니다.|  
-|**session_phase**|**int**|오류 발생한 시점의 세션 단계를 나타내는 번호입니다. 이 열은 [dm_cdc_errors](../../relational-databases/system-dynamic-management-views/change-data-capture-sys-dm-cdc-errors.md)의 **phase_number** 열에 매핑됩니다.|  
+|**session_id**|**int**|변경 데이터 캡처 로그 스캔 세션의 ID입니다. 이 열은 [sys.dm_cdc_logscan_sessions](../../relational-databases/system-dynamic-management-views/change-data-capture-sys-dm-cdc-log-scan-sessions.md)의 **session_id** 열에 매핑됩니다.|  
+|**session_phase**|**int**|오류 발생한 시점의 세션 단계를 나타내는 번호입니다. 이 열은 [sys.dm_cdc_errors](../../relational-databases/system-dynamic-management-views/change-data-capture-sys-dm-cdc-errors.md)의 **phase_number** 열에 매핑됩니다.|  
 |**is_known_cdc_tran**|**bit**|변경 데이터 캡처로 추적된 트랜잭션을 나타냅니다.<br /><br /> 0 = 트랜잭션 복제 트랜잭션<br /><br /> 1 = 변경 데이터 캡처 트랜잭션|  
 |**error_count**|**int**|오류가 발생한 횟수입니다.|  
   
@@ -77,7 +77,5 @@ ms.locfileid: "89542110"
 ## <a name="see-also"></a>참고 항목  
  [동적 관리 뷰 및 함수&#40;Transact-SQL&#41;](~/relational-databases/system-dynamic-management-views/system-dynamic-management-views.md)   
  [복제 관련 동적 관리 뷰 &#40;Transact-sql&#41;](../../relational-databases/system-dynamic-management-views/replication-related-dynamic-management-views-transact-sql.md)   
- [변경 데이터 캡처 관련 동적 관리 뷰&#40;Transact-SQL&#41;](https://msdn.microsoft.com/library/2a771d7d-693a-4f56-9227-02cd00e0e200)  
+ [변경 데이터 캡처 관련 동적 관리 뷰&#40;Transact-SQL&#41;](./system-dynamic-management-views.md)  
   
-  
-

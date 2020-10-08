@@ -1,6 +1,6 @@
 ---
 description: sys.dm_os_child_instances(Transact-SQL)
-title: sys. dm_os_child_instances (Transact-sql) | Microsoft Docs
+title: sys.dm_os_child_instances (Transact-sql) | Microsoft Docs
 ms.custom: ''
 ms.date: 08/18/2017
 ms.prod: sql
@@ -21,12 +21,12 @@ helpviewer_keywords:
 ms.assetid: 1bef3074-0ccc-48fa-8f3d-14f3d99df86b
 author: markingmyname
 ms.author: maghan
-ms.openlocfilehash: 9c148c6d3bab448d89294eba4af7ebec8cd2cf6c
-ms.sourcegitcommit: dd36d1cbe32cd5a65c6638e8f252b0bd8145e165
+ms.openlocfilehash: 81cceff6a1336fadecb84f1d70c5f41c7625dc07
+ms.sourcegitcommit: 32135463a8494d9ed1600a58f51819359e3c09dc
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 09/08/2020
-ms.locfileid: "89539371"
+ms.lasthandoff: 10/08/2020
+ms.locfileid: "91834454"
 ---
 # <a name="sysdm_os_child_instances-transact-sql"></a>sys.dm_os_child_instances(Transact-SQL)
 [!INCLUDE [SQL Server](../../includes/applies-to-version/sqlserver.md)]
@@ -35,11 +35,11 @@ ms.locfileid: "89539371"
   
 > **중요!** [!INCLUDE[ssNoteDepFutureAvoid](../../includes/ssnotedepfutureavoid-md.md)]  
   
- **Dm_os_child_instances** 에서 반환 된 정보를 사용 하 여 각 사용자 인스턴스의 상태를 확인 하 고 (heart_beat) 또는 SQLCmd를 사용 하 여 사용자 인스턴스에 대 한 연결을 만드는 데 사용할 수 있는 파이프 이름 (instance_pipe_name)을 가져올 수 있습니다. [!INCLUDE[ssManStudioFull](../../includes/ssmanstudiofull-md.md)] 클라이언트 애플리케이션과 같은 외부 프로세스에 의해 시작된 다음에만 사용자 인스턴스에 연결할 수 있습니다. SQL 관리 도구에서는 사용자 인스턴스를 시작할 수 없습니다.  
+ **Sys.dm_os_child_instances** 에서 반환 된 정보를 사용 하 여 각 사용자 인스턴스의 상태를 확인 하 고 (heart_beat) 또는 SQLCmd를 사용 하 여 사용자 인스턴스에 대 한 연결을 만드는 데 사용할 수 있는 파이프 이름 (instance_pipe_name)을 가져올 수 있습니다 [!INCLUDE[ssManStudioFull](../../includes/ssmanstudiofull-md.md)] . 클라이언트 애플리케이션과 같은 외부 프로세스에 의해 시작된 다음에만 사용자 인스턴스에 연결할 수 있습니다. SQL 관리 도구에서는 사용자 인스턴스를 시작할 수 없습니다.  
   
 > **참고:** 사용자 인스턴스는의 기능 [!INCLUDE[ssExpressEd11](../../includes/ssexpressed11-md.md)] 입니다.  
 > 
-> **참고** 또는에서이를 호출 하려면 [!INCLUDE[ssSDWfull](../../includes/sssdwfull-md.md)] [!INCLUDE[ssPDW](../../includes/sspdw-md.md)] 이름 **sys. dm_pdw_nodes_os_child_instances**을 사용 합니다.  
+> **참고** 또는에서이를 호출 하려면 [!INCLUDE[ssSDWfull](../../includes/sssdwfull-md.md)] [!INCLUDE[ssPDW](../../includes/sspdw-md.md)] **sys.dm_pdw_nodes_os_child_instances**이름을 사용 합니다.  
   
 |열|데이터 형식|Description|  
 |------------|---------------|-----------------|  
@@ -60,9 +60,5 @@ ms.locfileid: "89539371"
  동적 관리 뷰에 대 한 자세한 내용은 온라인 설명서의 [동적 관리 뷰 및 함수 &#40;transact-sql&#41;](~/relational-databases/system-dynamic-management-views/system-dynamic-management-views.md) 를 참조 하십시오 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] .  
   
 ## <a name="see-also"></a>참고 항목  
- [비관리자용 사용자 인스턴스](https://msdn.microsoft.com/85385aae-10fb-4f8b-9eeb-cce2ee7da019)  
+ [비관리자용 사용자 인스턴스](/previous-versions/sql/)  
   
-  
-
-
-

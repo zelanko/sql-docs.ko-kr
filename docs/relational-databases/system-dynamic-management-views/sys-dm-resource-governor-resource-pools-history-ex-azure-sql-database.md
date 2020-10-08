@@ -1,6 +1,6 @@
 ---
-description: sys. dm_resource_governor_resource_pools_history_ex (Transact-sql)
-title: sys. dm_resource_governor_resource_pools_history_ex (Transact-sql) | Microsoft Docs
+description: sys.dm_resource_governor_resource_pools_history_ex (Transact-sql)
+title: sys.dm_resource_governor_resource_pools_history_ex (Transact-sql) | Microsoft Docs
 ms.custom: ''
 ms.date: 03/27/2019
 ms.prod: sql
@@ -21,14 +21,14 @@ ms.assetid: ''
 author: joesackmsft
 ms.author: josack
 monikerRange: =azuresqldb-current||=sqlallproducts-allversions
-ms.openlocfilehash: 62aec7de63493a94ea05f91883e506d0fc0f6f7b
-ms.sourcegitcommit: e700497f962e4c2274df16d9e651059b42ff1a10
+ms.openlocfilehash: 1cbc5d23a7c7843a2186cd951fd5bb16079489d3
+ms.sourcegitcommit: 32135463a8494d9ed1600a58f51819359e3c09dc
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 08/17/2020
-ms.locfileid: "88481794"
+ms.lasthandoff: 10/08/2020
+ms.locfileid: "91834319"
 ---
-# <a name="sysdm_resource_governor_resource_pools_history_ex-transact-sql"></a>sys. dm_resource_governor_resource_pools_history_ex (Transact-sql)
+# <a name="sysdm_resource_governor_resource_pools_history_ex-transact-sql"></a>sys.dm_resource_governor_resource_pools_history_ex (Transact-sql)
 
 [!INCLUDE[appliesto-xx-asdb-xxxx-xxx-md](../../includes/appliesto-xx-asdb-xxxx-xxx-md.md)]
 
@@ -111,7 +111,7 @@ Azure SQL Database에 대 한 리소스 풀 통계의 마지막 32 분 (128 개 
 > [!IMPORTANT]
 > 이 DMV에 의해 표시 되는 대부분의 데이터는 내부 사용을 위한 것 이며 변경 될 수 있습니다.
 
-## <a name="examples"></a>예제
+## <a name="examples"></a>예
 
 다음 예에서는 사용자 풀의 각 스냅숏에서 최대 로그 속도 데이터 및 사용량을 반환 합니다.  
 
@@ -119,7 +119,7 @@ Azure SQL Database에 대 한 리소스 풀 통계의 마지막 32 분 (128 개 
 select snapshot_time, name, max_log_rate_kb, delta_log_bytes_used from sys.dm_resource_governor_resource_pools_history_ex where name like 'UserPool%' order by snapshot_time desc
 ```
 
-다음 예에서는 논리 마스터에 연결할 필요 없이 elastic_pool_resource_stats와 유사한 정보를 반환 합니다.
+다음 예에서는 논리 마스터에 연결 하지 않고도 sys.elastic_pool_resource_stats 유사한 정보를 반환 합니다.
 
 ```sql
 select snapshot_time, name, cap_vcores_used_percent,
@@ -135,6 +135,6 @@ select snapshot_time, name, cap_vcores_used_percent,
 
 ## <a name="see-also"></a>참고 항목
 
-- [변환 로그 율 거 버 넌 스](https://docs.microsoft.com/azure/sql-database/sql-database-resource-limits-database-server#transaction-log-rate-governance)
-- [탄력적 풀 DTU 리소스 제한](https://docs.microsoft.com/azure/sql-database/sql-database-dtu-resource-limits-elastic-pools)
-- [탄력적 풀 vCore 리소스 제한](https://docs.microsoft.com/azure/sql-database/sql-database-vcore-resource-limits-elastic-pools)
+- [변환 로그 율 거 버 넌 스](/azure/sql-database/sql-database-resource-limits-database-server#transaction-log-rate-governance)
+- [탄력적 풀 DTU 리소스 제한](/azure/sql-database/sql-database-dtu-resource-limits-elastic-pools)
+- [탄력적 풀 vCore 리소스 제한](/azure/sql-database/sql-database-vcore-resource-limits-elastic-pools)

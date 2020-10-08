@@ -1,6 +1,6 @@
 ---
 description: sys.dm_resource_governor_workload_groups_history_ex(Azure SQL Database)
-title: dm_resource_governor_workload_groups_history_ex (Azure SQL Database) | Microsoft Docs
+title: sys.dm_resource_governor_workload_groups_history_ex (Azure SQL Database) | Microsoft Docs
 ms.custom: ''
 ms.date: 05/22/2019
 ms.prod: sql
@@ -19,12 +19,12 @@ helpviewer_keywords:
 - sys.dm_resource_governor_workload_groups_history_ex dynamic management view
 author: joesackmsft
 ms.author: josack
-ms.openlocfilehash: eee98e604fad74b58db9acd5e1f5b20a0189f216
-ms.sourcegitcommit: e700497f962e4c2274df16d9e651059b42ff1a10
+ms.openlocfilehash: d761d1ca80037e26f8757ec681929dd5356b182f
+ms.sourcegitcommit: 32135463a8494d9ed1600a58f51819359e3c09dc
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 08/17/2020
-ms.locfileid: "88489763"
+ms.lasthandoff: 10/08/2020
+ms.locfileid: "91834399"
 ---
 # <a name="sysdm_resource_governor_workload_groups_history_ex-azure-sql-database"></a>sys.dm_resource_governor_workload_groups_history_ex(Azure SQL Database)
 [!INCLUDE[Azure SQL Database Azure SQL Managed Instance](../../includes/applies-to-version/asdb-asdbmi.md)]
@@ -69,8 +69,8 @@ Azure SQL Database에 대 한 리소스 풀 통계의 마지막 32 분 (총 128 
 |**max_request_cpu_msec**| bigint |단일 요청에 대한 최대 CPU 사용량(밀리초)입니다. Null을 허용하지 않습니다.|
 |**max_concurrent_request**| int |최대 동시 요청 수에 대한 현재 설정입니다. Null을 허용하지 않습니다.|
 |**max_io**| int |그룹에 대 한 최대 IO 제한입니다.|
-|**max_global_io**| int |정보를 제공하기 위해서만 확인됩니다. 지원되지 않습니다. 향후 호환성은 보장되지 않습니다.
-|**max_queued_io**| int |정보를 제공하기 위해서만 확인됩니다. 지원되지 않습니다. 향후 호환성은 보장되지 않습니다.|
+|**max_global_io**| int |정보를 제공하기 위해서만 확인됩니다. 지원 안 됨 향후 호환성은 보장되지 않습니다.
+|**max_queued_io**| int |정보를 제공하기 위해서만 확인됩니다. 지원 안 됨 향후 호환성은 보장되지 않습니다.|
 |**max_log_rate_kb**| bigint |리소스 그룹 수준에서 최대 로그 속도 (초당 킬로바이트 바이트)입니다.|
 |**max_session**| int |그룹에 대 한 세션 제한입니다.|
 |**max_worker**| int |그룹에 대 한 작업자 한도입니다.|
@@ -87,7 +87,7 @@ Azure SQL Database에 대 한 리소스 풀 통계의 마지막 32 분 (총 128 
 > [!IMPORTANT]
 > 이 DMV에 의해 표시 되는 대부분의 데이터는 내부 사용을 위한 것 이며 변경 될 수 있습니다.
 
-## <a name="examples"></a>예제
+## <a name="examples"></a>예
 
 다음 예에서는 사용자 풀의 각 스냅숏에서 최대 로그 속도 데이터 및 사용량을 반환 합니다.
 
@@ -101,8 +101,8 @@ WHERE name LIKE 'User%'
 ORDER BY snapshot_time DESC;
 ```
 
-## <a name="see-also"></a>관련 항목
+## <a name="see-also"></a>참고 항목
 
-- [변환 로그 율 거 버 넌 스](https://docs.microsoft.com/azure/sql-database/sql-database-resource-limits-database-server#transaction-log-rate-governance)
-- [탄력적 풀 DTU 리소스 제한](https://docs.microsoft.com/azure/sql-database/sql-database-dtu-resource-limits-elastic-pools)
-- [탄력적 풀 vCore 리소스 제한](https://docs.microsoft.com/azure/sql-database/sql-database-vcore-resource-limits-elastic-pools)
+- [변환 로그 율 거 버 넌 스](/azure/sql-database/sql-database-resource-limits-database-server#transaction-log-rate-governance)
+- [탄력적 풀 DTU 리소스 제한](/azure/sql-database/sql-database-dtu-resource-limits-elastic-pools)
+- [탄력적 풀 vCore 리소스 제한](/azure/sql-database/sql-database-vcore-resource-limits-elastic-pools)

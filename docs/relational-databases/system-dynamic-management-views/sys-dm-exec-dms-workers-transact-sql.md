@@ -1,6 +1,6 @@
 ---
-description: sys. dm_exec_dms_workers (Transact-sql)
-title: sys. dm_exec_dms_workers (Transact-sql) | Microsoft Docs
+description: sys.dm_exec_dms_workers (Transact-sql)
+title: sys.dm_exec_dms_workers (Transact-sql) | Microsoft Docs
 ms.custom: ''
 ms.date: 11/04/2019
 ms.prod: sql
@@ -23,14 +23,14 @@ ms.assetid: f468da29-78c3-4f10-8a3c-17905bbf46f2
 author: markingmyname
 ms.author: maghan
 monikerRange: '>=aps-pdw-2016||=azure-sqldw-latest||>=sql-server-2016||=sqlallproducts-allversions||>=sql-server-linux-2017||=azuresqldb-mi-current'
-ms.openlocfilehash: 677ad00bd29d3f689c1722e1fc1abd65374426a5
-ms.sourcegitcommit: c4d6804bde7eaf72d9233d6d43f77d77d1b17c4e
+ms.openlocfilehash: 5942abbdd1710a058ec725e88d96f99c9ba21e37
+ms.sourcegitcommit: 32135463a8494d9ed1600a58f51819359e3c09dc
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 10/01/2020
-ms.locfileid: "91624780"
+ms.lasthandoff: 10/08/2020
+ms.locfileid: "91834097"
 ---
-# <a name="sysdm_exec_dms_workers-transact-sql"></a>sys. dm_exec_dms_workers (Transact-sql)
+# <a name="sysdm_exec_dms_workers-transact-sql"></a>sys.dm_exec_dms_workers (Transact-sql)
 [!INCLUDE [sqlserver2016-asa-pdw](../../includes/applies-to-version/sqlserver2016-asa-pdw.md)]
 
   DMS 단계를 완료 하는 모든 작업자에 대 한 정보를 저장 합니다.  
@@ -40,11 +40,11 @@ ms.locfileid: "91624780"
 |열 이름|데이터 형식|Description|범위|  
 |-----------------|---------------|-----------------|-----------|  
 |execution_id|`nvarchar(32)`|이 DMS 작업자를 포함 하는 쿼리입니다. <br /><br /> 이 보기의 키를 execution_id, step_index 및 dms_step_index 구성 합니다.||  
-|step_index|`int`|이 DMS 작업자의 일부인 쿼리 단계입니다.|[Dm_exec_distributed_request_steps &#40;transact-sql&#41;](../../relational-databases/system-dynamic-management-views/sys-dm-exec-distributed-request-steps-transact-sql.md)에서 단계 인덱스를 참조 하십시오.|  
-|dms_step_index|`int`|이 작업자를 실행 하는 DMS 계획의 단계입니다.|[Dm_exec_dms_workers (transact-sql)을](../../relational-databases/system-dynamic-management-views/sys-dm-exec-dms-workers-transact-sql.md) 참조 하세요.|  
-|compute_node_id|`int`|Worker가 실행 되는 노드입니다.|[Dm_exec_compute_nodes &#40;transact-sql&#41;](../../relational-databases/system-dynamic-management-views/sys-dm-exec-compute-nodes-transact-sql.md)을 참조 하십시오.|  
+|step_index|`int`|이 DMS 작업자의 일부인 쿼리 단계입니다.|[Sys.dm_exec_distributed_request_steps &#40;transact-sql&#41;](../../relational-databases/system-dynamic-management-views/sys-dm-exec-distributed-request-steps-transact-sql.md)에서 단계 인덱스를 참조 하십시오.|  
+|dms_step_index|`int`|이 작업자를 실행 하는 DMS 계획의 단계입니다.|[Sys.dm_exec_dms_workers (transact-sql)을](../../relational-databases/system-dynamic-management-views/sys-dm-exec-dms-workers-transact-sql.md) 참조 하세요.|  
+|compute_node_id|`int`|Worker가 실행 되는 노드입니다.|[Sys.dm_exec_compute_nodes &#40;transact-sql&#41;](../../relational-databases/system-dynamic-management-views/sys-dm-exec-compute-nodes-transact-sql.md)를 참조 하세요.|  
 |distribution_id|`int`|||  
-|형식|`nvarchar(32)`|이 항목이 나타내는 DMS 작업자 스레드의 형식입니다.|' DIRECT_CONVERTER ', ' DIRECT_READER ', ' FILE_READER ', ' HASH_CONVERTER ', ' HASH_READER ', ' ROUNDROBIN_CONVERTER ', ' EXPORT_READER ', ' EXTERNAL_READER ', ' EXTERNAL_WRITER ', ' PARALLEL_COPY_READER ', ' REJECT_WRITER ', ' WRITER '|  
+|type|`nvarchar(32)`|이 항목이 나타내는 DMS 작업자 스레드의 형식입니다.|' DIRECT_CONVERTER ', ' DIRECT_READER ', ' FILE_READER ', ' HASH_CONVERTER ', ' HASH_READER ', ' ROUNDROBIN_CONVERTER ', ' EXPORT_READER ', ' EXTERNAL_READER ', ' EXTERNAL_WRITER ', ' PARALLEL_COPY_READER ', ' REJECT_WRITER ', ' WRITER '|  
 |상태|`nvarchar(32)`|이 단계의 상태|' Pending ', ' Running ', ' Complete ', ' Failed ', ' 작업 취소 실패 ', ' PendingCancel ', ' 취소 됨 ', ' 실행 취소 됨 ', ' 중단 됨 '|  
 |bytes_per_sec|`bigint`|||  
 |bytes_processed|`bigint`|||  
@@ -64,8 +64,7 @@ ms.locfileid: "91624780"
 |compute_pool_id|`int`|풀에 대 한 고유 식별자입니다.|
 
 ## <a name="see-also"></a>참고 항목  
- [동적 관리 뷰를 사용한 PolyBase 문제 해결](https://msdn.microsoft.com/library/ce9078b7-a750-4f47-b23e-90b83b783d80)   
+ [동적 관리 뷰를 사용한 PolyBase 문제 해결](/previous-versions/sql/sql-server-2016/mt146389(v=sql.130))   
  [동적 관리 뷰 및 함수&#40;Transact-SQL&#41;](~/relational-databases/system-dynamic-management-views/system-dynamic-management-views.md)   
  [Transact-sql&#41;&#40;데이터베이스 관련 동적 관리 뷰 ](../../relational-databases/system-dynamic-management-views/database-related-dynamic-management-views-transact-sql.md)  
-  
   
