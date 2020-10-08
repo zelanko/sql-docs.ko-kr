@@ -14,12 +14,12 @@ helpviewer_keywords:
 - SPNs [SQL Server]
 author: David-Engel
 ms.author: v-daenge
-ms.openlocfilehash: f369b492536ee432385e3babef0e42924f86926d
-ms.sourcegitcommit: fe5dedb2a43516450696b754e6fafac9f5fdf3cf
+ms.openlocfilehash: f335fef3f9918ebcd04362cd6b1edf2df6a29dfc
+ms.sourcegitcommit: c7f40918dc3ecdb0ed2ef5c237a3996cb4cd268d
 ms.translationtype: HT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 08/31/2020
-ms.locfileid: "89195149"
+ms.lasthandoff: 10/05/2020
+ms.locfileid: "91727301"
 ---
 # <a name="service-principal-name-spn-support-in-client-connections"></a>클라이언트 연결의 SPN(서비스 사용자 이름) 지원
 
@@ -41,9 +41,9 @@ ms.locfileid: "89195149"
   
  Kerberos에 대한 자세한 내용은 다음 문서를 참조하십시오.  
   
--   [Windows용 Kerberos 기술 보충 자료](https://go.microsoft.com/fwlink/?LinkId=101449)  
+-   [Windows용 Kerberos 기술 보충 자료](/previous-versions/msp-n-p/ff649429(v=pandp.10))  
   
--   [Microsoft Kerberos](https://go.microsoft.com/fwlink/?LinkID=100758)  
+-   [Microsoft Kerberos](/windows/win32/secauthn/microsoft-kerberos)  
   
 ## <a name="usage"></a>사용량  
  다음 표에서는 클라이언트 애플리케이션이 보안 인증을 사용할 수 있는 가장 일반적인 시나리오에 대해 설명합니다.  
@@ -110,4 +110,3 @@ ms.locfileid: "89195149"
 ## <a name="see-also"></a>참고 항목  
  [SQL Server 기능용 OLE DB 드라이버](../../oledb/features/oledb-driver-for-sql-server-features.md)   
  [Kerberos 연결의 서비스 사용자 이름 등록](../../../database-engine/configure-windows/register-a-service-principal-name-for-kerberos-connections.md)  
-  

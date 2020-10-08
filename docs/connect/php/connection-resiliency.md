@@ -9,12 +9,12 @@ ms.technology: connectivity
 ms.topic: conceptual
 author: David-Engel
 ms.author: v-daenge
-ms.openlocfilehash: 8b425d57a0b1aee0c01db62d3fd1b77eb59c8aed
-ms.sourcegitcommit: 8ffc23126609b1cbe2f6820f9a823c5850205372
+ms.openlocfilehash: 4008dd4f023170b50bdf28f1f026da9ee892f970
+ms.sourcegitcommit: c7f40918dc3ecdb0ed2ef5c237a3996cb4cd268d
 ms.translationtype: HT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 04/17/2020
-ms.locfileid: "81632953"
+ms.lasthandoff: 10/05/2020
+ms.locfileid: "91726864"
 ---
 # <a name="idle-connection-resiliency"></a>유휴 연결 복원력
 [!INCLUDE[Driver_PHP_Download](../../includes/driver_php_download.md)]
@@ -45,7 +45,7 @@ ms.locfileid: "81632953"
 
 ## <a name="example"></a>예제
 
-다음 코드는 데이터베이스에 연결하고 쿼리를 실행합니다. 세션을 중지하여 연결이 중단되면 끊어진 연결을 사용하여 새 쿼리를 시도합니다. 이 예제에서는 [AdventureWorks](https://msdn.microsoft.com/library/ms124501%28v=sql.100%29.aspx) 예제 데이터베이스를 사용합니다.
+다음 코드는 데이터베이스에 연결하고 쿼리를 실행합니다. 세션을 중지하여 연결이 중단되면 끊어진 연결을 사용하여 새 쿼리를 시도합니다. 이 예제에서는 [AdventureWorks](/previous-versions/sql/sql-server-2008/ms124501(v=sql.100)) 예제 데이터베이스를 사용합니다.
 
 이 예제에서는 연결을 중단하기 전에 버퍼링된 커서를 지정합니다. 버퍼링된 커서를 지정하지 않을 경우 연결이 다시 설정되지 않습니다. 활성 서버 쪽 커서가 있으면 연결이 끊어졌을 때 유휴 상태가 되지 않기 때문입니다. 그러나 이 경우 연결을 중단하여 커서를 비우기 전에 sqlsrv_free_stmt()를 호출하면 연결을 다시 설정할 수 있습니다.
 

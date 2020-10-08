@@ -9,12 +9,12 @@ ms.topic: conceptual
 ms.prod: sql
 ms.technology: language-extensions
 monikerRange: '>=sql-server-ver15||>=sql-server-linux-ver15||=sqlallproducts-allversions'
-ms.openlocfilehash: 44f32695e91c3c273b024b9f8d7259c59b43014d
-ms.sourcegitcommit: 9b41725d6db9957dd7928a3620fe4db41eb51c6e
+ms.openlocfilehash: 51780bbb0184bdd950e36eef45877da576cd2576
+ms.sourcegitcommit: 346a37242f889d76cd783f55aeed98023c693610
 ms.translationtype: HT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 08/13/2020
-ms.locfileid: "88180310"
+ms.lasthandoff: 10/06/2020
+ms.locfileid: "91765689"
 ---
 # <a name="extensibility-architecture-in-sql-server-language-extensions"></a>SQL Server 언어 확장의 확장성 아키텍처
 
@@ -58,7 +58,7 @@ The following diagram visually describes opportunities and benefits of the exten
 |-------------------|-----------|---------------------|
 | JavaLauncher.dll for Java | Java 확장 | SQL Server 2019 |
 
-[!INCLUDE[rsql_launchpad_md](../../includes/rsql-launchpad-md.md)] 서비스는 실행 격리를 위해 [AppContainers](https://docs.microsoft.com/windows/desktop/secauthz/appcontainer-isolation)를 사용하는 **SQLRUserGroup**에서 실행됩니다.
+[!INCLUDE[rsql_launchpad_md](../../includes/rsql-launchpad-md.md)] 서비스는 실행 격리를 위해 [AppContainers](/windows/desktop/secauthz/appcontainer-isolation)를 사용하는 **SQLRUserGroup**에서 실행됩니다.
 
 SQL Server 컴퓨터 언어 확장을 추가한 각 데이터베이스 엔진 인스턴스에 대해 별도의 [!INCLUDE[rsql_launchpad_md](../../includes/rsql-launchpad-md.md)] 서비스가 생성됩니다. 각 데이터베이스 엔진 인스턴스마다 하나의 실행 패드 서비스가 있으므로, 외부 스크립트를 지원하는 여러 인스턴스가 있는 경우 각 인스턴스에 대한 실행 패드 서비스가 제공됩니다. 데이터베이스 엔진 인스턴스는 생성된 실행 패드 서비스에 바인딩됩니다. 저장 프로시저 또는 T-SQL에서 외부 스크립트를 호출할 때마다 SQL Server 서비스가 동일한 인스턴스에 대해 만들어진 실행 패드 서비스를 호출합니다.
 
@@ -86,7 +86,7 @@ SQL Server 컴퓨터 언어 확장을 추가한 각 데이터베이스 엔진 �
 
 + **기타 프로토콜**
 
-  "청크"로 작업하거나 데이터를 원격 클라이언트에 다시 전송해야 하는 프로세스도 [XDF 파일 형식](https://docs.microsoft.com/machine-learning-server/r/concept-what-is-xdf)을 사용할 수 있습니다. 실제 데이터는 인코딩된 Blob을 통해 전송됩니다.
+  "청크"로 작업하거나 데이터를 원격 클라이언트에 다시 전송해야 하는 프로세스도 [XDF 파일 형식](/machine-learning-server/r/concept-what-is-xdf)을 사용할 수 있습니다. 실제 데이터는 인코딩된 Blob을 통해 전송됩니다.
 
 ## <a name="next-steps"></a>다음 단계
 

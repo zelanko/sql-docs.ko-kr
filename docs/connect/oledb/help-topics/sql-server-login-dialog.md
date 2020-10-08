@@ -10,12 +10,12 @@ ms.technology: connectivity
 ms.topic: reference
 ms.author: v-beaziz
 author: bazizi
-ms.openlocfilehash: af86eae9866960c58ec9967f32a45998e5a91106
-ms.sourcegitcommit: e4c36570c34cd7d7ae258061351bce6e54ea49f6
+ms.openlocfilehash: 403c134c6e627ba1eb6c18cd2ba5341e54d65975
+ms.sourcegitcommit: c7f40918dc3ecdb0ed2ef5c237a3996cb4cd268d
 ms.translationtype: HT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 08/12/2020
-ms.locfileid: "88147584"
+ms.lasthandoff: 10/05/2020
+ms.locfileid: "91727261"
 ---
 # <a name="sql-server-login-dialog-box"></a>SQL Server 로그인 대화 상자
 [!INCLUDE [SQL Server](../../../includes/applies-to-version/sql-asdb-asdbmi-asa-pdw.md)]
@@ -27,14 +27,14 @@ ms.locfileid: "88147584"
 > [!NOTE]  
 > SQL Server 로그인 대화 상자 동작은 `DBPROP_INIT_PROMPT` 초기화 속성에 의해 제어됩니다. 자세한 내용은 다음을 참조하세요.
 > - [초기화 및 권한 부여 속성](../ole-db-data-source-objects/initialization-and-authorization-properties.md)
-> - [OLE DB 프로그래머 가이드](https://go.microsoft.com/fwlink/?linkid=2067702)
+> - [OLE DB 프로그래머 가이드](/previous-versions/windows/desktop/ms714342(v=vs.85))
 
 ![SQL Server 로그인 대화 상자의 스크린샷](../media/sql-server-login-dialog.png)
 
 ## <a name="options"></a>옵션
 |옵션|Description|
 |---   |---        |
-|서버|네트워크에서 SQL Server 인스턴스의 이름입니다. 목록에서 서버\인스턴스 이름을 선택하거나 **서버** 상자에 서버\인스턴스 이름을 입력합니다. 필요한 경우 **SQL Server 구성 관리자**를 사용하여 클라이언트 컴퓨터에서 서버 별칭을 만들고 **서버** 상자에 이 이름을 입력할 수 있습니다. <br/><br/>SQL Server와 동일한 컴퓨터를 사용하는 경우에는 "(로컬)"을 입력할 수 있습니다. 그러면 네트워크에 연결되지 않은 SQL Server 버전을 실행하는 경우에도 SQL Server의 로컬 인스턴스에 연결할 수 있습니다.<br/><br/>여러 네트워크 유형의 서버 이름에 대한 자세한 내용은 [SQL Server 설치](https://go.microsoft.com/fwlink/?linkid=2067541)를 참조하세요.|
+|서버|네트워크에서 SQL Server 인스턴스의 이름입니다. 목록에서 서버\인스턴스 이름을 선택하거나 **서버** 상자에 서버\인스턴스 이름을 입력합니다. 필요한 경우 **SQL Server 구성 관리자**를 사용하여 클라이언트 컴퓨터에서 서버 별칭을 만들고 **서버** 상자에 이 이름을 입력할 수 있습니다. <br/><br/>SQL Server와 동일한 컴퓨터를 사용하는 경우에는 "(로컬)"을 입력할 수 있습니다. 그러면 네트워크에 연결되지 않은 SQL Server 버전을 실행하는 경우에도 SQL Server의 로컬 인스턴스에 연결할 수 있습니다.<br/><br/>여러 네트워크 유형의 서버 이름에 대한 자세한 내용은 [SQL Server 설치](../../../database-engine/install-windows/install-sql-server.md)를 참조하세요.|
 |인증 모드|드롭다운 목록에서 다음 인증 옵션을 선택할 수 있습니다.<br/><ul><li>`Windows Authentication:` 현재 로그인한 사용자의 Windows 계정 자격 증명을 사용하는 SQL Server 인증입니다.</li><li>`SQL Server Authentication:` 로그인 ID 및 암호를 사용하는 인증입니다.</li><li>`Active Directory - Integrated:` Azure Active Directory ID를 사용하는 통합 인증입니다. 이 모드는 SQL Server에 대한 Windows 인증에도 사용할 수 있습니다.</li><li>`Active Directory - Password:` Azure Active Directory ID를 사용하는 사용자 ID 및 암호 인증입니다.</li><li>`Active Directory - Universal with MFA support:` Azure Active Directory ID를 사용하는 대화형 인증입니다. 이 모드는 Azure MFA(다단계 인증)를 지원합니다.</li></ul>|
 |서버 SPN|트러스트된 연결을 사용하면 서버에 대한 SPN(서비스 사용자 이름)을 지정할 수 있습니다.|
 |로그인 ID|연결에 사용할 로그인 ID를 지정합니다. 로그인 ID 텍스트 상자는 `Authentication Mode`가 `SQL Server Authentication`, `Active Directory - Password` 또는 `Active Directory - Universal with MFA support`로 설정된 경우에만 사용할 수 있습니다.|

@@ -16,12 +16,12 @@ helpviewer_keywords:
 - OLE DB error handling
 author: David-Engel
 ms.author: v-daenge
-ms.openlocfilehash: ddd8fd4e6280e49d924a0bf60f4d8a4900c114e4
-ms.sourcegitcommit: c95f3ef5734dec753de09e07752a5d15884125e2
+ms.openlocfilehash: 15b2001e7e6c0a747b77cb51df0bf38c17856d99
+ms.sourcegitcommit: c7f40918dc3ecdb0ed2ef5c237a3996cb4cd268d
 ms.translationtype: HT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 08/25/2020
-ms.locfileid: "88862007"
+ms.lasthandoff: 10/05/2020
+ms.locfileid: "91727204"
 ---
 # <a name="errors"></a>오류
 [!INCLUDE [SQL Server](../../../includes/applies-to-version/sql-asdb-asdbmi-asa-pdw.md)]
@@ -32,11 +32,11 @@ ms.locfileid: "88862007"
   
  OLE/COM은 **IErrorInfo** 인터페이스를 지정합니다. 이 인터페이스는 **GetDescription**과 같은 메서드를 제공합니다. 이 인터페이스를 사용하여 클라이언트는 OLE/COM 서버에서 오류 정보를 추출합니다. OLE DB는 단일 멤버 함수 실행에 대해 여러 개의 오류 정보 패킷 반환을 지원하기 위해 **IErrorInfo**를 확장합니다.  
   
- [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)]에서 여러 오류를 반환합니다. 애플리케이션은 ISQLErrorInfo 및 IErrorRecords를 조합한 [IMultipleResults::GetResult](https://go.microsoft.com/fwlink/?LinkId=129630)를 호출하여 한 번에 하나씩 서버 오류를 검색할 수 있습니다.  
+ [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)]에서 여러 오류를 반환합니다. 애플리케이션은 ISQLErrorInfo 및 IErrorRecords를 조합한 [IMultipleResults::GetResult](/previous-versions/windows/desktop/ms721289(v=vs.85))를 호출하여 한 번에 하나씩 서버 오류를 검색할 수 있습니다.  
   
- SQL Server용 OLE DB 드라이버는 OLE DB 레코드로 향상된 **IErrorInfo**, 사용자 지정 **ISQLErrorInfo** 및 공급자별 [ISQLServerErrorInfo](https://docs.microsoft.com/sql/connect/oledb/ole-db-interfaces/isqlservererrorinfo-geterrorinfo-ole-db?view=sql-server-ver15) 오류 개체 인터페이스를 제공합니다.  
+ SQL Server용 OLE DB 드라이버는 OLE DB 레코드로 향상된 **IErrorInfo**, 사용자 지정 **ISQLErrorInfo** 및 공급자별 [ISQLServerErrorInfo](../ole-db-interfaces/isqlservererrorinfo-geterrorinfo-ole-db.md?view=sql-server-ver15) 오류 개체 인터페이스를 제공합니다.  
   
- 오류 추적에 대한 자세한 내용은 [데이터 액세스 추적](https://go.microsoft.com/fwlink/?LinkId=125805)을 참조하십시오. [!INCLUDE[ssSQL11](../../../includes/sssql11-md.md)]에 추가된 오류 추적의 향상된 기능에 대한 자세한 내용은 [확장 이벤트 로그의 진단 정보 액세스](../../oledb/features/accessing-diagnostic-information-in-the-extended-events-log.md)를 참조하세요.  
+ 오류 추적에 대한 자세한 내용은 [데이터 액세스 추적](/previous-versions/sql/sql-server-2008/cc765421(v=sql.100))을 참조하십시오. [!INCLUDE[ssSQL11](../../../includes/sssql11-md.md)]에 추가된 오류 추적의 향상된 기능에 대한 자세한 내용은 [확장 이벤트 로그의 진단 정보 액세스](../../oledb/features/accessing-diagnostic-information-in-the-extended-events-log.md)를 참조하세요.  
   
 ## <a name="in-this-section"></a>섹션 내용  
   
@@ -52,5 +52,4 @@ ms.locfileid: "88862007"
   
 ## <a name="see-also"></a>참고 항목  
  [SQL Server 프로그래밍용 OLE DB 드라이버](../../oledb/ole-db/oledb-driver-for-sql-server-programming.md)  
-  
   

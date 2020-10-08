@@ -11,12 +11,12 @@ ms.topic: conceptual
 ms.assetid: 73a80821-d345-4fea-b076-f4aabeb4af3e
 author: David-Engel
 ms.author: v-daenge
-ms.openlocfilehash: 8e0386a6aba186924ee345bd9d5b470bd0bd6c56
-ms.sourcegitcommit: e700497f962e4c2274df16d9e651059b42ff1a10
+ms.openlocfilehash: 875c5944a0b74c7140843388da1e783e9f2ba5b8
+ms.sourcegitcommit: c7f40918dc3ecdb0ed2ef5c237a3996cb4cd268d
 ms.translationtype: HT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 08/17/2020
-ms.locfileid: "88478005"
+ms.lasthandoff: 10/05/2020
+ms.locfileid: "91726764"
 ---
 # <a name="support-for-high-availability-disaster-recovery"></a>고가용성, 재해 복구 지원
 [!INCLUDE[Driver_PHP_Download](../../includes/driver_php_download.md)]
@@ -27,7 +27,7 @@ Microsoft Drivers for PHP for SQL Server 버전 3.0부터 연결 문자열에 �
 
 **MultiSubnetFailover** 연결 속성은 애플리케이션을 가용성 그룹 또는 장애 조치(Failover) 클러스터 인스턴스에 배포하는 중이며 드라이버가 모든 IP 주소에 연결을 시도하여 주 SQL Server 인스턴스의 데이터베이스에 연결을 시도함을 나타냅니다. SQL Server 가용성 그룹 수신기 또는 SQL Server 장애 조치(Failover) 클러스터 인스턴스에 연결할 때는 항상 **MultiSubnetFailover=True**를 지정하세요. 애플리케이션이 장애 조치되는 AlwaysOn 데이터베이스에 연결되는 경우 장애 조치 후 작업을 계속하기 위해 원래 연결이 끊어지고 애플리케이션은 새 연결을 열어야 합니다.
 
-Always On 가용성 그룹에 대한 자세한 내용은 [고가용성, 재해 복구](https://docs.microsoft.com/sql/relational-databases/native-client/features/sql-server-native-client-support-for-high-availability-disaster-recovery) 문서 페이지에서 확인할 수 있습니다.
+Always On 가용성 그룹에 대한 자세한 내용은 [고가용성, 재해 복구](../../relational-databases/native-client/features/sql-server-native-client-support-for-high-availability-disaster-recovery.md) 문서 페이지에서 확인할 수 있습니다.
 
 ## <a name="transparent-network-ip-resolution-tnir"></a>TNIR(투명 네트워크 IP 확인)
 
@@ -72,4 +72,3 @@ AG의 주 데이터베이스에서 데이터베이스 미러링이 사용되고 
 
 ## <a name="see-also"></a>참고 항목  
 [서버에 연결](../../connect/php/connecting-to-the-server.md)  
-  

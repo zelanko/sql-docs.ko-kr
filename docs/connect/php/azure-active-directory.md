@@ -11,17 +11,17 @@ helpviewer_keywords:
 - azure active directory, authentication, access token
 author: David-Engel
 ms.author: v-daenge
-ms.openlocfilehash: ac1e598b5599caa9020ed795d1bffd185887ad76
-ms.sourcegitcommit: 8ffc23126609b1cbe2f6820f9a823c5850205372
+ms.openlocfilehash: 7b0d644d362ad4105c4e0b4f0db8d50c92a7e8b1
+ms.sourcegitcommit: c7f40918dc3ecdb0ed2ef5c237a3996cb4cd268d
 ms.translationtype: HT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 04/17/2020
-ms.locfileid: "81625463"
+ms.lasthandoff: 10/05/2020
+ms.locfileid: "91726894"
 ---
 # <a name="connect-using-azure-active-directory-authentication"></a>Azure Active Directory 인증을 사용하여 연결
 [!INCLUDE[Driver_PHP_Download](../../includes/driver_php_download.md)]
 
-[Azure AD](https://docs.microsoft.com/azure/active-directory/active-directory-whatis)(Azure Active Directory)는 [SQL Server 인증](how-to-connect-using-sql-server-authentication.md) 대신 사용 가능한 중앙 사용자 ID 관리 기술입니다. Azure AD는 Azure AD의 페더레이션 ID로 사용자 이름과 암호, Windows 통합 인증, 또는 Azure AD 액세스 토큰을 사용하여 Microsoft Azure SQL Database 및 SQL Data Warehouse에 대한 연결을 허용합니다. SQL Server의 PHP 드라이버는 이 기능을 부분적으로 지원합니다.
+[Azure AD](/azure/active-directory/active-directory-whatis)(Azure Active Directory)는 [SQL Server 인증](how-to-connect-using-sql-server-authentication.md) 대신 사용 가능한 중앙 사용자 ID 관리 기술입니다. Azure AD는 Azure AD의 페더레이션 ID로 사용자 이름과 암호, Windows 통합 인증, 또는 Azure AD 액세스 토큰을 사용하여 Microsoft Azure SQL Database 및 SQL Data Warehouse에 대한 연결을 허용합니다. SQL Server의 PHP 드라이버는 이 기능을 부분적으로 지원합니다.
 
 Azure AD를 사용하려면 다음 표에 나와 있는 것처럼 **인증** 또는 **AccessToken** 키워드를 사용합니다(함께 사용할 수 없음). 자세한 기술 정보는 [ODBC 드라이버에서 Azure Active Directory 사용](../odbc/using-azure-active-directory.md)을 참조하세요.
 
@@ -32,7 +32,7 @@ Azure AD를 사용하려면 다음 표에 나와 있는 것처럼 **인증** 또
 |**인증**|미설정(기본값)|다른 키워드에 의해 결정되는 인증 모드입니다. 자세한 내용은 [Connection Options](connection-options.md)을 참조하세요. |
 ||`SqlPassword`|사용자 이름과 암호로 SQL Server 인스턴스(Azure 인스턴스일 수 있음)에 직접 인증합니다. **UID** 및 **PWD** 키워드로 사용자 이름과 암호를 연결 문자열에 전달해야 합니다. |
 ||`ActiveDirectoryPassword`|사용자 이름과 암호를 사용하는 Azure Active Directory ID로 인증합니다. **UID** 및 **PWD** 키워드로 사용자 이름과 암호를 연결 문자열에 전달해야 합니다. |
-||`ActiveDirectoryMsi`|시스템 할당 관리 ID 또는 사용자 할당 관리 ID 중 하나로 인증합니다(ODBC 드라이버 버전 17.3.1.1 이상 필요). 개요와 자습서는 [Azure 리소스에 대한 관리 ID란?](https://docs.microsoft.com/azure/active-directory/managed-identities-azure-resources/overview)을 참조하세요.|
+||`ActiveDirectoryMsi`|시스템 할당 관리 ID 또는 사용자 할당 관리 ID 중 하나로 인증합니다(ODBC 드라이버 버전 17.3.1.1 이상 필요). 개요와 자습서는 [Azure 리소스에 대한 관리 ID란?](/azure/active-directory/managed-identities-azure-resources/overview)을 참조하세요.|
 
 **인증** 키워드는 연결 보안 설정에 영향을 줍니다. 연결 문자열에 설정된 경우 **암호화** 키워드는 기본적으로 true로 설정되며, 따라서 클라이언트가 암호화를 요청합니다. 또한 **TrustServerCertificate**의 설정이 true가 아니면(**false**로 기본 설정 시) 암호화 설정과 관계없이 서버 인증서의 유효성이 검사됩니다. 이 기능은 연결 문자열에서 암호화가 구체적으로 요청된 경우에만 서버 인증서의 유효성을 검사하는 방식 때문에 보안성이 비교적 떨어지던 이전의 로그인 방법과 구별됩니다.
 
@@ -237,4 +237,4 @@ try {
 ## <a name="see-also"></a>참고 항목
 [ODBC 드라이버에서 Azure Active Directory 사용](../odbc/using-azure-active-directory.md)
 
-[Azure 리소스용 관리 ID란?](https://docs.microsoft.com/azure/active-directory/managed-identities-azure-resources/overview)
+[Azure 리소스용 관리 ID란?](/azure/active-directory/managed-identities-azure-resources/overview)

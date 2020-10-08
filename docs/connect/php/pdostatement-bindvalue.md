@@ -11,12 +11,12 @@ ms.topic: conceptual
 ms.assetid: 13bc4ece-420e-4887-8809-bf0705ddf126
 author: David-Engel
 ms.author: v-daenge
-ms.openlocfilehash: ebb895ac26aaff16ef4fb0d51a56243a9401e4d1
-ms.sourcegitcommit: 331b8495e4ab37266945c81ff5b93d250bdaa6da
+ms.openlocfilehash: 602b368e8d36a39b3350c0e61e290da053484e38
+ms.sourcegitcommit: c7f40918dc3ecdb0ed2ef5c237a3996cb4cd268d
 ms.translationtype: HT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 08/20/2020
-ms.locfileid: "88645364"
+ms.lasthandoff: 10/05/2020
+ms.locfileid: "91726787"
 ---
 # <a name="pdostatementbindvalue"></a>PDOStatement::bindValue
 [!INCLUDE[Driver_PHP_Download](../../includes/driver_php_download.md)]
@@ -77,7 +77,7 @@ while ($row = $stmt->fetch(PDO::FETCH_ASSOC)) {
 ```
 
 > [!NOTE]
-> PHP에서는 [부동 소수점 숫자](https://php.net/manual/en/language.types.float.php)의 정밀도가 제한되어 있으므로 [decimal 또는 numeric 열](https://docs.microsoft.com/sql/t-sql/data-types/decimal-and-numeric-transact-sql)에 값을 바인딩할 때는 정밀도와 정확도를 보장하기 위해 문자열을 입력으로 사용하는 것이 좋습니다. bigint 열도 마찬가지이며, 값이 [정수](../../t-sql/data-types/int-bigint-smallint-and-tinyint-transact-sql.md) 범위를 벗어나는 경우 특히 그렇습니다.
+> PHP에서는 [부동 소수점 숫자](https://php.net/manual/en/language.types.float.php)의 정밀도가 제한되어 있으므로 [decimal 또는 numeric 열](../../t-sql/data-types/decimal-and-numeric-transact-sql.md)에 값을 바인딩할 때는 정밀도와 정확도를 보장하기 위해 문자열을 입력으로 사용하는 것이 좋습니다. bigint 열도 마찬가지이며, 값이 [정수](../../t-sql/data-types/int-bigint-smallint-and-tinyint-transact-sql.md) 범위를 벗어나는 경우 특히 그렇습니다.
 
 ## <a name="example"></a>예제  
 이 코드 샘플에서는 10진수 값을 입력 매개 변수로 바인딩하는 방법을 보여 줍니다.  
@@ -101,4 +101,3 @@ $stmt->execute();
 [PDOStatement 클래스](../../connect/php/pdostatement-class.md)
 
 [PDO](https://php.net/manual/book.pdo.php)  
-  

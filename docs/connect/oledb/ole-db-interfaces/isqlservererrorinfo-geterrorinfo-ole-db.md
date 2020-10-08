@@ -15,12 +15,12 @@ helpviewer_keywords:
 - GetErrorInfo method
 author: David-Engel
 ms.author: v-daenge
-ms.openlocfilehash: e6c025b5832299867be8b611756b5e15d54109c2
-ms.sourcegitcommit: c95f3ef5734dec753de09e07752a5d15884125e2
+ms.openlocfilehash: 717a866203bfc7f96311ff0c4f28ffb11f745ac7
+ms.sourcegitcommit: c7f40918dc3ecdb0ed2ef5c237a3996cb4cd268d
 ms.translationtype: HT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 08/25/2020
-ms.locfileid: "88860084"
+ms.lasthandoff: 10/05/2020
+ms.locfileid: "91726966"
 ---
 # <a name="isqlservererrorinfogeterrorinfo-ole-db"></a>ISQLServerErrorInfo::GetErrorInfo(OLE DB)
 [!INCLUDE [SQL Server](../../../includes/applies-to-version/sql-asdb-asdbmi-asa-pdw.md)]
@@ -90,7 +90,6 @@ SSERRORINFO;
  *ppErrorStrings* 인수에 반환된 문자열의 구조 참조 주소에 있는 포인터입니다.  
   
 ## <a name="see-also"></a>참고 항목  
- [ISQLServerErrorInfo &#40;OLE DB&#41;](https://docs.microsoft.com/sql/connect/oledb/ole-db-interfaces/isqlservererrorinfo-geterrorinfo-ole-db?view=sql-server-ver15)   
+ [ISQLServerErrorInfo &#40;OLE DB&#41;](?view=sql-server-ver15)   
  [RAISERROR&#40;Transact-SQL&#41;](../../../t-sql/language-elements/raiserror-transact-sql.md)  
-  
   

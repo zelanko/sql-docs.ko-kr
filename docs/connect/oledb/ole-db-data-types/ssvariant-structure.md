@@ -14,12 +14,12 @@ helpviewer_keywords:
 - SSVARIANT struct
 author: David-Engel
 ms.author: v-daenge
-ms.openlocfilehash: 701476b8e1cea1f84d7fdbf970a345311d686cfd
-ms.sourcegitcommit: c95f3ef5734dec753de09e07752a5d15884125e2
+ms.openlocfilehash: b6cef1fb9b92df92cba00ea9e9aa8c9591e887a6
+ms.sourcegitcommit: c7f40918dc3ecdb0ed2ef5c237a3996cb4cd268d
 ms.translationtype: HT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 08/25/2020
-ms.locfileid: "88860061"
+ms.lasthandoff: 10/05/2020
+ms.locfileid: "91727237"
 ---
 # <a name="ssvariant-structure"></a>SSVARIANT 구조
 [!INCLUDE [SQL Server](../../../includes/applies-to-version/sql-asdb-asdbmi-asa-pdw.md)]
@@ -28,7 +28,7 @@ ms.locfileid: "88860061"
 
   msoledbsql.h에 정의된 **SSVARIANT** 구조는 OLE DB Driver for SQL Server의 DBTYPE_SQLVARIANT 값에 해당합니다.  
   
- **SSVARIANT**는 판별 공용 구조체입니다. vt 멤버의 값에 따라 소비자는 읽을 멤버를 결정할 수 있습니다. vt 값은 [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] 데이터 형식에 해당하므로 **SSVARIANT** 구조는 모든 SQL Server 형식을 보유할 수 있습니다. 표준 OLE DB 형식의 데이터 구조에 대한 자세한 내용은 [형식 표시기](https://go.microsoft.com/fwlink/?LinkId=122171)를 참조하세요.  
+ **SSVARIANT**는 판별 공용 구조체입니다. vt 멤버의 값에 따라 소비자는 읽을 멤버를 결정할 수 있습니다. vt 값은 [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] 데이터 형식에 해당하므로 **SSVARIANT** 구조는 모든 SQL Server 형식을 보유할 수 있습니다. 표준 OLE DB 형식의 데이터 구조에 대한 자세한 내용은 [형식 표시기](/previous-versions/windows/desktop/ms711251(v=vs.85))를 참조하세요.  
   
 ## <a name="remarks"></a>설명  
  DataTypeCompat==80인 경우, 여러 **SSVARIANT** 하위 유형이 문자열이 됩니다. 예를 들면 다음 vt 값이 **SSVARIANT**에 VT_SS_WVARSTRING으로 나타납니다.  
@@ -87,7 +87,7 @@ OLE DB 드라이버 버전 18.4보다 이전에는 다음 조건이 모두 true�
 - 클라이언트 컴퓨터 코드 페이지가 데이터베이스 데이터 정렬 코드 페이지와 일치하지 않습니다.
 - 삽입할 클라이언트 버퍼가 코드 페이지에 인코딩된 비 ASCII 좁은 문자열 문자를 포함합니다.
 - 다음 조건 중 하나가 true입니다.
-  - `sql_variant` 열에 해당하는 매개 변수를 설명하는 `DBPARAMBINDINFO` 구조의 `pwszDataSourceType` 필드가 `L"DBTYPE_SQLVARIANT"`, `L"DBTYPE_VARIANT"`또는 `L"sql_variant"`로 설정되었습니다. 자세한 내용은 다음을 참조하세요. [ICommandWithParameters::SetParameterInfo](https://docs.microsoft.com/previous-versions/windows/desktop/ms725393(v=vs.85)).
+  - `sql_variant` 열에 해당하는 매개 변수를 설명하는 `DBPARAMBINDINFO` 구조의 `pwszDataSourceType` 필드가 `L"DBTYPE_SQLVARIANT"`, `L"DBTYPE_VARIANT"`또는 `L"sql_variant"`로 설정되었습니다. 자세한 내용은 다음을 참조하세요. [ICommandWithParameters::SetParameterInfo](/previous-versions/windows/desktop/ms725393(v=vs.85)).
 
     *or*
   - 삽입에 사용되는 매개 변수가 있는 SQL 쿼리가 준비되었습니다.
@@ -153,5 +153,4 @@ UPDATE [YourDatabase].[dbo].[YourTable] SET [YourColumn] = @sqlvariant WHERE <Fi
 
 ## <a name="see-also"></a>참고 항목  
  [데이터 형식&#40;OLE DB&#41;](../../oledb/ole-db-data-types/data-types-ole-db.md)  
-  
   

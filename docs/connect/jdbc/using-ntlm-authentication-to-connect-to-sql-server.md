@@ -13,12 +13,12 @@ ms.assetid: ''
 author: lilgreenbird
 ms.author: v-susanh
 manager: kenvh
-ms.openlocfilehash: 93b4956b70e6e81e215da4fcde61a3a3287b50ec
-ms.sourcegitcommit: cb620c77fe6bdefb975968837706750c31048d46
+ms.openlocfilehash: a9d16c785696a18262b818668af9d65c55f37616
+ms.sourcegitcommit: c7f40918dc3ecdb0ed2ef5c237a3996cb4cd268d
 ms.translationtype: HT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 07/15/2020
-ms.locfileid: "86393151"
+ms.lasthandoff: 10/05/2020
+ms.locfileid: "91727497"
 ---
 # <a name="using-ntlm-authentication-to-connect-to-sql-server"></a>NTLM 인증을 사용하여 SQL Server에 연결
 
@@ -35,11 +35,11 @@ NTLM 인증에는 다음 속성도 사용됩니다.
 
 **domain** 이외에 다른 속성은 필수입니다. **NTLM** authenticationScheme 속성이 사용될 때 이 중 하나라도 누락되는 경우 드라이버가 오류를 throw합니다. 
 
-연결 속성에 대한 자세한 내용은 [연결 속성 설정](../../connect/jdbc/setting-the-connection-properties.md)을 참조하세요. Microsoft NTLM 인증 프로토콜에 대한 자세한 내용은 [Microsoft NTLM](https://docs.microsoft.com/windows/desktop/SecAuthN/microsoft-ntlm)을 참조하세요.
+연결 속성에 대한 자세한 내용은 [연결 속성 설정](../../connect/jdbc/setting-the-connection-properties.md)을 참조하세요. Microsoft NTLM 인증 프로토콜에 대한 자세한 내용은 [Microsoft NTLM](/windows/desktop/SecAuthN/microsoft-ntlm)을 참조하세요.
 
 ## <a name="remarks"></a>설명
 
-[네트워크 보안: LAN 관리자 인증 수준](https://docs.microsoft.com/windows/security/threat-protection/security-policy-settings/network-security-lan-manager-authentication-level)에서 NTLM 인증의 동작을 제어하는 SQL Server 설정에 대한 설명을 확인합니다. 
+[네트워크 보안: LAN 관리자 인증 수준](/windows/security/threat-protection/security-policy-settings/network-security-lan-manager-authentication-level)에서 NTLM 인증의 동작을 제어하는 SQL Server 설정에 대한 설명을 확인합니다. 
 
 ## <a name="logging"></a>로깅
 
@@ -79,7 +79,7 @@ SPN(서비스 사용자 이름)은 클라이언트가 서비스 인스턴스를 
 
 SPN(서비스 사용자 이름)에 대한 자세한 내용은 다음을 참조하십시오.
 
-- [클라이언트 연결의 SPN(서비스 사용자 이름) 지원](https://docs.microsoft.com/sql/relational-databases/native-client/features/service-principal-name-spn-support-in-client-connections?view=sql-server-2017)
+- [클라이언트 연결의 SPN(서비스 사용자 이름) 지원](../../relational-databases/native-client/features/service-principal-name-spn-support-in-client-connections.md?view=sql-server-2017)
 
 > [!NOTE]  
 > serverSpn 연결 특성은 Microsoft JDBC Driver 4.2 이상에서만 지원됩니다.

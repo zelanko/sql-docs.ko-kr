@@ -12,12 +12,12 @@ helpviewer_keywords:
 - data sources [OLE DB]
 author: David-Engel
 ms.author: v-daenge
-ms.openlocfilehash: 9b165f5ceb5e8f08539cb48473a6f3d701623f6a
-ms.sourcegitcommit: c95f3ef5734dec753de09e07752a5d15884125e2
+ms.openlocfilehash: 327a4ca587a577bdca3fe8f42748998f29060146
+ms.sourcegitcommit: c7f40918dc3ecdb0ed2ef5c237a3996cb4cd268d
 ms.translationtype: HT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 08/25/2020
-ms.locfileid: "88861380"
+ms.lasthandoff: 10/05/2020
+ms.locfileid: "91727158"
 ---
 # <a name="enumerate-ole-db-data-sources-ole-db"></a>OLE DB 데이터 원본 열거(OLE DB)
 [!INCLUDE [SQL Server](../../../includes/applies-to-version/sql-asdb-asdbmi-asa-pdw.md)]
@@ -26,7 +26,7 @@ ms.locfileid: "88861380"
 
   이 예제에서는 열거자 개체를 사용하여 사용 가능한 데이터 원본을 나열하는 방법을 보여 줍니다.  
   
- 소비자는 [ISourcesRowset::GetSourcesRowset](https://go.microsoft.com/fwlink/?LinkId=120312) 메서드를 호출하여 MSOLEDBSQL 열거자에 표시되는 데이터 원본을 나열할 수 있습니다. 이 메서드는 현재 표시되는 데이터 원본에 대한 정보의 행 집합을 반환합니다.  
+ 소비자는 [ISourcesRowset::GetSourcesRowset](/previous-versions/windows/desktop/ms711200(v=vs.85)) 메서드를 호출하여 MSOLEDBSQL 열거자에 표시되는 데이터 원본을 나열할 수 있습니다. 이 메서드는 현재 표시되는 데이터 원본에 대한 정보의 행 집합을 반환합니다.  
   
  사용 중인 네트워크 라이브러리에 따라 적절한 도메인에서 데이터 원본이 검색됩니다. 명명된 파이프를 사용하는 경우 클라이언트가 로그온한 도메인에서 데이터 원본을 검색하고 AppleTalk를 사용하는 경우 기본 영역에서 데이터 원본을 검색하며 SPX/IPX를 사용하는 경우 바인더리에 있는 [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] 목록에서 데이터 원본을 검색하고 Banyan VINES를 사용하는 경우 로컬 네트워크에 있는 [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] 에서 데이터 원본을 검색합니다. 멀티프로토콜 및 TCP/IP 소켓은 지원되지 않습니다.  
   
@@ -35,7 +35,7 @@ ms.locfileid: "88861380"
  이 예제에는 [Microsoft SQL Server 예제 및 커뮤니티 프로젝트(Microsoft SQL Server Samples and Community Projects)](https://go.microsoft.com/fwlink/?LinkID=85384) 홈 페이지에서 다운로드할 수 있는 AdventureWorks 예제 데이터베이스가 필요합니다.  
   
 > [!IMPORTANT]  
->  가능하면 Windows 인증을 사용하세요. Windows 인증을 사용할 수 없으면 런타임에 사용자에게 자격 증명을 입력하라는 메시지를 표시합니다. 자격 증명은 파일에 저장하지 않는 것이 좋습니다. 자격 증명을 유지하려면 [Win32 crypto API](https://go.microsoft.com/fwlink/?LinkId=64532)를 사용하여 자격 증명을 암호화해야 합니다.  
+>  가능하면 Windows 인증을 사용하세요. Windows 인증을 사용할 수 없으면 런타임에 사용자에게 자격 증명을 입력하라는 메시지를 표시합니다. 자격 증명은 파일에 저장하지 않는 것이 좋습니다. 자격 증명을 유지하려면 [Win32 crypto API](/windows/win32/seccrypto/cryptography-reference)를 사용하여 자격 증명을 암호화해야 합니다.  
   
 ### <a name="to-enumerate-ole-db-data-sources"></a>OLE DB 데이터 원본을 열거하려면  
   
@@ -280,5 +280,4 @@ SAFE_EXIT:
    return TRUE;  
 }  
 ```  
-  
   

@@ -14,12 +14,12 @@ helpviewer_keywords:
 - OLE DB, creating applications
 author: David-Engel
 ms.author: v-daenge
-ms.openlocfilehash: 49a9f20904c5719960cbffc7ca94c825def7231c
-ms.sourcegitcommit: c95f3ef5734dec753de09e07752a5d15884125e2
+ms.openlocfilehash: ed150ea18d1141e6116efe177e65836c235cf703
+ms.sourcegitcommit: c7f40918dc3ecdb0ed2ef5c237a3996cb4cd268d
 ms.translationtype: HT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 08/25/2020
-ms.locfileid: "88862333"
+ms.lasthandoff: 10/05/2020
+ms.locfileid: "91727229"
 ---
 # <a name="creating-an-ole-db-driver-for-sql-server-application"></a>SQL Server 애플리케이션용 OLE DB 드라이버 만들기
 [!INCLUDE [SQL Server](../../../includes/applies-to-version/sql-asdb-asdbmi-asa-pdw.md)]
@@ -35,7 +35,7 @@ ms.locfileid: "88862333"
 3.  결과 처리  
   
 > [!NOTE]  
->  가능하면 Windows 인증을 사용하세요. Windows 인증을 사용할 수 없으면 런타임에 사용자에게 자격 증명을 입력하라는 메시지를 표시합니다. 자격 증명은 파일에 저장하지 않는 것이 좋습니다. 자격 증명을 유지하려면 [the Win32 cryptoAPI](https://go.microsoft.com/fwlink/?LinkId=9504)를 사용하여 자격 증명을 암호화해야 합니다.  
+>  가능하면 Windows 인증을 사용하세요. Windows 인증을 사용할 수 없으면 런타임에 사용자에게 자격 증명을 입력하라는 메시지를 표시합니다. 자격 증명은 파일에 저장하지 않는 것이 좋습니다. 자격 증명을 유지하려면 [the Win32 cryptoAPI](/windows/win32/seccng/cng-portal)를 사용하여 자격 증명을 암호화해야 합니다.  
   
 ## <a name="in-this-section"></a>섹션 내용  
   
@@ -51,5 +51,4 @@ ms.locfileid: "88862333"
   
 ## <a name="see-also"></a>참고 항목  
  [SQL Server 프로그래밍용 OLE DB 드라이버](../../oledb/ole-db/oledb-driver-for-sql-server-programming.md)  
-  
   

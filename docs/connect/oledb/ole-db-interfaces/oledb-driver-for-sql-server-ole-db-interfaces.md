@@ -15,12 +15,12 @@ helpviewer_keywords:
 - OLE DB Driver for SQL Server, OLE DB
 author: David-Engel
 ms.author: v-daenge
-ms.openlocfilehash: 00bf7bad226fc793c17a80a0e10e86c970aae195
-ms.sourcegitcommit: c95f3ef5734dec753de09e07752a5d15884125e2
+ms.openlocfilehash: 3676f8daad2e597510323577a67f37c9a901f2b0
+ms.sourcegitcommit: c7f40918dc3ecdb0ed2ef5c237a3996cb4cd268d
 ms.translationtype: HT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 08/25/2020
-ms.locfileid: "88862130"
+ms.lasthandoff: 10/05/2020
+ms.locfileid: "91726953"
 ---
 # <a name="ole-db-driver-for-sql-server-ole-db-interfaces"></a>SQL Server용 OLE DB 드라이버(OLE DB) 인터페이스
 [!INCLUDE [SQL Server](../../../includes/applies-to-version/sql-asdb-asdbmi-asa-pdw.md)]
@@ -31,7 +31,7 @@ ms.locfileid: "88862130"
   
  이 SQL Server용 OLE DB 드라이버 프로그래밍 참조에는 모든 OLE DB 인터페이스 및 메서드가 포함되어 있지는 않으며 SQL Server용 OLE DB 드라이버를 사용할 때 공급자별 동작을 지원하는 인터페이스 및 메서드만 포함합니다.  
   
- 핵심 OLE DB 인터페이스 및 메서드에 대한 자세한 내용은 [OLE DB 프로그래머 참조(OLE DB Programmer's Reference)](https://go.microsoft.com/fwlink/?LinkId=45232)를 참조하십시오.  
+ 핵심 OLE DB 인터페이스 및 메서드에 대한 자세한 내용은 [OLE DB 프로그래머 참조(OLE DB Programmer's Reference)](/previous-versions/windows/desktop/ms713643(v=vs.85))를 참조하십시오.  
   
 ## <a name="in-this-section"></a>섹션 내용  
   
@@ -39,5 +39,4 @@ ms.locfileid: "88862130"
   
 ## <a name="see-also"></a>참고 항목  
  [SQL Server 프로그래밍용 OLE DB 드라이버](../../oledb/ole-db/oledb-driver-for-sql-server-programming.md)  
-  
   

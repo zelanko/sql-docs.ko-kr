@@ -10,12 +10,12 @@ ms.technology: connectivity
 ms.topic: reference
 author: David-Engel
 ms.author: v-daenge
-ms.openlocfilehash: 4c7f5ac94ff64ef32aaee793c59529ad0377b2f5
-ms.sourcegitcommit: c95f3ef5734dec753de09e07752a5d15884125e2
+ms.openlocfilehash: bcb768c0beea3ce836586bc718e1b7757da7ce72
+ms.sourcegitcommit: c7f40918dc3ecdb0ed2ef5c237a3996cb4cd268d
 ms.translationtype: HT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 08/25/2020
-ms.locfileid: "88860686"
+ms.lasthandoff: 10/05/2020
+ms.locfileid: "91727318"
 ---
 # <a name="ole-db-driver-for-sql-server-support-for-localdb"></a>SQL Server용 OLE DB 드라이버의 LocalDB 지원
 [!INCLUDE [SQL Server](../../../includes/applies-to-version/sql-asdb-asdbmi-asa-pdw.md)]
@@ -29,7 +29,7 @@ ms.locfileid: "88860686"
   
 -   [SQL Server Express LocalDB 참조](../../../relational-databases/sql-server-express-localdb-reference.md)  
   
--   [SQL Server 2016 Express LocalDB](../../../database-engine/configure-windows/sql-server-2016-express-localdb.md)  
+-   [SQL Server 2016 Express LocalDB](../../../database-engine/configure-windows/sql-server-express-localdb.md)  
   
  요약하자면, LocalDB를 통해 다음과 같은 기능을 수행할 수 있습니다.  
   
@@ -47,5 +47,4 @@ SERVER=(localdb)\v11.0
   
 ## <a name="see-also"></a>참고 항목  
  [SQL Server 기능용 OLE DB 드라이버](../../oledb/features/oledb-driver-for-sql-server-features.md)  
-  
   

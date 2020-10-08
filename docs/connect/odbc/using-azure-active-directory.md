@@ -11,12 +11,12 @@ ms.topic: conceptual
 ms.assetid: 52205f03-ff29-4254-bfa8-07cced155c86
 author: David-Engel
 ms.author: v-daenge
-ms.openlocfilehash: c71c9a458d285cdf33bd785e1bec74a6f33d5820
-ms.sourcegitcommit: b6ee0d434b3e42384b5d94f1585731fd7d0eff6f
+ms.openlocfilehash: e6925b2b79629fbcbe84f6577e2617e9b45ea82c
+ms.sourcegitcommit: c7f40918dc3ecdb0ed2ef5c237a3996cb4cd268d
 ms.translationtype: HT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 09/02/2020
-ms.locfileid: "89288195"
+ms.lasthandoff: 10/05/2020
+ms.locfileid: "91727386"
 ---
 # <a name="using-azure-active-directory-with-the-odbc-driver"></a>ODBC 드라이버에서 Azure Active Directory 사용
 [!INCLUDE[Driver_ODBC_Download](../../includes/driver_odbc_download.md)]
@@ -45,7 +45,7 @@ Microsoft ODBC Driver for SQL Server 버전 13.1 이상에서는 ODBC 애플리�
 |-|-|-|-|-|
 |`SQL_COPT_SS_AUTHENTICATION`|`SQL_IS_INTEGER`|`SQL_AU_NONE`, `SQL_AU_PASSWORD`, `SQL_AU_AD_INTEGRATED`, `SQL_AU_AD_PASSWORD`, `SQL_AU_AD_INTERACTIVE`, `SQL_AU_AD_MSI`, `SQL_AU_RESET`|(설정 안 됨)|위의 `Authentication` 키워드에 대한 설명을 참조하세요. `SQL_AU_NONE`는 DSN 및/또는 연결 문자열의 설정된 `Authentication` 값을 명시적으로 재정의하기 위해 제공되며, `SQL_AU_RESET`는 설정된 경우 특성을 설정 해제하여 DSN 또는 연결 문자열 값이 우선적으로 적용될 수 있도록 합니다.|
 |`SQL_COPT_SS_ACCESS_TOKEN`|`SQL_IS_POINTER`|`ACCESSTOKEN` 또는 NULL에 대한 포인터|NULL|Null이 아닌 경우 사용할 AzureAD 액세스 토큰을 지정합니다. 액세스 토큰을 지정하는 것은 오류이며 `UID`, `PWD`, `Trusted_Connection` 또는 `Authentication` 연결 문자열 키워드 또는 이와 동등한 특성을 지정하는 것도 오류입니다. <br> **참고:** ODBC 드라이버 버전 13.1은 _Windows_에서만 이를 지원합니다.|
-|`SQL_COPT_SS_ENCRYPT`|`SQL_IS_INTEGER`|`SQL_EN_OFF`, `SQL_EN_ON`|(설명 참조)|연결의 암호화를 제어합니다. `SQL_EN_OFF`는 암호화를 사용하지 않도록 설정하고, `SQL_EN_ON`는 사용하도록 설정합니다. `Authentication` 설정의 사전 특성 값이 _none_이거나 `SQL_COPT_SS_ACCESS_TOKEN`이 설정되어 있고 DSN 또는 연결 문자열에 `Encrypt`가 지정되지 않은 경우 기본값은 `SQL_EN_ON`입니다. 그렇지 않은 경우 기본값은 `SQL_EN_OFF`입니다. 연결 특성 `SQL_COPT_SS_AUTHENTICATION`이 _none_으로 설정된 경우 DSN 또는 연결 문자열에 `Encrypt`가 지정되지 않았으면 명시적으로 `SQL_COPT_SS_ENCRYPT`를 원하는 값으로 설정합니다. 이 특성의 유효한 값은 [연결에 암호화를 사용할지 여부](https://docs.microsoft.com/sql/relational-databases/native-client/features/using-encryption-without-validation)를 제어합니다.|
+|`SQL_COPT_SS_ENCRYPT`|`SQL_IS_INTEGER`|`SQL_EN_OFF`, `SQL_EN_ON`|(설명 참조)|연결의 암호화를 제어합니다. `SQL_EN_OFF`는 암호화를 사용하지 않도록 설정하고, `SQL_EN_ON`는 사용하도록 설정합니다. `Authentication` 설정의 사전 특성 값이 _none_이거나 `SQL_COPT_SS_ACCESS_TOKEN`이 설정되어 있고 DSN 또는 연결 문자열에 `Encrypt`가 지정되지 않은 경우 기본값은 `SQL_EN_ON`입니다. 그렇지 않은 경우 기본값은 `SQL_EN_OFF`입니다. 연결 특성 `SQL_COPT_SS_AUTHENTICATION`이 _none_으로 설정된 경우 DSN 또는 연결 문자열에 `Encrypt`가 지정되지 않았으면 명시적으로 `SQL_COPT_SS_ENCRYPT`를 원하는 값으로 설정합니다. 이 특성의 유효한 값은 [연결에 암호화를 사용할지 여부](../../relational-databases/native-client/features/using-encryption-without-validation.md)를 제어합니다.|
 |`SQL_COPT_SS_OLDPWD`|\-|\-|\-|ODBC 연결을 통해서는 Azure AD 보안 주체에 대한 암호 변경을 수행할 수 없으므로 Azure Active Directory에서는 지원되지 않습니다. <br><br>SQL Server 인증의 암호 만료가 SQL Server 2005에 도입되었습니다. 클라이언트에서 연결에 대한 기존 암호와 새 암호를 모두 제공할 수 있도록 `SQL_COPT_SS_OLDPWD` 특성이 추가되었습니다. 이 속성을 설정하면 변경된 “이전 암호”가 연결 문자열에 포함되기 때문에 공급자가 첫 번째 연결 또는 이후 연결에 연결 풀을 사용하지 않습니다.|
 |`SQL_COPT_SS_INTEGRATED_SECURITY`|`SQL_IS_INTEGER`|`SQL_IS_OFF`,`SQL_IS_ON`|`SQL_IS_OFF`|_사용되지 않습니다_. 대신 `SQL_AU_AD_INTEGRATED`로 설정된 `SQL_COPT_SS_AUTHENTICATION`을 사용합니다. <br><br>서버 로그인에 대한 액세스 유효성 검사에 Windows 인증(Linux 및 macOS의 Kerberos)을 강제로 사용합니다. Windows 인증을 사용하는 경우 드라이버는 `SQLConnect`, `SQLDriverConnect` 또는 `SQLBrowseConnect` 처리의 일부로 제공된 사용자 ID 및 암호 값을 무시합니다.|
 
@@ -135,7 +135,7 @@ typedef struct AccessToken
 } ACCESSTOKEN;
 ~~~
 
-`ACCESSTOKEN`은 4바이트 _길이_ 뒤에 액세스 토큰을 구성하는 불투명 데이터의 바이트 _길이_가 이어지는 가변 길이 구조입니다. SQL Server에서 액세스 토큰을 처리하는 방법 때문에 [OAuth 2.0](https://docs.microsoft.com/azure/active-directory/develop/active-directory-authentication-scenarios) JSON 응답을 통해 가져온 토큰은 ASCII 문자만 포함하는 UCS-2 문자열과 비슷하게 각 바이트 뒤에 0 패딩 바이트가 오도록 확장되어야 합니다. 그러나 토큰은 불투명 값이며 지정된 길이(바이트)는 null 종결자를 포함하지 않아야 합니다. 이 인증 방법은 매우 긴 길이와 형식 제약 조건 때문에 `SQL_COPT_SS_ACCESS_TOKEN` 연결 특성을 통해서만 프로그래밍 방식으로 사용할 수 있습니다. 해당하는 DSN 또는 연결 문자열 키워드가 없습니다. 연결 문자열에 `UID`, `PWD`, `Authentication` 또는 `Trusted_Connection` 키워드가 포함되면 안 됩니다.
+`ACCESSTOKEN`은 4바이트 _길이_ 뒤에 액세스 토큰을 구성하는 불투명 데이터의 바이트 _길이_가 이어지는 가변 길이 구조입니다. SQL Server에서 액세스 토큰을 처리하는 방법 때문에 [OAuth 2.0](/azure/active-directory/develop/active-directory-authentication-scenarios) JSON 응답을 통해 가져온 토큰은 ASCII 문자만 포함하는 UCS-2 문자열과 비슷하게 각 바이트 뒤에 0 패딩 바이트가 오도록 확장되어야 합니다. 그러나 토큰은 불투명 값이며 지정된 길이(바이트)는 null 종결자를 포함하지 않아야 합니다. 이 인증 방법은 매우 긴 길이와 형식 제약 조건 때문에 `SQL_COPT_SS_ACCESS_TOKEN` 연결 특성을 통해서만 프로그래밍 방식으로 사용할 수 있습니다. 해당하는 DSN 또는 연결 문자열 키워드가 없습니다. 연결 문자열에 `UID`, `PWD`, `Authentication` 또는 `Trusted_Connection` 키워드가 포함되면 안 됩니다.
 
 > [!NOTE]
 > ODBC 드라이버 버전 13.1은 _Windows_에서만 이 인증을 지원합니다.

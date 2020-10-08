@@ -11,12 +11,12 @@ ms.topic: conceptual
 ms.assetid: c92a21cc-8e53-43d0-a4bf-542c77c100c9
 author: David-Engel
 ms.author: v-daenge
-ms.openlocfilehash: e29418276e6209f669ae57160809120d61e19a05
-ms.sourcegitcommit: 331b8495e4ab37266945c81ff5b93d250bdaa6da
+ms.openlocfilehash: 58b6882fe4f0fce4ddf948121cb6ad35e5828fd7
+ms.sourcegitcommit: c7f40918dc3ecdb0ed2ef5c237a3996cb4cd268d
 ms.translationtype: HT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 08/20/2020
-ms.locfileid: "88645083"
+ms.lasthandoff: 10/05/2020
+ms.locfileid: "91726744"
 ---
 # <a name="pdostatementgetcolumnmeta"></a>PDOStatement::getColumnMeta
 [!INCLUDE[Driver_PHP_Download](../../includes/driver_php_download.md)]
@@ -72,7 +72,7 @@ print $metadata['name'];
   
 ## <a name="sensitivity-data-classification-metadata"></a>민감도 데이터 분류 메타데이터
 
-버전 5.8.0부터 사용자가 Microsoft SQL Server 2019에서 `PDOStatement::getColumnMeta`를 사용하여(Microsoft ODBC Driver 17.4.2 이상 필요) [민감도 데이터 분류 메타데이터](https://docs.microsoft.com/sql/relational-databases/security/sql-data-discovery-and-classification?view=sql-server-ver15&tabs=t-sql#subheading-4)에 액세스할 수 있는 새 문 특성 `PDO::SQLSRV_ATTR_DATA_CLASSIFICATION`을 사용할 수 있습니다.
+버전 5.8.0부터 사용자가 Microsoft SQL Server 2019에서 `PDOStatement::getColumnMeta`를 사용하여(Microsoft ODBC Driver 17.4.2 이상 필요) [민감도 데이터 분류 메타데이터](../../relational-databases/security/sql-data-discovery-and-classification.md?tabs=t-sql&view=sql-server-ver15#subheading-4)에 액세스할 수 있는 새 문 특성 `PDO::SQLSRV_ATTR_DATA_CLASSIFICATION`을 사용할 수 있습니다.
 
 `PDO::SQLSRV_ATTR_DATA_CLASSIFICATION` 특성은 기본적으로 `false`이지만 `true`로 설정된 경우 앞서 언급한 배열 필드 `flags`에는 민감도 데이터 분류 메타데이터(있는 경우)가 채워집니다. 
 
@@ -136,4 +136,3 @@ for ($i = 0; $i < $numCol; $i++) {
 [PDOStatement 클래스](../../connect/php/pdostatement-class.md)
 
 [PDO](https://php.net/manual/book.pdo.php)  
-  

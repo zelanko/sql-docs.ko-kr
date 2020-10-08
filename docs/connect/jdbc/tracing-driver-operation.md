@@ -11,12 +11,12 @@ ms.topic: conceptual
 ms.assetid: 723aeae7-6504-4585-ba8b-3525115bea8b
 author: David-Engel
 ms.author: v-daenge
-ms.openlocfilehash: b89be9709f04e995ed560e291a5199cebfd2bd75
-ms.sourcegitcommit: cb620c77fe6bdefb975968837706750c31048d46
+ms.openlocfilehash: c25f97d79477497d60d458c994ef5dbdc102463d
+ms.sourcegitcommit: c7f40918dc3ecdb0ed2ef5c237a3996cb4cd268d
 ms.translationtype: HT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 07/15/2020
-ms.locfileid: "86393131"
+ms.lasthandoff: 10/05/2020
+ms.locfileid: "91727542"
 ---
 # <a name="tracing-driver-operation"></a>드라이버 작업 추적
 [!INCLUDE[Driver_JDBC_Download](../../includes/driver_jdbc_download.md)]
@@ -24,7 +24,7 @@ ms.locfileid: "86393131"
   [!INCLUDE[jdbcNoVersion](../../includes/jdbcnoversion_md.md)]에서는 추적 또는 로깅 기능을 사용하여 애플리케이션에서 사용되는 JDBC 드라이버 관련 문제를 해결할 수 있습니다. 추적 기능을 활성화하기 위해 JDBC 드라이버는 java.util.logging의 로깅 API를 사용합니다. 이 API는 Logger 및 LogRecord 개체를 만드는 클래스 집합을 제공합니다.  
   
 > [!NOTE]  
->  JDBC 드라이버에 포함된 네이티브 구성 요소(sqljdbc_xa.dll)의 경우 BID(Built-In Diagnostics) 프레임워크를 사용하여 추적 기능을 활성화합니다. BID에 대한 자세한 내용은 [SQL Server에서 데이터 액세스 추적](https://go.microsoft.com/fwlink/?LinkId=70042)을 참조하세요.  
+>  JDBC 드라이버에 포함된 네이티브 구성 요소(sqljdbc_xa.dll)의 경우 BID(Built-In Diagnostics) 프레임워크를 사용하여 추적 기능을 활성화합니다. BID에 대한 자세한 내용은 [SQL Server에서 데이터 액세스 추적](/previous-versions/sql/sql-server-2008/cc765421(v=sql.100))을 참조하세요.  
   
  애플리케이션을 개발할 때 Logger 개체를 호출한 다음, LogRecord 개체를 만들고 Handler 개체에 전달하여 처리할 수 있습니다. 로거 및 처리기 개체는 둘 다 로깅 수준을 사용하며 필요에 따라 로깅 필터를 사용하여 처리되는 LogRecords를 조정합니다. 로깅 작업이 완료되면 Handler 개체는 필요에 따라 Formatter 개체를 사용하여 로그 정보를 게시합니다.  
   
@@ -161,5 +161,4 @@ com.microsoft.sqlserver.jdbc.level=FINEST
   
 ## <a name="see-also"></a>참고 항목  
  [JDBC 드라이버 관련 문제 진단](../../connect/jdbc/diagnosing-problems-with-the-jdbc-driver.md)  
-  
   

@@ -14,12 +14,12 @@ ms.assetid: f78b81ed-5214-43ec-a600-9bfe51c5745a
 author: v-makouz
 ms.author: v-makouz
 manager: kenvh
-ms.openlocfilehash: d2f33c6b753b227bf8c6d7aed2c66dd7a09d8433
-ms.sourcegitcommit: e700497f962e4c2274df16d9e651059b42ff1a10
+ms.openlocfilehash: 38439c3eff4eee2eef3b3e39f7b2b2b5454b2bec
+ms.sourcegitcommit: c7f40918dc3ecdb0ed2ef5c237a3996cb4cd268d
 ms.translationtype: HT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 08/17/2020
-ms.locfileid: "88466875"
+ms.lasthandoff: 10/05/2020
+ms.locfileid: "91727451"
 ---
 # <a name="data-classification"></a>데이터 분류
 [!INCLUDE[Driver_ODBC_Download](../../includes/driver_odbc_download.md)]
@@ -27,7 +27,7 @@ ms.locfileid: "88466875"
 ## <a name="overview"></a>개요
 SQL Server와 Azure SQL Server는 중요 데이터 관리를 위해 데이터 보호 정책에 따라 클라이언트 애플리케이션에서 다양한 유형의 중요 데이터(예: 건강, 재무 등)를 처리할 수 있도록 하는 민감도 메타데이터를 데이터베이스 열에 제공하는 기능을 도입했습니다.
 
-열에 분류를 할당하는 방법에 대한 자세한 내용은 [SQL 데이터 검색 및 분류](https://docs.microsoft.com/sql/relational-databases/security/sql-data-discovery-and-classification?view=sql-server-2017)를 참조하세요.
+열에 분류를 할당하는 방법에 대한 자세한 내용은 [SQL 데이터 검색 및 분류](../../relational-databases/security/sql-data-discovery-and-classification.md?view=sql-server-2017)를 참조하세요.
 
 Microsoft ODBC Driver 17.2는 SQL_CA_SS_DATA_CLASSIFICATION 필드 식별자를 사용하는 SQLGetDescField를 통해 이 메타데이터를 검색할 수 있도록 합니다.
 
@@ -264,4 +264,3 @@ ret = SQLSetConnectAttr(dbc, SQL_COPT_SS_DATACLASSIFICATION_VERSION, (SQLPOINTER
 ```
 ret = SQLGetConnectAttr(dbc, SQL_COPT_SS_DATACLASSIFICATION_VERSION, (SQLPOINTER)&dataClassVersion, SQL_IS_INTEGER, 0);
 ```
-

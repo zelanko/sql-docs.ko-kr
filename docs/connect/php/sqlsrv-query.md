@@ -18,12 +18,12 @@ helpviewer_keywords:
 ms.assetid: 9fa7c4c8-4da8-4299-9893-f61815055aa3
 author: David-Engel
 ms.author: v-daenge
-ms.openlocfilehash: 6f211fffa4d3fd9cbafec9180894c5760f876c98
-ms.sourcegitcommit: 66407a7248118bb3e167fae76bacaa868b134734
+ms.openlocfilehash: ec60fe007ff784c2ff19ad82bd9d212f685ef6d6
+ms.sourcegitcommit: c7f40918dc3ecdb0ed2ef5c237a3996cb4cd268d
 ms.translationtype: HT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 04/21/2020
-ms.locfileid: "81728406"
+ms.lasthandoff: 10/05/2020
+ms.locfileid: "91726687"
 ---
 # <a name="sqlsrv_query"></a>sqlsrv_query
 [!INCLUDE[Driver_PHP_Download](../../includes/driver_php_download.md)]
@@ -157,7 +157,7 @@ sqlsrv_close($conn);
 ```  
   
 > [!NOTE]
-> PHP에서는 [부동 소수점 숫자](https://php.net/manual/en/language.types.float.php)의 정밀도가 제한되어 있으므로 [decimal 또는 numeric 열](https://docs.microsoft.com/sql/t-sql/data-types/decimal-and-numeric-transact-sql)에 값을 바인딩할 때는 정밀도와 정확도를 보장하기 위해 문자열을 입력으로 사용하는 것이 좋습니다. bigint 열도 마찬가지이며, 값이 [정수](../../t-sql/data-types/int-bigint-smallint-and-tinyint-transact-sql.md) 범위를 벗어나는 경우 특히 그렇습니다.
+> PHP에서는 [부동 소수점 숫자](https://php.net/manual/en/language.types.float.php)의 정밀도가 제한되어 있으므로 [decimal 또는 numeric 열](../../t-sql/data-types/decimal-and-numeric-transact-sql.md)에 값을 바인딩할 때는 정밀도와 정확도를 보장하기 위해 문자열을 입력으로 사용하는 것이 좋습니다. bigint 열도 마찬가지이며, 값이 [정수](../../t-sql/data-types/int-bigint-smallint-and-tinyint-transact-sql.md) 범위를 벗어나는 경우 특히 그렇습니다.
 
 ## <a name="example"></a>예제  
 이 코드 샘플에서는 10진수 값을 입력 매개 변수로 바인딩하는 방법을 보여 줍니다.  
@@ -184,7 +184,7 @@ sqlsrv_close($conn);
 ```
 
 ## <a name="example"></a>예제
-이 코드 샘플에서는 [sql_variant](https://docs.microsoft.com/sql/t-sql/data-types/sql-variant-transact-sql) 형식의 테이블을 만들고 삽입된 데이터를 가져오는 방법을 보여 줍니다.
+이 코드 샘플에서는 [sql_variant](../../t-sql/data-types/sql-variant-transact-sql.md) 형식의 테이블을 만들고 삽입된 데이터를 가져오는 방법을 보여 줍니다.
 
 ```
 <?php
@@ -252,4 +252,3 @@ Second field:  test_data
 
 [방향 매개 변수 사용](../../connect/php/using-directional-parameters.md)  
 
-  

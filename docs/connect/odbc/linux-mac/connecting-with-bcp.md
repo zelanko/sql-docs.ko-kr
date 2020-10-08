@@ -13,17 +13,17 @@ helpviewer_keywords:
 ms.assetid: 3eca5717-e50f-40db-be16-a1cebbdfee70
 author: David-Engel
 ms.author: v-daenge
-ms.openlocfilehash: 562b1584a86c290d294c2fc3117a9485e45211e8
-ms.sourcegitcommit: 6f49804b863fed44968ea5829e2c26edc5988468
+ms.openlocfilehash: b66ebab16bc26beec9ef9cd8699f53e75d36d478
+ms.sourcegitcommit: c7f40918dc3ecdb0ed2ef5c237a3996cb4cd268d
 ms.translationtype: HT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 08/05/2020
-ms.locfileid: "87807077"
+ms.lasthandoff: 10/05/2020
+ms.locfileid: "91727440"
 ---
 # <a name="connecting-with-bcp"></a>bcp를 사용하여 연결
 [!INCLUDE[Driver_ODBC_Download](../../../includes/driver_odbc_download.md)]
 
-[bcp](https://go.microsoft.com/fwlink/?LinkID=190626) 유틸리티는 Linux 및 macOS 기반 [!INCLUDE[msCoName](../../../includes/msconame_md.md)] ODBC Driver for [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)]에서 사용할 수 있습니다. 이 페이지에서는 `bcp` Windows 버전과의 차이점을 설명합니다.
+[bcp](../../../tools/bcp-utility.md) 유틸리티는 Linux 및 macOS 기반 [!INCLUDE[msCoName](../../../includes/msconame_md.md)] ODBC Driver for [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)]에서 사용할 수 있습니다. 이 페이지에서는 `bcp` Windows 버전과의 차이점을 설명합니다.
   
 - 필드 종결자는 탭("\t")입니다.  
   

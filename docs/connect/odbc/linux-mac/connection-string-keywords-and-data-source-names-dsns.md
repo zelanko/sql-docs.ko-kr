@@ -15,12 +15,12 @@ helpviewer_keywords:
 ms.assetid: f95cdbce-e7c2-4e56-a9f7-8fa3a920a125
 author: David-Engel
 ms.author: v-daenge
-ms.openlocfilehash: f667fc06ffe7ced9241e8bfdd2a00caba3b8b2a5
-ms.sourcegitcommit: 5f658b286f56001b055a8898d97e74906516dc99
+ms.openlocfilehash: 8bc808e2e25a1f421712f6146fd13e8f6adafac3
+ms.sourcegitcommit: c7f40918dc3ecdb0ed2ef5c237a3996cb4cd268d
 ms.translationtype: HT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 09/11/2020
-ms.locfileid: "90009339"
+ms.lasthandoff: 10/05/2020
+ms.locfileid: "91727454"
 ---
 # <a name="connecting-to-sql-server"></a>SQL Server에 연결
 
@@ -77,7 +77,7 @@ ini 파일 및 `odbcinst`에 대한 전체 설명서는 [unixODBC 설명서](htt
 
 암호화를 사용하면 보안은 강화되지만 성능은 저하됩니다.
 
-자세한 내용은 [SQL Server에 대한 연결 암호화](https://go.microsoft.com/fwlink/?LinkId=220900) 및 [유효성 검사 없이 암호화 사용](https://docs.microsoft.com/sql/relational-databases/native-client/features/using-encryption-without-validation)을 참조하세요.
+자세한 내용은 [SQL Server에 대한 연결 암호화](/previous-versions/sql/sql-server-2008-r2/ms189067(v=sql.105)) 및 [유효성 검사 없이 암호화 사용](../../../relational-databases/native-client/features/using-encryption-without-validation.md)을 참조하세요.
 
 **Encrypt** 및 **TrustServerCertificate**에 대한 설정과 관계없이 서버 로그인 자격 증명(사용자 이름 및 암호)은 상시 암호화됩니다. 다음 표는 **Encrypt** 및 **TrustServerCertificate** 를 설정할 때의 영향을 보여 줍니다.  
 

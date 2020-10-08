@@ -11,12 +11,12 @@ ms.topic: conceptual
 ms.assetid: b10cfc22-6a2c-4707-a456-0dcec317982b
 author: David-Engel
 ms.author: v-daenge
-ms.openlocfilehash: 64a2c7ff06534865c4105ab28c2f3bc42b783de3
-ms.sourcegitcommit: e700497f962e4c2274df16d9e651059b42ff1a10
+ms.openlocfilehash: 38d897f60b5e3ed9278214c8dae8525c72668e20
+ms.sourcegitcommit: c7f40918dc3ecdb0ed2ef5c237a3996cb4cd268d
 ms.translationtype: HT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 08/17/2020
-ms.locfileid: "88462244"
+ms.lasthandoff: 10/05/2020
+ms.locfileid: "91727363"
 ---
 # <a name="microsoft-odbc-driver-for-sql-server-on-windows"></a>Windows의 Microsoft ODBC Driver for SQL Server
 [!INCLUDE[Driver_ODBC_Download](../../../includes/driver_odbc_download.md)]
@@ -53,6 +53,6 @@ Microsoft ODBC Driver for SQL Server를 사용하여 새 애플리케이션을 �
   
 ## <a name="see-also"></a>참고 항목  
 - [SQL Server Native Client를 사용하여 애플리케이션 빌드](../../../relational-databases/native-client/applications/building-applications-with-sql-server-native-client.md)   
-- [SQL Server Native Client FAQ](https://msdn.microsoft.com/sqlserver/aa937707.aspx)   
+- [SQL Server Native Client FAQ](/previous-versions/aa937707(v=msdn.10))   
 - [ODBC 프로그래머 참조](../../../odbc/reference/odbc-programmer-s-reference.md)   
-- [SQL Server Native Client(ODBC)](../../../relational-databases/native-client/odbc/sql-server-native-client-odbc.md)  
+- [SQL Server Native Client(ODBC)](../../../relational-databases/native-client/odbc/sql-server-native-client-odbc.md)

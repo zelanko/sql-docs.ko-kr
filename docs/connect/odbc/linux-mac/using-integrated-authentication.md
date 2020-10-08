@@ -13,12 +13,12 @@ helpviewer_keywords:
 ms.assetid: 9499ffdf-e0ee-4d3c-8bca-605371eb52d9
 author: David-Engel
 ms.author: v-daenge
-ms.openlocfilehash: b1be7086c66ed6450e8e23f90c0804274bc6b37d
-ms.sourcegitcommit: b6ee0d434b3e42384b5d94f1585731fd7d0eff6f
+ms.openlocfilehash: 4f53290d9b9a1ecd161ef02161f29c172297a93f
+ms.sourcegitcommit: c7f40918dc3ecdb0ed2ef5c237a3996cb4cd268d
 ms.translationtype: HT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 09/02/2020
-ms.locfileid: "89288215"
+ms.lasthandoff: 10/05/2020
+ms.locfileid: "91727424"
 ---
 # <a name="using-integrated-authentication"></a>통합 인증 사용
 [!INCLUDE[Driver_ODBC_Download](../../../includes/driver_odbc_download.md)]
@@ -128,7 +128,7 @@ Linux 또는 macOS 컴퓨터의 시간과 KDC Kerberos KDC(Key Distribution Cent
 
 Kerberos 인증이 실패하는 경우 Linux 또는 macOS 기반 ODBC 드라이버가 NTLM 인증을 사용하지 않습니다.  
 
-Active Directory를 사용하여 Linux 또는 macOS 컴퓨터를 인증하는 방법에 대한 자세한 내용은 [Active Directory를 사용하여 Linux 클라이언트 인증](https://technet.microsoft.com/magazine/2008.12.linux.aspx#id0060048)을 참조하세요. Kerberos 구성에 대한 자세한 내용은 [MIT Kerberos 설명서](https://web.mit.edu/kerberos/krb5-1.12/doc/index.html)를 참조하세요.
+Active Directory를 사용하여 Linux 또는 macOS 컴퓨터를 인증하는 방법에 대한 자세한 내용은 [Active Directory를 사용하여 Linux 클라이언트 인증](/previous-versions/technet-magazine/dd228986(v=msdn.10)#id0060048)을 참조하세요. Kerberos 구성에 대한 자세한 내용은 [MIT Kerberos 설명서](https://web.mit.edu/kerberos/krb5-1.12/doc/index.html)를 참조하세요.
 
 ## <a name="see-also"></a>참고 항목  
 [프로그래밍 지침](programming-guidelines.md)

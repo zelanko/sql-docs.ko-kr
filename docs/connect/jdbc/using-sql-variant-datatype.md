@@ -11,18 +11,18 @@ ms.topic: conceptual
 ms.assetid: ''
 author: David-Engel
 ms.author: v-daenge
-ms.openlocfilehash: bf29942e5d427a4a4852a6d1a856d81765690050
-ms.sourcegitcommit: e700497f962e4c2274df16d9e651059b42ff1a10
+ms.openlocfilehash: 198c8a21fcea9a1386effe8d30c8d954180d6dc5
+ms.sourcegitcommit: c7f40918dc3ecdb0ed2ef5c237a3996cb4cd268d
 ms.translationtype: HT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 08/17/2020
-ms.locfileid: "88414529"
+ms.lasthandoff: 10/05/2020
+ms.locfileid: "91727486"
 ---
 # <a name="using-sql_variant-data-type"></a>Sql_variant 데이터 형식 사용
 
 [!INCLUDE[Driver_JDBC_Download](../../includes/driver_jdbc_download.md)]
 
-JDBC 드라이버는 버전 6.3.0부터 sql_variant 데이터 형식을 지원합니다. sql_variant는 테이블 반환 매개 변수 및 BulkCopy와 같은 기능을 사용하는 경우에도 지원됩니다(관련 제한 사항은 이 페이지의 뒷부분에 설명). 일부 데이터 형식은 sql_variant 데이터 형식에 저장할 수 없습니다. sql_variant 지원 데이터 형식 목록은 SQL Server [설명서](https://docs.microsoft.com/sql/t-sql/data-types/sql-variant-transact-sql)를 참조하세요.
+JDBC 드라이버는 버전 6.3.0부터 sql_variant 데이터 형식을 지원합니다. sql_variant는 테이블 반환 매개 변수 및 BulkCopy와 같은 기능을 사용하는 경우에도 지원됩니다(관련 제한 사항은 이 페이지의 뒷부분에 설명). 일부 데이터 형식은 sql_variant 데이터 형식에 저장할 수 없습니다. sql_variant 지원 데이터 형식 목록은 SQL Server [설명서](../../t-sql/data-types/sql-variant-transact-sql.md)를 참조하세요.
 
 ##  <a name="populating-and-retrieving-a-table"></a>테이블 채우기 및 검색:
 다음과 같은 sql_variant 열이 포함된 테이블이 있다고 가정합니다.
@@ -95,4 +95,4 @@ try (CallableStatement callableStatement = con.prepareCall(" {call " + inputProc
 
 ## <a name="see-also"></a>참고 항목
 
-[JDBC 드라이버 데이터 형식 이해](../../connect/jdbc/understanding-the-jdbc-driver-data-types.md)  
+[JDBC 드라이버 데이터 형식 이해](../../connect/jdbc/understanding-the-jdbc-driver-data-types.md)

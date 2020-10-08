@@ -12,12 +12,12 @@ helpviewer_keywords:
 - fast forward-only cursors
 author: David-Engel
 ms.author: v-daenge
-ms.openlocfilehash: a6b5aec6440a666413a06e1c7307a6d8c83aaaac
-ms.sourcegitcommit: c95f3ef5734dec753de09e07752a5d15884125e2
+ms.openlocfilehash: de4b4d600e6b83d1c2eede7ed7ef3d5970b6ac74
+ms.sourcegitcommit: c7f40918dc3ecdb0ed2ef5c237a3996cb4cd268d
 ms.translationtype: HT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 08/25/2020
-ms.locfileid: "88860332"
+ms.lasthandoff: 10/05/2020
+ms.locfileid: "91727106"
 ---
 # <a name="obtain-a-fast_forward-cursor"></a>FAST_FORWARD 커서 가져오기
 [!INCLUDE [SQL Server](../../../includes/applies-to-version/sql-asdb-asdbmi-asa-pdw.md)]
@@ -29,7 +29,7 @@ ms.locfileid: "88860332"
  전체 예제에서는 행 집합 속성을 설정하여 FAST_FORWARD 커서를 가져오는 방법을 보여 줍니다. 속성이 설정된 후에 SELECT 문이 실행되어 **AdventureWorks** 데이터베이스에 있는 **Purchasing.Vendor** 테이블의 **Name** 열이 검색되고 표시됩니다.  
   
 > [!IMPORTANT]  
->  가능하면 Windows 인증을 사용하세요. Windows 인증을 사용할 수 없으면 런타임에 사용자에게 자격 증명을 입력하라는 메시지를 표시합니다. 자격 증명은 파일에 저장하지 않는 것이 좋습니다. 자격 증명을 유지하려면 [Win32 crypto API](https://go.microsoft.com/fwlink/?LinkId=64532)를 사용하여 자격 증명을 암호화해야 합니다.  
+>  가능하면 Windows 인증을 사용하세요. Windows 인증을 사용할 수 없으면 런타임에 사용자에게 자격 증명을 입력하라는 메시지를 표시합니다. 자격 증명은 파일에 저장하지 않는 것이 좋습니다. 자격 증명을 유지하려면 [Win32 crypto API](/windows/win32/seccrypto/cryptography-reference)를 사용하여 자격 증명을 암호화해야 합니다.  
   
 ### <a name="to-obtain-fast_forward-cursor"></a>FAST_FORWARD 커서를 가져오려면  
   
@@ -409,5 +409,4 @@ void Cleanup() {
    OleUninitialize();  
 }  
 ```  
-  
   

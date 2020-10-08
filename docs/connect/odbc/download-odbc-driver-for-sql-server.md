@@ -10,12 +10,12 @@ ms.topic: conceptual
 ms.assetid: 53b09784-bb9d-4fd4-99d3-0492b3308ac4
 author: David-Engel
 ms.author: v-daenge
-ms.openlocfilehash: 919a0f04eb0d6c4f15125dc9514d11930bd13f8e
-ms.sourcegitcommit: 6d53ecfdc463914f045c20eda96da39dec22acca
+ms.openlocfilehash: b1f77ce4eb0b329fdb6911bd38f6e120e4ff7d3d
+ms.sourcegitcommit: c7f40918dc3ecdb0ed2ef5c237a3996cb4cd268d
 ms.translationtype: HT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 08/26/2020
-ms.locfileid: "88901334"
+ms.lasthandoff: 10/05/2020
+ms.locfileid: "91727539"
 ---
 # <a name="download-odbc-driver-for-sql-server"></a>SQL Server용 ODBC 드라이버 다운로드
 
@@ -38,7 +38,7 @@ Microsoft ODBC Driver 17 for SQL Server 재배포 가능 설치 관리자는 런
 - 릴리스 날짜: 2020년 7월 31일
 
 > [!Note]
-> 영어가 아닌 언어 버전에서 이 페이지에 액세스하고 최신 콘텐츠를 보려는 경우 [영어 버전 사이트](https://aka.ms/downloadmsodbcsqlenglish)를 방문하세요. 영어 버전 사이트에서 [사용 가능한 언어](#available-languages)를 선택하여 다른 언어를 다운로드할 수 있습니다.
+> 영어가 아닌 언어 버전에서 이 페이지에 액세스하고 최신 콘텐츠를 보려는 경우 [영어 버전 사이트]()를 방문하세요. 영어 버전 사이트에서 [사용 가능한 언어](#available-languages)를 선택하여 다른 언어를 다운로드할 수 있습니다.
 
 ## <a name="available-languages"></a>사용 가능한 언어
 

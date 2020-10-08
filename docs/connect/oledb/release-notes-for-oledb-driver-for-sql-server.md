@@ -8,12 +8,12 @@ ms.topic: conceptual
 ms.reviewer: genemi
 author: mateusz-kmiecik
 ms.author: v-makmie
-ms.openlocfilehash: 296efcdd888e2424cfb80f40221f7d8f65acab89
-ms.sourcegitcommit: f3321ed29d6d8725ba6378d207277a57cb5fe8c2
+ms.openlocfilehash: 2e957fdb91720c46f5065f4b671c14b757a7cb0f
+ms.sourcegitcommit: c7f40918dc3ecdb0ed2ef5c237a3996cb4cd268d
 ms.translationtype: HT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 07/06/2020
-ms.locfileid: "86011914"
+ms.lasthandoff: 10/05/2020
+ms.locfileid: "91726941"
 ---
 # <a name="release-notes-for-the-microsoft-ole-db-driver-for-sql-server"></a>SQL Server용 Microsoft OLE DB 드라이버에 대한 릴리스 정보
 
@@ -49,8 +49,8 @@ x86 드라이버의 경우: [중국어(간체)](https://go.microsoft.com/fwlink/
 
 | 버그 수정 | 세부 정보 |
 | :-------- | :------ |
-| [ISequentialStream](https://docs.microsoft.com/previous-versions/windows/desktop/ms718035(v=vs.85)) 인터페이스에서 다양한 버그 수정 | 멀티 바이트 코드 페이지에 영향을 주는 몇 가지 버그 때문에 읽기 작업 중에 인터페이스가 도중에 스트림 끝을 보고했었습니다.|
-| [IOpenRowset::OpenRowset](https://docs.microsoft.com/previous-versions/windows/desktop/ms716724(v=vs.85)) 인터페이스에서 메모리 누수 문제 수정 | `SSPROP_IRowsetFastLoad` 속성이 사용하도록 설정된 경우 [IOpenRowset::OpenRowset](https://docs.microsoft.com/previous-versions/windows/desktop/ms716724(v=vs.85)) 인터페이스에서 발생한 메모리 누수 문제가 수정되었습니다. |
+| [ISequentialStream](/previous-versions/windows/desktop/ms718035(v=vs.85)) 인터페이스에서 다양한 버그 수정 | 멀티 바이트 코드 페이지에 영향을 주는 몇 가지 버그 때문에 읽기 작업 중에 인터페이스가 도중에 스트림 끝을 보고했었습니다.|
+| [IOpenRowset::OpenRowset](/previous-versions/windows/desktop/ms716724(v=vs.85)) 인터페이스에서 메모리 누수 문제 수정 | `SSPROP_IRowsetFastLoad` 속성이 사용하도록 설정된 경우 [IOpenRowset::OpenRowset](/previous-versions/windows/desktop/ms716724(v=vs.85)) 인터페이스에서 발생한 메모리 누수 문제가 수정되었습니다. |
 | `sql_variant` 데이터 형식 및 비 ASCII 문자열을 포함하는 시나리오의 버그가 수정되었습니다. | `sql_variant` 데이터 형식 및 비 ASCII 문자열과 관련된 특정 시나리오를 실행하면 데이터가 손상될 수 있습니다. 자세한 내용은 다음을 참조하세요. [알려진 문제](ole-db-data-types/ssvariant-structure.md#known-issues). |
 | [UDL 구성 대화 상자](help-topics/data-link-pages.md)에서 연결 테스트 단추 문제 해결 | [UDL 구성 대화 상자](help-topics/data-link-pages.md)의 연결 테스트 단추가 이제 모든 탭에서 설정된 초기화 속성을 인식합니다. |
 | `SSPROP_INIT_PACKETSIZE` 속성 기본값 처리 수정 | `SSPROP_INIT_PACKETSIZE` 속성이 기본값 `0`으로 설정된 경우 발생하는 예기치 않은 오류가 수정되었습니다. 이 속성에 대한 자세한 내용은 [초기화 및 권한 부여 속성](ole-db-data-source-objects/initialization-and-authorization-properties.md)을 참조하세요. |
@@ -82,7 +82,7 @@ x86 드라이버의 경우: [중국어(간체)](https://go.microsoft.com/fwlink/
 
 | 버그 수정 | 세부 정보 |
 | :-------- | :------ |
-| [IIndexDefinition::DropIndex](https://go.microsoft.com/fwlink/?linkid=2106448)의 인덱스 삭제 논리를 수정했습니다. | 이전 버전의 OLE DB 드라이버는 스키마 ID와 인덱스 소유자의 사용자 ID가 서로 다르면 기본 키 인덱스를 삭제할 수 없습니다. |
+| [IIndexDefinition::DropIndex](/previous-versions/windows/desktop/ms722733(v=vs.85))의 인덱스 삭제 논리를 수정했습니다. | 이전 버전의 OLE DB 드라이버는 스키마 ID와 인덱스 소유자의 사용자 ID가 서로 다르면 기본 키 인덱스를 삭제할 수 없습니다. |
 | &nbsp; | &nbsp; |
 
 다음 섹션의 다운로드 링크를 클릭하여 이전 OLE DB 드라이버 버전을 다운로드하세요.
@@ -120,7 +120,7 @@ x86 드라이버의 경우: [중국어(간체)](https://go.microsoft.com/fwlink/
 
 | 버그 수정 | 세부 정보 |
 | :-------- | :------ |
-| MTA(다중 스레드 아파트)에서 비 대화형 Azure Active Directory 인증이 수정되었습니다. | OLE DB 드라이버 18.2.1은 이전에 다중 스레드(MTA)로 초기화된 아파트에서 COM 동시성 모델을 잘못 변경하려고 시도합니다. 결과적으로, [IDBInitialize::Initialize](https://go.microsoft.com/fwlink/?linkid=2092522) 인터페이스를 호출하기 전에 [CoInitialize](https://go.microsoft.com/fwlink/?linkid=2092520) 또는 [CoInitializeEx](https://go.microsoft.com/fwlink/?linkid=2092521)에 두 번 이상 후속 호출을 하는 애플리케이션에서 Azure Active Directory 인증 모드 중 하나를 사용할 때 드라이버가 연결되지 않습니다. |
+| MTA(다중 스레드 아파트)에서 비 대화형 Azure Active Directory 인증이 수정되었습니다. | OLE DB 드라이버 18.2.1은 이전에 다중 스레드(MTA)로 초기화된 아파트에서 COM 동시성 모델을 잘못 변경하려고 시도합니다. 결과적으로, [IDBInitialize::Initialize](/previous-versions/windows/desktop/ms718026(v=vs.85)) 인터페이스를 호출하기 전에 [CoInitialize](/windows/win32/api/objbase/nf-objbase-coinitialize) 또는 [CoInitializeEx](/windows/win32/api/combaseapi/nf-combaseapi-coinitializeex)에 두 번 이상 후속 호출을 하는 애플리케이션에서 Azure Active Directory 인증 모드 중 하나를 사용할 때 드라이버가 연결되지 않습니다. |
 | &nbsp; | &nbsp; |
 
 ## <a name="1821"></a>18.2.1

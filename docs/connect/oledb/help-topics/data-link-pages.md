@@ -10,12 +10,12 @@ ms.technology: connectivity
 ms.topic: reference
 ms.author: v-beaziz
 author: bazizi
-ms.openlocfilehash: d23957c6f735ce7a69830eaf53d6aff113c9b720
-ms.sourcegitcommit: e4c36570c34cd7d7ae258061351bce6e54ea49f6
+ms.openlocfilehash: b691d24bb1d700a63e1ecfc9daca3bbfb5399800
+ms.sourcegitcommit: c7f40918dc3ecdb0ed2ef5c237a3996cb4cd268d
 ms.translationtype: HT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 08/12/2020
-ms.locfileid: "88147574"
+ms.lasthandoff: 10/05/2020
+ms.locfileid: "91727284"
 ---
 # <a name="universal-data-link-udl-configuration"></a>UDL(유니버설 데이터 링크) 구성
 [!INCLUDE [SQL Server](../../../includes/applies-to-version/sql-asdb-asdbmi-asa-pdw.md)]
@@ -56,7 +56,7 @@ ms.locfileid: "88147574"
 
 
 > [!NOTE]  
->  데이터 링크 연결에 대한 자세한 내용은 [데이터 링크 API 개요](https://go.microsoft.com/fwlink/?linkid=2067432)를 참조하세요.
+>  데이터 링크 연결에 대한 자세한 내용은 [데이터 링크 API 개요](/previous-versions/windows/desktop/ms718102(v=vs.85))를 참조하세요.
 
 ## <a name="next-steps"></a>다음 단계
 - OLE DB 드라이버를 사용하여 [Azure Active Directory에 인증](../features/using-azure-active-directory.md)합니다.

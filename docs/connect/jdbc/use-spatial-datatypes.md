@@ -11,18 +11,18 @@ ms.topic: conceptual
 ms.assetid: ''
 author: David-Engel
 ms.author: v-daenge
-ms.openlocfilehash: 0f4b01775e2c78c0cc8602539169a794eb476f92
-ms.sourcegitcommit: e700497f962e4c2274df16d9e651059b42ff1a10
+ms.openlocfilehash: 02b545ec1d33d17674266d58a2a120f07af423ad
+ms.sourcegitcommit: c7f40918dc3ecdb0ed2ef5c237a3996cb4cd268d
 ms.translationtype: HT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 08/17/2020
-ms.locfileid: "88487964"
+ms.lasthandoff: 10/05/2020
+ms.locfileid: "91727530"
 ---
 # <a name="using-spatial-datatypes"></a>공간 데이터 형식 사용
 
 [!INCLUDE[Driver_JDBC_Download](../../includes/driver_jdbc_download.md)]
 
-공간 데이터 형식(기하 도형 및 지리)은 JDBC 드라이버 미리 보기 릴리스 6.5.0부터 지원됩니다. 공간 데이터 형식은 현재 저장 프로시저, TVP(Table Valued Parameters), BulkCopy 및 Always Encrypted에서 지원되지 않습니다. 이 페이지에서는 JDBC 드라이버를 사용하여 기하 도형 및 지리 데이터 형식의 다양한 사용 사례를 보여 줍니다. 공간 데이터 형식에 대한 개요는 [공간 데이터 형식 개요](https://docs.microsoft.com/sql/relational-databases/spatial/spatial-data-types-overview) 페이지를 참조하세요.
+공간 데이터 형식(기하 도형 및 지리)은 JDBC 드라이버 미리 보기 릴리스 6.5.0부터 지원됩니다. 공간 데이터 형식은 현재 저장 프로시저, TVP(Table Valued Parameters), BulkCopy 및 Always Encrypted에서 지원되지 않습니다. 이 페이지에서는 JDBC 드라이버를 사용하여 기하 도형 및 지리 데이터 형식의 다양한 사용 사례를 보여 줍니다. 공간 데이터 형식에 대한 개요는 [공간 데이터 형식 개요](../../relational-databases/spatial/spatial-data-types-overview.md) 페이지를 참조하세요.
 
 ## <a name="creating-a-geometry--geography-object"></a>기하 도형/지리 개체 만들기
 

@@ -15,12 +15,12 @@ helpviewer_keywords:
 ms.assetid: 366c57cf-352f-4202-8074-6ddce44880d1
 author: David-Engel
 ms.author: v-daenge
-ms.openlocfilehash: bf7ec186a6a233d12034114f88b98efea50e72f9
-ms.sourcegitcommit: b2ab989264dd9d23c184f43fff2ec8966793a727
+ms.openlocfilehash: d62ab2a7715360b8cceeecccada01717d87471c0
+ms.sourcegitcommit: c7f40918dc3ecdb0ed2ef5c237a3996cb4cd268d
 ms.translationtype: HT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 07/14/2020
-ms.locfileid: "86381016"
+ms.lasthandoff: 10/05/2020
+ms.locfileid: "91726830"
 ---
 # <a name="how-to-send-and-retrieve-utf-8-data-using-built-in-utf-8-support"></a>방법: 기본 제공 UTF-8 지원을 사용하여 UTF-8 데이터 보내기 및 검색
 [!INCLUDE[Driver_PHP_Download](../../includes/driver_php_download.md)]
@@ -126,7 +126,7 @@ sqlsrv_close( $conn);
 ?>  
 ```  
   
-유니코드 데이터 저장에 대한 정보는 [유니코드 데이터로 작업](https://msdn.microsoft.com/library/ms175180.aspx)을 참조하세요.  
+유니코드 데이터 저장에 대한 정보는 [유니코드 데이터로 작업](/previous-versions/sql/sql-server-2008-r2/ms175180(v=sql.105))을 참조하세요.  
   
 ## <a name="example"></a>예제  
 다음 예제에서는 첫 번째 예제와 유사하지만 연결에서 UTF-8 문자 집합 대신 열에서 UTF-8 문자 집합을 지정하는 방법을 보여 줍니다.  
@@ -231,4 +231,3 @@ sqlsrv_close( $conn);
 [상수&#40;Microsoft Drivers for PHP for SQL Server&#41;](../../connect/php/constants-microsoft-drivers-for-php-for-sql-server.md)
 
 [예제 애플리케이션&#40;SQLSRV 드라이버&#41;](../../connect/php/example-application-sqlsrv-driver.md)  
-  

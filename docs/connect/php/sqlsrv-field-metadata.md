@@ -17,12 +17,12 @@ helpviewer_keywords:
 ms.assetid: c02f6942-0484-4567-a78e-fe8aa2053536
 author: David-Engel
 ms.author: v-daenge
-ms.openlocfilehash: fd0c925808fda11127d1632e62c296f8cce30272
-ms.sourcegitcommit: e700497f962e4c2274df16d9e651059b42ff1a10
+ms.openlocfilehash: 5629096fb59bbb081aa535e8e3436a4cb06130d8
+ms.sourcegitcommit: c7f40918dc3ecdb0ed2ef5c237a3996cb4cd268d
 ms.translationtype: HT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 08/17/2020
-ms.locfileid: "88449969"
+ms.lasthandoff: 10/05/2020
+ms.locfileid: "91726718"
 ---
 # <a name="sqlsrv_field_metadata"></a>sqlsrv_field_metadata
 [!INCLUDE[Driver_PHP_Download](../../includes/driver_php_download.md)]
@@ -129,7 +129,7 @@ sqlsrv_close($conn);
 
 ## <a name="sensitivity-data-classification-metadata"></a>민감도 데이터 분류 메타데이터
 
-사용자가 `sqlsrv_field_metadata`를 사용하여(Microsoft ODBC Driver 17.4.2 이상이 필요함) Microsoft SQL Server 2019에서 [민감도 데이터 분류 메타데이터](https://docs.microsoft.com/sql/relational-databases/security/sql-data-discovery-and-classification?view=sql-server-ver15&tabs=t-sql#subheading-4)에 액세스할 수 있도록 새 옵션인 `DataClassification`이 버전 5.8.0에 도입되었습니다.
+사용자가 `sqlsrv_field_metadata`를 사용하여(Microsoft ODBC Driver 17.4.2 이상이 필요함) Microsoft SQL Server 2019에서 [민감도 데이터 분류 메타데이터](../../relational-databases/security/sql-data-discovery-and-classification.md?tabs=t-sql&view=sql-server-ver15#subheading-4)에 액세스할 수 있도록 새 옵션인 `DataClassification`이 버전 5.8.0에 도입되었습니다.
 
 기본적으로 `DataClassification`이라는 옵션은 `false`이지만 `true`로 설정하면 `sqlsrv_field_metadata`에서 반환하는 배열이 민감도 데이터 분류 메타데이터(있는 경우)로 채워집니다. 
 
@@ -244,4 +244,3 @@ foreach ($fieldmeta as $f) {
 [상수&#40;Microsoft Drivers for PHP for SQL Server&#41;](../../connect/php/constants-microsoft-drivers-for-php-for-sql-server.md)  
 
 [설명서의 코드 예제 정보](../../connect/php/about-code-examples-in-the-documentation.md)  
-  

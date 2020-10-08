@@ -22,12 +22,12 @@ helpviewer_keywords:
 - errors [OLE DB], return codes
 author: David-Engel
 ms.author: v-daenge
-ms.openlocfilehash: 18d2b3f5029e70379f0692a919aa8fe6cd4ed10b
-ms.sourcegitcommit: c95f3ef5734dec753de09e07752a5d15884125e2
+ms.openlocfilehash: fe59f14e43a32d6c6b3239c24f1be665e7bbad82
+ms.sourcegitcommit: c7f40918dc3ecdb0ed2ef5c237a3996cb4cd268d
 ms.translationtype: HT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 08/25/2020
-ms.locfileid: "88862239"
+ms.lasthandoff: 10/05/2020
+ms.locfileid: "91727188"
 ---
 # <a name="return-codes"></a>반환 코드
 [!INCLUDE [SQL Server](../../../includes/applies-to-version/sql-asdb-asdbmi-asa-pdw.md)]
@@ -36,7 +36,7 @@ ms.locfileid: "88862239"
 
   아주 간단히 말해 멤버 함수는 성공하거나 실패하거나 둘 중 하나입니다. 그러나 좀 더 정확하게 말하면 함수가 성공하더라도 이러한 성공이 애플리케이션 개발자가 의도한 것이 아닐 수 있습니다.  
   
- OLE DB 반환 코드에 대한 자세한 내용은 [반환 코드(OLE DB)](https://go.microsoft.com/fwlink/?LinkId=101631)를 참조하십시오.  
+ OLE DB 반환 코드에 대한 자세한 내용은 [반환 코드(OLE DB)](/previous-versions/windows/desktop/ms725451(v=vs.85))를 참조하십시오.  
   
  OLE DB Driver for SQL Server 멤버 함수가 S_OK를 반환하면 함수가 성공한 것입니다.  
   
@@ -50,5 +50,4 @@ ms.locfileid: "88862239"
   
 ## <a name="see-also"></a>참고 항목  
  [Errors](../../oledb/ole-db-errors/errors.md)  
-  
   

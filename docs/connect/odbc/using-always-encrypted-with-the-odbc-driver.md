@@ -9,12 +9,12 @@ ms.topic: conceptual
 ms.assetid: 02e306b8-9dde-4846-8d64-c528e2ffe479
 ms.author: v-chojas
 author: v-chojas
-ms.openlocfilehash: 303131cd528abee1884c2454a46df3380528ebad
-ms.sourcegitcommit: b6ee0d434b3e42384b5d94f1585731fd7d0eff6f
+ms.openlocfilehash: 378403eec3b99d8f916a92fc768f1277a7b18572
+ms.sourcegitcommit: c7f40918dc3ecdb0ed2ef5c237a3996cb4cd268d
 ms.translationtype: HT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 09/02/2020
-ms.locfileid: "89288185"
+ms.lasthandoff: 10/05/2020
+ms.locfileid: "91727394"
 ---
 # <a name="using-always-encrypted-with-the-odbc-driver-for-sql-server"></a>SQL Server용 ODBC 드라이버와 함께 상시 암호화 사용
 [!INCLUDE[Driver_ODBC_Download](../../includes/driver_odbc_download.md)]
@@ -63,7 +63,7 @@ Always Encrypted를 사용하도록 설정해도 암호화 또는 암호 해독�
 > [!NOTE]
 > Linux 및 macOS에서는 보안 Enclave를 사용한 Always Encrypted를 사용하는 데 OpenSSL 버전 1.0.1 이상이 필요합니다.
 
-버전 17.4부터 드라이버는 보안 Enclave를 사용한 Always Encrypted를 지원합니다. SQL Server 2019 이상에 연결할 때 Enclave를 사용할 수 있도록 하려면 `ColumnEncryption` DSN, 연결 문자열 또는 연결 특성을 Enclave 유형 및 증명 프로토콜의 이름 그리고 연결된 증명 데이터를 쉼표로 구분하여 설정합니다. 버전 17.4에서는 [가상화 기반 보안](https://www.microsoft.com/security/blog/2018/06/05/virtualization-based-security-vbs-memory-enclaves-data-protection-through-isolation/) Enclave 유형 및 [호스트 보호 서비스](https://docs.microsoft.com/windows-server/security/set-up-hgs-for-always-encrypted-in-sql-server) 증명 프로토콜(`VBS-HGS`)만 지원됩니다. 이를 사용하려면 증명 서버의 URL을 지정합니다. 예를 들면 다음과 같습니다.
+버전 17.4부터 드라이버는 보안 Enclave를 사용한 Always Encrypted를 지원합니다. SQL Server 2019 이상에 연결할 때 Enclave를 사용할 수 있도록 하려면 `ColumnEncryption` DSN, 연결 문자열 또는 연결 특성을 Enclave 유형 및 증명 프로토콜의 이름 그리고 연결된 증명 데이터를 쉼표로 구분하여 설정합니다. 버전 17.4에서는 [가상화 기반 보안](https://www.microsoft.com/security/blog/2018/06/05/virtualization-based-security-vbs-memory-enclaves-data-protection-through-isolation/) Enclave 유형 및 [호스트 보호 서비스](/windows-server/security/set-up-hgs-for-always-encrypted-in-sql-server) 증명 프로토콜(`VBS-HGS`)만 지원됩니다. 이를 사용하려면 증명 서버의 URL을 지정합니다. 예를 들면 다음과 같습니다.
 
 ```
 Driver=ODBC Driver 17 for SQL Server;Server=yourserver.yourdomain;Trusted_Connection=Yes;ColumnEncryption=VBS-HGS,http://attestationserver.yourdomain/Attestation
@@ -383,7 +383,7 @@ ODBC Driver for SQL Server에는 다음과 같은 기본 제공 키 저장소 �
 
 ### <a name="using-the-azure-key-vault-provider"></a>Azure Key Vault 공급자 사용
 
-AKV(Azure Key Vault)는 Always Encrypted에 대한 열 마스터 키를 저장 및 관리하는 편리한 옵션입니다(특히 애플리케이션이 Azure에서 호스트되는 경우). Linux, macOS 및 Windows의 ODBC Driver for SQL Server에는 Azure Key Vault용 기본 제공 열 마스터 키 저장소 공급자가 포함되어 있습니다. Always Encrypted에 대해 Azure Key Vault를 구성하는 방법에 대한 자세한 내용은 [Azure Key Vault - 단계별](/archive/blogs/kv/azure-key-vault-step-by-step), [Key Vault 시작](https://azure.microsoft.com/documentation/articles/key-vault-get-started/) 및 [Azure Key Vault에 열 마스터 키 만들기](../../relational-databases/security/encryption/create-and-store-column-master-keys-always-encrypted.md#creating-column-master-keys-in-azure-key-vault)를 참조하세요.
+AKV(Azure Key Vault)는 Always Encrypted에 대한 열 마스터 키를 저장 및 관리하는 편리한 옵션입니다(특히 애플리케이션이 Azure에서 호스트되는 경우). Linux, macOS 및 Windows의 ODBC Driver for SQL Server에는 Azure Key Vault용 기본 제공 열 마스터 키 저장소 공급자가 포함되어 있습니다. Always Encrypted에 대해 Azure Key Vault를 구성하는 방법에 대한 자세한 내용은 [Azure Key Vault - 단계별](/archive/blogs/kv/azure-key-vault-step-by-step), [Key Vault 시작](/azure/key-vault/general/overview) 및 [Azure Key Vault에 열 마스터 키 만들기](../../relational-databases/security/encryption/create-and-store-column-master-keys-always-encrypted.md#creating-column-master-keys-in-azure-key-vault)를 참조하세요.
 
 > [!NOTE]
 > ODBC 드라이버는 Azure Active Directory에 대해 직접 AKV 인증만을 지원합니다. AKV에 Azure Active Directory 인증을 사용하고 Active Directory 구성에 Active Directory Federation Services 엔드포인트에 대한 인증이 필요한 경우 인증이 실패할 수 있습니다.
@@ -395,7 +395,7 @@ AKV(Azure Key Vault)는 Always Encrypted에 대한 열 마스터 키를 저장 �
 
 - 클라이언트 ID/비밀 - 이 방법을 사용할 경우 자격 증명은 애플리케이션 클라이언트 ID 및 애플리케이션 비밀입니다.
 
-- 관리 ID(17.5.2 이상) - 시스템 또는 사용자 할당. 자세한 내용은 [Azure 리소스의 관리 ID](https://docs.microsoft.com/azure/active-directory/managed-identities-azure-resources/)를 참조하세요.
+- 관리 ID(17.5.2 이상) - 시스템 또는 사용자 할당. 자세한 내용은 [Azure 리소스의 관리 ID](/azure/active-directory/managed-identities-azure-resources/)를 참조하세요.
 
 드라이버가 AKV에 저장된 CMK를 열 암호화에 사용할 수 있게 하려면 다음과 같은 연결 문자열 전용 키워드를 사용합니다.
 

@@ -11,12 +11,12 @@ ms.topic: conceptual
 ms.assetid: 271c0438-8af1-45e5-b96a-4b1cabe32707
 author: David-Engel
 ms.author: v-daenge
-ms.openlocfilehash: d0623450d73b47328a71bc84e46dda22824eaf5f
-ms.sourcegitcommit: 04fb4c2d7ccddd30745b334b319d9d2dd34325d6
+ms.openlocfilehash: 52fc716acb62ea82a6a29c1cceaa73a30cc93c44
+ms.sourcegitcommit: c7f40918dc3ecdb0ed2ef5c237a3996cb4cd268d
 ms.translationtype: HT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 09/09/2020
-ms.locfileid: "89570328"
+ms.lasthandoff: 10/05/2020
+ms.locfileid: "91727508"
 ---
 # <a name="using-always-encrypted-with-the-jdbc-driver"></a>상시 암호화와 JDBC 드라이버 사용
 
@@ -134,7 +134,7 @@ SQLServerConnection.registerColumnEncryptionKeyStoreProviders(keyStoreMap);
 
 JDBC Driver **8.4.1**부터 드라이버는 관리 ID를 사용하는 Azure Key Vault 인증에 대한 지원을 추가했습니다.
 
-애플리케이션이 Azure에서 호스트되는 경우 사용자는 [관리 ID](https://docs.microsoft.com/azure/active-directory/managed-identities-azure-resources/overview)를 사용하여 Azure Key Vault에 인증하므로 코드에서 자격 증명을 제공하고 노출할 필요가 없습니다. 
+애플리케이션이 Azure에서 호스트되는 경우 사용자는 [관리 ID](/azure/active-directory/managed-identities-azure-resources/overview)를 사용하여 Azure Key Vault에 인증하므로 코드에서 자격 증명을 제공하고 노출할 필요가 없습니다. 
 
 #### <a name="connection-properties-for-key-vault-authentication-with-managed-identities"></a>관리 ID를 사용하는 Key Vault 인증을 위한 연결 속성
 
@@ -164,7 +164,7 @@ JDBC Driver 8.4.1 이상에서 드라이버는 다음 연결 속성을 도입했
 
 이전에 추가된 연결 속성 `keyVaultProviderClientId` 및 `keyVaultProviderClientKey`는 더 이상 사용되지 않으며 위에 설명된 연결 속성으로 대체되었습니다.
 
-관리 ID를 구성하는 방법에 대한 자세한 내용은 [Azure Portal을 사용하여 VM에서 Azure 리소스에 대한 관리 ID 구성](https://docs.microsoft.com/azure/active-directory/managed-identities-azure-resources/qs-configure-portal-windows-vm)을 참조하세요.
+관리 ID를 구성하는 방법에 대한 자세한 내용은 [Azure Portal을 사용하여 VM에서 Azure 리소스에 대한 관리 ID 구성](/azure/active-directory/managed-identities-azure-resources/qs-configure-portal-windows-vm)을 참조하세요.
 
 ### <a name="using-windows-certificate-store-provider"></a>Windows 인증서 저장소 공급자 사용
 SQLServerColumnEncryptionCertificateStoreProvider는 Windows 인증서 저장소에 열 마스터 키를 저장하는 데 사용될 수 있습니다. SSMS(SQL Server Management Studio) Always Encrypted 마법사 또는 기타 지원되는 도구를 사용하여 데이터베이스에서 열 마스터 키 및 열 암호화 키 정의를 만듭니다. 동일한 마법사를 사용하여 Windows 인증서 저장소에서 Always Encrypted 데이터에 대한 열 마스터 키로 사용할 수 있는 자체 서명된 인증서를 생성할 수 있습니다. 열 마스터 키 및 열 암호화 키 T-SQL 구문에 대한 자세한 내용은 각각 [열 마스터 키 만들기](../../t-sql/statements/create-column-master-key-transact-sql.md) 및 [열 암호화 키 만들기](../../t-sql/statements/create-column-encryption-key-transact-sql.md)를 참조하세요.

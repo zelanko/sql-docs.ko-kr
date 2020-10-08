@@ -16,12 +16,12 @@ helpviewer_keywords:
 ms.assetid: f7688ba3-aa6e-41b1-811e-f70212029f4f
 author: markingmyname
 ms.author: maghan
-ms.openlocfilehash: 21ee2636d4a91e509f490ab3929514d7826d4c98
-ms.sourcegitcommit: dd36d1cbe32cd5a65c6638e8f252b0bd8145e165
+ms.openlocfilehash: 0d7efb66c93e6392ed6955ab91d6694e9fd50c60
+ms.sourcegitcommit: 04cf7905fa32e0a9a44575a6f9641d9a2e5ac0f8
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 09/08/2020
-ms.locfileid: "89545067"
+ms.lasthandoff: 10/07/2020
+ms.locfileid: "91807177"
 ---
 # <a name="scalar-types-catalog-views-transact-sql"></a>스칼라 유형 카탈로그 뷰(Transact-SQL)
 [!INCLUDE[sqlserver](../../includes/applies-to-version/sqlserver.md)]
@@ -39,6 +39,5 @@ ms.locfileid: "89545067"
 
 ## <a name="see-also"></a>참고 항목  
  [카탈로그 뷰&#40;Transact-SQL&#41;](../../relational-databases/system-catalog-views/catalog-views-transact-sql.md)   
- [Transact-sql&#41;&#40;시스템 뷰 ](https://msdn.microsoft.com/library/35a6161d-7f43-4e00-bcd3-3091f2015e90)  
-  
+ [Transact-sql&#41;&#40;시스템 뷰 ](../../t-sql/language-reference.md)  
   

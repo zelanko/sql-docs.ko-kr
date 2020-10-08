@@ -11,18 +11,18 @@ ms.topic: conceptual
 ms.assetid: 687802dc-042a-4363-89aa-741685d165b3
 author: David-Engel
 ms.author: v-daenge
-ms.openlocfilehash: 1ecbffed0e29bc3a36a1129dbade504c9b03484c
-ms.sourcegitcommit: e700497f962e4c2274df16d9e651059b42ff1a10
+ms.openlocfilehash: d015565b114641f2c44c28da1f2dc03e4fdda773
+ms.sourcegitcommit: c7f40918dc3ecdb0ed2ef5c237a3996cb4cd268d
 ms.translationtype: HT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 08/17/2020
-ms.locfileid: "88414599"
+ms.lasthandoff: 10/05/2020
+ms.locfileid: "91727518"
 ---
 # <a name="using-kerberos-integrated-authentication-to-connect-to-sql-server"></a>Kerberos 통합 인증을 사용하여 SQL Server에 연결
 
 [!INCLUDE[Driver_JDBC_Download](../../includes/driver_jdbc_download.md)]
 
-[!INCLUDE[jdbc_40](../../includes/jdbc_40_md.md)]부터 애플리케이션에서 유형 4 Kerberos 통합 인증을 사용하여 데이터베이스에 연결한다는 것을 나타내기 위해 **authenticationScheme** 연결 속성을 사용할 수 있습니다. 연결 속성에 대한 자세한 내용은 [연결 속성 설정](../../connect/jdbc/setting-the-connection-properties.md)을 참조하세요. Kerberos에 대한 자세한 내용은 [Microsoft Kerberos](https://go.microsoft.com/fwlink/?LinkID=100758)를 참조하세요.
+[!INCLUDE[jdbc_40](../../includes/jdbc_40_md.md)]부터 애플리케이션에서 유형 4 Kerberos 통합 인증을 사용하여 데이터베이스에 연결한다는 것을 나타내기 위해 **authenticationScheme** 연결 속성을 사용할 수 있습니다. 연결 속성에 대한 자세한 내용은 [연결 속성 설정](../../connect/jdbc/setting-the-connection-properties.md)을 참조하세요. Kerberos에 대한 자세한 내용은 [Microsoft Kerberos](/windows/win32/secauthn/microsoft-kerberos)를 참조하세요.
 
 Java **Krb5LoginModule**과 함께 통합 인증을 사용하면 [Class Krb5LoginModule](https://docs.oracle.com/javase/8/docs/jre/api/security/jaas/spec/com/sun/security/auth/module/Krb5LoginModule.html)를 사용하여 모듈을 구성할 수 있습니다.
 
@@ -74,7 +74,7 @@ SPN(서비스 사용자 이름)에 대한 자세한 내용은 다음을 참조�
 
 - [Kerberos 연결의 서비스 사용자 이름 등록](../../database-engine/configure-windows/register-a-service-principal-name-for-kerberos-connections.md)
 
-- [SQL Server에서 Kerberos 사용](https://docs.microsoft.com/archive/blogs/sql_protocols/using-kerberos-with-sql-server)
+- [SQL Server에서 Kerberos 사용](/archive/blogs/sql_protocols/using-kerberos-with-sql-server)
 
 > [!NOTE]  
 > JDBC 드라이버 6.2 릴리스 이전에서는 영역 간 Kerberos를 적절히 사용하려면 **serverSpn**를 명시적으로 설정해야 합니다.

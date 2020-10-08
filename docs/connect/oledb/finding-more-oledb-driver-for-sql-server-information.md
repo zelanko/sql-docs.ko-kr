@@ -13,12 +13,12 @@ helpviewer_keywords:
 - OLE DB Driver for SQL Server, additional resources
 author: David-Engel
 ms.author: v-daenge
-ms.openlocfilehash: 7f0beae794a4958a74b0ffa1b80b72bc41b0a396
-ms.sourcegitcommit: 827ad02375793090fa8fee63cc372d130f11393f
+ms.openlocfilehash: 39ae7839934055ac1845ee94ff1e8decaae5e223
+ms.sourcegitcommit: c7f40918dc3ecdb0ed2ef5c237a3996cb4cd268d
 ms.translationtype: HT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 09/04/2020
-ms.locfileid: "89480635"
+ms.lasthandoff: 10/05/2020
+ms.locfileid: "91727265"
 ---
 # <a name="finding-more-ole-db-driver-for-sql-server-information"></a>SQL Server 정보에 대한 더 많은 OLE DB 드라이버 찾기
 [!INCLUDE[SQL Server Azure SQL Database Synapse Analytics PDW ](../../includes/applies-to-version/sql-asdb-asdbmi-asa-pdw.md)]
@@ -33,7 +33,7 @@ ms.locfileid: "89480635"
  [데이터 액세스 블로그](https://techcommunity.microsoft.com/t5/sql-server/bg-p/SQLServer/label-name/SQLServerDrivers)  
  이 블로그 사이트에서는 데이터 액세스 기술에 대한 정보를 제공하며 제품 팀의 멤버와 직접 상호 작용할 수 있습니다.  
   
- [Windows Data Access Components](https://go.microsoft.com/fwlink/?LinkId=107907)  
+ [Windows Data Access Components](/previous-versions/windows/desktop/ms692897(v=vs.85))  
  이 사이트에는 최신 Windows DAC(Windows Data Access Components) SDK 설명서가 포함되어 있습니다. Windows DAC는 Windows Vista 및 Windows Server 2008에 포함된 데이터 액세스 구성 요소(이전 버전에서는 MDAC라고 함) 버전입니다.  
   
  Window DAC SDK에는 ADO(ActiveX Data Object), OLE DB 및 ODBC(Open Database Connectivity)에 대한 설명서가 포함되어 있습니다.  
@@ -41,5 +41,4 @@ ms.locfileid: "89480635"
 
 ## <a name="see-also"></a>참고 항목  
  [SQL Server용 OLE DB 드라이버](../oledb/oledb-driver-for-sql-server.md)  
-  
   

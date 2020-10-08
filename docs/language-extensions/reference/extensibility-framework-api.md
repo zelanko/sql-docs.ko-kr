@@ -9,12 +9,12 @@ ms.topic: reference
 ms.prod: sql
 ms.technology: language-extensions
 monikerRange: '>=sql-server-ver15||>=sql-server-linux-ver15||=sqlallproducts-allversions'
-ms.openlocfilehash: a0eb128a4b1c299d8a2d939582312cdc22ae4d40
-ms.sourcegitcommit: 9b41725d6db9957dd7928a3620fe4db41eb51c6e
+ms.openlocfilehash: 5a918ca8acb263e843915c48fc16e563433d32c2
+ms.sourcegitcommit: 346a37242f889d76cd783f55aeed98023c693610
 ms.translationtype: HT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 08/13/2020
-ms.locfileid: "88180504"
+ms.lasthandoff: 10/06/2020
+ms.locfileid: "91765773"
 ---
 # <a name="extensibility-framework-api-for-sql-server"></a>SQL Server용 확장성 프레임워크 API
 [!INCLUDE [SQL Server 2019 and later](../../includes/applies-to-version/sqlserver2019.md)]
@@ -541,7 +541,7 @@ SQLRETURN GetTelemetryResults(
 
 ## <a name="installexternallibrary"></a>InstallExternalLibrary
 
-라이브러리를 설치합니다. 이 함수는 선택 사항으로, 구현이 필요하지 않습니다. 기본 구현은 라이브러리([CREATE EXTERNAL LIBRARY](https://docs.microsoft.com/sql/t-sql/statements/create-external-library-transact-sql) 참조) 콘텐츠를 적절한 위치에 있는 파일에 복사하는 것입니다. 파일 이름은 라이브러리 이름입니다.
+라이브러리를 설치합니다. 이 함수는 선택 사항으로, 구현이 필요하지 않습니다. 기본 구현은 라이브러리([CREATE EXTERNAL LIBRARY](../../t-sql/statements/create-external-library-transact-sql.md) 참조) 콘텐츠를 적절한 위치에 있는 파일에 복사하는 것입니다. 파일 이름은 라이브러리 이름입니다.
 
 ### <a name="syntax"></a>구문
 
@@ -571,7 +571,7 @@ SQLRETURN InstallExternalLibrary(
 \[입력\] 라이브러리 이름의 길이입니다.
 
 *LibraryFile*  
-\[입력\] [CREATE EXTERNAL LIBRARY](https://docs.microsoft.com/sql/t-sql/statements/create-external-library-transact-sql)에서 지정된, 이진 콘텐츠를 포함하는 라이브러리 파일의 경로(문자열)입니다.
+\[입력\] [CREATE EXTERNAL LIBRARY](../../t-sql/statements/create-external-library-transact-sql.md)에서 지정된, 이진 콘텐츠를 포함하는 라이브러리 파일의 경로(문자열)입니다.
 
 *LibraryFileLength*  
 \[입력\] LibraryFile 문자열의 길이입니다.
@@ -637,4 +637,4 @@ SQLRETURN UninstallExternalLibrary(
 
 ## <a name="next-steps"></a>다음 단계
 
-- [SQL Server에 대한 Java용 Microsoft 확장성 SDK](../how-to/extensibility-sdk-java-sql-server.md) 
+- [SQL Server에 대한 Java용 Microsoft 확장성 SDK](../how-to/extensibility-sdk-java-sql-server.md)

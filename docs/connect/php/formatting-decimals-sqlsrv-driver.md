@@ -11,17 +11,17 @@ helpviewer_keywords:
 - formatting, decimal types, money values
 author: David-Engel
 ms.author: v-daenge
-ms.openlocfilehash: c6d77fb9fcfdc720c4053688f8f0dcf759af15c8
-ms.sourcegitcommit: d1051f05a7db81ec62d9785bb6af572408f3d4e0
+ms.openlocfilehash: b111dd925a98c4f0380dfceb0a09ddffadb96592
+ms.sourcegitcommit: c7f40918dc3ecdb0ed2ef5c237a3996cb4cd268d
 ms.translationtype: HT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 08/20/2020
-ms.locfileid: "88680728"
+ms.lasthandoff: 10/05/2020
+ms.locfileid: "91726826"
 ---
 # <a name="formatting-decimal-strings-and-money-values-sqlsrv-driver"></a>10진수 문자열 및 금액 값 형식 지정(SQLSRV 드라이버)
 [!INCLUDE[Driver_PHP_Download](../../includes/driver_php_download.md)]
 
-정확도를 유지하기 위해 [decimal 또는 numeric 형식](https://docs.microsoft.com/sql/t-sql/data-types/decimal-and-numeric-transact-sql)은 항상 정확한 전체 자릿수 및 소수 자릿수가 포함된 문자열로 페치됩니다. 값이 1보다 작은 경우 선행 0이 없습니다. money 및 smallmoney 필드도 마찬가지입니다. 이들 필드는 고정 소수 자릿수가 4인 10진수 필드이기 때문입니다.
+정확도를 유지하기 위해 [decimal 또는 numeric 형식](../../t-sql/data-types/decimal-and-numeric-transact-sql.md)은 항상 정확한 전체 자릿수 및 소수 자릿수가 포함된 문자열로 페치됩니다. 값이 1보다 작은 경우 선행 0이 없습니다. money 및 smallmoney 필드도 마찬가지입니다. 이들 필드는 고정 소수 자릿수가 4인 10진수 필드이기 때문입니다.
 
 ## <a name="add-leading-zeroes-if-missing"></a>누락된 경우 선행 0 추가
 버전 5.6.0부터 사용자가 10진수 문자열의 서식을 지정할 수 있는 sqlsrv 연결 및 문 수준에 `FormatDecimals` 옵션이 추가됩니다. 이 옵션은 부울 값(true 또는 false)을 예상하며 페치된 결과에서 10진수 또는 숫자 값의 서식 지정에만 영향을 줍니다. 즉, `FormatDecimals` 옵션은 삽입 또는 업데이트와 같은 다른 작업에는 영향을 주지 않습니다.

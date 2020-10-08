@@ -9,17 +9,17 @@ ms.topic: conceptual
 ms.prod: sql
 ms.technology: language-extensions
 monikerRange: '>=sql-server-ver15||>=sql-server-linux-ver15||=sqlallproducts-allversions'
-ms.openlocfilehash: 04e883861bfd14d5a5b69a080e1ed41bfeccd147
-ms.sourcegitcommit: 9b41725d6db9957dd7928a3620fe4db41eb51c6e
+ms.openlocfilehash: 901410fb36080d39436a3a908a0ffd9260c5b513
+ms.sourcegitcommit: 346a37242f889d76cd783f55aeed98023c693610
 ms.translationtype: HT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 08/13/2020
-ms.locfileid: "88180298"
+ms.lasthandoff: 10/06/2020
+ms.locfileid: "91765797"
 ---
 # <a name="how-to-call-the-java-runtime-in-sql-server-language-extensions"></a>SQL Server 언어 확장에서 Java 런타임을 호출하는 방법
 [!INCLUDE [SQL Server 2019 and later](../../includes/applies-to-version/sqlserver2019.md)]
 
-[SQL Server 언어 확장](../language-extensions-overview.md)은 [sp_execute_external_script](https://docs.microsoft.com/sql/relational-databases/system-stored-procedures/sp-execute-external-script-transact-sql) 시스템 저장 프로시저를 인터페이스로 사용하여 Java 런타임을 호출합니다. 
+[SQL Server 언어 확장](../language-extensions-overview.md)은 [sp_execute_external_script](../../relational-databases/system-stored-procedures/sp-execute-external-script-transact-sql.md) 시스템 저장 프로시저를 인터페이스로 사용하여 Java 런타임을 호출합니다. 
 
 이 방법 문서에서는 SQL Server에서 실행되는 Java 클래스 및 메서드에 대한 구현 세부 정보를 제공합니다.
 
@@ -56,7 +56,7 @@ SQL Server에서 Java 클래스를 호출하는 방법에는 두 가지가 있�
 
 ### <a name="call-java-class"></a>Java 클래스 호출
 
-[sp_execute_external_script](https://docs.microsoft.com/sql/relational-databases/system-stored-procedures/sp-execute-external-script-transact-sql) 시스템 저장 프로시저는 Java 런타임을 호출하는 데 사용되는 인터페이스입니다. 다음 예제에서는 Java 확장을 사용하는 `sp_execute_external_script`, 그리고 경로, 스크립트 및 사용자 지정 코드를 지정하는 매개 변수를 보여 줍니다.
+[sp_execute_external_script](../../relational-databases/system-stored-procedures/sp-execute-external-script-transact-sql.md) 시스템 저장 프로시저는 Java 런타임을 호출하는 데 사용되는 인터페이스입니다. 다음 예제에서는 Java 확장을 사용하는 `sp_execute_external_script`, 그리고 경로, 스크립트 및 사용자 지정 코드를 지정하는 매개 변수를 보여 줍니다.
 
 > [!NOTE]
 > 호출할 메서드는 정의할 필요가 없습니다. 기본적으로 **execute**라는 메서드가 호출됩니다. 즉, [SQL Server Java용 확장성 SDK](extensibility-sdk-java-sql-server.md)를 따르고 Java 클래스에서 execute 메서드를 구현해야 합니다.
@@ -90,7 +90,7 @@ Java 클래스 또는 클래스를 컴파일하고 Java Classpath에서 jar 파�
 
 ## <a name="use-external-library"></a>외부 라이브러리 사용
 
-SQL Server 2019 릴리스 후보 1에서는 Windows 및 Linux에서 Java 언어용 외부 라이브러리를 사용할 수 있습니다. 클래스를 .jar 파일로 컴파일하고 [CREATE EXTERNAL LIBRARY](https://docs.microsoft.com/sql/t-sql/statements/create-external-library-transact-sql) DDL을 사용하여 .jar 파일 및 기타 종속성을 데이터베이스에 업로드할 수 있습니다.
+SQL Server 2019 릴리스 후보 1에서는 Windows 및 Linux에서 Java 언어용 외부 라이브러리를 사용할 수 있습니다. 클래스를 .jar 파일로 컴파일하고 [CREATE EXTERNAL LIBRARY](../../t-sql/statements/create-external-library-transact-sql.md) DDL을 사용하여 .jar 파일 및 기타 종속성을 데이터베이스에 업로드할 수 있습니다.
 
 외부 라이브러리를 사용하여 .jar 파일을 업로드하는 방법 예:
 
@@ -113,7 +113,7 @@ EXEC sp_execute_external_script
 with result sets ((column1 int))
 ```
 
-자세한 내용은 [CREATE EXTERNAL LIBRARY](https://docs.microsoft.com/sql/t-sql/statements/create-external-library-transact-sql)를 참조하세요.
+자세한 내용은 [CREATE EXTERNAL LIBRARY](../../t-sql/statements/create-external-library-transact-sql.md)를 참조하세요.
 
 ## <a name="loopback-connection-to-sql-server"></a>SQL Server에 대한 루프백 연결
 

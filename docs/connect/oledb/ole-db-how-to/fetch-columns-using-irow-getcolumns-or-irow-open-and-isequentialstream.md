@@ -14,12 +14,12 @@ helpviewer_keywords:
 - GetColumns method
 author: David-Engel
 ms.author: v-daenge
-ms.openlocfilehash: eeaebe20dd27eb24edc1d23060d7a64fec8f0916
-ms.sourcegitcommit: c95f3ef5734dec753de09e07752a5d15884125e2
+ms.openlocfilehash: 65c7bdd5413b2ac320f7c9338978ab54012dabd4
+ms.sourcegitcommit: c7f40918dc3ecdb0ed2ef5c237a3996cb4cd268d
 ms.translationtype: HT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 08/25/2020
-ms.locfileid: "88860603"
+ms.lasthandoff: 10/05/2020
+ms.locfileid: "91727124"
 ---
 # <a name="fetch-columns-by-using-irowgetcolumns-or-irowopen-and-isequentialstream"></a>IRow::GetColumns(또는 IRow::Open) 및 ISequentialStream을 사용하여 열 페치
 [!INCLUDE [SQL Server](../../../includes/applies-to-version/sql-asdb-asdbmi-asa-pdw.md)]
@@ -29,7 +29,7 @@ ms.locfileid: "88860603"
   큰 데이터는 **ISequentialStream** 인터페이스를 사용하여 바인딩하거나 검색할 수 있습니다. 바인딩된 열에서 상태 플래그 DBSTATUS_S_TRUNCATED는 데이터가 잘렸음을 나타냅니다.  
   
 > [!IMPORTANT]  
->  가능하면 Windows 인증을 사용하세요. Windows 인증을 사용할 수 없으면 런타임에 사용자에게 자격 증명을 입력하라는 메시지를 표시합니다. 자격 증명은 파일에 저장하지 않는 것이 좋습니다. 자격 증명을 유지하려면 [Win32 crypto API](https://go.microsoft.com/fwlink/?LinkId=64532)를 사용하여 자격 증명을 암호화해야 합니다.  
+>  가능하면 Windows 인증을 사용하세요. Windows 인증을 사용할 수 없으면 런타임에 사용자에게 자격 증명을 입력하라는 메시지를 표시합니다. 자격 증명은 파일에 저장하지 않는 것이 좋습니다. 자격 증명을 유지하려면 [Win32 crypto API](/windows/win32/seccrypto/cryptography-reference)를 사용하여 자격 증명을 암호화해야 합니다.  
   
 ### <a name="to-fetch-columns-using-irowgetcolumns-or-irowopen-and-isequentialstream"></a>IRow::GetColumns/IRow::Open 및 ISequentialStream을 사용하여 열을 인출하려면  
   
@@ -675,5 +675,4 @@ GO
   
 ## <a name="see-also"></a>참고 항목  
  [OLE DB 방법 도움말 항목](../../oledb/ole-db-how-to/ole-db-how-to-topics.md)  
-  
   

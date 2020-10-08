@@ -11,17 +11,17 @@ ms.topic: conceptual
 ms.assetid: 0c617b53-a74b-4d5b-b76b-3ec7f1b8e8de
 author: David-Engel
 ms.author: v-daenge
-ms.openlocfilehash: 004125e217b1e2bf79ef26dc9ebffae2877890b2
-ms.sourcegitcommit: 331b8495e4ab37266945c81ff5b93d250bdaa6da
+ms.openlocfilehash: 854446b0a505dd2f8a2dc44c4f3eca70158e20be
+ms.sourcegitcommit: c7f40918dc3ecdb0ed2ef5c237a3996cb4cd268d
 ms.translationtype: HT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 08/20/2020
-ms.locfileid: "88646733"
+ms.lasthandoff: 10/05/2020
+ms.locfileid: "91726804"
 ---
 # <a name="pdolastinsertid"></a>PDO::lastInsertId
 [!INCLUDE[Driver_PHP_Download](../../includes/driver_php_download.md)]
 
-데이터베이스의 테이블에 가장 최근에 삽입된 행에 대한 식별자를 반환합니다. 테이블에 IDENTITY NOT NULL 열이 있어야 합니다. 시퀀스 이름이 제공된 경우 `lastInsertId`는 제공된 시퀀스 이름에 대해 가장 최근에 삽입된 시퀀스 번호를 반환합니다. 시퀀스 번호에 대한 자세한 내용은 [여기](https://docs.microsoft.com/sql/relational-databases/sequence-numbers/sequence-numbers)를 참조하세요.
+데이터베이스의 테이블에 가장 최근에 삽입된 행에 대한 식별자를 반환합니다. 테이블에 IDENTITY NOT NULL 열이 있어야 합니다. 시퀀스 이름이 제공된 경우 `lastInsertId`는 제공된 시퀀스 이름에 대해 가장 최근에 삽입된 시퀀스 번호를 반환합니다. 시퀀스 번호에 대한 자세한 내용은 [여기](../../relational-databases/sequence-numbers/sequence-numbers.md)를 참조하세요.
   
 ## <a name="syntax"></a>구문  
   
@@ -155,4 +155,3 @@ Last sequence number when a table name is supplied =
 [PDO 클래스](../../connect/php/pdo-class.md)
 
 [PDO](https://php.net/manual/book.pdo.php)  
-  

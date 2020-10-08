@@ -10,12 +10,12 @@ ms.topic: reference
 ms.reviewer: v-kaywon
 ms.author: v-daenge
 author: David-Engel
-ms.openlocfilehash: 424b18f18fb519b0e8755606d0af7488d9885007
-ms.sourcegitcommit: e4c36570c34cd7d7ae258061351bce6e54ea49f6
+ms.openlocfilehash: b16ba1f6fef9ec82de0e3c4877a52aee344a2b70
+ms.sourcegitcommit: c7f40918dc3ecdb0ed2ef5c237a3996cb4cd268d
 ms.translationtype: HT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 08/12/2020
-ms.locfileid: "88147554"
+ms.lasthandoff: 10/05/2020
+ms.locfileid: "91727278"
 ---
 # <a name="utf-8-support-in-ole-db-driver-for-sql-server"></a>SQL Server용 OLE DB 드라이버에서 UTF-8 지원
 [!INCLUDE [SQL Server](../../../includes/applies-to-version/sql-asdb-asdbmi-asa-pdw.md)]
@@ -29,14 +29,14 @@ SQL Server용 Microsoft OLE DB 드라이버(버전 18.2.1)에서 UTF-8 인코딩
 드라이버 버전 18.4.0에서 UTF-8 클라이언트 인코딩에 대한 지원이 추가됩니다(Windows 10의 지역 설정에서 "국가별 언어 지원에 유니코드 UTF-8 사용" 확인란을 선택).
 
 > [!NOTE]  
-> Microsoft OLE DB Driver for SQL Server는 [GetACP](https://docs.microsoft.com/windows/win32/api/winnls/nf-winnls-getacp) 함수를 사용하여 DBTYPE_STR 입력 버퍼의 인코딩을 확인합니다.
+> Microsoft OLE DB Driver for SQL Server는 [GetACP](/windows/win32/api/winnls/nf-winnls-getacp) 함수를 사용하여 DBTYPE_STR 입력 버퍼의 인코딩을 확인합니다.
 >
 > GetACP가 UTF-8 인코딩을 반환하는 시나리오(Windows 10의 지역 설정에서 "국가별 언어 지원에 유니코드 UTF-8 사용" 확인란을 선택)는 버전 18.4부터 지원됩니다. 이전 버전에서는 버퍼가 유니코드 데이터를 저장해야 하는 경우 버퍼 데이터 형식을 *DBTYPE_WSTR*(UTF-16으로 인코딩됨)로 설정해야 합니다.
 
 ## <a name="data-insertion-into-a-utf-8-encoded-char-or-varchar-column"></a>UTF-8로 인코딩된 CHAR 또는 VARCHAR 열로의 데이터 삽입
-삽입하기 위해 입력 매개 변수 버퍼를 만들 때 버퍼는 [DBBINDING 구조체](https://go.microsoft.com/fwlink/?linkid=2071182)의 배열을 사용하여 설명합니다. 각 DBBINDING 구조체는 단일 매개 변수를 소비자의 버퍼에 연결하고 데이터 값의 길이 및 형식과 같은 정보를 포함합니다. CHAR 형식의 입력 매개 변수 버퍼는 DBBINDING 구조체의 *wType*을 DBTYPE_STR로 설정해야 합니다. WCHAR 형식의 입력 매개 변수 버퍼는 DBBINDING 구조체의 *wType*을 DBTYPE_WSTR로 설정해야 합니다.
+삽입하기 위해 입력 매개 변수 버퍼를 만들 때 버퍼는 [DBBINDING 구조체](/previous-versions/windows/desktop/ms716845(v=vs.85))의 배열을 사용하여 설명합니다. 각 DBBINDING 구조체는 단일 매개 변수를 소비자의 버퍼에 연결하고 데이터 값의 길이 및 형식과 같은 정보를 포함합니다. CHAR 형식의 입력 매개 변수 버퍼는 DBBINDING 구조체의 *wType*을 DBTYPE_STR로 설정해야 합니다. WCHAR 형식의 입력 매개 변수 버퍼는 DBBINDING 구조체의 *wType*을 DBTYPE_WSTR로 설정해야 합니다.
 
-매개 변수를 사용하여 명령을 실행할 경우 드라이버에서 매개 변수 데이터 형식 정보를 생성합니다. 입력 버퍼 형식과 매개 변수 데이터 형식이 일치하면 드라이버에서 변환이 수행되지 않습니다. 그러지 않으면 드라이버에서 입력 매개 변수 버퍼를 매개 변수 데이터 형식으로 변환합니다. 매개 변수 데이터 형식은 사용자가 [ICommandWithParameters::SetParameterInfo](https://go.microsoft.com/fwlink/?linkid=2071577)를 호출하여 명시적으로 설정할 수 있습니다. 정보를 제공하지 않으면 드라이버는 (a) 문을 준비할 때 서버에서 열 메타데이터를 검색하거나 (b) 입력 매개 변수 데이터 형식에서 기본 변환을 시도하여 매개 변수 데이터 형식 정보를 파생합니다.
+매개 변수를 사용하여 명령을 실행할 경우 드라이버에서 매개 변수 데이터 형식 정보를 생성합니다. 입력 버퍼 형식과 매개 변수 데이터 형식이 일치하면 드라이버에서 변환이 수행되지 않습니다. 그러지 않으면 드라이버에서 입력 매개 변수 버퍼를 매개 변수 데이터 형식으로 변환합니다. 매개 변수 데이터 형식은 사용자가 [ICommandWithParameters::SetParameterInfo](/previous-versions/windows/desktop/ms725393(v=vs.85))를 호출하여 명시적으로 설정할 수 있습니다. 정보를 제공하지 않으면 드라이버는 (a) 문을 준비할 때 서버에서 열 메타데이터를 검색하거나 (b) 입력 매개 변수 데이터 형식에서 기본 변환을 시도하여 매개 변수 데이터 형식 정보를 파생합니다.
 
 입력 버퍼 데이터 형식 및 매개 변수 데이터 형식에 따라 드라이버나 서버에 의해 입력 매개 변수 버퍼가 서버 열 데이터 정렬로 변환될 수 있습니다. 변환하는 동안 클라이언트 코드 페이지 또는 데이터베이스 데이터 정렬 코드 페이지에서 입력 버퍼의 모든 문자를 나타낼 수 없는 경우 데이터 손실이 발생할 수 있습니다. 다음 표에서는 UTF-8 사용 열에 데이터를 삽입할 때의 변환 프로세스를 설명합니다.
 
@@ -48,7 +48,7 @@ SQL Server용 Microsoft OLE DB 드라이버(버전 18.2.1)에서 UTF-8 인코딩
 |DBTYPE_WSTR|DBTYPE_WSTR|UTF-16에서 열 데이터 정렬 코드 페이지로 서버 변환|없음|
 
 ## <a name="data-retrieval-from-a-utf-8-encoded-char-or-varchar-column"></a>UTF-8로 인코딩된 CHAR 또는 VARCHAR 열에서 데이터 검색
-검색된 데이터를 위한 버퍼를 만들 때 버퍼는 [DBBINDING 구조체](https://go.microsoft.com/fwlink/?linkid=2071182)의 배열을 사용하여 설명합니다. 각 DBBINDING 구조는 검색된 행의 단일 열을 연결합니다. 열 데이터를 CHAR로 검색하려면 DBBINDING 구조체의 *wType*을 DBTYPE_STR로 설정합니다. 열 데이터를 WCHAR로 검색하려면 DBBINDING 구조체의 *wType*을 DBTYPE_WSTR로 설정합니다.
+검색된 데이터를 위한 버퍼를 만들 때 버퍼는 [DBBINDING 구조체](/previous-versions/windows/desktop/ms716845(v=vs.85))의 배열을 사용하여 설명합니다. 각 DBBINDING 구조는 검색된 행의 단일 열을 연결합니다. 열 데이터를 CHAR로 검색하려면 DBBINDING 구조체의 *wType*을 DBTYPE_STR로 설정합니다. 열 데이터를 WCHAR로 검색하려면 DBBINDING 구조체의 *wType*을 DBTYPE_WSTR로 설정합니다.
 
 결과 버퍼 형식 표시기 DBTYPE_STR의 경우 드라이버는 UTF-8로 인코딩된 데이터를 클라이언트 인코딩으로 변환합니다. 사용자는 클라이언트 인코딩에서 UTF-8 열의 데이터를 표시할 수 있는지 확인해야 합니다. 표시할 수 없으면 데이터 손실이 발생할 수 있습니다.
 
@@ -58,11 +58,10 @@ SQL Server용 Microsoft OLE DB 드라이버(버전 18.2.1)에서 UTF-8 인코딩
 Microsoft OLE DB Driver for SQL Server를 사용하면 서버에서 인식할 수 있는 방식으로 데이터가 노출됩니다. UTF-8 사용 클라이언트로부터 데이터를 삽입하는 경우 드라이버는 UTF-8로 인코딩된 문자열을 서버로 전송하기 전에 데이터베이스 데이터 정렬 코드 페이지로 변환합니다.
 
 > [!NOTE]  
-> UTF-8로 인코딩된 데이터를 레거시 텍스트 열에 삽입하기 위해 [ISequentialStream](https://docs.microsoft.com/previous-versions/windows/desktop/ms718035(v=vs.85)) 인터페이스를 사용하는 것은 UTF-8을 지원하는 서버로만 제한됩니다. 자세한 내용은 [BLOB 및 OLE 개체](../ole-db-blobs/blobs-and-ole-objects.md)를 참조하세요.
+> UTF-8로 인코딩된 데이터를 레거시 텍스트 열에 삽입하기 위해 [ISequentialStream](/previous-versions/windows/desktop/ms718035(v=vs.85)) 인터페이스를 사용하는 것은 UTF-8을 지원하는 서버로만 제한됩니다. 자세한 내용은 [BLOB 및 OLE 개체](../ole-db-blobs/blobs-and-ole-objects.md)를 참조하세요.
 
 ## <a name="see-also"></a>참고 항목  
 [SQL Server 기능용 OLE DB 드라이버](../../oledb/features/oledb-driver-for-sql-server-features.md) 
 
 [SQL Server용 OLE DB 드라이버에서 UTF-16 지원](../../oledb/features/utf-16-support-in-oledb-driver-for-sql-server.md)    
-  
   
