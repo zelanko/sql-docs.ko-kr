@@ -9,12 +9,12 @@ ms.date: 12/06/2018
 ms.topic: conceptual
 ms.prod: sql
 ms.technology: machine-learning-bdc
-ms.openlocfilehash: 548db45e97fed2a5d955eef947c6d21004d439d2
-ms.sourcegitcommit: 216f377451e53874718ae1645a2611cdb198808a
+ms.openlocfilehash: 9768c406ca94cd16e8e9075bd5247434b8359d5c
+ms.sourcegitcommit: c7f40918dc3ecdb0ed2ef5c237a3996cb4cd268d
 ms.translationtype: HT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 07/28/2020
-ms.locfileid: "87243444"
+ms.lasthandoff: 10/05/2020
+ms.locfileid: "91725764"
 ---
 # <a name="data-wrangling-using-prose-code-accelerator"></a>PROSE Code Accelerator를 사용한 데이터 랭글링
 
@@ -37,7 +37,7 @@ import prose.codeaccelerator as cx
 - 데이터 프레임의 데이터 형식 수정
 - 문자열 목록에서 패턴을 나타내는 정규식 찾기
 
-Code Accelerator 메서드의 일반적인 개요를 보려면 [설명서](https://aka.ms/prose-codeaccelerator-overview)를 참조하세요.
+Code Accelerator 메서드의 일반적인 개요를 보려면 [설명서](/python/api/overview/azure/prose/intro)를 참조하세요.
 
 ## <a name="reading-data-from-a-file-to-a-dataframe"></a>파일의 데이터를 데이터 프레임으로 읽기
 
@@ -86,7 +86,7 @@ def read_file(file):
     return df
  ```
 
-Code Accelerator는 구분된, JSON 및 고정 너비 파일을 데이터 프레임으로 로드하는 코드를 생성할 수 있습니다. 고정 너비 파일을 읽기 위해 `ReadFwfBuilder`는 경우에 따라 열 위치를 가져오기 위해 구문 분석할 수 있는 사람이 읽을 수 있는 스키마 파일을 사용합니다. 자세히 알아보려면 [설명서](https://aka.ms/prose-codeaccelerator-docs)를 참조하세요.
+Code Accelerator는 구분된, JSON 및 고정 너비 파일을 데이터 프레임으로 로드하는 코드를 생성할 수 있습니다. 고정 너비 파일을 읽기 위해 `ReadFwfBuilder`는 경우에 따라 열 위치를 가져오기 위해 구문 분석할 수 있는 사람이 읽을 수 있는 스키마 파일을 사용합니다. 자세히 알아보려면 [설명서](/python/api/overview/azure/prose/intro)를 참조하세요.
 
 ## <a name="fixing-data-types-in-a-dataframe"></a>데이터 프레임의 데이터 형식 수정
 
@@ -106,7 +106,7 @@ builder = cx.DetectTypesBuilder(df)
 builder.learn().code()
 ```
 
-자세히 알아보려면 [설명서](https://aka.ms/prose-codeaccelerator-fixtypes)를 참조하세요.
+자세히 알아보려면 [설명서](/python/api/overview/azure/prose/fixdatatypes)를 참조하세요.
 
 ## <a name="identifying-patterns-in-strings"></a>문자열의 패턴 식별
 
@@ -143,4 +143,4 @@ builder.learn().regexes
 ^Unknown$
 ```
 
-정규식 생성 외에, `FindPatternsBuilder`는 생성된 정규식을 기준으로 값을 클러스터링하는 코드도 생성할 수 있습니다. 또한 열의 모든 값이 생성된 정규식을 준수한다는 것도 어설션할 수 있습니다. 자세히 알아보고 기타 유용한 시나리오를 보려면 [설명서](https://aka.ms/prose-codeaccelerator-findpatterns)를 참조하세요.
+정규식 생성 외에, `FindPatternsBuilder`는 생성된 정규식을 기준으로 값을 클러스터링하는 코드도 생성할 수 있습니다. 또한 열의 모든 값이 생성된 정규식을 준수한다는 것도 어설션할 수 있습니다. 자세히 알아보고 기타 유용한 시나리오를 보려면 [설명서](/python/api/overview/azure/prose/findpatterns)를 참조하세요.

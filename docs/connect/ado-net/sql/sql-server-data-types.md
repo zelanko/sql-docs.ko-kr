@@ -7,15 +7,15 @@ ms.prod: sql
 ms.prod_service: connectivity
 ms.technology: connectivity
 ms.topic: conceptual
-author: rothja
-ms.author: jroth
+author: David-Engel
+ms.author: v-daenge
 ms.reviewer: v-kaywon
-ms.openlocfilehash: 50a6e158f5678b30028337b70e1da6914038e64a
-ms.sourcegitcommit: ff82f3260ff79ed860a7a58f54ff7f0594851e6b
+ms.openlocfilehash: 57e0cec178c407cda530e6699e51743094c57dca
+ms.sourcegitcommit: c7f40918dc3ecdb0ed2ef5c237a3996cb4cd268d
 ms.translationtype: HT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 03/29/2020
-ms.locfileid: "78896546"
+ms.lasthandoff: 10/05/2020
+ms.locfileid: "91725594"
 ---
 # <a name="sql-server-data-types-and-adonet"></a>SQL Server 데이터 형식 및 ADO.NET
 
@@ -25,11 +25,11 @@ SQL Server와 .NET은 서로 다른 형식의 시스템을 기반으로 하기 �
   
 SQL Server 2008에서는 날짜 및 시간, 구조화, 반구조화, 비구조화 데이터를 사용해야 할 비즈니스 요구 사항에 맞게 설계된 새로운 데이터 형식을 소개합니다. 이 내용은 SQL Server 2008 온라인 설명서에 문서화되어 있습니다.  
   
-애플리케이션에서 사용할 수 있는 SQL Server 데이터 형식은 사용 중인 SQL Server의 버전에 따라 달라집니다. 자세한 내용은 SQL Server 온라인 설명서에서 [데이터 형식(데이터베이스 엔진)](https://go.microsoft.com/fwlink/?LinkID=107468)을 참조하세요.
+애플리케이션에서 사용할 수 있는 SQL Server 데이터 형식은 사용 중인 SQL Server의 버전에 따라 달라집니다. 자세한 내용은 SQL Server 온라인 설명서에서 [데이터 형식(데이터베이스 엔진)](/previous-versions/sql/sql-server-2008-r2/ms187594(v=sql.105))을 참조하세요.
   
 ## <a name="in-this-section"></a>섹션 내용  
 [SqlTypes 및 데이터 세트](sqltypes-dataset.md)  
-`DataSet`의 `SqlTypes`에 대한 형식 지원에 대해 설명합니다.  
+`SqlTypes`의 `DataSet`에 대한 형식 지원에 대해 설명합니다.  
   
 [NULL 값 처리](handle-null-values.md)  
 null 값과 값이 세 개인 논리로 작업하는 방법에 대해 설명합니다.  

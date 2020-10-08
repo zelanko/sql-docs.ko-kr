@@ -12,12 +12,12 @@ ms.topic: conceptual
 author: David-Engel
 ms.author: v-daenge
 ms.reviewer: v-kaywon
-ms.openlocfilehash: be42913b07f037b002123bedb6d285f41b52c9a3
-ms.sourcegitcommit: cb620c77fe6bdefb975968837706750c31048d46
+ms.openlocfilehash: 0f4ccc330491ba5699ed10de48a883792d896447
+ms.sourcegitcommit: c7f40918dc3ecdb0ed2ef5c237a3996cb4cd268d
 ms.translationtype: HT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 07/15/2020
-ms.locfileid: "86393171"
+ms.lasthandoff: 10/05/2020
+ms.locfileid: "91725644"
 ---
 # <a name="handling-null-values"></a>NULL 값 처리
 
@@ -26,7 +26,7 @@ ms.locfileid: "86393171"
 관계형 데이터베이스에서 null 값은 열 값을 알 수 없거나 값이 누락된 경우에 사용됩니다. Null은 빈 문자열(문자 또는 날짜/시간 데이터 형식의 경우)도 아니고 0 값(숫자 데이터 형식의 경우)도 아닙니다. ANSI SQL-92 사양에서는 모든 null이 일관되게 처리되도록 null이 모든 데이터 형식에 대해 동일해야 함을 명시합니다. <xref:System.Data.SqlTypes> 네임스페이스는 <xref:System.Data.SqlTypes.INullable> 인터페이스를 구현하여 null 의미 체계를 제공합니다. <xref:System.Data.SqlTypes>의 각 데이터 형식에는 해당 데이터 형식의 인스턴스에 할당할 수 있는 고유한 `IsNull` 속성과 `Null` 값이 있습니다.  
   
 > [!NOTE]
->  .NET Framework 버전 2.0 및 .NET Core 버전 1.0에는 nullable 형식에 대한 지원이 도입되었습니다. 이를 통해 프로그래머는 값 형식을 확장하여 기본 형식의 모든 값을 나타낼 수 있습니다. 이러한 CLR nullable 형식은 <xref:System.Nullable> 구조체의 인스턴스를 나타냅니다. 이 기능은 값 형식이 boxed 및 unboxed인 경우에 특히 유용하며 개체 유형과의 호환성을 향상시킵니다. ANSI SQL null은 `null` 참조(또는 Visual Basic의 `Nothing`)와 동일한 방식으로 동작하지 않으므로 CLR nullable 형식은 데이터베이스 null을 저장하는 데 적합하지 않습니다. 데이터베이스 ANSI SQL null 값에 대한 작업을 수행하려면 <xref:System.Data.SqlTypes> 대신 <xref:System.Nullable> null을 사용합니다. C#에서 CLR nullable 형식으로 작업하는 방법에 대한 자세한 내용은 [Nullable 형식](https://docs.microsoft.com/dotnet/csharp/programming-guide/nullable-types/)을 참조하고, C#의 경우 [Nullable 형식 사용](https://docs.microsoft.com/dotnet/csharp/programming-guide/nullable-types/using-nullable-types/)을 참조하세요.  
+>  .NET Framework 버전 2.0 및 .NET Core 버전 1.0에는 nullable 형식에 대한 지원이 도입되었습니다. 이를 통해 프로그래머는 값 형식을 확장하여 기본 형식의 모든 값을 나타낼 수 있습니다. 이러한 CLR nullable 형식은 <xref:System.Nullable> 구조체의 인스턴스를 나타냅니다. 이 기능은 값 형식이 boxed 및 unboxed인 경우에 특히 유용하며 개체 유형과의 호환성을 향상시킵니다. ANSI SQL null은 `null` 참조(또는 Visual Basic의 `Nothing`)와 동일한 방식으로 동작하지 않으므로 CLR nullable 형식은 데이터베이스 null을 저장하는 데 적합하지 않습니다. 데이터베이스 ANSI SQL null 값에 대한 작업을 수행하려면 <xref:System.Data.SqlTypes> 대신 <xref:System.Nullable> null을 사용합니다. C#에서 CLR nullable 형식으로 작업하는 방법에 대한 자세한 내용은 [Nullable 형식](/dotnet/csharp/programming-guide/nullable-types/)을 참조하고, C#의 경우 [Nullable 형식 사용](/dotnet/csharp/programming-guide/nullable-types/using-nullable-types/)을 참조하세요.  
   
 ## <a name="nulls-and-three-valued-logic"></a>Null 및 3치 논리  
 열 정의에 null 값을 허용하면 애플리케이션에 값이 3치 논리가 도입됩니다. 비교는 다음 세 가지 조건 중 하나로 평가될 수 있습니다.  

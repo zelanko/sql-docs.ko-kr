@@ -8,16 +8,16 @@ ms.reviewer: mihaelab
 ms.date: 01/07/2020
 ms.topic: conceptual
 ms.prod: sql
-ms.openlocfilehash: 7939aa1575aaeec8edff33a9a9f7101a1014abc2
-ms.sourcegitcommit: d56f1eca807c55cf606a6316f3872585f014fec1
+ms.openlocfilehash: 83da4e1554e1a6fa112c6fc8f629d30cbcb97d4d
+ms.sourcegitcommit: c7f40918dc3ecdb0ed2ef5c237a3996cb4cd268d
 ms.translationtype: HT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 09/22/2020
-ms.locfileid: "90914937"
+ms.lasthandoff: 10/05/2020
+ms.locfileid: "91725259"
 ---
 # <a name="install-azdata"></a>`azdata` 설치
 
-[!INCLUDE[SQL Server 2019](../../includes/applies-to-version/azdata.md)]
+[!INCLUDE[azdata](../../includes/applies-to-version/azdata.md)]
 
 `azdata`는 REST API를 통해 데이터 서비스를 부트스트랩하고 관리할 수 있도록 Python으로 작성된 명령줄 유틸리티입니다. 
 

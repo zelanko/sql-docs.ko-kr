@@ -9,12 +9,12 @@ ms.date: 08/04/2020
 ms.topic: conceptual
 ms.prod: sql
 ms.technology: big-data-cluster
-ms.openlocfilehash: 6c5ec4c058edc0f1d63aee7c0ab305d9becfdc56
-ms.sourcegitcommit: 6ab28d954f3a63168463321a8bc6ecced099b247
+ms.openlocfilehash: 53d7b050fe1269f704a38ca5542c0dae6fdfd0f7
+ms.sourcegitcommit: c7f40918dc3ecdb0ed2ef5c237a3996cb4cd268d
 ms.translationtype: HT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 08/05/2020
-ms.locfileid: "87790316"
+ms.lasthandoff: 10/05/2020
+ms.locfileid: "91725004"
 ---
 # <a name="configure-apache-spark-and-apache-hadoop-in-big-data-clusters"></a>빅 데이터 클러스터에서 Apache Spark 및 Apache Hadoop 구성
 
@@ -155,5 +155,5 @@ bdc.json의 예제 스토리지 풀 정의는 다음과 같습니다.
 ## <a name="next-steps"></a>다음 단계
 
 - [Apache Spark 및 Apache Hadoop(HDFS) 구성 속성](reference-config-spark-hadoop.md)
-- [`azdata` 참조](reference-azdata.md)
+- [`azdata` 참조](../azdata/reference/reference-azdata.md)
 - [[!INCLUDE[big-data-clusters-2019](../includes/ssbigdataclusters-ver15.md)]란 무엇인가요?](big-data-cluster-overview.md)

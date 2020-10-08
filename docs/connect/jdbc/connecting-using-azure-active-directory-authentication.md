@@ -11,12 +11,12 @@ ms.topic: conceptual
 ms.assetid: 9c9d97be-de1d-412f-901d-5d9860c3df8c
 author: David-Engel
 ms.author: v-daenge
-ms.openlocfilehash: 04e52a1a84bb37fccd90f9ff32e0fdadde8fb2af
-ms.sourcegitcommit: cc23d8646041336d119b74bf239a6ac305ff3d31
+ms.openlocfilehash: 94950f346ddaf4264926438ca107c49350577b27
+ms.sourcegitcommit: c7f40918dc3ecdb0ed2ef5c237a3996cb4cd268d
 ms.translationtype: HT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 09/23/2020
-ms.locfileid: "91117134"
+ms.lasthandoff: 10/05/2020
+ms.locfileid: "91725474"
 ---
 # <a name="connecting-using-azure-active-directory-authentication"></a>Azure Active Directory 인증을 사용하여 연결
 
@@ -24,7 +24,7 @@ ms.locfileid: "91117134"
 
 이 문서에서는 Microsoft JDBC Driver for SQL Server에서 Azure Active Directory 인증 기능을 사용하는 Java 애플리케이션을 개발하는 방법을 설명합니다.
 
-Azure AD(Azure Active Directory)의 ID를 사용하여 Azure SQL Database v12에 연결하는 메커니즘인 Azure AD 인증을 사용할 수 있습니다. Azure Active Directory 인증을 사용하여 중앙에서 데이터베이스 사용자의 ID를 관리하고 SQL Server 인증 대신 사용할 수 있습니다. JDBC 드라이버를 사용하면 JDBC 연결 문자열에서 Azure SQL Database에 연결할 Azure Active Directory 자격 증명을 지정할 수 있습니다. Azure Active Directory 인증을 구성하는 방법에 대한 자세한 내용은 [Azure Active Directory 인증을 사용하여 SQL Database에 연결](https://azure.microsoft.com/documentation/articles/sql-database-aad-authentication/)을 참조하세요. 
+Azure AD(Azure Active Directory)의 ID를 사용하여 Azure SQL Database v12에 연결하는 메커니즘인 Azure AD 인증을 사용할 수 있습니다. Azure Active Directory 인증을 사용하여 중앙에서 데이터베이스 사용자의 ID를 관리하고 SQL Server 인증 대신 사용할 수 있습니다. JDBC 드라이버를 사용하면 JDBC 연결 문자열에서 Azure SQL Database에 연결할 Azure Active Directory 자격 증명을 지정할 수 있습니다. Azure Active Directory 인증을 구성하는 방법에 대한 자세한 내용은 [Azure Active Directory 인증을 사용하여 SQL Database에 연결](/azure/azure-sql/database/authentication-aad-overview)을 참조하세요. 
 
 Microsoft JDBC Driver for SQL Server에서 Azure Active Directory 인증을 지원하는 연결 속성은 다음과 같습니다.
 *   **인증**:  이 속성을 사용하여 연결에 사용할 SQL 인증 방법을 지정합니다. 가능한 값은 다음과 같습니다. 
@@ -287,7 +287,7 @@ You have successfully logged on as: <your user name>
     12. 왼쪽 패널에서 Azure Active Directory를 클릭합니다. "앱 등록"에서 "엔드포인트" 탭을 찾습니다. "OATH 2.0 토큰 엔드포인트"에서 URL을 복사합니다. 이것이 STS URL입니다.
     
     ![JDBC_AAD_Token](media/jdbc_aad_token.png)  
-2. Azure SQL Server의 사용자 데이터베이스에 Azure Active Directory 관리자로 로그인하고 T-SQL 명령을 사용하여 애플리케이션 보안 주체에 대해 포함된 데이터베이스 사용자를 프로비전합니다. Azure Active Directory 관리자 및 포함된 데이터베이스 사용자를 만드는 방법에 대한 자세한 내용은 [Azure Active Directory 인증을 사용하여 SQL Database에 또는 SQL Data Warehouse에 연결](https://azure.microsoft.com/documentation/articles/sql-database-aad-authentication/)을 참조하세요.
+2. Azure SQL Server의 사용자 데이터베이스에 Azure Active Directory 관리자로 로그인하고 T-SQL 명령을 사용하여 애플리케이션 보안 주체에 대해 포함된 데이터베이스 사용자를 프로비전합니다. Azure Active Directory 관리자 및 포함된 데이터베이스 사용자를 만드는 방법에 대한 자세한 내용은 [Azure Active Directory 인증을 사용하여 SQL Database에 또는 SQL Data Warehouse에 연결](/azure/azure-sql/database/authentication-aad-overview)을 참조하세요.
 
     ```
     CREATE USER [mytokentest] FROM EXTERNAL PROVIDER
@@ -351,4 +351,4 @@ public class AADTokenBased {
 ```bash
 Access Token: <your access token>
 You have successfully logged on as: <your client ID>    
-``` 
+```

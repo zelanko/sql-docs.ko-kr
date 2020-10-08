@@ -10,12 +10,12 @@ ms.date: 08/16/2020
 ms.topic: conceptual
 ms.prod: sql
 ms.technology: big-data-cluster
-ms.openlocfilehash: 1cb2262d5e12c9b898abee0b928b1c63307fb065
-ms.sourcegitcommit: d1051f05a7db81ec62d9785bb6af572408f3d4e0
+ms.openlocfilehash: fa5ae6a8834659f7a1098cd9d8fbaee6beef359e
+ms.sourcegitcommit: c7f40918dc3ecdb0ed2ef5c237a3996cb4cd268d
 ms.translationtype: HT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 08/20/2020
-ms.locfileid: "88681044"
+ms.lasthandoff: 10/05/2020
+ms.locfileid: "91725037"
 ---
 # <a name="monitor-applications-with-azdata-and-grafana-dashboard"></a>azdata 및 Grafana 대시보드를 사용하여 애플리케이션 모니터링
 
@@ -26,7 +26,7 @@ Grafana는 Kubernetes에서 실행되는 애플리케이션의 다양한 모니�
 ## <a name="prerequisites"></a>사전 요구 사항
 
 - [SQL Server 2019 빅 데이터 클러스터](deployment-guidance.md)
-- [azdata 명령줄 유틸리티](deploy-install-azdata.md)
+- [azdata 명령줄 유틸리티](../azdata/install/deploy-install-azdata.md)
 
 ## <a name="capabilities"></a>기능
 

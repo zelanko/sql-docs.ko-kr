@@ -10,12 +10,12 @@ ms.technology: connectivity
 ms.topic: conceptual
 ms.reviewer: v-daveng
 ms.author: v-daenge
-ms.openlocfilehash: 19dafa831f6763c5c2da5b54f14326db38372be4
-ms.sourcegitcommit: 216f377451e53874718ae1645a2611cdb198808a
+ms.openlocfilehash: 561cb6e02ac26db3c1d5c9a61fcf689bcca5360d
+ms.sourcegitcommit: c7f40918dc3ecdb0ed2ef5c237a3996cb4cd268d
 ms.translationtype: HT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 07/28/2020
-ms.locfileid: "87243415"
+ms.lasthandoff: 10/05/2020
+ms.locfileid: "91725521"
 ---
 # <a name="homepage-for-client-programming-to-microsoft-sql-server"></a>Microsoft SQL Server로의 클라이언트 프로그래밍 홈페이지
 
@@ -35,7 +35,7 @@ Microsoft SQL Server 및 클라우드의 Azure SQL Database와 상호 작용하�
 Azure SQL Database에 연결하기 위한 연결 문자열에 대한 자세한 내용은 다음을 참조하세요.
 
 - [.NET Core(C#)를 사용하여 Azure SQL 데이터베이스 쿼리](/azure/sql-database/sql-database-connect-query-dotnet-core).
-- 기타 Azure SQL Database 아티클에서 기타 언어 사용에 대한 설명(목차에서 이전 항목과 가까이 있음). 예를 들어 [PHP를 사용하여 Azure SQL 데이터베이스 쿼리](https://docs.microsoft.com/azure/sql-database/sql-database-connect-query-php)를 참조하세요.
+- 기타 Azure SQL Database 아티클에서 기타 언어 사용에 대한 설명(목차에서 이전 항목과 가까이 있음). 예를 들어 [PHP를 사용하여 Azure SQL 데이터베이스 쿼리](/azure/sql-database/sql-database-connect-query-php)를 참조하세요.
 
 
 #### <a name="build-an-app-webpages"></a>앱 빌드 웹 페이지
@@ -77,7 +77,7 @@ Azure SQL Database에 연결하기 위한 연결 문자열에 대한 자세한 �
 
 다음 문서에서는 프로그래밍 언어에서 사용할 수 있도록 다양한 SQL 연결 드라이버를 다운로드하고 설치하는 방법을 설명합니다.
 
-- [SQL Server 드라이버](sql-server-drivers.md)
+- [SQL Server 드라이버](./sql-connection-libraries.md)
 
 
 
@@ -93,7 +93,7 @@ C# 및 Visual Basic 같은 .NET 관리 언어는 가장 일반적인 ADO.NET 사
 | :-- | :-- |
 | [ADO.NET을 사용하여 SQL에 연결하는 개념 증명](./ado-net/step-3-connect-sql-ado-net.md) | SQL Server에 연결하고 쿼리하는 데 초점을 맞춘 소형 코드 예제입니다. |
 | [ADO.NET을 사용하여 탄력적으로 SQL에 연결](./ado-net/step-4-connect-resiliently-sql-ado-net.md) | 재시도 논리 코드 예제입니다(연결에서 간헐적으로 연결 손실이 발생할 수 있기 때문).<br /><br />재시도 논리는 인터넷을 통해 유지되는 클라우드 데이터베이스(예: Azure SQL Database) 쪽 연결에 잘 적용됩니다. |
-| [Azure SQL Database: Windows/Linux/macOS에서 .NET Core를 사용하여 C# 프로그램을 만들고 연결하고 쿼리하는 방법에 대한 데모](https://docs.microsoft.com/azure/sql-database/sql-database-connect-query-dotnet-core) | Azure SQL Database 예제입니다. |
+| [Azure SQL Database: Windows/Linux/macOS에서 .NET Core를 사용하여 C# 프로그램을 만들고 연결하고 쿼리하는 방법에 대한 데모](/azure/sql-database/sql-database-connect-query-dotnet-core) | Azure SQL Database 예제입니다. |
 | [앱 빌드: C#, ADO.NET, Windows](https://www.microsoft.com/sql-server/developer-get-started/csharp/win/) | 구성 정보입니다. 코드 예제도 제공됩니다. |
 | &nbsp; | <br /> |
 
@@ -101,9 +101,9 @@ C# 및 Visual Basic 같은 .NET 관리 언어는 가장 일반적인 ADO.NET 사
 
 | 영역 | 설명 |
 | :-- | :-- |
-| [ADO.NET 사용 C# ](./ado-net/index.md)| 설명서의 루트입니다. |
-| [네임스페이스: System.Data](https://docs.microsoft.com/dotnet/api/system.data) | ADO.NET에 사용되는 클래스 집합입니다. |
-| [네임스페이스: Microsoft.Data.SqlClient](https://docs.microsoft.com/dotnet/api/microsoft.data.SqlClient) | Microsoft .NET Data Provider for SQL Server에 사용되는 클래스 집합 |
+| [ADO.NET 사용 C# ](./ado-net/microsoft-ado-net-sql-server.md)| 설명서의 루트입니다. |
+| [네임스페이스: System.Data](/dotnet/api/system.data) | ADO.NET에 사용되는 클래스 집합입니다. |
+| [네임스페이스: Microsoft.Data.SqlClient](/dotnet/api/microsoft.data.SqlClient) | Microsoft .NET Data Provider for SQL Server에 사용되는 클래스 집합 |
 | &nbsp; | <br /> |
 
 
@@ -117,14 +117,14 @@ EF(Entity Framework)는 ORM(개체 관계 매핑)을 제공합니다. ORM을 사
 EF는 다음 기술과 직접 또는 간접적인 관계가 있습니다.
 
 - .NET Framework
-- [LINQ to SQL](https://docs.microsoft.com/dotnet/framework/data/adonet/sql/linq/) 또는 [LINQ to Entities](https://docs.microsoft.com/dotnet/framework/data/adonet/ef/language-reference/linq-to-entities)
+- [LINQ to SQL](/dotnet/framework/data/adonet/sql/linq/) 또는 [LINQ to Entities](/dotnet/framework/data/adonet/ef/language-reference/linq-to-entities)
 - C#의 **=>** 연산자와 같은 언어 구문 향상 기능입니다.
-- SQL 데이터베이스의 테이블에 매핑되는 클래스에 대한 소스 코드를 생성하는 편리한 프로그램입니다. 예: [EdmGen.exe](https://docs.microsoft.com/dotnet/framework/data/adonet/ef/edm-generator-edmgen-exe).
+- SQL 데이터베이스의 테이블에 매핑되는 클래스에 대한 소스 코드를 생성하는 편리한 프로그램입니다. 예: [EdmGen.exe](/dotnet/framework/data/adonet/ef/edm-generator-edmgen-exe).
 
 
 #### <a name="original-ef-and-new-ef"></a>최초 EF, 새로운 EF
 
-[Entity Framework 시작 페이지](https://docs.microsoft.com/ef/)는 다음과 같은 설명으로 EF를 소개합니다.
+[Entity Framework 시작 페이지](/ef/)는 다음과 같은 설명으로 EF를 소개합니다.
 
 - Entity Framework는 .NET 개발자가 .NET 개체를 사용하여 데이터베이스 작업을 수행할 수 있도록 하는 O/RM(개체 관계 매퍼)입니다. 여기서는 개발자가 일반적으로 작성해야 하는 대부분의 데이터 액세스 소스 코드가 필요하지 않습니다.
 
@@ -132,8 +132,8 @@ EF는 다음 기술과 직접 또는 간접적인 관계가 있습니다.
 
 | 버전 | Description |
 | :-- | :-- |
-| [EF 6.x](https://docs.microsoft.com/ef/ef6/) | Microsoft는 2008년 8월 EF를 최초로 발표했습니다. 2015년 3월에는 Microsoft가 개발한 최종 버전인 EF 6.x가 발표되었습니다. Microsoft는 퍼블릭 도메인에 소스 코드를 릴리스했습니다.<br /><br />초기에는 EF가 .NET Framework의 일부였습니다. 그러나 EF 6.x는 .NET Framework에서 제거되었습니다.<br /><br />[GitHub의 EF 6.x에서 소스 코드, 리포지토리: *aspnet/EntityFramework6*](https://github.com/aspnet/EntityFramework6) |
-| [EF Core](https://docs.microsoft.com/ef/core/) | Microsoft는 2016년 6월에 새로 개발된 EF Core를 출시했습니다. EF Core는 향상된 유연성 및 이식성을 제공하도록 설계되었습니다. EF Core는 Microsoft Windows 이외의 운영 체제에서도 실행할 수 있습니다. 또한 EF Core는 Microsoft SQL Server 및 기타 관계형 데이터베이스 이외의 데이터베이스와도 상호 작용할 수 있습니다.<br /><br />**C&#x23; 코드 예제:**<br />[Entity Framework Core 시작하기](https://docs.microsoft.com/ef/core/get-started/index)<br />[기존 데이터베이스를 사용하여 .NET Framework의 EF Core 시작하기](https://docs.microsoft.com/ef/core/get-started/full-dotnet/existing-db) |
+| [EF 6.x](/ef/ef6/) | Microsoft는 2008년 8월 EF를 최초로 발표했습니다. 2015년 3월에는 Microsoft가 개발한 최종 버전인 EF 6.x가 발표되었습니다. Microsoft는 퍼블릭 도메인에 소스 코드를 릴리스했습니다.<br /><br />초기에는 EF가 .NET Framework의 일부였습니다. 그러나 EF 6.x는 .NET Framework에서 제거되었습니다.<br /><br />[GitHub의 EF 6.x에서 소스 코드, 리포지토리: *aspnet/EntityFramework6*](https://github.com/aspnet/EntityFramework6) |
+| [EF Core](/ef/core/) | Microsoft는 2016년 6월에 새로 개발된 EF Core를 출시했습니다. EF Core는 향상된 유연성 및 이식성을 제공하도록 설계되었습니다. EF Core는 Microsoft Windows 이외의 운영 체제에서도 실행할 수 있습니다. 또한 EF Core는 Microsoft SQL Server 및 기타 관계형 데이터베이스 이외의 데이터베이스와도 상호 작용할 수 있습니다.<br /><br />**C&#x23; 코드 예제:**<br />[Entity Framework Core 시작하기](/ef/core/get-started/index)<br />[기존 데이터베이스를 사용하여 .NET Framework의 EF Core 시작하기](/ef/core/get-started/full-dotnet/existing-db) |
 | &nbsp; | <br /> |
 
 EF 및 관련 기술은 강력하며 개발자가 전체 영역을 마스터하려면 학습할 내용이 많습니다.
@@ -152,10 +152,10 @@ Microsoft는 SQL Server(또는 Azure SQL Database)와 함께 사용할 JDBC(Java
 
 | 예제 | Description |
 | :-- | :-- |
-| [코드 예제](./jdbc/code-samples/index.md) | 데이터 형식, 결과 집합 및 대량 데이터에 대해 학습하는 코드 예제입니다. |
+| [코드 예제](./jdbc/sample-jdbc-driver-applications.md) | 데이터 형식, 결과 집합 및 대량 데이터에 대해 학습하는 코드 예제입니다. |
 | [연결 URL 샘플](./jdbc/connection-url-sample.md) | 연결 URL을 사용하여 SQL Server에 연결하는 방법을 설명합니다. 그런 다음 이를 통해 SQL 문을 사용하여 데이터를 검색합니다. |
 | [데이터 원본 샘플](./jdbc/data-source-sample.md) | 데이터 원본을 사용하여 SQL Server에 연결하는 방법을 설명합니다. 그런 다음 저장 프로시저를 사용하여 데이터를 검색합니다. |
-| [Java를 사용하여 Azure SQL Database 쿼리](https://docs.microsoft.com/azure/sql-database/sql-database-connect-query-java) | Azure SQL Database 예제입니다. |
+| [Java를 사용하여 Azure SQL Database 쿼리](/azure/sql-database/sql-database-connect-query-java) | Azure SQL Database 예제입니다. |
 | [Ubuntu에서 SQL Server를 사용하여 Java 앱 만들기](https://www.microsoft.com/sql-server/developer-get-started/java/ubuntu/) | 구성 정보입니다. 코드 예제도 제공됩니다. |
 | &nbsp; | <br /> |
 
@@ -165,8 +165,8 @@ JDBC 설명서에는 다음과 같은 주요 영역이 포함되어 있습니다
 
 | 영역 | 설명 |
 | :-- | :-- |
-| [Java Database Connectivity(JDBC)](./jdbc/index.md) | JDBC 설명서의 루트입니다. |
-| [참조](./jdbc/reference/index.md) | 인터페이스, 클래스 및 멤버입니다. |
+| [Java Database Connectivity(JDBC)](./jdbc/microsoft-jdbc-driver-for-sql-server.md) | JDBC 설명서의 루트입니다. |
+| [참조](./jdbc/reference/jdbc-driver-api-reference.md) | 인터페이스, 클래스 및 멤버입니다. |
 | [JDBC SQL 드라이버 프로그래밍 가이드](./jdbc/programming-guide-for-jdbc-sql-driver.md) | 구성 정보입니다. 코드 예제도 제공됩니다. |
 | &nbsp; | <br /> |
 
@@ -176,7 +176,7 @@ JDBC 설명서에는 다음과 같은 주요 영역이 포함되어 있습니다
 
 ## <a name="nodejs-logoimage-ref-340-node-nodejs"></a>![Node.js 로고][image-ref-340-node] Node.js
 
-Node.js를 사용하여 Windows, Linux 또는 macOS에서 SQL Server에 연결할 수 있습니다. Node.js 설명서의 루트는 [여기](./node-js/index.md)입니다.
+Node.js를 사용하여 Windows, Linux 또는 macOS에서 SQL Server에 연결할 수 있습니다. Node.js 설명서의 루트는 [여기](./node-js/node-js-driver-for-sql-server.md)입니다.
 
 SQL Server용 Node.js 연결 드라이버는 JavaScript에서 구현됩니다. 이 드라이버는 모든 최신 버전의 SQL Server에서 지원되는 TDS 프로토콜을 사용합니다. 드라이버는 오픈 소스 프로젝트이며 [GitHub에서 제공](https://tediousjs.github.io/tedious/)됩니다.
 
@@ -185,7 +185,7 @@ SQL Server용 Node.js 연결 드라이버는 JavaScript에서 구현됩니다. �
 | 예제 | Description |
 | :-- | :-- |
 | [Node.js를 사용하여 SQL에 연결하는 개념 증명](./node-js/step-3-proof-of-concept-connecting-to-sql-using-node-js.md) | SQL Server에 연결하고 쿼리를 실행하기 위한 기본 기능 소스 코드입니다. |
-| [Azure SQL Database: Node.js를 사용하여 쿼리](https://docs.microsoft.com/azure/sql-database/sql-database-connect-query-nodejs) | 클라우드 기반 Azure SQL Database의 예제입니다. |
+| [Azure SQL Database: Node.js를 사용하여 쿼리](/azure/sql-database/sql-database-connect-query-nodejs) | 클라우드 기반 Azure SQL Database의 예제입니다. |
 | [macOS에서 SQL Server를 사용하는 Node.js 앱 만들기](https://www.microsoft.com/sql-server/developer-get-started/node/mac/) | 구성 정보입니다. 코드 예제도 제공됩니다. |
 | &nbsp; | <br /> |
 
@@ -214,17 +214,17 @@ ODBC(Open Database Connectivity)는 .NET Framework보다 앞서 1990년에 개�
 
 | 영역 | 하위 영역 | Description |
 | :--- | :------ | :---------- |
-| [C++용 ODBC](./odbc/index.md) | 설명서의 루트입니다. |
-| [Linux-macOS](./odbc/linux-mac/index.md) | &nbsp; | Linux 또는 macOS 운영 체제에서 ODBC를 사용하는 방법입니다. |
-| [Windows](./odbc/windows/index.md)     | &nbsp; | Windows 운영 체제에서 ODBC를 사용하는 방법입니다. |
-| [관리](../odbc/admin/index.md) | &nbsp; | ODBC 데이터 원본을 관리하기 위한 관리 도구에 대한 설명입니다. |
-| [Microsoft](../odbc/microsoft/index.md)  | &nbsp; | Microsoft에서 만들고 제공하는 다양한 ODBC 드라이버에 대한 설명입니다. |
-| [개념 및 참조](../odbc/reference/index.md) | &nbsp; | 기존 참조 이외에 ODBC 인터페이스에 대한 개념 정보입니다. |
-| &nbsp; " | [부록](../odbc/reference/appendixes/index.md)    | 상태 전환 테이블, ODBC 커서 라이브러리 등에 대한 설명입니다. |
-| &nbsp; " | [앱 개발](../odbc/reference/develop-app/index.md)  | 함수, 핸들 등에 대한 설명입니다. |
-| &nbsp; " | [드라이버 개발](../odbc/reference/develop-driver/index.md) | 특수 데이터 원본이 있는 경우 자체 ODBC 드라이버를 개발하는 방법입니다. |
-| &nbsp; " | [설치](../odbc/reference/install/index.md) | ODBC 설치, 하위 키 등에 대한 설명입니다. |
-| &nbsp; " | [구문](../odbc/reference/syntax/index.md)   | 설치, 설치 프로그램, 변환 및 데이터 액세스용 API에 대한 설명입니다. |
+| [C++용 ODBC](./odbc/microsoft-odbc-driver-for-sql-server.md) | 설명서의 루트입니다. |
+| [Linux-macOS](./odbc/linux-mac/system-requirements.md) | &nbsp; | Linux 또는 macOS 운영 체제에서 ODBC를 사용하는 방법입니다. |
+| [Windows](./odbc/windows/microsoft-odbc-driver-for-sql-server-on-windows.md)     | &nbsp; | Windows 운영 체제에서 ODBC를 사용하는 방법입니다. |
+| [관리](../odbc/admin/odbc-data-source-administrator.md) | &nbsp; | ODBC 데이터 원본을 관리하기 위한 관리 도구에 대한 설명입니다. |
+| [Microsoft](../odbc/microsoft/microsoft-supplied-odbc-drivers.md)  | &nbsp; | Microsoft에서 만들고 제공하는 다양한 ODBC 드라이버에 대한 설명입니다. |
+| [개념 및 참조](../odbc/reference/introduction-to-odbc.md) | &nbsp; | 기존 참조 이외에 ODBC 인터페이스에 대한 개념 정보입니다. |
+| &nbsp; " | [부록](../odbc/reference/appendixes/odbc-appendixes.md)    | 상태 전환 테이블, ODBC 커서 라이브러리 등에 대한 설명입니다. |
+| &nbsp; " | [앱 개발](../odbc/reference/develop-app/checking-feature-support-and-variability.md)  | 함수, 핸들 등에 대한 설명입니다. |
+| &nbsp; " | [드라이버 개발](../odbc/reference/develop-driver/developing-an-odbc-driver.md) | 특수 데이터 원본이 있는 경우 자체 ODBC 드라이버를 개발하는 방법입니다. |
+| &nbsp; " | [설치](../odbc/reference/install/odbc-subkey.md) | ODBC 설치, 하위 키 등에 대한 설명입니다. |
+| &nbsp; " | [구문](../odbc/reference/syntax/odbc-reference.md)   | 설치, 설치 프로그램, 변환 및 데이터 액세스용 API에 대한 설명입니다. |
 | &nbsp; | &nbsp; | <br /> |
 
 
@@ -233,7 +233,7 @@ ODBC(Open Database Connectivity)는 .NET Framework보다 앞서 1990년에 개�
 
 ## <a name="php-logoimage-ref-360-php-php"></a>![PHP 로고][image-ref-360-php] PHP
 
-PHP를 사용하여 SQL Server와 상호 작용할 수 있습니다. PHP 설명서의 루트는 [여기](./php/index.md)입니다.
+PHP를 사용하여 SQL Server와 상호 작용할 수 있습니다. PHP 설명서의 루트는 [여기](./php/microsoft-php-driver-for-sql-server.md)입니다.
 
 #### <a name="code-examples"></a>코드 예제
 
@@ -241,7 +241,7 @@ PHP를 사용하여 SQL Server와 상호 작용할 수 있습니다. PHP 설명�
 | :-- | :-- |
 | [PHP를 사용하여 SQL에 연결하는 개념 증명](./php/step-3-proof-of-concept-connecting-to-sql-using-php.md) | SQL Server에 연결하고 쿼리하는 데 초점을 맞춘 소형 코드 예제입니다. |
 | [PHP를 사용하여 탄력적으로 SQL에 연결](./php/step-4-connect-resiliently-to-sql-with-php.md) | 재시도 논리 코드 예제입니다(인터넷 및 클라우드를 통한 연결에서 간헐적으로 연결 손실이 발생할 수 있기 때문). |
-| [Azure SQL Database: PHP를 사용하여 쿼리](https://docs.microsoft.com/azure/sql-database/sql-database-connect-query-php) | Azure SQL Database 예제입니다. |
+| [Azure SQL Database: PHP를 사용하여 쿼리](/azure/sql-database/sql-database-connect-query-php) | Azure SQL Database 예제입니다. |
 | [RHEL에서 SQL Server를 사용하는 PHP 앱 만들기](https://www.microsoft.com/sql-server/developer-get-started/php/rhel/) | 구성 정보입니다. 코드 예제도 제공됩니다. |
 | &nbsp; | <br /> |
 
@@ -259,7 +259,7 @@ Python을 사용하여 SQL Server와 상호 작용할 수 있습니다.
 | 예제 | Description |
 | :-- | :-- |
 | [Python - pyodbc를 사용하여 SQL에 연결하는 개념 증명](./python/pyodbc/step-3-proof-of-concept-connecting-to-sql-using-pyodbc.md) | SQL Server에 연결하고 쿼리하는 데 초점을 맞춘 소형 코드 예제입니다. |
-| [Azure SQL Database: Python을 사용하여 쿼리](https://docs.microsoft.com/azure/sql-database/sql-database-connect-query-python) | Azure SQL Database 예제입니다. |
+| [Azure SQL Database: Python을 사용하여 쿼리](/azure/sql-database/sql-database-connect-query-python) | Azure SQL Database 예제입니다. |
 | [SLES에서 SQL Server를 사용하는 PHP 앱 만들기](https://www.microsoft.com/sql-server/developer-get-started/python/sles/) | 구성 정보입니다. 코드 예제도 제공됩니다. |
 | &nbsp; | <br /> |
 
@@ -267,9 +267,9 @@ Python을 사용하여 SQL Server와 상호 작용할 수 있습니다.
 
 | 영역 | Description |
 | :--- | :---------- |
-| [Python에서 SQL Server](./python/index.md) | 설명서의 루트입니다. |
-| [pymssql 드라이버](./python/pymssql/index.md) | Microsoft는 pymssql 드라이버를 유지 관리하거나 테스트하지 않습니다.<br /><br />pymssql 연결 드라이버는 Python 프로그램에서 사용할 수 있는 간단한 SQL 데이터베이스 인터페이스입니다. Pymssql은 FreeTDS를 기반으로 하여 Microsoft SQL Server에 대한 Python DB-API(PEP-249) 인터페이스를 제공합니다. |
-| [pyodbc 드라이버](./python/pyodbc/index.md)   | pyodbc 연결 드라이버는 ODBC 데이터베이스에 간편하게 액세스할 수 있는 오픈 소스 Python 모듈입니다. DB API 2.0 사양을 구현하지만 Python적 편의를 위해 압축됩니다. |
+| [Python에서 SQL Server](./python/python-driver-for-sql-server.md) | 설명서의 루트입니다. |
+| [pymssql 드라이버](./python/pymssql/python-sql-driver-pymssql.md) | Microsoft는 pymssql 드라이버를 유지 관리하거나 테스트하지 않습니다.<br /><br />pymssql 연결 드라이버는 Python 프로그램에서 사용할 수 있는 간단한 SQL 데이터베이스 인터페이스입니다. Pymssql은 FreeTDS를 기반으로 하여 Microsoft SQL Server에 대한 Python DB-API(PEP-249) 인터페이스를 제공합니다. |
+| [pyodbc 드라이버](./python/pyodbc/python-sql-driver-pyodbc.md)   | pyodbc 연결 드라이버는 ODBC 데이터베이스에 간편하게 액세스할 수 있는 오픈 소스 Python 모듈입니다. DB API 2.0 사양을 구현하지만 Python적 편의를 위해 압축됩니다. |
 | &nbsp; | <br /> |
 
 
@@ -277,14 +277,14 @@ Python을 사용하여 SQL Server와 상호 작용할 수 있습니다.
 
 ## <a name="ruby-logoimage-ref-380-ruby-ruby"></a>![Ruby 로고][image-ref-380-ruby] Ruby
 
-Ruby를 사용하여 SQL Server와 상호 작용할 수 있습니다. Ruby 설명서의 루트는 [여기](./ruby/index.md)입니다.
+Ruby를 사용하여 SQL Server와 상호 작용할 수 있습니다. Ruby 설명서의 루트는 [여기](./ruby/ruby-driver-for-sql-server.md)입니다.
 
 #### <a name="code-examples"></a>코드 예제
 
 | 예제 | Description |
 | :-- | :-- |
 | [Ruby를 사용하여 SQL에 연결하는 개념 증명](./ruby/step-3-proof-of-concept-connecting-to-sql-using-ruby.md) | SQL Server에 연결하고 쿼리하는 데 초점을 맞춘 소형 코드 예제입니다. |
-| [Azure SQL Database: Ruby를 사용하여 쿼리](https://docs.microsoft.com/azure/sql-database/sql-database-connect-query-ruby) | Azure SQL Database 예제입니다. |
+| [Azure SQL Database: Ruby를 사용하여 쿼리](/azure/sql-database/sql-database-connect-query-ruby) | Azure SQL Database 예제입니다. |
 | [macOS에서 SQL Server를 사용하는 Ruby 앱 만들기](https://www.microsoft.com/sql-server/developer-get-started/ruby/mac/) | 구성 정보입니다. 코드 예제도 제공됩니다. |
 | &nbsp; | <br /> |
 
@@ -360,12 +360,12 @@ Ruby를 사용하여 SQL Server와 상호 작용할 수 있습니다. Ruby 설�
 
 #### <a name="developer-hub-for-azure"></a>Azure 개발자 허브
 
-- [Azure 개발자 허브](https://docs.microsoft.com/azure/)
-- [.NET 개발자용 Azure](https://docs.microsoft.com/dotnet/azure/)
-- [Java 개발자용 Azure](https://docs.microsoft.com/java/azure/)
-- [Node.js 개발자용 Azure](https://docs.microsoft.com/nodejs/azure/)
-- [Python 개발자용 Azure](https://docs.microsoft.com/python/azure/)
-- [Azure에서 PHP 웹앱 만들기](https://docs.microsoft.com/azure/app-service-web/app-service-web-get-started-php)
+- [Azure 개발자 허브](/azure/)
+- [.NET 개발자용 Azure](/dotnet/azure/)
+- [Java 개발자용 Azure](/java/azure/)
+- [Node.js 개발자용 Azure](/nodejs/azure/)
+- [Python 개발자용 Azure](/python/azure/)
+- [Azure에서 PHP 웹앱 만들기](/azure/app-service-web/app-service-web-get-started-php)
 
 #### <a name="other-languages"></a>기타 언어
 
@@ -386,4 +386,3 @@ Ruby를 사용하여 SQL Server와 상호 작용할 수 있습니다. Ruby 설�
 [image-ref-380-ruby]: ./media/homepage-sql-connection-drivers/gm-ruby-un-r82.png
 [image-ref-390-aka-ms-sqldev-choose-language]: ./media/homepage-sql-connection-drivers/gm-aka-ms-sqldev-choose-language-g21.png
 [image-ref-400-aka-ms-sqldev-java-ubuntu]: ./media/homepage-sql-connection-drivers/gm-aka-ms-sqldev-java-ubuntu-c31.png
-

@@ -11,12 +11,12 @@ ms.topic: conceptual
 ms.assetid: a79e9468-2257-4536-91f1-73b008c376c3
 author: David-Engel
 ms.author: v-daenge
-ms.openlocfilehash: 98d2ffca0ca9f8bab6f481ddf654bd388ecba4d7
-ms.sourcegitcommit: 37a3e2c022c578fc3a54ebee66d9957ff7476922
+ms.openlocfilehash: 6d9b75ea8c722ca753e831811226b8128df15266
+ms.sourcegitcommit: c7f40918dc3ecdb0ed2ef5c237a3996cb4cd268d
 ms.translationtype: HT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 05/07/2020
-ms.locfileid: "82922248"
+ms.lasthandoff: 10/05/2020
+ms.locfileid: "91725509"
 ---
 # <a name="accessing-diagnostic-information-in-the-extended-events-log"></a>확장 이벤트 로그의 진단 정보 액세스
 [!INCLUDE[Driver_JDBC_Download](../../includes/driver_jdbc_download.md)]
@@ -28,7 +28,7 @@ ms.locfileid: "82922248"
   
  [ISQLServerConnection 인터페이스](../../connect/jdbc/reference/isqlserverconnection-interface.md)를 사용하여 클라이언트 연결 ID를 프로그래밍 방식으로 가져올 수 있습니다. 연결 ID는 연결 관련 예외에서도 표시됩니다.  
   
- 연결 오류가 발생하는 경우 서버의 BID(기본 제공 진단) 추적 정보 및 연결 링 버퍼에 있는 클라이언트 연결 ID를 사용하여 클라이언트 연결과 서버 연결의 상관관계를 지정할 수 있습니다. 서버의 BID 추적에 대한 자세한 내용은 [데이터 액세스 추적](https://go.microsoft.com/fwlink/?LinkId=125805)을 참조하세요. 데이터 액세스 추적 문서에는 데이터 액세스 추적에 대한 정보도 포함되어 있습니다. 이 정보는 [!INCLUDE[jdbcNoVersion](../../includes/jdbcnoversion_md.md)]에 적용되지 않습니다. [!INCLUDE[jdbcNoVersion](../../includes/jdbcnoversion_md.md)]을(를) 사용하여 데이터 액세스 추적을 수행하는 방법에 대한 자세한 내용은 [드라이버 작업 추적](../../connect/jdbc/tracing-driver-operation.md)을 참조하세요.  
+ 연결 오류가 발생하는 경우 서버의 BID(기본 제공 진단) 추적 정보 및 연결 링 버퍼에 있는 클라이언트 연결 ID를 사용하여 클라이언트 연결과 서버 연결의 상관관계를 지정할 수 있습니다. 서버의 BID 추적에 대한 자세한 내용은 [데이터 액세스 추적](/previous-versions/sql/sql-server-2008/cc765421(v=sql.100))을 참조하세요. 데이터 액세스 추적 문서에는 데이터 액세스 추적에 대한 정보도 포함되어 있습니다. 이 정보는 [!INCLUDE[jdbcNoVersion](../../includes/jdbcnoversion_md.md)]에 적용되지 않습니다. [!INCLUDE[jdbcNoVersion](../../includes/jdbcnoversion_md.md)]을(를) 사용하여 데이터 액세스 추적을 수행하는 방법에 대한 자세한 내용은 [드라이버 작업 추적](../../connect/jdbc/tracing-driver-operation.md)을 참조하세요.  
   
  JDBC 드라이버는 또한 스레드별 작업 ID를 전송합니다. TRACK_CAUSAILITY 옵션이 활성화된 상태에서 세션을 시작한 경우 작업 ID는 확장 이벤트 세션에서 캡처됩니다. 활성 연결의 성능 문제를 위해 클라이언트의 추적(ActivityID 필드)에서 작업 ID를 가져온 다음 확장 이벤트 출력에 작업 ID를 배치할 수 있습니다. 확장 이벤트의 작업 ID는 16바이트 GUID(클라이언트 연결 ID의 GUID와 같지 않음)에 4바이트 시퀀스 번호가 추가된 형식입니다. 시퀀스 번호는 스레드 내 요청의 순서를 나타냅니다. ActivityId는 SQL 배치 문과 RPC 요청을 위해 전송됩니다. ActivityId가 서버로 전송되도록 하려면 먼저 Logging.Properties 파일에 다음 키-값 쌍을 지정해야 합니다.  
   
@@ -54,4 +54,4 @@ add target ring_buffer with (track_causality=on)
   
 ## <a name="see-also"></a>참고 항목
 
-[JDBC 드라이버 관련 문제 진단](../../connect/jdbc/diagnosing-problems-with-the-jdbc-driver.md)  
+[JDBC 드라이버 관련 문제 진단](../../connect/jdbc/diagnosing-problems-with-the-jdbc-driver.md)

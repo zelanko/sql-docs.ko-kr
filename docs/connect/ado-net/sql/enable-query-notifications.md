@@ -12,12 +12,12 @@ ms.topic: conceptual
 author: David-Engel
 ms.author: v-daenge
 ms.reviewer: v-kaywon
-ms.openlocfilehash: 2648f8efbae6cc6665ea3ab984b27012a2a1ebc7
-ms.sourcegitcommit: fe5c45a492e19a320a1a36b037704bf132dffd51
+ms.openlocfilehash: 1fae73102dbbb29b6772213c4d021c273271458a
+ms.sourcegitcommit: c7f40918dc3ecdb0ed2ef5c237a3996cb4cd268d
 ms.translationtype: HT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 04/08/2020
-ms.locfileid: "80920424"
+ms.lasthandoff: 10/05/2020
+ms.locfileid: "91725643"
 ---
 # <a name="enabling-query-notifications"></a>쿼리 알림 사용
 
@@ -40,23 +40,23 @@ ms.locfileid: "80920424"
   
 **SQL Server 설명서**  
   
-- [알림에 대한 쿼리 만들기](https://docs.microsoft.com/previous-versions/sql/sql-server-2008-r2/ms181122(v=sql.105))  
+- [알림에 대한 쿼리 만들기](/previous-versions/sql/sql-server-2008-r2/ms181122(v=sql.105))  
   
-- [Service Broker에 대한 보안 고려 사항](https://docs.microsoft.com/previous-versions/sql/sql-server-2005/ms166059(v=sql.90))  
+- [Service Broker에 대한 보안 고려 사항](/previous-versions/sql/sql-server-2005/ms166059(v=sql.90))  
   
-- [보안 및 보호(Service Broker)](https://docs.microsoft.com/previous-versions/sql/sql-server-2008-r2/bb522911(v=sql.105))  
+- [보안 및 보호(Service Broker)](/previous-versions/sql/sql-server-2008-r2/bb522911(v=sql.105))  
   
-- [Notifications Services에 대한 보안 고려 사항](https://docs.microsoft.com/previous-versions/sql/sql-server-2005/ms172604(v=sql.90))  
+- [Notifications Services에 대한 보안 고려 사항](/previous-versions/sql/sql-server-2005/ms172604(v=sql.90))  
   
-- [쿼리 알림 사용 권한](https://docs.microsoft.com/previous-versions/sql/sql-server-2008-r2/ms188311(v=sql.105))  
+- [쿼리 알림 사용 권한](/previous-versions/sql/sql-server-2008-r2/ms188311(v=sql.105))  
   
-- [Service Broker에 대한 국가별 고려 사항](https://docs.microsoft.com/previous-versions/sql/sql-server-2005/ms166028(v=sql.90))  
+- [Service Broker에 대한 국가별 고려 사항](/previous-versions/sql/sql-server-2005/ms166028(v=sql.90))  
   
-- [솔루션 디자인 고려 사항(Service Broker)](https://docs.microsoft.com/previous-versions/sql/sql-server-2008-r2/bb522899(v=sql.105))  
+- [솔루션 디자인 고려 사항(Service Broker)](/previous-versions/sql/sql-server-2008-r2/bb522899(v=sql.105))  
   
-- [Service Broker 개발자 정보 센터](https://docs.microsoft.com/previous-versions/sql/sql-server-2008-r2/ms166100(v=sql.105))  
+- [Service Broker 개발자 정보 센터](/previous-versions/sql/sql-server-2008-r2/ms166100(v=sql.105))  
   
-- [개발자 가이드(Service Broker)](https://docs.microsoft.com/previous-versions/sql/sql-server-2008-r2/bb522908(v=sql.105))  
+- [개발자 가이드(Service Broker)](/previous-versions/sql/sql-server-2008-r2/bb522908(v=sql.105))  
   
 ## <a name="enabling-query-notifications-to-run-sample-code"></a>쿼리 알림을 사용하여 샘플 코드 실행  
 SQL Server Management Studio를 사용하여 **AdventureWorks** 데이터베이스에 대해 Service Broker를 활성화하려면 다음 Transact-SQL 문을 실행합니다.  

@@ -10,12 +10,12 @@ ms.date: 03/30/2020
 ms.topic: conceptual
 ms.prod: sql
 ms.technology: big-data-cluster
-ms.openlocfilehash: 372520b7bc4d5c80f67e6206194d8e02e2562e7b
-ms.sourcegitcommit: 7345e4f05d6c06e1bcd73747a4a47873b3f3251f
+ms.openlocfilehash: e54c9b01a58ba6eeeeda2fb74ca422d9d90ae45c
+ms.sourcegitcommit: c7f40918dc3ecdb0ed2ef5c237a3996cb4cd268d
 ms.translationtype: HT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 08/24/2020
-ms.locfileid: "88778532"
+ms.lasthandoff: 10/05/2020
+ms.locfileid: "91725790"
 ---
 # <a name="manage-sql-server-big-data-clusters-with-azure-data-studio-notebooks"></a>Azure Data Studio Notebooks를 사용하여 SQL Server 빅 데이터 클러스터 관리
 
@@ -23,7 +23,7 @@ ms.locfileid: "88778532"
 
 [!INCLUDE[sql-server-2019](../includes/sssqlv15-md.md)]에서는 Notebook을 포함하는 Azure Data Studio에 대한 확장을 제공합니다. Notebook은 Azure Data Studio에서 SQL Server 2019 빅 데이터 클러스터를 관리하는 데 사용할 수 있는 설명서와 코드를 제공합니다.
 
-원래 오픈 소스 프로젝트로 구현된 [Notebooks](../azure-data-studio/notebooks-guidance.md)는 [Azure Data Studio](../azure-data-studio/download-azure-data-studio.md?view=sql-server-ver15)에 통합되었습니다. 사용 가능한 커널 중 하나와 텍스트 셀에 있는 텍스트의 Markdown을 사용하여 코드 셀에 코드를 작성할 수 있습니다.
+원래 오픈 소스 프로젝트로 구현된 [Notebooks](../azure-data-studio/notebooks/notebooks-guidance.md)는 [Azure Data Studio](../azure-data-studio/download-azure-data-studio.md?view=sql-server-ver15)에 통합되었습니다. 사용 가능한 커널 중 하나와 텍스트 셀에 있는 텍스트의 Markdown을 사용하여 코드 셀에 코드를 작성할 수 있습니다.
 
 Notebook을 사용하여 [!INCLUDE[sql-server-2019](../includes/sssqlv15-md.md)]의 빅 데이터 클러스터를 배포할 수 있습니다.
 
@@ -33,12 +33,12 @@ Notebooks 외에도 Jupyter Book이라는 Notebook 컬렉션을 볼 수 있습�
 
 Notebook을 열려면 다음과 같은 필수 구성 요소가 필요합니다.
 
-* [Azure Data Studio Insiders 빌드](https://aka.ms/azuredatastudio-rc)의 최신 버전
+* [Azure Data Studio Insiders 빌드](./deploy-big-data-tools.md?viewFallbackFrom=sqlallproducts)의 최신 버전
 * Azure Data Studio에 설치된 [!INCLUDE[sql-server-2019](../includes/sssqlv15-md.md)] 확장
 
 이러한 필수 구성 요소 외에도 SQL Server 2019 빅 데이터 클러스터를 배포하려면 다음이 필요합니다.
 
-* [azdata](deploy-install-azdata.md)
+* [azdata](../azdata/install/deploy-install-azdata.md)
 * [kubectl](https://kubernetes.io/docs/tasks/tools/install-kubectl/#install-kubectl-binary-using-native-package-management)
 * [Azure CLI](/cli/azure/install-azure-cli)
 
@@ -97,4 +97,4 @@ Notebook의 SQL Server 빅 데이터 클러스터를 변경하려면 다음을 �
 
 ## <a name="next-steps"></a>다음 단계
 
-Azure Data Studio의 Notebook에 대한 자세한 내용은 [SQL Server에서 Notebook을 사용하는 방법](../azure-data-studio/notebooks-guidance.md)을 참조하세요.
+Azure Data Studio의 Notebook에 대한 자세한 내용은 [SQL Server에서 Notebook을 사용하는 방법](../azure-data-studio/notebooks/notebooks-guidance.md)을 참조하세요.

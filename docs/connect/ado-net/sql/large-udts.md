@@ -9,15 +9,15 @@ ms.prod: sql
 ms.prod_service: connectivity
 ms.technology: connectivity
 ms.topic: conceptual
-author: rothja
-ms.author: jroth
+author: David-Engel
+ms.author: v-daenge
 ms.reviewer: v-kaywon
-ms.openlocfilehash: e572b8fcf1550562c7a9f1841eec1c311f18c3f8
-ms.sourcegitcommit: ff82f3260ff79ed860a7a58f54ff7f0594851e6b
+ms.openlocfilehash: cbeac11486783b8eb2f0de59bd34e72234c8ea68
+ms.sourcegitcommit: c7f40918dc3ecdb0ed2ef5c237a3996cb4cd268d
 ms.translationtype: HT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 03/29/2020
-ms.locfileid: "78896701"
+ms.lasthandoff: 10/05/2020
+ms.locfileid: "91725615"
 ---
 # <a name="large-udts"></a>큰 UDT
 
@@ -27,13 +27,13 @@ UDT(사용자 정의 형식)는 개발자가 CLR(공용 언어 런타임) 개체
   
 이전에는 UDT의 최대 크기가 8KB로 제한되었습니다. SQL Server 2008에서 <xref:Microsoft.Data.SqlClient.Server.Format.UserDefined> 형식인 UDT에서는 이 제한이 제거되었습니다.  
   
-사용자 정의 형식에 대한 전체 설명은 SQL Server 온라인 설명서에서 [CLR 사용자 정의 형식](https://go.microsoft.com/fwlink/?LinkId=98366)을 참조하세요.
+사용자 정의 형식에 대한 전체 설명은 SQL Server 온라인 설명서에서 [CLR 사용자 정의 형식](/previous-versions/sql/sql-server-2008/ms131120(v=sql.100))을 참조하세요.
   
 ## <a name="retrieving-udt-schemas-using-getschema"></a>GetSchema를 사용하여 UDT 스키마 검색  
-<xref:Microsoft.Data.SqlClient.SqlConnection>의 <xref:Microsoft.Data.SqlClient.SqlConnection.GetSchema%2A> 메서드는 <xref:System.Data.DataTable>에서 데이터베이스 스키마 정보를 반환합니다.
+<xref:Microsoft.Data.SqlClient.SqlConnection.GetSchema%2A>의 <xref:Microsoft.Data.SqlClient.SqlConnection> 메서드는 <xref:System.Data.DataTable>에서 데이터베이스 스키마 정보를 반환합니다.
   
 ### <a name="getschematable-column-values-for-udts"></a>UDT에 대한 GetSchemaTable 열 값  
-<xref:Microsoft.Data.SqlClient.SqlDataReader>의 <xref:Microsoft.Data.SqlClient.SqlDataReader.GetSchemaTable%2A> 메서드는 열 메타데이터를 설명하는 <xref:System.Data.DataTable>을 반환합니다. 다음 표에서는 SQL Server 2005와 SQL Server 2008 사이에 큰 UDT에 대한 열 메타데이터의 차이점을 설명합니다.  
+<xref:Microsoft.Data.SqlClient.SqlDataReader.GetSchemaTable%2A>의 <xref:Microsoft.Data.SqlClient.SqlDataReader> 메서드는 열 메타데이터를 설명하는 <xref:System.Data.DataTable>을 반환합니다. 다음 표에서는 SQL Server 2005와 SQL Server 2008 사이에 큰 UDT에 대한 열 메타데이터의 차이점을 설명합니다.  
   
 |SqlDataReader 열|SQL Server 2005|SQL Server 2008 이상|  
 |--------------------------|---------------------|-------------------------------|  
@@ -50,7 +50,7 @@ UDT(사용자 정의 형식)는 개발자가 CLR(공용 언어 런타임) 개체
 ## <a name="sqldatareader-considerations"></a>SqlDataReader 고려 사항  
 <xref:Microsoft.Data.SqlClient.SqlDataReader>는 큰 UDT 값 검색을 지원하도록 SQL Server 2008부터 확장되었습니다. <xref:Microsoft.Data.SqlClient.SqlDataReader>에 의해 처리되는 큰 UDT 값은 사용하는 SQL Server 버전과 연결 문자열에 지정된 `Type System Version`에 따라 달라집니다. 자세한 내용은 <xref:Microsoft.Data.SqlClient.SqlConnection.ConnectionString%2A>을 참조하세요.  
   
-다음 <xref:Microsoft.Data.SqlClient.SqlDataReader> 메서드는 `Type System Version`이 SQL Server 2005로 설정된 경우 UDT 대신 <xref:System.Data.SqlTypes.SqlBinary>를 반환합니다.  
+다음 <xref:Microsoft.Data.SqlClient.SqlDataReader> 메서드는 <xref:System.Data.SqlTypes.SqlBinary>이 SQL Server 2005로 설정된 경우 UDT 대신 `Type System Version`를 반환합니다.  
   
 - <xref:Microsoft.Data.SqlClient.SqlDataReader.GetProviderSpecificFieldType%2A>  
   
@@ -62,7 +62,7 @@ UDT(사용자 정의 형식)는 개발자가 CLR(공용 언어 런타임) 개체
   
 - <xref:Microsoft.Data.SqlClient.SqlDataReader.GetSqlValues%2A>  
   
-다음 메서드는 `Type System Version`이 SQL Server 2005로 설정된 경우 UDT 대신 `Byte[]` 배열을 반환합니다.  
+다음 메서드는 `Byte[]`이 SQL Server 2005로 설정된 경우 UDT 대신 `Type System Version` 배열을 반환합니다.  
   
 - <xref:Microsoft.Data.SqlClient.SqlDataReader.GetValue%2A>  
   
@@ -110,4 +110,3 @@ reader.close
   
 ## <a name="next-steps"></a>다음 단계
 - [SQL Server 이진 및 큰 값 데이터](sql-server-binary-large-value-data.md)
- 

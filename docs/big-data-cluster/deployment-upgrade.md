@@ -9,12 +9,12 @@ ms.date: 09/02/2020
 ms.topic: conceptual
 ms.prod: sql
 ms.technology: big-data-cluster
-ms.openlocfilehash: 009853cd960a49ec559edd1d8a619e458102364d
-ms.sourcegitcommit: c5f0c59150c93575bb2bd6f1715b42716001126b
+ms.openlocfilehash: 6aa01e932003fb1ca650e4b7bf135ff8266b6457
+ms.sourcegitcommit: c7f40918dc3ecdb0ed2ef5c237a3996cb4cd268d
 ms.translationtype: HT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 09/02/2020
-ms.locfileid: "89392181"
+ms.lasthandoff: 10/05/2020
+ms.locfileid: "91725854"
 ---
 # <a name="how-to-upgrade-big-data-clusters-2019"></a>[!INCLUDE[big-data-clusters-2019](../includes/ssbigdataclusters-ss-nover.md)]를 업그레이드하는 방법
 
@@ -60,10 +60,10 @@ ms.locfileid: "89392181"
 1. `azdata`를 업데이트합니다.
 
    `azdata` 설치를 위한 지침을 따릅니다. 
-   - [Windows Installer](deploy-install-azdata-installer.md)
-   - [Apt를 사용하는 Linux](deploy-install-azdata-linux-package.md)
-   - [yum을 사용하는 Linux](deploy-install-azdata-yum.md)
-   - [zypper를 사용하는 Linux](deploy-install-azdata-zypper.md)
+   - [Windows Installer](../azdata/install/deploy-install-azdata-installer.md)
+   - [Apt를 사용하는 Linux](../azdata/install/deploy-install-azdata-linux-package.md)
+   - [yum을 사용하는 Linux](../azdata/install/deploy-install-azdata-yum.md)
+   - [zypper를 사용하는 Linux](../azdata/install/deploy-install-azdata-zypper.md)
 
    >[!NOTE]
    >`azdata`가 `pip`와 함께 설치된 경우 Windows 설치 프로그램 또는 Linux 패키지 관리자를 사용하여 설치하기 전에 수동으로 제거해야 합니다.

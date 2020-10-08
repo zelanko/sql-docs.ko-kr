@@ -9,12 +9,12 @@ ms.date: 06/22/2020
 ms.topic: conceptual
 ms.prod: sql
 ms.technology: big-data-cluster
-ms.openlocfilehash: fe4b026047ea98350283c1beedf87988d39df4bd
-ms.sourcegitcommit: 4b775a3ce453b757c7435cc2a4c9b35d0c5a8a9e
+ms.openlocfilehash: f74a46d13c907bd81e3afe4af7ba8db38a515e00
+ms.sourcegitcommit: c7f40918dc3ecdb0ed2ef5c237a3996cb4cd268d
 ms.translationtype: HT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 07/31/2020
-ms.locfileid: "87472339"
+ms.lasthandoff: 10/05/2020
+ms.locfileid: "91725783"
 ---
 # <a name="use-a-python-script-to-deploy-a-sql-server-big-data-cluster-on-azure-red-hat-openshift-aro"></a>python 스크립트를 사용하여 ARO(Azure Red Hat OpenShift)에 SQL Server 빅 데이터 클러스터 배포
 
@@ -37,7 +37,7 @@ ms.locfileid: "87472339"
 - [oc](https://docs.openshift.com/container-platform/4.4/cli_reference/openshift_cli/getting-started-cli.html)
 - [Python 최소 버전 3.0](https://www.python.org/downloads)
 - [`az` CLI](/cli/azure/install-azure-cli/)
-- [`azdata` CLI](deploy-install-azdata.md)
+- [`azdata` CLI](../azdata/install/deploy-install-azdata.md)
 - **Azure Data Studio**
 
 ## <a name="log-in-to-your-azure-account"></a>Azure 계정에 로그인

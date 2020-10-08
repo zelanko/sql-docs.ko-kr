@@ -10,12 +10,12 @@ ms.topic: conceptual
 author: David-Engel
 ms.author: v-daenge
 ms.reviewer: v-kaywon
-ms.openlocfilehash: d1c1911905c1ddf0af01a2592d0be49796cd3596
-ms.sourcegitcommit: cb620c77fe6bdefb975968837706750c31048d46
+ms.openlocfilehash: 86d0abbc216deeb583cf4a091e0c36b9cebc4ee1
+ms.sourcegitcommit: c7f40918dc3ecdb0ed2ef5c237a3996cb4cd268d
 ms.translationtype: HT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 07/15/2020
-ms.locfileid: "86393111"
+ms.lasthandoff: 10/05/2020
+ms.locfileid: "91725575"
 ---
 # <a name="sql-server-features-and-adonet"></a>SQL Server 기능 및 ADO.NET
 
@@ -23,7 +23,7 @@ ms.locfileid: "86393111"
 
 이 단원의 항목에서는 ADO.NET을 사용하여 데이터베이스 애플리케이션을 개발하는 데 사용할 수 있는 SQL Server 기능에 대해 설명합니다.  
   
-자세한 내용은 SQL Server 온라인 설명서에서 [개발(데이터베이스 엔진)](https://go.microsoft.com/fwlink/?LinkId=115245)을 참조하세요.
+자세한 내용은 SQL Server 온라인 설명서에서 [개발(데이터베이스 엔진)](/previous-versions/sql/sql-server-2008/bb500155(v=sql.100))을 참조하세요.
   
 ## <a name="in-this-section"></a>섹션 내용  
 [SQL Server의 인스턴스 열거(ADO.NET)](enumerate-instances-sql-server.md)  

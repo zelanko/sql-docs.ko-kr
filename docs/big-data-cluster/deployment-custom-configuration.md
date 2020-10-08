@@ -9,12 +9,12 @@ ms.date: 06/22/2020
 ms.topic: conceptual
 ms.prod: sql
 ms.technology: big-data-cluster
-ms.openlocfilehash: db42b544127041a0d06cce8ff5f94466198bfa9f
-ms.sourcegitcommit: c95f3ef5734dec753de09e07752a5d15884125e2
+ms.openlocfilehash: 48a2c99a029517ebbab24b017bbaeba906b1c6cb
+ms.sourcegitcommit: c7f40918dc3ecdb0ed2ef5c237a3996cb4cd268d
 ms.translationtype: HT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 08/25/2020
-ms.locfileid: "88860575"
+ms.lasthandoff: 10/05/2020
+ms.locfileid: "91725867"
 ---
 # <a name="configure-deployment-settings-for-cluster-resources-and-services"></a>클러스터 리소스 및 서비스에 대한 배포 설정 구성
 
@@ -171,7 +171,7 @@ ms.locfileid: "88860575"
 
 ## <a name="prerequisites"></a>사전 요구 사항
 
-- [azdata 설치](deploy-install-azdata.md).
+- [azdata 설치](../azdata/install/deploy-install-azdata.md).
 
 - 이 섹션의 각 예제에서는 표준 구성 중 하나의 복사본을 만들었다고 가정합니다. 자세한 내용은 [사용자 지정 구성 만들기](deployment-guidance.md#customconfig)를 참조하세요. 예를 들어 다음 명령은 기본 `aks-dev-test` 구성에 따라 두 개의 JSON 배포 구성 파일(`bdc.json` 및 `control.json`)을 포함하는 `custom-bdc`라는 디렉터리를 만듭니다.
 

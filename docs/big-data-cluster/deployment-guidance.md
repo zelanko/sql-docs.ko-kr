@@ -9,12 +9,12 @@ ms.date: 06/22/2020
 ms.topic: conceptual
 ms.prod: sql
 ms.technology: big-data-cluster
-ms.openlocfilehash: 10c3e83451efd0f7ac5868fd25d540191821b72c
-ms.sourcegitcommit: 7345e4f05d6c06e1bcd73747a4a47873b3f3251f
+ms.openlocfilehash: 0564d83508dafa650735981537599c7b0068da67
+ms.sourcegitcommit: c7f40918dc3ecdb0ed2ef5c237a3996cb4cd268d
 ms.translationtype: HT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 08/24/2020
-ms.locfileid: "88765772"
+ms.lasthandoff: 10/05/2020
+ms.locfileid: "91725874"
 ---
 # <a name="how-to-deploy-big-data-clusters-2019-on-kubernetes"></a>Kubernetes에 [!INCLUDE[big-data-clusters-2019](../includes/ssbigdataclusters-ss-nover.md)]를 배포하는 방법
 
@@ -80,7 +80,7 @@ SQL Server 2019 빅 데이터 클러스터를 배포하기 전에 먼저 [빅 �
 - `azdata`
 - `kubectl`
 - Azure Data Studio
-- Azure Data Studio용 [데이터 가상화 확장](../azure-data-studio/data-virtualization-extension.md)
+- Azure Data Studio용 [데이터 가상화 확장](../azure-data-studio/extensions/data-virtualization-extension.md)
 
 
 ## <a name="deployment-overview"></a><a id="deploy"></a> 배포 개요
@@ -255,7 +255,7 @@ Cluster deployed successfully.
    > [!TIP]
    > 배포 중에 기본 이름을 변경하지 않은 경우에는 위 명령에서 `-n mssql-cluster`를 사용합니다. `mssql-cluster`는 빅 데이터 클러스터의 기본 이름입니다.
 
-1. [azdata login](reference-azdata.md)을 사용하여 빅 데이터 클러스터에 로그인합니다. `--endpoint` 매개 변수를 컨트롤러 엔드포인트의 외부 IP 주소로 설정합니다.
+1. [azdata login](../azdata/reference/reference-azdata.md)을 사용하여 빅 데이터 클러스터에 로그인합니다. `--endpoint` 매개 변수를 컨트롤러 엔드포인트의 외부 IP 주소로 설정합니다.
 
    ```bash
    azdata login --endpoint https://<ip-address-of-controller-svc-external>:30080 --username <user-name>
@@ -266,7 +266,7 @@ Cluster deployed successfully.
    > [!TIP]
    > Kubernetes 클러스터 관리자이고 클러스터 구성 파일(kube config 파일)에 액세스할 수 있는 경우 대상 Kubernetes 클러스터를 가리키도록 현재 컨텍스트를 구성할 수 있습니다. 이 경우 `azdata login -n <namespaceName>`를 사용하여 로그인 할 수 있으며, 여기서 `namespace`는 빅 데이터 클러스터 이름입니다. 로그인 명령 내에서 지정하지 않으면 자격 증명을 입력하라는 메시지가 표시됩니다.
    
-1. [azdata bdc endpoint list](reference-azdata-bdc-endpoint.md)를 실행하여 각 엔드포인트에 대한 설명과 해당 IP 주소 및 포트 값이 포함된 목록을 가져옵니다. 
+1. [azdata bdc endpoint list](../azdata/reference/reference-azdata-bdc-endpoint.md)를 실행하여 각 엔드포인트에 대한 설명과 해당 IP 주소 및 포트 값이 포함된 목록을 가져옵니다. 
 
    ```bash
    azdata bdc endpoint list -o table
@@ -298,7 +298,7 @@ kubectl get svc -n <your-big-data-cluster-name>
 
 ## <a name="verify-the-cluster-status"></a><a id="status"></a> 클러스터 상태 확인
 
-배포 후에 [azdata bdc status show](reference-azdata-bdc-status.md) 명령을 사용하여 클러스터 상태를 확인할 수 있습니다.
+배포 후에 [azdata bdc status show](../azdata/reference/reference-azdata-bdc-status.md) 명령을 사용하여 클러스터 상태를 확인할 수 있습니다.
 
 ```bash
 azdata bdc status show
@@ -381,7 +381,7 @@ Bdc: ready                                                                      
 
 다음 명령을 사용하여 자세한 상태를 가져올 수도 있습니다.
 
-- [azdata bdc control status show](reference-azdata-bdc-control-status.md)는 컨트롤 관리 서비스와 연결된 모든 구성 요소의 상태를 반환합니다.
+- [azdata bdc control status show](../azdata/reference/reference-azdata-bdc-control-status.md)는 컨트롤 관리 서비스와 연결된 모든 구성 요소의 상태를 반환합니다.
 ```
 azdata bdc control status show
 ```

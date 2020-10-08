@@ -13,12 +13,12 @@ ms.topic: conceptual
 author: David-Engel
 ms.author: v-daenge
 ms.reviewer: v-kaywon
-ms.openlocfilehash: 26ee3500511ca937e0712b9338ba9a796b3a8a45
-ms.sourcegitcommit: 6b3569977b034554883a94d73d1c4df6e2f74fe2
+ms.openlocfilehash: 1ae61c177686f072729c1763974c1cdc3d00baa7
+ms.sourcegitcommit: c7f40918dc3ecdb0ed2ef5c237a3996cb4cd268d
 ms.translationtype: HT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 06/19/2020
-ms.locfileid: "85106891"
+ms.lasthandoff: 10/05/2020
+ms.locfileid: "91725714"
 ---
 # <a name="finding-additional-sqlclient-driver-information"></a>추가 SqlClient 드라이버 정보 찾기
 
@@ -32,7 +32,7 @@ ms.locfileid: "85106891"
 |--------------|-----------------|  
 |[.NET 런타임 GitHub 리포지토리](https://github.com/dotnet/runtime)|이 리포지토리에는 .NET Core에 대한 라이브러리 구현이 포함됩니다.|
 |[Microsoft SqlClient Data Provider for SQL Server GitHub 리포지토리](https://github.com/dotnet/SqlClient)|이 리포지토리에는 SqlClient 드라이버의 소스 코드가 포함됩니다.|  
-|[.NET API 브라우저](https://docs.microsoft.com/dotnet/api/)|이 사이트에는 드라이버에 대한 .NET API 정보가 포함됩니다.|  
+|[.NET API 브라우저](/dotnet/api/)|이 사이트에는 드라이버에 대한 .NET API 정보가 포함됩니다.|  
   
 ## <a name="next-steps"></a>다음 단계
- [SqlClient 드라이버 개요](overview-sqlclient-driver.md)  
+ [SqlClient 드라이버 개요](overview-sqlclient-driver.md)

@@ -11,12 +11,12 @@ ms.topic: conceptual
 ms.assetid: cbc0e397-ecf2-4494-87b2-a492609bceae
 author: David-Engel
 ms.author: v-daenge
-ms.openlocfilehash: e4ca5823ac73868400d9f9a370e053d263143c0f
-ms.sourcegitcommit: 9be0047805ff14e26710cfbc6e10d6d6809e8b2c
+ms.openlocfilehash: f1fe92ec4216998d36826c518a5dce40c26253c0
+ms.sourcegitcommit: c7f40918dc3ecdb0ed2ef5c237a3996cb4cd268d
 ms.translationtype: HT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 08/27/2020
-ms.locfileid: "89042426"
+ms.lasthandoff: 10/05/2020
+ms.locfileid: "91725467"
 ---
 # <a name="frequently-asked-questions-faq-for-jdbc-driver"></a>JDBC 드라이버에 대한 FAQ(질문과 대답)
 
@@ -146,7 +146,7 @@ JDBC 드라이버 6.0, 6.2, 6.4 및 7.0은 재배포 가능합니다. 라이선�
 예. 드라이버는 IPv6 주소 사용을 지원합니다. 연결 속성 컬렉션 및 serverName 연결 문자열 속성을 사용합니다. 자세한 내용은 [Building the Connection URL](../../connect/jdbc/building-the-connection-url.md)(연결 URL 작성)을 참조하세요.
 
 **적응 버퍼링이란 무엇인가요?**  
-적응 버퍼링 Microsoft SQL Server 2005 JDBC 드라이버 버전 1.2부터 도입되었습니다. 이 기능은 서버 커서 오버헤드 없이 모든 종류의 큰 값 데이터를 검색할 수 있도록 설계되었습니다. Microsoft SQL Server JDBC Driver의 선택 버퍼링 기능은 "선택" 또는 "전체"로 설정될 수 있는 responseBuffering 연결 문자열 속성을 제공합니다. 버전 1.2 릴리스에서는 버퍼링 모드가 기본적으로 "full"이므로 애플리케이션에서 명시적으로 적응 버퍼링 모드를 설정해야 합니다. JDBC Driver 버전 2.0부터, 이 드라이버의 기본 동작은 "선택"입니다. 따라서 적응 버퍼링을 사용하기 위해 애플리케이션에서 명시적으로 적응 버퍼링을 요청할 필요가 없습니다. 자세한 내용은 [적응 버퍼링 사용](../../connect/jdbc/using-adaptive-buffering.md) 및 [적응 응답 버퍼링이란 무엇이며 왜 사용해야 하나요?](https://go.microsoft.com/fwlink/?LinkId=111575) 블로그를 참조하세요.
+적응 버퍼링 Microsoft SQL Server 2005 JDBC 드라이버 버전 1.2부터 도입되었습니다. 이 기능은 서버 커서 오버헤드 없이 모든 종류의 큰 값 데이터를 검색할 수 있도록 설계되었습니다. Microsoft SQL Server JDBC Driver의 선택 버퍼링 기능은 "선택" 또는 "전체"로 설정될 수 있는 responseBuffering 연결 문자열 속성을 제공합니다. 버전 1.2 릴리스에서는 버퍼링 모드가 기본적으로 "full"이므로 애플리케이션에서 명시적으로 적응 버퍼링 모드를 설정해야 합니다. JDBC Driver 버전 2.0부터, 이 드라이버의 기본 동작은 "선택"입니다. 따라서 적응 버퍼링을 사용하기 위해 애플리케이션에서 명시적으로 적응 버퍼링을 요청할 필요가 없습니다. 자세한 내용은 [적응 버퍼링 사용](../../connect/jdbc/using-adaptive-buffering.md) 및 [적응 응답 버퍼링이란 무엇이며 왜 사용해야 하나요?](/archive/blogs/jdbcteam/) 블로그를 참조하세요.
 
 **이 드라이버는 연결 풀링을 지원하나요?**  
 이 드라이버는 Java Platform, Enterprise Edition 5(Java EE 5) 연결 풀링을 지원합니다. 미들웨어 애플리케이션 서버 공급업체가 제공하며 JDBC 3.0과 호환되는 모든 연결 풀링 구현에 참여할 수 있도록 드라이버는 JDBC 3.0 필수 인터페이스를 구현합니다. 이 드라이버는 이러한 환경에서 풀링된 연결에 참여합니다. 자세한 내용은 [Using Connection Pooling](../../connect/jdbc/using-connection-pooling.md)(연결 풀링 사용)을 참조하세요. 이 드라이버는 자체 풀링 구현을 제공하지 않으며 타사 Java 애플리케이션 서버에 의존합니다.
@@ -158,7 +158,7 @@ JDBC 드라이버 6.0, 6.2, 6.4 및 7.0은 재배포 가능합니다. 라이선�
 이 드라이버는 IBM WebSphere 및 SAP NetWeaver를 비롯한 다양한 애플리케이션 서버에서 테스트되었습니다.
 
 **추적을 사용하도록 설정하려면 어떻게 하나요?**  
-이 드라이버에서는 추적 또는 로깅 기능을 사용하여 애플리케이션에서 사용되는 JDBC Driver 관련 문제를 해결할 수 있습니다. 클라이언트 쪽 JAR 추적을 사용으로 설정할 수 있도록 JDBC Driver는 java.util.logging의 로깅 API를 사용합니다. 자세한 내용은 [드라이버 작업 추적](../../connect/jdbc/tracing-driver-operation.md)을 참조하세요. 서버 쪽 XA 추적에 대한 자세한 내용은 [SQL Server의 데이터 액세스 추적](https://go.microsoft.com/fwlink/?LinkId=248705)을 참조하세요.
+이 드라이버에서는 추적 또는 로깅 기능을 사용하여 애플리케이션에서 사용되는 JDBC Driver 관련 문제를 해결할 수 있습니다. 클라이언트 쪽 JAR 추적을 사용으로 설정할 수 있도록 JDBC Driver는 java.util.logging의 로깅 API를 사용합니다. 자세한 내용은 [드라이버 작업 추적](../../connect/jdbc/tracing-driver-operation.md)을 참조하세요. 서버 쪽 XA 추적에 대한 자세한 내용은 [SQL Server의 데이터 액세스 추적](/previous-versions/sql/sql-server-2012/hh880086(v=msdn.10))을 참조하세요.
 
 **SQL Server 2000 JDBC Driver, 2005 Driver, 1.0, 1.1 또는 1.2 Driver와 같은 이전 버전의 드라이버는 어디에서 다운로드할 수 있나요?**  
 이러한 드라이버 버전은 더 이상 지원되지 않으므로 다운로드할 수 없습니다. Java 연결 지원을 지속적으로 개선하고 있습니다. 따라서 최신 버전의 Microsoft JDBC 드라이버를 사용하는 것이 좋습니다.

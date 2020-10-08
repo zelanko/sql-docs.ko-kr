@@ -10,12 +10,12 @@ ms.date: 12/13/2019
 ms.topic: conceptual
 ms.prod: sql
 ms.technology: big-data-cluster
-ms.openlocfilehash: 08e19f1c78b14e57aa50fa23bc10379c6f662351
-ms.sourcegitcommit: d1051f05a7db81ec62d9785bb6af572408f3d4e0
+ms.openlocfilehash: 890b029833e7d34da7663b9f0e6ccfa63195c6d5
+ms.sourcegitcommit: c7f40918dc3ecdb0ed2ef5c237a3996cb4cd268d
 ms.translationtype: HT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 08/20/2020
-ms.locfileid: "88681065"
+ms.lasthandoff: 10/05/2020
+ms.locfileid: "91725084"
 ---
 # <a name="how-to-deploy-an-app-on-sql-server-big-data-clusters"></a>SQL Server 빅 데이터 클러스터에 앱을 배포하는 방법
 
@@ -44,7 +44,7 @@ SQL Server BDC(빅 데이터 클러스터)에 배포된 애플리케이션은 �
 ## <a name="prerequisites"></a>사전 요구 사항
 
 - [SQL Server 2019 빅 데이터 클러스터](deployment-guidance.md)
-- [azdata 명령줄 유틸리티](deploy-install-azdata.md)
+- [azdata 명령줄 유틸리티](../azdata/install/deploy-install-azdata.md)
 
 ## <a name="capabilities"></a>기능
 

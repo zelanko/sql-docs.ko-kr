@@ -7,15 +7,15 @@ ms.prod: sql
 ms.prod_service: connectivity
 ms.technology: connectivity
 ms.topic: conceptual
-author: rothja
-ms.author: jroth
+author: David-Engel
+ms.author: v-daenge
 ms.reviewer: v-kaywon
-ms.openlocfilehash: 57222c852ac2ba8c1aedf42075b69587a4b3843d
-ms.sourcegitcommit: ff82f3260ff79ed860a7a58f54ff7f0594851e6b
+ms.openlocfilehash: b5f4500645b60a98dd97166e12bdf0899149b1c4
+ms.sourcegitcommit: c7f40918dc3ecdb0ed2ef5c237a3996cb4cd268d
 ms.translationtype: HT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 03/29/2020
-ms.locfileid: "78896570"
+ms.lasthandoff: 10/05/2020
+ms.locfileid: "91725604"
 ---
 # <a name="query-notifications-in-sql-server"></a>SQL Server의 쿼리 알림
 
@@ -35,19 +35,19 @@ ADO.NET를 사용하여 쿼리 알림을 구현하는 방법에는 세 가지가
   
 SELECT 및 EXECUTE 문에 대한 알림을 설정할 수 있습니다. EXECUTE 문을 사용하는 경우 SQL Server는 EXECUTE 문 자체가 아니라 실행된 명령에 대한 알림을 등록합니다. 명령은 SELECT 문의 요구 사항과 제한 사항을 따라야 합니다. 알림을 등록하는 명령에 하나 이상의 문이 포함된 경우 데이터베이스 엔진은 일괄 처리에 있는 각 문에 대한 알림을 만듭니다.  
   
-데이터가 변경될 때 신뢰할 수 있는 하위 보조 알림이 필요한 애플리케이션을 개발하려는 경우 SQL Server 온라인 설명서의 [알림 계획 항목](https://go.microsoft.com/fwlink/?LinkId=211984)에 있는 **효율적인 쿼리 알림 방법 계획** 및 **쿼리 알림 대체 방법** 단원을 참조하세요. 쿼리 알림 및 SQL Server Service Broker에 대한 자세한 내용은 SQL Server 온라인 설명서에서 다음 항목에 대한 링크를 참조하세요.  
+데이터가 변경될 때 신뢰할 수 있는 하위 보조 알림이 필요한 애플리케이션을 개발하려는 경우 SQL Server 온라인 설명서의 **알림 계획 항목**에 있는 **효율적인 쿼리 알림 방법 계획** 및 [쿼리 알림 대체 방법](/previous-versions/sql/sql-server-2008-r2/ms187528(v=sql.105)) 단원을 참조하세요. 쿼리 알림 및 SQL Server Service Broker에 대한 자세한 내용은 SQL Server 온라인 설명서에서 다음 항목에 대한 링크를 참조하세요.  
   
 **SQL Server 설명서**  
   
-- [쿼리 알림 사용](https://docs.microsoft.com/previous-versions/sql/sql-server-2008-r2/ms175110(v=sql.105))  
+- [쿼리 알림 사용](/previous-versions/sql/sql-server-2008-r2/ms175110(v=sql.105))  
   
-- [알림에 대한 쿼리 만들기](https://docs.microsoft.com/previous-versions/sql/sql-server-2008-r2/ms181122(v=sql.105))  
+- [알림에 대한 쿼리 만들기](/previous-versions/sql/sql-server-2008-r2/ms181122(v=sql.105))  
   
-- [개발(Service Broker)](https://docs.microsoft.com/previous-versions/sql/sql-server-2008-r2/bb522889(v=sql.105))  
+- [개발(Service Broker)](/previous-versions/sql/sql-server-2008-r2/bb522889(v=sql.105))  
   
-- [Service Broker 개발자 정보 센터](https://docs.microsoft.com/previous-versions/sql/sql-server-2008-r2/ms166100(v=sql.105))  
+- [Service Broker 개발자 정보 센터](/previous-versions/sql/sql-server-2008-r2/ms166100(v=sql.105))  
   
-- [개발자 가이드(Service Broker)](https://docs.microsoft.com/previous-versions/sql/sql-server-2008-r2/bb522908(v=sql.105))  
+- [개발자 가이드(Service Broker)](/previous-versions/sql/sql-server-2008-r2/bb522908(v=sql.105))  
   
 ## <a name="in-this-section"></a>섹션 내용  
 [쿼리 알림 사용](enable-query-notifications.md)  

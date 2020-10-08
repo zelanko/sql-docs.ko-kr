@@ -10,12 +10,12 @@ ms.date: 12/13/2019
 ms.topic: conceptual
 ms.prod: sql
 ms.technology: machine-learning-bdc
-ms.openlocfilehash: be8a2e43c120f154cf998e49027c5025bd4feac4
-ms.sourcegitcommit: 56f6892b3795da308d226d4b3c5c859ead2e830a
+ms.openlocfilehash: 3ccd54d4e5e73da6492de753084ffa924341b63a
+ms.sourcegitcommit: c7f40918dc3ecdb0ed2ef5c237a3996cb4cd268d
 ms.translationtype: HT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 07/17/2020
-ms.locfileid: "86438085"
+ms.lasthandoff: 10/05/2020
+ms.locfileid: "91725734"
 ---
 # <a name="create-export-and-score-spark-machine-learning-models-on-big-data-clusters-2019"></a>[!INCLUDE[big-data-clusters-2019](../includes/ssbigdataclusters-ss-nover.md)]에서 Spark Machine Learning 모델을 만들고, 내보내고, 채점합니다.
 
@@ -52,7 +52,7 @@ ms.locfileid: "86438085"
 
    이 노트북에는 샘플의 이 섹션에 필요한 명령이 포함된 셀이 있습니다.
 
-1. Azure Data Studio에서 노트북을 열고 각 코드 블록을 실행합니다. Notebook 사용 방법에 대한 자세한 내용은 [SQL Server에서 Notebook을 사용하는 방법](../azure-data-studio/notebooks-guidance.md)을 참조하세요.
+1. Azure Data Studio에서 노트북을 열고 각 코드 블록을 실행합니다. Notebook 사용 방법에 대한 자세한 내용은 [SQL Server에서 Notebook을 사용하는 방법](../azure-data-studio/notebooks/notebooks-guidance.md)을 참조하세요.
 
 데이터가 먼저 Spark로 읽혀진 후 학습 및 테스트 데이터 세트로 분할됩니다. 그런 다음, 코드가 학습 데이터를 사용하여 파이프라인 모델을 학습시킵니다. 마지막으로 모델을 MLeap 번들로 내보냅니다.
 

@@ -11,12 +11,12 @@ ms.topic: conceptual
 ms.assetid: c5769e67-99f7-4bc1-a4fa-8941dad33d35
 author: David-Engel
 ms.author: v-daenge
-ms.openlocfilehash: f8fc0f34c860c9919d56d3d2c4645e9fea8bb428
-ms.sourcegitcommit: 9be0047805ff14e26710cfbc6e10d6d6809e8b2c
+ms.openlocfilehash: 341b021bbc582b2273f7601bfb993b4db40a4590
+ms.sourcegitcommit: c7f40918dc3ecdb0ed2ef5c237a3996cb4cd268d
 ms.translationtype: HT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 08/27/2020
-ms.locfileid: "89042404"
+ms.lasthandoff: 10/05/2020
+ms.locfileid: "91725454"
 ---
 # <a name="microsoft-jdbc-driver-for-sql-server-support-matrix"></a>SQL Server용 Microsoft JDBC Driver 지원 매트릭스
 
@@ -81,7 +81,7 @@ MSL(Microsoft 지원 수명 주기) 정책은 Microsoft 제품 지원 수명 주
   
  <sup>2</sup> Azure SQL Database에 대한 지원은 3.0 드라이버에서 핫픽스로 도입되었습니다. Azure SQL 데이터베이스 고객은 사용 가능한 최신 드라이버 버전을 사용하는 것이 좋습니다.  
   
- <sup>3</sup> Microsoft SQL Server JDBC Driver 버전 2.0 및 Microsoft SQL Server 2005 JDBC Driver 버전 1.2는 하위 수준 클라이언트로 SQL Server 2008에 연결될 수 있습니다. 하위 수준 변환이 허용되는 경우 애플리케이션은 쿼리를 실행하고 시간, 날짜, datetime2, datetimeoffset 및 FILESTREAM 등 새로운 SQL Server 2008 데이터 형식을 업데이트할 수 있습니다. JDBC Driver와 함께 이러한 새로운 데이터 형식을 사용하는 방법에 대한 자세한 내용은  [JDBC Driver를 사용하여 SQL Server 2008 날짜/시간 데이터 형식 작업](https://go.microsoft.com/fwlink/?LinkId=145198) 및  [JDBC Driver를 사용하 여 SQL Server 2008 FileStream 작업](https://go.microsoft.com/fwlink/?LinkId=145199)을 참조하세요. 이러한 새 데이터 형식의 하위 수준 호환성에 대한 자세한 내용은 SQL Server 온라인 설명서의  [날짜 및 시간 데이터 사용](https://go.microsoft.com/fwlink/?LinkId=145211)및  [FILESTREAM 지원](https://go.microsoft.com/fwlink/?LinkId=145212) 항목을 참조하세요.  
+ <sup>3</sup> Microsoft SQL Server JDBC Driver 버전 2.0 및 Microsoft SQL Server 2005 JDBC Driver 버전 1.2는 하위 수준 클라이언트로 SQL Server 2008에 연결될 수 있습니다. 하위 수준 변환이 허용되는 경우 애플리케이션은 쿼리를 실행하고 시간, 날짜, datetime2, datetimeoffset 및 FILESTREAM 등 새로운 SQL Server 2008 데이터 형식을 업데이트할 수 있습니다. JDBC Driver와 함께 이러한 새로운 데이터 형식을 사용하는 방법에 대한 자세한 내용은  [JDBC Driver를 사용하여 SQL Server 2008 날짜/시간 데이터 형식 작업](/archive/blogs/jdbcteam/) 및  [JDBC Driver를 사용하 여 SQL Server 2008 FileStream 작업](/archive/blogs/jdbcteam/)을 참조하세요. 이러한 새 데이터 형식의 하위 수준 호환성에 대한 자세한 내용은 SQL Server 온라인 설명서의  [날짜 및 시간 데이터 사용](/previous-versions/sql/sql-server-2008-r2/ms180878(v=sql.105))및  [FILESTREAM 지원](../../relational-databases/native-client/features/filestream-support.md) 항목을 참조하세요.  
   
  <sup>4</sup> Microsoft JDBC Driver와 병렬 데이터 웨어하우스 간의 연결 지원은 SQL Server용 Microsoft JDBC Driver 4.0 및 Microsoft SQL Server 2008 R2 병렬 데이터 웨어하우스 어플라이언스 업데이트 3에 최초로 도입되었습니다.  
   

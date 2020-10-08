@@ -11,21 +11,21 @@ ms.topic: conceptual
 ms.assetid: 249e3794-e3fa-41cb-ad9c-f46e19e6805c
 author: David-Engel
 ms.author: v-daenge
-ms.openlocfilehash: a6faff357f036f521a88fa37b15db5ead82b5758
-ms.sourcegitcommit: d56a834269132a83e5fe0a05b033936776cda8bb
+ms.openlocfilehash: 85b7c9f681a79a3678b932c63f755fc01d543100
+ms.sourcegitcommit: c7f40918dc3ecdb0ed2ef5c237a3996cb4cd268d
 ms.translationtype: HT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 09/29/2020
-ms.locfileid: "91529404"
+ms.lasthandoff: 10/05/2020
+ms.locfileid: "91726595"
 ---
 # <a name="sql-data-developer"></a>SQL 데이터 개발자
 Microsoft의 SQL 데이터 플랫폼을 사용하여 웹 서버, 엔터프라이즈 서버 및 클라우드의 모바일 디바이스 및 데스크톱에서 데이터 중심 솔루션을 만들 수 있습니다.  
 
 ## <a name="sql-data-storage"></a>SQL 데이터 스토리지
 * [SQL Server 데이터베이스 엔진](../database-engine/install-windows/install-sql-server-database-engine.md) SQL Server 데이터베이스 엔진을 사용하여 OLTP(온라인 트랜잭션 처리) 또는 OLAP(온라인 분석 처리) 데이터에 사용할 관계형 데이터베이스를 만들 수 있습니다. 
-* [Azure SQL](https://docs.microsoft.com/azure/azure-sql/azure-sql-iaas-vs-paas-what-is-overview): Azure SQL을 사용하여 데이터베이스를 클라우드로 이동 
+* [Azure SQL](/azure/azure-sql/azure-sql-iaas-vs-paas-what-is-overview): Azure SQL을 사용하여 데이터베이스를 클라우드로 이동 
 * [SQL Compact](https://www.microsoft.com/download/details.aspx?id=30709): SQL Server Compact를 사용하여 모바일 디바이스, 데스크톱 및 웹 클라이언트를 위한 독립 실행형 애플리케이션과 간헐적으로 연결되는 애플리케이션을 빌드합니다.
-* [LocalDB](../database-engine/configure-windows/sql-server-2016-express-localdb.md): SQL Server의 전체 서버 인스턴스를 관리할 필요 없이 개발 중에 LocalDB를 사용하여 Transact-SQL 코드를 작성하고 테스트할 수 있습니다.
+* [LocalDB](../database-engine/configure-windows/sql-server-express-localdb.md): SQL Server의 전체 서버 인스턴스를 관리할 필요 없이 개발 중에 LocalDB를 사용하여 Transact-SQL 코드를 작성하고 테스트할 수 있습니다.
 
 ## <a name="sql-data-tools"></a>SQL 데이터 도구
 * [Azure Data Studio](../azure-data-studio/download-azure-data-studio.md): Windows, macOS 및 Linux에서 Azure Data Studio를 사용하여 SQL Server, Azure SQL Database, PostgreSQL, Jupyter Notebook 등을 실행할 수 있습니다.

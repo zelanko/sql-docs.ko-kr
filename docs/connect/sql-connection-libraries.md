@@ -8,16 +8,16 @@ ms.custom: ''
 ms.topic: article
 ms.date: 03/06/2020
 ms.author: v-daenge
-ms.openlocfilehash: c2f282e9ba4c3b182640989e2365e9be70a258da
-ms.sourcegitcommit: 822d4b3cfa53269535500a3db5877a82b5076728
+ms.openlocfilehash: 8d5c44c11d9f5158abc52634f648a4159f86c143
+ms.sourcegitcommit: c7f40918dc3ecdb0ed2ef5c237a3996cb4cd268d
 ms.translationtype: HT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 08/07/2020
-ms.locfileid: "87988511"
+ms.lasthandoff: 10/05/2020
+ms.locfileid: "91726614"
 ---
 # <a name="connection-modules-for-microsoft-sql-database"></a>Microsoft SQL Database용 연결 모듈
 
-이 문서에서는 클라이언트 프로그램이 [Microsoft SQL Server](../relational-databases/database-features.md) 및 클라우드 [Azure SQL Database](/azure/sql-database/) 내 해당 쌍과의 상호 작용에 사용할 수 있는 연결 모듈 또는 *드라이버*의 다운로드 링크를 제공합니다. 드라이버는 다음의 운영 체제에서 실행되는 다양한 프로그래밍 언어에 사용할 수 있습니다.
+이 문서에서는 클라이언트 프로그램이 [Microsoft SQL Server](../relational-databases/databases/databases.md) 및 클라우드 [Azure SQL Database](/azure/sql-database/) 내 해당 쌍과의 상호 작용에 사용할 수 있는 연결 모듈 또는 *드라이버*의 다운로드 링크를 제공합니다. 드라이버는 다음의 운영 체제에서 실행되는 다양한 프로그래밍 언어에 사용할 수 있습니다.
 
 - Linux
 - macOS
@@ -54,7 +54,7 @@ ms.locfileid: "87988511"
 
 | 언어 | ORM 드라이버 다운로드 |
 | :------- | :------------------ |
-| C# | [Entity Framework Core](https://docs.microsoft.com/ef/core/)<br />[Entity Framework(6.x 이상)](https://docs.microsoft.com/ef/) |
+| C# | [Entity Framework Core](/ef/core/)<br />[Entity Framework(6.x 이상)](/ef/) |
 | Java | [Hibernate ORM](https://hibernate.org/orm)|
 | PHP | [Eloquent ORM, Laravel 설치 시 포함됨](https://laravel.com/docs/) |
 | Node.js | [Sequelize ORM](https://sequelize.org/) |
@@ -85,7 +85,7 @@ ms.locfileid: "87988511"
 
 ## <a name="related-links"></a>관련 링크
 
-- [클라우드에서 Java와 기타 언어로 Azure SQL Database에 연결하기 위한 코드의 예제](https://docs.microsoft.com/azure/sql-database/sql-database-connect-query-java)
+- [클라우드에서 Java와 기타 언어로 Azure SQL Database에 연결하기 위한 코드의 예제](/azure/sql-database/sql-database-connect-query-java)
 
 <!--
 Image references, **obsolete** markdown syntax alternative:

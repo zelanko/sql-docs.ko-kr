@@ -11,12 +11,12 @@ ms.topic: conceptual
 ms.assetid: 3a1568d1-917b-46d3-b5cb-facdc740408f
 author: David-Engel
 ms.author: v-daenge
-ms.openlocfilehash: a29748dc5c62d3102dc964871b416e175dbd725a
-ms.sourcegitcommit: dc8a30a4a27e15fc6671ca2674da9b7c637ec255
+ms.openlocfilehash: 697dde24fcce29c725ab28c670a6d50f65d489bc
+ms.sourcegitcommit: c7f40918dc3ecdb0ed2ef5c237a3996cb4cd268d
 ms.translationtype: HT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 08/21/2020
-ms.locfileid: "88746073"
+ms.lasthandoff: 10/05/2020
+ms.locfileid: "91726640"
 ---
 # <a name="python-sql-driver"></a>Python SQL Driver
 
@@ -37,7 +37,7 @@ Windows, Linux 또는 macOS에서 Python을 사용하여 SQL Database에 연결�
 * [python.org 커뮤니티](https://www.python.org/community/)  
   
 ## <a name="more-samples"></a>다른 샘플  
-* [Azure App Service on Linux에서 Python 앱 만들기](https://docs.microsoft.com/azure/app-service/containers/quickstart-python?tabs=bash)
+* [Azure App Service on Linux에서 Python 앱 만들기](/azure/app-service/containers/quickstart-python?tabs=bash)
 * [Windows에서 Python 시작](https://www.microsoft.com/sql-server/developer-get-started/python/windows/)
 * [macOS에서 Python 시작](https://www.microsoft.com/sql-server/developer-get-started/python/mac/)
 * [Ubuntu에서 Python 시작](https://www.microsoft.com/sql-server/developer-get-started/python/ubuntu/)

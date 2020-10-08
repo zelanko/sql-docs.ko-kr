@@ -10,12 +10,12 @@ ms.topic: conceptual
 author: David-Engel
 ms.author: v-daenge
 ms.reviewer: v-kaywon
-ms.openlocfilehash: 0e9a0b87e0275846b1c1b9535b9485dd1cbae066
-ms.sourcegitcommit: 216f377451e53874718ae1645a2611cdb198808a
+ms.openlocfilehash: ed42778724b468892ff72203695e976d176459b2
+ms.sourcegitcommit: c7f40918dc3ecdb0ed2ef5c237a3996cb4cd268d
 ms.translationtype: HT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 07/28/2020
-ms.locfileid: "87243427"
+ms.lasthandoff: 10/05/2020
+ms.locfileid: "91725571"
 ---
 # <a name="sql-server-express-security"></a>SQL Server Express 보안
 
@@ -42,8 +42,8 @@ SQL Server Express에 대한 자세한 내용은 다음 리소스를 참조하�
   
 |리소스|설명|
 |-|-|  
-|[Microsoft SQL Server 2005 Express Edition 온라인 설명서](https://docs.microsoft.com/previous-versions/sql/sql-server-2005/ms165706(v=sql.90))|SQL Server 2005 Express Edition에 대한 전체 설명서입니다.|  
-|[비관리자용 사용자 인스턴스](https://docs.microsoft.com/previous-versions/sql/sql-server-2008/ms143684(v=sql.100))(SQL Server 온라인 설명서)|사용자 인스턴스를 만들고 배포하는 방법을 설명합니다.|  
+|[Microsoft SQL Server 2005 Express Edition 온라인 설명서](/previous-versions/sql/sql-server-2005/ms165706(v=sql.90))|SQL Server 2005 Express Edition에 대한 전체 설명서입니다.|  
+|[비관리자용 사용자 인스턴스](/previous-versions/sql/sql-server-2008/ms143684(v=sql.100))(SQL Server 온라인 설명서)|사용자 인스턴스를 만들고 배포하는 방법을 설명합니다.|  
 |[SQL Server Express 사용자 인스턴스](sql-server-express-user-instances.md)|ADO.NET 애플리케이션의 사용자 인스턴스 기능에 대해 설명합니다. 사용자 인스턴스를 사용하도록 설정하는 방법, <xref:Microsoft.Data.SqlClient.SqlConnection>을 사용하여 사용자 인스턴스에 연결하는 방법, 사용자 인스턴스 수명, 사용자 인스턴스 시나리오에 대한 정보를 제공합니다.|  
   
 ## <a name="next-steps"></a>다음 단계

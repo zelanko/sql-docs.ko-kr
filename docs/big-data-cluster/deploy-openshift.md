@@ -9,12 +9,12 @@ ms.date: 06/22/2020
 ms.topic: conceptual
 ms.prod: sql
 ms.technology: big-data-cluster
-ms.openlocfilehash: c8dad935a404d682cf5c627a09795bf257efc209
-ms.sourcegitcommit: b57d98e9b2444348f95c83a24b8eea0e6c9da58d
+ms.openlocfilehash: 9d12d25873d7963a29afd66802f40e3074150e77
+ms.sourcegitcommit: c7f40918dc3ecdb0ed2ef5c237a3996cb4cd268d
 ms.translationtype: HT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 07/21/2020
-ms.locfileid: "86553028"
+ms.lasthandoff: 10/05/2020
+ms.locfileid: "91725884"
 ---
 # <a name="deploy-big-data-clusters-2019-on-openshift-on-premises-and-azure-red-hat-openshift"></a>OpenShift 온-프레미스 및 Azure Red Hat OpenShift에 [!INCLUDE[big-data-clusters-2019](../includes/ssbigdataclusters-ss-nover.md)] 배포
 
@@ -88,7 +88,7 @@ OpenShift 클러스터를 온-프레미스에 배포하는 방법은 [Red Hat Op
 
 ## <a name="deploy-big-data-cluster"></a>빅 데이터 클러스터를 배포합니다.
 
-1. 최신 [azdata](deploy-install-azdata.md)를 설치합니다.
+1. 최신 [azdata](../azdata/install/deploy-install-azdata.md)를 설치합니다.
 
 1. 대상 환경(OpenShift 온-프레미스 또는 ARO) 및 배포 시나리오에 따라 기본 제공 구성 파일 중 하나를 OpenShift에 대해 복제합니다. 기본 제공 구성 파일에서 OpenShift에 해당하는 설정은 아래의 ‘배포 구성 파일에서 OpenShift에 해당하는 설정’ 섹션을 참조하세요. 사용 가능한 구성 파일에 대한 자세한 내용은 [배포 지침](deployment-guidance.md)을 참조하세요.
 

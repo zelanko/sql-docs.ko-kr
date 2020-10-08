@@ -10,12 +10,12 @@ ms.topic: conceptual
 author: David-Engel
 ms.author: v-daenge
 ms.reviewer: v-kaywon
-ms.openlocfilehash: c3af23cb3816ad45fa75516633749d1f011c930d
-ms.sourcegitcommit: d56a834269132a83e5fe0a05b033936776cda8bb
+ms.openlocfilehash: d72beeaf5b7652e040dd5bbe5f20373e655f822a
+ms.sourcegitcommit: c7f40918dc3ecdb0ed2ef5c237a3996cb4cd268d
 ms.translationtype: HT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 09/29/2020
-ms.locfileid: "91529354"
+ms.lasthandoff: 10/05/2020
+ms.locfileid: "91725704"
 ---
 # <a name="introduction-to-microsoftdatasqlclient-namespace"></a>Microsoft.Data.SqlClient 네임스페이스 소개
 
@@ -77,7 +77,7 @@ AppContext.SetSwitch("Switch.Microsoft.Data.SqlClient.TruncateScaledDecimal", tr
 
 #### <a name="new-connection-string-property-synonyms"></a>새 연결 문자열 속성 동의어
 
-두 단어 이상이 포함된 속성에서 간격 혼동을 방지하기 위해 다음과 같은 기존 연결 문자열 속성의 새 동의어가 추가되었습니다. 이전 버전과의 호환성을 위해 이전 속성 이름이 계속 지원되지만, 이제 [SqlConnectionStringBuilder](https://docs.microsoft.com/dotnet/api/microsoft.data.sqlclient.sqlconnectionstringbuilder)에서 연결 문자열을 가져올 때 새 연결 문자열 속성이 포함됩니다.
+두 단어 이상이 포함된 속성에서 간격 혼동을 방지하기 위해 다음과 같은 기존 연결 문자열 속성의 새 동의어가 추가되었습니다. 이전 버전과의 호환성을 위해 이전 속성 이름이 계속 지원되지만, 이제 [SqlConnectionStringBuilder](/dotnet/api/microsoft.data.sqlclient.sqlconnectionstringbuilder)에서 연결 문자열을 가져올 때 새 연결 문자열 속성이 포함됩니다.
 
 |기존 연결 문자열 속성|새 동의어|
 |-----------------------------------|-----------|
@@ -214,11 +214,11 @@ UTF-8 지원을 위해 애플리케이션 코드를 변경하지 않아도 됩�
 
  [.NET Framework 데이터 공급자와 Always Encrypted를 사용하여 개발](../../relational-databases/security/encryption/develop-using-always-encrypted-with-net-framework-data-provider.md)
 
- [Always Encrypted: Windows 인증서 저장소에 중요한 데이터를 보호하고 암호화 키 저장](https://docs.microsoft.com/azure/sql-database/sql-database-always-encrypted)
+ [Always Encrypted: Windows 인증서 저장소에 중요한 데이터를 보호하고 암호화 키 저장](/azure/sql-database/sql-database-always-encrypted)
 
 ### <a name="authentication"></a>인증
 
-_인증_ 연결 문자열 옵션을 사용하여 다양한 인증 모드를 지정할 수 있습니다. 자세한 내용은 [SqlAuthenticationMethod 설명서](https://docs.microsoft.com/dotnet/api/system.data.sqlclient.sqlauthenticationmethod?view=netframework-4.7.2)를 참조하세요.
+_인증_ 연결 문자열 옵션을 사용하여 다양한 인증 모드를 지정할 수 있습니다. 자세한 내용은 [SqlAuthenticationMethod 설명서](/dotnet/api/system.data.sqlclient.sqlauthenticationmethod?view=netframework-4.7.2)를 참조하세요.
 
 > [!NOTE]
 > Azure Key Vault 공급자와 같은 사용자 지정 키 저장소 공급자는 Microsoft.Data.SqlClient를 지원하도록 업데이트해야 합니다. 마찬가지로 enclave 공급자도 Microsoft.Data.SqlClient를 지원하도록 업데이트해야 합니다.

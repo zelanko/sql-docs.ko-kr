@@ -13,12 +13,12 @@ ms.assetid: 9b608b0b-6b38-42da-bb83-79df8c170cd7
 author: David-Engel
 ms.author: v-daenge
 ms.reviewer: v-kaywon
-ms.openlocfilehash: a70b5449d1af02c3b367a204e2e32dfb32281d72
-ms.sourcegitcommit: cb620c77fe6bdefb975968837706750c31048d46
+ms.openlocfilehash: d2a300ce4565d9eb6104dd73c89a7b30b7aa1e8e
+ms.sourcegitcommit: c7f40918dc3ecdb0ed2ef5c237a3996cb4cd268d
 ms.translationtype: HT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 07/15/2020
-ms.locfileid: "86391768"
+ms.lasthandoff: 10/05/2020
+ms.locfileid: "91725536"
 ---
 # <a name="step-4-connect-resiliently-to-sql-with-adonet"></a>4단계: ADO.NET을 사용하여 탄력적으로 SQL에 연결
 
@@ -41,7 +41,7 @@ ms.locfileid: "86391768"
   
 프로그램은 일시적인 오류와 지속적인 오류를 구별해야 합니다. 일시적 오류는 일시적인 네트워크 문제와 같이 단기간에 정리될 수 있는 오류 조건입니다.  영구적 오류의 예는 프로그램에 대상 데이터베이스 이름의 철자가 틀린 경우입니다. 이 경우 "해당 데이터베이스를 찾을 수 없습니다" 오류가 지속되고 단기간에 해결될 가능성이 없습니다.  
   
-일시적 오류로 분류되는 오류 번호 목록은 [SQL Database 클라이언트 애플리케이션의 오류 메시지](https://docs.microsoft.com/azure/sql-database/sql-database-develop-error-messages/)에서 확인할 수 있습니다.  
+일시적 오류로 분류되는 오류 번호 목록은 [SQL Database 클라이언트 애플리케이션의 오류 메시지](/azure/sql-database/sql-database-develop-error-messages/)에서 확인할 수 있습니다.  
   
 ## <a name="step-2-create-and-run-sample-application"></a>2단계: 샘플 애플리케이션 만들기 및 실행  
   
@@ -319,4 +319,4 @@ ERROR: Unable to access the database!
   
 ## <a name="next-steps"></a>다음 단계  
   
-다른 모범 사례 및 디자인 지침을 살펴보려면 [SQL Database에 연결: 링크, 모범 사례 및 디자인 지침](https://azure.microsoft.com/documentation/articles/sql-database-connect-central-recommendations/)을 참조하세요.  
+다른 모범 사례 및 디자인 지침을 살펴보려면 [SQL Database에 연결: 링크, 모범 사례 및 디자인 지침](/azure/azure-sql/database/develop-overview)을 참조하세요.

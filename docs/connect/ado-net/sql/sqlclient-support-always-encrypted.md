@@ -10,12 +10,12 @@ ms.topic: conceptual
 author: cheenamalhotra
 ms.author: v-chmalh
 ms.reviewer: v-kaywon
-ms.openlocfilehash: 1bdb50bccf859bdd640e1da1650dc160d1d79c1e
-ms.sourcegitcommit: 7ce4a81c1b91239c8871c50f97ecaf387f439f6c
+ms.openlocfilehash: a15c888abefba554bb4170039eea23988a6615fd
+ms.sourcegitcommit: c7f40918dc3ecdb0ed2ef5c237a3996cb4cd268d
 ms.translationtype: HT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 07/10/2020
-ms.locfileid: "86217771"
+ms.lasthandoff: 10/05/2020
+ms.locfileid: "91725678"
 ---
 # <a name="using-always-encrypted-with-the-microsoft-net-data-provider-for-sql-server"></a>Microsoft.NET Data Provider for SQL Server와 Always Encrypted 사용
 
@@ -28,7 +28,7 @@ Always Encrypted를 사용하면 클라이언트 애플리케이션이 중요한
 ## <a name="prerequisites"></a>사전 요구 사항
 
 - 데이터베이스에서 상시 암호화를 구성합니다. 상시 암호화를 구성하려면 상시 암호화 키를 프로비전하고 선택한 데이터베이스 열에 대한 암호화를 설정해야 합니다. 데이터베이스에 Always Encrypted가 구성되지 않은 경우 [Always Encrypted 시작](../../../relational-databases/security/encryption/always-encrypted-database-engine.md#getting-started-with-always-encrypted)의 지침을 따르세요.
-- 필요한 .NET 플랫폼이 개발 컴퓨터에 설치되어 있는지 확인합니다. [Microsoft.Data.SqlClient](../microsoft-ado-net-sql-server.md)에서 Always Encrypted 기능은 .NET Framework 및 .NET Core 모두에 대해 지원됩니다. 개발 환경에서 [.NET Framework 4.6](https://docs.microsoft.com/dotnet/framework/) 이상 또는 [.NET Core 2.1](https://docs.microsoft.com/dotnet/core/) 이상이 대상 .NET 플랫폼 버전으로 구성되어 있는지 확인해야 합니다. Visual Studio를 사용하는 경우 [Framework 대상 지정 개요](https://docs.microsoft.com/visualstudio/ide/visual-studio-multi-targeting-overview)를 참조하세요.
+- 필요한 .NET 플랫폼이 개발 컴퓨터에 설치되어 있는지 확인합니다. [Microsoft.Data.SqlClient](../microsoft-ado-net-sql-server.md)에서 Always Encrypted 기능은 .NET Framework 및 .NET Core 모두에 대해 지원됩니다. 개발 환경에서 [.NET Framework 4.6](/dotnet/framework/) 이상 또는 [.NET Core 2.1](/dotnet/core/) 이상이 대상 .NET 플랫폼 버전으로 구성되어 있는지 확인해야 합니다. Visual Studio를 사용하는 경우 [Framework 대상 지정 개요](/visualstudio/ide/visual-studio-multi-targeting-overview)를 참조하세요.
 
 ## <a name="enabling-always-encrypted-for-application-queries"></a>애플리케이션 쿼리에 대해 상시 암호화 사용
 
@@ -69,7 +69,7 @@ Enclave 계산 및 Enclave 증명에서 클라이언트 드라이버 역할에 �
 
 애플리케이션을 구성하려면 다음을 수행합니다.
 
-1. [!INCLUDE [ssnoversion-md](../../../includes/ssnoversion-md.md)] 인스턴스가 Enclave 형식을 사용하여 구성되었는지 확인합니다([Always Encrypted 서버 구성 옵션에 대한 Enclave 형식 구성](../../../database-engine/configure-windows/configure-column-encryption-enclave-type.md) 참조). [!INCLUDE [sssqlv15-md](../../../includes/sssqlv15-md.md)]에서는 증명을 위해 VBS Enclave 형식 및 [호스트 보호 서비스](https://docs.microsoft.com/windows-server/security/guarded-fabric-shielded-vm/guarded-fabric-setting-up-the-host-guardian-service-hgs)를 지원합니다.
+1. [!INCLUDE [ssnoversion-md](../../../includes/ssnoversion-md.md)] 인스턴스가 Enclave 형식을 사용하여 구성되었는지 확인합니다([Always Encrypted 서버 구성 옵션에 대한 Enclave 형식 구성](../../../database-engine/configure-windows/configure-column-encryption-enclave-type.md) 참조). [!INCLUDE [sssqlv15-md](../../../includes/sssqlv15-md.md)]에서는 증명을 위해 VBS Enclave 형식 및 [호스트 보호 서비스](/windows-server/security/guarded-fabric-shielded-vm/guarded-fabric-setting-up-the-host-guardian-service-hgs)를 지원합니다.
 2. 연결 문자열의 `Enclave Attestation URL` 키워드를 증명 엔드포인트로 설정하여 애플리케이션에서 데이터베이스로 연결하는 데 Enclave 계산을 사용하도록 설정합니다. 키워드 값은 사용자 환경에 구성된 HGS 서버의 증명 엔드포인트로 설정되어야 합니다.
 3. 연결 문자열에서 `Attestation Protocol` 키워드를 설정하여 사용할 증명 프로토콜을 제공합니다. 이 키워드의 값은 "HGS"로 설정해야 합니다.
 
@@ -80,7 +80,7 @@ Enclave 계산 및 Enclave 증명에서 클라이언트 드라이버 역할에 �
 
 ## <a name="retrieving-and-modifying-data-in-encrypted-columns"></a>암호화된 열에서 데이터 검색 및 수정
 
-애플리케이션 쿼리에 대해 Always Encrypted를 사용하도록 설정하면 [Microsoft.Data.SqlClient 네임스페이스](https://docs.microsoft.com/dotnet/api/microsoft.data.sqlclient)에 정의된 표준 SqlClient API([ADO.NET에서 데이터 검색 및 수정](https://docs.microsoft.com/dotnet/framework/data/adonet/retrieving-and-modifying-data) 참조) 또는 [**Microsoft .NET Data Provider for SQL Server**](index.md) API를 사용하여 암호화된 데이터베이스 열에서 데이터를 검색하거나 수정할 수 있습니다. 애플리케이션에 필요한 데이터베이스 권한이 있고 열 마스터 키에 액세스할 수 있는 경우 데이터베이스 스키마의 열에 설정된 SQL Server 데이터 형식에 따라 **Microsoft .NET Data Provider for SQL Server**에서 암호화된 열을 대상으로 하는 쿼리 매개 변수를 암호화하고 .NET 형식의 일반 텍스트 값을 반환하는 암호화된 열에서 검색된 데이터의 암호를 해독합니다.
+애플리케이션 쿼리에 대해 Always Encrypted를 사용하도록 설정하면 [Microsoft.Data.SqlClient 네임스페이스](/dotnet/api/microsoft.data.sqlclient)에 정의된 표준 SqlClient API([ADO.NET에서 데이터 검색 및 수정](/dotnet/framework/data/adonet/retrieving-and-modifying-data) 참조) 또는 [**Microsoft .NET Data Provider for SQL Server**](index.md) API를 사용하여 암호화된 데이터베이스 열에서 데이터를 검색하거나 수정할 수 있습니다. 애플리케이션에 필요한 데이터베이스 권한이 있고 열 마스터 키에 액세스할 수 있는 경우 데이터베이스 스키마의 열에 설정된 SQL Server 데이터 형식에 따라 **Microsoft .NET Data Provider for SQL Server**에서 암호화된 열을 대상으로 하는 쿼리 매개 변수를 암호화하고 .NET 형식의 일반 텍스트 값을 반환하는 암호화된 열에서 검색된 데이터의 암호를 해독합니다.
 Always Encrypted를 사용하지 않는 경우 암호화된 열을 대상으로 하는 매개 변수가 있는 쿼리가 실패합니다. 쿼리에 암호화된 열을 대상으로 하는 매개 변수가 없는 경우 쿼리가 암호화된 열에서 데이터를 검색할 수 있습니다. 그러나 **Microsoft .NET Data Provider for SQL Server**는 암호화된 열에서 검색된 값을 암호 해독하지 않고 애플리케이션에서 암호화된 이진 데이터(바이트 배열)를 수신합니다.
 
 다음 표에서는 Always Encrypted 사용 여부에 따른 쿼리 동작을 요약합니다.
@@ -113,9 +113,9 @@ CREATE TABLE [dbo].[Patients]([PatientId] [int] IDENTITY(1,1),
 이 예제에서는 Patients 테이블에 행을 삽입합니다. 다음 사항에 유의하세요.
 
 - 샘플 코드에는 암호화에 대한 내용이 없습니다. **Microsoft .NET Data Provider for SQL Server**에서는 암호화된 열을 대상으로 하는 `paramSSN` 및 `paramBirthdate` 매개 변수를 자동으로 검색하고 암호화합니다. 이렇게 하면 애플리케이션에 투명하게 암호화할 수 있습니다.
-- 암호화된 열을 포함하여 데이터베이스 열에 삽입된 값은 [SqlParameter](https://docs.microsoft.com/dotnet/api/microsoft.data.sqlclient.sqlparameter) 개체로 전달됩니다. **SqlParameter**를 사용하여 암호화되지 않은 열에 값을 전달하는 것은 선택 사항이지만(그러나 SQL 삽입을 방지할 수 있으므로 매우 권장됨) 암호화된 열을 대상으로 하는 값에 필요합니다. SSN 또는 BirthDate 열에 삽입된 값이 쿼리 문에 포함된 리터럴로 전달된 경우 **Microsoft .NET Data Provider for SQL Server**에서 암호화된 대상 열의 값을 확인할 수 없어 값을 암호화하지 않으므로 쿼리가 실패합니다. 결과적으로, 암호화된 열과 호환 불가능한 것으로 간주하여 서버에서 거부합니다.
+- 암호화된 열을 포함하여 데이터베이스 열에 삽입된 값은 [SqlParameter](/dotnet/api/microsoft.data.sqlclient.sqlparameter) 개체로 전달됩니다. **SqlParameter**를 사용하여 암호화되지 않은 열에 값을 전달하는 것은 선택 사항이지만(그러나 SQL 삽입을 방지할 수 있으므로 매우 권장됨) 암호화된 열을 대상으로 하는 값에 필요합니다. SSN 또는 BirthDate 열에 삽입된 값이 쿼리 문에 포함된 리터럴로 전달된 경우 **Microsoft .NET Data Provider for SQL Server**에서 암호화된 대상 열의 값을 확인할 수 없어 값을 암호화하지 않으므로 쿼리가 실패합니다. 결과적으로, 암호화된 열과 호환 불가능한 것으로 간주하여 서버에서 거부합니다.
 - SSN 열을 대상으로 하는 매개 변수의 데이터 형식은 ANSI(비 유니코드) 문자열이며 char/varchar SQL Server 데이터 형식에 매핑됩니다. 매개 변수 형식이 유니코드 문자열(String)로 설정되어 nchar/nvarchar에 매핑되는 경우 Always Encrypted가 암호화된 nchar/nvarchar 값을 암호화된 char/varchar 값으로 변환하는 것을 지원하지 않으므로 쿼리가 실패합니다. 데이터 형식 매핑에 대한 자세한 내용은 [SQL Server 데이터 형식 매핑](/dotnet/framework/data/adonet/sql-server-data-type-mappings) 을 참조하세요.
-- BirthDate 열에 삽입되는 매개 변수의 데이터 형식은 [SqlParameter.DbType 속성](https://docs.microsoft.com/dotnet/api/microsoft.data.sqlclient.sqlparameter.sqldbtype)을 사용할 때 적용되는 SQL Server 데이터 형식으로 .NET 형식을 암시적으로 매핑하지 않고 [SqlParameter.SqlDbType 속성](https://docs.microsoft.com/dotnet/api/microsoft.data.sqlclient.sqlparameter.dbtype)을 사용하여 명시적으로 대상 SQL Server 데이터 형식으로 설정됩니다. 기본적으로 [DateTime 구조체](https://docs.microsoft.com/dotnet/api/system.datetime)는 SQL Server 데이터 형식 datetime에 매핑됩니다. BirthDate 열의 데이터 형식이 date이고 상시 암호화는 암호화된 datetime 값을 암호화된 date 값으로 변환하는 것을 지원하지 않으므로 기본 매핑 시 오류가 발생합니다.
+- BirthDate 열에 삽입되는 매개 변수의 데이터 형식은 [SqlParameter.DbType 속성](/dotnet/api/microsoft.data.sqlclient.sqlparameter.sqldbtype)을 사용할 때 적용되는 SQL Server 데이터 형식으로 .NET 형식을 암시적으로 매핑하지 않고 [SqlParameter.SqlDbType 속성](/dotnet/api/microsoft.data.sqlclient.sqlparameter.dbtype)을 사용하여 명시적으로 대상 SQL Server 데이터 형식으로 설정됩니다. 기본적으로 [DateTime 구조체](/dotnet/api/system.datetime)는 SQL Server 데이터 형식 datetime에 매핑됩니다. BirthDate 열의 데이터 형식이 date이고 상시 암호화는 암호화된 datetime 값을 암호화된 date 값으로 변환하는 것을 지원하지 않으므로 기본 매핑 시 오류가 발생합니다.
 
 ```cs
 string connectionString = "Data Source=server63; Initial Catalog=Clinic; Integrated Security=true; Column Encryption Setting=enabled";
@@ -259,7 +259,7 @@ Microsoft.Data.SqlClient.SqlException (0x80131904): Operand type clash: varchar 
 
 이러한 오류를 방지하려면 다음을 확인합니다.
 
-- 암호화된 열을 대상으로 하는 애플리케이션 쿼리에 대해 Always Encrypted가 설정되어 있어야 합니다(특정 쿼리에 대한 [SqlCommand](https://docs.microsoft.com/dotnet/api/microsoft.data.sqlclient.sqlcommand) 개체 또는 연결 문자열).
+- 암호화된 열을 대상으로 하는 애플리케이션 쿼리에 대해 Always Encrypted가 설정되어 있어야 합니다(특정 쿼리에 대한 [SqlCommand](/dotnet/api/microsoft.data.sqlclient.sqlcommand) 개체 또는 연결 문자열).
 - SqlParameter를 사용하여 암호화된 열을 대상으로 하는 데이터를 전송합니다. 다음 예제에서는 SqlParameter 개체에 리터럴을 전달하지 않고 암호화된 열(SSN)에서 리터럴/상수를 기준으로 잘못 필터링한 쿼리를 보여 줍니다.
 
 ```cs
@@ -274,7 +274,7 @@ using (SqlCommand cmd = connection.CreateCommand())
 
 매개 변수 값을 암호화하거나 쿼리 결과의 데이터 암호를 해독하려면 대상 열에 대해 구성된 열 암호화 키가 **Microsoft .NET Data Provider for SQL Server**에 있어야 합니다. 열 암호화 키는 데이터베이스 메타데이터에 암호화된 형태로 저장됩니다. 각 열 암호화 키에는 열 암호화 키를 암호화하는 데 사용된 해당 열 마스터 키가 있습니다. 데이터베이스 메타데이터에는 열 마스터 키가 저장되지 않고, 특정 열 마스터 키가 포함된 키 저장소와 키 저장소에서의 키 위치에 대한 정보만 저장됩니다.
 
-열 암호화 키의 일반 텍스트 값을 가져오려면 **Microsoft .NET Data Provider for SQL Server**에서 먼저 열 암호화 키와 해당 열 마스터 키에 대한 메타데이터를 가져온 다음 메타데이터에서 이 정보를 사용하여 열 마스터 키가 포함된 키 저장소에 연결하고 암호화된 열 암호화 키를 암호 해독합니다. **Microsoft .NET Data Provider for SQL Server**는 열 마스터 키 저장소 공급자를 사용하여 키 저장소와 통신합니다. 해당 공급자는 [SqlColumnEncryptionKeyStoreProvider 클래스](https://docs.microsoft.com/dotnet/api/microsoft.data.sqlclient.sqlcolumnencryptionkeystoreprovider)에서 파생된 클래스 인스턴스입니다.
+열 암호화 키의 일반 텍스트 값을 가져오려면 **Microsoft .NET Data Provider for SQL Server**에서 먼저 열 암호화 키와 해당 열 마스터 키에 대한 메타데이터를 가져온 다음 메타데이터에서 이 정보를 사용하여 열 마스터 키가 포함된 키 저장소에 연결하고 암호화된 열 암호화 키를 암호 해독합니다. **Microsoft .NET Data Provider for SQL Server**는 열 마스터 키 저장소 공급자를 사용하여 키 저장소와 통신합니다. 해당 공급자는 [SqlColumnEncryptionKeyStoreProvider 클래스](/dotnet/api/microsoft.data.sqlclient.sqlcolumnencryptionkeystoreprovider)에서 파생된 클래스 인스턴스입니다.
 
 열 암호화 키를 받는 프로세스는 다음과 같습니다.
 
@@ -295,9 +295,9 @@ using (SqlCommand cmd = connection.CreateCommand())
 
 | 클래스 | Description | 공급자 (조회) 이름 | 플랫폼 |
 |:---|:---|:---|:---|
-|[SqlColumnEncryptionCertificateStoreProvider 클래스](https://docs.microsoft.com/dotnet/api/microsoft.data.sqlclient.sqlcolumnencryptioncertificatestoreprovider) | Windows 인증서 저장소에 대한 공급자입니다. | MSSQL_CERTIFICATE_STORE | Windows |
-|[SqlColumnEncryptionCngProvider 클래스](https://docs.microsoft.com/dotnet/api/microsoft.data.sqlclient.sqlcolumnencryptioncngprovider) | [Microsoft CNG (Cryptography Next Generation) API](https://docs.microsoft.com/windows/win32/seccng/cng-portal)를 지원하는 키 저장소 공급자입니다. 일반적으로 이 저장소의 형식은 하드웨어 보안 모듈로서, 디지털 키를 보호 및 관리하고 암호화 프로세스를 제공하는 물리적 디바이스입니다. | MSSQL_CNG_STORE | Windows |
-| [SqlColumnEncryptionCspProvider 클래스](https://docs.microsoft.com/dotnet/api/microsoft.data.sqlclient.sqlcolumnencryptioncspprovider) | [Microsoft CAPI(암호화 API)](https://docs.microsoft.com/windows/win32/seccrypto/cryptographic-service-providers)를 지원하는 키 저장소 공급자입니다. 일반적으로 이 저장소의 형식은 하드웨어 보안 모듈로서, 디지털 키를 보호 및 관리하고 암호화 프로세스를 제공하는 물리적 디바이스입니다. | MSSQL_CSP_PROVIDER | Windows |
+|[SqlColumnEncryptionCertificateStoreProvider 클래스](/dotnet/api/microsoft.data.sqlclient.sqlcolumnencryptioncertificatestoreprovider) | Windows 인증서 저장소에 대한 공급자입니다. | MSSQL_CERTIFICATE_STORE | Windows |
+|[SqlColumnEncryptionCngProvider 클래스](/dotnet/api/microsoft.data.sqlclient.sqlcolumnencryptioncngprovider) | [Microsoft CNG (Cryptography Next Generation) API](/windows/win32/seccng/cng-portal)를 지원하는 키 저장소 공급자입니다. 일반적으로 이 저장소의 형식은 하드웨어 보안 모듈로서, 디지털 키를 보호 및 관리하고 암호화 프로세스를 제공하는 물리적 디바이스입니다. | MSSQL_CNG_STORE | Windows |
+| [SqlColumnEncryptionCspProvider 클래스](/dotnet/api/microsoft.data.sqlclient.sqlcolumnencryptioncspprovider) | [Microsoft CAPI(암호화 API)](/windows/win32/seccrypto/cryptographic-service-providers)를 지원하는 키 저장소 공급자입니다. 일반적으로 이 저장소의 형식은 하드웨어 보안 모듈로서, 디지털 키를 보호 및 관리하고 암호화 프로세스를 제공하는 물리적 디바이스입니다. | MSSQL_CSP_PROVIDER | Windows |
 
 이러한 공급자를 사용하기 위해 애플리케이션 코드를 변경할 필요는 없지만 다음에 유의하세요.
 
@@ -306,17 +306,17 @@ using (SqlCommand cmd = connection.CreateCommand())
 
 ### <a name="using-the-azure-key-vault-provider"></a>Azure Key Vault 공급자 사용
 
-Azure 주요 자격 증명 모음은 상시 암호화에 대한 열 마스터 키를 저장 및 관리하는 편리한 옵션입니다(특히 애플리케이션이 Azure에서 호스트되는 경우). **Microsoft .NET Data Provider for SQL Server**에서는 Azure Key Vault용 열 마스터 키 저장소 공급자가 기본 제공되지 않지만 NuGet 패키지([Microsoft.Data.SqLClient.AlwaysEncrypted.AzureKeyVaultProvider](https://www.nuget.org/packages/Microsoft.Data.SqlClient.AlwaysEncrypted.AzureKeyVaultProvider))로 사용할 수 있으므로 애플리케이션과 쉽게 통합할 수 있습니다. 자세한 내용은 [상시 암호화 - 데이터 암호화를 사용하여 SQL 데이터베이스의 중요 데이터를 보호하고 Azure 주요 자격 증명 모음에 암호화 키 저장](https://azure.microsoft.com/documentation/articles/sql-database-always-encrypted-azure-key-vault/)을 참조하세요.
+Azure 주요 자격 증명 모음은 상시 암호화에 대한 열 마스터 키를 저장 및 관리하는 편리한 옵션입니다(특히 애플리케이션이 Azure에서 호스트되는 경우). **Microsoft .NET Data Provider for SQL Server**에서는 Azure Key Vault용 열 마스터 키 저장소 공급자가 기본 제공되지 않지만 NuGet 패키지([Microsoft.Data.SqLClient.AlwaysEncrypted.AzureKeyVaultProvider](https://www.nuget.org/packages/Microsoft.Data.SqlClient.AlwaysEncrypted.AzureKeyVaultProvider))로 사용할 수 있으므로 애플리케이션과 쉽게 통합할 수 있습니다. 자세한 내용은 [상시 암호화 - 데이터 암호화를 사용하여 SQL 데이터베이스의 중요 데이터를 보호하고 Azure 주요 자격 증명 모음에 암호화 키 저장](/azure/azure-sql/database/always-encrypted-azure-key-vault-configure)을 참조하세요.
 
 | 클래스 | Description | 공급자 (조회) 이름 | 플랫폼 |
 |:---|:---|:---|:---|
-|[SqlColumnEncryptionAzureKeyVaultProvider 클래스](https://docs.microsoft.com/dotnet/api/microsoft.data.sqlclient.alwaysencrypted.azurekeyvaultprovider.sqlcolumnencryptionazurekeyvaultprovider) | Azure Key Vault 공급자입니다. | AZURE_KEY_VAULT | Windows, Linux, macOS |
+|[SqlColumnEncryptionAzureKeyVaultProvider 클래스](/dotnet/api/microsoft.data.sqlclient.alwaysencrypted.azurekeyvaultprovider.sqlcolumnencryptionazurekeyvaultprovider) | Azure Key Vault 공급자입니다. | AZURE_KEY_VAULT | Windows, Linux, macOS |
 
 Azure Key Vault를 사용하여 암호화/암호 해독을 수행하는 방법에 대한 예제는 [Always Encrypted에서 작동하는 Azure Key Vault](azure-key-vault-example.md) 및 [보안 Enclave를 사용한 Always Encrypted에서 작동하는 Azure Key Vault](azure-key-vault-enclave-example.md)를 참조하세요.
 
 ### <a name="implementing-a-custom-column-master-key-store-provider"></a>사용자 지정 열 마스터 키 저장소 공급자 구현
 
-기존 공급자에서 지원하지 않는 열 마스터 키를 키 저장소에 저장하려는 경우 [SqlColumnEncryptionCngProvider 클래스](https://docs.microsoft.com/dotnet/api/microsoft.data.sqlclient.sqlcolumnencryptioncngprovider) 를 확장하고 [SqlConnection.RegisterColumnEncryptionKeyStoreProviders](https://docs.microsoft.com/dotnet/api/microsoft.data.sqlclient.sqlconnection.registercolumnencryptionkeystoreproviders) 메서드를 사용하여 공급자를 등록하여 사용자 지정 공급자를 구현할 수 있습니다.
+기존 공급자에서 지원하지 않는 열 마스터 키를 키 저장소에 저장하려는 경우 [SqlColumnEncryptionCngProvider 클래스](/dotnet/api/microsoft.data.sqlclient.sqlcolumnencryptioncngprovider) 를 확장하고 [SqlConnection.RegisterColumnEncryptionKeyStoreProviders](/dotnet/api/microsoft.data.sqlclient.sqlconnection.registercolumnencryptionkeystoreproviders) 메서드를 사용하여 공급자를 등록하여 사용자 지정 공급자를 구현할 수 있습니다.
 
 ```cs
 public class MyCustomKeyStoreProvider : SqlColumnEncryptionKeyStoreProvider
@@ -349,7 +349,7 @@ class Program
 
 암호화된 열에 액세스할 때 **Microsoft .NET Data Provider for SQL Server**는 올바른 열 마스터 키 저장소를 투명하게 찾고 호출하여 열 암호화 키를 암호 해독합니다. 일반적으로 정상적인 애플리케이션 코드는 열 마스터 키 저장소 공급자를 직접 호출하지 않습니다. 그러나 명시적으로 공급자를 시작 및 호출하여 프로그래밍 방식으로 상시 암호화 키를 프로비전 및 관리하고, 암호화된 열 암호화 키를 생성하고, 열 암호화 키의 암호를 해독할 수 있습니다(예: 열 마스터 키 순환의 일부로). 자세한 내용은 [Always Encrypted를 위한 키 관리 개요](../../../relational-databases/security/encryption/overview-of-key-management-for-always-encrypted.md)를 참조하세요.
 사용자 지정 키 저장소 공급자를 사용하는 경우에만 고유한 키 관리 도구 구현이 필요할 수 있습니다. 기본 제공 공급자가 있는 키 저장소 또는 Azure 주요 자격 증명 모음에 저장된 키를 사용할 때는 SQL Server Management Studio 또는 PowerShell 등 기존 도구를 사용하여 키를 관리 및 프로비전할 수 있습니다.
-아래 예제에서는 열 암호화 키를 생성하고 [SqlColumnEncryptionCertificateStoreProvider 클래스](https://docs.microsoft.com/dotnet/api/microsoft.data.sqlclient.sqlcolumnencryptioncertificatestoreprovider) 를 사용하여 인증서로 키를 암호화하는 방법을 보여 줍니다.
+아래 예제에서는 열 암호화 키를 생성하고 [SqlColumnEncryptionCertificateStoreProvider 클래스](/dotnet/api/microsoft.data.sqlclient.sqlcolumnencryptioncertificatestoreprovider) 를 사용하여 인증서로 키를 암호화하는 방법을 보여 줍니다.
 
 ```cs
 using System.Security.Cryptography;
@@ -392,7 +392,7 @@ Always Encrypted는 클라이언트 쪽 암호화 기술이므로 데이터베�
 
 ### <a name="query-metadata-caching"></a>쿼리 메타데이터 캐싱
 
-**Microsoft .NET Data Provider for SQL Server**는 각 쿼리 문에 대해 **sys.sp_describe_parameter_encryption**의 결과를 캐시합니다. 결과적으로 동일한 쿼리 문이 여러 번 실행될 경우 드라이버는 **sys.sp_describe_parameter_encryption** 을 한 번만 호출합니다. 쿼리 문에 대한 암호화 메타데이터 캐싱은 실제로 데이터베이스에서 메타데이터를 가져오는 성능 비용을 절감해 줍니다. 캐싱은 기본적으로 사용하도록 설정됩니다. [SqlConnection.ColumnEncryptionQueryMetadataCacheEnabled 속성](https://docs.microsoft.com/dotnet/api/microsoft.data.sqlclient.sqlconnection.columnencryptionquerymetadatacacheenabled)을 false로 설정하여 매개 변수 메타데이터 캐싱을 사용하지 않도록 설정할 수 있습니다. 하지만 아래 설명된 경우와 같이 아주 드문 경우를 제외하고는 권장되지 않습니다.
+**Microsoft .NET Data Provider for SQL Server**는 각 쿼리 문에 대해 **sys.sp_describe_parameter_encryption**의 결과를 캐시합니다. 결과적으로 동일한 쿼리 문이 여러 번 실행될 경우 드라이버는 **sys.sp_describe_parameter_encryption** 을 한 번만 호출합니다. 쿼리 문에 대한 암호화 메타데이터 캐싱은 실제로 데이터베이스에서 메타데이터를 가져오는 성능 비용을 절감해 줍니다. 캐싱은 기본적으로 사용하도록 설정됩니다. [SqlConnection.ColumnEncryptionQueryMetadataCacheEnabled 속성](/dotnet/api/microsoft.data.sqlclient.sqlconnection.columnencryptionquerymetadatacacheenabled)을 false로 설정하여 매개 변수 메타데이터 캐싱을 사용하지 않도록 설정할 수 있습니다. 하지만 아래 설명된 경우와 같이 아주 드문 경우를 제외하고는 권장되지 않습니다.
 
 두 개의 서로 다른 스키마 s1 및 s2가 있는 데이터베이스를 고려해 보세요. 각 스키마에는 이름이 같은 테이블 t가 있습니다. 암호화 관련 속성을 제외하면 s1.t 및 s2.t 테이블 정의가 동일합니다. 이름이 c인 열이 s1.t에 있고 암호화되지 않았으며, s2.t에서는 암호화되어 있습니다. 데이터베이스에 두 사용자 u1 및 u2가 있습니다. u1 사용자에 대한 기본 스키마는 s1입니다. u2에 대한 기본 스키마는 s2입니다. .NET 애플리케이션에서는 데이터베이스에 대한 두 가지 연결이 열립니다. 한 연결에서는 u1 사용자를 가장하고, 다른 연결에서는 u2 사용자를 가장합니다. 애플리케이션은 사용자 u1에 대한 연결을 통해 c열을 대상으로 하는 매개 변수가 포함된 쿼리를 보냅니다(쿼리에서 스키마를 지정하지 않으면 기본 사용자 스키마로 가정). 다음으로 애플리케이션에서 u2 사용자에 대한 연결을 통해 동일한 쿼리를 보냅니다. 쿼리 메타데이터 캐싱을 사용하는 경우에는 첫 번째 쿼리 후 캐시가 c열(쿼리 매개 변수 대상)이 암호화되지 않았음을 나타내는 메타데이터로 채워집니다. 두 번째 쿼리에 동일한 쿼리 문이 있으므로 캐시에 저장된 정보가 사용됩니다. 결과적으로 드라이버는 매개 변수를 암호화하지 않고 쿼리를 보내(대상 열 s2.t.c는 암호화되었으므로 정확하지는 않음) 서버에 전달되는 매개 변수의 일반 텍스트 값이 누락됩니다. 서버는 해당 비호환성을 감지하여 드라이버가 강제로 캐시를 새로 고치도록 합니다. 따라서 애플리케이션에서 올바르게 암호화된 매개 변수 값이 포함된 쿼리를 다시 보냅니다. 이러한 경우 서버에 중요한 정보가 누락되는 것을 방지하기 위해 캐싱을 사용하지 않도록 설정해야 합니다.
 
@@ -403,7 +403,7 @@ Always Encrypted는 클라이언트 쪽 암호화 기술이므로 데이터베�
 > [!NOTE]
 > 쿼리 수준에서 Always Encrypted를 설정하면 매개 변수 암호화 메타데이터 캐싱의 성능상 이점이 제한됩니다.
 
-개별 쿼리의 Always Encrypted 동작을 제어하려면 [SqlCommand](https://docs.microsoft.com/dotnet/api/microsoft.data.sqlclient.sqlcommand) 및 [SqlCommandColumnEncryptionSetting](https://docs.microsoft.com/dotnet/api/microsoft.data.sqlclient.sqlcommandcolumnencryptionsetting)의 이 생성자를 사용해야 합니다. 다음은 몇 가지 유용한 지침입니다.
+개별 쿼리의 Always Encrypted 동작을 제어하려면 [SqlCommand](/dotnet/api/microsoft.data.sqlclient.sqlcommand) 및 [SqlCommandColumnEncryptionSetting](/dotnet/api/microsoft.data.sqlclient.sqlcommandcolumnencryptionsetting)의 이 생성자를 사용해야 합니다. 다음은 몇 가지 유용한 지침입니다.
 
 - 대부분이 데이터베이스 연결 액세스 암호화된 열을 통해 전송하는 클라이언트 애플리케이션을 쿼리하는 경우:
   - **열 암호화 설정** 연결 문자열 키워드를 *사용*으로 설정합니다.
@@ -447,7 +447,7 @@ connection, null, SqlCommandColumnEncryptionSetting.ResultSetOnly))
 
 열 마스터 키 저장소에 대한 호출 수를 줄여 열 암호화 키의 암호를 해독하기 위해 **Microsoft .NET Data Provider for SQL Server**는 일반 텍스트 열 암호화 키를 메모리에 캐시합니다. 데이터베이스 메타데이터에서 암호화된 열 암호화 키 값을 받은 후 드라이버는 제일 먼저 암호화된 키 값에 해당하는 일반 텍스트 열 암호화 키를 찾습니다. 드라이버는 캐시에서 암호화된 열 암호화 키 값을 찾을 수 없는 경우에만 열 마스터 키가 포함된 키 저장소를 호출합니다.
 
-캐시 항목은 보안상의 이유로 구성 가능한 TTL(Time-to-Live) 시간 간격 후 제거됩니다. 기본 TTL(Time-to-Live) 값은 2시간입니다. 애플리케이션에서 열 암호화 키를 일반 텍스트로 캐시할 수 있는 시간에 대해 좀 더 엄격한 보안 요구 사항이 있을 경우에는 [SqlConnection.ColumnEncryptionKeyCacheTtl 속성](https://docs.microsoft.com/dotnet/api/microsoft.data.sqlclient.sqlconnection.columnencryptionkeycachettl)을 사용하여 변경할 수 있습니다. 
+캐시 항목은 보안상의 이유로 구성 가능한 TTL(Time-to-Live) 시간 간격 후 제거됩니다. 기본 TTL(Time-to-Live) 값은 2시간입니다. 애플리케이션에서 열 암호화 키를 일반 텍스트로 캐시할 수 있는 시간에 대해 좀 더 엄격한 보안 요구 사항이 있을 경우에는 [SqlConnection.ColumnEncryptionKeyCacheTtl 속성](/dotnet/api/microsoft.data.sqlclient.sqlconnection.columnencryptionkeycachettl)을 사용하여 변경할 수 있습니다. 
 
 ## <a name="enabling-additional-protection-for-a-compromised-sql-server"></a>손상된 SQL Server에 대한 추가 보호를 사용하도록 설정
 
@@ -457,7 +457,7 @@ connection, null, SqlCommandColumnEncryptionSetting.ResultSetOnly))
 
 **Microsoft .NET Data Provider for SQL Server**에서 SQL Server에 매개 변수가 있는 쿼리를 보내기 전에 [sys.sp_describe_parameter_encryption](../../../relational-databases/system-stored-procedures/sp-describe-parameter-encryption-transact-sql.md)을 호출하여 쿼리 문을 분석하고 쿼리에서 암호화해야 할 매개 변수에 대한 정보를 제공하라는 요청을 받게 됩니다. 손상된 SQL Server 인스턴스는 매개 변수에서 암호화된 열을 대상으로 지정하지 않았다고 알리는 메타데이터를 보내 실제로 열은 데이터베이스에서 암호화되어 있어도 **Microsoft .NET Data Provider for SQL Server**에서는 오해할 수 있습니다. 결과적으로 **Microsoft .NET Data Provider for SQL Server**는 매개 변수 값을 암호화하지 않고 일반 텍스트로 손상된 SQL Server 인스턴스에 보냅니다.
 
-이러한 공격을 방지하기 위해 애플리케이션은 매개 변수에 대한 [SqlParameter.ForceColumnEncryption 속성](https://docs.microsoft.com/dotnet/api/microsoft.data.sqlclient.sqlparameter.forcecolumnencryption) 을 true로 설정할 수 있습니다. 이렇게 하면 서버에서 수신한 메타데이터에서 매개 변수를 암호화하지 않아도 된다고 나타낼 경우 **Microsoft .NET Data Provider for SQL Server**에서는 예외를 throw합니다.
+이러한 공격을 방지하기 위해 애플리케이션은 매개 변수에 대한 [SqlParameter.ForceColumnEncryption 속성](/dotnet/api/microsoft.data.sqlclient.sqlparameter.forcecolumnencryption) 을 true로 설정할 수 있습니다. 이렇게 하면 서버에서 수신한 메타데이터에서 매개 변수를 암호화하지 않아도 된다고 나타낼 경우 **Microsoft .NET Data Provider for SQL Server**에서는 예외를 throw합니다.
 
 **SqlParameter.ForceColumnEncryption 속성**을 사용하면 보안이 강화되지만 클라이언트 애플리케이션에 대한 암호화 투명도는 줄어듭니다. 데이터베이스 스키마를 업데이트하여 암호화된 열 집합을 변경하려면 애플리케이션도 변경해야 할 수 있습니다.
 
@@ -490,7 +490,7 @@ using (SqlCommand cmd = _sqlconn.CreateCommand())
 
 암호화된 열을 대상으로 하는 쿼리 매개 변수와, 암호화된 열에서 검색된 결과에 대해 SQL Server에서 반환하는 암호화 메타데이터에는 키 저장소와, 키 저장소에 있는 키의 위치를 식별하는 열 마스터 키의 키 경로가 포함되어 있습니다. SQL Server 인스턴스가 손상되면 **Microsoft .NET Data Provider for SQL Server**를 공격자가 조정하는 위치로 연결하는 키 경로를 보낼 수 있습니다. 이렇게 하면 애플리케이션에서 인증해야 하는 키 저장소의 경우 자격 증명에 누수가 발생할 수도 있습니다.
 
-이러한 공격을 방지하기 위해 애플리케이션에서는 [SqlConnection.ColumnEncryptionTrustedMasterKeyPaths 속성](https://docs.microsoft.com/dotnet/api/microsoft.data.sqlclient.sqlconnection.columnencryptiontrustedmasterkeypaths)을 사용하여 지정된 서버에 대해 신뢰할 수 있는 키 경로 목록을 지정할 수 있습니다. **Microsoft .NET Data Provider for SQL Server**에서 신뢰할 수 있는 키 경로 목록 외부에 있는 키 경로를 수신하면 예외가 throw됩니다.
+이러한 공격을 방지하기 위해 애플리케이션에서는 [SqlConnection.ColumnEncryptionTrustedMasterKeyPaths 속성](/dotnet/api/microsoft.data.sqlclient.sqlconnection.columnencryptiontrustedmasterkeypaths)을 사용하여 지정된 서버에 대해 신뢰할 수 있는 키 경로 목록을 지정할 수 있습니다. **Microsoft .NET Data Provider for SQL Server**에서 신뢰할 수 있는 키 경로 목록 외부에 있는 키 경로를 수신하면 예외가 throw됩니다.
 
 신뢰할 수 있는 키 경로를 설정하면 애플리케이션 보안이 강화되지만 열 마스터 키를 회전시킬 때마다 즉, 열 마스터 키 경로가 변경될 때마다 애플리케이션 코드 및/또는 구성을 변경해야 합니다.
 
@@ -513,7 +513,7 @@ SqlBulkCopy를 사용하면 데이터의 암호를 해독하지 않고 한 테�
 
 - 대상 테이블의 암호화 구성이 원본 테이블의 구성과 일치하는지 확인합니다. 특히 두 테이블에 동일한 암호화 열이 있고 동일한 암호화 형식 및 암호화 키를 사용하여 열이 암호화되어야 합니다. 참고: 대상 열 중 하나가 해당 원본 열과 다르게 암호화된 경우 복사 작업 후 대상 테이블의 데이터 암호를 해독할 수 없습니다. 데이터가 손상됩니다.
 - 상시 암호화를 사용하지 않고 원본 테이블과 대상 테이블에 대한 데이터베이스 연결을 구성합니다.
-- `AllowEncryptedValueModifications` 옵션을 설정합니다([SqlBulkCopyOptions](https://docs.microsoft.com/dotnet/api/microsoft.data.sqlclient.sqlbulkcopyoptions)참조).
+- `AllowEncryptedValueModifications` 옵션을 설정합니다([SqlBulkCopyOptions](/dotnet/api/microsoft.data.sqlclient.sqlbulkcopyoptions)참조).
 
 > [!NOTE]
 > `AllowEncryptedValueModifications`를 지정하면 **Microsoft .NET Data Provider for SQL Server**가 데이터가 실제로 암호화되었는지 여부 또는 동일한 암호화 형식, 알고리즘 및 키를 대상 열로 사용하여 올바르게 암호화되었는지 확인하지 않아 데이터베이스가 손상될 수 있으므로 주의하여 사용합니다.
@@ -544,31 +544,31 @@ static public void CopyTablesUsingBulk(string sourceTable, string targetTable)
 
 ## <a name="always-encrypted-api-reference"></a>상시 암호화 API 참조
 
-**네임스페이스:** [Microsoft.Data.SqlClient](https://docs.microsoft.com/dotnet/api/microsoft.data.sqlclient)
+**네임스페이스:** [Microsoft.Data.SqlClient](/dotnet/api/microsoft.data.sqlclient)
 
 **어셈블리:** Microsoft.Data.SqlClient.dll
 
 |속성|Description|
 |:---|:---|
-|[SqlColumnEncryptionCertificateStoreProvider 클래스](https://docs.microsoft.com/dotnet/api/microsoft.data.sqlclient.sqlcolumnencryptioncertificatestoreprovider)|Windows 인증서 저장소에 대한 키 저장소 공급자입니다.|
-|[SqlColumnEncryptionCngProvider 클래스](https://docs.microsoft.com/dotnet/api/microsoft.data.sqlclient.sqlcolumnencryptioncngprovider)|Microsoft CNG (Cryptography Next Generation) API에 대한 키 저장소 공급자입니다.|
-|[SqlColumnEncryptionCspProvider 클래스](https://docs.microsoft.com/dotnet/api/microsoft.data.sqlclient.sqlcolumnencryptioncspprovider)|CSP(암호화 서비스 공급자)를 기반으로 하는 Microsoft CAPI에 대한 키 저장소 공급자입니다.|
-|[SqlColumnEncryptionKeyStoreProvider](https://docs.microsoft.com/dotnet/api/microsoft.data.sqlclient.sqlcolumnencryptionkeystoreprovider)|키 저장소 공급자의 기본 클래스입니다.|
-|[SqlCommandColumnEncryptionSetting 열거형](https://docs.microsoft.com/dotnet/api/microsoft.data.sqlclient.sqlcommandcolumnencryptionsetting)|데이터베이스 연결에 대한 암호화 및 암호 해독을 활성화하는 설정입니다.|
-|[SqlConnectionColumnEncryptionSetting 열거형](https://docs.microsoft.com/dotnet/api/microsoft.data.sqlclient.sqlconnectioncolumnencryptionsetting)|개별 쿼리에 대한 상시 암호화의 동작을 제어하는 설정입니다.|
-|[SqlConnectionStringBuilder.ColumnEncryptionSetting 속성](https://docs.microsoft.com/dotnet/api/microsoft.data.sqlclient.sqlconnectionstringbuilder.columnencryptionsetting)|연결 문자열에서 상시 암호화를 가져오고 설정합니다.|
-|[SqlConnection.ColumnEncryptionQueryMetadataCacheEnabled 속성](https://docs.microsoft.com/dotnet/api/microsoft.data.sqlclient.sqlconnection.columnencryptionquerymetadatacacheenabled)|암호화 쿼리 메타데이터 캐싱을 사용하거나 사용하지 않도록 설정합니다.|
-|[SqlConnection.ColumnEncryptionKeyCacheTtl 속성](https://docs.microsoft.com/dotnet/api/microsoft.data.sqlclient.sqlconnection.columnencryptionkeycachettl)|열 암호화 키 캐시에서 항목에 대한 TTL(Time-to-Live)을 가져와 설정합니다.|
-|[SqlConnection.ColumnEncryptionTrustedMasterKeyPaths 속성](https://docs.microsoft.com/dotnet/api/microsoft.data.sqlclient.sqlconnection.columnencryptiontrustedmasterkeypaths)|데이터베이스 서버에 대해 신뢰할 수 있는 키 경로 목록을 설정할 수 있습니다. 애플리케이션 쿼리를 처리하는 동안 드라이버에서 목록에 없는 키 경로를 수신하면 쿼리가 실패합니다. 이 속성은 손상된 SQL Server가 가짜 키 쌍을 제공하여 키 저장소 자격 증명을 유출하는 보안 공격에 대한 추가 보호를 제공합니다.|
-|[SqlConnection.RegisterColumnEncryptionKeyStoreProviders 메서드](https://docs.microsoft.com/dotnet/api/microsoft.data.sqlclient.sqlconnection.registercolumnencryptionkeystoreproviders)|사용자 지정 키 저장소 공급자를 등록할 수 있습니다. 키 저장소 공급자 이름을 키 저장소 공급자 구현에 매핑하는 사전입니다.|
-|[SqlCommand 생성자(문자열, SqlConnection, SqlTransaction, SqlCommandColumnEncryptionSetting)](https://docs.microsoft.com/dotnet/api/microsoft.data.sqlclient.sqlcommand.-ctor?view=sqlclient-dotnet-core-1.0#Microsoft_Data_SqlClient_SqlCommand__ctor_System_String_Microsoft_Data_SqlClient_SqlConnection_Microsoft_Data_SqlClient_SqlTransaction_Microsoft_Data_SqlClient_SqlCommandColumnEncryptionSetting_)|개별 쿼리에 대한 상시 암호화의 동작을 제어할 수 있습니다.|
-|[SqlParameter.ForceColumnEncryption 속성](https://docs.microsoft.com/dotnet/api/microsoft.data.sqlclient.sqlparameter.forcecolumnencryption)|매개 변수의 암호화를 적용합니다. SQL Server가 매개 변수를 암호화하지 않아도 되는 것을 드라이버에 알리는 경우 매개 변수를 사용하는 쿼리는 실패합니다. 이 속성은 데이터 노출을 야기할 수 있는 잘못된 암호화 메타데이터를 클라이언트에게 제공하는 손상된 SQL Server를 포함하는 보안 공격에 대한 추가 보호를 제공합니다.|
-|[연결 문자열](https://docs.microsoft.com/dotnet/api/microsoft.data.sqlclient.sqlconnection.connectionstring) 키워드: `Column Encryption Setting=enabled`|연결에 대해 상시 암호화 기능을 사용하거나 사용하지 않습니다.|
+|[SqlColumnEncryptionCertificateStoreProvider 클래스](/dotnet/api/microsoft.data.sqlclient.sqlcolumnencryptioncertificatestoreprovider)|Windows 인증서 저장소에 대한 키 저장소 공급자입니다.|
+|[SqlColumnEncryptionCngProvider 클래스](/dotnet/api/microsoft.data.sqlclient.sqlcolumnencryptioncngprovider)|Microsoft CNG (Cryptography Next Generation) API에 대한 키 저장소 공급자입니다.|
+|[SqlColumnEncryptionCspProvider 클래스](/dotnet/api/microsoft.data.sqlclient.sqlcolumnencryptioncspprovider)|CSP(암호화 서비스 공급자)를 기반으로 하는 Microsoft CAPI에 대한 키 저장소 공급자입니다.|
+|[SqlColumnEncryptionKeyStoreProvider](/dotnet/api/microsoft.data.sqlclient.sqlcolumnencryptionkeystoreprovider)|키 저장소 공급자의 기본 클래스입니다.|
+|[SqlCommandColumnEncryptionSetting 열거형](/dotnet/api/microsoft.data.sqlclient.sqlcommandcolumnencryptionsetting)|데이터베이스 연결에 대한 암호화 및 암호 해독을 활성화하는 설정입니다.|
+|[SqlConnectionColumnEncryptionSetting 열거형](/dotnet/api/microsoft.data.sqlclient.sqlconnectioncolumnencryptionsetting)|개별 쿼리에 대한 상시 암호화의 동작을 제어하는 설정입니다.|
+|[SqlConnectionStringBuilder.ColumnEncryptionSetting 속성](/dotnet/api/microsoft.data.sqlclient.sqlconnectionstringbuilder.columnencryptionsetting)|연결 문자열에서 상시 암호화를 가져오고 설정합니다.|
+|[SqlConnection.ColumnEncryptionQueryMetadataCacheEnabled 속성](/dotnet/api/microsoft.data.sqlclient.sqlconnection.columnencryptionquerymetadatacacheenabled)|암호화 쿼리 메타데이터 캐싱을 사용하거나 사용하지 않도록 설정합니다.|
+|[SqlConnection.ColumnEncryptionKeyCacheTtl 속성](/dotnet/api/microsoft.data.sqlclient.sqlconnection.columnencryptionkeycachettl)|열 암호화 키 캐시에서 항목에 대한 TTL(Time-to-Live)을 가져와 설정합니다.|
+|[SqlConnection.ColumnEncryptionTrustedMasterKeyPaths 속성](/dotnet/api/microsoft.data.sqlclient.sqlconnection.columnencryptiontrustedmasterkeypaths)|데이터베이스 서버에 대해 신뢰할 수 있는 키 경로 목록을 설정할 수 있습니다. 애플리케이션 쿼리를 처리하는 동안 드라이버에서 목록에 없는 키 경로를 수신하면 쿼리가 실패합니다. 이 속성은 손상된 SQL Server가 가짜 키 쌍을 제공하여 키 저장소 자격 증명을 유출하는 보안 공격에 대한 추가 보호를 제공합니다.|
+|[SqlConnection.RegisterColumnEncryptionKeyStoreProviders 메서드](/dotnet/api/microsoft.data.sqlclient.sqlconnection.registercolumnencryptionkeystoreproviders)|사용자 지정 키 저장소 공급자를 등록할 수 있습니다. 키 저장소 공급자 이름을 키 저장소 공급자 구현에 매핑하는 사전입니다.|
+|[SqlCommand 생성자(문자열, SqlConnection, SqlTransaction, SqlCommandColumnEncryptionSetting)](/dotnet/api/microsoft.data.sqlclient.sqlcommand.-ctor?view=sqlclient-dotnet-core-1.0#Microsoft_Data_SqlClient_SqlCommand__ctor_System_String_Microsoft_Data_SqlClient_SqlConnection_Microsoft_Data_SqlClient_SqlTransaction_Microsoft_Data_SqlClient_SqlCommandColumnEncryptionSetting_)|개별 쿼리에 대한 상시 암호화의 동작을 제어할 수 있습니다.|
+|[SqlParameter.ForceColumnEncryption 속성](/dotnet/api/microsoft.data.sqlclient.sqlparameter.forcecolumnencryption)|매개 변수의 암호화를 적용합니다. SQL Server가 매개 변수를 암호화하지 않아도 되는 것을 드라이버에 알리는 경우 매개 변수를 사용하는 쿼리는 실패합니다. 이 속성은 데이터 노출을 야기할 수 있는 잘못된 암호화 메타데이터를 클라이언트에게 제공하는 손상된 SQL Server를 포함하는 보안 공격에 대한 추가 보호를 제공합니다.|
+|[연결 문자열](/dotnet/api/microsoft.data.sqlclient.sqlconnection.connectionstring) 키워드: `Column Encryption Setting=enabled`|연결에 대해 상시 암호화 기능을 사용하거나 사용하지 않습니다.|
 
 ## <a name="see-also"></a>참고 항목
 
 - [Always Encrypted](../../../relational-databases/security/encryption/always-encrypted-database-engine.md)
-- [SQL Database 자습서: Always Encrypted로 중요한 데이터 보호](https://azure.microsoft.com/documentation/articles/sql-database-always-encrypted/)
+- [SQL Database 자습서: Always Encrypted로 중요한 데이터 보호](/azure/azure-sql/database/always-encrypted-certificate-store-configure)
 - [자습서: 보안 enclave를 사용한 Always Encrypted를 이용하여 .NET 애플리케이션 개발](tutorial-always-encrypted-enclaves-develop-net-apps.md)을 참조하세요.
 - [예: Always Encrypted에서 작동하는 Azure Key Vault](azure-key-vault-example.md)
 - [예: 보안 Enclave를 사용한 Always Encrypted에서 작동하는 Azure Key Vault](azure-key-vault-enclave-example.md)

@@ -9,12 +9,12 @@ ms.date: 03/30/2020
 ms.topic: tutorial
 ms.prod: sql
 ms.technology: big-data-cluster
-ms.openlocfilehash: 7f42b454ebfc1b9b4ea8e841cba6fe2a4b209ebc
-ms.sourcegitcommit: da88320c474c1c9124574f90d549c50ee3387b4c
+ms.openlocfilehash: 32cdcca2e4052374e7f26d59a3caf35f200cd47d
+ms.sourcegitcommit: c7f40918dc3ecdb0ed2ef5c237a3996cb4cd268d
 ms.translationtype: HT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 07/01/2020
-ms.locfileid: "85660377"
+ms.lasthandoff: 10/05/2020
+ms.locfileid: "91725811"
 ---
 # <a name="run-a-sample-notebook-using-spark"></a>Spark를 사용하여 샘플 Notebook 실행
 
@@ -69,11 +69,11 @@ ms.locfileid: "85660377"
 
 샘플 Notebook의 각 셀을 연속해서 실행합니다. [!INCLUDE[big-data-clusters-2019](../includes/ssbigdataclusters-ss-nover.md)]에서 Notebooks를 사용하는 방법에 대한 자세한 내용은 다음 리소스를 참조하세요.
 
-- [Notebook을 사용하는 방법](../azure-data-studio/notebooks-guidance.md)
+- [Notebook을 사용하는 방법](../azure-data-studio/notebooks/notebooks-guidance.md)
 - [Azure Data Studio에서 Notebooks를 관리하는 방법](notebooks-manage-bdc.md)
 
 ## <a name="next-steps"></a>다음 단계
 
 Notebook에 대한 자세한 정보:
 > [!div class="nextstepaction"]
-> [Notebook을 사용하는 방법](../azure-data-studio/notebooks-guidance.md)
+> [Notebook을 사용하는 방법](../azure-data-studio/notebooks/notebooks-guidance.md)

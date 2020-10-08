@@ -9,12 +9,12 @@ ms.date: 06/22/2020
 ms.topic: conceptual
 ms.prod: sql
 ms.technology: big-data-cluster
-ms.openlocfilehash: 5d0c4f21d6fcf8f90026164dded1007de4e34164
-ms.sourcegitcommit: 7345e4f05d6c06e1bcd73747a4a47873b3f3251f
+ms.openlocfilehash: c901147ec1481f93bb76a9bf013d393b47be97ab
+ms.sourcegitcommit: c7f40918dc3ecdb0ed2ef5c237a3996cb4cd268d
 ms.translationtype: HT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 08/24/2020
-ms.locfileid: "88765842"
+ms.lasthandoff: 10/05/2020
+ms.locfileid: "91725898"
 ---
 # <a name="install-sql-server-2019-big-data-tools"></a>SQL Server 2019 빅 데이터 도구 설치
 
@@ -29,10 +29,10 @@ ms.locfileid: "88765842"
 | 도구 | 필수 | Description | 설치 |
 |---|---|---|---|
 | `python` | 예 | python은 동적 의미 체계를 사용하는 해석된 개체 지향 고급 프로그래밍 언어입니다. SQL Server 빅 데이터 클러스터의 대부분은 python을 사용합니다. | [python 설치](#python).|
-| `azdata` | 예 | 빅 데이터 클러스터를 설치하고 관리하기 위한 명령줄 도구입니다. | [설치](deploy-install-azdata.md) |
+| `azdata` | 예 | 빅 데이터 클러스터를 설치하고 관리하기 위한 명령줄 도구입니다. | [설치](../azdata/install/deploy-install-azdata.md) |
 | `kubectl`<sup>1</sup> | 예 | 기본 Kubernetes 클러스터를 모니터링하기 위한 명령줄 도구입니다([자세한 정보](https://kubernetes.io/docs/tasks/tools/install-kubectl/)). | [Windows](https://kubernetes.io/docs/tasks/tools/install-kubectl/#install-with-powershell-from-psgallery) \| [Linux](https://kubernetes.io/docs/tasks/tools/install-kubectl/#install-using-native-package-management) |
-| **Azure Data Studio** | 예 | SQL Server를 쿼리하기 위한 플랫폼 간 그래픽 도구입니다. | [설치](https://aka.ms/getazuredatastudio) |
-| **데이터 가상화 확장** | 예 | 데이터 가상화 마법사를 제공하는 Azure Data Studio용 확장입니다. | [설치](../azure-data-studio/data-virtualization-extension.md) |
+| **Azure Data Studio** | 예 | SQL Server를 쿼리하기 위한 플랫폼 간 그래픽 도구입니다. | [설치](../azure-data-studio/download-azure-data-studio.md) |
+| **데이터 가상화 확장** | 예 | 데이터 가상화 마법사를 제공하는 Azure Data Studio용 확장입니다. | [설치](../azure-data-studio/extensions/data-virtualization-extension.md) |
 | **Azure CLI**<sup>2</sup> | AKS의 경우 | Azure 서비스를 관리하기 위한 최신 명령줄 인터페이스입니다. AKS 빅 데이터 클러스터 배포와 함께 사용됩니다([자세한 정보](/cli/azure/?view=azure-cli-latest)). | [설치](/cli/azure/install-azure-cli?view=azure-cli-latest) |
 | **mssql-cli** | 옵션 | SQL Server를 쿼리하기 위한 최신 명령줄 인터페이스입니다([자세한 정보](../tools/mssql-cli.md)). | [Windows](https://github.com/dbcli/mssql-cli/blob/master/doc/installation/windows.md) \| [Linux](https://github.com/dbcli/mssql-cli/blob/master/doc/installation/linux.md) |
 | **sqlcmd** | 일부 스크립트의 경우 | SQL Server를 쿼리하기 위한 레거시 명령줄 도구입니다([자세한 정보](../tools/sqlcmd-utility.md?view=sql-server-ver15)). SQLCMD 패키지를 설치하기 전에 Microsoft ODBC Driver 11 for SQL Server를 설치해야 할 수 있습니다. | [Windows](https://www.microsoft.com/download/details.aspx?id=36433) \| [Linux](../linux/sql-server-linux-setup-tools.md) |
@@ -85,7 +85,7 @@ ms.locfileid: "88765842"
 
 Azure Data Studio는 특히 SQL Server 빅 데이터 클러스터를 위한 기능을 제공합니다.
 
-[최신 Azure Data Studio를 가져옵니다](https://aka.ms/getazuredatastudio).
+[최신 Azure Data Studio를 가져옵니다](../azure-data-studio/download-azure-data-studio.md).
 
 최신 릴리스에 대한 자세한 내용은 [릴리스 정보](./release-notes-big-data-cluster.md)를 참조하세요.
 
