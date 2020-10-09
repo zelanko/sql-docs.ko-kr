@@ -17,12 +17,12 @@ ms.assetid: 063fc40d-ff81-490d-9c9b-2faefb729f37
 author: markingmyname
 ms.author: maghan
 monikerRange: '>=aps-pdw-2016||=azuresqldb-current||=azure-sqldw-latest||>=sql-server-2016||=sqlallproducts-allversions||>=sql-server-linux-2017||=azuresqldb-mi-current'
-ms.openlocfilehash: 45ac4b91f5aab26d1086bcc8e3b31c11821f75da
-ms.sourcegitcommit: e700497f962e4c2274df16d9e651059b42ff1a10
+ms.openlocfilehash: cc2f16bf168fc7f37ac6f6518e7e16cd7dfa35c3
+ms.sourcegitcommit: 4d370399f6f142e25075b3714e5c2ce056b1bfd0
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 08/17/2020
-ms.locfileid: "88486843"
+ms.lasthandoff: 10/09/2020
+ms.locfileid: "91869360"
 ---
 # <a name="executing-statements-odbc"></a>문 실행(ODBC)
 [!INCLUDE [SQL Server](../../../includes/applies-to-version/sql-asdb-asdbmi-asa-pdw.md)]
@@ -33,7 +33,7 @@ ms.locfileid: "88486843"
   
 -   준비된 실행  
   
- 직접 실행에는 문을 포함 하는 문자열을 작성 [!INCLUDE[tsql](../../../includes/tsql-md.md)] 하 고 **Sqlexecdirect** 함수를 사용 하 여 실행을 위해 제출 해야 합니다. 준비된 실행에서는 [!INCLUDE[tsql](../../../includes/tsql-md.md)] 문이 포함된 문자열을 작성한 다음 두 가지 단계로 실행합니다. 첫 번째 단계에서는 [Sqlprepare 함수](https://go.microsoft.com/fwlink/?LinkId=59360) 함수를 사용 하 여의 문에 대 한 실행 계획을 구문 분석 하 고 컴파일합니다 [!INCLUDE[ssDE](../../../includes/ssde-md.md)] . 두 번째 단계는 **Sqlexecute** 함수를 사용 하 여 이전에 준비 된 실행 계획을 실행 합니다. 이렇게 하면 각각의 실행에서 구문 분석 및 컴파일 오버헤드를 줄일 수 있습니다. 준비된 실행은 애플리케이션에서 매개 변수가 있는 동일한 SQL 문을 반복적으로 실행하는 데 많이 사용됩니다.  
+ 직접 실행에는 문을 포함 하는 문자열을 작성 [!INCLUDE[tsql](../../../includes/tsql-md.md)] 하 고 **Sqlexecdirect** 함수를 사용 하 여 실행을 위해 제출 해야 합니다. 준비된 실행에서는 [!INCLUDE[tsql](../../../includes/tsql-md.md)] 문이 포함된 문자열을 작성한 다음 두 가지 단계로 실행합니다. 첫 번째 단계에서는 [Sqlprepare 함수](../../../odbc/reference/syntax/sqlprepare-function.md) 함수를 사용 하 여의 문에 대 한 실행 계획을 구문 분석 하 고 컴파일합니다 [!INCLUDE[ssDE](../../../includes/ssde-md.md)] . 두 번째 단계는 **Sqlexecute** 함수를 사용 하 여 이전에 준비 된 실행 계획을 실행 합니다. 이렇게 하면 각각의 실행에서 구문 분석 및 컴파일 오버헤드를 줄일 수 있습니다. 준비된 실행은 애플리케이션에서 매개 변수가 있는 동일한 SQL 문을 반복적으로 실행하는 데 많이 사용됩니다.  
   
  직접 실행과 준비된 실행에서 모두 단일 [!INCLUDE[tsql](../../../includes/tsql-md.md)] 문이나 SQL 문의 일괄 처리를 실행하거나 저장 프로시저를 호출할 수 있습니다.  
   
@@ -51,5 +51,4 @@ ms.locfileid: "88486843"
   
 ## <a name="see-also"></a>참고 항목  
  [ODBC&#41;&#40;쿼리 실행 ](../../../relational-databases/native-client-odbc-queries/executing-queries-odbc.md)  
-  
   

@@ -19,17 +19,17 @@ ms.assetid: f3a9d32b-6cd7-4f0c-b38d-c8ccc4ee40c3
 author: markingmyname
 ms.author: maghan
 monikerRange: '>=aps-pdw-2016||=azuresqldb-current||=azure-sqldw-latest||>=sql-server-2016||=sqlallproducts-allversions||>=sql-server-linux-2017||=azuresqldb-mi-current'
-ms.openlocfilehash: 721b2377f5539a4ee047816da6e5ecb5bc2fe213
-ms.sourcegitcommit: e700497f962e4c2274df16d9e651059b42ff1a10
+ms.openlocfilehash: f1eb4580f3654b12f09b39e2fadf2167a9f9e561
+ms.sourcegitcommit: 4d370399f6f142e25075b3714e5c2ce056b1bfd0
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 08/17/2020
-ms.locfileid: "88486786"
+ms.lasthandoff: 10/09/2020
+ms.locfileid: "91869335"
 ---
 # <a name="prepared-execution"></a>준비된 실행
 [!INCLUDE [SQL Server](../../../includes/applies-to-version/sql-asdb-asdbmi-asa-pdw.md)]
 
-  ODBC API에서는 반복적인 [!INCLUDE[tsql](../../../includes/tsql-md.md)] 문 실행과 관련한 구문 분석 및 컴파일 오버헤드를 줄이는 한 가지 방법으로 준비된 실행을 정의합니다. 애플리케이션은 SQL 문이 포함된 문자열을 작성한 다음 두 단계로 실행합니다. [Sqlprepare 함수](https://go.microsoft.com/fwlink/?LinkId=59360) 를 한 번 호출 하 여 문을 구문 분석 하 고에서 실행 계획으로 컴파일합니다 [!INCLUDE[ssDE](../../../includes/ssde-md.md)] . 그런 다음 준비 된 실행 계획을 실행할 때마다 **Sqlexecute** 를 호출 합니다. 이렇게 하면 각각의 실행에서 구문 분석 및 컴파일 오버헤드를 줄일 수 있습니다. 준비된 실행은 애플리케이션에서 매개 변수가 있는 동일한 SQL 문을 반복적으로 실행하는 데 많이 사용됩니다.  
+  ODBC API에서는 반복적인 [!INCLUDE[tsql](../../../includes/tsql-md.md)] 문 실행과 관련한 구문 분석 및 컴파일 오버헤드를 줄이는 한 가지 방법으로 준비된 실행을 정의합니다. 애플리케이션은 SQL 문이 포함된 문자열을 작성한 다음 두 단계로 실행합니다. [Sqlprepare 함수](../../../odbc/reference/syntax/sqlprepare-function.md) 를 한 번 호출 하 여 문을 구문 분석 하 고에서 실행 계획으로 컴파일합니다 [!INCLUDE[ssDE](../../../includes/ssde-md.md)] . 그런 다음 준비 된 실행 계획을 실행할 때마다 **Sqlexecute** 를 호출 합니다. 이렇게 하면 각각의 실행에서 구문 분석 및 컴파일 오버헤드를 줄일 수 있습니다. 준비된 실행은 애플리케이션에서 매개 변수가 있는 동일한 SQL 문을 반복적으로 실행하는 데 많이 사용됩니다.  
   
  대부분의 데이터베이스에서 준비된 실행은 문을 직접 실행하는 경우보다 3-4배 이상 빠릅니다. 가장 큰 이유는 직접 실행할 경우 매번 문이 컴파일되는 반면에 준비된 실행에서는 문이 한 번만 컴파일되기 때문입니다. 또한 준비된 실행을 사용할 경우 문을 실행할 때마다 드라이버가 전체 SQL 문 대신 실행 계획 식별자와 매개 변수 값만 데이터 원본에 보내면 되므로 네트워크 트래픽도 줄일 수 있습니다.  
   
@@ -49,5 +49,4 @@ ms.locfileid: "88486786"
   
 ## <a name="see-also"></a>참고 항목  
  [ODBC&#41;&#40;문을 실행 하는 중 ](../../../relational-databases/native-client-odbc-queries/executing-statements/executing-statements-odbc.md)  
-  
   
