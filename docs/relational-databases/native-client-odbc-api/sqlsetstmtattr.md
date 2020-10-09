@@ -15,12 +15,12 @@ ms.assetid: 799c80fd-c561-4912-8562-9229076dfd19
 author: markingmyname
 ms.author: maghan
 monikerRange: '>=aps-pdw-2016||=azuresqldb-current||=azure-sqldw-latest||>=sql-server-2016||=sqlallproducts-allversions||>=sql-server-linux-2017||=azuresqldb-mi-current'
-ms.openlocfilehash: 3909eca1ac7b61da6d9d29ecbe0f4283065b122b
-ms.sourcegitcommit: e700497f962e4c2274df16d9e651059b42ff1a10
+ms.openlocfilehash: 043e8e62174f286ad229485ecce4e4db0990557a
+ms.sourcegitcommit: 4d370399f6f142e25075b3714e5c2ce056b1bfd0
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 08/17/2020
-ms.locfileid: "88420777"
+ms.lasthandoff: 10/09/2020
+ms.locfileid: "91868456"
 ---
 # <a name="sqlsetstmtattr"></a>SQLSetStmtAttr
 [!INCLUDE[SQL Server Azure SQL Database Synapse Analytics PDW ](../../includes/applies-to-version/sql-asdb-asdbmi-asa-pdw.md)]
@@ -67,7 +67,7 @@ ms.locfileid: "88420777"
   
 |*값*|설명|  
 |----------------------|-----------------|  
-|SQL_DP_ON|기본값 [Sqlprepare 함수](https://go.microsoft.com/fwlink/?LinkId=59360)를 호출한 후에는 **sqlprepare** 가 호출 되거나 메타 속성 작업 (**SQLDescribeCol** 또는 **SQLDescribeParam**)이 실행 될 때까지 문 준비가 지연 됩니다.|  
+|SQL_DP_ON|기본값 [Sqlprepare 함수](../../odbc/reference/syntax/sqlprepare-function.md)를 호출한 후에는 **sqlprepare** 가 호출 되거나 메타 속성 작업 (**SQLDescribeCol** 또는 **SQLDescribeParam**)이 실행 될 때까지 문 준비가 지연 됩니다.|  
 |SQL_DP_OFF|**Sqlprepare** 를 실행 하는 즉시 문이 준비 됩니다.|  
   
 ### <a name="sql_sopt_ss_regionalize"></a>SQL_SOPT_SS_REGIONALIZE  
@@ -149,7 +149,6 @@ ms.locfileid: "88420777"
  SQL_SOPT_SS_NAME_SCOPE에 SQL_SS_NAME_SCOPE_TABLE 이외의 값이 있는 경우 SQLTables, Sqltables 또는 SQLPrimaryKeys의 다른 카탈로그 함수를 호출 하면 SQL_ERROR 반환 됩니다. SQLSTATE HY010 및 "함수 시퀀스 오류입니다(SQL_SOPT_SS_NAME_SCOPE가 SQL_SS_NAME_SCOPE_TABLE로 설정되지 않았습니다)" 메시지가 표시되고 진단 레코드가 생성됩니다.  
   
 ## <a name="see-also"></a>참고 항목  
- [SQLGetStmtAttr 함수](https://go.microsoft.com/fwlink/?LinkId=59355)   
+ [SQLGetStmtAttr 함수](../../odbc/reference/syntax/sqlgetstmtattr-function.md)   
  [ODBC API 구현 정보](../../relational-databases/native-client-odbc-api/odbc-api-implementation-details.md)  
-  
   

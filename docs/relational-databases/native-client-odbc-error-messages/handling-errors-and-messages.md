@@ -21,11 +21,12 @@ ms.assetid: 74ea9630-e482-4a46-bb45-f5234f079b48
 author: markingmyname
 ms.author: maghan
 monikerRange: '>=aps-pdw-2016||=azuresqldb-current||=azure-sqldw-latest||>=sql-server-2016||=sqlallproducts-allversions||>=sql-server-linux-2017||=azuresqldb-mi-current'
-ms.openlocfilehash: 64e6226c5f8260979b5cf83245f56bf77b9ff759
-ms.sourcegitcommit: f3321ed29d6d8725ba6378d207277a57cb5fe8c2
+ms.openlocfilehash: 92a47417e8b8b133bd8956d0ba02d8f0037d0111
+ms.sourcegitcommit: 4d370399f6f142e25075b3714e5c2ce056b1bfd0
+ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 07/06/2020
-ms.locfileid: "85998511"
+ms.lasthandoff: 10/09/2020
+ms.locfileid: "91868338"
 ---
 # <a name="handling-errors-and-messages"></a>오류 및 메시지 처리
 [!INCLUDE[SQL Server Azure SQL Database Synapse Analytics PDW ](../../includes/applies-to-version/sql-asdb-asdbmi-asa-pdw.md)]
@@ -40,9 +41,9 @@ ms.locfileid: "85998511"
   
  반환 코드 SQL_INVALID_HANDLE은 항상 프로그래밍 오류를 나타내며 런타임에 발생하지 않도록 해야 합니다. 다른 모든 반환 코드는 런타임 정보를 나타내며 SQL_ERROR는 프로그래밍 오류를 나타내는 경우가 있습니다.  
   
- 원래 [!INCLUDE[msCoName](../../includes/msconame-md.md)] [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 네이티브 API 인 C 용 db-library를 사용 하면 응용 프로그램에서 오류 또는 메시지를 반환 하는 콜백 오류 처리 및 메시지 처리 함수를 설치할 수 있습니다. PRINT, RAISERROR, DBCC 및 SET과 같은 일부 [!INCLUDE[tsql](../../includes/tsql-md.md)] 문은 결과를 결과 집합이 아닌 DB-Library 메시지 처리기 함수로 반환합니다. 그러나 ODBC API에는 이러한 콜백 기능이 없습니다. [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]Native CLIENT odbc 드라이버가에서 반환 된 메시지를 검색 하는 경우 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] odbc 반환 코드를 SQL_SUCCESS_WITH_INFO 또는 SQL_ERROR로 설정 하 고 메시지를 하나 이상의 진단 레코드로 반환 합니다. 따라서 ODBC 응용 프로그램은 이러한 반환 코드를 신중 하 게 테스트 하 고 **SQLGetDiagRec** 를 호출 하 여 메시지 데이터를 검색 해야 합니다.  
+ [!INCLUDE[msCoName](../../includes/msconame-md.md)] [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] C에 대 한 DB-Library 원래 네이티브 API를 사용 하면 응용 프로그램에서 오류 또는 메시지를 반환 하는 콜백 오류 처리 및 메시지 처리 함수를 설치할 수 있습니다. PRINT, RAISERROR, DBCC 및 SET과 같은 일부 [!INCLUDE[tsql](../../includes/tsql-md.md)] 문은 결과를 결과 집합이 아닌 DB-Library 메시지 처리기 함수로 반환합니다. 그러나 ODBC API에는 이러한 콜백 기능이 없습니다. [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]Native CLIENT odbc 드라이버가에서 반환 된 메시지를 검색 하는 경우 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] odbc 반환 코드를 SQL_SUCCESS_WITH_INFO 또는 SQL_ERROR로 설정 하 고 메시지를 하나 이상의 진단 레코드로 반환 합니다. 따라서 ODBC 응용 프로그램은 이러한 반환 코드를 신중 하 게 테스트 하 고 **SQLGetDiagRec** 를 호출 하 여 메시지 데이터를 검색 해야 합니다.  
   
- 오류 추적에 대한 자세한 내용은 [데이터 액세스 추적](https://go.microsoft.com/fwlink/?LinkId=125805)을 참조하십시오. [!INCLUDE[ssSQL11](../../includes/sssql11-md.md)]에 추가된 오류 추적의 향상된 기능에 대한 자세한 내용은 [확장 이벤트 로그의 진단 정보 액세스](../../relational-databases/native-client/features/accessing-diagnostic-information-in-the-extended-events-log.md)를 참조하세요.  
+ 오류 추적에 대한 자세한 내용은 [데이터 액세스 추적](/previous-versions/sql/sql-server-2008/cc765421(v=sql.100))을 참조하십시오. [!INCLUDE[ssSQL11](../../includes/sssql11-md.md)]에 추가된 오류 추적의 향상된 기능에 대한 자세한 내용은 [확장 이벤트 로그의 진단 정보 액세스](../../relational-databases/native-client/features/accessing-diagnostic-information-in-the-extended-events-log.md)를 참조하세요.  
   
 ## <a name="in-this-section"></a>섹션 내용  
   
@@ -58,5 +59,4 @@ ms.locfileid: "85998511"
   
 ## <a name="see-also"></a>참고 항목  
  [SQL Server Native Client &#40;ODBC&#41;](../../relational-databases/native-client/odbc/sql-server-native-client-odbc.md)  
-  
   

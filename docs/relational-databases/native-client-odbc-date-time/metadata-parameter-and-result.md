@@ -14,12 +14,12 @@ ms.assetid: 1518e6e5-a6a8-4489-b779-064c5624df53
 author: markingmyname
 ms.author: maghan
 monikerRange: '>=aps-pdw-2016||=azuresqldb-current||=azure-sqldw-latest||>=sql-server-2016||=sqlallproducts-allversions||>=sql-server-linux-2017||=azuresqldb-mi-current'
-ms.openlocfilehash: 3beab01b2c2b8493bf598d508b7b1b37152e1f34
-ms.sourcegitcommit: e700497f962e4c2274df16d9e651059b42ff1a10
+ms.openlocfilehash: b2205348e8b0ba913cdb12a990d88233c74dfe12
+ms.sourcegitcommit: 4d370399f6f142e25075b3714e5c2ce056b1bfd0
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 08/17/2020
-ms.locfileid: "88420587"
+ms.lasthandoff: 10/09/2020
+ms.locfileid: "91868349"
 ---
 # <a name="metadata---parameter-and-result"></a>메타데이터 - 매개 변수 및 결과
 [!INCLUDE[SQL Server Azure SQL Database Synapse Analytics PDW ](../../includes/applies-to-version/sql-asdb-asdbmi-asa-pdw.md)]
@@ -97,6 +97,5 @@ ms.locfileid: "88420587"
 |SQL_DESC_UNSIGNED|SQL_TRUE|SQL_TRUE|SQL_TRUE|SQL_TRUE|SQL_TRUE|SQL_TRUE|  
   
 ## <a name="see-also"></a>참고 항목  
- [ODBC&#41;&#40;메타 데이터 ](https://msdn.microsoft.com/library/99133efc-b1f2-46e9-8203-d90c324a8e4c)  
-  
+ [ODBC&#41;&#40;메타 데이터 ](./date-and-time-improvements-odbc.md)  
   

@@ -15,12 +15,12 @@ ms.assetid: ec41f017-f5e0-40ef-913a-65d206068631
 author: markingmyname
 ms.author: maghan
 monikerRange: '>=aps-pdw-2016||=azuresqldb-current||=azure-sqldw-latest||>=sql-server-2016||=sqlallproducts-allversions||>=sql-server-linux-2017||=azuresqldb-mi-current'
-ms.openlocfilehash: 801f814433feddf26a7f8438bd543ce0d3c85e8d
-ms.sourcegitcommit: e700497f962e4c2274df16d9e651059b42ff1a10
+ms.openlocfilehash: e535c47ec1dbcbb93314fc96f3435042495bec3a
+ms.sourcegitcommit: 4d370399f6f142e25075b3714e5c2ce056b1bfd0
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 08/17/2020
-ms.locfileid: "88423975"
+ms.lasthandoff: 10/09/2020
+ms.locfileid: "91867755"
 ---
 # <a name="sqlprocedures"></a>SQLProcedures
 [!INCLUDE[SQL Server Azure SQL Database Synapse Analytics PDW ](../../includes/applies-to-version/sql-asdb-asdbmi-asa-pdw.md)]
@@ -34,7 +34,6 @@ ms.locfileid: "88423975"
  **Sqlprocedures** 는 이름이 *ProcName* 와 일치 하 고 현재 사용자가 실행 하거나 현재 사용자에 게 VIEW DEFINITION 권한이 부여 된 프로시저에 대 한 정보를 반환 합니다.  
   
 ## <a name="see-also"></a>참고 항목  
- [SQLProcedures 함수](https://go.microsoft.com/fwlink/?LinkId=59364)   
+ [SQLProcedures 함수](../../odbc/reference/syntax/sqlprocedures-function.md)   
  [ODBC API 구현 정보](../../relational-databases/native-client-odbc-api/odbc-api-implementation-details.md)  
-  
   

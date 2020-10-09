@@ -14,11 +14,12 @@ ms.assetid: 31176be8-d40e-4f93-8d44-a46e804a3e2d
 author: markingmyname
 ms.author: maghan
 monikerRange: '>=aps-pdw-2016||=azuresqldb-current||=azure-sqldw-latest||>=sql-server-2016||=sqlallproducts-allversions||>=sql-server-linux-2017||=azuresqldb-mi-current'
-ms.openlocfilehash: a0f1e1be06331ef8ba1251a352e13e9d81ae6f46
-ms.sourcegitcommit: f3321ed29d6d8725ba6378d207277a57cb5fe8c2
+ms.openlocfilehash: 76c5e2aab1f515ee52feb97218880e8831f3bea8
+ms.sourcegitcommit: 4d370399f6f142e25075b3714e5c2ce056b1bfd0
+ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 07/06/2020
-ms.locfileid: "86004294"
+ms.lasthandoff: 10/09/2020
+ms.locfileid: "91868841"
 ---
 # <a name="running-stored-procedures---call-stored-procedures"></a>저장 프로시저 실행 - 저장 프로시저 호출
 [!INCLUDE[SQL Server Azure SQL Database Synapse Analytics PDW ](../../includes/applies-to-version/sql-asdb-asdbmi-asa-pdw.md)]
@@ -39,7 +40,7 @@ ms.locfileid: "86004294"
   
 2.  각 입력, 입/출력 및 출력 매개 변수와 프로시저 반환 값(있는 경우)에 대해 [SQLBindParameter](../../relational-databases/native-client-odbc-api/sqlbindparameter.md) 를 호출합니다.  
   
-3.  [SQLExecDirect](https://go.microsoft.com/fwlink/?LinkId=58399)를 사용하여 문을 실행합니다.  
+3.  [SQLExecDirect](../../odbc/reference/syntax/sqlexecdirect-function.md)를 사용하여 문을 실행합니다.  
   
 > [!NOTE]  
 >  애플리케이션이 ODBC CALL 이스케이프 시퀀스가 아닌 Transact-SQL EXECUTE 구문을 사용하여 프로시저를 제출하는 경우 SQL Server ODBC 드라이버는 프로시저 호출을 RPC 대신 SQL 문으로 SQL Server에 전달합니다. 또한 Transact-SQL EXECUTE 문을 사용하면 출력 매개 변수가 반환되지 않습니다.  
@@ -49,5 +50,4 @@ ms.locfileid: "86004294"
  [저장 프로시저 실행](../../relational-databases/native-client-odbc-stored-procedures/running-stored-procedures.md)   
  [저장 프로시저 호출](../../relational-databases/native-client-odbc-stored-procedures/calling-a-stored-procedure.md)   
  [절차](../../relational-databases/native-client-odbc-queries/executing-statements/procedures.md)  
-  
   

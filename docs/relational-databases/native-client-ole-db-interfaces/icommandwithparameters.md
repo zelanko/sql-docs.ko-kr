@@ -12,12 +12,12 @@ ms.assetid: 66644c70-def7-46d8-8c47-b883292a0288
 author: markingmyname
 ms.author: maghan
 monikerRange: '>=aps-pdw-2016||=azuresqldb-current||=azure-sqldw-latest||>=sql-server-2016||=sqlallproducts-allversions||>=sql-server-linux-2017||=azuresqldb-mi-current'
-ms.openlocfilehash: 196bbc6f5dddffe5c88906e27f192fe6bf28ff46
-ms.sourcegitcommit: e700497f962e4c2274df16d9e651059b42ff1a10
+ms.openlocfilehash: 0ecf207fa32d103042fd5888f3f416cffd4563bd
+ms.sourcegitcommit: 4d370399f6f142e25075b3714e5c2ce056b1bfd0
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 08/17/2020
-ms.locfileid: "88475684"
+ms.lasthandoff: 10/09/2020
+ms.locfileid: "91868316"
 ---
 # <a name="icommandwithparameters-native-client-ole-db-provider"></a>ICommandWithParameters (Native Client OLE DB 공급자)
 [!INCLUDE[SQL Server Azure SQL Database Synapse Analytics PDW ](../../includes/applies-to-version/sql-asdb-asdbmi-asa-pdw.md)]
@@ -27,6 +27,5 @@ ms.locfileid: "88475684"
  또한 [!INCLUDE[ssSQL11](../../includes/sssql11-md.md)]부터는 ICommandWithParameters::SetParameterInfo를 호출할 때 *pwszName* 매개 변수에 전달된 값이 유효한 식별자여야 합니다. 자세한 내용은 [Database Identifiers](../../relational-databases/databases/database-identifiers.md)을 참조하세요.  
   
 ## <a name="see-also"></a>참고 항목  
- [인터페이스&#40;OLE DB&#41;](https://msdn.microsoft.com/library/34c33364-8538-45db-ae41-5654481cda93)  
-  
+ [인터페이스&#40;OLE DB&#41;](./sql-server-native-client-ole-db-interfaces.md)  
   

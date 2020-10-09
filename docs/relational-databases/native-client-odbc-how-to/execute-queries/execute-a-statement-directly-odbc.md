@@ -14,12 +14,12 @@ ms.assetid: b690f9de-66e1-4ee5-ab6a-121346fb5f85
 author: markingmyname
 ms.author: maghan
 monikerRange: '>=aps-pdw-2016||=azuresqldb-current||=azure-sqldw-latest||>=sql-server-2016||=sqlallproducts-allversions||>=sql-server-linux-2017||=azuresqldb-mi-current'
-ms.openlocfilehash: e5264929258fb03c7572de1459a57fb86dbd99ee
-ms.sourcegitcommit: e700497f962e4c2274df16d9e651059b42ff1a10
+ms.openlocfilehash: bf661d045b24c3844513356a2cdd081c05ff2620
+ms.sourcegitcommit: 4d370399f6f142e25075b3714e5c2ce056b1bfd0
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 08/17/2020
-ms.locfileid: "88328959"
+ms.lasthandoff: 10/09/2020
+ms.locfileid: "91867920"
 ---
 # <a name="execute-a-statement-directly-odbc"></a>직접 문 실행(ODBC)
 [!INCLUDE [SQL Server](../../../includes/applies-to-version/sql-asdb-asdbmi-asa-pdw.md)]
@@ -29,9 +29,9 @@ ms.locfileid: "88328959"
   
 1.  문에 매개 변수 표식이 있으면 [SQLBindParameter](../../../relational-databases/native-client-odbc-api/sqlbindparameter.md) 를 사용하여 프로그램 변수에 각 매개 변수를 바인딩합니다. 프로그램 변수를 데이터 값으로 채운 다음 실행 시 데이터 매개 변수를 설정합니다.  
   
-2.  [SQLExecDirect](https://go.microsoft.com/fwlink/?LinkId=58399) 를 호출하여 문을 실행합니다.  
+2.  [SQLExecDirect](../../../odbc/reference/syntax/sqlexecdirect-function.md) 를 호출하여 문을 실행합니다.  
   
-3.  실행 시 데이터 입력 매개 변수를 사용하면 [SQLExecDirect](https://go.microsoft.com/fwlink/?LinkId=58399) 는 SQL_NEED_DATA를 반환합니다. [SQLParamData](https://go.microsoft.com/fwlink/?LinkId=58405) 및 [SQLPutData](../../../relational-databases/native-client-odbc-api/sqlputdata.md)를 사용하여 데이터를 청크로 보냅니다.  
+3.  실행 시 데이터 입력 매개 변수를 사용하면 [SQLExecDirect](../../../odbc/reference/syntax/sqlexecdirect-function.md) 는 SQL_NEED_DATA를 반환합니다. [SQLParamData](../../../odbc/reference/syntax/sqlparamdata-function.md) 및 [SQLPutData](../../../relational-databases/native-client-odbc-api/sqlputdata.md)를 사용하여 데이터를 청크로 보냅니다.  
 
 ### <a name="to-execute-a-statement-multiple-times-by-using-column-wise-parameter-binding"></a>열 단위 매개 변수 바인딩을 사용하여 문을 여러 번 실행하려면  
   
@@ -57,9 +57,9 @@ ms.locfileid: "88328959"
   
      S개의 데이터 값과 S개의 데이터 길이를 바인딩된 매개 변수 배열에 넣습니다.  
   
-3.  [SQLExecDirect](https://go.microsoft.com/fwlink/?LinkId=58399) 를 호출하여 문을 실행합니다. 드라이버에서는 효율적으로 문을 각 매개 변수 집합에 대해 한 번씩 총 S번 실행합니다.  
+3.  [SQLExecDirect](../../../odbc/reference/syntax/sqlexecdirect-function.md) 를 호출하여 문을 실행합니다. 드라이버에서는 효율적으로 문을 각 매개 변수 집합에 대해 한 번씩 총 S번 실행합니다.  
   
-4.  실행 시 데이터 입력 매개 변수를 사용하면 [SQLExecDirect](https://go.microsoft.com/fwlink/?LinkId=58399) 는 SQL_NEED_DATA를 반환합니다. [SQLParamData](https://go.microsoft.com/fwlink/?LinkId=58405) 및 [SQLPutData](../../../relational-databases/native-client-odbc-api/sqlputdata.md)를 사용하여 데이터를 청크로 보냅니다.  
+4.  실행 시 데이터 입력 매개 변수를 사용하면 [SQLExecDirect](../../../odbc/reference/syntax/sqlexecdirect-function.md) 는 SQL_NEED_DATA를 반환합니다. [SQLParamData](../../../odbc/reference/syntax/sqlparamdata-function.md) 및 [SQLPutData](../../../relational-databases/native-client-odbc-api/sqlputdata.md)를 사용하여 데이터를 청크로 보냅니다.  
   
 ### <a name="to-execute-a-statement-multiple-times-by-using-row-wise-parameter-binding"></a>행 단위 매개 변수 바인딩을 사용하여 문을 여러 번 실행하려면  
   
@@ -83,13 +83,12 @@ ms.locfileid: "88328959"
   
 4.  바인딩된 매개 변수 버퍼 배열을 데이터 값으로 채웁니다.  
   
-5.  [SQLExecDirect](https://go.microsoft.com/fwlink/?LinkId=58399) 를 호출하여 문을 실행합니다. 드라이버에서는 효율적으로 문을 각 매개 변수 집합에 대해 한 번씩 총 S번 실행합니다.  
+5.  [SQLExecDirect](../../../odbc/reference/syntax/sqlexecdirect-function.md) 를 호출하여 문을 실행합니다. 드라이버에서는 효율적으로 문을 각 매개 변수 집합에 대해 한 번씩 총 S번 실행합니다.  
   
-6.  실행 시 데이터 입력 매개 변수를 사용하면 [SQLExecDirect](https://go.microsoft.com/fwlink/?LinkId=58399) 는 SQL_NEED_DATA를 반환합니다. [SQLParamData](https://go.microsoft.com/fwlink/?LinkId=58405) 및 [SQLPutData](../../../relational-databases/native-client-odbc-api/sqlputdata.md)를 사용하여 데이터를 청크로 보냅니다.  
+6.  실행 시 데이터 입력 매개 변수를 사용하면 [SQLExecDirect](../../../odbc/reference/syntax/sqlexecdirect-function.md) 는 SQL_NEED_DATA를 반환합니다. [SQLParamData](../../../odbc/reference/syntax/sqlparamdata-function.md) 및 [SQLPutData](../../../relational-databases/native-client-odbc-api/sqlputdata.md)를 사용하여 데이터를 청크로 보냅니다.  
   
- **참고** 열 단위 및 행 단위 바인딩은 일반적으로 [SQLExecDirect](https://go.microsoft.com/fwlink/?LinkId=59360) 보다는 [SQLPrepare 함수](https://go.microsoft.com/fwlink/?LinkId=58400) 및 [SQLExecute](https://go.microsoft.com/fwlink/?LinkId=58399)와 함께 사용됩니다.  
+ **참고** 열 단위 및 행 단위 바인딩은 일반적으로 [SQLExecDirect](../../../odbc/reference/syntax/sqlprepare-function.md) 보다는 [SQLPrepare 함수](../../../odbc/reference/syntax/sqlexecute-function.md) 및 [SQLExecute](../../../odbc/reference/syntax/sqlexecdirect-function.md)와 함께 사용됩니다.  
   
 ## <a name="see-also"></a>참고 항목  
  [쿼리 실행 방법 도움말 항목 &#40;ODBC&#41;](../../../relational-databases/native-client-odbc-how-to/execute-queries/executing-queries-how-to-topics-odbc.md)  
-  
   

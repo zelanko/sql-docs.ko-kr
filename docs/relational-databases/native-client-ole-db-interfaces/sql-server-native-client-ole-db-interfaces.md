@@ -17,12 +17,12 @@ ms.assetid: 7c462c92-ad5b-4dd5-817d-2b89c83d8fe4
 author: markingmyname
 ms.author: maghan
 monikerRange: '>=aps-pdw-2016||=azuresqldb-current||=azure-sqldw-latest||>=sql-server-2016||=sqlallproducts-allversions||>=sql-server-linux-2017||=azuresqldb-mi-current'
-ms.openlocfilehash: efd4e1f3692ebe6c78625a14cfc81d66f552ebaa
-ms.sourcegitcommit: e700497f962e4c2274df16d9e651059b42ff1a10
+ms.openlocfilehash: 7f0bfbd52a5a150b1630d92d5e2612b8f0fa69f2
+ms.sourcegitcommit: 4d370399f6f142e25075b3714e5c2ce056b1bfd0
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 08/17/2020
-ms.locfileid: "88490774"
+ms.lasthandoff: 10/09/2020
+ms.locfileid: "91865323"
 ---
 # <a name="sql-server-native-client-ole-db-interfaces"></a>SQL Server Native Client(OLE DB) 인터페이스
 [!INCLUDE[SQL Server Azure SQL Database Synapse Analytics PDW ](../../includes/applies-to-version/sql-asdb-asdbmi-asa-pdw.md)]
@@ -31,13 +31,12 @@ ms.locfileid: "88490774"
   
  이 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] Native client OLE DB 공급자 프로그래밍 참조는 일부 OLE DB 인터페이스와 메서드를 문서화 하지 않습니다 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] . native client OLE DB 공급자를 사용할 때 공급자별 동작을 나타내는 인터페이스와 메서드만 제공 합니다.  
   
- 핵심 OLE DB 인터페이스 및 메서드에 대한 자세한 내용은 [OLE DB 프로그래머 참조(OLE DB Programmer's Reference)](https://go.microsoft.com/fwlink/?LinkId=45232)를 참조하십시오.  
+ 핵심 OLE DB 인터페이스 및 메서드에 대한 자세한 내용은 [OLE DB 프로그래머 참조(OLE DB Programmer's Reference)](/previous-versions/windows/desktop/ms713643(v=vs.85))를 참조하십시오.  
   
 ## <a name="in-this-section"></a>섹션 내용  
   
--   [인터페이스&#40;OLE DB&#41;](https://msdn.microsoft.com/library/34c33364-8538-45db-ae41-5654481cda93)  
+-   [인터페이스&#40;OLE DB&#41;]()  
   
 ## <a name="see-also"></a>참고 항목  
  [SQL Server Native Client&#40;OLE DB&#41;](../../relational-databases/native-client/ole-db/sql-server-native-client-ole-db.md)  
-  
   

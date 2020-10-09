@@ -15,12 +15,12 @@ ms.assetid: 0adecc63-4da5-486c-bc48-09a004a2fae6
 author: markingmyname
 ms.author: maghan
 monikerRange: '>=aps-pdw-2016||=azuresqldb-current||=azure-sqldw-latest||>=sql-server-2016||=sqlallproducts-allversions||>=sql-server-linux-2017||=azuresqldb-mi-current'
-ms.openlocfilehash: 7a00b92a059014ff36ee1e0b473285641ef107c3
-ms.sourcegitcommit: e700497f962e4c2274df16d9e651059b42ff1a10
+ms.openlocfilehash: 3ee418dfb4378ea0291996a0a16e5f0596faf471
+ms.sourcegitcommit: 4d370399f6f142e25075b3714e5c2ce056b1bfd0
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 08/17/2020
-ms.locfileid: "88423773"
+ms.lasthandoff: 10/09/2020
+ms.locfileid: "91867747"
 ---
 # <a name="prepare-and-execute-a-statement-odbc"></a>문 준비 및 실행(ODBC)
 [!INCLUDE [SQL Server](../../../includes/applies-to-version/sql-asdb-asdbmi-asa-pdw.md)]
@@ -28,9 +28,9 @@ ms.locfileid: "88423773"
     
 ### <a name="to-prepare-a-statement-once-and-then-execute-it-multiple-times"></a>문을 한 번 준비한 후 여러 번 실행하려면  
   
-1.  [SQLPrepare 함수](https://go.microsoft.com/fwlink/?LinkId=59360) 를 호출하여 문을 준비합니다.  
+1.  [SQLPrepare 함수](../../../odbc/reference/syntax/sqlprepare-function.md) 를 호출하여 문을 준비합니다.  
   
-2.  필요에 따라 [SQLNumParams](https://go.microsoft.com/fwlink/?LinkId=58404) 를 호출하여 준비된 문의 매개 변수 수를 확인합니다.  
+2.  필요에 따라 [SQLNumParams](../../../odbc/reference/syntax/sqlnumparams-function.md) 를 호출하여 준비된 문의 매개 변수 수를 확인합니다.  
   
 3.  필요에 따라 준비된 문의 각 매개 변수에 대해 다음 작업을 수행합니다.  
   
@@ -42,9 +42,9 @@ ms.locfileid: "88423773"
   
     -   문에 매개 변수 표식이 있는 경우 데이터 값을 바인딩된 매개 변수 버퍼에 넣습니다.  
   
-    -   [SQLExecute](https://go.microsoft.com/fwlink/?LinkId=58400) 를 호출하여 준비된 문을 실행합니다.  
+    -   [SQLExecute](../../../odbc/reference/syntax/sqlexecute-function.md) 를 호출하여 준비된 문을 실행합니다.  
   
-    -   실행 시 데이터 입력 매개 변수를 사용하는 경우 [SQLExecute](https://go.microsoft.com/fwlink/?LinkId=58400) 는 SQL_NEED_DATA를 반환합니다. [SQLParamData](https://go.microsoft.com/fwlink/?LinkId=58405) 및 [SQLPutData](../../../relational-databases/native-client-odbc-api/sqlputdata.md)를 사용하여 데이터를 청크로 보냅니다.  
+    -   실행 시 데이터 입력 매개 변수를 사용하는 경우 [SQLExecute](../../../odbc/reference/syntax/sqlexecute-function.md) 는 SQL_NEED_DATA를 반환합니다. [SQLParamData](../../../odbc/reference/syntax/sqlparamdata-function.md) 및 [SQLPutData](../../../relational-databases/native-client-odbc-api/sqlputdata.md)를 사용하여 데이터를 청크로 보냅니다.  
   
 ### <a name="to-prepare-a-statement-with-column-wise-parameter-binding"></a>열 단위 매개 변수 바인딩을 사용하여 문을 준비하려면  
   
@@ -60,7 +60,7 @@ ms.locfileid: "88423773"
   
 2.  SQLPrepare를 호출 하 여 문을 준비 합니다.  
   
-3.  필요에 따라 [SQLNumParams](https://go.microsoft.com/fwlink/?LinkId=58404) 를 호출하여 준비된 문의 매개 변수 수를 확인합니다.  
+3.  필요에 따라 [SQLNumParams](../../../odbc/reference/syntax/sqlnumparams-function.md) 를 호출하여 준비된 문의 매개 변수 수를 확인합니다.  
   
 4.  필요에 따라 준비 된 문의 각 매개 변수에 대해 SQLDescribeParam를 호출 하 여 매개 변수 정보를 가져옵니다.  
   
@@ -116,5 +116,4 @@ ms.locfileid: "88423773"
   
 ## <a name="see-also"></a>참고 항목  
  [쿼리 실행 방법 도움말 항목 &#40;ODBC&#41;](../../../relational-databases/native-client-odbc-how-to/execute-queries/executing-queries-how-to-topics-odbc.md)  
-  
   

@@ -14,12 +14,12 @@ ms.assetid: f7573f8f-6f21-4e03-8dd5-a5f2ea4878cc
 author: markingmyname
 ms.author: maghan
 monikerRange: '>=aps-pdw-2016||=azuresqldb-current||=azure-sqldw-latest||>=sql-server-2016||=sqlallproducts-allversions||>=sql-server-linux-2017||=azuresqldb-mi-current'
-ms.openlocfilehash: 1d3a6cead69651eedec63d9c34e24674ec6dd6ae
-ms.sourcegitcommit: e700497f962e4c2274df16d9e651059b42ff1a10
+ms.openlocfilehash: d1610a48081c8eb8e4cab0829527516e9ee44246
+ms.sourcegitcommit: 4d370399f6f142e25075b3714e5c2ce056b1bfd0
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 08/17/2020
-ms.locfileid: "88470442"
+ms.lasthandoff: 10/09/2020
+ms.locfileid: "91867706"
 ---
 # <a name="use-a-statement-odbc"></a>문 사용(ODBC)
 [!INCLUDE [SQL Server](../../../includes/applies-to-version/sql-asdb-asdbmi-asa-pdw.md)]
@@ -27,23 +27,23 @@ ms.locfileid: "88470442"
     
 ### <a name="to-use-a-statement"></a>문을 사용하려면  
   
-1.  SQL_HANDLE_STMT의 *HandleType*으로 [SQLAllocHandle](https://go.microsoft.com/fwlink/?LinkId=58396)을 호출하여 문 핸들을 할당합니다.  
+1.  SQL_HANDLE_STMT의 *HandleType*으로 [SQLAllocHandle](../../../odbc/reference/syntax/sqlallochandle-function.md)을 호출하여 문 핸들을 할당합니다.  
   
 2.  필요에 따라 [SQLSetStmtAttr](../../../relational-databases/native-client-odbc-api/sqlsetstmtattr.md)을 호출하여 문 옵션을 설정하거나 [SQLGetStmtAttr](../../../relational-databases/native-client-odbc-api/sqlgetstmtattr.md)을 호출하여 문 특성을 가져옵니다.  
   
      서버 커서를 사용하려면 커서 특성을 기본값 이외의 값으로 설정해야 합니다.  
   
-3.  문이 여러 번 실행되는 경우 필요에 따라 [SQLPrepare Function](https://go.microsoft.com/fwlink/?LinkId=59360)(SQLPrepare 함수)을 사용하여 문 실행을 준비합니다.  
+3.  문이 여러 번 실행되는 경우 필요에 따라 [SQLPrepare Function](../../../odbc/reference/syntax/sqlprepare-function.md)(SQLPrepare 함수)을 사용하여 문 실행을 준비합니다.  
   
-4.  문에 바인딩된 매개 변수 표식이 있으면 필요에 따라 [SQLBindParameter](../../../relational-databases/native-client-odbc-api/sqlbindparameter.md)를 사용하여 프로그램 변수에 매개 변수 표식을 바인딩합니다. 문이 준비되어 있으면 [SQLNumParams](https://go.microsoft.com/fwlink/?LinkId=58404) 및 [SQLDescribeParam](../../../relational-databases/native-client-odbc-api/sqldescribeparam.md)을 호출하여 매개 변수의 수와 특징을 확인할 수 있습니다.  
+4.  문에 바인딩된 매개 변수 표식이 있으면 필요에 따라 [SQLBindParameter](../../../relational-databases/native-client-odbc-api/sqlbindparameter.md)를 사용하여 프로그램 변수에 매개 변수 표식을 바인딩합니다. 문이 준비되어 있으면 [SQLNumParams](../../../odbc/reference/syntax/sqlnumparams-function.md) 및 [SQLDescribeParam](../../../relational-databases/native-client-odbc-api/sqldescribeparam.md)을 호출하여 매개 변수의 수와 특징을 확인할 수 있습니다.  
   
 5.  SQLExecDirect를 사용하여 문을 직접 실행합니다.  
   
-     \- 또는-  
+     \- 또는 -  
   
-     문이 준비되어 있는 경우 [SQLExecute](https://go.microsoft.com/fwlink/?LinkId=58400)를 사용하여 여러 번 실행합니다.  
+     문이 준비되어 있는 경우 [SQLExecute](../../../odbc/reference/syntax/sqlexecute-function.md)를 사용하여 여러 번 실행합니다.  
   
-     \- 또는-  
+     \- 또는 -  
   
      카탈로그 함수를 호출하여 결과가 반환되도록 합니다.  
   
@@ -51,11 +51,11 @@ ms.locfileid: "88470442"
   
      문의 결과 집합을 한 번에 한 행씩 인출합니다.  
   
-     \- 또는-  
+     \- 또는 -  
   
      블록 커서를 사용하여 결과 집합을 한 번에 여러 행씩 인출합니다.  
   
-     \- 또는-  
+     \- 또는 -  
   
      [SQLRowCount](../../../relational-databases/native-client-odbc-api/sqlrowcount.md)를 호출하여 INSERT, UPDATE 또는 DELETE 문의 영향을 받는 행 수를 확인합니다.  
   
@@ -75,5 +75,4 @@ ms.locfileid: "88470442"
   
 ## <a name="see-also"></a>참고 항목  
  [쿼리 실행 방법 도움말 항목 &#40;ODBC&#41;](../../../relational-databases/native-client-odbc-how-to/execute-queries/executing-queries-how-to-topics-odbc.md)  
-  
   

@@ -14,12 +14,12 @@ ms.assetid: 2a738aef-c991-4f62-bdab-a5221c335f31
 author: markingmyname
 ms.author: maghan
 monikerRange: '>=aps-pdw-2016||=azuresqldb-current||=azure-sqldw-latest||>=sql-server-2016||=sqlallproducts-allversions||>=sql-server-linux-2017||=azuresqldb-mi-current'
-ms.openlocfilehash: 9542741a00cee0206931e6194e3ded2089fe3f4d
-ms.sourcegitcommit: e700497f962e4c2274df16d9e651059b42ff1a10
+ms.openlocfilehash: 5ce4d81317218c8823b528c3e37df40694471e9c
+ms.sourcegitcommit: 4d370399f6f142e25075b3714e5c2ce056b1bfd0
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 08/17/2020
-ms.locfileid: "88460778"
+ms.lasthandoff: 10/09/2020
+ms.locfileid: "91868916"
 ---
 # <a name="managing-text-and-image-columns---use-data-at-execution-parameters"></a>텍스트 및 이미지 열 관리 - Data-at-Execution 매개 변수 사용
 [!INCLUDE[SQL Server Azure SQL Database Synapse Analytics PDW ](../../includes/applies-to-version/sql-asdb-asdbmi-asa-pdw.md)]
@@ -33,17 +33,17 @@ ms.locfileid: "88460778"
   
     -   프로그램에서 정의된 매개 변수 식별자의 **rgbValue** (8번째 매개 변수)를 사용합니다.  
   
-2.  [SQLExecDirect](https://go.microsoft.com/fwlink/?LinkId=58399) 또는 [SQLExecute](https://go.microsoft.com/fwlink/?LinkId=58400) 를 호출하면 데이터 실행 시 매개 변수를 처리할 준비가 되었음을 나타내는 SQL_NEED_DATA가 반환됩니다.  
+2.  [SQLExecDirect](../../odbc/reference/syntax/sqlexecdirect-function.md) 또는 [SQLExecute](../../odbc/reference/syntax/sqlexecute-function.md) 를 호출하면 데이터 실행 시 매개 변수를 처리할 준비가 되었음을 나타내는 SQL_NEED_DATA가 반환됩니다.  
   
 3.  각 실행 시 데이터 매개 변수에 대해 다음을 수행합니다.  
   
-    -   [SQLParamData](https://go.microsoft.com/fwlink/?LinkId=58405) 를 호출하여 프로그램에서 정의된 매개 변수 ID를 가져옵니다. 다른 실행 시 데이터 매개 변수가 있는 경우 SQL_NEED_DATA가 반환됩니다.  
+    -   [SQLParamData](../../odbc/reference/syntax/sqlparamdata-function.md) 를 호출하여 프로그램에서 정의된 매개 변수 ID를 가져옵니다. 다른 실행 시 데이터 매개 변수가 있는 경우 SQL_NEED_DATA가 반환됩니다.  
   
     -   [SQLPutData](../../relational-databases/native-client-odbc-api/sqlputdata.md) 를 한 번 이상 호출하여 길이가 전달될 때까지 매개 변수 데이터를 보냅니다.  
   
-4.  [SQLParamData](https://go.microsoft.com/fwlink/?LinkId=58405) 를 호출하여 최종 실행 시 데이터 매개 변수의 모든 데이터가 전송되었음을 나타냅니다. SQL_NEED_DATA는 반환되지 않습니다.  
+4.  [SQLParamData](../../odbc/reference/syntax/sqlparamdata-function.md) 를 호출하여 최종 실행 시 데이터 매개 변수의 모든 데이터가 전송되었음을 나타냅니다. SQL_NEED_DATA는 반환되지 않습니다.  
   
-## <a name="example"></a>예제  
+## <a name="example"></a>예  
  이 예제에서는 SQLParamData 및 SQLPutData를 사용하여 SQL_LONG 변수 문자 데이터를 읽는 방법을 보여 줍니다. 이 예제는 IA64에서 지원되지 않습니다.  
   
  AdventureWorks 예제 데이터베이스를 기본 데이터베이스로 사용하는 AdventureWorks라는 ODBC 데이터 원본이 필요합니다. AdventureWorks 샘플 데이터베이스는 [Microsoft SQL Server 샘플 및 커뮤니티 프로젝트](https://go.microsoft.com/fwlink/?LinkID=85384) 홈 페이지에서 다운로드할 수 있습니다. 이 데이터 원본은 운영 체제에서 제공 하는 ODBC 드라이버를 기반으로 해야 합니다. 드라이버 이름은 "SQL Server"입니다. 이 예제를 64비트 운영 체제에서 32비트 애플리케이션으로 작성하여 실행하려는 경우 %windir%\SysWOW64\odbcad32.exe에서 ODBC 관리자를 사용하여 ODBC 데이터 원본을 만들어야 합니다.  
@@ -226,6 +226,5 @@ GO
 ```  
   
 ## <a name="see-also"></a>참고 항목  
- [텍스트 및 이미지 열 관리 방법 항목 ODBC&#41;&#40;](https://msdn.microsoft.com/library/f97333ad-e2ab-4d26-9395-741ba25f2c28)  
-  
+ [텍스트 및 이미지 열 관리 방법 항목 ODBC&#41;&#40;](./odbc-how-to-topics.md)  
   

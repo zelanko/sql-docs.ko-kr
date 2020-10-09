@@ -12,12 +12,12 @@ ms.assetid: e988f9e8-6801-41d1-8069-726f487244d5
 author: markingmyname
 ms.author: maghan
 monikerRange: =azuresqldb-current||=azure-sqldw-latest||>=sql-server-2016||=sqlallproducts-allversions||>=sql-server-linux-2017||=azuresqldb-mi-current
-ms.openlocfilehash: f567277dd128095222633c0694412fd477bc623b
-ms.sourcegitcommit: e700497f962e4c2274df16d9e651059b42ff1a10
+ms.openlocfilehash: 8f472c3354e2cfefe10aeeedd8935360e3a4751a
+ms.sourcegitcommit: 4d370399f6f142e25075b3714e5c2ce056b1bfd0
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 08/17/2020
-ms.locfileid: "88455544"
+ms.lasthandoff: 10/09/2020
+ms.locfileid: "91868262"
 ---
 # <a name="overview-smo"></a>개요(SMO)
 [!INCLUDE [SQL Server ASDB, ASDBMI, ASDW ](../../includes/applies-to-version/sql-asdb-asdbmi-asa.md)]
@@ -60,7 +60,7 @@ ms.locfileid: "88455544"
   
 -   [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]에서 전자 메일 서버, 전자 메일 프로필 및 전자 메일 계정을 생성하는 데이터베이스 메일 관리 기능. 자세한 내용은 [데이터베이스 메일](../../relational-databases/database-mail/database-mail.md)을 참조하세요.  
   
--   연결 정보를 등록하기 위한 등록된 서버 지원. 자세한 내용은 [Register Servers](../../tools/sql-server-management-studio/register-servers.md)을 참조하세요.  
+-   연결 정보를 등록하기 위한 등록된 서버 지원. 자세한 내용은 [Register Servers](../../ssms/register-servers/register-servers.md)을 참조하세요.  
   
 -   [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 이벤트의 추적 및 재생. 자세한 내용은 [SQL Server Profiler](../../tools/sql-server-profiler/sql-server-profiler.md), [SQL Trace](../../relational-databases/sql-trace/sql-trace.md), [SQL Server Distributed Replay](../../tools/distributed-replay/sql-server-distributed-replay.md)및 [Extended Events](../../relational-databases/extended-events/extended-events.md)를 참조하세요.  
   
@@ -175,5 +175,4 @@ ms.locfileid: "88455544"
   
 ## <a name="see-also"></a>참고 항목  
  [복제 관리 개체 개념](../../relational-databases/replication/concepts/replication-management-objects-concepts.md)  
-  
   

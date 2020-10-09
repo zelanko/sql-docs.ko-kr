@@ -1,6 +1,6 @@
 ---
 description: 실행 시 데이터를 사용하여 테이블 반환 매개 변수로 데이터 전송(ODBC)
-title: 테이블 반환 매개 변수, 실행 시 데이터 (ODBC)
+title: Table-Valued 매개 변수, 실행 시 데이터 (ODBC)
 ms.custom: ''
 ms.date: 03/14/2017
 ms.prod: sql
@@ -14,19 +14,19 @@ ms.assetid: 361e6442-34de-4cac-bdbd-e05f04a21ce4
 author: markingmyname
 ms.author: maghan
 monikerRange: '>=aps-pdw-2016||=azuresqldb-current||=azure-sqldw-latest||>=sql-server-2016||=sqlallproducts-allversions||>=sql-server-linux-2017||=azuresqldb-mi-current'
-ms.openlocfilehash: 72fc2ad3db6c6eddde0124fc2144fa6faca6f058
-ms.sourcegitcommit: e700497f962e4c2274df16d9e651059b42ff1a10
+ms.openlocfilehash: 48823426052fec8f16989facc77a676ed8d3e2c6
+ms.sourcegitcommit: 4d370399f6f142e25075b3714e5c2ce056b1bfd0
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 08/17/2020
-ms.locfileid: "88499141"
+ms.lasthandoff: 10/09/2020
+ms.locfileid: "91868215"
 ---
 # <a name="sending-data-as-a-table-valued-parameter-using-data-at-execution-odbc"></a>실행 시 데이터를 사용하여 테이블 반환 매개 변수로 데이터 전송(ODBC)
 [!INCLUDE[SQL Server Azure SQL Database Synapse Analytics PDW ](../../includes/applies-to-version/sql-asdb-asdbmi-asa-pdw.md)]
 
   이는 [모든 메모리 내](../../relational-databases/native-client-odbc-table-valued-parameters/sending-data-as-a-table-valued-parameter-with-all-values-in-memory-odbc.md) 프로시저와 유사 하지만 테이블 반환 매개 변수에 대해 실행 시 데이터를 사용 합니다.  
   
- 테이블 반환 매개 변수를 보여 주는 다른 예제는 [ODBC&#41;&#40;테이블 반환 매개 변수 사용 ](../../relational-databases/native-client-odbc-how-to/use-table-valued-parameters-odbc.md)을 참조 하세요.  
+ 테이블 반환 매개 변수를 보여 주는 다른 예제는 [ODBC&#41;&#40;Table-Valued 매개 변수 사용 ](../../relational-databases/native-client-odbc-how-to/use-table-valued-parameters-odbc.md)을 참조 하세요.  
   
  이 예에서 SQLExecute 또는 SQLExecDirect를 호출 하면 드라이버는 SQL_NEED_DATA을 반환 합니다. 그러면 응용 프로그램은 드라이버가 SQL_NEED_DATA 이외의 값을 반환할 때까지 SQLParamData를 반복 해 서 호출 합니다. 드라이버는 매개 변수에서 데이터를 요청 하 고 있음을 응용 프로그램에 알리기 위해 *Parametervalueptr* 을 반환 합니다. 응용 프로그램은 SQLPutData를 호출 하 여 다음에 Sqlputdata를 호출 하기 전에 매개 변수 데이터를 제공 합니다. 테이블 반환 매개 변수의 경우 SQLPutData에 대 한 호출은 드라이버에 대해 준비 된 행 수를 나타냅니다 (이 예에서는 항상 1). 테이블 값의 모든 행이 드라이버에 전달 된 경우 SQLPutData를 호출 하 여 0 개 행을 사용할 수 있음을 표시 합니다.  
   
@@ -582,6 +582,5 @@ EXIT:
 ```  
   
 ## <a name="see-also"></a>참고 항목  
- [ODBC 테이블 반환 매개 변수 프로그래밍 예제](https://msdn.microsoft.com/library/3f52b7a7-f2bd-4455-b79e-d015fb397726)  
-  
+ [ODBC 테이블 반환 매개 변수 프로그래밍 예제](./table-valued-parameters-odbc.md)  
   

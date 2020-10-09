@@ -15,12 +15,12 @@ ms.assetid: 967ed3d4-3d31-4485-ac92-027076ebc829
 author: markingmyname
 ms.author: maghan
 monikerRange: '>=aps-pdw-2016||=azuresqldb-current||=azure-sqldw-latest||>=sql-server-2016||=sqlallproducts-allversions||>=sql-server-linux-2017||=azuresqldb-mi-current'
-ms.openlocfilehash: 11156b3b3080c537f1fb65eee081632ce7f3c1e3
-ms.sourcegitcommit: e700497f962e4c2274df16d9e651059b42ff1a10
+ms.openlocfilehash: 81d32f5f577d9c594556c477620e89435cf66226
+ms.sourcegitcommit: 4d370399f6f142e25075b3714e5c2ce056b1bfd0
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 08/17/2020
-ms.locfileid: "88423965"
+ms.lasthandoff: 10/09/2020
+ms.locfileid: "91869130"
 ---
 # <a name="sqlrowcount"></a>SQLRowCount
 [!INCLUDE[SQL Server Azure SQL Database Synapse Analytics PDW ](../../includes/applies-to-version/sql-asdb-asdbmi-asa-pdw.md)]
@@ -34,7 +34,6 @@ ms.locfileid: "88423965"
  [!INCLUDE[tsql](../../includes/tsql-md.md)]Output 절이 있는 INSERT, UPDATE, DELETE 또는 MERGE 문을 실행 하면 output 절에 의해 생성 된 결과 집합의 모든 행이 소비 될 때까지 SQLRowCount는 영향을 받는 행 수를 반환 하지 않습니다. 이러한 행을 사용 하려면 SQLFetch 또는 SQLFetchScroll을 호출 합니다. SQLResultCols는 모든 결과 행이 소비 될 때까지-1을 반환 합니다. SQLFetch 또는 SQLFetchScroll SQL_NO_DATA 반환한 후 응용 프로그램은 Sqlfetch를 호출 하 여 다음 결과로 이동 하기 전에 SQLMoreResults를 호출 하기 전에 영향을 받는 행 수를 확인 해야 합니다.  
   
 ## <a name="see-also"></a>참고 항목  
- [SQLRowCount 함수](https://go.microsoft.com/fwlink/?LinkId=59367)   
+ [SQLRowCount 함수](../../odbc/reference/syntax/sqlrowcount-function.md)   
  [ODBC API 구현 정보](../../relational-databases/native-client-odbc-api/odbc-api-implementation-details.md)  
-  
   
