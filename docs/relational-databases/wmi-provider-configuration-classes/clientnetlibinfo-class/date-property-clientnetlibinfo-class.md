@@ -18,12 +18,12 @@ helpviewer_keywords:
 ms.assetid: 4ca7e569-f097-49f7-b83c-795b0f1319ec
 author: markingmyname
 ms.author: maghan
-ms.openlocfilehash: c2d87dc569ce146bbdecbabf42cf07a90092af4b
-ms.sourcegitcommit: dd36d1cbe32cd5a65c6638e8f252b0bd8145e165
+ms.openlocfilehash: 8570e016f125de5def6d9464417ffc0036b20e92
+ms.sourcegitcommit: 783b35f6478006d654491cb52f6edf108acf2482
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 09/08/2020
-ms.locfileid: "89540828"
+ms.lasthandoff: 10/09/2020
+ms.locfileid: "91892343"
 ---
 # <a name="date-property-clientnetlibinfo-class"></a>Date 속성(ClientNetLibInfo 클래스)
 [!INCLUDE [SQL Server](../../../includes/applies-to-version/sqlserver.md)]
@@ -46,6 +46,5 @@ object.Date [= value]
 ## <a name="remarks"></a>설명  
   
 ## <a name="see-also"></a>참고 항목  
- [클라이언트 프로토콜 구성](https://technet.microsoft.com/library/ms181035.aspx)  
-  
+ [클라이언트 프로토콜 구성](../../../database-engine/configure-windows/configure-client-protocols.md)  
   

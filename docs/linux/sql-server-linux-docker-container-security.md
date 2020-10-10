@@ -10,12 +10,12 @@ ms.topic: conceptual
 ms.prod: sql
 ms.technology: linux
 moniker: '>= sql-server-linux-2017 || >= sql-server-2017 || =sqlallproducts-allversions'
-ms.openlocfilehash: 10d2eb061a4ee6d9ff9c8d0594561667dd882dc9
-ms.sourcegitcommit: 678f513b0c4846797ba82a3f921ac95f7a5ac863
+ms.openlocfilehash: 60ee13c6715362ba821575a3f8b9f9d5bc3e2bfa
+ms.sourcegitcommit: 764f90cf2eeca8451afdea2753691ae4cf032bea
 ms.translationtype: HT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 09/07/2020
-ms.locfileid: "89511591"
+ms.lasthandoff: 09/30/2020
+ms.locfileid: "91589332"
 ---
 # <a name="secure-sql-server-docker-containers"></a>SQL Server Docker 컨테이너 보안 유지
 
@@ -126,6 +126,60 @@ chmod -R g=u <database file dir>
 ```bash
 chown -R 10001:0 <database file dir>
 ```
+## <a name="encrypting-connections-to-sql-server-linux-containers"></a>SQL Server Linux 컨테이너에 대한 연결 암호화
+
+SQL Server Linux 컨테이너에 대한 연결을 암호화하려면 요구 사항이 [여기]에 문서화되어 있는 인증서가 필요합니다.
+
+다음은 SQL Server Linux 컨테이너에 대한 연결을 암호화하는 방법의 예입니다. 여기서는 자체 서명된 인증서를 사용합니다. 이러한 환경의 프로덕션 시나리오에는 사용해서는 안되며, CA 인증서를 사용해야 합니다.
+
+1. 테스트 및 비 프로덕션 환경에만 적합한 자체 서명된 인증서를 만듭니다.
+  
+      ```bash
+      openssl req -x509 -nodes -newkey rsa:2048 -subj '/CN=sql1.contoso.com' -keyout /container/sql1/mssql.key -out /container/sql1/mssql.pem -days 365
+      ```
+     여기서 sql1은 SQL 컨테이너의 호스트 이름이므로 이 컨테이너에 연결할 때 연결 문자열에 사용되는 이름은 \'sql1.contoso.com,port\'가 됩니다.
+
+    > [!NOTE]
+    > 위의 명령을 실행하기 전에 /container/sql1/ 폴더 경로가 이미 있는지 확인합니다.
+
+2. mssql.key 및 mssql.pem 파일에 올바른 사용 권한을 설정했는지 확인하여 SQL 컨테이너에 파일을 탑재할 때 오류가 발생하지 않도록 합니다.
+
+    ```bash
+    chmod 440 /container/sql1/mssql.pem
+    chmod 440 /container/sql1/mssql.key
+    ```
+
+3. 이제 아래 내용이 포함된 mssql.conf 파일을 생성하여 서버 시작 암호화를 사용하도록 설정합니다. 클라이언트 시작 암호화의 경우 마지막 줄을 'forceencryption = 0\'으로 변경합니다.
+
+    ```bash
+    [network]
+    tlscert = /etc/ssl/certs/mssql.pem
+    tlskey = /etc/ssl/private/mssql.key
+    tlsprotocols = 1.2
+    forceencryption = 1
+    ```
+
+    > [!NOTE]
+    > 일부 Linux 배포판의 경우 인증서 및 키를 저장하는 경로는 각각 /etc/pki/tls/certs/ 및 /etc/pki/tls/private/이 될 수도 있습니다. SQL 컨테이너에 대한 mssql.conf를 업데이트하기 전에 경로를 확인하세요. mssql.conf에서 설정한 위치는 컨테이너의 SQL Server가 인증서와 해당 키를 검색할 위치가 됩니다. 이 경우 해당 위치는 /etc/ssl/certs/ 및 /etc/ssl/private/입니다.
+
+    mssql.conf 파일도 동일한 폴더 위치인 /container/sql1/ 아래에 생성됩니다. 위의 단계를 실행한 후에는 sql1 폴더에 mssql.conf, mssql.key 및 mssql.pem의 세 파일이 있어야 합니다.
+
+4. 아래에 표시된 명령을 사용하여 SQL 컨테이너를 배포합니다.
+
+    ```bash
+    docker run -e "ACCEPT_EULA=Y" -e "SA_PASSWORD=P@ssw0rd" -p 5434:1433 --name sql1 -h sql1 -v /container/sql1/mssql.conf:/var/opt/mssql/mssql.conf -v   /container/sql1/mssql.pem:/etc/ssl/certs/mssql.pem -v /container/sql1/mssql.key:/etc/ssl/private/mssql.key -d mcr.microsoft.com/mssql/server:2019-latest
+    ```
+
+    위의 명령에서 mssql.conf, mssql.pem 및 mssql.key 파일을 컨테이너에 탑재하고 컨테이너의 1433(SQL Server 기본 포트) 포트를 호스트의 5434 포트에 매핑했습니다. 
+
+    > [!NOTE]
+    > RHEL 8 이상을 사용하는 경우 \'docker run\' 대신 \'podman run\' 명령을 사용할 수도 있습니다. 
+
+\"클라이언트 컴퓨터에 인증서 등록\" 및 [여기][1]에 설명된 \"연결 문자열 예제\" 섹션에 따라 Linux 컨테이너에서 SQL Server에 대한 연결 암호화를 시작합니다.
+
+  [Encrypting connection to SQL Server Linux]: https://docs.microsoft.com/sql/linux/sql-server-linux-encrypted-connections?view=sql-server-ver15&preserve-view=true
+  [여기]: https://docs.microsoft.com/sql/linux/sql-server-linux-encrypted-connections?view=sql-server-ver15&preserve-view=true#requirements-for-certificates
+  [1]: https://docs.microsoft.com/sql/linux/sql-server-linux-encrypted-connections?view=sql-server-ver15&preserve-view=true#client-initiated-encryption
 
 ## <a name="next-steps"></a>다음 단계
 

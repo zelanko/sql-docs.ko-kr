@@ -18,12 +18,12 @@ ms.assetid: 07f8f594-75b4-4591-8c29-d63811d7753e
 author: pmasl
 ms.author: pelopes
 manager: amitban
-ms.openlocfilehash: 099bf39d869caf8e42575393276e1a7e5ddadb68
-ms.sourcegitcommit: 9470c4d1fc8d2d9d08525c4f811282999d765e6e
+ms.openlocfilehash: c1327c908a034f524140ed8b9282766e328f75b9
+ms.sourcegitcommit: c7f40918dc3ecdb0ed2ef5c237a3996cb4cd268d
 ms.translationtype: HT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 07/17/2020
-ms.locfileid: "86457263"
+ms.lasthandoff: 10/05/2020
+ms.locfileid: "91719508"
 ---
 # <a name="query-profiling-infrastructure"></a>쿼리 프로파일링 인프라
 [!INCLUDE [SQL Server Azure SQL Database](../../includes/applies-to-version/sql-asdb.md)]
@@ -126,7 +126,7 @@ WITH (MAX_MEMORY=4096 KB,
 
 새 DMF [sys.dm_exec_query_plan_stats](../../relational-databases/system-dynamic-management-views/sys-dm-exec-query-plan-stats-transact-sql.md)는 대부분의 쿼리에 대해 마지막으로 알려진 실제 실행 계획과 동등한 것을 반환하기 위해 도입되었으며 *마지막 쿼리 계획 통계*라고 합니다. 마지막 쿼리 계획 통계는 LAST_QUERY_PLAN_STATS [데이터베이스 범위 구성](../../t-sql/statements/alter-database-scoped-configuration-transact-sql.md)(`ALTER DATABASE SCOPED CONFIGURATION SET LAST_QUERY_PLAN_STATS = ON;`)을 사용하여 데이터베이스 수준에서 사용하도록 설정할 수 있습니다.
 
-새 *query_post_execution_plan_profile* 확장 이벤트는 표준 프로파일링을 사용하는 *query_post_execution_showplan*과 달리 경량 프로파일링에 기반한 실제 계획과 동등한 것을 수집합니다. *query_post_execution_plan_profile* 확장 이벤트를 사용하는 샘플 세션은 아래 예제와 같이 구성할 수 있습니다.
+새 *query_post_execution_plan_profile* 확장 이벤트는 표준 프로파일링을 사용하는 *query_post_execution_showplan*과 달리 경량 프로파일링에 기반한 실제 계획과 동등한 것을 수집합니다. [!INCLUDE[ssSQL17](../../includes/sssql17-md.md)]는 CU14부터 이 이벤트도 제공합니다. *query_post_execution_plan_profile* 확장 이벤트를 사용하는 샘플 세션은 아래 예제와 같이 구성할 수 있습니다.
 
 ```sql
 CREATE EVENT SESSION [PerfStats_LWP_All_Plans] ON SERVER
@@ -180,7 +180,7 @@ WITH (MAX_MEMORY=4096 KB, EVENT_RETENTION_MODE=ALLOW_SINGLE_EVENT_LOSS,
 |---------------|---------------|---------------|
 |Global|`query_post_execution_showplan` XE가 있는 xEvent 세션, [!INCLUDE[ssSQL11](../../includes/sssql11-md.md)] 이상|추적 플래그 7412, [!INCLUDE[ssSQL15](../../includes/sssql15-md.md)] SP1 이상|
 |Global|`Showplan XML` 추적 이벤트를 포함하는 SQL 추적 및 SQL Server Profiler, SQL Server 2000 이상|`query_thread_profile` XE가 있는 xEvent 세션, [!INCLUDE[ssSQL14](../../includes/sssql14-md.md)] SP2 이상|
-|Global|-|`query_post_execution_plan_profile` XE가 있는 xEvent 세션, [!INCLUDE[sql-server-2019](../../includes/sssqlv15-md.md)] 이상|
+|Global|-|`query_post_execution_plan_profile` XE가 있는 xEvent 세션, [!INCLUDE[ssSQL17](../../includes/sssql17-md.md)] CU14 및 [!INCLUDE[sql-server-2019](../../includes/sssqlv15-md.md)] 이상|
 |세션|`SET STATISTICS XML ON` 사용, SQL Server 2000 이상|`query_plan_profile` XE에서 xEvent 세션과 함께 `QUERY_PLAN_PROFILE` 쿼리 힌트 사용, [!INCLUDE[ssSQL15](../../includes/sssql15-md.md)] SP2 CU3 및 [!INCLUDE[ssSQL17](../../includes/sssql17-md.md)] CU11 이상|
 |세션|`SET STATISTICS PROFILE ON` 사용, SQL Server 2000 이상|-|
 |세션|SSMS에서 [활성 쿼리 통계](../../relational-databases/performance/live-query-statistics.md) 단추 클릭, [!INCLUDE[ssSQL14](../../includes/sssql14-md.md)] SP2 이상|-|

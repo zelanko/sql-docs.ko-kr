@@ -18,12 +18,12 @@ dev_langs:
 author: kevinvngo
 ms.author: kevin
 monikerRange: =sqlallproducts-allversions||=azure-sqldw-latest
-ms.openlocfilehash: 28711d123d4084c973d301f7fa93c9f5d598986f
-ms.sourcegitcommit: 197a6ffb643f93592edf9e90b04810a18be61133
+ms.openlocfilehash: b0acdd99ed178329210bdab83e4492b7a4bfc2a7
+ms.sourcegitcommit: c4d6804bde7eaf72d9233d6d43f77d77d1b17c4e
 ms.translationtype: HT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 09/26/2020
-ms.locfileid: "91380838"
+ms.lasthandoff: 10/01/2020
+ms.locfileid: "91624820"
 ---
 # <a name="copy-transact-sql"></a>COPY(Transact-SQL)
 
@@ -99,7 +99,7 @@ WITH
 - ADLS Gen2의 *외부 위치*: https://<account>. dfs.core.windows.net/<container>/<path>
 
 > [!NOTE]  
-> BLOB 엔드포인트는 이전 버전과의 호환성을 위해 ADLS Gen2에 사용할 수 있습니다. 최상의 성능을 위해 **BLOB** 엔드포인트를 사용하세요.
+> .blob 엔드포인트는 ADLS Gen2에서도 사용할 수 있으며 현재 최상의 성능을 제공합니다. 인증 방법에 .dfs가 필요하지 않은 경우에는 .blob 엔드포인트를 사용합니다.
 
 - *계정* - 스토리지 계정 이름
 
@@ -141,14 +141,15 @@ WITH
 |  **Azure Blob 스토리지**  | SAS/MSI/SERVICE PRINCIPAL/KEY/AAD |                      SAS/KEY                       |                      SAS/KEY                       |
 | **Azure Data Lake Gen2** | SAS/MSI/SERVICE PRINCIPAL/KEY/AAD | SAS(blob<sup>1</sup>)/MSI(dfs<sup>2</sup>)/SERVICE PRINCIPAL/KEY/AAD | SAS(blob<sup>1</sup>)/MSI(dfs<sup>2</sup>)/SERVICE PRINCIPAL/KEY/AAD |
 
-1: 외부 위치 경로에서 Blob 엔드포인트( **.blob**.core.windows.net)를 사용해야 합니다.
+1: 이 인증 방법에는 외부 위치 경로의 .blob 엔드포인트( **.blob**.core.windows.net)가 필요합니다.
 
-2: 외부 위치 경로에서 dfs 엔드포인트( **.dfs**.core.windows.net)를 사용해야 합니다.
+2: 이 인증 방법에는 외부 위치 경로의 .dfs 엔드포인트( **.dfs**.core.windows.net)가 필요합니다.
+
 
 > [!NOTE]  
 >
 > - AAD 또는 퍼블릭 스토리지 계정을 사용하여 인증할 때는 자격 증명을 지정할 필요가 없습니다. 
->  - 스토리지 계정이 VNet과 연결된 경우 MSI(관리 ID)를 사용하여 인증해야 합니다.
+> - 스토리지 계정이 VNet과 연결된 경우 MSI(관리 ID)를 사용하여 인증해야 합니다.
 
 - SAS(공유 액세스 서명)를 사용하여 인증
   
@@ -428,9 +429,6 @@ COPY 명령은 워크로드에 따라 성능이 향상됩니다. 최적의 로�
 
 ### <a name="what-is-the-file-splitting-guidance-for-the-copy-command-loading-parquet-or-orc-files"></a>Parquet 또는 ORC 파일을 로드하는 COPY 명령의 파일 분할 지침은 무엇인가요?
 Parquet 및 ORC 파일은 COPY 명령이 자동으로 분할하기 때문에 파일을 분할할 필요가 없습니다. 최상의 성능을 얻으려면 Azure Storage 계정의 Parquet 및 ORC 파일이 256MB 이상이어야 합니다. 
-
-### <a name="when-will-the-copy-command-be-generally-available"></a>COPY 명령은 언제 출시되나요?
-COPY 명령은 올해(2020년) 말에 출시될 예정입니다. 
 
 ### <a name="are-there-any-limitations-on-the-number-or-size-of-files"></a>파일 개수 또는 크기에 제한이 있나요?
 파일 개수 또는 크기에 제한이 없습니다. 하지만 최상의 성능을 위해 4MB 이상의 파일을 사용하는 것이 좋습니다.

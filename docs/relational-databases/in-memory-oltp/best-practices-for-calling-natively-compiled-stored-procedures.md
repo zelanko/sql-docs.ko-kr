@@ -12,12 +12,12 @@ ms.assetid: f39fc1c7-cfec-4a95-97f6-6b95954694b
 author: markingmyname
 ms.author: maghan
 monikerRange: =azuresqldb-current||>=sql-server-2016||=sqlallproducts-allversions||>=sql-server-linux-2017||=azuresqldb-mi-current
-ms.openlocfilehash: 053cd5f7aebf3b84de1bf08104b13aa30488704b
-ms.sourcegitcommit: dd36d1cbe32cd5a65c6638e8f252b0bd8145e165
+ms.openlocfilehash: e26440be66b89ff789890169751a18500f465c00
+ms.sourcegitcommit: d56a834269132a83e5fe0a05b033936776cda8bb
 ms.translationtype: HT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 09/08/2020
-ms.locfileid: "89537719"
+ms.lasthandoff: 09/29/2020
+ms.locfileid: "91529374"
 ---
 # <a name="best-practices-for-calling-natively-compiled-stored-procedures"></a>고유하게 컴파일된 저장 프로시저를 호출하는 최선의 구현 방법
 [!INCLUDE [SQL Server Azure SQL Database](../../includes/applies-to-version/sql-asdb.md)]
@@ -27,9 +27,9 @@ ms.locfileid: "89537719"
   
 -   자주 실행됩니다.  
   
--   매우 빠를 것으로 예상됩니다.  
+-   빠를 것으로 예상됩니다.  
   
- 고유하게 컴파일된 저장 프로시저를 사용하는 경우의 성능 이점은 행 수와 프로시저에서 처리하는 논리의 양이 많을수록 커집니다. 예를 들어 고유하게 컴파일된 저장 프로시저는 다음 중 하나 이상을 사용하는 경우 성능이 향상됩니다.  
+ 고유하게 컴파일된 저장 프로시저를 사용하는 경우의 성능 이점은 행 수와 프로시저에서 처리하는 논리의 양이 많을수록 커집니다. 예를 들어 고유하게 컴파일된 저장 프로시저는 다음 구성 요소 중 하나 이상을 사용하는 경우 성능이 향상됩니다.  
   
 -   집계.  
   
@@ -43,11 +43,11 @@ ms.locfileid: "89537719"
   
  단일 행만 처리해야 하는 경우 고유하게 컴파일된 저장 프로시저를 사용하면 성능 이점이 제공되지 않을 수 있습니다.  
   
- 서버에서 매개 변수 이름을 매핑하고 형식을 변환하지 않아도 되도록 하려면 다음과 같이 하십시오.  
+ 서버에서 매개 변수 이름을 매핑하고 형식을 변환하지 않도록 하려면 다음을 수행해야 합니다.  
   
 -   프로시저에 전달된 매개 변수의 형식을 프로시저 정의에 있는 형식과 일치시킵니다.  
   
--   고유하게 컴파일된 저장 프로시저를 호출하는 경우 이름이 없는 서수 매개 변수를 사용합니다. 가장 효율적으로 실행하려면 명명된 매개 변수를 사용하지 마십시오.  
+-   고유하게 컴파일된 저장 프로시저를 호출하는 경우 이름이 없는 서수 매개 변수를 사용합니다. 가장 효율적으로 실행하려면 명명된 매개 변수를 사용하지 마세요.  
   
  XEvent **natively_compiled_proc_slow_parameter_passing**을 사용하여 고유하게 컴파일된 저장 프로시저에서 비효율적인 매개 변수를 감지할 수 있습니다.
  - 일치하지 않는 형식: **reason=parameter_conversion**

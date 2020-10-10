@@ -25,19 +25,19 @@ ms.assetid: c83c36e2-734e-4960-bc7e-92235910bc6f
 author: markingmyname
 ms.author: maghan
 monikerRange: '>=aps-pdw-2016||=azuresqldb-current||=azure-sqldw-latest||>=sql-server-2016||=sqlallproducts-allversions||>=sql-server-linux-2017||=azuresqldb-mi-current'
-ms.openlocfilehash: 6bcb65baaf591267d1c40b254bb23fe19e383192
-ms.sourcegitcommit: e700497f962e4c2274df16d9e651059b42ff1a10
+ms.openlocfilehash: d11d28460905bcf1581aeaa56777b72f987f8452
+ms.sourcegitcommit: 783b35f6478006d654491cb52f6edf108acf2482
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 08/17/2020
-ms.locfileid: "88428195"
+ms.lasthandoff: 10/09/2020
+ms.locfileid: "91890803"
 ---
 # <a name="creating-a-driver-application"></a>드라이버 애플리케이션 만들기
 [!INCLUDE [SQL Server](../../../includes/applies-to-version/sql-asdb-asdbmi-asa-pdw.md)]
 
   ODBC 아키텍처에는 다음과 같은 기능을 수행하는 네 가지 구성 요소가 있습니다.  
   
-|구성 요소|기능|  
+|구성 요소|함수|  
 |---------------|--------------|  
 |애플리케이션|ODBC 데이터 원본과 통신하는 ODBC 함수를 호출하고, SQL 문을 전송하고, 결과 집합을 처리합니다.|  
 |드라이버 관리자|애플리케이션과 애플리케이션에서 사용하는 모든 ODBC 드라이버 사이의 통신을 관리합니다.|  
@@ -111,7 +111,7 @@ LIB=c:\Program Files\Microsoft Data Access SDK 2.8\Libs\x86\lib;C:\Program Files
 INCLUDE=c:\Program Files\Microsoft Data Access SDK 2.8\inc;C:\Program Files\Microsoft SQL Server\100\Tools\SDK\Include;  
 ```  
   
- 애플리케이션을 빌드할 때는 애플리케이션에서 여러 개의 ODBC 호출을 동시에 유지해야 하는지 여부를 초기 단계에서 결정해야 합니다. 여러 개의 동시 ODBC 호출을 지원하는 방법에는 두 가지가 있으며 이 섹션의 나머지 항목에서 설명합니다. 자세한 내용은 [ODBC 프로그래머 참조](https://go.microsoft.com/fwlink/?LinkId=45250)를 참조 하세요.  
+ 애플리케이션을 빌드할 때는 애플리케이션에서 여러 개의 ODBC 호출을 동시에 유지해야 하는지 여부를 초기 단계에서 결정해야 합니다. 여러 개의 동시 ODBC 호출을 지원하는 방법에는 두 가지가 있으며 이 섹션의 나머지 항목에서 설명합니다. 자세한 내용은 [ODBC 프로그래머 참조](../../../odbc/reference/odbc-programmer-s-reference.md)를 참조 하세요.  
   
 ## <a name="in-this-section"></a>섹션 내용  
   
@@ -121,5 +121,4 @@ INCLUDE=c:\Program Files\Microsoft Data Access SDK 2.8\inc;C:\Program Files\Micr
   
 ## <a name="see-also"></a>참고 항목  
  [SQL Server Native Client &#40;ODBC&#41;](../../../relational-databases/native-client/odbc/sql-server-native-client-odbc.md)  
-  
   

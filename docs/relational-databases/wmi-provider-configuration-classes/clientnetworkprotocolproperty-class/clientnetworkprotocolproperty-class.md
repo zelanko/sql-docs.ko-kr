@@ -17,12 +17,12 @@ helpviewer_keywords:
 ms.assetid: a6e8adb5-2ffd-4c49-b9e4-9a1e459ff7b4
 author: markingmyname
 ms.author: maghan
-ms.openlocfilehash: cf1bad8b740c483bc4f84224ec9c975a0dd52f76
-ms.sourcegitcommit: dd36d1cbe32cd5a65c6638e8f252b0bd8145e165
+ms.openlocfilehash: a892928fc669730fb48e86f09908111c772a8087
+ms.sourcegitcommit: 783b35f6478006d654491cb52f6edf108acf2482
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 09/08/2020
-ms.locfileid: "89517069"
+ms.lasthandoff: 10/09/2020
+ms.locfileid: "91888924"
 ---
 # <a name="clientnetworkprotocolproperty-class"></a>ClientNetworkProtocolProperty 클래스
 [!INCLUDE [SQL Server](../../../includes/applies-to-version/sqlserver.md)]
@@ -41,6 +41,5 @@ ms.locfileid: "89517069"
 -   현재 속성에 대한 플래그를 설정합니다.  
   
 ## <a name="see-also"></a>참고 항목  
- [클라이언트 프로토콜 구성](https://technet.microsoft.com/library/ms181035.aspx)  
-  
+ [클라이언트 프로토콜 구성](../../../database-engine/configure-windows/configure-client-protocols.md)  
   

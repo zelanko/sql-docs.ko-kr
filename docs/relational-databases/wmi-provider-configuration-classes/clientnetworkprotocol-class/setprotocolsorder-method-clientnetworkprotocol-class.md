@@ -18,12 +18,12 @@ helpviewer_keywords:
 ms.assetid: b86d98b9-aae4-4e74-b4da-1ec984d5c8b4
 author: markingmyname
 ms.author: maghan
-ms.openlocfilehash: 90673f277f630be8126c010854927cd7f8f15cb3
-ms.sourcegitcommit: dd36d1cbe32cd5a65c6638e8f252b0bd8145e165
+ms.openlocfilehash: 047a078e93a4683647f65e5cdc702d89199a6123
+ms.sourcegitcommit: 783b35f6478006d654491cb52f6edf108acf2482
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 09/08/2020
-ms.locfileid: "89521520"
+ms.lasthandoff: 10/09/2020
+ms.locfileid: "91889209"
 ---
 # <a name="setprotocolsorder-method-clientnetworkprotocol-class"></a>SetProtocolsOrder 메서드(ClientNetworkProtocol 클래스)
 [!INCLUDE [SQL Server](../../../includes/applies-to-version/sqlserver.md)]
@@ -42,7 +42,7 @@ object.SetProtocolsOrder(ProtocolOrderList)
   
 #### <a name="parameters"></a>매개 변수  
   
-|매개 변수|Description|  
+|매개 변수|설명|  
 |---------------|-----------------|  
 |*ProtocolOrderList*|클라이언트 네트워크 프로토콜을 새로운 순서로 나열하는 string[] 형식의 배열입니다.|  
   
@@ -52,7 +52,6 @@ object.SetProtocolsOrder(ProtocolOrderList)
 ## <a name="remarks"></a>설명  
   
 ## <a name="see-also"></a>참고 항목  
- [클라이언트 프로토콜 구성](https://technet.microsoft.com/library/ms181035.aspx)   
- [클라이언트 네트워크 프로토콜 및 네트워크 라이브러리 구성](https://technet.microsoft.com/library/ms181035.aspx)  
-  
+ [클라이언트 프로토콜 구성](../../../database-engine/configure-windows/configure-client-protocols.md)   
+ [클라이언트 네트워크 프로토콜 및 네트워크 라이브러리 구성](../../../database-engine/configure-windows/configure-client-protocols.md)  
   

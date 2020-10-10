@@ -18,12 +18,12 @@ ms.assetid: bfc97632-c14c-4768-9dc5-a9c512f4b2bd
 author: julieMSFT
 ms.author: jrasnick
 monikerRange: '>=aps-pdw-2016||=azuresqldb-current||=azure-sqldw-latest||>=sql-server-2016||=sqlallproducts-allversions||>=sql-server-linux-2017||=azuresqldb-mi-current'
-ms.openlocfilehash: f659e5aff803fd670082277430d795074b23470e
-ms.sourcegitcommit: 678f513b0c4846797ba82a3f921ac95f7a5ac863
+ms.openlocfilehash: c672ae4cf447f60f486eaaca8a50a1d79c3cd4b4
+ms.sourcegitcommit: c7f40918dc3ecdb0ed2ef5c237a3996cb4cd268d
 ms.translationtype: HT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 09/07/2020
-ms.locfileid: "89511315"
+ms.lasthandoff: 10/05/2020
+ms.locfileid: "91726014"
 ---
 # <a name="joins-sql-server"></a>조인(SQL Server)
 [!INCLUDE[SQL Server Azure SQL Database Synapse Analytics PDW ](../../includes/applies-to-version/sql-asdb-asdbmi-asa-pdw.md)]
@@ -263,7 +263,7 @@ WHERE [fo].[Quantity] = 361;
 - 데이터베이스 호환성 수준이 140 이상입니다.
 - 쿼리가 `SELECT` 문입니다(데이터 수정 문은 현재 적합하지 않음).
 - 인덱싱된 중첩 루프 조인 또는 해시 조인 실제 알고리즘 둘 다에서 조인을 실행할 수 있습니다.
-- 해시 조인은 일괄 처리 모드를 사용합니다. 일괄 처리 모드는 쿼리 전체의 columnstore 인덱스 현재 상태를 통해 사용하도록 설정되거나, 조인에서 직접 참조되는 columnstore 인덱싱된 테이블을 통해 사용하도록 설정되거나, [Rowstore 기능의 일괄 처리 모드](../../relational-databases/performance/intelligent-query-processing.md#batch-mode-on-rowstore)를 사용함으로써 사용하도록 설정됩니다.
+- 해시 조인은 쿼리 전체의 Columnstore 인덱스 현재 상태를 통해 사용하도록 설정되거나, 조인에서 직접 참조되는 Columnstore 인덱싱된 테이블을 통해 사용하도록 설정되거나, [rowstore의 일괄 처리 모드](./intelligent-query-processing.md#batch-mode-on-rowstore)를 사용하여 활성화되는 일괄 처리 모드를 사용합니다.
 - 중첩 루프 조인 및 해시 조인의 생성된 대체 솔루션에 동일한 첫 번째 자식(외부 참조)이 있어야 합니다.
 
 ### <a name="adaptive-threshold-rows"></a>적응 임계값 행

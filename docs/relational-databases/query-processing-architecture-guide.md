@@ -16,12 +16,12 @@ helpviewer_keywords:
 ms.assetid: 44fadbee-b5fe-40c0-af8a-11a1eecf6cb5
 author: pmasl
 ms.author: pelopes
-ms.openlocfilehash: ddc409af7352ce7770d905b4bc5b859497123645
-ms.sourcegitcommit: e700497f962e4c2274df16d9e651059b42ff1a10
+ms.openlocfilehash: 49fd020cbbe8162dd82b51ab4743730a85762598
+ms.sourcegitcommit: 2600a414c321cfd6dc6daf5b9bcbc9a99c049dc4
 ms.translationtype: HT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 08/17/2020
-ms.locfileid: "88423727"
+ms.lasthandoff: 09/30/2020
+ms.locfileid: "91603370"
 ---
 # <a name="query-processing-architecture-guide"></a>쿼리 처리 아키텍처 가이드
 [!INCLUDE [SQL Server Azure SQL Database](../includes/applies-to-version/sql-asdb.md)]
@@ -1322,7 +1322,7 @@ SET quantity = quantity * 2
 WHERE date_id BETWEEN 20080802 AND 20080902;
 ```
 
-다음 그림에서는 이 쿼리에 대해 컴파일 시간 실행 계획의 `Clustered Index Seek` 연산자 속성을 보여 줍니다. `fact_sales` 테이블의 정의 및 파티션 정의를 보려면 이 항목의 “예”를 참조하세요.  
+다음 그림에서는 이 쿼리에 대한 런타임 시간 실행 계획의 `Clustered Index Seek` 연산자 속성을 보여줍니다. `fact_sales` 테이블의 정의 및 파티션 정의를 보려면 이 항목의 “예”를 참조하세요.  
 
 ![clustered_index_seek](../relational-databases/media/clustered-index-seek.gif)
 

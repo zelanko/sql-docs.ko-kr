@@ -15,12 +15,12 @@ ms.assetid: 6ad23de1-2bab-4933-9122-c09f5565028d
 author: MashaMSFT
 ms.author: mathoma
 monikerRange: '>=sql-server-2016||=sqlallproducts-allversions'
-ms.openlocfilehash: 1129420a821c7cbce65a094a75512fd5baa54d1a
-ms.sourcegitcommit: f7ac1976d4bfa224332edd9ef2f4377a4d55a2c9
+ms.openlocfilehash: d1b9e9e71fc425ca978d3050e8fdfd72a1c39d7f
+ms.sourcegitcommit: 2f868a77903c1f1c4cecf4ea1c181deee12d5b15
 ms.translationtype: HT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 07/02/2020
-ms.locfileid: "85899705"
+ms.lasthandoff: 10/02/2020
+ms.locfileid: "91670448"
 ---
 # <a name="install-sql-server-from-the-installation-wizard-setup"></a>설치 마법사에서 SQL Server 설치(설치 프로그램)
 
@@ -32,8 +32,8 @@ ms.locfileid: "85899705"
 
 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]를 설치하는 다른 방법은 다음을 참조하세요.  
 
-* [명령 프롬프트에서 SQL Server 설치](../../database-engine/install-windows/install-sql-server-2016-from-the-command-prompt.md)  
-* [구성 파일을 사용하여 SQL Server 설치](../../database-engine/install-windows/install-sql-server-2016-using-a-configuration-file.md)  
+* [명령 프롬프트에서 SQL Server 설치](./install-sql-server-from-the-command-prompt.md)  
+* [구성 파일을 사용하여 SQL Server 설치](./install-sql-server-using-a-configuration-file.md)  
 * [SysPrep을 사용하여 SQL Server 설치](../../database-engine/install-windows/install-sql-server-using-sysprep.md)  
 * [새 SQL Server 장애 조치(failover) 클러스터 만들기&#40;설치 프로그램&#41;](../../sql-server/failover-clusters/install/create-a-new-sql-server-failover-cluster-setup.md)  
 * [설치 마법사를 사용하여 SQL Server 업그레이드&#40;설치 프로그램&#41;](../../database-engine/install-windows/upgrade-sql-server-using-the-installation-wizard-setup.md)
@@ -70,7 +70,7 @@ Microsoft는 SQL Server 2016 및 2017에서 필수 구성 요소로 설치되는
 1. **사용 조건** 페이지에서 사용권 계약을 검토합니다. 동의하는 경우 **동의함** 확인란을 선택하고 **다음**을 선택합니다.  
     
    > [!NOTE]
-   > SQL Server에서는 설치 환경 정보뿐만 아니라 기타 사용 현황 및 성능 데이터를 Microsoft의 제품 개선에 도움을 주기 위해 전송합니다. SQL Server 데이터 처리 및 개인 정보 제어에 대해 자세히 알아보려면 [개인정보처리방침](https://privacy.microsoft.com/privacystatement) 및 [SQL Server를 구성하여 Microsoft에 피드백 보내기](https://docs.microsoft.com/sql/sql-server/sql-server-customer-feedback)를 참조하세요.
+   > SQL Server에서는 설치 환경 정보뿐만 아니라 기타 사용 현황 및 성능 데이터를 Microsoft의 제품 개선에 도움을 주기 위해 전송합니다. SQL Server 데이터 처리 및 개인 정보 제어에 대해 자세히 알아보려면 [개인정보처리방침](https://privacy.microsoft.com/privacystatement) 및 [SQL Server를 구성하여 Microsoft에 피드백 보내기](../../sql-server/usage-and-diagnostic-data-configuration-for-sql-server.md)를 참조하세요.
 
 1. **전역 규칙** 페이지에서 규칙 오류가 없는 경우 설치 프로그램이 **제품 업데이트** 페이지로 자동으로 진행됩니다.  
   
@@ -238,7 +238,7 @@ Microsoft는 SQL Server 2016 및 2017에서 필수 구성 요소로 설치되는
    > 엔터프라이즈 서버/CAL 라이선스 제품 키를 입력했으며, 머신에 20개가 넘는 물리적 코어가 있거나 하이퍼스레딩을 사용하는 경우 40개가 넘는 논리적 코어가 있는 경우 설치 중에 경고가 표시됩니다. **이 상자를 선택하여 이 제한을 승인하거나, [뒤로/취소]를 클릭하여 운영 체제 최대값까지 지원하는 Enterprise Core 제품 라이선스를 입력합니다.** 확인란을 선택하여 설치를 계속하거나 **뒤로**를 클릭하고 운영 체제의 최대 프로세서 수를 지원하는 라이선스 키를 입력할 수 있습니다.
 
    > [!NOTE]
-   > SQL Server에서는 설치 환경 정보뿐만 아니라 기타 사용 현황 및 성능 데이터를 Microsoft의 제품 개선에 도움을 주기 위해 전송합니다. SQL Server 데이터 처리 및 개인 정보 제어에 대해 자세히 알아보려면 [개인정보처리방침](https://privacy.microsoft.com/privacystatement) 및 [SQL Server를 구성하여 Microsoft에 피드백 보내기](https://docs.microsoft.com/sql/sql-server/sql-server-customer-feedback)를 참조하세요.
+   > SQL Server에서는 설치 환경 정보뿐만 아니라 기타 사용 현황 및 성능 데이터를 Microsoft의 제품 개선에 도움을 주기 위해 전송합니다. SQL Server 데이터 처리 및 개인 정보 제어에 대해 자세히 알아보려면 [개인정보처리방침](https://privacy.microsoft.com/privacystatement) 및 [SQL Server를 구성하여 Microsoft에 피드백 보내기](../../sql-server/usage-and-diagnostic-data-configuration-for-sql-server.md)를 참조하세요.
 
 1. **전역 규칙** 페이지에서 규칙 오류가 없는 경우 설치 프로그램이 **제품 업데이트** 페이지로 자동으로 진행됩니다.  
   
@@ -306,11 +306,11 @@ Microsoft는 SQL Server 2016 및 2017에서 필수 구성 요소로 설치되는
   
 1. **데이터베이스 엔진 구성 – 서버 구성** 페이지를 사용하여 다음 옵션을 지정할 수 있습니다.  
   
-    * **보안 모드**: [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 인스턴스에 대해 **Windows 인증** 또는 **혼합 모드 인증**을 선택합니다. **혼합 모드 인증**을 선택하는 경우 기본 제공 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 시스템 관리자 계정의 강력한 암호를 제공해야 합니다.  
+    * **보안 모드**: [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 인스턴스에 대해 **Windows 인증** 또는 **혼합 모드 인증**을 선택합니다. **혼합 모드 인증**을 선택하는 경우 기본 제공 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 시스템 관리자 계정(sa)에 강력한 암호를 제공해야 합니다.  
   
        디바이스가 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]에 성공적으로 연결되면, Windows 인증과 혼합 모드 인증에 동일한 보안 메커니즘이 적용됩니다. 자세한 내용은 [데이터베이스 엔진 구성 - 서버 구성](../../sql-server/install/instance-configuration.md#serverconfig) 페이지를 참조하세요.
   
-    * **SQL Server 관리자**: [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 인스턴스에 대해 시스템 관리자를 한 명 이상 지정해야 합니다. [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 설치 프로그램을 실행 중인 계정을 추가하려면 **현재 사용자 추가**를 선택합니다. 시스템 관리자 목록에서 계정을 추가하거나 제거하려면 **추가** 또는 **제거**를 선택한 다음, [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 인스턴스의 관리자 권한이 있는 사용자, 그룹 또는 컴퓨터 목록을 편집합니다.  
+    * **SQL Server 관리자**: [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 인스턴스에 대해 시스템 관리자를 한 명 이상 지정해야 합니다. [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 설치 프로그램을 실행 중인 계정을 추가하려면 **현재 사용자 추가**를 선택합니다. 시스템 관리자 목록에서 계정을 추가하거나 제거하려면 **추가** 또는 **제거**를 선택한 다음, [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 인스턴스의 관리자 권한이 있는 사용자, 그룹 또는 컴퓨터 목록을 편집합니다.  Windows 도메인 그룹을 추가하여 SQL Server에 대한 sysadmin 액세스 권한이 있는 Active Directory에서 공유 SQL 관리자 그룹을 설정할 수도 있습니다. 
   
      **데이터베이스 엔진 구성 - 데이터 디렉터리** 페이지를 사용하여 기본값이 아닌 설치 디렉터리를 지정할 수 있습니다. 기본 디렉터리에 설치하려면 **다음**을 선택합니다.  
   
@@ -326,14 +326,14 @@ Microsoft는 SQL Server 2016 및 2017에서 필수 구성 요소로 설치되는
     > [!NOTE]  
     > 이 페이지는 [!INCLUDE[sql-server-2019](../../includes/sssqlv15-md.md)]로 시작하는 설치에서만 사용할 수 있습니다. 
     
-    자세한 내용은 [데이터베이스 엔진 구성 - MaxDOP 페이지](https://docs.microsoft.com/sql/sql-server/install/instance-configuration?view=sql-server-ver15#maxdop)를 참조하세요. 
+    자세한 내용은 [데이터베이스 엔진 구성 - MaxDOP 페이지](../../sql-server/install/instance-configuration.md?view=sql-server-ver15#maxdop)를 참조하세요. 
 
      **데이터베이스 엔진 구성 - 메모리** 페이지를 사용하여 시작 후에 이 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 인스턴스에서 사용할 **최소 서버 메모리** 및 **최대 서버 메모리** 값을 지정합니다. **권장** 옵션을 선택한 후 기본값 또는 계산된 권장 값을 사용하거나 사용자 고유의 값을 수동으로 지정할 수 있습니다.
      
     > [!NOTE]  
     > 이 페이지는 [!INCLUDE[sql-server-2019](../../includes/sssqlv15-md.md)]로 시작하는 설치에서만 사용할 수 있습니다. 
     
-    자세한 내용은 [데이터베이스 엔진 구성 - 메모리 페이지](https://docs.microsoft.com/sql/sql-server/install/instance-configuration?view=sql-server-ver15#memory)를 참조하세요. 
+    자세한 내용은 [데이터베이스 엔진 구성 - 메모리 페이지](../../sql-server/install/instance-configuration.md?view=sql-server-ver15#memory)를 참조하세요. 
 
      **데이터베이스 엔진 구성 - FILESTREAM** 페이지를 사용하여 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 인스턴스에 대해 FILESTREAM을 사용하도록 설정할 수 있습니다. 자세한 내용은 [데이터베이스 엔진 구성 - FILESTREAM 페이지](../../sql-server/install/instance-configuration.md#database-engine-configuration---filestream-page)를 참조하세요.  
   
@@ -411,4 +411,4 @@ Microsoft는 SQL Server 2016 및 2017에서 필수 구성 요소로 설치되는
 * [실패한 SQL Server 설치 복구](../../database-engine/install-windows/repair-a-failed-sql-server-installation.md)
 * [SQL Server 설치 로그 파일 보기 및 읽기](../../database-engine/install-windows/view-and-read-sql-server-setup-log-files.md)
 * [설치 마법사를 사용하여 SQL Server로 업그레이드&#40;설치 프로그램&#41;](../../database-engine/install-windows/upgrade-sql-server-using-the-installation-wizard-setup.md)
-* [명령 프롬프트에서 SQL Server 설치](../../database-engine/install-windows/install-sql-server-2016-from-the-command-prompt.md) 
+* [명령 프롬프트에서 SQL Server 설치](./install-sql-server-from-the-command-prompt.md)

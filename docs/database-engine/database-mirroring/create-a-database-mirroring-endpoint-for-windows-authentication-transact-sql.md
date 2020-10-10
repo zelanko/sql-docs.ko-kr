@@ -17,12 +17,12 @@ helpviewer_keywords:
 ms.assetid: baf1a4b1-6790-4275-b261-490bca33bdb9
 author: MikeRayMSFT
 ms.author: mikeray
-ms.openlocfilehash: 15b7fe1a4a8ad78402226814e46ffc9d47964439
-ms.sourcegitcommit: da88320c474c1c9124574f90d549c50ee3387b4c
+ms.openlocfilehash: c364aab699f49a4a9c4814a572a6a7295273650b
+ms.sourcegitcommit: d56a834269132a83e5fe0a05b033936776cda8bb
 ms.translationtype: HT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 07/01/2020
-ms.locfileid: "85789728"
+ms.lasthandoff: 09/29/2020
+ms.locfileid: "91529456"
 ---
 # <a name="create-a-database-mirroring-endpoint-for-windows-authentication-transact-sql"></a>Windows 인증에 대한 데이터베이스 미러링 엔드포인트 만들기(Transact-SQL)
  [!INCLUDE [SQL Server](../../includes/applies-to-version/sqlserver.md)]
@@ -42,11 +42,11 @@ ms.locfileid: "85789728"
 ###  <a name="security"></a><a name="Security"></a> 보안  
  서버 인스턴스의 인증 및 암호화 방법은 시스템 관리자가 설정합니다.  
   
-> [!IMPORTANT]  
+> [!WARNING]  
 >  RC4 알고리즘은 더 이상 사용되지 않습니다. [!INCLUDE[ssNoteDepFutureDontUse](../../includes/ssnotedepfuturedontuse-md.md)] AES를 사용하는 것이 좋습니다.  
   
 ####  <a name="permissions"></a><a name="Permissions"></a> 권한  
- CREATE ENDPOINT 권한 또는 sysadmin 고정 서버 역할의 멤버 자격이 필요합니다. 자세한 내용은 [GRANT 엔드포인트 사용 권한&#40;Transact-SQL&#41;](../../t-sql/statements/grant-endpoint-permissions-transact-sql.md)을 참조하세요.  
+ `CREATE ENDPOINT` 권한 또는 `sysadmin` 고정 서버 역할의 멤버 자격이 필요합니다. 자세한 내용은 [GRANT 엔드포인트 사용 권한&#40;Transact-SQL&#41;](../../t-sql/statements/grant-endpoint-permissions-transact-sql.md)을 참조하세요.  
   
 ##  <a name="using-transact-sql"></a><a name="TsqlProcedure"></a> Transact-SQL 사용  
   
@@ -58,15 +58,16 @@ ms.locfileid: "85789728"
   
 3.  다음 문을 사용하여 데이터베이스 미러링 엔드포인트가 이미 존재하는지 확인합니다.  
   
-    ```  
+    ```sql  
     SELECT name, role_desc, state_desc FROM sys.database_mirroring_endpoints;   
     ```  
   
     > [!IMPORTANT]  
     >  서버 인스턴스에 대한 데이터베이스 미러링 엔드포인트가 이미 존재하는 경우 서버 인스턴스에서 설정한 다른 세션에 대한 엔드포인트를 사용하세요.  
   
-4.  Transact-SQL로 Windows 인증을 사용하는 엔드포인트를 만들려면 CREATE ENDPOINT 문을 사용합니다. 이 문은 일반적으로 다음과 같은 형식으로 되어 있습니다.  
+4.  Transact-SQL을 사용하여 Windows 인증에 사용할 엔드포인트를 만들려면 `CREATE ENDPOINT` 문을 사용합니다. 이 문은 일반적으로 다음과 같은 형식으로 되어 있습니다.  
   
+     ```syntaxsql
      CREATE ENDPOINT *\<endpointName>*  
   
      STATE=STARTED  
@@ -81,17 +82,18 @@ ms.locfileid: "85789728"
   
      ]  
   
-     [ [ **,** ] ENCRYPTION = **REQUIRED**  
+     [ [**,**] ENCRYPTION = **REQUIRED**  
   
      [ ALGORITHM { *\<algorithm>* } ]  
   
      ]  
   
-     [ **,** ] ROLE = *\<role>*  
+     [**,**] ROLE = *\<role>*  
   
      )  
-  
-     라는 설치 관리자 실행 파일에 포함됩니다. 여기서  
+     ```
+     
+     위치:  
   
     -   *\<endpointName>* 은 서버 인스턴스의 데이터베이스 미러링 엔드포인트에 대한 고유 이름입니다.  
   
@@ -101,7 +103,7 @@ ms.locfileid: "85789728"
   
          하나의 포트 번호는 컴퓨터 시스템당 한 번만 사용할 수 있습니다. 데이터베이스 미러링 엔드포인트는 엔드포인트가 생성될 때 로컬 시스템에서 사용 가능한 모든 포트를 사용할 수 있습니다. 시스템의 TCP 엔드포인트에서 현재 사용 중인 포트를 식별하려면 다음 Transact-SQL 문을 사용합니다.  
   
-        ```  
+        ```sql  
         SELECT name, port FROM sys.tcp_endpoints;  
         ```  
   
@@ -124,12 +126,12 @@ ms.locfileid: "85789728"
   
          AES RC4는 엔드포인트가 AES 알고리즘에 우선 순위를 두어 암호화 알고리즘을 협상하도록 지정합니다. RC4 AES는 엔드포인트가 RC4 알고리즘에 우선 순위를 두어 암호화 알고리즘을 협상하도록 지정합니다. 양쪽 엔드포인트가 두 알고리즘을 모두 지정하지만 순서가 다른 경우 연결을 수락하는 엔드포인트의 알고리즘이 적용됩니다. 동일한 알고리즘을 명시적으로 제공하여 서로 다른 서버 간의 연결 오류를 방지합니다.
   
-        > [!NOTE]  
+        > [!WARNING]  
         >  RC4 알고리즘은 더 이상 사용되지 않습니다. [!INCLUDE[ssNoteDepFutureDontUse](../../includes/ssnotedepfuturedontuse-md.md)] AES를 사용하는 것이 좋습니다.  
   
     -   *\<role>* 은 서버가 수행할 수 있는 역할을 정의합니다. ROLE은 반드시 지정해야 합니다. 그러나 엔드포인트의 역할은 데이터베이스 미러링과만 관련이 있습니다. [!INCLUDE[ssHADR](../../includes/sshadr-md.md)]에 대해서는 엔드포인트의 역할이 무시됩니다.  
   
-         서버 인스턴스가 데이터베이스 미러링 세션에 따라 각기 다른 역할을 하도록 하려면 ROLE=ALL을 지정합니다. 서버 인스턴스가 파트너 또는 미러링 모니터 서버가 되도록 제한하려면 ROLE=PARTNER와 ROLE=WITNESS를 각각 지정합니다.  
+         서버 인스턴스가 데이터베이스 미러링 세션에 따라 각기 다른 역할을 하도록 하려면 ROLE=ALL을 지정합니다. 서버 인스턴스를 파트너 또는 미러링 모니터 서버가 되도록 제한하려면 `ROLE = PARTNER` 또는 `ROLE = WITNESS`를 각각 지정합니다.  
   
         > [!NOTE]  
         >  다양한 버전의 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]에서 제공하는 데이터베이스 미러링 옵션에 대한 자세한 내용은 [SQL Server 2016 버전에서 지원하는 기능](~/sql-server/editions-and-supported-features-for-sql-server-2016.md)을 참조하세요.  
@@ -155,7 +157,7 @@ ms.locfileid: "85789728"
 > [!IMPORTANT]  
 >  각 서버 인스턴스는 엔드포인트를 하나만 가질 수 있습니다. 따라서 서버 인스턴스가 세션에 따라 파트너 역할을 하거나 미러링 모니터 서버 역할을 하도록 하려면 ROLE=ALL을 지정하세요.  
   
-```  
+```sql  
 --Endpoint for initial principal server instance, which  
 --is the only server instance running on SQLHOST01.  
 CREATE ENDPOINT endpoint_mirroring  

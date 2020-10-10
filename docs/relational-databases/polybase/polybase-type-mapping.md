@@ -8,12 +8,12 @@ ms.topic: conceptual
 author: MikeRayMSFT
 ms.author: mikeray
 ms.reviewer: ''
-ms.openlocfilehash: 9d4dd55daf26c9f927e23c0f269a084c711d0481
-ms.sourcegitcommit: 58158eda0aa0d7f87f9d958ae349a14c0ba8a209
+ms.openlocfilehash: 107e25f9d4307532e4d1bd6d413e05347fc5209b
+ms.sourcegitcommit: c4d6804bde7eaf72d9233d6d43f77d77d1b17c4e
 ms.translationtype: HT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 03/30/2020
-ms.locfileid: "80215750"
+ms.lasthandoff: 10/01/2020
+ms.locfileid: "91624740"
 ---
 # <a name="type-mapping-with-polybase"></a>PolyBase를 사용한 형식 매핑
 
@@ -64,7 +64,8 @@ PolyBase로 외부 테이블을 만들 때 데이터 형식 및 열 수를 포�
 | Oracle 데이터 형식 | SQL Server 형식 | 
 | -------------    | --------------- |
 |Float             |Float            |
-|NUMBER            |Decimal          |
+|NUMBER            |Float            |
+|NUMBER(p,s)      |10진수(p, s)   |
 |LONG              |nvarchar         |
 |BINARY_FLOAT      |Real             | 
 |BINARY_DOUBLE     |Float            | 
@@ -120,7 +121,7 @@ MongoDB는 BSON 문서를 사용하여 데이터 레코드를 저장합니다. �
 
 | Teradata 데이터 형식 | SQL Server 형식 | 
 | -------------      | -------------   |
-|INTEGER             |Int              |
+|정수             |Int              |
 |SMALLINT            |SmallInt         |
 |bigint              |BigInt           |
 |BYTEINT             |SmallInt         |
@@ -139,7 +140,7 @@ MongoDB는 BSON 문서를 사용하여 데이터 레코드를 저장합니다. �
 |timestamp           |Datetime2        |
 |TIME                |Time             |
 |TIME WITH TIME ZONE |Time             |
-|TIMESTAMP WITH TIME ZONE|Time         |
+|TIMESTAMP WITH TIME ZONE|시간         |
 
 ::: moniker-end
 

@@ -13,19 +13,19 @@ helpviewer_keywords:
 ms.assetid: 46788407-187e-4b0b-bfe4-529af8d77c60
 author: VanMSFT
 ms.author: vanto
-ms.openlocfilehash: 8560ed40c5a50ca16c6bad6b78d4a2eddcb0f0e2
-ms.sourcegitcommit: da88320c474c1c9124574f90d549c50ee3387b4c
+ms.openlocfilehash: fa82df08581e8667bdcae7e8c64fa1562e4b7081
+ms.sourcegitcommit: 27f95e50f11a98164e9e7a5130a3e00ac06b4cea
 ms.translationtype: HT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 07/01/2020
-ms.locfileid: "85785090"
+ms.lasthandoff: 09/28/2020
+ms.locfileid: "91412764"
 ---
 # <a name="monitor-and-enforce-best-practices-by-using-policy-based-management"></a>정책 기반 관리를 사용하여 최선의 방법 모니터링 및 적용
  [!INCLUDE [SQL Server](../../includes/applies-to-version/sqlserver.md)]
-  정책 기반 관리를 통해 [!INCLUDE[ssDEnoversion](../../includes/ssdenoversion-md.md)]에 대한 최선의 방법을 모니터링할 수 있습니다. [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 에서는 최선의 방법 정책으로 가져와서 인스턴스, 인스턴스 개체, 데이터베이스 또는 데이터베이스 개체를 포함하는 대상 집합에 대해 정책을 평가할 수 있는 일련의 정책 파일을 제공합니다. 정책을 수동으로 평가하거나, 일정에 따라 대상 집합을 평가하도록 정책을 설정하거나, 이벤트에 따라 대상 집합을 평가하도록 정책을 설정합니다. 정책 기반 관리에 대한 자세한 내용은 [정책 기반 관리를 사용하여 서버 관리](../../relational-databases/policy-based-management/administer-servers-by-using-policy-based-management.md)를 참조하세요.  
+  정책 기반 관리를 통해 [!INCLUDE[ssDEnoversion](../../includes/ssdenoversion-md.md)]에 대한 최선의 방법을 모니터링할 수 있습니다.  정책을 수동으로 평가하거나, 일정에 따라 대상 집합을 평가하도록 정책을 설정하거나, 이벤트에 따라 대상 집합을 평가하도록 정책을 설정합니다. 정책 기반 관리에 대한 자세한 내용은 [정책 기반 관리를 사용하여 서버 관리](../../relational-databases/policy-based-management/administer-servers-by-using-policy-based-management.md)를 참조하세요.  모범 사례 정책으로 가져온 다음, 인스턴스, 인스턴스 개체, 데이터베이스 또는 데이터베이스 개체를 포함하는 대상 집합에 대해 정책을 평가할 수 있는 [샘플 정책 파일](https://github.com/microsoft/sql-server-samples/tree/master/samples/features/epm-framework/sample-policies) 세트를 사용할 수 있습니다.
   
 ## <a name="policy-and-rules-for-database-engine"></a>데이터베이스 엔진에 대한 정책 및 규칙  
- 다음 표에서는 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 설치에 포함되는 정책 목록을 보여 주고 각 정책이 평가하는 최선의 방법 규칙에 대한 정보를 제공합니다. 정책은 XML 파일로 저장되며 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]로 가져와야 합니다. 정책을 가져오는 방법은 [정책 기반 관리 정책 가져오기](../../relational-databases/policy-based-management/import-a-policy-based-management-policy.md)를 참조하세요.  
+ 다음 표에는 [샘플 정책](https://github.com/microsoft/sql-server-samples/tree/master/samples/features/epm-framework/sample-policies) 세트에 포함된 정책과 각 정책이 평가하는 모범 사례 규칙에 대한 정보가 나열되어 있습니다. 정책은 XML 파일로 저장되며 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]로 가져와야 합니다. 정책을 가져오는 방법은 [정책 기반 관리 정책 가져오기](../../relational-databases/policy-based-management/import-a-policy-based-management-policy.md)를 참조하세요.  
   
 |정책 이름|최선의 방법 규칙|  
 |-----------------|------------------------|  

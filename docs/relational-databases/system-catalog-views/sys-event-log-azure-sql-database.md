@@ -21,16 +21,16 @@ ms.assetid: ad5496b5-e5c7-4a18-b5a0-3f985d7c4758
 author: markingmyname
 ms.author: maghan
 monikerRange: = azuresqldb-current || = sqlallproducts-allversions
-ms.openlocfilehash: d75c8cb02c64b5965fd5a6fe084b065c3dc8ba65
-ms.sourcegitcommit: 04cf7905fa32e0a9a44575a6f9641d9a2e5ac0f8
+ms.openlocfilehash: 67c111b15728f92e3a6f0ac8dac830fe32f2f8da
+ms.sourcegitcommit: 783b35f6478006d654491cb52f6edf108acf2482
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 10/07/2020
-ms.locfileid: "91809849"
+ms.lasthandoff: 10/09/2020
+ms.locfileid: "91892403"
 ---
 # <a name="sysevent_log-azure-sql-database"></a>sys.event_log(Azure SQL Database)
 
-[!INCLUDE[Azure SQL Database Azure SQL Managed Instance](../../includes/applies-to-version/asdb-asdbmi.md)]
+[!INCLUDE[Azure SQL Database](../../includes/applies-to-version/asdb.md)]
 
   성공적인 [!INCLUDE[ssSDSfull](../../includes/sssdsfull-md.md)] 데이터베이스 연결, 연결 실패 및 교착 상태를 반환 합니다. 이 정보를 사용하여 [!INCLUDE[ssSDS](../../includes/sssds-md.md)]가 있는 데이터베이스 활동을 추적하거나 문제 해결할 수 있습니다.  
   
@@ -39,10 +39,10 @@ ms.locfileid: "91809849"
   
  `sys.event_log` 뷰는 다음 열을 포함합니다.  
   
-|열 이름|데이터 형식|Description|  
+|열 이름|데이터 형식|설명|  
 |-----------------|---------------|-----------------|  
 |**database_name**|**sysname**|데이터베이스의 이름입니다. 연결이 실패하고 사용자가 데이터베이스 이름을 지정하지 않은 경우 이 열은 비어 있습니다.|  
-|**start_time**|**datetime2**|집계 간격 시작의 UTC 날짜 및 시간입니다. 집계 이벤트에 대해 시간은 항상 5분의 배수입니다. 다음은 그 예입니다. <br /><br /> '2011-09-28 16:00:00'<br />'2011-09-28 16:05:00'<br />'2011-09-28 16:10:00'|  
+|**start_time**|**datetime2**|집계 간격 시작의 UTC 날짜 및 시간입니다. 집계 이벤트에 대해 시간은 항상 5분의 배수입니다. 예를 들면 다음과 같습니다.<br /><br /> '2011-09-28 16:00:00'<br />'2011-09-28 16:05:00'<br />'2011-09-28 16:10:00'|  
 |**end_time**|**datetime2**|집계 간격 끝의 UTC 날짜 및 시간입니다. 집계 된 이벤트의 경우 **End_time** 은 항상 같은 행의 해당 **start_time** 보다 정확히 5 분 후입니다. 집계 되지 않은 이벤트의 경우 **start_time** 및 **end_time** 이벤트의 실제 UTC 날짜 및 시간과 같습니다.|  
 |**event_category**|**nvarchar (64)**|이 이벤트를 생성한 높은 수준의 구성 요소입니다.<br /><br /> 가능한 값 목록은 [이벤트 유형](../../relational-databases/system-catalog-views/sys-event-log-azure-sql-database.md#EventTypes) 을 참조 하세요.|  
 |**event_type**|**nvarchar (64)**|이벤트의 유형입니다.<br /><br /> 가능한 값 목록은 [이벤트 유형](../../relational-databases/system-catalog-views/sys-event-log-azure-sql-database.md#EventTypes) 을 참조 하세요.|  
@@ -129,7 +129,7 @@ start_time                    end_time
 - 데이터 센터 내에 컴퓨터 오류가 발생 하면 [!INCLUDE[ssSDS](../../includes/sssds-md.md)] 이벤트 테이블에서 소량의 데이터가 누락 될 수 있습니다.  
 - DoSGuard를 통해 IP 주소를 차단하는 경우 해당 IP 주소로부터의 연결 시도 이벤트는 수집할 수 없으며 이 뷰에 나타나지 않습니다.  
   
-## <a name="examples"></a>예  
+## <a name="examples"></a>예제  
   
 ### <a name="simple-examples"></a>간단한 예제
 
@@ -172,7 +172,7 @@ WHERE event_type = 'throttling'
     AND end_time <= '2011-09-25 11:00:00';  
 ```
 
-### <a name="db-scoped-extended-event"></a>DB 범위 확장 이벤트
+### <a name="db-scoped-extended-event"></a>DB-Scoped 확장 이벤트
 
  다음 샘플 코드를 사용 하 여 db 범위 확장 이벤트 (XEvent) 세션을 설정 합니다.  
 

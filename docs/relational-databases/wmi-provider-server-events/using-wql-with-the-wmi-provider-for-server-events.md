@@ -17,12 +17,12 @@ helpviewer_keywords:
 ms.assetid: 58b67426-1e66-4445-8e2c-03182e94c4be
 author: markingmyname
 ms.author: maghan
-ms.openlocfilehash: 076c91605c245ad49f6c51a2a656d48c7dba2109
-ms.sourcegitcommit: dd36d1cbe32cd5a65c6638e8f252b0bd8145e165
+ms.openlocfilehash: f65cd55570312a4d86e795d224c900fa7517236e
+ms.sourcegitcommit: 783b35f6478006d654491cb52f6edf108acf2482
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 09/08/2020
-ms.locfileid: "89545176"
+ms.lasthandoff: 10/09/2020
+ms.locfileid: "91891243"
 ---
 # <a name="using-wql-with-the-wmi-provider-for-server-events"></a>서버 이벤트용 WMI 공급자에 WQL 사용
 [!INCLUDE [SQL Server](../../includes/applies-to-version/sqlserver.md)]
@@ -50,7 +50,7 @@ CREATE EVENT NOTIFICATION SQLWEP_76CF38C1_18BB_42DD_A7DC_C8820155B0E9
 GO  
 ```  
   
- WQL 쿼리(`FROM`)의 `DDL_DATABASE_LEVEL_EVENTS` 절에 있는 인수는 이벤트 알림을 만들 수 있는 유효한 모든 이벤트일 수 있습니다. `SELECT` 및 `WHERE` 절의 인수는 이벤트 또는 해당 부모 이벤트와 연결된 이벤트 속성을 지정할 수 있습니다. 유효한 이벤트 및 이벤트 속성 목록은 [이벤트 알림 (데이터베이스 엔진)](https://technet.microsoft.com/library/ms182602.aspx)을 참조 하세요.  
+ WQL 쿼리(`FROM`)의 `DDL_DATABASE_LEVEL_EVENTS` 절에 있는 인수는 이벤트 알림을 만들 수 있는 유효한 모든 이벤트일 수 있습니다. `SELECT` 및 `WHERE` 절의 인수는 이벤트 또는 해당 부모 이벤트와 연결된 이벤트 속성을 지정할 수 있습니다. 유효한 이벤트 및 이벤트 속성 목록은 [이벤트 알림 (데이터베이스 엔진)](/previous-versions/sql/sql-server-2008-r2/ms182602(v=sql.105))을 참조 하세요.  
   
  서버 이벤트용 WMI 공급자가 명시적으로 지원하는 WQL 구문은 다음과 같습니다. 추가 WQL 구문을 지정할 수도 있지만 해당 구문은 이 공급자와 관련이 없으며 대신 WMI 호스트 서비스에 의해 구문 분석됩니다. WMI 쿼리 언어에 대한 자세한 내용은 MSDN(Microsoft Developer Network)의 WQL 설명서를 참조하십시오.  
   
@@ -74,7 +74,7 @@ WHERE where_condition
  이벤트와 관련된 모든 속성이 쿼리되도록 지정합니다.  
   
  *event_type*  
- 이벤트 알림을 만들 수 있는 모든 이벤트입니다. 사용 가능한 이벤트 목록은 [서버 이벤트 용 WMI 공급자 클래스 및 속성](https://technet.microsoft.com/library/ms186449.aspx)을 참조 하세요. 이벤트 *유형* 이름은 *event_type*  |  create event notification을 사용 하 여 수동으로 이벤트 알림을 만들 때 지정할 수 있는 동일한 event_type*event_group* 에 해당 합니다. *이벤트 유형의* 예로는 CREATE_TABLE, LOCK_DEADLOCK, DDL_USER_EVENTS 및 TRC_DATABASE가 있습니다.  
+ 이벤트 알림을 만들 수 있는 모든 이벤트입니다. 사용 가능한 이벤트 목록은 [서버 이벤트 용 WMI 공급자 클래스 및 속성](./wmi-provider-for-server-events-classes-and-properties.md)을 참조 하세요. 이벤트 *유형* 이름은 *event_type*  |  create event notification을 사용 하 여 수동으로 이벤트 알림을 만들 때 지정할 수 있는 동일한 event_type*event_group* 에 해당 합니다. *이벤트 유형의* 예로는 CREATE_TABLE, LOCK_DEADLOCK, DDL_USER_EVENTS 및 TRC_DATABASE가 있습니다.  
   
 > [!NOTE]  
 >  DDL과 같은 작업을 수행하는 특정 시스템 저장 프로시저에서 이벤트 알림이 발생할 수도 있습니다. 이벤트 알림을 테스트하여 실행된 시스템 저장 프로시저에 대한 응답을 확인합니다. 예를 들어 CREATE TYPE 문과 **sp_addtype** 저장 프로시저는 모두 CREATE_TYPE 이벤트에 대해 생성 되는 이벤트 알림을 발생 시킵니다. 그러나 **sp_rename** 저장 프로시저는 이벤트 알림을 발생 시 지 않습니다. 자세한 내용은[DDL Events](../../relational-databases/triggers/ddl-events.md)를 참조 하십시오.  
@@ -111,9 +111,9 @@ WHERE DatabaseName = 'AdventureWorks' AND SchemaName = 'Sales'
   
  임의의 특정 범위에서 모든 이벤트를 쿼리할 수는 없습니다. 예를 들어 Lock_Deadlock과 같은 추적 이벤트나 TRC_LOCKS와 같은 추적 이벤트 그룹의 WQL 쿼리는 서버 수준에서만 등록할 수 있습니다. 이와 유사하게, CREATE_ENDPOINT 이벤트 및 DDL_ENDPOINT_EVENTS 이벤트 그룹도 서버 수준에서만 등록할 수 있습니다. 이벤트 등록에 적합 한 범위에 대 한 자세한 내용은 [이벤트 알림 디자인](https://technet.microsoft.com/library/ms175854\(v=sql.105\).aspx)을 참조 하세요. 서버 수준 에서만 *event_type* 등록 될 수 있는 WQL 쿼리를 등록 하려는 시도는 항상 서버 수준에서 수행 됩니다. WMI 클라이언트에 사용 권한이 있으면 등록이 성공합니다. 그렇지 않으면 오류가 클라이언트에 반환됩니다. 하지만 경우에 따라 이벤트에 해당하는 속성을 기반으로 WHERE 절을 서버 수준 이벤트의 필터로 사용할 수 있습니다. 예를 들어 많은 추적 이벤트에는 WHERE 절에서 필터로 사용할 수 있는 **DatabaseName** 속성이 있습니다.  
   
- 서버 범위 이벤트 알림은 **master** 데이터베이스에 생성 되며, [server_event_notifications](../../relational-databases/system-catalog-views/sys-server-event-notifications-transact-sql.md) 카탈로그 뷰를 사용 하 여 메타 데이터에 대해 쿼리할 수 있습니다.  
+ 서버 범위 이벤트 알림은 **master** 데이터베이스에서 만들어지며 [sys.server_event_notifications](../../relational-databases/system-catalog-views/sys-server-event-notifications-transact-sql.md) 카탈로그 뷰를 사용 하 여 메타 데이터에 대해 쿼리할 수 있습니다.  
   
- 데이터베이스 범위 또는 개체 범위 이벤트 알림은 지정 된 데이터베이스에 생성 되며, [event_notifications](../../relational-databases/system-catalog-views/sys-event-notifications-transact-sql.md) 카탈로그 뷰를 사용 하 여 메타 데이터에 대해 쿼리할 수 있습니다. 카탈로그 뷰에 해당 데이터베이스 이름을 접두사로 추가해야 합니다.  
+ 데이터베이스 범위 또는 개체 범위 이벤트 알림은 지정 된 데이터베이스에서 만들어지며 [sys.event_notifications](../../relational-databases/system-catalog-views/sys-event-notifications-transact-sql.md) 카탈로그 뷰를 사용 하 여 메타 데이터에 대해 쿼리할 수 있습니다. 카탈로그 뷰에 해당 데이터베이스 이름을 접두사로 추가해야 합니다.  
   
 ## <a name="examples"></a>예제  
   
@@ -142,7 +142,6 @@ WHERE DatabaseName = 'AdventureWorks' AND SchemaName = 'Sales'
 ```  
   
 ## <a name="see-also"></a>참고 항목  
- [서버 이벤트 용 WMI 공급자 개념](https://technet.microsoft.com/library/ms180560.aspx)   
- [이벤트 알림(데이터베이스 엔진)](https://technet.microsoft.com/library/ms182602.aspx)  
-  
+ [서버 이벤트 용 WMI 공급자 개념](./wmi-provider-for-server-events-concepts.md)   
+ [이벤트 알림(데이터베이스 엔진)](/previous-versions/sql/sql-server-2008-r2/ms182602(v=sql.105))  
   

@@ -11,12 +11,12 @@ ms.assetid: a62f4ff9-2953-42ca-b7d8-1f8f527c4d66
 author: VanMSFT
 ms.author: vanto
 monikerRange: =azuresqldb-current||=azure-sqldw-latest||>=sql-server-2016||=sqlallproducts-allversions||>=sql-server-linux-2017||=azuresqldb-mi-current
-ms.openlocfilehash: bf3c9a827a4a3318bbee7e550aa8759a8dcc0eb4
-ms.sourcegitcommit: f3321ed29d6d8725ba6378d207277a57cb5fe8c2
+ms.openlocfilehash: eb0c19820d7f3dcb4ff60c39d0cf3cbd6661b062
+ms.sourcegitcommit: c7f40918dc3ecdb0ed2ef5c237a3996cb4cd268d
 ms.translationtype: HT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 07/06/2020
-ms.locfileid: "86005591"
+ms.lasthandoff: 10/05/2020
+ms.locfileid: "91727627"
 ---
 # <a name="dynamic-data-masking"></a>동적 데이터 마스킹
 [!INCLUDE [SQL Server ASDB, ASDBMI, ASDW ](../../includes/applies-to-version/sql-asdb-asdbmi-asa.md)]
@@ -32,8 +32,6 @@ DDM(동적 데이터 마스킹)에서는 권한이 없는 사용자로 마스킹
 * DDM은 전체 마스킹 및 부분 마스킹 기능과 숫자 데이터에 대한 임의 마스크 기능을 갖추고 있습니다.
 * 간단한 [!INCLUDE[tsql_md](../../includes/tsql-md.md)] 명령에서 마스크를 정의하고 관리합니다.
 
-예를 들어, 콜 센터 지원 담당자는 사회 보장 번호 또는 신용카드 번호의 여러 숫자로 발신자를 식별할 수 있습니다.  사회 보장 번호나 신용카드 번호가 지원 담당자에게 완전히 노출되지 않아야 합니다. 모든 쿼리의 결과 집합에서 주민 등록 번호 또는 신용 카드 번호의 마지막 4자리를 제외한 모든 숫자를 마스킹하도록 마스킹 규칙을 정의할 수 있습니다. 또 다른 예로, 개인 식별이 가능한 정보(PII) 데이터를 보호하기 위해 적합한 데이터 마스크를 사용하여 개발자는 적합성 규정 준수 규칙을 위반하지 않고 문제 해결 목적으로 프로덕션 환경을 쿼리할 수 있습니다.
-
 동적 데이터 마스킹의 목적은 중요한 데이터의 노출을 제한하여 데이터에 대한 액세스 권한이 없는 사용자가 보지 못하게 하는 것이지 데이터베이스 사용자가 데이터베이스에 직접 연결하여 중요한 데이터 조각을 노출하는 과도한 쿼리를 실행하지 못하게 하는 것은 아닙니다. 동적 데이터 마스킹은 기타 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 보안 기능(감사, 암호화, 행 수준 보안...)에 보완적이며 데이터베이스에서 중요한 데이터의 보호를 강화하기 위해 추가적으로 이 기능을 함께 사용하는 것이 좋습니다.  
   
 동적 데이터 마스킹은에서 [!INCLUDE[ssSQL15](../../includes/sssql15-md.md)] 및 [!INCLUDE[ssSDSFull](../../includes/sssdsfull-md.md)]에서 사용할 수 있으며 [!INCLUDE[tsql](../../includes/tsql-md.md)] 명령을 사용하여 구성됩니다.합니다. Azure Portal을 사용하여 동적 데이터 마스킹을 구성하는 방법에 대한 자세한 내용은 [SQL 데이터베이스 동적 데이터 마스킹 시작(Azure Portal)](https://azure.microsoft.com/documentation/articles/sql-database-dynamic-data-masking-get-started/)을 참조하세요.  
@@ -44,9 +42,9 @@ DDM(동적 데이터 마스킹)에서는 권한이 없는 사용자로 마스킹
 |함수|Description|예제|  
 |--------------|-----------------|--------------|  
 |기본값|지정된 필드의 데이터 형식에 따라 전체 마스킹.<br /><br /> 문자열 데이터 형식의 경우 필드의 크기가 4자 미만인 경우 XXXX 미만의 X를 사용합니다(**char**, **nchar**,  **varchar**, **nvarchar**, **text**, **ntext**).  <br /><br /> 숫자 데이터 형식의 경우 영(0) 값을 사용합니다(**bigint**, **bit**, **decimal**, **int**, **money**, **numeric**, **smallint**, **smallmoney**, **tinyint**, **float**, **real**).<br /><br /> 날짜 및 시간 데이터 형식의 경우 01.01.1900 00:00:00.0000000(**date**, **datetime2**, **datetime**, **datetimeoffset**, **smalldatetime**, **time**)을 사용합니다.<br /><br />이진 데이터 형식의 경우 단일 바이트의 ASCII 값 0을 사용합니다(**binary**, **varbinary**, **image**).|열 정의 구문 예제: `Phone# varchar(12) MASKED WITH (FUNCTION = 'default()') NULL`<br /><br /> 변경 구문의 예제: `ALTER COLUMN Gender ADD MASKED WITH (FUNCTION = 'default()')`|  
-|Email|이메일 주소의 형식에서 이메일 주소의 첫 번째 문자와 상수 접미사 ".com"을 표시하는 마스킹 방법입니다. `aXXX@XXXX.com`입니다.|정의 구문 예제: `Email varchar(100) MASKED WITH (FUNCTION = 'email()') NULL`<br /><br /> 변경 구문의 예제: `ALTER COLUMN Email ADD MASKED WITH (FUNCTION = 'email()')`|  
+|Email|이메일 주소의 형식에서 이메일 주소의 첫 번째 문자와 상수 접미사 ".com"을 표시하는 마스킹 방법입니다. `aXXX@XXXX.com`.|정의 구문 예제: `Email varchar(100) MASKED WITH (FUNCTION = 'email()') NULL`<br /><br /> 변경 구문의 예제: `ALTER COLUMN Email ADD MASKED WITH (FUNCTION = 'email()')`|  
 |임의|지정된 범위 내에서 임의 값으로 원래 값을 마스킹하기 위해 숫자 유형에서 사용할 임의 마스킹 함수입니다.|정의 구문 예제: `Account_Number bigint MASKED WITH (FUNCTION = 'random([start range], [end range])')`<br /><br /> 변경 구문의 예제: `ALTER COLUMN [Month] ADD MASKED WITH (FUNCTION = 'random(1, 12)')`|  
-|사용자 지정 문자열|첫 번째 및 마지막 문자를 표시하고 가운데에 사용자 지정 안쪽 여백 문자열을 추가하는 마스킹 방법입니다. `prefix,[padding],suffix`<br /><br /> 참고: 원래 값이 너무 짧아서 전체 마스크를 완료할 수 없는 경우 접두사 또는 접미사 부분이 표시되지 않습니다.|정의 구문 예제: `FirstName varchar(100) MASKED WITH (FUNCTION = 'partial(prefix,[padding],suffix)') NULL`<br /><br /> 변경 구문의 예제: `ALTER COLUMN [Phone Number] ADD MASKED WITH (FUNCTION = 'partial(1,"XXXXXXX",0)')`<br /><br /> 추가 예:<br /><br /> `ALTER COLUMN [Phone Number] ADD MASKED WITH (FUNCTION = 'partial(5,"XXXXXXX",0)')`<br /><br /> `ALTER COLUMN [Social Security Number] ADD MASKED WITH (FUNCTION = 'partial(0,"XXX-XX-",4)')`|  
+|사용자 지정 문자열|첫 번째 및 마지막 문자를 표시하고 가운데에 사용자 지정 안쪽 여백 문자열을 추가하는 마스킹 방법입니다. `prefix,[padding],suffix`<br /><br /> 참고: 원래 값이 너무 짧아서 전체 마스크를 완료할 수 없는 경우 접두사 또는 접미사 부분이 표시되지 않습니다.|정의 구문 예제: `FirstName varchar(100) MASKED WITH (FUNCTION = 'partial(prefix,[padding],suffix)') NULL`<br /><br /> 변경 구문의 예제: `ALTER COLUMN [Phone Number] ADD MASKED WITH (FUNCTION = 'partial(1,"XXXXXXX",0)')`<br /><br /> 추가 예제:<br /><br /> `ALTER COLUMN [Phone Number] ADD MASKED WITH (FUNCTION = 'partial(5,"XXXXXXX",0)')`|  
   
 ## <a name="permissions"></a>사용 권한  
  동적 데이터 마스크로 테이블을 만드는 데 특별한 권한이 필요하지 않습니다. 구성표 권한에 대한 표준 **CREATE TABLE** 및 **ALTER** 만 필요합니다.  

@@ -19,12 +19,12 @@ ms.assetid: 3c036813-36cf-4415-a0c9-248d0a433856
 author: pmasl
 ms.author: pelopes
 monikerRange: '>=sql-server-2016||=sqlallproducts-allversions'
-ms.openlocfilehash: 40d7c10127efa14000a3f91f2cf003bf52d95b2c
-ms.sourcegitcommit: bf5acef60627f77883249bcec4c502b0205300a4
+ms.openlocfilehash: 80fbe0c833f9b4ac7f3d0ec1f845dfd230f09e64
+ms.sourcegitcommit: 2600a414c321cfd6dc6daf5b9bcbc9a99c049dc4
 ms.translationtype: HT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 08/13/2020
-ms.locfileid: "88200967"
+ms.lasthandoff: 09/30/2020
+ms.locfileid: "91603451"
 ---
 # <a name="compatibility-certification"></a>호환성 인증
 
@@ -35,11 +35,13 @@ ms.locfileid: "88200967"
 동일한 [!INCLUDE[ssde_md](../../includes/ssde_md.md)]에서 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 및 [!INCLUDE[ssazure_md](../../includes/ssazure_md.md)](Managed Instance)를 모두 구동합니다. 이 공유된 [!INCLUDE[ssde_md](../../includes/ssde_md.md)]는 사용자 데이터베이스를 온-프레미스 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 및 [!INCLUDE[ssazure_md](../../includes/ssazure_md.md)] 간에 원활하게 이동할 수 있고, [!INCLUDE[tsql](../../includes/tsql-md.md)]처럼 데이터베이스에서 실행되는 애플리케이션 코드가 원본 시스템에 있는 것처럼 계속 작동한다는 것을 의미합니다.
 
 각 새로운 릴리스의 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 설치의 경우 기본 호환성 수준은 [!INCLUDE[ssDE](../../includes/ssde-md.md)]의 버전으로 설정됩니다. 그러나 이전 버전의 호환성 수준은 기존 애플리케이션의 호환성을 위해 유지됩니다. 이 호환성 매트릭스는 [여기](../../t-sql/statements/alter-database-transact-sql-compatibility-level.md#supported-dbcompats)에서 볼 수 있습니다.
-따라서 지정된 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 버전에서 작동하도록 인증된 애플리케이션은 실제로 해당 버전의 기본 호환성 수준에서 작동하도록 인증되었습니다.
+따라서 지정된 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 버전에서 작동하도록 인증된 애플리케이션은 **실제로 해당 버전의 기본 호환성 수준에서 작동하도록 인증되었습니다**.
 
-예를 들어 데이터베이스 호환성 수준 130은 [!INCLUDE[ssSQL15](../../includes/sssql15-md.md)]에서 기본값이었습니다. 호환성 수준은 특정 [!INCLUDE[tsql](../../includes/tsql-md.md)] 기능 및 쿼리 최적화 동작을 강제하기 때문에 [!INCLUDE[ssSQL15](../../includes/sssql15-md.md)]에 작동하도록 인증된 데이터베이스는 데이터베이스 호환성 수준 130에서 암시적으로 인증되었습니다. 데이터베이스 호환성 수준이 130으로 유지되는 한, 이 데이터베이스는 좀 더 최신 버전의 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)](예: [!INCLUDE[ssCurrent](../../includes/sscurrent-md.md)]) 및 [!INCLUDE[ssazure_md](../../includes/ssazure_md.md)]에서 그대로 작동할 수 있습니다. 
+예를 들어 데이터베이스 호환성 수준 130은 [!INCLUDE[ssSQL15](../../includes/sssql15-md.md)]에서 기본값이었습니다. 호환성 수준은 특정 [!INCLUDE[tsql](../../includes/tsql-md.md)] 기능 및 쿼리 최적화 동작을 강제하기 때문에 **[!INCLUDE[ssSQL15](../../includes/sssql15-md.md)]에 작동하도록 인증된 데이터베이스는 데이터베이스 호환성 수준 130에서 암시적으로 인증되었습니다**. 데이터베이스 호환성 수준이 130으로 유지되는 한, 이 데이터베이스는 좀 더 최신 버전의 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)](예: [!INCLUDE[ssCurrent](../../includes/sscurrent-md.md)]) 및 [!INCLUDE[ssazure_md](../../includes/ssazure_md.md)]에서 그대로 작동할 수 있습니다. 
 
 [!INCLUDE[msCoName](../../includes/msconame-md.md)] [!INCLUDE[ssazure_md](../../includes/ssazure_md.md)] 연속 통합 작업 모델의 기본 원칙입니다. [!INCLUDE[ssde_md](../../includes/ssde_md.md)]은 Azure에서 지속적으로 개선되고 업그레이드되지만 기존 데이터베이스는 현재 호환성 수준을 유지하기 때문에 기본 [!INCLUDE[ssde_md](../../includes/ssde_md.md)]으로 업그레이드한 후에도 설계된 대로 계속 작동합니다. 
+
+이는 또한 SharePoint Server 2016 및 SharePoint Server 2019가 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 및 [!INCLUDE[ssSDSMIfull](../../includes/sssdsmifull-md.md)]에서 인증하는 방법으로, 해당 SharePoint Server 버전에 대해 지원되는 데이터베이스 호환성 수준을 사용할 수 있는 [!INCLUDE[ssDEnoversion](../../includes/ssdenoversion-md.md)]를 배포할 수 있습니다. 자세한 내용은 [SharePoint Server 2016의 하드웨어 및 소프트웨어 요구 사항](https://docs.microsoft.com/sharepoint/install/hardware-and-software-requirements#minimum-requirements-for-a-database-server-in-a-farm) 및 [SharePoint Server 2019의 하드웨어 및 소프트웨어 요구 사항](https://docs.microsoft.com/sharepoint/install/hardware-and-software-requirements-2019#minimum-requirements-for-a-database-server-in-a-farm)을 참조하세요.
 
 ## <a name="managing-upgrade-risk-with-compatibility-certification"></a>호환성 인증으로 업그레이드 위험 관리
 호환성 인증을 사용하는 것은 데이터베이스 현대화의 중요한 접근 방식입니다. 호환성 수준을 기반으로 한 인증을 통해 개발자는 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 및 [!INCLUDE[ssazure_md](../../includes/ssazure_md.md)]에서 지원되는 애플리케이션에 대한 기술 요구 사항을 설정하지만, 데이터베이스 플랫폼 수명 주기와 애플리케이션 수명 주기를 분리합니다. 이렇게 하면 회사는 수명 주기 정책에 따라 [!INCLUDE[ssDEnoversion](../../includes/ssdenoversion-md.md)]의 업그레이드된 상태를 유지할 뿐만 아니라 코드에 종속되지 않는 새로운 확장성 및 성능 향상 기능을 활용하고, 애플리케이션 연결은 업그레이드를 통해 **기능 상태를 유지합니다**.
@@ -54,9 +56,10 @@ ms.locfileid: "88200967"
    
 호환성 수준에 대한 자세한 내용은 [이전 버전과의 호환성을 위해 호환성 수준 사용](../../t-sql/statements/alter-database-transact-sql-compatibility-level.md#backwardCompat)을 참조하세요.
    
-애플리케이션이 상위 데이터베이스 호환성 수준에서만 사용 가능한 향상 기능을 사용할 필요가 없는 한, [!INCLUDE[ssDEnoversion](../../includes/ssdenoversion-md.md)]를 업그레이드하고 이전 데이터베이스 호환성 수준을 유지하는 것이 유효한 접근법이며, 애플리케이션을 다시 인증할 필요가 없습니다. 자세한 내용은 이 문서의 뒷부분에 나오는 [호환성 수준 및 데이터베이스 엔진 업그레이드](#compatibility-levels-and-database-engine-upgrades)를 참조하세요.
-
-새로운 개발 작업을 수행하는 경우 또는 기존 애플리케이션에 [지능형 쿼리 처리](../../relational-databases/performance/intelligent-query-processing.md) 및 새로운 [!INCLUDE[tsql](../../includes/tsql-md.md)]와 같은 새 기능을 사용해야 하는 경우 데이터베이스 호환성 수준을 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]에서 사용 가능한 최신 수준으로 업그레이드하고, 애플리케이션이 해당 호환성 수준과 함께 작동함을 인증하세요. 데이터베이스 호환성 수준을 업그레이드하는 방법에 대한 자세한 내용은 [데이터베이스 호환성 수준 업그레이드에 대한 모범 사례](../../t-sql/statements/alter-database-transact-sql-compatibility-level.md#best-practices-for-upgrading-database-compatibility-level)를 참조하세요.
+> [!IMPORTANT]
+> 지정된 호환성 수준에 대해 이미 인증된 기존 애플리케이션의 경우 [!INCLUDE[ssDEnoversion](../../includes/ssdenoversion-md.md)]를 업그레이드하고 이전 데이터베이스 호환성 수준을 **유지 관리**합니다. 이 시나리오에서는 애플리케이션을 다시 인증할 필요가 없습니다. 자세한 내용은 이 문서의 뒷부분에 나오는 [호환성 수준 및 데이터베이스 엔진 업그레이드](#compatibility-levels-and-database-engine-upgrades)를 참조하세요.
+>
+> 새로운 개발 작업을 수행하는 경우 또는 기존 애플리케이션에 [지능형 쿼리 처리](../../relational-databases/performance/intelligent-query-processing.md) 및 새로운 [!INCLUDE[tsql](../../includes/tsql-md.md)]와 같은 새 기능을 사용해야 하는 경우 데이터베이스 호환성 수준을 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]에서 사용 가능한 최신 수준으로 업그레이드하고, 애플리케이션이 해당 호환성 수준에서 작동하도록 애플리케이션을 다시 인증합니다. 데이터베이스 호환성 수준을 업그레이드하는 방법에 대한 자세한 내용은 [데이터베이스 호환성 수준 업그레이드에 대한 모범 사례](../../t-sql/statements/alter-database-transact-sql-compatibility-level.md#best-practices-for-upgrading-database-compatibility-level)를 참조하세요.
    
 ### <a name="why-query-plan-shape"></a><a name="queryplan_shape"></a> 쿼리 계획 셰이프를 사용하는 이유      
 쿼리 계획 셰이프는 쿼리 계획을 구성하는 다양한 연산자의 시각적 표시를 나타냅니다. 여기에는 검색, 검사, 조인, 정렬 등의 연산자와 데이터 흐름을 나타내는 연산자 간 연결, 의도한 결과 세트를 생성하기 위해 실행해야 하는 연산 순서가 포함됩니다. 쿼리 계획 셰이프는 쿼리 최적화 프로그램에서 결정됩니다.
@@ -75,7 +78,7 @@ ms.locfileid: "88200967"
 -  **코드 변경 없이 업그레이드합니다**. 새 버전의 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 또는 [!INCLUDE[ssazure_md](../../includes/ssazure_md.md)]로의 업그레이드를 코드 변경 없이 원본 시스템과 동일한 호환성 수준을 유지하며 수행할 수 있고, 애플리케이션에서 더 높은 데이터베이스 호환성 수준에서만 사용할 수 있는 향상된 기능을 활용해야 할 때까지는 즉시 다시 인증할 필요가 없습니다.
 - 애플리케이션의 변경이 필요 없고 데이터베이스 호환성 수준으로 제어되지 않는 향상된 기능을 사용하여 **관리 효율성 및 확장성을 향상시킵니다**. [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]에서 예를 들면 다음과 같습니다. 
   - [시스템 동적 관리 뷰](../../relational-databases/system-dynamic-management-views/system-dynamic-management-views.md), [확장 이벤트](../../relational-databases/extended-events/extended-events.md) 및 [자동 조정](../../relational-databases/automatic-tuning/automatic-tuning.md)을 통한 풍부한 모니터링 및 문제 해결 개선 사항입니다. 
-  - [자동 Soft-NUMA](../../database-engine/configure-windows/soft-numa-sql-server.md#automatic-soft-numa)를 통해 확장성이 개선되었습니다.
+  - 예를 들어 [Automatic Soft-NUMA](../../database-engine/configure-windows/soft-numa-sql-server.md#automatic-soft-numa), [가속 데이터베이스 복구](../../relational-databases/accelerated-database-recovery-concepts.md) 또는 [메모리 최적화 tempdb 메타데이터](../../relational-databases/in-memory-database.md#memory-optimized-tempdb-metadata)를 통해 확장성이 향상되었습니다.
 
 새 데이터베이스는 여전히 [!INCLUDE[ssde_md](../../includes/ssde_md.md)] 버전의 기본 호환성 수준으로 설정됩니다. 하지만 이전 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 버전을 새로운 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 또는 [!INCLUDE[ssazure_md](../../includes/ssazure_md.md)] 버전으로 이동할 때 데이터베이스는 기존 호환성 수준을 유지합니다. 
 
@@ -87,7 +90,12 @@ ms.locfileid: "88200967"
 > 현재 호환성 수준을 확인하려면 [sys.databases](../../relational-databases/system-catalog-views/sys-databases-transact-sql.md)의 **compatibility_level** 열을 쿼리합니다.
 
 ## <a name="compatibility-levels-and-database-engine-upgrades"></a>호환성 수준 및 업그레이드 데이터베이스 엔진
-업그레이드 이전의 데이터베이스 호환성 수준과 지원 가능성 상태를 유지하면서 [!INCLUDE[ssde_md](../../includes/ssde_md.md)]을 최신 버전으로 업그레이드하려면 [DMA](https://www.microsoft.com/download/details.aspx?id=53595) 도구(Microsoft Data Migration Assistant)를 사용하여 데이터베이스(저장 프로시저, 함수, 트리거 등의 프로그래밍 기능 개체) 및 애플리케이션(애플리케이션에서 전송된 동적 코드를 캡처하는 워크로드 추적 사용)의 애플리케이션 코드에 대한 정적 기능 노출 영역 유효성 검사를 수행하는 것이 좋습니다. DMA 도구 출력에 누락되거나 호환되지 않는 기능에 대한 오류가 없는 경우 애플리케이션이 새로운 대상 버전의 기능 회귀로부터 보호됩니다. 자세한 내용은 [Data Migration Assistant 개요](../../dma/dma-overview.md)를 참조하세요.
+업그레이드 이전의 데이터베이스 호환성 수준과 지원 가능성 상태를 유지하면서 [!INCLUDE[ssde_md](../../includes/ssde_md.md)]를 최신 버전으로 업그레이드하려면 **데이터베이스**(저장 프로시저, 함수, 트리거 등의 프로그래밍 기능 개체) 및 **애플리케이션**(애플리케이션에서 전송된 동적 코드를 캡처하는 워크로드 추적 사용)의 애플리케이션 코드에 대한 **정적 기능 노출 영역 유효성 검사**를 수행하는 것이 좋습니다.
+
+이 작업은 [Microsoft Data Migration Assistant](https://www.microsoft.com/download/details.aspx?id=53595) 도구(DMA)를 사용하여 쉽게 수행할 수 있습니다. DMA 도구 출력에 누락되거나 호환되지 않는 기능에 대한 오류가 없는 경우 애플리케이션이 새로운 대상 버전의 기능 회귀로부터 보호됩니다. 데이터베이스가 새 버전에서 작동하도록 변경해야 하는 경우 DMA를 통해 변경이 필요한 위치와 사용 가능한 해결 방법을 정확하게 파악할 수 있습니다. 자세한 내용은 [Data Migration Assistant 개요](../../dma/dma-overview.md)를 참조하세요.   
+
+> [!TIP]
+> 이 기능 유효성 검사는 데이터베이스 호환성 수준으로 보호되지 않는 중단된 [!INCLUDE[tsql](../../includes/tsql-md.md)]를 애플리케이션 코드에서 사용할 수 있기 때문에 레거시 버전(예: [!INCLUDE[ssKilimanjaro](../../includes/ssKilimanjaro-md.md)] 또는 [!INCLUDE[ssSQL11](../../includes/sssql11-md.md)])에서 새 버전의 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 또는 [!INCLUDE[ssazure_md](../../includes/ssazure_md.md)]로 데이터베이스를 이동할 때 특히 중요합니다. 그러나 최신 버전(예: [!INCLUDE[ssSQL15](../../includes/sssql15-md.md)])에서 [!INCLUDE[ssCurrent](../../includes/sscurrent-md.md)] 또는 [!INCLUDE[ssSDSfull](../../includes/sssdsfull-md.md)]로 이동하는 경우에는 중단된 [!INCLUDE[tsql](../../includes/tsql-md.md)]는 걱정할 필요가 없습니다. 지원되지 않는 [!INCLUDE[tsql](../../includes/tsql-md.md)]에 대한 자세한 내용은 [이전 버전과의 호환성을 위해 호환성 수준 사용](../../t-sql/statements/alter-database-transact-sql-compatibility-level.md#backwardCompat)을 참조하세요.
 
 > [!NOTE]
 > DMA는 데이터베이스 호환성 수준 100 이상을 지원합니다. 원본 버전 [!INCLUDE[ssVersion2005](../../includes/ssversion2005-md.md)]는 제외됩니다.   
@@ -95,7 +103,7 @@ ms.locfileid: "88200967"
 > [!IMPORTANT]
 > [!INCLUDE[msCoName](../../includes/msconame-md.md)]에서는 업그레이드의 성공 여부를 확인하기 위해 최소한의 테스트를 수행하고, 이전의 데이터베이스 호환성 수준을 유지할 것을 권장합니다. 자신의 애플리케이션 및 시나리오에 의미 있는 최소한의 테스트를 결정해야 합니다.   
 
-> [!NOTE]
+> [!IMPORTANT]
 > [!INCLUDE[msCoName](../../includes/msconame-md.md)]에서는 다음과 같은 경우 쿼리 계획 셰이프 보호를 제공합니다.
 >
 > - 새 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 버전(대상)은 이전 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 버전(원본)이 실행 중인 하드웨어와 유사한 하드웨어에서 실행됩니다.

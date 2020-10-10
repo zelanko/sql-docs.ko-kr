@@ -18,12 +18,12 @@ helpviewer_keywords:
 ms.assetid: d741dc5c-c225-43d9-a730-7ad664ac525f
 author: markingmyname
 ms.author: maghan
-ms.openlocfilehash: e949793037efc9e3b4f4bf8395acc2879d17a0dd
-ms.sourcegitcommit: dd36d1cbe32cd5a65c6638e8f252b0bd8145e165
+ms.openlocfilehash: 788ffc019ba4b99e064c111a9ef59715c235501c
+ms.sourcegitcommit: 783b35f6478006d654491cb52f6edf108acf2482
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 09/08/2020
-ms.locfileid: "89522768"
+ms.lasthandoff: 10/09/2020
+ms.locfileid: "91890663"
 ---
 # <a name="getnextordervalue-method-clientnetworkprotocol-class"></a>GetNextOrderValue 메서드(ClientNetworkProtocol 클래스)
 [!INCLUDE [SQL Server](../../../includes/applies-to-version/sqlserver.md)]
@@ -46,7 +46,6 @@ object.GetNextOrderValue()
 ## <a name="remarks"></a>설명  
   
 ## <a name="see-also"></a>참고 항목  
- [클라이언트 프로토콜 구성](https://technet.microsoft.com/library/ms181035.aspx)   
- [클라이언트 네트워크 프로토콜 및 네트워크 라이브러리 구성](https://technet.microsoft.com/library/ms181035.aspx)  
-  
+ [클라이언트 프로토콜 구성](../../../database-engine/configure-windows/configure-client-protocols.md)   
+ [클라이언트 네트워크 프로토콜 및 네트워크 라이브러리 구성](../../../database-engine/configure-windows/configure-client-protocols.md)  
   

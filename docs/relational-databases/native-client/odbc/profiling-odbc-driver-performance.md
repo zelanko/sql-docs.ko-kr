@@ -21,12 +21,12 @@ ms.assetid: 8f44e194-d556-4119-a759-4c9dec7ecead
 author: markingmyname
 ms.author: maghan
 monikerRange: '>=aps-pdw-2016||=azuresqldb-current||=azure-sqldw-latest||>=sql-server-2016||=sqlallproducts-allversions||>=sql-server-linux-2017||=azuresqldb-mi-current'
-ms.openlocfilehash: 172557586f7198bcc6151fd58f12faa0683f4fc0
-ms.sourcegitcommit: e700497f962e4c2274df16d9e651059b42ff1a10
+ms.openlocfilehash: 6db94d769171bd5335253611758da5234f6d5a7c
+ms.sourcegitcommit: 783b35f6478006d654491cb52f6edf108acf2482
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 08/17/2020
-ms.locfileid: "88428125"
+ms.lasthandoff: 10/09/2020
+ms.locfileid: "91892273"
 ---
 # <a name="profiling-odbc-driver-performance"></a>ODBC 드라이버 성능 프로파일링
 [!INCLUDE [SQL Server](../../../includes/applies-to-version/sql-asdb-asdbmi-asa-pdw.md)]
@@ -70,7 +70,7 @@ ErrorMsg: [Microsoft][SQL Server Native Client]
   
 -   연결  
   
--   Network (네트워크)  
+-   네트워크  
   
 -   시간  
   
@@ -86,7 +86,7 @@ ErrorMsg: [Microsoft][SQL Server Native Client]
 |SQLSelects|SQL_PERF_START 이후 처리된 SELECT 문의 수입니다.|  
 |SQLSelectRows|SQL_PERF_START 이후에 선택된 행의 수입니다.|  
 |트랜잭션|SQL_PERF_START 이후 롤백을 포함한 사용자 트랜잭션의 수입니다. ODBC 애플리케이션이 SQL_AUTOCOMMIT_ON 상태로 실행 중인 경우 각 명령은 트랜잭션으로 간주됩니다.|  
-|SQLPrepares|SQL_PERF_START 후 [Sqlprepare 함수](https://go.microsoft.com/fwlink/?LinkId=59360) 호출 수입니다.|  
+|SQLPrepares|SQL_PERF_START 후 [Sqlprepare 함수](../../../odbc/reference/syntax/sqlprepare-function.md) 호출 수입니다.|  
 |ExecDirects|SQL_PERF_START 후 **Sqlexecdirect** 호출 수입니다.|  
 |SQLExecutes|SQL_PERF_START 후의 **Sqlexecute** 호출 수입니다.|  
 |CursorOpens|SQL_PERF_START 이후 드라이버가 서버 커서를 연 횟수입니다.|  
@@ -124,5 +124,4 @@ ErrorMsg: [Microsoft][SQL Server Native Client]
 ## <a name="see-also"></a>참고 항목  
  [ODBC&#41;SQL Server Native Client &#40;](../../../relational-databases/native-client/odbc/sql-server-native-client-odbc.md)   
  [ODBC 드라이버 성능 프로 파일링 방법 항목 ODBC&#41;&#40;](../../../relational-databases/native-client-odbc-how-to/profiling-odbc-driver-performance-odbc.md)  
-  
   

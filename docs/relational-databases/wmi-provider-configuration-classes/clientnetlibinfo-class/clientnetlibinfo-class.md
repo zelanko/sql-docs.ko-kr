@@ -17,12 +17,12 @@ helpviewer_keywords:
 ms.assetid: 29f7c88d-31a4-49fe-ba21-2642bd9f4d04
 author: markingmyname
 ms.author: maghan
-ms.openlocfilehash: 87839caee0439b696dced17b386e91f89e820098
-ms.sourcegitcommit: dd36d1cbe32cd5a65c6638e8f252b0bd8145e165
+ms.openlocfilehash: 9232e5e86d8624a824cbc9570e9a08cd3932d19f
+ms.sourcegitcommit: 783b35f6478006d654491cb52f6edf108acf2482
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 09/08/2020
-ms.locfileid: "89517156"
+ms.lasthandoff: 10/09/2020
+ms.locfileid: "91890963"
 ---
 # <a name="clientnetlibinfo-class"></a>ClientNetLibInfo 클래스
 [!INCLUDE [SQL Server](../../../includes/applies-to-version/sqlserver.md)]
@@ -31,6 +31,5 @@ ms.locfileid: "89517156"
  클라이언트 네트워크 라이브러리 파일을 통해 클라이언트 인스턴스는 [!INCLUDE[msCoName](../../../includes/msconame-md.md)] [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] 특정 네트워크 프로토콜을 사용 하 여의 인스턴스와 네트워크를 통해 통신할 수 있습니다.  
   
 ## <a name="see-also"></a>참고 항목  
- [클라이언트 프로토콜 구성](https://technet.microsoft.com/library/ms181035.aspx)  
-  
+ [클라이언트 프로토콜 구성](../../../database-engine/configure-windows/configure-client-protocols.md)  
   

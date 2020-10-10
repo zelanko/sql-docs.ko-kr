@@ -3,16 +3,16 @@ title: SQL Server 2019 on Linux 릴리스 정보
 description: 이 문서에는 Linux에서 실행되는 SQL Server 2019에 대한 릴리스 정보 및 지원되는 기능이 포함됩니다. 최신 릴리스 및 여러 이전 릴리스에 대한 릴리스 정보가 포함됩니다.
 author: VanMSFT
 ms.author: vanto
-ms.date: 09/02/2020
+ms.date: 10/01/2020
 ms.topic: conceptual
 ms.prod: sql
 ms.technology: linux
-ms.openlocfilehash: b5a0f9825a44e1f0d1a4d19ba5fc86a9b9fa9630
-ms.sourcegitcommit: 658c2e0ad958009ce7f041ba1ec0b4af06887497
+ms.openlocfilehash: 8ee707f13c8b02669486f5fab0106cb9357be232
+ms.sourcegitcommit: 71d2389cf27156fa0404a6e6f65fb7a61c40789a
 ms.translationtype: HT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 09/24/2020
-ms.locfileid: "91145402"
+ms.lasthandoff: 10/01/2020
+ms.locfileid: "91636113"
 ---
 # <a name="release-notes-for-sql-server-2019-on-linux"></a>SQL Server 2019 on Linux 릴리스 정보
 
@@ -35,6 +35,8 @@ SQL Server를 대상으로 하는 대부분의 기존 클라이언트 도구는 
 
 | 해제                   | 버전       | 릴리스 날짜 |
 |---------------------------|---------------|--------------|
+| [CU8](#cu8)               |               |              |
+| [CU7(제거됨)](https://support.microsoft.com/help/4570012)     | 15.0.4063.15  | 2020-09-02   |
 | [CU6](#cu6)               | 15.0.4053.23  | 2020-08-04   |
 | [CU5](#cu5)               | 15.0.4043.16  | 2020-06-22   |
 | [CU4](#cu4)               | 15.0.4033.1   | 2020-03-31   |
@@ -56,6 +58,10 @@ CU 리포지토리(mssql-server-2019)를 구성한 경우에는 새 설치를 �
 - [Linux에서 SQL Server 2019 Machine Learning Services R 및 Python 지원 설치](sql-server-linux-setup-machine-learning.md)
 - [PolyBase 패키지 설치](../relational-databases/polybase/polybase-linux-setup.md)
 - [SQL Server 에이전트 사용](sql-server-linux-setup-sql-agent.md)
+
+## <a name="cu8"></a><a id="cu8"></a> CU8
+
+SQL Server 2019(15.x)용 누적 업데이트 8(CU8)은 아직 릴리스되지 않았습니다.
 
 ## <a name="cu6-july-2020"></a><a id="cu6"></a> CU6(2020년 7월)
 

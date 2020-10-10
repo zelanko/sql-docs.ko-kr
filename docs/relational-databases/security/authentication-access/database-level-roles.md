@@ -39,12 +39,12 @@ ms.assetid: 7f3fa5f6-6b50-43bb-9047-1544ade55e39
 author: VanMSFT
 ms.author: vanto
 monikerRange: '>=aps-pdw-2016||=azuresqldb-current||=azure-sqldw-latest||>=sql-server-2016||=sqlallproducts-allversions||>=sql-server-linux-2017||=azuresqldb-mi-current'
-ms.openlocfilehash: f49b1139faade46df4d1b853c4bc0e9f25c4e111
-ms.sourcegitcommit: f3321ed29d6d8725ba6378d207277a57cb5fe8c2
+ms.openlocfilehash: 6bb15e848af1a5a2fa6236be0f9999accf144b1a
+ms.sourcegitcommit: c4d6804bde7eaf72d9233d6d43f77d77d1b17c4e
 ms.translationtype: HT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 07/06/2020
-ms.locfileid: "86005675"
+ms.lasthandoff: 10/01/2020
+ms.locfileid: "91624860"
 ---
 # <a name="database-level-roles"></a>데이터베이스 수준 역할
 
@@ -98,6 +98,10 @@ ms.locfileid: "86005675"
 
 > [!NOTE]
 > 서버 수준 보안 주체 및 Azure Active Directory 관리자(구성된 경우)는 역할 멤버가 아니더라도 [!INCLUDE[ssSDS_md](../../../includes/sssds-md.md)] 및 Azure Synapse의 모든 권한이 있습니다. 자세한 내용은 [SQL Database 인증 및 권한 부여: 액세스 부여](https://azure.microsoft.com/documentation/articles/sql-database-manage-logins/)를 참조하세요. 
+
+일부 데이터베이스 역할은 Azure SQL 또는 Synapse SQL에 적용되지 않습니다.
+- 백업 및 복원 T-SQL 명령을 사용할 수 없으므로 **db_backupoperator**는 Azure SQL 데이터베이스(관리되는 인스턴스가 아님) 및 Synapse SQL 서버리스 풀에는 적용되지 않습니다.
+- **db_datawriter** 및 **db_denydatawriter**는 외부 데이터만 읽기 때문에 Synapse SQL 서버리스에는 적용되지 않습니다.
   
 ## <a name="msdb-roles"></a>msdb 역할  
  msdb 데이터베이스에는 다음 표에서 보여 주는 특수한 용도의 역할이 포함되어 있습니다.  

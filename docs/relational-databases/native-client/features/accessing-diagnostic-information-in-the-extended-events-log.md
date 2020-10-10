@@ -10,19 +10,19 @@ ms.assetid: aaa180c2-5e1a-4534-a125-507c647186ab
 author: markingmyname
 ms.author: maghan
 monikerRange: '>=aps-pdw-2016||=azuresqldb-current||=azure-sqldw-latest||>=sql-server-2016||=sqlallproducts-allversions||>=sql-server-linux-2017||=azuresqldb-mi-current'
-ms.openlocfilehash: 51dc4f1def0f612c0eb074ae1111a177e27c1413
-ms.sourcegitcommit: f7c9e562d6048f89d203d71685ba86f127d8d241
+ms.openlocfilehash: 71219302c9180000ee14c18f0d7f90c9557c3673
+ms.sourcegitcommit: 783b35f6478006d654491cb52f6edf108acf2482
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 09/12/2020
-ms.locfileid: "90042764"
+ms.lasthandoff: 10/09/2020
+ms.locfileid: "91891993"
 ---
 # <a name="accessing-sql-server-native-client-diagnostic-information-in-the-extended-events-log"></a>확장 이벤트 로그에서 SQL Server Native Client 진단 정보에 액세스
 [!INCLUDE [SQL Server](../../../includes/applies-to-version/sql-asdb-asdbmi-asa-pdw.md)]
 
-  [!INCLUDE[ssSQL11](../../../includes/sssql11-md.md)]부터 [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] Native Client와 데이터 액세스 추적([데이터 액세스 추적](https://go.microsoft.com/fwlink/?LinkId=125805))은 연결 링 버퍼에서 연결 실패에 대한 진단 정보를 쉽게 얻을 수 있고 확장 이벤트 로그에서 애플리케이션 성능 정보를 쉽게 얻을 수 있도록 업데이트되었습니다.  
+  [!INCLUDE[ssSQL11](../../../includes/sssql11-md.md)]부터 [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] Native Client와 데이터 액세스 추적([데이터 액세스 추적](/previous-versions/sql/sql-server-2008/cc765421(v=sql.100)))은 연결 링 버퍼에서 연결 실패에 대한 진단 정보를 쉽게 얻을 수 있고 확장 이벤트 로그에서 애플리케이션 성능 정보를 쉽게 얻을 수 있도록 업데이트되었습니다.  
   
- 확장 이벤트 로그를 읽는 방법에 대한 자세한 내용은 [View Event Session Data](https://msdn.microsoft.com/library/ac742a01-2a95-42c7-b65e-ad565020dc49)를 참조하십시오.  
+ 확장 이벤트 로그를 읽는 방법에 대한 자세한 내용은 [View Event Session Data](../../extended-events/advanced-viewing-of-target-data-from-extended-events-in-sql-server.md)를 참조하십시오.  
   
 > [!NOTE]  
 >  이 기능은 문제 해결 및 진단 용도로만 제공되며 감사 또는 보안 용도에는 적합하지 않을 수 있습니다.  
@@ -213,7 +213,6 @@ class Bid2Etw_SQLNCLI11_1_Trace_TextW : Bid2Etw_SQLNCLI11_1_Trace
 };  
 ```  
   
-## <a name="see-also"></a>관련 항목  
+## <a name="see-also"></a>참고 항목  
  [오류 및 메시지 처리](../../../relational-databases/native-client-odbc-error-messages/handling-errors-and-messages.md)  
-  
   

@@ -31,12 +31,12 @@ ms.assetid: f76fbd84-df59-4404-806b-8ecb4497c9cc
 author: markingmyname
 ms.author: maghan
 monikerRange: =azuresqldb-current||=azuresqldb-current||>=sql-server-2016||=sqlallproducts-allversions||>=sql-server-linux-2017||=azure-sqldw-latest||=azuresqldb-mi-current
-ms.openlocfilehash: 2ba665e435b6245320f4f5c496a212d485df7951
-ms.sourcegitcommit: dd36d1cbe32cd5a65c6638e8f252b0bd8145e165
+ms.openlocfilehash: 0c54bbd653e6939327e96beb5d7662b14dad1ea3
+ms.sourcegitcommit: 764f90cf2eeca8451afdea2753691ae4cf032bea
 ms.translationtype: HT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 09/08/2020
-ms.locfileid: "89538187"
+ms.lasthandoff: 09/30/2020
+ms.locfileid: "91589312"
 ---
 # <a name="alter-database-set-options-transact-sql"></a>ALTER DATABASE SET 옵션(Transact-SQL)
 
@@ -216,7 +216,7 @@ SET
 {
     QUERY_STORE
     {
-          = OFF [ FORCED ] 
+          = OFF [ ( FORCED ) ] 
         | = ON [ ( <query_store_option_list> [,...n] ) ]
         | ( < query_store_option_list> [,...n] )
         | CLEAR [ ALL ]
@@ -763,19 +763,19 @@ FORCED
 <a name="query-store"></a> **\<query_store_options> ::=**      
 **적용 대상**: [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] ([!INCLUDE[ssSQL15](../../includes/sssql15-md.md)]부터 시작)
 
-ON | **OFF** [ FORCED ] | CLEAR [ ALL ]     
+ON | **OFF** [ ( FORCED )  ] | CLEAR [ ALL ]     
 이 데이터베이스에서 쿼리 저장소를 사용할 수 있는지 여부를 제어하고, 쿼리 저장소의 내용 제거도 제어합니다. 자세한 내용은 [쿼리 스토리지 사용 시나리오](../../relational-databases/performance/query-store-usage-scenarios.md)를 참조하세요.
 
 켜기     
 쿼리 저장소를 사용하도록 설정합니다.
 
-OFF      
-쿼리 저장소를 사용하지 않도록 합니다. OFF가 기본값입니다. FORCED는 선택 사항입니다. FORCED는 실행 중인 모든 쿼리 저장소 백그라운드 태스크를 중단하고, 쿼리 저장소가 해제된 경우 동기 플러시를 건너뜁니다. 쿼리 저장소가 최대한 빨리 종료되도록 합니다. FORCED가 [!INCLUDE[sql-server-2019](../../includes/sssqlv15-md.md)] CU6 이상 빌드에 적용됩니다.
+OFF [ ( FORCED ) ]      
+쿼리 저장소를 사용하지 않도록 합니다. OFF가 기본값입니다. FORCED는 선택 사항입니다. FORCED는 실행 중인 모든 쿼리 저장소 백그라운드 태스크를 중단하고, 쿼리 저장소가 해제된 경우 동기 플러시를 건너뜁니다. 쿼리 저장소가 최대한 빨리 종료되도록 합니다. FORCED는 [!INCLUDE[ssSQL15](../../includes/sssql15-md.md)] SP2 CU14, [!INCLUDE[ssSQL17](../../includes/sssql17-md.md)] CU21, [!INCLUDE[sql-server-2019](../../includes/sssqlv15-md.md)] CU6 및 이후 빌드에 적용됩니다.
 
 > [!NOTE]  
 > 쿼리 저장소는 [!INCLUDE[ssSDSfull](../../includes/sssdsfull-md.md)] 단일 데이터베이스 및 탄력적 풀에서 사용하지 않도록 설정할 수 없습니다. `ALTER DATABASE [database] SET QUERY_STORE = OFF`를 실행하면 경고 `'QUERY_STORE=OFF' is not supported in this version of SQL Server.`가 반환됩니다. 
 
-CLEAR     
+CLEAR [ ALL ]     
 쿼리 저장소에서 쿼리 관련 데이터를 제거합니다. ALL은 선택 사항입니다. ALL은 쿼리 저장소에서 쿼리 관련 데이터와 메타데이터를 제거합니다.
 
 OPERATION_MODE { READ_ONLY | READ_WRITE }     

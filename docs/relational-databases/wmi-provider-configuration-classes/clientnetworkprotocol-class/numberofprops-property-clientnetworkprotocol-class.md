@@ -18,12 +18,12 @@ helpviewer_keywords:
 ms.assetid: 9c508bc5-c7a4-4db1-b3bf-c7098c66435a
 author: markingmyname
 ms.author: maghan
-ms.openlocfilehash: 1b568179401bde8f3d1d314452493b7af30fc558
-ms.sourcegitcommit: dd36d1cbe32cd5a65c6638e8f252b0bd8145e165
+ms.openlocfilehash: 7c743befc55ec93abbd2a6d4e5f7727d6a58ec09
+ms.sourcegitcommit: 783b35f6478006d654491cb52f6edf108acf2482
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 09/08/2020
-ms.locfileid: "89523027"
+ms.lasthandoff: 10/09/2020
+ms.locfileid: "91890413"
 ---
 # <a name="numberofprops-property-clientnetworkprotocol-class"></a>NumberOfProps 속성(ClientNetworkProtocol 클래스)
 [!INCLUDE [SQL Server](../../../includes/applies-to-version/sqlserver.md)]
@@ -46,6 +46,5 @@ object.NumberOfProps [= value]
 ## <a name="remarks"></a>설명  
   
 ## <a name="see-also"></a>참고 항목  
- [클라이언트 프로토콜 구성](https://technet.microsoft.com/library/ms181035.aspx)  
-  
+ [클라이언트 프로토콜 구성](../../../database-engine/configure-windows/configure-client-protocols.md)  
   

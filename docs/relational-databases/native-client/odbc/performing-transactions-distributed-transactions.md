@@ -18,11 +18,12 @@ ms.assetid: 2c17fba0-7a3c-453c-91b7-f801e7b39ccb
 author: markingmyname
 ms.author: maghan
 monikerRange: '>=aps-pdw-2016||=azuresqldb-current||=azure-sqldw-latest||>=sql-server-2016||=sqlallproducts-allversions||>=sql-server-linux-2017||=azuresqldb-mi-current'
-ms.openlocfilehash: a7732b2e0f975ad1cd026a75f9614b3cb59ec7d8
-ms.sourcegitcommit: f3321ed29d6d8725ba6378d207277a57cb5fe8c2
+ms.openlocfilehash: b20ac97f52b9429c1d3ab0b0db5230100af2e19f
+ms.sourcegitcommit: 783b35f6478006d654491cb52f6edf108acf2482
+ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 07/06/2020
-ms.locfileid: "86009748"
+ms.lasthandoff: 10/09/2020
+ms.locfileid: "91892263"
 ---
 # <a name="create-a-distributed-transaction"></a>분산 트랜잭션 만들기
 
@@ -59,7 +60,7 @@ _(1)_ ODBC 없이 MSDTC를 호출할 수 있습니다. 이 경우 MSDTC는 트�
 
 C + + Native Client ODBC 응용 프로그램이 분산 트랜잭션에 참여 한다고 가정 합니다. 그런 다음 응용 프로그램은 두 번째 분산 트랜잭션에 참여 합니다. 이 경우 [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] Native CLIENT ODBC 드라이버는 원래 분산 트랜잭션을 떠나 새 분산 트랜잭션에 참여 시킵니다.
 
-자세한 내용은 [DTC 프로그래머 참조](https://docs.microsoft.com/previous-versions/windows/desktop/ms686108\(v=vs.85\))를 참조 하세요.
+자세한 내용은 [DTC 프로그래머 참조](/previous-versions/windows/desktop/ms686108(v=vs.85))를 참조 하세요.
 
 ## <a name="c-alternative-for-sql-database-in-the-cloud"></a>클라우드의 SQL Database에 대 한 c # 대안
 
@@ -75,6 +76,6 @@ MSDTC는 Azure SQL Database 또는 Azure SQL Data Warehouse에 대해 지원 되
 - Transact-sql을 사용 하는 연결 된 서버
 - JDBC 드라이버
 
-## <a name="see-also"></a>참고 항목
+## <a name="see-also"></a>참조
 
 [트랜잭션 수행(ODBC)](performing-transactions-in-odbc.md)

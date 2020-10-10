@@ -51,12 +51,12 @@ helpviewer_keywords:
 ms.assetid: 309b9dac-0b3a-4617-85ef-c4519ce9d014
 author: markingmyname
 ms.author: maghan
-ms.openlocfilehash: fd2a061d3eba753530f7f86b858563b2168157a2
-ms.sourcegitcommit: f7c9e562d6048f89d203d71685ba86f127d8d241
+ms.openlocfilehash: c3a609c9d9cdf4f01fea153fa85316920b674e88
+ms.sourcegitcommit: 2f868a77903c1f1c4cecf4ea1c181deee12d5b15
 ms.translationtype: HT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 09/12/2020
-ms.locfileid: "90042804"
+ms.lasthandoff: 10/02/2020
+ms.locfileid: "91670318"
 ---
 # <a name="configure-windows-service-accounts-and-permissions"></a>Windows 서비스 계정 및 권한 구성
 
@@ -72,7 +72,6 @@ ms.locfileid: "90042804"
 |[!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 2016|C:\Windows\SysWOW64\SQLServerManager13.msc|
 |[!INCLUDE[ssSQL14](../../includes/sssql14-md.md)]|C:\Windows\SysWOW64\SQLServerManager12.msc|
 |[!INCLUDE[ssSQL11](../../includes/sssql11-md.md)]|C:\Windows\SysWOW64\SQLServerManager11.msc|
-|[!INCLUDE[ssKatmai](../../includes/sskatmai-md.md)]|C:\Windows\SysWOW64\SQLServerManager10.msc|
 
 ## <a name="services-installed-by-ssnoversion"></a><a name="Service_Details"></a>[!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]에 의해 설치되는 서비스
 
@@ -172,7 +171,7 @@ ms.locfileid: "90042804"
 
   SQL Server 2014 이상에 대해 gMSA를 사용하려면 운영 체제가 Windows Server 2012 R2 이상이어야 합니다. Windows Server 2012 R2를 실행하는 서버의 경우 암호 변경 후 중단 없이 즉시 서비스가 로그인할 수 있도록 [KB 2998082](https://support.microsoft.com/kb/2998082) 를 적용해야 합니다.
 
-  자세한 내용은 [그룹 관리 서비스 계정](https://technet.microsoft.com/library/hh831782.aspx)을 참조하세요.
+  자세한 내용은 [그룹 관리 서비스 계정](/previous-versions/windows/it-pro/windows-server-2012-R2-and-2012/hh831782(v=ws.11))을 참조하세요.
 
   > [!NOTE]
   > [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 설치 프로그램에서 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 서비스에 대해 gMSA를 사용할 수 있으려면 먼저 도메인 관리자가 Active Directory에서 MSA를 만들어야 합니다.
@@ -195,7 +194,7 @@ ms.locfileid: "90042804"
 
 관리 서비스 계정 및 가상 계정에 대한 자세한 내용은 **서비스 계정 단계별 가이드** 의 [관리 서비스 계정 및 가상 계정 개념](https://technet.microsoft.com/library/dd548356\(WS.10\).aspx) 섹션과 [관리 서비스 계정 FAQ(질문과 대답)](https://technet.microsoft.com/library/ff641729\(WS.10\).aspx)를 참조하세요.
 
-**보안 정보:** [!INCLUDE[ssNoteLowRights](../../includes/ssnotelowrights-md.md)] 가능하다면 [MSA](#MSA) 또는 [가상 계정](#VA_Desc)을 사용하세요. MSA 및 가상 계정을 사용할 수 없으면 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 서비스에 대해 공유 계정 대신 권한이 낮은 특정 사용자 계정 또는 도메인 계정을 사용하십시오. 서로 다른 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 서비스에 대해서는 각각 별도의 계정을 사용하십시오. [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 서비스 계정 또는 서비스 그룹에 추가 권한을 부여하지 마세요. 권한은 그룹 멤버 자격을 통해 부여되거나 서비스 SID에 직접 부여됩니다(서비스 SID가 지원되는 경우).
+**보안 정보:** [!INCLUDE[ssNoteLowRights](../../includes/ssnotelowrights-md.md)] 가능하다면 [MSA](#MSA), [gMSA](#GMSA) 또는 [가상 계정](#VA_Desc)을 사용하세요. MSA, gMSA 및 가상 계정을 사용할 수 없으면 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 서비스에 대해 공유 계정 대신 권한이 낮은 특정 사용자 계정 또는 도메인 계정을 사용하세요. 서로 다른 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 서비스에 대해서는 각각 별도의 계정을 사용하십시오. [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 서비스 계정 또는 서비스 그룹에 추가 권한을 부여하지 마세요. 권한은 그룹 멤버 자격을 통해 부여되거나 서비스 SID에 직접 부여됩니다(서비스 SID가 지원되는 경우).
 
 ### <a name="automatic-startup"></a><a name="Auto_Start"></a> 자동 시작
 
@@ -223,7 +222,7 @@ ms.locfileid: "90042804"
 |R Services 또는 Machine Learning Services|EXTSVCACCOUNT, EXTSVCPASSWORD, ADVANCEDANALYTICS\*\*\*|
 |PolyBase 엔진| PBENGSVCACCOUNT, PBENGSVCPASSWORD, PBENGSVCSTARTUPTYPE, PBDMSSVCACCOUNT,PBDMSSVCPASSWORD, PBDMSSVCSTARTUPTYPE, PBSCALEOUT, PBPORTRANGE
 
-\*무인 설치에 대한 자세한 내용과 샘플 구문은 [명령 프롬프트에서 SQL Server 2016 설치](../../database-engine/install-windows/install-sql-server-2016-from-the-command-prompt.md)를 참조하세요.
+\*무인 설치에 대한 자세한 내용과 샘플 구문은 [명령 프롬프트에서 SQL Server 2016 설치](../install-windows/install-sql-server-from-the-command-prompt.md)를 참조하세요.
 
 \*\*[!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 에이전트 서비스는 [!INCLUDE[ssExpress](../../includes/ssexpress-md.md)] 및 [!INCLUDE[ssExpress](../../includes/ssexpress-md.md)] Advanced Services 인스턴스에서 사용할 수 없습니다.
 
@@ -249,7 +248,7 @@ ms.locfileid: "90042804"
 
 ### <a name="service-configuration-and-access-control"></a><a name="Serv_SID"></a> 서비스 구성 및 액세스 제어
 
-[!INCLUDE[ssCurrent](../../includes/sscurrent-md.md)] 에서는 각 서비스에 대해 서비스별 SID로 서비스 격리 및 철저한 방어 기능을 제공하도록 지원합니다. 서비스별 SID는 서비스 이름에서 파생되며 서비스마다 고유합니다. 예를 들어, [!INCLUDE[ssDE](../../includes/ssde-md.md)] 서비스의 서비스 SID 이름은 **NT Service\MSSQL$** _\<InstanceName>_ 입니다. 서비스 격리는 높은 권한 수준의 계정에서 실행되거나 개체의 보안을 약화시키지 않고도 특정 개체에 액세스할 수 있도록 해줍니다. [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 서비스는 서비스 SID가 포함된 액세스 제어 항목을 사용하여 해당 리소스에 대한 액세스를 제한할 수 있습니다.
+[!INCLUDE[ssCurrent](../../includes/sscurrent-md.md)] 에서는 각 서비스에 대해 서비스별 SID로 서비스 격리 및 철저한 방어 기능을 제공하도록 지원합니다. 서비스별 SID는 서비스 이름에서 파생되며 서비스마다 고유합니다. 예를 들어 [!INCLUDE[ssDE](../../includes/ssde-md.md)] 서비스의 명명된 인스턴스에 대한 서비스 SID 이름은 **NT Service\MSSQL$** _\<InstanceName>_ 일 수 있습니다. 서비스 격리는 높은 권한 수준의 계정에서 실행되거나 개체의 보안을 약화시키지 않고도 특정 개체에 액세스할 수 있도록 해줍니다. [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 서비스는 서비스 SID가 포함된 액세스 제어 항목을 사용하여 해당 리소스에 대한 액세스를 제한할 수 있습니다.
 
 > [!NOTE]
 > Windows 7 및 [!INCLUDE[nextref_longhorn](../../includes/nextref-longhorn-md.md)] R2(이후 버전)에서 서비스별 SID는 서비스에서 사용되는 가상 계정일 수 있습니다.
@@ -426,7 +425,7 @@ ms.locfileid: "90042804"
 |[!INCLUDE[ssDE](../../includes/ssde-md.md)] 튜닝 관리자|최적의 쿼리 성능을 위해 데이터베이스를 튜닝합니다.|처음 사용하는 경우 시스템 관리 자격 증명이 있는 사용자가 애플리케이션을 초기화해야 합니다. 초기화한 다음에는 dbo 사용자가 [!INCLUDE[ssDE](../../includes/ssde-md.md)] 튜닝 관리자를 사용하여 자신이 소유한 테이블만 튜닝할 수 있습니다. 자세한 내용은 [!INCLUDE[ssDE](../../includes/ssde-md.md)] 온라인 설명서의 "처음 사용할 때의 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 튜닝 관리자 초기화"를 참조하십시오.|
 
 > [!IMPORTANT]
-> [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]를 업그레이드하기 전에 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 에이전트에 대해 Windows 인증을 활성화하고 필요한 기본 구성, 즉 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 에이전트 서비스 계정이 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]sysadmin 그룹의 구성원인지 확인합니다.
+> [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]를 업그레이드하기 전에 SQL Server 에이전트를 활성화하고 필요한 기본 구성, 즉 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 에이전트 서비스 계정이 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] **sysadmin** 고정 서버 역할의 구성원인지 확인합니다.
 
 ### <a name="registry-permissions"></a><a name="Registry"></a> 레지스트리 권한
 
@@ -446,7 +445,7 @@ ms.locfileid: "90042804"
 
 WMI(Windows Management Instrumentation)에서 [!INCLUDE[ssDE](../../includes/ssde-md.md)]에 연결할 수 있어야 합니다. 이를 지원하기 위해 Windows WMI 공급자의 서비스별 SID(**NT SERVICE\winmgmt**)가 [!INCLUDE[ssDE](../../includes/ssde-md.md)]에 프로비전됩니다.
 
-SQL WMI 공급자에는 다음과 같은 사용 권한이 필요합니다.
+SQL WMI 공급자에게는 다음과 같은 최소 권한이 필요합니다.
 
 - msdb 데이터베이스에 있는 **db_ddladmin** 또는 **db_owner** 고정 데이터베이스 역할의 멤버 자격
 - 서버의**CREATE DDL EVENT NOTIFICATION** 권한
@@ -485,11 +484,11 @@ SQL WMI 공급자에는 다음과 같은 사용 권한이 필요합니다.
 
 #### <a name="sa-account"></a><a name="sa"></a> sa 계정
 
-**sa** 계정은 항상 [!INCLUDE[ssDE](../../includes/ssde-md.md)] 로그인으로 제공되며 **sysadmin** 고정 서버 역할의 멤버입니다. Windows 인증만 사용하여 [!INCLUDE[ssDE](../../includes/ssde-md.md)] 이 설치된 경우에도( [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 인증이 설정되지 않은 경우) **sa** 로그인이 제공되지만 사용할 수 없습니다. **sa** 계정을 사용하도록 설정하는 방법은 [서버 인증 모드 변경](../../database-engine/configure-windows/change-server-authentication-mode.md)을 참조하세요.
+**sa** 계정은 항상 [!INCLUDE[ssDE](../../includes/ssde-md.md)] 로그인으로 제공되며 **sysadmin** 고정 서버 역할의 멤버입니다. Windows 인증만 사용하여 [!INCLUDE[ssDE](../../includes/ssde-md.md)]가 설치된 경우(즉, [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 인증이 사용하도록 설정되지 않은 경우) **sa** 로그인이 여전히 존재하지만 비활성화되고, 암호가 복잡하고 임의로 설정됩니다. **sa** 계정을 사용하도록 설정하는 방법은 [서버 인증 모드 변경](../../database-engine/configure-windows/change-server-authentication-mode.md)을 참조하세요.
 
 #### <a name="sql-server-per-service-sid-login-and-privileges"></a><a name="Logins"></a> SQL Server 서비스별 SID 로그인 및 권한
 
-[!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 서비스의 서비스별 SID는 [!INCLUDE[ssDE](../../includes/ssde-md.md)] 로그인으로 프로비전됩니다. 서비스별 SID 로그인은 **sysadmin** 고정 서버 역할의 멤버입니다.
+[!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 서비스의 서비스별 SID(서비스 보안 주체(SID)라고도 함)는 [!INCLUDE[ssDE](../../includes/ssde-md.md)] 로그인으로 프로비저닝됩니다. 서비스별 SID 로그인은 **sysadmin** 고정 서버 역할의 멤버입니다. 서비스별 SID에 대한 자세한 내용은 [서비스 SID를 사용하여 SQL Server의 서비스에 사용 권한 부여](../../relational-databases/security/using-service-sids-to-grant-permissions-to-services-in-sql-server.md)를 참조하세요.
 
 #### <a name="sql-server-agent-login-and-privileges"></a><a name="Agent"></a> SQL Server 에이전트 로그인 및 사용 권한
 
@@ -513,9 +512,9 @@ SQL WMI 공급자에는 다음과 같은 사용 권한이 필요합니다.
 
 ### <a name="ssas-provisioning"></a><a name="SSAS"></a> SSAS 프로비전
 
-[!INCLUDE[ssAS](../../includes/ssas-md.md)] 서비스 계정 요구 사항은 서버 배포 방법에 따라 다릅니다. [!INCLUDE[ssGeminiShort](../../includes/ssgeminishort-md.md)]를 설치하는 경우 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 설치 프로그램을 실행하려면 도메인 계정으로 실행하도록 [!INCLUDE[ssASnoversion](../../includes/ssasnoversion-md.md)] 서비스를 구성해야 합니다. SharePoint에 기본 제공되는 관리 계정 기능을 지원하려면 도메인 계정이 필요합니다. 따라서 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 설치 프로그램은 [!INCLUDE[ssGeminiShort](../../includes/ssgeminishort-md.md)] 설치에 대해 가상 계정과 같은 기본 서비스 계정을 제공하지 않습니다. SharePoint용 [!INCLUDE[ssGemini](../../includes/ssgemini-md.md)] 을 프로비전하는 방법에 대한 자세한 내용은 [파워 피벗 서비스 계정 구성](https://docs.microsoft.com/analysis-services/power-pivot-sharepoint/configure-power-pivot-service-accounts)을 참조하세요.
+[!INCLUDE[ssAS](../../includes/ssas-md.md)] 서비스 계정 요구 사항은 서버 배포 방법에 따라 다릅니다. [!INCLUDE[ssGeminiShort](../../includes/ssgeminishort-md.md)]를 설치하는 경우 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 설치 프로그램을 실행하려면 도메인 계정으로 실행하도록 [!INCLUDE[ssASnoversion](../../includes/ssasnoversion-md.md)] 서비스를 구성해야 합니다. SharePoint에 기본 제공되는 관리 계정 기능을 지원하려면 도메인 계정이 필요합니다. 따라서 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 설치 프로그램은 [!INCLUDE[ssGeminiShort](../../includes/ssgeminishort-md.md)] 설치에 대해 가상 계정과 같은 기본 서비스 계정을 제공하지 않습니다. SharePoint용 [!INCLUDE[ssGemini](../../includes/ssgemini-md.md)] 을 프로비전하는 방법에 대한 자세한 내용은 [파워 피벗 서비스 계정 구성](/analysis-services/power-pivot-sharepoint/configure-power-pivot-service-accounts)을 참조하세요.
 
-다른 모든 독립 실행형 [!INCLUDE[ssAS](../../includes/ssas-md.md)] 설치의 경우 도메인 계정, 기본 제공 시스템 계정, 관리 계정 또는 가상 계정으로 실행하도록 서비스를 프로비전할 수 있습니다. 계정 프로비전에 대한 자세한 내용은 [서비스 계정 구성&#40;Analysis Services&#41;](https://docs.microsoft.com/analysis-services/instances/configure-service-accounts-analysis-services)을 참조하세요.
+다른 모든 독립 실행형 [!INCLUDE[ssAS](../../includes/ssas-md.md)] 설치의 경우 도메인 계정, 기본 제공 시스템 계정, 관리 계정 또는 가상 계정으로 실행하도록 서비스를 프로비전할 수 있습니다. 계정 프로비전에 대한 자세한 내용은 [서비스 계정 구성&#40;Analysis Services&#41;](/analysis-services/instances/configure-service-accounts-analysis-services)을 참조하세요.
 
 클러스터형 설치의 경우 도메인 계정 또는 기본 제공 시스템 계정을 지정해야 합니다. [!INCLUDE[ssAS](../../includes/ssas-md.md)] 장애 조치(Failover) 클러스터에는 관리 계정이나 가상 계정이 없습니다.
 
@@ -551,18 +550,18 @@ SQL WMI 공급자에는 다음과 같은 사용 권한이 필요합니다.
 
 ### <a name="description-of-service-accounts"></a><a name="Serv_Accts"></a> 서비스 계정에 대한 설명
 
-서비스 계정은 [!INCLUDE[ssDEnoversion](../../includes/ssdenoversion-md.md)]과 같은 Windows 서비스를 시작하는 데 사용되는 계정입니다.
+서비스 계정은 [!INCLUDE[ssDEnoversion](../../includes/ssdenoversion-md.md)]과 같은 Windows 서비스를 시작하는 데 사용되는 계정입니다. SQL Server를 실행하는 경우 항상 존재하며 **sysamin** 고정 서버 역할의 멤버인 서비스 SID 외에 SQL Server에 대한 로그인으로 서비스 계정을 추가할 필요는 없습니다.
 
 #### <a name="accounts-available-with-any-operating-system"></a><a name="Any_OS"></a> 모든 운영 체제에서 사용할 수 있는 계정
 
-앞에서 설명한 새로운 [MSA](#MSA) 및 [가상 계정](#VA_Desc) 외에도 다음과 같은 계정을 사용할 수 있습니다.
+앞에서 설명한 새로운 [MSA](#MSA), [gMSA](#GMSA) 및 [가상 계정](#VA_Desc) 외에도 다음과 같은 계정을 사용할 수 있습니다.
 
 <a name="Domain_User"></a> **도메인 사용자 계정**
 
 서비스가 네트워크 서비스, 파일 공유와 같은 액세스 도메인 리소스와 상호 작용해야 하는 경우 또는 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]를 실행하는 다른 컴퓨터에 대한 연결된 서버 연결을 사용하는 경우 최소 권한이 부여된 도메인 계정을 사용하는 것이 좋습니다. 서버 간 작업은 많은 경우 도메인 사용자 계정으로만 수행할 수 있습니다. 이 계정은 해당 환경에서 도메인 관리자가 미리 만들어 놓아야 합니다.
 
 > [!NOTE]
-> 도메인 계정을 사용하도록 애플리케이션을 구성한 경우 애플리케이션에 대한 사용 권한을 격리시킬 수 있지만 암호를 수동으로 관리하거나 이러한 암호 관리를 위한 사용자 지정 솔루션을 만들어야 합니다. 여러 서버 애플리케이션들에서 보안 향상을 위해 이러한 전략이 사용되고 있지만 이 전략은 추가 관리 수준과 복잡성이 필요합니다. 이러한 배포에서 서비스 관리자는 Kerberos 인증에 필요한 서비스 암호 및 SPN(서비스 사용자 이름) 관리와 같은 유지 관리 태스크에 상당 시간을 소비해야 합니다. 또한 이러한 유지 관리 태스크로 인해 서비스가 중단될 수 있습니다.
+> 도메인 계정을 사용하도록 SQL Server를 구성한 경우 서비스에 대한 사용 권한을 격리시킬 수 있지만 암호를 수동으로 관리하거나 이러한 암호 관리를 위한 사용자 지정 솔루션을 만들어야 합니다. 여러 서버 애플리케이션들에서 보안 향상을 위해 이러한 전략이 사용되고 있지만 이 전략은 추가 관리 수준과 복잡성이 필요합니다. 이러한 배포에서 서비스 관리자는 Kerberos 인증에 필요한 서비스 암호 및 SPN(서비스 사용자 이름) 관리와 같은 유지 관리 태스크에 상당 시간을 소비해야 합니다. 또한 이러한 유지 관리 태스크로 인해 서비스가 중단될 수 있습니다.
 
 <a name="Local_User"></a> **로컬 사용자 계정**
 
@@ -570,7 +569,10 @@ SQL WMI 공급자에는 다음과 같은 사용 권한이 필요합니다.
 
 <a name="Local_Service"></a> **로컬 서비스 계정**
 
-로컬 서비스 계정은 리소스 및 개체에 대한 액세스 권한 수준이 Users 그룹 멤버와 동일한 기본 제공 계정입니다. 이러한 액세스 제한을 통해 개별 서비스나 프로세스의 보안이 침해될 때 시스템을 보호할 수 있습니다. 로컬 서비스 계정으로 실행되는 서비스는 자격 증명이 없는 Null 세션으로 네트워크 리소스에 액세스합니다. [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 또는 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 에이전트 서비스에 대해서는 로컬 서비스 계정이 지원되지 않습니다. 로컬 서비스는 공유 서비스이고 로컬 서비스로 실행되는 다른 모든 서비스가 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]에 대한 시스템 관리자 액세스 권한을 갖기 때문에 해당 서비스를 실행하는 계정으로 지원되지 않습니다. 계정의 실제 이름은 **NT AUTHORITY\LOCAL SERVICE**입니다.
+로컬 서비스 계정은 리소스 및 개체에 대한 액세스 권한 수준이 Users 그룹 멤버와 동일한 기본 제공 계정입니다. 이러한 액세스 제한을 통해 개별 서비스나 프로세스의 보안이 침해될 때 시스템을 보호할 수 있습니다. 로컬 서비스 계정으로 실행되는 서비스는 자격 증명이 없는 Null 세션으로 네트워크 리소스에 액세스합니다. 
+> [!NOTE]
+> [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 또는 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 에이전트 서비스에 대해서는 로컬 서비스 계정이 지원되지 않습니다. 로컬 서비스는 공유 서비스이고 로컬 서비스로 실행되는 다른 모든 서비스가 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]에 대한 시스템 관리자 액세스 권한을 갖기 때문에 해당 서비스를 실행하는 계정으로 지원되지 않습니다.
+계정의 실제 이름은 **NT AUTHORITY\LOCAL SERVICE**입니다.
 
 <a name="Network_Service"></a> **네트워크 서비스 계정**
 

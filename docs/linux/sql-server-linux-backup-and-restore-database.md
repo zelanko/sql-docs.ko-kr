@@ -9,18 +9,21 @@ ms.topic: conceptual
 ms.prod: sql
 ms.technology: linux
 ms.assetid: d30090fb-889f-466e-b793-5f284fccc4e6
-ms.openlocfilehash: 637a4c7d5eef6b40008a2903d4840783dcb48b12
-ms.sourcegitcommit: 3ea082c778f6771b17d90fb597680ed334d3e0ec
+ms.openlocfilehash: 6a590b895a1929e0c83ebef76cc2d6dc544ae5af
+ms.sourcegitcommit: 968969b62bc158b9843aba5034c9d913519bc4a7
 ms.translationtype: HT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 08/11/2020
-ms.locfileid: "88088972"
+ms.lasthandoff: 10/06/2020
+ms.locfileid: "91753520"
 ---
 # <a name="backup-and-restore-sql-server-databases-on-linux"></a>Linux에서 SQL Server 데이터베이스 백업 및 복원
 
 [!INCLUDE [SQL Server - Linux](../includes/applies-to-version/sql-linux.md)]
 
 다른 옵션을 사용하여 SQL Server 2017 on Linux에서 데이터베이스 백업을 수행할 수 있습니다. Linux 서버에서 **sqlcmd**를 사용하여 SQL Server에 연결하고 백업을 수행할 수 있습니다. Windows에서 SQL Server on Linux에 연결하고 사용자 인터페이스를 사용하여 백업을 수행할 수 있습니다. 백업 기능은 플랫폼 간에 동일합니다. 예를 들어 데이터베이스를 로컬에서 원격 드라이브 또는 [Microsoft Azure Blob Storage 서비스](../relational-databases/backup-restore/sql-server-backup-to-url.md)로 백업할 수 있습니다.
+
+> [!IMPORTANT]
+> SQL Server on Linux는 블록 Blob을 사용한 Azure Blob 스토리지로의 백업만 지원합니다. 백업 및 복원에 스토리지 키를 사용하면 지원되지 않는 페이지 블로그가 사용됩니다. 대신 공유 액세스 서명을 사용합니다. 블록 블로그 및 페이지 블로그에 대한 자세한 내용은 [블록 Blob 및 페이지 Blob에 대한 백업](../relational-databases/backup-restore/sql-server-backup-to-url.md#blockbloborpageblob)을 참조하세요.
 
 ## <a name="backup-a-database"></a>데이터베이스 백업
 

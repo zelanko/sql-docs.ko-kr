@@ -11,12 +11,12 @@ ms.topic: conceptual
 ms.assetid: 11be89e9-ff2a-4a94-ab5d-27d8edf9167d
 author: MashaMSFT
 ms.author: mathoma
-ms.openlocfilehash: 6835fbc893b45214cf8ea6f7b6a02d8f1e1df773
-ms.sourcegitcommit: 822d4b3cfa53269535500a3db5877a82b5076728
+ms.openlocfilehash: 68bfdb9d087539efaf05d9f3f78bb5348d2a2831
+ms.sourcegitcommit: c4d6804bde7eaf72d9233d6d43f77d77d1b17c4e
 ms.translationtype: HT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 08/07/2020
-ms.locfileid: "87988741"
+ms.lasthandoff: 10/01/2020
+ms.locfileid: "91624840"
 ---
 # <a name="sql-server-backup-to-url"></a>URL에 대한 SQL Server 백업
 [!INCLUDE [SQL Server SQL MI](../../includes/applies-to-version/sql-asdbmi.md)]
@@ -85,6 +85,9 @@ Blob Storage에 대용량 데이터베이스를 백업하는 경우에는 [Manag
   
 -   SQL Server는 페이지 Blob을 사용하여 지원되는 최대 백업 크기를 1TB로 제한합니다. 블록 Blob을 사용하여 지원되는 최대 백업 크기는 약 200GB로 제한됩니다(50,000개 블록 * 4MB MAXTRANSFERSIZE). 블록 Blob은 실질적으로 더 큰 백업 크기를 지원하기 위해 스트라이프를 지원합니다.  
   
+    > [!IMPORTANT]  
+    >  단일 블록 Blob에서 지원되는 최대 백업 크기는 200GB이지만 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]가 더 작은 블록 크기로 작성될 수 있습니다. 이로 인해 전체 백업이 전송되기 전에 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]가 50,000 블록 제한에 도달할 수 있습니다. 특히 차등 또는 비압축 백업을 사용하는 경우 블록 제한을 피하기 위해 스트라이프 백업(200GB 미만인 경우에도)을 수행합니다.
+
 -   TSQL, SMO, PowerShell cmdlet, SQL Server Management Studio 백업 또는 복원 마법사를 사용하여 백업 또는 복원 문을 실행할 수 있습니다.   
   
 -   논리적 디바이스 이름을 만들 수 없습니다. 따라서 SQL Server Management Studio나 sp_dumpdevice를 사용하여 URL을 백업 디바이스로 추가할 수 없습니다.  

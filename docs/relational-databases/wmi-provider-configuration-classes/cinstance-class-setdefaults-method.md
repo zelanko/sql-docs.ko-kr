@@ -18,12 +18,12 @@ helpviewer_keywords:
 ms.assetid: ed9e99c2-3e28-4ee8-bc20-61ca05984973
 author: markingmyname
 ms.author: maghan
-ms.openlocfilehash: 2a99b8bbc94bf8e62cd8125e01327a4691a296cb
-ms.sourcegitcommit: dd36d1cbe32cd5a65c6638e8f252b0bd8145e165
+ms.openlocfilehash: 99771d12be4c10d8d4b823ceb788e9722d417fca
+ms.sourcegitcommit: 783b35f6478006d654491cb52f6edf108acf2482
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 09/08/2020
-ms.locfileid: "89545323"
+ms.lasthandoff: 10/09/2020
+ms.locfileid: "91890983"
 ---
 # <a name="cinstance-class---setdefaults-method"></a>CInstance 클래스 - SetDefaults 메서드
 [!INCLUDE [SQL Server](../../includes/applies-to-version/sqlserver.md)]
@@ -42,7 +42,7 @@ object.SetDefaults(OverwriteAll)
   
 #### <a name="parameters"></a>매개 변수  
   
-|매개 변수|Description|  
+|매개 변수|설명|  
 |---------------|-----------------|  
 |*OverwriteAll*|클라이언트 인스턴스의 기존 값을 덮어쓸지 여부를 지정 하는 부울 값입니다 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] . 기존 데이터를 덮어쓰려면 **true** 이 고, 기존 데이터를 덮어쓰지 않을 경우 **false** 입니다.|  
   
@@ -52,6 +52,5 @@ object.SetDefaults(OverwriteAll)
 ## <a name="remarks"></a>설명  
   
 ## <a name="see-also"></a>참고 항목  
- [클라이언트 프로토콜 구성](https://technet.microsoft.com/library/ms181035.aspx)  
-  
+ [클라이언트 프로토콜 구성](../../database-engine/configure-windows/configure-client-protocols.md)  
   

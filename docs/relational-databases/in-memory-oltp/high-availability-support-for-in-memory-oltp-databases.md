@@ -11,12 +11,12 @@ ms.topic: conceptual
 ms.assetid: 2113a916-3b1e-496c-8650-7f495e492510
 author: markingmyname
 ms.author: maghan
-ms.openlocfilehash: 2caa0afdd029b630b0c10f1e3c3c0ea3c0ea0ca5
-ms.sourcegitcommit: dd36d1cbe32cd5a65c6638e8f252b0bd8145e165
+ms.openlocfilehash: 92a09ac4702cae987c4fa5f4ccd420819c29073a
+ms.sourcegitcommit: d56a834269132a83e5fe0a05b033936776cda8bb
 ms.translationtype: HT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 09/08/2020
-ms.locfileid: "89537099"
+ms.lasthandoff: 09/29/2020
+ms.locfileid: "91529434"
 ---
 # <a name="high-availability-support-for-in-memory-oltp-databases"></a>메모리 내 OLTP 데이터베이스에 대한 고가용성 지원
  [!INCLUDE [SQL Server](../../includes/applies-to-version/sqlserver.md)]
@@ -26,13 +26,13 @@ ms.locfileid: "89537099"
 
   
 ## <a name="always-on-availability-groups-and-in-memory-oltp-databases"></a>Always On 가용성 그룹 및 메모리 내 OLTP 데이터베이스  
- [!INCLUDE[hek_2](../../includes/hek-2-md.md)] 구성 요소를 통한 데이터베이스 구성에는 다음과 같은 장점이 있습니다.  
+ [!INCLUDE[hek_2](../../includes/hek-2-md.md)] 구성 요소로 데이터베이스를 구성하면 다음과 같은 이점이 있습니다.  
   
 -   **완전 통합 환경**   
     동기 및 비동기 보조 복제본에 대해 동일한 지원 수준으로 동일한 마법사를 사용하여 메모리 최적화 테이블을 포함하는 데이터베이스를 구성할 수 있습니다. 또한 SQL Server Management Studio의 친숙한 Always On 대시보드를 사용하여 상태 모니터링이 제공됩니다.  
   
 -   **동등한 장애 조치(failover) 시간**   
-    보조 복제본은 메모리 최적화 지속형 테이블의 메모리 내 상태를 유지합니다. 복구가 필요하지 않으므로 자동 또는 강제 장애 조치(failover) 발생 시 새로운 주 복제본으로 장애 조치하는 시간이 디스크 기반 테이블과 비슷합니다. SCHEMA_ONLY로 생성되는 메모리 액세스에 최적화된 테이블이 이 구성에서 지원됩니다. 그러나 이러한 테이블에 대한 변경 사항은 기록되지 않으므로 보조 복제본의 이 테이블에는 데이터가 존재하지 않습니다.  
+    보조 복제본은 메모리 최적화 지속형 테이블의 메모리 내 상태를 유지합니다. 복구가 필요하지 않으므로 자동 또는 강제 장애 조치(failover) 발생 시 새로운 주 복제본으로 장애 조치하는 시간이 디스크 기반 테이블과 비슷합니다. SCHEMA_ONLY로 생성되는 메모리 액세스에 최적화된 테이블이 이 구성에서 지원됩니다. 그러나 이러한 테이블에 대한 변경 사항은 기록되지 않으므로 보조 복제본의 해당 테이블에는 데이터가 존재하지 않습니다.  
   
 -   **읽기용 보조**   
     읽기 권한으로 구성된 경우 보조 복제본의 메모리 최적화 테이블에 액세스하고 해당 테이블을 쿼리할 수 있습니다. [!INCLUDE[ssSQL15](../../includes/sssql15-md.md)]에서 보조 복제본의 읽기 타임스탬프는 주 복제본의 읽기 타임스탬프와 근접하게 동기화되므로 주 복제본의 변경 내용이 보조 복제본에 빠르게 표시됩니다. 이와 같은 근접 동기화 동작은 [!INCLUDE[ssSQL14](../../includes/sssql14-md.md)] 메모리 내 OLTP와 다릅니다.  
@@ -42,7 +42,7 @@ ms.locfileid: "89537099"
 - SQL Server 2019에서는 메모리 최적화 가용성 그룹 데이터베이스를 위한 병렬 다시 실행이 도입되었습니다. SQL Server 2016 및 2017에서는 가용성 그룹의 데이터베이스가 메모리 최적화된 경우에도 디스크 기반 테이블에서 병렬 다시 실행을 사용하지 않습니다. 
   
 ## <a name="failover-clustering-instance-fci-and-in-memory-oltp-databases"></a>장애 조치 클러스터링 인스턴스(FCI) 및 메모리 내 OLTP 데이터베이스  
- 공유 스토리지 구성에서 고가용성을 구현하도록 메모리 최적화 테이블을 사용하여 데이터베이스가 포함된 장애 조치(failover) 클러스터 인스턴스를 설정할 수 있습니다. FCI는 설정의 일부로 다음과 같은 요소를 고려해야 합니다.  
+ 공유 스토리지 구성에서 고가용성을 구현하도록 메모리 최적화 테이블을 사용하여 데이터베이스가 포함된 장애 조치(failover) 클러스터 인스턴스를 설정할 수 있습니다. FCI 설정의 일부로 다음과 같은 요소를 고려하세요.  
   
 -   **복구 시간 목표**   
     메모리 최적화 테이블을 메모리에 로드해야 데이터베이스를 사용할 수 있으므로 장애 조치(failover) 시간이 더 길어질 수 있습니다.  

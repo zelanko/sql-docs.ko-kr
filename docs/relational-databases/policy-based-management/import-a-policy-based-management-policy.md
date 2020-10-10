@@ -13,12 +13,12 @@ helpviewer_keywords:
 ms.assetid: 850b7ef9-d2b7-4754-bf04-7cb419ffb776
 author: VanMSFT
 ms.author: vanto
-ms.openlocfilehash: 37f49a006b0fe17120af2309f9b3991ab594ebda
-ms.sourcegitcommit: e700497f962e4c2274df16d9e651059b42ff1a10
+ms.openlocfilehash: 1ea5d3c83667dbd194e9fb82ae7bce2e815d479b
+ms.sourcegitcommit: 27f95e50f11a98164e9e7a5130a3e00ac06b4cea
 ms.translationtype: HT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 08/17/2020
-ms.locfileid: "88423717"
+ms.lasthandoff: 09/28/2020
+ms.locfileid: "91412774"
 ---
 # <a name="import-a-policy-based-management-policy"></a>정책 기반 관리 정책 가져오기
  [!INCLUDE [SQL Server](../../includes/applies-to-version/sqlserver.md)]
@@ -46,4 +46,4 @@ ms.locfileid: "88423717"
 
 
 ## <a name="example-policies"></a>예제 정책
- 예제 정책이 [!INCLUDE[ssDEnoversion](../../includes/ssdenoversion-md.md)]에 포함되지 않지만 이전에 배포된 예제 정책은 [SQL Server Management Studio v17](../../ssms/release-notes-ssms.md#previous-ssms-releases)을 설치하여 액세스할 수 있습니다.  SQL Server Management Studio v17이 설치되면 `C:\Program Files (x86)\Microsoft SQL Server\140\Tools\Policies`에서 예제 정책을 찾을 수 있습니다. 이 정책은 사용 중인 정책 기반 관리 정책의 기준으로 가져와 사용할 수 있습니다.
+ 예제 정책은 [SQL Server 샘플 코드 리포지토리](https://github.com/microsoft/sql-server-samples/tree/master/samples/features/epm-framework/sample-policies)에서 사용할 수 있습니다. 이 정책은 사용 중인 정책 기반 관리 정책의 기준으로 가져와 사용할 수 있습니다.

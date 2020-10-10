@@ -14,12 +14,12 @@ helpviewer_keywords:
 ms.assetid: bde6c467-38d0-4766-a7af-d6c9d6302b07
 author: markingmyname
 ms.author: maghan
-ms.openlocfilehash: ff086556b507c0d09750b7ab27671a7b1cfaf496
-ms.sourcegitcommit: dd36d1cbe32cd5a65c6638e8f252b0bd8145e165
+ms.openlocfilehash: 7e106fa85ac8832782c339b115969e2ca8d4fad4
+ms.sourcegitcommit: 783b35f6478006d654491cb52f6edf108acf2482
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 09/08/2020
-ms.locfileid: "89522255"
+ms.lasthandoff: 10/09/2020
+ms.locfileid: "91891533"
 ---
 # <a name="sqlerrorlogevent-class"></a>SqlErrorLogEvent 클래스
 [!INCLUDE[sqlserver](../../includes/applies-to-version/sqlserver.md)]
@@ -42,7 +42,7 @@ class SQLErrorLogEvent
 ## <a name="properties"></a>속성  
  SQLErrorLogEvent 클래스는 다음 속성을 정의 합니다.  
   
-| 속성 | Description |
+| 속성 | 설명 |
 | -------- | ----------- |
 |FileName|데이터 형식: **문자열**<br /><br /> 액세스 형식: 읽기 전용<br /><br /> <br /><br /> 오류 로그 파일의 이름입니다.|  
 |InstanceName|데이터 형식: **문자열**<br /><br /> 액세스 형식: 읽기 전용<br /><br /> 한정자: Key<br /><br /> 로그 파일이 있는 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 인스턴스의 이름입니다.|  
@@ -95,10 +95,9 @@ Next
   
      ** \<Drive> : Files\Microsoft SQL Server\MSSQL13** **. \<InstanceName> \MSSQL\Log**  
   
- 방화벽을 통해 연결하는 경우 방화벽에 원격 대상 컴퓨터의 WMI에 대한 예외가 설정되어 있는지 확인합니다. 자세한 내용은 [Windows Vista부터 원격으로 WMI에 연결](https://go.microsoft.com/fwlink/?LinkId=178848)을 참조 하세요.  
+ 방화벽을 통해 연결하는 경우 방화벽에 원격 대상 컴퓨터의 WMI에 대한 예외가 설정되어 있는지 확인합니다. 자세한 내용은 [Windows Vista부터 원격으로 WMI에 연결](/windows/win32/wmisdk/connecting-to-wmi-remotely-starting-with-vista)을 참조 하세요.  
   
 ## <a name="see-also"></a>참고 항목  
  [SqlErrorLogFile 클래스](../../relational-databases/wmi-provider-configuration-classes/sqlerrorlogfile-class.md)   
  [오프라인 로그 파일 보기](../../relational-databases/logs/view-offline-log-files.md)  
-  
   

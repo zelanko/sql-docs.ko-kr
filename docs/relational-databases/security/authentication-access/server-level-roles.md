@@ -24,12 +24,12 @@ ms.assetid: 7adf2ad7-015d-4cbe-9e29-abaefd779008
 author: VanMSFT
 ms.author: vanto
 monikerRange: '>=aps-pdw-2016||>=sql-server-2016||=sqlallproducts-allversions||>=sql-server-linux-2017||=azuresqldb-mi-current'
-ms.openlocfilehash: 5e955b167d1ce496ca14585d16c470502e9bffbe
-ms.sourcegitcommit: 22f687e9e8b4f37b877b2d19c5090dade8fa26d0
+ms.openlocfilehash: b911a1c651716dd53eacda67ee41cdfc6d7a9262
+ms.sourcegitcommit: 71d2389cf27156fa0404a6e6f65fb7a61c40789a
 ms.translationtype: HT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 06/24/2020
-ms.locfileid: "85334023"
+ms.lasthandoff: 10/01/2020
+ms.locfileid: "91636143"
 ---
 # <a name="server-level-roles"></a>서버 수준 역할
 [!INCLUDE[appliesto-ss-xxxx-xxxx-pdw-md](../../../includes/appliesto-ss-xxxx-xxxx-pdw-md.md)]
@@ -58,6 +58,9 @@ ms.locfileid: "85334023"
 |**diskadmin**|**diskadmin** 고정 서버 역할은 디스크 파일을 관리하는 데 사용됩니다.|  
 |**dbcreator**|**dbcreator** 고정 서버 역할의 멤버는 데이터베이스를 생성, 변경, 삭제, 복원할 수 있습니다.|  
 |**public**|모든 [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] 로그인은 **public** 서버 역할에 속합니다. 서버 보안 주체에게 보안 개체에 대한 특정 사용 권한이 부여되지 않았거나 거부된 경우 사용자는 해당 개체에 대해 public으로 부여된 사용 권한을 상속 받습니다. 모든 사용자가 개체를 사용할 수 있도록 하려는 경우에만 개체에 public 권한을 할당해야 합니다. public의 멤버 자격은 변경할 수 없습니다.<br /><br /> **참고:** **public**은 다른 역할과 다른 방식으로 구현되며 public 고정 서버 역할에서 사용 권한이 부여, 거부 또는 취소될 수 있습니다.|  
+  
+> [!IMPORTANT] 
+> 다음 서버 역할에서 제공하는 대부분의 권한은 Synapse SQL - **processadmin**, **serveradmin**, **setupadmin** 및 **diskadmin**에는 적용되지 않습니다.
   
 ## <a name="permissions-of-fixed-server-roles"></a>고정 서버 역할에 대한 사용 권한  
  각 고정 서버 역할에는 관련된 특정 사용 권한이 있습니다. 다음 그림에서는 서버 역할에 할당된 사용 권한을 보여 줍니다.   

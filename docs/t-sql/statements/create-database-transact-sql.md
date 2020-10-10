@@ -1,8 +1,8 @@
 ---
 title: CREATE DATABASE(Transact-SQL) | Microsoft Docs
 description: SQL Server, Azure SQL Database, Azure Synapse Analytics 및 Analytics Platform System의 데이터베이스 구문 만들기
-ms.custom: ''
-ms.date: 07/21/2020
+ms.custom: references_regions
+ms.date: 09/29/2020
 ms.prod: sql
 ms.prod_service: sql-database
 ms.reviewer: ''
@@ -37,12 +37,12 @@ ms.assetid: 29ddac46-7a0f-4151-bd94-75c1908c89f8
 author: markingmyname
 ms.author: maghan
 monikerRange: '>=sql-server-2016||>=sql-server-linux-2017||=azuresqldb-current||=azuresqldb-mi-current||=azure-sqldw-latest||>=aps-pdw-2016||=sqlallproducts-allversions'
-ms.openlocfilehash: 4738bbf83c73ae8f2e58b10196e1fc1394d43383
-ms.sourcegitcommit: dd36d1cbe32cd5a65c6638e8f252b0bd8145e165
+ms.openlocfilehash: b488b5861c807bbac66599b71feb71d70d261ba9
+ms.sourcegitcommit: c7f40918dc3ecdb0ed2ef5c237a3996cb4cd268d
 ms.translationtype: HT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 09/08/2020
-ms.locfileid: "89539879"
+ms.lasthandoff: 10/05/2020
+ms.locfileid: "91723514"
 ---
 # <a name="create-database"></a>CREATE DATABASE
 
@@ -133,14 +133,6 @@ CREATE DATABASE database_name
 FILEGROUP filegroup name [ [ CONTAINS FILESTREAM ] [ DEFAULT ] | CONTAINS MEMORY_OPTIMIZED_DATA ]
     <filespec> [ ,...n ]
 }
-
-<service_broker_option> ::=
-{
-    ENABLE_BROKER
-  | NEW_BROKER
-  | ERROR_BROKER_CONVERSATIONS
-}
-
 ```
 
 데이터베이스 연결
@@ -157,6 +149,13 @@ CREATE DATABASE database_name
       <service_broker_option>
     | RESTRICTED_USER
     | FILESTREAM ( DIRECTORY_NAME = { 'directory_name' | NULL } )
+}
+
+<service_broker_option> ::=
+{
+    ENABLE_BROKER
+  | NEW_BROKER
+  | ERROR_BROKER_CONVERSATIONS
 }
 ```
 
@@ -207,7 +206,7 @@ Windows 데이터 정렬 이름 및 SQL 데이터 정렬 이름에 대한 자세
 > 포함된 데이터베이스는 포함되지 않은 데이터베이스와 다른 방식으로 데이터가 정렬됩니다. 자세한 내용은 [Contained Database Collations](../../relational-databases/databases/contained-database-collations.md)을 참조하세요.
 
 WITH \<option>
- **\<filestream_options>**
+ **\<filestream_option>**
 
 NON_TRANSACTED_ACCESS = { **OFF** | READ_ONLY | FULL } **적용 대상**: [!INCLUDE[ssSQL11](../../includes/sssql11-md.md)] 이상
 
@@ -897,8 +896,14 @@ CREATE DATABASE database_name [ COLLATE collation_name ]
 {
   (<edition_options> [, ...n])
 }
-[ WITH CATALOG_COLLATION = { DATABASE_DEFAULT | SQL_Latin1_General_CP1_CI_AS }]
+[ WITH <with_options> [,..n]]
 [;]
+
+<with_options> ::=
+{
+  CATALOG_COLLATION = { DATABASE_DEFAULT | SQL_Latin1_General_CP1_CI_AS }
+  | BACKUP_STORAGE_REDUNDANCY = { 'LOCAL' | 'ZONE' | 'GEO' }
+}
 
 <edition_options> ::=
 {
@@ -971,6 +976,11 @@ CATALOG_COLLATION 메타데이터 카탈로그의 기본 데이터 정렬을 지
 
 *SQL_Latin1_General_CP1_CI_AS*는 시스템 뷰와 테이블에 사용된 메타데이터 카탈로그가 고정된 SQL_Latin1_General_CP1_CI_AS 데이터 정렬로 정렬되도록 지정합니다. 이것이 지정되지 않은 경우 Azure SQL Database의 기본 설정입니다.
 
+BACKUP_STORAGE_REDUNDANCY 데이터베이스에 대한 지정 시간 복원 및 장기 보존 백업을 복제하는 방법을 지정합니다. 지역 복구 또는 지역 가동 중단에서 복구하는 기능은 'GEO' 백업 스토리지 중복성을 통해 데이터베이스를 만든 경우에만 사용할 수 있습니다. 명시적으로 지정되지 않은 한 T-SQL로 생성된 데이터베이스는 지역 중복 백업 스토리지를 사용합니다. 
+
+> [!IMPORTANT]
+> Azure SQL Database에 대한 BACKUP_STORAGE_REDUNDANCY 옵션은 동남 아시아 Azure 지역에서만 공개 미리 보기로 제공됩니다.  
+
 EDITION 데이터베이스의 서비스 계층을 지정합니다.
 
 단일 및 풀링된 데이터베이스. 사용 가능한 값은 ‘Basic’, ‘Standard’, ‘Premium’, ‘GeneralPurpose’, ‘BusinessCritical’ 및 ‘Hyperscale’입니다.
@@ -1004,7 +1014,7 @@ MAXSIZE 데이터베이스의 최대 크기를 지정합니다. MAXSIZE는 지�
 |500GB|N/A|N/A|√|√ (D)|√|
 |750GB|N/A|N/A|√|√|√|
 |1024GB|N/A|N/A|√|√|√ (D)|
-|1024GB에서 최대 4096GB(256 GB*로 증분) |해당 없음|N/A|N/A|해당 없음|√|√|
+|1024GB에서 최대 4096GB(256 GB*로 증분) |N/A|N/A|N/A|N/A|√|√|
 
 \* P11과 P15는 기본 크기인 1024를 사용하여 MAXSIZE를 최대 4TB까지 허용합니다. P11 및 P15는 추가 비용 없이 최대 4TB가 포함된 스토리지를 사용할 수 있습니다. 프리미엄 계층에서 1TB 초과 MAXSIZE는 현재 다음 지역에서 사용할 수 있습니다. 미국 동부2, 미국 서부, US Gov 버지니아, 서유럽, 독일 중부, 동남 아시아, 일본 동부, 오스트레일리아 동부, 캐나다 중부 및 캐나다 동부. DTU 모델에 대한 리소스 제한에 관한 자세한 내용은 [DTU 리소스 제한](https://docs.microsoft.com/azure/sql-database/sql-database-dtu-resource-limits)을 참조하세요.
 
@@ -1170,6 +1180,10 @@ AS COPY OF [source_server_name.]source_database_name **적용 대상:** 단일 �
 
 자세한 내용은 [Transact-SQL을 사용하여 Azure SQL 데이터베이스의 복사본 만들기](https://azure.microsoft.com/documentation/articles/sql-database-copy-transact-sql/)를 참조하세요.
 
+> [!IMPORTANT]
+> 기본적으로 데이터베이스 복사본은 원본 데이터베이스와 동일한 백업 스토리지 중복성을 사용하여 생성됩니다. 데이터베이스 복사본을 만드는 동안 백업 스토리지 중복성을 변경하는 것은 T-SQL을 통해 지원되지 않습니다. 
+
+
 ## <a name="permissions"></a>사용 권한
 
 데이터베이스를 만들려면 로그인은 다음 중 하나여야 합니다.
@@ -1258,6 +1272,15 @@ CREATE DATABASE db_copy
 ```sql
 CREATE DATABASE TestDB3 COLLATE Japanese_XJIS_140 (MAXSIZE = 100 MB, EDITION = 'Basic')
   WITH CATALOG_COLLATION = DATABASE_DEFAULT
+```
+
+### <a name="create-database-using-zone-redundancy-for-backups"></a>백업을 위해 영역 중복성을 사용하여 데이터베이스 만들기
+
+다음 예제에서는 데이터베이스 백업에 대한 영역 중복성을 설정합니다. 특정 시점 복원 백업과 장기 보존 백업(구성된 경우)은 모두 동일한 백업 스토리지 중복성을 사용합니다.
+
+```sql
+CREATE DATABASE test_zone_redundancy 
+  WITH BACKUP_STORAGE_REDUNDANCY = 'ZONE';
 ```
 
 ## <a name="see-also"></a>참고 항목
@@ -1380,6 +1403,7 @@ Azure Synapse에서 이 문을 Azure SQL Database 서버와 함께 사용하여 
 
 ## <a name="syntax"></a>구문
 
+### <a name="sql-pool"></a>[SQL 풀](#tab/sqlpool)
 ```syntaxsql
 CREATE DATABASE database_name [ COLLATE collation_name ]
 (
@@ -1400,6 +1424,12 @@ CREATE DATABASE database_name [ COLLATE collation_name ]
 )
 [;]
 ```
+### <a name="sql-on-demand-preview"></a>[SQL 주문형(미리 보기)](#tab/sqlod)
+```syntaxsql
+CREATE DATABASE database_name [ COLLATE collation_name ]
+[;] 
+```
+---
 
 ## <a name="arguments"></a>인수
 

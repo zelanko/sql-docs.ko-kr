@@ -14,12 +14,12 @@ ms.assetid: edeb5c75-fb13-467e-873a-ab3aad88ab72
 author: MashaMSFT
 ms.author: mathoma
 manager: erikre
-ms.openlocfilehash: 2aec52249b366eac2057fe8cde5e3829e5125a5d
-ms.sourcegitcommit: f7ac1976d4bfa224332edd9ef2f4377a4d55a2c9
+ms.openlocfilehash: 0f38c60868785a9487e848fd9617e2b2feedf481
+ms.sourcegitcommit: 2f868a77903c1f1c4cecf4ea1c181deee12d5b15
 ms.translationtype: HT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 07/02/2020
-ms.locfileid: "85893100"
+ms.lasthandoff: 10/02/2020
+ms.locfileid: "91670090"
 ---
 # <a name="reporting-services-with-always-on-availability-groups-sql-server"></a>Always On 가용성 그룹이 포함된 Reporting Services(SQL Server)
 [!INCLUDE [SQL Server](../../../includes/applies-to-version/sqlserver.md)]
@@ -28,7 +28,7 @@ ms.locfileid: "85893100"
   
  [!INCLUDE[ssHADR](../../../includes/sshadr-md.md)] 데이터 원본에 [!INCLUDE[ssRSnoversion](../../../includes/ssrsnoversion-md.md)] 을 사용할 경우의 중요한 이점 중 하나는 읽기 가능한 보조 복제본을 보고 데이터 원본으로 사용하는 것과 동시에 보조 복제본이 주 데이터베이스에 대한 장애 조치(Failover) 기능을 제공할 수 있다는 점입니다.  
   
- [!INCLUDE[ssHADR](../../../includes/sshadr-md.md)]에 대한 일반적인 내용은 [SQL Server 2012 Always On FAQ(https://msdn.microsoft.com/sqlserver/gg508768)](https://msdn.microsoft.com/sqlserver/gg508768)를 참조하세요.  
+ [!INCLUDE[ssHADR](../../../includes/sshadr-md.md)]에 대한 일반적인 내용은 [SQL Server 2012에 대한 Always On FAQ(../../../sql-server/index.yml)](../../../sql-server/index.yml)를 참조하세요.  
 
 ##  <a name="requirements-for-using-reporting-services-and-always-on-availability-groups"></a><a name="bkmk_requirements"></a> Reporting Services 및 Always On 가용성 그룹 사용을 위한 요구 사항  
  [!INCLUDE[ssCurrent](../../../includes/sscurrent-md.md)] [!INCLUDE[ssRSnoversion](../../../includes/ssrsnoversion-md.md)] 및 Power BI Report Server에서는 .NET Framework 4.0을 사용하며 데이터 원본과 함께 사용할 [!INCLUDE[ssHADR](../../../includes/sshadr-md.md)] 연결 문자열 속성을 지원합니다.  
@@ -125,7 +125,7 @@ ms.locfileid: "85893100"
   
 -   ReportServerTempDB  
   
- 기본 모드에서는 경고 데이터베이스 및 관련 기능을 지원하거나 사용하지 않습니다. 기본 모드 보고서 서버는 [!INCLUDE[ssRSnoversion](../../../includes/ssrsnoversion-md.md)] 구성 관리자에서 구성합니다. SharePoint 모드의 경우 서비스 애플리케이션 데이터베이스 이름을 SharePoint 구성 중에 만든 "클라이언트 액세스 지점"의 이름으로 구성합니다. [!INCLUDE[ssHADR](../../../includes/sshadr-md.md)]에서 SharePoint 구성에 대한 자세한 내용은 [SharePoint Server용 SQL Server 가용성 그룹 구성 및 관리(https://go.microsoft.com/fwlink/?LinkId=245165) )](https://go.microsoft.com/fwlink/?LinkId=245165)를 참조하세요.  
+ 기본 모드에서는 경고 데이터베이스 및 관련 기능을 지원하거나 사용하지 않습니다. 기본 모드 보고서 서버는 [!INCLUDE[ssRSnoversion](../../../includes/ssrsnoversion-md.md)] 구성 관리자에서 구성합니다. SharePoint 모드의 경우 서비스 애플리케이션 데이터베이스 이름을 SharePoint 구성 중에 만든 "클라이언트 액세스 지점"의 이름으로 구성합니다. [!INCLUDE[ssHADR](../../../includes/sshadr-md.md)]에서 SharePoint 구성에 대한 자세한 내용은 [SharePoint Server용 SQL Server 가용성 그룹 구성 및 관리(/previous-versions/office/sharepoint-server-2010/hh913923(v=office.14))](/previous-versions/office/sharepoint-server-2010/hh913923(v=office.14))를 참조하세요.  
   
 > [!NOTE]
 >  SharePoint 모드 보고서 서버는 [!INCLUDE[ssRSnoversion](../../../includes/ssrsnoversion-md.md)] 서비스 애플리케이션 데이터베이스와 SharePoint 콘텐츠 데이터베이스 사이의 동기화 프로세스를 사용합니다. 보고서 서버 데이터베이스와 콘텐츠 데이터베이스를 함께 유지 관리하는 것이 중요합니다. 이를 하나의 집합으로 장애 조치(Failover)하고 복구할 수 있도록 동일한 가용성으로 구성해야 합니다. 다음과 같은 시나리오를 고려해 보세요.  
@@ -181,5 +181,3 @@ ms.locfileid: "85893100"
  [고가용성 재해 복구를 위한 SQL Server Native Client 지원](../../../relational-databases/native-client/features/sql-server-native-client-support-for-high-availability-disaster-recovery.md)   
  [가용성 복제본에 대한 클라이언트 연결 액세스 정보&#40;SQL Server&#41;](../../../database-engine/availability-groups/windows/about-client-connection-access-to-availability-replicas-sql-server.md)  
   
-  
-

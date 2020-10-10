@@ -18,16 +18,16 @@ helpviewer_keywords:
 ms.assetid: a66c756a-1311-4f4a-8088-818f8ed90056
 author: markingmyname
 ms.author: maghan
-ms.openlocfilehash: 1a4fa2a1bb7dda435676564989c1fb648eb3a956
-ms.sourcegitcommit: dd36d1cbe32cd5a65c6638e8f252b0bd8145e165
+ms.openlocfilehash: dcc745710132ea85b7027152900b7d693df37aab
+ms.sourcegitcommit: 783b35f6478006d654491cb52f6edf108acf2482
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 09/08/2020
-ms.locfileid: "89521508"
+ms.lasthandoff: 10/09/2020
+ms.locfileid: "91889039"
 ---
 # <a name="setenable-method-clientnetworkprotocol-class"></a>SetEnable 메서드(ClientNetworkProtocol 클래스)
 [!INCLUDE [SQL Server](../../../includes/applies-to-version/sqlserver.md)]
-  [클라이언트 프로토콜 구성](https://technet.microsoft.com/library/ms181035.aspx)에서 지정한 클라이언트 네트워크 프로토콜을 사용 하도록 설정 합니다.  
+  [클라이언트 프로토콜 구성](../../../database-engine/configure-windows/configure-client-protocols.md)에서 지정한 클라이언트 네트워크 프로토콜을 사용 하도록 설정 합니다.  
   
 ## <a name="syntax"></a>구문  
   
@@ -46,6 +46,5 @@ object.SetEnableMethod()
 ## <a name="remarks"></a>설명  
   
 ## <a name="see-also"></a>참고 항목  
- [클라이언트 네트워크 프로토콜 및 네트워크 라이브러리 구성](https://technet.microsoft.com/library/ms181035.aspx)  
-  
+ [클라이언트 네트워크 프로토콜 및 네트워크 라이브러리 구성](../../../database-engine/configure-windows/configure-client-protocols.md)  
   
