@@ -10,12 +10,12 @@ ms.topic: conceptual
 author: MashaMSFT
 ms.author: mathoma
 ms.custom: seo-lt-2019
-ms.openlocfilehash: c9757642736362745bd37607cacf74eeee962125
-ms.sourcegitcommit: 777704aefa7e574f4b7d62ad2a4c1b10ca1731ff
+ms.openlocfilehash: 9868b414d627c7ea98504120432c0c3a662d463b
+ms.sourcegitcommit: afb02c275b7c79fbd90fac4bfcfd92b00a399019
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 08/06/2020
-ms.locfileid: "87824068"
+ms.lasthandoff: 10/12/2020
+ms.locfileid: "91956554"
 ---
 # <a name="installation-and-configuration"></a>설치 및 구성
 [!INCLUDE [SQL Server Azure SQL Database](../includes/applies-to-version/sql-asdb.md)]
@@ -57,9 +57,9 @@ SQL Server 인스턴스에 백업을 복원 하려면 Management Studio를 사�
 Bacpac를 새 SQL Database 가져오려면 Management Studio를 사용할 수 있습니다.
 
 1. 필드 Azure에 아직 SQL Server 없는 경우 [Azure Portal](https://portal.azure.com/) 로 이동 하 여 새 SQL Database를 만듭니다. 데이터베이스를 만드는 과정에서 서버를 만듭니다. 서버를 기록해 둡니다.
-   - 몇 분만에 데이터베이스를 만들려면 [이 자습서](https://azure.microsoft.com/documentation/articles/sql-database-get-started/) 를 참조 하세요.
+   - 몇 분만에 데이터베이스를 만들려면 [이 자습서](/azure/azure-sql/database/single-database-create-quickstart) 를 참조 하세요.
 2. SQL Server Management Studio를 열고 Azure에서 서버에 연결 합니다.
-3. **데이터베이스** 노드를 마우스 오른쪽 단추로 클릭 하 고 **데이터 계층 응용 프로그램 가져오기**를 선택 합니다.
+3. **데이터베이스** 노드를 마우스 오른쪽 단추로 클릭 하 고 **Data-Tier 응용 프로그램 가져오기**를 선택 합니다.
 4. **가져오기 설정** 에서 **로컬 디스크에서 가져오기** 를 선택 하 고 파일 시스템에서 샘플 데이터베이스의 bacpac를 선택 합니다.
 5. **데이터베이스 설정** 에서 데이터베이스 이름을 *WideWorldImporters* 로 변경 하 고 사용할 대상 버전 및 서비스 목표를 선택 합니다.
 6. **다음** 을 클릭 하 고 **마침** 을 클릭 하 여 배포를 시작 합니다. P1에서 완료 하는 데 몇 분이 걸립니다. 낮은 가격 책정 계층을 원하는 경우 새 P1 데이터베이스로 가져온 다음 가격 책정 계층을 원하는 수준으로 변경 하는 것이 좋습니다.
@@ -68,10 +68,10 @@ Bacpac를 새 SQL Database 가져오려면 Management Studio를 사용할 수 �
 
 ### <a name="full-text-indexing"></a>전체 텍스트 인덱싱
 
-예제 데이터베이스는 전체 텍스트 인덱싱을 사용할 수 있습니다. 그러나이 기능은 기본적으로 SQL Server와 함께 설치 되지 않습니다. SQL Server 설치 중에 선택 해야 합니다 (Azure SQL Database에서 기본적으로 사용 하도록 설정 됨). 따라서 사후 설치 단계가 필요 합니다.
+예제 데이터베이스는 Full-Text 인덱싱을 사용할 수 있습니다. 그러나이 기능은 기본적으로 SQL Server와 함께 설치 되지 않습니다. SQL Server 설치 중에 선택 해야 합니다 (Azure SQL Database에서 기본적으로 사용 하도록 설정 됨). 따라서 사후 설치 단계가 필요 합니다.
 
 1. SQL Server Management Studio에서 WideWorldImporters 데이터베이스에 연결 하 고 새 쿼리 창을 엽니다.
-2. 다음 T-sql 명령을 실행 하 여 데이터베이스에서 전체 텍스트 인덱싱을 사용할 수 있도록 합니다.`EXECUTE Application.Configuration_ApplyFullTextIndexing`
+2. 다음 T-sql 명령을 실행 하 여 데이터베이스에서 Full-Text 인덱싱을 사용 하도록 설정 합니다.  `EXECUTE Application.Configuration_ApplyFullTextIndexing`
 
 
 ### <a name="sql-server-audit"></a>SQL Server Audit
@@ -90,9 +90,8 @@ Azure SQL Database에서 감사는 [Azure Portal](https://portal.azure.com/)를 
 
 적용 대상: Azure SQL Database
 
-행 수준 보안은 WideWorldImporters의 bacpac 다운로드에서 기본적으로 사용 하도록 설정 되어 있지 않습니다. 데이터베이스에서 행 수준 보안을 사용 하도록 설정 하려면 다음 저장 프로시저를 실행 합니다.
+Row-Level 보안은 bacpac 다운로드 WideWorldImporters에서 기본적으로 사용 하도록 설정 되어 있지 않습니다. 데이터베이스에서 Row-Level 보안을 사용 하도록 설정 하려면 다음 저장 프로시저를 실행 합니다.
 
 ```sql
 EXECUTE [Application].[Configuration_ApplyRowLevelSecurity]
 ```
-

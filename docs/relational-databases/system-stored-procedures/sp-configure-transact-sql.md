@@ -19,12 +19,12 @@ ms.assetid: d18b251d-b37a-4f5f-b50c-502d689594c8
 author: markingmyname
 ms.author: maghan
 monikerRange: '>=aps-pdw-2016||=azuresqldb-mi-current||>=sql-server-2016||=sqlallproducts-allversions||>=sql-server-linux-2017'
-ms.openlocfilehash: dd9ba41579e8d1c0bac76bb634e9074bf9e5c670
-ms.sourcegitcommit: dd36d1cbe32cd5a65c6638e8f252b0bd8145e165
+ms.openlocfilehash: e02f07a78dc5f3022bfd1f374738f22b326ca94e
+ms.sourcegitcommit: afb02c275b7c79fbd90fac4bfcfd92b00a399019
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 09/08/2020
-ms.locfileid: "89536645"
+ms.lasthandoff: 10/12/2020
+ms.locfileid: "91955864"
 ---
 # <a name="sp_configure-transact-sql"></a>sp_configure(Transact-SQL)
 [!INCLUDE[tsql-appliesto-ss2008-xxxx-xxxx-pdw-md](../../includes/tsql-appliesto-ss2008-asdbmi-xxxx-pdw-md.md)]
@@ -83,7 +83,7 @@ RECONFIGURE
 |**minimum**|**int**|구성 옵션의 최소값입니다.|  
 |**maximum**|**int**|구성 옵션의 최대값입니다.|  
 |**config_value**|**int**|**Sp_configure** ( **sys.configurations**값)를 사용 하 여 구성 옵션이 설정 된 값입니다. 이러한 옵션에 대 한 자세한 내용은 [서버 구성 옵션 &#40;SQL Server&#41;](../../database-engine/configure-windows/server-configuration-options-sql-server.md) 및 [sys.configurations &#40;transact-sql&#41;](../../relational-databases/system-catalog-views/sys-configurations-transact-sql.md)을 참조 하세요.|  
-|**run_value**|**int**|현재 실행 중인 구성 옵션 값 ( **sys.configvalue_in_use urations**의 값)입니다.<br /><br /> 자세한 내용은 [sys.configurations &#40;transact-sql&#41;](../../relational-databases/system-catalog-views/sys-configurations-transact-sql.md)를 참조 하세요.|  
+|**run_value**|**int**|현재 실행 중인 구성 옵션 값 ( **sys.configurations.value_in_use**의 값)입니다.<br /><br /> 자세한 내용은 [sys.configurations &#40;transact-sql&#41;](../../relational-databases/system-catalog-views/sys-configurations-transact-sql.md)를 참조 하세요.|  
   
 ## <a name="remarks"></a>설명  
  **Sp_configure** 를 사용 하 여 서버 수준 설정을 표시 하거나 변경할 수 있습니다. 데이터베이스 수준의 설정을 변경하려면 ALTER DATABASE를 사용합니다. 현재 사용자 세션에만 적용되는 설정을 변경하려면 SET 문을 사용합니다.  
@@ -112,14 +112,17 @@ RECONFIGURE
  자세한 내용은 [RECONFIGURE &#40;transact-sql&#41;](../../t-sql/language-elements/reconfigure-transact-sql.md)를 참조 하세요.  
   
 ## <a name="advanced-options"></a>고급 옵션  
- **선호도 마스크** 및 **복구 간격과**같은 일부 구성 옵션은 고급 옵션으로 지정 됩니다. 기본적으로 이 옵션은 보거나 변경할 수 없습니다. 사용 가능 하도록 설정 하려면 **ShowAdvancedOptions** 구성 옵션을 1로 설정 합니다.  
+ **선호도 마스크** 및 **복구 간격과**같은 일부 구성 옵션은 고급 옵션으로 지정 됩니다. 기본적으로 이 옵션은 보거나 변경할 수 없습니다. 사용할 수 있도록 하려면 **고급 옵션 표시** 구성 옵션을 1로 설정 합니다. 
+ 
+> [!CAUTION]  
+> **고급 옵션 표시** 옵션이 1로 설정 된 경우이 설정은 모든 사용자에 게 적용 됩니다. 이 상태를 일시적으로 사용 하 고 고급 옵션을 확인 해야 하는 작업이 완료 되 면 0으로 다시 전환 하는 것이 좋습니다.  
   
  구성 옵션 및 해당 설정에 대 한 자세한 내용은 [서버 구성 옵션 &#40;SQL Server&#41;](../../database-engine/configure-windows/server-configuration-options-sql-server.md)를 참조 하세요.  
   
 ## <a name="permissions"></a>사용 권한  
  매개 변수 없이 또는 첫 번째 매개 변수만 사용하여 **sp_configure** 를 실행할 수 있는 권한은 기본적으로 모든 사용자에게 부여됩니다. 구성 옵션을 변경 하거나 RECONFIGURE 문을 실행 하는 두 매개 변수를 사용 하 여 **sp_configure** 를 실행 하려면 ALTER SETTINGS 서버 수준 사용 권한이 있어야 합니다. **sysadmin** 및 **serveradmin** 고정 서버 역할은 ALTER SETTINGS 권한을 암시적으로 보유하고 있습니다.  
   
-## <a name="examples"></a>예제  
+## <a name="examples"></a>예  
   
 ### <a name="a-listing-the-advanced-configuration-options"></a>A. 고급 구성 옵션 나열  
  다음 예에서는 모든 구성 옵션을 설정하고 나열하는 방법을 보여 줍니다. 먼저 `show advanced option`을 `1`로 설정하면 고급 구성 옵션이 표시됩니다. 이 옵션을 변경한 다음 매개 변수 없이 `sp_configure`를 실행하면 모든 구성 옵션이 표시됩니다.  
