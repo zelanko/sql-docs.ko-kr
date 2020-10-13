@@ -1,6 +1,6 @@
 ---
 description: sys.sql_expression_dependencies(Transact-SQL)
-title: sys. sql_expression_dependencies (Transact-sql) | Microsoft Docs
+title: sys.sql_expression_dependencies (Transact-sql) | Microsoft Docs
 ms.custom: ''
 ms.date: 03/14/2017
 ms.prod: sql
@@ -21,12 +21,12 @@ ms.assetid: 78a218e4-bf99-4a6a-acbf-ff82425a5946
 author: markingmyname
 ms.author: maghan
 monikerRange: '>=aps-pdw-2016||=azure-sqldw-latest||>=sql-server-2016||=sqlallproducts-allversions||>=sql-server-linux-2017||=azuresqldb-mi-current'
-ms.openlocfilehash: 3d4aabba6bd3608b4a4392b47e64ee37d7498d80
-ms.sourcegitcommit: dd36d1cbe32cd5a65c6638e8f252b0bd8145e165
+ms.openlocfilehash: 012d3d8b944b162e317bee53f4f25dcaaf5a1541
+ms.sourcegitcommit: a5398f107599102af7c8cda815d8e5e9a367ce7e
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 09/08/2020
-ms.locfileid: "89548664"
+ms.lasthandoff: 10/13/2020
+ms.locfileid: "92006427"
 ---
 # <a name="syssql_expression_dependencies-transact-sql"></a>sys.sql_expression_dependencies(Transact-SQL)
 [!INCLUDE [sql-asdbmi-asa-pdw](../../includes/applies-to-version/sql-asdbmi-asa-pdw.md)]
@@ -43,7 +43,7 @@ ms.locfileid: "89548664"
   
 -   데이터베이스 간 및 서버 간 엔터티. 엔터티 이름이 보고되지만 엔터티 ID는 확인되지 않습니다.  
   
--   스키마 바운드 엔터티에 대한 열 수준 종속성. 비 스키마 바운드 개체에 대 한 열 수준 종속성은 [dm_sql_referenced_entities](../../relational-databases/system-dynamic-management-views/sys-dm-sql-referenced-entities-transact-sql.md)를 사용 하 여 반환할 수 있습니다.  
+-   스키마 바운드 엔터티에 대한 열 수준 종속성. 비 스키마 바운드 개체에 대 한 열 수준 종속성은 [sys.dm_sql_referenced_entities](../../relational-databases/system-dynamic-management-views/sys-dm-sql-referenced-entities-transact-sql.md)를 사용 하 여 반환할 수 있습니다.  
   
 -   master 데이터베이스의 컨텍스트에서 서버 수준 DLL 트리거  
   
@@ -69,12 +69,12 @@ ms.locfileid: "89548664"
  다음 표에서는 종속성 정보가 생성 및 유지되는 엔터티 유형을 보여 줍니다. 종속성 정보는 규칙, 기본값, 임시 테이블, 임시 저장 프로시저 또는 시스템 개체에 대해서는 생성 및 유지되지 않습니다.  
 
 > [!NOTE]
-> Azure SQL Data Warehouse 및 병렬 데이터 웨어하우스는이 목록에서 테이블, 뷰, 필터링 된 통계 및 Transact-sql 저장 프로시저 엔터티 형식을 지원 합니다.  종속성 정보는 테이블, 뷰 및 필터링 된 통계에 대해서만 생성 및 유지 관리 됩니다.  
+> Azure Synapse 분석 및 병렬 데이터 웨어하우스는이 목록에서 테이블, 뷰, 필터링 된 통계 및 Transact-sql 저장 프로시저 엔터티 형식을 지원 합니다.  종속성 정보는 테이블, 뷰 및 필터링 된 통계에 대해서만 생성 및 유지 관리 됩니다.  
   
 |엔터티 유형|참조 엔터티|참조된 엔터티|  
 |-----------------|------------------------|-----------------------|  
 |테이블|예*|예|  
-|View|예|예|  
+|보기|예|예|  
 |필터링된 인덱스|예**|아니요|  
 |필터링된 통계|예**|아니요|  
 |[!INCLUDE[tsql](../../includes/tsql-md.md)] 저장 프로시저***|예|예|  
@@ -101,7 +101,7 @@ ms.locfileid: "89548664"
 ## <a name="permissions"></a>사용 권한  
  데이터베이스에 대한 VIEW DEFINITION 권한과 데이터베이스의 sys.sql_expression_dependencies에 대한 SELECT 권한이 필요합니다. 기본적으로 SELECT 권한은 db_owner 고정 데이터베이스 역할의 멤버에게만 부여됩니다. SELECT와 VIEW DEFINITION 권한을 다른 사용자에게 부여하면 피부여자는 데이터베이스의 모든 종속성을 볼 수 있습니다.  
   
-## <a name="examples"></a>예제  
+## <a name="examples"></a>예  
   
 ### <a name="a-returning-entities-that-are-referenced-by-another-entity"></a>A. 다른 엔터티에서 참조한 엔터티 반환  
  다음 예는 `Production.vProductAndDescription` 뷰에서 참조되는 테이블과 열을 반환합니다. 이 뷰는 `referenced_entity_name` 및 `referenced_column_name` 열에 반환된 엔터티(테이블 및 열)에 종속됩니다.  

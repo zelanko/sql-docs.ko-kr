@@ -11,12 +11,12 @@ ms.topic: conceptual
 ms.assetid: a0305f5b-91bd-4d18-a2fc-ec235b062fd3
 author: MightyPen
 ms.author: genemi
-ms.openlocfilehash: 2ff96199ed01fe06524ec38f8df2a0cce6380b8d
-ms.sourcegitcommit: da88320c474c1c9124574f90d549c50ee3387b4c
+ms.openlocfilehash: b73ea09a24e2091a76d6bf2526c1f7a17e3afd60
+ms.sourcegitcommit: 4d370399f6f142e25075b3714e5c2ce056b1bfd0
 ms.translationtype: HT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 07/01/2020
-ms.locfileid: "85723304"
+ms.lasthandoff: 10/09/2020
+ms.locfileid: "91868000"
 ---
 # <a name="cross-database-queries"></a>데이터베이스 간 쿼리
  [!INCLUDE [SQL Server](../../includes/applies-to-version/sqlserver.md)]
@@ -122,6 +122,5 @@ ms.locfileid: "85723304"
     ```
    
 ## <a name="see-also"></a>참고 항목  
- [메모리 내 OLTP로 마이그레이션](../../relational-databases/in-memory-oltp/migrating-to-in-memory-oltp.md)  
-  
+ [메모리 내 OLTP로 마이그레이션](./plan-your-adoption-of-in-memory-oltp-features-in-sql-server.md)  
   

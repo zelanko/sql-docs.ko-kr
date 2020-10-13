@@ -1,20 +1,20 @@
 ---
 title: SQL Server의 SLES 공유 디스크 클러스터 구성
 description: SQL Server에 대해 SLES(SUSE Linux Enterprise Server) 공유 디스크 클러스터를 구성하여 고가용성을 구현합니다.
-author: MikeRayMSFT
-ms.author: mikeray
+author: VanMSFT
+ms.author: vanto
 ms.reviewer: vanto
 ms.date: 03/17/2017
 ms.topic: conceptual
 ms.prod: sql
 ms.technology: linux
 ms.assetid: e5ad1bdd-c054-4999-a5aa-00e74770b481
-ms.openlocfilehash: 4d2032c14f435b48fa181f2fcab388d417ebea7d
-ms.sourcegitcommit: f7ac1976d4bfa224332edd9ef2f4377a4d55a2c9
+ms.openlocfilehash: c32a526c35d4a4cf236794e1ada6dc66cfac6ba6
+ms.sourcegitcommit: 610e3ebe21ac6575850a29641a32f275e71557e3
 ms.translationtype: HT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 07/02/2020
-ms.locfileid: "85897242"
+ms.lasthandoff: 10/07/2020
+ms.locfileid: "91784726"
 ---
 # <a name="configure-sles-shared-disk-cluster-for-sql-server"></a>SQL Server의 SLES 공유 디스크 클러스터 구성
 

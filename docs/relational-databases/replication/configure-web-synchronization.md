@@ -33,12 +33,12 @@ helpviewer_keywords:
 ms.assetid: 21f8e4d4-cd07-4856-98f0-9c9890ebbc82
 author: MashaMSFT
 ms.author: mathoma
-ms.openlocfilehash: a0c28163aab72b8011bb4fdf4984813cbd026091
-ms.sourcegitcommit: e700497f962e4c2274df16d9e651059b42ff1a10
+ms.openlocfilehash: 797c213fcba4e74cc9fe2a376985352120d5898b
+ms.sourcegitcommit: 4d370399f6f142e25075b3714e5c2ce056b1bfd0
 ms.translationtype: HT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 08/17/2020
-ms.locfileid: "88455621"
+ms.lasthandoff: 10/09/2020
+ms.locfileid: "91868136"
 ---
 # <a name="configure-web-synchronization"></a>웹 동기화 구성
  [!INCLUDE [SQL Server](../../includes/applies-to-version/sqlserver.md)]
@@ -87,7 +87,7 @@ ms.locfileid: "88455621"
   
  **웹 동기화를 위해 IIS를 구성하려면**  
   
--   [!INCLUDE[ssManStudioFull](../../includes/ssmanstudiofull-md.md)]: [웹 동기화를 위한 IIS 구성](../../relational-databases/replication/configure-iis-for-web-synchronization.md)  
+-   [!INCLUDE[ssManStudioFull](../../includes/ssmanstudiofull-md.md)]: [웹 동기화를 위한 IIS 구성](./configure-iis-7-for-web-synchronization.md)  
   
 -   [!INCLUDE[ssManStudioFull](../../includes/ssmanstudiofull-md.md)]: [웹 동기화를 위한 IIS 7 구성](../../relational-databases/replication/configure-iis-7-for-web-synchronization.md)  
   
@@ -160,7 +160,7 @@ ms.locfileid: "88455621"
   
 -   각 게시는 IIS에 대해 서로 다른 가상 디렉터리를 사용해야 합니다.  
   
--   [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 복제 수신기(Replisapi.dll)를 실행하는 계정은 동기화하는 동안 게시자 및 배포자에 연결되는 계정이기도 합니다. 계정은 게시자 및 배포자의 SQL 로그인 계정에 매핑되어야 합니다. 자세한 내용은 [웹 동기화를 위한 IIS 구성](../../relational-databases/replication/configure-iis-for-web-synchronization.md)에서 "SQL Server 복제 수신기에 대한 사용 권한 설정" 섹션을 참조하세요.  
+-   [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 복제 수신기(Replisapi.dll)를 실행하는 계정은 동기화하는 동안 게시자 및 배포자에 연결되는 계정이기도 합니다. 계정은 게시자 및 배포자의 SQL 로그인 계정에 매핑되어야 합니다. 자세한 내용은 [웹 동기화를 위한 IIS 구성](./configure-iis-7-for-web-synchronization.md)에서 "SQL Server 복제 수신기에 대한 사용 권한 설정" 섹션을 참조하세요.  
   
 -   FTP를 사용하여 게시자에 있는 스냅샷을 IIS를 실행하는 컴퓨터로 배달할 수 있습니다. 스냅샷은 항상 IIS를 실행하는 컴퓨터에서 HTTPS를 사용하여 구독자로 배달됩니다. 자세한 내용은 [FTP를 통해 스냅샷 전송](../../relational-databases/replication/publish/deliver-a-snapshot-through-ftp.md)을 참조하세요.  
   
@@ -177,5 +177,4 @@ ms.locfileid: "88455621"
   
 ## <a name="see-also"></a>참고 항목  
  [병합 복제에 대한 웹 동기화](../../relational-databases/replication/web-synchronization-for-merge-replication.md)  
-  
   

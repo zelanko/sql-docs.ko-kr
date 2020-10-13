@@ -12,12 +12,12 @@ ms.assetid: 23274522-e5cf-4095-bed8-bf986d6342e0
 author: markingmyname
 ms.author: maghan
 monikerRange: =azuresqldb-current||>=sql-server-2016||=sqlallproducts-allversions||>=sql-server-linux-2017||=azuresqldb-mi-current
-ms.openlocfilehash: 72c4b76489628e29825a7a212232a8f4aad99fde
-ms.sourcegitcommit: dd36d1cbe32cd5a65c6638e8f252b0bd8145e165
+ms.openlocfilehash: 8ddfdf4456f3195d2d9d15c2a7f63fffc5b574fa
+ms.sourcegitcommit: 04cf7905fa32e0a9a44575a6f9641d9a2e5ac0f8
 ms.translationtype: HT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 09/08/2020
-ms.locfileid: "89547001"
+ms.lasthandoff: 10/07/2020
+ms.locfileid: "91810464"
 ---
 # <a name="system-versioned-temporal-tables-with-memory-optimized-tables"></a>메모리 액세스에 최적화된 테이블을 포함한 시스템 버전 임시 테이블
 
@@ -25,7 +25,7 @@ ms.locfileid: "89547001"
 [!INCLUDE [sqlserver2016-asdb-asdbmi](../../includes/applies-to-version/sqlserver2016-asdb-asdbmi.md)]
 
 
-[메모리 최적화 테이블](../../relational-databases/in-memory-oltp/memory-optimized-tables.md) 에 대한 시스템 버전 temporal 테이블은 메모리 내 OLTP 작업으로 수집한 데이터 위에 [데이터 감사 및 특정 시간 분석](https://msdn.microsoft.com/library/mt631669.aspx) 이 필요한 시나리오에 대해 비용 효율적인 솔루션을 제공하기 위한 것입니다. 이는 높은 트랜잭션 처리량, 잠금 없는 동시성 및 동시에 쉽게 쿼리할 수 있는 대량의 기록 데이터를 저장하는 기능을 제공합니다.
+[메모리 최적화 테이블](../in-memory-oltp/sample-database-for-in-memory-oltp.md) 에 대한 시스템 버전 temporal 테이블은 메모리 내 OLTP 작업으로 수집한 데이터 위에 [데이터 감사 및 특정 시간 분석](./temporal-table-usage-scenarios.md) 이 필요한 시나리오에 대해 비용 효율적인 솔루션을 제공하기 위한 것입니다. 이는 높은 트랜잭션 처리량, 잠금 없는 동시성 및 동시에 쉽게 쿼리할 수 있는 대량의 기록 데이터를 저장하는 기능을 제공합니다.
 
 ## <a name="overview"></a>개요
 
@@ -43,7 +43,7 @@ ms.locfileid: "89547001"
 
 - 내구성 있는 메모리 최적화 테이블만이 시스템 버전 관리가 가능합니다(**DURABILITY = SCHEMA_AND_DATA**).
 - 메모리 최적화 시스템 버전 관리 테이블에 대한 기록 테이블은 만든 주체가 최종 사용자이든 또는 시스템이든 상관없이 디스크 기반이어야 합니다.
-- 현재 테이블(메모리 내)에만 영향을 주는 쿼리를 [고유하게 컴파일된 T-SQL 모듈](https://msdn.microsoft.com/library/dn133184.aspx)에서 사용할 수 있습니다. FOR SYSTEM TIME 절을 사용하는 임시 쿼리는 고유하게 컴파일된 모듈에서 지원되지 않습니다. 임시 쿼리 및 비네이티브 모듈에서 메모리 최적화 테이블이 포함된 FOR SYSTEM TIME 절을 사용할 수 있습니다.
+- 현재 테이블(메모리 내)에만 영향을 주는 쿼리를 [고유하게 컴파일된 T-SQL 모듈](../in-memory-oltp/a-guide-to-query-processing-for-memory-optimized-tables.md)에서 사용할 수 있습니다. FOR SYSTEM TIME 절을 사용하는 임시 쿼리는 고유하게 컴파일된 모듈에서 지원되지 않습니다. 임시 쿼리 및 비네이티브 모듈에서 메모리 최적화 테이블이 포함된 FOR SYSTEM TIME 절을 사용할 수 있습니다.
 - **SYSTEM_VERSIONING = ON**의 경우, 메모리 최적화 현재 테이블에 대한 업데이트 및 삭제 연산의 결과인 최근 시스템 버전 관리 변경 내용을 수용하기 위해 메모리 최적화 준비 테이블이 자동으로 생성됩니다.
 - 내부 메모리 최적화 준비 테이블의 데이터는 비동기 데이터 플러시 태스크에 의해 정기적으로 디스크 기반 기록 테이블로 이동됩니다. 이 데이터 플러시 메커니즘의 목표는 내부 메모리 버퍼를 상위 개체의 메모리 소비량의 10% 미만으로 유지하는 것입니다. [sys.dm_db_xtp_memory_consumers&#40;Transact-SQL&#41;](../../relational-databases/system-dynamic-management-views/sys-dm-db-xtp-memory-consumers-transact-sql.md)를 쿼리하고 메모리 최적화 준비 테이블 및 현재 temporal 테이블에 대한 데이터를 요약하면 메모리 최적화 시스템 버전 관리 temporal 테이블의 총 메모리 소비량을 추적할 수 있습니다.
 - [sp_xtp_flush_temporal_history](../../relational-databases/system-stored-procedures/temporal-table-sp-xtp-flush-temporal-history.md)를 호출하면 데이터 플러시를 적용할 수 있습니다.

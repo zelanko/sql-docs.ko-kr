@@ -10,12 +10,12 @@ ms.technology: ssma
 ms.topic: conceptual
 ms.assetid: f305ebb6-7393-4a43-abb3-6332b739d690
 ms.author: alexiva
-ms.openlocfilehash: 0c2ab60111951167bffb4d3bafd04bca27f23a4d
-ms.sourcegitcommit: b93beb4f03aee2c1971909cb1d15f79cd479a35c
+ms.openlocfilehash: 23bd7c70522d1d691e4670c43bb7f07b5534c379
+ms.sourcegitcommit: a5398f107599102af7c8cda815d8e5e9a367ce7e
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 09/29/2020
-ms.locfileid: "91497969"
+ms.lasthandoff: 10/13/2020
+ms.locfileid: "92005750"
 ---
 # <a name="whats-new-in-ssma-for-oracle-oracletosql"></a>Oracle 용 SSMA의 새로운 기능 (OracleToSQL)
 
@@ -73,7 +73,7 @@ Oracle 용 SSMA 릴리스에는 다음과 같은 변경 내용이 포함 되어 
 * 기본 DDL에 대 한 지원 추가 `ALTER TRIGGER` / `ALTER INDEX` (설정/해제 등)
 * 기본 제공 함수 이름과 일치 하는 열에 대 한 변환 향상
 * 사용할 수 있는 열에 대 한 필터링 된 고유 인덱스 생성 `NULL`
-* Azure SQL Data Warehouse에 대 한 변수 선언 변환 향상
+* Azure Synapse Analytics에 대 한 변수 선언 변환 향상
 * 프로젝트 이름에서 특수 문자를 사용 하 여 문제 해결
 
 ## <a name="ssma-v88"></a>SSMA v 8.8
@@ -85,7 +85,7 @@ Oracle 용 SSMA의 v 8.8 릴리스에는 다음이 포함 됩니다.
 * 분석 절의 변환 개선 `OVER PARTITION`
 * 분석 함수에 대 한 새 변환 `LEAD`
 * 하위 쿼리 팩터링 절의 새 변환
-* `REPLICATE`Azure SQL Data Warehouse에 대 한 새 배포 옵션
+* `REPLICATE`Azure Synapse Analytics에 대 한 새 배포 옵션
 * 변환 성능을 향상 시키기 위해 새로운 Oracle 구문 파서
 
 ## <a name="ssma-v87"></a>SSMA v 8.7
@@ -251,7 +251,7 @@ Oracle 용 SSMA 릴리스에는 다음과 같은 변경 내용이 포함 되어 
 
 Oracle 용 SSMA의 v 7.4 릴리스에는 다음과 같은 변경 내용이 포함 되어 있습니다.
 
-* 이제 Oracle 용 SSMA는 Azure SQL Data Warehouse를 마이그레이션하기 위한 대상 플랫폼으로 지원 합니다.
+* 이제 Oracle 용 SSMA는 Azure Synapse Analytics를 마이그레이션의 대상 플랫폼으로 지원 합니다.
 
   ![새 프로젝트 창](../media/new-project.png)
   * 에서는 다음 이미지에 표시 된 것 처럼 데이터 웨어하우스 저장소 옵션을 지원 합니다.
@@ -397,7 +397,7 @@ Oracle 용 SSMA의 4 월 2011 릴리스에는 다음과 같은 변경 내용이 
 * `Simple`및 로그 복구 모델을 사용 하 여 데이터 마이그레이션 성능이 개선 `Bulk` 되었습니다.
 * 이전 버전의 SSMA (v 4.0 및 v 4.2)에서 만든 프로젝트의 이전 버전과의 호환성에 대 한 지원이 추가 되었습니다.
 * 이전 버전의 SSMA (v 4.0 및 v 4.2)와 함께 Oracle v 5.0 용 SSMA 제품을 함께 설치 하는 기능이 추가 되었습니다.
-* 사용자 정의 형식 (하위 형식, `VARRAY` , `NESTED TABLE` , 개체 테이블 및 개체 뷰 포함)과 특수 오류 메시지를 포함 하는 PL/SQL 블록의 용도에 대 한 지원이 추가 되었습니다.
+* 보고 User-Defined 형식 (하위 형식, `VARRAY` , `NESTED TABLE` , 개체 테이블 및 개체 뷰 포함)과 특수 오류 메시지를 포함 하는 PL/SQL 블록의 용도에 대 한 지원이 추가 되었습니다.
 
 ## <a name="july-2010"></a>2010년 7월
 
@@ -405,7 +405,7 @@ Oracle 용 SSMA의 7 월 2010 릴리스 추가 됨:
 
 * SQL Server 2008 R2로의 마이그레이션을 지원 합니다.
 * 명령줄 실행을 위한 새 SSMA 콘솔 응용 프로그램입니다.
-* 서버 쪽 및 클라이언트 쪽 데이터 마이그레이션 엔진을 모두 사용 하 여 데이터 마이그레이션을 지원 합니다.
+* Server-Side 및 Client-Side 데이터 마이그레이션 엔진을 사용 하 여 데이터 마이그레이션을 지원 합니다.
 * 데이터 마이그레이션에서 "Custom SELECT" 문을 지원 합니다.
 * Oracle 11g r 2에서의 마이그레이션 지원.
 

@@ -14,18 +14,18 @@ ms.assetid: af673514-30c7-403a-9d18-d01e1a095115
 author: MashaMSFT
 ms.author: mathoma
 monikerRange: '>=aps-pdw-2016||=azuresqldb-current||=azure-sqldw-latest||>=sql-server-2016||=sqlallproducts-allversions||>=sql-server-linux-2017||=azuresqldb-mi-current'
-ms.openlocfilehash: 4110d523762a147a569caaf03d71dbdc4567c5c3
-ms.sourcegitcommit: da88320c474c1c9124574f90d549c50ee3387b4c
+ms.openlocfilehash: a4ffeb0300e8211110ba3a8b303ff21b230626b9
+ms.sourcegitcommit: 4d370399f6f142e25075b3714e5c2ce056b1bfd0
 ms.translationtype: HT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 07/01/2020
-ms.locfileid: "85720697"
+ms.lasthandoff: 10/09/2020
+ms.locfileid: "91866908"
 ---
 # <a name="tutorial-configure-replication-between-a-server-and-mobile-clients-merge"></a>자습서: 서버와 모바일 클라이언트 간의 복제 구성(병합)
  [!INCLUDE [SQL Server](../../includes/applies-to-version/sqlserver.md)]
 병합 복제는 가끔씩만 연결되는 중앙 서버와 모바일 클라이언트 간에 데이터를 이동할 때 발생하는 문제를 해결하는 좋은 방법입니다. 복제 마법사를 사용하여 병합 복제 토폴로지를 쉽게 구성하고 관리할 수 있습니다. 
 
-이 자습서에서는 모바일 클라이언트에 대해 복제 토폴로지를 구성하는 방법에 대해 설명합니다. 병합 복제에 대한 자세한 내용은 [병합 복제의 개요](https://docs.microsoft.com/sql/relational-databases/replication/merge/merge-replication)를 참조하세요.
+이 자습서에서는 모바일 클라이언트에 대해 복제 토폴로지를 구성하는 방법에 대해 설명합니다. 병합 복제에 대한 자세한 내용은 [병합 복제의 개요](./merge/merge-replication.md)를 참조하세요.
   
 ## <a name="what-you-will-learn"></a>알아볼 내용  
 이 자습서에서는 병합 복제를 사용하여 중앙 데이터베이스의 데이터를 여러 모바일 사용자에게 게시하여 각 사용자가 고유하게 필터링된 데이터의 하위 집합을 얻을 수 있도록 안내합니다. 
@@ -48,14 +48,14 @@ ms.locfileid: "85720697"
   
 - 구독자 서버(대상)에서 SQL Server Express 또는 SQL Server Compact를 제외하고 모든 SQL Server 버전을 설치합니다. 이 자습서에서 만든 게시는 SQL Server Express 또는 SQL Server Compact를 지원하지 않습니다. 
 
-- [SQL Server Management Studio](https://docs.microsoft.com/sql/ssms/download-sql-server-management-studio-ssms)를 설치합니다.
+- [SQL Server Management Studio](../../ssms/download-sql-server-management-studio-ssms.md)를 설치합니다.
 - [SQL Server 2017 Developer Edition](https://www.microsoft.com/sql-server/sql-server-downloads)을 설치합니다.
-- [AdventureWorks 샘플 데이터베이스](https://github.com/Microsoft/sql-server-samples/releases)를 다운로드합니다. SSMS에서 데이터베이스를 복원하는 방법에 대한 지침은 [데이터베이스 복원](https://docs.microsoft.com/sql/relational-databases/backup-restore/restore-a-database-backup-using-ssms)을 참조하세요.  
+- [AdventureWorks 샘플 데이터베이스](https://github.com/Microsoft/sql-server-samples/releases)를 다운로드합니다. SSMS에서 데이터베이스를 복원하는 방법에 대한 지침은 [데이터베이스 복원](../backup-restore/restore-a-database-backup-using-ssms.md)을 참조하세요.  
  
   
 >[!NOTE]
 > - 두 버전이 넘게 차이 나는 SQL Server 인스턴스에서는 복제가 지원되지 않습니다. 자세한 내용은 [복제 토폴로지에서 지원되는 SQL Server 버전](https://blogs.msdn.microsoft.com/repltalk/2016/08/12/suppported-sql-server-versions-in-replication-topology/)을 참조하세요.
-> - [!INCLUDE[ssManStudioFull](../../includes/ssmanstudiofull-md.md)]에서는 **sysadmin** 고정 서버 역할의 멤버인 로그인을 사용하여 게시자 및 구독자에 연결해야 합니다. 이 역할에 대한 자세한 내용은 [서버 수준 역할](https://docs.microsoft.com/sql/relational-databases/security/authentication-access/server-level-roles)을 참조하세요.  
+> - [!INCLUDE[ssManStudioFull](../../includes/ssmanstudiofull-md.md)]에서는 **sysadmin** 고정 서버 역할의 멤버인 로그인을 사용하여 게시자 및 구독자에 연결해야 합니다. 이 역할에 대한 자세한 내용은 [서버 수준 역할](../security/authentication-access/server-level-roles.md)을 참조하세요.  
   
   
 **이 자습서에 소요되는 예상 시간: 60분**  
@@ -91,7 +91,7 @@ ms.locfileid: "85720697"
    >
    > SQL 2017보다 낮은 빌드를 사용하는 경우, 양방향 복제에서 이 열을 사용할 때 잠재적인 데이터 손실을 알리는 메시지가 화면 맨 아래에 표시됩니다. 이 자습서의 목적상 이 메시지는 무시할 수 있습니다. 그러나 지원되는 빌드를 사용하지 않는 경우 프로덕션 환경에서 이 데이터 형식을 복제해서는 안 됩니다.
    > 
-   > **hierarchyid** 데이터 형식을 복제하는 방법에 대한 자세한 내용은 [복제에서 hierarchyid 열 사용](https://docs.microsoft.com/sql/t-sql/data-types/hierarchyid-data-type-method-reference#using-hierarchyid-columns-in-replicated-tables)을 참조하세요.
+   > **hierarchyid** 데이터 형식을 복제하는 방법에 대한 자세한 내용은 [복제에서 hierarchyid 열 사용](../../t-sql/data-types/hierarchyid-data-type-method-reference.md#using-hierarchyid-columns-in-replicated-tables)을 참조하세요.
     
   
 7. **테이블 행 필터링** 페이지에서 **추가**를 선택한 다음, **필터 추가**를 선택합니다.  
@@ -281,7 +281,6 @@ ms.locfileid: "85720697"
 - [스냅샷으로 구독 초기화](../../relational-databases/replication/initialize-a-subscription-with-a-snapshot.md)  
 - [데이터 동기화](../../relational-databases/replication/synchronize-data.md)  
 - [끌어오기 구독 동기화](../../relational-databases/replication/synchronize-a-pull-subscription.md)  
-  
   
   
   

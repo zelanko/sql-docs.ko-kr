@@ -13,12 +13,12 @@ helpviewer_keywords:
 ms.assetid: 33070e5f-4e39-4b70-ae81-b8af6e4983c5
 author: nahk-ivanov
 ms.author: alexiva
-ms.openlocfilehash: 2495d1b61b0251deee1b86ce66c03b6474f36cd8
-ms.sourcegitcommit: b57d98e9b2444348f95c83a24b8eea0e6c9da58d
+ms.openlocfilehash: 7acabfac10c3eb6e7afa1fbfbb2f546b0ae4137d
+ms.sourcegitcommit: a5398f107599102af7c8cda815d8e5e9a367ce7e
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 07/21/2020
-ms.locfileid: "86554828"
+ms.lasthandoff: 10/13/2020
+ms.locfileid: "92006440"
 ---
 # <a name="installing-ssma-components-on-sql-server-oracletosql"></a>SQL Server에 SSMA 구성 요소 설치 (OracleToSQL)
 
@@ -34,8 +34,8 @@ SSMA 확장 팩은 **sysdb** 및 **ssmatesterdb** 데이터베이스를 지정 �
 
 Oracle 용 SSMA 서버 구성 요소를 설치 하기 전에 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 시스템이 다음과 같은 요구 사항을 충족 하는지 확인 합니다.
 
-- [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]인스턴스가 설치 되었습니다.
-- [!INCLUDE[msCoName](../../includes/msconame_md.md)]Windows Installer 3.1 이상 버전
+- [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 인스턴스가 설치 되었습니다.
+- [!INCLUDE[msCoName](../../includes/msconame_md.md)] Windows Installer 3.1 이상 버전
 - [!INCLUDE[msCoName](../../includes/msconame_md.md)] [!INCLUDE[dnprdnshort](../../includes/dnprdnshort_md.md)] 버전 4.7.2 이상 버전입니다. [.NET Framework 개발자 센터](https://go.microsoft.com/fwlink/?LinkId=48882)에서 가져올 수 있습니다.
 - Oracle에 대 한 OLE DB 공급자 (OLE DB를 사용 하는 경우) 및 마이그레이션할 Oracle 데이터베이스에 대 한 연결입니다. Oracle 제품 미디어 또는 Oracle 웹 사이트에서 공급자를 설치할 수 있습니다.
 - [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]설치 하는 동안 Browser 서비스를 실행 해야 합니다. 이는 설치 마법사에서 인스턴스 목록을 채우는 데 사용 됩니다 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] . 설치 후 Browser 서비스를 사용 하지 않도록 설정할 수 있습니다 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] .
@@ -65,7 +65,7 @@ Oracle 용 SSMA 서버 구성 요소를 설치 하기 전에 [!INCLUDE[ssNoVersi
 8. 원하는 설치 유형을 선택 하 고 **다음**을 클릭 합니다.
 
    > [!IMPORTANT]
-   > 원격 옵션은 Linux에서 실행 되는 확장 팩을 설치 하거나 대상으로 지정할 때만 사용 해야 합니다 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] [!INCLUDE[ssAzureMi](../../includes/ssazuremi_md.md)] . [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]Windows에서 실행 되는 설치에는 항상 확장 팩이 로컬로 설치 되어 있어야 합니다. [!INCLUDE[ssAzure](../../includes/ssazure_md.md)]및 Azure SQL Data Warehouse는 확장 팩을 지원 하지 않습니다.
+   > 원격 옵션은 Linux에서 실행 되는 확장 팩을 설치 하거나 대상으로 지정할 때만 사용 해야 합니다 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] [!INCLUDE[ssAzureMi](../../includes/ssazuremi_md.md)] . [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] Windows에서 실행 되는 설치에는 항상 확장 팩이 로컬로 설치 되어 있어야 합니다. [!INCLUDE[ssAzure](../../includes/ssazure_md.md)] 및 Azure Synapse Analytics는 확장 팩을 지원 하지 않습니다.
 
    로컬 인스턴스에 확장 팩을 설치 하는 경우 다음 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 페이지에서는 Oracle 스키마를 마이그레이션할 로컬 인스턴스를 선택할 수 있습니다 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] . 드롭다운에서 인스턴스를 선택 하 고 **다음**을 선택 합니다.
 
@@ -100,11 +100,11 @@ Oracle 용 SSMA 서버 구성 요소를 설치 하기 전에 [!INCLUDE[ssNoVersi
 
 ### <a name="sql-server-database-objects"></a>데이터베이스 개체 SQL Server
 
-확장 팩을 설치한 후에는 **ssma_oracle bcp_migration_packages** 테이블이 **sysdb** 데이터베이스에 표시 됩니다.
+확장 팩을 설치한 후에는 **ssma_oracle _migration_packages** 테이블이 **sysdb** 데이터베이스에 표시 됩니다.
 
 데이터를로 마이그레이션할 때마다 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] ssma는 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 에이전트 작업을 만듭니다. 이러한 작업에는 **데이터 마이그레이션 패키지 {GUID} ssma_oracle**이름이 지정 되 고 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 작업 폴더의 에이전트 노드에 표시 됩니다 [!INCLUDE[ssManStudioFull](../../includes/ssmanstudiofull-md.md)] .
 
-## <a name="see-also"></a>참고 항목
+## <a name="see-also"></a>참조
 
-- [Oracle용 SSMA 클라이언트 설치](../../ssma/oracle/installing-ssma-for-oracle-client-oracletosql.md)
+- [Oracle 용 SSMA 클라이언트 설치](../../ssma/oracle/installing-ssma-for-oracle-client-oracletosql.md)
 - [Oracle 데이터베이스를 SQL Server로 마이그레이션](../../ssma/oracle/migrating-oracle-databases-to-sql-server-oracletosql.md)

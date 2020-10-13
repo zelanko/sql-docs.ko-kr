@@ -15,12 +15,12 @@ helpviewer_keywords:
 ms.assetid: 9bfaf500-2d1e-4c02-b041-b8761a9e695b
 author: jaszymas
 ms.author: jaszymas
-ms.openlocfilehash: 6421c442c5cbb45b9e076d3353abcbad6217fa53
-ms.sourcegitcommit: f7ac1976d4bfa224332edd9ef2f4377a4d55a2c9
+ms.openlocfilehash: 0524aa4738ae7003d763422c20db17e39e89e964
+ms.sourcegitcommit: 4d370399f6f142e25075b3714e5c2ce056b1bfd0
 ms.translationtype: HT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 07/02/2020
-ms.locfileid: "85896795"
+ms.lasthandoff: 10/09/2020
+ms.locfileid: "91867847"
 ---
 # <a name="extensible-key-management-ekm"></a>EKM(확장 가능 키 관리)
 [!INCLUDE [SQL Server](../../../includes/applies-to-version/sqlserver.md)]
@@ -34,7 +34,7 @@ ms.locfileid: "85896795"
   
  [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] 확장 가능 키 관리를 사용하면 타사 EKM/HSM 공급업체가 [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)]에 해당 모듈을 등록할 수 있습니다. EKM 모듈이 등록되면 [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] 에서 이러한 모듈에 저장된 암호화 키를 사용할 수 있고, 이를 통해 [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] 에서 이러한 모듈이 지원하는 대량 암호화 및 암호 해독 같은 고급 암호화 기능과 키 에이징 및 키 회전 같은 키 관리 함수에 액세스할 수 있습니다.  
   
- Azure VM에서 [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] 를 실행할 때 [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] 는 [Azure 키 자격 증명 모음](https://go.microsoft.com/fwlink/?LinkId=521401)에 저장된 키를 사용할 수 있습니다. 자세한 내용은 [Azure 주요 자격 증명 모음을 사용한 확장 가능 키 관리&#40;SQL Server&#41;](../../../relational-databases/security/encryption/extensible-key-management-using-azure-key-vault-sql-server.md)에서 암호화 키 계층 및 키 백업을 포함한 키 관리를 처리할 수 있습니다.  
+ Azure VM에서 [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] 를 실행할 때 [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] 는 [Azure 키 자격 증명 모음](/azure/key-vault/general/basic-concepts)에 저장된 키를 사용할 수 있습니다. 자세한 내용은 [Azure 주요 자격 증명 모음을 사용한 확장 가능 키 관리&#40;SQL Server&#41;](../../../relational-databases/security/encryption/extensible-key-management-using-azure-key-vault-sql-server.md)에서 암호화 키 계층 및 키 백업을 포함한 키 관리를 처리할 수 있습니다.  
   
 ## <a name="ekm-configuration"></a>EKM 구성  
  일부 [!INCLUDE[msCoName](../../../includes/msconame-md.md)][!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)]버전에서는 확장 가능 키 관리를 사용할 수 없습니다. [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)]버전에서 지원되는 기능 목록은 [SQL Server 2016 버전에서 지원하는 기능](~/sql-server/editions-and-supported-features-for-sql-server-2016.md)을 참조하세요.  
@@ -169,5 +169,4 @@ DECRYPTION BY EKM_AKey1
  [데이터베이스 마스터 키 백업](../../../relational-databases/security/encryption/back-up-a-database-master-key.md)   
  [데이터베이스 마스터 키 복원](../../../relational-databases/security/encryption/restore-a-database-master-key.md)   
  [두 서버에서 동일한 대칭 키 만들기](../../../relational-databases/security/encryption/create-identical-symmetric-keys-on-two-servers.md)  
-  
   

@@ -11,12 +11,12 @@ ms.topic: conceptual
 ms.assetid: 83d47694-e56d-4dae-b54e-14945bf8ba31
 author: markingmyname
 ms.author: maghan
-ms.openlocfilehash: f4fafa88b228551aabab01cdb34bd5f119db5fa0
-ms.sourcegitcommit: dd36d1cbe32cd5a65c6638e8f252b0bd8145e165
+ms.openlocfilehash: ef4d351d9eb1cdfc58cfe78696b21451163c42c9
+ms.sourcegitcommit: 4d370399f6f142e25075b3714e5c2ce056b1bfd0
 ms.translationtype: HT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 09/08/2020
-ms.locfileid: "89537757"
+ms.lasthandoff: 10/09/2020
+ms.locfileid: "91867339"
 ---
 # <a name="backing-up-a-database-with-memory-optimized-tables"></a>메모리 액세스에 최적화된 테이블이 포함된 데이터베이스 백업
  [!INCLUDE [SQL Server](../../includes/applies-to-version/sqlserver.md)]
@@ -70,6 +70,5 @@ ms.locfileid: "89537757"
  메모리 최적화 테이블이 데이터베이스 크기의 상당 부분을 차지하는 경우 차등 백업으로 데이터베이스 백업의 크기를 대폭 줄일 수 있습니다. 일반적인 OLTP 작업의 경우 차등 백업이 전체 데이터베이스 백업보다 상당히 작습니다.  
   
 ## <a name="see-also"></a>참고 항목  
- [메모리 액세스에 최적화된 테이블의 백업, 복원 및 복구](https://msdn.microsoft.com/library/3f083347-0fbb-4b19-a6fb-1818d545e281)  
-  
+ [메모리 액세스에 최적화된 테이블의 백업, 복원 및 복구](/previous-versions/sql/sql-server-2016/dn624160(v=sql.130))  
   

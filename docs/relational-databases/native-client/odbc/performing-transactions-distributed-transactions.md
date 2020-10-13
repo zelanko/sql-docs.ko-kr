@@ -18,12 +18,12 @@ ms.assetid: 2c17fba0-7a3c-453c-91b7-f801e7b39ccb
 author: markingmyname
 ms.author: maghan
 monikerRange: '>=aps-pdw-2016||=azuresqldb-current||=azure-sqldw-latest||>=sql-server-2016||=sqlallproducts-allversions||>=sql-server-linux-2017||=azuresqldb-mi-current'
-ms.openlocfilehash: b20ac97f52b9429c1d3ab0b0db5230100af2e19f
-ms.sourcegitcommit: 783b35f6478006d654491cb52f6edf108acf2482
+ms.openlocfilehash: e5ace381694dcc3afdbed36e35e48af147067b32
+ms.sourcegitcommit: a5398f107599102af7c8cda815d8e5e9a367ce7e
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 10/09/2020
-ms.locfileid: "91892263"
+ms.lasthandoff: 10/13/2020
+ms.locfileid: "92005966"
 ---
 # <a name="create-a-distributed-transaction"></a>분산 트랜잭션 만들기
 
@@ -64,7 +64,7 @@ C + + Native Client ODBC 응용 프로그램이 분산 트랜잭션에 참여 �
 
 ## <a name="c-alternative-for-sql-database-in-the-cloud"></a>클라우드의 SQL Database에 대 한 c # 대안
 
-MSDTC는 Azure SQL Database 또는 Azure SQL Data Warehouse에 대해 지원 되지 않습니다.
+MSDTC는 Azure SQL Database 또는 Azure Synapse Analytics에 대해 지원 되지 않습니다.
 
 그러나 c # 프로그램에서 .NET 클래스 [system.object](/dotnet/api/system.transactions.transactionscope)를 사용 하도록 하 여 SQL Database에 대 한 분산 트랜잭션을 만들 수 있습니다.
 

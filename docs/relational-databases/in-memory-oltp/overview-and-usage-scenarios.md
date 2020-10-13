@@ -12,12 +12,12 @@ ms.assetid: 62c964c5-eae4-4cf1-9024-d5a19adbd652
 author: jodebrui
 ms.author: jodebrui
 monikerRange: =azuresqldb-current||>=sql-server-2016||=sqlallproducts-allversions||>=sql-server-linux-2017||=azuresqldb-mi-current
-ms.openlocfilehash: c4f98e06aa52d2fe7e3c0a911f793a038c8dee9a
-ms.sourcegitcommit: da88320c474c1c9124574f90d549c50ee3387b4c
+ms.openlocfilehash: d9502743c1765561fd82f52e601983ec0bb8cc9c
+ms.sourcegitcommit: 4d370399f6f142e25075b3714e5c2ce056b1bfd0
 ms.translationtype: HT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 07/01/2020
-ms.locfileid: "85722417"
+ms.lasthandoff: 10/09/2020
+ms.locfileid: "91867113"
 ---
 # <a name="overview-and-usage-scenarios"></a>개요 및 사용 시나리오
 
@@ -29,7 +29,7 @@ ms.locfileid: "85722417"
 
 ## <a name="in-memory-oltp-overview"></a>메모리 내 OLTP 개요
 
-메모리 내 OLTP는 올바른 워크로드에 대해 상당한 성능 향상을 제공할 수 있습니다. 한 고객은 [!INCLUDE[ssSQL15](../../includes/sssql15-md.md)]를 실행하는 단일 머신에서 메모리 내 OLTP를 사용하여 [초당 120만 요청을 달성](https://blogs.msdn.microsoft.com/sqlcat/2016/10/26/how-bwin-is-using-sql-server-2016-in-memory-oltp-to-achieve-unprecedented-performance-and-scale/)하도록 관리되는 BWIN입니다. 또 다른 고객은 [!INCLUDE[ssSDS](../../includes/sssds-md.md)]에서 메모리 내 OLTP를 활용하여 [리소스 사용률을 70%로 줄이는 동시에](https://customers.microsoft.com/story/quorum-doubles-key-databases-workload-while-lowering-dtu-with-sql-database) 워크로드를 두 배로 늘리려는 Quorum입니다. 경우에 따라 고객이 최대 30배의 성능 향상을 얻기도 하지만 성능 향상 정도는 워크로드에 따라 다릅니다.
+메모리 내 OLTP는 올바른 워크로드에 대해 상당한 성능 향상을 제공할 수 있습니다. 한 고객은 [!INCLUDE[ssSQL15](../../includes/sssql15-md.md)]를 실행하는 단일 머신에서 메모리 내 OLTP를 사용하여 [초당 120만 요청을 달성](/archive/blogs/sqlcat/how-bwin-is-using-sql-server-2016-in-memory-oltp-to-achieve-unprecedented-performance-and-scale)하도록 관리되는 BWIN입니다. 또 다른 고객은 [!INCLUDE[ssSDS](../../includes/sssds-md.md)]에서 메모리 내 OLTP를 활용하여 [리소스 사용률을 70%로 줄이는 동시에](https://customers.microsoft.com/story/quorum-doubles-key-databases-workload-while-lowering-dtu-with-sql-database) 워크로드를 두 배로 늘리려는 Quorum입니다. 경우에 따라 고객이 최대 30배의 성능 향상을 얻기도 하지만 성능 향상 정도는 워크로드에 따라 다릅니다.
 
 그렇다면 이러한 성능 향상은 어디에서 이루어지는 것일까요? 기본적으로 메모리 내 OLTP는 데이터 액세스 및 트랜잭션 실행을 보다 효율적으로 만들고, 동시 실행 트랜잭션 간에 잠금 및 래치 경합을 제거하여 트랜잭션 처리 성능을 개선합니다. 한편으로는 메모리 내 작업이기 때문에 빠르지 않지만 다른 한편으로는 메모리 내 데이터를 중심으로 최적화되기 때문에 빠릅니다. 메모리 내 및 높은 동시성 컴퓨팅의 최신 개선 사항을 활용하기 위해 데이터 스토리지, 액세스 및 처리 알고리즘이 처음부터 다시 설계되었습니다.
 
@@ -122,11 +122,11 @@ GitHub에 게시된 스크립트에서 기본 제공 [!INCLUDE[ssNoVersion](../.
 
 #### <a name="implementation-considerations"></a>구현 고려 사항
 
-시작하려면 [메모리 최적화를 사용하여 임시 테이블 및 테이블 변수 성능 향상](https://blogs.msdn.microsoft.com/sqlserverstorageengine/2016/03/21/improving-temp-table-and-table-variable-performance-using-memory-optimization/)을 참조하세요.
+시작하려면 [메모리 최적화를 사용하여 임시 테이블 및 테이블 변수 성능 향상](/archive/blogs/sqlserverstorageengine/improving-temp-table-and-table-variable-performance-using-memory-optimization)을 참조하세요.
 
 #### <a name="customer-case-studies"></a>고객 사례 연구
 
-- 한 고객은 기존 TVP를 메모리 최적화 TVP로 바꾼 것만으로 성능을 40% 개선할 수 있었습니다. [Azure의 메모리 내 OLTP를 사용한 고속 IoT 데이터 수집](https://blogs.msdn.microsoft.com/sqlserverstorageengine/2016/04/07/a-technical-case-study-high-speed-iot-data-ingestion-using-in-memory-oltp-in-azure/)
+- 한 고객은 기존 TVP를 메모리 최적화 TVP로 바꾼 것만으로 성능을 40% 개선할 수 있었습니다. [Azure의 메모리 내 OLTP를 사용한 고속 IoT 데이터 수집](/archive/blogs/sqlserverstorageengine/a-technical-case-study-high-speed-iot-data-ingestion-using-in-memory-oltp-in-azure)
 - SentryOne은 엔터프라이즈 확장성 개선 목적으로 tempdb의 테이블을 메모리 내 OLTP 테이블로 교환하여 모니터링 솔루션에서 대기 시간이 거의 없이 데이터 수집 용량을 훨씬 개선했습니다. [솔루션 공급자가 데이터 모니터링 혁신을 통해 성능 한계 극복](https://customers.microsoft.com/story/sentryone-partner-professional-services-sql-server-azure)
 
 ### <a name="etl-extract-transform-load"></a>ETL(추출, 변환, 로드)
@@ -222,12 +222,12 @@ GO
 
 ## <a name="resources-to-learn-more"></a>참조 리소스
 
-- [더 빠른 T-SQL 성능을 위한 메모리 내 OLTP 기술](https://msdn.microsoft.com/library/mt694156.aspx)
+- [더 빠른 T-SQL 성능을 위한 메모리 내 OLTP 기술](./survey-of-initial-areas-in-in-memory-oltp.md)
 - 메모리 내 OLTP 사용에 대한 성능 데모는 [in-memory-oltp-perf-demo-v1.0](https://github.com/Microsoft/sql-server-samples/releases/tag/in-memory-oltp-demo-v1.0)에서 확인할 수 있습니다.
 - [메모리 내 OLTP를 설명하고 데모를 보여 주는 17분 분량의 비디오](in-memory-oltp-in-memory-optimization.md#anchorname-17minute-video)
 - [메모리 내 OLTP를 사용하도록 설정하고 권장 옵션을 설정하는 스크립트](https://github.com/microsoft/sql-server-samples/blob/master/samples/features/in-memory-database/in-memory-oltp/t-sql-scripts/enable-in-memory-oltp.sql)
 - [기본 메모리 내 OLTP 설명서](in-memory-oltp-in-memory-optimization.md)
 - [Azure SQL Database의 메모리 내 OLTP 성능 및 리소스 사용률 이점](https://azure.microsoft.com/blog/in-memory-oltp-in-azure-sql-database/)
-- [메모리 최적화를 사용하여 임시 테이블 및 테이블 변수 성능 향상](https://blogs.msdn.microsoft.com/sqlserverstorageengine/2016/03/21/improving-temp-table-and-table-variable-performance-using-memory-optimization/)
-- [SQL Database에서 메모리 내 기술을 사용하여 성능 최적화](https://docs.microsoft.com/azure/sql-database/sql-database-in-memory)
+- [메모리 최적화를 사용하여 임시 테이블 및 테이블 변수 성능 향상](/archive/blogs/sqlserverstorageengine/improving-temp-table-and-table-variable-performance-using-memory-optimization)
+- [SQL Database에서 메모리 내 기술을 사용하여 성능 최적화](/azure/sql-database/sql-database-in-memory)
 - [메모리 액세스에 최적화된 테이블을 포함한 시스템 버전 임시 테이블](../tables/system-versioned-temporal-tables-with-memory-optimized-tables.md)

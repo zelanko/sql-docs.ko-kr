@@ -1,6 +1,6 @@
 ---
 description: sys.index_columns(Transact SQL)
-title: sys. index_columns (Transact-sql) | Microsoft Docs
+title: sys.index_columns (Transact-sql) | Microsoft Docs
 ms.custom: ''
 ms.date: 07/03/2019
 ms.prod: sql
@@ -21,12 +21,12 @@ ms.assetid: 211471aa-558a-475c-9b94-5913c143ed12
 author: markingmyname
 ms.author: maghan
 monikerRange: '>=aps-pdw-2016||=azuresqldb-current||=azure-sqldw-latest||>=sql-server-2016||=sqlallproducts-allversions||>=sql-server-linux-2017||=azuresqldb-mi-current'
-ms.openlocfilehash: dccbbac037400f0addda79c3fc61adfb0b971f3d
-ms.sourcegitcommit: dd36d1cbe32cd5a65c6638e8f252b0bd8145e165
+ms.openlocfilehash: e77661ec4ddd9a53a5279dd433d20ab58e4263d0
+ms.sourcegitcommit: a5398f107599102af7c8cda815d8e5e9a367ce7e
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 09/08/2020
-ms.locfileid: "89546810"
+ms.lasthandoff: 10/13/2020
+ms.locfileid: "92006527"
 ---
 # <a name="sysindex_columns-transact-sql"></a>sys.index_columns(Transact SQL)
 [!INCLUDE [sql-asdb-asdbmi-asa-pdw](../../includes/applies-to-version/sql-asdb-asdbmi-asa-pdw.md)]
@@ -42,14 +42,14 @@ ms.locfileid: "89546810"
 |**key_ordinal**|**tinyint**|키 열 집합 내에서의 서수(1부터 시작)입니다.<br /><br /> 0 = 키 열이 아니거나, XML 인덱스, columnstore 인덱스 또는 공간 인덱스입니다.<br /><br /> 참고: 기본 열을 비교할 수 없기 때문에 XML 또는 공간 인덱스는 키가 될 수 없습니다. 즉, 해당 값을 정렬할 수 없습니다.|  
 |**partition_ordinal**|**tinyint**|분할 열 집합 내에 있는 서수(1부터 시작)입니다. 클러스터형 columnstore 인덱스는 하나의 분할 열만 가질 수 있습니다.<br /><br /> 0 = 분할 열 아님|  
 |**is_descending_key**|**bit**|1 = 인덱스 키 열이 내림차순으로 정렬됩니다.<br /><br /> 0 = 인덱스 키 열이 오름차순으로 정렬되거나 열이 columnstore 또는 해시 인덱스의 일부입니다.|  
-|**is_included_column**|**bit**|1 = 열이 CREATE INDEX INCLUDE 절을 사용하여 인덱스에 추가된 키가 아닌 열이거나 columnstore 인덱스의 일부인 열입니다.<br /><br /> 0 = 열이 포괄 열이 아닙니다.<br /><br /> 클러스터링 키의 일부 이므로 암시적으로 추가 된 열은 **sys. index_columns**에 나열 되지 않습니다.<br /><br /> 분할 열이어서 암시적으로 추가된 열은 0으로 반환됩니다.| 
-|**column_store_order_ordinal**</br> 적용 대상: Azure SQL Data Warehouse (미리 보기)|**tinyint**|순서가 지정 된 클러스터형 columnstore 인덱스의 순서 열 집합 내에서의 서 수 (1부터 기반)입니다.|
+|**is_included_column**|**bit**|1 = 열이 CREATE INDEX INCLUDE 절을 사용하여 인덱스에 추가된 키가 아닌 열이거나 columnstore 인덱스의 일부인 열입니다.<br /><br /> 0 = 열이 포괄 열이 아닙니다.<br /><br /> 클러스터링 키의 일부 이므로 암시적으로 추가 된 열은 **sys.index_columns**에 나열 되지 않습니다.<br /><br /> 분할 열이어서 암시적으로 추가된 열은 0으로 반환됩니다.| 
+|**column_store_order_ordinal**</br> 적용 대상: Azure Synapse Analytics (미리 보기)|**tinyint**|순서가 지정 된 클러스터형 columnstore 인덱스의 순서 열 집합 내에서의 서 수 (1부터 기반)입니다.|
   
 ## <a name="permissions"></a>사용 권한
 
  [!INCLUDE[ssCatViewPerm](../../includes/sscatviewperm-md.md)] 자세한 내용은 [Metadata Visibility Configuration](../../relational-databases/security/metadata-visibility-configuration.md)을 참조하세요.  
   
-## <a name="examples"></a>예제
+## <a name="examples"></a>예
 
  다음 예는 `Production.BillOfMaterials` 테이블에 대한 모든 인덱스 및 인덱스 열을 반환합니다.  
   

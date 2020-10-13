@@ -19,12 +19,12 @@ author: jaszymas
 ms.author: jaszymas
 ms.reviewer: vanto
 monikerRange: '>=aps-pdw-2016||=azuresqldb-current||=azure-sqldw-latest||>=sql-server-2016||=sqlallproducts-allversions||>=sql-server-linux-2017||=azuresqldb-mi-current'
-ms.openlocfilehash: 8cf9e3f2273cf4b85365d7c44f9587e02c62b984
-ms.sourcegitcommit: 8f062015c2a033f5a0d805ee4adabbe15e7c8f94
+ms.openlocfilehash: d6cd4c4988b07e19c04d72efe2fc19200313f355
+ms.sourcegitcommit: 4d370399f6f142e25075b3714e5c2ce056b1bfd0
 ms.translationtype: HT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 09/25/2020
-ms.locfileid: "91227059"
+ms.lasthandoff: 10/09/2020
+ms.locfileid: "91866635"
 ---
 # <a name="transparent-data-encryption-tde"></a>TDE(투명한 데이터 암호화)
 
@@ -51,12 +51,12 @@ TDE는 데이터 및 로그 파일인 미사용 데이터를 보호합니다. �
 >
 >**관련 항목:**
 >
-> - [Azure SQL Database를 사용한 투명한 데이터 암호화](../../../relational-databases/security/encryption/transparent-data-encryption-azure-sql.md)
-> - [SQL Data Warehouse에서 TDE(투명한 데이터 암호화) 시작](https://azure.microsoft.com/documentation/articles/sql-data-warehouse-encryption-tde-tsql/)
+> - [Azure SQL Database를 사용한 투명한 데이터 암호화](/azure/azure-sql/database/transparent-data-encryption-tde-overview)
+> - [SQL Data Warehouse에서 TDE(투명한 데이터 암호화) 시작](/azure/synapse-analytics/sql-data-warehouse/sql-data-warehouse-encryption-tde-tsql)
 > - [다른 SQL Server로 TDE 보호 데이터베이스 이동](../../../relational-databases/security/encryption/move-a-tde-protected-database-to-another-sql-server.md)
 > - [EKM을 사용하여 SQL Server에서 TDE를 사용하도록 설정](../../../relational-databases/security/encryption/enable-tde-on-sql-server-using-ekm.md)
 > - [SQL 암호화 기능을 통해 SQL Server 커넥터 사용](../../../relational-databases/security/encryption/use-sql-server-connector-with-sql-encryption-features.md)
-> - [TDE에 대한 SQL Server 보안 블로그(FAQ 포함)](https://blogs.msdn.microsoft.com/sqlsecurity/2016/10/05/feature-spotlight-transparent-data-encryption-tde/)
+> - [TDE에 대한 SQL Server 보안 블로그(FAQ 포함)](/archive/blogs/sqlsecurity/feature-spotlight-transparent-data-encryption-tde)
 
 ## <a name="about-tde"></a>TDE 정보
 
@@ -64,7 +64,7 @@ TDE는 데이터 및 로그 파일인 미사용 데이터를 보호합니다. �
 
 ### <a name="information-applicable-to-sssds"></a>[!INCLUDE[ssSDS](../../../includes/sssds-md.md)]에 적용되는 정보
 
-[!INCLUDE[sqldbesa](../../../includes/sqldbesa-md.md)] V12에서 TDE를 사용하는 경우, [!INCLUDE[ssSDS](../../../includes/sssds-md.md)]에 의해 master 데이터베이스에 저장된 서버 수준 인증서가 자동으로 생성됩니다. [!INCLUDE[ssSDS](../../../includes/sssds-md.md)]에서 TDE 데이터베이스를 이동하기 위해 이동 작업에 대한 데이터베이스의 암호를 해독할 필요가 없습니다. [!INCLUDE[ssSDS](../../../includes/sssds-md.md)]에서 TDE를 사용하는 방법에 대한 자세한 내용은 [Azure SQL Database를 사용한 투명한 데이터 암호화](../../../relational-databases/security/encryption/transparent-data-encryption-azure-sql.md)를 참조하세요.
+[!INCLUDE[sqldbesa](../../../includes/sqldbesa-md.md)] V12에서 TDE를 사용하는 경우, [!INCLUDE[ssSDS](../../../includes/sssds-md.md)]에 의해 master 데이터베이스에 저장된 서버 수준 인증서가 자동으로 생성됩니다. [!INCLUDE[ssSDS](../../../includes/sssds-md.md)]에서 TDE 데이터베이스를 이동하기 위해 이동 작업에 대한 데이터베이스의 암호를 해독할 필요가 없습니다. [!INCLUDE[ssSDS](../../../includes/sssds-md.md)]에서 TDE를 사용하는 방법에 대한 자세한 내용은 [Azure SQL Database를 사용한 투명한 데이터 암호화](/azure/azure-sql/database/transparent-data-encryption-tde-overview)를 참조하세요.
 
 ### <a name="information-applicable-to-ssnoversion"></a>[!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)]에 적용되는 정보
 
@@ -324,12 +324,12 @@ TDE는 메모리 내 OLTP 개체가 포함된 데이터베이스에서 TDE를 �
 
 ## <a name="related-content"></a>관련 콘텐츠
 
-[Azure SQL Database를 사용한 투명한 데이터 암호화](../../../relational-databases/security/encryption/transparent-data-encryption-azure-sql.md)  
-[SQL Data Warehouse에서 TDE(투명한 데이터 암호화) 시작](https://azure.microsoft.com/documentation/articles/sql-data-warehouse-encryption-tde-tsql/)  
+[Azure SQL Database를 사용한 투명한 데이터 암호화](/azure/azure-sql/database/transparent-data-encryption-tde-overview)  
+[SQL Data Warehouse에서 TDE(투명한 데이터 암호화) 시작](/azure/synapse-analytics/sql-data-warehouse/sql-data-warehouse-encryption-tde-tsql)  
 [SQL Server 암호화](../../../relational-databases/security/encryption/sql-server-encryption.md)  
 [SQL Server 및 데이터베이스 암호화 키(데이터베이스 엔진)](../../../relational-databases/security/encryption/sql-server-and-database-encryption-keys-database-engine.md)  
 
 ## <a name="see-also"></a>참고 항목
 
 [SQL Server 데이터베이스 엔진 및 Azure SQL Database 보안 센터](../../../relational-databases/security/security-center-for-sql-server-database-engine-and-azure-sql-database.md)  
-[FILESTREAM [SQL Server]](../../../relational-databases/blob/filestream-sql-server.md)  
+[FILESTREAM [SQL Server]](../../../relational-databases/blob/filestream-sql-server.md)

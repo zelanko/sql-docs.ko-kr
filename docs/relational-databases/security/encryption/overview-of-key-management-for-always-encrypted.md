@@ -12,12 +12,12 @@ ms.assetid: 07a305b1-4110-42f0-b7aa-28a4e32e912a
 author: jaszymas
 ms.author: jaszymas
 monikerRange: =azuresqldb-current||>=sql-server-2016||=sqlallproducts-allversions||>=sql-server-linux-2017||=azuresqldb-mi-current
-ms.openlocfilehash: bfeb8126553a1a5990ed7ccfd8a836117f3328b0
-ms.sourcegitcommit: da88320c474c1c9124574f90d549c50ee3387b4c
+ms.openlocfilehash: ed92a4bce43ec105992bfd41dbde825d72fc2a22
+ms.sourcegitcommit: 4d370399f6f142e25075b3714e5c2ce056b1bfd0
 ms.translationtype: HT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 07/01/2020
-ms.locfileid: "85784012"
+ms.lasthandoff: 10/09/2020
+ms.locfileid: "91867606"
 ---
 # <a name="overview-of-key-management-for-always-encrypted"></a>Always Encrypted를 위한 키 관리 개요
 [!INCLUDE [SQL Server Azure SQL Database](../../../includes/applies-to-version/sql-asdb.md)]
@@ -68,7 +68,7 @@ ms.locfileid: "85784012"
 
 ## <a name="tools-for-managing-always-encrypted-keys"></a>상시 암호화 키 관리 도구
 
-상시 암호화 키는 [SSMS(SQL Server Management Studio)](https://msdn.microsoft.com/library/ms174173.aspx) 및 [PowerShell](../../scripting/sql-server-powershell.md)을 사용하여 관리할 수 있습니다.
+상시 암호화 키는 [SSMS(SQL Server Management Studio)](../../../ssms/sql-server-management-studio-ssms.md) 및 [PowerShell](../../../powershell/sql-server-powershell.md)을 사용하여 관리할 수 있습니다.
 
 - **SSMS(SQL Server Management Studio)** – 키 저장소 액세스 및 데이터베이스 액세스와 관련된 태스크를 결합하는 대화 상자와 마법사를 제공하므로 SSMS는 역할 구분을 지원하지 않지만 쉽게 키를 구성할 수 있습니다. SSMS를 사용하여 키를 관리하는 방법은 다음을 참조하세요.
     - [SQL Server Management Studio를 사용하여 Always Encrypted 키 프로비전](configure-always-encrypted-keys-using-ssms.md)
@@ -101,9 +101,5 @@ ms.locfileid: "85784012"
 
 ## <a name="see-also"></a>참고 항목
 - [Always Encrypted](../../../relational-databases/security/encryption/always-encrypted-database-engine.md)
-- [상시 암호화 마법사 자습서(Azure 주요 자격 증명 모음)](https://azure.microsoft.com/documentation/articles/sql-database-always-encrypted-azure-key-vault/)
-- [상시 암호화 마법사 자습서(Windows 인증서 저장소)](https://azure.microsoft.com/documentation/articles/sql-database-always-encrypted/)
-
-
-
-
+- [상시 암호화 마법사 자습서(Azure 주요 자격 증명 모음)](/azure/azure-sql/database/always-encrypted-azure-key-vault-configure)
+- [상시 암호화 마법사 자습서(Windows 인증서 저장소)](/azure/azure-sql/database/always-encrypted-certificate-store-configure)

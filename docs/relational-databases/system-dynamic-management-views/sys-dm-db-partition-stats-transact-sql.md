@@ -1,6 +1,6 @@
 ---
 description: sys.dm_db_partition_stats(Transact-SQL)
-title: sys. dm_db_partition_stats (Transact-sql) | Microsoft Docs
+title: sys.dm_db_partition_stats (Transact-sql) | Microsoft Docs
 ms.custom: ''
 ms.date: 05/28/2020
 ms.prod: sql
@@ -21,12 +21,12 @@ ms.assetid: 9db9d184-b3a2-421e-a804-b18ebcb099b7
 author: markingmyname
 ms.author: maghan
 monikerRange: '>=aps-pdw-2016||=azuresqldb-current||=azure-sqldw-latest||>=sql-server-2016||=sqlallproducts-allversions||>=sql-server-linux-2017||=azuresqldb-mi-current'
-ms.openlocfilehash: 3099e86d00f0541fc4c5b3408ec8708d04042b3e
-ms.sourcegitcommit: dd36d1cbe32cd5a65c6638e8f252b0bd8145e165
+ms.openlocfilehash: a1fd58cef1e99a1c7648ea8ad73657b7dc02be01
+ms.sourcegitcommit: a5398f107599102af7c8cda815d8e5e9a367ce7e
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 09/08/2020
-ms.locfileid: "89544780"
+ms.lasthandoff: 10/13/2020
+ms.locfileid: "92006018"
 ---
 # <a name="sysdm_db_partition_stats-transact-sql"></a>sys.dm_db_partition_stats(Transact-SQL)
 [!INCLUDE [sql-asdb-asdbmi-asa-pdw](../../includes/applies-to-version/sql-asdb-asdbmi-asa-pdw.md)]
@@ -34,11 +34,11 @@ ms.locfileid: "89544780"
   현재 데이터베이스의 모든 파티션에 대해 페이지 및 행 수 정보를 반환합니다.  
   
 > [!NOTE]  
-> 또는에서이를 호출 하려면 [!INCLUDE[ssSDWfull](../../includes/sssdwfull-md.md)] [!INCLUDE[ssPDW](../../includes/sspdw-md.md)] 이름 **sys. dm_pdw_nodes_db_partition_stats**을 사용 합니다. Dm_pdw_nodes_db_partition_stats의 partition_id은 Azure SQL Data Warehouse에 대 한 sys. 파티션 카탈로그 뷰의 partition_id와 다릅니다.
+> 또는에서이를 호출 하려면 [!INCLUDE[ssSDWfull](../../includes/sssdwfull-md.md)] [!INCLUDE[ssPDW](../../includes/sspdw-md.md)] **sys.dm_pdw_nodes_db_partition_stats**이름을 사용 합니다. Sys.dm_pdw_nodes_db_partition_stats의 partition_id은 Azure Synapse Analytics에 대 한 sys. 파티션 카탈로그 뷰의 partition_id와 다릅니다.
   
 |열 이름|데이터 형식|Description|  
 |-----------------|---------------|-----------------|  
-|**partition_id**|**bigint**|파티션의 ID입니다. 데이터베이스 내에서 고유합니다. 이 값은 Azure SQL Data Warehouse를 제외 하 고는 **partition_id** 와 동일한 값입니다 **.**|  
+|**partition_id**|**bigint**|파티션의 ID입니다. 데이터베이스 내에서 고유합니다. 이 값은 Azure Synapse Analytics를 제외 **하 고는 카탈로그 뷰의** **partition_id** 와 동일 합니다.|  
 |**object_id**|**int**|파티션이 속한 테이블 또는 인덱싱된 뷰의 개체 ID입니다.|  
 |**index_id**|**int**|파티션이 속한 힙 또는 인덱스의 ID입니다.<br /><br /> 0 = 힙<br /><br /> 1 = 클러스터형 인덱스<br /><br /> > 1 = 비클러스터형 인덱스|  
 |**partition_number**|**int**|인덱스 또는 힙 내의 1부터 시작하는 파티션 번호입니다.|  
@@ -67,9 +67,9 @@ ms.locfileid: "89544780"
  개별 테이블이나 인덱스에 대한 총 수는 관련된 모든 파티션에 대한 수를 더하여 얻을 수 있습니다.  
   
 ## <a name="permissions"></a>사용 권한  
- `VIEW DATABASE STATE` `VIEW DEFINITION` **Dm_db_partition_stats** 동적 관리 뷰를 쿼리하려면 및 권한이 필요 합니다. 동적 관리 뷰 사용 권한에 대 한 자세한 내용은 [동적 관리 뷰 및 함수 &#40;transact-sql&#41;](~/relational-databases/system-dynamic-management-views/system-dynamic-management-views.md)를 참조 하세요.  
+ `VIEW DATABASE STATE` `VIEW DEFINITION` **Sys.dm_db_partition_stats** 동적 관리 뷰를 쿼리하려면 및 권한이 필요 합니다. 동적 관리 뷰 사용 권한에 대 한 자세한 내용은 [동적 관리 뷰 및 함수 &#40;transact-sql&#41;](~/relational-databases/system-dynamic-management-views/system-dynamic-management-views.md)를 참조 하세요.  
   
-## <a name="examples"></a>예제  
+## <a name="examples"></a>예  
   
 ### <a name="a-returning-all-counts-for-all-partitions-of-all-indexes-and-heaps-in-a-database"></a>A. 데이터베이스에 있는 모든 인덱스와 힙의 모든 파티션에 대한 모든 개수 반환  
  다음 예에서는 [!INCLUDE[ssSampleDBnormal](../../includes/sssampledbnormal-md.md)] 데이터베이스에 있는 모든 인덱스와 힙의 모든 파티션에 대한 모든 개수를 표시합니다.  

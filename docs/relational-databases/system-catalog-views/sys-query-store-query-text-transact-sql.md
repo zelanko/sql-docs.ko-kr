@@ -1,6 +1,6 @@
 ---
-description: sys. query_store_query_text (Transact-sql)
-title: sys. query_store_query_text (Transact-sql) | Microsoft Docs
+description: sys.query_store_query_text (Transact-sql)
+title: sys.query_store_query_text (Transact-sql) | Microsoft Docs
 ms.custom: ''
 ms.date: 01/23/2019
 ms.prod: sql
@@ -22,14 +22,14 @@ ms.assetid: f7032fa0-7c16-4492-bb82-685806c63a8c
 author: markingmyname
 ms.author: maghan
 monikerRange: =azuresqldb-current||>=sql-server-2016||= azure-sqldw-latest||=sqlallproducts-allversions||>=sql-server-linux-2017||=azuresqldb-mi-current
-ms.openlocfilehash: e569882a6a677b24030ae475292c3907886eb0f1
-ms.sourcegitcommit: dd36d1cbe32cd5a65c6638e8f252b0bd8145e165
+ms.openlocfilehash: 2d0dd52ae5c84ab13266bc1c90f81a3d9b2ad869
+ms.sourcegitcommit: a5398f107599102af7c8cda815d8e5e9a367ce7e
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 09/08/2020
-ms.locfileid: "89542475"
+ms.lasthandoff: 10/13/2020
+ms.locfileid: "92005632"
 ---
-# <a name="sysquery_store_query_text-transact-sql"></a>sys. query_store_query_text (Transact-sql)
+# <a name="sysquery_store_query_text-transact-sql"></a>sys.query_store_query_text (Transact-sql)
 [!INCLUDE [sqlserver2016-asdb-asdbmi-asa](../../includes/applies-to-version/sqlserver2016-asdb-asdbmi-asa.md)]
 
   [!INCLUDE[tsql](../../includes/tsql-md.md)]쿼리의 텍스트와 SQL 핸들을 포함 합니다.  
@@ -39,20 +39,20 @@ ms.locfileid: "89542475"
 |**query_text_id**|**bigint**|기본 키입니다.|  
 |**query_sql_text**|**nvarchar(max)**|사용자가 제공한 쿼리의 SQL 텍스트입니다. 에는 공백, 힌트 및 주석이 포함 됩니다. 쿼리 텍스트 전후의 주석 및 공백은 무시됩니다. 텍스트 내의 주석 및 공백은 무시되지 않습니다.|  
 |**statement_sql_handle**|**vabinary (64)**|개별 쿼리의 SQL 핸들입니다.|  
-|**is_part_of_encrypted_module**|**bit**|쿼리 텍스트는 암호화 된 모듈의 일부입니다.<br/>**참고:** Azure SQL Data Warehouse는 항상 0을 반환 합니다.|
-|**has_restricted_text**|**bit**|쿼리 텍스트에 암호 또는 기타 기타 권한 없는 단어가 포함 되어 있습니다.<br/>**참고:** Azure SQL Data Warehouse는 항상 0을 반환 합니다.|
+|**is_part_of_encrypted_module**|**bit**|쿼리 텍스트는 암호화 된 모듈의 일부입니다.<br/>**참고:** Azure Synapse Analytics는 항상 0을 반환 합니다.|
+|**has_restricted_text**|**bit**|쿼리 텍스트에 암호 또는 기타 기타 권한 없는 단어가 포함 되어 있습니다.<br/>**참고:** Azure Synapse Analytics는 항상 0을 반환 합니다.|
   
 ## <a name="permissions"></a>사용 권한  
  **VIEW DATABASE STATE** 권한이 필요 합니다.  
   
 ## <a name="see-also"></a>참고 항목  
- [database_query_store_options &#40;Transact-sql&#41;](../../relational-databases/system-catalog-views/sys-database-query-store-options-transact-sql.md)   
- [query_context_settings &#40;Transact-sql&#41;](../../relational-databases/system-catalog-views/sys-query-context-settings-transact-sql.md)   
- [query_store_plan &#40;Transact-sql&#41;](../../relational-databases/system-catalog-views/sys-query-store-plan-transact-sql.md)   
- [query_store_query &#40;Transact-sql&#41;](../../relational-databases/system-catalog-views/sys-query-store-query-transact-sql.md)   
- [query_store_runtime_stats &#40;Transact-sql&#41;](../../relational-databases/system-catalog-views/sys-query-store-runtime-stats-transact-sql.md)   
+ [Transact-sql&#41;sys.database_query_store_options &#40;](../../relational-databases/system-catalog-views/sys-database-query-store-options-transact-sql.md)   
+ [Transact-sql&#41;sys.query_context_settings &#40;](../../relational-databases/system-catalog-views/sys-query-context-settings-transact-sql.md)   
+ [Transact-sql&#41;sys.query_store_plan &#40;](../../relational-databases/system-catalog-views/sys-query-store-plan-transact-sql.md)   
+ [Transact-sql&#41;sys.query_store_query &#40;](../../relational-databases/system-catalog-views/sys-query-store-query-transact-sql.md)   
+ [Transact-sql&#41;sys.query_store_runtime_stats &#40;](../../relational-databases/system-catalog-views/sys-query-store-runtime-stats-transact-sql.md)   
  [sys.query_store_wait_stats&#40;Transact-SQL&#41;](../../relational-databases/system-catalog-views/sys-query-store-wait-stats-transact-sql.md)  
- [query_store_runtime_stats_interval &#40;Transact-sql&#41;](../../relational-databases/system-catalog-views/sys-query-store-runtime-stats-interval-transact-sql.md)   
+ [Transact-sql&#41;sys.query_store_runtime_stats_interval &#40;](../../relational-databases/system-catalog-views/sys-query-store-runtime-stats-interval-transact-sql.md)   
  [관련된 뷰, 함수 및 프로시저](../../relational-databases/performance/monitoring-performance-by-using-the-query-store.md)   
  [카탈로그 뷰&#40;Transact-SQL&#41;](../../relational-databases/system-catalog-views/catalog-views-transact-sql.md)   
  [쿼리 저장소 저장 프로시저&#40;Transact-SQL&#41;](../../relational-databases/system-stored-procedures/query-store-stored-procedures-transact-sql.md)   

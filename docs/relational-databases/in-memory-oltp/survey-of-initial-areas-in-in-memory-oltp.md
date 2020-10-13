@@ -12,12 +12,12 @@ ms.assetid: 1c25a164-547d-43c4-8484-6b5ee3cbaf3a
 author: MightyPen
 ms.author: genemi
 monikerRange: =azuresqldb-current||>=sql-server-2016||=sqlallproducts-allversions||>=sql-server-linux-2017||=azuresqldb-mi-current
-ms.openlocfilehash: d150330a700b8580f561c4459d50ceab355eb8de
-ms.sourcegitcommit: 591bbf4c7e4e2092f8abda6a2ffed263cb61c585
+ms.openlocfilehash: 92be3a1844fde38aca090dd8032736f34fe99361
+ms.sourcegitcommit: 4d370399f6f142e25075b3714e5c2ce056b1bfd0
 ms.translationtype: HT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 07/22/2020
-ms.locfileid: "86942920"
+ms.lasthandoff: 10/09/2020
+ms.locfileid: "91866679"
 ---
 # <a name="survey-of-initial-areas-in-in-memory-oltp"></a>메모리 내 OLTP에서 초기 영역 설문 조사
 
@@ -72,7 +72,7 @@ Transact-SQL 계산을 많이 처리하는 시스템도 적합합니다.
 다음 두 가지 주요 시나리오가 있습니다.  
   
 - *배치 운영 분석* 은 업무 시간 이후 또는 트랜잭션 데이터의 복사본이 있는 보조 하드웨어에서 실행되는 집계 프로세스를 가리킵니다.  
-  - [Azure SQL 데이터 웨어하우스](https://azure.microsoft.com/documentation/articles/sql-data-warehouse-overview-what-is/) 도 배치 운영 분석과 관련이 있습니다.  
+  - [Azure SQL 데이터 웨어하우스](/azure/synapse-analytics/sql-data-warehouse/sql-data-warehouse-overview-what-is) 도 배치 운영 분석과 관련이 있습니다.  
 - *실시간 운영 분석* 은 업무 시간 중 및 트랜잭션 작업에 사용되는 주 하드웨어에서 실행되는 집계 프로세스를 가리킵니다.  
   
   
@@ -93,24 +93,24 @@ Transact-SQL 계산을 많이 처리하는 시스템도 적합합니다.
 #### <a name="real-time-operational-analytics"></a>실시간 운영 분석
 
 1. [메모리 내 기술을 사용하는 실시간 운영 분석](https://blogs.technet.microsoft.com/dataplatforminsider/2015/12/09/real-time-operational-analytics-using-in-memory-technology/)
-2. [실시간 운영 분석 - NCCI(비클러스터형 columnstore 인덱스) 개요](https://blogs.msdn.microsoft.com/sqlserverstorageengine/2016/02/29/real-time-operational-analytics-using-nonclustered-columnstore-index/)
-3. [실시간 운영 분석: SQL Server 2016에서 NCCI(비클러스터형 columnstore 인덱스)를 사용하는 간단한 예제](https://blogs.msdn.microsoft.com/sqlserverstorageengine/2016/02/29/real-time-operational-analytics-simple-example-using-nonclustered-clustered-columnstore-index-ncci/)
-4. [실시간 운영 분석: SQL Server 2016의 DML 작업 및 NCCI(비클러스터형 columnstore 인덱스)](https://blogs.msdn.microsoft.com/sqlserverstorageengine/2016/03/04/real-time-operational-analytics-dml-operations-and-nonclustered-columnstore-index-ncci-in-sql-server-2016/)
-5. [실시간 운영 분석: 필터링된 NCCI(비클러스터형 columnstore 인덱스)](https://blogs.msdn.microsoft.com/sqlserverstorageengine/2016/03/06/real-time-operational-analytics-filtered-nonclustered-columnstore-index-ncci/)
-6. [실시간 운영 분석: NCCI(비클러스터형 Columnstore 인덱스)의 압축 지연 옵션](https://blogs.msdn.microsoft.com/sqlserverstorageengine/2016/03/06/real-time-operational-analytics-compression-delay-option-for-nonclustered-columnstore-index-ncci/)
-7. [실시간 운영 분석: NCCI의 압축 지연 옵션 및 성능](https://blogs.msdn.microsoft.com/sqlserverstorageengine/2016/03/06/real-time-operational-analytics-compression-delay-option-with-ncci-and-the-performance/)
-8. [실시간 운영 분석: 메모리 최적화 테이블 및 Columnstore 인덱스](https://blogs.msdn.microsoft.com/sqlserverstorageengine/2016/03/07/real-time-operational-analytics-memory-optimized-table-and-columnstore-index/)
+2. [실시간 운영 분석 - NCCI(비클러스터형 columnstore 인덱스) 개요](/archive/blogs/sqlserverstorageengine/real-time-operational-analytics-using-nonclustered-columnstore-index)
+3. [실시간 운영 분석: SQL Server 2016에서 NCCI(비클러스터형 columnstore 인덱스)를 사용하는 간단한 예제](/archive/blogs/sqlserverstorageengine/real-time-operational-analytics-simple-example-using-nonclustered-clustered-columnstore-index-ncci)
+4. [실시간 운영 분석: SQL Server 2016의 DML 작업 및 NCCI(비클러스터형 columnstore 인덱스)](/archive/blogs/sqlserverstorageengine/real-time-operational-analytics-dml-operations-and-nonclustered-columnstore-index-ncci-in-sql-server-2016)
+5. [실시간 운영 분석: 필터링된 NCCI(비클러스터형 columnstore 인덱스)](/archive/blogs/sqlserverstorageengine/real-time-operational-analytics-filtered-nonclustered-columnstore-index-ncci)
+6. [실시간 운영 분석: NCCI(비클러스터형 Columnstore 인덱스)의 압축 지연 옵션](/archive/blogs/sqlserverstorageengine/real-time-operational-analytics-compression-delay-option-for-nonclustered-columnstore-index-ncci)
+7. [실시간 운영 분석: NCCI의 압축 지연 옵션 및 성능](/archive/blogs/sqlserverstorageengine/real-time-operational-analytics-compression-delay-option-with-ncci-and-the-performance)
+8. [실시간 운영 분석: 메모리 최적화 테이블 및 Columnstore 인덱스](/archive/blogs/sqlserverstorageengine/real-time-operational-analytics-memory-optimized-table-and-columnstore-index)
 
 #### <a name="defragment-a-columnstore-index"></a>Columnstore 인덱스를 조각 모음합니다.
 
-1. [REORGANIZE 명령을 사용하여 Columnstore 인덱스 조각 모음](https://blogs.msdn.microsoft.com/sqlserverstorageengine/2016/03/07/columnstore-index-defragmentation-using-reorganize-command/)
-2. [REORGANIZE의 Columnstore 인덱스 병합 정책](https://blogs.msdn.microsoft.com/sqlserverstorageengine/2016/03/08/columnstore-index-merge-policy-for-reorganize/)
+1. [REORGANIZE 명령을 사용하여 Columnstore 인덱스 조각 모음](/archive/blogs/sqlserverstorageengine/columnstore-index-defragmentation-using-reorganize-command)
+2. [REORGANIZE의 Columnstore 인덱스 병합 정책](/archive/blogs/sqlserverstorageengine/columnstore-index-merge-policy-for-reorganize)
 
 #### <a name="bulk-importation-of-data"></a>데이터 대량 가져오기
 
-1. [클러스터형 열 저장소: 대량 로드](https://blogs.msdn.microsoft.com/sqlserverstorageengine/2014/07/27/clustered-column-store-index-bulk-loading-the-data/)
-2. [클러스터형 columnstore 인덱스: 데이터 로드 최적화 - 최소 로깅](https://blogs.msdn.microsoft.com/sqlserverstorageengine/2016/01/10/clustered-columnstore-index-data-load-optimizations-minimal-logging/)
-3. [클러스터형 columnstore 인덱스: 데이터 로드 최적화 – 병렬로 대량 가져오기](https://blogs.msdn.microsoft.com/sqlserverstorageengine/2016/02/28/clustered-columnstore-index-parallel-bulk-import/)
+1. [클러스터형 열 저장소: 대량 로드](/archive/blogs/sqlserverstorageengine/clustered-column-store-index-bulk-loading-the-data)
+2. [클러스터형 columnstore 인덱스: 데이터 로드 최적화 - 최소 로깅](/archive/blogs/sqlserverstorageengine/clustered-columnstore-index-data-load-optimizations-minimal-logging)
+3. [클러스터형 columnstore 인덱스: 데이터 로드 최적화 – 병렬로 대량 가져오기](/archive/blogs/sqlserverstorageengine/clustered-columnstore-index-parallel-bulk-import)
 
 
 
@@ -128,7 +128,7 @@ Transact-SQL 계산을 많이 처리하는 시스템도 적합합니다.
 CREATE TABLE 문에서 T-SQL 키워드 MEMORY_OPTIMIZED는 디스크가 아니라 활성 메모리에 있도록 테이블을 만드는 방법입니다.  
   
   
-[메모리 액세스에 최적화된 테이블](../../relational-databases/in-memory-oltp/memory-optimized-tables.md) 은 활성 메모리에 포함될 뿐 아니라 디스크에도 보조 복사본이 있습니다.  
+[메모리 액세스에 최적화된 테이블](./sample-database-for-in-memory-oltp.md) 은 활성 메모리에 포함될 뿐 아니라 디스크에도 보조 복사본이 있습니다.  
   
 - 디스크 복사본은 서버 또는 데이터베이스가 종료된 다음 다시 시작한 후 일상적인 복구를 위해 사용됩니다. 이 메모리 및 디스크의 중복성은 사용자와 코드에서 완전히 숨겨집니다.  
   
@@ -144,14 +144,14 @@ CREATE PROCEDURE 문에서 T-SQL 키워드 NATIVE_COMPILATION은 네이티브 �
   
 고유하게 컴파일된 모듈에는 다음 세 가지 유형이 있습니다.  
   
-- [네이티브 컴파일 저장 프로시저](../../relational-databases/in-memory-oltp/natively-compiled-stored-procedures.md)  
+- [네이티브 컴파일 저장 프로시저](./a-guide-to-query-processing-for-memory-optimized-tables.md)  
 - 네이티브 컴파일 UDF(사용자 정의 함수), 스칼라  
 - 네이티브 컴파일 트리거  
   
   
 #### <a name="availability-in-azure-sql-database"></a>Azure SQL 데이터베이스의 가용성  
   
-메모리 내 OLTP 및 Columnstore를 Azure SQL Database에서 사용할 수 있습니다. 자세한 내용은 [SQL Database에서 메모리 내 기술을 사용하여 성능 최적화](https://docs.microsoft.com/azure/sql-database/sql-database-in-memory)를 참조하세요.
+메모리 내 OLTP 및 Columnstore를 Azure SQL Database에서 사용할 수 있습니다. 자세한 내용은 [SQL Database에서 메모리 내 기술을 사용하여 성능 최적화](/azure/sql-database/sql-database-in-memory)를 참조하세요.
   
   
 <a name="ensure-compatibility-level-gteq-130-99c"></a>  
@@ -452,7 +452,7 @@ TRANSACT-SQL을 통해 사용할 수 있는 네이티브 컴파일 모듈 형식
 - 네이티브 컴파일 트리거(네이티브 트리거)  
   - 메모리 최적화 테이블에는 고유하게 컴파일되는 트리거만 허용됩니다.  
 - 네이티브 컴파일 [테이블 반환 함수](../../relational-databases/user-defined-functions/create-user-defined-functions-database-engine.md)  
-  - [메모리 최적화를 사용하여 임시 테이블 및 테이블 변수 성능 향상](https://blogs.msdn.microsoft.com/sqlserverstorageengine/2016/03/21/improving-temp-table-and-table-variable-performance-using-memory-optimization/)  
+  - [메모리 최적화를 사용하여 임시 테이블 및 테이블 변수 성능 향상](/archive/blogs/sqlserverstorageengine/improving-temp-table-and-table-variable-performance-using-memory-optimization)  
   
 고유하게 컴파일된 UDF(사용자 정의 함수)는 해석된 UDF보다 더 빠르게 실행됩니다. UDF와 관련해서 고려해야 할 몇 가지 사항은 다음과 같습니다.  
   
@@ -463,7 +463,7 @@ TRANSACT-SQL을 통해 사용할 수 있는 네이티브 컴파일 모듈 형식
   
 네이티브 UDF의 성능에 대한 테스트 데이터 및 설명은 다음을 참조하세요.  
   
-  - [SQL Server 2016에서 네이티브 컴파일 UDF로 RBAR 영향 완화](https://blogs.msdn.microsoft.com/sqlcat/2016/02/17/soften-the-rbar-impact-with-native-compiled-udfs-in-sql-server-2016/)  
+  - [SQL Server 2016에서 네이티브 컴파일 UDF로 RBAR 영향 완화](/archive/blogs/sqlcat/soften-the-rbar-impact-with-native-compiled-udfs-in-sql-server-2016)  
   - [고유하게 컴파일된 사용자 정의 함수](https://sqlinthewild.co.za/index.php/2016/01/12/natively-compiled-user-defined-functions/) 블로그 게시물, 2016년 1월 Gail Shaw 작성  
   
 <a name="documentation-guide-for-memory-optimized-tables-41z"></a>  
@@ -472,11 +472,11 @@ TRANSACT-SQL을 통해 사용할 수 있는 네이티브 컴파일 모듈 형식
   
 메모리 최적화 테이블에 대한 특별 고려 사항을 설명하는 다음과 같은 기타 문서를 참조하세요.  
   
-- [메모리 내 OLTP로 마이그레이션](../../relational-databases/in-memory-oltp/migrating-to-in-memory-oltp.md)  
+- [메모리 내 OLTP로 마이그레이션](./plan-your-adoption-of-in-memory-oltp-features-in-sql-server.md)  
   - [메모리 내 OLTP에 테이블 또는 저장 프로시저를 이식해야 하는지 확인](../../relational-databases/in-memory-oltp/determining-if-a-table-or-stored-procedure-should-be-ported-to-in-memory-oltp.md)  
   - SQL Server Management Studio의 트랜잭션 성능 분석 보고서를 사용하면 메모리 내 OLTP로 데이터베이스 애플리케이션의 성능이 향상될지 평가할 수 있습니다.  
   - [메모리 최적화 관리자](../../relational-databases/in-memory-oltp/memory-optimization-advisor.md) 를 사용하여 디스크 기반 데이터베이스 테이블을 메모리 내 OLTP로 마이그레이션 지원   
-- [메모리 액세스에 최적화된 테이블의 백업, 복원 및 복구](https://msdn.microsoft.com/library/3f083347-0fbb-4b19-a6fb-1818d545e281)  
+- [메모리 액세스에 최적화된 테이블의 백업, 복원 및 복구](/previous-versions/sql/sql-server-2016/dn624160(v=sql.130))  
   - 메모리 최적화 테이블에서 사용하는 스토리지는 메모리의 해당 크기보다 훨씬 클 수 있으며, 이는 데이터베이스 백업의 크기에 영향을 미칩니다.  
 - [Transactions with Memory-Optimized Tables](../../relational-databases/in-memory-oltp/transactions-with-memory-optimized-tables.md)  
   - 메모리 최적화 테이블의 트랜잭션과 관련해서 T-SQL의 재시도 논리에 대한 정보를 포함합니다.  
@@ -490,7 +490,7 @@ TRANSACT-SQL을 통해 사용할 수 있는 네이티브 컴파일 모듈 형식
 
 다음 문서 및 그 목차에 나오는 하위 문서에서는 네이티브 컴파일 저장 프로시저에 대해 자세히 설명합니다.
 
-- [네이티브 컴파일 저장 프로시저](natively-compiled-stored-procedures.md)
+- [네이티브 컴파일 저장 프로시저](./a-guide-to-query-processing-for-memory-optimized-tables.md)
   
 <a name="related-links-43f"></a>  
   
@@ -501,4 +501,4 @@ TRANSACT-SQL을 통해 사용할 수 있는 네이티브 컴파일 모듈 형식
 메모리 내 OLTP를 사용하여 얻을 수 있는 성능 향상을 보여 주는 코드를 제공하는 문서는 다음과 같습니다.  
   
 - [데모: 메모리 내 OLTP의 성능 향상](../../relational-databases/in-memory-oltp/demonstration-performance-improvement-of-in-memory-oltp.md)에서는 더 큰 잠재적 성능 향상에 대한 소규모 데모를 제공합니다.  
-- [Sample Database for In-Memory OLTP](../../relational-databases/in-memory-oltp/sample-database-for-in-memory-oltp.md) (메모리 내 OLTP에 대한 샘플 데이터베이스)에서는 규모가 더 큰 데모를 제공합니다.  
+- [Sample Database for In-Memory OLTP](../../relational-databases/in-memory-oltp/sample-database-for-in-memory-oltp.md) (메모리 내 OLTP에 대한 샘플 데이터베이스)에서는 규모가 더 큰 데모를 제공합니다.

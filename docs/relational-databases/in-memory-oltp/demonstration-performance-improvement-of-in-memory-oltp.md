@@ -12,12 +12,12 @@ ms.assetid: c6def45d-d2d4-4d24-8068-fab4cd94d8cc
 author: markingmyname
 ms.author: maghan
 monikerRange: =azuresqldb-current||>=sql-server-2016||=sqlallproducts-allversions||>=sql-server-linux-2017||=azuresqldb-mi-current
-ms.openlocfilehash: 5711115843a32b18a1a16f50cd8eaf79fefb2f63
-ms.sourcegitcommit: dd36d1cbe32cd5a65c6638e8f252b0bd8145e165
+ms.openlocfilehash: ab153d8d28e2f8005f0b0a370ffa4def42f81c58
+ms.sourcegitcommit: 4d370399f6f142e25075b3714e5c2ce056b1bfd0
 ms.translationtype: HT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 09/08/2020
-ms.locfileid: "89537091"
+ms.lasthandoff: 10/09/2020
+ms.locfileid: "91868022"
 ---
 # <a name="demonstration-performance-improvement-of-in-memory-oltp"></a>데모: 메모리 내 OLTP의 성능 향상
 [!INCLUDE [SQL Server Azure SQL Database](../../includes/applies-to-version/sql-asdb.md)]
@@ -66,7 +66,7 @@ go
   
 2.  새 테스트 데이터베이스를 만들려면 [Azure 포털](https://portal.azure.com) 을 사용하여 이름이 **imoltp**인 데이터베이스를 생성합니다.  
   
- 이를 위해 Azure 포털 사용 지침을 확인하려면 [Azure SQL 데이터베이스 시작](https://azure.microsoft.com/documentation/articles/sql-database-get-started)을 참조하십시오.  
+ 이를 위해 Azure 포털 사용 지침을 확인하려면 [Azure SQL 데이터베이스 시작](/azure/azure-sql/database/single-database-create-quickstart)을 참조하십시오.  
   
 ### <a name="step-2-create-memory-optimized-tables-and-ncsproc"></a>2단계: 메모리 액세스에 최적화된 테이블과 NCSProc 만들기  
  이 단계를 통해 메모리 최적화 테이블 및 고유하게 컴파일된 저장 프로시저(NCSProc)를 만들 수 있습니다. 다음을 수행합니다.  
@@ -198,5 +198,4 @@ go
   
 ## <a name="see-also"></a>참고 항목  
  [메모리 내 OLTP&#40;메모리 내 최적화&#41;](../../relational-databases/in-memory-oltp/in-memory-oltp-in-memory-optimization.md)  
-  
   

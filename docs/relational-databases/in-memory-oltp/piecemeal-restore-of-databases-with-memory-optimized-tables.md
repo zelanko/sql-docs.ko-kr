@@ -12,12 +12,12 @@ ms.assetid: 732c9721-8dd4-481d-8ff9-1feaaa63f84f
 author: markingmyname
 ms.author: maghan
 monikerRange: =azuresqldb-current||>=sql-server-2016||=sqlallproducts-allversions||>=sql-server-linux-2017||=azuresqldb-mi-current
-ms.openlocfilehash: e78c9912b4fa1482d44f7dc9367f70b3c25f04bc
-ms.sourcegitcommit: dd36d1cbe32cd5a65c6638e8f252b0bd8145e165
+ms.openlocfilehash: 576d42e0c87c2f9e2b6afd40774ee10e51163f1c
+ms.sourcegitcommit: 4d370399f6f142e25075b3714e5c2ce056b1bfd0
 ms.translationtype: HT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 09/08/2020
-ms.locfileid: "89551608"
+ms.lasthandoff: 10/09/2020
+ms.locfileid: "91867109"
 ---
 # <a name="piecemeal-restore-of-databases-with-memory-optimized-tables"></a>메모리 액세스에 최적화된 테이블이 있는 데이터베이스의 증분 복원
 
@@ -149,5 +149,4 @@ GO
 ```
 
 ## <a name="see-also"></a>참고 항목  
- [메모리 액세스에 최적화된 테이블의 백업, 복원 및 복구](https://msdn.microsoft.com/library/3f083347-0fbb-4b19-a6fb-1818d545e281)  
-
+ [메모리 액세스에 최적화된 테이블의 백업, 복원 및 복구](/previous-versions/sql/sql-server-2016/dn624160(v=sql.130))

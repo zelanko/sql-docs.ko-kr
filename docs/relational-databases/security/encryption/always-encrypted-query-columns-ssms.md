@@ -13,12 +13,12 @@ ms.assetid: 29816a41-f105-4414-8be1-070675d62e84
 author: jaszymas
 ms.author: jaszymas
 monikerRange: =azuresqldb-current||>=sql-server-2016||=sqlallproducts-allversions||>=sql-server-linux-2017||=azuresqldb-mi-current
-ms.openlocfilehash: 7cd8ae48dd5e1403b2dd84f6654c6954d9cd8e64
-ms.sourcegitcommit: 591bbf4c7e4e2092f8abda6a2ffed263cb61c585
+ms.openlocfilehash: 91523e68c03467a7c6aaab40a5cbd3ab696b1890
+ms.sourcegitcommit: 4d370399f6f142e25075b3714e5c2ce056b1bfd0
 ms.translationtype: HT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 07/22/2020
-ms.locfileid: "86942645"
+ms.lasthandoff: 10/09/2020
+ms.locfileid: "91866534"
 ---
 # <a name="query-columns-using-always-encrypted-with-sql-server-management-studio"></a>SQL Server Management Studio로 Always Encrypted를 사용하는 열 쿼리
 [!INCLUDE [SQL Server Azure SQL Database](../../../includes/applies-to-version/sql-asdb.md)]
@@ -90,7 +90,7 @@ SSMS에서 데이터베이스에 연결하는 경우 데이터베이스 연결�
 새 연결을 만들거나 **서버에 연결** 대화 상자를 사용하여 기존 연결을 변경하는 경우 Always Encrypted를 사용하거나 사용하지 않도록 설정할 수 있습니다. 
 
 Always Encrypted를 사용하거나 사용하지 않도록 설정하려면 다음을 수행합니다.
-1. **서버에 연결** 대화 상자를 엽니다. 자세한 내용은 [SQL Server 인스턴스에 연결](../../../ssms/tutorials/connect-query-sql-server.md#connect-to-a-sql-server-instance)을 참조하세요.
+1. **서버에 연결** 대화 상자를 엽니다. 자세한 내용은 [SQL Server 인스턴스에 연결](../../../ssms/quickstarts/connect-query-sql-server.md#connect-to-a-sql-server-instance)을 참조하세요.
 1. **옵션 >>** 을 클릭합니다.
 1. SSMS 18 이상 버전을 사용하는 경우:
     1. **Always Encrypted** 탭을 선택합니다.
@@ -109,7 +109,7 @@ Always Encrypted를 사용하거나 사용하지 않도록 설정하려면 다�
    
 ## <a name="parameterization-for-always-encrypted"></a><a name="param"></a>Always Encrypted에 대한 매개 변수화   
  
-Always Encrypted에 대한 매개 변수화는 Transact-SQL 변수를 쿼리 매개 변수( [SqlParameter 클래스](https://msdn.microsoft.com/library/system.data.sqlclient.sqlparameter.aspx)의 인스턴스)로 자동으로 변환하는 SQL Server Management Studio의 기능입니다. SSMS 버전 17.0 이상이 필요합니다. 이 기능을 사용하면 기본 .NET Framework Data Provider for SQL Server이 암호화된 열을 대상으로 하는 데이터를 검색하고, 이러한 데이터를 데이터베이스로 전송하기 전에 암호화합니다. 
+Always Encrypted에 대한 매개 변수화는 Transact-SQL 변수를 쿼리 매개 변수( [SqlParameter 클래스](/dotnet/api/system.data.sqlclient.sqlparameter)의 인스턴스)로 자동으로 변환하는 SQL Server Management Studio의 기능입니다. SSMS 버전 17.0 이상이 필요합니다. 이 기능을 사용하면 기본 .NET Framework Data Provider for SQL Server이 암호화된 열을 대상으로 하는 데이터를 검색하고, 이러한 데이터를 데이터베이스로 전송하기 전에 암호화합니다. 
   
 매개 변수화하지 않으면 .NET Framework Data Provider가 쿼리 편집기에서 작성한 각 문을 매개 변수화되지 않은 쿼리로 전달합니다. 쿼리에 암호화된 열을 대상으로 하는 리터럴 또는 Transact-SQL 변수가 포함된 경우 .NET Framework Data Provider for SQL Server는 쿼리를 데이터베이스로 전송하기 전에 검색 및 암호화할 수 없습니다. 따라서 일반 텍스트 리터럴 Transact-SQL 변수와 암호화된 열 간의 형식 불일치로 인해 쿼리에 실패합니다. 예를 들어 `SSN` 열이 암호화된 것으로 가정할 경우 매개 변수화하지 않으면 다음 쿼리가 실패합니다.   
 
@@ -173,7 +173,7 @@ DECLARE @NewSalary money = @Salary * 1.1; -- an expression used instead of a lit
  
 시도한 매개 변수화가 성공하려면   
 - 매개 변수화할 변수의 초기화에 사용된 리터럴 형식이 변수 선언의 형식과 일치해야 합니다.   
-- 변수의 선언된 형식이 날짜 형식이거나 시간 형식인 경우 변수는 다음 [ISO 8601 규격 형식](https://docs.microsoft.com/sql/t-sql/functions/cast-and-convert-transact-sql#date-and-time-styles) 중 하나를 사용하는 문자열을 사용하여 초기화되어야 합니다.    
+- 변수의 선언된 형식이 날짜 형식이거나 시간 형식인 경우 변수는 다음 [ISO 8601 규격 형식](../../../t-sql/functions/cast-and-convert-transact-sql.md#date-and-time-styles) 중 하나를 사용하는 문자열을 사용하여 초기화되어야 합니다.    
 
 매개 변수화 오류가 발생하는 TRANSACT-SQL 변수 선언의 예는 다음과 같습니다.   
 ```sql
@@ -183,7 +183,7 @@ DECLARE @Number int = 1.1 -- the type of the literal does not match the type of 
 ```
 SQL Server Management Studio는 Intellisense를 사용하여 성공적으로 매개 변수화할 수 있는 변수와 매개 변수화 시도에 실패하는 변수(및 이유)를 알려 줍니다.   
 
-성공적으로 매개 변수화할 수 있는 변수의 선언은 쿼리 편집기에 경고 밑줄로 표시됩니다. 경고 밑줄이 표시된 선언 문에 마우스를 놓으면 결과 [SqlParameter](https://msdn.microsoft.com/library/system.data.sqlclient.sqlparameter.aspx) 개체(매핑된 변수)의 키 속성 값을 비롯한 매개 변수화 프로세스의 결과가 표시됩니다. [SqlDbType](https://msdn.microsoft.com/library/system.data.sqlclient.sqlparameter.sqldbtype.aspx), [크기](https://msdn.microsoft.com/library/system.data.sqlclient.sqlparameter.size.aspx), [정밀도](https://msdn.microsoft.com/library/system.data.sqlclient.sqlparameter.precision.aspx)를 [배율](https://msdn.microsoft.com/library/system.data.sqlclient.sqlparameter.scale.aspx), [SqlValue](https://msdn.microsoft.com/library/system.data.sqlclient.sqlparameter.sqlvalue.aspx). **오류 목록** 보기의 **경고** 탭에서 성공적으로 매개 변수화된 모든 변수의 전체 목록을 볼 수 있습니다. **오류 목록** 보기를 열려면 주 메뉴에서 **보기** 를 선택한 다음 **오류 목록**을 선택합니다.    
+성공적으로 매개 변수화할 수 있는 변수의 선언은 쿼리 편집기에 경고 밑줄로 표시됩니다. 경고 밑줄이 표시된 선언 문에 마우스를 놓으면 결과 [SqlParameter](/dotnet/api/system.data.sqlclient.sqlparameter) 개체(매핑된 변수)의 키 속성 값을 비롯한 매개 변수화 프로세스의 결과가 표시됩니다. [SqlDbType](/dotnet/api/system.data.sqlclient.sqlparameter.sqldbtype), [크기](/dotnet/api/system.data.sqlclient.sqlparameter.size), [정밀도](/dotnet/api/system.data.sqlclient.sqlparameter.precision)를 [배율](/dotnet/api/system.data.sqlclient.sqlparameter.scale), [SqlValue](/dotnet/api/system.data.sqlclient.sqlparameter.sqlvalue). **오류 목록** 보기의 **경고** 탭에서 성공적으로 매개 변수화된 모든 변수의 전체 목록을 볼 수 있습니다. **오류 목록** 보기를 열려면 주 메뉴에서 **보기** 를 선택한 다음 **오류 목록**을 선택합니다.    
 
 SQL Server Management Studio가 변수를 매개 변수화하려고 시도했지만 매개 변수화에 실패한 경우 해당 변수의 선언이 오류 밑줄로 표시됩니다. 오류 밑줄이 표시된 선언 문 위에 마우스를 놓으면 오류에 대한 결과가 표시됩니다. **오류 목록** 보기의 **오류** 탭에서 모든 변수에 대한 전체 매개 변수화 오류 목록을 볼 수도 있습니다는. **오류 목록** 보기를 열려면 주 메뉴에서 **보기** 를 선택한 다음 **오류 목록**을 선택합니다.   
 

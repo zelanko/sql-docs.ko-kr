@@ -19,12 +19,12 @@ helpviewer_keywords:
 ms.assetid: 4d93489e-e9bb-45b3-8354-21f58209965d
 author: VanMSFT
 ms.author: vanto
-ms.openlocfilehash: 80c8c535c5463a6639c752a68e20fd95c54899b3
-ms.sourcegitcommit: da88320c474c1c9124574f90d549c50ee3387b4c
+ms.openlocfilehash: 2bcb047dc1d998eb797a3bca7b6d09699f8585d2
+ms.sourcegitcommit: 4d370399f6f142e25075b3714e5c2ce056b1bfd0
 ms.translationtype: HT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 07/01/2020
-ms.locfileid: "85729243"
+ms.lasthandoff: 10/09/2020
+ms.locfileid: "91867535"
 ---
 # <a name="securing-sql-server"></a>SQL Server 보안 설정
 
@@ -56,7 +56,7 @@ ms.locfileid: "85729243"
 |---------------------------|---------|  
 |사용할 방화벽 구성: [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]|[데이터베이스 엔진 액세스에 대한 Windows 방화벽 구성](../../database-engine/configure-windows/configure-a-windows-firewall-for-database-engine-access.md)|  
 |사용할 방화벽 구성: [!INCLUDE[ssISnoversion](../../includes/ssisnoversion-md.md)]|[Integration Services 서비스&#40;SSIS 서비스&#41;](../../integration-services/service/integration-services-service-ssis-service.md)|  
-|사용할 방화벽 구성: [!INCLUDE[ssASnoversion](../../includes/ssasnoversion-md.md)]|[Analysis Services 액세스를 허용하도록 Windows 방화벽 구성](https://docs.microsoft.com/analysis-services/instances/configure-the-windows-firewall-to-allow-analysis-services-access)|  
+|사용할 방화벽 구성: [!INCLUDE[ssASnoversion](../../includes/ssasnoversion-md.md)]|[Analysis Services 액세스를 허용하도록 Windows 방화벽 구성](/analysis-services/instances/configure-the-windows-firewall-to-allow-analysis-services-access)|  
 |다음에 액세스할 수 있도록 방화벽의 특정 포트 열기: [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]|[SQL Server 액세스를 허용하도록 Windows 방화벽 구성](../../sql-server/install/configure-the-windows-firewall-to-allow-sql-server-access.md)|  
 |채널 바인딩 및 서비스 바인딩을 사용하여 인증에 대한 확장된 보호 지원 구성|[확장된 보호를 사용하여 데이터베이스 엔진에 연결](../../database-engine/configure-windows/connect-to-the-database-engine-using-extended-protection.md)|  
 | &nbsp; | &nbsp; |
@@ -144,7 +144,7 @@ WDAC(Windows Defender 애플리케이션 컨트롤)는 권한이 없는 코드 �
   
 |원하는 정보|참조 항목|  
 |---------------------------|---------|  
-|다음 연결, 구성 및 제어: [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]|[SQL Server Management Studio 사용](https://msdn.microsoft.com/library/f289e978-14ca-46ef-9e61-e1fe5fd593be)|  
+|다음 연결, 구성 및 제어: [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]|[SQL Server Management Studio 사용](../../ssms/sql-server-management-studio-ssms.md)|  
 |[!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 연결 및 명령 프롬프트에서 쿼리 실행|[sqlcmd 유틸리티](../../tools/sqlcmd-utility.md)|  
 |다음 네트워크 구성 및 제어: [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]|[SQL Server 구성 관리자](../../relational-databases/sql-server-configuration-manager.md)|  
 |정책 기반 관리를 사용하여 기능 설정 및 해제|[정책 기반 관리를 사용하여 서버 관리](../../relational-databases/policy-based-management/administer-servers-by-using-policy-based-management.md)|  
@@ -165,8 +165,7 @@ WDAC(Windows Defender 애플리케이션 컨트롤)는 권한이 없는 코드 �
  [SQL Server 설치에 대한 보안 고려 사항](../../sql-server/install/security-considerations-for-a-sql-server-installation.md)  
  [SQL Server 데이터베이스 엔진 및 Azure SQL Database 보안 센터](../../relational-databases/security/security-center-for-sql-server-database-engine-and-azure-sql-database.md)  
 [SQL Server 2012 보안 모범 사례 - 운영 및 관리 태스크](https://download.microsoft.com/download/8/F/A/8FABACD7-803E-40FC-ADF8-355E7D218F4C/SQL_Server_2012_Security_Best_Practice_Whitepaper_Apr2012.docx)   
-[SQL Server 보안 블로그](https://blogs.msdn.microsoft.com/sqlsecurity/)  
-[보안 모범 사례 및 레이블 보안 백서](https://blogs.msdn.microsoft.com/sqlsecurity/2012/03/06/security-best-practice-and-label-security-whitepapers/)  
+[SQL Server 보안 블로그](/archive/blogs/sqlsecurity/)  
+[보안 모범 사례 및 레이블 보안 백서](/archive/blogs/sqlsecurity/security-best-practice-and-label-security-whitepapers)  
 [행 수준 보안](../../relational-databases/security/row-level-security.md)   
 [SQL Server 지적 재산 보호](../../relational-databases/security/protecting-your-sql-server-intellectual-property.md)   
-  

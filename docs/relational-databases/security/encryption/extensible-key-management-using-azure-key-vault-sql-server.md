@@ -17,12 +17,12 @@ helpviewer_keywords:
 ms.assetid: 3efdc48a-8064-4ea6-a828-3fbf758ef97c
 author: jaszymas
 ms.author: jaszymas
-ms.openlocfilehash: 71145a184d13ad4ca4393cd1468293e40f0ad594
-ms.sourcegitcommit: f7ac1976d4bfa224332edd9ef2f4377a4d55a2c9
+ms.openlocfilehash: 3b4cb86e387e076ac6dab0ca86642a3cb7860cd3
+ms.sourcegitcommit: 4d370399f6f142e25075b3714e5c2ce056b1bfd0
 ms.translationtype: HT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 07/02/2020
-ms.locfileid: "85896855"
+ms.lasthandoff: 10/09/2020
+ms.locfileid: "91867838"
 ---
 # <a name="extensible-key-management-using-azure-key-vault-sql-server"></a>Azure 키 자격 증명 모음(SQL Server)을 사용한 확장 가능 키 관리
 [!INCLUDE [SQL Server](../../../includes/applies-to-version/sqlserver.md)]
@@ -41,7 +41,7 @@ ms.locfileid: "85896855"
    
  [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] 커넥터는 [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] 및 Azure 주요 자격 증명 모음 간 브리지 역할을 하므로 [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] 은(는) Azure 주요 자격 증명 모음 서비스의 확장성, 고성능 및 고가용성을 활용할 수 있습니다. 다음 이미지는 키 계층이 Azure 주요 자격 증명 모음 및 [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] 커넥터를 사용하여 EKM 공급자 아키텍처에서 작동하는 방법을 보여 줍니다.  
   
-  Azure 주요 자격 증명 모음은 [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] Azure 가상 컴퓨터의 [!INCLUDE[msCoName](../../../includes/msconame-md.md)] 설치와 함께 온-프레미스 서버용으로 사용할 수 있습니다. 키 자격 증명 모음 서비스에서는 더 높은 수준의 비대칭 암호화 키 보호를 위해 세부적인 제어 및 모니터링이 이루어지는 HSM(하드웨어 보안 모듈)을 사용할 수도 있습니다. 주요 자격 증명 모음에 대한 자세한 내용은 [Azure 주요 자격 증명 모음](https://go.microsoft.com/fwlink/?LinkId=521401)을 참조하세요.  
+  Azure 주요 자격 증명 모음은 [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] Azure 가상 컴퓨터의 [!INCLUDE[msCoName](../../../includes/msconame-md.md)] 설치와 함께 온-프레미스 서버용으로 사용할 수 있습니다. 키 자격 증명 모음 서비스에서는 더 높은 수준의 비대칭 암호화 키 보호를 위해 세부적인 제어 및 모니터링이 이루어지는 HSM(하드웨어 보안 모듈)을 사용할 수도 있습니다. 주요 자격 증명 모음에 대한 자세한 내용은 [Azure 주요 자격 증명 모음](/azure/key-vault/general/basic-concepts)을 참조하세요.  
   
  다음 이미지에 키 자격 증명 모음을 사용한 EKM의 프로세스 흐름이 요약되어 있습니다. 이미지의 프로세스 단계 번호는 이미지에서 설명하는 설정 단계 번호와 일치하지 않습니다.  
   
@@ -56,5 +56,4 @@ ms.locfileid: "85896855"
   
 ## <a name="see-also"></a>참고 항목  
  [SQL Server 커넥터 유지 관리 및 문제 해결](../../../relational-databases/security/encryption/sql-server-connector-maintenance-troubleshooting.md)  
-  
   

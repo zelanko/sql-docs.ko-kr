@@ -14,12 +14,12 @@ ms.assetid: d312a9ff-50ba-4721-baef-50bfd3169d38
 author: MightyPen
 ms.author: genemi
 monikerRange: =azuresqldb-current||>=sql-server-2016||=sqlallproducts-allversions||>=sql-server-linux-2017||=azuresqldb-mi-current
-ms.openlocfilehash: 3fa4511be07d5bb0e9a69d0db4515926824600cb
-ms.sourcegitcommit: da88320c474c1c9124574f90d549c50ee3387b4c
+ms.openlocfilehash: 7fa0e0e6c3b44e07568240d879fdb6d0829e6ffc
+ms.sourcegitcommit: 4d370399f6f142e25075b3714e5c2ce056b1bfd0
 ms.translationtype: HT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 07/01/2020
-ms.locfileid: "85717700"
+ms.lasthandoff: 10/09/2020
+ms.locfileid: "91868110"
 ---
 # <a name="extended-events-tools"></a>확장 이벤트 도구
 
@@ -89,8 +89,7 @@ ms.locfileid: "85717700"
 ## <a name="see-also"></a>참고 항목  
  [동적 관리 뷰 및 함수&#40;Transact-SQL&#41;](~/relational-databases/system-dynamic-management-views/system-dynamic-management-views.md)   
  [카탈로그 뷰&#40;Transact-SQL&#41;](../../relational-databases/system-catalog-views/catalog-views-transact-sql.md)   
- [SQL Server 확장 이벤트 테이블&#40;Transact-SQL&#41;](https://msdn.microsoft.com/library/6d52ff03-f5aa-4f0f-8c98-9b49dc76f94e)   
+ [SQL Server 확장 이벤트 테이블&#40;Transact-SQL&#41;](../system-tables/system-tables-transact-sql.md)   
  [system_health 세션 사용](../../relational-databases/extended-events/use-the-system-health-session.md)   
  [확장 이벤트에 PowerShell 공급자 사용](../../relational-databases/extended-events/use-the-powershell-provider-for-extended-events.md)  
-  
   

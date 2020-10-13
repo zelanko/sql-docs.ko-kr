@@ -39,12 +39,12 @@ ms.assetid: 7f3fa5f6-6b50-43bb-9047-1544ade55e39
 author: VanMSFT
 ms.author: vanto
 monikerRange: '>=aps-pdw-2016||=azuresqldb-current||=azure-sqldw-latest||>=sql-server-2016||=sqlallproducts-allversions||>=sql-server-linux-2017||=azuresqldb-mi-current'
-ms.openlocfilehash: 6bb15e848af1a5a2fa6236be0f9999accf144b1a
-ms.sourcegitcommit: c4d6804bde7eaf72d9233d6d43f77d77d1b17c4e
+ms.openlocfilehash: ce99d5ffe875283675e62069efed8b855ad6d43a
+ms.sourcegitcommit: 4d370399f6f142e25075b3714e5c2ce056b1bfd0
 ms.translationtype: HT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 10/01/2020
-ms.locfileid: "91624860"
+ms.lasthandoff: 10/09/2020
+ms.locfileid: "91867429"
 ---
 # <a name="database-level-roles"></a>데이터베이스 수준 역할
 
@@ -97,7 +97,7 @@ ms.locfileid: "91624860"
 |**loginmanager** | 가상 master 데이터베이스에서 로그인을 만들고 삭제할 수 있습니다.|
 
 > [!NOTE]
-> 서버 수준 보안 주체 및 Azure Active Directory 관리자(구성된 경우)는 역할 멤버가 아니더라도 [!INCLUDE[ssSDS_md](../../../includes/sssds-md.md)] 및 Azure Synapse의 모든 권한이 있습니다. 자세한 내용은 [SQL Database 인증 및 권한 부여: 액세스 부여](https://azure.microsoft.com/documentation/articles/sql-database-manage-logins/)를 참조하세요. 
+> 서버 수준 보안 주체 및 Azure Active Directory 관리자(구성된 경우)는 역할 멤버가 아니더라도 [!INCLUDE[ssSDS_md](../../../includes/sssds-md.md)] 및 Azure Synapse의 모든 권한이 있습니다. 자세한 내용은 [SQL Database 인증 및 권한 부여: 액세스 부여](/azure/azure-sql/database/logins-create-manage)를 참조하세요. 
 
 일부 데이터베이스 역할은 Azure SQL 또는 Synapse SQL에 적용되지 않습니다.
 - 백업 및 복원 T-SQL 명령을 사용할 수 없으므로 **db_backupoperator**는 Azure SQL 데이터베이스(관리되는 인스턴스가 아님) 및 Synapse SQL 서버리스 풀에는 적용되지 않습니다.
@@ -153,5 +153,4 @@ ms.locfileid: "91624860"
  [SQL Server 보안 설정](../../../relational-databases/security/securing-sql-server.md)  
   
  [sp_helprotect&#40;Transact-SQL&#41;](../../../relational-databases/system-stored-procedures/sp-helprotect-transact-sql.md)  
-  
   

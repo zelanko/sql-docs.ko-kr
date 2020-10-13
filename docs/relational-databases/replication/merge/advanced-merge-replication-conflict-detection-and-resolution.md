@@ -20,12 +20,12 @@ helpviewer_keywords:
 ms.assetid: 063d3d9c-ccb5-4fab-9d0c-c675997428b4
 author: MashaMSFT
 ms.author: mathoma
-ms.openlocfilehash: 7a031fdb7c4a71c26990d26a524e5a75ac784565
-ms.sourcegitcommit: f7ac1976d4bfa224332edd9ef2f4377a4d55a2c9
+ms.openlocfilehash: 3a894198a994f98f9bcb2586c9b1b6a1428f562c
+ms.sourcegitcommit: 4d370399f6f142e25075b3714e5c2ce056b1bfd0
 ms.translationtype: HT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 07/02/2020
-ms.locfileid: "85901872"
+ms.lasthandoff: 10/09/2020
+ms.locfileid: "91867911"
 ---
 # <a name="advanced-merge-replication---conflict-detection-and-resolution"></a>고급 병합 복제 - 충돌 감지 및 해결
 [!INCLUDE [SQL Server](../../../includes/applies-to-version/sqlserver.md)]
@@ -124,7 +124,7 @@ ms.locfileid: "85901872"
  가장 간단한 방법으로 충돌을 보려면 [!INCLUDE[ssManStudioFull](../../../includes/ssmanstudiofull-md.md)]에서 제공하는 복제 충돌 뷰어를 사용합니다([!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)]는 충돌 테이블을 쿼리할 저장 프로시저도 제공합니다). 충돌 뷰어와 대화형 해결 프로그램은 유사한 도구이지만, 대화형 해결 프로그램은 동기화가 이루어지는 동안 충돌을 해결하는데 사용하는 반면 충돌 뷰어는 충돌이 해결된 후 충돌을 보는 데 사용합니다. 시스템 테이블에서 충돌 메타데이터를 사용할 수 있는 경우(충돌 메타데이터는 기본적으로 14일 동안 유지됨) 충돌 뷰어에서 충돌 해결 결과를 무시할 수 있지만 정기적으로 직접적인 사용자 작업이 필요한 경우 대화형 해결 프로그램을 사용합니다.  
   
 > [!NOTE]  
->  논리적 레코드와 관련된 충돌은 충돌 뷰어에 표시되지 않습니다. 이러한 충돌에 대한 정보를 보려면 복제 저장 프로시저를 사용합니다. 자세한 내용은 [병합 게시에 대한 충돌 정보 보기&#40;복제 Transact-SQL 프로그래밍&#41;](../../../relational-databases/replication/view-conflict-information-for-merge-publications.md)을 참조하세요.  
+>  논리적 레코드와 관련된 충돌은 충돌 뷰어에 표시되지 않습니다. 이러한 충돌에 대한 정보를 보려면 복제 저장 프로시저를 사용합니다. 자세한 내용은 [병합 게시에 대한 충돌 정보 보기&#40;복제 Transact-SQL 프로그래밍&#41;](../view-and-resolve-data-conflicts-for-merge-publications.md)을 참조하세요.  
   
  충돌 뷰어는 3개의 시스템 테이블에 대한 정보를 표시합니다.  
   
@@ -148,9 +148,8 @@ ms.locfileid: "85901872"
   
 -   [!INCLUDE[ssManStudioFull](../../../includes/ssmanstudiofull-md.md)]: [병합 게시에 대한 데이터 충돌 보기 및 해결&#40;SQL Server Management Studio&#41;](../../../relational-databases/replication/view-and-resolve-data-conflicts-for-merge-publications.md)  
   
--   복제 [!INCLUDE[tsql](../../../includes/tsql-md.md)] 프로그래밍: [병합 게시에 대한 충돌 정보 보기&#40;복제 Transact-SQL 프로그래밍&#41;](../../../relational-databases/replication/view-conflict-information-for-merge-publications.md)  
+-   복제 [!INCLUDE[tsql](../../../includes/tsql-md.md)] 프로그래밍: [병합 게시에 대한 충돌 정보 보기&#40;복제 Transact-SQL 프로그래밍&#41;](../view-and-resolve-data-conflicts-for-merge-publications.md)  
   
 ## <a name="see-also"></a>참고 항목  
  [데이터 동기화](../../../relational-databases/replication/synchronize-data.md)  
-  
   

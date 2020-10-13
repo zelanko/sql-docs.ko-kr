@@ -12,12 +12,12 @@ ms.assetid: 041b428f-781d-4628-9f34-4d697894e61e
 author: MightyPen
 ms.author: genemi
 monikerRange: =azuresqldb-current||>=sql-server-2016||=sqlallproducts-allversions||>=sql-server-linux-2017||=azuresqldb-mi-current
-ms.openlocfilehash: 12288ac1ab4923e776b968a6f990e95a17f96060
-ms.sourcegitcommit: da88320c474c1c9124574f90d549c50ee3387b4c
+ms.openlocfilehash: 8eabca1300e3937d4b1a1f48531c9cc09b1978dd
+ms.sourcegitcommit: 4d370399f6f142e25075b3714e5c2ce056b1bfd0
 ms.translationtype: HT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 07/01/2020
-ms.locfileid: "85722409"
+ms.lasthandoff: 10/09/2020
+ms.locfileid: "91867097"
 ---
 # <a name="plan-your-adoption-of-in-memory-oltp-features-in-sql-server"></a>SQL Server에 메모리 내 OLTP 기능 채택 계획
 [!INCLUDE [SQL Server Azure SQL Database](../../includes/applies-to-version/sql-asdb.md)]
@@ -32,7 +32,7 @@ ms.locfileid: "85722409"
 
 다음 하위 섹션에서는 메모리 내 기능을 채택하고 구현하려는 경우 고려해야 할 요소를 설명합니다. 다음에서 많은 설명 정보를 확인할 수 있습니다.
 
-- [메모리 내 OLTP를 사용하여 Azure SQL Database에서 애플리케이션의 성능 향상](https://azure.microsoft.com/documentation/articles/sql-database-in-memory-oltp-migration/)
+- [메모리 내 OLTP를 사용하여 Azure SQL Database에서 애플리케이션의 성능 향상](/azure/azure-sql/in-memory-oltp-configure)
 
 
 
@@ -42,7 +42,7 @@ ms.locfileid: "85722409"
 
 - [메모리 액세스에 최적화된 테이블 사용을 위한 요구 사항](../../relational-databases/in-memory-oltp/requirements-for-using-memory-optimized-tables.md)
     - [SQL Server 2016 버전 및 구성 요소](../../sql-server/editions-and-components-of-sql-server-2016.md)
-    - [SQL Database 가격 책정 계층 권장 사항](https://azure.microsoft.com/documentation/articles/sql-database-service-tier-advisor/)
+    - [SQL Database 가격 책정 계층 권장 사항](/azure/azure-sql/database/service-tiers-vcore)
 
 
 ### <a name="a2-forecast-the-amount-of-active-memory"></a>A.2 활성 메모리 양 예측
@@ -59,8 +59,8 @@ ms.locfileid: "85722409"
 
 Azure SQL Database 클라우드 서비스에 호스트된 데이터베이스의 경우 선택한 서비스 계층이 데이터베이스에서 사용할 수 있는 활성 메모리의 양에 영향을 줍니다. 경고를 사용하여 데이터베이스의 메모리 사용량 모니터링을 계획해야 합니다. 자세한 내용은 다음을 참조하세요.
 
-- [가격 책정 계층](https://docs.microsoft.com/azure/sql-database/sql-database-purchase-models)에 대한 메모리 내 OLTP 스토리지 제한 검토
-- [메모리 내 OLTP 스토리지 모니터링](https://azure.microsoft.com/documentation/articles/sql-database-in-memory-oltp-monitoring/)
+- [가격 책정 계층](/azure/sql-database/sql-database-purchase-models)에 대한 메모리 내 OLTP 스토리지 제한 검토
+- [메모리 내 OLTP 스토리지 모니터링](/azure/azure-sql/in-memory-oltp-monitor-space)
 
 #### <a name="memory-optimized-table-variables"></a>메모리 액세스에 최적화된 테이블 변수
 
@@ -261,7 +261,7 @@ Transact-SQL의 특정 요소는 저장 프로시저를 포함하여 고유하�
 
 지원되지 않는 기능을 사용하는 Transact-SQL 모듈을 고유하게 컴파일된 모듈로 마이그레이션할 때 고려해야 할 사항은 다음을 참조하세요.
 
-- [고유하게 컴파일된 저장 프로시저의 마이그레이션 문제](../../relational-databases/in-memory-oltp/migration-issues-for-natively-compiled-stored-procedures.md)
+- [고유하게 컴파일된 저장 프로시저의 마이그레이션 문제](./a-guide-to-query-processing-for-memory-optimized-tables.md)
 
 Transact-SQL의 특정 요소에 대한 제한 사항 외에도 고유하게 컴파일된 T-SQL 모듈에서 지원되는 쿼리 연산자에 대한 제한 사항도 있습니다. 이러한 제한 사항 때문에 고유하게 컴파일된 저장 프로시저는 큰 데이터 집합을 처리하는 분석 쿼리에는 적합하지 않습니다.
 
@@ -297,12 +297,10 @@ SQL Server 2016에서:
 스크립트에 *재시도 논리* 를 추가하여 Transact-SQL 스크립트를 가능한 트랜잭션 오류에 대해 더 강력하게 만들 수 있습니다. 재시도 논리는 UPDATE 및 DELETE 호출이 빈번하거나 다른 테이블의 외래 키가 메모리 최적화 테이블을 참조하는 경우 더 유용할 수 있습니다. 자세한 내용은 다음을 참조하세요.
 
 - [Transactions with Memory-Optimized Tables](../../relational-databases/in-memory-oltp/transactions-with-memory-optimized-tables.md)
-- [메모리 최적화 테이블이 있는 트랜잭션 종속성 제한 – 오류 41839](https://blogs.msdn.microsoft.com/sqlcat/2016/07/11/transaction-dependency-limits-with-memory-optimized-tables-error-41839/)
+- [메모리 최적화 테이블이 있는 트랜잭션 종속성 제한 – 오류 41839](/archive/blogs/sqlcat/transaction-dependency-limits-with-memory-optimized-tables-error-41839)
 
 
 
 ## <a name="related-links"></a>관련 링크
 
 - [메모리 내 OLTP(메모리 내 최적화)](../../relational-databases/in-memory-oltp/in-memory-oltp-in-memory-optimization.md)
-
-

@@ -16,12 +16,12 @@ helpviewer_keywords:
 ms.assetid: 172c60c7-f605-4eb5-b185-54ae9e9d3c60
 author: MashaMSFT
 ms.author: mathoma
-ms.openlocfilehash: 02ae1373116ddd43059fc8b61c210bc1f607ee7e
-ms.sourcegitcommit: e700497f962e4c2274df16d9e651059b42ff1a10
+ms.openlocfilehash: 07b8552da25b0ba9d79320c09d3fb4eb8f346532
+ms.sourcegitcommit: 4d370399f6f142e25075b3714e5c2ce056b1bfd0
 ms.translationtype: HT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 08/17/2020
-ms.locfileid: "88423567"
+ms.lasthandoff: 10/09/2020
+ms.locfileid: "91867905"
 ---
 # <a name="advanced-merge-replication-conflict---interactive-resolution"></a>고급 병합 복제 충돌 - 대화형 해결
 [!INCLUDE [SQL Server](../../../includes/applies-to-version/sqlserver.md)]
@@ -30,7 +30,7 @@ ms.locfileid: "88423567"
  대화형 해결 프로그램은 충돌 뷰어와 비슷합니다. 그러나 충돌 뷰어는 병합 동기화 후 이미 해결된 충돌의 결과를 표시하는 반면 대화형 해결 프로그램은 해결 전 각 충돌을 표시하여 병합 동기화 중 각 충돌의 결과를 결정하도록 허용합니다. 사용자는 충돌 발생 시 대화형 해결 프로그램을 모니터링할 수 있어야 합니다.  
   
 > [!NOTE]  
->  대화형 해결을 사용하려면 Windows 동기화 관리자가 필요합니다. 동기화가 Windows 동기화 관리자 외부(예: [!INCLUDE[ssManStudioFull](../../../includes/ssmanstudiofull-md.md)] 또는 복제 모니터의 예약 동기화 또는 요청 시 동기화)에서 수행된 경우 아티클에 지정된 해결 프로그램에 따라 사용자 개입 없이도 자동으로 충돌이 해결됩니다. 논리적 레코드와 관련된 충돌은 대화형 해결 프로그램에 표시되지 않습니다. 이러한 충돌에 대한 정보를 보려면 복제 저장 프로시저를 사용합니다. 자세한 내용은 [병합 게시에 대한 충돌 정보 보기&#40;복제 Transact-SQL 프로그래밍&#41;](../../../relational-databases/replication/view-conflict-information-for-merge-publications.md)을 참조하세요.  
+>  대화형 해결을 사용하려면 Windows 동기화 관리자가 필요합니다. 동기화가 Windows 동기화 관리자 외부(예: [!INCLUDE[ssManStudioFull](../../../includes/ssmanstudiofull-md.md)] 또는 복제 모니터의 예약 동기화 또는 요청 시 동기화)에서 수행된 경우 아티클에 지정된 해결 프로그램에 따라 사용자 개입 없이도 자동으로 충돌이 해결됩니다. 논리적 레코드와 관련된 충돌은 대화형 해결 프로그램에 표시되지 않습니다. 이러한 충돌에 대한 정보를 보려면 복제 저장 프로시저를 사용합니다. 자세한 내용은 [병합 게시에 대한 충돌 정보 보기&#40;복제 Transact-SQL 프로그래밍&#41;](../view-and-resolve-data-conflicts-for-merge-publications.md)을 참조하세요.  
   
 ## <a name="article-resolvers-and-the-interactive-resolver"></a>아티클 해결 프로그램 및 대화형 해결 프로그램  
  게시가 만들어질 때 충돌 해결 프로그램(기본 해결 프로그램, 비즈니스 논리 처리기 또는 사용자 지정 해결 프로그램)은 특정 아티클에 할당되며 규칙 집합을 사용하여 충돌하는 행 데이터 입력 시 사용해야 하는 데이터 집합을 결정합니다. 대화형 해결 프로그램은 충돌 시 적용되는 내용과 삭제되는 내용을 결정하는 규칙을 가진 별도의 충돌 해결 프로그램이 아니라 기본 및 사용자 지정 해결 프로그램과 함께 사용되는 도구입니다. 아티클 해결 프로그램도 적용할 행 및 삭제할 행을 결정하지만 대화형 해결 프로그램으로 사용자는 결과를 승인, 거부 또는 수정할 수 있는 간섭 기능을 가집니다.  
@@ -41,5 +41,4 @@ ms.locfileid: "88423567"
   
 ## <a name="see-also"></a>참고 항목  
  [Advanced Merge Replication Conflict Detection and Resolution](../../../relational-databases/replication/merge/advanced-merge-replication-conflict-detection-and-resolution.md)  
-  
   

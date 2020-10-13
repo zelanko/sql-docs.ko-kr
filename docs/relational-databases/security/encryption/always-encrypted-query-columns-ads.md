@@ -10,17 +10,17 @@ ms.topic: conceptual
 author: jaszymas
 ms.author: jaszymas
 monikerRange: =azuresqldb-current||>=sql-server-2016||=sqlallproducts-allversions||>=sql-server-linux-2017||=azuresqldb-mi-current
-ms.openlocfilehash: d039034a5c76f5f7e98b2eed84f92c27a039832d
-ms.sourcegitcommit: e700497f962e4c2274df16d9e651059b42ff1a10
+ms.openlocfilehash: 3c1f91effdea8225df62e3782e43ff5e863d827c
+ms.sourcegitcommit: 4d370399f6f142e25075b3714e5c2ce056b1bfd0
 ms.translationtype: HT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 08/17/2020
-ms.locfileid: "88493836"
+ms.lasthandoff: 10/09/2020
+ms.locfileid: "91866699"
 ---
 # <a name="query-columns-using-always-encrypted-with-azure-data-studio"></a>Azure Data Studio를 사용하여 Always Encrypted를 이용하는 열 쿼리
 [!INCLUDE [SQL Server Azure SQL Database](../../../includes/applies-to-version/sql-asdb.md)]
 
-이 문서에서는 [Azure Data Studio](https://docs.microsoft.com/sql/azure-data-studio/what-is)를 사용하여 [Always Encrypted](../../../relational-databases/security/encryption/always-encrypted-database-engine.md)로 암호화된 열을 쿼리하는 방법을 설명합니다. Azure Data Studio를 사용하면 다음 작업을 할 수 있습니다.
+이 문서에서는 [Azure Data Studio](../../../azure-data-studio/what-is.md)를 사용하여 [Always Encrypted](../../../relational-databases/security/encryption/always-encrypted-database-engine.md)로 암호화된 열을 쿼리하는 방법을 설명합니다. Azure Data Studio를 사용하면 다음 작업을 할 수 있습니다.
 - 암호화된 열에 저장된 암호 텍스트 값을 검색합니다. 
 - 암호화된 열에 저장된 일반 텍스트 값을 검색합니다.  
 - 암호화된 열을 대상으로 하는 일반 텍스트 값을 보냅니다(예: `INSERT` 또는 `UPDATE` 문에 포함하거나 `WHERE` 문에서 `SELECT` 절의 조회 매개 변수로). 
@@ -113,7 +113,7 @@ Always Encrypted를 사용하거나 사용하지 않도록 설정하려면 다�
 
 ## <a name="parameterization-for-always-encrypted"></a>Always Encrypted에 대한 매개 변수화
 
-Always Encrypted에 대한 매개 변수화는 Transact-SQL 변수를 쿼리 매개 변수( [SqlParameter 클래스](https://docs.microsoft.com/dotnet/api/microsoft.data.sqlclient.sqlparameter)의 인스턴스)로 자동으로 변환하는 Azure Data Studio 18.1 이상에서 제공하는 기능입니다. 이 기능을 사용하면 기본 [Microsoft .NET Data Provider for SQL Server](../../../connect/ado-net/sql/sqlclient-support-always-encrypted.md)에서 암호화된 열을 대상으로 하는 데이터를 검색하고, 이러한 데이터를 데이터베이스로 전송하기 전에 암호화할 수 있습니다.
+Always Encrypted에 대한 매개 변수화는 Transact-SQL 변수를 쿼리 매개 변수( [SqlParameter 클래스](/dotnet/api/microsoft.data.sqlclient.sqlparameter)의 인스턴스)로 자동으로 변환하는 Azure Data Studio 18.1 이상에서 제공하는 기능입니다. 이 기능을 사용하면 기본 [Microsoft .NET Data Provider for SQL Server](../../../connect/ado-net/sql/sqlclient-support-always-encrypted.md)에서 암호화된 열을 대상으로 하는 데이터를 검색하고, 이러한 데이터를 데이터베이스로 전송하기 전에 암호화할 수 있습니다.
   
 매개 변수화하지 않으면 Microsoft .NET Data Provider for SQL Server는 쿼리 창에서 작성한 각 문을 매개 변수화되지 않은 쿼리로 전달합니다. 쿼리에 암호화된 열을 대상으로 하는 리터럴 또는 Transact-SQL 변수가 포함된 경우 .NET Framework Data Provider for SQL Server는 쿼리를 데이터베이스로 전송하기 전에 검색 및 암호화할 수 없습니다. 따라서 일반 텍스트 리터럴 Transact-SQL 변수와 암호화된 열 간의 형식 불일치로 인해 쿼리에 실패합니다. 예를 들어 `SSN` 열이 암호화된 것으로 가정할 경우 매개 변수화하지 않으면 다음 쿼리가 실패합니다.   
 
@@ -180,7 +180,7 @@ DECLARE @Number int = 1.1 -- the type of the literal does not match the type of 
 
 Azure Data Studio는 Intellisense를 사용하여 성공적으로 매개 변수화할 수 있는 변수와 매개 변수화 시도에 실패하는 변수(및 이유)를 알려 줍니다.   
 
-성공적으로 매개 변수화할 수 있는 변수의 선언은 쿼리 창에 정보 메시지 밑줄로 표시됩니다. 정보 메시지 밑줄이 표시된 선언 문에 마우스 커서를 놓으면 결과 [SqlParameter Class](https://docs.microsoft.com/dotnet/api/microsoft.data.sqlclient.sqlparameter) 개체( [SqlDbType](https://docs.microsoft.com/dotnet/api/microsoft.data.sqlclient.sqlparameter.dbtype), [크기](https://docs.microsoft.com/dotnet/api/microsoft.data.sqlclient.sqlparameter.size), [정밀도](https://docs.microsoft.com/dotnet/api/microsoft.data.sqlclient.sqlparameter.precision), [배율](https://docs.microsoft.com/dotnet/api/microsoft.data.sqlclient.sqlparameter.scale), [SqlValue](https://docs.microsoft.com/dotnet/api/microsoft.data.sqlclient.sqlparameter.sqlvalue)로 매핑된 변수)의 키 속성 값을 비롯한 매개 변수화 프로세스의 결과를 포함하는 메시지가 표시됩니다. **문제** 보기에서 성공적으로 매개 변수화된 모든 변수의 전체 목록을 볼 수 있습니다. **문제** 보기를 열려면 **보기** > **문제**를 선택합니다.    
+성공적으로 매개 변수화할 수 있는 변수의 선언은 쿼리 창에 정보 메시지 밑줄로 표시됩니다. 정보 메시지 밑줄이 표시된 선언 문에 마우스 커서를 놓으면 결과 [SqlParameter Class](/dotnet/api/microsoft.data.sqlclient.sqlparameter) 개체( [SqlDbType](/dotnet/api/microsoft.data.sqlclient.sqlparameter.dbtype), [크기](/dotnet/api/microsoft.data.sqlclient.sqlparameter.size), [정밀도](/dotnet/api/microsoft.data.sqlclient.sqlparameter.precision), [배율](/dotnet/api/microsoft.data.sqlclient.sqlparameter.scale), [SqlValue](/dotnet/api/microsoft.data.sqlclient.sqlparameter.sqlvalue)로 매핑된 변수)의 키 속성 값을 비롯한 매개 변수화 프로세스의 결과를 포함하는 메시지가 표시됩니다. **문제** 보기에서 성공적으로 매개 변수화된 모든 변수의 전체 목록을 볼 수 있습니다. **문제** 보기를 열려면 **보기** > **문제**를 선택합니다.    
 
 
 

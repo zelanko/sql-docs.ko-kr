@@ -13,12 +13,12 @@ helpviewer_keywords:
 ms.assetid: 11f8017e-5bc3-4bab-8060-c16282cfbac1
 author: pelopes
 ms.author: harinid
-ms.openlocfilehash: 6af3d91a76dd1964b7ef2e929392f85eb4b9245c
-ms.sourcegitcommit: e700497f962e4c2274df16d9e651059b42ff1a10
+ms.openlocfilehash: 5324b953f70a9f0f64a4988c50ae02d1653d94f5
+ms.sourcegitcommit: 783b35f6478006d654491cb52f6edf108acf2482
 ms.translationtype: HT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 08/17/2020
-ms.locfileid: "88482492"
+ms.lasthandoff: 10/09/2020
+ms.locfileid: "91891133"
 ---
 # <a name="post-migration-validation-and-optimization-guide"></a>마이그레이션 후 유효성 검사 및 최적화 가이드
 
@@ -38,7 +38,7 @@ ms.locfileid: "88482492"
 
 [!INCLUDE[ssSQL14](../includes/sssql14-md.md)]부터는 쿼리 최적화 프로그램의 모든 변경 내용이 최신 [데이터베이스 호환성 수준](../relational-databases/databases/view-or-change-the-compatibility-level-of-a-database.md)에 연결되므로 계획이 업그레이드 시점에 즉시 변경되지 않고 사용자가 `COMPATIBILITY_LEVEL` 데이터베이스 옵션을 최신 상태로 변경하는 경우에 변경됩니다. 이 기능은 쿼리 저장소와 함께 업그레이드 프로세스에서 쿼리 성능에 대한 뛰어난 제어 수준을 제공합니다. 
 
-[!INCLUDE[ssSQL14](../includes/sssql14-md.md)]에 도입된 쿼리 최적화 프로그램 변경 사항에 대한 자세한 내용은 [Optimizing Your Query Plans with the SQL Server 2014 Cardinality Estimator](https://msdn.microsoft.com/library/dn673537.aspx)(SQL Server 2014 카디널리티 평가기로 쿼리 계획 최적화)를 참조하세요.
+[!INCLUDE[ssSQL14](../includes/sssql14-md.md)]에 도입된 쿼리 최적화 프로그램 변경 사항에 대한 자세한 내용은 [Optimizing Your Query Plans with the SQL Server 2014 Cardinality Estimator](/previous-versions/dn673537(v=msdn.10))(SQL Server 2014 카디널리티 평가기로 쿼리 계획 최적화)를 참조하세요.
 
 ### <a name="steps-to-resolve"></a>해결 단계
 
@@ -67,7 +67,7 @@ ms.locfileid: "88482492"
 5.  `DISABLE_PARAMETER_SNIFFING` 힌트를 사용하도록 쿼리를 다시 작성합니다. `OPTION(RECOMPILE)`, `WITH RECOMPILE` 또는 `OPTIMIZE FOR <value>`를 사용하는 경우 외에는 매개 변수 검색을 완전히 사용하지 않도록 설정하므로 지역 변수 기술을 사용하는 것과 결과가 같습니다.
 
 > [!TIP] 
-> [!INCLUDE[ssManStudio](../includes/ssmanstudio-md.md)] 계획 분석 기능을 활용하면 이로 인해 문제가 발생하는지 빠르게 식별할 수 있습니다. 자세한 내용은 [여기](https://blogs.msdn.microsoft.com/sql_server_team/new-in-ssms-query-performance-troubleshooting-made-easier/)를 참조하세요.
+> [!INCLUDE[ssManStudio](../includes/ssmanstudio-md.md)] 계획 분석 기능을 활용하면 이로 인해 문제가 발생하는지 빠르게 식별할 수 있습니다. 자세한 내용은 [여기](/archive/blogs/sql_server_team/new-in-ssms-query-performance-troubleshooting-made-easier)를 참조하세요.
 
 ## <a name="missing-indexes"></a><a name="MissingIndexes"></a> 누락된 인덱스
 
@@ -166,8 +166,8 @@ SARGable이 아닌 조건자의 몇 가지 예:
 ##  <a name="additional-reading"></a><a name="Additional_Reading"></a> 더 보기
 
  [쿼리 저장소에 대한 모범 사례](../relational-databases/performance/best-practice-with-the-query-store.md)  
-[메모리 최적화 테이블](../relational-databases/in-memory-oltp/memory-optimized-tables.md)  
+[메모리 최적화 테이블](./in-memory-oltp/sample-database-for-in-memory-oltp.md)  
 [사용자 정의 함수](../relational-databases/user-defined-functions/user-defined-functions.md)  
-[Table Variables and Row Estimations - Part 1](https://blogs.msdn.microsoft.com/blogdoezequiel/2012/11/30/table-variables-and-row-estimations-part-1/)(테이블 변수 및 행 예상치 - 1부)  
-[Table Variables and Row Estimations - Part 2](https://blogs.msdn.microsoft.com/blogdoezequiel/2012/12/09/table-variables-and-row-estimations-part-2/)(테이블 변수 및 행 예상치 - 2부)  
+[Table Variables and Row Estimations - Part 1](/archive/blogs/blogdoezequiel/table-variables-and-row-estimations-part-1)(테이블 변수 및 행 예상치 - 1부)  
+[Table Variables and Row Estimations - Part 2](/archive/blogs/blogdoezequiel/table-variables-and-row-estimations-part-2)(테이블 변수 및 행 예상치 - 2부)  
 [실행 계획 캐싱 및 다시 사용](../relational-databases/query-processing-architecture-guide.md#execution-plan-caching-and-reuse)

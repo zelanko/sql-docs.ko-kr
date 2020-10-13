@@ -20,12 +20,12 @@ helpviewer_keywords:
 ms.assetid: 8697e4a4-4f59-4cda-af71-7de86005bd4a
 author: MikeRayMSFT
 ms.author: mikeray
-ms.openlocfilehash: 2e97a0e8ddae735865b4314e33f3a5ce6d365de0
-ms.sourcegitcommit: 01297f2487fe017760adcc6db5d1df2c1234abb4
+ms.openlocfilehash: 4479093323ceb6bb235fd1adab6eed7d796774af
+ms.sourcegitcommit: 04cf7905fa32e0a9a44575a6f9641d9a2e5ac0f8
 ms.translationtype: HT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 07/09/2020
-ms.locfileid: "86197271"
+ms.lasthandoff: 10/07/2020
+ms.locfileid: "91810566"
 ---
 # <a name="utility-explorer-f1-help"></a>유틸리티 탐색기 F1 도움말
 
@@ -68,7 +68,7 @@ ms.locfileid: "86197271"
   
  사용 범주 링크를 클릭할 때 유틸리티 탐색기 탐색 창의 해당 노드에 **(필터링됨)** 이 추가됩니다. 즉, **관리되는 인스턴스** 레이블이 **관리되는 인스턴스(필터링됨)** 로 바뀝니다. 필터 설정을 보려면 탐색 창의 노드를 마우스 오른쪽 단추로 클릭하고 **필터**를 선택한 다음 **필터 설정**을 클릭합니다. 필터 설정을 지우려면 탐색 창의 노드를 마우스 오른쪽 단추로 클릭하고 **필터**를 선택한 다음 **필터 제거**를 클릭합니다.  
   
- 개별 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 인스턴스의 상태를 보는 방법과 정책 구성 설정을 보거나 변경하는 방법은 [관리되는 인스턴스 세부 정보 &#40;SQL Server 유틸리티 &#41;](https://msdn.microsoft.com/library/6e51b7bb-a733-4852-8c33-7f4dbdf931c2)를 참조하세요.  
+ 개별 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 인스턴스의 상태를 보는 방법과 정책 구성 설정을 보거나 변경하는 방법은 [관리되는 인스턴스 세부 정보 &#40;SQL Server 유틸리티 &#41;]()를 참조하세요.  
   
  유틸리티 요약  
  [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 유틸리티에서 관리되는 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 의 관리되는 인스턴스 수와 데이터 계층 애플리케이션의 수를 표시합니다.  
@@ -96,10 +96,10 @@ ms.locfileid: "86197271"
   
 -   사용 가능한 데이터 없음 - 데이터 계층 애플리케이션을 포함하는 SQL Server의 관리되는 인스턴스가 데이터를 보고하지 않기 때문에 데이터 계층 애플리케이션에 대한 사용 가능한 데이터가 없습니다.  
   
- 각 상태 매개 변수에 대한 자세한 상태는 슬라이딩 표시기에 나열됩니다. 슬라이딩 표시기의 오른쪽 부분에는 각 상태 범주에 얼마나 많은 데이터 계층 애플리케이션이 해당되는지 표시됩니다. 개별 데이터 계층 애플리케이션의 상태를 보는 방법과 정책 구성 설정을 보거나 변경하는 방법은 [배포된 데이터 계층 애플리케이션 세부 정보&#40;SQL Server 유틸리티&#41;](https://msdn.microsoft.com/library/79c41dd9-abcb-434e-9326-00a341d5c867)를 참조하세요.  
+ 각 상태 매개 변수에 대한 자세한 상태는 슬라이딩 표시기에 나열됩니다. 슬라이딩 표시기의 오른쪽 부분에는 각 상태 범주에 얼마나 많은 데이터 계층 애플리케이션이 해당되는지 표시됩니다. 개별 데이터 계층 애플리케이션의 상태를 보는 방법과 정책 구성 설정을 보거나 변경하는 방법은 [배포된 데이터 계층 애플리케이션 세부 정보&#40;SQL Server 유틸리티&#41;](/previous-versions/sql/sql-server-2016/ee240857(v=sql.130))를 참조하세요.  
   
  유틸리티 스토리지 사용 기록  
- 사용 기록은 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 유틸리티 대시보드 아래쪽의 시간 그래프에 표시됩니다. 시간 데이터는 datetime 데이터 형식을 사용하여 UCP 로컬 날짜 및 시간을 보여 줍니다. 자세한 내용은 [datetime(TRANSACT-SQL)](https://go.microsoft.com/fwlink/?LinkId=164071) 항목을 참조하세요. 유틸리티 개체 모델을 사용할 때는 SSMS가 datetimeoffset 데이터 형식을 사용합니다. 자세한 내용은 [datetimeoffset(TRANSACT-SQL)](https://go.microsoft.com/fwlink/?LinkId=141713) 항목을 참조하세요.  
+ 사용 기록은 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 유틸리티 대시보드 아래쪽의 시간 그래프에 표시됩니다. 시간 데이터는 datetime 데이터 형식을 사용하여 UCP 로컬 날짜 및 시간을 보여 줍니다. 자세한 내용은 [datetime(TRANSACT-SQL)](../../t-sql/data-types/datetime-transact-sql.md) 항목을 참조하세요. 유틸리티 개체 모델을 사용할 때는 SSMS가 datetimeoffset 데이터 형식을 사용합니다. 자세한 내용은 [datetimeoffset(TRANSACT-SQL)](../../t-sql/data-types/datetimeoffset-transact-sql.md) 항목을 참조하세요.  
   
  표시 영역 왼쪽에 있는 라디오 단추를 사용하여 그래프의 보고 기간을 변경할 수 있습니다.  
   
@@ -133,7 +133,7 @@ ms.locfileid: "86197271"
   
  목록 뷰의 열 순서는 마우스로 왼쪽이나 오른쪽으로 끌어서 변경할 수 있습니다. 목록 뷰에서 열 머리글을 마우스 오른쪽 단추로 클릭하고 열을 선택하거나 선택을 취소하여 열을 추가하거나 삭제할 수 있습니다. 오른쪽 클릭 메뉴에도 정렬 옵션이 있습니다. 열 이름 위쪽을 클릭하여 정렬을 활성화할 수도 있습니다.  
   
- [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 유틸리티 목록 뷰의 필터 옵션에 액세스하려면 유틸리티 탐색기 탐색 창의 **배포된 데이터 계층 애플리케이션** 노드를 마우스 오른쪽 단추로 클릭하고 **필터**를 선택합니다. 필터 설정이 구현된 후에는 유틸리티 탐색기의 **배포된 데이터 계층 애플리케이션** 노드가 **배포된 데이터 계층 애플리케이션(필터링됨)** 이라고 표시됩니다. 자세한 내용은 [필터 설정&#40;개체 탐색기 및 유틸리티 탐색기&#41;](https://msdn.microsoft.com/library/4aab04bc-e1ab-4d4b-ab74-b287fc805bc2)을 참조하세요.  
+ [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 유틸리티 목록 뷰의 필터 옵션에 액세스하려면 유틸리티 탐색기 탐색 창의 **배포된 데이터 계층 애플리케이션** 노드를 마우스 오른쪽 단추로 클릭하고 **필터**를 선택합니다. 필터 설정이 구현된 후에는 유틸리티 탐색기의 **배포된 데이터 계층 애플리케이션** 노드가 **배포된 데이터 계층 애플리케이션(필터링됨)** 이라고 표시됩니다. 자세한 내용은 [필터 설정&#40;개체 탐색기 및 유틸리티 탐색기&#41;](../../ssms/object/filter-settings-object-explorer-and-utility-explorer.md)을 참조하세요.  
   
  기본적으로 각 데이터 계층 애플리케이션의 상태 정보가 다음과 같은 열에 표시됩니다.  
   
@@ -179,7 +179,7 @@ ms.locfileid: "86197271"
   
 -   복구 모델: (단순, 전체 또는 대량 로그)  
   
--   마지막 보고 시간: 이 열에는 datetime 데이터 형식을 사용하여 UCP 로컬 날짜 및 시간이 표시됩니다. 자세한 내용은 [datetime(TRANSACT-SQL)](https://go.microsoft.com/fwlink/?LinkId=164071) 항목을 참조하세요. 유틸리티 개체 모델을 사용할 때는 SSMS가 datetimeoffset 데이터 형식을 사용합니다. 자세한 내용은 [datetimeoffset(TRANSACT-SQL)](https://go.microsoft.com/fwlink/?LinkId=141713) 항목을 참조하세요.  
+-   마지막 보고 시간: 이 열에는 datetime 데이터 형식을 사용하여 UCP 로컬 날짜 및 시간이 표시됩니다. 자세한 내용은 [datetime(TRANSACT-SQL)](../../t-sql/data-types/datetime-transact-sql.md) 항목을 참조하세요. 유틸리티 개체 모델을 사용할 때는 SSMS가 datetimeoffset 데이터 형식을 사용합니다. 자세한 내용은 [datetimeoffset(TRANSACT-SQL)](../../t-sql/data-types/datetimeoffset-transact-sql.md) 항목을 참조하세요.  
   
  CPU 사용 탭  
  CPU 사용 탭에는 데이터 계층 애플리케이션과 컴퓨터 CPU 사용의 기록 데이터 그래프가 함께 표시됩니다.  
@@ -197,7 +197,7 @@ ms.locfileid: "86197271"
 -   1년, 1개월 간격으로 표시  
   
  스토리지 사용 탭  
- 스토리지 사용 탭에는 목록 뷰에 선택된 데이터 계층 애플리케이션에 속한 데이터베이스 파일과 로그 파일의 스토리지 사용 정보를 표시하는 트리 뷰가 있습니다. 시간 데이터는 datetime 데이터 형식을 사용하여 UCP 로컬 날짜 및 시간을 보여 줍니다. 자세한 내용은 [datetime(TRANSACT-SQL)](https://go.microsoft.com/fwlink/?LinkId=164071) 항목을 참조하세요. 유틸리티 개체 모델을 사용할 때는 SSMS가 datetimeoffset 데이터 형식을 사용합니다. 자세한 내용은 [datetimeoffset(TRANSACT-SQL)](https://go.microsoft.com/fwlink/?LinkId=141713) 항목을 참조하세요.  
+ 스토리지 사용 탭에는 목록 뷰에 선택된 데이터 계층 애플리케이션에 속한 데이터베이스 파일과 로그 파일의 스토리지 사용 정보를 표시하는 트리 뷰가 있습니다. 시간 데이터는 datetime 데이터 형식을 사용하여 UCP 로컬 날짜 및 시간을 보여 줍니다. 자세한 내용은 [datetime(TRANSACT-SQL)](../../t-sql/data-types/datetime-transact-sql.md) 항목을 참조하세요. 유틸리티 개체 모델을 사용할 때는 SSMS가 datetimeoffset 데이터 형식을 사용합니다. 자세한 내용은 [datetimeoffset(TRANSACT-SQL)](../../t-sql/data-types/datetimeoffset-transact-sql.md) 항목을 참조하세요.  
   
  표시는 파일 그룹별 또는 볼륨별로 그룹화할 수 있습니다. 파일 그룹 트리 뷰를 사용하려면 **파일 그룹화 방법:** 선택에서 **파일 그룹** 라디오 단추를 선택합니다.  
   
@@ -256,7 +256,7 @@ ms.locfileid: "86197271"
   
 -   복구 모델: (단순, 전체 또는 대량 로그)  
   
--   마지막 보고 시간: 이 열에는 datetime 데이터 형식을 사용하여 UCP 로컬 날짜 및 시간이 표시됩니다. 자세한 내용은 [datetime(TRANSACT-SQL)](https://go.microsoft.com/fwlink/?LinkId=164071) 항목을 참조하세요. 유틸리티 개체 모델을 사용할 때는 SSMS가 datetimeoffset 데이터 형식을 사용합니다. 자세한 내용은 [datetimeoffset(TRANSACT-SQL)](https://go.microsoft.com/fwlink/?LinkId=141713) 항목을 참조하세요.
+-   마지막 보고 시간: 이 열에는 datetime 데이터 형식을 사용하여 UCP 로컬 날짜 및 시간이 표시됩니다. 자세한 내용은 [datetime(TRANSACT-SQL)](../../t-sql/data-types/datetime-transact-sql.md) 항목을 참조하세요. 유틸리티 개체 모델을 사용할 때는 SSMS가 datetimeoffset 데이터 형식을 사용합니다. 자세한 내용은 [datetimeoffset(TRANSACT-SQL)](../../t-sql/data-types/datetimeoffset-transact-sql.md) 항목을 참조하세요.
 
 ## <a name="managed-instance-details-sql-server-utility"></a>관리되는 인스턴스 세부 정보(SQL Server 유틸리티)
  유틸리티 탐색기의 관리되는 인스턴스 뷰에 나오는 정보는 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]의 개별 인스턴스에 대한 사용 데이터, CPU 사용 기록, 파일 수준의 스토리지 사용 세부 정보, 그리고 정책 임계 값을 확인 및 업데이트하는 기능을 제공합니다. 정책 임계 값은 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 인스턴스 수준, 컴퓨터, 데이터베이스 파일과 로그 파일, 그리고 스토리지 볼륨 수준에서 제어할 수 있습니다. 개별 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]의 관리되는 인스턴스 속성 정보를 볼 수도 있습니다.  
@@ -275,7 +275,7 @@ ms.locfileid: "86197271"
   
  목록 뷰의 열 순서는 마우스로 왼쪽이나 오른쪽으로 끌어서 변경할 수 있습니다. 목록 뷰에서 열 머리글을 마우스 오른쪽 단추로 클릭하고 열을 선택하거나 선택을 취소하여 열을 추가하거나 삭제할 수 있습니다. 오른쪽 클릭 메뉴에도 정렬 옵션이 있습니다. 열 이름 위쪽을 클릭하여 정렬을 활성화할 수도 있습니다.  
   
- 유틸리티 목록 뷰의 필터 옵션에 액세스하려면 유틸리티 탐색기 탐색 창의 **관리되는 인스턴스** 노드를 마우스 오른쪽 단추로 클릭하고 **필터**를 선택합니다. 필터 설정이 구현된 후에는 유틸리티 탐색기의 **관리되는 인스턴스** 노드가 **관리되는 인스턴스(필터링됨)** 라고 표시됩니다. 자세한 내용은 [필터 설정&#40;개체 탐색기 및 유틸리티 탐색기&#41;](https://msdn.microsoft.com/library/4aab04bc-e1ab-4d4b-ab74-b287fc805bc2)을 참조하세요.  
+ 유틸리티 목록 뷰의 필터 옵션에 액세스하려면 유틸리티 탐색기 탐색 창의 **관리되는 인스턴스** 노드를 마우스 오른쪽 단추로 클릭하고 **필터**를 선택합니다. 필터 설정이 구현된 후에는 유틸리티 탐색기의 **관리되는 인스턴스** 노드가 **관리되는 인스턴스(필터링됨)** 라고 표시됩니다. 자세한 내용은 [필터 설정&#40;개체 탐색기 및 유틸리티 탐색기&#41;](../../ssms/object/filter-settings-object-explorer-and-utility-explorer.md)을 참조하세요.  
   
  기본적으로 각 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]의 관리되는 인스턴스 상태 정보가 다음과 같은 열에 표시됩니다.  
   
@@ -319,7 +319,7 @@ ms.locfileid: "86197271"
   
 -   언어:  
   
--   마지막 보고 시간: 이 열에는 datetime 데이터 형식을 사용하여 UCP 로컬 날짜 및 시간이 표시됩니다. 자세한 내용은 [datetime(TRANSACT-SQL)](https://go.microsoft.com/fwlink/?LinkId=164071) 항목을 참조하세요. 유틸리티 개체 모델을 사용할 때는 SSMS가 datetimeoffset 데이터 형식을 사용합니다. 자세한 내용은 [datetimeoffset(TRANSACT-SQL)](https://go.microsoft.com/fwlink/?LinkId=141713) 항목을 참조하세요.  
+-   마지막 보고 시간: 이 열에는 datetime 데이터 형식을 사용하여 UCP 로컬 날짜 및 시간이 표시됩니다. 자세한 내용은 [datetime(TRANSACT-SQL)](../../t-sql/data-types/datetime-transact-sql.md) 항목을 참조하세요. 유틸리티 개체 모델을 사용할 때는 SSMS가 datetimeoffset 데이터 형식을 사용합니다. 자세한 내용은 [datetimeoffset(TRANSACT-SQL)](../../t-sql/data-types/datetimeoffset-transact-sql.md) 항목을 참조하세요.  
   
  CPU 사용 탭  
  CPU 사용 탭에는 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 인스턴스와 컴퓨터 CPU 사용의 기록 데이터 그래프가 함께 표시됩니다.  
@@ -337,7 +337,7 @@ ms.locfileid: "86197271"
 -   1년, 1개월 간격으로 표시  
   
  스토리지 사용 탭  
- 스토리지 사용 탭에는 스토리지 사용 세부 정보를 표시하는 트리 뷰가 있습니다. 시간 데이터는 datetime 데이터 형식을 사용하여 UCP 로컬 날짜 및 시간을 보여 줍니다. 자세한 내용은 [datetime(TRANSACT-SQL)](https://go.microsoft.com/fwlink/?LinkId=164071) 항목을 참조하세요. 유틸리티 개체 모델을 사용할 때는 SSMS가 datetimeoffset 데이터 형식을 사용합니다. 자세한 내용은 [datetimeoffset(TRANSACT-SQL)](https://go.microsoft.com/fwlink/?LinkId=141713) 항목을 참조하세요.  
+ 스토리지 사용 탭에는 스토리지 사용 세부 정보를 표시하는 트리 뷰가 있습니다. 시간 데이터는 datetime 데이터 형식을 사용하여 UCP 로컬 날짜 및 시간을 보여 줍니다. 자세한 내용은 [datetime(TRANSACT-SQL)](../../t-sql/data-types/datetime-transact-sql.md) 항목을 참조하세요. 유틸리티 개체 모델을 사용할 때는 SSMS가 datetimeoffset 데이터 형식을 사용합니다. 자세한 내용은 [datetimeoffset(TRANSACT-SQL)](../../t-sql/data-types/datetimeoffset-transact-sql.md) 항목을 참조하세요.  
   
  표시는 데이터베이스별 또는 볼륨별로 그룹화할 수 있습니다. 데이터베이스 트리 뷰를 사용하려면 **파일 그룹화 방법:** 선택에서 **데이터베이스** 라디오 단추를 선택합니다. 개별 데이터베이스 파일의 스토리지 사용 상태를 보려면 트리 뷰에서 데이터베이스 이름 옆에 있는 더하기 기호를 클릭합니다. 나열되는 데이터베이스 파일에는 목록 뷰에서 선택한 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 의 관리되는 인스턴스에 속한 모든 시스템 및 사용자 데이터베이스가 포함됩니다.  
   
@@ -513,6 +513,5 @@ ms.locfileid: "86197271"
   
 ## <a name="see-also"></a>참고 항목  
  [SQL Server 유틸리티 기능 및 태스크](../../relational-databases/manage/sql-server-utility-features-and-tasks.md)   
- [SQL Server 유틸리티 문제 해결](https://msdn.microsoft.com/library/f5f47c2a-38ea-40f8-9767-9bc138d14453)  
-  
+ [SQL Server 유틸리티 문제 해결](/previous-versions/sql/sql-server-2016/ee210592(v=sql.130))  
   

@@ -11,12 +11,12 @@ ms.topic: conceptual
 author: jaszymas
 ms.author: jaszymas
 monikerRange: '>= sql-server-ver15 || = sqlallproducts-allversions'
-ms.openlocfilehash: 27ccecb8293adff8fe5f2aaa3062a871d745c587
-ms.sourcegitcommit: 129f8574eba201eb6ade1f1620c6b80dfe63b331
+ms.openlocfilehash: e33b72c93022a02538c143f976d4114589998b6f
+ms.sourcegitcommit: 4d370399f6f142e25075b3714e5c2ce056b1bfd0
 ms.translationtype: HT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 07/30/2020
-ms.locfileid: "87435447"
+ms.lasthandoff: 10/09/2020
+ms.locfileid: "91867250"
 ---
 # <a name="always-encrypted-with-secure-enclaves"></a>보안 Enclave를 사용한 Always Encrypted
 [!INCLUDE [sqlserver2019-windows-only](../../../includes/applies-to-version/sqlserver2019-windows-only.md)]
@@ -125,7 +125,7 @@ SQL Server 인스턴스에서 오류가 발생하면 데이터베이스가 불�
 > [!IMPORTANT]
 > 데이터베이스에 대해 [ADR(가속 데이터베이스 복구)](../../backup-restore/restore-and-recovery-overview-sql-server.md#adr)을 사용하도록 설정한 **다음**, 임의 암호화로 암호화된 enclave 사용 열에 첫 번째 인덱스를 만드는 것이 좋습니다.
 
-인덱스의 변경 내용을 취소하는 [기존 데이터베이스 복구 프로세스](https://docs.microsoft.com/azure/sql-database/sql-database-accelerated-database-recovery#the-current-database-recovery-process)([ARIES](https://people.eecs.berkeley.edu/~brewer/cs262/Aries.pdf) 복구 모델을 따름)에서는 애플리케이션이 열의 열 암호화 키를 enclave에 제공할 때까지 SQL Server에서 기다려야 하며, 오랜 시간이 걸릴 수 있습니다. ADR을 사용하면 enclave 내부 캐시에서 열 암호화 키를 사용할 수 없어 지연되어야 하는 실행 취소 작업 수가 훨씬 줄어듭니다. 따라서 새 트랜잭션이 차단될 가능성이 최소화되어 데이터베이스 가용성이 상당히 증가합니다. ADR을 사용하는 경우에도 SQL Server에서 이전 데이터 버전 정리를 완료하려면 열 암호화 키가 필요할 수 있지만 백그라운드 작업으로 수행하기 때문에 데이터베이스 또는 사용자 트랜잭션의 가용성에는 영향을 주지 않습니다. 그러나 누락된 열 암호화 키로 인해 실패한 정리 작업을 나타내는 오류 메시지가 오류 로그에 표시될 수 있습니다.
+인덱스의 변경 내용을 취소하는 [기존 데이터베이스 복구 프로세스](/azure/sql-database/sql-database-accelerated-database-recovery#the-current-database-recovery-process)([ARIES](https://people.eecs.berkeley.edu/~brewer/cs262/Aries.pdf) 복구 모델을 따름)에서는 애플리케이션이 열의 열 암호화 키를 enclave에 제공할 때까지 SQL Server에서 기다려야 하며, 오랜 시간이 걸릴 수 있습니다. ADR을 사용하면 enclave 내부 캐시에서 열 암호화 키를 사용할 수 없어 지연되어야 하는 실행 취소 작업 수가 훨씬 줄어듭니다. 따라서 새 트랜잭션이 차단될 가능성이 최소화되어 데이터베이스 가용성이 상당히 증가합니다. ADR을 사용하는 경우에도 SQL Server에서 이전 데이터 버전 정리를 완료하려면 열 암호화 키가 필요할 수 있지만 백그라운드 작업으로 수행하기 때문에 데이터베이스 또는 사용자 트랜잭션의 가용성에는 영향을 주지 않습니다. 그러나 누락된 열 암호화 키로 인해 실패한 정리 작업을 나타내는 오류 메시지가 오류 로그에 표시될 수 있습니다.
 
 ### <a name="indexes-on-enclave-enabled-columns-using-deterministic-encryption"></a>결정적 암호화를 사용하는 Enclave 사용 열의 인덱스
 
@@ -187,5 +187,3 @@ bacpac 파일을 사용하여 데이터베이스를 마이그레이션하는 경
 - [보안 Enclave를 사용한 Always Encrypted를 사용하여 열 쿼리](always-encrypted-enclaves-query-columns.md)
 - [기존 암호화된 열에 관해 보안 Enclave를 사용한 Always Encrypted 사용](always-encrypted-enclaves-enable-for-encrypted-columns.md)
 - [보안 Enclave를 사용한 Always Encrypted를 사용하여 열에 인덱스 만들기 및 사용](always-encrypted-enclaves-create-use-indexes.md)
-
-

@@ -13,12 +13,12 @@ helpviewer_keywords:
 ms.assetid: fb420903-df54-4016-bab6-49e6dfbdedc7
 author: jaszymas
 ms.author: jaszymas
-ms.openlocfilehash: 3ea15d89efb653bff92817ffc97300ec03958482
-ms.sourcegitcommit: f7ac1976d4bfa224332edd9ef2f4377a4d55a2c9
+ms.openlocfilehash: e15751fb064d2843770d72f26db94b29de28f199
+ms.sourcegitcommit: 4d370399f6f142e25075b3714e5c2ce056b1bfd0
 ms.translationtype: HT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 07/02/2020
-ms.locfileid: "85899057"
+ms.lasthandoff: 10/09/2020
+ms.locfileid: "91867589"
 ---
 # <a name="move-a-tde-protected-database-to-another-sql-server"></a>다른 SQL Server로 TDE 보호 데이터베이스 이동
 [!INCLUDE [SQL Server](../../../includes/applies-to-version/sqlserver.md)]
@@ -130,7 +130,7 @@ ms.locfileid: "85899057"
   
 -   [BACKUP CERTIFICATE&#40;Transact-SQL&#41;](../../../t-sql/statements/backup-certificate-transact-sql.md)  
   
--   [CREATE DATABASE&#40;SQL Server Transact-SQL&#41;](../../../t-sql/statements/create-database-sql-server-transact-sql.md)  
+-   [CREATE DATABASE&#40;SQL Server Transact-SQL&#41;](../../../t-sql/statements/create-database-transact-sql.md)  
   
 -   [CREATE DATABASE ENCRYPTION KEY&#40;Transact-SQL&#41;](../../../t-sql/statements/create-database-encryption-key-transact-sql.md)  
   
@@ -300,10 +300,9 @@ ms.locfileid: "85899057"
   
 -   [CREATE CERTIFICATE&#40;Transact-SQL&#41;](../../../t-sql/statements/create-certificate-transact-sql.md)  
   
--   [CREATE DATABASE&#40;SQL Server Transact-SQL&#41;](../../../t-sql/statements/create-database-sql-server-transact-sql.md)  
+-   [CREATE DATABASE&#40;SQL Server Transact-SQL&#41;](../../../t-sql/statements/create-database-transact-sql.md)  
   
 ## <a name="see-also"></a>참고 항목  
  [데이터베이스 분리 및 연결&#40;SQL Server&#41;](../../../relational-databases/databases/database-detach-and-attach-sql-server.md)   
- [Azure SQL Database를 사용한 투명한 데이터 암호화](../../../relational-databases/security/encryption/transparent-data-encryption-azure-sql.md)  
-  
+ [Azure SQL Database를 사용한 투명한 데이터 암호화](/azure/azure-sql/database/transparent-data-encryption-tde-overview)  
   

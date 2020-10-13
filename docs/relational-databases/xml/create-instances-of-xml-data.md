@@ -20,12 +20,12 @@ helpviewer_keywords:
 ms.assetid: dbd6c06f-db6e-44a7-855a-6a55bf374907
 author: MightyPen
 ms.author: genemi
-ms.openlocfilehash: c1ee7e4446b67c60a8bb0b7a3d43453a5e7498d6
-ms.sourcegitcommit: e8f6c51d4702c0046aec1394109bc0503ca182f0
+ms.openlocfilehash: 4dc776e09639a67ef93e1778dd152761ed5a0bfc
+ms.sourcegitcommit: 783b35f6478006d654491cb52f6edf108acf2482
 ms.translationtype: HT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 08/07/2020
-ms.locfileid: "87940574"
+ms.lasthandoff: 10/09/2020
+ms.locfileid: "91891583"
 ---
 # <a name="create-instances-of-xml-data"></a>XML 데이터 인스턴스 만들기
 [!INCLUDE [SQL Server Azure SQL Database](../../includes/applies-to-version/sql-asdb.md)]
@@ -62,7 +62,7 @@ from OpenRowset(BULK 'filename.xml', SINGLE_BLOB) R(x)
  [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 에서는 내부적으로 UTF-16 인코딩을 사용하는 효율적인 이진 표현으로 XML을 나타냅니다. 사용자가 제공한 인코딩은 유지되지 않지만 구문 분석 프로세스 중에 고려됩니다.  
   
 ### <a name="type-casting-clr-user-defined-types"></a>CLR 사용자 정의 형식 캐스팅  
- CLR 사용자 정의 형식에 XML 직렬화가 지정되면 명시적으로 해당 형식의 인스턴스를 XML 데이터 형식으로 캐스팅할 수 있습니다. CLR 사용자 정의 형식의 XML 직렬화에 대한 자세한 내용은 [CLR 데이터베이스 개체에서 XML 직렬화](https://docs.microsoft.com/dotnet/standard/serialization/introducing-xml-serialization)를 참조하세요.  
+ CLR 사용자 정의 형식에 XML 직렬화가 지정되면 명시적으로 해당 형식의 인스턴스를 XML 데이터 형식으로 캐스팅할 수 있습니다. CLR 사용자 정의 형식의 XML 직렬화에 대한 자세한 내용은 [CLR 데이터베이스 개체에서 XML 직렬화](/dotnet/standard/serialization/introducing-xml-serialization)를 참조하세요.  
   
 ### <a name="white-space-handling-in-typed-xml"></a>형식화된 XML에서 공백 처리  
  [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]에서 요소 내용 내에 있는 공백은 시작 또는 끝 태그처럼 마크업으로 구분된 공백 전용 문자 데이터 시퀀스 내에 있을 경우와 엔터티화되지 않은 경우 불필요한 것으로 간주됩니다. CDATA 섹션은 무시됩니다. 이러한 공백을 처리하는 방식은 W3C(World Wide Web Consortium)에서 게시한 XML 1.0 사양에 설명된 방법과 다릅니다. 그 이유는 XML 1.0에 설명된 대로 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 의 XML 파서가 제한된 개수의 DTD 하위 집합만 인식하기 때문입니다. [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]에서 지원하는 제한된 DTD 하위 집합에 대한 자세한 내용은 [CAST 및 CONVERT&#40;Transact-SQL&#41;](../../t-sql/functions/cast-and-convert-transact-sql.md)를 참조하세요.  
@@ -220,5 +220,4 @@ INSERT INTO T VALUES (3, '<Cust><Fname>Andrew</Fname><Lname>Fuller</Lname></Cust
  [xml 데이터 형식 메서드](../../t-sql/xml/xml-data-type-methods.md)   
  [XML DML&#40;XML 데이터 수정 언어&#41;](../../t-sql/xml/xml-data-modification-language-xml-dml.md)   
  [XML 데이터&#40;SQL Server&#41;](../../relational-databases/xml/xml-data-sql-server.md)  
-  
   

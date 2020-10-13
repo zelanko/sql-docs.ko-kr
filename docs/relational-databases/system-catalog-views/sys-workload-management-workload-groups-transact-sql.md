@@ -1,6 +1,6 @@
 ---
-description: sys. workload_management_workload_groups (Transact-sql)
-title: sys. workload_management_workload_groups (Transact-sql) | Microsoft Docs
+description: sys.workload_management_workload_groups (Transact-sql)
+title: sys.workload_management_workload_groups (Transact-sql) | Microsoft Docs
 ms.custom: ''
 ms.date: 11/05/2019
 ms.prod: sql
@@ -13,14 +13,14 @@ dev_langs:
 author: ronortloff
 ms.author: rortloff
 monikerRange: =azure-sqldw-latest||=sqlallproducts-allversions
-ms.openlocfilehash: 051793030a4151385957e7c3f9fcb047c98fb743
-ms.sourcegitcommit: e700497f962e4c2274df16d9e651059b42ff1a10
+ms.openlocfilehash: e6366de9514f625ef1c0a008b0ca6e0e331b5669
+ms.sourcegitcommit: a5398f107599102af7c8cda815d8e5e9a367ce7e
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 08/17/2020
-ms.locfileid: "88419877"
+ms.lasthandoff: 10/13/2020
+ms.locfileid: "92006396"
 ---
-# <a name="sysworkload_management_workload_groups-transact-sql"></a>sys. workload_management_workload_groups (Transact-sql)
+# <a name="sysworkload_management_workload_groups-transact-sql"></a>sys.workload_management_workload_groups (Transact-sql)
 
 [!INCLUDE [asa](../../includes/applies-to-version/asa.md)]
 
@@ -47,4 +47,4 @@ VIEW SERVER STATE 권한이 필요합니다.
 
 ## <a name="next-steps"></a>다음 단계
 
- SQL Data Warehouse 및 병렬 데이터 웨어하우스의 모든 카탈로그 뷰 목록은 [SQL Data Warehouse 및 병렬 데이터 웨어하우스 카탈로그 뷰](../../relational-databases/system-catalog-views/sql-data-warehouse-and-parallel-data-warehouse-catalog-views.md)를 참조 하세요. 작업 그룹을 만들려면 [작업 그룹 만들기](../../t-sql/statements/create-workload-group-transact-sql.md)를 참조 하세요. 작업 분류에 대 한 자세한 내용은 [워크 로드 격리](/azure/sql-data-warehouse/sql-data-warehouse-workload-isolation) 를 참조 하세요.
+ Azure Synapse Analytics 및 병렬 데이터 웨어하우스의 모든 카탈로그 뷰 목록은 [SQL Data Warehouse 및 병렬 데이터 웨어하우스 카탈로그 뷰](../../relational-databases/system-catalog-views/sql-data-warehouse-and-parallel-data-warehouse-catalog-views.md)를 참조 하세요. 작업 그룹을 만들려면 [작업 그룹 만들기](../../t-sql/statements/create-workload-group-transact-sql.md)를 참조 하세요. 작업 분류에 대 한 자세한 내용은 [워크 로드 격리](/azure/sql-data-warehouse/sql-data-warehouse-workload-isolation) 를 참조 하세요.

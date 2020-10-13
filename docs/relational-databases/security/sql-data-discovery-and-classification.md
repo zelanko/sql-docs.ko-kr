@@ -11,23 +11,23 @@ ms.topic: conceptual
 ms.date: 06/10/2020
 ms.author: datrigan
 author: DavidTrigano
-ms.openlocfilehash: 7c23b7faa93281ab34ed4b500d10dfd50e9c8c76
-ms.sourcegitcommit: da88320c474c1c9124574f90d549c50ee3387b4c
+ms.openlocfilehash: 90c219cd2e1034df4cc714247ae8d983bf54ff01
+ms.sourcegitcommit: 4d370399f6f142e25075b3714e5c2ce056b1bfd0
 ms.translationtype: HT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 07/01/2020
-ms.locfileid: "85737045"
+ms.lasthandoff: 10/09/2020
+ms.locfileid: "91867768"
 ---
 # <a name="sql-data-discovery-and-classification"></a>SQL 데이터 검색 및 분류
 [!INCLUDE [SQL Server](../../includes/applies-to-version/sqlserver.md)]
 
-데이터 검색 및 분류는 데이터베이스에서 중요한 데이터를 **검색**, **분류**, **레이블 지정** & **보고**하기 위해 [SSMS(SQL Server Management Studio)](https://docs.microsoft.com/sql/ssms/download-sql-server-management-studio-ssms)에 기본 제공된 새로운 도구를 소개합니다.
+데이터 검색 및 분류는 데이터베이스에서 중요한 데이터를 **검색**, **분류**, **레이블 지정** & **보고**하기 위해 [SSMS(SQL Server Management Studio)](../../ssms/download-sql-server-management-studio-ssms.md)에 기본 제공된 새로운 도구를 소개합니다.
 가장 중요한 데이터(비즈니스, 재무, 보건 등)를 검색하고 분류하면 조직 정보 보호 수준에서 중요한 역할을 담당할 수 있습니다. 다음에 대한 인프라를 제공할 수 있습니다.
 * 데이터 개인 정보 보호 표준을 충족하도록 지원합니다.
 * 매우 중요한 데이터가 포함된 데이터베이스/열에 대한 액세스를 제어하고 보안을 강화합니다.
 
 > [!NOTE]
-> 데이터 검색 및 분류는 **SQL Server 2012 이상에 지원되며, [SSMS 17.5](https://docs.microsoft.com/sql/ssms/download-sql-server-management-studio-ssms) 이상에서 사용할 수 있습니다**. Azure SQL Database는 [Azure SQL Database 데이터 검색 및 분류](/azure/sql-database/sql-database-data-discovery-and-classification/)를 참조하세요.
+> 데이터 검색 및 분류는 **SQL Server 2012 이상에 지원되며, [SSMS 17.5](../../ssms/download-sql-server-management-studio-ssms.md) 이상에서 사용할 수 있습니다**. Azure SQL Database는 [Azure SQL Database 데이터 검색 및 분류](/azure/sql-database/sql-database-data-discovery-and-classification/)를 참조하세요.
 
 ## <a name="overview"></a><a id="subheading-1"></a>개요
 데이터 검색 및 분류는 고급 서비스의 집합을 소개하고 데이터베이스뿐만 아니라 데이터를 보호 대상으로 지정하는 새로운 SQL Information Protection 패러다임을 형성합니다.
@@ -93,7 +93,7 @@ ms.locfileid: "85737045"
 
 ## <a name="manage-information-protection-policy-with-ssms"></a><a id="subheading-3"></a>SSMS를 사용하여 정보 보호 정책 관리
 
-[SSMS 18.4](https://docs.microsoft.com/sql/ssms/download-sql-server-management-studio-ssms) 이상을 사용하여 정보 보호 정책을 관리할 수 있습니다.
+[SSMS 18.4](../../ssms/download-sql-server-management-studio-ssms.md) 이상을 사용하여 정보 보호 정책을 관리할 수 있습니다.
 
 1. SSMS(SQL Server Management Studio)에서 SQL Server에 연결합니다.
 
@@ -116,7 +116,7 @@ ms.locfileid: "85737045"
 SQL Server 2019에서는 [`sys.sensitivity_classifications`](../system-catalog-views/sys-sensitivity-classifications-transact-sql.md) 시스템 카탈로그 뷰가 도입되었습니다. 이 뷰는 정보 유형과 민감도 레이블을 반환합니다. 
 
 > [!NOTE]
-> 이 뷰를 사용하려면 **VIEW ANY SENSITIVITY CLASSIFICATION** 권한이 필요합니다. 자세한 내용은 [Metadata Visibility Configuration](https://docs.microsoft.com/sql/relational-databases/security/metadata-visibility-configuration?view=sql-server-ver15)을 참조하세요.
+> 이 뷰를 사용하려면 **VIEW ANY SENSITIVITY CLASSIFICATION** 권한이 필요합니다. 자세한 내용은 [Metadata Visibility Configuration](./metadata-visibility-configuration.md?view=sql-server-ver15)을 참조하세요.
 
 SQL Server 2019 인스턴스에서는 `sys.sensitivity_classifications`를 쿼리하여 분류된 모든 열과 해당 분류를 검토합니다. 다음은 그 예입니다. 
 
@@ -190,27 +190,27 @@ FROM
 # <a name="t-sql"></a>[T-SQL](#tab/t-sql)
 T-SQL을 사용하여 열 분류를 추가/제거하고 전체 데이터베이스에 대한 모든 분류를 검색할 수 있습니다.
 
-- 하나 이상의 열 분류 추가/업데이트: [민감도 분류 추가](https://docs.microsoft.com/sql/t-sql/statements/add-sensitivity-classification-transact-sql)
-- 하나 이상의 열에서 분류 제거: [민감도 분류 삭제](https://docs.microsoft.com/sql/t-sql/statements/drop-sensitivity-classification-transact-sql)
+- 하나 이상의 열 분류 추가/업데이트: [민감도 분류 추가](../../t-sql/statements/add-sensitivity-classification-transact-sql.md)
+- 하나 이상의 열에서 분류 제거: [민감도 분류 삭제](../../t-sql/statements/drop-sensitivity-classification-transact-sql.md)
 
 # <a name="powershell-cmdlet"></a>[PowerShell Cmdlet](#tab/sql-powelshell)
 PowerShell Cmdlet을 사용하여 열 분류를 추가/제거하고 모든 분류를 검색하며 전체 데이터베이스의 권장 사항을 가져올 수 있습니다.
 
-- [Get-SqlSensitivityClassification](https://docs.microsoft.com/powershell/module/sqlserver/Get-SqlSensitivityClassification?view=sqlserver-ps)
-- [Get-SqlSensitivityRecommendations](https://docs.microsoft.com/powershell/module/sqlserver/Get-SqlSensitivityRecommendations?view=sqlserver-ps)
-- [Set-SqlSensitivityClassification](https://docs.microsoft.com/powershell/module/sqlserver/Set-SqlSensitivityClassification?view=sqlserver-ps)
-- [Remove-SqlSensitivityClassification](https://docs.microsoft.com/powershell/module/sqlserver/Remove-SqlSensitivityClassification?view=sqlserver-ps)
+- [Get-SqlSensitivityClassification](/powershell/module/sqlserver/Get-SqlSensitivityClassification?view=sqlserver-ps)
+- [Get-SqlSensitivityRecommendations](/powershell/module/sqlserver/Get-SqlSensitivityRecommendations?view=sqlserver-ps)
+- [Set-SqlSensitivityClassification](/powershell/module/sqlserver/Set-SqlSensitivityClassification?view=sqlserver-ps)
+- [Remove-SqlSensitivityClassification](/powershell/module/sqlserver/Remove-SqlSensitivityClassification?view=sqlserver-ps)
 
 ---
 
 ## <a name="next-steps"></a><a id="subheading-6"></a>다음 단계
 
-Azure SQL Database는 [Azure SQL Database 데이터 검색 및 분류](https://go.microsoft.com/fwlink/?linkid=866265)를 참조하세요.
+Azure SQL Database는 [Azure SQL Database 데이터 검색 및 분류](/azure/azure-sql/database/data-discovery-and-classification-overview)를 참조하세요.
 
 열 수준 보안 메커니즘을 적용하여 중요한 열을 보호하는 것이 좋습니다.
 
-* [동적 데이터 마스킹](https://docs.microsoft.com/sql/relational-databases/security/dynamic-data-masking) 사용 중인 중요한 열을 난독 처리합니다.
-* [항상 암호화](https://docs.microsoft.com/sql/relational-databases/security/encryption/always-encrypted-database-engine) 중요한 미사용 열을 암호화합니다.
+* [동적 데이터 마스킹](./dynamic-data-masking.md) 사용 중인 중요한 열을 난독 처리합니다.
+* [항상 암호화](./encryption/always-encrypted-database-engine.md) 중요한 미사용 열을 암호화합니다.
 
 <!--Anchors-->
 [SQL Data Discovery & Classification overview]: #subheading-1

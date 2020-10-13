@@ -12,12 +12,12 @@ ms.assetid: ea82a9b9-e9ed-4d6f-b3fd-917f6c687ae3
 author: markingmyname
 ms.author: maghan
 monikerRange: =azuresqldb-current||>=sql-server-2016||=sqlallproducts-allversions||>=sql-server-linux-2017||=azuresqldb-mi-current
-ms.openlocfilehash: 6edd36bacc7c2316ac747156b7d1ccdbb0e4f7ce
-ms.sourcegitcommit: dd36d1cbe32cd5a65c6638e8f252b0bd8145e165
+ms.openlocfilehash: a2e755e50bc48e418ceabd0b2334746dc6e7885d
+ms.sourcegitcommit: 4d370399f6f142e25075b3714e5c2ce056b1bfd0
 ms.translationtype: HT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 09/08/2020
-ms.locfileid: "89551591"
+ms.lasthandoff: 10/09/2020
+ms.locfileid: "91867515"
 ---
 # <a name="sql-server-integration-services-support-for-in-memory-oltp"></a>메모리 내 OLTP에 대한 SQL Server Integration Services 지원
 [!INCLUDE [SQL Server Azure SQL Database](../../includes/applies-to-version/sql-asdb.md)]
@@ -31,6 +31,5 @@ ms.locfileid: "89551591"
  ADO .NET 원본과 OLE DB 원본을 사용하여 고유하게 컴파일된 저장 프로시저를 호출할 수도 있지만 ODBC 원본을 사용하는 것이 좋습니다. 고유하게 컴파일된 저장 프로시저를 실행하도록 ADO .NET 원본을 구성하는 경우, ADO .NET 원본이 기본적으로 사용하는 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] (SqlClient)의 데이터 공급자가 고유하게 컴파일된 저장 프로시저의 실행을 지원하지 않기 때문에 오류 메시지가 나타납니다. ODBC 데이터 공급자, [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]또는 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] Native Client를 사용하도록 ADO .NET 원본을 구성할 수 있습니다. 하지만 ODBC 데이터 공급자와 함께 ADO .NET 원본을 사용하는 것보다 ODBC 원본이 더 좋은 성능을 나타냅니다.  
   
 ## <a name="see-also"></a>참고 항목  
- [메모리 내 OLTP에 대한 SQL Server 지원](../../relational-databases/in-memory-oltp/sql-server-support-for-in-memory-oltp.md)  
-  
+ [메모리 내 OLTP에 대한 SQL Server 지원](./transact-sql-support-for-in-memory-oltp.md)  
   

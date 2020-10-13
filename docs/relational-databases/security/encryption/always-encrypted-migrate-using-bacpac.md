@@ -13,12 +13,12 @@ ms.assetid: 29816a41-f105-4414-8be1-070675d62e84
 author: jaszymas
 ms.author: jaszymas
 monikerRange: =azuresqldb-current||>=sql-server-2016||=sqlallproducts-allversions||>=sql-server-linux-2017||=azuresqldb-mi-current
-ms.openlocfilehash: d4b82259c992000578a4fcca1c5807cf551dc9d0
-ms.sourcegitcommit: e700497f962e4c2274df16d9e651059b42ff1a10
+ms.openlocfilehash: 3fc54fedce772b267cf19a9396672b61cf6e6254
+ms.sourcegitcommit: 4d370399f6f142e25075b3714e5c2ce056b1bfd0
 ms.translationtype: HT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 08/17/2020
-ms.locfileid: "88498580"
+ms.lasthandoff: 10/09/2020
+ms.locfileid: "91867778"
 ---
 # <a name="export-and-import-databases-using-always-encrypted"></a>Always Encrypted를 사용하여 데이터베이스 내보내기 및 가져오기 
 [!INCLUDE [SQL Server Azure SQL Database](../../../includes/applies-to-version/sql-asdb.md)]
@@ -34,8 +34,8 @@ BACPAC를 데이터베이스로 가져올 때 BACPAC의 암호화된 데이터�
 데이터베이스를 내보내고 가져오는 방법에 대한 자세한 내용은 다음을 참조하세요.
 - [데이터 계층 애플리케이션 내보내기](../../data-tier-applications/export-a-data-tier-application.md)
 - [BACPAC 파일을 가져와 새 사용자 데이터베이스 만들기](../../data-tier-applications/import-a-bacpac-file-to-create-a-new-user-database.md)
-- [Azure SQL 데이터베이스를 BACPAC 파일로 내보내기](https://docs.microsoft.com/azure/sql-database/sql-database-export)
-- [BACPAC 파일을 Azure SQL Database 데이터베이스로 가져오기](https://docs.microsoft.com/azure/sql-database/sql-database-import)
+- [Azure SQL 데이터베이스를 BACPAC 파일로 내보내기](/azure/sql-database/sql-database-export)
+- [BACPAC 파일을 Azure SQL Database 데이터베이스로 가져오기](/azure/sql-database/sql-database-import)
 - [SqlPackage.exe](../../../tools/sqlpackage.md)
 
 ## <a name="permissions-for-migrating-databases-with-encrypted-columns"></a>Encrypted 열을 사용하여 데이터베이스를 마이그레이션할 수 있는 rnjsgks

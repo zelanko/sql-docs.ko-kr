@@ -11,18 +11,18 @@ ms.assetid: 1d196dd6-4322-4c98-bb72-602c57d96134
 author: nahk-ivanov
 ms.author: alexiva
 manager: alexiva
-ms.openlocfilehash: 194d33d0b5318ca66494b838c7f59dfde5c72b88
-ms.sourcegitcommit: e8f6c51d4702c0046aec1394109bc0503ca182f0
+ms.openlocfilehash: 98070662e3e097aea0edc6c0879a8c63e4bb5850
+ms.sourcegitcommit: a5398f107599102af7c8cda815d8e5e9a367ce7e
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 08/07/2020
-ms.locfileid: "87933444"
+ms.lasthandoff: 10/13/2020
+ms.locfileid: "92005869"
 ---
 # <a name="migrating-oracle-databases-to-sql-server-oracletosql"></a>Oracle 데이터베이스를 SQL Server로 마이그레이션(OracleToSQL)
-[!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]Oracle 용 SSMA (Migration Assistant)는 Oracle 데이터베이스를 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] , Azure SQL Database 또는 Azure SQL Data Warehouse으로 신속 하 게 마이그레이션하는 데 도움이 되는 포괄적인 환경입니다. Oracle 용 SSMA를 사용 하 여 데이터베이스 개체 및 데이터를 검토 하 고, 마이그레이션을 위해 데이터베이스를 평가 하 고, 데이터베이스 개체를 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] , Azure SQL Database 또는 Azure SQL Data Warehouse로 마이그레이션한 다음 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] , Azure SQL Database 또는 Azure SQL Data Warehouse로 데이터를 마이그레이션할 수 있습니다. SYS 및 시스템 Oracle 스키마는 마이그레이션할 수 없습니다.
+[!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] Oracle 용 SSMA (Migration Assistant)는 Oracle 데이터베이스를 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] , Azure SQL Database 또는 Azure Synapse Analytics로 신속 하 게 마이그레이션하는 데 도움이 되는 포괄적인 환경입니다. Oracle 용 SSMA를 사용 하 여 데이터베이스 개체 및 데이터를 검토 하 고, 마이그레이션을 위해 데이터베이스를 평가 하 고, 데이터베이스 개체를 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] , Azure SQL Database 또는 Azure Synapse analytics로 마이그레이션한 다음 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] , Azure SQL Database 또는 Azure Synapse analytics로 데이터를 마이그레이션할 수 있습니다. SYS 및 시스템 Oracle 스키마는 마이그레이션할 수 없습니다.
   
 ## <a name="recommended-migration-process"></a>권장 마이그레이션 프로세스  
-Oracle 데이터베이스에서, Azure SQL Database 또는 Azure SQL Data Warehouse 개체와 데이터를 성공적으로 마이그레이션하려면 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 다음 프로세스를 사용 합니다.
+Oracle 데이터베이스에서, Azure SQL Database 또는 Azure Synapse Analytics로 개체 및 데이터를 성공적으로 마이그레이션하려면 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 다음 프로세스를 사용 합니다.
   
 1.  [새 SSMA 프로젝트를 만듭니다](working-with-ssma-projects-oracletosql.md).  
   
@@ -51,6 +51,6 @@ Oracle 데이터베이스에서, Azure SQL Database 또는 Azure SQL Data Wareho
 9. 필요한 경우 데이터베이스 응용 프로그램을 업데이트 합니다.  
   
 ## <a name="see-also"></a>참고 항목  
-[OracleToSQL&#41;&#40;Oracle 용 SSMA 설치](../../ssma/oracle/installing-ssma-for-oracle-oracletosql.md)  
-[Oracle &#40;OracleToSQL&#41;에 대 한 SSMA 시작](../../ssma/oracle/getting-started-with-ssma-for-oracle-oracletosql.md)  
+[OracleToSQL&#41;&#40;Oracle 용 SSMA 설치 ](../../ssma/oracle/installing-ssma-for-oracle-oracletosql.md)  
+[Oracle &#40;OracleToSQL&#41;에 대 한 SSMA 시작 ](../../ssma/oracle/getting-started-with-ssma-for-oracle-oracletosql.md)  
   

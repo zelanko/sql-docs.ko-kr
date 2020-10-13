@@ -17,12 +17,12 @@ author: MashaMSFT
 ms.author: mathoma
 monikerRange: '>=sql-server-2017||=sqlallproducts-allversions||>=sql-server-linux-2017||=azuresqldb-mi-current'
 ms.custom: seo-lt-2019
-ms.openlocfilehash: 7d05c7c6b049958f2f6280f3ee8ed2ae56ce325d
-ms.sourcegitcommit: da88320c474c1c9124574f90d549c50ee3387b4c
+ms.openlocfilehash: b067b668cfdf0dc42596d7fb6858240ad8d944e9
+ms.sourcegitcommit: 4d370399f6f142e25075b3714e5c2ce056b1bfd0
 ms.translationtype: HT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 07/01/2020
-ms.locfileid: "85650849"
+ms.lasthandoff: 10/09/2020
+ms.locfileid: "91867716"
 ---
 # <a name="examples-of-bulk-access-to-data-in-azure-blob-storage"></a>Azure Blob 스토리지 데이터에 대한 대량 액세스 예제
 
@@ -40,7 +40,7 @@ SQL Server에서 Azure Blob Storage에 대량 액세스하려면 적어도 [!INC
 아래 모든 예제에는 공유 액세스 서명을 참조하는 데이터베이스 범위 자격 증명이 필요합니다.
 
 > [!IMPORTANT]
-> 외부 데이터 원본은 `SHARED ACCESS SIGNATURE` ID를 사용하는 데이터베이스 범위 자격 증명으로 만들어야 합니다. 스토리지 계정에 대한 공유 액세스 서명을 만들려면 Azure Portal에서 스토리지 계정 속성 페이지의 **공유 액세스 서명** 속성을 참조하세요. 공유 액세스 서명에 대한 자세한 내용은 [SAS(공유 액세스 서명) 사용](https://docs.microsoft.com/azure/storage/storage-dotnet-shared-access-signature-part-1)을 참조하세요. 자격 증명에 대한 자세한 내용은 [CREATE DATABASE SCOPED CREDENTIAL](../../t-sql/statements/create-database-scoped-credential-transact-sql.md)을 참조하세요.
+> 외부 데이터 원본은 `SHARED ACCESS SIGNATURE` ID를 사용하는 데이터베이스 범위 자격 증명으로 만들어야 합니다. 스토리지 계정에 대한 공유 액세스 서명을 만들려면 Azure Portal에서 스토리지 계정 속성 페이지의 **공유 액세스 서명** 속성을 참조하세요. 공유 액세스 서명에 대한 자세한 내용은 [SAS(공유 액세스 서명) 사용](/azure/storage/storage-dotnet-shared-access-signature-part-1)을 참조하세요. 자격 증명에 대한 자세한 내용은 [CREATE DATABASE SCOPED CREDENTIAL](../../t-sql/statements/create-database-scoped-credential-transact-sql.md)을 참조하세요.
 
 `SHARED ACCESS SIGNATURE`여야 하는 `IDENTITY`를 사용하여 데이터베이스 범위 자격 증명을 만듭니다. BLOB 스토리지 계정에 대해 생성된 SAS 토큰을 사용합니다. SAS 토큰에 선행하는 `?`이(가) 없는지, 로드해야 하는 개체의 읽기 권한이 하나 이상인지 및 만료 기간(모든 날짜는 UTC 시간임)이 유효한지 확인하세요.
 

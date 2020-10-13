@@ -15,12 +15,12 @@ helpviewer_keywords:
 ms.assetid: d7be5ac5-4c8e-4d0a-b114-939eb97dac4d
 author: MashaMSFT
 ms.author: mathoma
-ms.openlocfilehash: 74220a441301bdb44c00a6e6a998861df2c6ce02
-ms.sourcegitcommit: edad5252ed01151ef2b94001c8a0faf1241f9f7b
+ms.openlocfilehash: 4d6e28a0e86a240d03ab4cdccac843488ff84446
+ms.sourcegitcommit: 4d370399f6f142e25075b3714e5c2ce056b1bfd0
 ms.translationtype: HT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 07/02/2020
-ms.locfileid: "85834764"
+ms.lasthandoff: 10/09/2020
+ms.locfileid: "91869303"
 ---
 # <a name="the-transaction-log-sql-server"></a>트랜잭션 로그(SQL Server)
  [!INCLUDE [SQL Server](../../includes/applies-to-version/sqlserver.md)]
@@ -57,7 +57,7 @@ ms.locfileid: "85834764"
 각 로그 백업을 복원할 때 [!INCLUDE[ssde_md](../../includes/ssde_md.md)]은 로그에 기록된 모든 수정 내용을 다시 적용하여 모든 트랜잭션을 롤포워드합니다. 마지막 로그 백업이 복원되면 [!INCLUDE[ssde_md](../../includes/ssde_md.md)]은 로그 정보를 사용하여 해당 지점에서 완료되지 않은 모든 트랜잭션을 롤백합니다. 자세한 내용은 [복원 및 복구 개요(SQL Server)](../../relational-databases/backup-restore/restore-and-recovery-overview-sql-server.md#TlogAndRecovery)를 참조하세요.
 
 ### <a name="supporting-transactional-replication"></a>트랜잭션 복제 지원
-로그 판독기 에이전트는 트랜잭션 복제를 위해 구성한 각 데이터베이스의 트랜잭션 로그를 모니터링하고 복제 표시된 트랜잭션을 트랜잭션 로그에서 배포 데이터베이스로 복사합니다. 자세한 내용은 [트랜잭션 복제 작동 방법](https://docs.microsoft.com/previous-versions/sql/sql-server-2008-r2/ms151706(v=sql.105))을 참조하세요.
+로그 판독기 에이전트는 트랜잭션 복제를 위해 구성한 각 데이터베이스의 트랜잭션 로그를 모니터링하고 복제 표시된 트랜잭션을 트랜잭션 로그에서 배포 데이터베이스로 복사합니다. 자세한 내용은 [트랜잭션 복제 작동 방법](/previous-versions/sql/sql-server-2008-r2/ms151706(v=sql.105))을 참조하세요.
 
 ### <a name="supporting-high-availability-and-disaster-recovery-solutions"></a>고가용성 및 재해 복구 솔루션 지원
 대기 서버 솔루션, [!INCLUDE[ssHADR](../../includes/sshadr-md.md)], 데이터베이스 미러링 및 로그 전달은 트랜잭션 로그를 많이 사용합니다. 
@@ -192,5 +192,4 @@ ms.locfileid: "85834764"
 [트랜잭션 로그 백업&#40;SQL Server&#41;](../../relational-databases/backup-restore/transaction-log-backups-sql-server.md)    
 [sys.dm_db_log_info &#40;Transact-SQL&#41;](../../relational-databases/system-dynamic-management-views/sys-dm-db-log-info-transact-sql.md)  
 [sys.dm_db_log_space_usage &#40;Transact-SQL&#41;](../../relational-databases/system-dynamic-management-views/sys-dm-db-log-space-usage-transact-sql.md)    
-  
   

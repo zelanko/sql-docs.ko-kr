@@ -12,12 +12,12 @@ ms.assetid: 2b67292d-6d8e-4016-9063-a97461ffe57a
 author: markingmyname
 ms.author: maghan
 monikerRange: =azuresqldb-current||>=sql-server-2016||=sqlallproducts-allversions||>=sql-server-linux-2017||=azuresqldb-mi-current
-ms.openlocfilehash: 464ee40e94e457de56960f18934972d30c7d80c8
-ms.sourcegitcommit: dd36d1cbe32cd5a65c6638e8f252b0bd8145e165
+ms.openlocfilehash: 0f2c00e3a3be3e80662d9ec360f82c2103a96af1
+ms.sourcegitcommit: 4d370399f6f142e25075b3714e5c2ce056b1bfd0
 ms.translationtype: HT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 09/08/2020
-ms.locfileid: "89546943"
+ms.lasthandoff: 10/09/2020
+ms.locfileid: "91867496"
 ---
 # <a name="sql-server-management-objects-support-for-in-memory-oltp"></a>메모리 내 OLTP에 대한 SQL Server 관리 개체 지원
 [!INCLUDE [SQL Server Azure SQL Database](../../includes/applies-to-version/sql-asdb.md)]
@@ -164,5 +164,5 @@ public class A {
   
 ## <a name="see-also"></a>참고 항목  
 
-- [메모리 내 OLTP에 대한 SQL Server 지원](sql-server-support-for-in-memory-oltp.md)
+- [메모리 내 OLTP에 대한 SQL Server 지원](./transact-sql-support-for-in-memory-oltp.md)
 - [SMO 개요](../server-management-objects-smo/overview-smo.md)

@@ -24,12 +24,12 @@ ms.assetid: fb163e47-1546-4682-abaa-8c9494e9ddc7
 author: VanMSFT
 ms.author: vanto
 monikerRange: '>=aps-pdw-2016||=azuresqldb-current||=azure-sqldw-latest||>=sql-server-2016||=sqlallproducts-allversions||>=sql-server-linux-2017||=azuresqldb-mi-current'
-ms.openlocfilehash: 860f4d84084916982fb8328e2fa1cc373d8b3204
-ms.sourcegitcommit: f3321ed29d6d8725ba6378d207277a57cb5fe8c2
+ms.openlocfilehash: 77b94fa9994a42dd11b6fa5a54fffd222e87feb2
+ms.sourcegitcommit: 4d370399f6f142e25075b3714e5c2ce056b1bfd0
 ms.translationtype: HT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 07/06/2020
-ms.locfileid: "86005685"
+ms.lasthandoff: 10/09/2020
+ms.locfileid: "91867446"
 ---
 # <a name="create-a-login"></a>로그인 만들기
 [!INCLUDE [SQL Server](../../../includes/applies-to-version/sql-asdb-asdbmi-asa-pdw.md)]
@@ -66,9 +66,9 @@ ms.locfileid: "86005685"
   
     2.  **찾을 위치를 선택하세요.** 에서 **위치...** 를 클릭하여 **위치** 대화 상자를 열고 사용 가능한 서버 위치 중 하나를 선택합니다. 완료되었으면 **확인**을 클릭합니다.  
   
-    3.  **선택할 개체 이름을 입력하세요(예제)** 에서 찾으려는 사용자 또는 그룹 이름을 입력합니다. 자세한 내용은 [사용자, 컴퓨터 또는 그룹 선택 대화 상자](https://technet.microsoft.com/library/cc771712.aspx)를 참조하세요.  
+    3.  **선택할 개체 이름을 입력하세요(예제)** 에서 찾으려는 사용자 또는 그룹 이름을 입력합니다. 자세한 내용은 [사용자, 컴퓨터 또는 그룹 선택 대화 상자](/previous-versions/windows/it-pro/windows-server-2008-R2-and-2008/cc771712(v=ws.11))를 참조하세요.  
   
-    4.  고급 검색 옵션을 보려면 **고급...** 을 클릭합니다. 자세한 내용은 [사용자, 컴퓨터 또는 그룹 선택 대화 상자 - 고급 페이지](https://technet.microsoft.com/library/cc733110.aspx)를 참조하세요.  
+    4.  고급 검색 옵션을 보려면 **고급...** 을 클릭합니다. 자세한 내용은 [사용자, 컴퓨터 또는 그룹 선택 대화 상자 - 고급 페이지](/previous-versions/windows/it-pro/windows-server-2008-R2-and-2008/cc733110(v=ws.11))를 참조하세요.  
   
     5.  **확인**을 클릭합니다.  
   
@@ -275,5 +275,4 @@ ms.locfileid: "86005685"
   
 ## <a name="see-also"></a>참고 항목  
  [SQL Server 데이터베이스 엔진 및 Azure SQL Database 보안 센터](../../../relational-databases/security/security-center-for-sql-server-database-engine-and-azure-sql-database.md)  
-  
   

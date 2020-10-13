@@ -24,12 +24,12 @@ ms.assetid: b86a88ba-4f7c-4e19-9fbd-2f8bcd3be14a
 author: julieMSFT
 ms.author: jrasnick
 monikerRange: '>=aps-pdw-2016||=azuresqldb-current||=azure-sqldw-latest||>=sql-server-2016||=sqlallproducts-allversions||>=sql-server-linux-2017||=azuresqldb-mi-current'
-ms.openlocfilehash: fbe55bf680ffbb80dca592d9bbdf63d86aaa793c
-ms.sourcegitcommit: cc23d8646041336d119b74bf239a6ac305ff3d31
+ms.openlocfilehash: dc2c5467768aa92badb1a74e90a9f940eb0732e3
+ms.sourcegitcommit: 04cf7905fa32e0a9a44575a6f9641d9a2e5ac0f8
 ms.translationtype: HT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 09/23/2020
-ms.locfileid: "91116571"
+ms.lasthandoff: 10/07/2020
+ms.locfileid: "91810529"
 ---
 # <a name="statistics"></a>통계
 
@@ -121,7 +121,7 @@ ORDER BY s.name;
 [!INCLUDE[ssSQL15](../../includes/sssql15-md.md)] 이전 환경에서 추적 플래그 2371을 사용하도록 설정하는 경우 다음 지침을 사용할 수 있습니다.
 
  - 오래된 통계로 인한 성능 문제가 관찰되지 않은 경우 이 추적 플래그를 사용하도록 설정할 필요가 없습니다.
- - SAP 시스템을 기반으로 하는 경우 이 추적 플래그를 사용하도록 설정합니다.  자세한 내용은 이 [블로그](https://docs.microsoft.com/archive/blogs/saponsqlserver/changes-to-automatic-update-statistics-in-sql-server-traceflag-2371)를 참조하세요.
+ - SAP 시스템을 기반으로 하는 경우 이 추적 플래그를 사용하도록 설정합니다.  자세한 내용은 이 [블로그](/archive/blogs/saponsqlserver/changes-to-automatic-update-statistics-in-sql-server-traceflag-2371)를 참조하세요.
  - 현재 자동 업데이트가 충분히 자주 트리거되지 않아 주로 야간작업으로 통계를 업데이트해야 하는 경우 추적 플래그 2371을 사용하도록 설정하여 임계값을 줄여 보세요.
   
 쿼리 최적화 프로그램은 쿼리를 컴파일하기 전과 캐시된 쿼리 계획을 실행하기 전에 최신이 아닌 통계가 있는지를 확인합니다. 쿼리 최적화 프로그램은 쿼리를 컴파일하기 전에 쿼리 조건자의 열, 테이블 및 인덱싱된 뷰를 사용하여 어떤 통계가 최신이 아닌지 결정합니다. [!INCLUDE[ssDE](../../includes/ssde-md.md)] 에서는 캐시된 쿼리 계획을 실행하기 전에 쿼리 계획에서 최신 통계가 참조되는지 확인합니다.  
@@ -406,4 +406,4 @@ GO
  [sys.dm_db_stats_histogram&#40;Transact-SQL&#41;](../../relational-databases/system-dynamic-management-views/sys-dm-db-stats-histogram-transact-sql.md)  
  [sys.stats](../../relational-databases/system-catalog-views/sys-stats-transact-sql.md)  
  [sys.stats_columns &#40;Transact-SQL&#41;](../../relational-databases/system-catalog-views/sys-stats-columns-transact-sql.md)    
- [Adaptive Index Defrag](https://github.com/Microsoft/tigertoolbox/tree/master/AdaptiveIndexDefrag)   
+ [Adaptive Index Defrag](https://github.com/Microsoft/tigertoolbox/tree/master/AdaptiveIndexDefrag)
