@@ -13,12 +13,12 @@ helpviewer_keywords:
 ms.assetid: 74eee587-d5f5-4d1a-bbae-7f4e3f27e23b
 author: MashaMSFT
 ms.author: mathoma
-ms.openlocfilehash: 59ad240e910a4188672b0d73abcd98f168603f94
-ms.sourcegitcommit: e700497f962e4c2274df16d9e651059b42ff1a10
+ms.openlocfilehash: 9db611e60deea85ee5d24006f111db425f66924f
+ms.sourcegitcommit: 4d370399f6f142e25075b3714e5c2ce056b1bfd0
 ms.translationtype: HT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 08/17/2020
-ms.locfileid: "88326899"
+ms.lasthandoff: 10/09/2020
+ms.locfileid: "91868221"
 ---
 # <a name="security-architecture-for-web-synchronization"></a>웹 동기화를 위한 보안 아키텍처
 [!INCLUDE [SQL Server](../../../includes/applies-to-version/sqlserver.md)]
@@ -131,7 +131,7 @@ ms.locfileid: "88326899"
   
 -   Xmlsub  
   
- 또한 이 계정은 IIS_WPG 그룹의 일부여야 합니다. 자세한 내용은 [웹 동기화를 위한 IIS 구성](../../../relational-databases/replication/configure-iis-for-web-synchronization.md)의 "[!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] 복제 수신기에 대한 사용 권한 설정" 섹션을 참조하세요.  
+ 또한 이 계정은 IIS_WPG 그룹의 일부여야 합니다. 자세한 내용은 [웹 동기화를 위한 IIS 구성](../configure-iis-7-for-web-synchronization.md)의 "[!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] 복제 수신기에 대한 사용 권한 설정" 섹션을 참조하세요.  
   
 |계정 유형|계정 지정 위치|  
 |---------------------|------------------------------------|  
@@ -140,5 +140,4 @@ ms.locfileid: "88326899"
 ## <a name="see-also"></a>참고 항목  
  [Configure Web Synchronization](../../../relational-databases/replication/configure-web-synchronization.md)   
  [Replication Merge Agent](../../../relational-databases/replication/agents/replication-merge-agent.md)  
-  
   

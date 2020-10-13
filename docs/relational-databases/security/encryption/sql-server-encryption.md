@@ -16,12 +16,12 @@ ms.assetid: ead0150e-4943-4ad5-84c8-36f85c7278f4
 author: jaszymas
 ms.author: jaszymas
 monikerRange: =azuresqldb-current||>=sql-server-2016||=sqlallproducts-allversions||>=sql-server-linux-2017||=azuresqldb-mi-current
-ms.openlocfilehash: d749c2707c78aa452bdb6a55f2f2d477ea0fb465
-ms.sourcegitcommit: da88320c474c1c9124574f90d549c50ee3387b4c
+ms.openlocfilehash: 702b7f39a3435255432474542b74a8d1f210284d
+ms.sourcegitcommit: 4d370399f6f142e25075b3714e5c2ce056b1bfd0
 ms.translationtype: HT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 07/01/2020
-ms.locfileid: "85720437"
+ms.lasthandoff: 10/09/2020
+ms.locfileid: "91869240"
 ---
 # <a name="sql-server-encryption"></a>SQL Server 암호화
 [!INCLUDE [SQL Server Azure SQL Database](../../../includes/applies-to-version/sql-asdb.md)]
@@ -61,7 +61,7 @@ ms.locfileid: "85720437"
  [SQL Server 보안 설정](../../../relational-databases/security/securing-sql-server.md)  
  [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] 플랫폼에 보안을 설정하는 방법 및 사용자 및 보안 개체 작업을 수행하는 방법에 대한 개요입니다.  
 
-[Azure SQL Database 보안 기능 개요](https://docs.microsoft.com/azure/sql-database/sql-database-security-overview)
+[Azure SQL Database 보안 기능 개요](/azure/sql-database/sql-database-security-overview)
 </br>데이터 보호, 액세스 제어, 사전 대처식 모니터링을 위한 Azure SQL Database 보안 개요입니다.
   
  [암호화 함수&#40;Transact-SQL&#41;](../../../t-sql/functions/cryptographic-functions-transact-sql.md)  
@@ -88,5 +88,4 @@ ms.locfileid: "85720437"
  [SQL Server 및 데이터베이스 암호화 키&#40;데이터베이스 엔진&#41;](../../../relational-databases/security/encryption/sql-server-and-database-encryption-keys-database-engine.md)   
  [Reporting Services 암호화 키 백업 및 복원](../../../reporting-services/install-windows/ssrs-encryption-keys-back-up-and-restore-encryption-keys.md)     
  [데이터베이스 엔진에 암호화된 연결 사용](../../../database-engine/configure-windows/enable-encrypted-connections-to-the-database-engine.md)    
-  
   

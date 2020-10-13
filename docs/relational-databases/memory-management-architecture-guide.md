@@ -27,12 +27,12 @@ ms.assetid: 7b0d0988-a3d8-4c25-a276-c1bdba80d6d5
 author: rothja
 ms.author: jroth
 monikerRange: '>=aps-pdw-2016||=azuresqldb-current||=azure-sqldw-latest||>=sql-server-2016||=sqlallproducts-allversions||>=sql-server-linux-2017||=azuresqldb-mi-current'
-ms.openlocfilehash: 8677c1e3fff32a5ea2ae43f6437f0d219180123c
-ms.sourcegitcommit: cc23d8646041336d119b74bf239a6ac305ff3d31
+ms.openlocfilehash: aaf9bcf9387d4414959e569301e16f348f1164c0
+ms.sourcegitcommit: 04cf7905fa32e0a9a44575a6f9641d9a2e5ac0f8
 ms.translationtype: HT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 09/23/2020
-ms.locfileid: "91116218"
+ms.lasthandoff: 10/07/2020
+ms.locfileid: "91809829"
 ---
 # <a name="memory-management-architecture-guide"></a>메모리 관리 아키텍처 가이드
 
@@ -81,7 +81,7 @@ AWE와 Lock Pages in Memory 권한을 사용하면 [!INCLUDE[ssNoVersion](../inc
 <sup>6</sup> 32비트에서 AWE 지원에 대해 또는 64비트에서 단독으로 LPIM(메모리의 페이지 잠금) 권한이 부여된 경우 max server memory도 설정하는 것이 좋습니다. LPIM에 대한 자세한 내용은 [서버 메모리 서버 구성 옵션](../database-engine/configure-windows/server-memory-server-configuration-options.md#lock-pages-in-memory-lpim)을 참조하세요.
 
 > [!NOTE]
-> 이전 버전의 [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)] 는 32비트 운영 체제에서 실행할 수 있었습니다. 32비트 운영 체제에서 4GB가 넘는 메모리에 액세스하려면 AWE(Address Windowing Extension)에서 메모리를 관리해야 합니다. 이는 [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)] 를 64비트 운영 체제에서 실행할 경우에는 필요하지 않습니다. AWE에 대한 자세한 내용은 [!INCLUDE[ssKatmai](../includes/ssKatmai-md.md)] 설명서에서 [프로세스 주소 공간](https://msdn.microsoft.com/library/ms189334.aspx) 및 [큰 데이터베이스의 메모리 관리](https://msdn.microsoft.com/library/ms191481.aspx)를 참조하세요.   
+> 이전 버전의 [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)] 는 32비트 운영 체제에서 실행할 수 있었습니다. 32비트 운영 체제에서 4GB가 넘는 메모리에 액세스하려면 AWE(Address Windowing Extension)에서 메모리를 관리해야 합니다. 이는 [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)] 를 64비트 운영 체제에서 실행할 경우에는 필요하지 않습니다. AWE에 대한 자세한 내용은 [!INCLUDE[ssKatmai](../includes/ssKatmai-md.md)] 설명서에서 [프로세스 주소 공간](/previous-versions/sql/sql-server-2008-r2/ms189334(v=sql.105)) 및 [큰 데이터베이스의 메모리 관리](/previous-versions/sql/sql-server-2008-r2/ms191481(v=sql.105))를 참조하세요.   
 
 <a name="changes-to-memory-management-starting-2012-11x-gm"></a>
 

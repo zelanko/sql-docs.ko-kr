@@ -15,12 +15,12 @@ ms.assetid: 3a5f4592-3c61-4b4d-9ceb-39716aeeba41
 author: MashaMSFT
 ms.author: mathoma
 monikerRange: =azuresqldb-mi-current||>=sql-server-2016||=sqlallproducts-allversions
-ms.openlocfilehash: 6644a84c2134735cefd489c4ddf6abdae775c412
-ms.sourcegitcommit: da88320c474c1c9124574f90d549c50ee3387b4c
+ms.openlocfilehash: 0690ad04a9b4dfdb2edd22c4e882616c2f8bf73f
+ms.sourcegitcommit: 4d370399f6f142e25075b3714e5c2ce056b1bfd0
 ms.translationtype: HT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 07/01/2020
-ms.locfileid: "85723097"
+ms.lasthandoff: 10/09/2020
+ms.locfileid: "91869505"
 ---
 # <a name="sql-server-replication"></a>SQL Server 복제
 [!INCLUDE [SQL Server SQL MI](../../includes/applies-to-version/sql-asdbmi.md)]
@@ -134,7 +134,6 @@ ms.locfileid: "85723097"
 -   [비관리자의 복제 모니터 사용 허용](monitor/allow-non-administrators-to-use-replication-monitor.md)    
 -   [프로그래밍 방식으로 복제 모니터링](monitor/programmatically-monitor-replication.md)    
 -   [배포 데이터베이스의 복제된 명령 및 기타 정보 보기&#40;복제 Transact-SQL 프로그래밍&#41;](monitor/view-replicated-commands-and-information-in-distribution-database.md)    
--   [병합 게시에 대한 충돌 정보 보기&#40;복제 Transact-SQL 프로그래밍&#41;](view-conflict-information-for-merge-publications.md) 
+-   [병합 게시에 대한 충돌 정보 보기&#40;복제 Transact-SQL 프로그래밍&#41;](./view-and-resolve-data-conflicts-for-merge-publications.md) 
 -   [트랜잭션 복제에 대한 대기 시간 측정 및 연결 유효성 검사](monitor/measure-latency-and-validate-connections-for-transactional-replication.md)  
-  
   

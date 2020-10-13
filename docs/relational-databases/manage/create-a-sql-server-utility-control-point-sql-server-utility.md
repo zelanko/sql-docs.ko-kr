@@ -21,12 +21,12 @@ helpviewer_keywords:
 ms.assetid: d5335124-1625-47ce-b4ac-36078967158c
 author: MikeRayMSFT
 ms.author: mikeray
-ms.openlocfilehash: d29ab79c75adb436b45faab5e8161c8d01e6c533
-ms.sourcegitcommit: 01297f2487fe017760adcc6db5d1df2c1234abb4
+ms.openlocfilehash: 1d0951c4b5a51596db015a39ff146383a0b2aa6a
+ms.sourcegitcommit: 04cf7905fa32e0a9a44575a6f9641d9a2e5ac0f8
 ms.translationtype: HT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 07/09/2020
-ms.locfileid: "86196894"
+ms.lasthandoff: 10/07/2020
+ms.locfileid: "91809543"
 ---
 # <a name="create-a-sql-server-utility-control-point-sql-server-utility"></a>SQL Server 유틸리티 제어 지점 만들기(SQL Server 유틸리티)
  [!INCLUDE [SQL Server](../../includes/applies-to-version/sqlserver.md)]
@@ -78,7 +78,7 @@ ms.locfileid: "86196894"
   
 -   UCP를 만들 때 필요한 권한인 sysadmin 권한의 사용자가 이 절차를 실행해야 합니다.  
   
--   모든 SQL Server의 관리되는 인스턴스는 해당 UCP에서 제거되어야 합니다. 즉, UCP가 SQL Server의 관리되는 인스턴스입니다. 자세한 내용은 [방법: SQL Server 유틸리티에서 SQL Server 인스턴스 제거](https://go.microsoft.com/fwlink/?LinkId=169392)를 참조하세요.  
+-   모든 SQL Server의 관리되는 인스턴스는 해당 UCP에서 제거되어야 합니다. 즉, UCP가 SQL Server의 관리되는 인스턴스입니다. 자세한 내용은 [방법: SQL Server 유틸리티에서 SQL Server 인스턴스 제거](/previous-versions/sql/sql-server-2008-r2/ee210565(v=sql.105))를 참조하세요.  
   
  이 프로시저를 사용하여 SQL Server 유틸리티에서 SQL Server UCP를 제거합니다. 제거가 완료되면 SQL Server 인스턴스에서 UCP를 다시 만들 수 있습니다.  
   
@@ -140,7 +140,7 @@ EXEC msdb.dbo.sp_sysutility_ucp_remove;
  계속하려면 **다음**을 클릭합니다.  
   
 ##  <a name="connection-dialog"></a><a name="Connection_dialog"></a> 연결 대화 상자  
- 서버로 연결 대화 상자에서 서버 유형, 컴퓨터 이름 및 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 인스턴스 이름 정보를 확인합니다. 자세한 내용은 [서버에 연결&#40;데이터베이스 엔진&#41;](https://msdn.microsoft.com/library/ee9017b4-8a19-4360-9003-9e6484082d41)을 참조하세요.  
+ 서버로 연결 대화 상자에서 서버 유형, 컴퓨터 이름 및 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 인스턴스 이름 정보를 확인합니다. 자세한 내용은 [서버에 연결&#40;데이터베이스 엔진&#41;](../../ssms/f1-help/connect-to-server-database-engine.md)을 참조하세요.  
   
 > [!NOTE]  
 >  연결이 암호화되어 있으면 암호화 연결이 사용됩니다. 연결이 암호화되어 있지 않으면 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 유틸리티는 암호화된 연결을 사용하여 다시 연결합니다.  
@@ -170,7 +170,7 @@ EXEC msdb.dbo.sp_sysutility_ucp_remove;
 |[!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 인스턴스에 "sysutility_mdw"라는 데이터베이스가 있으면 안 됩니다.|UCP 만들기 작업을 수행하면 "sysutility_mdw"라는 UMDW(유틸리티 관리 데이터 웨어하우스)가 생성됩니다. 이 작업을 수행하려면 유효성 검사가 실행되는 시점에 컴퓨터에 이 이름이 존재하지 않아야 합니다. 계속하려면 "sysutility_mdw"라는 데이터베이스를 제거하거나 이름을 변경해야 합니다. 이름을 변경하는 방법은 [ALTER DATABASE&#40;Transact-SQL&#41;](../../t-sql/statements/alter-database-transact-sql.md)를 참조하세요.|  
 |지정된 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 인스턴스의 컬렉션 집합은 중지해야 합니다.|지정된 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]인스턴스에 UCP가 생성되는 동안 기존 컬렉션 집합을 중지합니다. 데이터 수집기가 해제된 경우 이를 설정하고 실행 중인 컬렉션 집합을 중지한 다음 UCP 생성 작업을 위한 유효성 검사 규칙을 다시 실행합니다.<br /><br /> 데이터 수집기를 활성화하려면<br /><br /> 개체 탐색기에서 **관리** 노드를 확장합니다.<br /><br /> **데이터 컬렉션**을 마우스 오른쪽 단추로 클릭한 다음 **데이터 컬렉션 사용**을 클릭합니다.<br /><br /> 컬렉션 집합을 중지하려면<br /><br /> 개체 탐색기에서 관리 노드, **데이터 컬렉션**, **시스템 데이터 컬렉션 집합**을 차례로 확장합니다.<br /><br /> 중지할 컬렉션 집합을 마우스 오른쪽 단추로 클릭한 다음 **데이터 컬렉션 집합 중지**를 클릭합니다.<br /><br /> 메시지 상자에 이 동작의 결과가 표시되며, 컬렉션 집합의 아이콘에 빨간색 원이 표시되어 컬렉션 집합이 중지되었음을 나타냅니다.|  
 |지정한 인스턴스에서 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 에이전트 서비스가 시작해야 합니다. 지정한 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 인스턴스가 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 장애 조치(failover) 클러스터 인스턴스일 경우 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 에이전트 서비스가 수동으로 시작되도록 구성되어야 합니다. 그렇지 않을 경우 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 에이전트 서비스가 자동으로 시작하도록 구성되어야 합니다.|[!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 에이전트 서비스를 시작합니다. 지정한 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 인스턴스가 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 장애 조치(failover) 클러스터 인스턴스일 경우 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 에이전트 서비스를 수동으로 시작하도록 구성합니다. 그렇지 않을 경우 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 에이전트 서비스가 자동으로 시작하도록 구성합니다.|  
-|WMI가 올바르게 구성되어 있어야 합니다.|WMI 구성 문제를 해결하려면 [SQL Server 유틸리티 문제 해결](https://msdn.microsoft.com/library/f5f47c2a-38ea-40f8-9767-9bc138d14453)을 참조하세요.|  
+|WMI가 올바르게 구성되어 있어야 합니다.|WMI 구성 문제를 해결하려면 [SQL Server 유틸리티 문제 해결](/previous-versions/sql/sql-server-2016/ee210592(v=sql.130))을 참조하세요.|  
 |[!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 에이전트 프록시 계정은 Network Service와 같은 기본 제공 계정일 수 없습니다.|[!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 에이전트 프록시 계정이 Network Service와 같은 기본 제공 계정인 경우 계정을 sysadmin인 Windows 도메인 계정으로 다시 할당하세요.|  
 |프록시 계정 옵션을 선택한 경우 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 에이전트 프록시 계정은 유효한 Windows 도메인 계정이어야 합니다.|유효한 Windows 도메인 계정을 지정합니다. 계정이 유효한지 확인하려면 Windows 도메인 계정을 사용하여 지정된 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 인스턴스로 로그온합니다.|  
 |서비스 계정 옵션을 선택한 경우 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 에이전트 서비스 계정은 Network Service와 같은 기본 제공 계정일 수 없습니다.|[!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 에이전트 서비스 계정이 Network Service와 같은 기본 제공 계정인 경우 계정을 Windows 도메인 계정으로 다시 할당하세요.|  
@@ -229,6 +229,5 @@ EXEC msdb.dbo.sp_sysutility_ucp_remove;
   
 ## <a name="see-also"></a>참고 항목  
  [SQL Server 유틸리티 기능 및 태스크](../../relational-databases/manage/sql-server-utility-features-and-tasks.md)   
- [SQL Server 유틸리티 문제 해결](https://msdn.microsoft.com/library/f5f47c2a-38ea-40f8-9767-9bc138d14453)  
-  
+ [SQL Server 유틸리티 문제 해결](/previous-versions/sql/sql-server-2016/ee210592(v=sql.130))  
   

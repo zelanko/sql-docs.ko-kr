@@ -12,12 +12,12 @@ ms.assetid: fc3e22c2-3165-4ac9-87e3-bf27219c820f
 author: MikeRayMSFT
 ms.author: mikeray
 monikerRange: '>=aps-pdw-2016||=azuresqldb-current||=azure-sqldw-latest||>=sql-server-2016||=sqlallproducts-allversions||>=sql-server-linux-2017||=azuresqldb-mi-current'
-ms.openlocfilehash: e601f2b89000902647631fda9ee46a90a92e5b39
-ms.sourcegitcommit: e700497f962e4c2274df16d9e651059b42ff1a10
+ms.openlocfilehash: c2af78d5af858f6faad29c8baaf260610f377cb4
+ms.sourcegitcommit: 4d370399f6f142e25075b3714e5c2ce056b1bfd0
 ms.translationtype: HT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 08/17/2020
-ms.locfileid: "88409179"
+ms.lasthandoff: 10/09/2020
+ms.locfileid: "91868654"
 ---
 # <a name="columnstore-indexes---design-guidance"></a>Columnstore 인덱스 - 디자인 지침
 [!INCLUDE[SQL Server Azure SQL Database Synapse Analytics PDW ](../../includes/applies-to-version/sql-asdb-asdbmi-asa-pdw.md)]
@@ -66,7 +66,7 @@ columnstore 인덱스는 클러스터형이거나 비클러스터형입니다.  
 * 테이블에 varchar(max), nvarchar(max) 또는 varbinary(max) 데이터 형식이 필요합니다. 또는 이러한 열이 포함되지 않도록 columnstore 인덱스를 디자인하세요.
 * 테이블 데이터가 영구적이지 않습니다. 데이터를 신속하게 저장하고 삭제해야 하는 경우 힙이나 임시 테이블을 사용하는 것이 좋습니다.
 * 테이블에 파티션당 백만 개 미만의 행이 있습니다. 
-* 테이블에서 수행되는 작업의 10% 이상이 업데이트 및 삭제입니다. 많은 수의 업데이트 및 삭제를 수행하면 조각화가 발생합니다. 조각화는 모든 데이터를 columnstore에 적용하고 조각화를 제거하는 다시 구성이라는 작업을 실행할 때까지 압축률 및 쿼리 성능에 영향을 줍니다. 자세한 내용은 [columnstore 인덱스에서 인덱스 조각화 최소화](https://blogs.msdn.microsoft.com/sqlserverstorageengine/2016/03/07/columnstore-index-defragmentation-using-reorganize-command/)를 참조하세요.
+* 테이블에서 수행되는 작업의 10% 이상이 업데이트 및 삭제입니다. 많은 수의 업데이트 및 삭제를 수행하면 조각화가 발생합니다. 조각화는 모든 데이터를 columnstore에 적용하고 조각화를 제거하는 다시 구성이라는 작업을 실행할 때까지 압축률 및 쿼리 성능에 영향을 줍니다. 자세한 내용은 [columnstore 인덱스에서 인덱스 조각화 최소화](/archive/blogs/sqlserverstorageengine/columnstore-index-defragmentation-using-reorganize-command)를 참조하세요.
 
 자세한 내용은 [Columnstore 인덱스-데이터 웨어하우징](../../relational-databases/indexes/columnstore-indexes-data-warehouse.md)을 참조하세요.
 
@@ -100,7 +100,7 @@ columnstore 인덱스는 rowstore 인덱스보다 10배 더 뛰어난 데이터 
 
 자세한 내용은 [실시간 운영 분석을 위한 Columnstore 시작](../../relational-databases/indexes/get-started-with-columnstore-for-real-time-operational-analytics.md)을 참조하세요.
 
-최상의 columnstore 인덱스를 선택하는 방법에 대한 자세한 내용은 Sunil Agarwal의 블로그 [Which columnstore index is right for my workload?](https://blogs.msdn.microsoft.com/sql_server_team/columnstore-index-which-columnstore-index-is-right-for-my-workload)(내 워크로드에 적합한 columnstore 인덱스는 무엇일까요?)를 참조하세요.
+최상의 columnstore 인덱스를 선택하는 방법에 대한 자세한 내용은 Sunil Agarwal의 블로그 [Which columnstore index is right for my workload?](/archive/blogs/sql_server_team/columnstore-index-which-columnstore-index-is-right-for-my-workload)(내 워크로드에 적합한 columnstore 인덱스는 무엇일까요?)를 참조하세요.
 
 ## <a name="use-table-partitions-for-data-management-and-query-performance"></a>데이터 관리 및 쿼리 성능을 위해 테이블 파티션 사용
 columnstore 인덱스는 데이터를 관리하고 보관하는 적합한 방법인 분할을 지원합니다. 또한 분할에서는 하나 이상의 파티션으로 작업을 제한하여 쿼리 성능이 향상됩니다.
@@ -130,7 +130,7 @@ columnstore 인덱스는 데이터를 관리하고 보관하는 적합한 방법
 * 1,000,000개 행을 하나의 파티션 또는 분할되지 않은 테이블에 로드합니다. 1,000,000개 행이 있는 압축된 행 그룹 하나를 받습니다. 높은 데이터 압축 및 빠른 쿼리 성능에 적합합니다.
 * 1,000,000개 행을 10개의 파티션에 균등하게 로드합니다. 각 파티션은 columnstore 압축의 최소 임계값보다 작은 100,000개 행을 받습니다. 결과적으로 columnstore 인덱스에는 각각 100,000개 행이 있는 10개의 델타 행 그룹이 생성됩니다. columnstore에 델타 행 그룹을 적용하는 방법이 있습니다. 그러나 columnstore 인덱스에 행만 있는 경우 압축된 행 그룹이 너무 작아서 최상의 압축 및 쿼리 성능을 제공할 수 없습니다.
 
-분할에 대한 자세한 내용은 Sunil Agarwal의 블로그 게시물 [Should I partition my columnstore index?](https://blogs.msdn.microsoft.com/sqlserverstorageengine/2016/10/04/columnstore-index-should-i-partition-my-columnstore-index/)(내 columnstore 인덱스를 분할해야 하나요?)를 참조하세요.
+분할에 대한 자세한 내용은 Sunil Agarwal의 블로그 게시물 [Should I partition my columnstore index?](/archive/blogs/sqlserverstorageengine/columnstore-index-should-i-partition-my-columnstore-index)(내 columnstore 인덱스를 분할해야 하나요?)를 참조하세요.
 
 ## <a name="choose-the-appropriate-data-compression-method"></a>적절한 데이터 압축 방법 선택
 columnstore 인덱스에서는 columnstore 압축 및 보관 압축이라는 두 가지 데이터 압축 옵션을 제공합니다. 인덱스를 만들 때 압축 옵션을 선택하거나 나중에 [ALTER INDEX ... REBUILD](../../t-sql/statements/alter-index-transact-sql.md)를 사용하여 변경할 수 있습니다.
@@ -193,4 +193,3 @@ columnstore 인덱스는 데이터를 정렬하지 않지만 메타데이터를 
 * [!INCLUDE[ssSDW](../../includes/sssdw-md.md)]의 경우 [CREATE TABLE(Azure SQL Data Warehouse)](../../t-sql/statements/create-table-as-select-azure-sql-data-warehouse.md)을 참조하세요.
 
 기존 rowstore 힙 또는 B-트리 인덱스를 클러스터형 columnstore 인덱스로 변환하는 방법 또는 비클러스터형 columnstore 인덱스를 만드는 방법에 대한 자세한 내용은 [CREATE COLUMNSTORE INDEX(TRANSACT-SQL)](../../t-sql/statements/create-columnstore-index-transact-sql.md)를 참조하세요.
-

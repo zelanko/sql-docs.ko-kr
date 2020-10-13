@@ -12,12 +12,12 @@ ms.assetid: 5880fbd9-a23e-464a-8b44-09750eeb2dad
 author: MightyPen
 ms.author: genemi
 monikerRange: =azuresqldb-current||>=sql-server-2016||=sqlallproducts-allversions||>=sql-server-linux-2017||=azuresqldb-mi-current
-ms.openlocfilehash: 8e26bb81bb4289d2b60f069444230e6fb25142ac
-ms.sourcegitcommit: da88320c474c1c9124574f90d549c50ee3387b4c
+ms.openlocfilehash: f2600cee68204b3ec05c68e074cfc12d48cfee9c
+ms.sourcegitcommit: 4d370399f6f142e25075b3714e5c2ce056b1bfd0
 ms.translationtype: HT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 07/01/2020
-ms.locfileid: "85722442"
+ms.lasthandoff: 10/09/2020
+ms.locfileid: "91868521"
 ---
 # <a name="native-compilation-of-tables-and-stored-procedures"></a>테이블과 저장 프로시저의 네이티브 컴파일
 [!INCLUDE [SQL Server Azure SQL Database](../../includes/applies-to-version/sql-asdb.md)]
@@ -149,7 +149,7 @@ GO
 
 NATIVE_COMPILATION으로 표시된 저장 프로시저는 고유하게 컴파일됩니다. 성능에 중요한 영향을 미치는 비즈니스 논리를 효율적으로 실행하기 위해 프로시저의 [!INCLUDE[tsql](../../includes/tsql-md.md)] 문은 모두 네이티브 코드로 컴파일됩니다.
 
-고유하게 컴파일된 저장 프로시저에 대한 자세한 내용은 [Natively Compiled Stored Procedures](../../relational-databases/in-memory-oltp/natively-compiled-stored-procedures.md)를 참조하세요.
+고유하게 컴파일된 저장 프로시저에 대한 자세한 내용은 [Natively Compiled Stored Procedures](./a-guide-to-query-processing-for-memory-optimized-tables.md)를 참조하세요.
 
 다음 예제 저장 프로시저에서는 이전 예제의 테이블 t1에 행을 삽입합니다.
 
@@ -212,6 +212,6 @@ native_sp에 대한 DLL은 t1에 대한 DLL 및 메모리 내 OLTP 스토리지 
 
 ## <a name="see-also"></a>참고 항목
 
-[메모리 최적화 테이블](../../relational-databases/in-memory-oltp/memory-optimized-tables.md)
+[메모리 최적화 테이블](./sample-database-for-in-memory-oltp.md)
 
-[고유하게 컴파일된 저장 프로시저](../../relational-databases/in-memory-oltp/natively-compiled-stored-procedures.md)
+[고유하게 컴파일된 저장 프로시저](./a-guide-to-query-processing-for-memory-optimized-tables.md)

@@ -19,12 +19,12 @@ ms.author: pelopes
 ms.reviewer: mikeray
 monikerRange: =azuresqldb-current||>=sql-server-2016||=sqlallproducts-allversions||>=sql-server-linux-2017||=azuresqldb-mi-current
 ms.custom: seo-lt-2019
-ms.openlocfilehash: dad86600ba067bd0e03eb0e9b8a05be49593bf7d
-ms.sourcegitcommit: e700497f962e4c2274df16d9e651059b42ff1a10
+ms.openlocfilehash: 54c462ee83fe972eccc9347e8a9f41e570511239
+ms.sourcegitcommit: 4d370399f6f142e25075b3714e5c2ce056b1bfd0
 ms.translationtype: HT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 08/17/2020
-ms.locfileid: "88423387"
+ms.lasthandoff: 10/09/2020
+ms.locfileid: "91869400"
 ---
 # <a name="configure-and-manage-stopwords-and-stoplists-for-full-text-search"></a>전체 텍스트 검색에 사용할 중지 단어와 중지 목록 구성 및 관리
 [!INCLUDE [SQL Server Azure SQL Database](../../includes/applies-to-version/sql-asdb.md)]
@@ -69,7 +69,7 @@ ms.locfileid: "88423387"
   
     -   **기존 전체 텍스트 중지 목록에서 만들기**  
   
-     자세한 내용은 [새 전체 텍스트 중지 목록&#40;일반 페이지&#41;](https://msdn.microsoft.com/library/97f8e82d-82ab-4525-91c9-1ee3ae217309)을 참조하세요.  
+     자세한 내용은 [새 전체 텍스트 중지 목록&#40;일반 페이지&#41;](/previous-versions/sql/sql-server-2016/cc280518(v=sql.130))을 참조하세요.  
   
 8.  [!INCLUDE[clickOK](../../includes/clickok-md.md)]  
   
@@ -96,7 +96,7 @@ ms.locfileid: "88423387"
   
 4.  변경할 속성이 있는 중지 목록을 마우스 오른쪽 단추로 클릭하고 **속성**을 선택합니다.  
   
-5.  [전체 텍스트 중지 목록 속성](https://msdn.microsoft.com/library/2e907f5b-0cf9-484a-afcf-a4e7f1e2f87f) 대화 상자에서 다음을 수행합니다.  
+5.  [전체 텍스트 중지 목록 속성](/previous-versions/sql/sql-server-2016/cc280415(v=sql.130)) 대화 상자에서 다음을 수행합니다.  
   
     1.  **동작** 목록 상자에서 **중지 단어 추가**, **중지 단어 삭제**, **모든 중지 단어 삭제**또는 **중지 목록 지우기**동작 중 하나를 선택합니다.  
   
@@ -139,6 +139,5 @@ ms.locfileid: "88423387"
   
 ## <a name="upgrade-noise-words-from-sql-server-2005"></a>SQL Server 2005에서 의미 없는 단어 업그레이드  
  [!INCLUDE[ssVersion2005](../../includes/ssversion2005-md.md)] 의 의미 없는 단어가 중지 단어로 바뀌었습니다. 데이터베이스를 [!INCLUDE[ssVersion2005](../../includes/ssversion2005-md.md)]에서 업그레이드하면 의미 없는 단어 파일이 더 이상 사용되지 않습니다. 그러나 의미 없는 단어 파일이 FTDATA\ FTNoiseThesaurusBak 폴더에 저장되므로 나중에 해당 중지 목록을 업데이트하거나 새로 작성할 때 사용할 수 있습니다. 의미 없는 단어 파일을 중지 목록으로 업그레이드하는 방법은 [전체 텍스트 검색 업그레이드](../../relational-databases/search/upgrade-full-text-search.md)를 참조하세요.  
-  
   
   

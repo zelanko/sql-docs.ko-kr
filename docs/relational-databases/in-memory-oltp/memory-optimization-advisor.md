@@ -15,12 +15,12 @@ ms.assetid: 181989c2-9636-415a-bd1d-d304fc920b8a
 author: MightyPen
 ms.author: genemi
 monikerRange: =azuresqldb-current||>=sql-server-2016||=sqlallproducts-allversions||>=sql-server-linux-2017||=azuresqldb-mi-current
-ms.openlocfilehash: 9579587e39b4becd16be9bcae1e206703eb4720c
-ms.sourcegitcommit: da88320c474c1c9124574f90d549c50ee3387b4c
+ms.openlocfilehash: 4d5d881ff7628c094b8d6880406650387c0cff48
+ms.sourcegitcommit: 4d370399f6f142e25075b3714e5c2ce056b1bfd0
 ms.translationtype: HT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 07/01/2020
-ms.locfileid: "85730860"
+ms.lasthandoff: 10/09/2020
+ms.locfileid: "91868578"
 ---
 # <a name="memory-optimization-advisor"></a>메모리 최적화 관리자
 [!INCLUDE [SQL Server Azure SQL Database](../../includes/applies-to-version/sql-asdb.md)]
@@ -33,7 +33,7 @@ ms.locfileid: "85730860"
   
 -   메모리 최적화으로 테이블과 데이터를 마이그레이션합니다(지원되지 않는 기능이 있는 경우).  
     
- 마이그레이션 방법에 대한 자세한 내용은 [메모리 내 OLTP – 일반적인 작업 패턴 및 마이그레이션 고려 사항](https://msdn.microsoft.com/library/dn673538.aspx)을 참조하세요.  
+ 마이그레이션 방법에 대한 자세한 내용은 [메모리 내 OLTP – 일반적인 작업 패턴 및 마이그레이션 고려 사항](/previous-versions/dn673538(v=msdn.10))을 참조하세요.  
   
 ## <a name="walkthrough-using-the-memory-optimization-advisor"></a>메모리 최적화 관리자 사용 연습  
  **개체 탐색기**에서 변환할 테이블을 마우스 오른쪽 단추로 클릭하고 **메모리 최적화 관리자**를 선택합니다. **테이블 메모리 최적화 관리자**시작 페이지가 표시됩니다.  
@@ -99,7 +99,7 @@ ms.locfileid: "85730860"
   
  기본 키가 없고 테이블을 비영구 테이블로 마이그레이션하는 경우에는 이 화면이 표시되지 않습니다.  
   
- 텍스트 열( **char**, **nchar**, **varchar**및 **nvarchar**형식의 열)의 경우 적절한 데이터 정렬을 선택해야 합니다. 메모리 내 OLTP는 메모리 최적화 테이블의 열에 대해 BIN2 데이터 정렬만 지원하고 보조 문자를 사용한 데이터 정렬은 지원하지 않습니다. 지원되는 데이터 정렬 및 데이터 정렬 변경이 주는 잠재적 영향은 [Collations and Code Pages](https://msdn.microsoft.com/library/c626dcac-0474-432d-acc0-cfa643345372) 를 참조하십시오.  
+ 텍스트 열( **char**, **nchar**, **varchar**및 **nvarchar**형식의 열)의 경우 적절한 데이터 정렬을 선택해야 합니다. 메모리 내 OLTP는 메모리 최적화 테이블의 열에 대해 BIN2 데이터 정렬만 지원하고 보조 문자를 사용한 데이터 정렬은 지원하지 않습니다. 지원되는 데이터 정렬 및 데이터 정렬 변경이 주는 잠재적 영향은 [Collations and Code Pages](./introduction-to-memory-optimized-tables.md) 를 참조하십시오.  
   
  기본 키에 대해 다음 매개 변수를 구성할 수 있습니다.  
   
@@ -113,7 +113,7 @@ ms.locfileid: "85730860"
   
 -   비클러스터형 인덱스. 이 유형의 인덱스는 범위 쿼리가 많은 인덱스에 적합합니다. **열 정렬 및 순서** 목록의 각 열에 대해 정렬 순서를 구성할 수 있습니다.  
   
- 기본 키에 적합한 인덱스 형식을 확인하려면 [해시 인덱스](https://msdn.microsoft.com/library/f4bdc9c1-7922-4fac-8183-d11ec58fec4e)를 참조하세요.  
+ 기본 키에 적합한 인덱스 형식을 확인하려면 [해시 인덱스](/previous-versions/sql/sql-server-2016/dn133190(v=sql.130))를 참조하세요.  
   
  기본 키를 선택한 후 **다음** 을 클릭합니다.  
   
@@ -130,6 +130,5 @@ ms.locfileid: "85730860"
  프로세스가 완료되면 **개체 탐색기** 를 새로 고쳐 새 메모리 최적화 테이블 및 이전의 디스크 기반 테이블이 표시되는지 확인합니다. 편의대로 테이블을 유지하거나 삭제할 수 있습니다.  
   
 ## <a name="see-also"></a>참고 항목  
- [메모리 내 OLTP로 마이그레이션](../../relational-databases/in-memory-oltp/migrating-to-in-memory-oltp.md)  
-  
+ [메모리 내 OLTP로 마이그레이션](./plan-your-adoption-of-in-memory-oltp-features-in-sql-server.md)  
   

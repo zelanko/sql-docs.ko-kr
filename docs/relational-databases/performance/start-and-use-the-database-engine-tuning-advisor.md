@@ -19,12 +19,12 @@ helpviewer_keywords:
 ms.assetid: a4e3226a-3917-4ec8-bdf0-472879d231c9
 author: julieMSFT
 ms.author: jrasnick
-ms.openlocfilehash: 1f13fc030209957910284132b42c89a52b01ff31
-ms.sourcegitcommit: f7c9e562d6048f89d203d71685ba86f127d8d241
+ms.openlocfilehash: 68e48fb6316b5794d51208b42ab10938b17126dc
+ms.sourcegitcommit: 783b35f6478006d654491cb52f6edf108acf2482
 ms.translationtype: HT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 09/12/2020
-ms.locfileid: "90042832"
+ms.lasthandoff: 10/09/2020
+ms.locfileid: "91890747"
 ---
 # <a name="start-and-use-the-database-engine-tuning-advisor"></a>데이터베이스 엔진 튜닝 관리자 시작 및 사용
  [!INCLUDE [SQL Server](../../includes/applies-to-version/sqlserver.md)]
@@ -55,7 +55,7 @@ ms.locfileid: "90042832"
   
 #### <a name="to-start-the-database-engine-tuning-advisor-from-the-sql-server-management-studio-query-editor"></a>SQL Server Management Studio 쿼리 편집기에서 데이터베이스 엔진 튜닝 관리자를 시작하려면  
   
-1.  [!INCLUDE[tsql](../../includes/tsql-md.md)] 에서 [!INCLUDE[ssManStudioFull](../../includes/ssmanstudiofull-md.md)]스크립트 파일을 엽니다. 자세한 내용은 [쿼리 및 텍스트 편집기&#40;SQL Server Management Studio&#41;](https://docs.microsoft.com/sql/ssms/f1-help/database-engine-query-editor-sql-server-management-studio?view=sql-server-ver15)를 참조하세요.  
+1.  [!INCLUDE[tsql](../../includes/tsql-md.md)] 에서 [!INCLUDE[ssManStudioFull](../../includes/ssmanstudiofull-md.md)]스크립트 파일을 엽니다. 자세한 내용은 [쿼리 및 텍스트 편집기&#40;SQL Server Management Studio&#41;](../../ssms/f1-help/database-engine-query-editor-sql-server-management-studio.md?view=sql-server-ver15)를 참조하세요.  
   
 2.  [!INCLUDE[tsql](../../includes/tsql-md.md)] 스크립트에서 쿼리를 선택하거나 전체 스크립트를 선택하고 선택 영역을 마우스 오른쪽 단추를 클릭한 다음 **데이터베이스 엔진 튜닝 관리자의 쿼리 분석**을 선택합니다. 데이터베이스 엔진 튜닝 관리자 GUI가 열리고 스크립트를 XML 파일 작업으로 가져옵니다. 세션 이름과 튜닝 옵션을 지정하여 선택한 [!INCLUDE[tsql](../../includes/tsql-md.md)] 쿼리를 작업으로 튜닝할 수 있습니다.  
   
@@ -88,7 +88,7 @@ ms.locfileid: "90042832"
   
 ###  <a name="to-create-transact-sql-script-workloads"></a><a name="SSMS"></a> Transact-SQL 스크립트 작업을 만들려면  
   
-1.  [!INCLUDE[ssManStudioFull](../../includes/ssmanstudiofull-md.md)]에서 쿼리 편집기를 시작합니다. 자세한 내용은 [쿼리 및 텍스트 편집기&#40;SQL Server Management Studio&#41;](https://docs.microsoft.com/sql/ssms/f1-help/database-engine-query-editor-sql-server-management-studio?view=sql-server-ver15)를 참조하세요.  
+1.  [!INCLUDE[ssManStudioFull](../../includes/ssmanstudiofull-md.md)]에서 쿼리 편집기를 시작합니다. 자세한 내용은 [쿼리 및 텍스트 편집기&#40;SQL Server Management Studio&#41;](../../ssms/f1-help/database-engine-query-editor-sql-server-management-studio.md?view=sql-server-ver15)를 참조하세요.  
   
 2.  쿼리 편집기에 [!INCLUDE[tsql](../../includes/tsql-md.md)] 스크립트를 입력합니다. 이 스크립트는 튜닝하려는 데이터베이스에 대해 실행되는 일련의 [!INCLUDE[tsql](../../includes/tsql-md.md)] 문을 포함해야 합니다.  
   
@@ -519,4 +519,3 @@ database_name.owner_name.table_name
  [데이터베이스 엔진 튜닝 관리자의 출력 보기 및 작업](../../relational-databases/performance/view-and-work-with-the-output-from-the-database-engine-tuning-advisor.md)   
  [dta 유틸리티](../../tools/dta/dta-utility.md)    
  [자습서: 데이테베이스 엔진 튜닝 관리자](../../tools/dta/tutorial-database-engine-tuning-advisor.md)
-  

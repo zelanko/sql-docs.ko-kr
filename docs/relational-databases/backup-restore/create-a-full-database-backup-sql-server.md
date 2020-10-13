@@ -15,12 +15,12 @@ helpviewer_keywords:
 ms.assetid: 586561fc-dfbb-4842-84f8-204a9100a534
 author: MikeRayMSFT
 ms.author: mikeray
-ms.openlocfilehash: 5c691d1e4a6164087ee3bee776e27a786f68effe
-ms.sourcegitcommit: dd36d1cbe32cd5a65c6638e8f252b0bd8145e165
+ms.openlocfilehash: d534efe7cf6de24acad83604b7ed6e42efa9ce6f
+ms.sourcegitcommit: 04cf7905fa32e0a9a44575a6f9641d9a2e5ac0f8
 ms.translationtype: HT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 09/08/2020
-ms.locfileid: "89519400"
+ms.lasthandoff: 10/07/2020
+ms.locfileid: "91809279"
 ---
 # <a name="create-a-full-database-backup"></a>전체 데이터베이스 백업 만들기
 
@@ -208,7 +208,7 @@ GO
 
 아래 예제에서는 Azure Blob Storage 서비스에 `SQLTestDB`의 전체 데이터베이스 백업을 수행합니다. 이 예제에서는 Blob 컨테이너가 있는 스토리지 계정이 이미 있다고 가정합니다. 이 예제에서는 공유 액세스 서명을 만듭니다. 컨테이너에 기존 공유 액세스 서명이 있으면 이 예제는 실패합니다.
 
-스토리지 계정에 Azure Blob 컨테이너가 없는 경우 계속하기 전에 만듭니다. 자세한 내용은 [범용 스토리지 계정 만들기](https://docs.microsoft.com/azure/storage/common/storage-quickstart-create-account?tabs=azure-portal) 및 [컨테이너 만들기](https://docs.microsoft.com/azure/storage/blobs/storage-quickstart-blobs-portal#create-a-container)를 참조하세요.
+스토리지 계정에 Azure Blob 컨테이너가 없는 경우 계속하기 전에 만듭니다. 자세한 내용은 [범용 스토리지 계정 만들기](/azure/storage/common/storage-quickstart-create-account?tabs=azure-portal) 및 [컨테이너 만들기](/azure/storage/blobs/storage-quickstart-blobs-portal#create-a-container)를 참조하세요.
 
 1. [!INCLUDE[msCoName](../../includes/msconame-md.md)] [!INCLUDE[ssDEnoversion](../../includes/ssdenoversion-md.md)]의 해당 인스턴스에 연결한 다음, **개체 탐색기**에서 서버 트리를 확장합니다.
 
@@ -368,7 +368,7 @@ GO
 > [!NOTE]
 > 이러한 예제에는 SqlServer 모듈이 필요합니다. 이 모듈이 설치되어 있는지 확인하려면 `Get-Module -Name SqlServer`를 실행합니다. 이 모듈을 설치하려면 PowerShell의 관리자 세션에서 `Install-Module -Name SqlServer`를 실행합니다.
 >
-> 자세한 내용은 [SQL Server PowerShell Provider](https://docs.microsoft.com/sql/powershell/sql-server-powershell-provider)을(를) 참조하세요.
+> 자세한 내용은 [SQL Server PowerShell Provider](../../powershell/sql-server-powershell-provider.md)을(를) 참조하세요.
 
 > [!IMPORTANT]
 > SQL Server Management Studio 내에서 PowerShell 창을 열어 SQL Server 설치에 연결하는 경우 SSMS의 자격 증명이 PowerShell과 SQL Server 인스턴스 간의 연결을 설정하는 데 자동으로 사용되므로 이 예제의 자격 증명 부분을 생략해도 됩니다.
@@ -379,7 +379,7 @@ GO
 
 다음 예에서는 서버 인스턴스 `<myDatabase>` 의 기본 백업 위치에 `Computer\Instance`데이터베이스의 전체 데이터베이스 백업을 만듭니다. 선택 사항으로, 이 예제에서는 **-BackupAction Database**를 지정합니다.
 
-전체 구문 및 추가 예제는 [Backup-SqlDatabase](https://docs.microsoft.com/powershell/module/sqlserver/backup-sqldatabase)를 참조하세요.
+전체 구문 및 추가 예제는 [Backup-SqlDatabase](/powershell/module/sqlserver/backup-sqldatabase)를 참조하세요.
 
 ```powershell
 $credential = Get-Credential

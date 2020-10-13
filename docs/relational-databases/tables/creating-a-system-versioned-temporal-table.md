@@ -12,12 +12,12 @@ ms.assetid: 21e6d74f-711f-40e6-a8b7-85f832c5d4b3
 author: markingmyname
 ms.author: maghan
 monikerRange: =azuresqldb-current||>=sql-server-2016||=sqlallproducts-allversions||>=sql-server-linux-2017||=azuresqldb-mi-current
-ms.openlocfilehash: 035b1793515779102b9b6b24d0377a4d33cba3c1
-ms.sourcegitcommit: c74bb5944994e34b102615b592fdaabe54713047
+ms.openlocfilehash: 3c2be314863112cfb7d0a22e9000fc71d7991454
+ms.sourcegitcommit: 04cf7905fa32e0a9a44575a6f9641d9a2e5ac0f8
 ms.translationtype: HT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 09/22/2020
-ms.locfileid: "90990401"
+ms.lasthandoff: 10/07/2020
+ms.locfileid: "91809301"
 ---
 # <a name="creating-a-system-versioned-temporal-table"></a>시스템 버전 관리 temporal 테이블 만들기
 
@@ -84,7 +84,7 @@ WITH (SYSTEM_VERSIONING = ON (HISTORY_TABLE = dbo.DepartmentHistory));
 
 - 스키마 이름은 **HISTORY_TABLE** 매개 변수에 필수입니다.
 - 지정된 스키마가 없는 경우 **CREATE TABLE** 문이 실패합니다.
-- **HISTORY_TABLE** 매개 변수에 의해 지정한 테이블이 이미 있는 경우 [스키마 일관성 및 임시 데이터 일관성](https://msdn.microsoft.com/library/dn935015.aspx)측면에서 새로 생성된 temporal 테이블에 대해 유효성이 검사됩니다. 잘못된 기록 테이블을 지정하면 **CREATE TABLE** 문이 실패합니다.
+- **HISTORY_TABLE** 매개 변수에 의해 지정한 테이블이 이미 있는 경우 [스키마 일관성 및 임시 데이터 일관성](./temporal-tables.md)측면에서 새로 생성된 temporal 테이블에 대해 유효성이 검사됩니다. 잘못된 기록 테이블을 지정하면 **CREATE TABLE** 문이 실패합니다.
 
 ## <a name="creating-a-temporal-table-with-a-user-defined-history-table"></a>사용자 정의 기록 테이블이 포함된 temporal 테이블 만들기
 
@@ -207,4 +207,4 @@ ALTER TABLE ProjectTaskCurrent
 - [시스템 버전 임시 테이블의 데이터 수정](../../relational-databases/tables/modifying-data-in-a-system-versioned-temporal-table.md)
 - [시스템 버전 임시 테이블의 데이터 쿼리](../../relational-databases/tables/querying-data-in-a-system-versioned-temporal-table.md)
 - [시스템 버전 임시 테이블의 스키마 변경](../../relational-databases/tables/changing-the-schema-of-a-system-versioned-temporal-table.md)
-- [시스템 버전 임시 테이블에서 시스템 버전 관리 중지](../../relational-databases/tables/stopping-system-versioning-on-a-system-versioned-temporal-table.md)  
+- [시스템 버전 임시 테이블에서 시스템 버전 관리 중지](../../relational-databases/tables/stopping-system-versioning-on-a-system-versioned-temporal-table.md)

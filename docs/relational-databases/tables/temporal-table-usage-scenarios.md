@@ -11,12 +11,12 @@ ms.topic: conceptual
 ms.assetid: 4b8fa2dd-1790-4289-8362-f11e6d63bb09
 author: markingmyname
 ms.author: maghan
-ms.openlocfilehash: 77d47d7492b9c4973d58113c80e5cca737315282
-ms.sourcegitcommit: dd36d1cbe32cd5a65c6638e8f252b0bd8145e165
+ms.openlocfilehash: 53d2ea62bebcce1df978a8b4e539c56408a9f673
+ms.sourcegitcommit: 04cf7905fa32e0a9a44575a6f9641d9a2e5ac0f8
 ms.translationtype: HT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 09/08/2020
-ms.locfileid: "89540845"
+ms.lasthandoff: 10/07/2020
+ms.locfileid: "91809199"
 ---
 # <a name="temporal-table-usage-scenarios"></a>Temporal 테이블 사용 시나리오
 
@@ -59,7 +59,7 @@ CREATE TABLE Employee
 
 ### <a name="enabling-system-versioning-on-an-existing-table-for-data-audit"></a>데이터 감사를 위해 기존 테이블에 시스템 버전 관리를 사용하도록 설정
 
-기존 데이터베이스에서 데이터 감사를 수행해야 할 경우 시스템 버전이 관리되도록 ALTER TABLE을 사용하여 비temporal 테이블을 확장합니다. [비temporal 테이블을 시스템 버전 관리 temporal 테이블로 변경](https://msdn.microsoft.com/library/mt590957.aspx#Anchor_3)에 설명된 대로 애플리케이션에서 호환성이 손상되는 변경이 발생하지 않도록 HIDDEN으로 기간 열을 추가합니다. 다음 예제에서는 가상 HR 데이터베이스에 있는 기존 직원 테이블에서 시스템 버전 관리를 사용하도록 설정하는 방법을 보여 줍니다.
+기존 데이터베이스에서 데이터 감사를 수행해야 할 경우 시스템 버전이 관리되도록 ALTER TABLE을 사용하여 비temporal 테이블을 확장합니다. [비temporal 테이블을 시스템 버전 관리 temporal 테이블로 변경](./creating-a-system-versioned-temporal-table.md)에 설명된 대로 애플리케이션에서 호환성이 손상되는 변경이 발생하지 않도록 HIDDEN으로 기간 열을 추가합니다. 다음 예제에서는 가상 HR 데이터베이스에 있는 기존 직원 테이블에서 시스템 버전 관리를 사용하도록 설정하는 방법을 보여 줍니다.
 
 ```sql
 /*

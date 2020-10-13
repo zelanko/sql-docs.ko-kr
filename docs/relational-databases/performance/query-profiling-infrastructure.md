@@ -18,12 +18,12 @@ ms.assetid: 07f8f594-75b4-4591-8c29-d63811d7753e
 author: pmasl
 ms.author: pelopes
 manager: amitban
-ms.openlocfilehash: c1327c908a034f524140ed8b9282766e328f75b9
-ms.sourcegitcommit: c7f40918dc3ecdb0ed2ef5c237a3996cb4cd268d
+ms.openlocfilehash: 02b4935c7608bb6912274ee017371f519df7bdf8
+ms.sourcegitcommit: 783b35f6478006d654491cb52f6edf108acf2482
 ms.translationtype: HT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 10/05/2020
-ms.locfileid: "91719508"
+ms.lasthandoff: 10/09/2020
+ms.locfileid: "91890768"
 ---
 # <a name="query-profiling-infrastructure"></a>쿼리 프로파일링 인프라
 [!INCLUDE [SQL Server Azure SQL Database](../../includes/applies-to-version/sql-asdb.md)]
@@ -84,7 +84,7 @@ WITH (MAX_MEMORY=4096 KB,
 ```
 
 > [!NOTE]
-> 쿼리 프로파일링의 성능 오버헤드에 자세한 내용은 블로그 게시물 [개발자 선택 사항: 쿼리 진행률 - 언제, 어디서나](https://blogs.msdn.microsoft.com/sql_server_team/query-progress-anytime-anywhere/)를 참조하세요. 
+> 쿼리 프로파일링의 성능 오버헤드에 자세한 내용은 블로그 게시물 [개발자 선택 사항: 쿼리 진행률 - 언제, 어디서나](/archive/blogs/sql_server_team/query-progress-anytime-anywhere)를 참조하세요. 
 
 *query_thread_profile* 이벤트를 사용하는 확장 이벤트 세션을 실행하면 간단한 프로파일링을 사용하여 [sys.dm_exec_query_profiles](../../relational-databases/system-dynamic-management-views/sys-dm-exec-query-profiles-transact-sql.md) DMV도 채워지며, 따라서 [Activity Monitor](../../relational-databases/performance-monitor/activity-monitor.md)를 사용하여 또는 DMV를 직접 쿼리하여 모든 세션에 활성 쿼리 통계를 사용할 수 있습니다.
 
@@ -212,4 +212,4 @@ WITH (MAX_MEMORY=4096 KB, EVENT_RETENTION_MODE=ALLOW_SINGLE_EVENT_LOSS,
  [추적 플래그](../../t-sql/database-console-commands/dbcc-traceon-trace-flags-transact-sql.md)    
  [실행 계획 논리 및 물리 연산자 참조](../../relational-databases/showplan-logical-and-physical-operators-reference.md)    
  [실제 실행 모드](../../relational-databases/performance/display-an-actual-execution-plan.md)    
- [활성 쿼리 통계](../../relational-databases/performance/live-query-statistics.md)      
+ [활성 쿼리 통계](../../relational-databases/performance/live-query-statistics.md)

@@ -3,20 +3,20 @@ title: 가용성 그룹의 Ubuntu 클러스터 구성
 titleSuffix: SQL Server on Linux
 description: Ubuntu에서 3노드 클러스터를 만들고 이전에 만든 가용성 그룹 리소스를 클러스터에 추가하는 방법을 알아봅니다.
 ms.custom: seo-lt-2019
-author: MikeRayMSFT
-ms.author: mikeray
+author: VanMSFT
+ms.author: vanto
 ms.reviewer: vanto
 ms.date: 04/30/2018
 ms.topic: conceptual
 ms.prod: sql
 ms.technology: linux
 ms.assetid: dd0d6fb9-df0a-41b9-9f22-9b558b2b2233
-ms.openlocfilehash: c929e689f68def3b267dced2001468814d8747d0
-ms.sourcegitcommit: f7ac1976d4bfa224332edd9ef2f4377a4d55a2c9
+ms.openlocfilehash: 52511077d0f4f0da4db0f32dc057b614830587ec
+ms.sourcegitcommit: 610e3ebe21ac6575850a29641a32f275e71557e3
 ms.translationtype: HT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 07/02/2020
-ms.locfileid: "85892323"
+ms.lasthandoff: 10/07/2020
+ms.locfileid: "91784860"
 ---
 # <a name="configure-ubuntu-cluster-and-availability-group-resource"></a>Ubuntu 클러스터 및 가용성 그룹 리소스 구성
 

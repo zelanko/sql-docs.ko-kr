@@ -15,12 +15,12 @@ helpviewer_keywords:
 ms.assetid: 3426b5eb-6327-4c7f-88aa-37030be69fbf
 author: MikeRayMSFT
 ms.author: mikeray
-ms.openlocfilehash: 1e01e01544a0417210a8f2e3a40bb10398875c37
-ms.sourcegitcommit: da88320c474c1c9124574f90d549c50ee3387b4c
+ms.openlocfilehash: c953e5a707bb197457d76e9d5d4f64635515ffce
+ms.sourcegitcommit: 04cf7905fa32e0a9a44575a6f9641d9a2e5ac0f8
 ms.translationtype: HT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 07/01/2020
-ms.locfileid: "85719967"
+ms.lasthandoff: 10/07/2020
+ms.locfileid: "91807639"
 ---
 # <a name="back-up-a-transaction-log"></a>트랜잭션 로그 백업
  [!INCLUDE [SQL Server](../../includes/applies-to-version/sqlserver.md)]
@@ -153,7 +153,7 @@ GO
   
 ##  <a name="using-powershell"></a><a name="PowerShellProcedure"></a> PowerShell 사용
 
-[SQL Server PowerShell 공급자](../../relational-databases/scripting/sql-server-powershell-provider.md)를 설정 및 사용합니다. **Backup-SqlDatabase** cmdlet을 사용하고 **-BackupAction** 매개 변수의 값으로 **로그** 를 지정합니다.  
+[SQL Server PowerShell 공급자](../../powershell/sql-server-powershell-provider.md)를 설정 및 사용합니다. **Backup-SqlDatabase** cmdlet을 사용하고 **-BackupAction** 매개 변수의 값으로 **로그** 를 지정합니다.  
   
 다음 예에서는 서버 인스턴스 `<myDatabase>` 의 기본 백업 위치에 `Computer\Instance`데이터베이스의 로그 백업을 만듭니다.  
   
@@ -174,4 +174,4 @@ Backup-SqlDatabase -ServerInstance Computer\Instance -Database <myDatabase> -Bac
  [BACKUP&#40;Transact-SQL&#41;](../../t-sql/statements/backup-transact-sql.md)   
  [트랜잭션 로그 백업 적용&#40;SQL Server&#41;](../../relational-databases/backup-restore/apply-transaction-log-backups-sql-server.md)   
  [유지 관리 계획](../../relational-databases/maintenance-plans/maintenance-plans.md)   
- [전체 파일 백업&#40;SQL Server&#41;](../../relational-databases/backup-restore/full-file-backups-sql-server.md)  
+ [전체 파일 백업&#40;SQL Server&#41;](../../relational-databases/backup-restore/full-file-backups-sql-server.md)

@@ -13,12 +13,12 @@ helpviewer_keywords:
 ms.assetid: 5ee6f19a-6dd7-4730-a91c-bbed1bd77e0b
 author: MashaMSFT
 ms.author: mathoma
-ms.openlocfilehash: a1a4d64425d6d02fbc57bde9f84159c4f09f4929
-ms.sourcegitcommit: e700497f962e4c2274df16d9e651059b42ff1a10
+ms.openlocfilehash: 4a56b34301386287ef954edae0528decd4d03fee
+ms.sourcegitcommit: 04cf7905fa32e0a9a44575a6f9641d9a2e5ac0f8
 ms.translationtype: HT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 08/17/2020
-ms.locfileid: "88488586"
+ms.lasthandoff: 10/07/2020
+ms.locfileid: "91809486"
 ---
 # <a name="lesson-1-converting-a-table-to-a-hierarchical-structure"></a>1단원: 테이블을 계층 구조로 변환
 [!INCLUDE [SQL Server](../../includes/applies-to-version/sqlserver.md)]
@@ -30,11 +30,11 @@ ms.locfileid: "88488586"
 ## <a name="prerequisites"></a>사전 요구 사항  
 이 자습서를 완료하려면 SQL Server Management Studio, SQL Server를 실행하는 서버에 대한 액세스 및 AdventureWorks 데이터베이스가 필요합니다.
 
-- [SQL Server Management Studio](https://docs.microsoft.com/sql/ssms/download-sql-server-management-studio-ssms)를 설치합니다.
+- [SQL Server Management Studio](../../ssms/download-sql-server-management-studio-ssms.md)를 설치합니다.
 - [SQL Server 2017 Developer Edition](https://www.microsoft.com/sql-server/sql-server-downloads)을 설치합니다.
-- [AdventureWorks2017 샘플 데이터베이스](https://docs.microsoft.com/sql/samples/adventureworks-install-configure)를 다운로드합니다.
+- [AdventureWorks2017 샘플 데이터베이스](../../samples/adventureworks-install-configure.md)를 다운로드합니다.
 
-SSMS에서 데이터베이스를 복원하기 위한 지침은 [데이터베이스 복원](https://docs.microsoft.com/sql/relational-databases/backup-restore/restore-a-database-backup-using-ssms)을 참조하세요.  
+SSMS에서 데이터베이스를 복원하기 위한 지침은 [데이터베이스 복원](../backup-restore/restore-a-database-backup-using-ssms.md)을 참조하세요.  
 
 ## <a name="examine-the-current-structure-of-the-employee-table"></a>Employee 테이블의 현재 구조 검사
 샘플 Adventureworks2017(또는 이상) 데이터베이스에는 **HumanResources** 스키마에 **Employee** 테이블이 있습니다. 원래 테이블이 변경되지 않도록 이 단계에서는 **EmployeeDemo** 라는 **Employee**테이블의 복사본을 만듭니다. 예를 단순화하기 위해 원래 테이블에서 5개의 열만 복사합니다. 그런 다음 **HumanResources.EmployeeDemo** 테이블을 쿼리하여 **hierarchyid** 데이터 형식을 사용하지 않고 한 테이블에서 데이터가 구조화되는 방식을 검토합니다.  
@@ -224,7 +224,7 @@ SSMS에서 데이터베이스를 복원하기 위한 지침은 [데이터베이�
     ```  
   
 ## <a name="optimizing-the-neworg-table"></a>NewOrg 테이블 최적화
-**기존 계층적 데이터로 테이블 채우기** 태스크에서 만든 [NewOrd](../../relational-databases/tables/lesson-1-2-populating-a-table-with-existing-hierarchical-data.md) 테이블은 모든 직원 정보를 포함하며 **hierarchyid** 데이터 형식을 사용하여 계층 구조를 나타냅니다. 이 태스크에서는 새 인덱스를 추가하여 **hierarchyid** 열의 검색을 지원합니다.  
+**기존 계층적 데이터로 테이블 채우기** 태스크에서 만든 [NewOrd]() 테이블은 모든 직원 정보를 포함하며 **hierarchyid** 데이터 형식을 사용하여 계층 구조를 나타냅니다. 이 태스크에서는 새 인덱스를 추가하여 **hierarchyid** 열의 검색을 지원합니다.  
   
 
 **hierarchyid** 열(**OrgNode**)은 **NewOrg** 테이블의 기본 키입니다. 테이블을 만들 때 **OrgNode** 열의 고유성을 적용하기 위해 이 열에 **PK_NewOrg_OrgNode** 라는 클러스터형 인덱스가 포함되었습니다. 이 클러스터형 인덱스는 테이블의 깊이 우선 검색도 지원합니다.  

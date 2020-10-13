@@ -15,12 +15,12 @@ ms.assetid: bf3b98a6-51ed-4f2d-9c26-92f07f1fa947
 author: MightyPen
 ms.author: genemi
 monikerRange: =azuresqldb-current||>=sql-server-2016||=sqlallproducts-allversions||>=sql-server-linux-2017||=azuresqldb-mi-current
-ms.openlocfilehash: fdca475c71f2f1b81dac9b2a37850cea697a4414
-ms.sourcegitcommit: da88320c474c1c9124574f90d549c50ee3387b4c
+ms.openlocfilehash: e8ba3ebb2aca0f1afd435e654427250901f9d83a
+ms.sourcegitcommit: 4d370399f6f142e25075b3714e5c2ce056b1bfd0
 ms.translationtype: HT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 07/01/2020
-ms.locfileid: "85727340"
+ms.lasthandoff: 10/09/2020
+ms.locfileid: "91868560"
 ---
 # <a name="extended-events-overview"></a>확장 이벤트 개요
 
@@ -45,7 +45,7 @@ ms.locfileid: "85727340"
 |항목|Description|  
 |-----------|-----------------|  
 |[SQL Server 확장 이벤트 패키지](../../relational-databases/extended-events/sql-server-extended-events-packages.md)|개체를 포함하는 확장 이벤트 패키지에 대해 설명합니다. 이러한 개체는 확장 이벤트 세션이 실행 중일 때 데이터를 가져오고 처리하는 데 사용됩니다.|  
-|[SQL Server 확장 이벤트 대상](https://msdn.microsoft.com/library/e281684c-40d1-4cf9-a0d4-7ea1ecffa384)|이벤트 세션이 지속되는 동안 데이터를 수신할 수 있는 이벤트 소비자에 대해 설명합니다.|  
+|[SQL Server 확장 이벤트 대상](/previous-versions/sql/sql-server-2016/bb630339(v=sql.130))|이벤트 세션이 지속되는 동안 데이터를 수신할 수 있는 이벤트 소비자에 대해 설명합니다.|  
 |[SQL Server 확장 이벤트 엔진](../../relational-databases/extended-events/sql-server-extended-events-engine.md)|확장 이벤트 세션을 구현 및 관리하는 엔진에 대해 설명합니다.|  
 |[SQL Server 확장 이벤트 세션](../../relational-databases/extended-events/sql-server-extended-events-sessions.md)|확장 이벤트 세션에 대해 설명합니다.|  
 | &nbsp; | &nbsp; |
@@ -68,7 +68,7 @@ ms.locfileid: "85727340"
   
 -   확장 이벤트 엔진은 이벤트 중립적입니다. 이 엔진은 이벤트 내용에 따른 제한이 없으므로 모든 이벤트를 모든 대상에 바인딩할 수 있습니다. 확장 이벤트 엔진에 대한 자세한 내용은 [SQL Server Extended Events Engine](../../relational-databases/extended-events/sql-server-extended-events-engine.md)을 참조하십시오.  
   
--   이벤트는 확장 이벤트의 *대상* 이라고 하는 이벤트 소비자와 분리됩니다. 따라서 모든 대상이 모든 이벤트를 수신할 수 있습니다. 또한 발생한 모든 이벤트는 대상에서 자동으로 사용되므로 추가 이벤트 컨텍스트가 기록되거나 제공될 수 있습니다. 자세한 내용은 [SQL Server Extended Events Targets](https://msdn.microsoft.com/library/e281684c-40d1-4cf9-a0d4-7ea1ecffa384)을 참조하세요.  
+-   이벤트는 확장 이벤트의 *대상* 이라고 하는 이벤트 소비자와 분리됩니다. 따라서 모든 대상이 모든 이벤트를 수신할 수 있습니다. 또한 발생한 모든 이벤트는 대상에서 자동으로 사용되므로 추가 이벤트 컨텍스트가 기록되거나 제공될 수 있습니다. 자세한 내용은 [SQL Server Extended Events Targets](/previous-versions/sql/sql-server-2016/bb630339(v=sql.130))을 참조하세요.  
   
 -   이벤트는 이벤트가 발생할 때 실행되는 동작과는 별개입니다. 따라서 모든 이벤트에 모든 동작을 연결할 수 있습니다.  
   
@@ -93,15 +93,15 @@ ms.locfileid: "85727340"
 |태스크 설명|항목|  
 |----------------------|-----------|  
 |**개체 탐색기** 를 사용하여 이벤트 세션을 관리합니다.|[개체 탐색기에서 이벤트 세션 관리](../../relational-databases/extended-events/manage-event-sessions-in-the-object-explorer.md)|  
-|확장 이벤트 세션을 만드는 방법에 대해 설명합니다.|[확장 이벤트 세션 만들기](https://msdn.microsoft.com/library/34b1e95a-a80e-4aca-9201-abde47f2ca74)|  
+|확장 이벤트 세션을 만드는 방법에 대해 설명합니다.|[확장 이벤트 세션 만들기](/previous-versions/sql/sql-server-2016/hh213147(v=sql.130))|  
 |대상 데이터를 보고 새로 고치는 방법에 대해 설명합니다.| [SQL Server 확장 이벤트의 대상 데이터 고급 보기](../../relational-databases/extended-events/advanced-viewing-of-target-data-from-extended-events-in-sql-server.md)|  
 |확장 이벤트 도구를 사용하여 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 확장 이벤트 세션을 만들고 관리하는 방법에 대해 설명합니다.|[확장 이벤트 도구](../../relational-databases/extended-events/extended-events-tools.md)|  
 |확장 이벤트 세션을 변경하는 방법에 대해 설명합니다.|[확장 이벤트 세션 변경](../../relational-databases/extended-events/alter-an-extended-events-session.md)|  
-|이벤트와 관련된 필드에 대한 정보를 가져오는 방법에 대해 설명합니다.|[모든 이벤트에 대한 필드 가져오기](https://msdn.microsoft.com/library/4e4ee03f-5bca-42ed-a37c-db1c82e3aad2)|  
-|등록된 패키지에서 사용할 수 있는 이벤트를 확인하는 방법에 대해 설명합니다.|[등록된 패키지에 대한 이벤트 보기](https://msdn.microsoft.com/library/9a90b1a2-aa69-43f6-bdeb-cc5f57a26c6f)|  
-|등록된 패키지에서 사용할 수 있는 확장 이벤트 대상을 확인하는 방법에 대해 설명합니다.|[등록된 패키지의 확장 이벤트 대상 보기](https://msdn.microsoft.com/library/4985aa5f-ac99-49f6-852c-9d25916549e9)|  
+|이벤트와 관련된 필드에 대한 정보를 가져오는 방법에 대해 설명합니다.|[모든 이벤트에 대한 필드 가져오기](/previous-versions/sql/sql-server-2016/bb677249(v=sql.130))|  
+|등록된 패키지에서 사용할 수 있는 이벤트를 확인하는 방법에 대해 설명합니다.|[등록된 패키지에 대한 이벤트 보기](./selects-and-joins-from-system-views-for-extended-events-in-sql-server.md)|  
+|등록된 패키지에서 사용할 수 있는 확장 이벤트 대상을 확인하는 방법에 대해 설명합니다.|[등록된 패키지의 확장 이벤트 대상 보기](/previous-versions/sql/sql-server-2016/bb677247(v=sql.130))|  
 |각 SQL 추적 이벤트 및 관련 열에 해당하는 확장 이벤트의 이벤트 및 동작을 확인하는 방법에 대해 설명합니다.|[SQL 추적 이벤트 클래스에 해당하는 확장 이벤트 항목 확인](../../relational-databases/extended-events/view-the-extended-events-equivalents-to-sql-trace-event-classes.md)|  
-|CREATE EVENT SESSION 또는 ALTER EVENT SESSION에 ADD TARGET 인수를 사용할 경우에 설정할 수 있는 매개 변수를 확인하는 방법에 대해 설명합니다.|[ADD TARGET 인수에 대한 구성 가능한 매개 변수 가져오기](https://msdn.microsoft.com/library/08454543-c5c8-4ca3-9af9-f1d82264471c)|  
+|CREATE EVENT SESSION 또는 ALTER EVENT SESSION에 ADD TARGET 인수를 사용할 경우에 설정할 수 있는 매개 변수를 확인하는 방법에 대해 설명합니다.|[ADD TARGET 인수에 대한 구성 가능한 매개 변수 가져오기](/previous-versions/sql/sql-server-2016/bb677176(v=sql.130))|  
 |기존 SQL 추적 스크립트를 확장 이벤트 세션으로 변환하는 방법에 대해 설명합니다.|[기존 SQL 추적 스크립트를 확장 이벤트 세션으로 변환](../../relational-databases/extended-events/convert-an-existing-sql-trace-script-to-an-extended-events-session.md)|  
 |잠금을 보유 중인 쿼리, 쿼리 계획 및 잠긴 시점의 [!INCLUDE[tsql](../../includes/tsql-md.md)] 스택을 확인하는 방법에 대해 설명합니다.|[잠금을 보유한 쿼리 파악](../../relational-databases/extended-events/determine-which-queries-are-holding-locks.md)|  
 |데이터베이스 성능을 저하시키는 잠금의 원인을 파악하는 방법에 대해 설명합니다.|[가장 많은 잠금이 발생한 개체 찾기](../../relational-databases/extended-events/find-the-objects-that-have-the-most-locks-taken-on-them.md)|  
@@ -133,7 +133,7 @@ SELECT
 ## <a name="see-also"></a>참고 항목
 
 [데이터 계층 애플리케이션](../../relational-databases/data-tier-applications/data-tier-applications.md)  
-[SQL Server 개체 및 버전에 대한 DAC 지원](../../relational-databases/data-tier-applications/dac-support-for-sql-server-objects-and-versions.md)  
+[SQL Server 개체 및 버전에 대한 DAC 지원](/previous-versions/sql/sql-server-2012/ee210549(v=sql.110))  
 [데이터 계층 애플리케이션 배포](../../relational-databases/data-tier-applications/deploy-a-data-tier-application.md)  
 [데이터 계층 애플리케이션 모니터링](../../relational-databases/data-tier-applications/monitor-data-tier-applications.md)  
 &nbsp;  
@@ -142,4 +142,4 @@ SELECT
 &nbsp;  
 [XELite: XEL 파일 또는 라이브 SQL 스트림에서 XEvents를 읽을 수 있는 플랫폼 간 라이브러리](https://www.nuget.org/packages/Microsoft.SqlServer.XEvent.XELite/), 2019년 5월에 릴리스됨.  
 [Read-SQLXEvent PowerShell cmdlet](https://www.powershellgallery.com/packages/SqlServer.XEvent) 2019년 6월 릴리스.  
-[SQL Mysteries: XEvent 세션의 인과 관계 추적 및 이벤트 순서(블로그 게시일 2019년 4월 1일)](https://bobsql.com/sql-mysteries-causality-tracking-vs-event-sequence-for-xevent-sessions/)  
+[SQL Mysteries: XEvent 세션의 인과 관계 추적 및 이벤트 순서(블로그 게시일 2019년 4월 1일)](https://bobsql.com/sql-mysteries-causality-tracking-vs-event-sequence-for-xevent-sessions/)

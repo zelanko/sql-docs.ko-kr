@@ -11,12 +11,12 @@ ms.assetid: e000a1d8-a049-4542-bfeb-943fd6ab3969
 author: MladjoA
 ms.author: mlandzic
 monikerRange: =azuresqldb-current||>=sql-server-2016||=sqlallproducts-allversions||>=sql-server-linux-2017||=azuresqldb-mi-current
-ms.openlocfilehash: 69aaa7667e0aa1576dc1ec2744e1f07a402ccdf0
-ms.sourcegitcommit: e700497f962e4c2274df16d9e651059b42ff1a10
+ms.openlocfilehash: f6e73e4fbfbef45cb55f75ca193cb462ae1abeb5
+ms.sourcegitcommit: 4d370399f6f142e25075b3714e5c2ce056b1bfd0
 ms.translationtype: HT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 08/17/2020
-ms.locfileid: "88455435"
+ms.lasthandoff: 10/09/2020
+ms.locfileid: "91868171"
 ---
 # <a name="curvepolygon"></a>CurvePolygon
 [!INCLUDE [SQL Server Azure SQL Database](../../includes/applies-to-version/sql-asdb.md)]
@@ -178,8 +178,7 @@ SELECT @g1.STIsValid() AS G1, @g2.STIsValid() AS G2;
  [Polygon](../../relational-databases/spatial/polygon.md)   
  [CircularString](../../relational-databases/spatial/circularstring.md)   
  [CompoundCurve](../../relational-databases/spatial/compoundcurve.md)   
- [geometry 데이터 형식 메서드 참조](https://msdn.microsoft.com/library/d88e632b-6b2f-4466-a15f-9fbef1a347a7)   
- [geography 데이터 형식 메서드 참조](https://msdn.microsoft.com/library/028e6137-7128-4c74-90a7-f7bdd2d79f5e)   
+ [geometry 데이터 형식 메서드 참조](../../t-sql/spatial-geometry/spatial-types-geometry-transact-sql.md)   
+ [geography 데이터 형식 메서드 참조](../../t-sql/spatial-geography/stequals-geography-data-type.md)   
  [공간 데이터 형식 개요](../../relational-databases/spatial/spatial-data-types-overview.md)  
-  
   

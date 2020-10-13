@@ -26,12 +26,12 @@ ms.assetid: a35ecd7d-f130-483c-87e3-ddc8927bb91b
 author: MashaMSFT
 ms.author: mathoma
 monikerRange: =azuresqldb-mi-current||>=sql-server-2016||=sqlallproducts-allversions
-ms.openlocfilehash: 18b3914f2ed9be429f29b929bc74623af9f707bf
-ms.sourcegitcommit: c8e1553ff3fdf295e8dc6ce30d1c454d6fde8088
+ms.openlocfilehash: a60d78abb92552e6413fd827d2223e507a0a439e
+ms.sourcegitcommit: 783b35f6478006d654491cb52f6edf108acf2482
 ms.translationtype: HT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 07/22/2020
-ms.locfileid: "86922857"
+ms.lasthandoff: 10/09/2020
+ms.locfileid: "91890953"
 ---
 # <a name="replication-agents-overview"></a>복제 에이전트 개요
 [!INCLUDE[sql-asdbmi](../../../includes/applies-to-version/sql-asdbmi.md)]
@@ -41,7 +41,7 @@ ms.locfileid: "86922857"
  [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] 에이전트는 복제에 사용되는 에이전트를 호스팅 및 예약하고 복제 에이전트를 쉽게 실행하는 방법을 제공합니다. 또한[!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] 에이전트는 복제 이외의 작업을 제어하고 모니터링합니다. 자세한 내용은 [Configure SQL Server Agent](../../../ssms/agent/configure-sql-server-agent.md)을 참조하세요.  
   
 > [!IMPORTANT]  
->  [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] 가 설치될 때 사용자가 [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] 에이전트 서비스를 자동으로 시작하도록 명시적으로 선택하지 않으면 기본적으로 이 서비스는 해제됩니다. [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] 에이전트 서비스를 시작하는 방법은 [SQL Server 에이전트 서비스 시작, 중지 또는 일시 중지](https://msdn.microsoft.com/library/c95a9759-dd30-4ab6-9ab0-087bb3bfb97c)를 참조하세요.  
+>  [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] 가 설치될 때 사용자가 [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] 에이전트 서비스를 자동으로 시작하도록 명시적으로 선택하지 않으면 기본적으로 이 서비스는 해제됩니다. [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] 에이전트 서비스를 시작하는 방법은 [SQL Server 에이전트 서비스 시작, 중지 또는 일시 중지](../../../ssms/agent/start-stop-or-pause-the-sql-server-agent-service.md)를 참조하세요.  
   
 ## <a name="snapshot-agent"></a>스냅샷 에이전트  
  일반적으로 스냅샷 에이전트는 모든 복제 유형에서 사용됩니다. 스냅샷 에이전트는 게시된 테이블과 다른 개체의 스키마 및 초기 데이터 파일을 준비하고, 스냅샷 파일을 저장하고, 배포 데이터베이스의 동기화에 대한 정보를 기록합니다. 배포자에서 스냅샷 에이전트를 실행합니다. 자세한 내용은 [Replication Snapshot Agent](../../../relational-databases/replication/agents/replication-snapshot-agent.md)을 참조하세요.  
@@ -66,5 +66,4 @@ ms.locfileid: "86922857"
  [복제 유지 관리 작업 실행&#40;SQL Server Management Studio&#41;](../../../relational-databases/replication/administration/run-replication-maintenance-jobs-sql-server-management-studio.md)   
  [복제 에이전트 실행 파일 개념](../../../relational-databases/replication/concepts/replication-agent-executables-concepts.md)   
  [복제 에이전트 관리](../../../relational-databases/replication/agents/replication-agent-administration.md)  
-  
   

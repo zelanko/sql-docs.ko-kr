@@ -11,12 +11,12 @@ ms.topic: conceptual
 ms.assetid: 294975b7-e7d1-491b-b66a-fdb1100d2acc
 author: markingmyname
 ms.author: maghan
-ms.openlocfilehash: 73edcacffe6267d6a2692018a106a4eb055817e6
-ms.sourcegitcommit: dd36d1cbe32cd5a65c6638e8f252b0bd8145e165
+ms.openlocfilehash: 740636f90882f32ec42722e2f36cdd2932747025
+ms.sourcegitcommit: 4d370399f6f142e25075b3714e5c2ce056b1bfd0
 ms.translationtype: HT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 09/08/2020
-ms.locfileid: "89551260"
+ms.lasthandoff: 10/09/2020
+ms.locfileid: "91868686"
 ---
 # <a name="restore-and-recovery-of-memory-optimized-tables"></a>메모리 최적화 테이블 복원 및 복구
  [!INCLUDE [SQL Server](../../includes/applies-to-version/sqlserver.md)]
@@ -68,6 +68,5 @@ ms.locfileid: "89551260"
 -   비클러스터형 인텍스가 하나 이상 포함된 메모리 최적화 테이블이 많으면 CPU 사용률이 높아질 수 있습니다. 작성 시 버킷 수 크기가 조정되는 해시 인덱스와 달리, 비클러스터형 인덱스는 동적으로 증가합니다.  
   
 ## <a name="see-also"></a>참고 항목  
- [메모리 액세스에 최적화된 테이블의 백업, 복원 및 복구](https://msdn.microsoft.com/library/3f083347-0fbb-4b19-a6fb-1818d545e281)  
-  
+ [메모리 액세스에 최적화된 테이블의 백업, 복원 및 복구](/previous-versions/sql/sql-server-2016/dn624160(v=sql.130))  
   

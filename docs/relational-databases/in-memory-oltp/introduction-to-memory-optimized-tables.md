@@ -12,12 +12,12 @@ ms.assetid: ef1cc7de-63be-4fa3-a622-6d93b440e3ac
 author: MightyPen
 ms.author: genemi
 monikerRange: =azuresqldb-current||>=sql-server-2016||=sqlallproducts-allversions||>=sql-server-linux-2017||=azuresqldb-mi-current
-ms.openlocfilehash: 32129e87589c982c2ae620abbf91eeeb245dc3a0
-ms.sourcegitcommit: da88320c474c1c9124574f90d549c50ee3387b4c
+ms.openlocfilehash: 9677adb821528d7188a64415c344548a7ea400ed
+ms.sourcegitcommit: 4d370399f6f142e25075b3714e5c2ce056b1bfd0
 ms.translationtype: HT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 07/01/2020
-ms.locfileid: "85723122"
+ms.lasthandoff: 10/09/2020
+ms.locfileid: "91868675"
 ---
 # <a name="introduction-to-memory-optimized-tables"></a>메모리 액세스에 최적화된 테이블 소개
 [!INCLUDE [SQL Server Azure SQL Database](../../includes/applies-to-version/sql-asdb.md)]
@@ -54,7 +54,7 @@ SQL Server 2016부터 Azure SQL Database에는 메모리 내 OLTP에 한정되�
   
 ## <a name="accessing-data-in-memory-optimized-tables"></a>메모리 액세스에 최적화된 테이블에서 데이터 액세스  
 
-메모리 액세스에 최적화된 테이블은 고유하게 컴파일된 저장 프로시저([고유하게 컴파일된 저장 프로시저](../../relational-databases/in-memory-oltp/natively-compiled-stored-procedures.md))에서 가장 효율적으로 액세스할 수 있습니다. (기존의) 해석된 [!INCLUDE[tsql](../../includes/tsql-md.md)]로 메모리 액세스에 최적화된 테이블에 액세스할 수도 있습니다. 해석된 [!INCLUDE[tsql](../../includes/tsql-md.md)]은 고유하게 컴파일된 저장 프로시저를 사용하지 않고 메모리 최적화 테이블에 액세스함을 나타냅니다. 해석된 [!INCLUDE[tsql](../../includes/tsql-md.md)] 액세스의 예로는 DML 트리거, 임시 [!INCLUDE[tsql](../../includes/tsql-md.md)] 일괄 처리, 뷰 및 테이블 반환 함수에서 메모리 최적화 테이블에 액세스 등이 있습니다.  
+메모리 액세스에 최적화된 테이블은 고유하게 컴파일된 저장 프로시저([고유하게 컴파일된 저장 프로시저](./a-guide-to-query-processing-for-memory-optimized-tables.md))에서 가장 효율적으로 액세스할 수 있습니다. (기존의) 해석된 [!INCLUDE[tsql](../../includes/tsql-md.md)]로 메모리 액세스에 최적화된 테이블에 액세스할 수도 있습니다. 해석된 [!INCLUDE[tsql](../../includes/tsql-md.md)]은 고유하게 컴파일된 저장 프로시저를 사용하지 않고 메모리 최적화 테이블에 액세스함을 나타냅니다. 해석된 [!INCLUDE[tsql](../../includes/tsql-md.md)] 액세스의 예로는 DML 트리거, 임시 [!INCLUDE[tsql](../../includes/tsql-md.md)] 일괄 처리, 뷰 및 테이블 반환 함수에서 메모리 최적화 테이블에 액세스 등이 있습니다.  
   
  다음 표에서는 다양한 개체에 대한 고유 및 해석된 [!INCLUDE[tsql](../../includes/tsql-md.md)] 액세스를 요약하여 보여 줍니다.  
   
@@ -108,5 +108,4 @@ EXECUTE AS CALLER 사용 시에는 호출자의 권한 확인으로 인해 성�
 ## <a name="see-also"></a>참고 항목
 
 [메모리 내 OLTP&#40;메모리 내 최적화&#41;](../../relational-databases/in-memory-oltp/in-memory-oltp-in-memory-optimization.md)  
-  
   

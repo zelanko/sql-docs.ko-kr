@@ -15,12 +15,12 @@ applies_to:
 ms.assetid: e69be67d-da1c-41ae-8c9a-6b12c8c2fb61
 author: MashaMSFT
 ms.author: mathoma
-ms.openlocfilehash: baf78116ef5d200246a0da7f4f8ce5c8686d2426
-ms.sourcegitcommit: e700497f962e4c2274df16d9e651059b42ff1a10
+ms.openlocfilehash: af830fc0130c4404f4321c3ec5c03bd1111a11a0
+ms.sourcegitcommit: 04cf7905fa32e0a9a44575a6f9641d9a2e5ac0f8
 ms.translationtype: HT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 08/17/2020
-ms.locfileid: "88472956"
+ms.lasthandoff: 10/07/2020
+ms.locfileid: "91809755"
 ---
 # <a name="tutorial-use-azure-blob-storage-service-with-sql-server-2016"></a>자습서: SQL Server 2016에서 Azure Blob Storage 서비스 사용
 
@@ -36,16 +36,16 @@ Microsoft Azure Blob Storage 서비스에 대한 SQL Server 통합 지원은 SQL
 이 자습서를 완료하려면 [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)] 백업 및 복원 개념과 T-SQL 구문에 대해 잘 알고 있어야 합니다. 이 자습서를 사용하려면 Azure Storage 계정, SSMS(SQL Server Management Studio), SQL Server 온-프레미스의 인스턴스에 대한 액세스, SQL Server 2016을 실행하는 Azure VM(가상 머신)에 대한 액세스 및 AdventureWorks2016 데이터베이스가 필요합니다. 또한 BACKUP 및 RESTORE 명령을 실행하는 데 사용하는 계정은 **모든 자격 증명 변경** 권한이 있는 **db_backup operator** 데이터베이스 역할에 있어야 합니다. 
 
 - 체험 [Azure 계정](https://azure.microsoft.com/offers/ms-azr-0044p/)을 받습니다.
-- [Azure Storage 계정](https://docs.microsoft.com/azure/storage/common/storage-quickstart-create-account?tabs=portal)을 만듭니다.
+- [Azure Storage 계정](/azure/storage/common/storage-quickstart-create-account?tabs=portal)을 만듭니다.
 - [SQL Server 2017 Developer Edition](https://www.microsoft.com/sql-server/sql-server-downloads)을 설치합니다.
 - [SQL Server를 실행하는 Azure VM](https://azure.microsoft.com/services/virtual-machines/sql-server/) 프로비전
-- [SQL Server Management Studio](https://docs.microsoft.com/sql/ssms/download-sql-server-management-studio-ssms)를 설치합니다.
-- [AdventureWorks2016 샘플 데이터베이스](https://docs.microsoft.com/sql/samples/adventureworks-install-configure)를 다운로드합니다.
-- 사용자 계정에 [db_backupoperator](https://docs.microsoft.com/sql/relational-databases/security/authentication-access/database-level-roles) 역할을 할당하고 [모든 자격 증명 변경](https://docs.microsoft.com/sql/t-sql/statements/alter-credential-transact-sql) 권한을 부여합니다. 
+- [SQL Server Management Studio](../ssms/download-sql-server-management-studio-ssms.md)를 설치합니다.
+- [AdventureWorks2016 샘플 데이터베이스](../samples/adventureworks-install-configure.md)를 다운로드합니다.
+- 사용자 계정에 [db_backupoperator](./security/authentication-access/database-level-roles.md) 역할을 할당하고 [모든 자격 증명 변경](../t-sql/statements/alter-credential-transact-sql.md) 권한을 부여합니다. 
 
 ## <a name="1---create-stored-access-policy-and-shared-access-storage"></a>1 - 저장된 액세스 정책 및 공유 액세스 스토리지 만들기
 
-이 섹션에서는 [Azure PowerShell](https://azure.microsoft.com/documentation/articles/powershell-install-configure/) 스크립트를 사용하여 저장된 액세스 정책을 통해 Azure Blob 컨테이너에 공유 액세스 서명을 만듭니다.  
+이 섹션에서는 [Azure PowerShell](/powershell/azure/) 스크립트를 사용하여 저장된 액세스 정책을 통해 Azure Blob 컨테이너에 공유 액세스 서명을 만듭니다.  
   
 > [!NOTE]  
 > 이 스크립트는 Azure PowerShell 5.0.10586을 사용하여 작성되었습니다.  
@@ -484,13 +484,13 @@ AdventureWorks2016 데이터베이스에 작업을 생성하고 파일-스냅샷
 [Microsoft Azure의 SQL Server 데이터 파일](../relational-databases/databases/sql-server-data-files-in-microsoft-azure.md)  
 [Azure의 데이터베이스 파일에 대한 파일-스냅샷 백업](../relational-databases/backup-restore/file-snapshot-backups-for-database-files-in-azure.md)  
 [URL에 SQL Server 백업](../relational-databases/backup-restore/sql-server-backup-to-url.md) 
-[공유 액세스 서명, 1부: SAS 모델 이해](https://azure.microsoft.com/documentation/articles/storage-dotnet-shared-access-signature-part-1/)  
-[컨테이너 만들기](https://msdn.microsoft.com/library/azure/dd179468.aspx)  
-[컨테이너 ACL 설정](https://msdn.microsoft.com/library/azure/dd179391.aspx)  
-[컨테이너 ACL 가져오기](https://msdn.microsoft.com/library/azure/dd179469.aspx)
+[공유 액세스 서명, 1부: SAS 모델 이해](/azure/storage/common/storage-sas-overview)  
+[컨테이너 만들기](/rest/api/storageservices/Create-Container)  
+[컨테이너 ACL 설정](/rest/api/storageservices/Set-Container-ACL)  
+[컨테이너 ACL 가져오기](/rest/api/storageservices/Get-Container-ACL)
 [자격 증명&#40;데이터베이스 엔진&#41;](../relational-databases/security/authentication-access/credentials-database-engine.md)  
 [CREATE CREDENTIAL &#40;Transact-SQL&#41;](../t-sql/statements/create-credential-transact-sql.md)  
 [sys.credentials&#40;Transact-SQL&#41;](../relational-databases/system-catalog-views/sys-credentials-transact-sql.md)  
 [sp_delete_backup&#40;Transact-SQL&#41;](../relational-databases/system-stored-procedures/snapshot-backup-sp-delete-backup.md)  
 [sys.fn_db_backup_file_snapshots&#40;Transact-SQL&#41;](../relational-databases/system-functions/sys-fn-db-backup-file-snapshots-transact-sql.md)  
-[sp_delete_backup_file_snapshot&#40;Transact-SQL&#41;](../relational-databases/system-stored-procedures/snapshot-backup-sp-delete-backup-file-snapshot.md) [Azure의 데이터베이스 파일에 대한 파일-스냅샷 백업](../relational-databases/backup-restore/file-snapshot-backups-for-database-files-in-azure.md)  
+[sp_delete_backup_file_snapshot&#40;Transact-SQL&#41;](../relational-databases/system-stored-procedures/snapshot-backup-sp-delete-backup-file-snapshot.md) [Azure의 데이터베이스 파일에 대한 파일-스냅샷 백업](../relational-databases/backup-restore/file-snapshot-backups-for-database-files-in-azure.md)

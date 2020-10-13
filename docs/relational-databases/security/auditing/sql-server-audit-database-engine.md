@@ -17,12 +17,12 @@ ms.assetid: 0c1fca2e-f22b-4fe8-806f-c87806664f00
 author: davidtrigano
 ms.author: datrigan
 monikerRange: =azuresqldb-mi-current||>=sql-server-2016||=sqlallproducts-allversions||>=sql-server-linux-2017
-ms.openlocfilehash: f37e26803ebc57479d0c70dcd69dc951881c119a
-ms.sourcegitcommit: c8e1553ff3fdf295e8dc6ce30d1c454d6fde8088
+ms.openlocfilehash: 83fdbfc82724e7c3c1a41210a44e6371f9191f9e
+ms.sourcegitcommit: 4d370399f6f142e25075b3714e5c2ce056b1bfd0
 ms.translationtype: HT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 07/22/2020
-ms.locfileid: "86923939"
+ms.lasthandoff: 10/09/2020
+ms.locfileid: "91868597"
 ---
 # <a name="sql-server-audit-database-engine"></a>SQL Server Audit(데이터베이스 엔진)
 [!INCLUDE[sql-asdbmi](../../../includes/applies-to-version/sql-asdbmi.md)]
@@ -38,7 +38,7 @@ ms.locfileid: "86923939"
  모든 버전의 [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] 는 서버 수준 감사를 지원합니다. [!INCLUDE[ssSQL15_md](../../../includes/sssql15-md.md)] SP1부터 모든 버전에서 데이터베이스 수준 감사를 지원합니다. 이전에는 데이터베이스 수준 감사가 Enterprise, Developer 및 Evaluation 버전에서만 지원되었습니다. 자세한 내용은 [SQL Server 2016 버전에서 지원하는 기능](~/sql-server/editions-and-supported-features-for-sql-server-2016.md)을 참조하세요.  
   
 > [!NOTE]  
->  이 항목의 내용은 [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)]에 적용됩니다.  [!INCLUDE[ssSDS](../../../includes/sssds-md.md)]의 경우 [SQL 데이터베이스 감사 시작](https://azure.microsoft.com/documentation/articles/sql-database-auditing-get-started/)을 참조하세요.  
+>  이 항목의 내용은 [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)]에 적용됩니다.  [!INCLUDE[ssSDS](../../../includes/sssds-md.md)]의 경우 [SQL 데이터베이스 감사 시작](/azure/azure-sql/database/auditing-overview)을 참조하세요.  
   
 ## <a name="sql-server-audit-components"></a>SQL Server Audit 구성 요소  
  *감사* 는 특정 서버 동작 또는 데이터베이스 동작 그룹에 대한 여러 요소를 하나의 패키지로 결합한 것입니다. 보고서 정의가 그래픽 및 데이터 요소와 결합되어 보고서가 생성되는 것처럼 [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] Audit의 구성 요소가 결합되어 감사가 만들어집니다.  
@@ -70,7 +70,7 @@ ms.locfileid: "86923939"
 > [!IMPORTANT]  
 >  허가 받은 사용자는 Windows 애플리케이션 이벤트 로그에 대해 읽기/쓰기 작업이 가능합니다. 애플리케이션 이벤트 로그는 Windows 보안 이벤트 로그보다 낮은 권한을 요구하므로 Windows 보안 이벤트 로그보다 보안 수준이 낮습니다.  
   
- Windows 보안 로그에 대한 쓰기 작업을 수행하려면 [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] 서비스 계정을 **보안 감사 생성** 정책에 추가해야 합니다. 기본적으로 이 정책에는 로컬 시스템, 로컬 서비스 및 네트워크 서비스 등이 포함됩니다. 이 설정은 보안 정책 스냅인(secpol.msc)을 사용하여 구성할 수 있습니다. 또한 **성공** 및 **실패** 모두에 대한 **감사 개체 액세스**보안 정책을 설정해야 합니다. 이 설정은 보안 정책 스냅인(secpol.msc)을 사용하여 구성할 수 있습니다. [!INCLUDE[wiprlhext](../../../includes/wiprlhext-md.md)] 또는 Windows Server 2008의 경우 감사 정책 프로그램( **AuditPol.exe** )을 사용하여 명령줄에서 더욱 세부적인**애플리케이션 생성**정책을 설정할 수 있습니다. Windows 보안 로그의 쓰기를 설정하는 단계에 대한 자세한 내용은 [보안 로그에 SQL Server 감사 이벤트 쓰기](../../../relational-databases/security/auditing/write-sql-server-audit-events-to-the-security-log.md)를 참조하세요. Auditpol.exe 프로그램에 대한 자세한 내용은 기술 자료 문서 921469, [그룹 정책을 사용하여 세부 보안 감사를 구성하는 방법](https://support.microsoft.com/kb/921469/)을 참조하세요. Windows 이벤트 로그는 Windows 운영 체제에 전반적으로 적용됩니다. Windows 이벤트 로그에 대한 자세한 내용은 [이벤트 뷰어 개요(Event Viewer Overview)](https://go.microsoft.com/fwlink/?LinkId=101455)를 참조하십시오. 감사에 대해 보다 정확한 권한이 필요하다면 이진 파일 대상을 사용하십시오.  
+ Windows 보안 로그에 대한 쓰기 작업을 수행하려면 [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] 서비스 계정을 **보안 감사 생성** 정책에 추가해야 합니다. 기본적으로 이 정책에는 로컬 시스템, 로컬 서비스 및 네트워크 서비스 등이 포함됩니다. 이 설정은 보안 정책 스냅인(secpol.msc)을 사용하여 구성할 수 있습니다. 또한 **성공** 및 **실패** 모두에 대한 **감사 개체 액세스**보안 정책을 설정해야 합니다. 이 설정은 보안 정책 스냅인(secpol.msc)을 사용하여 구성할 수 있습니다. [!INCLUDE[wiprlhext](../../../includes/wiprlhext-md.md)] 또는 Windows Server 2008의 경우 감사 정책 프로그램( **AuditPol.exe** )을 사용하여 명령줄에서 더욱 세부적인**애플리케이션 생성**정책을 설정할 수 있습니다. Windows 보안 로그의 쓰기를 설정하는 단계에 대한 자세한 내용은 [보안 로그에 SQL Server 감사 이벤트 쓰기](../../../relational-databases/security/auditing/write-sql-server-audit-events-to-the-security-log.md)를 참조하세요. Auditpol.exe 프로그램에 대한 자세한 내용은 기술 자료 문서 921469, [그룹 정책을 사용하여 세부 보안 감사를 구성하는 방법](https://support.microsoft.com/kb/921469/)을 참조하세요. Windows 이벤트 로그는 Windows 운영 체제에 전반적으로 적용됩니다. Windows 이벤트 로그에 대한 자세한 내용은 [이벤트 뷰어 개요(Event Viewer Overview)](/previous-versions/windows/it-pro/windows-server-2003/cc737015(v=ws.10))를 참조하십시오. 감사에 대해 보다 정확한 권한이 필요하다면 이진 파일 대상을 사용하십시오.  
   
  감사 정보를 파일에 저장할 때 변조를 방지하기 위해 다음과 같은 방법으로 파일 위치에 대한 액세스를 제한할 수 있습니다.  
   
@@ -215,12 +215,10 @@ ms.locfileid: "86923939"
  [DDL 트리거](../../../relational-databases/triggers/ddl-triggers.md)  
  DDL(데이터 정의 언어) 트리거를 사용하여 데이터베이스 변경 내용을 추적할 수 있는 방법에 대해 설명합니다.  
   
- [Microsoft TechNet: SQL Server TechCenter: SQL Server 2005 보안 및 보호](https://go.microsoft.com/fwlink/?LinkId=101152)  
+ [Microsoft TechNet: SQL Server TechCenter: SQL Server 2005 보안 및 보호](../../../sql-server/index.yml)  
  [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] 보안에 대한 최신 정보를 제공합니다.  
   
 ## <a name="see-also"></a>참고 항목  
  [SQL Server 감사 동작 그룹 및 동작](../../../relational-databases/security/auditing/sql-server-audit-action-groups-and-actions.md)   
  [SQL Server 감사 기록](../../../relational-databases/security/auditing/sql-server-audit-records.md)  
   
-  
-

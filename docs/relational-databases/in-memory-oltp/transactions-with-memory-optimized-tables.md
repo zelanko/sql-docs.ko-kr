@@ -12,12 +12,12 @@ ms.assetid: ba6f1a15-8b69-4ca6-9f44-f5e3f2962bc5
 author: MightyPen
 ms.author: genemi
 monikerRange: =azuresqldb-current||>=sql-server-2016||=sqlallproducts-allversions||>=sql-server-linux-2017||=azuresqldb-mi-current
-ms.openlocfilehash: e86e2957a4c9961a5d82d13737a3239deb9a7342
-ms.sourcegitcommit: da88320c474c1c9124574f90d549c50ee3387b4c
+ms.openlocfilehash: 9c41b7f8fc9f1851daa72ca5189fee433c217f20
+ms.sourcegitcommit: 4d370399f6f142e25075b3714e5c2ce056b1bfd0
 ms.translationtype: HT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 07/01/2020
-ms.locfileid: "85753184"
+ms.lasthandoff: 10/09/2020
+ms.locfileid: "91868666"
 ---
 # <a name="transactions-with-memory-optimized-tables"></a>메모리 액세스에 최적화된 테이블의 트랜잭션
 [!INCLUDE [SQL Server Azure SQL Database](../../includes/applies-to-version/sql-asdb.md)]
@@ -143,7 +143,7 @@ ALTER DATABASE CURRENT
 | 오류 코드 | Description | 원인 |
 | :-- | :-- | :-- |
 | **41302** | 현재 트랜잭션이 시작된 이후 다른 트랜잭션에서 업데이트된 행을 업데이트하려고 했습니다. | 이 오류 조건은 두 개의 동시 트랜잭션에서 같은 행을 동시에 업데이트 또는 삭제하려고 할 때 발생합니다. 두 개의 트랜잭션 중 하나에 이 오류 메시지가 전달되며 다시 시도해야 합니다. <br/><br/>  | 
-| **41305**| 반복 가능한 읽기 유효성 검사 오류. 메모리 최적화 테이블에서 행을 읽었는데 이 트랜잭션을 커밋하기 전에 커밋된 다른 트랜잭션에 의해 이 트랜잭션이 업데이트되었습니다. | 이 오류는 REPEATABLE READ 또는 SERIALIZABLE 격리를 사용하거나 동시 트랜잭션의 작업으로 인해 FOREIGN KEY 제약 조건의 위반이 발생하는 경우에도 발생할 수 있습니다. <br/><br/>이러한 외래 키 제약 조건의 동시 위반은 드물게 발생하며 일반적으로 애플리케이션 논리 또는 데이터 입력에 문제가 있다는 것을 나타냅니다. 그러나 FOREIGN KEY 제약 조건과 관련된 열에 인덱스가 없는 경우에도 오류가 발생할 수 있습니다. 따라서 항상 메모리 최적화 테이블의 외래 키 열에 인덱스를 만들어야 합니다. <br/><br/> 외래 키 위반으로 인해 발생한 유효성 검사 오류에 대한 자세한 고려 사항은 SQL Server 고객 자문 팀의 [이 블로그 게시물](https://blogs.msdn.microsoft.com/sqlcat/2016/03/24/considerations-around-validation-errors-41305-and-41325-on-memory-optimized-tables-with-foreign-keys/) 을 참조하세요. |  
+| **41305**| 반복 가능한 읽기 유효성 검사 오류. 메모리 최적화 테이블에서 행을 읽었는데 이 트랜잭션을 커밋하기 전에 커밋된 다른 트랜잭션에 의해 이 트랜잭션이 업데이트되었습니다. | 이 오류는 REPEATABLE READ 또는 SERIALIZABLE 격리를 사용하거나 동시 트랜잭션의 작업으로 인해 FOREIGN KEY 제약 조건의 위반이 발생하는 경우에도 발생할 수 있습니다. <br/><br/>이러한 외래 키 제약 조건의 동시 위반은 드물게 발생하며 일반적으로 애플리케이션 논리 또는 데이터 입력에 문제가 있다는 것을 나타냅니다. 그러나 FOREIGN KEY 제약 조건과 관련된 열에 인덱스가 없는 경우에도 오류가 발생할 수 있습니다. 따라서 항상 메모리 최적화 테이블의 외래 키 열에 인덱스를 만들어야 합니다. <br/><br/> 외래 키 위반으로 인해 발생한 유효성 검사 오류에 대한 자세한 고려 사항은 SQL Server 고객 자문 팀의 [이 블로그 게시물](/archive/blogs/sqlcat/considerations-around-validation-errors-41305-and-41325-on-memory-optimized-tables-with-foreign-keys) 을 참조하세요. |  
 | **41325** | 직렬화 유효성 검사 오류. 현재 트랜잭션에서 이전에 검색한 범위에 새 행을 삽입했습니다. 이를 가상 행이라고 합니다. | 이 오류는 SERIALIZABLE 격리를 사용하거나 동시 트랜잭션의 작업으로 인해 PRIMARY KEY, UNIQUE 또는 FOREIGN KEY 제약 조건의 위반이 발생하는 경우 발생할 수 있습니다. <br/><br/> 이러한 동시 제약 조건의 위반은 드물게 발생하며 일반적으로 애플리케이션 논리 또는 데이터 입력에 문제가 있다는 것을 의미합니다. 그러나 이 오류는 반복 읽기 유효성 검사 오류와 마찬가지로 관련 열에 인덱스가 없는 FOREIGN KEY 제약 조건이 있는 경우에도 발생할 수 있습니다. |  
 | **41301** | 종속성 오류: 나중에 커밋이 실패한 다른 트랜잭션에 종속되어 있습니다. | 이 트랜잭션(Tx1)은 다른 트랜잭션(Tx2)에 종속되어 있는데 해당 트랜잭션(Tx2)이 Tx2에서 쓰여진 데이터를 읽어 유효성 검사 또는 커밋 처리 단계였습니다. 이후에 Tx2 커밋에 실패했습니다. Tx2가 커밋에 실패하는 가장 일반적인 원인은 반복 읽기(41305) 및 직렬화(41325) 유효성 검사 실패이며 그 외에 로그 IO 실패 등이 있습니다. |
 | **41823** 및 **41840** | 메모리 최적화 테이블 및 테이블 변수의 사용자 데이터 할당량에 도달했습니다. | 오류 41823은 [!INCLUDE[sssdsfull](../../includes/sssdsfull-md.md)]의 단일 데이터베이스뿐만 아니라 SQL Server Express/Web/Standard Edition에도 적용됩니다. 오류 41840은 [!INCLUDE[sssdsfull](../../includes/sssdsfull-md.md)]의 탄력적 풀에 적용됩니다. <br/><br/> 대부분의 경우 이러한 오류는 최대 사용자 데이터 크기에 도달했음을 나타내며, 오류를 해결하는 방법은 메모리 최적화 테이블에서 데이터를 삭제하는 것입니다. 그러나 이 오류가 일시적인 경우는 거의 없습니다. 따라서 이러한 오류가 처음 발생할 때 다시 시도하는 것이 좋습니다.<br/><br/> 이 목록의 다른 오류와 같이 오류 41823 및 41840은 활성 트랜잭션을 중단시킵니다. |
@@ -281,6 +281,6 @@ go
   
 - [sp_getapplock(Transact-SQL)](../../relational-databases/system-stored-procedures/sp-getapplock-transact-sql.md)  
   
-- [데이터베이스 엔진의 행 버전 관리 기반 격리 수준](https://msdn.microsoft.com/library/ms177404.aspx)  
+- [데이터베이스 엔진의 행 버전 관리 기반 격리 수준](/previous-versions/sql/sql-server-2008-r2/ms177404(v=sql.105))  
   
-- [트랜잭션 내구성 제어](../../relational-databases/logs/control-transaction-durability.md)   
+- [트랜잭션 내구성 제어](../../relational-databases/logs/control-transaction-durability.md)

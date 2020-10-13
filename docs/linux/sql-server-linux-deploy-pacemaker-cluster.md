@@ -1,19 +1,19 @@
 ---
 title: SQL Server on Linux용 Pacemaker 클러스터 배포
 description: SQL Server Always On AG(가용성 그룹) 또는 FCI(장애 조치(failover) 클러스터 인스턴스)용 Linux Pacemaker 클러스터를 배포하는 작업에 대해 알아봅니다.
-author: MikeRayMSFT
-ms.author: mikeray
+author: VanMSFT
+ms.author: vanto
 ms.reviewer: vanto
 ms.date: 12/11/2017
 ms.topic: conceptual
 ms.prod: sql
 ms.technology: linux
-ms.openlocfilehash: ebee4156a89a7eb2464abbda997f20a99be30753
-ms.sourcegitcommit: 3ea082c778f6771b17d90fb597680ed334d3e0ec
+ms.openlocfilehash: b2e5c3adb5f04f3e138b1d0644a047b8a443fde7
+ms.sourcegitcommit: 610e3ebe21ac6575850a29641a32f275e71557e3
 ms.translationtype: HT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 08/11/2020
-ms.locfileid: "88088936"
+ms.lasthandoff: 10/07/2020
+ms.locfileid: "91785177"
 ---
 # <a name="deploy-a-pacemaker-cluster-for-sql-server-on-linux"></a>SQL Server on Linux용 Pacemaker 클러스터 배포
 

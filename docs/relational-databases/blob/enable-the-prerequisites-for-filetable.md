@@ -12,12 +12,12 @@ ms.assetid: 6286468c-9dc9-4eda-9961-071d2a36ebd6
 author: MikeRayMSFT
 ms.author: mikeray
 ms.reviewer: ''
-ms.openlocfilehash: fc5ba7ab181e07552f9865eff482d67e292c0249
-ms.sourcegitcommit: da88320c474c1c9124574f90d549c50ee3387b4c
+ms.openlocfilehash: 12e392d083b9b47e3330d8a95b6c2d199a146cea
+ms.sourcegitcommit: 04cf7905fa32e0a9a44575a6f9641d9a2e5ac0f8
 ms.translationtype: HT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 07/01/2020
-ms.locfileid: "85767999"
+ms.lasthandoff: 10/07/2020
+ms.locfileid: "91809926"
 ---
 # <a name="enable-the-prerequisites-for-filetable"></a>FileTable의 필수 구성 요소를 사용하도록 설정
  [!INCLUDE [SQL Server](../../includes/applies-to-version/sqlserver.md)]
@@ -68,7 +68,7 @@ GO
  사용 가능한 비트랜잭션 액세스 수준은 FULL, READ_ONLY 및 OFF입니다.  
   
  **Transact-SQL을 사용하여 비트랜잭션 액세스 수준 지정**  
- - **새 데이터베이스를 만들 경우** **NON_TRANSACTED_ACCESS** FILESTREAM 옵션을 사용하여 [CREATE DATABASE&#40;SQL Server Transact-SQL&#41;](../../t-sql/statements/create-database-sql-server-transact-sql.md) 문을 호출합니다.
+ - **새 데이터베이스를 만들 경우** **NON_TRANSACTED_ACCESS** FILESTREAM 옵션을 사용하여 [CREATE DATABASE&#40;SQL Server Transact-SQL&#41;](../../t-sql/statements/create-database-transact-sql.md) 문을 호출합니다.
 
    ```sql
    CREATE DATABASE database_name  
@@ -94,7 +94,7 @@ GO
  지정한 이름은 데이터베이스 수준 디렉터리의 인스턴스 전체에서 고유해야 합니다.  
   
 **Transact-SQL을 사용하여 FileTable의 디렉터리 지정**  
-- **새 데이터베이스를 만들 경우** **DIRECTORY_NAME** FILESTREAM 옵션을 사용하여 [CREATE DATABASE&#40;SQL Server Transact-SQL&#41;](../../t-sql/statements/create-database-sql-server-transact-sql.md) 문을 호출합니다.
+- **새 데이터베이스를 만들 경우** **DIRECTORY_NAME** FILESTREAM 옵션을 사용하여 [CREATE DATABASE&#40;SQL Server Transact-SQL&#41;](../../t-sql/statements/create-database-transact-sql.md) 문을 호출합니다.
 
    ```sql
    CREATE DATABASE database_name  
@@ -110,7 +110,7 @@ GO
     GO  
     ```  
   
--   **데이터베이스를 연결할 경우** **FOR ATTACH** 옵션 및 **DIRECTORY_NAME** FILESTREAM 옵션을 사용하여 [CREATE DATABASE&#40;SQL Server Transact-SQL&#41;](../../t-sql/statements/create-database-sql-server-transact-sql.md) 문을 호출합니다.  
+-   **데이터베이스를 연결할 경우** **FOR ATTACH** 옵션 및 **DIRECTORY_NAME** FILESTREAM 옵션을 사용하여 [CREATE DATABASE&#40;SQL Server Transact-SQL&#41;](../../t-sql/statements/create-database-transact-sql.md) 문을 호출합니다.  
   
     ```sql  
     CREATE DATABASE database_name  
@@ -153,5 +153,4 @@ GO
 -   데이터베이스 수준에서 비트랜잭션 액세스를 사용하거나 사용하지 않도록 설정할 때 디렉터리 이름이 지정되었는지 여부나 디렉터리 이름이 고유한지 여부는 확인되지 않습니다.  
   
 -   FileTable에 대해 사용하도록 설정된 데이터베이스를 삭제하면 해당 데이터베이스에 있는 데이터베이스 수준 디렉터리와 모든 디렉터리 구조가 제거됩니다.  
-  
   

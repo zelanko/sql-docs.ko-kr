@@ -17,12 +17,12 @@ author: pmasl
 ms.author: pelopes
 ms.reviewer: mikeray
 monikerRange: =azuresqldb-current||>=sql-server-2016||=sqlallproducts-allversions||>=sql-server-linux-2017||=azuresqldb-mi-current
-ms.openlocfilehash: 763184ba374d004001b33357591a89668c3dd0a2
-ms.sourcegitcommit: e700497f962e4c2274df16d9e651059b42ff1a10
+ms.openlocfilehash: 4759838a20e721031db8e4ea5e644cc3822285a8
+ms.sourcegitcommit: 4d370399f6f142e25075b3714e5c2ce056b1bfd0
 ms.translationtype: HT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 08/17/2020
-ms.locfileid: "88490596"
+ms.lasthandoff: 10/09/2020
+ms.locfileid: "91868940"
 ---
 # <a name="upgrade-full-text-search"></a>전체 텍스트 검색 업그레이드
 [!INCLUDE [SQL Server Azure SQL Database](../../includes/applies-to-version/sql-asdb.md)]
@@ -113,7 +113,7 @@ ms.locfileid: "88490596"
 ## <a name="backup-and-imported-full-text-catalogs"></a>전체 텍스트 카탈로그 백업 및 가져오기  
  업그레이드 도중 다시 작성되거나 다시 설정된 전체 텍스트 카탈로그 및 새로 작성된 전체 텍스트 카탈로그는 논리적인 개념이며 파일 그룹에 존재하지 않습니다. 따라서 [!INCLUDE[ssCurrent](../../includes/sscurrent-md.md)]에서 전체 텍스트 카탈로그를 백업하려면 카탈로그의 전체 텍스트 인덱스가 들어 있는 파일 그룹을 모두 확인하여 하나씩 백업해야 합니다. 자세한 내용은 [전체 텍스트 카탈로그와 인덱스 백업 및 복원](../../relational-databases/search/back-up-and-restore-full-text-catalogs-and-indexes.md)을 참조하세요.  
   
- [!INCLUDE[ssVersion2005](../../includes/ssversion2005-md.md)]에서 가져온 전체 텍스트 카탈로그는 여전히 자체 파일 그룹의 데이터베이스 파일입니다. 전체 텍스트 카탈로그에 대한 [!INCLUDE[ssVersion2005](../../includes/ssversion2005-md.md)] 의 백업 프로세스가 여전히 적용되지만 [!INCLUDE[ssCurrent](../../includes/sscurrent-md.md)]에는 MSFTESQL 서비스가 없습니다. [!INCLUDE[ssVersion2005](../../includes/ssversion2005-md.md)] 프로세스에 대한 자세한 내용은 SQL Server 2005 온라인 설명서에서 [전체 텍스트 카탈로그 백업 및 복원](https://go.microsoft.com/fwlink/?LinkId=209154) 을 참조하세요.  
+ [!INCLUDE[ssVersion2005](../../includes/ssversion2005-md.md)]에서 가져온 전체 텍스트 카탈로그는 여전히 자체 파일 그룹의 데이터베이스 파일입니다. 전체 텍스트 카탈로그에 대한 [!INCLUDE[ssVersion2005](../../includes/ssversion2005-md.md)] 의 백업 프로세스가 여전히 적용되지만 [!INCLUDE[ssCurrent](../../includes/sscurrent-md.md)]에는 MSFTESQL 서비스가 없습니다. [!INCLUDE[ssVersion2005](../../includes/ssversion2005-md.md)] 프로세스에 대한 자세한 내용은 SQL Server 2005 온라인 설명서에서 [전체 텍스트 카탈로그 백업 및 복원](/previous-versions/sql/sql-server-2005/ms142511(v=sql.90)) 을 참조하세요.  
   
 ##  <a name="migrating-full-text-indexes-when-upgrading-a-database-to-sscurrent"></a><a name="Upgrade_Db"></a> 데이터베이스를 다음으로 업그레이드할 때 전체 텍스트 인덱스 마이그레이션: [!INCLUDE[ssCurrent](../../includes/sscurrent-md.md)]  
  데이터베이스 연결, 복원 또는 복사 마법사를 사용하여 이전 버전의 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 에서 만든 데이터베이스 파일 및 전체 텍스트 카탈로그를 기존 [!INCLUDE[ssCurrent](../../includes/sscurrent-md.md)] 서버 인스턴스로 업그레이드할 수 있습니다. [!INCLUDE[ssVersion2005](../../includes/ssversion2005-md.md)] 전체 텍스트 인덱스(있는 경우)는 가져오거나 다시 설정하거나 다시 작성할 수 있습니다. **upgrade_option** 서버 속성은 이러한 데이터베이스 업그레이드 도중 서버 인스턴스에서 사용할 전체 텍스트 업그레이드 옵션을 제어합니다.  
@@ -135,7 +135,7 @@ ms.locfileid: "88490596"
   
 -   전체 텍스트 카탈로그가 오프라인 상태이면 백업이 실패합니다.  
   
- [!INCLUDE[ssVersion2005](../../includes/ssversion2005-md.md)] 전체 텍스트 카탈로그 백업 및 복원에 대한 자세한 내용은 온라인 설명서에서 [전체 텍스트 카탈로그 백업 및 복원](https://go.microsoft.com/fwlink/?LinkId=121052) 및 [파일 백업과 복원 및 전체 텍스트 카탈로그](https://go.microsoft.com/fwlink/?LinkId=121053)[!INCLUDE[ssVersion2005](../../includes/ssversion2005-md.md)] 를 참조하세요.  
+ [!INCLUDE[ssVersion2005](../../includes/ssversion2005-md.md)] 전체 텍스트 카탈로그 백업 및 복원에 대한 자세한 내용은 온라인 설명서에서 [전체 텍스트 카탈로그 백업 및 복원](./back-up-and-restore-full-text-catalogs-and-indexes.md) 및 [파일 백업과 복원 및 전체 텍스트 카탈로그](/previous-versions/sql/sql-server-2008-r2/ms190643(v=sql.105))[!INCLUDE[ssVersion2005](../../includes/ssversion2005-md.md)] 를 참조하세요.  
   
  데이터베이스를 [!INCLUDE[ssCurrent](../../includes/sscurrent-md.md)]에 복원하면 전체 텍스트 카탈로그에 대한 새 데이터베이스 파일이 만들어집니다. 이 파일의 기본 이름은 ftrow_*catalog-name*.ndf입니다. 예를 들어 *catalog-name* 이 `cat1`이면 [!INCLUDE[ssCurrent](../../includes/sscurrent-md.md)] 데이터베이스 파일의 기본 이름은 `ftrow_cat1.ndf`입니다. 대상 디렉터리에서 이 기본 이름이 이미 사용되고 있으면 새 데이터베이스 파일의 이름이 `ftrow_`*catalog-name*`{`*GUID*`}.ndf`로 지정됩니다. 여기에서 *GUID* 는 새 파일의 전역 고유 식별자입니다.  
   
@@ -176,11 +176,10 @@ RESTORE DATABASE [ftdb1] FROM  DISK = N'C:\temp\ftdb1.bak' WITH  FILE = 1,
   
  [!INCLUDE[ssCurrent](../../includes/sscurrent-md.md)] 에서 전체 텍스트 카탈로그 파일을 찾을 수 없거나 연결 작업 도중 전체 텍스트 파일이 이동했는데 새 위치가 지정되지 않은 경우의 동작은 선택한 전체 텍스트 업그레이드 옵션에 따라 다릅니다. 전체 텍스트 업그레이드 옵션이 **가져오기** 또는 **다시 작성**이면 연결된 전체 텍스트 카탈로그가 다시 작성됩니다. 전체 텍스트 업그레이드 옵션이 **다시 설정**이면 연결된 전체 텍스트 카탈로그가 다시 설정됩니다.  
   
- 데이터베이스를 연결 및 분리하는 방법은 [데이터베이스 분리 및 연결&#40;SQL Server&#41;](../../relational-databases/databases/database-detach-and-attach-sql-server.md), [CREATE DATABASE&#40;SQL Server Transact-SQL&#41;](../../t-sql/statements/create-database-sql-server-transact-sql.md), [sp_attach_db](../../relational-databases/system-stored-procedures/sp-attach-db-transact-sql.md) 및 [sp_detach_db&#40;Transact-SQL&#41;](../../relational-databases/system-stored-procedures/sp-detach-db-transact-sql.md)를 참조하세요.  
+ 데이터베이스를 연결 및 분리하는 방법은 [데이터베이스 분리 및 연결&#40;SQL Server&#41;](../../relational-databases/databases/database-detach-and-attach-sql-server.md), [CREATE DATABASE&#40;SQL Server Transact-SQL&#41;](../../t-sql/statements/create-database-transact-sql.md), [sp_attach_db](../../relational-databases/system-stored-procedures/sp-attach-db-transact-sql.md) 및 [sp_detach_db&#40;Transact-SQL&#41;](../../relational-databases/system-stored-procedures/sp-detach-db-transact-sql.md)를 참조하세요.  
   
 ## <a name="see-also"></a>참고 항목  
  [전체 텍스트 검색 시작](../../relational-databases/search/get-started-with-full-text-search.md)   
  [검색을 위해 단어 분리기와 형태소 분석기 구성 및 관리](../../relational-databases/search/configure-and-manage-word-breakers-and-stemmers-for-search.md)   
  [검색 필터 구성 및 관리](../../relational-databases/search/configure-and-manage-filters-for-search.md)  
-  
   

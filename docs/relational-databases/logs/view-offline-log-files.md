@@ -14,12 +14,12 @@ helpviewer_keywords:
 ms.assetid: 9223e474-f224-4907-a4f2-081e11db58f5
 author: MashaMSFT
 ms.author: mathoma
-ms.openlocfilehash: aa13f33366eebe2501a135a6f8de1abbe810fa19
-ms.sourcegitcommit: da88320c474c1c9124574f90d549c50ee3387b4c
+ms.openlocfilehash: 4f0f124b9073335a5dc681c34fb7fa977123f04c
+ms.sourcegitcommit: 4d370399f6f142e25075b3714e5c2ce056b1bfd0
 ms.translationtype: HT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 07/01/2020
-ms.locfileid: "85667858"
+ms.lasthandoff: 10/09/2020
+ms.locfileid: "91869280"
 ---
 # <a name="view-offline-log-files"></a>오프라인 로그 파일 보기
  [!INCLUDE [SQL Server](../../includes/applies-to-version/sqlserver.md)]
@@ -35,11 +35,11 @@ ms.locfileid: "85667858"
   
  등록된 서버를 사용하는 경우 연결할 인스턴스는 **로컬 서버 그룹** 또는 **중앙 관리 서버**에 등록되어야 합니다. 인스턴스는 자체적으로 등록될 수도 있고 서버 그룹의 멤버로 등록될 수도 있습니다. [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 인스턴스를 등록된 서버에 추가하는 방법은 다음 항목을 참조하십시오.  
   
--   [서버 그룹 만들기 또는 편집&#40;SQL Server Management Studio&#41;](../../tools/sql-server-management-studio/create-or-edit-a-server-group-sql-server-management-studio.md)  
+-   [서버 그룹 만들기 또는 편집&#40;SQL Server Management Studio&#41;](../../ssms/register-servers/create-or-edit-a-server-group-sql-server-management-studio.md)  
   
--   [연결된 서버 등록&#40;SQL Server Management Studio&#41;](../../tools/sql-server-management-studio/register-a-connected-server-sql-server-management-studio.md)  
+-   [연결된 서버 등록&#40;SQL Server Management Studio&#41;](../../ssms/register-servers/register-a-connected-server-sql-server-management-studio.md)  
   
--   [중앙 관리 서버 및 서버 그룹 만들기&#40;SQL Server Management Studio&#41;](../../tools/sql-server-management-studio/create-a-central-management-server-and-server-group.md)  
+-   [중앙 관리 서버 및 서버 그룹 만들기&#40;SQL Server Management Studio&#41;](../../ssms/register-servers/create-a-central-management-server-and-server-group.md)  
   
  WMI 및 WQL 쿼리를 통해 프로그래밍 방식으로 오프라인 로그 파일을 보는 방법은 다음 항목을 참조하십시오.  
   
@@ -122,5 +122,4 @@ ms.locfileid: "85667858"
   
 ## <a name="see-also"></a>참고 항목  
  [로그 파일 뷰어](../../relational-databases/logs/log-file-viewer.md)  
-  
   

@@ -26,12 +26,12 @@ helpviewer_keywords:
 ms.assetid: 47f9d9a7-80b0-416d-9d9a-9e265bc190dc
 author: julieMSFT
 ms.author: jrasnick
-ms.openlocfilehash: c6a6dace6d14ea38aa411924f0c74dfec2218f77
-ms.sourcegitcommit: 9470c4d1fc8d2d9d08525c4f811282999d765e6e
+ms.openlocfilehash: 0116bfc2b0b87ca6079c2c25fe63d40ec12f0273
+ms.sourcegitcommit: 783b35f6478006d654491cb52f6edf108acf2482
 ms.translationtype: HT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 07/17/2020
-ms.locfileid: "86458579"
+ms.lasthandoff: 10/09/2020
+ms.locfileid: "91890913"
 ---
 # <a name="view-and-work-with-the-output-from-the-database-engine-tuning-advisor-dta"></a>DTA(데이터베이스 엔진 튜닝 관리자)의 출력 보기 및 작업
 
@@ -45,7 +45,7 @@ ms.locfileid: "86458579"
  GUI를 사용하여 **dta** 명령줄 유틸리티로 생성된 튜닝 출력을 볼 수도 있습니다.  
   
 > [!NOTE]  
->  **dta** 명령줄 유틸리티를 사용하며 **-ox** 인수를 사용하여 XML 파일에 출력 내용이 기록되도록 지정하는 경우 **의** 파일 **메뉴에서** 파일 열기 [!INCLUDE[ssManStudioFull](../../includes/ssmanstudiofull-md.md)]를 클릭하여 XML 출력 파일을 열어 볼 수 있습니다. 자세한 내용은 [Use SQL Server Management Studio](https://msdn.microsoft.com/library/f289e978-14ca-46ef-9e61-e1fe5fd593be)을 참조하세요. **dta** 명령줄 유틸리티에 대한 자세한 내용은 [dta 유틸리티](../../tools/dta/dta-utility.md)를 참조하세요.  
+>  **dta** 명령줄 유틸리티를 사용하며 **-ox** 인수를 사용하여 XML 파일에 출력 내용이 기록되도록 지정하는 경우 **의** 파일 **메뉴에서** 파일 열기 [!INCLUDE[ssManStudioFull](../../includes/ssmanstudiofull-md.md)]를 클릭하여 XML 출력 파일을 열어 볼 수 있습니다. 자세한 내용은 [Use SQL Server Management Studio](../../ssms/sql-server-management-studio-ssms.md)을 참조하세요. **dta** 명령줄 유틸리티에 대한 자세한 내용은 [dta 유틸리티](../../tools/dta/dta-utility.md)를 참조하세요.  
   
 #### <a name="to-view-tuning-recommendations-with-the-database-engine-tuning-advisor-gui"></a>데이터베이스 엔진 튜닝 관리자 GUI로 튜닝 권장 구성을 보려면  
   
@@ -392,5 +392,4 @@ ms.locfileid: "86458579"
 ## <a name="see-also"></a>참고 항목  
  [데이터베이스 엔진 튜닝 관리자 시작 및 사용](../../relational-databases/performance/start-and-use-the-database-engine-tuning-advisor.md)   
  [dta 유틸리티](../../tools/dta/dta-utility.md)  
-  
   

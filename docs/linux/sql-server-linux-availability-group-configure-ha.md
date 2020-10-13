@@ -1,21 +1,21 @@
 ---
 title: SQL Server on Linux의 가용성 그룹 구성
 description: Linux에서 고가용성을 위해 SQL Server Always On AG(가용성 그룹)를 만드는 방법을 알아봅니다.
-author: MikeRayMSFT
+author: VanMSFT
 ms.custom: seo-lt-2019
-ms.author: mikeray
+ms.author: vanto
 ms.reviewer: vanto
 ms.date: 08/26/2019
 ms.topic: conceptual
 ms.prod: sql
 ms.technology: linux
 ms.assetid: ''
-ms.openlocfilehash: d15d295b36ae14e81a3e39272e1c3af71cb51d2d
-ms.sourcegitcommit: f7ac1976d4bfa224332edd9ef2f4377a4d55a2c9
+ms.openlocfilehash: cfe799e9a0abb8731642ee8b2d8d293c8a8851a2
+ms.sourcegitcommit: 610e3ebe21ac6575850a29641a32f275e71557e3
 ms.translationtype: HT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 07/02/2020
-ms.locfileid: "85892315"
+ms.lasthandoff: 10/07/2020
+ms.locfileid: "91784849"
 ---
 # <a name="configure-sql-server-always-on-availability-group-for-high-availability-on-linux"></a>Linux에서 고가용성을 위한 SQL Server Always On 가용성 그룹 구성
 

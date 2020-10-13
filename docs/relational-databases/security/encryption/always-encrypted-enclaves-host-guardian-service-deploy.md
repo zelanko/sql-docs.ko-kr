@@ -10,12 +10,12 @@ ms.topic: conceptual
 author: rpsqrd
 ms.author: ryanpu
 monikerRange: =azuresqldb-current||>=sql-server-2016||=sqlallproducts-allversions||>=sql-server-linux-2017||=azuresqldb-mi-current
-ms.openlocfilehash: 1d8fd7e4164807789939ba0c3fd515d1a2d8dc67
-ms.sourcegitcommit: 620a868e623134ad6ced6728ce9d03d7d0038fe0
+ms.openlocfilehash: 88ab6e015f26cf97e002bc4e21a4430bf30d9cba
+ms.sourcegitcommit: 4d370399f6f142e25075b3714e5c2ce056b1bfd0
 ms.translationtype: HT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 07/29/2020
-ms.locfileid: "87410989"
+ms.lasthandoff: 10/09/2020
+ms.locfileid: "91868200"
 ---
 # <a name="deploy-the-host-guardian-service-for-ssnoversion-md"></a>[!INCLUDE [ssnoversion-md](../../../includes/ssnoversion-md.md)]에 대한 호스트 보호 서비스 배포
 
@@ -53,7 +53,7 @@ HGS(호스트 보호 서비스)는 하나 이상의 컴퓨터에서 클러스터
     Install-HgsServer -HgsDomainName $HgsDomainName -SafeModeAdministratorPassword $DSRMPassword -Restart
     ```
 
-    Active Directory 포리스트 구성을 완료하기 위해 HGS 컴퓨터가 다시 시작됩니다. 다음에 로그인할 때 관리자 계정은 도메인 관리자 계정이 됩니다. 새 포리스트를 관리하고 보안을 설정하는 방법에 대한 자세한 내용은 [Active Directory Domain Services 작업 문서](https://docs.microsoft.com/windows-server/identity/ad-ds/manage/component-updates/ad-ds-operations)를 검토하는 것이 좋습니다.
+    Active Directory 포리스트 구성을 완료하기 위해 HGS 컴퓨터가 다시 시작됩니다. 다음에 로그인할 때 관리자 계정은 도메인 관리자 계정이 됩니다. 새 포리스트를 관리하고 보안을 설정하는 방법에 대한 자세한 내용은 [Active Directory Domain Services 작업 문서](/windows-server/identity/ad-ds/manage/component-updates/ad-ds-operations)를 검토하는 것이 좋습니다.
 
 3. 다음으로, 관리자 권한 Windows PowerShell 콘솔에서 다음 명령을 실행하여 HGS 클러스터를 설정하고 증명 서비스를 설치합니다.
 
@@ -218,7 +218,7 @@ HGS의 모든 프로덕션 인스턴스는 HTTPS 바인딩을 사용하는 것�
 
 1. 1\.3단계의 정규화된 HGS 서비스 이름을 주체 이름으로 사용하여 인증 기관에서 TLS 인증서를 가져옵니다. 서비스 이름을 모르는 경우 HGS 컴퓨터에서 `Get-HgsServer`를 실행하여 찾을 수 있습니다. [!INCLUDE [ssnoversion-md](../../../includes/ssnoversion-md.md)] 컴퓨터가 다른 DNS 이름을 사용하여 HGS 클러스터에 연결하는 경우(예: HGS가 다른 주소를 사용하는 네트워크 부하 분산 장치 뒤에 있는 경우) 대체 DNS 이름을 주체 대체 이름 목록에 추가할 수 있습니다.
 
-2. HGS 컴퓨터에서 [Set-HgsServer](https://docs.microsoft.com/powershell/module/hgsserver/set-hgsserver)를 사용하여 HTTPS 바인딩을 사용하도록 설정하고 이전 단계에서 가져온 TLS 인증서를 지정합니다. 인증서가 컴퓨터의 로컬 인증서 저장소에 이미 설치된 경우 다음 명령을 사용하여 HGS에 등록합니다.
+2. HGS 컴퓨터에서 [Set-HgsServer](/powershell/module/hgsserver/set-hgsserver)를 사용하여 HTTPS 바인딩을 사용하도록 설정하고 이전 단계에서 가져온 TLS 인증서를 지정합니다. 인증서가 컴퓨터의 로컬 인증서 저장소에 이미 설치된 경우 다음 명령을 사용하여 HGS에 등록합니다.
 
     ```powershell
     # Note: you'll need to know the thumbprint for your certificate to configure HGS this way

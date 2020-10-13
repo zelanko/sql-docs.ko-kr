@@ -18,12 +18,12 @@ ms.assetid: a86f9d6f-f242-43be-b65d-b3435b71b62a
 author: stevestein
 ms.author: sstein
 monikerRange: =azuresqldb-current||>=sql-server-2016||=sqlallproducts-allversions||>=sql-server-linux-2017||=azuresqldb-mi-current
-ms.openlocfilehash: 5a9be69bad3b4cad8265065d393bea75e107492f
-ms.sourcegitcommit: fe5dedb2a43516450696b754e6fafac9f5fdf3cf
+ms.openlocfilehash: fa72cf50aed832d92d0351ceb699df0646debacd
+ms.sourcegitcommit: 04cf7905fa32e0a9a44575a6f9641d9a2e5ac0f8
 ms.translationtype: HT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 08/31/2020
-ms.locfileid: "89195099"
+ms.lasthandoff: 10/07/2020
+ms.locfileid: "91809662"
 ---
 # <a name="create-unique-constraints"></a>UNIQUE 제약 조건 만들기
 
@@ -32,7 +32,7 @@ ms.locfileid: "89195099"
   [!INCLUDE[ssCurrent](../../includes/sscurrent-md.md)] 에서 [!INCLUDE[ssManStudioFull](../../includes/ssmanstudiofull-md.md)] 또는 [!INCLUDE[tsql](../../includes/tsql-md.md)] 을 사용하여 UNIQUE 제약 조건을 만들어서 기본 키에 참여하지 않는 특정 열에 입력하는 값이 중복되지 않도록 할 수 있습니다. UNIQUE 제약 조건을 만들면 해당하는 고유 인덱스가 자동으로 만들어집니다.  
   
 > [!NOTE]    
-> Azure Synapse Analytics의 UNIQUE 제약 조건에 대한 자세한 내용은 [Azure Synapse Analytics의 기본 키, 외래 키 및 고유 키](https://docs.microsoft.com/azure/sql-data-warehouse/sql-data-warehouse-table-constraints)를 참조하세요.
+> Azure Synapse Analytics의 UNIQUE 제약 조건에 대한 자세한 내용은 [Azure Synapse Analytics의 기본 키, 외래 키 및 고유 키](/azure/sql-data-warehouse/sql-data-warehouse-table-constraints)를 참조하세요.
   
  **항목 내용**  
   
@@ -128,4 +128,4 @@ ms.locfileid: "89195099"
   
      자세한 내용은 [ALTER TABLE&#40;Transact-SQL&#41;](../../t-sql/statements/alter-table-transact-sql.md), [CREATE TABLE&#40;Transact-SQL&#41;](../../t-sql/statements/create-table-transact-sql.md) 및 [table_constraint&#40;Transact-SQL&#41;](../../t-sql/statements/alter-table-table-constraint-transact-sql.md)를 참조하세요.  
   
-###  <a name="TsqlExample"></a>  
+###  <a name="TsqlExample"></a>

@@ -10,12 +10,12 @@ ms.topic: conceptual
 author: rpsqrd
 ms.author: ryanpu
 monikerRange: =azuresqldb-current||>=sql-server-2016||=sqlallproducts-allversions||>=sql-server-linux-2017||=azuresqldb-mi-current
-ms.openlocfilehash: 425fdeb973918744b4aeab423629939a2a84f97a
-ms.sourcegitcommit: 620a868e623134ad6ced6728ce9d03d7d0038fe0
+ms.openlocfilehash: b2fcf4a523331260cea82a8537d83c891ea4a1c4
+ms.sourcegitcommit: 4d370399f6f142e25075b3714e5c2ce056b1bfd0
 ms.translationtype: HT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 07/29/2020
-ms.locfileid: "87411387"
+ms.lasthandoff: 10/09/2020
+ms.locfileid: "91869162"
 ---
 # <a name="plan-for-host-guardian-service-attestation"></a>호스트 보호자 서비스 증명 계획
 
@@ -42,7 +42,7 @@ HGS 설치 프로그램은 HGS 서버, 장애 조치(failover) 클러스터 리�
 ### <a name="high-availability"></a>고가용성
 
 HGS 기능은 자동으로 장애 조치(failover) 클러스터를 설치하고 구성합니다.
-프로덕션 환경에서는 고가용성을 위해 3개의 HGS 서버를 사용하는 것이 좋습니다. 클러스터 쿼럼을 결정하는 방법과 외부 감시를 사용하는 두 노드 클러스터를 비롯한 대체 구성에 대한 자세한 내용은 [장애 조치(failover) 클러스터 설명서](https://docs.microsoft.com/windows-server/failover-clustering/manage-cluster-quorum)를 참조하세요.
+프로덕션 환경에서는 고가용성을 위해 3개의 HGS 서버를 사용하는 것이 좋습니다. 클러스터 쿼럼을 결정하는 방법과 외부 감시를 사용하는 두 노드 클러스터를 비롯한 대체 구성에 대한 자세한 내용은 [장애 조치(failover) 클러스터 설명서](/windows-server/failover-clustering/manage-cluster-quorum)를 참조하세요.
 
 HGS 노드 사이에는 공유 스토리지가 필요하지 않습니다. 증명 데이터베이스의 복사본은 각 HGS 서버에 저장되며 클러스터 서비스에서 네트워크를 통해 자동으로 복제합니다.
 
@@ -67,7 +67,7 @@ HGS는 [!INCLUDE [ssnoversion-md](../../../includes/ssnoversion-md.md)]와 함�
 일반적으로 권장 사항은 다음과 같습니다.
 
 - **물리적 프로덕션 서버**의 경우 제공되는 추가 보증을 위해 TPM 증명을 사용하는 것이 좋습니다.
-- **가상 프로덕션 서버**의 경우 대부분의 가상 머신에는 가상 TPM 또는 보안 부팅이 없으므로 호스트 키 증명을 권장합니다. [온-프레미스 보호된 VM](https://aka.ms/shieldedvms) 같이 보안이 강화된 VM을 사용하는 경우 TPM 모드를 사용하도록 선택할 수 있습니다. 모든 가상화된 배포에서 증명 프로세스는 VM 아래 가상화 플랫폼이 아닌 VM 환경만 분석합니다.
+- **가상 프로덕션 서버**의 경우 대부분의 가상 머신에는 가상 TPM 또는 보안 부팅이 없으므로 호스트 키 증명을 권장합니다. [온-프레미스 보호된 VM](/windows-server/security/guarded-fabric-shielded-vm/guarded-fabric-and-shielded-vms-top-node) 같이 보안이 강화된 VM을 사용하는 경우 TPM 모드를 사용하도록 선택할 수 있습니다. 모든 가상화된 배포에서 증명 프로세스는 VM 아래 가상화 플랫폼이 아닌 VM 환경만 분석합니다.
 - **개발/테스트 시나리오**의 경우 버전을 더 쉽게 업그레이드할 수 있으므로 호스트 키 증명을 권장합니다.
 
 ### <a name="trust-model"></a>신뢰 모델
@@ -114,7 +114,7 @@ HGS는 암호화 및 암호 해독이 필요한 작업 수 때문에 CPU 바인�
 
 ### <a name="ssnoversion-md-computer-prerequisites"></a>[!INCLUDE [ssnoversion-md](../../../includes/ssnoversion-md.md)] 컴퓨터 필수 구성 요소
 
-[!INCLUDE [ssnoversion-md](../../../includes/ssnoversion-md.md)]를 실행하는 컴퓨터는 [SQL Server 설치를 위한 요구 사항](../../../sql-server/install/hardware-and-software-requirements-for-installing-sql-server.md)과 [Hyper-V 하드웨어 요구 사항](https://docs.microsoft.com/virtualization/hyper-v-on-windows/reference/hyper-v-requirements#hardware-requirements)을 모두 충족해야 합니다.
+[!INCLUDE [ssnoversion-md](../../../includes/ssnoversion-md.md)]를 실행하는 컴퓨터는 [SQL Server 설치를 위한 요구 사항](../../../sql-server/install/hardware-and-software-requirements-for-installing-sql-server.md)과 [Hyper-V 하드웨어 요구 사항](/virtualization/hyper-v-on-windows/reference/hyper-v-requirements#hardware-requirements)을 모두 충족해야 합니다.
 
 요구 사항은 다음과 같습니다.
 
@@ -124,7 +124,7 @@ HGS는 암호화 및 암호 해독이 필요한 작업 수 때문에 CPU 바인�
   - Intel VT-x의 확장 페이지 테이블
   - AMD-V의 신속한 가상화 인덱싱
   - VM에서 [!INCLUDE [ssnoversion-md](../../../includes/ssnoversion-md.md)]를 실행하는 경우 하이퍼바이저 및 실제 CPU에서 중첩된 가상화 기능을 제공해야 합니다. VM에서 VBS enclaves를 실행할 때 보증에 대한 자세한 내용은 [신뢰 모델](#trust-model) 섹션을 참조하세요.
-    - Hyper-V 2016 이상에서는 [VM 프로세서에서 중첩된 가상화 확장을 사용하도록 설정](https://docs.microsoft.com/virtualization/hyper-v-on-windows/user-guide/nested-virtualization#configure-nested-virtualization)합니다.
+    - Hyper-V 2016 이상에서는 [VM 프로세서에서 중첩된 가상화 확장을 사용하도록 설정](/virtualization/hyper-v-on-windows/user-guide/nested-virtualization#configure-nested-virtualization)합니다.
     - Azure에서는 중첩된 가상화를 지원하는 VM 크기를 선택합니다. 모든 v3 시리즈 VM은 Dv3 및 Ev3와 같은 중첩된 가상화를 지원합니다. [중첩 지원 Azure VM 만들기](/azure/virtual-machines/windows/nested-virtualization#create-a-nesting-capable-azure-vm)를 참조하세요.
     - [VMware 설명서](https://docs.vmware.com/en/VMware-vSphere/6.7/com.vmware.vsphere.vm_admin.doc/GUID-C2E78F3E-9DE2-44DB-9B0A-11440800AADD.html)에 설명된 대로 VMWare vSphere 6.7 이상에서 VM에 대한 가상화 기반 보안 지원을 사용하도록 설정합니다.
     - 다른 하이퍼바이저 및 퍼블릭 클라우드는 VBS Enclaves 함께 Always Encrypted를 사용할 수 있는 중첩된 가상화 기능을 지원할 수 있습니다. 호환성 및 구성 지침은 가상화 솔루션 설명서를 확인하세요.

@@ -12,12 +12,12 @@ ms.assetid: e3f8009c-319d-4d7b-8993-828e55ccde11
 author: MightyPen
 ms.author: genemi
 monikerRange: =azuresqldb-current||>=sql-server-2016||=sqlallproducts-allversions||>=sql-server-linux-2017||=azuresqldb-mi-current
-ms.openlocfilehash: ad82e31acbe105810b00b1f6bfc59ec433ca273b
-ms.sourcegitcommit: da88320c474c1c9124574f90d549c50ee3387b4c
+ms.openlocfilehash: 04bc3b16152307b5d5ed4a3437934e5c7ce6a45a
+ms.sourcegitcommit: 4d370399f6f142e25075b3714e5c2ce056b1bfd0
 ms.translationtype: HT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 07/01/2020
-ms.locfileid: "85753207"
+ms.lasthandoff: 10/09/2020
+ms.locfileid: "91868786"
 ---
 # <a name="transact-sql-constructs-not-supported-by-in-memory-oltp"></a>메모리 내 OLTP에서 지원되지 않는 Transact-SQL 구문
 [!INCLUDE [SQL Server Azure SQL Database](../../includes/applies-to-version/sql-asdb.md)]
@@ -28,13 +28,13 @@ ms.locfileid: "85753207"
   
  메모리 최적화 테이블과 고유하게 컴파일된 저장 프로시저에서 지원되는 기능에 대한 자세한 내용은 다음을 참조하세요.  
   
--   [고유하게 컴파일된 저장 프로시저의 마이그레이션 문제](../../relational-databases/in-memory-oltp/migration-issues-for-natively-compiled-stored-procedures.md)  
+-   [고유하게 컴파일된 저장 프로시저의 마이그레이션 문제](./a-guide-to-query-processing-for-memory-optimized-tables.md)  
   
 -   [메모리 내 OLTP에 대한 Transact-SQL 지원](../../relational-databases/in-memory-oltp/transact-sql-support-for-in-memory-oltp.md)  
   
 -   [메모리 내 OLTP에 대해 지원되지 않는 SQL Server 기능](../../relational-databases/in-memory-oltp/unsupported-sql-server-features-for-in-memory-oltp.md)  
   
--   [고유하게 컴파일된 저장 프로시저](../../relational-databases/in-memory-oltp/natively-compiled-stored-procedures.md)  
+-   [고유하게 컴파일된 저장 프로시저](./a-guide-to-query-processing-for-memory-optimized-tables.md)  
   
 ## <a name="databases-that-use-in-memory-oltp"></a>메모리 내 OLTP를 사용하는 데이터베이스  
  다음 표에는 메모리 내 OLTP 데이터베이스와 관련된 오류 메시지 텍스트에 표시될 수 있는 지원되지 않는 [!INCLUDE[tsql](../../includes/tsql-md.md)] 기능 및 키워드가 나열되어 있습니다. 또한, 다음 표는 오류 해결 방법을 보여줍니다.  
@@ -110,7 +110,7 @@ ms.locfileid: "85753207"
 |기능|COMPUTE|**COMPUTE** 절은 지원되지 않습니다. 쿼리에서 이 절을 제거합니다.|  
 |기능|SELECT INTO|**INTO** 절은 **SELECT** 문에 지원되지 않습니다. **INSERT INTO** _Table_ **SELECT**로 쿼리를 다시 작성합니다.|  
 |기능|불완전한 삽입 열 목록|일반적으로, INSERT 문에서는 테이블에 잇는 모든 열에 대해 값을 지정해야 합니다.<br /><br /> 그러나 메모리 최적화된 테이블에서는 기본 제약 조건 및 IDENTITY(1,1) 열이 지원됩니다. 이러한 열이 될 수 있고 IDENTITY 열이 반드시 있어야 하는 경우 INSERT 열 목록에서 생략합니다.|  
-|기능|*Function*|일부 기본 함수는 고유하게 컴파일된 저장 프로시저에서 지원되지 않습니다. 저장 프로시저에서 거부된 함수를 제거합니다. 지원되는 기본 제공 함수에 대한 자세한 내용은<br />[고유하게 컴파일된 T-SQL 모듈에 대해 지원되는 기능](../../relational-databases/in-memory-oltp/supported-features-for-natively-compiled-t-sql-modules.md)또는<br />[고유하게 컴파일된 저장 프로시저](../../relational-databases/in-memory-oltp/natively-compiled-stored-procedures.md)를 참조하세요.|  
+|기능|*Function*|일부 기본 함수는 고유하게 컴파일된 저장 프로시저에서 지원되지 않습니다. 저장 프로시저에서 거부된 함수를 제거합니다. 지원되는 기본 제공 함수에 대한 자세한 내용은<br />[고유하게 컴파일된 T-SQL 모듈에 대해 지원되는 기능](../../relational-databases/in-memory-oltp/supported-features-for-natively-compiled-t-sql-modules.md)또는<br />[고유하게 컴파일된 저장 프로시저](./a-guide-to-query-processing-for-memory-optimized-tables.md)를 참조하세요.|  
 |기능|CASE|**적용 대상:** [!INCLUDE[ssSQL14-md](../../includes/sssql14-md.md)] 및 SQL Server [!INCLUDE[ssSQL15-md](../../includes/sssql15-md.md)] 이상<br/>**CASE** 식은 고유하게 컴파일된 저장 프로시저 내의 쿼리에서 지원되지 않습니다. 각 사례에 대해 쿼리를 만듭니다. 자세한 내용은 [고유하게 컴파일된 저장 프로시저에서 CASE 식 구현](../../relational-databases/in-memory-oltp/implementing-a-case-expression-in-a-natively-compiled-stored-procedure.md)을 참조하세요.<br/><br/>[!INCLUDE[ssSDSFull_md](../../includes/ssSDSFull-md.md)] 및 SQL Server [!INCLUDE[ssSQLv14_md](../../includes/sssqlv14-md.md)] 이상에서는 CASE 식이 지원되지 않습니다.|  
 |기능|INSERT EXECUTE|참조를 제거합니다.|  
 |기능|CREATE 문을 실행하기 전에|고유하게 컴파일된 저장 프로시저 및 사용자 정의 함수를 실행하기 위해서만 지원됩니다.|  
@@ -147,7 +147,7 @@ ms.locfileid: "85753207"
 |연산자|TSEQUAL|이 연산자는 지원되지 않습니다. 고유하게 컴파일된 저장 프로시저에서 **TSEQUAL** 를 제거합니다.|  
 |연산자|LIKE|이 연산자는 지원되지 않습니다. 고유하게 컴파일된 저장 프로시저에서 **LIKE** 를 제거합니다.|  
 |연산자|NEXT VALUE FOR|고유하게 컴파일된 저장 프로시저 내부에서 시퀀스를 참조할 수 없습니다. 해석된 [!INCLUDE[tsql](../../includes/tsql-md.md)]을 사용하여 값을 얻은 다음 고유하게 컴파일된 저장 프로시저로 값을 전달합니다. 자세한 내용은 [메모리 액세스에 최적화된 테이블에서 IDENTITY 구현](../../relational-databases/in-memory-oltp/implementing-identity-in-a-memory-optimized-table.md)을 참조하세요.|  
-|SET 옵션|*옵션*|고유하게 컴파일된 저장 프로시저 내부에서 SET 옵션을 변경할 수 없습니다. BEGIN ATOMIC 문을 사용하여 특정 옵션을 설정할 수 있습니다. 자세한 내용은 [Natively Compiled Stored Procedures](../../relational-databases/in-memory-oltp/natively-compiled-stored-procedures.md)에서 ATOMIC 블록에 대한 섹션을 참조하십시오.|  
+|SET 옵션|*옵션*|고유하게 컴파일된 저장 프로시저 내부에서 SET 옵션을 변경할 수 없습니다. BEGIN ATOMIC 문을 사용하여 특정 옵션을 설정할 수 있습니다. 자세한 내용은 [Natively Compiled Stored Procedures](./a-guide-to-query-processing-for-memory-optimized-tables.md)에서 ATOMIC 블록에 대한 섹션을 참조하십시오.|  
 |피연산자|TABLESAMPLE|이 연산자는 지원되지 않습니다. 고유하게 컴파일된 저장 프로시저에서 **TABLESAMPLE** 를 제거합니다.|  
 |옵션|RECOMPILE|고유하게 컴파일된 저장 프로시저는 만들 때 컴파일됩니다. 프로시저 정의에서 **RECOMPILE** 을 제거합니다.<br /><br /> 고유하게 컴파일된 저장 프로시저에서 sp_recompile을 실행할 수 있고 이를 통해 다음 실행에서 다시 컴파일됩니다.|  
 |옵션|ENCRYPTION|이 옵션은 지원되지 않습니다. 프로시저 정의에서 **ENCRYPTION** 을 제거합니다.|  
@@ -187,6 +187,5 @@ ms.locfileid: "85753207"
 |기능|DTC|메모리 최적화 테이블에 액세스하는 트랜잭션은 분산 트랜잭션일 수 없습니다.|  
   
 ## <a name="see-also"></a>참고 항목  
- [메모리 내 OLTP로 마이그레이션](../../relational-databases/in-memory-oltp/migrating-to-in-memory-oltp.md)  
-  
+ [메모리 내 OLTP로 마이그레이션](./plan-your-adoption-of-in-memory-oltp-features-in-sql-server.md)  
   

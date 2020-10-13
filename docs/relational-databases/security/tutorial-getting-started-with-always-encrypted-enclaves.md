@@ -13,12 +13,12 @@ ms.topic: tutorial
 author: jaszymas
 ms.author: jaszymas
 monikerRange: '>= sql-server-ver15 || = sqlallproducts-allversions'
-ms.openlocfilehash: 35a7f19d04edc8cdcacbd9d41ec27ce3c91f6fd1
-ms.sourcegitcommit: dacd9b6f90e6772a778a3235fb69412662572d02
+ms.openlocfilehash: 75d9993cb91ff153075aa1feae19dd5a43499b0d
+ms.sourcegitcommit: 4d370399f6f142e25075b3714e5c2ce056b1bfd0
 ms.translationtype: HT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 07/11/2020
-ms.locfileid: "86279369"
+ms.lasthandoff: 10/09/2020
+ms.locfileid: "91868168"
 ---
 # <a name="tutorial-always-encrypted-with-secure-enclaves-using-ssms"></a>자습서: SSMS를 사용하여 보안 Enclave를 사용한 Always Encrypted
 [!INCLUDE [sqlserver2019-windows-only](../../includes/applies-to-version/sqlserver2019-windows-only.md)]
@@ -42,8 +42,8 @@ ms.locfileid: "86279369"
   - Intel VT-x의 확장 페이지 테이블
   - AMD-V의 신속한 가상화 인덱싱
   - VM에서 [!INCLUDE [ssnoversion-md](../../includes/ssnoversion-md.md)]를 실행하는 경우 하이퍼바이저 및 실제 CPU에서 중첩된 가상화 기능을 제공해야 합니다. 
-    - Hyper-V 2016 이상에서는 [VM 프로세서에서 중첩된 가상화 확장을 사용하도록 설정](https://docs.microsoft.com/virtualization/hyper-v-on-windows/user-guide/nested-virtualization#configure-nested-virtualization)합니다.
-    - Azure에서는 중첩된 가상화를 지원하는 VM 크기를 선택합니다. 여기에는 모든 v3 시리즈 VM(예: Dv3 및 Ev3)이 포함됩니다. [중첩 지원 Azure VM 만들기](https://docs.microsoft.com/azure/virtual-machines/windows/nested-virtualization#create-a-nesting-capable-azure-vm)를 참조하세요.
+    - Hyper-V 2016 이상에서는 [VM 프로세서에서 중첩된 가상화 확장을 사용하도록 설정](/virtualization/hyper-v-on-windows/user-guide/nested-virtualization#configure-nested-virtualization)합니다.
+    - Azure에서는 중첩된 가상화를 지원하는 VM 크기를 선택합니다. 여기에는 모든 v3 시리즈 VM(예: Dv3 및 Ev3)이 포함됩니다. [중첩 지원 Azure VM 만들기](/azure/virtual-machines/windows/nested-virtualization#create-a-nesting-capable-azure-vm)를 참조하세요.
     - [VMware 설명서](https://docs.vmware.com/en/VMware-vSphere/6.7/com.vmware.vsphere.vm_admin.doc/GUID-C2E78F3E-9DE2-44DB-9B0A-11440800AADD.html)에 설명된 대로 VMWare vSphere 6.7 이상에서 VM에 대한 가상화 기반 보안 지원을 사용합니다.
     - 다른 하이퍼바이저 및 퍼블릭 클라우드는 VBS Enclaves 함께 Always Encrypted를 사용할 수 있는 중첩된 가상화 기능을 지원할 수 있습니다. 호환성 및 구성 지침은 가상화 솔루션 설명서를 확인하세요.
 - [SSMS(SQL Server Management Studio) 18.3 이상](../../ssms/download-sql-server-management-studio-ssms.md).
@@ -264,7 +264,7 @@ UnauthorizedHost 오류는 공개 키가 HGS 서버에 등록되지 않았음을
     2. 열 마스터 키 이름을 선택합니다. **CMK1**.
     3. **Windows 인증서 저장소(현재 사용자 또는 로컬 컴퓨터)** 또는 **Azure Key Vault**를 선택해야 합니다.
     4. **Enclave 계산 허용**을 선택합니다.
-    5. Azure Key Vault를 선택한 경우 Azure에 로그인하고 Key Vault를 선택합니다. Always Encrypted용 Key Vault를 만드는 방법에 대한 자세한 내용은 [Azure Portal에서 Key Vault 관리](https://blogs.technet.microsoft.com/kv/2016/09/12/manage-your-key-vaults-from-new-azure-portal/)를 참조하세요.
+    5. Azure Key Vault를 선택한 경우 Azure에 로그인하고 Key Vault를 선택합니다. Always Encrypted용 Key Vault를 만드는 방법에 대한 자세한 내용은 [Azure Portal에서 Key Vault 관리](/archive/blogs/kv/manage-your-key-vaults-from-new-azure-portal)를 참조하세요.
     6. 인증서나 Azure 키 값 키가 이미 존재하는 경우 하나를 선택하거나 **인증서 생성** 단추를 클릭하여 새 인증서를 생성합니다.
     7. **확인**을 선택합니다.
 

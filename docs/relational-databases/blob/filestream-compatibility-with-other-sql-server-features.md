@@ -14,12 +14,12 @@ helpviewer_keywords:
 ms.assetid: d2c145dc-d49a-4f5b-91e6-89a2b0adb4f3
 author: MikeRayMSFT
 ms.author: mikeray
-ms.openlocfilehash: e2d2fdefb8684a95c8c80376e0bb353125b911ab
-ms.sourcegitcommit: da88320c474c1c9124574f90d549c50ee3387b4c
+ms.openlocfilehash: f6d34e2db139a4b38f073f693d3828f9d403c660
+ms.sourcegitcommit: 04cf7905fa32e0a9a44575a6f9641d9a2e5ac0f8
 ms.translationtype: HT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 07/01/2020
-ms.locfileid: "85642840"
+ms.lasthandoff: 10/07/2020
+ms.locfileid: "91809936"
 ---
 # <a name="filestream-compatibility-with-other-sql-server-features"></a>FILESTREAM과 기타 SQL Server 기능 간 호환성
 
@@ -72,7 +72,7 @@ ms.locfileid: "85642840"
  게시자에서 FILESTREAM 특성을 사용할 수 있는 **varbinary(max)** 열을 FILESTREAM 특성을 사용하거나 사용하지 않고 구독자로 복제할 수 있습니다. 열의 복제 방법을 지정하려면 **아티클 속성 - \<Article>** 대화 상자를 사용하거나 [sp_addarticle](../../relational-databases/system-stored-procedures/sp-addarticle-transact-sql.md) 또는 [sp_addmergearticle](../../relational-databases/system-stored-procedures/sp-addmergearticle-transact-sql.md)의 @schema_option 매개 변수를 사용합니다. FILESTREAM 특성이 없는 **varbinary(max)** 열에 복제된 데이터는 해당 데이터 형식에 대해 2GB 제한을 초과할 수 없습니다. 초과할 경우 런타임 오류가 발생합니다. 데이터를 [!INCLUDE[ssVersion2005](../../includes/ssversion2005-md.md)]에 복제하는 경우가 아니면 FILESTREAM 특성을 복제하는 것이 좋습니다. FILESTREAM 열이 있는 테이블은 지정된 스키마 옵션에 상관없이 [!INCLUDE[ssVersion2000](../../includes/ssversion2000-md.md)] 구독자에 복제할 수 없습니다.  
   
 > [!NOTE]  
->  [!INCLUDE[ssCurrent](../../includes/sscurrent-md.md)] 에서 [!INCLUDE[ssVersion2005](../../includes/ssversion2005-md.md)] 구독자로 대형 데이터 값을 복제하면 최대 256MB 데이터 값으로 제한됩니다. 자세한 내용은 [SQL Server 2005의 최대 용량 사양](https://go.microsoft.com/fwlink/?LinkId=103810)을 참조하십시오.  
+>  [!INCLUDE[ssCurrent](../../includes/sscurrent-md.md)] 에서 [!INCLUDE[ssVersion2005](../../includes/ssversion2005-md.md)] 구독자로 대형 데이터 값을 복제하면 최대 256MB 데이터 값으로 제한됩니다. 자세한 내용은 [SQL Server 2005의 최대 용량 사양](../../sql-server/maximum-capacity-specifications-for-sql-server.md)을 참조하십시오.  
   
 ### <a name="considerations-for-transactional-replication"></a>트랜잭션 복제에 대한 고려 사항  
  트랜잭션 복제를 위해 게시된 테이블의 FILESTREAM 열을 사용할 경우 다음 사항을 고려하십시오.  
@@ -124,5 +124,4 @@ ms.locfileid: "85642840"
   
 ## <a name="see-also"></a>참고 항목  
  [Blob&#40;Binary Large Object&#41; 데이터&#40;SQL Server&#41;](../../relational-databases/blob/binary-large-object-blob-data-sql-server.md)  
-  
   

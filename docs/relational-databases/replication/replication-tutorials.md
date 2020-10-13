@@ -16,12 +16,12 @@ ms.assetid: 19fbd10e-5b59-4cd0-a988-52d5d9206242
 author: MashaMSFT
 ms.author: mathoma
 monikerRange: =azuresqldb-mi-current||>=sql-server-2016||=sqlallproducts-allversions
-ms.openlocfilehash: 811723fa85d059b5e750135bf551f723c5c137dc
-ms.sourcegitcommit: da88320c474c1c9124574f90d549c50ee3387b4c
+ms.openlocfilehash: ab482e4818d7d60b9876fbf300a39de0b2f9ee40
+ms.sourcegitcommit: 4d370399f6f142e25075b3714e5c2ce056b1bfd0
 ms.translationtype: HT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 07/01/2020
-ms.locfileid: "85716715"
+ms.lasthandoff: 10/09/2020
+ms.locfileid: "91868386"
 ---
 # <a name="replication-tutorials"></a>복제 자습서
 [!INCLUDE [SQL Server SQL MI](../../includes/applies-to-version/sql-asdbmi.md)]
@@ -51,8 +51,7 @@ ms.locfileid: "85716715"
 ## <a name="see-also"></a>참고 항목  
 [복제 보안 설정 보기 및 수정](../../relational-databases/replication/security/view-and-modify-replication-security-settings.md) 
 
-[트랜잭션 복제 개요](https://docs.microsoft.com/sql/relational-databases/replication/transactional/transactional-replication) 
+[트랜잭션 복제 개요](./transactional/transactional-replication.md) 
 
-[병합 복제 개요](https://docs.microsoft.com/sql/relational-databases/replication/merge/merge-replication)
+[병합 복제 개요](./merge/merge-replication.md)
 
-  

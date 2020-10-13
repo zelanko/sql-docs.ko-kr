@@ -24,12 +24,12 @@ ms.assetid: 7adf2ad7-015d-4cbe-9e29-abaefd779008
 author: VanMSFT
 ms.author: vanto
 monikerRange: '>=aps-pdw-2016||>=sql-server-2016||=sqlallproducts-allversions||>=sql-server-linux-2017||=azuresqldb-mi-current'
-ms.openlocfilehash: b911a1c651716dd53eacda67ee41cdfc6d7a9262
-ms.sourcegitcommit: 71d2389cf27156fa0404a6e6f65fb7a61c40789a
+ms.openlocfilehash: f185faf3ef585c1f76b3c1dea605632cedf7bd1b
+ms.sourcegitcommit: 4d370399f6f142e25075b3714e5c2ce056b1bfd0
 ms.translationtype: HT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 10/01/2020
-ms.locfileid: "91636143"
+ms.lasthandoff: 10/09/2020
+ms.locfileid: "91869025"
 ---
 # <a name="server-level-roles"></a>서버 수준 역할
 [!INCLUDE[appliesto-ss-xxxx-xxxx-pdw-md](../../../includes/appliesto-ss-xxxx-xxxx-pdw-md.md)]
@@ -42,7 +42,7 @@ ms.locfileid: "91636143"
   
  서버 수준 보안 주체([!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] 로그인, Windows 계정 및 Windows 그룹)를 서버 수준 역할에 추가할 수 있습니다. 고정 서버 역할의 각 멤버는 같은 역할에 다른 로그인을 추가할 수 있습니다. 사용자 정의 서버 역할의 멤버는 이 역할에 다른 서버 보안 주체를 추가할 수 없습니다.  
 > [!NOTE]
->  SQL Database 또는 SQL Data Warehouse에서는 서버 수준 사용 권한을 사용할 수 없습니다. SQL Database에 대한 자세한 내용은 [데이터베이스 액세스 제어 및 권한 부여](https://docs.microsoft.com/azure/sql-database/sql-database-manage-logins)를 참조하세요.
+>  SQL Database 또는 SQL Data Warehouse에서는 서버 수준 사용 권한을 사용할 수 없습니다. SQL Database에 대한 자세한 내용은 [데이터베이스 액세스 제어 및 권한 부여](/azure/sql-database/sql-database-manage-logins)를 참조하세요.
   
 ## <a name="fixed-server-level-roles"></a>고정 서버 수준 역할  
  다음 표에서는 고정 서버 수준 역할과 해당 기능을 보여 줍니다.  
@@ -104,5 +104,4 @@ SELECT * FROM sys.fn_builtin_permissions('SERVER') ORDER BY permission_name;
  [REVOKE 서버 보안 주체 사용 권한&#40;Transact-SQL&#41;](../../../t-sql/statements/revoke-server-principal-permissions-transact-sql.md)   
  [DENY 서버 보안 주체 사용 권한&#40;Transact-SQL&#41;](../../../t-sql/statements/deny-server-principal-permissions-transact-sql.md)   
  [서버 역할 만들기](../../../relational-databases/security/authentication-access/create-a-server-role.md)  
-  
   

@@ -19,12 +19,12 @@ ms.assetid: 19aefa9a-fbc2-4b22-92cf-67b8bb01671c
 author: rothja
 ms.author: jroth
 monikerRange: =azuresqldb-current||>=sql-server-2016||=sqlallproducts-allversions||>=sql-server-linux-2017||=azuresqldb-mi-current
-ms.openlocfilehash: 1638e581a384f79842109c83352fc7292fa15de7
-ms.sourcegitcommit: e700497f962e4c2274df16d9e651059b42ff1a10
+ms.openlocfilehash: 994adada7ecef047967b07d03cd2a9a129c8f227
+ms.sourcegitcommit: 4d370399f6f142e25075b3714e5c2ce056b1bfd0
 ms.translationtype: HT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 08/17/2020
-ms.locfileid: "88382529"
+ms.lasthandoff: 10/09/2020
+ms.locfileid: "91869050"
 ---
 # <a name="hierarchical-data-sql-server"></a>계층적 데이터(SQL Server)
 
@@ -44,7 +44,7 @@ ms.locfileid: "88382529"
   
 -   웹 페이지 간 링크의 그래프  
   
- [hierarchyid](../t-sql/data-types/hierarchyid-data-type-method-reference.md) 를 데이터 형식으로 사용하여 계층 구조가 있는 테이블을 만들거나 다른 위치에 저장된 데이터의 계층 구조를 설명할 수 있습니다. [의](https://msdn.microsoft.com/library/01a050f5-7580-4d5f-807c-7f11423cbb06) hierarchyid 함수 [!INCLUDE[tsql](../includes/tsql-md.md)] 를 사용하면 계층적 데이터를 쿼리하고 관리할 수 있습니다.  
+ [hierarchyid](../t-sql/data-types/hierarchyid-data-type-method-reference.md) 를 데이터 형식으로 사용하여 계층 구조가 있는 테이블을 만들거나 다른 위치에 저장된 데이터의 계층 구조를 설명할 수 있습니다. [의](../t-sql/data-types/hierarchyid-data-type-method-reference.md) hierarchyid 함수 [!INCLUDE[tsql](../includes/tsql-md.md)] 를 사용하면 계층적 데이터를 쿼리하고 관리할 수 있습니다.  
   
 ##  <a name="key-properties-of-hierarchyid"></a><a name="keyprops"></a> hierarchyid의 주요 속성  
  **hierarchyid** 데이터 형식의 값은 트리 계층에서의 위치를 나타냅니다. **hierarchyid** 값의 속성은 다음과 같습니다.  
@@ -540,8 +540,7 @@ GO
   
   
 ## <a name="see-also"></a>관련 항목  
- [hierarchyid 데이터 형식 메서드 참조](https://msdn.microsoft.com/library/01a050f5-7580-4d5f-807c-7f11423cbb06)   
+ [hierarchyid 데이터 형식 메서드 참조](../t-sql/data-types/hierarchyid-data-type-method-reference.md)   
  [자습서: hierarchyid 데이터 형식 사용](../relational-databases/tables/tutorial-using-the-hierarchyid-data-type.md)   
  [hierarchyid&#40;Transact-SQL&#41;](../t-sql/data-types/hierarchyid-data-type-method-reference.md)  
-  
   

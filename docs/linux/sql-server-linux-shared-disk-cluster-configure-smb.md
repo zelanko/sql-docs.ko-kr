@@ -1,19 +1,19 @@
 ---
 title: SMB 스토리지 FCI 구성 - SQL Server on Linux
 description: SQL Server on Linux에 SMB 스토리지를 사용하여 FCI(장애 조치 클러스터 인스턴스)를 구성하는 방법을 알아봅니다.
-author: MikeRayMSFT
-ms.author: mikeray
+author: VanMSFT
+ms.author: vanto
 ms.reviewer: vanto
 ms.date: 08/28/2017
 ms.topic: conceptual
 ms.prod: sql
 ms.technology: linux
-ms.openlocfilehash: e386bb61142faca2ce81d2e95a46b3399bce15c0
-ms.sourcegitcommit: f7ac1976d4bfa224332edd9ef2f4377a4d55a2c9
+ms.openlocfilehash: b57aec5c6abc9bbeb6928c5310a3217957d2d02b
+ms.sourcegitcommit: 610e3ebe21ac6575850a29641a32f275e71557e3
 ms.translationtype: HT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 07/02/2020
-ms.locfileid: "85902353"
+ms.lasthandoff: 10/07/2020
+ms.locfileid: "91784899"
 ---
 # <a name="configure-failover-cluster-instance---smb---sql-server-on-linux"></a>장애 조치(failover) 클러스터 인스턴스 구성 - SMB - SQL Server on Linux
 

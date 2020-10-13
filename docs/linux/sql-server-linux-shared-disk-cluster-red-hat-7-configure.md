@@ -2,20 +2,20 @@
 title: SQL Server on Linux의 RHEL FCI 구성
 description: SQL Server on Linux 고가용성을 위해 RHEL(Red Hat Enterprise Linux) 공유 디스크 FCI(장애 조치 클러스터 인스턴스)를 구성하는 방법을 알아봅니다.
 ms.custom: seo-lt-2019
-author: MikeRayMSFT
-ms.author: mikeray
+author: VanMSFT
+ms.author: vanto
 ms.reviewer: vanto
 ms.date: 03/17/2017
 ms.topic: conceptual
 ms.prod: sql
 ms.technology: linux
 ms.assetid: dcc0a8d3-9d25-4208-8507-a5e65d2a9a15
-ms.openlocfilehash: 493239906f83b74735f9fcd4b6673fb2748abfff
-ms.sourcegitcommit: f7ac1976d4bfa224332edd9ef2f4377a4d55a2c9
+ms.openlocfilehash: 617487d27842a6eb2c8844ae6c7ed2aa4e8fadce
+ms.sourcegitcommit: 610e3ebe21ac6575850a29641a32f275e71557e3
 ms.translationtype: HT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 07/02/2020
-ms.locfileid: "85897295"
+ms.lasthandoff: 10/07/2020
+ms.locfileid: "91785081"
 ---
 # <a name="configure-rhel-failover-cluster-instance-fci-cluster-for-sql-server"></a>SQL Server의 RHEL FCI(장애 조치 클러스터 인스턴스) 클러스터 구성
 

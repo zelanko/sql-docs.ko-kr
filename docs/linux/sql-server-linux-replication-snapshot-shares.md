@@ -3,20 +3,20 @@ title: 스냅샷 폴더 공유 구성
 titleSuffix: SQL Server on Linux
 description: Linux에서 스냅샷 폴더 공유 SQL Server 복제를 구성하는 방법을 알아봅니다.
 ms.custom: seo-lt-2019
-author: MikeRayMSFT
-ms.author: mikeray
+author: VanMSFT
+ms.author: vanto
 ms.reviewer: vanto
 ms.date: 09/24/2018
 ms.topic: article
 ms.prod: sql
 ms.technology: linux
 monikerRange: '>=sql-server-ver15||>=sql-server-linux-ver15||=sqlallproducts-allversions'
-ms.openlocfilehash: e5f21fee3218977d22a5c3314fe82c5a3e508bfc
-ms.sourcegitcommit: f7ac1976d4bfa224332edd9ef2f4377a4d55a2c9
+ms.openlocfilehash: 16e1d3458e04d1693afeca030e0ecb89f434fc1d
+ms.sourcegitcommit: 610e3ebe21ac6575850a29641a32f275e71557e3
 ms.translationtype: HT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 07/02/2020
-ms.locfileid: "85882668"
+ms.lasthandoff: 10/07/2020
+ms.locfileid: "91785045"
 ---
 # <a name="configure-replication-snapshot-folder-with-shares"></a>공유를 사용하여 복제 스냅샷 폴더 구성
 

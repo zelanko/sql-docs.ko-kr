@@ -16,12 +16,12 @@ ms.assetid: 1615db50-69de-4778-8be6-4e058c00ccd4
 author: MladjoA
 ms.author: mlandzic
 monikerRange: =azuresqldb-current||>=sql-server-2016||=sqlallproducts-allversions||>=sql-server-linux-2017||=azuresqldb-mi-current
-ms.openlocfilehash: befee8aca5a1c9d7a66015a02c8851c56d0e5a8a
-ms.sourcegitcommit: e700497f962e4c2274df16d9e651059b42ff1a10
+ms.openlocfilehash: f0939dd9a38e049fc0db732c1635fdb73b686f04
+ms.sourcegitcommit: 04cf7905fa32e0a9a44575a6f9641d9a2e5ac0f8
 ms.translationtype: HT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 08/17/2020
-ms.locfileid: "88464921"
+ms.lasthandoff: 10/07/2020
+ms.locfileid: "91809549"
 ---
 # <a name="spatial-data-types-overview"></a>공간 데이터 형식 개요
 
@@ -74,7 +74,7 @@ geometry 형식의 원호 세그먼트는 XY 데카르트 좌표 평면(Z 값은
 
 평면(평평한 표면) 시스템에서 거리와 영역의 측정은 좌표와 동일한 측정 단위로 지정됩니다. **geometry** 데이터 형식을 이용하면 사용한 단위에 상관없이 (2, 2)와 (5, 6) 사이의 거리는 5단위입니다.  
 
-타원 또는 둥근 지구 시스템에서 좌표는 위도와 경도의 도 단위로 지정됩니다. 그러나 **geography** 인스턴스의 [공간 참조 식별자](https://docs.microsoft.com/sql/relational-databases/spatial/spatial-reference-identifiers-srids)에 따라 측정이 달라지더라도 길이 및 영역은 일반적으로 미터와 제곱미터로 측정됩니다. 가장 일반적인 **geography** 데이터 형식의 측정 단위는 미터입니다.  
+타원 또는 둥근 지구 시스템에서 좌표는 위도와 경도의 도 단위로 지정됩니다. 그러나 **geography** 인스턴스의 [공간 참조 식별자](./spatial-reference-identifiers-srids.md)에 따라 측정이 달라지더라도 길이 및 영역은 일반적으로 미터와 제곱미터로 측정됩니다. 가장 일반적인 **geography** 데이터 형식의 측정 단위는 미터입니다.  
 
 ### <a name="orientation-of-spatial-data"></a>공간 데이터의 방향
 
@@ -201,10 +201,10 @@ SELECT @g.ToString(), @g.STLength();
 
 ## <a name="see-also"></a>참고 항목
 
-- [공간 데이터(SQL Server)](https://msdn.microsoft.com/library/bb933790.aspx)
-- [geometry 데이터 형식 메서드 참조](https://msdn.microsoft.com/library/bb933973.aspx)
-- [geography 데이터 형식 메서드 참조](https://docs.microsoft.com/sql/t-sql/spatial-geography/spatial-types-geography)
+- [공간 데이터(SQL Server)](./spatial-data-sql-server.md)
+- [geometry 데이터 형식 메서드 참조](../../t-sql/spatial-geometry/spatial-types-geometry-transact-sql.md)
+- [geography 데이터 형식 메서드 참조](../../t-sql/spatial-geography/spatial-types-geography.md)
 - [STNumCurves&#40;geometry 데이터 형식&#41;](../../t-sql/spatial-geometry/stnumcurves-geometry-data-type.md)
 - [STNumCurves&#40;geography 데이터 형식&#41;](../../t-sql/spatial-geography/stnumcurves-geography-data-type.md)
 - [STGeomFromText&#40;geometry 데이터 형식&#41;](../../t-sql/spatial-geometry/stgeomfromtext-geometry-data-type.md)
-- [STGeomFromText&#40;geography 데이터 형식&#41;](../../t-sql/spatial-geography/stgeomfromtext-geography-data-type.md)  
+- [STGeomFromText&#40;geography 데이터 형식&#41;](../../t-sql/spatial-geography/stgeomfromtext-geography-data-type.md)

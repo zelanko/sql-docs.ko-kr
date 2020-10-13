@@ -18,12 +18,12 @@ helpviewer_keywords:
 ms.assetid: 84785aba-b2c1-4821-9e9d-a363c73dcb37
 author: MashaMSFT
 ms.author: mathoma
-ms.openlocfilehash: 9139d4e5b0ab2df1074774dc90af44bc711804ad
-ms.sourcegitcommit: e700497f962e4c2274df16d9e651059b42ff1a10
+ms.openlocfilehash: e7ddce7f64c33d0646f3d79aa91b75f05ff11ffe
+ms.sourcegitcommit: 4d370399f6f142e25075b3714e5c2ce056b1bfd0
 ms.translationtype: HT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 08/17/2020
-ms.locfileid: "88404479"
+ms.lasthandoff: 10/09/2020
+ms.locfileid: "91869276"
 ---
 # <a name="web-synchronization-for-merge-replication"></a>병합 복제에 대한 웹 동기화
  [!INCLUDE [SQL Server](../../includes/applies-to-version/sqlserver.md)]
@@ -37,7 +37,7 @@ ms.locfileid: "88404479"
   
  [!INCLUDE[ssSampleDBCoShort](../../includes/sssampledbcoshort-md.md)] IT 부서에서는 각 휴대용 컴퓨터를 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 로 구성하고 웹 동기화를 사용할 수 있도록 병합 복제를 설정했습니다. 각 휴대용 컴퓨터의 병합 에이전트에는 [!INCLUDE[msCoName](../../includes/msconame-md.md)] 인터넷 정보 서비스(IIS)를 실행하는 컴퓨터에 설치된 복제 구성 요소를 가리키는 인터넷 URL이 있습니다. 이러한 구성 요소는 구독자와 게시자를 동기화합니다. 각 담당자는 이제 원격 전화 접속 연결을 사용하지 않고도 사용 가능한 임의의 인터넷 연결을 통해 연결을 설정하여 해당 데이터를 업로드 및 다운로드할 수 있습니다. 인터넷 연결은 이전에 SSL(Secure Sockets Layer)로 알려진 TLS(전송 계층 보안)를 사용하므로 VPN(가상 프라이빗 네트워크)이 필요하지 않습니다.  
   
- 웹 동기화에 필요한 구성 요소를 구성하는 방법은 [웹 동기화 구성](../../relational-databases/replication/configure-web-synchronization.md), [웹 동기화를 위한 IIS 구성](../../relational-databases/replication/configure-iis-for-web-synchronization.md) 및 [웹 동기화를 위한 IIS 7 구성](../../relational-databases/replication/configure-iis-7-for-web-synchronization.md)을 참조하세요.  
+ 웹 동기화에 필요한 구성 요소를 구성하는 방법은 [웹 동기화 구성](../../relational-databases/replication/configure-web-synchronization.md), [웹 동기화를 위한 IIS 구성](./configure-iis-7-for-web-synchronization.md) 및 [웹 동기화를 위한 IIS 7 구성](../../relational-databases/replication/configure-iis-7-for-web-synchronization.md)을 참조하세요.  
   
 > [!NOTE]  
 >  웹 동기화는 데이터를 휴대용 컴퓨터, 핸드헬드 디바이스 및 기타 클라이언트와 동기화하기 위해 디자인되었으며 고용량 서버 간 애플리케이션을 위해 디자인되지 않았습니다.  
@@ -85,5 +85,4 @@ ms.locfileid: "88404479"
 ## <a name="see-also"></a>참고 항목  
  [Configure Web Synchronization](../../relational-databases/replication/configure-web-synchronization.md)   
  [웹 동기화를 위한 토폴로지](../../relational-databases/replication/topologies-for-web-synchronization.md)  
-  
   

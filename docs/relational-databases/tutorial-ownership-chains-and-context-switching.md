@@ -14,12 +14,12 @@ helpviewer_keywords:
 ms.assetid: db5d4cc3-5fc5-4cf5-afc1-8d4edc1d512b
 author: MashaMSFT
 ms.author: mathoma
-ms.openlocfilehash: b26b475fbef54f501d1b40dc1c1b35df796b27ea
-ms.sourcegitcommit: e700497f962e4c2274df16d9e651059b42ff1a10
+ms.openlocfilehash: d4c1494efa032ba58315e8a5f7fe5fd855b3e51f
+ms.sourcegitcommit: 04cf7905fa32e0a9a44575a6f9641d9a2e5ac0f8
 ms.translationtype: HT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 08/17/2020
-ms.locfileid: "88472968"
+ms.lasthandoff: 10/07/2020
+ms.locfileid: "91809369"
 ---
 # <a name="tutorial-ownership-chains-and-context-switching"></a>자습서: 소유권 체인 및 컨텍스트 전환
 [!INCLUDE[sqlserver](../includes/applies-to-version/sqlserver.md)]
@@ -46,11 +46,11 @@ ms.locfileid: "88472968"
 ## <a name="prerequisites"></a>사전 요구 사항
 이 자습서를 완료하려면 SQL Server Management Studio, SQL Server를 실행하는 서버에 대한 액세스 및 AdventureWorks 데이터베이스가 필요합니다.
 
-- [SQL Server Management Studio](https://docs.microsoft.com/sql/ssms/download-sql-server-management-studio-ssms)를 설치합니다.
+- [SQL Server Management Studio](../ssms/download-sql-server-management-studio-ssms.md)를 설치합니다.
 - [SQL Server 2017 Developer Edition](https://www.microsoft.com/sql-server/sql-server-downloads)을 설치합니다.
-- [AdventureWorks2017 샘플 데이터베이스](https://docs.microsoft.com/sql/samples/adventureworks-install-configure)를 다운로드합니다.
+- [AdventureWorks2017 샘플 데이터베이스](../samples/adventureworks-install-configure.md)를 다운로드합니다.
 
-SQL Server Management Studio에서 데이터베이스를 복원하는 방법은 [데이터베이스를 복원](https://docs.microsoft.com/sql/relational-databases/backup-restore/restore-a-database-backup-using-ssms)을 참조하세요.   
+SQL Server Management Studio에서 데이터베이스를 복원하는 방법은 [데이터베이스를 복원](./backup-restore/restore-a-database-backup-using-ssms.md)을 참조하세요.   
   
 ## <a name="1-configure-the-environment"></a>1. 환경 구성  
 [!INCLUDE[ssManStudioFull](../includes/ssmanstudiofull-md.md)] 및 다음 코드를 사용하여 `AdventureWorks2017` 데이터베이스를 열고 `CURRENT_USER` [!INCLUDE[tsql](../includes/tsql-md.md)] 문을 사용하여 dbo 사용자가 컨텍스트로 표시되는지 확인합니다.  
@@ -334,6 +334,5 @@ GO
   
 ## <a name="see-also"></a>참고 항목  
 [SQL Server 데이터베이스 엔진 및 Azure SQL Database 보안 센터](../relational-databases/security/security-center-for-sql-server-database-engine-and-azure-sql-database.md)  
-  
   
   

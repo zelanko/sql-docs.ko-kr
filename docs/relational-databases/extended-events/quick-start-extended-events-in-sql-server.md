@@ -16,12 +16,12 @@ ms.author: genemi
 ms.reviewer: maghan
 ms.date: 04/16/2020
 monikerRange: =azuresqldb-current||>=sql-server-2016||=sqlallproducts-allversions||>=sql-server-linux-2017||=azuresqldb-mi-current
-ms.openlocfilehash: 18e0b44567d2e6a06dfc243231aebe6f9be11222
-ms.sourcegitcommit: c4d6804bde7eaf72d9233d6d43f77d77d1b17c4e
+ms.openlocfilehash: b2cc5e7de4b96bbd85ebe36e3173189d08258139
+ms.sourcegitcommit: 4d370399f6f142e25075b3714e5c2ce056b1bfd0
 ms.translationtype: HT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 10/01/2020
-ms.locfileid: "91624790"
+ms.lasthandoff: 10/09/2020
+ms.locfileid: "91869424"
 ---
 # <a name="quickstart-extended-events-in-sql-server"></a>빠른 시작: SQL Server의 확장 이벤트
 
@@ -49,13 +49,13 @@ ms.locfileid: "91624790"
 블로그 및 기타 비공식 대화에서는 확장 이벤트를 약어 *xevents*로 부르기도 합니다.
 
 > [!NOTE]
-> 코드 샘플을 포함하여 Azure SQL Database의 확장 이벤트에 대한 자세한 내용은 [SQL Database의 확장 이벤트](https://azure.microsoft.com/documentation/articles/sql-database-xevent-db-diff-from-svr/)를 참조하세요.
+> 코드 샘플을 포함하여 Azure SQL Database의 확장 이벤트에 대한 자세한 내용은 [SQL Database의 확장 이벤트](/azure/azure-sql/database/xevent-db-diff-from-svr)를 참조하세요.
 
 ## <a name="preparations-before-demo"></a>데모 전 준비 작업
 
 예정된 데모를 실제로 수행하기 전에 다음과 같은 사전 지식이 필요합니다.
 
-1. [SSMS(SQL Server Management Studio) 다운로드](https://msdn.microsoft.com/library/mt238290.aspx)
+1. [SSMS(SQL Server Management Studio) 다운로드](../../ssms/download-sql-server-management-studio-ssms.md)
 
    매월 SSMS의 최신 월별 업데이트를 설치해야 합니다.
 2. Microsoft SQL Server 2014 이상에 로그인합니다.
@@ -359,7 +359,7 @@ SSMS **개체 탐색기**에서 이벤트 세션 노드를 마우스 오른쪽 �
 - [가장 많은 잠금이 발생한 개체 찾기](../../relational-databases/extended-events/find-the-objects-that-have-the-most-locks-taken-on-them.md)
   - 이 시나리오에서는 사용자에게 표시하기 전에 원시 이벤트 데이터를 처리하는 대상 package0.histogram을 사용합니다.
 - [잠금을 보유한 쿼리 파악](../../relational-databases/extended-events/determine-which-queries-are-holding-locks.md)
-  - 이 시나리오에서는 이벤트 쌍이 sqlserver.lock_acquire 및 lock_release인 [target package0.pair_matching](https://msdn.microsoft.com/library/3c87dcfb-543a-4bd8-a73d-1390bdf4ffa3)을 사용합니다.
+  - 이 시나리오에서는 이벤트 쌍이 sqlserver.lock_acquire 및 lock_release인 [target package0.pair_matching](/previous-versions/sql/sql-server-2016/ff878062(v=sql.130))을 사용합니다.
 
 ## <a name="terms-and-concepts-in-extended-events"></a>확장 이벤트의 용어 및 개념
 
@@ -541,7 +541,7 @@ SELECT HAS_PERMS_BY_NAME
 - 기본 제공 함수 [HAS_PERMS_BY_NAME(Transact-SQL)](../../t-sql/functions/has-perms-by-name-transact-sql.md)에 대한 세부 정보
 - [sys.fn_my_permissions(Transact-SQL)](../../relational-databases/system-functions/sys-fn-my-permissions-transact-sql.md)
 - [GRANT 서버 사용 권한(Transact-SQL)](../../t-sql/statements/grant-server-permissions-transact-sql.md)
-- [sys.server_principals(Transact-SQL)](https://msdn.microsoft.com/library/ms188786.aspx)
+- [sys.server_principals(Transact-SQL)](../system-catalog-views/sys-server-principals-transact-sql.md)
 - 블로그: [효과적인 데이터베이스 엔진 사용 권한](https://social.technet.microsoft.com/wiki/contents/articles/15180.effective-database-engine-permissions.aspx)
 - 모든 SQL Server 사용 권한 계층을 PDF로 표시하는 확대 가능한 [포스터](https://aka.ms/sql-permissions-poster)
 

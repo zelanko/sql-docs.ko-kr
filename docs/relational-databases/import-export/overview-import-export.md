@@ -11,12 +11,12 @@ author: MashaMSFT
 ms.author: mathoma
 monikerRange: '>=aps-pdw-2016||=azuresqldb-current||=azure-sqldw-latest||>=sql-server-2016||=sqlallproducts-allversions||>=sql-server-linux-2017||=azuresqldb-mi-current'
 ms.custom: seo-lt-2019
-ms.openlocfilehash: c2f1b8e4a711081bb998c6417c90e28b7638e508
-ms.sourcegitcommit: f3321ed29d6d8725ba6378d207277a57cb5fe8c2
+ms.openlocfilehash: e8e0c926a81d97561a16928dc33af406c69469ae
+ms.sourcegitcommit: 4d370399f6f142e25075b3714e5c2ce056b1bfd0
 ms.translationtype: HT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 07/06/2020
-ms.locfileid: "86001187"
+ms.lasthandoff: 10/09/2020
+ms.locfileid: "91868808"
 ---
 # <a name="import-and-export-data-from-sql-server-and-azure-sql-database"></a>SQL Server 및 Azure SQL Database에서 데이터 가져오기 및 내보내기
 [!INCLUDE[SQL Server Azure SQL Database Synapse Analytics PDW ](../../includes/applies-to-version/sql-asdb-asdbmi-asa-pdw.md)]
@@ -44,7 +44,7 @@ SQL Server 가져오기 및 내보내기 마법사를 사용하여 다양한 원
 ### <a name="design-your-own-import-or-export"></a>사용자 고유 가져오기 또는 내보내기 디자인
 사용자 지정 데이터 가져오기를 디자인하려는 경우 다음 기능 또는 서비스 중 하나를 사용할 수 있습니다.
 -   SQL Server Integration Services. 자세한 내용은 [SQL Server Integration Services](../../integration-services/sql-server-integration-services.md)를 참조하세요.
--   Azure Data Factory. 자세한 내용은 [Azure Data Factory 소개](https://docs.microsoft.com/azure/data-factory/data-factory-introduction)를 참조하세요.
+-   Azure Data Factory. 자세한 내용은 [Azure Data Factory 소개](/azure/data-factory/data-factory-introduction)를 참조하세요.
 
 ## <a name="data-formats-for-import-and-export"></a>가져오기 및 내보내기에 대한 데이터 형식
 
@@ -53,7 +53,7 @@ SQL Server 가져오기 및 내보내기 마법사를 사용하여 다양한 원
 플랫 파일 또는 다양한 다른 파일 형식, 관계형 데이터베이스 및 클라우드 서비스 간에 데이터를 가져오고 내보낼 수 있습니다. 특정 도구에 대한 이러한 옵션에 대한 자세한 내용은 다음 항목을 참조하세요.
 -   SQL Server 가져오기 및 내보내기 마법사의 경우 [SQL Server 가져오기 및 내보내기 마법사를 사용하여 데이터 원본에 연결](../../integration-services/import-export-data/connect-to-data-sources-with-the-sql-server-import-and-export-wizard.md)을 참조하세요.
 -   SQL Server Integration Services의 경우 [Integration Services(SSIS) 연결](../../integration-services/connection-manager/integration-services-ssis-connections.md)을 참조하세요.
--   Azure Data Factory의 경우 [Azure Data Factory 커넥터](https://docs.microsoft.com/azure/data-factory/data-factory-amazon-redshift-connector)를 참조하세요.
+-   Azure Data Factory의 경우 [Azure Data Factory 커넥터](/azure/data-factory/data-factory-amazon-redshift-connector)를 참조하세요.
 
 ### <a name="commonly-used-data-formats"></a>일반적으로 사용되는 데이터 형식
 

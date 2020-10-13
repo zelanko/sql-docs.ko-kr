@@ -20,12 +20,12 @@ ms.assetid: 6ef578bf-8da7-46e0-88b5-e310fc908bb0
 author: stevestein
 ms.author: sstein
 ms.custom: seo-dt-2019
-ms.openlocfilehash: b471d7e0f6ab13c5718e1ec37a87d423e7115f94
-ms.sourcegitcommit: e700497f962e4c2274df16d9e651059b42ff1a10
+ms.openlocfilehash: ea8f2b873b8990a00bc61cd8ce45c192feefaaa5
+ms.sourcegitcommit: 4d370399f6f142e25075b3714e5c2ce056b1bfd0
 ms.translationtype: HT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 08/17/2020
-ms.locfileid: "88420927"
+ms.lasthandoff: 10/09/2020
+ms.locfileid: "91869413"
 ---
 # <a name="linked-servers-database-engine"></a>연결된 서버(데이터베이스 엔진)
 
@@ -34,7 +34,7 @@ ms.locfileid: "88420927"
   연결된 서버를 사용하면 [!INCLUDE[ssDEnoversion](../../includes/ssdenoversion-md.md)] 및 [!INCLUDE[ssSDSMIfull](../../includes/sssdsmifull-md.md)]가 원격 데이터 원본에서 데이터를 읽고 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 인스턴스 외부에서 원격 데이터베이스 서버(예: OLE DB 데이터 원본)에 대해 명령을 실행할 수 있습니다. 일반적으로 연결된 서버는 [!INCLUDE[ssDE](../../includes/ssde-md.md)] 에서 [!INCLUDE[tsql](../../includes/tsql-md.md)] 의 다른 인스턴스 또는 Oracle과 같은 다른 데이터베이스 제품에 있는 테이블이 포함된 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]문을 실행할 수 있도록 구성됩니다. [!INCLUDE[msCoName](../../includes/msconame-md.md)] Access, Excel 및 Azure CosmosDB를 포함한 많은 유형의 OLE DB 데이터 원본을 연결된 서버로 구성할 수 있습니다.
 
 > [!NOTE]
-> 연결된 서버는 [!INCLUDE[ssDEnoversion](../../includes/ssdenoversion-md.md)] 및 [!INCLUDE[ssSDSMIfull](../../includes/sssdsmifull-md.md)]에서 사용할 수 있습니다. [!INCLUDE[ssSDSfull](../../includes/sssdsfull-md.md)] Singleton 및 탄력적 풀에서는 사용할 수 없습니다. [Managed Instance에서의 몇 가지 제약 조건은 여기에서](https://docs.microsoft.com/azure/sql-database/sql-database-managed-instance-transact-sql-information#linked-servers) 확인할 수 있습니다. 
+> 연결된 서버는 [!INCLUDE[ssDEnoversion](../../includes/ssdenoversion-md.md)] 및 [!INCLUDE[ssSDSMIfull](../../includes/sssdsmifull-md.md)]에서 사용할 수 있습니다. [!INCLUDE[ssSDSfull](../../includes/sssdsfull-md.md)] Singleton 및 탄력적 풀에서는 사용할 수 없습니다. [Managed Instance에서의 몇 가지 제약 조건은 여기에서](/azure/sql-database/sql-database-managed-instance-transact-sql-information#linked-servers) 확인할 수 있습니다. 
 
 ## <a name="when-to-use-linked-servers"></a>연결된 서버를 사용하는 경우
 
@@ -76,7 +76,7 @@ ms.locfileid: "88420927"
 > OLE DB Provider를 사용하는 경우 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 서비스가 실행되는 계정에는 공급자가 설치된 디렉터리 및 모든 하위 디렉터리에 대한 읽기 및 실행 권한이 있어야 합니다. 여기에는 Microsoft 릴리스 공급자 및 모든 타사 공급자가 포함됩니다.
 
 > [!NOTE]
-> 연결된 서버는 완전 위임을 사용할 때 Active Directory 통과 인증을 지원합니다. [!INCLUDE[ssSQL17](../../includes/sssql17-md.md)] CU17부터 제한된 위임을 사용하는 통과 인증도 지원되지만 [리소스 기반 제한된 위임](https://docs.microsoft.com/windows-server/security/kerberos/kerberos-constrained-delegation-overview)은 지원되지 않습니다.
+> 연결된 서버는 완전 위임을 사용할 때 Active Directory 통과 인증을 지원합니다. [!INCLUDE[ssSQL17](../../includes/sssql17-md.md)] CU17부터 제한된 위임을 사용하는 통과 인증도 지원되지만 [리소스 기반 제한된 위임](/windows-server/security/kerberos/kerberos-constrained-delegation-overview)은 지원되지 않습니다.
 
 ## <a name="managing-providers"></a>공급자 관리  
 일련의 옵션을 사용하여 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 에서 레지스트리에 지정된 OLE DB Provider를 로드하고 사용하는 방법을 제어할 수 있습니다.  
@@ -107,5 +107,4 @@ ms.locfileid: "88420927"
   
 ## <a name="related-content"></a>관련 내용  
  [sys.servers&#40;Transact-SQL&#41;](../../relational-databases/system-catalog-views/sys-servers-transact-sql.md)    
- [sp_linkedservers&#40;Transact-SQL&#41;](../../relational-databases/system-stored-procedures/sp-linkedservers-transact-sql.md)  
-
+ [sp_linkedservers&#40;Transact-SQL&#41;](../../relational-databases/system-stored-procedures/sp-linkedservers-transact-sql.md)

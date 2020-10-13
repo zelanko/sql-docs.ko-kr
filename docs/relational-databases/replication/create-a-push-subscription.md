@@ -18,12 +18,12 @@ ms.assetid: adfbbc61-58d1-4330-9ad6-b14ab1142e2b
 author: MashaMSFT
 ms.author: mathoma
 monikerRange: =azuresqldb-current||>=sql-server-2016||=sqlallproducts-allversions
-ms.openlocfilehash: f69f19c766fc0768bf72101955ee5bc08b9e8702
-ms.sourcegitcommit: 768f046107642f72693514f51bf2cbd00f58f58a
+ms.openlocfilehash: 4710900a9a33de2be669ddf1204080068aad0220
+ms.sourcegitcommit: 4d370399f6f142e25075b3714e5c2ce056b1bfd0
 ms.translationtype: HT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 07/23/2020
-ms.locfileid: "87110569"
+ms.lasthandoff: 10/09/2020
+ms.locfileid: "91869255"
 ---
 # <a name="create-a-push-subscription"></a>밀어넣기 구독 만들기
 [!INCLUDE[sql-asdb](../../includes/applies-to-version/sql-asdb.md)]
@@ -164,7 +164,7 @@ ms.locfileid: "87110569"
  RMO(복제 관리 개체)를 사용하여 프로그래밍 방식으로 밀어넣기 구독을 만들 수 있습니다. 밀어넣기 구독을 만들 때 사용하는 RMO 클래스는 구독을 만드는 게시 유형에 따라 달라집니다.  
   
 > [!IMPORTANT]
-> 가능한 경우 런타임 시 사용자에게 보안 자격 증명을 입력하라는 메시지가 표시됩니다. 자격 증명을 저장해야 하는 경우 [!INCLUDE[msCoName](../../includes/msconame-md.md)] Windows .NET Framework에서 제공하는 [암호화 서비스](https://go.microsoft.com/fwlink/?LinkId=34733)를 사용합니다.  
+> 가능한 경우 런타임 시 사용자에게 보안 자격 증명을 입력하라는 메시지가 표시됩니다. 자격 증명을 저장해야 하는 경우 [!INCLUDE[msCoName](../../includes/msconame-md.md)] Windows .NET Framework에서 제공하는 [암호화 서비스](/previous-versions/aa719848(v=vs.71))를 사용합니다.  
   
 #### <a name="to-create-a-push-subscription-to-a-snapshot-or-transactional-publication"></a>스냅샷 또는 트랜잭션 게시에 밀어넣기 구독을 만들려면  
   
@@ -266,6 +266,5 @@ ms.locfileid: "87110569"
  [복제 관리 개체 개념](../../relational-databases/replication/concepts/replication-management-objects-concepts.md)   
  [밀어넣기 구독 동기화](../../relational-databases/replication/synchronize-a-push-subscription.md)   
  [게시 구독](../../relational-databases/replication/subscribe-to-publications.md)   
- [스크립팅 변수와 함께 sqlcmd 사용](../../relational-databases/scripting/sqlcmd-use-with-scripting-variables.md)  
-  
+ [스크립팅 변수와 함께 sqlcmd 사용](../../ssms/scripting/sqlcmd-use-with-scripting-variables.md)  
   

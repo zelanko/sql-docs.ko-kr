@@ -14,12 +14,12 @@ helpviewer_keywords:
 ms.assetid: 174a646a-d65c-4074-8249-d783e91be2dd
 author: VanMSFT
 ms.author: vanto
-ms.openlocfilehash: dc6b2c88fc2405aea99ac8ce7de9c38cf43c99aa
-ms.sourcegitcommit: da88320c474c1c9124574f90d549c50ee3387b4c
+ms.openlocfilehash: 4619b4bd72258e67388ee7498eff63b28a1f3b03
+ms.sourcegitcommit: 4d370399f6f142e25075b3714e5c2ce056b1bfd0
 ms.translationtype: HT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 07/01/2020
-ms.locfileid: "85773882"
+ms.lasthandoff: 10/09/2020
+ms.locfileid: "91869016"
 ---
 # <a name="protecting-your-sql-server-intellectual-property"></a>SQL Server 지적 재산 보호
  [!INCLUDE [SQL Server](../../includes/applies-to-version/sqlserver.md)]
@@ -34,12 +34,11 @@ ms.locfileid: "85773882"
 클라이언트가 컴퓨터에서 관리자가 아닌 경우 클라이언트의 액세스를 방지할 수 있습니다. You can use [투명한 데이터 암호화](../../relational-databases/security/encryption/transparent-data-encryption.md)를 사용하여 데이터 파일을 암호화할 수 있으며 백업을 암호화하고 모든 사용자의 작업을 감사할 수 있습니다. 그러나 [!INCLUDE[ssNoVersion_md](../../includes/ssnoversion-md.md)] 관리자 및 [!INCLUDE[ssNoVersion_md](../../includes/ssnoversion-md.md)] 컴퓨터의 관리자는 이러한 작업을 되돌릴 수 있습니다.
 
 ## <a name="solution"></a>해결 방법
-클라이언트 컴퓨터에 [!INCLUDE[ssNoVersion_md](../../includes/ssnoversion-md.md)]를 설치하지 않고도 다양한 방법으로 클라이언트 데이터 액세스를 구성할 수 있습니다. 가장 쉬운 방법은 [상시 암호화](../../relational-databases/security/encryption/always-encrypted-database-engine.md)와 함께 [!INCLUDE[ssSDSfull_md](../../includes/sssdsfull-md.md)]를 사용하여 클라이언트가 관리자가 되지 않도록 하는 것입니다. [!INCLUDE[ssSDS_md](../../includes/sssds-md.md)]시작에 대한 자세한 내용은 [SQL Database 정의 SQL Database 소개](https://docs.microsoft.com/azure/sql-database/sql-database-technical-overview)를 참조하세요.  
+클라이언트 컴퓨터에 [!INCLUDE[ssNoVersion_md](../../includes/ssnoversion-md.md)]를 설치하지 않고도 다양한 방법으로 클라이언트 데이터 액세스를 구성할 수 있습니다. 가장 쉬운 방법은 [상시 암호화](../../relational-databases/security/encryption/always-encrypted-database-engine.md)와 함께 [!INCLUDE[ssSDSfull_md](../../includes/sssdsfull-md.md)]를 사용하여 클라이언트가 관리자가 되지 않도록 하는 것입니다. [!INCLUDE[ssSDS_md](../../includes/sssds-md.md)]시작에 대한 자세한 내용은 [SQL Database 정의 SQL Database 소개](/azure/sql-database/sql-database-technical-overview)를 참조하세요.  
 
 또한 [!INCLUDE[ssNoVersion_md](../../includes/ssnoversion-md.md)]를 자신의 네트워크에서 호스트하고 클라이언트가 네트워크를 통해 직접적으로나 웹 애플리케이션을 통해 데이터에 액세스하도록 할 수 있습니다.
 
 ## <a name="see-also"></a>참고 항목
 
 [SQL Server 데이터베이스 엔진 및 Azure SQL Database 보안 센터](../../relational-databases/security/security-center-for-sql-server-database-engine-and-azure-sql-database.md)  
-[SQL Server 보안 설정](../../relational-databases/security/securing-sql-server.md)  
-
+[SQL Server 보안 설정](../../relational-databases/security/securing-sql-server.md)

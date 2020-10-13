@@ -18,12 +18,12 @@ helpviewer_keywords:
 ms.assetid: 07f8f594-75b4-4591-8c29-d63811d7753e
 author: julieMSFT
 ms.author: jrasnick
-ms.openlocfilehash: 0d23b18096f1be3feeaddbee6bc2517bcaae8130
-ms.sourcegitcommit: 9470c4d1fc8d2d9d08525c4f811282999d765e6e
+ms.openlocfilehash: fe6467cbe5cc915b876b9efa6b8afd9ff59e2bbd
+ms.sourcegitcommit: 783b35f6478006d654491cb52f6edf108acf2482
 ms.translationtype: HT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 07/17/2020
-ms.locfileid: "86457895"
+ms.lasthandoff: 10/09/2020
+ms.locfileid: "91890781"
 ---
 # <a name="live-query-statistics"></a>활성 쿼리 통계
 [!INCLUDE [SQL Server Azure SQL Database](../../includes/applies-to-version/sql-asdb.md)]
@@ -37,7 +37,7 @@ ms.locfileid: "86457895"
   
 > [!WARNING]  
 > 이 기능은 주로 문제 해결을 위해 사용됩니다. 이 기능을 사용하면 특히 [!INCLUDE[ssSQL14](../../includes/sssql14-md.md)]에서 전체 쿼리 성능이 약간 느려질 수 있습니다. 자세한 내용은 [쿼리 프로파일링 인프라](../../relational-databases/performance/query-profiling-infrastructure.md)를 참조하세요.  
-> 이 기능을 [Transact-SQL 디버거](../../relational-databases/scripting/configure-firewall-rules-before-running-the-tsql-debugger.md)와 함께 사용할 수 있습니다.  
+> 이 기능을 [Transact-SQL 디버거](../../ssms/scripting/configure-firewall-rules-before-running-the-tsql-debugger.md)와 함께 사용할 수 있습니다.  
   
 ## <a name="to-view-live-query-statistics-for-one-query"></a>하나의 쿼리에 대한 활성 쿼리 통계를 보려면 
   
@@ -79,4 +79,4 @@ ms.locfileid: "86457895"
  [sys.dm_exec_query_profiles](../../relational-databases/system-dynamic-management-views/sys-dm-exec-query-profiles-transact-sql.md)     
  [추적 플래그](../../t-sql/database-console-commands/dbcc-traceon-trace-flags-transact-sql.md)    
  [실행 계획 논리 및 물리 연산자 참조](../../relational-databases/showplan-logical-and-physical-operators-reference.md)     
- [쿼리 프로파일링 인프라](../../relational-databases/performance/query-profiling-infrastructure.md)   
+ [쿼리 프로파일링 인프라](../../relational-databases/performance/query-profiling-infrastructure.md)

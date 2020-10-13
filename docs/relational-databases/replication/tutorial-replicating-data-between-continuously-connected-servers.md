@@ -15,18 +15,18 @@ helpviewer_keywords:
 ms.assetid: 7b18a04a-2c3d-4efe-a0bc-c3f92be72fd0
 author: MashaMSFT
 ms.author: mathoma
-ms.openlocfilehash: 15b114b66462be069b4c67d3bedc662af6c6cbfd
-ms.sourcegitcommit: da88320c474c1c9124574f90d549c50ee3387b4c
+ms.openlocfilehash: e22b9695d229c83cbf95a08c0ef81462b8074a63
+ms.sourcegitcommit: 4d370399f6f142e25075b3714e5c2ce056b1bfd0
 ms.translationtype: HT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 07/01/2020
-ms.locfileid: "85720701"
+ms.lasthandoff: 10/09/2020
+ms.locfileid: "91868280"
 ---
 # <a name="tutorial-configure-replication-between-two-fully-connected-servers-transactional"></a>자습서: 두 개의 완전히 연결된 서버 간 복제 구성(트랜잭션)
  [!INCLUDE [SQL Server](../../includes/applies-to-version/sqlserver.md)]
 트랜잭션 복제는 계속 연결되는 서버 간에 데이터를 이동할 때 발생하는 문제를 해결하는 좋은 방법입니다. 복제 마법사를 사용하면 복제 토폴로지를 쉽게 구성하고 관리할 수 있습니다. 
 
-이 자습서에서는 계속 연결되는 서버에 대해 트랜잭션 복제 토폴로지를 구성하는 방법을 보여줍니다. 트랜잭션 복제가 작동하는 방법에 대한 자세한 내용은 [트랜잭션 복제 개요](https://docs.microsoft.com/sql/relational-databases/replication/transactional/transactional-replication)를 참조하세요. 
+이 자습서에서는 계속 연결되는 서버에 대해 트랜잭션 복제 토폴로지를 구성하는 방법을 보여줍니다. 트랜잭션 복제가 작동하는 방법에 대한 자세한 내용은 [트랜잭션 복제 개요](./transactional/transactional-replication.md)를 참조하세요. 
   
 ## <a name="what-you-will-learn"></a>알아볼 내용  
 이 자습서에서는 트랜잭션 복제를 사용하여 한 데이터베이스의 데이터를 다른 데이터베이스에 게시하는 방법을 보여 줍니다.  
@@ -50,13 +50,13 @@ ms.locfileid: "85720701"
   
 - 구독자 서버(대상)에서 [!INCLUDE[ssEW](../../includes/ssew-md.md)]을 제외한 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]의 모든 버전을 설치합니다. [!INCLUDE[ssEW](../../includes/ssew-md.md)]는 트랜잭션 복제에서 구독자가 될 수 없습니다.  
   
-- [SQL Server Management Studio](https://docs.microsoft.com/sql/ssms/download-sql-server-management-studio-ssms)를 설치합니다.
+- [SQL Server Management Studio](../../ssms/download-sql-server-management-studio-ssms.md)를 설치합니다.
 - [SQL Server 2017 Developer Edition](https://www.microsoft.com/sql-server/sql-server-downloads)을 설치합니다.
-- [AdventureWorks 샘플 데이터베이스](https://github.com/Microsoft/sql-server-samples/releases)를 다운로드합니다. SSMS에서 데이터베이스를 복원하는 방법에 대한 지침은 [데이터베이스 복원](https://docs.microsoft.com/sql/relational-databases/backup-restore/restore-a-database-backup-using-ssms)을 참조하세요. 
+- [AdventureWorks 샘플 데이터베이스](https://github.com/Microsoft/sql-server-samples/releases)를 다운로드합니다. SSMS에서 데이터베이스를 복원하는 방법에 대한 지침은 [데이터베이스 복원](../backup-restore/restore-a-database-backup-using-ssms.md)을 참조하세요. 
  
 >[!NOTE]
 > - 두 버전이 넘게 차이 나는 SQL Server 인스턴스에서는 복제가 지원되지 않습니다. 자세한 내용은 [복제 토폴로지에서 지원되는 SQL Server 버전](https://blogs.msdn.microsoft.com/repltalk/2016/08/12/suppported-sql-server-versions-in-replication-topology/)을 참조하세요.
-> - [!INCLUDE[ssManStudioFull](../../includes/ssmanstudiofull-md.md)]에서는 **sysadmin** 고정 서버 역할의 멤버인 로그인을 사용하여 게시자 및 구독자에 연결해야 합니다. 이 역할에 대한 자세한 내용은 [서버 수준 역할](https://docs.microsoft.com/sql/relational-databases/security/authentication-access/server-level-roles)을 참조하세요.  
+> - [!INCLUDE[ssManStudioFull](../../includes/ssmanstudiofull-md.md)]에서는 **sysadmin** 고정 서버 역할의 멤버인 로그인을 사용하여 게시자 및 구독자에 연결해야 합니다. 이 역할에 대한 자세한 내용은 [서버 수준 역할](../security/authentication-access/server-level-roles.md)을 참조하세요.  
   
   
 **이 자습서에 소요되는 예상 시간: 60분**  
@@ -168,7 +168,7 @@ ms.locfileid: "85720701"
 
    ![선택된 게시가 있는 "게시" 페이지](media/tutorial-replicating-data-between-continuously-connected-servers/selectpub.png)
   
-4. **배포 에이전트 위치** 페이지에서 **배포자에서 모든 에이전트 실행**을 선택한 후, **다음**을 선택합니다.  구독 끌어오기 및 밀어넣기에 대한 자세한 내용은 [게시 구독](https://docs.microsoft.com/sql/relational-databases/replication/subscribe-to-publications)을 참조하세요.
+4. **배포 에이전트 위치** 페이지에서 **배포자에서 모든 에이전트 실행**을 선택한 후, **다음**을 선택합니다.  구독 끌어오기 및 밀어넣기에 대한 자세한 내용은 [게시 구독](./subscribe-to-publications.md)을 참조하세요.
 
    ![배포자에서 모든 에이전트를 실행하기 위해 선택된 옵션이 있는“배포 에이전트 위치” 페이지](media/tutorial-replicating-data-between-continuously-connected-servers/runagentsatdist.png)
   

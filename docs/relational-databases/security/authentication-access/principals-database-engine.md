@@ -30,12 +30,12 @@ ms.assetid: 3f7adbf7-6e40-4396-a8ca-71cbb843b5c2
 author: VanMSFT
 ms.author: vanto
 monikerRange: '>=aps-pdw-2016||=azuresqldb-current||=azure-sqldw-latest||>=sql-server-2016||=sqlallproducts-allversions||>=sql-server-linux-2017||=azuresqldb-mi-current'
-ms.openlocfilehash: 213babf7e34fac642bd91374b2f008776dbbd8d1
-ms.sourcegitcommit: f3321ed29d6d8725ba6378d207277a57cb5fe8c2
+ms.openlocfilehash: 22a6beec87891408ef34039675dd4a2b9ede5758
+ms.sourcegitcommit: 4d370399f6f142e25075b3714e5c2ce056b1bfd0
 ms.translationtype: HT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 07/06/2020
-ms.locfileid: "86005616"
+ms.lasthandoff: 10/09/2020
+ms.locfileid: "91869066"
 ---
 # <a name="principals-database-engine"></a>보안 주체(데이터베이스 엔진)
 [!INCLUDE [SQL Server](../../../includes/applies-to-version/sql-asdb-asdbmi-asa-pdw.md)]
@@ -93,7 +93,7 @@ ms.locfileid: "86005616"
   
  [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] 온라인 설명서 섹션에는 다음과 같은 항목이 포함되어 있습니다.  
   
--   [로그인, 사용자 및 스키마 관리 방법 도움말 항목](../../../relational-databases/security/authentication-access/managing-logins-users-and-schemas-how-to-topics.md)  
+-   [로그인, 사용자 및 스키마 관리 방법 도움말 항목](./create-a-login.md)  
   
 -   [서버 수준 역할](../../../relational-databases/security/authentication-access/server-level-roles.md)  
   
@@ -109,5 +109,4 @@ ms.locfileid: "86005616"
  [sys.database_role_members&#40;Transact-SQL&#41;](../../../relational-databases/system-catalog-views/sys-database-role-members-transact-sql.md)   
  [서버 수준 역할](../../../relational-databases/security/authentication-access/server-level-roles.md)   
  [데이터베이스 수준 역할](../../../relational-databases/security/authentication-access/database-level-roles.md)  
-  
   

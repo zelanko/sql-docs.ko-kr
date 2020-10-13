@@ -2,20 +2,20 @@
 title: SQL Server on Linux의 RHEL FCI 작동
 description: FCI 수동 장애 조치, 클러스터에 노드 추가 또는 제거와 같은 고가용성을 위해 SQL Server용 RHEL(Red Hat Enterprise Linux) 공유 디스크 FCI(장애 조치 클러스터 인스턴스)를 작동하는 방법을 알아봅니다.
 ms.custom: seo-lt-2019
-author: MikeRayMSFT
-ms.author: mikeray
+author: VanMSFT
+ms.author: vanto
 ms.reviewer: vanto
 ms.date: 03/17/2017
 ms.topic: conceptual
 ms.prod: sql
 ms.technology: linux
 ms.assetid: 075ab7d8-8b68-43f3-9303-bbdf00b54db1
-ms.openlocfilehash: 94ac1e7dbd6632d2346df2d7d1837b8ee66859c7
-ms.sourcegitcommit: f7ac1976d4bfa224332edd9ef2f4377a4d55a2c9
+ms.openlocfilehash: 639e88a96ac639d20a6190bffeed75d46495aa51
+ms.sourcegitcommit: 610e3ebe21ac6575850a29641a32f275e71557e3
 ms.translationtype: HT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 07/02/2020
-ms.locfileid: "85897265"
+ms.lasthandoff: 10/07/2020
+ms.locfileid: "91785075"
 ---
 # <a name="operate-rhel-failover-cluster-instance-fci-for-sql-server"></a>SQL Server의 RHEL FCI(장애 조치 클러스터 인스턴스) 작동
 
