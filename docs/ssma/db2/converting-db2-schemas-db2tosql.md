@@ -10,12 +10,12 @@ ms.topic: conceptual
 ms.assetid: 7947efc3-ca86-4ec5-87ce-7603059c75a0
 author: nahk-ivanov
 ms.author: alexiva
-ms.openlocfilehash: 9dbf89c8027737a02d4eded9dc2e743e683b65e4
-ms.sourcegitcommit: e700497f962e4c2274df16d9e651059b42ff1a10
+ms.openlocfilehash: b506f7ae063964bc1667b4425028cd35fbc9c91e
+ms.sourcegitcommit: a41e1f4199785a2b8019a419a1f3dcdc15571044
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 08/17/2020
-ms.locfileid: "88418559"
+ms.lasthandoff: 10/13/2020
+ms.locfileid: "91985127"
 ---
 # <a name="converting-db2-schemas-db2tosql"></a>DB2 스키마 변환 (DB2ToSQL)
 DB2에 연결 하 고,에 연결 하 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 고, 프로젝트 및 데이터 매핑 옵션을 설정한 후 db2 데이터베이스 개체를 데이터베이스 개체로 변환할 수 있습니다 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] .  
@@ -147,8 +147,7 @@ DB2 데이터베이스 개체를 변환 하려면 먼저 변환할 개체를 선
 -   마이그레이션할 때 개체를 제외할 수 있습니다. [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]메타 데이터 탐색기 및 Db2 메타 데이터 탐색기에서 개체를 로드 하 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 고 db2의 데이터를 마이그레이션하기 전에 항목 옆에 있는 확인란의 선택을 취소 합니다.  
   
 ## <a name="next-step"></a>다음 단계  
-마이그레이션 프로세스의 다음 단계는 [변환 된 개체를 SQL Server 로드](https://msdn.microsoft.com/f4ea1ced-9f9f-4a9d-88ab-81dbab64adc3)하는 것입니다.  
+마이그레이션 프로세스의 다음 단계는 [변환 된 개체를 SQL Server 로드](./loading-converted-database-objects-into-sql-server-db2tosql.md)하는 것입니다.  
   
 ## <a name="see-also"></a>참고 항목  
 [DB2 데이터를 SQL Server &#40;DB2ToSQL&#41;로 마이그레이션 ](../../ssma/db2/migrating-db2-data-into-sql-server-db2tosql.md)  
-  

@@ -12,12 +12,12 @@ helpviewer_keywords:
 ms.assetid: 1c0202e8-546d-4cb3-a37f-1d2e35d53839
 author: nahk-ivanov
 ms.author: alexiva
-ms.openlocfilehash: 641edbb3db15387543645fcab7a375b2985a01d6
-ms.sourcegitcommit: e700497f962e4c2274df16d9e651059b42ff1a10
+ms.openlocfilehash: 58cc5fc2f06419293b58fa6a38d6d75a8f750897
+ms.sourcegitcommit: a41e1f4199785a2b8019a419a1f3dcdc15571044
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 08/17/2020
-ms.locfileid: "88463431"
+ms.lasthandoff: 10/13/2020
+ms.locfileid: "91987889"
 ---
 # <a name="generating-reports-mysqltosql"></a>보고서 생성(MySQLToSQL)
 명령을 사용 하 여 수행 되는 특정 활동의 보고서는 SSMA 콘솔에서 개체 트리 수준에 생성 됩니다.  
@@ -140,6 +140,5 @@ ms.locfileid: "88463431"
   
 -   fail-스크립트  
   
-## <a name="see-also"></a>관련 항목  
-[SSMA 콘솔 실행 (MySQL)](https://msdn.microsoft.com/e3e9f7e4-0619-4861-a202-3d5d39953b26)  
-  
+## <a name="see-also"></a>참고 항목  
+[SSMA 콘솔 실행 (MySQL)](./executing-the-ssma-console-mysqltosql.md)  

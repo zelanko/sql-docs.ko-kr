@@ -16,18 +16,18 @@ helpviewer_keywords:
 ms.assetid: b362a075-16e7-423f-b63f-e1e9f02844a9
 author: nahk-ivanov
 ms.author: alexiva
-ms.openlocfilehash: d95c7b5d429aeba2425c9deb63af1df4ab0f6ac8
-ms.sourcegitcommit: e700497f962e4c2274df16d9e651059b42ff1a10
+ms.openlocfilehash: 92ce9298b6d3752a4b60e98918404c2116423973
+ms.sourcegitcommit: a41e1f4199785a2b8019a419a1f3dcdc15571044
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 08/17/2020
-ms.locfileid: "88497851"
+ms.lasthandoff: 10/13/2020
+ms.locfileid: "91988689"
 ---
 # <a name="mapping-source-and-target-data-types-accesstosql"></a>원본 및 대상 데이터 형식 매핑 (AccessToSQL)
 Access 데이터베이스 형식은 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 데이터베이스 형식과 다릅니다. Access 데이터베이스 개체를 개체로 변환 하 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 는 경우 access에서로 데이터 형식을 매핑하는 방법을 지정 해야 합니다 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] . 기본 데이터 형식 매핑을 그대로 적용 하거나 다음 절차에 표시 된 대로 매핑을 사용자 지정할 수 있습니다.  
   
 ## <a name="default-mappings"></a>기본 매핑  
-SSMA에는 기본 데이터 형식 매핑 집합이 있습니다. 기본 매핑 목록은 [프로젝트 설정 (형식 매핑)](https://msdn.microsoft.com/b87b9683-abed-4677-8c50-18bdba704655)을 참조 하세요.  
+SSMA에는 기본 데이터 형식 매핑 집합이 있습니다. 기본 매핑 목록은 [프로젝트 설정 (형식 매핑)](./project-settings-type-mapping-accesstosql.md)을 참조 하세요.  
   
 ## <a name="customizing-data-type-mappings"></a>데이터 형식 매핑 사용자 지정  
 **프로젝트 설정** 대화 상자를 사용 하 여 프로젝트의 모든 데이터베이스 및 데이터베이스 개체에 대 한 형식이 매핑되는 방식을 사용자 지정할 수 있습니다. 프로젝트에 대 한 형식 매핑은 사용자 지정 형식 매핑이 없는 모든 데이터베이스와 데이터베이스 개체에 적용 됩니다.  
@@ -91,6 +91,5 @@ SSMA에는 기본 데이터 형식 매핑 집합이 있습니다. 기본 매핑 
 ## <a name="next-steps"></a>다음 단계  
 마이그레이션 프로세스의 다음 단계는 [access 데이터베이스 개체를 SQL Server 개체로 변환 하](converting-access-database-objects-accesstosql.md) 는 것입니다.  
   
-## <a name="see-also"></a>관련 항목  
+## <a name="see-also"></a>참고 항목  
 [SQL Server로 Access 데이터베이스 마이그레이션](migrating-access-databases-to-sql-server-azure-sql-db-accesstosql.md)  
-  

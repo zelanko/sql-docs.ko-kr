@@ -10,12 +10,12 @@ ms.topic: conceptual
 ms.assetid: b099d0f9-dd37-4c87-8b6f-ed0177881ea4
 author: nahk-ivanov
 ms.author: alexiva
-ms.openlocfilehash: dc47389afdd9b8241a0d06960baf592639daa6cb
-ms.sourcegitcommit: e700497f962e4c2274df16d9e651059b42ff1a10
+ms.openlocfilehash: 3069d1cff693ead8a6acf3af7f9644c4a3d6ab43
+ms.sourcegitcommit: a41e1f4199785a2b8019a419a1f3dcdc15571044
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 08/17/2020
-ms.locfileid: "88372859"
+ms.lasthandoff: 10/13/2020
+ms.locfileid: "91988669"
 ---
 # <a name="managing-passwords-accesstosql"></a>암호 관리 (AccessToSQL)
 이 섹션에서는 데이터베이스 암호를 보호 하는 방법과 서버에서 데이터베이스를 가져오거나 내보내는 절차에 대해 설명 합니다.  
@@ -132,5 +132,4 @@ SSMA 콘솔 응용 프로그램을 사용 하면 로컬 컴퓨터의 파일에 �
 7. 암호를 확인 하세요.  
 
 ## <a name="see-also"></a>참고 항목  
-[SSMA 콘솔 실행 (Access)](https://msdn.microsoft.com/aa1bf665-8dc0-4259-b36f-46ae67197a43)  
-  
+[SSMA 콘솔 실행 (Access)](./executing-the-ssma-console-accesstosql.md)  

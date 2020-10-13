@@ -14,12 +14,12 @@ helpviewer_keywords:
 ms.assetid: 8ebfa061-be6f-4a07-923f-8dc832a82f70
 author: nahk-ivanov
 ms.author: alexiva
-ms.openlocfilehash: 1dee948ce6b0cd36191fc13421fcfdfaa07138ac
-ms.sourcegitcommit: e8f6c51d4702c0046aec1394109bc0503ca182f0
+ms.openlocfilehash: e183c885cc08f699926dc88838d8650be55b400b
+ms.sourcegitcommit: a41e1f4199785a2b8019a419a1f3dcdc15571044
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 08/07/2020
-ms.locfileid: "87935499"
+ms.lasthandoff: 10/13/2020
+ms.locfileid: "91987879"
 ---
 # <a name="getting-started-with-ssma-for-mysql-mysqltosql"></a>MySQL용 SSMA 시작(MySQLToSQL)
 MySQL 용 SSMA (SQL Server Migration Assistant)를 사용 하면 MySQL 데이터베이스 스키마를 SQL Server 또는 Azure SQL Database 스키마로 신속 하 게 변환 하 고, 결과 스키마를 SQL Server 또는 Azure SQL Database로 업로드 하 고, MySQL에서 SQL Server 또는 Azure SQL Database로 데이터를 마이그레이션할 수 있습니다.  
@@ -73,7 +73,7 @@ Mysql 메타 데이터 탐색기는 MySQL 스키마에 대 한 정보를 표시 
   
 이 메타 데이터 탐색기를 사용 하 여 변환 된 MySQL 데이터베이스 개체를 선택한 다음 SQL Server 또는 Azure SQL Database 인스턴스와 해당 개체를 동기화 할 수 있습니다.  
   
-자세한 내용은 [동기화 (MySQL to SQL Server/Azure SQL Database)](https://msdn.microsoft.com/ac993a6d-0283-4823-8793-6b217677dfa3) 를 참조 하세요.  
+자세한 내용은 [동기화 (MySQL to SQL Server/Azure SQL Database)](./loading-converted-database-objects-into-sql-server-mysqltosql.md) 를 참조 하세요.  
   
 ### <a name="metadata"></a>메타데이터  
 각 메타 데이터 탐색기의 오른쪽에는 선택한 개체를 설명 하는 탭이 있습니다. 예를 들어 MySQL 메타 데이터 탐색기에서 테이블을 선택 하면 **테이블**, **SQL**, **형식 매핑**, **데이터**, **설정**, **문자 집합 매핑**, **SQL 모드**, **속성**및 **보고서**와 같은 9 개의 탭이 표시 됩니다. 선택한 개체가 포함 된 보고서를 만든 후에만 **보고서** 탭에 정보가 포함 됩니다. 메타 데이터 탐색기 SQL Server에서 테이블을 선택 하면 **테이블**, **SQL** 및 **데이터**라는 세 개의 탭이 표시 됩니다.  
@@ -109,10 +109,10 @@ SSMA에는 프로젝트 도구 모음과 마이그레이션 도구 모음 이라
 |||  
 |-|-|  
 |**메뉴**|**설명**|  
-|**파일**|프로젝트 작업, MySQL에 연결, SQL Server 또는 Azure SQL Database에 연결에 대 한 명령이 포함 되어 있습니다.|  
+|**최근에 사용한 파일**|프로젝트 작업, MySQL에 연결, SQL Server 또는 Azure SQL Database에 연결에 대 한 명령이 포함 되어 있습니다.|  
 |**편집**|세부 정보 페이지에서 텍스트를 찾고 사용 하는 명령이 포함 되어 있습니다. **책갈피 관리** 대화 상자를 열려면 편집 메뉴에서 책갈피 관리를 클릭 합니다. 대화 상자에서 기존 책갈피의 목록이 표시 됩니다. 대화 상자의 오른쪽에 있는 단추를 사용 하 여 책갈피를 관리할 수 있습니다.|  
 |**보기**|**메타 데이터 탐색기 동기화** 명령을 포함 합니다. MySQL 메타 데이터 탐색기와 SQL Server 또는 Azure SQL Database 메타 데이터 탐색기 사이에서 개체를 동기화 합니다. 에는 **출력과** **오류 목록** 창 및 레이아웃을 사용 하 여 관리 하는 옵션 **레이아웃** 을 표시 하 고 숨기는 명령도 포함 됩니다.|  
-|**도구**|보고서를 만들고, 스키마를 변환 하 고, 데이터베이스에서 새로 고치고, 개체 및 데이터를 마이그레이션하고, 스크립트로 저장 하는 명령을 포함 합니다. 또한 **전역 설정, 기본 프로젝트 설정** 및 **프로젝트 설정** 대화 상자에 대 한 액세스를 제공 합니다.|  
+|**Tools**|보고서를 만들고, 스키마를 변환 하 고, 데이터베이스에서 새로 고치고, 개체 및 데이터를 마이그레이션하고, 스크립트로 저장 하는 명령을 포함 합니다. 또한 **전역 설정, 기본 프로젝트 설정** 및 **프로젝트 설정** 대화 상자에 대 한 액세스를 제공 합니다.|  
 |**도움말**|SSMA 도움말과 정보 대화 상자에 대 **한** 액세스를 제공 합니다.|  
   
 ### <a name="output-pane-and-error-list-pane"></a>출력 창 및 오류 목록 창  
@@ -123,6 +123,5 @@ SSMA에는 프로젝트 도구 모음과 마이그레이션 도구 모음 이라
 -   오류 목록 창에는 정렬 가능한 목록에서 오류, 경고 및 정보 메시지가 표시 됩니다.  
   
 ## <a name="see-also"></a>참고 항목  
-[MySQLToSQL&#41;&#40;사용자 인터페이스 참조](../../ssma/mysql/user-interface-reference-mysqltosql.md)  
-[MySQL 데이터를 SQL Server Azure SQL Database &#40;MySQLToSQL&#41;로 마이그레이션](../../ssma/mysql/migrating-mysql-data-into-sql-server-azure-sql-db-mysqltosql.md)  
-  
+[MySQLToSQL&#41;&#40;사용자 인터페이스 참조 ](../../ssma/mysql/user-interface-reference-mysqltosql.md)  
+[MySQL 데이터를 SQL Server Azure SQL Database &#40;MySQLToSQL&#41;로 마이그레이션 ](../../ssma/mysql/migrating-mysql-data-into-sql-server-azure-sql-db-mysqltosql.md)  

@@ -10,12 +10,12 @@ ms.topic: conceptual
 ms.assetid: 56d546e3-8747-4169-aace-693302667e94
 author: nahk-ivanov
 ms.author: alexiva
-ms.openlocfilehash: 25a6063863355fe40f36ab00bf7473d5d3d690d2
-ms.sourcegitcommit: e700497f962e4c2274df16d9e651059b42ff1a10
+ms.openlocfilehash: f68af2ae2176ed4860f92a829544c7ff463254e9
+ms.sourcegitcommit: a41e1f4199785a2b8019a419a1f3dcdc15571044
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 08/17/2020
-ms.locfileid: "88472482"
+ms.lasthandoff: 10/13/2020
+ms.locfileid: "91987419"
 ---
 # <a name="managing-passwords-db2tosql"></a>암호 관리 (DB2ToSQL)
 이 섹션에서는 데이터베이스 암호를 보호 하는 방법과 서버에서 데이터베이스를 가져오거나 내보내는 절차에 대해 설명 합니다.  
@@ -108,13 +108,13 @@ _가져오기 기능은_ 보안 파일에서 서버 id와 암호 정보를 읽�
 
 2. 내보낸 파일을 보호 하는 데 사용할 암호를 입력 합니다.
 
-3. 실행: &nbsp;`C:\SSMA\SSMAforDB2Console.EXE -securepassword -export all "machine1passwords.file"`
+3. &nbsp; `C:\SSMA\SSMAforDB2Console.EXE -securepassword -export all "machine1passwords.file"`를 실행합니다.
 
 4. 내보낸 파일을 보호 하는 데 사용할 암호를 입력 합니다. xxxxxxxx-xxxx-xxxx-xxxx-xxxxxxxxxxxx
 
 5. 암호 확인: xxxxxxxx-xxxx-xxxx-xxxx-xxxxxxxxxxxx
 
-6. 실행: &nbsp;`C:\SSMA\SSMAforDB2Console.EXE -p -e "DB2DB_1_1,Sql_1" "machine2passwords.file"`
+6. &nbsp; `C:\SSMA\SSMAforDB2Console.EXE -p -e "DB2DB_1_1,Sql_1" "machine2passwords.file"`를 실행합니다.
 
 7. 내보낸 파일을 보호 하는 데 사용할 암호를 입력 합니다. xxxxxxxx-xxxx-xxxx-xxxx-xxxxxxxxxxxx
 
@@ -126,18 +126,17 @@ _가져오기 기능은_ 보안 파일에서 서버 id와 암호 정보를 읽�
 
 2. 가져온 파일을 보호 하는 데 사용할 암호를 입력 합니다.
 
-3. 실행: &nbsp;`C:\SSMA\SSMAforDB2Console.EXE -securepassword -import all "machine1passwords.file"`
+3. &nbsp; `C:\SSMA\SSMAforDB2Console.EXE -securepassword -import all "machine1passwords.file"`를 실행합니다.
 
 4. 암호화 된 파일에서 서버를 가져올 암호를 입력 하십시오.
 
 5. 암호 확인: xxxxxxxx-xxxx-xxxx-xxxx-xxxxxxxxxxxx
 
-6. 실행: &nbsp;`C:\SSMA\SSMAforDB2Console.EXE -p -i "DB2DB_1,Sql_1" "machine2passwords.file"`
+6. &nbsp; `C:\SSMA\SSMAforDB2Console.EXE -p -i "DB2DB_1,Sql_1" "machine2passwords.file"`를 실행합니다.
 
 7. 암호화 된 파일에서 서버를 가져올 암호를 입력 하십시오.
 
 8. 암호 확인: xxxxxxxx-xxxx-xxxx-xxxx-xxxxxxxxxxxx
 
 ## <a name="see-also"></a>참고 항목  
-[SSMA 콘솔 실행](https://msdn.microsoft.com/ce63f633-067d-4f04-b8e9-e1abd7ec740b)  
-  
+[SSMA 콘솔 실행](./executing-the-ssma-console-db2tosql.md)  

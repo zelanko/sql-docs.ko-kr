@@ -10,12 +10,12 @@ ms.topic: conceptual
 ms.assetid: 98ecc4ff-9416-48a2-af0f-86852cf69dab
 author: nahk-ivanov
 ms.author: alexiva
-ms.openlocfilehash: fa7ecb8749fb0b5a6f9a105393e3cb20a41456a0
-ms.sourcegitcommit: e700497f962e4c2274df16d9e651059b42ff1a10
+ms.openlocfilehash: 6ae2a0f65d638af965b7dbb933a38c0b3b0e151e
+ms.sourcegitcommit: a41e1f4199785a2b8019a419a1f3dcdc15571044
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 08/17/2020
-ms.locfileid: "88454167"
+ms.lasthandoff: 10/13/2020
+ms.locfileid: "91988489"
 ---
 # <a name="user-interface-reference-db2tosql"></a>사용자 인터페이스 참조 (DB2ToSQL)
 이 섹션에는 d b 2 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 용 SSMA (Migration Assistant)에 대 한 도움말 항목이 포함 되어 있습니다.  
@@ -23,14 +23,14 @@ ms.locfileid: "88454167"
 ## <a name="in-this-section"></a>섹션 내용  
 다음 표에서는 SSMA 대화 상자를 보여 줍니다.  
   
-|항목|설명|  
+|항목|Description|  
 |-|-|  
 |[고급 개체 선택 &#40;DB2ToSQL&#41;](../../ssma/db2/advanced-object-selection-db2tosql.md)|**고급 개체 선택** 대화 상자를 사용 하 여 필터 조건을 사용 하 여 데이터베이스 개체를 찾은 다음 해당 개체를 선택 하거나 선택 취소 합니다.|  
 |[평가 보고서 &#40;DB2ToSQL&#41;](../../ssma/db2/assessment-report-db2tosql.md)|평가 보고서를 사용 하 여 DB2 개체를 구문으로 변환한 결과를 보고 [!INCLUDE[tsql](../../includes/tsql-md.md)] 로 마이그레이션하는 시간과 복잡성을 예측할 수 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 있습니다.|  
 |[DB2 데이터베이스 &#40;DB2ToSQL&#41;에 연결 하는 중 ](../../ssma/db2/connecting-to-db2-database-db2tosql.md)|**Db2에 연결** 대화 상자를 사용 하 여 마이그레이션할 db2 데이터베이스에 연결 합니다.|  
 |[SQL Server &#40;DB2ToSQL에 연결&#41;](../../ssma/db2/connect-to-sql-server-db2tosql.md)|**SQL Server 연결** 대화 상자를 사용 하 여 마이그레이션하려는 인스턴스에 연결할 수 있습니다 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] .|  
 |[데이터 마이그레이션 보고서 &#40;DB2ToSQL&#41;](../../ssma/db2/data-migration-report-db2tosql.md)|DB2에서로 데이터를 마이그레이션한 결과를 표시 합니다 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] .|  
-|[데이터 마이그레이션 설정](https://msdn.microsoft.com/573e673e-a194-4cb2-9aba-aaac6e1a225c)|**확장 데이터 마이그레이션 설정** 탭을 사용 하 여 데이터 마이그레이션에 대 한 사용자 지정 쿼리를 작성할 수 있습니다.|  
+|[데이터 마이그레이션 설정](./data-migration-settings-db2tosql.md)|**확장 데이터 마이그레이션 설정** 탭을 사용 하 여 데이터 마이그레이션에 대 한 사용자 지정 쿼리를 작성할 수 있습니다.|  
 |[형식 매핑 편집 &#40;DB2ToSQL&#41;](../../ssma/db2/edit-type-mapping-db2tosql.md)|**새 형식 매핑** 또는 **형식 매핑 편집** 대화 상자를 사용 하 여 원본 데이터베이스와 대상 데이터베이스 및 데이터베이스 개체 간에 데이터 형식의 매핑을 만들거나 수정할 수 있습니다.|  
 |[전역 설정 &#40;편집기&#41; &#40;DB2ToSQL&#41;](../../ssma/db2/global-settings-editor-db2tosql.md)|**전역 설정** 대화 상자의 편집기 페이지를 사용 하 여 코드 편집기 옵션을 구성할 수 있습니다.|  
 |[전역 설정 &#40;대화&#41; &#40;DB2ToSQL&#41;](../../ssma/db2/global-settings-dialogs-db2tosql.md)|**전역 설정** 대화 상자의 대화 상자 페이지를 사용 하 여 기본 대화 상자 및 경고 설정을 구성할 수 있습니다.|  
@@ -49,4 +49,3 @@ ms.locfileid: "88454167"
 ## <a name="see-also"></a>참고 항목  
 [D b 2 용 SSMA &#40;DB2ToSQL&#41;시작 ](../../ssma/db2/getting-started-with-ssma-for-db2-db2tosql.md)  
 [DB2 데이터베이스를 SQL Server &#40;DB2ToSQL&#41;로 마이그레이션 ](../../ssma/db2/migrating-db2-databases-to-sql-server-db2tosql.md)  
-  

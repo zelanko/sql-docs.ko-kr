@@ -18,12 +18,12 @@ helpviewer_keywords:
 ms.assetid: f2d1f0b0-5394-4adb-b3f3-abd71eb68ca7
 author: nahk-ivanov
 ms.author: alexiva
-ms.openlocfilehash: 078b7f511d8120a0b5fa7cd182024cf7a124e84a
-ms.sourcegitcommit: e700497f962e4c2274df16d9e651059b42ff1a10
+ms.openlocfilehash: ee6cf3bea905b169503851efe375fd614c4589e9
+ms.sourcegitcommit: a41e1f4199785a2b8019a419a1f3dcdc15571044
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 08/17/2020
-ms.locfileid: "88373059"
+ms.lasthandoff: 10/13/2020
+ms.locfileid: "91988199"
 ---
 # <a name="creating-and-managing-projects-accesstosql"></a>프로젝트 만들기 및 관리 (AccessToSQL)
 Access 데이터베이스를 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 또는 SQL Azure 마이그레이션하려면 먼저 SSMA 프로젝트를 만들어야 합니다. 프로젝트는 SQL Azure 마이그레이션하려는 액세스 데이터베이스에 대 한 메타 데이터 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] , [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 마이그레이션된 개체 및 데이터, [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 연결 정보 및 프로젝트 설정을 받는 SQL Azure의 대상 인스턴스에 대 한 메타 데이터를 포함 하는 파일입니다.  
@@ -39,19 +39,19 @@ SSMA에는 데이터베이스 개체를 변환 및 동기화 하 고 데이터�
   
 3.  왼쪽 창에서 **변환**을 클릭 합니다.  
   
-4.  오른쪽 창에서 옵션을 검토 합니다. 이러한 옵션에 대 한 자세한 내용은 [프로젝트 설정 (변환)](https://msdn.microsoft.com/bcebc635-c638-4ddb-924c-b9ccfef86388)을 참조 하세요.  
+4.  오른쪽 창에서 옵션을 검토 합니다. 이러한 옵션에 대 한 자세한 내용은 [프로젝트 설정 (변환)](./project-settings-conversion-accesstosql.md)을 참조 하세요.  
   
 5.  필요에 따라 옵션을 변경 합니다.  
   
 6.  **마이그레이션**, **GUI**및 **형식 매핑** 페이지에 대해 이전 단계를 반복 합니다.  
   
-    -   마이그레이션 옵션에 대 한 자세한 내용은 [프로젝트 설정 (마이그레이션)](https://msdn.microsoft.com/4caebc9c-8680-4b99-a8fa-89c43161c95d)을 참조 하세요.  
+    -   마이그레이션 옵션에 대 한 자세한 내용은 [프로젝트 설정 (마이그레이션)](./project-settings-migration-accesstosql.md)을 참조 하세요.  
   
-    -   사용자 인터페이스 옵션에 대 한 자세한 내용은 [프로젝트 설정 (GUI)](https://msdn.microsoft.com/cf06baf1-8714-48a3-95dc-781f6ca53693)을 참조 하세요.  
+    -   사용자 인터페이스 옵션에 대 한 자세한 내용은 [프로젝트 설정 (GUI)](../sybase/project-settings-gui-sybasetosql.md)을 참조 하세요.  
   
-    -   데이터 형식 매핑 설정에 대 한 자세한 내용은 [프로젝트 설정 (형식 매핑)](https://msdn.microsoft.com/b87b9683-abed-4677-8c50-18bdba704655)을 참조 하세요.  
+    -   데이터 형식 매핑 설정에 대 한 자세한 내용은 [프로젝트 설정 (형식 매핑)](./project-settings-type-mapping-accesstosql.md)을 참조 하세요.  
   
-    -   SQL Azure 설정에 대 한 자세한 내용은 [프로젝트 설정 (SQL Azure)](https://msdn.microsoft.com/bbb8a204-d0e4-4f0b-9709-271feb1f136e)을 참조 하세요.  
+    -   SQL Azure 설정에 대 한 자세한 내용은 [프로젝트 설정 (SQL Azure)](./project-settings-azure-sql-db-accesstosql.md)을 참조 하세요.  
   
 **참고** SQL Azure 설정은 프로젝트를 만드는 동안 SQL Azure로 마이그레이션을 선택한 경우에만 사용할 수 있습니다.  
   
@@ -90,7 +90,7 @@ SSMA에서 프로젝트 파일을 만듭니다. 이제 [하나 이상의 Access 
   
         메타 데이터를 저장 하는 데 몇 분 정도 걸릴 수 있습니다. 이때 메타 데이터를 저장 하지 않으려면 확인란을 선택 하지 마십시오.  
   
-    2.  **저장**을 클릭합니다.  
+    2.  **Save**을 클릭합니다.  
   
         SSMA는 액세스 스키마를 구문 분석 하 고 메타 데이터를 프로젝트 파일에 저장 합니다.  
   
@@ -115,4 +115,3 @@ SSMA에서 프로젝트 파일을 만듭니다. 이제 [하나 이상의 Access 
 ## <a name="see-also"></a>참고 항목  
 [SQL Server로 Access 데이터베이스 마이그레이션](migrating-access-databases-to-sql-server-azure-sql-db-accesstosql.md)  
 [Access 데이터베이스 파일 추가 및 제거](adding-and-removing-access-database-files-accesstosql.md)  
-  

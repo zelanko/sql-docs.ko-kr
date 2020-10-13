@@ -10,12 +10,12 @@ ms.topic: conceptual
 ms.assetid: f4ea1ced-9f9f-4a9d-88ab-81dbab64adc3
 author: nahk-ivanov
 ms.author: alexiva
-ms.openlocfilehash: ddd074654a12d6eb837b9e9fc9a152c7ec1e75b9
-ms.sourcegitcommit: e700497f962e4c2274df16d9e651059b42ff1a10
+ms.openlocfilehash: e89edc66dee92fb74071de952e056d99c91cbf12
+ms.sourcegitcommit: a41e1f4199785a2b8019a419a1f3dcdc15571044
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 08/17/2020
-ms.locfileid: "88497784"
+ms.lasthandoff: 10/13/2020
+ms.locfileid: "91985039"
 ---
 # <a name="loading-converted-database-objects-into-sql-server-db2tosql"></a>변환 된 데이터베이스 개체를 SQL Server (DB2ToSQL)로 로드 하는 중
 DB2 스키마를로 변환한 후 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 결과 데이터베이스 개체를에 로드할 수 있습니다 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] . SSMA에서 개체를 만들거나 개체를 스크립팅 하 고 스크립트를 직접 실행할 수 있습니다. 또한 SSMA를 사용 하면 데이터베이스의 실제 콘텐츠를 사용 하 여 대상 메타 데이터를 업데이트할 수 있습니다 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] .  
@@ -104,8 +104,7 @@ SSMA를 사용 하 여 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]
 변환 된 데이터베이스 개체를에 로드 한 후에는 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 해당 개체에 대 한 사용 권한을 부여 하 고 거부할 수 있습니다. 로 데이터를 마이그레이션하기 전에이 작업을 수행 하는 것이 좋습니다 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] . 에서 개체를 보호 하는 방법에 대 한 자세한 내용은 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 온라인 설명서의 "데이터베이스 및 데이터베이스 응용 프로그램에 대 한 보안 고려 사항"을 참조 하십시오 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] .  
   
 ## <a name="next-step"></a>다음 단계  
-마이그레이션 프로세스의 다음 단계는 [DB2 데이터를 SQL Server으로 마이그레이션하](https://msdn.microsoft.com/86cbd39f-6dac-409a-9ce1-7dd54403f84b)는 것입니다.  
+마이그레이션 프로세스의 다음 단계는 [DB2 데이터를 SQL Server으로 마이그레이션하](./migrating-db2-data-into-sql-server-db2tosql.md)는 것입니다.  
   
-## <a name="see-also"></a>관련 항목  
+## <a name="see-also"></a>참고 항목  
 [DB2 데이터를 SQL Server &#40;DB2ToSQL&#41;로 마이그레이션 ](../../ssma/db2/migrating-db2-data-into-sql-server-db2tosql.md)  
-  

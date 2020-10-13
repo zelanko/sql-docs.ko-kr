@@ -10,12 +10,12 @@ ms.topic: conceptual
 ms.assetid: 237354e9-25c4-4386-9d1f-ca0618d4a9a0
 author: nahk-ivanov
 ms.author: alexiva
-ms.openlocfilehash: 5dde1168e8107f01f06d5e60fb2b1853d47abc43
-ms.sourcegitcommit: e700497f962e4c2274df16d9e651059b42ff1a10
+ms.openlocfilehash: 3dfef8a72c8c578b468ebcf34372e603579d13ed
+ms.sourcegitcommit: a41e1f4199785a2b8019a419a1f3dcdc15571044
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 08/17/2020
-ms.locfileid: "88472526"
+ms.lasthandoff: 10/13/2020
+ms.locfileid: "91987439"
 ---
 # <a name="command-line-options-in-ssma-console-db2tosql"></a>SSMA 콘솔의 명령줄 옵션 (DB2ToSQL)
 Microsoft에서는 SSMA 활동을 실행 하 고 제어 하는 강력한 set 명령줄 옵션을 제공 합니다. 결과 섹션에서 자세히 설명 합니다.  
@@ -120,7 +120,7 @@ Xmloutput에 사용할 수 있는 두 가지 옵션은 시각화입니다.
 ### <a name="secure-password-option--psecurepassword"></a>보안 암호 옵션:-p/securepassword  
 이 옵션은 서버 연결에 대 한 암호화 된 암호를 나타냅니다. 다른 모든 옵션과 다릅니다. 옵션은 모든 스크립트를 실행 하거나 마이그레이션 관련 작업을 지원 하지는 않지만 마이그레이션 프로젝트에 사용 되는 서버 연결에 대 한 암호 암호화를 관리 하는 데 도움이 됩니다.  
   
-다른 옵션 또는 암호를 명령줄 매개 변수로 입력할 수 없습니다. 그렇지 않으면 오류가 발생 합니다. 자세한 내용은 [암호 관리](https://msdn.microsoft.com/56d546e3-8747-4169-aace-693302667e94) 섹션을 참조 하세요.  
+다른 옵션 또는 암호를 명령줄 매개 변수로 입력할 수 없습니다. 그렇지 않으면 오류가 발생 합니다. 자세한 내용은 [암호 관리](./managing-passwords-db2tosql.md) 섹션을 참조 하세요.  
   
 에 대해 지원 되는 하위 옵션은 다음과 `-p/securepassword` 같습니다.  
   
@@ -170,4 +170,3 @@ SSMA 콘솔 명령줄 옵션이 표 형식으로 표시 되는 경우 [부록-1 
 2.  보고서를 생성 하려면 [DB2ToSQL&#41;&#40;보고서 생성 ](../../ssma/db2/generating-reports-db2tosql.md)을 참조 하세요.  
   
 3.  콘솔의 문제 해결에 대해서는 [문제 해결 &#40;DB2ToSQL&#41;](../../ssma/db2/troubleshooting-db2tosql.md)을 참조 하세요.  
-  

@@ -13,12 +13,12 @@ helpviewer_keywords:
 ms.assetid: 4ffbc587-ea3f-49ad-bc42-a654f672325e
 author: nahk-ivanov
 ms.author: alexiva
-ms.openlocfilehash: 2caaa5f0a7fca36dcd5cf7aebcadaee4c8f715e5
-ms.sourcegitcommit: e700497f962e4c2274df16d9e651059b42ff1a10
+ms.openlocfilehash: 50238d3cbcd65077ad724d41c907221d5d8be998
+ms.sourcegitcommit: a41e1f4199785a2b8019a419a1f3dcdc15571044
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 08/17/2020
-ms.locfileid: "88463345"
+ms.lasthandoff: 10/13/2020
+ms.locfileid: "91988529"
 ---
 # <a name="managing-passwords-mysqltosql"></a>암호 관리(MySQLToSQL)
 이 문서에서는 데이터베이스 암호를 보호 하는 방법과 서버 간에 데이터베이스를 가져오거나 내보내는 절차에 대해 설명 합니다.
@@ -135,5 +135,4 @@ SSMA 콘솔 응용 프로그램을 사용 하면 로컬 컴퓨터의 파일에 �
 8. 암호를 확인 하세요.  
   
 ## <a name="see-also"></a>참고 항목  
-[SSMA 콘솔 실행 (MySQL)](https://msdn.microsoft.com/e3e9f7e4-0619-4861-a202-3d5d39953b26)  
-  
+[SSMA 콘솔 실행 (MySQL)](./executing-the-ssma-console-mysqltosql.md)  

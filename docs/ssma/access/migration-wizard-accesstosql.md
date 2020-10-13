@@ -19,12 +19,12 @@ helpviewer_keywords:
 ms.assetid: 5bab5914-b2ae-4795-8cf5-83e42d64bef2
 author: nahk-ivanov
 ms.author: alexiva
-ms.openlocfilehash: 8f2e2308cbee8aea34f8fa4b33de50ee69a2fdb5
-ms.sourcegitcommit: e700497f962e4c2274df16d9e651059b42ff1a10
+ms.openlocfilehash: c8f03fa27bf8c49cfeef06246c47996860c932ba
+ms.sourcegitcommit: a41e1f4199785a2b8019a419a1f3dcdc15571044
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 08/17/2020
-ms.locfileid: "88423037"
+ms.lasthandoff: 10/13/2020
+ms.locfileid: "91988652"
 ---
 # <a name="migration-wizard-accesstosql"></a>마이그레이션 마법사 (AccessToSQL)
 마이그레이션 마법사는 하나 이상의 데이터베이스를에 대 한 액세스에서 또는 SQL Azure로 마이그레이션하는 과정을 안내 합니다 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] . 마법사를 사용 하 여 프로젝트를 만들고, 프로젝트에 데이터베이스를 추가 하 고, 마이그레이션할 개체를 선택 하 고, SQL Azure에 연결 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 합니다. 또한 액세스 스키마와 데이터를 변환, 로드 및 마이그레이션합니다. 필요에 따라 액세스 테이블을 또는 SQL Azure 테이블에 연결할 수 있습니다 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] .  
@@ -41,18 +41,18 @@ ms.locfileid: "88423037"
 Ssma를 시작 하면 기본적으로 마이그레이션 마법사가 시작 됩니다. 마법사가 자동으로 시작 되는 것을 방지 하려면이 확인란의 선택을 취소 합니다.  
   
 ## <a name="create-new-project-page"></a>새 프로젝트 만들기 페이지  
-새 프로젝트 만들기 페이지에서 프로젝트 파일 이름, 위치 및 마이그레이션 프로젝트 형식 (마이그레이션에 사용 되는 대상 SQL Server의 버전)을 입력할 수 있습니다. 자세한 내용은 [SSMA (새 프로젝트)](https://msdn.microsoft.com/ca294f6d-eeb5-42ca-9306-156281a3f0f3) 를 참조 하세요.  
+새 프로젝트 만들기 페이지에서 프로젝트 파일 이름, 위치 및 마이그레이션 프로젝트 형식 (마이그레이션에 사용 되는 대상 SQL Server의 버전)을 입력할 수 있습니다. 자세한 내용은 [SSMA (새 프로젝트)](./new-project-ssma-accesstosql.md) 를 참조 하세요.  
   
 ## <a name="add-access-databases-page"></a>액세스 데이터베이스 추가 페이지  
 액세스 데이터베이스 추가 페이지에서 하나 이상의 Access 데이터베이스를 프로젝트에 추가할 수 있습니다. **데이터베이스 추가**를 클릭 한 다음 **열기** 창에서 데이터베이스를 선택 하 여 개별 데이터베이스를 추가할 수 있습니다. 또는 데이터베이스 **찾기** 단추를 사용 하 여 데이터베이스를 찾을 수 있습니다. 자세한 내용은 다음 항목을 참조하세요.  
   
 -   [Access 데이터베이스 파일 추가 및 제거](adding-and-removing-access-database-files-accesstosql.md)  
   
--   [데이터베이스 찾기 마법사(위치 선택)](https://msdn.microsoft.com/00b2d32a-998b-47a7-b25c-589b5bd6777a)  
+-   [데이터베이스 찾기 마법사(위치 선택)](./find-databases-wizard-select-locations-accesstosql.md)  
   
--   [데이터베이스 찾기 마법사(파일 선택)](https://msdn.microsoft.com/2f574a34-4bab-40a4-89a8-ad4907ffc3fd)  
+-   [데이터베이스 찾기 마법사(파일 선택)](./find-databases-wizard-select-files-accesstosql.md)  
   
--   [데이터베이스 찾기 마법사(선택 영역 확인)](https://msdn.microsoft.com/62e20e03-50cc-4ac8-8072-524d194d2ec3)  
+-   [데이터베이스 찾기 마법사(선택 영역 확인)](./find-databases-wizard-verify-selection-accesstosql.md)  
   
 ## <a name="select-objects-to-migrate-page"></a>마이그레이션할 개체 선택 페이지  
 마이그레이션할 개체 선택 페이지에서 변환할 개체를 선택 합니다. 모든 개체, 개체 그룹 또는 개별 개체를 선택할 수 있습니다.  
@@ -73,7 +73,7 @@ Ssma를 시작 하면 기본적으로 마이그레이션 마법사가 시작 됩
   
 개체가 많은 경우 오른쪽 창에서 **고급 개체 선택** 옵션을 사용 하 여 Access 데이터베이스 개체를 필터링 할 수 있습니다. 예를 들어 왼쪽 창에서 **테이블** 을 선택 하는 경우 **필터** 상자에 문자열을 입력 하 여 테이블 목록을 필터링 할 수 있습니다. 그런 다음 창의 맨 위에 있는 단추를 사용 하 여 마이그레이션할 필터링 된 테이블을 선택 하거나 선택 취소할 수 있습니다.  
   
-필터링에 대 한 자세한 내용은 [고급 개체 선택 (SSMA Common)](https://msdn.microsoft.com/f53b0c79-5473-410a-a0dc-d8f544f7a63c)의 옵션 섹션을 참조 하세요.  
+필터링에 대 한 자세한 내용은 [고급 개체 선택 (SSMA Common)](../sybase/advanced-object-selection-sybasetosql.md)의 옵션 섹션을 참조 하세요.  
   
 ## <a name="connect-to-sql-server-page"></a>SQL Server 페이지에 연결  
 연결 대상 페이지에서 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 연결 속성을 지정 하 고에 연결 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 합니다. 자세한 내용은 [SQL Server에 연결](connect-to-sql-server-accesstosql.md)을 참조 하세요.
@@ -96,10 +96,9 @@ SQL Azure에 연결 페이지에서 연결 속성을 지정 하 고 SQL Azure에
 ## <a name="migration-status-page"></a>마이그레이션 상태 페이지  
 마이그레이션 상태 페이지에는 액세스 스키마를 또는 SQL Azure 스키마로 변환 하 고 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] , 변환 된 스키마를 또는 SQL Azure로 로드 하 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 고, 데이터를 마이그레이션하는 진행률이 표시 됩니다.  
   
-이 페이지에 대 한 자세한 내용은 [변환, 로드 및 마이그레이션](https://msdn.microsoft.com/4ec83e96-88a5-4b7b-8d5a-f3429d9a936b) 을 참조 하세요.  
+이 페이지에 대 한 자세한 내용은 [변환, 로드 및 마이그레이션](./convert-load-and-migrate-accesstosql.md) 을 참조 하세요.  
   
 ## <a name="see-also"></a>참고 항목  
 [Access &#40;AccessToSQL&#41;에 대 한 SQL Server Migration Assistant 시작 ](../../ssma/access/getting-started-with-sql-server-migration-assistant-for-access-accesstosql.md)  
 [SQL Server로 Access 데이터베이스 마이그레이션](migrating-access-databases-to-sql-server-azure-sql-db-accesstosql.md)  
-[사용자 인터페이스 참조 (액세스)](https://msdn.microsoft.com/af24c303-4a41-449b-9c86-d6558a97e839)  
-  
+[사용자 인터페이스 참조 (액세스)](./user-interface-reference-accesstosql.md)  

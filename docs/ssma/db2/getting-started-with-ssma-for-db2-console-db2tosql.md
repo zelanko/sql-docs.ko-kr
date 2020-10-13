@@ -10,12 +10,12 @@ ms.topic: conceptual
 ms.assetid: f245c017-023e-4880-8721-8908d339525e
 author: nahk-ivanov
 ms.author: alexiva
-ms.openlocfilehash: cb55f49a063ba58b526cccafbd2f400f4f889f17
-ms.sourcegitcommit: e700497f962e4c2274df16d9e651059b42ff1a10
+ms.openlocfilehash: 57cf454c5d13bf4a40325024e51bd19c4d56c446
+ms.sourcegitcommit: a41e1f4199785a2b8019a419a1f3dcdc15571044
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 08/17/2020
-ms.locfileid: "88454285"
+ms.lasthandoff: 10/13/2020
+ms.locfileid: "91985129"
 ---
 # <a name="getting-started-with-ssma--for-db2-console-db2tosql"></a>DB2 용 SSMA 콘솔 시작 (DB2ToSQL)
 이 섹션에서는 DB2 콘솔 응용 프로그램을 시작 하 고 시작 하는 절차에 대해 설명 합니다. 또한 여기에 나열 된 것은 일반적인 SSMA 콘솔 출력 창에서 사용 되는 규칙입니다.  
@@ -42,9 +42,9 @@ Windows 시스템에서 콘솔이 성공적으로 시작 된 후에는 다음 �
   
 추가 기능:  
   
-1.  [암호 관리](https://msdn.microsoft.com/56d546e3-8747-4169-aace-693302667e94) 및 다른 창 컴퓨터로 내보내기/가져오기  
+1.  [암호 관리](./managing-passwords-db2tosql.md) 및 다른 창 컴퓨터로 내보내기/가져오기  
   
-2.  평가/변환 및 데이터 마이그레이션에 대 한 자세한 xml 출력 보고서를 볼 수 있는 [보고서를 생성](https://msdn.microsoft.com/69ef5fd9-190d-4c58-8199-b3f77d5e1883) 합니다. 새로 고침 및 동기화 명령에 대해 자세한 오류 보고서를 생성할 수도 있습니다.  
+2.  평가/변환 및 데이터 마이그레이션에 대 한 자세한 xml 출력 보고서를 볼 수 있는 [보고서를 생성](./generating-reports-db2tosql.md) 합니다. 새로 고침 및 동기화 명령에 대해 자세한 오류 보고서를 생성할 수도 있습니다.  
   
 ## <a name="ssma-console-output-conventions"></a>SSMA 콘솔 출력 규칙  
 SSMA 스크립트 명령 및 옵션을 실행 하면 콘솔 프로그램이 콘솔의 사용자에 게 결과와 메시지 (정보, 오류 등)를 표시 하거나 필요한 경우 xml 출력 파일로 리디렉션합니다. 출력의 각 메시지 형식은 고유한 색으로 표시 됩니다. 예를 들어 흰색의 텍스트 메시지는 스크립트 파일 명령을 나타냅니다. 녹색으로 표시 되는 색은 사용자 입력에 대 한 프롬프트를 나타냅니다.  
@@ -55,7 +55,7 @@ SSMA 스크립트 명령 및 옵션을 실행 하면 콘솔 프로그램이 콘�
   
 |색|Description|  
 |---------|---------------|  
-|빨강|실행 하는 동안 심각한 오류가 발생 했습니다.|  
+|빨간색|실행 하는 동안 심각한 오류가 발생 했습니다.|  
 |회색|날짜 및 시간 스탬프, 사용자에 대 한 메시지|  
 |흰색|스크립트 파일 명령, 메시지 유형|  
 |노란색|경고|  
@@ -63,5 +63,4 @@ SSMA 스크립트 명령 및 옵션을 실행 하면 콘솔 프로그램이 콘�
 |녹청|작업의 시작, 종료 및 결과|  
   
 ## <a name="see-also"></a>참고 항목  
-[D b 2 용 SSMA 설치](https://msdn.microsoft.com/79fbe8ea-471b-407a-be2a-4100d9b57c61)  
-  
+[D b 2 용 SSMA 설치](./installing-ssma-for-db2-db2tosql.md)  

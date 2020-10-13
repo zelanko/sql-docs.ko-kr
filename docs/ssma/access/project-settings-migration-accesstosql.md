@@ -13,12 +13,12 @@ helpviewer_keywords:
 ms.assetid: 4caebc9c-8680-4b99-a8fa-89c43161c95d
 author: nahk-ivanov
 ms.author: alexiva
-ms.openlocfilehash: 94bd5cc9a8cb0db9079db981ec50a5fa6af7b20c
-ms.sourcegitcommit: e700497f962e4c2274df16d9e651059b42ff1a10
+ms.openlocfilehash: 3163da352fa925a821287fc1447fd8b6b5e89cdb
+ms.sourcegitcommit: a41e1f4199785a2b8019a419a1f3dcdc15571044
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 08/17/2020
-ms.locfileid: "88480535"
+ms.lasthandoff: 10/13/2020
+ms.locfileid: "91988499"
 ---
 # <a name="project-settings-migration-accesstosql"></a>프로젝트 설정 (마이그레이션) (AccessToSQL)
 마이그레이션 프로젝트 설정을 사용 하 여 데이터를 마이그레이션하는 방법을 구성 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 하거나 SQL Azure 수 있습니다.  
@@ -88,5 +88,4 @@ SSMA에서 가장 이른 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md
 데이터 마이그레이션 중에 사용 되는 일괄 처리 크기입니다. 트랜잭션은 각 일괄 처리 후에 기록 됩니다. 기본적으로 모든 스키마에 대 한 일괄 처리 크기는 1만입니다.  
   
 ## <a name="see-also"></a>참고 항목  
-[사용자 인터페이스 참조 (액세스)](https://msdn.microsoft.com/af24c303-4a41-449b-9c86-d6558a97e839)  
-  
+[사용자 인터페이스 참조 (액세스)](./user-interface-reference-accesstosql.md)  

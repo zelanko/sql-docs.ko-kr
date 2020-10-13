@@ -30,12 +30,12 @@ helpviewer_keywords:
 ms.assetid: e0ef67bf-80a6-4e6c-a82d-5d46e0623c6c
 author: nahk-ivanov
 ms.author: alexiva
-ms.openlocfilehash: 6109f523cce37e64bd13ccf9bf783b07a26fe94e
-ms.sourcegitcommit: e8f6c51d4702c0046aec1394109bc0503ca182f0
+ms.openlocfilehash: 04f6f0adb61a0bb7ccf33e3705a4a32b9ed9d69e
+ms.sourcegitcommit: a41e1f4199785a2b8019a419a1f3dcdc15571044
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 08/07/2020
-ms.locfileid: "87939149"
+ms.lasthandoff: 10/13/2020
+ms.locfileid: "91988229"
 ---
 # <a name="converting-access-database-objects-accesstosql"></a>Access 데이터베이스 개체 변환 (AccessToSQL)
 Access 데이터베이스를 추가 하 고 또는 SQL Azure에 연결한 후 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] SSMA는 access 및 또는 Azure SQL Database 개체에 대 한 메타 데이터를 표시 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 합니다. 이제 데이터베이스 개체에 액세스를 선택한 다음 스키마를 또는 SQL Azure 스키마로 변환할 수 있습니다 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] .  
@@ -49,7 +49,7 @@ Access 데이터베이스를 추가 하 고 또는 SQL Azure에 연결한 후 [!
 변환 하는 동안 SSMA는 출력 창에 상태를 인쇄 하 고, 오류, 경고 및 정보 메시지를 오류 목록 창에 인쇄 합니다. 이 정보를 사용 하 여 원하는 변환 결과를 얻기 위해 액세스 데이터베이스 또는 변환 프로세스를 수정 해야 하는지 여부를 결정할 수 있습니다. [마이그레이션에 대 한 액세스 데이터베이스 준비](preparing-access-databases-for-migration-accesstosql.md) 항목의 정보를 사용 하 여 변환 되지 않을 항목을 확인할 수도 있습니다.  
   
 ## <a name="setting-conversion-options"></a>변환 옵션 설정  
-개체를 변환 하기 전에 **프로젝트 설정** 대화 상자에서 프로젝트 변환 옵션을 검토 합니다. 이 대화 상자를 사용 하면 SSMA가 인덱싱된 메모 열, 기본 키, 외래 키 제약 조건, 타임 스탬프 및 인덱스 없이 테이블을 변환 하는 방법을 설정할 수 있습니다. 자세한 내용은 [프로젝트 설정 (변환)](https://msdn.microsoft.com/bcebc635-c638-4ddb-924c-b9ccfef86388) 을 참조 하세요.  
+개체를 변환 하기 전에 **프로젝트 설정** 대화 상자에서 프로젝트 변환 옵션을 검토 합니다. 이 대화 상자를 사용 하면 SSMA가 인덱싱된 메모 열, 기본 키, 외래 키 제약 조건, 타임 스탬프 및 인덱스 없이 테이블을 변환 하는 방법을 설정할 수 있습니다. 자세한 내용은 [프로젝트 설정 (변환)](./project-settings-conversion-accesstosql.md) 을 참조 하세요.  
   
 ## <a name="conversion-results"></a>변환 결과  
 다음 표에서는 변환 된 액세스 개체 및 결과 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 또는 SQL Azure 개체를 보여 줍니다.  
@@ -120,4 +120,3 @@ Access 데이터베이스 개체를 변환 하려면 먼저 변환할 개체를 
   
 ## <a name="see-also"></a>참고 항목  
 [SQL Server로 Access 데이터베이스 마이그레이션](migrating-access-databases-to-sql-server-azure-sql-db-accesstosql.md)  
-  

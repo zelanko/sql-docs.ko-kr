@@ -17,12 +17,12 @@ helpviewer_keywords:
 ms.assetid: b87b9683-abed-4677-8c50-18bdba704655
 author: nahk-ivanov
 ms.author: alexiva
-ms.openlocfilehash: 48054f25a5c7156a6d9d25d4770d19437d9dbadf
-ms.sourcegitcommit: e700497f962e4c2274df16d9e651059b42ff1a10
+ms.openlocfilehash: 8c39bc03cb6a1da09c7be6aac41c18b9d3bbd871
+ms.sourcegitcommit: a41e1f4199785a2b8019a419a1f3dcdc15571044
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 08/17/2020
-ms.locfileid: "88454306"
+ms.lasthandoff: 10/13/2020
+ms.locfileid: "91987529"
 ---
 # <a name="project-settings-type-mapping-accesstosql"></a>프로젝트 설정 (형식 매핑) (AccessToSQL)
 형식 매핑 프로젝트 설정을 사용 하 여 SSMA 프로젝트에 대 한 기본 형식 매핑을 설정할 수 있습니다. 또한 개별 데이터베이스 개체에 대 한 형식 매핑을 지정할 수 있습니다. 자세한 내용은 [원본 및 대상 데이터 형식 매핑](mapping-source-and-target-data-types-accesstosql.md)을 참조 하세요.  
@@ -46,7 +46,7 @@ ms.locfileid: "88454306"
 |--------------------|------------------------|  
 |**binary [ \* .. \* ]**|**varbinary [ \* ]**|  
 |**boolean**|**bit**|  
-|**바이트**|**tinyint**|  
+|**byte**|**tinyint**|  
 |**최신**|**money**|  
 |**date**|**datetime**|  
 |**decimal**|**float**|  
@@ -55,7 +55,7 @@ ms.locfileid: "88454306"
 |**integer**|**smallint**|  
 |**long**|**int**|  
 |**longbinary**|**varbinary(max)**|  
-|**메모(memo)**|**nvarchar(max)**|  
+|**memo**|**nvarchar(max)**|  
 |**memo** -Access 97|**varchar(max)**|  
 |**single**|**real**|  
 |**텍스트 [ \* ... \* ]**|**nvarchar [ \* ]**|  
@@ -75,5 +75,4 @@ ms.locfileid: "88454306"
   
 ## <a name="see-also"></a>참고 항목  
 [원본 및 대상 데이터 형식 매핑](mapping-source-and-target-data-types-accesstosql.md)  
-[사용자 인터페이스 참조 (액세스)](https://msdn.microsoft.com/af24c303-4a41-449b-9c86-d6558a97e839)  
-  
+[사용자 인터페이스 참조 (액세스)](./user-interface-reference-accesstosql.md)  

@@ -19,18 +19,18 @@ helpviewer_keywords:
 ms.assetid: f3b18af7-1af0-499d-a00d-a0af94895625
 author: nahk-ivanov
 ms.author: alexiva
-ms.openlocfilehash: c44f7af6972c316322d4a81b7de9fa13b77205a0
-ms.sourcegitcommit: e700497f962e4c2274df16d9e651059b42ff1a10
+ms.openlocfilehash: cc1cdb31969eb94c29a6c58f974aef92c5cdfc62
+ms.sourcegitcommit: a41e1f4199785a2b8019a419a1f3dcdc15571044
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 08/17/2020
-ms.locfileid: "88488306"
+ms.lasthandoff: 10/13/2020
+ms.locfileid: "91988659"
 ---
 # <a name="migrating-access-data-into-sql-server---azure-sql-database-accesstosql"></a>액세스 데이터를 SQL Server Azure SQL Database (AccessToSQL)로 마이그레이션
 로 데이터베이스 개체를 성공적으로 만든 후에는에 대 한 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 액세스에서 또는 SQL Azure으로 데이터를 마이그레이션할 수 있습니다 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] .  
   
 ## <a name="setting-migration-options"></a>마이그레이션 옵션 설정  
-또는 SQL Azure 데이터를 마이그레이션하기 전에 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] **프로젝트 설정** 대화 상자에서 프로젝트 마이그레이션 옵션을 검토 하십시오. 이 대화 상자에서 마이그레이션 일괄 처리 크기, 테이블 잠금, 제약 조건 확인, 삽입 트리거 발생, id 및 null 값 처리 및 범위를 벗어난 날짜를 처리 하는 방법을 설정할 수 있습니다 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] . 자세한 내용은 [프로젝트 설정 (마이그레이션)](https://msdn.microsoft.com/4caebc9c-8680-4b99-a8fa-89c43161c95d)을 참조 하세요.  
+또는 SQL Azure 데이터를 마이그레이션하기 전에 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] **프로젝트 설정** 대화 상자에서 프로젝트 마이그레이션 옵션을 검토 하십시오. 이 대화 상자에서 마이그레이션 일괄 처리 크기, 테이블 잠금, 제약 조건 확인, 삽입 트리거 발생, id 및 null 값 처리 및 범위를 벗어난 날짜를 처리 하는 방법을 설정할 수 있습니다 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] . 자세한 내용은 [프로젝트 설정 (마이그레이션)](./project-settings-migration-accesstosql.md)을 참조 하세요.  
   
 ## <a name="migrating-data"></a>데이터 마이그레이션  
 데이터 마이그레이션은 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 트랜잭션 내에서 또는 SQL Azure 데이터 행을 이동 하는 대량 로드 작업입니다. 각 트랜잭션에서 로드 되거나 SQL Azure 되는 행 수는 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 프로젝트 설정에서 구성 됩니다.  
@@ -54,7 +54,6 @@ ms.locfileid: "88488306"
 ## <a name="next-step"></a>다음 단계  
 마이그레이션 후에도 계속 사용 하려는 데이터베이스 응용 프로그램에 액세스 하는 경우 Access 데이터베이스 테이블을 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 또는 SQL Azure 테이블에 연결 합니다. 자세한 내용은 [SQL Server에 액세스 응용 프로그램 연결](linking-access-applications-to-sql-server-azure-sql-db-accesstosql.md)을 참조 하세요.  
   
-## <a name="see-also"></a>관련 항목  
+## <a name="see-also"></a>참고 항목  
 [SQL Server로 Access 데이터베이스 마이그레이션](migrating-access-databases-to-sql-server-azure-sql-db-accesstosql.md)  
 [변환 및 마이그레이션 옵션 설정](setting-conversion-and-migration-options-accesstosql.md)  
-  

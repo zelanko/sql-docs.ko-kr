@@ -14,12 +14,12 @@ helpviewer_keywords:
 ms.assetid: 4ec83e96-88a5-4b7b-8d5a-f3429d9a936b
 author: nahk-ivanov
 ms.author: alexiva
-ms.openlocfilehash: e541bf7cecf1614fc7fcdb1bf44cb8d71910bc13
-ms.sourcegitcommit: e700497f962e4c2274df16d9e651059b42ff1a10
+ms.openlocfilehash: 7f6b1db29b03d0ea0b2f6704039a1436107a4fd9
+ms.sourcegitcommit: a41e1f4199785a2b8019a419a1f3dcdc15571044
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 08/17/2020
-ms.locfileid: "88372919"
+ms.lasthandoff: 10/13/2020
+ms.locfileid: "91987646"
 ---
 # <a name="convert-load-and-migrate-accesstosql"></a>변환, 로드 및 마이그레이션 (AccessToSQL)
 
@@ -36,6 +36,5 @@ ms.locfileid: "88372919"
   
 ## <a name="see-also"></a>참고 항목
 
-[사용자 인터페이스 참조 (액세스)](https://msdn.microsoft.com/af24c303-4a41-449b-9c86-d6558a97e839)  
+[사용자 인터페이스 참조 (액세스)](./user-interface-reference-accesstosql.md)  
 [마이그레이션 마법사](migration-wizard-accesstosql.md)  
-  

@@ -10,12 +10,12 @@ ms.topic: conceptual
 ms.assetid: 29d8787c-632e-4ff7-9ccc-3f7ad40480ec
 author: nahk-ivanov
 ms.author: alexiva
-ms.openlocfilehash: 8c83a3992c66ef244e63f578725793551fb22be9
-ms.sourcegitcommit: e700497f962e4c2274df16d9e651059b42ff1a10
+ms.openlocfilehash: 9266aa52fe59439ea91f071f134bbe5680aa5e8b
+ms.sourcegitcommit: a41e1f4199785a2b8019a419a1f3dcdc15571044
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 08/17/2020
-ms.locfileid: "88472492"
+ms.lasthandoff: 10/13/2020
+ms.locfileid: "91988475"
 ---
 # <a name="working-with-ssma-for-oracle-console-db2tosql"></a>Oracle 용 SSMA 콘솔 작업 (DB2ToSQL)
 [!INCLUDE[msCoName](../../includes/msconame_md.md)][!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] D b 2 용 SSMA (Migration Assistant) 릴리스는 이제 콘솔 응용 프로그램을 통해 명령줄에서 액세스할 수 있습니다. 스크립트 파일은 명령을 실행 하기 위해 응용 프로그램에 대 한 입력을 구성 합니다. SSMA는 콘솔 응용 프로그램으로 스크립트 수준 상호 작용을 사용 하도록 설정 하 고 마이그레이션 주기를 줄이고 마이그레이션 작업을 확장 합니다.  
@@ -24,7 +24,7 @@ ms.locfileid: "88472492"
   
 이 섹션에서 다루는 항목은 다음과 같습니다.  
   
-|항목|설명|  
+|항목|Description|  
 |-|-|  
 |[DB2 용 SSMA &#40;콘솔 시작 DB2ToSQL&#41;](../../ssma/db2/getting-started-with-ssma-for-db2-console-db2tosql.md)|콘솔 응용 프로그램을 실행 하는 절차에 대해 설명 합니다.|  
 |[SSMA 콘솔의 명령줄 옵션 &#40;DB2ToSQL&#41;](../../ssma/db2/command-line-options-in-ssma-console-db2tosql.md)|SSMA 콘솔 응용 프로그램을 작동 하는 명령줄 옵션과 매개 변수를 설명 합니다.|  
@@ -38,5 +38,4 @@ ms.locfileid: "88472492"
 |[&#40;DB2ToSQL&#41;문제 해결 ](../../ssma/db2/troubleshooting-db2tosql.md)|마이그레이션 문제 해결에 대 한 간략 한 정보를 제공 합니다.|  
   
 ## <a name="see-also"></a>참고 항목  
-[DB2 용 SSMA 콘솔 시작](https://msdn.microsoft.com/f245c017-023e-4880-8721-8908d339525e)  
-  
+[DB2 용 SSMA 콘솔 시작](./getting-started-with-ssma-for-db2-console-db2tosql.md)  
