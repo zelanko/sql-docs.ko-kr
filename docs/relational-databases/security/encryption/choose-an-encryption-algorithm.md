@@ -17,12 +17,12 @@ ms.assetid: 8227028c-a9c9-489d-bd27-fbf8242634ae
 author: jaszymas
 ms.author: jaszymas
 monikerRange: '>=aps-pdw-2016||=azuresqldb-current||=azure-sqldw-latest||>=sql-server-2016||=sqlallproducts-allversions||>=sql-server-linux-2017||=azuresqldb-mi-current'
-ms.openlocfilehash: 3e93eeab1636dd2ee866ee6727bddb99c58a8c14
-ms.sourcegitcommit: 75f767c7b1ead31f33a870fddab6bef52f99906b
+ms.openlocfilehash: 04f5ea78761812c54c13fcf611d3f6e4765769a5
+ms.sourcegitcommit: 4d370399f6f142e25075b3714e5c2ce056b1bfd0
 ms.translationtype: HT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 07/28/2020
-ms.locfileid: "87332229"
+ms.lasthandoff: 10/09/2020
+ms.locfileid: "91869491"
 ---
 # <a name="choose-an-encryption-algorithm"></a>암호화 알고리즘 선택
 [!INCLUDE [SQL Server](../../../includes/applies-to-version/sql-asdb-asdbmi-asa-pdw.md)]
@@ -54,7 +54,7 @@ ms.locfileid: "87332229"
 >   
 >  [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] 에서는 솔트를 자동으로 제공하지 않기 때문에 서로 다른 데이터 블록에서 동일한 RC4 또는 RC4_128 KEY_GUID를 반복해서 사용하면 동일한 RC4 키가 만들어집니다. 동일한 RC4 키를 반복해서 사용하는 것은 암호화를 매우 약하게 만드는 잘 알려진 오류입니다. 따라서 RC4 및 RC4_128 키워드는 더 이상 사용되지 않습니다. [!INCLUDE[ssNoteDepFutureDontUse](../../../includes/ssnotedepfuturedontuse-md.md)]  
   
- 암호화 알고리즘 및 암호화 기술에 대한 자세한 내용은 MSDN에서 .NET Framework Developer's Guide의 [주요 보안 개념(Key Security Concepts)](https://go.microsoft.com/fwlink/?LinkId=62082) 을 참조하십시오.  
+ 암호화 알고리즘 및 암호화 기술에 대한 자세한 내용은 MSDN에서 .NET Framework Developer's Guide의 [주요 보안 개념(Key Security Concepts)](/previous-versions/aa720225(v=vs.71)) 을 참조하십시오.  
   
  **DES 알고리즘 관련 설명:**  
   
@@ -77,5 +77,4 @@ ms.locfileid: "87332229"
 ## <a name="see-also"></a>참고 항목  
  [SQL Server 암호화](../../../relational-databases/security/encryption/sql-server-encryption.md)   
  [암호화 계층](../../../relational-databases/security/encryption/encryption-hierarchy.md)  
-  
   

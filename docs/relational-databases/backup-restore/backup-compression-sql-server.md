@@ -18,12 +18,12 @@ helpviewer_keywords:
 ms.assetid: 05bc9c4f-3947-4dd4-b823-db77519bd4d2
 author: MikeRayMSFT
 ms.author: mikeray
-ms.openlocfilehash: f3351a709eef1550ab172e90b61d2cb67673ba27
-ms.sourcegitcommit: 01297f2487fe017760adcc6db5d1df2c1234abb4
+ms.openlocfilehash: 56c2f2cadd998a6daba51b46e46e2c141e1f0f38
+ms.sourcegitcommit: 04cf7905fa32e0a9a44575a6f9641d9a2e5ac0f8
 ms.translationtype: HT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 07/09/2020
-ms.locfileid: "86196948"
+ms.lasthandoff: 10/07/2020
+ms.locfileid: "91810289"
 ---
 # <a name="backup-compression-sql-server"></a>백업 압축(SQL Server)
  [!INCLUDE [SQL Server](../../includes/applies-to-version/sqlserver.md)]
@@ -94,7 +94,7 @@ SELECT backup_size/compressed_backup_size FROM msdb..backupset;
 
 ## <a name="backup-compression-with-tde"></a>TDE로 백업 압축
 
-[!INCLUDE[ssSQL15](../../includes/sssql15-md.md)]부터, **65536(64KB)보다 큰** `MAXTRANSFERSIZE`를 설정 시 압축 알고리즘이 사용됩니다. 이 알고리즘은 먼저 페이지를 해독하고 압축한 다음 다시 암호화하는 [TDE(투명한 데이터 암호화)](../../relational-databases/security/encryption/transparent-data-encryption.md)로 암호화된 데이터베이스에 최적화되어 있습니다. `MAXTRANSFERSIZE`를 지정하지 않은 경우 또는 `MAXTRANSFERSIZE = 65536`(64KB)을 사용하는 경우 TDE 암호화 데이터베이스를 통해 백업 압축을 수행하면 암호화된 페이지가 바로 압축되어 압축률이 좋지 않을 수 있습니다. 자세한 내용은 [TDE 가능 데이터베이스의 백업 압축](https://blogs.msdn.microsoft.com/sqlcat/2016/06/20/sqlsweet16-episode-1-backup-compression-for-tde-enabled-databases/)을 참조하세요.
+[!INCLUDE[ssSQL15](../../includes/sssql15-md.md)]부터, **65536(64KB)보다 큰** `MAXTRANSFERSIZE`를 설정 시 압축 알고리즘이 사용됩니다. 이 알고리즘은 먼저 페이지를 해독하고 압축한 다음 다시 암호화하는 [TDE(투명한 데이터 암호화)](../../relational-databases/security/encryption/transparent-data-encryption.md)로 암호화된 데이터베이스에 최적화되어 있습니다. `MAXTRANSFERSIZE`를 지정하지 않은 경우 또는 `MAXTRANSFERSIZE = 65536`(64KB)을 사용하는 경우 TDE 암호화 데이터베이스를 통해 백업 압축을 수행하면 암호화된 페이지가 바로 압축되어 압축률이 좋지 않을 수 있습니다. 자세한 내용은 [TDE 가능 데이터베이스의 백업 압축](/archive/blogs/sqlcat/sqlsweet16-episode-1-backup-compression-for-tde-enabled-databases)을 참조하세요.
 
 [!INCLUDE[sql-server-2019](../../includes/sssqlv15-md.md)] CU5부터 더 이상 이 TDE를 사용하는 최적화된 압축 알고리즘을 사용하도록 `MAXTRANSFERSIZE`를 설정할 필요가 없습니다. 백업 명령에 `WITH COMPRESSION`이 지정되거나 *백업 압축 기본값* 서버 구성이 1로 설정되어 있으면 `MAXTRANSFERSIZE`가 자동으로 128K로 증가하여 최적화된 알고리즘을 사용하도록 설정합니다. 백업 명령에 `MAXTRANSFERSIZE`가 64K를 초과하는 값으로 지정되면 제공된 값이 적용됩니다. 즉, SQL Server는 자동으로 이 값을 줄이지 않고 늘리기만 합니다. `MAXTRANSFERSIZE = 65536`을 사용하여 TDE 암호화 데이터베이스를 백업해야 하는 경우 `WITH NO_COMPRESSION`를 지정하거나 *백업 압축 기본값* 서버 구성이 0으로 설정되어 있어야 합니다.
 
@@ -120,5 +120,4 @@ SELECT backup_size/compressed_backup_size FROM msdb..backupset;
 ## <a name="see-also"></a>참고 항목  
  [백업 개요&#40;SQL Server&#41;](../../relational-databases/backup-restore/backup-overview-sql-server.md)   
  [추적 플래그&#40;Transact-SQL&#41;](../../t-sql/database-console-commands/dbcc-traceon-trace-flags-transact-sql.md)  
-  
   

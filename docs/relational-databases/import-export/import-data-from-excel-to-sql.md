@@ -11,12 +11,12 @@ ms.topic: conceptual
 author: MashaMSFT
 ms.author: mathoma
 monikerRange: =azuresqldb-current||>=sql-server-2016||=sqlallproducts-allversions||>=sql-server-linux-2017||=azuresqldb-mi-current
-ms.openlocfilehash: df99c766fa727af8981f048b231abac95c3a168c
-ms.sourcegitcommit: da88320c474c1c9124574f90d549c50ee3387b4c
+ms.openlocfilehash: 6b299248e1bd953109d72e4536a4d520ccd942d7
+ms.sourcegitcommit: 4d370399f6f142e25075b3714e5c2ce056b1bfd0
 ms.translationtype: HT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 07/01/2020
-ms.locfileid: "85715393"
+ms.lasthandoff: 10/09/2020
+ms.locfileid: "91868760"
 ---
 # <a name="import-data-from-excel-to-sql-server-or-azure-sql-database"></a>Excel에서 SQL Server 또는 Azure SQL Database로 데이터 가져오기
 
@@ -135,7 +135,7 @@ Excel 데이터를 가져오지 않고 쿼리를 사용하려면 표준 `SELECT 
 
 분산 쿼리에 대한 자세한 내용은 다음 항목을 참조하세요.
 
-- [분산 쿼리](https://msdn.microsoft.com/library/ms188721(v=sql.105).aspx)(분산 쿼리는 SQL Server 2016에서 계속 지원되지만 이 기능에 대한 설명서는 업데이트되지 않았습니다.)
+- [분산 쿼리](/previous-versions/sql/sql-server-2008-r2/ms188721(v=sql.105))(분산 쿼리는 SQL Server 2016에서 계속 지원되지만 이 기능에 대한 설명서는 업데이트되지 않았습니다.)
 - [OPENROWSET](../../t-sql/functions/openrowset-transact-sql.md)
 - [OPENDATASOURCE](../../t-sql/functions/openquery-transact-sql.md)
 
@@ -252,8 +252,8 @@ Azure Data Factory 복사 마법사 페이지를 단계별로 실행하여 텍�
 
 복사 마법사에 대한 자세한 내용은 다음 항목을 참조하세요.
 
-- [데이터 팩터리 복사 마법사](https://docs.microsoft.com/azure/data-factory/data-factory-azure-copy-wizard)
-- [자습서: 데이터 팩터리 복사 마법사를 사용하여 복사 활동으로 파이프라인을 만듭니다](https://docs.microsoft.com/azure/data-factory/data-factory-copy-data-wizard-tutorial).
+- [데이터 팩터리 복사 마법사](/azure/data-factory/data-factory-azure-copy-wizard)
+- [자습서: 데이터 팩터리 복사 마법사를 사용하여 복사 활동으로 파이프라인을 만듭니다](/azure/data-factory/data-factory-copy-data-wizard-tutorial).
 
 ## <a name="azure-data-factory"></a><a name="adf"></a> Azure Data Factory
 
@@ -263,14 +263,14 @@ Azure Data Factory에 익숙하여 복사 마법사를 실행되지 않게 하�
 
 이러한 Data Factory 원본 및 싱크에 대한 자세한 내용은 다음 항목을 참조하세요.
 
-- [파일 시스템](https://docs.microsoft.com/azure/data-factory/data-factory-onprem-file-system-connector)
-- [SQL Server](https://docs.microsoft.com/azure/data-factory/data-factory-sqlserver-connector)
-- [Azure SQL Database](https://docs.microsoft.com/azure/data-factory/data-factory-azure-sql-connector)
+- [파일 시스템](/azure/data-factory/data-factory-onprem-file-system-connector)
+- [SQL Server](/azure/data-factory/data-factory-sqlserver-connector)
+- [Azure SQL Database](/azure/data-factory/data-factory-azure-sql-connector)
 
 Azure Data Factory를 사용해 데이터를 복사하는 방법을 알아보려면 다음 항목을 참조하세요.
 
-- [복사 활동을 사용하여 데이터 이동](https://docs.microsoft.com/azure/data-factory/data-factory-data-movement-activities)
-- [자습서: Azure Portal을 사용하여 복사 활동으로 파이프라인 만들기](https://docs.microsoft.com/azure/data-factory/data-factory-copy-data-from-azure-blob-storage-to-sql-database)
+- [복사 활동을 사용하여 데이터 이동](/azure/data-factory/data-factory-data-movement-activities)
+- [자습서: Azure Portal을 사용하여 복사 활동으로 파이프라인 만들기](/azure/data-factory/data-factory-copy-data-from-azure-blob-storage-to-sql-database)
 
 ## <a name="common-errors"></a>일반 오류
 

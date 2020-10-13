@@ -14,12 +14,12 @@ helpviewer_keywords:
 ms.assetid: a82df075-2243-4e19-bfe1-ae6d65dabd0f
 author: rothja
 ms.author: jroth
-ms.openlocfilehash: 97cbd5543bd73001f599a25eaa9a79f493f40f58
-ms.sourcegitcommit: e700497f962e4c2274df16d9e651059b42ff1a10
+ms.openlocfilehash: 4e7e7ba7e0e3f526c69026b9f759937d7329d50c
+ms.sourcegitcommit: 04cf7905fa32e0a9a44575a6f9641d9a2e5ac0f8
 ms.translationtype: HT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 08/17/2020
-ms.locfileid: "88472921"
+ms.lasthandoff: 10/07/2020
+ms.locfileid: "91811077"
 ---
 # <a name="create-clr-functions"></a>CLR 함수 만들기
 [!INCLUDE [sqlserver2016](../../includes/applies-to-version/sqlserver2016.md)]
@@ -56,7 +56,7 @@ ms.locfileid: "88472921"
 -   [CREATE FUNCTION&#40;Transact-SQL&#41;](../../t-sql/statements/create-function-transact-sql.md)  
   
 ## <a name="accessing-native-code"></a>네이티브 코드 액세스  
- CLR 함수를 사용하면 관리 코드에서 PInvoke를 사용하는 방법을 통해 C 또는 C++로 작성된 코드 등의 네이티브(비관리) 코드에 액세스할 수 있습니다. 자세한 내용은 [관리 코드에서 네이티브 함수 호출](https://go.microsoft.com/fwlink/?LinkID=181929) 을 참조하세요. 네이티브 코드에 액세스하면 레거시 코드를 CLR UDF로 다시 사용하거나 성능에 중요한 영향을 주는 UDF를 네이티브 코드로 작성할 수 있습니다. 이렇게 하려면 UNSAFE 어셈블리를 사용해야 합니다. UNSAFE 어셈블리 사용에 대한 주의 사항은 [CLR Integration Code Access Security](../../relational-databases/clr-integration/security/clr-integration-code-access-security.md) 을 참조하십시오.  
+ CLR 함수를 사용하면 관리 코드에서 PInvoke를 사용하는 방법을 통해 C 또는 C++로 작성된 코드 등의 네이티브(비관리) 코드에 액세스할 수 있습니다. 자세한 내용은 [관리 코드에서 네이티브 함수 호출](/cpp/dotnet/calling-native-functions-from-managed-code) 을 참조하세요. 네이티브 코드에 액세스하면 레거시 코드를 CLR UDF로 다시 사용하거나 성능에 중요한 영향을 주는 UDF를 네이티브 코드로 작성할 수 있습니다. 이렇게 하려면 UNSAFE 어셈블리를 사용해야 합니다. UNSAFE 어셈블리 사용에 대한 주의 사항은 [CLR Integration Code Access Security](../../relational-databases/clr-integration/security/clr-integration-code-access-security.md) 을 참조하십시오.  
   
 ## <a name="see-also"></a>참고 항목  
  [사용자 정의 함수 만들기&#40;데이터베이스 엔진&#41;](../../relational-databases/user-defined-functions/create-user-defined-functions-database-engine.md)   
@@ -64,5 +64,4 @@ ms.locfileid: "88472921"
  [사용자 정의 함수 실행](../../relational-databases/user-defined-functions/execute-user-defined-functions.md)   
  [사용자 정의 함수 보기](../../relational-databases/user-defined-functions/view-user-defined-functions.md)   
  [CLR&#40;공용 언어 런타임&#41; 통합 프로그래밍 개요](../../relational-databases/clr-integration/common-language-runtime-clr-integration-programming-concepts.md)  
-  
   

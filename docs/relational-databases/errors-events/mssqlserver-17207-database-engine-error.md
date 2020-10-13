@@ -12,12 +12,12 @@ helpviewer_keywords:
 ms.assetid: ''
 author: PijoCoder
 ms.author: mathoma
-ms.openlocfilehash: a7938f28af84596f620246d3d70ad491cb22828c
-ms.sourcegitcommit: e700497f962e4c2274df16d9e651059b42ff1a10
+ms.openlocfilehash: d1c0face9315a38d4748cffef71e135401102dd0
+ms.sourcegitcommit: 4d370399f6f142e25075b3714e5c2ce056b1bfd0
 ms.translationtype: HT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 08/17/2020
-ms.locfileid: "88456467"
+ms.lasthandoff: 10/09/2020
+ms.locfileid: "91869460"
 ---
 # <a name="mssqlserver_17207"></a>MSSQLSERVER_17207
  [!INCLUDE [SQL Server](../../includes/applies-to-version/sqlserver.md)]
@@ -55,7 +55,7 @@ STREAMFCB::Startup: Operating system error 2(The system cannot find the file spe
 ```
 
 ## <a name="cause"></a>원인
-[!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 데이터베이스를 사용하려면 먼저 데이터베이스를 시작해야 합니다. 데이터베이스 시작 프로세스에는 데이터베이스 및 데이터베이스 파일을 나타내는 다양한 데이터 구조를 초기화하고, 데이터베이스에 속하는 모든 파일을 열고, 마지막으로 데이터베이스에서 복구를 실행하는 작업이 포함됩니다. [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]는 [CreateFile](https://docs.microsoft.com/windows/win32/api/fileapi/nf-fileapi-createfilea) Windows API 함수를 사용하여 데이터베이스에 속하는 파일을 엽니다.
+[!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 데이터베이스를 사용하려면 먼저 데이터베이스를 시작해야 합니다. 데이터베이스 시작 프로세스에는 데이터베이스 및 데이터베이스 파일을 나타내는 다양한 데이터 구조를 초기화하고, 데이터베이스에 속하는 모든 파일을 열고, 마지막으로 데이터베이스에서 복구를 실행하는 작업이 포함됩니다. [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]는 [CreateFile](/windows/win32/api/fileapi/nf-fileapi-createfilea) Windows API 함수를 사용하여 데이터베이스에 속하는 파일을 엽니다.
  
 메시지 17207(및 17204)은 시작 프로세스에서 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]가 데이터베이스 파일을 열려고 할 때 오류가 발생했음을 표시합니다.
  
@@ -83,7 +83,7 @@ STREAMFCB::Startup: Operating system error 2(The system cannot find the file spe
 1. ```Access is Denied``` 운영 체제 오류 = 5가 반환되는 경우 다음 방법을 고려하세요.
    -  Windows 탐색기에서 파일의 속성을 확인하여 파일에 설정된 권한을 확인합니다. [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]는 Windows 그룹을 사용하여 다양한 파일 리소스에 액세스 제어를 프로비전합니다. (SQLServerMSSQLUser$ComputerName$MSSQLSERVER 또는 SQLServerMSSQLUser$ComputerName$InstanceName 같은 이름을 가진) 적절한 그룹에 오류 메시지에서 언급된 데이터베이스 파일에 필요한 권한이 있는지 확인합니다. 자세한 내용은 [데이터베이스 엔진 액세스에 대한 파일 시스템 권한 구성](/previous-versions/sql/2014/database-engine/configure-windows/configure-file-system-permissions-for-database-engine-access?view=sql-server-2014)을 검토하세요. Windows 그룹에 실제로 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 서비스 시작 계정 또는 서비스 SID가 포함되어 있는지 확인합니다.
    -  [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 서비스가 현재 실행되고 있는 사용자 계정을 검토합니다. Windows 작업 관리자를 사용하여 이 정보를 가져올 수 있습니다. 실행 파일 "sqlservr.exe"의 "사용자 이름" 값을 찾습니다. 또한 최근에 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 서비스 계정을 변경한 경우 이 작업을 수행하는 데 지원되는 방법은 SQL Server 구성 관리자 유틸리티를 사용하는 것임을 알아야 합니다. 이에 대한 자세한 내용은 [SQL Server 구성 관리자](../sql-server-configuration-manager.md)에서 확인할 수 있습니다. 
-   -  작업 유형(서버 시작 시 데이터베이스 열기, 데이터베이스 연결, 데이터베이스 복원 등)에 따라 가장과 데이터베이스 파일 액세스에 사용되는 계정이 다를 수 있습니다. [데이터 및 로그 파일 보안](https://docs.microsoft.com/previous-versions/sql/sql-server-2008-r2/ms189128(v=sql.105)?redirectedfrom=MSDN) 항목을 검토하여 어떤 작업이 어떤 권한을 어떤 계정에 설정하는지 파악합니다. Windows SysInternals [프로세스 모니터](https://docs.microsoft.com/sysinternals/downloads/procmon)와 같은 도구를 사용하여 파일 액세스가 SQL Server 인스턴스 서비스 시작 계정(또는 서비스 SID) 또는 가장된 계정의 보안 컨텍스트에서 일어나는지 확인합니다.
+   -  작업 유형(서버 시작 시 데이터베이스 열기, 데이터베이스 연결, 데이터베이스 복원 등)에 따라 가장과 데이터베이스 파일 액세스에 사용되는 계정이 다를 수 있습니다. [데이터 및 로그 파일 보안](/previous-versions/sql/sql-server-2008-r2/ms189128(v=sql.105)) 항목을 검토하여 어떤 작업이 어떤 권한을 어떤 계정에 설정하는지 파악합니다. Windows SysInternals [프로세스 모니터](/sysinternals/downloads/procmon)와 같은 도구를 사용하여 파일 액세스가 SQL Server 인스턴스 서비스 시작 계정(또는 서비스 SID) 또는 가장된 계정의 보안 컨텍스트에서 일어나는지 확인합니다.
 
       SQL Server가 ALTER DATABASE 또는 CREATE DATABASE 작업을 실행하는 로그인의 사용자 자격 증명을 가장하는 경우 프로세스 모니터 도구(예)에서 다음과 같은 정보를 확인할 수 있습니다.
 
@@ -115,7 +115,6 @@ STREAMFCB::Startup: Operating system error 2(The system cannot find the file spe
    - [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]에서 이러한 위치에 있는 데이터베이스 파일에 액세스하기 전에 [iSCSI 드라이브 같은] 디스크나 네트워크 위치를 사용할 수 있는지 확인합니다. 필요하다면 클러스터 관리자나 서비스 제어 관리자에서 필요한 종속성을 만듭니다.
 
 1. `The process cannot access the file because it is being used by another process` 운영 체제 오류 = 32가 표시되는 경우:
-   - Windows Sysinternals에서 [프로세스 탐색기](https://docs.microsoft.com/sysinternals/downloads/process-explorer)나 [핸들](https://docs.microsoft.com/sysinternals/downloads/handle) 같은 도구를 사용하여 다른 프로세스 또는 서비스가 이 데이터베이스 파일에 대한 배타적 잠금을 획득했는지 확인합니다.
+   - Windows Sysinternals에서 [프로세스 탐색기](/sysinternals/downloads/process-explorer)나 [핸들](/sysinternals/downloads/handle) 같은 도구를 사용하여 다른 프로세스 또는 서비스가 이 데이터베이스 파일에 대한 배타적 잠금을 획득했는지 확인합니다.
    - 프로세스가 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 데이터베이스 파일에 액세스하지 못하게 합니다. 일반적인 예제에는 바이러스 백신 프로그램이 동원됩니다(다음 [기술 자료 문서](https://support.microsoft.com/help/309422/choosing-antivirus-software-for-computers-that-run-sql-server)에서 파일 제외 지침을 참조하세요).
    - 클러스터 환경에서 이전 소유 노드의 sqlservr.exe 프로세스가 데이터베이스 핸들을 실제로 릴리스했는지 확인합니다. 일반적으로는 발생하지 않지만 클러스터 또는 I/O 경로를 잘못 구성하면 이러한 문제가 발생할 수 있습니다.
-  

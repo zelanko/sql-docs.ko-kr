@@ -14,12 +14,12 @@ helpviewer_keywords:
 ms.assetid: 31f41703-134d-49fc-9850-76c297351c2c
 author: rothja
 ms.author: jroth
-ms.openlocfilehash: f3d7218b9d2524fd2312ea0364268821524eb926
-ms.sourcegitcommit: e700497f962e4c2274df16d9e651059b42ff1a10
+ms.openlocfilehash: a2c78991ea408f6b6b23169524280d834cf5c27a
+ms.sourcegitcommit: 04cf7905fa32e0a9a44575a6f9641d9a2e5ac0f8
 ms.translationtype: HT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 08/17/2020
-ms.locfileid: "88446380"
+ms.lasthandoff: 10/07/2020
+ms.locfileid: "91809298"
 ---
 # <a name="create-clr-triggers"></a>CLR 트리거 만들기
 [!INCLUDE [SQL Server](../../includes/applies-to-version/sqlserver.md)]
@@ -27,7 +27,7 @@ ms.locfileid: "88446380"
   
  [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 에서 CLR 트리거(DML 또는 DDL)를 만드는 단계는 다음과 같습니다.  
   
--   .NET Framework 지원 언어로 트리거를 클래스로 정의합니다. CLR에서 트리거를 프로그래밍하는 방법은 [CLR 트리거](https://msdn.microsoft.com/library/302a4e4a-3172-42b6-9cc0-4a971ab49c1c)를 참조하세요. 그런 다음 적절한 언어 컴파일러를 사용하여 [!INCLUDE[dnprdnshort](../../includes/dnprdnshort-md.md)] 에서 어셈블리를 빌드하기 위한 클래스를 컴파일합니다.  
+-   .NET Framework 지원 언어로 트리거를 클래스로 정의합니다. CLR에서 트리거를 프로그래밍하는 방법은 [CLR 트리거](/dotnet/framework/data/adonet/sql/clr-triggers)를 참조하세요. 그런 다음 적절한 언어 컴파일러를 사용하여 [!INCLUDE[dnprdnshort](../../includes/dnprdnshort-md.md)] 에서 어셈블리를 빌드하기 위한 클래스를 컴파일합니다.  
   
 -   CREATE ASSEMBLY 문을 사용하여 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 에 어셈블리를 등록합니다. [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]의 어셈블리에 대한 자세한 내용은 [어셈블리&#40;데이터베이스 엔진&#41;](../../relational-databases/clr-integration/assemblies-database-engine.md)를 참조하세요.  
   
@@ -55,5 +55,4 @@ ms.locfileid: "88446380"
  [DML 트리거](../../relational-databases/triggers/dml-triggers.md)   
  [CLR&#40;공용 언어 런타임&#41; 통합 프로그래밍 개요](../../relational-databases/clr-integration/common-language-runtime-clr-integration-programming-concepts.md)   
  [CLR 데이터베이스 개체에서 데이터 액세스](../../relational-databases/clr-integration/data-access/data-access-from-clr-database-objects.md)  
-  
   

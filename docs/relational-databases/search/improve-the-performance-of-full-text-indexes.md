@@ -18,12 +18,12 @@ author: pmasl
 ms.author: pelopes
 ms.reviewer: mikeray
 monikerRange: =azuresqldb-current||>=sql-server-2016||=sqlallproducts-allversions||>=sql-server-linux-2017||=azuresqldb-mi-current
-ms.openlocfilehash: a4b893bd45de93ab0ee934343e16bf6d577f1123
-ms.sourcegitcommit: e700497f962e4c2274df16d9e651059b42ff1a10
+ms.openlocfilehash: 77e6942702594d7c33e3e88ca0d695dda3a59caa
+ms.sourcegitcommit: 4d370399f6f142e25075b3714e5c2ce056b1bfd0
 ms.translationtype: HT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 08/17/2020
-ms.locfileid: "88427935"
+ms.lasthandoff: 10/09/2020
+ms.locfileid: "91868069"
 ---
 # <a name="improve-the-performance-of-full-text-indexes"></a>전체 텍스트 인덱스 성능 향상
 [!INCLUDE [SQL Server Azure SQL Database](../../includes/applies-to-version/sql-asdb.md)]
@@ -207,7 +207,7 @@ GO
   
  보안상의 이유로 필터는 필터 데몬 호스트 프로세스에 의해 로드됩니다. 서버 인스턴스는 모든 다중 스레드 필터에 대해 다중 스레드 프로세스를 사용하고 모든 단일 스레드 필터에 대해 단일 스레드 프로세스를 사용합니다. 다중 스레드 필터를 사용하는 문서에 단일 스레드 필터를 사용하는 포함 문서가 있을 경우 전체 텍스트 엔진은 해당 포함 문서에 대해 단일 스레드 프로세스를 시작합니다. 예를 들어 PDF 문서가 포함된 Word 문서가 있을 경우 전체 텍스트 엔진은 Word 콘텐츠에 대해 다중 스레드 프로세스를 사용하고 PDF 콘텐츠에 대해 단일 스레드 프로세스를 시작합니다. 그러나 이러한 환경에서는 단일 스레드 필터가 제대로 작동하지 않을 수 있으며 이로 인해 필터링 프로세스가 불안정해질 수 있습니다. 이러한 포함 작업이 자주 수행되는 특정 환경에서는 불안정화로 인해 해당 프로세스가 충돌할 수 있습니다. 충돌이 발생하면 전체 텍스트 엔진은 실패한 문서(예: 포함된 PDF 콘텐츠가 있는 Word 문서)를 단일 스레드 필터링 프로세스로 모두 다시 라우트합니다. 다시 라우팅 작업이 자주 발생하면 전체 텍스트 인덱싱 프로세스의 성능이 저하됩니다.  
   
-이 문제를 해결하려면 컨테이너 문서(이 예제의 경우 Word 문서)의 필터를 단일 스레드 필터로 표시합니다. 필터를 단일 스레드 필터로 표시하려면 필터의 **ThreadingModel** 레지스트리 값을 **Apartment Threaded**로 설정합니다. 단일 스레드 아파트에 대한 자세한 내용은 [COM 스레딩 모델 이해 및 사용](https://go.microsoft.com/fwlink/?LinkId=209159)백서를 참조하세요.  
+이 문제를 해결하려면 컨테이너 문서(이 예제의 경우 Word 문서)의 필터를 단일 스레드 필터로 표시합니다. 필터를 단일 스레드 필터로 표시하려면 필터의 **ThreadingModel** 레지스트리 값을 **Apartment Threaded**로 설정합니다. 단일 스레드 아파트에 대한 자세한 내용은 [COM 스레딩 모델 이해 및 사용](/previous-versions/ms809971(v=msdn.10))백서를 참조하세요.  
   
 ## <a name="see-also"></a>참고 항목  
  [서버 메모리 서버 구성 옵션](../../database-engine/configure-windows/server-memory-server-configuration-options.md)   
@@ -217,5 +217,4 @@ GO
  [sys.dm_fts_memory_buffers&#40;Transact-SQL&#41;](../../relational-databases/system-dynamic-management-views/sys-dm-fts-memory-buffers-transact-sql.md)   
  [sys.dm_fts_memory_pools&#40;Transact-SQL&#41;](../../relational-databases/system-dynamic-management-views/sys-dm-fts-memory-pools-transact-sql.md)   
  [전체 텍스트 인덱싱 문제 해결](../../relational-databases/search/troubleshoot-full-text-indexing.md)  
-  
   

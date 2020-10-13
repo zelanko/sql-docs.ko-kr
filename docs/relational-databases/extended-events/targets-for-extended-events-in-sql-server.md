@@ -11,12 +11,12 @@ ms.assetid: 47c64144-4432-4778-93b5-00496749665b
 author: MightyPen
 ms.author: genemi
 monikerRange: =azuresqldb-current||=azuresqldb-mi-current||>=sql-server-2016||=sqlallproducts-allversions||>=sql-server-linux-2017
-ms.openlocfilehash: 706aa149b51b2cc56b524ad39db0e1453324bd00
-ms.sourcegitcommit: 21bedbae28840e2f96f5e8b08bcfc794f305c8bc
+ms.openlocfilehash: 45f347cb606773ad5e568a8d443bbe010e1a3fd1
+ms.sourcegitcommit: 4d370399f6f142e25075b3714e5c2ce056b1bfd0
 ms.translationtype: HT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 08/06/2020
-ms.locfileid: "87863377"
+ms.lasthandoff: 10/09/2020
+ms.locfileid: "91868770"
 ---
 # <a name="targets-for-extended-events-in-sql-server"></a>SQL Server에서 확장 이벤트에 대한 대상
 
@@ -156,7 +156,7 @@ CREATE EVENT SESSION [event_counter_1]
 > [!NOTE]
 > Azure SQL Database는 Azure Blob Storage에 `xel` 파일 저장만 지원합니다. 
 >
-> SQL Database(및 SQL Managed Instance)에 대한 **event_file** 코드 예제의 경우 [SQL Database의 확장된 이벤트에 대한 이벤트 파일 대상 코드](https://docs.microsoft.com/azure/sql-database/sql-database-xevent-code-event-file)를 참조하세요.
+> SQL Database(및 SQL Managed Instance)에 대한 **event_file** 코드 예제의 경우 [SQL Database의 확장된 이벤트에 대한 이벤트 파일 대상 코드](/azure/sql-database/sql-database-xevent-code-event-file)를 참조하세요.
 
 ::: moniker-end
 
@@ -792,9 +792,6 @@ event_stream 대상은 C#과 같은 언어로 작성 된.NET 프로그램에서 
 ### <a name="xevent-namespaces"></a>XEvent 네임스페이스
 
 
-- [Microsoft.SqlServer.Management.XEvent 네임스페이스](https://msdn.microsoft.com/library/microsoft.sqlserver.management.xevent.aspx)
+- [Microsoft.SqlServer.Management.XEvent 네임스페이스](/dotnet/api/microsoft.sqlserver.management.xevent)
 
-- [Microsoft.SqlServer.XEvent.Linq 네임스페이스](https://msdn.microsoft.com/library/microsoft.sqlserver.xevent.linq.aspx)
-
-
-
+- [Microsoft.SqlServer.XEvent.Linq 네임스페이스](/dotnet/api/microsoft.sqlserver.xevent.linq)

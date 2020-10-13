@@ -1,20 +1,20 @@
 ---
 title: Windows에서 Linux로 SQL Server 데이터베이스 마이그레이션
 description: 이 자습서에서는 Windows에서 SQL Server 데이터베이스 백업을 수행하고 SQL Server를 실행하는 Linux 머신으로 복원하는 방법을 보여 줍니다.
-author: MikeRayMSFT
-ms.author: mikeray
+author: VanMSFT
+ms.author: vanto
 ms.reviewer: vanto
 ms.date: 08/16/2017
 ms.topic: conceptual
 ms.prod: sql
 ms.technology: linux
 ms.assetid: 9ac64d1a-9fe5-446e-93c3-d17b8f55a28f
-ms.openlocfilehash: 63226ae06abe2771c50fc5debc1a1dc63cb7c590
-ms.sourcegitcommit: 205de8fa4845c491914902432791bddf11002945
+ms.openlocfilehash: e28b690a6231a77b09664b1c8680522f426e5e92
+ms.sourcegitcommit: 610e3ebe21ac6575850a29641a32f275e71557e3
 ms.translationtype: HT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 07/23/2020
-ms.locfileid: "86971531"
+ms.lasthandoff: 10/07/2020
+ms.locfileid: "91785062"
 ---
 # <a name="migrate-a-sql-server-database-from-windows-to-linux-using-backup-and-restore"></a>백업 및 복원을 사용하여 Windows에서 Linux로 SQL Server 데이터베이스 마이그레이션
 

@@ -12,12 +12,12 @@ ms.assetid: eecc5821-152b-4ed5-888f-7c0e6beffed9
 author: MightyPen
 ms.author: genemi
 monikerRange: =azuresqldb-current||>=sql-server-2016||=sqlallproducts-allversions||>=sql-server-linux-2017||=azuresqldb-mi-current
-ms.openlocfilehash: bbc6a5f1be39d3b46de9c9cb9abea5e17ecc0b41
-ms.sourcegitcommit: da88320c474c1c9124574f90d549c50ee3387b4c
+ms.openlocfilehash: 817e126cfcd6bd4f825cb8e3158cc96d0a78e30c
+ms.sourcegitcommit: 4d370399f6f142e25075b3714e5c2ce056b1bfd0
 ms.translationtype: HT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 07/01/2020
-ms.locfileid: "85723107"
+ms.lasthandoff: 10/09/2020
+ms.locfileid: "91866620"
 ---
 # <a name="indexes-on-memory-optimized-tables"></a>메모리 액세스에 최적화된 테이블의 인덱스
 
@@ -143,7 +143,7 @@ ms.locfileid: "85723107"
 
 이 시나리오에서는 `(CustomerCategoryID, CustomerId)`에서 비클러스터형 인덱스를 사용하는 것이 모범 사례입니다. 이 인덱스는 `CustomerCategoryID`를 포함하는 조건자를 사용하는 쿼리에 사용할 수 있지만, 인덱스 키는 중복을 포함하지 않습니다. 따라서 CustomerCategoryID 값 중복이나 인덱스의 추가 열에 따른 인덱스 유지 관리에서의 비효율이 발생하지 않습니다.
 
-다음 쿼리는 샘플 데이터베이스 `CustomerCategoryID` WideWorldImporters `Sales.Customers`의 테이블 [에 있는](../../sample/world-wide-importers/wide-world-importers-documentation.md)에 대한 인덱스와 관련해 중복 인덱스 키 값의 평균 개수를 보여 줍니다.
+다음 쿼리는 샘플 데이터베이스 `CustomerCategoryID` WideWorldImporters `Sales.Customers`의 테이블 [에 있는](../../samples/wide-world-importers-what-is.md)에 대한 인덱스와 관련해 중복 인덱스 키 값의 평균 개수를 보여 줍니다.
 
 ```sql
 SELECT AVG(row_count) FROM
@@ -235,4 +235,4 @@ WHERE col1 = 'dn';
  [SQL Server 인덱스 디자인 가이드](../../relational-databases/sql-server-index-design-guide.md)   
  [메모리 최적화 테이블의 해시 인덱스](../../relational-databases/sql-server-index-design-guide.md#hash_index)   
  [메모리 최적화 테이블의 비클러스터형 인덱스](../../relational-databases/sql-server-index-design-guide.md#inmem_nonclustered_index)    
- [Adaptive Index Defrag](https://github.com/Microsoft/tigertoolbox/tree/master/AdaptiveIndexDefrag)  
+ [Adaptive Index Defrag](https://github.com/Microsoft/tigertoolbox/tree/master/AdaptiveIndexDefrag)

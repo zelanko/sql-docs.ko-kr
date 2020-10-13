@@ -12,16 +12,16 @@ ms.assetid: ee847b5f-6a1a-448e-a746-d61a023881ff
 author: markingmyname
 ms.author: maghan
 monikerRange: =azuresqldb-current||>=sql-server-2016||=sqlallproducts-allversions||>=sql-server-linux-2017||=azuresqldb-mi-current
-ms.openlocfilehash: 4ad32beddf999b37ad3c3a507f7cc761463264d5
-ms.sourcegitcommit: dd36d1cbe32cd5a65c6638e8f252b0bd8145e165
+ms.openlocfilehash: ddd1c896aa3a1425b6d31d33a6d113c77c9c11bf
+ms.sourcegitcommit: 4d370399f6f142e25075b3714e5c2ce056b1bfd0
 ms.translationtype: HT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 09/08/2020
-ms.locfileid: "89551576"
+ms.lasthandoff: 10/09/2020
+ms.locfileid: "91867491"
 ---
 # <a name="sql-server-management-studio-support-for-in-memory-oltp"></a>메모리 내 OLTP에 대한 SQL Server Management Studio 지원
 [!INCLUDE [SQL Server Azure SQL Database](../../includes/applies-to-version/sql-asdb.md)]
-  [!INCLUDE[ssManStudioFull](../../includes/ssmanstudiofull-md.md)] 는 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 인프라를 관리하기 위한 통합 환경입니다. [!INCLUDE[ssManStudioFull](../../includes/ssmanstudiofull-md.md)] 는 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]인스턴스를 구성, 모니터링 및 관리하는 도구를 제공합니다. 자세한 내용은 [SQL Server Management Studio](https://msdn.microsoft.com/library/66a6b7b1-de6a-4161-82bd-98ded486947b)를 참조하세요.  
+  [!INCLUDE[ssManStudioFull](../../includes/ssmanstudiofull-md.md)] 는 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 인프라를 관리하기 위한 통합 환경입니다. [!INCLUDE[ssManStudioFull](../../includes/ssmanstudiofull-md.md)] 는 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]인스턴스를 구성, 모니터링 및 관리하는 도구를 제공합니다. 자세한 내용은 [SQL Server Management Studio](../../ssms/sql-server-management-studio-ssms.md)를 참조하세요.  
   
  이 항목의 태스크에서는 [!INCLUDE[ssManStudioFull](../../includes/ssmanstudiofull-md.md)]를 사용하여 메모리 최적화 테이블, 메모리 최적화 테이블의 인덱스, 고유하게 컴파일된 저장 프로시저, 사용자 정의 메모리 최적화 테이블 형식을 관리하는 방법을 설명합니다.  
   
@@ -159,6 +159,5 @@ ms.locfileid: "89551576"
  지원되지 않는 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 기능에 대한 자세한 내용은 [메모리 내 OLTP에 대해 지원되지 않는 SQL Server 기능](../../relational-databases/in-memory-oltp/unsupported-sql-server-features-for-in-memory-oltp.md)을 참조하세요.  
   
 ## <a name="see-also"></a>참고 항목  
- [메모리 내 OLTP에 대한 SQL Server 지원](../../relational-databases/in-memory-oltp/sql-server-support-for-in-memory-oltp.md)  
-  
+ [메모리 내 OLTP에 대한 SQL Server 지원](./transact-sql-support-for-in-memory-oltp.md)  
   

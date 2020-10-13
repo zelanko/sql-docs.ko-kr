@@ -2,8 +2,8 @@
 title: 복제 구성(SSMS)
 description: Linux에서 SQL Server 복제를 구성하는 방법을 알아봅니다. SSMS(SQL Server Management Studio) 또는 Transact-SQL 저장 프로시저를 사용하여 복제를 구성합니다.
 ms.custom: seo-dt-2019
-author: MikeRayMSFT
-ms.author: mikeray
+author: VanMSFT
+ms.author: vanto
 ms.reviewer: vanto
 ms.date: 03/20/2018
 ms.topic: article
@@ -12,12 +12,12 @@ ms.prod_service: database-engine
 ms.technology: linux
 titleSuffix: SQL Server on Linux
 monikerRange: '>=sql-server-ver15||>=sql-server-linux-ver15||=sqlallproducts-allversions'
-ms.openlocfilehash: 61943baf9083d3ca33bd37e0fe9759a4c530dfe2
-ms.sourcegitcommit: 3ea082c778f6771b17d90fb597680ed334d3e0ec
+ms.openlocfilehash: 0c4a22b43650292055a7b1c48b9408b4d8e85f6c
+ms.sourcegitcommit: 610e3ebe21ac6575850a29641a32f275e71557e3
 ms.translationtype: HT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 08/11/2020
-ms.locfileid: "88088863"
+ms.lasthandoff: 10/07/2020
+ms.locfileid: "91785057"
 ---
 # <a name="configure-sql-server-replication-on-linux"></a>Linux의 SQL Server 복제 구성
 

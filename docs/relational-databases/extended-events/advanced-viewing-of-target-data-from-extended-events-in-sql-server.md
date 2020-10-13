@@ -12,12 +12,12 @@ author: MightyPen
 ms.author: genemi
 ms.custom: seo-lt-2019
 monikerRange: =azuresqldb-current||>=sql-server-2016||=sqlallproducts-allversions||>=sql-server-linux-2017||=azuresqldb-mi-current
-ms.openlocfilehash: 16671290ed86def1b013a77d991487dfdad26a10
-ms.sourcegitcommit: da88320c474c1c9124574f90d549c50ee3387b4c
+ms.openlocfilehash: 225de42adb409ef908544bb51c4d523452554838
+ms.sourcegitcommit: 4d370399f6f142e25075b3714e5c2ce056b1bfd0
 ms.translationtype: HT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 07/01/2020
-ms.locfileid: "85779498"
+ms.lasthandoff: 10/09/2020
+ms.locfileid: "91869316"
 ---
 # <a name="advanced-viewing-of-target-data-from-extended-events-in-sql-server"></a>SQL Server 확장 이벤트의 대상 데이터 고급 보기
 
@@ -66,7 +66,7 @@ ms.locfileid: "85779498"
 
 Azure SQL 데이터베이스와 관련된 확장 이벤트에 대한 설명은 다음을 참조하세요.
 
-- [Azure SQL 데이터베이스의 확장 이벤트](https://azure.microsoft.com/documentation/articles/sql-database-xevent-db-diff-from-svr/)
+- [Azure SQL 데이터베이스의 확장 이벤트](/azure/azure-sql/database/xevent-db-diff-from-svr)
 
 
 

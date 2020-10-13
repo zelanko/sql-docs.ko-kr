@@ -12,17 +12,17 @@ ms.assetid: b0a248a4-4488-4cc8-89fc-46906a8c24a1
 author: MightyPen
 ms.author: genemi
 monikerRange: =azuresqldb-current||>=sql-server-2016||=sqlallproducts-allversions||>=sql-server-linux-2017||=azuresqldb-mi-current
-ms.openlocfilehash: 4d7b59adddba4266499b90ec0ee523aeb7308673
-ms.sourcegitcommit: da88320c474c1c9124574f90d549c50ee3387b4c
+ms.openlocfilehash: 975e14a1a17422949f5ef848b0b0a69d71e58593
+ms.sourcegitcommit: 4d370399f6f142e25075b3714e5c2ce056b1bfd0
 ms.translationtype: HT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 07/01/2020
-ms.locfileid: "85651009"
+ms.lasthandoff: 10/09/2020
+ms.locfileid: "91866627"
 ---
 # <a name="table-and-row-size-in-memory-optimized-tables"></a>메모리 액세스에 최적화된 테이블의 테이블 및 행 크기
 [!INCLUDE [SQL Server Azure SQL Database](../../includes/applies-to-version/sql-asdb.md)]
 
-[!INCLUDE[ssSQL15](../../includes/sssql15-md.md)] 이전에는 메모리 최적화 테이블의 행 내부 데이터 크기가 [8,060바이트](https://msdn.microsoft.com/library/dn205318(v=sql.120).aspx)를 초과할 수 없었습니다. 그러나 [!INCLUDE[ssSQL15](../../includes/sssql15-md.md)]부터 및 Azure SQL Database에서는 이제 여러 큰 열(예: 여러 varbinary(8000) 열) 및 LOB 열(즉, varbinary(max), varchar(max) 및 nvarchar(max))이 있는 메모리 최적화 테이블을 만들고 네이티브 컴파일된 T-SQL 모듈 및 테이블 형식을 사용하여 테이블에 대한 작업을 수행할 수 있습니다. 
+[!INCLUDE[ssSQL15](../../includes/sssql15-md.md)] 이전에는 메모리 최적화 테이블의 행 내부 데이터 크기가 [8,060바이트](?viewFallbackFrom=sql-server-2014)를 초과할 수 없었습니다. 그러나 [!INCLUDE[ssSQL15](../../includes/sssql15-md.md)]부터 및 Azure SQL Database에서는 이제 여러 큰 열(예: 여러 varbinary(8000) 열) 및 LOB 열(즉, varbinary(max), varchar(max) 및 nvarchar(max))이 있는 메모리 최적화 테이블을 만들고 네이티브 컴파일된 T-SQL 모듈 및 테이블 형식을 사용하여 테이블에 대한 작업을 수행할 수 있습니다. 
   
 8060바이트 행 크기 제한에 맞지 않는 열은 행 외부의 별도 내부 테이블에 배치됩니다. 각 행 외부 열에는 해당 내부 테이블이 있으며 단일 비클러스터형 인덱스가 있습니다. 행 외부 열에 사용되는 이러한 내부 테이블에 대한 자세한 내용은 [sys.memory_optimized_tables_internal_attributes&#40;Transact-SQL&#41;](../../relational-databases/system-catalog-views/sys-memory-optimized-tables-internal-attributes-transact-sql.md)를 참조하세요. 
  
@@ -238,9 +238,8 @@ where object_id = object_id('dbo.Orders')
 -   LOB에 대한 크기 제한 사항은 디스크 기반 테이블의 크기 제한 사항을 미러링합니다(LOB 값에 대한 2GB 제한). 
 -   성능을 최적화하려면 대부분의 열을 8060바이트 이내로 설정하는 것이 좋습니다. 
 
-[What's new for In-Memory OLTP in SQL Server 2016 since CTP3](https://blogs.msdn.microsoft.com/sqlserverstorageengine/2016/03/25/whats-new-for-in-memory-oltp-in-sql-server-2016-since-ctp3)(CTP3 이후 SQL Server 2016의 메모리 내 OLTP에 대한 새로운 기능) 블로그 게시물에서 이러한 몇 가지 복잡한 사항을 자세히 설명합니다.   
+[What's new for In-Memory OLTP in SQL Server 2016 since CTP3](/archive/blogs/sqlserverstorageengine/whats-new-for-in-memory-oltp-in-sql-server-2016-since-ctp3)(CTP3 이후 SQL Server 2016의 메모리 내 OLTP에 대한 새로운 기능) 블로그 게시물에서 이러한 몇 가지 복잡한 사항을 자세히 설명합니다.   
  
 ## <a name="see-also"></a>참고 항목  
- [메모리 최적화 테이블](../../relational-databases/in-memory-oltp/memory-optimized-tables.md)  
-  
+ [메모리 최적화 테이블](./sample-database-for-in-memory-oltp.md)  
   

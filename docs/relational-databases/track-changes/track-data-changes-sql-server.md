@@ -21,12 +21,12 @@ ms.assetid: 7a34be46-15b4-4b6b-8497-cfd8f9f14234
 author: rothja
 ms.author: jroth
 monikerRange: =azuresqldb-current||>=sql-server-2016||=sqlallproducts-allversions||>=sql-server-linux-2017||=azuresqldb-mi-current
-ms.openlocfilehash: 02ac9ba37fae91916675a8a8edb4dfe904306112
-ms.sourcegitcommit: e700497f962e4c2274df16d9e651059b42ff1a10
+ms.openlocfilehash: 5edcc10b7cb9682f6856c8129e13a2d57af67074
+ms.sourcegitcommit: 04cf7905fa32e0a9a44575a6f9641d9a2e5ac0f8
 ms.translationtype: HT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 08/17/2020
-ms.locfileid: "88463801"
+ms.lasthandoff: 10/07/2020
+ms.locfileid: "91810750"
 ---
 # <a name="track-data-changes-sql-server"></a>데이터 변경 내용 추적(SQL Server)
 [!INCLUDE [SQL Server SQL Database](../../includes/applies-to-version/sql-asdb.md)]
@@ -154,7 +154,7 @@ ms.locfileid: "88463801"
   
      변경 내용 추적에 대해 설명하고, 변경 내용 추적 작동 방법에 대한 높은 수준의 개요를 제공하며, 변경 내용 추적과 다른 [!INCLUDE[ssDEnoversion](../../includes/ssdenoversion-md.md)] 기능의 상호 작용 방식에 대해 설명합니다.  
   
--   [Microsoft Sync Framework 개발자 센터(Microsoft Sync Framework Developer Center)](https://go.microsoft.com/fwlink/?LinkId=108054)  
+-   [Microsoft Sync Framework 개발자 센터(Microsoft Sync Framework Developer Center)](/previous-versions/sql/synchronization/mt490616(v=msdn.10))  
   
      [!INCLUDE[ssSyncFrameLong](../../includes/sssyncframelong-md.md)] 및 [!INCLUDE[sql_sync_short](../../includes/sql-sync-short-md.md)]의 전체 설명서를 제공합니다. [!INCLUDE[sql_sync_short](../../includes/sql-sync-short-md.md)]에 대한 설명서에서 "방법: SQL Server 변경 내용 추적 사용" 항목에 자세한 내용과 코드 예제가 포함되어 있습니다.  
   
@@ -176,7 +176,5 @@ ms.locfileid: "88463801"
  [변경 내용 추적 함수&#40;Transact-SQL&#41;](../../relational-databases/system-functions/change-tracking-functions-transact-sql.md)   
  [변경 데이터 캡처 저장 프로시저&#40;Transact-SQL&#41;](../../relational-databases/system-stored-procedures/change-data-capture-stored-procedures-transact-sql.md)   
  [변경 데이터 캡처 테이블&#40;Transact-SQL&#41;](../../relational-databases/system-tables/change-data-capture-tables-transact-sql.md)   
- [변경 데이터 캡처 관련 동적 관리 뷰&#40;Transact-SQL&#41;](https://msdn.microsoft.com/library/2a771d7d-693a-4f56-9227-02cd00e0e200)  
+ [변경 데이터 캡처 관련 동적 관리 뷰&#40;Transact-SQL&#41;](../system-dynamic-management-views/system-dynamic-management-views.md)  
   
-  
-

@@ -18,12 +18,12 @@ ms.assetid: 427911a7-57d4-4542-8846-47c3267a5d9c
 author: MashaMSFT
 ms.author: mathoma
 ms.custom: seo-lt-2019
-ms.openlocfilehash: 9fcf805dc2c4ff9e639b43e0d6ea455d3aa439fe
-ms.sourcegitcommit: c8e1553ff3fdf295e8dc6ce30d1c454d6fde8088
+ms.openlocfilehash: 73f2e9153ebfc204a0f63a6f8aea305815da4e59
+ms.sourcegitcommit: 04cf7905fa32e0a9a44575a6f9641d9a2e5ac0f8
 ms.translationtype: HT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 07/22/2020
-ms.locfileid: "86915713"
+ms.lasthandoff: 10/07/2020
+ms.locfileid: "91810742"
 ---
 # <a name="administer-multiple-servers-using-central-management-servers"></a>중앙 관리 서버를 사용하여 여러 서버 관리
 [!INCLUDE[sqlserver](../includes/applies-to-version/sqlserver.md)]
@@ -39,9 +39,8 @@ ms.locfileid: "86915713"
 ## <a name="create-central-management-server-and-server-groups"></a>중앙 관리 서버 및 서버 그룹 만들기 
  중앙 관리 서버 및 서버 그룹을 만들려면 **의** 등록된 서버 [!INCLUDE[ssManStudioFull](../includes/ssmanstudiofull-md.md)]창을 사용합니다. 중앙 관리 서버는 자신이 유지 관리하는 그룹의 멤버가 될 수 없습니다. 
  
- 중앙 관리 서버 및 서버 그룹을 만드는 방법에 대한 자세한 내용은 [중앙 관리 서버 및 서버 그룹 만들기&#40;SQL Server Management Studio&#41;](../tools/sql-server-management-studio/create-a-central-management-server-and-server-group.md)를 참조하세요.  
+ 중앙 관리 서버 및 서버 그룹을 만드는 방법에 대한 자세한 내용은 [중앙 관리 서버 및 서버 그룹 만들기&#40;SQL Server Management Studio&#41;](../ssms/register-servers/create-a-central-management-server-and-server-group.md)를 참조하세요.  
   
 ## <a name="see-also"></a>참고 항목  
  [정책 기반 관리를 사용하여 서버 관리](../relational-databases/policy-based-management/administer-servers-by-using-policy-based-management.md)  
-  
   

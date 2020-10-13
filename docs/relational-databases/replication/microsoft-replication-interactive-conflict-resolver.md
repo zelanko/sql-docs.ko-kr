@@ -15,19 +15,19 @@ ms.assetid: d3d4a480-782b-4b1d-b839-565c8cf6cb24
 author: MashaMSFT
 ms.author: mathoma
 monikerRange: =azuresqldb-current||>=sql-server-2016||=sqlallproducts-allversions
-ms.openlocfilehash: 242e6847c2c00177ba9939781d56831d8cb9492a
-ms.sourcegitcommit: e700497f962e4c2274df16d9e651059b42ff1a10
+ms.openlocfilehash: c0ecc10fd8155a0f18e216458d2dcd47132d35d4
+ms.sourcegitcommit: 4d370399f6f142e25075b3714e5c2ce056b1bfd0
 ms.translationtype: HT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 08/17/2020
-ms.locfileid: "88482464"
+ms.lasthandoff: 10/09/2020
+ms.locfileid: "91868085"
 ---
 # <a name="microsoft-replication-interactive-conflict-resolver"></a>Microsoft 복제 상호 충돌 해결 프로그램
 [!INCLUDE [SQL Server Azure SQL Database](../../includes/applies-to-version/sql-asdb.md)]
   상호 충돌 해결 프로그램은 Windows 동기화 관리자로 동기화하는 병합 구독에 사용할 수 있습니다. 상호 충돌 해결 프로그램을 사용하여 데이터 충돌 결과를 확인, 비교, 편집 및 선택할 수 있습니다. 또한 복제에는 충돌 결과를 커밋한 다음 충돌 결과를 보고 수정할 수 있는 충돌 뷰어가 포함되어 있습니다. 상호 충돌 해결 프로그램을 사용하여 동기화 중에 결과를 선택할 수 있습니다.  
   
 > [!NOTE]  
->  논리적 레코드와 관련된 충돌은 대화형 해결 프로그램에 표시되지 않습니다. 이러한 충돌에 대한 정보를 보려면 복제 저장 프로시저를 사용합니다. 자세한 내용은 [병합 게시에 대한 충돌 정보 보기&#40;복제 Transact-SQL 프로그래밍&#41;](../../relational-databases/replication/view-conflict-information-for-merge-publications.md)을 참조하세요.  
+>  논리적 레코드와 관련된 충돌은 대화형 해결 프로그램에 표시되지 않습니다. 이러한 충돌에 대한 정보를 보려면 복제 저장 프로시저를 사용합니다. 자세한 내용은 [병합 게시에 대한 충돌 정보 보기&#40;복제 Transact-SQL 프로그래밍&#41;](./view-and-resolve-data-conflicts-for-merge-publications.md)을 참조하세요.  
   
 ## <a name="options"></a>옵션  
  **열 이름**  
@@ -56,5 +56,4 @@ ms.locfileid: "88482464"
  [병합 게시에 대한 데이터 충돌 보기 및 해결&#40;SQL Server Management Studio&#41;](../../relational-databases/replication/view-and-resolve-data-conflicts-for-merge-publications.md)   
  [Windows 동기화 관리자를 사용하여 구독 동기화&#40;Windows 동기화 관리자&#41;](../../relational-databases/replication/synchronize-a-subscription-using-windows-synchronization-manager.md)   
  [Advanced Merge Replication Conflict Detection and Resolution](../../relational-databases/replication/merge/advanced-merge-replication-conflict-detection-and-resolution.md)  
-  
   

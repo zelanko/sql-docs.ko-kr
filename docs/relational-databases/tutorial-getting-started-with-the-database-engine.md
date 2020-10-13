@@ -18,12 +18,12 @@ ms.assetid: 655e709b-346b-469c-bddc-a5a0238d07e0
 author: rothja
 ms.author: jroth
 monikerRange: =azuresqldb-current||>=sql-server-2016||=sqlallproducts-allversions||>=sql-server-linux-2017||=azuresqldb-mi-current
-ms.openlocfilehash: 8398d6dcd8dc4fa10a6a4e4c52c0e910a9de1f18
-ms.sourcegitcommit: e700497f962e4c2274df16d9e651059b42ff1a10
+ms.openlocfilehash: cad1def690f9ebf0803f25e83300d3790d6ef4c9
+ms.sourcegitcommit: 04cf7905fa32e0a9a44575a6f9641d9a2e5ac0f8
 ms.translationtype: HT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 08/17/2020
-ms.locfileid: "88485395"
+ms.lasthandoff: 10/07/2020
+ms.locfileid: "91809386"
 ---
 # <a name="tutorial-getting-started-with-the-database-engine"></a>자습서: 데이터베이스 엔진 시작
 [!INCLUDE [SQL Server Azure SQL Database](../includes/applies-to-version/sql-asdb.md)]
@@ -49,8 +49,6 @@ ms.locfileid: "88485395"
 -   [!INCLUDE[ssManStudioFull](../includes/ssmanstudiofull-md.md)]. [!INCLUDE[ssManStudio](../includes/ssmanstudio-md.md)]를 설치하려면 [SQL Server Management Studio 다운로드](../ssms/download-sql-server-management-studio-ssms.md)를 참조하세요.  
   
 ## <a name="see-also"></a>참고 항목  
-[자습서: SQL Server Management Studio](../ssms/tutorials/tutorial-sql-server-management-studio.md)  
+[자습서: SQL Server Management Studio](../ssms/quickstarts/connect-query-sql-server.md)  
   
   
-  
-

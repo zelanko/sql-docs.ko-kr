@@ -12,12 +12,12 @@ ms.assetid: 010318a0-6807-47c3-8ecc-bb7cb60513f0
 author: MightyPen
 ms.author: genemi
 monikerRange: =azuresqldb-current||>=sql-server-2016||=sqlallproducts-allversions||>=sql-server-linux-2017||=azuresqldb-mi-current
-ms.openlocfilehash: 1a91880504a74a7fae9d98018b31994ded63199c
-ms.sourcegitcommit: da88320c474c1c9124574f90d549c50ee3387b4c
+ms.openlocfilehash: b52fb0f4a7e0df54964d5e127570856e7baa8e56
+ms.sourcegitcommit: 4d370399f6f142e25075b3714e5c2ce056b1bfd0
 ms.translationtype: HT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 07/01/2020
-ms.locfileid: "85668538"
+ms.lasthandoff: 10/09/2020
+ms.locfileid: "91867393"
 ---
 # <a name="altering-natively-compiled-t-sql-modules"></a>Altering Natively Compiled T-SQL Modules
 [!INCLUDE [SQL Server Azure SQL Database](../../includes/applies-to-version/sql-asdb.md)]
@@ -74,4 +74,4 @@ GO
 ```   
   
 ## <a name="see-also"></a>참고 항목  
- [고유하게 컴파일된 저장 프로시저](../../relational-databases/in-memory-oltp/natively-compiled-stored-procedures.md)    
+ [고유하게 컴파일된 저장 프로시저](./a-guide-to-query-processing-for-memory-optimized-tables.md)

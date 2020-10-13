@@ -15,12 +15,12 @@ helpviewer_keywords:
 ms.assetid: 00dfb229-f1de-4d33-90b0-d7c99ab52dcb
 author: MashaMSFT
 ms.author: mathoma
-ms.openlocfilehash: 6b4f57e1593d9f8335f62095cf309ee85f74e1a4
-ms.sourcegitcommit: da88320c474c1c9124574f90d549c50ee3387b4c
+ms.openlocfilehash: d0229c5fb1166d49c8e4db2e80fbed03c0ea95a9
+ms.sourcegitcommit: 4d370399f6f142e25075b3714e5c2ce056b1bfd0
 ms.translationtype: HT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 07/01/2020
-ms.locfileid: "85773917"
+ms.lasthandoff: 10/09/2020
+ms.locfileid: "91868302"
 ---
 # <a name="create-a-snapshot-for-a-merge-publication-with-parameterized-filters"></a>Create a Snapshot for a Merge Publication with Parameterized Filters
  [!INCLUDE [SQL Server](../../includes/applies-to-version/sqlserver.md)]
@@ -285,7 +285,7 @@ PAUSE
 >  병합 아티클을 만들 때 F:Microsoft.SqlServer.Replication.PartitionOptions.NonOverlappingSingleSubscription에 P:Microsoft.SqlServer.Replication.MergeArticle.PartitionOption 값을 지정하여 아티클을 필터링함으로써 구독별로 고유한 겹치지 않는 파티션을 생성하면 병합 에이전트를 실행할 때마다 메타데이터가 정리됩니다. 따라서 분할된 스냅샷은 더 빨리 만료됩니다. 이 옵션을 사용할 경우 구독자가 스냅샷 생성을 요청하도록 허용하는 것을 고려해야 합니다. 자세한 내용은 [Parameterized Row Filters](../../relational-databases/replication/merge/parameterized-filters-parameterized-row-filters.md)항목의 "적절한 필터링 옵션 사용" 섹션을 참조하세요.  
   
 > [!IMPORTANT]  
->  가능한 경우 런타임 시 사용자에게 보안 자격 증명을 입력하라는 메시지가 표시됩니다. 자격 증명을 저장해야 하는 경우 [Windows .NET Framework에서 제공하는](https://go.microsoft.com/fwlink/?LinkId=34733) 암호화 서비스 [!INCLUDE[msCoName](../../includes/msconame-md.md)] 를 사용합니다.  
+>  가능한 경우 런타임 시 사용자에게 보안 자격 증명을 입력하라는 메시지가 표시됩니다. 자격 증명을 저장해야 하는 경우 [Windows .NET Framework에서 제공하는](/previous-versions/aa719848(v=vs.71)) 암호화 서비스 [!INCLUDE[msCoName](../../includes/msconame-md.md)] 를 사용합니다.  
   
 #### <a name="to-create-a-publication-that-allows-subscribers-to-initiate-snapshot-generation-and-delivery"></a>구독자가 스냅샷 생성 및 배달을 시작하도록 허용하는 게시를 만들려면  
   
@@ -424,5 +424,4 @@ PAUSE
  [매개 변수가 있는 행 필터](../../relational-databases/replication/merge/parameterized-filters-parameterized-row-filters.md)   
  [Replication System Stored Procedures Concepts](../../relational-databases/replication/concepts/replication-system-stored-procedures-concepts.md)   
  [복제 보안을 위한 최선의 구현 방법](../../relational-databases/replication/security/replication-security-best-practices.md)  
-  
   

@@ -1,19 +1,19 @@
 ---
 title: Linux의 SQL Server에 대해 가용성 그룹 만들기 및 구성
 description: 이 자습서에서는 SQL Server on Linux에 대한 가용성 그룹을 만들고 구성하는 방법과 가용성 그룹 엔드포인트 및 인증서를 만드는 방법을 보여 줍니다.
-author: MikeRayMSFT
-ms.author: mikeray
+author: VanMSFT
+ms.author: vanto
 ms.reviewer: vanto
 ms.date: 06/28/2018
 ms.topic: conceptual
 ms.prod: sql
 ms.technology: linux
-ms.openlocfilehash: c3b1bf11bfbc91fa2226bfc925e80288aaf9281d
-ms.sourcegitcommit: 3ea082c778f6771b17d90fb597680ed334d3e0ec
+ms.openlocfilehash: 075a2e7ed11abe0ceadfa4f50ba82ca57ff97f0e
+ms.sourcegitcommit: 610e3ebe21ac6575850a29641a32f275e71557e3
 ms.translationtype: HT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 08/11/2020
-ms.locfileid: "88088985"
+ms.lasthandoff: 10/07/2020
+ms.locfileid: "91785157"
 ---
 # <a name="create-and-configure-an-availability-group-for-sql-server-on-linux"></a>Linux의 SQL Server에 대해 가용성 그룹 만들기 및 구성
 

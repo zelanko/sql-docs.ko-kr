@@ -17,12 +17,12 @@ ms.assetid: 68daddc9-ce48-49aa-917f-6dec86ad5af5
 author: jaszymas
 ms.author: jaszymas
 monikerRange: =azuresqldb-current||>=sql-server-2016||=sqlallproducts-allversions||>=sql-server-linux-2017||=azuresqldb-mi-current
-ms.openlocfilehash: f592004e96a9b469a56bc9ff85b8f4080af38406
-ms.sourcegitcommit: da88320c474c1c9124574f90d549c50ee3387b4c
+ms.openlocfilehash: 9e130997ff6e81ffaef45597b0f4fbe9a238154c
+ms.sourcegitcommit: 4d370399f6f142e25075b3714e5c2ce056b1bfd0
 ms.translationtype: HT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 07/01/2020
-ms.locfileid: "85627450"
+ms.lasthandoff: 10/09/2020
+ms.locfileid: "91866690"
 ---
 # <a name="configure-column-encryption-using-always-encrypted-wizard"></a>Always Encrypted 마법사를 사용하여 열 암호화 구성
 [!INCLUDE [SQL Server Azure SQL Database](../../../includes/applies-to-version/sql-asdb.md)]
@@ -46,8 +46,8 @@ Always Encrypted 마법사는 선택한 데이터베이스 열에 대해 원하�
 PowerShell을 사용하는 것이 좋습니다. 
 
  - 마법사를 사용하여 Always Encrypted를 구성하고 클라이언트 애플리케이션에서 사용하는 방법을 보여 주는 엔드투엔드 연습은 다음과 같은 Azure SQL Database 자습서를 참조하세요.
-    - [Windows 인증서 저장소에서 Always Encrypted 및 열 마스터 키를 사용하여 Azure SQL Database의 중요한 데이터 보호](https://azure.microsoft.com/documentation/articles/sql-database-always-encrypted/)
-    - [Azure Key Vault에서 Always Encrypted 및 열 마스터 키를 사용하여 Azure SQL Database의 중요한 데이터 보호](https://docs.microsoft.com/azure/sql-database/sql-database-always-encrypted-azure-key-vault)
+    - [Windows 인증서 저장소에서 Always Encrypted 및 열 마스터 키를 사용하여 Azure SQL Database의 중요한 데이터 보호](/azure/azure-sql/database/always-encrypted-certificate-store-configure)
+    - [Azure Key Vault에서 Always Encrypted 및 열 마스터 키를 사용하여 Azure SQL Database의 중요한 데이터 보호](/azure/sql-database/sql-database-always-encrypted-azure-key-vault)
 
  - 마법사 사용이 포함된 비디오는 [상시 암호화를 사용하여 중요 데이터 보안 유지](https://channel9.msdn.com/events/DataDriven/SQLServer2016/AlwaysEncrypted)를 참조하세요. 그리고 [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] 보안 팀 블로그 [SSMS 암호화 마법사 - 간단한 몇 단계로 상시 암호화 설정](https://techcommunity.microsoft.com/t5/SQL-Server/SSMS-Encryption-Wizard-Enabling-Always-Encrypted-in-a-Few-Easy/ba-p/384545)을 참조하세요.  
  - Always Encrypted 키에 대한 자세한 내용은 [Always Encrypted를 위한 키 관리 개요](overview-of-key-management-for-always-encrypted.md)를 참조하세요.

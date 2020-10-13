@@ -15,23 +15,23 @@ ms.assetid: d3898a47-2985-4a08-bc70-fd8331a01b7b
 author: MightyPen
 ms.author: genemi
 monikerRange: =azuresqldb-current||>=sql-server-2016||=sqlallproducts-allversions||>=sql-server-linux-2017||=azuresqldb-mi-current
-ms.openlocfilehash: e31863944670cbb6e32e999ec06164792848236a
-ms.sourcegitcommit: da88320c474c1c9124574f90d549c50ee3387b4c
+ms.openlocfilehash: efbd90e43c4f2bf7863106330b59f436c31b6238
+ms.sourcegitcommit: 4d370399f6f142e25075b3714e5c2ce056b1bfd0
 ms.translationtype: HT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 07/01/2020
-ms.locfileid: "85722455"
+ms.lasthandoff: 10/09/2020
+ms.locfileid: "91868536"
 ---
 # <a name="native-compilation-advisor"></a>네이티브 컴파일 관리자
 [!INCLUDE [SQL Server Azure SQL Database](../../includes/applies-to-version/sql-asdb.md)]
 
   트랜잭션 성능 분석 보고서는 네이티브 컴파일을 사용하도록 변환할 경우 효과적인 해석된 저장 프로시저에 대한 정보를 제공합니다. 자세한 내용은 [메모리 내 OLTP에 테이블 또는 저장 프로시저를 이식해야 하는지 확인](../../relational-databases/in-memory-oltp/determining-if-a-table-or-stored-procedure-should-be-ported-to-in-memory-oltp.md)을 참조하세요.  
   
- 네이티브 컴파일을 사용하도록 변환할 저장 프로시저를 식별한 후 네이티브 컴파일 관리자(NCA)를 사용하여 해석된 저장 프로시저를 네이티브 컴파일로 마이그레이션할 수 있습니다. 고유하게 컴파일된 저장 프로시저에 대한 자세한 내용은 [Natively Compiled Stored Procedures](../../relational-databases/in-memory-oltp/natively-compiled-stored-procedures.md)를 참조하세요.  
+ 네이티브 컴파일을 사용하도록 변환할 저장 프로시저를 식별한 후 네이티브 컴파일 관리자(NCA)를 사용하여 해석된 저장 프로시저를 네이티브 컴파일로 마이그레이션할 수 있습니다. 고유하게 컴파일된 저장 프로시저에 대한 자세한 내용은 [Natively Compiled Stored Procedures](./a-guide-to-query-processing-for-memory-optimized-tables.md)를 참조하세요.  
   
  지정된 해석 저장 프로시저에서 NCA를 통해 네이티브 모듈에서 지원되지 않는 모든 기능을 식별할 수 있습니다. NCA는 해결 방법 또는 솔루션에 대한 설명서 링크를 제공합니다.  
   
- 마이그레이션 방법에 대한 자세한 내용은 [메모리 내 OLTP – 일반적인 작업 패턴 및 마이그레이션 고려 사항](https://msdn.microsoft.com/library/dn673538.aspx)을 참조하세요.  
+ 마이그레이션 방법에 대한 자세한 내용은 [메모리 내 OLTP – 일반적인 작업 패턴 및 마이그레이션 고려 사항](/previous-versions/dn673538(v=msdn.10))을 참조하세요.  
   
 ## <a name="walkthrough-using-the-native-compilation-advisor"></a>네이티브 컴파일 관리자 사용 연습  
  **개체 탐색기**에서 변환할 저장 프로시저를 마우스 오른쪽 단추로 클릭하고 **네이티브 컴파일 관리자**를 선택합니다. **저장 프로시저 네이티브 컴파일 관리자**시작 페이지가 표시됩니다. **다음**을 클릭하여 계속합니다.  
@@ -105,7 +105,6 @@ SELECT * from SalesOrders;
 ```  
   
 ## <a name="see-also"></a>참고 항목  
- [메모리 내 OLTP로 마이그레이션](../../relational-databases/in-memory-oltp/migrating-to-in-memory-oltp.md)   
+ [메모리 내 OLTP로 마이그레이션](./plan-your-adoption-of-in-memory-oltp-features-in-sql-server.md)   
  [메모리 액세스에 최적화된 테이블 사용을 위한 요구 사항](../../relational-databases/in-memory-oltp/requirements-for-using-memory-optimized-tables.md)  
-  
   

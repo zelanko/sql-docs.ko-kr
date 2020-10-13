@@ -12,17 +12,17 @@ ms.assetid: 074c012b-cf14-4230-bf0d-55e23d24f9c8
 author: jaszymas
 ms.author: jaszymas
 monikerRange: =azuresqldb-current||>=sql-server-2016||=sqlallproducts-allversions||>=sql-server-linux-2017||=azuresqldb-mi-current
-ms.openlocfilehash: 623986a7ff2adaa7b2769090c2d94a8e9ebf2e83
-ms.sourcegitcommit: e700497f962e4c2274df16d9e651059b42ff1a10
+ms.openlocfilehash: 7014f349998781dcd890e84a77deb4732fe028c9
+ms.sourcegitcommit: 4d370399f6f142e25075b3714e5c2ce056b1bfd0
 ms.translationtype: HT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 08/17/2020
-ms.locfileid: "88493821"
+ms.lasthandoff: 10/09/2020
+ms.locfileid: "91865754"
 ---
 # <a name="configure-column-encryption-using-always-encrypted-with-powershell"></a>PowerShell로 Always Encrypted를 사용하여 열 암호화 구성
 [!INCLUDE [SQL Server Azure SQL Database](../../../includes/applies-to-version/sql-asdb.md)]
 
-이 문서에서는 [SqlServer](https://docs.microsoft.com/powershell/sqlserver/sqlserver/vlatest/set-sqlcolumnencryption) PowerShell 모듈의 *Set-SqlColumnEncryption* cmdlet을 사용하여 데이터베이스 열에 대한 대상 상시 암호화 구성을 설정하는 단계를 제공합니다. **Set-SqlColumnEncryption** cmdlet은 대상 데이터베이스의 스키마와 선택한 열에 저장된 데이터를 둘 다 수정합니다. 열에 지정된 대상 암호화 설정과 현재 암호화 구성에 따라 열에 저장된 데이터를 암호화, 다시 암호화 또는 암호 해독할 수 있습니다.
+이 문서에서는 [SqlServer](/powershell/sqlserver/sqlserver/vlatest/set-sqlcolumnencryption) PowerShell 모듈의 *Set-SqlColumnEncryption* cmdlet을 사용하여 데이터베이스 열에 대한 대상 상시 암호화 구성을 설정하는 단계를 제공합니다. **Set-SqlColumnEncryption** cmdlet은 대상 데이터베이스의 스키마와 선택한 열에 저장된 데이터를 둘 다 수정합니다. 열에 지정된 대상 암호화 설정과 현재 암호화 구성에 따라 열에 저장된 데이터를 암호화, 다시 암호화 또는 암호 해독할 수 있습니다.
 
 ::: moniker range=">=sql-server-ver15||=sqlallproducts-allversions"
 
@@ -66,9 +66,9 @@ Task  |아티클  |일반 텍스트 키/키 저장소 액세스  |데이터베�
 ---|---|---|---
 1단계. PowerShell 환경을 시작하고 SqlServer 모듈을 가져옵니다. | [SqlServer 모듈 가져오기](../../../relational-databases/security/encryption/configure-always-encrypted-using-powershell.md#importsqlservermodule) | 예 | 예
 2단계. 서버 및 데이터베이스에 연결 | [데이터베이스에 연결](../../../relational-databases/security/encryption/configure-always-encrypted-using-powershell.md#connectingtodatabase) | 예 | 예
-3단계. 열 마스터 키(순환할 열 암호화 키 보호)가 Azure 주요 자격 증명 모음에 저장된 경우 Azure에 인증 | [Add-SqlAzureAuthenticationContext](https://docs.microsoft.com/powershell/sqlserver/sqlserver/vlatest/add-sqlazureauthenticationcontext) | 예 | 예
-4단계. 암호화, 다시 암호화 또는 암호 해독하려는 각 데이터베이스 열에 대해 하나씩 SqlColumnEncryptionSettings 개체 배열을 생성합니다. SqlColumnMasterKeySettings는 PowerShell의 메모리에 있는 개체입니다. 열에 대한 대상 암호화 체계를 지정합니다. | [New-SqlColumnEncryptionSettings](https://docs.microsoft.com/powershell/sqlserver/sqlserver/vlatest/new-sqlcolumnencryptionsettings) | 예 | 예
-5단계. 이전 단계에서 만든 SqlColumnMasterKeySettings 개체 배열에 지정된 원하는 암호화 구성을 설정합니다. 열에 지정된 대상 설정과 현재 암호화 구성에 따라 열이 암호화, 다시 암호화 또는 암호 해독됩니다.| [Set-SqlColumnEncryption](https://docs.microsoft.com/powershell/sqlserver/sqlserver/vlatest/set-sqlcolumnencryption)<br><br>**참고:** 이 단계는 시간이 오래 걸릴 수 있습니다. 선택한 접근 방식(온라인 또는 오프라인)에 따라 애플리케이션에서 전체 작업이나 일부 작업 중에 테이블에 액세스할 수 없게 됩니다. | yes | 예
+3단계. 열 마스터 키(순환할 열 암호화 키 보호)가 Azure 주요 자격 증명 모음에 저장된 경우 Azure에 인증 | [Add-SqlAzureAuthenticationContext](/powershell/sqlserver/sqlserver/vlatest/add-sqlazureauthenticationcontext) | 예 | 예
+4단계. 암호화, 다시 암호화 또는 암호 해독하려는 각 데이터베이스 열에 대해 하나씩 SqlColumnEncryptionSettings 개체 배열을 생성합니다. SqlColumnMasterKeySettings는 PowerShell의 메모리에 있는 개체입니다. 열에 대한 대상 암호화 체계를 지정합니다. | [New-SqlColumnEncryptionSettings](/powershell/sqlserver/sqlserver/vlatest/new-sqlcolumnencryptionsettings) | 예 | 예
+5단계. 이전 단계에서 만든 SqlColumnMasterKeySettings 개체 배열에 지정된 원하는 암호화 구성을 설정합니다. 열에 지정된 대상 설정과 현재 암호화 구성에 따라 열이 암호화, 다시 암호화 또는 암호 해독됩니다.| [Set-SqlColumnEncryption](/powershell/sqlserver/sqlserver/vlatest/set-sqlcolumnencryption)<br><br>**참고:** 이 단계는 시간이 오래 걸릴 수 있습니다. 선택한 접근 방식(온라인 또는 오프라인)에 따라 애플리케이션에서 전체 작업이나 일부 작업 중에 테이블에 액세스할 수 없게 됩니다. | yes | 예
 
 ## <a name="encrypt-columns-using-offline-approach---example"></a>오프라인 접근 방식을 사용한 열 암호화 - 예제
 
@@ -156,5 +156,3 @@ Set-SqlColumnEncryption -ColumnEncryptionSettings $ces -InputObject $database -L
  - [PowerShell을 사용하여 Always Encrypted 구성](../../../relational-databases/security/encryption/configure-always-encrypted-using-powershell.md)
  - [Always Encrypted 마법사를 사용하여 열 암호화 구성](always-encrypted-wizard.md)
  - [DAC 패키지로 Always Encrypted를 사용하여 열 암호화 구성](configure-always-encrypted-using-dacpac.md)
-
-

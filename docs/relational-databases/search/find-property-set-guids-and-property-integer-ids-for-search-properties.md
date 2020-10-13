@@ -15,12 +15,12 @@ ms.author: pelopes
 ms.reviewer: mikeray
 monikerRange: =azuresqldb-current||>=sql-server-2016||=sqlallproducts-allversions||>=sql-server-linux-2017||=azuresqldb-mi-current
 ms.custom: seo-lt-2019
-ms.openlocfilehash: b405768f889e73d1885b67b05d8cf124d3f28d1f
-ms.sourcegitcommit: e700497f962e4c2274df16d9e651059b42ff1a10
+ms.openlocfilehash: c916bcaa0ff0a3fb294038df30e65e7f53f367aa
+ms.sourcegitcommit: 4d370399f6f142e25075b3714e5c2ce056b1bfd0
 ms.translationtype: HT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 08/17/2020
-ms.locfileid: "88498623"
+ms.lasthandoff: 10/09/2020
+ms.locfileid: "91867453"
 ---
 # <a name="find-property-set-guids-and-property-integer-ids-for-search-properties"></a>검색 속성의 속성 세트 GUID 및 속성 정수 ID 찾기
 [!INCLUDE [SQL Server Azure SQL Database](../../includes/applies-to-version/sql-asdb.md)]
@@ -48,7 +48,7 @@ ms.locfileid: "88498623"
 |Type|**System.PerceivedType**|28636AA6-953D-11D2-B5D6-00C04FD918D0|9|정식 유형을 기반으로 인식되는 파일 유형입니다.|  
 |제목|**System.Title**|F29F85E0-4FF9-1068-AB91-08002B27B3D9|2|항목의 제목입니다. 예를 들어 문서의 제목, 메시지의 제목, 사진의 캡션 또는 음악 트랙의 이름이 여기에 해당합니다.|  
   
- 파일 형식 간 일관성을 유지하기 위해 Microsoft에서는 몇 가지 문서 범주에 대해 자주 사용되고 우선 순위가 높은 문서 속성의 하위 집합을 식별했습니다. 여기에는 통신, 연락처, 문서, 음악 파일, 그림 및 동영상이 포함됩니다. 각 범주에서 순위가 높은 속성에 대한 자세한 내용은 Windows Search 설명서에서 [사용자 지정 파일 형식에 대한 시스템 정의 속성](https://go.microsoft.com/fwlink/?LinkId=144336) 을 참조하세요.  
+ 파일 형식 간 일관성을 유지하기 위해 Microsoft에서는 몇 가지 문서 범주에 대해 자주 사용되고 우선 순위가 높은 문서 속성의 하위 집합을 식별했습니다. 여기에는 통신, 연락처, 문서, 음악 파일, 그림 및 동영상이 포함됩니다. 각 범주에서 순위가 높은 속성에 대한 자세한 내용은 Windows Search 설명서에서 [사용자 지정 파일 형식에 대한 시스템 정의 속성](/windows/win32/search/-shell-systemdefinedpropertiesforfileformats) 을 참조하세요.  
   
  특정 파일 형식은 세 가지 유형의 속성을 구현할 수 있습니다.  
   
@@ -84,9 +84,9 @@ propID = 4
 ...  
 ```  
   
- 이 속성의 전체 설명은 Windows 검색 설명서에서 [System.Author](https://go.microsoft.com/fwlink/?LinkId=144337)를 참조하십시오.  
+ 이 속성의 전체 설명은 Windows 검색 설명서에서 [System.Author](/windows/win32/properties/props-system-author)를 참조하십시오.  
   
- Windows 속성의 전체 목록을 보려면 Windows 검색 설명서에서 [Windows 속성](https://go.microsoft.com/fwlink/?LinkId=215013)을 참조하십시오.  
+ Windows 속성의 전체 목록을 보려면 Windows 검색 설명서에서 [Windows 속성](/windows/win32/properties/props)을 참조하십시오.  
   
 ##  <a name="adding-a-property-to-a-search-property-list"></a><a name="examples"></a> 검색 속성 목록에 속성 추가  
  다음 예에서는 속성을 검색 속성 목록에 추가하는 방법을 보여 줍니다. 이 예에서는 [ALTER SEARCH PROPERTY LIST](../../t-sql/statements/alter-search-property-list-transact-sql.md) 문을 사용하여 `System.Author` 속성을 `PropertyList1`이라는 검색 속성 목록에 추가하고 속성에 `Author`라는 이름을 제공합니다.  
@@ -107,5 +107,4 @@ GO
 ## <a name="see-also"></a>참고 항목  
  [검색 속성 목록을 사용하여 문서 속성 검색](../../relational-databases/search/search-document-properties-with-search-property-lists.md)   
  [검색 필터 구성 및 관리](../../relational-databases/search/configure-and-manage-filters-for-search.md)  
-  
   

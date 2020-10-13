@@ -18,12 +18,12 @@ author: pmasl
 ms.author: pelopes
 ms.reviewer: mikeray
 ms.custom: seo-lt-2019
-ms.openlocfilehash: 37a8ab93e1a7f4747167dc6a69acf173c318751f
-ms.sourcegitcommit: e700497f962e4c2274df16d9e651059b42ff1a10
+ms.openlocfilehash: b8b6708493f92712fddb22582fe94382d882f0a2
+ms.sourcegitcommit: 4d370399f6f142e25075b3714e5c2ce056b1bfd0
 ms.translationtype: HT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 08/17/2020
-ms.locfileid: "88465002"
+ms.lasthandoff: 10/09/2020
+ms.locfileid: "91869189"
 ---
 # <a name="back-up-and-restore-full-text-catalogs-and-indexes"></a>전체 텍스트 카탈로그와 인덱스 백업 및 복원
  [!INCLUDE [SQL Server](../../includes/applies-to-version/sqlserver.md)]
@@ -31,7 +31,7 @@ ms.locfileid: "88465002"
   이 항목에서는 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]에서 만든 전체 텍스트 인덱스를 백업 및 복원하는 방법에 대해 설명합니다. [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]에서 전체 텍스트 카탈로그는 논리적인 개념이며 파일 그룹에 상주하는 것은 아닙니다. 따라서 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]에서 전체 텍스트 카탈로그를 백업하려면 카탈로그에 속한 전체 텍스트 인덱스가 포함된 모든 파일 그룹을 식별해야 합니다. 그런 다음 해당 파일 그룹을 하나씩 백업해야 합니다.  
   
 > [!IMPORTANT]  
->  [!INCLUDE[ssVersion2005](../../includes/ssversion2005-md.md)] 데이터베이스를 업그레이드할 때 전체 텍스트 카탈로그를 가져올 수도 있습니다. 가져온 각 전체 텍스트 카탈로그는 고유한 파일 그룹에 있는 데이터베이스 파일입니다. 가져온 카탈로그를 백업하려면 해당 파일 그룹을 백업하기만 하면 됩니다. 자세한 내용은 [온라인 설명서의](https://go.microsoft.com/fwlink/?LinkID=121052)전체 텍스트 카탈로그 백업 및 복원 [!INCLUDE[ssVersion2005](../../includes/ssversion2005-md.md)] 을 참조하세요.  
+>  [!INCLUDE[ssVersion2005](../../includes/ssversion2005-md.md)] 데이터베이스를 업그레이드할 때 전체 텍스트 카탈로그를 가져올 수도 있습니다. 가져온 각 전체 텍스트 카탈로그는 고유한 파일 그룹에 있는 데이터베이스 파일입니다. 가져온 카탈로그를 백업하려면 해당 파일 그룹을 백업하기만 하면 됩니다. 자세한 내용은 [온라인 설명서의]()전체 텍스트 카탈로그 백업 및 복원 [!INCLUDE[ssVersion2005](../../includes/ssversion2005-md.md)] 을 참조하세요.  
   
 ##  <a name="backing-up-the-full-text-indexes-of-a-full-text-catalog"></a><a name="backingup"></a> 전체 텍스트 카탈로그의 전체 텍스트 인덱스 백업  
   
@@ -105,5 +105,4 @@ GO
 ## <a name="see-also"></a>참고 항목  
  [서버 인스턴스의 전체 텍스트 검색 관리 및 모니터링](../../relational-databases/search/manage-and-monitor-full-text-search-for-a-server-instance.md)   
  [전체 텍스트 검색 업그레이드](../../relational-databases/search/upgrade-full-text-search.md)  
-  
   

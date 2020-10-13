@@ -11,12 +11,12 @@ ms.topic: conceptual
 ms.assetid: 9ecb49ee-f64e-4d30-a803-e4064a21950a
 author: MikeRayMSFT
 ms.author: mikeray
-ms.openlocfilehash: fe2ed55cd68ee6852ab071a7ff8ca428150737d9
-ms.sourcegitcommit: da88320c474c1c9124574f90d549c50ee3387b4c
+ms.openlocfilehash: cfc44f0284b16df456881cf178c1846691aa9862
+ms.sourcegitcommit: 04cf7905fa32e0a9a44575a6f9641d9a2e5ac0f8
 ms.translationtype: HT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 07/01/2020
-ms.locfileid: "85642684"
+ms.lasthandoff: 10/07/2020
+ms.locfileid: "91809956"
 ---
 # <a name="filestream-functions-stored-procedures-and-views"></a>FILESTREAM, 함수, 저장 프로시저, 뷰
  [!INCLUDE [SQL Server](../../includes/applies-to-version/sqlserver.md)]
@@ -26,7 +26,7 @@ ms.locfileid: "85642684"
   
 ##  <a name="transact-sql-data-definition-language-ddl-statements"></a><a name="ddl"></a> Transact-SQL DDL(데이터 정의 언어) 문  
   
--   [CREATE DATABASE&#40;SQL Server Transact-SQL&#41;](../../t-sql/statements/create-database-sql-server-transact-sql.md)  
+-   [CREATE DATABASE&#40;SQL Server Transact-SQL&#41;](../../t-sql/statements/create-database-transact-sql.md)  
   
 -   [ALTER DATABASE&#40;Transact-SQL&#41;](../../t-sql/statements/alter-database-transact-sql.md)  
   
@@ -64,6 +64,5 @@ ms.locfileid: "85642684"
   
 -   [OpenSqlFilestream을 사용하여 FILESTREAM 데이터 액세스](../../relational-databases/blob/access-filestream-data-with-opensqlfilestream.md)  
   
--   [관리되는 API - SqlFileStream 클래스](https://go.microsoft.com/fwlink/?LinkId=220875)  
-  
+-   [관리되는 API - SqlFileStream 클래스](/dotnet/api/system.data.sqltypes.sqlfilestream)  
   

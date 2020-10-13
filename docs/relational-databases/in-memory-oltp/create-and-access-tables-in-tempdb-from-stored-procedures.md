@@ -12,12 +12,12 @@ ms.assetid: 12be8011-b76c-45c1-8f55-7f46e0e374e9
 author: MightyPen
 ms.author: genemi
 monikerRange: =azuresqldb-current||>=sql-server-2016||=sqlallproducts-allversions||>=sql-server-linux-2017||=azuresqldb-mi-current
-ms.openlocfilehash: 076d1d07ea0f28ccabe2d90930ce9f77c3d13bdc
-ms.sourcegitcommit: d56a834269132a83e5fe0a05b033936776cda8bb
+ms.openlocfilehash: 50db7b7594aeb244f5408cbf48efde7dd0fd703c
+ms.sourcegitcommit: 4d370399f6f142e25075b3714e5c2ce056b1bfd0
 ms.translationtype: HT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 09/29/2020
-ms.locfileid: "91529510"
+ms.lasthandoff: 10/09/2020
+ms.locfileid: "91867726"
 ---
 # <a name="create-and-access-tables-in-tempdb-from-stored-procedures"></a>저장 프로시저에서 TempDB에 테이블 만들기 및 액세스
 [!INCLUDE [SQL Server Azure SQL Database](../../includes/applies-to-version/sql-asdb.md)]
@@ -51,7 +51,6 @@ AS BEGIN ATOMIC WITH
 ```  
   
 ## <a name="see-also"></a>참고 항목  
- [고유하게 컴파일된 저장 프로시저의 마이그레이션 문제](../../relational-databases/in-memory-oltp/migration-issues-for-natively-compiled-stored-procedures.md)   
+ [고유하게 컴파일된 저장 프로시저의 마이그레이션 문제](./a-guide-to-query-processing-for-memory-optimized-tables.md)   
  [메모리 내 OLTP에서 지원되지 않는 Transact-SQL 구문](../../relational-databases/in-memory-oltp/transact-sql-constructs-not-supported-by-in-memory-oltp.md)  
-  
   

@@ -14,12 +14,12 @@ ms.topic: conceptual
 ms.date: 11/06/2019
 ms.author: jaszymas
 monikerRange: = azuresqldb-current || = azure-sqldw-latest || = sqlallproducts-allversions
-ms.openlocfilehash: c37c2aa1f36fca57e544dc588d492be98c653fef
-ms.sourcegitcommit: e700497f962e4c2274df16d9e651059b42ff1a10
+ms.openlocfilehash: d19b9d31caf45a5438bf03fcab675ad9ebe5cf71
+ms.sourcegitcommit: 4d370399f6f142e25075b3714e5c2ce056b1bfd0
 ms.translationtype: HT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 08/17/2020
-ms.locfileid: "88448082"
+ms.lasthandoff: 10/09/2020
+ms.locfileid: "91867943"
 ---
 # <a name="common-errors-for-transparent-data-encryption-with-customer-managed-keys-in-azure-key-vault"></a>Azure Key Vault의 고객 관리 키를 통한 투명한 데이터 암호화의 일반적인 오류
 
@@ -34,7 +34,7 @@ TDE가 Azure Key Vault에서 고객 관리 키를 사용하도록 구성된 경�
 
 액세스할 수 없는 데이터베이스가 더 이상 필요 하지 않은 경우 즉시 삭제하여 비용 발생을 중지할 수 있습니다. Azure Key Vault 키에 대한 액세스가 복원되고 데이터베이스가 다시 온라인 상태가 될 때까지 데이터베이스에 대한 기타 모든 작업은 허용되지 않습니다. 고객 관리 키로 암호화된 데이터베이스에 액세스할 수 없는 동안에는 서버에서 고객 관리 키에서 서비스 관리 키로 TDE 옵션을 변경할 수도 없습니다. 이 기능은 TDE 보호기에 대한 권한이 해지된 상태에서 무단 액세스로부터 데이터를 보호하는 데 필요합니다. 
 
-데이터베이스가 8시간 넘게 액세스할 수 없게 된 후에는 더 이상 자동으로 복구되지 않습니다. 해당 기간 후에 필요한 Azure Key Vault 키 액세스가 복원된 경우 데이터베이스를 다시 온라인 상태로 전환하려면 수동으로 키 액세스의 유효성을 다시 검사해야 합니다. 이 경우 데이터베이스를 다시 온라인 상태로 만들려면 데이터베이스 크기에 따라 상당한 시간이 소요될 수 있습니다. 데이터베이스가 다시 온라인 상태가 되면 [장애 조치(failover) 그룹](https://docs.microsoft.com/azure/sql-database/sql-database-auto-failover-group), PITR 기록, 태그 등 이전에 구성한 설정이 모두 **손실됩니다**. 따라서 가능한 한 빨리 기본 Key Vault 문제를 인식하고 해결할 수 있는 [작업 그룹](https://docs.microsoft.com/azure/azure-monitor/platform/action-groups)을 사용하여 알림 시스템을 구현하는 것이 좋습니다. 
+데이터베이스가 8시간 넘게 액세스할 수 없게 된 후에는 더 이상 자동으로 복구되지 않습니다. 해당 기간 후에 필요한 Azure Key Vault 키 액세스가 복원된 경우 데이터베이스를 다시 온라인 상태로 전환하려면 수동으로 키 액세스의 유효성을 다시 검사해야 합니다. 이 경우 데이터베이스를 다시 온라인 상태로 만들려면 데이터베이스 크기에 따라 상당한 시간이 소요될 수 있습니다. 데이터베이스가 다시 온라인 상태가 되면 [장애 조치(failover) 그룹](/azure/sql-database/sql-database-auto-failover-group), PITR 기록, 태그 등 이전에 구성한 설정이 모두 **손실됩니다**. 따라서 가능한 한 빨리 기본 Key Vault 문제를 인식하고 해결할 수 있는 [작업 그룹](/azure/azure-monitor/platform/action-groups)을 사용하여 알림 시스템을 구현하는 것이 좋습니다. 
 
 ## <a name="common-errors-causing-databases-to-become-inaccessible"></a>데이터베이스에 액세스할 수 없는 일반적인 오류
 
@@ -68,17 +68,17 @@ _401 AzureKeyVaultNoServerIdentity - 서버 ID가 서버에 올바르게 구성�
 
 다음 cmdlet 또는 명령을 사용하여 ID가 논리 SQL Server 인스턴스에 할당되었는지 확인합니다.
 
-- Azure PowerShell: [Get-AzureRMSqlServer](https://docs.microsoft.com/powershell/module/AzureRM.Sql/Get-AzureRmSqlServer?view=azurermps-6.13.0) 
+- Azure PowerShell: [Get-AzureRMSqlServer](/powershell/module/AzureRM.Sql/Get-AzureRmSqlServer?view=azurermps-6.13.0) 
 
-- Azure CLI: [az-sql-server-show](https://docs.microsoft.com/cli/azure/sql/server?view=azure-cli-latest#az-sql-server-show)
+- Azure CLI: [az-sql-server-show](/cli/azure/sql/server?view=azure-cli-latest#az-sql-server-show)
 
 **마이그레이션**
 
 다음 cmdlet 또는 명령을 사용하여 논리 SQL Server 인스턴스의 Azure AD ID(APPID)를 구성합니다.
 
-- Azure PowerShell: [Set-AzureRmSqlServer](https://docs.microsoft.com/powershell/module/azurerm.sql/set-azurermsqlserver?view=azurermps-6.13.0)(`-AssignIdentity` 옵션 사용)
+- Azure PowerShell: [Set-AzureRmSqlServer](/powershell/module/azurerm.sql/set-azurermsqlserver?view=azurermps-6.13.0)(`-AssignIdentity` 옵션 사용)
 
-- Azure CLI: [az sql server 업데이트](https://docs.microsoft.com/cli/azure/sql/server?view=azure-cli-latest#az-sql-server-update)(`--assign_identity` 옵션 사용)
+- Azure CLI: [az sql server 업데이트](/cli/azure/sql/server?view=azure-cli-latest#az-sql-server-update)(`--assign_identity` 옵션 사용)
 
 Azure Portal에서 Key Vault로 이동한 다음 **액세스 정책**으로 이동합니다. 다음 단계를 완료합니다. 
 
@@ -103,9 +103,9 @@ _503 AzureKeyVaultConnectionFailed - Azure Key Vault에 연결하려는 시도�
 
 1. 다음 cmdlet 또는 명령을 사용하여 특정 논리 SQL Server 인스턴스의 키 URI를 가져옵니다.
 
-    - Azure PowerShell: [Get-AzureRmSqlServerKeyVaultKey](https://docs.microsoft.com/powershell/module/azurerm.sql/get-azurermsqlserverkeyvaultkey?view=azurermps-6.13.0)
+    - Azure PowerShell: [Get-AzureRmSqlServerKeyVaultKey](/powershell/module/azurerm.sql/get-azurermsqlserverkeyvaultkey?view=azurermps-6.13.0)
 
-    - Azure CLI: [az-sql-server-tde-key-show](https://docs.microsoft.com/cli/azure/sql/server/tde-key?view=azure-cli-latest#az-sql-server-tde-key-show) 
+    - Azure CLI: [az-sql-server-tde-key-show](/cli/azure/sql/server/tde-key?view=azure-cli-latest#az-sql-server-tde-key-show) 
 
 1. 키 URI를 사용하여 Key Vault 식별:
 
@@ -165,7 +165,7 @@ _401 AzureKeyVaultMissingPermissions - 서버에서 Azure Key Vault에 필요한
 
 ## <a name="getting-tde-status-from-the-activity-log"></a>활동 로그에서 TDE 상태 가져오기
 
-Azure Key Vault 키 액세스 이슈로 인한 데이터베이스 상태를 모니터링할 수 있도록 Azure Resource Manager URL 및 Subscription+Resourcegroup+ServerName+DatabaseName을 기반으로 리소스 ID에 대한 [활동 로그](https://docs.microsoft.com/azure/service-health/alerts-activity-log-service-notifications)에 다음 이벤트가 로그됩니다. 
+Azure Key Vault 키 액세스 이슈로 인한 데이터베이스 상태를 모니터링할 수 있도록 Azure Resource Manager URL 및 Subscription+Resourcegroup+ServerName+DatabaseName을 기반으로 리소스 ID에 대한 [활동 로그](/azure/service-health/alerts-activity-log-service-notifications)에 다음 이벤트가 로그됩니다. 
 
 **서비스가 Azure Key Vault 키에 대한 액세스 권한을 잃은 경우 발생하는 이벤트**
 
@@ -238,7 +238,5 @@ EventName: MakeDatabaseAccessible
 
 ## <a name="next-steps"></a>다음 단계
 
-- [Azure Resource Health](https://docs.microsoft.com/azure/service-health/resource-health-overview)를 확인하세요.
-- 이메일/SMS/푸시/음성, 논리 앱, 웹후크, ITSM 또는 Automation Runbook과 같은 기본 설정에 따라 알림 및 경고를 받도록 [작업 그룹](https://docs.microsoft.com/azure/azure-monitor/platform/action-groups)을 설정합니다. 
-
-
+- [Azure Resource Health](/azure/service-health/resource-health-overview)를 확인하세요.
+- 이메일/SMS/푸시/음성, 논리 앱, 웹후크, ITSM 또는 Automation Runbook과 같은 기본 설정에 따라 알림 및 경고를 받도록 [작업 그룹](/azure/azure-monitor/platform/action-groups)을 설정합니다.

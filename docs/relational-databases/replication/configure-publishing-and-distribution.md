@@ -16,12 +16,12 @@ ms.assetid: 3cfc8966-833e-42fa-80cb-09175d1feed7
 author: MashaMSFT
 ms.author: mathoma
 monikerRange: =azuresqldb-mi-current||>=sql-server-2016||=sqlallproducts-allversions
-ms.openlocfilehash: 0fba95ecd1553bcd090cbf7ef987728bd17b712d
-ms.sourcegitcommit: 21bedbae28840e2f96f5e8b08bcfc794f305c8bc
+ms.openlocfilehash: f321bc96749a0a5c6bf260a8093113258c64f3f1
+ms.sourcegitcommit: 4d370399f6f142e25075b3714e5c2ce056b1bfd0
 ms.translationtype: HT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 08/06/2020
-ms.locfileid: "87863363"
+ms.lasthandoff: 10/09/2020
+ms.locfileid: "91866564"
 ---
 # <a name="configure-publishing-and-distribution"></a>게시 및 배포 구성
 [!INCLUDE [SQL Server SQL MI](../../includes/applies-to-version/sql-asdbmi.md)]
@@ -133,7 +133,7 @@ ms.locfileid: "87863363"
 
 5. <xref:Microsoft.SqlServer.Replication.ReplicationServer.InstallDistributor%2A> 메서드를 호출하여 배포자를 설치합니다. 원격 배포자에 연결할 때 게시자에서 사용되는 보안 암호 및 3단계에서 만든 <xref:Microsoft.SqlServer.Replication.DistributionDatabase> 개체를 지정합니다. 자세한 내용은 [배포자 보안 설정](../../relational-databases/replication/security/secure-the-distributor.md)을 참조하세요.
 
-   > `IMPORTANT!!` 가능한 경우 런타임 시 사용자에게 보안 자격 증명을 입력하라는 메시지가 표시됩니다. 자격 증명을 저장해야 하는 경우 [Windows .NET Framework에서 제공하는](https://go.microsoft.com/fwlink/?LinkId=34733) 암호화 서비스 [!INCLUDE[msCoName](../../includes/msconame-md.md)] 를 사용합니다.
+   > `IMPORTANT!!` 가능한 경우 런타임 시 사용자에게 보안 자격 증명을 입력하라는 메시지가 표시됩니다. 자격 증명을 저장해야 하는 경우 [Windows .NET Framework에서 제공하는](/previous-versions/aa719848(v=vs.71)) 암호화 서비스 [!INCLUDE[msCoName](../../includes/msconame-md.md)] 를 사용합니다.
 
 6. <xref:Microsoft.SqlServer.Replication.DistributionPublisher> 클래스의 인스턴스를 만듭니다.
 
@@ -158,7 +158,7 @@ ms.locfileid: "87863363"
 11. <xref:Microsoft.SqlServer.Replication.ReplicationServer.InstallDistributor%2A> 메서드를 호출합니다. 5단계에서 지정된 원격 배포자 이름 및 원격 배포자 암호를 전달합니다.
 
 > [!IMPORTANT]
-> 가능한 경우 런타임 시 사용자에게 보안 자격 증명을 입력하라는 메시지가 표시됩니다. 자격 증명을 저장해야 하는 경우 Windows .NET Framework에서 제공하는 [암호화 서비스](https://go.microsoft.com/fwlink/?LinkId=34733) 를 사용합니다.
+> 가능한 경우 런타임 시 사용자에게 보안 자격 증명을 입력하라는 메시지가 표시됩니다. 자격 증명을 저장해야 하는 경우 Windows .NET Framework에서 제공하는 [암호화 서비스](/previous-versions/aa719848(v=vs.71)) 를 사용합니다.
 
 ###  <a name="example-rmo"></a><a name="PShellExample"></a> 예(RMO) 
 RMO(복제 관리 개체)를 사용하여 프로그래밍 방식으로 복제 게시 및 배포를 구성할 수 있습니다.
@@ -172,6 +172,4 @@ RMO(복제 관리 개체)를 사용하여 프로그래밍 방식으로 복제 �
 [Replication System Stored Procedures Concepts](../../relational-databases/replication/concepts/replication-system-stored-procedures-concepts.md)  
 [배포 구성](../../relational-databases/replication/configure-distribution.md)  
 [복제 관리 개체 개념](../../relational-databases/replication/concepts/replication-management-objects-concepts.md)  
-[Always On 가용성 그룹에 대한 복제 구성&#40;SQL Server&#41;](../../database-engine/availability-groups/windows/configure-replication-for-always-on-availability-groups-sql-server.md) 
-
-
+[Always On 가용성 그룹에 대한 복제 구성&#40;SQL Server&#41;](../../database-engine/availability-groups/windows/configure-replication-for-always-on-availability-groups-sql-server.md)

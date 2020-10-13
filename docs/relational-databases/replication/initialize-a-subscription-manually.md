@@ -16,12 +16,12 @@ ms.assetid: 27a1bc38-e498-4fff-8082-04b52aa4b22c
 author: MashaMSFT
 ms.author: mathoma
 monikerRange: =azuresqldb-mi-current||>=sql-server-2016||=sqlallproducts-allversions
-ms.openlocfilehash: 84d8c205fad36848874ec5f8dd8714755c74fad2
-ms.sourcegitcommit: e700497f962e4c2274df16d9e651059b42ff1a10
+ms.openlocfilehash: bfa7cc36898aa521fed2e0e20fd08a5296147fcf
+ms.sourcegitcommit: 4d370399f6f142e25075b3714e5c2ce056b1bfd0
 ms.translationtype: HT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 08/17/2020
-ms.locfileid: "88490614"
+ms.lasthandoff: 10/09/2020
+ms.locfileid: "91869221"
 ---
 # <a name="initialize-a-subscription-manually"></a>수동 구독 초기화
 [!INCLUDE [SQL Server SQL MI](../../includes/applies-to-version/sql-asdbmi.md)]
@@ -54,7 +54,7 @@ ms.locfileid: "88490614"
   
 2.  게시 데이터베이스의 게시자에서 [sp_addsubscription](../../relational-databases/system-stored-procedures/sp-addsubscription-transact-sql.md)을 실행합니다. **\@publication**, **\@subscriber**, **\@destination_db**의 게시된 데이터를 포함하는 구독자 측의 데이터베이스 이름, **\@subscription_type**에 대해 **pull** 값, **\@sync_type**에 대해 **replication support only**를 지정합니다. 자세한 내용은 [끌어오기 구독 만들기](../../relational-databases/replication/create-a-pull-subscription.md)를 참조하세요.  
   
-3.  구독자에서 [sp_addpullsubscription](../../relational-databases/system-stored-procedures/sp-addpullsubscription-transact-sql.md)을 실행합니다. 구독 업데이트에 대한 내용은 [Create an Updatable Subscription to a Transactional Publication](https://technet.microsoft.com/library/ms152769(v=sql.130).aspx)를 참조하세요.  
+3.  구독자에서 [sp_addpullsubscription](../../relational-databases/system-stored-procedures/sp-addpullsubscription-transact-sql.md)을 실행합니다. 구독 업데이트에 대한 내용은 [Create an Updatable Subscription to a Transactional Publication](./publish/create-an-updatable-subscription-to-a-transactional-publication.md)를 참조하세요.  
   
 4.  구독자에서 [sp_addpullsubscription_agent](../../relational-databases/system-stored-procedures/sp-addpullsubscription-agent-transact-sql.md)를 실행합니다. 자세한 내용은 [끌어오기 구독 만들기](../../relational-databases/replication/create-a-pull-subscription.md)를 참조하세요.  
   
@@ -64,7 +64,7 @@ ms.locfileid: "88490614"
   
 1.  스키마와 데이터가 구독 데이터베이스에 존재하는지 확인합니다. 자세한 내용은 [스냅샷 없이 트랜잭션 구독 초기화](../../relational-databases/replication/initialize-a-transactional-subscription-without-a-snapshot.md)에서 수동으로 구독을 초기화하는 방법에 대해 설명합니다.  
   
-2.  게시 데이터베이스의 게시자에서 [sp_addsubscription](../../relational-databases/system-stored-procedures/sp-addsubscription-transact-sql.md)을 실행합니다. **\@destination_db**에 게시된 데이터를 포함하고 있는 구독자의 데이터베이스 이름, **\@subscription_type**에 대해 **push**값, **\@sync_type**에 대해 **replication support only** 값을 지정합니다. 구독 업데이트에 대한 내용은 [Create an Updatable Subscription to a Transactional Publication](https://technet.microsoft.com/library/ms152769(v=sql.130).aspx)를 참조하세요.  
+2.  게시 데이터베이스의 게시자에서 [sp_addsubscription](../../relational-databases/system-stored-procedures/sp-addsubscription-transact-sql.md)을 실행합니다. **\@destination_db**에 게시된 데이터를 포함하고 있는 구독자의 데이터베이스 이름, **\@subscription_type**에 대해 **push**값, **\@sync_type**에 대해 **replication support only** 값을 지정합니다. 구독 업데이트에 대한 내용은 [Create an Updatable Subscription to a Transactional Publication](./publish/create-an-updatable-subscription-to-a-transactional-publication.md)를 참조하세요.  
   
 3.  게시 데이터베이스의 게시자에서 [sp_addpushsubscription_agent](../../relational-databases/system-stored-procedures/sp-addpullsubscription-agent-transact-sql.md)를 실행합니다. 자세한 내용은 [밀어넣기 구독 만들기](../../relational-databases/replication/create-a-push-subscription.md)을 참조하세요.  
   
@@ -96,5 +96,4 @@ ms.locfileid: "88490614"
  [스냅샷 없이 트랜잭션 구독 초기화](../../relational-databases/replication/initialize-a-transactional-subscription-without-a-snapshot.md)   
  [복제된 데이터베이스 백업 및 복원](../../relational-databases/replication/administration/back-up-and-restore-replicated-databases.md)   
  [복제 보안을 위한 최선의 구현 방법](../../relational-databases/replication/security/replication-security-best-practices.md)  
-  
   

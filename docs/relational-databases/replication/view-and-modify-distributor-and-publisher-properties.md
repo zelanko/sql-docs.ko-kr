@@ -17,12 +17,12 @@ ms.assetid: 5dae1d59-c377-4c6e-adc9-b68c5b328f79
 author: MashaMSFT
 ms.author: mathoma
 monikerRange: =azuresqldb-mi-current||>=sql-server-2016||=sqlallproducts-allversions
-ms.openlocfilehash: 18b5f2e898638823e20aa237d9bbbc43bb025967
-ms.sourcegitcommit: da88320c474c1c9124574f90d549c50ee3387b4c
+ms.openlocfilehash: 88321dc6030b76869c55039f04dea39728342751
+ms.sourcegitcommit: 4d370399f6f142e25075b3714e5c2ce056b1bfd0
 ms.translationtype: HT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 07/01/2020
-ms.locfileid: "85720592"
+ms.lasthandoff: 10/09/2020
+ms.locfileid: "91868128"
 ---
 # <a name="view-and-modify-distributor-and-publisher-properties"></a>게시자 및 배포자 속성 보기 및 수정
 [!INCLUDE [SQL Server SQL MI](../../includes/applies-to-version/sql-asdbmi.md)]
@@ -176,7 +176,7 @@ ms.locfileid: "85720592"
 5.  <xref:Microsoft.SqlServer.Replication.ReplicationServer.ChangeDistributorPassword%2A> 메서드를 호출합니다. *password* 매개 변수에 대해 새 암호 값을 전달합니다.  
   
     > [!IMPORTANT]  
-    >  가능한 경우 런타임 시 사용자에게 보안 자격 증명을 입력하라는 메시지가 표시됩니다. 자격 증명을 저장해야 하는 경우 [Windows .NET Framework에서 제공하는](https://go.microsoft.com/fwlink/?LinkId=34733) 암호화 서비스 [!INCLUDE[msCoName](../../includes/msconame-md.md)] 를 사용합니다.  
+    >  가능한 경우 런타임 시 사용자에게 보안 자격 증명을 입력하라는 메시지가 표시됩니다. 자격 증명을 저장해야 하는 경우 [Windows .NET Framework에서 제공하는](/previous-versions/aa719848(v=vs.71)) 암호화 서비스 [!INCLUDE[msCoName](../../includes/msconame-md.md)] 를 사용합니다.  
   
 6.  (옵션) 다음 단계를 수행하여 이 배포자를 사용하는 각 원격 게시자에서 암호를 변경합니다.  
   
@@ -208,5 +208,4 @@ ms.locfileid: "85720592"
  [배포자 및 게시자 정보 스크립트](../../relational-databases/replication/administration/distributor-and-publisher-information-script.md)   
  [Replication System Stored Procedures Concepts](../../relational-databases/replication/concepts/replication-system-stored-procedures-concepts.md)   
  [게시자에 대한 정보 보기 및 태스크 수행&#40;복제 모니터&#41;](../../relational-databases/replication/monitor/view-information-and-perform-tasks-replication-monitor.md)  
-  
   

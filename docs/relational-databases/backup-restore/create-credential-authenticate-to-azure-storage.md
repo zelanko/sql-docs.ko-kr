@@ -13,12 +13,12 @@ f1_keywords:
 ms.assetid: 0622619d-27c5-4ff0-83e5-cde31648c27a
 author: MikeRayMSFT
 ms.author: mikeray
-ms.openlocfilehash: d3804de9de13720d5d7813d54bf5f8962b5e2992
-ms.sourcegitcommit: da88320c474c1c9124574f90d549c50ee3387b4c
+ms.openlocfilehash: b75085f8b5c01ad5257f5bc165f32be7a7a91902
+ms.sourcegitcommit: 04cf7905fa32e0a9a44575a6f9641d9a2e5ac0f8
 ms.translationtype: HT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 07/01/2020
-ms.locfileid: "85748419"
+ms.lasthandoff: 10/07/2020
+ms.locfileid: "91809242"
 ---
 # <a name="create-credential---authenticate-to-azure-storage"></a>자격 증명 만들기 - Azure 스토리지 인증
  [!INCLUDE [SQL Server](../../includes/applies-to-version/sqlserver.md)]
@@ -31,7 +31,7 @@ ms.locfileid: "85748419"
   
 ## <a name="azure-credentials"></a>Azure 자격 증명  
  **관리 인증서**  
- 이 옵션을 사용하여 Azure의 관리 인증서와 일치하는 로컬 인증서 저장소의 인증서를 지정합니다. Azure 관리 인증서에 대한 자세한 내용은 [Azure용 관리 인증서 만들기 및 업로드](https://go.microsoft.com/fwlink/?LinkId=320781)를 참조하세요.  
+ 이 옵션을 사용하여 Azure의 관리 인증서와 일치하는 로컬 인증서 저장소의 인증서를 지정합니다. Azure 관리 인증서에 대한 자세한 내용은 [Azure용 관리 인증서 만들기 및 업로드](/previous-versions/azure/gg551722(v=azure.100))를 참조하세요.  
   
  **구독**  
  로컬 인증서 저장소의 관리 인증서와 일치하는 Azure 구독 ID를 선택, 입력 또는 붙여 넣습니다.  
@@ -44,5 +44,4 @@ ms.locfileid: "85748419"
   
 ## <a name="storage-account"></a>스토리지 계정  
  백업 파일을 저장하는 데 사용할 스토리지 계정을 선택합니다.  
-  
   

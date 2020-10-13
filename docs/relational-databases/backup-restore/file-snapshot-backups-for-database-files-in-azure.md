@@ -11,12 +11,12 @@ ms.topic: conceptual
 ms.assetid: 17a81fcd-8dbd-458d-a9c7-2b5209062f45
 author: MikeRayMSFT
 ms.author: mikeray
-ms.openlocfilehash: 1fd961b275f6b392e9284312675c873f16fecd27
-ms.sourcegitcommit: da88320c474c1c9124574f90d549c50ee3387b4c
+ms.openlocfilehash: fe74f56af2726a32d6216852ca2d8dec341ee6dd
+ms.sourcegitcommit: 04cf7905fa32e0a9a44575a6f9641d9a2e5ac0f8
 ms.translationtype: HT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 07/01/2020
-ms.locfileid: "85718062"
+ms.lasthandoff: 10/07/2020
+ms.locfileid: "91809445"
 ---
 # <a name="file-snapshot-backups-for-database-files-in-azure"></a>Azure의 데이터베이스 파일에 대한 파일-스냅샷 백업
  [!INCLUDE [SQL Server](../../includes/applies-to-version/sqlserver.md)]
@@ -72,7 +72,7 @@ ms.locfileid: "85718062"
   
 -   RESTORE WITH MOVE가 필요합니다.  
   
--   Premium Storage에 대한 자세한 내용은 [Premium Storage: Azure Virtual Machine 워크로드에 대한 고성능 스토리지](https://azure.microsoft.com/documentation/articles/storage-premium-storage-preview-portal/)를 참조하세요.  
+-   Premium Storage에 대한 자세한 내용은 [Premium Storage: Azure Virtual Machine 워크로드에 대한 고성능 스토리지](/azure/virtual-machines/disks-types)를 참조하세요.  
   
  **단일 스토리지 계정:** 파일-스냅샷 및 대상 BLOB에서 동일한 스토리지 계정을 사용해야 합니다.  
   
@@ -80,7 +80,7 @@ ms.locfileid: "85718062"
   
  **온라인 복원:** 파일-스냅샷 백업을 사용하는 경우 온라인 복원을 수행할 수 없습니다. 온라인 복원에 대한 자세한 내용은 [온라인 복원&#40;SQL Server&#41;](../../relational-databases/backup-restore/online-restore-sql-server.md)을 참조하세요.  
   
- **결제:** SQL Server 파일-스냅샷 백업을 사용하는 경우 데이터가 변경되면 추가 요금이 발생합니다. 자세한 내용은 [스냅샷에서 요금이 발생하는 방식 이해](https://msdn.microsoft.com/library/azure/hh768807.aspx)를 참조하세요.  
+ **결제:** SQL Server 파일-스냅샷 백업을 사용하는 경우 데이터가 변경되면 추가 요금이 발생합니다. 자세한 내용은 [스냅샷에서 요금이 발생하는 방식 이해](/rest/api/storageservices/Understanding-How-Snapshots-Accrue-Charges)를 참조하세요.  
   
  **보관:** 파일-스냅샷 백업을 보관하려는 경우 BLOB 스토리지 또는 스트리밍 백업에 보관할 수 있습니다. Blob 스토리지에 보관하려면 파일-스냅샷 백업 집합의 스냅샷을 별도 Blob에 복사합니다. 스트리밍 백업에 보관하려면 파일-스냅샷 백업을 새 데이터베이스로 복원한 다음 압축 및/또는 암호화를 사용하여 일반 스트리밍 백업을 수행하고 기본 blob에 독립적으로 원하는 기간 동안 보관합니다.  
   
@@ -178,5 +178,4 @@ GO
   
 ## <a name="see-also"></a>참고 항목  
  [자습서: SQL Server 2016 데이터베이스와 함께 Microsoft Azure Blob 스토리지 서비스 사용](../tutorial-use-azure-blob-storage-service-with-sql-server-2016.md)  
-  
   

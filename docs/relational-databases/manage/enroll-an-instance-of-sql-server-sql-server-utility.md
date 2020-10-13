@@ -21,12 +21,12 @@ helpviewer_keywords:
 ms.assetid: a801c619-611b-4e82-a8d8-d1e01691b7a1
 author: MikeRayMSFT
 ms.author: mikeray
-ms.openlocfilehash: 211b16d4b03439295c4970449ef61855c09addc4
-ms.sourcegitcommit: 822d4b3cfa53269535500a3db5877a82b5076728
+ms.openlocfilehash: 04a4513ed886c29a18d5bee3d45324a35b3d63ea
+ms.sourcegitcommit: 04cf7905fa32e0a9a44575a6f9641d9a2e5ac0f8
 ms.translationtype: HT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 08/07/2020
-ms.locfileid: "87988553"
+ms.lasthandoff: 10/07/2020
+ms.locfileid: "91810432"
 ---
 # <a name="enroll-an-instance-of-sql-server-sql-server-utility"></a>SQL Server 인스턴스 등록(SQL Server 유틸리티)
  [!INCLUDE [SQL Server](../../includes/applies-to-version/sqlserver.md)]
@@ -94,12 +94,12 @@ ms.locfileid: "87988553"
  계속하려면 **다음**을 클릭합니다.  
   
 ##  <a name="specify-the-instance-of-sql-server"></a><a name="Instance_name"></a> SQL Server 인스턴스 지정  
- 연결 대화 상자에서 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 인스턴스를 선택하려면 **연결...** 을 클릭합니다. 컴퓨터 이름과 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 인스턴스 이름을 ComputerName\InstanceName 형식으로 입력합니다. 자세한 내용은 [서버에 연결&#40;데이터베이스 엔진&#41;](https://msdn.microsoft.com/library/ee9017b4-8a19-4360-9003-9e6484082d41)을 참조하세요.  
+ 연결 대화 상자에서 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 인스턴스를 선택하려면 **연결...** 을 클릭합니다. 컴퓨터 이름과 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 인스턴스 이름을 ComputerName\InstanceName 형식으로 입력합니다. 자세한 내용은 [서버에 연결&#40;데이터베이스 엔진&#41;](../../ssms/f1-help/connect-to-server-database-engine.md)을 참조하세요.  
   
  계속하려면 **다음**을 클릭합니다.  
   
 ##  <a name="connection-dialog"></a><a name="Connection_dialog"></a> 연결 대화 상자  
- 서버로 연결 대화 상자에서 서버 유형, 컴퓨터 이름 및 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 인스턴스 이름 정보를 확인합니다. 자세한 내용은 [서버에 연결&#40;데이터베이스 엔진&#41;](https://msdn.microsoft.com/library/ee9017b4-8a19-4360-9003-9e6484082d41)을 참조하세요.  
+ 서버로 연결 대화 상자에서 서버 유형, 컴퓨터 이름 및 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 인스턴스 이름 정보를 확인합니다. 자세한 내용은 [서버에 연결&#40;데이터베이스 엔진&#41;](../../ssms/f1-help/connect-to-server-database-engine.md)을 참조하세요.  
   
 > [!NOTE]  
 >  연결이 암호화되어 있으면 암호화 연결이 사용됩니다. 연결이 암호화되어 있지 않으면 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 유틸리티는 암호화된 연결을 사용하여 다시 연결합니다.  
@@ -129,7 +129,7 @@ ms.locfileid: "87988553"
 |지정된 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 인스턴스의 컬렉션 집합은 중지해야 합니다.|지정된 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]인스턴스의 기존 컬렉션 집합을 중지합니다. 데이터 수집기가 해제된 경우 이를 설정하고 실행 중인 컬렉션 집합을 중지한 다음 UCP 생성 작업을 위한 유효성 검사 규칙을 다시 실행합니다.<br /><br /> 데이터 수집기를 활성화하려면<br /><br /> 개체 탐색기에서 **관리** 노드를 확장합니다.<br /><br /> **데이터 컬렉션**을 마우스 오른쪽 단추로 클릭한 다음 **데이터 컬렉션 사용**을 클릭합니다.<br /><br /> 컬렉션 집합을 중지하려면<br /><br /> 개체 탐색기에서 관리 노드, **데이터 컬렉션**, **시스템 데이터 컬렉션 집합**을 차례로 확장합니다.<br /><br /> 중지할 컬렉션 집합을 마우스 오른쪽 단추로 클릭한 다음 **데이터 컬렉션 집합 중지**를 클릭합니다.<br /><br /> 메시지 상자에 이 동작의 결과가 표시되며, 컬렉션 집합의 아이콘에 빨간색 원이 표시되어 컬렉션 집합이 중지되었음을 나타냅니다.|  
 |지정한 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 인스턴스에서 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 에이전트 서비스가 시작되어야 합니다.|지정한 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 인스턴스에서 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]에이전트 서비스를 시작합니다. 지정한 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 인스턴스가 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 장애 조치(failover) 클러스터 인스턴스일 경우 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 에이전트 서비스를 수동으로 시작하도록 구성합니다. 그렇지 않을 경우 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 에이전트 서비스가 자동으로 시작하도록 구성합니다.|  
 |UCP에서 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 에이전트 서비스가 시작되어야 합니다.|UCP에서 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 에이전트 서비스를 시작합니다. [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] UCP가 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 장애 조치(failover) 클러스터 인스턴스일 경우 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 에이전트 서비스가 수동으로 시작되도록 구성합니다. 그렇지 않을 경우 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 에이전트 서비스가 자동으로 시작하도록 구성합니다.|  
-|WMI가 올바르게 구성되어 있어야 합니다.|WMI 구성 문제를 해결하려면 [SQL Server 유틸리티 문제 해결](https://msdn.microsoft.com/library/f5f47c2a-38ea-40f8-9767-9bc138d14453)을 참조하세요.|  
+|WMI가 올바르게 구성되어 있어야 합니다.|WMI 구성 문제를 해결하려면 [SQL Server 유틸리티 문제 해결](/previous-versions/sql/sql-server-2016/ee210592(v=sql.130))을 참조하세요.|  
 |[!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 에이전트 프록시 계정이 UCP의 유효한 Windows 도메인 계정이어야 합니다.|유효한 Windows 도메인 계정을 지정합니다. 계정이 유효한지 확인하려면 Windows 도메인 계정을 사용하여 UCP로 로그온합니다.|  
 |프록시 계정 옵션을 선택한 경우 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 에이전트 프록시 계정은 지정된 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]인스턴스의 유효한 Windows 도메인 계정이어야 합니다.|유효한 Windows 도메인 계정을 지정합니다. 계정이 유효한지 확인하려면 Windows 도메인 계정을 사용하여 지정된 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 인스턴스로 로그온합니다.|  
 |[!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 에이전트 서비스 계정은 Network Service와 같은 기본 제공 계정일 수 없습니다.|Windows 도메인 계정으로 계정을 다시 할당합니다. 계정이 유효한지 확인하려면 Windows 도메인 계정을 사용하여 지정된 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 인스턴스로 로그온합니다.|  
@@ -173,7 +173,7 @@ ms.locfileid: "87988553"
 >   
 >  추가 정보:  Windows NT 그룹/사용자 '\<DomainName\AccountName>'에 대한 정보를 가져올 수 없습니다. 오류 코드 0x5. (Microsoft SQL Server, 오류: 15404)  
 >   
->  이 문제를 해결하는 자세한 내용은 [SQL Server 유틸리티 문제 해결](https://msdn.microsoft.com/library/f5f47c2a-38ea-40f8-9767-9bc138d14453)을 참조하세요.  
+>  이 문제를 해결하는 자세한 내용은 [SQL Server 유틸리티 문제 해결](/previous-versions/sql/sql-server-2016/ee210592(v=sql.130))을 참조하세요.  
   
 > [!IMPORTANT]  
 >  [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]의 관리형 인스턴스에 있는 “유틸리티 정보” 컬렉션 세트의 속성은 변경해서는 안 되며, 데이터 컬렉션은 유틸리티 에이전트 작업에 의해 제어되므로 데이터 컬렉션을 수동으로 설정/해제하면 안 됩니다.  
@@ -199,6 +199,5 @@ ms.locfileid: "87988553"
 ## <a name="see-also"></a>참고 항목  
  [SQL Server 유틸리티 기능 및 태스크](../../relational-databases/manage/sql-server-utility-features-and-tasks.md)   
  [SQL Server 유틸리티에서 SQL Server 인스턴스 모니터링](../../relational-databases/manage/monitor-instances-of-sql-server-in-the-sql-server-utility.md)   
- [SQL Server 유틸리티 문제 해결](https://msdn.microsoft.com/library/f5f47c2a-38ea-40f8-9767-9bc138d14453)  
-  
+ [SQL Server 유틸리티 문제 해결](/previous-versions/sql/sql-server-2016/ee210592(v=sql.130))  
   

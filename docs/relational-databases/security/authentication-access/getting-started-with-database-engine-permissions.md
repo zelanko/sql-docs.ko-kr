@@ -14,12 +14,12 @@ ms.assetid: 051af34e-bb5b-403e-bd33-007dc02eef7b
 author: VanMSFT
 ms.author: vanto
 monikerRange: '>=aps-pdw-2016||=azuresqldb-current||=azure-sqldw-latest||>=sql-server-2016||=sqlallproducts-allversions||>=sql-server-linux-2017||=azuresqldb-mi-current'
-ms.openlocfilehash: c5d6f2daf6b37c260b84683e3f85395a88b1f218
-ms.sourcegitcommit: f3321ed29d6d8725ba6378d207277a57cb5fe8c2
+ms.openlocfilehash: 2c5d2d1f0af5abdf24fce8be780c15a73f2a778a
+ms.sourcegitcommit: 4d370399f6f142e25075b3714e5c2ce056b1bfd0
 ms.translationtype: HT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 07/06/2020
-ms.locfileid: "86005652"
+ms.lasthandoff: 10/09/2020
+ms.locfileid: "91864479"
 ---
 # <a name="getting-started-with-database-engine-permissions"></a>데이터베이스 엔진 권한 시작
 [!INCLUDE [SQL Server](../../../includes/applies-to-version/sql-asdb-asdbmi-asa-pdw.md)]
@@ -233,7 +233,7 @@ JOIN sys.database_principals AS dRole
 
 -   [데이터베이스 만들기&#40;자습서&#41;](../../../t-sql/lesson-1-creating-database-objects.md)  
   
--   [자습서: SQL Server Management Studio](../../../tools/sql-server-management-studio/tutorial-sql-server-management-studio.md)  
+-   [자습서: SQL Server Management Studio](../../../ssms/quickstarts/connect-query-sql-server.md)  
   
 -   [자습서: Transact-SQL 문 작성](../../../t-sql/tutorial-writing-transact-sql-statements.md)  
   
@@ -244,5 +244,4 @@ JOIN sys.database_principals AS dRole
  [보안 카탈로그 뷰&#40;Transact-SQL&#41;](../../../relational-databases/system-catalog-views/security-catalog-views-transact-sql.md)   
  [sys.fn_builtin_permissions&#40;Transact-SQL&#41;](../../../relational-databases/system-functions/sys-fn-builtin-permissions-transact-sql.md)   
  [효과적인 데이터베이스 엔진 사용 권한 결정](../../../relational-databases/security/authentication-access/determining-effective-database-engine-permissions.md)
-  
   

@@ -8,12 +8,12 @@ ms.date: 05/02/2019
 ms.topic: conceptual
 ms.prod: sql
 ms.prod_service: database-engine, sql-database
-ms.openlocfilehash: f366af08581accf5ef1f1c8fc00830f6cc592537
-ms.sourcegitcommit: e700497f962e4c2274df16d9e651059b42ff1a10
+ms.openlocfilehash: 0174ce5aae88406719fbf57c53734d535476a799
+ms.sourcegitcommit: 4d370399f6f142e25075b3714e5c2ce056b1bfd0
 ms.translationtype: HT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 08/17/2020
-ms.locfileid: "88403569"
+ms.lasthandoff: 10/09/2020
+ms.locfileid: "91868152"
 ---
 # <a name="using-service-sids-to-grant-permissions-to-services-in-sql-server"></a>서비스 SID를 사용하여 SQL Server의 서비스에 사용 권한 부여
 
@@ -28,7 +28,7 @@ SQL Server는 [서비스별 보안 식별자(SID)](https://support.microsoft.com
 
 일부 서비스에는 기본적으로 서비스 SID가 없습니다. 서비스 SID는 [SC.exe](/windows/desktop/services/configuring-a-service-using-sc)를 사용하여 만들어야 합니다. [이 메서드](https://kevinholman.com/2016/08/25/sql-mp-run-as-accounts-no-longer-required/)는 Microsoft System Center Operations Manager 관리자가 SQL 서버 내의 HealthService에 사용 권한을 부여하기 위해 채택했습니다.
 
-서비스 SID가 만들어지고 확인되면 SQL Server 내에서 사용 권한을 부여받아야 합니다. 권한 부여는 [SSMS(SQL Server Management Studio)](/sql/ssms/download-sql-server-management-studio-ssms) 또는 쿼리를 사용하여 Windows 로그인을 생성하여 수행할 수 있습니다. 로그인이 생성되면 다른 로그인처럼 권한이 부여되고 역할에 추가되며 데이터베이스에 매핑될 수 있습니다.
+서비스 SID가 만들어지고 확인되면 SQL Server 내에서 사용 권한을 부여받아야 합니다. 권한 부여는 [SSMS(SQL Server Management Studio)](../../ssms/download-sql-server-management-studio-ssms.md) 또는 쿼리를 사용하여 Windows 로그인을 생성하여 수행할 수 있습니다. 로그인이 생성되면 다른 로그인처럼 권한이 부여되고 역할에 추가되며 데이터베이스에 매핑될 수 있습니다.
 
 > [!TIP]
 > `Login failed for user 'NT AUTHORITY\SYSTEM'` 오류가 수신되면 원하는 서비스에 대한 서비스 SID가 있는지, SQL Server에 서비스 SID 로그인이 생성되었는지, SQL Server의 서비스 SID에 적절한 사용 권한이 부여되었는지 확인합니다.
@@ -41,7 +41,7 @@ SQL Server는 [서비스별 보안 식별자(SID)](https://support.microsoft.com
 
 ### <a name="granular-permissions-to-system-accounts"></a>시스템 계정에 대한 세부적인 사용 권한
 
-시스템 계정은 지금까지 [LocalSystem](https://msdn.microsoft.com/library/windows/desktop/ms684190)([en-us의 NT AUTHORITY\SYSTEM](/sql/database-engine/configure-windows/configure-windows-service-accounts-and-permissions#Localized_service_names)) 또는 [NetworkService](/windows/desktop/Services/networkservice-account)([en-us의 NT AUTHORITY\NETWORK SERVICE](/sql/database-engine/configure-windows/configure-windows-service-accounts-and-permissions?#Localized_service_names)) 계정에 대한 로그인을 생성하고 해당 로그인 권한을 부여하여 사용 권한을 부여 받았습니다. 이 메서드는 시스템 계정으로 실행 중인 SQL에 모든 프로세스 또는 서비스 사용 권한을 부여합니다.
+시스템 계정은 지금까지 [LocalSystem](/windows/win32/services/localsystem-account)([en-us의 NT AUTHORITY\SYSTEM](../../database-engine/configure-windows/configure-windows-service-accounts-and-permissions.md#Localized_service_names)) 또는 [NetworkService](/windows/desktop/Services/networkservice-account)([en-us의 NT AUTHORITY\NETWORK SERVICE](../../database-engine/configure-windows/configure-windows-service-accounts-and-permissions.md#Localized_service_names)) 계정에 대한 로그인을 생성하고 해당 로그인 권한을 부여하여 사용 권한을 부여 받았습니다. 이 메서드는 시스템 계정으로 실행 중인 SQL에 모든 프로세스 또는 서비스 사용 권한을 부여합니다.
 
 서비스 SID를 사용하면 특정 서비스에 사용 권한을 부여할 수 있습니다. 이 서비스는 실행 중일 때 권한이 부여된 리소스에만 액세스할 수 있습니다. 예를 들어 `HealthService`가 `LocalSystem`으로 실행 중이고 `View Server State`가 부여된 경우 `LocalSystem` 계정은 `HealthService`의 컨텍스트에서 실행 중일 때 `View Server State`에 대한 권한만 가집니다. 다른 프로세스가 SQL의 서버 상태에 `LocalSystem`으로 액세스하려고 하면 액세스가 거부됩니다.
 
@@ -106,8 +106,8 @@ GO
 
 서비스 sid 구조에 대한 자세한 내용은 [SERVICE_SID_INFO 구조](/windows/win32/api/winsvc/ns-winsvc-service_sid_info)를 참조하세요.
 
-[로그인을 만들](/sql/t-sql/statements/create-login-transact-sql) 때 사용할 수 있는 추가 옵션에 대해 읽어보세요.
+[로그인을 만들](../../t-sql/statements/create-login-transact-sql.md) 때 사용할 수 있는 추가 옵션에 대해 읽어보세요.
 
-서비스 SID와 함께 역할 기반 보안을 사용하려면 SQL Server에서 [역할 만들기](/sql/t-sql/statements/create-role-transact-sql)에 대해 읽어보세요.
+서비스 SID와 함께 역할 기반 보안을 사용하려면 SQL Server에서 [역할 만들기](../../t-sql/statements/create-role-transact-sql.md)에 대해 읽어보세요.
 
-SQL Server의 서비스 SID에 [권한을 부여](/sql/t-sql/statements/grant-transact-sql)하는 다양한 방법을 읽어보세요.
+SQL Server의 서비스 SID에 [권한을 부여](../../t-sql/statements/grant-transact-sql.md)하는 다양한 방법을 읽어보세요.

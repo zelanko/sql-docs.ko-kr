@@ -12,12 +12,12 @@ ms.assetid: 05515013-28b5-4ccf-9a54-ae861448945b
 author: MightyPen
 ms.author: genemi
 monikerRange: =azuresqldb-current||>=sql-server-2016||=sqlallproducts-allversions||>=sql-server-linux-2017||=azuresqldb-mi-current
-ms.openlocfilehash: 172e3a271086564c0ae4da7fd01a3084d65a85e5
-ms.sourcegitcommit: edad5252ed01151ef2b94001c8a0faf1241f9f7b
+ms.openlocfilehash: b1d4a5951b223e5772a59f3cb9c12fd4f04ae244
+ms.sourcegitcommit: 4d370399f6f142e25075b3714e5c2ce056b1bfd0
 ms.translationtype: HT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 07/02/2020
-ms.locfileid: "85834724"
+ms.lasthandoff: 10/09/2020
+ms.locfileid: "91867291"
 ---
 # <a name="supported-features-for-natively-compiled-t-sql-modules"></a>고유하게 컴파일된 T-SQL 모듈에 대해 지원되는 기능
 [!INCLUDE [SQL Server Azure SQL Database](../../includes/applies-to-version/sql-asdb.md)]
@@ -27,7 +27,7 @@ ms.locfileid: "85834724"
 
  네이티브 모듈 정의와 관련하여 지원되는 기능은 [고유하게 컴파일된 T-SQL 모듈에 대해 지원되는 DDL](../../relational-databases/in-memory-oltp/supported-ddl-for-natively-compiled-t-sql-modules.md)을 참조하세요.  
 
- 고유하게 컴파일된 모듈에서 지원되지 않는 구문에 대한 자세한 내용과 지원되지 않는 일부 기능을 해결하는 방법은 [Migration Issues for Natively Compiled Stored Procedures](../../relational-databases/in-memory-oltp/migration-issues-for-natively-compiled-stored-procedures.md)를 참조하세요. 지원되지 않는 기능에 대한 자세한 내용은 [메모리 내 OLTP에서 지원되지 않는 Transact-SQL 구문](../../relational-databases/in-memory-oltp/transact-sql-constructs-not-supported-by-in-memory-oltp.md)을 참조하세요.  
+ 고유하게 컴파일된 모듈에서 지원되지 않는 구문에 대한 자세한 내용과 지원되지 않는 일부 기능을 해결하는 방법은 [Migration Issues for Natively Compiled Stored Procedures](./a-guide-to-query-processing-for-memory-optimized-tables.md)를 참조하세요. 지원되지 않는 기능에 대한 자세한 내용은 [메모리 내 OLTP에서 지원되지 않는 Transact-SQL 구문](../../relational-databases/in-memory-oltp/transact-sql-constructs-not-supported-by-in-memory-oltp.md)을 참조하세요.  
 
 ##  <a name="query-surface-area-in-native-modules"></a><a name="qsancsp"></a> 네이티브 모듈의 쿼리 노출 영역  
 
@@ -286,7 +286,5 @@ GO
  TOP N에서 지원되는 최대 N의 경우를 계산하는 공식은 `N = floor ( 65536 / number_of_tables * 8 + total_size+of+aggs )`입니다.  
 
 ## <a name="see-also"></a>참고 항목  
- [고유하게 컴파일된 저장 프로시저](../../relational-databases/in-memory-oltp/natively-compiled-stored-procedures.md)   
- [고유하게 컴파일된 저장 프로시저의 마이그레이션 문제](../../relational-databases/in-memory-oltp/migration-issues-for-natively-compiled-stored-procedures.md)  
-
-
+ [고유하게 컴파일된 저장 프로시저](./a-guide-to-query-processing-for-memory-optimized-tables.md)   
+ [고유하게 컴파일된 저장 프로시저의 마이그레이션 문제](./a-guide-to-query-processing-for-memory-optimized-tables.md)

@@ -1,20 +1,20 @@
 ---
 title: Linux에서 SQL Server 데이터베이스 백업 및 복원
 description: Linux에서 SQL Server 데이터베이스를 백업 및 복원하는 방법을 알아봅니다. SSMS(SQL Server Management Studio)를 사용하여 백업하고 복원하는 방법도 알아봅니다.
-author: MikeRayMSFT
-ms.author: mikeray
+author: VanMSFT
+ms.author: vanto
 ms.reviewer: vanto
 ms.date: 11/14/2017
 ms.topic: conceptual
 ms.prod: sql
 ms.technology: linux
 ms.assetid: d30090fb-889f-466e-b793-5f284fccc4e6
-ms.openlocfilehash: 6a590b895a1929e0c83ebef76cc2d6dc544ae5af
-ms.sourcegitcommit: 968969b62bc158b9843aba5034c9d913519bc4a7
+ms.openlocfilehash: 743995e7615ac7c0398d525657dfa44138de3108
+ms.sourcegitcommit: 610e3ebe21ac6575850a29641a32f275e71557e3
 ms.translationtype: HT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 10/06/2020
-ms.locfileid: "91753520"
+ms.lasthandoff: 10/07/2020
+ms.locfileid: "91784775"
 ---
 # <a name="backup-and-restore-sql-server-databases-on-linux"></a>Linux에서 SQL Server 데이터베이스 백업 및 복원
 

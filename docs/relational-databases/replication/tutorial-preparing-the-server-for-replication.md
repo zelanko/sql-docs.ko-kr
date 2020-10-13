@@ -13,12 +13,12 @@ helpviewer_keywords:
 ms.assetid: ce30a095-2975-4387-9377-94a461ac78ee
 author: MashaMSFT
 ms.author: mathoma
-ms.openlocfilehash: 4ae1dddb8ac5b84bea8a602264c43797b2b041e8
-ms.sourcegitcommit: da88320c474c1c9124574f90d549c50ee3387b4c
+ms.openlocfilehash: 2f9cbaaca472c6b63d0196cb2f751e28b184e206
+ms.sourcegitcommit: 4d370399f6f142e25075b3714e5c2ce056b1bfd0
 ms.translationtype: HT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 07/01/2020
-ms.locfileid: "85726028"
+ms.lasthandoff: 10/09/2020
+ms.locfileid: "91868398"
 ---
 # <a name="tutorial-prepare-sql-server-for-replication-publisher-distributor-subscriber"></a>자습서: 복제를 위한 SQL Server 준비(게시자, 배포자, 구독자)
  [!INCLUDE [SQL Server](../../includes/applies-to-version/sqlserver.md)]
@@ -48,13 +48,13 @@ ms.locfileid: "85726028"
   
 - 구독자 서버(대상)에서 [!INCLUDE[ssEW](../../includes/ssew-md.md)]을 제외한 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]의 모든 버전을 설치합니다. [!INCLUDE[ssEW](../../includes/ssew-md.md)]는 트랜잭션 복제에서 구독자가 될 수 없습니다.  
   
-- [SQL Server Management Studio](https://docs.microsoft.com/sql/ssms/download-sql-server-management-studio-ssms)를 설치합니다.
+- [SQL Server Management Studio](../../ssms/download-sql-server-management-studio-ssms.md)를 설치합니다.
 - [SQL Server 2017 Developer Edition](https://www.microsoft.com/sql-server/sql-server-downloads)을 설치합니다.
-- [AdventureWorks 샘플 데이터베이스](https://github.com/Microsoft/sql-server-samples/releases)를 다운로드합니다. SSMS에서 데이터베이스를 복원하는 방법에 대한 지침은 [데이터베이스 복원](https://docs.microsoft.com/sql/relational-databases/backup-restore/restore-a-database-backup-using-ssms)을 참조하세요. 
+- [AdventureWorks 샘플 데이터베이스](https://github.com/Microsoft/sql-server-samples/releases)를 다운로드합니다. SSMS에서 데이터베이스를 복원하는 방법에 대한 지침은 [데이터베이스 복원](../backup-restore/restore-a-database-backup-using-ssms.md)을 참조하세요. 
     
 >[!NOTE]
 > - 두 버전이 넘게 차이 나는 SQL Server 인스턴스에서는 복제가 지원되지 않습니다. 자세한 내용은 [복제 토폴로지에서 지원되는 SQL Server 버전](replication-backward-compatibility.md)을 참조하세요.
-> - [!INCLUDE[ssManStudioFull](../../includes/ssmanstudiofull-md.md)]에서는 **sysadmin** 고정 서버 역할의 멤버인 로그인을 사용하여 게시자 및 구독자에 연결해야 합니다. 이 역할에 대한 자세한 내용은 [서버 수준 역할](https://docs.microsoft.com/sql/relational-databases/security/authentication-access/server-level-roles)을 참조하세요.  
+> - [!INCLUDE[ssManStudioFull](../../includes/ssmanstudiofull-md.md)]에서는 **sysadmin** 고정 서버 역할의 멤버인 로그인을 사용하여 게시자 및 구독자에 연결해야 합니다. 이 역할에 대한 자세한 내용은 [서버 수준 역할](../security/authentication-access/server-level-roles.md)을 참조하세요.  
 
 
 **이 자습서에 소요되는 예상 시간: 30분**
@@ -247,5 +247,4 @@ SQL Server Management Studio 인스턴스를 관리자 권한으로 실행 중�
 > [!div class="nextstepaction"]
 > [자습서: 두 개의 완전히 연결된 서버 간 복제 구성(트랜잭션)](tutorial-replicating-data-between-continuously-connected-servers.md)
 
-  
   

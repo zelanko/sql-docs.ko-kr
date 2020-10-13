@@ -11,17 +11,17 @@ ms.topic: conceptual
 ms.assetid: 47d9a7e8-c597-4b95-a58a-dcf66df8e572
 author: markingmyname
 ms.author: maghan
-ms.openlocfilehash: 62e63082d016d36855cd6a9e9f6067257bc6c77c
-ms.sourcegitcommit: dd36d1cbe32cd5a65c6638e8f252b0bd8145e165
+ms.openlocfilehash: 796a0423da44917251fa87828c71d0e47092d028
+ms.sourcegitcommit: 4d370399f6f142e25075b3714e5c2ce056b1bfd0
 ms.translationtype: HT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 09/08/2020
-ms.locfileid: "89551584"
+ms.lasthandoff: 10/09/2020
+ms.locfileid: "91867061"
 ---
 # <a name="requirements-for-using-memory-optimized-tables"></a>메모리 액세스에 최적화된 테이블 사용을 위한 요구 사항
  [!INCLUDE [SQL Server](../../includes/applies-to-version/sqlserver.md)]
 
-  Azure DB에서 메모리 내 OLTP 사용의 경우 [SQL 데이터베이스에서 메모리 내 시작](https://azure.microsoft.com/documentation/articles/sql-database-in-memory/)을 참조하세요.  
+  Azure DB에서 메모리 내 OLTP 사용의 경우 [SQL 데이터베이스에서 메모리 내 시작](/azure/azure-sql/in-memory-oltp-overview)을 참조하세요.  
   
  [SQL Server 설치를 위한 하드웨어 및 소프트웨어 요구 사항](../../sql-server/install/hardware-and-software-requirements-for-installing-sql-server.md) 외에 메모리 내 OLTP를 사용하기 위한 요구 사항은 다음과 같습니다.  
   
@@ -59,4 +59,3 @@ ms.locfileid: "89551584"
  [메모리 내 OLTP&#40;메모리 내 최적화&#41;](../../relational-databases/in-memory-oltp/in-memory-oltp-in-memory-optimization.md)  
  [데이터베이스 즉시 파일 초기화](../../relational-databases/databases/database-instant-file-initialization.md)  
  [메모리 아키텍처 가이드](../../relational-databases/memory-management-architecture-guide.md)
-  

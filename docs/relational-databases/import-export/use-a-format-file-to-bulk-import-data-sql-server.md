@@ -15,12 +15,12 @@ author: MashaMSFT
 ms.author: mathoma
 monikerRange: '>=aps-pdw-2016||=azuresqldb-current||=azure-sqldw-latest||>=sql-server-2016||=sqlallproducts-allversions||>=sql-server-linux-2017||=azuresqldb-mi-current'
 ms.custom: seo-lt-2019
-ms.openlocfilehash: 83a024997910e16b67e66244edcd9cc34c6751a7
-ms.sourcegitcommit: 039fb38c583019b3fd06894160568387a19ba04e
+ms.openlocfilehash: 1699ac4a2ad49a6a65fafed6a75c71585514de51
+ms.sourcegitcommit: 4d370399f6f142e25075b3714e5c2ce056b1bfd0
 ms.translationtype: HT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 07/30/2020
-ms.locfileid: "87442534"
+ms.lasthandoff: 10/09/2020
+ms.locfileid: "91868050"
 ---
 # <a name="use-a-format-file-to-bulk-import-data-sql-server"></a>서식 파일을 사용하여 데이터 대량 가져오기(SQL Server)
 [!INCLUDE[SQL Server Azure SQL Database Synapse Analytics PDW ](../../includes/applies-to-version/sql-asdb-asdbmi-asa-pdw.md)]
@@ -34,9 +34,9 @@ ms.locfileid: "87442534"
   * SQLNCHAR 또는 SQLNVARCHAR(데이터를 유니코드로 보냅니다.)
   * SQLBINARY 또는 SQLVARYBIN(데이터를 변환하지 않고 보냅니다.)
 * Azure SQL Database 및 Azure SQL Data Warehouse는 [bcp](../../tools/bcp-utility.md)만 지원합니다.  자세한 내용은 다음을 참조하세요.
-  * [Azure SQL Data Warehouse에 데이터 로드](https://azure.microsoft.com/documentation/articles/sql-data-warehouse-overview-load/)
-  * [SQL Server에서 Azure SQL Data Warehouse로 데이터 로드(플랫 파일)](https://azure.microsoft.com/documentation/articles/sql-data-warehouse-load-from-sql-server-with-bcp/)
-  * [데이터 마이그레이션](https://azure.microsoft.com/documentation/articles/sql-data-warehouse-migrate-data/)
+  * [Azure SQL Data Warehouse에 데이터 로드](/azure/synapse-analytics/sql-data-warehouse/design-elt-data-loading)
+  * [SQL Server에서 Azure SQL Data Warehouse로 데이터 로드(플랫 파일)](/azure/synapse-analytics/sql-data-warehouse/design-elt-data-loading)
+  * [데이터 마이그레이션](/azure/synapse-analytics/sql-data-warehouse/sql-data-warehouse-overview-develop)
 
 ## <a name="example-test-conditions"></a>예제 테스트 조건
 이 항목의 서식 파일 예제는 아래 정의된 테이블 및 데이터 파일을 기반으로 합니다.
@@ -263,4 +263,3 @@ SELECT * FROM TestDatabase.dbo.myFirstImport;
  [비 XML 서식 파일&#40;SQL Server&#41;](../../relational-databases/import-export/non-xml-format-files-sql-server.md)   
  [XML 서식 파일&#40;SQL Server&#41;](../../relational-databases/import-export/xml-format-files-sql-server.md)  
   [데이터를 가져오거나 내보내기 위한 서식 파일(SQL Server)](../../relational-databases/import-export/format-files-for-importing-or-exporting-data-sql-server.md)
-  

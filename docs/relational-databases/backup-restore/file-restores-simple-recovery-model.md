@@ -20,12 +20,12 @@ helpviewer_keywords:
 ms.assetid: b6d07386-7c6f-4cc6-be32-93289adbd3d6
 author: mashamsft
 ms.author: mathoma
-ms.openlocfilehash: 0e4bd61a4b08e394acfe53e0430f762f7c31d868
-ms.sourcegitcommit: da88320c474c1c9124574f90d549c50ee3387b4c
+ms.openlocfilehash: 84ba17db1df93ed95853519691a6caac94b6afb8
+ms.sourcegitcommit: 04cf7905fa32e0a9a44575a6f9641d9a2e5ac0f8
 ms.translationtype: HT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 07/01/2020
-ms.locfileid: "85718078"
+ms.lasthandoff: 10/07/2020
+ms.locfileid: "91809435"
 ---
 # <a name="file-restores-simple-recovery-model"></a>파일 복원(단순 복구 모델)
  [!INCLUDE [SQL Server](../../includes/applies-to-version/sqlserver.md)]
@@ -46,7 +46,7 @@ ms.locfileid: "85718078"
   
      *온라인 파일 복원*의 경우 데이터베이스가 복원 시점에 온라인 상태이면 파일 복원 중에 온라인 상태로 유지됩니다. 그러나 파일을 복원할 각 파일 그룹은 복원 작업 중에 오프라인 상태입니다. 오프라인 파일 그룹의 모든 파일이 복구되면 파일 그룹이 자동으로 온라인 상태가 됩니다.  
   
-     온라인 페이지 및 파일 복원 지원에 대한 자세한 내용은 [데이터베이스 엔진 기능 및 태스크](https://msdn.microsoft.com/library/d9efe145-3306-4d61-bd77-e2af43e19c34)를 참조하세요. 온라인 복원에 대한 자세한 내용은 [온라인 복원&#40;SQL Server&#41;](../../relational-databases/backup-restore/online-restore-sql-server.md)을 참조하세요.  
+     온라인 페이지 및 파일 복원 지원에 대한 자세한 내용은 [데이터베이스 엔진 기능 및 태스크](../../sql-server/what-s-new-in-sql-server-ver15.md)를 참조하세요. 온라인 복원에 대한 자세한 내용은 [온라인 복원&#40;SQL Server&#41;](../../relational-databases/backup-restore/online-restore-sql-server.md)을 참조하세요.  
   
     > [!TIP]  
     >  파일 복원을 위해 데이터베이스를 오프라인 상태로 전환하려면 [ALTER DATABASE](../../t-sql/statements/alter-database-transact-sql-set-options.md) 문: ALTER DATABASE *database_name* SET OFFLINE을 실행하여 복원 시퀀스를 시작하기 전에 데이터베이스 오프라인으로 전환합니다.  
@@ -96,7 +96,7 @@ ms.locfileid: "85718078"
   
 -   [파일 및 파일 그룹 복원&#40;SQL Server&#41;](../../relational-databases/backup-restore/restore-files-and-filegroups-sql-server.md)  
   
--   [Restore.SqlRestore 메서드(서버)(SMO)](https://msdn.microsoft.com/library/microsoft.sqlserver.management.smo.restore.sqlrestore.aspx)   
+-   [Restore.SqlRestore 메서드(서버)(SMO)](/dotnet/api/microsoft.sqlserver.management.smo.restore.sqlrestore)   
   
 ## <a name="see-also"></a>참고 항목  
  [백업 및 복원: 상호 운용성 및 공존성&#40;SQL Server&#41;](../../relational-databases/backup-restore/backup-and-restore-interoperability-and-coexistence-sql-server.md)   
@@ -107,5 +107,4 @@ ms.locfileid: "85718078"
  [RESTORE&#40;Transact-SQL&#41;](../../t-sql/statements/restore-statements-transact-sql.md)   
  [전체 데이터베이스 복원&#40;단순 복구 모델&#41;](../../relational-databases/backup-restore/complete-database-restores-simple-recovery-model.md)   
  [증분 복원&#40;SQL Server&#41;](../../relational-databases/backup-restore/piecemeal-restores-sql-server.md)  
-  
   

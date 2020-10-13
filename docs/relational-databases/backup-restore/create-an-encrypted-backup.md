@@ -11,12 +11,12 @@ ms.topic: conceptual
 ms.assetid: e29061d3-c2ab-4d98-b9be-8e90a11d17fe
 author: MikeRayMSFT
 ms.author: mikeray
-ms.openlocfilehash: a235ae2c396334d7dbd7c27efb582bf8c1890219
-ms.sourcegitcommit: da88320c474c1c9124574f90d549c50ee3387b4c
+ms.openlocfilehash: fbf54c1e384357a423ee9c2c1f086edbc5c947f9
+ms.sourcegitcommit: 04cf7905fa32e0a9a44575a6f9641d9a2e5ac0f8
 ms.translationtype: HT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 07/01/2020
-ms.locfileid: "85748433"
+ms.lasthandoff: 10/07/2020
+ms.locfileid: "91809259"
 ---
 # <a name="create-an-encrypted-backup"></a>암호화된 백업 만들기
  [!INCLUDE [SQL Server](../../includes/applies-to-version/sqlserver.md)]
@@ -77,7 +77,7 @@ ms.locfileid: "85748433"
   
  **사전 요구 사항:**  
   
--   Windows 스토리지 계정 및 컨테이너. 자세한 내용은 다음을 참조하십시오. [1단원: Azure Storage 개체 만들기](https://msdn.microsoft.com/library/74edd1fd-ab00-46f7-9e29-7ba3f1a446c5).  
+-   Windows 스토리지 계정 및 컨테이너. 자세한 내용은 다음을 참조하십시오. [1단원: Azure Storage 개체 만들기](/previous-versions/sql/sql-server-2016/jj720557(v=sql.130)).  
   
 -   master 데이터베이스의 데이터베이스 마스터 키 및 SQL Server 인스턴스에 대한 인증서 또는 비대칭 키. 암호화 요구 사항과 사용 권한에 대한 자세한 내용은 [Backup Encryption](../../relational-databases/backup-restore/backup-encryption.md)를 참조하십시오.  
   
@@ -129,5 +129,4 @@ ms.locfileid: "85748433"
     GO  
   
     ```  
-  
   

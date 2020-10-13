@@ -13,12 +13,12 @@ ms.assetid: ae8226ff-0853-4716-be7b-673ce77dd370
 author: jaszymas
 ms.author: jaszymas
 monikerRange: =azuresqldb-current||>=sql-server-2016||=sqlallproducts-allversions||>=sql-server-linux-2017||=azuresqldb-mi-current
-ms.openlocfilehash: 364dbefa72708910d54977600ecb47942a5d96e1
-ms.sourcegitcommit: da88320c474c1c9124574f90d549c50ee3387b4c
+ms.openlocfilehash: 2cc6c779f441934e76108a71445078386dc4d567
+ms.sourcegitcommit: 4d370399f6f142e25075b3714e5c2ce056b1bfd0
 ms.translationtype: HT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 07/01/2020
-ms.locfileid: "85627553"
+ms.lasthandoff: 10/09/2020
+ms.locfileid: "91866914"
 ---
 # <a name="always-encrypted-cryptography"></a>Always Encrypted 암호화
 [!INCLUDE [SQL Server Azure SQL Database](../../../includes/applies-to-version/sql-asdb.md)]
@@ -32,7 +32,7 @@ ms.locfileid: "85627553"
   
  CEK(열 암호화 키)는 CMK로 보호되는 콘텐츠 암호화 키(예: 데이터를 보호하는 데 사용되는 키)입니다.  
   
- 모든 [!INCLUDE[msCoName](../../../includes/msconame-md.md)] CMK 저장소 공급자는 최적 비대칭 암호화 패딩(RSA-OAEP)과 RSA를 사용하여 CEK를 암호화합니다. Microsoft CNG(Cryptography API: Next Generation)를 .NET Framework([SqlColumnEncryptionCngProvider 클래스](https://msdn.microsoft.com/library/system.data.sqlclient.sqlcolumnencryptioncngprovider.aspx))에서 지원하는 키 저장소 공급자는 RFC 8017의 섹션 A.2.1에 지정된 기본 매개 변수를 사용합니다. 이러한 기본 매개 변수는 SHA-1의 해시 함수와 SHA-1이 포함된 MGF1의 마스크 생성 함수를 사용합니다. 다른 모든 키 저장소 공급자는 SHA-256을 사용합니다. 
+ 모든 [!INCLUDE[msCoName](../../../includes/msconame-md.md)] CMK 저장소 공급자는 최적 비대칭 암호화 패딩(RSA-OAEP)과 RSA를 사용하여 CEK를 암호화합니다. Microsoft CNG(Cryptography API: Next Generation)를 .NET Framework([SqlColumnEncryptionCngProvider 클래스](/dotnet/api/system.data.sqlclient.sqlcolumnencryptioncngprovider))에서 지원하는 키 저장소 공급자는 RFC 8017의 섹션 A.2.1에 지정된 기본 매개 변수를 사용합니다. 이러한 기본 매개 변수는 SHA-1의 해시 함수와 SHA-1이 포함된 MGF1의 마스크 생성 함수를 사용합니다. 다른 모든 키 저장소 공급자는 SHA-256을 사용합니다. 
   
 ## <a name="data-encryption-algorithm"></a>데이터 암호화 알고리즘  
  상시 암호화는 **AEAD_AES_256_CBC_HMAC_SHA_256** 알고리즘을 사용하여 데이터베이스에서 데이터를 암호화합니다.  
@@ -181,5 +181,4 @@ aead_aes_256_cbc_hmac_sha_256 = versionbyte + MAC + IV + aes_256_cbc_ciphertext
 ## <a name="see-also"></a>참고 항목  
  - [Always Encrypted](../../../relational-databases/security/encryption/always-encrypted-database-engine.md)   
  - [Always Encrypted를 사용하여 애플리케이션 개발](../../../relational-databases/security/encryption/always-encrypted-client-development.md)  
-  
   

@@ -12,12 +12,12 @@ ms.assetid: 856e8061-c604-4ce4-b89f-a11876dd6c88
 author: jaszymas
 ms.author: jaszymas
 monikerRange: =azuresqldb-current||>=sql-server-2016||=sqlallproducts-allversions||>=sql-server-linux-2017||=azuresqldb-mi-current
-ms.openlocfilehash: 10f95ba72bbb57481d5753e4a26d2fde3ecf1f16
-ms.sourcegitcommit: da88320c474c1c9124574f90d549c50ee3387b4c
+ms.openlocfilehash: c08fb0c0fc82d252e87847562957705e03e30512
+ms.sourcegitcommit: 4d370399f6f142e25075b3714e5c2ce056b1bfd0
 ms.translationtype: HT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 07/01/2020
-ms.locfileid: "85765045"
+ms.lasthandoff: 10/09/2020
+ms.locfileid: "91867822"
 ---
 # <a name="create-and-store-column-master-keys-for-always-encrypted"></a>Always Encrypted용 열 마스터 키 만들기 및 저장
 [!INCLUDE [SQL Server Azure SQL Database](../../../includes/applies-to-version/sql-asdb.md)]
@@ -76,7 +76,7 @@ $cert = New-SelfSignedCertificate -Subject "AlwaysEncryptedCert" -CertStoreLocat
 ### <a name="create-a-self-signed-certificate-using-sql-server-management-studio-ssms"></a>SSMS(SQL Server Management Studio)를 사용하여 자체 서명된 인증서 만들기
 
 자세한 내용은 [SQL Server Management Studio를 사용하여 Always Encrypted 키 프로비전](configure-always-encrypted-keys-using-ssms.md)을 참조하세요.
-SSMS를 사용하고 Windows 인증서 저장소에 상시 암호화 키를 저장하는 단계별 자습서는 [상시 암호화 마법사 자습서(Windows 인증서 저장소)](https://azure.microsoft.com/documentation/articles/sql-database-always-encrypted/)를 참조하세요.
+SSMS를 사용하고 Windows 인증서 저장소에 상시 암호화 키를 저장하는 단계별 자습서는 [상시 암호화 마법사 자습서(Windows 인증서 저장소)](/azure/azure-sql/database/always-encrypted-certificate-store-configure)를 참조하세요.
 
 
 ### <a name="making-certificates-available-to-applications-and-users"></a>애플리케이션 및 사용자가 인증서를 사용할 수 있도록 설정
@@ -104,7 +104,7 @@ SSMS를 사용하고 Windows 인증서 저장소에 상시 암호화 키를 저�
 
 ## <a name="creating-column-master-keys-in-azure-key-vault"></a>Azure 주요 자격 증명 모음에서 열 마스터 키 만들기
 
-Azure 주요 자격 증명 모음은 암호화 키 및 암호를 보호하고 상시 암호화에 대한 열 마스터 키를 저장하는 편리한 옵션입니다(특히 애플리케이션이 Azure에서 호스트되는 경우). [Azure 주요 자격 증명 모음](https://azure.microsoft.com/documentation/articles/key-vault-get-started/)에서 키를 만들려면 [Azure 구독](https://azure.microsoft.com/free/) 및 Azure 주요 자격 증명 모음이 필요합니다.
+Azure 주요 자격 증명 모음은 암호화 키 및 암호를 보호하고 상시 암호화에 대한 열 마스터 키를 저장하는 편리한 옵션입니다(특히 애플리케이션이 Azure에서 호스트되는 경우). [Azure 주요 자격 증명 모음](/azure/key-vault/general/overview)에서 키를 만들려면 [Azure 구독](https://azure.microsoft.com/free/) 및 Azure 주요 자격 증명 모음이 필요합니다.
 
 ### <a name="using-powershell"></a>PowerShell 사용
 
@@ -128,7 +128,7 @@ $akvKey = Add-AzKeyVaultKey -VaultName $akvName -Name $akvKeyName -Destination H
 ### <a name="using-sql-server-management-studio-ssms"></a>SSMS(SQL Server Management Studio) 사용
 
 SSMS를 사용하여 Azure Key Vault에서 열 마스터 키를 만드는 방법에 대한 자세한 내용은 [SQL Server Management Studio를 사용하여 Always Encrypted 키 프로비전](configure-always-encrypted-keys-using-ssms.md)을 참조하세요.
-SSMS를 사용하고 Azure 주요 자격 증명 모음에 상시 암호화 키를 저장하는 단계별 자습서는 [상시 암호화 마법사 자습서(Azure 주요 자격 증명 모음)](https://azure.microsoft.com/documentation/articles/sql-database-always-encrypted-azure-key-vault)를 참조하세요.
+SSMS를 사용하고 Azure 주요 자격 증명 모음에 상시 암호화 키를 저장하는 단계별 자습서는 [상시 암호화 마법사 자습서(Azure 주요 자격 증명 모음)](/azure/azure-sql/database/always-encrypted-azure-key-vault-configure)를 참조하세요.
 
 ### <a name="making-azure-key-vault-keys-available-to-applications-and-users"></a>애플리케이션 및 사용자가 Azure 주요 자격 증명 모음을 사용할 수 있도록 설정
 
@@ -138,7 +138,7 @@ Azure 주요 자격 증명 모음에 저장된 열 마스터 키를 사용하여
 
 #### <a name="using-powershell"></a>PowerShell 사용
 
-사용자와 애플리케이션이 Azure Key Vault의 실제 키에 액세스할 수 있게 하려면 자격 증명 모음 액세스 정책([Set-AzKeyVaultAccessPolicy](https://docs.microsoft.com/powershell/module/az.keyvault/set-azkeyvaultaccesspolicy))을 설정해야 합니다.
+사용자와 애플리케이션이 Azure Key Vault의 실제 키에 액세스할 수 있게 하려면 자격 증명 모음 액세스 정책([Set-AzKeyVaultAccessPolicy](/powershell/module/az.keyvault/set-azkeyvaultaccesspolicy))을 설정해야 합니다.
 
 ```
 $vaultName = "<vault name>"
@@ -227,4 +227,4 @@ HSM에 대한 설명서를 참조하세요.
   
 ## <a name="see-also"></a>참고 항목 
 - [Always Encrypted](../../../relational-databases/security/encryption/always-encrypted-database-engine.md)
-- [Always Encrypted를 위한 키 관리 개요](../../../relational-databases/security/encryption/overview-of-key-management-for-always-encrypted.md)  
+- [Always Encrypted를 위한 키 관리 개요](../../../relational-databases/security/encryption/overview-of-key-management-for-always-encrypted.md)

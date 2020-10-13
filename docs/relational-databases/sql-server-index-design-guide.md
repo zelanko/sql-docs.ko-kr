@@ -23,12 +23,12 @@ ms.assetid: 11f8017e-5bc3-4bab-8060-c16282cfbac1
 author: rothja
 ms.author: jroth
 monikerRange: '>=aps-pdw-2016||=azuresqldb-current||=azure-sqldw-latest||>=sql-server-2016||=sqlallproducts-allversions||>=sql-server-linux-2017||=azuresqldb-mi-current'
-ms.openlocfilehash: 2de53e7c941e28a3a498f984fc544f4733f71694
-ms.sourcegitcommit: 216f377451e53874718ae1645a2611cdb198808a
+ms.openlocfilehash: b2dbc06494347c3c69798b5c45e779e0ebda6238
+ms.sourcegitcommit: 04cf7905fa32e0a9a44575a6f9641d9a2e5ac0f8
 ms.translationtype: HT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 07/28/2020
-ms.locfileid: "87240515"
+ms.lasthandoff: 10/07/2020
+ms.locfileid: "91810446"
 ---
 # <a name="sql-server-index-architecture-and-design-guide"></a>SQL Server 인덱스 아키텍처 및 디자인 가이드
 [!INCLUDE[SQL Server Azure SQL Database Synapse Analytics PDW ](../includes/applies-to-version/sql-asdb-asdbmi-asa-pdw.md)]
@@ -984,7 +984,7 @@ Bw-트리의 인덱스 페이지는 단일 행부터 최대 8KB까지 저장하�
 [CREATE XML INDEX &#40;Transact-SQL&#41;](../t-sql/statements/create-xml-index-transact-sql.md)  
 [CREATE SPATIAL INDEX &#40;Transact-SQL&#41;](../t-sql/statements/create-spatial-index-transact-sql.md)     
 [인덱스 다시 구성 및 다시 작성](../relational-databases/indexes/reorganize-and-rebuild-indexes.md)         
-[SQL Server 2008 인덱싱된 뷰를 통해 성능 향상](https://msdn.microsoft.com/library/dd171921(v=sql.100).aspx)  
+[SQL Server 2008 인덱싱된 뷰를 통해 성능 향상](/previous-versions/sql/sql-server-2008/dd171921(v=sql.100))  
 [Partitioned Tables and Indexes](../relational-databases/partitions/partitioned-tables-and-indexes.md)  
 [기본 키를 만들기](../relational-databases/tables/create-primary-keys.md)    
 [메모리 액세스에 최적화된 테이블의 인덱스](../relational-databases/in-memory-oltp/indexes-for-memory-optimized-tables.md)  
@@ -994,4 +994,4 @@ Bw-트리의 인덱스 페이지는 단일 행부터 최대 8KB까지 저장하�
 [인덱스 관련 동적 관리 뷰 및 함수 &#40;Transact-SQL&#41;](../relational-databases/system-dynamic-management-views/index-related-dynamic-management-views-and-functions-transact-sql.md)       
 [계산 열의 인덱스](../relational-databases/indexes/indexes-on-computed-columns.md)   
 [인덱스 및 ALTER TABLE](../t-sql/statements/alter-table-transact-sql.md#indexes-and-alter-table)      
-[Adaptive Index Defrag](https://github.com/Microsoft/tigertoolbox/tree/master/AdaptiveIndexDefrag)      
+[Adaptive Index Defrag](https://github.com/Microsoft/tigertoolbox/tree/master/AdaptiveIndexDefrag)

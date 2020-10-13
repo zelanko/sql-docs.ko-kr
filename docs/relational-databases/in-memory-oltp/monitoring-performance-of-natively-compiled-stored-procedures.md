@@ -12,12 +12,12 @@ ms.assetid: 55548cb2-77a8-4953-8b5a-f2778a4f13cf
 author: markingmyname
 ms.author: maghan
 monikerRange: =azuresqldb-current||>=sql-server-2016||=sqlallproducts-allversions||>=sql-server-linux-2017||=azuresqldb-mi-current
-ms.openlocfilehash: dbac8fa27b79b96a55f580983586141e14e27fc1
-ms.sourcegitcommit: dd36d1cbe32cd5a65c6638e8f252b0bd8145e165
+ms.openlocfilehash: a4214a85d3adc673c557d99d6bc21176559a85bd
+ms.sourcegitcommit: 4d370399f6f142e25075b3714e5c2ce056b1bfd0
 ms.translationtype: HT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 09/08/2020
-ms.locfileid: "89545184"
+ms.lasthandoff: 10/09/2020
+ms.locfileid: "91868518"
 ---
 # <a name="monitoring-performance-of-natively-compiled-stored-procedures"></a>고유하게 컴파일된 저장 프로시저의 성능 모니터링
 
@@ -133,6 +133,5 @@ GO
  고유하게 컴파일된 저장 프로시저의 예상 실행 계획은 프로시저의 쿼리에 대한 쿼리 연산자 및 식을 보여 줍니다. [!INCLUDE[ssSQL14](../../includes/sssql14-md.md)] 에서는 고유하게 컴파일된 저장 프로시저에 대한 일부 SHOWPLAN_XML 특성을 지원하지 않습니다. 예를 들어 쿼리 최적화 프로그램 비용 계산과 관련된 특성은 프로시저에 대한 SHOWPLAN_XML의 일부가 아닙니다.  
   
 ## <a name="see-also"></a>참고 항목  
- [고유하게 컴파일된 저장 프로시저](../../relational-databases/in-memory-oltp/natively-compiled-stored-procedures.md)  
-  
+ [고유하게 컴파일된 저장 프로시저](./a-guide-to-query-processing-for-memory-optimized-tables.md)  
   

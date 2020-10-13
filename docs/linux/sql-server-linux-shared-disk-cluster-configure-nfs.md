@@ -2,19 +2,19 @@
 title: NFS 스토리지 FCI 구성 - SQL Server on Linux
 description: SQL Server on Linux에 NFS 스토리지를 사용하여 FCI(장애 조치 클러스터 인스턴스)를 구성하는 방법을 알아봅니다.
 ms.custom: seo-lt-2019
-author: MikeRayMSFT
-ms.author: mikeray
+author: VanMSFT
+ms.author: vanto
 ms.reviewer: vanto
 ms.date: 08/28/2017
 ms.topic: conceptual
 ms.prod: sql
 ms.technology: linux
-ms.openlocfilehash: 47c2e816219ebbb4a4b3fefea2974ef511cdaee2
-ms.sourcegitcommit: f7ac1976d4bfa224332edd9ef2f4377a4d55a2c9
+ms.openlocfilehash: 06cd2218a2a194ab3345fc9ed00ae40e17f0141d
+ms.sourcegitcommit: 610e3ebe21ac6575850a29641a32f275e71557e3
 ms.translationtype: HT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 07/02/2020
-ms.locfileid: "85897287"
+ms.lasthandoff: 10/07/2020
+ms.locfileid: "91784880"
 ---
 # <a name="configure-failover-cluster-instance---nfs---sql-server-on-linux"></a>장애 조치(failover) 클러스터 인스턴스 구성 - NFS - SQL Server on Linux
 

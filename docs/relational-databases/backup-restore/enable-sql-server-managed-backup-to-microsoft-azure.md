@@ -11,19 +11,19 @@ ms.topic: conceptual
 ms.assetid: 68ebb53e-d5ad-4622-af68-1e150b94516e
 author: MikeRayMSFT
 ms.author: mikeray
-ms.openlocfilehash: 27f37c0bfc246256274eb435ff8a79a9010c204e
-ms.sourcegitcommit: 216f377451e53874718ae1645a2611cdb198808a
+ms.openlocfilehash: 9dcbab028ec47adcf569554d464634a4813e5914
+ms.sourcegitcommit: 04cf7905fa32e0a9a44575a6f9641d9a2e5ac0f8
 ms.translationtype: HT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 07/28/2020
-ms.locfileid: "87248647"
+ms.lasthandoff: 10/07/2020
+ms.locfileid: "91810179"
 ---
 # <a name="enable-sql-server-managed-backup-to-azure"></a>Azure로의 SQL Server 관리형 백업 사용
 
  [!INCLUDE [SQL Server](../../includes/applies-to-version/sqlserver.md)]
   이 항목은 데이터베이스 및 인스턴스 수준에서 [!INCLUDE[ss_smartbackup](../../includes/ss-smartbackup-md.md)] 을 기본 설정으로 사용하는 방법에 대해 설명합니다. 또한 전자 메일 알림을 설정하고 백업 활동을 모니터링하는 방법에 대해서도 설명합니다.  
   
- 이 자습서는 Azure PowerShell을 사용합니다. 자습서를 시작하기 전에 [Azure PowerShell을 다운로드 및 설치](https://azure.microsoft.com/documentation/articles/powershell-install-configure/)하십시오.  
+ 이 자습서는 Azure PowerShell을 사용합니다. 자습서를 시작하기 전에 [Azure PowerShell을 다운로드 및 설치](/powershell/azure/)하십시오.  
   
 > [!IMPORTANT]  
 >  고급 옵션도 설정하거나 사용자 지정 일정을 사용하려는 경우에는 [!INCLUDE[ss_smartbackup](../../includes/ss-smartbackup-md.md)]을 설정하기 전에 해당 설정을 구성하십시오. 자세한 내용은 [Microsoft Azure로의 SQL Server 관리형 백업용 고급 옵션 구성](../../relational-databases/backup-restore/configure-advanced-options-for-sql-server-managed-backup-to-microsoft-azure.md)을 참조하세요.  
@@ -32,7 +32,7 @@ ms.locfileid: "87248647"
 
 이 프로세스에는 Azure 계정이 필요합니다. 이미 계정이 있는 경우 다음 단계로 이동합니다. 그렇지 않을 경우 [무료 평가판](https://azure.microsoft.com/pricing/free-trial/) 으로 시작한 후에 [구매 옵션](https://azure.microsoft.com/pricing/purchase-options/)을 살펴볼 수 있습니다.
 
-스토리지 계정에 대한 자세한 내용은 [Azure Storage 계정](https://azure.microsoft.com/documentation/articles/storage-create-storage-account/)을 참조하세요. 
+스토리지 계정에 대한 자세한 내용은 [Azure Storage 계정](/azure/storage/common/storage-account-create)을 참조하세요. 
 
 #### <a name="azure-cli"></a>[Azure CLI](#tab/azure-cli)
 
@@ -106,7 +106,7 @@ URL이 포함된 경우 물음표 위치에서 SAS 토큰과 URL을 분리합니
 |**SAS 토큰**|sv=2014-02-14&sr=c&sig=xM2LXVo1Erqp7LxQ%9BxqK9QC6%5Qabcd%9LKjHGnnmQWEsDf%5Q%se=2015-05-14T14%3B93%4V20X&sp=rwdl|  
 |||
   
-SQL 자격 증명을 만드는 데 사용할 컨테이너 URL과 SAS를 기록합니다. SAS에 대한 자세한 내용은 [공유 액세스 서명 1부: SAS 모델 이해](https://azure.microsoft.com/documentation/articles/storage-dotnet-shared-access-signature-part-1/)를 참조하세요.  
+SQL 자격 증명을 만드는 데 사용할 컨테이너 URL과 SAS를 기록합니다. SAS에 대한 자세한 내용은 [공유 액세스 서명 1부: SAS 모델 이해](/azure/storage/common/storage-sas-overview)를 참조하세요.  
   
 ## <a name="enable-managed-backup-to-azure"></a>Azure로의 관리형 백업 사용
   
@@ -211,4 +211,4 @@ SQL 자격 증명을 만드는 데 사용할 컨테이너 URL과 SAS를 기록�
 이 섹션에서는 데이터베이스에서 [!INCLUDE[ss_smartbackup](../../includes/ss-smartbackup-md.md)] 을 처음 구성하는 단계에 대해 설명합니다. 동일한 시스템 저장 프로시저를 사용하여 기존 구성을 수정하고 새 값을 제공할 수 있습니다.  
   
 ## <a name="see-also"></a>참고 항목  
- [Azure로의 SQL Server 관리형 백업](../../relational-databases/backup-restore/sql-server-managed-backup-to-microsoft-azure.md)  
+ [Azure로의 SQL Server 관리형 백업](../../relational-databases/backup-restore/sql-server-managed-backup-to-microsoft-azure.md)

@@ -18,12 +18,12 @@ helpviewer_keywords:
 ms.assetid: 6e6cbd25-6b1c-4e21-9ade-4584e243fd8f
 author: MikeRayMSFT
 ms.author: mikeray
-ms.openlocfilehash: 2378ecd42d821a818a539350f872ed0d12099a8d
-ms.sourcegitcommit: 216f377451e53874718ae1645a2611cdb198808a
+ms.openlocfilehash: 9f37e62285ffcd3623bd1a26609466556e07634c
+ms.sourcegitcommit: 04cf7905fa32e0a9a44575a6f9641d9a2e5ac0f8
 ms.translationtype: HT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 07/28/2020
-ms.locfileid: "87242968"
+ms.lasthandoff: 10/07/2020
+ms.locfileid: "91810420"
 ---
 # <a name="sql-server-utility-features-and-tasks"></a>SQL Server 유틸리티 기능 및 태스크
  [!INCLUDE [SQL Server](../../includes/applies-to-version/sqlserver.md)]
@@ -57,8 +57,7 @@ ms.locfileid: "87242968"
 |SQL Server의 관리되는 인스턴스에서 유틸리티 데이터 수집기에 대한 프록시 계정을 변경하는 방법을 설명합니다.|[SQL Server 관리되는 인스턴스의 유틸리티 컬렉션 집합을 위한 프록시 계정 변경&#40;SQL Server 유틸리티&#41;](../../relational-databases/manage/change-proxy-account-for-utility-collection-on-managed-sql-server.md)|  
 |SQL Server의 한 인스턴스에서 다른 인스턴스로 UCP를 이동하는 방법을 설명합니다.|[UCP를 한 SQL Server 인스턴스에서 다른 인스턴스로 이동&#40;SQL Server 유틸리티&#41;](../../relational-databases/manage/move-a-ucp-from-one-instance-of-sql-server-to-another-sql-server-utility.md)|  
 |UCP를 제거하는 방법을 설명합니다.|[유틸리티 제어 지점 제거&#40;SQL Server 유틸리티&#41;](../../relational-databases/manage/remove-a-utility-control-point-sql-server-utility.md)|  
-|SQL Server 유틸리티의 문제를 해결하는 방법을 설명합니다.|[SQL Server 유틸리티 문제 해결](https://msdn.microsoft.com/library/f5f47c2a-38ea-40f8-9767-9bc138d14453)|  
+|SQL Server 유틸리티의 문제를 해결하는 방법을 설명합니다.|[SQL Server 유틸리티 문제 해결](/previous-versions/sql/sql-server-2016/ee210592(v=sql.130))|  
 |SQL Server 리소스 상태의 문제를 해결하는 방법을 설명합니다.|[SQL Server 리소스 상태 문제 해결&#40;SQL Server 유틸리티&#41;](../../relational-databases/manage/troubleshoot-sql-server-resource-health-sql-server-utility.md)|  
 |유틸리티 탐색기 F1 도움말 항목에 대한 링크입니다.|[유틸리티 탐색기 F1 도움말](../../relational-databases/manage/utility-explorer-f1-help.md)|  
-  
   

@@ -11,12 +11,12 @@ ms.topic: quickstart
 ms.assetid: 9e1d94ce-2c93-45d1-ae2a-2a7d1fa094c4
 author: rothja
 ms.author: jroth
-ms.openlocfilehash: 332fde643d285b20c0bd772918f8c9cf1bf578f2
-ms.sourcegitcommit: 21bedbae28840e2f96f5e8b08bcfc794f305c8bc
+ms.openlocfilehash: a0fffe198adc37a9cabe232d5509e9df1652013b
+ms.sourcegitcommit: 04cf7905fa32e0a9a44575a6f9641d9a2e5ac0f8
 ms.translationtype: HT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 08/06/2020
-ms.locfileid: "87864960"
+ms.lasthandoff: 10/07/2020
+ms.locfileid: "91809129"
 ---
 # <a name="quickstart-sql-backup-and-restore-to-azure-blob-storage-service"></a>빠른 시작: Azure Blob Storage 서비스로 SQL 백업 및 복원
 [!INCLUDE[tsql-appliesto-ss2008-asdbmi-xxxx-xxx-md.md](../includes/tsql-appliesto-ss2008-asdbmi-xxxx-xxx-md.md)]
@@ -26,10 +26,10 @@ ms.locfileid: "87864960"
 이 빠른 시작을 완료하려면 [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)] 백업 및 복원 개념과 T-SQL 구문에 대해 잘 알고 있어야 합니다.  Azure Storage 계정, SQL Server Management Studio(SSMS), 그리고 SQL Server 또는 Azure SQL Managed Instance를 실행하는 서버에 대한 액세스 권한이 필요합니다. 또한 BACKUP 및 RESTORE 명령을 실행하는 데 사용하는 계정은 **모든 자격 증명 변경** 권한이 있는 **db_backup operator** 데이터베이스 역할에 있어야 합니다. 
 
 - 체험 [Azure 계정](https://azure.microsoft.com/offers/ms-azr-0044p/)을 받습니다.
-- [Azure Storage 계정](https://docs.microsoft.com/azure/storage/common/storage-quickstart-create-account?tabs=portal)을 만듭니다.
-- [SQL Server Management Studio](https://docs.microsoft.com/sql/ssms/download-sql-server-management-studio-ssms)를 설치합니다.
+- [Azure Storage 계정](/azure/storage/common/storage-quickstart-create-account?tabs=portal)을 만듭니다.
+- [SQL Server Management Studio](../ssms/download-sql-server-management-studio-ssms.md)를 설치합니다.
 - [SQL Server 2017 Developer Edition](https://www.microsoft.com/sql-server/sql-server-downloads)을 설치하거나 [Azure SQL 가상 머신](/azure/sql-database/sql-database-managed-instance-configure-vm) 또는 [지점 및 사이트 간](/azure/sql-database/sql-database-managed-instance-configure-p2s) 연결을 통해 설정된 연결을 사용하여 [Azure SQL Managed Instance](/azure/sql-database/sql-database-managed-instance-get-started)를 배포합니다.
-- 사용자 계정에 [db_backupoperator](https://docs.microsoft.com/sql/relational-databases/security/authentication-access/database-level-roles) 역할을 할당하고 [모든 자격 증명 변경](https://docs.microsoft.com/sql/t-sql/statements/alter-credential-transact-sql) 권한을 부여합니다. 
+- 사용자 계정에 [db_backupoperator](./security/authentication-access/database-level-roles.md) 역할을 할당하고 [모든 자격 증명 변경](../t-sql/statements/alter-credential-transact-sql.md) 권한을 부여합니다. 
 
 ## <a name="create-azure-blob-container"></a>Azure Blob 컨테이너 만들기
 컨테이너는 Blob 집합의 그룹화를 제공합니다. 모든 Blob은 컨테이너에 있어야 합니다. 스토리지 계정은 개수에 제한 없이 컨테이너를 포함할 수 있지만 적어도 하나는 포함해야 합니다. 한 컨테이너에 저장될 수 있는 Blob 수에도 제한이 없습니다. 
@@ -46,7 +46,7 @@ ms.locfileid: "87864960"
     ![새 컨테이너](media/tutorial-sql-server-backup-and-restore-to-azure-blob-storage-service/new-container.png)
 
   > [!NOTE]
-  > 공용 컨테이너를 만들도록 선택한 경우에도 SQL Server 백업 및 복원에 스토리지 계정 인증이 필요합니다. 또한 REST API를 사용하여 프로그래밍 방식으로 컨테이너를 만들 수도 있습니다. 자세한 내용은 [컨테이너 만들기](https://docs.microsoft.com/rest/api/storageservices/Create-Container)를 참조하세요.
+  > 공용 컨테이너를 만들도록 선택한 경우에도 SQL Server 백업 및 복원에 스토리지 계정 인증이 필요합니다. 또한 REST API를 사용하여 프로그래밍 방식으로 컨테이너를 만들 수도 있습니다. 자세한 내용은 [컨테이너 만들기](/rest/api/storageservices/Create-Container)를 참조하세요.
 
 ## <a name="create-a-test-database"></a>테스트 데이터베이스 만들기 
 이 단계에서는 SSMS(SQL Server Management Studio)를 사용하여 테스트 데이터베이스를 만듭니다. 
@@ -235,4 +235,3 @@ URL = N'https://msftutorialstorage.blob.core.windows.net/sql-backup/sqltestdb_ba
   
 -   [Microsoft Azure Blob Storage 서비스로 SQL Server 백업 및 복원](../relational-databases/backup-restore/sql-server-backup-and-restore-with-microsoft-azure-blob-storage-service.md)   
 -   [URL에 SQL Server 백업 모범 사례 및 문제 해결](../relational-databases/backup-restore/sql-server-backup-to-url-best-practices-and-troubleshooting.md)  
-  

@@ -11,12 +11,12 @@ ms.topic: conceptual
 ms.assetid: 48a9a0a3-930f-477b-bd0f-e82e77999ecc
 author: markingmyname
 ms.author: maghan
-ms.openlocfilehash: 10c344ac156a59dda89e678709e6b846bf3c33a0
-ms.sourcegitcommit: dd36d1cbe32cd5a65c6638e8f252b0bd8145e165
+ms.openlocfilehash: cededc3af0cb9c5e1980246ef67491c7e68fc960
+ms.sourcegitcommit: 4d370399f6f142e25075b3714e5c2ce056b1bfd0
 ms.translationtype: HT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 09/08/2020
-ms.locfileid: "89541187"
+ms.lasthandoff: 10/09/2020
+ms.locfileid: "91868144"
 ---
 # <a name="creating-a-memory-optimized-table-and-a-natively-compiled-stored-procedure"></a>메모리 액세스에 최적화된 테이블 및 고유하게 컴파일된 저장 프로시저 만들기
 
@@ -42,7 +42,7 @@ ms.locfileid: "89541187"
 
 ### <a name="natively-compiled-stored-procedures"></a>고유하게 컴파일된 저장 프로시저
 
-고유하게 컴파일된 저장 프로시저는 네이티브 코드로 컴파일된 [!INCLUDE[tsql](../../includes/tsql-md.md)] 저장 프로시저이며 메모리 최적화 테이블에 액세스합니다. 고유하게 컴파일된 저장 프로시저는 쿼리 및 비즈니스 논리가 저장 프로시저에서 효율적으로 실행되도록 해 줍니다. 네이티브 컴파일 프로세스에 대한 자세한 내용은 [Native Compilation of Tables and Stored Procedures](../../relational-databases/in-memory-oltp/native-compilation-of-tables-and-stored-procedures.md)을 참조하세요. 디스크 기반 저장 프로시저를 고유하게 컴파일된 저장 프로시저로 마이그레이션하는 방법은 [고유하게 컴파일된 저장 프로시저의 마이그레이션 문제](../../relational-databases/in-memory-oltp/migration-issues-for-natively-compiled-stored-procedures.md)를 참조하세요.
+고유하게 컴파일된 저장 프로시저는 네이티브 코드로 컴파일된 [!INCLUDE[tsql](../../includes/tsql-md.md)] 저장 프로시저이며 메모리 최적화 테이블에 액세스합니다. 고유하게 컴파일된 저장 프로시저는 쿼리 및 비즈니스 논리가 저장 프로시저에서 효율적으로 실행되도록 해 줍니다. 네이티브 컴파일 프로세스에 대한 자세한 내용은 [Native Compilation of Tables and Stored Procedures](../../relational-databases/in-memory-oltp/native-compilation-of-tables-and-stored-procedures.md)을 참조하세요. 디스크 기반 저장 프로시저를 고유하게 컴파일된 저장 프로시저로 마이그레이션하는 방법은 [고유하게 컴파일된 저장 프로시저의 마이그레이션 문제](./a-guide-to-query-processing-for-memory-optimized-tables.md)를 참조하세요.
 
 > [!NOTE]
 > 해석된(디스크 기반) 저장 프로시저와 고유하게 컴파일된 저장 프로시저 간의 한 가지 차이점은 해석된 저장 프로시저가 처음 실행할 때 컴파일되는 반면 고유하게 컴파일된 저장 프로시저는 생성할 때 컴파일된다는 것입니다. 고유하게 컴파일된 저장 프로시저를 사용하면 만들 때 많은 오류 조건을 검색하여 고유하게 컴파일된 저장 프로시저 만들기가 실패할 수 있습니다(예: 산술 오버플로, 형식 변환, 일부 0으로 나누기 조건). 해석된 저장된 프로시저를 사용하면 일반적으로 저장 프로시저를 만들 때 이러한 오류 조건으로 인해 오류가 발생하지 않지만 모든 실행이 실패합니다.
@@ -291,6 +291,5 @@ ORDER BY so.so_id, sod.lineitem_id
 ```  
   
 ## <a name="see-also"></a>참고 항목  
- [메모리 내 OLTP 코드 예제](../../relational-databases/in-memory-oltp/in-memory-oltp-code-samples.md)  
-  
+ [메모리 내 OLTP 코드 예제](./sample-database-for-in-memory-oltp.md)  
   

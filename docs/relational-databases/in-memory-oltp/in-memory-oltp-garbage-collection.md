@@ -12,12 +12,12 @@ ms.assetid: 940140a7-4785-46fc-8bf4-151435dccd3c
 author: markingmyname
 ms.author: maghan
 monikerRange: =azuresqldb-current||>=sql-server-2016||=sqlallproducts-allversions||>=sql-server-linux-2017||=azuresqldb-mi-current
-ms.openlocfilehash: 8784e1fe3f44cd2927ffc1f1a48d51242671051a
-ms.sourcegitcommit: dd36d1cbe32cd5a65c6638e8f252b0bd8145e165
+ms.openlocfilehash: 92a1137dd1fa20ad2a6748be9309d812fdfc38f6
+ms.sourcegitcommit: 4d370399f6f142e25075b3714e5c2ce056b1bfd0
 ms.translationtype: HT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 09/08/2020
-ms.locfileid: "89537037"
+ms.lasthandoff: 10/09/2020
+ms.locfileid: "91866759"
 ---
 # <a name="in-memory-oltp-garbage-collection"></a>메모리 내 OLTP 가비지 수집
 [!INCLUDE [SQL Server Azure SQL Database](../../includes/applies-to-version/sql-asdb.md)]
@@ -46,6 +46,5 @@ ms.locfileid: "89537037"
  사용자 트랜잭션은 커밋 후 실행에 사용된 스케줄러와 연결된 큐에서 모든 큐 항목을 식별한 다음 메모리를 해제합니다. 스케줄러에서 가비지 수집 큐가 비어 있으면 현재 NUMA 노드에서 비어 있지 않은 큐를 검색합니다. 트랜잭션 활동이 적고 메모리 가중이 있는 경우 기본 가비지 수집기 스레드가 개입하여 어떤 큐에서든 행의 가비지 수집에 액세스할 수 있습니다. 예를 들어 많은 수의 행을 삭제한 후 트랜잭션 활동이 없고 메모리 가중이 없는 경우 트랜잭션 활동이 다시 시작되거나 메모리 가중이 있을 때까지 삭제된 행에서 가비지를 수집하지 않습니다.  
   
 ## <a name="see-also"></a>참고 항목  
- [메모리 내 OLTP의 메모리 관리](https://msdn.microsoft.com/library/d82f21fa-6be1-4723-a72e-f2526fafd1b6)  
-  
+ [메모리 내 OLTP의 메모리 관리](/previous-versions/sql/sql-server-2016/dn465872(v=sql.130))  
   
