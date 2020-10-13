@@ -145,23 +145,23 @@
           href: ../reporting-services/install-windows/install-reporting-and-internet-information-services-side-by-side.md
         - name: SQL Server 장애 조치(failover) 클러스터에서 보고서 서버 데이터베이스 호스팅
           href: ../reporting-services/install-windows/host-a-report-server-database-in-a-sql-server-failover-cluster.md
-    - name: Reporting Services 구성 관리자(기본 모드)
+    - name: 보고서 서버 구성 관리자(기본 모드)
       href: ../reporting-services/install-windows/reporting-services-configuration-manager-native-mode.md
       items:
-        - name: 보고서 서버 서비스 계정 구성(SSRS 구성 관리자)
+        - name: 보고서 서버 서비스 계정 구성
           href: ../reporting-services/install-windows/configure-the-report-server-service-account-ssrs-configuration-manager.md
-        - name: 보고서 서버 URL 구성(SSRS 구성 관리자)
+        - name: 보고서 서버 URL 구성
           href: ../reporting-services/install-windows/configure-report-server-urls-ssrs-configuration-manager.md
           items:
-            - name: URL 예약 및 등록 정보(SSRS 구성 관리자)
+            - name: URL 예약 및 등록 정보
               href: ../reporting-services/install-windows/about-url-reservations-and-registration-ssrs-configuration-manager.md
-            - name: URL 구성(SSRS 구성 관리자)
+            - name: URL 구성
               href: ../reporting-services/install-windows/configure-a-url-ssrs-configuration-manager.md
-            - name: URL 예약 구문(SSRS 구성 관리자)
+            - name: URL 예약 구문
               href: ../reporting-services/install-windows/url-reservation-syntax-ssrs-configuration-manager.md
-            - name: 구성 파일의 URL(SSRS 구성 관리자)
+            - name: 구성 파일의 URL
               href: ../reporting-services/install-windows/urls-in-configuration-files-ssrs-configuration-manager.md
-            - name: 다중 인스턴스 보고서 서버 배포를 위한 URL 예약(SSRS 구성 관리자)
+            - name: 다중 인스턴스 보고서 서버 배포를 위한 URL 예약
               href: ../reporting-services/install-windows/url-reservations-for-multi-instance-report-server-deployments.md
         - name: 데이터베이스 만들기
           href: ../reporting-services/install-windows/ssrs-report-server-create-a-report-server-database.md
@@ -171,7 +171,7 @@
           href: ../reporting-services/install-windows/configure-a-report-server-database-connection-ssrs-configuration-manager.md
         - name: 전자 메일 설정 - Reporting Services 기본 모드(구성 관리자)
           href: ../reporting-services/install-windows/e-mail-settings-reporting-services-native-mode-configuration-manager.md
-        - name: 무인 실행 계정 구성(SSRS 구성 관리자)
+        - name: 무인 실행 계정 구성
           href: ../reporting-services/install-windows/configure-the-unattended-execution-account-ssrs-configuration-manager.md
         - name: SSRS 암호화 키 - 암호화 키 관리
           href: ../reporting-services/install-windows/ssrs-encryption-keys-manage-encryption-keys.md
@@ -188,7 +188,7 @@
               href: ../reporting-services/install-windows/add-and-remove-encryption-keys-for-scale-out-deployment.md
         - name: 구독 설정 및 파일 공유 계정(구성 관리자)
           href: ../reporting-services/install-windows/subscription-settings-and-a-file-share-account-configuration-manager.md
-        - name: 기본 모드 보고서 서버 확장 배포 구성(SSRS 구성 관리자)
+        - name: 기본 모드 보고서 서버 확장 배포 구성
           href: ../reporting-services/install-windows/configure-a-native-mode-report-server-scale-out-deployment.md
         - name: Power BI 통합
           href: ../reporting-services/install-windows/power-bi-report-server-integration-configuration-manager.md
