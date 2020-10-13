@@ -12,12 +12,12 @@ ms.assetid: 38512a22-7e63-436f-9c13-dde7cf5c2202
 author: Jodebrui
 ms.author: jodebrui
 monikerRange: =azuresqldb-current||>=sql-server-2016||=sqlallproducts-allversions||>=sql-server-linux-2017||=azuresqldb-mi-current
-ms.openlocfilehash: e8f6369de798c04805e2c5facb01fcfd6dc31153
-ms.sourcegitcommit: da88320c474c1c9124574f90d549c50ee3387b4c
+ms.openlocfilehash: 699819c74630687f4548d248632536e6e713e68b
+ms.sourcegitcommit: 4d370399f6f142e25075b3714e5c2ce056b1bfd0
 ms.translationtype: HT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 07/01/2020
-ms.locfileid: "85723238"
+ms.lasthandoff: 10/09/2020
+ms.locfileid: "91869371"
 ---
 # <a name="faster-temp-table-and-table-variable-by-using-memory-optimization"></a>메모리 최적화를 사용한 더 빠른 임시 테이블 및 테이블 변수
 [!INCLUDE [SQL Server Azure SQL Database](../../includes/applies-to-version/sql-asdb.md)]
@@ -429,11 +429,10 @@ Batch execution completed 5001 times.
   
 ## <a name="h-see-also"></a>H. 참고 항목  
   
-- [메모리 액세스에 최적화된 테이블](../../relational-databases/in-memory-oltp/memory-optimized-tables.md)
+- [메모리 액세스에 최적화된 테이블](./sample-database-for-in-memory-oltp.md)
 
 - [메모리 액세스에 최적화된 개체에 대한 내구성 정의](../../relational-databases/in-memory-oltp/defining-durability-for-memory-optimized-objects.md)
 
 - [2017년 9월 블로그에 공지된 부적절한 메모리 부족 오류 가능성을 제거하기 위한 누적 업데이트입니다.](https://support.microsoft.com/help/4025208/fix-memory-leak-occurs-when-you-use-memory-optimized-tables-in-microso)
     - [SQL Server 2016 빌드 버전](https://support.microsoft.com/help/3177312/sql-server-2016-build-versions)은 릴리스, 서비스 팩 및 누적 업데이트에 대한 자세한 세부 정보를 제공합니다.
     - 이러한 부적절한 오류는 Enterprise 버전의 SQL Server에서 전혀 발생하지 않았습니다.
-

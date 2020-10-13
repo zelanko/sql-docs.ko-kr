@@ -16,12 +16,12 @@ ms.assetid: 09830897-cc10-46b8-95f5-e0e9681b668c
 author: stevestein
 ms.author: sstein
 monikerRange: '>=aps-pdw-2016||=azuresqldb-current||=azure-sqldw-latest||>=sql-server-2016||=sqlallproducts-allversions||>=sql-server-linux-2017||=azuresqldb-mi-current'
-ms.openlocfilehash: c5792d13fc9fcfff9ffeadaf5aadee948f6060e6
-ms.sourcegitcommit: e700497f962e4c2274df16d9e651059b42ff1a10
+ms.openlocfilehash: 0ddf8c0360de470d5640ed650c4b8339061c41b4
+ms.sourcegitcommit: 04cf7905fa32e0a9a44575a6f9641d9a2e5ac0f8
 ms.translationtype: HT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 08/17/2020
-ms.locfileid: "88463830"
+ms.lasthandoff: 10/07/2020
+ms.locfileid: "91810489"
 ---
 # <a name="table-column-properties-sql-server-management-studio"></a>테이블 열 속성(SQL Server Management Studio)
 [!INCLUDE [sqlserver2016-asdb-asdbmi-asa-pdw](../../includes/applies-to-version/sqlserver2016-asdb-asdbmi-asa-pdw.md)]
@@ -83,7 +83,7 @@ ms.locfileid: "88463830"
  선택한 열의 데이터 형식을 확실하게 결정할 수 있는지 여부를 표시합니다.  
   
  **DTS 게시됨**  
- 열의 DTS 게시 여부를 표시합니다. ([데이터 변환 서비스가 더 이상 사용되지 않음](https://msdn.microsoft.com/library/cc707786(v=sql.130).aspx#Anchor_0)) 
+ 열의 DTS 게시 여부를 표시합니다. ([데이터 변환 서비스가 더 이상 사용되지 않음](/previous-versions/sql/sql-server-2008-r2/cc707786(v=sql.105))) 
   
  **전체 텍스트 사양**  
  전체 텍스트 인덱스에 대한 정보를 표시합니다. 이 속성 값은 **전체 텍스트가 인덱싱됨** 자식 속성의 값이며 현재 열이 전체 텍스트 인덱싱이 적용된 열인지 여부를 나타냅니다.  
@@ -137,5 +137,4 @@ ms.locfileid: "88463830"
   
 > [!NOTE]  
 >  **(max)** 데이터 형식의 길이는 각 행에 따라 달라집니다. **sp_help** 는 **(max)** 열의 길이로 (-1)을 반환합니다. [!INCLUDE[ssManStudioFull](../../includes/ssmanstudiofull-md.md)] 는 열 크기로 -1을 표시합니다.  
-  
   

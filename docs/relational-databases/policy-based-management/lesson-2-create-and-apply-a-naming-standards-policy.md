@@ -11,12 +11,12 @@ ms.topic: conceptual
 ms.assetid: 87e51f4e-156c-4def-8572-76a15075d75e
 author: VanMSFT
 ms.author: vanto
-ms.openlocfilehash: 86014f1a4c7ee4f9c002df67d2f739124dc70e2a
-ms.sourcegitcommit: da88320c474c1c9124574f90d549c50ee3387b4c
+ms.openlocfilehash: 246c9d419d6f9b8fdbaae2619ef45df4d9465c36
+ms.sourcegitcommit: 783b35f6478006d654491cb52f6edf108acf2482
 ms.translationtype: HT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 07/01/2020
-ms.locfileid: "85785076"
+ms.lasthandoff: 10/09/2020
+ms.locfileid: "91892433"
 ---
 # <a name="lesson-2-create-and-apply-a-naming-standards-policy"></a>2단원: 명명 표준 정책 만들기 및 적용
  [!INCLUDE [SQL Server](../../includes/applies-to-version/sqlserver.md)]
@@ -26,7 +26,7 @@ ms.locfileid: "85785076"
 ## <a name="prerequisites"></a>사전 요구 사항
 이 자습서를 완료하려면 SQL Server Management Studio, SQL Server를 실행하는 서버에 대한 액세스가 필요합니다.
 
-- [SQL Server Management Studio](https://docs.microsoft.com/sql/ssms/download-sql-server-management-studio-ssms)를 설치합니다.
+- [SQL Server Management Studio](../../ssms/download-sql-server-management-studio-ssms.md)를 설치합니다.
 - [SQL Server 2017 Developer Edition](https://www.microsoft.com/sql-server/sql-server-downloads)을 설치합니다.
   
 ## <a name="create-the-finance-database"></a>Finance 데이터베이스 만들기  
@@ -160,4 +160,4 @@ ms.locfileid: "85785076"
 자습서 목록을 보려면 [SQL Server 2016 자습서](../../sql-server/tutorials-for-sql-server-2016.md)를 참조하세요.  
   
 ## <a name="see-also"></a>참고 항목  
-[정책 기반 관리를 사용하여 서버 관리](../../relational-databases/policy-based-management/administer-servers-by-using-policy-based-management.md)  
+[정책 기반 관리를 사용하여 서버 관리](../../relational-databases/policy-based-management/administer-servers-by-using-policy-based-management.md)

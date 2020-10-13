@@ -12,12 +12,12 @@ ms.assetid: e1328615-6b59-4473-8a8d-4f360f73187d
 author: MikeRayMSFT
 ms.author: mikeray
 monikerRange: =azuresqldb-current||>=sql-server-2016||=sqlallproducts-allversions||>=sql-server-linux-2017||=azuresqldb-mi-current
-ms.openlocfilehash: 24ecd09d3f649e0a18e76db87c05ee2be79c0cb9
-ms.sourcegitcommit: e700497f962e4c2274df16d9e651059b42ff1a10
+ms.openlocfilehash: 05ca5334dd7f83ac31c8e118cad983b25d049b03
+ms.sourcegitcommit: 4d370399f6f142e25075b3714e5c2ce056b1bfd0
 ms.translationtype: HT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 08/17/2020
-ms.locfileid: "88381986"
+ms.lasthandoff: 10/09/2020
+ms.locfileid: "91863910"
 ---
 # <a name="get-started-with-columnstore-for-real-time-operational-analytics"></a>실시간 운영 분석을 위한 Columnstore 시작
 [!INCLUDE [SQL Server Azure SQL Database](../../includes/applies-to-version/sql-asdb.md)]
@@ -91,21 +91,21 @@ ms.locfileid: "88381986"
   
 -   [실시간 운영 분석에 대한 비즈니스 사례](https://blogs.technet.microsoft.com/dataplatforminsider/2015/12/09/real-time-operational-analytics-using-in-memory-technology/)  
   
--   [실시간 운영 분석에 비클러스터형 columnstore 인덱스 사용](https://blogs.msdn.microsoft.com/sqlserverstorageengine/2016/02/29/real-time-operational-analytics-using-nonclustered-columnstore-index/)  
+-   [실시간 운영 분석에 비클러스터형 columnstore 인덱스 사용](/archive/blogs/sqlserverstorageengine/real-time-operational-analytics-using-nonclustered-columnstore-index)  
   
--   [비클러스터형 columnstore 인덱스를 사용하는 간단한 예제](https://blogs.msdn.microsoft.com/sqlserverstorageengine/2016/02/29/real-time-operational-analytics-simple-example-using-nonclustered-clustered-columnstore-index-ncci/)  
+-   [비클러스터형 columnstore 인덱스를 사용하는 간단한 예제](/archive/blogs/sqlserverstorageengine/real-time-operational-analytics-simple-example-using-nonclustered-clustered-columnstore-index-ncci)  
   
--   [SQL Server가 트랜잭션 워크로드에서 비클러스터형 columnstore 인덱스를 유지 관리하는 방법](https://blogs.msdn.microsoft.com/sqlserverstorageengine/2016/03/04/real-time-operational-analytics-dml-operations-and-nonclustered-columnstore-index-ncci-in-sql-server-2016/)  
+-   [SQL Server가 트랜잭션 워크로드에서 비클러스터형 columnstore 인덱스를 유지 관리하는 방법](/archive/blogs/sqlserverstorageengine/real-time-operational-analytics-dml-operations-and-nonclustered-columnstore-index-ncci-in-sql-server-2016)  
   
--   [필터링된 인덱스를 사용하여 비클러스터형 columnstore 인덱스 유지 관리의 영향 최소화](https://blogs.msdn.microsoft.com/sqlserverstorageengine/2016/03/06/real-time-operational-analytics-filtered-nonclustered-columnstore-index-ncci/)  
+-   [필터링된 인덱스를 사용하여 비클러스터형 columnstore 인덱스 유지 관리의 영향 최소화](/archive/blogs/sqlserverstorageengine/real-time-operational-analytics-filtered-nonclustered-columnstore-index-ncci)  
   
--   [압축 지연을 사용하여 비클러스터형 columnstore 인덱스 유지 관리의 영향 최소화](https://blogs.msdn.microsoft.com/sqlserverstorageengine/2016/03/06/real-time-operational-analytics-compression-delay-option-for-nonclustered-columnstore-index-ncci/)  
+-   [압축 지연을 사용하여 비클러스터형 columnstore 인덱스 유지 관리의 영향 최소화](/archive/blogs/sqlserverstorageengine/real-time-operational-analytics-compression-delay-option-for-nonclustered-columnstore-index-ncci)  
   
--   [압축 지연 - 성능 수치를 사용하여 비클러스터형 columnstore 인덱스 유지 관리의 영향 최소화](https://blogs.msdn.microsoft.com/sqlserverstorageengine/2016/03/06/real-time-operational-analytics-compression-delay-option-with-ncci-and-the-performance/)  
+-   [압축 지연 - 성능 수치를 사용하여 비클러스터형 columnstore 인덱스 유지 관리의 영향 최소화](/archive/blogs/sqlserverstorageengine/real-time-operational-analytics-compression-delay-option-with-ncci-and-the-performance)  
   
--   [메모리 최적화 테이블을 사용한 실시간 운영 분석](https://blogs.msdn.microsoft.com/sqlserverstorageengine/2016/03/07/real-time-operational-analytics-memory-optimized-table-and-columnstore-index/)  
+-   [메모리 최적화 테이블을 사용한 실시간 운영 분석](/archive/blogs/sqlserverstorageengine/real-time-operational-analytics-memory-optimized-table-and-columnstore-index)  
   
--   [Columnstore 인덱스와 행 그룹에 대한 병합 정책](https://blogs.msdn.microsoft.com/sqlserverstorageengine/2016/03/08/columnstore-index-merge-policy-for-reorganize/)  
+-   [Columnstore 인덱스와 행 그룹에 대한 병합 정책](/archive/blogs/sqlserverstorageengine/columnstore-index-merge-policy-for-reorganize)  
   
 ## <a name="performance-tip-1-use-filtered-indexes-to-improve-query-performance"></a>성능 팁 1: 필터링된 인덱스를 사용하여 쿼리 성능 향상  
  실시간 운영 분석을 실행하면 OLTP 워크로드의 성능이 영향을 받을 수 있습니다. 이 영향을 최소화해야 합니다. 아래 예에서는 실시간 분석을 제공하면서 필터링된 인덱스를 사용하여 비클러스터형 columnstore 인덱스가 트랜잭션 워크로드에 미치는 영향을 최소화하는 방법을 보여줍니다.  
@@ -165,7 +165,7 @@ Group By customername
   
  ![쿼리 계획](../../relational-databases/indexes/media/query-plan-columnstore.png "쿼리 계획")  
   
- [필터링된 비클러스터형 columnstore 인덱스](https://blogs.msdn.microsoft.com/sqlserverstorageengine/2016/03/06/real-time-operational-analytics-filtered-nonclustered-columnstore-index-ncci/)에 대한 자세한 내용은 블로그를 참조하세요.  
+ [필터링된 비클러스터형 columnstore 인덱스](/archive/blogs/sqlserverstorageengine/real-time-operational-analytics-filtered-nonclustered-columnstore-index-ncci)에 대한 자세한 내용은 블로그를 참조하세요.  
   
 ## <a name="performance-tip-2-offload-analytics-to-always-on-readable-secondary"></a>성능 팁 2: 분석을 Always On 읽기 가능한 보조로 오프로드  
  필터링된 columnstore 인덱스를 사용하여 columnstore 인덱스 유지 관리를 최소화할 수 있지만 분석 쿼리에는 여전히 운영 워크로드 성능에 영향을 주는 많은 컴퓨팅 리소스(CPU, I/O, 메모리)가 필요할 수 있습니다. 업무에 중요한 워크로드에는 대부분 Always On 구성을 사용하는 것이 좋습니다. 이 구성에서는 분석 실행을 읽기 가능한 보조로 오프로드하여 그 영향을 제거할 수 있습니다.  
@@ -192,7 +192,7 @@ CREATE NONCLUSTERED COLUMNSTORE index t_colstor_cci on t_colstor (accountkey, ac
 ;  
 ```  
   
- [압축 지연](https://blogs.msdn.microsoft.com/sqlserverstorageengine/2016/03/06/real-time-operational-analytics-compression-delay-option-for-nonclustered-columnstore-index-ncci/)에 대한 자세한 내용은 블로그를 참조하세요.  
+ [압축 지연](/archive/blogs/sqlserverstorageengine/real-time-operational-analytics-compression-delay-option-for-nonclustered-columnstore-index-ncci)에 대한 자세한 내용은 블로그를 참조하세요.  
   
  권장 모범 사례는 다음과 같습니다.  
   
@@ -222,4 +222,3 @@ ORDER BY created_time DESC;
  [Columnstore 인덱스 쿼리 성능](../../relational-databases/indexes/columnstore-indexes-query-performance.md)   
  [데이터 웨어하우스용 Columnstore 인덱스](../../relational-databases/indexes/columnstore-indexes-data-warehouse.md)   
  [인덱스 다시 구성 및 다시 작성](../../relational-databases/indexes/reorganize-and-rebuild-indexes.md)
-  

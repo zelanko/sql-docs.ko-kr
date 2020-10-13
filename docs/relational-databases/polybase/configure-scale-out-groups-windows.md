@@ -9,12 +9,12 @@ author: MikeRayMSFT
 ms.author: mikeray
 ms.reviewer: ''
 monikerRange: '>= sql-server-2016 || =sqlallproducts-allversions'
-ms.openlocfilehash: 2fee6052dea18c25b093ee75b53c56b1dd053aad
-ms.sourcegitcommit: 9be0047805ff14e26710cfbc6e10d6d6809e8b2c
+ms.openlocfilehash: ddf0fe7b4f3f14963291d8ae930d7d680c374cb2
+ms.sourcegitcommit: 783b35f6478006d654491cb52f6edf108acf2482
 ms.translationtype: HT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 08/27/2020
-ms.locfileid: "89042502"
+ms.lasthandoff: 10/09/2020
+ms.locfileid: "91892143"
 ---
 # <a name="configure-polybase-scale-out-groups-on-windows"></a>Windows에서 PolyBase 스케일 아웃 그룹 구성
 
@@ -109,6 +109,6 @@ ms.locfileid: "89042502"
   
 ## <a name="next-steps"></a>다음 단계  
 
-문제를 해결하려면 [PolyBase troubleshooting with dynamic management views](https://msdn.microsoft.com/library/ce9078b7-a750-4f47-b23e-90b83b783d80)을(를) 참조하십시오.
+문제를 해결하려면 [PolyBase troubleshooting with dynamic management views](/previous-versions/sql/sql-server-2016/mt146389(v=sql.130))을(를) 참조하십시오.
   
 PolyBase에 대한 자세한 내용은 [PolyBase 개요](../../relational-databases/polybase/polybase-guide.md)를 참조하세요.

@@ -18,12 +18,12 @@ ms.assetid: ad8a2fd4-f092-4c0f-be85-54ce8b9d725a
 author: stevestein
 ms.author: sstein
 monikerRange: '>=aps-pdw-2016||=azuresqldb-current||=azure-sqldw-latest||>=sql-server-2016||=sqlallproducts-allversions||>=sql-server-linux-2017||=azuresqldb-mi-current'
-ms.openlocfilehash: 1cc8c79f0a8020d4301e6bc8653f2d3fcf600149
-ms.sourcegitcommit: e700497f962e4c2274df16d9e651059b42ff1a10
+ms.openlocfilehash: 018b1388e283541f883844daf77c68267c535a9c
+ms.sourcegitcommit: 04cf7905fa32e0a9a44575a6f9641d9a2e5ac0f8
 ms.translationtype: HT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 08/17/2020
-ms.locfileid: "88463779"
+ms.lasthandoff: 10/07/2020
+ms.locfileid: "91810475"
 ---
 # <a name="table-properties---ssms"></a>Table Properties - SSMS
 [!INCLUDE [sqlserver2016-asdb-asdbmi-asa-pdw](../../includes/applies-to-version/sqlserver2016-asdb-asdbmi-asa-pdw.md)]
@@ -69,7 +69,7 @@ ms.locfileid: "88463779"
  따옴표 붙은 식별자 옵션이 ON으로 설정된 상태에서 개체가 만들어졌는지 여부를 나타냅니다. 자세한 내용은 [SET QUOTED_IDENTIFIER&#40;Transact-SQL&#41;](../../t-sql/statements/set-quoted-identifier-transact-sql.md)를 참조하세요.  
   
  **잠금 에스컬레이션**  
- 테이블의 잠금 에스컬레이션 세분성을 나타냅니다. 데이터베이스 엔진에서의 잠금에 대한 자세한 내용은 [SQL Server 트랜잭션 잠금 및 행 버전 관리 지침](https://docs.microsoft.com/sql/relational-databases/sql-server-transaction-locking-and-row-versioning-guide?view=sql-server-ver15)을 참조하세요. 가능한 값은 다음과 같습니다.  
+ 테이블의 잠금 에스컬레이션 세분성을 나타냅니다. 데이터베이스 엔진에서의 잠금에 대한 자세한 내용은 [SQL Server 트랜잭션 잠금 및 행 버전 관리 지침](../sql-server-transaction-locking-and-row-versioning-guide.md?view=sql-server-ver15)을 참조하세요. 가능한 값은 다음과 같습니다.  
   
  AUTO  
  이 옵션을 선택하면 [!INCLUDE[ssDEnoversion](../../includes/ssdenoversion-md.md)] 에서 테이블 스키마에 적절한 잠금 에스컬레이션 세분성을 선택할 수 있습니다.  
@@ -175,5 +175,4 @@ ms.locfileid: "88463779"
 ## <a name="see-also"></a>참고 항목  
  [테이블 정의 보기](../../relational-databases/tables/view-the-table-definition.md)   
  [열 수정&#40;데이터베이스 엔진&#41;](../../relational-databases/tables/modify-columns-database-engine.md)  
-  
   

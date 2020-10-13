@@ -13,12 +13,12 @@ author: MikeRayMSFT
 ms.author: mikeray
 ms.reviewer: ''
 monikerRange: '>= sql-server-linux-ver15 || >= sql-server-2016 || =sqlallproducts-allversions'
-ms.openlocfilehash: 40763d6caadc420a3bb1794a4759c848d579007c
-ms.sourcegitcommit: 9b41725d6db9957dd7928a3620fe4db41eb51c6e
+ms.openlocfilehash: 137a4156dde6cfe89ff76998b383fb4ab17ea672
+ms.sourcegitcommit: 783b35f6478006d654491cb52f6edf108acf2482
 ms.translationtype: HT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 08/13/2020
-ms.locfileid: "88173384"
+ms.lasthandoff: 10/09/2020
+ms.locfileid: "91891343"
 ---
 # <a name="polybase-transact-sql-reference"></a>PolyBase Transact-SQL 참조
 
@@ -198,7 +198,7 @@ CREATE STATISTICS StatsForSensors on CarSensor_Data(CustomerKey, Speed)
 ## <a name="create-external-tables-for-azure-data-lake-store"></a>Azure Data Lake Store의 외부 테이블 만들기
 적용 대상: Azure SQL Data Warehouse
 
-자세한 내용은 [Azure Data Lake Store를 사용하여 로드](https://docs.microsoft.com/azure/sql-data-warehouse/sql-data-warehouse-load-from-azure-data-lake-store)를 참조하세요.
+자세한 내용은 [Azure Data Lake Store를 사용하여 로드](/azure/sql-data-warehouse/sql-data-warehouse-load-from-azure-data-lake-store)를 참조하세요.
 
 **1. 데이터베이스 범위 자격 증명 만들기**   
 
@@ -567,5 +567,5 @@ CREATE STATISTICS CustomerCustKeyStatistics ON sqlserver.customer (C_CUSTKEY) WI
 쿼리의 예제를 보려면 [PolyBase 쿼리](../../relational-databases/polybase/polybase-queries.md)를 참조하세요.  
   
 ## <a name="see-also"></a>관련 항목  
-[PolyBase 시작하기](../../relational-databases/polybase/get-started-with-polybase.md)   
+[PolyBase 시작하기](./polybase-guide.md)   
 [PolyBase 가이드](../../relational-databases/polybase/polybase-guide.md)

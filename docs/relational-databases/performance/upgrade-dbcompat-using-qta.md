@@ -21,12 +21,12 @@ ms.assetid: 07f8f594-75b4-4591-8c29-d63811e7753e
 author: pmasl
 ms.author: pelopes
 manager: amitban
-ms.openlocfilehash: ed1a88ec860edfc34535bbf812fd51f9930edb11
-ms.sourcegitcommit: 04fb4c2d7ccddd30745b334b319d9d2dd34325d6
+ms.openlocfilehash: aafbba1fe5c4d7fe8c20b1d50d97bbd8a4277bae
+ms.sourcegitcommit: 783b35f6478006d654491cb52f6edf108acf2482
 ms.translationtype: HT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 09/09/2020
-ms.locfileid: "89569930"
+ms.lasthandoff: 10/09/2020
+ms.locfileid: "91890973"
 ---
 # <a name="upgrading-databases-by-using-the-query-tuning-assistant"></a>쿼리 튜닝 길잡이를 사용하여 데이터베이스 업그레이드
 
@@ -230,4 +230,5 @@ QTA는 세션이 처음으로 만들어진 사용자 데이터베이스의 `msqt
 - [추적 플래그](../../t-sql/database-console-commands/dbcc-traceon-trace-flags-transact-sql.md)
 - [USE HINT 쿼리 힌트](../../t-sql/queries/hints-transact-sql-query.md#use_hint)
 - [카디널리티 평가기](../../relational-databases/performance/cardinality-estimation-sql-server.md)
-- [자동 조정](../../relational-databases/automatic-tuning/automatic-tuning.md)
+- [자동 조정](../../relational-databases/automatic-tuning/automatic-tuning.md)   
+- [SQL Server 쿼리 튜닝 길잡이 사용](https://docs.microsoft.com/learn/modules/use-sql-server-query-tuning-assistant/)

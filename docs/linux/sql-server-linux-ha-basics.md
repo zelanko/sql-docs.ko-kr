@@ -2,19 +2,19 @@
 title: Linux 배포의 SQL Server 고가용성
 description: Always On 가용성 그룹, FCI(장애 조치(failover) 클러스터 인스턴스), 로그 전달 등 SQL Server on Linux에 사용할 수 있는 고가용성 옵션을 알아봅니다.
 ms.custom: seo-lt-2019
-author: MikeRayMSFT
-ms.author: mikeray
+author: VanMSFT
+ms.author: vanto
 ms.reviewer: vanto
 ms.date: 11/27/2017
 ms.topic: conceptual
 ms.prod: sql
 ms.technology: linux
-ms.openlocfilehash: 67a5219e955ccd9d4b0303276823d8cafbce4963
-ms.sourcegitcommit: 01297f2487fe017760adcc6db5d1df2c1234abb4
+ms.openlocfilehash: fa9fc496d10a189d75686e3c72f2453b89184626
+ms.sourcegitcommit: 610e3ebe21ac6575850a29641a32f275e71557e3
 ms.translationtype: HT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 07/09/2020
-ms.locfileid: "86196856"
+ms.lasthandoff: 10/07/2020
+ms.locfileid: "91785133"
 ---
 # <a name="sql-server-availability-basics-for-linux-deployments"></a>Linux 배포의 SQL Server 가용성 기본 사항
 

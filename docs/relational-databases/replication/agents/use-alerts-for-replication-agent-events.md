@@ -23,12 +23,12 @@ ms.assetid: 8c42e523-7020-471d-8977-a0bd044b9471
 author: MashaMSFT
 ms.author: mathoma
 monikerRange: =azuresqldb-mi-current||>=sql-server-2016||=sqlallproducts-allversions
-ms.openlocfilehash: d0fbec0a8ff1bcd6416ab0c24166a5bf5559cb8f
-ms.sourcegitcommit: e700497f962e4c2274df16d9e651059b42ff1a10
+ms.openlocfilehash: dc93e307fb7e9b7afab3717d32dd4be58a1ec818
+ms.sourcegitcommit: 783b35f6478006d654491cb52f6edf108acf2482
 ms.translationtype: HT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 08/17/2020
-ms.locfileid: "88428045"
+ms.lasthandoff: 10/09/2020
+ms.locfileid: "91892153"
 ---
 # <a name="use-alerts-for-replication-agent-events"></a>복제 에이전트 이벤트에 대한 경고 사용
 [!INCLUDE[sql-asdbmi](../../../includes/applies-to-version/sql-asdbmi.md)]
@@ -48,7 +48,7 @@ ms.locfileid: "88428045"
 |20578|**복제: 에이전트 사용자 지정 종료**|||  
 |22815|**피어 투 피어 충돌 감지 경고**|피어 투 피어 노드에서 변경 내용을 적용하려고 할 때 배포 에이전트에서 충돌이 감지되었습니다.|예|  
   
- 복제 모니터는 이러한 경고 외에도 상태 및 성능과 관련된 일련의 경고를 제공합니다. 자세한 내용은 [Set Thresholds and Warnings in Replication Monitor](../../../relational-databases/replication/monitor/set-thresholds-and-warnings-in-replication-monitor.md)를 참조하세요. [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] 경고 인프라를 사용하여 다른 복제 이벤트에 대한 경고도 정의할 수 있습니다. 자세한 내용은 [사용자 정의 이벤트 만들기](https://msdn.microsoft.com/library/03d71a35-97fa-4bba-aa9a-23ac9c9cf879)를 참조하세요.  
+ 복제 모니터는 이러한 경고 외에도 상태 및 성능과 관련된 일련의 경고를 제공합니다. 자세한 내용은 [Set Thresholds and Warnings in Replication Monitor](../../../relational-databases/replication/monitor/set-thresholds-and-warnings-in-replication-monitor.md)를 참조하세요. [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] 경고 인프라를 사용하여 다른 복제 이벤트에 대한 경고도 정의할 수 있습니다. 자세한 내용은 [사용자 정의 이벤트 만들기](../../../ssms/agent/create-a-user-defined-event.md)를 참조하세요.  
   
  **미리 정의된 복제 경고를 구성하려면**  
   
@@ -93,5 +93,4 @@ deallocate hc
  [복제 에이전트 관리](../../../relational-databases/replication/agents/replication-agent-administration.md)   
  [Best Practices for Replication Administration](../../../relational-databases/replication/administration/best-practices-for-replication-administration.md)   
  [모니터링&#40;복제&#41;](../../../relational-databases/replication/monitor/monitoring-replication.md)  
-  
   

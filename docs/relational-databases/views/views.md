@@ -14,12 +14,12 @@ ms.assetid: ada83c28-e8b7-45d9-b53c-b3d67c8820c8
 author: stevestein
 ms.author: sstein
 monikerRange: '>=aps-pdw-2016||=azuresqldb-current||=azure-sqldw-latest||>=sql-server-2016||=sqlallproducts-allversions||>=sql-server-linux-2017||=azuresqldb-mi-current'
-ms.openlocfilehash: dda5e49aa6f51382beb390ae48a544565e2703d9
-ms.sourcegitcommit: e700497f962e4c2274df16d9e651059b42ff1a10
+ms.openlocfilehash: baa0397320f725f401099c00e9887069b5ec6cd1
+ms.sourcegitcommit: 783b35f6478006d654491cb52f6edf108acf2482
 ms.translationtype: HT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 08/17/2020
-ms.locfileid: "88418927"
+ms.lasthandoff: 10/09/2020
+ms.locfileid: "91891923"
 ---
 # <a name="views"></a>보기
 [!INCLUDE [sql-asdb-asdbmi-asa-pdw](../../includes/applies-to-version/sql-asdb-asdbmi-asa-pdw.md)]
@@ -39,7 +39,7 @@ ms.locfileid: "88418927"
  분할된 뷰는 하나 이상의 서버에 있는 여러 멤버 테이블의 수평 분할된 데이터를 조인하여 데이터가 한 테이블에 있는 것처럼 보이게 합니다. [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 의 동일한 인스턴스에 있는 멤버 테이블을 조인하는 뷰는 로컬 분할 뷰입니다.  
   
  시스템 뷰  
- 시스템 뷰는 카탈로그 메타데이터를 노출합니다. 시스템 뷰를 사용하여 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 인스턴스 또는 인스턴스에 정의된 개체에 대한 정보를 반환할 수 있습니다. 예를 들어 sys.databases 카탈로그 뷰를 쿼리하여 인스턴스에서 사용할 수 있는 사용자 정의 데이터베이스에 대한 정보를 반환할 수 있습니다. 자세한 내용은 [시스템 뷰&#40;Transact-SQL&#41;](https://msdn.microsoft.com/library/35a6161d-7f43-4e00-bcd3-3091f2015e90)를 참조하세요.  
+ 시스템 뷰는 카탈로그 메타데이터를 노출합니다. 시스템 뷰를 사용하여 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 인스턴스 또는 인스턴스에 정의된 개체에 대한 정보를 반환할 수 있습니다. 예를 들어 sys.databases 카탈로그 뷰를 쿼리하여 인스턴스에서 사용할 수 있는 사용자 정의 데이터베이스에 대한 정보를 반환할 수 있습니다. 자세한 내용은 [시스템 뷰&#40;Transact-SQL&#41;](../../t-sql/language-reference.md)를 참조하세요.  
   
 ## <a name="common-view-tasks"></a>일반 뷰 태스크  
  다음 표에서는 뷰 만들기 또는 수정과 연관된 일반 태스크에 대한 링크를 제공합니다.  
@@ -57,5 +57,4 @@ ms.locfileid: "88418927"
 ## <a name="see-also"></a>참고 항목  
  [XML 열에서 뷰 만들기](../../relational-databases/xml/create-views-over-xml-columns.md)   
  [CREATE VIEW&#40;Transact-SQL&#41;](../../t-sql/statements/create-view-transact-sql.md)  
-  
   

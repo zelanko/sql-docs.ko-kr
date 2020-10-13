@@ -11,12 +11,12 @@ ms.date: 10/02/2019
 ms.prod: sql
 ms.prod_service: polybase, sql-data-warehouse, pdw
 monikerRange: '>= sql-server-2016 || =sqlallproducts-allversions'
-ms.openlocfilehash: cc030aa9036c67b1175a99ef01eab47099b8fc36
-ms.sourcegitcommit: 216f377451e53874718ae1645a2611cdb198808a
+ms.openlocfilehash: d037abd54cc0014289b949d7e00a2bf585d3a9e4
+ms.sourcegitcommit: 783b35f6478006d654491cb52f6edf108acf2482
 ms.translationtype: HT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 07/28/2020
-ms.locfileid: "87247304"
+ms.lasthandoff: 10/09/2020
+ms.locfileid: "91891333"
 ---
 # <a name="troubleshoot-polybase-kerberos-connectivity"></a>PolyBase Kerberos 연결 문제 해결
 
@@ -253,7 +253,7 @@ Kerberos를 액세스하는 문제가 여전히 발생하는 경우 아래 단�
 4. KDC에서 AES256을 지원할 수 있는 경우 [JCE 정책 파일](http://www.oracle.com/technetwork/java/javase/downloads/index.html)을 설치했는지 확인합니다.
 
 ## <a name="see-also"></a>참고 항목
-[Integrating PolyBase with Cloudera using Active Directory Authentication](https://blogs.msdn.microsoft.com/microsoftrservertigerteam/2016/10/17/integrating-polybase-with-cloudera-using-active-directory-authentication)(Active Directory 인증을 사용하여 PolyBase와 Cloudera 통합)  
+[Integrating PolyBase with Cloudera using Active Directory Authentication](/archive/blogs/microsoftrservertigerteam/integrating-polybase-with-cloudera-using-active-directory-authentication)(Active Directory 인증을 사용하여 PolyBase와 Cloudera 통합)  
 [Cloudera’s Guide to setting up Kerberos for CDH](https://www.cloudera.com/documentation/enterprise/5-6-x/topics/cm_sg_principal_keytab.html)(CDH의 Kerberos 설정에 대한 Cloudera 가이드)  
 [Hortonworks’ Guide to Setting up Kerberos for HDP](https://docs.hortonworks.com/HDPDocuments/Ambari-2.2.0.0/bk_Ambari_Security_Guide/content/ch_configuring_amb_hdp_for_kerberos.html)(HDP의 Kerberos 설정에 대한 Hortonworks 가이드)  
 [PolyBase 문제 해결](polybase-troubleshooting.md)

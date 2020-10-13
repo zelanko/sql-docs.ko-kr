@@ -11,12 +11,12 @@ ms.topic: conceptual
 ms.assetid: d31367db-b7db-44c4-8df2-f1240474cf78
 author: VanMSFT
 ms.author: vanto
-ms.openlocfilehash: a26b04b1acc7ac829bb8fe79db2d3eaeede502dc
-ms.sourcegitcommit: da88320c474c1c9124574f90d549c50ee3387b4c
+ms.openlocfilehash: ea4b3c26cba886b5150b1bef7b8f3b08380c7a98
+ms.sourcegitcommit: 783b35f6478006d654491cb52f6edf108acf2482
 ms.translationtype: HT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 07/01/2020
-ms.locfileid: "85760473"
+ms.lasthandoff: 10/09/2020
+ms.locfileid: "91892483"
 ---
 # <a name="lesson-1-create-and-apply-an-off-by-default-policy"></a>1단원: Off By Default 정책 만들기 및 적용
  [!INCLUDE [SQL Server](../../includes/applies-to-version/sqlserver.md)]
@@ -25,7 +25,7 @@ ms.locfileid: "85760473"
 ## <a name="prerequisites"></a>사전 요구 사항
 이 자습서를 완료하려면 SQL Server Management Studio 및 SQL Server 인스턴스에 대한 액세스 권한이 필요합니다. 
 
-- [SQL Server Management Studio](https://docs.microsoft.com/sql/ssms/download-sql-server-management-studio-ssms)를 설치합니다.
+- [SQL Server Management Studio](../../ssms/download-sql-server-management-studio-ssms.md)를 설치합니다.
 - [SQL Server 2017 Developer Edition](https://www.microsoft.com/sql-server/sql-server-downloads)을 설치합니다.
   
 ## <a name="create-the-mail-off-condition"></a>mail-off 조건 만들기
@@ -92,6 +92,5 @@ ms.locfileid: "85760473"
    
 ## <a name="next-lesson"></a>다음 단원  
 [2단원: 명명 표준 정책 만들기 및 적용](../../relational-databases/policy-based-management/lesson-2-create-and-apply-a-naming-standards-policy.md)  
-  
   
   

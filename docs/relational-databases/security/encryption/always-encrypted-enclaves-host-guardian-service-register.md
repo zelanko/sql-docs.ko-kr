@@ -10,12 +10,12 @@ ms.topic: conceptual
 author: rpsqrd
 ms.author: ryanpu
 monikerRange: =azuresqldb-current||>=sql-server-2016||=sqlallproducts-allversions||>=sql-server-linux-2017||=azuresqldb-mi-current
-ms.openlocfilehash: fd8b43e431a4e67eb1933548935fb37562dcdeb7
-ms.sourcegitcommit: 620a868e623134ad6ced6728ce9d03d7d0038fe0
+ms.openlocfilehash: e161eff506c1aa5398752f052f00dc4dd69ae8d9
+ms.sourcegitcommit: 4d370399f6f142e25075b3714e5c2ce056b1bfd0
 ms.translationtype: HT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 07/29/2020
-ms.locfileid: "87411149"
+ms.lasthandoff: 10/09/2020
+ms.locfileid: "91868905"
 ---
 # <a name="register-computer-with-host-guardian-service"></a>호스트 보호 서비스에 컴퓨터 등록
 
@@ -120,7 +120,7 @@ TPM 증명을 위해 세 개의 데이터 파일이 수집되며 동일하게 �
 | -------------------- | ---------------- | ---------- |
 | 플랫폼 식별자  | 컴퓨터의 TPM에 있는 공용 인증 키와 TPM 제조업체의 인증 키 인증서입니다. | 컴퓨터당 1개 |
 | TPM 기준 | 부팅 프로세스 중 로드된 펌웨어 및 OS 구성을 측정하는 TPM의 PCR(플랫폼 제어 레지스터)입니다. 예제에는 보안 부팅 상태와 함께 크래시 덤프 암호화 여부가 포함됩니다. | 고유한 컴퓨터 구성마다 하나의 기준(동일한 하드웨어 및 소프트웨어가 동일한 기준을 사용할 수 있음) |
-| 코드 무결성 검사 | 컴퓨터를 보호하기 위해 신뢰할 수 있는 [Windows Defender 애플리케이션 제어](https://docs.microsoft.com/windows/security/threat-protection/windows-defender-application-control/windows-defender-application-control) 정책입니다. | 컴퓨터에 배포된 고유한 CI 정책당 1개 |
+| 코드 무결성 검사 | 컴퓨터를 보호하기 위해 신뢰할 수 있는 [Windows Defender 애플리케이션 제어](/windows/security/threat-protection/windows-defender-application-control/windows-defender-application-control) 정책입니다. | 컴퓨터에 배포된 고유한 CI 정책당 1개 |
 
 혼합된 하드웨어 및 소프트웨어 집합을 지원하기 위해 HGS에서 각 증명 아티팩트를 두 개 이상 구성할 수 있습니다.
 HGS를 사용하려면 컴퓨터 증명이 각 정책 범주에 포함된 하나의 정책과 일치해야 합니다.
@@ -147,7 +147,7 @@ WDAC 코드 무결성 정책은 신뢰할 수 있는 게시자 및 파일 해시
     ConvertFrom-CIPolicy -XmlFilePath $temppolicy -BinaryFilePath "$HOME\Desktop\allowall_cipolicy.bin"
     ```
 
-2. [Windows Defender Application Control 배포 가이드](/windows/security/threat-protection/windows-defender-application-control/windows-defender-application-control-deployment-guide)의 지침에 따라 [그룹 정책](https://docs.microsoft.com/windows/security/threat-protection/windows-defender-application-control/deploy-windows-defender-application-control-policies-using-group-policy)을 사용하여 `allowall_cipolicy.bin` 파일을 [!INCLUDE [ssnoversion-md](../../../includes/ssnoversion-md.md)] 컴퓨터에 배포합니다. 작업 그룹 컴퓨터의 경우 로컬 그룹 정책 편집기(`gpedit.msc`)를 사용하여 동일한 프로세스를 수행합니다.
+2. [Windows Defender Application Control 배포 가이드](/windows/security/threat-protection/windows-defender-application-control/windows-defender-application-control-deployment-guide)의 지침에 따라 [그룹 정책](/windows/security/threat-protection/windows-defender-application-control/deploy-windows-defender-application-control-policies-using-group-policy)을 사용하여 `allowall_cipolicy.bin` 파일을 [!INCLUDE [ssnoversion-md](../../../includes/ssnoversion-md.md)] 컴퓨터에 배포합니다. 작업 그룹 컴퓨터의 경우 로컬 그룹 정책 편집기(`gpedit.msc`)를 사용하여 동일한 프로세스를 수행합니다.
 
 3. [!INCLUDE [ssnoversion-md](../../../includes/ssnoversion-md.md)] 컴퓨터에서 `gpupdate /force`를 실행하여 새 코드 무결성 검사를 구성한 다음, 컴퓨터를 다시 시작하여 정책을 적용합니다.
 
@@ -243,7 +243,7 @@ HGS를 사용하여 증명할 모든 [!INCLUDE [ssnoversion-md](../../../include
 
 [!INCLUDE [ssnoversion-md](../../../includes/ssnoversion-md.md)] 컴퓨터를 HGS에 등록한 후에는(TPM 모드의 경우 [4A단계](#step-4a-register-a-computer-in-tpm-mode), 호스트 키 모드의 경우 [4B단계](#step-4b-register-a-computer-in-host-key-mode)) 성공적으로 증명할 수 있는지 확인해야 합니다.
 
-언제든지 [Get-HgsClientConfiguration](https://docs.microsoft.com/powershell/module/hgsclient/get-hgsclientconfiguration?view=win10-ps)을 사용하여 HGS 증명 클라이언트의 구성을 확인하고 증명 시도를 수행할 수 있습니다.
+언제든지 [Get-HgsClientConfiguration](/powershell/module/hgsclient/get-hgsclientconfiguration?view=win10-ps)을 사용하여 HGS 증명 클라이언트의 구성을 확인하고 증명 시도를 수행할 수 있습니다.
 명령의 출력은 다음과 유사하게 표시됩니다.
 
 ```

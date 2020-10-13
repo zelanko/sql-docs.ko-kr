@@ -24,12 +24,12 @@ ms.assetid: d6e0e21a-7568-4321-b6d6-bcfba183a719
 author: VanMSFT
 ms.author: vanto
 monikerRange: '>=aps-pdw-2016||=azuresqldb-current||=azure-sqldw-latest||>=sql-server-2016||=sqlallproducts-allversions||>=sql-server-linux-2017||=azuresqldb-mi-current'
-ms.openlocfilehash: 9f5afe06027e489fb7b9971edd1fcc81853e4f93
-ms.sourcegitcommit: b93beb4f03aee2c1971909cb1d15f79cd479a35c
+ms.openlocfilehash: 7baa74c6e4655ee95cfd9e10b7107431339cddb2
+ms.sourcegitcommit: afb02c275b7c79fbd90fac4bfcfd92b00a399019
 ms.translationtype: HT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 09/29/2020
-ms.locfileid: "91498253"
+ms.lasthandoff: 10/12/2020
+ms.locfileid: "91955824"
 ---
 # <a name="drop-user-transact-sql"></a>DROP USER(Transact-SQL)
 [!INCLUDE [sql-asdb-asdbmi-asa-pdw](../../includes/applies-to-version/sql-asdb-asdbmi-asa-pdw.md)]
@@ -50,31 +50,31 @@ DROP USER [ IF EXISTS ] user_name
 -- Syntax for Azure Synapse Analytics and Parallel Data Warehouse  
   
 DROP USER user_name  
-  
+```  
 [!INCLUDE[sql-server-tsql-previous-offline-documentation](../../includes/sql-server-tsql-previous-offline-documentation.md)]
 
-## Arguments
+## <a name="arguments"></a>인수
  *IF EXISTS*  
- **Applies to**: [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] ( [!INCLUDE[ssSQL15](../../includes/sssql15-md.md)] through [current version](https://go.microsoft.com/fwlink/p/?LinkId=299658), [!INCLUDE[sssds](../../includes/sssds-md.md)]).  
+ **적용 대상**: [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] ([!INCLUDE[ssSQL15](../../includes/sssql15-md.md)] ~ [현재 버전](https://go.microsoft.com/fwlink/p/?LinkId=299658), [!INCLUDE[sssds](../../includes/sssds-md.md)]).  
   
- Conditionally drops the user only if it already exists.  
+ 이미 있는 경우에만 사용자를 조건적으로 삭제합니다.  
   
  *user_name*  
- Specifies the name by which the user is identified inside this database.  
+ 이 데이터베이스 내에서 사용자를 식별하는 이름을 지정합니다.  
   
-## Remarks  
- Users that own securables cannot be dropped from the database. Before dropping a database user that owns securables, you must first drop or transfer ownership of those securables.  
+## <a name="remarks"></a>설명  
+ 보안 개체를 소유하는 사용자는 데이터베이스에서 삭제할 수 없습니다. 보안 개체를 소유하는 데이터베이스 사용자를 삭제하려면 먼저 해당 보안 개체의 소유권을 삭제하거나 이전해야 합니다.  
   
- The guest user cannot be dropped, but guest user can be disabled by revoking its CONNECT permission by executing REVOKE CONNECT FROM GUEST within any database other than master or tempdb.  
+ 게스트 사용자는 삭제할 수 없지만 master 또는 tempdb 이외의 데이터베이스 내에서 REVOKE CONNECT FROM GUEST를 실행하면 게스트 사용자의 CONNECT 권한이 취소되므로 사용할 수 없게 됩니다.  
   
 > [!CAUTION]  
 >  [!INCLUDE[ssCautionUserSchema](../../includes/sscautionuserschema-md.md)]  
   
-## Permissions  
- Requires ALTER ANY USER permission on the database.  
+## <a name="permissions"></a>사용 권한  
+ 데이터베이스에 대한 ALTER ANY USER 권한이 필요합니다.  
   
-## Examples  
- The following example removes database user `AbolrousHazem` from the `AdventureWorks2012` database.  
+## <a name="examples"></a>예제  
+ 다음 예에서는 `AbolrousHazem` 데이터베이스에서 `AdventureWorks2012` 데이터베이스 사용자를 제거합니다.  
   
 ```sql  
 DROP USER AbolrousHazem;  

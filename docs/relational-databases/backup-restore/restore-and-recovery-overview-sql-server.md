@@ -22,12 +22,12 @@ helpviewer_keywords:
 ms.assetid: e985c9a6-4230-4087-9fdb-de8571ba5a5f
 author: mashamsft
 ms.author: mathoma
-ms.openlocfilehash: e62b9f4c4de0db24294640cd2013f0fc4b0d6c7b
-ms.sourcegitcommit: 827ad02375793090fa8fee63cc372d130f11393f
+ms.openlocfilehash: 5157ab86adbbea5b6e9fa1bdb14264f5418ac07b
+ms.sourcegitcommit: 04cf7905fa32e0a9a44575a6f9641d9a2e5ac0f8
 ms.translationtype: HT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 09/04/2020
-ms.locfileid: "89480416"
+ms.lasthandoff: 10/07/2020
+ms.locfileid: "91810707"
 ---
 # <a name="restore-and-recovery-overview-sql-server"></a>복원 및 복구 개요(SQL Server)
  [!INCLUDE [SQL Server](../../includes/applies-to-version/sqlserver.md)]
@@ -97,7 +97,7 @@ ms.locfileid: "89480416"
 
 -   **실행 취소 단계**는 해당 데이터베이스의 무결성이 유지되도록 ATT에서 발견된 불완전한 트랜잭션을 롤백합니다. 롤백 후 데이터베이스는 온라인 상태가 되고 트랜잭션 로그 백업이 더 이상 데이터베이스에 적용되지 않습니다.
 
-각 데이터베이스 복구 단계의 진행에 대한 정보는 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] [오류 로그](../../tools/configuration-manager/viewing-the-sql-server-error-log.md)에 기록됩니다. 확장 이벤트를 사용하여 데이터베이스 복구 진행률을 추적할 수도 있습니다. 자세한 내용은 블로그 게시물 [데이터베이스 복구 진행률에 대한 새 확장 이벤트](https://blogs.msdn.microsoft.com/sql_server_team/new-extended-events-for-database-recovery-progress/)를 참조하세요.
+각 데이터베이스 복구 단계의 진행에 대한 정보는 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] [오류 로그](../../tools/configuration-manager/viewing-the-sql-server-error-log.md)에 기록됩니다. 확장 이벤트를 사용하여 데이터베이스 복구 진행률을 추적할 수도 있습니다. 자세한 내용은 블로그 게시물 [데이터베이스 복구 진행률에 대한 새 확장 이벤트](/archive/blogs/sql_server_team/new-extended-events-for-database-recovery-progress)를 참조하세요.
 
 > [!NOTE]
 > 증분 복원 시나리오에서는 파일 백업이 생성되기 이전부터 읽기 전용 파일 그룹이 읽기 전용이었으면 로그 백업을 파일 그룹에 적용할 필요가 없으며 파일 복원 시 이 작업은 생략됩니다. 
@@ -174,9 +174,9 @@ ms.locfileid: "89480416"
   
 데이터베이스 복구 관리자에 대한 자세한 내용은 다음 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 관리 효율성 블로그를 참조하십시오.  
   
--   [복구 관리자: 소개](https://docs.microsoft.com/archive/blogs/managingsql/recovery-advisor-an-introduction)  
+-   [복구 관리자: 소개](/archive/blogs/managingsql/recovery-advisor-an-introduction)  
   
--   [복구 관리자: SSMS를 사용하여 분할 백업 만들기/복원](https://docs.microsoft.com/archive/blogs/managingsql/recovery-advisor-using-ssms-to-createrestore-split-backups)  
+-   [복구 관리자: SSMS를 사용하여 분할 백업 만들기/복원](/archive/blogs/managingsql/recovery-advisor-using-ssms-to-createrestore-split-backups)  
 
 ## <a name="accelerated-database-recovery"></a><a name="adr"></a> 가속 데이터베이스 복구
 [가속 데이터베이스 복구](/azure/sql-database/sql-database-accelerated-database-recovery/)는 [!INCLUDE[sql-server-2019](../../includes/sssqlv15-md.md)] 및 [!INCLUDE[ssSDSfull](../../includes/sssdsfull-md.md)]에서 사용할 수 있습니다. 가속 데이터베이스 복구는 특히 장기 실행 트랜잭션이 있는 경우 [!INCLUDE[ssDEnoversion](../../includes/ssdenoversion-md.md)] [복구 프로세스](#TlogAndRecovery)를 다시 설계하여 데이터베이스 가용성을 크게 향상합니다. 가속 데이터베이스 복구가 사용하도록 설정된 데이터베이스는 장애 조치(failover) 또는 다른 완전하지 않은 종료 후에 훨씬 빠르게 복구 프로세스를 완료합니다. 가속 데이터베이스 복구를 사용하도록 설정하면 취소된 장기 실행 트랜잭션의 롤백이 훨씬 빨리 완료됩니다.
@@ -195,4 +195,4 @@ ALTER DATABASE <db_name> SET ACCELERATED_DATABASE_RECOVERY = ON;
  [트랜잭션 로그&#40;SQL Server&#41;](../../relational-databases/logs/the-transaction-log-sql-server.md)     
  [SQL Server 트랜잭션 로그 아키텍처 및 관리 가이드](../../relational-databases/sql-server-transaction-log-architecture-and-management-guide.md)     
  [SQL Server 데이터베이스 백업 및 복원](../../relational-databases/backup-restore/back-up-and-restore-of-sql-server-databases.md)     
- [트랜잭션 로그 백업 적용(SQL Server)](../../relational-databases/backup-restore/apply-transaction-log-backups-sql-server.md)    
+ [트랜잭션 로그 백업 적용(SQL Server)](../../relational-databases/backup-restore/apply-transaction-log-backups-sql-server.md)

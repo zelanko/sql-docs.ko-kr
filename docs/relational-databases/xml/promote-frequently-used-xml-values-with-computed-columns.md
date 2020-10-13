@@ -14,12 +14,12 @@ ms.assetid: f5111896-c2fd-4209-b500-f2baa45489ad
 author: MightyPen
 ms.author: genemi
 ms.custom: seo-lt-2019
-ms.openlocfilehash: 065b882ac2a3fdd2d43f9d7754b267384a163e89
-ms.sourcegitcommit: da88320c474c1c9124574f90d549c50ee3387b4c
+ms.openlocfilehash: c5881835f6a415b47825181d7d5a74ec24677e3c
+ms.sourcegitcommit: 783b35f6478006d654491cb52f6edf108acf2482
 ms.translationtype: HT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 07/01/2020
-ms.locfileid: "85772094"
+ms.lasthandoff: 10/09/2020
+ms.locfileid: "91891943"
 ---
 # <a name="promote-frequently-used-xml-values-with-computed-columns"></a>계산 열을 사용하여 자주 사용되는 XML 값 승격
 [!INCLUDE [SQL Server Azure SQL Database](../../includes/applies-to-version/sql-asdb.md)]
@@ -177,7 +177,7 @@ WHERE    tblPropAuthor.propAuthor = 'David'
  이렇게 하려면 먼저 스트리밍 CLR 함수를 만듭니다. **xml** 데이터 형식은 ADO.NET의 관리 클래스 SqlXml로 제공되며 XmlReader를 반환하는 **CreateReader()** 메서드를 지원합니다.  
   
 > [!NOTE]  
->  이 섹션의 예제 코드에서는 XPathDocument 및 XPathNavigator가 사용됩니다. 이를 통해 사용자는 모든 XML 문서를 메모리에 강제로 로드할 수 있습니다. 일부 큰 XML 문서를 처리하기 위해 애플리케이션에서 비슷한 코드를 사용하는 경우 이 코드는 확장할 수 없습니다. 대신 메모리 할당을 적게 유지하고 가능한 모든 경우에 스트리밍 인터페이스를 사용합니다. 성능에 대한 자세한 내용은 [CLR 통합 아키텍처](https://msdn.microsoft.com/library/05e4b872-3d21-46de-b4d5-739b5f2a0cf9)를 참조하세요.  
+>  이 섹션의 예제 코드에서는 XPathDocument 및 XPathNavigator가 사용됩니다. 이를 통해 사용자는 모든 XML 문서를 메모리에 강제로 로드할 수 있습니다. 일부 큰 XML 문서를 처리하기 위해 애플리케이션에서 비슷한 코드를 사용하는 경우 이 코드는 확장할 수 없습니다. 대신 메모리 할당을 적게 유지하고 가능한 모든 경우에 스트리밍 인터페이스를 사용합니다. 성능에 대한 자세한 내용은 [CLR 통합 아키텍처](../clr-integration/clr-integration-architecture-clr-hosted-environment.md)를 참조하세요.  
   
 ```  
 public class c_streaming_xml_tvf {  
@@ -257,5 +257,4 @@ as
   
 ## <a name="see-also"></a>참고 항목  
  [계산 열에 XML 사용](../../relational-databases/xml/use-xml-in-computed-columns.md)  
-  
   

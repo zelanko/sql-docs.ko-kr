@@ -13,12 +13,12 @@ f1_keywords:
 ms.assetid: a0bbe501-78c5-45ad-9087-965d04855663
 author: VanMSFT
 ms.author: vanto
-ms.openlocfilehash: 9e6467de5064cfd3b6d4ce2c151a456c63919e7d
-ms.sourcegitcommit: 827ad02375793090fa8fee63cc372d130f11393f
+ms.openlocfilehash: 60664db09d71d0ec6a9049a568af057ffea84a6c
+ms.sourcegitcommit: 783b35f6478006d654491cb52f6edf108acf2482
 ms.translationtype: HT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 09/04/2020
-ms.locfileid: "89480495"
+ms.lasthandoff: 10/09/2020
+ms.locfileid: "91892203"
 ---
 # <a name="advanced-edit-condition-dialog-box"></a>고급 편집(조건) 대화 상자
  [!INCLUDE [SQL Server](../../includes/applies-to-version/sqlserver.md)]
@@ -78,7 +78,7 @@ ms.locfileid: "89480495"
 |**Divide()**|Numeric Divide(Numeric *expression_dividend*, Numeric *expression_divisor*)|한 숫자를 다른 숫자로 나눕니다.|*expression_dividend* - 나눌 숫자 식입니다. 피제수는 숫자 데이터 형식 범주에서 **datetime** 데이터 형식을 제외한 모든 데이터 형식 중 하나에 대한 올바른 식일 수 있습니다.<br /><br /> *expression_divisor* - 피제수를 나눌 숫자 식입니다. 제수는 **datetime** 데이터 형식을 제외한 숫자 데이터 형식 범주의 데이터 형식 중 하나에 대한 올바른 식일 수 있습니다.|우선 순위가 높은 인수의 데이터 형식을 반환합니다.|**예제:** `Divide(Property1, 2)`<br /><br /> 참고: double 연산이 됩니다. 정수를 비교하려면 결과를 `Round()`와 결합해야 합니다. 예: `Round(Divide(10, 3), 0) = 3`|  
 |**Enum()**|Numeric Enum(String *enumTypeName*, String *enumValueName*)|문자열에서 열거형 값을 만듭니다.|*enumTypeName* - 열거형 형식 이름입니다.<br /><br /> *enumValueName* - 열거형의 값입니다.|숫자 값으로 열거형 값을 반환합니다.|`Enum('CompatibilityLevel','Version100')`|  
 |**Escape()**|String Escape(String *replaceString*, String *stringToEscape*, String *escapeString*)|입력 문자열의 부분 문자열을 지정된 이스케이프 문자열로 이스케이프합니다.|*replaceString* - 입력 문자열입니다.<br /><br /> *stringToEscape* - *replaceString*의 부분 문자열입니다. 앞에 이스케이프 문자열을 추가할 문자열입니다.<br /><br /> *escapeString* - 각 *stringToEscape* 인스턴스 앞에 추가하려는 이스케이프 문자열입니다.|각 *replaceString* 인스턴스 앞에 *stringToEscape* 이 있는 수정된 *escapeString*을 반환합니다.|`Escape("Hello", "l", "[")` "`He[l[lo`"를 반환합니다.|  
-|**ExecuteSQL()**|Variant ExecuteSQL(String *returnType*, String *sqlQuery*)|대상 서버에 대해 [!INCLUDE[tsql](../../includes/tsql-md.md)] 쿼리를 실행합니다.<br /><br /> ExecuteSql()에 대한 자세한 내용은 [ExecuteSql() 함수](https://docs.microsoft.com/archive/blogs/sqlpbm/executesql)를 참조하세요.|*returnType* - [!INCLUDE[tsql](../../includes/tsql-md.md)] 문에서 반환된 데이터의 반환 형식을 지정합니다. *returnType* 에 유효한 리터럴은 **Numeric**, **String**, **Bool**, **DateTime**, **Array**및 **Guid**입니다.<br /><br /> *sqlQuery* - 실행할 쿼리가 포함된 문자열입니다.||`ExecuteSQL ('Numeric', 'SELECT COUNT(*) FROM msdb.dbo.sysjobs') <> 0`<br /><br /> 대상 SQL Server 인스턴스에 대해 스칼라 반환 Transact-SQL 쿼리를 실행합니다. `SELECT` 문에는 열을 하나만 지정할 수 있으며 첫째 열을 제외한 추가 열은 무시됩니다. 결과 쿼리는 행을 하나만 반환하며 첫째 행을 제외한 추가 행은 무시됩니다. 쿼리에서 빈 집합을 반환할 경우 `ExecuteSQL` 을 기반으로 작성한 조건 식의 평가 결과가 false입니다. `ExecuteSql` 은 **요청 시** 및 **예약 시** 평가 모드를 지원합니다.<br /><br /> -`@@ObjectName`:<br />                      [sys.objects](../../relational-databases/system-catalog-views/sys-objects-transact-sql.md)의 이름 필드에 해당합니다. 변수가 현재 개체의 이름으로 바뀝니다.<br /><br /> -`@@SchemaName`:  [sys.schemas](../../relational-databases/system-catalog-views/schemas-catalog-views-sys-schemas.md)의 이름 필드에 해당합니다. 해당 사항이 있을 경우 변수가 현재 개체의 스키마 이름으로 바뀝니다.<br /><br /> 참고: ExecuteSQL 문에 작은 따옴표를 포함하려면 작은 따옴표에 두 번째 작은 따옴표를 붙여 이스케이프 처리합니다. 예를 들어 O'Brian이라는 사용자에 대한 참조를 포함하려면 O''Brian을 입력합니다.|  
+|**ExecuteSQL()**|Variant ExecuteSQL(String *returnType*, String *sqlQuery*)|대상 서버에 대해 [!INCLUDE[tsql](../../includes/tsql-md.md)] 쿼리를 실행합니다.<br /><br /> ExecuteSql()에 대한 자세한 내용은 [ExecuteSql() 함수](/archive/blogs/sqlpbm/executesql)를 참조하세요.|*returnType* - [!INCLUDE[tsql](../../includes/tsql-md.md)] 문에서 반환된 데이터의 반환 형식을 지정합니다. *returnType* 에 유효한 리터럴은 **Numeric**, **String**, **Bool**, **DateTime**, **Array**및 **Guid**입니다.<br /><br /> *sqlQuery* - 실행할 쿼리가 포함된 문자열입니다.||`ExecuteSQL ('Numeric', 'SELECT COUNT(*) FROM msdb.dbo.sysjobs') <> 0`<br /><br /> 대상 SQL Server 인스턴스에 대해 스칼라 반환 Transact-SQL 쿼리를 실행합니다. `SELECT` 문에는 열을 하나만 지정할 수 있으며 첫째 열을 제외한 추가 열은 무시됩니다. 결과 쿼리는 행을 하나만 반환하며 첫째 행을 제외한 추가 행은 무시됩니다. 쿼리에서 빈 집합을 반환할 경우 `ExecuteSQL` 을 기반으로 작성한 조건 식의 평가 결과가 false입니다. `ExecuteSql` 은 **요청 시** 및 **예약 시** 평가 모드를 지원합니다.<br /><br /> -`@@ObjectName`:<br />                      [sys.objects](../../relational-databases/system-catalog-views/sys-objects-transact-sql.md)의 이름 필드에 해당합니다. 변수가 현재 개체의 이름으로 바뀝니다.<br /><br /> -`@@SchemaName`:  [sys.schemas](../../relational-databases/system-catalog-views/schemas-catalog-views-sys-schemas.md)의 이름 필드에 해당합니다. 해당 사항이 있을 경우 변수가 현재 개체의 스키마 이름으로 바뀝니다.<br /><br /> 참고: ExecuteSQL 문에 작은 따옴표를 포함하려면 작은 따옴표에 두 번째 작은 따옴표를 붙여 이스케이프 처리합니다. 예를 들어 O'Brian이라는 사용자에 대한 참조를 포함하려면 O''Brian을 입력합니다.|  
 |**ExecuteWQL()**|Variant ExecuteWQL(string *returnType* , string *namespace*, string *wql*)|제공된 네임스페이스에 대해 WQL 스크립트를 실행합니다. Select 문에는 단일 반환 열만 포함될 수 있습니다. 열을 두 개 이상 제공하면 오류가 throw됩니다.|*returnType* - WQL에서 반환된 데이터의 반환 형식을 지정합니다. 유효한 리터럴은 **Numeric**, **String**, **Bool**, **DateTime**, **Array**및 **Guid**입니다.<br /><br /> *namespace* - 실행할 WMI 네임스페이스입니다.<br /><br /> *wql* - 실행할 WQL이 포함된 문자열입니다.||`ExecuteWQL('Numeric', 'root\CIMV2', 'select NumberOfProcessors from win32_ComputerSystem') <> 0`|  
 |**False()**|Bool False()|부울 값 FALSE를 반환합니다.|None|부울 값 FALSE를 반환합니다.|`IsDatabaseMailEnabled = False()`|  
 |**GetDate()**|DateTime GetDate()|시스템 날짜를 반환합니다.|None|시스템 날짜를 DateTime으로 반환합니다.|`@DateLastModified = GetDate()`|  
@@ -98,5 +98,4 @@ ms.locfileid: "89480495"
 ## <a name="see-also"></a>참고 항목  
  [새 조건 만들기 또는 조건 열기 대화 상자, 일반 페이지](../../relational-databases/policy-based-management/create-new-condition-or-open-condition-dialog-box-general-page.md)   
  [정책 기반 관리를 사용하여 서버 관리](../../relational-databases/policy-based-management/administer-servers-by-using-policy-based-management.md)  
-  
   

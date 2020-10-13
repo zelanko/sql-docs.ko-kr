@@ -16,12 +16,12 @@ ms.assetid: baa8a304-5713-4cfe-a699-345e819ce6df
 author: julieMSFT
 ms.author: jrasnick
 monikerRange: =azuresqldb-current||>=sql-server-2016||=sqlallproducts-allversions||>=sql-server-linux-2017||=azuresqldb-mi-current
-ms.openlocfilehash: 571d611fe49e590d65f0f9749660844328f6c9c1
-ms.sourcegitcommit: c74bb5944994e34b102615b592fdaabe54713047
+ms.openlocfilehash: e6ae3d6eaeab58e1352c14ba5ee90b47d500b974
+ms.sourcegitcommit: 783b35f6478006d654491cb52f6edf108acf2482
 ms.translationtype: HT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 09/22/2020
-ms.locfileid: "90990176"
+ms.lasthandoff: 10/09/2020
+ms.locfileid: "91891003"
 ---
 # <a name="cardinality-estimation-sql-server"></a>카디널리티 추정(SQL Server)
 
@@ -159,7 +159,7 @@ STATE = START;  --STOP;
 GO  
 ```  
   
-[!INCLUDE[ssSDS](../../includes/sssds-md.md)]용 확장 이벤트에 대한 자세한 내용은 [SQL Database의 확장 이벤트](https://azure.microsoft.com/documentation/articles/sql-database-xevent-db-diff-from-svr/)를 참조하세요.  
+[!INCLUDE[ssSDS](../../includes/sssds-md.md)]용 확장 이벤트에 대한 자세한 내용은 [SQL Database의 확장 이벤트](/azure/azure-sql/database/xevent-db-diff-from-svr)를 참조하세요.  
   
 ## <a name="steps-to-assess-the-ce-version"></a>CE 버전 평가 단계  
   
@@ -290,9 +290,9 @@ WHERE s.ticket = r.ticket AND
   
 ## <a name="see-also"></a>참고 항목  
  [성능 모니터링 및 튜닝](../../relational-databases/performance/monitor-and-tune-for-performance.md)   
- [SQL Server 2014 카디널리티 추정기로 쿼리 계획 최적화](https://msdn.microsoft.com/library/dn673537.aspx)  
+ [SQL Server 2014 카디널리티 추정기로 쿼리 계획 최적화](/previous-versions/dn673537(v=msdn.10))  
  [쿼리 힌트](../../t-sql/queries/hints-transact-sql-query.md)     
  [힌트 쿼리 힌트 사용](../../t-sql/queries/hints-transact-sql-query.md#use_hint)       
  [쿼리 튜닝 길잡이를 사용하여 데이터베이스 업그레이드](../../relational-databases/performance/upgrade-dbcompat-using-qta.md)           
  [관련된 뷰, 함수 및 프로시저](../../relational-databases/performance/monitoring-performance-by-using-the-query-store.md)    
- [쿼리 처리 아키텍처 가이드](../../relational-databases/query-processing-architecture-guide.md)   
+ [쿼리 처리 아키텍처 가이드](../../relational-databases/query-processing-architecture-guide.md)

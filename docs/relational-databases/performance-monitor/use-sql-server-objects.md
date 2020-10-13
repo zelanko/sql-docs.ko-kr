@@ -31,12 +31,12 @@ helpviewer_keywords:
 ms.assetid: bcd731b1-3c4e-4086-b58a-af7a3af904ad
 author: julieMSFT
 ms.author: jrasnick
-ms.openlocfilehash: 0b5f120e82f44966d42a9c511f8c240e9d74c493
-ms.sourcegitcommit: 9470c4d1fc8d2d9d08525c4f811282999d765e6e
+ms.openlocfilehash: 0dd256b071ce3621f02e6c4a6a152670e2fd5c0f
+ms.sourcegitcommit: 783b35f6478006d654491cb52f6edf108acf2482
 ms.translationtype: HT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 07/17/2020
-ms.locfileid: "86458619"
+ms.lasthandoff: 10/09/2020
+ms.locfileid: "91892223"
 ---
 # <a name="use-sql-server-objects"></a>SQL Server 개체 사용
  [!INCLUDE [SQL Server](../../includes/applies-to-version/sqlserver.md)]
@@ -45,7 +45,7 @@ ms.locfileid: "86458619"
   
  지정된 유형의 리소스가 컴퓨터에 여러 개 존재할 경우 일부 개체는 여러 인스턴스를 갖습니다. 예를 들어 **Processor** 개체 유형은 시스템에 프로세서가 여러 개 있는 경우 인스턴스를 여러 개 갖게 됩니다. **Databases** 개체 유형은 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]의 각 데이터베이스에 대해 인스턴스를 하나씩 갖습니다. 일부 개체 유형(예: **Memory Manager** 개체)은 인스턴스를 하나만 갖습니다. 개체 유형이 인스턴스를 여러 개 가지는 경우 카운터를 추가해 각 인스턴스의 통계를 추적할 수 있고, 대부분의 경우 모든 인스턴스를 한 번에 추적할 수 있습니다. 기본 인스턴스에 대한 카운터는 **SQLServer:** _\<object name>_ 형식으로 표시됩니다. 명명된 인스턴스에 대한 카운터는 **MSSQL$** _\<instance name>_ **:** _\<counter name>_ 또는 **SQLAgent$** _\<instance name>_ **:** _\<counter name>_ 형식으로 표시됩니다.  
   
-[!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 성능 카운터 값은 WPC(Windows Performance Counter) 엔진을 사용하여 생성됩니다. 일부 카운터 값은 [!INCLUDE[ssDEnoversion](../../includes/ssdenoversion-md.md)]에 의해 직접 계산되지 않습니다. [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]가 WPC 엔진에 베이스 값을 제공하면 백분율과 같은 필요한 계산을 수행합니다. [sys.dm_os_performance_counters &#40;Transact-SQL&#41;](../../relational-databases/system-dynamic-management-views/sys-dm-os-performance-counters-transact-sql.md) 동적 관리 뷰는 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]에 의해 생성된 원래 값과 함께 모든 카운터를 제공합니다. `cntr_type` 열은 카운터의 형식을 나타냅니다. WPC 엔진이 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 카운터를 처리하는 방식은 이 형식에 따라 달라집니다. 성능 카운터 형식에 대한 자세한 내용은 [WMI 설명서](https://docs.microsoft.com/windows/win32/wmisdk/wmi-performance-counter-types)를 참조하세요.
+[!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 성능 카운터 값은 WPC(Windows Performance Counter) 엔진을 사용하여 생성됩니다. 일부 카운터 값은 [!INCLUDE[ssDEnoversion](../../includes/ssdenoversion-md.md)]에 의해 직접 계산되지 않습니다. [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]가 WPC 엔진에 베이스 값을 제공하면 백분율과 같은 필요한 계산을 수행합니다. [sys.dm_os_performance_counters &#40;Transact-SQL&#41;](../../relational-databases/system-dynamic-management-views/sys-dm-os-performance-counters-transact-sql.md) 동적 관리 뷰는 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]에 의해 생성된 원래 값과 함께 모든 카운터를 제공합니다. `cntr_type` 열은 카운터의 형식을 나타냅니다. WPC 엔진이 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 카운터를 처리하는 방식은 이 형식에 따라 달라집니다. 성능 카운터 형식에 대한 자세한 내용은 [WMI 설명서](/windows/win32/wmisdk/wmi-performance-counter-types)를 참조하세요.
   
  카운터를 차트에 추가하거나 제거하고 차트 설정을 저장하면 시스템 모니터가 시작될 때 모니터링되는 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 개체 및 카운터를 지정할 수 있습니다.  
   
@@ -144,5 +144,4 @@ ms.locfileid: "86458619"
 ## <a name="see-also"></a>참고 항목  
  [성능 개체 사용](../../ssms/agent/use-performance-objects.md)   
  [sys.dm_os_performance_counters&#40;Transact-SQL&#41;](../../relational-databases/system-dynamic-management-views/sys-dm-os-performance-counters-transact-sql.md)  
-  
   

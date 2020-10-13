@@ -23,12 +23,12 @@ ms.assetid: 67084a67-43ff-4065-987a-3b16d1841565
 author: MashaMSFT
 ms.author: mathoma
 monikerRange: =azuresqldb-mi-current||>=sql-server-2016||=sqlallproducts-allversions
-ms.openlocfilehash: d3af77a60678e8286fadfbafcf46f742439e9bf7
-ms.sourcegitcommit: c8e1553ff3fdf295e8dc6ce30d1c454d6fde8088
+ms.openlocfilehash: de468b09b6f6b1f05545cb4a93b6db6082cef48e
+ms.sourcegitcommit: 783b35f6478006d654491cb52f6edf108acf2482
 ms.translationtype: HT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 07/22/2020
-ms.locfileid: "86902556"
+ms.lasthandoff: 10/09/2020
+ms.locfileid: "91891123"
 ---
 # <a name="enhance-transactional-replication-performance"></a>트랜잭션 복제 성능 향상
 [!INCLUDE[sql-asdbmi](../../../includes/applies-to-version/sql-asdbmi.md)]
@@ -84,7 +84,7 @@ ms.locfileid: "86902556"
     - **SubscriptionStreams** 값을 늘리면 구독자에 대한 여러 연결이 변경 내용의 일괄 처리를 병렬로 적용하므로 배포 에이전트의 전체 처리량에 도움이 됩니다. 그러나 프로세서 및 기타 메타데이터 조건(예: 기본 키, 외래 키, 고유 제약 조건 및 인덱스)의 수에 따라 SubscriptionStreams 값이 높으면 실제로 부정적인 영향을 줄 수 있습니다. 또한 스트림이 실행 또는 커밋되지 않으면 배포 에이전트는 대신에 단일 스트림을 사용하여 실패한 일괄 처리를 다시 시도합니다.
 
 
-이 테스트에 대한 자세한 내용은 [Optimizing replication agent profile parameters for better performance](https://blogs.msdn.microsoft.com/sql_server_team/optimizing-replication-agent-profile-parameters-for-better-performance/)(성능 향상을 위해 복제 에이전트 프로필 매개 변수 최적화)를 참조하세요.
+이 테스트에 대한 자세한 내용은 [Optimizing replication agent profile parameters for better performance](/archive/blogs/sql_server_team/optimizing-replication-agent-profile-parameters-for-better-performance)(성능 향상을 위해 복제 에이전트 프로필 매개 변수 최적화)를 참조하세요.
 
 
 ### <a name="log-reader-agent"></a>로그 판독기 에이전트
@@ -162,5 +162,4 @@ SQL Server 온라인 설명서의 "복제 배포 에이전트" 항목에는 *Sub
 [복제 에이전트 프로필 작업](../../../relational-databases/replication/agents/work-with-replication-agent-profiles.md)  
 [복제 에이전트의 명령 프롬프트 매개 변수 보기 및 수정&#40;SQL Server Management Studio&#41;](../../../relational-databases/replication/agents/view-and-modify-replication-agent-command-prompt-parameters.md)  
 [Replication Agent Executables Concepts](../../../relational-databases/replication/concepts/replication-agent-executables-concepts.md)  
-  
   

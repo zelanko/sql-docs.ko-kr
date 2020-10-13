@@ -12,12 +12,12 @@ ms.assetid: 7925ebef-cdb1-4cfe-b660-a8604b9d2153
 author: markingmyname
 ms.author: maghan
 monikerRange: =azuresqldb-current||>=sql-server-2016||=sqlallproducts-allversions||>=sql-server-linux-2017||=azuresqldb-mi-current
-ms.openlocfilehash: 912aca78675b1cf5a0a088ba9a2264fe23b2b2eb
-ms.sourcegitcommit: dd36d1cbe32cd5a65c6638e8f252b0bd8145e165
+ms.openlocfilehash: 322f977207bb593ddc6a4c8c78fae7621bd2aad4
+ms.sourcegitcommit: 04cf7905fa32e0a9a44575a6f9641d9a2e5ac0f8
 ms.translationtype: HT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 09/08/2020
-ms.locfileid: "89548901"
+ms.lasthandoff: 10/07/2020
+ms.locfileid: "91810689"
 ---
 # <a name="manage-retention-of-historical-data-in-system-versioned-temporal-tables"></a>시스템 버전 관리된 temporal 테이블에서 기록 데이터의 보존 관리
 
@@ -38,10 +38,10 @@ temporal 테이블 데이터 보존 관리는 각 temporal 테이블에 대한 �
 
 데이터 보존 기간을 결정하고 나면 그 다음으로 기록 데이터 저장 방법과 저장 위치, 그리고 요구되는 보존 기간보다 오래된 기록 데이터를 삭제하는 방법 등 기록 데이터를 관리하기 위한 계획을 개발합니다. 다음 네 가지 방법으로 temporal 기록 테이블에서 기록 데이터를 관리할 수 있습니다.
 
-- [Stretch Database](https://msdn.microsoft.com/library/mt637341.aspx#using-stretch-database-approach)
-- [테이블 분할](https://msdn.microsoft.com/library/mt637341.aspx#using-table-partitioning-approach)
-- [사용자 지정 정리 스크립트](https://msdn.microsoft.com/library/mt637341.aspx#using-custom-cleanup-script-approach)
-- [보존 정책](https://msdn.microsoft.com/library/mt637341.aspx#using-temporal-history-retention-policy-approach)
+- [Stretch Database](#using-stretch-database-approach)
+- [테이블 분할](#using-table-partitioning-approach)
+- [사용자 지정 정리 스크립트](#using-custom-cleanup-script-approach)
+- [보존 정책](#using-temporal-history-retention-policy-approach)
 
  기록 데이터 문제 완화 또는 정리를 위한 논리는 이 방법 중 한 가지를 사용하며 현재 테이블에서 기간 종료에 해당하는 열을 기반으로 합니다. 각 행에 대해 기간 값의 끝에서는 행 버전이 "닫힌" 상태가 되는, 즉 기록 테이블에서 해당 값이 처음 삽입되는 순간을 결정합니다. 예를 들어 조건 `SysEndTime < DATEADD (DAYS, -30, SYSUTCDATETIME ())` 은1개월보다 오래된 기록 데이터를 기록 테이블에서 제거하거나 제외해야 한다고 지정합니다.
 
@@ -53,7 +53,7 @@ temporal 테이블 데이터 보존 관리는 각 temporal 테이블에 대한 �
 > [!NOTE]
 > Stretch Database 접근 방식 사용은 [!INCLUDE[ssCurrent](../../includes/sscurrent-md.md)] 에만 적용되며 [!INCLUDE[sqldbesa](../../includes/sqldbesa-md.md)]에는 적용되지 않습니다.
 
-[스트레치 데이터베이스](../../sql-server/stretch-database/stretch-database.md) 에서 [!INCLUDE[ssCurrent](../../includes/sscurrent-md.md)] 는 Azure로 기록 데이터를 투명하게 마이그레이션합니다. 추가 보안을 위해 SQL Server의 [항상 암호화](https://msdn.microsoft.com/library/mt163865.aspx) 기능을 사용하여 동작에 대한 데이터를 암호화할 수 있습니다. 또한 데이터 보호를 위해 [행 수준 보안](../../relational-databases/security/row-level-security.md) 및 기타 고급 SQL Server 보안 기능을 임시 및 스트레치 데이터베이스와 함께 사용할 수 있습니다.
+[스트레치 데이터베이스](../../sql-server/stretch-database/stretch-database.md) 에서 [!INCLUDE[ssCurrent](../../includes/sscurrent-md.md)] 는 Azure로 기록 데이터를 투명하게 마이그레이션합니다. 추가 보안을 위해 SQL Server의 [항상 암호화](../security/encryption/always-encrypted-database-engine.md) 기능을 사용하여 동작에 대한 데이터를 암호화할 수 있습니다. 또한 데이터 보호를 위해 [행 수준 보안](../../relational-databases/security/row-level-security.md) 및 기타 고급 SQL Server 보안 기능을 임시 및 스트레치 데이터베이스와 함께 사용할 수 있습니다.
 
 Stretch Database 접근 방식을 사용하면 기록 데이터 일부 또는 전체를 Azure에 스트레치할 수 있으며 SQL Server에서 Azure로 기록 데이터를 자동으로 옮깁니다. 기록 테이블에서 스트레치를 사용하도록 설정한다고 해서 데이터 수정 및 임시 쿼리 측면에서 temporal 테이블을 조작하는 방식이 변경되는 것은 아닙니다.
 
@@ -98,7 +98,7 @@ Stretch Database 접근 방식을 사용하면 기록 데이터 일부 또는 �
 
 ### <a name="using-transact-sql-to-stretch-the-entire-history-table"></a>Transact-SQL을 사용하여 전체 기록 테이블 스트레치
 
-Transact-SQL을 사용하여 로컬 서버에서 스트레치를 사용하도록 설정하고 [데이터베이스에 대해 스트레치 데이터베이스를 사용](../../sql-server/stretch-database/enable-stretch-database-for-a-database.md)하도록 설정할 수 있습니다. 그런 다음, [Transact-SQL을 사용하여 테이블에서 Stretch Database를 사용하도록 설정](https://msdn.microsoft.com/library/mt605115.aspx#Anchor_1)할 수 있습니다. 스트레치 데이터베이스에 대해 이전에 사용하도록 설정된 데이터베이스를 사용하여 기존 시스템 버전 관리된 임시 기록 테이블을 스트레치할 수 있도록 다음 Transact-SQL 스크립트를 실행합니다.
+Transact-SQL을 사용하여 로컬 서버에서 스트레치를 사용하도록 설정하고 [데이터베이스에 대해 스트레치 데이터베이스를 사용](../../sql-server/stretch-database/enable-stretch-database-for-a-database.md)하도록 설정할 수 있습니다. 그런 다음, [Transact-SQL을 사용하여 테이블에서 Stretch Database를 사용하도록 설정](../../sql-server/stretch-database/enable-stretch-database-for-a-table.md)할 수 있습니다. 스트레치 데이터베이스에 대해 이전에 사용하도록 설정된 데이터베이스를 사용하여 기존 시스템 버전 관리된 임시 기록 테이블을 스트레치할 수 있도록 다음 Transact-SQL 스크립트를 실행합니다.
 
 ```sql
 ALTER TABLE <history table name>
@@ -315,7 +315,7 @@ COMMIT TRANSACTION
 4. 단계 (6)에서는 하한 경계를 병합하여 파티션 함수를 변경합니다(10월에 대한 데이터를 이동하여 제외한 후 `MERGE RANGE(N'2015-10-31T23:59:59.999'`).
 5. 단계 (7)에서는 새 상한 경계를 만드는 파티션 함수를 분리합니다(10월에 대한 데이터를 이동하여 제외한 후 `SPLIT RANGE (N'2016-04-30T23:59:59.999'` ).
 
-그러나 최적의 솔루션은 스크립트를 수정하지 않고 매월 적절한 작업을 수행할 수 있도록 일반 TRANSACT-SQL 스크립트를 정기적으로 실행하는 것입니다. 제공된 매개 변수(병합해야 할 하한 경계와 파티션 분할로 만들어지는 새 경계)로 동작을 수행하도록 위 스크립트를 일반화할 수도 있습니다. 매달 준비 테이블 생성을 방지하기 위해 사전에 미리 테이블을 만들고 전환할 파티션과 일치하도록 확인 제약 조건을 변경하여 다시 사용할 수 있습니다. 다음 페이지를 살펴보고 TRANSACT-SQL 스크립트를 사용하여 [슬라이딩 윈도우를 완전히 자동화할 수 있는 방법](https://msdn.microsoft.com/library/aa964122.aspx) 에 대한 아이디어를 얻어보세요.
+그러나 최적의 솔루션은 스크립트를 수정하지 않고 매월 적절한 작업을 수행할 수 있도록 일반 TRANSACT-SQL 스크립트를 정기적으로 실행하는 것입니다. 제공된 매개 변수(병합해야 할 하한 경계와 파티션 분할로 만들어지는 새 경계)로 동작을 수행하도록 위 스크립트를 일반화할 수도 있습니다. 매달 준비 테이블 생성을 방지하기 위해 사전에 미리 테이블을 만들고 전환할 파티션과 일치하도록 확인 제약 조건을 변경하여 다시 사용할 수 있습니다. 다음 페이지를 살펴보고 TRANSACT-SQL 스크립트를 사용하여 [슬라이딩 윈도우를 완전히 자동화할 수 있는 방법](/previous-versions/sql/sql-server-2005/administrator/aa964122(v=sql.90)) 에 대한 아이디어를 얻어보세요.
 
 ### <a name="performance-considerations-with-table-partitioning"></a>테이블 분할 시 성능 고려 사항
 
@@ -502,7 +502,7 @@ ON T1.history_table_id = T2.object_id WHERE T1.temporal_type = 2
 
 클러스터형 columnstore 인덱스는 데이터 압축이 뛰어나고 보존 정리가 효율적이므로 작업에서 대량의 기록 데이터를 빠르게 생성하는 시나리오에 적합합니다. 이런 패턴은 변경 내용 추적 및 감사, 추세 분석 또는 IoT 데이터 수집에 temporal 테이블을 사용하는 집약적 트랜잭션 처리 작업에서 일반적으로 나타납니다.
 
-자세한 내용은 [보존 정책을 사용하여 temporal 테이블에서 기록 데이터 관리](https://docs.microsoft.com/azure/sql-database/sql-database-temporal-tables-retention-policy)를 참조하세요.
+자세한 내용은 [보존 정책을 사용하여 temporal 테이블에서 기록 데이터 관리](/azure/sql-database/sql-database-temporal-tables-retention-policy)를 참조하세요.
 
 ## <a name="next-steps"></a>다음 단계
 

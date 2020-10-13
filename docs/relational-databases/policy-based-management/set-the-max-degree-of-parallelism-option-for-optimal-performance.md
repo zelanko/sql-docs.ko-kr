@@ -13,12 +13,12 @@ helpviewer_keywords:
 ms.assetid: ec908006-67ae-4674-9a61-25ea741d6197
 author: VanMSFT
 ms.author: vanto
-ms.openlocfilehash: 9f2cd688ca16baad21ec295105eeb0fdbbbda967
-ms.sourcegitcommit: da88320c474c1c9124574f90d549c50ee3387b4c
+ms.openlocfilehash: 6aada496465c642570f9b60a0b1659bbe9ee3db6
+ms.sourcegitcommit: 783b35f6478006d654491cb52f6edf108acf2482
 ms.translationtype: HT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 07/01/2020
-ms.locfileid: "85774179"
+ms.lasthandoff: 10/09/2020
+ms.locfileid: "91890903"
 ---
 # <a name="set-the-max-degree-of-parallelism-option-for-optimal-performance"></a>최적 성능을 위해 최대 병렬 처리 수준 옵션 설정
  [!INCLUDE [SQL Server](../../includes/applies-to-version/sqlserver.md)]
@@ -30,7 +30,6 @@ ms.locfileid: "85774179"
  MAXDOP 구성에 대한 권장 사항은 사용 중인 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 버전에 따라 달라집니다. 버전 관련 지침은 [최대 병렬 처리 수준 서버 구성 옵션 구성](../../database-engine/configure-windows/configure-the-max-degree-of-parallelism-server-configuration-option.md#Guidelines)을 참조하고, 이에 따라 최대 병렬 처리 수준 값을 확인하도록 정책을 구성합니다.     
   
 ## <a name="for-more-information"></a>참조 항목  
- [SQL Server의 최대 병렬 처리 수준 구성 옵션에 대한 권장 사항 및 지침](https://go.microsoft.com/fwlink/?linkid=117786)    
+ [SQL Server의 최대 병렬 처리 수준 구성 옵션에 대한 권장 사항 및 지침](../../database-engine/configure-windows/configure-the-max-degree-of-parallelism-server-configuration-option.md)    
  [최대 병렬 처리 수준 서버 구성 옵션 구성](../../database-engine/configure-windows/configure-the-max-degree-of-parallelism-server-configuration-option.md#Guidelines)     
  [sp_configure &#40;Transact-SQL&#41;](../../relational-databases/system-stored-procedures/sp-configure-transact-sql.md)     
-  

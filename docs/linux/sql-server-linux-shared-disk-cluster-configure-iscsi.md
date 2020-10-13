@@ -2,19 +2,19 @@
 title: iSCSI FCI 스토리지 구성 - SQL Server on Linux
 description: SQL Server on Linux용 iSCSI를 사용하여 FCI(장애 조치 클러스터 인스턴스)를 구성하는 방법을 알아봅니다.
 ms.custom: seo-lt-2019
-author: MikeRayMSFT
-ms.author: mikeray
+author: VanMSFT
+ms.author: vanto
 ms.reviewer: vanto
 ms.date: 06/30/2020
 ms.topic: conceptual
 ms.prod: sql
 ms.technology: linux
-ms.openlocfilehash: abe2613d421e07107c6ce81b18f5f9f83c8fe66d
-ms.sourcegitcommit: f7ac1976d4bfa224332edd9ef2f4377a4d55a2c9
+ms.openlocfilehash: 32ff32e3d342d63e6de7976213bf4a48ec915778
+ms.sourcegitcommit: 610e3ebe21ac6575850a29641a32f275e71557e3
 ms.translationtype: HT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 07/02/2020
-ms.locfileid: "85897303"
+ms.lasthandoff: 10/07/2020
+ms.locfileid: "91784913"
 ---
 # <a name="configure-failover-cluster-instance---iscsi---sql-server-on-linux"></a>장애 조치(failover) 클러스터 인스턴스 구성 - iSCSI - SQL Server on Linux
 

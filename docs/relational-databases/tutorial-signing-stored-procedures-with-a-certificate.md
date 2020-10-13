@@ -14,12 +14,12 @@ ms.assetid: a4b0f23b-bdc8-425f-b0b9-e0621894f47e
 author: MashaMSFT
 ms.author: mathoma
 monikerRange: =azuresqldb-current||>=sql-server-2016||=sqlallproducts-allversions||>=sql-server-linux-2017||=azuresqldb-mi-current
-ms.openlocfilehash: b612f3718b35d94ec7e0a4ae60acd618faa9135e
-ms.sourcegitcommit: e700497f962e4c2274df16d9e651059b42ff1a10
+ms.openlocfilehash: cfbe3440f5976ed2432f5fbcc7bd7ff39dffde45
+ms.sourcegitcommit: 04cf7905fa32e0a9a44575a6f9641d9a2e5ac0f8
 ms.translationtype: HT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 08/17/2020
-ms.locfileid: "88427405"
+ms.lasthandoff: 10/07/2020
+ms.locfileid: "91811087"
 ---
 # <a name="tutorial-signing-stored-procedures-with-a-certificate"></a>자습서: 인증서로 저장 프로시저 서명
 [!INCLUDE [SQL Server Azure SQL Database SQL Managed Instance](../includes/applies-to-version/sql-asdb-asdbmi.md)]
@@ -39,11 +39,11 @@ master 데이터베이스에서 인증서를 만들어 서버 수준 사용 권�
 ## <a name="prerequisites"></a>사전 요구 사항
 이 자습서를 완료하려면 SQL Server Management Studio, SQL Server를 실행하는 서버에 대한 액세스 및 AdventureWorks 데이터베이스가 필요합니다.
 
-- [SQL Server Management Studio](https://docs.microsoft.com/sql/ssms/download-sql-server-management-studio-ssms)를 설치합니다.
+- [SQL Server Management Studio](../ssms/download-sql-server-management-studio-ssms.md)를 설치합니다.
 - [SQL Server 2017 Developer Edition](https://www.microsoft.com/sql-server/sql-server-downloads)을 설치합니다.
-- [AdventureWorks2017 샘플 데이터베이스](https://docs.microsoft.com/sql/samples/adventureworks-install-configure)를 다운로드합니다.
+- [AdventureWorks2017 샘플 데이터베이스](../samples/adventureworks-install-configure.md)를 다운로드합니다.
 
-SQL Server Management Studio에서 데이터베이스를 복원하는 방법은 [데이터베이스를 복원](https://docs.microsoft.com/sql/relational-databases/backup-restore/restore-a-database-backup-using-ssms)을 참조하세요.   
+SQL Server Management Studio에서 데이터베이스를 복원하는 방법은 [데이터베이스를 복원](./backup-restore/restore-a-database-backup-using-ssms.md)을 참조하세요.   
   
 ## <a name="1-configure-the-environment"></a>1. 환경 구성  
 예제의 초기 컨텍스트를 설정하려면 [!INCLUDE[ssManStudioFull](../includes/ssmanstudiofull-md.md)]에서 새 쿼리를 열고 다음 코드를 실행하여 Adventureworks2017 데이터베이스를 엽니다. 이 코드는 데이터베이스 컨텍스트를 `AdventureWorks2012` 로 변경하고 암호를 사용하여 새 서버 로그인 및 데이터베이스 사용자 계정(`TestCreditRatingUser`)을 만듭니다.  
@@ -288,6 +288,5 @@ GO
   
 ## <a name="see-also"></a>참고 항목  
 [SQL Server 데이터베이스 엔진 및 Azure SQL Database 보안 센터](../relational-databases/security/security-center-for-sql-server-database-engine-and-azure-sql-database.md)  
-  
   
   

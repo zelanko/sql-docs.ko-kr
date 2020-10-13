@@ -13,12 +13,12 @@ helpviewer_keywords:
 ms.assetid: 46788407-187e-4b0b-bfe4-529af8d77c60
 author: VanMSFT
 ms.author: vanto
-ms.openlocfilehash: fa82df08581e8667bdcae7e8c64fa1562e4b7081
-ms.sourcegitcommit: 27f95e50f11a98164e9e7a5130a3e00ac06b4cea
+ms.openlocfilehash: 189ce28ed2480a6efedd14c91a96ebae12c862e2
+ms.sourcegitcommit: 783b35f6478006d654491cb52f6edf108acf2482
 ms.translationtype: HT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 09/28/2020
-ms.locfileid: "91412764"
+ms.lasthandoff: 10/09/2020
+ms.locfileid: "91892163"
 ---
 # <a name="monitor-and-enforce-best-practices-by-using-policy-based-management"></a>정책 기반 관리를 사용하여 최선의 방법 모니터링 및 적용
  [!INCLUDE [SQL Server](../../includes/applies-to-version/sqlserver.md)]
@@ -30,11 +30,11 @@ ms.locfileid: "91412764"
 |정책 이름|최선의 방법 규칙|  
 |-----------------|------------------------|  
 |비대칭 키 암호화 알고리즘|[비대칭 키 암호화의 강도](../../relational-databases/policy-based-management/asymmetric-keys-encryption-strength.md)|  
-|백업 및 데이터 파일 위치|[백업 파일을 데이터베이스 파일과 별개의 디바이스에 두어야 함](https://msdn.microsoft.com/library/7039bebb-1f25-4cf3-81f1-393dfb78da12)|  
+|백업 및 데이터 파일 위치|[백업 파일을 데이터베이스 파일과 별개의 디바이스에 두어야 함](../backup-restore/backup-devices-sql-server.md)|  
 |데이터 및 로그 파일 위치|[데이터와 로그 파일을 별개의 드라이브에 배치](../../relational-databases/policy-based-management/place-data-and-log-files-on-separate-drives.md)|  
 |데이터베이스 자동 닫기|[AUTO_CLOSE 데이터베이스 옵션을 OFF로 설정](../../relational-databases/policy-based-management/set-the-auto-close-database-option-to-off.md)|  
 |데이터베이스 자동 축소|[AUTO_SHRINK 데이터베이스 옵션을 OFF로 설정](../../relational-databases/policy-based-management/set-the-auto-shrink-database-option-to-off.md)|  
-|데이터베이스 정렬|[master 및 model 데이터베이스와 일치하도록 사용자 정의 데이터베이스의 데이터 정렬 설정](https://msdn.microsoft.com/library/c686446f-dae1-4b05-a3df-837b3422988d)|  
+|데이터베이스 정렬|[master 및 model 데이터베이스와 일치하도록 사용자 정의 데이터베이스의 데이터 정렬 설정](/previous-versions/sql/sql-server-2016/bb402915(v=sql.130))|  
 |데이터베이스 페이지 확인|[PAGE_VERIFY 데이터베이스 옵션을 CHECKSUM으로 설정](../../relational-databases/policy-based-management/set-the-page-verify-database-option-to-checksum.md)|  
 |데이터베이스 페이지 상태|[주의 대상 페이지가 있는 데이터베이스의 무결성 검사](../../relational-databases/policy-based-management/check-integrity-of-database-with-suspect-pages.md)|  
 |게스트 사용 권한|[사용자 데이터베이스에 대한 게스트 사용 권한](../../relational-databases/policy-based-management/guest-permissions-on-user-databases.md)|  
@@ -70,5 +70,4 @@ ms.locfileid: "91412764"
   
 ## <a name="see-also"></a>참고 항목  
  [정책 기반 관리 패싯 작업](../../relational-databases/policy-based-management/working-with-policy-based-management-facets.md)  
-  
   

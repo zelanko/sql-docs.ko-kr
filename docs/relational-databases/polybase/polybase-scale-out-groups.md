@@ -14,12 +14,12 @@ author: MikeRayMSFT
 ms.author: mikeray
 ms.reviewer: ''
 monikerRange: '>= sql-server-2016 || =sqlallproducts-allversions'
-ms.openlocfilehash: 7ea789049116c79e3242a5d1fed1f1fb8f020d1f
-ms.sourcegitcommit: 9a0824aa9bf54b24039c6a533d11474cfb5423ef
+ms.openlocfilehash: b636a615544cdf3ab642e34b1d02c59db2e11872
+ms.sourcegitcommit: 783b35f6478006d654491cb52f6edf108acf2482
 ms.translationtype: HT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 06/16/2020
-ms.locfileid: "84818225"
+ms.lasthandoff: 10/09/2020
+ms.locfileid: "91892513"
 ---
 # <a name="polybase-scale-out-groups"></a>PolyBase 스케일 아웃 그룹
 
@@ -27,7 +27,7 @@ ms.locfileid: "84818225"
 
 PolyBase를 사용하는 독립 실행형 SQL Server 인스턴스는 Hadoop 또는 Azure Blob 스토리지에서 대규모 데이터 집합을 처리하는 경우 성능상의 병목 지점이 될 수 있습니다. PolyBase 그룹 기능을 사용하면 SQL Server 인스턴스 클러스터를 만들어 Hadoop 또는 Azure Blob Storage와 같은 외부 데이터 원본에서 쿼리 성능을 향상하기 위해 스케일 아웃 방식으로 대규모 데이터를 처리할 수 있습니다. 이제 워크로드의 성능 요구에 맞게 SQL Server 컴퓨팅을 확장할 수 있습니다. SQL Server 인스턴스 그룹인 PolyBase 스케일 아웃 그룹을 사용하여 병렬 처리 아키텍처에서 대규모 외부 데이터 집합을 처리할 수 있습니다. 그룹에 더 많은 SQL Server 인스턴스를 추가하면 데이터 부하 및 쿼리 성능이 비례해서 증가할 수 있습니다. 
   
-[PolyBase 시작](../../relational-databases/polybase/get-started-with-polybase.md) 및 [PolyBase 가이드](../../relational-databases/polybase/polybase-guide.md)를 참조하세요.
+[PolyBase 시작](./polybase-guide.md) 및 [PolyBase 가이드](../../relational-databases/polybase/polybase-guide.md)를 참조하세요.
   
 ![PolyBase 스케일 아웃 그룹](../../relational-databases/polybase/media/polybase-scale-out-groups.png "PolyBase 스케일 아웃 그룹")  
   
@@ -68,5 +68,4 @@ PolyBase 스케일 아웃 그룹을 구성하려면 다음 안내서를 참조�
 
  [sys-dm-exec-compute-nodes](../../relational-databases/system-dynamic-management-views/sys-dm-exec-compute-nodes-transact-sql.md)   
  [sys-dm-exec-compute-node-status](../../relational-databases/system-dynamic-management-views/sys-dm-exec-compute-node-status-transact-sql.md)   
- [sys.dm_exec_compute_node_errors](../../relational-databases/system-dynamic-management-views/sys-dm-exec-compute-node-errors-transact-sql.md)   
-
+ [sys.dm_exec_compute_node_errors](../../relational-databases/system-dynamic-management-views/sys-dm-exec-compute-node-errors-transact-sql.md)

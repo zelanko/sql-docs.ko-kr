@@ -24,12 +24,12 @@ helpviewer_keywords:
 ms.assetid: e2478d26-dea4-428d-98c5-aad2d2a30da8
 author: julieMSFT
 ms.author: jrasnick
-ms.openlocfilehash: e49dc9ad226d9a9a1bd3cc277a1944f7b5b6622e
-ms.sourcegitcommit: e700497f962e4c2274df16d9e651059b42ff1a10
+ms.openlocfilehash: 45cfba1078dbe72e09f760f24fc0c9f47c0c0b1f
+ms.sourcegitcommit: 783b35f6478006d654491cb52f6edf108acf2482
 ms.translationtype: HT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 08/17/2020
-ms.locfileid: "88482523"
+ms.lasthandoff: 10/09/2020
+ms.locfileid: "91891023"
 ---
 # <a name="manage-partition-wizard"></a>파티션 관리 마법사 
  [!INCLUDE [SQL Server](../../includes/applies-to-version/sqlserver.md)]
@@ -90,7 +90,7 @@ ms.locfileid: "88482523"
  **슬라이딩 윈도우 시나리오에서 분할된 데이터 관리**  
  데이터 전환에 사용할 수 있는 기존 테이블에 빈 파티션을 추가합니다. 이 마법사는 현재 마지막 파티션으로의 전환과 첫 번째 파티션으로부터의 전환을 지원합니다.  
   
- ![맨 위로 이동 링크와 함께 사용되는 화살표 아이콘](https://docs.microsoft.com/analysis-services/analysis-services/instances/media/uparrow16x16.gif "맨 위로 이동 링크와 함께 사용되는 화살표 아이콘") [섹션 내용](#Top)  
+ ![맨 위로 이동 링크와 함께 사용되는 화살표 아이콘](/analysis-services/analysis-services/instances/media/uparrow16x16.gif "맨 위로 이동 링크와 함께 사용되는 화살표 아이콘") [섹션 내용](#Top)  
   
 ##  <a name="select-partition-switching-in-options-page"></a><a name="SwitchIn"></a> 파티션 내부 전환 옵션 선택 페이지  
  **파티션 내부 전환 옵션 선택** 페이지를 사용하여 분할된 테이블로 내부 전환할 준비 테이블을 선택할 수 있습니다.  
@@ -105,7 +105,7 @@ ms.locfileid: "88482523"
  **내부 전환 테이블**  
  분할된 테이블에 추가할 파티션이 포함된 준비 테이블을 선택합니다. **파티션 관리 마법사**를 사용하여 파티션을 내부 전환하기 전에 이 준비 테이블을 만들어야 합니다.  
   
- ![맨 위로 이동 링크와 함께 사용되는 화살표 아이콘](https://docs.microsoft.com/analysis-services/analysis-services/instances/media/uparrow16x16.gif "맨 위로 이동 링크와 함께 사용되는 화살표 아이콘") [섹션 내용](#Top)  
+ ![맨 위로 이동 링크와 함께 사용되는 화살표 아이콘](/analysis-services/analysis-services/instances/media/uparrow16x16.gif "맨 위로 이동 링크와 함께 사용되는 화살표 아이콘") [섹션 내용](#Top)  
   
 ##  <a name="select-partition-switching-out-options-page"></a><a name="SwitchOut"></a> 파티션 외부 전환 옵션 선택 페이지  
  **파티션 외부 전환 옵션 선택** 페이지를 사용하여 분할된 테이블에서 외부 전환할 분할된 데이터를 저장하기 위한 파티션 및 준비 테이블을 선택할 수 있습니다.  
@@ -123,7 +123,7 @@ ms.locfileid: "88482523"
  **기존**  
  현재 원본 테이블에서 외부 전환하려는 파티션에 사용할 기존 준비 테이블을 선택합니다. 기존 테이블에 데이터가 포함된 경우 외부 전환하는 데이터가 이 데이터를 덮어씁니다.  
   
- ![맨 위로 이동 링크와 함께 사용되는 화살표 아이콘](https://docs.microsoft.com/analysis-services/analysis-services/instances/media/uparrow16x16.gif "맨 위로 이동 링크와 함께 사용되는 화살표 아이콘") [섹션 내용](#Top)  
+ ![맨 위로 이동 링크와 함께 사용되는 화살표 아이콘](/analysis-services/analysis-services/instances/media/uparrow16x16.gif "맨 위로 이동 링크와 함께 사용되는 화살표 아이콘") [섹션 내용](#Top)  
   
 ##  <a name="select-the-staging-table-options-page"></a><a name="StagingTableOptions"></a> 준비 테이블 옵션 선택 페이지  
  **준비 테이블 옵션 선택** 페이지를 사용하여 분할된 데이터를 전환하는 데 사용할 준비 테이블을 만들 수 있습니다.  
@@ -145,7 +145,7 @@ ms.locfileid: "88482523"
  **파일 그룹**  
  새 테이블의 파일 그룹을 선택합니다.  
   
- ![맨 위로 이동 링크와 함께 사용되는 화살표 아이콘](https://docs.microsoft.com/analysis-services/analysis-services/instances/media/uparrow16x16.gif "맨 위로 이동 링크와 함께 사용되는 화살표 아이콘") [섹션 내용](#Top)  
+ ![맨 위로 이동 링크와 함께 사용되는 화살표 아이콘](/analysis-services/analysis-services/instances/media/uparrow16x16.gif "맨 위로 이동 링크와 함께 사용되는 화살표 아이콘") [섹션 내용](#Top)  
   
 ##  <a name="select-output-option-page"></a><a name="OutputOption"></a> 출력 옵션 선택 페이지  
  **출력 옵션 선택** 페이지를 사용하여 파티션에 대한 수정을 완료하는 방법을 지정할 수 있습니다.  
@@ -172,7 +172,7 @@ ms.locfileid: "88482523"
  **일정 변경**  
  예약된 작업의 속성을 선택, 변경하거나 볼 수 있는 **새 작업 일정** 대화 상자를 엽니다.  
   
- ![맨 위로 이동 링크와 함께 사용되는 화살표 아이콘](https://docs.microsoft.com/analysis-services/analysis-services/instances/media/uparrow16x16.gif "맨 위로 이동 링크와 함께 사용되는 화살표 아이콘") [섹션 내용](#Top)  
+ ![맨 위로 이동 링크와 함께 사용되는 화살표 아이콘](/analysis-services/analysis-services/instances/media/uparrow16x16.gif "맨 위로 이동 링크와 함께 사용되는 화살표 아이콘") [섹션 내용](#Top)  
   
 ##  <a name="new-job-schedule-page"></a><a name="NewJob"></a> 새 작업 일정 페이지  
  **새 작업 일정** 페이지를 사용하여 일정 속성을 확인하고 변경할 수 있습니다.  
@@ -255,7 +255,7 @@ ms.locfileid: "88482523"
  **Time**  
  작업을 실행할 시간을 선택합니다.  
   
- ![맨 위로 이동 링크와 함께 사용되는 화살표 아이콘](https://docs.microsoft.com/analysis-services/analysis-services/instances/media/uparrow16x16.gif "맨 위로 이동 링크와 함께 사용되는 화살표 아이콘") [섹션 내용](#Top)  
+ ![맨 위로 이동 링크와 함께 사용되는 화살표 아이콘](/analysis-services/analysis-services/instances/media/uparrow16x16.gif "맨 위로 이동 링크와 함께 사용되는 화살표 아이콘") [섹션 내용](#Top)  
   
 ##  <a name="summary-page"></a><a name="Summary"></a> 요약 페이지  
  **요약** 페이지를 사용하여 이전 페이지에서 선택한 옵션을 검토할 수 있습니다.  
@@ -264,7 +264,7 @@ ms.locfileid: "88482523"
  **선택 항목 검토**  
  마법사의 각 페이지에서 사용자가 선택한 항목을 표시합니다. 이전에 선택한 옵션을 확장하고 보려면 노드를 클릭합니다.  
   
- ![맨 위로 이동 링크와 함께 사용되는 화살표 아이콘](https://docs.microsoft.com/analysis-services/analysis-services/instances/media/uparrow16x16.gif "맨 위로 이동 링크와 함께 사용되는 화살표 아이콘") [섹션 내용](#Top)  
+ ![맨 위로 이동 링크와 함께 사용되는 화살표 아이콘](/analysis-services/analysis-services/instances/media/uparrow16x16.gif "맨 위로 이동 링크와 함께 사용되는 화살표 아이콘") [섹션 내용](#Top)  
   
 ##  <a name="progress-page"></a><a name="Progress"></a> 진행률 페이지  
  **진행률** 페이지를 사용하여 **파티션 관리 마법사**의 동작에 대한 상태 정보를 모니터링할 수 있습니다. 마법사에서 선택한 옵션에 따라 **진행률** 페이지에 하나 이상의 동작이 포함될 수 있습니다. 맨 위에 있는 상자에는 전반적인 마법사 상태와 수신된 상태, 오류 및 경고 메시지의 수가 표시됩니다.  
@@ -302,9 +302,8 @@ ms.locfileid: "88482523"
  **닫기**  
  마법사를 닫습니다.  
   
- ![맨 위로 이동 링크와 함께 사용되는 화살표 아이콘](https://docs.microsoft.com/analysis-services/analysis-services/instances/media/uparrow16x16.gif "맨 위로 이동 링크와 함께 사용되는 화살표 아이콘") [섹션 내용](#Top)  
+ ![맨 위로 이동 링크와 함께 사용되는 화살표 아이콘](/analysis-services/analysis-services/instances/media/uparrow16x16.gif "맨 위로 이동 링크와 함께 사용되는 화살표 아이콘") [섹션 내용](#Top)  
   
 ## <a name="see-also"></a>참고 항목  
  [Partitioned Tables and Indexes](../../relational-databases/partitions/partitioned-tables-and-indexes.md)  
-  
   

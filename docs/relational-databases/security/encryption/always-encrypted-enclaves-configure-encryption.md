@@ -11,12 +11,12 @@ ms.topic: conceptual
 author: jaszymas
 ms.author: jaszymas
 monikerRange: '>= sql-server-ver15 || = sqlallproducts-allversions'
-ms.openlocfilehash: 38f421815202b16fe5d7d2570ce5661be5097109
-ms.sourcegitcommit: e700497f962e4c2274df16d9e651059b42ff1a10
+ms.openlocfilehash: bb922b1dc85706e0630dd3d67dcb33459c490124
+ms.sourcegitcommit: 4d370399f6f142e25075b3714e5c2ce056b1bfd0
 ms.translationtype: HT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 08/17/2020
-ms.locfileid: "88490498"
+ms.lasthandoff: 10/09/2020
+ms.locfileid: "91863699"
 ---
 # <a name="configure-column-encryption-in-place-using-always-encrypted-with-secure-enclaves"></a>보안 Enclave를 사용한 Always Encrypted를 사용하여 바로 열 암호화 구성 
 [!INCLUDE [sqlserver2019-windows-only](../../../includes/applies-to-version/sqlserver2019-windows-only.md)]
@@ -28,7 +28,7 @@ ms.locfileid: "88490498"
 
 바로 암호화를 사용하면 [ALTER TABLE ALTER COLUMN(Transact-SQL)](../../../t-sql/statements/alter-table-transact-sql.md) 문을 사용하여 암호화 작업을 트리거할 수도 있습니다. 이 방법은 Enclave 없이는 사용할 수 없습니다.
 
-## <a name="prerequisites"></a>사전 요구 사항
+## <a name="prerequisites"></a>필수 구성 요소
 지원되는 암호화 작업과 작업에 사용되는 열 암호화 키에 대한 요구 사항은 다음과 같습니다.
 - 일반 텍스트 열 암호화. 열 암호화에 사용되는 열 암호화 키가 Enclave 사용 키여야 합니다.
 - 새 암호화 유형 또는/및 새 열 암호화 키를 사용하여 암호화된 열 다시 암호화. 현재 열 암호화 키 및 새 열 암호화 키(현재 키와 다른 경우) 둘 다 Enclave 사용 키여야 합니다.
@@ -43,7 +43,7 @@ ms.locfileid: "88490498"
 SQL Server Management Studio 또는 사용자 지정 애플리케이션에서 [ALTER TABLE ALTER COLUMN(Transact-SQL)](../../../t-sql/statements/alter-table-transact-sql.md)을 사용하는 경우에만 바로 암호화를 트리거할 수 있습니다. [Transact-SQL을 사용하여 바로 열 암호화 구성](always-encrypted-enclaves-configure-encryption-tsql.md)을 참조하세요.
 
 > [!NOTE]
-> 현재 [Always Encrypted 마법사](always-encrypted-wizard.md) 및 [Set-SqlColumnEncryption](https://docs.microsoft.com/powershell/module/sqlserver/set-sqlcolumnencryption) cmdlet은 바로 암호화를 지원하지 않으며, 구성이 위의 조건을 충족하는 경우에도 항상 암호화 작업에 대한 데이터를 다운로드합니다. 
+> 현재 [Always Encrypted 마법사](always-encrypted-wizard.md) 및 [Set-SqlColumnEncryption](/powershell/module/sqlserver/set-sqlcolumnencryption) cmdlet은 바로 암호화를 지원하지 않으며, 구성이 위의 조건을 충족하는 경우에도 항상 암호화 작업에 대한 데이터를 다운로드합니다. 
 
 ## <a name="next-steps"></a>다음 단계
 - [Transact-SQL을 사용하여 바로 열 암호화 구성](always-encrypted-enclaves-configure-encryption-tsql.md)

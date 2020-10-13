@@ -12,12 +12,12 @@ ms.author: pelopes
 ms.reviewer: mikeray
 monikerRange: =azuresqldb-current||>=sql-server-2016||=sqlallproducts-allversions||>=sql-server-linux-2017||=azuresqldb-mi-current
 ms.custom: seo-lt-2019
-ms.openlocfilehash: 29861071eec3c87797843aaa40590c23d912ea52
-ms.sourcegitcommit: e700497f962e4c2274df16d9e651059b42ff1a10
+ms.openlocfilehash: d6d2ab12917fe043cd65d035cc1f133a24c04460
+ms.sourcegitcommit: 4d370399f6f142e25075b3714e5c2ce056b1bfd0
 ms.translationtype: HT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 08/17/2020
-ms.locfileid: "88464976"
+ms.lasthandoff: 10/09/2020
+ms.locfileid: "91868972"
 ---
 # <a name="revert-word-breakers-used-by-search-to-previous-version-sql-server-search"></a>검색에 사용된 단어 분리기를 이전 버전으로 되돌리기(SQL Server 검색)
 [!INCLUDE [SQL Server Azure SQL Database](../../includes/applies-to-version/sql-asdb.md)]
@@ -381,5 +381,4 @@ ms.locfileid: "88464976"
   
 ## <a name="see-also"></a>참고 항목  
  [미국 영어 및 영국 영어에 사용되는 단어 분리기 변경](../../relational-databases/search/change-the-word-breaker-used-for-us-english-and-uk-english.md)   
- [전체 텍스트 검색의 동작 변경](https://docs.microsoft.com/sql/relational-databases/search/full-text-search?view=sql-server-ver15)
- 
+ [전체 텍스트 검색의 동작 변경](./full-text-search.md?view=sql-server-ver15)

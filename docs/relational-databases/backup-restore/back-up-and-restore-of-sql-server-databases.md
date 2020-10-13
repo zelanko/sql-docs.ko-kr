@@ -23,12 +23,12 @@ helpviewer_keywords:
 ms.assetid: 570a21b3-ad29-44a9-aa70-deb2fbd34f27
 author: MikeRayMSFT
 ms.author: mikeray
-ms.openlocfilehash: a39bffb27177281b5e5c89330bb605ce7fd90acf
-ms.sourcegitcommit: da88320c474c1c9124574f90d549c50ee3387b4c
+ms.openlocfilehash: afc33480cb19ac8b676c6384d839f1ae4b7d9440
+ms.sourcegitcommit: 04cf7905fa32e0a9a44575a6f9641d9a2e5ac0f8
 ms.translationtype: HT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 07/01/2020
-ms.locfileid: "85771731"
+ms.lasthandoff: 10/07/2020
+ms.locfileid: "91810089"
 ---
 # <a name="back-up-and-restore-of-sql-server-databases"></a>SQL Server 데이터베이스 백업 및 복원
  [!INCLUDE [SQL Server](../../includes/applies-to-version/sqlserver.md)]
@@ -38,7 +38,7 @@ ms.locfileid: "85771731"
   
  SQL Server 백업 및 복원 구성 요소는 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 데이터베이스에 저장된 중요한 데이터를 보호하기 위한 필수 보호 방법을 제공합니다. 치명적인 데이터 손실 위험을 최소화하려면 정기적으로 데이터베이스를 백업하여 수정 내용을 보존해야 합니다. 잘 계획된 백업 및 복원 전략은 다양한 오류로 인한 데이터 손실을 막아줍니다. 백업 세트를 복원하고 데이터베이스를 복구하는 방법으로 전략을 테스트하여 재해에 효과적으로 대응할 수 있도록 준비하세요.
   
- 백업을 저장하기 위한 로컬 스토리지 외에도 SQL Server는 Azure Blob Storage 서비스로의 백업 및 복원도 지원합니다. 자세한 내용은 [Microsoft Azure Blob Storage 서비스로 SQL Server 백업 및 복원](../../relational-databases/backup-restore/sql-server-backup-and-restore-with-microsoft-azure-blob-storage-service.md)을 참조하세요. Microsoft Azure Blob Storage 서비스를 사용하여 스토리지된 데이터베이스 파일의 경우 [!INCLUDE[ssSQL15](../../includes/sssql15-md.md)] 은(는) 거의 즉시 백업 및 빠른 복원에 Azure 스냅샷을 사용하는 옵션을 제공합니다. 자세한 내용은 [Azure에서 데이터베이스 파일에 대한 파일-스냅샷 Backup](../../relational-databases/backup-restore/file-snapshot-backups-for-database-files-in-azure.md)을 참조하세요. Azure는 Azure VM에서 실행 중인 SQL Server에 대한 엔터프라이즈 클래스 백업 솔루션도 제공합니다. 완전히 관리되는 백업 솔루션인 Azure는 Always On 가용성 그룹, 장기 보존, 지정 시간 복구, 중앙 관리 및 모니터링을 지원합니다. 자세한 내용은 [Azure VM에서 SQL Server에 대한 Azure Backup](https://docs.microsoft.com/azure/backup/backup-azure-sql-database)을 참조하세요.
+ 백업을 저장하기 위한 로컬 스토리지 외에도 SQL Server는 Azure Blob Storage 서비스로의 백업 및 복원도 지원합니다. 자세한 내용은 [Microsoft Azure Blob Storage 서비스로 SQL Server 백업 및 복원](../../relational-databases/backup-restore/sql-server-backup-and-restore-with-microsoft-azure-blob-storage-service.md)을 참조하세요. Microsoft Azure Blob Storage 서비스를 사용하여 스토리지된 데이터베이스 파일의 경우 [!INCLUDE[ssSQL15](../../includes/sssql15-md.md)] 은(는) 거의 즉시 백업 및 빠른 복원에 Azure 스냅샷을 사용하는 옵션을 제공합니다. 자세한 내용은 [Azure에서 데이터베이스 파일에 대한 파일-스냅샷 Backup](../../relational-databases/backup-restore/file-snapshot-backups-for-database-files-in-azure.md)을 참조하세요. Azure는 Azure VM에서 실행 중인 SQL Server에 대한 엔터프라이즈 클래스 백업 솔루션도 제공합니다. 완전히 관리되는 백업 솔루션인 Azure는 Always On 가용성 그룹, 장기 보존, 지정 시간 복구, 중앙 관리 및 모니터링을 지원합니다. 자세한 내용은 [Azure VM에서 SQL Server에 대한 Azure Backup](/azure/backup/backup-azure-sql-database)을 참조하세요.
   
 ##  <a name="why-back-up"></a>백업 이유  
 -   [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 데이터베이스를 백업하고 백업에 대한 테스트 복원 절차를 실행한 다음 안전한 오프 사이트 위치에 백업을 저장하여 치명적인 데이터 손실을 방지할 수 있습니다. **백업은 데이터를 보호하는 유일한 방법입니다.**
@@ -285,11 +285,10 @@ GO
  [복원 및 복구 개요&#40;SQL Server&#41;](../../relational-databases/backup-restore/restore-and-recovery-overview-sql-server.md)   
  [BACKUP&#40;Transact-SQL&#41;](../../t-sql/statements/backup-transact-sql.md)   
  [RESTORE&#40;Transact-SQL&#41;](../../t-sql/statements/restore-statements-transact-sql.md)   
- [Analysis Services 데이터베이스 백업 및 복원](https://docs.microsoft.com/analysis-services/multidimensional-models/backup-and-restore-of-analysis-services-databases)   
+ [Analysis Services 데이터베이스 백업 및 복원](/analysis-services/multidimensional-models/backup-and-restore-of-analysis-services-databases)   
  [전체 텍스트 카탈로그와 인덱스 백업 및 복원](../../relational-databases/search/back-up-and-restore-full-text-catalogs-and-indexes.md)   
  [복제된 데이터베이스 백업 및 복원](../../relational-databases/replication/administration/back-up-and-restore-replicated-databases.md)   
  [트랜잭션 로그&#40;SQL Server&#41;](../../relational-databases/logs/the-transaction-log-sql-server.md)   
  [복구 모델&#40;SQL Server&#41;](../../relational-databases/backup-restore/recovery-models-sql-server.md)   
  [미디어 세트, 미디어 패밀리 및 백업 세트&#40;SQL Server&#41;](../../relational-databases/backup-restore/media-sets-media-families-and-backup-sets-sql-server.md)  
-  
   

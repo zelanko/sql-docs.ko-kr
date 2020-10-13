@@ -13,16 +13,16 @@ author: yualan
 ms.author: alayu
 ms.reviewer: maghan
 monikerRange: =azuresqldb-current||>=sql-server-2016||=sqlallproducts-allversions||>=sql-server-linux-2017||=azuresqldb-mi-current
-ms.openlocfilehash: c083045beaae0d9cbdc6c815723a60093a97431a
-ms.sourcegitcommit: 331b8495e4ab37266945c81ff5b93d250bdaa6da
+ms.openlocfilehash: 68144fbcffdc2535471c279b5771963fcfb05fec
+ms.sourcegitcommit: 4d370399f6f142e25075b3714e5c2ce056b1bfd0
 ms.translationtype: HT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 08/20/2020
-ms.locfileid: "88646053"
+ms.lasthandoff: 10/09/2020
+ms.locfileid: "91868735"
 ---
 # <a name="import-flat-file-to-sql-wizard"></a>SQL 마법사로 플랫 파일 가져오기
 [!INCLUDE [SQL Server Azure SQL Database](../../includes/applies-to-version/sql-asdb.md)]
-> 가져오기 및 내보내기 마법사와 관련된 콘텐츠는 [SQL Server 가져오기 및 내보내기 마법사](https://docs.microsoft.com/sql/integration-services/import-export-data/import-and-export-data-with-the-sql-server-import-and-export-wizard)를 참조하세요.
+> 가져오기 및 내보내기 마법사와 관련된 콘텐츠는 [SQL Server 가져오기 및 내보내기 마법사](../../integration-services/import-export-data/import-and-export-data-with-the-sql-server-import-and-export-wizard.md)를 참조하세요.
 
 플랫 파일 가져오기 마법사는 플랫 파일(.csv, .txt)에서 데이터베이스의 새 테이블로 데이터를 복사하는 간단한 방법입니다.  플랫 파일 가져오기 마법사는 쉼표로 구분된 서식 파일과 고정 너비 서식 파일을 모두 지원합니다. 이 개요에는 이 마법사를 사용하는 이유, 이 마법사를 찾는 방법 및 수행할 간단한 예제가 나와 있습니다.
 
@@ -36,7 +36,7 @@ PROSE는 입력 파일의 데이터 패턴을 분석하여 열 이름, 형식, �
 > [!VIDEO https://channel9.msdn.com/Shows/Data-Exposed/Introducing-the-new-Import-Flat-File-Wizard-in-SSMS-173/player?WT.mc_id=dataexposed-c9-niner]
 
 ## <a name="prerequisites"></a>사전 요구 사항
-이 기능은 SSMS(SQL Server Management Studio) v17.3 이상에서 사용할 수 있습니다. 최신 버전을 사용하고 있는지 확인하세요. 최신 버전은 [여기](https://docs.microsoft.com/sql/ssms/download-sql-server-management-studio-ssms)에서 찾을 수 있습니다.
+이 기능은 SSMS(SQL Server Management Studio) v17.3 이상에서 사용할 수 있습니다. 최신 버전을 사용하고 있는지 확인하세요. 최신 버전은 [여기](../../ssms/download-sql-server-management-studio-ssms.md)에서 찾을 수 있습니다.
  
 ## <a name="getting-started"></a><a id="started"></a>시작
 플랫 파일 가져오기 마법사에 액세스하려면 다음 단계를 수행합니다.
@@ -124,7 +124,6 @@ Failed to convert parameter value from a String to a Double. (System.Data)
 
 마법사에 대해 자세히 알아봅니다.
  
-- **다른 원본 가져오기에 대해 자세히 알아봅니다.** 플랫 파일 이외의 항목을 가져오려는 경우 [SQL Server 가져오기 및 내보내기 마법사](https://docs.microsoft.com/sql/integration-services/import-export-data/import-and-export-data-with-the-sql-server-import-and-export-wizard)를 참조하세요.
-- **플랫 파일 원본에 연결하기에 대해 자세히 알아봅니다.** 플랫 파일 원본에 연결하기에 대한 자세한 내용을 찾는 경우 [플랫 파일 데이터 원본에 연결](https://docs.microsoft.com/sql/integration-services/import-export-data/connect-to-a-flat-file-data-source-sql-server-import-and-export-wizard)을 참조하세요.
+- **다른 원본 가져오기에 대해 자세히 알아봅니다.** 플랫 파일 이외의 항목을 가져오려는 경우 [SQL Server 가져오기 및 내보내기 마법사](../../integration-services/import-export-data/import-and-export-data-with-the-sql-server-import-and-export-wizard.md)를 참조하세요.
+- **플랫 파일 원본에 연결하기에 대해 자세히 알아봅니다.** 플랫 파일 원본에 연결하기에 대한 자세한 내용을 찾는 경우 [플랫 파일 데이터 원본에 연결](../../integration-services/import-export-data/connect-to-a-flat-file-data-source-sql-server-import-and-export-wizard.md)을 참조하세요.
 - **PROSE에 대해 자세히 알아봅니다.** 이 마법사에서 사용하는 지능형 프레임워크에 대한 개요를 찾는 경우 [PROSE SDK](https://microsoft.github.io/prose/)를 참조하세요.
-

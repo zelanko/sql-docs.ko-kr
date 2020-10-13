@@ -1467,7 +1467,7 @@
 - name: 관계형 데이터베이스
   items:
     - name: '로그인, 사용자 및 스키마를 관리하는 방법'
-      href: ../relational-databases/security/authentication-access/managing-logins-users-and-schemas-how-to-topics.md
+      href: ../relational-databases/security/authentication-access/create-a-login.md
     - name: 동적 데이터 마스킹
       href: ../relational-databases/security/dynamic-data-masking.md
     - name: SQL Server Express LocalDB 참조

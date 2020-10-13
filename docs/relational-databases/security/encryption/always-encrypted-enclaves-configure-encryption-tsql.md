@@ -11,12 +11,12 @@ ms.topic: conceptual
 author: jaszymas
 ms.author: jaszymas
 monikerRange: '>= sql-server-ver15 || = sqlallproducts-allversions'
-ms.openlocfilehash: 85729b4f194cedb1a0682387ab7047f332a2ceb8
-ms.sourcegitcommit: e700497f962e4c2274df16d9e651059b42ff1a10
+ms.openlocfilehash: 90bb710e57e87bfb6bf86f4ae0543329a4500940
+ms.sourcegitcommit: 4d370399f6f142e25075b3714e5c2ce056b1bfd0
 ms.translationtype: HT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 08/17/2020
-ms.locfileid: "88490476"
+ms.lasthandoff: 10/09/2020
+ms.locfileid: "91863648"
 ---
 # <a name="configure-column-encryption-in-place-with-transact-sql"></a>Transact-SQL을 사용하여 내부 열 암호화 구성
 [!INCLUDE [sqlserver2019-windows-only](../../../includes/applies-to-version/sqlserver2019-windows-only.md)]
@@ -36,7 +36,7 @@ ms.locfileid: "88490476"
 이 문서의 나머지 부분에서는 SQL Server Management Studio에서 `ALTER TABLE`/`ALTER COLUMN` 문을 사용하여 내부 암호화를 트리거하는 방법을 설명합니다. 또는 애플리케이션에서 `ALTER TABLE`/`ALTER COLUMN`을 실행할 수 있습니다. 
 
 > [!NOTE]
-> 현재, SqlServer PowerShell 모듈의 [Invoke-Sqlcmd](https://docs.microsoft.com/powershell/module/sqlserver/invoke-sqlcmd) cmdlet, [sqlcmd](../../../tools/sqlcmd-utility.md) 등 SSMS 이외의 도구는 내부 암호화 작업에 `ALTER TABLE`/`ALTER COLUMN`를 사용하도록 지원하지 않습니다.
+> 현재, SqlServer PowerShell 모듈의 [Invoke-Sqlcmd](/powershell/module/sqlserver/invoke-sqlcmd) cmdlet, [sqlcmd](../../../tools/sqlcmd-utility.md) 등 SSMS 이외의 도구는 내부 암호화 작업에 `ALTER TABLE`/`ALTER COLUMN`를 사용하도록 지원하지 않습니다.
 
 ## <a name="perform-in-place-encryption-with-transact-sql-in-ssms"></a>SSMS에서 Transact-SQL을 사용하여 내부 암호화 수행
 ### <a name="pre-requisites"></a>필수 구성 요소

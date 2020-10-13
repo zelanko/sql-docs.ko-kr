@@ -15,12 +15,12 @@ ms.assetid: c0414147-7ffe-4f9a-908c-71c1b5201584
 author: MashaMSFT
 ms.author: mathoma
 monikerRange: =azuresqldb-mi-current||>=sql-server-2016||=sqlallproducts-allversions
-ms.openlocfilehash: 74ea5f383422ae75fb5bdd6f449c2498ce6c7ea1
-ms.sourcegitcommit: da88320c474c1c9124574f90d549c50ee3387b4c
+ms.openlocfilehash: 1dd36895604f81e378b37d2d711c814251ee7cd7
+ms.sourcegitcommit: 783b35f6478006d654491cb52f6edf108acf2482
 ms.translationtype: HT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 07/01/2020
-ms.locfileid: "85726061"
+ms.lasthandoff: 10/09/2020
+ms.locfileid: "91892423"
 ---
 # <a name="configure-predefined-replication-alerts-sql-server-management-studio"></a>미리 정의된 복제 경고 구성(SQL Server Management Studio)
 [!INCLUDE[applies-to-version/_ssnoversion.md](../../../includes/applies-to-version/sqlserver.md)]
@@ -44,7 +44,7 @@ ms.locfileid: "85726061"
   
  [!INCLUDE[msCoName](../../../includes/msconame-md.md)] [!INCLUDE[ssManStudioFull](../../../includes/ssmanstudiofull-md.md)]의 **경고** 폴더 또는 복제 모니터의 **경고** 탭에서 위와 같은 경고를 구성합니다. 이 탭에 액세스하는 방법에 대한 자세한 내용은 [복제 모니터를 사용하여 정보 보기 및 태스크 수행](../../../relational-databases/replication/monitor/view-information-and-perform-tasks-replication-monitor.md)을 참조하세요.  
   
- 복제 모니터는 이러한 경고 외에도 상태 및 성능과 관련된 일련의 경고를 제공합니다. 자세한 내용은 [Set Thresholds and Warnings in Replication Monitor](../../../relational-databases/replication/monitor/set-thresholds-and-warnings-in-replication-monitor.md)를 참조하세요. [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] 경고 인프라를 사용하여 다른 복제 이벤트에 대한 경고도 정의할 수 있습니다. 자세한 내용은 [사용자 정의 이벤트 만들기](https://msdn.microsoft.com/library/03d71a35-97fa-4bba-aa9a-23ac9c9cf879)를 참조하세요.  
+ 복제 모니터는 이러한 경고 외에도 상태 및 성능과 관련된 일련의 경고를 제공합니다. 자세한 내용은 [Set Thresholds and Warnings in Replication Monitor](../../../relational-databases/replication/monitor/set-thresholds-and-warnings-in-replication-monitor.md)를 참조하세요. [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] 경고 인프라를 사용하여 다른 복제 이벤트에 대한 경고도 정의할 수 있습니다. 자세한 내용은 [사용자 정의 이벤트 만들기](../../../ssms/agent/create-a-user-defined-event.md)를 참조하세요.  
   
 ### <a name="to-configure-a-predefined-replication-alert-in-management-studio"></a>Management Studio에서 미리 정의된 복제 경고를 구성하려면  
   
@@ -88,5 +88,4 @@ ms.locfileid: "85726061"
   
 ## <a name="see-also"></a>참고 항목  
  [복제 에이전트 이벤트에 대한 경고 사용](../../../relational-databases/replication/agents/use-alerts-for-replication-agent-events.md)  
-  
   

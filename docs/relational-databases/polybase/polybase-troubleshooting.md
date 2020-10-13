@@ -15,12 +15,12 @@ author: MikeRayMSFT
 ms.author: mikeray
 ms.reviewer: ''
 monikerRange: '>= sql-server-linux-ver15 || >= sql-server-2016 || =sqlallproducts-allversions'
-ms.openlocfilehash: a6ea70d3e24d659337c85895946c1f310e045234
-ms.sourcegitcommit: 216f377451e53874718ae1645a2611cdb198808a
+ms.openlocfilehash: c54a2d16acafefdc763ca7e02f9b42c81cb1c2f7
+ms.sourcegitcommit: 783b35f6478006d654491cb52f6edf108acf2482
 ms.translationtype: HT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 07/28/2020
-ms.locfileid: "87247312"
+ms.lasthandoff: 10/09/2020
+ms.locfileid: "91892393"
 ---
 # <a name="monitor-and-troubleshoot-polybase"></a>PolyBase 모니터링 및 문제 해결
 
@@ -260,7 +260,7 @@ PolyBase는 오늘 Zookeeper 또는 Knox와 같은 이름 노드 HA 서비스와
 
 ## <a name="error-messages-and-possible-solutions"></a>오류 메시지 및 가능한 해결 방법
 
-외부 테이블 오류를 해결하려면 Murshed Zaman의 블로그 [https://blogs.msdn.microsoft.com/sqlcat/2016/06/21/polybase-setup-errors-and-possible-solutions/](https://blogs.msdn.microsoft.com/sqlcat/2016/06/21/polybase-setup-errors-and-possible-solutions/ "PolyBase 설정 오류 및 가능한 해결 방법")을 참조하세요.
+외부 테이블 오류를 해결하려면 Murshed Zaman의 블로그 [https://blogs.msdn.microsoft.com/sqlcat/2016/06/21/polybase-setup-errors-and-possible-solutions/](/archive/blogs/sqlcat/polybase-setup-errors-and-possible-solutions "PolyBase 설정 오류 및 가능한 해결 방법")을 참조하세요.
 
 ## <a name="see-also"></a>참고 항목
 

@@ -13,12 +13,12 @@ ms.assetid: 5b13b5ac-1e4c-45e7-bda7-ebebe2784551
 author: pmasl
 ms.author: jrasnick
 monikerRange: =azuresqldb-current||>=sql-server-2016||=sqlallproducts-allversions||= azure-sqldw-latest||>=sql-server-linux-2017||=azuresqldb-mi-current
-ms.openlocfilehash: 8f0d845cc010b41fe7789ead2a66a188b214020a
-ms.sourcegitcommit: d56a834269132a83e5fe0a05b033936776cda8bb
+ms.openlocfilehash: aab93dcc8036e0e1273a1c9444d7418214ad8926
+ms.sourcegitcommit: 783b35f6478006d654491cb52f6edf108acf2482
 ms.translationtype: HT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 09/29/2020
-ms.locfileid: "91529494"
+ms.lasthandoff: 10/09/2020
+ms.locfileid: "91891053"
 ---
 # <a name="best-practices-with-query-store"></a>쿼리 저장소에 대한 모범 사례
 
@@ -28,13 +28,13 @@ ms.locfileid: "91529494"
 
 ## <a name="use-the-latest-ssmanstudiofull"></a><a name="SSMS"></a> 최신 [!INCLUDE[ssManStudioFull](../../includes/ssmanstudiofull-md.md)] 사용
 
-[!INCLUDE[ssManStudioFull](../../includes/ssmanstudiofull-md.md)]에는 쿼리 저장소를 구성하고 수집된 워크로드 데이터를 사용하도록 설계된 사용자 인터페이스 집합이 있습니다. [!INCLUDE[ssManStudio](../../includes/ssmanstudio-md.md)] 최신 버전은 [여기](https://docs.microsoft.com/sql/ssms/download-sql-server-management-studio-ssms)에서 다운로드하세요.
+[!INCLUDE[ssManStudioFull](../../includes/ssmanstudiofull-md.md)]에는 쿼리 저장소를 구성하고 수집된 워크로드 데이터를 사용하도록 설계된 사용자 인터페이스 집합이 있습니다. [!INCLUDE[ssManStudio](../../includes/ssmanstudio-md.md)] 최신 버전은 [여기](../../ssms/download-sql-server-management-studio-ssms.md)에서 다운로드하세요.
 
 문제 해결 시나리오에서 쿼리 저장소를 사용하는 방법에 대한 간략한 설명은 [쿼리 저장소 @Azure 블로그](https://azure.microsoft.com/blog/query-store-a-flight-data-recorder-for-your-database/)를 참조하세요.
 
 ## <a name="use-query-performance-insight-in-azure-sql-database"></a><a name="Insight"></a> Azure SQL Database에서 Query Performance Insight 사용
 
-[!INCLUDE[ssSDSfull](../../includes/sssdsfull-md.md)]에서 쿼리 저장소를 실행하는 경우 [Query Performance Insight](https://docs.microsoft.com/azure/sql-database/sql-database-query-performance)를 사용하여 시간에 따른 리소스 사용을 분석할 수 있습니다. [!INCLUDE[ssManStudio](../../includes/ssmanstudio-md.md)] 및 [Azure Data Studio](../../azure-data-studio/what-is.md)를 사용하여 CPU, 메모리, I/O 등 모든 쿼리의 자세한 리소스 사용 정보를 가져올 수 있으며 Query Performance Insight를 사용하면 이와 같은 쿼리가 데이터베이스의 전반적인 DTU 사용에 미치는 영향을 빠르고 효율적으로 확인할 수 있습니다. 자세한 내용은 [Azure SQL 데이터베이스 Query Performance Insight](https://azure.microsoft.com/documentation/articles/sql-database-query-performance/)를 참조하세요.
+[!INCLUDE[ssSDSfull](../../includes/sssdsfull-md.md)]에서 쿼리 저장소를 실행하는 경우 [Query Performance Insight](/azure/sql-database/sql-database-query-performance)를 사용하여 시간에 따른 리소스 사용을 분석할 수 있습니다. [!INCLUDE[ssManStudio](../../includes/ssmanstudio-md.md)] 및 [Azure Data Studio](../../azure-data-studio/what-is.md)를 사용하여 CPU, 메모리, I/O 등 모든 쿼리의 자세한 리소스 사용 정보를 가져올 수 있으며 Query Performance Insight를 사용하면 이와 같은 쿼리가 데이터베이스의 전반적인 DTU 사용에 미치는 영향을 빠르고 효율적으로 확인할 수 있습니다. 자세한 내용은 [Azure SQL 데이터베이스 Query Performance Insight](/azure/azure-sql/database/query-performance-insight-use)를 참조하세요.
 
 이 섹션에서는 쿼리 저장소 및 종속 기능의 안정적인 운영을 보장하도록 설계된 최적의 구성 기본값을 설명합니다. 기본 구성은 지속적인 데이터 수집을 위해 최적화됩니다(예: OFF/READ_ONLY 상태에 소요되는 시간 최소화). 사용 가능한 모든 쿼리 저장소 옵션에 대한 자세한 내용은 [ALTER DATABASE SET 옵션(Transact-SQL)](../../t-sql/statements/alter-database-transact-sql-set-options.md#query-store)을 참조하세요.
 
