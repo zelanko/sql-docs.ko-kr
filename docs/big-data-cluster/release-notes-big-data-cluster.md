@@ -5,16 +5,16 @@ description: 이 문서에서는 SQL Server 빅 데이터 클러스터의 최신
 author: MikeRayMSFT
 ms.author: mikeray
 ms.reviewer: mihaelab
-ms.date: 09/02/2020
+ms.date: 10/01/2020
 ms.topic: conceptual
 ms.prod: sql
 ms.technology: big-data-cluster
-ms.openlocfilehash: 75af471239529587cf51b151c04a541a612949c0
-ms.sourcegitcommit: 658c2e0ad958009ce7f041ba1ec0b4af06887497
+ms.openlocfilehash: 4217e2be765e29fe58ff423be8632f7e18e1b2eb
+ms.sourcegitcommit: 32135463a8494d9ed1600a58f51819359e3c09dc
 ms.translationtype: HT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 09/24/2020
-ms.locfileid: "91145392"
+ms.lasthandoff: 10/08/2020
+ms.locfileid: "91834517"
 ---
 # <a name="sql-server-2019-big-data-clusters-release-notes"></a>SQL Server 2019 빅 데이터 클러스터 릴리스 정보
 
@@ -54,7 +54,7 @@ ms.locfileid: "91145392"
 |플랫폼|지원되는 버전|
 |---------|---------|
 |`azdata`|사용 가능한 최신 버전을 사용하는 것이 가장 좋습니다. SQL Server 2019 CU5 릴리스부터 `azdata`에는 서버와 별개의 의미 체계 버전이 있습니다. <br/><br/>`azdata –-version`을 실행하여 버전을 확인하세요.<br/><br/>최신 버전은 [릴리스 기록](#release-history)을 참조하세요.|
-|Azure Data Studio|[Azure Data Studio](https://aka.ms/getazuredatastudio)의 최신 빌드를 받으세요.|
+|Azure Data Studio|[Azure Data Studio](../azure-data-studio/download-azure-data-studio.md)의 최신 빌드를 받으세요.|
 
 전체 목록은 [필수 도구](deploy-big-data-tools.md#which-tools-are-required)를 참조하세요.
 
@@ -62,7 +62,7 @@ ms.locfileid: "91145392"
 
 다음 표에는 [!INCLUDE[big-data-clusters-2019](../includes/ssbigdataclusters-ver15.md)]의 릴리스 기록이 나와 있습니다.
 
-| 해제 | BDC 버전  | `azdata` 버전 <sup>1</sup> | 릴리스 날짜 |
+| 릴리스<sup>1</sup> | BDC 버전  | `azdata` 버전 <sup>2</sup> | 릴리스 날짜 |
 |----------------------|--------------|-------------------------------|--------------|
 | [CU6](#cu6)          | 15.0.4053.23 | 20.0.1                        | 2020-08-04   |
 | [CU5](#cu5)          | 15.0.4043.16 | 20.0.0                        | 2020-06-22   |
@@ -72,7 +72,11 @@ ms.locfileid: "91145392"
 | [CU1](#cu1)          | 15.0.4003.23 | 15.0.4003                     | 2020-01-07   |
 | [GDR1](#rtm)         | 15.0.2070.34 | 15.0.2070                     | 2019-11-04   |
 
-<sup>1</sup> `azdata` 버전은 CU 릴리스 시점의 도구 버전을 반영합니다. `azdata`는 서버 릴리스와 별개로 릴리스할 수도 있으므로 최신 패키지를 설치하면 최신 버전을 가져올 수 있습니다. 최신 버전은 이전에 릴리스된 CU와 호환됩니다.
+<sup>1</sup>다음 릴리스는 BDC에 사용할 수 없습니다.
+- CU7
+- CU8
+
+<sup>2</sup>`azdata` 버전은 CU 릴리스 시점의 도구 버전을 반영합니다. `azdata`는 서버 릴리스와 별개로 릴리스할 수도 있으므로 최신 패키지를 설치하면 최신 버전을 가져올 수 있습니다. 최신 버전은 이전에 릴리스된 CU와 호환됩니다.
 
 ## <a name="how-to-install-updates"></a>업데이트 설치 방법
 
@@ -111,7 +115,7 @@ SQL Server 2019의 CU5(누적 업데이트 5) 릴리스입니다.
 - BDC의 일부로 배포된 권한 있는 컨테이너가 더 이상 ‘필요’하지 않도록 BDC 배포 보안 모델을 업데이트했습니다. 권한 없는 컨테이너 외에도, 컨테이너는 SQL Server 2019 CU5를 사용하는 모든 신규 배포에 대해 기본적으로 루트가 아닌 사용자로 실행됩니다. 
 - Active Directory 도메인에 여러 개의 빅 데이터 클러스터를 배포하도록 지원을 추가했습니다.
 - `azdata` CLI에는 서버와 별개인 고유한 의미 체계 버전이 있습니다. 클라이언트 버전과 서버 버전의 azdata 간에 모든 종속성이 제거되었습니다. 최신 향상 기능 및 수정 사항을 활용할 수 있도록 클라이언트와 서버 모두의 최신 버전을 사용하는 것이 좋습니다.
-- 특정 외부 데이터 원본의 검사를 지원하기 위해 두 개의 새로운 저장 프로시저 sp_data_source_objects 및 sp_data_source_table_columns를 도입했습니다. 고객이 T-SQL을 통해 직접 이 저장 프로시저를 사용하여 스키마를 검색하고 가상화가 가능한 테이블을 확인할 수 있습니다. SQL Server, Oracle, MongoDB 및 Teradata에서 외부 테이블을 만들 수 있도록 이러한 변경 내용을 Azure Data Studio용 [데이터 가상화 확장](../azure-data-studio/data-virtualization-extension.md)의 외부 테이블 마법사에서 활용합니다.
+- 특정 외부 데이터 원본의 검사를 지원하기 위해 두 개의 새로운 저장 프로시저 sp_data_source_objects 및 sp_data_source_table_columns를 도입했습니다. 고객이 T-SQL을 통해 직접 이 저장 프로시저를 사용하여 스키마를 검색하고 가상화가 가능한 테이블을 확인할 수 있습니다. SQL Server, Oracle, MongoDB 및 Teradata에서 외부 테이블을 만들 수 있도록 이러한 변경 내용을 Azure Data Studio용 [데이터 가상화 확장](../azure-data-studio/extensions/data-virtualization-extension.md)의 외부 테이블 마법사에서 활용합니다.
 - Grafana에서 수행되는 사용자 지정을 유지하도록 지원을 추가했습니다. CU5 이전에는 (Grafana 대시보드를 호스트하는) `metricsui` Pod가 다시 시작될 때 Grafana 구성의 편집 내용이 손실되었습니다. 이 문제를 해결하여 이제 모든 구성이 유지됩니다. 
 - Telegraf(`metricsdc` Pod에서 호스팅)를 사용하여 Pod 및 노드 메트릭을 수집하는 데 사용되는 API와 관련된 보안 문제를 해결했습니다. 이 변경으로 인해 이제 Telegraf에서는 서비스 계정, 클러스터 역할 및 클러스터 바인딩에서 필수 권한이 있어야 Pod 및 노드 메트릭을 수집할 수 있습니다. 자세한 내용은 [Cluster role required for Pods and nodes metrics collection](kubernetes-rbac.md#cluster-role-required-for-pods-and-nodes-metrics-collection)(Pod 및 노드 메트릭 수집에 필요한 클러스터 역할)을 참조하세요.
 - Pod 및 노드 메트릭의 수집을 제어하는 두 가지 기능 스위치를 추가했습니다. Kubernetes 인프라를 모니터링하기 위해 다른 솔루션을 사용하는 경우 control.json 배포 구성 파일에서 *allowNodeMetricsCollection* 및 *allowPodMetricsCollection*을 false로 설정하면 기본 제공되는 Pod 및 호스트 노드 메트릭 수집을 해제할 수 있습니다. OpenShift 환경의 경우 Pod 및 노드 메트릭을 수집하려면 권한 기능이 필요하므로 기본 제공 배포 프로필에서 이 설정은 기본적으로 false로 설정됩니다.

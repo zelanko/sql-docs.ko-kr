@@ -1,21 +1,21 @@
 ---
 title: SSMS 구성 요소 및 구성
 description: SQL Server Management Studio 환경에 대한 구성 요소 및 기본 구성 옵션을 설명하는 자습서입니다.
-keywords: SQL Server, SSMS, SQL Server Management Studio
-author: MashaMSFT
-ms.author: mathoma
-ms.date: 03/16/2018
-ms.topic: tutorial
 ms.prod: sql
 ms.technology: ssms
 ms.prod_service: sql-tools
+ms.topic: tutorial
+keywords: SQL Server, SSMS, SQL Server Management Studio
+author: markingmyname
+ms.author: maghan
 ms.reviewer: sstein
-ms.openlocfilehash: fe7518959f62328e038e7afb619b79cf2acbda86
-ms.sourcegitcommit: ff82f3260ff79ed860a7a58f54ff7f0594851e6b
+ms.date: 03/16/2018
+ms.openlocfilehash: 2b2590229fa175ac41f2af236c5f87d541895d95
+ms.sourcegitcommit: 9386ae1b90705a39d37d5541b70c5e8a6564f253
 ms.translationtype: HT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 03/29/2020
-ms.locfileid: "75247287"
+ms.lasthandoff: 10/02/2020
+ms.locfileid: "91662032"
 ---
 # <a name="sql-server-management-studio-components-and-configuration"></a>SQL Server Management Studio 구성 요소 및 구성
 
@@ -53,7 +53,7 @@ ms.locfileid: "75247287"
 
 * **속성**(F4): 쿼리 창이 열려 있을 때 속성 보기를 볼 수 있습니다. 보기는 쿼리의 기본 속성을 표시합니다. 예를 들어 쿼리가 시작된 시간, 반환된 행 수 및 연결 세부 정보를 표시합니다.  
 
-    ![속성](media/ssms-configuration/properties.png)
+    ![구성 속성](media/ssms-configuration/properties.png)
 
 * **템플릿 브라우저**(Ctrl+Alt+T): 템플릿 브라우저에는 다양한 미리 작성된 T-SQL 템플릿이 있습니다. 이러한 템플릿을 사용하여 데이터베이스 만들기 또는 백업과 같은 다양한 기능을 수행할 수 있습니다. 
 

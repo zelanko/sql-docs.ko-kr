@@ -1,114 +1,117 @@
 ---
-title: Linux에서 설치 관리자를 사용하여 azdata 설치
-titleSuffix: ''
-description: 설치 관리자(Linux)를 사용하여 azdata 도구를 설치하는 방법을 알아봅니다.
+title: apt를 사용하여 azdata 설치
+description: apt를 사용하여 azdata 도구를 설치하는 방법을 알아봅니다.
 author: MikeRayMSFT
 ms.author: mikeray
 ms.reviewer: mihaelab
-ms.date: 01/07/2020
+ms.date: 09/30/2020
 ms.topic: conceptual
 ms.prod: sql
 ms.technology: big-data-cluster
-ms.openlocfilehash: 2dc1c3d58ee5f7b6ea032a2e41f7c18431229881
-ms.sourcegitcommit: d56f1eca807c55cf606a6316f3872585f014fec1
+ms.openlocfilehash: 0d268bc5ed31f844c28499b95054e5edbbd14848
+ms.sourcegitcommit: c7f40918dc3ecdb0ed2ef5c237a3996cb4cd268d
 ms.translationtype: HT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 09/22/2020
-ms.locfileid: "90914970"
+ms.lasthandoff: 10/05/2020
+ms.locfileid: "91725294"
 ---
 # <a name="install-azdata-with-apt"></a>apt를 사용하여 `azdata` 설치
 
-[!INCLUDE[SQL Server 2019](../../includes/applies-to-version/azdata.md)]
+[!INCLUDE[azdata](../../includes/applies-to-version/azdata.md)]
 
-이 문서에서는 Linux에 `azdata`를 설치하는 방법을 설명합니다. 패키지 관리자가 출시되기 전에는 `azdata`를 설치하려면 `pip`가 필요했습니다.
+`apt`을 사용한 Linux 배포판의 경우, `azdata-cli`에 대한 패키지가 있습니다. CLI 패키지는 `apt`을 사용하는 다음의 Linux 버전에서 테스트되었습니다.
+
+- Ubuntu 16.04, Ubuntu 18.04
 
 [!INCLUDE [azdata-package-installation-remove-pip-install](../../includes/azdata-package-installation-remove-pip-install.md)]
 
-## <a name="install-azdata-for-linux"></a><a id="linux"></a>Linux용 `azdata` 설치
+## <a name="install-with-apt"></a>apt를 사용하여 설치
 
-`azdata` 설치 패키지는 `apt`를 사용하여 Ubuntu에 사용할 수 있습니다.
+>[!IMPORTANT]
+> `azdata-cli`의 RPM 패키지는 python3 패키지에 따라 달라집니다. 시스템에서 이 패키지는 *Python 3.6.x* 요구 사항 이전의 Python 버전일 수 있습니다. 이로 인해 문제가 발생하는 경우, 대체 python3 패키지를 찾거나 [`pip`](../install/deploy-install-azdata-pip.md)를 사용하는 수동 설치 지침을 따릅니다.
 
-### <a name="install-azdata-with-apt-ubuntu"></a><a id="azdata-apt"></a>apt를 사용하여 `azdata` 설치(Ubuntu)
+1. `azdata-cli` 설치에 필요한 종속성을 설치합니다.
 
->[!NOTE]
->`azdata` 패키지는 시스템 Python을 사용하지 않고 자체 Python 인터프리터를 설치합니다.
+   ```bash
+   sudo apt-get update
+   sudo apt-get install gnupg ca-certificates curl wget software-properties-common apt-transport-https lsb-release -y
+   ```
 
-1. 설치 프로세스에 필요한 패키지를 가져옵니다.
+2. Microsoft 리포지토리 키를 가져옵니다.
 
-    ```bash
-    sudo apt-get update
-    sudo apt-get install gnupg ca-certificates curl wget software-properties-common apt-transport-https lsb-release -y
-    ```
+   ```bash
+   curl -sL https://packages.microsoft.com/keys/microsoft.asc |
+   gpg --dearmor |
+   sudo tee /etc/apt/trusted.gpg.d/microsoft.asc.gpg > /dev/null
+   ```
 
-2. 서명 키를 다운로드하여 설치합니다.
-
-    ```bash
-    curl -sL https://packages.microsoft.com/keys/microsoft.asc |
-    gpg --dearmor |
-    sudo tee /etc/apt/trusted.gpg.d/microsoft.asc.gpg > /dev/null
-    ```
-
-3. `azdata` 리포지토리 정보를 추가합니다.
+3. 로컬 리포지토리 정보를 만듭니다.
 
    Ubuntu 16.04 클라이언트 실행의 경우:
+
     ```bash
     sudo add-apt-repository "$(wget -qO- https://packages.microsoft.com/config/ubuntu/16.04/prod.list)"
     ```
 
    Ubuntu 18.04 클라이언트 실행의 경우:
+
     ```bash
     sudo add-apt-repository "$(wget -qO- https://packages.microsoft.com/config/ubuntu/18.04/prod.list)"
     ```
 
-4. 리포지토리 정보를 업데이트하고 `azdata`를 설치합니다.
+   Ubuntu 20.04 클라이언트 실행의 경우:
 
     ```bash
-    sudo apt-get update
-    sudo apt-get install -y azdata-cli
+    sudo add-apt-repository "$(wget -qO- https://packages.microsoft.com/config/ubuntu/20.04/prod.list)
     ```
 
-5. 설치를 확인합니다.
+4. `azdata-cli`설치
 
-    ```bash
-    azdata --version
-    ```
+   ```bash
+   sudo apt-get update
+   sudo apt-get install -y azdata-cli
+   ```
 
-### <a name="update"></a>업데이트
+## <a name="verify-install"></a>설치 확인
 
-`azdata`만 업그레이드합니다.
+```bash
+azdata
+azdata --version
+```
+
+## <a name="update"></a>업데이트
+
+`apt-get update` 및 `apt-get install` 명령을 사용하여 `azdata-cli`를 업데이트합니다.
 
 ```bash
 sudo apt-get update && sudo apt-get install --only-upgrade -y azdata-cli
 ```
 
-### <a name="uninstall"></a>제거
+## <a name="uninstall"></a>제거
 
-1. apt-get remove를 사용하여 제거합니다.
+1. 시스템에서 패키지를 제거합니다.
 
-    ```bash
-    sudo apt-get remove -y azdata-cli
-    ```
+   ```bash
+   sudo apt-get remove -y azdata-cli
+   ```
 
-2. `azdata` 리포지토리 정보를 제거합니다.
+2. `azdata-cli`를 다시 설치하지 않으려면 리포지토리 정보를 제거합니다.
 
-    >[!NOTE]
-    >나중에 `azdata`를 설치하려는 경우 이 단계를 수행할 필요가 없습니다.
+   ```bash
+   sudo rm /etc/apt/sources.list.d/azdata-cli.list
+   ```
 
-    ```bash
-    sudo rm /etc/apt/sources.list.d/azdata-cli.list
-    ```
+3. 리포지토리 키를 제거합니다.
 
-3. 서명 키를 제거합니다.
+   ```bash
+   sudo rm /etc/apt/trusted.gpg.d/dpgswdist.v1.asc.gpg
+   ```
 
-    ```bash
-    sudo rm /etc/apt/trusted.gpg.d/dpgswdist.v1.asc.gpg
-    ```
+4. 종속성 제거는 더 이상 필요하지 않습니다.
 
-4. Azdata CLI와 함께 설치된 불필요한 종속성을 제거합니다.
-
-    ```bash
-    sudo apt autoremove
-    ```
+   ```bash
+   sudo apt autoremove
+   ```
 
 ## <a name="next-steps"></a>다음 단계
 

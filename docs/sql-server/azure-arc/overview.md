@@ -5,16 +5,16 @@ description: Azure Arc 지원 SQL Server를 사용하여 SQL Server 인스턴스
 author: anosov1960
 ms.author: sashan
 ms.reviewer: mikeray
-ms.date: 09/10/2020
+ms.date: 10/07/2020
 ms.topic: conceptual
 ms.prod: sql
 ms.custom: references_regions
-ms.openlocfilehash: c647a1cdf767b7dacef5b7e376d6e787af688469
-ms.sourcegitcommit: 764f90cf2eeca8451afdea2753691ae4cf032bea
+ms.openlocfilehash: 5cf1a67d1eeb36ec4889d75241eba34b515264b0
+ms.sourcegitcommit: 32135463a8494d9ed1600a58f51819359e3c09dc
 ms.translationtype: HT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 09/30/2020
-ms.locfileid: "91589302"
+ms.lasthandoff: 10/08/2020
+ms.locfileid: "91834315"
 ---
 # <a name="azure-arc-enabled-sql-server-preview"></a>Azure Arc 지원 SQL Server(미리 보기)
 
@@ -44,8 +44,7 @@ Azure Arc 지원 SQL Server는 다음 버전의 Windows 또는 Linux 운영 체�
 ### <a name="required-permissions"></a>필요한 사용 권한
 
 SQL Server 인스턴스 및 호스팅을 Azure Arc에 연결하려면 다음 작업을 수행할 수 있는 권한을 가진 계정이 있어야 합니다.
-   * Microsoft.AzureData/sqlServerInstances/write
-   * Microsoft.AzureData/sqlServerInstances/read
+   * Microsoft.AzureData/*
    * Microsoft.HybridCompute/machines/read
    * Microsoft.HybridCompute/machines/write
    * Microsoft.GuestConfiguration/guestConfigurationAssignments/read

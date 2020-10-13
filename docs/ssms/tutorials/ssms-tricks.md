@@ -1,12 +1,12 @@
 ---
 title: SSMS 사용 팁과 요령
 description: SQL Server Management Studio를 사용하여 코드 주석 처리 및 제거, 텍스트 들여쓰기, 개체 필터링, 오류 로그 액세스, SQL Server 인스턴스 이름 찾기 등을 수행하는 방법을 알아봅니다.
-ms.topic: tutorial
 ms.prod: sql
 ms.technology: ssms
 ms.prod_service: sql-tools
-author: MashaMSFT
-ms.author: mathoma
+ms.topic: tutorial
+author: markingmyname
+ms.author: maghan
 ms.reviewer: sstein
 helpviewer_keywords:
 - source controls [SQL Server Management Studio], tutorials
@@ -19,43 +19,43 @@ helpviewer_keywords:
 - find sql server instance name
 ms.custom: seo-lt-2019
 ms.date: 03/13/2018
-ms.openlocfilehash: 2147baf038b99140bf21ab72695f779c0fe69faf
-ms.sourcegitcommit: 6c2232c4d2c1ce5710296ce97b909f5ed9787f66
+ms.openlocfilehash: 60bf46d57b029696229ebf50188eca39f5b97c0a
+ms.sourcegitcommit: c7f40918dc3ecdb0ed2ef5c237a3996cb4cd268d
 ms.translationtype: HT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 06/05/2020
-ms.locfileid: "84462347"
+ms.lasthandoff: 10/05/2020
+ms.locfileid: "91724514"
 ---
 # <a name="tips-and-tricks-for-using-sql-server-management-studio-ssms"></a>SSMS(SQL Server Management Studio)를 사용하기 위한 팁과 요령
 
-이 문서에서는 SSMS(SQL Server Management Studio)를 사용하기 위한 몇 가지 팁과 요령을 제공합니다. 이 아티클에서는 다음을 수행하는 방법을 보여줍니다. 
+이 문서에서는 SSMS([!INCLUDE[ssManStudioFull](../../includes/ssmanstudiofull-md.md)]) 사용에 대한 몇 가지 팁과 요령을 제공합니다. 이 아티클에서는 다음을 수행하는 방법을 보여줍니다. 
 
 > [!div class="checklist"]
 > * T-SQL(Transact-SQL) 텍스트 주석 처리/주석 처리 제거
 > * 텍스트 들여쓰기
 > * 개체 탐색기에서 개체 필터링
-> * SQL Server 오류 로그에 액세스
-> * SQL Server 인스턴스의 이름 찾기
+> * [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 오류 로그에 액세스
+> * [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 인스턴스 이름 찾기
 
 ## <a name="prerequisites"></a>사전 요구 사항
 
-이 문서에 제공된 단계를 테스트하려면 SQL Server Management Studio, SQL Server 액세스 및 AdventureWorks 데이터베이스가 필요합니다. 
+이 문서에 제공된 단계를 테스트하려면 [!INCLUDE[ssManStudioFull](../../includes/ssmanstudiofull-md.md)], SQL Server 액세스 및 AdventureWorks 데이터베이스가 필요합니다. 
 
 * [SQL Server Management Studio](https://docs.microsoft.com/sql/ssms/download-sql-server-management-studio-ssms)를 설치합니다.
-* [SQL Server 2017 Developer Edition](https://www.microsoft.com/sql-server/sql-server-downloads)을 설치합니다.
+* [[!INCLUDE[ssCurrent](../../includes/sscurrent-md.md)] Developer Edition](https://www.microsoft.com/sql-server/sql-server-downloads)을 설치합니다.
 * [AdventureWorks 샘플 데이터베이스](https://github.com/Microsoft/sql-server-samples/releases)를 다운로드합니다. SSMS에서 데이터베이스를 복원하는 방법을 자세히 알아보려면 [데이터베이스 복원](https://docs.microsoft.com/sql/relational-databases/backup-restore/restore-a-database-backup-using-ssms)을 참조하세요. 
 
 ## <a name="commentuncomment-your-t-sql-code"></a>T-SQL 코드 주석 처리/주석 처리 제거
 
 도구 모음의 **주석** 단추를 사용하여 텍스트의 일부를 주석 처리하고 주석 처리를 제거할 수 있습니다. 주석 처리한 텍스트를 실행할 수 없습니다.
 
-1. SQL Server Management Studio를 엽니다.
+1. [!INCLUDE[ssManStudioFull](../../includes/ssmanstudiofull-md.md)]를 엽니다.
 
 2. SQL Server에 연결합니다.
 
 3. 새 쿼리 창을 엽니다.
 
-4. 다음 T-SQL 코드를 텍스트 창에 붙여넣습니다.
+4. 다음 [!INCLUDE[tsql](../../includes/tsql-md.md)] 코드를 텍스트 창에 붙여넣습니다.
 
     ```sql
     USE master
@@ -105,7 +105,7 @@ ms.locfileid: "84462347"
 
 1. 새 쿼리 창을 엽니다.
 
-2. 다음 T-SQL 코드를 텍스트 창에 붙여넣습니다.
+2. 다음 [!INCLUDE[tsql](../../includes/tsql-md.md)] 코드를 텍스트 창에 붙여넣습니다.
 
     ```sql
     USE master
@@ -163,11 +163,11 @@ ms.locfileid: "84462347"
 
 ## <a name="access-your-sql-server-error-log"></a>SQL Server 오류 로그에 액세스
 
-오류 로그는 SQL Server 인스턴스에서 발생하는 작업에 대한 세부 정보를 포함하는 파일입니다. SSMS에서 오류 로그를 찾아보고 쿼리할 수 있습니다. 오류 로그는 디스크에 있는.log 파일입니다.
+오류 로그는 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 인스턴스에서 발생하는 작업에 대한 세부 정보를 포함하는 파일입니다. SSMS에서 오류 로그를 찾아보고 쿼리할 수 있습니다. 오류 로그는 디스크에 있는.log 파일입니다.
 
 ### <a name="open-the-error-log-in-ssms"></a>SSMS에서 오류 로그 열기
 
-1. SQL Server에 연결합니다.  
+1. [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]에 연결합니다.  
 
 2. **관리** > **SQL Server 로그**를 확장합니다. 
 
@@ -181,7 +181,7 @@ ms.locfileid: "84462347"
 
 2. 새 쿼리 창을 엽니다.
 
-3. 다음 T-SQL 코드를 쿼리 창에 붙여넣습니다.
+3. 다음 [!INCLUDE[tsql](../../includes/tsql-md.md)] 코드를 쿼리 창에 붙여넣습니다.
 
      ```sql
        sp_readerrorlog 0,1,'Server process ID'
@@ -195,11 +195,11 @@ ms.locfileid: "84462347"
 
 ### <a name="find-the-error-log-location-if-youre-connected-to-sql-server"></a>SQL Server에 연결된 경우 오류 로그 위치 찾기
 
-1. SQL Server에 연결합니다.
+1. [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]에 연결합니다.
 
 2. 새 쿼리 창을 엽니다.
 
-3. 다음 T-SQL 코드를 쿼리 창에 붙여넣은 다음, **실행**을 선택합니다.
+3. 다음 [!INCLUDE[tsql](../../includes/tsql-md.md)] 코드를 쿼리 창에 붙여넣은 다음, **실행**을 선택합니다.
 
      ```sql
         SELECT SERVERPROPERTY('ErrorLogFileName') AS 'Error log file location'  
@@ -211,13 +211,13 @@ ms.locfileid: "84462347"
 
 ### <a name="find-the-error-log-location-if-you-cant-connect-to-sql-server"></a>SQL Server에 연결할 수 없는 경우 오류 로그 위치 찾기
 
-SQL Server 오류 로그에 대한 경로는 구성 설정에 따라 다를 수 있습니다. 오류 로그 위치에 대한 경로는 SQL Server 구성 관리자 내의 시작 매개 변수에서 찾을 수 있습니다. 아래 단계에 따라 SQL Server 오류 로그의 위치를 식별하는 관련 시작 매개 변수를 찾습니다. *경로는 아래 표시된 경로와 다를 수 있습니다*.
+[!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 오류 로그에 대한 경로는 구성 설정에 따라 다를 수 있습니다. 오류 로그 위치에 대한 경로는 SQL Server 구성 관리자 내의 시작 매개 변수에서 찾을 수 있습니다. 아래 단계에 따라 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 오류 로그의 위치를 식별하는 관련 시작 매개 변수를 찾습니다. *경로는 아래 표시된 경로와 다를 수 있습니다*.
 
 1. SQL Server 구성 관리자를 엽니다.
 
 2. **서비스**를 확장합니다.
 
-3. SQL Server 인스턴스를 마우스 오른쪽 단추로 클릭한 다음, **속성**을 선택합니다.
+3. [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 인스턴스를 마우스 오른쪽 단추로 클릭한 다음, **속성**을 선택합니다.
 
     ![Configuration Manager 서버 속성](media/ssms-tricks/serverproperties.PNG)
 
@@ -227,13 +227,13 @@ SQL Server 오류 로그에 대한 경로는 구성 설정에 따라 다를 수 
 
     ![오류 로그](media/ssms-tricks/errorlog.png)
 
-    이 위치에 여러 개의 errorlog.* 파일이 있습니다. *.log로 끝나는 파일 이름은 현재 오류 로그 파일입니다. 숫자로 끝나는 파일 이름은 이전 로그 파일입니다. SQL Server를 다시 시작할 때마다 새 로그가 생성됩니다.
+    이 위치에 여러 개의 오류 로그 파일이 있습니다. *.log로 끝나는 파일 이름은 현재 오류 로그 파일입니다. 숫자로 끝나는 파일 이름은 이전 로그 파일입니다. SQL Server를 다시 시작할 때마다 새 로그가 생성됩니다.
 
-6. 메모장에서 errorlog.log 파일을 엽니다. 
+6. 메모장에서 errorlog.log 파일을 엽니다.
 
-## <a name="find-sql-server-instance-name"></a><a name="determine-sql-server-name"></a>SQL Server 인스턴스 이름 찾기
+## <a name="find-sql-server-instance-name"></a>SQL Server 인스턴스 이름 찾기
 
-SQL Server에 연결한 전후에 SQL Server의 이름을 찾는 몇 가지 옵션이 있습니다.  
+[!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]에 연결한 전후에 SQL Server의 이름을 찾는 몇 가지 옵션이 있습니다.  
 
 ### <a name="before-you-connect-to-sql-server"></a>SQL Server에 연결하기 전에
 
@@ -243,7 +243,7 @@ SQL Server에 연결한 전후에 SQL Server의 이름을 찾는 몇 가지 옵�
 
 3. *서버 이름은* 텍스트를 검색합니다.
 
-    작은따옴표에 나열된 것은 연결하려는 SQL Server 인스턴스의 이름입니다.
+    작은따옴표에 나열된 것은 연결하려는 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 인스턴스의 이름입니다.
 
     ![오류 로그에서 서버 이름 찾기](media/ssms-tricks/servernameinlog.png)
 
@@ -251,7 +251,7 @@ SQL Server에 연결한 전후에 SQL Server의 이름을 찾는 몇 가지 옵�
 
 ### <a name="when-youre-connected-to-sql-server"></a>SQL Server에 연결된 경우
 
-SQL Server에 연결된 경우 세 개의 위치에서 서버 이름을 찾을 수 있습니다. 
+[!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]에 연결된 경우 세 개의 위치에서 서버 이름을 찾을 수 있습니다. 
 
 1. 서버의 이름은 개체 탐색기에 나열됩니다.
 
@@ -266,19 +266,19 @@ SQL Server에 연결된 경우 세 개의 위치에서 서버 이름을 찾을 �
 
 ### <a name="if-youre-connected-to-an-alias-or-availability-group-listener"></a>별칭 또는 가용성 그룹 수신기에 연결된 경우
 
-별칭 또는 가용성 그룹 수신기에 연결된 경우 해당 정보가 개체 탐색기 및 속성에 표시됩니다. 이 경우에 SQL Server 이름을 즉시 확인할 수 없으며 쿼리해야 합니다.
+별칭 또는 가용성 그룹 수신기에 연결된 경우 해당 정보가 개체 탐색기 및 속성에 표시됩니다. 이 경우에 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 이름을 즉시 확인하지 못하면 쿼리해야 합니다.
 
 1. SQL Server에 연결합니다.
 
 2. 새 쿼리 창을 엽니다.
 
-3. 다음 T-SQL 코드를 창에 붙여넣습니다.
+3. 다음 [!INCLUDE[tsql](../../includes/tsql-md.md)] 코드를 창에 붙여넣습니다.
 
       ```sql
        select @@Servername
      ```
 
-4. 연결된 SQL Server 인스턴스의 이름을 식별하려면 쿼리의 결과를 봅니다. 
+4. 연결된 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 인스턴스의 이름을 식별하려면 쿼리의 결과를 봅니다. 
 
     ![SQL Server 이름 쿼리](media/ssms-tricks/queryservername.png)
 

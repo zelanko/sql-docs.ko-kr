@@ -1,7 +1,7 @@
 ---
 title: SQL Server 언어 확장이란?
 titleSuffix: ''
-description: 언어 확장은 외부 코드를 실행하는 데 사용되는 SQL Server의 기능입니다. SQL Server 2019에서는 Java가 지원됩니다. 확장성 프레임워크를 사용하여 외부 코드에 관계형 데이터를 사용할 수 있습니다.
+description: 언어 확장은 외부 코드를 실행하는 데 사용되는 SQL Server의 기능입니다. SQL Server 2019에서는 Java, R 및 Python이 지원됩니다. 확장성 프레임워크를 사용하여 외부 코드에 관계형 데이터를 사용할 수 있습니다.
 author: dphansen
 ms.author: davidph
 ms.date: 08/19/2020
@@ -9,12 +9,12 @@ ms.topic: overview
 ms.prod: sql
 ms.technology: language-extensions
 monikerRange: '>=sql-server-ver15||>=sql-server-linux-ver15||=sqlallproducts-allversions'
-ms.openlocfilehash: 3877e08c3f8976fc6a5c0aedfca594b8dee165a6
-ms.sourcegitcommit: 331b8495e4ab37266945c81ff5b93d250bdaa6da
+ms.openlocfilehash: a7e79d6253c531ef2a008a7284fa8d7cd0365999
+ms.sourcegitcommit: 346a37242f889d76cd783f55aeed98023c693610
 ms.translationtype: HT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 08/20/2020
-ms.locfileid: "88645932"
+ms.lasthandoff: 10/06/2020
+ms.locfileid: "91765793"
 ---
 # <a name="what-is-sql-server-language-extensions"></a>SQL Server 언어 확장이란?
 [!INCLUDE [SQL Server 2019 and later](../includes/applies-to-version/sqlserver2019.md)]
@@ -30,7 +30,7 @@ SQL Server 2019에서는 Java가 지원됩니다. 기본 Java 런타임은 Zulu 
 
 언어 확장은 외부 코드를 실행하는 데 확장성 프레임워크를 사용합니다. 코드 실행이 코어 엔진 프로세스에서 격리되지만 SQL Server 쿼리 실행에 완전히 통합됩니다. 데이터가 있는 위치에서 코드를 실행할 수 있으므로 네트워크에서 데이터를 끌어올 필요가 없습니다.
 
-외부 언어는 [CREATE EXTERNAL LANGUAGE](https://docs.microsoft.com/sql/t-sql/statements/create-external-language-transact-sql)를 사용하여 정의됩니다. 시스템 저장 프로시저 [sp_execute_external_script](https://docs.microsoft.com/sql/relational-databases/system-stored-procedures/sp-execute-external-script-transact-sql)가 코드를 실행하기 위한 인터페이스로 사용됩니다.
+외부 언어는 [CREATE EXTERNAL LANGUAGE](../t-sql/statements/create-external-language-transact-sql.md)를 사용하여 정의됩니다. 시스템 저장 프로시저 [sp_execute_external_script](../relational-databases/system-stored-procedures/sp-execute-external-script-transact-sql.md)가 코드를 실행하기 위한 인터페이스로 사용됩니다.
 
 언어 확장은 다음과 같은 여러 이점을 제공합니다.
 
@@ -53,9 +53,9 @@ SQL Server 2019에서는 Java가 지원됩니다. 기본 Java 런타임은 Zulu 
 
 + SQL Server에서 Java 코드를 실행하려면 **[Microsoft 확장성 SDK for Java](how-to/extensibility-sdk-java-sql-server.md) 를 설치**합니다.
 
-+ SQL Server에서 외부 코드를 실행하는 데는 **[Azure Data Studio](https://docs.microsoft.com/sql/azure-data-studio/what-is) 또는 [SQL Server Management Studio](https://docs.microsoft.com/sql/ssms/sql-server-management-studio-ssms)를 사용**합니다.
++ SQL Server에서 외부 코드를 실행하는 데는 **[Azure Data Studio](../azure-data-studio/what-is.md) 또는 [SQL Server Management Studio](../ssms/sql-server-management-studio-ssms.md)를 사용**합니다.
 
-+ SQL Server에서 Java 코드를 실행하려면 **시스템 저장 프로시저 [sp_execute_external_script](https://docs.microsoft.com/sql/relational-databases/system-stored-procedures/sp-execute-external-script-transact-sql)를 사용**합니다.
++ SQL Server에서 Java 코드를 실행하려면 **시스템 저장 프로시저 [sp_execute_external_script](../relational-databases/system-stored-procedures/sp-execute-external-script-transact-sql.md)를 사용**합니다.
 
 ### <a name="step-3-write-your-first-code"></a>3단계: 첫 번째 코드 작성
 
@@ -69,5 +69,7 @@ T-SQL 스크립트 내에서 Java 코드를 실행합니다.
 
 ## <a name="next-steps"></a>다음 단계
 
++ [SQL Server용 Python 사용자 지정 런타임](../machine-learning/install/custom-runtime-python.md) 설치
++ [SQL Server용 R 사용자 지정 런타임](../machine-learning/install/custom-runtime-r.md) 설치
 + [Windows에 SQL Server 언어 확장 설치](install/install-sql-server-language-extensions-on-windows.md) 또는 [Linux에 SQL Server 언어 확장 설치](../linux/sql-server-linux-setup-language-extensions.md)
 + [Java 용 Microsoft 확장성 SDK](how-to/extensibility-sdk-java-sql-server.md) 설치

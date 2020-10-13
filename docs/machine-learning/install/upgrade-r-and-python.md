@@ -3,17 +3,17 @@ title: Python 및 R 런타임 업그레이드(바인딩)
 description: sqlbindr.exe를 사용해서 Machine Learning Server에 바인딩하여 SQL Server Machine Learning Services 또는 SQL Server R Services에서 Python 및 R 런타임을 업그레이드합니다.
 ms.prod: sql
 ms.technology: machine-learning-services
-ms.date: 09/16/2020
+ms.date: 09/30/2020
 ms.topic: how-to
 author: cawrites
 ms.author: chadam
 monikerRange: =sql-server-2016||=sql-server-2017||=sqlallproducts-allversions
-ms.openlocfilehash: f6b7d5b0dbff20961b6f719e0e0f3360433712f8
-ms.sourcegitcommit: c74bb5944994e34b102615b592fdaabe54713047
+ms.openlocfilehash: af8999f35d0dbab75b50381d521904d4c9e28f8f
+ms.sourcegitcommit: c4d6804bde7eaf72d9233d6d43f77d77d1b17c4e
 ms.translationtype: HT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 09/22/2020
-ms.locfileid: "90990117"
+ms.lasthandoff: 10/01/2020
+ms.locfileid: "91624850"
 ---
 # <a name="upgrade-python-and-r-runtime-with-binding-in-sql-server-machine-learning-services"></a>SQL Server Machine Learning Services에서 바인딩을 사용하여 Python 및 R 런타임 업그레이드
 [!INCLUDE [SQL Server 2016 and 2017](../../includes/applies-to-version/sqlserver2016-2017-only.md)]
@@ -61,30 +61,30 @@ SQL Server 2016 R Services 고객의 경우 바인딩은 다음을 제공합니�
 ::: moniker range="=sql-server-2016||=sqlallproducts-allversions"
 [**SQL Server 2016 R Services**](../install/sql-r-services-windows-install.md)
 
-구성 요소 |초기 릴리스 | [R Server 9.0.1](https://docs.microsoft.com/machine-learning-server/install/r-server-install-windows) | [R Server 9.1](https://docs.microsoft.com/machine-learning-server/install/r-server-install-windows) | [Machine Learning Server 9.2.1](https://docs.microsoft.com/machine-learning-server/install/machine-learning-server-windows-install) | [Machine Learning Server 9.3](https://docs.microsoft.com/machine-learning-server/install/machine-learning-server-windows-install) |
-----------|----------------|----------------|--------------|---------|-------|
-R 기반 Microsoft R Open(MRO) | R 3.2.2     | R 3.3.2   |R 3.3.3   | R 3.4.1  | R 3.4.3 |
-[RevoScaleR](https://docs.microsoft.com/machine-learning-server/r-reference/revoscaler/revoscaler) | 8.0.3  | 9.0.1 |  9.1 |  9.2.1 |  9.3 |
-[MicrosoftML](https://docs.microsoft.com/machine-learning-server/r-reference/microsoftml/microsoftml-package)| n.a. | 9.0.1 |  9.1 |  9.2.1 |  9.3 |
-[미리 학습된 모델](https://docs.microsoft.com/machine-learning-server/install/microsoftml-install-pretrained-models)| n.a. | 9.0.1 |  9.1 |  9.2.1 |  9.3 |
-[sqlrutils](https://docs.microsoft.com/machine-learning-server/r-reference/sqlrutils/sqlrutils)| n.a. | 1.0 |  1.0 |  1.0 |  1.0 |
-[olapR](https://docs.microsoft.com/machine-learning-server/r-reference/olapr/olapr) | n.a. | 1.0 |  1.0 |  1.0 |  1.0 |
+구성 요소 |초기 릴리스 | [R Server 9.0.1](https://docs.microsoft.com/machine-learning-server/install/r-server-install-windows) | [R Server 9.1](https://docs.microsoft.com/machine-learning-server/install/r-server-install-windows) | [Machine Learning Server 9.2.1](https://docs.microsoft.com/machine-learning-server/install/machine-learning-server-windows-install) | [Machine Learning Server 9.3](https://docs.microsoft.com/machine-learning-server/install/machine-learning-server-windows-install) |  [Machine Learning Server 9.4.7](https://docs.microsoft.com/machine-learning-server/install/machine-learning-server-windows-install)
+----------|----------------|----------------|--------------|---------|-------|-------|
+R 기반 Microsoft R Open(MRO) | R 3.2.2     | R 3.3.2   |R 3.3.3   | R 3.4.1  | R 3.4.3 | R 3.5.2
+[RevoScaleR](https://docs.microsoft.com/machine-learning-server/r-reference/revoscaler/revoscaler) | 8.0.3  | 9.0.1 |  9.1 |  9.2.1 |  9.3 |  9.4.7 |
+[MicrosoftML](https://docs.microsoft.com/machine-learning-server/r-reference/microsoftml/microsoftml-package)| n.a. | 9.0.1 |  9.1 |  9.2.1 |  9.3 | 9.4.7 |
+[미리 학습된 모델](https://docs.microsoft.com/machine-learning-server/install/microsoftml-install-pretrained-models)| n.a. | 9.0.1 |  9.1 |  9.2.1 |  9.3 | 9.4.7 |
+[sqlrutils](https://docs.microsoft.com/machine-learning-server/r-reference/sqlrutils/sqlrutils)| n.a. | 1.0 |  1.0 |  1.0 |  1.0 | 1.0 |
+[olapR](https://docs.microsoft.com/machine-learning-server/r-reference/olapr/olapr) | n.a. | 1.0 |  1.0 |  1.0 |  1.0 | 1.0 |
 ::: moniker-end
 
 ::: moniker range="=sql-server-2017||=sqlallproducts-allversions"
 [**SQL Server 2017 Machine Learning Services**](../install/sql-machine-learning-services-windows-install.md)
 
-구성 요소 |초기 릴리스 | Machine Learning Server 9.3 |
-----------|----------------|---------|
-R 기반 Microsoft R Open(MRO) | R 3.3.3 | R 3.4.3 |
-[RevoScaleR](https://docs.microsoft.com/machine-learning-server/r-reference/revoscaler/revoscaler) |   9.2 |  9.3 |
-[MicrosoftML](https://docs.microsoft.com/machine-learning-server/r-reference/microsoftml/microsoftml-package) | 9.2  | 9.3|
-[sqlrutils](https://docs.microsoft.com/machine-learning-server/r-reference/sqlrutils/sqlrutils)| 1.0 |  1.0 |
-[olapR](https://docs.microsoft.com/machine-learning-server/r-reference/olapr/olapr) | 1.0 |  1.0 |
+구성 요소 |초기 릴리스 | Machine Learning Server 9.3 | Machine Learning Server 9.4.7 |
+----------|----------------|---------|---------|
+R 기반 Microsoft R Open(MRO) | R 3.3.3 | R 3.4.3 | R 3.5.2 |
+[RevoScaleR](https://docs.microsoft.com/machine-learning-server/r-reference/revoscaler/revoscaler) |   9.2 |  9.3 | 9.4.7 |
+[MicrosoftML](https://docs.microsoft.com/machine-learning-server/r-reference/microsoftml/microsoftml-package) | 9.2  | 9.3| 9.4.7 |
+[sqlrutils](https://docs.microsoft.com/machine-learning-server/r-reference/sqlrutils/sqlrutils)| 1.0 |  1.0 | 1.0 |
+[olapR](https://docs.microsoft.com/machine-learning-server/r-reference/olapr/olapr) | 1.0 |  1.0 | 1.0 |
 Python 3.5 기반 Anaconda 4.2  | 4.2/3.5.2 | 4.2/3.5.2 |
-[revoscalepy](https://docs.microsoft.com/machine-learning-server/python-reference/revoscalepy/revoscalepy-package) | 9.2  | 9.3|
-[microsoftml](https://docs.microsoft.com/machine-learning-server/python-reference/microsoftml/microsoftml-package) | 9.2  | 9.3|
-[미리 학습된 모델](https://docs.microsoft.com/machine-learning-server/install/microsoftml-install-pretrained-models) | 9.2 | 9.3|
+[revoscalepy](https://docs.microsoft.com/machine-learning-server/python-reference/revoscalepy/revoscalepy-package) | 9.2  | 9.3| 9.4.7 |
+[microsoftml](https://docs.microsoft.com/machine-learning-server/python-reference/microsoftml/microsoftml-package) | 9.2  | 9.3| 9.4.7 |
+[미리 학습된 모델](https://docs.microsoft.com/machine-learning-server/install/microsoftml-install-pretrained-models) | 9.2 | 9.3| 9.4.7 |
 ::: moniker-end
 
 ## <a name="how-component-upgrade-works"></a>구성 요소 업그레이드 작동 방법
@@ -146,7 +146,7 @@ Python 3.5 기반 Anaconda 4.2  | 4.2/3.5.2 | 4.2/3.5.2 |
 
 1. **거의 완료** 페이지에서 설치 폴더 위치를 확인합니다. 기본 폴더는 \Program Files\Microsoft\ML Server입니다.
 
-    설치 폴더를 변경하려면 **고급**을 클릭하여 마법사의 첫 번째 페이지로 돌아갑니다. 하지만 이전의 모든 선택 항목을 다시 반복해야 합니다.
+    설치 폴더를 변경하려면 **고급**을 선택하여 마법사의 첫 번째 페이지로 돌아갑니다. 하지만 이전의 모든 선택 항목을 다시 반복해야 합니다.
 
 업그레이드가 실패하면 [SqlBindR 오류 코드](#sqlbindr-error-codes)로 자세한 내용을 확인하세요.
 
@@ -160,7 +160,7 @@ Python 3.5 기반 Anaconda 4.2  | 4.2/3.5.2 | 4.2/3.5.2 |
 
 1. MLSWIN93 설치 프로그램을 다운로드합니다. 이 프로그램은 단일 압축 파일로 다운로드됩니다. [최신 버전](https://docs.microsoft.com/machine-learning-server/install/machine-learning-server-windows-install#download-machine-learning-server-installer)이 권장되지만 [이전 버전](https://docs.microsoft.com/machine-learning-server/install/r-server-install-windows-offline#download-required-components)을 설치할 수도 있습니다.
 
-1. .cab 파일을 다운로드합니다. 다음 링크는 9.3 릴리스용입니다. 이전 버전이 필요한 경우 [R Server 9.1](https://docs.microsoft.com/machine-learning-server/install/r-server-install-windows-offline#download-required-components)에서 추가 링크를 찾을 수 있습니다. Python/Anaconda는 SQL Server Machine Learning Services 인스턴스에만 추가할 수 있습니다. 미리 학습된 모델이 Python 및 R 모두 존재하며, .cab은사용 중인 언어로 모델을 제공합니다.
+1. .cab 파일을 다운로드합니다. 다음 링크는 9.3 릴리스용입니다. 이전 버전이 필요한 경우 [R Server 9.1](https://docs.microsoft.com/machine-learning-server/install/r-server-install-windows-offline#download-required-components)에서 추가 링크를 찾을 수 있습니다. Python/Anaconda는 SQL Server Machine Learning Services 인스턴스에만 추가할 수 있습니다. 미리 학습된 모델이 Python 및 R 모두에 대해 존재하며 .cab은 사용 중인 언어로 모델을 제공합니다.
 
     | 기능 | 다운로드 |
     |---------|----------|
@@ -218,7 +218,7 @@ Python 3.5 기반 Anaconda 4.2  | 4.2/3.5.2 | 4.2/3.5.2 |
 2. 설치 프로그램이 언바인딩 후보인 로컬 인스턴스를 식별합니다.
 3. 원래 구성으로 되돌리려는 인스턴스 옆에 있는 확인란을 선택 취소합니다.
 4. 모든 라이선스 계약에 동의합니다.
-5. **Finish**를 클릭합니다. 이 프로세스는 시간이 오래 걸립니다.
+5. **마침**을 선택합니다. 이 프로세스는 시간이 오래 걸립니다.
 
 #### <a name="unbind-using-the-command-line"></a><a name="bkmk_cmdunbind"></a> 명령줄을 사용하여 언바인딩
 
@@ -289,6 +289,16 @@ SqlBindR.exe는 Microsoft R Server 9.0.1 업그레이드로 원래 패키지 또
 
 R 명령을 사용하여 설치된 패키지를 데이터베이스의 레코드를 사용하는 파일 시스템에 동기화합니다. 자세한 내용은 [SQL Server에 대한 R 패키지 관리](https://docs.microsoft.com/sql/machine-learning/package-management/install-additional-r-packages-on-sql-server)를 참조하세요.
 
+### <a name="problems-with-overwritten-sqlbinrini-file-in-sql-server"></a>SQL Server에서 sqlbinr.ini 파일 덮어쓰기 문제
+
+시나리오: 이 문제는 Machine Learning Server 9.4.7을 SQL Server 2017에 바인딩할 때 발생합니다.  Python이 업데이트 및 바인딩될 때 또는 사용자가 새 CU로 업데이트할 때, Python이 바인딩되는 것이 파악되지 않아 파일을 덮어씁니다. R에는 알려진 문제가 없습니다.
+
+이 문제를 해결하려면 비어 있지 않은 PYTHON_SERVICES 디렉터리에 `sqlbindr.ini` 파일을 만듭니다. 내용은 파일의 작동 방식에 영향을 주지 않습니다.
+
+**9.4.7.82**를 포함하는 `sqlbindr.ini` 파일을 만들고 다음 위치에 저장합니다.  
+
+`C:\Program Files\Microsoft SQL Server\MSSQL14.MSSQLSERVER\PYTHON_SERVICES`
+
 ### <a name="problems-with-multiple-upgrades-from-sql-server"></a>SQL Server의 여러 업그레이드 문제
 
 시나리오: 이전에 SQL Server 2016 R Services 인스턴스를 9.0.1로 업그레이드했습니다. Microsoft R Server 9.1.0용 새 설치 프로그램을 실행했습니다. 설치 프로그래이 모든 유효한 인스턴스의 목록을 표시합니다.
@@ -296,7 +306,7 @@ R 명령을 사용하여 설치된 패키지를 데이터베이스의 레코드�
 
 이를 해결하기 위해서는 다음과 같이 기존 R Server 설치를 수정할 수 있습니다.
 1. 제어판에서 **프로그램 추가 또는 제거**를 엽니다.
-2. Microsoft R Server를 찾고 **변경/수정**을 클릭합니다.
+2. Microsoft R Server를 찾고 **변경/수정**을 선택합니다.
 3. 설치 프로그램이 시작되고 9.1.0에 바인딩하려는 인스턴스를 선택합니다.
 
 Microsoft Machine Learning Server 9.2.1 및 9.3에는 이 문제가 없습니다.
@@ -310,6 +320,7 @@ Microsoft Machine Learning Server 9.2.1 및 9.3에는 이 문제가 없습니다
 
 ## <a name="see-also"></a>참고 항목
 
++ [기본 R 또는 Python 언어 런타임 버전 변경](https://docs.microsoft.com/sql/machine-learning/install/change-default-language-runtime-version)
 + [Windows용 Machine Learning Server 설치(인터넷 연결)](https://docs.microsoft.com/machine-learning-server/install/machine-learning-server-windows-install)
 + [Windows용 Machine Learning Server 설치(오프라인)](https://docs.microsoft.com/machine-learning-server/install/machine-learning-server-windows-offline)
 + [Machine Learning Server의 알려진 문제](https://docs.microsoft.com/machine-learning-server/resources-known-issues)

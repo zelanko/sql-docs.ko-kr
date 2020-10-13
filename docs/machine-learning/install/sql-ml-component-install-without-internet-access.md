@@ -1,23 +1,25 @@
 ---
-title: 인터넷 액세스 권한 없이 설치
-description: 네트워크 방화벽 뒤에 격리된 컴퓨터에 SQL Server 기계 학습 R 및 Python을 설치합니다.
+title: 인터넷 액세스 없이 오프라인으로 설치
+description: Python 및 R을 사용하여 네트워크 방화벽 뒤에 격리된 컴퓨터에 SQL Server Machine Learning Services를 오프라인으로 설치합니다.
 ms.prod: sql
 ms.technology: machine-learning-services
-ms.date: 11/04/2019
+ms.date: 10/01/2020
 ms.topic: how-to
 author: dphansen
 ms.author: davidph
 ms.custom: seo-lt-2019
 monikerRange: '>=sql-server-2016||>=sql-server-linux-ver15||=sqlallproducts-allversions'
-ms.openlocfilehash: 2ee1ed401942ac2673e6527a721ba04bcd95b2f7
-ms.sourcegitcommit: e700497f962e4c2274df16d9e651059b42ff1a10
+ms.openlocfilehash: f891511b5c3547dbeecf35f27b3a56682a7b6749
+ms.sourcegitcommit: 71d2389cf27156fa0404a6e6f65fb7a61c40789a
 ms.translationtype: HT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 08/17/2020
-ms.locfileid: "88487646"
+ms.lasthandoff: 10/01/2020
+ms.locfileid: "91636163"
 ---
-# <a name="install-sql-server-machine-learning-r-and-python-on-computers-with-no-internet-access"></a>인터넷 액세스가 없는 컴퓨터에 SQL Server 기계 학습 R 및 Python 설치
+# <a name="offline-install-sql-server-machine-learning-services-python-and-r-on-computers-with-no-internet-access"></a>Python 및 R을 사용하여 인터넷에 연결되지 않은 컴퓨터에 SQL Server Machine Learning Services를 오프라인으로 설치
 [!INCLUDE [SQL Server 2016 and later](../../includes/applies-to-version/sqlserver2016.md)]
+
+이 문서에서는 네트워크 방화벽 뒤에 격리되어 있고 인터넷에 연결되지 않은 컴퓨터에 SQL Server Machine Learning Services를 오프라인으로 설치하는 방법을 설명합니다.
 
 기본적으로 설치 관리자는 Microsoft 다운로드 사이트에 연결하여 SQL Server에 기계 학습을 위한 필수 구성 요소 및 업데이트된 구성 요소를 가져옵니다. 방화벽 제약 조건으로 인해 설치 관리자가 이러한 사이트에 도달하지 못하는 경우 인터넷에 연결된 장치를 사용하여 파일을 다운로드하고 오프라인 서버로 파일을 전송한 다음 설치 프로그램을 실행할 수 있습니다.
 

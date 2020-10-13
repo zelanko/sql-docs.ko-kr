@@ -5,59 +5,55 @@ description: pip를 사용하여 azdata 도구를 설치하는 방법을 알아�
 author: MikeRayMSFT
 ms.author: mikeray
 ms.reviewer: mihaelab
-ms.date: 01/07/2020
+ms.date: 09/30/2020
 ms.topic: conceptual
 ms.prod: sql
 ms.technology: big-data-cluster
-ms.openlocfilehash: 6bf2bbff5f1d048895515f18b600cd05acd8ae6f
-ms.sourcegitcommit: d56f1eca807c55cf606a6316f3872585f014fec1
+ms.openlocfilehash: ecf4eaaddf9423bb9a3ae88036b5c3cb2090451b
+ms.sourcegitcommit: c7f40918dc3ecdb0ed2ef5c237a3996cb4cd268d
 ms.translationtype: HT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 09/22/2020
-ms.locfileid: "90914948"
+ms.lasthandoff: 10/05/2020
+ms.locfileid: "91725288"
 ---
 # <a name="install-azdata-with-pip"></a>`pip`를 사용하여 `azdata` 설치
 
-[!INCLUDE[SQL Server 2019](../../includes/applies-to-version/azdata.md)]
+[!INCLUDE[azdata](../../includes/applies-to-version/azdata.md)]
 
-이 문서에서는 `pip`를 사용하여 `azdata` 도구 Windows 또는 Linux를 설치하는 방법을 설명합니다.
+이 문서에서는 `pip`를 사용하여 Windows, Linux 또는 macOS/OS X에 `azdata` 도구를 설치하는 방법을 설명합니다.
 
-Windows 및 Linux(Ubuntu 배포판)의 경우 [패키지 관리자](./deploy-install-azdata-installer.md)를 사용하여 간단한 환경을 설치할 수 있습니다.
+> [!TIP]
+> 더 간단한 환경을 위해 Windows, Linux(Ubuntu, Debian, RHEL, CentOS, openSUSE, SLE 배포) 및 macOS용 [패키지 관리자](./deploy-install-azdata.md)와 함께 `azdata`를 설치할 수 있습니다.
 
 ## <a name="prerequisites"></a><a id="prerequisites"></a> 필수 조건
 
-`azdata`는 클러스터 관리자가 REST API를 통해 데이터를 부트스트랩하고 관리할 수 있도록 Python으로 작성된 명령줄 유틸리티입니다. 필요한 최소 Python 버전은 v3.5입니다. `pip`는 `azdata` 도구를 다운로드하고 설치하는 데 필요합니다. 아래 지침에서는 Windows 및 Ubuntu용 예제를 제공합니다. 다른 플랫폼에서 Python을 설치하는 경우 [Python 설명서](https://wiki.python.org/moin/BeginnersGuide/Download)를 참조하세요.
-그리고 최신 버전의 `requests` Python 패키지를 설치하고 업데이트합니다.
+`azdata`는 클러스터 관리자가 REST API를 통해 데이터 리소스를 부트스트랩하고 관리할 수 있도록 Python으로 작성된 명령줄 유틸리티입니다. 필요한 최소 Python 버전은 v3.5입니다. `pip`는 `azdata` 도구를 다운로드하고 설치하는 데 필요합니다. 아래 지침에서는 Windows, Linux(Ubuntu) 및 macOS/OS X의 예제를 제공합니다. 다른 플랫폼에서 Python을 설치하는 방법은 [Python 설명서](https://wiki.python.org/moin/BeginnersGuide/Download)를 참조하세요. 그리고 최신 버전의 `requests` Python 패키지를 설치하고 업데이트합니다.
 
 ```bash
 pip3 install -U requests
 ```
 
-> [!IMPORTANT]
-> 최신 버전의 빅 데이터 클러스터를 설치하는 경우 데이터를 백업하고 이전 클러스터를 삭제한 후 `azdata`를 업그레이드하고 새 릴리스를 설치합니다. 자세한 내용은 [새 릴리스로 업그레이드](../../big-data-cluster/deployment-upgrade.md)를 참조하세요.
-
 ## <a name="windows-azdata-installation"></a><a id="windows"></a> Windows `azdata` 설치
 
-1. Windows 클라이언트에서 [https://www.python.org/downloads/](https://www.python.org/downloads/)를 통해 필요한 Python 패키지를 다운로드합니다. python3.5.3 이상에서는 Python을 설치할 때 pip3도 설치됩니다. 
+1. Windows 클라이언트에서 [https://www.python.org/downloads/](https://www.python.org/downloads/)를 통해 필요한 Python 패키지를 다운로드합니다. python 3.5.3 이상에서는 Python을 설치할 때 pip3도 설치됩니다.
 
-   > [!TIP] 
+   > [!TIP]
    > Python3를 설치하는 경우 `PATH`에 Python을 추가하도록 선택합니다. 추가하지 않는 경우 나중에 pip3가 있는 위치를 찾아 `PATH`에 수동으로 추가할 수 있습니다.
 
 1. 새 Windows PowerShell 세션을 열어 Python이 있는 최신 경로를 가져옵니다.
 
-1. `azdata`의 이전 릴리스가 설치된 경우 먼저 제거한 후 최신 버전을 설치해야 합니다.
+1. SQL Server 2019 CU5 릴리스부터 azdata에는 서버와 별개의 의미 체계 버전이 있습니다. 이에 앞서 `azdata`의 이전 릴리스가 설치된 경우 이전 버전을 먼저 제거한 후 최신 버전을 설치해야 합니다.
 
-   CTP 3.2 또는 RC1의 경우 다음 명령을 실행합니다.
+   예를 들어 2019-cu4의 경우 다음 명령을 실행합니다.
 
-   ```bash
-   pip3 uninstall -r https://azdatacli.blob.core.windows.net/python/azdata/2019-ctp3.2/requirements.txt
-   ```
-   또는
-   ```bash
-   pip3 uninstall -r https://azdatacli.blob.core.windows.net/python/azdata/2019-rc1/requirements.txt
+   ```powershell
+   pip3 uninstall -r https://azdatacli.blob.core.windows.net/python/azdata/2019-cu4/requirements.txt
    ```
 
-1. 다음 명령을 사용하여 `azdata`를 설치합니다.
+  > [!NOTE]
+  > 앞의 예제에서 `2019-cu6`을 `azdata` 설치의 버전 및 CU로 바꿉니다. 
+
+1. `azdata`설치
 
    ```powershell
    pip3 install -r https://aka.ms/azdata
@@ -84,19 +80,18 @@ Linux에서 Python 3.5를 설치한 다음, pip를 업그레이드해야 합니�
    sudo -H pip3 install --upgrade pip
    ```
 
-1. `azdata`의 이전 릴리스가 설치된 경우 먼저 제거한 후 최신 버전을 설치해야 합니다.
+1. SQL Server 2019 CU5 릴리스부터 azdata에는 서버와 별개의 의미 체계 버전이 있습니다. 이에 앞서 `azdata`의 이전 릴리스가 설치된 경우 이전 버전을 먼저 제거한 후 최신 버전을 설치해야 합니다.
 
-   CTP 3.2 또는 RC1의 경우 다음 명령을 실행합니다.
+   예를 들어 `2019-cu6`에 대해 다음 명령을 실행합니다.
 
    ```bash
-   pip3 uninstall -r https://azdatacli.blob.core.windows.net/python/azdata/2019-ctp3.2/requirements.txt
-   ```
-   또는
-   ```bash
-   pip3 uninstall -r https://azdatacli.blob.core.windows.net/python/azdata/2019-rc1/requirements.txt
+   pip3 uninstall -r https://azdatacli.blob.core.windows.net/python/azdata/2019-cu6/requirements.txt
    ```
 
-1. 다음 명령을 사용하여 `azdata`를 설치합니다.
+  > [!NOTE]
+  > 앞의 예제에서 `2019-cu6`을 `azdata` 설치의 버전 및 CU로 바꿉니다.
+
+1. `azdata`설치
 
    ```bash
    pip3 install -r https://aka.ms/azdata --user
@@ -111,32 +106,32 @@ macOS 또는 OS X에 `azdata`를 설치하려면 다음 단계를 완료합니�
 
 1. 아직 [Homebrew](https://brew.sh)가 없으면 macOS 클라이언트에서 Homebrew를 설치합니다.
 
-   ```
+   ```bash
    /usr/bin/ruby -e "$(curl -fsSL https://raw.githubusercontent.com/Homebrew/install/master/install)"
    ```
 
 1. Python 및 pip 버전 3.0 이상을 설치합니다.
 
-   ```
+   ```bash
    brew install python3
    ```
 
 1. 종속성을 설치합니다.
 
-   ```
+   ```bash
    pip3 install -U requests
    brew install freetds
    ```
 
-1. 도구의 이전 릴리스가 설치된 경우 먼저 제거한 후 `azdata` 최신 버전을 설치해야 합니다. 다음 명령은 `azdata` 버전을 제거합니다.
+1. SQL Server 2019 CU5 릴리스부터 azdata에는 서버와 별개의 의미 체계 버전이 있습니다. 이에 앞서 `azdata`의 이전 릴리스가 설치된 경우 이전 버전을 먼저 제거한 후 최신 버전을 설치해야 합니다. 예를 들어 다음 명령은 `azdata`의 RC1 버전을 제거합니다.
 
-   ```
+   ```bash
    pip3 uninstall -r https://azdatacli.blob.core.windows.net/python/azdata/2019-rc1/requirements.txt
    ```
 
-1. 다음 명령을 사용하여 `azdata`를 설치합니다.
+1. `azdata`설치
 
-   ```
+   ```bash
    pip3 install -r https://aka.ms/azdata
    ```
 

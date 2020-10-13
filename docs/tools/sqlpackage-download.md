@@ -8,14 +8,14 @@ ms.technology: tools-other
 ms.topic: conceptual
 author: pensivebrian
 ms.author: broneill
-ms.reviewer: alayu; sstein
-ms.date: 06/20/2018
-ms.openlocfilehash: 40c95546496b6b79aeb95bc63db7750646f833fc
-ms.sourcegitcommit: c74bb5944994e34b102615b592fdaabe54713047
+ms.reviewer: drskwier; sstein
+ms.date: 10/02/2020
+ms.openlocfilehash: 1a722b41576136bdcc509c96626f8cf4351629e4
+ms.sourcegitcommit: c7f40918dc3ecdb0ed2ef5c237a3996cb4cd268d
 ms.translationtype: HT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 09/22/2020
-ms.locfileid: "90990146"
+ms.lasthandoff: 10/05/2020
+ms.locfileid: "91721584"
 ---
 # <a name="download-and-install-sqlpackage"></a>sqlpackage 다운로드 및 설치
 
@@ -25,14 +25,24 @@ sqlpackage는 Windows, macOS 및 Linux에서 실행됩니다.
 
 |플랫폼|다운로드|릴리스 날짜|버전|빌드
 |:---|:---|:---|:---|:---|
-|Windows|[MSI 설치 관리자](https://go.microsoft.com/fwlink/?linkid=2143544)|2020년 9월 18일| 18.6 | 15.0.4897.1 |
-|macOS .NET Core |[zip 파일](https://go.microsoft.com/fwlink/?linkid=2143659)|2020년 9월 18일| 18.6| 15.0.4897.1 |
-|Linux .NET Core |[zip 파일](https://go.microsoft.com/fwlink/?linkid=2143497)|2020년 9월 18일| 18.6| 15.0.4897.1 |
-|Windows .NET Core |[zip 파일](https://go.microsoft.com/fwlink/?linkid=2143496)|2020년 9월 18일| 18.6| 15.0.4897.1 |
+|[Windows](#get-sqlpackage-for-windows)|[MSI 설치 관리자](https://go.microsoft.com/fwlink/?linkid=2143544)|2020년 9월 18일| 18.6 | 15.0.4897.1 |
+|[macOS .NET Core](#get-sqlpackage-net-core-for-macos) |[zip 파일](https://go.microsoft.com/fwlink/?linkid=2143659)|2020년 9월 18일| 18.6| 15.0.4897.1 |
+|[Linux .NET Core](#get-sqlpackage-net-core-for-linux) |[zip 파일](https://go.microsoft.com/fwlink/?linkid=2143497)|2020년 9월 18일| 18.6| 15.0.4897.1 |
+|[Windows .NET Core](#get-sqlpackage-net-core-for-windows) |[zip 파일](https://go.microsoft.com/fwlink/?linkid=2143496)|2020년 9월 18일| 18.6| 15.0.4897.1 |
 
 최신 릴리스에 대한 자세한 내용은 [릴리스 정보](release-notes-sqlpackage.md)를 참조하세요. 언어를 추가로 다운로드하려면 [사용 가능한 언어](#available-languages) 섹션을 참조하세요.
 
-[!INCLUDE[Freshness](../includes/paragraph-content/fresh-note-steps-feedback.md)]
+## <a name="dacfx"></a>DacFx
+DacServices([Microsoft.SqlServer.Dac](https://docs.microsoft.com/dotnet/api/microsoft.sqlserver.dac.dacservices))는 데이터베이스 배포를 애플리케이션 파이프라인에 통합하기 위한 관련 메커니즘입니다.  DacServices API는 nuget, [Microsoft.SqlServer.DACFx](https://www.nuget.org/packages/Microsoft.SqlServer.DACFx)를 통해 패키지로 이용할 수 있습니다.  현재 DacFx 버전은 150.4897.1입니다.
+
+.NET CLI를 통한 nuget 패키지 설치는 다음 명령으로 수행됩니다.
+
+```cmd
+> dotnet add package Microsoft.SqlServer.DACFx
+```
+
+>[!NOTE]
+> 추가 nuget 패키지는 DacFx 이름, “Microsoft.SqlServer.DacFx.x64” 및 “Microsoft.SqlServer.DacFx.x86”으로 게시되었습니다. “Microsoft.SqlServer.DACFx” 패키지에 두 플랫폼 모두에 대한 지원이 포함되어 있습니다. x64 또는 x86 변형이 아니라 이 패키지에 대한 새 참조를 만들어야 합니다.
 
 ## <a name="get-sqlpackage-for-windows"></a>Windows sqlpackage 가져오기
 
@@ -129,7 +139,7 @@ Windows installer를 사용하여 sqlpackage를 설치한 경우, 모든 Windows
 
 ## <a name="supported-operating-systems"></a>지원되는 운영 체제
 
-sqlpackage는 Windows, macOS 및 Linux에서 실행되며 .NET Core 3.1을 사용하여 빌드됩니다.  sqlpackage에는 [.NET Core 3.1 OS 요구 사항](https://github.com/dotnet/core/blob/master/release-notes/3.1/3.1-supported-os.md)]이 적용됩니다.
+sqlpackage는 Windows, macOS 및 Linux에서 실행되며 .NET Core 3.1을 사용하여 빌드됩니다.  sqlpackage에는 [.NET Core 3.1 OS 요구 사항](https://github.com/dotnet/core/blob/master/release-notes/3.1/3.1-supported-os.md)이 적용됩니다.
 
 ### <a name="windows-x64"></a>Windows(x64)
 
@@ -168,6 +178,7 @@ sqlpackage .NET Core macOS:
 
 sqlpackage .NET Core Linux:  
 [중국어(간체)](https://go.microsoft.com/fwlink/?linkid=2143497&clcid=0x804) | [중국어(번체)](https://go.microsoft.com/fwlink/?linkid=2143497&clcid=0x404) | [영어(미국)](https://go.microsoft.com/fwlink/?linkid=2143497&clcid=0x409) | [프랑스어](https://go.microsoft.com/fwlink/?linkid=2143497&clcid=0x40c) | [독일어](https://go.microsoft.com/fwlink/?linkid=2143497&clcid=0x407) | [이탈리아어](https://go.microsoft.com/fwlink/?linkid=2143497&clcid=0x410) | [일본어](https://go.microsoft.com/fwlink/?linkid=2143497&clcid=0x411) | [한국어](https://go.microsoft.com/fwlink/?linkid=2143497&clcid=0x412) | [포르투갈어(브라질)](https://go.microsoft.com/fwlink/?linkid=2143497&clcid=0x416) | [러시아어](https://go.microsoft.com/fwlink/?linkid=2143497&clcid=0x419) | [스페인어](https://go.microsoft.com/fwlink/?linkid=2143497&clcid=0x40a)
+
 
 ## <a name="next-steps"></a>다음 단계
 

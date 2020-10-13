@@ -5,23 +5,24 @@ description: yum을 사용하여 azdata 도구를 설치하는 방법을 알아�
 author: MikeRayMSFT
 ms.author: mikeray
 ms.reviewer: mihaelab
-ms.date: 01/07/2020
+ms.date: 09/30/2020
 ms.topic: conceptual
 ms.prod: sql
 ms.technology: big-data-cluster
-ms.openlocfilehash: eae81ccee65899335b161b3a32fbb260d0a8517a
-ms.sourcegitcommit: d56f1eca807c55cf606a6316f3872585f014fec1
+ms.openlocfilehash: 7f2f06c22b56e2afbe7c51198efbbfe1eecbc8c4
+ms.sourcegitcommit: c7f40918dc3ecdb0ed2ef5c237a3996cb4cd268d
 ms.translationtype: HT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 09/22/2020
-ms.locfileid: "90914895"
+ms.lasthandoff: 10/05/2020
+ms.locfileid: "91725274"
 ---
 # <a name="install-azdata-with-yum"></a>yum을 사용하여 `azdata` 설치
+
+[!INCLUDE[azdata](../../includes/applies-to-version/azdata.md)]
 
 `yum`을 사용한 Linux 배포판의 경우, `azdata-cli`에 대한 패키지가 있습니다. CLI 패키지는 `yum`을 사용하는 다음의 Linux 버전에서 테스트되었습니다.
 
 - RHEL 7, RHEL 8
-
 
 [!INCLUDE [azdata-package-installation-remove-pip-install](../../includes/azdata-package-installation-remove-pip-install.md)]
 
@@ -30,13 +31,19 @@ ms.locfileid: "90914895"
 >[!IMPORTANT]
 > `azdata-cli`의 RPM 패키지는 python3 패키지에 따라 달라집니다. 시스템에서 이 패키지는 *Python 3.6.x* 요구 사항 이전의 Python 버전일 수 있습니다. 이로 인해 문제가 발생하는 경우, 대체 python3 패키지를 찾거나 [`pip`](../install/deploy-install-azdata-pip.md)를 사용하는 수동 설치 지침을 따릅니다.
 
-1. Microsoft 리포지토리 키 가져오기
+1. `azdata-cli` 설치에 필요한 종속성을 설치합니다.
+
+   ```bash
+   sudo yum install -y curl
+   ```
+
+1. Microsoft 리포지토리 키를 가져옵니다.
 
    ```bash
    sudo rpm --import https://packages.microsoft.com/keys/microsoft.asc
    ```
 
-1. 로컬 리포지토리 정보 만들기
+1. 로컬 리포지토리 정보를 만듭니다.
 
    RHEL 7 클라이언트의 경우 다음을 실행합니다.
 
@@ -50,7 +57,7 @@ ms.locfileid: "90914895"
    sudo curl -o /etc/yum.repos.d/mssql-server.repo https://packages.microsoft.com/config/rhel/8/prod.repo
    ```
 
-1. `yum install` 명령을 사용하여 설치
+1. `azdata-cli`설치
 
    ```bash
    sudo yum install azdata-cli
@@ -58,7 +65,7 @@ ms.locfileid: "90914895"
 
 ## <a name="verify-install"></a>설치 확인
 
-```
+```bash
 azdata
 azdata --version
 ```

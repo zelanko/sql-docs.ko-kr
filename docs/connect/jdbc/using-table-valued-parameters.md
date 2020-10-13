@@ -11,12 +11,12 @@ ms.topic: conceptual
 ms.assetid: 3af61054-a886-4e1a-ad85-93f87c6d3584
 author: David-Engel
 ms.author: v-daenge
-ms.openlocfilehash: 698cf6e4e44210ea5f4575d4021514c07fe4255d
-ms.sourcegitcommit: 8ffc23126609b1cbe2f6820f9a823c5850205372
+ms.openlocfilehash: eac620d522408ff9fb4de5550d92cfcbd0f3ec4a
+ms.sourcegitcommit: c7f40918dc3ecdb0ed2ef5c237a3996cb4cd268d
 ms.translationtype: HT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 04/17/2020
-ms.locfileid: "81631943"
+ms.lasthandoff: 10/05/2020
+ms.locfileid: "91727474"
 ---
 # <a name="using-table-valued-parameters"></a>테이블 반환 매개 변수 사용
 
@@ -35,8 +35,8 @@ ms.locfileid: "81631943"
   
 | 리소스                                                                                                             | Description                                                                         |
 | -------------------------------------------------------------------------------------------------------------------- | ----------------------------------------------------------------------------------- |
-| [테이블 반환 매개 변수(데이터베이스 엔진)](https://go.microsoft.com/fwlink/?LinkId=98363)(SQL Server 온라인 설명서) | 테이블 반환 매개 변수를 만들고 사용하는 방법을 설명합니다.                             |
-| SQL Server 온라인 설명서의 [사용자 정의 테이블 형식](https://go.microsoft.com/fwlink/?LinkId=98364)                  | 테이블 반환 매개 변수를 선언하는 데 사용되는 사용자 정의 테이블 형식에 대해 설명합니다. |
+| [테이블 반환 매개 변수(데이터베이스 엔진)](/previous-versions/sql/sql-server-2008/bb510489(v=sql.100))(SQL Server 온라인 설명서) | 테이블 반환 매개 변수를 만들고 사용하는 방법을 설명합니다.                             |
+| SQL Server 온라인 설명서의 [사용자 정의 테이블 형식](/previous-versions/sql/sql-server-2008/bb522526(v=sql.100))                  | 테이블 반환 매개 변수를 선언하는 데 사용되는 사용자 정의 테이블 형식에 대해 설명합니다. |
 | CodePlex의 [Microsoft SQL Server 데이터베이스 엔진](https://go.microsoft.com/fwlink/?LinkId=120507) 섹션        | SQL Server의 특성과 기능을 사용하는 방법을 보여 주는 샘플을 포함합니다.  |
   
 ## <a name="passing-multiple-rows-in-previous-versions-of-sql-server"></a>이전 버전의 SQL Server에서 여러 행 전달  
@@ -53,7 +53,7 @@ SQL Server 2008에 테이블 반환 매개 변수가 도입되기 전에는 여�
   
 ## <a name="creating-table-valued-parameter-types"></a>테이블 반환 매개 변수 형식 만들기  
 
-테이블 반환 매개 변수는 Transact-SQL `CREATE TYPE` 문을 사용하여 정의된 강력한 형식의 테이블 구조를 기반으로 합니다. 클라이언트 애플리케이션에서 테이블 반환 매개 변수를 사용할 수 있으려면 먼저 SQL Server에서 테이블 형식을 만들고 구조를 정의해야 합니다. 테이블 형식 만들기에 대한 자세한 내용은 SQL Server 온라인 설명서에서 [사용자 정의 테이블 형식](https://go.microsoft.com/fwlink/?LinkID=98364)을 참조하세요.  
+테이블 반환 매개 변수는 Transact-SQL `CREATE TYPE` 문을 사용하여 정의된 강력한 형식의 테이블 구조를 기반으로 합니다. 클라이언트 애플리케이션에서 테이블 반환 매개 변수를 사용할 수 있으려면 먼저 SQL Server에서 테이블 형식을 만들고 구조를 정의해야 합니다. 테이블 형식 만들기에 대한 자세한 내용은 SQL Server 온라인 설명서에서 [사용자 정의 테이블 형식](/previous-versions/sql/sql-server-2008/bb522526(v=sql.100))을 참조하세요.  
 
 ```sql
 CREATE TYPE dbo.CategoryTableType AS TABLE  
@@ -315,4 +315,4 @@ pStmt.execute();
 
 ## <a name="see-also"></a>참고 항목
 
-[JDBC 드라이버 개요](overview-of-the-jdbc-driver.md)  
+[JDBC 드라이버 개요](overview-of-the-jdbc-driver.md)

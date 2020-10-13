@@ -1,22 +1,22 @@
 ---
-title: 오프라인 설치를 위한 업데이트 다운로드
+title: 오프라인 설치를 위한 업데이트 CAB 다운로드
 description: SQL Server Machine Learning Services용 Python 및 R CAB 파일을 다운로드합니다. 이러한 CAB 파일은 Machine Learning Services(Python 및 R) 기능에 대한 업데이트를 포함하며 인터넷에 액세스할 수 없는 서버에 SQL Server를 설치할 때 사용됩니다.
 ms.prod: sql
 ms.technology: machine-learning-services
-ms.date: 08/06/2020
+ms.date: 10/02/2020
 ms.topic: how-to
 author: dphansen
 ms.author: davidph
 ms.custom: seo-lt-2019
 monikerRange: '>=sql-server-2016||=sqlallproducts-allversions'
-ms.openlocfilehash: c7af170b3e64e60c886dd1cab2a02cba06e318e2
-ms.sourcegitcommit: b93beb4f03aee2c1971909cb1d15f79cd479a35c
+ms.openlocfilehash: f2d9867ebad010ea8e518f3faee29041eebd79a8
+ms.sourcegitcommit: 2f868a77903c1f1c4cecf4ea1c181deee12d5b15
 ms.translationtype: HT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 09/29/2020
-ms.locfileid: "91498278"
+ms.lasthandoff: 10/02/2020
+ms.locfileid: "91670796"
 ---
-# <a name="cab-downloads-for-cumulative-updates-of-sql-server-machine-learning-services"></a>SQL Server Machine Learning Services의 누적 업데이트를 위한 CAB 다운로드
+# <a name="cab-downloads-for-offline-installation-of-cumulative-updates-for-sql-server-machine-learning-services"></a>SQL Server Machine Learning Services에 대한 누적 업데이트의 오프라인 설치를 위한 CAB 다운로드
 
 [!INCLUDE [SQL Server 2016 and later](../../includes/applies-to-version/sqlserver2016.md)]
 
@@ -50,7 +50,7 @@ CAB 파일은 시간의 역순으로 나열됩니다. CAB 파일을 다운로드
 
 |해제 | 구성 요소 | 다운로드 링크 | 해결된 문제 |
 |------- | --------- | ------------- | ---------------- |
-|**[SQL Server 2019 CU7](https://support.microsoft.com/help/4552255)** |  |  |  |
+|**[SQL Server 2019 CU8](https://support.microsoft.com/help/4577194)** |  |  |  |
 | | Microsoft R Open      | [SRO_3.5.2.777_1033.cab](https://go.microsoft.com/fwlink/?linkid=2134897)  |  |
 | | R Server              | [SRS_9.4.7.958_1033.cab](https://go.microsoft.com/fwlink/?linkid=2136942)  |  |
 | | Microsoft Python Open | [SPO_4.5.12.479_1033.cab](https://go.microsoft.com/fwlink/?LinkId=2118341) |  |
