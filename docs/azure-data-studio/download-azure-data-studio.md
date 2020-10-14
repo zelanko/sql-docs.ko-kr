@@ -9,12 +9,12 @@ ms.author: alayu
 ms.reviewer: maghan
 ms.custom: seodec18
 ms.date: 9/30/2020
-ms.openlocfilehash: 2e8d8175daebc99cd414e9deef4bb8692f4de833
-ms.sourcegitcommit: 764f90cf2eeca8451afdea2753691ae4cf032bea
+ms.openlocfilehash: 0d318fedc053c4d01db2fc192375c499daa4573d
+ms.sourcegitcommit: a41e1f4199785a2b8019a419a1f3dcdc15571044
 ms.translationtype: HT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 09/30/2020
-ms.locfileid: "91589322"
+ms.lasthandoff: 10/13/2020
+ms.locfileid: "91987842"
 ---
 # <a name="download-and-install-azure-data-studio"></a>Azure Data Studio 다운로드 및 설치
 
@@ -178,7 +178,7 @@ Azure Data Studio는 Windows, macOS, Linux에서 실행되고, 다음 플랫폼�
 
 ## <a name="supported-sql-offerings"></a>지원되는 SQL 서비스
 
-- 이 Azure Data Studio 버전은 [지원되는 모든 버전의 SQL Server 2014 - [!INCLUDE[sql-server-2019](../includes/sssqlv15-md.md)]](https://support.microsoft.com/lifecycle?C2=1044)에서 작동하며 Azure SQL Database와 Azure SQL Data Warehouse의 최신 클라우드 기능 사용을 지원합니다. Azure Data Studio는 Azure SQL Managed Instance에 대한 미리 보기 지원도 제공합니다.
+- 이 Azure Data Studio 버전은 [지원되는 모든 버전의 SQL Server 2014 - [!INCLUDE[sql-server-2019](../includes/sssqlv15-md.md)]](https://support.microsoft.com/lifecycle?C2=1044)에서 작동하며 Azure SQL Database와 Azure Synapse Analytics의 최신 클라우드 기능 사용을 지원합니다. Azure Data Studio는 Azure SQL Managed Instance에 대한 미리 보기 지원도 제공합니다.
 
 ## <a name="upgrade-from-sql-operations-studio"></a>SQL Operations Studio에서 업그레이드
 
