@@ -13,12 +13,12 @@ ms.assetid: d62b0e25-3226-4f87-a10a-b3a0d9555e19
 author: XiaoyuMSFT
 ms.author: xiaoyul
 monikerRange: = azure-sqldw-latest || = sqlallproducts-allversions
-ms.openlocfilehash: d81f8646196c2b8af01fa2689633284d700398c3
-ms.sourcegitcommit: 22dacedeb6e8721e7cdb6279a946d4002cfb5da3
+ms.openlocfilehash: 5efa6d9c501d9f7903ee81770e8ceb364baadc8a
+ms.sourcegitcommit: 76ab3b57718341c6057613c9bd38cf82fb17786e
 ms.translationtype: MT
 ms.contentlocale: ko-KR
 ms.lasthandoff: 10/14/2020
-ms.locfileid: "92036971"
+ms.locfileid: "92059512"
 ---
 # <a name="syspdw_materialized_view_column_distribution_properties-transact-sql"></a>sys.pdw_materialized_view_column_distribution_properties (Transact-sql) 
 
@@ -30,7 +30,7 @@ ms.locfileid: "92036971"
 |-----------------|---------------|-----------------|  
 |object_id|**int**|열이 속한 개체의 ID입니다. |  
 |column_id|**int**|열의 ID입니다.|  
-|distribution_ordinal|**tinyint**|0 = 배포 열이 아닙니다.</br> 1 = SQL Data Warehouse이 열을 사용 하 여 구체화 된 뷰를 배포 합니다.|
+|distribution_ordinal|**tinyint**|0 = 배포 열이 아닙니다.</br> 1 = Azure Synapse Analytics는이 열을 사용 하 여 구체화 된 뷰를 배포 합니다.|
  
 ## <a name="permissions"></a>사용 권한 
 

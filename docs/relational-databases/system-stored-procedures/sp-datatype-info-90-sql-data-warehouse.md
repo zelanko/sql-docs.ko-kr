@@ -1,6 +1,6 @@
 ---
-description: sp_datatype_info_90 (SQL Data Warehouse)
-title: sp_datatype_info_90 (SQL Data Warehouse) | Microsoft Docs
+description: sp_datatype_info_90 (Azure Synapse Analytics)
+title: sp_datatype_info_90 (Azure Synapse Analytics)
 ms.custom: ''
 ms.date: 03/13/2017
 ms.service: sql-data-warehouse
@@ -12,14 +12,14 @@ ms.assetid: 1d043964-dc6e-4c3e-ab61-bc444d5e25ae
 author: ronortloff
 ms.author: rortloff
 monikerRange: '>= aps-pdw-2016 || = azure-sqldw-latest || = sqlallproducts-allversions'
-ms.openlocfilehash: 6a7f2cc25af40cc85ae3600e18d861d106af7168
-ms.sourcegitcommit: a41e1f4199785a2b8019a419a1f3dcdc15571044
+ms.openlocfilehash: 6c9d03578a2eab318be1669303e9a8b741eb3779
+ms.sourcegitcommit: 76ab3b57718341c6057613c9bd38cf82fb17786e
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 10/13/2020
-ms.locfileid: "91987959"
+ms.lasthandoff: 10/14/2020
+ms.locfileid: "92059441"
 ---
-# <a name="sp_datatype_info_90-sql-data-warehouse"></a>sp_datatype_info_90 (SQL Data Warehouse)
+# <a name="sp_datatype_info_90-azure-synapse-analytics"></a>sp_datatype_info_90 (Azure Synapse Analytics)
 [!INCLUDE[applies-to-version/asa-pdw](../../includes/applies-to-version/asa-pdw.md)]
 
   현재 환경에서 지원되는 데이터 형식에 대한 정보를 반환합니다.  
@@ -47,7 +47,7 @@ sp_datatype_info_90 [ [ @data_type = ] data_type ]
   
 ## <a name="result-sets"></a>결과 집합  
   
-|열 이름|데이터 형식|Description|  
+|열 이름|데이터 형식|설명|  
 |-----------------|---------------|-----------------|  
 |TYPE_NAME|**sysname**|DBMS에 종속된 데이터 형식입니다.|  
 |DATA_TYPE|**smallint**|ODBC 형식의 열이 모두 매핑되는 해당 형식의 코드입니다.|  
@@ -87,7 +87,7 @@ GO
 ```  
   
 ## <a name="see-also"></a>참고 항목  
- [SQL Data Warehouse 저장 프로시저](../../relational-databases/system-stored-procedures/sql-data-warehouse-stored-procedures.md)   
+ [Azure Synapse Analytics 저장 프로시저](../../relational-databases/system-stored-procedures/sql-data-warehouse-stored-procedures.md)   
  [데이터 형식&#40;Transact-SQL&#41;](../../t-sql/data-types/data-types-transact-sql.md)  
   
   

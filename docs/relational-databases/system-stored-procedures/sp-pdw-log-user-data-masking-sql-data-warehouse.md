@@ -1,6 +1,6 @@
 ---
-description: sp_pdw_log_user_data_masking (SQL Data Warehouse)
-title: sp_pdw_log_user_data_masking (SQL Data Warehouse) | Microsoft Docs
+description: sp_pdw_log_user_data_masking (Azure Synapse Analytics)
+title: sp_pdw_log_user_data_masking (Azure Synapse Analytics) | Microsoft Docs
 ms.custom: ''
 ms.date: 03/14/2017
 ms.service: sql-data-warehouse
@@ -12,14 +12,14 @@ ms.assetid: 43c63b42-03cb-4fb5-8362-ec3b7e22a590
 author: ronortloff
 ms.author: rortloff
 monikerRange: '>= aps-pdw-2016 || = azure-sqldw-latest || = sqlallproducts-allversions'
-ms.openlocfilehash: c3b65b6e3626a79fae4f5b5ac87e997ce3c97554
-ms.sourcegitcommit: a41e1f4199785a2b8019a419a1f3dcdc15571044
+ms.openlocfilehash: 87c151558a290f3c06a605de72931c5ee6990f60
+ms.sourcegitcommit: 76ab3b57718341c6057613c9bd38cf82fb17786e
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 10/13/2020
-ms.locfileid: "91988809"
+ms.lasthandoff: 10/14/2020
+ms.locfileid: "92059361"
 ---
-# <a name="sp_pdw_log_user_data_masking-sql-data-warehouse"></a>sp_pdw_log_user_data_masking (SQL Data Warehouse)
+# <a name="sp_pdw_log_user_data_masking-azure-synapse-analytics"></a>sp_pdw_log_user_data_masking (Azure Synapse Analytics)
 [!INCLUDE[applies-to-version/asa-pdw](../../includes/applies-to-version/asa-pdw.md)]
 
   **Sp_pdw_log_user_data_masking** 를 사용 하 여 활동 로그에서 사용자 데이터 마스킹을 사용 하도록 설정 [!INCLUDE[ssSDW](../../includes/sssdw-md.md)] 합니다. 사용자 데이터 마스킹은 어플라이언스의 모든 데이터베이스에 대 한 문에 영향을 줍니다.  
@@ -76,7 +76,7 @@ EXEC sp_pdw_log_user_data_masking 1;
 ```  
   
 ## <a name="see-also"></a>참고 항목  
- [sp_pdw_database_encryption &#40;SQL Data Warehouse&#41;](../../relational-databases/system-stored-procedures/sp-pdw-database-encryption-sql-data-warehouse.md)   
- [sp_pdw_database_encryption_regenerate_system_keys &#40;SQL Data Warehouse&#41;](../../relational-databases/system-stored-procedures/sp-pdw-database-encryption-regenerate-system-keys-sql-data-warehouse.md)  
+ [Azure Synapse Analytics를 &#40;sp_pdw_database_encryption&#41;](../../relational-databases/system-stored-procedures/sp-pdw-database-encryption-sql-data-warehouse.md)   
+ [Azure Synapse Analytics를 &#40;sp_pdw_database_encryption_regenerate_system_keys&#41;](../../relational-databases/system-stored-procedures/sp-pdw-database-encryption-regenerate-system-keys-sql-data-warehouse.md)  
   
   

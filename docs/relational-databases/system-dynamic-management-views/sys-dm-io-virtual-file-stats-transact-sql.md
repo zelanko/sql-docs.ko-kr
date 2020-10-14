@@ -21,12 +21,12 @@ ms.assetid: fa3e321f-6fe5-45ff-b397-02a0dd3d6b7d
 author: markingmyname
 ms.author: maghan
 monikerRange: =azuresqldb-current||=azure-sqldw-latest||>=sql-server-2016||=sqlallproducts-allversions||>=sql-server-linux-2017||=azuresqldb-mi-current
-ms.openlocfilehash: 70311ec54cd2eb49894751a2891259800552afc6
-ms.sourcegitcommit: a5398f107599102af7c8cda815d8e5e9a367ce7e
+ms.openlocfilehash: 4d4d4c319afb3cfb40c05cc187ae4d6ea6e0eacb
+ms.sourcegitcommit: 76ab3b57718341c6057613c9bd38cf82fb17786e
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 10/13/2020
-ms.locfileid: "92005617"
+ms.lasthandoff: 10/14/2020
+ms.locfileid: "92059621"
 ---
 # <a name="sysdm_io_virtual_file_stats-transact-sql"></a>sys.dm_io_virtual_file_stats(Transact-SQL)
 [!INCLUDE [sql-asdb-asdbmi-asa-pdw](../../includes/applies-to-version/sql-asdb-asdbmi-asa.md)]
@@ -76,7 +76,7 @@ sys.dm_pdw_nodes_io_virtual_file_stats
   
 |열 이름|데이터 형식|Description|  
 |-----------------|---------------|-----------------|  
-|**database_name**|**sysname**|데이터베이스 이름</br></br>SQL Data Warehouse의 경우 pdw_node_id에 의해 식별 되는 노드에 저장 된 데이터베이스의 이름입니다. 각 노드에는 파일 13 개를 포함 하는 tempdb 데이터베이스가 하나 있습니다. 또한 각 노드에는 배포 당 하나의 데이터베이스가 있으며 각 배포 데이터베이스에는 5 개의 파일이 있습니다. 예를 들어 각 노드에 4 개의 분포가 포함 된 경우 결과는 pdw_node_id 당 배포 데이터베이스 파일 20 개를 표시 합니다. 
+|**database_name**|**sysname**|데이터베이스 이름</br></br>Azure Synapse Analytics의 경우 pdw_node_id으로 식별 되는 노드에 저장 된 데이터베이스의 이름입니다. 각 노드에는 파일 13 개를 포함 하는 tempdb 데이터베이스가 하나 있습니다. 또한 각 노드에는 배포 당 하나의 데이터베이스가 있으며 각 배포 데이터베이스에는 5 개의 파일이 있습니다. 예를 들어 각 노드에 4 개의 분포가 포함 된 경우 결과는 pdw_node_id 당 배포 데이터베이스 파일 20 개를 표시 합니다. 
 |**database_id**|**smallint**|데이터베이스의 ID입니다.|  
 |**file_id**|**smallint**|파일의 ID입니다.|  
 |**sample_ms**|**bigint**|컴퓨터가 시작된 이후로 경과한 시간(밀리초)입니다. 이 열은 이 함수의 다양한 출력을 비교하는 데 사용할 수 있습니다.</br></br>데이터 형식은 **정수** [!INCLUDE[ssKatmai](../../includes/sskatmai-md.md)] 형식입니다. [!INCLUDE[ssSQL14](../../includes/sssql14-md.md)]|  

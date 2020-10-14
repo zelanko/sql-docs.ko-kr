@@ -13,12 +13,12 @@ helpviewer_keywords:
 ms.assetid: 6dc27c85-84e1-472a-b057-d1854b8c98a3
 author: rothja
 ms.author: jroth
-ms.openlocfilehash: ffda330af0353020a9448a3fe6b95ebcce1de2e4
-ms.sourcegitcommit: 18a98ea6a30d448aa6195e10ea2413be7e837e94
+ms.openlocfilehash: 4984459a381210572a3803a09a2dec8fe81bb988
+ms.sourcegitcommit: 76ab3b57718341c6057613c9bd38cf82fb17786e
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 08/27/2020
-ms.locfileid: "88985944"
+ms.lasthandoff: 10/14/2020
+ms.locfileid: "92059371"
 ---
 # <a name="ado-programmer39s-reference"></a>ADO 프로그래머&#39;s 참조
 이 섹션에서는 다음 항목을 다룹니다.  
@@ -27,6 +27,6 @@ ms.locfileid: "88985944"
   
 -   [RDS API 참조](./rds-api/rds-api-reference.md)  
   
--   [ADO MD API 참조](./ado-md-api/ado-md-object-model.md?view=sql-server-ver15)  
+-   [ADO MD API 참조](./ado-md-api/ado-md-object-model.md?view=sql-server-ver15&preserve-view=true)  
   
--   [ADOX API 참조](./adox-api/adox-object-model.md?view=sql-server-ver15)
+-   [ADOX API 참조](./adox-api/adox-object-model.md?view=sql-server-ver15&preserve-view=true)

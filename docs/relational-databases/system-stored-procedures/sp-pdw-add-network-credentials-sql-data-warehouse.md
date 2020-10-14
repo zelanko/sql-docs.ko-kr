@@ -1,5 +1,5 @@
 ---
-description: sp_pdw_add_network_credentials (SQL Data Warehouse)
+description: sp_pdw_add_network_credentials (Azure Synapse Analytics)
 title: sp_pdw_add_network_credentials
 titleSuffix: Azure Synapse Analytics
 ms.date: 03/14/2017
@@ -13,14 +13,14 @@ author: ronortloff
 ms.author: rortloff
 monikerRange: '>= aps-pdw-2016 || = azure-sqldw-latest || = sqlallproducts-allversions'
 ms.custom: seo-dt-2019
-ms.openlocfilehash: a91960dc4dad3909e18003309bcd7f12f1461b67
-ms.sourcegitcommit: a5398f107599102af7c8cda815d8e5e9a367ce7e
+ms.openlocfilehash: 87757b771e7c140454d8cdceac8dc1a77600f94b
+ms.sourcegitcommit: 76ab3b57718341c6057613c9bd38cf82fb17786e
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 10/13/2020
-ms.locfileid: "92004538"
+ms.lasthandoff: 10/14/2020
+ms.locfileid: "92059354"
 ---
-# <a name="sp_pdw_add_network_credentials-sql-data-warehouse"></a>sp_pdw_add_network_credentials (SQL Data Warehouse)
+# <a name="sp_pdw_add_network_credentials-azure-synapse-analytics"></a>sp_pdw_add_network_credentials (Azure Synapse Analytics)
 [!INCLUDE[applies-to-version/asa-pdw](../../includes/applies-to-version/asa-pdw.md)]
 
   그러면에서 네트워크 자격 증명 [!INCLUDE[ssSDW](../../includes/sssdw-md.md)] 을 저장 하 고 서버에 연결 합니다. 예를 들어이 저장 프로시저를 사용 하 여 [!INCLUDE[ssSDW](../../includes/sssdw-md.md)] 대상 서버에서 데이터베이스 백업 및 복원 작업을 수행 하거나 TDE에 사용 되는 인증서의 백업을 만들 수 있도록 적절 한 읽기/쓰기 권한을 부여할 수 있습니다.  
@@ -80,7 +80,7 @@ EXEC sp_pdw_add_network_credentials '10.172.63.255', 'seattle\david', '********'
 >  InfiniBand를 통해 데이터베이스 백업을 수행 하려면 백업 서버의 InfiniBand IP 주소를 사용 해야 합니다.  
   
 ## <a name="see-also"></a>참고 항목  
- [sp_pdw_remove_network_credentials &#40;SQL Data Warehouse&#41;](../../relational-databases/system-stored-procedures/sp-pdw-remove-network-credentials-sql-data-warehouse.md)  
+ [Azure Synapse Analytics를 &#40;sp_pdw_remove_network_credentials&#41;](../../relational-databases/system-stored-procedures/sp-pdw-remove-network-credentials-sql-data-warehouse.md)  
   
   
 

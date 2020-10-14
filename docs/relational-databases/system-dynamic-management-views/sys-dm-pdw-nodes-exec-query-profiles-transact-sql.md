@@ -13,19 +13,21 @@ ms.assetid: ''
 author: XiaoyuMSFT
 ms.author: xiaoyul
 monikerRange: =azure-sqldw-latest || = sqlallproducts-allversions
-ms.openlocfilehash: ef3237f77272978c767e1519e6b7895ce4cb274b
-ms.sourcegitcommit: 22dacedeb6e8721e7cdb6279a946d4002cfb5da3
+ms.openlocfilehash: 591bba14af18f8c622ffa5547339fd0024cf4445
+ms.sourcegitcommit: 76ab3b57718341c6057613c9bd38cf82fb17786e
 ms.translationtype: MT
 ms.contentlocale: ko-KR
 ms.lasthandoff: 10/14/2020
-ms.locfileid: "92037716"
+ms.locfileid: "92059521"
 ---
 # <a name="sysdm_pdw_nodes_exec_query_profiles-transact-sql"></a>sys.dm_pdw_nodes_exec_query_profiles (Transact-sql)
+
 [!INCLUDE [asa](../../includes/applies-to-version/asa.md)]
 
 쿼리가 실행 되는 동안 실시간 데이터 웨어하우스 쿼리 진행률을 모니터링 합니다.   
   
-## <a name="table-returned"></a>반환 된 테이블  
+## <a name="table-returned"></a>반환 된 테이블
+  
 반환된 카운터는 연산자 및 스레드 기준입니다. 결과는 동적 이며 `SET STATISTICS XML ON` 쿼리가 완료 될 때만 출력을 만드는 것과 같은 기존 옵션의 결과와 일치 하지 않습니다.  
   
 |열 이름|데이터 형식|Description|  
@@ -68,15 +70,18 @@ ms.locfileid: "92037716"
 |actual_read_row_count|**bigint**|잔여 조건자를 적용 하기 전에 연산자가 읽은 행 수입니다.| 
 |estimated_read_row_count|**bigint**|**적용 대상:** S p [!INCLUDE[ssSQL15_md](../../includes/sssql15-md.md)] 1 부터는 <br/>나머지 조건자가 적용 되기 전에 연산자에서 읽을 수 있는 것으로 예상 되는 행 수입니다.|  
   
-## <a name="remarks"></a>설명  
+## <a name="remarks"></a>설명
+
 [Sys.dm_exec_query_profiles](./sys-dm-exec-query-profiles-transact-sql.md?view=sql-server-ver15) 에 동일한 설명이 적용 됩니다.  
 
 ## <a name="permissions"></a>사용 권한  
  서버에 대한 `VIEW SERVER STATE` 권한이 필요합니다.  
 
-## <a name="see-also"></a>참조  
+## <a name="see-also"></a>참고 항목
+
  [Transact-sql&#41;&#40;Azure Synapse 분석 및 병렬 데이터 웨어하우스 동적 관리 뷰 ](../../relational-databases/system-dynamic-management-views/sql-and-parallel-data-warehouse-dynamic-management-views.md)  
    
 
- ## <a name="next-steps"></a>다음 단계
- 더 많은 개발 팁은 [SQL Data Warehouse 개발 개요](/azure/sql-data-warehouse/sql-data-warehouse-overview-develop)를 참조하세요.
+ ## <a name="next-steps"></a>다음 단계 
+
+Azure Synapse Analytics 개발 개요] (/azure/sql-data-warehouse/sql-data-warehouse-overview-develop).

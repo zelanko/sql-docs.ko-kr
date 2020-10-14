@@ -13,12 +13,12 @@ ms.assetid: ''
 author: XiaoyuMSFT
 ms.author: xiaoyul
 monikerRange: =azure-sqldw-latest || = sqlallproducts-allversions
-ms.openlocfilehash: 5ac37e8c768068244c549d28d9bf6d157d46e853
-ms.sourcegitcommit: 22dacedeb6e8721e7cdb6279a946d4002cfb5da3
+ms.openlocfilehash: 3bfb94c0a0c49603681de5cf84c40e535596c3db
+ms.sourcegitcommit: 76ab3b57718341c6057613c9bd38cf82fb17786e
 ms.translationtype: MT
 ms.contentlocale: ko-KR
 ms.lasthandoff: 10/14/2020
-ms.locfileid: "92035296"
+ms.locfileid: "92059461"
 ---
 # <a name="sysdm_pdw_nodes_exec_text_query_plan--transact-sql"></a>sys.dm_pdw_nodes_exec_text_query_plan (Transact-sql)
 [!INCLUDE [asa](../../includes/applies-to-version/asa.md)]
@@ -42,8 +42,8 @@ ms.locfileid: "92035296"
 ## <a name="permissions"></a>사용 권한  
  서버에 대 한 **sysadmin** 서버 역할 또는 `VIEW SERVER STATE` 권한이 필요 합니다.  
   
-## <a name="see-also"></a>참조  
+## <a name="see-also"></a>참고 항목  
  [Transact-sql&#41;&#40;Azure Synapse 분석 및 병렬 데이터 웨어하우스 동적 관리 뷰 ](../../relational-databases/system-dynamic-management-views/sql-and-parallel-data-warehouse-dynamic-management-views.md)  
 
   ## <a name="next-steps"></a>다음 단계
- 더 많은 개발 팁은 [SQL Data Warehouse 개발 개요](/azure/sql-data-warehouse/sql-data-warehouse-overview-develop)를 참조하세요.
+ 더 많은 개발 팁은 [Azure Synapse Analytics 개발 개요](/azure/sql-data-warehouse/sql-data-warehouse-overview-develop)를 참조 하세요.

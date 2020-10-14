@@ -1,5 +1,5 @@
 ---
-description: sp_pdw_remove_network_credentials (SQL Data Warehouse)
+description: sp_pdw_remove_network_credentials (Azure Synapse Analytics)
 title: sp_pdw_remove_network_credentials
 titleSuffix: Azure Synapse Analytics
 ms.date: 03/14/2017
@@ -15,14 +15,14 @@ author: ronortloff
 ms.author: rortloff
 monikerRange: '>= aps-pdw-2016 || = azure-sqldw-latest || = sqlallproducts-allversions'
 ms.custom: seo-dt-2019
-ms.openlocfilehash: 4c65a7c67dde39e9a382180f0e01e2bf06cbbee3
-ms.sourcegitcommit: a5398f107599102af7c8cda815d8e5e9a367ce7e
+ms.openlocfilehash: f53f7d439db50afde5b6aa556d418e20499ab0fc
+ms.sourcegitcommit: 76ab3b57718341c6057613c9bd38cf82fb17786e
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 10/13/2020
-ms.locfileid: "92005792"
+ms.lasthandoff: 10/14/2020
+ms.locfileid: "92059336"
 ---
-# <a name="sp_pdw_remove_network_credentials-sql-data-warehouse"></a>sp_pdw_remove_network_credentials (SQL Data Warehouse)
+# <a name="sp_pdw_remove_network_credentials-azure-synapse-analytics"></a>sp_pdw_remove_network_credentials (Azure Synapse Analytics)
 [!INCLUDE[applies-to-version/asa-pdw](../../includes/applies-to-version/asa-pdw.md)]
 
   네트워크 파일 공유에 액세스 하기 위해에 저장 된 네트워크 자격 증명 [!INCLUDE[ssSDW](../../includes/sssdw-md.md)] 을 제거 합니다. 예를 들어이 저장 프로시저를 사용 하 여에 대 한 사용 권한을 제거 하 여 [!INCLUDE[ssSDW](../../includes/sssdw-md.md)] 자체 네트워크 내에 있는 서버에서 백업 및 복원 작업을 수행할 수 있습니다.  
@@ -60,7 +60,7 @@ sp_pdw_remove_network_credentials 'target_server_name'
 ## <a name="metadata"></a>메타데이터  
  모든 자격 증명을 나열 하 고 자격 증명이 제거 되었는지 확인 하려면 [transact-sql&#41;&#40;sys.dm_pdw_network_credentials ](../../relational-databases/system-dynamic-management-views/sys-dm-pdw-network-credentials-transact-sql.md)을 사용 합니다.  
   
- 자격 증명을 추가 하려면 [sp_pdw_add_network_credentials &#40;SQL Data Warehouse&#41;](../../relational-databases/system-stored-procedures/sp-pdw-add-network-credentials-sql-data-warehouse.md)를 사용 합니다.  
+ 자격 증명을 추가 하려면 [Azure Synapse Analytics&#41;&#40;sp_pdw_add_network_credentials ](../../relational-databases/system-stored-procedures/sp-pdw-add-network-credentials-sql-data-warehouse.md)을 사용 합니다.  
   
 ## <a name="examples-sssdwfull-and-sspdw"></a>예: [!INCLUDE[ssSDWfull](../../includes/sssdwfull-md.md)] 및 [!INCLUDE[ssPDW](../../includes/sspdw-md.md)]  
   
