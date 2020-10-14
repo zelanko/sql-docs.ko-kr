@@ -13,12 +13,12 @@ dev_langs:
 author: ronortloff
 ms.author: rortloff
 monikerRange: =azure-sqldw-latest||=sqlallproducts-allversions
-ms.openlocfilehash: 88d8010883def59e8d9ab4c3e5535359fcd3d3a1
-ms.sourcegitcommit: a5398f107599102af7c8cda815d8e5e9a367ce7e
+ms.openlocfilehash: 78811f776f7492cdcdba10a0f257e3d9a8f44aa7
+ms.sourcegitcommit: 22dacedeb6e8721e7cdb6279a946d4002cfb5da3
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 10/13/2020
-ms.locfileid: "92006406"
+ms.lasthandoff: 10/14/2020
+ms.locfileid: "92033865"
 ---
 # <a name="sysworkload_management_workload_classifiers-transact-sql"></a>sys.workload_management_workload_classifiers (Transact-sql)
 
@@ -43,4 +43,4 @@ VIEW SERVER STATE 권한이 필요합니다.
 
 ## <a name="next-steps"></a>다음 단계
 
- Azure Synapse Analytics 및 병렬 데이터 웨어하우스의 모든 카탈로그 뷰 목록은 [SQL Data Warehouse 및 병렬 데이터 웨어하우스 카탈로그 뷰](../../relational-databases/system-catalog-views/sql-data-warehouse-and-parallel-data-warehouse-catalog-views.md)를 참조 하세요. 작업 분류자를 만들려면 [작업 분류자 만들기](../../t-sql/statements/create-workload-classifier-transact-sql.md)를 참조 하세요. 작업 분류에 대 한 자세한 내용은 [작업 분류](/azure/sql-data-warehouse/sql-data-warehouse-workload-classification) 를 참조 하세요.
+ Azure Synapse Analytics 및 병렬 데이터 웨어하우스의 모든 카탈로그 뷰 목록은 [Azure Synapse 분석 및 병렬 데이터 웨어하우스 카탈로그 뷰](../../relational-databases/system-catalog-views/sql-data-warehouse-and-parallel-data-warehouse-catalog-views.md)를 참조 하세요. 작업 분류자를 만들려면 [작업 분류자 만들기](../../t-sql/statements/create-workload-classifier-transact-sql.md)를 참조 하세요. 작업 분류에 대 한 자세한 내용은 [작업 분류](/azure/sql-data-warehouse/sql-data-warehouse-workload-classification) 를 참조 하세요.

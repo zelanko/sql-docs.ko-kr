@@ -1,6 +1,6 @@
 ---
-description: sys. dm_workload_management_workload_groups_stats (Transact-sql)
-title: sys. dm_workload_management_workload_groups_stats (Transact-sql) | Microsoft Docs
+description: sys.dm_workload_management_workload_groups_stats (Transact-sql)
+title: sys.dm_workload_management_workload_groups_stats (Transact-sql) | Microsoft Docs
 ms.custom: ''
 ms.date: 11/02/2019
 ms.prod: sql
@@ -12,14 +12,14 @@ dev_langs:
 author: ronortloff
 ms.author: rortloff
 monikerRange: = azure-sqldw-latest||= sqlallproducts-allversions
-ms.openlocfilehash: a439ebecacd29c2ca412e5ba90fac6b6b5af2b24
-ms.sourcegitcommit: e700497f962e4c2274df16d9e651059b42ff1a10
+ms.openlocfilehash: bc36846a62b8b71e0e21d7ea61d088a0f16c674d
+ms.sourcegitcommit: 22dacedeb6e8721e7cdb6279a946d4002cfb5da3
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 08/17/2020
-ms.locfileid: "88498321"
+ms.lasthandoff: 10/14/2020
+ms.locfileid: "92035186"
 ---
-# <a name="sysdm_workload_management_workload_groups_stats-transact-sql"></a>sys. dm_workload_management_workload_groups_stats (Transact-sql)
+# <a name="sysdm_workload_management_workload_groups_stats-transact-sql"></a>sys.dm_workload_management_workload_groups_stats (Transact-sql)
 [!INCLUDE [asa](../../includes/applies-to-version/asa.md)]
 
 에서 작업 그룹 통계 및 작업 그룹의 유효 값을 반환 [!INCLUDE[ssSDW](../../includes/sssdw-md.md)] 합니다.  
@@ -41,4 +41,4 @@ ms.locfileid: "88498321"
 
 ## <a name="see-also"></a>참조
 
- [Transact-sql&#41;&#40;SQL Data Warehouse 및 병렬 데이터 웨어하우스 동적 관리 뷰 ](../../relational-databases/system-dynamic-management-views/sql-and-parallel-data-warehouse-dynamic-management-views.md)  
+ [Transact-sql&#41;&#40;Azure Synapse 분석 및 병렬 데이터 웨어하우스 동적 관리 뷰 ](../../relational-databases/system-dynamic-management-views/sql-and-parallel-data-warehouse-dynamic-management-views.md)  

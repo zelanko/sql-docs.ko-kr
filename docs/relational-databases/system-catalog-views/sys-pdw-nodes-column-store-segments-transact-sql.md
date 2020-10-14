@@ -1,6 +1,6 @@
 ---
-description: sys. pdw_nodes_column_store_segments (Transact-sql)
-title: sys. pdw_nodes_column_store_segments (Transact-sql)
+description: sys.pdw_nodes_column_store_segments (Transact-sql)
+title: sys.pdw_nodes_column_store_segments (Transact-sql)
 ms.custom: seo-dt-2019
 ms.date: 03/28/2018
 ms.prod: sql
@@ -14,14 +14,14 @@ author: julieMSFT
 ms.author: jrasnick
 manager: jrj
 monikerRange: '>= aps-pdw-2016 || = azure-sqldw-latest || = sqlallproducts-allversions'
-ms.openlocfilehash: 4adbc9ea8015b500b4555b8e2e2d97d363b098b1
-ms.sourcegitcommit: 331b8495e4ab37266945c81ff5b93d250bdaa6da
+ms.openlocfilehash: 47e0b471f4622a66fa3ecba7dfa73fdaf8fa08e5
+ms.sourcegitcommit: 22dacedeb6e8721e7cdb6279a946d4002cfb5da3
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 08/20/2020
-ms.locfileid: "88646054"
+ms.lasthandoff: 10/14/2020
+ms.locfileid: "92034791"
 ---
-# <a name="syspdw_nodes_column_store_segments-transact-sql"></a>sys. pdw_nodes_column_store_segments (Transact-sql)
+# <a name="syspdw_nodes_column_store_segments-transact-sql"></a>sys.pdw_nodes_column_store_segments (Transact-sql)
 
 [!INCLUDE[applies-to-version/asa-pdw](../../includes/applies-to-version/asa-pdw.md)]
 
@@ -50,7 +50,7 @@ Columnstore 인덱스의 각 열에 대해 행을 하나씩 포함합니다.
 
 ## <a name="examples-sssdwfull-and-sspdw"></a>예: [!INCLUDE[ssSDWfull](../../includes/sssdwfull-md.md)] 및 [!INCLUDE[ssPDW](../../includes/sspdw-md.md)]
 
-다른 시스템 테이블과 pdw_nodes_column_store_segments를 조인 하 여 논리적 테이블당 columnstore 세그먼트 수를 확인 합니다.
+다른 시스템 테이블과 sys.pdw_nodes_column_store_segments 조인 하 여 논리적 테이블당 columnstore 세그먼트 수를 확인 합니다.
 
 ```sql
 SELECT  sm.name           as schema_nm
@@ -81,16 +81,13 @@ ORDER BY    table_nm
 ,           sm.name ;
 ```
 
->[!TIP]
-> Synapse SQL의 성능 향상을 위해 영구 사용자 테이블에서 **pdw_table_mappings** 대신 **pdw_permanent_table_mappings** 를 사용 하는 것이 좋습니다. 자세한 내용은 **[pdw_permanent_table_mappings &#40;transact-sql&#41;](../../relational-databases/system-catalog-views/sys-pdw-permanent-table-mappings-transact-sql.md)** 을 참조 하십시오.
-
 ## <a name="permissions"></a>사용 권한
 
 **VIEW SERVER STATE** 권한이 필요합니다.
 
-## <a name="see-also"></a>관련 항목
+## <a name="see-also"></a>참고 항목
 
-[SQL Data Warehouse 및 병렬 Data Warehouse 카탈로그 뷰](../../relational-databases/system-catalog-views/sql-data-warehouse-and-parallel-data-warehouse-catalog-views.md)  
+[Azure Synapse Analytics 및 병렬 데이터 웨어하우스 카탈로그 뷰](../../relational-databases/system-catalog-views/sql-data-warehouse-and-parallel-data-warehouse-catalog-views.md)  
 [CREATE COLUMNSTORE INDEX&#40;Transact-SQL&#41;](../../t-sql/statements/create-columnstore-index-transact-sql.md)  
-[pdw_nodes_column_store_row_groups &#40;Transact-sql&#41;](../../relational-databases/system-catalog-views/sys-pdw-nodes-column-store-row-groups-transact-sql.md)  
-[pdw_nodes_column_store_dictionaries &#40;Transact-sql&#41;](../../relational-databases/system-catalog-views/sys-pdw-nodes-column-store-dictionaries-transact-sql.md)
+[Transact-sql&#41;sys.pdw_nodes_column_store_row_groups &#40;](../../relational-databases/system-catalog-views/sys-pdw-nodes-column-store-row-groups-transact-sql.md)  
+[Transact-sql&#41;sys.pdw_nodes_column_store_dictionaries &#40;](../../relational-databases/system-catalog-views/sys-pdw-nodes-column-store-dictionaries-transact-sql.md)

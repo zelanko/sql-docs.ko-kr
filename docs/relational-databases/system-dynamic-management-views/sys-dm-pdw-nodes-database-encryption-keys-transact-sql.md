@@ -1,6 +1,6 @@
 ---
-description: sys. dm_pdw_nodes_database_encryption_keys (Transact-sql)
-title: sys. dm_pdw_nodes_database_encryption_keys (Transact-sql)
+description: sys.dm_pdw_nodes_database_encryption_keys (Transact-sql)
+title: sys.dm_pdw_nodes_database_encryption_keys (Transact-sql)
 ms.custom: seo-dt-2019
 ms.date: 03/07/2017
 ms.prod: sql
@@ -13,17 +13,17 @@ ms.assetid: e7fd02b2-5d7e-4816-a0af-b58ae2ac3f7a
 author: ronortloff
 ms.author: rortloff
 monikerRange: '>= aps-pdw-2016 || = azure-sqldw-latest || = sqlallproducts-allversions'
-ms.openlocfilehash: c4011dd07b6de3b89f6efb39a6f98e4577b88500
-ms.sourcegitcommit: e700497f962e4c2274df16d9e651059b42ff1a10
+ms.openlocfilehash: 5e8a399d58c4ffa4f61e9509bd243f7e9c71275e
+ms.sourcegitcommit: 22dacedeb6e8721e7cdb6279a946d4002cfb5da3
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 08/17/2020
-ms.locfileid: "88397609"
+ms.lasthandoff: 10/14/2020
+ms.locfileid: "92037726"
 ---
-# <a name="sysdm_pdw_nodes_database_encryption_keys-transact-sql"></a>sys. dm_pdw_nodes_database_encryption_keys (Transact-sql)
+# <a name="sysdm_pdw_nodes_database_encryption_keys-transact-sql"></a>sys.dm_pdw_nodes_database_encryption_keys (Transact-sql)
 [!INCLUDE[applies-to-version/asa-pdw](../../includes/applies-to-version/asa-pdw.md)]
 
-  연결된 데이터베이스 암호화 키 및 데이터베이스의 암호화 상태에 대한 정보를 반환합니다. **dm_pdw_nodes_database_encryption_keys** 각 노드에 대해이 정보를 제공 합니다. 데이터베이스 암호화에 대 한 자세한 내용은 [투명한 데이터 암호화 (SQL Server PDW)](../../analytics-platform-system/transparent-data-encryption.md)를 참조 하세요.  
+  연결된 데이터베이스 암호화 키 및 데이터베이스의 암호화 상태에 대한 정보를 반환합니다. **sys.dm_pdw_nodes_database_encryption_keys** 는 각 노드에 대해이 정보를 제공 합니다. 데이터베이스 암호화에 대 한 자세한 내용은 [투명한 데이터 암호화 (SQL Server PDW)](../../analytics-platform-system/transparent-data-encryption.md)를 참조 하세요.  
   
 |열 이름|데이터 형식|설명|  
 |-----------------|---------------|-----------------|  
@@ -61,7 +61,7 @@ ORDER BY D.database_id, PD.pdw_node_ID;
 ```  
   
 ## <a name="see-also"></a>참고 항목  
- [Transact-sql&#41;&#40;SQL Data Warehouse 및 병렬 데이터 웨어하우스 동적 관리 뷰 ](../../relational-databases/system-dynamic-management-views/sql-and-parallel-data-warehouse-dynamic-management-views.md)   
+ [Transact-sql&#41;&#40;Azure Synapse 분석 및 병렬 데이터 웨어하우스 동적 관리 뷰 ](../../relational-databases/system-dynamic-management-views/sql-and-parallel-data-warehouse-dynamic-management-views.md)   
  [CREATE DATABASE ENCRYPTION KEY &#40;Transact-SQL&#41;](../../t-sql/statements/create-database-encryption-key-transact-sql.md)   
  [ALTER DATABASE ENCRYPTION KEY &#40;Transact-SQL&#41;](../../t-sql/statements/alter-database-encryption-key-transact-sql.md)   
  [DROP DATABASE ENCRYPTION KEY &#40;Transact-SQL&#41;](../../t-sql/statements/drop-database-encryption-key-transact-sql.md)  

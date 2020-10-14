@@ -16,12 +16,12 @@ helpviewer_keywords:
 ms.assetid: 318e370d-0444-4812-afe4-307df7ef9f3b
 author: rothja
 ms.author: jroth
-ms.openlocfilehash: 3661757a2352c5a4a968e58c8676aec609391652
-ms.sourcegitcommit: c8e1553ff3fdf295e8dc6ce30d1c454d6fde8088
+ms.openlocfilehash: 8dc3582cb34c80f488005f5a2eaf1c6022c5e1be
+ms.sourcegitcommit: 22dacedeb6e8721e7cdb6279a946d4002cfb5da3
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 07/22/2020
-ms.locfileid: "86914647"
+ms.lasthandoff: 10/14/2020
+ms.locfileid: "92035796"
 ---
 # <a name="boolean-constructor-functions---true-xquery"></a>부울 생성자 함수 - true(XQuery)
 [!INCLUDE[sqlserver](../includes/applies-to-version/sqlserver.md)]
@@ -90,6 +90,5 @@ go
 ```  
   
 ## <a name="see-also"></a>참고 항목  
- [부울 생성자 함수는 XQuery를 &#40;&#41;](https://msdn.microsoft.com/library/fa907f39-d4b7-4495-b829-c788928e0f64)  
-  
+ [부울 생성자 함수는 XQuery를 &#40;&#41;](./xquery-functions-against-the-xml-data-type.md)  
   

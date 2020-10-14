@@ -15,12 +15,12 @@ helpviewer_keywords:
 ms.assetid: 9e4394e9-f177-41d9-839e-5d53a9c9b840
 author: nahk-ivanov
 ms.author: alexiva
-ms.openlocfilehash: d6a1bbc7b47531c66e27818e8673a7c6aa9723c8
-ms.sourcegitcommit: e700497f962e4c2274df16d9e651059b42ff1a10
+ms.openlocfilehash: 3da213467ad6513d4c25e6888bd095e80746cba7
+ms.sourcegitcommit: 22dacedeb6e8721e7cdb6279a946d4002cfb5da3
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 08/17/2020
-ms.locfileid: "88492426"
+ms.lasthandoff: 10/14/2020
+ms.locfileid: "92038276"
 ---
 # <a name="working-with-ssma-projects-mysqltosql"></a>SSMA 프로젝트 작업(MySQLToSQL)
 MySQL 데이터베이스를 SQL Server 또는 SQL Azure로 마이그레이션하려면 먼저 SSMA 프로젝트를 만들어야 합니다. 프로젝트는 다음 정보를 포함 하는 파일입니다.  
@@ -54,7 +54,7 @@ SSMA에는 데이터베이스를 변환 및 로드 하 고, 데이터를 마이�
   
 -   SQL Server에 대 한 동기화 설정에 대 한 자세한 내용은 [프로젝트 설정 &#40;동기화&#41; &#40;MySQLToSQL&#41;](../../ssma/mysql/project-settings-synchronization-mysqltosql.md)를 참조 하세요.  
   
--   GUI 설정에 대 한 자세한 내용은 [프로젝트 설정 (gui) (SSMA Common)](https://msdn.microsoft.com/cf06baf1-8714-48a3-95dc-781f6ca53693)을 참조 하세요.  
+-   GUI 설정에 대 한 자세한 내용은 [프로젝트 설정 (gui) (SSMA Common)](../sybase/project-settings-gui-sybasetosql.md)을 참조 하세요.  
   
 -   데이터 형식 매핑 설정에 대 한 자세한 내용은 [프로젝트 설정 &#40;형식 매핑&#41; &#40;MySQLToSQL&#41;](../../ssma/mysql/project-settings-type-mapping-mysqltosql.md)을 참조 하세요.  
   
@@ -132,9 +132,8 @@ SSMA는 MySQL 스키마를 구문 분석 하 고 메타 데이터를 프로젝�
 ## <a name="next-step"></a>다음 단계  
 마이그레이션 프로세스의 다음 단계는 [MySQL &#40;MySQLToSQL&#41;에 연결 하](../../ssma/mysql/connecting-to-mysql-mysqltosql.md) 는 것입니다.  
   
-## <a name="see-also"></a>관련 항목  
+## <a name="see-also"></a>참고 항목  
 [MySQL &#40;MySQLToSQL&#41;에 연결 ](../../ssma/mysql/connecting-to-mysql-mysqltosql.md)  
 [MySQL 데이터베이스를 SQL Server-Azure SQL Database &#40;MySQLToSql&#41;로 마이그레이션 ](../../ssma/mysql/migrating-mysql-databases-to-sql-server-azure-sql-db-mysqltosql.md)  
 [MySQLToSQL&#41;&#40;SQL Server에 연결 ](../../ssma/mysql/connecting-to-sql-server-mysqltosql.md)  
 [MySQLToSQL&#41;&#40;Azure SQL Database에 연결 ](../../ssma/mysql/connecting-to-azure-sql-db-mysqltosql.md)  
-  

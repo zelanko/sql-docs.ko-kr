@@ -1,6 +1,6 @@
 ---
-description: sys. dm_pdw_query_stats_xe (Transact-sql)
-title: sys. dm_pdw_query_stats_xe (Transact-sql) | Microsoft Docs
+description: sys.dm_pdw_query_stats_xe (Transact-sql)
+title: sys.dm_pdw_query_stats_xe (Transact-sql) | Microsoft Docs
 ms.custom: ''
 ms.date: 03/07/2017
 ms.prod: sql
@@ -13,14 +13,14 @@ ms.assetid: 5d551241-db35-4958-b60f-55e996f95c1f
 author: markingmyname
 ms.author: maghan
 monikerRange: '>= aps-pdw-2016 || = sqlallproducts-allversions'
-ms.openlocfilehash: 13b09ebe66a759d0c57161c99cfb16864be1b094
-ms.sourcegitcommit: dd36d1cbe32cd5a65c6638e8f252b0bd8145e165
+ms.openlocfilehash: ae6e1bad82f1280bd0e2ed4c461f93dfb2dd9e34
+ms.sourcegitcommit: 22dacedeb6e8721e7cdb6279a946d4002cfb5da3
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 09/08/2020
-ms.locfileid: "89530357"
+ms.lasthandoff: 10/14/2020
+ms.locfileid: "92035265"
 ---
-# <a name="sysdm_pdw_query_stats_xe-transact-sql"></a>sys. dm_pdw_query_stats_xe (Transact-sql)
+# <a name="sysdm_pdw_query_stats_xe-transact-sql"></a>sys.dm_pdw_query_stats_xe (Transact-sql)
 [!INCLUDE [pdw](../../includes/applies-to-version/pdw.md)]
 
   이 DMV는 더 이상 사용 되지 않으며 이후 릴리스에서 제거 될 예정입니다. 이 릴리스에서는 0 개의 행을 반환 합니다.  
@@ -30,7 +30,7 @@ ms.locfileid: "89530357"
 |event|**nvarchar(60)**|이 보기의 키입니다.||  
 |event_id|**nvarchar (36)**|||  
 |create_time|**datetime**|||  
-|session_id|**int**|세션의 id입니다.|[Dm_pdw_exec_sessions &#40;transact-sql&#41;](../../relational-databases/system-dynamic-management-views/sys-dm-pdw-exec-sessions-transact-sql.md)에서 session_id를 참조 하세요.|  
+|session_id|**int**|세션의 id입니다.|[Sys.dm_pdw_exec_sessions &#40;transact-sql&#41;](../../relational-databases/system-dynamic-management-views/sys-dm-pdw-exec-sessions-transact-sql.md)에서 session_id를 참조 하세요.|  
 |cpu|**int**|||  
 |reads|**int**|이벤트가 시작 된 이후의 논리적 읽기 수입니다.||  
 |writes|**int**|이벤트가 시작 된 이후의 논리적 쓰기 수입니다.||  
@@ -40,6 +40,6 @@ ms.locfileid: "89530357"
 |pdw_node_id|**int**|이 Xevent 인스턴스가 실행 되는 노드입니다.|  
   
 ## <a name="see-also"></a>참고 항목  
- [Transact-sql&#41;&#40;SQL Data Warehouse 및 병렬 데이터 웨어하우스 동적 관리 뷰 ](../../relational-databases/system-dynamic-management-views/sql-and-parallel-data-warehouse-dynamic-management-views.md)  
+ [Transact-sql&#41;&#40;Azure Synapse 분석 및 병렬 데이터 웨어하우스 동적 관리 뷰 ](../../relational-databases/system-dynamic-management-views/sql-and-parallel-data-warehouse-dynamic-management-views.md)  
   
   

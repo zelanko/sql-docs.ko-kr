@@ -1,6 +1,6 @@
 ---
-description: sys. pdw_loader_run_stages (Transact-sql)
-title: sys. pdw_loader_run_stages (Transact-sql) | Microsoft Docs
+description: sys.pdw_loader_run_stages (Transact-sql)
+title: sys.pdw_loader_run_stages (Transact-sql) | Microsoft Docs
 ms.custom: ''
 ms.date: 03/04/2017
 ms.prod: sql
@@ -13,14 +13,14 @@ ms.assetid: 255681e9-323c-42c0-a63c-1f05536efdd5
 author: ronortloff
 ms.author: rortloff
 monikerRange: '>= aps-pdw-2016 || = sqlallproducts-allversions'
-ms.openlocfilehash: b2af896ec6a187f81c523ee172662141b71cffb8
-ms.sourcegitcommit: e700497f962e4c2274df16d9e651059b42ff1a10
+ms.openlocfilehash: 288810d6143bcdb98e7bf3257f5958b2cf5f91ee
+ms.sourcegitcommit: 22dacedeb6e8721e7cdb6279a946d4002cfb5da3
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 08/17/2020
-ms.locfileid: "88377009"
+ms.lasthandoff: 10/14/2020
+ms.locfileid: "92036739"
 ---
-# <a name="syspdw_loader_run_stages-transact-sql"></a>sys. pdw_loader_run_stages (Transact-sql)
+# <a name="syspdw_loader_run_stages-transact-sql"></a>sys.pdw_loader_run_stages (Transact-sql)
 [!INCLUDE [pdw](../../includes/applies-to-version/pdw.md)]
 
   에서 진행 중인 로드 작업과 완료 된 로드 작업에 대 한 정보를 포함 [!INCLUDE[ssPDW](../../includes/sspdw-md.md)] 합니다. 이 정보는 시스템을 다시 시작해도 유지됩니다.  
@@ -36,6 +36,6 @@ ms.locfileid: "88377009"
 |total_elapsed_time|**int**|이 단계를 실행 하는 데 걸린 총 시간입니다.|Total_elapsed_time 정수 24.8 (밀리초)의 최대값을 초과 하는 경우 오버플로로 인 한 구체화 실패가 발생 합니다.<br /><br /> 최대 값 (밀리초)은 24.8 일에 해당 합니다.|  
   
 ## <a name="see-also"></a>참고 항목  
- [SQL Data Warehouse 및 병렬 Data Warehouse 카탈로그 뷰](../../relational-databases/system-catalog-views/sql-data-warehouse-and-parallel-data-warehouse-catalog-views.md)  
+ [Azure Synapse Analytics 및 병렬 데이터 웨어하우스 카탈로그 뷰](../../relational-databases/system-catalog-views/sql-data-warehouse-and-parallel-data-warehouse-catalog-views.md)  
   
   

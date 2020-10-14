@@ -14,23 +14,23 @@ ms.assetid: e23c5268-41ed-4e55-9fe7-a11376202a13
 author: nahk-ivanov
 ms.author: alexiva
 manager: alexiva
-ms.openlocfilehash: 16f2223c49fc6fac5b096263c90aadc4a0a2ab61
-ms.sourcegitcommit: e8f6c51d4702c0046aec1394109bc0503ca182f0
+ms.openlocfilehash: 5b22dfee8112beb7419408dfc8a3dcadf53c631d
+ms.sourcegitcommit: 22dacedeb6e8721e7cdb6279a946d4002cfb5da3
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 08/07/2020
-ms.locfileid: "87933484"
+ms.lasthandoff: 10/14/2020
+ms.locfileid: "92035166"
 ---
 # <a name="migrating-oracle-data-into-sql-server-oracletosql"></a>Oracle 데이터를 SQL Server로 마이그레이션(OracleToSQL)
 로 변환 된 개체를 성공적으로 동기화 한 후 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 에는 Oracle에서로 데이터를 마이그레이션할 수 있습니다 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] .  
   
 > [!IMPORTANT]  
-> 사용 중인 엔진이 서버 쪽 데이터 마이그레이션 엔진이 면 데이터를 마이그레이션하기 전에 ssma를 실행 하는 컴퓨터에 oracle 용 SSMA 확장 팩 및 Oracle 공급자를 설치 해야 합니다. SQL Server 에이전트 서비스도 실행 중 이어야 합니다. 확장 팩을 설치 하는 방법에 대 한 자세한 내용은 [서버 구성 요소 설치 (OracleToSQL)](https://msdn.microsoft.com/33070e5f-4e39-4b70-ae81-b8af6e4983c5) 를 참조 하십시오.  
+> 사용 중인 엔진이 서버 쪽 데이터 마이그레이션 엔진이 면 데이터를 마이그레이션하기 전에 ssma를 실행 하는 컴퓨터에 oracle 용 SSMA 확장 팩 및 Oracle 공급자를 설치 해야 합니다. SQL Server 에이전트 서비스도 실행 중 이어야 합니다. 확장 팩을 설치 하는 방법에 대 한 자세한 내용은 [서버 구성 요소 설치 (OracleToSQL)](./installing-ssma-components-on-sql-server-oracletosql.md) 를 참조 하십시오.  
   
 ## <a name="setting-migration-options"></a>마이그레이션 옵션 설정  
 로 데이터를 마이그레이션하기 전에 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] **프로젝트 설정** 대화 상자에서 프로젝트 마이그레이션 옵션을 검토 하십시오.  
   
--   이 대화 상자를 사용 하 여 마이그레이션 일괄 처리 크기, 테이블 잠금, 제약 조건 확인, null 값 처리, id 값 처리 등의 옵션을 설정할 수 있습니다. 프로젝트 마이그레이션 설정에 대 한 자세한 내용은 [프로젝트 설정 (마이그레이션) (OracleToSQL)](https://msdn.microsoft.com/fcd6b988-633b-4b2b-9f36-6368b5e86b60)을 참조 하십시오.  
+-   이 대화 상자를 사용 하 여 마이그레이션 일괄 처리 크기, 테이블 잠금, 제약 조건 확인, null 값 처리, id 값 처리 등의 옵션을 설정할 수 있습니다. 프로젝트 마이그레이션 설정에 대 한 자세한 내용은 [프로젝트 설정 (마이그레이션) (OracleToSQL)](./project-settings-migration-oracletosql.md)을 참조 하십시오.  
   
 -   사용자는 **프로젝트 설정** 대화 상자의 **마이그레이션 엔진** 을 사용 하 여 다음과 같은 두 가지 유형의 데이터 마이그레이션 엔진을 사용 하 여 마이그레이션 프로세스를 수행할 수 있습니다.  
   
@@ -95,13 +95,12 @@ ms.locfileid: "87933484"
   
 5.  **Oracle에 연결** 대화 상자에서 연결 자격 증명을 입력 한 다음 **연결**을 클릭 합니다. Oracle에 연결 하는 방법에 대 한 자세한 내용은 [Connect To oracle &#40;OracleToSQL를](../../ssma/oracle/connect-to-oracle-oracletosql.md) 참조 하세요&#41;  
   
-    대상 데이터베이스에 연결 하려면 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] **SQL Server** 연결 대화 상자에 연결 자격 증명을 입력 하 고 **연결**을 클릭 합니다. 에 연결 하는 방법에 대 한 자세한 내용은 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] [SQL Server에 연결](https://msdn.microsoft.com/bb8c4bde-cfc2-4636-92ae-5dd24abe9536) 을 참조 하세요.  
+    대상 데이터베이스에 연결 하려면 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] **SQL Server** 연결 대화 상자에 연결 자격 증명을 입력 하 고 **연결**을 클릭 합니다. 에 연결 하는 방법에 대 한 자세한 내용은 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] [SQL Server에 연결](../sybase/connecting-to-sql-server-sybasetosql.md) 을 참조 하세요.  
   
-    메시지가 **출력** 창에 표시 됩니다. 마이그레이션이 완료 되 면 **데이터 마이그레이션 보고서** 가 나타납니다. 데이터를 마이그레이션하지 않은 경우 오류가 포함 된 행을 클릭 한 다음 **세부 정보**를 클릭 합니다. 보고서가 완료 되 면 **닫기**를 클릭 합니다. 데이터 마이그레이션 보고서에 대 한 자세한 내용은 [SSMA Common (데이터 마이그레이션 보고서)](https://msdn.microsoft.com/bbfb9d88-5a98-4980-8d19-c5d78bd0d241) 를 참조 하세요.  
+    메시지가 **출력** 창에 표시 됩니다. 마이그레이션이 완료 되 면 **데이터 마이그레이션 보고서** 가 나타납니다. 데이터를 마이그레이션하지 않은 경우 오류가 포함 된 행을 클릭 한 다음 **세부 정보**를 클릭 합니다. 보고서가 완료 되 면 **닫기**를 클릭 합니다. 데이터 마이그레이션 보고서에 대 한 자세한 내용은 [SSMA Common (데이터 마이그레이션 보고서)](../sybase/data-migration-report-sybasetosql.md) 를 참조 하세요.  
   
 > [!NOTE]  
 > SQL Express edition을 대상 데이터베이스로 사용 하는 경우 클라이언트 쪽 데이터 마이그레이션만 허용 되며 서버 쪽 데이터 마이그레이션은 지원 되지 않습니다.  
   
 ## <a name="see-also"></a>참고 항목  
-[Oracle 데이터베이스를 SQL Server &#40;OracleToSQL&#41;로 마이그레이션](../../ssma/oracle/migrating-oracle-databases-to-sql-server-oracletosql.md)  
-  
+[Oracle 데이터베이스를 SQL Server &#40;OracleToSQL&#41;로 마이그레이션 ](../../ssma/oracle/migrating-oracle-databases-to-sql-server-oracletosql.md)  

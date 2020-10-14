@@ -10,19 +10,19 @@ ms.topic: conceptual
 ms.assetid: 94d7a083-2dbc-4e3d-94dd-92b7ff9d0c2d
 author: nahk-ivanov
 ms.author: alexiva
-ms.openlocfilehash: 1d86fbfceefd3f0a4fba6f3bb86a071736e12c54
-ms.sourcegitcommit: e700497f962e4c2274df16d9e651059b42ff1a10
+ms.openlocfilehash: 6fcca84f52f5a6b9b8c033c00980374a0c17d7be
+ms.sourcegitcommit: 22dacedeb6e8721e7cdb6279a946d4002cfb5da3
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 08/17/2020
-ms.locfileid: "88492237"
+ms.lasthandoff: 10/14/2020
+ms.locfileid: "92036687"
 ---
 # <a name="data-migration-settings-sybasetosql"></a>데이터 마이그레이션 설정(SybaseToSQL)
   
 ## <a name="data-migration-settings"></a>데이터 마이그레이션 설정  
 **데이터 마이그레이션 설정을** 사용 하면 사용자가 데이터 마이그레이션에 대 한 사용자 지정 쿼리를 작성할 수 있습니다.  
   
--   이 탭은 **확장 데이터 마이그레이션 옵션이** **표시** 로 설정 된 경우에 사용할 수 있으며, 설정이 프로젝트 설정에서 **숨기기** 로 설정 된 경우에는 숨겨집니다. 프로젝트 마이그레이션 설정에 대 한 자세한 내용은 [프로젝트 설정 (마이그레이션)](https://msdn.microsoft.com/82f8857f-7ab1-4738-ab6e-b1e95ea94924) 을 참조 하세요.  
+-   이 탭은 **확장 데이터 마이그레이션 옵션이** **표시** 로 설정 된 경우에 사용할 수 있으며, 설정이 프로젝트 설정에서 **숨기기** 로 설정 된 경우에는 숨겨집니다. 프로젝트 마이그레이션 설정에 대 한 자세한 내용은 [프로젝트 설정 (마이그레이션)](./project-settings-migration-sybasetosql.md) 을 참조 하세요.  
   
 -   사용자 지정 SQL 문의 구문 분석은 테이블 노드의 **데이터 마이그레이션 설정** 탭에서 구현 됩니다.  
   
@@ -53,5 +53,4 @@ ms.locfileid: "88492237"
 -   **취소:** 변경을 수행 하기 전에 표시 되는 설정을 복원 하려면 **취소** 를 클릭 합니다.  
   
 ## <a name="see-also"></a>참고 항목  
-[Sybase 데이터를 SQL Server/SQL Azure으로 마이그레이션](https://msdn.microsoft.com/54a39f5e-9250-4387-a3ae-eae47c799811)  
-  
+[Sybase 데이터를 SQL Server/SQL Azure으로 마이그레이션](./migrating-sybase-ase-data-into-sql-server-azure-sql-db-sybasetosql.md)  

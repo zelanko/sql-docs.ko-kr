@@ -16,12 +16,12 @@ helpviewer_keywords:
 ms.assetid: 6e2e5063-c1cf-4b5a-b642-234921e3f4f7
 author: rothja
 ms.author: jroth
-ms.openlocfilehash: 52d3c9676adbd95d219221270090dbcedc798bfb
-ms.sourcegitcommit: da88320c474c1c9124574f90d549c50ee3387b4c
+ms.openlocfilehash: 6ed7dd109906b4cace6ed185b1842f9e9e7dedde
+ms.sourcegitcommit: 22dacedeb6e8721e7cdb6279a946d4002cfb5da3
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 07/01/2020
-ms.locfileid: "85775424"
+ms.lasthandoff: 10/14/2020
+ms.locfileid: "92037041"
 ---
 # <a name="xquery-extension-functions---sqlvariable"></a>XQuery 확장 함수 - sql:variable()
 [!INCLUDE [SQL Server Azure SQL Database ](../includes/applies-to-version/sqlserver.md)]
@@ -44,7 +44,7 @@ sql:variable("variableName") as xdt:anyAtomicType?
   
  Xml DML insert 문의 원본 식 컨텍스트에서만 **xml** 인스턴스를 참조할 수 있습니다. 그렇지 않으면 **xml** 형식의 값 또는 CLR (공용 언어 런타임) 사용자 정의 형식을 참조할 수 없습니다.  
   
-## <a name="examples"></a>예제  
+## <a name="examples"></a>예  
   
 ### <a name="a-using-the-sqlvariable-function-to-bring-a-transact-sql-variable-value-into-xml"></a>A. sql:variable() 함수를 사용하여 Transact-SQL 변수 값을 XML로 가져오기  
  다음 예에서는 다음으로 구성된 XML 인스턴스를 생성합니다.  
@@ -94,11 +94,10 @@ WHERE ProductID=771
 ```  
   
 ## <a name="see-also"></a>참고 항목  
- [SQL Server XQuery 확장 함수](https://msdn.microsoft.com/library/4bc5d499-5fec-4c3f-b11e-5ab5ef9d8f97)   
+ [SQL Server XQuery 확장 함수](./xquery-extension-functions-sql-column.md)   
  [형식화된 XML과 형식화되지 않은 XML 비교](../relational-databases/xml/compare-typed-xml-to-untyped-xml.md)   
- [XML 데이터 &#40;SQL Server&#41;](../relational-databases/xml/xml-data-sql-server.md)   
+ [XML 데이터&#40;SQL Server&#41;](../relational-databases/xml/xml-data-sql-server.md)   
  [XML 데이터 인스턴스 만들기](../relational-databases/xml/create-instances-of-xml-data.md)   
  [xml 데이터 형식 메서드](../t-sql/xml/xml-data-type-methods.md)   
  [XML DML&#40;XML 데이터 수정 언어&#41;](../t-sql/xml/xml-data-modification-language-xml-dml.md)  
-  
   

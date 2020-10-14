@@ -11,12 +11,12 @@ ms.assetid: 32f38713-7ae4-48d3-980d-74cadc8545a0
 author: nahk-ivanov
 ms.author: alexiva
 manager: alexiva
-ms.openlocfilehash: a0498953c28a90498aa3e15439840180efdd25f7
-ms.sourcegitcommit: e700497f962e4c2274df16d9e651059b42ff1a10
+ms.openlocfilehash: 4707c68c0b744e092844d57bd6f235a69dbec9ce
+ms.sourcegitcommit: 22dacedeb6e8721e7cdb6279a946d4002cfb5da3
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 08/17/2020
-ms.locfileid: "88463228"
+ms.lasthandoff: 10/14/2020
+ms.locfileid: "92038046"
 ---
 # <a name="finishing-test-case-preparation-oracletosql"></a>테스트 사례 준비 완료(OracleToSQL)
 마법사의 마지막 페이지에는 테스트 사례 설명 및 테스트와 관련 된 개체에 대 한 정보가 표시 됩니다. 또한이 페이지에서 테스트 실행 옵션을 설정할 수 있습니다.  
@@ -55,10 +55,9 @@ ms.locfileid: "88463228"
   
 -   **테이블 비교가 실패 한 경우 사용자에 게 요청**을 선택 하면 오류가 발생 하는 경우 사용자가 필요한 작업을 선택할 수 있습니다.  
   
-[테스트 리포지토리 (OracleToSQL)를 사용 하 여](https://msdn.microsoft.com/f941cce4-d3e3-4aeb-a88a-4f101a97a9f4)준비 된 테스트 사례를 저장 하려면 **마침** 단추를 클릭 합니다.  
+[테스트 리포지토리 (OracleToSQL)를 사용 하 여](./using-test-repositories-oracletosql.md)준비 된 테스트 사례를 저장 하려면 **마침** 단추를 클릭 합니다.  
   
 ## <a name="see-also"></a>참고 항목  
 [OracleToSQL&#41;&#40;테스트 리포지토리 사용 ](../../ssma/oracle/using-test-repositories-oracletosql.md)  
 [OracleToSQL&#41;&#40;테스트 사례 실행 ](../../ssma/oracle/running-test-cases-oracletosql.md)  
 [OracleToSQL&#41;&#40;마이그레이션된 데이터베이스 개체 테스트 ](../../ssma/oracle/testing-migrated-database-objects-oracletosql.md)  
-  

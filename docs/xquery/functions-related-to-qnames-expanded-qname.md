@@ -16,12 +16,12 @@ helpviewer_keywords:
 ms.assetid: b8377042-95cc-467b-9ada-fe43cebf4bc3
 author: rothja
 ms.author: jroth
-ms.openlocfilehash: 88bbf5697112fd80f8ffea629a1ad2b9e99977fa
-ms.sourcegitcommit: da88320c474c1c9124574f90d549c50ee3387b4c
+ms.openlocfilehash: d1a59104b8becec2edd8b4b15c28e13e19011a4b
+ms.sourcegitcommit: 22dacedeb6e8721e7cdb6279a946d4002cfb5da3
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 07/01/2020
-ms.locfileid: "85720048"
+ms.lasthandoff: 10/14/2020
+ms.locfileid: "92036827"
 ---
 # <a name="functions-related-to-qnames---expanded-qname"></a>QNames 관련 함수 - expanded-QName
 [!INCLUDE [SQL Server Azure SQL Database ](../includes/applies-to-version/sqlserver.md)]
@@ -50,7 +50,7 @@ fn:expanded-QName($paramURI as xs:string?, $paramLocal as xs:string?) as xs:QNam
   
 -   기존의 QName 유형 값을 수정하거나 비교할 수 있습니다. 예를 들어는 `/root[1]/e[1] eq expanded-QName("http://nsURI" "myNS")`> <요소의 값을 확장 된 `e` **qname ()** 함수에서 반환 된 qname과 비교 합니다.  
   
-## <a name="examples"></a>예제  
+## <a name="examples"></a>예  
  이 항목에서는 데이터베이스의 다양 한 **xml** 유형 열에 저장 된 xml 인스턴스에 대 한 XQuery 예를 제공 [!INCLUDE[ssSampleDBobject](../includes/sssampledbobject-md.md)] 합니다.  
   
 ### <a name="a-replacing-a-qname-type-node-value"></a>A. QName 유형 노드 값 바꾸기  
@@ -204,6 +204,5 @@ FROM T
  한 가지 제한이 있습니다. **확장 된 QName ()** 함수는 빈 시퀀스를 두 번째 인수로 허용 하 고 두 번째 인수가 잘못 된 경우 런타임 오류를 발생 시 키 지 않고 빈 시퀀스를 반환 합니다.  
   
 ## <a name="see-also"></a>참고 항목  
- [Qname &#40;XQuery&#41;와 관련 된 함수](https://msdn.microsoft.com/library/7e07eb26-f551-4b63-ab77-861684faff71)  
-  
+ [Qname &#40;XQuery&#41;와 관련 된 함수 ]()  
   

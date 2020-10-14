@@ -1,6 +1,6 @@
 ---
-description: sys. dm_pdw_wait_stats (Transact-sql)
-title: sys. dm_pdw_wait_stats (Transact-sql) | Microsoft Docs
+description: sys.dm_pdw_wait_stats (Transact-sql)
+title: sys.dm_pdw_wait_stats (Transact-sql) | Microsoft Docs
 ms.custom: ''
 ms.date: 03/14/2017
 ms.prod: sql
@@ -13,17 +13,17 @@ ms.assetid: cfb8d905-c34f-44de-9574-dde81e170916
 author: ronortloff
 ms.author: rortloff
 monikerRange: '>= aps-pdw-2016 || = azure-sqldw-latest || = sqlallproducts-allversions'
-ms.openlocfilehash: f5a8d40b7181f932f5e42192224e91f5c6aa4c8a
-ms.sourcegitcommit: e700497f962e4c2274df16d9e651059b42ff1a10
+ms.openlocfilehash: e3b8bdac31ca372506a23e852b0f73d5ec643b3a
+ms.sourcegitcommit: 22dacedeb6e8721e7cdb6279a946d4002cfb5da3
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 08/17/2020
-ms.locfileid: "88397829"
+ms.lasthandoff: 10/14/2020
+ms.locfileid: "92035196"
 ---
-# <a name="sysdm_pdw_wait_stats-transact-sql"></a>sys. dm_pdw_wait_stats (Transact-sql)
+# <a name="sysdm_pdw_wait_stats-transact-sql"></a>sys.dm_pdw_wait_stats (Transact-sql)
 [!INCLUDE[applies-to-version/asa-pdw](../../includes/applies-to-version/asa-pdw.md)]
 
-  [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]서로 다른 노드에서 실행 되는 인스턴스와 관련 된 OS 상태와 관련 된 정보를 보유 합니다. 대기 유형 및 해당 설명의 목록은 [sys. dm_os_wait_stats](https://msdn.microsoft.com/library/ms179984\(v=sql.120\).aspx)를 참조 하세요.  
+  [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]서로 다른 노드에서 실행 되는 인스턴스와 관련 된 OS 상태와 관련 된 정보를 보유 합니다. 대기 유형 목록과 해당 설명에 대 한 자세한 내용은 [sys.dm_os_wait_stats](https://msdn.microsoft.com/library/ms179984\(v=sql.120\).aspx)를 참조 하세요.  
   
 |열 이름|데이터 형식|Description|범위|  
 |-----------------|---------------|-----------------|-----------|  
@@ -36,7 +36,7 @@ ms.locfileid: "88397829"
 |**wait_time**|**bigint**|Millisecons에서이 대기 유형의 총 대기 시간입니다. Signal_time 포함||  
   
 ## <a name="see-also"></a>참고 항목  
- [Transact-sql&#41;&#40;SQL Data Warehouse 및 병렬 데이터 웨어하우스 동적 관리 뷰 ](../../relational-databases/system-dynamic-management-views/sql-and-parallel-data-warehouse-dynamic-management-views.md)   
- [dm_pdw_waits &#40;Transact-sql&#41;](../../relational-databases/system-dynamic-management-views/sys-dm-pdw-waits-transact-sql.md)  
+ [Transact-sql&#41;&#40;Azure Synapse 분석 및 병렬 데이터 웨어하우스 동적 관리 뷰 ](../../relational-databases/system-dynamic-management-views/sql-and-parallel-data-warehouse-dynamic-management-views.md)   
+ [Transact-sql&#41;sys.dm_pdw_waits &#40;](../../relational-databases/system-dynamic-management-views/sys-dm-pdw-waits-transact-sql.md)  
   
   

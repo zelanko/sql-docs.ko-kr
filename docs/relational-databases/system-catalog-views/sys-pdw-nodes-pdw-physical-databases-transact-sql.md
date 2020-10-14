@@ -1,6 +1,6 @@
 ---
-description: sys. pdw_nodes_pdw_physical_databases (Transact-sql)
-title: sys. pdw_nodes_pdw_physical_databases (Transact-sql)
+description: sys.pdw_nodes_pdw_physical_databases (Transact-sql)
+title: sys.pdw_nodes_pdw_physical_databases (Transact-sql)
 ms.custom: seo-dt-2019
 ms.date: 03/09/2017
 ms.prod: sql
@@ -13,14 +13,14 @@ ms.assetid: 70e0939d-4d97-4ae0-ba16-934e0a80e718
 author: ronortloff
 ms.author: rortloff
 monikerRange: '>= aps-pdw-2016 || = sqlallproducts-allversions'
-ms.openlocfilehash: 41c43a39c85c05dcb0155c90fea74c5899445527
-ms.sourcegitcommit: e700497f962e4c2274df16d9e651059b42ff1a10
+ms.openlocfilehash: 3f4b29984f962f2ec4f542a57cd604c619a78c6a
+ms.sourcegitcommit: 22dacedeb6e8721e7cdb6279a946d4002cfb5da3
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 08/17/2020
-ms.locfileid: "88475375"
+ms.lasthandoff: 10/14/2020
+ms.locfileid: "92036716"
 ---
-# <a name="syspdw_nodes_pdw_physical_databases-transact-sql"></a>sys. pdw_nodes_pdw_physical_databases (Transact-sql)
+# <a name="syspdw_nodes_pdw_physical_databases-transact-sql"></a>sys.pdw_nodes_pdw_physical_databases (Transact-sql)
 [!INCLUDE [pdw](../../includes/applies-to-version/pdw.md)]
 
   계산 노드의 각 물리적 데이터베이스에 대 한 행을 포함 합니다. 데이터베이스에 대 한 자세한 정보를 얻기 위해 실제 데이터베이스 정보를 집계 합니다. 정보를 결합 하려면 `sys.pdw_nodes_pdw_physical_databases` 및 테이블에를 조인 합니다 `sys.pdw_database_mappings` `sys.databases` .  
@@ -28,7 +28,7 @@ ms.locfileid: "88475375"
 |열 이름|데이터 형식|설명|  
 |-----------------|---------------|-----------------|  
 |database_id|**int**|데이터베이스의 개체 ID입니다. 이 값은 [&#40;transact-sql&#41;](../../relational-databases/system-catalog-views/sys-databases-transact-sql.md) 뷰의 database_id와 동일 하지 않습니다.|  
-|physical_name|**sysname**|셸/계산 노드에 있는 데이터베이스의 물리적 이름입니다. 이 값은 [pdw_database_mappings &#40;transact-sql&#41;](../../relational-databases/system-catalog-views/sys-pdw-database-mappings-transact-sql.md) 뷰의 physical_name 열에 있는 값과 동일 합니다.|  
+|physical_name|**sysname**|셸/계산 노드에 있는 데이터베이스의 물리적 이름입니다. 이 값은 [sys.pdw_database_mappings &#40;transact-sql&#41;](../../relational-databases/system-catalog-views/sys-pdw-database-mappings-transact-sql.md) 뷰의 physical_name 열에 있는 값과 동일 합니다.|  
 |pdw_node_id|**int**|노드와 연결 된 고유 숫자 id입니다.|  
   
 ## <a name="examples-sspdw"></a>예제: [!INCLUDE[ssPDW](../../includes/sspdw-md.md)]  
@@ -47,7 +47,7 @@ JOIN sys.pdw_nodes_pdw_physical_databases AS PD
 ORDER BY D.database_id, PD.pdw_node_ID;  
 ```  
   
-### <a name="b-using-syspdw_nodes_pdw_physical_databases-to-gather-detailed-object-information"></a>B. Sys. pdw_nodes_pdw_physical_databases를 사용 하 여 자세한 개체 정보 수집  
+### <a name="b-using-syspdw_nodes_pdw_physical_databases-to-gather-detailed-object-information"></a>B. Sys.pdw_nodes_pdw_physical_databases를 사용 하 여 자세한 개체 정보 수집  
  다음 쿼리는 인덱스에 대 한 정보를 표시 하 고 개체가 데이터베이스의 개체에 속하는 데이터베이스에 대 한 유용한 정보를 포함 합니다.  
   
 ```  
@@ -64,7 +64,7 @@ JOIN sys.dm_pdw_nodes_db_index_usage_stats AS IU
 ORDER BY D.database_id, IU.object_id, IU.index_id, PD.pdw_node_ID;  
 ```  
   
-### <a name="c-using-syspdw_nodes_pdw_physical_databases-to-determine-the-encryption-state"></a>C. Pdw_nodes_pdw_physical_databases를 사용 하 여 암호화 상태 확인  
+### <a name="c-using-syspdw_nodes_pdw_physical_databases-to-determine-the-encryption-state"></a>C. Sys.pdw_nodes_pdw_physical_databases를 사용 하 여 암호화 상태 확인  
  다음 쿼리는 AdventureWorksPDW2012 데이터베이스의 암호화 상태를 제공 합니다.  
   
 ```  
@@ -87,9 +87,9 @@ SELECT TOP 1 encryption_state
 ```  
   
 ## <a name="see-also"></a>참고 항목  
- [SQL Data Warehouse 및 병렬 Data Warehouse 카탈로그 뷰](../../relational-databases/system-catalog-views/sql-data-warehouse-and-parallel-data-warehouse-catalog-views.md)   
+ [Azure Synapse Analytics 및 병렬 데이터 웨어하우스 카탈로그 뷰](../../relational-databases/system-catalog-views/sql-data-warehouse-and-parallel-data-warehouse-catalog-views.md)   
  [sys.databases&#40;Transact-SQL&#41;](../../relational-databases/system-catalog-views/sys-databases-transact-sql.md)   
- [pdw_database_mappings &#40;Transact-sql&#41;](../../relational-databases/system-catalog-views/sys-pdw-database-mappings-transact-sql.md)  
+ [Transact-sql&#41;sys.pdw_database_mappings &#40;](../../relational-databases/system-catalog-views/sys-pdw-database-mappings-transact-sql.md)  
   
   
 

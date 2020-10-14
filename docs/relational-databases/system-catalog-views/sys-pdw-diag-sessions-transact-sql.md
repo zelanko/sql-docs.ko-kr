@@ -1,6 +1,6 @@
 ---
-description: sys. pdw_diag_sessions (Transact-sql)
-title: sys. pdw_diag_sessions (Transact-sql) | Microsoft Docs
+description: sys.pdw_diag_sessions (Transact-sql)
+title: sys.pdw_diag_sessions (Transact-sql) | Microsoft Docs
 ms.custom: ''
 ms.date: 03/03/2017
 ms.prod: sql
@@ -12,14 +12,14 @@ ms.assetid: 4d23688a-cddb-4eed-8231-ecde2a0b0e65
 author: ronortloff
 ms.author: rortloff
 monikerRange: '>= aps-pdw-2016 || = sqlallproducts-allversions'
-ms.openlocfilehash: 4615bce79c1a748a76a9af02d1991585e4550e12
-ms.sourcegitcommit: e700497f962e4c2274df16d9e651059b42ff1a10
+ms.openlocfilehash: e8fade6ec60ada411ee78027d01f9616e499f755
+ms.sourcegitcommit: 22dacedeb6e8721e7cdb6279a946d4002cfb5da3
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 08/17/2020
-ms.locfileid: "88420027"
+ms.lasthandoff: 10/14/2020
+ms.locfileid: "92036755"
 ---
-# <a name="syspdw_diag_sessions-transact-sql"></a>sys. pdw_diag_sessions (Transact-sql)
+# <a name="syspdw_diag_sessions-transact-sql"></a>sys.pdw_diag_sessions (Transact-sql)
 [!INCLUDE [pdw](../../includes/applies-to-version/pdw.md)]
 
   시스템에 생성 된 다양 한 진단 세션에 대 한 정보를 저장 합니다.  
@@ -34,6 +34,6 @@ ms.locfileid: "88420027"
 |**database_id**|**int**|진단 세션의 범위에 해당 하는 데이터베이스의 ID입니다.|  
   
 ## <a name="see-also"></a>참고 항목  
- [SQL Data Warehouse 및 병렬 Data Warehouse 카탈로그 뷰](../../relational-databases/system-catalog-views/sql-data-warehouse-and-parallel-data-warehouse-catalog-views.md)  
+ [Azure Synapse Analytics 및 병렬 데이터 웨어하우스 카탈로그 뷰](../../relational-databases/system-catalog-views/sql-data-warehouse-and-parallel-data-warehouse-catalog-views.md)  
   
   

@@ -1,6 +1,6 @@
 ---
-description: sys. dm_pdw_exec_sessions (Transact-sql)
-title: sys. dm_pdw_exec_sessions (Transact-sql) | Microsoft Docs
+description: sys.dm_pdw_exec_sessions (Transact-sql)
+title: sys.dm_pdw_exec_sessions (Transact-sql) | Microsoft Docs
 ms.custom: ''
 ms.date: 03/22/2019
 ms.prod: sql
@@ -13,14 +13,14 @@ ms.assetid: 31c262b3-7e4d-44c4-af71-aaef0fd1a980
 author: ronortloff
 ms.author: rortloff
 monikerRange: '>= aps-pdw-2016 || = azure-sqldw-latest || = sqlallproducts-allversions'
-ms.openlocfilehash: 5801b3e1b4cf57aef3b465a6190b3093480e6ca0
-ms.sourcegitcommit: e700497f962e4c2274df16d9e651059b42ff1a10
+ms.openlocfilehash: d155f836abb975b39ef7b2396057a43e59686f9b
+ms.sourcegitcommit: 22dacedeb6e8721e7cdb6279a946d4002cfb5da3
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 08/17/2020
-ms.locfileid: "88489803"
+ms.lasthandoff: 10/14/2020
+ms.locfileid: "92035346"
 ---
-# <a name="sysdm_pdw_exec_sessions-transact-sql"></a>sys. dm_pdw_exec_sessions (Transact-sql)
+# <a name="sysdm_pdw_exec_sessions-transact-sql"></a>sys.dm_pdw_exec_sessions (Transact-sql)
 [!INCLUDE[applies-to-version/asa-pdw](../../includes/applies-to-version/asa-pdw.md)]
 
   어플라이언스에서 현재 또는 최근에 열려 있는 모든 세션에 대 한 정보를 보관 합니다. 세션 마다 하나의 행을 나열 합니다.  
@@ -37,14 +37,14 @@ ms.locfileid: "88489803"
 |is_transactional|**bit**|세션이 현재 트랜잭션 내에 있는지 여부를 캡처합니다.|자동 커밋의 경우 0, 트랜잭션의 경우 1입니다.|  
 |client_id|**nvarchar(255)**|세션에 대 한 클라이언트 정보를 캡처합니다.|모든 유효한 문자열입니다.|  
 |app_name|**nvarchar(255)**|선택적으로 연결 프로세스의 일부로 설정 된 응용 프로그램 이름 정보를 캡처합니다.|모든 유효한 문자열입니다.|  
-|sql_spid|**int**|SPID의 id 번호입니다. `session_id`이 세션을 사용 합니다. 열을 사용 `sql_spid` 하 여 **dm_pdw_nodes_exec_sessions**에 조인 합니다.<br /><br /> 경고이 열에는 닫힌 spid가 포함 됩니다. ** \* \* \* \* **||  
+|sql_spid|**int**|SPID의 id 번호입니다. `session_id`이 세션을 사용 합니다. 열을 사용 하 여 `sql_spid` **sys.dm_pdw_nodes_exec_sessions**에 조인 합니다.<br /><br /> 경고이 열에는 닫힌 spid가 포함 됩니다. ** \* \* \* \* **||  
   
  이 보기에 의해 유지 되는 최대 행에 대 한 자세한 내용은 [용량 제한](/azure/sql-data-warehouse/sql-data-warehouse-service-capacity-limits#metadata) 항목에서 메타 데이터 섹션을 참조 하세요.  
   
 ## <a name="permissions"></a>사용 권한  
  `VIEW SERVER STATE` 권한이 필요합니다.  
   
-## <a name="see-also"></a>관련 항목  
- [Transact-sql&#41;&#40;SQL Data Warehouse 및 병렬 데이터 웨어하우스 동적 관리 뷰 ](../../relational-databases/system-dynamic-management-views/sql-and-parallel-data-warehouse-dynamic-management-views.md)  
+## <a name="see-also"></a>참고 항목  
+ [Transact-sql&#41;&#40;Azure Synapse 분석 및 병렬 데이터 웨어하우스 동적 관리 뷰 ](../../relational-databases/system-dynamic-management-views/sql-and-parallel-data-warehouse-dynamic-management-views.md)  
   
   

@@ -13,12 +13,12 @@ ms.assetid: ee5d94c0-c7a6-4779-bd32-729bdaf61e1b
 author: nahk-ivanov
 ms.author: alexiva
 manager: alexiva
-ms.openlocfilehash: 1acf08369e0d6591c96e74defabe2a49d15e412d
-ms.sourcegitcommit: e8f6c51d4702c0046aec1394109bc0503ca182f0
+ms.openlocfilehash: 1e8b211dc0a73ac6fd84515ce0153faa5ed7ae73
+ms.sourcegitcommit: 22dacedeb6e8721e7cdb6279a946d4002cfb5da3
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 08/07/2020
-ms.locfileid: "87932694"
+ms.lasthandoff: 10/14/2020
+ms.locfileid: "92038877"
 ---
 # <a name="working-with-ssma-projects-oracletosql"></a>SSMA 프로젝트 작업(OracleToSQL)
 Oracle 데이터베이스를로 마이그레이션하려면 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 먼저 SSMA 프로젝트를 만듭니다. 프로젝트는 다음 정보를 포함 하는 파일입니다.  
@@ -27,7 +27,7 @@ Oracle 데이터베이스를로 마이그레이션하려면 [!INCLUDE[ssNoVersio
   
 -   마이그레이션된 개체와 데이터를 받을의 대상 인스턴스에 대 한 메타 데이터 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 입니다.  
   
--   [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]연결 정보입니다.  
+-   [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 연결 정보입니다.  
   
 -   프로젝트 설정.  
   
@@ -77,7 +77,7 @@ Oracle 데이터베이스에서로 데이터를 마이그레이션하려면 [!IN
   
     -   [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 2008  
   
-    -   [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]2014  
+    -   [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 2014  
   
     -   [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 2016  
   
@@ -121,10 +121,9 @@ Oracle 데이터베이스에서로 데이터를 마이그레이션하려면 [!IN
 3.  에 다시 연결 하려면 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] **파일** 메뉴에서 **다시 연결**을 클릭 하 여 SQL Server 합니다.  
   
 ## <a name="next-step"></a>다음 단계  
-마이그레이션 프로세스의 다음 단계는 [Oracle Database (OracleToSQL)에 연결](https://msdn.microsoft.com/e276cdbf-3ebc-4ba8-b40d-a7a42befa2b6)하는 것입니다.  
+마이그레이션 프로세스의 다음 단계는 [Oracle Database (OracleToSQL)에 연결](./connecting-to-oracle-database-oracletosql.md)하는 것입니다.  
   
 ## <a name="see-also"></a>참고 항목  
-[Oracle 데이터베이스를 SQL Server &#40;OracleToSQL&#41;로 마이그레이션](../../ssma/oracle/migrating-oracle-databases-to-sql-server-oracletosql.md)  
-[Oracle Database &#40;OracleToSQL&#41;에 연결 하는 중](../../ssma/oracle/connecting-to-oracle-database-oracletosql.md)  
-[SQL Server &#40;OracleToSQL&#41;에 연결 하는 중](../../ssma/oracle/connecting-to-sql-server-oracletosql.md)  
-  
+[Oracle 데이터베이스를 SQL Server &#40;OracleToSQL&#41;로 마이그레이션 ](../../ssma/oracle/migrating-oracle-databases-to-sql-server-oracletosql.md)  
+[Oracle Database &#40;OracleToSQL&#41;에 연결 하는 중 ](../../ssma/oracle/connecting-to-oracle-database-oracletosql.md)  
+[SQL Server &#40;OracleToSQL&#41;에 연결 하는 중 ](../../ssma/oracle/connecting-to-sql-server-oracletosql.md)  

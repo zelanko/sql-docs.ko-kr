@@ -1,6 +1,6 @@
 ---
-description: sys. pdw_nodes_partitions (Transact-sql)
-title: sys. pdw_nodes_partitions (Transact-sql) | Microsoft Docs
+description: sys.pdw_nodes_partitions (Transact-sql)
+title: sys.pdw_nodes_partitions (Transact-sql) | Microsoft Docs
 ms.custom: ''
 ms.date: 03/03/2017
 ms.prod: sql
@@ -13,14 +13,14 @@ ms.assetid: b4216752-4813-4b2c-b259-7d8ffc6cc190
 author: ronortloff
 ms.author: rortloff
 monikerRange: '>= aps-pdw-2016 || = azure-sqldw-latest || = sqlallproducts-allversions'
-ms.openlocfilehash: 82903661be207c73b1b848e8273b594ff49d1642
-ms.sourcegitcommit: 883435b4c7366f06ac03579752093737b098feab
+ms.openlocfilehash: ff60a994457c8836446520aae7772f2ab6150a46
+ms.sourcegitcommit: 22dacedeb6e8721e7cdb6279a946d4002cfb5da3
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 08/28/2020
-ms.locfileid: "89062272"
+ms.lasthandoff: 10/14/2020
+ms.locfileid: "92036726"
 ---
-# <a name="syspdw_nodes_partitions-transact-sql"></a>sys. pdw_nodes_partitions (Transact-sql)
+# <a name="syspdw_nodes_partitions-transact-sql"></a>sys.pdw_nodes_partitions (Transact-sql)
 [!INCLUDE[applies-to-version/asa-pdw](../../includes/applies-to-version/asa-pdw.md)]
 
   모든 테이블의 각 파티션에 대 한 행과 데이터베이스의 대부분의 인덱스 유형을 포함 [!INCLUDE[ssSDW](../../includes/sssdw-md.md)] 합니다. 모든 테이블 및 인덱스는 명시적으로 분할 되었는지 여부에 관계 없이 하나 이상의 파티션을 포함 합니다.  
@@ -71,7 +71,7 @@ ORDER BY o.name, pnp.index_id, pnp.partition_id;
 ```    
   
 ## <a name="see-also"></a>참고 항목  
- [SQL Data Warehouse 및 병렬 Data Warehouse 카탈로그 뷰](../../relational-databases/system-catalog-views/sql-data-warehouse-and-parallel-data-warehouse-catalog-views.md)  
+ [Azure Synapse Analytics 및 병렬 데이터 웨어하우스 카탈로그 뷰](../../relational-databases/system-catalog-views/sql-data-warehouse-and-parallel-data-warehouse-catalog-views.md)  
   
   
 

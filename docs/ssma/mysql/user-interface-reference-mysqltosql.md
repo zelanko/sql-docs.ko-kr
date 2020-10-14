@@ -10,12 +10,12 @@ ms.topic: conceptual
 ms.assetid: 2fad3fa2-5729-4b96-99d4-2c6edfab0a54
 author: nahk-ivanov
 ms.author: alexiva
-ms.openlocfilehash: 76eb6b52b988fc0a4c0f62e4c295b36beeab0078
-ms.sourcegitcommit: e700497f962e4c2274df16d9e651059b42ff1a10
+ms.openlocfilehash: 47633dca91b3cf240ef745b186e01d4795de7d37
+ms.sourcegitcommit: 22dacedeb6e8721e7cdb6279a946d4002cfb5da3
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 08/17/2020
-ms.locfileid: "88463303"
+ms.lasthandoff: 10/14/2020
+ms.locfileid: "92035156"
 ---
 # <a name="user-interface-reference-mysqltosql"></a>사용자 인터페이스 참조(MySQLToSQL)
 이 섹션에는 MySQL 용 SSMA (SQL Server Migration Assistant)에 대 한 도움말 항목이 포함 되어 있습니다.  
@@ -28,15 +28,15 @@ ms.locfileid: "88463303"
 |[MySQLToSQL&#41;&#40;고급 개체 선택 ](../../ssma/mysql/advanced-object-selection-mysqltosql.md)|**고급 개체 선택** 대화 상자를 사용 하 여 필터 조건을 사용 하 여 데이터베이스 개체를 찾은 다음 해당 개체를 선택 하거나 선택 취소 합니다.|  
 |[평가 보고서 &#40;MySQLToSQL&#41;](../../ssma/mysql/assessment-report-mysqltosql.md)|보고서를 사용 하 여 MySQL 개체를 Transact-sql 구문으로 변환 하는 결과를 확인 하 고 SQL Server로 마이그레이션의 시간과 복잡성을 예측할 수 있습니다.|  
 |[MySQL &#40;MySQLToSQL&#41;에 연결 ](../../ssma/mysql/connect-to-mysql-mysqltosql.md)|**Mysql에 연결** 대화 상자를 사용 하 여 마이그레이션하려는 mysql 데이터베이스에 연결 합니다.|  
-|[SQL Server에 연결](https://msdn.microsoft.com/d73abd3a-80df-4293-b973-1723069db049)|**SQL Server 연결** 대화 상자를 사용 하 여 마이그레이션하려는 SQL Server 인스턴스에 연결할 수 있습니다.|  
+|[SQL Server에 연결](./connect-to-sql-server-mysqltosql.md)|**SQL Server 연결** 대화 상자를 사용 하 여 마이그레이션하려는 SQL Server 인스턴스에 연결할 수 있습니다.|  
 |[MySQLToSQL&#41;&#40;Azure SQL Database에 연결 ](../../ssma/mysql/connect-to-azure-sql-db-mysqltosql.md)|**SQL Azure 연결** 대화 상자를 사용 하 여 마이그레이션하려는 SQL Azure 인스턴스에 연결할 수 있습니다.|  
-|[변환 설정 (MySQL)](https://msdn.microsoft.com/f551cf6e-1575-4206-9cca-975b5b43a6b8)|**설정** 탭을 사용 하 여 노드 수준 설정을 설정 합니다.|  
+|[변환 설정 (MySQL)](./conversion-settings-mysqltosql.md)|**설정** 탭을 사용 하 여 노드 수준 설정을 설정 합니다.|  
 |[데이터 마이그레이션 보고서 &#40;MySQLToSQL&#41;](../../ssma/mysql/data-migration-report-mysqltosql.md)|MySQL의 데이터를 SQL Server 또는 SQL Azure로 마이그레이션한 결과를 표시 합니다.|  
 |[데이터 마이그레이션 설정](data-migration-settings-mysqltosql.md)|**확장 데이터 마이그레이션 설정** 탭을 사용 하 여 데이터 마이그레이션에 대 한 사용자 지정 쿼리를 작성할 수 있습니다.|  
 |[MySQLToSQL&#41;&#40;형식 매핑 편집 ](../../ssma/mysql/edit-type-mapping-mysqltosql.md)|**형식 매핑 편집** 대화 상자를 사용 하 여 원본 데이터베이스와 대상 데이터베이스 및 데이터베이스 개체 간의 데이터 형식 매핑을 만들거나 수정할 수 있습니다.|  
 |[전역 설정 &#40;편집기&#41; &#40;MySQLToSQL&#41;](../../ssma/mysql/global-settings-editor-mysqltosql.md)|**전역 설정** 대화 상자의 편집기 페이지를 사용 하 여 코드 편집기 옵션을 구성할 수 있습니다.|  
 |[전역 설정 &#40;대화&#41; &#40;MySQLToSQL&#41;](../../ssma/mysql/global-settings-dialogs-mysqltosql.md)|**전역 설정** 대화 상자의 대화 상자 페이지를 사용 하 여 기본 대화 상자 및 경고 설정을 구성할 수 있습니다.|  
-|[전역 설정(로깅)](https://msdn.microsoft.com/0d033492-5ec3-473a-8de1-821894ec9518)|**전역 설정** 대화 상자의 로깅 페이지를 사용 하 여 로깅을 구성할 수 있습니다.|  
+|[전역 설정(로깅)](./global-settings-logging-mysqltosql.md)|**전역 설정** 대화 상자의 로깅 페이지를 사용 하 여 로깅을 구성할 수 있습니다.|  
 |[전역 설정 &#40;출력 창&#41; &#40;MySQLToSQL&#41;](../../ssma/mysql/global-settings-output-window-mysqltosql.md)|**전역 설정** 대화 상자를 사용 하 여 MYSQL 용 ssma 사용자 인터페이스에 대 한 기본 설정을 지정할 수 있습니다.|  
 |[새 프로젝트 &#40;SSMA&#41; &#40;MySQLToSQL&#41;](../../ssma/mysql/new-project-ssma-mysqltosql.md)|**새 프로젝트** 대화 상자를 사용 하 여 MySQL 용 새 ssma 프로젝트를 만들 수 있습니다.|  
 |[프로젝트 설정 &#40;MySQLToSQL&#41;&#41; &#40;변환 ](../../ssma/mysql/project-settings-conversion-mysqltosql.md)|**프로젝트 설정** 대화 상자의 변환 페이지를 사용 하 여 MYSQL 용 ssma가 함수 및 전역 변수를 변환 하는 방법을 지정할 수 있습니다.|  
@@ -51,4 +51,3 @@ ms.locfileid: "88463303"
 ## <a name="see-also"></a>참고 항목  
 [MySQL 용 SSMA를 시작 &#40;MySQLToSQL&#41;](../../ssma/mysql/getting-started-with-ssma-for-mysql-mysqltosql.md)  
 [MySQL 데이터베이스를 SQL Server-Azure SQL Database &#40;MySQLToSql&#41;로 마이그레이션 ](../../ssma/mysql/migrating-mysql-databases-to-sql-server-azure-sql-db-mysqltosql.md)  
-  

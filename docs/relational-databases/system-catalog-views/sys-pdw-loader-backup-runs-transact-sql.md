@@ -1,6 +1,6 @@
 ---
-description: sys. pdw_loader_backup_runs (Transact-sql)
-title: sys. pdw_loader_backup_runs (Transact-sql) | Microsoft Docs
+description: sys.pdw_loader_backup_runs (Transact-sql)
+title: sys.pdw_loader_backup_runs (Transact-sql) | Microsoft Docs
 ms.custom: ''
 ms.date: 03/06/2017
 ms.prod: sql
@@ -13,14 +13,14 @@ ms.assetid: 2b72034c-6a11-46b9-a76c-7a88b2bea360
 author: ronortloff
 ms.author: rortloff
 monikerRange: '>= aps-pdw-2016 || = azure-sqldw-latest || = sqlallproducts-allversions'
-ms.openlocfilehash: fc85ec89f07359714c4661b3b7c4c8d8d5138b1a
-ms.sourcegitcommit: e700497f962e4c2274df16d9e651059b42ff1a10
+ms.openlocfilehash: 31d8ae2e196d116b6e3ff58c23deedc20425fdf5
+ms.sourcegitcommit: 22dacedeb6e8721e7cdb6279a946d4002cfb5da3
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 08/17/2020
-ms.locfileid: "88490271"
+ms.lasthandoff: 10/14/2020
+ms.locfileid: "92036986"
 ---
-# <a name="syspdw_loader_backup_runs-transact-sql"></a>sys. pdw_loader_backup_runs (Transact-sql)
+# <a name="syspdw_loader_backup_runs-transact-sql"></a>sys.pdw_loader_backup_runs (Transact-sql)
 [!INCLUDE[applies-to-version/asa-pdw](../../includes/applies-to-version/asa-pdw.md)]
 
   에서 진행 중이 고 완료 된 백업 및 복원 작업과의 [!INCLUDE[ssSDW](../../includes/sssdw-md.md)] 지속적인 백업, 복원 및 로드 작업에 대 한 정보를 포함 [!INCLUDE[ssPDW](../../includes/sspdw-md.md)] 합니다. 이 정보는 시스템을 다시 시작해도 유지됩니다.  
@@ -38,8 +38,8 @@ ms.locfileid: "88490271"
 |database_name|**nvarchar(255)**|이 작업의 컨텍스트인 데이터베이스의 이름입니다.||  
 |table_name|**nvarchar(255)**|[!INCLUDE[ssInfoNA](../../includes/ssinfona-md.md)]||  
 |Principal_id|**int**|작업을 요청 하는 사용자의 ID입니다.||  
-|session_id|**nvarchar(32)**|작업을 수행 하는 세션의 ID입니다.|[Dm_pdw_exec_sessions &#40;transact-sql&#41;](../../relational-databases/system-dynamic-management-views/sys-dm-pdw-exec-sessions-transact-sql.md)에서 session_id를 참조 하세요.|  
-|request_id|**nvarchar(32)**|작업을 수행 하는 요청의 ID입니다. 로드의 경우이 로드와 연결 된 현재 또는 마지막 요청입니다.|[Dm_pdw_exec_requests &#40;transact-sql&#41;](../../relational-databases/system-dynamic-management-views/sys-dm-pdw-exec-requests-transact-sql.md)에서 request_id를 참조 하세요.|  
+|session_id|**nvarchar(32)**|작업을 수행 하는 세션의 ID입니다.|[Sys.dm_pdw_exec_sessions &#40;transact-sql&#41;](../../relational-databases/system-dynamic-management-views/sys-dm-pdw-exec-sessions-transact-sql.md)에서 session_id를 참조 하세요.|  
+|request_id|**nvarchar(32)**|작업을 수행 하는 요청의 ID입니다. 로드의 경우이 로드와 연결 된 현재 또는 마지막 요청입니다.|[Sys.dm_pdw_exec_requests &#40;transact-sql&#41;](../../relational-databases/system-dynamic-management-views/sys-dm-pdw-exec-requests-transact-sql.md)에서 request_id를 참조 하세요.|  
 |상태|**nvarchar (16)**|실행의 상태입니다.|' 취소 됨 ', ' 완료 됨 ', ' 실패 ', ' 대기 중 ', ' 실행 중 '|  
 |progress|**int**|완료 비율입니다.|0~100|  
 |명령을 사용합니다.|**nvarchar(4000)**|사용자가 제출한 명령의 전체 텍스트입니다.|는 4000 자 (공백 수) 보다 길면 잘립니다.|  
@@ -48,6 +48,6 @@ ms.locfileid: "88490271"
 |rows_inserted|**bigint**|이 작업의 일부로 데이터베이스 테이블에 삽입 된 행 수입니다.||  
   
 ## <a name="see-also"></a>참고 항목  
- [SQL Data Warehouse 및 병렬 Data Warehouse 카탈로그 뷰](../../relational-databases/system-catalog-views/sql-data-warehouse-and-parallel-data-warehouse-catalog-views.md)  
+ [Azure Synapse Analytics 및 병렬 데이터 웨어하우스 카탈로그 뷰](../../relational-databases/system-catalog-views/sql-data-warehouse-and-parallel-data-warehouse-catalog-views.md)  
   
   

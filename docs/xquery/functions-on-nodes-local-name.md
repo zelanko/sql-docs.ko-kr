@@ -16,12 +16,12 @@ helpviewer_keywords:
 ms.assetid: c901ef5d-89c5-482a-bf64-3eefbcf3098d
 author: rothja
 ms.author: jroth
-ms.openlocfilehash: 4c634614b6cfad036146081436ce31efcf1cd464
-ms.sourcegitcommit: da88320c474c1c9124574f90d549c50ee3387b4c
+ms.openlocfilehash: dc7c25d1b953b98c81691843a4de6dc924bca651
+ms.sourcegitcommit: 22dacedeb6e8721e7cdb6279a946d4002cfb5da3
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 07/01/2020
-ms.locfileid: "85753609"
+ms.lasthandoff: 10/14/2020
+ms.locfileid: "92038077"
 ---
 # <a name="functions-on-nodes---local-name"></a>노드 함수 - local-name
 [!INCLUDE [SQL Server Azure SQL Database ](../includes/applies-to-version/sqlserver.md)]
@@ -47,7 +47,7 @@ fn:local-name($arg as node()?) as xs:string
   
 -   대상 노드가 문서 노드이거나 설명이거나 텍스트 노드이기 때문에 대상 노드의 이름이 없는 경우 함수는 길이가 0인 문자열을 반환합니다.  
   
-## <a name="examples"></a>예제  
+## <a name="examples"></a>예  
  이 항목에서는 AdventureWorks 데이터베이스의 다양 한 **xml** 유형 열에 저장 된 xml 인스턴스에 대 한 XQuery 예를 제공 합니다.  
   
 ### <a name="a-retrieve-local-name-of-a-specific-node"></a>A. 특정 노드의 로컬 이름 검색  
@@ -85,7 +85,6 @@ WHERE ProductModelID=7
  이 쿼리는 `Location` <> 요소의 모든 <> 요소 자식을 반환 합니다 `root` .  
   
 ## <a name="see-also"></a>참고 항목  
- [노드의 함수](https://msdn.microsoft.com/library/09a8affa-3341-4f50-aebc-fdf529e00c08)   
+ [노드의 함수](./xquery-functions-against-the-xml-data-type.md)   
  [네임 스페이스 uri 함수 &#40;XQuery&#41;](../xquery/functions-on-nodes-namespace-uri.md)  
-  
   

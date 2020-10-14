@@ -17,12 +17,12 @@ helpviewer_keywords:
 ms.assetid: 8df0877d-a03f-4ca9-b84e-908c4bb42b5e
 author: rothja
 ms.author: jroth
-ms.openlocfilehash: ad25db1aa5a10039bc80766b30e1d2ba478df123
-ms.sourcegitcommit: da88320c474c1c9124574f90d549c50ee3387b4c
+ms.openlocfilehash: 8e92148b5a85ced147599eafe09156cf41c47021
+ms.sourcegitcommit: 22dacedeb6e8721e7cdb6279a946d4002cfb5da3
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 07/01/2020
-ms.locfileid: "85730982"
+ms.lasthandoff: 10/14/2020
+ms.locfileid: "92037016"
 ---
 # <a name="xquery-functions-against-the-xml-data-type"></a>xml 데이터 형식에 대한 XQuery 함수
 [!INCLUDE [SQL Server Azure SQL Database ](../includes/applies-to-version/sqlserver.md)]
@@ -35,43 +35,42 @@ ms.locfileid: "85730982"
   
 |범주|함수 이름|  
 |--------------|-------------------|  
-|[숫자 값에 대 한 함수](https://msdn.microsoft.com/library/d5740a32-b174-43b9-b64d-1cc6edc50cff)|[ceiling](../xquery/numeric-values-functions-ceiling.md)|  
+|[숫자 값에 대 한 함수]()|[ceiling](../xquery/numeric-values-functions-ceiling.md)|  
 ||[평면](../xquery/numeric-values-functions-floor.md)|  
 ||[둥근](../xquery/numeric-values-functions-round.md)|  
-|[문자열 값의 XQuery 함수](https://msdn.microsoft.com/library/2dccefef-5d90-4f56-bda7-4c1954d8a730)|[concat](../xquery/functions-on-string-values-concat.md)|  
+|[문자열 값의 XQuery 함수]()|[concat](../xquery/functions-on-string-values-concat.md)|  
 ||[contains](../xquery/functions-on-string-values-contains.md)|  
 ||[substring](../xquery/functions-on-string-values-substring.md)|  
 ||[낮은 case 함수 &#40;XQuery&#41;](../xquery/functions-on-string-values-lower-case.md)|  
 ||[문자열 길이](../xquery/functions-on-string-values-string-length.md)|  
 ||[대문자 함수 &#40;XQuery&#41;](../xquery/functions-on-string-values-upper-case.md)|  
 |부울 값 함수|[not](../xquery/functions-on-boolean-values-not-function.md)|  
-|[노드의 함수](https://msdn.microsoft.com/library/09a8affa-3341-4f50-aebc-fdf529e00c08)|[number](../xquery/functions-on-nodes-number.md)|  
+|[노드의 함수]()|[number](../xquery/functions-on-nodes-number.md)|  
 ||[local-name 함수(XQuery)](../xquery/functions-on-nodes-local-name.md)|  
 ||[namespace-uri 함수(XQuery)](../xquery/functions-on-nodes-namespace-uri.md)|  
-|[컨텍스트 함수](https://msdn.microsoft.com/library/f7d8af33-9de9-450c-a667-23dee3129b5f)|[last](../xquery/context-functions-last-xquery.md)|  
+|[컨텍스트 함수]()|[last](../xquery/context-functions-last-xquery.md)|  
 ||[position](../xquery/context-functions-position-xquery.md)|  
-|[시퀀스 함수](https://msdn.microsoft.com/library/672d2795-53ab-49c2-bf24-bc81a47ecd3f)|[empty](../xquery/functions-on-sequences-empty.md)|  
+|[시퀀스 함수]()|[empty](../xquery/functions-on-sequences-empty.md)|  
 ||[distinct-values](../xquery/functions-on-sequences-distinct-values.md)|  
 ||[id 함수(XQuery)](../xquery/functions-on-sequences-id.md)|  
-|[집계 함수 &#40;XQuery&#41;](https://msdn.microsoft.com/library/be647ef1-291e-4a5d-ab18-07c759efe176)|[count](../xquery/aggregate-functions-count.md)|  
-||[매출](../xquery/aggregate-functions-avg.md)|  
+|[집계 함수 &#40;XQuery&#41;]()|[count](../xquery/aggregate-functions-count.md)|  
+||[avg](../xquery/aggregate-functions-avg.md)|  
 ||[min](../xquery/aggregate-functions-min.md)|  
 ||[max](../xquery/aggregate-functions-max.md)|  
 ||[sum](../xquery/aggregate-functions-sum.md)|  
 |[생성자 함수는 XQuery를 &#40;&#41;](../xquery/constructor-functions-xquery.md)|[생성자 함수](../xquery/constructor-functions-xquery.md)|  
 |[데이터 접근자 함수](../xquery/data-accessor-functions.md)|[string](../xquery/data-accessor-functions-string-xquery.md)|  
-||[데이터](../xquery/data-accessor-functions-data-xquery.md)|  
-|[부울 생성자 함수는 XQuery를 &#40;&#41;](https://msdn.microsoft.com/library/fa907f39-d4b7-4495-b829-c788928e0f64)|[true 함수(XQuery)](../xquery/boolean-constructor-functions-true-xquery.md)|  
+||[data](../xquery/data-accessor-functions-data-xquery.md)|  
+|[부울 생성자 함수는 XQuery를 &#40;&#41;]()|[true 함수(XQuery)](../xquery/boolean-constructor-functions-true-xquery.md)|  
 ||[false 함수(XQuery)](../xquery/boolean-constructor-functions-false-xquery.md)|  
-|[Qname &#40;XQuery&#41;와 관련 된 함수](https://msdn.microsoft.com/library/7e07eb26-f551-4b63-ab77-861684faff71)|[expanded-QName(XQuery)](../xquery/functions-related-to-qnames-expanded-qname.md)|  
+|[Qname &#40;XQuery&#41;와 관련 된 함수 ](./functions-related-to-qnames-expanded-qname.md)|[expanded-QName(XQuery)](../xquery/functions-related-to-qnames-expanded-qname.md)|  
 ||[local-name-from-QName(XQuery)](../xquery/functions-related-to-qnames-local-name-from-qname.md)|  
 ||[namespace-uri-from-QName(XQuery)](../xquery/functions-related-to-qnames-namespace-uri-from-qname.md)|  
-|[SQL Server XQuery 확장 함수](https://msdn.microsoft.com/library/4bc5d499-5fec-4c3f-b11e-5ab5ef9d8f97)|[sql:column() 함수(XQuery)](../xquery/xquery-extension-functions-sql-column.md)|  
+|[SQL Server XQuery 확장 함수](./xquery-extension-functions-sql-column.md)|[sql:column() 함수(XQuery)](../xquery/xquery-extension-functions-sql-column.md)|  
 ||[sql:variable() 함수(XQuery)](../xquery/xquery-extension-functions-sql-variable.md)|  
   
 ## <a name="see-also"></a>참고 항목  
  [xml 데이터 형식 메서드](../t-sql/xml/xml-data-type-methods.md)   
- [XQuery 언어 참조 &#40;SQL Server&#41;](../xquery/xquery-language-reference-sql-server.md)   
+ [XQuery 언어 참조&#40;SQL Server&#41;](../xquery/xquery-language-reference-sql-server.md)   
  [XML 데이터&#40;SQL Server&#41;](../relational-databases/xml/xml-data-sql-server.md)  
-  
   

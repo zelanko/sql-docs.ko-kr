@@ -14,12 +14,12 @@ ms.assetid: 8c7d9f8e-06bb-476c-bbd2-15b61d5bba3c
 author: nahk-ivanov
 ms.author: alexiva
 manager: alexiva
-ms.openlocfilehash: 3ffcc42e790e6eb0f26ffa96ec8e3bcf7503ca3d
-ms.sourcegitcommit: e700497f962e4c2274df16d9e651059b42ff1a10
+ms.openlocfilehash: 212d6792704ed2b52af91be3ea810a916a486bc8
+ms.sourcegitcommit: 22dacedeb6e8721e7cdb6279a946d4002cfb5da3
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 08/17/2020
-ms.locfileid: "88480455"
+ms.lasthandoff: 10/14/2020
+ms.locfileid: "92038026"
 ---
 # <a name="managing-passwords-oracletosql"></a>암호 관리(OracleToSQL)
 이 섹션에서는 데이터베이스 암호를 보호 하는 방법과 서버에서 데이터베이스를 가져오거나 내보내는 절차에 대해 설명 합니다.
@@ -132,5 +132,4 @@ SSMA 콘솔 응용 프로그램을 사용 하면 로컬 컴퓨터의 파일에 �
 8. 암호를 확인 하세요.  
 
 ## <a name="see-also"></a>참고 항목  
-[SSMA 콘솔 실행 (Oracle)](https://msdn.microsoft.com/7228ccba-c69f-4b4c-8664-01a2750183c5)  
-  
+[SSMA 콘솔 실행 (Oracle)](./executing-the-ssma-console-oracletosql.md)  

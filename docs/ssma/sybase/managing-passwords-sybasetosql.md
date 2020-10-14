@@ -14,12 +14,12 @@ helpviewer_keywords:
 ms.assetid: 9b6a70f9-6840-4140-a059-bb7bd7ccc67c
 author: nahk-ivanov
 ms.author: alexiva
-ms.openlocfilehash: 81a31e8aa6b7c395fc623357a2bc56ebb5a037da
-ms.sourcegitcommit: e700497f962e4c2274df16d9e651059b42ff1a10
+ms.openlocfilehash: 5a43526e9dd4b0d1e5057c9854a827b084a7e17b
+ms.sourcegitcommit: 22dacedeb6e8721e7cdb6279a946d4002cfb5da3
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 08/17/2020
-ms.locfileid: "88480378"
+ms.lasthandoff: 10/14/2020
+ms.locfileid: "92036503"
 ---
 # <a name="managing-passwords-sybasetosql"></a>암호 관리(SybaseToSQL)
 이 섹션에서는 데이터베이스 암호를 보호 하는 방법과 서버에서 데이터베이스를 가져오거나 내보내는 절차에 대해 설명 합니다.
@@ -132,5 +132,4 @@ SSMA 콘솔 응용 프로그램을 사용 하면 로컬 컴퓨터의 파일에 �
 8. 암호를 확인 하세요.  
   
 ## <a name="see-also"></a>참고 항목  
-[SSMA 콘솔 실행 (Sybase)](https://msdn.microsoft.com/ea8950b7-fabc-4aa4-89f8-9573a2617d70)  
-  
+[SSMA 콘솔 실행 (Sybase)](./executing-the-ssma-console-sybasetosql.md)  

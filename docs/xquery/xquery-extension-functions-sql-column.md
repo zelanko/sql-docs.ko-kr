@@ -16,12 +16,12 @@ helpviewer_keywords:
 ms.assetid: e8f67bdf-b489-49a9-9d0f-2069c1750467
 author: rothja
 ms.author: jroth
-ms.openlocfilehash: 6b3aeded0476c809bd1bcdfbfdacb4eac3381751
-ms.sourcegitcommit: da88320c474c1c9124574f90d549c50ee3387b4c
+ms.openlocfilehash: 55a38974ec5e85eeec58195c18edd1f6fb8b5cb4
+ms.sourcegitcommit: 22dacedeb6e8721e7cdb6279a946d4002cfb5da3
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 07/01/2020
-ms.locfileid: "85775417"
+ms.lasthandoff: 10/14/2020
+ms.locfileid: "92038070"
 ---
 # <a name="xquery-extension-functions---sqlcolumn"></a>XQuery 확장 함수 - sql:column()
 [!INCLUDE [SQL Server Azure SQL Database ](../includes/applies-to-version/sqlserver.md)]
@@ -46,7 +46,7 @@ sql:column("columnName")
   
  **Sql: column ()** 함수는 조인 작업에서 지원 되지 않습니다. 대신 APPLY 연산을 사용할 수 있습니다.  
   
-## <a name="examples"></a>예제  
+## <a name="examples"></a>예  
   
 ### <a name="a-using-sqlcolumn-to-retrieve-the-relational-value-inside-xml"></a>A. sql:column()을 사용하여 XML 내의 관계형 값 검색  
  XML을 생성할 때 다음 예는 비-XML 관계형 열의 값을 검색하여 XML 및 관계형 데이터에 바인딩하는 방법을 보여 줍니다.  
@@ -131,11 +131,10 @@ select @x
 ```  
   
 ## <a name="see-also"></a>참고 항목  
- [SQL Server XQuery 확장 함수](https://msdn.microsoft.com/library/4bc5d499-5fec-4c3f-b11e-5ab5ef9d8f97)   
+ [SQL Server XQuery 확장 함수]()   
  [형식화된 XML과 형식화되지 않은 XML 비교](../relational-databases/xml/compare-typed-xml-to-untyped-xml.md)   
- [XML 데이터 &#40;SQL Server&#41;](../relational-databases/xml/xml-data-sql-server.md)   
+ [XML 데이터&#40;SQL Server&#41;](../relational-databases/xml/xml-data-sql-server.md)   
  [XML 데이터 인스턴스 만들기](../relational-databases/xml/create-instances-of-xml-data.md)   
  [xml 데이터 형식 메서드](../t-sql/xml/xml-data-type-methods.md)   
  [XML DML&#40;XML 데이터 수정 언어&#41;](../t-sql/xml/xml-data-modification-language-xml-dml.md)  
-  
   

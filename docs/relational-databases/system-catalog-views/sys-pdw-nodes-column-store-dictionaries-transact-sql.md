@@ -1,6 +1,6 @@
 ---
-description: sys. pdw_nodes_column_store_dictionaries (Transact-sql)
-title: sys. pdw_nodes_column_store_dictionaries (Transact-sql)
+description: sys.pdw_nodes_column_store_dictionaries (Transact-sql)
+title: sys.pdw_nodes_column_store_dictionaries (Transact-sql)
 ms.date: 03/03/2017
 ms.prod: sql
 ms.technology: data-warehouse
@@ -13,14 +13,14 @@ ms.assetid: 7ae1c2e4-45c0-4880-a692-1f299fbcfd19
 author: ronortloff
 ms.author: rortloff
 monikerRange: '>= aps-pdw-2016 || = azure-sqldw-latest || = sqlallproducts-allversions'
-ms.openlocfilehash: c0510e37a1d3dc2feb537bc64c0e2cb5f3e56414
-ms.sourcegitcommit: e700497f962e4c2274df16d9e651059b42ff1a10
+ms.openlocfilehash: 3171dabfa8ebb3d1a71c88633457446ef2016593
+ms.sourcegitcommit: 22dacedeb6e8721e7cdb6279a946d4002cfb5da3
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 08/17/2020
-ms.locfileid: "88475413"
+ms.lasthandoff: 10/14/2020
+ms.locfileid: "92036932"
 ---
-# <a name="syspdw_nodes_column_store_dictionaries-transact-sql"></a>sys. pdw_nodes_column_store_dictionaries (Transact-sql)
+# <a name="syspdw_nodes_column_store_dictionaries-transact-sql"></a>sys.pdw_nodes_column_store_dictionaries (Transact-sql)
 [!INCLUDE[applies-to-version/asa-pdw](../../includes/applies-to-version/asa-pdw.md)]
 
   Columnstore 인덱스에 사용 되는 각 사전에 대 한 행을 포함 합니다. 사전은 일부 데이터 형식을 인코딩하는 데 사용되므로 columnstore 인덱스의 일부 열에만 사전이 있습니다. 사전은 모든 세그먼트의 기본 사전으로 있을 수 있으며 열 세그먼트의 하위 집합에 사용되는 다른 보조 사전으로 있을 수도 있습니다.  
@@ -42,9 +42,9 @@ ms.locfileid: "88475413"
  `VIEW SERVER STATE` 권한이 필요합니다.  
   
 ## <a name="see-also"></a>참고 항목  
- [SQL Data Warehouse 및 병렬 Data Warehouse 카탈로그 뷰](../../relational-databases/system-catalog-views/sql-data-warehouse-and-parallel-data-warehouse-catalog-views.md)   
+ [Azure Synapse Analytics 및 병렬 데이터 웨어하우스 카탈로그 뷰](../../relational-databases/system-catalog-views/sql-data-warehouse-and-parallel-data-warehouse-catalog-views.md)   
  [Transact-sql&#41;&#40;COLUMNSTORE 인덱스 만들기 ](../../t-sql/statements/create-columnstore-index-transact-sql.md)   
- [pdw_nodes_column_store_segments &#40;Transact-sql&#41;](../../relational-databases/system-catalog-views/sys-pdw-nodes-column-store-segments-transact-sql.md)   
- [pdw_nodes_column_store_row_groups &#40;Transact-sql&#41;](../../relational-databases/system-catalog-views/sys-pdw-nodes-column-store-row-groups-transact-sql.md)  
+ [Transact-sql&#41;sys.pdw_nodes_column_store_segments &#40;](../../relational-databases/system-catalog-views/sys-pdw-nodes-column-store-segments-transact-sql.md)   
+ [Transact-sql&#41;sys.pdw_nodes_column_store_row_groups &#40;](../../relational-databases/system-catalog-views/sys-pdw-nodes-column-store-row-groups-transact-sql.md)  
   
   

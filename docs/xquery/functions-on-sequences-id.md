@@ -16,12 +16,12 @@ helpviewer_keywords:
 ms.assetid: de99fc60-d0ad-4117-a17d-02bdde6512b4
 author: rothja
 ms.author: jroth
-ms.openlocfilehash: 0dacb3e54898ece6222d2f9eb3d7a546c8aa7b76
-ms.sourcegitcommit: da88320c474c1c9124574f90d549c50ee3387b4c
+ms.openlocfilehash: c27ed4fad982831288f1e115f6da94bc70114c61
+ms.sourcegitcommit: 22dacedeb6e8721e7cdb6279a946d4002cfb5da3
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 07/01/2020
-ms.locfileid: "85753557"
+ms.lasthandoff: 10/14/2020
+ms.locfileid: "92037436"
 ---
 # <a name="functions-on-sequences---id"></a>시퀀스 함수 - id
 [!INCLUDE [SQL Server Azure SQL Database ](../includes/applies-to-version/sqlserver.md)]
@@ -44,7 +44,7 @@ fn:id($arg as xs:IDREF*) as element()*
   
  요소와 일치하는 xs:IDREF 값이 없으면 이 함수는 빈 시퀀스를 반환합니다.  
   
-## <a name="examples"></a>예제  
+## <a name="examples"></a>예  
  이 항목에서는 데이터베이스의 다양 한 **xml** 유형 열에 저장 된 xml 인스턴스에 대 한 XQuery 예를 제공 [!INCLUDE[ssSampleDBobject](../includes/sssampledbobject-md.md)] 합니다.  
   
 ### <a name="a-retrieving-elements-based-on-the-idref-attribute-value"></a>A. IDREF 특성 값을 기반으로 요소 검색  
@@ -177,11 +177,10 @@ select @x.query('declare namespace CustOrders="Customers";
 ### <a name="implementation-limitations"></a>구현 시 제한 사항  
  제한 사항은 다음과 같습니다.  
   
--   [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)]는 **id ()** 의 두 인수 버전을 지원 하지 않습니다.  
+-   [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)] 는 **id ()** 의 두 인수 버전을 지원 하지 않습니다.  
   
 -   [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)]**id ()** 의 인수 형식이 XS: IDREF *의 하위 형식 이어야 합니다.  
   
 ## <a name="see-also"></a>참고 항목  
- [시퀀스 함수](https://msdn.microsoft.com/library/672d2795-53ab-49c2-bf24-bc81a47ecd3f)  
-  
+ [시퀀스 함수](./xquery-functions-against-the-xml-data-type.md)  
   

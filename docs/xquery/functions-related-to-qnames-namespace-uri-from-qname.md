@@ -16,12 +16,12 @@ helpviewer_keywords:
 ms.assetid: 4ab3f003-2a3b-4268-9e88-b615e35701b2
 author: rothja
 ms.author: jroth
-ms.openlocfilehash: 91174fa3ef113a7944ef02bb62e7088acd344f3e
-ms.sourcegitcommit: da88320c474c1c9124574f90d549c50ee3387b4c
+ms.openlocfilehash: 035b92b719431b5a9b74f951f20d51911a41d59c
+ms.sourcegitcommit: 22dacedeb6e8721e7cdb6279a946d4002cfb5da3
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 07/01/2020
-ms.locfileid: "85720032"
+ms.lasthandoff: 10/14/2020
+ms.locfileid: "92035782"
 ---
 # <a name="functions-related-to-qnames---namespace-uri-from-qname"></a>QNames 관련 함수 - namespace-uri-from-QName
 [!INCLUDE [SQL Server Azure SQL Database ](../includes/applies-to-version/sqlserver.md)]
@@ -38,7 +38,7 @@ namespace-uri-from-QName($arg as xs:QName?) as xs:string?
  *$arg*  
  네임스페이스 URI가 반환되는 QName입니다.  
   
-## <a name="examples"></a>예제  
+## <a name="examples"></a>예  
  이 항목에서는 AdventureWorks 데이터베이스의 다양 한 **xml** 유형 열에 저장 된 xml 인스턴스에 대 한 XQuery 예를 제공 합니다.  
   
 ### <a name="a-retrieve-the-namespace-uri-from-a-qname"></a>A. QName에서 네임스페이스 URI 검색  
@@ -50,6 +50,5 @@ namespace-uri-from-QName($arg as xs:QName?) as xs:string?
 -   **네임 스페이스--QName ()** 함수는 Xs: anyURI 대신 xs: string의 인스턴스를 반환 합니다.  
   
 ## <a name="see-also"></a>참고 항목  
- [Qname &#40;XQuery&#41;와 관련 된 함수](https://msdn.microsoft.com/library/7e07eb26-f551-4b63-ab77-861684faff71)  
-  
+ [Qname &#40;XQuery&#41;와 관련 된 함수 ](./functions-related-to-qnames-expanded-qname.md)  
   

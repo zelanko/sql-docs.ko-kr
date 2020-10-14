@@ -12,12 +12,12 @@ helpviewer_keywords:
 ms.assetid: 4c59256f-99a8-4351-9559-a455813dbd06
 author: nahk-ivanov
 ms.author: alexiva
-ms.openlocfilehash: 8cf1c6af1a526efe771ccbd3b0f02f35670a1130
-ms.sourcegitcommit: e700497f962e4c2274df16d9e651059b42ff1a10
+ms.openlocfilehash: 6b7f9a9a69fd1f5ac685550fb91ab93ad2220f49
+ms.sourcegitcommit: 22dacedeb6e8721e7cdb6279a946d4002cfb5da3
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 08/17/2020
-ms.locfileid: "88492171"
+ms.lasthandoff: 10/14/2020
+ms.locfileid: "92038264"
 ---
 # <a name="loading-converted-database-objects-into-sql-server-sybasetosql"></a>변환된 데이터베이스 개체를 SQL Server로 로드(SybaseToSQL)
 Sybase ASE (Server Enterprise) 데이터베이스 개체를 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 또는 SQL Azure 변환 하면 결과 데이터베이스 개체를 또는 SQL Azure에 로드할 수 있습니다 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] . SSMA에서 개체를 만들거나 개체를 스크립팅 하 고 스크립트를 직접 실행할 수 있습니다. 또한 SSMA를 사용 하면의 실제 내용으로 대상 메타 데이터를 업데이트 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 하거나 Azure SQL Database 수 있습니다.  
@@ -108,8 +108,7 @@ SSMA를 사용 하 여 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]
 변환 된 데이터베이스 개체를에 로드 한 후에는 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 해당 개체에 대 한 사용 권한을 부여 하 고 거부할 수 있습니다. 로 데이터를 마이그레이션하기 전에이 작업을 수행 하는 것이 좋습니다 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] . 에서 개체를 보호 하는 방법에 대 한 자세한 내용은 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 온라인 설명서의 "데이터베이스 및 데이터베이스 응용 프로그램에 대 한 보안 고려 사항"을 참조 하십시오 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] .  
   
 ## <a name="next-step"></a>다음 단계  
-마이그레이션 프로세스의 다음 단계는 [SYBASE ASE 데이터를 SQL Server/SQL Azure (SybaseToSQL)로 마이그레이션하](https://msdn.microsoft.com/54a39f5e-9250-4387-a3ae-eae47c799811)는 것입니다.  
+마이그레이션 프로세스의 다음 단계는 [SYBASE ASE 데이터를 SQL Server/SQL Azure (SybaseToSQL)로 마이그레이션하](./migrating-sybase-ase-data-into-sql-server-azure-sql-db-sybasetosql.md)는 것입니다.  
   
 ## <a name="see-also"></a>참고 항목  
 [Sybase ASE 데이터베이스를 SQL Server-Azure SQL Database &#40;SybaseToSQL&#41;로 마이그레이션 ](../../ssma/sybase/migrating-sybase-ase-databases-to-sql-server-azure-sql-db-sybasetosql.md)  
-  

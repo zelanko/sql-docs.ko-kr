@@ -1,6 +1,6 @@
 ---
-description: sys. dm_pdw_diag_processing_stats (Transact-sql)
-title: sys. dm_pdw_diag_processing_stats (Transact-sql) | Microsoft Docs
+description: sys.dm_pdw_diag_processing_stats (Transact-sql)
+title: sys.dm_pdw_diag_processing_stats (Transact-sql) | Microsoft Docs
 ms.custom: ''
 ms.date: 03/07/2017
 ms.prod: sql
@@ -13,19 +13,19 @@ ms.assetid: df659c55-4f63-45f8-8afe-ce300031bc5b
 author: markingmyname
 ms.author: maghan
 monikerRange: '>= aps-pdw-2016 || = sqlallproducts-allversions'
-ms.openlocfilehash: e93ebebc4f82786537d4a16ac015eca34bc0efc3
-ms.sourcegitcommit: dd36d1cbe32cd5a65c6638e8f252b0bd8145e165
+ms.openlocfilehash: 4abebe258290203f7b87ff39e48d30de2a910379
+ms.sourcegitcommit: 22dacedeb6e8721e7cdb6279a946d4002cfb5da3
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 09/08/2020
-ms.locfileid: "89531011"
+ms.lasthandoff: 10/14/2020
+ms.locfileid: "92035421"
 ---
-# <a name="sysdm_pdw_diag_processing_stats-transact-sql"></a>sys. dm_pdw_diag_processing_stats (Transact-sql)
+# <a name="sysdm_pdw_diag_processing_stats-transact-sql"></a>sys.dm_pdw_diag_processing_stats (Transact-sql)
 [!INCLUDE [pdw](../../includes/applies-to-version/pdw.md)]
 
   관리자가 정의한 진단 세션에 통합 될 수 있는 모든 내부 진단 이벤트와 관련 된 정보를 표시 합니다. 다른 모든 Dmv의 채우기를 구동 하는 진단 및 이벤트 하위 시스템의 통계를 이해 하려면이 뷰를 쿼리 합니다. 각 노드의 각 프로세스에 대 한 큐 그룹이 있습니다.  
   
-|열 이름|데이터 형식|Description|  
+|열 이름|데이터 형식|설명|  
 |-----------------|---------------|-----------------|  
 |**pdw_node_id**|**int**|이 로그를 가져온 어플라이언스 노드입니다.|  
 |**process_id**|**int**|이 통계 제출을 실행 하는 프로세스의 식별자입니다.|  
@@ -34,6 +34,6 @@ ms.locfileid: "89531011"
 |**lost_events_count**|**bigint**|손실 된 이벤트 수입니다.|  
   
 ## <a name="see-also"></a>참고 항목  
- [Transact-sql&#41;&#40;SQL Data Warehouse 및 병렬 데이터 웨어하우스 동적 관리 뷰 ](../../relational-databases/system-dynamic-management-views/sql-and-parallel-data-warehouse-dynamic-management-views.md)  
+ [Transact-sql&#41;&#40;Azure Synapse 분석 및 병렬 데이터 웨어하우스 동적 관리 뷰 ](../../relational-databases/system-dynamic-management-views/sql-and-parallel-data-warehouse-dynamic-management-views.md)  
   
   
