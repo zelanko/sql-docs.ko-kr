@@ -9,12 +9,12 @@ author: dphansen
 ms.author: davidph
 ms.custom: seo-lt-2019
 monikerRange: '>=sql-server-2016||>=sql-server-linux-ver15||=sqlallproducts-allversions'
-ms.openlocfilehash: b39d73a46a5ac82c3b85606536f283e4d6bbf57e
-ms.sourcegitcommit: 9b41725d6db9957dd7928a3620fe4db41eb51c6e
+ms.openlocfilehash: 60aecdbd44d13308a30434f42a01f3919fc72aa5
+ms.sourcegitcommit: afb02c275b7c79fbd90fac4bfcfd92b00a399019
 ms.translationtype: HT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 08/13/2020
-ms.locfileid: "88173712"
+ms.lasthandoff: 10/12/2020
+ms.locfileid: "91956652"
 ---
 # <a name="data-exploration-and-predictive-modeling-with-r-in-sql-server"></a>SQL Server에서 R을 사용한 데이터 탐색 및 예측 모델링
 [!INCLUDE [SQL Server 2016 and later](../../includes/applies-to-version/sqlserver2016.md)]
@@ -36,7 +36,7 @@ ms.locfileid: "88173712"
 
 ## <a name="whats-different-about-revoscaler"></a>RevoScaleR에 대한 차이점은 무엇인가요?
 
-**RevoScaleR** 패키지에는 R의 인기 있는 일부 함수가 구현되었고 병렬 처리 및 확장성을 제공하도록 다시 설계되었습니다. 자세한 내용은 [RevoScaleR을 사용한 분산 컴퓨팅](https://docs.microsoft.com/machine-learning-server/r/how-to-revoscaler-distributed-computing)을 참조하세요.
+**RevoScaleR** 패키지에는 R의 인기 있는 일부 함수가 구현되었고 병렬 처리 및 확장성을 제공하도록 다시 설계되었습니다. 자세한 내용은 [RevoScaleR을 사용한 분산 컴퓨팅](/machine-learning-server/r/how-to-revoscaler-distributed-computing)을 참조하세요.
 
 또한, RevoScaleR 패키지는 *실행 컨텍스트*변경을 지원합니다. 즉, 전체 솔루션 또는 하나의 함수에 대하여 로컬 워크스테이션이 아닌 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 인스턴스를 호스팅하는 컴퓨터 리소스를 사용하여 계산이 수행되도록 지정할 수 있습니다. 이러한 방식은 불필요한 데이터 이동을 방지하고 서버 컴퓨터의 더 큰 계산 리소스를 활용할 수 있는 등의 여러 가지 장점이 있습니다.
 
@@ -60,7 +60,7 @@ Microsoft Machine Learning에 포함된 독점 R 라이브러리 외에도 다�
   
      **RevoPemaR** 패키지를 사용하면 R에서 자체 병렬 외부 메모리 알고리즘을 개발할 수 있습니다.  
   
-     이러한 패키지 및 사용 방법에 대한 자세한 내용은 [RevoScaleR이란?](https://docs.microsoft.com/machine-learning-server/r/concept-what-is-revoscaler) 및 [RevoPemaR 시작](https://docs.microsoft.com/machine-learning-server/r/how-to-developer-pemar)을 참조하세요. 
+     이러한 패키지 및 사용 방법에 대한 자세한 내용은 [RevoScaleR이란?](/machine-learning-server/r/concept-what-is-revoscaler) 및 [RevoPemaR 시작](/machine-learning-server/r/how-to-developer-pemar)을 참조하세요. 
 
 + **MicrosoftML**에는 Microsoft 데이터 과학 팀의 고도로 최적화된 기계 학습 알고리즘 및 데이터 변환 컬렉션이 포함되어 있습니다. 대부분의 알고리즘은 Azure Machine Learning에서도 사용됩니다. 자세한 내용은 [SQL Server의 MicrosoftML](ref-r-microsoftml.md)을 참조하세요.
 
@@ -82,14 +82,14 @@ RevoScaleR 패키지를 사용하여 [!INCLUDE[ssNoVersion](../../includes/ssnov
   
      R 코드에서 이 함수를 사용하여 *데이터 원본*을 정의할 수 있습니다. 데이터 원본 개체는 데이터가 있고 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]에서 데이터를 읽고 쓰는 작업을 관리하는 서버와 테이블을 지정합니다.
   
--   **RxInSqlServer** 함수를 사용하여 *컴퓨팅 컨텍스트*를 지정할 수 있습니다.  즉, 로컬 워크스테이션 또는 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 인스턴스를 호스팅하는 컴퓨터 등 R 코드의 실행 위치를 나타낼 수 있습니다.  자세한 내용은 [RevoScaleR Functions](https://docs.microsoft.com/machine-learning-server/r-reference/revoscaler/revoscaler)를 참조하세요.
+-   **RxInSqlServer** 함수를 사용하여 *컴퓨팅 컨텍스트*를 지정할 수 있습니다.  즉, 로컬 워크스테이션 또는 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 인스턴스를 호스팅하는 컴퓨터 등 R 코드의 실행 위치를 나타낼 수 있습니다.  자세한 내용은 [RevoScaleR Functions](/machine-learning-server/r-reference/revoscaler/revoscaler)를 참조하세요.
   
      컴퓨팅 컨텍스트를 설정하는 경우 원격 실행 컨텍스트를 지원하는 컴퓨팅, 즉 RevoScaleR 패키지에서 제공하는 R 작업 및 관련 함수에만 영향을 줍니다. 일반적으로 표준 CRAN 패키지를 기반으로 하는 R 솔루션은 원격 컴퓨팅 컨텍스트에서 실행할 수 없습니다. 단, T-SQL에서 시작된 경우에는 [!INCLUDE[ssNoVersion_md](../../includes/ssnoversion-md.md)] 컴퓨터에서 실행할 수 있습니다. 그러나 `rxExec` 함수를 사용하여 개별 R 함수를 호출하고 [!INCLUDE[ssNoVersion_md](../../includes/ssnoversion-md.md)]에서 원격으로 실행할 수 있습니다.
 
 데이터 원본 및 실행 컨텍스트를 만들고 사용하는 방법의 예는 다음 자습서를 참조하세요.
 
 + [데이터 과학 심층 분석](../../machine-learning/tutorials/deepdive-data-science-deep-dive-using-the-revoscaler-packages.md)  
-+  [Microsoft R을 사용한 데이터 분석](https://docs.microsoft.com/machine-learning-server/r/how-to-introduction)
++  [Microsoft R을 사용한 데이터 분석](/machine-learning-server/r/how-to-introduction)
 
 ## <a name="deploy-r-code-to-production"></a>프로덕션에 R 코드 배포
 
@@ -101,6 +101,6 @@ RevoScaleR 패키지를 사용하여 [!INCLUDE[ssNoVersion](../../includes/ssnov
 
 ## <a name="see-also"></a>참고 항목
 
-[Base R과 RevoScaleR Functions 비교](https://docs.microsoft.com/machine-learning-server/r-reference/revoscaler/revoscaler-compared-to-base-r)
+[Base R과 RevoScaleR Functions 비교](/machine-learning-server/r-reference/revoscaler/revoscaler-compared-to-base-r)
 
 [SQL Server의 RevoScaleR 라이브러리](ref-r-revoscaler.md)

@@ -9,12 +9,12 @@ author: dphansen
 ms.author: davidph
 ms.custom: seo-lt-2019
 monikerRange: '>=sql-server-2017||>=sql-server-linux-ver15||=sqlallproducts-allversions'
-ms.openlocfilehash: ea886eed26a2f88711d1405b5130570c09c87d6c
-ms.sourcegitcommit: 9b41725d6db9957dd7928a3620fe4db41eb51c6e
+ms.openlocfilehash: 576a19cf5a86893c248f11897f9a2d83a80598bc
+ms.sourcegitcommit: afb02c275b7c79fbd90fac4bfcfd92b00a399019
 ms.translationtype: HT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 08/13/2020
-ms.locfileid: "88180502"
+ms.lasthandoff: 10/12/2020
+ms.locfileid: "91956974"
 ---
 # <a name="install-sql-server-machine-learning-services-with-python-and-r-on-an-azure-virtual-machine"></a>Azure 가상 머신에 Python과 R을 지원하는 SQL Server Machine Learning Services 설치
 [!INCLUDE [SQL Server 2017 and later](../../includes/applies-to-version/sqlserver2017.md)]
@@ -30,9 +30,9 @@ Azure 가상 머신에 Python과 R을 지원하는 SQL Server Machine Learning S
 
 ## <a name="provision-sql-server-virtual-machine-in-azure"></a>Azure에서 SQL Server 가상 머신 프로비전
 
-단계별 지침은 [Azure Portal에서 Windows SQL Server 가상 머신을 프로비저닝하는 방법](https://docs.microsoft.com/azure/virtual-machines/windows/sql/virtual-machines-windows-portal-sql-server-provision)을 참조하세요. 
+단계별 지침은 [Azure Portal에서 Windows SQL Server 가상 머신을 프로비저닝하는 방법](/azure/virtual-machines/windows/sql/virtual-machines-windows-portal-sql-server-provision)을 참조하세요. 
 
-[SQL 서버 설정 구성](https://docs.microsoft.com/azure/virtual-machines/windows/sql/virtual-machines-windows-portal-sql-server-provision#3-configure-sql-server-settings) 단계는 인스턴스에 Machine Learning Services를 추가하는 단계입니다.
+[SQL 서버 설정 구성](/azure/virtual-machines/windows/sql/virtual-machines-windows-portal-sql-server-provision#3-configure-sql-server-settings) 단계는 인스턴스에 Machine Learning Services를 추가하는 단계입니다.
 
 <a name="firewall"></a>
 

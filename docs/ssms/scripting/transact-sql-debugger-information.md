@@ -19,12 +19,12 @@ ms.reviewer: ''
 ms.custom: seo-lt-2019
 ms.date: 12/04/2019
 monikerRange: '>=aps-pdw-2016||=azuresqldb-current||=azure-sqldw-latest||>=sql-server-2016||=sqlallproducts-allversions||>=sql-server-linux-2017||=azuresqldb-mi-current'
-ms.openlocfilehash: 35bd9f8d1870c45b5c2b401639e261806e9d3f91
-ms.sourcegitcommit: 6d53ecfdc463914f045c20eda96da39dec22acca
+ms.openlocfilehash: ad70e5f88163668c8b0802b6b66996e608f0ffd9
+ms.sourcegitcommit: 22dacedeb6e8721e7cdb6279a946d4002cfb5da3
 ms.translationtype: HT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 08/26/2020
-ms.locfileid: "88902095"
+ms.lasthandoff: 10/14/2020
+ms.locfileid: "92036176"
 ---
 # <a name="transact-sql-debugger---information"></a>Transact-SQL 디버거 - 정보
 
@@ -70,10 +70,10 @@ ms.locfileid: "88902095"
   
  행을 마우스 오른쪽 단추로 클릭한 다음 **값 편집**을 선택하여 **지역**, **조사식** 또는 **간략한 조사식**창에서 변수에 대한 데이터 값을 설정할 수 있습니다. **지역** 창, **조사식** 창 및 **간략한 조사식** 대화 상자의 **값** 열은 모두 텍스트, XML 및 HTML 데이터 시각화 도우미를 지원합니다. 시각화 도우미는 **값** 열의 오른쪽 끝에 있는 돋보기 모양의 데이터 팁으로 표시됩니다. 시각화 도우미를 사용하면 브라우저 창에서 XML 파일을 보는 경우와 같이 데이터 형식과 일치하는 표시 형식으로 텍스트, XML 또는 HTML 데이터 값을 볼 수 있습니다.  
   
- 디버그 모드에서 마우스 포인터를 식별자 위로 이동하면 식 이름 및 식의 현재 값이 포함된 **요약 정보** 팝업 창이 표시됩니다. 자세한 내용은 [요약 정보&#40;IntelliSense&#41;](../../relational-databases/scripting/quick-info-intellisense.md)를 참조하세요.  
+ 디버그 모드에서 마우스 포인터를 식별자 위로 이동하면 식 이름 및 식의 현재 값이 포함된 **요약 정보** 팝업 창이 표시됩니다. 자세한 내용은 [요약 정보&#40;IntelliSense&#41;](./quick-info-intellisense.md)를 참조하세요.  
   
 ## <a name="breakpoints"></a>중단점  
- **중단점** 창을 사용하여 현재 설정된 중단점을 보고 관리할 수 있습니다. 자세한 내용은 [Transact-SQL 코드 단계별 실행](../../relational-databases/scripting/step-through-transact-sql-code.md)을 참조하세요.  
+ **중단점** 창을 사용하여 현재 설정된 중단점을 보고 관리할 수 있습니다. 자세한 내용은 [Transact-SQL 코드 단계별 실행](./step-through-transact-sql-code.md)을 참조하세요.  
   
 ## <a name="call-stacks"></a>호출 스택  
  **호출 스택** 창에는 현재 실행 위치와 원래 쿼리 편집기 창에서 전달된 실행이 [!INCLUDE[tsql](../../includes/tsql-md.md)] 모듈(함수, 저장 프로시저 또는 트리거)을 통해 현재 실행 위치에 도달하는 방법에 대한 정보가 표시됩니다. **호출 스택** 창의 각 행은 스택 프레임이라고 하며 다음 항목 중 하나를 나타냅니다.  
@@ -104,13 +104,12 @@ ms.locfileid: "88902095"
  디버그 모드에서는 **결과** 및 **메시지** 탭이 쿼리 편집기에 계속 활성화되어 있습니다. **결과** 탭은 디버깅 세션 동안 실행되는 [!INCLUDE[tsql](../../includes/tsql-md.md)] 문의 결과 집합을 계속 표시합니다. **메시지** 탭은 *xx* 개 행 적용됨, PRINT 및 RAISERROR 문의 출력과 같은 시스템 메시지를 계속 표시합니다.  
   
 ## <a name="see-also"></a>참고 항목  
- [지역 창](../../relational-databases/scripting/transact-sql-debugger-locals-window.md)   
- [조사식 창](../../relational-databases/scripting/transact-sql-debugger-watch-window.md)   
- [간략한 조사식 대화 상자](../../relational-databases/scripting/transact-sql-debugger-quickwatch-dialog-box.md)   
- [중단점 창](../../relational-databases/scripting/transact-sql-debugger-breakpoints-window.md)   
- [호출 스택 창](../../relational-databases/scripting/transact-sql-debugger-call-stack-window.md)   
- [스레드 창](../../relational-databases/scripting/transact-sql-debugger-threads-window.md)   
- [출력 창](../../relational-databases/scripting/transact-sql-debugger-output-window.md)   
- [Transact-SQL 디버거](../../relational-databases/scripting/transact-sql-debugger.md)  
-  
+ [지역 창](./transact-sql-debugger-locals-window.md)   
+ [조사식 창](./transact-sql-debugger-watch-window.md)   
+ [간략한 조사식 대화 상자](./transact-sql-debugger-quickwatch-dialog-box.md)   
+ [중단점 창](./transact-sql-debugger-breakpoints-window.md)   
+ [호출 스택 창](./transact-sql-debugger-call-stack-window.md)   
+ [스레드 창](./transact-sql-debugger-threads-window.md)   
+ [출력 창](./transact-sql-debugger-output-window.md)   
+ [Transact-SQL 디버거](./transact-sql-debugger.md)  
   

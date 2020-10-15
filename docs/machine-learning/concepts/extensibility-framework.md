@@ -10,12 +10,12 @@ ms.author: garye
 ms.reviewer: davidph
 ms.custom: seo-lt-2019
 monikerRange: '>=sql-server-2016||>=sql-server-linux-ver15||=sqlallproducts-allversions'
-ms.openlocfilehash: 2303fdda5ae28fb9a384a174a128b2487e637f7e
-ms.sourcegitcommit: 9b41725d6db9957dd7928a3620fe4db41eb51c6e
+ms.openlocfilehash: 053639f8ff25d50e7cad9c05d82cfcac6a0ee071
+ms.sourcegitcommit: afb02c275b7c79fbd90fac4bfcfd92b00a399019
 ms.translationtype: HT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 08/13/2020
-ms.locfileid: "88173320"
+ms.lasthandoff: 10/12/2020
+ms.locfileid: "91956542"
 ---
 # <a name="extensibility-architecture-in-sql-server-machine-learning-services"></a>SQL Server Machine Learning Services의 확장성 아키텍처 
 [!INCLUDE [SQL Server 2016 and later](../../includes/applies-to-version/sqlserver2016.md)]
@@ -81,7 +81,7 @@ Linux에서는 하나의 데이터베이스 엔진 인스턴스만 지원되며,
 
 ## <a name="bxlserver-and-sql-satellite"></a>BxlServer 및 SQL Satellite
 
-**BxlServer**는 Microsoft에서 제공하고 SQL Server와 언어 런타임 간의 통신을 관리하는 실행 파일입니다. 외부 스크립트 세션을 포함하는 데 사용되는 Windows용 Windows 작업 개체 또는 Linux용 네임스페이스를 만듭니다. 또한 각 외부 스크립트 작업에 대한 보안 작업 폴더를 프로비저닝하고, SQL Satellite를 사용하여 외부 런타임과 SQL Server 간의 데이터 전송을 관리합니다. 작업이 실행되는 동안 [프로세스 탐색기](https://technet.microsoft.com/sysinternals/processexplorer.aspx)를 실행하는 경우 하나 이상의 BxlServer 인스턴스가 표시될 수 있습니다.
+**BxlServer**는 Microsoft에서 제공하고 SQL Server와 언어 런타임 간의 통신을 관리하는 실행 파일입니다. 외부 스크립트 세션을 포함하는 데 사용되는 Windows용 Windows 작업 개체 또는 Linux용 네임스페이스를 만듭니다. 또한 각 외부 스크립트 작업에 대한 보안 작업 폴더를 프로비저닝하고, SQL Satellite를 사용하여 외부 런타임과 SQL Server 간의 데이터 전송을 관리합니다. 작업이 실행되는 동안 [프로세스 탐색기](/sysinternals/downloads/process-explorer)를 실행하는 경우 하나 이상의 BxlServer 인스턴스가 표시될 수 있습니다.
 
 실제로 BxlServer는 SQL Server에서 작동하여 데이터를 전송하고 작업을 관리하는 언어 런타임 환경의 도우미입니다. BXL은 이진 교환 언어의 약자이며, SQL Server와 외부 프로세스 간에 데이터를 효율적으로 이동하는 데 사용되는 데이터 형식을 나타냅니다. BxlServer는 Microsoft R Client 및 Microsoft R Server와 같은 관련 제품의 중요한 부분이기도 합니다.
 
@@ -139,7 +139,7 @@ SQL Satellite는 Windows 확장 이벤트(xEvents)를 사용하여 모니터링�
 
 + **기타 프로토콜**
 
-  "청크"로 작업하거나 데이터를 원격 클라이언트에 다시 전송해야 하는 프로세스도 [XDF 파일 형식](https://docs.microsoft.com/machine-learning-server/r/concept-what-is-xdf)을 사용할 수 있습니다. 실제 데이터는 인코딩된 Blob을 통해 전송됩니다.
+  "청크"로 작업하거나 데이터를 원격 클라이언트에 다시 전송해야 하는 프로세스도 [XDF 파일 형식](/machine-learning-server/r/concept-what-is-xdf)을 사용할 수 있습니다. 실제 데이터는 인코딩된 Blob을 통해 전송됩니다.
 
 ## <a name="see-also"></a>참고 항목
 

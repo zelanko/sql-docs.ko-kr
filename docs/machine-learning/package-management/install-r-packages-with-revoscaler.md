@@ -9,12 +9,12 @@ author: garyericson
 ms.author: garye
 ms.reviewer: davidph
 monikerRange: =sql-server-2016||=sql-server-2017||=sqlallproducts-allversions
-ms.openlocfilehash: b2dd0f77dcfc8c116bfbf0f4431c2825f6cb9e68
-ms.sourcegitcommit: 9b41725d6db9957dd7928a3620fe4db41eb51c6e
+ms.openlocfilehash: e68c51930cae4762723f098089d0913792748c61
+ms.sourcegitcommit: afb02c275b7c79fbd90fac4bfcfd92b00a399019
 ms.translationtype: HT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 08/13/2020
-ms.locfileid: "88179314"
+ms.lasthandoff: 10/12/2020
+ms.locfileid: "91956681"
 ---
 # <a name="use-revoscaler-to-install-r-packages"></a>RevoScaleR을 사용하여 R 패키지 설치
 
@@ -33,12 +33,12 @@ ms.locfileid: "88179314"
 
 | 함수 | Description |
 |----------|-------------|
-| [rxSqlLibPaths](https://docs.microsoft.com/machine-learning-server/r-reference/revoscaler/rxsqllibpaths) | 원격 SQL Server의 인스턴스 라이브러리 경로를 확인합니다. |
-| [rxFindPackage](https://docs.microsoft.com/machine-learning-server/r-reference/revoscaler/rxfindpackage) | 원격 SQL Server에 있는 하나 이상의 패키지에 대한 경로를 가져옵니다. |
-| [rxInstallPackages](https://docs.microsoft.com/machine-learning-server/r-reference/revoscaler/rxinstallpackages) | 원격 R 클라이언트에서 이 함수를 호출하여 지정된 리포지토리에서 또는 로컬로 저장된 압축 패키지를 읽어 SQL Server 컴퓨팅 컨텍스트에 패키지를 설치합니다. 이 함수는 종속성을 확인하고 로컬 컴퓨팅 컨텍스트의 R 패키지 설치와 마찬가지로 SQL Server에 관련 패키지를 설치할 수 있는지 확인합니다. 이 옵션을 사용하려면 서버 및 데이터베이스에서 패키지 관리를 사용하도록 설정해야 합니다. 클라이언트 환경과 서버 환경의 RevoScaleR 버전이 동일해야 합니다. |
-| [rxInstalledPackages](https://docs.microsoft.com/machine-learning-server/r-reference/revoscaler/rxinstalledpackages) | 지정된 컴퓨팅 컨텍스트에서 설치된 패키지 목록을 가져옵니다. |
-| [rxSyncPackages](https://docs.microsoft.com/machine-learning-server/r-reference/revoscaler/rxsyncpackages) | 지정된 컴퓨팅 컨텍스트에 대한 패키지 라이브러리 정보를 파일 시스템과 데이터베이스 사이에 복사합니다. |
-| [rxRemovePackages](https://docs.microsoft.com/machine-learning-server/r-reference/revoscaler/rxremovepackages) | 지정된 컴퓨팅 컨텍스트에서 패키지를 제거합니다. 또한 종속성을 계산하고 SQL Server의 다른 패키지에서 더 이상 사용되지 않는 패키지를 제거하여 리소스를 확보하도록 합니다. |
+| [rxSqlLibPaths](/machine-learning-server/r-reference/revoscaler/rxsqllibpaths) | 원격 SQL Server의 인스턴스 라이브러리 경로를 확인합니다. |
+| [rxFindPackage](/machine-learning-server/r-reference/revoscaler/rxfindpackage) | 원격 SQL Server에 있는 하나 이상의 패키지에 대한 경로를 가져옵니다. |
+| [rxInstallPackages](/machine-learning-server/r-reference/revoscaler/rxinstallpackages) | 원격 R 클라이언트에서 이 함수를 호출하여 지정된 리포지토리에서 또는 로컬로 저장된 압축 패키지를 읽어 SQL Server 컴퓨팅 컨텍스트에 패키지를 설치합니다. 이 함수는 종속성을 확인하고 로컬 컴퓨팅 컨텍스트의 R 패키지 설치와 마찬가지로 SQL Server에 관련 패키지를 설치할 수 있는지 확인합니다. 이 옵션을 사용하려면 서버 및 데이터베이스에서 패키지 관리를 사용하도록 설정해야 합니다. 클라이언트 환경과 서버 환경의 RevoScaleR 버전이 동일해야 합니다. |
+| [rxInstalledPackages](/machine-learning-server/r-reference/revoscaler/rxinstalledpackages) | 지정된 컴퓨팅 컨텍스트에서 설치된 패키지 목록을 가져옵니다. |
+| [rxSyncPackages](/machine-learning-server/r-reference/revoscaler/rxsyncpackages) | 지정된 컴퓨팅 컨텍스트에 대한 패키지 라이브러리 정보를 파일 시스템과 데이터베이스 사이에 복사합니다. |
+| [rxRemovePackages](/machine-learning-server/r-reference/revoscaler/rxremovepackages) | 지정된 컴퓨팅 컨텍스트에서 패키지를 제거합니다. 또한 종속성을 계산하고 SQL Server의 다른 패키지에서 더 이상 사용되지 않는 패키지를 제거하여 리소스를 확보하도록 합니다. |
 
 ## <a name="prerequisites"></a>사전 요구 사항
 
@@ -56,14 +56,14 @@ ms.locfileid: "88179314"
 
 ## <a name="client-connections"></a>클라이언트 연결
 
-클라이언트 워크스테이션은 동일한 네트워크에서 [Microsoft R Client](https://docs.microsoft.com/machine-learning-server/r-client/install-on-windows) 또는 [Microsoft Machine Learning Server](https://docs.microsoft.com/machine-learning-server/install/machine-learning-server-windows-install)(데이터 과학자는 일반적으로 무료 개발자 버전 사용)일 수 있습니다.
+클라이언트 워크스테이션은 동일한 네트워크에서 [Microsoft R Client](/machine-learning-server/r-client/install-on-windows) 또는 [Microsoft Machine Learning Server](/machine-learning-server/install/machine-learning-server-windows-install)(데이터 과학자는 일반적으로 무료 개발자 버전 사용)일 수 있습니다.
 
-원격 R 클라이언트에서 패키지 관리 함수를 호출하는 경우 [RxInSqlServer](https://docs.microsoft.com/machine-learning-server/r-reference/revoscaler/rxinsqlserver) 함수를 사용하여 컴퓨팅 컨텍스트 개체를 먼저 만들어야 합니다. 그런 다음 사용하는 각 패키지 관리 함수에 대해 컴퓨팅 컨텍스트를 인수로 전달합니다.
+원격 R 클라이언트에서 패키지 관리 함수를 호출하는 경우 [RxInSqlServer](/machine-learning-server/r-reference/revoscaler/rxinsqlserver) 함수를 사용하여 컴퓨팅 컨텍스트 개체를 먼저 만들어야 합니다. 그런 다음 사용하는 각 패키지 관리 함수에 대해 컴퓨팅 컨텍스트를 인수로 전달합니다.
 
 사용자 ID는 일반적으로 컴퓨팅 컨텍스트를 설정할 때 지정됩니다. 컴퓨팅 컨텍스트를 만들 때 사용자 이름 및 암호를 지정하지 않으면 R 코드를 실행하는 사용자의 ID가 사용됩니다.
 
 1. R 명령줄에서 인스턴스 및 데이터베이스에 대한 연결 문자열을 정의합니다.
-2. [RxInSqlServer](https://docs.microsoft.com/machine-learning-server/r-reference/revoscaler/rxinsqlserver) 생성자를 사용하여 연결 문자열로 SQL Server 컴퓨팅 컨텍스트를 정의합니다.
+2. [RxInSqlServer](/machine-learning-server/r-reference/revoscaler/rxinsqlserver) 생성자를 사용하여 연결 문자열로 SQL Server 컴퓨팅 컨텍스트를 정의합니다.
 
     ```R
     sqlcc <- RxInSqlServer(connectionString = myConnString, shareDir = sqlShareDir, wait = sqlWait, consoleOutput = sqlConsoleOutput)
@@ -74,7 +74,7 @@ ms.locfileid: "88179314"
     packageList <- c("e1071", "mice")
     ```
 
-4. [rxInstallPackages](https://docs.microsoft.com/machine-learning-server/r-reference/revoscaler/rxinstallpackages)를 호출하고, 컴퓨팅 컨텍스트와 패키지 이름을 포함하는 문자열 변수를 전달합니다.
+4. [rxInstallPackages](/machine-learning-server/r-reference/revoscaler/rxinstallpackages)를 호출하고, 컴퓨팅 컨텍스트와 패키지 이름을 포함하는 문자열 변수를 전달합니다.
 
     ```R
     rxInstallPackages(pkgs = packageList, verbose = TRUE, computeContext = sqlcc)

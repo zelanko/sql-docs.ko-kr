@@ -9,12 +9,12 @@ author: dphansen
 ms.author: davidph
 ms.custom: seo-lt-2019
 monikerRange: '>=sql-server-2016||>=sql-server-linux-ver15||=sqlallproducts-allversions'
-ms.openlocfilehash: 89e7a3e15f389de8fc696247197c9f678955ed73
-ms.sourcegitcommit: 5f658b286f56001b055a8898d97e74906516dc99
+ms.openlocfilehash: e6809a66ce7f5fd425ce9bfeb2b1fea919c4dfaa
+ms.sourcegitcommit: afb02c275b7c79fbd90fac4bfcfd92b00a399019
 ms.translationtype: HT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 09/11/2020
-ms.locfileid: "90009349"
+ms.lasthandoff: 10/12/2020
+ms.locfileid: "91956934"
 ---
 # <a name="real-time-scoring-with-sp_rxpredict-in-sql-server"></a>SQL Server의 sp_rxPredict를 사용한 실시간 채점
 [!INCLUDE[sqlserver2016](../../includes/applies-to-version/sqlserver2016.md)]
@@ -44,12 +44,12 @@ SQL Server의 [sp_rxPredict](../../relational-databases/system-stored-procedures
 
 + 지원되는 **rx** 알고리즘 중 하나를 사용하여 모델을 미리 학습시켜야 합니다. R의 경우 `sp_rxPredict`에 대한 실시간 채점은 [RevoScaleR 및 MicrosoftML 지원 알고리즘](#bkmk_rt_supported_algos)과 함께 작동합니다. Python의 경우 [revoscalepy 및 microsoftml 지원 알고리즘](#bkmk_py_supported_algos)을 참조하세요.
 
-+ R에는 [rxSerialize](https://docs.microsoft.com/machine-learning-server/r-reference/revoscaler/rxserializemodel)를, Python에는 [rx_serialize_model](https://docs.microsoft.com/machine-learning-server/python-reference/revoscalepy/rx-serialize-model)을 사용하여 모델을 직렬화합니다. 이러한 직렬화 함수는 빠른 채점을 지원하도록 최적화되었습니다.
++ R에는 [rxSerialize](/machine-learning-server/r-reference/revoscaler/rxserializemodel)를, Python에는 [rx_serialize_model](/machine-learning-server/python-reference/revoscalepy/rx-serialize-model)을 사용하여 모델을 직렬화합니다. 이러한 직렬화 함수는 빠른 채점을 지원하도록 최적화되었습니다.
 
 + 모델을 호출하려는 데이터베이스 엔진 인스턴스에 모델을 저장합니다. 이 인스턴스에는 R 또는 Python 런타임 확장이 필요하지 않습니다.
 
 > [!Note]
-> 실시간 채점은 현재 몇 개의 행에서 수십만 개의 행까지, 더 작은 데이터 세트에 대한 빠른 예측에 최적화되어 있습니다. 빅 데이터 세트에서 [rxPredict](https://docs.microsoft.com/machine-learning-server/r-reference/revoscaler/rxpredict)를 사용하는 것이 더 빠를 수 있습니다.
+> 실시간 채점은 현재 몇 개의 행에서 수십만 개의 행까지, 더 작은 데이터 세트에 대한 빠른 예측에 최적화되어 있습니다. 빅 데이터 세트에서 [rxPredict](/machine-learning-server/r-reference/revoscaler/rxpredict)를 사용하는 것이 더 빠를 수 있습니다.
 
 <a name ="bkmk_enableRtScoring"></a> 
 
@@ -98,29 +98,29 @@ SQL Server의 [sp_rxPredict](../../relational-databases/system-stored-procedures
 
 + revoscalepy 모델
 
-  + [rx_lin_mod](https://docs.microsoft.com/machine-learning-server/python-reference/revoscalepy/rx-lin-mod) \*
-  + [rx_logit](https://docs.microsoft.com/machine-learning-server/python-reference/revoscalepy/rx-logit) \*
-  + [rx_btrees](https://docs.microsoft.com/machine-learning-server/python-reference/revoscalepy/rx-btrees) \*
-  + [rx_dtree](https://docs.microsoft.com/machine-learning-server/python-reference/revoscalepy/rx-dtree) \*
-  + [rx_dforest](https://docs.microsoft.com/machine-learning-server/python-reference/revoscalepy/rx-dforest) \*
+  + [rx_lin_mod](/machine-learning-server/python-reference/revoscalepy/rx-lin-mod) \*
+  + [rx_logit](/machine-learning-server/python-reference/revoscalepy/rx-logit) \*
+  + [rx_btrees](/machine-learning-server/python-reference/revoscalepy/rx-btrees) \*
+  + [rx_dtree](/machine-learning-server/python-reference/revoscalepy/rx-dtree) \*
+  + [rx_dforest](/machine-learning-server/python-reference/revoscalepy/rx-dforest) \*
   
   \*가 표시된 모델은 PREDICT 함수를 사용하는 네이티브 채점도 지원합니다.
 
 + microsoftml 모델
 
-  + [rx_fast_trees](https://docs.microsoft.com/machine-learning-server/python-reference/microsoftml/rx-fast-trees)
-  + [rx_fast_forest](https://docs.microsoft.com/machine-learning-server/python-reference/microsoftml/rx-fast-forest)
-  + [rx_logistic_regression](https://docs.microsoft.com/machine-learning-server/python-reference/microsoftml/rx-logistic-regression)
-  + [rx_oneclass_svm](https://docs.microsoft.com/machine-learning-server/python-reference/microsoftml/rx-oneclass-svm)
-  + [rx_neural_net](https://docs.microsoft.com/machine-learning-server/python-reference/microsoftml/rx-neural-network)
-  + [rx_fast_linear](https://docs.microsoft.com/machine-learning-server/python-reference/microsoftml/rx-fast-linear)
+  + [rx_fast_trees](/machine-learning-server/python-reference/microsoftml/rx-fast-trees)
+  + [rx_fast_forest](/machine-learning-server/python-reference/microsoftml/rx-fast-forest)
+  + [rx_logistic_regression](/machine-learning-server/python-reference/microsoftml/rx-logistic-regression)
+  + [rx_oneclass_svm](/machine-learning-server/python-reference/microsoftml/rx-oneclass-svm)
+  + [rx_neural_net](/machine-learning-server/python-reference/microsoftml/rx-neural-network)
+  + [rx_fast_linear](/machine-learning-server/python-reference/microsoftml/rx-fast-linear)
 
 + microsoftml에서 제공하는 변환
 
-  + [featurize_text](https://docs.microsoft.com/machine-learning-server/python-reference/microsoftml/featurize-text)
-  + [concat](https://docs.microsoft.com/machine-learning-server/python-reference/microsoftml/concat)
-  + [categorical](https://docs.microsoft.com/machine-learning-server/python-reference/microsoftml/categorical)
-  + [categorical_hash](https://docs.microsoft.com/machine-learning-server/python-reference/microsoftml/categorical-hash)
+  + [featurize_text](/machine-learning-server/python-reference/microsoftml/featurize-text)
+  + [concat](/machine-learning-server/python-reference/microsoftml/concat)
+  + [categorical](/machine-learning-server/python-reference/microsoftml/categorical)
+  + [categorical_hash](/machine-learning-server/python-reference/microsoftml/categorical-hash)
 
 <a name="bkmk_rt_supported_algos"></a>
 
@@ -128,30 +128,30 @@ SQL Server의 [sp_rxPredict](../../relational-databases/system-stored-procedures
 
 + RevoScaleR 모델
 
-  + [rxLinMod](https://docs.microsoft.com/machine-learning-server/r-reference/revoscaler/rxlinmod) \*
-  + [rxLogit](https://docs.microsoft.com/machine-learning-server/r-reference/revoscaler/rxlogit) \*
-  + [rxBTrees](https://docs.microsoft.com/machine-learning-server/r-reference/revoscaler/rxbtrees) \*
-  + [rxDtree](https://docs.microsoft.com/machine-learning-server/r-reference/revoscaler/rxdtree) \*
-  + [rxdForest](https://docs.microsoft.com/machine-learning-server/r-reference/revoscaler/rxdforest) \*
+  + [rxLinMod](/machine-learning-server/r-reference/revoscaler/rxlinmod) \*
+  + [rxLogit](/machine-learning-server/r-reference/revoscaler/rxlogit) \*
+  + [rxBTrees](/machine-learning-server/r-reference/revoscaler/rxbtrees) \*
+  + [rxDtree](/machine-learning-server/r-reference/revoscaler/rxdtree) \*
+  + [rxdForest](/machine-learning-server/r-reference/revoscaler/rxdforest) \*
   
   \*가 표시된 모델은 PREDICT 함수를 사용하는 네이티브 채점도 지원합니다.
 
 + MicrosoftML 모델
 
-  + [rxFastTrees](https://docs.microsoft.com/machine-learning-server/r-reference/microsoftml/rxfasttrees)
-  + [rxFastForest](https://docs.microsoft.com/machine-learning-server/r-reference/microsoftml/rxfastforest)
-  + [rxLogisticRegression](https://docs.microsoft.com/machine-learning-server/r-reference/microsoftml/rxlogisticregression)
-  + [rxOneClassSvm](https://docs.microsoft.com/machine-learning-server/r-reference/microsoftml/rxoneclasssvm)
-  + [rxNeuralNet](https://docs.microsoft.com/machine-learning-server/r-reference/microsoftml/rxneuralnet)
-  + [rxFastLinear](https://docs.microsoft.com/machine-learning-server/r-reference/microsoftml/rxfastlinear)
+  + [rxFastTrees](/machine-learning-server/r-reference/microsoftml/rxfasttrees)
+  + [rxFastForest](/machine-learning-server/r-reference/microsoftml/rxfastforest)
+  + [rxLogisticRegression](/machine-learning-server/r-reference/microsoftml/rxlogisticregression)
+  + [rxOneClassSvm](/machine-learning-server/r-reference/microsoftml/rxoneclasssvm)
+  + [rxNeuralNet](/machine-learning-server/r-reference/microsoftml/rxneuralnet)
+  + [rxFastLinear](/machine-learning-server/r-reference/microsoftml/rxfastlinear)
 
 + MicrosoftML에서 제공하는 변환
 
-  + [featurizeText](https://docs.microsoft.com/machine-learning-server/r-reference/microsoftml/rxfasttrees)
-  + [concat](https://docs.microsoft.com/machine-learning-server/r-reference/microsoftml/concat)
-  + [categorical](https://docs.microsoft.com/machine-learning-server/r-reference/microsoftml/categorical)
-  + [categoricalHash](https://docs.microsoft.com/machine-learning-server/r-reference/microsoftml/categoricalHash)
-  + [selectFeatures](https://docs.microsoft.com/machine-learning-server/r-reference/microsoftml/selectFeatures)
+  + [featurizeText](/machine-learning-server/r-reference/microsoftml/rxfasttrees)
+  + [concat](/machine-learning-server/r-reference/microsoftml/concat)
+  + [categorical](/machine-learning-server/r-reference/microsoftml/categorical)
+  + [categoricalHash](/machine-learning-server/r-reference/microsoftml/categoricalHash)
+  + [selectFeatures](/machine-learning-server/r-reference/microsoftml/selectFeatures)
 
 ### <a name="unsupported-model-types"></a>지원되지 않는 모델 형식
 
@@ -167,7 +167,7 @@ SQL Server의 [sp_rxPredict](../../relational-databases/system-stored-procedures
 
 ### <a name="step-1-prepare-and-save-the-model"></a>1단계. 모델 준비 및 저장
 
-sp\_rxPredict에 필요한 이진 형식은 PREDICT 함수를 사용하는 데 필요한 형식과 동일합니다. 따라서 R 코드에서 [rxSerializeModel](https://docs.microsoft.com/machine-learning-server/r-reference/revoscaler/rxserializemodel)에 대한 호출을 포함하고 다음 예제와 같이 `realtimeScoringOnly = TRUE`를 지정해야 합니다.
+sp\_rxPredict에 필요한 이진 형식은 PREDICT 함수를 사용하는 데 필요한 형식과 동일합니다. 따라서 R 코드에서 [rxSerializeModel](/machine-learning-server/r-reference/revoscaler/rxserializemodel)에 대한 호출을 포함하고 다음 예제와 같이 `realtimeScoringOnly = TRUE`를 지정해야 합니다.
 
 ```R
 model <- rxSerializeModel(model.name, realtimeScoringOnly = TRUE)
@@ -195,7 +195,7 @@ EXEC sp_rxPredict
 >
 > 따라서 실시간 채점에 사용하기 전에 입력 데이터에서 지원되지 않는 형식을 필터링해야 할 수도 있습니다.
 >
-> 해당하는 SQL 형식에 대한 자세한 내용은 [SQL-CLR 형식 매핑](/dotnet/framework/data/adonet/sql/linq/sql-clr-type-mapping) 또는 [CLR 매개 변수 데이터 매핑](https://docs.microsoft.com/sql/relational-databases/clr-integration-database-objects-types-net-framework/mapping-clr-parameter-data)을 참조하세요.
+> 해당하는 SQL 형식에 대한 자세한 내용은 [SQL-CLR 형식 매핑](/dotnet/framework/data/adonet/sql/linq/sql-clr-type-mapping) 또는 [CLR 매개 변수 데이터 매핑](../../relational-databases/clr-integration-database-objects-types-net-framework/mapping-clr-parameter-data.md)을 참조하세요.
 
 ## <a name="next-steps"></a>다음 단계
 

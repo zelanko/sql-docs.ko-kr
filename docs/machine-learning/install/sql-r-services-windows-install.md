@@ -10,12 +10,12 @@ author: dphansen
 ms.author: davidph
 ms.custom: contperfq4
 monikerRange: =sql-server-2016||=sqlallproducts-allversions
-ms.openlocfilehash: 14dca3774771a3cb3a83c99811f3145dfd582de9
-ms.sourcegitcommit: e700497f962e4c2274df16d9e651059b42ff1a10
+ms.openlocfilehash: 1aa6fee67871e705f915f72a178ee4d0e4c562e6
+ms.sourcegitcommit: afb02c275b7c79fbd90fac4bfcfd92b00a399019
 ms.translationtype: HT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 08/17/2020
-ms.locfileid: "88487656"
+ms.lasthandoff: 10/12/2020
+ms.locfileid: "91956774"
 ---
 # <a name="install-sql-server-2016-r-services"></a>SQL Server 2016 R Services 설치
 
@@ -32,7 +32,7 @@ Windows에 SQL Server 2016 R Services를 설치하는 방법을 알아봅니다.
 
 + 데이터베이스 엔진 인스턴스가 필요합니다. 기존 인스턴스에 증분식으로 추가할 수 있지만 R만 설치할 수는 없습니다.
 
-+ 비즈니스 연속성을 위해 [Always On 가용성 그룹](https://docs.microsoft.com/sql/database-engine/availability-groups/windows/overview-of-always-on-availability-groups-sql-server)이 R Services에 대해 지원됩니다. 각 노드에서 R Services를 설치하고 패키지를 구성해야 합니다.
++ 비즈니스 연속성을 위해 [Always On 가용성 그룹](../../database-engine/availability-groups/windows/overview-of-always-on-availability-groups-sql-server.md)이 R Services에 대해 지원됩니다. 각 노드에서 R Services를 설치하고 패키지를 구성해야 합니다.
 
 + SQL Server Always On FCI(장애 조치(failover) 클러스터 인스턴스)에는 R Services를 설치하지 마세요. R 프로세스 격리에 사용되는 보안 메커니즘이 SQL Server Always On FCI(장애 조치(failover) 클러스터 인스턴스) 환경과 호환되지 않기 때문입니다.
 
@@ -91,7 +91,7 @@ Microsoft는 SQL Server에서 필수 조건으로 설치되는 Microsoft VC++ 20
     + 데이터베이스 엔진 서비스
     + R Services(In-database)
 
-1. 설치가 완료된 후 컴퓨터를 다시 시작하라는 메시지가 나타나면 다시 시작합니다. 설치가 끝나면 설치 마법사에 표시되는 메시지를 읽어야 합니다. 자세한 내용은 [View and Read SQL Server Setup Log Files](https://docs.microsoft.com/sql/database-engine/install-windows/view-and-read-sql-server-setup-log-files)을 참조하세요.
+1. 설치가 완료된 후 컴퓨터를 다시 시작하라는 메시지가 나타나면 다시 시작합니다. 설치가 끝나면 설치 마법사에 표시되는 메시지를 읽어야 합니다. 자세한 내용은 [View and Read SQL Server Setup Log Files](../../database-engine/install-windows/view-and-read-sql-server-setup-log-files.md)을 참조하세요.
 
 ## <a name="set-environment-variables"></a>환경 변수 설정
 
@@ -110,7 +110,7 @@ R 기능 통합의 경우에만 **MKL_CBWR** 환경 변수를 설정하여 Intel
 
 ##  <a name="enable-script-execution"></a>스크립트 실행 사용
 
-1. [SSMS(SQL Server Management Studio)](https://docs.microsoft.com/sql/ssms/download-sql-server-management-studio-ssms) 또는 [Azure Data Studio](../../azure-data-studio/what-is.md)를 엽니다.
+1. [SSMS(SQL Server Management Studio)](../../ssms/download-sql-server-management-studio-ssms.md) 또는 [Azure Data Studio](../../azure-data-studio/what-is.md)를 엽니다.
 
 1. R Services를 설치한 인스턴스에 연결하고 **새 쿼리**를 클릭하여 쿼리 창을 열고 다음 명령을 실행합니다.
 
@@ -181,7 +181,7 @@ SSMS 인스턴스에 대한 오른쪽 클릭 **다시 시작** 명령을 사용�
 
 1. 이미 설치된 기준 인스턴스를 사용하여 시작합니다. SQL Server 2016 초기 릴리스, SQL Server 2016 SP 1 또는 SQL Server 2016 SP 2
 
-1. 누적 업데이트 목록으로 이동합니다. [Microsoft SQL Server에 대한 최신 업데이트](https://docs.microsoft.com/sql/database-engine/install-windows/latest-updates-for-microsoft-sql-server)
+1. 누적 업데이트 목록으로 이동합니다. [Microsoft SQL Server에 대한 최신 업데이트](../../database-engine/install-windows/latest-updates-for-microsoft-sql-server.md)
 
 1. 최신 서비스 팩(아직 기준 인스턴스로 설치되지 않음) 및 누적 업데이트를 선택합니다. 실행 파일이 자동으로 다운로드되고 추출됩니다.
 
@@ -205,7 +205,7 @@ SSMS 인스턴스에 대한 오른쪽 클릭 **다시 시작** 명령을 사용�
 * [SQL Server Machine Learning Services에 대한 방화벽 구성](../../machine-learning/security/firewall-configuration.md)
 * [추가 네트워크 프로토콜 사용](../../database-engine/configure-windows/enable-or-disable-a-server-network-protocol.md)
 * [원격 연결 사용](../../database-engine/configure-windows/configure-the-remote-access-server-configuration-option.md)
-* [디스크 할당량을 관리](https://docs.microsoft.com/windows/desktop/fileio/managing-disk-quotas)하여 디스크 공간을 소모하는 작업을 실행하는 외부 스크립트 방지
+* [디스크 할당량을 관리](/windows/desktop/fileio/managing-disk-quotas)하여 디스크 공간을 소모하는 작업을 실행하는 외부 스크립트 방지
 
 <a name="bkmk_configureAccounts"></a>
 <a name="bkmk_AllowLogon"></a>

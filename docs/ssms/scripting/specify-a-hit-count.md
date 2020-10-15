@@ -16,12 +16,12 @@ ms.reviewer: ''
 ms.custom: seo-lt-2019
 ms.date: 12/04/2019
 monikerRange: '>=aps-pdw-2016||=azuresqldb-current||=azure-sqldw-latest||>=sql-server-2016||=sqlallproducts-allversions||>=sql-server-linux-2017||=azuresqldb-mi-current'
-ms.openlocfilehash: d83f361efd4d822456366133729759cb16c18647
-ms.sourcegitcommit: 6d53ecfdc463914f045c20eda96da39dec22acca
+ms.openlocfilehash: 56af9dbb3c2245bc3b45d8dde24ae5be169f886d
+ms.sourcegitcommit: 22dacedeb6e8721e7cdb6279a946d4002cfb5da3
 ms.translationtype: HT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 08/26/2020
-ms.locfileid: "88901416"
+ms.lasthandoff: 10/14/2020
+ms.locfileid: "92036286"
 ---
 # <a name="specify-a-hit-count"></a>적중 횟수 지정
 
@@ -47,7 +47,7 @@ ms.locfileid: "88901416"
   
  중단점 중단을 실행하지 않고 중단점 적중 횟수를 추적하려면 중단점이 중단되지 않도록 적중 횟수를 매우 높은 값으로 지정합니다.  
   
- 중단점의 기본 동작은 적중 횟수와 중단점 조건을 모두 만족하면 실행을 중단하는 것입니다. 다른 동작을 지정하는 방법은 [중단점 동작 지정](../../relational-databases/scripting/specify-a-breakpoint-action.md)을 참조하세요.  
+ 중단점의 기본 동작은 적중 횟수와 중단점 조건을 모두 만족하면 실행을 중단하는 것입니다. 다른 동작을 지정하는 방법은 [중단점 동작 지정](./specify-a-breakpoint-action.md)을 참조하세요.  
   
 #### <a name="to-specify-a-hit-count"></a>적중 횟수를 지정하려면  
   
@@ -78,6 +78,5 @@ ms.locfileid: "88901416"
 4.  **확인** 이나 **취소** 를 클릭하여 대화 상자를 종료합니다.  
   
 ## <a name="see-also"></a>참고 항목  
- [중단점 조건 지정](../../relational-databases/scripting/specify-a-breakpoint-condition.md)  
-  
+ [중단점 조건 지정](./specify-a-breakpoint-condition.md)  
   

@@ -14,12 +14,12 @@ ms.assetid: 1ed6ae10-d212-4ec2-8569-1b94ab1cba6d
 author: markingmyname
 ms.author: maghan
 ms.reviewer: ''
-ms.openlocfilehash: 88f2c0cff6bd33bf5327c7c919370015873700ec
-ms.sourcegitcommit: e700497f962e4c2274df16d9e651059b42ff1a10
+ms.openlocfilehash: d42c0bb0c18b7917ef0e8c8a29e9522e744ce2d2
+ms.sourcegitcommit: 22dacedeb6e8721e7cdb6279a946d4002cfb5da3
 ms.translationtype: HT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 08/17/2020
-ms.locfileid: "88314629"
+ms.lasthandoff: 10/14/2020
+ms.locfileid: "92037782"
 ---
 # <a name="issues-of-database-evolution-visual-database-tools"></a>데이터베이스의 단계적 개발 문제(Visual Database Tools)
 [!INCLUDE[SQL Server Azure SQL Database Synapse Analytics PDW ](../../includes/applies-to-version/sql-asdb-asdbmi-asa-pdw.md)]
@@ -36,6 +36,5 @@ ms.locfileid: "88314629"
 데이터베이스 디자인을 변경하는 방법에 관계 없이 변경 기록을 유지해야 합니다. 프로덕션 데이터베이스의 모든 수정 내용에 대한 SQL 스크립트를 유지하는 것도 변경 기록을 유지하는 한 방법입니다.  
   
 ## <a name="see-also"></a>참고 항목  
-[제약 조건 작업](https://msdn.microsoft.com/637098af-2567-48f8-90f4-b41df059833e)  
+[제약 조건 작업](../../relational-databases/tables/unique-constraints-and-check-constraints.md)  
 [다중 사용자 환경&#40;Visual Database Tools&#41;](../../ssms/visual-db-tools/multiuser-environments-visual-database-tools.md)  
-  

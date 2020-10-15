@@ -11,12 +11,12 @@ ms.topic: conceptual
 ms.assetid: ea3aa222-538d-485f-99dc-01eb02cdcfea
 author: markingmyname
 ms.author: maghan
-ms.openlocfilehash: 8981ada42e88eadcb263e01dd65f1b2cf9015852
-ms.sourcegitcommit: 827ad02375793090fa8fee63cc372d130f11393f
+ms.openlocfilehash: 018a84c06eb9d74032b5d2eaf5dc7041372a14f9
+ms.sourcegitcommit: 22dacedeb6e8721e7cdb6279a946d4002cfb5da3
 ms.translationtype: HT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 09/04/2020
-ms.locfileid: "89480235"
+ms.lasthandoff: 10/14/2020
+ms.locfileid: "92037236"
 ---
 # <a name="options-environment---fonts-and-colors-page"></a>옵션(환경 - 글꼴 및 색 페이지)
 [!INCLUDE[SQL Server Azure SQL Database Synapse Analytics PDW ](../../includes/applies-to-version/sql-asdb-asdbmi-asa-pdw.md)]
@@ -83,4 +83,4 @@ ms.locfileid: "89480235"
 **설정 표시** 및 **표시 항목**에서 선택한 값에 대한 글꼴 스타일, 크기 및 색 구성표 샘플을 표시합니다. 이 입력란을 사용하여 여러 서식 옵션을 적용한 결과를 미리 볼 수 있습니다.  
   
 ## <a name="see-also"></a>참고 항목  
-[코드 편집기의 코드 색 구분](../../relational-databases/scripting/color-coding-in-query-editors.md)  
+[코드 편집기의 코드 색 구분](../scripting/color-coding-in-query-editors.md)

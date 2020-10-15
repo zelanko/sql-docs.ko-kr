@@ -9,30 +9,30 @@ author: garyericson
 ms.author: garye
 ms.reviewer: davidph
 monikerRange: '>=sql-server-ver15||>=sql-server-linux-ver15||=azuresqldb-mi-current||=sqlallproducts-allversions'
-ms.openlocfilehash: a387e10afc9210fd90248fb0240e3b77c37b2afd
-ms.sourcegitcommit: 9be0047805ff14e26710cfbc6e10d6d6809e8b2c
+ms.openlocfilehash: 229b0843fc8602457328921eaa6ff8991f4b5655
+ms.sourcegitcommit: afb02c275b7c79fbd90fac4bfcfd92b00a399019
 ms.translationtype: HT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 08/27/2020
-ms.locfileid: "89042536"
+ms.lasthandoff: 10/12/2020
+ms.locfileid: "91956714"
 ---
 # <a name="install-python-packages-with-sqlmlutils"></a>sqlmlutils를 사용하여 Python 패키지 설치
 
 [!INCLUDE [SQL Server 2019 SQL MI](../../includes/applies-to-version/sqlserver2019-asdbmi.md)]
 
 ::: moniker range=">=sql-server-ver15||>=sql-server-linux-ver15||=sqlallproducts-allversions"
-이 문서에서는 [**sqlmlutils**](https://github.com/Microsoft/sqlmlutils) 패키지의 함수를 사용하여 [SQL Server Machine Learning Services](../sql-server-machine-learning-services.md) 및 [빅 데이터 클러스터](../../big-data-cluster/machine-learning-services.md) 인스턴스에 새 Python 패키지를 설치하는 방법을 설명합니다. 설치한 패키지는 [sp_execute_external_script](https://docs.microsoft.com/sql/relational-databases/system-stored-procedures/sp-execute-external-script-transact-sql) T-SQL 문을 사용하여 데이터베이스 내에서 실행되는 Python 스크립트에서 사용할 수 있습니다.
+이 문서에서는 [**sqlmlutils**](https://github.com/Microsoft/sqlmlutils) 패키지의 함수를 사용하여 [SQL Server Machine Learning Services](../sql-server-machine-learning-services.md) 및 [빅 데이터 클러스터](../../big-data-cluster/machine-learning-services.md) 인스턴스에 새 Python 패키지를 설치하는 방법을 설명합니다. 설치한 패키지는 [sp_execute_external_script](../../relational-databases/system-stored-procedures/sp-execute-external-script-transact-sql.md) T-SQL 문을 사용하여 데이터베이스 내에서 실행되는 Python 스크립트에서 사용할 수 있습니다.
 ::: moniker-end
 
 ::: moniker range="=azuresqldb-mi-current||=sqlallproducts-allversions"
-이 문서에서는 [**sqlmlutils**](https://github.com/Microsoft/sqlmlutils) 패키지의 함수를 사용하여 [Azure SQL Managed Instance Machine Learning Services](/azure/azure-sql/managed-instance/machine-learning-services-overview) 인스턴스에 새 Python 패키지를 설치하는 방법을 설명합니다. 설치한 패키지는 [sp_execute_external_script](https://docs.microsoft.com/sql/relational-databases/system-stored-procedures/sp-execute-external-script-transact-sql) T-SQL 문을 사용하여 데이터베이스 내에서 실행되는 Python 스크립트에서 사용할 수 있습니다.
+이 문서에서는 [**sqlmlutils**](https://github.com/Microsoft/sqlmlutils) 패키지의 함수를 사용하여 [Azure SQL Managed Instance Machine Learning Services](/azure/azure-sql/managed-instance/machine-learning-services-overview) 인스턴스에 새 Python 패키지를 설치하는 방법을 설명합니다. 설치한 패키지는 [sp_execute_external_script](../../relational-databases/system-stored-procedures/sp-execute-external-script-transact-sql.md) T-SQL 문을 사용하여 데이터베이스 내에서 실행되는 Python 스크립트에서 사용할 수 있습니다.
 ::: moniker-end
 
 패키지 위치 및 설치 경로에 대한 자세한 내용은 [Python 패키지 정보 가져오기](../package-management/python-package-information.md)를 참조하세요.
 
 ::: moniker range=">=sql-server-ver15||>=sql-server-linux-ver15||=sqlallproducts-allversions"
 > [!NOTE]
-> 이 문서에서 설명하는 **sqlmlutils** 패키지는 SQL Server 2019 이상에 Python 패키지를 추가하는 데 사용됩니다. SQL Server 2017 이전 버전의 경우 [Python 도구를 사용하여 패키지 설치](https://docs.microsoft.com/sql/machine-learning/package-management/install-python-packages-standard-tools?view=sql-server-2017)를 참조하세요.
+> 이 문서에서 설명하는 **sqlmlutils** 패키지는 SQL Server 2019 이상에 Python 패키지를 추가하는 데 사용됩니다. SQL Server 2017 이전 버전의 경우 [Python 도구를 사용하여 패키지 설치](./install-python-packages-standard-tools.md?view=sql-server-2017)를 참조하세요.
 ::: moniker-end
 
 ## <a name="prerequisites"></a>사전 요구 사항
@@ -41,7 +41,7 @@ ms.locfileid: "89042536"
 + Python 언어 옵션과 함께 설치된 [SQL Server Machine Learning Services](../install/sql-machine-learning-services-windows-install.md)가 있어야 합니다.
 ::: moniker-end
 
-+ SQL Server에 연결하는 데 사용하는 클라이언트 컴퓨터에 [Azure Data Studio](https://docs.microsoft.com/sql/azure-data-studio/what-is)를 설치합니다. 다른 데이터베이스 관리 또는 쿼리 도구를 사용할 수 있지만, 이 문서에서는 Azure Data Studio를 사용한다고 가정합니다.
++ SQL Server에 연결하는 데 사용하는 클라이언트 컴퓨터에 [Azure Data Studio](../../azure-data-studio/what-is.md)를 설치합니다. 다른 데이터베이스 관리 또는 쿼리 도구를 사용할 수 있지만, 이 문서에서는 Azure Data Studio를 사용한다고 가정합니다.
 
 + Azure Data Studio에서 Python 커널을 설치합니다. 또한 명령줄에서 Python을 설치하고 사용할 수 있으며, [Visual Studio Code](https://code.visualstudio.com/download)와 같은 Python 개발 환경을 [Python Extension](https://marketplace.visualstudio.com/items?itemName=ms-python.python)과 함께 사용할 수도 있습니다.
 
@@ -74,7 +74,7 @@ ms.locfileid: "89042536"
 
 Azure Data Studio에서 **sqlmlutils**를 사용하는 경우 Python 커널 Notebook의 패키지 관리 기능을 사용하여 설치할 수 있습니다.
 
-1. [Azure Data Studio의 Python 커널 Notebook](../../azure-data-studio/notebooks-tutorial-python-kernel.md)에서 **패키지 관리**를 클릭합니다.
+1. [Azure Data Studio의 Python 커널 Notebook](../../azure-data-studio/notebooks/notebooks-python-kernel.md)에서 **패키지 관리**를 클릭합니다.
 1. **새로 추가**를 클릭합니다.
 1. **Pip 패키지 검색** 필드에 "sqlmlutils"를 입력하고 **검색**을 클릭합니다.
 1. 설치할 **패키지 버전**을 선택합니다(최신 버전 권장).

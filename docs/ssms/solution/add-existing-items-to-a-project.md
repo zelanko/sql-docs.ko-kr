@@ -14,16 +14,16 @@ helpviewer_keywords:
 ms.assetid: 084b3879-e96b-45a7-b421-6a4b0db2b92b
 author: markingmyname
 ms.author: maghan
-ms.openlocfilehash: 3744d99ede7e4f50e7fb4393d8e58cff314f4f06
-ms.sourcegitcommit: e700497f962e4c2274df16d9e651059b42ff1a10
+ms.openlocfilehash: 4231ae6339e40f40ef1626748553c6fd68f6f6b7
+ms.sourcegitcommit: 22dacedeb6e8721e7cdb6279a946d4002cfb5da3
 ms.translationtype: HT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 08/17/2020
-ms.locfileid: "88480127"
+ms.lasthandoff: 10/14/2020
+ms.locfileid: "92036066"
 ---
 # <a name="add-existing-items-to-a-project"></a>프로젝트에 기존 항목 추가
 [!INCLUDE[SQL Server Azure SQL Database Synapse Analytics PDW ](../../includes/applies-to-version/sql-asdb-asdbmi-asa-pdw.md)]
-프로젝트에 새 항목을 추가하여 애플리케이션 기능을 확장할 수 있습니다. 기존 항목은 쿼리나 기타 파일이 될 수 있습니다. [!INCLUDE[ssManStudioFull](../../includes/ssmanstudiofull-md.md)][!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 스크립트 프로젝트 및 Analysis Services 스크립트 프로젝트의 두 가지 프로젝트 형식이 있습니다. 프로젝트 형식에 따라 프로젝트에 추가할 수 있는 쿼리 파일이 결정됩니다. 예를 들어 [!INCLUDE[tsql](../../includes/tsql-md.md)] 스크립트 프로젝트에는 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 쿼리(확장명이 .sql인 파일)를 추가할 수 있지만 Analysis Services 스크립트 프로젝트에는 추가할 수 없습니다. 추가 파일 확장명을 프로젝트 형식에 연결하려면 [방법: 파일 확장명을 코드 편집기에 연결](../../relational-databases/scripting/associate-file-extensions-to-a-code-editor.md)을 참조하세요.  
+프로젝트에 새 항목을 추가하여 애플리케이션 기능을 확장할 수 있습니다. 기존 항목은 쿼리나 기타 파일이 될 수 있습니다. [!INCLUDE[ssManStudioFull](../../includes/ssmanstudiofull-md.md)][!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 스크립트 프로젝트 및 Analysis Services 스크립트 프로젝트의 두 가지 프로젝트 형식이 있습니다. 프로젝트 형식에 따라 프로젝트에 추가할 수 있는 쿼리 파일이 결정됩니다. 예를 들어 [!INCLUDE[tsql](../../includes/tsql-md.md)] 스크립트 프로젝트에는 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 쿼리(확장명이 .sql인 파일)를 추가할 수 있지만 Analysis Services 스크립트 프로젝트에는 추가할 수 없습니다. 추가 파일 확장명을 프로젝트 형식에 연결하려면 [방법: 파일 확장명을 코드 편집기에 연결](../scripting/associate-file-extensions-to-a-code-editor.md)을 참조하세요.  
   
 ### <a name="to-add-an-existing-query-or-a-miscellaneous-file-to-a-project"></a>기존 쿼리나 기타 파일을 프로젝트에 추가하려면  
   
@@ -71,4 +71,3 @@ ms.locfileid: "88480127"
 [솔루션 탐색기](../../ssms/solution/solution-explorer.md)  
 [프로젝트에 새 항목 추가](../../ssms/solution/add-new-items-to-a-project.md)  
 [항목이나 프로젝트 제거 또는 삭제](../../ssms/solution/remove-or-delete-an-item-or-project.md)  
-  

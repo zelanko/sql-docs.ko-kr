@@ -16,19 +16,19 @@ ms.reviewer: ''
 ms.custom: seo-lt-2019
 ms.date: 03/16/2017
 monikerRange: '>=aps-pdw-2016||=azuresqldb-current||=azure-sqldw-latest||>=sql-server-2016||=sqlallproducts-allversions||>=sql-server-linux-2017||=azuresqldb-mi-current'
-ms.openlocfilehash: 8609537fdd61fb40ee88c0e1cb3c05b21a7e5e47
-ms.sourcegitcommit: 6d53ecfdc463914f045c20eda96da39dec22acca
+ms.openlocfilehash: d7525f558f3afd86beedde300b078c82ce0e6206
+ms.sourcegitcommit: 22dacedeb6e8721e7cdb6279a946d4002cfb5da3
 ms.translationtype: HT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 08/26/2020
-ms.locfileid: "88901007"
+ms.lasthandoff: 10/14/2020
+ms.locfileid: "92036106"
 ---
 # <a name="transact-sql-syntax-supported-by-intellisense"></a>IntelliSense에서 지원되는 Transact-SQL 구문
 [!INCLUDE[SQL Server Azure SQL Database Synapse Analytics PDW ](../../includes/applies-to-version/sql-asdb-asdbmi-asa-pdw.md)]
   이 항목에서는 [!INCLUDE[tsql](../../includes/tsql-md.md)] 의 IntelliSense에서 지원하는 [!INCLUDE[ssCurrent](../../includes/sscurrent-md.md)]문 및 구문 요소에 대해 설명합니다.  
   
 ## <a name="statements-supported-by-intellisense"></a>IntelliSense에서 지원하는 문  
- [!INCLUDE[ssCurrent](../../includes/sscurrent-md.md)]에서 IntelliSense는 가장 일반적으로 사용되는 [!INCLUDE[tsql](../../includes/tsql-md.md)] 문만 지원합니다. 일부 일반적인 [!INCLUDE[ssDE](../../includes/ssde-md.md)] 쿼리 편집기 조건으로 인해 IntelliSense가 제대로 작동하지 않을 수 있습니다. 자세한 내용은 [IntelliSense 문제 해결&#40;SQL Server Management Studio&#41;](../../relational-databases/scripting/troubleshooting-intellisense.md)을 참조하세요.  
+ [!INCLUDE[ssCurrent](../../includes/sscurrent-md.md)]에서 IntelliSense는 가장 일반적으로 사용되는 [!INCLUDE[tsql](../../includes/tsql-md.md)] 문만 지원합니다. 일부 일반적인 [!INCLUDE[ssDE](../../includes/ssde-md.md)] 쿼리 편집기 조건으로 인해 IntelliSense가 제대로 작동하지 않을 수 있습니다. 자세한 내용은 [IntelliSense 문제 해결&#40;SQL Server Management Studio&#41;](./troubleshooting-intellisense.md)을 참조하세요.  
   
 > [!NOTE]  
 >  암호화된 저장 프로시저 또는 사용자 정의 함수와 같이 암호화된 데이터베이스 개체에 대해 IntelliSense를 사용할 수 없습니다. 확장 저장 프로시저 및 CLR 통합 사용자 정의 유형의 매개 변수에 대해 매개 변수 도움말 및 요약 정보를 사용할 수 없습니다.  
@@ -166,5 +166,4 @@ SELECT
 ```  
   
  `SELECT`를 입력하면 스크립트를 실행하지 않아 **이**에 아직 없더라도 IntelliSense는 SELECT 목록에 **PrimaryKeyCol**, **FirstNameCol** 및 `MyTable` LastNameCol `MyTestDB`을 사용 가능한 요소로 나열합니다.  
-  
   

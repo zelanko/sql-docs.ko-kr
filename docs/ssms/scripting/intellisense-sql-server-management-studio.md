@@ -12,12 +12,12 @@ ms.assetid: 7d6b0f60-c6ac-4f71-a9d0-fc3c2ffa7e91
 author: markingmyname
 ms.author: maghan
 monikerRange: =azuresqldb-current||>=sql-server-2016||=sqlallproducts-allversions||>=sql-server-linux-2017||=azuresqldb-mi-current
-ms.openlocfilehash: ff6f5f8cd3bd9300e38f0eaaebd9d7c442ab95e8
-ms.sourcegitcommit: 827ad02375793090fa8fee63cc372d130f11393f
+ms.openlocfilehash: 2e5902be2e28aaa2b3f020664ac31b8582de2a42
+ms.sourcegitcommit: 22dacedeb6e8721e7cdb6279a946d4002cfb5da3
 ms.translationtype: HT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 09/04/2020
-ms.locfileid: "89479645"
+ms.lasthandoff: 10/14/2020
+ms.locfileid: "92038984"
 ---
 # <a name="intellisense-sql-server-management-studio"></a>IntelliSense(SQL Server Management Studio)
 [!INCLUDE [SQL Server Azure SQL Database](../../includes/applies-to-version/sql-asdb.md)]
@@ -30,14 +30,13 @@ ms.locfileid: "89479645"
   
 |태스크 설명|항목|  
 |----------------------|-----------|  
-|문 완료 옵션 또는 IntelliSense가 꺼지는 Transact-SQL 스크립트의 크기와 같은 IntelliSense 옵션을 구성하는 방법을 설명합니다.|[IntelliSense 구성&#40;SQL Server Management Studio&#41;](../../relational-databases/scripting/configure-intellisense-sql-server-management-studio.md)|  
-|매개 변수 정보를 사용하여 함수 또는 저장 프로시저 매개 변수의 개수, 이름 및 크기에 대한 정보를 보는 방법을 설명합니다.|[매개 변수 정보&#40;IntelliSense&#41;](../../relational-databases/scripting/parameter-info-intellisense.md)|  
-|요약 정보를 사용하여 식별자(예: 테이블 또는 뷰 이름)를 설명하는 도구 설명을 보는 방법을 설명합니다.|[요약 정보&#40;IntelliSense&#41;](../../relational-databases/scripting/quick-info-intellisense.md)|  
-|이름이 동일한 문자열로 시작하는 개체의 짧은 목록을 표시할 만큼 이름을 입력한 후 IntelliSense에서 식별자의 나머지 부분을 완성하도록 설정하는 방법을 설명합니다.|[단어 자동 완성&#40;IntelliSense&#41;](../../relational-databases/scripting/complete-word-intellisense.md)|  
-|IntelliSense에서 구분 기호 쌍의 양쪽 끝을 식별할 수 있는 방법과 쌍의 양쪽 끝 사이를 건너뛸 수 있는 방법을 설명합니다.|[구문 쌍의 자동 일치 기능](../../relational-databases/scripting/automatic-matching-of-syntax-pairs.md)|  
+|문 완료 옵션 또는 IntelliSense가 꺼지는 Transact-SQL 스크립트의 크기와 같은 IntelliSense 옵션을 구성하는 방법을 설명합니다.|[IntelliSense 구성&#40;SQL Server Management Studio&#41;](./configure-intellisense-sql-server-management-studio.md)|  
+|매개 변수 정보를 사용하여 함수 또는 저장 프로시저 매개 변수의 개수, 이름 및 크기에 대한 정보를 보는 방법을 설명합니다.|[매개 변수 정보&#40;IntelliSense&#41;](./parameter-info-intellisense.md)|  
+|요약 정보를 사용하여 식별자(예: 테이블 또는 뷰 이름)를 설명하는 도구 설명을 보는 방법을 설명합니다.|[요약 정보&#40;IntelliSense&#41;](./quick-info-intellisense.md)|  
+|이름이 동일한 문자열로 시작하는 개체의 짧은 목록을 표시할 만큼 이름을 입력한 후 IntelliSense에서 식별자의 나머지 부분을 완성하도록 설정하는 방법을 설명합니다.|[단어 자동 완성&#40;IntelliSense&#41;](./complete-word-intellisense.md)|  
+|IntelliSense에서 구분 기호 쌍의 양쪽 끝을 식별할 수 있는 방법과 쌍의 양쪽 끝 사이를 건너뛸 수 있는 방법을 설명합니다.|[구문 쌍의 자동 일치 기능](./automatic-matching-of-syntax-pairs.md)|  
 |Intellisense가 작동하지 않을 수 있는 조건을 설명 합니다.|IntelliSense(SQL Server Management Studio) 문제 해결|  
   
 ## <a name="see-also"></a>참고 항목  
- [쿼리 및 텍스트 편집기&#40;SQL Server Management Studio&#41;](https://docs.microsoft.com/sql/ssms/f1-help/database-engine-query-editor-sql-server-management-studio?view=sql-server-ver15)  
-  
+ [쿼리 및 텍스트 편집기&#40;SQL Server Management Studio&#41;](../f1-help/database-engine-query-editor-sql-server-management-studio.md?view=sql-server-ver15)  
   

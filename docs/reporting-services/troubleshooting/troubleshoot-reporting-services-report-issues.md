@@ -9,12 +9,12 @@ ms.topic: conceptual
 ms.assetid: a705d103-85b1-49b5-b27f-332b1040d029
 author: maggiesMSFT
 ms.author: maggies
-ms.openlocfilehash: dcd12b54aa0ef9cee4cd5e0be98889119a99336c
-ms.sourcegitcommit: 68583d986ff5539fed73eacb7b2586a71c37b1fa
+ms.openlocfilehash: 18809d6d6d5937355fedebf72f50e82fadad10ff
+ms.sourcegitcommit: a41e1f4199785a2b8019a419a1f3dcdc15571044
 ms.translationtype: HT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 04/04/2020
-ms.locfileid: "80662798"
+ms.lasthandoff: 10/13/2020
+ms.locfileid: "91988377"
 ---
 # <a name="troubleshoot--reporting-services-report-issues"></a>Reporting Services 보고서 문제 해결
 이 항목에서는 [!INCLUDE[ssRSnoversion](../../includes/ssrsnoversion.md)] 보고서 디자인, 보고서 미리 보기, 기본 모드 또는 SharePoint 모드에서 보고서 서버에 보고서 게시, 보고서 서버에서 보고서 보기 또는 다른 파일 형식으로 보고서 내보내기 등의 작업과 관련된 문제를 해결하는 데 필요한 정보를 제공합니다.  
@@ -38,7 +38,7 @@ ms.locfileid: "80662798"
 ## <a name="use-ssmanstudiofull-to-verify-queries-and-credentials"></a>[!INCLUDE[ssManStudioFull](../../includes/ssmanstudiofull.md)] 를 사용하여 쿼리 및 자격 증명 확인  
 보고서에 복잡한 쿼리를 포함하기 전에 [!INCLUDE[ssManStudioFull](../../includes/ssmanstudiofull.md)] 를 사용하여 이러한 쿼리의 유효성을 검사할 수 있습니다.   
   
-자세한 내용은 [데이터베이스 엔진 쿼리 편집기](../../relational-databases/scripting/database-engine-query-editor-sql-server-management-studio.md) 및 [개체 탐색기를 사용하여 개체 관리](~/ssms/object/manage-objects-by-using-object-explorer.md)를 참조하세요.  
+자세한 내용은 [데이터베이스 엔진 쿼리 편집기](../../ssms/f1-help/database-engine-query-editor-sql-server-management-studio.md) 및 [개체 탐색기를 사용하여 개체 관리](~/ssms/object/manage-objects-by-using-object-explorer.md)를 참조하세요.  
   
 ## <a name="analyze-problem-reports-with-report-data-cached-on-the-client"></a>클라이언트에 캐시된 보고서 데이터를 사용하여 문제 보고서 분석  
 보고서 작성자가 Business Intelligence Development Studio에서 보고서를 만들 때 제작 클라이언트는 데이터를 .rdl 데이터 파일로 캐시합니다. 이 캐시 데이터는 보고서를 미리 볼 때 사용됩니다. 이 캐시는 쿼리가 변경될 때마다 업데이트됩니다. 보고서 문제를 디버깅할 때는 디버깅 중에 데이터가 변경되지 않도록 보고서 데이터의 새로 고침을 방지하는 것이 유용할 수 있습니다.   
@@ -60,5 +60,3 @@ ms.locfileid: "80662798"
   
 
 [!INCLUDE[feedback_stackoverflow_msdn_connect](../../includes/feedback-stackoverflow-msdn-connect-md.md)]
-
-

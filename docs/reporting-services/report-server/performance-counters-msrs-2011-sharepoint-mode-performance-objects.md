@@ -17,12 +17,12 @@ ms.assetid: 70bf6980-7845-4ab5-8b2a-ebf526d811a6
 author: maggiesMSFT
 ms.author: maggies
 monikerRange: '>=sql-server-2016 <=sql-server-2016||=sqlallproducts-allversions'
-ms.openlocfilehash: 50981b1da0addf5bd55e4640653d3471e3aa459d
-ms.sourcegitcommit: f0772f614482e0b3cde3609e178689ce62ca3a19
+ms.openlocfilehash: 01ec0494fa258aed08c723869efb414600eb8359
+ms.sourcegitcommit: a41e1f4199785a2b8019a419a1f3dcdc15571044
 ms.translationtype: HT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 06/09/2020
-ms.locfileid: "84545545"
+ms.lasthandoff: 10/13/2020
+ms.locfileid: "91988730"
 ---
 # <a name="performance-counters-msrs-2011-sharepoint-mode-performance-objects"></a>성능 카운터 MSRS 2011 SharePoint 모드 성능 개체
   이 항목에서는 **SharePoint 모드 배포의 일부인** MSRS 2011 웹 서비스 SharePoint 모드 **및** MSRS 2011 Windows 서비스 SharePoint 모드 [!INCLUDE[ssRSCurrent](../../includes/ssrscurrent-md.md)] 성능 개체에 대한 성능 카운터를 설명합니다.  
@@ -30,7 +30,7 @@ ms.locfileid: "84545545"
 > [!NOTE]  
 >  이 성능 개체는 로컬 보고서 서버의 이벤트를 모니터링합니다. 스케일 아웃 배포에서 보고서 서버를 실행 중이면 카운터는 현재 서버에만 적용되고 스케일 아웃 배포 전체에는 적용되지 않습니다.  
   
- 성능 개체는 Windows 성능 모니터(**Perfmon.exe**)에서 제공됩니다. 자세한 내용은 Windows 설명서를 참조하십시오. [런타임 프로파일링](https://msdn.microsoft.com/library/w4bz2147.aspx)(https://msdn.microsoft.com/library/w4bz2147.aspx).  
+ 성능 개체는 Windows 성능 모니터(**Perfmon.exe**)에서 제공됩니다. 자세한 내용은 Windows 설명서를 참조하십시오. [런타임 프로파일링](/dotnet/framework/debug-trace-profile/runtime-profiling)(https://msdn.microsoft.com/library/w4bz2147.aspx).  
   
  성능 카운터 및 기본 모드 보고서 서버에 대한 자세한 내용은 [MSRS 2011 웹 서비스 및 MSRS 2011 Windows 서비스 성능 개체에 대한 성능 카운터&#40;기본 모드&#41;](../../reporting-services/report-server/performance-counters-msrs-2011-web-service-performance-objects.md)[MSRS 2011 웹 서비스 SharePoint 모드 및 MSRS 2011 Windows 서비스 SharePoint 모드 성능 개체에 대한 성능 카운터(SharePoint 모드)](../../reporting-services/report-server/performance-counters-msrs-2011-sharepoint-mode-performance-objects.md)를 참조하세요.  
   
@@ -120,7 +120,7 @@ ms.locfileid: "84545545"
 |**Total Snapshot Updates**|총 보고서 실행 스냅샷 업데이트 수입니다.|  
   
 ##  <a name="use-powershell-cmdlets-to-return-lists"></a><a name="bkmk_powershell"></a> PowerShell Cmdlet을 사용하여 목록 반환  
- ![PowerShell 관련 콘텐츠](https://docs.microsoft.com/analysis-services/analysis-services/instances/install-windows/media/rs-powershellicon.jpg "PowerShell 관련 콘텐츠")다음 Windows PowerShell 스크립트는 CounterSetName이 “msr”로 시작되는 카운터 집합 반환  
+ ![PowerShell 관련 콘텐츠](/analysis-services/analysis-services/instances/install-windows/media/rs-powershellicon.jpg "PowerShell 관련 콘텐츠")다음 Windows PowerShell 스크립트는 CounterSetName이 “msr”로 시작되는 카운터 집합 반환  
   
 ```  
 get-counter -listset msr*  
@@ -139,5 +139,4 @@ CounterSetName     : MSRS 2011 Web Service SharePoint Mode
  [보고서 서버 성능 모니터링](../../reporting-services/report-server/monitoring-report-server-performance.md)   
  [MSRS 2011 웹 서비스 및 MSRS 2011 Windows 서비스 성능 개체에 대한 성능 카운터&#40;기본 모드&#41;](../../reporting-services/report-server/performance-counters-msrs-2011-web-service-performance-objects.md)   
  [ReportServer:Service 및 ReportServerSharePoint:Service 성능 개체에 대한 성능 카운터](../../reporting-services/report-server/performance-counters-reportserver-service-performance-objects.md)  
-  
   

@@ -17,12 +17,12 @@ ms.author: maghan
 ms.reviewer: ''
 ms.custom: seo-lt-2019
 ms.date: 03/14/2017
-ms.openlocfilehash: ed7c74f225998a7556ece2d6f62bf5ce6e47d7eb
-ms.sourcegitcommit: e700497f962e4c2274df16d9e651059b42ff1a10
+ms.openlocfilehash: eafa770651260fb99931556308ccce58f1bf681c
+ms.sourcegitcommit: 22dacedeb6e8721e7cdb6279a946d4002cfb5da3
 ms.translationtype: HT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 08/17/2020
-ms.locfileid: "88463002"
+ms.lasthandoff: 10/14/2020
+ms.locfileid: "92037566"
 ---
 # <a name="import-registered-server-information-sql-server-management-studio"></a>등록된 서버 정보 가져오기(SQL Server Management Studio)
 
@@ -56,8 +56,7 @@ ms.locfileid: "88463002"
  [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 인증을 사용하는 서버 등록은 사용자 단위로 암호를 저장합니다. 서버 등록을 가져온 후 사용자는 처음으로 연결할 때 각 서버의 암호를 입력하여 등록된 서버 목록에 암호를 저장해야 합니다. Windows 인증을 통해 등록된 서버에는 이 작업이 필요 없습니다.  
   
 ## <a name="see-also"></a>참고 항목  
- [서버 등록 변경&#40;SQL Server Management Studio&#41;](../../tools/sql-server-management-studio/change-a-server-s-registration-sql-server-management-studio.md)   
- [등록된 서버 정보 내보내기&#40;SQL Server Management Studio&#41;](../../tools/sql-server-management-studio/export-registered-server-information-sql-server-management-studio.md)   
- [새 등록된 서버 만들기&#40;SQL Server Management Studio&#41;](../../tools/sql-server-management-studio/create-a-new-registered-server-sql-server-management-studio.md)  
-  
+ [서버 등록 변경&#40;SQL Server Management Studio&#41;](./change-a-server-s-registration-sql-server-management-studio.md)   
+ [등록된 서버 정보 내보내기&#40;SQL Server Management Studio&#41;](./export-registered-server-information-sql-server-management-studio.md)   
+ [새 등록된 서버 만들기&#40;SQL Server Management Studio&#41;](./create-a-new-registered-server-sql-server-management-studio.md)  
   

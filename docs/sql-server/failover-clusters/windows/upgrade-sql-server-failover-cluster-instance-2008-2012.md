@@ -12,12 +12,12 @@ helpviewer_keywords:
 - failover clustering [SQL Server], upgrading
 author: MashaMSFT
 ms.author: mathoma
-ms.openlocfilehash: 6c8bc141152f907154b1108ffb53f42daac7e462
-ms.sourcegitcommit: cc23d8646041336d119b74bf239a6ac305ff3d31
+ms.openlocfilehash: 20fce8623266a733bb777b0cd3153ad593cfded0
+ms.sourcegitcommit: a41e1f4199785a2b8019a419a1f3dcdc15571044
 ms.translationtype: HT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 09/23/2020
-ms.locfileid: "91114584"
+ms.lasthandoff: 10/13/2020
+ms.locfileid: "91988067"
 ---
 # <a name="upgrade-sql-server-instances-running-on-windows-server-20082008-r22012-clusters"></a>Windows Server 2008/2008 R2/2012 클러스터에서 실행 중인 SQL Server 인스턴스 업그레이드
 
@@ -321,7 +321,7 @@ SQL FCI 인스턴스만 있는 [!INCLUDE[ssNoVersion](../../../includes/ssnovers
 ## <a name="next-steps"></a>다음 단계
 - [데이터베이스 엔진 업그레이드 완료](../../../database-engine/install-windows/complete-the-database-engine-upgrade.md)
 - [데이터베이스 호환성 모드 변경 및 쿼리 저장소 사용](../../../database-engine/install-windows/change-the-database-compatibility-mode-and-use-the-query-store.md)
-- [새 SQL Server 2016 기능 활용](https://msdn.microsoft.com/library/d8879659-8efa-4442-bcbb-91272647ae16)
+- [새 SQL Server 2016 기능 활용](../../what-s-new-in-sql-server-2017.md)
 - [SQL Server 장애 조치(Failover) 클러스터 인스턴스 업그레이드](upgrade-a-sql-server-failover-cluster-instance.md)
 - [SQL Server 설치 로그 파일 보기 및 읽기](../../../database-engine/install-windows/view-and-read-sql-server-setup-log-files.md)
-- [SQL Server 2016 인스턴스에 기능 추가(설치 프로그램)](../../../database-engine/install-windows/add-features-to-an-instance-of-sql-server-2016-setup.md)
+- [SQL Server 2016 인스턴스에 기능 추가(설치 프로그램)](../../../database-engine/install-windows/add-features-to-an-instance-of-sql-server-setup.md)

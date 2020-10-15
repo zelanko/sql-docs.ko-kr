@@ -4,34 +4,32 @@ description: SQL Server PowerShell 공급자를 사용하는 경우 인스턴스
 ms.custom: seo-lt-2019
 ms.date: 03/14/2017
 ms.prod: sql
-ms.reviewer: ''
 ms.technology: sql-server-powershell
 ms.topic: conceptual
 ms.assetid: 9373de68-fd43-45f2-b9a6-149c96610aeb
 author: markingmyname
 ms.author: maghan
-ms.openlocfilehash: 1e8c6c0b2d73528ecf483741458f10a606adc273
-ms.sourcegitcommit: a9f16d7819ed0e2b7ad8f4a7d4d2397437b2bbb2
+ms.reviewer: matteot, drskwier
+ms.openlocfilehash: ab9ceac58363c39bff11e2898821b5811c704d2c
+ms.sourcegitcommit: a5398f107599102af7c8cda815d8e5e9a367ce7e
 ms.translationtype: HT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 08/21/2020
-ms.locfileid: "88714311"
+ms.lasthandoff: 10/13/2020
+ms.locfileid: "92006179"
 ---
 # <a name="specify-instances-in-the-sql-server-powershell-provider"></a>SQL Server PowerShell 공급자에 인스턴스 지정
+
 [!INCLUDE[SQL Server Azure SQL Database Synapse Analytics PDW ](../includes/applies-to-version/sql-asdb-asdbmi-asa-pdw.md)]
 
 SQL Server PowerShell 공급자에 대해 지정되는 경로는 [!INCLUDE[ssDE](../includes/ssde-md.md)] 의 인스턴스와 해당 인스턴스가 실행 중인 컴퓨터를 식별해야 합니다. 컴퓨터와 인스턴스를 지정하는 구문은 SQL Server 식별자 규칙과 Windows PowerShell 경로 규칙을 모두 준수해야 합니다.  
-  
-> [!NOTE]
-> SQL Server PowerShell 모듈은 **SqlServer**와 **SQLPS**의 두 가지가 있습니다. **SQLPS** 모듈은 (이전 버전과의 호환성을 위해) SQL Server 설치에 포함되어 있지만 더 이상 업데이트되지는 않습니다. 최신 PowerShell 모듈은 **SqlServer** 모듈입니다. **SqlServer** 모듈은 **SQLPS**에 업데이트된 버전의 cmdlet이 포함되어 있으며, 최신 SQL 기능을 지원하는 새로운 cmdlet도 포함되어 있습니다.  
-> 이전 버전의 **SqlServer** 모듈은 SSMS(SQL Server Management Studio)에 *포함되었습니다*(SSMS 16.x 버전만 해당). SSMS 17.0 이상이 포함된 PowerShell을 사용하려면 PowerShell 갤러리에서 **SqlServer** 모듈을 설치해야 합니다.
-> **SqlServer** 모듈을 설치하려면 [SQL Server PowerShell 설치](download-sql-server-ps-module.md)를 참조하세요.
-  
-  
+
+[!INCLUDE [sql-server-powershell-version](../includes/sql-server-powershell-version.md)]
+
 ## <a name="before-you-begin"></a>시작하기 전에  
- SQL Server 공급자 경로에서 SQLSERVER:\SQL 다음에 오는 첫 번째 노드는 [!INCLUDE[ssDE](../includes/ssde-md.md)]인스턴스를 실행하는 컴퓨터 이름입니다. 예를 들면 다음과 같습니다.  
+
+SQL Server 공급자 경로에서 SQLSERVER:\SQL 다음에 오는 첫 번째 노드는 [!INCLUDE[ssDE](../includes/ssde-md.md)]인스턴스를 실행하는 컴퓨터 이름입니다. 예를 들면 다음과 같습니다.  
   
-```  
+```powershell
 SQLSERVER:\SQL\MyComputer  
 ```  
   

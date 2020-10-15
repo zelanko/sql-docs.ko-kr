@@ -10,19 +10,18 @@ ms.author: maghan
 ms.reviewer: matteot
 ms.custom: ''
 ms.date: 08/06/2020
-ms.openlocfilehash: 9a3b653a0e82eed4bffdf88461474a999eef152d
-ms.sourcegitcommit: a9f16d7819ed0e2b7ad8f4a7d4d2397437b2bbb2
+ms.openlocfilehash: ba4b1362a3f435617f36c75fbcf0e8371169f990
+ms.sourcegitcommit: a5398f107599102af7c8cda815d8e5e9a367ce7e
 ms.translationtype: HT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 08/21/2020
-ms.locfileid: "88714181"
+ms.lasthandoff: 10/13/2020
+ms.locfileid: "92005170"
 ---
 # <a name="how-to-enable-the-tcp-protocol"></a>TCP 프로토콜을 사용하도록 설정하는 방법
 
 ## <a name="how-to-enable-the-tcp-protocol-when-connected-to-the-console-with-sqlps"></a>SQLPS를 사용하여 콘솔에 연결할 때 TCP 프로토콜을 사용하도록 설정하는 방법입니다.
 
-> [!Note]
-> **SQLPS** 모듈은 (이전 버전과의 호환성을 위해) SQL Server 설치에 포함되어 있지만 더 이상 업데이트되지는 않습니다. 최신 PowerShell 모듈은 **[SqlServer](sql-server-powershell.md)** 모듈입니다.
+[!INCLUDE [sql-server-powershell-version](../includes/sql-server-powershell-version.md)]
 
 1. 명령 프롬프트를 열고 다음을 입력합니다.
 
@@ -92,10 +91,6 @@ ms.locfileid: "88714181"
 
     Restart-Service -Name MSSQLSERVER -Force
     ```
-
-
-
-
 
 ## <a name="next-steps"></a>다음 단계
 

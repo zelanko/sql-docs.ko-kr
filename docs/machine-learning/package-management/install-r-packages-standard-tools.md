@@ -9,12 +9,12 @@ author: garyericson
 ms.author: garye
 ms.reviewer: davidph
 monikerRange: =sql-server-2016||=sql-server-2017||=sqlallproducts-allversions
-ms.openlocfilehash: dd9b0dde6a7cc032b31fc2d8c45a06f616e3ed58
-ms.sourcegitcommit: 9b41725d6db9957dd7928a3620fe4db41eb51c6e
+ms.openlocfilehash: 55e02294fcf59b4dc8d826f468b21ff8718492ef
+ms.sourcegitcommit: afb02c275b7c79fbd90fac4bfcfd92b00a399019
 ms.translationtype: HT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 08/13/2020
-ms.locfileid: "88179149"
+ms.lasthandoff: 10/12/2020
+ms.locfileid: "91956682"
 ---
 # <a name="install-packages-with-r-tools"></a>R 도구를 사용하여 패키지 설치
 
@@ -127,4 +127,4 @@ SQL Server의 인스턴스가 병렬로 여럿이라면 패키지를 사용하�
 
 + [R 패키지 정보 가져오기](r-package-information.md)
 + [R 패키지 사용 팁](tips-for-using-r-packages.md)
-+ [SQL Server R 언어 자습서](../tutorials/sql-server-r-tutorials.md)
++ [SQL Server R 언어 자습서](../tutorials/r-tutorials.md)

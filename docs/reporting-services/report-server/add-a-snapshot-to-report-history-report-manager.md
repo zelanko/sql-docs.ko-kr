@@ -9,12 +9,12 @@ ms.author: maggies
 ms.reviewer: ''
 ms.custom: ''
 ms.date: 06/26/2019
-ms.openlocfilehash: 1effcdd44d04b3125cdeaf9983372cdcb00bd429
-ms.sourcegitcommit: 216f377451e53874718ae1645a2611cdb198808a
+ms.openlocfilehash: 549333b7556e3537fd8a6a628738b0c0f87a1da9
+ms.sourcegitcommit: fe59f8dc27fd633f5dfce54519d6f5dcea577f56
 ms.translationtype: HT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 07/28/2020
-ms.locfileid: "87245736"
+ms.lasthandoff: 10/09/2020
+ms.locfileid: "91935319"
 ---
 # <a name="add-a-snapshot-to-report-history"></a>보고서 기록에 스냅샷 추가
 
@@ -71,7 +71,7 @@ ms.locfileid: "87245736"
 - [보고서에 실행 속성 구성&#40;보고서 관리자&#41;](../../reporting-services/reports/configure-execution-properties-for-a-report-report-manager.md)
 - [보고서 기록 제한&#40;보고서 관리자&#41;](../../reporting-services/reports/limit-report-history-report-manager.md)
 - [일정](../../reporting-services/subscriptions/schedules.md)   
-- [보고서 관리자&#40;SSRS 기본 모드&#41;](https://msdn.microsoft.com/library/80949f9d-58f5-48e3-9342-9e9bf4e57896)
+- [보고서 관리자&#40;SSRS 기본 모드&#41;](../web-portal-ssrs-native-mode.md)
 
 ::: moniker-end
 
@@ -160,6 +160,6 @@ ms.locfileid: "87245736"
 - [보고서 실행 속성 구성(웹 포털)](../../reporting-services/reports/configure-execution-properties-for-a-report-report-manager.md)
 - [보고서 기록 제한(웹 포털)](../../reporting-services/reports/limit-report-history-report-manager.md)
 - [일정](../../reporting-services/subscriptions/schedules.md)   
-- [웹 포털 &#40;SSRS 기본 모드&#41;](https://msdn.microsoft.com/library/80949f9d-58f5-48e3-9342-9e9bf4e57896)
+- [웹 포털 &#40;SSRS 기본 모드&#41;](../web-portal-ssrs-native-mode.md)
 
 ::: moniker-end

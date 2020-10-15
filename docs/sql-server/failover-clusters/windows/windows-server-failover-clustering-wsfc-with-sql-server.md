@@ -16,12 +16,12 @@ helpviewer_keywords:
 ms.assetid: 79d2ea5a-edd8-4b3b-9502-96202057b01a
 author: MashaMSFT
 ms.author: mathoma
-ms.openlocfilehash: 9854bef628a04871e0c173847651df0b64c83088
-ms.sourcegitcommit: f7ac1976d4bfa224332edd9ef2f4377a4d55a2c9
+ms.openlocfilehash: 3340ba57a0b316c9a58fbf1b0c65d7ca01f3e1ee
+ms.sourcegitcommit: a41e1f4199785a2b8019a419a1f3dcdc15571044
 ms.translationtype: HT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 07/02/2020
-ms.locfileid: "85896662"
+ms.lasthandoff: 10/13/2020
+ms.locfileid: "91988129"
 ---
 # <a name="windows-server-failover-clustering-with-sql-server"></a>SQL Server의 Windows Server 장애 조치(Failover) 클러스터링
 [!INCLUDE [SQL Server](../../../includes/applies-to-version/sqlserver.md)]
@@ -73,7 +73,7 @@ ms.locfileid: "85896662"
   
 -   **장애 조치(Failover) 조정.** 각 리소스는 주 노드에 호스팅되도록 구성되며, 하나 이상의 보조 노드에 자동 또는 수동으로 전송될 수 있습니다. 상태 기반 장애 조치(Failover) 정책은 노드 간의 리소스 소유권 자동 전송을 제어합니다. 장애 조치(Failover)가 발생할 경우 적절히 대응할 수 있도록 노드 및 호스팅된 애플리케이션에 알림을 제공합니다.  
   
- 자세한 내용은 [장애 조치(Failover) 클러스터링 개요 - Windows Server](https://technet.microsoft.com/library/hh831579(v=ws.11).aspx)를 참조하세요.  
+ 자세한 내용은 [장애 조치(Failover) 클러스터링 개요 - Windows Server](/previous-versions/windows/it-pro/windows-server-2012-R2-and-2012/hh831579(v=ws.11))를 참조하세요.  
   
 ##  <a name="sql-server-always-on-technologies-and-wsfc"></a><a name="AlwaysOnWsfcTech"></a> SQL Server Always On 기술 및 WSFC  
  [!INCLUDE[ssCurrent](../../../includes/sscurrent-md.md)] *Always On*은 WSFC를 활용하는 고가용성 및 재해 복구 솔루션입니다. Always On 기능은 애플리케이션 가용성을 높이고 하드웨어에 대한 ROI(투자 수익률)를 향상시키고 고가용성 배포 및 관리를 간소화하는 유연한 통합 솔루션입니다.  
@@ -85,7 +85,7 @@ ms.locfileid: "85896662"
 >  자세한 내용은 [Always On 가용성 그룹에 대한 필수 조건, 제한 사항 및 권장 사항&#40;SQL Server&#41;](../../../database-engine/availability-groups/windows/prereqs-restrictions-recommendations-always-on-availability.md)을 참조하세요.  
   
 ### <a name="instance-level-high-availability-with-always-on-failover-cluster-instances"></a>Always On 장애 조치(Failover) 클러스터 인스턴스가 있는 인스턴스 수준 고가용성  
- Always On FCI( *장애 조치(failover) 클러스터 인스턴스*)는 WSFC에서 노드를 통해 설치되는 [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] 인스턴스입니다. 이 인스턴스 형식은 스토리지 및 가상 네트워크 이름에 대한 리소스에 따라 달라집니다. 스토리지에서는 공유 디스크 스토리지에 Fibre Channel, iSCSI, FCoE 또는 SAS를 사용하거나 [S2D(스토리지 공간 다이렉트)](https://technet.microsoft.com/windows-server-docs/storage/storage-spaces/storage-spaces-direct-overview)와 로컬로 연결된 스토리지를 사용할 수 있습니다. 가상 네트워크 이름은 각각 서로 다른 서브넷에 있는 하나 이상의 가상 IP 주소에 따라 달라집니다. SQL Server 서비스와 SQL Server 에이전트 서비스는 리소스이며 둘 다 스토리지 및 가상 네트워크 이름 리소스에 종속됩니다.  
+ Always On FCI( *장애 조치(failover) 클러스터 인스턴스*)는 WSFC에서 노드를 통해 설치되는 [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] 인스턴스입니다. 이 인스턴스 형식은 스토리지 및 가상 네트워크 이름에 대한 리소스에 따라 달라집니다. 스토리지에서는 공유 디스크 스토리지에 Fibre Channel, iSCSI, FCoE 또는 SAS를 사용하거나 [S2D(스토리지 공간 다이렉트)](/windows-server/storage/storage-spaces/storage-spaces-direct-overview)와 로컬로 연결된 스토리지를 사용할 수 있습니다. 가상 네트워크 이름은 각각 서로 다른 서브넷에 있는 하나 이상의 가상 IP 주소에 따라 달라집니다. SQL Server 서비스와 SQL Server 에이전트 서비스는 리소스이며 둘 다 스토리지 및 가상 네트워크 이름 리소스에 종속됩니다.  
   
  장애 조치(Failover)가 발생하면 WSFC 서비스는 인스턴스 리소스의 소유권을 지정된 장애 조치(Failover) 노드에 전송합니다. 그러면 [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] 인스턴스는 장애 조치 노드(Failover)에서 다시 시작되고 데이터베이스는 복구됩니다. 모든 지정된 시점에서 클러스터의 노드 중 하나만 FCI 및 기본 리소스를 호스팅할 수 있습니다.  
   
@@ -175,13 +175,13 @@ ms.locfileid: "85896662"
   
 -   [Windows Server 기술: 장애 조치(failover) 클러스터](https://technet.microsoft.com/library/cc732488\(v=WS.10\).aspx)  
 
--   [S2D\(스토리지 공간 다이렉트\) 개요](https://technet.microsoft.com/windows-server-docs/storage/storage-spaces/storage-spaces-direct-overview)
+-   [S2D\(스토리지 공간 다이렉트\) 개요](/windows-server/storage/storage-spaces/storage-spaces-direct-overview)
 
 -   [Windows Server 2008 R2의 장애 조치(Failover) 클러스터](https://technet.microsoft.com/library/ff182338\(WS.10\).aspx)  
   
 -   [장애 조치(Failover) 클러스터에 대한 이벤트 및 로그 보기](https://technet.microsoft.com/library/cc772342\(WS.10\).aspx)  
   
--   [Get-ClusterLog 장애 조치(Failover) 클러스터 Cmdlet](https://technet.microsoft.com/library/ee461045.aspx)  
+-   [Get-ClusterLog 장애 조치(Failover) 클러스터 Cmdlet](/previous-versions/windows/it-pro/windows-server-2008-R2-and-2008/ee461045(v=technet.10))  
   
 ## <a name="see-also"></a>참고 항목  
  [Always On 장애 조치(failover) 클러스터 인스턴스(SQL Server)](../../../sql-server/failover-clusters/windows/always-on-failover-cluster-instances-sql-server.md)   
@@ -190,4 +190,3 @@ ms.locfileid: "85896662"
  [장애 조치(failover) 클러스터 인스턴스용 장애 조치(failover) 정책](../../../sql-server/failover-clusters/windows/failover-policy-for-failover-cluster-instances.md)   
  [쿼럼 강제를 통한 WSFC 재해 복구(SQL Server)](../../../sql-server/failover-clusters/windows/wsfc-disaster-recovery-through-forced-quorum-sql-server.md)  
  [SQL Server 2016 Supports Windows Server 2016 Storage Spaces Direct](https://blogs.technet.microsoft.com/dataplatforminsider/2016/09/27/sql-server-2016-now-supports-windows-server-2016-storage-spaces-direct/)(SQL Server 2016이 Windows Server 2016 스토리지 공간 다이렉트를 지원함)
-  

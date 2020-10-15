@@ -9,12 +9,12 @@ author: dphansen
 ms.author: davidph
 ms.custom: seo-lt-2019
 monikerRange: '>=sql-server-2016||>=sql-server-linux-ver15||=sqlallproducts-allversions'
-ms.openlocfilehash: 02516b35a75c39c967b916d2e424362114008480
-ms.sourcegitcommit: 9b41725d6db9957dd7928a3620fe4db41eb51c6e
+ms.openlocfilehash: 431d76d63d08ed23fd62669dc52548082582f2ef
+ms.sourcegitcommit: afb02c275b7c79fbd90fac4bfcfd92b00a399019
 ms.translationtype: HT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 08/13/2020
-ms.locfileid: "88173278"
+ms.lasthandoff: 10/12/2020
+ms.locfileid: "91956534"
 ---
 # <a name="r-language-extension-in-sql-server-machine-learning-services"></a>SQL Server Machine Learning Services의 R 언어 확장
 [!INCLUDE [SQL Server 2016 and later](../../includes/applies-to-version/sqlserver2016.md)]
@@ -32,7 +32,7 @@ ms.locfileid: "88173278"
 
 SQL Server는 오픈 소스 패키지와 독점 패키지를 모두 포함하고 있습니다. 기본 R 라이브러리는 Microsoft의 오픈 소스 R: Microsoft R Open(MRO) 배포판을 통해 설치됩니다. 현재 R 사용자는 R 코드를 약간 수정하거나 전혀 수정하지 않고 이식하여 SQL Server에서 외부 프로세스로 실행할 수 있습니다. MRO는 SQL 도구와 독립적으로 설치되며, 핵심 엔진 프로세스 외부인 확장성 프레임워크에서 실행됩니다. 설치하는 동안 오픈 소스 라이선스 사용 약관에 동의해야 합니다. 그 후에 R의 다른 오픈 소스 배포에서 실행하는 것처럼 추가 수정 없이 표준 R 패키지를 실행할 수 있습니다. 
 
-SQL Server는 기본 R 실행 파일을 수정하지 않지만, 설치 프로그램에서 설치하는 R 버전을 사용해야 합니다. 해당 버전에서 독점 패키지를 빌드하고 테스트했기 때문입니다. MRO가 CRAN에서 얻을 수 있는 기본 배포판 R과 어떤 차이가 있는지 자세히 알아보려면 [R 언어와 Microsoft R 제품 및 기능과의 상호 운용성](https://docs.microsoft.com/r-server/what-is-r-server-interoperability)을 참조하세요.
+SQL Server는 기본 R 실행 파일을 수정하지 않지만, 설치 프로그램에서 설치하는 R 버전을 사용해야 합니다. 해당 버전에서 독점 패키지를 빌드하고 테스트했기 때문입니다. MRO가 CRAN에서 얻을 수 있는 기본 배포판 R과 어떤 차이가 있는지 자세히 알아보려면 [R 언어와 Microsoft R 제품 및 기능과의 상호 운용성](/r-server/what-is-r-server-interoperability)을 참조하세요.
 
 설치 프로그램을 통해 설치된 R 기본 패키지 배포판은 인스턴스와 연결된 폴더에서 찾을 수 있습니다. 예를 들어 R Services를 SQL Server 기본 인스턴스에 설치한 경우 R 라이브러리는 기본적으로 `C:\Program Files\Microsoft SQL Server\MSSQL13.MSSQLSERVER\R_SERVICES\library` 폴더에 있습니다. 마찬가지로, 기본 인스턴스와 연결된 R 도구는 기본적으로 `C:\Program Files\Microsoft SQL Server\MSSQL13.MSSQLSERVER\R_SERVICES\bin` 폴더에 있습니다.
 
@@ -40,8 +40,8 @@ SQL Server는 기본 R 실행 파일을 수정하지 않지만, 설치 프로그
 
 | 라이브러리 | 설명 |
 |---------|-------------|
-| [**RevoScaleR**](https://docs.microsoft.com/machine-learning-server/r-reference/revoscaler/revoscaler) | 데이터 원본 개체와 데이터 탐색, 조작, 변환 및 시각화를 지원합니다. **rxLinMod**와 같이 다양한 확장 가능한 기계 학습 모델뿐 아니라 원격 컴퓨팅 컨텍스트 만들기도 지원합니다. API는 너무 커서 메모리에 맞출 수 없는 데이터 집합을 분석하고 여러 코어 또는 프로세서에 분배되는 계산을 수행하도록 최적화되었습니다. 분석에 사용되는 데이터를 더 빠르게 이동하고 스토리지하기 위해 RevoScaleR 패키지는 XDF 파일 형식도 지원합니다. XDF 형식은 열 형식 스토리지를 사용하고, 이식 가능하고, 텍스트, SPSS 또는 ODBC 연결과 같은 다양한 원본에서 데이터를 로드하고 나서 조작하는 데 사용될 수 있습니다. |
-| [**MicrosoftML**](https://docs.microsoft.com/r-server/r/concept-what-is-the-microsoftml-package) | 속도와 정확도에 최적화된 기계 학습 알고리즘과 텍스트 및 이미지 작업을 위한 인라인 변환이 포함되어 있습니다. 자세한 내용은 [SQL Server의 MicrosoftML](../r/ref-r-microsoftml.md)을 참조하세요. | 
+| [**RevoScaleR**](/machine-learning-server/r-reference/revoscaler/revoscaler) | 데이터 원본 개체와 데이터 탐색, 조작, 변환 및 시각화를 지원합니다. **rxLinMod**와 같이 다양한 확장 가능한 기계 학습 모델뿐 아니라 원격 컴퓨팅 컨텍스트 만들기도 지원합니다. API는 너무 커서 메모리에 맞출 수 없는 데이터 집합을 분석하고 여러 코어 또는 프로세서에 분배되는 계산을 수행하도록 최적화되었습니다. 분석에 사용되는 데이터를 더 빠르게 이동하고 스토리지하기 위해 RevoScaleR 패키지는 XDF 파일 형식도 지원합니다. XDF 형식은 열 형식 스토리지를 사용하고, 이식 가능하고, 텍스트, SPSS 또는 ODBC 연결과 같은 다양한 원본에서 데이터를 로드하고 나서 조작하는 데 사용될 수 있습니다. |
+| [**MicrosoftML**](/r-server/r/concept-what-is-the-microsoftml-package) | 속도와 정확도에 최적화된 기계 학습 알고리즘과 텍스트 및 이미지 작업을 위한 인라인 변환이 포함되어 있습니다. 자세한 내용은 [SQL Server의 MicrosoftML](../r/ref-r-microsoftml.md)을 참조하세요. | 
 
 ## <a name="using-r-in-sql-server"></a>SQL Server에서 R 사용
 

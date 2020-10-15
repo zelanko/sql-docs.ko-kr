@@ -9,12 +9,12 @@ author: dphansen
 ms.author: davidph
 ms.custom: seo-lt-2019
 monikerRange: '>=sql-server-2016||=sqlallproducts-allversions'
-ms.openlocfilehash: f2d9867ebad010ea8e518f3faee29041eebd79a8
-ms.sourcegitcommit: 2f868a77903c1f1c4cecf4ea1c181deee12d5b15
+ms.openlocfilehash: 1d36936a0dc921a02897bcf7f9a9bfceb6766293
+ms.sourcegitcommit: afb02c275b7c79fbd90fac4bfcfd92b00a399019
 ms.translationtype: HT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 10/02/2020
-ms.locfileid: "91670796"
+ms.lasthandoff: 10/12/2020
+ms.locfileid: "91956784"
 ---
 # <a name="cab-downloads-for-offline-installation-of-cumulative-updates-for-sql-server-machine-learning-services"></a>SQL Server Machine Learning Services에 대한 누적 업데이트의 오프라인 설치를 위한 CAB 다운로드
 
@@ -108,9 +108,9 @@ CAB 파일은 시간의 역순으로 나열됩니다. CAB 파일을 다운로드
 | | Python 서버    |[SPS_9.2.0.1400_1033.cab](https://go.microsoft.com/fwlink/?LinkId=2071421&clcid=1033)| 패키지 내의 이진 파일이 이제 서명된 상태입니다.  |
 |**[SQL Server 2017 CU13](https://support.microsoft.com/help/4466404)** |  |  |  |
 | | Microsoft R Open     | [SRO_3.3.3.1300_1033.cab](https://go.microsoft.com/fwlink/?LinkId=863894)| 이전 버전과의 변경 사항이 없습니다. |
-| | R Server      |[SRS_9.2.0.1300_1033.cab](https://go.microsoft.com/fwlink/?LinkId=2038263&clcid=1033)| SQL Server 설치 프로그램을 통해 설치될 때와 같이 [운영화된 독립형 R 서버](https://docs.microsoft.com/machine-learning-server/what-is-operationalization)를 업그레이드하기 위한 수정이 포함되어 있습니다. CU13 CAB를 사용하고 [해당 지침](sql-machine-learning-standalone-windows-install.md#apply-cu)에 따라 업데이트를 적용합니다. |
+| | R Server      |[SRS_9.2.0.1300_1033.cab](https://go.microsoft.com/fwlink/?LinkId=2038263&clcid=1033)| SQL Server 설치 프로그램을 통해 설치될 때와 같이 [운영화된 독립형 R 서버](/machine-learning-server/what-is-operationalization)를 업그레이드하기 위한 수정이 포함되어 있습니다. CU13 CAB를 사용하고 [해당 지침](sql-machine-learning-standalone-windows-install.md#apply-cu)에 따라 업데이트를 적용합니다. |
 | | Microsoft Python Open     | [SPO_9.2.0.24_1033.cab](https://go.microsoft.com/fwlink/?LinkId=851502)| 이전 버전과의 변경 사항이 없습니다. |
-| | Python 서버    |[SPS_9.2.0.1300_1033.cab](https://go.microsoft.com/fwlink/?LinkId=2038197&clcid=1033)| SQL Server 설치 프로그램을 통해 설치될 때와 같이 [운영화된 독립형 Python 서버](https://docs.microsoft.com/machine-learning-server/what-is-operationalization)를 업그레이드하기 위한 수정이 포함되어 있습니다. CU13 CAB를 사용하고 [해당 지침](sql-machine-learning-standalone-windows-install.md#apply-cu)에 따라 업데이트를 적용합니다. |
+| | Python 서버    |[SPS_9.2.0.1300_1033.cab](https://go.microsoft.com/fwlink/?LinkId=2038197&clcid=1033)| SQL Server 설치 프로그램을 통해 설치될 때와 같이 [운영화된 독립형 Python 서버](/machine-learning-server/what-is-operationalization)를 업그레이드하기 위한 수정이 포함되어 있습니다. CU13 CAB를 사용하고 [해당 지침](sql-machine-learning-standalone-windows-install.md#apply-cu)에 따라 업데이트를 적용합니다. |
 |**[SQL Server 2017 CU10](https://support.microsoft.com/help/4342123)-[CU11](https://support.microsoft.com/help/4462262)-[CU12](https://support.microsoft.com/help/4464082)** |  |  |  |
 | | Microsoft R Open     | [SRO_3.3.3.300_1033.cab](https://go.microsoft.com/fwlink/?LinkId=863894)| 이전 버전과의 변경 사항이 없습니다. |
 | | R Server      |[SRS_9.2.0.1000_1033.cab](https://go.microsoft.com/fwlink/?LinkId=2006287&clcid=1033)| 사소한 수정입니다.|
@@ -140,12 +140,12 @@ CAB 파일은 시간의 역순으로 나열됩니다. CAB 파일을 다운로드
 | | Microsoft R Open     |[SRO_3.3.3.300_1033.cab](https://go.microsoft.com/fwlink/?LinkId=863894)|
 | | R Server      |[SRS_9.2.0.300_1033.cab](https://go.microsoft.com/fwlink/?LinkId=863893)|
 | | Microsoft Python Open     |[SPO_9.2.0.24_1033.cab](https://go.microsoft.com/fwlink/?LinkId=851502)| 이전 버전과의 변경 사항이 없습니다. |
-| | Python 서버    |[SPS_9.2.0.300_1033.cab](https://go.microsoft.com/fwlink/?LinkId=863892)| [rx_serialize_model function](https://docs.microsoft.com/machine-learning-server/python-reference/revoscalepy/rx-serialize-model)를 사용하는 revoscalepy의 Python 모델 직렬화입니다.<br/>[실시간 채점](../predictions/real-time-scoring.md)에대 한 향상 기능과 함께 [네이티브 채점](../predictions/native-scoring-predict-transact-sql.md)을 지원합니다. 
+| | Python 서버    |[SPS_9.2.0.300_1033.cab](https://go.microsoft.com/fwlink/?LinkId=863892)| [rx_serialize_model function](/machine-learning-server/python-reference/revoscalepy/rx-serialize-model)를 사용하는 revoscalepy의 Python 모델 직렬화입니다.<br/>[실시간 채점](../predictions/real-time-scoring.md)에대 한 향상 기능과 함께 [네이티브 채점](../predictions/native-scoring-predict-transact-sql.md)을 지원합니다. 
 |**[SQL Server 2017 CU1](https://support.microsoft.com/help/4038634)-[CU2](https://support.microsoft.com/help/4052574)** |  |  |  |
 | | Microsoft R Open     | [SRO_3.3.3.24_1033.cab](https://go.microsoft.com/fwlink/?LinkId=851496)| 이전 버전과의 변경 사항이 없습니다. |
 | | R Server      |[SRS_9.2.0.100_1033.cab](https://go.microsoft.com/fwlink/?LinkId=851501)|
 | | Microsoft Python Open     | [SPO_9.2.0.24_1033.cab](https://go.microsoft.com/fwlink/?LinkId=851502)| 이전 버전과의 변경 사항이 없습니다. | 
-| | Python 서버    |[SPS_9.2.0.100_1033.cab](https://go.microsoft.com/fwlink/?LinkId=851500) | 스키마 정보를 반환하기 위한 rx_create_col_info를 추가합니다. <br/>`RxLocalParallel` 계산 컨텍스트를 사용하여 병렬 시나리오를 지원하기 위해 [rx_exec](https://docs.microsoft.com/machine-learning-server/python-reference/revoscalepy/rx-exec)가 향상되었습니다.|
+| | Python 서버    |[SPS_9.2.0.100_1033.cab](https://go.microsoft.com/fwlink/?LinkId=851500) | 스키마 정보를 반환하기 위한 rx_create_col_info를 추가합니다. <br/>`RxLocalParallel` 계산 컨텍스트를 사용하여 병렬 시나리오를 지원하기 위해 [rx_exec](/machine-learning-server/python-reference/revoscalepy/rx-exec)가 향상되었습니다.|
 |**초기 릴리스** |  |  |
 | | Microsoft R Open     |[SRO_3.3.3.24_1033.cab](https://go.microsoft.com/fwlink/?LinkId=851496)|
 | | R Server      |[SRS_9.2.0.24_1033.cab](https://go.microsoft.com/fwlink/?LinkId=851507)|
@@ -202,7 +202,7 @@ SQL Server 2016 R Services의 경우 기본 릴리스는 RTM 버전 또는 서�
 > 
 > SQL Server 2016 SP1 CU4 또는 SP1 CU5를 오프라인으로 설치할 때는 SRO_3.2.2.16000_1033.cab를 다운로드합니다. 설치 프로그램 대화 상자에 표시된 대로 FWLINK 831785에서 SRO_3.2.2.13000_1033.cab를 다운로드한 경우, 누적 업데이트를 설치하기 전에 파일 이름을 SRO_3.2.2.16000_1033.cab로 바꿉니다.
 
-Microsoft R을 위한 소스 코드를 볼 수 있도록 .tar 형식의 아카이브로 다운로드가 제공됩니다. [R 서버 설치 프로그램 다운로드](https://docs.microsoft.com/machine-learning-server/install/r-server-install-windows#download)
+Microsoft R을 위한 소스 코드를 볼 수 있도록 .tar 형식의 아카이브로 다운로드가 제공됩니다. [R 서버 설치 프로그램 다운로드](/machine-learning-server/install/r-server-install-windows#download)
 
 ::: moniker-end
 

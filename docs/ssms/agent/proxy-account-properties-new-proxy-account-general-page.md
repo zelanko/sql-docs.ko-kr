@@ -14,18 +14,18 @@ author: markingmyname
 ms.author: maghan
 ms.reviewer: ''
 monikerRange: = azuresqldb-mi-current || >= sql-server-2016 || = sqlallproducts-allversions
-ms.openlocfilehash: 5e466d75990589513ce09e071dd17d55d2fd512c
-ms.sourcegitcommit: e700497f962e4c2274df16d9e651059b42ff1a10
+ms.openlocfilehash: a70ba36150771ef90f3cfc9461c018c212da4c73
+ms.sourcegitcommit: 22dacedeb6e8721e7cdb6279a946d4002cfb5da3
 ms.translationtype: HT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 08/17/2020
-ms.locfileid: "88468589"
+ms.lasthandoff: 10/14/2020
+ms.locfileid: "92037307"
 ---
 # <a name="proxy-account-properties---new-proxy-account-general-page"></a>프록시 계정 속성 - 새 프록시 계정(일반 페이지)
 [!INCLUDE [SQL Server SQL MI](../../includes/applies-to-version/sql-asdbmi.md)]
 
 > [!IMPORTANT]  
-> 현재 [Azure SQL Managed Instance](https://docs.microsoft.com/azure/sql-database/sql-database-managed-instance)에서는 SQL Server 에이전트 기능이 대부분 지원됩니다. 자세한 내용은 [SQL Server와 Azure SQL Managed Instance 간의 T-SQL 차이점](https://docs.microsoft.com/azure/sql-database/sql-database-managed-instance-transact-sql-information#sql-server-agent)을 참조하세요.
+> 현재 [Azure SQL Managed Instance](/azure/sql-database/sql-database-managed-instance)에서는 SQL Server 에이전트 기능이 대부분 지원됩니다. 자세한 내용은 [SQL Server와 Azure SQL Managed Instance 간의 T-SQL 차이점](/azure/sql-database/sql-database-managed-instance-transact-sql-information#sql-server-agent)을 참조하세요.
 
 이 페이지를 사용하여 [!INCLUDE[msCoName](../../includes/msconame_md.md)] [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 에이전트 프록시 계정의 속성을 확인하거나 변경할 수 있습니다.  
   
@@ -37,7 +37,7 @@ ms.locfileid: "88468589"
 프록시에 대한 자격 증명 이름을 입력합니다.  
   
 > [!NOTE]  
-> 기존 자격 증명의 이름을 제공해야 합니다. 자격 증명 만들기에 대한 자세한 내용은 [방법: 프록시 만들기](https://msdn.microsoft.com/c1e77e91-2a69-40d9-b8b3-97cffc710586)  
+> 기존 자격 증명의 이름을 제공해야 합니다. 자격 증명 만들기에 대한 자세한 내용은 [방법: 프록시 만들기](../../relational-databases/security/authentication-access/create-a-credential.md)  
   
 **...**  
 **자격 증명 선택** 대화 상자를 시작합니다.  
@@ -53,4 +53,3 @@ ms.locfileid: "88468589"
   
 ## <a name="see-also"></a>참고 항목  
 [SQL Server 에이전트 프록시 만들기](../../ssms/agent/create-a-sql-server-agent-proxy.md)  
-  

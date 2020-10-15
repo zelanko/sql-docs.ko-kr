@@ -11,12 +11,12 @@ ms.topic: conceptual
 ms.assetid: 9803a8a0-a8f1-4b65-87b8-989b06850194
 author: markingmyname
 ms.author: maghan
-ms.openlocfilehash: 2530029b43a4b01d8b6fce8b321f0c9b66a6a852
-ms.sourcegitcommit: e700497f962e4c2274df16d9e651059b42ff1a10
+ms.openlocfilehash: 700944b707416a89d16b5ce53eee471692779870
+ms.sourcegitcommit: 22dacedeb6e8721e7cdb6279a946d4002cfb5da3
 ms.translationtype: HT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 08/17/2020
-ms.locfileid: "88417939"
+ms.lasthandoff: 10/14/2020
+ms.locfileid: "92037656"
 ---
 # <a name="connect-to-a-sql-server-or-azure-sql-database"></a>SQL Server 또는 Azure SQL Database에 연결
 
@@ -29,7 +29,7 @@ ms.locfileid: "88417939"
 
 1. **개체 탐색기**에서 **연결 > 데이터베이스 엔진... **을 클릭합니다.
 
-   ![연결](../media/connect-to-server/connect-db-engine.png)
+   ![connect](../media/connect-to-server/connect-db-engine.png)
 
 1. **서버에 연결** 양식을 입력하고 **연결**을 클릭합니다.
 
@@ -58,7 +58,7 @@ ms.locfileid: "88417939"
 [SSMS(SQL Server Management Studio)](../sql-server-management-studio-ssms.md)  
 [SSMS(SQL Server Management Studio) 다운로드](../download-sql-server-management-studio-ssms.md)
 
-[Analysis Services](https://docs.microsoft.com/sql/analysis-services/instances/connect-to-analysis-services)  
-[Integration Services](https://docs.microsoft.com/sql/integration-services/sql-server-integration-services)  
-[Reporting Services](https://docs.microsoft.com/sql/reporting-services/tools/connect-to-a-report-server-in-management-studio)  
-[Azure Storage](../f1-help/connect-to-microsoft-azure-storage.md)  
+[Analysis Services](/analysis-services/instances/connect-from-client-applications-analysis-services)  
+[Integration Services](../../integration-services/sql-server-integration-services.md)  
+[Reporting Services](../../reporting-services/tools/connect-to-a-report-server-in-management-studio.md)  
+[Azure Storage](../f1-help/connect-to-microsoft-azure-storage.md)

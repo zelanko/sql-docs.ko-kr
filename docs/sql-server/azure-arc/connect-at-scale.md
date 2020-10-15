@@ -8,16 +8,16 @@ ms.reviewer: mikeray
 ms.date: 09/10/2020
 ms.topic: conceptual
 ms.prod: sql
-ms.openlocfilehash: 07b140aceae2eae1a63b826b0bb4f95c8cfc515b
-ms.sourcegitcommit: c74bb5944994e34b102615b592fdaabe54713047
+ms.openlocfilehash: 36d4581756cd89e016658f8e415aaec6fbe9a35b
+ms.sourcegitcommit: a41e1f4199785a2b8019a419a1f3dcdc15571044
 ms.translationtype: HT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 09/22/2020
-ms.locfileid: "90990356"
+ms.lasthandoff: 10/13/2020
+ms.locfileid: "91988009"
 ---
 # <a name="connect-sql-server-instances-to-azure-arc-at-scale"></a>SQL Server 인스턴스를 Azure Arc에 대규모로 연결
 
-[단일 머신에 대해 생성한 것과 동일한 스크립트](connect.md)를 사용하여 여러 Windows 또는 Linux 머신에 설치된 여러 SQL Server 인스턴스를 Azure Arc에 연결할 수 있습니다. 이 스크립트는 각 머신과 머신에 설치된 SQL Server 인스턴스를 Azure Arc에 연결하고 등록합니다. 최적의 환경을 위해 Azure Active Directory [서비스 주체](https://docs.microsoft.com/azure/active-directory/develop/app-objects-and-service-principals)를 사용하는 것이 좋습니다. 서비스 주체는 머신을 Azure에 연결하고 Azure Arc 사용 서버와 Azure Arc 사용 SQL Server에 대한 Azure 리소스를 만드는 데 필요한 최소한의 사용 권한만 부여된 특별한 제한된 관리 ID입니다. 이는 테넌트 관리자와 같은 더 높은 권한의 계정을 사용하는 것보다 안전하며, 액세스 제어 보안 모범 사례를 준수하는 것입니다.  
+[단일 머신에 대해 생성한 것과 동일한 스크립트](connect.md)를 사용하여 여러 Windows 또는 Linux 머신에 설치된 여러 SQL Server 인스턴스를 Azure Arc에 연결할 수 있습니다. 이 스크립트는 각 머신과 머신에 설치된 SQL Server 인스턴스를 Azure Arc에 연결하고 등록합니다. 최적의 환경을 위해 Azure Active Directory [서비스 주체](/azure/active-directory/develop/app-objects-and-service-principals)를 사용하는 것이 좋습니다. 서비스 주체는 머신을 Azure에 연결하고 Azure Arc 사용 서버와 Azure Arc 사용 SQL Server에 대한 Azure 리소스를 만드는 데 필요한 최소한의 사용 권한만 부여된 특별한 제한된 관리 ID입니다. 이는 테넌트 관리자와 같은 더 높은 권한의 계정을 사용하는 것보다 안전하며, 액세스 제어 보안 모범 사례를 준수하는 것입니다.  
 
 Connected Machine 에이전트를 설치하고 구성하는 설치 메서드는 사용하는 자동화 메서드에서 머신에 대한 관리자 권한을 요구합니다. Linux에서는 루트 계정을 사용하고 Windows에서는 로컬 관리자 그룹의 멤버여야 합니다.
 

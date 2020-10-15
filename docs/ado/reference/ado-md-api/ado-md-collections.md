@@ -14,16 +14,16 @@ helpviewer_keywords:
 ms.assetid: 01c53429-ccc9-4077-b738-d3c1f43bd76c
 author: rothja
 ms.author: jroth
-ms.openlocfilehash: e0e912950c12b6d3a3c87a497a43d75ab1c29199
-ms.sourcegitcommit: 76ab3b57718341c6057613c9bd38cf82fb17786e
+ms.openlocfilehash: f83f06c5aa72c31df711db05198032206c5a32b9
+ms.sourcegitcommit: 9774e2cb8c07d4f6027fa3a5bb2852e4396b3f68
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 10/14/2020
-ms.locfileid: "92059421"
+ms.lasthandoff: 10/15/2020
+ms.locfileid: "92098672"
 ---
 # <a name="ado-md-collections"></a>ADO MD 컬렉션
 
-|컬렉션|설명|  
+|컬렉션|Description|  
 |-|-|  
 |[Axes](./axes-collection-ado-md.md)|셀 집합을 정의 하는 **축** 개체를 포함 합니다.|  
 |[CubeDefs](./cubedef-object-ado-md.md)|다차원 카탈로그에서 큐브를 나타내는 **CubeDef** 개체를 포함 합니다.|  
@@ -34,7 +34,7 @@ ms.locfileid: "92059421"
 |[위치](./positions-collection-ado-md.md)|축의 점을 정의 하는 **위치** 개체를 포함 합니다.|  
   
 ## <a name="see-also"></a>참고 항목  
- [ADO MD API 참조](./ado-md-object-model.md?view=sql-server-ver15&preserve-view=true)   
+ [ADO MD API 참조](./ado-md-object-model.md?view=sql-server-ver15)   
  [ADO MD 코드 예제](./ado-md-code-examples.md)   
  [ADO MD 열거 상수](./ado-md-enumerated-constants.md)   
  [ADO MD 메서드](./ado-md-methods.md)   

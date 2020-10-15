@@ -15,12 +15,12 @@ ms.author: maghan
 ms.reviewer: ''
 ms.custom: seo-lt-2019
 ms.date: 07/18/2016
-ms.openlocfilehash: 627eff46acaae38b675814e84ea76e7a7ea64f2d
-ms.sourcegitcommit: e700497f962e4c2274df16d9e651059b42ff1a10
+ms.openlocfilehash: 91a18087a9bf3f844988dec16e84a1cdbbfb1948
+ms.sourcegitcommit: 22dacedeb6e8721e7cdb6279a946d4002cfb5da3
 ms.translationtype: HT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 08/17/2020
-ms.locfileid: "88417959"
+ms.lasthandoff: 10/14/2020
+ms.locfileid: "92037581"
 ---
 # <a name="execute-statements-against-multiple-servers-simultaneously"></a>여러 서버에 대해 동시에 문 실행
 
@@ -30,7 +30,7 @@ ms.locfileid: "88417959"
 
 쿼리에서 반환되는 결과는 단일 결과 창으로 결합되거나 별도의 결과 창에 반환될 수 있습니다. 결과 집합에는 각 서버에 대한 쿼리에서 사용하는 서버 이름 및 로그인에 대한 추가 열이 포함되어 있습니다. 중앙 관리 서버와 하위 서버는 Windows 인증을 사용해서만 등록할 수 있습니다. Windows 인증 또는 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 인증을 사용하여 로컬 서버 그룹의 서버를 등록할 수 있습니다.  
   
-> **참고!** 다음 절차를 실행하기 전에 중앙 관리 서버 및 서버 그룹을 만듭니다. 자세한 내용은 [중앙 관리 서버 및 서버 그룹 만들기&#40;SQL Server Management Studio&#41;](../../tools/sql-server-management-studio/create-a-central-management-server-and-server-group.md)를 참조하세요.  
+> **참고!** 다음 절차를 실행하기 전에 중앙 관리 서버 및 서버 그룹을 만듭니다. 자세한 내용은 [중앙 관리 서버 및 서버 그룹 만들기&#40;SQL Server Management Studio&#41;](./create-a-central-management-server-and-server-group.md)를 참조하세요.  
 
   
 ##  <a name="permissions"></a><a name="Permissions"></a> 권한  
@@ -63,5 +63,4 @@ ms.locfileid: "88417959"
   
 ## <a name="see-also"></a>참고 항목  
  [중앙 관리 서버를 사용하여 여러 서버 관리](../../relational-databases/administer-multiple-servers-using-central-management-servers.md)  
-  
   

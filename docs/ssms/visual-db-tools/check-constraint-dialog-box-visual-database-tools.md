@@ -13,12 +13,12 @@ ms.author: maghan
 ms.reviewer: ''
 ms.custom: seo-lt-2019
 ms.date: 01/19/2017
-ms.openlocfilehash: c210bb02d44b22727b74cb49e635b47e6d1f3dba
-ms.sourcegitcommit: e700497f962e4c2274df16d9e651059b42ff1a10
+ms.openlocfilehash: b37e339dc13577bd30491f1c155ebb8114868d60
+ms.sourcegitcommit: 22dacedeb6e8721e7cdb6279a946d4002cfb5da3
 ms.translationtype: HT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 08/17/2020
-ms.locfileid: "88491753"
+ms.lasthandoff: 10/14/2020
+ms.locfileid: "92038967"
 ---
 # <a name="check-constraint-dialog-box-visual-database-tools"></a>CHECK 제약 조건 대화 상자(Visual Database Tools)
 
@@ -44,7 +44,7 @@ ms.locfileid: "88491753"
 확장하면 **식** 속성 필드가 표시됩니다.  
   
 **식**  
-선택한 CHECK 제약 조건의 식을 표시합니다. 새 제약 조건을 만드는 경우 이 상자의 작업을 마치기 전에 식을 입력해야 합니다. 기존 CHECK 제약 조건을 편집할 수도 있습니다. 자세한 내용은 [제약 조건 작업](https://msdn.microsoft.com/637098af-2567-48f8-90f4-b41df059833e)을 참조하세요.  
+선택한 CHECK 제약 조건의 식을 표시합니다. 새 제약 조건을 만드는 경우 이 상자의 작업을 마치기 전에 식을 입력해야 합니다. 기존 CHECK 제약 조건을 편집할 수도 있습니다. 자세한 내용은 [제약 조건 작업](../../relational-databases/tables/unique-constraints-and-check-constraints.md)을 참조하세요.  
   
 **ID 범주**  
 확장하면 **이름** 및 **설명**에 대한 속성이 표시됩니다.  
@@ -69,5 +69,5 @@ CHECK 제약 조건에 대해 설명합니다. 속성 필드에 직접 텍스트
   
 ## <a name="see-also"></a>참고 항목
 
-[제약 조건 작업](https://msdn.microsoft.com/637098af-2567-48f8-90f4-b41df059833e)
+[제약 조건 작업](../../relational-databases/tables/unique-constraints-and-check-constraints.md)
 [인덱스 - 키 대화 상자&#40;Visual Database Tools&#41;](../../ssms/visual-db-tools/indexes-keys-dialog-box-visual-database-tools.md)

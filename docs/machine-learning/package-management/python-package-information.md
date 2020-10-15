@@ -10,12 +10,12 @@ author: garyericson
 ms.author: garye
 ms.reviewer: davidph
 monikerRange: '>=sql-server-2017||>=sql-server-linux-ver15||=azuresqldb-mi-current||=sqlallproducts-allversions'
-ms.openlocfilehash: 2232b844fc6955118e2da878caf9ff425f160c55
-ms.sourcegitcommit: 9b41725d6db9957dd7928a3620fe4db41eb51c6e
+ms.openlocfilehash: 6513c3333bb852b0d899b785073f4ecbc31daab3
+ms.sourcegitcommit: afb02c275b7c79fbd90fac4bfcfd92b00a399019
 ms.translationtype: HT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 08/13/2020
-ms.locfileid: "88178950"
+ms.lasthandoff: 10/12/2020
+ms.locfileid: "91956957"
 ---
 # <a name="get-python-package-information"></a>Python 패키지 정보 가져오기
 
@@ -82,8 +82,8 @@ EXECUTE sp_execute_external_script
 
 | 패키지 | 버전 |  Description |
 | ---------|---------|--------------|
-| [revoscalepy](https://docs.microsoft.com/machine-learning-server/python-reference/revoscalepy/revoscalepy-package) | 9.4.7 | 데이터 가져오기 및 변환, 모델링, 시각화 및 분석을 위해 원격 컴퓨팅 컨텍스트, 스트리밍, rx 함수의 병렬 실행에 사용됩니다. |
-| [microsoftml](https://docs.microsoft.com/machine-learning-server/python-reference/microsoftml/microsoftml-package) | 9.4.7 | Python에서 기계 학습 알고리즘을 추가합니다. |
+| [revoscalepy](/machine-learning-server/python-reference/revoscalepy/revoscalepy-package) | 9.4.7 | 데이터 가져오기 및 변환, 모델링, 시각화 및 분석을 위해 원격 컴퓨팅 컨텍스트, 스트리밍, rx 함수의 병렬 실행에 사용됩니다. |
+| [microsoftml](/machine-learning-server/python-reference/microsoftml/microsoftml-package) | 9.4.7 | Python에서 기계 학습 알고리즘을 추가합니다. |
 
 포함된 Python 버전에 대한 자세한 내용은 [Python 및 R 버전](../sql-server-machine-learning-services.md#versions)을 참조하세요.
 

@@ -9,12 +9,12 @@ ms.topic: conceptual
 ms.assetid: 2fdf670a-5237-48fe-813d-97657c5c77d2
 author: maggiesMSFT
 ms.author: maggies
-ms.openlocfilehash: 196e542698af55c3469a1851b3f7b315d9410f8d
-ms.sourcegitcommit: e8f6c51d4702c0046aec1394109bc0503ca182f0
+ms.openlocfilehash: 8c0ee25b36c64a8b151c6d816d47dd0e8c1e90b4
+ms.sourcegitcommit: fe59f8dc27fd633f5dfce54519d6f5dcea577f56
 ms.translationtype: HT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 08/07/2020
-ms.locfileid: "87939243"
+ms.lasthandoff: 10/09/2020
+ms.locfileid: "91935031"
 ---
 # <a name="formatting-pointers-on-a-gauge-report-builder-and-ssrs"></a>계기의 포인터 서식 지정(보고서 작성기 및 SSRS)
  페이지가 매겨진 [!INCLUDE[ssRSnoversion_md](../../includes/ssrsnoversion-md.md)] 보고서에서 계기 포인터는 계기의 현재 값을 나타냅니다.   
@@ -44,7 +44,7 @@ ms.locfileid: "87939243"
  방사형 계기에서만 포인터 위쪽이나 아래쪽에 니들 캡을 그릴 수 있습니다. 모든 니들 캡 스타일은 수정할 수 없는 기본 제공 그라데이션을 사용하여 그려집니다. 단, **RoundedDark** 스타일의 경우 그라데이션 색과 그라데이션 스타일을 지정할 수 있습니다.  
   
 ##  <a name="setting-a-snapping-interval"></a><a name="SettingSnappingInterval"></a> 맞춤 간격 설정  
- 맞춤 간격은 값이 반올림되는 배수를 정의합니다. 기본적으로 계기는 데이터 창에서 지정한 필드의 정확한 값을 가리킵니다. 그러나 포인터가 미리 설정된 간격에 맞도록 정확한 값을 반올림하거나 내림할 수도 있습니다. 예를 들어 계기의 값이 34.2이고 맞춤 간격을 5로 지정한 경우에는 계기 포인터는 35를 가리킵니다. 계기의 값이 31.2이고 맞춤 간격을 5로 지정한 경우에는 계기 포인터가 30을 가리킵니다. 자세한 내용은 [계기의 맞춤 간격 설정(보고서 작성기 및 SSRS)](https://docs.microsoft.com/sql/reporting-services/report-design/set-a-minimum-or-maximum-on-a-gauge-report-builder-and-ssrs)을 참조하세요.  
+ 맞춤 간격은 값이 반올림되는 배수를 정의합니다. 기본적으로 계기는 데이터 창에서 지정한 필드의 정확한 값을 가리킵니다. 그러나 포인터가 미리 설정된 간격에 맞도록 정확한 값을 반올림하거나 내림할 수도 있습니다. 예를 들어 계기의 값이 34.2이고 맞춤 간격을 5로 지정한 경우에는 계기 포인터는 35를 가리킵니다. 계기의 값이 31.2이고 맞춤 간격을 5로 지정한 경우에는 계기 포인터가 30을 가리킵니다. 자세한 내용은 [계기의 맞춤 간격 설정(보고서 작성기 및 SSRS)](./set-a-minimum-or-maximum-on-a-gauge-report-builder-and-ssrs.md)을 참조하세요.  
   
 ##  <a name="specifying-an-image-as-a-pointer-on-a-radial-gauge"></a><a name="SpecifyingImage"></a> 방사형 계기에서 이미지를 포인터로 지정  
  기본 제공 포인터 스타일 목록 외에도 이미지를 포인터로 지정할 수 있습니다. 이 방법은 이미지를 사용하여 기존의 니들 포인터 스타일을 대체할 때 가장 효과적입니다. 이미지가 포인터 위로 겹쳐 나타나지만 모든 포인터 기능을 적용할 수 있습니다. 이미지를 포인터로 사용한 경우 색 및 그라데이션 옵션은 적용할 수 없습니다.  
@@ -55,5 +55,4 @@ ms.locfileid: "87939243"
  [계기의 눈금 서식 지정&#40;보고서 작성기 및 SSRS&#41;](../../reporting-services/report-design/formatting-scales-on-a-gauge-report-builder-and-ssrs.md)   
  [계기에서 범위 서식 지정&#40;보고서 작성기 및 SSRS&#41;](../../reporting-services/report-design/formatting-ranges-on-a-gauge-report-builder-and-ssrs.md)   
  [계기&#40;보고서 작성기 및 SSRS&#41;](../../reporting-services/report-design/gauges-report-builder-and-ssrs.md)  
-  
   

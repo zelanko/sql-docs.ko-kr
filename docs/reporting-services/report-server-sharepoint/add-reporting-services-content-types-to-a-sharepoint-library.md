@@ -10,12 +10,12 @@ ms.assetid: ac9136c8-9ef4-484c-8e9d-05008a186db5
 author: maggiesMSFT
 ms.author: maggies
 monikerRange: '>=sql-server-2016 <=sql-server-2016||=sqlallproducts-allversions'
-ms.openlocfilehash: 8964906be1f9d055e45c7eacb6699f7ccc87da86
-ms.sourcegitcommit: 01297f2487fe017760adcc6db5d1df2c1234abb4
+ms.openlocfilehash: 97502e9f1e8c5784afb2d8ad05f8fb2a05dab57a
+ms.sourcegitcommit: fe59f8dc27fd633f5dfce54519d6f5dcea577f56
 ms.translationtype: HT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 07/09/2020
-ms.locfileid: "86197201"
+ms.lasthandoff: 10/09/2020
+ms.locfileid: "91935562"
 ---
 # <a name="add-reporting-services-content-types-to-a-sharepoint-library"></a>SharePoint 라이브러리에 Reporting Services 콘텐츠 형식 추가
 
@@ -61,7 +61,7 @@ ms.locfileid: "86197201"
   
 2.  **사이트 설정**으로 이동합니다.  
   
-    -   SharePoint 2013에서 **설정** 아이콘을 클릭합니다. ![SharePoint 설정](https://docs.microsoft.com/analysis-services/analysis-services/media/as-sharepoint2013-settings-gear.gif "SharePoint 설정")  
+    -   SharePoint 2013에서 **설정** 아이콘을 클릭합니다. ![SharePoint 설정](/analysis-services/analysis-services/media/as-sharepoint2013-settings-gear.gif "SharePoint 설정")  
   
     -   SharePoint 2010에서 **사이트 동작**을 클릭한 다음 **사이트 설정**을 클릭합니다.  
   
@@ -173,5 +173,4 @@ ms.locfileid: "86197201"
 ## <a name="see-also"></a>참고 항목  
  [보고서 서버 항목에 대한 SharePoint 사이트 및 목록 사용 권한 참조](../../reporting-services/security/sharepoint-site-and-list-permission-reference-for-report-server-items.md)   
  [보고서 작성기 시작](../../reporting-services/report-builder/start-report-builder.md)  
-  
   

@@ -10,12 +10,12 @@ author: garyericson
 ms.author: garye
 ms.reviewer: davidph
 monikerRange: '>=sql-server-2016||>=sql-server-linux-ver15||=azuresqldb-mi-current||=sqlallproducts-allversions'
-ms.openlocfilehash: b998c66511dc749002df01349bcb965b7f42e713
-ms.sourcegitcommit: 9b41725d6db9957dd7928a3620fe4db41eb51c6e
+ms.openlocfilehash: 7b1004b6ecaffba0768d8565a90387964b62b53b
+ms.sourcegitcommit: afb02c275b7c79fbd90fac4bfcfd92b00a399019
 ms.translationtype: HT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 08/13/2020
-ms.locfileid: "88178910"
+ms.lasthandoff: 10/12/2020
+ms.locfileid: "91956947"
 ---
 # <a name="get-r-package-information"></a>R 패키지 정보 가져오기
 
@@ -80,8 +80,8 @@ GO
 
 |패키지 | 버전 | Description |
 |---------|---------|-------------|
-| [RevoScaleR](https://docs.microsoft.com/r-server/r-reference/revoscaler/revoscaler)  | 8.0.3 | 데이터 가져오기 및 변환, 모델링, 시각화 및 분석을 위해 원격 컴퓨팅 컨텍스트, 스트리밍, rx 함수의 병렬 실행에 사용됩니다. |
-| [sqlrutils](https://docs.microsoft.com/machine-learning-server/r-reference/sqlrutils/sqlrutils) | 1.0.0 | 저장 프로시저에 R 스크립트를 포함하는 데 사용됩니다. |
+| [RevoScaleR](/r-server/r-reference/revoscaler/revoscaler)  | 8.0.3 | 데이터 가져오기 및 변환, 모델링, 시각화 및 분석을 위해 원격 컴퓨팅 컨텍스트, 스트리밍, rx 함수의 병렬 실행에 사용됩니다. |
+| [sqlrutils](/machine-learning-server/r-reference/sqlrutils/sqlrutils) | 1.0.0 | 저장 프로시저에 R 스크립트를 포함하는 데 사용됩니다. |
 
 ::: moniker-end
 
@@ -91,10 +91,10 @@ GO
 
 |패키지 | 버전 | Description |
 |---------|---------|-------------|
-| [RevoScaleR](https://docs.microsoft.com/r-server/r-reference/revoscaler/revoscaler)  | 9.2 | 데이터 가져오기 및 변환, 모델링, 시각화 및 분석을 위해 원격 컴퓨팅 컨텍스트, 스트리밍, rx 함수의 병렬 실행에 사용됩니다. |
-| [sqlrutils](https://docs.microsoft.com/machine-learning-server/r-reference/sqlrutils/sqlrutils) | 1.0.0 | 저장 프로시저에 R 스크립트를 포함하는 데 사용됩니다. |
-| [MicrosoftML](https://docs.microsoft.com/r-server/r-reference/microsoftml/microsoftml-package)| 1.4.0 | R에서 기계 학습 알고리즘을 추가합니다. | 
-| [olapR](https://docs.microsoft.com/machine-learning-server/r-reference/olapr/olapr) | 1.0.0 | R에서 MDX 문을 작성하는 데 사용됩니다. |
+| [RevoScaleR](/r-server/r-reference/revoscaler/revoscaler)  | 9.2 | 데이터 가져오기 및 변환, 모델링, 시각화 및 분석을 위해 원격 컴퓨팅 컨텍스트, 스트리밍, rx 함수의 병렬 실행에 사용됩니다. |
+| [sqlrutils](/machine-learning-server/r-reference/sqlrutils/sqlrutils) | 1.0.0 | 저장 프로시저에 R 스크립트를 포함하는 데 사용됩니다. |
+| [MicrosoftML](/r-server/r-reference/microsoftml/microsoftml-package)| 1.4.0 | R에서 기계 학습 알고리즘을 추가합니다. | 
+| [olapR](/machine-learning-server/r-reference/olapr/olapr) | 1.0.0 | R에서 MDX 문을 작성하는 데 사용됩니다. |
 
 ::: moniker-end
 
@@ -104,10 +104,10 @@ GO
 
 |패키지 | 버전 | Description |
 |---------|---------|-------------|
-| [RevoScaleR](https://docs.microsoft.com/r-server/r-reference/revoscaler/revoscaler)  | 9.4.7 | 데이터 가져오기 및 변환, 모델링, 시각화 및 분석을 위해 원격 컴퓨팅 컨텍스트, 스트리밍, rx 함수의 병렬 실행에 사용됩니다. |
-| [sqlrutils](https://docs.microsoft.com/machine-learning-server/r-reference/sqlrutils/sqlrutils) | 1.0.0 | 저장 프로시저에 R 스크립트를 포함하는 데 사용됩니다. |
-| [MicrosoftML](https://docs.microsoft.com/r-server/r-reference/microsoftml/microsoftml-package)| 9.4.7 | R에서 기계 학습 알고리즘을 추가합니다. |
-| [olapR](https://docs.microsoft.com/machine-learning-server/r-reference/olapr/olapr) | 1.0.0 | R에서 MDX 문을 작성하는 데 사용됩니다. |
+| [RevoScaleR](/r-server/r-reference/revoscaler/revoscaler)  | 9.4.7 | 데이터 가져오기 및 변환, 모델링, 시각화 및 분석을 위해 원격 컴퓨팅 컨텍스트, 스트리밍, rx 함수의 병렬 실행에 사용됩니다. |
+| [sqlrutils](/machine-learning-server/r-reference/sqlrutils/sqlrutils) | 1.0.0 | 저장 프로시저에 R 스크립트를 포함하는 데 사용됩니다. |
+| [MicrosoftML](/r-server/r-reference/microsoftml/microsoftml-package)| 9.4.7 | R에서 기계 학습 알고리즘을 추가합니다. |
+| [olapR](/machine-learning-server/r-reference/olapr/olapr) | 1.0.0 | R에서 MDX 문을 작성하는 데 사용됩니다. |
 
 ::: moniker-end
 

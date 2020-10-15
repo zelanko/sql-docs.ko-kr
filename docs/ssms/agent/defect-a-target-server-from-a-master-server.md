@@ -18,18 +18,18 @@ author: markingmyname
 ms.author: maghan
 ms.reviewer: ''
 monikerRange: = azuresqldb-mi-current || >= sql-server-2016 || = sqlallproducts-allversions
-ms.openlocfilehash: 177519b7517a1bec286fecbbbb8784a4e9940ba0
-ms.sourcegitcommit: e700497f962e4c2274df16d9e651059b42ff1a10
+ms.openlocfilehash: 14d926337076113671d2dd9eae71ad5a9211bbd9
+ms.sourcegitcommit: 22dacedeb6e8721e7cdb6279a946d4002cfb5da3
 ms.translationtype: HT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 08/17/2020
-ms.locfileid: "88480428"
+ms.lasthandoff: 10/14/2020
+ms.locfileid: "92036512"
 ---
 # <a name="defect-a-target-server-from-a-master-server"></a>마스터 서버에서 대상 서버 제거
 [!INCLUDE [SQL Server SQL MI](../../includes/applies-to-version/sql-asdbmi.md)]
 
 > [!IMPORTANT]  
-> 현재 [Azure SQL Managed Instance](https://docs.microsoft.com/azure/sql-database/sql-database-managed-instance)에서는 SQL Server 에이전트 기능이 대부분 지원됩니다. 자세한 내용은 [SQL Server와 Azure SQL Managed Instance 간의 T-SQL 차이점](https://docs.microsoft.com/azure/sql-database/sql-database-managed-instance-transact-sql-information#sql-server-agent)을 참조하세요.
+> 현재 [Azure SQL Managed Instance](/azure/sql-database/sql-database-managed-instance)에서는 SQL Server 에이전트 기능이 대부분 지원됩니다. 자세한 내용은 [SQL Server와 Azure SQL Managed Instance 간의 T-SQL 차이점](/azure/sql-database/sql-database-managed-instance-transact-sql-information#sql-server-agent)을 참조하세요.
 
 이 항목에서는 [!INCLUDE[ssCurrent](../../includes/sscurrent-md.md)]에서 [!INCLUDE[ssManStudioFull](../../includes/ssmanstudiofull-md.md)], [!INCLUDE[tsql](../../includes/tsql-md.md)] 또는 SMO(SQL Server 관리 개체)를 사용하여 마스터 서버에서 대상 서버를 제거하는 방법에 대해 설명합니다. 이 프로시저를 대상 서버에서 실행합니다.  
   
@@ -64,7 +64,7 @@ ms.locfileid: "88480428"
 sp_msx_defect ;  
 ```  
   
-자세한 내용은 [sp_msx_defect(Transact-SQL)](https://msdn.microsoft.com/0dfd963a-3bc5-4b58-94f7-aec976da2883)를 참조하세요.  
+자세한 내용은 [sp_msx_defect(Transact-SQL)](../../relational-databases/system-stored-procedures/sp-msx-defect-transact-sql.md)를 참조하세요.  
   
 ## <a name="using-sql-server-management-objects-smo"></a><a name="PowerShellProcedure"></a>SMO(SQL Server 관리 개체) 사용  
 **MsxDefect 메서드**를 사용합니다.  
@@ -73,4 +73,3 @@ sp_msx_defect ;
 [다중 서버 환경 만들기](../../ssms/agent/create-a-multiserver-environment.md)  
 [기업 내 관리 자동화](../../ssms/agent/automated-administration-across-an-enterprise.md)  
 [마스터 서버에서 여러 대상 서버 제거](../../ssms/agent/defect-multiple-target-servers-from-a-master-server.md)  
-  

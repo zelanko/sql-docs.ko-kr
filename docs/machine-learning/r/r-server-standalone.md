@@ -9,12 +9,12 @@ author: dphansen
 ms.author: davidph
 ms.custom: seo-lt-2019
 monikerRange: '>=sql-server-2016||=sqlallproducts-allversions'
-ms.openlocfilehash: 1259cc5d536e66b95db4e6575237484efafcc581
-ms.sourcegitcommit: 9b41725d6db9957dd7928a3620fe4db41eb51c6e
+ms.openlocfilehash: 342c9bd2f83fed2b74cbce1f5ea7b7d942e9fd63
+ms.sourcegitcommit: afb02c275b7c79fbd90fac4bfcfd92b00a399019
 ms.translationtype: HT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 08/13/2020
-ms.locfileid: "88179964"
+ms.lasthandoff: 10/12/2020
+ms.locfileid: "91956914"
 ---
 # <a name="what-are-standalone-machine-learning-server-or-r-server-in-sql-server"></a>SQL Server의 독립 실행형 Machine Learning Server 또는 R Server란?
 [!INCLUDE [SQL Server 2016 and later](../../includes/applies-to-version/sqlserver2016.md)]
@@ -24,7 +24,7 @@ SQL Server는 SQL Server와 독립적으로 실행되는 독립 실행형 R Serv
 SQL Server 2016에서는 이 기능을 **R Server(독립 실행형)** 라고 하며 R 전용입니다. SQL Server 2017에서는 **Machine Learning Server(독립 실행형)** 라고 하며 R과 Python을 모두 포함하고 있습니다.  
 
 > [!Note]
-> SQL Server 설치 프로그램을 통해 설치되는 독립 실행형 서버는 SQL 브랜드가 아닌 버전의 [Microsoft Machine Learning Server](https://docs.microsoft.com/machine-learning-server/what-is-machine-learning-server)와 기능적으로 동일합니다. 즉, 원격 실행, 운영 및 웹 서비스, R 및 Python 라이브러리의 전체 컬렉션을 포함하여 동일한 사용자 시나리오를 지원합니다.
+> SQL Server 설치 프로그램을 통해 설치되는 독립 실행형 서버는 SQL 브랜드가 아닌 버전의 [Microsoft Machine Learning Server](/machine-learning-server/what-is-machine-learning-server)와 기능적으로 동일합니다. 즉, 원격 실행, 운영 및 웹 서비스, R 및 Python 라이브러리의 전체 컬렉션을 포함하여 동일한 사용자 시나리오를 지원합니다.
 
 ## <a name="components"></a>구성 요소
 
@@ -48,7 +48,7 @@ R 및 Python 개발자는 오픈 소스 R 및 Python의 메모리 및 처리 제
 
 SQL Server에서 분리된 독립 서버인 R 및 Python 환경은 SQL Server가 아닌 독립 실행형 서버에서 제공하는 기본 운영 체제 및 표준 도구를 사용하여 구성, 보호 및 액세스됩니다. SQL Server 관계형 데이터를 기본적으로 지원하지 않습니다. SQL Server 데이터를 사용하려면 다른 클라이언트에서 하듯이 데이터 원본 개체 및 연결을 만들면 됩니다.
 
-SQL Server의 보충 모델인 독립 실행형 서버는 로컬 및 원격 컴퓨팅이 모두 필요한 경우에 유용하게 사용할 수 있는 강력한 개발 환경이기도 합니다. 독립 실행형 서버의 R 및 Python 패키지는 데이터베이스 엔진 설치와 함께 제공되는 패키지와 동일하며, 코드 이식 및 [컴퓨팅 컨텍스트 전환](https://docs.microsoft.com/machine-learning-server/r/concept-what-is-compute-context)이 가능합니다.
+SQL Server의 보충 모델인 독립 실행형 서버는 로컬 및 원격 컴퓨팅이 모두 필요한 경우에 유용하게 사용할 수 있는 강력한 개발 환경이기도 합니다. 독립 실행형 서버의 R 및 Python 패키지는 데이터베이스 엔진 설치와 함께 제공되는 패키지와 동일하며, 코드 이식 및 [컴퓨팅 컨텍스트 전환](/machine-learning-server/r/concept-what-is-compute-context)이 가능합니다.
 
 ## <a name="how-to-get-started"></a>시작하는 방법
 
@@ -72,15 +72,15 @@ SQL Server의 보충 모델인 독립 실행형 서버는 로컬 및 원격 컴�
 
 RevoScaleR, revoscalepy 및 기계 학습 알고리즘의 함수를 사용하여 R 또는 Python 스크립트를 작성합니다.
   
-  + [25개 함수의 R 및 RevoScaleR 살펴보기](https://docs.microsoft.com/machine-learning-server/r/tutorial-r-to-revoscaler): 기본 R 명령으로 시작한 다음, R 솔루션에 고성능 및 확장성을 제공하는 RevoScaleR 배포 가능 분석 함수로 넘어갑니다. K-means 클러스터링, 의사 결정 트리, 의사 결정 포리스트, 데이터 조작 도구 등 가장 많이 사용되는 R 모델링 패키지의 병렬 처리 버전을 포함합니다.
+  + [25개 함수의 R 및 RevoScaleR 살펴보기](/machine-learning-server/r/tutorial-r-to-revoscaler): 기본 R 명령으로 시작한 다음, R 솔루션에 고성능 및 확장성을 제공하는 RevoScaleR 배포 가능 분석 함수로 넘어갑니다. K-means 클러스터링, 의사 결정 트리, 의사 결정 포리스트, 데이터 조작 도구 등 가장 많이 사용되는 R 모델링 패키지의 병렬 처리 버전을 포함합니다.
 
-  + [빠른 시작: microsoftml Python 패키지를 사용하는 이진 분류의 예](https://docs.microsoft.com/machine-learning-server/python/quickstart-binary-classification-with-microsoftml): microsoftml의 함수와 잘 알려진 유방암 암 데이터 세트를 사용하여 이진 분류 모델을 만듭니다.
+  + [빠른 시작: microsoftml Python 패키지를 사용하는 이진 분류의 예](/machine-learning-server/python/quickstart-binary-classification-with-microsoftml): microsoftml의 함수와 잘 알려진 유방암 암 데이터 세트를 사용하여 이진 분류 모델을 만듭니다.
 
 작업에 가장 적합한 언어를 선택합니다. SQL을 사용하여 구현하기 어려운 통계 컴퓨팅에는 R이 가장 적합합니다. 데이터에 대한 세트 기반 작업의 경우 강력한 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]를 활용하여 성능을 극대화합니다. 열에 대한 컴퓨팅을 매우 빠르게 수행할 수 있는 메모리 내 데이터베이스 엔진을 사용합니다.
 
 ### <a name="step-4-operationalize-your-solution"></a>4단계: 솔루션 운영
 
-독립 실행형 서버는 SQL 브랜드가 아닌 [Microsoft Machine Learning Server](https://docs.microsoft.com/machine-learning-server/what-is-machine-learning-server)의 [운영](https://docs.microsoft.com//machine-learning-server/what-is-operationalization) 기능을 사용할 수 있습니다. 독립 실행형 서버의 운영을 구성할 수 있으며, 이를 통해 코드를 웹 서비스로 배포 및 호스팅하고, 진단을 실행하고, 웹 서비스 용량을 테스트할 수 있습니다.
+독립 실행형 서버는 SQL 브랜드가 아닌 [Microsoft Machine Learning Server](/machine-learning-server/what-is-machine-learning-server)의 [운영](//machine-learning-server/what-is-operationalization) 기능을 사용할 수 있습니다. 독립 실행형 서버의 운영을 구성할 수 있으며, 이를 통해 코드를 웹 서비스로 배포 및 호스팅하고, 진단을 실행하고, 웹 서비스 용량을 테스트할 수 있습니다.
 
 ### <a name="step-5-maintain-your-server"></a>5단계: 서버 유지 관리
 
@@ -93,4 +93,3 @@ SQL Server는 정기적으로 누적 업데이트가 출시됩니다. 누적 업
 ## <a name="see-also"></a>참고 항목
 
  [R Server(독립 실행형) 또는 Machine Learning Server(독립 실행형) 설치](../install/sql-machine-learning-standalone-windows-install.md)
-

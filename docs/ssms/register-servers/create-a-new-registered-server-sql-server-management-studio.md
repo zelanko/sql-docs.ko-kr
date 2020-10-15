@@ -16,12 +16,12 @@ ms.author: maghan
 ms.reviewer: ''
 ms.custom: seo-lt-2019
 ms.date: 03/14/2017
-ms.openlocfilehash: 5b75fa312f06fa91d7ffbe9a4a4226f0e3852449
-ms.sourcegitcommit: e700497f962e4c2274df16d9e651059b42ff1a10
+ms.openlocfilehash: 9bdbf68766e6c271f17254afc4262de341deaeb3
+ms.sourcegitcommit: 22dacedeb6e8721e7cdb6279a946d4002cfb5da3
 ms.translationtype: HT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 08/17/2020
-ms.locfileid: "88480177"
+ms.lasthandoff: 10/14/2020
+ms.locfileid: "92037601"
 ---
 # <a name="create-a-new-registered-server-sql-server-management-studio"></a>새 등록된 서버 만들기(SQL Server Management Studio)
 
@@ -33,7 +33,7 @@ ms.locfileid: "88480177"
   
 -   로컬 서버 그룹  
   
-     로컬 서버 그룹을 사용하여 자주 관리하는 서버에 쉽게 연결할 수 있습니다. 로컬 서버와 로컬이 아닌 서버가 모두 로컬 서버 그룹에 등록됩니다. 로컬 서버 그룹은 각 사용자에게 고유합니다. 등록된 서버 정보를 공유하는 방법은 [등록된 서버 정보 내보내기&#40;SQL Server Management Studio&#41;](../../tools/sql-server-management-studio/export-registered-server-information-sql-server-management-studio.md) 및 [등록된 서버 정보 가져오기&#40;SQL Server Management Studio&#41;](../../tools/sql-server-management-studio/import-registered-server-information-sql-server-management-studio.md)의 등록된 서버 구성 요소에 서버를 등록하여 자주 액세스하는 서버에 대한 연결 정보를 저장하는 방법에 대해 설명합니다.  
+     로컬 서버 그룹을 사용하여 자주 관리하는 서버에 쉽게 연결할 수 있습니다. 로컬 서버와 로컬이 아닌 서버가 모두 로컬 서버 그룹에 등록됩니다. 로컬 서버 그룹은 각 사용자에게 고유합니다. 등록된 서버 정보를 공유하는 방법은 [등록된 서버 정보 내보내기&#40;SQL Server Management Studio&#41;](./export-registered-server-information-sql-server-management-studio.md) 및 [등록된 서버 정보 가져오기&#40;SQL Server Management Studio&#41;](./import-registered-server-information-sql-server-management-studio.md)의 등록된 서버 구성 요소에 서버를 등록하여 자주 액세스하는 서버에 대한 연결 정보를 저장하는 방법에 대해 설명합니다.  
   
     > [!NOTE]  
     >  가능하면 Windows 인증을 사용하는 것이 좋습니다.  
@@ -98,7 +98,7 @@ ms.locfileid: "88480177"
      등록된 서버 설정을 저장하려면 클릭합니다.  
   
 ## <a name="multiserver-queries"></a>다중 서버 쿼리  
- [!INCLUDE[ssManStudioFull](../../includes/ssmanstudiofull-md.md)] 의 쿼리 편집기 창은 여러 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 인스턴스에 동시에 연결하여 쿼리를 수행할 수 있습니다. 쿼리에서 반환되는 결과는 단일 결과 창에 병합되거나 별도의 결과 창에 반환될 수 있습니다. 선택적으로 쿼리 편집기는 각 행을 생성한 서버의 이름을 제공하는 열과 각 행을 제공한 서버에 연결하는 데 사용된 로그인을 포함할 수 있습니다. 다중 서버 쿼리를 실행하는 방법은 [여러 서버에 대해 동시에 문 실행&#40;SQL Server Management Studio&#41;](../../tools/sql-server-management-studio/execute-statements-against-multiple-servers-simultaneously.md)을 참조하세요.  
+ [!INCLUDE[ssManStudioFull](../../includes/ssmanstudiofull-md.md)] 의 쿼리 편집기 창은 여러 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 인스턴스에 동시에 연결하여 쿼리를 수행할 수 있습니다. 쿼리에서 반환되는 결과는 단일 결과 창에 병합되거나 별도의 결과 창에 반환될 수 있습니다. 선택적으로 쿼리 편집기는 각 행을 생성한 서버의 이름을 제공하는 열과 각 행을 제공한 서버에 연결하는 데 사용된 로그인을 포함할 수 있습니다. 다중 서버 쿼리를 실행하는 방법은 [여러 서버에 대해 동시에 문 실행&#40;SQL Server Management Studio&#41;](./execute-statements-against-multiple-servers-simultaneously.md)을 참조하세요.  
   
  로컬 서버 그룹의 모든 서버에 대해 쿼리를 실행하려면 서버 그룹을 마우스 오른쪽 단추로 클릭하고 **연결**을 가리켜 클릭한 다음 **새 쿼리**를 클릭합니다. 새 쿼리 편집기 창에서 쿼리를 실행하면 사용자 인증 컨텍스트를 비롯한 저장된 연결 정보를 사용하여 그룹의 모든 서버에 대해 해당 쿼리가 실행됩니다. [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 인증을 사용하여 등록되었지만 암호를 저장하지 않는 서버는 연결에 실패합니다.  
   
@@ -106,7 +106,6 @@ ms.locfileid: "88480177"
   
 ## <a name="see-also"></a>참고 항목  
  [개체 탐색기에서 시스템 개체 숨기기](../object/hide-system-objects-in-object-explorer.md)   
- [등록된 서버 정보 내보내기&#40;SQL Server Management Studio&#41;](../../tools/sql-server-management-studio/export-registered-server-information-sql-server-management-studio.md)   
- [등록된 서버 정보 가져오기&#40;SQL Server Management Studio&#41;](../../tools/sql-server-management-studio/import-registered-server-information-sql-server-management-studio.md)  
-  
+ [등록된 서버 정보 내보내기&#40;SQL Server Management Studio&#41;](./export-registered-server-information-sql-server-management-studio.md)   
+ [등록된 서버 정보 가져오기&#40;SQL Server Management Studio&#41;](./import-registered-server-information-sql-server-management-studio.md)  
   

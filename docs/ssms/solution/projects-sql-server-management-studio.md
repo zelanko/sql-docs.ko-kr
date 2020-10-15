@@ -11,12 +11,12 @@ ms.topic: conceptual
 ms.assetid: c13af859-ca66-4e43-b76a-0650ac6566c0
 author: markingmyname
 ms.author: maghan
-ms.openlocfilehash: 321257f45a593afdaf8c69228b2018347074d7ce
-ms.sourcegitcommit: e700497f962e4c2274df16d9e651059b42ff1a10
+ms.openlocfilehash: 8edcfdae75389c0922582aa7bad4ad323e6ba49a
+ms.sourcegitcommit: 22dacedeb6e8721e7cdb6279a946d4002cfb5da3
 ms.translationtype: HT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 08/17/2020
-ms.locfileid: "88417879"
+ms.lasthandoff: 10/14/2020
+ms.locfileid: "92036001"
 ---
 # <a name="projects-sql-server-management-studio"></a>프로젝트(SQL Server Management Studio)
 [!INCLUDE[SQL Server Azure SQL Database Synapse Analytics PDW ](../../includes/applies-to-version/sql-asdb-asdbmi-asa-pdw.md)]
@@ -60,5 +60,4 @@ ms.locfileid: "88417879"
 ## <a name="see-also"></a>참고 항목  
 [솔루션 탐색기](../../ssms/solution/solution-explorer.md)  
 [솔루션&#40;SQL Server Management Studio&#41;](../../ssms/solution/solutions-sql-server-management-studio.md)  
-[솔루션 탐색기 원본 제어](https://docs.microsoft.com/sql/ssms/solution/solution-explorer)  
-  
+[솔루션 탐색기 원본 제어](./solution-explorer.md)  

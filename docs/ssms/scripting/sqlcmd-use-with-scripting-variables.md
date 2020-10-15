@@ -19,12 +19,12 @@ ms.assetid: 793495ca-cfc9-498d-8276-c44a5d09a92c
 author: markingmyname
 ms.author: maghan
 monikerRange: '>=aps-pdw-2016||=azuresqldb-current||=azure-sqldw-latest||>=sql-server-2016||=sqlallproducts-allversions||>=sql-server-linux-2017||=azuresqldb-mi-current'
-ms.openlocfilehash: 4ead5f4da1024f098b4dea456848fc993f7c6124
-ms.sourcegitcommit: 6d53ecfdc463914f045c20eda96da39dec22acca
+ms.openlocfilehash: ca718daf11f544120db3a17aed21f73b2e467c54
+ms.sourcegitcommit: 22dacedeb6e8721e7cdb6279a946d4002cfb5da3
 ms.translationtype: HT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 08/26/2020
-ms.locfileid: "88901548"
+ms.lasthandoff: 10/14/2020
+ms.locfileid: "92036256"
 ---
 # <a name="sqlcmd---use-with-scripting-variables"></a>sqlcmd - 스크립팅 변수와 함께 사용
 [!INCLUDE[SQL Server Azure SQL Database Synapse Analytics PDW ](../../includes/applies-to-version/sql-asdb-asdbmi-asa-pdw.md)]
@@ -332,8 +332,7 @@ C:\> sqlcmd
 ```
   
 ## <a name="see-also"></a>참고 항목  
- [sqlcmd 유틸리티 사용](../../relational-databases/scripting/sqlcmd-use-the-utility.md)   
+ [sqlcmd 유틸리티 사용](./sqlcmd-use-the-utility.md)   
  [sqlcmd 유틸리티](../../tools/sqlcmd-utility.md)   
  [명령 프롬프트 유틸리티 참조&#40;데이터베이스 엔진#41;](../../tools/command-prompt-utility-reference-database-engine.md)  
-  
   

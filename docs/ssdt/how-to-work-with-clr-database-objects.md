@@ -12,16 +12,16 @@ ms.author: maghan
 ms.reviewer: “”
 ms.custom: seo-lt-2019
 ms.date: 02/09/2017
-ms.openlocfilehash: 46269e242cab25708006b8f1432ac12b72570779
-ms.sourcegitcommit: f7ac1976d4bfa224332edd9ef2f4377a4d55a2c9
+ms.openlocfilehash: 4427101e26905c21e093eca61a5579026522991b
+ms.sourcegitcommit: a41e1f4199785a2b8019a419a1f3dcdc15571044
 ms.translationtype: HT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 07/02/2020
-ms.locfileid: "85893857"
+ms.lasthandoff: 10/13/2020
+ms.locfileid: "91988686"
 ---
 # <a name="how-to-work-with-clr-database-objects"></a>방법: CLR 데이터베이스 개체 작업
 
-Transact\-SQL 프로그래밍 언어뿐만 아니라 .NET Framework 언어를 사용하여 데이터를 검색 및 업데이트하는 데이터베이스 개체를 만들 수 있습니다. 관리 코드로 작성된 데이터베이스 개체를 SQL Server CLR(공용 언어 런타임) 데이터베이스 개체라고 합니다. SQL Server에서 호스트되는 CLR 데이터베이스 개체를 사용할 경우의 이점과 Transact\-SQL 및 CLR 중에서 선택하는 방법은 [CLR 통합의 장점](../relational-databases/clr-integration/clr-integration-overview.md) 및 [관리 코드를 사용하여 데이터베이스 개체를 만드는 경우의 이점](https://msdn.microsoft.com/library/k2e1fb36.aspx)을 참조하세요.  
+Transact\-SQL 프로그래밍 언어뿐만 아니라 .NET Framework 언어를 사용하여 데이터를 검색 및 업데이트하는 데이터베이스 개체를 만들 수 있습니다. 관리 코드로 작성된 데이터베이스 개체를 SQL Server CLR(공용 언어 런타임) 데이터베이스 개체라고 합니다. SQL Server에서 호스트되는 CLR 데이터베이스 개체를 사용할 경우의 이점과 Transact\-SQL 및 CLR 중에서 선택하는 방법은 [CLR 통합의 장점](../relational-databases/clr-integration/clr-integration-overview.md) 및 [관리 코드를 사용하여 데이터베이스 개체를 만드는 경우의 이점](/previous-versions/visualstudio/visual-studio-2010/k2e1fb36(v=vs.100))을 참조하세요.  
   
 SQL Server Data Tools를 사용하는 CLR 데이터베이스 개체를 만들려면 데이터베이스 프로젝트를 만든 후 이 프로젝트에 CLR 데이터베이스 개체를 추가합니다. 이전 버전의 Visual Studio와 달리 별도의 CLR 프로젝트를 만든 후 데이터베이스 프로젝트에서 해당 프로젝트에 대한 참조를 추가할 필요가 없습니다. 데이터베이스 프로젝트를 빌드하고 게시하면 프로젝트의 CLR 개체가 동시에 자동으로 게시됩니다. 게시된 CLR 개체는 다른 데이터베이스 개체와 마찬가지 방식으로 호출하고 실행할 수 있습니다.  
   
@@ -29,7 +29,7 @@ CLR 및 CLR 빌드 속성 페이지에는 프로젝트에서 CLR 데이터베이
   
 CLR 데이터베이스 개체 디버깅을 사용하도록 설정하려면 **SQL Server 개체 탐색기**를 엽니다. 디버그하려는 CLR 데이터베이스 아티팩트를 포함한 서버를 마우스 오른쪽 단추로 클릭하고 **SQL/CLR 디버깅 허용**을 선택합니다. 경고와 함께 다음과 같은 메시지 상자가 표시됩니다. "디버깅하는 동안 이 서버의 모든 관리되는 스레드가 중지됩니다. 이 서버에서 SQL/CLR 디버깅을 사용하도록 설정하시겠습니까?" CLR 데이터베이스 개체를 디버깅할 때 실행을 중단하면 서버의 모든 스레드가 중단되어 다른 사용자에게 영향을 미치게 됩니다. 따라서 프로덕션 서버에서 CLR 데이터베이스 개체 애플리케이션을 디버깅하면 안 됩니다. 또한 디버깅을 시작한 후에는 **SQL Server 개체 탐색기**에서 설정을 변경할 수 없습니다. **SQL Server 개체 탐색기**의 변경 내용은 다음에 디버깅 세션을 시작할 때까지 적용되지 않습니다.  
   
-CLR 데이터베이스 개체를 작성할 때의 요구 사항에 대한 자세한 내용은 [CLR(공용 언어 런타임) 통합을 사용하여 데이터베이스 개체 작성](https://msdn.microsoft.com/library/ms131046.aspx)을 참조하세요.  
+CLR 데이터베이스 개체를 작성할 때의 요구 사항에 대한 자세한 내용은 [CLR(공용 언어 런타임) 통합을 사용하여 데이터베이스 개체 작성](../relational-databases/clr-integration/database-objects/building-database-objects-with-common-language-runtime-clr-integration.md)을 참조하세요.  
   
 > [!WARNING]  
 > 다음 절차에서는 [연결된 데이터베이스 개발](../ssdt/connected-database-development.md) 및 [프로젝트 기반 오프라인 데이터베이스 개발](../ssdt/project-oriented-offline-database-development.md) 섹션의 이전 절차에서 만들어진 엔터티를 사용합니다.  
@@ -103,6 +103,5 @@ CLR 데이터베이스 개체를 작성할 때의 요구 사항에 대한 자세
   
 ## <a name="see-also"></a>참고 항목  
 [CLR 통합의 장점](../relational-databases/clr-integration/clr-integration-overview.md)  
-[관리 코드를 사용하여 데이터베이스 개체를 만드는 경우의 이점](https://msdn.microsoft.com/library/k2e1fb36.aspx)  
-[CLR(공용 언어 런타임) 통합을 사용하여 데이터베이스 개체 작성](https://msdn.microsoft.com/library/ms131046.aspx)  
-  
+[관리 코드를 사용하여 데이터베이스 개체를 만드는 경우의 이점](/previous-versions/visualstudio/visual-studio-2010/k2e1fb36(v=vs.100))  
+[CLR(공용 언어 런타임) 통합을 사용하여 데이터베이스 개체 작성](../relational-databases/clr-integration/database-objects/building-database-objects-with-common-language-runtime-clr-integration.md)  

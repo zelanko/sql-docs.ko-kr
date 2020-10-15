@@ -21,12 +21,12 @@ ms.reviewer: ''
 ms.custom: seo-lt-2019
 ms.date: 03/01/2017
 monikerRange: '>=aps-pdw-2016||=azuresqldb-current||=azure-sqldw-latest||>=sql-server-2016||=sqlallproducts-allversions||>=sql-server-linux-2017||=azuresqldb-mi-current'
-ms.openlocfilehash: 1402467a2a030afc77390b5fccb2246fe2ae52c5
-ms.sourcegitcommit: 9e1f1c6ee8f5a10d18a2599bfd9f3eb6081829e1
+ms.openlocfilehash: 9e71aa6719c06dd181d756ebb1ee5e14e47ba96f
+ms.sourcegitcommit: 22dacedeb6e8721e7cdb6279a946d4002cfb5da3
 ms.translationtype: HT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 08/29/2020
-ms.locfileid: "89093437"
+ms.lasthandoff: 10/14/2020
+ms.locfileid: "92038985"
 ---
 # <a name="manage-the-editor-and-view-mode"></a>편집기 및 보기 모드 관리
 
@@ -91,7 +91,7 @@ ms.locfileid: "89093437"
  가상 공간 모드를 활성화하지 않은 경우 커서는 한 줄의 끝에서 다음 줄의 첫 번째 문자로 또는 그 반대로 줄 바꿈됩니다.  
   
 ## <a name="displaying-line-numbers"></a>줄 번호 표시  
- 코드에 줄 번호 매기기를 설정할 수 있습니다. 줄 번호는 코드를 이동할 때 유용합니다. 자세한 내용은 [코드 및 텍스트 이동](../../relational-databases/scripting/navigate-code-and-text.md)을 참조하세요.  
+ 코드에 줄 번호 매기기를 설정할 수 있습니다. 줄 번호는 코드를 이동할 때 유용합니다. 자세한 내용은 [코드 및 텍스트 이동](./navigate-code-and-text.md)을 참조하세요.  
   
 > [!NOTE]  
 >  줄 번호 매기기를 설정하더라도 문서에 자동으로 줄 번호가 표시되어 출력되지는 않습니다. 줄 번호를 출력하려면 **파일** 메뉴의 **페이지 설정** 명령에서 **줄 번호** 확인란을 선택해야 합니다.  
@@ -122,5 +122,4 @@ ms.locfileid: "89093437"
 #### <a name="to-hide-all-the-tool-windows-at-once"></a>모든 도구 창을 한 번에 숨기려면  
   
 1.  **창** 메뉴에서 **모두 자동 숨기기** 를 선택합니다.  
-  
   

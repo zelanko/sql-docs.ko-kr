@@ -4,7 +4,6 @@ description: Windows PowerShell 공급자가 데이터 계층 구조를 노출�
 ms.custom: ''
 ms.date: 03/14/2017
 ms.prod: sql
-ms.reviewer: ''
 ms.technology: sql-server-powershell
 ms.topic: conceptual
 helpviewer_keywords:
@@ -19,26 +18,25 @@ helpviewer_keywords:
 ms.assetid: 651099b0-33b4-453a-a864-b067f21eb8b9
 author: markingmyname
 ms.author: maghan
-ms.openlocfilehash: 54a37555038b3757ebff61faad8717c6a800ff1c
-ms.sourcegitcommit: a9f16d7819ed0e2b7ad8f4a7d4d2397437b2bbb2
+ms.reviewer: matteot, drskwier
+ms.openlocfilehash: 4f889fa93b78782a368ba36085a393f8b79fdb91
+ms.sourcegitcommit: a5398f107599102af7c8cda815d8e5e9a367ce7e
 ms.translationtype: HT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 08/21/2020
-ms.locfileid: "88714301"
+ms.lasthandoff: 10/13/2020
+ms.locfileid: "92006105"
 ---
 # <a name="sql-server-identifiers-in-powershell"></a>PowerShell의 SQL Server 식별자
+
 [!INCLUDE[SQL Server Azure SQL Database Synapse Analytics PDW ](../includes/applies-to-version/sql-asdb-asdbmi-asa-pdw.md)]
 
 Windows PowerShell의 [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)] 공급자는 Windows PowerShell 경로에서 [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)] 식별자를 사용합니다. [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)] 식별자는 Windows PowerShell이 경로에서 지원하지 않는 문자를 포함할 수 있습니다. Windows PowerShell 경로에서 식별자를 사용할 때는 이러한 문자를 이스케이프 처리하거나 특수 인코딩을 사용해야 합니다.  
   
-> [!NOTE]
-> SQL Server PowerShell 모듈은 **SqlServer**와 **SQLPS**의 두 가지가 있습니다. **SQLPS** 모듈은 (이전 버전과의 호환성을 위해) SQL Server 설치에 포함되어 있지만 더 이상 업데이트되지는 않습니다. 최신 PowerShell 모듈은 **SqlServer** 모듈입니다. **SqlServer** 모듈은 **SQLPS**에 업데이트된 버전의 cmdlet이 포함되어 있으며, 최신 SQL 기능을 지원하는 새로운 cmdlet도 포함되어 있습니다.  
-> 이전 버전의 **SqlServer** 모듈은 SSMS(SQL Server Management Studio)에 *포함되었습니다*(SSMS 16.x 버전만 해당). SSMS 17.0 이상이 포함된 PowerShell을 사용하려면 PowerShell 갤러리에서 **SqlServer** 모듈을 설치해야 합니다.
-> **SqlServer** 모듈을 설치하려면 [SQL Server PowerShell 설치](download-sql-server-ps-module.md)를 참조하세요.
-
+[!INCLUDE [sql-server-powershell-version](../includes/sql-server-powershell-version.md)]
 
 ## <a name="sql-server-identifiers-in-windows-powershell-paths"></a>Windows PowerShell 경로의 SQL Server 식별자  
- Windows PowerShell 공급자는 Windows 파일 시스템과 유사한 경로 구조를 사용하여 데이터 계층 구조를 표시합니다. [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)] 공급자는 [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)] 개체에 대한 경로를 구현합니다. [!INCLUDE[ssDE](../includes/ssde-md.md)]의 경우 드라이브는 SQLSERVER:로 설정되고 첫 번째 폴더는 \SQL로 설정되며 데이터베이스 개체는 컨테이너 및 항목으로 참조됩니다. 다음은 기본 [!INCLUDE[ssSampleDBobject](../includes/sssampledbobject-md.md)] 인스턴스에서 [!INCLUDE[ssDE](../includes/ssde-md.md)]데이터베이스의 Purchasing 스키마에 있는 Vendor 테이블에 대한 경로입니다.  
+
+Windows PowerShell 공급자는 Windows 파일 시스템과 유사한 경로 구조를 사용하여 데이터 계층 구조를 표시합니다. [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)] 공급자는 [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)] 개체에 대한 경로를 구현합니다. [!INCLUDE[ssDE](../includes/ssde-md.md)]의 경우 드라이브는 SQLSERVER:로 설정되고 첫 번째 폴더는 \SQL로 설정되며 데이터베이스 개체는 컨테이너 및 항목으로 참조됩니다. 다음은 기본 [!INCLUDE[ssSampleDBobject](../includes/sssampledbobject-md.md)] 인스턴스에서 [!INCLUDE[ssDE](../includes/ssde-md.md)]데이터베이스의 Purchasing 스키마에 있는 Vendor 테이블에 대한 경로입니다.  
   
 ```  
 SQLSERVER:\SQL\MyComputer\DEFAULT\Databases\AdventureWorks2012\Tables\Purchasing.Vendor  

@@ -20,12 +20,12 @@ helpviewer_keywords:
 ms.assetid: 93acefa8-bb41-4ccc-b763-7801f51134e0
 author: markingmyname
 ms.author: maghan
-ms.openlocfilehash: 3067b285a1d821808323cff524b109f782172e84
-ms.sourcegitcommit: f7ac1976d4bfa224332edd9ef2f4377a4d55a2c9
+ms.openlocfilehash: a2f9c1f0a6f73d4f2e2dfa5556548d3e1d5d9481
+ms.sourcegitcommit: a41e1f4199785a2b8019a419a1f3dcdc15571044
 ms.translationtype: HT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 07/02/2020
-ms.locfileid: "85899619"
+ms.lasthandoff: 10/13/2020
+ms.locfileid: "91988099"
 ---
 # <a name="work-with-multiple-versions-and-instances-of-sql-server"></a>여러 버전 및 인스턴스의 SQL Server 작업
 
@@ -126,4 +126,4 @@ SQL Server를 여러 개 설치하거나 이전 SQL Server 버전이 이미 설�
 * [SQL Server 업그레이드](../../database-engine/install-windows/upgrade-sql-server.md)
 * [버전 및 SQL Server 2017 의 지원 되는 기능](../../sql-server/editions-and-components-of-sql-server-2017.md)
 * [버전 및 SQL Server 2016 의 지원 되는 기능](../../sql-server/editions-and-components-of-sql-server-2016.md)
-* [이전 버전과의 호환성_삭제됨](https://msdn.microsoft.com/library/15d9117e-e2fa-4985-99ea-66a117c1e9fd)
+* [이전 버전과의 호환성_삭제됨](/previous-versions/sql/sql-server-2016/cc280407(v=sql.130))

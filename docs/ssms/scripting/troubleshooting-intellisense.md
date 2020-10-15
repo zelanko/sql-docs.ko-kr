@@ -16,12 +16,12 @@ ms.assetid: 4b72ffc6-aea2-4e11-ab36-fa2de4d7bcc5
 author: markingmyname
 ms.author: maghan
 monikerRange: '>=aps-pdw-2016||=azuresqldb-current||=azure-sqldw-latest||>=sql-server-2016||=sqlallproducts-allversions||>=sql-server-linux-2017||=azuresqldb-mi-current'
-ms.openlocfilehash: 613633dced2e5e906ad5d676e05b519e5f1708a5
-ms.sourcegitcommit: 6d53ecfdc463914f045c20eda96da39dec22acca
+ms.openlocfilehash: decdf70e29d907e8f95b7e16cbd88ac94e16b857
+ms.sourcegitcommit: 22dacedeb6e8721e7cdb6279a946d4002cfb5da3
 ms.translationtype: HT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 08/26/2020
-ms.locfileid: "88901866"
+ms.lasthandoff: 10/14/2020
+ms.locfileid: "92036086"
 ---
 # <a name="identify-issues-with-intellisense---sql-server-management-studio-ssms"></a>IntelliSense를 사용하여 문제 식별 - SSMS(SQL Server Management Studio)
 [!INCLUDE[SQL Server Azure SQL Database Synapse Analytics PDW ](../../includes/applies-to-version/sql-asdb-asdbmi-asa-pdw.md)]
@@ -48,12 +48,12 @@ ms.locfileid: "88901866"
   
      기본적으로 대부분의 IntelliSense 기능은 자동으로 작동하지만 임의의 기능을 해제할 수 있습니다.  
   
-     자동 문 완성이 해제된 경우에도 IntelliSense 기능을 사용할 수 있습니다. 자세한 내용은 [IntelliSense 구성&#40;SQL Server Management Studio&#41;](../../relational-databases/scripting/configure-intellisense-sql-server-management-studio.md)을 참조하세요.  
+     자동 문 완성이 해제된 경우에도 IntelliSense 기능을 사용할 수 있습니다. 자세한 내용은 [IntelliSense 구성&#40;SQL Server Management Studio&#41;](./configure-intellisense-sql-server-management-studio.md)을 참조하세요.  
   
 ## <a name="database-engine-query-intellisense"></a>데이터베이스 엔진 쿼리 IntelliSense  
  [!INCLUDE[ssDEnoversion](../../includes/ssdenoversion-md.md)] 쿼리 편집기에는 다음과 같은 문제가 적용됩니다.  
   
--   [!INCLUDE[ssDE](../../includes/ssde-md.md)] 쿼리 편집기의 IntelliSense 기능이 일부 [!INCLUDE[tsql](../../includes/tsql-md.md)] 구문 요소를 지원하지 않습니다. 매개 변수 도움말은 일부 개체에서 확장 저장 프로시저와 같은 매개 변수를 지원하지 않습니다. 자세한 내용은 [IntelliSense에서 지원되는 Transact-SQL 구문](../../relational-databases/scripting/transact-sql-syntax-supported-by-intellisense.md)을 참조하세요.  
+-   [!INCLUDE[ssDE](../../includes/ssde-md.md)] 쿼리 편집기의 IntelliSense 기능이 일부 [!INCLUDE[tsql](../../includes/tsql-md.md)] 구문 요소를 지원하지 않습니다. 매개 변수 도움말은 일부 개체에서 확장 저장 프로시저와 같은 매개 변수를 지원하지 않습니다. 자세한 내용은 [IntelliSense에서 지원되는 Transact-SQL 구문](./transact-sql-syntax-supported-by-intellisense.md)을 참조하세요.  
   
 -   [!INCLUDE[ssDE](../../includes/ssde-md.md)] 쿼리 편집기가 [!INCLUDE[ssDE](../../includes/ssde-md.md)] 이상의 [!INCLUDE[ssKatmai](../../includes/sskatmai-md.md)] 인스턴스에 연결되는 경우에만 IntelliSense를 사용할 수 있습니다. 쿼리 편집기가 이전 버전의 [!INCLUDE[ssDE](../../includes/ssde-md.md)]에 연결되는 경우에는 IntelliSense를 사용할 수 없습니다.  
   
@@ -70,5 +70,4 @@ ms.locfileid: "88901866"
 -   사용자가 권한을 가지고 있지 않은 데이터베이스 개체는 완성 목록에 포함되지 않습니다. IntelliSense 플래그는 사용자가 권한을 가지고 있는 개체를 참조합니다. 예를 들어 다른 사용자가 작성한 스크립트를 열면 스크립트 작성한 사용자만 권한을 가지고 있고 사용자 자신은 권한을 가지고 있지 않은 개체에 대한 모든 참조는 올바르지 않은 것으로 플래그가 지정됩니다.  
   
 -   [!INCLUDE[ssDE](../../includes/ssde-md.md)]인스턴스와의 연결이 끊어지면 완성 목록이 작동하지 않을 수 있습니다. 인스턴스에 다시 연결하십시오.  
-  
   

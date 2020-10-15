@@ -15,12 +15,12 @@ helpviewer_keywords:
 ms.assetid: 2a49d417-25fb-4760-8ae5-5871bfb1e6f3
 author: MashaMSFT
 ms.author: mathoma
-ms.openlocfilehash: 6144c7ef647f9108f9ac6619d971696b643e7648
-ms.sourcegitcommit: cc23d8646041336d119b74bf239a6ac305ff3d31
+ms.openlocfilehash: bbea3e2cf7d8a8eaf3ab62b20e0dd0472053def4
+ms.sourcegitcommit: a41e1f4199785a2b8019a419a1f3dcdc15571044
 ms.translationtype: HT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 09/23/2020
-ms.locfileid: "91115747"
+ms.lasthandoff: 10/13/2020
+ms.locfileid: "91988369"
 ---
 # <a name="rename-a-sql-server-failover-cluster-instance"></a>SQL Server 장애 조치(Failover) 클러스터 인스턴스 이름 변경
 [!INCLUDE [SQL Server](../../../includes/applies-to-version/sqlserver.md)]
@@ -66,7 +66,7 @@ ms.locfileid: "91115747"
   
  **[!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] 에이전트 서비스:** [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] 에이전트 서비스에 대한 아래의 추가 작업을 확인 및 수행합니다.  
   
--   SQL 에이전트가 이벤트를 전달하도록 구성된 경우 레지스트리 설정을 수정합니다. 자세한 내용은 [이벤트 전달 서버 지정&#40;SQL Server Management Studio&#41;](https://msdn.microsoft.com/library/81dfcbe4-3000-4e77-99de-bf85fef63a12)을 참조하세요.  
+-   SQL 에이전트가 이벤트를 전달하도록 구성된 경우 레지스트리 설정을 수정합니다. 자세한 내용은 [이벤트 전달 서버 지정&#40;SQL Server Management Studio&#41;](../../../ssms/agent/designate-an-events-forwarding-server-sql-server-management-studio.md)을 참조하세요.  
   
 -   컴퓨터/클러스터 네트워크 이름을 바꿀 때 마스터 서버(MSX) 및 대상 서버(TSX) 인스턴스 이름을 수정합니다. 자세한 내용은 아래 항목을 참조하세요.  
   
@@ -84,5 +84,4 @@ ms.locfileid: "91115747"
   
 ## <a name="see-also"></a>참고 항목  
  [SQL Server의 독립 실행형 인스턴스를 호스트하는 컴퓨터 이름 바꾸기](../../../database-engine/install-windows/rename-a-computer-that-hosts-a-stand-alone-instance-of-sql-server.md)  
-  
   

@@ -8,12 +8,12 @@ ms.topic: how-to
 author: dphansen
 ms.author: davidph
 monikerRange: '>=sql-server-2016||>=sql-server-linux-ver15||=sqlallproducts-allversions'
-ms.openlocfilehash: b907f4837810a2fdfabfbbfabbecc965627b86e9
-ms.sourcegitcommit: b6ee0d434b3e42384b5d94f1585731fd7d0eff6f
+ms.openlocfilehash: ea99f736af30fb1989bd8728896bed3f12c4c59c
+ms.sourcegitcommit: afb02c275b7c79fbd90fac4bfcfd92b00a399019
 ms.translationtype: HT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 09/02/2020
-ms.locfileid: "89288292"
+ms.lasthandoff: 10/12/2020
+ms.locfileid: "91956636"
 ---
 # <a name="create-ssis-and-ssrs-workflows-with-r-on-sql-server"></a>SQL Server에서 R을 사용하여 SSIS 및 SSRS 워크플로 만들기
 [!INCLUDE [SQL Server 2016 and later](../../includes/applies-to-version/sqlserver2016.md)]
@@ -47,9 +47,9 @@ Transact-SQL 및 저장 프로시저를 통해 [!INCLUDE[rsql_productname](../..
 
 다음 예제는 `https://blogs.msdn.microsoft.com/ssis/2016/01/11/operationalize-your-machine-learning-project-using-sql-server-2016-ssis-and-r-services/` URL에서 Jimmy Wong이 작성한 현재 사용 중지된 MSDN 블로그 게시물에서 가져왔습니다.
 
-이 예제에서는 SSIS를 사용하여 작업을 자동화하는 방법을 보여 줍니다. SQL Server Management Studio를 사용하여 포함된 R로 저장 프로시저를 만든 다음, SSIS 패키지의 [T-SQL 실행 태스크](https://docs.microsoft.com/sql/integration-services/control-flow/execute-t-sql-statement-task)에서 해당 저장 프로시저를 실행합니다.
+이 예제에서는 SSIS를 사용하여 작업을 자동화하는 방법을 보여 줍니다. SQL Server Management Studio를 사용하여 포함된 R로 저장 프로시저를 만든 다음, SSIS 패키지의 [T-SQL 실행 태스크](../../integration-services/control-flow/execute-t-sql-statement-task.md)에서 해당 저장 프로시저를 실행합니다.
 
-이 예제를 단계별로 실행하려면 Management Studio, SSIS, SSIS 디자이너, 패키지 디자인 및 T-SQL에 대해 잘 알고 있어야 합니다. SSIS 패키지는 학습 데이터를 테이블에 삽입하고, 데이터를 모델링하고, 데이터에 점수를 매겨 예측 출력을 가져오는 세 가지 [T-SQL 실행 태스크](https://docs.microsoft.com/sql/integration-services/control-flow/execute-t-sql-statement-task)를 사용합니다.
+이 예제를 단계별로 실행하려면 Management Studio, SSIS, SSIS 디자이너, 패키지 디자인 및 T-SQL에 대해 잘 알고 있어야 합니다. SSIS 패키지는 학습 데이터를 테이블에 삽입하고, 데이터를 모델링하고, 데이터에 점수를 매겨 예측 출력을 가져오는 세 가지 [T-SQL 실행 태스크](../../integration-services/control-flow/execute-t-sql-statement-task.md)를 사용합니다.
 
 ### <a name="load-training-data"></a>학습 데이터 로드
 
@@ -83,7 +83,7 @@ begin
 end;
 ```
 
-SSIS 디자이너에서 방금 정의한 저장 프로시저를 실행하는 [SQL 실행 태스크](https://docs.microsoft.com/sql/integration-services/control-flow/execute-sql-task)를 만듭니다. **SQLStatement**의 스크립트는 기존 데이터를 제거하고 삽입할 데이터를 지정한 다음, 저장 프로시저를 호출하여 데이터를 제공합니다.
+SSIS 디자이너에서 방금 정의한 저장 프로시저를 실행하는 [SQL 실행 태스크](../../integration-services/control-flow/execute-sql-task.md)를 만듭니다. **SQLStatement**의 스크립트는 기존 데이터를 제거하고 삽입할 데이터를 지정한 다음, 저장 프로시저를 호출하여 데이터를 제공합니다.
 
 ```T-SQL
 truncate table ssis_iris;
@@ -108,7 +108,7 @@ Create table ssis_iris_models (
 GO
 ```
 
-[rxLinMod](https://docs.microsoft.com/machine-learning-server/r-reference/revoscaler/rxlinmod)를 사용하여 선형 모델을 생성하는 저장 프로시저를 만듭니다. RevoScaleR 및 revoscalepy 라이브러리는 SQL Server의 R 및 Python 세션에서 자동으로 사용할 수 있으므로 라이브러리를 가져올 필요가 없습니다.
+[rxLinMod](/machine-learning-server/r-reference/revoscaler/rxlinmod)를 사용하여 선형 모델을 생성하는 저장 프로시저를 만듭니다. RevoScaleR 및 revoscalepy 라이브러리는 SQL Server의 R 및 Python 세션에서 자동으로 사용할 수 있으므로 라이브러리를 가져올 필요가 없습니다.
 
 ```T-SQL
 Create procedure generate_iris_rx_model
@@ -127,7 +127,7 @@ end;
 GO
 ```
 
-SSIS 디자이너에서 [SQL 실행 태스크](https://docs.microsoft.com/sql/integration-services/control-flow/execute-sql-task)를 만들어 **generate_iris_rx_model** 저장 프로시저를 실행합니다. 모델이 serialize되어 ssis_iris_models 테이블에 저장됩니다. **SQLStatement**에 대한 스크립트는 다음과 같습니다.
+SSIS 디자이너에서 [SQL 실행 태스크](../../integration-services/control-flow/execute-sql-task.md)를 만들어 **generate_iris_rx_model** 저장 프로시저를 실행합니다. 모델이 serialize되어 ssis_iris_models 테이블에 저장됩니다. **SQLStatement**에 대한 스크립트는 다음과 같습니다.
 
 ```T-SQL
 insert into ssis_iris_models (model)
@@ -143,7 +143,7 @@ update ssis_iris_models set model_name = 'rxLinMod' where model_name = 'default 
 
 이제 학습 데이터를 로드하고 모델을 생성하는 코드를 만들었으므로 남은 단계는 이 모델을 사용해서 예측을 생성하는 것입니다. 
 
-이렇게 하려면 SQL 쿼리에 R 스크립트를 추가하여 ssis_iris_model에서 [rxPredict](https://docs.microsoft.com//machine-learning-server/r-reference/revoscaler/rxpredict) 기본 제공 R 함수를 트리거합니다. **predict_species_length** 저장 프로시저가 이 작업을 수행합니다.
+이렇게 하려면 SQL 쿼리에 R 스크립트를 추가하여 ssis_iris_model에서 [rxPredict](//machine-learning-server/r-reference/revoscaler/rxpredict) 기본 제공 R 함수를 트리거합니다. **predict_species_length** 저장 프로시저가 이 작업을 수행합니다.
 
 ```T-SQL
 Create procedure predict_species_length (@model varchar(100))
@@ -171,7 +171,7 @@ colnames(OutputDataSet) <- c("id", "Sepal.Length.Actual", "Sepal.Length.Expected
 end;
 ```
 
-SSIS 디자이너에서 **predict_species_length** 저장 프로시저를 실행하여 예측된 꽃잎 길이를 생성하는 [SQL 실행 태스크](https://docs.microsoft.com/sql/integration-services/control-flow/execute-sql-task)를 만듭니다.
+SSIS 디자이너에서 **predict_species_length** 저장 프로시저를 실행하여 예측된 꽃잎 길이를 생성하는 [SQL 실행 태스크](../../integration-services/control-flow/execute-sql-task.md)를 만듭니다.
 
 ```T-SQL
 exec predict_species_length 'rxLinMod';

@@ -16,12 +16,12 @@ ms.assetid: 56c2aac9-c65c-4679-b62c-d9f689876dde
 author: markingmyname
 ms.author: maghan
 monikerRange: '>=aps-pdw-2016||=azuresqldb-current||=azure-sqldw-latest||>=sql-server-2016||=sqlallproducts-allversions||>=sql-server-linux-2017||=azuresqldb-mi-current'
-ms.openlocfilehash: cbd2f430583b125333f11184bf49d86fafdb8ae1
-ms.sourcegitcommit: 6d53ecfdc463914f045c20eda96da39dec22acca
+ms.openlocfilehash: 806d153589f05f8e2a945f7c8e1e34b1aab57aab
+ms.sourcegitcommit: 22dacedeb6e8721e7cdb6279a946d4002cfb5da3
 ms.translationtype: HT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 08/26/2020
-ms.locfileid: "88901742"
+ms.lasthandoff: 10/14/2020
+ms.locfileid: "92036446"
 ---
 # <a name="parameter-info-intellisense"></a>매개 변수 정보(IntelliSense)
 [!INCLUDE[SQL Server Azure SQL Database Synapse Analytics PDW ](../../includes/applies-to-version/sql-asdb-asdbmi-asa-pdw.md)]
@@ -47,9 +47,8 @@ ms.locfileid: "88901742"
   
 2.  바로 가기 키 Ctrl+Shift+스페이스바를 누릅니다.  
   
- 자세한 내용은 [IntelliSense 구성&#40;SQL Server Management Studio&#41;](../../relational-databases/scripting/configure-intellisense-sql-server-management-studio.md)을 참조하세요.  
+ 자세한 내용은 [IntelliSense 구성&#40;SQL Server Management Studio&#41;](./configure-intellisense-sql-server-management-studio.md)을 참조하세요.  
   
 > [!NOTE]  
 >  **매개 변수 정보** 옵션은 [!INCLUDE[ssDE](../../includes/ssde-md.md)] 쿼리 편집기와 XML 쿼리 편집기에서만 사용할 수 있습니다.  
-  
   

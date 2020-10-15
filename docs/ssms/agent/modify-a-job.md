@@ -16,19 +16,19 @@ ms.reviewer: mikeray
 ms.custom: seo-lt-2019
 ms.date: 01/19/2017
 monikerRange: = azuresqldb-mi-current || >= sql-server-2016 || = sqlallproducts-allversions
-ms.openlocfilehash: fcbe3849b9d3aa1aef06c451437511076691a4db
-ms.sourcegitcommit: e700497f962e4c2274df16d9e651059b42ff1a10
+ms.openlocfilehash: 7027d8f478ba0f0841e085ada61ef8ff1f379a0c
+ms.sourcegitcommit: 22dacedeb6e8721e7cdb6279a946d4002cfb5da3
 ms.translationtype: HT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 08/17/2020
-ms.locfileid: "88319589"
+ms.lasthandoff: 10/14/2020
+ms.locfileid: "92038860"
 ---
 # <a name="modify-a-job"></a>Modify a Job
 
 [!INCLUDE [SQL Server SQL MI](../../includes/applies-to-version/sql-asdbmi.md)]
 
 > [!IMPORTANT]  
-> 현재 [Azure SQL Managed Instance](https://docs.microsoft.com/azure/sql-database/sql-database-managed-instance)에서는 SQL Server 에이전트 기능이 대부분 지원됩니다. 자세한 내용은 [SQL Server와 Azure SQL Managed Instance 간의 T-SQL 차이점](https://docs.microsoft.com/azure/sql-database/sql-database-managed-instance-transact-sql-information#sql-server-agent)을 참조하세요.
+> 현재 [Azure SQL Managed Instance](/azure/sql-database/sql-database-managed-instance)에서는 SQL Server 에이전트 기능이 대부분 지원됩니다. 자세한 내용은 [SQL Server와 Azure SQL Managed Instance 간의 T-SQL 차이점](/azure/sql-database/sql-database-managed-instance-transact-sql-information#sql-server-agent)을 참조하세요.
 
 이 문서에서는 [!INCLUDE[msCoName](../../includes/msconame_md.md)] [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 또는 SQL Server 관리 개체를 사용하여 [!INCLUDE[ssCurrent](../../includes/sscurrent-md.md)]에서 [!INCLUDE[ssManStudioFull](../../includes/ssmanstudiofull-md.md)], [!INCLUDE[tsql](../../includes/tsql-md.md)] 에이전트 작업의 속성을 변경하는 방법에 대해 설명합니다.  
 
@@ -60,24 +60,23 @@ ms.locfileid: "88319589"
   
 3.  쿼리 창에서 다음 시스템 저장 프로시저를 사용하여 작업을 수정합니다.  
   
-    -   작업의 특성을 변경하려면 [sp_update_job(Transact-SQL)](https://msdn.microsoft.com/cbdfea38-9e42-47f3-8fc8-5978b82e2623) 을 실행합니다.  
+    -   작업의 특성을 변경하려면 [sp_update_job(Transact-SQL)](../../relational-databases/system-stored-procedures/sp-update-job-transact-sql.md) 을 실행합니다.  
   
-    -   작업 정의에 대한 일정 정보를 변경하려면 [sp_update_schedule(Transact-SQL)](https://msdn.microsoft.com/97b3119b-e43e-447a-bbfb-0b5499e2fefe) 을 실행합니다.  
+    -   작업 정의에 대한 일정 정보를 변경하려면 [sp_update_schedule(Transact-SQL)](../../relational-databases/system-stored-procedures/sp-update-schedule-transact-sql.md) 을 실행합니다.  
   
-    -   새 작업 단계를 추가하려면 [sp_add_jobstep(Transact-SQL)](https://msdn.microsoft.com/97900032-523d-49d6-9865-2734fba1c755) 을 실행합니다.  
+    -   새 작업 단계를 추가하려면 [sp_add_jobstep(Transact-SQL)](../../relational-databases/system-stored-procedures/sp-add-jobstep-transact-sql.md) 을 실행합니다.  
   
-    -   기존의 작업 단계를 변경하려면 [sp_update_jobstep(Transact-SQL)](https://msdn.microsoft.com/e158802c-c347-4a5d-bf75-c03e5ae56e6b) 을 실행합니다.  
+    -   기존의 작업 단계를 변경하려면 [sp_update_jobstep(Transact-SQL)](../../relational-databases/system-stored-procedures/sp-update-jobstep-transact-sql.md) 을 실행합니다.  
   
-    -   작업에서 작업 단계를 제거하려면 [sp_delete_jobstep(Transact-SQL)](https://msdn.microsoft.com/421ede8e-ad57-474a-9fb9-92f70a3e77e3) 을 실행합니다.  
+    -   작업에서 작업 단계를 제거하려면 [sp_delete_jobstep(Transact-SQL)](../../relational-databases/system-stored-procedures/sp-delete-jobstep-transact-sql.md) 을 실행합니다.  
   
     -   SQL Server 에이전트 마스터 작업을 수정하는 추가 저장 프로시저:  
   
-        -   현재 작업과 연결되어 있는 서버를 삭제하려면 [sp_delete_jobserver(Transact-SQL)](https://msdn.microsoft.com/6d63ed32-68cf-4d8f-aa40-05a3826e05b8) 를 실행합니다.  
+        -   현재 작업과 연결되어 있는 서버를 삭제하려면 [sp_delete_jobserver(Transact-SQL)](../../relational-databases/system-stored-procedures/sp-delete-jobserver-transact-sql.md) 를 실행합니다.  
   
-        -   현재 작업과 서버를 연결하려면 [sp_add_jobserver(Transact-SQL)](https://msdn.microsoft.com/485252cc-0081-490a-9bd1-cbbd68eea286) 를 실행합니다.  
+        -   현재 작업과 서버를 연결하려면 [sp_add_jobserver(Transact-SQL)](../../relational-databases/system-stored-procedures/sp-add-jobserver-transact-sql.md) 를 실행합니다.  
   
 ## <a name="using-sql-server-management-objects"></a><a name="SMO"></a>SQL Server 관리 개체 사용  
 **작업을 수정하려면**  
   
-Visual Basic, Visual C#, PowerShell 등 선택한 프로그래밍 언어를 사용하여 **Job** 클래스를 사용합니다. 자세한 내용은 [SMO(SQL Server 관리 개체)](https://msdn.microsoft.com/library/ms162169.aspx)를 참조하세요.  
-  
+Visual Basic, Visual C#, PowerShell 등 선택한 프로그래밍 언어를 사용하여 **Job** 클래스를 사용합니다. 자세한 내용은 [SMO(SQL Server 관리 개체)](../../relational-databases/server-management-objects-smo/sql-server-management-objects-smo-programming-guide.md)를 참조하세요.  

@@ -13,12 +13,12 @@ helpviewer_keywords:
 ms.assetid: 9531588c-e7ec-4049-9f9c-ee000c49c5de
 author: markingmyname
 ms.author: maghan
-ms.openlocfilehash: e619e457bf538a0a8c75e0615e45ca52567ea43a
-ms.sourcegitcommit: e700497f962e4c2274df16d9e651059b42ff1a10
+ms.openlocfilehash: cb7bd83a9a7526466d1a7798ab9ef3d71647d4fd
+ms.sourcegitcommit: 22dacedeb6e8721e7cdb6279a946d4002cfb5da3
 ms.translationtype: HT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 08/17/2020
-ms.locfileid: "88491951"
+ms.lasthandoff: 10/14/2020
+ms.locfileid: "92037674"
 ---
 # <a name="open-with-new-file"></a>연결 프로그램(새 파일)
 [!INCLUDE[SQL Server Azure SQL Database Synapse Analytics PDW ](../../includes/applies-to-version/sql-asdb-asdbmi-asa-pdw.md)]
@@ -44,4 +44,4 @@ ms.locfileid: "88491951"
 > **열려는 프로그램을 선택하십시오.** 아래의 프로그램 목록에서 선택한 파일 형식의 기본 편집기 이름 뒤에는 **(기본값)** 이 붙습니다.  
   
 ## <a name="see-also"></a>참고 항목  
-[파일 확장명을 코드 편집기에 연결](../../relational-databases/scripting/associate-file-extensions-to-a-code-editor.md)  
+[파일 확장명을 코드 편집기에 연결](../scripting/associate-file-extensions-to-a-code-editor.md)

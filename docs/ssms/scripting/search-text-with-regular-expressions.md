@@ -17,12 +17,12 @@ ms.assetid: a057690c-d118-4159-8e4d-2ed5ccfe79d3
 author: markingmyname
 ms.author: maghan
 monikerRange: '>=aps-pdw-2016||=azuresqldb-current||=azure-sqldw-latest||>=sql-server-2016||=sqlallproducts-allversions||>=sql-server-linux-2017||=azuresqldb-mi-current'
-ms.openlocfilehash: 41132064138e0272911bdd8bb4c89a24444fd1c0
-ms.sourcegitcommit: 6d53ecfdc463914f045c20eda96da39dec22acca
+ms.openlocfilehash: 564aafe28198a0afc46ba379849d24a7f3ec588f
+ms.sourcegitcommit: 22dacedeb6e8721e7cdb6279a946d4002cfb5da3
 ms.translationtype: HT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 08/26/2020
-ms.locfileid: "88902106"
+ms.lasthandoff: 10/14/2020
+ms.locfileid: "92036356"
 ---
 # <a name="search-text-with-regular-expressions"></a>정규식을 사용한 텍스트 검색
 [!INCLUDE[SQL Server Azure SQL Database Synapse Analytics PDW ](../../includes/applies-to-version/sql-asdb-asdbmi-asa-pdw.md)]
@@ -134,5 +134,5 @@ ms.locfileid: "88902106"
 |표의/한문/간지|:Id|표의 문자(예: 한문 및 간지)와 대응합니다.|  
   
 ## <a name="see-also"></a>참고 항목  
- [찾기 및 바꾸기](../../relational-databases/scripting/search-and-replace.md)   
- [와일드카드로 텍스트 검색](../../relational-databases/scripting/search-text-with-wildcards.md)  
+ [찾기 및 바꾸기](./search-and-replace.md)   
+ [와일드카드로 텍스트 검색](./search-text-with-wildcards.md)
