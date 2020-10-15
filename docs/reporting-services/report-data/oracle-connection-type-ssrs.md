@@ -9,12 +9,12 @@ ms.topic: conceptual
 ms.assetid: 9db86dd2-beda-42d8-8af7-2629d58a8e3d
 author: maggiesMSFT
 ms.author: maggies
-ms.openlocfilehash: 32972e17c7dee83c1099cf8826eefe874db9d7dd
-ms.sourcegitcommit: 216f377451e53874718ae1645a2611cdb198808a
+ms.openlocfilehash: 425f864e31f1280fd31852de44a40d5e2d5c61ef
+ms.sourcegitcommit: 783b35f6478006d654491cb52f6edf108acf2482
 ms.translationtype: HT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 07/28/2020
-ms.locfileid: "87246482"
+ms.lasthandoff: 10/09/2020
+ms.locfileid: "91891723"
 ---
 # <a name="oracle-connection-type-ssrs--power-bi-report-server"></a>Oracle 연결 형식(SSRS 및 Power BI Report Server)
 
@@ -114,7 +114,7 @@ Data Source="Oracle"; Unicode="True"
   
  자세한 내용은 다음 문서를 참조하세요.  
   
--   [Reporting Services를 사용한 Oracle 데이터 원본 구성 및 액세스 방법](https://docs.microsoft.com/archive/blogs/dataaccesstechnologies/configure-oracle-data-source-for-sql-server-reporting-services-ssdt-and-report-server)  
+-   [Reporting Services를 사용한 Oracle 데이터 원본 구성 및 액세스 방법](/archive/blogs/dataaccesstechnologies/configure-oracle-data-source-for-sql-server-reporting-services-ssdt-and-report-server)  
 -   [NETWORK SERVICE 보안 주체에 대한 사용 권한을 추가하는 방법](https://support.microsoft.com/kb/870668)  
   
 ### <a name="alternate-data-extensions"></a>대체 데이터 확장 프로그램 
@@ -137,5 +137,4 @@ Data Source="Oracle"; Unicode="True"
  [보고서 매개 변수&#40;보고서 작성기 및 보고서 디자이너&#41;](../../reporting-services/report-design/report-parameters-report-builder-and-report-designer.md)   
  [데이터 필터링, 그룹화 및 정렬&#40;보고서 작성기 및 SSRS&#41;](../../reporting-services/report-design/filter-group-and-sort-data-report-builder-and-ssrs.md)   
  [식&#40;보고서 작성기 및 SSRS&#41;](../../reporting-services/report-design/expressions-report-builder-and-ssrs.md)  
-  
   

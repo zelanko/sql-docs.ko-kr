@@ -9,12 +9,12 @@ ms.topic: conceptual
 ms.assetid: eb01c4ca-4fd6-4629-b595-f0d2565915df
 author: maggiesMSFT
 ms.author: maggies
-ms.openlocfilehash: 610ca1c3b7dbd5660a98dec4a91ce4f9988a5108
-ms.sourcegitcommit: 9470c4d1fc8d2d9d08525c4f811282999d765e6e
+ms.openlocfilehash: 4118c7ad1cccb46a08ec200eef223f62010cf45e
+ms.sourcegitcommit: 783b35f6478006d654491cb52f6edf108acf2482
 ms.translationtype: HT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 07/17/2020
-ms.locfileid: "86455255"
+ms.lasthandoff: 10/09/2020
+ms.locfileid: "91890823"
 ---
 # <a name="show-hidden-datasets-for-parameter-values---multidimensional-data"></a>다차원 데이터의 매개 변수 값에 대해 숨겨진 데이터 세트 표시
   보고서에는 보고서 데이터 창에 기본적으로 표시되지 않는 자동 생성 데이터 세트(숨겨진 데이터 세트라고도 함)이 포함될 수도 있습니다. 이러한 데이터 세트는 다음과 같은 방법으로 생성됩니다.  
@@ -36,8 +36,7 @@ ms.locfileid: "86455255"
   
 ## <a name="see-also"></a>참고 항목  
  [쿼리 디자인 도구&#40;SSRS&#41;](query-design-tools-ssrs.md)   
- [Reporting Services 쿼리 디자이너](https://msdn.microsoft.com/library/07efd3f1-804f-45f7-b62a-3e727a3d9835)   
+ [Reporting Services 쿼리 디자이너](/previous-versions/sql/)   
  [보고서 포함된 데이터 세트 및 공유 데이터 세트&#40;보고서 작성기 및 SSRS&#41;](../../reporting-services/report-data/report-embedded-datasets-and-shared-datasets-report-builder-and-ssrs.md)   
  [보고서 데이터 세트&#40;SSRS&#41;](../../reporting-services/report-data/report-datasets-ssrs.md)  
-  
   

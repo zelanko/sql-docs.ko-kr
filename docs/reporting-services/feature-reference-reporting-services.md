@@ -14,12 +14,12 @@ helpviewer_keywords:
 ms.assetid: 01daf21c-19c6-448d-ac30-accb54ad83da
 author: maggiesMSFT
 ms.author: maggies
-ms.openlocfilehash: b5b87404b685fe9e5de09f8703d3c06c48371836
-ms.sourcegitcommit: 216f377451e53874718ae1645a2611cdb198808a
+ms.openlocfilehash: b0b603e2abb775383083942f93279c8c117a3829
+ms.sourcegitcommit: 783b35f6478006d654491cb52f6edf108acf2482
 ms.translationtype: HT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 07/28/2020
-ms.locfileid: "87247242"
+ms.lasthandoff: 10/09/2020
+ms.locfileid: "91891493"
 ---
 # <a name="feature-reference-reporting-services"></a>기능 참조(Reporting Services)
   [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)] [!INCLUDE[ssRSnoversion](../includes/ssrsnoversion-md.md)]에는 보고서를 생성, 관리 및 확인하는 데 사용할 수 있는 여러 가지 도구와 애플리케이션이 포함되어 있습니다. 이 섹션에서는 이러한 도구와 애플리케이션의 대화 상자, 웹 페이지 및 마법사와 관련된 항목에 대해 설명합니다.  
@@ -29,9 +29,6 @@ ms.locfileid: "87247242"
 ## <a name="in-this-section"></a>섹션 내용  
  [보고서 디자이너 F1 도움말](../reporting-services/tools/report-designer-f1-help.md)  
  보고서 디자이너와 관련 대화 상자, 보고서 마법사 및 이미지 마법사에 대한 도움말을 제공합니다.  
-  
- [Reporting Services 구성 관리자 도움말 항목](https://msdn.microsoft.com/library/7b6fb18e-ec39-4661-88e3-977ed64e2c82)  
- 보고서 서버 인스턴스의 관리 및 배포에 사용되는 [!INCLUDE[ssRSnoversion](../includes/ssrsnoversion-md.md)] 구성 도구에 대한 도움말을 제공합니다.  
   
  [Management Studio의 보고서 서버 F1 도움말](../reporting-services/tools/report-server-in-management-studio-f1-help.md)  
  [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)] [!INCLUDE[ssManStudio](../includes/ssmanstudio-md.md)]에서 보고서 및 보고서 서버를 관리하는 데 사용되는 대화 상자에 대한 도움말을 제공합니다.  

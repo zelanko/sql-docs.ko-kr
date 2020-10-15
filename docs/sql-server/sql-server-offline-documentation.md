@@ -9,12 +9,12 @@ author: markingmyname
 ms.author: maghan
 ms.date: 08/12/2020
 monikerRange: '>= aps-pdw-2016 || = azuresqldb-current || = azure-sqldw-latest || >= sql-server-2016 || >= sql-server-linux-2017 || = sqlallproducts-allversions'
-ms.openlocfilehash: 1a933145d646c8e8a0c65151eaff7307066a223d
-ms.sourcegitcommit: dd36d1cbe32cd5a65c6638e8f252b0bd8145e165
+ms.openlocfilehash: a7ca5fa6785257de26e173a1946045109f00fbd7
+ms.sourcegitcommit: a41e1f4199785a2b8019a419a1f3dcdc15571044
 ms.translationtype: HT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 09/08/2020
-ms.locfileid: "89550593"
+ms.lasthandoff: 10/13/2020
+ms.locfileid: "91986329"
 ---
 # <a name="install-sql-server-documentation-to-view-offline-in-ssms"></a>SQL Server 설명서를 설치하여 오프라인으로 SSMS에서 보기
 
@@ -22,7 +22,7 @@ ms.locfileid: "89550593"
 
 이 문서에서는 오프라인 SQL Server 콘텐츠를 다운로드하고 [SSMS(SQL Server Management Studio)](../ssms/download-sql-server-management-studio-ssms.md)에서 보는 방법을 설명합니다. 오프라인 콘텐츠를 사용하면 인터넷에 연결되어 있지 않아도 설명서에 액세스할 수 있습니다(처음에 다운로드할 때는 인터넷 연결이 필요함).
 
-오프라인 설명서는 SQL Server 2012의 이상의 사용 가능한 버전에서 사용할 수 있습니다. [온라인으로 이전 버전의 콘텐츠를 볼](https://docs.microsoft.com/previous-versions/sql/) 수 있지만 오프라인 옵션을 사용하면 이전 콘텐츠에 편리하게 액세스할 수 있습니다.
+오프라인 설명서는 SQL Server 2012의 이상의 사용 가능한 버전에서 사용할 수 있습니다. [온라인으로 이전 버전의 콘텐츠를 볼](/previous-versions/sql/) 수 있지만 오프라인 옵션을 사용하면 이전 콘텐츠에 편리하게 액세스할 수 있습니다.
 
 - [SQL Server 2016 이상](#sql-server-2016-and-later-offline-content)
 - [SQL Server 2014](#sql-server-2014-offline-content)
@@ -171,6 +171,6 @@ SSMS에서 설치된 도움말을 보려면 도움말 메뉴에서 **도움말 �
 보관된 콘텐츠 및 도움말 뷰어에 대한 자세한 내용을 보려면 아래 링크를 참조하세요.
 
 - [SQL Server 온라인 설명서](../sql-server/index.yml?view=sql-server-2016&preserve-view=true)
-- [SQL Server 2014 온라인 설명서](https://docs.microsoft.com/previous-versions/sql/2014)
+- [SQL Server 2014 온라인 설명서](/previous-versions/sql/2014)
 - [이전 버전 SQL Server 온라인 설명서](previous-versions-sql-server.md)
 - [SQL 버전 관리 시스템 설명서](../sql-server/versioning-system-monikers-ui-sql-server.md?view=sql-server-2016&preserve-view=true)

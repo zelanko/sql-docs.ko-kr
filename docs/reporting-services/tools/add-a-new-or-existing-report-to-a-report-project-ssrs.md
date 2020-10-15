@@ -11,12 +11,12 @@ helpviewer_keywords:
 ms.assetid: 8bc0bb53-ad8a-464d-bb6a-7fea5fa62c5c
 author: maggiesMSFT
 ms.author: maggies
-ms.openlocfilehash: d2bea776af3fd91144adfbc62b0e395550c66752
-ms.sourcegitcommit: c8e1553ff3fdf295e8dc6ce30d1c454d6fde8088
+ms.openlocfilehash: 07d1f6d9f31fa300b2e9e43e80eda9c03111cc6c
+ms.sourcegitcommit: a41e1f4199785a2b8019a419a1f3dcdc15571044
 ms.translationtype: HT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 07/22/2020
-ms.locfileid: "86918009"
+ms.lasthandoff: 10/13/2020
+ms.locfileid: "91986509"
 ---
 # <a name="add-a-new-or-existing-report-to-a-report-project-ssrs"></a>보고서 프로젝트에 새 보고서 또는 기존 보고서 추가(SSRS)
   [!INCLUDE[ssBIDevStudioFull](../../includes/ssbidevstudiofull-md.md)]에서 보고서 마법사를 사용하거나 프로젝트에 새 보고서를 추가하여 새 [!INCLUDE[ssRSnoversion_md](../../includes/ssrsnoversion-md.md)] 페이지를 매긴 보고서를 추가할 수 있습니다. 기본 보고서를 추가할 수도 있습니다. 보고서를 추가한 후 프로젝트의 **보고서** 폴더 아래에 나열된 보고서 이름을 볼 수 있습니다.  
@@ -34,7 +34,7 @@ ms.locfileid: "86918009"
   
     -   **데이터 원본 선택.** 보고서를 만드는 첫 번째 단계로 데이터 원본을 정의합니다. 보고서 마법사는 보고서 프로젝트의 전체 공유 데이터 원본 목록뿐만 아니라 새 데이터 원본을 만드는 옵션도 제공합니다.  
   
-    -   **쿼리 디자인.** 두 번째 단계로 쿼리를 디자인합니다. 쿼리 문자열을 직접 입력하거나 쿼리 디자이너를 사용하여 작성하거나 다른 보고서에서 쿼리를 가져올 수 있습니다. 쿼리 디자이너에 대한 자세한 내용은 [Reporting Services Query Designers](https://msdn.microsoft.com/library/07efd3f1-804f-45f7-b62a-3e727a3d9835)를 참조하십시오.  
+    -   **쿼리 디자인.** 두 번째 단계로 쿼리를 디자인합니다. 쿼리 문자열을 직접 입력하거나 쿼리 디자이너를 사용하여 작성하거나 다른 보고서에서 쿼리를 가져올 수 있습니다. 쿼리 디자이너에 대한 자세한 내용은 [Reporting Services Query Designers](/previous-versions/sql/)를 참조하십시오.  
   
     -   **보고서 유형 선택.** 세 번째 단계로 원하는 보고서 유형을 선택합니다. 테이블 형식 보고서나 행렬 보고서를 선택할 수 있습니다. 테이블 형식 보고서의 열 수는 고정되어 있지만 행렬, 즉 크로스탭 보고서는 쿼리 결과에 따라 열 수가 달라집니다. 지도 보고서에는 지리적 배경과 함께 분석 데이터가 표시됩니다.  
   
@@ -61,5 +61,4 @@ ms.locfileid: "86918009"
 ## <a name="see-also"></a>참고 항목  
  [Reporting Services&#40;SSRS&#41; 자습서](../../reporting-services/reporting-services-tutorials-ssrs.md)  
  추가 질문이 있으신가요? [Reporting Services 포럼을 이용해 보세요.](https://go.microsoft.com/fwlink/?LinkId=620231)
-  
   

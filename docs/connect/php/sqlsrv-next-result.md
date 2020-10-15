@@ -19,12 +19,12 @@ helpviewer_keywords:
 ms.assetid: 41270d16-0003-417c-b837-ea51439654cd
 author: David-Engel
 ms.author: v-daenge
-ms.openlocfilehash: f10a69247a442c1fa7b369f46b65d8c0c04e7237
-ms.sourcegitcommit: e700497f962e4c2274df16d9e651059b42ff1a10
+ms.openlocfilehash: cb7d88913a06e44bdec247793b0080f3ba860025
+ms.sourcegitcommit: 7eb80038c86acfef1d8e7bfd5f4e30e94aed3a75
 ms.translationtype: HT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 08/17/2020
-ms.locfileid: "88426235"
+ms.lasthandoff: 10/15/2020
+ms.locfileid: "92081262"
 ---
 # <a name="sqlsrv_next_result"></a>sqlsrv_next_result
 [!INCLUDE[Driver_PHP_Download](../../includes/driver_php_download.md)]
@@ -47,7 +47,7 @@ sqlsrv_next_result( resource $stmt )
 ## <a name="return-value"></a>반환 값  
 다음 결과가 성공적으로 활성화되면 부울 값 **true** 가 반환됩니다. 다음 결과가 활성화될 때 오류가 발생한 경우 **false** 가 반환됩니다. 더 이상 결과가 없는 경우 **null** 이 반환됩니다.  
   
-## <a name="example"></a>예제  
+## <a name="example-1"></a>예제 1  
 다음 예제는 제품 검토를 *Production.ProductReview* 테이블에 삽입하는 저장 프로시저를 만들고 실행한 다음 지정된 제품에 대해 모든 검토를 선택합니다. 저장 프로시저를 실행한 후 첫 번째 결과(저장 프로시저의 INSERT 쿼리에 의해 영향을 받는 행 수)는 **sqlsrv_next_result**를 호출하지 않아도 사용됩니다. 다음 결과(저장 프로시저의 SELECT 쿼리에서 반환되는 행)는 **sqlsrv_next_result**를 호출하여 사용 가능하게 설정할 수 있으며 [sqlsrv_fetch_array](../../connect/php/sqlsrv-fetch-array.md)에서 사용됩니다.  
   
 > [!NOTE]  
@@ -180,7 +180,7 @@ sqlsrv_close( $conn );
   
 출력 매개 변수가 있는 저장 프로시저를 실행할 때 출력 매개 변수 값에 액세스하기 전에 다른 모든 결과를 사용하는 것이 좋습니다. 자세한 내용은 [방법: SQLSRV 드라이버를 사용하여 매개 변수 방향 지정](../../connect/php/how-to-specify-parameter-direction-using-the-sqlsrv-driver.md)을 참조하세요.  
   
-## <a name="example"></a>예제  
+## <a name="example-2"></a>예제 2  
 다음 예제는 지정된 제품 ID에 대한 제품 검토 정보를 검색하고, 제품에 대한 검토를 삽입한 다음, 지정된 제품 ID에 대한 제품 검토 정보를 다시 검색하는 배치 쿼리를 실행합니다. 새로 삽입된 제품 검토는 배치 쿼리의 최종 결과 집합에 포함됩니다. 예제에서는 배치 쿼리의 한 결과에서 다른 결과로 이동하기 위해 [sqlsrv_next_result](../../connect/php/sqlsrv-next-result.md) 를 사용합니다.  
   
 > [!NOTE]  

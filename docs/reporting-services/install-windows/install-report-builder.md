@@ -8,12 +8,12 @@ ms.topic: conceptual
 ms.assetid: 6b2291bb-1d20-4d08-81cb-a16dd8e01faf
 author: maggiesMSFT
 ms.author: maggies
-ms.openlocfilehash: d256ac7cc7f7925ad307c527378abcca5b6d121f
-ms.sourcegitcommit: ff82f3260ff79ed860a7a58f54ff7f0594851e6b
+ms.openlocfilehash: f1c8338fe9c477f8885839a0236f2aaaa0e9ebde
+ms.sourcegitcommit: 783b35f6478006d654491cb52f6edf108acf2482
 ms.translationtype: HT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 03/29/2020
-ms.locfileid: "76971378"
+ms.lasthandoff: 10/09/2020
+ms.locfileid: "91890850"
 ---
 # <a name="install-report-builder"></a>보고서 작성기 설치
 
@@ -43,7 +43,7 @@ ms.locfileid: "76971378"
  
 ## <a name="install-ssrbnoversion-with-microsoft-endpoint-configuration-manager"></a>Microsoft Endpoint Configuration Manager로 [!INCLUDE[ssRBnoversion](../../includes/ssrbnoversion.md)] 설치 
   
- 관리자는 Microsoft Endpoint Configuration Manager와 같은 소프트웨어를 사용하여 프로그램을 컴퓨터에 배포할 수도 있습니다. 특정 소프트웨어를 사용하여 [!INCLUDE[ssRBnoversion](../../includes/ssrbnoversion.md)]를 설치하는 방법을 확인하려면 해당 소프트웨어의 설명서를 참조하십시오. 자세한 내용은 [Microsoft Endpoint Configuration Manager 설명서](https://docs.microsoft.com/configmgr/)를 참조하세요.  
+ 관리자는 Microsoft Endpoint Configuration Manager와 같은 소프트웨어를 사용하여 프로그램을 컴퓨터에 배포할 수도 있습니다. 특정 소프트웨어를 사용하여 [!INCLUDE[ssRBnoversion](../../includes/ssrbnoversion.md)]를 설치하는 방법을 확인하려면 해당 소프트웨어의 설명서를 참조하십시오. 자세한 내용은 [Microsoft Endpoint Configuration Manager 설명서](/configmgr/)를 참조하세요.  
   
 > [!IMPORTANT]  
 >  Windows Vista 및 Windows 7의 경우 보안 기능으로 인해 명령줄 작업을 실행하려면 높은 권한이 필요합니다. 따라서 명령줄을 실행할 경우 사용 권한을 요청하는 메시지가 표시되므로 자동 설치를 수행할 수 없습니다. 자동 설치를 수행하려면 관리자 권한으로 명령줄을 실행해야 합니다.  
@@ -118,5 +118,4 @@ ms.locfileid: "76971378"
 ## <a name="see-also"></a>참고 항목  
  [보고서 작성기 시작](../../reporting-services/report-builder/start-report-builder.md)   
  [보고서 작성기 제거](../../reporting-services/install-windows/uninstall-report-builder.md)  
-  
   

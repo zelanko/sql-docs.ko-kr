@@ -7,12 +7,12 @@ ms.prod: reporting-services
 ms.prod_service: reporting-services-sharepoint
 ms.topic: conceptual
 ms.date: 09/15/2017
-ms.openlocfilehash: 65f2fb2148e1a33aacb9d0b1e82039d594ea3524
-ms.sourcegitcommit: e700497f962e4c2274df16d9e651059b42ff1a10
+ms.openlocfilehash: 429933e4491a7e0f7382e5ca8faa3b6ae26f3c82
+ms.sourcegitcommit: 783b35f6478006d654491cb52f6edf108acf2482
 ms.translationtype: HT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 08/17/2020
-ms.locfileid: "88396789"
+ms.lasthandoff: 10/09/2020
+ms.locfileid: "91891603"
 ---
 # <a name="claims-to-windows-token-service-c2wts-and-reporting-services"></a>C2WTS(Windows 토큰 서비스에 대한 클레임) 및 Reporting Services
 
@@ -29,9 +29,9 @@ SharePoint 팜 외부에 있는 데이터 원본에 대해 Windows 인증을 사
 
 보고서 뷰어 웹 파트를 SharePoint 사이트 내에서 SQL Server Reporting Services 기본 모드 보고서를 포함하는 데 사용할 수 있습니다. 이 웹 파트는 SharePoint 2013 및 SharePoint 2016에서 사용할 수 있습니다. SharePoint 2013 및 SharePoint 2016은 모두 클레임 인증을 사용합니다. 결과적으로, 보고서가 제대로 렌더링되려면 C2WTS를 적절히 구성하고 Reporting Services를 Kerberos 인증을 위해 구성해야 합니다.
 
-1. SSRS 서비스 계정을 확인하고, SPN을 설정하고, RSWindowsNegotiate 인증 형식을 사용하도록 rsreportserver.config 파일을 업데이트하여 Kerberos 인증을 위해 Reporting Services(기본 모드) 인스턴스를 구성합니다. [보고서 서버의 SPN(서비스 사용자 이름) 등록](https://docs.microsoft.com/sql/reporting-services/report-server/register-a-service-principal-name-spn-for-a-report-server)
+1. SSRS 서비스 계정을 확인하고, SPN을 설정하고, RSWindowsNegotiate 인증 형식을 사용하도록 rsreportserver.config 파일을 업데이트하여 Kerberos 인증을 위해 Reporting Services(기본 모드) 인스턴스를 구성합니다. [보고서 서버의 SPN(서비스 사용자 이름) 등록](../report-server/register-a-service-principal-name-spn-for-a-report-server.md)
 
-2. [c2WTS를 구성하는 데 필요한 단계](https://docs.microsoft.com/sql/reporting-services/install-windows/claims-to-windows-token-service-c2wts-and-reporting-services?view=sql-server-2017#steps-needed-to-configure-c2wts)를 따릅니다.
+2. [c2WTS를 구성하는 데 필요한 단계](?view=sql-server-2017#steps-needed-to-configure-c2wts)를 따릅니다.
  
 
 ## <a name="sharepoint-mode-integration"></a>SharePoint 모드 통합
@@ -44,7 +44,7 @@ SharePoint 팜 외부에 있는 데이터 원본에 대해 Windows 인증을 사
 
 C2WTS에서 만들어진 토큰은 제한된 위임(특정 서비스로 제한됨)과 “모든 인증 프로토콜 사용”(프로토콜 전환) 구성 옵션에서만 작동합니다.
 
-사용자 환경에서 Kerberos 제한된 위임을 사용하는 경우 SharePoint Server 서비스와 외부 데이터 원본이 동일한 Windows 도메인에 있어야 합니다. c2WTS(Windows 토큰 서비스에 대한 클레임)를 사용하는 서비스는 c2WTS에서 Kerberos 프로토콜 전환을 사용하여 클레임을 Windows 자격 증명으로 변환할 수 있도록 Kerberos **제한된** 위임을 사용해야 합니다. 이러한 요구 사항은 모든 SharePoint 공유 서비스에 적용됩니다. 자세한 내용은 [SharePoint 2013에서 Kerberos 인증 계획](https://technet.microsoft.com/library/ee806870.aspx)을 참조하세요.  
+사용자 환경에서 Kerberos 제한된 위임을 사용하는 경우 SharePoint Server 서비스와 외부 데이터 원본이 동일한 Windows 도메인에 있어야 합니다. c2WTS(Windows 토큰 서비스에 대한 클레임)를 사용하는 서비스는 c2WTS에서 Kerberos 프로토콜 전환을 사용하여 클레임을 Windows 자격 증명으로 변환할 수 있도록 Kerberos **제한된** 위임을 사용해야 합니다. 이러한 요구 사항은 모든 SharePoint 공유 서비스에 적용됩니다. 자세한 내용은 [SharePoint 2013에서 Kerberos 인증 계획](/SharePoint/security-for-sharepoint-server/kerberos-authentication-planning)을 참조하세요.  
 
 1. C2WTS 서비스 도메인 계정을 구성합니다. 
 
@@ -84,7 +84,7 @@ C2WTS에서 만들어진 토큰은 제한된 위임(특정 서비스로 제한�
     * **사용자 또는 컴퓨터...&#42;** 를 선택하고 서비스를 호스트하는 계정을 입력합니다. 예를 들어 *sqlservice*라는 계정으로 SQL Server를 실행 중이면 `sqlservice`를 입력합니다. 
       **보고서 뷰어 웹 파트**의 경우, Reporting Services(기본 모드) 인스턴스의 서비스 계정입니다.
 
-    * 서비스 목록을 선택합니다. 해당 계정에서 사용할 수 있는 SPN이 표시됩니다. 해당 계정에 서비스가 표시되지 않는 경우 누락되었거나 다른 계정에 배치되었을 수 있습니다. SetSPN 유틸리티를 사용하여 SPN을 조정할 수 있습니다. **보고서 뷰어 웹 파트**의 경우 [보고서 뷰어 웹 파트 구성](https://docs.microsoft.com/sql/reporting-services/install-windows/claims-to-windows-token-service-c2wts-and-reporting-services?view=sql-server-2017#report-viewer-native-mode-web-part-configuration)에 구성된 http SPN이 표시됩니다.
+    * 서비스 목록을 선택합니다. 해당 계정에서 사용할 수 있는 SPN이 표시됩니다. 해당 계정에 서비스가 표시되지 않는 경우 누락되었거나 다른 계정에 배치되었을 수 있습니다. SetSPN 유틸리티를 사용하여 SPN을 조정할 수 있습니다. **보고서 뷰어 웹 파트**의 경우 [보고서 뷰어 웹 파트 구성](?view=sql-server-2017#report-viewer-native-mode-web-part-configuration)에 구성된 http SPN이 표시됩니다.
 
     * 확인을 선택하여 대화 상자를 종료합니다.
 

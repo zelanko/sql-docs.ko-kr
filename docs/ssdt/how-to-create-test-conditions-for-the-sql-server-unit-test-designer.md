@@ -10,16 +10,16 @@ ms.author: maghan
 ms.reviewer: “”
 ms.custom: seo-lt-2019
 ms.date: 02/09/2017
-ms.openlocfilehash: e34ca98e6a6a9423bd0237c980e15b91fcdd9aa6
-ms.sourcegitcommit: b860fe41b873977649dca8c1fd5619f294c37a58
+ms.openlocfilehash: ae0b544fb49a1161699a1a9e2d152abea2d847bb
+ms.sourcegitcommit: a41e1f4199785a2b8019a419a1f3dcdc15571044
 ms.translationtype: HT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 06/29/2020
-ms.locfileid: "85518893"
+ms.lasthandoff: 10/13/2020
+ms.locfileid: "91985941"
 ---
 # <a name="how-to-create-test-conditions-for-the-sql-server-unit-test-designer"></a>방법: SQL Server 단위 테스트 디자이너용 테스트 조건 만들기
 
-확장 가능한 [TestCondition](https://msdn.microsoft.com/library/microsoft.data.tools.schema.sql.unittesting.conditions.testcondition(v=vs.103).aspx) 클래스를 사용하여 새 테스트 조건을 만들 수 있습니다. 예를 들어 결과 집합의 열 또는 값 수를 확인하는 새 테스트 조건을 만들 수 있습니다.  
+확장 가능한 [TestCondition](/previous-versions/sql/sql-server-data-tools/jj856583(v=vs.103)) 클래스를 사용하여 새 테스트 조건을 만들 수 있습니다. 예를 들어 결과 집합의 열 또는 값 수를 확인하는 새 테스트 조건을 만들 수 있습니다.  
   
 ## <a name="to-create-a-test-condition"></a>테스트 조건을 만들려면  
 이 절차에서는 SQL Server 단위 테스트 디자이너에 표시할 테스트 조건을 만드는 방법에 대해 설명합니다.  
@@ -47,9 +47,9 @@ ms.locfileid: "85518893"
   
 9. 파일을 저장하고 닫습니다. **솔루션 탐색기**에서 프로젝트를 마우스 오른쪽 단추로 클릭하고 **프로젝트 다시 로드**를 선택합니다.  
   
-10. [TestCondition](https://msdn.microsoft.com/library/microsoft.data.tools.schema.sql.unittesting.conditions.testcondition(v=vs.103).aspx) 클래스에서 클래스를 파생시킵니다.  
+10. [TestCondition](/previous-versions/sql/sql-server-data-tools/jj856583(v=vs.103)) 클래스에서 클래스를 파생시킵니다.  
   
-11. 강력한 이름으로 어셈블리에 서명합니다. 자세한 내용은 [방법: 강력한 이름으로 어셈블리 서명](https://msdn.microsoft.com/library/xc31ft41.aspx)을 참조하세요.  
+11. 강력한 이름으로 어셈블리에 서명합니다. 자세한 내용은 [방법: 강력한 이름으로 어셈블리 서명](/dotnet/standard/assembly/sign-strong-name)을 참조하세요.  
   
 12. 클래스 라이브러리를 빌드합니다.  
   
@@ -172,9 +172,9 @@ namespace Ssdt.Samples.SqlUnitTesting
 }  
 ```  
   
-사용자 지정 테스트 조건의 클래스는 기본 [TestCondition](https://msdn.microsoft.com/library/microsoft.data.tools.schema.sql.unittesting.conditions.testcondition(v=vs.103).aspx) 클래스에서 상속합니다. 사용자 지정 테스트 조건에는 추가 속성이 있으므로 사용자가 조건을 설치한 후 속성 창에서 조건을 구성할 수 있습니다.  
+사용자 지정 테스트 조건의 클래스는 기본 [TestCondition](/previous-versions/sql/sql-server-data-tools/jj856583(v=vs.103)) 클래스에서 상속합니다. 사용자 지정 테스트 조건에는 추가 속성이 있으므로 사용자가 조건을 설치한 후 속성 창에서 조건을 구성할 수 있습니다.  
   
-[ExportTestConditionAttribute](https://msdn.microsoft.com/library/microsoft.data.tools.schema.sql.unittesting.conditions.exporttestconditionattribute(v=vs.103).aspx)는 [TestCondition](https://msdn.microsoft.com/library/microsoft.data.tools.schema.sql.unittesting.conditions.testcondition(v=vs.103).aspx)을 확장하는 클래스에 추가되어야 합니다. 이 특성을 사용하면 해당 클래스가 SQL Server Data Tools에서 검색되어 SQL Server 단위 테스트 디자인 및 실행 중에 사용됩니다. 이 특성에는 다음 두 개의 매개 변수가 사용됩니다.  
+[ExportTestConditionAttribute](/previous-versions/sql/sql-server-data-tools/jj856578(v=vs.103))는 [TestCondition](/previous-versions/sql/sql-server-data-tools/jj856583(v=vs.103))을 확장하는 클래스에 추가되어야 합니다. 이 특성을 사용하면 해당 클래스가 SQL Server Data Tools에서 검색되어 SQL Server 단위 테스트 디자인 및 실행 중에 사용됩니다. 이 특성에는 다음 두 개의 매개 변수가 사용됩니다.  
   
 |특성 매개 변수|위치|Description|  
 |-----------------------|------------|---------------|  
@@ -205,4 +205,3 @@ Assert 메서드는 테스트 조건의 기본 태스크를 수행합니다. Ass
   
 ## <a name="see-also"></a>참고 항목  
 [SQL Server 단위 테스트의 사용자 지정 테스트 조건](../ssdt/custom-test-conditions-for-sql-server-unit-tests.md)  
-  

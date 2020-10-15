@@ -4,37 +4,34 @@ description: 공급자 경로로 식별되는 개체의 메서드 및 속성 또
 ms.custom: ''
 ms.date: 03/14/2017
 ms.prod: sql
-ms.reviewer: ''
 ms.technology: sql-server-powershell
 ms.topic: conceptual
 ms.assetid: f31d8e2c-8d59-4fee-ac2a-324668e54262
 author: markingmyname
 ms.author: maghan
-ms.openlocfilehash: 15dae50a965c6e30c9531a76b0cb7d6867ee49ec
-ms.sourcegitcommit: a9f16d7819ed0e2b7ad8f4a7d4d2397437b2bbb2
+ms.reviewer: matteot, drskwier
+ms.openlocfilehash: 3f07a7bef87e6ab770c82a482c85bd9dacf9dae1
+ms.sourcegitcommit: 7eb80038c86acfef1d8e7bfd5f4e30e94aed3a75
 ms.translationtype: HT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 08/21/2020
-ms.locfileid: "88714321"
+ms.lasthandoff: 10/15/2020
+ms.locfileid: "92081942"
 ---
 # <a name="work-with-sql-server-powershell-paths"></a>SQL Server PowerShell 경로 작업
+
 [!INCLUDE[SQL Server Azure SQL Database Synapse Analytics PDW ](../includes/applies-to-version/sql-asdb-asdbmi-asa-pdw.md)]
 
 [!INCLUDE[ssDE](../includes/ssde-md.md)] 공급자 경로의 노드로 이동한 후에는 노드에 연결된 [!INCLUDE[ssDE](../includes/ssde-md.md)] 관리 개체에서 메서드 및 속성을 사용하여 작업을 수행하거나 정보를 검색할 수 있습니다.  
-  
-> [!NOTE]
-> SQL Server PowerShell 모듈은 **SqlServer**와 **SQLPS**의 두 가지가 있습니다. **SQLPS** 모듈은 (이전 버전과의 호환성을 위해) SQL Server 설치에 포함되어 있지만 더 이상 업데이트되지는 않습니다. 최신 PowerShell 모듈은 **SqlServer** 모듈입니다. **SqlServer** 모듈은 **SQLPS**에 업데이트된 버전의 cmdlet이 포함되어 있으며, 최신 SQL 기능을 지원하는 새로운 cmdlet도 포함되어 있습니다.  
-> 이전 버전의 **SqlServer** 모듈은 SSMS(SQL Server Management Studio)에 *포함되었습니다*(SSMS 16.x 버전만 해당). SSMS 17.0 이상이 포함된 PowerShell을 사용하려면 PowerShell 갤러리에서 **SqlServer** 모듈을 설치해야 합니다.
-> **SqlServer** 모듈을 설치하려면 [SQL Server PowerShell 설치](download-sql-server-ps-module.md)를 참조하세요.
 
-  
+[!INCLUDE [sql-server-powershell-version](../includes/sql-server-powershell-version.md)]
+
 [!INCLUDE[ssDE](../includes/ssde-md.md)] 공급자 경로의 노드로 이동한 후에는 다음 두 가지 동작을 수행할 수 있습니다.  
   
 -   **Rename-Item**과 같이 노드에서 작동하는 Windows PowerShell cmdlet을 실행할 수 있습니다.  
   
 -   SMO와 같은 관련 [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)] 관리 개체 모델에서 메서드를 호출할 수 있습니다. 예를 들어 경로에서 Databases 노드로 이동하는 경우 <xref:Microsoft.SqlServer.Management.Smo.Database> 클래스의 메서드와 속성을 사용할 수 있습니다.  
   
- [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)] 공급자는 [!INCLUDE[ssDE](../includes/ssde-md.md)]인스턴스의 개체를 관리하는 데 사용됩니다. 데이터베이스의 데이터 작업에는 사용되지 않습니다. 테이블 또는 뷰로 이동한 경우에는 공급자를 사용하여 데이터에 대한 선택, 삽입, 업데이트 또는 삭제 작업을 수행할 수 없습니다. Windows PowerShell 환경에서 테이블 및 뷰의 데이터를 쿼리하거나 변경하려면 **Invoke-Sqlcmd** cmdlet을 사용하세요. 자세한 내용은 [Invoke-Sqlcmd cmdlet](invoke-sqlcmd-cmdlet.md)을 참조하세요.  
+ [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)] 공급자는 [!INCLUDE[ssDE](../includes/ssde-md.md)]인스턴스의 개체를 관리하는 데 사용됩니다. 데이터베이스의 데이터 작업에는 사용되지 않습니다. 테이블 또는 뷰로 이동한 경우에는 공급자를 사용하여 데이터에 대한 선택, 삽입, 업데이트 또는 삭제 작업을 수행할 수 없습니다. Windows PowerShell 환경에서 테이블 및 뷰의 데이터를 쿼리하거나 변경하려면 **Invoke-Sqlcmd** cmdlet을 사용하세요. 자세한 내용은 [Invoke-Sqlcmd cmdlet](/powershell/module/sqlserver/invoke-sqlcmd)을 참조하세요.  
   
 ##  <a name="listing-methods-and-properties"></a><a name="ListPropMeth"></a> 메서드 및 속성 나열  
  **메서드 및 속성 나열**  
@@ -101,7 +98,6 @@ $MyDBVar.State
 ## <a name="see-also"></a>참고 항목  
  [SQL Server PowerShell 공급자](sql-server-powershell-provider.md)   
  [SQL Server PowerShell 경로 탐색](navigate-sql-server-powershell-paths.md)   
- [URN을 SQL Server 공급자 경로로 변환](https://docs.microsoft.com/powershell/module/sqlserver/Convert-UrnToPath)   
+ [URN을 SQL Server 공급자 경로로 변환](/powershell/module/sqlserver/Convert-UrnToPath)   
  [SQL Server PowerShell](sql-server-powershell.md)  
-  
   

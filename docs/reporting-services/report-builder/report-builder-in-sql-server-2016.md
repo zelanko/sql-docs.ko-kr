@@ -14,18 +14,18 @@ helpviewer_keywords:
 ms.assetid: 55bf4f9c-d037-412f-ae57-3fc39ce32fa5
 author: maggiesMSFT
 ms.author: maggies
-ms.openlocfilehash: f67cf34bd18dc6a2743822f66acbee1692000bdb
-ms.sourcegitcommit: ff82f3260ff79ed860a7a58f54ff7f0594851e6b
+ms.openlocfilehash: f8c6cb06fd63f526de699d7c6050dacd1b5ff05b
+ms.sourcegitcommit: 783b35f6478006d654491cb52f6edf108acf2482
 ms.translationtype: HT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 03/29/2020
-ms.locfileid: "80290890"
+ms.lasthandoff: 10/09/2020
+ms.locfileid: "91891863"
 ---
 # <a name="report-builder-in-sql-server"></a>SQL Server의 보고서 작성기
 
  [!INCLUDE[ssRBnoversion](../../includes/ssrbnoversion.md)]는 Visual Studio / SSDT의 보고서 디자이너를 사용하는 대신 독립 실행형 환경에서 작업하려는 비즈니스 사용자가 페이지를 매긴 보고서를 작성하는 데 사용할 수 있는 도구입니다.  페이지를 매긴 보고서를 디자인할 때 검색할 데이터, 가져올 위치 및 표시 방법을 지정하는 보고서 정의를 만듭니다. 보고서를 실행하면 보고서 처리기는 지정된 보고서 정의를 가져와 데이터를 검색한 다음 보고서 레이아웃에 따라 정렬하여 보고서를 생성합니다. [!INCLUDE[ssRBnoversion](../../includes/ssrbnoversion.md)]에서 보고서를 미리 볼 수 있습니다. 그런 다음, 보고서를 [!INCLUDE[ssRSnoversion](../../includes/ssrsnoversion-md.md)] 보고서 서버에 기본 모드 또는 SharePoint 통합 모드(2016 이하)로 게시할 수 있습니다. 
 
-페이지를 매긴 보고서를 Power BI 서비스에 게시할 수도 있습니다. [Power BI Premium의 페이지를 매긴 보고서](https://docs.microsoft.com/power-bi/paginated-reports-report-builder-power-bi)(미리 보기)에 대해 자세히 알아보세요.
+페이지를 매긴 보고서를 Power BI 서비스에 게시할 수도 있습니다. [Power BI Premium의 페이지를 매긴 보고서](/power-bi/paginated-reports-report-builder-power-bi)(미리 보기)에 대해 자세히 알아보세요.
   
  ![rs_GettingStartedReport](../../reporting-services/report-builder/media/rs-gettingstartedreport.png "rs_GettingStartedReport")  
   
@@ -93,5 +93,3 @@ ms.locfileid: "80290890"
   
  [바로 가기 키&#40;보고서 작성기&#41;](../../reporting-services/report-builder/keyboard-shortcuts-report-builder.md)  
  [!INCLUDE[ssRBnoversion](../../includes/ssrbnoversion.md)]에서 보고서를 탐색 및 디자인하는 데 사용할 수 있는 단축 키에 대해 간단히 설명합니다.  
-  
-

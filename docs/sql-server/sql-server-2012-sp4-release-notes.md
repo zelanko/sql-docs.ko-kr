@@ -11,12 +11,12 @@ ms.assetid: 67cb8b3e-3d82-47f4-840d-0f12a3bff565
 author: rothja
 ms.author: jroth
 monikerRange: = sql-server-2016 || = sqlallproducts-allversions
-ms.openlocfilehash: 395acfc882bdd4277a260f53eba4da8acf57d85f
-ms.sourcegitcommit: 768f046107642f72693514f51bf2cbd00f58f58a
+ms.openlocfilehash: bdfedbb3a60a27ec53744b2b4a6919a5be9510fd
+ms.sourcegitcommit: a41e1f4199785a2b8019a419a1f3dcdc15571044
 ms.translationtype: HT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 07/23/2020
-ms.locfileid: "87111690"
+ms.lasthandoff: 10/13/2020
+ms.locfileid: "91986173"
 ---
 # <a name="sql-server-2012-service-pack-release-notes"></a>SQL Server 2012 서비스 팩 릴리스 정보
 [!INCLUDE [SQL Server Azure SQL Database ](../includes/applies-to-version/sqlserver.md)]
@@ -208,11 +208,11 @@ SQL  Server  2012  Express  서비스 팩 1(SP1)  릴리스에는 SQL  Server  2
 ### <a name="sql-server-data-tier-application-framework-dacfx"></a>DACFx(SQL Server Data-Tier Application Framework)  
 **현재 위치 업그레이드 지원**  
   
-이 버전의 데이터 계층 애플리케이션 프레임워크(DACFx)에서는 이전 버전에서의 내부 업그레이드를 지원하므로 이 릴리스로 업그레이드하기 전에 이전 DACFx 설치를 제거할 필요가 없습니다. [여기](https://msdn.microsoft.com/library/dn702988.aspx)에서 DACFx  후속 릴리스를 찾을 수 있습니다.  
+이 버전의 데이터 계층 애플리케이션 프레임워크(DACFx)에서는 이전 버전에서의 내부 업그레이드를 지원하므로 이 릴리스로 업그레이드하기 전에 이전 DACFx 설치를 제거할 필요가 없습니다. [여기](/previous-versions/sql/sql-server-2016/dn702988(v=sql.130))에서 DACFx  후속 릴리스를 찾을 수 있습니다.  
   
 **선택적 XML 인덱스 지원**  
   
-SQL Server 2012 SP1에는 높아진 성능과 효율성으로 XML 열 데이터를 인덱싱하는 새로운 방법을 제공하는 새로운 SQL Server 기능인 [SXI(선택적 XML 인덱스)](https://msdn.microsoft.com/598ecdcd-084b-4032-81b2-eed6ae9f5d44)에 대한 지원이 포함되어 있습니다.  
+SQL Server 2012 SP1에는 높아진 성능과 효율성으로 XML 열 데이터를 인덱싱하는 새로운 방법을 제공하는 새로운 SQL Server 기능인 [SXI(선택적 XML 인덱스)](../relational-databases/xml/selective-xml-indexes-sxi.md)에 대한 지원이 포함되어 있습니다.  
   
 이제 DACFx에서는 모든 DAC  시나리오 및 클라이언트 도구에서의 SXI  인덱스를 지원합니다. SXI는 최신 버전의 SSDT에서만 지원됩니다. SSDT  RTM  및 2012년 9월 버전에서는 SXI를 지원하지 않습니다.  
   
@@ -232,7 +232,7 @@ SQL Server 2012 SP1에는 높아진 성능과 효율성으로 XML 열 데이터�
   
 -   BACPAC 가져오기 – .bacpac 파일을 가져와서 새로 만들거나 빈 SQL Server 또는 Azure SQL Database를 채웁니다.  
   
-MSDN의 전체 SqlPackage.exe 설명서는 [여기](https://msdn.microsoft.com/library/hh550080%28v=vs.103%29.aspx)에 있습니다.  
+MSDN의 전체 SqlPackage.exe 설명서는 [여기](../tools/sqlpackage.md)에 있습니다.  
   
 **패키지 호환성**  
   
@@ -243,11 +243,11 @@ MSDN의 전체 SqlPackage.exe 설명서는 [여기](https://msdn.microsoft.com/l
 -   이 버전의 DACFx에서 만든 모든 DAC  패키지는 이 릴리스에서 사용될 수 있습니다.  
   
 ## <a name="see-also"></a>참고 항목
-- [SQL Server 2012 서비스 업데이트 설치](https://msdn.microsoft.com/library/hh479746(v=sql.110).aspx)
+- [SQL Server 2012 서비스 업데이트 설치](/previous-versions/sql/sql-server-2012/hh479746(v=sql.110))
 - [SQL Server 버전 및 에디션 확인 방법](https://support.microsoft.com/help/321185)
-- [SQL Server 2012 서비스 업데이트 설치](https://msdn.microsoft.com/library/hh479746(v=sql.110).aspx)
+- [SQL Server 2012 서비스 업데이트 설치](/previous-versions/sql/sql-server-2012/hh479746(v=sql.110))
 - [SQL Server 버전 및 에디션 확인 방법](https://support.microsoft.com/help/321185) 
 - [SQL  Server  버전 및 에디션 확인 방법](https://support.microsoft.com/kb/321185)  
-- [SQL Server 2014 버전에서 지원하는 기능](https://msdn.microsoft.com/5da61ff5-12b9-48e6-b3c8-0dacca1751c4)  
+- [SQL Server 2014 버전에서 지원하는 기능](./editions-and-components-of-sql-server-2016.md)  
 
 [!INCLUDE[get-help-options](../includes/paragraph-content/get-help-options.md)]

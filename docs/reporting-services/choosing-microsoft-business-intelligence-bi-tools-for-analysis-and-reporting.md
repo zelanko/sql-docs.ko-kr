@@ -10,12 +10,12 @@ ms.prod_service: reporting-services-native
 ms.topic: conceptual
 ms.custom: seodec18
 ms.date: 07/22/2020
-ms.openlocfilehash: d4a0c1c88e890ed7aa92a50a83eff795a83f42e9
-ms.sourcegitcommit: df1f0f2dfb9452f16471e740273cd1478ff3100c
+ms.openlocfilehash: d6880689d05328b09c4f50b87ef8182c1c927afa
+ms.sourcegitcommit: 783b35f6478006d654491cb52f6edf108acf2482
 ms.translationtype: HT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 07/29/2020
-ms.locfileid: "87395301"
+ms.lasthandoff: 10/09/2020
+ms.locfileid: "91891213"
 ---
 # <a name="analysis-and-reporting-with-microsoft-business-intelligence-bi-tools"></a>Microsoft BI(business intelligence) 도구로 분석 및 보고
 
@@ -35,17 +35,16 @@ ms.locfileid: "87395301"
 |강력한 데이터 모델 만들기||[Power Pivot](https://support.office.com/article/Power-Pivot-Overview-and-Learning-f9001958-7901-4caa-ad80-028a6d2432ed?ui=en-US&rs=en-US&ad=US)|||[Power BI Desktop](/power-bi/fundamentals/desktop-get-the-desktop)||  
 |셀프 서비스 예측 분석 수행||||||[Excel용 데이터 마이닝 추가 기능](/previous-versions/sql/2014/analysis-services/data-mining-client-for-excel-sql-server-data-mining-add-ins?view=sql-server-2014) |  
 |데이터 시각화 및 탐색||[파워 뷰](https://support.office.com/article/Power-View-Explore-visualize-and-present-your-data-98268d31-97e2-42aa-a52b-a68cf460472e)<br /><br /> [3D 맵](https://support.office.com/article/Visualize-your-data-in-3D-Maps-ce6b1d5c-4602-4dae-b487-91ec0268e75d)|||[Power BI Desktop](/power-bi/fundamentals/desktop-get-the-desktop)||  
-|자연어 쿼리를 사용하여 질문|||||[질문과 대답](https://docs.microsoft.com/power-bi/consumer/end-user-q-and-a)|
-|모바일 디바이스를 사용하여 보고서 액세스||||[HTML 5(10MB 미만의 파일을 볼 수 있도록 지원)](create-deploy-and-manage-mobile-and-paginated-reports.md)<br /><br /> | [HTML 5(250MB 미만의 파일을 볼 수 있도록 지원)](https://go.microsoft.com/fwlink/p/?LinkId=391854)<br /><br /> [iOS 디바이스의 Power BI 모바일 앱](https://docs.microsoft.com/power-bi/consumer/mobile/mobile-iphone-app-get-started)<br /><br /> [Android 디바이스의 Power BI 모바일 앱](https://docs.microsoft.com/power-bi/consumer/mobile/mobile-android-app-get-started) <br /><br /> [Windows 10용 Power BI 모바일 앱](https://docs.microsoft.com/power-bi/consumer/mobile/mobile-windows-10-phone-app-get-started)|  
-|공동 작업 및 공유|||[SharePoint 사이트](https://docs.microsoft.com/sharepoint/getting-started)|[SharePoint 팀 사이트](https://go.microsoft.com/fwlink/?LinkId=391850)|[Power BI 사이트](https://docs.microsoft.com/power-bi/service-how-to-collaborate-distribute-dashboards-reports)||  
+|자연어 쿼리를 사용하여 질문|||||[질문과 대답](/power-bi/consumer/end-user-q-and-a)|
+|모바일 디바이스를 사용하여 보고서 액세스||||[HTML 5(10MB 미만의 파일을 볼 수 있도록 지원)](create-deploy-and-manage-mobile-and-paginated-reports.md)<br /><br /> | [HTML 5(250MB 미만의 파일을 볼 수 있도록 지원)](https://go.microsoft.com/fwlink/p/?LinkId=391854)<br /><br /> [iOS 디바이스의 Power BI 모바일 앱](/power-bi/consumer/mobile/mobile-iphone-app-get-started)<br /><br /> [Android 디바이스의 Power BI 모바일 앱](/power-bi/consumer/mobile/mobile-android-app-get-started) <br /><br /> [Windows 10용 Power BI 모바일 앱](/power-bi/consumer/mobile/mobile-windows-10-phone-app-get-started)|  
+|공동 작업 및 공유|||[SharePoint 사이트](/sharepoint/getting-started)|[SharePoint 팀 사이트](https://go.microsoft.com/fwlink/?LinkId=391850)|[Power BI 사이트](/power-bi/service-how-to-collaborate-distribute-dashboards-reports)||  
 |**기업 BI**|IT 전문가||||||  
-|다차원/테이블 형식 기업 모델 만들기||||||[Analysis Services](https://docs.microsoft.com/analysis-services/analysis-services-overview)|  
+|다차원/테이블 형식 기업 모델 만들기||||||[Analysis Services](/analysis-services/analysis-services-overview)|  
 |임시 데이터 시각화 만들기|||[SharePoint용 파워 뷰](https://go.microsoft.com/fwlink/?LinkId=391858)||||  
-|대시보드 만들기|||[SharePoint 대시보드](https://go.microsoft.com/fwlink/?LinkId=391859)<br /><br /> [PerformancePoint Services](https://technet.microsoft.com/library/ee424392.aspx)||[Power BI의 대시보드](https://powerbi.microsoft.com/documentation/powerbi-service-dashboards/)||  
+|대시보드 만들기|||[SharePoint 대시보드](https://go.microsoft.com/fwlink/?LinkId=391859)<br /><br /> [PerformancePoint Services](/SharePoint/administration/performancepoint-services-overview)||[Power BI의 대시보드](https://powerbi.microsoft.com/documentation/powerbi-service-dashboards/)||  
 |작업 보고서 만들기||||||*[Reporting Services](create-deploy-and-manage-mobile-and-paginated-reports.md)|  
 |사용자 지정 및 포함된 보고서 만들기|||||[Power BI Embedded](create-deploy-and-manage-mobile-and-paginated-reports.md)|  
 |**고급 분석**|데이터 과학자||||||  
 |셀프 서비스 예측 분석 수행||||||[Excel용 데이터 마이닝 추가 기능](/previous-versions/sql/2014/analysis-services/data-mining-client-for-excel-sql-server-data-mining-add-ins?view=sql-server-2014) |  
-|데이터 마이닝 알고리즘 사용||||||[Analysis Services의 데이터 마이닝](https://docs.microsoft.com/analysis-services/data-mining/data-mining-ssas)<br/><br/>[SQL Server R Services](https://msdn.microsoft.com/library/mt604845.aspx)|  
+|데이터 마이닝 알고리즘 사용||||||[Analysis Services의 데이터 마이닝](/analysis-services/data-mining/data-mining-ssas)<br/><br/>[SQL Server R Services](../machine-learning/r/sql-server-r-services.md?viewFallbackFrom=sql-server-ver15)|  
 | &nbsp; | &nbsp; | &nbsp; | &nbsp; | &nbsp; | &nbsp; | &nbsp; |
-  

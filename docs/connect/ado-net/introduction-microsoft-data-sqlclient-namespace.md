@@ -10,12 +10,12 @@ ms.topic: conceptual
 author: David-Engel
 ms.author: v-daenge
 ms.reviewer: v-kaywon
-ms.openlocfilehash: d72beeaf5b7652e040dd5bbe5f20373e655f822a
-ms.sourcegitcommit: c7f40918dc3ecdb0ed2ef5c237a3996cb4cd268d
+ms.openlocfilehash: d02c12998f1083774727c33a261292396151a352
+ms.sourcegitcommit: 7eb80038c86acfef1d8e7bfd5f4e30e94aed3a75
 ms.translationtype: HT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 10/05/2020
-ms.locfileid: "91725704"
+ms.lasthandoff: 10/15/2020
+ms.locfileid: "92081472"
 ---
 # <a name="introduction-to-microsoftdatasqlclient-namespace"></a>Microsoft.Data.SqlClient 네임스페이스 소개
 
@@ -218,7 +218,7 @@ UTF-8 지원을 위해 애플리케이션 코드를 변경하지 않아도 됩�
 
 ### <a name="authentication"></a>인증
 
-_인증_ 연결 문자열 옵션을 사용하여 다양한 인증 모드를 지정할 수 있습니다. 자세한 내용은 [SqlAuthenticationMethod 설명서](/dotnet/api/system.data.sqlclient.sqlauthenticationmethod?view=netframework-4.7.2)를 참조하세요.
+_인증_ 연결 문자열 옵션을 사용하여 다양한 인증 모드를 지정할 수 있습니다. 자세한 내용은 [SqlAuthenticationMethod 설명서](/dotnet/api/system.data.sqlclient.sqlauthenticationmethod?view=netframework-4.7.2&preserve-view=true)를 참조하세요.
 
 > [!NOTE]
 > Azure Key Vault 공급자와 같은 사용자 지정 키 저장소 공급자는 Microsoft.Data.SqlClient를 지원하도록 업데이트해야 합니다. 마찬가지로 enclave 공급자도 Microsoft.Data.SqlClient를 지원하도록 업데이트해야 합니다.
