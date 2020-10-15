@@ -14,16 +14,16 @@ ms.assetid: c64077a2-bec8-4c87-9def-3dbfb1ea1fb6
 author: rothja
 ms.author: jroth
 monikerRange: = sql-server-2016 || = sqlallproducts-allversions
-ms.openlocfilehash: 1daf6c1205c33d0522f44105397be8b87dabda23
-ms.sourcegitcommit: da88320c474c1c9124574f90d549c50ee3387b4c
+ms.openlocfilehash: 19f906960bc31346f21e4afed436ff10517adebf
+ms.sourcegitcommit: a41e1f4199785a2b8019a419a1f3dcdc15571044
 ms.translationtype: HT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 07/01/2020
-ms.locfileid: "85728110"
+ms.lasthandoff: 10/13/2020
+ms.locfileid: "91985819"
 ---
 # <a name="sql-server-2016-release-notes"></a>SQL Server 2016 릴리스 정보
 [!INCLUDE [SQL Server 2016](../includes/applies-to-version/sqlserver2016.md)]  
-  이 문서는 서비스 팩을 포함하여 SQL Server 2016 릴리스 관련 제한 사항 및 문제를 설명합니다. 새로운 기능에 대한 자세한 내용은 [SQL Server 2016의 새로운 기능](https://docs.microsoft.com/sql/sql-server/what-s-new-in-sql-server-2016)을 참조하세요.
+  이 문서는 서비스 팩을 포함하여 SQL Server 2016 릴리스 관련 제한 사항 및 문제를 설명합니다. 새로운 기능에 대한 자세한 내용은 [SQL Server 2016의 새로운 기능](./what-s-new-in-sql-server-2016.md)을 참조하세요.
 
 - [![평가 센터에서 다운로드](../includes/media/download2.png)](https://www.microsoft.com/evalcenter/evaluate-sql-server-2016) **[평가 센터](https://www.microsoft.com/evalcenter/evaluate-sql-server-2016)** 에서 SQL Server 2016 다운로드
 - [![Azure 가상 컴퓨터 소형](../includes/media/azure-vm.png)](https://azuremarketplace.microsoft.com/marketplace/apps/microsoftsqlserver.sql2017-ws2019?tab=Overview) Azure 계정이 있습니까?  계정이 있는 경우 **[여기](https://azuremarketplace.microsoft.com/marketplace/apps/microsoftsqlserver.sql2017-ws2019?tab=Overview)** 로 이동하여 SQL Server 2016 SP1이 이미 설치된 가상 머신을 실행해 보세요.
@@ -71,14 +71,14 @@ SQL Server 2016 SP2에는 지원 가능성 및 진단 관련 개선 사항이 �
 |sys.dm_exec_query_stats의 세그먼트 정보   |   total_columnstore_segment_reads 및 total_columnstore_segment_skips와 같이, 건너뛴 columnstore 세그먼트와 읽은 columnstore 세그먼트의 수를 추적하는 새 열이 sys.dm_exec_query_stats에 추가되었습니다.   |   [KB4051358](https://support.microsoft.com/help/4051358)   |
 |배포 데이터베이스에 맞는 호환성 수준 설정   |   서비스 팩을 설치하면 배포 데이터베이스 호환성 수준이 90으로 변경됩니다. 이것은 sp_vupgrade_replication 저장 프로시저의 코드 경로 때문입니다. 이제 배포 데이터베이스에 올바른 호환성 수준을 설정하도록 SP가 변경되었습니다.   |      |
 |마지막으로 알려진 양호한 DBCC CHECKDB 정보 노출   |   마지막으로 성공한 DBCC CHECKDB 실행 날짜를 프로그래밍 방식으로 반환하는 새 데이터베이스 옵션이 추가되었습니다. 사용자는 이제 DATABASEPROPERTYEX([database], ‘lastgoodcheckdbtime’)를 쿼리하여 지정된 데이터베이스에서 마지막으로 DBCC CHECKDB의 실행에 성공한 날짜/시간을 나타내는 단일 값을 얻을 수 있습니다.   |      |
-|실행 계획 XML 향상|   통계 이름, 수정 카운터, 샘플링 비율 및 통계가 마지막으로 업데이트된 시간을 포함하는 [쿼리 계획을 컴파일하는데 사용되는 통계에 대한 정보](https://blogs.msdn.microsoft.com/sql_server_team/sql-server-2017-showplan-enhancements/)입니다. 이 기능은 CE 모델 120 이상에만 추가됩니다. 예를 들어 CE 70에서는 지원되지 않습니다.| |
-| |쿼리 최적화 프로그램에서 "행 목표" 논리를 사용하는 경우 새로운 특성인 [EstimateRowsWithoutRowgoal](https://blogs.msdn.microsoft.com/sql_server_team/more-showplan-enhancements-row-goal/)이 실행 계획 XML에 추가됩니다.| |
-| |스칼라 UDF(사용자 정의 함수)에 소요된 시간을 추적하는 새 런타임 속성 [UdfCpuTime and UdfElapsedTime](https://blogs.msdn.microsoft.com/sql_server_team/more-showplan-enhancements-udfs/)이 실제 실행 계획 XML에 있습니다.| |
-| |실제 실행 계획 XML에서 [상위 10개의 가능한 대기 목록](https://blogs.msdn.microsoft.com/sql_server_team/new-showplan-enhancements/)에 CXPACKET 대기 유형을 추가합니다. 병렬 쿼리 실행에는 CXPACKET 대기가 자주 포함되지만 이런 유형의 대기는 실제 실행 계획 XML에서 보고되지 않았습니다.   |      |
+|실행 계획 XML 향상|   통계 이름, 수정 카운터, 샘플링 비율 및 통계가 마지막으로 업데이트된 시간을 포함하는 [쿼리 계획을 컴파일하는데 사용되는 통계에 대한 정보](/archive/blogs/sql_server_team/sql-server-2017-showplan-enhancements)입니다. 이 기능은 CE 모델 120 이상에만 추가됩니다. 예를 들어 CE 70에서는 지원되지 않습니다.| |
+| |쿼리 최적화 프로그램에서 "행 목표" 논리를 사용하는 경우 새로운 특성인 [EstimateRowsWithoutRowgoal](/archive/blogs/sql_server_team/more-showplan-enhancements-row-goal)이 실행 계획 XML에 추가됩니다.| |
+| |스칼라 UDF(사용자 정의 함수)에 소요된 시간을 추적하는 새 런타임 속성 [UdfCpuTime and UdfElapsedTime](/archive/blogs/sql_server_team/more-showplan-enhancements-udfs)이 실제 실행 계획 XML에 있습니다.| |
+| |실제 실행 계획 XML에서 [상위 10개의 가능한 대기 목록](/archive/blogs/sql_server_team/new-showplan-enhancements)에 CXPACKET 대기 유형을 추가합니다. 병렬 쿼리 실행에는 CXPACKET 대기가 자주 포함되지만 이런 유형의 대기는 실제 실행 계획 XML에서 보고되지 않았습니다.   |      |
 | |병렬 처리 연산자 유출 중 TempDB에 기록된 페이지 수를 보고하는 런타임 유출 경고가 확장되었습니다.| |
 |보조 문자 데이터 정렬이 사용되는 데이터베이스에 대한 복제 지원   |   보조 문자 데이터 정렬을 사용하는 데이터베이스에서 복제가 지원됩니다.   |      |
 |가용성 그룹 장애 조치(failover)를 사용하여 적절한 Service Broker 처리   |   가용성 그룹 데이터베이스에서 Service Broker를 사용할 수 있는 현재 구현에서는 AG 장애 조치(failover) 중 주 복제본에서 시작된 모든 Service Broker 연결이 열린 상태로 유지됩니다. 향상된 버전에서는 AG 장애 조치(failover) 중 열려있는 모든 연결을 닫는 것이 목표입니다.   |      |
-|문제 해결에 대기하도록 병렬 처리 기능 향상   |   새로운 [CXCONSUMER](https://blogs.msdn.microsoft.com/sql_server_team/making-parallelism-waits-actionable/) 대기가 추가되었습니다.   |      |
+|문제 해결에 대기하도록 병렬 처리 기능 향상   |   새로운 [CXCONSUMER](/archive/blogs/sql_server_team/making-parallelism-waits-actionable) 대기가 추가되었습니다.   |      |
 |동일한 정보에 대한 DMV 간의 일관성 향상   |   sys.dm_exec_session_wait_stats DMV가 CXPACKET 및 CXCONSUMER 대기를 sys.dm_os_wait_stats DMV와 일관되게 추적합니다.   |      |
 |쿼리 내 병렬 처리 교착 상태 문제 해결 향상 | xEvent 필드 이름 worktable_physical_writes에 병렬 처리 연산자 유출 중 TempDB에 기록되는 페이지 수를 보고하는 새 exchange_spill 확장 이벤트가 있습니다.| |
 | |sys.dm_exec_query_stats, sys.dm_exec_procedure_stats 및 sys.dm_exec_trigger_stats DMV의 spills 열(예: total_spills)에 병렬 처리 연산자에 의해 유출되는 데이터도 포함됩니다.| |
@@ -108,21 +108,21 @@ SQL Server 2016 SP2에는 지원 가능성 및 진단 관련 개선 사항이 �
 
 |기능|Description|자세한 정보|
 |---|---|---|
-|TF 715에서 자동 TABLOCK을 사용하여 힙으로 대량 삽입| 추적 플래그 715는 대량 로드 작업에 대한 테이블 잠금을 비클러스터형 인덱스가 없는 힙에 사용하도록 설정합니다.|[2.5x배 더 빠르게 SQL Server로 SAP 워크로드 마이그레이션](https://blogs.msdn.microsoft.com/sql_server_team/migrating-sap-workloads-to-sql-server-just-got-2-5x-faster/)|
-|CREATE OR ALTER|저장 프로시저, 트리거, 사용자 정의 함수 및 뷰와 같은 개체를 배포합니다.|[SQL Server 데이터베이스 엔진 블로그](https://blogs.msdn.microsoft.com/sqlserverstorageengine/2016/11/17/create-or-alter-another-great-language-enhancement-in-sql-server-2016-sp1/)|
+|TF 715에서 자동 TABLOCK을 사용하여 힙으로 대량 삽입| 추적 플래그 715는 대량 로드 작업에 대한 테이블 잠금을 비클러스터형 인덱스가 없는 힙에 사용하도록 설정합니다.|[2.5x배 더 빠르게 SQL Server로 SAP 워크로드 마이그레이션](/archive/blogs/sql_server_team/migrating-sap-workloads-to-sql-server-just-got-2-5x-faster)|
+|CREATE OR ALTER|저장 프로시저, 트리거, 사용자 정의 함수 및 뷰와 같은 개체를 배포합니다.|[SQL Server 데이터베이스 엔진 블로그](/archive/blogs/sqlserverstorageengine/create-or-alter-another-great-language-enhancement-in-sql-server-2016-sp1)|
 |복제에 대한 DROP TABLE 지원|복제 아티클을 삭제하도록 복제에 대한 DROP TABLE DDL 지원|[KB 3170123](https://support.microsoft.com/help/3170123/supports-drop-table-ddl-for-articles-that-are-included-in-transactiona)|
-|파일 스트림 RsFx 드라이버 서명|파일 스트림 RsFx 드라이버는 SQL Server 2016 SP1 파일 스트림 RsFx 드라이버를 문제 없이 Windows Server 2016/Windows 10에 설치하도록 하는 Windows 하드웨어 개발자 센터 대시보드 포털(개발자 포털)을 사용하여 서명 및 인증됩니다.|[2.5x배 더 빠르게 SQL Server로 SAP 워크로드 마이그레이션](https://blogs.msdn.microsoft.com/sql_server_team/migrating-sap-workloads-to-sql-server-just-got-2-5x-faster/)|
-|LPIM에서 SQL 서비스 계정 - 프로그래밍 방식으로 식별|LPIM(메모리의 페이지 잠금) 권한이 서비스 시작 시간에 적용되는 경우 DBA에서 프로그래밍 방식으로 식별하도록 허용합니다.|[개발자 선택 사항: SQL Server에서 LPIM 및 IFI 권한을 프로그래밍 방식으로 식별](https://blogs.msdn.microsoft.com/sql_server_team/developers-choice-programmatically-identify-lpim-and-ifi-privileges-in-sql-server)|
+|파일 스트림 RsFx 드라이버 서명|파일 스트림 RsFx 드라이버는 SQL Server 2016 SP1 파일 스트림 RsFx 드라이버를 문제 없이 Windows Server 2016/Windows 10에 설치하도록 하는 Windows 하드웨어 개발자 센터 대시보드 포털(개발자 포털)을 사용하여 서명 및 인증됩니다.|[2.5x배 더 빠르게 SQL Server로 SAP 워크로드 마이그레이션](/archive/blogs/sql_server_team/migrating-sap-workloads-to-sql-server-just-got-2-5x-faster)|
+|LPIM에서 SQL 서비스 계정 - 프로그래밍 방식으로 식별|LPIM(메모리의 페이지 잠금) 권한이 서비스 시작 시간에 적용되는 경우 DBA에서 프로그래밍 방식으로 식별하도록 허용합니다.|[개발자 선택 사항: SQL Server에서 LPIM 및 IFI 권한을 프로그래밍 방식으로 식별](/archive/blogs/sql_server_team/developers-choice-programmatically-identify-lpim-and-ifi-privileges-in-sql-server)|
 |수동 변경 내용 추적 정리|새 저장 프로시저는 요청 시 변경 내용 추적 내부 테이블을 정리합니다.| [KB 3173157](https://support.microsoft.com/help/3173157/adds-a-stored-procedure-for-the-manual-cleanup-of-the-change-tracking)|
-|로컬 임시 테이블에 대한 병렬 INSERT..SELECT 변경 내용|INSERT..SELECT 작업에서 새 병렬 INSERT|[SQL Server 고객 자문 팀](https://blogs.msdn.microsoft.com/sqlcat/2016/07/21/real-world-parallel-insert-what-else-you-need-to-know/)|
+|로컬 임시 테이블에 대한 병렬 INSERT..SELECT 변경 내용|INSERT..SELECT 작업에서 새 병렬 INSERT|[SQL Server 고객 자문 팀](/archive/blogs/sqlcat/real-world-parallel-insert-what-else-you-need-to-know)|
 |Showplan XML|권한 부여 경고 최대 메모리를 포함하는 확장된 진단은 쿼리, 활성화된 추적 플래그에 대해 활성화되었으며 다른 진단 정보를 제공합니다. | [KB 3190761](https://support.microsoft.com/help/3190761/update-to-improve-diagnostics-by-expose-data-type-of-the-parameters-fo)|
-|스토리지 클래스 메모리|크기 순서대로 트랜잭션 커밋 시간을 가속화하는 기능을 발생시키는 Windows Server 2016에서 스토리지 클래스 메모리를 사용하여 트랜잭션 처리를 증가시킵니다.|[SQL Server 데이터베이스 엔진 블로그](https://blogs.msdn.microsoft.com/sqlserverstorageengine/2016/12/02/transaction-commit-latency-acceleration-using-storage-class-memory-in-windows-server-2016sql-server-2016-sp1/)|
-|USE HINT|쿼리 옵션, `OPTION(USE HINT('<option>'))`을 사용하여 지원되는 쿼리 수준 힌트를 통해 쿼리 최적화 프로그램 동작을 변경합니다. QUERYTRACEON과 달리 USE HINT 옵션은 sysadmin 권한이 필요하지 않습니다.|[개발자 선택 사항: USE HINT 쿼리 힌트](https://blogs.msdn.microsoft.com/sql_server_team/developers-choice-use-hint-query-hints/)|
-|XEvent 추가|새로운 Xevent 및 Perfmon 진단 기능은 대기 시간 문제 해결을 개선합니다.|[확장 이벤트](https://docs.microsoft.com/sql/relational-databases/extended-events/extended-events)|
+|스토리지 클래스 메모리|크기 순서대로 트랜잭션 커밋 시간을 가속화하는 기능을 발생시키는 Windows Server 2016에서 스토리지 클래스 메모리를 사용하여 트랜잭션 처리를 증가시킵니다.|[SQL Server 데이터베이스 엔진 블로그](/archive/blogs/sqlserverstorageengine/transaction-commit-latency-acceleration-using-storage-class-memory-in-windows-server-2016sql-server-2016-sp1)|
+|USE HINT|쿼리 옵션, `OPTION(USE HINT('<option>'))`을 사용하여 지원되는 쿼리 수준 힌트를 통해 쿼리 최적화 프로그램 동작을 변경합니다. QUERYTRACEON과 달리 USE HINT 옵션은 sysadmin 권한이 필요하지 않습니다.|[개발자 선택 사항: USE HINT 쿼리 힌트](/archive/blogs/sql_server_team/developers-choice-use-hint-query-hints)|
+|XEvent 추가|새로운 Xevent 및 Perfmon 진단 기능은 대기 시간 문제 해결을 개선합니다.|[확장 이벤트](../relational-databases/extended-events/extended-events.md)|
 
 또한 다음 수정 사항을 참조하세요.
 - DBA와 SQL 커뮤니티의 피드백에 따라 SQL 2016 SP1부터 Hekaton 로깅 메시지가 최소로 줄어듭니다.
-- 새 [추적 플래그](https://docs.microsoft.com/sql/t-sql/database-console-commands/dbcc-traceon-trace-flags-transact-sql)를 검토합니다.
+- 새 [추적 플래그](../t-sql/database-console-commands/dbcc-traceon-trace-flags-transact-sql.md)를 검토합니다.
 - 전체 버전의 WideWorldImporters 샘플 데이터베이스는 이제 SQL Server 2016 SP1부터 Standard Edition 및 Express Edition을 사용하며 [Github]( https://github.com/Microsoft/sql-server-samples/releases/tag/wide-world-importers-v1.0)에서 사용 가능합니다. 샘플에서 변경이 필요하지 않습니다. Enterprise 버전에 대한 RTM에서 만든 데이터베이스 백업은 SP1에서 Standard 및 Express를 사용합니다.
 
 SQL Server 2016 SP1 설치는 설치 후에 다시 부팅해야 합니다. 모범 사례로, SQL Server 2016 SP1의 설치를 따라 다시 부팅을 계획 및 수행하는 것이 좋습니다.
@@ -130,9 +130,9 @@ SQL Server 2016 SP1 설치는 설치 후에 다시 부팅해야 합니다. 모�
 ### <a name="download-pages-and-more-information"></a>다운로드 페이지 및 추가 정보
 
 - [Microsoft SQL Server 2016용 서비스 팩 1 다운로드](https://www.microsoft.com/download/details.aspx?id=54276)
-- [SQL Server 2016 서비스 팩 1(SP1) 출시](https://blogs.msdn.microsoft.com/sqlreleaseservices/sql-server-2016-service-pack-1-sp1-released/)
+- [SQL Server 2016 서비스 팩 1(SP1) 출시](/archive/blogs/sqlreleaseservices/sql-server-2016-service-pack-1-sp1-released)
 - [SQL Server 2016 서비스 팩 1 릴리스 정보](https://support.microsoft.com/kb/3182545)
-- ![info_tip](../sql-server/media/info-tip.png) [!INCLUDE[ssNoVersion_md](../includes/ssnoversion-md.md)]의 서비스 팩을 포함하여 지원되는 모든 버전에 대한 링크 및 자세한 내용은 [SQL Server 업데이트 센터](https://msdn.microsoft.com/library/ff803383.aspx)를 참조하세요.
+- ![info_tip](../sql-server/media/info-tip.png) [!INCLUDE[ssNoVersion_md](../includes/ssnoversion-md.md)]의 서비스 팩을 포함하여 지원되는 모든 버전에 대한 링크 및 자세한 내용은 [SQL Server 업데이트 센터](../database-engine/install-windows/latest-updates-for-microsoft-sql-server.md)를 참조하세요.
 
 ![horizontal-bar.png](media/horizontal-bar.png)
 
@@ -219,7 +219,7 @@ SQL Server 2016 SP1 설치는 설치 후에 다시 부팅해야 합니다. 모�
 
  **F1 도움말:** 기본적으로 [!INCLUDE[ssManStudioFull](../includes/ssmanstudiofull-md.md)]에서 F1 키를 누르면 F1 도움말 문서의 온라인 버전이 브라우저에 표시됩니다. 문제는 로컬 도움말을 구성하고 설치한 경우에도 브라우저 기반 도움말입니다.
 
-**콘텐츠 업데이트:** SQL Server Management Studio 및 Visual Studio에서 설명서를 추가하는 프로세스 중에 도움말 뷰어 애플리케이션이 응답을 중지할 수 있습니다. 이 문제를 해결하려면 다음 단계를 완료하세요. 이 문제에 대한 자세한 내용은 [Visual Studio 도움말 뷰어가 중단됨](https://msdn.microsoft.com/library/mt654096.aspx)을 참조하세요.
+**콘텐츠 업데이트:** SQL Server Management Studio 및 Visual Studio에서 설명서를 추가하는 프로세스 중에 도움말 뷰어 애플리케이션이 응답을 중지할 수 있습니다. 이 문제를 해결하려면 다음 단계를 완료하세요. 이 문제에 대한 자세한 내용은 [Visual Studio 도움말 뷰어가 중단됨](/previous-versions/mt654096(v=vs.140))을 참조하세요.
 
 * 메모장에서 %LOCALAPPDATA%\Microsoft\HelpViewer2.2\HlpViewer_SSMS16_en-US.settings | HlpViewer_VisualStudio14_en US.settings 파일을 열고 다음 코드의 날짜를 미래의 날짜로 변경합니다.
 
@@ -228,8 +228,8 @@ SQL Server 2016 SP1 설치는 설치 후에 다시 부팅해야 합니다. 모�
 ```
 
 ## <a name="additional-information"></a>추가 정보
-+ [SQL Server 2016 설치](../database-engine/install-windows/installation-for-sql-server-2016.md)
-+ [SQL Server 업데이트 센터 - 지원되는 모든 버전에 대한 링크 및 정보](https://msdn.microsoft.com/library/ff803383.aspx)
++ [SQL Server 2016 설치](../database-engine/install-windows/install-sql-server.md)
++ [SQL Server 업데이트 센터 - 지원되는 모든 버전에 대한 링크 및 정보](../database-engine/install-windows/latest-updates-for-microsoft-sql-server.md)
 
 [!INCLUDE[get-help-options](../includes/paragraph-content/get-help-options.md)]
 

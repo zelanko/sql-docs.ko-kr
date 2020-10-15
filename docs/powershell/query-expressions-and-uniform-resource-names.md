@@ -1,10 +1,7 @@
 ---
 title: 쿼리 식 및 URN | Microsoft 문서
 description: 개체 모델 계층 구조에 있는 하나 이상의 개체를 열거하는 쿼리 식과 단일 개체를 고유하게 식별하는 URN(Uniform Resource Names)에 대해 알아봅니다.
-ms.custom: ''
-ms.date: 03/14/2017
 ms.prod: sql
-ms.reviewer: ''
 ms.technology: sql-server-powershell
 ms.topic: conceptual
 helpviewer_keywords:
@@ -14,12 +11,15 @@ helpviewer_keywords:
 ms.assetid: e0d30dbe-7daf-47eb-8412-1b96792b6fb9
 author: markingmyname
 ms.author: maghan
-ms.openlocfilehash: 26483454e805bf8dcaa780fed352cbe984c61f71
-ms.sourcegitcommit: a9f16d7819ed0e2b7ad8f4a7d4d2397437b2bbb2
+ms.reviewer: matteot, drskwier
+ms.custom: ''
+ms.date: 10/14/2020
+ms.openlocfilehash: 839bef5d4b3aba3a9d95664c549556d6c05206e5
+ms.sourcegitcommit: 7eb80038c86acfef1d8e7bfd5f4e30e94aed3a75
 ms.translationtype: HT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 08/21/2020
-ms.locfileid: "88714121"
+ms.lasthandoff: 10/15/2020
+ms.locfileid: "92081902"
 ---
 # <a name="query-expressions-and-uniform-resource-names"></a>쿼리 식 및 URN
 
@@ -27,15 +27,11 @@ ms.locfileid: "88714121"
 
 SMO( [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)] Management Object) 모델 및 [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)] PowerShell 스냅인은 XPath 식과 유사한 두 가지 유형의 식 문자열을 사용합니다. 쿼리 식은 개체 모델 계층 구조에 있는 하나 이상의 개체를 열거하는 데 사용되는 조건 집합을 지정하는 문자열입니다. URN(Uniform Resource Name)은 단일 개체를 고유하게 식별하는 특정 유형의 쿼리 식 문자열입니다.  
 
-> [!NOTE]
-> SQL Server PowerShell 모듈은 **SqlServer**와 **SQLPS**의 두 가지가 있습니다. **SQLPS** 모듈은 (이전 버전과의 호환성을 위해) SQL Server 설치에 포함되어 있지만 더 이상 업데이트되지는 않습니다. 최신 PowerShell 모듈은 **SqlServer** 모듈입니다. **SqlServer** 모듈은 **SQLPS**에 업데이트된 버전의 cmdlet이 포함되어 있으며, 최신 SQL 기능을 지원하는 새로운 cmdlet도 포함되어 있습니다.  
-> 이전 버전의 **SqlServer** 모듈은 SSMS(SQL Server Management Studio)에 *포함되었습니다*(SSMS 16.x 버전만 해당). SSMS 17.0 이상이 포함된 PowerShell을 사용하려면 PowerShell 갤러리에서 **SqlServer** 모듈을 설치해야 합니다.
-> **SqlServer** 모듈을 설치하려면 [SQL Server PowerShell 설치](download-sql-server-ps-module.md)를 참조하세요.
+[!INCLUDE [sql-server-powershell-version](../includes/sql-server-powershell-version.md)]
 
-  
 ## <a name="syntax"></a>구문  
-  
-```  
+
+```powershell
   
 Object1[<FilterExpression1>]/ ... /ObjectN[<FilterExpressionN>]  
   
@@ -50,48 +46,48 @@ Object1[<FilterExpression1>]/ ... /ObjectN[<FilterExpressionN>]
  | @DatePropertyName=datetime('DateString')  
  | is_null(@PropertyName)  
  | not(<PropertyExpression>)  
-  
 ```  
+
+## <a name="arguments"></a>인수
+
+*Object*  
+식 문자열의 Object 노드에서 나타내는 개체 유형을 지정합니다. 각 개체는 이러한 SMO 개체 모델 네임스페이스의 컬렉션 클래스를 나타냅니다.  
+
+<xref:Microsoft.SqlServer.Management.Smo>  
+
+<xref:Microsoft.SqlServer.Management.Smo.Agent>  
+
+<xref:Microsoft.SqlServer.Management.Smo.Broker>  
+
+<xref:Microsoft.SqlServer.Management.Smo.Mail>  
+
+<xref:Microsoft.SqlServer.Management.Dmf>  
+
+<xref:Microsoft.SqlServer.Management.Facets>  
+
+<xref:Microsoft.SqlServer.Management.RegisteredServers>  
+
+<xref:Microsoft.SqlServer.Management.Smo.RegSvrEnum>  
+
+예를 들어 **ServerCollection** 클래스에 대한 서버, **DatabaseCollection** 클래스에 대한 데이터베이스를 지정합니다.  
+
+\@*PropertyName*  
+*Object*에서 지정된 개체와 연결되는 클래스 속성 중 하나의 이름을 지정합니다. 속성 이름은 \@ 문자로 시작해야 합니다. 예를 들어 **Database** 클래스 속성인 **IsAnsiNull**에 \@IsAnsiNull을 지정합니다.  
   
-## <a name="arguments"></a>인수  
- *Object*  
- 식 문자열의 Object 노드에서 나타내는 개체 유형을 지정합니다. 각 개체는 이러한 SMO 개체 모델 네임스페이스의 컬렉션 클래스를 나타냅니다.  
+\@*BooleanPropertyName*=true()  
+지정된 부울 속성이 TRUE로 설정된 개체를 모두 열거합니다.  
   
- <xref:Microsoft.SqlServer.Management.Smo>  
+\@*BooleanPropertyName*=false()  
+지정된 부울 속성이 FALSE로 설정된 개체를 모두 열거합니다.  
   
- <xref:Microsoft.SqlServer.Management.Smo.Agent>  
+contains(\@*StringPropertyName*, '*PatternString*')  
+지정된 문자열 속성에 '*PatternString*'에 지정된 문자열 집합이 하나 이상 포함되어 있는 개체를 모두 열거합니다.  
   
- <xref:Microsoft.SqlServer.Management.Smo.Broker>  
+\@*StringPropertyName*='*PatternString*'  
+지정된 문자열 속성 값이 '*PatternString*'에 지정된 문자 패턴과 정확하게 같은 개체를 모두 열거합니다.  
   
- <xref:Microsoft.SqlServer.Management.Smo.Mail>  
-  
- <xref:Microsoft.SqlServer.Management.Dmf>  
-  
- <xref:Microsoft.SqlServer.Management.Facets>  
-  
- <xref:Microsoft.SqlServer.Management.RegisteredServers>  
-  
- <xref:Microsoft.SqlServer.Management.Smo.RegSvrEnum>  
-  
- 예를 들어 **ServerCollection** 클래스에 대한 서버, **DatabaseCollection** 클래스에 대한 데이터베이스를 지정합니다.  
-  
- \@*PropertyName*  
- *Object*에서 지정된 개체와 연결되는 클래스 속성 중 하나의 이름을 지정합니다. 속성 이름은 \@ 문자로 시작해야 합니다. 예를 들어 **Database** 클래스 속성인 **IsAnsiNull**에 \@IsAnsiNull을 지정합니다.  
-  
- \@*BooleanPropertyName*=true()  
- 지정된 부울 속성이 TRUE로 설정된 개체를 모두 열거합니다.  
-  
- \@*BooleanPropertyName*=false()  
- 지정된 부울 속성이 FALSE로 설정된 개체를 모두 열거합니다.  
-  
- contains(\@*StringPropertyName*, '*PatternString*')  
- 지정된 문자열 속성에 '*PatternString*'에 지정된 문자열 집합이 하나 이상 포함되어 있는 개체를 모두 열거합니다.  
-  
- \@*StringPropertyName*='*PatternString*'  
- 지정된 문자열 속성 값이 '*PatternString*'에 지정된 문자 패턴과 정확하게 같은 개체를 모두 열거합니다.  
-  
- \@*DatePropertyName*= datetime('*DateString*')  
- 지정된 날짜 속성 값이 '*DateString*'에 지정된 날짜와 일치하는 개체를 모두 열거합니다. *DateString*은 yyyy-mm-dd hh:mi:ss.mmm 형식을 따라야 합니다.  
+\@*DatePropertyName*= datetime('*DateString*')  
+지정된 날짜 속성 값이 '*DateString*'에 지정된 날짜와 일치하는 개체를 모두 열거합니다. *DateString*은 yyyy-mm-dd hh:mi:ss.mmm 형식을 따라야 합니다.  
   
 |DateString 구성 요소|설명|  
 |-|-|  
@@ -112,18 +108,20 @@ Object1[<FilterExpression1>]/ ... /ObjectN[<FilterExpressionN>]
  *PropertyExpression*의 평가 값을 부정하고 *PropertyExpression*에 지정된 조건과 일치하지 않는 개체를 모두 열거합니다. 예를 들어 not(contains(\@Name, 'xyz'))는 이름에 xyz 문자열이 없는 개체를 모두 열거합니다.  
   
 ## <a name="remarks"></a>설명  
- 쿼리 식은 SMO 모델 계층 구조에 있는 노드를 열거하는 문자열입니다. 각 노드에는 해당 노드에서 열거되는 개체를 결정하는 조건을 지정하는 필터 식이 있습니다. 쿼리 식은 XPath 식 언어에서 모델링됩니다. 쿼리 식은 XPath에서 지원하는 작은 식 집합을 구현하고 XPath에 없는 일부 확장도 포함합니다. XPath 식은 XML 문서에서 하나 이상의 태그를 열거하는 데 사용되는 조건 집합을 지정하는 문자열입니다. XPath에 대한 자세한 내용은 [W3C XPath Language](http://www.w3.org/TR/xpath20/)를 참조하십시오.  
-  
- 쿼리 식은 Server 개체에 대한 절대 참조로 시작해야 합니다. /로 시작하는 상대 식은 사용할 수 없습니다. 쿼리 식에 지정된 개체 시퀀스는 관련 개체 모델에 있는 컬렉션 개체의 계층 구조를 따라야 합니다. 예를 들어 Microsoft.SqlServer.Management.Smo 네임스페이스의 개체를 참조하는 쿼리 식은 Server 노드로 시작하고 그 다음에 Database 노드 등이 와야 합니다.  
-  
- 개체에 대해 *\<FilterExpression>* 이 지정되지 않은 경우 해당 노드의 모든 개체가 열거됩니다.  
+
+쿼리 식은 SMO 모델 계층 구조에 있는 노드를 열거하는 문자열입니다. 각 노드에는 해당 노드에서 열거되는 개체를 결정하는 조건을 지정하는 필터 식이 있습니다. 쿼리 식은 XPath 식 언어에서 모델링됩니다. 쿼리 식은 XPath에서 지원하는 작은 식 집합을 구현하고 XPath에 없는 일부 확장도 포함합니다. XPath 식은 XML 문서에서 하나 이상의 태그를 열거하는 데 사용되는 조건 집합을 지정하는 문자열입니다. XPath에 대한 자세한 내용은 [W3C XPath Language](http://www.w3.org/TR/xpath20/)를 참조하십시오.  
+
+쿼리 식은 Server 개체에 대한 절대 참조로 시작해야 합니다. /로 시작하는 상대 식은 사용할 수 없습니다. 쿼리 식에 지정된 개체 시퀀스는 관련 개체 모델에 있는 컬렉션 개체의 계층 구조를 따라야 합니다. 예를 들어 Microsoft.SqlServer.Management.Smo 네임스페이스의 개체를 참조하는 쿼리 식은 Server 노드로 시작하고 그 다음에 Database 노드 등이 와야 합니다.  
+
+개체에 대해 *\<FilterExpression>* 이 지정되지 않은 경우 해당 노드의 모든 개체가 열거됩니다.  
   
 ## <a name="uniform-resource-names-urn"></a>URN(Uniform Resource Name)  
- URN은 쿼리 식의 하위 집합입니다. 각 URN은 단일 개체에 대한 정규화된 참조를 형성합니다. 일반적인 URN에서는 Name 속성을 사용하여 각 노드의 단일 개체를 식별합니다. 예를 들어 이 URN은 특정 열을 참조합니다.  
+
+URN은 쿼리 식의 하위 집합입니다. 각 URN은 단일 개체에 대한 정규화된 참조를 형성합니다. 일반적인 URN에서는 Name 속성을 사용하여 각 노드의 단일 개체를 식별합니다. 예를 들어 이 URN은 특정 열을 참조합니다.  
   
-```  
+```powershell
 Server[@Name='MYCOMPUTER']/Database[@Name='AdventureWorks2012']/Table[@Name='SalesPerson' and @Schema='Sales']/Column[@Name='SalesPersonID']  
-```  
+```
   
 ## <a name="examples"></a>예  
   
@@ -169,8 +167,7 @@ Server[@Name='MYCOMPUTER']/Database[@Name='AdventureWorks2012"]/Table[@CreateDat
 Server[@Name='MYCOMPUTER']/Database[@Name='AdventureWorks2012"]/Table[Not(is_null(@DateLastModified))]  
 ```  
   
-## <a name="see-also"></a>참고 항목  
- [Invoke-PolicyEvaluation cmdlet](invoke-policyevaluation-cmdlet.md)   
- [SQL Server Audit&#40;데이터베이스 엔진&#41;](../relational-databases/security/auditing/sql-server-audit-database-engine.md)  
-  
-  
+## <a name="see-also"></a>참고 항목
+
+- [Invoke-PolicyEvaluation cmdlet](invoke-policyevaluation-cmdlet.md)
+- [SQL Server Audit&#40;데이터베이스 엔진&#41;](../relational-databases/security/auditing/sql-server-audit-database-engine.md)

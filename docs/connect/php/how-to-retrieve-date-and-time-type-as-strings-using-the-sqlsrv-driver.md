@@ -13,12 +13,12 @@ helpviewer_keywords:
 ms.assetid: 58a974ea-4daf-4e3b-98ed-9731b9c9250f
 author: David-Engel
 ms.author: v-daenge
-ms.openlocfilehash: 51135c202b40cbae5a251a2ab36a695f6981c68e
-ms.sourcegitcommit: 620a868e623134ad6ced6728ce9d03d7d0038fe0
+ms.openlocfilehash: 2dd1bd53b5ce3304b48fe8ed022e538d4d705154
+ms.sourcegitcommit: 7eb80038c86acfef1d8e7bfd5f4e30e94aed3a75
 ms.translationtype: HT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 07/29/2020
-ms.locfileid: "87410967"
+ms.lasthandoff: 10/15/2020
+ms.locfileid: "92081442"
 ---
 # <a name="how-to-retrieve-date-and-time-types-as-strings-using-the-sqlsrv-driver"></a>방법: SQLSRV 드라이버를 사용하여 날짜 및 시간 형식을 문자열로 검색
 [!INCLUDE[Driver_PHP_Download](../../includes/driver_php_download.md)]
@@ -33,7 +33,7 @@ ms.locfileid: "87410967"
 
 기본적으로 PDO_SQLSRV 드라이버는 날짜 및 시간 형식을 문자열로 반환합니다. PHP DateTime 개체로 검색하려면 [방법: PDO_SQLSRV를 사용하여 날짜 및 시간 형식을 PHP Datetime 개체로 검색](../../connect/php/how-to-retrieve-datetime-objects-using-pdo-sqlsrv-driver.md)을 참조하세요.
 
-## <a name="example"></a>예제
+## <a name="example-1"></a>예제 1
 다음 예제에서는 날짜 및 시간 형식을 문자열로 검색하기 위해 지정하는 구문을 보여 줍니다.
 
 ```php
@@ -50,7 +50,7 @@ sqlsrv_close($conn);
 ?>
 ```
 
-## <a name="example"></a>예제
+## <a name="example-2"></a>예제 2
 다음 예제에서는 `"ReturnDatesAsStrings" => false`로 연결이 생성된 경우에도 문자열을 검색할 때 UTF-8을 지정하여 문자열로 날짜를 검색할 수 있음을 보여줍니다.
 
 ```php
@@ -87,7 +87,7 @@ sqlsrv_close($conn);
 ?>
 ```
 
-## <a name="example"></a>예제
+## <a name="example-3"></a>예제 3
 다음 예제에서는 연결 문자열에서 UTF-8 및 `"ReturnDatesAsStrings" => true`를 지정하여 날짜를 문자열로 검색하는 방법을 보여줍니다.
 
 ```php
@@ -123,7 +123,7 @@ sqlsrv_close($conn);
 ?>
 ```
 
-## <a name="example"></a>예제
+## <a name="example-4"></a>예제 4
 다음 예제에서는 날짜를 PHP 형식으로 검색하는 방법을 보여 줍니다. `'ReturnDatesAsStrings'=> false` 는 기본적으로 설정되어 있습니다.
 
 ```php
@@ -161,7 +161,7 @@ sqlsrv_close($conn);
 ?>
 ```
 
-## <a name="example"></a>예제
+## <a name="example-5"></a>예제 5
 문 수준의 ReturnDatesAsStrings 옵션은 해당하는 연결 옵션을 재정의합니다.
 
 ```php

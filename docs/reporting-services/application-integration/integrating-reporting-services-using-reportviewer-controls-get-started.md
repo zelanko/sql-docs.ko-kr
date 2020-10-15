@@ -10,16 +10,16 @@ ms.topic: conceptual
 ms.assetid: 01a821c4-2920-400c-be03-93d26c749bb1
 author: maggiesMSFT
 ms.author: maggies
-ms.openlocfilehash: 009c70da7365cc232dc5b00da6b4f1f62bfca8e2
-ms.sourcegitcommit: 04fb4c2d7ccddd30745b334b319d9d2dd34325d6
+ms.openlocfilehash: d4195123fbe1660c1c081c810d2b5b6b0feebd80
+ms.sourcegitcommit: 783b35f6478006d654491cb52f6edf108acf2482
 ms.translationtype: HT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 09/09/2020
-ms.locfileid: "89569963"
+ms.lasthandoff: 10/09/2020
+ms.locfileid: "91891513"
 ---
 # <a name="integrate-reporting-services-using-the-report-viewer-controls---get-started"></a>보고서 뷰어 컨트롤을 사용하여 Reporting Services 통합 - 시작하기
 
-보고서 뷰어 컨트롤은 Reporting Services RDL 보고서를 WebForms 및 WinForms 앱에 통합하는 데 사용할 수 있습니다. 최근 업데이트에 대한 자세한 내용은 [변경 로그](changelog.md)를 참조하세요.
+보고서 뷰어 컨트롤은 Reporting Services RDL 보고서를 WebForms 및 WinForms 앱에 통합하는 데 사용할 수 있습니다. 최근 업데이트에 대한 자세한 내용은 [변경 로그](./release-notes-ssrs-application-integration.md)를 참조하세요.
 
 ## <a name="add-the-report-viewer-control-to-a-new-web-project"></a>새 웹 프로젝트에 보고서 뷰어 컨트롤 추가
 
@@ -270,9 +270,8 @@ ms.locfileid: "89569963"
 
 ## <a name="forum-feedback"></a>포럼 피드백
 
-[Reporting Services 포럼](https://docs.microsoft.com/answers/topics/sql-server-reporting-services.html)에서 문제를 게시하여 팀에 알려주세요.
+[Reporting Services 포럼](/answers/topics/sql-server-reporting-services.html)에서 문제를 게시하여 팀에 알려주세요.
 
 ## <a name="see-also"></a>참고 항목
 
-[보고서 뷰어 컨트롤의 데이터 컬렉션](../../reporting-services/application-integration/integrating-reporting-services-using-reportviewer-controls-data-collection.md)  
-
+[보고서 뷰어 컨트롤의 데이터 컬렉션](../../reporting-services/application-integration/integrating-reporting-services-using-reportviewer-controls-data-collection.md)

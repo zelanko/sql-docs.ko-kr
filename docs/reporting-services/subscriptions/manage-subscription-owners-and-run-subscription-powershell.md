@@ -10,12 +10,12 @@ ms.author: maggies
 ms.reviewer: ''
 ms.custom: ''
 ms.date: 01/16/2020
-ms.openlocfilehash: 0a05f23265bd6e81c639bc8342699bf3bb8ab661
-ms.sourcegitcommit: c6a2efe551e37883c1749bdd9e3c06eb54ccedc9
+ms.openlocfilehash: b0174f0b7705c9a7c7c678782a4b17fb4a1a74af
+ms.sourcegitcommit: a41e1f4199785a2b8019a419a1f3dcdc15571044
 ms.translationtype: HT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 04/06/2020
-ms.locfileid: "80742191"
+ms.lasthandoff: 10/13/2020
+ms.locfileid: "91985909"
 ---
 # <a name="manage-subscription-owners-and-run-subscription---powershell"></a>구독 소유자 관리 및 구독 실행 - PowerShell
 
@@ -23,7 +23,7 @@ ms.locfileid: "80742191"
 
 [!INCLUDE[ssKilimanjaro](../../includes/sskilimanjaro-md.md)][!INCLUDE[ssRSnoversion](../../includes/ssrsnoversion-md.md)] 부터 [!INCLUDE[ssRSnoversion](../../includes/ssrsnoversion-md.md)] 구독 소유권을 프로그래밍 방식으로 한 사용자에서 다른 사용자에게 전송할 수 있습니다. 이 항목에서는 구독 소유권을 변경하거나 단순히 나열할 수 있는 여러 가지 Windows PowerShell 스크립트를 제공합니다. 각 샘플에는 기본 모드 및 SharePoint 모드에 대한 샘플 구문이 포함됩니다. 구독 소유자를 변경한 후 구독은 새 소유자의 보안 컨텍스트에서 실행되고, 보고서의 User!UserID 필드에 새 소유자 값이 표시됩니다. PowerShell 샘플의 개체 모델에 대한 자세한 내용은 <xref:ReportService2010.ReportingService2010.ChangeSubscriptionOwner%2A>  
 
-![PowerShell 관련 콘텐츠](https://docs.microsoft.com/analysis-services/analysis-services/instances/install-windows/media/rs-powershellicon.jpg "PowerShell 관련 콘텐츠")
+![PowerShell 관련 콘텐츠](/analysis-services/analysis-services/instances/install-windows/media/rs-powershellicon.jpg "PowerShell 관련 콘텐츠")
 
 ##  <a name="in-this-topic"></a><a name="bkmk_top"></a> 항목 내용
   
@@ -47,17 +47,17 @@ ms.locfileid: "80742191"
 
 이 섹션에서는 기본 모드와 SharePoint 모드 [!INCLUDE[ssRSnoversion](../../includes/ssrsnoversion-md.md)]의 각 메서드를 사용하기 위해 필요한 권한 수준을 요약합니다. 이 항목의 스크립트는 다음 [!INCLUDE[ssRSnoversion](../../includes/ssrsnoversion-md.md)] 메서드를 사용합니다.  
   
-- [ReportingService2010.ListSubscriptions 메서드](https://msdn.microsoft.com/library/reportservice2010.reportingservice2010.listsubscriptions.aspx)  
+- [ReportingService2010.ListSubscriptions 메서드](/dotnet/api/reportservice2010.reportingservice2010.listsubscriptions)  
   
-- [ReportingService2010.ChangeSubscriptionOwner 메서드](https://msdn.microsoft.com/library/reportservice2010.reportingservice2010.changesubscriptionowner.aspx)  
+- [ReportingService2010.ChangeSubscriptionOwner 메서드](/dotnet/api/reportservice2010.reportingservice2010.changesubscriptionowner)  
   
-- [ReportingService2010.ListChildren](https://msdn.microsoft.com/library/reportservice2010.reportingservice2010.listchildren.aspx)  
+- [ReportingService2010.ListChildren](/dotnet/api/reportservice2010.reportingservice2010.listchildren)  
   
-- [ReportingService2010.FireEvent](https://msdn.microsoft.com/library/reportservice2010.reportingservice2010.fireevent.aspx) 메서드는 실행하는 특정 구독을 트리거하기 위해 마지막 스크립트에서만 사용됩니다. 해당 스크립트를 사용하지 않으려면 FireEvent 메서드에 대한 권한 요구 사항을 무시할 수 있습니다.  
+- [ReportingService2010.FireEvent](/dotnet/api/reportservice2010.reportingservice2010.fireevent) 메서드는 실행하는 특정 구독을 트리거하기 위해 마지막 스크립트에서만 사용됩니다. 해당 스크립트를 사용하지 않으려면 FireEvent 메서드에 대한 권한 요구 사항을 무시할 수 있습니다.  
   
 **기본 모드:**
   
-- 구독 나열: [보고서의 ReportOperation 열거형](https://msdn.microsoft.com/library/microsoft.reportingservices.interfaces.reportoperation.aspx) + 사용자는 구독 소유자, 또는 ReadAnySubscription  
+- 구독 나열: [보고서의 ReportOperation 열거형](/dotnet/api/microsoft.reportingservices.interfaces.reportoperation) + 사용자는 구독 소유자, 또는 ReadAnySubscription  
   
 - 구독 변경: 사용자는 BUILTIN\Administrators 그룹의 구성원여야 합니다.  
   
@@ -67,7 +67,7 @@ ms.locfileid: "80742191"
   
  **SharePoint 모드:**
   
-- 구독 나열: ManageAlerts, 또는 보고서의 [CreateAlerts](https://msdn.microsoft.com/library/microsoft.sharepoint.spbasepermissions.aspx) + 사용자는 구독 소유자이며 구독은 정기 구독  
+- 구독 나열: ManageAlerts, 또는 보고서의 [CreateAlerts](/previous-versions/office/sharepoint-server/ms412690(v=office.15)) + 사용자는 구독 소유자이며 구독은 정기 구독  
   
 - 구독 변경: ManageWeb  
   
@@ -387,10 +387,10 @@ $subscriptions | select Status, Path, report, Description, Owner, SubscriptionID
 
 ## <a name="see-also"></a>참고 항목  
 
-- [ReportingService2010.ListSubscriptions 메서드](https://msdn.microsoft.com/library/reportservice2010.reportingservice2010.listsubscriptions.aspx)  
+- [ReportingService2010.ListSubscriptions 메서드](/dotnet/api/reportservice2010.reportingservice2010.listsubscriptions)  
 
-- [ReportingService2010.ChangeSubscriptionOwner 메서드](https://msdn.microsoft.com/library/reportservice2010.reportingservice2010.changesubscriptionowner.aspx)   
+- [ReportingService2010.ChangeSubscriptionOwner 메서드](/dotnet/api/reportservice2010.reportingservice2010.changesubscriptionowner)   
 
-- [ReportingService2010.ListChildren](https://msdn.microsoft.com/library/reportservice2010.reportingservice2010.listchildren.aspx)  
+- [ReportingService2010.ListChildren](/dotnet/api/reportservice2010.reportingservice2010.listchildren)  
 
-- [ReportingService2010.FireEvent](https://msdn.microsoft.com/library/reportservice2010.reportingservice2010.fireevent.aspx)
+- [ReportingService2010.FireEvent](/dotnet/api/reportservice2010.reportingservice2010.fireevent)

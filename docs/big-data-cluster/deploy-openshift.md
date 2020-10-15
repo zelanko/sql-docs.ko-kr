@@ -9,12 +9,12 @@ ms.date: 06/22/2020
 ms.topic: conceptual
 ms.prod: sql
 ms.technology: big-data-cluster
-ms.openlocfilehash: 9d12d25873d7963a29afd66802f40e3074150e77
-ms.sourcegitcommit: c7f40918dc3ecdb0ed2ef5c237a3996cb4cd268d
+ms.openlocfilehash: aa838fc8920469921063ebdface6680e3bc5a3bf
+ms.sourcegitcommit: 783b35f6478006d654491cb52f6edf108acf2482
 ms.translationtype: HT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 10/05/2020
-ms.locfileid: "91725884"
+ms.lasthandoff: 10/09/2020
+ms.locfileid: "91892493"
 ---
 # <a name="deploy-big-data-clusters-2019-on-openshift-on-premises-and-azure-red-hat-openshift"></a>OpenShift 온-프레미스 및 Azure Red Hat OpenShift에 [!INCLUDE[big-data-clusters-2019](../includes/ssbigdataclusters-ss-nover.md)] 배포
 
@@ -37,8 +37,8 @@ OpenShift 클러스터를 온-프레미스에 배포하는 방법은 [Red Hat Op
 > [!IMPORTANT]
 > 아래의 필수 구성 요소는 클러스터 수준 개체를 만들기 위한 충분한 권한이 있는 OpenShift 클러스터 관리자(cluster-admin 클러스터 역할)가 수행해야 합니다. OpenShift의 클러스터 역할에 대한 자세한 내용은 [RBAC를 사용하여 권한 정의 및 적용](https://docs.openshift.com/container-platform/4.4/authentication/using-rbac.html)을 참조하세요.
 
-1. OpenShift의 **pidsLimit** 설정이 SQL Server 워크로드를 수용할 수 있도록 업데이트되었는지 확인합니다. OpenShift의 기본값은 워크로드와 같은 프로덕션용으로는 너무 낮습니다. 최소 **4096**의 값을 사용하는 것이 권장되나, 최적의 값은 SQL Server의 *max worker threads* 설정과 OpenShift 호스트 노드의 CPU 프로세서 수에 따라 달라집니다. 
-    - OpenShift 클러스터의 **pidsLimit**를 업데이트하는 방법을 확인하려면 [해당 지침]( https://github.com/openshift/machine-config-operator/blob/master/docs/ContainerRuntimeConfigDesign.md)을 참조하세요. **4.3.5** 전의 OpenShift 버전에는 업데이트된 값의 효력이 발생되지 않는 결함이 있었습니다. 반드시 OpenShift를 최신 버전으로 업그레이드하세요. 
+1. OpenShift의 `pidsLimit` 설정이 SQL Server 워크로드를 수용할 수 있도록 업데이트되었는지 확인합니다. OpenShift의 기본값은 워크로드와 같은 프로덕션용으로는 너무 낮습니다. 최소 `4096`의 값을 사용하는 것이 권장되나, 최적의 값은 SQL Server의 `max worker threads` 설정과 OpenShift 호스트 노드의 CPU 프로세서 수에 따라 달라집니다. 
+    - OpenShift 클러스터의 `pidsLimit`를 업데이트하는 방법을 확인하려면 [해당 지침]( https://github.com/openshift/machine-config-operator/blob/master/docs/ContainerRuntimeConfigDesign.md)을 참조하세요. `4.3.5` 전의 OpenShift 버전에는 업데이트된 값의 효력이 발생되지 않는 결함이 있었습니다. 반드시 OpenShift를 최신 버전으로 업그레이드하세요. 
     - 환경 및 계획된 SQL Server 워크로드에 따라 최적의 값을 계산하는 데 도움이 되도록, 아래의 추산 및 예를 참고하세요.
 
     |프로세서 수|기본 max worker threads|프로세서당 기본 작업자|최소 pidsLimit 값|
@@ -56,7 +56,7 @@ OpenShift 클러스터를 온-프레미스에 배포하는 방법은 [Red Hat Op
     ```
 
     > [!NOTE]
-    > BDC의 사용자 지정 SCC는 추가 권한과 함께 OpenShift의 기본 제공 *nonroot* SCC에 기반합니다. OpenShift의 보안 컨텍스트 제약 조건에 대해 자세히 알아보려면 [보안 컨텍스트 제약 조건 관리](https://docs.openshift.com/container-platform/4.3/authentication/managing-security-context-constraints.html)를 참조하세요. 빅 데이터 클러스터를 사용하는 데 *nonroot* SCC 외에 추가로 어떤 권한이 필요한지 알아보려면 [여기](https://aka.ms/sql-bdc-openshift-security)에서 백서를 다운로드하세요.
+    > BDC의 사용자 지정 SCC는 추가 권한과 함께 OpenShift의 기본 제공 `nonroot` SCC에 기반합니다. OpenShift의 보안 컨텍스트 제약 조건에 대해 자세히 알아보려면 [보안 컨텍스트 제약 조건 관리](https://docs.openshift.com/container-platform/4.3/authentication/managing-security-context-constraints.html)를 참조하세요. 빅 데이터 클러스터를 사용하는 데 `nonroot` SCC 외에 추가로 어떤 권한이 필요한지 알아보려면 [여기](https://aka.ms/sql-bdc-openshift-security)에서 백서를 다운로드하세요.
 
 3. 네임스페이스/프로젝트를 만듭니다.
 
@@ -104,7 +104,7 @@ OpenShift 클러스터를 온-프레미스에 배포하는 방법은 [Red Hat Op
    azdata bdc config init --source openshift-dev-test --target custom-openshift
    ```
 
-   ARO에 배포하는 경우 이 환경에 적합한 *serviceType* 및 *storageClass*의 기본값을 포함하는 *aro-* 프로필 중 하나로 시작하는 것이 좋습니다. 예를 들면 다음과 같습니다.
+   ARO에 배포하는 경우 이 환경에 적합한 `serviceType` 및 `storageClass`의 기본값을 포함하는 `aro-` 프로필 중 하나로 시작하는 것이 좋습니다. 예를 들면 다음과 같습니다.
 
    ```console
    azdata bdc config init --source aro-dev-test --target custom-openshift
@@ -113,7 +113,7 @@ OpenShift 클러스터를 온-프레미스에 배포하는 방법은 [Red Hat Op
 1. 구성 파일 control.json 및 bdc.json을 사용자 지정합니다. 다음은 다양한 사용 사례에 대해 지원되는 사용자 지정을 안내하는 몇 가지 추가 리소스입니다.
 
    - [스토리지](concept-data-persistence.md)
-   - [AD 관련 설정](deploy-active-directory.md)
+   - [AD 관련 설정](active-directory-deploy.md)
    - [기타 사용자 지정](deployment-custom-configuration.md)
 
    > [!NOTE]
@@ -136,7 +136,7 @@ OpenShift 클러스터를 온-프레미스에 배포하는 방법은 [Red Hat Op
 
 ## <a name="openshift-specific-settings-in-the-deployment-configuration-files"></a>배포 구성 파일에서 OpenShift에 해당하는 설정
 
-SQL Server 2019 CU5부터 Pod 및 노드 메트릭의 수집을 제어하는 두 가지 기능 스위치가 도입되었습니다. 이러한 매개 변수는 OpenShift에 대한 기본 제공 프로필에서 기본적으로 *false*로 설정됩니다. 모니터링 컨테이너에 [권한 있는 보안 컨텍스트](https://www.openshift.com/blog/managing-sccs-in-openshift)가 필요하기 때문입니다. 이로 인해 BDC가 배포된 네임스페이스의 보안 제약 조건이 일부 완화됩니다.
+SQL Server 2019 CU5부터 Pod 및 노드 메트릭의 수집을 제어하는 두 가지 기능 스위치가 도입되었습니다. 이러한 매개 변수는 OpenShift에 대한 기본 제공 프로필에서 기본적으로 `false`로 설정됩니다. 모니터링 컨테이너에 [권한 있는 보안 컨텍스트](https://www.openshift.com/blog/managing-sccs-in-openshift)가 필요하기 때문입니다. 이로 인해 BDC가 배포된 네임스페이스의 보안 제약 조건이 일부 완화됩니다.
 
 ```json
     "security": {
