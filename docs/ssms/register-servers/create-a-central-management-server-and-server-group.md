@@ -13,12 +13,12 @@ ms.author: maghan
 ms.reviewer: ''
 ms.custom: seo-lt-2019
 ms.date: 03/14/2017
-ms.openlocfilehash: d0d43fe140f2165b19cb38a6c8d7391428a14e93
-ms.sourcegitcommit: e700497f962e4c2274df16d9e651059b42ff1a10
+ms.openlocfilehash: a66f57b77b5d92bf39795533a29faacacdf01b95
+ms.sourcegitcommit: 22dacedeb6e8721e7cdb6279a946d4002cfb5da3
 ms.translationtype: HT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 08/17/2020
-ms.locfileid: "88370815"
+ms.lasthandoff: 10/14/2020
+ms.locfileid: "92037617"
 ---
 # <a name="create-a-central-management-server-and-server-group"></a>중앙 관리 서버 및 서버 그룹 만들기
 
@@ -65,7 +65,7 @@ ms.locfileid: "88370815"
   
 4.  **등록된 서버**에서 서버 이름과 설명(선택 사항)을 입력합니다.  
   
-5.  **연결 속성** 탭에서 네트워크 및 연결 속성을 검토하거나 수정합니다. 자세한 내용은 [서버에 연결&#40;연결 속성 페이지&#41; 데이터베이스 엔진](https://msdn.microsoft.com/library/edc1143c-6a47-4b02-92ab-441bdea8ea8a)을 참조하세요.  
+5.  **연결 속성** 탭에서 네트워크 및 연결 속성을 검토하거나 수정합니다. 자세한 내용은 [서버에 연결&#40;연결 속성 페이지&#41; 데이터베이스 엔진](../f1-help/connect-to-server-connection-properties-page-database-engine.md)을 참조하세요.  
   
 6.  **테스트**를 클릭하여 연결을 테스트합니다.  
   
@@ -79,13 +79,12 @@ ms.locfileid: "88370815"
   
 3.  **등록된 서버**에서 서버 그룹을 마우스 오른쪽 단추로 클릭하고 **새 서버 등록**을 클릭합니다.  
   
-4.  새 서버 등록에서 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 인스턴스를 선택합니다. 자세한 내용은 [새 등록된 서버 만들기&#40;SQL Server Management Studio&#41;](../../tools/sql-server-management-studio/create-a-new-registered-server-sql-server-management-studio.md)를 참조하세요. 필요에 따라 서버를 더 추가합니다.  
+4.  새 서버 등록에서 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 인스턴스를 선택합니다. 자세한 내용은 [새 등록된 서버 만들기&#40;SQL Server Management Studio&#41;](./create-a-new-registered-server-sql-server-management-studio.md)를 참조하세요. 필요에 따라 서버를 더 추가합니다.  
   
 #### <a name="to-execute-queries-against-several-configuration-targets-at-the-same-time"></a>여러 구성 대상에 대해 동시에 쿼리를 실행하려면  
   
--   하나의 중앙 관리 서버, 하나 이상의 서버 그룹 및 하나 이상의 등록된 서버를 만든 후에는 전체 그룹에 대해 동시에 쿼리를 실행할 수 있습니다. 서버 그룹의 서버에서 [!INCLUDE[tsql](../../includes/tsql-md.md)] 문을 동시에 실행하는 방법에 대한 자세한 내용은 [여러 서버에 대해 동시에 문 실행&#40;SQL Server Management Studio&#41;](../../tools/sql-server-management-studio/execute-statements-against-multiple-servers-simultaneously.md)을 참조하세요.  
+-   하나의 중앙 관리 서버, 하나 이상의 서버 그룹 및 하나 이상의 등록된 서버를 만든 후에는 전체 그룹에 대해 동시에 쿼리를 실행할 수 있습니다. 서버 그룹의 서버에서 [!INCLUDE[tsql](../../includes/tsql-md.md)] 문을 동시에 실행하는 방법에 대한 자세한 내용은 [여러 서버에 대해 동시에 문 실행&#40;SQL Server Management Studio&#41;](./execute-statements-against-multiple-servers-simultaneously.md)을 참조하세요.  
   
 ## <a name="see-also"></a>참고 항목  
  [중앙 관리 서버를 사용하여 여러 서버 관리](../../relational-databases/administer-multiple-servers-using-central-management-servers.md)  
-  
   

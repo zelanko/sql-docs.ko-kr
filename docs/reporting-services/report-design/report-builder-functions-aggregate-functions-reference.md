@@ -9,12 +9,12 @@ ms.topic: conceptual
 ms.assetid: db6542ee-02d0-4073-90e6-cba8f9510fbb
 author: maggiesMSFT
 ms.author: maggies
-ms.openlocfilehash: 0c767c4e4feced7f5979cf6b22e90cceef311ca5
-ms.sourcegitcommit: 93e4fd75e8fe0cc85e7949c9adf23b0e1c275465
+ms.openlocfilehash: 8338e122e08ddf03417875c6a0436c16d1e3ff34
+ms.sourcegitcommit: fe59f8dc27fd633f5dfce54519d6f5dcea577f56
 ms.translationtype: HT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 06/01/2020
-ms.locfileid: "84255736"
+ms.lasthandoff: 10/09/2020
+ms.locfileid: "91935282"
 ---
 # <a name="report-builder-functions---aggregate-functions-reference"></a>보고서 작성기 함수 - 집계 함수 참조
   보고서에 집계 값을 포함하려면 식에서 기본 제공 집계 함수를 사용할 수 있습니다. 숫자 필드에 대한 기본 집계 함수는 SUM입니다. 식을 편집하고 다른 기본 제공 집계 함수를 사용하거나 다른 범위를 지정할 수 있습니다. 범위는 계산에 사용할 데이터 집합을 식별합니다.  
@@ -65,7 +65,7 @@ ms.locfileid: "84255736"
 |[Var](../../reporting-services/report-design/report-builder-functions-var-function.md)|식으로 지정되어 정해진 범위에서 계산되는 Null이 아닌 모든 숫자 값의 분산을 반환합니다.|  
 |[VarP](../../reporting-services/report-design/report-builder-functions-varp-function.md)|식으로 지정되어 정해진 범위의 컨텍스트에서 계산되는 Null이 아닌 모든 숫자 값의 모집단 분산을 반환합니다.|  
   
- ![맨 위로 이동 링크와 함께 사용되는 화살표 아이콘](https://docs.microsoft.com/analysis-services/analysis-services/instances/media/uparrow16x16.gif "맨 위로 이동 링크와 함께 사용되는 화살표 아이콘")맨 위로 이동  
+ ![맨 위로 이동 링크와 함께 사용되는 화살표 아이콘](/analysis-services/analysis-services/instances/media/uparrow16x16.gif "맨 위로 이동 링크와 함께 사용되는 화살표 아이콘")맨 위로 이동  
   
 ##  <a name="restrictions-on-built-in-fields-collections-and-aggregate-functions"></a><a name="Restrictions"></a> 기본 제공 필드, 컬렉션 및 집계 함수의 제한 사항  
  다음 표에는 전역 기본 제공 컬렉션에 대한 참조가 포함된 식을 추가할 수 있는 보고서 위치에서의 제한 사항이 요약되어 있습니다.  
@@ -102,7 +102,7 @@ ms.locfileid: "84255736"
   
 -   **참고 8.** Count 및 CountDistinct를 제외한 모든 집계의 데이터 형식은 모든 값에 대해 동일한 데이터 형식이거나 Null이어야 합니다.  
   
- ![맨 위로 이동 링크와 함께 사용되는 화살표 아이콘](https://docs.microsoft.com/analysis-services/analysis-services/instances/media/uparrow16x16.gif "맨 위로 이동 링크와 함께 사용되는 화살표 아이콘")맨 위로 이동  
+ ![맨 위로 이동 링크와 함께 사용되는 화살표 아이콘](/analysis-services/analysis-services/instances/media/uparrow16x16.gif "맨 위로 이동 링크와 함께 사용되는 화살표 아이콘")맨 위로 이동  
   
 ##  <a name="restrictions-on-nested-aggregates"></a><a name="NestedRestrictions"></a> 중첩 집계의 제한 사항  
  다음 표에는 다른 집계 함수를 중첩 집계로 지정할 수 있는 집계 함수의 제한 사항이 요약되어 있습니다.  
@@ -119,7 +119,7 @@ ms.locfileid: "84255736"
   
 -   **참고 1.** 집계 함수는 Lookup 함수가 집계에 포함되지 않은 경우 Lookup 함수의 *Source* 식 안에서만 허용됩니다. 집계 함수는 Lookup 함수의 *Destination* 또는 *Result* 식 안에서 허용되지 않습니다.  
   
- ![맨 위로 이동 링크와 함께 사용되는 화살표 아이콘](https://docs.microsoft.com/analysis-services/analysis-services/instances/media/uparrow16x16.gif "맨 위로 이동 링크와 함께 사용되는 화살표 아이콘")맨 위로 이동  
+ ![맨 위로 이동 링크와 함께 사용되는 화살표 아이콘](/analysis-services/analysis-services/instances/media/uparrow16x16.gif "맨 위로 이동 링크와 함께 사용되는 화살표 아이콘")맨 위로 이동  
   
 ##  <a name="calculating-running-values"></a><a name="CalculatingRunningValues"></a> 실행 값 계산  
  다음 기본 제공 함수는 데이터의 집합에 대한 실행 값을 계산합니다. **RowNumber** 는 포함하는 범위 내의 각 행에 대해 증가하는 개수의 실행 값을 반환한다는 점에서 **RunningValue** 와 비슷합니다. 이러한 함수의 범위 매개 변수는 개수 계산을 다시 시작하는 시점을 제어하는 포함하는 범위를 지정해야 합니다.  
@@ -129,7 +129,7 @@ ms.locfileid: "84255736"
 |[RowNumber](../../reporting-services/report-design/report-builder-functions-rownumber-function.md)|지정한 범위에서 행 개수의 실행 개수를 반환합니다. **RowNumber** 는 0이 아닌 1부터 계산을 다시 시작합니다.|  
 |[RunningValue](../../reporting-services/report-design/report-builder-functions-runningvalue-function.md)|식으로 지정되어 정해진 범위에서 계산되는 Null이 아닌 모든 숫자 값의 실행 집계를 반환합니다.|  
   
- ![맨 위로 이동 링크와 함께 사용되는 화살표 아이콘](https://docs.microsoft.com/analysis-services/analysis-services/instances/media/uparrow16x16.gif "맨 위로 이동 링크와 함께 사용되는 화살표 아이콘")맨 위로 이동  
+ ![맨 위로 이동 링크와 함께 사용되는 화살표 아이콘](/analysis-services/analysis-services/instances/media/uparrow16x16.gif "맨 위로 이동 링크와 함께 사용되는 화살표 아이콘")맨 위로 이동  
   
 ##  <a name="retrieving-row-counts"></a><a name="RetrievingRowCounts"></a> 행 개수 검색  
  다음 기본 제공 함수는 지정된 범위에서 행 개수를 계산합니다. 이 함수를 사용하여 Null 값을 가진 행을 포함한 모든 행의 개수를 계산할 수 있습니다.  
@@ -138,7 +138,7 @@ ms.locfileid: "84255736"
 |------------------|---------------------|  
 |[CountRows](../../reporting-services/report-design/report-builder-functions-countrows-function.md)|Null 값을 가진 행을 포함하여 지정된 범위의 행 수를 반환합니다.|  
   
- ![맨 위로 이동 링크와 함께 사용되는 화살표 아이콘](https://docs.microsoft.com/analysis-services/analysis-services/instances/media/uparrow16x16.gif "맨 위로 이동 링크와 함께 사용되는 화살표 아이콘")맨 위로 이동  
+ ![맨 위로 이동 링크와 함께 사용되는 화살표 아이콘](/analysis-services/analysis-services/instances/media/uparrow16x16.gif "맨 위로 이동 링크와 함께 사용되는 화살표 아이콘")맨 위로 이동  
   
 ##  <a name="looking-up-values-from-another-dataset"></a><a name="LookupFunctions"></a> 다른 데이터 세트에서 값 조회  
  다음 조회 함수는 지정된 데이터 세트에서 값을 검색합니다.  
@@ -149,7 +149,7 @@ ms.locfileid: "84255736"
 |[LookupSet 함수](../../reporting-services/report-design/report-builder-functions-lookupset-function.md)|데이터 세트에서 지정된 식에 대한 값 세트를 반환합니다.|  
 |[Multilookup 함수](../../reporting-services/report-design/report-builder-functions-multilookup-function.md)|이름/값 쌍을 포함하는 데이터 세트에서 이름 집합과 처음 일치하는 값 집합을 반환합니다.|  
   
- ![맨 위로 이동 링크와 함께 사용되는 화살표 아이콘](https://docs.microsoft.com/analysis-services/analysis-services/instances/media/uparrow16x16.gif "맨 위로 이동 링크와 함께 사용되는 화살표 아이콘")맨 위로 이동  
+ ![맨 위로 이동 링크와 함께 사용되는 화살표 아이콘](/analysis-services/analysis-services/instances/media/uparrow16x16.gif "맨 위로 이동 링크와 함께 사용되는 화살표 아이콘")맨 위로 이동  
   
 ##  <a name="retrieving-sort-dependent-values"></a><a name="RetrievingPostsortValues"></a> 정렬 종속 값 검색  
  다음 기본 제공 함수는 지정된 범위 내의 첫 번째, 마지막 또는 이전 값을 반환합니다. 이러한 함수는 데이터 값의 정렬 순서에 따라 달라집니다. 예를 들어 이러한 함수를 사용하여 페이지의 첫 번째와 마지막 값을 찾아 사전 스타일의 페이지 머리글을 만들 수 있습니다. 예를 들어 **Previous** 를 사용하여 특정 범위 내에서 한 행에 있는 값을 이전 행의 값과 비교하여 테이블에서 전년동기대비 백분율 값을 찾을 수 있습니다.  
@@ -160,7 +160,7 @@ ms.locfileid: "84255736"
 |[마지막](../../reporting-services/report-design/report-builder-functions-last-function.md)|지정된 식의 지정된 범위에서 마지막 값을 반환합니다.|  
 |[이전](../../reporting-services/report-design/report-builder-functions-previous-function.md)|지정된 범위 내에서 항목의 이전 인스턴스에 대한 지정된 집계 값 또는 값을 반환합니다.|  
   
- ![맨 위로 이동 링크와 함께 사용되는 화살표 아이콘](https://docs.microsoft.com/analysis-services/analysis-services/instances/media/uparrow16x16.gif "맨 위로 이동 링크와 함께 사용되는 화살표 아이콘")맨 위로 이동  
+ ![맨 위로 이동 링크와 함께 사용되는 화살표 아이콘](/analysis-services/analysis-services/instances/media/uparrow16x16.gif "맨 위로 이동 링크와 함께 사용되는 화살표 아이콘")맨 위로 이동  
   
 ##  <a name="retrieving-server-aggregates"></a><a name="RetrievingServerAggregates"></a> 서버 집계 검색  
  다음 기본 제공 함수는 데이터 공급자에서 사용자 지정 집계를 검색합니다. 예를 들어 [!INCLUDE[ssASnoversion](../../includes/ssasnoversion-md.md)] 데이터 원본 유형을 사용하면 데이터 원본 서버에서 계산된 집계를 검색하여 그룹 머리글에 사용할 수 있습니다.  
@@ -169,7 +169,7 @@ ms.locfileid: "84255736"
 |------------------|---------------------|  
 |[집계](../../reporting-services/report-design/report-builder-functions-aggregate-function.md)|데이터 공급자가 정의한 대로 지정한 식의 사용자 지정 집계를 반환합니다.|  
   
- ![맨 위로 이동 링크와 함께 사용되는 화살표 아이콘](https://docs.microsoft.com/analysis-services/analysis-services/instances/media/uparrow16x16.gif "맨 위로 이동 링크와 함께 사용되는 화살표 아이콘")맨 위로 이동  
+ ![맨 위로 이동 링크와 함께 사용되는 화살표 아이콘](/analysis-services/analysis-services/instances/media/uparrow16x16.gif "맨 위로 이동 링크와 함께 사용되는 화살표 아이콘")맨 위로 이동  
   
 ##  <a name="testing-for-scope"></a><a name="TestingforScope"></a> 범위 테스트  
  다음 기본 제공 함수는 보고서 항목의 현재 컨텍스트를 테스트하여 특정 범위에 속하는지 확인합니다.  
@@ -178,7 +178,7 @@ ms.locfileid: "84255736"
 |--------------|-----------------|  
 |[InScope](../../reporting-services/report-design/report-builder-functions-inscope-function.md)|항목의 현재 인스턴스가 지정한 범위 내에 있는지 여부를 나타냅니다.|  
   
- ![맨 위로 이동 링크와 함께 사용되는 화살표 아이콘](https://docs.microsoft.com/analysis-services/analysis-services/instances/media/uparrow16x16.gif "맨 위로 이동 링크와 함께 사용되는 화살표 아이콘")맨 위로 이동  
+ ![맨 위로 이동 링크와 함께 사용되는 화살표 아이콘](/analysis-services/analysis-services/instances/media/uparrow16x16.gif "맨 위로 이동 링크와 함께 사용되는 화살표 아이콘")맨 위로 이동  
   
 ##  <a name="retrieving-recursive-level"></a><a name="RetrievingRecursiveLevel"></a> 재귀 수준 검색  
  다음 기본 제공 함수는 재귀 계층이 처리될 때 현재 수준을 검색합니다. 이 함수의 결과를 입력란의 **Padding** 속성에 사용하여 재귀 그룹에 대한 시각적 계층의 들여쓰기 수준을 제어할 수 있습니다. 자세한 내용은 [재귀 계층 구조 그룹 생성&#40;보고서 작성기 및 SSRS&#41;](../../reporting-services/report-design/creating-recursive-hierarchy-groups-report-builder-and-ssrs.md)을 참조하세요.  
@@ -187,11 +187,10 @@ ms.locfileid: "84255736"
 |--------------|-----------------|  
 |[Level](../../reporting-services/report-design/report-builder-functions-level-function.md)|재귀 계층의 현재 수준을 반환합니다.|  
   
- ![맨 위로 이동 링크와 함께 사용되는 화살표 아이콘](https://docs.microsoft.com/analysis-services/analysis-services/instances/media/uparrow16x16.gif "맨 위로 이동 링크와 함께 사용되는 화살표 아이콘")맨 위로 이동  
+ ![맨 위로 이동 링크와 함께 사용되는 화살표 아이콘](/analysis-services/analysis-services/instances/media/uparrow16x16.gif "맨 위로 이동 링크와 함께 사용되는 화살표 아이콘")맨 위로 이동  
   
 ## <a name="see-also"></a>참고 항목  
  [보고서에 사용되는 식&#40;보고서 작성기 및 SSRS&#41;](../../reporting-services/report-design/expression-uses-in-reports-report-builder-and-ssrs.md)   
  [식 예&#40;보고서 작성기 및 SSRS&#41;](../../reporting-services/report-design/expression-examples-report-builder-and-ssrs.md)   
  [합계, 집계 및 기본 제공 컬렉션의 식 범위&#40;보고서 작성기 및 SSRS&#41;](../../reporting-services/report-design/expression-scope-for-totals-aggregates-and-built-in-collections.md)  
-  
   

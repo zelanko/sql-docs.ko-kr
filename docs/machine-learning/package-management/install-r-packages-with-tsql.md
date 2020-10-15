@@ -9,25 +9,25 @@ author: garyericson
 ms.author: garye
 ms.reviewer: davidph
 monikerRange: =sql-server-2017||=sqlallproducts-allversions
-ms.openlocfilehash: 1c2860efa5b47d3f6b6209f152e7085094fabaf3
-ms.sourcegitcommit: 9b41725d6db9957dd7928a3620fe4db41eb51c6e
+ms.openlocfilehash: 00ead49bdc0aa14304b3c95f0bee51329f6ad163
+ms.sourcegitcommit: afb02c275b7c79fbd90fac4bfcfd92b00a399019
 ms.translationtype: HT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 08/13/2020
-ms.locfileid: "88178973"
+ms.lasthandoff: 10/12/2020
+ms.locfileid: "91956664"
 ---
 # <a name="use-t-sql-create-external-library-to-install-r-packages-on-sql-server"></a>T-SQL(CREATE EXTERNAL LIBRARY)을 사용하여 SQL Server에 R 패키지 설치
 [!INCLUDE [SQL Server 2017 only](../../includes/applies-to-version/sqlserver2017-only.md)]
 
 이 문서에서는 기계 학습이 사용되는 SQL Server 인스턴스에 새 R 패키지를 설치하는 방법을 설명합니다. 여러 가지 방법 중에서 선택할 수 있습니다. T-SQL을 사용하는 것은 R에 익숙하지 않은 서버 관리자에게 가장 적합합니다.
 
-[CREATE EXTERNAL LIBRARY](https://docs.microsoft.com/sql/t-sql/statements/create-external-library-transact-sql) 문을 사용하면 R 또는 Python 코드를 직접 실행하지 않고도 패키지 또는 패키지 집합을 인스턴스 또는 특정 데이터베이스에 추가할 수 있습니다. 그러나 이 방법에는 패키지 준비와 추가 데이터베이스 권한이 필요합니다.
+[CREATE EXTERNAL LIBRARY](../../t-sql/statements/create-external-library-transact-sql.md) 문을 사용하면 R 또는 Python 코드를 직접 실행하지 않고도 패키지 또는 패키지 집합을 인스턴스 또는 특정 데이터베이스에 추가할 수 있습니다. 그러나 이 방법에는 패키지 준비와 추가 데이터베이스 권한이 필요합니다.
 
 + 모든 패키지는 인터넷에서 요청 시 다운로드되는 것이 아니라 로컬 압축 파일로 사용할 수 있어야 합니다.
 
 + 모든 종속성은 이름 및 버전으로 식별되고 zip 파일에 포함되어야 합니다. 다운스트림 패키지 종속성을 포함하여 필요한 패키지를 사용할 수 없는 경우 문이 실패합니다. 
 
-+ **db_owner**이거나 데이터베이스 역할에서 CREATE EXTERNAL LIBRARY 권한이 있어야 합니다. 자세한 내용은 [CREATE EXTERNAL LIBRARY](https://docs.microsoft.com/sql/t-sql/statements/create-external-library-transact-sql)를 참조하세요.
++ **db_owner**이거나 데이터베이스 역할에서 CREATE EXTERNAL LIBRARY 권한이 있어야 합니다. 자세한 내용은 [CREATE EXTERNAL LIBRARY](../../t-sql/statements/create-external-library-transact-sql.md)를 참조하세요.
 
 ## <a name="download-packages-in-archive-format"></a>보관 형식으로 패키지 다운로드
 
@@ -68,4 +68,4 @@ EXEC sp_execute_external_script
 ## <a name="see-also"></a>참고 항목
 
 + [R 패키지 정보 가져오기](r-package-information.md)
-+ [R 자습서](../tutorials/sql-server-r-tutorials.md)
++ [R 자습서](../tutorials/r-tutorials.md)

@@ -11,12 +11,12 @@ ms.reviewer: ''
 ms.custom: seo-lt-2019
 ms.date: 03/14/2017
 monikerRange: '>=aps-pdw-2016||=azuresqldb-current||=azure-sqldw-latest||>=sql-server-2016||=sqlallproducts-allversions||>=sql-server-linux-2017||=azuresqldb-mi-current'
-ms.openlocfilehash: c31d10b470271959f7bcb77b821847f9ff45b388
-ms.sourcegitcommit: 9e1f1c6ee8f5a10d18a2599bfd9f3eb6081829e1
+ms.openlocfilehash: 66b83e6c2a26f5fb9f8c2676dc3245d4d79e080e
+ms.sourcegitcommit: 22dacedeb6e8721e7cdb6279a946d4002cfb5da3
 ms.translationtype: HT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 08/29/2020
-ms.locfileid: "89093491"
+ms.lasthandoff: 10/14/2020
+ms.locfileid: "92036486"
 ---
 # <a name="open-an-editor-sql-server-management-studio"></a>편집기 열기(SQL Server Management Studio)
 
@@ -52,7 +52,7 @@ ms.locfileid: "89093491"
 ### <a name="using-the-fileopen-menu"></a>파일/열기 메뉴 사용  
  **파일** 메뉴에서 **열기**를 클릭한 다음 파일을 찾아서 엽니다. [!INCLUDE[ssManStudio](../../includes/ssmanstudio-md.md)] 에서는 파일 확장명에 적절한 유형의 편집기를 열고, 파일 내용을 편집기 창에 복사하며, 필요한 경우 연결 대화 상자를 엽니다. 예를 들어 확장명이 .sql인 파일을 열 경우 [!INCLUDE[ssManStudio](../../includes/ssmanstudio-md.md)] 에서는 [!INCLUDE[ssDE](../../includes/ssde-md.md)] 쿼리 편집기 창을 열고 .sql 파일의 내용을 복사한 다음 연결 대화 상자를 엽니다. 특정 편집기에 연결되지 않은 확장명을 가진 파일을 열 경우 [!INCLUDE[ssManStudio](../../includes/ssmanstudio-md.md)] 에서는 텍스트 편집기 창을 열고 파일 내용을 복사합니다.  
   
- 자세한 내용은 [파일 확장명을 코드 편집기에 연결](../../relational-databases/scripting/associate-file-extensions-to-a-code-editor.md)을 참조하세요.  
+ 자세한 내용은 [파일 확장명을 코드 편집기에 연결](./associate-file-extensions-to-a-code-editor.md)을 참조하세요.  
   
 ### <a name="using-the-toolbar"></a>도구 모음 사용  
  **표준** 도구 모음에서 다음 단추 중 하나를 클릭합니다.  

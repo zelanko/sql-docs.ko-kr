@@ -8,12 +8,12 @@ ms.reviewer: mikeray
 ms.date: 09/10/2020
 ms.topic: conceptual
 ms.prod: sql
-ms.openlocfilehash: f3d2051e7003407a4ba7cbb3fb2ff8682ec6ee8f
-ms.sourcegitcommit: 8f062015c2a033f5a0d805ee4adabbe15e7c8f94
+ms.openlocfilehash: 41a7f1f4edc247f211ee5b3cdcaddfd139c5027c
+ms.sourcegitcommit: a41e1f4199785a2b8019a419a1f3dcdc15571044
 ms.translationtype: HT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 09/25/2020
-ms.locfileid: "91227326"
+ms.lasthandoff: 10/13/2020
+ms.locfileid: "91988019"
 ---
 # <a name="configure-on-demand-sql-assessment-for-azure-arc-enabled-sql-server-instance"></a>Azure Arc 사용 SQL Server 인스턴스에 대해 주문형 SQL 평가 구성
 
@@ -23,13 +23,13 @@ ms.locfileid: "91227326"
 
 * SQL Server 인스턴스가 Azure Arc에 연결되어 있습니다. 지침에 따라 [SQL Server 인스턴스를 Arc 사용 SQL Server에 온보딩](connect.md)합니다.
 
-* MMA 확장이 머신에 설치되었으며 구성되어 있습니다. 지침에 따라 [MMA(Microsoft Monitoring Agent)를 설치](configure-advanced-data-security.md#install-microsoft-monitoring-agent-mma)합니다. 자세한 내용은 [Log Analytics 에이전트](https://docs.microsoft.com/azure/azure-monitor/platform/log-analytics-agent)를 참조하세요.
+* MMA 확장이 머신에 설치되었으며 구성되어 있습니다. 지침에 따라 [MMA(Microsoft Monitoring Agent)를 설치](configure-advanced-data-security.md#install-microsoft-monitoring-agent-mma)합니다. 자세한 내용은 [Log Analytics 에이전트](/azure/azure-monitor/platform/log-analytics-agent)를 참조하세요.
 
 * SQL Server에서 [TCP/IP 프로토콜을 사용](../../database-engine/configure-windows/enable-or-disable-a-server-network-protocol.md)할 수 있습니다.
 
 * 명명된 SQL Server 인스턴스를 운영하는 경우 [SQL Server Browser](../../tools/configuration-manager/sql-server-browser-service.md)가 실행되고 있습니다.
 
-* [서비스 허브 주문형 평가 필수 조건](https://docs.microsoft.com/services-hub/health/assessment-prereq-docs#on-demand-assessment-prerequisite-documents)에서 SQL Server 문서를 검토했습니다.
+* [서비스 허브 주문형 평가 필수 조건](/services-hub/health/assessment-prereq-docs#on-demand-assessment-prerequisite-documents)에서 SQL Server 문서를 검토했습니다.
 
 ## <a name="enable-on-demand-sql-assessment"></a>주문형 SQL 평가 사용
 
@@ -75,6 +75,6 @@ Microsoft Monitoring Agent는 15분마다 작업 폴더를 검사하여 _new.*_ 
 
 ## <a name="next-steps"></a>다음 단계
 
-자세한 내용은 [서비스 허브 주문형 평가 필수 조건](https://docs.microsoft.com/services-hub/health/assessment-prereq-docs#on-demand-assessment-prerequisite-documents)에서 SQL Server 문서를 참조하세요.
+자세한 내용은 [서비스 허브 주문형 평가 필수 조건](/services-hub/health/assessment-prereq-docs#on-demand-assessment-prerequisite-documents)에서 SQL Server 문서를 참조하세요.
 
 주문형 SQL 평가의 포괄적인 지원을 받으려면 프리미어 또는 통합 지원 구독이 필요합니다. 자세한 내용은 [Azure 프리미어 지원](https://azure.microsoft.com/support/plans/premier)을 확인하세요.

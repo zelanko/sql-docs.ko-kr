@@ -19,12 +19,12 @@ helpviewer_keywords:
 - solutions [SQL Server Management Studio], tutorials
 - SQL Server Management Studio [SQL Server], tutorials
 - scripts [SQL Server], SQL Server Management Studio
-ms.openlocfilehash: 4d8df5bbc3ead279cb9606da6a906f9d713ff439
-ms.sourcegitcommit: 9386ae1b90705a39d37d5541b70c5e8a6564f253
+ms.openlocfilehash: a2fe23c032c9e11d31586b25064c2ede386fa3e5
+ms.sourcegitcommit: 22dacedeb6e8721e7cdb6279a946d4002cfb5da3
 ms.translationtype: HT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 10/02/2020
-ms.locfileid: "91662042"
+ms.lasthandoff: 10/14/2020
+ms.locfileid: "92038964"
 ---
 # <a name="script-objects-in-sql-server-management-studio"></a>SQL Server Management Studio에서 개체 스크립팅
 
@@ -43,11 +43,11 @@ ms.locfileid: "91662042"
 
 이 자습서를 완료하려면 SQL Server Management Studio, SQL Server를 실행하는 서버에 대한 액세스 및 AdventureWorks 데이터베이스가 필요합니다.
 
-* [SQL Server Management Studio](https://docs.microsoft.com/sql/ssms/download-sql-server-management-studio-ssms)를 설치합니다.
+* [SQL Server Management Studio](../download-sql-server-management-studio-ssms.md)를 설치합니다.
 * [SQL Server 2017 Developer Edition](https://www.microsoft.com/sql-server/sql-server-downloads)을 설치합니다.
 * [AdventureWorks2016 샘플 데이터베이스](https://github.com/Microsoft/sql-server-samples/releases)를 다운로드합니다.
 
-SSMS에서 데이터베이스를 복원하기 위한 지침은 여기: [데이터베이스 복원](https://docs.microsoft.com/sql/relational-databases/backup-restore/restore-a-database-backup-using-ssms)에 있습니다. 
+SSMS에서 데이터베이스를 복원하기 위한 지침은 여기: [데이터베이스 복원](../../relational-databases/backup-restore/restore-a-database-backup-using-ssms.md)에 있습니다. 
 
 ## <a name="script-queries-from-the-gui"></a>GUI에서 쿼리 스크립팅
 
@@ -146,7 +146,7 @@ SSMS에서 GUI를 사용하여 작업을 완료할 때마다 작업에 연결된
    ![스크립트 개체](media/scripting-ssms/advancedscripts.png)
 
    > [!NOTE]
-   > **스크립팅할 데이터 형식** 옵션에 *스키마 및 데이터*를 선택하면 데이터베이스에 대한 데이터를 스크립팅할 수 있습니다. 그러나 대용량 데이터베이스는 이상적이 아닙니다. SSMS에서 할당할 수 있는 것보다 많은 메모리가 필요할 수 있습니다. 이 제한은 작은 데이터베이스의 경우 괜찮습니다. 대형 데이터베이스용 데이터를 이동하려는 경우 [가져오기 및 내보내기 마법사](https://docs.microsoft.com/sql/integration-services/import-export-data/import-and-export-data-with-the-sql-server-import-and-export-wizard)를 사용합니다.
+   > **스크립팅할 데이터 형식** 옵션에 *스키마 및 데이터*를 선택하면 데이터베이스에 대한 데이터를 스크립팅할 수 있습니다. 그러나 대용량 데이터베이스는 이상적이 아닙니다. SSMS에서 할당할 수 있는 것보다 많은 메모리가 필요할 수 있습니다. 이 제한은 작은 데이터베이스의 경우 괜찮습니다. 대형 데이터베이스용 데이터를 이동하려는 경우 [가져오기 및 내보내기 마법사](../../integration-services/import-export-data/import-and-export-data-with-the-sql-server-import-and-export-wizard.md)를 사용합니다.
 
 6. **확인**선택하고 **다음**을 선택합니다.
 
@@ -199,7 +199,7 @@ SSMS에서 GUI를 사용하여 작업을 완료할 때마다 작업에 연결된
 
 ## <a name="script-extended-events"></a>확장 이벤트 스크립팅
 
-이 섹션에서는 [확장 이벤트](https://docs.microsoft.com/sql/relational-databases/extended-events/extended-events)를 스크립팅하는 방법을 다룹니다.
+이 섹션에서는 [확장 이벤트](../../relational-databases/extended-events/extended-events.md)를 스크립팅하는 방법을 다룹니다.
 
 1. SQL Server를 실행하는 서버에 연결합니다.
 
@@ -226,7 +226,7 @@ SSMS에서 GUI를 사용하여 작업을 완료할 때마다 작업에 연결된
 
 실습을 통해 SSMS에 익숙해지는 것이 가장 좋습니다. 이러한 *자습서* 및 *방법* 문서에서는 SSMS 내에서 사용할 수 있는 다양한 기능에 관해 도움을 얻을 수 있습니다. 이러한 문서에서는 SSMS의 구성 요소를 관리하는 방법과 정기적으로 사용하는 기능을 찾는 방법을 알아봅니다.
 
-* [인스턴스에 연결 및 쿼리](connect-query-sql-server.md)
+* [인스턴스에 연결 및 쿼리](../quickstarts/connect-query-sql-server.md)
 * [SSMS에서 템플릿 사용](../template/templates-ssms.md)
 * [SSMS 구성](ssms-configuration.md)
 * [SSMS 사용을 위한 추가 팁과 요령](ssms-tricks.md)

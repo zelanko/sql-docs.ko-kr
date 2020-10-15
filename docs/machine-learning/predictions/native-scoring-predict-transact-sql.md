@@ -10,12 +10,12 @@ author: dphansen
 ms.author: davidph
 ms.custom: seo-lt-2019
 monikerRange: '>=sql-server-2017||=azuresqldb-current||>=sql-server-linux-2017||=azuresqldb-mi-current||=azure-sqldw-latest||=sqlallproducts-allversions'
-ms.openlocfilehash: 762d272661fd9bfaa61781391e42d3d9919d78c1
-ms.sourcegitcommit: 039fb38c583019b3fd06894160568387a19ba04e
+ms.openlocfilehash: 9d8f65baaec3038431455712d64803459a96e45c
+ms.sourcegitcommit: afb02c275b7c79fbd90fac4bfcfd92b00a399019
 ms.translationtype: HT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 07/30/2020
-ms.locfileid: "87442911"
+ms.lasthandoff: 10/12/2020
+ms.locfileid: "91956964"
 ---
 # <a name="native-scoring-using-the-predict-t-sql-function-with-sql-machine-learning"></a>SQL 기계 학습에서 PREDICT T-SQL 함수를 사용하는 네이티브 채점
 
@@ -71,7 +71,7 @@ ms.locfileid: "87442911"
 
 이 모델은 [RevoScaleR](../r/ref-r-revoscaler.md) 또는 [revoscalepy](../python/ref-py-revoscalepy.md) 패키지를 사용하여 아래 나열된 지원되는 **rx** 알고리즘 중 하나로 미리 학습되어야 합니다.
 
-R에는 [rxSerialize](https://docs.microsoft.com/machine-learning-server/r-reference/revoscaler/rxserializemodel)를, Python에는 [rx_serialize_model](https://docs.microsoft.com/machine-learning-server/python-reference/revoscalepy/rx-serialize-model)을 사용하여 모델을 직렬화합니다. 이러한 직렬화 함수는 빠른 채점을 지원하도록 최적화되었습니다.
+R에는 [rxSerialize](/machine-learning-server/r-reference/revoscaler/rxserializemodel)를, Python에는 [rx_serialize_model](/machine-learning-server/python-reference/revoscalepy/rx-serialize-model)을 사용하여 모델을 직렬화합니다. 이러한 직렬화 함수는 빠른 채점을 지원하도록 최적화되었습니다.
 
 <a name="bkmk_native_supported_algos"></a> 
 
@@ -81,19 +81,19 @@ revoscalepy 및 RevoScaleR에서 지원되는 알고리즘은 다음과 같습�
 
 + revoscalepy 알고리즘
 
-  + [rx_lin_mod](https://docs.microsoft.com/machine-learning-server/python-reference/revoscalepy/rx-lin-mod)
-  + [rx_logit](https://docs.microsoft.com/machine-learning-server/python-reference/revoscalepy/rx-logit) 
-  + [rx_btrees](https://docs.microsoft.com/machine-learning-server/python-reference/revoscalepy/rx-btrees) 
-  + [rx_dtree](https://docs.microsoft.com/machine-learning-server/python-reference/revoscalepy/rx-dtree) 
-  + [rx_dforest](https://docs.microsoft.com/machine-learning-server/python-reference/revoscalepy/rx-dforest) 
+  + [rx_lin_mod](/machine-learning-server/python-reference/revoscalepy/rx-lin-mod)
+  + [rx_logit](/machine-learning-server/python-reference/revoscalepy/rx-logit) 
+  + [rx_btrees](/machine-learning-server/python-reference/revoscalepy/rx-btrees) 
+  + [rx_dtree](/machine-learning-server/python-reference/revoscalepy/rx-dtree) 
+  + [rx_dforest](/machine-learning-server/python-reference/revoscalepy/rx-dforest) 
 
 + RevoScaleR 알고리즘
 
-  + [rxLinMod](https://docs.microsoft.com/r-server/r-reference/revoscaler/rxlinmod)
-  + [rxLogit](https://docs.microsoft.com/r-server/r-reference/revoscaler/rxlogit)
-  + [rxBTrees](https://docs.microsoft.com/r-server/r-reference/revoscaler/rxbtrees)
-  + [rxDtree](https://docs.microsoft.com/r-server/r-reference/revoscaler/rxdtree)
-  + [rxDForest](https://docs.microsoft.com/r-server/r-reference/revoscaler/rxdforest)
+  + [rxLinMod](/r-server/r-reference/revoscaler/rxlinmod)
+  + [rxLogit](/r-server/r-reference/revoscaler/rxlogit)
+  + [rxBTrees](/r-server/r-reference/revoscaler/rxbtrees)
+  + [rxDtree](/r-server/r-reference/revoscaler/rxdtree)
+  + [rxDForest](/r-server/r-reference/revoscaler/rxdforest)
 
 MicrosoftML 또는 microsoftml의 알고리즘을 사용해야 하는 경우 [sp_rxPredict를 사용한 실시간 채점](../predictions/real-time-scoring.md)을 사용합니다.
 
@@ -210,7 +210,7 @@ EXECUTE sp_execute_external_script
 ```
 
 > [!NOTE]
-> RevoScaleR에서 [rxSerializeModel](https://docs.microsoft.com/machine-learning-server/r-reference/revoscaler/rxserializemodel) 함수를 사용하여 모델을 저장해야 합니다. 표준 R `serialize` 함수는 필요한 형식을 생성할 수 없습니다.
+> RevoScaleR에서 [rxSerializeModel](/machine-learning-server/r-reference/revoscaler/rxserializemodel) 함수를 사용하여 모델을 저장해야 합니다. 표준 R `serialize` 함수는 필요한 형식을 생성할 수 없습니다.
 
 다음과 같은 문을 실행하여 이진 형식으로 저장된 모델을 볼 수 있습니다.
 

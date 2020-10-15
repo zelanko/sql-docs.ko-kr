@@ -17,12 +17,12 @@ helpviewer_keywords:
 ms.assetid: e60367a7-3fdd-40b8-82bb-9e819d78de5a
 author: markingmyname
 ms.author: maghan
-ms.openlocfilehash: 974cf89ca255f42f088d9b271863c45f4294fbbf
-ms.sourcegitcommit: e700497f962e4c2274df16d9e651059b42ff1a10
+ms.openlocfilehash: 19caca02569f477570236eb2b71adceb388b1358
+ms.sourcegitcommit: 22dacedeb6e8721e7cdb6279a946d4002cfb5da3
 ms.translationtype: HT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 08/17/2020
-ms.locfileid: "88491904"
+ms.lasthandoff: 10/14/2020
+ms.locfileid: "92037226"
 ---
 # <a name="manage-objects-by-using-object-explorer"></a>개체 탐색기를 사용하여 개체 관리
 [!INCLUDE[SQL Server Azure SQL Database Synapse Analytics PDW ](../../includes/applies-to-version/sql-asdb-asdbmi-asa-pdw.md)]
@@ -53,7 +53,7 @@ ms.locfileid: "88491904"
 개체 탐색기가 서버에 연결되면 개체 탐색기의 연결 설정을 사용하여 새 코드 편집기 창을 열 수 있습니다. 새 코드 편집기 창을 열려면 개체 탐색기에서 서버 이름을 마우스 오른쪽 단추로 클릭한 다음 **새 쿼리**를 클릭합니다. 특정 데이터베이스를 사용하여 코드 편집기 창을 열려면 데이터베이스 이름을 마우스 오른쪽 단추로 클릭한 다음 **새 쿼리**를 클릭합니다. Analysis Services 서버에 대한 새 쿼리를 열 경우 DMX, MDX 또는 XMLA 쿼리를 선택할 수 있습니다.  
   
 ### <a name="start-powershell"></a>PowerShell 시작  
-개체 탐색기 트리에서 대부분의 폴더 및 개체를 마우스 오른쪽 단추로 클릭하고 **PowerShell 시작**을 선택하면 PowerShell 세션을 시작할 수 있습니다. 이렇게 하면 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] PowerShell 지원이 활성화되고 개체 탐색기에서 마우스 오른쪽 단추로 클릭한 개체로 경로가 설정되어 PowerShell 세션이 시작됩니다. 그러면 대화형 PowerShell 환경에서 PowerShell 명령을 입력할 수 있습니다. 자세한 내용은 [SQL Server PowerShell](https://msdn.microsoft.com/89b70725-bbe7-4ffe-a27d-2a40005a97e7)을 참조하세요.  
+개체 탐색기 트리에서 대부분의 폴더 및 개체를 마우스 오른쪽 단추로 클릭하고 **PowerShell 시작**을 선택하면 PowerShell 세션을 시작할 수 있습니다. 이렇게 하면 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] PowerShell 지원이 활성화되고 개체 탐색기에서 마우스 오른쪽 단추로 클릭한 개체로 경로가 설정되어 PowerShell 세션이 시작됩니다. 그러면 대화형 PowerShell 환경에서 PowerShell 명령을 입력할 수 있습니다. 자세한 내용은 [SQL Server PowerShell](../../powershell/sql-server-powershell.md)을 참조하세요.  
   
 ## <a name="see-also"></a>참고 항목  
 [개체 탐색기](../../ssms/object/object-explorer.md)  
@@ -61,4 +61,3 @@ ms.locfileid: "88491904"
 [개체 탐색기에서 인스턴스에 연결](../../ssms/object/connect-to-an-instance-from-object-explorer.md)  
 [개체 탐색기 세부 정보 창](../../ssms/object/object-explorer-details-pane.md)  
 [Management Studio의 사용자 지정 보고서](../../ssms/object/custom-reports-in-management-studio.md)  
-  

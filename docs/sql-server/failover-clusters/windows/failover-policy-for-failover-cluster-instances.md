@@ -12,12 +12,12 @@ helpviewer_keywords:
 ms.assetid: 39ceaac5-42fa-4b5d-bfb6-54403d7f0dc9
 author: MashaMSFT
 ms.author: mathoma
-ms.openlocfilehash: 70f02555b6993a8edd3b226352480dc5be8951c7
-ms.sourcegitcommit: f7ac1976d4bfa224332edd9ef2f4377a4d55a2c9
+ms.openlocfilehash: b548dc877969334096171ee7475c928b786e5905
+ms.sourcegitcommit: a41e1f4199785a2b8019a419a1f3dcdc15571044
 ms.translationtype: HT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 07/02/2020
-ms.locfileid: "85894889"
+ms.lasthandoff: 10/13/2020
+ms.locfileid: "91988286"
 ---
 # <a name="failover-policy-for-failover-cluster-instances"></a>장애 조치(failover) 클러스터 인스턴스용 장애 조치(failover) 정책
 [!INCLUDE [SQL Server](../../../includes/applies-to-version/sqlserver.md)]
@@ -105,11 +105,10 @@ ms.locfileid: "85894889"
  *기본값  
   
 ####  <a name="responding-to-failures"></a><a name="respond"></a> 실패에 대한 응답  
- 하나 이상의 오류 상태가 감지된 경우 WSFC 서비스의 오류 대응 방법은 FCI 리소스 그룹의 다시 시작 및 장애 조치(failover) 설정과 WSFC 쿼럼 상태에 따라 다릅니다. FCI에 손실된 WSFC 쿼럼이 있으면 전체 FCI가 오프라인 상태가 되고 해당 FCI의 고가용성이 손실됩니다. 이 FCI가 계속 WSFC 쿼럼을 유지하면 WSFC 서비스는 실패한 노드의 다시 시작을 처음 시도하여 대응하고 다시 시작 시도가 실패할 경우 장애 조치(failover)할 수도 있습니다. 다시 시작 및 장애 조치(failover) 설정은 장애 조치(failover) 클러스터 관리자 스냅인에서 구성됩니다. 이러한 설정에 대한 자세한 내용은 [\<Resource> 속성: 정책 탭](https://technet.microsoft.com/library/cc725685.aspx)을 참조하세요.  
+ 하나 이상의 오류 상태가 감지된 경우 WSFC 서비스의 오류 대응 방법은 FCI 리소스 그룹의 다시 시작 및 장애 조치(failover) 설정과 WSFC 쿼럼 상태에 따라 다릅니다. FCI에 손실된 WSFC 쿼럼이 있으면 전체 FCI가 오프라인 상태가 되고 해당 FCI의 고가용성이 손실됩니다. 이 FCI가 계속 WSFC 쿼럼을 유지하면 WSFC 서비스는 실패한 노드의 다시 시작을 처음 시도하여 대응하고 다시 시작 시도가 실패할 경우 장애 조치(failover)할 수도 있습니다. 다시 시작 및 장애 조치(failover) 설정은 장애 조치(failover) 클러스터 관리자 스냅인에서 구성됩니다. 이러한 설정에 대한 자세한 내용은 [\<Resource> 속성: 정책 탭](/previous-versions/windows/it-pro/windows-server-2008-R2-and-2008/cc725685(v=ws.11))을 참조하세요.  
   
  쿼럼 상태의 유지 관리에 대한 자세한 내용은 [WSFC 쿼럼 모드 및 투표 구성&#40;SQL Server&#41;](../../../sql-server/failover-clusters/windows/wsfc-quorum-modes-and-voting-configuration-sql-server.md)을 참조하세요.  
   
 ## <a name="see-also"></a>참고 항목  
  [ALTER SERVER CONFIGURATION&#40;Transact-SQL&#41;](../../../t-sql/statements/alter-server-configuration-transact-sql.md)  
-  
   

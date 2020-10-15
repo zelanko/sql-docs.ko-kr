@@ -9,12 +9,12 @@ ms.topic: how-to
 ms.prod: sql
 ms.technology: machine-learning
 monikerRange: '>=sql-server-2017||>=sql-server-linux-ver15||=azuresqldb-mi-current||=azuresqldb-current||=sqlallproducts-allversions'
-ms.openlocfilehash: 1a946efdd8da5a64d2475164a1b8057c7b41554f
-ms.sourcegitcommit: 8f062015c2a033f5a0d805ee4adabbe15e7c8f94
+ms.openlocfilehash: c1f30230b00258b5f5f662a99c2d75c29ea7ba8d
+ms.sourcegitcommit: afb02c275b7c79fbd90fac4bfcfd92b00a399019
 ms.translationtype: HT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 09/25/2020
-ms.locfileid: "91226849"
+ms.lasthandoff: 10/12/2020
+ms.locfileid: "91956810"
 ---
 # <a name="plot-histograms-in-python"></a>Python에서 히스토그램 그리기 
 [!INCLUDE[SQL Server SQL DB SQL MI](../../includes/applies-to-version/sql-asdb-asdbmi.md)]
@@ -28,11 +28,11 @@ ms.locfileid: "91226849"
 ::: moniker-end
 
 ::: moniker range="=azuresqldb-current||=sqlallproducts-allversions"
-* Azure SQL Database. 등록 방법은 [Azure SQL Database](https://docs.microsoft.com/azure/sql-database/sql-database-get-started-portal)를 참조하세요.
+* Azure SQL Database. 등록 방법은 [Azure SQL Database](/azure/sql-database/sql-database-get-started-portal)를 참조하세요.
 ::: moniker-end
 
 ::: moniker range="=azuresqldb-mi-current||=sqlallproducts-allversions"
-* Azure SQL Managed Instance. 등록 방법은 [Azure SQL Managed Instance](https://docs.microsoft.com/azure/azure-sql/managed-instance/instance-create-quickstart)를 참조하세요.
+* Azure SQL Managed Instance. 등록 방법은 [Azure SQL Managed Instance](/azure/azure-sql/managed-instance/instance-create-quickstart)를 참조하세요.
 
 * 샘플 데이터베이스를 Azure SQL Managed Instance로 복원하기 위한 [SQL Server Management Studio](../../ssms/download-sql-server-management-studio-ssms.md).
 ::: moniker-end
@@ -93,5 +93,3 @@ df.hist(bins=10)
 이 표시에서는 FactInternetSales 테이블에 있는 고객의 연령 분포를 보여 줍니다.
 
 ![Pandas 히스토그램](./media/python-histogram.png)
-
-

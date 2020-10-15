@@ -11,12 +11,12 @@ ms.author: maghan
 ms.reviewer: drskwier, sstein
 ms.custom: seo-lt-2019
 ms.date: 09/18/2019
-ms.openlocfilehash: 3363414382df2eb73a21dd32a9daa3a950c6907a
-ms.sourcegitcommit: c74bb5944994e34b102615b592fdaabe54713047
+ms.openlocfilehash: 97200a4dfdaebeb77703fe420267557a3d5ad9d7
+ms.sourcegitcommit: 22dacedeb6e8721e7cdb6279a946d4002cfb5da3
 ms.translationtype: HT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 09/22/2020
-ms.locfileid: "90990366"
+ms.lasthandoff: 10/14/2020
+ms.locfileid: "92035910"
 ---
 # <a name="get-diagnostic-data-after-a-sql-server-management-studio-ssms-crash"></a>SSMS(SQL Server Management Studio) 충돌이 발생한 후 진단 데이터 가져오기
 
@@ -28,7 +28,7 @@ ms.locfileid: "90990366"
 
 SSMS의 충돌 또는 응답 없음 문제를 해결하기 위한 진단 정보를 캡처하려면 아래 단계를 따르세요.
 
-1. [ProcDump](https://technet.microsoft.com/sysinternals/dd996900.aspx)를 다운로드합니다.
+1. [ProcDump](/sysinternals/downloads/procdump)를 다운로드합니다.
 
 2. 폴더에서 다운로드 파일의 압축을 풉니다.
 
@@ -62,7 +62,7 @@ OutOfMemoryException을 throw할 때 SSMS의 전체 메모리 덤프를 가져�
 
 SSMS에서 OutOfMemoryException 문제를 해결하기 위한 진단 정보를 캡처하려면 아래 단계를 따르세요.
 
-1. [ProcDump](https://technet.microsoft.com/sysinternals/dd996900.aspx)를 다운로드합니다.
+1. [ProcDump](/sysinternals/downloads/procdump)를 다운로드합니다.
 
 2. 폴더에서 다운로드 파일의 압축을 풉니다.
 

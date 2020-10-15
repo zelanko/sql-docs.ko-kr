@@ -8,12 +8,12 @@ ms.reviewer: mikeray
 ms.date: 09/10/2020
 ms.topic: conceptual
 ms.prod: sql
-ms.openlocfilehash: a51ec53b5b5e928bd19dd66cb1ac6a8da162e817
-ms.sourcegitcommit: c74bb5944994e34b102615b592fdaabe54713047
+ms.openlocfilehash: 2bd589ebacd9ea35e15881eaaeb022d4f2302986
+ms.sourcegitcommit: a41e1f4199785a2b8019a419a1f3dcdc15571044
 ms.translationtype: HT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 09/22/2020
-ms.locfileid: "90990376"
+ms.lasthandoff: 10/13/2020
+ms.locfileid: "91988029"
 ---
 # <a name="configure-advanced-data-security-for-azure-arc-enabled-sql-server-instance"></a>Azure Arc 사용 SQL Server 인스턴스에 대해 Advanced Data Security 구성
 
@@ -77,7 +77,7 @@ Azure Security Center에서 보안 변칙 및 위협을 살펴봅니다.
 
    ![취약성 보고서](media/configure-advanced-data-security/vulnerabilities-report.png)
 
-1. 보안 경고를 클릭하여 전체 세부 정보를 확인하고 [Azure Sentinel](https://docs.microsoft.com/azure/sentinel/overview)에서 공격을 살펴봅니다. 다음 다이어그램은 무차별 암호 대입(brute force) 경고의 예입니다.
+1. 보안 경고를 클릭하여 전체 세부 정보를 확인하고 [Azure Sentinel](/azure/sentinel/overview)에서 공격을 살펴봅니다. 다음 다이어그램은 무차별 암호 대입(brute force) 경고의 예입니다.
 
    ![무차별 암호 대입 경고](media/configure-advanced-data-security/brute-force-alert.png)
 

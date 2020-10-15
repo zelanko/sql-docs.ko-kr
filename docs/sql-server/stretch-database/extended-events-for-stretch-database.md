@@ -9,12 +9,12 @@ ms.assetid: 70485e74-2e25-4e7e-be6c-9dd1780a42e3
 author: rothja
 ms.author: jroth
 ms.custom: seo-dt-2019
-ms.openlocfilehash: 02fe62db4f59916f5b97624c4b4560a33738d761
-ms.sourcegitcommit: e700497f962e4c2274df16d9e651059b42ff1a10
+ms.openlocfilehash: 7940de563ab3b5dbee0fe59fb93f1dfe2d02ce3b
+ms.sourcegitcommit: a41e1f4199785a2b8019a419a1f3dcdc15571044
 ms.translationtype: HT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 08/17/2020
-ms.locfileid: "88454352"
+ms.lasthandoff: 10/13/2020
+ms.locfileid: "91988259"
 ---
 # <a name="extended-events-for-stretch-database"></a>스트레치 데이터베이스용 확장 이벤트
 [!INCLUDE [sqlserver2016-windows-only](../../includes/applies-to-version/sqlserver2016-windows-only.md)]
@@ -22,7 +22,7 @@ ms.locfileid: "88454352"
 
 스트레치 데이터베이스는 문제 해결을 위해 몇 가지 확장 이벤트를 제공합니다.  
   
-자세한 내용은 [확장 이벤트](../../relational-databases/extended-events/extended-events.md)를 참조하세요. 문제 해결을 위해 확장 이벤트 세션을 시작하는 방법은 [확장 이벤트 세션 만들기](https://msdn.microsoft.com/library/34b1e95a-a80e-4aca-9201-abde47f2ca74)를 참조하세요.  
+자세한 내용은 [확장 이벤트](../../relational-databases/extended-events/extended-events.md)를 참조하세요. 문제 해결을 위해 확장 이벤트 세션을 시작하는 방법은 [확장 이벤트 세션 만들기](/previous-versions/sql/sql-server-2016/hh213147(v=sql.130))를 참조하세요.  
   
 ## <a name="list-of-extended-events-for-stretch-database"></a>스트레치 데이터베이스용 확장 이벤트 목록  
   
@@ -82,5 +82,4 @@ stretch_table_validation_error|사용자가 늘이기를 사용하도록 설정�
 stretch_unprovision_table_start|늘이기 테이블 프로비전 해제 시작을 보고합니다.  
   
 ## <a name="see-also"></a>참고 항목  
-[Stretch Database 관리 및 문제 해결](../../sql-server/stretch-database/manage-and-troubleshoot-stretch-database.md)  
-
+[Stretch Database 관리 및 문제 해결](../../sql-server/stretch-database/manage-and-troubleshoot-stretch-database.md)

@@ -9,12 +9,12 @@ author: dphansen
 ms.author: davidph
 ms.custom: seo-lt-2019
 monikerRange: '>=sql-server-2017||>=sql-server-linux-ver15||=sqlallproducts-allversions'
-ms.openlocfilehash: 9263d11f271249d7fa31b1a3f3af83a21c04c793
-ms.sourcegitcommit: 9b41725d6db9957dd7928a3620fe4db41eb51c6e
+ms.openlocfilehash: 8ed1adfff31afc57f50e6b5e0757370b152cd544
+ms.sourcegitcommit: afb02c275b7c79fbd90fac4bfcfd92b00a399019
 ms.translationtype: HT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 08/13/2020
-ms.locfileid: "88173297"
+ms.lasthandoff: 10/12/2020
+ms.locfileid: "91956524"
 ---
 # <a name="python-language-extension-in-sql-server-machine-learning-services"></a>SQL Server Machine Learning Services의 Python 언어 확장
 [!INCLUDE [SQL Server 2017 and later](../../includes/applies-to-version/sqlserver2017.md)]
@@ -42,8 +42,8 @@ SQL Server는 Python 실행 파일을 수정하지 않지만, 설치 프로그�
 
 | 라이브러리 | Description |
 |---------|-------------|
-| [**revoscalepy**](https://docs.microsoft.com/machine-learning-server/python-reference/revoscalepy/revoscalepy-package) | 데이터 원본 개체와 데이터 탐색, 조작, 변환 및 시각화를 지원합니다. **rxLinMod**와 같이 다양한 확장 가능한 기계 학습 모델뿐 아니라 원격 컴퓨팅 컨텍스트 만들기도 지원합니다. 자세한 내용은 [SQL Server와 revoscalepy 모듈](../python/ref-py-revoscalepy.md)을 참조하세요.  |
-| [**microsoftml**](https://docs.microsoft.com/machine-learning-server/python-reference/microsoftml/microsoftml-package) | 속도와 정확도에 최적화된 기계 학습 알고리즘과 텍스트 및 이미지 작업을 위한 인라인 변환이 포함되어 있습니다. 자세한 내용은 [SQL Server와 microsoftml 모듈](../python/ref-py-microsoftml.md)을 참조하세요. |
+| [**revoscalepy**](/machine-learning-server/python-reference/revoscalepy/revoscalepy-package) | 데이터 원본 개체와 데이터 탐색, 조작, 변환 및 시각화를 지원합니다. **rxLinMod**와 같이 다양한 확장 가능한 기계 학습 모델뿐 아니라 원격 컴퓨팅 컨텍스트 만들기도 지원합니다. 자세한 내용은 [SQL Server와 revoscalepy 모듈](../python/ref-py-revoscalepy.md)을 참조하세요.  |
+| [**microsoftml**](/machine-learning-server/python-reference/microsoftml/microsoftml-package) | 속도와 정확도에 최적화된 기계 학습 알고리즘과 텍스트 및 이미지 작업을 위한 인라인 변환이 포함되어 있습니다. 자세한 내용은 [SQL Server와 microsoftml 모듈](../python/ref-py-microsoftml.md)을 참조하세요. |
 
 Microsoftml과 revoscalepy는 긴밀하게 결합되어 있으며, microsoftml에 사용되는 데이터 원본은 revoscalepy 개체로 정의됩니다. revoscalepy 전송에서 컴퓨팅 컨텍스트를 microsoftml로 제한합니다. 즉, 모든 기능을 로컬 작업에 사용할 수 있지만 원격 컴퓨팅 컨텍스트로 전환하려면 RxInSqlServer가 필요합니다.
 
@@ -102,7 +102,7 @@ Linux에서 SQL은 **실행 패드** 서비스를 사용하여 각 사용자에 
 ## <a name="next-steps"></a>다음 단계
 
 + [SQL Server의 revoscalepy 모듈](../python/ref-py-revoscalepy.md)
-+ [revoscalepy 함수 참조](https://docs.microsoft.com/r-server/python-reference/revoscalepy/revoscalepy-package) 
++ [revoscalepy 함수 참조](/r-server/python-reference/revoscalepy/revoscalepy-package) 
 + [SQL Server의 확장성 프레임워크](extensibility-framework.md)
 + [SQL Server의 R 및 기계 학습 확장](extension-r.md)
 + [Python 패키지 정보 가져오기](../package-management/python-package-information.md)

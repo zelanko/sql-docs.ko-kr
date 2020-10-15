@@ -10,12 +10,12 @@ ms.author: maghan
 ms.reviewer: “”
 ms.custom: seo-lt-2019
 ms.date: 02/09/2017
-ms.openlocfilehash: 861014b336d9f75c2df1dfc7888a28eb663575de
-ms.sourcegitcommit: b860fe41b873977649dca8c1fd5619f294c37a58
+ms.openlocfilehash: 0db07a60c00e499cb86b5efb1113bbfd49807dc4
+ms.sourcegitcommit: a41e1f4199785a2b8019a419a1f3dcdc15571044
 ms.translationtype: HT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 06/29/2020
-ms.locfileid: "85518753"
+ms.lasthandoff: 10/13/2020
+ms.locfileid: "91988219"
 ---
 # <a name="creating-and-defining-sql-server-unit-tests"></a>SQL Server 단위 테스트 만들기 및 정의
 
@@ -43,9 +43,8 @@ SQL Server 단위 테스트를 추가하고 스키마의 개체를 테스트하�
 [SQL Server 단위 테스트 실행](../ssdt/running-sql-server-unit-tests.md)  
 SQL Server 단위 테스트를 만든 후에는 [테스트 뷰] 창이나 SQL Server 단위 테스트 디자이너에서 또는 Team Foundation Build를 사용하여 실행할 수 있습니다.  
   
-[시나리오: 데이터베이스 단위 테스트의 사용자 지정 테스트 조건 정의](https://msdn.microsoft.com/library/dd193282(VS.100).aspx)  
+[시나리오: 데이터베이스 단위 테스트의 사용자 지정 테스트 조건 정의](/previous-versions/visualstudio/visual-studio-2010/dd193282(v=vs.100))  
 기본 테스트 조건으로 확인할 수 없는 동작을 테스트하기 위해 사용자 지정 테스트 조건을 만들 수 있습니다.  
   
 ## <a name="see-also"></a>참고 항목  
 [SQL Server 단위 테스트를 사용하여 데이터베이스 코드 확인](../ssdt/verifying-database-code-by-using-sql-server-unit-tests.md)  
-  

@@ -15,12 +15,12 @@ helpviewer_keywords:
 ms.assetid: bf63353b-69cf-4c5c-98ea-7b151e36537f
 author: MashaMSFT
 ms.author: mathoma
-ms.openlocfilehash: e60acfeb4f8a785fa55ee8df70003b9b8b42f13b
-ms.sourcegitcommit: cc23d8646041336d119b74bf239a6ac305ff3d31
+ms.openlocfilehash: 3b523b792889c21a0b1d00ea3ab3ea3ac6fbf2aa
+ms.sourcegitcommit: a41e1f4199785a2b8019a419a1f3dcdc15571044
 ms.translationtype: HT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 09/23/2020
-ms.locfileid: "91114639"
+ms.lasthandoff: 10/13/2020
+ms.locfileid: "91988411"
 ---
 # <a name="remove-a-failover-cluster-instance-setup"></a>장애 조치(failover) 클러스터 인스턴스 제거(설치 프로그램)
 
@@ -39,7 +39,7 @@ ms.locfileid: "91114639"
   
 -   두 개 이상의 SQL IP 클러스터 리소스를 갖고 있는 장애 조치(failover) 클러스터를 제거한 경우 장애 조치(failover) 클러스터 관리자 또는 PowerShell을 사용하여 추가 SQL IP 리소스를 제거해야 합니다.  
   
- 명령 프롬프트 구문에 대한 자세한 내용은 [명령 프롬프트에서 SQL Server 2016 설치](../../../database-engine/install-windows/install-sql-server-2016-from-the-command-prompt.md)를 참조하세요.  
+ 명령 프롬프트 구문에 대한 자세한 내용은 [명령 프롬프트에서 SQL Server 2016 설치](../../../database-engine/install-windows/install-sql-server-from-the-command-prompt.md)를 참조하세요.  
   
 ### <a name="to-uninstall-a-ssnoversion-failover-cluster-instance"></a>[!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] 장애 조치(failover) 클러스터 인스턴스를 제거하려면
   
@@ -47,5 +47,4 @@ ms.locfileid: "91114639"
   
 ## <a name="see-also"></a>참고 항목  
  [SQL Server 설치 로그 파일 보기 및 읽기](../../../database-engine/install-windows/view-and-read-sql-server-setup-log-files.md)  
-  
   

@@ -9,12 +9,12 @@ author: dphansen
 ms.author: davidph
 ms.custom: seo-lt-2019
 monikerRange: '>=sql-server-2016||>=sql-server-linux-ver15||=sqlallproducts-allversions'
-ms.openlocfilehash: 95600d85c02d120f1bb4df2e7a73411a9965550a
-ms.sourcegitcommit: 9b41725d6db9957dd7928a3620fe4db41eb51c6e
+ms.openlocfilehash: eaabfce536283644a0ccedcc315d91e11f33eade
+ms.sourcegitcommit: afb02c275b7c79fbd90fac4bfcfd92b00a399019
 ms.translationtype: HT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 08/13/2020
-ms.locfileid: "88179999"
+ms.lasthandoff: 10/12/2020
+ms.locfileid: "91956584"
 ---
 # <a name="performance-for-r-services---data-optimization"></a>R Services 성능 - 데이터 최적화
 [!INCLUDE [SQL Server 2016 and later](../../includes/applies-to-version/sqlserver2016.md)]
@@ -131,19 +131,19 @@ RxSqlServerData(sqlQuery= "SELECT [ArrDelay],[CRSDepTime],[DayOfWeek] FROM  airl
 
 많은 RevoScaleR 학습 알고리즘은 학습 모델 생성 방법을 제어하는 매개 변수를 지원합니다. 모델의 정밀도와 정확도가 중요하지만, 알고리즘 성능도 똑같이 중요할 수 있습니다. 정확도와 학습 시간 사이에 적절한 균형을 맞추기 위해 계산 속도를 높이고 대부분의 경우 정밀도나 정확도를 줄이지 않고 성능을 개선하도록 매개 변수를 수정할 수 있습니다.
 
-+ [rxDTree](https://docs.microsoft.com/r-server/r-reference/revoscaler/rxdtree)
++ [rxDTree](/r-server/r-reference/revoscaler/rxdtree)
 
     `rxDTree`는 의사 결정 트리 수준을 제어하는 `maxDepth` 매개 변수를 지원합니다. `maxDepth`가 증가하면 성능이 저하될 수 있으므로 수준 증가 및 성능 저하 시 이점을 분석해야 합니다.
 
     `maxNumBins`, `maxDepth`, `maxComplete` 및 `maxSurrogate`와 같은 매개 변수를 조정하여 시간 복잡성과 예측 정확도 간에 균형을 제어할 수도 있습니다. 깊이를 10 또는 15 이상으로 늘리면 계산에 비용이 매우 많이 들 수 있습니다.
 
-+ [rxLinMod](https://docs.microsoft.com/r-server/r-reference/revoscaler/rxlinmod)
++ [rxLinMod](/r-server/r-reference/revoscaler/rxlinmod)
 
     수식의 첫 번째 종속 변수가 요소 변수인 경우 `cube` 인수를 사용하세요.
     
     `cube`가 `TRUE`로 설정되면 분할된 역함수를 사용하여 회귀가 수행되고 표준 회귀 계산보다 더 빠르고 더 적은 메모리를 사용할 수 있습니다. 수식에 많은 변수가 있으면 성능이 상당히 향상될 수 있습니다.
 
-+ [rxLogit](https://docs.microsoft.com/r-server/r-reference/revoscaler/rxlogit)
++ [rxLogit](/r-server/r-reference/revoscaler/rxlogit)
 
     첫 번째 종속 변수가 요소 변수인 경우 `cube` 인수를 사용합니다.
     
@@ -153,31 +153,31 @@ RevoScaleR 최적화에 대한 추가 지침은 다음 문서를 참조하세요
 
 + 지원 문서: [Performance Tuning Options for rxDForest and rxDTree](https://support.microsoft.com/kb/3104235)(rxDForest 및 rxDTree에 대한 성능 조정 옵션)
 
-+ 모델 제어 방법이 승격된 트리 모델에 맞게 조정됩니다. [Estimating Models Using Stochastic Gradient Boosting](https://docs.microsoft.com/r-server/r/how-to-revoscaler-boosting)(예측 모델이 확률적 경사 부스팅을 사용하고 있음)
++ 모델 제어 방법이 승격된 트리 모델에 맞게 조정됩니다. [Estimating Models Using Stochastic Gradient Boosting](/r-server/r/how-to-revoscaler-boosting)(예측 모델이 확률적 경사 부스팅을 사용하고 있음)
 
-+ RevoScaleR이 데이터를 이동 및 처리하는 방법에 대한 개요: [Write custom chunking algorithms in ScaleR](https://docs.microsoft.com/r-server/r/how-to-developer-write-chunking-algorithms)(ScaleR에서 사용자 지정 청크 알고리즘 작성)
++ RevoScaleR이 데이터를 이동 및 처리하는 방법에 대한 개요: [Write custom chunking algorithms in ScaleR](/r-server/r/how-to-developer-write-chunking-algorithms)(ScaleR에서 사용자 지정 청크 알고리즘 작성)
 
-+ RevoScaleR용 프로그래밍 모델: [Managing threads in RevoScaleR](https://docs.microsoft.com/r-server/r/how-to-developer-manage-threads)(RevoScaleR에서 스레드 관리)
++ RevoScaleR용 프로그래밍 모델: [Managing threads in RevoScaleR](/r-server/r/how-to-developer-manage-threads)(RevoScaleR에서 스레드 관리)
 
-+ [rxDForest](https://docs.microsoft.com/r-server/r-reference/revoscaler/rxdforest)에 대한 함수 참조
++ [rxDForest](/r-server/r-reference/revoscaler/rxdforest)에 대한 함수 참조
 
-+ [rxBTrees](https://docs.microsoft.com/r-server/r-reference/revoscaler/rxbtrees)에 대한 함수 참조
++ [rxBTrees](/r-server/r-reference/revoscaler/rxbtrees)에 대한 함수 참조
 
 ### <a name="use-microsoftml"></a>MicrosoftML 사용
 
 RevoScaleR에서 제공하는 컴퓨팅 컨텍스트 및 변환을 사용할 수 있는 확장성 있는 기계 학습 알고리즘을 제공하는 새로운 **MicrosoftML** 패키지를 살펴보는 것이 좋습니다.
 
-+ [Get started with MicrosoftML](https://docs.microsoft.com/r-server/r/concept-what-is-the-microsoftml-package)(MicrosoftML 시작)
++ [Get started with MicrosoftML](/r-server/r/concept-what-is-the-microsoftml-package)(MicrosoftML 시작)
 
-+ [How to choose a MicrosoftML algorithm](https://docs.microsoft.com/r-server/r/how-to-choose-microsoftml-algorithms-cheatsheet)(MicrosoftML 알고리즘을 선택하는 방법)
++ [How to choose a MicrosoftML algorithm](/r-server/r/how-to-choose-microsoftml-algorithms-cheatsheet)(MicrosoftML 알고리즘을 선택하는 방법)
 
 ### <a name="operationalize-a-solution-using-microsoft-r-server"></a>Microsoft R Server를 사용하여 솔루션 운영화
 
-시나리오에서 저장된 모델을 사용하거나 기계 학습을 애플리케이션에 통합하여 빠른 예측을 수행하는 경우 Microsoft R Server (이전 DeployR)에서 [운영화](https://docs.microsoft.com/r-server/what-is-operationalization) 기능을 사용할 수 있습니다.
+시나리오에서 저장된 모델을 사용하거나 기계 학습을 애플리케이션에 통합하여 빠른 예측을 수행하는 경우 Microsoft R Server (이전 DeployR)에서 [운영화](/r-server/what-is-operationalization) 기능을 사용할 수 있습니다.
 
-+ **데이터 과학자**로 [mrsdeploy](https://docs.microsoft.com/r-server/r-reference/mrsdeploy/mrsdeploy-package) 패키지를 사용하여 R 코드를 다른 컴퓨터와 공유하고 R 분석을 웹, 데스크톱, 모바일 및 대시보드 애플리케이션 내부에 통합할 수 있습니다. [How to publish and manage R web services in R Server](https://docs.microsoft.com/r-server/operationalize/how-to-deploy-web-service-publish-manage-in-r)(R Server에서 R 웹 서비스를 게시 및 관리하는 방법)
++ **데이터 과학자**로 [mrsdeploy](/r-server/r-reference/mrsdeploy/mrsdeploy-package) 패키지를 사용하여 R 코드를 다른 컴퓨터와 공유하고 R 분석을 웹, 데스크톱, 모바일 및 대시보드 애플리케이션 내부에 통합할 수 있습니다. [How to publish and manage R web services in R Server](/r-server/operationalize/how-to-deploy-web-service-publish-manage-in-r)(R Server에서 R 웹 서비스를 게시 및 관리하는 방법)
 
-+ **관리자**로 패키지를 관리하고, 웹 노드 및 컴퓨팅 노드를 모니터링하고, R 작업의 보안을 제어하는 방법을 알아봅니다. [How to interact with and consume web services in R](https://docs.microsoft.com/r-server/operationalize/how-to-consume-web-service-interact-in-r)(R에서 웹 서비스와 상호 작용하고 웹 서비스를 사용하는 방법)
++ **관리자**로 패키지를 관리하고, 웹 노드 및 컴퓨팅 노드를 모니터링하고, R 작업의 보안을 제어하는 방법을 알아봅니다. [How to interact with and consume web services in R](/r-server/operationalize/how-to-consume-web-service-interact-in-r)(R에서 웹 서비스와 상호 작용하고 웹 서비스를 사용하는 방법)
 
 ## <a name="articles-in-this-series"></a>이 시리즈의 문서
 

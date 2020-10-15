@@ -9,12 +9,12 @@ author: dphansen
 ms.author: davidph
 ms.custom: seo-lt-2019
 monikerRange: '>=sql-server-2016||>=sql-server-linux-ver15||=sqlallproducts-allversions'
-ms.openlocfilehash: a6afdda3975fc8f6c269f9c1fcbca35318f0c4da
-ms.sourcegitcommit: 9b41725d6db9957dd7928a3620fe4db41eb51c6e
+ms.openlocfilehash: b317c09026eb6baa0e9d0f8f2957c7c7c717af55
+ms.sourcegitcommit: afb02c275b7c79fbd90fac4bfcfd92b00a399019
 ms.translationtype: HT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 08/13/2020
-ms.locfileid: "88180000"
+ms.lasthandoff: 10/12/2020
+ms.locfileid: "91956580"
 ---
 # <a name="performance-for-r-services-results-and-resources"></a>R Services에 대한 성능: 결과 및 리소스
 [!INCLUDE [SQL Server 2016 and later](../../includes/applies-to-version/sqlserver2016.md)]
@@ -357,19 +357,19 @@ CPU affinitization은 R 작업에 대한 영향을 평가하기 위해 다시 �
 
 + [How to determine the appropriate page file size for 64-bit versions of Windows](https://support.microsoft.com/kb/2860880)(Windows 64비트 버전에 적절한 페이지 파일 크기를 결정하는 방법)
 
-+ [NUMA 이해](https://technet.microsoft.com/library/ms178144.aspx)
++ [NUMA 이해](/previous-versions/sql/sql-server-2008-r2/ms178144(v=sql.105))
 
-+ [SQL Server가 NUMA를 지원하는 방법](https://technet.microsoft.com/library/ms180954.aspx)
++ [SQL Server가 NUMA를 지원하는 방법](/previous-versions/sql/sql-server-2008-r2/ms180954(v=sql.105))
 
-+ [소프트 NUMA](https://docs.microsoft.com/sql/database-engine/configure-windows/soft-numa-sql-server)
++ [소프트 NUMA](../../database-engine/configure-windows/soft-numa-sql-server.md)
 
 ### <a name="learn-about-sql-server-optimizations"></a>SQL Server 최적화에 대한 자세한 정보
 
 + [인덱스 다시 구성 및 다시 작성](../../relational-databases/indexes/reorganize-and-rebuild-indexes.md)
 
-+ [메모리 최적화 테이블 소개](https://docs.microsoft.com/sql/relational-databases/in-memory-oltp/introduction-to-memory-optimized-tables)
++ [메모리 최적화 테이블 소개](../../relational-databases/in-memory-oltp/introduction-to-memory-optimized-tables.md)
 
-+ [데모: 메모리 내 OLTP의 성능 향상](https://docs.microsoft.com/sql/relational-databases/in-memory-oltp/demonstration-performance-improvement-of-in-memory-oltp)
++ [데모: 메모리 내 OLTP의 성능 향상](../../relational-databases/in-memory-oltp/demonstration-performance-improvement-of-in-memory-oltp.md)
 
 + [데이터 압축](../../relational-databases/data-compression/data-compression.md)
 
@@ -383,7 +383,7 @@ CPU affinitization은 R 작업에 대한 영향을 평가하기 위해 다시 �
 
 + [리소스 관리자](../../relational-databases/resource-governor/resource-governor.md)
 
-+ [Resource Governor 소개](https://technet.microsoft.com/library/bb895232.aspx)
++ [Resource Governor 소개](/previous-versions/sql/sql-server-2008-r2/bb895232(v=sql.105))
 
 + [Resource Governor 구성 예제](https://blog.sqlauthority.com/2012/06/04/sql-server-simple-example-to-configure-resource-governor-introduction-to-resource-governor/)
 
@@ -391,7 +391,7 @@ CPU affinitization은 R 작업에 대한 영향을 평가하기 위해 다시 �
 
 + [DISKSPD storage load generator/performance test tool](https://github.com/microsoft/diskspd)(DISKSPD 스토리지 로드 생성기/성능 테스트 도구)
 
-+ [FSUtil utility reference](https://technet.microsoft.com/library/cc753059.aspx)(FSUtil 유틸리티 참조)
++ [FSUtil utility reference](/previous-versions/windows/it-pro/windows-server-2012-R2-and-2012/cc753059(v=ws.11))(FSUtil 유틸리티 참조)
 
 
 ## <a name="other-articles-in-this-series"></a>이 시리즈의 다른 문서

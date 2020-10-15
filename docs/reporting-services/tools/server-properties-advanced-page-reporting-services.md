@@ -9,12 +9,12 @@ ms.technology: tools
 ms.topic: conceptual
 ms.date: 08/17/2020
 monikerRange: '>=sql-server-2016||=sqlallproducts-allversions'
-ms.openlocfilehash: e3ea21418a058f3d4b8db13ea498c1bb94564964
-ms.sourcegitcommit: 5da46e16b2c9710414fe36af9670461fb07555dc
+ms.openlocfilehash: 9d5132ad1ea115e051a4c9d4ba898aa53ddeb98a
+ms.sourcegitcommit: a41e1f4199785a2b8019a419a1f3dcdc15571044
 ms.translationtype: HT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 09/01/2020
-ms.locfileid: "89282403"
+ms.lasthandoff: 10/13/2020
+ms.locfileid: "91988750"
 ---
 # <a name="server-properties-advanced-page---power-bi-report-server--reporting-services"></a>서버 속성 고급 페이지 - Power BI Report Server 및 Reporting Services
 
@@ -82,7 +82,7 @@ ms.locfileid: "89282403"
 
 #### <a name="setting-the-customheaders-property"></a>CustomHeaders 속성 설정
 
-- CustomHeaders 속성을 매개 변수로 전달하는 [SetSystemProperties](https://docs.microsoft.com/dotnet/api/reportservice2010.reportingservice2010.setsystemproperties) SOAP 엔드포인트를 사용하여 설정할 수 있습니다.
+- CustomHeaders 속성을 매개 변수로 전달하는 [SetSystemProperties](/dotnet/api/reportservice2010.reportingservice2010.setsystemproperties) SOAP 엔드포인트를 사용하여 설정할 수 있습니다.
 - REST 엔드포인트 [UpdateSystemProperties](https://app.swaggerhub.com/apis/microsoft-rs/PBIRS/2.0#/System/UpdateSystemProperties): `/System/Properties`를 사용하여 CustomHeaders 속성을 전달할 수 있습니다.
 
 #### <a name="example"></a>예제

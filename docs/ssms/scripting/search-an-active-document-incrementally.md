@@ -15,12 +15,12 @@ ms.assetid: 490bb36c-dd43-4219-9e2a-ff27046b9395
 author: markingmyname
 ms.author: maghan
 monikerRange: '>=aps-pdw-2016||=azuresqldb-current||=azure-sqldw-latest||>=sql-server-2016||=sqlallproducts-allversions||>=sql-server-linux-2017||=azuresqldb-mi-current'
-ms.openlocfilehash: 390ffb66c98f2328b8bfb1807a1c6dc7f4a78def
-ms.sourcegitcommit: 6d53ecfdc463914f045c20eda96da39dec22acca
+ms.openlocfilehash: 6e28ed3ad28a47fba60a703882684a1625523675
+ms.sourcegitcommit: 22dacedeb6e8721e7cdb6279a946d4002cfb5da3
 ms.translationtype: HT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 08/26/2020
-ms.locfileid: "88901953"
+ms.lasthandoff: 10/14/2020
+ms.locfileid: "92036416"
 ---
 # <a name="search-an-active-document-incrementally"></a>활성 문서에서 입력하는 순서대로 검색
 [!INCLUDE[SQL Server Azure SQL Database Synapse Analytics PDW ](../../includes/applies-to-version/sql-asdb-asdbmi-asa-pdw.md)]
@@ -50,10 +50,9 @@ ms.locfileid: "88901953"
 >  바로 가기 키의 전체 목록을 보려면 [SQL Server Management Studio 바로 가기 키](../../ssms/sql-server-management-studio-keyboard-shortcuts.md)를 참조하세요.  
   
 ## <a name="see-also"></a>참고 항목  
- [찾기 및 바꾸기](../../relational-databases/scripting/search-and-replace.md)   
- [대화형으로 문서 검색](../../relational-databases/scripting/search-documents-interactively.md)   
- [결과 목록을 사용하여 문서 검색](../../relational-databases/scripting/search-documents-using-results-lists.md)   
- [와일드카드로 텍스트 검색](../../relational-databases/scripting/search-text-with-wildcards.md)   
- [정규식을 사용한 텍스트 검색](../../relational-databases/scripting/search-text-with-regular-expressions.md)  
-  
+ [찾기 및 바꾸기](./search-and-replace.md)   
+ [대화형으로 문서 검색](./search-documents-interactively.md)   
+ [결과 목록을 사용하여 문서 검색](./search-documents-using-results-lists.md)   
+ [와일드카드로 텍스트 검색](./search-text-with-wildcards.md)   
+ [정규식을 사용한 텍스트 검색](./search-text-with-regular-expressions.md)  
   

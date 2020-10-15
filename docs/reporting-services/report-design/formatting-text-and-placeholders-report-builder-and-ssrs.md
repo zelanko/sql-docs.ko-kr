@@ -16,12 +16,12 @@ f1_keywords:
 ms.assetid: 26a4baf2-7bc5-4634-b136-552687ffa477
 author: maggiesMSFT
 ms.author: maggies
-ms.openlocfilehash: 5e507c40fba6755a0a7a82e3047b2b9b44cbc66d
-ms.sourcegitcommit: f898aa83561e94626024916932568ab05e73b656
+ms.openlocfilehash: e50c5c3f239900ab1c477f1c9d49507b3b4a43e8
+ms.sourcegitcommit: fe59f8dc27fd633f5dfce54519d6f5dcea577f56
 ms.translationtype: HT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 05/27/2020
-ms.locfileid: "84012661"
+ms.lasthandoff: 10/09/2020
+ms.locfileid: "91935339"
 ---
 # <a name="formatting-text-and-placeholders-report-builder-and-ssrs"></a>텍스트 및 자리 표시자 서식 지정(보고서 작성기 및 SSRS)
   입력란은 데이터 영역 안에 있는 보고서 항목 또는 개별 셀로서 텍스트, 계산 필드, 데이터베이스의 필드에 대한 포인터 또는 이 세 항목의 조합을 포함하고 있습니다. 글꼴 및 색을 혼합하고, 굵게 및 기울임꼴 스타일을 추가하고, 맞춤 및 내어쓰기와 같은 단락 스타일을 사용할 수 있습니다. 또한 입력란 전체의 형식을 지정하거나 입력란 내에 있는 특정 텍스트, 숫자, 식 또는 필드의 형식을 지정할 수 있습니다.  
@@ -44,7 +44,7 @@ ms.locfileid: "84012661"
   
 -   **보고서 데이터** 창에서 필드를 끌어다 입력란 안에 놓습니다. 보고서 본문이 아닌 다른 곳으로 식을 끌면 자리 표시자를 포함하는 새 입력란이 생성됩니다. 끌어다 놓은 필드에 해당하는 필드 식이 이 자리 표시자의 값이 됩니다.  
   
--   입력란의 아무 곳이나 마우스 오른쪽 단추로 클릭하고 **자리 표시자 삽입**을 선택합니다. **자리 표시자 속성** 대화 상자에서 식을 자리 표시자의 값으로 지정할 수 있습니다. 자세한 내용은 [자리 표시자 속성 대화 상자, 일반&#40;보고서 작성기 및 SSRS&#41;](https://msdn.microsoft.com/library/7a867736-a3b0-4b5a-b3e5-fe7c8d7618a8)을 참조하세요.  
+-   입력란의 아무 곳이나 마우스 오른쪽 단추로 클릭하고 **자리 표시자 삽입**을 선택합니다. **자리 표시자 속성** 대화 상자에서 식을 자리 표시자의 값으로 지정할 수 있습니다. 자세한 내용은 [자리 표시자 속성 대화 상자, 일반&#40;보고서 작성기 및 SSRS&#41;](./text-boxes-report-builder-and-ssrs.md)을 참조하세요.  
   
 -   입력란에 단순 또는 복합 식을 입력합니다. 예를 들어 입력란에 **Name: [Name]** 을 입력하면 **[Name]** 텍스트가 `=Fields!Name.Value`식을 나타내는 자리 표시자로 표시됩니다.  
   
@@ -74,8 +74,7 @@ ms.locfileid: "84012661"
  [차트의 축 레이블 서식 지정&#40;보고서 작성기 및 SSRS&#41;](../../reporting-services/report-design/formatting-axis-labels-on-a-chart-report-builder-and-ssrs.md)   
  [계기의 눈금 서식 지정&#40;보고서 작성기 및 SSRS&#41;](../../reporting-services/report-design/formatting-scales-on-a-gauge-report-builder-and-ssrs.md)   
  [테이블, 행렬 및 목록&#40;보고서 작성기 및 SSRS&#41;](../../reporting-services/report-design/tables-matrices-and-lists-report-builder-and-ssrs.md)   
- [자리 표시자 속성 대화 상자, 일반&#40;보고서 작성기 및 SSRS&#41;](https://msdn.microsoft.com/library/7a867736-a3b0-4b5a-b3e5-fe7c8d7618a8)   
+ [자리 표시자 속성 대화 상자, 일반&#40;보고서 작성기 및 SSRS&#41;](./text-boxes-report-builder-and-ssrs.md)   
  [Microsoft Excel로 내보내기&#40;보고서 작성기 및 SSRS&#41;](../../reporting-services/report-builder/exporting-to-microsoft-excel-report-builder-and-ssrs.md)   
  [입력란&#40;보고서 작성기 및 SSRS&#41;](../../reporting-services/report-design/text-boxes-report-builder-and-ssrs.md)  
-  
   

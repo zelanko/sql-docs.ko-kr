@@ -14,12 +14,12 @@ helpviewer_keywords:
 ms.assetid: 76af8692-324f-4f5e-b1a0-d72ca8a107e3
 author: markingmyname
 ms.author: maghan
-ms.openlocfilehash: bd7c686682a83b95e6053d60323fe1829a500752
-ms.sourcegitcommit: e700497f962e4c2274df16d9e651059b42ff1a10
+ms.openlocfilehash: 7b3b36bfa75c39a4acc0c41c8dae5199b7973391
+ms.sourcegitcommit: 22dacedeb6e8721e7cdb6279a946d4002cfb5da3
 ms.translationtype: HT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 08/17/2020
-ms.locfileid: "88316189"
+ms.lasthandoff: 10/14/2020
+ms.locfileid: "92036056"
 ---
 # <a name="add-new-items-to-a-project"></a>프로젝트에 새 항목 추가
 [!INCLUDE[SQL Server Azure SQL Database Synapse Analytics PDW ](../../includes/applies-to-version/sql-asdb-asdbmi-asa-pdw.md)]
@@ -55,7 +55,6 @@ ms.locfileid: "88316189"
   
 ## <a name="see-also"></a>참고 항목  
 [솔루션 탐색기](../../ssms/solution/solution-explorer.md)  
-[파일 확장명을 코드 편집기에 연결](../../relational-databases/scripting/associate-file-extensions-to-a-code-editor.md)  
+[파일 확장명을 코드 편집기에 연결](../scripting/associate-file-extensions-to-a-code-editor.md)  
 [프로젝트에 기존 항목 추가](../../ssms/solution/add-existing-items-to-a-project.md)  
 [항목이나 프로젝트 제거 또는 삭제](../../ssms/solution/remove-or-delete-an-item-or-project.md)  
-  

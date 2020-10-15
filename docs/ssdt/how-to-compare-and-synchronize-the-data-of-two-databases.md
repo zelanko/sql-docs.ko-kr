@@ -14,12 +14,12 @@ ms.author: maghan
 ms.reviewer: “”
 ms.custom: seo-lt-2019
 ms.date: 02/09/2017
-ms.openlocfilehash: 19a1854a939f776f8eb75d9adf9d6d43856f920b
-ms.sourcegitcommit: b860fe41b873977649dca8c1fd5619f294c37a58
+ms.openlocfilehash: e246374476c3dff300aaf6c53ee3c6e8a1896db5
+ms.sourcegitcommit: a41e1f4199785a2b8019a419a1f3dcdc15571044
 ms.translationtype: HT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 06/29/2020
-ms.locfileid: "85519043"
+ms.lasthandoff: 10/13/2020
+ms.locfileid: "91987979"
 ---
 # <a name="how-to-compare-and-synchronize-the-data-of-two-databases"></a>방법: 두 데이터베이스의 데이터 비교 및 동기화
 
@@ -83,7 +83,7 @@ ms.locfileid: "85519043"
   
     자리 표시자(*sServerName*, *sDatabaseName*, *sUserName*, *sPassword*, *sDisplayName*, *tServerName*, *tDatabaseName*, *tUserName*, *tPassword* 및 *tDisplayName*)를 원본 및 대상 데이터베이스에 대한 값으로 바꿉니다.  
   
-    원본 및 대상을 지정하지 않으면 **새 데이터 비교** 대화 상자가 나타납니다. Sql.NewDataComparison 명령의 매개 변수에 대한 자세한 내용은 [Visual Studio Team System의 데이터베이스 기능에 대한 Automation 명령 참조](https://msdn.microsoft.com/library/dd470565.aspx)를 참조하세요.  
+    원본 및 대상을 지정하지 않으면 **새 데이터 비교** 대화 상자가 나타납니다. Sql.NewDataComparison 명령의 매개 변수에 대한 자세한 내용은 [Visual Studio Team System의 데이터베이스 기능에 대한 Automation 명령 참조](/previous-versions/visualstudio/visual-studio-2010/dd470565(v=vs.100))를 참조하세요.  
   
     지정된 원본 및 대상 데이터베이스의 데이터가 비교됩니다. 결과는 데이터 비교 세션에 표시됩니다. 결과를 보거나 데이터를 동기화하는 방법에 대한 자세한 내용은 [데이터 차이 보기](#ViewDifferences) 및 [데이터베이스 데이터 동기화](#Synchronize)를 참조하세요.  
   
@@ -168,4 +168,3 @@ ms.locfileid: "85519043"
   
 ## <a name="see-also"></a>참고 항목  
 [하나 이상의 테이블에 있는 데이터를 참조 데이터베이스에 있는 데이터와 비교 및 동기화](../ssdt/compare-and-synchronize-data-in-tables-with-data-in-reference-database.md)  
-  

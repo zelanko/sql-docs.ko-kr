@@ -14,12 +14,12 @@ ms.reviewer: ''
 ms.custom: seo-lt-2019
 ms.date: 07/22/2020
 monikerRange: '>= sql-server-2016 || = sqlallproducts-allversions'
-ms.openlocfilehash: 3485795f239017df321e862a04c0411a3a9318c0
-ms.sourcegitcommit: 827ad02375793090fa8fee63cc372d130f11393f
+ms.openlocfilehash: ea7e44a8069fc1b66c49f4bb20fbfc8ba3e1c3f7
+ms.sourcegitcommit: 22dacedeb6e8721e7cdb6279a946d4002cfb5da3
 ms.translationtype: HT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 09/04/2020
-ms.locfileid: "89480404"
+ms.lasthandoff: 10/14/2020
+ms.locfileid: "92036156"
 ---
 # <a name="transact-sql-debugger"></a>Transact-SQL 디버거
 
@@ -47,7 +47,7 @@ ms.locfileid: "89480404"
 
     저장 프로시저 또는 함수를 디버깅하려는 경우 모듈을 한 단계씩 코드 실행할 수 있습니다. [!INCLUDE[ssManStudioFull](../../includes/ssmanstudiofull-md.md)] 에서 모듈에 대한 원본 코드로 채워지는 새 [!INCLUDE[ssDE](../../includes/ssde-md.md)] 쿼리 편집기 창이 열리고, 창이 디버그 모드로 지정된 다음 모듈의 첫 번째 문에서 실행이 일시 중지됩니다. 그리고 나서 중단점을 설정하거나 코드를 단계별로 실행하여 모듈 코드를 탐색할 수 있습니다.  
 
-디버거를 사용하여 코드를 탐색하는 방법은 [Transact-SQL 코드 단계별 실행](../../relational-databases/scripting/step-through-transact-sql-code.md)을 참조하세요.  
+디버거를 사용하여 코드를 탐색하는 방법은 [Transact-SQL 코드 단계별 실행](./step-through-transact-sql-code.md)을 참조하세요.  
 
 ## <a name="viewing-debugger-information"></a>디버거 정보 보기
 
@@ -69,11 +69,11 @@ ms.locfileid: "89480404"
 
 |태스크 설명|항목|  
 |----------------------|-----------|  
-|원격 디버깅을 위해 [!INCLUDE[tsql](../../includes/tsql-md.md)] 디버거를 구성하는 방법을 설명합니다.|[TSQL 디버거를 실행하기 전에 방화벽 규칙 구성](../../relational-databases/scripting/configure-firewall-rules-before-running-the-tsql-debugger.md)|  
-|디버거 작동을 시작, 중지 및 제어하는 방법을 설명합니다.|[Transact-SQL 디버거 실행](../../relational-databases/scripting/run-the-transact-sql-debugger.md)|  
-|[!INCLUDE[tsql](../../includes/tsql-md.md)] 디버거를 사용하여 코드를 단계별로 실행하는 방법을 설명합니다.|[Transact-SQL 코드 단계별 실행](../../relational-databases/scripting/step-through-transact-sql-code.md)|  
-|디버거를 사용하여 매개 변수 및 변수와 같은 [!INCLUDE[tsql](../../includes/tsql-md.md)] 데이터와 시스템 정보를 보는 방법을 설명합니다.|[Transact-SQL 디버거 정보](../../relational-databases/scripting/transact-sql-debugger-information.md)|  
+|원격 디버깅을 위해 [!INCLUDE[tsql](../../includes/tsql-md.md)] 디버거를 구성하는 방법을 설명합니다.|[TSQL 디버거를 실행하기 전에 방화벽 규칙 구성](./configure-firewall-rules-before-running-the-tsql-debugger.md)|  
+|디버거 작동을 시작, 중지 및 제어하는 방법을 설명합니다.|[Transact-SQL 디버거 실행](./run-the-transact-sql-debugger.md)|  
+|[!INCLUDE[tsql](../../includes/tsql-md.md)] 디버거를 사용하여 코드를 단계별로 실행하는 방법을 설명합니다.|[Transact-SQL 코드 단계별 실행](./step-through-transact-sql-code.md)|  
+|디버거를 사용하여 매개 변수 및 변수와 같은 [!INCLUDE[tsql](../../includes/tsql-md.md)] 데이터와 시스템 정보를 보는 방법을 설명합니다.|[Transact-SQL 디버거 정보](./transact-sql-debugger-information.md)|  
 
 ## <a name="see-also"></a>참고 항목
 
-[쿼리 및 텍스트 편집기&#40;SQL Server Management Studio&#41;](https://docs.microsoft.com/sql/ssms/f1-help/database-engine-query-editor-sql-server-management-studio?view=sql-server-ver15)
+[쿼리 및 텍스트 편집기&#40;SQL Server Management Studio&#41;](../f1-help/database-engine-query-editor-sql-server-management-studio.md?view=sql-server-ver15)

@@ -16,12 +16,12 @@ ms.assetid: 193630f4-93de-4950-8f36-68702531f925
 author: markingmyname
 ms.author: maghan
 monikerRange: '>=aps-pdw-2016||=azuresqldb-current||=azure-sqldw-latest||>=sql-server-2016||=sqlallproducts-allversions||>=sql-server-linux-2017||=azuresqldb-mi-current'
-ms.openlocfilehash: adce5f66d608c4c359962ed35bbf5090cf323e53
-ms.sourcegitcommit: 6d53ecfdc463914f045c20eda96da39dec22acca
+ms.openlocfilehash: 0845fc6cbf14259c02e2fdbf1f30bcf450917f00
+ms.sourcegitcommit: 22dacedeb6e8721e7cdb6279a946d4002cfb5da3
 ms.translationtype: HT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 08/26/2020
-ms.locfileid: "88902060"
+ms.lasthandoff: 10/14/2020
+ms.locfileid: "92039147"
 ---
 # <a name="associate-file-extensions-to-a-code-editor"></a>파일 확장명을 코드 편집기에 연결
 
@@ -58,6 +58,5 @@ ms.locfileid: "88902060"
 4.  **편집기** 상자에서 이 파일 형식을 열 때 사용할 코드 편집기를 클릭하고 **추가**를 클릭한 다음 **확인**을 클릭합니다.  
   
 ## <a name="see-also"></a>참고 항목  
- [Ssms 유틸리티](../../tools/sql-server-management-studio/ssms-utility.md)  
-  
+ [Ssms 유틸리티](../ssms-utility.md)  
   

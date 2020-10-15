@@ -14,12 +14,12 @@ ms.reviewer: ''
 ms.custom: seo-lt-2019
 ms.date: 12/04/2019
 monikerRange: '>=aps-pdw-2016||=azuresqldb-current||=azure-sqldw-latest||>=sql-server-2016||=sqlallproducts-allversions||>=sql-server-linux-2017||=azuresqldb-mi-current'
-ms.openlocfilehash: 4e6744d8296272dab3b8c774f57e2d60e3ac5858
-ms.sourcegitcommit: 6d53ecfdc463914f045c20eda96da39dec22acca
+ms.openlocfilehash: eca7c941bbf64c0e9f159c868e35413415b18136
+ms.sourcegitcommit: 22dacedeb6e8721e7cdb6279a946d4002cfb5da3
 ms.translationtype: HT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 08/26/2020
-ms.locfileid: "88901502"
+ms.lasthandoff: 10/14/2020
+ms.locfileid: "92036212"
 ---
 # <a name="transact-sql-breakpoints"></a>Transact-SQL 중단점
 
@@ -39,15 +39,14 @@ ms.locfileid: "88901502"
   
 |태스크 설명|항목|  
 |----------------------|-----------|  
-|디버거를 일시 중지할 [!INCLUDE[tsql](../../includes/tsql-md.md)] 문을 지정하는 방법에 대해 설명합니다.|[중단점 설정/해제](../../relational-databases/scripting/toggle-a-breakpoint.md)|  
-|중단점을 일시적으로 비활성화하고 나중에 다시 활성화하는 방법에 대해 설명합니다. 또한 중단점을 삭제하는 방법에 대해 설명합니다.|[중단점 설정, 해제 및 삭제](../../relational-databases/scripting/enable-disable-and-delete-breakpoints.md)|  
-|지정한 Transact-SQL 식의 평가 결과에 따라 중단점을 적용할지 여부를 정의하는 조건을 지정하는 방법에 대해 설명합니다.|[중단점 조건 지정](../../relational-databases/scripting/specify-a-breakpoint-condition.md)|  
-|중단점을 포함하는 문이 지정한 횟수만큼 실행된 경우에만 중단점을 적용하도록 적중 횟수를 지정하는 방법에 대해 설명합니다.|[적중 횟수 지정](../../relational-databases/scripting/specify-a-hit-count.md)|  
-|중단점이 지정된 프로세스 또는 스레드에서만 작동하도록 필터를 지정하는 방법에 대해 설명합니다.|[중단점 필터 지정](../../relational-databases/scripting/specify-a-breakpoint-filter.md)|  
-|중단점 문이 실행될 때 수행되는 사용자 지정 작업인 **적중될 때** 동작을 지정하는 방법에 대해 설명합니다. 예에서는 메시지를 인쇄합니다.|[중단점 동작 지정](../../relational-databases/scripting/specify-a-breakpoint-action.md)|  
-|중단점의 위치를 편집하는 방법에 대해 설명합니다.|[중단점 위치 편집](../../relational-databases/scripting/edit-a-breakpoint-location.md)|  
+|디버거를 일시 중지할 [!INCLUDE[tsql](../../includes/tsql-md.md)] 문을 지정하는 방법에 대해 설명합니다.|[중단점 설정/해제](./toggle-a-breakpoint.md)|  
+|중단점을 일시적으로 비활성화하고 나중에 다시 활성화하는 방법에 대해 설명합니다. 또한 중단점을 삭제하는 방법에 대해 설명합니다.|[중단점 설정, 해제 및 삭제](./enable-disable-and-delete-breakpoints.md)|  
+|지정한 Transact-SQL 식의 평가 결과에 따라 중단점을 적용할지 여부를 정의하는 조건을 지정하는 방법에 대해 설명합니다.|[중단점 조건 지정](./specify-a-breakpoint-condition.md)|  
+|중단점을 포함하는 문이 지정한 횟수만큼 실행된 경우에만 중단점을 적용하도록 적중 횟수를 지정하는 방법에 대해 설명합니다.|[적중 횟수 지정](./specify-a-hit-count.md)|  
+|중단점이 지정된 프로세스 또는 스레드에서만 작동하도록 필터를 지정하는 방법에 대해 설명합니다.|[중단점 필터 지정](./specify-a-breakpoint-filter.md)|  
+|중단점 문이 실행될 때 수행되는 사용자 지정 작업인 **적중될 때** 동작을 지정하는 방법에 대해 설명합니다. 예에서는 메시지를 인쇄합니다.|[중단점 동작 지정](./specify-a-breakpoint-action.md)|  
+|중단점의 위치를 편집하는 방법에 대해 설명합니다.|[중단점 위치 편집](./edit-a-breakpoint-location.md)|  
   
 ## <a name="see-also"></a>참고 항목  
- [Transact-SQL 디버거 정보](../../relational-databases/scripting/transact-sql-debugger-information.md)  
-  
+ [Transact-SQL 디버거 정보](./transact-sql-debugger-information.md)  
   

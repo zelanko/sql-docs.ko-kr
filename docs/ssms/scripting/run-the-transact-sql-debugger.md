@@ -23,12 +23,12 @@ ms.reviewer: ''
 ms.custom: seo-lt-2019
 ms.date: 03/14/2017
 monikerRange: '>=aps-pdw-2016||=azuresqldb-current||=azure-sqldw-latest||>=sql-server-2016||=sqlallproducts-allversions||>=sql-server-linux-2017||=azuresqldb-mi-current'
-ms.openlocfilehash: d30830fae390788d81fc655e4c31dcbe3eea79b5
-ms.sourcegitcommit: 6d53ecfdc463914f045c20eda96da39dec22acca
+ms.openlocfilehash: 1e8a30b5c8ff29155c58f940de8d800075c84c1e
+ms.sourcegitcommit: 22dacedeb6e8721e7cdb6279a946d4002cfb5da3
 ms.translationtype: HT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 08/26/2020
-ms.locfileid: "88901959"
+ms.lasthandoff: 10/14/2020
+ms.locfileid: "92036396"
 ---
 # <a name="run-the-transact-sql-debugger"></a>Transact-SQL 디버거 실행
 
@@ -42,7 +42,7 @@ ms.locfileid: "88901959"
 
 [!INCLUDE[tsql](../../includes/tsql-md.md)] 디버거를 시작하기 위한 요구 사항은 다음과 같습니다.
 
-- [!INCLUDE[ssDE](../../includes/ssde-md.md)] 쿼리 편집기가 다른 컴퓨터의 [!INCLUDE[ssDE](../../includes/ssde-md.md)] 인스턴스에 연결된 경우 원격 디버깅을 사용하도록 디버거가 구성되어 있어야 합니다. 자세한 내용은 [TSQL 디버거를 실행하기 전에 방화벽 규칙 구성](../../relational-databases/scripting/configure-firewall-rules-before-running-the-tsql-debugger.md)을 참조하세요.
+- [!INCLUDE[ssDE](../../includes/ssde-md.md)] 쿼리 편집기가 다른 컴퓨터의 [!INCLUDE[ssDE](../../includes/ssde-md.md)] 인스턴스에 연결된 경우 원격 디버깅을 사용하도록 디버거가 구성되어 있어야 합니다. 자세한 내용은 [TSQL 디버거를 실행하기 전에 방화벽 규칙 구성](./configure-firewall-rules-before-running-the-tsql-debugger.md)을 참조하세요.
   
 - [!INCLUDE[ssManStudioFull](../../includes/ssmanstudiofull-md.md)] 를 sysadmin 고정 서버 역할의 멤버인 Windows 계정으로 실행해야 합니다.
 
@@ -114,8 +114,8 @@ ms.locfileid: "88901959"
   
 ## <a name="see-also"></a>참고 항목
 
-- [Transact-SQL 디버거](../../relational-databases/scripting/transact-sql-debugger.md)
-- [Transact-SQL 코드 단계별 실행](../../relational-databases/scripting/step-through-transact-sql-code.md)
-- [Transact-SQL 디버거 정보](../../relational-databases/scripting/transact-sql-debugger-information.md)
-- [데이터베이스 엔진 쿼리 편집기&#40;SQL Server Management Studio&#41;](../../relational-databases/scripting/database-engine-query-editor-sql-server-management-studio.md)
+- [Transact-SQL 디버거](./transact-sql-debugger.md)
+- [Transact-SQL 코드 단계별 실행](./step-through-transact-sql-code.md)
+- [Transact-SQL 디버거 정보](./transact-sql-debugger-information.md)
+- [데이터베이스 엔진 쿼리 편집기&#40;SQL Server Management Studio&#41;](../f1-help/database-engine-query-editor-sql-server-management-studio.md)
 - [활성 쿼리 통계](../../relational-databases/performance/live-query-statistics.md)

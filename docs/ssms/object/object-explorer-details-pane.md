@@ -19,12 +19,12 @@ helpviewer_keywords:
 ms.assetid: b963e3c2-dc9e-4d38-bd28-2e00fe9e0e47
 author: markingmyname
 ms.author: maghan
-ms.openlocfilehash: c9ee38de46d4bcd689c471eb9f32fa79df40fa68
-ms.sourcegitcommit: e700497f962e4c2274df16d9e651059b42ff1a10
+ms.openlocfilehash: 846c2707e5fe04e080460241e41df0ebf7ec8329
+ms.sourcegitcommit: 22dacedeb6e8721e7cdb6279a946d4002cfb5da3
 ms.translationtype: HT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 08/17/2020
-ms.locfileid: "88370789"
+ms.lasthandoff: 10/14/2020
+ms.locfileid: "92037193"
 ---
 # <a name="object-explorer-details-pane"></a>개체 탐색기 세부 정보 창
 [!INCLUDE[SQL Server Azure SQL Database Synapse Analytics PDW ](../../includes/applies-to-version/sql-asdb-asdbmi-asa-pdw.md)]
@@ -89,7 +89,7 @@ ms.locfileid: "88370789"
 ## <a name="sql-server-object-search"></a>SQL Server 개체 검색  
 와일드카드  
   
--   표준 와일드카드 문자를 사용할 수 있습니다. 예를 들어 **dm_os%counters** 를 검색하면 dm_os_memory_cache_counters와 dm_os_performance_counters가 모두 반환됩니다. 자세한 내용은 [방법: 와일드 카드로 검색](../../relational-databases/scripting/search-text-with-wildcards.md)을 참조하세요.  
+-   표준 와일드카드 문자를 사용할 수 있습니다. 예를 들어 **dm_os%counters** 를 검색하면 dm_os_memory_cache_counters와 dm_os_performance_counters가 모두 반환됩니다. 자세한 내용은 [방법: 와일드 카드로 검색](../scripting/search-text-with-wildcards.md)을 참조하세요.  
   
 검색 범위  
   
@@ -101,4 +101,3 @@ ms.locfileid: "88370789"
   
 ## <a name="see-also"></a>참고 항목  
 [개체 탐색기](../../ssms/object/object-explorer.md)  
-  

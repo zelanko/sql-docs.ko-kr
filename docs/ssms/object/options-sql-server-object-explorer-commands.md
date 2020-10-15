@@ -13,12 +13,12 @@ f1_keywords:
 ms.assetid: 0e5afdb3-488c-4ea9-9e38-d42085ec00b1
 author: markingmyname
 ms.author: maghan
-ms.openlocfilehash: bb1c05534ef2ce73caeccd4f6f1bf4fee3d10063
-ms.sourcegitcommit: e700497f962e4c2274df16d9e651059b42ff1a10
+ms.openlocfilehash: e06f6e6b667092b6b27871a48724afc0498bf34a
+ms.sourcegitcommit: 22dacedeb6e8721e7cdb6279a946d4002cfb5da3
 ms.translationtype: HT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 08/17/2020
-ms.locfileid: "88497388"
+ms.lasthandoff: 10/14/2020
+ms.locfileid: "92037651"
 ---
 # <a name="options-sql-server-object-explorer---commands"></a>옵션(SQL Server 개체 탐색기 - 명령)
 [!INCLUDE[SQL Server Azure SQL Database Synapse Analytics PDW ](../../includes/applies-to-version/sql-asdb-asdbmi-asa-pdw.md)]
@@ -45,5 +45,4 @@ ms.locfileid: "88497388"
 쿼리 편집기에서 만든 스크립트에 지정된 반환할 행 수를 지정합니다. 기본값은 1000입니다.  
   
 ## <a name="see-also"></a>참고 항목  
-[SQL Server Audit(데이터베이스 엔진)](https://msdn.microsoft.com/0c1fca2e-f22b-4fe8-806f-c87806664f00)  
-  
+[SQL Server Audit(데이터베이스 엔진)](../../relational-databases/security/auditing/sql-server-audit-database-engine.md)  

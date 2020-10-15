@@ -10,12 +10,12 @@ ms.author: maghan
 ms.reviewer: “”
 ms.custom: seo-lt-2019
 ms.date: 02/09/2017
-ms.openlocfilehash: edc5f591746673f55dfc7ea10c99822ee0c13098
-ms.sourcegitcommit: f7ac1976d4bfa224332edd9ef2f4377a4d55a2c9
+ms.openlocfilehash: 7b5bc161cc66aa904ed63e67bbc5f2ff4695168f
+ms.sourcegitcommit: a41e1f4199785a2b8019a419a1f3dcdc15571044
 ms.translationtype: HT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 07/02/2020
-ms.locfileid: "85882925"
+ms.lasthandoff: 10/13/2020
+ms.locfileid: "91987939"
 ---
 # <a name="walkthrough-creating-and-running-a-sql-server-unit-test"></a>연습: SQL Server 단위 테스트 만들기 및 실행
 
@@ -40,7 +40,7 @@ ms.locfileid: "85882925"
 단위 테스트 중 하나에서 저장 프로시저의 오류가 검색된 후 오류를 수정하고 테스트를 다시 실행합니다.  
   
 ## <a name="prerequisites"></a>필수 구성 요소  
-이 연습을 완료하려면 데이터베이스를 만들고 배포할 수 있는 권한이 있는 데이터베이스 서버(또는 LocalDB 데이터베이스)에 연결할 수 있어야 합니다. 자세한 내용은 [Visual Studio의 데이터베이스 기능에 필요한 권한](https://msdn.microsoft.com/library/aa833413(VS.100).aspx)을 참조하세요.  
+이 연습을 완료하려면 데이터베이스를 만들고 배포할 수 있는 권한이 있는 데이터베이스 서버(또는 LocalDB 데이터베이스)에 연결할 수 있어야 합니다. 자세한 내용은 [Visual Studio의 데이터베이스 기능에 필요한 권한](/previous-versions/visualstudio/visual-studio-2010/aa833413(v=vs.100))을 참조하세요.  
   
 ## <a name="create-a-script-that-contains-a-database-schema"></a><a name="CreateScript"></a>데이터베이스 스키마가 포함된 스크립트 만들기  
   
@@ -992,4 +992,3 @@ ms.locfileid: "85882925"
 [SQL Server 단위 테스트를 사용하여 데이터베이스 코드 확인](../ssdt/verifying-database-code-by-using-sql-server-unit-tests.md)  
 [방법: 빈 SQL Server 단위 테스트 만들기](../ssdt/how-to-create-an-empty-sql-server-unit-test.md)  
 [방법: SQL Server 단위 테스트 실행 구성](../ssdt/how-to-configure-sql-server-unit-test-execution.md)  
-  

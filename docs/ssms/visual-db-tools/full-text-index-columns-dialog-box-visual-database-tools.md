@@ -13,12 +13,12 @@ ms.assetid: a6f41c5c-d950-4d64-9e42-d062925917b6
 author: markingmyname
 ms.author: maghan
 ms.reviewer: ''
-ms.openlocfilehash: 3af68e931a6165389f5200d07b8920dc33aadb36
-ms.sourcegitcommit: e700497f962e4c2274df16d9e651059b42ff1a10
+ms.openlocfilehash: 4670e9b18ede820b703d824f87878de24e576fc3
+ms.sourcegitcommit: 22dacedeb6e8721e7cdb6279a946d4002cfb5da3
 ms.translationtype: HT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 08/17/2020
-ms.locfileid: "88480007"
+ms.lasthandoff: 10/14/2020
+ms.locfileid: "92034886"
 ---
 # <a name="full-text-index-columns-dialog-box-visual-database-tools"></a>전체 텍스트 인덱스 열 대화 상자(Visual Database Tools)
 [!INCLUDE[SQL Server Azure SQL Database Synapse Analytics PDW ](../../includes/applies-to-version/sql-asdb-asdbmi-asa-pdw.md)]
@@ -40,10 +40,9 @@ ms.locfileid: "88480007"
 사용할 수 있는 언어를 나열합니다. 열 데이터에 해당하는 언어를 드롭다운 목록에서 선택합니다. 예를 들어 사용 중인 운영 체제는 영어이지만 독일어 텍스트가 포함된 열을 인덱싱하려는 경우 드롭다운 목록에서 독일어를 선택하면 인덱싱 속도를 향상시킬 수 있습니다.  
   
 **통계 의미 체계**  
-선택한 열에 대해 의미 체계 인덱싱을 사용하도록 설정할지 여부를 선택합니다. 자세한 내용은 [의미 체계 검색 자리 표시자](https://msdn.microsoft.com/cd8faa9d-07db-420d-93f4-a2ea7c974b97)를 참조하세요.  
+선택한 열에 대해 의미 체계 인덱싱을 사용하도록 설정할지 여부를 선택합니다. 자세한 내용은 [의미 체계 검색 자리 표시자](../../relational-databases/search/semantic-search-sql-server.md)를 참조하세요.  
   
 **통계 의미 체계** 를 선택하기 전에 **언어**를 선택했으며 선택한 언어에 연결된 의미 체계 언어 모델이 없으면 **통계 의미 체계** 확인란은 사용할 수 없습니다. **언어** 를 선택하기 전에 **통계 의미 체계**를 선택한 경우 드롭다운 콤보 상자에서 사용할 수 있는 언어가 의미 체계 언어 모델에서 지원하는 언어로 제한됩니다.  
   
 ## <a name="see-also"></a>참고 항목  
 [전체 텍스트 인덱스 대화 상자&#40;Visual Database Tools&#41;](../../ssms/visual-db-tools/full-text-index-dialog-box-visual-database-tools.md)  
-  

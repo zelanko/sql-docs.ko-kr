@@ -10,12 +10,12 @@ ms.author: maghan
 ms.reviewer: “”
 ms.custom: seo-lt-2019
 ms.date: 02/09/2017
-ms.openlocfilehash: 42ec6c34cad7a14d397965717a9447c9d0e29a4b
-ms.sourcegitcommit: f7ac1976d4bfa224332edd9ef2f4377a4d55a2c9
+ms.openlocfilehash: 028f92e064b41d68e8c168f22faa479f1c29f559
+ms.sourcegitcommit: a41e1f4199785a2b8019a419a1f3dcdc15571044
 ms.translationtype: HT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 07/02/2020
-ms.locfileid: "85893835"
+ms.lasthandoff: 10/13/2020
+ms.locfileid: "91988179"
 ---
 # <a name="interpreting-sql-server-unit-test-results"></a>SQL Server 단위 테스트 결과 해석
 
@@ -23,18 +23,17 @@ SQL Server 단위 테스트를 실행하면 테스트 결과가 자동으로 생
   
 테스트 결과에 대한 자세한 내용을 보려면 **테스트 결과** 창에서 테스트 결과를 두 번 클릭하여 **테스트 결과 정보** 페이지를 표시합니다. 테스트 결과에 대한 자세한 내용을 보려면 테스트 결과를 두 번 클릭합니다.  
   
-**테스트 결과** 창의 표시를 변경하는 방법에 대한 자세한 내용은 [방법: 테스트 창의 열 추가 또는 제거(Visual Studio 2010)](https://msdn.microsoft.com/library/ms182508(VS.100).aspx) 또는 [방법: 테스트 창의 열 추가 또는 제거(Visual Studio 2012)](https://msdn.microsoft.com/library/ms182508.aspx)를 참조하세요.  
+**테스트 결과** 창의 표시를 변경하는 방법에 대한 자세한 내용은 [방법: 테스트 창의 열 추가 또는 제거(Visual Studio 2010)](/previous-versions/visualstudio/visual-studio-2010/ms182508(v=vs.100)) 또는 [방법: 테스트 창의 열 추가 또는 제거(Visual Studio 2012)](/previous-versions/visualstudio/visual-studio-2012/ms182508(v=vs.110))를 참조하세요.  
   
 ## <a name="storing-test-results"></a>테스트 결과 저장  
-단위 테스트의 결과는 하드 디스크에 확장명이 .trx인 파일로 자동 저장됩니다. .trx 파일은 테스트 실행의 세부 정보가 포함된 XML 파일입니다. 이전 테스트 실행에서 .trx 파일을 로드하여 해당 테스트 실행 결과를 검토하거나 이전 테스트를 다시 실행할 수 있습니다 자세한 내용은 [방법: 테스트 다시 실행(Visual Studio 2010)](https://msdn.microsoft.com/library/ms182472(VS.100).aspx)을 참조하세요.  
+단위 테스트의 결과는 하드 디스크에 확장명이 .trx인 파일로 자동 저장됩니다. .trx 파일은 테스트 실행의 세부 정보가 포함된 XML 파일입니다. 이전 테스트 실행에서 .trx 파일을 로드하여 해당 테스트 실행 결과를 검토하거나 이전 테스트를 다시 실행할 수 있습니다 자세한 내용은 [방법: 테스트 다시 실행(Visual Studio 2010)](/previous-versions/visualstudio/visual-studio-2010/ms182472(v=vs.100))을 참조하세요.  
   
 > [!NOTE]  
 > 단위 테스트를 원격으로 실행할 수는 없습니다.  
   
 팀에서 Visual Studio Team Foundation Server 팀 프로젝트를 사용하여 작업을 관리하는 경우 테스트 데이터를 작업 저장소라는 SQL Server 데이터베이스에 게시할 수도 있습니다.  
   
-테스트 결과를 저장하고 다시 사용하고 팀과 공유하는 방법에 대한 자세한 내용은 [방법: Visual Studio 2010에서 테스트 결과 저장 및 열기](https://msdn.microsoft.com/library/ms404662(VS.100).aspx) 또는 [방법: Visual Studio 2012에서 테스트 결과 저장 및 열기](https://msdn.microsoft.com/library/ms404662.aspx)를 참조하세요.  
+테스트 결과를 저장하고 다시 사용하고 팀과 공유하는 방법에 대한 자세한 내용은 [방법: Visual Studio 2010에서 테스트 결과 저장 및 열기](/previous-versions/visualstudio/visual-studio-2010/ms404662(v=vs.100)) 또는 [방법: Visual Studio 2012에서 테스트 결과 저장 및 열기](/previous-versions/ms404662(v=vs.140))를 참조하세요.  
   
 ## <a name="see-also"></a>참고 항목  
 [SQL Server 단위 테스트 실행](../ssdt/running-sql-server-unit-tests.md)  
-  

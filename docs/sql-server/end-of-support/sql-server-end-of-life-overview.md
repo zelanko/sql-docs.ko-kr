@@ -9,12 +9,12 @@ author: markingmyname
 ms.author: maghan
 ms.reviewer: pmasl
 monikerRange: '>=sql-server-2016||=sqlallproducts-allversions'
-ms.openlocfilehash: 378af311994d2aa478df0c673e0a1f0162d4dbfd
-ms.sourcegitcommit: bf5acef60627f77883249bcec4c502b0205300a4
+ms.openlocfilehash: 49cb6fddf2906583d64aa732d222a1d1a100e6c8
+ms.sourcegitcommit: a41e1f4199785a2b8019a419a1f3dcdc15571044
 ms.translationtype: HT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 08/13/2020
-ms.locfileid: "88200298"
+ms.lasthandoff: 10/13/2020
+ms.locfileid: "91988614"
 ---
 # <a name="sql-server-end-of-support-options"></a>SQL Server 지원 종료 옵션 
 [!INCLUDE [SQL Server Windows Only - ASDBMI ](../../includes/applies-to-version/sql-windows-only-asdbmi.md)]
@@ -37,7 +37,7 @@ ms.locfileid: "88200298"
 - [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]를 최신 버전으로 업그레이드합니다.
 - [연장 보안 업데이트 구독](https://www.microsoft.com/cloud-platform/extended-security-updates)을 구매합니다. 
 - [무료 연장 보안 업데이트](/azure/virtual-machines/windows/sql/virtual-machines-windows-sql-server-2008-eos-extend-support)를 위해 워크로드를 Azure 가상 머신으로 현재 상태로 마이그레이션합니다.
-- 워크로드를 [Azure SQL Database 서비스](https://docs.microsoft.com/azure/sql-database/sql-database-paas-vs-sql-server-iaas)로 마이그레이션합니다. 
+- 워크로드를 [Azure SQL Database 서비스](/azure/sql-database/sql-database-paas-vs-sql-server-iaas)로 마이그레이션합니다. 
 
 업그레이드 또는 마이그레이션을 계획하고 자동화하기 위한 자세한 정보, 지침 및 도구는 [SQL Server 2005 지원 종료](https://www.microsoft.com/sql-server/sql-server-2005) 및 [SQL Server 2008 지원 종료](https://www.microsoft.com/cloud-platform/windows-sql-server-2008)를 참조하세요.  
 
@@ -241,7 +241,7 @@ ms.locfileid: "88200298"
 
 ### <a name="azure-cosmos-db"></a>Azure Cosmos DB
 
-JSON 데이터를 사용하고 강력한 쿼리와 트랜잭션 데이터 처리를 함께 필요로 하는 확장 가능한 최신 모바일 및 웹 애플리케이션의 경우 Azure Cosmos DB를 고려합니다. 자세한 내용은 [Cosmos DB](https://azure.microsoft.com/services/cosmos-db/)를 참조하세요. 데이터 가져오기에 대한 자세한 내용은 [Cosmos DB에 데이터 가져오기](https://docs.microsoft.com/azure/cosmos-db/import-data/)를 참조하세요.
+JSON 데이터를 사용하고 강력한 쿼리와 트랜잭션 데이터 처리를 함께 필요로 하는 확장 가능한 최신 모바일 및 웹 애플리케이션의 경우 Azure Cosmos DB를 고려합니다. 자세한 내용은 [Cosmos DB](https://azure.microsoft.com/services/cosmos-db/)를 참조하세요. 데이터 가져오기에 대한 자세한 내용은 [Cosmos DB에 데이터 가져오기](/azure/cosmos-db/import-data/)를 참조하세요.
 
 Azure Cosmos DB는 다음과 같은 이점이 있습니다.
 - 문서는 인덱싱되며 익숙한 SQL 구문을 사용하여 문서를 쿼리할 수 있습니다.
@@ -274,7 +274,7 @@ Azure 테이블 스토리지에는 다음과 같은 이점이 있습니다.
 | [SQL Server 2008 R2](https://support.microsoft.com/lifecycle/search?alpha=SQL%20Server%202008%20R2) | 2010 | 2012 | [2019](https://www.microsoft.com/sql-server/sql-server-2008) |
 | [SQL Server 2008](https://support.microsoft.com/lifecycle/search?alpha=SQL%20Server%202008) | 2008 | 2012 | [2019](https://www.microsoft.com/sql-server/sql-server-2008) |
 | [SQL Server 2005](https://support.microsoft.com/lifecycle/search?alpha=SQL%20Server%202005) | 2006 | 2011 | [2016](https://www.microsoft.com/sql-server/sql-server-2005) |
-| [SQL Server 2000](https://support.microsoft.com/lifecycle/search?alpha=SQL%20Server%202000) | 2000 | 2005 | [2013](https://blogs.technet.microsoft.com/cdnitmanagers/2012/12/06/sql-server-2000-end-of-support-april-2013/) |
+| [SQL Server 2000](https://support.microsoft.com/lifecycle/search?alpha=SQL%20Server%202000) | 2000 | 2005 | [2013](/archive/blogs/cdnitmanagers/sql-server-2000-end-of-support-april-2013) |
 
 > [!IMPORTANT]
 > 이 표는 대략적 참조이며 표 내용과 [!INCLUDE[msCoName](../../includes/msconame-md.md)] 수명 주기 페이지 사이에 차이가 있는 경우 [!INCLUDE[msCoName](../../includes/msconame-md.md)] 수명 주기를 우선적으로 참조하세요.  
@@ -286,5 +286,4 @@ Azure 테이블 스토리지에는 다음과 같은 이점이 있습니다.
 [연장 보안 업데이트(ESU) 개요](sql-server-extended-security-updates.md)   
 [Azure로 현재 상태로 마이그레이션하기 위한 무료 연장 보안 업데이트(ESU)](/azure/virtual-machines/windows/sql/virtual-machines-windows-sql-server-2008-eos-extend-support)   
 [SQL Server VM 개요](/azure/virtual-machines/windows/sql/virtual-machines-windows-sql-server-iaas-overview)   
-[Azure SQL Database 개요](/azure/sql-database/sql-database-technical-overview)    
-
+[Azure SQL Database 개요](/azure/sql-database/sql-database-technical-overview)

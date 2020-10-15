@@ -8,12 +8,12 @@ ms.topic: how-to
 author: dphansen
 ms.author: davidph
 monikerRange: '>=sql-server-ver15||=sqlallproducts-allversions'
-ms.openlocfilehash: 30097342700a9daccb6107f5fafe9e5acef3e225
-ms.sourcegitcommit: 9b41725d6db9957dd7928a3620fe4db41eb51c6e
+ms.openlocfilehash: 4a4f32c73d1fdf0cd47caaa031321eaa0ef52092
+ms.sourcegitcommit: afb02c275b7c79fbd90fac4bfcfd92b00a399019
 ms.translationtype: HT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 08/13/2020
-ms.locfileid: "88179422"
+ms.lasthandoff: 10/12/2020
+ms.locfileid: "91956744"
 ---
 # <a name="sql-server-2019-on-windows-isolation-changes-for-machine-learning-services"></a>Windows의 SQL Server 2019: Machine Learning Services에 대한 격리 변경 내용
 [!INCLUDE [SQL Server 2019 - Windows only](../../includes/applies-to-version/sqlserver2019-windows-only.md)]
@@ -24,7 +24,7 @@ ms.locfileid: "88179422"
 
 ## <a name="changes-to-isolation-mechanism"></a>격리 메커니즘의 변경 내용
 
-Windows에서 SQL Server 2019 설치 프로그램은 외부 프로세스에 대한 격리 메커니즘을 변경합니다. 이 변경 내용은 로컬 작업자 계정을 Windows에서 실행되는 클라이언트 애플리케이션에 대한 격리 기술인 [AppContainer](https://docs.microsoft.com/windows/desktop/secauthz/appcontainer-isolation)로 바꿉니다. 
+Windows에서 SQL Server 2019 설치 프로그램은 외부 프로세스에 대한 격리 메커니즘을 변경합니다. 이 변경 내용은 로컬 작업자 계정을 Windows에서 실행되는 클라이언트 애플리케이션에 대한 격리 기술인 [AppContainer](/windows/desktop/secauthz/appcontainer-isolation)로 바꿉니다. 
 
 이러한 수정 때문에 관리자가 구체적으로 수행할 작업 항목은 없습니다. 새 서버 또는 업그레이드된 서버에서 [sp_execute_external_script](../../relational-databases/system-stored-procedures/sp-execute-external-script-transact-sql.md)로부터 실행되는 모든 외부 스크립트와 코드는 자동으로 새 격리 모델을 따릅니다. 
 
@@ -39,7 +39,7 @@ Windows에서 SQL Server 2019 설치 프로그램은 외부 프로세스에 대�
 
 이전 릴리스의 **SQLRUserGroup**에는 외부 프로세스를 격리하고 실행하는 데 사용되는 로컬 Windows 사용자 계정(MSSQLSERVER00-MSSQLSERVER20) 풀이 포함되어 있습니다. 외부 프로세스가 필요한 경우 SQL Server 실행 패드 서비스는 사용 가능한 계정을 가져와 프로세스를 실행하는 데 사용합니다. 
 
-SQL Server 2019에서 설치 프로그램은 더 이상 로컬 작업자 계정을 생성하지 않습니다. 대신 [AppContainer](https://docs.microsoft.com/windows/desktop/secauthz/appcontainer-isolation)를 통해 격리가 이루어집니다. 런타임에 저장 프로시저 또는 쿼리에서 포함된 스크립트나 코드가 감지되면 SQL Server는 확장별 시작 관리자를 요청하여 실행 패드를 호출합니다. 실행 패드는 해당 ID를 사용하여 프로세스에서 적절한 런타임 환경을 호출하고, 이를 포함할 AppContainer를 인스턴스화합니다. 이러한 변경은 로컬 계정 및 암호 관리가 더 이상 필요하지 않기 때문에 유용합니다. 또한 로컬 사용자 계정이 금지된 설치에서 로컬 사용자 계정 종속성을 제거하면 이 기능을 사용할 수 있습니다.
+SQL Server 2019에서 설치 프로그램은 더 이상 로컬 작업자 계정을 생성하지 않습니다. 대신 [AppContainer](/windows/desktop/secauthz/appcontainer-isolation)를 통해 격리가 이루어집니다. 런타임에 저장 프로시저 또는 쿼리에서 포함된 스크립트나 코드가 감지되면 SQL Server는 확장별 시작 관리자를 요청하여 실행 패드를 호출합니다. 실행 패드는 해당 ID를 사용하여 프로세스에서 적절한 런타임 환경을 호출하고, 이를 포함할 AppContainer를 인스턴스화합니다. 이러한 변경은 로컬 계정 및 암호 관리가 더 이상 필요하지 않기 때문에 유용합니다. 또한 로컬 사용자 계정이 금지된 설치에서 로컬 사용자 계정 종속성을 제거하면 이 기능을 사용할 수 있습니다.
 
 SQL Server에서 구현되므로 AppContainer는 내부 메커니즘입니다. 프로세스 모니터에서 AppContainer의 물리적 증거는 표시되지 않지만 설치 프로그램에서 프로세스의 네트워크 호출 수행을 방지하기 위해 만든 아웃바운드 방화벽 규칙에 표시될 수 있습니다.
 

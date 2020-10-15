@@ -19,12 +19,12 @@ helpviewer_keywords:
 - find sql server instance name
 ms.custom: seo-lt-2019
 ms.date: 03/13/2018
-ms.openlocfilehash: 60bf46d57b029696229ebf50188eca39f5b97c0a
-ms.sourcegitcommit: c7f40918dc3ecdb0ed2ef5c237a3996cb4cd268d
+ms.openlocfilehash: 1f05ea22f092573364e663165559be73857ca320
+ms.sourcegitcommit: 22dacedeb6e8721e7cdb6279a946d4002cfb5da3
 ms.translationtype: HT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 10/05/2020
-ms.locfileid: "91724514"
+ms.lasthandoff: 10/14/2020
+ms.locfileid: "92038920"
 ---
 # <a name="tips-and-tricks-for-using-sql-server-management-studio-ssms"></a>SSMS(SQL Server Management Studio)를 사용하기 위한 팁과 요령
 
@@ -41,9 +41,9 @@ ms.locfileid: "91724514"
 
 이 문서에 제공된 단계를 테스트하려면 [!INCLUDE[ssManStudioFull](../../includes/ssmanstudiofull-md.md)], SQL Server 액세스 및 AdventureWorks 데이터베이스가 필요합니다. 
 
-* [SQL Server Management Studio](https://docs.microsoft.com/sql/ssms/download-sql-server-management-studio-ssms)를 설치합니다.
+* [SQL Server Management Studio](../download-sql-server-management-studio-ssms.md)를 설치합니다.
 * [[!INCLUDE[ssCurrent](../../includes/sscurrent-md.md)] Developer Edition](https://www.microsoft.com/sql-server/sql-server-downloads)을 설치합니다.
-* [AdventureWorks 샘플 데이터베이스](https://github.com/Microsoft/sql-server-samples/releases)를 다운로드합니다. SSMS에서 데이터베이스를 복원하는 방법을 자세히 알아보려면 [데이터베이스 복원](https://docs.microsoft.com/sql/relational-databases/backup-restore/restore-a-database-backup-using-ssms)을 참조하세요. 
+* [AdventureWorks 샘플 데이터베이스](https://github.com/Microsoft/sql-server-samples/releases)를 다운로드합니다. SSMS에서 데이터베이스를 복원하는 방법을 자세히 알아보려면 [데이터베이스 복원](../../relational-databases/backup-restore/restore-a-database-backup-using-ssms.md)을 참조하세요. 
 
 ## <a name="commentuncomment-your-t-sql-code"></a>T-SQL 코드 주석 처리/주석 처리 제거
 
@@ -286,7 +286,7 @@ ms.locfileid: "91724514"
 
 실습을 통해 SSMS에 익숙해지는 것이 가장 좋습니다. 이러한 *자습서* 및 *방법* 문서에서는 SSMS 내에서 사용할 수 있는 다양한 기능에 관해 도움을 얻을 수 있습니다.  이러한 문서에서는 SSMS의 구성 요소를 관리하는 방법과 정기적으로 사용하는 기능을 찾는 방법을 알아봅니다.
 
-* [인스턴스에 연결 및 쿼리](connect-query-sql-server.md)
+* [인스턴스에 연결 및 쿼리](../quickstarts/connect-query-sql-server.md)
 * [스크립팅](scripting-ssms.md)
 * [SSMS에서 템플릿 사용](../template/templates-ssms.md)
 * [SSMS 구성](ssms-configuration.md)

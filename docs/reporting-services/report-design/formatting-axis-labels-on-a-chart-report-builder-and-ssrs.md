@@ -26,12 +26,12 @@ helpviewer_keywords:
 ms.assetid: ddf50dd5-5314-42ff-97f4-c3a4a17cfcdd
 author: maggiesMSFT
 ms.author: maggies
-ms.openlocfilehash: 5d44212b3d290f69f8565040d44946104f92b045
-ms.sourcegitcommit: 5c7634b007f6808c87094174b80376cb20545d5f
+ms.openlocfilehash: 240444331ed9a3ffa4fd083107aa68c476153392
+ms.sourcegitcommit: fe59f8dc27fd633f5dfce54519d6f5dcea577f56
 ms.translationtype: HT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 06/17/2020
-ms.locfileid: "84880281"
+ms.lasthandoff: 10/09/2020
+ms.locfileid: "91935132"
 ---
 # <a name="formatting-axis-labels-on-a-chart-report-builder-and-ssrs"></a>차트의 축 레이블 서식 지정(보고서 작성기 및 SSRS)
   좌표 기반 차트 종류(세로 막대형, 가로 막대형, 영역형, 점, 꺾은선형 및 범위형)에는 데이터 관계를 범주화하고 표시하는 데 사용되는 두 개의 축이 있습니다. 각 축에는 다양한 유형의 서식이 지정됩니다.  
@@ -106,7 +106,7 @@ ms.locfileid: "84880281"
   
  스칼라 축은 다음 두 가지 방법으로 설정할 수 있습니다.  
   
--   **축 속성** 대화 상자에서 **스칼라 축** 옵션을 선택합니다. 이렇게 하면 데이터 그룹화 값이 없는 축 위치에 숫자 또는 날짜/시간 값이 추가됩니다. 자세한 내용은 [축 속성 대화 상자, 축 옵션&#40;보고서 작성기 및 SSRS&#41;](https://msdn.microsoft.com/library/b276e210-7a12-48ae-971b-7dabae51df11)를 참조하세요.  
+-   **축 속성** 대화 상자에서 **스칼라 축** 옵션을 선택합니다. 이렇게 하면 데이터 그룹화 값이 없는 축 위치에 숫자 또는 날짜/시간 값이 추가됩니다. 자세한 내용은 [축 속성 대화 상자, 축 옵션&#40;보고서 작성기 및 SSRS&#41;](/previous-versions/sql/)를 참조하세요.  
   
 -   **계열 속성** 대화 상자의 **범주 필드** 옵션에 대한 필드를 선택하거나 식을 입력합니다. 차트는 지정한 범주 필드의 모든 값에 대해 축 간격을 추가합니다.  
   
@@ -128,5 +128,4 @@ ms.locfileid: "84880281"
  [차트 서식 지정&#40;보고서 작성기 및 SSRS&#41;](../../reporting-services/report-design/formatting-a-chart-report-builder-and-ssrs.md)   
  [차트&#40;보고서 작성기 및 SSRS&#41;](../../reporting-services/report-design/charts-report-builder-and-ssrs.md)   
  [차트의 데이터 요소에 서식 지정&#40;보고서 작성기 및 SSRS&#41;](../../reporting-services/report-design/formatting-data-points-on-a-chart-report-builder-and-ssrs.md)  
-  
   

@@ -9,12 +9,12 @@ author: cawrites
 ms.author: chadam
 ms.custom: seo-lt-2019
 monikerRange: '>=sql-server-2017||=sqlallproducts-allversions'
-ms.openlocfilehash: c3cf6afe4f99e7a728368f3454cc125998d806fa
-ms.sourcegitcommit: 9b41725d6db9957dd7928a3620fe4db41eb51c6e
+ms.openlocfilehash: f00bbceefd5691bf4f78111aaa73f03f35bfb812
+ms.sourcegitcommit: afb02c275b7c79fbd90fac4bfcfd92b00a399019
 ms.translationtype: HT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 08/13/2020
-ms.locfileid: "88178670"
+ms.lasthandoff: 10/12/2020
+ms.locfileid: "91956994"
 ---
 # <a name="install-sql-server-machine-learning-services-python-and-r-on-windows"></a>Windows에 SQL Server Machine Learning Services(Python 및 R) 설치
 
@@ -26,7 +26,7 @@ Windows에서 SQL Server Machine Learning Services를 설치하는 방법을 알
 
 + 데이터베이스 엔진 인스턴스가 필요합니다. Python 또는 R 기능은 기존 인스턴스에 증분식으로 추가할 수는 있지만 설치할 수는 없습니다.
 
-+ 비즈니스 연속성을 위해 [Always On 가용성 그룹](https://docs.microsoft.com/sql/database-engine/availability-groups/windows/overview-of-always-on-availability-groups-sql-server)은 Machine Learning Services에 대해 지원됩니다. 각 노드에서 Machine Learning Services를 설치하고 패키지를 구성합니다.
++ 비즈니스 연속성을 위해 [Always On 가용성 그룹](../../database-engine/availability-groups/windows/overview-of-always-on-availability-groups-sql-server.md)은 Machine Learning Services에 대해 지원됩니다. 각 노드에서 Machine Learning Services를 설치하고 패키지를 구성합니다.
 
 + SQL Server 2017의 [Always On FCI(장애 조치(failover) 클러스터 인스턴스)](../../sql-server/failover-clusters/windows/always-on-failover-cluster-instances-sql-server.md)에서는 Machine Learning Services 설치가 지원되지 않습니다. SQL Server 2019 이상에서 지원됩니다.
  
@@ -52,11 +52,11 @@ Windows에서 SQL Server Machine Learning Services를 설치하는 방법을 알
 [!INCLUDE[GetInstallationMedia](../../includes/getssmedia.md)]
 
 ::: moniker range="=sql-server-2017||=sqlallproducts-allversions"
-Machine Learning Services와 Python 및 R 통합을 지원하는 SQL Server 버전에 대한 자세한 내용은 [SQL Server 2017의 버전과 지원하는 기능](https://docs.microsoft.com/sql/sql-server/editions-and-components-of-sql-server-2017)을 참조하세요.
+Machine Learning Services와 Python 및 R 통합을 지원하는 SQL Server 버전에 대한 자세한 내용은 [SQL Server 2017의 버전과 지원하는 기능](../../sql-server/editions-and-components-of-sql-server-2017.md)을 참조하세요.
 ::: moniker-end
 
 ::: moniker range="=sql-server-ver15||=sqlallproducts-allversions"
-Machine Learning Services와 Python 및 R 통합을 지원하는 SQL Server 버전에 대한 자세한 내용은 [SQL Server 2019(15.x)의 버전과 지원하는 기능](https://docs.microsoft.com/sql/sql-server/editions-and-components-of-sql-server-version-15)을 참조하세요.
+Machine Learning Services와 Python 및 R 통합을 지원하는 SQL Server 버전에 대한 자세한 내용은 [SQL Server 2019(15.x)의 버전과 지원하는 기능](../../sql-server/editions-and-components-of-sql-server-version-15.md)을 참조하세요.
 ::: moniker-end
 
 ## <a name="run-setup"></a>설치 프로그램 실행
@@ -147,7 +147,7 @@ Machine Learning Services와 Python 및 R 통합을 지원하는 SQL Server 버�
 
    구성 파일이 저장된 `..\Setup Bootstrap\Log` 경로 아래에 있는 폴더의 위치를 확인합니다. 설치가 완료되면 요약 파일에 설치된 구성 요소를 검토할 수 있습니다.
 
-1. 설치가 완료된 후 컴퓨터를 다시 시작하라는 메시지가 나타나면 다시 시작합니다. 설치가 끝나면 설치 마법사에 표시되는 메시지를 읽어야 합니다. 자세한 내용은 [View and Read SQL Server Setup Log Files](https://docs.microsoft.com/sql/database-engine/install-windows/view-and-read-sql-server-setup-log-files)을 참조하세요.
+1. 설치가 완료된 후 컴퓨터를 다시 시작하라는 메시지가 나타나면 다시 시작합니다. 설치가 끝나면 설치 마법사에 표시되는 메시지를 읽어야 합니다. 자세한 내용은 [View and Read SQL Server Setup Log Files](../../database-engine/install-windows/view-and-read-sql-server-setup-log-files.md)을 참조하세요.
 
 ::: moniker-end
 
@@ -165,7 +165,7 @@ Machine Learning Services와 Python 및 R 통합을 지원하는 SQL Server 버�
 
    구성 파일이 저장된 `..\Setup Bootstrap\Log` 경로 아래에 있는 폴더의 위치를 확인합니다. 설치가 완료되면 요약 파일에 설치된 구성 요소를 검토할 수 있습니다.
 
-4. 설치가 완료된 후 컴퓨터를 다시 시작하라는 메시지가 나타나면 다시 시작합니다. 설치가 끝나면 설치 마법사에 표시되는 메시지를 읽어야 합니다. 자세한 내용은 [View and Read SQL Server Setup Log Files](https://docs.microsoft.com/sql/database-engine/install-windows/view-and-read-sql-server-setup-log-files)을 참조하세요.
+4. 설치가 완료된 후 컴퓨터를 다시 시작하라는 메시지가 나타나면 다시 시작합니다. 설치가 끝나면 설치 마법사에 표시되는 메시지를 읽어야 합니다. 자세한 내용은 [View and Read SQL Server Setup Log Files](../../database-engine/install-windows/view-and-read-sql-server-setup-log-files.md)을 참조하세요.
 
 ::: moniker-end
 
@@ -189,7 +189,7 @@ R 기능 통합의 경우에만 **MKL_CBWR** 환경 변수를 설정하여 Intel
 1. [!INCLUDE[ssManStudioFull](../../includes/ssmanstudiofull-md.md)]를 엽니다. 
 
     > [!TIP]
-    > 이 페이지에서 적절한 버전을 다운로드하여 설치할 수 있습니다. [SSMS(SQL Server Management Studio) 다운로드합니다](https://docs.microsoft.com/sql/ssms/download-sql-server-management-studio-ssms).
+    > 이 페이지에서 적절한 버전을 다운로드하여 설치할 수 있습니다. [SSMS(SQL Server Management Studio) 다운로드합니다](../../ssms/download-sql-server-management-studio-ssms.md).
     > 
     > SQL Server에 대한 관리 작업 및 쿼리를 지원하는 [Azure Data Studio](../../azure-data-studio/what-is.md)를 사용할 수도 있습니다.
   
@@ -287,7 +287,7 @@ SSMS의 인스턴스에 대해 **Restart** 명령을 마우스 오른쪽 단추�
 
 1. 이미 설치된 기준 인스턴스를 사용하여 시작합니다. SQL Server 2017 초기 릴리스
 
-2. 누적 업데이트 목록으로 이동합니다. [Microsoft SQL Server에 대한 최신 업데이트](https://docs.microsoft.com/sql/database-engine/install-windows/latest-updates-for-microsoft-sql-server)
+2. 누적 업데이트 목록으로 이동합니다. [Microsoft SQL Server에 대한 최신 업데이트](../../database-engine/install-windows/latest-updates-for-microsoft-sql-server.md)
 
 3. 최신 누적 업데이트를 선택합니다. 실행 파일이 자동으로 다운로드되고 추출됩니다.
 
@@ -311,7 +311,7 @@ SSMS의 인스턴스에 대해 **Restart** 명령을 마우스 오른쪽 단추�
 * [추가 네트워크 프로토콜 사용](../../database-engine/configure-windows/enable-or-disable-a-server-network-protocol.md)
 * [원격 연결 사용](../../database-engine/configure-windows/configure-the-remote-access-server-configuration-option.md)
 * [SQLRUserGroup에 대한 로그인 만들기](../../machine-learning/security/create-a-login-for-sqlrusergroup.md)
-* [디스크 할당량을 관리](https://docs.microsoft.com/windows/desktop/fileio/managing-disk-quotas)하여 디스크 공간을 소모하는 작업을 실행하는 외부 스크립트 방지
+* [디스크 할당량을 관리](/windows/desktop/fileio/managing-disk-quotas)하여 디스크 공간을 소모하는 작업을 실행하는 외부 스크립트 방지
 
 ::: moniker range=">=sql-server-ver15||=sqlallproducts-allversions"
 Windows의 SQL Server 2019에서는 격리 메커니즘이 변경되었습니다. 이 메커니즘은 **SQLRUserGroup**, 방화벽 규칙, 파일 사용 권한 및 묵시적 인증에 영향을 줍니다. 자세한 내용은 [Machine Learning Services에 대한 격리 변경 사항](sql-server-machine-learning-services-2019.md)을 참조하세요.

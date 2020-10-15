@@ -9,12 +9,12 @@ ms.topic: conceptual
 ms.assetid: 16ce643f-bbb3-40a5-ba78-7aed73156f3e
 author: maggiesMSFT
 ms.author: maggies
-ms.openlocfilehash: aef4411334ee9ca345a5b2f2c8b325c6fd2dae70
-ms.sourcegitcommit: 6c2232c4d2c1ce5710296ce97b909f5ed9787f66
+ms.openlocfilehash: 0e2036700a138150c9d103cfc1bca9c3c65b6d60
+ms.sourcegitcommit: fe59f8dc27fd633f5dfce54519d6f5dcea577f56
 ms.translationtype: HT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 06/05/2020
-ms.locfileid: "84462417"
+ms.lasthandoff: 10/09/2020
+ms.locfileid: "91935402"
 ---
 # <a name="report-builder-functions---aggregate-function"></a>보고서 작성기 함수 - 집계 함수
   데이터 공급자가 정의한 대로 지정한 식의 사용자 지정 집계를 반환합니다.  
@@ -40,7 +40,7 @@ Aggregate(expression, scope)
  반환 형식은 데이터 공급자에 의해 결정됩니다. 데이터 공급자가 이 함수를 지원하지 않거나 데이터를 사용할 수 없는 경우 **Nothing** 을 반환합니다.  
   
 ## <a name="remarks"></a>설명  
- **Aggregate** 함수를 통해 외부 데이터 원본에서 계산되는 집계를 사용할 수 있습니다. 이 기능에 대한 지원은 데이터 확장 프로그램에 의해 결정됩니다. 예를 들어 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] [!INCLUDE[ssASnoversion](../../includes/ssasnoversion-md.md)] 데이터 처리 확장 프로그램은 MDX 쿼리에서 일반 행 세트를 검색합니다. 결과 집합의 일부 행에는 데이터 원본 서버에서 계산된 집계 값이 포함될 수 있습니다. 이를 *서버 집계*라고 합니다. [!INCLUDE[ssASnoversion](../../includes/ssasnoversion-md.md)]용 그래픽 쿼리 디자이너에서 서버 집계를 보려면 도구 모음에서 **집계 표시** 단추를 사용합니다. 자세한 내용은 [Analysis Services MDX 쿼리 디자이너 사용자 인터페이스&#40;보고서 작성기&#41;](https://msdn.microsoft.com/library/7e288eee-2d37-485e-a6a0-dbba5e041e26)를 참조하세요.  
+ **Aggregate** 함수를 통해 외부 데이터 원본에서 계산되는 집계를 사용할 수 있습니다. 이 기능에 대한 지원은 데이터 확장 프로그램에 의해 결정됩니다. 예를 들어 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] [!INCLUDE[ssASnoversion](../../includes/ssasnoversion-md.md)] 데이터 처리 확장 프로그램은 MDX 쿼리에서 일반 행 세트를 검색합니다. 결과 집합의 일부 행에는 데이터 원본 서버에서 계산된 집계 값이 포함될 수 있습니다. 이를 *서버 집계*라고 합니다. [!INCLUDE[ssASnoversion](../../includes/ssasnoversion-md.md)]용 그래픽 쿼리 디자이너에서 서버 집계를 보려면 도구 모음에서 **집계 표시** 단추를 사용합니다. 자세한 내용은 [Analysis Services MDX 쿼리 디자이너 사용자 인터페이스&#40;보고서 작성기&#41;](/previous-versions/sql/)를 참조하세요.  
   
  테이블릭스 데이터 영역의 정보 행에 집계 및 정보 데이터 세트 값의 조합을 표시할 때 서버 집계는 정보 데이터가 아니므로 일반적으로 포함되지 않습니다. 하지만 데이터 세트에 대해 검색된 모든 값을 표시하고 집계 데이터가 계산 및 표시되는 방식을 사용자 지정할 수 있습니다.  
   
@@ -80,5 +80,4 @@ Aggregate(expression, scope)
  [식 예&#40;보고서 작성기 및 SSRS&#41;](../../reporting-services/report-design/expression-examples-report-builder-and-ssrs.md)   
  [식의 데이터 형식&#40;보고서 작성기 및 SSRS&#41;](../../reporting-services/report-design/data-types-in-expressions-report-builder-and-ssrs.md)   
  [합계, 집계 및 기본 제공 컬렉션의 식 범위&#40;보고서 작성기 및 SSRS&#41;](../../reporting-services/report-design/expression-scope-for-totals-aggregates-and-built-in-collections.md)  
-  
   

@@ -17,12 +17,12 @@ ms.assetid: e549a2a8-4154-4ec8-b146-614564169b39
 author: markingmyname
 ms.author: maghan
 ms.reviewer: ''
-ms.openlocfilehash: 3a4a58cd8522050e3de958cafae1224ba59363b0
-ms.sourcegitcommit: e700497f962e4c2274df16d9e651059b42ff1a10
+ms.openlocfilehash: 2228819de295edf29d5b2b1ca6bfcc43626a42a0
+ms.sourcegitcommit: 22dacedeb6e8721e7cdb6279a946d4002cfb5da3
 ms.translationtype: HT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 08/17/2020
-ms.locfileid: "88480093"
+ms.lasthandoff: 10/14/2020
+ms.locfileid: "92038953"
 ---
 # <a name="column-properties-visual-database-tools"></a>열 속성(Visual Database Tools)
 [!INCLUDE[SQL Server Azure SQL Database Synapse Analytics PDW ](../../includes/applies-to-version/sql-asdb-asdbmi-asa-pdw.md)]
@@ -53,7 +53,7 @@ ms.locfileid: "88480093"
 확장하면 나머지 속성이 표시됩니다.  
   
 **데이터 형식**  
-선택한 열의 데이터 형식을 표시합니다. 자세한 내용은 [데이터 형식(Transact-SQL)](https://msdn.microsoft.com/a54f7373-b247-4d61-8fb8-7f2ec7a8d0a4)을 참조하세요.  
+선택한 열의 데이터 형식을 표시합니다. 자세한 내용은 [데이터 형식(Transact-SQL)](../../t-sql/data-types/data-types-transact-sql.md)을 참조하세요.  
   
 **ID 증가값**  
 ID 열의 각 후속 행에 대한 **ID 초기값** 에 추가할 증가값을 표시합니다. [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]에만 적용됩니다.  
@@ -95,7 +95,7 @@ ID 열에 대한 테이블의 첫 번째 행에 할당된 초기값을 표시합
 열의 데이터 형식에 Null 값이 허용되는지 여부를 표시합니다.  
   
 **데이터 형식**  
-선택한 열의 데이터 형식을 표시합니다. 이 속성을 편집하려면 해당 값을 클릭하고 드롭다운 목록을 확장한 다음 다른 값을 선택합니다. 자세한 내용은 [데이터 형식(Transact-SQL)](https://msdn.microsoft.com/a54f7373-b247-4d61-8fb8-7f2ec7a8d0a4)을 참조하세요.  
+선택한 열의 데이터 형식을 표시합니다. 이 속성을 편집하려면 해당 값을 클릭하고 드롭다운 목록을 확장한 다음 다른 값을 선택합니다. 자세한 내용은 [데이터 형식(Transact-SQL)](../../t-sql/data-types/data-types-transact-sql.md)을 참조하세요.  
   
 **기본값 또는 바인딩**  
 이 열에 대해 지정한 값이 없는 경우 이 열에 대한 기본값을 표시합니다. 드롭다운 목록에는 데이터 원본에 정의된 모든 전역 기본값이 포함되어 있습니다. 열을 전역 기본값에 바인딩하려면 드롭다운 목록에서 선택합니다. 열에 대한 기본 제약 조건을 만들려면 직접 기본값을 텍스트로 입력합니다.  
@@ -143,7 +143,7 @@ IMAGE 유형 열의 문서 유형을 정의하는 데 사용되는 열을 표시
 열을 인덱싱하는 데 사용되는 언어를 나타냅니다.  
   
 **통계 의미 체계**  
-선택한 열에 대해 통계 의미 체계 인덱싱을 사용하도록 설정할지 여부를 선택합니다. 자세한 내용은 [의미 체계 검색 자리 표시자](https://msdn.microsoft.com/cd8faa9d-07db-420d-93f4-a2ea7c974b97)를 참조하세요.  
+선택한 열에 대해 통계 의미 체계 인덱싱을 사용하도록 설정할지 여부를 선택합니다. 자세한 내용은 [의미 체계 검색 자리 표시자](../../relational-databases/search/semantic-search-sql-server.md)를 참조하세요.  
   
 **통계 의미 체계** 를 선택하기 전에 **언어**를 선택했으며 선택한 언어에 연결된 의미 체계 언어 모델이 없으면 **통계 의미 체계** 옵션은 **아니요** 로 설정되며 수정할 수 없습니다. **언어** 를 선택하기 전에 **통계 의미 체계** 옵션에 대해 **예**를 선택한 경우 **언어** 열에서 사용할 수 있는 언어는 의미 체계 언어 모델이 지원되는 언어로 제한됩니다.  
   
@@ -188,4 +188,3 @@ IMAGE 유형 열의 문서 유형을 정의하는 데 사용되는 열을 표시
   
 > [!NOTE]  
 > **varchar(max)** 데이터 형식의 길이는 각 행에 따라 다릅니다. sp_help는 **varchar(max)** 열의 길이로 (-1)을 반환합니다. [!INCLUDE[ssManStudio](../../includes/ssmanstudio-md.md)] 는 열 크기로 -1을 표시합니다.  
-  

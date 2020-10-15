@@ -14,12 +14,12 @@ ms.assetid: 8e4a1f0a-8a42-4733-be8d-e21d6dbddb33
 author: markingmyname
 ms.author: maghan
 ms.reviewer: ''
-ms.openlocfilehash: 3c5f6cf27b08c761f4c1b36618bd207c5187f154
-ms.sourcegitcommit: e700497f962e4c2274df16d9e651059b42ff1a10
+ms.openlocfilehash: e33f45c9fc5e3219db2731922d0f1c83ff751084
+ms.sourcegitcommit: 22dacedeb6e8721e7cdb6279a946d4002cfb5da3
 ms.translationtype: HT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 08/17/2020
-ms.locfileid: "88468426"
+ms.lasthandoff: 10/14/2020
+ms.locfileid: "92037529"
 ---
 # <a name="create-queries-using-something-besides-a-table-visual-database-tools"></a>테이블 외의 항목을 사용하여 쿼리 만들기(Visual Database Tools)
 [!INCLUDE[SQL Server Azure SQL Database Synapse Analytics PDW ](../../includes/applies-to-version/sql-asdb-asdbmi-asa-pdw.md)]
@@ -143,5 +143,4 @@ FROM
      fn_GetWholeTeam ('VPA30890F')  
 ```  
   
-"VPA30890F"는 검색하려는 조직의 관리자의 emp_id입니다. 쿼리에 사용자 정의 함수를 추가하는 방법에 대한 자세한 내용은 [쿼리에 테이블 추가&#40;Visual Database Tools&#41;](../../ssms/visual-db-tools/add-tables-to-queries-visual-database-tools.md)를 참조하세요. 사용자 정의 함수에 대한 자세한 내용은 [사용자 정의 함수](https://msdn.microsoft.com/d7ddafab-f5a6-44b0-81d5-ba96425aada4)를 참조하세요.  
-  
+"VPA30890F"는 검색하려는 조직의 관리자의 emp_id입니다. 쿼리에 사용자 정의 함수를 추가하는 방법에 대한 자세한 내용은 [쿼리에 테이블 추가&#40;Visual Database Tools&#41;](../../ssms/visual-db-tools/add-tables-to-queries-visual-database-tools.md)를 참조하세요. 사용자 정의 함수에 대한 자세한 내용은 [사용자 정의 함수](../../relational-databases/user-defined-functions/user-defined-functions.md)를 참조하세요.  

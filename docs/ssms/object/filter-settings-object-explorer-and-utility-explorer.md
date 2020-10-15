@@ -14,12 +14,12 @@ f1_keywords:
 ms.assetid: 4aab04bc-e1ab-4d4b-ab74-b287fc805bc2
 author: markingmyname
 ms.author: maghan
-ms.openlocfilehash: d4595be9c345b32c20bf028cc384a2e61766295d
-ms.sourcegitcommit: e700497f962e4c2274df16d9e651059b42ff1a10
+ms.openlocfilehash: 50a7eccca6f889a7bff57b244d8c209af7b73ec2
+ms.sourcegitcommit: 22dacedeb6e8721e7cdb6279a946d4002cfb5da3
 ms.translationtype: HT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 08/17/2020
-ms.locfileid: "88480187"
+ms.lasthandoff: 10/14/2020
+ms.locfileid: "92037208"
 ---
 # <a name="filter-settings-object-explorer-and-utility-explorer"></a>필터 설정(개체 탐색기 및 유틸리티 탐색기)
 [!INCLUDE[SQL Server Azure SQL Database Synapse Analytics PDW ](../../includes/applies-to-version/sql-asdb-asdbmi-asa-pdw.md)]
@@ -75,6 +75,5 @@ ms.locfileid: "88480187"
 현재 필터 설정을 모두 제거합니다.  
   
 ## <a name="see-also"></a>참고 항목  
-[SQL Server Management Studio 사용](../../ssms/use-sql-server-management-studio.md)  
+[SQL Server Management Studio 사용](../sql-server-management-studio-ssms.md)  
 [SQL Server 유틸리티 개요](../../relational-databases/manage/sql-server-utility-features-and-tasks.md)  
-  
