@@ -8,12 +8,12 @@ ms.technology: report-server-sharepoint
 ms.topic: conceptual
 author: maggiesMSFT
 ms.author: maggies
-ms.openlocfilehash: 49ac20b46c5453c431cb856ad060512b48315262
-ms.sourcegitcommit: 66a0672e47415dbd5cfd8d19075102c8c3973e70
+ms.openlocfilehash: b6c0280e54fab14c4a3f76f75a4639dad99a0635
+ms.sourcegitcommit: fe59f8dc27fd633f5dfce54519d6f5dcea577f56
 ms.translationtype: HT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 05/21/2020
-ms.locfileid: "83767037"
+ms.lasthandoff: 10/09/2020
+ms.locfileid: "91933559"
 ---
 # <a name="deploy-the-sql-server-reporting-services-report-viewer-web-part-on-a-sharepoint-site"></a>SharePoint 사이트에 SQL Server Reporting Services 보고서 뷰어 웹 파트 배포
 
@@ -53,7 +53,7 @@ ms.locfileid: "83767037"
 
 1. SharePoint 서버에서 **관리자 권한으로 실행** 옵션을 사용하여 SharePoint 관리 셸을 엽니다.
 
-2. [Add-SPSolution](https://technet.microsoft.com/library/ff607552(v=office.16).aspx)을 실행하여 팜 솔루션을 추가합니다.
+2. [Add-SPSolution](/powershell/module/sharepoint-server/Add-SPSolution)을 실행하여 팜 솔루션을 추가합니다.
 
     ```
     Add-SPSolution -LiteralPath "{path to file}\ReportViewerWebPart.wsp"
@@ -61,7 +61,7 @@ ms.locfileid: "83767037"
 
     이 cmdlet을 실행하면 솔루션의 이름,  솔루션 ID  및 Deployed=False가 반환됩니다. 다음 단계에서는 솔루션을 배포합니다.
 
-3. [Install-SPSolution](https://technet.microsoft.com/library/ff607534(v=office.16).aspx) cmdlet을 실행하여 팜 솔루션을 배포합니다.
+3. [Install-SPSolution](/powershell/module/sharepoint-server/Install-SPSolution) cmdlet을 실행하여 팜 솔루션을 배포합니다.
 
     **SharePoint 2013**
 
@@ -93,7 +93,7 @@ ms.locfileid: "83767037"
 
 6. 각 사이트를 열고 사이트 작업을 클릭하여 추가 사이트 모음에 대해 위 단계를 반복합니다.
 
-필요에 따라 [Enable-SPFeature](https://technet.microsoft.com/library/ff607803.aspx) cmdlet을 사용하여 모든 사이트에서 이 기능을 활성화하는 데 PowerShell을 사용할 수도 있습니다.
+필요에 따라 [Enable-SPFeature](/powershell/module/sharepoint-server/Enable-SPFeature) cmdlet을 사용하여 모든 사이트에서 이 기능을 활성화하는 데 PowerShell을 사용할 수도 있습니다.
 
 ```
 Get-SPWebApplication "<web application url>" | Get-SPSite -Limit ALL | 

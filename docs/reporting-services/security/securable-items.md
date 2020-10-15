@@ -14,12 +14,12 @@ helpviewer_keywords:
 ms.assetid: 27f58d4c-5c7b-4947-af5b-0f1fa60faf5f
 author: maggiesMSFT
 ms.author: maggies
-ms.openlocfilehash: 9fd4b92dcacf94e2a0196f210050954a84c1ac3d
-ms.sourcegitcommit: e700497f962e4c2274df16d9e651059b42ff1a10
+ms.openlocfilehash: f30b82c72a726faf5d2fb0e221fa36f4872acf12
+ms.sourcegitcommit: a41e1f4199785a2b8019a419a1f3dcdc15571044
 ms.translationtype: HT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 08/17/2020
-ms.locfileid: "88498016"
+ms.lasthandoff: 10/13/2020
+ms.locfileid: "91987339"
 ---
 # <a name="securable-items"></a>보안 개체 항목
   [!INCLUDE[ssRSnoversion](../../includes/ssrsnoversion-md.md)] 에서는 역할 기반 보안을 사용하여 보고서 서버에 저장되어 있는 항목에 대한 액세스를 제어합니다. 사용자에게 보고서 서버 액세스 권한을 부여할 때는 일반적으로 다음과 같이 역할 할당 쌍을 만듭니다.  
@@ -61,7 +61,6 @@ ms.locfileid: "88498016"
 ## <a name="see-also"></a>참고 항목  
  [기본 모드 보고서 서버에 대한 사용 권한 부여](../../reporting-services/security/granting-permissions-on-a-native-mode-report-server.md)   
  [역할 만들기, 삭제 또는 수정&#40;Management Studio&#41;](../../reporting-services/security/role-definitions-create-delete-or-modify.md)   
- [사용자에게 보고서 서버에 대한 액세스 권한 부여&#40;보고서 관리자&#41;](../../reporting-services/security/grant-user-access-to-a-report-server-report-manager.md)   
+ [사용자에게 보고서 서버에 대한 액세스 권한 부여&#40;보고서 관리자&#41;](./grant-user-access-to-a-report-server.md)   
  [역할 할당 수정 또는 삭제&#40;보고서 관리자&#41;](../../reporting-services/security/role-assignments-modify-or-delete.md)  
-  
   

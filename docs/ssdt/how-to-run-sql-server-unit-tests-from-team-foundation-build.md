@@ -10,12 +10,12 @@ ms.author: maghan
 ms.reviewer: “”
 ms.custom: seo-lt-2019
 ms.date: 02/09/2017
-ms.openlocfilehash: f256431ad0b9df55d23672522db8533ebd26f311
-ms.sourcegitcommit: f7ac1976d4bfa224332edd9ef2f4377a4d55a2c9
+ms.openlocfilehash: ed4241fb1aeac7faaceadc250f0c2e61f10179fc
+ms.sourcegitcommit: a41e1f4199785a2b8019a419a1f3dcdc15571044
 ms.translationtype: HT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 07/02/2020
-ms.locfileid: "85893923"
+ms.lasthandoff: 10/13/2020
+ms.locfileid: "91987539"
 ---
 # <a name="how-to-run-sql-server-unit-tests-from-team-foundation-build"></a>방법: Team Foundation Build에서 SQL Server 단위 테스트 실행
 
@@ -23,15 +23,15 @@ Team Foundation Build를 사용하여 BVT(빌드 확인 테스트)의 일부로 
   
 -   [SQL Server 단위 테스트 만들기 및 정의](../ssdt/creating-and-defining-sql-server-unit-tests.md)  
   
--   [방법: 애플리케이션을 빌드한 후 예약된 테스트 구성 및 실행](https://msdn.microsoft.com/library/ms182465(VS.100).aspx)  
+-   [방법: 애플리케이션을 빌드한 후 예약된 테스트 구성 및 실행](/previous-versions/visualstudio/visual-studio-2010/ms182465(v=vs.100))  
   
--   [기본 빌드 정의 만들기](https://msdn.microsoft.com/library/ms181716(VS.100).aspx)  
+-   [기본 빌드 정의 만들기](/previous-versions/visualstudio/visual-studio-2010/ms181716(v=vs.100))  
   
 절차를 사용하기 전에 먼저 다음 작업을 수행하여 작업 환경을 구성해야 합니다.  
   
 -   Team Foundation Build와 Team Foundation 버전 제어를 설치합니다. 대개 Team Foundation Build와 Team Foundation 버전 제어를 서로 다른 컴퓨터에 설치해야 합니다.  
   
--   Team Foundation Build와 동일한 컴퓨터에 Microsoft SQL Server Data Tools 빌드 유틸리티를 설치합니다. SQL Server Data Tools 빌드 유틸리티를 설치하려면 먼저 관리 설치 지점을 수행합니다. 관리 설치 지점에 대한 자세한 내용은 [SQL Server Data Tools 설치](../ssdt/install-sql-server-data-tools.md)를 참조하세요. 그런 다음 관리 설치 지점에 사용되는 위치(/location)에서 빌드 서버에 SSDTBuildUtilties.msi를 설치합니다.  
+-   Team Foundation Build와 동일한 컴퓨터에 Microsoft SQL Server Data Tools 빌드 유틸리티를 설치합니다. SQL Server Data Tools 빌드 유틸리티를 설치하려면 먼저 관리 설치 지점을 수행합니다. 관리 설치 지점에 대한 자세한 내용은 [SQL Server Data Tools 설치](./download-sql-server-data-tools-ssdt.md)를 참조하세요. 그런 다음 관리 설치 지점에 사용되는 위치(/location)에서 빌드 서버에 SSDTBuildUtilties.msi를 설치합니다.  
   
 -   Visual Studio Team Foundation Server 인스턴스에 연결합니다.  
   
@@ -215,22 +215,22 @@ x64 빌드 에이전트에서 단위 테스트를 실행하려면 먼저 호스�
   
 1.  Team Foundation Server를 실행하는 컴퓨터에 연결합니다.  
   
-    자세한 내용은 [소스 제어 탐색기 사용](https://msdn.microsoft.com/library/ms181370(VS.100).aspx)을 참조하세요.  
+    자세한 내용은 [소스 제어 탐색기 사용](/previous-versions/visualstudio/visual-studio-2010/ms181370(v=vs.100))을 참조하세요.  
   
 2.  솔루션이 아직 소스 제어에 없으면 소스 제어에 추가합니다.  
   
-    자세한 내용은 [버전 제어에 프로젝트 또는 솔루션 추가](https://msdn.microsoft.com/library/ms181374(VS.100).aspx)를 참조하세요.  
+    자세한 내용은 [버전 제어에 프로젝트 또는 솔루션 추가](/previous-versions/visualstudio/visual-studio-2010/ms181374(v=vs.100))를 참조하세요.  
   
 3.  **보기**를 클릭한 후 **보류 중인 체크 인**을 클릭합니다.  
   
 4.  솔루션의 모든 파일을 체크 인합니다.  
   
-    자세한 내용은 [보류 중인 변경 내용 체크 인](https://msdn.microsoft.com/library/ms181411(VS.100).aspx)을 참조하세요.  
+    자세한 내용은 [보류 중인 변경 내용 체크 인](/previous-versions/visualstudio/visual-studio-2010/ms181411(v=vs.100))을 참조하세요.  
   
     > [!NOTE]  
     > 자동화된 테스트를 만들고 관리하는 방법을 제어하는 특정 팀 프로세스가 있을 수 있습니다. 예를 들어 프로세스에 따라 코드를 해당 코드로 실행되는 테스트와 함께 체크 인하기 전에 빌드를 로컬로 확인해야 할 수 있습니다.  
   
-    **솔루션 탐색기**에서 체크 인되었음을 나타내는 자물쇠 아이콘이 각 파일 옆에 나타납니다. 자세한 내용은 [버전 제어 파일 및 폴더 속성 보기](https://msdn.microsoft.com/library/ms245468(VS.100).aspx)를 참조하세요.  
+    **솔루션 탐색기**에서 체크 인되었음을 나타내는 자물쇠 아이콘이 각 파일 옆에 나타납니다. 자세한 내용은 [버전 제어 파일 및 폴더 속성 보기](/previous-versions/visualstudio/visual-studio-2010/ms245468(v=vs.100))를 참조하세요.  
   
     Team Foundation Build에서 테스트를 사용할 수 있게 되었습니다. 이제 실행하려는 테스트가 포함된 빌드 정의를 만들 수 있습니다.  
   
@@ -280,11 +280,10 @@ x64 빌드 에이전트에서 단위 테스트를 실행하려면 먼저 호스�
   
 3.  **빌드 정의**, **빌드 에이전트** 및 **이 빌드의 저장 폴더** 필드의 값이 모두 적합한지 확인한 후 **큐**를 클릭합니다.  
   
-    **빌드 탐색기**의 **큐 대기** 탭이 표시됩니다. 자세한 내용은 [완료된 빌드 관리 및 보기(Visual Studio 2010)](https://msdn.microsoft.com/library/ms181730(VS.100).aspx) 또는 [빌드 탐색기에서 빌드 관리(Visual Studio 2012)](https://msdn.microsoft.com/library/ms181732.aspx)를 참조하세요.  
+    **빌드 탐색기**의 **큐 대기** 탭이 표시됩니다. 자세한 내용은 [완료된 빌드 관리 및 보기(Visual Studio 2010)](/previous-versions/visualstudio/visual-studio-2010/ms181730(v=vs.100)) 또는 [빌드 탐색기에서 빌드 관리(Visual Studio 2012)](/previous-versions/ms181732(v=vs.140))를 참조하세요.  
   
 ## <a name="see-also"></a>참고 항목  
 [SQL Server 단위 테스트 실행](../ssdt/running-sql-server-unit-tests.md)  
-[기본 빌드 정의 만들기](https://msdn.microsoft.com/library/ms181716(VS.100).aspx)  
-[큐에 빌드 대기](https://msdn.microsoft.com/library/ms181722(VS.100).aspx)  
-[실행 중인 빌드의 진행률 모니터링](https://msdn.microsoft.com/library/ms181724(VS.100).aspx)  
-  
+[기본 빌드 정의 만들기](/previous-versions/visualstudio/visual-studio-2010/ms181716(v=vs.100))  
+[큐에 빌드 대기](/previous-versions/visualstudio/visual-studio-2010/ms181722(v=vs.100))  
+[실행 중인 빌드의 진행률 모니터링](/previous-versions/visualstudio/visual-studio-2010/ms181724(v=vs.100))  

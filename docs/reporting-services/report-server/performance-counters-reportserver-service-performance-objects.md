@@ -12,12 +12,12 @@ ms.assetid: 2bcacab2-3a4f-4aae-b123-19d756b9b9ed
 author: maggiesMSFT
 ms.author: maggies
 monikerRange: '>=sql-server-2016 <=sql-server-2016||=sqlallproducts-allversions'
-ms.openlocfilehash: b7afe684cb88327fd7b8bb22ae2637ad4064cb25
-ms.sourcegitcommit: f0772f614482e0b3cde3609e178689ce62ca3a19
+ms.openlocfilehash: fe50faeeb134ca9162f5de25b6c775d3b6eea829
+ms.sourcegitcommit: a41e1f4199785a2b8019a419a1f3dcdc15571044
 ms.translationtype: HT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 06/09/2020
-ms.locfileid: "84545525"
+ms.lasthandoff: 10/13/2020
+ms.locfileid: "91986971"
 ---
 # <a name="performance-counters---reportserver-service--performance-objects"></a>성능 카운터 - ReportServer 서비스 성능 개체
   이 항목에서는 **배포에 포함된** ReportServer:Service **및** ReportServerSharePoint:Service [!INCLUDE[ssSQL11](../../includes/sssql11-md.md)] 성능 개체의 성능 카운터에 대해 설명합니다.  
@@ -25,7 +25,7 @@ ms.locfileid: "84545525"
 > [!NOTE]  
 >  이 성능 개체는 로컬 보고서 서버의 이벤트를 모니터링하는 데 사용됩니다. 스케일 아웃 배포에서 보고서 서버를 실행 중이면 카운터는 현재 서버에만 적용되고 스케일 아웃 배포 전체에는 적용되지 않습니다.  
   
- 성능 개체는 Windows 성능 모니터(**Perfmon.exe**)에서 제공됩니다. 자세한 내용은 Windows 설명서를 참조하십시오. [런타임 프로파일링](https://msdn.microsoft.com/library/w4bz2147.aspx)(https://msdn.microsoft.com/library/w4bz2147.aspx).  
+ 성능 개체는 Windows 성능 모니터(**Perfmon.exe**)에서 제공됩니다. 자세한 내용은 Windows 설명서를 참조하십시오. [런타임 프로파일링](/dotnet/framework/debug-trace-profile/runtime-profiling)(https://msdn.microsoft.com/library/w4bz2147.aspx).  
   
  이 항목의 내용:  
   
@@ -44,7 +44,7 @@ ms.locfileid: "84545525"
   
  다음 표에서는 **ReportServer:Service** 성능 개체에 포함된 카운터를 나열합니다.  
   
- ![PowerShell 관련 콘텐츠](https://docs.microsoft.com/analysis-services/analysis-services/instances/install-windows/media/rs-powershellicon.jpg "PowerShell 관련 콘텐츠") 다음 Windows PowerShell 스크립트는 CounterSetName의 성능 카운터 목록을 반환합니다.  
+ ![PowerShell 관련 콘텐츠](/analysis-services/analysis-services/instances/install-windows/media/rs-powershellicon.jpg "PowerShell 관련 콘텐츠") 다음 Windows PowerShell 스크립트는 CounterSetName의 성능 카운터 목록을 반환합니다.  
   
 ```  
 (get-counter -listset "ReportServer:Service").paths  
@@ -77,7 +77,7 @@ ms.locfileid: "84545525"
 ##  <a name="reportserversharepointservice-sharepoint-mode-report-server"></a><a name="bkmk_ReportServerSharePoint"></a> ReportServerSharePoint:Service(SharePoint 모드 보고서 서버)  
  [!INCLUDE[ssSQL11](../../includes/sssql11-md.md)] [!INCLUDE[ssRSnoversion](../../includes/ssrsnoversion-md.md)]에서 **ReportServerSharePoint:Service** 성능 개체가 추가되었습니다.  
   
- ![PowerShell 관련 콘텐츠](https://docs.microsoft.com/analysis-services/analysis-services/instances/install-windows/media/rs-powershellicon.jpg "PowerShell 관련 콘텐츠") 다음 Windows PowerShell 스크립트는 CounterSetName의 성능 카운터 목록을 반환합니다.  
+ ![PowerShell 관련 콘텐츠](/analysis-services/analysis-services/instances/install-windows/media/rs-powershellicon.jpg "PowerShell 관련 콘텐츠") 다음 Windows PowerShell 스크립트는 CounterSetName의 성능 카운터 목록을 반환합니다.  
   
 ```  
 (get-counter -listset "ReportServerSharePoint:Service").paths  
@@ -90,7 +90,7 @@ ms.locfileid: "84545525"
 |**Memory Shrink Notifications/Sec**||  
   
 ##  <a name="use-powershell-cmdlets-to-return-lists"></a><a name="bkmk_powershell"></a> PowerShell Cmdlet을 사용하여 목록 반환  
- ![PowerShell 관련 콘텐츠](https://docs.microsoft.com/analysis-services/analysis-services/instances/install-windows/media/rs-powershellicon.jpg "PowerShell 관련 콘텐츠") 다음 Windows PowerShell 스크립트는 CounterSetName "ReportServerSharePoint:Service"의 성능 카운터 목록을 반환합니다.  
+ ![PowerShell 관련 콘텐츠](/analysis-services/analysis-services/instances/install-windows/media/rs-powershellicon.jpg "PowerShell 관련 콘텐츠") 다음 Windows PowerShell 스크립트는 CounterSetName "ReportServerSharePoint:Service"의 성능 카운터 목록을 반환합니다.  
   
 ```  
 (get-counter -listset "ReportServerSharePoint:Service").paths  
@@ -100,5 +100,4 @@ ms.locfileid: "84545525"
  [보고서 서버 성능 모니터링](../../reporting-services/report-server/monitoring-report-server-performance.md)   
  [MSRS 2011 웹 서비스 및 MSRS 2011 Windows 서비스 성능 개체에 대한 성능 카운터&#40;기본 모드&#41;](../../reporting-services/report-server/performance-counters-msrs-2011-web-service-performance-objects.md)   
  [MSRS 2011 웹 서비스 SharePoint 모드 및 MSRS 2011 Windows 서비스 SharePoint 모드 성능 개체에 대한 성능 카운터&#40;SharePoint 모드&#41;](../../reporting-services/report-server/performance-counters-msrs-2011-sharepoint-mode-performance-objects.md)  
-  
   

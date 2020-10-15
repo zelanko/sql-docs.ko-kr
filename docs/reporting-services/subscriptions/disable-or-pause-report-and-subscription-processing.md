@@ -20,12 +20,12 @@ helpviewer_keywords:
 ms.assetid: 3cf9a240-24cc-46d4-bec6-976f82d8f830
 author: maggiesMSFT
 ms.author: maggies
-ms.openlocfilehash: ffdfc6e3a2141eddb484bc4dde3b25bda5a8b70a
-ms.sourcegitcommit: df1f0f2dfb9452f16471e740273cd1478ff3100c
+ms.openlocfilehash: 1ea16180c9a4e67f40302de7d70ae357b8393010
+ms.sourcegitcommit: a41e1f4199785a2b8019a419a1f3dcdc15571044
 ms.translationtype: HT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 07/29/2020
-ms.locfileid: "87396112"
+ms.lasthandoff: 10/13/2020
+ms.locfileid: "91986629"
 ---
 # <a name="disable-or-pause-report-and-subscription-processing"></a>보고서 및 구독 처리 해제 또는 일시 중지  
 [!INCLUDE[ssRSnoversion](../../includes/ssrsnoversion-md.md)] 보고서 및 구독 처리를 해제하거나 일시 중지하는 데 사용할 수 있는 몇 가지 방법이 있습니다. 이 문서에는 구독을 해제하는 방법에서부터 데이터 원본 연결을 중단하는 방법이 포함되어 있습니다. 두 [!INCLUDE[ssRSnoversion](../../includes/ssrsnoversion-md.md)] 서버 모드 모두에 사용할 수 없는 접근 방식도 있습니다. 다음 표에는 방법 및 지원되는 [!INCLUDE[ssRSnoversion](../../includes/ssrsnoversion-md.md)] 서버 모드가 요약되어 있습니다.  
@@ -60,7 +60,7 @@ ms.locfileid: "87396112"
   
  `RSPortal!subscription!RSPortal.exe!93!06/20/2019-01:16:51:: i INFO: Subscription 2b409d66-d4ea-408a-918c-0f9e41ce49ca enabled at 06/20/2019 01:16:51`  
   
-![PowerShell 관련 콘텐츠](https://docs.microsoft.com/analysis-services/analysis-services/instances/install-windows/media/rs-powershellicon.jpg "PowerShell 관련 콘텐츠"): **Windows PowerShell로 단일 구독을 설정 해제합니다.** 다음 PowerShell 스크립트로 특정 구독을 사용하지 않도록 설정합니다. 스크립트의 서버 이름 및 구독 ID를 업데이트합니다.  
+![PowerShell 관련 콘텐츠](/analysis-services/analysis-services/instances/install-windows/media/rs-powershellicon.jpg "PowerShell 관련 콘텐츠"): **Windows PowerShell로 단일 구독을 설정 해제합니다.** 다음 PowerShell 스크립트로 특정 구독을 사용하지 않도록 설정합니다. 스크립트의 서버 이름 및 구독 ID를 업데이트합니다.  
   
 ```PS  
 #disable specific subscription  
@@ -80,7 +80,7 @@ $subscriptions | select subscriptionid, report, status, path
   
 ```  
   
- ![PowerShell 관련 콘텐츠](https://docs.microsoft.com/analysis-services/analysis-services/instances/install-windows/media/rs-powershellicon.jpg "PowerShell 관련 콘텐츠") **Windows PowerShell을 사용하여 구독 해제된 구독을 모두 나열합니다.** 다음 PowerShell 스크립트를 사용하여 현재 기본 모드 보고서 서버에서 구독 해제된 구독을 모두 나열합니다. 서버 이름을 업데이트합니다.  
+ ![PowerShell 관련 콘텐츠](/analysis-services/analysis-services/instances/install-windows/media/rs-powershellicon.jpg "PowerShell 관련 콘텐츠") **Windows PowerShell을 사용하여 구독 해제된 구독을 모두 나열합니다.** 다음 PowerShell 스크립트를 사용하여 현재 기본 모드 보고서 서버에서 구독 해제된 구독을 모두 나열합니다. 서버 이름을 업데이트합니다.  
   
 ```  
 #list all disabled subscriptions  
@@ -91,7 +91,7 @@ Write-Host "----------------------------------- ";
 $subscriptions | Where-Object {$_.Active.DisabledByUserSpecified -and $_.Active.DisabledByUser } | select subscriptionid, report, status, lastexecuted,path | format-table -auto  
 ```  
   
- ![PowerShell 관련 콘텐츠](https://docs.microsoft.com/analysis-services/analysis-services/instances/install-windows/media/rs-powershellicon.jpg "PowerShell 관련 콘텐츠") **Windows PowerShell을 사용하여 구독 해제된 구독을 모두 구독 설정합니다.** 다음 PowerShell 스크립트를 사용하여 현재 구독 해제되어 있는 모든 구독을 구독 설정합니다. 서버 이름을 업데이트합니다.  
+ ![PowerShell 관련 콘텐츠](/analysis-services/analysis-services/instances/install-windows/media/rs-powershellicon.jpg "PowerShell 관련 콘텐츠") **Windows PowerShell을 사용하여 구독 해제된 구독을 모두 구독 설정합니다.** 다음 PowerShell 스크립트를 사용하여 현재 구독 해제되어 있는 모든 구독을 구독 설정합니다. 서버 이름을 업데이트합니다.  
   
 ```  
 #enable all subscriptions  
@@ -105,7 +105,7 @@ ForEach ($subscription in $subscriptions)
   
 ```  
   
- ![PowerShell 관련 콘텐츠](https://docs.microsoft.com/analysis-services/analysis-services/instances/install-windows/media/rs-powershellicon.jpg "PowerShell 관련 콘텐츠") **Windows PowerShell을 사용하여 모든 구독을 해제합니다.** 다음 PowerShell 스크립트를 사용하여 구독 해제된 구독을 **모두** 나열합니다.  
+ ![PowerShell 관련 콘텐츠](/analysis-services/analysis-services/instances/install-windows/media/rs-powershellicon.jpg "PowerShell 관련 콘텐츠") **Windows PowerShell을 사용하여 모든 구독을 해제합니다.** 다음 PowerShell 스크립트를 사용하여 구독 해제된 구독을 **모두** 나열합니다.  
   
 ```  
 #DISABLE all subscriptions  
@@ -121,7 +121,7 @@ ForEach ($subscription in $subscriptions)
 ##  <a name="pause-a-shared-schedule"></a><a name="bkmk_pause_schedule"></a> 공유 일정 일시 중지  
  보고서나 구독을 공유 일정에 따라 실행하는 경우 일정을 일시 중지하여 처리를 중단할 수 있습니다. 일정에 따라 진행되는 모든 보고서와 구독 처리는 일정을 다시 시작할 때까지 중단됩니다.  
   
--   **SharePoint 모드:** ![SharePoint 설정:](https://docs.microsoft.com/analysis-services/analysis-services/media/as-sharepoint2013-settings-gear.gif "SharePoint 설정")**사이트 설정**에서 **공유 일정 관리**를 선택합니다. 일정을 선택하고 **선택한 일정 일시 중지**를 클릭합니다.  
+-   **SharePoint 모드:** ![SharePoint 설정:](/analysis-services/analysis-services/media/as-sharepoint2013-settings-gear.gif "SharePoint 설정")**사이트 설정**에서 **공유 일정 관리**를 선택합니다. 일정을 선택하고 **선택한 일정 일시 중지**를 클릭합니다.  
   
 -   **기본 모드:** 웹 포털 화면 상단의 메뉴 모음에서 **설정** 단추 ![설정 단추](media/ssrs-portal-settings-gear.png)를 선택하고 드롭다운 메뉴에서 **사이트 설정**을 선택합니다. **일정** 탭을 선택하여 일정 페이지를 표시합니다. 사용하거나 사용하지 않도록 설정할 일정 옆의 확인란을 선택한 다음 **사용** 또는 **사용 안 함** 단추를 각각 선택하여 원하는 작업을 수행합니다. 상태 열이 그에 따라 "사용 안 함" 또는 "사용"으로 업데이트됩니다.  
   
@@ -177,4 +177,3 @@ ForEach ($subscription in $subscriptions)
  [Reporting Services 보고서 서버&#40;기본 모드&#41;](../../reporting-services/report-server/reporting-services-report-server-native-mode.md)   
  [보고서 서버의 웹 포털(SSRS 기본 모드)](../../reporting-services/web-portal-ssrs-native-mode.md)   
  [보안 개체 항목](../../reporting-services/security/securable-items.md) 
-  

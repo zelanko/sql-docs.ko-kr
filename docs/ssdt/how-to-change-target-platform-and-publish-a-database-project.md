@@ -13,12 +13,12 @@ ms.author: maghan
 ms.reviewer: “”
 ms.custom: seo-lt-2019
 ms.date: 02/09/2017
-ms.openlocfilehash: 1d69b0f2a11afb46e46ff88a49dff12c2037ecca
-ms.sourcegitcommit: 591bbf4c7e4e2092f8abda6a2ffed263cb61c585
+ms.openlocfilehash: c5ee0b9febeec7da287e26a40adcb6910b80991d
+ms.sourcegitcommit: a41e1f4199785a2b8019a419a1f3dcdc15571044
 ms.translationtype: HT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 07/22/2020
-ms.locfileid: "86942469"
+ms.lasthandoff: 10/13/2020
+ms.locfileid: "91987219"
 ---
 # <a name="how-to-change-target-platform-and-publish-a-database-project"></a>방법: 대상 플랫폼 변경 및 데이터베이스 프로젝트 게시
 
@@ -43,7 +43,7 @@ SSDT에서는 대상 플랫폼이 인식되고 코드의 오류(예를 들어 SQ
   
 3.  **오류 목록** 창에 SQL70015: SQL Azure에서는 ‘파일 그룹 참조 및 파티션 구성표’가 지원되지 않습니다.라는 오류가 표시되는지 확인합니다.  
   
-    SSDT에서는 대상 플랫폼에 따라 스크립트의 유효성을 자동으로 검사합니다. 이 예의 경우 SQL Azure에서는 파일 그룹이 지원되지 않으므로 오류가 반환됩니다. SQL Azure에서 지원되지 않는 Transact\-SQL 문 목록은 [부분적으로 지원되는 Transact-SQL 문(Microsoft Azure SQL Database)](https://msdn.microsoft.com/library/ee336267.aspx)을 참조하세요.  
+    SSDT에서는 대상 플랫폼에 따라 스크립트의 유효성을 자동으로 검사합니다. 이 예의 경우 SQL Azure에서는 파일 그룹이 지원되지 않으므로 오류가 반환됩니다. SQL Azure에서 지원되지 않는 Transact\-SQL 문 목록은 [부분적으로 지원되는 Transact-SQL 문(Microsoft Azure SQL Database)](/previous-versions/azure/ee336267(v=azure.100))을 참조하세요.  
   
 4.  `ON` 절을 제거합니다. 오류가 즉시 **오류 목록**에서 사라집니다.  
   
@@ -68,4 +68,3 @@ SSDT에서는 대상 플랫폼이 인식되고 코드의 오류(예를 들어 SQ
 **Microsoft SQL Server 2012를 대상 플랫폼으로 지정하는 프로젝트에서 SQL Server 2008에 대한 호환성 문제가 발생할 수 있음**    Microsoft SQL Server 2012에 도입된 엔터티(예: 시퀀스 개체)가 이러한 프로젝트에 포함되어 있으면 게시 작업이 실패합니다.  
   
 개체 조건자가 새로 만들어진 전체 텍스트 인덱스에서 **CONTAINS** 또는 **FREETEXT**를 사용하고 트랜잭션 스크립트가 사용되는 경우 배포가 실패합니다. 배포 중 트랜잭션 스크립트를 포함하는 옵션을 사용하면 트랜잭션 내에 프로시저 및 보기가 정의되고 배포 스크립트 끝의 트랜잭션 밖에서는 전체 텍스트 인덱스가 정의됩니다. 스크립트의 이러한 순서로 인해 CONTAINS 또는 FREETEXT를 사용하는 프로시저 또는 보기가 전체 텍스트 인덱스에 대해 해결되지 않아 배포 오류가 발생합니다.  
-  

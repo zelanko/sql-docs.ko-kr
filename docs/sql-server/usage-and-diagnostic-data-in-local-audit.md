@@ -14,12 +14,12 @@ ms.assetid: a0665916-7789-4f94-9086-879275802cf3
 author: MashaMSFT
 ms.author: mathoma
 monikerRange: '>=sql-server-2016||=sqlallproducts-allversions'
-ms.openlocfilehash: a212013d950f6a8f39816361b7f9c6209d0fa3e3
-ms.sourcegitcommit: 99f61724de5edf6640efd99916d464172eb23f92
+ms.openlocfilehash: bd75bde9e125ffc99f1af6f382aa91d2f1e0caf7
+ms.sourcegitcommit: a41e1f4199785a2b8019a419a1f3dcdc15571044
 ms.translationtype: HT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 07/28/2020
-ms.locfileid: "87362518"
+ms.lasthandoff: 10/13/2020
+ms.locfileid: "91987289"
 ---
 # <a name="local-audit-for-sql-server-usage-and-diagnostic-data-collection-ceip"></a>SQL Server 사용 현황 및 진단 데이터 수집(CEIP)에 대한 로컬 감사
 
@@ -333,7 +333,7 @@ DBA는 디스크 공간을 너무 많이 사용하지 않도록 디렉터리에�
 
 **이 JSON 출력을 읽는 데 사용하는 클라이언트 또는 도구가 있나요?**
 메모장, Visual Studio 또는 어떤 JSON 판독기든지 사용자가 선택하여 출력을 읽을 수 있습니다.
-또는 JSON 파일을 읽고 아래와 같이 SQL Server 인스턴스에서 데이터를 분석할 수 있습니다. SQL Server에서 JSON 파일을 읽는 방법에 대한 자세한 내용은 [Importing JSON files into SQL Server using OPENROWSET (BULK) and OPENJSON (Transact-SQL)](https://blogs.msdn.microsoft.com/sqlserverstorageengine/2015/10/07/bulk-importing-json-files-into-sql-server/)(OPENROWSET(BULK) 및 OPENJSON(TRANSACT-SQL)를 사용하여 SQL Server로 JSON 파일 가져오기)을 참조하세요.
+또는 JSON 파일을 읽고 아래와 같이 SQL Server 인스턴스에서 데이터를 분석할 수 있습니다. SQL Server에서 JSON 파일을 읽는 방법에 대한 자세한 내용은 [Importing JSON files into SQL Server using OPENROWSET (BULK) and OPENJSON (Transact-SQL)](/archive/blogs/sqlserverstorageengine/bulk-importing-json-files-into-sql-server)(OPENROWSET(BULK) 및 OPENJSON(TRANSACT-SQL)를 사용하여 SQL Server로 JSON 파일 가져오기)을 참조하세요.
 
 ```Transact-SQL
 DECLARE @JSONFile AS VARCHAR(MAX)

@@ -14,12 +14,12 @@ helpviewer_keywords:
 ms.assetid: 675b0e0e-cfee-4790-9675-80fc3ea6d30f
 author: maggiesMSFT
 ms.author: maggies
-ms.openlocfilehash: 0b6618f89ab0bdf31ef71e779a3d69fe675d5e2d
-ms.sourcegitcommit: 216f377451e53874718ae1645a2611cdb198808a
+ms.openlocfilehash: 4e8aca7775191a5a4b0ea6bf1e4269ca2a4b2ea4
+ms.sourcegitcommit: a41e1f4199785a2b8019a419a1f3dcdc15571044
 ms.translationtype: HT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 07/28/2020
-ms.locfileid: "87245740"
+ms.lasthandoff: 10/13/2020
+ms.locfileid: "91987491"
 ---
 #  <a name="reporting-services-backward-compatibility"></a>Reporting Services의 이전 버전과의 호환성
 [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)] [!INCLUDE[ssRSnoversion](../includes/ssrsnoversion-md.md)] 동작의 변경된 내용에 대해 알아봅니다. 더 이상 사용되지 않거나 후속 릴리스에서 제거될 예정인 기능을 포함합니다.
@@ -36,6 +36,5 @@ ms.locfileid: "87245740"
 |[SQL Server 2016에서 SQL Server Reporting Services의 동작 변경](behavior-changes-to-sql-server-reporting-services-in-sql-server-2016.md)|[!INCLUDE[ssRSnoversion](../includes/ssrsnoversion-md.md)]에서 변경된 기능을 설명합니다.|  
   
 ## <a name="see-also"></a>참고 항목  
- [이전 버전과의 호환성 | Analysis Services](https://msdn.microsoft.com/618b6c3a-e20d-47a9-b2c6-6d848dfba05a)  
-  
+ [이전 버전과의 호환성 | Analysis Services](/analysis-services/analysis-services-backward-compatibility?viewFallbackFrom=sql-server-ver15)  
   

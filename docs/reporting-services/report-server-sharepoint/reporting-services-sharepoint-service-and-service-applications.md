@@ -9,12 +9,12 @@ ms.topic: conceptual
 author: maggiesMSFT
 ms.author: maggies
 monikerRange: '>=sql-server-2016 <=sql-server-2016||=sqlallproducts-allversions'
-ms.openlocfilehash: 522d18c5eca3f9200f69b68e3f269ce01212a608
-ms.sourcegitcommit: e8f6c51d4702c0046aec1394109bc0503ca182f0
+ms.openlocfilehash: 1d1a544f300e6e49e5355294a1e0f99515482113
+ms.sourcegitcommit: fe59f8dc27fd633f5dfce54519d6f5dcea577f56
 ms.translationtype: HT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 08/07/2020
-ms.locfileid: "87934232"
+ms.lasthandoff: 10/09/2020
+ms.locfileid: "91934641"
 ---
 # <a name="reporting-services-sharepoint-service-and-service-applications"></a>Reporting Services SharePoint Service 및 서비스 애플리케이션
 
@@ -29,7 +29,7 @@ ms.locfileid: "87934232"
   
 ## <a name="creating-a-reporting-services-service-application"></a>Reporting Services 서비스 애플리케이션 만들기
 
- SharePoint 중앙 관리 또는 PowerShell 스크립트를 사용하여 Reporting Services 서비스 애플리케이션을 만들 수 있습니다. SharePoint 중앙 관리를 사용하는 방법에 대한 자세한 내용은 [SharePoint 2010용 Reporting Services SharePoint 모드 설치](https://docs.microsoft.com/sql/reporting-services/install-windows/install-the-first-report-server-in-sharepoint-mode)에서 "Reporting Services 서비스 애플리케이션 만들기" 섹션을 참조하세요. 서비스 애플리케이션을 만들기 위한 예제 PowerShell 스크립트는 이 항목의 뒷부분에 나오는 PowerShell 섹션을 참조하세요.  
+ SharePoint 중앙 관리 또는 PowerShell 스크립트를 사용하여 Reporting Services 서비스 애플리케이션을 만들 수 있습니다. SharePoint 중앙 관리를 사용하는 방법에 대한 자세한 내용은 [SharePoint 2010용 Reporting Services SharePoint 모드 설치](../install-windows/install-the-first-report-server-in-sharepoint-mode.md)에서 "Reporting Services 서비스 애플리케이션 만들기" 섹션을 참조하세요. 서비스 애플리케이션을 만들기 위한 예제 PowerShell 스크립트는 이 항목의 뒷부분에 나오는 PowerShell 섹션을 참조하세요.  
   
 ## <a name="modify-the-associations-of-the-service-application-with-a-proxy-group"></a>프록시 그룹과 서비스 애플리케이션의 연결 수정
 

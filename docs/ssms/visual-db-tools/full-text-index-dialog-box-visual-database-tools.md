@@ -13,12 +13,12 @@ ms.assetid: ef45b585-2567-4abe-b421-9fd0994e0146
 author: markingmyname
 ms.author: maghan
 ms.reviewer: ''
-ms.openlocfilehash: 566239ac238afb66650c50cd9d96c8fa81d3f70c
-ms.sourcegitcommit: e700497f962e4c2274df16d9e651059b42ff1a10
+ms.openlocfilehash: 68b0546f18d5026caf7e0a141eb58bd62efa2188
+ms.sourcegitcommit: 22dacedeb6e8721e7cdb6279a946d4002cfb5da3
 ms.translationtype: HT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 08/17/2020
-ms.locfileid: "88497146"
+ms.lasthandoff: 10/14/2020
+ms.locfileid: "92034880"
 ---
 # <a name="full-text-index-dialog-box-visual-database-tools"></a>전체 텍스트 인덱스 대화 상자(Visual Database Tools)
 [!INCLUDE[SQL Server Azure SQL Database Synapse Analytics PDW ](../../includes/applies-to-version/sql-asdb-asdbmi-asa-pdw.md)]
@@ -28,7 +28,7 @@ ms.locfileid: "88497146"
 > 전체 텍스트 인덱스를 만들려면 우선 [!INCLUDE[ssManStudioFull](../../includes/ssmanstudiofull-md.md)] 나 엔터프라이즈 관리자와 같은 외부 도구를 사용하여 데이터베이스의 전체 텍스트 카탈로그를 만들어야 합니다.  
 > 
 > [!NOTE]
-> [!INCLUDE[msCoName](../../includes/msconame_md.md)][!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]의 일부 버전에서는 전체 텍스트 인덱스 기능을 사용할 수 없습니다. [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]버전에서 지원되는 기능 목록은 [SQL Server 2012 버전에서 지원하는 기능](https://msdn.microsoft.com/5da61ff5-12b9-48e6-b3c8-0dacca1751c4)을 참조하세요.  
+> [!INCLUDE[msCoName](../../includes/msconame_md.md)][!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]의 일부 버전에서는 전체 텍스트 인덱스 기능을 사용할 수 없습니다. [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]버전에서 지원되는 기능 목록은 [SQL Server 2012 버전에서 지원하는 기능](../../sql-server/editions-and-components-of-sql-server-2016.md)을 참조하세요.  
   
 ## <a name="options"></a>옵션  
 **선택한 전체 텍스트 인덱스**  
@@ -95,6 +95,5 @@ ms.locfileid: "88497146"
 현재 데이터베이스에서 고유한 단일 열 인덱스가 있는 열의 이름에 대한 전체 목록을 표시합니다. 이러한 열은 전체 텍스트 인덱스를 만드는 데 사용할 수 있습니다.  
   
 ## <a name="see-also"></a>참고 항목  
-[전체 텍스트 인덱싱 마법사 사용](https://msdn.microsoft.com/3e9d9605-6525-4781-9168-fdaa06db3459)  
-[CREATE FULLTEXT INDEX(Transact-SQL)](https://msdn.microsoft.com/8b80390f-5f8b-4e66-9bcc-cabd653c19fd)  
-  
+[전체 텍스트 인덱싱 마법사 사용](../../relational-databases/search/use-the-full-text-indexing-wizard.md)  
+[CREATE FULLTEXT INDEX(Transact-SQL)](../../t-sql/statements/create-fulltext-index-transact-sql.md)  

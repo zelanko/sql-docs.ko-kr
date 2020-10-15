@@ -9,12 +9,12 @@ ms.topic: conceptual
 ms.assetid: 70a38879-856c-414b-8479-5f9dead38f15
 author: maggiesMSFT
 ms.author: maggies
-ms.openlocfilehash: ae3ae4b181ee6b3308bcbe5bcfc4af1ca370c974
-ms.sourcegitcommit: f0772f614482e0b3cde3609e178689ce62ca3a19
+ms.openlocfilehash: e1c2094a4ee16d33c6e076440e56a55434b2347a
+ms.sourcegitcommit: a41e1f4199785a2b8019a419a1f3dcdc15571044
 ms.translationtype: HT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 06/09/2020
-ms.locfileid: "84548025"
+ms.lasthandoff: 10/13/2020
+ms.locfileid: "91987189"
 ---
 # <a name="create-delete-or-modify-a-folder---reporting-services"></a>폴더 만들기, 삭제 또는 수정 - Reporting Services
   폴더를 만들어 보고서 서버에 게시하는 항목을 구성하고 관리할 수 있습니다. 폴더를 만들면 관심 있는 보고서를 찾는 데 도움이 될 수 있습니다. 내용 관리자의 경우 폴더는 사용 권한을 적용하는 프레임워크를 제공합니다. 개발 중인 보고서나 배포되면 안 되는 보고서에 대한 액세스를 제한하기 위해 특정 폴더에 역할 할당을 만들 수 있습니다.  
@@ -23,7 +23,7 @@ ms.locfileid: "84548025"
 
 ## <a name="to-create-a-folder"></a>폴더를 만들려면  
   
-1.  [보고서 관리자&#40;SSRS 기본 모드&#41;](https://msdn.microsoft.com/library/80949f9d-58f5-48e3-9342-9e9bf4e57896)를 시작합니다.  
+1.  [보고서 관리자&#40;SSRS 기본 모드&#41;](../web-portal-ssrs-native-mode.md)를 시작합니다.  
   
 2.  보고서 관리자에서 홈 폴더를 선택하고 **새 폴더**를 클릭합니다. 또는 기존 폴더 아래에 폴더를 만들려면 **내용** 페이지에서 해당 폴더로 이동한 후 폴더를 클릭하여 엽니다. 그런 후 **새 폴더**를 클릭합니다.  
   

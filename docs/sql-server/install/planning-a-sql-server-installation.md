@@ -12,12 +12,12 @@ helpviewer_keywords:
 ms.assetid: b1d56f2f-603f-48f2-b902-c715f14a6db9
 author: markingmyname
 ms.author: maghan
-ms.openlocfilehash: ce94f99ac38a6d87dfc39a9ba01ad672f1cd70a0
-ms.sourcegitcommit: f7ac1976d4bfa224332edd9ef2f4377a4d55a2c9
+ms.openlocfilehash: 0197c453f2eaeda872eac7ec639fdb56eb7545ce
+ms.sourcegitcommit: a41e1f4199785a2b8019a419a1f3dcdc15571044
 ms.translationtype: HT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 07/02/2020
-ms.locfileid: "85902302"
+ms.lasthandoff: 10/13/2020
+ms.locfileid: "91987109"
 ---
 # <a name="planning-a-sql-server-installation"></a>SQL Server 설치 계획
 [!INCLUDE [SQL Server Windows Only - ASDBMI ](../../includes/applies-to-version/sql-windows-only-asdbmi.md)]
@@ -75,7 +75,7 @@ ms.locfileid: "85902302"
  [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 설치 설명서 중 이 섹션에서는 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 장애 조치(failover) 클러스터를 설치 및 구성하는 방법에 대해 설명합니다.  
   
 ## <a name="see-also"></a>참고 항목  
- [명령 프롬프트에서 SQL Server 설치](../../database-engine/install-windows/install-sql-server-2016-from-the-command-prompt.md)   
+ [명령 프롬프트에서 SQL Server 설치](../../database-engine/install-windows/install-sql-server-from-the-command-prompt.md)   
  [고가용성 솔루션&#40;SQL Server&#41;](../../database-engine/sql-server-business-continuity-dr.md)   
  [장애 조치(Failover) 클러스터링을 설치하기 전에](../../sql-server/failover-clusters/install/before-installing-failover-clustering.md)   
- [설치 마법사를 사용하여 SQL Server 업그레이드&#40;설치 프로그램&#41;](../../database-engine/install-windows/upgrade-sql-server-using-the-installation-wizard-setup.md)  
+ [설치 마법사를 사용하여 SQL Server 업그레이드&#40;설치 프로그램&#41;](../../database-engine/install-windows/upgrade-sql-server-using-the-installation-wizard-setup.md)

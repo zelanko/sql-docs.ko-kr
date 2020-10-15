@@ -8,12 +8,12 @@ ms.topic: conceptual
 author: MightyPen
 ms.author: genemi
 monikerRange: =azuresqldb-current||=azuresqldb-mi-current||=azure-sqldw-latest||>=aps-pdw-2016||>=sql-server-linux-2017||>=sql-server-2016||=sqlallproducts-allversions
-ms.openlocfilehash: e4bdddf08a1d9b276b4e4714d75a0a231560ef19
-ms.sourcegitcommit: e700497f962e4c2274df16d9e651059b42ff1a10
+ms.openlocfilehash: d0a851a8f2374740f9a6cfe9d1ae6db5f2ee113e
+ms.sourcegitcommit: a41e1f4199785a2b8019a419a1f3dcdc15571044
 ms.translationtype: HT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 08/17/2020
-ms.locfileid: "88373169"
+ms.lasthandoff: 10/13/2020
+ms.locfileid: "91987249"
 ---
 # <a name="versioning-system-for-sql-documentation"></a>SQL 설명서용 버전 관리 시스템
 
@@ -159,17 +159,17 @@ _최신_ 버전은 아직 완전히 릴리스되지 않았으며 _미리 보기_
 
 - _2012 및 이전 버전:_ &nbsp; 버전 관리 시스템은 SQL Server 2012 이전 버전에는 사용되지 않습니다.
     - **SQL Server - 이전**의 특별한 모니커는 거의 모든 문서를 숨기기 위한 것입니다. 드물지만 예외적으로 이전 버전의 고객에게 한 번만 필요할 수 있는 아티클도 일부 있습니다.
-    - [SQL Server 이전 버전, 2012-2005](../toc/previous-versions-sql-server.md)
+    - [SQL Server 이전 버전, 2012-2005](./previous-versions-sql-server.md)
 
 - _2014:_ &nbsp; 버전 관리 시스템은 SQL Server 2014에서는 절반 정도 구현됩니다. 버전 관리 컨트롤에서 SQL Server 2014를 선택할 수 있으며 문제없이 작동합니다. 그러나 기본적으로 2014용 파일은 2014 전용이고, 마찬가지로 2008용 파일도 2008 전용입니다.
-    - [SQL Server 2014 오프라인 설명서](/sql/sql-server/sql-server-offline-documentation)
+    - [SQL Server 2014 오프라인 설명서](./sql-server-offline-documentation.md)
 
 - _2016 이상:_ &nbsp; 버전 관리 시스템은 SQL Server 2016 이상 버전에 대해 완전히 구현됩니다.
-    - [SQL Server 설명서 2016 이상 시작](/sql/sql-server/?view=sql-server-2016&preserve-view=true)
+    - [SQL Server 설명서 2016 이상 시작](./index.yml?preserve-view=true&view=sql-server-2016)
     - [SQL Server 2016 오프라인 설명서](sql-server-offline-documentation.md)
 
 ## <a name="see-also"></a>참고 항목
 
-[SQL Server 이전 버전, 2014-2005](../toc/previous-versions-sql-server.md)  
+[SQL Server 이전 버전, 2014-2005](./previous-versions-sql-server.md)  
 [SQL Server 설명서 탐색 가이드](sql-docs-navigation-guide.md)  
-[SQL Server 설명서에 기여하는 방법](sql-server-docs-contribute.md)  
+[SQL Server 설명서에 기여하는 방법](sql-server-docs-contribute.md)

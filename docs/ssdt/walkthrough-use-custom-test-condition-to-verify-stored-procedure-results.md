@@ -10,12 +10,12 @@ ms.author: maghan
 ms.reviewer: “”
 ms.custom: seo-lt-2019
 ms.date: 02/09/2017
-ms.openlocfilehash: 296e9220c4c8b0518bba5a7587cf3a69fcecae06
-ms.sourcegitcommit: f7ac1976d4bfa224332edd9ef2f4377a4d55a2c9
+ms.openlocfilehash: 738ff14a43dd473abeab0c02ef206417675a7fb9
+ms.sourcegitcommit: a41e1f4199785a2b8019a419a1f3dcdc15571044
 ms.translationtype: HT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 07/02/2020
-ms.locfileid: "85882889"
+ms.lasthandoff: 10/13/2020
+ms.locfileid: "91987697"
 ---
 # <a name="walkthrough-using-a-custom-test-condition-to-verify-the-results-of-a-stored-procedure"></a>연습: 사용자 지정 테스트 조건을 사용하여 저장 프로시저 결과 확인
 
@@ -35,7 +35,7 @@ ms.locfileid: "85882889"
   
 -   새 테스트 조건 테스트  
   
-이 연습을 완료하려면 최신 버전의 SQL Server Data Tools가 포함된 Visual Studio 2010 또는 Visual Studio 2012가 있어야 합니다. 자세한 내용은 [SQL Server Data Tools 설치](../ssdt/install-sql-server-data-tools.md)를 참조하세요.  
+이 연습을 완료하려면 최신 버전의 SQL Server Data Tools가 포함된 Visual Studio 2010 또는 Visual Studio 2012가 있어야 합니다. 자세한 내용은 [SQL Server Data Tools 설치](./download-sql-server-data-tools-ssdt.md)를 참조하세요.  
   
 ## <a name="creating-a-custom-test-condition"></a>사용자 지정 테스트 조건 만들기  
 먼저 클래스 라이브러리를 만듭니다.  
@@ -95,7 +95,7 @@ ms.locfileid: "85882889"
     **솔루션 탐색기**에서 프로젝트의 **참조** 노드 아래에 필요한 참조가 표시됩니다.  
   
 ## <a name="creating-the-resultsetcolumncountcondition-class"></a>ResultSetColumnCountCondition 클래스 만들기  
-이제 이름 **Class1**을 **ResultSetColumnCountCondition**으로 바꾸고 [testcondition](https://msdn.microsoft.com/library/microsoft.data.tools.schema.sql.unittesting.conditions.testcondition(v=vs.103).aspx)에서 파생시킵니다. **ResultSetColumnCountCondition** 클래스는 결과 집합에 반환된 열 수를 확인하는 간단한 테스트 조건입니다. 이 조건을 사용하여 저장 프로시저에 대한 계약이 올바른지 확인할 수 있습니다.  
+이제 이름 **Class1**을 **ResultSetColumnCountCondition**으로 바꾸고 [testcondition](/previous-versions/sql/sql-server-data-tools/jj856583(v=vs.103))에서 파생시킵니다. **ResultSetColumnCountCondition** 클래스는 결과 집합에 반환된 열 수를 확인하는 간단한 테스트 조건입니다. 이 조건을 사용하여 저장 프로시저에 대한 계약이 올바른지 확인할 수 있습니다.  
   
 1.  **솔루션 탐색기**에서 Class1.cs를 마우스 오른쪽 단추로 클릭하고 **이름 바꾸기**를 클릭한 후 **ResultSetColumnCountCondition.cs**를 입력합니다.  
   
@@ -115,13 +115,13 @@ ms.locfileid: "85882889"
         public class ResultSetColumnCountCondition  
     ```  
   
-4.  [testcondition](https://msdn.microsoft.com/library/microsoft.data.tools.schema.sql.unittesting.conditions.testcondition(v=vs.103).aspx)에서 클래스를 파생시킵니다.  
+4.  [testcondition](/previous-versions/sql/sql-server-data-tools/jj856583(v=vs.103))에서 클래스를 파생시킵니다.  
   
     ```  
     public class ResultSetColumnCountCondition : TestCondition  
     ```  
   
-5.  [ExportTestConditionAttribute](https://msdn.microsoft.com/library/microsoft.data.tools.schema.sql.unittesting.conditions.exporttestconditionattribute(v=vs.103).aspx)를 추가합니다. [방법: SQL Server 단위 테스트 디자이너용 테스트 조건 만들기](../ssdt/how-to-create-test-conditions-for-the-sql-server-unit-test-designer.md)를 참조하세요.  
+5.  [ExportTestConditionAttribute](/previous-versions/sql/sql-server-data-tools/jj856578(v=vs.103))를 추가합니다. [방법: SQL Server 단위 테스트 디자이너용 테스트 조건 만들기](../ssdt/how-to-create-test-conditions-for-the-sql-server-unit-test-designer.md)를 참조하세요.  
   
     ```  
     [ExportTestCondition("ResultSet Column Count", typeof(ResultSetColumnCountCondition))]  
@@ -404,4 +404,3 @@ namespace ColumnCountCondition
   
 ## <a name="see-also"></a>참고 항목  
 [SQL Server 단위 테스트의 사용자 지정 테스트 조건](../ssdt/custom-test-conditions-for-sql-server-unit-tests.md)  
-  

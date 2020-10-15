@@ -13,12 +13,12 @@ helpviewer_keywords:
 ms.assetid: 6b46db51-7c30-467d-a251-50f50647fe21
 author: maggiesMSFT
 ms.author: maggies
-ms.openlocfilehash: cb514f5580545c43752911257546d97bc67426d3
-ms.sourcegitcommit: e700497f962e4c2274df16d9e651059b42ff1a10
+ms.openlocfilehash: 0c0929f82f7f9a086fa58856b6e1357807c198f7
+ms.sourcegitcommit: a41e1f4199785a2b8019a419a1f3dcdc15571044
 ms.translationtype: HT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 08/17/2020
-ms.locfileid: "88454525"
+ms.lasthandoff: 10/13/2020
+ms.locfileid: "91987397"
 ---
 # <a name="role-definitions---predefined-roles"></a>역할 정의 - 미리 정의된 역할
 [!INCLUDE[ssRSnoversion](../../includes/ssrsnoversion-md.md)] 는 보고서 서버 작업에 대한 액세스 권한을 부여하는 데 사용할 수 있는 미리 정의된 역할과 함께 설치됩니다. 미리 정의된 각 역할은 관련 태스크 모음을 설명합니다. 미리 정의된 역할에 그룹 및 사용자 계정을 할당하여 보고서 서버 작업에 즉시 액세스하도록 할 수 있습니다.  
@@ -56,15 +56,15 @@ ms.locfileid: "88454525"
 ### <a name="content-manager-tasks"></a>내용 관리자 태스크  
  다음 표에서는 **내용 관리자** 역할에 포함되는 태스크를 나열합니다.  
   
-|Task|설명|  
+|Task|Description|  
 |----------|-----------------|  
 |보고서 사용|보고서 정의를 읽습니다.|  
 |링크된 보고서 만들기|링크되지 않은 보고서를 기반으로 하는 링크된 보고서를 만듭니다.|  
-|모든 구독 관리|구독의 소유자에 관계없이 보고서 및 링크된 보고서에 대한 모든 구독을 확인하고, 수정하고, 삭제합니다. 이 태스크는 데이터 기반 구독 만들기를 지원합니다. 또한 [Power BI Report Server에서 Power BI(.pbix) 파일에 대한 예약된 새로 고침](https://docs.microsoft.com/power-bi/report-server/configure-scheduled-refresh) 편집 및 실행도 지원합니다.|  
+|모든 구독 관리|구독의 소유자에 관계없이 보고서 및 링크된 보고서에 대한 모든 구독을 확인하고, 수정하고, 삭제합니다. 이 태스크는 데이터 기반 구독 만들기를 지원합니다. 또한 [Power BI Report Server에서 Power BI(.pbix) 파일에 대한 예약된 새로 고침](/power-bi/report-server/configure-scheduled-refresh) 편집 및 실행도 지원합니다.|  
 |데이터 원본 관리|공유 데이터 원본 항목을 만들고 삭제하며 데이터 원본 속성과 내용을 확인하고 수정합니다.|  
 |폴더 관리|폴더를 만들고, 확인하고, 삭제하며 폴더 속성을 확인하고 수정합니다.|  
 |모델 관리|모델을 만들고, 확인하고, 삭제하며 모델 속성을 확인하고 수정합니다.|  
-|개별 구독 관리|보고서 및 링크된 보고서에 대한 사용자 소유의 구독을 만들고, 확인하고, 수정하고, 삭제합니다. 이 태스크는 [Power BI Report Server에서 Power BI(.pbix) 파일에 대한 예약된 새로 고침](https://docs.microsoft.com/power-bi/report-server/configure-scheduled-refresh) 편집 및 실행도 지원합니다.|  
+|개별 구독 관리|보고서 및 링크된 보고서에 대한 사용자 소유의 구독을 만들고, 확인하고, 수정하고, 삭제합니다. 이 태스크는 [Power BI Report Server에서 Power BI(.pbix) 파일에 대한 예약된 새로 고침](/power-bi/report-server/configure-scheduled-refresh) 편집 및 실행도 지원합니다.|  
 |보고서 기록 관리|보고서 기록을 만들고, 확인하고, 삭제하며 보고서 기록 속성을 확인하고 스냅샷 기록 제한 및 캐싱 동작 방법을 결정하는 설정을 확인하고 수정합니다.|  
 |보고서 관리|보고서를 추가 및 삭제하고, 보고서 매개 변수를 수정하고, 보고서 속성을 확인 및 수정하고, 보고서에 내용을 제공하는 데이터 원본을 확인 및 수정하고, 보고서 정의를 확인 및 수정하고, 보고서 수준의 보안 정책을 설정합니다.|  
 |리소스 관리|리소스를 만들고, 수정하고, 삭제하며 리소스 속성을 확인하고 수정합니다.|  
@@ -134,7 +134,7 @@ ms.locfileid: "88454525"
 ### <a name="report-builder-tasks"></a>보고서 작성기 작업  
  다음 표에서는 **보고서 작성기** 역할에 포함되는 태스크에 대해 설명합니다.  
   
-|Task|설명|  
+|Task|Description|  
 |----------|-----------------|  
 |보고서 사용|보고서 정의를 읽습니다.|  
 |보고서 보기|보고서를 실행하고 보고서 속성을 봅니다.|  
@@ -216,4 +216,3 @@ ms.locfileid: "88454525"
 [역할 할당 수정 또는 삭제 &#40;SSRS 웹 포털&#41;](../../reporting-services/security/role-assignments-modify-or-delete.md)  
 [기본 모드 보고서 서버에 대한 사용 권한 부여](../../reporting-services/security/granting-permissions-on-a-native-mode-report-server.md)  
 [작업 및 사용 권한](../../reporting-services/security/tasks-and-permissions.md)
-  

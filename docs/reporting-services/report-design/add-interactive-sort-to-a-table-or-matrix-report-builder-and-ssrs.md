@@ -12,12 +12,12 @@ f1_keywords:
 ms.assetid: 05819637-729b-4cf6-82de-91a99f184ec6
 author: maggiesMSFT
 ms.author: maggies
-ms.openlocfilehash: d33cab9f1805652501f9d65cfeb06e47dc444733
-ms.sourcegitcommit: 93e4fd75e8fe0cc85e7949c9adf23b0e1c275465
+ms.openlocfilehash: 7674b05ba6c1fb5de836ed3b767e6653cbdc51cf
+ms.sourcegitcommit: fe59f8dc27fd633f5dfce54519d6f5dcea577f56
 ms.translationtype: HT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 06/01/2020
-ms.locfileid: "84255516"
+ms.lasthandoff: 10/09/2020
+ms.locfileid: "91933290"
 ---
 # <a name="add-interactive-sort-to-a-table-or-matrix-report-builder-and-ssrs"></a>테이블 또는 행렬에 대화형 정렬 추가(보고서 작성기 및 SSRS)
   대화형 정렬 단추를 추가하면 사용자가 테이블 및 행렬에서 행 및 열의 정렬 순서를 변경할 수 있습니다. 이 기능은 HTML처럼 사용자 상호 작용을 지원하는 랜더링 형식에서만 지원됩니다.  
@@ -61,7 +61,7 @@ ms.locfileid: "84255516"
   
  정렬 동작을 확인하려면 **실행** 을 클릭하여 보고서를 미리 본 후 대화형 정렬 단추를 클릭합니다.  
   
- ![맨 위로 이동 링크와 함께 사용되는 화살표 아이콘](https://docs.microsoft.com/analysis-services/analysis-services/instances/media/uparrow16x16.gif "맨 위로 이동 링크와 함께 사용되는 화살표 아이콘") [맨 위로 이동](#BackToTop)  
+ ![맨 위로 이동 링크와 함께 사용되는 화살표 아이콘](/analysis-services/analysis-services/instances/media/uparrow16x16.gif "맨 위로 이동 링크와 함께 사용되는 화살표 아이콘") [맨 위로 이동](#BackToTop)  
   
 ##  <a name="sorting-a-top-level-parent-row-group-for-a-table-or-matrix"></a><a name="SortingTopLevelParent"></a> 테이블 또는 행렬의 최상위 부모 행 그룹 정렬  
  대화형 정렬 단추를 열 머리글에 추가하면 사용자가 열 머리글을 클릭하고 테이블 또는 행렬의 해당 열에 표시된 값을 기준으로 부모 그룹 행을 정렬할 수 있습니다. 자식 그룹의 순서는 변경되지 않고 그대로 유지됩니다.  
@@ -85,7 +85,7 @@ ms.locfileid: "84255516"
   
  정렬 동작을 확인하려면 **실행** 을 클릭하여 보고서를 미리 본 후 대화형 정렬 단추를 클릭합니다.  
   
- ![맨 위로 이동 링크와 함께 사용되는 화살표 아이콘](https://docs.microsoft.com/analysis-services/analysis-services/instances/media/uparrow16x16.gif "맨 위로 이동 링크와 함께 사용되는 화살표 아이콘") [맨 위로 이동](#BackToTop)  
+ ![맨 위로 이동 링크와 함께 사용되는 화살표 아이콘](/analysis-services/analysis-services/instances/media/uparrow16x16.gif "맨 위로 이동 링크와 함께 사용되는 화살표 아이콘") [맨 위로 이동](#BackToTop)  
   
 ##  <a name="sorting-child-groups-or-detail-rows-for-a-group"></a><a name="SortingChildGroups"></a> 그룹의 자식 그룹 또는 정보 행 정렬  
  대화형 정렬 단추를 그룹 머리글 행에 추가하면 사용자가 부모 그룹의 자식 그룹 값을 정렬하거나 가장 안쪽에 있는 자식 그룹의 정보 행을 정렬할 수 있습니다.  
@@ -108,7 +108,7 @@ ms.locfileid: "84255516"
   
  정렬 동작을 확인하려면 **실행** 을 클릭하여 보고서를 미리 본 후 대화형 정렬 단추를 클릭합니다.  
   
- ![맨 위로 이동 링크와 함께 사용되는 화살표 아이콘](https://docs.microsoft.com/analysis-services/analysis-services/instances/media/uparrow16x16.gif "맨 위로 이동 링크와 함께 사용되는 화살표 아이콘") [맨 위로 이동](#BackToTop)  
+ ![맨 위로 이동 링크와 함께 사용되는 화살표 아이콘](/analysis-services/analysis-services/instances/media/uparrow16x16.gif "맨 위로 이동 링크와 함께 사용되는 화살표 아이콘") [맨 위로 이동](#BackToTop)  
   
 ##  <a name="sorting-rows-based-on-a-complex-group-expression"></a><a name="SortingMultipleRowGroups"></a> 복잡한 그룹 식을 기준으로 행 정렬  
  대화형 정렬 단추를 열 머리글에 추가하면 사용자가 열 머리글을 클릭하고 결합된 부모 및 자식 그룹을 정렬할 수 있습니다. 이러한 결과를 얻으려면 그룹 식을 두 그룹의 복합 형태로 변경해야 합니다. 예를 들어 상점에 대한 행렬에 색 및 크기로 그룹화된 품목의 총 재고량이 표시된다고 가정하겠습니다. 색 및 크기 각각에 대해 별도의 그룹을 만들지 않고 색 및 크기의 조합을 기준으로 행을 정렬하려면 색 및 크기의 조합을 기준으로 그룹을 정의할 수 있습니다. 그룹 식을 정의하는 방법에 대한 자세한 내용은 [그룹 식 예&#40;보고서 작성기 및 SSRS&#41;](../../reporting-services/report-design/group-expression-examples-report-builder-and-ssrs.md)를 참조하세요.  
@@ -165,7 +165,7 @@ ms.locfileid: "84255516"
   
  정렬 동작을 확인하려면 **실행** 을 클릭하여 보고서를 미리 본 후 대화형 정렬 단추를 클릭합니다. 각 값이 고유의 열로 표시되기는 하지만 그룹 식의 결합된 값을 기준으로 행렬이 정렬됩니다.  
   
- ![맨 위로 이동 링크와 함께 사용되는 화살표 아이콘](https://docs.microsoft.com/analysis-services/analysis-services/instances/media/uparrow16x16.gif "맨 위로 이동 링크와 함께 사용되는 화살표 아이콘") [맨 위로 이동](#BackToTop)  
+ ![맨 위로 이동 링크와 함께 사용되는 화살표 아이콘](/analysis-services/analysis-services/instances/media/uparrow16x16.gif "맨 위로 이동 링크와 함께 사용되는 화살표 아이콘") [맨 위로 이동](#BackToTop)  
   
 ##  <a name="synchronizing-sort-order-for-multiple-data-regions"></a><a name="SynchronizingSortOrder"></a> 여러 데이터 영역에 대한 정렬 순서 동기화  
  대화형 정렬 단추를 추가하면 사용자가 한 개의 정렬 단추를 클릭하여 여러 데이터 영역을 정렬할 수 있습니다. 대화형 정렬 단추를 만들 때 동일한 보고서 데이터 세트를 기반으로 여러 데이터 영역에 대한 정렬을 동기화할지 여부를 지정할 수 있습니다. 예를 들어 보고서에는 행렬과 그래픽으로 데이터를 표시하는 차트가 포함될 수 있습니다. 사용자가 행렬에서 행의 정렬 순서를 변경하면 차트도 자동으로 동일한 정렬 순서로 표시됩니다.  
@@ -214,12 +214,11 @@ ms.locfileid: "84255516"
   
  정렬 동작을 확인하려면 **실행** 을 클릭하여 보고서를 미리 본 후 대화형 정렬 단추를 클릭합니다. 각 값이 고유의 열로 표시되기는 하지만 그룹 식의 결합된 값을 기준으로 행렬이 정렬됩니다.  
   
- ![맨 위로 이동 링크와 함께 사용되는 화살표 아이콘](https://docs.microsoft.com/analysis-services/analysis-services/instances/media/uparrow16x16.gif "맨 위로 이동 링크와 함께 사용되는 화살표 아이콘") [맨 위로 이동](#BackToTop)  
+ ![맨 위로 이동 링크와 함께 사용되는 화살표 아이콘](/analysis-services/analysis-services/instances/media/uparrow16x16.gif "맨 위로 이동 링크와 함께 사용되는 화살표 아이콘") [맨 위로 이동](#BackToTop)  
   
 ## <a name="see-also"></a>참고 항목  
  [데이터 필터링, 그룹화 및 정렬&#40;보고서 작성기 및 SSRS&#41;](../../reporting-services/report-design/filter-group-and-sort-data-report-builder-and-ssrs.md)   
  [대화형 정렬&#40;보고서 작성기 및 SSRS&#41;](../../reporting-services/report-design/interactive-sort-report-builder-and-ssrs.md)   
  [데이터 영역의 데이터 정렬&#40;보고서 작성기 및 SSRS&#41;](../../reporting-services/report-design/sort-data-in-a-data-region-report-builder-and-ssrs.md)   
  [테이블릭스 데이터 영역의 유연성 살펴보기&#40;보고서 작성기 및 SSRS&#41;](../../reporting-services/report-design/exploring-the-flexibility-of-a-tablix-data-region-report-builder-and-ssrs.md)  
-  
   

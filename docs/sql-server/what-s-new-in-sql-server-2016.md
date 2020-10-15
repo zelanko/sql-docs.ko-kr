@@ -17,12 +17,12 @@ helpviewer_keywords:
 ms.assetid: 6a428023-e3cc-4626-a88a-4c13ccbd7db0
 author: MikeRayMSFT
 ms.author: mikeray
-ms.openlocfilehash: e7fa3484063a5d57de1540e54454b674d8d687c9
-ms.sourcegitcommit: 205de8fa4845c491914902432791bddf11002945
+ms.openlocfilehash: 24cf362c711abd450533b218c699fc7f2bc1dd18
+ms.sourcegitcommit: a41e1f4199785a2b8019a419a1f3dcdc15571044
 ms.translationtype: HT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 07/23/2020
-ms.locfileid: "86967554"
+ms.lasthandoff: 10/13/2020
+ms.locfileid: "91987259"
 ---
 # <a name="whats-new-in-sql-server-2016"></a>SQL Server 2016의 새로운 기능
 [!INCLUDE [SQL Server 2016](../includes/applies-to-version/sqlserver2016.md)]    
@@ -59,10 +59,10 @@ SQL Server 2016 Analysis Services는 **1200 호환성 수준**을 기준으로 �
 - 새 **데이터베이스 일관성 검사기(DBCC)** 는 잠재적 데이터 손상 문제를 감지하기 위해 내부적으로 실행됩니다.
 - **직접 쿼리**는 라이브 외부 데이터를 먼저 가져오는 대신 쿼리하며 이제 Azure SQL, Oracle 및 Teradata를 비롯한 더 많은 데이터 원본을 지원합니다. 
 - 다양한 새 **DAX(Data Access Expressions) 기능**이 있습니다.
-- 새 **[Microsoft.AnalysisServices.Tabular](https://msdn.microsoft.com/library/microsoft.analysisservices.tabular.aspx)** 네임스페이스는 테이블 형식 모드 인스턴스 및 모델을 관리합니다. 
-- [Analysis Services Management Objects(AMO)](https://msdn.microsoft.com/library/mt436122.aspx)가 두 번째 어셈블리인 **Microsoft.AnalysisServices.Core.dll**을 포함하도록 리팩터링되었습니다.
+- 새 **[Microsoft.AnalysisServices.Tabular](/dotnet/api/microsoft.analysisservices.tabular)** 네임스페이스는 테이블 형식 모드 인스턴스 및 모델을 관리합니다. 
+- [Analysis Services Management Objects(AMO)](/dotnet/api/)가 두 번째 어셈블리인 **Microsoft.AnalysisServices.Core.dll**을 포함하도록 리팩터링되었습니다.
 
-[Analysis Services 엔진(SSAS)](https://docs.microsoft.com/analysis-services/what-s-new-in-analysis-services)을 참조하세요. 
+[Analysis Services 엔진(SSAS)](/analysis-services/what-s-new-in-analysis-services)을 참조하세요. 
 
 ## <a name="sql-server-2016-integration-services-ssis"></a>SQL Server 2016 Integration Services(SSIS)
 - **Always On 가용성 그룹** 지원
@@ -97,13 +97,13 @@ Microsoft가 이 릴리스에서 Reporting Services를 완전히 개선했습니
 [Reporting Services(SSRS)](../reporting-services/what-s-new-in-sql-server-reporting-services-ssrs.md)를 참조하세요.
 
 ## <a name="next-steps"></a>다음 단계   
-- [SQL Server 설치](../database-engine/install-windows/installation-for-sql-server-2016.md)   
+- [SQL Server 설치](../database-engine/install-windows/install-sql-server.md)   
 - [SQL Server 2016 릴리스 정보](../sql-server/sql-server-2016-release-notes.md) 
 - [SQL Server 2016 데이터시트](https://download.microsoft.com/download/C/5/3/C53C3AEF-653C-4598-8721-D522E8AC6A3A/SQL_Server_2016_Everything_Built-In_Datasheet_EN_US.pdf)
-- [SQL Server 버전에서 지원하는 기능](https://msdn.microsoft.com/library/cc645993.aspx)
+- [SQL Server 버전에서 지원하는 기능](./editions-and-components-of-sql-server-2016.md)
 - [SQL Server 2016 설치를 위한 하드웨어 및 소프트웨어 요구 사항](../sql-server/install/hardware-and-software-requirements-for-installing-sql-server.md)
 - [설치 마법사에서 SQL Server 2016 설치](../database-engine/install-windows/install-sql-server-from-the-installation-wizard-setup.md)
-- [설치 및 서비스 설치](https://msdn.microsoft.com/library/6df72a78-6b36-4bc1-948e-04b4ebe46094)
+- [설치 및 서비스 설치](../database-engine/install-windows/install-sql-server-servicing-updates.md)
 - [새 SQL PowerShell 모듈](https://blogs.technet.microsoft.com/dataplatforminsider/2016/06/30/sql-powershell-july-2016-update/)
 
 [!INCLUDE[get-help-options](../includes/paragraph-content/get-help-options.md)]

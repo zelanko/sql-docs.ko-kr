@@ -15,12 +15,12 @@ helpviewer_keywords:
 ms.assetid: 8e255792-d9ef-496f-a26c-9e969c1209a0
 author: maggiesMSFT
 ms.author: maggies
-ms.openlocfilehash: 634a033c06b2ed6815e32cf97829118dafa13b5f
-ms.sourcegitcommit: ff82f3260ff79ed860a7a58f54ff7f0594851e6b
+ms.openlocfilehash: 809d11c82a9b09a23590592ec3f7b433e3c9ca43
+ms.sourcegitcommit: a41e1f4199785a2b8019a419a1f3dcdc15571044
 ms.translationtype: HT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 03/29/2020
-ms.locfileid: "79510124"
+ms.lasthandoff: 10/13/2020
+ms.locfileid: "91986659"
 ---
 # <a name="limit-report-history---reporting-services"></a>보고서 기록 제한 - Reporting Services
   보고서 기록은 시간에 따라 만든 보고서 스냅샷의 모음입니다. 요청 시 보고서 기록을 만들거나 스냅샷이 만들어져 보고서 기록에 추가되는 빈도를 예약할 수 있습니다.  
@@ -45,11 +45,11 @@ ms.locfileid: "79510124"
   
 3.  **기록** 탭을 클릭합니다.  
   
-4.  보고서에 대한 옵션을 선택하고 **적용**을 클릭합니다. 각 옵션에 대한 자세한 내용은 [스냅샷 옵션 속성 페이지&#40;보고서 관리자&#41;](https://msdn.microsoft.com/library/f6641f59-5267-4f57-8957-63b93d1a9679)를 참조하세요.  
+4.  보고서에 대한 옵션을 선택하고 **적용**을 클릭합니다. 각 옵션에 대한 자세한 내용은 [스냅샷 옵션 속성 페이지&#40;보고서 관리자&#41;](/previous-versions/sql/sql-server-2016/ms189952(v=sql.130))를 참조하세요.  
   
 ## <a name="see-also"></a>참고 항목  
  [보고서 기록에 스냅샷 추가&#40;보고서 관리자&#41;](../../reporting-services/report-server/add-a-snapshot-to-report-history-report-manager.md)   
- [보고서 관리자&#40;SSRS 기본 모드&#41;](https://msdn.microsoft.com/library/80949f9d-58f5-48e3-9342-9e9bf4e57896)  
+ [보고서 관리자&#40;SSRS 기본 모드&#41;](../web-portal-ssrs-native-mode.md)  
 
 ::: moniker-end
 
@@ -71,10 +71,9 @@ ms.locfileid: "79510124"
   
 3.  **기록** 탭을 클릭합니다.  
   
-4.  보고서에 대한 옵션을 선택하고 **적용**을 클릭합니다. 각 옵션에 대한 자세한 내용은 [스냅샷 옵션 속성 페이지](https://msdn.microsoft.com/library/f6641f59-5267-4f57-8957-63b93d1a9679)를 참조하세요.  
+4.  보고서에 대한 옵션을 선택하고 **적용**을 클릭합니다. 각 옵션에 대한 자세한 내용은 [스냅샷 옵션 속성 페이지](/previous-versions/sql/sql-server-2016/ms189952(v=sql.130))를 참조하세요.  
   
 ## <a name="see-also"></a>참고 항목  
  [보고서 기록에 스냅샷 추가](../../reporting-services/report-server/add-a-snapshot-to-report-history-report-manager.md)   
 
 ::: moniker-end
-  

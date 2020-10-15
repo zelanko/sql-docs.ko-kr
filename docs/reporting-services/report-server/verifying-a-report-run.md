@@ -17,12 +17,12 @@ helpviewer_keywords:
 ms.assetid: 18a98f2f-6b40-454e-9b37-568ed1a96458
 author: maggiesMSFT
 ms.author: maggies
-ms.openlocfilehash: 6384697eea05d39431ecd7ec77796101747a59ee
-ms.sourcegitcommit: f0772f614482e0b3cde3609e178689ce62ca3a19
+ms.openlocfilehash: 89f3381fdd26cc2fccc5aec34049e7d97fce4ef3
+ms.sourcegitcommit: a41e1f4199785a2b8019a419a1f3dcdc15571044
 ms.translationtype: HT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 06/09/2020
-ms.locfileid: "84547825"
+ms.lasthandoff: 10/13/2020
+ms.locfileid: "91987481"
 ---
 # <a name="verifying-a-report-run"></a>보고서 실행 확인
   보고서 처리 상태에 대한 정보를 보려면 로그 파일을 사용하거나 보고서 관리자에서 보고서와 함께 표시되는 상태 정보를 참조할 수 있습니다.  
@@ -39,13 +39,12 @@ ms.locfileid: "84547825"
   
 |보고서 종류|날짜 및 시간 정보 표시 위치|정보 확인 방법|  
 |-----------------------------|-----------------------------------------------|-----------------------------------------------|  
-|보고서 스냅샷으로 실행되는 보고서|내용 페이지. 자세한 내용은 [내용 페이지&#40;보고서 관리자&#41;](https://msdn.microsoft.com/library/6b16869b-158a-4934-9c85-bee934b35378)를 참조하세요.|1) 보고서가 포함된 폴더를 찾습니다.<br /><br /> 2) 폴더를 자세히 보기로 설정합니다.<br /><br /> 3) **실행 날짜** 열에서 날짜 및 시간을 확인합니다.|  
-|보고서 기록의 스냅샷|기록 속성 페이지. 자세한 내용은 [스냅샷 옵션 속성 페이지&#40;보고서 관리자&#41;](https://msdn.microsoft.com/library/f6641f59-5267-4f57-8957-63b93d1a9679)를 참조하세요.|1) 보고서를 엽니다.<br /><br /> 2) **속성** 페이지를 클릭합니다.<br /><br /> 3) **기록** 탭을 클릭합니다.<br /><br /> 4) **실행 날짜** 열에서 날짜 및 시간을 확인합니다.|  
+|보고서 스냅샷으로 실행되는 보고서|내용 페이지. 자세한 내용은 [내용 페이지&#40;보고서 관리자&#41;](/previous-versions/sql/sql-server-2016/ms186470(v=sql.130))를 참조하세요.|1) 보고서가 포함된 폴더를 찾습니다.<br /><br /> 2) 폴더를 자세히 보기로 설정합니다.<br /><br /> 3) **실행 날짜** 열에서 날짜 및 시간을 확인합니다.|  
+|보고서 기록의 스냅샷|기록 속성 페이지. 자세한 내용은 [스냅샷 옵션 속성 페이지&#40;보고서 관리자&#41;](/previous-versions/sql/sql-server-2016/ms189952(v=sql.130))를 참조하세요.|1) 보고서를 엽니다.<br /><br /> 2) **속성** 페이지를 클릭합니다.<br /><br /> 3) **기록** 탭을 클릭합니다.<br /><br /> 4) **실행 날짜** 열에서 날짜 및 시간을 확인합니다.|  
 |캐시된 보고서|캐시된 보고서를 만들고 새로 고치는 데 사용되는 일정|1) 보고서를 엽니다.<br /><br /> 2) **속성** 페이지를 클릭합니다.<br /><br /> 3) **실행** 탭을 클릭합니다.<br /><br /> 4) 일정을 엽니다.|  
   
 ## <a name="see-also"></a>참고 항목  
  [Reporting Services 로그 파일 및 소스](../../reporting-services/report-server/reporting-services-log-files-and-sources.md)   
  [보고서 처리 속성 설정](../../reporting-services/report-server/set-report-processing-properties.md)   
- [보고서 관리자&#40;SSRS 기본 모드&#41;](https://msdn.microsoft.com/library/80949f9d-58f5-48e3-9342-9e9bf4e57896)  
-  
+ [보고서 관리자&#40;SSRS 기본 모드&#41;](../web-portal-ssrs-native-mode.md)  
   

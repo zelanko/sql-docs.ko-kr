@@ -14,12 +14,12 @@ helpviewer_keywords:
 ms.assetid: d1b8dbf0-4462-402e-92dd-0e4835002b6e
 author: maggiesMSFT
 ms.author: maggies
-ms.openlocfilehash: 985ba6df5091c13ab4b91c7f2ba95b4c1484a584
-ms.sourcegitcommit: e700497f962e4c2274df16d9e651059b42ff1a10
+ms.openlocfilehash: d8dbfe6d890c84bee9a66141971a554c410d47dd
+ms.sourcegitcommit: a41e1f4199785a2b8019a419a1f3dcdc15571044
 ms.translationtype: HT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 08/17/2020
-ms.locfileid: "88498056"
+ms.lasthandoff: 10/13/2020
+ms.locfileid: "91987391"
 ---
 # <a name="role-definitions"></a>역할 정의
   [!INCLUDE[ssRSnoversion](../../includes/ssrsnoversion-md.md)]에서 *역할 정의*는 보고서 서버에서 사용할 수 있는 작업을 정의하는 명명된 작업 모음입니다. 역할 정의는 보고서 서버가 보안을 강화하기 위해 사용하는 규칙을 제공합니다. 사용자가 보고서 게시와 같은 태스크를 수행하려고 하면 보고서 서버가 사용자의 역할 할당을 검사하여 이 태스크가 해당 역할 정의에 포함되어 있는지 여부를 확인합니다. 해당 태스크가 역할 정의에 포함되어 있으면 요청이 제출됩니다.  
@@ -46,7 +46,7 @@ ms.locfileid: "88498056"
   
  역할 정의를 만들려면 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] [!INCLUDE[ssManStudio](../../includes/ssmanstudio-md.md)]를 사용합니다. 자세한 내용은 [역할 만들기, 삭제 또는 수정&#40;Management Studio&#41;](../../reporting-services/security/role-definitions-create-delete-or-modify.md)을 참조하세요.  
   
- 역할 정의를 만든 후 역할 할당에서 이를 선택하여 사용할 수 있습니다. 자세한 내용은 [사용자에게 보고서 서버에 대한 액세스 권한 부여&#40;보고서 관리자&#41;](../../reporting-services/security/grant-user-access-to-a-report-server-report-manager.md)을 참조하세요.  
+ 역할 정의를 만든 후 역할 할당에서 이를 선택하여 사용할 수 있습니다. 자세한 내용은 [사용자에게 보고서 서버에 대한 액세스 권한 부여&#40;보고서 관리자&#41;](./grant-user-access-to-a-report-server.md)을 참조하세요.  
   
 ## <a name="customize-or-delete-a-role-definition"></a>역할 정의 사용자 정의 또는 삭제  
  미리 정의된 역할은 수정하거나 사용자 지정 역할로 바꿀 수 있습니다. 역할을 수정하려면 역할 정의에서 태스크를 추가 또는 제거하고, 역할 이름은 바꿀 수 없습니다. 역할 정의에 대한 모든 변경 내용은 해당 역할 정의를 포함하는 모든 역할 할당에 바로 적용됩니다.  
@@ -57,8 +57,7 @@ ms.locfileid: "88498056"
  [태스크 및 권한](../../reporting-services/security/tasks-and-permissions.md)   
  [기본 모드 보고서 서버에 대한 사용 권한 부여](../../reporting-services/security/granting-permissions-on-a-native-mode-report-server.md)   
  [역할 만들기, 삭제 또는 수정&#40;Management Studio&#41;](../../reporting-services/security/role-definitions-create-delete-or-modify.md)   
- [사용자에게 보고서 서버에 대한 액세스 권한 부여&#40;보고서 관리자&#41;](../../reporting-services/security/grant-user-access-to-a-report-server-report-manager.md)   
+ [사용자에게 보고서 서버에 대한 액세스 권한 부여&#40;보고서 관리자&#41;](./grant-user-access-to-a-report-server.md)   
  [역할 할당 수정 또는 삭제&#40;보고서 관리자&#41;](../../reporting-services/security/role-assignments-modify-or-delete.md)   
  [SharePoint 사이트의 보고서 서버 항목에 대한 사용 권한 설정&#40;SharePoint 통합 모드의 Reporting Services&#41;](../../reporting-services/security/set-permissions-for-report-server-items-on-a-sharepoint-site.md)  
-  
   
