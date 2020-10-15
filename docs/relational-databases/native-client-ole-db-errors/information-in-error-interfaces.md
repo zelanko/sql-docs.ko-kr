@@ -19,12 +19,12 @@ ms.assetid: 4620f03f-1193-43e7-ba19-ad022737d300
 author: markingmyname
 ms.author: maghan
 monikerRange: '>=aps-pdw-2016||=azuresqldb-current||=azure-sqldw-latest||>=sql-server-2016||=sqlallproducts-allversions||>=sql-server-linux-2017||=azuresqldb-mi-current'
-ms.openlocfilehash: 5f8e3230a9db88d5341fa816ec7f33c62502ce22
-ms.sourcegitcommit: 4d370399f6f142e25075b3714e5c2ce056b1bfd0
+ms.openlocfilehash: 90120272c94731f6ac2ba3f692c8a8c83ed3f129
+ms.sourcegitcommit: 7eb80038c86acfef1d8e7bfd5f4e30e94aed3a75
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 10/09/2020
-ms.locfileid: "91868983"
+ms.lasthandoff: 10/15/2020
+ms.locfileid: "92081982"
 ---
 # <a name="information-in-ole-db-defined-error-interfaces"></a>OLE DB 정의 오류 인터페이스의 정보
 [!INCLUDE[SQL Server Azure SQL Database Synapse Analytics PDW ](../../includes/applies-to-version/sql-asdb-asdbmi-asa-pdw.md)]
@@ -46,7 +46,7 @@ ms.locfileid: "91868983"
 |멤버 함수|Description|  
 |---------------------|-----------------|  
 |**GetBasicErrorInfo**|ERRORINFO 구조에 오류에 대한 기본 정보를 채웁니다. ERRORINFO 구조에는 오류에 대한 HRESULT 반환 값을 식별하는 멤버와 오류가 적용되는 공급자 및 인터페이스가 포함됩니다.|  
-|**GetCustomErrorObject**|**ISQLErrorInfo** 및 [ISQLServerErrorInfo](../../connect/oledb/ole-db-interfaces/isqlservererrorinfo-geterrorinfo-ole-db.md?view=sql-server-ver15) 인터페이스에 대한 참조를 반환합니다.|  
+|**GetCustomErrorObject**|**ISQLErrorInfo** 및 [ISQLServerErrorInfo](../native-client-ole-db-interfaces/isqlservererrorinfo-geterrorinfo-ole-db.md) 인터페이스에 대한 참조를 반환합니다.|  
 |**GetErrorInfo**|**IErrorInfo** 인터페이스에 대한 참조를 반환합니다.|  
 |**GetErrorParameters**|[!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]Native Client OLE DB 공급자는 **geterrorparameters**를 통해 소비자에 게 매개 변수를 반환 하지 않습니다.|  
 |**GetRecordCount**|사용할 수 있는 오류 레코드 수입니다.|  

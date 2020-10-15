@@ -21,12 +21,12 @@ ms.assetid: 46c288c1-3410-4d68-a027-3bbf33239289
 author: markingmyname
 ms.author: maghan
 monikerRange: '>=aps-pdw-2016||=azuresqldb-current||=azure-sqldw-latest||>=sql-server-2016||=sqlallproducts-allversions||>=sql-server-linux-2017||=azuresqldb-mi-current'
-ms.openlocfilehash: 9e298052726e033724d20d6b1695b1accda4c6ec
-ms.sourcegitcommit: 8f062015c2a033f5a0d805ee4adabbe15e7c8f94
+ms.openlocfilehash: 77b8f5845f8fb3aea8712b6b63e54e10e62e2c6a
+ms.sourcegitcommit: 7eb80038c86acfef1d8e7bfd5f4e30e94aed3a75
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 09/25/2020
-ms.locfileid: "91227135"
+ms.lasthandoff: 10/15/2020
+ms.locfileid: "92081732"
 ---
 # <a name="sysdatabases-transact-sql"></a>sys.databases(Transact-SQL)
 
@@ -50,7 +50,7 @@ ms.locfileid: "91227135"
 |**is_read_only**|**bit**|1 = 데이터베이스가 READ_ONLY입니다.<br /> 0 = 데이터베이스가 READ_WRITE입니다.|  
 |**is_auto_close_on**|**bit**|1 = AUTO_CLOSE가 ON입니다.<br /> 0 = AUTO_CLOSE가 OFF입니다.|  
 |**is_auto_shrink_on**|**bit**|1 = AUTO_SHRINK가 ON입니다.<br /> 0 = AUTO_SHRINK가 OFF입니다.|  
-|**상태**|**tinyint**|**값**<br /> 0 = ONLINE <br /> 1 = RESTORING <br /> 2 = 복구 <sup>1</sup><br /> 3 = RECOVERY_PENDING <sup>1</sup><br /> 4 = SUSPECT <br /> 5 = 응급 <sup>1</sup><br /> 6 = 오프 라인 <sup>1</sup><br /> 7 = 복사 <sup>2</sup> <br /> 10 = OFFLINE_SECONDARY <sup>2</sup> <br /><br /> **참고:** Always On 데이터베이스의 경우 `database_state` `database_state_desc` [dm_hadr_database_replica_states](../../relational-databases/system-dynamic-management-views/sys-dm-hadr-database-replica-states-transact-sql.md)의 또는 열을 쿼리 합니다.<br /><br /><sup>1</sup> **적용 대상**: [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] (부터 [!INCLUDE[ssKatmai](../../includes/sskatmai-md.md)] ) 및 [!INCLUDE[ssSDSfull](../../includes/sssdsfull-md.md)]<br /><sup>2</sup> **적용**대상: [!INCLUDE[ssSDSfull](../../includes/sssdsfull-md.md)][!INCLUDE[ssGeoDR](../../includes/ssgeodr-md.md)]|  
+|**state**|**tinyint**|**값**<br /> 0 = ONLINE <br /> 1 = RESTORING <br /> 2 = 복구 <sup>1</sup><br /> 3 = RECOVERY_PENDING <sup>1</sup><br /> 4 = SUSPECT <br /> 5 = 응급 <sup>1</sup><br /> 6 = 오프 라인 <sup>1</sup><br /> 7 = 복사 <sup>2</sup> <br /> 10 = OFFLINE_SECONDARY <sup>2</sup> <br /><br /> **참고:** Always On 데이터베이스의 경우 `database_state` `database_state_desc` [sys.dm_hadr_database_replica_states](../../relational-databases/system-dynamic-management-views/sys-dm-hadr-database-replica-states-transact-sql.md)의 또는 열을 쿼리 합니다.<br /><br /><sup>1</sup> **적용 대상**: [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] (부터 [!INCLUDE[ssKatmai](../../includes/sskatmai-md.md)] ) 및 [!INCLUDE[ssSDSfull](../../includes/sssdsfull-md.md)]<br /><sup>2</sup> **적용**대상: [!INCLUDE[ssSDSfull](../../includes/sssdsfull-md.md)][!INCLUDE[ssGeoDR](../../includes/ssgeodr-md.md)]|  
 |**state_desc**|**nvarchar(60)**|데이터베이스 상태에 대한 설명입니다. 상태를 참조 하세요.|  
 |**is_in_standby**|**bit**|데이터베이스가 로그 복원을 위해 읽기 전용 상태임을 나타냅니다.|  
 |**is_cleanly_shutdown**|**bit**|1 = 데이터베이스가 올바르게 종료되었으므로 시작할 때 복구가 필요하지 않습니다.<br /> 0 = 데이터베이스가 올바르게 종료되지 않았으므로 시작할 때 복구가 필요합니다.|  
@@ -82,7 +82,7 @@ ms.locfileid: "91227135"
 |**is_db_chaining_on**|**bit**|1 = 데이터베이스 간 소유권 체인이 ON 상태입니다.<br /> 0 = 데이터베이스 간 소유권 체인이 OFF 상태입니다.|  
 |**is_parameterization_forced**|**bit**|1 = 매개 변수화가 FORCED로 설정되어 있습니다.<br /> 0 = 매개 변수화가 SIMPLE로 설정되어 있습니다.|  
 |**is_master_key_encrypted_by_server**|**bit**|1 = 데이터베이스에 암호화된 마스터 키가 있습니다.<br /> 0 = 데이터베이스에 암호화된 마스터 키가 없습니다.|  
-|**is_query_store_on**|**bit**|1 =이 데이터베이스에 대해 쿼리 저장소를 사용할 수 있습니다. [Database_query_store_options](../../relational-databases/system-catalog-views/sys-database-query-store-options-transact-sql.md) 확인 하 여 쿼리 저장소 상태를 확인 합니다.<br /> 0 = 쿼리 저장소를 사용할 수 없습니다.<br /> **적용 대상**: [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] ([!INCLUDE[ssSQL15](../../includes/sssql15-md.md)]부터)|  
+|**is_query_store_on**|**bit**|1 =이 데이터베이스에 대해 쿼리 저장소를 사용할 수 있습니다. [Sys.database_query_store_options](../../relational-databases/system-catalog-views/sys-database-query-store-options-transact-sql.md) 확인 하 여 쿼리 저장소 상태를 확인 합니다.<br /> 0 = 쿼리 저장소를 사용할 수 없습니다.<br /> **적용 대상**: [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] ([!INCLUDE[ssSQL15](../../includes/sssql15-md.md)]부터)|  
 |**is_published**|**bit**|1 = 데이터베이스가 트랜잭션 또는 스냅샷 복제 토폴로지에서 게시 데이터베이스입니다.<br /> 0 = 게시 데이터베이스가 아닙니다.|  
 |**is_subscribed**|**bit**|이 열은 사용되지 않으며, 데이터베이스의 구독자 상태에 관계없이 항상 0을 반환합니다.|  
 |**is_merge_published**|**bit**|1 = 데이터베이스가 병합 복제 토폴로지에서 게시 데이터베이스입니다.<br /> 0 = 병합 복제 토폴로지에서 게시 데이터베이스가 아닙니다.|  
@@ -93,8 +93,8 @@ ms.locfileid: "91227135"
 |**log_reuse_wait**|**tinyint**|트랜잭션 로그 공간을 다시 사용 하는 것은 현재 마지막 검사점의 다음 중 하나를 기다리고 있습니다. 이러한 값에 대 한 자세한 설명은 [트랜잭션 로그](../../relational-databases/logs/the-transaction-log-sql-server.md)를 참조 하세요.<br /> **값**<br /> 0 = 없음<br /> 1 = 검사점 (데이터베이스가 복구 모델을 사용 하 고 메모리 최적화 데이터 파일 그룹을 포함 하는 경우 `log_reuse_wait` 열이 또는를 나타냄 `checkpoint` `xtp_checkpoint` ) <sup>1</sup> 을 표시 해야 합니다.<br /> 2 = 로그 백업 <sup>1</sup><br /> 3 = 활성 백업 또는 복원 <sup>1</sup><br /> 4 = 활성 트랜잭션 <sup>1</sup><br /> 5 = 데이터베이스 미러링 <sup>1</sup><br /> 6 = 복제 <sup>1</sup><br /> 7 = 데이터베이스 스냅숏 만들기 <sup>1</sup><br /> 8 = 로그 검색 <br /> 9 = Always On 가용성 그룹 보조 복제본이 해당 보조 데이터베이스에이 데이터베이스의 트랜잭션 로그 레코드를 적용 하는 중입니다. <sup>2</sup><br /> 9 = 기타 (일시적) <sup>3</sup><br /> 10 = 내부용 으로만 사용 됩니다. <sup>2</sup><br /> 11 = 내부용 으로만 사용 됩니다. <sup>2</sup><br /> 12 = 내부용 으로만 사용 됩니다. <sup>2</sup><br /> 13 = 가장 오래 된 페이지 <sup>2</sup><br /> 14 = 기타 <sup>2</sup><br />  16 = XTP_CHECKPOINT (데이터베이스가 복구 모델을 사용 하 고 메모리 최적화 데이터 파일 그룹이 있는 경우 `log_reuse_wait` `checkpoint` 또는 `xtp_checkpoint` ) <sup>4</sup> 열이 표시 되어야 합니다.<br /><br /><sup>1</sup> **적용 대상**: [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] (부터 [!INCLUDE[ssKatmai](../../includes/sskatmai-md.md)] )<br /><sup>2</sup> **적용 대상**: [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] (부터 [!INCLUDE[ssSQL11](../../includes/sssql11-md.md)] )<br /><sup>3</sup> **적용 대상**: [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] (최대, 포함 [!INCLUDE[ssKilimanjaro](../../includes/ssKilimanjaro-md.md)] )<br /><sup>4</sup> **적용 대상**: [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] (부터 [!INCLUDE[ssSQL14](../../includes/sssql14-md.md)] )|  
 |**log_reuse_wait_desc**|**nvarchar(60)**|트랜잭션 로그 공간 다시 사용을 마지막 검사점을 기다리는지에 대한 설명입니다.|  
 |**is_date_correlation_on**|**bit**|1 = DATE_CORRELATION_OPTIMIZATION이 ON입니다.<br /> 0 = DATE_CORRELATION_OPTIMIZATION이 OFF입니다.|  
-|**is_cdc_enabled**|**bit**|1 = 데이터베이스에 변경 데이터 캡처가 설정되어 있습니다. 자세한 내용은 [sp_cdc_enable_db &#40;transact-sql&#41;](../../relational-databases/system-stored-procedures/sys-sp-cdc-enable-db-transact-sql.md)을 참조 하십시오.|  
-|**is_encrypted**|**bit**|데이터베이스가 암호화 되었는지 여부를 나타냅니다 .는 절을 사용 하 여 마지막으로 설정 된 상태를 반영 `ALTER DATABASE SET ENCRYPTION` 합니다. 다음 값 중 하나일 수 있습니다.<br /> 1 = 암호화됨<br /> 0 = 암호화되지 않음<br /> 데이터 암호화에 대한 자세한 내용은 [Transparent Data Encryption &#40;TDE&#41;](../../relational-databases/security/encryption/transparent-data-encryption.md)를 참조하십시오.<br /> 데이터베이스의 암호를 해독 하는 중이면에서 `is_encrypted` 0 값을 표시 합니다. [Dm_database_encryption_keys](../../relational-databases/system-dynamic-management-views/sys-dm-database-encryption-keys-transact-sql.md) 동적 관리 뷰를 사용 하 여 암호화 프로세스의 상태를 볼 수 있습니다.|  
+|**is_cdc_enabled**|**bit**|1 = 데이터베이스에 변경 데이터 캡처가 설정되어 있습니다. 자세한 내용은 [sys.sp_cdc_enable_db &#40;transact-sql&#41;](../../relational-databases/system-stored-procedures/sys-sp-cdc-enable-db-transact-sql.md)를 참조 하세요.|  
+|**is_encrypted**|**bit**|데이터베이스가 암호화 되었는지 여부를 나타냅니다 .는 절을 사용 하 여 마지막으로 설정 된 상태를 반영 `ALTER DATABASE SET ENCRYPTION` 합니다. 다음 값 중 하나일 수 있습니다.<br /> 1 = 암호화됨<br /> 0 = 암호화되지 않음<br /> 데이터 암호화에 대한 자세한 내용은 [Transparent Data Encryption &#40;TDE&#41;](../../relational-databases/security/encryption/transparent-data-encryption.md)를 참조하십시오.<br /> 데이터베이스의 암호를 해독 하는 중이면에서 `is_encrypted` 0 값을 표시 합니다. [Sys.dm_database_encryption_keys](../../relational-databases/system-dynamic-management-views/sys-dm-database-encryption-keys-transact-sql.md) 동적 관리 뷰를 사용 하 여 암호화 프로세스의 상태를 볼 수 있습니다.|  
 |**is_honor_broker_priority_on**|**bit**|데이터베이스에서 대화 우선 순위를 준수 하는지 여부를 나타냅니다 .는 절을 사용 하 여 마지막으로 설정한 상태를 반영 `ALTER DATABASE SET HONOR_BROKER_PRIORITY` 합니다. 다음 값 중 하나일 수 있습니다.<br /> 1 = HONOR_BROKER_PRIORITY가 ON입니다.<br /> 0 = HONOR_BROKER_PRIORITY가 OFF입니다.<br /> 기본적으로 복원 되거나 연결 된 데이터베이스의 broker 우선 순위는 off입니다.|  
 |**replica_id**|**uniqueidentifier**|데이터베이스가 참여하는 가용성 그룹(있는 경우)의 로컬 [!INCLUDE[ssHADR](../../includes/sshadr-md.md)] 가용성 복제본에 대한 고유 식별자입니다.<br /> NULL = 데이터베이스가 가용성 그룹에 포함된 가용성 복제본의 일부가 아닙니다.<br /> **적용 대상**: [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]([!INCLUDE[ssSQL11](../../includes/sssql11-md.md)] 이상) 및 [!INCLUDE[ssSDSfull](../../includes/sssdsfull-md.md)]|  
 |**group_database_id**|**uniqueidentifier**|데이터베이스가 참여 하는 Always On 가용성 그룹 (있는 경우) 내의 데이터베이스에 대 한 고유 식별자입니다. 주 복제본의이 데이터베이스와 데이터베이스가 가용성 그룹에 조인 된 모든 보조 복제본에 대 한 **group_database_id** 동일 합니다.<br /> NULL = 데이터베이스가 가용성 그룹에 포함된 가용성 복제본의 일부가 아닙니다.<br /> **적용 대상**: [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]([!INCLUDE[ssSQL11](../../includes/sssql11-md.md)]부터) 및 [!INCLUDE[ssSDSfull](../../includes/sssdsfull-md.md)]|  
@@ -123,7 +123,7 @@ ms.locfileid: "91227135"
 |**is_accelerated_database_recovery_on**|**bit**|ADR (가속화 된 데이터베이스 복구)를 사용할 수 있는지 여부를 나타냅니다.<br />1 = ADR가 사용 됩니다.<br />0 = ADR가 사용 되지 않습니다.<br />**적용 대상**: [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]([!INCLUDE[sql-server-2019](../../includes/sssqlv15-md.md)]부터) 및 [!INCLUDE[ssSDSfull](../../includes/sssdsfull-md.md)]|
 |**is_tempdb_spill_to_remote_store**|**bit**|원격 저장소에 대 한 tempdb 분산을 사용할 수 있는지 여부를 나타냅니다.<br />1 = 사용<br />0 = 사용 안 함<br />**적용**대상: [!INCLUDE[ssSDW](../../includes/sssdw-md.md)] Gen2. 이 기능이 모든 지역으로 롤아웃 되는 동안 인스턴스에 배포 된 버전과 최신 [Azure Synapse 릴리스 정보](/azure/synapse-analytics/sql-data-warehouse/release-notes-10-0-10106-0) 및 기능 가용성에 대 한 [Gen2 업그레이드 일정](/azure/synapse-analytics/sql-data-warehouse/gen2-migration-schedule) 을 확인 하세요.|
 |**is_stale_page_detection_on**|**bit**|오래 된 페이지 검색이 사용 되는지 여부를 나타냅니다.<br />1 = 오래 된 페이지 검색이 사용 됩니다.<br />0 = 부실 페이지 검색이 사용 하지 않도록 설정 됨<br />**적용**대상: [!INCLUDE[ssSDW](../../includes/sssdw-md.md)] Gen2. 이 기능이 모든 지역으로 롤아웃 되는 동안 인스턴스에 배포 된 버전과 최신 [Azure Synapse 릴리스 정보](/azure/synapse-analytics/sql-data-warehouse/release-notes-10-0-10106-0) 및 기능 가용성에 대 한 [Gen2 업그레이드 일정](/azure/synapse-analytics/sql-data-warehouse/gen2-migration-schedule) 을 확인 하세요.|
-|**is_memory_optimized_enabled**|**bit**|[하이브리드 버퍼 풀](../../database-engine/configure-windows/hybrid-buffer-pool.md)과 같은 특정 메모리 내 기능을 데이터베이스에 사용할 수 있는지 여부를 나타냅니다. 는 [메모리 내 OLTP](../../relational-databases/in-memory-oltp/in-memory-oltp-in-memory-optimization.md)의 가용성 또는 구성 상태를 반영 하지 않습니다. <br />1 = 메모리 액세스에 최적화 된 기능 사용<br />0 = 메모리 액세스에 최적화 된 기능을 사용할 수 없습니다.<br />**적용 대상**: [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]([!INCLUDE[sql-server-2019](../../includes/sssqlv15-md.md)]부터) 및 [!INCLUDE[ssSDSfull](../../includes/sssdsfull-md.md)]|
+|**is_memory_optimized_enabled**|**bit**|[하이브리드 버퍼 풀](../../database-engine/configure-windows/hybrid-buffer-pool.md)과 같은 특정 In-Memory 기능을 데이터베이스에 사용할 수 있는지 여부를 나타냅니다. 는 [메모리 내 OLTP](../../relational-databases/in-memory-oltp/in-memory-oltp-in-memory-optimization.md)의 가용성 또는 구성 상태를 반영 하지 않습니다. <br />1 = 메모리 액세스에 최적화 된 기능 사용<br />0 = 메모리 액세스에 최적화 된 기능을 사용할 수 없습니다.<br />**적용 대상**: [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]([!INCLUDE[sql-server-2019](../../includes/sssqlv15-md.md)]부터) 및 [!INCLUDE[ssSDSfull](../../includes/sssdsfull-md.md)]|
   
 ## <a name="permissions"></a>사용 권한
 
@@ -138,7 +138,7 @@ ms.locfileid: "91227135"
   
  새 데이터베이스가 만들어지는 [!INCLUDE[ssSDSfull](../../includes/sssdsfull-md.md)] 서버의 `master` 데이터베이스에서 `sys.databases` 뷰를 사용합니다. 데이터베이스 복사가 시작 된 후 `sys.databases` `sys.dm_database_copies` 대상 서버의 데이터베이스에서 및 뷰를 쿼리하여 `master` 복사 진행에 대 한 자세한 정보를 검색할 수 있습니다.  
   
-## <a name="examples"></a>예제  
+## <a name="examples"></a>예  
   
 ### <a name="a-query-the-sysdatabases-view"></a>A. sys.databases 뷰 쿼리
 
@@ -157,7 +157,7 @@ FROM sys.databases;
   
 ```sql
 -- Execute from the master database.  
-SELECT a.name, a.state_desc, b.start_date, b.modify_date, b.percentage_complete  
+SELECT a.name, a.state_desc, b.start_date, b.modify_date, b.percent_complete  
 FROM sys.databases AS a  
 INNER JOIN sys.dm_database_copies AS b ON a.database_id = b.database_id  
 WHERE a.state = 7;  
@@ -179,6 +179,6 @@ FROM sys.databases AS a;
 
 - [ALTER DATABASE&#40;Transact-SQL&#41;](../../t-sql/statements/alter-database-transact-sql.md)
 - [sys.database_mirroring_witnesses &#40;Transact-SQL&#41;](../../relational-databases/system-catalog-views/database-mirroring-witness-catalog-views-sys-database-mirroring-witnesses.md)
-- [database_recovery_status &#40;Transact-sql&#41;](../../relational-databases/system-catalog-views/sys-database-recovery-status-transact-sql.md)
+- [Transact-sql&#41;sys.database_recovery_status &#40;](../../relational-databases/system-catalog-views/sys-database-recovery-status-transact-sql.md)
 - [데이터베이스 및 파일 카탈로그 뷰&#40;Transact-SQL&#41;](../../relational-databases/system-catalog-views/databases-and-files-catalog-views-transact-sql.md)
 - [sys.dm_database_copies&#40;Azure SQL Database&#41;](../../relational-databases/system-dynamic-management-views/sys-dm-database-copies-azure-sql-database.md)  

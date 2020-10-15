@@ -1,6 +1,6 @@
 ---
 description: cdc.captured_columns(Transact-SQL)
-title: cdc. captured_columns (Transact-sql) | Microsoft Docs
+title: cdc.captured_columns (Transact-sql) | Microsoft Docs
 ms.custom: ''
 ms.date: 06/10/2016
 ms.prod: sql
@@ -18,23 +18,23 @@ helpviewer_keywords:
 ms.assetid: 7bb4d408-d764-4ef6-802c-f271c8d39c2a
 author: markingmyname
 ms.author: maghan
-ms.openlocfilehash: 675d6934c468b4f2a4574b82e79c203ab4796c9a
-ms.sourcegitcommit: dd36d1cbe32cd5a65c6638e8f252b0bd8145e165
+ms.openlocfilehash: 3337ab3e4b4c2221c018c326762251ff954b329d
+ms.sourcegitcommit: 7eb80038c86acfef1d8e7bfd5f4e30e94aed3a75
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 09/08/2020
-ms.locfileid: "89538367"
+ms.lasthandoff: 10/15/2020
+ms.locfileid: "92081492"
 ---
 # <a name="cdccaptured_columns-transact-sql"></a>cdc.captured_columns(Transact-SQL)
 [!INCLUDE [SQL Server](../../includes/applies-to-version/sqlserver.md)]
 
-  캡처 인스턴스에서 추적된 각 열에 대해 하나의 행을 반환합니다. 기본적으로 원본 테이블의 모든 열이 캡처됩니다. 하지만 원본 테이블에서 변경 데이터 캡처가 활성화된 경우 열 목록을 지정하여 열을 포함하거나 제외할 수 있습니다. 자세한 내용은 [sp_cdc_enable_table &#40;transact-sql&#41;](../../relational-databases/system-stored-procedures/sys-sp-cdc-enable-table-transact-sql.md)을 참조 하십시오.  
+  캡처 인스턴스에서 추적된 각 열에 대해 하나의 행을 반환합니다. 기본적으로 원본 테이블의 모든 열이 캡처됩니다. 하지만 원본 테이블에서 변경 데이터 캡처가 활성화된 경우 열 목록을 지정하여 열을 포함하거나 제외할 수 있습니다. 자세한 내용은 [sys.sp_cdc_enable_table &#40;transact-sql&#41;](../../relational-databases/system-stored-procedures/sys-sp-cdc-enable-table-transact-sql.md)를 참조 하세요.  
   
- **시스템 테이블을 직접 쿼리하지**않는 것이 좋습니다. 대신, [sp_cdc_get_source_columns](../../relational-databases/system-stored-procedures/sys-sp-cdc-get-captured-columns-transact-sql.md) 저장 프로시저를 실행 합니다.  
+ **시스템 테이블을 직접 쿼리하지**않는 것이 좋습니다. 대신 [sys.sp_cdc_get_source_columns](../../relational-databases/system-stored-procedures/sys-sp-cdc-get-captured-columns-transact-sql.md) 저장 프로시저를 실행 합니다.  
    
 |열 이름|데이터 형식|Description|  
 |-----------------|---------------|-----------------|  
-|**object_id**|**int**|캡처된 열이 속해 있는 원본 테이블의 ID입니다.|  
+|**object_id**|**int**|캡처된 열이 속한 변경 테이블의 ID입니다.|  
 |**column_name**|**sysname**|캡처된 열의 이름입니다.|  
 |**column_id**|**int**|원본 테이블 내 캡처된 열의 ID입니다.|  
 |**column_type**|**sysname**|캡처된 열의 유형입니다.|  
@@ -42,6 +42,6 @@ ms.locfileid: "89538367"
 |**is_computed**|**bit**|캡처된 열이 원본 테이블에서 계산 열임을 나타냅니다.|  
   
 ## <a name="see-also"></a>참고 항목  
- [change_tables &#40;Transact-sql&#41;](../../relational-databases/system-tables/cdc-change-tables-transact-sql.md)  
+ [Transact-sql&#41;cdc.change_tables &#40;](../../relational-databases/system-tables/cdc-change-tables-transact-sql.md)  
   
   
