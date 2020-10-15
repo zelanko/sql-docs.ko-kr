@@ -18,12 +18,12 @@ helpviewer_keywords:
 ms.assetid: fe20dca9-a4c1-4d32-813d-42f1782dfdd3
 author: MashaMSFT
 ms.author: mathoma
-ms.openlocfilehash: db5dbec0733140f39abe377513ff23bc7dd7b880
-ms.sourcegitcommit: cc23d8646041336d119b74bf239a6ac305ff3d31
+ms.openlocfilehash: a560f2d421675b3e01e8c1350b37112187dc3aa8
+ms.sourcegitcommit: a41e1f4199785a2b8019a419a1f3dcdc15571044
 ms.translationtype: HT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 09/23/2020
-ms.locfileid: "91117044"
+ms.lasthandoff: 10/13/2020
+ms.locfileid: "91988573"
 ---
 # <a name="add-or-remove-nodes-in-a-failover-cluster-instance-setup"></a>장애 조치(failover) 클러스터 인스턴스 인스턴스에서 노드 추가 또는 제거(설치 프로그램)
 
@@ -68,7 +68,7 @@ ms.locfileid: "91117044"
   
 8.  클러스터 노드 구성 페이지에서 드롭다운 상자를 사용하여 이 설치 작업 중에 수정할 [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] 장애 조치(Failover) 클러스터 인스턴스의 이름을 지정합니다.  
   
-9. 서버 구성 - 서비스 계정 페이지에서 [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] 서비스에 대한 로그인 계정을 지정합니다. 이 페이지에 구성된 실제 서비스는 사용자가 설치하도록 선택한 기능에 따라 달라집니다. 장애 조치(Failover) 클러스터 인스턴스 설치의 경우 계정 이름 및 시작 유형 정보는 활성 노드에 대해 지정된 설정에 따라 이 페이지에 미리 채워집니다. 암호는 각 계정별로 지정해야 합니다. 자세한 내용은 [서버 구성 - 서비스 계정](https://msdn.microsoft.com/library/c283702d-ab20-4bfa-9272-f0c53c31cb9f) 및 [Windows 서비스 계정 및 권한 구성](../../../database-engine/configure-windows/configure-windows-service-accounts-and-permissions.md)을 참조하세요.  
+9. 서버 구성 - 서비스 계정 페이지에서 [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] 서비스에 대한 로그인 계정을 지정합니다. 이 페이지에 구성된 실제 서비스는 사용자가 설치하도록 선택한 기능에 따라 달라집니다. 장애 조치(Failover) 클러스터 인스턴스 설치의 경우 계정 이름 및 시작 유형 정보는 활성 노드에 대해 지정된 설정에 따라 이 페이지에 미리 채워집니다. 암호는 각 계정별로 지정해야 합니다. 자세한 내용은 [서버 구성 - 서비스 계정](../../../database-engine/install-windows/install-sql-server.md) 및 [Windows 서비스 계정 및 권한 구성](../../../database-engine/configure-windows/configure-windows-service-accounts-and-permissions.md)을 참조하세요.  
   
      **보안 정보** [!INCLUDE[ssNoteStrongPass](../../../includes/ssnotestrongpass-md.md)]  
   
@@ -108,5 +108,4 @@ ms.locfileid: "91117044"
   
 ## <a name="see-also"></a>참고 항목  
  [SQL Server 설치 로그 파일 보기 및 읽기](../../../database-engine/install-windows/view-and-read-sql-server-setup-log-files.md)  
-  
   

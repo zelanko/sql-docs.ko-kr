@@ -10,12 +10,12 @@ ms.author: maghan
 ms.reviewer: “”
 ms.custom: seo-lt-2019
 ms.date: 02/09/2017
-ms.openlocfilehash: 51e2fc3b5e95fe022bd758d72fefb34611db0b79
-ms.sourcegitcommit: b860fe41b873977649dca8c1fd5619f294c37a58
+ms.openlocfilehash: b2d0b76423ab5a391351783970a6c9a057896bf7
+ms.sourcegitcommit: a41e1f4199785a2b8019a419a1f3dcdc15571044
 ms.translationtype: HT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 06/29/2020
-ms.locfileid: "85519033"
+ms.lasthandoff: 10/13/2020
+ms.locfileid: "91987969"
 ---
 # <a name="how-to-configure-sql-server-unit-test-execution"></a>방법: SQL Server 단위 테스트 실행 구성
 
@@ -30,7 +30,7 @@ ms.locfileid: "85519033"
 -   **스키마 배포**. 데이터베이스 프로젝트는 데이터베이스의 오프라인 표현입니다. 데이터베이스 프로젝트는 데이터베이스 개체의 구조를 나타내지만 데이터를 포함하지는 않습니다. 데이터베이스 프로젝트에서 스키마를 변경한 후에 실제 데이터베이스에서 해당 스키마를 테스트할 수 있습니다. 스키마 배포 단계에서는 테스트할 데이터베이스 개체가 데이터베이스 프로젝트에서 테스트를 실행할 데이터베이스에 복사됩니다. 스키마 배포에 대한 자세한 내용은 [데이터베이스 스키마 배포](#DeployingDBSchema)를 참조하세요.  
   
     > [!NOTE]  
-    > 테스트는 솔루션 폴더에서 실행되지 않고 로컬 하드 디스크에 있는 별도의 폴더에서 실행됩니다. 테스트 배포의 여러 측면을 구성할 수 있지만 일반적으로 단위 테스트에 대해서는 이를 구성할 필요가 없습니다. 테스트 배포에 대한 자세한 내용은 [테스트 실행](https://msdn.microsoft.com/library/dd286680(VS.100).aspx)을 참조하세요.  
+    > 테스트는 솔루션 폴더에서 실행되지 않고 로컬 하드 디스크에 있는 별도의 폴더에서 실행됩니다. 테스트 배포의 여러 측면을 구성할 수 있지만 일반적으로 단위 테스트에 대해서는 이를 구성할 필요가 없습니다. 테스트 배포에 대한 자세한 내용은 [테스트 실행](/previous-versions/visualstudio/visual-studio-2010/dd286680(v=vs.100))을 참조하세요.  
   
 ## <a name="specify-connection-strings"></a><a name="SpecifyConnectionStrings"></a>연결 문자열 지정  
   
@@ -85,4 +85,3 @@ ms.locfileid: "85519033"
 ## <a name="see-also"></a>참고 항목  
 [SQL Server 단위 테스트 만들기 및 정의](../ssdt/creating-and-defining-sql-server-unit-tests.md)  
 [SQL Server 단위 테스트를 사용하여 데이터베이스 코드 확인](../ssdt/verifying-database-code-by-using-sql-server-unit-tests.md)  
-  

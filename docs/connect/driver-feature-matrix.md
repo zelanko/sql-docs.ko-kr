@@ -9,12 +9,12 @@ ms.topic: conceptual
 author: David-Engel
 ms.author: v-daenge
 ms.reviewer: v-daenge
-ms.openlocfilehash: 4071353214f7ffde54ecd1097defaa6c60aa19d6
-ms.sourcegitcommit: 777704aefa7e574f4b7d62ad2a4c1b10ca1731ff
+ms.openlocfilehash: 6a781688b4fc24f8b79f3820fbcc3dc339b6c068
+ms.sourcegitcommit: 7eb80038c86acfef1d8e7bfd5f4e30e94aed3a75
 ms.translationtype: HT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 08/06/2020
-ms.locfileid: "87823358"
+ms.lasthandoff: 10/15/2020
+ms.locfileid: "92081432"
 ---
 # <a name="driver-feature-support-matrix-for-microsoft-sql-server"></a>Microsoft SQL Server용 드라이버 기능 지원 매트릭스
 
@@ -51,8 +51,8 @@ Microsoft에서는 모든 드라이버가 모든 기능을 지원하기를 희�
 | [MARS(Multiple Active Result Sets)](../relational-databases/native-client/features/using-multiple-active-result-sets-mars.md) | [예](ado-net/sql/multiple-active-result-sets-mars.md) | [예](ado-net/sql/multiple-active-result-sets-mars.md) | [예](/dotnet/framework/data/adonet/sql/multiple-active-result-sets-mars) | [예](/dotnet/framework/data/adonet/sql/multiple-active-result-sets-mars) |
 | [공간 데이터 형식](../relational-databases/spatial/spatial-data-sql-server.md) | | yes | | 예 |
 | [TVP(테이블 반환 매개 변수)](../relational-databases/tables/use-table-valued-parameters-database-engine.md) | [예](ado-net/sql/table-valued-parameters.md) | [예](ado-net/sql/table-valued-parameters.md) | [예](/dotnet/framework/data/adonet/sql/table-valued-parameters) | [예](/dotnet/framework/data/adonet/sql/table-valued-parameters) |
-| [MultiSubnetFailover](../relational-databases/native-client/features/sql-server-native-client-support-for-high-availability-disaster-recovery.md#connecting-with-multisubnetfailover) | [예](ado-net/sql/sqlclient-support-high-availability-disaster-recovery.md#connecting-with-multisubnetfailover) | [예](ado-net/sql/sqlclient-support-high-availability-disaster-recovery.md#connecting-with-multisubnetfailover) | [예](/dotnet/api/system.data.sqlclient.sqlconnectionstringbuilder.multisubnetfailover?view=netcore-1.0) | [예](/dotnet/api/system.data.sqlclient.sqlconnectionstringbuilder.multisubnetfailover?view=netframework-4.8) |
-| [투명 네트워크 IP 확인](odbc/using-transparent-network-ip-resolution.md) | | [예](/dotnet/api/microsoft.data.sqlclient.sqlconnection.connectionstring?view=sqlclient-dotnet-1.1) | | [예](/dotnet/api/system.data.sqlclient.sqlconnection.connectionstring?view=netframework-4.8) |
+| [MultiSubnetFailover](../relational-databases/native-client/features/sql-server-native-client-support-for-high-availability-disaster-recovery.md#connecting-with-multisubnetfailover) | [예](ado-net/sql/sqlclient-support-high-availability-disaster-recovery.md#connecting-with-multisubnetfailover) | [예](ado-net/sql/sqlclient-support-high-availability-disaster-recovery.md#connecting-with-multisubnetfailover) | [예](/dotnet/api/system.data.sqlclient.sqlconnectionstringbuilder.multisubnetfailover?view=netcore-1.0&preserve-view=true) | [예](/dotnet/api/system.data.sqlclient.sqlconnectionstringbuilder.multisubnetfailover?view=netframework-4.8&preserve-view=true) |
+| [투명 네트워크 IP 확인](odbc/using-transparent-network-ip-resolution.md) | | [예](/dotnet/api/microsoft.data.sqlclient.sqlconnection.connectionstring?view=sqlclient-dotnet-1.1&preserve-view=true) | | [예](/dotnet/api/system.data.sqlclient.sqlconnection.connectionstring?view=netframework-4.8&preserve-view=true) |
 | &nbsp; | &nbsp; | &nbsp; | &nbsp; | &nbsp; |
 
 | <a id="table2"></a>기능 | [Windows 기반 ODBC Driver for SQL Server](odbc/microsoft-odbc-driver-for-sql-server.md) | [Linux 및 macOS 기반 ODBC Driver for SQL Server](odbc/microsoft-odbc-driver-for-sql-server.md) | [JDBC Driver for SQL Server](jdbc/microsoft-jdbc-driver-for-sql-server.md) | [SQL Server용 OLE DB 드라이버](oledb/oledb-driver-for-sql-server.md) |

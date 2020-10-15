@@ -40,12 +40,12 @@ ms.author: maghan
 ms.reviewer: “”
 ms.custom: seo-lt-2019
 ms.date: 02/09/2017
-ms.openlocfilehash: 2a96f6ae82354d243b4c95561e7fdd7b11c58441
-ms.sourcegitcommit: e8f6c51d4702c0046aec1394109bc0503ca182f0
+ms.openlocfilehash: 126a649f2555b2a66ba7ce4378378ff9e401f6fc
+ms.sourcegitcommit: a41e1f4199785a2b8019a419a1f3dcdc15571044
 ms.translationtype: HT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 08/07/2020
-ms.locfileid: "87934114"
+ms.lasthandoff: 10/13/2020
+ms.locfileid: "91987229"
 ---
 # <a name="database-project-settings"></a>데이터베이스 프로젝트 설정
 
@@ -105,9 +105,9 @@ ms.locfileid: "87934114"
 확장 Transact-SQL 확인은 개발자가 빌드할 때 데이터베이스 프로젝트를 Transact-SQL 컴파일러 서비스에 전송하여 SQL Server 엔진의 파서 및 인터프리터에 대한 해당 코드의 유효성을 검사할 수 있도록 하는 데이터베이스 프로젝트 시스템에 있는 기능입니다.  
   
 ### <a name="transact-sql-compiler-service"></a>Transact-SQL 컴파일러 서비스  
-Transact-SQL 컴파일러 서비스는 Microsoft SQL Server 2012 데이터베이스 엔진 기반의 구성 요소입니다. 이 서비스는 Microsoft SQL Server 2012 데이터베이스 엔진의 정확성과 동일한 수준으로 DDL 문의 구문 및 의미 체계의 유효성을 검사합니다. 이는 기본적으로 컴파일러 서비스가 Microsoft SQL Server 2012에서 더 이상 사용되지 않은 구문 또는 기능을 지원하지 않음을 의미합니다. 더 이상 사용되지 않는 기능에 대한 자세한 내용은 [SQL Server 2012에서 지원되지 않는 데이터베이스 엔진 기능](../database-engine/discontinued-database-engine-functionality-in-sql-server-2016.md)을 참조하세요.  
+Transact-SQL 컴파일러 서비스는 Microsoft SQL Server 2012 데이터베이스 엔진 기반의 구성 요소입니다. 이 서비스는 Microsoft SQL Server 2012 데이터베이스 엔진의 정확성과 동일한 수준으로 DDL 문의 구문 및 의미 체계의 유효성을 검사합니다. 이는 기본적으로 컴파일러 서비스가 Microsoft SQL Server 2012에서 더 이상 사용되지 않은 구문 또는 기능을 지원하지 않음을 의미합니다. 더 이상 사용되지 않는 기능에 대한 자세한 내용은 [SQL Server 2012에서 지원되지 않는 데이터베이스 엔진 기능](../database-engine/discontinued-database-engine-functionality-in-sql-server.md)을 참조하세요.  
   
-데이터베이스 프로젝트의 유효성 검사 목적으로 컴파일러 서비스는 부분적으로 포함된 데이터베이스를 만들고 해당 데이터베이스에 대한 DDL 문의 실행을 시뮬레이션합니다. 자세한 내용은 [부분적으로 포함된 데이터베이스](https://msdn.microsoft.com/library/ff929071%28v=SQL.110%29.aspx)를 참조하십시오.  
+데이터베이스 프로젝트의 유효성 검사 목적으로 컴파일러 서비스는 부분적으로 포함된 데이터베이스를 만들고 해당 데이터베이스에 대한 DDL 문의 실행을 시뮬레이션합니다. 자세한 내용은 [부분적으로 포함된 데이터베이스](/previous-versions/sql/sql-server-2012/ff929071(v=sql.110))를 참조하십시오.  
   
 컴파일러 서비스에는 두 가지 범주의 제한이 있습니다.  
   
@@ -132,7 +132,7 @@ Transact-SQL 컴파일러 서비스는 Microsoft SQL Server 2012 데이터베이
 -   SQL Azure 메타데이터 데이터 정렬(컴파일러 서비스는 SQL Server 2012 부분적으로 포함된 데이터베이스 메타데이터 데이터 정렬 - Latin1_General_100_CI_AS_KS_WS_SC를 사용함)  
   
 ### <a name="enablingdisabling-extended-verification"></a>확장 확인 설정/해제  
-확장 Transact-SQL 확인은 기본적으로 해당 대상 플랫폼이 SQL Azure로 설정된 Azure SQL Database 또는 프로젝트에서 직접 만든 데이터베이스 프로젝트에서 사용하도록 설정됩니다. SQL Azure 또는 SQL Server 2012를 대상으로 하는 애플리케이션 범위의 데이터베이스를 개발할 때 확장 확인을 사용하는 것이 좋습니다. 애플리케이션 범위의 데이터베이스에 대한 자세한 내용은 [부분적으로 포함된 데이터베이스](https://msdn.microsoft.com/library/ff929071%28v=SQL.110%29.aspx)를 참조하십시오.  
+확장 Transact-SQL 확인은 기본적으로 해당 대상 플랫폼이 SQL Azure로 설정된 Azure SQL Database 또는 프로젝트에서 직접 만든 데이터베이스 프로젝트에서 사용하도록 설정됩니다. SQL Azure 또는 SQL Server 2012를 대상으로 하는 애플리케이션 범위의 데이터베이스를 개발할 때 확장 확인을 사용하는 것이 좋습니다. 애플리케이션 범위의 데이터베이스에 대한 자세한 내용은 [부분적으로 포함된 데이터베이스](/previous-versions/sql/sql-server-2012/ff929071(v=sql.110))를 참조하십시오.  
   
 확장 확인은 Microsoft SQL Server 2012 및 SQL Azure와의 호환성을 얻을 수 있도록 SQL Server 2008/R2용 애플리케이션 범위의 데이터베이스를 개발할 때에도 사용할 수 있습니다.  
   
@@ -154,21 +154,21 @@ Transact-SQL 컴파일러 서비스는 Microsoft SQL Server 2012 데이터베이
     ![파일 속성](../ssdt/media/ssdt-evf.gif "파일 속성")  
   
 ### <a name="special-considerations-for-collations"></a>데이터 정렬에 대한 특별 고려 사항  
-부분적으로 포함된 데이터베이스의 데이터 정렬에 대한 자세한 내용은 [포함된 데이터베이스 데이터 정렬](https://msdn.microsoft.com/library/ff929080%28v=sql.110%29.aspx)을 참조하십시오.  
+부분적으로 포함된 데이터베이스의 데이터 정렬에 대한 자세한 내용은 [포함된 데이터베이스 데이터 정렬](/previous-versions/sql/sql-server-2012/ff929080(v=sql.110))을 참조하십시오.  
   
 ## <a name="sqlclr"></a><a name="bkmk_sqlclr"></a>SQLCLR  
-어셈블리 옵션에 대한 자세한 내용은 [어셈블리 정보 대화 상자](https://msdn.microsoft.com/library/1h52t681.aspx?queryresult=true)를 참조하십시오.  
+어셈블리 옵션에 대한 자세한 내용은 [어셈블리 정보 대화 상자](/visualstudio/ide/reference/assembly-information-dialog-box?queryresult=true)를 참조하십시오.  
   
-서명에 대한 자세한 내용은 **서명 페이지, 프로젝트 디자이너** 항목의 [어셈블리 서명](https://msdn.microsoft.com/library/0k50fs3b.aspx?queryresult=true) 섹션을 참조하십시오.  
+서명에 대한 자세한 내용은 **서명 페이지, 프로젝트 디자이너** 항목의 [어셈블리 서명](/visualstudio/ide/reference/signing-page-project-designer?queryresult=true) 섹션을 참조하십시오.  
   
 ## <a name="sqlclr-and-sqlclr-build"></a><a name="bkmk_sqlclr_sqlclrbuild"></a>SQLCLR 및 SQLCLR 빌드  
 **SQLCLR** 및 **SQLCLR 빌드** 속성 페이지에는 프로젝트에서 SQL CLR 개체를 사용하기 위한 여러 설정이 포함되어 있습니다. 특히 **SQLCLR** 속성 페이지에는 SQLCLR 어셈블리에 대한 사용 권한을 설정할 수 있는 권한 수준 설정이 있습니다. 또한 이 페이지에는 프로젝트에 추가된 SQLCLR 개체에 대한 DDL(Dynamic Data Language)을 생성할지 여부를 제어하는 “DDL 생성” 설정도 있습니다. SQLCLR **빌드** 속성 페이지에는 프로젝트에서 SQLCLR 코드의 컴파일을 구성하기 위해 설정할 수 있는 모든 컴파일러 옵션이 포함되어 있습니다.  
   
 **SQLCLR 빌드** 속성 페이지에는 SQL CLR 개체 빌드를 위한 고급 빌드 설정이 포함되어 있습니다. SQL CLR 개체를 코딩하는 데 사용한 언어(VB 또는 C#)를 기반으로 각기 다른 옵션이 제공됩니다.  
   
-1.  C#를 사용하여 개체를 작성한 경우 **SQLCLR 빌드** 속성 페이지의 **고급** 단추를 클릭하여 옵션을 사용할 수 있습니다. C# 옵션에 대한 설명은 [고급 빌드 설정 대화 상자(C#)](https://msdn.microsoft.com/library/s4wcexbc.aspx)를 참조하세요.  
+1.  C#를 사용하여 개체를 작성한 경우 **SQLCLR 빌드** 속성 페이지의 **고급** 단추를 클릭하여 옵션을 사용할 수 있습니다. C# 옵션에 대한 설명은 [고급 빌드 설정 대화 상자(C#)](/visualstudio/ide/reference/advanced-build-settings-dialog-box-csharp)를 참조하세요.  
   
-2.  VB를 사용하여 개체를 작성한 경우 먼저 **언어** 드롭다운 목록에서 VB를 선택한 다음 **고급** 버튼을 클릭하십시오. VB 옵션에 대한 설명은 [고급 컴파일러 설정 대화 상자(Visual Basic)](https://msdn.microsoft.com/library/07bysfz2.aspx)를 참조하세요.  
+2.  VB를 사용하여 개체를 작성한 경우 먼저 **언어** 드롭다운 목록에서 VB를 선택한 다음 **고급** 버튼을 클릭하십시오. VB 옵션에 대한 설명은 [고급 컴파일러 설정 대화 상자(Visual Basic)](/visualstudio/ide/reference/advanced-compiler-settings-dialog-box-visual-basic)를 참조하세요.  
   
 
 ## <a name="build"></a><a name="bkmk_build"></a>빌드  
@@ -228,10 +228,9 @@ SQL Server 데이터베이스 프로젝트에서 SQLCMD 변수를 사용하여 �
 |고급...|예|배포를 위한 이벤트와 동작을 제어하는 옵션을 지정할 수 있는 명령 단추입니다.|  
   
 ## <a name="reference-paths"></a><a name="bkmk_ref_paths"></a>참조 경로  
-이 페이지를 사용하여 서버를 정의하고 크로스 데이터베이스 참조에 관련된 데이터베이스 변수를 정의할 수 있습니다. 또한 해당 변수의 값을 지정할 수 있습니다. 자세한 내용은 [데이터베이스 프로젝트에서 참조 사용](https://msdn.microsoft.com/library/bb386242.aspx)을 참조하세요.  
+이 페이지를 사용하여 서버를 정의하고 크로스 데이터베이스 참조에 관련된 데이터베이스 변수를 정의할 수 있습니다. 또한 해당 변수의 값을 지정할 수 있습니다. 자세한 내용은 [데이터베이스 프로젝트에서 참조 사용](/previous-versions/visualstudio/visual-studio-2010/bb386242(v=vs.100))을 참조하세요.  
   
 ## <a name="code-analysis"></a><a name="bkmk_code_analysis"></a>코드 분석  
 코드 분석을 사용하여 디자인, 명명 및 성능 문제와 같은 스크립트의 잠재적 문제를 찾을 수 있습니다. 데이터베이스 프로젝트에 대한 규칙은 특정 영역을 대상으로 하는 미리 정의된 규칙 집합으로 구성되어 있으며, **프로젝트 속성** 페이지의 **코드 분석** 탭에서 규칙을 사용하거나 사용하지 않도록 설정할 수 있습니다. 동일한 탭에서 프로젝트가 빌드될 때마다 코드 분석이 자동으로 실행되도록 지정하거나, 경고를 오류로 처리할지 여부를 지정할 수 있습니다.  
   
-코드 분석을 수동으로 사용하려면 **솔루션 탐색기**에서 프로젝트를 마우스 오른쪽 단추로 클릭하고 **코드 분석 실행**을 선택합니다. 코드 분석 경고는 **오류 목록** 창에 표시됩니다. 경고를 두 번 클릭하여 문제가 포함된 원본 코드로 이동하고 **오류 도움말 표시** 상황에 맞는 메뉴를 사용하여 경고에 대한 추가 정보와 가능한 해결 방법을 볼 수 있습니다. 코드 분석에 대한 자세한 내용은 [데이터베이스 코드를 분석하여 코드 품질 향상](https://msdn.microsoft.com/library/dd172133.aspx)을 참조하세요.  
-  
+코드 분석을 수동으로 사용하려면 **솔루션 탐색기**에서 프로젝트를 마우스 오른쪽 단추로 클릭하고 **코드 분석 실행**을 선택합니다. 코드 분석 경고는 **오류 목록** 창에 표시됩니다. 경고를 두 번 클릭하여 문제가 포함된 원본 코드로 이동하고 **오류 도움말 표시** 상황에 맞는 메뉴를 사용하여 경고에 대한 추가 정보와 가능한 해결 방법을 볼 수 있습니다. 코드 분석에 대한 자세한 내용은 [데이터베이스 코드를 분석하여 코드 품질 향상](/previous-versions/visualstudio/visual-studio-2010/dd172133(v=vs.100))을 참조하세요.  

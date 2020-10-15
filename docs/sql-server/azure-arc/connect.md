@@ -8,12 +8,12 @@ ms.reviewer: mikeray
 ms.date: 09/10/2020
 ms.topic: conceptual
 ms.prod: sql
-ms.openlocfilehash: 5b07323de0c8d385ad4df739c935a8bef96b4022
-ms.sourcegitcommit: c74bb5944994e34b102615b592fdaabe54713047
+ms.openlocfilehash: d5b66ac431bfadff06c930f76517f35d95dcb12f
+ms.sourcegitcommit: a41e1f4199785a2b8019a419a1f3dcdc15571044
 ms.translationtype: HT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 09/22/2020
-ms.locfileid: "90990331"
+ms.lasthandoff: 10/13/2020
+ms.locfileid: "91987999"
 ---
 # <a name="connect-your-sql-server-to-azure-arc"></a>Azure Arc에 SQL Server 연결
 
@@ -22,7 +22,7 @@ ms.locfileid: "90990331"
 ## <a name="prerequisites"></a>사전 요구 사항
 
 * 머신에 SQL Server 인스턴스가 하나 이상 설치되어 있습니다.
-* Windows 머신의 경우 Azure PowerShell을 설치했습니다. 지침에 따라 [Azure PowerShell을 설치](https://docs.microsoft.com/powershell/azure/install-az-ps)합니다.
+* Windows 머신의 경우 Azure PowerShell을 설치했습니다. 지침에 따라 [Azure PowerShell을 설치](/powershell/azure/install-az-ps)합니다.
 * Linux 머신의 경우 Azure CLI를 다운로드하고 Azure 계정을 연결했습니다. 지침에 따라 [Azure CLI를 설치](/cli/azure/install-azure-cli-apt)합니다.
 
 
@@ -39,7 +39,7 @@ ms.locfileid: "90990331"
 3. 구독, 리소스 그룹, Azure 지역, 호스트 운영 체제를 선택합니다. 필요한 경우 네트워크에서 인터넷 연결에 사용하는 프록시도 지정합니다.
 
 > [!IMPORTANT]
-> SQL Server 인스턴스를 호스트하는 머신이 이미 [Azure Arc에 연결](https://docs.microsoft.com/azure/azure-arc/servers/onboard-portal)되어 있으면 해당 __머신 - Azure Arc__ 리소스가 포함된 것과 동일한 리소스 그룹을 선택해야 합니다.
+> SQL Server 인스턴스를 호스트하는 머신이 이미 [Azure Arc에 연결](/azure/azure-arc/servers/onboard-portal)되어 있으면 해당 __머신 - Azure Arc__ 리소스가 포함된 것과 동일한 리소스 그룹을 선택해야 합니다.
 
 ![서버 세부 정보](media/join/server-details-sql-server-azure-arc.png)
 
@@ -56,7 +56,7 @@ ms.locfileid: "90990331"
 
 ### <a name="windows"></a>Windows
 
-1. __powershell.exe__의 관리자 인스턴스를 시작하고 Azure 자격 증명으로 PowerShell 모듈에 로그인합니다. [로그인 지침](https://docs.microsoft.com/powershell/azure/install-az-ps#sign-in)을 따릅니다.
+1. __powershell.exe__의 관리자 인스턴스를 시작하고 Azure 자격 증명으로 PowerShell 모듈에 로그인합니다. [로그인 지침](/powershell/azure/install-az-ps#sign-in)을 따릅니다.
 
 2. 다운로드한 스크립트 실행
 
@@ -69,7 +69,7 @@ ms.locfileid: "90990331"
 
 ### <a name="linux"></a>Linux
 
-1. Azure CLI를 사용하여 Azure 자격 증명으로 로그인합니다. [로그인 지침](https://docs.microsoft.com/cli/azure/authenticate-azure-cli)을 따릅니다.
+1. Azure CLI를 사용하여 Azure 자격 증명으로 로그인합니다. [로그인 지침](/cli/azure/authenticate-azure-cli)을 따릅니다.
 
 2. 다운로드한 스크립트에 실행 권한을 부여하고 실행합니다.
 

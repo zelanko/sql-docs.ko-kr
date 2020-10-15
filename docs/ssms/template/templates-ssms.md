@@ -19,12 +19,12 @@ helpviewer_keywords:
 - scripts [SQL Server], SQL Server Management Studio
 ms.custom: seo-lt-2019
 ms.date: 03/13/2018
-ms.openlocfilehash: 60b44b3676f7943cb6a2e5c1fdb7981ca47c965f
-ms.sourcegitcommit: 7035d9471876c70b99c58bf9b46af5cce6e9c66c
+ms.openlocfilehash: 4662b6e9bcea26bc93ab0d5bf07a767797a98d70
+ms.sourcegitcommit: 22dacedeb6e8721e7cdb6279a946d4002cfb5da3
 ms.translationtype: HT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 08/03/2020
-ms.locfileid: "87522995"
+ms.lasthandoff: 10/14/2020
+ms.locfileid: "92035941"
 ---
 # <a name="use-templates-in-sql-server-management-studio"></a>SQL Server Management Studio에서 템플릿 사용
 
@@ -34,7 +34,7 @@ ms.locfileid: "87522995"
 
 이 자습서를 완료하려면 SQL Server Management Studio 및 SQL Server에 대한 액세스 권한이 필요합니다.
 
-* [SQL Server Management Studio](https://docs.microsoft.com/sql/ssms/download-sql-server-management-studio-ssms)를 설치합니다.
+* [SQL Server Management Studio](../download-sql-server-management-studio-ssms.md)를 설치합니다.
 
 * [SQL Server 2017 Developer Edition](https://www.microsoft.com/sql-server/sql-server-downloads)을 설치합니다.
 
@@ -118,7 +118,7 @@ ms.locfileid: "87522995"
 
 실습을 통해 SSMS에 익숙해지는 것이 가장 좋습니다. 이러한 *자습서* 및 *방법* 문서에서는 SSMS 내에서 사용할 수 있는 다양한 기능에 관해 도움을 얻을 수 있습니다.  이러한 문서에서는 SSMS의 구성 요소를 관리하는 방법과 정기적으로 사용하는 기능을 찾는 방법을 알아봅니다.
 
-* [인스턴스에 연결 및 쿼리](../tutorials/connect-query-sql-server.md)
+* [인스턴스에 연결 및 쿼리](../quickstarts/connect-query-sql-server.md)
 * [스크립팅](../tutorials/scripting-ssms.md)
 * [SSMS 구성](../tutorials/ssms-configuration.md)
 * [SSMS 사용을 위한 추가 팁과 요령](../tutorials/ssms-tricks.md)

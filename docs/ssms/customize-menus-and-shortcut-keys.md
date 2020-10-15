@@ -20,12 +20,12 @@ ms.assetid: fb4edf3c-71b6-4645-b1d1-ddfdd69f0d7b
 author: markingmyname
 ms.author: maghan
 ms.reviewer: ''
-ms.openlocfilehash: 0cc9ba049ab56b65165fd1ba016ecd913df49a91
-ms.sourcegitcommit: e700497f962e4c2274df16d9e651059b42ff1a10
+ms.openlocfilehash: 242dc262053aefe5a95e6e65d99ae98965491e55
+ms.sourcegitcommit: 22dacedeb6e8721e7cdb6279a946d4002cfb5da3
 ms.translationtype: HT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 08/17/2020
-ms.locfileid: "88480228"
+ms.lasthandoff: 10/14/2020
+ms.locfileid: "92034928"
 ---
 # <a name="customize-menus-and-shortcut-keys"></a>메뉴 및 바로 가기 키 사용자 지정
 
@@ -163,5 +163,4 @@ Ctrl 키를 사용하는 저장 프로시저에 대한 키보드 액셀러레이
 > 일부 명령은 [!INCLUDE[ssManStudioFull](../includes/ssmanstudiofull-md.md)] 에 관련 내용이 표시되는 경우에만 사용할 수 있습니다. 메뉴에 사용할 수 있는 명령이 없으면 메뉴 항목을 사용할 수 없습니다.  
   
 ## <a name="see-also"></a>참고 항목  
-[SQL Server Management Studio의 기능](../ssms/features-in-sql-server-management-studio.md)  
-  
+[SQL Server Management Studio의 기능](./sql-server-management-studio-ssms.md)  

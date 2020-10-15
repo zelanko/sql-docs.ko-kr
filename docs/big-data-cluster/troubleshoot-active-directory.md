@@ -9,12 +9,12 @@ ms.date: 06/22/2020
 ms.topic: conceptual
 ms.prod: sql
 ms.technology: big-data-cluster
-ms.openlocfilehash: 302731f3f0c37f60c4944b7df44d02b2cfc64a8b
-ms.sourcegitcommit: da88320c474c1c9124574f90d549c50ee3387b4c
+ms.openlocfilehash: 269e886708ec82211a4e29ac8b1e492d9f69cc98
+ms.sourcegitcommit: 783b35f6478006d654491cb52f6edf108acf2482
 ms.translationtype: HT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 07/01/2020
-ms.locfileid: "85772879"
+ms.lasthandoff: 10/09/2020
+ms.locfileid: "91891073"
 ---
 # <a name="troubleshoot-sql-server-big-data-cluster-active-directory-integration"></a>SQL Server 빅 데이터 클러스터 Active Directory 통합 문제 해결
 
@@ -123,7 +123,7 @@ zookeeper-2       2/2     Running   0          32m
 
 ## <a name="cause"></a>원인
 
-위의 예제에서는 도메인 그룹의 범위가 도메인 로컬로 지정되었으므로 배포에서 도메인 사용자의 로그인을 만들지 못합니다. 전역 또는 유니버설 범위 그룹을 사용합니다. [Active Directory 모드에서 [!INCLUDE[big-data-clusters-2019](../includes/ssbigdataclusters-ss-nover.md)] 배포](deploy-active-directory.md)에서는 AD 그룹 범위 요구 사항을 설명합니다.
+위의 예제에서는 도메인 그룹의 범위가 도메인 로컬로 지정되었으므로 배포에서 도메인 사용자의 로그인을 만들지 못합니다. 전역 또는 유니버설 범위 그룹을 사용합니다. [Active Directory 모드에서 [!INCLUDE[big-data-clusters-2019](../includes/ssbigdataclusters-ss-nover.md)] 배포](active-directory-deploy.md)에서는 AD 그룹 범위 요구 사항을 설명합니다.
 
 ## <a name="verify"></a>확인
 

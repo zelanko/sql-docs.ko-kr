@@ -9,12 +9,12 @@ author: markingmyname
 ms.author: maghan
 ms.custom: seo-lt-2019
 ms.date: 04/25/2019
-ms.openlocfilehash: 044813df5fc1e222c24418c60d0a1c7d40d8c011
-ms.sourcegitcommit: 7035d9471876c70b99c58bf9b46af5cce6e9c66c
+ms.openlocfilehash: 22c9550044e5420426f6a423d340e3b32b7a77a4
+ms.sourcegitcommit: 22dacedeb6e8721e7cdb6279a946d4002cfb5da3
 ms.translationtype: HT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 08/03/2020
-ms.locfileid: "87523005"
+ms.lasthandoff: 10/14/2020
+ms.locfileid: "92034847"
 ---
 # <a name="install-non-english-language-versions-of-sql-server-management-studio-ssms"></a>영어가 아닌 언어 버전의 SSMS(SQL Server Management Studio) 설치
 
@@ -53,4 +53,4 @@ SSMS는 여러 언어로 사용할 수 있지만 시스템 로캘이 SSMS 언어
 
 ## <a name="next-steps"></a>다음 단계
 
-- [자습서: SQL Server Management Studio](https://docs.microsoft.com/sql/ssms/tutorials/tutorial-sql-server-management-studio)
+- [자습서: SQL Server Management Studio](./quickstarts/connect-query-sql-server.md)

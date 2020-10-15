@@ -14,12 +14,12 @@ ms.assetid: e2bd3de7-674c-4ea7-8d53-bb40bba86fae
 author: rothja
 ms.author: jroth
 monikerRange: = sql-server-2016 || = sqlallproducts-allversions
-ms.openlocfilehash: a54c7de35f9707701213488a4f51d23d5e314417
-ms.sourcegitcommit: 04fb4c2d7ccddd30745b334b319d9d2dd34325d6
+ms.openlocfilehash: d9fee236a710d7bc742f9a8fed27e12801daa550
+ms.sourcegitcommit: a41e1f4199785a2b8019a419a1f3dcdc15571044
 ms.translationtype: HT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 09/09/2020
-ms.locfileid: "89570312"
+ms.lasthandoff: 10/13/2020
+ms.locfileid: "91988270"
 ---
 # <a name="sql-server-2008-r2-sp2-release-notes"></a>SQL Server 2008 R2 SP2 Release Notes
 [!INCLUDE[sqlserver](../includes/applies-to-version/sqlserver.md)]
@@ -29,7 +29,7 @@ ms.locfileid: "89570312"
 DMV(동적 관리 뷰) **sys.dm_db_stats_properties**. 이 DMV를 사용하여 지정된 테이블 또는 현재 데이터베이스에 있는 인덱싱된 뷰에 대한 통계 속성을 반환할 수 있습니다. 예를 들어, 이 DMV는 샘플링된 행 수와 히스토그램에 있는 단계 수를 반환합니다.  
   
 ## <a name="20-before-you-install"></a>2.0 설치 전 준비 사항  
-[!INCLUDE[ssKilimanjaro](../includes/sskilimanjaro-md.md)] 업데이트 설치 방법에 대한 자세한 내용은 [SQL Server 2008 R2 서비스 설명서](https://msdn.microsoft.com/library/dd638062(SQL.105).aspx)를 참조하세요.  
+[!INCLUDE[ssKilimanjaro](../includes/sskilimanjaro-md.md)] 업데이트 설치 방법에 대한 자세한 내용은 [SQL Server 2008 R2 서비스 설명서](/previous-versions/sql/sql-server-2008-r2/dd638062(v=sql.105))를 참조하세요.  
   
 SQL Server 2008 R2를 시작하고 설치하는 방법은 SQL Server 2008 R2 추가 정보를 참조하십시오. 이 추가 정보 문서는 설치 미디어에서 다운로드할 수 있습니다.
   
@@ -65,4 +65,3 @@ SQL Server 2008 R2를 시작하고 설치하는 방법은 SQL Server 2008 R2 추
   
 ## <a name="see-also"></a>참고 항목  
 [SQL  Server  버전 및 에디션 확인 방법](https://support.microsoft.com/kb/321185)  
-  

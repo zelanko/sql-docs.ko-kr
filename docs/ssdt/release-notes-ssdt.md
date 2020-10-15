@@ -12,12 +12,12 @@ ms.reviewer: maghan
 ms.custom: seo-lt-2019
 ms.date: 12/15/2019
 monikerRange: '>=aps-pdw-2016||=azuresqldb-current||=azure-sqldw-latest||>=sql-server-2016||=sqlallproducts-allversions||=azuresqldb-mi-current'
-ms.openlocfilehash: 83d50d14f47c5b25de4bc3749bd2fd06dffff3df
-ms.sourcegitcommit: fe5dedb2a43516450696b754e6fafac9f5fdf3cf
+ms.openlocfilehash: f142a872688d28befefcffebfcdeb75976072863
+ms.sourcegitcommit: a41e1f4199785a2b8019a419a1f3dcdc15571044
 ms.translationtype: HT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 08/31/2020
-ms.locfileid: "89195129"
+ms.lasthandoff: 10/13/2020
+ms.locfileid: "91987859"
 ---
 # <a name="release-notes-for-sql-server-data-tools-ssdt"></a>SSDT(SQL Server Data Tools) 릴리스 정보
 
@@ -899,7 +899,7 @@ Console.WriteLine(result.DeploymentReport);
 **Analysis Services 및 Reporting Services**
 
 SSAS 테이블 형식 디자이너 DAX 파서에서 큰 DAX 식으로 작업할 때 성능이 향상되었습니다.
-자세한 내용은 [Analysis Services 블로그 게시물](https://blogs.msdn.microsoft.com/analysisservices/2016/09/20/introducing-integrated-workspace-mode-for-sql-server-data-tools-for-analysis-services-tabular-projects-ssdt-tabular/)을 참조하세요.
+자세한 내용은 [Analysis Services 블로그 게시물](/archive/blogs/analysisservices/introducing-integrated-workspace-mode-for-sql-server-data-tools-for-analysis-services-tabular-projects-ssdt-tabular)을 참조하세요.
 
 ### <a name="fixed--improved-this-month"></a>이번 달 수정/향상됨
 
@@ -935,11 +935,11 @@ _SQL Server 2016의 경우._
 
 **새로운 기능**
 
-이제 스키마 비교가 SqlPackage.exe 및 DacFx(데이터 계층 애플리케이션 프레임워크) API에서 지원됩니다. 자세한 내용은 [SqlPackage 및 데이터 계층 애플리케이션 프레임워크의 스키마 비교](https://blogs.msdn.microsoft.com/ssdt/2016/09/20/schema-compare-in-sqlpackage-and-the-data-tier-application-framework-dacfx/)를 참조하세요.
+이제 스키마 비교가 SqlPackage.exe 및 DacFx(데이터 계층 애플리케이션 프레임워크) API에서 지원됩니다. 자세한 내용은 [SqlPackage 및 데이터 계층 애플리케이션 프레임워크의 스키마 비교](/archive/blogs/ssdt/schema-compare-in-sqlpackage-and-the-data-tier-application-framework-dacfx)를 참조하세요.
 
 **Analysis Services – SSDT 테이블 형식에 대한 통합 작업 영역 모드(SSAS)**
 
-이제 SSDT 테이블 형식에 통합 작업 영역 모드를 사용할 경우 SSDT 테이블 형식이 백그라운드에서 자동으로 시작되는 내부 SSAS 인스턴스가 포함되어 있으므로 외부 작업 영역 서버 인스턴스를 제공할 필요 없이 모델 디자이너에서 테이블, 열 및 데이터를 추가하고 볼 수 있습니다. 통합 작업 영역 모드에서는 SSDT 테이블 형식이 작업 영역 서버 및 데이터베이스에서 작동하는 방식은 변경하지 않습니다. SSDT 테이블 형식이 작업 영역 데이터베이스를 호스트하는 위치만 변경합니다. 통합 작업 영역 모드를 사용하려면 새 테이블 형식 프로젝트를 만들 때 표시되는 테이블 형식 모델 디자이너 대화 상자에서 통합 작업 영역 옵션을 선택합니다. 현재 명시적 작업 영역 서버를 사용하는 기존 테이블 형식 프로젝트의 경우 솔루션 탐색기에서 Model.bim 파일을 선택할 때 표시되는 속성 창에서 통합 작업 영역 모드 매개 변수를 True로 설정하여 통합 작업 영역 모드로 전환할 수 있습니다. 자세한 내용은 [Analysis Services 블로그 게시물](https://blogs.msdn.microsoft.com/analysisservices/2016/09/20/introducing-integrated-workspace-mode-for-sql-server-data-tools-for-analysis-services-tabular-projects-ssdt-tabular/)을 참조하세요.
+이제 SSDT 테이블 형식에 통합 작업 영역 모드를 사용할 경우 SSDT 테이블 형식이 백그라운드에서 자동으로 시작되는 내부 SSAS 인스턴스가 포함되어 있으므로 외부 작업 영역 서버 인스턴스를 제공할 필요 없이 모델 디자이너에서 테이블, 열 및 데이터를 추가하고 볼 수 있습니다. 통합 작업 영역 모드에서는 SSDT 테이블 형식이 작업 영역 서버 및 데이터베이스에서 작동하는 방식은 변경하지 않습니다. SSDT 테이블 형식이 작업 영역 데이터베이스를 호스트하는 위치만 변경합니다. 통합 작업 영역 모드를 사용하려면 새 테이블 형식 프로젝트를 만들 때 표시되는 테이블 형식 모델 디자이너 대화 상자에서 통합 작업 영역 옵션을 선택합니다. 현재 명시적 작업 영역 서버를 사용하는 기존 테이블 형식 프로젝트의 경우 솔루션 탐색기에서 Model.bim 파일을 선택할 때 표시되는 속성 창에서 통합 작업 영역 모드 매개 변수를 True로 설정하여 통합 작업 영역 모드로 전환할 수 있습니다. 자세한 내용은 [Analysis Services 블로그 게시물](/archive/blogs/analysisservices/introducing-integrated-workspace-mode-for-sql-server-data-tools-for-analysis-services-tabular-projects-ssdt-tabular)을 참조하세요.
 
 **업데이트 및 수정**
 **데이터베이스 도구:**
@@ -1012,7 +1012,7 @@ _SQL Server 2016의 경우._
 **새로운 기능**  
 - **Always Encrypted 지원:** Always Encrypted 열이 포함된 데이터베이스의 경우 이 릴리스에서는 핵심 API 및 명령줄 도구(SqlPackage.exe)를 통해 Always Encrypted가 완전히 지원됩니다. 모든 Always Encrypted 기능을 완전히 지원하는 데이터베이스 프로젝트를 빌드하고 게시할 수 있습니다.  
 - **임시 테이블 지원 향상:** 변경 전에 임시 테이블을 연결 해제하고 완료된 후 다시 연결하여 환경을 간소화했습니다. 즉, 지원되는 작업의 경우 임시 테이블에 다른 테이블 형식(표준, 메모리 내)의 패리티가 있습니다. 
-- **SqlPackage.exe 및 설치 변경 내용:** SQL Server 엔진 및 SSMS 업데이트에서 SSDT를 격리하는 변경 내용입니다. 자세한 내용은 [SSDT와 SqlPackage.exe 설치 및 업데이트에 대한 변경 내용](https://blogs.msdn.microsoft.com/ssdt/2016/06/30/changes-to-ssdt-and-sqlpackage-exe-installation-and-updates/)을 참조하세요.
+- **SqlPackage.exe 및 설치 변경 내용:** SQL Server 엔진 및 SSMS 업데이트에서 SSDT를 격리하는 변경 내용입니다. 자세한 내용은 [SSDT와 SqlPackage.exe 설치 및 업데이트에 대한 변경 내용](/archive/blogs/ssdt/changes-to-ssdt-and-sqlpackage-exe-installation-and-updates)을 참조하세요.
 
 
 **업데이트 및 수정**
@@ -1050,12 +1050,12 @@ _릴리스 날짜:_ &nbsp; 2016년 6월 1일
 _빌드 번호:_ &nbsp; 14.0.60525.0  
 _SQL Server 2016의 경우._
 
-이제 SSDT GA(일반 공급)가 릴리스되었습니다. 2016년 6월의 SSDT GA 업데이트에서는 SQL Server 2016 RTM의 최신 업데이트 및 다양한 버그 수정 프로그램에 대한 지원이 추가되었습니다. 자세한 내용은 [2016년 6월의 SQL Server Data Tools GA 업데이트](https://blogs.msdn.microsoft.com/ssdt/2016/06/01/sql-server-data-tools-ga-update-for-june-2016/)를 참조하세요.
+이제 SSDT GA(일반 공급)가 릴리스되었습니다. 2016년 6월의 SSDT GA 업데이트에서는 SQL Server 2016 RTM의 최신 업데이트 및 다양한 버그 수정 프로그램에 대한 지원이 추가되었습니다. 자세한 내용은 [2016년 6월의 SQL Server Data Tools GA 업데이트](/archive/blogs/ssdt/sql-server-data-tools-ga-update-for-june-2016)를 참조하세요.
 
 ## <a name="additional-resources"></a>추가 리소스
 
 - [SQL Server Data Tools 다운로드 &#40;SSDT&#41;](../ssdt/download-sql-server-data-tools-ssdt.md)
 - [SQL Server Data Tools&#40;SSDT 및 SSDT-BI&#41;의 이전 릴리스](../ssdt/previous-releases-of-sql-server-data-tools-ssdt-and-ssdt-bi.md)
-- [데이터베이스 엔진의 새로운 기능](https://msdn.microsoft.com/library/bb510411.aspx)
-- [Analysis Services의 새로운 기능](https://docs.microsoft.com/analysis-services/what-s-new-in-analysis-services)
+- [데이터베이스 엔진의 새로운 기능](../sql-server/what-s-new-in-sql-server-2016.md)
+- [Analysis Services의 새로운 기능](/analysis-services/what-s-new-in-analysis-services)
 - [Integration Services의 새로운 기능](../integration-services/what-s-new-in-integration-services-in-sql-server-2016.md)

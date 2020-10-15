@@ -11,12 +11,12 @@ ms.assetid: bf4c4922-80b3-4be3-bf71-228247f97004
 author: rothja
 ms.author: jroth
 monikerRange: = sql-server-2016 || = sqlallproducts-allversions
-ms.openlocfilehash: aeeaf52d389da8bb58d4b76bfbe85957cbd832dd
-ms.sourcegitcommit: 768f046107642f72693514f51bf2cbd00f58f58a
+ms.openlocfilehash: 623c0e6b5a1bafa033ddc9a6fd34a1911d6ecf5b
+ms.sourcegitcommit: a41e1f4199785a2b8019a419a1f3dcdc15571044
 ms.translationtype: HT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 07/23/2020
-ms.locfileid: "87111121"
+ms.lasthandoff: 10/13/2020
+ms.locfileid: "91988539"
 ---
 # <a name="sql-server-2014-release-notes"></a>SQL Server 2014 Release Notes
 [!INCLUDE[tsql-appliesto-ss2014-xxxx-xxxx-xxx-md](../includes/tsql-appliesto-ss2014-xxxx-xxxx-xxx-md.md)]
@@ -30,27 +30,27 @@ SQL Server 2014 SP2는 SQL Server 2014 SP1 CU7에 대해 릴리스된 핫픽스�
 
 |기능|Description|참조 항목|
 |---|---|---|
-|자동 소프트 NUMA 분할|NUMA 노드당 8개 이상의 CPU를 보고하는 시스템에 소프트 NUMA를 자동으로 구성할 수 있습니다.|[soft-NUMA(SQL Server)](https://docs.microsoft.com/sql/database-engine/configure-windows/soft-numa-sql-server)|
-|Buffer Pool Extension|8TB 이상으로 SQL Server 버퍼 풀을 확장할 수 있습니다.|[버퍼 풀 확장](https://docs.microsoft.com/sql/database-engine/configure-windows/buffer-pool-extension)|
-|동적 메모리 개체 크기 조정| 노드 및 코어 수에 따라 메모리 개체를 동적으로 분할합니다. 이 기능은 추적 플래그 8048 게시물 SQL 2014 SP2의 필요가 없습니다.|[동적 메모리 개체 크기 조정](https://blogs.msdn.microsoft.com/sql_server_team/dynamic-memory-object-scaling/)|
-|DBCC CHECK* 명령에 대한 MAXDOP 힌트|이러한 향상은 sp_configure 값이 아닌 MAXDOP 설정을 사용하여 DBCC CHECKDB를 실행하는 데 유용합니다.|[힌트(Transact-SQL) - 쿼리](https://docs.microsoft.com/sql/t-sql/queries/hints-transact-sql-query)|
-|SOS_RWLock 스핀 잠금 개선|SOS_RWLock에 대한 스핀 잠금의 필요를 제거하고 대신 메모리 내 OLTP와 유사한 잠금 없는 기술을 사용합니다. |[SOS_RWLock 재설계](https://blogs.msdn.microsoft.com/psssql/2016/04/07/sql-2016-it-just-runs-faster-sos_rwlock-redesign/)|
+|자동 소프트 NUMA 분할|NUMA 노드당 8개 이상의 CPU를 보고하는 시스템에 소프트 NUMA를 자동으로 구성할 수 있습니다.|[soft-NUMA(SQL Server)](../database-engine/configure-windows/soft-numa-sql-server.md)|
+|Buffer Pool Extension|8TB 이상으로 SQL Server 버퍼 풀을 확장할 수 있습니다.|[버퍼 풀 확장](../database-engine/configure-windows/buffer-pool-extension.md)|
+|동적 메모리 개체 크기 조정| 노드 및 코어 수에 따라 메모리 개체를 동적으로 분할합니다. 이 기능은 추적 플래그 8048 게시물 SQL 2014 SP2의 필요가 없습니다.|[동적 메모리 개체 크기 조정](/archive/blogs/sql_server_team/dynamic-memory-object-scaling)|
+|DBCC CHECK* 명령에 대한 MAXDOP 힌트|이러한 향상은 sp_configure 값이 아닌 MAXDOP 설정을 사용하여 DBCC CHECKDB를 실행하는 데 유용합니다.|[힌트(Transact-SQL) - 쿼리](../t-sql/queries/hints-transact-sql-query.md)|
+|SOS_RWLock 스핀 잠금 개선|SOS_RWLock에 대한 스핀 잠금의 필요를 제거하고 대신 메모리 내 OLTP와 유사한 잠금 없는 기술을 사용합니다. |[SOS_RWLock 재설계](/archive/blogs/psssql/sql-2016-it-just-runs-faster-sos_rwlock-redesign)|
 |공간 네이티브 구현|공간 쿼리 성능이 크게 향상합니다.|[SQL Server 2012 및 2014의 공간 성능 향상](https://support.microsoft.com/help/3107399/spatial-performance-improvements-in-sql-server-2012-and-2014)
 
 ### <a name="supportability-and-diagnostics-improvements-in-sp2"></a>SP2의 지원 가능성 및 진단 향상
 
 |기능|Description|참조 항목|
 |---|---|---|
-|AlwaysON 시간 제한 로깅|현재 시간 및 예상된 갱신 시간이 기록되도록 임대 시간 제한 메시지에 대한 새 로깅 기능을 추가했습니다. |[향상된 AlwaysOn 가용성 그룹 임대 시간 제한 진단](https://blogs.msdn.microsoft.com/alwaysonpro/2016/02/23/improved-alwayson-availability-group-lease-timeout-diagnostics/)
+|AlwaysON 시간 제한 로깅|현재 시간 및 예상된 갱신 시간이 기록되도록 임대 시간 제한 메시지에 대한 새 로깅 기능을 추가했습니다. |[향상된 AlwaysOn 가용성 그룹 임대 시간 제한 진단](/archive/blogs/alwaysonpro/improved-alwayson-availability-group-lease-timeout-diagnostics)
 |AlwaysON XEvent 및 성능 카운터|AlwaysOn을 사용하여 대기 시간 문제를 해결할 때 진단을 개선하기 위한 새로운 AlwaysON XEvent 및 성능 카운터 |[KB 3107172](https://support.microsoft.com/help/3107172/improve-tempdb-spill-diagnostics-by-using-extended-events-in-sql-serve) 및 [KB 3107400](https://support.microsoft.com/help/3107400/improved-tempdb-spill-diagnostics-in-showplan-xml-schema-in-sql-server)
 |변경 내용 추적 정리|새 저장 프로시저 sp_flush_CT_internal_table_on_demand는 요청 시 변경 내용 추적 내부 테이블을 정리합니다.|[KB 3173157](https://support.microsoft.com/help/3173157/adds-a-stored-procedure-for-the-manual-cleanup-of-the-change-tracking)
 |데이터베이스 복제|새 DBCC 명령을 사용하여 데이터 없이 스키마, 메타데이터 및 통계를 복제하여 기존 프로덕션 데이터베이스의 문제를 해결합니다. 복제된 데이터베이스는 프로덕션 환경에서 사용할 수 없습니다.|[KB 3177838](https://support.microsoft.com/help/3177838/how-to-use-dbcc-clonedatabase-to-generate-a-schema-and-statistics-only)
 |DMF 추가|새 DMF sys.dm_db_incremental_stats_properties는 증분 통계에 대한 파티션당 정보를 노출합니다.|[KB 3170114](https://support.microsoft.com/help/3170114/update-to-add-dmf-sys-dm-db-incremental-stats-properties-in-sql-server)
-|SQL Server에서 입력 버퍼를 검색하기 위한 DMF|이제 세션/요청(sys.dm_exec_input_buffer)에 대한 입력 버퍼를 검색하기 위한 새 DMF를 사용할 수 있습니다. 이는 DBCC INPUTBUFFER와 기능적으로 동일합니다.|[sys.dm_exec_input_buffer](https://docs.microsoft.com/sql/relational-databases/system-dynamic-management-views/sys-dm-exec-input-buffer-transact-sql)
+|SQL Server에서 입력 버퍼를 검색하기 위한 DMF|이제 세션/요청(sys.dm_exec_input_buffer)에 대한 입력 버퍼를 검색하기 위한 새 DMF를 사용할 수 있습니다. 이는 DBCC INPUTBUFFER와 기능적으로 동일합니다.|[sys.dm_exec_input_buffer](../relational-databases/system-dynamic-management-views/sys-dm-exec-input-buffer-transact-sql.md)
 |복제를 위한 DROP DDL 지원|트랜잭션 복제 게시에서 문서로 포함된 테이블을 데이터베이스 및 게시에서 삭제하도록 허용합니다.|[KB 3170123](https://support.microsoft.com/help/3170123/supports-drop-table-ddl-for-articles-that-are-included-in-transactiona)
-|SQL 서비스 계정에 대한 IFI 권한|IFI(인스턴트 파일 초기화)가 SQL Server 서비스 시작 시 적용되는지 확인합니다.|[데이터베이스 파일 초기화](https://docs.microsoft.com/sql/relational-databases/databases/database-instant-file-initialization)
+|SQL 서비스 계정에 대한 IFI 권한|IFI(인스턴트 파일 초기화)가 SQL Server 서비스 시작 시 적용되는지 확인합니다.|[데이터베이스 파일 초기화](../relational-databases/databases/database-instant-file-initialization.md)
 |메모리 부여 - 문제 처리|메모리 경합을 방지하도록 해당 메모리 부여를 제한하여 쿼리를 실행하는 동안 진단 힌트를 활용할 수 있습니다.|[KB 3107401](https://support.microsoft.com/help/3107401/new-query-memory-grant-options-are-available-min-grant-percent-and-max)
-|연산자당 쿼리 실행 경량 프로파일링 |실제 행 수와 같은 연산자당 쿼리 실행 통계 수집을 최적화합니다.|[개발자 선택 사항: 쿼리 진행률 - 언제, 어디서나](https://blogs.msdn.microsoft.com/sql_server_team/query-progress-anytime-anywhere/)
+|연산자당 쿼리 실행 경량 프로파일링 |실제 행 수와 같은 연산자당 쿼리 실행 통계 수집을 최적화합니다.|[개발자 선택 사항: 쿼리 진행률 - 언제, 어디서나](/archive/blogs/sql_server_team/query-progress-anytime-anywhere)
 |쿼리 실행 진단|읽은 실제 행은 이제 쿼리 성능 문제 해결을 개선하기 위해 쿼리 실행 계획에서 보고됩니다.|[KB 3107397](https://support.microsoft.com/help/3107397/improved-diagnostics-for-query-execution-plans-that-involve-residual-p)
 |tempdb 분산에 대한 쿼리 실행 진단|Hash Warning 및 Sort Warning은 이제 물리적 I/O 통계, 사용되는 메모리 및 영향을 받는 행을 추적하는 추가 열을 갖습니다. |[temptdb 분산 진단 개선](https://support.microsoft.com/help/3107172/improve-tempdb-spill-diagnostics-by-using-extended-events-in-sql-serve)
 |Tempdb 지원 가능성 |서버 시작 시 tempdb 파일 수 및 tempdb 데이터 파일 변경 내용에 대한 새 Errorlog 메시지를 사용합니다.|[KB 2963384](https://support.microsoft.com/help/2963384/fix-sql-server-crashes-when-the-log-file-of-tempdb-database-is-full-in)
@@ -82,7 +82,7 @@ SQL Server 2014 SP1은 CU 5를 포함하여 SQL Server 2014 CU 1에서 제공하
 ### <a name="download-pages-and-more-information-for-sp1"></a>SP1에 대한 다운로드 페이지 및 추가 정보
 
 - [Microsoft SQL Server 2014용 서비스 팩 1 다운로드](https://www.microsoft.com/download/details.aspx?id=46694)
-- [SQL Server 2014 서비스 팩 1 릴리스됨 – 업데이트됨](https://blogs.msdn.microsoft.com/sqlreleaseservices/sql-server-2014-service-pack-1-has-released-updated/)
+- [SQL Server 2014 서비스 팩 1 릴리스됨 – 업데이트됨](/archive/blogs/sqlreleaseservices/sql-server-2014-service-pack-1-has-released-updated)
 - [Microsoft SQL Server 2014 SP1 Express](https://www.microsoft.com/download/details.aspx?id=42299)
 - [Microsoft SQL Server 2014 SP1 기능 팩](https://www.microsoft.com/download/details.aspx?id=46696)
 
@@ -103,7 +103,7 @@ SQL Server 2014 SP1은 CU 5를 포함하여 SQL Server 2014 CU 1에서 제공하
 1.  SQL Server 2014 CTP 2 데이터베이스를 SQL Server 2014 RTM 인스턴스에 연결합니다.    
 2.  SQL Server 2014 CTP 2에서 만든 데이터베이스 백업을 SQL Server 2014 RTM 인스턴스로 복원합니다.    
 3.  SQL Server 2014 RTM으로 전체 업그레이드를 수행합니다.
-4.  SQL Server 2014 RTM으로 롤링 업그레이드를 수행합니다. 롤링 업그레이드를 시작하기 전에 수동 장애 조치(failover) 모드로 전환해야 합니다. 자세한 내용은 [최소 작동 중지 및 데이터 손실로 가용성 그룹 서버 업그레이드 및 업데이트](https://msdn.microsoft.com/library/dn178483.aspx)를 참조하세요.    
+4.  SQL Server 2014 RTM으로 롤링 업그레이드를 수행합니다. 롤링 업그레이드를 시작하기 전에 수동 장애 조치(failover) 모드로 전환해야 합니다. 자세한 내용은 [최소 작동 중지 및 데이터 손실로 가용성 그룹 서버 업그레이드 및 업데이트](../database-engine/availability-groups/windows/upgrading-always-on-availability-group-replica-instances.md)를 참조하세요.    
 5.  SQL Server 2014 CTP 2에서 설치된 트랜잭션 성능 컬렉션 집합에 의해 수집된 데이터는 SQL Server 2014 RTM에서 SQL Server Management Studio를 통해 볼 수 없으며 그 반대의 경우도 마찬가지입니다.
   
 #### <a name="downgrading-from-sql-server-2014-rtm-to-sql-server-2014-ctp-2"></a>SQL Server 2014 RTM에서 SQL Server 2014 CTP 2로의 다운그레이드  
@@ -158,7 +158,7 @@ SQL Server 2014 Standard의 변경 사항은 다음과 같습니다.
 -   최대 메모리가 64GB에서 128GB로 증가했습니다.  
  
 #### <a name="memory-optimization-advisor-flags-default-constraints-as-incompatible"></a>메모리 최적화 관리자가 호환되지 않는 것으로 기본 제약 조건에 플래그를 지정함  
-**문제:** SQL Server Management Studio에서 메모리 최적화 관리자는 모든 기본 제약 조건에 호환되지 않는 것으로 플래그를 지정합니다. 일부 기본 제약 조건은 메모리 액세스에 최적화된 테이블에서 지원되지 않습니다. 메모리 최적화 관리자는 지원되는 유형의 기본 제약 조건과 지원되지 않는 유형의 기본 제약 조건을 구분하지 않습니다. 지원되는 기본 제약 조건에는 고유하게 컴파일된 저장 프로시저 내에서 지원되는 모든 상수, 식 및 기본 제공 함수가 포함됩니다. 고유하게 컴파일된 저장 프로시저에서 지원되는 함수 목록을 보려면 [고유하게 컴파일된 저장 프로시저에서 지원되는 구문](https://msdn.microsoft.com/library/dn452279(v=sql.120).aspx)을 참조하세요.  
+**문제:** SQL Server Management Studio에서 메모리 최적화 관리자는 모든 기본 제약 조건에 호환되지 않는 것으로 플래그를 지정합니다. 일부 기본 제약 조건은 메모리 액세스에 최적화된 테이블에서 지원되지 않습니다. 메모리 최적화 관리자는 지원되는 유형의 기본 제약 조건과 지원되지 않는 유형의 기본 제약 조건을 구분하지 않습니다. 지원되는 기본 제약 조건에는 고유하게 컴파일된 저장 프로시저 내에서 지원되는 모든 상수, 식 및 기본 제공 함수가 포함됩니다. 고유하게 컴파일된 저장 프로시저에서 지원되는 함수 목록을 보려면 [고유하게 컴파일된 저장 프로시저에서 지원되는 구문](../relational-databases/in-memory-oltp/supported-features-for-natively-compiled-t-sql-modules.md?viewFallbackFrom=sql-server-2014)을 참조하세요.  
   
 **해결 방법:** 메모리 최적화 관리자를 사용하여 블로커를 식별하려면 호환되는 기본 제약 조건을 무시합니다. 메모리 최적화 관리자를 사용하여 다른 블로커를 제외하고 호환되는 기본 제약 조건이 있는 테이블을 마이그레이션하려면 다음 단계를 수행하십시오.  
   
@@ -348,7 +348,7 @@ Description:   Report Server (DENALI) cannot connect to the report server databa
   
     이렇게 하면 마법사가 Azure에서 복제본을 추가하는 작업을 완료할 수 있습니다.  
   
-2.  마법사가 완료된 후 [Azure에서 AlwaysOn 가용성 그룹을 위한 수신기 구성](https://msdn.microsoft.com/library/dn376546.aspx)에 설명된 대로 Azure에서 수신기의 구성을 완료해야 합니다.  
+2.  마법사가 완료된 후 [Azure에서 AlwaysOn 가용성 그룹을 위한 수신기 구성](/previous-versions/azure/dn376546(v=azure.100))에 설명된 대로 Azure에서 수신기의 구성을 완료해야 합니다.  
   
 ### <a name="analysis-services-rtm"></a><a name="SSAS"></a>Analysis Services(RTM)
   
@@ -361,7 +361,7 @@ Description:   Report Server (DENALI) cannot connect to the report server databa
   
 1.  [!INCLUDE[ssSQL11SP1](../includes/sssql11sp1-md.md)] 기능 팩에서 MSOLAP.5 공급자를 다운로드합니다. Excel Services를 실행하는 애플리케이션 서버에서 공급자를 설치합니다. 자세한 내용은 [Microsoft SQL Server 2012 SP1 기능 팩](https://www.microsoft.com/download/details.aspx?id=35580)의 "Microsoft SQL Server 2012 SP1용 Microsoft Analysis Services OLE DB Provider" 섹션을 참조하세요.  
   
-2.  SharePoint Excel 서비스에서 신뢰할 수 있는 공급자로 MSOLAP.5를 등록합니다. 자세한 내용은 [MSOLAP.5를 Excel 서비스에서 신뢰할 수 있는 데이터 공급자로 추가](https://technet.microsoft.com/library/hh758436.aspx)를 참조하십시오.  
+2.  SharePoint Excel 서비스에서 신뢰할 수 있는 공급자로 MSOLAP.5를 등록합니다. 자세한 내용은 [MSOLAP.5를 Excel 서비스에서 신뢰할 수 있는 데이터 공급자로 추가](/analysis-services/power-pivot-for-sharepoint-ssas?viewFallbackFrom=sql-server-ver15)를 참조하십시오.  
   
 **추가 정보:**  
   
@@ -376,7 +376,7 @@ Description:   Report Server (DENALI) cannot connect to the report server databa
   
 1.  [!INCLUDE[ssSQL11SP1](../includes/sssql11sp1-md.md)] 기능 팩에서 MSOLAP.5 공급자를 다운로드합니다. Excel Services를 실행하는 애플리케이션 서버에서 공급자를 설치합니다. 자세한 내용은 [Microsoft SQL Server 2012 SP1 기능 팩](https://www.microsoft.com/download/details.aspx?id=35580)의 "Microsoft SQL Server 2012 SP1용 Microsoft Analysis Services OLE DB Provider" 섹션을 참조하세요.  
   
-2.  SharePoint Excel 서비스에서 신뢰할 수 있는 공급자로 MSOLAP.5를 등록합니다. 자세한 내용은 [MSOLAP.5를 Excel 서비스에서 신뢰할 수 있는 데이터 공급자로 추가](https://technet.microsoft.com/library/hh758436.aspx)를 참조하십시오.  
+2.  SharePoint Excel 서비스에서 신뢰할 수 있는 공급자로 MSOLAP.5를 등록합니다. 자세한 내용은 [MSOLAP.5를 Excel 서비스에서 신뢰할 수 있는 데이터 공급자로 추가](/analysis-services/power-pivot-for-sharepoint-ssas?viewFallbackFrom=sql-server-ver15)를 참조하십시오.  
   
 **추가 정보:**  
   

@@ -14,12 +14,12 @@ helpviewer_keywords:
 ms.assetid: 84012320-5a7b-45b0-8feb-325bf0e21324
 author: MashaMSFT
 ms.author: mathoma
-ms.openlocfilehash: d5bf4e441352bce868d80ba00fe185c7494c0917
-ms.sourcegitcommit: cc23d8646041336d119b74bf239a6ac305ff3d31
+ms.openlocfilehash: f9c54984eb8d1c94176929579043f979aa518672
+ms.sourcegitcommit: a41e1f4199785a2b8019a419a1f3dcdc15571044
 ms.translationtype: HT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 09/23/2020
-ms.locfileid: "91111019"
+ms.lasthandoff: 10/13/2020
+ms.locfileid: "91988310"
 ---
 # <a name="failover-cluster-troubleshooting"></a>장애 조치(Failover) 클러스터 문제 해결
 [!INCLUDE [SQL Server](../../../includes/applies-to-version/sqlserver.md)]
@@ -34,7 +34,7 @@ ms.locfileid: "91111019"
 -   확장 저장 프로시저 및 COM 개체 사용  
   
 ## <a name="basic-troubleshooting-steps"></a>기본 문제 해결 단계  
- 첫 번째 진단 단계는 새로운 클러스터 유효성 검사 확인을 실행하는 것입니다. 유효성 검사에 대한 자세한 내용은 [장애 조치(failover) 클러스터 단계별 가이드: 장애 조치(failover) 클러스터에 대한 하드웨어 유효성 검사](https://technet.microsoft.com/library/cc732035.aspx)를 참조하세요.  이 작업은 어떠한 온라인 클러스터 리소스에도 영향을 주지 않으므로 중단 없이 완료할 수 있습니다. 장애 조치(failover) 클러스터링 기능이 설치되었으면 클러스터가 배포되기 전, 클러스터 생성 중, 클러스터가 실행되는 동안을 포함하여 언제든지 유효성 검사를 실행할 수 있습니다. 실제로 클러스터가 사용 중이면 고가용성 워크로드를 위해 모범 사례를 따르고 있는지 확인하는 추가 테스트를 실행합니다. 이러한 수십 가지 테스트 중에 일부만 실행 중인 클러스터 워크로드에 영향을 주며 모두 스토리지 범주 내에 있으므로 이 전체 범주를 건너뛰면 테스트 중단을 쉽게 피할 수 있습니다.  
+ 첫 번째 진단 단계는 새로운 클러스터 유효성 검사 확인을 실행하는 것입니다. 유효성 검사에 대한 자세한 내용은 [장애 조치(failover) 클러스터 단계별 가이드: 장애 조치(failover) 클러스터에 대한 하드웨어 유효성 검사](/previous-versions/windows/it-pro/windows-server-2008-R2-and-2008/cc732035(v=ws.10))를 참조하세요.  이 작업은 어떠한 온라인 클러스터 리소스에도 영향을 주지 않으므로 중단 없이 완료할 수 있습니다. 장애 조치(failover) 클러스터링 기능이 설치되었으면 클러스터가 배포되기 전, 클러스터 생성 중, 클러스터가 실행되는 동안을 포함하여 언제든지 유효성 검사를 실행할 수 있습니다. 실제로 클러스터가 사용 중이면 고가용성 워크로드를 위해 모범 사례를 따르고 있는지 확인하는 추가 테스트를 실행합니다. 이러한 수십 가지 테스트 중에 일부만 실행 중인 클러스터 워크로드에 영향을 주며 모두 스토리지 범주 내에 있으므로 이 전체 범주를 건너뛰면 테스트 중단을 쉽게 피할 수 있습니다.  
 장애 조치(failover) 클러스터링에는 유효성 검사 중에 스토리지 테스트를 실행할 때 실수로 인한 중단 시간을 방지하기 위해 기본 제공 보호 기능이 함께 제공됩니다. 유효성 검사가 시작될 때 클러스터에 온라인 그룹이 있는 경우 스토리지 테스트가 선택된 상태로 있으면 모든 테스트를 실행할지(중단 시간 발생) 중단 시간을 피하기 위해 온라인 그룹 디스크의 테스트를 건너뛸지 묻는 메시지가 사용자에게 표시됩니다. 전체 스토리지 범주가 테스트에서 제외된 경우 이 메시지는 표시되지 않습니다. 이렇게 하면 중단 시간 없이 클러스터 유효성 검사가 가능합니다.  
   
 #### <a name="how-to-revalidate-your-cluster"></a>클러스터의 유효성을 다시 검사하는 방법  
@@ -189,5 +189,4 @@ ms.locfileid: "91111019"
  [SQL Server 설치 로그 파일 보기 및 읽기](../../../database-engine/install-windows/view-and-read-sql-server-setup-log-files.md)   
  [확장 저장 프로시저 작동 원리](../../../relational-databases/extended-stored-procedures-programming/how-extended-stored-procedures-work.md)   
  [확장 저장 프로시저의 실행 특징](../../../relational-databases/extended-stored-procedures-programming/execution-characteristics-of-extended-stored-procedures.md)  
-  
   

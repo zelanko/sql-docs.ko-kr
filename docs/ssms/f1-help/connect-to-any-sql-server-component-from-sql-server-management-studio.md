@@ -16,12 +16,12 @@ ms.author: maghan
 ms.reviewer: ''
 ms.custom: seo-lt-2019
 ms.date: 01/19/2017
-ms.openlocfilehash: 8f89371787c66271d8298beed886b04b2b4aade1
-ms.sourcegitcommit: e700497f962e4c2274df16d9e651059b42ff1a10
+ms.openlocfilehash: 3df8294e7028573518fe349d8c490fe6b5a266d1
+ms.sourcegitcommit: 22dacedeb6e8721e7cdb6279a946d4002cfb5da3
 ms.translationtype: HT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 08/17/2020
-ms.locfileid: "88497437"
+ms.lasthandoff: 10/14/2020
+ms.locfileid: "92034914"
 ---
 # <a name="connect-to-any-sql-server-component-from-sql-server-management-studio"></a>SQL Server Management Studio에서 SQL Server 구성 요소로 연결
 
@@ -51,6 +51,5 @@ ms.locfileid: "88497437"
 솔루션 탐색기를 사용하면 관련 쿼리, 스크립트, 연결 및 기타 관련 정보를 프로젝트에 저장할 수 있습니다. 각 스크립트 프로젝트에는 하나 이상의 연결을 저장할 수 있는 **연결**이라는 노드가 포함되어 있습니다. 연결을 추가하려면 **연결**을 마우스 오른쪽 단추로 선택하고 **새 연결**을 선택합니다. 저장된 연결에 액세스하려면 **연결**을 확장하고 연결을 두 번 선택합니다. [!INCLUDE[ssManStudio](../../includes/ssmanstudio-md.md)] 해당 연결과 연관된 쿼리 창이 열립니다. 저장 시 스크립트에서는 특정 연결과의 연관성이 유지됩니다.  
   
 ## <a name="see-also"></a>참고 항목  
-[SQL Server Management Studio 사용](../../ssms/use-sql-server-management-studio.md)  
+[SQL Server Management Studio 사용](../sql-server-management-studio-ssms.md)  
 [개체 탐색기](../../ssms/object/object-explorer.md)  
-  

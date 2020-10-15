@@ -16,12 +16,12 @@ ms.reviewer: ''
 ms.custom: seo-lt-2019
 ms.date: 03/14/2017
 monikerRange: '>=aps-pdw-2016||=azuresqldb-current||=azure-sqldw-latest||>=sql-server-2016||=sqlallproducts-allversions||>=sql-server-linux-2017||=azuresqldb-mi-current'
-ms.openlocfilehash: 087e3837ed8b1876216f847c956e0a4421f8a95c
-ms.sourcegitcommit: 6d53ecfdc463914f045c20eda96da39dec22acca
+ms.openlocfilehash: 2a953cd71bc267622dd158569da80bc924e89b83
+ms.sourcegitcommit: 22dacedeb6e8721e7cdb6279a946d4002cfb5da3
 ms.translationtype: HT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 08/26/2020
-ms.locfileid: "88901509"
+ms.lasthandoff: 10/14/2020
+ms.locfileid: "92036236"
 ---
 # <a name="step-through-transact-sql-code"></a>Transact-SQL 코드 단계별 실행
 
@@ -33,7 +33,7 @@ ms.locfileid: "88901509"
 
 ## <a name="breakpoints"></a>중단점
 
-중단점은 디버거에게 특정 [!INCLUDE[tsql](../../includes/tsql-md.md)] 문에서 실행을 일시 중지하라는 신호를 보냅니다. 중단점에 대한 자세한 내용은 [Transact-SQL 중단점](../../relational-databases/scripting/transact-sql-breakpoints.md)을 참조하세요.  
+중단점은 디버거에게 특정 [!INCLUDE[tsql](../../includes/tsql-md.md)] 문에서 실행을 일시 중지하라는 신호를 보냅니다. 중단점에 대한 자세한 내용은 [Transact-SQL 중단점](./transact-sql-breakpoints.md)을 참조하세요.  
   
 ## <a name="controlling-statement-execution"></a>문 실행 제어
 
@@ -67,4 +67,4 @@ ms.locfileid: "88901509"
   
 ## <a name="see-also"></a>참고 항목
 
-- [Transact-SQL 디버거 정보](../../relational-databases/scripting/transact-sql-debugger-information.md)
+- [Transact-SQL 디버거 정보](./transact-sql-debugger-information.md)

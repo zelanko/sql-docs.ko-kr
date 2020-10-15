@@ -10,12 +10,12 @@ ms.author: maghan
 ms.reviewer: “”
 ms.custom: seo-lt-2019
 ms.date: 02/09/2017
-ms.openlocfilehash: 4ff3cb815dcd27f72ea96296935484ec0cc15ea0
-ms.sourcegitcommit: 216f377451e53874718ae1645a2611cdb198808a
+ms.openlocfilehash: b5a10fdbc94858a9fe3f5b523fdd43b505e2563f
+ms.sourcegitcommit: a41e1f4199785a2b8019a419a1f3dcdc15571044
 ms.translationtype: HT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 07/28/2020
-ms.locfileid: "87243534"
+ms.lasthandoff: 10/13/2020
+ms.locfileid: "91987559"
 ---
 # <a name="how-to-create-a-test-project-for-sql-server-database-unit-testing"></a>방법: SQL Server 데이터베이스 단위 테스트용 테스트 프로젝트 만들기
 
@@ -28,7 +28,7 @@ ms.locfileid: "87243534"
 |테스트 실행 또는 테스트 유효성 검사를 위해 서로 다른 SQL Server 단위 테스트로 서로 다른 데이터베이스 연결에 액세스해야 합니까?|예인 경우, 두 개 이상의 테스트 프로젝트가 필요합니다. 테스트 실행에 대해서는 두 개 이상의 데이터베이스 연결을 지정할 수 없습니다. 하지만 테스트 유효성 검사를 위해서는 다른 데이터베이스 연결을 지정할 수 있습니다.|  
 |서로 다른 단위 테스트에 대해 서로 다른 데이터베이스 프로젝트를 배포해야 합니까?|예인 경우, 두 개 이상의 테스트 프로젝트가 필요합니다. 테스트 프로젝트에서는 데이터베이스 프로젝트를 하나만 배포할 수 있습니다.|  
   
-이러한 각 질문에 대한 자세한 내용은 [방법: SQL Server 단위 테스트 실행 구성](../ssdt/how-to-configure-sql-server-unit-test-execution.md)을 참조하세요. 여러 테스트 프로젝트를 만드는 방법에 대한 대안으로 사용자 고유의 [DatabaseTestService](https://msdn.microsoft.com/library/microsoft.data.schema.unittesting.databasetestservice.aspx) Microsoft.Data.Schema.UnitTesting.DatabaseTestService 구현을 제공할 수도 있습니다.  
+이러한 각 질문에 대한 자세한 내용은 [방법: SQL Server 단위 테스트 실행 구성](../ssdt/how-to-configure-sql-server-unit-test-execution.md)을 참조하세요. 여러 테스트 프로젝트를 만드는 방법에 대한 대안으로 사용자 고유의 [DatabaseTestService](/previous-versions/visualstudio/visual-studio-2010/dd154755(v=vs.100)) Microsoft.Data.Schema.UnitTesting.DatabaseTestService 구현을 제공할 수도 있습니다.  
   
 데이터베이스 프로젝트가 포함된 솔루션에 테스트 프로젝트를 추가하는 데는 세 가지 옵션을 사용할 수 있습니다.  
   
@@ -56,4 +56,3 @@ ms.locfileid: "87243534"
   
 ## <a name="see-also"></a>참고 항목  
 [SQL Server 단위 테스트 만들기 및 정의](../ssdt/creating-and-defining-sql-server-unit-tests.md)  
-  

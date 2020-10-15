@@ -11,12 +11,12 @@ ms.reviewer: ''
 ms.custom: seo-lt-2019
 ms.date: 03/16/2017
 monikerRange: '>=aps-pdw-2016||=azuresqldb-current||=azure-sqldw-latest||>=sql-server-2016||=sqlallproducts-allversions||>=sql-server-linux-2017||=azuresqldb-mi-current'
-ms.openlocfilehash: a70d930b53ac4c43428f2bb0dbe0da26ab5fbfc1
-ms.sourcegitcommit: 827ad02375793090fa8fee63cc372d130f11393f
+ms.openlocfilehash: 5a805fe8c32828dffc740959385ba599641ac03b
+ms.sourcegitcommit: 22dacedeb6e8721e7cdb6279a946d4002cfb5da3
 ms.translationtype: HT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 09/04/2020
-ms.locfileid: "89480728"
+ms.lasthandoff: 10/14/2020
+ms.locfileid: "92036226"
 ---
 # <a name="transact-sql-code-snippets"></a>Transact-SQL 코드 조각
 
@@ -28,11 +28,11 @@ ms.locfileid: "89480728"
   
 |태스크 설명|항목|  
 |----------------------|-----------|  
-|CREATE TABLE 또는 SELECT 조각과 같은 기존 코드 조각을 삽입하는 방법을 설명합니다.|[Transact-SQL 코드 조각 삽입](../../relational-databases/scripting/insert-transact-sql-snippets.md)|  
-|[!INCLUDE[tsql](../../includes/tsql-md.md)] 문 집합을 BEGIN, IF 또는 WHILE block 블록으로 묶는 방법을 설명합니다.|[코드 감싸기 Transact-SQL 조각 삽입](../../relational-databases/scripting/insert-surround-with-transact-sql-snippets.md)|  
-|코드 조각을 삽입한 후 전체 [!INCLUDE[tsql](../../includes/tsql-md.md)] 문 또는 블록 작성을 완료하는 방법을 설명합니다.|[Transact-SQL 코드 조각 완성](../../relational-databases/scripting/complete-transact-sql-snippets.md)|  
-|고유의 사용자 지정 코드 조각을 작성하여 SQL Server 코드 조각에 추가하는 방법을 설명합니다.|[Transact-SQL 코드 조각 추가](../../relational-databases/scripting/add-transact-sql-snippets.md)|  
+|CREATE TABLE 또는 SELECT 조각과 같은 기존 코드 조각을 삽입하는 방법을 설명합니다.|[Transact-SQL 코드 조각 삽입](./insert-transact-sql-snippets.md)|  
+|[!INCLUDE[tsql](../../includes/tsql-md.md)] 문 집합을 BEGIN, IF 또는 WHILE block 블록으로 묶는 방법을 설명합니다.|[코드 감싸기 Transact-SQL 조각 삽입](./insert-surround-with-transact-sql-snippets.md)|  
+|코드 조각을 삽입한 후 전체 [!INCLUDE[tsql](../../includes/tsql-md.md)] 문 또는 블록 작성을 완료하는 방법을 설명합니다.|[Transact-SQL 코드 조각 완성](./complete-transact-sql-snippets.md)|  
+|고유의 사용자 지정 코드 조각을 작성하여 SQL Server 코드 조각에 추가하는 방법을 설명합니다.|[Transact-SQL 코드 조각 추가](./add-transact-sql-snippets.md)|  
   
 ## <a name="see-also"></a>참고 항목
 
-[쿼리 및 텍스트 편집기&#40;SQL Server Management Studio&#41;](https://docs.microsoft.com/sql/ssms/f1-help/database-engine-query-editor-sql-server-management-studio?view=sql-server-ver15)
+[쿼리 및 텍스트 편집기&#40;SQL Server Management Studio&#41;](../f1-help/database-engine-query-editor-sql-server-management-studio.md?view=sql-server-ver15)

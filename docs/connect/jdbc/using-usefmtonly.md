@@ -15,12 +15,12 @@ caps.latest.revision: ''
 author: rene-ye
 ms.author: v-reye
 manager: kenvh
-ms.openlocfilehash: ad8f30b236ca9d4fe8a134db3e1726aaeb17a2d3
-ms.sourcegitcommit: c7f40918dc3ecdb0ed2ef5c237a3996cb4cd268d
+ms.openlocfilehash: 509c88230b8a09933291e5c09d528370cf06caca
+ms.sourcegitcommit: 7eb80038c86acfef1d8e7bfd5f4e30e94aed3a75
 ms.translationtype: HT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 10/05/2020
-ms.locfileid: "91727464"
+ms.lasthandoff: 10/15/2020
+ms.locfileid: "92081532"
 ---
 # <a name="retrieving-parametermetadata-via-usefmtonly"></a>useFmtOnly를 통해 ParameterMetaData 검색
 [!INCLUDE[Driver_JDBC_Download](../../includes/driver_jdbc_download.md)]
@@ -91,7 +91,7 @@ try (Connection c = DriverManager.getConnection(URL, USERNAME, PASSWORD)) {
 }
 ```
 > [!NOTE]  
->  이 기능은 `SELECT/INSERT/UPDATE/DELETE` 쿼리만 지원합니다. 쿼리는 지원되는 4개 키워드 중 하나 또는 [공통 테이블 식](../../t-sql/queries/with-common-table-expression-transact-sql.md?view=sql-server-2017)으로 시작하고 그 뒤에 지원되는 쿼리 중 하나가 이어져야 합니다. 공통 테이블 식 내 매개 변수는 지원되지 않습니다.
+>  이 기능은 `SELECT/INSERT/UPDATE/DELETE` 쿼리만 지원합니다. 쿼리는 지원되는 4개 키워드 중 하나 또는 [공통 테이블 식](../../t-sql/queries/with-common-table-expression-transact-sql.md)으로 시작하고 그 뒤에 지원되는 쿼리 중 하나가 이어져야 합니다. 공통 테이블 식 내 매개 변수는 지원되지 않습니다.
 
 ## <a name="known-issues"></a>알려진 문제
   이 기능에는 현재 SQL 구문 분석 논리의 결함으로 인해 발생하는 몇 가지 문제가 있습니다. 이러한 문제는 이 기능에 대한 향후 업데이트에서 해결될 수 있으며, 아래에 해결 방법 제안과 함께 설명되어 있습니다.
@@ -139,6 +139,6 @@ UPDATE Foo SET c1 = (SELECT c1 FROM Foo) WHERE c1 = ?; --Incorrect syntax near '
 UPDATE Foo SET c1 = (SELECT c1 FROM Foo HAVING (HASH JOIN)) WHERE c1 = ?;
 ```
 
-## <a name="see-also"></a>참고 항목  
+## <a name="see-also"></a>추가 정보  
  [연결 속성 설정](../../connect/jdbc/setting-the-connection-properties.md)  
   

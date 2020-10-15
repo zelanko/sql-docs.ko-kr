@@ -14,12 +14,12 @@ helpviewer_keywords:
 ms.assetid: daac41fe-7d0b-4f14-84c2-62952ad8cbfa
 author: MashaMSFT
 ms.author: mathoma
-ms.openlocfilehash: 196678dbb5c91e6c5acbaf2fda0b6a65f9ac369e
-ms.sourcegitcommit: 039fb38c583019b3fd06894160568387a19ba04e
+ms.openlocfilehash: c06446f14fd2f316f297b675cc1b96efc7801ba1
+ms.sourcegitcommit: a41e1f4199785a2b8019a419a1f3dcdc15571044
 ms.translationtype: HT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 07/30/2020
-ms.locfileid: "87442371"
+ms.lasthandoff: 10/13/2020
+ms.locfileid: "91988317"
 ---
 # <a name="upgrade-a-failover-cluster-instance"></a>장애 조치(failover) 클러스터 인스턴스 업그레이드 
 [!INCLUDE [SQL Server](../../../includes/applies-to-version/sqlserver.md)]
@@ -65,7 +65,7 @@ ms.locfileid: "87442371"
   
  이 프로세스로 인해 전체 장애 조치(Failover) 클러스터 업그레이드 중의 작동 중단은 장애 조치(Failover) 시간 및 데이터베이스 업그레이드 스크립트 실행 시간으로만 제한됩니다.  
   
- 업그레이드 프로세스 중에 클러스터 노드의 장애 조치(Failover) 동작을 제어하려면 명령 프롬프트에서 업그레이드 작업을 실행하고 /FAILOVERCLUSTERROLLOWNERSHIP 매개 변수를 사용합니다. 자세한 내용은 [명령 프롬프트에서 SQL Server 설치](../../../database-engine/install-windows/install-sql-server-2016-from-the-command-prompt.md)를 참조하세요.  
+ 업그레이드 프로세스 중에 클러스터 노드의 장애 조치(Failover) 동작을 제어하려면 명령 프롬프트에서 업그레이드 작업을 실행하고 /FAILOVERCLUSTERROLLOWNERSHIP 매개 변수를 사용합니다. 자세한 내용은 [명령 프롬프트에서 SQL Server 설치](../../../database-engine/install-windows/install-sql-server-from-the-command-prompt.md)를 참조하세요.  
 
  ## <a name="upgrade-with-installation-media"></a>설치 미디어를 사용하여 업그레이드 
   
@@ -83,7 +83,7 @@ ms.locfileid: "87442371"
   
 7.  인스턴스 선택 페이지에서 [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] 로 업그레이드할 [!INCLUDE[ssCurrent](../../../includes/sscurrent-md.md)]인스턴스를 지정합니다. 계속하려면**다음**을 클릭합니다.  
   
-8.  기능 선택 페이지에는 업그레이드할 기능이 미리 선택되어 있습니다. 기능 이름을 선택하면 오른쪽 창에 각 구성 요소 그룹에 대한 설명이 나타납니다. 업그레이드할 기능은 변경할 수 없으며, 업그레이드 작업 중에 기능을 추가할 수도 없습니다. 업그레이드 작업이 완료된 후 [!INCLUDE[ssSQL14](../../../includes/sssql14-md.md)] 의 업그레이드된 인스턴스에 기능을 추가하려면 [SQL Server 2016 인스턴스에 기능 추가&#40;설치&#41;](../../../database-engine/install-windows/add-features-to-an-instance-of-sql-server-2016-setup.md)를 참조하세요.  
+8.  기능 선택 페이지에는 업그레이드할 기능이 미리 선택되어 있습니다. 기능 이름을 선택하면 오른쪽 창에 각 구성 요소 그룹에 대한 설명이 나타납니다. 업그레이드할 기능은 변경할 수 없으며, 업그레이드 작업 중에 기능을 추가할 수도 없습니다. 업그레이드 작업이 완료된 후 [!INCLUDE[ssSQL14](../../../includes/sssql14-md.md)] 의 업그레이드된 인스턴스에 기능을 추가하려면 [SQL Server 2016 인스턴스에 기능 추가&#40;설치&#41;](../../../database-engine/install-windows/add-features-to-an-instance-of-sql-server-setup.md)를 참조하세요.  
   
      선택한 기능의 필수 구성 요소가 오른쪽 창에 표시됩니다. 설치되어 있지 않은 필수 구성 요소가 있는 경우 SQL Server 설치 프로그램은 이 절차의 뒷부분에 설명된 설치 단계에서 이를 설치합니다. 시간을 절약하려면 각 노드에서 이러한 필수 구성 요소를 미리 설치해야 합니다.  
   
@@ -95,7 +95,7 @@ ms.locfileid: "87442371"
   
 10. 디스크 공간 요구 사항 페이지에서는 사용자가 지정한 기능에 필요한 디스크 공간을 계산한 후 설치 프로그램을 실행 중인 컴퓨터에서 사용 가능한 디스크 공간과 실제로 필요한 디스크 공간의 크기를 비교하여 보여 줍니다.  
   
-11. 전체 텍스트 검색 업그레이드 페이지에서 업그레이드하려는 데이터베이스의 업그레이드 옵션을 지정합니다. 자세한 내용은 [전체 텍스트 검색 업그레이드](https://msdn.microsoft.com/library/16c9376b-5fbb-4495-a429-06a2493849c9)를 참조하세요.  
+11. 전체 텍스트 검색 업그레이드 페이지에서 업그레이드하려는 데이터베이스의 업그레이드 옵션을 지정합니다. 자세한 내용은 [전체 텍스트 검색 업그레이드](../../../database-engine/install-windows/install-sql-server.md)를 참조하세요.  
   
 12. **오류 보고** 페이지에서 [!INCLUDE[msCoName](../../../includes/msconame-md.md)] 개선에 도움이 되도록 [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)]에 보낼 정보를 지정할 수 있습니다. 오류 보고 옵션은 기본적으로 사용됩니다.  
   
@@ -140,8 +140,7 @@ ms.locfileid: "87442371"
   
 -   [데이터베이스 호환성 모드 변경 및 쿼리 저장소 사용](../../../database-engine/install-windows/change-the-database-compatibility-mode-and-use-the-query-store.md)  
   
--   [새 SQL Server 2016 기능 활용](https://msdn.microsoft.com/library/d8879659-8efa-4442-bcbb-91272647ae16)  
+-   [새 SQL Server 2016 기능 활용](../../what-s-new-in-sql-server-2017.md)  
   
 
-  
   

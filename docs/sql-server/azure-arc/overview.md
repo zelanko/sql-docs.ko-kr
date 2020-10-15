@@ -9,12 +9,12 @@ ms.date: 10/07/2020
 ms.topic: conceptual
 ms.prod: sql
 ms.custom: references_regions
-ms.openlocfilehash: 5cf1a67d1eeb36ec4889d75241eba34b515264b0
-ms.sourcegitcommit: 32135463a8494d9ed1600a58f51819359e3c09dc
+ms.openlocfilehash: 59a3dab4136749f85e1f752ee823f8815080fd76
+ms.sourcegitcommit: a41e1f4199785a2b8019a419a1f3dcdc15571044
 ms.translationtype: HT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 10/08/2020
-ms.locfileid: "91834315"
+ms.lasthandoff: 10/13/2020
+ms.locfileid: "91987989"
 ---
 # <a name="azure-arc-enabled-sql-server-preview"></a>Azure Arc 지원 SQL Server(미리 보기)
 
@@ -49,7 +49,7 @@ SQL Server 인스턴스 및 호스팅을 Azure Arc에 연결하려면 다음 작
    * Microsoft.HybridCompute/machines/write
    * Microsoft.GuestConfiguration/guestConfigurationAssignments/read
 
-최적 보안을 위해 Azure에서 최소 사용 권한이 나열된 사용자 지정 역할을 만드는 것이 좋습니다. Azure에서 해당 사용 권한을 가진 사용자 지정 역할을 만드는 방법에 대한 자세한 내용은 [사용자 지정 역할 개요](https://docs.microsoft.com/azure/active-directory/users-groups-roles/roles-custom-overview)를 참조하세요. 역할 할당을 추가하려면 [Azure Portal을 사용하여 역할 할당 추가 또는 제거](https://docs.microsoft.com/azure/role-based-access-control/role-assignments-portal) 또는 [Azure RBAC 및 Azure CLI를 사용하여 역할 할당 추가 또는 제거](https://docs.microsoft.com/azure/role-based-access-control/role-assignments-cli)를 참조하세요.
+최적 보안을 위해 Azure에서 최소 사용 권한이 나열된 사용자 지정 역할을 만드는 것이 좋습니다. Azure에서 해당 사용 권한을 가진 사용자 지정 역할을 만드는 방법에 대한 자세한 내용은 [사용자 지정 역할 개요](/azure/active-directory/users-groups-roles/roles-custom-overview)를 참조하세요. 역할 할당을 추가하려면 [Azure Portal을 사용하여 역할 할당 추가 또는 제거](/azure/role-based-access-control/role-assignments-portal) 또는 [Azure RBAC 및 Azure CLI를 사용하여 역할 할당 추가 또는 제거](/azure/role-based-access-control/role-assignments-cli)를 참조하세요.
 
 ### <a name="azure-subscription-and-service-limits"></a>Azure 구독 및 서비스 한도
 

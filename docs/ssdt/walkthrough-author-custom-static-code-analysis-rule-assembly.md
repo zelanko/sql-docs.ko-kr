@@ -10,12 +10,12 @@ ms.author: maghan
 ms.reviewer: “”
 ms.custom: seo-lt-2019
 ms.date: 02/09/2017
-ms.openlocfilehash: 31d183a212ea18f681724d06834041b0a50f752c
-ms.sourcegitcommit: f7ac1976d4bfa224332edd9ef2f4377a4d55a2c9
+ms.openlocfilehash: c734a2907ec4ad2d312385976013f8c1c39effcc
+ms.sourcegitcommit: a41e1f4199785a2b8019a419a1f3dcdc15571044
 ms.translationtype: HT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 07/02/2020
-ms.locfileid: "85896247"
+ms.lasthandoff: 10/13/2020
+ms.locfileid: "91987729"
 ---
 # <a name="walkthrough-authoring-a-custom-static-code-analysis-rule-assembly-for-sql-server"></a>SQL Server의 사용자 지정 정적 코드 분석 규칙 어셈블리 작성 연습
 
@@ -70,7 +70,7 @@ ms.locfileid: "85896247"
 
 규칙 자체의 클래스를 만들기 전에 방문자 클래스와 특성 클래스를 프로젝트에 추가합니다. 이러한 클래스는 추가 사용자 지정 규칙을 만드는 데 유용할 수 있습니다.  
   
-정의해야 하는 첫 번째 클래스는 [TSqlConcreteFragmentVisitor](https://docs.microsoft.com/dotnet/api/microsoft.sqlserver.transactsql.scriptdom.tsqlconcretefragmentvisitor)에서 파생된 WaitForDelayVisitor 클래스입니다. 이 클래스는 모델에서 WAITFOR DELAY 문에 대한 액세스를 제공합니다. 방문자 클래스는 SQL Server에서 제공하는 [ScriptDom](https://msdn.microsoft.com/library/microsoft.sqlserver.transactsql.scriptdom.aspx) API를 사용합니다. 이 API에서 Transact\-SQL 코드는 AST(추상 구문 트리)로 표현되며 방문자 클래스는 WAITFORDELAY 문과 같은 특정 구문 개체를 찾으려고 할 때 유용할 수 있습니다. 이러한 개체는 특정 개체 속성 또는 관계와 연결되어 있지 않으므로 개체 모델을 사용하여 찾기가 어려울 수도 있지만 방문자 패턴과 [ScriptDom](https://msdn.microsoft.com/library/microsoft.sqlserver.transactsql.scriptdom.aspx) API를 사용하면 쉽게 찾을 수 있습니다.  
+정의해야 하는 첫 번째 클래스는 [TSqlConcreteFragmentVisitor](/dotnet/api/microsoft.sqlserver.transactsql.scriptdom.tsqlconcretefragmentvisitor)에서 파생된 WaitForDelayVisitor 클래스입니다. 이 클래스는 모델에서 WAITFOR DELAY 문에 대한 액세스를 제공합니다. 방문자 클래스는 SQL Server에서 제공하는 [ScriptDom](/dotnet/api/microsoft.sqlserver.transactsql.scriptdom) API를 사용합니다. 이 API에서 Transact\-SQL 코드는 AST(추상 구문 트리)로 표현되며 방문자 클래스는 WAITFORDELAY 문과 같은 특정 구문 개체를 찾으려고 할 때 유용할 수 있습니다. 이러한 개체는 특정 개체 속성 또는 관계와 연결되어 있지 않으므로 개체 모델을 사용하여 찾기가 어려울 수도 있지만 방문자 패턴과 [ScriptDom](/dotnet/api/microsoft.sqlserver.transactsql.scriptdom) API를 사용하면 쉽게 찾을 수 있습니다.  
   
 ### <a name="defining-the-waitfordelayvisitor-class"></a>WaitForDelayVisitor 클래스 정의  
   
@@ -120,7 +120,7 @@ ms.locfileid: "85896247"
     }  
     ```  
   
-    이 메서드는 모델에서 WAITFOR 문을 방문하고 DELAY 옵션이 지정된 문을 WAITFOR DELAY 문 목록에 추가합니다. 여기서 참조되는 핵심 클래스는 [WaitForStatement](https://msdn.microsoft.com/library/microsoft.sqlserver.transactsql.scriptdom.waitforstatement.aspx)입니다.  
+    이 메서드는 모델에서 WAITFOR 문을 방문하고 DELAY 옵션이 지정된 문을 WAITFOR DELAY 문 목록에 추가합니다. 여기서 참조되는 핵심 클래스는 [WaitForStatement](/dotnet/api/microsoft.sqlserver.transactsql.scriptdom.waitforstatement)입니다.  
   
 9. **파일** 메뉴에서 **저장**을 클릭합니다.  
   
@@ -400,9 +400,9 @@ ms.locfileid: "85896247"
   
 9. Microsoft.SqlServer.Dac.CodeAnalysis.SqlAnalysisRule.Analyze(Microsoft.SqlServer.Dac.CodeAnalysis.SqlRuleExecutionContext) 메소드에 대한 재정의를 추가합니다. 이 메소드는 Microsoft.SqlServer.Dac.CodeAnalysis.SqlRuleExecutionContext를 입력 매개 변수로 사용합니다. 이 메서드는 잠재적 문제의 목록을 반환합니다.  
   
-    메서드는 컨텍스트 매개 변수에서 Microsoft.SqlServer.Dac.Model.TSqlModel, Microsoft.SqlServer.Dac.Model.TSqlObject, [TSqlFragment](https://msdn.microsoft.com/library/microsoft.sqlserver.transactsql.scriptdom.tsqlfragment.aspx)를 가져옵니다. WaitForDelayVisitor 클래스는 모델에서 모든 WAITFOR DELAY 문의 목록을 가져오는 데 사용됩니다.  
+    메서드는 컨텍스트 매개 변수에서 Microsoft.SqlServer.Dac.Model.TSqlModel, Microsoft.SqlServer.Dac.Model.TSqlObject, [TSqlFragment](/dotnet/api/microsoft.sqlserver.transactsql.scriptdom.tsqlfragment)를 가져옵니다. WaitForDelayVisitor 클래스는 모델에서 모든 WAITFOR DELAY 문의 목록을 가져오는 데 사용됩니다.  
   
-    그 목록에 있는 [WaitForStatement](https://msdn.microsoft.com/library/microsoft.sqlserver.transactsql.scriptdom.waitforstatement.aspx)마다 Microsoft.SqlServer.Dac.CodeAnalysis.SqlRuleProblem이 생성됩니다.  
+    그 목록에 있는 [WaitForStatement](/dotnet/api/microsoft.sqlserver.transactsql.scriptdom.waitforstatement)마다 Microsoft.SqlServer.Dac.CodeAnalysis.SqlRuleProblem이 생성됩니다.  
   
     ```  
     /// <summary>  

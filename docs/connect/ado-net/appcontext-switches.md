@@ -11,12 +11,12 @@ ms.topic: conceptual
 author: johnnypham
 ms.author: v-jopha
 ms.reviewer: ''
-ms.openlocfilehash: e2e27070fee16e7a7e55272eb044870a704d70db
-ms.sourcegitcommit: c7f40918dc3ecdb0ed2ef5c237a3996cb4cd268d
+ms.openlocfilehash: 8704cb5bf6492fc90f90344103359abdd7a32e2e
+ms.sourcegitcommit: 7eb80038c86acfef1d8e7bfd5f4e30e94aed3a75
 ms.translationtype: HT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 10/05/2020
-ms.locfileid: "91725754"
+ms.lasthandoff: 10/15/2020
+ms.locfileid: "92081512"
 ---
 # <a name="appcontext-switches-in-sqlclient"></a>SqlClient의 AppContext 스위치
 
@@ -95,4 +95,4 @@ AppContext.SetSwitch("Switch.Microsoft.Data.SqlClient.MakeReadAsyncBlocking", fa
 
 ## <a name="see-also"></a>참고 항목
 
-[AppContext 클래스](/dotnet/api/system.appcontext?view=netcore-3.1)
+[AppContext 클래스](/dotnet/api/system.appcontext?view=netcore-3.1&preserve-view=true)

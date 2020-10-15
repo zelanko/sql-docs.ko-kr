@@ -11,12 +11,12 @@ ms.assetid: 00d57437-7a29-4da1-b639-ee990db055fb
 author: markingmyname
 ms.author: maghan
 monikerRange: '>=aps-pdw-2016||=azuresqldb-current||=azure-sqldw-latest||>=sql-server-2016||=sqlallproducts-allversions||>=sql-server-linux-2017||=azuresqldb-mi-current'
-ms.openlocfilehash: a2abef56a866b38bc5d3be9dd962daafb71497c3
-ms.sourcegitcommit: 6d53ecfdc463914f045c20eda96da39dec22acca
+ms.openlocfilehash: 38b89e893efa43df3ae2c78aacd6431727d7765e
+ms.sourcegitcommit: 22dacedeb6e8721e7cdb6279a946d4002cfb5da3
 ms.translationtype: HT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 08/26/2020
-ms.locfileid: "88901611"
+ms.lasthandoff: 10/14/2020
+ms.locfileid: "92036281"
 ---
 # <a name="sqlcmd---start-the-utility"></a>sqlcmd - 유틸리티 시작
 [!INCLUDE[SQL Server Azure SQL Database Synapse Analytics PDW ](../../includes/applies-to-version/sql-asdb-asdbmi-asa-pdw.md)]
@@ -53,6 +53,5 @@ ms.locfileid: "88901611"
     >  입력한 [!INCLUDE[tsql](../../includes/tsql-md.md)] 문은 버퍼에 저장되며 GO 명령이 발견되면 일괄 처리로 실행됩니다.  
   
 ## <a name="see-also"></a>참고 항목  
- [sqlcmd를 사용하여 Transact-SQL 스크립트 파일 실행](../../relational-databases/scripting/sqlcmd-run-transact-sql-script-files.md)  
-  
+ [sqlcmd를 사용하여 Transact-SQL 스크립트 파일 실행](./sqlcmd-run-transact-sql-script-files.md)  
   

@@ -16,12 +16,12 @@ ms.assetid: 3c8b59f4-1922-4bde-844f-5f2306514d96
 author: markingmyname
 ms.author: maghan
 monikerRange: '>=aps-pdw-2016||=azuresqldb-current||=azure-sqldw-latest||>=sql-server-2016||=sqlallproducts-allversions||>=sql-server-linux-2017||=azuresqldb-mi-current'
-ms.openlocfilehash: b62555ab2395e4a32d78a427dd6301fcb264b28e
-ms.sourcegitcommit: 6d53ecfdc463914f045c20eda96da39dec22acca
+ms.openlocfilehash: 9a0f2d426c940950b114687f39d7a94bedbb75cf
+ms.sourcegitcommit: 22dacedeb6e8721e7cdb6279a946d4002cfb5da3
 ms.translationtype: HT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 08/26/2020
-ms.locfileid: "88902121"
+ms.lasthandoff: 10/14/2020
+ms.locfileid: "92036434"
 ---
 # <a name="quick-info-intellisense"></a>요약 정보(IntelliSense)
 [!INCLUDE[SQL Server Azure SQL Database Synapse Analytics PDW ](../../includes/applies-to-version/sql-asdb-asdbmi-asa-pdw.md)]
@@ -33,6 +33,5 @@ ms.locfileid: "88902121"
  [!INCLUDE[ssDE](../../includes/ssde-md.md)] 쿼리 편집기에서 IntelliSense에서 지원하는 **구문의 이러한 부분에 대해서만** 요약 정보 [!INCLUDE[tsql](../../includes/tsql-md.md)] 를 사용할 수 있습니다. 예를 들어 IntelliSense에서 지원하지 않는 데이터 형식이 있는 개체에 대한 식별자 위로 마우스 포인터를 이동하면 **요약 정보** 팝업 창에 데이터 형식이 지원되지 않는다는 메시지가 포함됩니다.  
   
 ## <a name="see-also"></a>참고 항목  
- [IntelliSense에서 지원되는 Transact-SQL 구문](../../relational-databases/scripting/transact-sql-syntax-supported-by-intellisense.md)  
-  
+ [IntelliSense에서 지원되는 Transact-SQL 구문](./transact-sql-syntax-supported-by-intellisense.md)  
   

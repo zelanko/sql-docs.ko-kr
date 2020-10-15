@@ -9,12 +9,12 @@ metadata:
   author: MashaMSFT
   ms.author: mathoma
   ms.date: 01/07/2020
-  ms.openlocfilehash: ae7785e57f43d83ec1a30e2d0642c6188e3b666d
-  ms.sourcegitcommit: dc8a30a4a27e15fc6671ca2674da9b7c637ec255
+  ms.openlocfilehash: d365573f99f0462a26d3c144476c32b4dc47773b
+  ms.sourcegitcommit: a41e1f4199785a2b8019a419a1f3dcdc15571044
   ms.translationtype: HT
   ms.contentlocale: ko-KR
-  ms.lasthandoff: 08/21/2020
-  ms.locfileid: "88745893"
+  ms.lasthandoff: 10/13/2020
+  ms.locfileid: "91988549"
 landingContent:
 - title: SQL에 대해 알아보기
   linkLists:
@@ -23,7 +23,7 @@ landingContent:
     - text: 초보자용 Azure SQL
       url: https://aka.ms/azuresql4beginners
     - text: Azure SQL 기본 사항
-      url: https://docs.microsoft.com/learn/paths/azure-sql-fundamentals/
+      url: /learn/paths/azure-sql-fundamentals/
     - text: Azure SQL 실습 랩
       url: https://aka.ms/asqlworkshop
     - text: Azure SQL 부트캠프
@@ -39,9 +39,9 @@ landingContent:
   - linkListType: learn
     links:
     - text: SQL Server 업그레이드
-      url: https://docs.microsoft.com/learn/modules/introduction-upgrading-sql-server/
+      url: /learn/modules/introduction-upgrading-sql-server/
     - text: 쿼리 튜닝 도우미 사용
-      url: https://docs.microsoft.com/learn/modules/use-sql-server-query-tuning-assistant/
+      url: /learn/modules/use-sql-server-query-tuning-assistant/
     - text: SQL Server 워크샵
       url: https://aka.ms/sqlworkshops
   - linkListType: quickstart
@@ -49,7 +49,7 @@ landingContent:
     - text: Azure Data Studio를 사용하여 연결 및 쿼리
       url: ../azure-data-studio/quickstart-sql-server.md
     - text: SSMS를 사용하여 연결 및 쿼리
-      url: ../ssms/tutorials/connect-query-sql-server.md
+      url: ../ssms/quickstarts/connect-query-sql-server.md
     - text: T-SQL(Transact-SQL) 작성
       url: ../t-sql/tutorial-writing-transact-sql-statements.md
     - text: 확장 이벤트
@@ -115,13 +115,13 @@ landingContent:
   - linkListType: learn
     links:
     - text: 데이터 스토리지 접근 방식 선택
-      url: https://docs.microsoft.com/learn/modules/choose-storage-approach-in-azure/
+      url: /learn/modules/choose-storage-approach-in-azure/
     - text: SQL Database 보호
-      url: https://docs.microsoft.com/learn/modules/secure-your-azure-sql-database/
+      url: /learn/modules/secure-your-azure-sql-database/
     - text: 지리적으로 분산된 앱
-      url: https://docs.microsoft.com/learn/modules/design-a-geographically-distributed-application/
+      url: /learn/modules/design-a-geographically-distributed-application/
     - text: SQL Database를 쿼리하기 위한 ASP.NET 앱
-      url: https://docs.microsoft.com/learn/modules/develop-app-that-queries-azure-sql/
+      url: /learn/modules/develop-app-that-queries-azure-sql/
   - linkListType: quickstart
     links:
     - text: 포털 또는 코드를 사용하여 DB 만들기
@@ -147,13 +147,13 @@ landingContent:
   - linkListType: learn
     links:
     - text: 소개
-      url: https://docs.microsoft.com/learn/modules/introduction-sql-server-linux/
+      url: /learn/modules/introduction-sql-server-linux/
     - text: 배포
-      url: https://docs.microsoft.com/learn/modules/deploy-sql-server-linux/
+      url: /learn/modules/deploy-sql-server-linux/
     - text: 자동 튜닝
-      url: https://docs.microsoft.com/learn/modules/automatically-tune-sql-server-linux/
+      url: /learn/modules/automatically-tune-sql-server-linux/
     - text: 컨테이너
-      url: https://docs.microsoft.com/learn/modules/run-sql-server-2017-linux-containers/
+      url: /learn/modules/run-sql-server-2017-linux-containers/
   - linkListType: quickstart
     links:
     - text: Red Hat
