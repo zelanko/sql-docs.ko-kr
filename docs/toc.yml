@@ -10142,7 +10142,7 @@
   items:
     - name: Azure SQL Database >
       href: /azure/sql-database/
-    - name: Azure SQL Data Warehouse >
+    - name: Azure Synapse Analytics >
       href: /azure/sql-data-warehouse/sql-data-warehouse-overview-what-is
     - name: Azure VM의 SQL Server >
       href: /azure/virtual-machines/windows/sql/virtual-machines-windows-sql-server-iaas-overview
@@ -16244,7 +16244,7 @@
               items:
                 - name: AT TIME ZONE
                   href: t-sql/queries/at-time-zone-transact-sql.md
-                - name: '별칭 지정(Azure SQL Data Warehouse, 병렬 데이터 웨어하우스)'
+                - name: '별칭 지정(Azure Synapse Analytics, 병렬 데이터 웨어하우스)'
                   href: t-sql/queries/aliasing-azure-sql-data-warehouse-parallel-data-warehouse.md
                 - name: EXPLAIN
                   href: t-sql/queries/explain-transact-sql.md
@@ -16258,7 +16258,7 @@
                   href: t-sql/queries/readtext-transact-sql.md
                 - name: 검색 조건
                   href: t-sql/queries/search-condition-transact-sql.md
-                - name: '하위 쿼리(Azure SQL Data Warehouse, 병렬 데이터 웨어하우스)'
+                - name: '하위 쿼리(Azure Synapse Analytics, 병렬 데이터 웨어하우스)'
                   href: t-sql/queries/subqueries-azure-sql-data-warehouse-parallel-data-warehouse.md
                 - name: 테이블 값 생성자
                   href: t-sql/queries/table-value-constructor-transact-sql.md
@@ -16578,7 +16578,7 @@
                   href: t-sql/statements/create-fulltext-stoplist-transact-sql.md
                 - name: FUNCTION
                   href: t-sql/statements/create-function-transact-sql.md
-                - name: FUNCTION(SQL Data Warehouse)
+                - name: FUNCTION(Azure Synapse Analytics)
                   href: t-sql/statements/create-function-sql-data-warehouse.md
                 - name: INDEX
                   href: t-sql/statements/create-index-transact-sql.md
@@ -16638,11 +16638,11 @@
                   href: t-sql/statements/create-synonym-transact-sql.md
                 - name: TABLE
                   href: t-sql/statements/create-table-transact-sql.md
-                - name: TABLE(Azure SQL Data Warehouse)
+                - name: TABLE(Azure Synapse Analytics)
                   href: t-sql/statements/create-table-azure-sql-data-warehouse.md
                 - name: TABLE(SQL Graph)
                   href: t-sql/statements/create-table-sql-graph.md
-                - name: TABLE AS SELECT(Azure SQL Data Warehouse)
+                - name: TABLE AS SELECT(Azure Synapse Analytics)
                   href: t-sql/statements/create-table-as-select-azure-sql-data-warehouse.md
                 - name: TABLE IDENTITY(속성)
                   href: t-sql/statements/create-table-transact-sql-identity-property.md
@@ -16902,7 +16902,7 @@
                   href: t-sql/statements/open-master-key-transact-sql.md
                 - name: OPEN SYMMETRIC KEY
                   href: t-sql/statements/open-symmetric-key-transact-sql.md
-                - name: '사용 권한: GRANT, DENY, REVOKE(Azure SQL Data Warehouse, 병렬 Data Warehouse)'
+                - name: '사용 권한: GRANT, DENY, REVOKE(Azure Synapse Analytics, 병렬 데이터 웨어하우스)'
                   href: t-sql/statements/permissions-grant-deny-revoke-azure-sql-data-warehouse-parallel-data-warehouse.md
                 - name: REVERT
                   href: t-sql/statements/revert-transact-sql.md

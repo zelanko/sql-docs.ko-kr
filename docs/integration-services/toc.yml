@@ -1560,7 +1560,7 @@
   href: ../integration-services/load-data-to-from-excel-with-ssis.md
 - name: SQL Server 또는 SQL Database에 데이터 로드
   href: ../integration-services/load-data-to-sql-database-with-ssis.md
-- name: SQL Data Warehouse로 데이터 로드
+- name: Azure Synapse Analytics에 데이터 로드
   href: ../integration-services/load-data-to-sql-data-warehouse.md
 - name: 변경 데이터 캡처
   items:

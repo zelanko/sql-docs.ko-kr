@@ -14,7 +14,7 @@
       href: quickstart-sql-server.md
     - name: Azure SQL Database 연결 및 쿼리
       href: quickstart-sql-database.md
-    - name: Azure SQL Data Warehouse 연결 및 쿼리
+    - name: Azure Synapse Analytics 연결 및 쿼리
       href: quickstart-sql-dw.md
     - name: PostgreSQL 연결 및 쿼리
       href: quickstart-postgres.md
