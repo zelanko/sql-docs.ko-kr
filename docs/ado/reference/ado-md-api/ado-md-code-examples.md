@@ -13,12 +13,12 @@ helpviewer_keywords:
 ms.assetid: 72cf9eb3-31f6-441c-aede-5383fdfb81af
 author: rothja
 ms.author: jroth
-ms.openlocfilehash: 56dfe6c01407db04e55703e8ec07183354202c2f
-ms.sourcegitcommit: 76ab3b57718341c6057613c9bd38cf82fb17786e
+ms.openlocfilehash: 66e47d79ebbd9ec9e408db412c74d0c50916e711
+ms.sourcegitcommit: 9774e2cb8c07d4f6027fa3a5bb2852e4396b3f68
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 10/14/2020
-ms.locfileid: "92059431"
+ms.lasthandoff: 10/15/2020
+ms.locfileid: "92098682"
 ---
 # <a name="ado-md-code-examples"></a>ADO MD 코드 예제
 다음 코드 예제를 사용 하 여 ADO MD 개체, 메서드 및 속성을 사용 하는 방법을 배울 수 있습니다. 이러한 예제는 SQL Server 7.0에 대 한 Microsoft SQL Server OLAP Services와 함께 설치 된 샘플 응용 프로그램의 하위 집합입니다.  
@@ -30,7 +30,7 @@ ms.locfileid: "92059431"
 -   [Visual Basic의 ADO MD코드 예제, 스크립팅 버전](./ado-md-code-examples-in-visual-basic-scripting-edition.md)  
   
 ## <a name="see-also"></a>참고 항목  
- [ADO MD API 참조](./ado-md-object-model.md?view=sql-server-ver15&preserve-view=true)   
+ [ADO MD API 참조](./ado-md-object-model.md?view=sql-server-ver15)   
  [ADO MD 컬렉션](./ado-md-collections.md)   
  [ADO MD 열거 상수](./ado-md-enumerated-constants.md)   
  [ADO MD 메서드](./ado-md-methods.md)   

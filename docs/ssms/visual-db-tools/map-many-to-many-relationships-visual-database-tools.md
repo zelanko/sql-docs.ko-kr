@@ -17,12 +17,12 @@ ms.assetid: 2977cf92-98b5-48b2-b0fd-8fbc7040f2b4
 author: markingmyname
 ms.author: maghan
 ms.reviewer: ''
-ms.openlocfilehash: 5e70db23f7fb2e07855228204a8c1318c9eb0a2f
-ms.sourcegitcommit: e700497f962e4c2274df16d9e651059b42ff1a10
+ms.openlocfilehash: afe40ef4863965905dedd825ee04bdb8a0e3e4d1
+ms.sourcegitcommit: 22dacedeb6e8721e7cdb6279a946d4002cfb5da3
 ms.translationtype: HT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 08/17/2020
-ms.locfileid: "88479997"
+ms.lasthandoff: 10/14/2020
+ms.locfileid: "92038680"
 ---
 # <a name="map-many-to-many-relationships-visual-database-tools"></a>다 대 다 관계 매핑(Visual Database Tools)
 [!INCLUDE[SQL Server Azure SQL Database Synapse Analytics PDW ](../../includes/applies-to-version/sql-asdb-asdbmi-asa-pdw.md)]
@@ -40,13 +40,12 @@ ms.locfileid: "88479997"
   
 4.  다른 두 테이블 각각의 기본 키 열을 병합 테이블에 복사합니다. 일반적인 테이블 작업의 경우와 마찬가지로 다른 열을 이 테이블에 추가할 수 있습니다.  
   
-5.  병합 테이블에서 다른 두 테이블의 기본 키 열이 모두 포함되도록 기본 키를 설정합니다. 자세한 내용은 [방법: 기본 키 만들기](https://msdn.microsoft.com/85c623ca-4656-4d70-a9db-ee4d897cd214)를 참조하세요.  
+5.  병합 테이블에서 다른 두 테이블의 기본 키 열이 모두 포함되도록 기본 키를 설정합니다. 자세한 내용은 [방법: 기본 키 만들기](../../relational-databases/tables/create-primary-keys.md)를 참조하세요.  
   
-6.  두 개의 각 기본 테이블과 병합 테이블 사이에 일 대 다 관계를 정의합니다. 병합 테이블은 작성된 두 관계 모두에서 "다" 쪽에 있어야 합니다. 자세한 내용은 [방법: 테이블 간에 관계 만들기](https://msdn.microsoft.com/867a54b8-5be4-46e6-9702-49ae6dabf67c)를 참조하세요.  
+6.  두 개의 각 기본 테이블과 병합 테이블 사이에 일 대 다 관계를 정의합니다. 병합 테이블은 작성된 두 관계 모두에서 "다" 쪽에 있어야 합니다. 자세한 내용은 [방법: 테이블 간에 관계 만들기](../../relational-databases/tables/create-foreign-key-relationships.md)를 참조하세요.  
   
     > [!NOTE]  
     > 데이터베이스 다이어그램에서 병합 테이블을 만들어도 관련 테이블의 데이터가 병합 테이블에 삽입되지는 않습니다. 테이블에 데이터를 삽입하는 방법에 대한 자세한 내용은 [결과 삽입 쿼리 만들기&#40;Visual Database Tools&#41;](../../ssms/visual-db-tools/create-insert-results-queries-visual-database-tools.md)를 참조하세요.  
   
 ## <a name="see-also"></a>참고 항목  
 [데이터베이스 다이어그램 작업&#40;Visual Database Tools&#41;](../../ssms/visual-db-tools/work-with-database-diagrams-visual-database-tools.md)  
-  

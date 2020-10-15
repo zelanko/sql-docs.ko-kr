@@ -15,12 +15,12 @@ author: markingmyname
 ms.author: maghan
 ms.reviewer: ''
 monikerRange: <= sql-server-2016 || = sqlallproducts-allversions
-ms.openlocfilehash: 8bac45061aa165808202b2a08b71618bd6513954
-ms.sourcegitcommit: 610e3ebe21ac6575850a29641a32f275e71557e3
+ms.openlocfilehash: a17be8d63b2ecea316819b90ae5cc8051bd0c2a6
+ms.sourcegitcommit: 22dacedeb6e8721e7cdb6279a946d4002cfb5da3
 ms.translationtype: HT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 10/07/2020
-ms.locfileid: "91784995"
+ms.lasthandoff: 10/14/2020
+ms.locfileid: "92035086"
 ---
 # <a name="create-an-activex-script-job-step"></a>Create an ActiveX script job step
 
@@ -97,10 +97,9 @@ ActiveX 하위 시스템은 SQL Server 2016부터 중단됩니다. ActiveX 스�
     GO  
     ```  
   
-자세한 내용은 [sp_add_jobstep(Transact-SQL)](https://msdn.microsoft.com/97900032-523d-49d6-9865-2734fba1c755)을 참조하세요.  
+자세한 내용은 [sp_add_jobstep(Transact-SQL)](../../relational-databases/system-stored-procedures/sp-add-jobstep-transact-sql.md)을 참조하세요.  
   
 ## <a name="using-sql-server-management-objects"></a><a name="SMO"></a>SQL Server 관리 개체 사용  
 **ActiveX 스크립트 작업 단계를 만들려면**  
   
 Visual Basic, Visual C#, PowerShell 등 선택한 프로그래밍 언어를 사용하여 **JobStep** 클래스를 사용합니다.  
-  

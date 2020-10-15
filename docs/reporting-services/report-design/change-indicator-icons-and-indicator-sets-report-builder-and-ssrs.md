@@ -9,12 +9,12 @@ ms.topic: conceptual
 ms.assetid: 8a056adf-4473-473d-9b0c-314675af7bfd
 author: maggiesMSFT
 ms.author: maggies
-ms.openlocfilehash: a3c0df0ae9ee9e67697d4f3ec321ab323cfd188e
-ms.sourcegitcommit: 5c7634b007f6808c87094174b80376cb20545d5f
+ms.openlocfilehash: 8fac0aa2fd1b480c91204d87bcfbbbfb37253af1
+ms.sourcegitcommit: fe59f8dc27fd633f5dfce54519d6f5dcea577f56
 ms.translationtype: HT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 06/17/2020
-ms.locfileid: "84881762"
+ms.lasthandoff: 10/09/2020
+ms.locfileid: "91935460"
 ---
 # <a name="change-indicator-icons-and-indicator-sets-report-builder-and-ssrs"></a>표시기 아이콘 및 표시기 집합 변경(보고서 작성기 및 SSRS)
   [!INCLUDE[ssRSnoversion](../../includes/ssrsnoversion-md.md)] 에서 제공하는 미리 구성된 표시기 집합이 항상 데이터를 효율적으로 나타내고 전달된 보고서에서 제대로 작동하는 것은 아닙니다. 이 항목에서는 표시기 아이콘 모양을 변경하고 더 많거나 더 적은 표시기 아이콘 또는 다른 표시기 아이콘을 포함하도록 표시기 집합을 변경하는 절차에 대해 설명합니다.  
@@ -31,7 +31,7 @@ ms.locfileid: "84881762"
   
      필요한 경우 **식** 단추(*fx*)를 클릭하여 **색** 옵션의 값을 설정하는 식을 편집합니다.  
   
-     **다른 색**을 클릭한 경우 **색 선택** 대화 상자가 열리고 여기서 여러 색 중 원하는 색을 선택할 수 있습니다. 해당 옵션에 대한 자세한 내용은 [색 선택 대화 상자&#40;보고서 작성기 및 SSRS&#41;](https://msdn.microsoft.com/library/ac7089a3-5c7b-4f53-8348-180610e86da2)를 참조하세요. **확인** 을 클릭하여 **색 선택** 대화 상자를 닫습니다.  
+     **다른 색**을 클릭한 경우 **색 선택** 대화 상자가 열리고 여기서 여러 색 중 원하는 색을 선택할 수 있습니다. 해당 옵션에 대한 자세한 내용은 [색 선택 대화 상자&#40;보고서 작성기 및 SSRS&#41;](./formatting-lines-colors-and-images-report-builder-and-ssrs.md)를 참조하세요. **확인** 을 클릭하여 **색 선택** 대화 상자를 닫습니다.  
   
 4.  **확인**을 클릭합니다.  
   
@@ -91,5 +91,4 @@ ms.locfileid: "84881762"
   
 ## <a name="see-also"></a>참고 항목  
  [표시기&#40;보고서 작성기 및 SSRS&#41;](../../reporting-services/report-design/indicators-report-builder-and-ssrs.md)  
-  
   

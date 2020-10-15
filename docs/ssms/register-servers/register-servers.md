@@ -20,12 +20,12 @@ ms.manageR: jroth
 ms.reviewer: ''
 ms.custom: seo-lt-2019
 ms.date: 03/14/2017
-ms.openlocfilehash: dd50ab7a771dd0cd479716c94fa26110198822b0
-ms.sourcegitcommit: e700497f962e4c2274df16d9e651059b42ff1a10
+ms.openlocfilehash: 3bd61a8a290f8863d13c2052d0a50835461c5aae
+ms.sourcegitcommit: 22dacedeb6e8721e7cdb6279a946d4002cfb5da3
 ms.translationtype: HT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 08/17/2020
-ms.locfileid: "88468553"
+ms.lasthandoff: 10/14/2020
+ms.locfileid: "92038398"
 ---
 # <a name="register-servers"></a>서버 등록
 
@@ -69,23 +69,22 @@ ms.locfileid: "88468553"
   
 |**설명**|**항목**|  
 |---------------------|---------------|  
-|로컬 서버 인스턴스 등록|[연결된 서버 등록&#40;SQL Server Management Studio&#41;](../../tools/sql-server-management-studio/register-a-connected-server-sql-server-management-studio.md)|  
-|서버 등록|[새 등록된 서버 만들기&#40;SQL Server Management Studio&#41;](../../tools/sql-server-management-studio/create-a-new-registered-server-sql-server-management-studio.md)|  
-|등록된 서버 보기|[SQL Server Management Studio에서 등록된 서버 보기](../../tools/sql-server-management-studio/view-registered-servers-in-sql-server-management-studio.md)|  
-|등록된 서버 제거|[등록된 서버 제거&#40;SQL Server Management Studio&#41;](../../tools/sql-server-management-studio/remove-a-registered-server-sql-server-management-studio.md)|  
-|서버 등록 변경|[서버 등록 변경&#40;SQL Server Management Studio&#41;](../../tools/sql-server-management-studio/change-a-server-s-registration-sql-server-management-studio.md)|  
-|등록된 서버에 연결|[등록된 서버에 연결&#40;SQL Server Management Studio&#41;](../../tools/sql-server-management-studio/connect-to-a-registered-server-sql-server-management-studio.md)|  
-|등록된 서버에서 연결 끊기|[등록된 서버에서 연결 끊기&#40;SQL Server Management Studio&#41;](../../tools/sql-server-management-studio/disconnect-from-a-registered-server-sql-server-management-studio.md)|  
-|등록된 서버 또는 서버 그룹 이동|[등록된 서버 및 등록된 서버 그룹 이동&#40;SQL Server Management Studio&#41;](../../tools/sql-server-management-studio/move-a-registered-server-or-registered-server-group.md)|  
-|등록된 서버 또는 등록된 서버 그룹 이름 변경|[등록된 서버 또는 등록된 서버 그룹 이름 변경&#40;SQL Server Management Studio&#41;](../../tools/sql-server-management-studio/change-the-name-of-registered-server-or-registered-server-group.md)|  
-|서버 그룹 만들기 또는 편집|[서버 그룹 만들기 또는 편집&#40;SQL Server Management Studio&#41;](../../tools/sql-server-management-studio/create-or-edit-a-server-group-sql-server-management-studio.md)|  
-|서버 그룹 제거|[서버 그룹 제거&#40;SQL Server Management Studio&#41;](../../tools/sql-server-management-studio/remove-a-server-group-sql-server-management-studio.md)|  
-|등록된 서버 정보 내보내기|[등록된 서버 정보 내보내기&#40;SQL Server Management Studio&#41;](../../tools/sql-server-management-studio/export-registered-server-information-sql-server-management-studio.md)|  
-|등록된 서버 정보 가져오기|[등록된 서버 정보 가져오기&#40;SQL Server Management Studio&#41;](../../tools/sql-server-management-studio/import-registered-server-information-sql-server-management-studio.md)|  
-|중앙 관리 서버 및 서버 그룹 만들기|[중앙 관리 서버 및 서버 그룹 만들기&#40;SQL Server Management Studio&#41;](../../tools/sql-server-management-studio/create-a-central-management-server-and-server-group.md)|  
-|여러 서버에 대해 동시에 문 실행|[여러 서버에 대해 동시에 문 실행&#40;SQL Server Management Studio&#41;](../../tools/sql-server-management-studio/execute-statements-against-multiple-servers-simultaneously.md)|  
+|로컬 서버 인스턴스 등록|[연결된 서버 등록&#40;SQL Server Management Studio&#41;](./register-a-connected-server-sql-server-management-studio.md)|  
+|서버 등록|[새 등록된 서버 만들기&#40;SQL Server Management Studio&#41;](./create-a-new-registered-server-sql-server-management-studio.md)|  
+|등록된 서버 보기|[SQL Server Management Studio에서 등록된 서버 보기](./view-registered-servers-in-sql-server-management-studio.md)|  
+|등록된 서버 제거|[등록된 서버 제거&#40;SQL Server Management Studio&#41;](./remove-a-registered-server-sql-server-management-studio.md)|  
+|서버 등록 변경|[서버 등록 변경&#40;SQL Server Management Studio&#41;](./change-a-server-s-registration-sql-server-management-studio.md)|  
+|등록된 서버에 연결|[등록된 서버에 연결&#40;SQL Server Management Studio&#41;](./connect-to-a-registered-server-sql-server-management-studio.md)|  
+|등록된 서버에서 연결 끊기|[등록된 서버에서 연결 끊기&#40;SQL Server Management Studio&#41;](./disconnect-from-a-registered-server-sql-server-management-studio.md)|  
+|등록된 서버 또는 서버 그룹 이동|[등록된 서버 및 등록된 서버 그룹 이동&#40;SQL Server Management Studio&#41;](./move-a-registered-server-or-registered-server-group.md)|  
+|등록된 서버 또는 등록된 서버 그룹 이름 변경|[등록된 서버 또는 등록된 서버 그룹 이름 변경&#40;SQL Server Management Studio&#41;](./change-the-name-of-registered-server-or-registered-server-group.md)|  
+|서버 그룹 만들기 또는 편집|[서버 그룹 만들기 또는 편집&#40;SQL Server Management Studio&#41;](./create-or-edit-a-server-group-sql-server-management-studio.md)|  
+|서버 그룹 제거|[서버 그룹 제거&#40;SQL Server Management Studio&#41;](./remove-a-server-group-sql-server-management-studio.md)|  
+|등록된 서버 정보 내보내기|[등록된 서버 정보 내보내기&#40;SQL Server Management Studio&#41;](./export-registered-server-information-sql-server-management-studio.md)|  
+|등록된 서버 정보 가져오기|[등록된 서버 정보 가져오기&#40;SQL Server Management Studio&#41;](./import-registered-server-information-sql-server-management-studio.md)|  
+|중앙 관리 서버 및 서버 그룹 만들기|[중앙 관리 서버 및 서버 그룹 만들기&#40;SQL Server Management Studio&#41;](./create-a-central-management-server-and-server-group.md)|  
+|여러 서버에 대해 동시에 문 실행|[여러 서버에 대해 동시에 문 실행&#40;SQL Server Management Studio&#41;](./execute-statements-against-multiple-servers-simultaneously.md)|  
   
 ## <a name="see-also"></a>참고 항목  
  [원격 서버](../../database-engine/configure-windows/remote-servers.md)  
-  
   

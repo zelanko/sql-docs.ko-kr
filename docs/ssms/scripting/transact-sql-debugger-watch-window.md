@@ -14,12 +14,12 @@ ms.custom: seo-lt-2019
 ms.reviewer: ''
 ms.date: 12/04/2019
 monikerRange: '>=aps-pdw-2016||=azuresqldb-current||=azure-sqldw-latest||>=sql-server-2016||=sqlallproducts-allversions||>=sql-server-linux-2017||=azuresqldb-mi-current'
-ms.openlocfilehash: a4a19d53dc1c7788a2e5002bc1189b9df47b3ee5
-ms.sourcegitcommit: 6d53ecfdc463914f045c20eda96da39dec22acca
+ms.openlocfilehash: 182f6805ee452f065bda86ee23bfec60bc8b8999
+ms.sourcegitcommit: 22dacedeb6e8721e7cdb6279a946d4002cfb5da3
 ms.translationtype: HT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 08/26/2020
-ms.locfileid: "88901807"
+ms.lasthandoff: 10/14/2020
+ms.locfileid: "92036134"
 ---
 # <a name="transact-sql-debugger---watch-window"></a>Transact-SQL 디버거 - 조사식 창
 
@@ -64,9 +64,9 @@ ms.locfileid: "88901807"
  식의 데이터 형식을 표시합니다.  
   
 ## <a name="see-also"></a>참고 항목  
- [Transact-SQL 디버거](../../relational-databases/scripting/transact-sql-debugger.md)   
- [Transact-SQL 디버거 정보](../../relational-databases/scripting/transact-sql-debugger-information.md)   
- [지역 창](../../relational-databases/scripting/transact-sql-debugger-locals-window.md)   
- [호출 스택 창](../../relational-databases/scripting/transact-sql-debugger-call-stack-window.md)   
- [간략한 조사식 대화 상자](../../relational-databases/scripting/transact-sql-debugger-quickwatch-dialog-box.md)   
- [식&#40;Transact-SQL&#41;](../../t-sql/language-elements/expressions-transact-sql.md)  
+ [Transact-SQL 디버거](./transact-sql-debugger.md)   
+ [Transact-SQL 디버거 정보](./transact-sql-debugger-information.md)   
+ [지역 창](./transact-sql-debugger-locals-window.md)   
+ [호출 스택 창](./transact-sql-debugger-call-stack-window.md)   
+ [간략한 조사식 대화 상자](./transact-sql-debugger-quickwatch-dialog-box.md)   
+ [식&#40;Transact-SQL&#41;](../../t-sql/language-elements/expressions-transact-sql.md)

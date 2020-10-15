@@ -10,12 +10,12 @@ ms.author: maghan
 ms.reviewer: “”
 ms.custom: seo-lt-2019
 ms.date: 02/09/2017
-ms.openlocfilehash: 801844176680032b24e777a70acceea65f19f1f2
-ms.sourcegitcommit: f7ac1976d4bfa224332edd9ef2f4377a4d55a2c9
+ms.openlocfilehash: 26c12a659e702765b4d69b58d5e1b4247d7aba3c
+ms.sourcegitcommit: a41e1f4199785a2b8019a419a1f3dcdc15571044
 ms.translationtype: HT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 07/02/2020
-ms.locfileid: "85883388"
+ms.lasthandoff: 10/13/2020
+ms.locfileid: "91987789"
 ---
 # <a name="upgrade-an-older-test-project-containing-database-unit-tests"></a>데이터베이스 단위 테스트가 포함된 이전 테스트 프로젝트 업그레이드
 
@@ -24,7 +24,7 @@ Visual Studio 2010에서 만들었고 데이터베이스 단위 테스트를 포
 > [!TIP]  
 > Visual Studio 2010을 사용하는 경우에는 테스트 프로젝트에 SQL Server 단위 테스트를 추가한 후 이전 데이터베이스 단위 테스트 템플릿을 사용하여 SQL Server 단위 테스트를 추가하면 안 됩니다. 그럴 경우 프로젝트를 다시 변환해야만 테스트가 올바르게 실행됩니다.  
   
-Visual Studio 2010 이전 릴리스에서 만든 테스트 데이터베이스 프로젝트가 있는 경우 프로젝트를 Visual Studio 2010으로 업그레이드하기 전에 [방법: 이전 버전의 Visual Studio에서 데이터베이스 단위 테스트 업그레이드](https://msdn.microsoft.com/library/dd193412(VS.100).aspx)의 정보를 사용하여 데이터베이스 프로젝트를 SQL Server Data Tools로 업그레이드할 수 있습니다.  
+Visual Studio 2010 이전 릴리스에서 만든 테스트 데이터베이스 프로젝트가 있는 경우 프로젝트를 Visual Studio 2010으로 업그레이드하기 전에 [방법: 이전 버전의 Visual Studio에서 데이터베이스 단위 테스트 업그레이드](/previous-versions/visualstudio/visual-studio-2010/dd193412(v=vs.100))의 정보를 사용하여 데이터베이스 프로젝트를 SQL Server Data Tools로 업그레이드할 수 있습니다.  
   
 ### <a name="initiating-an-upgrade"></a>업그레이드 시작  
   
@@ -41,4 +41,3 @@ Visual Studio 2010 이전 릴리스에서 만든 테스트 데이터베이스 �
   
 ## <a name="see-also"></a>참고 항목  
 [SQL Server 단위 테스트를 사용하여 데이터베이스 코드 확인](../ssdt/verifying-database-code-by-using-sql-server-unit-tests.md)  
-  

@@ -12,16 +12,16 @@ ms.author: maghan
 ms.reviewer: “”
 ms.custom: seo-lt-2019
 ms.date: 02/09/2017
-ms.openlocfilehash: dc5e5817952ea19f12879079c572a3c79594e070
-ms.sourcegitcommit: f7ac1976d4bfa224332edd9ef2f4377a4d55a2c9
+ms.openlocfilehash: 43dbf8c960e45ab0b9099951b7b03b331170ad53
+ms.sourcegitcommit: a41e1f4199785a2b8019a419a1f3dcdc15571044
 ms.translationtype: HT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 07/02/2020
-ms.locfileid: "85895112"
+ms.lasthandoff: 10/13/2020
+ms.locfileid: "91987759"
 ---
 # <a name="using-test-conditions-in-sql-server-unit-tests"></a>SQL Server 단위 테스트에서 테스트 조건 사용
 
-SQL Server 단위 테스트에서 하나 이상의 Transact\-SQL 테스트 스크립트가 실행됩니다. 결과는 Transact\-SQL 스크립트와 오류를 반환하고 테스트를 실패 처리하는 데 사용되는 THROW 또는 RAISERROR 내에서 평가할 수 있으며, 결과를 평가하기 위한 테스트 조건을 테스트에 정의할 수 있습니다. 테스트는 [SqlExecutionResult](https://msdn.microsoft.com/library/microsoft.data.tools.schema.sql.unittesting.sqlexecutionresult.aspx) 클래스의 인스턴스를 반환합니다. 이 클래스의 인스턴스에는 하나 이상의 데이터 세트, 실행 시간 및 스크립트의 영향을 받는 행이 포함됩니다. 이러한 모든 정보는 스크립트를 실행하는 동안 수집됩니다. 이러한 결과는 테스트 조건을 사용하여 평가될 수 있습니다. SQL Server Data Tools에서는 미리 정의된 테스트 조건의 집합을 제공합니다. 사용자 지정 조건을 작성하고 사용할 수도 있습니다. [SQL Server 단위 테스트의 사용자 지정 테스트 조건](../ssdt/custom-test-conditions-for-sql-server-unit-tests.md)을 참조하세요.  
+SQL Server 단위 테스트에서 하나 이상의 Transact\-SQL 테스트 스크립트가 실행됩니다. 결과는 Transact\-SQL 스크립트와 오류를 반환하고 테스트를 실패 처리하는 데 사용되는 THROW 또는 RAISERROR 내에서 평가할 수 있으며, 결과를 평가하기 위한 테스트 조건을 테스트에 정의할 수 있습니다. 테스트는 [SqlExecutionResult](/previous-versions/sql/sql-server-data-tools/jj856590(v=vs.103)) 클래스의 인스턴스를 반환합니다. 이 클래스의 인스턴스에는 하나 이상의 데이터 세트, 실행 시간 및 스크립트의 영향을 받는 행이 포함됩니다. 이러한 모든 정보는 스크립트를 실행하는 동안 수집됩니다. 이러한 결과는 테스트 조건을 사용하여 평가될 수 있습니다. SQL Server Data Tools에서는 미리 정의된 테스트 조건의 집합을 제공합니다. 사용자 지정 조건을 작성하고 사용할 수도 있습니다. [SQL Server 단위 테스트의 사용자 지정 테스트 조건](../ssdt/custom-test-conditions-for-sql-server-unit-tests.md)을 참조하세요.  
   
 ## <a name="predefined-test-conditions"></a>미리 정의된 테스트 조건  
 다음 표에서는 SQL Server 단위 테스트 디자이너에서 테스트 조건 창을 사용하여 추가할 수 있는 미리 정의된 테스트 조건을 보여 줍니다.  
@@ -92,7 +92,7 @@ SQL Server 단위 테스트 디자이너를 표시하려면 **솔루션 탐색�
   
     **TestConditionName에 대한 구성** 대화 상자가 나타납니다.  
   
-5.  테스트할 데이터베이스에 대한 연결을 지정합니다. 자세한 내용은 [방법: 데이터베이스 연결 만들기](https://msdn.microsoft.com/library/aa833420(VS.100).aspx)를 참조하세요.  
+5.  테스트할 데이터베이스에 대한 연결을 지정합니다. 자세한 내용은 [방법: 데이터베이스 연결 만들기](/previous-versions/visualstudio/visual-studio-2010/aa833420(v=vs.100))를 참조하세요.  
   
 6.  기본적으로 편집 창에는 테스트의 Transact\-SQL 본문이 나타납니다. 필요한 경우 예상 결과를 만들도록 코드를 수정할 수 있습니다. 예를 들어 테스트에 테스트 전 코드가 있는 경우 해당 코드를 추가해야 할 수 있습니다.  
   
@@ -122,7 +122,7 @@ SQL Server 단위 테스트에 필요한 스키마 테스트 조건을 추가한
   
     **TestConditionName에 대한 구성** 대화 상자가 나타납니다.  
   
-5.  테스트할 데이터베이스에 대한 연결을 지정합니다. 자세한 내용은 [방법: 데이터베이스 연결 만들기](https://msdn.microsoft.com/library/aa833420(VS.100).aspx)를 참조하세요.  
+5.  테스트할 데이터베이스에 대한 연결을 지정합니다. 자세한 내용은 [방법: 데이터베이스 연결 만들기](/previous-versions/visualstudio/visual-studio-2010/aa833420(v=vs.100))를 참조하세요.  
   
 6.  기본적으로 편집 창에는 테스트의 Transact\-SQL 본문이 나타납니다. 필요한 경우 예상 결과를 만들도록 코드를 수정할 수 있습니다. 예를 들어 테스트에 테스트 전 코드가 있는 경우 해당 코드를 추가해야 할 수 있습니다.  
   
@@ -144,4 +144,3 @@ SQL Server 단위 테스트에 필요한 스키마 테스트 조건을 추가한
 [SQL Server 단위 테스트 만들기 및 정의](../ssdt/creating-and-defining-sql-server-unit-tests.md)  
 [SQL Server 단위 테스트에서 Transact-SQL 어설션 사용](../ssdt/using-transact-sql-assertions-in-sql-server-unit-tests.md)  
 [SQL Server 단위 테스트의 스크립트](../ssdt/scripts-in-sql-server-unit-tests.md)  
-  

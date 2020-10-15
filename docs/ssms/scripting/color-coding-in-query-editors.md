@@ -15,18 +15,18 @@ ms.reviewer: ''
 ms.custom: seo-lt-2019
 ms.date: 03/14/2017
 monikerRange: '>=aps-pdw-2016||=azuresqldb-current||=azure-sqldw-latest||>=sql-server-2016||=sqlallproducts-allversions||>=sql-server-linux-2017||=azuresqldb-mi-current'
-ms.openlocfilehash: f0361e410c73a18b2901ff11487a58925ce32fa8
-ms.sourcegitcommit: 9e1f1c6ee8f5a10d18a2599bfd9f3eb6081829e1
+ms.openlocfilehash: d83afc075542a3dce2bfeb13272194efc661f7f9
+ms.sourcegitcommit: 22dacedeb6e8721e7cdb6279a946d4002cfb5da3
 ms.translationtype: HT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 08/29/2020
-ms.locfileid: "89093497"
+ms.lasthandoff: 10/14/2020
+ms.locfileid: "92039114"
 ---
 # <a name="color-coding-in-query-editors"></a>쿼리 편집기에서 코드 색상 지정
 
 [!INCLUDE[SQL Server Azure SQL Database Synapse Analytics PDW ](../../includes/applies-to-version/sql-asdb-asdbmi-asa-pdw.md)]
 
-코드 편집기에 입력하는 텍스트에는 범주가 할당되고 각 범주는 색으로 표시됩니다. 색을 통해 코드의 텍스트를 빠르게 찾을 수 있습니다. 예를 들어 주석은 진한 녹색으로 표시됩니다. 다음 표에서는 가장 일반적인 색을 나열합니다. **도구**, **옵션** 메뉴를 사용하여 전체 색 목록과 해당 범주를 볼 수 있으며 사용자 지정 색 구성표를 구성할 수 있습니다. 기본 색을 변경하는 방법은 [Change Font Color, Size, and Style](../../relational-databases/scripting/change-font-color-size-and-style.md)을 참조하십시오.  
+코드 편집기에 입력하는 텍스트에는 범주가 할당되고 각 범주는 색으로 표시됩니다. 색을 통해 코드의 텍스트를 빠르게 찾을 수 있습니다. 예를 들어 주석은 진한 녹색으로 표시됩니다. 다음 표에서는 가장 일반적인 색을 나열합니다. **도구**, **옵션** 메뉴를 사용하여 전체 색 목록과 해당 범주를 볼 수 있으며 사용자 지정 색 구성표를 구성할 수 있습니다. 기본 색을 변경하는 방법은 [Change Font Color, Size, and Style](./change-font-color-size-and-style.md)을 참조하십시오.  
   
 ## <a name="default-code-colors"></a>기본 코드 색  
   
@@ -43,8 +43,7 @@ ms.locfileid: "89093497"
 |진한 회색|연산자|  
   
 ## <a name="status-bar"></a>상태 표시줄  
- [!INCLUDE[ssDE](../../includes/ssde-md.md)] 쿼리 편집기 상태 표시줄에 다른 색상을 사용하도록 개체 탐색기에서 등록된 서버 또는 [!INCLUDE[ssDE](../../includes/ssde-md.md)] 서버를 구성할 수 있습니다. 이렇게 하면 동시에 여러 창이 열려 있을 때 각 편집기 창에 연결된 서버를 식별할 수 있습니다. 상태 표시줄 색상 설정에 대한 자세한 내용은 [상태 표시줄&#40;데이터베이스 엔진 쿼리 편집기&#41;](../../relational-databases/scripting/status-bar-database-engine-query-editor.md)을 참조하세요.  
+ [!INCLUDE[ssDE](../../includes/ssde-md.md)] 쿼리 편집기 상태 표시줄에 다른 색상을 사용하도록 개체 탐색기에서 등록된 서버 또는 [!INCLUDE[ssDE](../../includes/ssde-md.md)] 서버를 구성할 수 있습니다. 이렇게 하면 동시에 여러 창이 열려 있을 때 각 편집기 창에 연결된 서버를 식별할 수 있습니다. 상태 표시줄 색상 설정에 대한 자세한 내용은 [상태 표시줄&#40;데이터베이스 엔진 쿼리 편집기&#41;](./status-bar-database-engine-query-editor.md)을 참조하세요.  
   
  일부 유형의 편집기에는 상태 표시줄이 표시되지 않으며 여러 색상이 지원되지 않습니다.  
-  
   

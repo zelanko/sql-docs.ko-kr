@@ -10,12 +10,12 @@ author: markingmyname
 ms.author: maghan
 ms.reviewer: sstein
 ms.date: 03/16/2018
-ms.openlocfilehash: 2b2590229fa175ac41f2af236c5f87d541895d95
-ms.sourcegitcommit: 9386ae1b90705a39d37d5541b70c5e8a6564f253
+ms.openlocfilehash: 238df1200d88023abec54fdf3fa2c37df758f0f8
+ms.sourcegitcommit: 22dacedeb6e8721e7cdb6279a946d4002cfb5da3
 ms.translationtype: HT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 10/02/2020
-ms.locfileid: "91662032"
+ms.lasthandoff: 10/14/2020
+ms.locfileid: "92038948"
 ---
 # <a name="sql-server-management-studio-components-and-configuration"></a>SQL Server Management Studio 구성 요소 및 구성
 
@@ -33,7 +33,7 @@ ms.locfileid: "91662032"
 
 이 자습서를 완료하려면 SQL Server Management Studio가 필요합니다.  
 
-* [SQL Server Management Studio](https://docs.microsoft.com/sql/ssms/download-sql-server-management-studio-ssms)를 설치합니다.
+* [SQL Server Management Studio](../download-sql-server-management-studio-ssms.md)를 설치합니다.
 
 ## <a name="sql-server-management-studio-components"></a>SQL Server Management Studio 구성 요소
 
@@ -138,7 +138,7 @@ ms.locfileid: "91662032"
 
 실습을 통해 SSMS에 익숙해지는 것이 가장 좋습니다. 이러한 *자습서* 및 *방법* 문서에서는 SSMS 내에서 사용할 수 있는 다양한 기능에 관해 도움을 얻을 수 있습니다.  이러한 문서에서는 SSMS의 구성 요소를 관리하는 방법과 정기적으로 사용하는 기능을 찾는 방법을 알아봅니다.
 
-* [인스턴스에 연결 및 쿼리](connect-query-sql-server.md)
+* [인스턴스에 연결 및 쿼리](../quickstarts/connect-query-sql-server.md)
 * [스크립팅](scripting-ssms.md)
 * [SSMS에서 템플릿 사용](../template/templates-ssms.md)
 * [SSMS 사용을 위한 추가 팁과 요령](ssms-tricks.md)

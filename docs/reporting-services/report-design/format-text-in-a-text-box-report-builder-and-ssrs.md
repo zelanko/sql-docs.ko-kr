@@ -9,12 +9,12 @@ ms.topic: conceptual
 ms.assetid: df0794b5-96b0-4034-bd17-1be7f31e29db
 author: maggiesMSFT
 ms.author: maggies
-ms.openlocfilehash: 5c1ea82680da039b9f38c7a3c308fd07bfa1cd89
-ms.sourcegitcommit: e572f1642f588b8c4c75bc9ea6adf4ccd48a353b
+ms.openlocfilehash: 659f5ed939e9dfd3a93fd638701c94cf7c27264b
+ms.sourcegitcommit: fe59f8dc27fd633f5dfce54519d6f5dcea577f56
 ms.translationtype: HT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 06/15/2020
-ms.locfileid: "84778905"
+ms.lasthandoff: 10/09/2020
+ms.locfileid: "91935093"
 ---
 # <a name="format-text-in-a-text-box-report-builder-and-ssrs"></a>입력란의 텍스트 서식 지정(보고서 작성기 및 SSRS)
   입력란에 있는 텍스트 부분의 서식을 개별적으로 지정하고 한 입력란 내에 자리 표시자 텍스트와 정적 텍스트를 함께 사용할 수 있습니다. 여러 서식을 함께 사용하고 자리 표시자 텍스트를 추가하는 이 기능을 통해 보고서의 텍스트에 대한 편지 병합 또는 템플릿을 만들 수 있습니다. 자리 표시자를 사용하여 모든 식을 개별적으로 정의하고 서식을 지정할 수 있습니다.  
@@ -46,7 +46,7 @@ ms.locfileid: "84778905"
   
 ### <a name="to-format-text-and-placeholders-differently-in-the-same-text-box"></a>같은 입력란에서 텍스트 및 자리 표시자의 서식을 다르게 지정하려면  
   
-1.  **삽입** 탭에서 **목록**을 클릭합니다. 디자인 화면을 클릭한 다음 끌어 원하는 크기의 상자를 만듭니다. **데이터 세트 속성** 대화 상자가 열립니다. 보고서에 포함된 데이터 세트나 공유 데이터 세트를 사용할 수 있습니다. 자세한 내용은 [데이터 세트 속성 대화 상자, 쿼리&#40;보고서 작성기&#41;](../../reporting-services/report-data/dataset-properties-dialog-box-query-report-builder.md) 또는 [데이터 세트 속성 대화 상자, 쿼리](https://msdn.microsoft.com/library/1fa34a4b-7de0-4e92-99fa-bc28a206773f)를 참조하세요.  
+1.  **삽입** 탭에서 **목록**을 클릭합니다. 디자인 화면을 클릭한 다음 끌어 원하는 크기의 상자를 만듭니다. **데이터 세트 속성** 대화 상자가 열립니다. 보고서에 포함된 데이터 세트나 공유 데이터 세트를 사용할 수 있습니다. 자세한 내용은 [데이터 세트 속성 대화 상자, 쿼리&#40;보고서 작성기&#41;](../../reporting-services/report-data/dataset-properties-dialog-box-query-report-builder.md) 또는 [데이터 세트 속성 대화 상자, 쿼리](/previous-versions/sql/)를 참조하세요.  
   
 2.  **삽입** 탭에서 **입력란**을 클릭합니다. 목록을 클릭한 다음 끌어 원하는 크기의 상자를 만듭니다.  
   
@@ -72,6 +72,5 @@ ms.locfileid: "84778905"
  [보고서에 HTML 추가&#40;보고서 작성기 및 SSRS&#41;](../../reporting-services/report-design/add-html-into-a-report-report-builder-and-ssrs.md)   
  [테이블, 행렬 및 목록&#40;보고서 작성기 및 SSRS&#41;](../../reporting-services/report-design/tables-matrices-and-lists-report-builder-and-ssrs.md)   
  [숫자 및 날짜 서식 지정&#40;보고서 작성기 및 SSRS&#41;](../../reporting-services/report-design/formatting-numbers-and-dates-report-builder-and-ssrs.md)   
- [자리 표시자 속성 대화 상자, 일반&#40;보고서 작성기 및 SSRS&#41;](https://msdn.microsoft.com/library/7a867736-a3b0-4b5a-b3e5-fe7c8d7618a8)  
-  
+ [자리 표시자 속성 대화 상자, 일반&#40;보고서 작성기 및 SSRS&#41;](./text-boxes-report-builder-and-ssrs.md)  
   

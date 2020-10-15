@@ -10,12 +10,12 @@ ms.author: garye
 ms.reviewer: davidph
 ms.custom: contperfq1, seo-lt-2019
 monikerRange: '>=sql-server-2016||>=sql-server-linux-ver15||=sqlallproducts-allversions'
-ms.openlocfilehash: 61294897524a0e260e457cbf98e892cad940ca54
-ms.sourcegitcommit: c74bb5944994e34b102615b592fdaabe54713047
+ms.openlocfilehash: f51998b722748bdfe51b773e251de88c8cac07a2
+ms.sourcegitcommit: afb02c275b7c79fbd90fac4bfcfd92b00a399019
 ms.translationtype: HT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 09/22/2020
-ms.locfileid: "90989842"
+ms.lasthandoff: 10/12/2020
+ms.locfileid: "91956532"
 ---
 # <a name="security-architecture-for-the-extensibility-framework-in-sql-server-machine-learning-services"></a>SQL Server Machine Learning Services 확장성 프레임워크의 보안 아키텍처
 
@@ -153,7 +153,7 @@ SQL Server의 중요한 리소스를 보호하기 위해 필요에 따라 **SQLR
 
 ## <a name="appcontainer-isolation"></a>AppContainer 격리
 
-격리는 [AppContainer](https://docs.microsoft.com/windows/desktop/secauthz/appcontainer-isolation)를 통해 처리됩니다. 런타임에 저장 프로시저 또는 쿼리에서 외부 스크립트가 검색되면 SQL Server는 확장별 시작 관리자를 요청하여 실행 패드를 호출합니다. 실행 패드는 해당 ID를 사용하여 프로세스에서 적절한 런타임 환경을 호출하고, 이를 포함할 AppContainer를 인스턴스화합니다. 이러한 변경은 로컬 계정 및 암호 관리가 더 이상 필요하지 않기 때문에 유용합니다. 또한 로컬 사용자 계정이 금지된 설치에서 로컬 사용자 계정 종속성을 제거하면 이 기능을 사용할 수 있습니다.
+격리는 [AppContainer](/windows/desktop/secauthz/appcontainer-isolation)를 통해 처리됩니다. 런타임에 저장 프로시저 또는 쿼리에서 외부 스크립트가 검색되면 SQL Server는 확장별 시작 관리자를 요청하여 실행 패드를 호출합니다. 실행 패드는 해당 ID를 사용하여 프로세스에서 적절한 런타임 환경을 호출하고, 이를 포함할 AppContainer를 인스턴스화합니다. 이러한 변경은 로컬 계정 및 암호 관리가 더 이상 필요하지 않기 때문에 유용합니다. 또한 로컬 사용자 계정이 금지된 설치에서 로컬 사용자 계정 종속성을 제거하면 이 기능을 사용할 수 있습니다.
 
 SQL Server에서 구현되므로 AppContainer는 내부 메커니즘입니다. 프로세스 모니터에서 AppContainer의 물리적 증거는 표시되지 않지만 설치 프로그램에서 프로세스의 네트워크 호출 수행을 방지하기 위해 만든 아웃바운드 방화벽 규칙에 표시될 수 있습니다. 자세한 내용은 [SQL Server Machine Learning Services에 대한 방화벽 구성](../../machine-learning/security/firewall-configuration.md)을 참조하세요.
 
@@ -216,7 +216,7 @@ print(system("ls -al /var/opt/mssql-extensibility/data/*/*"))
 
 ‘암시적 인증’은 데이터 또는 작업에 대한 루프백 요청에서 AppContainer로 실행되는 외부 프로세스가 SQL Server에 신뢰할 수 있는 사용자 ID로 제공되는 연결 요청 동작을 설명합니다.  개념적으로 암시적 인증은 R 또는 Python 스크립트와 같은 외부 프로세스에서 요청이 시작되는 경우 신뢰할 수 있는 연결을 지정하는 SQL Server 연결 문자열의 Windows 인증에 더 이상 고유하지 않습니다. ‘루프백’이라고도 합니다. 
 
-AppContainer는 ID 및 자격 증명을 관리하여 사용자 자격 증명을 통해 리소스에 액세스하거나 다른 환경에 로그인하는 것을 방지합니다. AppContainer 환경에서는 사용자와 애플리케이션의 결합된 ID를 사용하는 식별자를 만들므로 자격 증명이 각 사용자/애플리케이션 쌍에 고유하며 애플리케이션이 사용자를 가장할 수 없습니다. 자세한 내용은 [AppContainer 격리](https://docs.microsoft.com/windows/win32/secauthz/appcontainer-isolation)를 참조하세요.
+AppContainer는 ID 및 자격 증명을 관리하여 사용자 자격 증명을 통해 리소스에 액세스하거나 다른 환경에 로그인하는 것을 방지합니다. AppContainer 환경에서는 사용자와 애플리케이션의 결합된 ID를 사용하는 식별자를 만들므로 자격 증명이 각 사용자/애플리케이션 쌍에 고유하며 애플리케이션이 사용자를 가장할 수 없습니다. 자세한 내용은 [AppContainer 격리](/windows/win32/secauthz/appcontainer-isolation)를 참조하세요.
 
 루프백 연결에 대한 자세한 내용은 [Python 또는 R 스크립트에서 SQL Server로의 루프백 연결](../connect/loopback-connection.md)을 참조하세요.
 

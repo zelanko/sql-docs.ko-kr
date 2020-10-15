@@ -14,12 +14,12 @@ ms.author: maghan
 ms.reviewer: ''
 ms.custom: seo-lt-2019
 ms.date: 08/14/2017
-ms.openlocfilehash: e5b01c75e099facc54c65ce5ef0d4c290ec79694
-ms.sourcegitcommit: e700497f962e4c2274df16d9e651059b42ff1a10
+ms.openlocfilehash: 5031cafdcb62d840d26950682d3490e5f252ee72
+ms.sourcegitcommit: 22dacedeb6e8721e7cdb6279a946d4002cfb5da3
 ms.translationtype: HT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 08/17/2020
-ms.locfileid: "88370849"
+ms.lasthandoff: 10/14/2020
+ms.locfileid: "92037246"
 ---
 # <a name="connect-to-server-connection-properties-page-database-engine"></a>서버에 연결(연결 속성 페이지) 데이터베이스 엔진
 
@@ -76,5 +76,4 @@ ms.locfileid: "88370849"
 **등록된 서버**에 설정을 저장합니다.  
   
 ## <a name="see-also"></a>참고 항목  
-[연결 속성 대화 상자](../../ssms/f1-help/connection-properties-dialog-box.md)  
-  
+[연결 속성 대화 상자]()  

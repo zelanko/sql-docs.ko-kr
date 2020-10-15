@@ -14,12 +14,12 @@ ms.assetid: bf92770a-33df-43ef-85ad-5a9223649b98
 author: markingmyname
 ms.author: maghan
 monikerRange: '>=aps-pdw-2016||=azuresqldb-current||=azure-sqldw-latest||>=sql-server-2016||=sqlallproducts-allversions||>=sql-server-linux-2017||=azuresqldb-mi-current'
-ms.openlocfilehash: 8127d6b7c38fc2ca95acea9de94fd030773e7a20
-ms.sourcegitcommit: 6d53ecfdc463914f045c20eda96da39dec22acca
+ms.openlocfilehash: 56201dec5bb9b6a66c63f6c4bca50d90b4e27c33
+ms.sourcegitcommit: 22dacedeb6e8721e7cdb6279a946d4002cfb5da3
 ms.translationtype: HT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 08/26/2020
-ms.locfileid: "88901282"
+ms.lasthandoff: 10/14/2020
+ms.locfileid: "92039051"
 ---
 # <a name="find-in-files"></a>파일에서 찾기
 [!INCLUDE[SQL Server Azure SQL Database Synapse Analytics PDW ](../../includes/applies-to-version/sql-asdb-asdbmi-asa-pdw.md)]
@@ -84,10 +84,10 @@ ms.locfileid: "88901282"
  **찾을 내용** 또는 **바꿀 내용** 입력란에 입력한 특수 문자의 해석 방법을 나타냅니다. 옵션에는 **와일드카드** 및 **정규식**이 있습니다.  
   
  **Regular Expressions**  
- 특수 표기를 사용하여 일치하는 텍스트의 패턴을 정의합니다. 목록을 보려면 [정규식으로 텍스트 검색](../../relational-databases/scripting/search-text-with-regular-expressions.md)을 참조하세요.  
+ 특수 표기를 사용하여 일치하는 텍스트의 패턴을 정의합니다. 목록을 보려면 [정규식으로 텍스트 검색](./search-text-with-regular-expressions.md)을 참조하세요.  
   
  **와일드카드**  
- 별표(`*`) 및 물음표(`?`)와 같은 특수 문자는 하나 이상의 문자를 나타냅니다. 목록을 보려면 [와일드카드로 텍스트 검색](../../relational-databases/scripting/search-text-with-wildcards.md)을 참조하세요.  
+ 별표(`*`) 및 물음표(`?`)와 같은 특수 문자는 하나 이상의 문자를 나타냅니다. 목록을 보려면 [와일드카드로 텍스트 검색](./search-text-with-wildcards.md)을 참조하세요.  
   
  **이 파일 형식 보기**  
  이 목록은 **찾는 위치**에 지정한 디렉터리에서 검색할 파일 유형을 나타냅니다. 이 필드를 비워 두면 **찾는 위치** 에서 지정한 디렉터리에 있는 모든 파일이 검색됩니다.  
@@ -135,4 +135,4 @@ ms.locfileid: "88901282"
  이 도구 모음 탭은 대화 상자를 **기호 찾기** 대화 상자로 변경합니다.  
   
 ## <a name="see-also"></a>참고 항목  
- [SQL Server Management Studio 바로 가기 키](../../ssms/sql-server-management-studio-keyboard-shortcuts.md)  
+ [SQL Server Management Studio 바로 가기 키](../../ssms/sql-server-management-studio-keyboard-shortcuts.md)

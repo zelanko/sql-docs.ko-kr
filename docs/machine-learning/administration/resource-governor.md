@@ -9,12 +9,12 @@ author: dphansen
 ms.author: davidph
 ms.custom: seo-lt-2019
 monikerRange: '>=sql-server-2016||>=sql-server-linux-ver15||=sqlallproducts-allversions'
-ms.openlocfilehash: 55fd9d7c699523856ad2623298c62d6f986904a5
-ms.sourcegitcommit: 5da46e16b2c9710414fe36af9670461fb07555dc
+ms.openlocfilehash: 20506baeb0a22e4e32fd1c4b24a7d00f4493b6d5
+ms.sourcegitcommit: afb02c275b7c79fbd90fac4bfcfd92b00a399019
 ms.translationtype: HT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 09/01/2020
-ms.locfileid: "89283554"
+ms.lasthandoff: 10/12/2020
+ms.locfileid: "91956541"
 ---
 # <a name="manage-python-and-r-workloads-with-resource-governor-in-sql-server-machine-learning-services"></a>SQL Server Machine Learning Services에서 Resource Governor를 사용하여 Python 및 R 워크로드 관리
 [!INCLUDE [SQL Server 2016 and later](../../includes/applies-to-version/sqlserver2016.md)]
@@ -38,9 +38,9 @@ Python 및 R의 기계 학습 알고리즘은 일반적으로 컴퓨팅 집약�
 
 선택적으로 특정 프로그램이나 호스트로부터 시작되는 요청 또는 사용자가 제공한 다른 기준에 따라 리소스 할당을 결정하기 위해 워크로드 그룹 및 분류자가 연결된 사용자 지정 **외부 리소스 풀**을 만들 수 있습니다. 외부 리소스 풀은 데이터베이스 엔진 외부의 R 및 Python 프로세스 관리를 돕기 위해 [!INCLUDE[sssql15-md](../../includes/sssql15-md.md)]에 도입된 리소스 풀 유형입니다.
 
-1. [리소스 관리를 사용하도록 설정합니다](https://docs.microsoft.com/sql/relational-databases/resource-governor/enable-resource-governor)(기본적으로 해제되어 있음).
+1. [리소스 관리를 사용하도록 설정합니다](../../relational-databases/resource-governor/enable-resource-governor.md)(기본적으로 해제되어 있음).
 
-2. [CREATE EXTERNAL RESOURCE POOL](https://docs.microsoft.com/sql/t-sql/statements/create-external-resource-pool-transact-sql)을 실행하여 리소스 풀을 만들고 구성한 후 [ALTER RESOURCE GOVERNOR](https://docs.microsoft.com/sql/t-sql/statements/alter-resource-governor-transact-sql)를 실행하여 구현합니다.
+2. [CREATE EXTERNAL RESOURCE POOL](../../t-sql/statements/create-external-resource-pool-transact-sql.md)을 실행하여 리소스 풀을 만들고 구성한 후 [ALTER RESOURCE GOVERNOR](../../t-sql/statements/alter-resource-governor-transact-sql.md)를 실행하여 구현합니다.
 
 3. 학습과 채점 사이의 세부적인 할당을 위한 워크로드 그룹을 만듭니다.
 

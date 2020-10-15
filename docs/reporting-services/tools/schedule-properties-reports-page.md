@@ -11,12 +11,12 @@ f1_keywords:
 ms.assetid: 7db728bd-4b08-43ef-a49a-e8dcdd37cf89
 author: maggiesMSFT
 ms.author: maggies
-ms.openlocfilehash: 556fc5e4c785345ede475dcadb2c5673489a279f
-ms.sourcegitcommit: e8f6c51d4702c0046aec1394109bc0503ca182f0
+ms.openlocfilehash: ad2720898bc340d71644356b0ced7a4b8d647a5a
+ms.sourcegitcommit: a41e1f4199785a2b8019a419a1f3dcdc15571044
 ms.translationtype: HT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 08/07/2020
-ms.locfileid: "87939416"
+ms.lasthandoff: 10/13/2020
+ms.locfileid: "91988126"
 ---
 # <a name="schedule-properties-reports-page"></a>일정 속성(보고서 페이지)
   [!INCLUDE[ssRSnoversion_md](../../includes/ssrsnoversion-md.md)] 의 [!INCLUDE[ssManStudioFull_md](../../includes/ssmanstudiofull-md.md)] 일정 속성 페이지를 사용하여 특정 공유 일정을 사용하는 모든 보고서 목록을 볼 수 있습니다. 일정을 사용하여 보고서 스냅샷을 새로 고치거나, 보고서 기록을 생성하거나, 구독을 트리거하거나, 보고서의 캐시된 복사본을 만료시킬 수 있습니다. 일정 사용 방법을 확인하려면 보고서의 속성 및 구독 정보를 확인하십시오.  
@@ -47,7 +47,5 @@ ms.locfileid: "87939416"
  [일정](../../reporting-services/subscriptions/schedules.md)   
  [Management Studio의 보고서 서버 F1 도움말](../../reporting-services/tools/report-server-in-management-studio-f1-help.md)   
  [Management Studio에서 보고서 서버에 연결](../../reporting-services/tools/connect-to-a-report-server-in-management-studio.md)   
- [일반적인 보고서 속성 구성(보고서 관리자)](https://docs.microsoft.com/sql/reporting-services/reports/configure-execution-properties-for-a-report-report-manager)  
+ [일반적인 보고서 속성 구성(보고서 관리자)](../reports/configure-execution-properties-for-a-report-report-manager.md)  
   
-  
-

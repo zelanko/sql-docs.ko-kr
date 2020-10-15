@@ -9,12 +9,12 @@ author: dphansen
 ms.author: davidph
 ms.custom: seo-lt-2019
 monikerRange: '>=sql-server-2016||=sqlallproducts-allversions'
-ms.openlocfilehash: a83e1ea4c96144f7188812522ee121530bac351c
-ms.sourcegitcommit: 9b41725d6db9957dd7928a3620fe4db41eb51c6e
+ms.openlocfilehash: 2332aff0cb4c73fb7bbda61e498b1167327f6957
+ms.sourcegitcommit: afb02c275b7c79fbd90fac4bfcfd92b00a399019
 ms.translationtype: HT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 08/13/2020
-ms.locfileid: "88178660"
+ms.lasthandoff: 10/12/2020
+ms.locfileid: "91956815"
 ---
 # <a name="install-machine-learning-server-standalone-or-r-server-standalone-using-sql-server-setup"></a>SQL Server 설치 프로그램을 사용하여 Machine Learning Server(독립 실행형) 또는 R Server 설치
 [!INCLUDE [SQL Server 2016 and later](../../includes/applies-to-version/sqlserver2016.md)]
@@ -26,7 +26,7 @@ SQL Server 설치 프로그램에는 SQL Server 외부에서 실행되는 독립
 SQL Server 설치 프로그램에는 SQL Server 외부에서 실행되는 독립 실행형 기계 학습 서버 설치를 위한 **공유 기능** 옵션이 포함되어 있습니다. SQL Server 2016에서는 이 기능을 **R Server(독립 실행형)** 라고 합니다.  
 ::: moniker-end
 
-SQL Server 설치 프로그램을 통해 설치되는 독립 실행형 서버는 SQL 브랜드가 아닌 버전의 [Microsoft Machine Learning Server](https://docs.microsoft.com/machine-learning-server/what-is-machine-learning-server)와 기능적으로 동일하며, 다음을 포함한 동일한 사용 사례 및 시나리오를 지원합니다.
+SQL Server 설치 프로그램을 통해 설치되는 독립 실행형 서버는 SQL 브랜드가 아닌 버전의 [Microsoft Machine Learning Server](/machine-learning-server/what-is-machine-learning-server)와 기능적으로 동일하며, 다음을 포함한 동일한 사용 사례 및 시나리오를 지원합니다.
 
 + 원격 실행, 동일한 콘솔에서 로컬 세션과 원격 세션 간에 전환
 + 웹 노드와 컴퓨팅 노드를 사용하여 운영화
@@ -192,7 +192,7 @@ R 및 Python 개발의 경우 동일한 컴퓨터에 여러 버전을 설치하�
 
 3. 웹 서비스 배포를 위해 웹 노드 및 컴퓨팅 노드로 실행되도록 운영화를 설정한 경우 예방 조치로 **AppSettings.json** 파일을 백업합니다. SQL Server 2017 CU13 이상을 적용하면 이 파일이 수정되므로 백업 복사본을 만들어 원래 버전을 유지하는 것이 좋습니다.
 
-4. 인터넷에 연결된 기계를 이용해 [Microsoft SQL Server 최신 업데이트](https://docs.microsoft.com/sql/database-engine/install-windows/latest-updates-for-microsoft-sql-server)에서 버전의 최신 누적 업데이트를 다운로드하세요.
+4. 인터넷에 연결된 기계를 이용해 [Microsoft SQL Server 최신 업데이트](../../database-engine/install-windows/latest-updates-for-microsoft-sql-server.md)에서 버전의 최신 누적 업데이트를 다운로드하세요.
 
 5. 최신 누적 업데이트를 다운로드합니다. 실행 파일입니다.
 
@@ -215,7 +215,7 @@ R 및 Python 개발의 경우 동일한 컴퓨터에 여러 버전을 설치하�
     }
     ```
 
-9. [관리 CLI 유틸리티를 실행](https://docs.microsoft.com/machine-learning-server/operationalize/configure-admin-cli-launch)하여 웹 및 컴퓨팅 노드를 다시 시작합니다. 단계와 구문은 [웹 및 컴퓨팅 노드의 모니터링, 시작, 중지](https://docs.microsoft.com/machine-learning-server/operationalize/configure-admin-cli-stop-start)를 참조하세요.
+9. [관리 CLI 유틸리티를 실행](/machine-learning-server/operationalize/configure-admin-cli-launch)하여 웹 및 컴퓨팅 노드를 다시 시작합니다. 단계와 구문은 [웹 및 컴퓨팅 노드의 모니터링, 시작, 중지](/machine-learning-server/operationalize/configure-admin-cli-stop-start)를 참조하세요.
 
 ## <a name="development-tools"></a>개발 도구
 

@@ -17,12 +17,12 @@ ms.author: maghan
 ms.reviewer: ''
 ms.custom: seo-lt-2019
 ms.date: 03/01/2017
-ms.openlocfilehash: d770a7396f48aa11e00eb4f4663285f4cf6eef9a
-ms.sourcegitcommit: e700497f962e4c2274df16d9e651059b42ff1a10
+ms.openlocfilehash: 1c976735ddc6ce9e602969e06abc13b076a74144
+ms.sourcegitcommit: 22dacedeb6e8721e7cdb6279a946d4002cfb5da3
 ms.translationtype: HT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 08/17/2020
-ms.locfileid: "88370309"
+ms.lasthandoff: 10/14/2020
+ms.locfileid: "92037586"
 ---
 # <a name="export-registered-server-information-sql-server-management-studio"></a>등록된 서버 정보 내보내기(SQL Server Management Studio)
 
@@ -61,7 +61,6 @@ ms.locfileid: "88370309"
     >  내보낼 파일이 암호화되더라도 파일에 사용자 이름과 SQL Server 인증 암호가 포함되면 파일에 대한 액세스를 신중하게 제어해야 합니다. 따라서 사용자 이름과 암호는 기본적으로 내보낼 파일에서 제외됩니다.  
   
 ## <a name="see-also"></a>참고 항목  
- [등록된 서버 정보 가져오기&#40;SQL Server Management Studio&#41;](../../tools/sql-server-management-studio/import-registered-server-information-sql-server-management-studio.md)   
- [새 등록된 서버 만들기&#40;SQL Server Management Studio&#41;](../../tools/sql-server-management-studio/create-a-new-registered-server-sql-server-management-studio.md)  
-  
+ [등록된 서버 정보 가져오기&#40;SQL Server Management Studio&#41;](./import-registered-server-information-sql-server-management-studio.md)   
+ [새 등록된 서버 만들기&#40;SQL Server Management Studio&#41;](./create-a-new-registered-server-sql-server-management-studio.md)  
   

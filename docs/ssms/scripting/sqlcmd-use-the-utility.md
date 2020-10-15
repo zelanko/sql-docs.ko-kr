@@ -18,12 +18,12 @@ ms.assetid: 3ec89119-7314-43ef-9e91-12e72bb63d62
 author: markingmyname
 ms.author: maghan
 monikerRange: '>=aps-pdw-2016||=azuresqldb-current||=azure-sqldw-latest||>=sql-server-2016||=sqlallproducts-allversions||>=sql-server-linux-2017||=azuresqldb-mi-current'
-ms.openlocfilehash: b3a7425eebb86ae2afd5d9e41af51fa0badbb304
-ms.sourcegitcommit: 6d53ecfdc463914f045c20eda96da39dec22acca
+ms.openlocfilehash: 5c71685e6abf6a38827394c24fb9d2dc5e1afb8d
+ms.sourcegitcommit: 22dacedeb6e8721e7cdb6279a946d4002cfb5da3
 ms.translationtype: HT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 08/26/2020
-ms.locfileid: "88901516"
+ms.lasthandoff: 10/14/2020
+ms.locfileid: "92036268"
 ---
 # <a name="sqlcmd---use-the-utility"></a>sqlcmd - 유틸리티 사용
 [!INCLUDE[SQL Server Azure SQL Database Synapse Analytics PDW ](../../includes/applies-to-version/sql-asdb-asdbmi-asa-pdw.md)]
@@ -33,7 +33,7 @@ ms.locfileid: "88901516"
   
 -   실행할 단일 **문을 지정하거나 실행할** 문이 포함된 텍스트 파일을 유틸리티에 알려 [!INCLUDE[tsql](../../includes/tsql-md.md)] sqlcmd [!INCLUDE[tsql](../../includes/tsql-md.md)] 작업을 제출합니다. 출력은 일반적으로 텍스트 파일로 전송되지만 명령 프롬프트에 표시될 수도 있습니다.  
   
--   [쿼리 편집기의](../../relational-databases/scripting/edit-sqlcmd-scripts-with-query-editor.md) SQLCMD 모드 [!INCLUDE[ssManStudioFull](../../includes/ssmanstudiofull-md.md)]  
+-   [쿼리 편집기의](./edit-sqlcmd-scripts-with-query-editor.md) SQLCMD 모드 [!INCLUDE[ssManStudioFull](../../includes/ssmanstudiofull-md.md)]  
   
 -   SMO(SQL Server 관리 개체)  
   
@@ -202,7 +202,7 @@ ms.locfileid: "88901516"
  `3> GO` 줄 다음에 표시된 줄은 `SELECT` 문의 출력입니다. 출력이 생성된 후 `sqlcmd` 는 `sqlcmd` 프롬프트를 다시 설정하고 `1>`을 표시합니다. `EXIT` 줄에 `1>`를 입력하면 명령 프롬프트 창을 처음 열었을 때와 동일한 줄이 표시됩니다. 이는 `sqlcmd` 가 해당 세션을 종료했음을 나타냅니다. 이제 다시 `EXIT` 명령을 입력하여 명령 프롬프트 창을 닫을 수 있습니다.  
   
 ## <a name="running-transact-sql-script-files-using-sqlcmd"></a>sqlcmd를 사용하여 Transact-SQL 스크립트 파일 실행  
- **sqlcmd** 를 사용하여 데이터베이스 스크립트 파일을 실행할 수 있습니다. 스크립트 파일은 [!INCLUDE[tsql](../../includes/tsql-md.md)] 문, **sqlcmd** 명령 및 스크립팅 변수를 포함하는 텍스트 파일입니다. 변수를 스크립팅하는 방법은 [스크립팅 변수와 함께 sqlcmd 사용](../../relational-databases/scripting/sqlcmd-use-with-scripting-variables.md)을 참조하세요. **sqlcmd** 는 대화형으로 입력된 문과 명령을 사용하는 방식과 유사한 방식으로 스크립트 파일의 문, 명령 및 스크립팅 변수를 사용합니다. 주된 차이점은 **sqlcmd** 가 사용자의 문, 명령 및 스크립팅 변수 입력 작업을 기다리지 않고 일시 중지 없이 입력 파일을 읽는다는 점입니다.  
+ **sqlcmd** 를 사용하여 데이터베이스 스크립트 파일을 실행할 수 있습니다. 스크립트 파일은 [!INCLUDE[tsql](../../includes/tsql-md.md)] 문, **sqlcmd** 명령 및 스크립팅 변수를 포함하는 텍스트 파일입니다. 변수를 스크립팅하는 방법은 [스크립팅 변수와 함께 sqlcmd 사용](./sqlcmd-use-with-scripting-variables.md)을 참조하세요. **sqlcmd** 는 대화형으로 입력된 문과 명령을 사용하는 방식과 유사한 방식으로 스크립트 파일의 문, 명령 및 스크립팅 변수를 사용합니다. 주된 차이점은 **sqlcmd** 가 사용자의 문, 명령 및 스크립팅 변수 입력 작업을 기다리지 않고 일시 중지 없이 입력 파일을 읽는다는 점입니다.  
   
  다음과 같이 데이터베이스 스크립트 파일을 만드는 다른 방법도 있습니다.  
   
@@ -535,9 +535,8 @@ SQLCMD -E -N -C
   
 ## <a name="more-about-sqlcmd"></a>sqlcmd에 대한 자세한 정보  
  [sqlcmd 유틸리티](../../tools/sqlcmd-utility.md)   
- [스크립팅 변수와 함께 sqlcmd 사용](../../relational-databases/scripting/sqlcmd-use-with-scripting-variables.md)   
- [쿼리 편집기로 SQLCMD 스크립트 편집](../../relational-databases/scripting/edit-sqlcmd-scripts-with-query-editor.md)   
+ [스크립팅 변수와 함께 sqlcmd 사용](./sqlcmd-use-with-scripting-variables.md)   
+ [쿼리 편집기로 SQLCMD 스크립트 편집](./edit-sqlcmd-scripts-with-query-editor.md)   
  [작업 단계 관리](../../ssms/agent/manage-job-steps.md)   
  [CmdExec 작업 단계 만들기](../../ssms/agent/create-a-cmdexec-job-step.md)  
-  
   

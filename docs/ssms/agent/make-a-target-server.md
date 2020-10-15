@@ -21,18 +21,18 @@ ms.reviewer: ''
 ms.custom: seo-lt-2019
 ms.date: 06/03/2020
 monikerRange: = azuresqldb-mi-current || >= sql-server-2016 || = sqlallproducts-allversions
-ms.openlocfilehash: d419d2ba35e4991dd7ff69f3a5adbb6240a07a81
-ms.sourcegitcommit: e700497f962e4c2274df16d9e651059b42ff1a10
+ms.openlocfilehash: dcb200c472eb0284af8ef829687b89b5ae0340b7
+ms.sourcegitcommit: 22dacedeb6e8721e7cdb6279a946d4002cfb5da3
 ms.translationtype: HT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 08/17/2020
-ms.locfileid: "88418129"
+ms.lasthandoff: 10/14/2020
+ms.locfileid: "92036559"
 ---
 # <a name="make-a-target-server"></a>대상 서버 만들기
 [!INCLUDE [SQL Server SQL MI](../../includes/applies-to-version/sql-asdbmi.md)]
 
 > [!IMPORTANT]  
-> 현재 [Azure SQL Managed Instance](https://docs.microsoft.com/azure/sql-database/sql-database-managed-instance)에서는 SQL Server 에이전트 기능이 대부분 지원됩니다. 자세한 내용은 [SQL Server와 Azure SQL Managed Instance 간의 T-SQL 차이점](https://docs.microsoft.com/azure/sql-database/sql-database-managed-instance-transact-sql-information#sql-server-agent)을 참조하세요.
+> 현재 [Azure SQL Managed Instance](/azure/sql-database/sql-database-managed-instance)에서는 SQL Server 에이전트 기능이 대부분 지원됩니다. 자세한 내용은 [SQL Server와 Azure SQL Managed Instance 간의 T-SQL 차이점](/azure/sql-database/sql-database-managed-instance-transact-sql-information#sql-server-agent)을 참조하세요.
 
 이 항목에서는 [!INCLUDE[ssCurrent](../../includes/sscurrent-md.md)] 에서 [!INCLUDE[ssManStudioFull](../../includes/ssmanstudiofull-md.md)], [!INCLUDE[tsql](../../includes/tsql-md.md)]또는 SMO(SQL Server 관리 개체)를 사용하여 대상 서버를 만드는 방법에 대해 설명합니다.  
   
@@ -98,8 +98,7 @@ ms.locfileid: "88418129"
     GO
     ```  
   
-    자세한 내용은 [sp_msx_enlist(Transact-SQL)](https://msdn.microsoft.com/ceb3b2bc-0cc4-48d8-9bdc-6a809556e35f)를 참조하세요.  
+    자세한 내용은 [sp_msx_enlist(Transact-SQL)](../../relational-databases/system-stored-procedures/sp-msx-enlist-transact-sql.md)를 참조하세요.  
   
 ## <a name="see-also"></a>참고 항목  
 [기업 내 관리 자동화](../../ssms/agent/automated-administration-across-an-enterprise.md)  
-  

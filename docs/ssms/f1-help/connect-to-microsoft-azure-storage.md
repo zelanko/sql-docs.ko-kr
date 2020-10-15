@@ -14,12 +14,12 @@ ms.author: maghan
 ms.reviewer: ''
 ms.custom: seo-lt-2019
 ms.date: 07/12/2017
-ms.openlocfilehash: ed8fa9e9ecb2f5f94d177c588584478fae8e8d81
-ms.sourcegitcommit: e700497f962e4c2274df16d9e651059b42ff1a10
+ms.openlocfilehash: 7d1074f9247e8c46a027bde25e3b6a01cc185cb9
+ms.sourcegitcommit: 22dacedeb6e8721e7cdb6279a946d4002cfb5da3
 ms.translationtype: HT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 08/17/2020
-ms.locfileid: "88417929"
+ms.lasthandoff: 10/14/2020
+ms.locfileid: "92035476"
 ---
 # <a name="connect-to-microsoft-azure-storage"></a>Microsoft Azure Storage에 연결
 
@@ -32,7 +32,7 @@ Azure 계정에 대해 다음 정보를 지정한 후 **다음**을 선택하여
 1.  **스토리지 계정** - 스토리지 계정 이름을 지정합니다.
 
    >[!NOTE]
-   > [범용 스토리지 계정](https://docs.microsoft.com/azure/storage/common/storage-introduction#azure-storage-services)에만 연결할 수 있습니다. 다른 유형의 스토리지 계정에 연결하면 다음과 유사한 오류 메시지가 발생할 수 있습니다.
+   > [범용 스토리지 계정](/azure/storage/common/storage-introduction#azure-storage-services)에만 연결할 수 있습니다. 다른 유형의 스토리지 계정에 연결하면 다음과 유사한 오류 메시지가 발생할 수 있습니다.
    >
    >  HTTP 헤더 중 하나에 대한 값 형식이 올바르지 않습니다. (Microsoft.SqlServer.StorageClient).
    >
@@ -43,4 +43,3 @@ Azure 계정에 대해 다음 정보를 지정한 후 **다음**을 선택하여
 3.  **보안 엔드포인트 사용(HTTPS)** – 이 옵션은 암호화된 통신 및 네트워크 웹 서버의 보안 ID를 사용합니다.  
   
 4.  **계정 키 저장** - 이 옵션은 암호화된 파일에 암호를 저장합니다.  
-  

@@ -15,12 +15,12 @@ helpviewer_keywords:
 ms.assetid: ba797203-24d0-4922-9b97-8ab483f1db14
 author: markingmyname
 ms.author: maghan
-ms.openlocfilehash: 8b0bb11779dc90e17f0646bfe747550df62e94ba
-ms.sourcegitcommit: e700497f962e4c2274df16d9e651059b42ff1a10
+ms.openlocfilehash: 9a08bda94128619aa9bf8c190652654ebd765d03
+ms.sourcegitcommit: 22dacedeb6e8721e7cdb6279a946d4002cfb5da3
 ms.translationtype: HT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 08/17/2020
-ms.locfileid: "88463016"
+ms.lasthandoff: 10/14/2020
+ms.locfileid: "92035492"
 ---
 # <a name="external-tools-dialog-box"></a>외부 도구 대화 상자
 [!INCLUDE[SQL Server Azure SQL Database Synapse Analytics PDW ](../includes/applies-to-version/sql-asdb-asdbmi-asa-pdw.md)]
@@ -52,7 +52,7 @@ ms.locfileid: "88463016"
 메뉴에서 도구를 선택했을 때 도구로 전달되는 변수를 지정합니다. 인수는 도구 또는 명령이 실행될 때 도구 또는 명령에 전달되는 값을 지정할 수 있습니다. 예를 들어 값은 파일 이름 또는 디렉터리를 지정할 수 있습니다. 화살표 단추를 사용하여 미리 정의된 인수 목록에서 선택할 수 있습니다. 인수를 두 개 이상 추가할 수도 있습니다. 미리 정의된 인수 및 인수 정의의 전체 목록은 [Arguments for External Tools](../ssms/use-of-sql-server-features-and-capabilities-wwi-oltp.md)를 참조하십시오. 사용하는 명령이나 도구에 따라서 명령줄 스위치와 같은 사용자 지정 인수를 입력할 수도 있습니다.  
   
 **출력 창 사용**  
-[!INCLUDE[ssManStudio](../includes/ssmanstudio-md.md)] 출력 창을 열어 실행 중인 명령의 출력을 표시합니다. 모든 도구가 출력 창에 표시되는 형식으로 출력을 제공하는 것은 아닙니다. 자세한 내용은 [출력 창](../relational-databases/scripting/transact-sql-debugger-output-window.md)을 참조하세요.  
+[!INCLUDE[ssManStudio](../includes/ssmanstudio-md.md)] 출력 창을 열어 실행 중인 명령의 출력을 표시합니다. 모든 도구가 출력 창에 표시되는 형식으로 출력을 제공하는 것은 아닙니다. 자세한 내용은 [출력 창](./scripting/transact-sql-debugger-output-window.md)을 참조하세요.  
   
 **출력을 유니코드로 처리**  
 출력을 유니코드로 해석합니다.  
@@ -78,4 +78,3 @@ ms.locfileid: "88463016"
 ## <a name="see-also"></a>참고 항목  
 [Arguments for External Tools](../ssms/use-of-sql-server-features-and-capabilities-wwi-oltp.md)  
 [일반 사용자 인터페이스 요소](../ssms/general-user-interface-elements.md)  
-  

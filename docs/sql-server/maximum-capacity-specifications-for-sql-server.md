@@ -21,12 +21,12 @@ helpviewer_keywords:
 ms.assetid: 13e95046-0e76-4604-b561-d1a74dd824d7
 ms.author: mikeray
 author: MikeRayMSFT
-ms.openlocfilehash: c7335d6a9f2fd1993ce66a6fd56f0f14d111a7e9
-ms.sourcegitcommit: 7035d9471876c70b99c58bf9b46af5cce6e9c66c
+ms.openlocfilehash: 81a36f15a68d3b122a0ba7651c11bfb22fbfa2e2
+ms.sourcegitcommit: a41e1f4199785a2b8019a419a1f3dcdc15571044
 ms.translationtype: HT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 08/03/2020
-ms.locfileid: "87523045"
+ms.lasthandoff: 10/13/2020
+ms.locfileid: "91988559"
 ---
 # <a name="maximum-capacity-specifications-for-sql-server"></a>SQL Server의 최대 용량 사양
 
@@ -122,7 +122,7 @@ ms.locfileid: "87523045"
 |데이터베이스당 로그 파일 수|1|
 |컴퓨터당 볼륨 수|3|
 
-<sup>*</sup> [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)] 유틸리티에서 지원하는 [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)] 관리되는 인스턴스의 최대 개수는 서버의 하드웨어 구성에 따라 달라질 수 있습니다. 시작 정보는 [SQL Server 유틸리티 기능 및 태스크](../relational-databases/manage/sql-server-utility-features-and-tasks.md)를 참조하세요. [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)] 유틸리티 제어 지점은 일부 [!INCLUDE[ssCurrent](../includes/sscurrent-md.md)]버전에서는 사용할 수 없습니다. [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)]버전에서 지원되는 기능 목록은 [SQL Server 2016 버전에서 지원하는 기능](https://msdn.microsoft.com/library/cc645993.aspx)을 참조하세요.
+<sup>*</sup> [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)] 유틸리티에서 지원하는 [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)] 관리되는 인스턴스의 최대 개수는 서버의 하드웨어 구성에 따라 달라질 수 있습니다. 시작 정보는 [SQL Server 유틸리티 기능 및 태스크](../relational-databases/manage/sql-server-utility-features-and-tasks.md)를 참조하세요. [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)] 유틸리티 제어 지점은 일부 [!INCLUDE[ssCurrent](../includes/sscurrent-md.md)]버전에서는 사용할 수 없습니다. [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)]버전에서 지원되는 기능 목록은 [SQL Server 2016 버전에서 지원하는 기능](./editions-and-components-of-sql-server-2016.md)을 참조하세요.
 
 ## <a name="ssnoversion-data-tier-application-objects"></a>[!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)] 데이터 계층 애플리케이션 개체
 

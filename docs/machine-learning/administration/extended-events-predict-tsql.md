@@ -9,12 +9,12 @@ author: dphansen
 ms.author: davidph
 ms.custom: seo-lt-2019
 monikerRange: '>=sql-server-2017||>=sql-server-linux-ver15||=sqlallproducts-allversions'
-ms.openlocfilehash: 79053a7dcf91b220bdb288fc7efc711c80684aa0
-ms.sourcegitcommit: 9b41725d6db9957dd7928a3620fe4db41eb51c6e
+ms.openlocfilehash: 3d312a74a8920031015e0a985d8b30933cfc039a
+ms.sourcegitcommit: afb02c275b7c79fbd90fac4bfcfd92b00a399019
 ms.translationtype: HT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 08/13/2020
-ms.locfileid: "88171872"
+ms.lasthandoff: 10/12/2020
+ms.locfileid: "91956848"
 ---
 # <a name="monitor-predict-t-sql-statements-with-extended-events-in-sql-server-machine-learning-services"></a>SQL Server Machine Learning Services에서 확장 이벤트를 사용하여 PREDICT T-SQL 문 모니터링
 [!INCLUDE [SQL Server 2017 and later](../../includes/applies-to-version/sqlserver2017.md)]
@@ -23,7 +23,7 @@ ms.locfileid: "88171872"
 
 ## <a name="table-of-extended-events"></a>확장 이벤트 테이블
 
-[PREDICT](https://docs.microsoft.com/sql/t-sql/queries/predict-transact-sql) T-SQL 문을 지원하는 모든 버전의 SQL Server에서 다음 확장 이벤트를 사용할 수 있습니다. 
+[PREDICT](../../t-sql/queries/predict-transact-sql.md) T-SQL 문을 지원하는 모든 버전의 SQL Server에서 다음 확장 이벤트를 사용할 수 있습니다. 
 
 |name |object_type|description| 
 |----|----|----|
@@ -47,7 +47,7 @@ WHERE object_name LIKE `predict%'
 
 PREDICT를 사용하여 점수 매기기 세션의 성능에 대한 정보를 캡처하려면 다음을 수행합니다.
 
-1. Management Studio 또는 지원되는 다른 [도구](https://docs.microsoft.com/sql/relational-databases/extended-events/extended-events-tools)를 사용하여 새 확장 이벤트 세션을 만듭니다.
+1. Management Studio 또는 지원되는 다른 [도구](../../relational-databases/extended-events/extended-events-tools.md)를 사용하여 새 확장 이벤트 세션을 만듭니다.
 2. `predict_function_completed` 및 `predict_model_cache_hit` 이벤트를 세션에 추가합니다.
 3. 확장 이벤트 세션을 시작합니다.
 4. PREDICT를 사용하는 쿼리를 실행합니다.
@@ -82,6 +82,6 @@ WHERE TYPE = 'MEMOBJ_NATIVESCORING';
 확장 이벤트(XEvents라고도 함) 및 세션에서 이벤트를 추적하는 방법에 대한 자세한 내용은 다음 문서를 참조하세요.
 
 + [SQL Server Machine Learning Services에서 확장 이벤트를 사용하여 Python 및 R 스크립트 모니터링](extended-events.md)
-+ [확장 이벤트 개념 및 아키텍처](https://docs.microsoft.com/sql/relational-databases/extended-events/extended-events)
-+ [SSMS에서 이벤트 캡처 설정](https://docs.microsoft.com/sql/relational-databases/extended-events/quick-start-extended-events-in-sql-server)
-+ [개체 탐색기에서 이벤트 세션 관리](https://docs.microsoft.com/sql/relational-databases/extended-events/manage-event-sessions-in-the-object-explorer)
++ [확장 이벤트 개념 및 아키텍처](../../relational-databases/extended-events/extended-events.md)
++ [SSMS에서 이벤트 캡처 설정](../../relational-databases/extended-events/quick-start-extended-events-in-sql-server.md)
++ [개체 탐색기에서 이벤트 세션 관리](../../relational-databases/extended-events/manage-event-sessions-in-the-object-explorer.md)

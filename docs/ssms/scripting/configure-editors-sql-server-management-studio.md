@@ -12,12 +12,12 @@ ms.reviewer: ''
 ms.custom: seo-lt-2019
 ms.date: 03/01/2017
 monikerRange: '>=aps-pdw-2016||=azuresqldb-current||=azure-sqldw-latest||>=sql-server-2016||=sqlallproducts-allversions||>=sql-server-linux-2017||=azuresqldb-mi-current'
-ms.openlocfilehash: 99fb2ac932b3fde03c024d1ecce06de2ef37d5b1
-ms.sourcegitcommit: 9e1f1c6ee8f5a10d18a2599bfd9f3eb6081829e1
+ms.openlocfilehash: 7da0e6a9eff582e69fa37ccd4396039fe6ac1727
+ms.sourcegitcommit: 22dacedeb6e8721e7cdb6279a946d4002cfb5da3
 ms.translationtype: HT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 08/29/2020
-ms.locfileid: "89093507"
+ms.lasthandoff: 10/14/2020
+ms.locfileid: "92039097"
 ---
 # <a name="configure-editors-sql-server-management-studio"></a>편집기 구성(SQL Server Management Studio)
 
@@ -42,7 +42,7 @@ ms.locfileid: "89093507"
   
 |태스크 설명|항목|  
 |----------------------|-----------|  
-|Windows 탐색기에서 지정된 확장명을 가진 파일을 두 번 클릭하여 편집기를 열도록 지정하는 방법에 대해 설명합니다.|[파일 확장명을 코드 편집기에 연결](../../relational-databases/scripting/associate-file-extensions-to-a-code-editor.md)|  
-|코드와 텍스트를 더 쉽게 읽을 수 있도록 글꼴을 사용자 지정하는 방법에 대해 설명합니다.|[글꼴 색상, 크기 및 스타일 변경](../../relational-databases/scripting/change-font-color-size-and-style.md)|  
-|속성을 보는 방법에 대해 설명합니다.|[Management Studio에서 속성 창 사용](../../relational-databases/scripting/use-the-properties-window-in-management-studio.md)|  
-|편집기 옵션 대화 상자의 F1 도움말 페이지 위치|[쿼리 옵션 페이지 F1 도움말](https://docs.microsoft.com/sql/ssms/f1-help/f1-help-for-server-connections-sql-server-management-studio)|
+|Windows 탐색기에서 지정된 확장명을 가진 파일을 두 번 클릭하여 편집기를 열도록 지정하는 방법에 대해 설명합니다.|[파일 확장명을 코드 편집기에 연결](./associate-file-extensions-to-a-code-editor.md)|  
+|코드와 텍스트를 더 쉽게 읽을 수 있도록 글꼴을 사용자 지정하는 방법에 대해 설명합니다.|[글꼴 색상, 크기 및 스타일 변경](./change-font-color-size-and-style.md)|  
+|속성을 보는 방법에 대해 설명합니다.|[Management Studio에서 속성 창 사용](./use-the-properties-window-in-management-studio.md)|  
+|편집기 옵션 대화 상자의 F1 도움말 페이지 위치|[쿼리 옵션 페이지 F1 도움말](../f1-help/f1-help-for-server-connections-sql-server-management-studio.md)|

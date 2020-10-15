@@ -12,12 +12,12 @@ ms.author: maghan
 ms.reviewer: drskwier, sstein
 ms.custom: seo-lt-2019
 ms.date: 05/17/2019
-ms.openlocfilehash: a15ce5e05e54b6196d363e8967c33fa4ad190295
-ms.sourcegitcommit: c74bb5944994e34b102615b592fdaabe54713047
+ms.openlocfilehash: d6055d14fd6edbc711c950aa194cd9b553cb3b78
+ms.sourcegitcommit: 22dacedeb6e8721e7cdb6279a946d4002cfb5da3
 ms.translationtype: HT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 09/22/2020
-ms.locfileid: "90990269"
+ms.lasthandoff: 10/14/2020
+ms.locfileid: "92035921"
 ---
 # <a name="get-full-memory-dump"></a>전체 메모리 덤프 가져오기
 
@@ -27,7 +27,7 @@ ms.locfileid: "90990269"
 
 문제를 해결하기 위한 진단 정보를 캡처하려면 아래 단계를 따르세요.
 
-1. [ProcDump](https://technet.microsoft.com/sysinternals/dd996900.aspx)를 다운로드합니다.
+1. [ProcDump](/sysinternals/downloads/procdump)를 다운로드합니다.
 
 2. 폴더에서 다운로드 파일의 압축을 풉니다.
 
@@ -61,7 +61,7 @@ OutOfMemoryException(관리되는 예외 모두 가능)을 throw할 때 SSMS의 
 
 SSMS에서 OutOfMemoryException 문제를 해결하기 위한 진단 정보를 캡처하려면 아래 단계를 따르세요.
 
-1. [ProcDump](https://technet.microsoft.com/sysinternals/dd996900.aspx)를 다운로드합니다.
+1. [ProcDump](/sysinternals/downloads/procdump)를 다운로드합니다.
 
 2. 폴더에서 다운로드 파일의 압축을 풉니다.
 

@@ -11,12 +11,12 @@ ms.assetid: 59cca562-e3f5-4257-b868-adcbcc0142cc
 author: markingmyname
 ms.author: maghan
 monikerRange: '>=aps-pdw-2016||=azuresqldb-current||=azure-sqldw-latest||>=sql-server-2016||=sqlallproducts-allversions||>=sql-server-linux-2017||=azuresqldb-mi-current'
-ms.openlocfilehash: 248a47715f1f1c468729e1051b462b77a7bbb426
-ms.sourcegitcommit: 827ad02375793090fa8fee63cc372d130f11393f
+ms.openlocfilehash: 73ca53f14b81c42bf32f6dbc42ed8229a87a0aa4
+ms.sourcegitcommit: 22dacedeb6e8721e7cdb6279a946d4002cfb5da3
 ms.translationtype: HT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 09/04/2020
-ms.locfileid: "89480265"
+ms.lasthandoff: 10/14/2020
+ms.locfileid: "92036076"
 ---
 # <a name="view-spatial-data-in-object-explorer"></a>개체 탐색기에서 공간 데이터 보기
 [!INCLUDE[SQL Server Azure SQL Database Synapse Analytics PDW ](../../includes/applies-to-version/sql-asdb-asdbmi-asa-pdw.md)]
@@ -41,8 +41,7 @@ ms.locfileid: "89480265"
 5.  **확대/축소** 슬라이더를 조정하여 매핑된 요소의 시각적 크기를 늘립니다. 다각형 모양의 경우 레이블 텍스트를 넣을 수 있을 만큼 큰 경우에만 레이블이 표시됩니다.  
   
 ## <a name="see-also"></a>참고 항목  
- [공간 데이터 결과 창](../../relational-databases/scripting/spatial-results-window.md)   
- [데이터베이스 엔진 쿼리 편집기&#40;SQL Server Management Studio&#41;](../../relational-databases/scripting/database-engine-query-editor-sql-server-management-studio.md)   
- [쿼리 및 텍스트 편집기&#40;SQL Server Management Studio&#41;](https://docs.microsoft.com/sql/ssms/f1-help/database-engine-query-editor-sql-server-management-studio?view=sql-server-ver15)  
-  
+ [공간 데이터 결과 창](./spatial-results-window.md)   
+ [데이터베이스 엔진 쿼리 편집기&#40;SQL Server Management Studio&#41;](../f1-help/database-engine-query-editor-sql-server-management-studio.md)   
+ [쿼리 및 텍스트 편집기&#40;SQL Server Management Studio&#41;](../f1-help/database-engine-query-editor-sql-server-management-studio.md?view=sql-server-ver15)  
   

@@ -13,12 +13,12 @@ helpviewer_keywords:
 ms.assetid: 954476fc-5f72-4ada-ace5-d9acb27d18f8
 author: rothja
 ms.author: jroth
-ms.openlocfilehash: ce9b8d9bedafc4211f15022cf0326174a2c597b2
-ms.sourcegitcommit: 76ab3b57718341c6057613c9bd38cf82fb17786e
+ms.openlocfilehash: 6bb64cb60584444ba845ef1464fb07886c5db782
+ms.sourcegitcommit: 9774e2cb8c07d4f6027fa3a5bb2852e4396b3f68
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 10/14/2020
-ms.locfileid: "92059071"
+ms.lasthandoff: 10/15/2020
+ms.locfileid: "92098632"
 ---
 # <a name="adox-fundamentals"></a>ADOX 기본 사항
 Microsoft® ActiveX® 데이터 개체 확장 ADOX (데이터 정의 언어 및 보안)는 ADO 개체 및 프로그래밍 모델에 대 한 확장입니다. ADOX에는 스키마를 만들고 수정할 뿐만 아니라 보안을 위한 개체가 포함 되어 있습니다. 스키마 조작을 위한 개체 기반 방법 이므로 네이티브 구문의 차이점에 관계 없이 다양 한 데이터 원본에 대해 작동 하는 코드를 작성할 수 있습니다.  
@@ -44,7 +44,7 @@ Microsoft® ActiveX® 데이터 개체 확장 ADOX (데이터 정의 언어 및 
 -   [ADOX 예제](../../reference/adox-api/adox-code-examples.md)  
   
 ## <a name="see-also"></a>참고 항목  
- [ADOX API 참조](../../reference/adox-api/adox-object-model.md?view=sql-server-ver15&preserve-view=true)   
+ [ADOX API 참조](../../reference/adox-api/adox-object-model.md?view=sql-server-ver15)   
  [ADOX 코드 예제](../../reference/adox-api/adox-code-examples.md)   
  [ADOX 컬렉션](../../reference/adox-api/adox-collections.md)   
  [ADOX 열거 상수](../../reference/adox-api/adox-enumerated-constants.md)   

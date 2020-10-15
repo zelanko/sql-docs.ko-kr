@@ -9,12 +9,12 @@ author: garyericson
 ms.author: garye
 ms.reviewer: davidph
 monikerRange: =sql-server-2017||=sqlallproducts-allversions
-ms.openlocfilehash: 75d5e4cc3892ed2fd33392dc413b55936eac191d
-ms.sourcegitcommit: 9b41725d6db9957dd7928a3620fe4db41eb51c6e
+ms.openlocfilehash: c09f79fafca4c16048817f3ee2524f214cb13d49
+ms.sourcegitcommit: afb02c275b7c79fbd90fac4bfcfd92b00a399019
 ms.translationtype: HT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 08/13/2020
-ms.locfileid: "88179692"
+ms.lasthandoff: 10/12/2020
+ms.locfileid: "91956627"
 ---
 # <a name="r-package-synchronization-for-sql-server"></a>SQL Server의 R 패키지 동기화
 [!INCLUDE [SQL Server 2017 only](../../includes/applies-to-version/sqlserver2017-only.md)]
@@ -23,7 +23,7 @@ SQL Server 2017에 포함된 RevoScaleR 버전에는 패키지가 사용되는 �
 
 이 기능은 SQL Server 데이터베이스와 연결된 R 패키지 컬렉션을 보다 쉽게 백업할 수 있도록 제공되었습니다. 관리자는 이 기능으로 데이터베이스뿐만 아니라 데이터베이스에서 작업하는 데이터 과학자가 사용했던 R 패키지 또한 모두 복원할 수 있습니다.
 
-이 문서에서는 패키지 동기화 기능과 [rxSyncPackages](https://docs.microsoft.com/machine-learning-server/r-reference/revoscaler/rxsyncpackages) 함수로 다음 작업을 수행하는 방법을 설명합니다.
+이 문서에서는 패키지 동기화 기능과 [rxSyncPackages](/machine-learning-server/r-reference/revoscaler/rxsyncpackages) 함수로 다음 작업을 수행하는 방법을 설명합니다.
 
 + 전체 SQL Server 데이터베이스에 대한 패키지 목록 동기화
 
@@ -56,7 +56,7 @@ SQL Server 2017에 포함된 RevoScaleR 버전에는 패키지가 사용되는 �
 1. 서버 관리자는 SQL Server 인스턴스의 기능을 사용 설정합니다.
 2. 각 데이터베이스에 대해 관리자는 데이터베이스 역할을 사용하여 개별 사용자에게 R 패키지를 설치하거나 공유할 권한을 부여합니다.
 
-이 작업이 완료되면 [rxInstallPackages](https://docs.microsoft.com/machine-learning-server/r-reference/revoscaler/rxinstallpackages)와 같은 RevoScaleR 함수를 사용하여 패키지를 데이터베이스에 설치할 수 있습니다.  사용자와 이들이 사용 가능한 패키지에 대한 정보는 SQL Server 인스턴스에 저장됩니다. 
+이 작업이 완료되면 [rxInstallPackages](/machine-learning-server/r-reference/revoscaler/rxinstallpackages)와 같은 RevoScaleR 함수를 사용하여 패키지를 데이터베이스에 설치할 수 있습니다.  사용자와 이들이 사용 가능한 패키지에 대한 정보는 SQL Server 인스턴스에 저장됩니다. 
 
 패키지 관리 기능을 사용하여 새 패키지를 추가할 때마다 SQL Server의 레코드와 파일 시스템이 모두 업데이트됩니다. 이 정보는 전체 데이터베이스의 패키지 정보를 복원하는 데 사용할 수 있습니다.
 
@@ -74,7 +74,7 @@ SQL Server 2017에 포함된 RevoScaleR 버전에는 패키지가 사용되는 �
 
 ## <a name="how-package-synchronization-works"></a>패키지 동기화 방법
 
-패키지 동기화를 사용하려면 [RevoScaleR](https://docs.microsoft.com/machine-learning-server/r-reference/revoscaler/revoscaler)의 새로운 함수인 [rxSyncPackages](https://docs.microsoft.com/r-server/r-reference/revoscaler/rxsyncpackages)를 호출합니다. 
+패키지 동기화를 사용하려면 [RevoScaleR](/machine-learning-server/r-reference/revoscaler/revoscaler)의 새로운 함수인 [rxSyncPackages](/r-server/r-reference/revoscaler/rxsyncpackages)를 호출합니다. 
 
 각 `rxSyncPackages` 호출의 경우 SQL Server 인스턴스 및 데이터베이스 지정이 필요합니다. 그 후에는 동기화할 패키지를 나열하거나 패키지 범위를 지정합니다.
 

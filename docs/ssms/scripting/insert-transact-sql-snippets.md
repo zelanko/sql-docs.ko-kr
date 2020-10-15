@@ -16,12 +16,12 @@ ms.assetid: d66c96f4-2e84-4d79-9bfd-3635fdd98425
 author: markingmyname
 ms.author: maghan
 monikerRange: '>=aps-pdw-2016||=azuresqldb-current||=azure-sqldw-latest||>=sql-server-2016||=sqlallproducts-allversions||>=sql-server-linux-2017||=azuresqldb-mi-current'
-ms.openlocfilehash: 979018404b696ef3d8a39b198d4cf115e28f068f
-ms.sourcegitcommit: 6d53ecfdc463914f045c20eda96da39dec22acca
+ms.openlocfilehash: 2998121fff0be71019539a9e40da5a06bbf9133a
+ms.sourcegitcommit: 22dacedeb6e8721e7cdb6279a946d4002cfb5da3
 ms.translationtype: HT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 08/26/2020
-ms.locfileid: "88901906"
+ms.lasthandoff: 10/14/2020
+ms.locfileid: "92039027"
 ---
 # <a name="insert-transact-sql-snippets"></a>Transact-SQL 코드 조각 삽입
 [!INCLUDE[SQL Server Azure SQL Database Synapse Analytics PDW ](../../includes/applies-to-version/sql-asdb-asdbmi-asa-pdw.md)]
@@ -30,7 +30,7 @@ ms.locfileid: "88901906"
 ## <a name="inserting-snippets"></a>조각 삽입  
  **조각 삽입** 메뉴를 사용하여 범주별로 분류된 조각 목록을 열고 이 목록에서 조각을 선택할 수 있습니다.  
   
- [!INCLUDE[tsql](../../includes/tsql-md.md)] 조각에는 해당 지점과 관련된 구문을 제안하는 텍스트인 대체 지점이 포함되어 있습니다. 예를 들어 CREATE TABLE 조각에는 테이블 이름, 열 이름, 열 데이터 형식 등의 요소에 대한 대체 지점이 있습니다. 코드 조각을 삽입한 후에는 올바른 [!INCLUDE[tsql](../../includes/tsql-md.md)] 문이 되도록 대체 텍스트를 변경해야 합니다. 자세한 내용은 [Transact-SQL 코드 조각 완성](../../relational-databases/scripting/complete-transact-sql-snippets.md)을 참조하세요.  
+ [!INCLUDE[tsql](../../includes/tsql-md.md)] 조각에는 해당 지점과 관련된 구문을 제안하는 텍스트인 대체 지점이 포함되어 있습니다. 예를 들어 CREATE TABLE 조각에는 테이블 이름, 열 이름, 열 데이터 형식 등의 요소에 대한 대체 지점이 있습니다. 코드 조각을 삽입한 후에는 올바른 [!INCLUDE[tsql](../../includes/tsql-md.md)] 문이 되도록 대체 텍스트를 변경해야 합니다. 자세한 내용은 [Transact-SQL 코드 조각 완성](./complete-transact-sql-snippets.md)을 참조하세요.  
   
 #### <a name="inserting-a-snippet-by-using-the-insert-snippet-menu"></a>조각 삽입 메뉴를 사용하여 조각 삽입  
   
@@ -47,6 +47,5 @@ ms.locfileid: "88901906"
 3.  조각을 두 번 클릭하거나 조각 선택에서 조각을 선택하고 Tab 키 또는 Enter 키를 누릅니다.  
   
 ## <a name="see-also"></a>참고 항목  
- [코드 감싸기 Transact-SQL 조각 삽입](../../relational-databases/scripting/insert-surround-with-transact-sql-snippets.md)  
-  
+ [코드 감싸기 Transact-SQL 조각 삽입](./insert-surround-with-transact-sql-snippets.md)  
   

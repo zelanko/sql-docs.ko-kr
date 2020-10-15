@@ -16,18 +16,18 @@ author: markingmyname
 ms.author: maghan
 ms.reviewer: ''
 monikerRange: = azuresqldb-mi-current || >= sql-server-2016 || = sqlallproducts-allversions
-ms.openlocfilehash: 314318a46e6d93aa71f3715d781cf66379fe0863
-ms.sourcegitcommit: e700497f962e4c2274df16d9e651059b42ff1a10
+ms.openlocfilehash: 880286e2ffa649316aa3c92c37f4bca461d62d4b
+ms.sourcegitcommit: 22dacedeb6e8721e7cdb6279a946d4002cfb5da3
 ms.translationtype: HT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 08/17/2020
-ms.locfileid: "88468637"
+ms.lasthandoff: 10/14/2020
+ms.locfileid: "92037924"
 ---
 # <a name="job-categories---manage-job-categories"></a>작업 범주 - 작업 범주 관리
 [!INCLUDE [SQL Server SQL MI](../../includes/applies-to-version/sql-asdbmi.md)]
 
 > [!IMPORTANT]  
-> 현재 [Azure SQL Managed Instance](https://docs.microsoft.com/azure/sql-database/sql-database-managed-instance)에서는 SQL Server 에이전트 기능이 대부분 지원됩니다. 자세한 내용은 [SQL Server와 Azure SQL Managed Instance 간의 T-SQL 차이점](https://docs.microsoft.com/azure/sql-database/sql-database-managed-instance-transact-sql-information#sql-server-agent)을 참조하세요.
+> 현재 [Azure SQL Managed Instance](/azure/sql-database/sql-database-managed-instance)에서는 SQL Server 에이전트 기능이 대부분 지원됩니다. 자세한 내용은 [SQL Server와 Azure SQL Managed Instance 간의 T-SQL 차이점](/azure/sql-database/sql-database-managed-instance-transact-sql-information#sql-server-agent)을 참조하세요.
 
 **작업 범주** 대화 상자를 사용하여 작업 범주를 추가하거나 삭제할 수 있습니다. 기본 제공 작업 범주는 삭제할 수 없습니다.  
   
@@ -53,4 +53,3 @@ ms.locfileid: "88468637"
 #### <a name="to-access-the-job-categories-dialog-box"></a>작업 범주 대화 상자에 액세스하려면  
   
 1.  **개체 탐색기**에서 **SQL Server 에이전트**를 확장하고 **작업**을 마우스 오른쪽 단추로 클릭한 다음 **작업 범주 관리**를 클릭합니다.  
-  

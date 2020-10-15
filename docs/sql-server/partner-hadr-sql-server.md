@@ -8,12 +8,12 @@ ms.prod: sql
 ms.technology: release-landing
 ms.author: mikeray
 author: MikeRayMSFT
-ms.openlocfilehash: 5fd19ca04a383ca8485d2668a7988c8558040f76
-ms.sourcegitcommit: c8e1553ff3fdf295e8dc6ce30d1c454d6fde8088
+ms.openlocfilehash: e330bb9da022c15cfffe715f85c43cdd34bd9d45
+ms.sourcegitcommit: a41e1f4199785a2b8019a419a1f3dcdc15571044
 ms.translationtype: HT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 07/22/2020
-ms.locfileid: "86923049"
+ms.lasthandoff: 10/13/2020
+ms.locfileid: "91988765"
 ---
 # <a name="sql-server-high-availability-and-disaster-recovery-partners"></a>SQL Server 고가용성 및 재해 복구 파트너
 [!INCLUDE[sqlserver](../includes/applies-to-version/sqlserver.md)]
@@ -55,7 +55,7 @@ SQL Server 서비스에 대한 고가용성 및 재해 복구를 제공하려면
 [dh2i_website]:https://dh2i.com
 [idera_website]:https://www.idera.com/productssolutions/sqlserver
 [hpe_website]: https://www.hpe.com/us/en/product-catalog/detail/pip.376220.html
-[azure_website]: https://docs.microsoft.com/azure/site-recovery/site-recovery-sql
+[azure_website]: /azure/site-recovery/site-recovery-sql
 [necec_website]: https://www.necam.com/ExpressCluster/
 [portworx_website]: https://portworx.com/
 [sios_website]: https://us.sios.com/

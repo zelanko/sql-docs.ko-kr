@@ -8,21 +8,21 @@ ms.topic: how-to
 author: dphansen
 ms.author: davidph
 monikerRange: '>=sql-server-2017||>=sql-server-linux-ver15||=sqlallproducts-allversions'
-ms.openlocfilehash: b7f711ae8b90762003f903b7fd4a59771c5d3f53
-ms.sourcegitcommit: 9b41725d6db9957dd7928a3620fe4db41eb51c6e
+ms.openlocfilehash: b8f787cdef6baeeaa57e79c9c5c167e12395508b
+ms.sourcegitcommit: afb02c275b7c79fbd90fac4bfcfd92b00a399019
 ms.translationtype: HT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 08/13/2020
-ms.locfileid: "88178690"
+ms.lasthandoff: 10/12/2020
+ms.locfileid: "91956987"
 ---
 # <a name="run-python-and-r-scripts-in-azure-data-studio-notebooks-with-sql-server-machine-learning-services"></a>SQL Server Machine Learning Services를 사용하여 Azure Data Studio Notebook에서 Python 및 R 스크립트 실행
 [!INCLUDE [SQL Server 2017 and later](../../includes/applies-to-version/sqlserver2017.md)]
 
-[SQL Server Machine Learning Services](../sql-server-machine-learning-services.md)를 사용하여 [Azure Data Studio](https://docs.microsoft.com/sql/azure-data-studio/what-is) Notebook에서 Python 및 R 스크립트를 실행하는 방법을 알아봅니다. Azure Data Studio는 플랫폼 간 데이터베이스 도구입니다.
+[SQL Server Machine Learning Services](../sql-server-machine-learning-services.md)를 사용하여 [Azure Data Studio](../../azure-data-studio/what-is.md) Notebook에서 Python 및 R 스크립트를 실행하는 방법을 알아봅니다. Azure Data Studio는 플랫폼 간 데이터베이스 도구입니다.
 
 ## <a name="prerequisites"></a>사전 요구 사항
 
-- 워크스테이션 컴퓨터에서 [Azure Data Studio 다운로드 및 설치](https://docs.microsoft.com/sql/azure-data-studio/download-azure-data-studio). Azure Data Studio는 플랫폼 간 도구이며 Windows, macOS, Linux에서 실행됩니다.
+- 워크스테이션 컴퓨터에서 [Azure Data Studio 다운로드 및 설치](../../azure-data-studio/download-azure-data-studio.md). Azure Data Studio는 플랫폼 간 도구이며 Windows, macOS, Linux에서 실행됩니다.
 
 - SQL Server Machine Learning Services가 설치되고 사용하도록 설정된 서버. Windows, Linux 또는 빅 데이터 클러스터에서 Machine Learning Services를 사용할 수 있습니다.
 
@@ -123,7 +123,7 @@ R 스크립트를 실행하려면 다음 단계를 수행합니다.
 
 ## <a name="next-steps"></a>다음 단계
 
-- [Azure Data Studio에서 Notebook을 사용하는 방법](../../azure-data-studio/notebooks-guidance.md)
-- [SQL Server Notebook 만들기 및 실행](../../azure-data-studio/notebooks-tutorial-sql-kernel.md)
+- [Azure Data Studio에서 Notebook을 사용하는 방법](../../azure-data-studio/notebooks/notebooks-guidance.md)
+- [SQL Server Notebook 만들기 및 실행](../../azure-data-studio/notebooks/notebooks-sql-kernel.md)
 - [빠른 시작: SQL Server Machine Learning Services로 간단한 Python 스크립트 실행](../tutorials/quickstart-python-create-script.md)
 - [빠른 시작: SQL Server Machine Learning Services로 간단한 R 스크립트 실행](../tutorials/quickstart-r-create-script.md)

@@ -8,12 +8,12 @@ ms.technology: report-server-sharepoint
 ms.topic: conceptual
 author: maggiesMSFT
 ms.author: maggies
-ms.openlocfilehash: bf8f744078ccad4e755cc6d635ba999e0f077574
-ms.sourcegitcommit: 66a0672e47415dbd5cfd8d19075102c8c3973e70
+ms.openlocfilehash: 0061f824a8801db7c703df4a902b7b6cac7d10bd
+ms.sourcegitcommit: fe59f8dc27fd633f5dfce54519d6f5dcea577f56
 ms.translationtype: HT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 05/21/2020
-ms.locfileid: "83767114"
+ms.lasthandoff: 10/09/2020
+ms.locfileid: "91935542"
 ---
 # <a name="add-the-report-viewer-web-part-to-a-web-page"></a>웹 페이지에 보고서 뷰어 웹 파트 추가
 
@@ -55,7 +55,7 @@ ms.locfileid: "83767114"
   
 ## <a name="see-also"></a>참고 항목
 
- [SharePoint 사이트의 보고서 뷰어 웹 파트](../../reporting-services/report-server-sharepoint/report-viewer-web-part-on-a-sharepoint-site.md)   
+ [SharePoint 사이트의 보고서 뷰어 웹 파트](./report-viewer-web-part-sharepoint-site.md)   
  [보고서 뷰어 웹 파트 사용자 지정](../../reporting-services/report-server-sharepoint/customize-the-report-viewer-web-part.md)   
  [SharePoint 사이트의 보고서 서버 항목에 대한 사용 권한 부여](../../reporting-services/security/granting-permissions-on-report-server-items-on-a-sharepoint-site.md)   
- [SharePoint용 Reporting Services 추가 기능 설치 또는 제거](../../reporting-services/install-windows/install-or-uninstall-the-reporting-services-add-in-for-sharepoint.md)  
+ [SharePoint용 Reporting Services 추가 기능 설치 또는 제거](../../reporting-services/install-windows/install-or-uninstall-the-reporting-services-add-in-for-sharepoint.md)

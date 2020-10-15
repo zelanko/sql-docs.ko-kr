@@ -9,12 +9,12 @@ author: garyericson
 ms.author: garye
 ms.reviewer: davidph
 monikerRange: =sql-server-2017||=sqlallproducts-allversions
-ms.openlocfilehash: 3bee37788001edabd454891d8e9081814f198490
-ms.sourcegitcommit: 9b41725d6db9957dd7928a3620fe4db41eb51c6e
+ms.openlocfilehash: 8b2e61640c03af160985d9e65262eb3da600c3c2
+ms.sourcegitcommit: afb02c275b7c79fbd90fac4bfcfd92b00a399019
 ms.translationtype: HT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 08/13/2020
-ms.locfileid: "88179252"
+ms.lasthandoff: 10/12/2020
+ms.locfileid: "91956694"
 ---
 # <a name="install-packages-with-python-tools-on-sql-server"></a>SQL Server에서 Python 도구를 사용하여 패키지 설치
 [!INCLUDE [SQL Server 2017 only](../../includes/applies-to-version/sqlserver2017-only.md)]
@@ -52,7 +52,7 @@ ms.locfileid: "88179252"
 
 SQL Server의 스크립트에서 사용할 수 있는 새 Python 패키지를 설치하려면 Machine Learning Services의 인스턴스에 패키지를 설치합니다. Machine Learning Services 인스턴스가 여러 개 있는 경우 패키지를 각각에 추가해야 합니다.
 
-다음 예제에 설치된 패키지는 여러 유형의 신경망 사용자 지정, 학습 및 공유를 지원하는 Microsoft의 딥 러닝을 위한 프레임워크인 [CNTK](https://docs.microsoft.com/cognitive-toolkit/)입니다.
+다음 예제에 설치된 패키지는 여러 유형의 신경망 사용자 지정, 학습 및 공유를 지원하는 Microsoft의 딥 러닝을 위한 프레임워크인 [CNTK](/cognitive-toolkit/)입니다.
 
 ### <a name="for-offline-install-download-the-python-package"></a>오프라인 설치의 경우 Python 패키지 다운로드
 
@@ -63,7 +63,7 @@ SQL Server의 스크립트에서 사용할 수 있는 새 Python 패키지를 �
 > [!IMPORTANT]
 > 패키지의 Windows 버전이 있는지 확인합니다. 파일이 .gz로 끝나면 올바른 버전이 아닐 수 있습니다.
 
-여러 플랫폼 및 여러 버전의 Python용 CNTK 프레임워크 다운로드에 대한 자세한 내용은 [컴퓨터에 CNTK 설치](https://docs.microsoft.com/cognitive-toolkit/Setup-CNTK-on-your-machine)를 참조하세요.
+여러 플랫폼 및 여러 버전의 Python용 CNTK 프레임워크 다운로드에 대한 자세한 내용은 [컴퓨터에 CNTK 설치](/cognitive-toolkit/Setup-CNTK-on-your-machine)를 참조하세요.
 
 ### <a name="locate-the-python-library"></a>Python 라이브러리 찾기
 
@@ -123,5 +123,5 @@ import cntk
 ## <a name="see-also"></a>참고 항목
 
 + [Python 패키지 정보 가져오기](python-package-information.md)
-+ [SQL Server Machine Learning Services용 Python 자습서](../tutorials/sql-server-python-tutorials.md)
++ [SQL Server Machine Learning Services용 Python 자습서](../tutorials/python-tutorials.md)
 + [CNTK용 Python API](https://cntk.ai/pythondocs/tutorials.html).

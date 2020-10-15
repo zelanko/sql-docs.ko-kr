@@ -15,12 +15,12 @@ ms.assetid: dae65ac5-67af-45c6-a6e0-952fea26d680
 author: markingmyname
 ms.author: maghan
 monikerRange: '>=aps-pdw-2016||=azuresqldb-current||=azure-sqldw-latest||>=sql-server-2016||=sqlallproducts-allversions||>=sql-server-linux-2017||=azuresqldb-mi-current'
-ms.openlocfilehash: 5808e51f9311a90f84527bce104d25c673198953
-ms.sourcegitcommit: 6d53ecfdc463914f045c20eda96da39dec22acca
+ms.openlocfilehash: a97a33dadae8f9039a6c5a0ca935decfb1e24b4a
+ms.sourcegitcommit: 22dacedeb6e8721e7cdb6279a946d4002cfb5da3
 ms.translationtype: HT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 08/26/2020
-ms.locfileid: "88901921"
+ms.lasthandoff: 10/14/2020
+ms.locfileid: "92036381"
 ---
 # <a name="search-documents-interactively"></a>대화형으로 문서 검색
 [!INCLUDE[SQL Server Azure SQL Database Synapse Analytics PDW ](../../includes/applies-to-version/sql-asdb-asdbmi-asa-pdw.md)]
@@ -64,10 +64,9 @@ ms.locfileid: "88901921"
  **모두 바꾸기** 명령은 **다음 찾기** 단추로 건너뛴 항목을 비롯하여 일치하는 모든 항목을 바꿉니다. **모두 바꾸기**를 취소하려면 파일을 닫기 전에 **편집** 메뉴에서 **실행 취소** 를 클릭합니다.  
   
 ## <a name="see-also"></a>참고 항목  
- [활성 문서에서 입력하는 순서대로 검색](../../relational-databases/scripting/search-an-active-document-incrementally.md)   
- [찾기 및 바꾸기](../../relational-databases/scripting/search-and-replace.md)   
- [결과 목록을 사용하여 문서 검색](../../relational-databases/scripting/search-documents-using-results-lists.md)   
- [와일드카드로 텍스트 검색](../../relational-databases/scripting/search-text-with-wildcards.md)   
- [정규식을 사용한 텍스트 검색](../../relational-databases/scripting/search-text-with-regular-expressions.md)  
-  
+ [활성 문서에서 입력하는 순서대로 검색](./search-an-active-document-incrementally.md)   
+ [찾기 및 바꾸기](./search-and-replace.md)   
+ [결과 목록을 사용하여 문서 검색](./search-documents-using-results-lists.md)   
+ [와일드카드로 텍스트 검색](./search-text-with-wildcards.md)   
+ [정규식을 사용한 텍스트 검색](./search-text-with-regular-expressions.md)  
   
