@@ -21,12 +21,12 @@ ms.assetid: de4e1fcd-0e1a-4af3-97ee-d1becc7f04df
 author: dphansen
 ms.author: davidph
 monikerRange: '>=sql-server-2016||>=sql-server-linux-ver15||=azuresqldb-mi-current||=sqlallproducts-allversions'
-ms.openlocfilehash: 27a1776382cf9a8acf86f08ed960578932ca9655
-ms.sourcegitcommit: 04cf7905fa32e0a9a44575a6f9641d9a2e5ac0f8
+ms.openlocfilehash: 7953c9aafda19182395311b7adc648c04d5c1f39
+ms.sourcegitcommit: 43b92518c5848489d03c68505bd9905f8686cbc0
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 10/07/2020
-ms.locfileid: "91810197"
+ms.lasthandoff: 10/17/2020
+ms.locfileid: "92155079"
 ---
 # <a name="sp_execute_external_script-transact-sql"></a>sp_execute_external_script(Transact-SQL)
 [!INCLUDE [SQL Server 2016 SQL MI](../../includes/applies-to-version/sqlserver2016-asdbmi.md)]
@@ -36,7 +36,7 @@ ms.locfileid: "91810197"
 
 Machine Learning Services의 경우 [Python](../../machine-learning/concepts/extension-python.md) 및 [R](../../machine-learning/concepts/extension-r.md) 은 지원 되는 언어입니다. 언어 확장의 경우 Java는 지원 되지만 [CREATE EXTERNAL Language](../../t-sql/statements/create-external-language-transact-sql.md)를 사용 하 여 정의 해야 합니다.
 
-**Sp_execute_external_script**를 실행 하려면 먼저 Machine Learning Services 또는 언어 확장을 설치 해야 합니다. 자세한 내용은 Windows 및 Linux [에서 SQL Server Machine Learning Services (Python 및 R) 설치](../../machine-learning/install/sql-machine-learning-services-windows-install.md) 또는 Windows [Linux](../../linux/sql-server-linux-setup-machine-learning.md)및 [Linux](../../linux/sql-server-linux-setup-language-extensions.md) [에서 SQL Server 언어 확장 설치](../../language-extensions/install/install-sql-server-language-extensions-on-windows.md) 를 참조 하세요.
+**Sp_execute_external_script**를 실행 하려면 먼저 Machine Learning Services 또는 언어 확장을 설치 해야 합니다. 자세한 내용은 Windows 및 Linux [에서 SQL Server Machine Learning Services (Python 및 R) 설치](../../machine-learning/install/sql-machine-learning-services-windows-install.md) 또는 Windows [Linux](../../linux/sql-server-linux-setup-machine-learning.md)및 [Linux](../../linux/sql-server-linux-setup-language-extensions-java.md) [에서 SQL Server 언어 확장 설치](../../language-extensions/install/windows-java.md) 를 참조 하세요.
 ::: moniker-end
 
 ::: moniker range="=sql-server-2017||=sqlallproducts-allversions"

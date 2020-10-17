@@ -59,7 +59,7 @@
         - name: PowerShell 확장
           href: extensions/powershell-extension.md
         - name: SandDance 확장
-          href: sanddance-extension.md
+          href: extensions/sanddance-extension.md
         - name: 스키마 비교 확장
           href: extensions/schema-compare-extension.md
         - name: SQL Database Projects 확장
@@ -84,10 +84,10 @@
           href: extensions/sql-server-profiler-extension.md
     - name: 확장 작성
       items:
-        - name: 확장성 개요
-          href: extensibility.md
         - name: 확장 작성
           href: extensions/extension-authoring.md
+        - name: 확장성 개요
+          href: extensibility.md
         - name: 확장성 API
           href: extensibility-apis.md
         - name: 키맵 확장
@@ -102,6 +102,8 @@
           href: extensions/wizard-extension.md
     - name: '통합된 터미널(PowerShell, Bash)'
       href: integrated-terminal.md
+    - name: 미리 보기 기능
+      href: preview-features.md
     - name: 서버 그룹
       href: server-groups.md
     - name: 원본 제어
@@ -122,8 +124,12 @@
           href: notebooks/notebooks-kqlmagic.md
     - name: 배포
       items:
+        - name: Azure SQL Database 배포
+          href: deploy-azure-sql-database.md
         - name: Azure SQL Edge 배포
           href: deploy-azure-sql-edge.md
+        - name: Azure Virtual Machines의 SQL Server 배포
+          href: deploy-azure-sql-server-vm.md
     - name: 대시보드 및 정보 위젯
       href: insight-widgets.md
     - name: 코드 조각
