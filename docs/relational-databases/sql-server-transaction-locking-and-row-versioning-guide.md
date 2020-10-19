@@ -20,12 +20,12 @@ ms.assetid: 44fadbee-b5fe-40c0-af8a-11a1eecf6cb7
 author: rothja
 ms.author: jroth
 monikerRange: '>=aps-pdw-2016||=azuresqldb-current||=azure-sqldw-latest||>=sql-server-2016||=sqlallproducts-allversions||>=sql-server-linux-2017||=azuresqldb-mi-current'
-ms.openlocfilehash: cab3daadc9c3fda3739db3c48fb623725098cba1
-ms.sourcegitcommit: 827ad02375793090fa8fee63cc372d130f11393f
+ms.openlocfilehash: 70358a9ba4fc5cb9d9b326119b488efe6af3a9f5
+ms.sourcegitcommit: 4d370399f6f142e25075b3714e5c2ce056b1bfd0
 ms.translationtype: HT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 09/04/2020
-ms.locfileid: "89480955"
+ms.lasthandoff: 10/09/2020
+ms.locfileid: "91868195"
 ---
 # <a name="transaction-locking-and-row-versioning-guide"></a>트랜잭션 잠금 및 행 버전 관리 지침
 [!INCLUDE[SQL Server Azure SQL Database Synapse Analytics PDW ](../includes/applies-to-version/sql-asdb-asdbmi-asa-pdw.md)]
@@ -810,7 +810,7 @@ GO
 ## <a name="dynamic-locking"></a><a name="dynamic_locks"></a> 동적 잠금
  행 잠금과 같이 낮은 수준의 잠금을 사용하면 두 트랜잭션이 동일한 데이터에 대해 동시에 잠금을 요청할 확률이 줄어들어 동시성이 증가합니다. 또한 잠금 수 및 잠금 관리에 필요한 리소스 수도 늘어납니다. 테이블 또는 페이지 잠금과 같이 높은 수준의 잠금을 사용하면 오버헤드는 줄어들지만 동시성이 감소합니다.  
   
- ![lockcht](../relational-databases/media/lockcht.png) 
+ ![잠금 비용 대 동시성 비용](../relational-databases/media/lockcht.png) 
   
  [!INCLUDE[ssDEnoversion](../includes/ssdenoversion-md.md)]에서는 동적 잠금 전략을 사용하여 가장 비용 효율적인 잠금을 결정합니다. [!INCLUDE[ssDEnoversion](../includes/ssdenoversion-md.md)]에서는 스키마 및 쿼리의 특징을 기준으로 쿼리를 실행할 때 가장 적합한 잠금을 자동으로 결정합니다. 예를 들어 잠금 오버헤드를 줄이기 위해서 인덱스 검색을 수행할 때 최적화 프로그램이 인덱스에서 페이지 수준 잠금을 선택할 수 있습니다.  
   
@@ -940,7 +940,7 @@ ORDER BY [Date] DESC
 
 [!INCLUDE[ssResult](../includes/ssresult-md.md)]
 
-![system_health_qry](../relational-databases/media/system_health_qry.png)
+![system_health_xevent_query_result](../relational-databases/media/system_health_qry.png)
 
 다음 예제는 위 결과의 첫 번째 링크를 클릭한 후 출력을 보여줍니다.
 
@@ -2080,8 +2080,15 @@ GO
   
 -   트랜잭션에서는 가능한 적은 양의 데이터에 액세스합니다.  
     이렇게 하면 잠긴 행 수가 줄어들어 트랜잭션 간의 경합이 감소됩니다.  
+    
+-   가능하면 보류 잠금과 같은 비관적 잠금 힌트를 사용하지 않습니다. 
+    HOLDLOCK 또는 SERIALIZABLE 격리 수준과 같은 힌트를 사용하면 프로세스가 공유 잠금에서도 대기하여 동시성이 감소할 수 있습니다.
+
+-   가능하면 암시적 트랜잭션을 사용하지 않습니다. 암시적 트랜잭션의 특성 때문에 예기치 않은 동작이 발생할 수 있습니다. [암시적 트랜잭션 및 동시성 문제](#implicit-transactions-and-avoiding-concurrency-and-resource-problems)를 참조하세요.
+
+-   [채우기 비율](indexes/specify-fill-factor-for-an-index.md)을 줄여 인덱스를 설계합니다. 채우기 비율을 줄이면 인덱스 페이지의 조각화를 방지하거나 줄여 특히 디스크에서 검색할 때 인덱스 검색 시간을 줄일 수 있습니다. 테이블 또는 뷰의 데이터와 인덱스에 대한 조각화 정보를 보려면 sys.dm_db_index_physical_stats를 사용합니다. 
   
-#### <a name="avoiding-concurrency-and-resource-problems"></a>동시성 문제 및 리소스 문제 방지  
+#### <a name="implicit-transactions-and-avoiding-concurrency-and-resource-problems"></a>암시적 트랜잭션과 동시성 및 리소스 문제 방지  
  동시성 문제와 리소스 문제를 방지하려면 암시적 트랜잭션을 신중하게 관리합니다. 암시적 트랜잭션을 사용할 때는 `COMMIT` 또는 `ROLLBACK` 다음의 [!INCLUDE[tsql](../includes/tsql-md.md)] 문이 자동으로 새 트랜잭션을 시작합니다. 이로 인해 애플리케이션에서 데이터를 찾아보는 동안이나 사용자 입력이 필요할 때 새 트랜잭션이 열릴 수 있습니다. 데이터 수정을 보호하는 데 필요한 마지막 트랜잭션을 완료한 다음 데이터 수정을 보호하기 위해 트랜잭션이 다시 한 번 필요할 때까지 암시적 트랜잭션을 해제합니다. 이렇게 하면 애플리케이션에서 데이터를 찾아보고 사용자로부터 입력을 받는 동안 [!INCLUDE[ssDEnoversion](../includes/ssdenoversion-md.md)]이 자동 커밋 모드를 사용할 수 있습니다.  
   
  또한 스냅샷 격리 수준을 사용하면 새 트랜잭션이 잠금을 확보하지 않더라도 장기 실행 트랜잭션이 `tempdb`에서 이전 버전이 제거되지 않도록 방지합니다.  
@@ -2112,8 +2119,8 @@ GO
  KILL 문을 사용해야 하는 경우도 있습니다. 그러나 특히 중요한 프로세스가 실행 중일 때는 이 문을 신중하게 사용하십시오. 자세한 내용은 [KILL&#40;Transact-SQL&#41;](../t-sql/language-elements/kill-transact-sql.md)을 참조하세요.  
   
 ##  <a name="additional-reading"></a><a name="Additional_Reading"></a> 더 보기   
-[행 버전 관리 오버헤드](https://docs.microsoft.com/archive/blogs/sqlserverstorageengine/overhead-of-row-versioning)   
+[행 버전 관리 오버헤드](/archive/blogs/sqlserverstorageengine/overhead-of-row-versioning)   
 [확장 이벤트](../relational-databases/extended-events/extended-events.md)   
 [sys.dm_tran_locks &#40;Transact-SQL&#41;](../relational-databases/system-dynamic-management-views/sys-dm-tran-locks-transact-sql.md)     
 [동적 관리 뷰 및 함수&#40;Transact-SQL&#41;](../relational-databases/system-dynamic-management-views/system-dynamic-management-views.md)      
-[트랜잭션 관련 동적 관리 뷰 및 함수&#40;Transact-SQL&#41;](../relational-databases/system-dynamic-management-views/transaction-related-dynamic-management-views-and-functions-transact-sql.md)     
+[트랜잭션 관련 동적 관리 뷰 및 함수&#40;Transact-SQL&#41;](../relational-databases/system-dynamic-management-views/transaction-related-dynamic-management-views-and-functions-transact-sql.md)

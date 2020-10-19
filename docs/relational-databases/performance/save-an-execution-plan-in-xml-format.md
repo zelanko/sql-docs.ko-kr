@@ -18,12 +18,12 @@ ms.assetid: c439e53b-56f3-4442-97c6-dabd48a203d8
 author: julieMSFT
 ms.author: jrasnick
 monikerRange: =azuresqldb-current||>=sql-server-2016||=sqlallproducts-allversions||>=sql-server-linux-2017||=azuresqldb-mi-current
-ms.openlocfilehash: 6bcf97d3f0e3607d9444c6ab5b3b101004d3926b
-ms.sourcegitcommit: 9470c4d1fc8d2d9d08525c4f811282999d765e6e
+ms.openlocfilehash: f10e2cd6b6b146bb7c91d9732ba04b7f6a4d5ebb
+ms.sourcegitcommit: 610e3ebe21ac6575850a29641a32f275e71557e3
 ms.translationtype: HT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 07/17/2020
-ms.locfileid: "86457627"
+ms.lasthandoff: 10/07/2020
+ms.locfileid: "91784737"
 ---
 # <a name="save-an-execution-plan-in-xml-format"></a>XML 형식으로 실행 계획 저장
 [!INCLUDE [SQL Server Azure SQL Database](../../includes/applies-to-version/sql-asdb.md)]
@@ -71,7 +71,7 @@ ms.locfileid: "86457627"
   
 5.  \<Grid or Text> **결과** **저장** 대화 상자의 **다른 이름으로 저장** 상자에서 **모든 파일(\*.\*)** 을 선택합니다.  
   
-6.  **파일 이름** 상자에 \<name**>.sqlplan** 형식으로 이름을 입력한 후 **저장**을 클릭합니다.  
+6.  **파일 이름** 상자에 이름을 \<name> **.sqlplan** 형식으로 입력하고 **저장**을 클릭합니다.  
 
 ### <a name="to-save-an-execution-plan-by-using-sql-server-management-studio-options"></a>SQL Server Management Studio 옵션을 사용하여 실행 계획을 저장하려면  
   
@@ -83,7 +83,7 @@ ms.locfileid: "86457627"
   
 3.  **다른 이름으로 저장** 대화 상자에서 **파일 형식**이 **실행 계획 파일(\*.sqlplan)** 로 설정되어 있는지 확인합니다.  
   
-4.  **파일 이름** 상자에 \<name**>.sqlplan** 형식으로 이름을 입력한 후 **저장**을 클릭합니다.  
+4.  **파일 이름** 상자에 이름을 \<name> **.sqlplan** 형식으로 입력하고 **저장**을 클릭합니다.  
   
 ### <a name="to-open-a-saved-xml-query-plan-in-sql-server-management-studio"></a>SQL Server Management Studio에서 저장된 XML 쿼리 계획을 열려면  
   

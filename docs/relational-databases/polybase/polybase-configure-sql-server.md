@@ -1,7 +1,7 @@
 ---
 title: '외부 데이터 액세스: SQL Server - PolyBase'
 description: SQL Server 인스턴스에서 PolyBase를 사용하여 다른 SQL Server 인스턴스에 있는 외부 데이터를 쿼리하는 방법을 알아봅니다. 외부 데이터를 참조하는 외부 테이블을 만듭니다.
-ms.date: 12/13/2019
+ms.date: 10/06/2020
 ms.custom: seo-lt-2019
 ms.prod: sql
 ms.technology: polybase
@@ -10,12 +10,12 @@ author: MikeRayMSFT
 ms.author: mikeray
 ms.reviewer: mikeray
 monikerRange: '>= sql-server-linux-ver15 || >= sql-server-ver15 || =sqlallproducts-allversions'
-ms.openlocfilehash: 3bb2528613bc4e13cf5c3559e8d257e64e276fd0
-ms.sourcegitcommit: da88320c474c1c9124574f90d549c50ee3387b4c
+ms.openlocfilehash: 31b07b70e5a90d36a7094f38eab7b99f3bac821e
+ms.sourcegitcommit: 32135463a8494d9ed1600a58f51819359e3c09dc
 ms.translationtype: HT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 07/01/2020
-ms.locfileid: "85741327"
+ms.lasthandoff: 10/08/2020
+ms.locfileid: "91834027"
 ---
 # <a name="configure-polybase-to-access-external-data-in-sql-server"></a>SQL Server의 외부 데이터에 액세스하도록 PolyBase 구성
 
@@ -27,11 +27,13 @@ ms.locfileid: "85741327"
 
 PolyBase를 설치하지 않은 경우 [PolyBase 설치](polybase-installation.md)를 참조하세요. 설치 문서에서는 필수 구성 요소를 설명합니다. 설치되고 나면 [PolyBase를 사용](polybase-installation.md#enable)하도록 설정합니다.
 
+SQL Server 외부 데이터 원본은 SQL 인증을 사용합니다.
+
 데이터베이스 범위 자격 증명을 만들기 전에 [마스터 키](../../t-sql/statements/create-master-key-transact-sql.md)를 만들어야 합니다. 
 
 ## <a name="configure-a-sql-server-external-data-source"></a>SQL Server 외부 데이터 원본 구성
 
-SQL Server 데이터 원본의 데이터를 쿼리하려면 외부 데이터를 참조하는 외부 테이블을 만들어야 합니다. 이 섹션에서는 이러한 외부 테이블을 만들기 위한 샘플 코드를 제공합니다. 
+SQL Server 데이터 원본의 데이터를 쿼리하려면 외부 데이터를 참조하는 외부 테이블을 만들어야 합니다. 이 섹션에서는 이러한 외부 테이블을 만들기 위한 샘플 코드를 제공합니다.
  
 최적의 쿼리 성능을 위해서는 특히 조인, 필터 및 집계에 사용되는 외부 테이블 열에 대해 통계를 만듭니다.
 
@@ -47,8 +49,10 @@ SQL Server 데이터 원본의 데이터를 쿼리하려면 외부 데이터를 
     CREATE DATABASE SCOPED CREDENTIAL SqlServerCredentials
     WITH IDENTITY = 'username', SECRET = 'password';
     ```
+   >[!IMPORTANT]
+   >PolyBase용 SQL ODBC 커넥터는 기본 인증만 지원하고 Kerberos 인증은 지원하지 않습니다.
 
-1. [CREATE EXTERNAL DATA SOURCE](../../t-sql/statements/create-external-data-source-transact-sql.md)를 사용하여 외부 데이터 원본을 만듭니다. 다음 예제를 참조하세요.
+1. [CREATE EXTERNAL DATA SOURCE](../../t-sql/statements/create-external-data-source-transact-sql.md)를 사용하여 외부 데이터 원본을 만듭니다. 다음 예제가 하는 일:
 
    - `SQLServerInstance`라는 외부 데이터 원본을 만듭니다.
    - 외부 데이터 원본(`LOCATION = '<vendor>://<server>[:<port>]'`)을 확인합니다. 예제에서는 SQL Server의 기본 인스턴스를 가리킵니다.
@@ -72,7 +76,7 @@ SQL Server 데이터 원본의 데이터를 쿼리하려면 외부 데이터를 
     WITH FULLSCAN;
   ```
 
->[!IMPORTANT] 
+>[!IMPORTANT]
 >외부 데이터 원본을 만든 후에는 [CREATE EXTERNAL TABLE](../../t-sql/statements/create-external-table-transact-sql.md) 명령을 사용하여 해당 원본 위에 쿼리 가능 테이블을 만들 수 있습니다.
 
 ## <a name="sql-server-connector-compatible-types"></a>SQL Server 커넥터 호환 형식

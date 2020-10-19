@@ -24,12 +24,12 @@ helpviewer_keywords:
 ms.assetid: 873a2fa0-2a02-41fc-a80a-ec9767f36a8a
 author: chugugrace
 ms.author: chugu
-ms.openlocfilehash: 91f2323a61440792654b341364efb79506c5cdd3
-ms.sourcegitcommit: e700497f962e4c2274df16d9e651059b42ff1a10
+ms.openlocfilehash: fa8723e3db746c614d3a9e44c37ea702506d2c45
+ms.sourcegitcommit: a41e1f4199785a2b8019a419a1f3dcdc15571044
 ms.translationtype: HT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 08/17/2020
-ms.locfileid: "88477795"
+ms.lasthandoff: 10/13/2020
+ms.locfileid: "91987663"
 ---
 # <a name="ole-db-destination"></a>OLE DB 대상
 
@@ -96,7 +96,7 @@ ms.locfileid: "88477795"
   
 |빠른 로드 옵션|Description|  
 |----------------------|-----------------|  
-|KILOBYTES_PER_BATCH|삽입할 크기(KB)를 지정합니다. 이 옵션은 **KILOBYTES_PER_BATCH** = \<positive integer value**>** 형식으로 입력합니다.|  
+|KILOBYTES_PER_BATCH|삽입할 크기(KB)를 지정합니다. 이 옵션은 **KILOBYTES_PER_BATCH** =  *\<positive integer value>* 형식을 사용합니다.|  
 |FIRE_TRIGGERS|테이블 삽입에 대한 트리거 시작 여부를 지정합니다. 이 옵션은 **FIRE_TRIGGERS**형식으로 입력합니다. 이 옵션이 있으면 트리거가 시작됨을 나타냅니다.|  
 |ORDER|입력 데이터 저장 방식을 지정합니다. 이 옵션은 ORDER \<column name> ASC&#124;DESC 형식으로 입력합니다. 열 수에 상관없이 나열할 수 있으며 정렬 순서를 포함할 수도 있습니다. 정렬 순서를 생략하면 삽입 작업에서는 데이터가 정렬되지 않은 것으로 간주합니다.<br /><br /> 참고: ORDER 옵션을 사용하여 테이블의 클러스터형 인덱스에 따라 입력 데이터를 정렬하면 성능을 개선할 수 있습니다.|  
   

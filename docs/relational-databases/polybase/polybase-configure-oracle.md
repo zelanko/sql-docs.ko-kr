@@ -10,12 +10,12 @@ author: MikeRayMSFT
 ms.author: mikeray
 ms.reviewer: mikeray
 monikerRange: '>= sql-server-linux-ver15 || >= sql-server-ver15 || =sqlallproducts-allversions'
-ms.openlocfilehash: 322c858a9b20548662136e395c0db1c76171f5fd
-ms.sourcegitcommit: da88320c474c1c9124574f90d549c50ee3387b4c
+ms.openlocfilehash: c2d0edde6ca50074f05ff51eca0de38ec947f31a
+ms.sourcegitcommit: 32135463a8494d9ed1600a58f51819359e3c09dc
 ms.translationtype: HT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 07/01/2020
-ms.locfileid: "85740958"
+ms.lasthandoff: 10/08/2020
+ms.locfileid: "91834037"
 ---
 # <a name="configure-polybase-to-access-external-data-in-oracled"></a>Oracle의 외부 데이터에 액세스하도록 PolyBase 구성
 
@@ -49,6 +49,9 @@ Oracle 데이터 원본의 데이터를 쿼리하려면 외부 데이터를 참�
     */
     CREATE DATABASE SCOPED CREDENTIAL credential_name WITH IDENTITY = 'username', Secret = 'password';
     ```
+    
+   > [!IMPORTANT] 
+   > PolyBase용 Oracle ODBC 커넥터는 기본 인증만 지원하고 Kerberos 인증은 지원하지 않습니다. 
 
 1. [CREATE EXTERNAL DATA SOURCE](../../t-sql/statements/create-external-data-source-transact-sql.md)를 사용하여 외부 데이터 원본을 만듭니다.
 

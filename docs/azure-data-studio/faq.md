@@ -9,12 +9,12 @@ ms.author: maghan
 ms.reviewer: alayu, maghan, sstein
 ms.custom: seodec18
 ms.date: 09/24/2018
-ms.openlocfilehash: 1413903521019e9b2c95b11143d7e0039fc8e103
-ms.sourcegitcommit: dc8a30a4a27e15fc6671ca2674da9b7c637ec255
+ms.openlocfilehash: 0231111907d1f342aeda6aea5a9d824a56f40e8b
+ms.sourcegitcommit: a41e1f4199785a2b8019a419a1f3dcdc15571044
 ms.translationtype: HT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 08/21/2020
-ms.locfileid: "88745973"
+ms.lasthandoff: 10/13/2020
+ms.locfileid: "91987572"
 ---
 # <a name="azure-data-studio-faq"></a>Azure Data Studio FAQ
 
@@ -181,9 +181,9 @@ SQL PowerShell은 현재 PowerShell 갤러리에서 사용 가능하며, Windows
 
 개발자와 DBA가 일반적으로 Azure Data Studio의 사용자입니다.
 
-## <a name="does-azure-data-studio-integrate-with-azure-sql-data-warehouse"></a>Azure Data Studio는 Azure SQL Data Warehouse와 연결되나요?
+## <a name="does-azure-data-studio-integrate-with-azure-synapse-analytics"></a>Azure Data Studio는 Azure Synapse Analytics와 통합되나요?
 
-예. Azure SQL Data Warehouse에 대한 Azure Data Studio 지원은 현재 Azure SQL Managed Instance 및 SQL Server 2019 빅 데이터와 함께 미리 보기로 제공됩니다.
+예. Azure Data Studio의 Azure Synapse Analytics 지원은 현재 Azure SQL Managed Instance 및 SQL Server 2019 빅 데이터와 함께 미리 보기로 제공됩니다.
 
 ## <a name="why-is-azure-data-studio-important-for-the-new-version-of-sql-server"></a>새 버전의 SQL Server에서 Azure Data Studio가 중요한 이유는 무엇인가요?
 

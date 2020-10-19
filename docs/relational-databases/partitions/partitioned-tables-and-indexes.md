@@ -17,16 +17,16 @@ ms.assetid: cc5bf181-18a0-44d5-8bd7-8060d227c927
 author: julieMSFT
 ms.author: jrasnick
 monikerRange: =azuresqldb-current||>=sql-server-2016||=sqlallproducts-allversions||>=sql-server-linux-2017||=azuresqldb-mi-current
-ms.openlocfilehash: 5cbc395652b7c829fe3694bf5d040a319073e958
-ms.sourcegitcommit: e700497f962e4c2274df16d9e651059b42ff1a10
+ms.openlocfilehash: 1cdad35826cf23244264057c059d2f2c79f2049a
+ms.sourcegitcommit: 783b35f6478006d654491cb52f6edf108acf2482
 ms.translationtype: HT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 08/17/2020
-ms.locfileid: "88470372"
+ms.lasthandoff: 10/09/2020
+ms.locfileid: "91891013"
 ---
 # <a name="partitioned-tables-and-indexes"></a>Partitioned Tables and Indexes
 [!INCLUDE [SQL Server Azure SQL Database](../../includes/applies-to-version/sql-asdb.md)]
-  [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 에서는 테이블 및 인덱스 분할을 지원합니다. 분할 테이블 및 인덱스의 데이터는 데이터베이스에서 두 개 이상의 파일 그룹으로 분할될 수 있는 단위로 나뉩니다. 행 그룹이 개별 파티션에 매핑되도록 데이터는 수평적으로 분할됩니다. 단일 인덱스나 테이블의 모든 파티션은 동일 데이터베이스에 상주해야 합니다. 데이터에서 쿼리나 업데이트가 수행되면 테이블이나 인덱스는 단일 논리적 엔터티로 처리됩니다. [!INCLUDE[ssSQL15_md](../../includes/sssql15-md.md)] SP1 전에는 분할된 테이블 및 인덱스를 일부 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 버전에서만 사용할 수 있습니다. [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 버전에서 지원되는 기능 목록은 [SQL Server 2016 버전에 대한 버전 및 지원하는 기능](../../sql-server/editions-and-supported-features-for-sql-server-2016.md)을 참조하세요.  
+  [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 에서는 테이블 및 인덱스 분할을 지원합니다. 분할 테이블 및 인덱스의 데이터는 데이터베이스에서 두 개 이상의 파일 그룹으로 분할될 수 있는 단위로 나뉩니다. 행 그룹이 개별 파티션에 매핑되도록 데이터는 수평적으로 분할됩니다. 단일 인덱스나 테이블의 모든 파티션은 동일 데이터베이스에 상주해야 합니다. 데이터에서 쿼리나 업데이트가 수행되면 테이블이나 인덱스는 단일 논리적 엔터티로 처리됩니다. [!INCLUDE[ssSQL15_md](../../includes/sssql15-md.md)] SP1 전에는 분할된 테이블 및 인덱스를 일부 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 버전에서만 사용할 수 있습니다. [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 버전에서 지원되는 기능 목록은 [SQL Server 2016 버전에 대한 버전 및 지원하는 기능](../../sql-server/editions-and-components-of-sql-server-2016.md)을 참조하세요.  
   
 > [!IMPORTANT]  
 > [!INCLUDE[ssCurrent](../../includes/sscurrent-md.md)] 는 기본적으로 최대 15,000개의 파티션을 지원합니다. [!INCLUDE[ssSQL11](../../includes/sssql11-md.md)] 이전 버전에서는 파티션 수가 기본적으로 1,000개로 제한되었습니다. x86 기반 시스템에서는 파티션 수가 1,000개를 초과하는 테이블 또는 인덱스를 만들 수 있지만 해당 테이블 또는 인덱스는 지원되지 않습니다.  
@@ -48,7 +48,7 @@ ms.locfileid: "88470372"
 테이블 및 인덱스 분할에 적용되는 용어는 다음과 같습니다.  
   
 ### <a name="partition-function"></a>파티션 함수  
-분할 열이라고 하는 특정 열의 값을 기반으로 파티션 집합에 테이블이나 인덱스의 행을 매핑하는 방식을 정의하는 데이터베이스 개체입니다. 즉, 파티션 함수는 테이블이 포함할 파티션 수를 정의하고 파티션 경계의 정의 방법을 정의합니다. 예를 들어 매출 주문 데이터가 포함된 테이블이 있다고 가정할 경우 매출 날짜와 같은 **datetime** 열을 기준으로 테이블을 12개(월별) 파티션으로 분할해야 할 수 있습니다.  
+분할 열이라는 특정 열의 값을 기준으로 테이블이나 인덱스의 행을 파티션 세트에 매핑하는 방식을 정의하는 데이터베이스 개체입니다. 분할 열의 각 값은 파티션 값을 반환하는 분할 함수에 대한 입력입니다. 파티션 함수는 테이블에 포함할 파티션 수와 파티션 경계를 정의합니다. 예를 들어 매출 주문 데이터가 포함된 테이블이 있다고 가정할 경우 매출 날짜와 같은 **datetime** 열을 기준으로 테이블을 12개(월별) 파티션으로 분할해야 할 수 있습니다.  
   
 ### <a name="partition-scheme"></a>파티션 구성표 
 파티션 함수의 파티션을 파일 그룹 집합으로 매핑하는 데이터베이스 개체입니다. 별개의 파일 그룹에 파티션을 넣는 주된 이유는 파티션 백업 작업을 독립적으로 수행하기 위해서입니다. 이는 개별 파일 그룹에 대해 백업을 수행할 수 있기 때문입니다.  
@@ -129,9 +129,8 @@ ms.locfileid: "88470372"
  분할된 테이블 및 인덱스 전략과 구현에 대한 자세한 내용은 다음 백서를 참조하십시오.  
 -   [SQL Server 2008을 사용할 경우의 분할된 테이블 및 인덱스 전략](https://msdn.microsoft.com/library/dd578580\(SQL.100\).aspx)    
 -   [자동 슬라이딩 윈도우를 구현하는 방법](https://msdn.microsoft.com/library/aa964122\(SQL.90\).aspx)    
--   [분할된 테이블로 대량 로드](https://msdn.microsoft.com/library/cc966380.aspx)    
--   [Project REAL: 데이터 수명 주기 -- 분할](https://technet.microsoft.com/library/cc966424.aspx)    
--   [분할된 테이블 및 인덱스에서의 향상된 쿼리 처리](https://msdn.microsoft.com/library/ms345599.aspx)    
+-   [분할된 테이블로 대량 로드](/previous-versions/sql/sql-server-2005/administrator/cc966380(v=technet.10))    
+-   [Project REAL: 데이터 수명 주기 -- 분할](/previous-versions/sql/sql-server-2005/administrator/cc966424(v=technet.10))    
+-   [분할된 테이블 및 인덱스에서의 향상된 쿼리 처리](/previous-versions/sql/sql-server-2008-r2/ms345599(v=sql.105))    
 -   [대규모 관계형 데이터 웨어하우스를 구축 하기 위한 상위 10 가지 모범 사례](https://download.microsoft.com/download/0/F/B/0FBFAA46-2BFD-478F-8E56-7BF3C672DF9D/SQLCAT's%20Guide%20to%20Relational%20Engine.pdf) _SQLCAT의 가이드 관계형 엔지니어링_
-  
   

@@ -13,12 +13,12 @@ ms.author: jovanpop
 ms.reviewer: jroth
 ms.custom: seo-dt-2019
 monikerRange: =azuresqldb-current||>=sql-server-2016||=sqlallproducts-allversions||>=sql-server-linux-2017||=azuresqldb-mi-current
-ms.openlocfilehash: 785060a9f12b68f38e7d59420f7a2e31a77312fa
-ms.sourcegitcommit: e700497f962e4c2274df16d9e651059b42ff1a10
+ms.openlocfilehash: 7161ce97faa4d1baab514df45429592629e2518b
+ms.sourcegitcommit: 346a37242f889d76cd783f55aeed98023c693610
 ms.translationtype: HT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 08/17/2020
-ms.locfileid: "88499339"
+ms.lasthandoff: 10/06/2020
+ms.locfileid: "91765726"
 ---
 # <a name="format-json-output-automatically-with-auto-mode-sql-server"></a>AUTO 모드를 사용하여 JSON 출력 형식 자동 지정(SQL Server)
 [!INCLUDE [SQL Server Azure SQL Database](../../includes/applies-to-version/sql-asdb.md)]
@@ -33,9 +33,9 @@ ms.locfileid: "88499339"
 
 **FOR JSON AUTO** 옵션을 사용하는 쿼리에는 **FROM** 절이 있어야 합니다.  
   
-아래에는 **AUTO** 옵션에서 **FOR JSON** 절을 사용하는 몇 가지 예가 나와 있습니다.  
+아래에는 **AUTO** 옵션에서 **FOR JSON** 절을 사용하는 몇 가지 예가 나와 있습니다. [Azure Data Studio](../../azure-data-studio/download-azure-data-studio.md)는 일반 문자열을 표시하는 대신 이 문서에 표시된 대로 JSON 결과에 서식을 자동으로 지정하므로 JSON 쿼리에 권장되는 쿼리 편집기입니다.
   
-## <a name="examples"></a>예제
+## <a name="examples"></a>예
 
 ### <a name="example-1"></a>예 1
  **쿼리**  

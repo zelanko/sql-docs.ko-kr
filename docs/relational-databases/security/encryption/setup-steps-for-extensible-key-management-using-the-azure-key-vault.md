@@ -2,7 +2,7 @@
 title: Azure Key Vault를 사용하여 TDE(투명한 데이터 암호화) 확장 가능 키 관리 설정
 description: Azure Key Vault용 SQL Server 커넥터를 설치하고 구성합니다.
 ms.custom: seo-lt-2019
-ms.date: 08/12/2020
+ms.date: 10/08/2020
 ms.prod: sql
 ms.reviewer: vanto
 ms.technology: security
@@ -13,14 +13,14 @@ helpviewer_keywords:
 - SQL Server Connector, setup
 - SQL Server Connector
 ms.assetid: c1f29c27-5168-48cb-b649-7029e4816906
-author: VanMSFT
-ms.author: vanto
-ms.openlocfilehash: e5b18c46f602d24339c092b8f3e622b2a915baeb
-ms.sourcegitcommit: f7c9e562d6048f89d203d71685ba86f127d8d241
+author: Rupp29
+ms.author: arupp
+ms.openlocfilehash: e3b12ed6d4f28ce04c1ceac5960ae564368d9a9a
+ms.sourcegitcommit: 4d370399f6f142e25075b3714e5c2ce056b1bfd0
 ms.translationtype: HT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 09/12/2020
-ms.locfileid: "90042888"
+ms.lasthandoff: 10/09/2020
+ms.locfileid: "91866608"
 ---
 # <a name="set-up-sql-server-tde-extensible-key-management-by-using-azure-key-vault"></a>Azure Key Vault를 사용하여 SQL Server TDE 확장 가능 키 관리 설정
 
@@ -34,7 +34,7 @@ SQL Server 인스턴스에서 Azure Key Vault를 사용하기 전에 다음 필�
   
 - Azure 구독이 있어야 합니다.
   
-- [Azure PowerShell 버전 5.2.0 이상](https://azure.microsoft.com/documentation/articles/powershell-install-configure/)을 설치합니다.  
+- [Azure PowerShell 버전 5.2.0 이상](/powershell/azure/)을 설치합니다.  
 
 - Azure AD(Azure Active Directory) 인스턴스를 만듭니다.
 
@@ -61,7 +61,7 @@ SQL Server 인스턴스에 Azure key vault에 대한 액세스 권한을 부여�
 
       ![“모든 Azure 서비스” 창 스크린샷](../../../relational-databases/security/encryption/media/ekm/ekm-part1-select-aad.png)  
 
-1. 다음을 수행하여 Azure Active Directory에 애플리케이션을 등록합니다. 자세한 단계별 지침을 보려면 [Azure Key Vault 블로그 게시물](https://blogs.technet.microsoft.com/kv/2015/06/02/azure-key-vault-step-by-step/)의 “Get an identity for the application”(애플리케이션의 ID 가져오기) 섹션을 참조하세요.
+1. 다음을 수행하여 Azure Active Directory에 애플리케이션을 등록합니다. 자세한 단계별 지침을 보려면 [Azure Key Vault 블로그 게시물](/archive/blogs/kv/azure-key-vault-step-by-step)의 “Get an identity for the application”(애플리케이션의 ID 가져오기) 섹션을 참조하세요.
 
     a. **Azure Active Directory 개요** 창에서 **앱 등록**을 선택합니다.
 
@@ -85,7 +85,7 @@ SQL Server 인스턴스에 Azure key vault에 대한 액세스 권한을 부여�
 
     f. **인증서 및 암호** 창의 **“값”** 에서 SQL Server에 비대칭 키를 만드는 데 사용할 클라이언트 암호 값 옆에 있는 **복사** 단추를 선택합니다.
 
-    ![“인증서 및 암호” 창 스크린샷](../../../relational-databases/security/encryption/media/ekm/ekm-part1-aad-new-secret.png)  
+    ![비밀 값 스크린샷](../../../relational-databases/security/encryption/media/ekm/ekm-part1-aad-new-secret.png)  
 
     g. 왼쪽 창에서 **개요**를 선택하고 **애플리케이션(클라이언트) ID** 상자에서 SQL Server에 비대칭 키를 만드는 데 사용할 값을 복사합니다.
 
@@ -160,7 +160,7 @@ Azure Portal을 사용하여 키 자격 증명 모음을 만든 다음, Azure AD
 > [!IMPORTANT]
 > 키 자격 증명 모음이 생성되는 구독은 Azure AD 서비스 주체를 만든 동일한 기본 Azure AD 인스턴스에 있어야 합니다. SQL Server 커넥터에 대한 서비스 주체를 만들기 위해 기본 인스턴스가 아닌 Azure AD 인스턴스를 사용하려는 경우에는 키 자격 증명 모음을 만들기 전에 Azure 계정에서 기본 Azure AD 인스턴스를 변경해야 합니다. 기본 Azure AD 인스턴스를 사용하려는 인스턴스로 변경하는 방법에 대한 자세한 내용은 [SQL Server 커넥터 유지 관리 및 문제 해결](../../../relational-databases/security/encryption/sql-server-connector-maintenance-troubleshooting.md#AppendixB)에서 “질문과 대답” 섹션을 참조하세요.  
   
-1. 다음 명령을 사용하여 [Azure PowerShell 5.2.0 이상](https://azure.microsoft.com/documentation/articles/powershell-install-configure/)을 설치하고 로그인합니다.  
+1. 다음 명령을 사용하여 [Azure PowerShell 5.2.0 이상](/powershell/azure/)을 설치하고 로그인합니다.  
   
     ```powershell  
     Connect-AzAccount  
@@ -266,7 +266,7 @@ Azure Portal을 사용하여 키 자격 증명 모음을 만든 다음, Azure AD
 
 - 로컬 HSM(하드웨어 보안 모듈) 디바이스에서 암호화 키를 로컬로 만듭니다. SQL Server에서 지원하도록 비대칭 RSA 2048 키를 사용해야 합니다.
 - Azure Key Vault에 암호화 키를 가져옵니다. 이 프로세스는 다음 섹션에 설명되어 있습니다.
-- Azure Key Vault에서 키를 처음 사용하기 전에 Azure Key Vault 키 백업을 수행합니다. 자세한 내용은 [Backup-AzureKeyVaultKey](/sql/relational-databases/security/encryption/setup-steps-for-extensible-key-management-using-the-azure-key-vault) 명령을 참조하세요.
+- Azure Key Vault에서 키를 처음 사용하기 전에 Azure Key Vault 키 백업을 수행합니다. 자세한 내용은 [Backup-AzureKeyVaultKey]() 명령을 참조하세요.
 - 키를 변경할 때마다(예: ACL, 태그 또는 키 특성 추가) 다른 Azure Key Vault 키 백업을 수행해야 합니다.
 
   > [!NOTE]
@@ -340,7 +340,7 @@ Id         : https://contosoekmkeyvault.vault.azure.net:443/
 > - 1\.0.3.0 버전부터 SQL Server 커넥터는 문제를 해결하기 위해 Windows 이벤트 로그에 관련 오류 메시지를 보고합니다.
 > - 1\.0.4.0 버전부터 Azure 중국, Azure 독일, Azure Government 등 프라이빗 Azure 클라우드가 지원됩니다.
 > - 1\.0.5.0 버전의 경우 지문 알고리즘 측면에서 호환성이 손상되는 변경이 있습니다. 1\.0.5.0으로 업그레이드한 후 데이터베이스 복원 실패가 발생할 수 있습니다. 자세한 내용은 [기술 자료 문서 447099](https://support.microsoft.com/help/4470999/db-backup-problems-to-sql-server-connector-for-azure-1-0-5-0)를 참조하세요.
-> - **1.0.7.0 버전부터 SQL Server 커넥터는 메시지 필터링 및 네트워크 요청 다시 시도 논리를 지원합니다.**
+> - **버전 1.0.5.0(타임스탬프: 2020년 9월)부터 SQL Server 커넥터는 메시지 필터링 및 네트워크 요청 다시 시도 논리를 지원합니다.**
   
   ![SQL Server 커넥터 설치 마법사 스크린샷](../../../relational-databases/security/encryption/media/ekm/ekm-connector-install.png)  
   

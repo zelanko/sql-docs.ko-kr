@@ -16,12 +16,12 @@ helpviewer_keywords:
 ms.assetid: 44fadbee-b5fe-40c0-af8a-11a1eecf6cb5
 author: pmasl
 ms.author: pelopes
-ms.openlocfilehash: 49fd020cbbe8162dd82b51ab4743730a85762598
-ms.sourcegitcommit: 2600a414c321cfd6dc6daf5b9bcbc9a99c049dc4
+ms.openlocfilehash: b06b51e5c8f1cbe7d542c8ecf04df0ded859d775
+ms.sourcegitcommit: 783b35f6478006d654491cb52f6edf108acf2482
 ms.translationtype: HT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 09/30/2020
-ms.locfileid: "91603370"
+ms.lasthandoff: 10/09/2020
+ms.locfileid: "91892443"
 ---
 # <a name="query-processing-architecture-guide"></a>쿼리 처리 아키텍처 가이드
 [!INCLUDE [SQL Server Azure SQL Database](../includes/applies-to-version/sql-asdb.md)]
@@ -148,7 +148,7 @@ GO
 - 상수만 포함된 산술 식(예: 1+1, 5/3*2)
 - 상수만 포함된 논리 식(1=1 and 1>2 AND 3>4)
 - `CAST` 및 `CONVERT`를 비롯하여 [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)]에서 폴딩 가능한 것으로 간주하는 기본 제공 함수. 일반적으로 입력으로만 사용되고, SET 옵션, 언어 설정, 데이터베이스 옵션 및 암호화 키와 같은 다른 컨텍스트 정보를 제공하지 않는 내장 함수가 폴딩 가능한 함수입니다. 비결정적 함수는 폴딩 가능하지 않습니다. 몇 가지 예외를 제외하고 결정적 기본 제공 함수는 폴딩 가능 함수입니다.
-- CLR 사용자 정의 형식의 결정적 메서드 및 결정적 스칼라 반환 CLR 사용자 정의 함수([!INCLUDE[ssSQL11](../includes/sssql11-md.md)]부터). 자세한 내용은 [CLR 사용자 정의 함수 및 메서드를 위한 상수 폴딩](https://docs.microsoft.com/sql/database-engine/breaking-changes-to-database-engine-features-in-sql-server-version-15?view=sql-server-ver15)을 참조하세요.
+- CLR 사용자 정의 형식의 결정적 메서드 및 결정적 스칼라 반환 CLR 사용자 정의 함수([!INCLUDE[ssSQL11](../includes/sssql11-md.md)]부터). 자세한 내용은 [CLR 사용자 정의 함수 및 메서드를 위한 상수 폴딩](/previous-versions/sql/2014/database-engine/behavior-changes-to-database-engine-features-in-sql-server-2014?view=sql-server-2014#constant-folding-for-clr-user-defined-functions-and-methods)을 참조하세요.
 
 > [!NOTE] 
 > 큰 개체 유형의 경우에는 예외입니다. 폴딩 프로세스의 출력 유형이 큰 개체 유형(text, ntext, image, nvarchar(max), varchar(max), varbinary(max) 또는 XML)이면 [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)]에서 식을 폴딩하지 않습니다.
@@ -1030,7 +1030,7 @@ WHERE ProductID = 63;
     커서에 대한 자세한 내용은 [DECLARE CURSOR](../t-sql/language-elements/declare-cursor-transact-sql.md)를 참조하세요.
     
 -   **재귀 쿼리**        
-    재귀에 대한 자세한 내용은 [재귀 공통 테이블 식 정의 및 사용 지침](../t-sql/queries/with-common-table-expression-transact-sql.md#guidelines-for-defining-and-using-recursive-common-table-expressions) 및 [T-SQL의 재귀](https://msdn.microsoft.com/library/aa175801(v=sql.80).aspx)를 참조하세요.
+    재귀에 대한 자세한 내용은 [재귀 공통 테이블 식 정의 및 사용 지침](../t-sql/queries/with-common-table-expression-transact-sql.md#guidelines-for-defining-and-using-recursive-common-table-expressions) 및 [T-SQL의 재귀](/previous-versions/sql/legacy/aa175801(v=sql.80))를 참조하세요.
 
 -   **다중 문 테이블 반환 함수(MSTVF)**         
     MSTVF에 대한 자세한 내용은 [사용자 정의 함수 만들기(데이터베이스 엔진)](../relational-databases/user-defined-functions/create-user-defined-functions-database-engine.md#TVF)를 참조하세요.
@@ -1270,7 +1270,8 @@ Microsoft [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)]는 [!INCLUDE[ts
 [!INCLUDE[ssKatmai](../includes/ssKatmai-md.md)]에서는 여러 병렬 계획에 대해 분할된 테이블에서의 쿼리 처리 성능이 향상되었고, 병렬 및 직렬 계획이 표시되는 방식이 변경되었으며 컴파일 시간 및 런타임 실행 계획에 제공되는 분할 정보가 개선되었습니다. 이 항목에서는 이러한 향상된 기능에 대해 설명하고, 분할된 테이블 및 인덱스의 쿼리 실행 계획을 해석하는 방법에 대해 안내하며, 분할된 개체에서의 쿼리 성능 향상을 위한 최선의 방법을 알려 줍니다. 
 
 > [!NOTE]
-> 분할된 테이블 및 인덱스는 [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)] Enterprise, Developer 및 Evaluation Edition에서만 지원됩니다.
+> [!INCLUDE[ssSQL14](../includes/sssql14-md.md)]까지 분할된 테이블 및 인덱스는 [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)] Enterprise, Developer, Evaluation Edition에서만 지원됩니다.   
+> [!INCLUDE[ssSQL15](../includes/sssql15-md.md)] SP1부터 [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)] Standard Edition에서도 분할된 테이블 및 인덱스가 지원됩니다. 
 
 ### <a name="new-partition-aware-seek-operation"></a>새 파티션 인식 Seek 연산
 
@@ -1435,7 +1436,7 @@ XML 실행 계획 출력에서`Partitions Accessed`는 새 `RuntimePartitionSumm
 * 빠른 프로세서와 가능한 많은 프로세서 코어가 장착된 서버를 사용하여 병렬 쿼리 처리 기능을 이용합니다.
 * 서버에 충분한 I/O 컨트롤러 대역폭이 있는지 확인합니다. 
 * 모든 분할된 대형 테이블에 클러스터형 인덱스를 만들어 B-트리 검색 최적화를 이용합니다.
-* 데이터를 분할된 테이블에 대량으로 로드하는 경우에는 [데이터 로드 성능 가이드](https://msdn.microsoft.com/library/dd425070.aspx) 백서의 모범 사례 권장 사항을 따르세요.
+* 데이터를 분할된 테이블에 대량으로 로드하는 경우에는 [데이터 로드 성능 가이드](/previous-versions/sql/sql-server-2008/dd425070(v=sql.100)) 백서의 모범 사례 권장 사항을 따르세요.
 
 ### <a name="example"></a>예제
 

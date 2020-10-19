@@ -10,12 +10,12 @@ author: MikeRayMSFT
 ms.author: mikeray
 ms.reviewer: mikeray
 monikerRange: '>= sql-server-linux-ver15 || >= sql-server-ver15 || =sqlallproducts-allversions'
-ms.openlocfilehash: ec09eca0568d1213fce850362be7c889af3a3258
-ms.sourcegitcommit: da88320c474c1c9124574f90d549c50ee3387b4c
+ms.openlocfilehash: 31ce6dbde09a9be1a69e6f024dc885f5cd38dfc8
+ms.sourcegitcommit: 32135463a8494d9ed1600a58f51819359e3c09dc
 ms.translationtype: HT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 07/01/2020
-ms.locfileid: "85722234"
+ms.lasthandoff: 10/08/2020
+ms.locfileid: "91833801"
 ---
 # <a name="configure-polybase-to-access-external-data-in-teradata"></a>Teradata의 외부 데이터에 액세스하도록 PolyBase 구성
 
@@ -52,6 +52,9 @@ Teradata 데이터 원본의 데이터를 쿼리하려면 외부 데이터를 �
     */
     CREATE DATABASE SCOPED CREDENTIAL credential_name WITH IDENTITY = 'username', Secret = 'password';
     ```
+
+   > [!IMPORTANT] 
+   > PolyBase용 Teradata ODBC 커넥터는 기본 인증만 지원하고 Kerberos 인증은 지원하지 않습니다.
 
 1. [CREATE EXTERNAL DATA SOURCE](../../t-sql/statements/create-external-data-source-transact-sql.md)를 사용하여 외부 데이터 원본을 만듭니다.
 

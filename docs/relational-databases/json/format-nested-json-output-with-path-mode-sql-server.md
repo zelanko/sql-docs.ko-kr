@@ -11,12 +11,12 @@ ms.author: jovanpop
 ms.reviewer: jroth
 ms.custom: seo-dt-2019
 monikerRange: =azuresqldb-current||>=sql-server-2016||=sqlallproducts-allversions||>=sql-server-linux-2017||=azuresqldb-mi-current
-ms.openlocfilehash: 4f4bc2ab48ca1d7d741eb7de8056f1566daadb47
-ms.sourcegitcommit: e700497f962e4c2274df16d9e651059b42ff1a10
+ms.openlocfilehash: 8c091618be5e414faa15e200fc8b30230f793eaf
+ms.sourcegitcommit: 346a37242f889d76cd783f55aeed98023c693610
 ms.translationtype: HT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 08/17/2020
-ms.locfileid: "88499399"
+ms.lasthandoff: 10/06/2020
+ms.locfileid: "91765722"
 ---
 # <a name="format-nested-json-output-with-path-mode-sql-server"></a>PATH 모드로 중첩 JSON 출력 서식 지정(SQL Server)
 [!INCLUDE [SQL Server Azure SQL Database](../../includes/applies-to-version/sql-asdb.md)]
@@ -29,7 +29,7 @@ ms.locfileid: "88499399"
  -   **AUTO** 옵션에 대한 자세한 내용은 [AUTO 모드를 사용하여 JSON 출력 형식 자동 지정](../../relational-databases/json/format-json-output-automatically-with-auto-mode-sql-server.md)을 참조하세요.
  -   두 옵션의 개요는 [FOR JSON을 사용하여 쿼리 결과를 JSON으로 서식 지정](../../relational-databases/json/format-query-results-as-json-with-for-json-sql-server.md)을 참조하세요.
  
-아래에는 **PATH** 옵션에서 **FOR JSON** 절을 사용하는 몇 가지 예가 나와 있습니다. 다음 예제에 표시된 것처럼 점으로 구분된 열 이름 또는 중첩 쿼리를 사용하여 중첩 결과를 서식 지정합니다. 기본적으로 null 값은 **FOR JSON** 출력에 포함되지 않습니다.  
+아래에는 **PATH** 옵션에서 **FOR JSON** 절을 사용하는 몇 가지 예가 나와 있습니다. 다음 예제에 표시된 것처럼 점으로 구분된 열 이름 또는 중첩 쿼리를 사용하여 중첩 결과를 서식 지정합니다. 기본적으로 null 값은 **FOR JSON** 출력에 포함되지 않습니다.  [Azure Data Studio](../../azure-data-studio/download-azure-data-studio.md)는 일반 문자열을 표시하는 대신 이 문서에 표시된 대로 JSON 결과에 서식을 자동으로 지정하므로 JSON 쿼리에 권장되는 쿼리 편집기입니다.
 
 ## <a name="example---dot-separated-column-names"></a>예 - 점으로 구분된 열 이름  
 다음 쿼리는 AdventureWorks `Person` 테이블의 처음 5개 행을 JSON 형식으로 지정합니다.  

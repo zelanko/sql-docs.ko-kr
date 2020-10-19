@@ -17,12 +17,12 @@ ms.assetid: 54757c91-615b-468f-814b-87e5376a960f
 author: jaszymas
 ms.author: jaszymas
 monikerRange: =azuresqldb-current||>=sql-server-2016||=sqlallproducts-allversions||>=sql-server-linux-2017||=azuresqldb-mi-current
-ms.openlocfilehash: 0f46200a134351d1f6328ad79ccb030baddf4df3
-ms.sourcegitcommit: bf8cf755896a8c964774a438f2bd461a2a648c22
+ms.openlocfilehash: 6c13a720a9578600d80bb989ef740d3654cc4ae6
+ms.sourcegitcommit: 04cf7905fa32e0a9a44575a6f9641d9a2e5ac0f8
 ms.translationtype: HT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 08/14/2020
-ms.locfileid: "88216769"
+ms.lasthandoff: 10/07/2020
+ms.locfileid: "91810009"
 ---
 # <a name="always-encrypted"></a>Always Encrypted
 [!INCLUDE [SQL Server Azure SQL Database](../../../includes/applies-to-version/sql-asdb.md)]
@@ -164,7 +164,7 @@ Always Encrypted 암호화 알고리즘에 대한 자세한 내용은 [Always En
 - `ROWGUIDCOL` 속성이 있는 열  
 - bin2가 아닌 데이터 정렬을 사용하는 문자열(`varchar`, `char` 등) 열  
 - 임의 암호화를 사용하는 경우 클러스터형 및 비클러스터형 인덱스에 대한 키 역할을 하는 열(결정적 암호화 지원됨)
-- 임의 암호화를 사용하는 경우 전체 텍스트 인덱스에 대한 키 역할을 하는 열(결정적 암호화 지원됨)  
+- 전체 텍스트 인덱스에 포함된 열(Always Encrypted는 [전체 텍스트 검색](../../../relational-databases/search/full-text-search.md)을 지원하지 않음)  
 - 계산된 열입니다.
 - 계산된 열에서 참조되는 열(식이 Always Encrypted에 대해 지원되지 않는 작업을 수행하는 경우)  
 - 스파스 열 집합  

@@ -23,12 +23,12 @@ helpviewer_keywords:
 ms.custom: ''
 ms.date: 06/10/2020
 monikerRange: " >= sql-server-linux-ver15 || >= sql-server-ver15 || = azuresqldb-current || = sqlallproducts-allversions"
-ms.openlocfilehash: 641896fb407beabdedbd30d98cc8d94d16d31efe
-ms.sourcegitcommit: 18a98ea6a30d448aa6195e10ea2413be7e837e94
+ms.openlocfilehash: cc5f77d8590434d8d8d03e5ef8ab68365be3c4ca
+ms.sourcegitcommit: 610e3ebe21ac6575850a29641a32f275e71557e3
 ms.translationtype: HT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 08/27/2020
-ms.locfileid: "88991892"
+ms.lasthandoff: 10/07/2020
+ms.locfileid: "91784782"
 ---
 # <a name="add-sensitivity-classification-transact-sql"></a>ADD SENSITIVITY CLASSIFICATION(Transact-SQL)
 
@@ -36,7 +36,7 @@ ms.locfileid: "88991892"
 
 하나 이상의 데이터베이스 열에 민감도 분류 메타데이터를 추가합니다. 분류에는 민감도 레이블과 정보 유형이 포함될 수 있습니다.
 
-SQL Server의 경우 SQL Server 2019에서 도입되었습니다.
+SQL Server의 경우 SQL Server 2012에서 도입되었습니다.
 
 데이터베이스 환경에서 중요한 데이터를 분류하면 표시 영역을 확장하고 보호를 강화할 수 있습니다. 자세한 내용은 [SQL Information Protection 시작](https://aka.ms/sqlip)을 참조하세요.
 

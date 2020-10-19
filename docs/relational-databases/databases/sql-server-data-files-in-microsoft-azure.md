@@ -11,12 +11,12 @@ ms.topic: conceptual
 ms.assetid: 38ffd9c2-18a5-43d2-b674-e425addec4e4
 author: MikeRayMSFT
 ms.author: mikeray
-ms.openlocfilehash: 5314f43ea17351f54cf1815346a0820cc5cd77e3
-ms.sourcegitcommit: da88320c474c1c9124574f90d549c50ee3387b4c
+ms.openlocfilehash: 5aed55fa41bfd3998b4580e5ee0b66a35997b942
+ms.sourcegitcommit: a41e1f4199785a2b8019a419a1f3dcdc15571044
 ms.translationtype: HT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 07/01/2020
-ms.locfileid: "85715493"
+ms.lasthandoff: 10/13/2020
+ms.locfileid: "91987592"
 ---
 # <a name="sql-server-data-files-in-microsoft-azure"></a>Microsoft Azure의 SQL Server 데이터 파일
  [!INCLUDE [SQL Server](../../includes/applies-to-version/sqlserver.md)]
@@ -177,25 +177,28 @@ ON
   
  **데이터베이스 오류**  
   
-1.  *데이터베이스를 만들 때 발생하는 오류*   
-    해결 방법: 4단원에 나오는 지침인 [ SQL Server 2016 데이터베이스와 함께 Microsoft Azure Blob 스토리지 서비스 사용](../lesson-4-restore-database-to-virtual-machine-from-url.md)에서 참조하세요.  
+**데이터베이스를 만드는 중 오류가 발생했습니다.** 해결 방법: 4단원에 나오는 지침인 [ SQL Server 2016 데이터베이스와 함께 Microsoft Azure Blob 스토리지 서비스 사용](../lesson-4-restore-database-to-virtual-machine-from-url.md)에서 참조하세요.  
   
-2.  *Alter 문을 실행할 때 발생하는 오류*   
-    해결 방법: 데이터베이스가 온라인 상태일 때 Alter Database 문을 실행해야 합니다. 데이터 파일을 Azure Storage에 복사할 경우 항상 블록 BLOB이 아닌 페이지 BLOB을 만듭니다. 그렇지 않으면 ALTER Database 문이 실패합니다. 7단원에 나오는 지침인 [: SQL Server 2016 데이터베이스와 함께 Microsoft Azure Blob 스토리지 서비스 사용](../tutorial-use-azure-blob-storage-service-with-sql-server-2016.md)에서 참조하세요.  
+**Alter 문을 실행할 때 발생하는 오류** 해결 방법: 데이터베이스가 온라인 상태일 때 Alter Database 문을 실행해야 합니다. 데이터 파일을 Azure Storage에 복사할 경우 항상 블록 BLOB이 아닌 페이지 BLOB을 만듭니다. 그렇지 않으면 ALTER Database 문이 실패합니다. 7단원에 나오는 지침인 [: SQL Server 2016 데이터베이스와 함께 Microsoft Azure Blob 스토리지 서비스 사용](../tutorial-use-azure-blob-storage-service-with-sql-server-2016.md)에서 참조하세요.  
   
-3.  *오류 코드 5120 물리적 파일 "%.\*ls"을(를) 열 수 없습니다. 운영 체제 오류 %d: "%ls"*   
+**오류 코드 - 5120 물리적 파일 “%.\*ls”을(를) 열 수 없습니다. 운영 체제 오류 %d: "%ls"**   
 
-    해결 방법: 현재 이 새로운 향상된 기능을 사용하여 여러 SQL Server 인스턴스에서 Azure Storage의 동일한 데이터베이스 파일에 동시에 액세스할 수 없습니다. 활성 데이터베이스 파일이 있는 서버 A가 온라인 상태인 동안 동일한 데이터 파일을 가리키는 데이터베이스를 포함하는 서버 B를 실수로 시작한 경우, 두 번째 서버에서는 데이터베이스가 시작되지 않고 다음 오류 코드가 표시됩니다. 5120 물리적 파일 “%.\*ls”을(를) 열 수 없습니다. *운영 체제 오류 %d: "%ls"* .  
+해결 방법: 현재 이 새로운 향상된 기능을 사용하여 여러 SQL Server 인스턴스에서 Azure Storage의 동일한 데이터베이스 파일에 동시에 액세스할 수 없습니다. 활성 데이터베이스 파일이 있는 서버 A가 온라인 상태인 동안 동일한 데이터 파일을 가리키는 데이터베이스를 포함하는 서버 B를 실수로 시작한 경우, 두 번째 서버에서는 데이터베이스가 시작되지 않고 다음 오류 코드가 표시됩니다. 5120 물리적 파일 “%.\*ls”을(를) 열 수 없습니다. *운영 체제 오류 %d: "%ls"* .  
   
-     이 문제를 해결하려면 먼저 Azure Storage의 데이터베이스 파일에 액세스하려면 서버 A가 필요한지 여부를 확인해야 합니다. 서버 A가 필요하지 않은 경우 서버 A와 Azure Storage에 있는 데이터베이스 파일 사이의 연결을 제거합니다. 이렇게 하려면 다음 단계를 수행하세요.  
-  
-    1.  ALTER Database 문을 사용하여 서버 A의 파일 경로를 로컬 폴더로 설정합니다.  
-  
-    2.  서버 A에서 데이터베이스를 오프라인으로 설정합니다.  
-  
-    3.  그런 다음 데이터베이스 파일을 Azure Storage에서 서버 A의 로컬 폴더로 복사합니다. 그러면 서버 A에 데이터베이스의 로컬 복사본이 여전히 있습니다.  
-  
-    4.  데이터베이스를 온라인으로 설정합니다.  
+이 문제를 해결하려면 먼저 Azure Storage의 데이터베이스 파일에 액세스하려면 서버 A가 필요한지 여부를 확인해야 합니다. 서버 A가 필요하지 않은 경우 서버 A와 Azure Storage에 있는 데이터베이스 파일 사이의 연결을 제거합니다. 이렇게 하려면 다음 단계를 수행하세요.  
+
+1.  ALTER Database 문을 사용하여 서버 A의 파일 경로를 로컬 폴더로 설정합니다.  
+
+2.  서버 A에서 데이터베이스를 오프라인으로 설정합니다.  
+
+3.  그런 다음 데이터베이스 파일을 Azure Storage에서 서버 A의 로컬 폴더로 복사합니다. 그러면 서버 A에 데이터베이스의 로컬 복사본이 여전히 있습니다.  
+
+4.  데이터베이스를 온라인으로 설정합니다.
+
+**오류 코드 833 - I/O 요청을 완료하는 데 15초보다 더 오래 걸렸습니다.** 
+   
+   이 오류는 스토리지 시스템이 SQL Server 워크로드의 수요를 충족할 수 없음을 나타냅니다. 애플리케이션 계층의 IO 작업을 줄이거나 스토리지 계층의 처리량 기능을 늘립니다. 자세한 내용은 [오류 833](../errors-events/mssqlserver-833-database-engine-error.md)을 참조하세요. 성능 문제가 지속되면 프리미엄 또는 UltraSSD 등의 다른 스토리지 계층으로 파일을 이동하는 것이 좋습니다. Azure VM의 SQL Server에 대해서는 [스토리지 성능 최적화](/azure/virtual-machines/premium-storage-performance)를 참조하세요.
+
 
 ## <a name="next-steps"></a>다음 단계  
   

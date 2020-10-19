@@ -18,12 +18,12 @@ ms.assetid: ''
 author: MikeRayMSFT
 ms.author: mikeray
 monikerRange: '>=sql-server-ver15||>=sql-server-linux-ver15||=sqlallproducts-allversions'
-ms.openlocfilehash: 4d3d1b76144de526146e4938ad655d990b443e1c
-ms.sourcegitcommit: 2f868a77903c1f1c4cecf4ea1c181deee12d5b15
+ms.openlocfilehash: 691b3c495db0280b2ae1f50b2d877677c66dc768
+ms.sourcegitcommit: 4d370399f6f142e25075b3714e5c2ce056b1bfd0
 ms.translationtype: HT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 10/02/2020
-ms.locfileid: "91669906"
+ms.lasthandoff: 10/09/2020
+ms.locfileid: "91866561"
 ---
 # <a name="secondary-to-primary-replica-readwrite-connection-redirection-always-on-availability-groups"></a>보조-주 복제본 읽기/쓰기 연결 리디렉션(Always On 가용성 그룹)
 
@@ -89,7 +89,7 @@ ms.locfileid: "91669906"
 
 다음 그림은 가용성 그룹을 나타냅니다.
 
-![원래 가용성 그룹](media/replica-connection-redirection-always-on-availability-groups/01_originalAG.png)
+![주 복제본, 보조 복제본, 비동기 보조 복제본이 있는 가용성 그룹](media/replica-connection-redirection-always-on-availability-groups/01_originalAG.png)
 
 다음 Transact-SQL 스크립트는 이 AG를 만듭니다. 이 예제에서 각 복제본은 `READ_WRITE_ROUTING_URL`을 지정합니다.
 ```sql
@@ -144,18 +144,13 @@ GO
 
 다음 다이어그램에서 클라이언트 애플리케이션은 `ApplicationIntent=ReadWrite`를 사용하여 COMPUTER02에 연결됩니다. 연결은 주 복제본으로 리디렉션됩니다. 
 
-![원래 가용성 그룹](media/replica-connection-redirection-always-on-availability-groups/02_redirectionAG.png)
+![컴퓨터 2에 대한 연결이 주 복제본으로 리디렉션됨](media/replica-connection-redirection-always-on-availability-groups/02_redirectionAG.png)
 
 보조 복제본은 읽기/쓰기 호출을 주 복제본으로 리디렉션합니다. 각 복제본에 대한 읽기/쓰기 연결이 주 복제본으로 리디렉션됩니다. 
 
 다음 다이어그램에서는 주 복제본이 COMPUTER02로 수동 장애 조치(Failover)되었습니다. 클라이언트 애플리케이션은 `ApplicationIntent=ReadWrite`를 사용하여 COMPUTER01에 연결합니다. 연결은 주 복제본으로 리디렉션됩니다. 
 
-![원래 가용성 그룹](media/replica-connection-redirection-always-on-availability-groups/03_redirectionAG.png)
-
-
-## <a name="sql-server-instance-offline"></a>SQL Server 인스턴스 오프라인
-
-연결 문자열에 지정된 SQL Server 인스턴스를 사용할 수 없는 경우(가동 중단의 경우) 대상 서버에서 해당 복제본의 역할에 관계없이 연결이 실패합니다. 애플리케이션이 장시간 가동 중지되는 것을 방지하려면 연결 문자열에 대체 `FailoverPartner`를 구성합니다. 애플리케이션은 실제 장애 조치(Failover) 동안 주 및 보조 복제본을 수용하기 위해 다시 시도 논리를 구현해야 합니다. 연결 문자열에 대한 자세한 내용은 [SqlConnection.ConnectionString Property](/dotnet/api/system.data.sqlclient.sqlconnection.connectionstring)를 참조하세요.
+![연결이 컴퓨터 2의 새로운 주 복제본으로 리디렉션됨](media/replica-connection-redirection-always-on-availability-groups/03_redirectionAG.png)
 
 ## <a name="see-also"></a>참고 항목
 

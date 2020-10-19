@@ -10,12 +10,12 @@ author: MikeRayMSFT
 ms.author: mikeray
 ms.reviewer: mikeray
 monikerRange: '>= sql-server-linux-ver15 || >= sql-server-ver15 || =sqlallproducts-allversions'
-ms.openlocfilehash: 7592100b7f8faec7dcfba35977e6b1cb5865854c
-ms.sourcegitcommit: da88320c474c1c9124574f90d549c50ee3387b4c
+ms.openlocfilehash: 5ab1ef128b86f3426193b648c41f6cac6b324e71
+ms.sourcegitcommit: 32135463a8494d9ed1600a58f51819359e3c09dc
 ms.translationtype: HT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 07/01/2020
-ms.locfileid: "85741769"
+ms.lasthandoff: 10/08/2020
+ms.locfileid: "91834043"
 ---
 # <a name="configure-polybase-to-access-external-data-in-mongodb"></a>MongoDB의 외부 데이터에 액세스하도록 PolyBase 구성
 
@@ -49,6 +49,10 @@ MongoDB 데이터 원본의 데이터를 쿼리하려면 외부 데이터를 참
     */
     CREATE DATABASE SCOPED CREDENTIAL credential_name WITH IDENTITY = 'username', Secret = 'password';
     ```
+    
+   > [!IMPORTANT] 
+   > PolyBase용 MongoDB ODBC 커넥터는 기본 인증만 지원하고 Kerberos 인증은 지원하지 않습니다.    
+    
 1. [CREATE EXTERNAL DATA SOURCE](../../t-sql/statements/create-external-data-source-transact-sql.md)를 사용하여 외부 데이터 원본을 만듭니다.
 
     ```sql
@@ -72,7 +76,9 @@ MongoDB 데이터 원본의 데이터를 쿼리하려면 외부 데이터를 참
     ```
 
 >[!IMPORTANT] 
->외부 데이터 원본을 만든 후에는 [CREATE EXTERNAL TABLE](../../t-sql/statements/create-external-table-transact-sql.md) 명령을 사용하여 해당 원본 위에 쿼리 가능 테이블을 만들 수 있습니다. 
+>외부 데이터 원본을 만든 후에는 [CREATE EXTERNAL TABLE](../../t-sql/statements/create-external-table-transact-sql.md) 명령을 사용하여 해당 원본 위에 쿼리 가능 테이블을 만들 수 있습니다.
+>
+>예제는 [MongoDB용 외부 테이블 만들기](../../t-sql/statements/create-external-table-transact-sql.md#k-create-an-external-table-for-mongodb)를 참조하세요.
 
 ## <a name="flattening"></a>평면화
 평면화는 MongoDB 문서 컬렉션에서 중첩되고 반복되는 데이터에 사용할 수 있습니다. 사용자는 `create an external table`을 활성화하고 데이터를 중첩 및/또는 반복하는 MongoDB 문서 콜렉션을 통해 관계형 스키마를 명시적으로 지정해야 합니다. JSON 중첩/반복 데이터 형식은 다음과 같이 평면화됩니다.
