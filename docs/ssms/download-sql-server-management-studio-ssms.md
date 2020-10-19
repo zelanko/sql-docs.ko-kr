@@ -25,12 +25,12 @@ manager: viharp
 ms.reviewer: maghan
 ms.custom: seo-lt-2019
 ms.date: 09/28/2020
-ms.openlocfilehash: 701150a6d4ef8667b5d2fef631dc0d6a04701388
-ms.sourcegitcommit: a5398f107599102af7c8cda815d8e5e9a367ce7e
+ms.openlocfilehash: 3919719b19cadb63e54a54dc5786f955a11ab5f5
+ms.sourcegitcommit: 22102f25db5ccca39aebf96bc861c92f2367c77a
 ms.translationtype: HT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 10/13/2020
-ms.locfileid: "92004756"
+ms.lasthandoff: 10/16/2020
+ms.locfileid: "92115762"
 ---
 # <a name="download-sql-server-management-studio-ssms"></a>SSMS(SQL Server Management Studio) 다운로드
 
@@ -133,7 +133,7 @@ SSMS를 제거한 후에도 설치된 상태로 유지되는 공유 구성 요�
 
 ## <a name="ssms-system-requirements"></a>SSMS 시스템 요구 사항
 
-이 SSMS 릴리스는 사용 가능한 최신 서비스 팩과 함께 사용할 경우 다음과 같은 64비트 플랫폼을 지원합니다.
+현재 SSMS 릴리스는 사용 가능한 최신 서비스 팩과 함께 사용할 경우 다음과 같은 64비트 플랫폼을 지원합니다.
 
 지원되는 운영 체제:
 
@@ -152,7 +152,7 @@ SSMS를 제거한 후에도 설치된 상태로 유지되는 공유 구성 요�
 - 하드 디스크 공간: 최소 2GB에서 최대 10GB의 사용 가능한 공간
 
 > [!NOTE]
-> SSMS는 Windows에서만 실행됩니다. Windows 이외의 운영 체제에서 실행되는 도구가 필요한 경우 Azure Data Studio를 권장합니다. Azure Data Studio는 macOS, Linux 및 Windows에서 실행되는 플랫폼 간 도구입니다. 자세한 내용은 [Azure Data Studio](../azure-data-studio/what-is.md)를 참조하세요.
+> SSMS는 Windows 용 32비트 응용 프로그램으로만 사용할 수 있습니다. Windows 이외의 운영 체제에서 실행되는 도구가 필요한 경우 Azure Data Studio를 권장합니다. Azure Data Studio는 macOS, Linux 및 Windows에서 실행되는 플랫폼 간 도구입니다. 자세한 내용은 [Azure Data Studio](../azure-data-studio/what-is.md)를 참조하세요.
 
 [!INCLUDE[get-help-sql-tools](../includes/paragraph-content/get-help-sql-tools.md)]
 
