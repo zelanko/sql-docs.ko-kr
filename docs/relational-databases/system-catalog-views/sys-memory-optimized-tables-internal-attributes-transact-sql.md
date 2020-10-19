@@ -1,6 +1,6 @@
 ---
 description: sys.memory_optimized_tables_internal_attributes(TRANSACT-SQL)
-title: sys. memory_optimized_tables_internal_attributes (Transact-sql) | Microsoft Docs
+title: sys.memory_optimized_tables_internal_attributes (Transact-sql) | Microsoft Docs
 ms.custom: ''
 ms.date: 03/07/2017
 ms.prod: sql
@@ -18,15 +18,15 @@ dev_langs:
 helpviewer_keywords:
 - sys.memory_optimized_tables_internal_attributes catalog view
 ms.assetid: 78ef5807-0504-4de8-9a01-ede6c03c7ff1
-author: jodebrui
-ms.author: jodebrui
+author: kevin-farlee
+ms.author: kfarlee
 monikerRange: =azuresqldb-current||>=sql-server-2016||=sqlallproducts-allversions||>=sql-server-linux-2017||=azuresqldb-mi-current
-ms.openlocfilehash: 23a58092954d1026071a469676e3fbfcc6628158
-ms.sourcegitcommit: 331b8495e4ab37266945c81ff5b93d250bdaa6da
+ms.openlocfilehash: 37f819a453b9619fa4e3c6185aac77859654505b
+ms.sourcegitcommit: 2b6760408de3b99193edeccce4b92a2f9ed5bcc6
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 08/20/2020
-ms.locfileid: "88646351"
+ms.lasthandoff: 10/19/2020
+ms.locfileid: "92175940"
 ---
 # <a name="sysmemory_optimized_tables_internal_attributes-transact-sql"></a>sys.memory_optimized_tables_internal_attributes(TRANSACT-SQL)
 
@@ -45,7 +45,7 @@ ms.locfileid: "88646351"
 ## <a name="permissions"></a>사용 권한  
  [!INCLUDE[ssCatViewPerm](../../includes/sscatviewperm-md.md)] 자세한 내용은 [Metadata Visibility Configuration](../../relational-databases/security/metadata-visibility-configuration.md)을 참조하세요.  
   
-## <a name="examples"></a>예제  
+## <a name="examples"></a>예  
   
 ### <a name="a-returning-all-columns-that-are-stored-off-row"></a>A. 행 외부에서 저장된 모든 열 반환
 
