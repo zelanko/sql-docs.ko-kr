@@ -9,12 +9,12 @@ ms.custom: ''
 ms.technology: integration-services
 author: chugugrace
 ms.author: chugu
-ms.openlocfilehash: 4c03bf004b95e4321cb93198750a798a019a1eb0
-ms.sourcegitcommit: e700497f962e4c2274df16d9e651059b42ff1a10
+ms.openlocfilehash: a741612f0afd305edaf4cc289f1841eb9b353d8a
+ms.sourcegitcommit: cfa04a73b26312bf18d8f6296891679166e2754d
 ms.translationtype: HT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 08/17/2020
-ms.locfileid: "88495456"
+ms.lasthandoff: 10/19/2020
+ms.locfileid: "92195215"
 ---
 # <a name="deploy-an-ssis-project-from-ssms-with-transact-sql"></a>Transact-SQL을 사용하여 SSMS에서 SSIS 프로젝트 배포
 
@@ -28,7 +28,7 @@ SQL Server Management Studio는 SQL Server에서 SQL Database까지 모든 SQL �
 
 ## <a name="prerequisites"></a>필수 조건
 
-시작하기 전에 최신 버전의 SQL Server Management Studio가 설치되어 있는지 확인합니다. SSMS를 다운로드하려면 [SSMS(SQL Server Management Studio) 다운로드](https://docs.microsoft.com/sql/ssms/download-sql-server-management-studio-ssms)를 참조하세요.
+시작하기 전에 최신 버전의 SQL Server Management Studio가 설치되어 있는지 확인합니다. SSMS를 다운로드하려면 [SSMS(SQL Server Management Studio) 다운로드](../ssms/download-sql-server-management-studio-ssms.md)를 참조하세요.
 
 ## <a name="supported-platforms"></a>지원되는 플랫폼
 
@@ -103,4 +103,4 @@ EXEC catalog.deploy_project @folder_name = '<target_folder>',
     - [Transact-SQL(VS Code)을 사용하여 SSIS 패키지 실행](ssis-quickstart-run-tsql-vscode.md)
     - [명령 프롬프트에서 SSIS 패키지 실행](./ssis-quickstart-run-cmdline.md)
     - [PowerShell을 사용하여 SSIS 패키지 실행](ssis-quickstart-run-powershell.md)
-    - [C#을 사용하여 SSIS 패키지 실행](./ssis-quickstart-run-dotnet.md) 
+    - [C#을 사용하여 SSIS 패키지 실행](./ssis-quickstart-run-dotnet.md)

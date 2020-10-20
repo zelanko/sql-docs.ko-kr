@@ -17,12 +17,12 @@ ms.assetid: 04f9863c-ba0b-47c5-af91-f2d41b078a23
 author: MikeRayMSFT
 ms.author: mikeray
 manager: erikre
-ms.openlocfilehash: c86a5f51e1d78b15a85a2063530bfb9ac4183a7d
-ms.sourcegitcommit: 827ad02375793090fa8fee63cc372d130f11393f
+ms.openlocfilehash: 95ffd6eb4e200139f653d3c051b6106c5f472497
+ms.sourcegitcommit: cfa04a73b26312bf18d8f6296891679166e2754d
 ms.translationtype: HT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 09/04/2020
-ms.locfileid: "89480622"
+ms.lasthandoff: 10/19/2020
+ms.locfileid: "92193915"
 ---
 # <a name="upgrade-integration-services"></a>Integration Services 업그레이드
 
@@ -51,14 +51,14 @@ ms.locfileid: "89480622"
 > -   DTS 2000 패키지 실행 태스크  
 > -   DTS 패키지의 업그레이드 관리자 검색입니다.  
 > 
->  지원되지 않는 다른 기능에 대한 자세한 내용은 [SQL Server 2016에서 지원되지 않는 Integration Services 기능](https://msdn.microsoft.com/library/5ee40ceb-37b9-47a9-b90d-ce1de74b10f7)을 참조하세요.  
+>  지원되지 않는 다른 기능에 대한 자세한 내용은 [SQL Server 2016에서 지원되지 않는 Integration Services 기능](/previous-versions/sql/sql-server-2016/bb500429(v=sql.130))을 참조하세요.  
   
 ## <a name="upgrading-integration-services"></a>Integration Services 업그레이드  
  다음 방법 중 하나를 사용하여 업그레이드할 수 있습니다.  
   
 -   [!INCLUDE[ssCurrent](../../includes/sscurrent-md.md)] 설치 프로그램을 실행하고 **SQL Server 2008, SQL Server 2008 R2, [!INCLUDE[ssSQL11](../../includes/sssql11-md.md)] 또는 [!INCLUDE[ssSQL14](../../includes/sssql14-md.md)]에서 업그레이드** 옵션을 선택합니다.  
   
--   명령 프롬프트에서 **setup.exe** 를 실행하고 **/ACTION=upgrade** 옵션을 지정합니다. 자세한 내용은 [명령 프롬프트에서 SQL Server 2016 설치](../../database-engine/install-windows/install-sql-server-2016-from-the-command-prompt.md)의 "[!INCLUDE[ssISnoversion](../../includes/ssisnoversion-md.md)]용 설치 스크립트" 섹션을 참조하세요.  
+-   명령 프롬프트에서 **setup.exe** 를 실행하고 **/ACTION=upgrade** 옵션을 지정합니다. 자세한 내용은 [명령 프롬프트에서 SQL Server 2016 설치](../../database-engine/install-windows/install-sql-server-from-the-command-prompt.md)의 "[!INCLUDE[ssISnoversion](../../includes/ssisnoversion-md.md)]용 설치 스크립트" 섹션을 참조하세요.  
   
  다음 동작은 업그레이드를 사용하여 수행할 수 없습니다.  
   
@@ -151,5 +151,4 @@ ms.locfileid: "89480622"
   
 ## <a name="external-resources"></a>외부 리소스  
  blogs.msdn.com의 블로그 항목 - [기존 사용자 지정 SSIS 확장 프로그램 및 애플리케이션을 Denali에서 사용되도록 설정](https://techcommunity.microsoft.com/t5/sql-server-integration-services/making-your-existing-custom-ssis-extensions-and-applications/ba-p/387951)  
-  
   

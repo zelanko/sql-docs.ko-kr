@@ -22,12 +22,12 @@ helpviewer_keywords:
 ms.assetid: ae1d8fad-6649-4e93-b589-14a32d07da33
 author: chugugrace
 ms.author: chugu
-ms.openlocfilehash: 9e5eab167ddaa471ac0bddbd4b048b38e040b62e
-ms.sourcegitcommit: e700497f962e4c2274df16d9e651059b42ff1a10
+ms.openlocfilehash: 28d2bac4024f067f4c3eb07318a47ef0d91fd171
+ms.sourcegitcommit: cfa04a73b26312bf18d8f6296891679166e2754d
 ms.translationtype: HT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 08/17/2020
-ms.locfileid: "88484606"
+ms.lasthandoff: 10/19/2020
+ms.locfileid: "92194287"
 ---
 # <a name="message-queue-task"></a>Message Queue Task
 
@@ -46,7 +46,7 @@ ms.locfileid: "88484606"
   
  메시지를 보내거나 받을 때 메시지 큐 태스크는 데이터 파일, 문자열, 변수에 대한 문자열 메시지 또는 변수 중 하나의 메시지 유형을 사용합니다. 변수에 대한 문자열 메시지의 메시지 유형은 메시지를 받을 때만 사용할 수 있습니다.  
   
- 이 태스크는 MSMQ 연결 관리자를 사용하여 메시지 큐에 연결합니다. 자세한 내용은 [MSMQ 연결 관리자](../../integration-services/connection-manager/msmq-connection-manager.md)를 참조하세요. 메시지 큐에 대한 자세한 내용은 [MSDN Library](https://go.microsoft.com/fwlink/?LinkId=7022)를 참조하십시오.  
+ 이 태스크는 MSMQ 연결 관리자를 사용하여 메시지 큐에 연결합니다. 자세한 내용은 [MSMQ 연결 관리자](../../integration-services/connection-manager/msmq-connection-manager.md)를 참조하세요. 메시지 큐에 대한 자세한 내용은 [MSDN Library](../../sql-server/index.yml)를 참조하십시오.  
   
  메시지 큐 태스크를 사용하려면 [!INCLUDE[ssISnoversion](../../includes/ssisnoversion-md.md)] 서비스가 설치되어 있어야 합니다. [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 설치 마법사의 **설치할 구성 요소** 페이지 또는 **기능 선택** 페이지에서 선택하여 설치할 수 있는 일부 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 구성 요소는 [!INCLUDE[ssISnoversion](../../includes/ssisnoversion-md.md)] 구성 요소의 일부 하위 집합을 설치합니다. 이러한 구성 요소는 특정 태스크에 유용하지만 [!INCLUDE[ssISnoversion](../../includes/ssisnoversion-md.md)] 의 기능은 제한됩니다. 예를 들어 [!INCLUDE[ssBIDevStudioFull](../../includes/ssbidevstudiofull-md.md)] 옵션을 선택하면 패키지 디자인에 필요한 [!INCLUDE[ssISnoversion](../../includes/ssisnoversion-md.md)] 구성 요소가 설치되지만 [!INCLUDE[ssISnoversion](../../includes/ssisnoversion-md.md)] 서비스가 설치되지 않기 때문에 메시지 큐 태스크가 작동하지 않습니다. [!INCLUDE[ssISnoversion](../../includes/ssisnoversion-md.md)]를 전체 설치하려면 [!INCLUDE[ssISnoversion](../../includes/ssisnoversion-md.md)] 설치할 구성 요소 **페이지에서** 를 선택해야 합니다. 메시지 큐 태스크 설치 및 실행에 대한 자세한 내용은 [Integration Services 설치](../../integration-services/install-windows/install-integration-services.md)를 참조하세요.  
   
@@ -102,7 +102,7 @@ ms.locfileid: "88484606"
  프로그래밍 방식으로 이러한 속성을 설정하는 방법은 개발자 가이드에서 **Microsoft.SqlServer.Dts.Tasks.MessageQueueTask.MessageQueueTask** 클래스에 대한 설명서를 참조하십시오.  
   
 ## <a name="related-tasks"></a>관련 작업  
- [!INCLUDE[ssIS](../../includes/ssis-md.md)] 디자이너에서 이러한 속성을 설정하는 방법에 대한 자세한 내용은 [태스크 또는 컨테이너의 속성 설정](https://msdn.microsoft.com/library/52d47ca4-fb8c-493d-8b2b-48bb269f859b)을 참조하세요.  
+ [!INCLUDE[ssIS](../../includes/ssis-md.md)] 디자이너에서 이러한 속성을 설정하는 방법에 대한 자세한 내용은 [태스크 또는 컨테이너의 속성 설정](./add-or-delete-a-task-or-a-container-in-a-control-flow.md)을 참조하세요.  
   
 ## <a name="message-queue-task-editor-general-page"></a>메시지 큐 태스크 편집기(일반 페이지)
   **메시지 큐 태스크 편집기** 대화 상자의 **일반 페이지** 를 사용하여 메시지 큐 태스크의 이름을 지정하고 설명하며 메시지 형식을 지정하고 태스크에서 메시지를 보내거나 받을지를 나타낼 수 있습니다.  
@@ -123,7 +123,7 @@ ms.locfileid: "88484606"
  **MSMQConnection**  
  기존 MSMQ 연결 관리자를 선택하거나 \<**New connection...**>을 클릭하여 새 연결 관리자를 만듭니다.  
   
- **관련 항목**: [MSMQ 연결 관리자](../../integration-services/connection-manager/msmq-connection-manager.md), [MSMQ 연결 관리자 편집기](../../integration-services/connection-manager/msmq-connection-manager-editor.md)  
+ **관련 항목**: [MSMQ 연결 관리자](../../integration-services/connection-manager/msmq-connection-manager.md), [MSMQ 연결 관리자 편집기](../connection-manager/msmq-connection-manager.md)  
   
  **메시지**  
  메시지 큐 태스크에서 메시지를 보내거나 받을지를 지정합니다. **메시지 보내기**를 선택하면 대화 상자의 왼쪽 창에 보내기 페이지가 표시되고 **메시지 받기**를 선택하면 받기 페이지가 표시됩니다. 기본적으로 이 값은 **메시지 보내기**로 설정됩니다.  
@@ -233,7 +233,7 @@ ms.locfileid: "88484606"
  **변수**  
  변수 이름을 입력하거나 \<**New variable...**>를 클릭한 다음, 새 변수를 구성합니다.  
   
- **관련 항목:** [변수 추가](https://msdn.microsoft.com/library/d09b5d31-433f-4f7c-8c68-9df3a97785d5)  
+ **관련 항목:** [변수 추가](../integration-services-ssis-variables.md)  
   
 #### <a name="filter-dynamic-options"></a>Filter 동적 옵션  
   
@@ -278,7 +278,7 @@ ms.locfileid: "88484606"
  **변수**  
  받은 메시지를 보관할 변수의 이름을 입력하거나 \<**New variable...**>를 클릭한 다음, 새 변수를 구성합니다.  
   
- **관련 항목:** [변수 추가](https://msdn.microsoft.com/library/d09b5d31-433f-4f7c-8c68-9df3a97785d5)  
+ **관련 항목:** [변수 추가](../integration-services-ssis-variables.md)  
   
 ## <a name="select-variables"></a>변수 선택
   **변수 선택** 대화 상자를 사용하여 메시지 큐 태스크의 메시지 보내기 작업에 사용할 변수를 지정할 수 있습니다. **사용 가능한 변수** 목록에는 메시지 큐 태스크 또는 해당 부모 컨테이너의 범위에 있는 시스템 및 사용자 정의 변수가 포함되어 있습니다. 이 태스크에서는 **선택한 변수** 목록의 변수를 사용합니다.  
@@ -299,9 +299,8 @@ ms.locfileid: "88484606"
  **새 변수**  
  새 변수를 만듭니다.  
   
- **관련 항목:** [변수 추가](https://msdn.microsoft.com/library/d09b5d31-433f-4f7c-8c68-9df3a97785d5)  
+ **관련 항목:** [변수 추가](../integration-services-ssis-variables.md)  
 ## <a name="see-also"></a>참고 항목  
  [Integration Services 태스크](../../integration-services/control-flow/integration-services-tasks.md)   
  [제어 흐름](../../integration-services/control-flow/control-flow.md)  
-  
   

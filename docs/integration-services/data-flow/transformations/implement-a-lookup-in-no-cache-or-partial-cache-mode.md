@@ -16,12 +16,12 @@ helpviewer_keywords:
 ms.assetid: 01b7fbca-5181-4d47-9f75-7f25af6b40d2
 author: chugugrace
 ms.author: chugu
-ms.openlocfilehash: 75974b57a139413f43b44deebeb0e1488cfd5155
-ms.sourcegitcommit: e700497f962e4c2274df16d9e651059b42ff1a10
+ms.openlocfilehash: f971d0788b33420495f1ae7ceeaca56599c8e239
+ms.sourcegitcommit: cfa04a73b26312bf18d8f6296891679166e2754d
 ms.translationtype: HT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 08/17/2020
-ms.locfileid: "88430675"
+ms.lasthandoff: 10/19/2020
+ms.locfileid: "92194186"
 ---
 # <a name="implement-a-lookup-in-no-cache-or-partial-cache-mode"></a>캐시 없음 또는 부분 캐시 모드로 조회 구현
 
@@ -108,11 +108,10 @@ ms.locfileid: "88430675"
     > [!NOTE]  
     >  이 페이지에서 지정하는 선택적 SQL 문이 **조회 변환 편집기** 의 **연결**페이지에서 지정한 테이블 이름을 재정의하고 대체합니다.  
   
-13. 오류 출력을 구성하려면 **오류 출력** 페이지를 클릭하고 오류 처리 옵션을 설정합니다. 자세한 내용은 [조회 변환 편집기&#40;오류 출력 페이지&#41;](../../../integration-services/data-flow/transformations/lookup-transformation-editor-error-output-page.md)를 참조하세요.  
+13. 오류 출력을 구성하려면 **오류 출력** 페이지를 클릭하고 오류 처리 옵션을 설정합니다. 자세한 내용은 [조회 변환 편집기&#40;오류 출력 페이지&#41;](./lookup-transformation.md)를 참조하세요.  
   
 14. 조회 변환의 변경 내용을 저장한 다음 패키지를 실행하려면 **확인** 을 클릭합니다.  
   
 ## <a name="see-also"></a>관련 항목  
  [Integration Services 변환](../../../integration-services/data-flow/transformations/integration-services-transformations.md)  
-  
   

@@ -19,12 +19,12 @@ helpviewer_keywords:
 ms.assetid: 37c07446-1264-4814-b4f5-9c66d333bb24
 author: chugugrace
 ms.author: chugu
-ms.openlocfilehash: 2abf3c8a09ead6369a5201a2d582623f05bc2f79
-ms.sourcegitcommit: e700497f962e4c2274df16d9e651059b42ff1a10
+ms.openlocfilehash: 85b62ff41c9b413c49ff6312e918f648fba430cd
+ms.sourcegitcommit: cfa04a73b26312bf18d8f6296891679166e2754d
 ms.translationtype: HT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 08/17/2020
-ms.locfileid: "88477867"
+ms.lasthandoff: 10/19/2020
+ms.locfileid: "92194831"
 ---
 # <a name="excel-destination"></a>Excel 대상
 
@@ -54,7 +54,7 @@ ms.locfileid: "88477867"
   
  **고급 편집기** 대화 상자에는 프로그래밍 방식으로 설정할 수 있는 모든 속성이 표시됩니다. **고급 편집기** 대화 상자를 사용하거나 프로그래밍 방식으로 설정할 수 있는 속성에 대한 자세한 내용을 보려면 다음 항목 중 하나를 클릭하세요.  
   
--   [Common Properties](https://msdn.microsoft.com/library/51973502-5cc6-4125-9fce-e60fa1b7b796)  
+-   [Common Properties](./set-the-properties-of-a-data-flow-component.md)  
   
 -   [Excel 사용자 지정 속성](../../integration-services/data-flow/excel-custom-properties.md)  
   
@@ -79,7 +79,7 @@ ms.locfileid: "88477867"
 |옵션|Description|  
 |------------|-----------------|  
 |테이블 또는 뷰|데이터를 워크시트 또는 Excel 데이터 원본의 명명된 범위로 로드합니다.|  
-|테이블 이름 또는 뷰 이름 변수|변수에 워크시트 또는 범위 이름을 지정합니다.<br /><br /> **관련 정보**: [패키지에서 변수 사용](https://msdn.microsoft.com/library/7742e92d-46c5-4cc4-b9a3-45b688ddb787)|  
+|테이블 이름 또는 뷰 이름 변수|변수에 워크시트 또는 범위 이름을 지정합니다.<br /><br /> **관련 정보**: [패키지에서 변수 사용](../integration-services-ssis-variables.md)|  
 |SQL 명령|SQL 쿼리를 사용하여 Excel 대상으로 데이터를 로드합니다.|  
   
  **Excel 시트의 이름**  

@@ -15,15 +15,15 @@ ms.assetid: b585851e-d15b-411f-adeb-aeabeb777c0b
 author: MladjoA
 ms.author: mlandzic
 monikerRange: =azuresqldb-current||>=sql-server-2016||=sqlallproducts-allversions||>=sql-server-linux-2017||=azuresqldb-mi-current
-ms.openlocfilehash: 271e1135cddfb775432660c1d4385753e95fbf16
-ms.sourcegitcommit: e700497f962e4c2274df16d9e651059b42ff1a10
+ms.openlocfilehash: 8dd26e26f4b567918f56187b5be4442b286ffabb
+ms.sourcegitcommit: a5398f107599102af7c8cda815d8e5e9a367ce7e
 ms.translationtype: HT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 08/17/2020
-ms.locfileid: "88455477"
+ms.lasthandoff: 10/13/2020
+ms.locfileid: "92006338"
 ---
 # <a name="create-construct-and-query-geography-instances"></a>geography 인스턴스 만들기, 구성 및 쿼리
-[!INCLUDE [SQL Server Azure SQL Database](../../includes/applies-to-version/sql-asdb.md)]
+[!INCLUDE [SQL Server Azure SQL Database Azure SQL Managed Instance](../../includes/applies-to-version/sql-asdb-asdbmi.md)]
   지리 공간 데이터 형식인 **geography**는 둥근 표면 좌표계로 데이터를 나타냅니다. 이 형식은 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]에서 .NET CLR(공용 언어 런타임) 데이터 형식으로 구현됩니다. [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] **geography** 데이터 형식은 GPS 위도 및 경도 좌표 등의 타원(둥근 표면) 데이터를 저장합니다.  
   
  **geography** 형식은 각 데이터베이스에서 미리 정의되고 사용할 수 있습니다. 다른 시스템 제공 형식을 사용할 때와 동일한 방식으로 **geography** 형식의 테이블 열을 만들고 **geography** 데이터에 대한 작업을 수행할 수 있습니다.  

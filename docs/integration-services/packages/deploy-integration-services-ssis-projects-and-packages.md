@@ -19,12 +19,12 @@ f1_keywords:
 ms.assetid: bea8ce8d-cf63-4257-840a-fc9adceade8c
 author: chugugrace
 ms.author: chugu
-ms.openlocfilehash: f31196ca74fa8aac69958ec47e084a3b63220ee7
-ms.sourcegitcommit: e700497f962e4c2274df16d9e651059b42ff1a10
+ms.openlocfilehash: 90fdfd4a64d77d3fa51ef7dc4c39ccf11b1fb9f3
+ms.sourcegitcommit: cfa04a73b26312bf18d8f6296891679166e2754d
 ms.translationtype: HT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 08/17/2020
-ms.locfileid: "88425225"
+ms.lasthandoff: 10/19/2020
+ms.locfileid: "92196375"
 ---
 # <a name="deploy-integration-services-ssis-projects-and-packages"></a>Integration Services(SSIS) 프로젝트 및 패키지 배포
 
@@ -95,7 +95,7 @@ System.ComponentModel.Win32Exception: A required privilege is not held by the cl
 
 이 섹션에 설명된 오류 및 SSIS 서비스 계정에 필요한 사용 권한에 대한 자세한 내용은 다음 블로그 게시물을 참조하세요.
  
-- [System.ComponentModel.Win32Exception: SSIS 프로젝트를 배포하는 동안 클라이언트가 필요한 권한을 가지고 있지 않습니다.](https://blogs.msdn.microsoft.com/dataaccesstechnologies/2013/08/20/system-componentmodel-win32exception-a-required-privilege-is-not-held-by-the-client-while-deploying-ssis-project/)
+- [System.ComponentModel.Win32Exception: SSIS 프로젝트를 배포하는 동안 클라이언트가 필요한 권한을 가지고 있지 않습니다.](/archive/blogs/dataaccesstechnologies/system-componentmodel-win32exception-a-required-privilege-is-not-held-by-the-client-while-deploying-ssis-project)
 
 ## <a name="deploy-projects-to-integration-services-server"></a>Deploy Projects to Integration Services Server
   현재 버전의 [!INCLUDE[ssISnoversion](../../includes/ssisnoversion-md.md)]에서는 프로젝트를 [!INCLUDE[ssISnoversion](../../includes/ssisnoversion-md.md)] 서버에 배포할 수 있습니다. [!INCLUDE[ssISnoversion](../../includes/ssisnoversion-md.md)] 서버에서는 환경을 사용하여 패키지를 관리하고, 패키지를 실행하고, 패키지에 대한 런타임 값을 구성할 수 있습니다.  
@@ -114,7 +114,7 @@ System.ComponentModel.Win32Exception: A required privilege is not held by the cl
     -   이전 버전의 [!INCLUDE[ssISnoversion](../../includes/ssisnoversion-md.md)]에서 프로젝트를 만든 경우 [!INCLUDE[vsprvs](../../includes/vsprvs-md.md)]에서 프로젝트 파일을 연 후 프로젝트 배포 모델로 프로젝트를 변환합니다.  
   
         > [!NOTE]  
-        >  프로젝트에 하나 이상의 데이터 원본이 포함된 경우 프로젝트 변환이 완료되면 데이터 원본이 제거됩니다. 프로젝트의 패키지에서 공유할 수 있는 데이터 원본에 대한 연결을 만들려면 프로젝트 수준에서 연결 관리자를 추가합니다. 자세한 내용은 [패키지에서 연결 관리자 추가, 삭제 또는 공유](https://msdn.microsoft.com/library/6f2ba4ea-10be-4c40-9e80-7efcf6ee9655)을 참조하세요.  
+        >  프로젝트에 하나 이상의 데이터 원본이 포함된 경우 프로젝트 변환이 완료되면 데이터 원본이 제거됩니다. 프로젝트의 패키지에서 공유할 수 있는 데이터 원본에 대한 연결을 만들려면 프로젝트 수준에서 연결 관리자를 추가합니다. 자세한 내용은 [패키지에서 연결 관리자 추가, 삭제 또는 공유](/previous-versions/sql/sql-server-2016/ms140237(v=sql.130))을 참조하세요.  
   
          **Integration Services 프로젝트 변환 마법사** 를 [!INCLUDE[vsprvs](../../includes/vsprvs-md.md)] 에서 실행하는지 아니면 [!INCLUDE[ssManStudioFull](../../includes/ssmanstudiofull-md.md)]에서 실행하는지에 따라 수행되는 변환 태스크가 다릅니다.  
   
@@ -530,7 +530,7 @@ exec [SSISDB].[CATALOG].[deploy_project] 'DestFolder', 'SSISPackages', @project_
   **Integration Services 프로젝트 변환 마법사** 는 프로젝트를 프로젝트 배포 모델로 변환합니다.  
   
 > [!NOTE]  
->  프로젝트에 하나 이상의 데이터 원본이 포함된 경우 프로젝트 변환이 완료되면 데이터 원본이 제거됩니다. 프로젝트의 패키지에서 공유할 수 있는 데이터 원본에 대한 연결을 만들려면 프로젝트 수준에서 연결 관리자를 추가합니다. 자세한 내용은 [패키지에서 연결 관리자 추가, 삭제 또는 공유](https://msdn.microsoft.com/library/6f2ba4ea-10be-4c40-9e80-7efcf6ee9655)을 참조하세요.  
+>  프로젝트에 하나 이상의 데이터 원본이 포함된 경우 프로젝트 변환이 완료되면 데이터 원본이 제거됩니다. 프로젝트의 패키지에서 공유할 수 있는 데이터 원본에 대한 연결을 만들려면 프로젝트 수준에서 연결 관리자를 추가합니다. 자세한 내용은 [패키지에서 연결 관리자 추가, 삭제 또는 공유](/previous-versions/sql/sql-server-2016/ms140237(v=sql.130))을 참조하세요.  
   
  **수행 작업**  
   
@@ -655,7 +655,7 @@ exec [SSISDB].[CATALOG].[deploy_project] 'DestFolder', 'SSISPackages', @project_
  선택적인 프로젝트 설명을 입력합니다.  
   
 ###  <a name="set-options-on-the-update-execute-package-task-page"></a><a name="executePackage"></a> 패키지 실행 태스크 업데이트 페이지에서 옵션 설정  
- 프로젝트 기반 참조를 사용할 수 있도록 패키지 실행 태스크 업데이트가 패키지에 포함되었습니다. 자세한 내용은 [Execute Package Task Editor](../../integration-services/control-flow/execute-package-task-editor.md)을 참조하세요.  
+ 프로젝트 기반 참조를 사용할 수 있도록 패키지 실행 태스크 업데이트가 패키지에 포함되었습니다. 자세한 내용은 [Execute Package Task Editor](../control-flow/execute-package-task.md)을 참조하세요.  
   
  **부모 패키지**  
  패키지 실행 태스크를 사용하여 자식 패키지를 실행하는 패키지의 이름을 나열합니다.  
@@ -746,4 +746,4 @@ exec [SSISDB].[CATALOG].[deploy_project] 'DestFolder', 'SSISPackages', @project_
  프로젝트 변환은 프로젝트가 [!INCLUDE[vsprvs](../../includes/vsprvs-md.md)]에 저장될 때까지 저장되지 않습니다.  
   
  **보고서 저장**  
- 프로젝트 변환 요약을 .xml 파일로 저장하려면 클릭합니다.  
+ 프로젝트 변환 요약을 .xml 파일로 저장하려면 클릭합니다.

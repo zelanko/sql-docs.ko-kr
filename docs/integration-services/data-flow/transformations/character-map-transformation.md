@@ -19,12 +19,12 @@ helpviewer_keywords:
 ms.assetid: e0f50eb6-b893-400f-bb8c-fb3072cc2620
 author: chugugrace
 ms.author: chugu
-ms.openlocfilehash: 84e3e3593e2a3cbee72d6df5cc7565bb908a8b53
-ms.sourcegitcommit: e700497f962e4c2274df16d9e651059b42ff1a10
+ms.openlocfilehash: b825ff5cee4ceba526d59cc30dc0bb1205896171
+ms.sourcegitcommit: cfa04a73b26312bf18d8f6296891679166e2754d
 ms.translationtype: HT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 08/17/2020
-ms.locfileid: "88430715"
+ms.lasthandoff: 10/19/2020
+ms.locfileid: "92194654"
 ---
 # <a name="character-map-transformation"></a>문자표 변환
 
@@ -78,7 +78,7 @@ ms.locfileid: "88430715"
   
  **고급 편집기** 대화 상자에는 프로그래밍 방식으로 설정할 수 있는 속성이 표시됩니다. **고급 편집기** 대화 상자를 사용하거나 프로그래밍 방식으로 설정할 수 있는 속성에 대한 자세한 내용을 보려면 다음 항목 중 하나를 클릭하세요.  
   
--   [Common Properties](https://msdn.microsoft.com/library/51973502-5cc6-4125-9fce-e60fa1b7b796)  
+-   [Common Properties](../set-the-properties-of-a-data-flow-component.md)  
   
 -   [변환 사용자 지정 속성](../../../integration-services/data-flow/transformations/transformation-custom-properties.md)  
   
@@ -126,6 +126,5 @@ ms.locfileid: "88430715"
  각 출력 열의 별칭을 입력합니다. 기본값은 **Copy of** 뒤에 입력 열 이름이 오는 형식이지만 설명이 포함된 고유 이름을 선택할 수 있습니다.  
   
  **오류 출력 구성**  
- [오류 출력 구성](https://msdn.microsoft.com/library/5f8da390-fab5-44f8-b268-d8fa313ce4b9) 대화 상자를 사용하여 이 변환에 대한 오류 처리 옵션을 지정할 수 있습니다.  
-  
+ [오류 출력 구성](../error-handling-in-data.md) 대화 상자를 사용하여 이 변환에 대한 오류 처리 옵션을 지정할 수 있습니다.  
   

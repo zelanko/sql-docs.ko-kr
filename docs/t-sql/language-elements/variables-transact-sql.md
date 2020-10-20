@@ -14,12 +14,12 @@ ms.assetid: f372ae86-a003-40af-92de-fa52e3eea13f
 author: rothja
 ms.author: jroth
 monikerRange: '>=aps-pdw-2016||=azuresqldb-current||=azure-sqldw-latest||>=sql-server-2016||=sqlallproducts-allversions||>=sql-server-linux-2017||=azuresqldb-mi-current'
-ms.openlocfilehash: b27c28f75dbd34fceded6a6170ea2b9596b0c60c
-ms.sourcegitcommit: 33e774fbf48a432485c601541840905c21f613a0
+ms.openlocfilehash: 264a277c45ebd1f067318625f7b0f1fb986389d4
+ms.sourcegitcommit: cfa04a73b26312bf18d8f6296891679166e2754d
 ms.translationtype: HT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 08/25/2020
-ms.locfileid: "88807027"
+ms.lasthandoff: 10/19/2020
+ms.locfileid: "92196153"
 ---
 # <a name="variables-transact-sql"></a>변수(Transact-SQL)
 [!INCLUDE [sql-asdb-asdbmi-asa-pdw](../../includes/applies-to-version/sql-asdb-asdbmi-asa-pdw.md)]
@@ -43,12 +43,12 @@ Transact-SQL 지역 변수는 특정 유형의 단일 데이터 값을 보유할
 
 ```sql
 -- Create the table.
-CREATE TABLE TestTable (cola int, colb char(3));
+CREATE TABLE TestTable (cola INT, colb CHAR(3));
 GO
 SET NOCOUNT ON;
 GO
 -- Declare the variable to be used.
-DECLARE @MyCounter int;
+DECLARE @MyCounter INT;
 
 -- Initialize the variable.
 SET @MyCounter = 0;
@@ -90,20 +90,20 @@ DECLARE 문은 다음을 통해 Transact-SQL 변수를 초기화합니다.
 
 예를 들어 다음 **DECLARE** 문은 int 데이터 형식의 **\@mycounter**라는 지역 변수를 만듭니다.  
 ```sql
-DECLARE @MyCounter int;
+DECLARE @MyCounter INT;
 ```
 둘 이상의 지역 변수를 선언하려면 정의된 첫 지역 변수 다음에 쉼표를 사용한 후 다음 지역 변수의 이름 및 데이터 형식을 지정합니다.
 
 예를 들어 다음 **DECLARE** 문은 **\@LastName**, **\@FirstName** 및 **\@StateProvince**의 세 지역 변수를 만들고 각각 NULL로 초기화합니다.  
 ```sql
-DECLARE @LastName nvarchar(30), @FirstName nvarchar(20), @StateProvince nchar(2);
+DECLARE @LastName NVARCHAR(30), @FirstName NVARCHAR(20), @StateProvince NCHAR(2);
 ```
 
 변수 범위는 변수를 참조할 수 있는 Transact-SQL 문의 범위입니다. 변수 범위는 선언된 시점부터 이를 선언했던 일괄 처리 또는 저장 프로시저가 끝날 때까지 계속됩니다. 예를 들어 다음 스크립트는 변수가 하나의 일괄 처리에서 선언되고 또 다른 일괄 처리에서 참조되므로 구문 오류를 일으킵니다.  
 ```sql
 USE AdventureWorks2014;
 GO
-DECLARE @MyVariable int;
+DECLARE @MyVariable INT;
 SET @MyVariable = 1;
 -- Terminate the batch by using the GO keyword.
 GO 
@@ -119,7 +119,7 @@ WHERE BusinessEntityID = @MyVariable;
 변수에는 변수가 정의된 일괄 처리 또는 프로시저 내에서만 표시되는 로컬 범위가 있습니다. 다음 예에서 sp_executesql을 실행하기 위해 만든 중첩 범위에서는 더 높은 범위에서 선언된 변수에 액세스할 수 없으므로 오류가 반환됩니다.  
 
 ```sql
-DECLARE @MyVariable int;
+DECLARE @MyVariable INT;
 SET @MyVariable = 1;
 EXECUTE sp_executesql N'SELECT @MyVariable'; -- this produces an error
 ```
@@ -134,8 +134,8 @@ SET 문을 사용하여 변수에 값을 할당하려면 변수 이름과 변수
 USE AdventureWorks2014;
 GO
 -- Declare two variables.
-DECLARE @FirstNameVariable nvarchar(50),
-   @PostalCodeVariable nvarchar(15);
+DECLARE @FirstNameVariable NVARCHAR(50),
+   @PostalCodeVariable NVARCHAR(15);
 
 -- Set their values.
 SET @FirstNameVariable = N'Amy';
@@ -154,7 +154,7 @@ GO
 ```sql
 USE AdventureWorks2014;
 GO
-DECLARE @EmpIDVariable int;
+DECLARE @EmpIDVariable INT;
 
 SELECT @EmpIDVariable = MAX(EmployeeID)
 FROM HumanResources.Employee;
@@ -169,7 +169,7 @@ SELECT 문에서 행을 두 개 이상 반환하고 변수가 스칼라가 아�
 ```sql
 USE AdventureWorks2014;
 GO
-DECLARE @EmpIDVariable int;
+DECLARE @EmpIDVariable INT;
 
 SELECT @EmpIDVariable = BusinessEntityID
 FROM HumanResources.Employee

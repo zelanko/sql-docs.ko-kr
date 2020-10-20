@@ -18,12 +18,12 @@ helpviewer_keywords:
 ms.assetid: a9e44748-4a9e-4179-abc4-7631597be5a7
 author: MladjoA
 ms.author: mlandzic
-ms.openlocfilehash: b10c1e637dbfbf6dbff923b212372aec48a22f40
-ms.sourcegitcommit: e700497f962e4c2274df16d9e651059b42ff1a10
+ms.openlocfilehash: cfce4111cfcfb296689754e18aeea37878636543
+ms.sourcegitcommit: 22dacedeb6e8721e7cdb6279a946d4002cfb5da3
 ms.translationtype: HT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 08/17/2020
-ms.locfileid: "88422407"
+ms.lasthandoff: 10/14/2020
+ms.locfileid: "92038086"
 ---
 # <a name="mindbcompatibilitylevel-geography-data-type"></a>MinDbCompatibilityLevel(geography 데이터 형식)
 [!INCLUDE [SQL Server Azure SQL Database ](../../includes/applies-to-version/sql-asdb.md)]
@@ -94,6 +94,5 @@ END
   
 ## <a name="see-also"></a>참고 항목  
  [ALTER DATABASE 호환성 수준&#40;Transact-SQL&#41;](../../t-sql/statements/alter-database-transact-sql-compatibility-level.md)   
- [SQL Server 데이터베이스 엔진의 이전 버전과의 호환성](../../database-engine/sql-server-database-engine-backward-compatibility.md)  
-  
+ [SQL Server 데이터베이스 엔진의 이전 버전과의 호환성](../../database-engine/discontinued-database-engine-functionality-in-sql-server.md)  
   

@@ -32,12 +32,12 @@ ms.assetid: 91da13a4-0eea-4e88-b608-dada881ff5f2
 author: MashaMSFT
 ms.author: mathoma
 monikerRange: =azuresqldb-current||>=sql-server-2016||=sqlallproducts-allversions||>=sql-server-linux-2017||=azuresqldb-mi-current
-ms.openlocfilehash: 3c36813bee6c6b75d869bc4f04d47665c206cfcc
-ms.sourcegitcommit: da88320c474c1c9124574f90d549c50ee3387b4c
+ms.openlocfilehash: 604fbce3aebe8e6e902e2dc9292a24779471c86e
+ms.sourcegitcommit: cfa04a73b26312bf18d8f6296891679166e2754d
 ms.translationtype: HT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 07/01/2020
-ms.locfileid: "85781603"
+ms.lasthandoff: 10/19/2020
+ms.locfileid: "92196224"
 ---
 # <a name="database-lifecycle-management"></a>데이터베이스 수명 주기 관리
 [!INCLUDE [SQL Server Azure SQL Database](../includes/applies-to-version/sql-asdb.md)]
@@ -45,7 +45,7 @@ ms.locfileid: "85781603"
   
  DLM은 프로젝트 디자인과 의도에 대한 논의로 시작하여, 데이터베이스 개발, 테스트, 빌드, 배포, 유지 관리, 모니터링 및 백업 작업으로 이어지고, 데이터베이스 보관으로 끝납니다. 이 항목에서는 데이터베이스 개발로 시작하여 빌드, 배포 및 모니터링 작업으로 이어지는 DLM의 단계를 간략하게 설명합니다. 여기에는 데이터베이스 관리 작업과 가져오기/내보내기, 백업, 마이그레이션, 동기화 등의 데이터 이식성 작업도 포함됩니다.  
   
- 전체 항목을 읽으려면 [DLM(데이터베이스 수명 주기 관리)](https://go.microsoft.com/fwlink/?LinkId=276949)을 참조하세요.  
+ 전체 항목을 읽으려면 [DLM(데이터베이스 수명 주기 관리)](/previous-versions/sql/sql-server-guides/jj907294(v=sql.110))을 참조하세요.  
   
 ## <a name="see-also"></a>참고 항목  
  [Azure 홈 페이지](https://www.windowsazure.com/)   
@@ -53,5 +53,4 @@ ms.locfileid: "85781603"
  [Azure 관리 센터](https://www.windowsazure.com/manage/overview/)   
  [Azure 팀 블로그](https://www.windowsazure.com/community/blog/)   
  [Azure 지원 옵션](https://www.windowsazure.com/support/contact/)  
-  
   

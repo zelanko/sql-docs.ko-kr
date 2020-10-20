@@ -21,19 +21,19 @@ helpviewer_keywords:
 ms.assetid: 4c49bb95-7259-42f4-a785-bb6aaf5f8566
 author: chugugrace
 ms.author: chugu
-ms.openlocfilehash: 5531a102eb4ec24fde1c9693c8f9939eb63b4335
-ms.sourcegitcommit: e700497f962e4c2274df16d9e651059b42ff1a10
+ms.openlocfilehash: 67a93e031afddb7533cea5251c4882da2760fbfe
+ms.sourcegitcommit: cfa04a73b26312bf18d8f6296891679166e2754d
 ms.translationtype: HT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 08/17/2020
-ms.locfileid: "88392639"
+ms.lasthandoff: 10/19/2020
+ms.locfileid: "92195400"
 ---
 # <a name="dimension-processing-destination"></a>차원 처리 대상
 
 [!INCLUDE[sqlserver-ssis](../../includes/applies-to-version/sqlserver-ssis.md)]
 
 
-  차원 처리 대상은 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] [!INCLUDE[ssASnoversion](../../includes/ssasnoversion-md.md)] 차원을 로드하고 처리합니다. 차원에 대한 자세한 내용은 [차원&#40;Analysis Services - 다차원 데이터&#41;](https://docs.microsoft.com/analysis-services/multidimensional-models-olap-logical-dimension-objects/dimensions-analysis-services-multidimensional-data)을 참조하세요.  
+  차원 처리 대상은 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] [!INCLUDE[ssASnoversion](../../includes/ssasnoversion-md.md)] 차원을 로드하고 처리합니다. 차원에 대한 자세한 내용은 [차원&#40;Analysis Services - 다차원 데이터&#41;](/analysis-services/multidimensional-models-olap-logical-dimension-objects/dimensions-analysis-services-multidimensional-data)을 참조하세요.  
   
  차원 처리 대상에는 다음 기능이 포함됩니다.  
   
@@ -43,7 +43,7 @@ ms.locfileid: "88392639"
   
 -   입력 열을 차원 테이블의 열로 매핑  
   
- [!INCLUDE[ssASnoversion](../../includes/ssasnoversion-md.md)] 개체를 처리하는 방법에 대한 자세한 내용은 [처리 옵션 및 설정&#40;Analysis Services&#41;](https://docs.microsoft.com/analysis-services/multidimensional-models/processing-options-and-settings-analysis-services)을 참조하세요.  
+ [!INCLUDE[ssASnoversion](../../includes/ssasnoversion-md.md)] 개체를 처리하는 방법에 대한 자세한 내용은 [처리 옵션 및 설정&#40;Analysis Services&#41;](/analysis-services/multidimensional-models/processing-options-and-settings-analysis-services)을 참조하세요.  
   
 ## <a name="configuration-of-the-dimension-processing-destination"></a>차원 처리 대상 구성  
  차원 처리 대상은 [!INCLUDE[ssASnoversion](../../includes/ssasnoversion-md.md)] 연결 관리자를 사용하여 [!INCLUDE[ssASnoversion](../../includes/ssasnoversion-md.md)] 프로젝트에 연결하거나 대상에서 처리되는 차원이 포함된 [!INCLUDE[ssASnoversion](../../includes/ssasnoversion-md.md)] 인스턴스에 연결합니다. 자세한 내용은 [Analysis Services Connection Manager](../../integration-services/connection-manager/analysis-services-connection-manager.md)을 참조하세요.  
@@ -54,7 +54,7 @@ ms.locfileid: "88392639"
   
  **고급 편집기** 대화 상자에는 프로그래밍 방식으로 설정할 수 있는 속성이 표시됩니다. **고급 편집기** 대화 상자를 사용하거나 프로그래밍 방식으로 설정할 수 있는 속성에 대한 자세한 내용을 보려면 다음 항목 중 하나를 클릭하십시오.  
   
--   [Common Properties](https://msdn.microsoft.com/library/51973502-5cc6-4125-9fce-e60fa1b7b796)  
+-   [Common Properties](./set-the-properties-of-a-data-flow-component.md)  
   
  속성을 설정하는 방법에 대한 자세한 내용은 [데이터 흐름 구성 요소의 속성 설정](../../integration-services/data-flow/set-the-properties-of-a-data-flow-component.md)을 참조하세요.  
   
@@ -173,5 +173,4 @@ ms.locfileid: "88392639"
 ## <a name="see-also"></a>참고 항목  
  [데이터 흐름](../../integration-services/data-flow/data-flow.md)   
  [Integration Services 변환](../../integration-services/data-flow/transformations/integration-services-transformations.md)  
-  
   

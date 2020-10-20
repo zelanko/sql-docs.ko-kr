@@ -8,12 +8,12 @@ ms.topic: conceptual
 ms.prod: sql
 ms.technology: linux
 ms.assetid: 9dcc6a90-0add-42c2-815b-862e4e2a21ac
-ms.openlocfilehash: 38cdca8bea1c524ac4b8c964871ac04d5b221506
-ms.sourcegitcommit: f7ac1976d4bfa224332edd9ef2f4377a4d55a2c9
+ms.openlocfilehash: 3ecec5879e66f17426b9aa68014c2b2d0f751153
+ms.sourcegitcommit: 22102f25db5ccca39aebf96bc861c92f2367c77a
 ms.translationtype: HT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 07/02/2020
-ms.locfileid: "85887867"
+ms.lasthandoff: 10/16/2020
+ms.locfileid: "92115535"
 ---
 # <a name="sql-server-on-linux"></a>SQL Server on Linux
 
@@ -61,7 +61,7 @@ SQL Server 2019는 Linux에서 실행됩니다. 운영 체제에 관계없이 �
 
 | 도구 | 자습서 |
 |-----|-----|
-| VS Code(Visual Studio Code) | [SQL Server on Linux와 함께 VS Code 사용](sql-server-linux-develop-use-vscode.md) |
+| VS Code(Visual Studio Code) | [SQL Server on Linux와 함께 VS Code 사용](../tools/visual-studio-code/sql-server-develop-use-vscode.md) |
 | SSMS(SQL Server Management Studio) | [Windows에서 SSMS를 사용하여 SQL Server on Linux에 연결](sql-server-linux-manage-ssms.md) |
 | SSDT(SQL Server Data Tools) | [SQL Server on Linux와 함께 SSDT 사용](sql-server-linux-develop-use-ssdt.md) |
 

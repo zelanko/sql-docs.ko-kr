@@ -21,12 +21,12 @@ ms.assetid: 17186213-5ab5-40b0-b470-b660af1ec44c
 author: markingmyname
 ms.author: maghan
 monikerRange: '>=aps-pdw-2016||=azuresqldb-current||=azure-sqldw-latest||>=sql-server-2016||=sqlallproducts-allversions||>=sql-server-linux-2017||=azuresqldb-mi-current'
-ms.openlocfilehash: 8e15d2d46f6bf1d7c922b11a210825cf78509ebe
-ms.sourcegitcommit: e700497f962e4c2274df16d9e651059b42ff1a10
+ms.openlocfilehash: 889e473669093646ae7c976025ed4032c17beeff
+ms.sourcegitcommit: 22dacedeb6e8721e7cdb6279a946d4002cfb5da3
 ms.translationtype: HT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 08/17/2020
-ms.locfileid: "88468055"
+ms.lasthandoff: 10/14/2020
+ms.locfileid: "92038353"
 ---
 # <a name="what-are-the-sql-database-functions"></a>SQL 데이터베이스 함수란?
 [!INCLUDE [sql-asdb-asdbmi-asa-pdw](../../includes/applies-to-version/sql-asdb-asdbmi-asa-pdw.md)]
@@ -67,7 +67,7 @@ SQL 데이터베이스에서 사용할 수 있는 기본 제공 함수의 범주
 |[문자열 함수](string-functions-transact-sql.md)|문자열(**char** 또는 **varchar**) 입력 값에 대한 작업을 수행하고 문자열이나 숫자 값을 반환합니다.|  
 |[시스템 함수](../../relational-databases/system-functions/system-functions-category-transact-sql.md)|작업을 수행하고 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 인스턴스의 값, 개체 및 설정에 대한 정보를 반환합니다.|  
 |[시스템 통계 함수](system-statistical-functions-transact-sql.md)|시스템에 대한 통계 정보를 반환합니다.|  
-|[텍스트 및 이미지 함수](https://msdn.microsoft.com/library/b9c70488-1bf5-4068-a003-e548ccbc5199)|텍스트 또는 이미지 입력 값이나 열에 대한 작업을 수행하고 그 값에 대한 정보를 반환합니다.|  
+|[텍스트 및 이미지 함수](./text-and-image-functions-textptr-transact-sql.md)|텍스트 또는 이미지 입력 값이나 열에 대한 작업을 수행하고 그 값에 대한 정보를 반환합니다.|  
   
 ## <a name="function-determinism"></a>함수 결정성  
  [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 기본 제공 함수는 결정적이거나 비결정적입니다. 특정 입력 값 집합으로 함수를 호출했을 때 항상 동일한 결과를 반환하는 경우에는 함수가 결정적이며 동일한 특정 입력 값 집합으로 함수를 호출할 때마다 다른 결과를 반환할 수 있으면 비결정적입니다. 자세한 내용은 [Deterministic and Nondeterministic Functions](../../relational-databases/user-defined-functions/deterministic-and-nondeterministic-functions.md)를 참조하세요.  
@@ -83,5 +83,4 @@ SQL 데이터베이스에서 사용할 수 있는 기본 제공 함수의 범주
  [CREATE FUNCTION&#40;Transact-SQL&#41;](../../t-sql/statements/create-function-transact-sql.md)   
  [결정적 함수 및 비결정적 함수](../../relational-databases/user-defined-functions/deterministic-and-nondeterministic-functions.md)   
  [저장 프로시저 사용 &#40;MDX&#41;](../../mdx/using-stored-procedures-mdx.md)  
-  
   

@@ -16,12 +16,12 @@ f1_keywords:
 ms.assetid: bffa63e0-c737-4b54-b4ea-495a400ffcf8
 author: chugugrace
 ms.author: chugu
-ms.openlocfilehash: 80b988844668fbc5ea1e06af2852ffc9bc1a7785
-ms.sourcegitcommit: e700497f962e4c2274df16d9e651059b42ff1a10
+ms.openlocfilehash: 04bf343142c1e89affe6ebb056f09771226da6e0
+ms.sourcegitcommit: cfa04a73b26312bf18d8f6296891679166e2754d
 ms.translationtype: HT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 08/17/2020
-ms.locfileid: "88392109"
+ms.lasthandoff: 10/19/2020
+ms.locfileid: "92194791"
 ---
 # <a name="odbc-destination"></a>ODBC 대상
 
@@ -35,7 +35,7 @@ ms.locfileid: "88392109"
  ODBC 대상에는 하나의 일반 출력과 하나의 오류 출력이 있습니다.  
   
 ##  <a name="load-options"></a><a name="BKMK_odbcdestination_loadoptions"></a> 로드 옵션  
- ODBC 대상은 두 액세스 로드 모듈 중 하나를 사용할 수 있습니다. [ODBC 원본 편집기&#40;연결 관리자 페이지&#41;](../../integration-services/data-flow/odbc-source-editor-connection-manager-page.md)에서 모드를 설정합니다. 두 모드는 다음과 같습니다.  
+ ODBC 대상은 두 액세스 로드 모듈 중 하나를 사용할 수 있습니다. [ODBC 원본 편집기&#40;연결 관리자 페이지&#41;](./odbc-source.md)에서 모드를 설정합니다. 두 모드는 다음과 같습니다.  
   
 -   **일괄 처리**: 이 모드에서는 ODBC 대상이 인식된 ODBC 공급자 기능을 기반으로 가장 효율적인 삽입 메서드를 사용하려고 합니다. 대부분의 요즘 ODBC 공급자에게 이는 매개 변수가 포함된 INSERT 문을 준비한 다음 행 단위 배열 매개 변수 바인딩을 사용해야 함을 의미할 수 있습니다(배열 크기는 **BatchSize** 속성으로 제어됨). **일괄 처리** 를 선택했는데 공급자가 이 메서드를 지원하지 않으면 ODBC 대상이 **행 단위** 모드로 자동 전환됩니다.  
   
@@ -50,7 +50,7 @@ ms.locfileid: "88392109"
   
 -   표준 출력 데이터 열입니다.  
   
- 오류 동작 설정에 따라 ODBC 대상은 추출 프로세스 중 발생하는 오류(데이터 변환, 잘림)를 오류 출력에 반환하는 작업을 지원합니다. 자세한 내용은 [ODBC 원본 편집기&#40;오류 출력 페이지&#41;](../../integration-services/data-flow/odbc-source-editor-error-output-page.md)를 참조하세요.  
+ 오류 동작 설정에 따라 ODBC 대상은 추출 프로세스 중 발생하는 오류(데이터 변환, 잘림)를 오류 출력에 반환하는 작업을 지원합니다. 자세한 내용은 [ODBC 원본 편집기&#40;오류 출력 페이지&#41;](./odbc-source.md)를 참조하세요.  
   
 ## <a name="parallelism"></a>병렬 처리  
  동일한 컴퓨터 또는 서로 다른 컴퓨터에서 동일한 테이블 또는 서로 다른 테이블에 대해 병렬로 실행될 수 있는 ODBC 대상 구성 요소의 수에는 제한이 없습니다(일반적인 전역 세션 제한 제외).  
@@ -67,11 +67,11 @@ ms.locfileid: "88392109"
   
  자세한 내용은 다음 항목 중 하나를 참조하십시오.  
   
--   [ODBC 대상 편집기&#40;연결 관리자 페이지&#41;](../../integration-services/data-flow/odbc-destination-editor-connection-manager-page.md)  
+-   [ODBC 대상 편집기&#40;연결 관리자 페이지&#41;]()  
   
--   [ODBC 대상 편집기&#40;매핑 페이지&#41;](../../integration-services/data-flow/odbc-destination-editor-mappings-page.md)  
+-   [ODBC 대상 편집기&#40;매핑 페이지&#41;]()  
   
--   [ODBC 대상 편집기&#40;오류 출력 페이지&#41;](../../integration-services/data-flow/odbc-destination-editor-error-output-page.md)  
+-   [ODBC 대상 편집기&#40;오류 출력 페이지&#41;]()  
   
  **고급 편집기** 대화 상자에는 프로그래밍 방식으로 설정할 수 있는 속성이 포함됩니다.  
   
@@ -185,4 +185,3 @@ ms.locfileid: "88392109"
   
 #### <a name="redirect-flow"></a>흐름 리디렉션  
  오류 또는 잘림을 발생시키는 행이 ODBC 대상의 오류 출력으로 전송됩니다. 자세한 내용은 ODBC 대상을 참조하십시오.  
-  

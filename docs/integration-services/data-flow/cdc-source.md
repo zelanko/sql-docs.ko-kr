@@ -16,12 +16,12 @@ f1_keywords:
 ms.assetid: 99775608-e177-44ed-bb44-aaccb0f4f327
 author: chugugrace
 ms.author: chugu
-ms.openlocfilehash: 86e5bfae7baa757b2655e63470be427ea46bebed
-ms.sourcegitcommit: e700497f962e4c2274df16d9e651059b42ff1a10
+ms.openlocfilehash: 7bd7f2478a08b00d1eb970b80ca3e5fb9f168d21
+ms.sourcegitcommit: cfa04a73b26312bf18d8f6296891679166e2754d
 ms.translationtype: HT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 08/17/2020
-ms.locfileid: "88457442"
+ms.lasthandoff: 10/19/2020
+ms.locfileid: "92196472"
 ---
 # <a name="cdc-source"></a>CDC 원본
 
@@ -36,7 +36,7 @@ ms.locfileid: "88457442"
   
  CDC 원본은 다음과 같은 구성을 사용합니다.  
   
--   [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] CDC 데이터베이스에 액세스하기 위한 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] ADO.NET 연결 관리자 CDC 원본 연결 구성에 대한 자세한 내용은 [CDC 원본 편집기&#40;연결 관리자 페이지&#41;](../../integration-services/data-flow/cdc-source-editor-connection-manager-page.md)를 참조하세요.  
+-   [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] CDC 데이터베이스에 액세스하기 위한 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] ADO.NET 연결 관리자 CDC 원본 연결 구성에 대한 자세한 내용은 [CDC 원본 편집기&#40;연결 관리자 페이지&#41;]()를 참조하세요.  
   
 -   CDC용으로 설정된 테이블  
   
@@ -105,11 +105,11 @@ use <cdc-enabled-database-name>
   
  자세한 내용은 다음 항목 중 하나를 참조하십시오.  
   
--   [CDC 원본 편집기&#40;연결 관리자 페이지&#41;](../../integration-services/data-flow/cdc-source-editor-connection-manager-page.md)  
+-   [CDC 원본 편집기&#40;연결 관리자 페이지&#41;]()  
   
--   [CDC 원본 편집기&#40;열 페이지&#41;](../../integration-services/data-flow/cdc-source-editor-columns-page.md)  
+-   [CDC 원본 편집기&#40;열 페이지&#41;]()  
   
--   [CDC 원본 편집기&#40;오류 출력 페이지&#41;](../../integration-services/data-flow/cdc-source-editor-error-output-page.md)  
+-   [CDC 원본 편집기&#40;오류 출력 페이지&#41;]()  
   
  **고급 편집기** 대화 상자에는 프로그래밍 방식으로 설정할 수 있는 속성이 포함됩니다.  
   
@@ -251,5 +251,4 @@ use <cdc-enabled-database-name>
 ## <a name="related-content"></a>관련 내용  
   
 -   mattmasson.com의 블로그 항목 - [CDC 원본 처리 모드](https://www.mattmasson.com/2012/01/processing-modes-for-the-cdc-source/)  
-  
   

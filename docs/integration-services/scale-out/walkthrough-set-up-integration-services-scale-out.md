@@ -10,12 +10,12 @@ ms.topic: conceptual
 author: HaoQian-MS
 ms.author: haoqian
 ms.reviewer: maghan
-ms.openlocfilehash: f7de3c86cf58a9e4173ef170dff07db61f06f7f9
-ms.sourcegitcommit: 7035d9471876c70b99c58bf9b46af5cce6e9c66c
+ms.openlocfilehash: 8d71c814adf1843a6fb6237f7767e1d9f540e7e0
+ms.sourcegitcommit: cfa04a73b26312bf18d8f6296891679166e2754d
 ms.translationtype: HT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 08/03/2020
-ms.locfileid: "87522347"
+ms.lasthandoff: 10/19/2020
+ms.locfileid: "92196357"
 ---
 # <a name="walkthrough-set-up-integration-services-ssis-scale-out"></a>연습: Integration Services(SSIS) Scale Out 설정
 
@@ -76,7 +76,7 @@ Scale Out 마스터 기능을 설치하려면 [!INCLUDE[ssNoVersion_md](../../in
 
 ### <a name="install-scale-out-master-from-the-command-prompt"></a>명령 프롬프트에서 Scale Out 마스터 설치
 
-[명령 프롬프트에서 SQL Server 설치](../../database-engine/install-windows/install-sql-server-2016-from-the-command-prompt.md)의 지침에 따릅니다. 다음을 수행하여 Scale Out 마스터의 매개 변수를 설정합니다.
+[명령 프롬프트에서 SQL Server 설치](../../database-engine/install-windows/install-sql-server-from-the-command-prompt.md)의 지침에 따릅니다. 다음을 수행하여 Scale Out 마스터의 매개 변수를 설정합니다.
  
 1.  매개 변수 `/FEATURES`에 `IS_Master` 추가
 
@@ -131,7 +131,7 @@ Scale Out 작업자 기능을 설치하려면 [!INCLUDE[ssNoVersion_md](../../in
 
 ### <a name="install-scale-out-worker-from-the-command-prompt"></a>명령 프롬프트에서 Scale Out 작업자 설치
 
-[명령 프롬프트에서 SQL Server 설치](../../database-engine/install-windows/install-sql-server-2016-from-the-command-prompt.md)의 지침에 따릅니다. 다음을 수행하여 Scale Out 작업자의 매개 변수를 설정합니다.
+[명령 프롬프트에서 SQL Server 설치](../../database-engine/install-windows/install-sql-server-from-the-command-prompt.md)의 지침에 따릅니다. 다음을 수행하여 Scale Out 작업자의 매개 변수를 설정합니다.
 
 1.  `/FEATURES` 매개 변수에 IS_Worker를 추가합니다.
 

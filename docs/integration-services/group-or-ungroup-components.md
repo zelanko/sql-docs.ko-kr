@@ -16,12 +16,12 @@ helpviewer_keywords:
 ms.assetid: 34320838-c271-4f8c-90b3-1254690890bb
 author: chugugrace
 ms.author: chugu
-ms.openlocfilehash: a83bebf92ddbf4e14d08518283547cb35594c290
-ms.sourcegitcommit: e700497f962e4c2274df16d9e651059b42ff1a10
+ms.openlocfilehash: 7cd88383577694d5bef248baea5004056d239136
+ms.sourcegitcommit: cfa04a73b26312bf18d8f6296891679166e2754d
 ms.translationtype: HT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 08/17/2020
-ms.locfileid: "88430185"
+ms.lasthandoff: 10/19/2020
+ms.locfileid: "92195211"
 ---
 # <a name="group-or-ungroup-components"></a>구성 요소 그룹화 또는 그룹 해제
 
@@ -66,6 +66,5 @@ ms.locfileid: "88430185"
   
 ## <a name="see-also"></a>참고 항목  
  [제어 흐름에서 태스크 또는 컨테이너 추가 또는 삭제](../integration-services/control-flow/add-or-delete-a-task-or-a-container-in-a-control-flow.md)   
- [기본 선행 제약 조건을 사용하여 태스크 및 컨테이너 연결](https://msdn.microsoft.com/library/8f31f15f-98ff-4c35-b41f-8b8cfd148d75)  
-  
+ [기본 선행 제약 조건을 사용하여 태스크 및 컨테이너 연결](./control-flow/precedence-constraints.md)  
   

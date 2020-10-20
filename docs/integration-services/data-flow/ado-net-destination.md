@@ -19,12 +19,12 @@ helpviewer_keywords:
 ms.assetid: cb883990-d875-4d8b-b868-45f9f15ebeae
 author: chugugrace
 ms.author: chugu
-ms.openlocfilehash: de65e13530f46b72a8474e58407de61e463685d5
-ms.sourcegitcommit: 27f95e50f11a98164e9e7a5130a3e00ac06b4cea
+ms.openlocfilehash: 146a75e907131d5faae03da46419b3b4137c01ca
+ms.sourcegitcommit: cfa04a73b26312bf18d8f6296891679166e2754d
 ms.translationtype: HT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 09/28/2020
-ms.locfileid: "91412762"
+ms.lasthandoff: 10/19/2020
+ms.locfileid: "92194877"
 ---
 # <a name="ado-net-destination"></a>ADO.NET 대상
 
@@ -33,7 +33,7 @@ ms.locfileid: "91412762"
 
   ADO.NET 대상은 데이터베이스 테이블이나 뷰를 사용하는 다양한 [!INCLUDE[vstecado](../../includes/vstecado-md.md)]호환 데이터베이스로 데이터를 로드합니다. 이 데이터를 기존 테이블이나 뷰에 로드하는 옵션이 제공되거나 새 테이블을 만들고 데이터를 새 테이블에 로드할 수 있습니다.  
   
- ADO NET 대상을 사용하여 [!INCLUDE[msCoName](../../includes/msconame-md.md)] [!INCLUDE[ssSDSFull](../../includes/sssdsfull-md.md)]에 연결할 수 있습니다. OLE DB를 사용하여 [!INCLUDE[ssSDS](../../includes/sssds-md.md)] 에 연결할 수는 없습니다. [!INCLUDE[ssSDS](../../includes/sssds-md.md)]에 대한 자세한 내용은 [일반 지침 및 제한 사항(Azure SQL Database)](https://go.microsoft.com/fwlink/?LinkId=248228)을 참조하세요.  
+ ADO NET 대상을 사용하여 [!INCLUDE[msCoName](../../includes/msconame-md.md)] [!INCLUDE[ssSDSFull](../../includes/sssdsfull-md.md)]에 연결할 수 있습니다. OLE DB를 사용하여 [!INCLUDE[ssSDS](../../includes/sssds-md.md)] 에 연결할 수는 없습니다. [!INCLUDE[ssSDS](../../includes/sssds-md.md)]에 대한 자세한 내용은 [일반 지침 및 제한 사항(Azure SQL Database)](/previous-versions/azure/ee336245(v=azure.100))을 참조하세요.  
   
 ## <a name="troubleshooting-the-ado-net-destination"></a>ADO.NET 대상 문제 해결  
  ADO.NET 대상이 외부 데이터 공급자에 대해 수행하는 호출을 로깅할 수 있습니다. 이 로깅 기능을 사용하여 ADO.NET 대상이 수행하는 외부 데이터 원본에 대한 데이터 저장 문제를 해결할 수 있습니다. ADO.NET 대상이 외부 데이터 공급자에 대해 수행하는 호출을 로깅하려면 패키지 로깅을 설정하고 패키지 수준에서 **Diagnostic** 이벤트를 선택합니다. 자세한 내용은 [패키지 실행 문제 해결 도구](../../integration-services/troubleshooting/troubleshooting-tools-for-package-execution.md)를 참조하세요.  
@@ -55,7 +55,7 @@ ms.locfileid: "91412762"
   
  **고급 편집기** 대화 상자에는 프로그래밍 방식으로 설정할 수 있는 속성이 표시됩니다. **고급 편집기** 대화 상자를 사용하거나 프로그래밍 방식으로 설정할 수 있는 속성에 대한 자세한 내용을 보려면 다음 항목 중 하나를 클릭하세요.  
   
--   [Common Properties](https://msdn.microsoft.com/library/51973502-5cc6-4125-9fce-e60fa1b7b796)  
+-   [Common Properties](./set-the-properties-of-a-data-flow-component.md)  
   
 -   [ADO.NET 사용자 지정 속성](../../integration-services/data-flow/ado-net-custom-properties.md)  
   
@@ -98,7 +98,7 @@ ms.locfileid: "91412762"
   
  .NET Data Provider for SQL Server(SqlClient)를 사용하여 [!INCLUDE[msCoName](../../includes/msconame-md.md)] [!INCLUDE[ssSDSFull](../../includes/sssdsfull-md.md)]에 연결할 수 있습니다.  
   
- **사용 가능한 경우 대량 삽입 사용**을 선택하고 **오류** 옵션을 **행 리디렉션**으로 설정하면 대상에서 오류 출력으로 리디렉션하는 일괄 처리 데이터에 올바른 행이 포함될 수 있습니다. 대량 작업에서 오류 처리에 대한 자세한 내용은 [데이터 오류 처리](../../integration-services/data-flow/error-handling-in-data.md)를 참조하세요. **오류** 옵션에 대한 자세한 내용은 [ADO NET 대상 편집기&#40;오류 출력 페이지&#41;](../../integration-services/data-flow/ado-net-destination-editor-error-output-page.md)를 참조하세요.  
+ **사용 가능한 경우 대량 삽입 사용**을 선택하고 **오류** 옵션을 **행 리디렉션**으로 설정하면 대상에서 오류 출력으로 리디렉션하는 일괄 처리 데이터에 올바른 행이 포함될 수 있습니다. 대량 작업에서 오류 처리에 대한 자세한 내용은 [데이터 오류 처리](../../integration-services/data-flow/error-handling-in-data.md)를 참조하세요. **오류** 옵션에 대한 자세한 내용은 [ADO NET 대상 편집기&#40;오류 출력 페이지&#41;]()를 참조하세요.  
   
 > [!NOTE]
 >  SQL Server 또는 Sybase 원본 테이블에 ID 열이 포함되어 있으면 SQL 실행 태스크를 사용하여 ADO NET 대상 전에 IDENTITY_INSERT를 활성화하고 그 후에 다시 비활성화해야 합니다. (ID 열 속성은 열에 대한 증분 값을 지정합니다. SET IDENTITY_INSERT 문은 원본 테이블의 명시적 값을 대상 테이블의 ID 열에 삽입되도록 합니다.)  
@@ -171,5 +171,4 @@ ms.locfileid: "91412762"
   
  **적용**  
  선택한 셀에 오류 처리 옵션을 적용합니다.  
-  
   

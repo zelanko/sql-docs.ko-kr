@@ -9,12 +9,12 @@ ms.custom: ''
 ms.technology: integration-services
 author: chugugrace
 ms.author: chugu
-ms.openlocfilehash: afd8fb3bf9b77eaaf5ee69728fafd83ed4f63889
-ms.sourcegitcommit: e700497f962e4c2274df16d9e651059b42ff1a10
+ms.openlocfilehash: b22c31b7e38936adec2ac7355912e2899024659c
+ms.sourcegitcommit: cfa04a73b26312bf18d8f6296891679166e2754d
 ms.translationtype: HT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 08/17/2020
-ms.locfileid: "88430115"
+ms.lasthandoff: 10/19/2020
+ms.locfileid: "92197022"
 ---
 # <a name="run-an-ssis-package-from-ssms-with-transact-sql"></a>Transact-SQL(SSMS)을 사용하여 SSIS 패키지 실행
 
@@ -27,7 +27,7 @@ SQL Server Management Studio는 SQL Server에서 SQL Database까지 모든 SQL �
 
 ## <a name="prerequisites"></a>필수 조건
 
-시작하기 전에 최신 버전의 SSMS(SQL Server Management Studio)가 설치되어 있는지 확인합니다. SSMS를 다운로드하려면 [SSMS(SQL Server Management Studio) 다운로드](https://docs.microsoft.com/sql/ssms/download-sql-server-management-studio-ssms)를 참조하세요.
+시작하기 전에 최신 버전의 SSMS(SQL Server Management Studio)가 설치되어 있는지 확인합니다. SSMS를 다운로드하려면 [SSMS(SQL Server Management Studio) 다운로드](../ssms/download-sql-server-management-studio-ssms.md)를 참조하세요.
 
 Azure SQL Database 서버는 포트 1433에서 수신 대기합니다. 회사 방화벽 내에서 Azure SQL Database 서버에 성공적으로 연결하려면 이 포트가 회사 방화벽에서 열려 있어야 합니다.
 
@@ -107,4 +107,4 @@ GO
     - [Transact-SQL(VS Code)을 사용하여 SSIS 패키지 실행](ssis-quickstart-run-tsql-vscode.md)
     - [명령 프롬프트에서 SSIS 패키지 실행](./ssis-quickstart-run-cmdline.md)
     - [PowerShell을 사용하여 SSIS 패키지 실행](ssis-quickstart-run-powershell.md)
-    - [C#을 사용하여 SSIS 패키지 실행](./ssis-quickstart-run-dotnet.md) 
+    - [C#을 사용하여 SSIS 패키지 실행](./ssis-quickstart-run-dotnet.md)

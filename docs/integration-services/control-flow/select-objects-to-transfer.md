@@ -13,12 +13,12 @@ f1_keywords:
 ms.assetid: 57941e52-374a-4c07-84eb-9899ff1bb119
 author: chugugrace
 ms.author: chugu
-ms.openlocfilehash: 3328426a280f8e974ddaa8cbb99ea944e006553f
-ms.sourcegitcommit: e700497f962e4c2274df16d9e651059b42ff1a10
+ms.openlocfilehash: 0fa807b323adb198b65de4ac3fb38017120ad4ad
+ms.sourcegitcommit: cfa04a73b26312bf18d8f6296891679166e2754d
 ms.translationtype: HT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 08/17/2020
-ms.locfileid: "88350169"
+ms.lasthandoff: 10/19/2020
+ms.locfileid: "92194945"
 ---
 # <a name="select-objects-to-transfer"></a>전송할 개체 선택
 
@@ -33,10 +33,9 @@ ms.locfileid: "88350169"
   
 ## <a name="see-also"></a>참고 항목  
  [Integration Services 오류 및 메시지 참조](../../integration-services/integration-services-error-and-message-reference.md)   
- [작업 전송 태스크 편집기&#40;일반 페이지&#41;](../../integration-services/control-flow/transfer-jobs-task-editor-general-page.md)   
- [로그인 전송 태스크 편집기&#40;로그인 페이지&#41;](../../integration-services/control-flow/transfer-logins-task-editor-logins-page.md)   
- [SQL Server 개체 전송 태스크 편집기&#40;개체 페이지&#41;](../../integration-services/control-flow/transfer-sql-server-objects-task-editor-objects-page.md)   
- [master 저장 프로시저 전송 태스크 편집기&#40저장 프로시저 페이지&#41;](../../integration-services/control-flow/transfer-master-stored-procedures-task-editor-stored-procedures-page.md)   
- [오류 메시지 전송 태스크 편집기&#40;메시지 페이지&#41;](../../integration-services/control-flow/transfer-error-messages-task-editor-messages-page.md)  
-  
+ [작업 전송 태스크 편집기&#40;일반 페이지&#41;](./transfer-jobs-task.md)   
+ [로그인 전송 태스크 편집기&#40;로그인 페이지&#41;](./transfer-logins-task.md)   
+ [SQL Server 개체 전송 태스크 편집기&#40;개체 페이지&#41;](./transfer-sql-server-objects-task.md)   
+ [master 저장 프로시저 전송 태스크 편집기&#40저장 프로시저 페이지&#41;](./transfer-master-stored-procedures-task.md)   
+ [오류 메시지 전송 태스크 편집기&#40;메시지 페이지&#41;](./transfer-error-messages-task.md)  
   

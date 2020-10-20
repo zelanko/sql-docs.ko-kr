@@ -16,16 +16,16 @@ ms.assetid: 1615db50-69de-4778-8be6-4e058c00ccd4
 author: MladjoA
 ms.author: mlandzic
 monikerRange: =azuresqldb-current||>=sql-server-2016||=sqlallproducts-allversions||>=sql-server-linux-2017||=azuresqldb-mi-current
-ms.openlocfilehash: f0939dd9a38e049fc0db732c1635fdb73b686f04
-ms.sourcegitcommit: 04cf7905fa32e0a9a44575a6f9641d9a2e5ac0f8
+ms.openlocfilehash: a5eca8f5329c6d4727c622c78d7b66000ad50935
+ms.sourcegitcommit: a5398f107599102af7c8cda815d8e5e9a367ce7e
 ms.translationtype: HT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 10/07/2020
-ms.locfileid: "91809549"
+ms.lasthandoff: 10/13/2020
+ms.locfileid: "92006219"
 ---
 # <a name="spatial-data-types-overview"></a>공간 데이터 형식 개요
 
-[!INCLUDE [SQL Server Azure SQL Database](../../includes/applies-to-version/sql-asdb.md)]
+[!INCLUDE [SQL Server Azure SQL Database Azure SQL Managed Instance](../../includes/applies-to-version/sql-asdb-asdbmi.md)]
   
 공간 데이터 형식은 두 가지가 있습니다. **geometry** 데이터 형식은 평면, 즉 유클리드(평평한 표면) 데이터를 지원합니다. **geometry** 데이터 형식은 ‘OGC(Open Geospatial Consortium)의 Simple Features for SQL Specification’ 버전 1.1.0을 따르며 SQL MM(ISO 표준) 규격을 준수합니다.
 또한 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]에서는 GPS 위도 및 경도 좌표 등의 타원(둥근 표면) 데이터를 저장하는 **geography** 데이터 형식을 지원합니다.

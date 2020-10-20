@@ -13,12 +13,12 @@ f1_keywords:
 ms.assetid: 1d7f042d-508d-4e1a-b83a-86a18e23b85f
 author: chugugrace
 ms.author: chugu
-ms.openlocfilehash: 52ed6a20fa7b125b3d95d854a6e380512cc1e424
-ms.sourcegitcommit: e700497f962e4c2274df16d9e651059b42ff1a10
+ms.openlocfilehash: afbfe24c671d8dae1089ca1e1acb892d5d388372
+ms.sourcegitcommit: cfa04a73b26312bf18d8f6296891679166e2754d
 ms.translationtype: HT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 08/17/2020
-ms.locfileid: "88393869"
+ms.lasthandoff: 10/19/2020
+ms.locfileid: "92196557"
 ---
 # <a name="expression-task"></a>식 태스크
 
@@ -35,9 +35,8 @@ ms.locfileid: "88393869"
  식을 사용하여 속성을 설정하는 예를 보려면 **Use Property Expressions in Packages** 의 [예제 속성 식](../../integration-services/expressions/use-property-expressions-in-packages.md)섹션을 참조하십시오.  
   
 ## <a name="related-tasks"></a>관련 작업  
- [데이터 흐름 구성 요소에서 식 사용](https://msdn.microsoft.com/library/9181b998-d24a-41fb-bb3c-14eee34f910d)  
+ [데이터 흐름 구성 요소에서 식 사용](/previous-versions/sql/sql-server-2016/ms141007(v=sql.130))  
   
 ## <a name="related-content"></a>관련 내용  
  pragmaticworks.com의 기술 문서 - [SSIS 식 치트 시트](https://go.microsoft.com/fwlink/?LinkId=746575)  
-  
   

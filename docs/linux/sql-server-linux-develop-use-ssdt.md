@@ -8,12 +8,12 @@ ms.topic: conceptual
 ms.prod: sql
 ms.technology: linux
 ms.assetid: 1e924704-e07c-4a8b-b243-8c1dd8cff0d3
-ms.openlocfilehash: 93e65b7ab401479cc126e8428295cb0f0715eae4
-ms.sourcegitcommit: f7ac1976d4bfa224332edd9ef2f4377a4d55a2c9
+ms.openlocfilehash: dc8975a1454996ffbbab38e3e443f3f3847dc8a1
+ms.sourcegitcommit: 22102f25db5ccca39aebf96bc861c92f2367c77a
 ms.translationtype: HT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 07/02/2020
-ms.locfileid: "85896266"
+ms.lasthandoff: 10/16/2020
+ms.locfileid: "92115474"
 ---
 # <a name="use-visual-studio-to-create-databases-for-sql-server-on-linux"></a>Visual Studio를 사용하여 SQL Server on Linux 데이터베이스 만들기
 
@@ -110,7 +110,7 @@ T-SQL을 처음 사용하는 경우 [자습서: Transact-SQL 문 작성](../t-sq
 SQL Data Tools를 사용하여 데이터베이스를 개발하는 방법에 대한 자세한 내용은 아래 문서를 참조하세요.
 
 * [Visual Studio 다운로드 및 설치](https://www.visualstudio.com/downloads/)
-* [SSDT를 다운로드하여 설치](https://aka.ms/ssdt-download)합니다.
-* [SSDT MSDN 문서](https://msdn.microsoft.com/library/hh272686(v=vs.103).aspx)
-* [자습서: Transact-SQL 문 작성](https://msdn.microsoft.com/library/ms365303.aspx)
-* [Transact-SQL 참조(데이터베이스 엔진)](https://msdn.microsoft.com/library/bb510741.aspx)
+* [SSDT를 다운로드하여 설치](../ssdt/download-sql-server-data-tools-ssdt.md)합니다.
+* [SSDT MSDN 문서](/previous-versions/sql/sql-server-data-tools/hh272686(v=vs.103))
+* [자습서: Transact-SQL 문 작성](../t-sql/tutorial-writing-transact-sql-statements.md)
+* [Transact-SQL 참조(데이터베이스 엔진)](../t-sql/language-reference.md)

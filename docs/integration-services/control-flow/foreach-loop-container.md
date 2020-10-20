@@ -31,12 +31,12 @@ helpviewer_keywords:
 ms.assetid: dd6cc2ba-631f-4adf-89dc-29ef449c6933
 author: chugugrace
 ms.author: chugu
-ms.openlocfilehash: df2b88cc69b8f77a43ad6d1a26bfa706fed12eaa
-ms.sourcegitcommit: e700497f962e4c2274df16d9e651059b42ff1a10
+ms.openlocfilehash: 3265871cc1ddf221b3fb4090936d146f555dd3b5
+ms.sourcegitcommit: cfa04a73b26312bf18d8f6296891679166e2754d
 ms.translationtype: HT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 08/17/2020
-ms.locfileid: "88393509"
+ms.lasthandoff: 10/19/2020
+ms.locfileid: "92194295"
 ---
 # <a name="foreach-loop-container"></a>Foreach 루프 컨테이너
 
@@ -115,9 +115,9 @@ ms.locfileid: "88393509"
   
 2.  Foreach 루프 컨테이너에 태스크 및 컨테이너를 추가합니다. 자세한 내용은 [제어 흐름에서 태스크 또는 컨테이너 추가 또는 삭제](../../integration-services/control-flow/add-or-delete-a-task-or-a-container-in-a-control-flow.md)를 참조하세요.  
   
-3.  선행 제약 조건을 사용하여 Foreach 루프 컨테이너에 있는 태스크 및 컨테이너를 연결합니다. 자세한 내용은 [기본 선행 제약 조건을 사용하여 태스크 및 컨테이너 연결](https://msdn.microsoft.com/library/8f31f15f-98ff-4c35-b41f-8b8cfd148d75)을 참조하세요.  
+3.  선행 제약 조건을 사용하여 Foreach 루프 컨테이너에 있는 태스크 및 컨테이너를 연결합니다. 자세한 내용은 [기본 선행 제약 조건을 사용하여 태스크 및 컨테이너 연결](./precedence-constraints.md)을 참조하세요.  
   
-4.  Foreach 루프 컨테이너를 구성합니다. 자세한 내용은 [Foreach 루프 컨테이너 구성](https://msdn.microsoft.com/library/519c6f96-5e1f-47d2-b96a-d49946948c25)을 참조하십시오.  
+4.  Foreach 루프 컨테이너를 구성합니다. 자세한 내용은 [Foreach 루프 컨테이너 구성]()을 참조하십시오.  
 
 ## <a name="configure-a-foreach-loop-container"></a>Foreach 루프 컨테이너 구성
 이 절차에서는 열거자 및 컨테이너 수준의 속성 식을 비롯한 Foreach 루프 컨테이너를 구성하는 방법에 대해 설명합니다.  
@@ -185,7 +185,7 @@ ms.locfileid: "88393509"
 ## <a name="general-page---foreach-loop-editor"></a>일반 페이지 - Foreach 루프 편집기
 **Foreach 루프 편집기** 대화 상자의 **일반** 페이지에서 지정한 열거자를 사용하여 컬렉션의 각 멤버에 대해 워크플로를 반복하는 Foreach 루프 컨테이너의 이름을 지정하고 설명할 수 있습니다.  
   
- Foreach 루프 컨테이너와 이를 구성하는 방법은 [Foreach 루프 컨테이너](../../integration-services/control-flow/foreach-loop-container.md) 및 [Foreach 루프 컨테이너 구성](https://msdn.microsoft.com/library/519c6f96-5e1f-47d2-b96a-d49946948c25)을 참조하세요.  
+ Foreach 루프 컨테이너와 이를 구성하는 방법은 [Foreach 루프 컨테이너](../../integration-services/control-flow/foreach-loop-container.md) 및 [Foreach 루프 컨테이너 구성]()을 참조하세요.  
   
 ### <a name="options"></a>옵션  
  **이름**  
@@ -200,7 +200,7 @@ ms.locfileid: "88393509"
 ## <a name="collection-page---foreach-loop-editor"></a>컬렉션 페이지 - Foreach 루프 편집기
  **Foreach 루프 편집기** 대화 상자의 **컬렉션** 페이지를 사용하여 열거자 유형을 지정하고 열거자를 구성합니다.  
   
- Foreach 루프 컨테이너와 이를 구성하는 방법은 [Foreach 루프 컨테이너](../../integration-services/control-flow/foreach-loop-container.md) 및 [Foreach 루프 컨테이너 구성](https://msdn.microsoft.com/library/519c6f96-5e1f-47d2-b96a-d49946948c25)을 참조하세요.  
+ Foreach 루프 컨테이너와 이를 구성하는 방법은 [Foreach 루프 컨테이너](../../integration-services/control-flow/foreach-loop-container.md) 및 [Foreach 루프 컨테이너 구성]()을 참조하세요.  
   
 ### <a name="static-options"></a>정적 옵션  
  **Enumerator**  
@@ -289,7 +289,7 @@ ms.locfileid: "88393509"
  **열**  
  항목에 있는 열의 데이터 형식을 구성하려면 클릭합니다.  
   
- **관련 항목:** [For Each Item 열 대화 상자 UI 참조](https://msdn.microsoft.com/library/ea76aae0-8798-4677-8ab8-4a579de4957c)  
+ **관련 항목:** [For Each Item 열 대화 상자 UI 참조]()  
   
 #### <a name="enumerator--foreach-ado-enumerator"></a>Enumerator = Foreach ADO 열거자  
  변수에 저장된 ADO 또는 ADO.NET 개체의 행이나 테이블을 열거하는 데 Foreach ADO 열거자를 사용할 수 있습니다. 예를 들어 Foreach 루프가 변수에 데이터 세트를 기록하는 스크립트 태스크를 포함하는 경우 Foreach ADO 열거자를 사용하여 데이터 세트의 행을 열거할 수 있습니다. 변수가 ADO.NET 데이터 세트를 포함하는 경우 여러 테이블의 행을 열거하거나 테이블을 열거하도록 열거자를 구성할 수 있습니다.  
@@ -300,7 +300,7 @@ ms.locfileid: "88393509"
 > [!NOTE]  
 >  변수에 Object 데이터 형식이 있어야 합니다. 그렇지 않으면 오류가 발생합니다.  
   
- **관련 항목:** [Integration Services&#40;SSIS&#41; 변수](../../integration-services/integration-services-ssis-variables.md), [변수 추가](https://msdn.microsoft.com/library/d09b5d31-433f-4f7c-8c68-9df3a97785d5)  
+ **관련 항목:** [Integration Services&#40;SSIS&#41; 변수](../../integration-services/integration-services-ssis-variables.md), [변수 추가](../integration-services-ssis-variables.md)  
   
  **첫 번째 테이블의 행**  
  첫 번째 테이블의 행만 열거하려면 선택합니다.  
@@ -320,7 +320,7 @@ ms.locfileid: "88393509"
 > [!IMPORTANT]  
 >  ADO.NET 연결 관리자는 OLE DB용 .NET 공급자를 사용해야 합니다. SQL Server에 연결하는 경우 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 연결 관리자 **대화 상자의** OleDb용 .NET 공급자 **섹션에 나열된** Native Client를 공급자로 사용하는 것이 좋습니다.  
   
- **관련 항목:** [ADO 연결 관리자](../../integration-services/connection-manager/ado-connection-manager.md), [ADO.NET 연결 관리자 구성](../../integration-services/connection-manager/configure-ado-net-connection-manager.md)  
+ **관련 항목:** [ADO 연결 관리자](../../integration-services/connection-manager/ado-connection-manager.md), [ADO.NET 연결 관리자 구성](../connection-manager/ado-net-connection-manager.md)  
   
  **스키마**  
  열거할 스키마를 선택합니다.  
@@ -328,7 +328,7 @@ ms.locfileid: "88393509"
  **제한 설정**  
  지정한 스키마에 적용할 제한을 설정합니다.  
   
- **관련 항목:** [스키마 제한 대화 상자](https://msdn.microsoft.com/library/92e5fd32-4944-4f7c-a448-b458df93d0d5)  
+ **관련 항목:** [스키마 제한 대화 상자]()  
   
 #### <a name="enumerator--foreach-from-variable-enumerator"></a>Enumerator = Foreach From Variable 열거자  
  지정한 변수의 열거 가능한 개체를 열거하는 데 Foreach From Variable 열거자를 사용할 수 있습니다. 예를 들어 Foreach 루프가 쿼리를 실행하여 변수에 결과를 저장하는 SQL 실행 태스크를 포함하는 경우 Foreach From Variable 열거자를 사용하여 쿼리 결과를 열거할 수 있습니다.  
@@ -336,14 +336,14 @@ ms.locfileid: "88393509"
  **변수**  
  목록에서 변수를 선택하거나 \<**New variable...**>를 클릭하여 새 변수를 만듭니다.  
   
- **관련 항목:** [Integration Services&#40;SSIS&#41; 변수](../../integration-services/integration-services-ssis-variables.md), [변수 추가](https://msdn.microsoft.com/library/d09b5d31-433f-4f7c-8c68-9df3a97785d5)  
+ **관련 항목:** [Integration Services&#40;SSIS&#41; 변수](../../integration-services/integration-services-ssis-variables.md), [변수 추가](../integration-services-ssis-variables.md)  
   
 #### <a name="enumerator--foreach-nodelist-enumerator"></a>Enumerator = Foreach NodeList 열거자  
  XML 파일에 XPath 식을 적용한 결과 생성된 XML 노드 집합을 열거하는 데 Foreach Nodelist 열거자를 사용할 수 있습니다. 예를 들어 Foreach 루프가 스크립트 태스크를 포함하는 경우 Foreach NodeList 열거자를 사용하여 XPath 식 조건에 부합하는 값을 XML 파일에서 스크립트 태스크로 전달할 수 있습니다.  
   
  XML 파일에 적용되는 XPath 식은 OuterXPathString 속성에 저장되는 외부 XPath 작업입니다. XPath 열거형을 **ElementCollection**으로 설정한 경우 Foreach NodeList 열거자는 InnerXPathString 속성에 저장되는 내부 XPath 식을 요소 모음에 적용할 수 있습니다.  
   
- XML 문서 및 데이터 작업 방법은 MSDN Library의 "[.NET Framework에 XML 적용(Employing XML in the .NET Framework)](https://go.microsoft.com/fwlink/?LinkId=56214)"을 참조하십시오.  
+ XML 문서 및 데이터 작업 방법은 MSDN Library의 "[.NET Framework에 XML 적용(Employing XML in the .NET Framework)](/previous-versions/aa720019(v=vs.71))"을 참조하십시오.  
   
  **DocumentSourceType**  
  XML 문서의 원본 유형을 선택합니다. 이 속성의 옵션은 다음 표에 나열되어 있습니다.  
@@ -359,11 +359,11 @@ ms.locfileid: "88393509"
   
  **DocumentSourceType**을 **파일 연결**로 설정한 경우 파일 연결 관리자를 선택하거나 \<**New connection...**>을 클릭하여 새 연결 관리자를 만듭니다.  
   
- **관련 항목:** [파일 연결 관리자](../../integration-services/connection-manager/file-connection-manager.md), [파일 연결 관리자 편집기](../../integration-services/connection-manager/file-connection-manager-editor.md)  
+ **관련 항목:** [파일 연결 관리자](../../integration-services/connection-manager/file-connection-manager.md), [파일 연결 관리자 편집기](../connection-manager/file-connection-manager.md)  
   
  **DocumentSourceType**을 **변수**로 설정한 경우 기존 변수를 선택하거나 \<**New variable...**>를 클릭하여 새 변수를 만듭니다.  
   
- **관련 항목:** [Integration Services&#40;SSIS&#41; 변수](../../integration-services/integration-services-ssis-variables.md), [변수 추가](https://msdn.microsoft.com/library/d09b5d31-433f-4f7c-8c68-9df3a97785d5)  
+ **관련 항목:** [Integration Services&#40;SSIS&#41; 변수](../../integration-services/integration-services-ssis-variables.md), [변수 추가](../integration-services-ssis-variables.md)  
   
  **EnumerationType**  
  목록에서 열거 유형을 선택합니다. 이 속성의 옵션은 다음 표에 나열되어 있습니다.  
@@ -389,11 +389,11 @@ ms.locfileid: "88393509"
   
  **OuterXPathStringSourceType**을 **파일 연결**로 설정한 경우 파일 연결 관리자를 선택하거나 \<**New connection...**>을 클릭하여 새 연결 관리자를 만듭니다.  
   
- **관련 항목:** [파일 연결 관리자](../../integration-services/connection-manager/file-connection-manager.md), [파일 연결 관리자 편집기](../../integration-services/connection-manager/file-connection-manager-editor.md)  
+ **관련 항목:** [파일 연결 관리자](../../integration-services/connection-manager/file-connection-manager.md), [파일 연결 관리자 편집기](../connection-manager/file-connection-manager.md)  
   
  **OuterXPathStringSourceType**을 **변수**로 설정한 경우 기존 변수를 선택하거나 \<**New variable...**>를 클릭하여 새 변수를 만듭니다.  
   
- **관련 항목:** [Integration Services&#40;SSIS&#41; 변수](../../integration-services/integration-services-ssis-variables.md), [변수 추가](https://msdn.microsoft.com/library/d09b5d31-433f-4f7c-8c68-9df3a97785d5)  
+ **관련 항목:** [Integration Services&#40;SSIS&#41; 변수](../../integration-services/integration-services-ssis-variables.md), [변수 추가](../integration-services-ssis-variables.md)  
   
  **InnerElementType**  
  **EnumerationType** 을 **ElementCollection**으로 설정한 경우 목록에서 내부 요소의 유형을 선택합니다.  
@@ -412,11 +412,11 @@ ms.locfileid: "88393509"
   
  **InnerXPathStringSourceType**을 **파일 연결**로 설정한 경우 파일 연결 관리자를 선택하거나 \<**New connection...**>을 클릭하여 새 연결 관리자를 만듭니다.  
   
- **관련 항목:** [파일 연결 관리자](../../integration-services/connection-manager/file-connection-manager.md), [파일 연결 관리자 편집기](../../integration-services/connection-manager/file-connection-manager-editor.md)  
+ **관련 항목:** [파일 연결 관리자](../../integration-services/connection-manager/file-connection-manager.md), [파일 연결 관리자 편집기](../connection-manager/file-connection-manager.md)  
   
  **InnerXPathStringSourceType**을 **변수**로 설정한 경우 기존 변수를 선택하거나 \<**New variable...**>를 클릭하여 새 변수를 만듭니다.  
   
- **관련 항목:** [Integration Services&#40;SSIS&#41; 변수](../../integration-services/integration-services-ssis-variables.md), [변수 추가](https://msdn.microsoft.com/library/d09b5d31-433f-4f7c-8c68-9df3a97785d5)  
+ **관련 항목:** [Integration Services&#40;SSIS&#41; 변수](../../integration-services/integration-services-ssis-variables.md), [변수 추가](../integration-services-ssis-variables.md)  
   
 #### <a name="enumerator--foreach-smo-enumerator"></a>Enumerator = Foreach SMO 열거자  
  SMO(SQL Server Management Objects) 개체를 열거하는 데 Foreach SMO 열거자를 사용할 수 있습니다. 예를 들어 Foreach 루프가 SQL 실행 태스크를 포함하는 경우 Foreach SMO 열거자를 사용하여 **AdventureWorks** 데이터베이스의 테이블을 열거하고 각 테이블의 행 수를 계산하는 쿼리를 실행할 수 있습니다.  
@@ -424,7 +424,7 @@ ms.locfileid: "88393509"
  **연결**  
  기존 ADO.NET 연결 관리자를 선택하거나 \<**New connection...**>을 클릭하여 새 연결 관리자를 만듭니다.  
   
- 관련 항목: [ADO.NET 연결 관리자](../../integration-services/connection-manager/ado-net-connection-manager.md), [ADO.NET 연결 관리자 구성](../../integration-services/connection-manager/configure-ado-net-connection-manager.md)  
+ 관련 항목: [ADO.NET 연결 관리자](../../integration-services/connection-manager/ado-net-connection-manager.md), [ADO.NET 연결 관리자 구성](../connection-manager/ado-net-connection-manager.md)  
   
  **열거**  
  열거할 SMO 개체를 지정합니다.  
@@ -432,7 +432,7 @@ ms.locfileid: "88393509"
  **찾아보기**  
  SMO 열거를 선택합니다.  
   
- **관련 항목:** [SMO 열거 선택 대화 상자](https://msdn.microsoft.com/library/64ada1fe-21a2-4675-98fc-d5c803aa32f0)  
+ **관련 항목:** [SMO 열거 선택 대화 상자]()  
   
 ####  <a name="enumerator--foreach-hdfs-file-enumerator"></a><a name="ForeachHDFSFile"></a> 열거자 = Foreach HDFS File 열거자  
  SSIS 패키지는 **Foreach HDFS 파일 열거자** 를 사용하여 지정된 HDFS 위치에 있는 HDFS 파일을 열거할 수 있습니다. 각 HDFS 파일의 이름을 변수에 저장하여 Foreach 루프 컨테이너 내의 태스크에서 사용할 수 있습니다.  
@@ -512,20 +512,20 @@ Azure Data Lake 연결 관리자를 지정하거나 ADLS 계정을 참조하는 
 
 ***서비스 사용자 권한 구성에 대한 참고 사항***
 
-Data Lake Storage Gen2 사용 권한은 [RBAC](https://docs.microsoft.com/azure/storage/common/storage-auth-aad-rbac-portal#assign-rbac-roles-using-the-azure-portal) 및 [ACL](https://docs.microsoft.com/azure/storage/blobs/data-lake-storage-how-to-set-permissions-storage-explorer)을 통해 결정됩니다.
-ACL은 [여기](https://docs.microsoft.com/azure/storage/blobs/data-lake-storage-access-control#how-do-i-set-acls-correctly-for-a-service-principal)에 자세히 설명된 대로 앱 등록에 서비스 사용자의 OID(개체 ID)를 사용하여 구성된다는 것에 주의합니다.
+Data Lake Storage Gen2 사용 권한은 [RBAC](/azure/storage/common/storage-auth-aad-rbac-portal#assign-rbac-roles-using-the-azure-portal) 및 [ACL](/azure/storage/blobs/data-lake-storage-how-to-set-permissions-storage-explorer)을 통해 결정됩니다.
+ACL은 [여기](/azure/storage/blobs/data-lake-storage-access-control#how-do-i-set-acls-correctly-for-a-service-principal)에 자세히 설명된 대로 앱 등록에 서비스 사용자의 OID(개체 ID)를 사용하여 구성된다는 것에 주의합니다.
 RBAC 구성에 사용되는 애플리케이션(클라이언트) ID와는 다릅니다.
 기본 제공 역할 또는 사용자 지정 역할을 통해 보안 주체에 RBAC 데이터 권한이 부여된 경우 요청의 권한 부여 시 먼저 이러한 사용 권한이 평가됩니다.
 보안 주체의 RBAC 할당을 통해 요청한 작업의 권한이 부여된 경우 권한 부여가 즉시 확인되고 추가 ACL 검사가 수행되지 않습니다.
 또는 보안 주체에 RBAC 할당이 없거나 요청한 작업이 할당된 사용 권한과 일치하지 않는 경우 ACL 검사를 통해 보안 주체가 요청된 작업을 수행할 수 있는 권한이 있는지 확인합니다.
 열거자가 작동하려면 대상 폴더에 대한 **읽기** 권한과 함께 최소한 루트 파일 시스템부터 **실행** 권한을 부여합니다.
 또는 RBAC를 사용하여 최소한 **Storage Blob 데이터 읽기 권한자** 역할을 부여합니다.
-자세한 내용은 [이](https://docs.microsoft.com/azure/storage/blobs/data-lake-storage-access-control) 문서를 참조하세요.
+자세한 내용은 [이](/azure/storage/blobs/data-lake-storage-access-control) 문서를 참조하세요.
 
 ## <a name="variable-mappings-page---foreach-loop-editor"></a>변수 매핑 페이지 - Foreach 루프 편집기
  **Foreach 루프 편집기** 대화 상자의 **변수 매핑** 페이지를 사용하여 변수를 컬렉션 값에 매핑할 수 있습니다. 변수 값은 루프가 반복될 때마다 컬렉션 값으로 업데이트됩니다.  
   
- Integration Services 패키지의 Foreach 루프 컨테이너를 사용하는 방법은 [Foreach 루프 컨테이너](../../integration-services/control-flow/foreach-loop-container.md)를 참조하세요. 구성 방법에 대한 자세한 내용은 [Foreach 루프 컨테이너 구성](https://msdn.microsoft.com/library/519c6f96-5e1f-47d2-b96a-d49946948c25)을 참조하세요.  
+ Integration Services 패키지의 Foreach 루프 컨테이너를 사용하는 방법은 [Foreach 루프 컨테이너](../../integration-services/control-flow/foreach-loop-container.md)를 참조하세요. 구성 방법에 대한 자세한 내용은 [Foreach 루프 컨테이너 구성]()을 참조하세요.  
   
  [!INCLUDE[msCoName](../../includes/msconame-md.md)] [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] [!INCLUDE[ssISnoversion](../../includes/ssisnoversion-md.md)] 자습서인 간단한 ETL 패키지 만들기 자습서에는 Foreach 루프를 추가 및 구성하는 방법을 배울 수 있는 단원이 있습니다.  
   
@@ -536,7 +536,7 @@ RBAC 구성에 사용되는 애플리케이션(클라이언트) ID와는 다릅�
 > [!NOTE]  
 >  변수를 매핑하면 새 행이 **변수** 목록에 자동으로 추가됩니다.  
   
- **관련 항목**: [Integration Services&#40;SSIS&#41; 변수](../../integration-services/integration-services-ssis-variables.md), [변수 추가](https://msdn.microsoft.com/library/d09b5d31-433f-4f7c-8c68-9df3a97785d5)  
+ **관련 항목**: [Integration Services&#40;SSIS&#41; 변수](../../integration-services/integration-services-ssis-variables.md), [변수 추가](../integration-services-ssis-variables.md)  
   
  **Index**  
  Foreach Item 열거자를 사용하는 경우 컬렉션 값에서 변수에 매핑할 열의 인덱스를 지정합니다. 다른 유형의 열거자를 사용하는 경우 인덱스는 읽기 전용입니다.  
@@ -557,7 +557,7 @@ RBAC 구성에 사용되는 애플리케이션(클라이언트) ID와는 다릅�
  **변수**  
  변수를 사용하여 제한을 정의합니다. 목록에서 변수를 선택하거나 **새 변수...** 를 클릭하여 새 변수를 만듭니다.  
   
- **관련 항목:** [Integration Services&#40;SSIS&#41; 변수](../../integration-services/integration-services-ssis-variables.md), [변수 추가](https://msdn.microsoft.com/library/d09b5d31-433f-4f7c-8c68-9df3a97785d5)  
+ **관련 항목:** [Integration Services&#40;SSIS&#41; 변수](../../integration-services/integration-services-ssis-variables.md), [변수 추가](../integration-services-ssis-variables.md)  
   
  **텍스트**  
  제한을 정의할 텍스트를 입력합니다.  
@@ -610,5 +610,4 @@ RBAC 구성에 사용되는 애플리케이션(클라이언트) ID와는 다릅�
 ## <a name="see-also"></a>참고 항목  
  [제어 흐름](../../integration-services/control-flow/control-flow.md)   
  [Integration Services 컨테이너](../../integration-services/control-flow/integration-services-containers.md)  
-  
   

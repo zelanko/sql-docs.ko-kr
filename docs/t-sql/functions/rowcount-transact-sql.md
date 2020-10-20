@@ -22,12 +22,12 @@ helpviewer_keywords:
 ms.assetid: 97a47998-81d9-4331-a244-9eb8b6fe4a56
 author: julieMSFT
 ms.author: jrasnick
-ms.openlocfilehash: e0a85b458990042e524b8e8382e75ce7c4cf27b1
-ms.sourcegitcommit: 197a6ffb643f93592edf9e90b04810a18be61133
+ms.openlocfilehash: 5cbcc0c744c195db159788cb4476a92963323f66
+ms.sourcegitcommit: 22dacedeb6e8721e7cdb6279a946d4002cfb5da3
 ms.translationtype: HT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 09/26/2020
-ms.locfileid: "91379968"
+ms.lasthandoff: 10/14/2020
+ms.locfileid: "92037115"
 ---
 # <a name="x40x40rowcount-transact-sql"></a>&#x40;&#x40;ROWCOUNT (Transact-SQL)
 [!INCLUDE [SQL Server SQL Database](../../includes/applies-to-version/sql-asdb.md)]
@@ -68,7 +68,7 @@ ms.locfileid: "91379968"
   
  USE, SET \<option>, DEALLOCATE CURSOR, CLOSE CURSOR, PRINT, RAISERROR, BEGIN TRANSACTION 또는 COMMIT TRANSACTION과 같은 문은 ROWCOUNT 값을 0으로 다시 설정합니다.  
   
- 고유하게 컴파일된 저장 프로시저는 이전 @@ROWCOUNT을 보존합니다. 고유하게 컴파일된 저장 프로시저 내의 [!INCLUDE[tsql](../../includes/tsql-md.md)]문은 @@ROWCOUNT을 설정하지 않습니다. 자세한 내용은 [고유하게 컴파일된 저장 프로시저](../../relational-databases/in-memory-oltp/natively-compiled-stored-procedures.md)를 참조하세요.  
+ 고유하게 컴파일된 저장 프로시저는 이전 @@ROWCOUNT을 보존합니다. 고유하게 컴파일된 저장 프로시저 내의 [!INCLUDE[tsql](../../includes/tsql-md.md)]문은 @@ROWCOUNT을 설정하지 않습니다. 자세한 내용은 [고유하게 컴파일된 저장 프로시저](../../relational-databases/in-memory-oltp/a-guide-to-query-processing-for-memory-optimized-tables.md)를 참조하세요.  
   
 ## <a name="examples"></a>예제  
  다음 예에서는 `UPDATE` 문을 실행하고 `@@ROWCOUNT`를 사용하여 변경된 행이 있는지 확인합니다.  
@@ -87,5 +87,4 @@ GO
 ## <a name="see-also"></a>참고 항목  
  [시스템 함수&#40;Transact-SQL&#41;](../../relational-databases/system-functions/system-functions-category-transact-sql.md)   
  [SET ROWCOUNT &#40;Transact-SQL&#41;](../../t-sql/statements/set-rowcount-transact-sql.md)  
-  
   

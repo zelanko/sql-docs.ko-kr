@@ -26,12 +26,12 @@ author: stevestein
 ms.author: sstein
 ms.custom: seo-dt-2019
 monikerRange: =azuresqldb-current||>=sql-server-2016||=sqlallproducts-allversions||>=sql-server-linux-2017||=azuresqldb-mi-current
-ms.openlocfilehash: 5e02041dd6801f5ab0b819f4bffd91ca8ba38e8b
-ms.sourcegitcommit: e700497f962e4c2274df16d9e651059b42ff1a10
+ms.openlocfilehash: 77209c7b5156956897c3c458e825fddeb7462e22
+ms.sourcegitcommit: cfa04a73b26312bf18d8f6296891679166e2754d
 ms.translationtype: HT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 08/17/2020
-ms.locfileid: "88412439"
+ms.lasthandoff: 10/19/2020
+ms.locfileid: "92195596"
 ---
 # <a name="import-a-bacpac-file-to-create-a-new-user-database"></a>BACPAC 파일을 가져와 새 사용자 데이터베이스 만들기
 [!INCLUDE [SQL Server Azure SQL Database](../../includes/applies-to-version/sql-asdb.md)]
@@ -122,8 +122,8 @@ ms.locfileid: "88412439"
   
  **Azure SQL Database:**  
   
- - **[BACPAC 파일을 가져와 새 Azure SQL Database를 만들기](https://azure.microsoft.com/documentation/articles/sql-database-import/)** 에서는 Azure Portal, PowerShell, SSMS 또는 SqlPackage를 사용하는 단계별 지침을 제공합니다.  
- - 다양한 서비스 계층을 자세히 살펴보려면 **[SQL Database 옵션 및 성능: 각 서비스 계층에서 제공되는 항목 이해](https://azure.microsoft.com/documentation/articles/sql-database-service-tiers/)** 를 확인해 보세요.  
+ - **[BACPAC 파일을 가져와 새 Azure SQL Database를 만들기](/azure/azure-sql/database/database-import)** 에서는 Azure Portal, PowerShell, SSMS 또는 SqlPackage를 사용하는 단계별 지침을 제공합니다.  
+ - 다양한 서비스 계층을 자세히 살펴보려면 **[SQL Database 옵션 및 성능: 각 서비스 계층에서 제공되는 항목 이해](/azure/azure-sql/database/purchasing-models)** 를 확인해 보세요.  
 
 ### <a name="validation-page"></a>유효성 검사 페이지  
  이 페이지에서 작업을 차단한 문제를 검토할 수 있습니다. 계속하려면 차단 문제를 해결하고 **유효성 검사 다시 실행** 을 클릭하여 유효성 검사에 성공했는지 확인합니다.  
@@ -144,8 +144,7 @@ ms.locfileid: "88412439"
  **닫기**를 클릭하여 마법사를 닫습니다.  
   
 ## <a name="see-also"></a>관련 항목  
-[BACPAC 파일을 가져와 새 Azure SQL Database 만들기](https://azure.microsoft.com/documentation/articles/sql-database-import/)  
+[BACPAC 파일을 가져와 새 Azure SQL Database 만들기](/azure/azure-sql/database/database-import)  
  [데이터 계층 애플리케이션](../../relational-databases/data-tier-applications/data-tier-applications.md)   
  [데이터 계층 애플리케이션 내보내기](../../relational-databases/data-tier-applications/export-a-data-tier-application.md)  
-  
   

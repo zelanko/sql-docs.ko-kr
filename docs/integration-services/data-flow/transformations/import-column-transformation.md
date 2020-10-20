@@ -18,12 +18,12 @@ helpviewer_keywords:
 ms.assetid: ac3b74c1-ef54-4297-8062-1734324fffcc
 author: chugugrace
 ms.author: chugu
-ms.openlocfilehash: bce31855c0ddd8825401eefd2253172538159cdc
-ms.sourcegitcommit: e700497f962e4c2274df16d9e651059b42ff1a10
+ms.openlocfilehash: 538077633c5eb6716dc632d9635e13f92d2421b4
+ms.sourcegitcommit: cfa04a73b26312bf18d8f6296891679166e2754d
 ms.translationtype: HT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 08/17/2020
-ms.locfileid: "88391919"
+ms.lasthandoff: 10/19/2020
+ms.locfileid: "92194135"
 ---
 # <a name="import-column-transformation"></a>열 가져오기 변환
 
@@ -50,7 +50,7 @@ ms.locfileid: "88391919"
   
  **고급 편집기** 대화 상자에는 프로그래밍 방식으로 설정할 수 있는 속성이 표시됩니다. **고급 편집기** 대화 상자를 사용하거나 프로그래밍 방식으로 설정할 수 있는 속성에 대한 자세한 내용을 보려면 다음 항목 중 하나를 클릭하세요.  
   
--   [Common Properties](https://msdn.microsoft.com/library/51973502-5cc6-4125-9fce-e60fa1b7b796)  
+-   [Common Properties](../set-the-properties-of-a-data-flow-component.md)  
   
 -   [변환 사용자 지정 속성](../../../integration-services/data-flow/transformations/transformation-custom-properties.md)  
   
@@ -61,5 +61,4 @@ ms.locfileid: "88391919"
  [열 내보내기 변환](../../../integration-services/data-flow/transformations/export-column-transformation.md)   
  [데이터 흐름](../../../integration-services/data-flow/data-flow.md)   
  [Integration Services 변환](../../../integration-services/data-flow/transformations/integration-services-transformations.md)  
-  
   

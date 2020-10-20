@@ -9,12 +9,12 @@ ms.topic: conceptual
 ms.assetid: 61ef1731-cb3a-4afb-b4a4-059b04aeade0
 author: chugugrace
 ms.author: chugu
-ms.openlocfilehash: edff307773f51fab064c47e7d4ff45e1161d18f3
-ms.sourcegitcommit: c8e1553ff3fdf295e8dc6ce30d1c454d6fde8088
+ms.openlocfilehash: d213c8849c23ec1cb57e2628403542a31655a495
+ms.sourcegitcommit: cfa04a73b26312bf18d8f6296891679166e2754d
 ms.translationtype: HT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 07/22/2020
-ms.locfileid: "86913765"
+ms.lasthandoff: 10/19/2020
+ms.locfileid: "92193775"
 ---
 # <a name="generating-dump-files-for-package-execution"></a>패키지 실행을 위한 덤프 파일 생성
 
@@ -35,7 +35,7 @@ ms.locfileid: "86913765"
   
      실행 중인 패키지를 일시 중지하고 덤프 파일을 만들도록 하려면 이 저장 프로시저를 호출합니다.  
   
- 패키지 배포 모델을 사용하는 경우 명령줄에서 디버그 덤프 옵션을 지정하기 위해 **dtexec** 유틸리티 또는 **dtutil** 유틸리티를 사용하여 디버그 덤프 파일을 만듭니다. 자세한 내용은 [dtexec Utility](../../integration-services/packages/dtexec-utility.md) 및 [dtutil Utility](../../integration-services/dtutil-utility.md)를 참조하세요. 패키지 배포 모델에 대한 자세한 내용은 [SSIS(Integration Services) 프로젝트 및 패키지 배포](https://msdn.microsoft.com/library/hh213290.aspx) 및 [레거시 패키지 배포&#40;SSIS&#41;](../../integration-services/packages/legacy-package-deployment-ssis.md)를 참조하세요.   
+ 패키지 배포 모델을 사용하는 경우 명령줄에서 디버그 덤프 옵션을 지정하기 위해 **dtexec** 유틸리티 또는 **dtutil** 유틸리티를 사용하여 디버그 덤프 파일을 만듭니다. 자세한 내용은 [dtexec Utility](../../integration-services/packages/dtexec-utility.md) 및 [dtutil Utility](../../integration-services/dtutil-utility.md)를 참조하세요. 패키지 배포 모델에 대한 자세한 내용은 [SSIS(Integration Services) 프로젝트 및 패키지 배포](../packages/deploy-integration-services-ssis-projects-and-packages.md) 및 [레거시 패키지 배포&#40;SSIS&#41;](../../integration-services/packages/legacy-package-deployment-ssis.md)를 참조하세요.   
   
 ## <a name="debug-dump-file-format"></a>디버그 덤프 파일 형식  
  디버그 덤프 옵션을 지정하면 [!INCLUDE[ssISnoversion](../../includes/ssisnoversion-md.md)] 가 다음과 같은 디버그 덤프 파일을 만듭니다.  
@@ -55,4 +55,4 @@ ms.locfileid: "86913765"
 |최근 메시지|시스템에서 표시한 최근 메시지. 각 메시지의 시간, 유형, 설명 및 스레드 ID가 포함됩니다.|[M:1]   Ring buffer entry:              (*pRecord)<br /><br /> [D:2]      <<\<CRingBufferLogging::RingBufferLoggingRecord>>> ( \@ 0282F1A8 )<br /><br /> [E:3]         Time Stamp: 2007-09-13 13:50:32.786      (szTimeStamp)<br /><br /> [E:3]         Thread ID: 2368           (ThreadID)<br /><br /> [E:3]         Event Name: OnError                        (EventName)<br /><br /> [E:3]         Source Name:                (SourceName)<br /><br /> [E:3]         Source ID:                        (SourceID)<br /><br /> [E:3]         Execution ID:                 (ExecutionGUID)<br /><br /> [E:3]         Data Code: -1073446879              (DataCode)<br /><br /> [E:3] 설명: 구성 요소가 없거나 등록되지 않았거나 업그레이드할 수 없거나 필수 인터페이스가 없습니다. 이 구성 요소에 대한 연락처 정보는 ""입니다.|  
   
 ## <a name="related-information"></a>관련 정보  
-[패키지 실행 대화 상자](../../integration-services/packages/run-integration-services-ssis-packages.md#execute_package_dialog)  
+[패키지 실행 대화 상자](../../integration-services/packages/run-integration-services-ssis-packages.md#execute_package_dialog)

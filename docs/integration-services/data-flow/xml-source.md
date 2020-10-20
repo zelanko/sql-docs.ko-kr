@@ -20,12 +20,12 @@ helpviewer_keywords:
 ms.assetid: 68c27ea5-e93d-4e26-bfb2-d967ca0a5282
 author: chugugrace
 ms.author: chugu
-ms.openlocfilehash: 14aeae01cecd283ae480b337543fa0e1c4fe8bfc
-ms.sourcegitcommit: e700497f962e4c2274df16d9e651059b42ff1a10
+ms.openlocfilehash: c066add73dbc8049f389c828363f1157bb39edae
+ms.sourcegitcommit: cfa04a73b26312bf18d8f6296891679166e2754d
 ms.translationtype: HT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 08/17/2020
-ms.locfileid: "88425615"
+ms.lasthandoff: 10/19/2020
+ms.locfileid: "92194565"
 ---
 # <a name="xml-source"></a>XML 원본
 
@@ -83,7 +83,7 @@ ms.locfileid: "88425615"
   
  **고급 편집기** 대화 상자에는 프로그래밍 방식으로 설정할 수 있는 속성이 표시됩니다. **고급 편집기** 대화 상자를 사용하거나 프로그래밍 방식으로 설정할 수 있는 속성에 대한 자세한 내용을 보려면 다음 항목 중 하나를 클릭하세요.  
   
--   [Common Properties](https://msdn.microsoft.com/library/51973502-5cc6-4125-9fce-e60fa1b7b796)  
+-   [Common Properties](./set-the-properties-of-a-data-flow-component.md)  
   
 -   [XML 원본 사용자 지정 속성](../../integration-services/data-flow/xml-source-custom-properties.md)  
   
@@ -101,7 +101,7 @@ ms.locfileid: "88425615"
 |값|Description|  
 |-----------|-----------------|  
 |XML 파일 위치|XML 파일에서 데이터를 검색합니다.|  
-|변수를 사용한 XML 파일|변수에 XML 파일 이름을 지정합니다.<br /><br /> **관련 정보**: [패키지에서 변수 사용](https://msdn.microsoft.com/library/7742e92d-46c5-4cc4-b9a3-45b688ddb787)|  
+|변수를 사용한 XML 파일|변수에 XML 파일 이름을 지정합니다.<br /><br /> **관련 정보**: [패키지에서 변수 사용](../integration-services-ssis-variables.md)|  
 |변수를 사용한 XML 데이터|변수에서 XML 데이터를 검색합니다.|  
   
  **인라인 스키마 사용**  
@@ -174,4 +174,4 @@ ms.locfileid: "88425615"
  선택한 셀에 오류 처리 옵션을 적용합니다.  
   
 ## <a name="related-tasks"></a>관련 작업  
- [XML 원본을 사용하여 데이터 추출](../../integration-services/data-flow/extract-data-by-using-the-xml-source.md)  
+ [XML 원본을 사용하여 데이터 추출](../../integration-services/data-flow/extract-data-by-using-the-xml-source.md)

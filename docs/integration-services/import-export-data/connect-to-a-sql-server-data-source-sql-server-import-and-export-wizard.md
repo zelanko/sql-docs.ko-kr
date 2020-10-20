@@ -10,12 +10,12 @@ ms.topic: conceptual
 ms.assetid: 386cedbb-fae5-45ce-9363-c4a417f80a2f
 author: chugugrace
 ms.author: chugu
-ms.openlocfilehash: 87d7a1a9132d4a41bdc73100b4f86d51de5c6d08
-ms.sourcegitcommit: e700497f962e4c2274df16d9e651059b42ff1a10
+ms.openlocfilehash: 5238049681cfb8ec71ea27a444a4e41bf7c64703
+ms.sourcegitcommit: cfa04a73b26312bf18d8f6296891679166e2754d
 ms.translationtype: HT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 08/17/2020
-ms.locfileid: "88495584"
+ms.lasthandoff: 10/19/2020
+ms.locfileid: "92196402"
 ---
 # <a name="connect-to-a-sql-server-data-source-sql-server-import-and-export-wizard"></a>SQL Server 데이터 원본에 연결(SQL Server 가져오기 및 내보내기 마법사)
 
@@ -68,7 +68,7 @@ ms.locfileid: "88495584"
 ODBC 드라이버는 데이터 원본의 드롭다운 목록에 표시되지 않습니다. ODBC 드라이버를 사용하여 연결하려면 **.NET Framework Data Provider for ODBC**를 데이터 원본으로 선택합니다. 이 공급자는 ODBC 드라이버 주위에서 래퍼 역할을 합니다.
 
 > [!TIP]
-> **최신 드라이버를 가져오세요**. [Microsoft ODBC Driver for SQL Server](https://aka.ms/downloadmsodbcsql)를 다운로드합니다.
+> **최신 드라이버를 가져오세요**. [Microsoft ODBC Driver for SQL Server](../../connect/odbc/download-odbc-driver-for-sql-server.md)를 다운로드합니다.
 
 다음은 .NET Framework Data Provider for ODBC를 선택한 직후 표시되는 일반적인 화면입니다.
 
@@ -120,8 +120,8 @@ Windows 통합 인증을 사용하여 연결하려면 **Trusted_Connection=Yes**
 
 > [!IMPORTANT]
 > Microsoft OLE DB Provider for SQL Server 및 SQL Server Native Client는 SQL Server 2012 이후 버전에서 지원되지 않습니다. 대신 ODBC 드라이버를 사용합니다. ODBC 드라이버로 전환하는 방법에 대한 자세한 내용은 다음 블로그 게시물을 참조하세요.
->   -   [고유 관계형 데이터 액세스용 ODBC에 대한 Microsoft 지원](https://blogs.msdn.microsoft.com/sqlnativeclient/2011/08/29/microsoft-is-aligning-with-odbc-for-native-relational-data-access/)
->   -   [새로운 Microsoft ODBC Driver for SQL Server에 대한 소개](https://blogs.msdn.microsoft.com/sqlnativeclient/2013/01/23/introducing-the-new-microsoft-odbc-drivers-for-sql-server/)
+>   -   [고유 관계형 데이터 액세스용 ODBC에 대한 Microsoft 지원](/archive/blogs/sqlnativeclient/microsoft-is-aligning-with-odbc-for-native-relational-data-access)
+>   -   [새로운 Microsoft ODBC Driver for SQL Server에 대한 소개](/archive/blogs/sqlnativeclient/introducing-the-new-microsoft-odbc-drivers-for-sql-server)
 
 ## <a name="other-data-providers-and-more-info"></a>다른 데이터 공급자 및 추가 정보
 여기에 나열되지 않은 데이터 공급자를 사용하여 SQL Server에 연결하는 방법에 대한 자세한 내용은 [SQL Server 연결 문자열](https://www.connectionstrings.com/sql-server/)을 참조하세요. 또한 이러한 타사 사이트에는 이 페이지에서 설명하는 데이터 공급자 및 연결 매개 변수에 대한 자세한 정보가 포함되어 있습니다.
@@ -129,4 +129,3 @@ Windows 통합 인증을 사용하여 연결하려면 **Trusted_Connection=Yes**
 ## <a name="see-also"></a>참고 항목
 [데이터 원본 선택](../../integration-services/import-export-data/choose-a-data-source-sql-server-import-and-export-wizard.md)  
 [대상 선택](../../integration-services/import-export-data/choose-a-destination-sql-server-import-and-export-wizard.md)
-

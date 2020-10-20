@@ -10,12 +10,12 @@ ms.technology: integration-services
 author: swinarko
 ms.author: sawinark
 ms.reviewer: maghan
-ms.openlocfilehash: 8b3e01fbded713f59832c30eb8cd9d8149e5b469
-ms.sourcegitcommit: 21bedbae28840e2f96f5e8b08bcfc794f305c8bc
+ms.openlocfilehash: 7a962b29d6af2caf48f32eec5bc7e77bef3b126f
+ms.sourcegitcommit: cfa04a73b26312bf18d8f6296891679166e2754d
 ms.translationtype: HT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 08/06/2020
-ms.locfileid: "87864600"
+ms.lasthandoff: 10/19/2020
+ms.locfileid: "92194058"
 ---
 # <a name="lift-and-shift-sql-server-integration-services-workloads-to-the-cloud"></a>SQL Server Integration Services 워크로드를 클라우드로 리프트 앤 시프트
 
@@ -33,7 +33,7 @@ ms.locfileid: "87864600"
 ## <a name="architecture-of-ssis-on-azure"></a>Azure의 SSIS 아키텍처
 다음 표에서는 온-프레미스 SSIS와 Azure SSIS의 차이점을 보여 줍니다.
 
-가장 중요한 차이점은 스토리지와 런타임의 분리입니다. Azure Data Factory는 Azure에서 SSIS 패키지의 런타임 엔진을 호스팅합니다. 런타임 엔진은 Azure-SSIS IR(Azure SSIS Integration Runtime)이라고 합니다. 자세한 내용은 [Azure-SSIS Integration Runtime](https://docs.microsoft.com/azure/data-factory/concepts-integration-runtime#azure-ssis-integration-runtime)을 참조하세요.
+가장 중요한 차이점은 스토리지와 런타임의 분리입니다. Azure Data Factory는 Azure에서 SSIS 패키지의 런타임 엔진을 호스팅합니다. 런타임 엔진은 Azure-SSIS IR(Azure SSIS Integration Runtime)이라고 합니다. 자세한 내용은 [Azure-SSIS Integration Runtime](/azure/data-factory/concepts-integration-runtime#azure-ssis-integration-runtime)을 참조하세요.
 
 | 위치 | 스토리지 | 런타임 | 확장성 |
 |---|---|---|---|
@@ -45,9 +45,9 @@ ms.locfileid: "87864600"
 
 **프로비전**. Azure에서 SSIS 패키지를 배포하고 실행하려면 먼저 SSISDB(SSIS 카탈로그)와 Azure-SSIS Integration Runtime을 프로비전해야 합니다.
 
--   Azure Portal의 Azure에서 SSIS를 프로비저닝하려면 이 문서의 프로비저닝 단계를 따르세요. [Azure Data Factory에서 Azure-SSIS Integration Runtime 프로비저닝](https://docs.microsoft.com/azure/data-factory/tutorial-deploy-ssis-packages-azure) 
+-   Azure Portal의 Azure에서 SSIS를 프로비저닝하려면 이 문서의 프로비저닝 단계를 따르세요. [Azure Data Factory에서 Azure-SSIS Integration Runtime 프로비저닝](/azure/data-factory/tutorial-deploy-ssis-packages-azure) 
 
--   PowerShell을 통해 Azure에서 SSIS를 프로비저닝하려면 이 문서의 프로비저닝 단계를 따르세요. [Azure Data Factory에서 PowerShell을 통해 Azure-SSIS Integration Runtime 프로비저닝](https://docs.microsoft.com/azure/data-factory/tutorial-deploy-ssis-packages-azure-powershell)
+-   PowerShell을 통해 Azure에서 SSIS를 프로비저닝하려면 이 문서의 프로비저닝 단계를 따르세요. [Azure Data Factory에서 PowerShell을 통해 Azure-SSIS Integration Runtime 프로비저닝](/azure/data-factory/tutorial-deploy-ssis-packages-azure-powershell)
 
 Azure-SSIS IR은 한 번만 프로비전해야 합니다. 그런 다음 SSDT(SQL Server Data Tools) 및 SSMS(SQL Server Management Studio)와 같은 친숙한 도구를 사용하여 패키지를 배포, 구성, 실행, 모니터링, 예약 및 관리할 수 있습니다.
 
@@ -59,9 +59,9 @@ Azure-SSIS IR은 한 번만 프로비전해야 합니다. 그런 다음 SSDT(SQL
 -   SSISDB(SSIS 카탈로그 데이터베이스)를 호스팅하는 Azure SQL Database의 기존 인스턴스 및 데이터베이스의 서비스 계층
 -   노드당 최대 병렬 실행 수
 
-**성능 향상**. 자세한 내용은 [고성능을 위한 Azure-SSIS Integration Runtime 구성](https://docs.microsoft.com/azure/data-factory/configure-azure-ssis-integration-runtime-performance)을 참조하세요.
+**성능 향상**. 자세한 내용은 [고성능을 위한 Azure-SSIS Integration Runtime 구성](/azure/data-factory/configure-azure-ssis-integration-runtime-performance)을 참조하세요.
 
-**비용 절감**. 비용을 줄이려면 필요한 경우에만 Azure-SSIS IR를 실행합니다. 자세한 내용은 [Azure SSIS 통합 런타임의 시작 및 중지를 예약하는 방법](https://docs.microsoft.com/azure/data-factory/how-to-schedule-azure-ssis-integration-runtime)을 참조하세요.
+**비용 절감**. 비용을 줄이려면 필요한 경우에만 Azure-SSIS IR를 실행합니다. 자세한 내용은 [Azure SSIS 통합 런타임의 시작 및 중지를 예약하는 방법](/azure/data-factory/how-to-schedule-azure-ssis-integration-runtime)을 참조하세요.
 
 ## <a name="design-packages"></a>패키지 디자인
 
@@ -69,9 +69,9 @@ SSDT가 설치된 Visual Studio 또는 SSDT에서 온-프레미스 **패키지�
 
 ### <a name="connect-to-data-sources"></a>데이터 원본에 연결
 
-**Windows 인증**을 사용하여 클라우드에서 온-프레미스 데이터 원본에 연결하려면 [Azure에서 SSIS 패키지의 Windows 인증을 사용하여 데이터 원본 및 파일 공유에 연결](ssis-azure-connect-with-windows-auth.md)을 참조하세요.
+**Windows 인증**을 사용하여 클라우드에서 온-프레미스 데이터 원본에 연결하려면 [Azure에서 SSIS 패키지의 Windows 인증을 사용하여 데이터 원본 및 파일 공유에 연결](/azure/data-factory/ssis-azure-connect-with-windows-auth)을 참조하세요.
 
-파일 및 파일 공유에 연결하려면 [Azure에 배포된 SSIS 패키지로 온-프레미스 및 Azure에서 파일 열기 및 저장](ssis-azure-files-file-shares.md)을 참조하세요.
+파일 및 파일 공유에 연결하려면 [Azure에 배포된 SSIS 패키지로 온-프레미스 및 Azure에서 파일 열기 및 저장](/azure/data-factory/ssis-azure-files-file-shares)을 참조하세요.
 
 ### <a name="available-ssis-components"></a>지원되는 SSIS 구성 요소
 
@@ -79,15 +79,15 @@ SSISDB를 호스트하기 위해 SQL Database의 인스턴스를 프로비전하
 
 추가 구성 요소를 설치할 수도 있습니다. 예를 들어 기본적으로 설치되지 않은 드라이버를 설치할 수 있습니다. 자세한 내용은 [Azure SSIS Integration Runtime에 대한 사용자 지정 설치](/azure/data-factory/how-to-configure-azure-ssis-ir-custom-setup)를 참조하세요.
 
-Enterprise Edition 라이선스가 있는 경우 추가 구성 요소를 사용할 수 있습니다. 자세한 내용은 [Azure-SSIS Integration Runtime용 Enterprise Edition 프로비전](https://docs.microsoft.com/azure/data-factory/how-to-configure-azure-ssis-ir-enterprise-edition)을 참조하세요.
+Enterprise Edition 라이선스가 있는 경우 추가 구성 요소를 사용할 수 있습니다. 자세한 내용은 [Azure-SSIS Integration Runtime용 Enterprise Edition 프로비전](/azure/data-factory/how-to-configure-azure-ssis-ir-enterprise-edition)을 참조하세요.
 
-ISV인 경우 사용이 허가된 구성 요소의 설치를 업데이트하여 Azure에서 사용할 수 있습니다. 자세한 내용은 [Azure-SSIS Integration Runtime에 대한 유료 또는 사용이 허가된 사용자 지정 구성 요소 설치](https://docs.microsoft.com/azure/data-factory/how-to-develop-azure-ssis-ir-licensed-components)를 참조하세요.
+ISV인 경우 사용이 허가된 구성 요소의 설치를 업데이트하여 Azure에서 사용할 수 있습니다. 자세한 내용은 [Azure-SSIS Integration Runtime에 대한 유료 또는 사용이 허가된 사용자 지정 구성 요소 설치](/azure/data-factory/how-to-develop-azure-ssis-ir-licensed-components)를 참조하세요.
 
 ### <a name="transaction-support"></a>트랜잭션 지원
 
-온-프레미스 및 Azure 가상 머신의 SQL Server에서는 MSDTC(Microsoft Distributed Transaction Coordinator) 트랜잭션을 사용할 수 있습니다. Azure-SSIS IR의 각 노드에서 MSDTC를 구성하려면 사용자 지정 설정 기능을 사용합니다. 자세한 내용은 [Azure SSIS 통합 런타임에 대한 사용자 지정 설치](https://docs.microsoft.com/azure/data-factory/how-to-configure-azure-ssis-ir-custom-setup)를 참조하세요.
+온-프레미스 및 Azure 가상 머신의 SQL Server에서는 MSDTC(Microsoft Distributed Transaction Coordinator) 트랜잭션을 사용할 수 있습니다. Azure-SSIS IR의 각 노드에서 MSDTC를 구성하려면 사용자 지정 설정 기능을 사용합니다. 자세한 내용은 [Azure SSIS 통합 런타임에 대한 사용자 지정 설치](/azure/data-factory/how-to-configure-azure-ssis-ir-custom-setup)를 참조하세요.
 
-Azure SQL Database에서는 탄력적 트랜잭션을 사용할 수 있습니다. 자세한 내용은 [클라우드 데이터베이스의 분산 트랜잭션](https://docs.microsoft.com/azure/sql-database/sql-database-elastic-transactions-overview)을 참조하세요.
+Azure SQL Database에서는 탄력적 트랜잭션을 사용할 수 있습니다. 자세한 내용은 [클라우드 데이터베이스의 분산 트랜잭션](/azure/sql-database/sql-database-elastic-transactions-overview)을 참조하세요.
 
 ## <a name="deploy-and-run-packages"></a>패키지 배포 및 실행
 
@@ -127,7 +127,7 @@ Azure에 배포된 SSIS 패키지를 실행하려면 다양한 방법을 사용�
 
 ### <a name="run-packages-in-an-azure-data-factory-pipeline"></a>Azure Data Factory 파이프라인에서 패키지 실행
 
-Azure Data Factory 파이프라인에서 SSIS 패키지를 실행하려면 SSIS 패키지 작업 실행을 사용합니다. 자세한 내용은 [Azure Data Factory에서 SSIS 패키지 실행 작업을 사용하여 SSIS 패키지 실행](https://docs.microsoft.com/azure/data-factory/how-to-invoke-ssis-package-ssis-activity)을 참조하십시오.
+Azure Data Factory 파이프라인에서 SSIS 패키지를 실행하려면 SSIS 패키지 작업 실행을 사용합니다. 자세한 내용은 [Azure Data Factory에서 SSIS 패키지 실행 작업을 사용하여 SSIS 패키지 실행](/azure/data-factory/how-to-invoke-ssis-package-ssis-activity)을 참조하십시오.
 
 SSIS 패키지 작업 실행을 통해 Data Factory 파이프라인에서 패키지를 실행하면 런타임에 값을 패키지에 전달할 수 있습니다. 하나 이상의 런타임 값을 전달하려면 SSMS(SQL Server Management Studio)를 사용하여 SSISDB에서 SSIS 실행 환경을 만듭니다. 각 환경에서 변수를 만들고 프로젝트 또는 패키지에 대한 매개 변수에 해당하는 값을 할당합니다. 프로젝트 또는 패키지 매개 변수와 해당 환경 변수를 연결하려면 SSMS에서 SSIS 패키지를 구성합니다. 파이프라인에서 패키지를 실행하는 경우 SSIS 패키지 작업 실행 UI의 설정 탭에서 다른 환경 경로를 지정하여 환경 간에 전환합니다. SSIS 환경에 대한 자세한 내용은 [서버 환경 만들기 및 매핑](../packages/deploy-integration-services-ssis-projects-and-packages.md#create-and-map-a-server-environment)을 참조하세요.
 
@@ -137,7 +137,7 @@ SSIS 패키지 작업 실행을 통해 Data Factory 파이프라인에서 패키
 -   **SSISDB**를 마우스 오른쪽 단추로 클릭한 다음 **활성 작업**을 선택하여 **활성 작업** 대화 상자를 엽니다.
 -   [개체 탐색기]에서 패키지를 선택하여 마우스 오른쪽 단추로 클릭하고, **보고서**, **표준 보고서**, **모든 실행**을 차례로 선택합니다.
 
-Azure-SSIS Integration Runtime을 모니터링하려면 [Azure-SSIS Integration Runtime 모니터링](https://docs.microsoft.com/azure/data-factory/monitor-integration-runtime#azure-ssis-integration-runtime)을 참조하세요.
+Azure-SSIS Integration Runtime을 모니터링하려면 [Azure-SSIS Integration Runtime 모니터링](/azure/data-factory/monitor-integration-runtime#azure-ssis-integration-runtime)을 참조하세요.
 
 ## <a name="schedule-packages"></a>패키지 예약
 Azure에 배포된 패키지의 실행을 예약하기 위해 다양한 도구를 사용할 수 있습니다. 자세한 내용은 [Azure에 배포된 SSIS(SQL Server Integration Services) 실행 예약](ssis-azure-schedule-packages.md)을 참조하세요.
@@ -145,4 +145,4 @@ Azure에 배포된 패키지의 실행을 예약하기 위해 다양한 도구�
 ## <a name="next-steps"></a>다음 단계
 Azure에서 SSIS 워크로드를 시작하려면 다음 문서를 참조하세요.
 -   [자습서: Azure에 SSIS(SQL Server Integration Services) 패키지 배포 및 실행](ssis-azure-deploy-run-monitor-tutorial.md)
--   [Azure Data Factory에서 Azure-SSIS Integration Runtime 프로비전](https://docs.microsoft.com/azure/data-factory/tutorial-deploy-ssis-packages-azure)
+-   [Azure Data Factory에서 Azure-SSIS Integration Runtime 프로비전](/azure/data-factory/tutorial-deploy-ssis-packages-azure)

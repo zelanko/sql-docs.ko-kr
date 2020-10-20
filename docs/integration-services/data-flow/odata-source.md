@@ -16,12 +16,12 @@ f1_keywords:
 ms.assetid: cc9003c9-638e-432b-867e-e949d50cec90
 author: chugugrace
 ms.author: chugu
-ms.openlocfilehash: 064b6294a33b87e41a9439e2759be2461131e388
-ms.sourcegitcommit: 8689a1abea3e2b768cdf365143b9c229194010c0
+ms.openlocfilehash: 8f872916b7b93a1aab3447bad6579dd672c915e1
+ms.sourcegitcommit: cfa04a73b26312bf18d8f6296891679166e2754d
 ms.translationtype: HT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 09/03/2020
-ms.locfileid: "89424423"
+ms.lasthandoff: 10/19/2020
+ms.locfileid: "92194803"
 ---
 # <a name="odata-source"></a>OData 원본
 
@@ -42,7 +42,7 @@ SSIS 패키지의 OData 원본 구성 요소를 사용하여 Open Data Protocol(
 
 OData 원본에는 다음 데이터 원본에 대한 지원이 포함됩니다.
 -   Microsoft Dynamics AX Online 및 Microsoft Dynamics CRM Online
--   SharePoint 목록 SharePoint 서버의 모든 목록을 보려면 URL `https://<server>/_vti_bin/ListData.svc`를 사용합니다. SharePoint URL 규칙에 대한 자세한 내용은 [SharePoint Foundation REST 인터페이스](https://msdn.microsoft.com/library/ff521587.aspx)를 참조하십시오.
+-   SharePoint 목록 SharePoint 서버의 모든 목록을 보려면 URL `https://<server>/_vti_bin/ListData.svc`를 사용합니다. SharePoint URL 규칙에 대한 자세한 내용은 [SharePoint Foundation REST 인터페이스](/previous-versions/office/developer/sharepoint-2010/ff521587(v=office.14))를 참조하십시오.
 
 ## <a name="supported-data-types"></a>지원되는 데이터 형식
 
@@ -159,5 +159,4 @@ OData 원본은 단순 데이터 형식 int, byte[], bool, byte, DateTime, DateT
   
 ## <a name="see-also"></a>참고 항목  
  [OData 연결 관리자](../../integration-services/connection-manager/odata-connection-manager.md)  
-  
   

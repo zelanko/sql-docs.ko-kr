@@ -14,12 +14,12 @@ helpviewer_keywords:
 ms.assetid: 224fc025-c21f-4d43-aa9d-5ffac337f9b0
 author: chugugrace
 ms.author: chugu
-ms.openlocfilehash: d5009a7a1c0b51feb555223294e1cc4cb5ff490f
-ms.sourcegitcommit: 04fb4c2d7ccddd30745b334b319d9d2dd34325d6
+ms.openlocfilehash: 01ccacdadefac0943e721c27d11287f28d66382b
+ms.sourcegitcommit: cfa04a73b26312bf18d8f6296891679166e2754d
 ms.translationtype: HT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 09/09/2020
-ms.locfileid: "89570359"
+ms.lasthandoff: 10/19/2020
+ms.locfileid: "92196077"
 ---
 # <a name="validate-xml-with-the-xml-task"></a>Validate XML with the XML Task
 
@@ -125,6 +125,5 @@ ORDER BY 2 DESC, COALESCE(error, 'Z');
   
 ## <a name="see-also"></a>참고 항목  
  [XML 태스크](../../integration-services/control-flow/xml-task.md)   
- [XML 태스크 편집기&#40;일반 페이지&#41;](../../integration-services/control-flow/xml-task-editor-general-page.md)  
-  
+ [XML 태스크 편집기&#40;일반 페이지&#41;](./xml-task.md)  
   

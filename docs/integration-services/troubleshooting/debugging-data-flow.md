@@ -17,12 +17,12 @@ helpviewer_keywords:
 ms.assetid: 1c574f1b-54f7-4c05-8e42-8620e2c1df0f
 author: chugugrace
 ms.author: chugu
-ms.openlocfilehash: 227414c3527633c941f7db123cd75083e1b6207b
-ms.sourcegitcommit: e700497f962e4c2274df16d9e651059b42ff1a10
+ms.openlocfilehash: bc8ff10121320da5b291c3c10cdcdac36f0cc364
+ms.sourcegitcommit: cfa04a73b26312bf18d8f6296891679166e2754d
 ms.translationtype: HT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 08/17/2020
-ms.locfileid: "88495190"
+ms.lasthandoff: 10/19/2020
+ms.locfileid: "92194067"
 ---
 # <a name="debugging-data-flow"></a>데이터 흐름 디버깅
 
@@ -214,7 +214,7 @@ order by source_component_name desc
 9. 표시할 열 영역에서 데이터 뷰어에 표시할 열을 선택합니다. 기본적으로 사용 가능한 열이 모두 선택되어 **표시된 열** 목록에 나열됩니다. 사용하지 않을 열을 선택하고 왼쪽 화살표를 클릭하여 **사용되지 않은 열** 목록으로 이동합니다.  
   
     > [!NOTE]  
-    >  표에서 DT_DATE, DT_DBTIME2, DT_FILETIME, DT_DBTIMESTAMP, DT_DBTIMESTAMP2 및 DT_DBTIMESTAMPOFFSET 데이터 형식을 나타내는 값은 ISO 8601 형식 문자열로 표시되고 **T** 구분 기호는 공백 구분 기호로 대체됩니다. DT_DATE 및 DT_FILETIME 데이터 형식을 나타내는 값은 7자리의 소수 자릿수 초를 갖습니다. DT_FILETIME 데이터 형식은 3자리의 소수 자릿수 초만 저장하기 때문에 표에는 나머지 4자리가 0으로 표시됩니다. DT_DBTIMESTAMP 데이터 형식을 나타내는 값은 3자리의 소수 자릿수 초를 갖습니다. DT_DBTIME2, DT_DBTIMESTAMP2 및 DT_DBTIMESTAMPOFFSET 데이터 형식을 나타내는 값의 경우 소수 자릿수 초의 자릿수는 열의 데이터 형식에 대해 지정된 소수 자릿수에 해당합니다. ISO 8601 형식에 대한 자세한 내용은 [Date and Time Formats](https://msdn.microsoft.com/library/bed6e2c1-791a-4fa1-b29f-cbfdd1fa8d39)을 참조하십시오. 데이터 형식에 대한 자세한 내용은 [Integration Services Data Types](../../integration-services/data-flow/integration-services-data-types.md)을 참조하세요.  
+    >  표에서 DT_DATE, DT_DBTIME2, DT_FILETIME, DT_DBTIMESTAMP, DT_DBTIMESTAMP2 및 DT_DBTIMESTAMPOFFSET 데이터 형식을 나타내는 값은 ISO 8601 형식 문자열로 표시되고 **T** 구분 기호는 공백 구분 기호로 대체됩니다. DT_DATE 및 DT_FILETIME 데이터 형식을 나타내는 값은 7자리의 소수 자릿수 초를 갖습니다. DT_FILETIME 데이터 형식은 3자리의 소수 자릿수 초만 저장하기 때문에 표에는 나머지 4자리가 0으로 표시됩니다. DT_DBTIMESTAMP 데이터 형식을 나타내는 값은 3자리의 소수 자릿수 초를 갖습니다. DT_DBTIME2, DT_DBTIMESTAMP2 및 DT_DBTIMESTAMPOFFSET 데이터 형식을 나타내는 값의 경우 소수 자릿수 초의 자릿수는 열의 데이터 형식에 대해 지정된 소수 자릿수에 해당합니다. ISO 8601 형식에 대한 자세한 내용은 [Date and Time Formats](../data-flow/parsing-data.md)을 참조하십시오. 데이터 형식에 대한 자세한 내용은 [Integration Services Data Types](../../integration-services/data-flow/integration-services-data-types.md)을 참조하세요.  
   
 10. **확인**을 클릭합니다.  
 
@@ -274,9 +274,8 @@ select * from [SSISDB].[catalog].execution_data_taps where execution_id=@execid
  자세한 로깅 수준을 사용하도록 설정하고 데이터 탭을 추가하면 데이터 통합 솔루션에서 수행되는 I/O 작업이 증가합니다. 따라서 문제 해결을 위해서만 데이터 탭을 추가하는 것이 좋습니다.  
   
 ### <a name="video"></a>비디오  
- 이 [TechNet 비디오](https://technet.microsoft.com/sqlserver/dn600163) 에서는 프로그래밍 방식으로 패키지를 디버깅하고 런타임에 일부 결과를 캡처하는 데 도움이 되도록 SQL Server 2012 SSISDB 카탈로그에 데이터 탭을 추가/사용하는 방법을 보여 줍니다. 이러한 데이터 탭을 나열/제거하는 방법과 함께 SSIS 패키지의 데이터 탭을 사용하기 위한 최선의 구현 방법에 대해서도 설명합니다.  
+ 이 [TechNet 비디오](../../sql-server/index.yml) 에서는 프로그래밍 방식으로 패키지를 디버깅하고 런타임에 일부 결과를 캡처하는 데 도움이 되도록 SQL Server 2012 SSISDB 카탈로그에 데이터 탭을 추가/사용하는 방법을 보여 줍니다. 이러한 데이터 탭을 나열/제거하는 방법과 함께 SSIS 패키지의 데이터 탭을 사용하기 위한 최선의 구현 방법에 대해서도 설명합니다.  
  
 ## <a name="see-also"></a>참고 항목  
  [데이터 오류 처리](../../integration-services/data-flow/error-handling-in-data.md)  
-  
   

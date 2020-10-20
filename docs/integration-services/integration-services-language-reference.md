@@ -11,12 +11,12 @@ ms.topic: language-reference
 ms.assetid: c67b72f1-0a1e-42f0-878a-84e85efc915b
 author: chugugrace
 ms.author: chugu
-ms.openlocfilehash: 2563d0029f9330dc07402e190d8553c8f509ef97
-ms.sourcegitcommit: e700497f962e4c2274df16d9e651059b42ff1a10
+ms.openlocfilehash: 53c23b16efed8909186d17cfcfafc6e91f283ef3
+ms.sourcegitcommit: cfa04a73b26312bf18d8f6296891679166e2754d
 ms.translationtype: HT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 08/17/2020
-ms.locfileid: "88449883"
+ms.lasthandoff: 10/19/2020
+ms.locfileid: "92193901"
 ---
 # <a name="integration-services-language-reference"></a>Integration Services 언어 참조
 
@@ -40,7 +40,6 @@ ms.locfileid: "88449883"
  [저장 프로시저&#40;Integration Services 카탈로그&#41;](../integration-services/system-stored-procedures/stored-procedures-integration-services-catalog.md)  
  저장 프로시저를 호출하여 [!INCLUDE[ssISnoversion](../includes/ssisnoversion-md.md)] 개체 및 설정을 추가, 제거 또는 수정합니다.  
   
- [함수&#40;Integration Services 카탈로그&#41;](https://msdn.microsoft.com/library/9f2aec85-3d4c-415f-b1f8-8328a60b1c7f)  
+ [함수&#40;Integration Services 카탈로그&#41;](./functions-dm-execution-performance-counters.md)  
  [!INCLUDE[ssISnoversion](../includes/ssisnoversion-md.md)] 프로젝트를 관리하는 함수를 호출합니다.  
-  
   

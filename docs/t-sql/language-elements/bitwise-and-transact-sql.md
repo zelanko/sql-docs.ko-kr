@@ -22,12 +22,12 @@ ms.assetid: 20275755-4fa7-47b1-a9be-ac85606d63b0
 author: rothja
 ms.author: jroth
 monikerRange: '>=aps-pdw-2016||=azuresqldb-current||=azure-sqldw-latest||>=sql-server-2016||=sqlallproducts-allversions||>=sql-server-linux-2017||=azuresqldb-mi-current'
-ms.openlocfilehash: d011180343d58f2eae4de0cadec0b5057ecd1603
-ms.sourcegitcommit: e700497f962e4c2274df16d9e651059b42ff1a10
+ms.openlocfilehash: 9590b5be5abbc2414674f552c4f8c6675b5dc935
+ms.sourcegitcommit: cfa04a73b26312bf18d8f6296891679166e2754d
 ms.translationtype: HT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 08/17/2020
-ms.locfileid: "88445585"
+ms.lasthandoff: 10/19/2020
+ms.locfileid: "92189266"
 ---
 # <a name="amp-bitwise-and-transact-sql"></a>&amp;(비트 AND)(Transact-SQL)
 [!INCLUDE [sql-asdb-asdbmi-asa-pdw](../../includes/applies-to-version/sql-asdb-asdbmi-asa-pdw.md)]
@@ -38,7 +38,7 @@ ms.locfileid: "88445585"
   
 ## <a name="syntax"></a>구문  
   
-```  
+```syntaxsql
 expression & expression  
 ```  
   
@@ -66,7 +66,7 @@ expression & expression
 ## <a name="examples"></a>예제  
  다음 예에서는 값을 저장하기 위해 **int** 데이터 형식을 사용하여 테이블을 만들고 두 값을 한 행에 삽입하는 방법을 보여 줍니다.  
   
-```  
+```sql
 CREATE TABLE bitwise (   
   a_int_value INT NOT NULL,  
   b_int_value INT NOT NULL);  
@@ -77,7 +77,7 @@ GO
   
  이 쿼리는 `a_int_value`와 `b_int_value` 열 간에 비트 AND를 수행합니다.  
   
-```  
+```sql  
 SELECT a_int_value & b_int_value  
 FROM bitwise;  
 GO  

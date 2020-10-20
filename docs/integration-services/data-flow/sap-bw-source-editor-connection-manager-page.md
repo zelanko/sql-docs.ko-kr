@@ -13,12 +13,12 @@ f1_keywords:
 ms.assetid: 2a6dc531-85ca-43c5-a65f-3ad3f7d537c4
 author: chugugrace
 ms.author: chugu
-ms.openlocfilehash: aa56c3788e690aae63d292ac1a71fad3a4fc6b67
-ms.sourcegitcommit: e700497f962e4c2274df16d9e651059b42ff1a10
+ms.openlocfilehash: b745e73cb7f25ff8936ddc385979c69ad675f8ea
+ms.sourcegitcommit: cfa04a73b26312bf18d8f6296891679166e2754d
 ms.translationtype: HT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 08/17/2020
-ms.locfileid: "88495745"
+ms.lasthandoff: 10/19/2020
+ms.locfileid: "92194758"
 ---
 # <a name="sap-bw-source-editor-connection-manager-page"></a>SAP BW 원본 편집기(연결 관리자 페이지)
 
@@ -54,7 +54,7 @@ ms.locfileid: "88495745"
  **새로 만들기**  
  **SAP BW 연결 관리자** 대화 상자를 사용하여 새 연결 관리자를 만듭니다.  
   
- 이 대화 상자에 대한 자세한 내용은 [SAP BW Connection Manager Editor](../../integration-services/connection-manager/sap-bw-connection-manager-editor.md)을 참조하십시오.  
+ 이 대화 상자에 대한 자세한 내용은 [SAP BW Connection Manager Editor](../connection-manager/sap-bw-connection-manager.md)을 참조하십시오.  
   
  **OHS 대상**  
  원본에서 데이터를 추출하는 데 사용할 OHS(Open Hub Service) 대상을 선택합니다.  
@@ -133,5 +133,4 @@ ms.locfileid: "88495745"
  [SAP BW 원본 편집기&#40;오류 출력 페이지&#41;](../../integration-services/data-flow/sap-bw-source-editor-error-output-page.md)   
  [SAP BW 원본 편집기&#40;고급 페이지&#41;](../../integration-services/data-flow/sap-bw-source-editor-advanced-page.md)   
  [Microsoft Connector for SAP BW F1 도움말](../../integration-services/microsoft-connector-for-sap-bw-f1-help.md)  
-  
   

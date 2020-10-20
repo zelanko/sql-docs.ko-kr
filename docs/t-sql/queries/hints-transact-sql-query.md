@@ -56,12 +56,12 @@ helpviewer_keywords:
 ms.assetid: 66fb1520-dcdf-4aab-9ff1-7de8f79e5b2d
 author: pmasl
 ms.author: vanto
-ms.openlocfilehash: 623c29594f1ceec2051eeec6e0a533fc948413dc
-ms.sourcegitcommit: cc23d8646041336d119b74bf239a6ac305ff3d31
+ms.openlocfilehash: effad55b1fd1eec856aa412700a751e36e588b37
+ms.sourcegitcommit: 22dacedeb6e8721e7cdb6279a946d4002cfb5da3
 ms.translationtype: HT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 09/23/2020
-ms.locfileid: "91116631"
+ms.lasthandoff: 10/14/2020
+ms.locfileid: "92035862"
 ---
 # <a name="hints-transact-sql---query"></a>힌트(Transact-SQL) - 쿼리
 [!INCLUDE [SQL Server SQL Database](../../includes/applies-to-version/sql-asdb.md)]
@@ -355,7 +355,7 @@ ROBUST PLAN
    > [!NOTE]
    > 데이터베이스 범위 구성, 추적 플래그 또는 다른 쿼리 힌트(예: QUERYTRACEON)를 통해 적용되는 경우 QUERY_OPTIMIZER_COMPATIBILITY_LEVEL_n 힌트는 기본 또는 레거시 카디널리티 예상 설정을 재정의하지 않습니다.   
    > 이 힌트는 쿼리 최적화 프로그램의 동작에만 영향을 줍니다. 특정 데이터베이스 기능의 가용성과 같이, 데이터베이스 [호환성 수준](../../t-sql/statements/alter-database-transact-sql-compatibility-level.md)에 따라 달라질 수 있는 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]의 다른 기능에는 영향을 주지 않습니다.  
-   > 이 힌트에 대한 자세한 내용은 [개발자 선택 사항: 힌트 쿼리 실행 모델](https://blogs.msdn.microsoft.com/sql_server_team/developers-choice-hinting-query-execution-model)을 참조하세요.
+   > 이 힌트에 대한 자세한 내용은 [개발자 선택 사항: 힌트 쿼리 실행 모델](/archive/blogs/sql_server_team/developers-choice-hinting-query-execution-model)을 참조하세요.
     
 *  'QUERY_PLAN_PROFILE'      
  쿼리에 대해 간단한 프로파일링을 사용합니다. 이 새 힌트가 포함된 쿼리가 완료되면 새 확장 이벤트 query_plan_profile이 발생합니다. 이 확장 이벤트는 query_post_execution_showplan 확장 이벤트와 유사한 실행 통계 및 실제 실행 계획 XML을 표시하지만 새 힌트가 포함된 쿼리에 대해서만 표시합니다.    
@@ -658,4 +658,3 @@ OPTION  (QUERYTRACEON 4199, QUERYTRACEON 4137);
 [sp_control_plan_guide &#40;Transact-SQL&#41;](../../relational-databases/system-stored-procedures/sp-control-plan-guide-transact-sql.md)  
 [추적 플래그](../../t-sql/database-console-commands/dbcc-traceon-trace-flags-transact-sql.md)       
 [Transact-SQL 구문 표기 규칙](../../t-sql/language-elements/transact-sql-syntax-conventions-transact-sql.md)      
-  

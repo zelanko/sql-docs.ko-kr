@@ -22,12 +22,12 @@ helpviewer_keywords:
 ms.assetid: 59767e52-f732-4b3f-8602-be50d0a64ef2
 author: chugugrace
 ms.author: chugu
-ms.openlocfilehash: 73394ed84f1222e98bf2e7605f378918f8e6be45
-ms.sourcegitcommit: e700497f962e4c2274df16d9e651059b42ff1a10
+ms.openlocfilehash: ba23ece6d37251dd3eebe4ba73c7fdc1a9672fa8
+ms.sourcegitcommit: cfa04a73b26312bf18d8f6296891679166e2754d
 ms.translationtype: HT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 08/17/2020
-ms.locfileid: "88477606"
+ms.lasthandoff: 10/19/2020
+ms.locfileid: "92197047"
 ---
 # <a name="percentage-sampling-transformation"></a>비율 샘플링 변환
 
@@ -56,7 +56,7 @@ ms.locfileid: "88477606"
   
  **고급 편집기** 대화 상자에는 프로그래밍 방식으로 설정할 수 있는 속성이 표시됩니다. **고급 편집기** 대화 상자를 사용하거나 프로그래밍 방식으로 설정할 수 있는 속성에 대한 자세한 내용을 보려면 다음 항목 중 하나를 클릭하세요.  
   
--   [Common Properties](https://msdn.microsoft.com/library/51973502-5cc6-4125-9fce-e60fa1b7b796)  
+-   [Common Properties](../set-the-properties-of-a-data-flow-component.md)  
   
 -   [변환 사용자 지정 속성](../../../integration-services/data-flow/transformations/transformation-custom-properties.md)  
   
@@ -79,5 +79,4 @@ ms.locfileid: "88477606"
   
  **다음과 같은 임의 초기값 사용**  
  변환에서 샘플을 만드는 데 사용하는 난수 생성기에 샘플링 초기값을 지정합니다. 이 옵션은 개발 및 테스트 용도로만 사용하는 것이 좋습니다. 임의 초기값을 지정하지 않으면 Microsoft Windows 틱 수가 사용됩니다.  
-  
   

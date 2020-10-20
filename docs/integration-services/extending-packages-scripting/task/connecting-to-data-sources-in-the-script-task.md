@@ -24,12 +24,12 @@ helpviewer_keywords:
 ms.assetid: 9c008380-715b-455b-9da7-22572d67c388
 author: chugugrace
 ms.author: chugu
-ms.openlocfilehash: 9d54dc51681e96ba34ec33f1a899f61983145c4e
-ms.sourcegitcommit: e700497f962e4c2274df16d9e651059b42ff1a10
+ms.openlocfilehash: 1dc8024520e561ec9c89081c665c8172a1fb9441
+ms.sourcegitcommit: cfa04a73b26312bf18d8f6296891679166e2754d
 ms.translationtype: HT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 08/17/2020
-ms.locfileid: "88430235"
+ms.lasthandoff: 10/19/2020
+ms.locfileid: "92194119"
 ---
 # <a name="connecting-to-data-sources-in-the-script-task"></a>스크립트 태스크에서 데이터 원본에 연결
 
@@ -93,6 +93,5 @@ ms.locfileid: "88430235"
   
 ## <a name="see-also"></a>참고 항목  
  [Integration Services&#40;SSIS&#41; 연결](../../../integration-services/connection-manager/integration-services-ssis-connections.md)   
- [연결 관리자 만들기](https://msdn.microsoft.com/library/6ca317b8-0061-4d9d-b830-ee8c21268345)  
-  
+ [연결 관리자 만들기](../../connection-manager/integration-services-ssis-connections.md)  
   

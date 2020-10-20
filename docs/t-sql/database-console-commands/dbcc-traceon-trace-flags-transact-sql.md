@@ -21,12 +21,12 @@ helpviewer_keywords:
 ms.assetid: b971b540-1ac2-435b-b191-24399eb88265
 author: pmasl
 ms.author: pelopes
-ms.openlocfilehash: 99dd26d2eec49212ae1603cc2acb8e7464dfbd2b
-ms.sourcegitcommit: c0f92739c81221fbcdb7c40b53a71038105df44f
+ms.openlocfilehash: 9f7914db08efd8a00e0fbcc0c69d6df0d9d8de26
+ms.sourcegitcommit: 22dacedeb6e8721e7cdb6279a946d4002cfb5da3
 ms.translationtype: HT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 09/24/2020
-ms.locfileid: "91210608"
+ms.lasthandoff: 10/14/2020
+ms.locfileid: "92037109"
 ---
 # <a name="dbcc-traceon---trace-flags-transact-sql"></a>DBCC TRACEON - 추적 플래그(Transact-SQL)
 
@@ -74,7 +74,7 @@ ms.locfileid: "91210608"
 |**260**|확장 저장 프로시저 동적 연결 라이브러리(DLL)에 대한 버전 관리 정보를 인쇄합니다. **GetXpVersion()** 에 대한 자세한 내용은 [확장 저장 프로시저 만들기](../../relational-databases/extended-stored-procedures-programming/creating-extended-stored-procedures.md)를 참조하세요.<br /><br />**범위:** 전역 또는 세션|
 |**272**|서버가 예기치 않게 다시 시작되거나 보조 서버로 장애 조치되는 경우 ID 열의 값 차이를 방지하기 위해 ID 사전 할당을 사용하지 않도록 설정합니다. ID 캐싱은 ID 열이 있는 테이블에서 INSERT 성능을 향상시키는 데 사용됩니다.<br /><br />**참고:** [!INCLUDE[ssSQL17](../../includes/sssql17-md.md)]부터 데이터베이스 수준에서 이를 수행하려면, [ALTER DATABASE SCOPED CONFIGURATION&#40;Transact-SQL&#41;](../../t-sql/statements/alter-database-scoped-configuration-transact-sql.md)의 IDENTITY_CACHE 옵션을 참조하세요.<br /><br />**범위**: 전역만|
 |**460**|데이터 잘림 메시지 ID [8152](../../relational-databases/errors-events/database-engine-events-and-errors.md#errors-8000-to-8999)를 메시지 ID [2628](../../relational-databases/errors-events/database-engine-events-and-errors.md#errors-2000-to-2999)로 바꿉니다. 자세한 내용은 이 [Microsoft 지원 문서](https://support.microsoft.com/kb/4468101)를 참조하세요.<br /><br />[!INCLUDE[sql-server-2019](../../includes/sssqlv15-md.md)]부터 데이터베이스 수준에서 이를 수행하려면 [ALTER DATABASE SCOPED CONFIGURATION &#40;Transact-SQL&#41;](../../t-sql/statements/alter-database-scoped-configuration-transact-sql.md)의 VERBOSE_TRUNCATION_WARNINGS 옵션을 참조하세요.<br /><br />**참고:** 이 추적 플래그는 [!INCLUDE[ssSQL17](../../includes/sssql17-md.md)] CU12 이상의 빌드에 적용됩니다.<br /><br />**참고:** 데이터베이스 호환성 수준 150부터 메시지 ID 2628이 기본값이므로, 이 추적 플래그는 영향을 주지 않습니다.<br /><br />**범위**: 전역 또는 세션|
-|**610**|인덱싱된 테이블에 최소한으로 기록된 삽입을 제어합니다. 인덱싱된 테이블에 대해 최소 로깅이 기본적으로 설정되므로 이 추적 플래그는 SQL Server 2016을 시작하는 데 필요하지 않습니다. [!INCLUDE[ssSQL15](../../includes/sssql15-md.md)]에서 대량 로드 작업에 따라 새 페이지가 할당되는 경우, 최소 로깅에 대한 다른 모든 필수 조건이 충족되면 해당 새 페이지를 순차적으로 채우는 모든 행이 최소한으로 로그됩니다. 인덱스 순서를 유지하기 위해 기존 페이지(새 페이지 할당 없음)에 삽입된 행은 모두 로드 중에 페이지 분할의 결과로 이동되는 행과 마찬가지로 여전히 로그됩니다. 또한 할당 중에 페이지 잠금이 획득되어 페이지 또는 익스텐트 할당만 로그되므로 최소 로깅 작업을 위해 인덱스에 대해 ALLOW_PAGE_LOCKS를 ON으로 설정해야 합니다(기본적으로 ON임). 자세한 내용은 [데이터 로드 성능 가이드](https://docs.microsoft.com/previous-versions/sql/sql-server-2008/dd425070(v=sql.100))를 참조하세요.<br /><br />**범위**: 전역 또는 세션|
+|**610**|인덱싱된 테이블에 최소한으로 기록된 삽입을 제어합니다. 인덱싱된 테이블에 대해 최소 로깅이 기본적으로 설정되므로 이 추적 플래그는 SQL Server 2016을 시작하는 데 필요하지 않습니다. [!INCLUDE[ssSQL15](../../includes/sssql15-md.md)]에서 대량 로드 작업에 따라 새 페이지가 할당되는 경우, 최소 로깅에 대한 다른 모든 필수 조건이 충족되면 해당 새 페이지를 순차적으로 채우는 모든 행이 최소한으로 로그됩니다. 인덱스 순서를 유지하기 위해 기존 페이지(새 페이지 할당 없음)에 삽입된 행은 모두 로드 중에 페이지 분할의 결과로 이동되는 행과 마찬가지로 여전히 로그됩니다. 또한 할당 중에 페이지 잠금이 획득되어 페이지 또는 익스텐트 할당만 로그되므로 최소 로깅 작업을 위해 인덱스에 대해 ALLOW_PAGE_LOCKS를 ON으로 설정해야 합니다(기본적으로 ON임). 자세한 내용은 [데이터 로드 성능 가이드](/previous-versions/sql/sql-server-2008/dd425070(v=sql.100))를 참조하세요.<br /><br />**범위**: 전역 또는 세션|
 |**634**|백그라운드 columnstore 압축 태스크를 해제합니다. [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]는 압축되지 않은 데이터가 있는 columnstore 인덱스 행 그룹을 한 번에 행 그룹 하나씩 압축하는 튜플 이동기 백그라운드 태스크를 정기적으로 실행합니다.<br /><br />Columnstore 압축은 쿼리 성능을 향상시키기도 하지만 시스템 리소스를 소모합니다. 634 추적 플래그로 백그라운드 압축 태스크를 사용하지 않도록 해제한 다음, 원하는 시점에 ALTER INDEX...REORGANIZE 또는 ALTER INDEX...REBUILD를 명시적으로 호출하여 columnstore 압축 시기를 수동으로 제어할 수 있습니다.<br /><br />**범위**: 전역만|
 |**652**|페이지 프리페치 검사를 사용하지 않도록 설정합니다. 추적 플래그 652를 설정하면 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]는 더 이상 데이터베이스 페이지가 검색에 의해 사용되기 전에 이러한 데이터베이스 페이지를 버퍼 풀로 가져오지 않습니다. 그 결과 페이지 프리페치 기능을 사용하면 성능이 좋아지는 페이지의 성능이 저하됩니다. <br /><br />**범위**: 전역 또는 세션|
 |**661**|삭제할 레코드 제거 프로세스를 사용하지 않도록 설정합니다. 추적 플래그 661은 삭제할 레코드 제거 프로세스를 사용하지 않도록 설정합니다. 삭제할 레코드는 삭제 작업의 결과입니다. 레코드를 삭제하면 삭제된 레코드가 삭제할 레코드로 유지됩니다. 이후 삭제된 레코드는 삭제할 레코드 제거 프로세스에 의해 제거됩니다. 이 프로세스를 사용하지 않도록 설정하면 삭제된 레코드가 제거되지 않습니다. 따라서 삭제된 레코드가 차지하는 공간이 해제되지 않습니다. 이 동작은 공간 사용량과 검색 작업의 성능에 영향을 줍니다. 자세한 내용은 [고스트 정리 프로세스 가이드](../../relational-databases/ghost-record-cleanup-process-guide.md)를 참조하세요. <br /><br />**범위**: 전역만|
@@ -187,7 +187,7 @@ ms.locfileid: "91210608"
 |**9495**|INSERT...SELECT 작업에 대한 삽입 중에 병렬 처리를 사용하지 않도록 설정하고, 사용자 및 임시 테이블 모두에 적용됩니다. 자세한 내용은 [Microsoft 지원 문서](https://support.microsoft.com/kb/3180087)를 참조하세요.<br /><br />**범위**: 전역 또는 세션| 
 |**9567**|자동 시드 중에 Always On 가용성 그룹에 대한 데이터 스트림 압축을 사용하도록 설정합니다. 압축은 자동 시드 중에 전송 시간을 크게 줄일 수 있으며 프로세서에 대한 로드를 늘려줍니다. 자세한 내용은 [Always On 가용성 그룹 자동 초기화](../../database-engine/availability-groups/windows/automatically-initialize-always-on-availability-group.md) 및 [가용성 그룹에 대한 압축 조정](../../database-engine/availability-groups/windows/tune-compression-for-availability-group.md)을 참조하세요.<br /><br />**범위**: 전역 또는 세션|
 |**9571**|기본 데이터베이스 경로에 대한 가용성 그룹 자동 시딩을 사용하지 않도록 설정합니다. 자세한 내용은 [디스크 레이아웃](../../database-engine/availability-groups/windows/automatic-seeding-secondary-replicas.md)을 참조하세요.<br /><br />**범위**: 전역 또는 세션| 
-|**9576**|[!INCLUDE[ssSQL15](../../includes/sssql15-md.md)] SP1 CU10, [!INCLUDE[ssSQL15](../../includes/sssql15-md.md)] SP2 CU2, [!INCLUDE[ssSQL17](../../includes/sssql17-md.md)] CU9에서 도입된 가용성 그룹 장애 조치(failover)에 향상된 오류 수집을 사용하지 않도록 설정합니다. 자세한 내용은 [SQL Server 가용성 그룹 – 향상된 데이터베이스 수준 장애 조치(failover)](https://docs.microsoft.com/archive/blogs/sql_server_team/sql-server-availability-groups-enhanced-database-level-failover)를 참조하세요.<br /><br />**범위**: 전역만| 
+|**9576**|[!INCLUDE[ssSQL15](../../includes/sssql15-md.md)] SP1 CU10, [!INCLUDE[ssSQL15](../../includes/sssql15-md.md)] SP2 CU2, [!INCLUDE[ssSQL17](../../includes/sssql17-md.md)] CU9에서 도입된 가용성 그룹 장애 조치(failover)에 향상된 오류 수집을 사용하지 않도록 설정합니다. 자세한 내용은 [SQL Server 가용성 그룹 – 향상된 데이터베이스 수준 장애 조치(failover)](/archive/blogs/sql_server_team/sql-server-availability-groups-enhanced-database-level-failover)를 참조하세요.<br /><br />**범위**: 전역만| 
 |**9591**|Always On 가용성 그룹에서 로그 블록 압축을 사용하지 않도록 설정합니다. 로그 블록 압축은 [!INCLUDE[ssSQL11](../../includes/sssql11-md.md)] 및 [!INCLUDE[ssSQL14](../../includes/sssql14-md.md)]에서 동기 및 비동기 복제본 모두에 사용되는 기본 동작입니다. [!INCLUDE[ssSQL15](../../includes/sssql15-md.md)]에서 압축은 비동기 복제에서만 사용됩니다. <br /><br />**범위**: 전역 또는 세션|
 |**9592**|동기 가용성 그룹에 대해 로그 스트림 압축을 사용하도록 설정합니다. 압축은 대기 시간을 추가하므로 이 기능은 기본적으로 동기 가용성 그룹에서 사용하지 않도록 해제되어 있습니다. 자세한 내용은 [가용성 그룹에 대한 압축 조정](../../database-engine/availability-groups/windows/tune-compression-for-availability-group.md)을 참조하세요.<br /><br />**범위**: 전역 또는 세션| 
 |**9929**|메모리 내(In-Memory) 검사점 파일을 각각 1MB로 줄입니다. 자세한 내용은 이 [Microsoft 지원 문서](https://support.microsoft.com/kb/3147012)를 참조하세요.<br /><br />**범위**: 전역만|  

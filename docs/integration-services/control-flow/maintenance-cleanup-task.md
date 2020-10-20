@@ -17,12 +17,12 @@ helpviewer_keywords:
 ms.assetid: 73ad3cd6-9a6d-44cf-905f-c56aa658bf42
 author: chugugrace
 ms.author: chugu
-ms.openlocfilehash: 7b24e6085e255e6e6a66d499b6c23e4cba91cf7a
-ms.sourcegitcommit: e700497f962e4c2274df16d9e651059b42ff1a10
+ms.openlocfilehash: 0994268d1e6ba95e7f4f3bc1bbe3875ec4f57358
+ms.sourcegitcommit: cfa04a73b26312bf18d8f6296891679166e2754d
 ms.translationtype: HT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 08/17/2020
-ms.locfileid: "88392549"
+ms.lasthandoff: 10/19/2020
+ms.locfileid: "92197187"
 ---
 # <a name="maintenance-cleanup-task"></a>유지 관리 정리 태스크
 
@@ -47,10 +47,9 @@ ms.locfileid: "88392549"
 -   [유지 관리 정리 태스크&#40;유지 관리 계획&#41;](../../relational-databases/maintenance-plans/maintenance-cleanup-task-maintenance-plan.md)  
   
 ## <a name="related-tasks"></a>관련 작업  
- [!INCLUDE[ssIS](../../includes/ssis-md.md)] 디자이너에서 이러한 속성을 설정하는 방법에 대한 자세한 내용은 [태스크 또는 컨테이너의 속성 설정](https://msdn.microsoft.com/library/52d47ca4-fb8c-493d-8b2b-48bb269f859b)을 참조하세요.  
+ [!INCLUDE[ssIS](../../includes/ssis-md.md)] 디자이너에서 이러한 속성을 설정하는 방법에 대한 자세한 내용은 [태스크 또는 컨테이너의 속성 설정](./add-or-delete-a-task-or-a-container-in-a-control-flow.md)을 참조하세요.  
   
 ## <a name="see-also"></a>참고 항목  
  [Integration Services 태스크](../../integration-services/control-flow/integration-services-tasks.md)   
  [제어 흐름](../../integration-services/control-flow/control-flow.md)  
-  
   
