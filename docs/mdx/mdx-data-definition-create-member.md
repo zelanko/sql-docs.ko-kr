@@ -9,12 +9,12 @@ ms.topic: reference
 ms.author: owend
 ms.reviewer: owend
 author: minewiskan
-ms.openlocfilehash: e0317d67b62efb84a0447543ca59836da6717f33
-ms.sourcegitcommit: e700497f962e4c2274df16d9e651059b42ff1a10
+ms.openlocfilehash: 7d2a604bd27145b839476c75ea443d680e78c464
+ms.sourcegitcommit: cfa04a73b26312bf18d8f6296891679166e2754d
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 08/17/2020
-ms.locfileid: "88483906"
+ms.lasthandoff: 10/19/2020
+ms.locfileid: "92196989"
 ---
 # <a name="mdx-data-definition---create-member"></a>MDX 데이터 정의 - CREATE MEMBER
 
@@ -48,9 +48,9 @@ CREATE [ SESSION ] [HIDDDEN] [ CALCULATED ] MEMBER CURRENTCUBE | Cube_Name.Membe
  계산 멤버 속성의 값을 정의하는 유효한 스칼라 식입니다.  
   
 ## <a name="remarks"></a>설명  
- CREATE MEMBER 문은 세션 전체에서 사용할 수 있는 계산 멤버를 정의하므로 세션 중에 여러 쿼리에서 사용할 수 있습니다. 자세한 내용은 [MDX&#41;&#40;세션 범위 계산 멤버 만들기 ](https://docs.microsoft.com/analysis-services/multidimensional-models/mdx/mdx-calculated-members-session-scoped-calculated-members)를 참조 하세요.  
+ CREATE MEMBER 문은 세션 전체에서 사용할 수 있는 계산 멤버를 정의하므로 세션 중에 여러 쿼리에서 사용할 수 있습니다. 자세한 내용은 [MDX&#41;&#40;계산 멤버 Session-Scoped 만들기 ](/analysis-services/multidimensional-models/mdx/mdx-calculated-members-session-scoped-calculated-members)를 참조 하세요.  
   
- 또한 단일 쿼리에서 사용할 계산 멤버를 정의할 수 있습니다. 단일 쿼리로 제한된 계산 멤버를 정의하려면 SELECT 문에서 WITH 절을 사용합니다. 자세한 내용은 [MDX&#41;&#40;쿼리 범위 계산 멤버 만들기 ](https://docs.microsoft.com/analysis-services/multidimensional-models/mdx/mdx-calculated-members-query-scoped-calculated-members)를 참조 하세요.  
+ 또한 단일 쿼리에서 사용할 계산 멤버를 정의할 수 있습니다. 단일 쿼리로 제한된 계산 멤버를 정의하려면 SELECT 문에서 WITH 절을 사용합니다. 자세한 내용은 [MDX&#41;&#40;계산 멤버 Query-Scoped 만들기 ](/analysis-services/multidimensional-models/mdx/mdx-calculated-members-query-scoped-calculated-members)를 참조 하세요.  
   
  *Property_Name* 은 표준 또는 선택적인 계산 멤버 속성을 참조할 수 있습니다. 표준 멤버 속성은 이 항목의 후반부에 나열되어 있습니다. **세션** 값 없이 CREATE MEMBER로 만든 계산 멤버는 세션 범위를 가집니다. 또한 계산 멤버 정의 내부의 문자열은 큰따옴표로 구분됩니다. 이것은 문자열이 작은따옴표로 구분되어야 한다고 지정하는 OLE DB에 의해 정의된 메서드와는 다릅니다.  
   
@@ -58,11 +58,11 @@ CREATE [ SESSION ] [HIDDDEN] [ CALCULATED ] MEMBER CURRENTCUBE | Cube_Name.Membe
   
  OLE DB에 의해 정의되는 멤버 속성에 대한 자세한 내용은 OLE DB 설명서를 참조하십시오.  
   
-## <a name="scope"></a>범위  
+## <a name="scope"></a>Scope  
  계산 멤버는 다음 테이블에 나열된 범위 중 하나에서 발생할 수 있습니다.  
   
  쿼리 범위  
- 계산 멤버의 표시 여부 및 수명은 쿼리로 제한됩니다. 계산 멤버는 개별 쿼리에서 정의됩니다. 쿼리 범위는 세션 범위보다 우선합니다. 자세한 내용은 [MDX&#41;&#40;쿼리 범위 계산 멤버 만들기 ](https://docs.microsoft.com/analysis-services/multidimensional-models/mdx/mdx-calculated-members-query-scoped-calculated-members)를 참조 하세요.  
+ 계산 멤버의 표시 여부 및 수명은 쿼리로 제한됩니다. 계산 멤버는 개별 쿼리에서 정의됩니다. 쿼리 범위는 세션 범위보다 우선합니다. 자세한 내용은 [MDX&#41;&#40;계산 멤버 Query-Scoped 만들기 ](/analysis-services/multidimensional-models/mdx/mdx-calculated-members-query-scoped-calculated-members)를 참조 하세요.  
   
  세션 범위  
  계산 멤버의 표시 여부 및 수명은 계산 멤버를 만들 때의 세션에 따라 결정됩니다. 계산 멤버에서 DROP MEMBER 문이 실행 되는 경우 수명은 세션 기간 보다 낮습니다. CREATE MEMBER 문은 세션 범위를 사용 하 여 계산 멤버를 만듭니다.  
@@ -124,5 +124,4 @@ WHERE ProfitRatio
  [DROP MEMBER 문 &#40;MDX&#41;](../mdx/mdx-data-definition-drop-member.md)   
  [MDX &#40;업데이트 멤버 문&#41;](../mdx/mdx-data-definition-update-member.md)   
  [Mdx 데이터 정의 문은 MDX를 &#40;&#41;](../mdx/mdx-data-definition-statements-mdx.md)  
-  
   

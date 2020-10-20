@@ -9,12 +9,12 @@ ms.topic: reference
 ms.author: owend
 ms.reviewer: owend
 author: minewiskan
-ms.openlocfilehash: d1712d109f7aa984e4b7b2b2a5512ce043869aad
-ms.sourcegitcommit: e700497f962e4c2274df16d9e651059b42ff1a10
+ms.openlocfilehash: 1d8aa29715753cfb169d87df3a31230eeec9397f
+ms.sourcegitcommit: cfa04a73b26312bf18d8f6296891679166e2754d
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 08/17/2020
-ms.locfileid: "88483889"
+ms.lasthandoff: 10/19/2020
+ms.locfileid: "92193955"
 ---
 # <a name="mdx-data-definition---create-set"></a>MDX 데이터 정의 - CREATE SET
 
@@ -50,19 +50,19 @@ CREATE [SESSION] [ STATIC | DYNAMIC ] [HIDDEN] SET
 ## <a name="remarks"></a>설명  
  명명된 집합은 다시 사용할 수 있도록 만드는 일련의 차원 멤버(또는 집합을 정의하는 식)입니다. 예를 들어 명명된 집합을 사용하면 판매량 기준으로 상위 10개의 판매점 집합으로 구성되는 차원 멤버 집합을 정의할 수 있습니다. 이 집합은 정적으로 정의 하거나 [TopCount](../mdx/topcount-mdx.md)과 같은 함수를 통해 정의할 수 있습니다. 그런 다음에는 상위 10개의 판매점이 필요할 때마다 이 명명된 집합을 사용할 수 있습니다.  
   
- CREATE SET 문은 세션을 통해 사용할 수 있는 상태로 유지되는 명명된 집합을 만들기 때문에 세션의 여러 쿼리에서 사용될 수 있습니다. 자세한 내용은 [MDX&#41;&#40;세션 범위 계산 멤버 만들기 ](https://docs.microsoft.com/analysis-services/multidimensional-models/mdx/mdx-calculated-members-session-scoped-calculated-members)를 참조 하세요.  
+ CREATE SET 문은 세션을 통해 사용할 수 있는 상태로 유지되는 명명된 집합을 만들기 때문에 세션의 여러 쿼리에서 사용될 수 있습니다. 자세한 내용은 [MDX&#41;&#40;계산 멤버 Session-Scoped 만들기 ](/analysis-services/multidimensional-models/mdx/mdx-calculated-members-session-scoped-calculated-members)를 참조 하세요.  
   
- 또한 단일 쿼리에서 사용할 명명된 집합을 정의할 수 있습니다. 이러한 집합을 정의하려면 SELECT 문에서 WITH 절을 사용합니다. WITH 절에 대 한 자세한 내용은 [MDX&#41;&#40;쿼리 범위 명명 된 집합 만들기 ](https://docs.microsoft.com/analysis-services/multidimensional-models/mdx/mdx-named-sets-creating-query-scoped-named-sets)를 참조 하세요.  
+ 또한 단일 쿼리에서 사용할 명명된 집합을 정의할 수 있습니다. 이러한 집합을 정의하려면 SELECT 문에서 WITH 절을 사용합니다. WITH 절에 대 한 자세한 내용은 [MDX&#41;&#40;Query-Scoped 명명 된 집합 만들기 ](/analysis-services/multidimensional-models/mdx/mdx-named-sets-creating-query-scoped-named-sets)를 참조 하세요.  
   
  *Set_Expression* 절은 MDX 구문을 지 원하는 모든 함수를 포함할 수 있습니다. SESSION 절을 지정하지 않는 CREATE SET 문으로 만든 집합에는 세션 범위가 포함됩니다. 쿼리 범위의 집합을 만들려면 WITH 절을 사용합니다.  
   
  현재 연결된 큐브가 아닌 다른 큐브를 지정하면 오류가 발생합니다. 따라서 큐브 이름에서 CURRENTCUBE를 사용하여 현재 큐브를 표시해야 합니다.  
   
-## <a name="scope"></a>범위  
+## <a name="scope"></a>Scope  
  사용자 정의 집합은 다음 표에 나열된 범위 중 하나에서 발생할 수 있습니다.  
   
  쿼리 범위  
- 집합의 표시 여부 및 수명은 쿼리에 따라 결정됩니다. 집합은 개별 쿼리에서 정의됩니다. 쿼리 범위는 세션 범위보다 우선합니다. 자세한 내용은 [MDX&#41;&#40;쿼리 범위 명명 된 집합 만들기 ](https://docs.microsoft.com/analysis-services/multidimensional-models/mdx/mdx-named-sets-creating-query-scoped-named-sets)를 참조 하세요.  
+ 집합의 표시 여부 및 수명은 쿼리에 따라 결정됩니다. 집합은 개별 쿼리에서 정의됩니다. 쿼리 범위는 세션 범위보다 우선합니다. 자세한 내용은 [MDX&#41;&#40;명명 된 집합 Query-Scoped 만들기 ](/analysis-services/multidimensional-models/mdx/mdx-named-sets-creating-query-scoped-named-sets)를 참조 하세요.  
   
  세션 범위  
  집합의 표시 여부 및 수명은 집합이 생성될 때의 세션에 따라 결정됩니다. 집합에서 DROP SET 문이 실행 되는 경우 수명은 세션 기간 보다 낮습니다. CREATE SET 문은 세션 범위를 사용 하 여 집합을 만듭니다. 쿼리 범위의 집합을 만들려면 WITH 절을 사용합니다.  
@@ -103,5 +103,4 @@ SELECT [Core Products] ON 0
 ## <a name="see-also"></a>참고 항목  
  [DROP SET 문이 MDX를 &#40;&#41;](../mdx/mdx-data-definition-drop-set.md)   
  [Mdx 데이터 정의 문은 MDX를 &#40;&#41;](../mdx/mdx-data-definition-statements-mdx.md)  
-  
   

@@ -9,12 +9,12 @@ ms.topic: reference
 ms.author: owend
 ms.reviewer: owend
 author: minewiskan
-ms.openlocfilehash: 5080e6bfa0f7a0ac942c3c5aa65bd1883b3050ee
-ms.sourcegitcommit: e700497f962e4c2274df16d9e651059b42ff1a10
+ms.openlocfilehash: 94f2a2286b72aac5a8698fad7ba0085f2a6ad8d0
+ms.sourcegitcommit: cfa04a73b26312bf18d8f6296891679166e2754d
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 08/17/2020
-ms.locfileid: "88494876"
+ms.lasthandoff: 10/19/2020
+ms.locfileid: "92197000"
 ---
 # <a name="mdx-data-definition---create-cell-calculation"></a>MDX 데이터 정의 - CREATE CELL CALCULATION
 
@@ -75,12 +75,11 @@ CREATE CELL CALCULATION CURRENTCUBE | Cube_Name.Calculation_Name
 >  `{*(<comment> | <whitespace> | <newline>)}`의 BNF(Backus-Naur Form)는 이전 버전과의 호환성을 위해 `{*}`로 구문 분석됩니다.  
   
 ## <a name="see-also"></a>참고 항목  
- [세션 범위 계산 셀 만들기](https://docs.microsoft.com/analysis-services/multidimensional-models/mdx/mdx-cell-calculations-session-scoped-calculated-cells)   
- [MDX&#41;&#40;쿼리 범위 셀 계산 만들기 ](https://docs.microsoft.com/analysis-services/multidimensional-models/mdx/mdx-cell-calculations-query-scoped-cell-calculations)   
- [Mdx로 셀 계산 작성 &#40;MDX&#41;](https://docs.microsoft.com/analysis-services/multidimensional-models/mdx/mdx-cell-calculations-build-cell-calculations)   
- [MDX &#40;셀 속성 사용&#41;](https://docs.microsoft.com/analysis-services/multidimensional-models/mdx/mdx-cell-properties-using-cell-properties)   
- [MDX &#40;FORMAT_STRING 내용&#41;](https://docs.microsoft.com/analysis-services/multidimensional-models/mdx/mdx-cell-properties-format-string-contents)   
- [MDX&#41;FORE_COLOR 및 BACK_COLOR 내용 &#40;](https://docs.microsoft.com/analysis-services/multidimensional-models/mdx/mdx-cell-properties-fore-color-and-back-color-contents)   
+ [Session-Scoped 계산 셀 만들기](/analysis-services/multidimensional-models/mdx/mdx-cell-calculations-session-scoped-calculated-cells)   
+ [MDX&#41;&#40;Query-Scoped 셀 계산 만들기 ](/analysis-services/multidimensional-models/mdx/mdx-cell-calculations-query-scoped-cell-calculations)   
+ [Mdx로 셀 계산 작성 &#40;MDX&#41;](/analysis-services/multidimensional-models/mdx/mdx-cell-calculations-build-cell-calculations)   
+ [MDX &#40;셀 속성 사용&#41;](/analysis-services/multidimensional-models/mdx/mdx-cell-properties-using-cell-properties)   
+ [MDX &#40;FORMAT_STRING 내용&#41;](/analysis-services/multidimensional-models/mdx/mdx-cell-properties-format-string-contents)   
+ [MDX&#41;FORE_COLOR 및 BACK_COLOR 내용 &#40;](/analysis-services/multidimensional-models/mdx/mdx-cell-properties-fore-color-and-back-color-contents)   
  [Mdx 데이터 정의 문은 MDX를 &#40;&#41;](../mdx/mdx-data-definition-statements-mdx.md)  
-  
   

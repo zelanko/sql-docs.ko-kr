@@ -21,12 +21,12 @@ ms.assetid: c5dbe0d8-a1c8-4dc4-b9b1-22af20effd37
 author: VanMSFT
 ms.author: vanto
 monikerRange: '>=aps-pdw-2016||>=sql-server-2016||=sqlallproducts-allversions||>=sql-server-linux-2017||=azuresqldb-mi-current'
-ms.openlocfilehash: 8f7d0f7afb3d432bdf0c266ee3dfb66813102709
-ms.sourcegitcommit: 04cf7905fa32e0a9a44575a6f9641d9a2e5ac0f8
+ms.openlocfilehash: 41147a1b5a644c5af7a155635c0e7c690f2e4916
+ms.sourcegitcommit: cfa04a73b26312bf18d8f6296891679166e2754d
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 10/07/2020
-ms.locfileid: "91809339"
+ms.lasthandoff: 10/19/2020
+ms.locfileid: "92196717"
 ---
 # <a name="sysserver_principals-transact-sql"></a>sys.server_principals(Transact-SQL)
 [!INCLUDE [sql-asdbmi-pdw](../../includes/applies-to-version/sql-asdbmi-pdw.md)]
@@ -38,9 +38,8 @@ ms.locfileid: "91809339"
 |**name**|**sysname**|보안 주체의 이름입니다. 서버 내에서 고유합니다.|  
 |**principal_id**|**int**|보안 주체의 ID 번호입니다. 서버 내에서 고유합니다.|  
 |**s**|**varbinary(85)**|보안 주체의 SID(보안 ID)입니다. Windows 보안 주체의 경우 Windows SID와 일치합니다.|  
-|**type**|**char(1)**|보안 주체 유형입니다.<br /><br /> S = SQL 로그인<br /><br /> U = Windows 로그인<br /><br /> G = Windows 그룹<br /><br /> R = 서버 역할<br /><br /> C = 인증서에 매핑된 로그인<br /><br /> E = Azure Active Directory의 외부 로그인<br /><br /> X = Azure Active Directory 그룹 또는 응용 프로그램의 외부 그룹
-<br /><br /> K = 비대칭 키에 매핑된 로그인|  
-|**type_desc**|**nvarchar(60)**|보안 주체 유형에 대한 설명입니다.<br /><br /> SQL_LOGIN<br /><br /> WINDOWS_LOGIN<br /><br /> WINDOWS_GROUP<br /><br /> SERVER_ROLE<br /><br /> CERTIFICATE_MAPPED_LOGIN<br /><br /> ASYMMETRIC_KEY_MAPPED_LOGIN|  
+|**type**|**char(1)**|보안 주체 유형입니다.<br /><br /> S = SQL 로그인<br /><br /> U = Windows 로그인<br /><br /> G = Windows 그룹<br /><br /> R = 서버 역할<br /><br /> C = 인증서에 매핑된 로그인<br /><br /> E = Azure Active Directory의 외부 로그인<br /><br /> X = Azure Active Directory 그룹 또는 응용 프로그램의 외부 그룹<br /><br /> K = 비대칭 키에 매핑된 로그인|  
+|**type_desc**|**nvarchar(60)**|보안 주체 유형에 대한 설명입니다.<br /><br /> SQL_LOGIN<br /><br /> WINDOWS_LOGIN<br /><br /> WINDOWS_GROUP<br /><br /> SERVER_ROLE<br /><br /> CERTIFICATE_MAPPED_LOGIN<br /><br /> EXTERNAL_LOGIN<br /><br /> EXTERNAL_GROUP<br /><br /> ASYMMETRIC_KEY_MAPPED_LOGIN|  
 |**is_disabled**|**int**|1 = 로그인을 사용할 수 없습니다.|  
 |**create_date**|**datetime**|보안 주체가 생성된 시간입니다.|  
 |**modify_date**|**datetime**|보안 주체 정의가 마지막으로 수정된 시간입니다.|  

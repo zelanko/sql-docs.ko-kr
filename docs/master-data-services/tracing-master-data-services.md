@@ -12,12 +12,12 @@ ms.assetid: 45823fc8-723a-49f2-9a11-94d241245cfd
 author: lrtoyou1223
 ms.author: lle
 manager: erikre
-ms.openlocfilehash: da6742e7c2801db245002688c04fcb22ada1723a
-ms.sourcegitcommit: 827ad02375793090fa8fee63cc372d130f11393f
+ms.openlocfilehash: eda1a559e9936deae31a5511dacd695e8ec6f24e
+ms.sourcegitcommit: cfa04a73b26312bf18d8f6296891679166e2754d
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 09/04/2020
-ms.locfileid: "89480448"
+ms.lasthandoff: 10/19/2020
+ms.locfileid: "92195040"
 ---
 # <a name="tracing-master-data-services"></a>추적(Master Data Services)
 
@@ -51,7 +51,7 @@ ms.locfileid: "89480448"
   
 -   추적은 Warning 및 ActivityTracing 메시지에 대해 사용하도록 설정됩니다.  
   
-     자세한 내용은 [SourceLevels 열거형](https://msdn.microsoft.com/library/system.diagnostics.sourcelevels)을 참조하세요.  
+     자세한 내용은 [SourceLevels 열거형](/dotnet/api/system.diagnostics.sourcelevels)을 참조하세요.  
   
 -   로그는 WebApplication 폴더 아래의 Logs 폴더에 저장됩니다. 기본 위치는 C:\Program Files\Microsoft SQL Server\130\Master Data Services\WebApplication\Logs입니다.  
   
@@ -71,5 +71,4 @@ ms.locfileid: "89480448"
   
 ## <a name="external-resources"></a>외부 리소스  
  msdn.com의 블로그 게시물 [로깅 문제 해결 개선](https://techcommunity.microsoft.com/t5/sql-server-integration-services/troubleshooting-logging-improvement/ba-p/388214)  
-  
   

@@ -11,12 +11,12 @@ ms.topic: reference
 ms.assetid: 8bdab026-a0c0-41f3-9d36-f3919c23247f
 author: lrtoyou1223
 ms.author: lle
-ms.openlocfilehash: 7fcc185243cca0ba45f1f8be199649508fc4b56a
-ms.sourcegitcommit: e700497f962e4c2274df16d9e651059b42ff1a10
+ms.openlocfilehash: 33eeff1c3bd33ee193a283c26225418a7ca54a25
+ms.sourcegitcommit: cfa04a73b26312bf18d8f6296891679166e2754d
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 08/17/2020
-ms.locfileid: "88477165"
+ms.lasthandoff: 10/19/2020
+ms.locfileid: "92196816"
 ---
 # <a name="create-master-data-manager-web-service-proxy-classes"></a>마스터 데이터 관리자 웹 서비스에 대한 프록시 클래스 만들기
 
@@ -40,10 +40,10 @@ ms.locfileid: "88477165"
     시작하는 페이지가 표시됩니다.  
   
 ## <a name="creating-proxy-classes-by-using-visual-studio"></a>Visual Studio를 사용하여 프록시 클래스 만들기  
- Visual Studio 2010이 설치된 경우 프로젝트에 **서비스 참조**를 추가하면 가장 간단하게 프록시 클래스를 생성할 수 있습니다. [!INCLUDE[ssMDSmdm](../../includes/ssmdsmdm-md.md)] 웹 애플리케이션의 URL에 /service/service.svc를 추가하면 서비스 참조의 주소가 됩니다. 예: `https://yourserver/MDS/service/service.svc` 자세한 내용은 [방법: 서비스 참조 추가, 업데이트 또는 제거](https://go.microsoft.com/fwlink/?LinkId=221167)를 참조하십시오.  
+ Visual Studio 2010이 설치된 경우 프로젝트에 **서비스 참조**를 추가하면 가장 간단하게 프록시 클래스를 생성할 수 있습니다. [!INCLUDE[ssMDSmdm](../../includes/ssmdsmdm-md.md)] 웹 애플리케이션의 URL에 /service/service.svc를 추가하면 서비스 참조의 주소가 됩니다. 예: `https://yourserver/MDS/service/service.svc` 자세한 내용은 [방법: 서비스 참조 추가, 업데이트 또는 제거](/previous-versions/bb628652(v=vs.140))를 참조하십시오.  
   
 ## <a name="creating-proxy-classes-by-using-svcutilexe"></a>Svcutil.exe를 사용하여 프록시 클래스 만들기  
- [!INCLUDE[msCoName](../../includes/msconame-md.md)] [!INCLUDE[vsprvs](../../includes/vsprvs-md.md)] [!INCLUDE[msCoName](../../includes/msconame-md.md)] 컴퓨터에 Svcutil.exe를 설치 하려면 또는 Windows SDK 설치 되어 있어야 합니다. [!INCLUDE[vsprvs](../../includes/vsprvs-md.md)]를 사용하는 경우에는 [!INCLUDE[vsprvs](../../includes/vsprvs-md.md)] 명령 프롬프트를 사용하여 명령을 실행해야 합니다. 자세한 내용은 [ServiceModel Metadata 유틸리티 도구(Svcutil.exe)](https://go.microsoft.com/fwlink/?LinkId=165027) 및 [서비스 메타데이터에서 WCF 클라이언트 생성](https://go.microsoft.com/fwlink/?LinkId=164821)을 참조하십시오.  
+ [!INCLUDE[msCoName](../../includes/msconame-md.md)] [!INCLUDE[vsprvs](../../includes/vsprvs-md.md)] [!INCLUDE[msCoName](../../includes/msconame-md.md)] 컴퓨터에 Svcutil.exe를 설치 하려면 또는 Windows SDK 설치 되어 있어야 합니다. [!INCLUDE[vsprvs](../../includes/vsprvs-md.md)]를 사용하는 경우에는 [!INCLUDE[vsprvs](../../includes/vsprvs-md.md)] 명령 프롬프트를 사용하여 명령을 실행해야 합니다. 자세한 내용은 [ServiceModel Metadata 유틸리티 도구(Svcutil.exe)](/dotnet/framework/wcf/servicemodel-metadata-utility-tool-svcutil-exe) 및 [서비스 메타데이터에서 WCF 클라이언트 생성](/dotnet/framework/wcf/feature-details/generating-a-wcf-client-from-service-metadata)을 참조하십시오.  
   
  Svcutil.exe를 사용하여 C# 프록시 클래스 집합을 만들려면 다음과 같은 명령을 사용하십시오.  
   
@@ -64,5 +64,4 @@ svcutil.exe https://<server_name:port>/<virtual_path>/Service/Service.svc
   
 ## <a name="see-also"></a>참고 항목  
  [범주별로 분류한 웹 서비스 작업&#40;Master Data Services&#41;](../../master-data-services/develop/categorized-web-service-operations-master-data-services.md)  
-  
   

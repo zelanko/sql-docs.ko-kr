@@ -9,17 +9,17 @@ ms.topic: reference
 ms.author: owend
 ms.reviewer: owend
 author: minewiskan
-ms.openlocfilehash: 142783612b495d7968fec1574e182654ac83fb64
-ms.sourcegitcommit: 827ad02375793090fa8fee63cc372d130f11393f
+ms.openlocfilehash: e4ee6d69057745486ed72f00721f9ab38833ca2e
+ms.sourcegitcommit: cfa04a73b26312bf18d8f6296891679166e2754d
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 09/04/2020
-ms.locfileid: "89480673"
+ms.lasthandoff: 10/19/2020
+ms.locfileid: "92196978"
 ---
 # <a name="mdx-data-manipulation---update-cube"></a>MDX 데이터 조작 - UPDATE CUBE
 
 
-  UPDATE CUBE 문은 SUM 집계를 사용하여 부모에 집계하는 큐브의 셀에 데이터를 쓰기 저장하는 데 사용됩니다. 자세한 설명 및 예제를 보려면이 블로그 게시물: [Analysis Services 사용 하 여 쓰기 저장 응용 프로그램 빌드 (블로그)](https://docs.microsoft.com/archive/blogs/data_otaku/building-a-writeback-application-with-analysis-services)의 "할당 이해"를 참조 하세요.  
+  UPDATE CUBE 문은 SUM 집계를 사용하여 부모에 집계하는 큐브의 셀에 데이터를 쓰기 저장하는 데 사용됩니다. 자세한 설명 및 예제를 보려면이 블로그 게시물: [Analysis Services 사용 하 여 쓰기 저장 응용 프로그램 빌드 (블로그)](/archive/blogs/data_otaku/building-a-writeback-application-with-analysis-services)의 "할당 이해"를 참조 하세요.  
   
 ## <a name="syntax"></a>구문  
   
@@ -110,5 +110,4 @@ Weight_Expression = <leaf cell value> / <existing value>
 ## <a name="see-also"></a>참고 항목  
  <xref:Microsoft.AnalysisServices.AdomdClient.AdomdConnection.ConnectionString%2A>   
  [Mdx 데이터 조작 문은 MDX를 &#40;&#41;](../mdx/mdx-data-manipulation-statements-mdx.md)  
-  
   

@@ -15,12 +15,12 @@ helpviewer_keywords:
 ms.assetid: 05d7a471-c5d5-4730-b903-e4edc8157bb4
 author: rothja
 ms.author: jroth
-ms.openlocfilehash: db3a0122abd82506f24464fb7131eeb557c596c8
-ms.sourcegitcommit: e8f6c51d4702c0046aec1394109bc0503ca182f0
+ms.openlocfilehash: b0f5c1ba58efb8fddcf5375d2a38fbf9f227f43f
+ms.sourcegitcommit: cfa04a73b26312bf18d8f6296891679166e2754d
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 08/07/2020
-ms.locfileid: "87947314"
+ms.lasthandoff: 10/19/2020
+ms.locfileid: "92196872"
 ---
 # <a name="clr-integration-security"></a>CLR 통합 보안
 
@@ -47,10 +47,10 @@ ms.locfileid: "87947314"
  [호스트 보호 특성 및 CLR 통합 프로그래밍](../../../relational-databases/clr-integration-security-host-protection-attributes/host-protection-attributes-and-clr-integration-programming.md)  
  SAFE 및 EXTERNAL_ACCESS 어셈블리에서 허용되지 않는 HPA(호스트 보호 특성)에 대한 정보를 제공합니다.  
   
- [CLR 통합 보안의 링크](https://msdn.microsoft.com/library/168efd01-d12e-4bdf-a1b3-0b5c76474eaf)  
+ [CLR 통합 보안의 링크]()  
  [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)]에서 사용자 코드 조각이 상호 호출하는 방법을 설명합니다.  
   
- [가장 및 CLR 통합 보안](https://msdn.microsoft.com/library/1495a7af-2248-4cee-afdb-9269fb3a7774)  
+ [가장 및 CLR 통합 보안](../data-access/impersonation-and-credentials-for-connections.md)  
  관리 코드에서 가장을 사용하여 외부 리소스에 액세스하는 방법을 설명합니다.  
   
  관리되는 메서드에서 다른 어셈블리에 포함된 클래스의 메서드를 호출할 때 발생하는 문제를 설명합니다.  
@@ -60,5 +60,4 @@ ms.locfileid: "87947314"
   
 ## <a name="see-also"></a>참고 항목  
  [CLR 통합 어셈블리 관리](../../../relational-databases/clr-integration/assemblies/managing-clr-integration-assemblies.md)  
-  
   

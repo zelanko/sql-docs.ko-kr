@@ -9,12 +9,12 @@ ms.topic: reference
 ms.author: owend
 ms.reviewer: owend
 author: minewiskan
-ms.openlocfilehash: 32f5084190642bd4237d225404c92f0c4754da7b
-ms.sourcegitcommit: e700497f962e4c2274df16d9e651059b42ff1a10
+ms.openlocfilehash: 391b39dd92011ce43b146d740b232d0c4fca6669
+ms.sourcegitcommit: cfa04a73b26312bf18d8f6296891679166e2754d
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 08/17/2020
-ms.locfileid: "88466475"
+ms.lasthandoff: 10/19/2020
+ms.locfileid: "92193483"
 ---
 # <a name="unary-operators"></a>단항 연산자
 
@@ -23,7 +23,7 @@ ms.locfileid: "88466475"
   
  다음 표에서는 MDX가 지원하는 단항 연산자를 나열합니다.  
   
-|연산자|설명|  
+|연산자|Description|  
 |--------------|-----------------|  
 |[-(음수)](../mdx/negative-mdx.md)|숫자 식의 음수 값을 반환합니다.|  
 |[+(양수)](../mdx/positive-mdx.md)|숫자 식의 양수 값을 반환합니다.|  
@@ -41,9 +41,8 @@ FROM [Adventure Works]
 WHERE [Product].[Category].[Bikes]  
 ```  
   
- 또한 MDX는 특수 단항 연산자를 사용 하 여 [RollupChildren](../mdx/rollupchildren-mdx.md) 함수에서 수행 하는 집계 작업을 결정 합니다. 이러한 특수 단항 연산자에 대 한 자세한 내용은 [차원에 사용자 지정 집계 추가](https://docs.microsoft.com/analysis-services/multidimensional-models/bi-wizard-add-a-custom-aggregation-to-a-dimension)를 참조 하세요.  
+ 또한 MDX는 특수 단항 연산자를 사용 하 여 [RollupChildren](../mdx/rollupchildren-mdx.md) 함수에서 수행 하는 집계 작업을 결정 합니다. 이러한 특수 단항 연산자에 대 한 자세한 내용은 [차원에 사용자 지정 집계 추가](/analysis-services/multidimensional-models/bi-wizard-add-a-custom-aggregation-to-a-dimension)를 참조 하세요.  
   
 ## <a name="see-also"></a>참고 항목  
  [연산자 &#40;MDX 구문&#41;](../mdx/operators-mdx-syntax.md)  
-  
   

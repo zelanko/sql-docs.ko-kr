@@ -11,12 +11,12 @@ ms.topic: quickstart
 ms.assetid: f6cd850f-b01b-491f-972c-f966b9fe4190
 author: lrtoyou1223
 ms.author: lle
-ms.openlocfilehash: d636d13512993d64a9abd88e61412f76790c7590
-ms.sourcegitcommit: 777704aefa7e574f4b7d62ad2a4c1b10ca1731ff
+ms.openlocfilehash: 4df36b6012cd6cbe0f2570bb678ebff02fa21dd5
+ms.sourcegitcommit: cfa04a73b26312bf18d8f6296891679166e2754d
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 08/06/2020
-ms.locfileid: "87823761"
+ms.lasthandoff: 10/19/2020
+ms.locfileid: "92195817"
 ---
 # <a name="master-data-services-installation-and-configuration"></a>Master Data Services 설치 및 구성
 
@@ -110,12 +110,12 @@ ms.locfileid: "87823761"
   
  설치 프로그램을 사용하여 [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)]를 설치하는 방법에 대한 자세한 내용은 [설치 마법사에서 SQL Server 2016 설치&#40;설치 프로그램&#41;](../database-engine/install-windows/install-sql-server-from-the-installation-wizard-setup.md)를 참조하세요.  
   
- 명령 프롬프트를 사용하여 [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)] 를 설치하는 방법에 대한 자세한 내용은 [명령 프롬프트에서 SQL Server 2016 설치](../database-engine/install-windows/install-sql-server-2016-from-the-command-prompt.md)를 참조하세요. 명령 프롬프트를 사용하는 경우 [!INCLUDE[ssMDSshort](../includes/ssmdsshort-md.md)] 는 기능 매개 변수로 사용할 수 있습니다.  
+ 명령 프롬프트를 사용하여 [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)] 를 설치하는 방법에 대한 자세한 내용은 [명령 프롬프트에서 SQL Server 2016 설치](../database-engine/install-windows/install-sql-server-from-the-command-prompt.md)를 참조하세요. 명령 프롬프트를 사용하는 경우 [!INCLUDE[ssMDSshort](../includes/ssmdsshort-md.md)] 는 기능 매개 변수로 사용할 수 있습니다.  
   
  사전 설치 작업에 대한 추가 정보 링크가 있는 간단한 설명은 [Master Data Services 설치](../master-data-services/install-windows/install-master-data-services.md)를 참조하세요.  
   
 ##  <a name="setting-up-the-database-and-website"></a><a name="SetUpWeb"></a> 데이터베이스 및 웹 사이트 설정  
- **을 사용 하 여 데이터베이스 및 웹 사이트를 설정 하려면[!INCLUDE[ssMDScfgmgr](../includes/ssmdscfgmgr-md.md)]**  
+ **을 사용 하 여 데이터베이스 및 웹 사이트를 설정 하려면 [!INCLUDE[ssMDScfgmgr](../includes/ssmdscfgmgr-md.md)]**  
 
  
 > [!WARNING]
@@ -130,7 +130,7 @@ ms.locfileid: "87823761"
   
 3.  **데이터베이스 서버** 페이지에서 SQL Server 인스턴스를 지정 합니다. 
 
-    >  [!INCLUDE[sqlv15](../includes/sssqlv15-md.md)]Managed Instance SQL Server에 대 한 지원을 추가 합니다. **SQL Server 인스턴스** 값을 관리 되는 인스턴스의 호스트로 설정 합니다. 예: `xxxxxx.xxxxxx.database.windows.net`.
+    >  [!INCLUDE[sqlv15](../includes/sssqlv15-md.md)] Managed Instance SQL Server에 대 한 지원을 추가 합니다. **SQL Server 인스턴스** 값을 관리 되는 인스턴스의 호스트로 설정 합니다. 정의합니다(예: `xxxxxx.xxxxxx.database.windows.net`).
 
 4. **인증 유형을** 선택한 다음 **연결 테스트** 를 클릭 하 여 선택한 인증 유형에 대 한 자격 증명을 사용 하 여 데이터베이스에 연결할 수 있는지 확인 합니다. **다음**을 클릭합니다.
 
@@ -294,5 +294,4 @@ ms.locfileid: "87823761"
  [웹 응용 프로그램 마스터 데이터 관리자](../master-data-services/master-data-manager-web-application.md)   
  [데이터베이스 구성 페이지 &#40;Master Data Services 구성 관리자&#41;](../master-data-services/database-configuration-page-master-data-services-configuration-manager.md)   
  [MDS&#40;Master Data Services&#41;의 새로운 기능](../master-data-services/what-s-new-in-master-data-services-mds.md)  
-  
   

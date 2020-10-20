@@ -9,12 +9,12 @@ ms.topic: reference
 ms.author: owend
 ms.reviewer: owend
 author: minewiskan
-ms.openlocfilehash: 623d798a3794da7577cf036cb8a32b2cf9cd7b84
-ms.sourcegitcommit: e700497f962e4c2274df16d9e651059b42ff1a10
+ms.openlocfilehash: 9660b546fbfa293cab2442db3546838dbde80467
+ms.sourcegitcommit: cfa04a73b26312bf18d8f6296891679166e2754d
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 08/17/2020
-ms.locfileid: "88477015"
+ms.lasthandoff: 10/19/2020
+ms.locfileid: "92196746"
 ---
 # <a name="mdx-data-manipulation---select"></a>MDX 데이터 조작 - SELECT
 
@@ -117,7 +117,7 @@ FROM
   
  하위 SELECT 문에 NON VISUAL 옵션을 사용하면 필터링된 합계 대신 순 합계를 유지하면서 멤버를 필터링할 수 있습니다. 즉, 상위 10개 매출 정보(사람/제품/지역)를 쿼리한 후 상위 10개의 매출 합계 값 대신 쿼리한 모든 멤버의 매출 순 합계를 반환 결과로 얻을 수 있습니다. 자세한 내용은 아래 예를 참조하십시오.  
   
- 연결 \<SELECT query axis clause> 문자열 매개 변수 *하위 쿼리 = 1*을 사용 하 여 연결을 열 때마다 계산 멤버를에 포함할 수 있습니다. [지원 되는 xmla 속성 &#40;xmla&#41;](https://docs.microsoft.com/analysis-services/xmla/xml-elements-properties/propertylist-element-supported-xmla-properties) 및 <xref:Microsoft.AnalysisServices.AdomdClient.AdomdConnection.ConnectionString%2A> 매개 변수 사용을 참조 하세요. 하위 SELECT의 계산 멤버에 대한 예는 다음을 참조하십시오.  
+ 연결 \<SELECT query axis clause> 문자열 매개 변수 *하위 쿼리 = 1*을 사용 하 여 연결을 열 때마다 계산 멤버를에 포함할 수 있습니다. [지원 되는 xmla 속성 &#40;xmla&#41;](/analysis-services/xmla/xml-elements-properties/propertylist-element-supported-xmla-properties) 및 <xref:Microsoft.AnalysisServices.AdomdClient.AdomdConnection.ConnectionString%2A> 매개 변수 사용을 참조 하세요. 하위 SELECT의 계산 멤버에 대한 예는 다음을 참조하십시오.  
   
 ## <a name="autoexists"></a>AUTOEXIST  
  SELECT 문에 두 개 이상의 차원 특성이 사용되는 경우 Analysis Services에서는 이러한 특성의 멤버가 다른 모든 특성의 기준에 맞도록 적절히 제한되도록 특성의 식을 계산합니다. 예를 들어 Geography 차원의 특성을 사용한다고 가정합니다. City 특성의 모든 멤버를 반환하는 식과 Country 특성의 멤버를 유럽의 모든 국가로 제한하는 다른 식이 있는 경우 City 멤버는 유럽 국가에 속한 도시로만 제한됩니다. 이러한 Analysis Services 특징을 Autoexists라고 하며 이는 동일한 차원의 특성에만 적용됩니다. Autoexists는 한 특성 식에서 제외된 차원 레코드를 다른 특성 식에서 포함하지 않도록 하기 때문에 동일한 차원의 특성에만 적용됩니다. 결과적으로 차원 레코드에서 서로 다른 특성 식이 교차하는 것으로 Autoexists를 이해할 수도 있습니다. 아래의 예를 참조하십시오.  
@@ -335,9 +335,9 @@ FROM
 |**Mountain-100**|**$8,568,958.27**|**$139,393.27**|**1.63%**|  
 |**HL Mountain Frame**|**$3,365,069.27**|**$174.11**|**0.01%**|  
   
- Autoexists 동작은 연결 문자열의 AUTOEXISTS = [1 | 2 | 3] 매개 변수를 사용 하 여 수정할 수 있습니다. [&#40;xmla&#41;](https://docs.microsoft.com/analysis-services/xmla/xml-elements-properties/propertylist-element-supported-xmla-properties) 및 <xref:Microsoft.AnalysisServices.AdomdClient.AdomdConnection.ConnectionString%2A> 매개 변수 사용에 대해 지원 되는 xmla 속성을 참조 하세요.  
+ Autoexists 동작은 연결 문자열의 AUTOEXISTS = [1 | 2 | 3] 매개 변수를 사용 하 여 수정할 수 있습니다. [&#40;xmla&#41;](/analysis-services/xmla/xml-elements-properties/propertylist-element-supported-xmla-properties) 및 <xref:Microsoft.AnalysisServices.AdomdClient.AdomdConnection.ConnectionString%2A> 매개 변수 사용에 대해 지원 되는 xmla 속성을 참조 하세요.  
   
-## <a name="examples"></a>예제  
+## <a name="examples"></a>예  
  다음 예에서는 `Measures.[Order Quantity]` `Date` **놀이 Works** 큐브에서 차원에 포함 된 2003 년의 첫 8 개월 동안 집계 된 멤버의 합계를 반환 합니다.  
   
 ```  
@@ -394,7 +394,7 @@ WHERE
   
  결과는 다음과 같습니다.  
   
-|비즈니스 유형 + 범주|All Products|Accessories|Clothing|  
+|비즈니스 유형 + 범주|All Products|액세서리|의류|  
 |-|-|-|-|  
 |**All Resellers**|**$80,450,596.98**|**$571,297.93**|**$1,777,840.84**|  
 |**Value Added Reseller**|**$34,967,517.33**|**$175,002.81**|**$592,385.71**|  
@@ -420,7 +420,7 @@ WHERE
   
  위 쿼리는 다음과 같은 결과를 생성합니다.  
   
-|비즈니스 유형 + 범주|All Products|Accessories|Clothing|  
+|비즈니스 유형 + 범주|All Products|액세서리|의류|  
 |-|-|-|-|  
 |All Resellers|$73,694,430.80|$506,172.45|$1,524,906.93|  
 |Value Added Reseller|$34,967,517.33|$175,002.81|$592,385.71|  
@@ -455,9 +455,7 @@ WHERE
 |$80,450,596.98|$79980114.38|$470482.60|0.58%|  
   
 ## <a name="see-also"></a>참고 항목  
- [MDX의 주요 개념 &#40;Analysis Services&#41;](https://docs.microsoft.com/analysis-services/multidimensional-models/mdx/key-concepts-in-mdx-analysis-services)   
+ [MDX의 주요 개념 &#40;Analysis Services&#41;](/analysis-services/multidimensional-models/mdx/key-concepts-in-mdx-analysis-services)   
  [Mdx 데이터 조작 문은 MDX를 &#40;&#41;](../mdx/mdx-data-manipulation-statements-mdx.md)   
  [쿼리 및 Slicer 축으로 쿼리 제한&#40;MDX&#41;](~/analysis-services/multidimensional-models/mdx/mdx-query-and-slicer-axes-restricting-the-query.md)  
   
-  
-

@@ -16,12 +16,12 @@ helpviewer_keywords:
 ms.assetid: ee95ffdb-5aa1-49a3-beb2-7695b27c3df9
 author: David-Engel
 ms.author: v-daenge
-ms.openlocfilehash: 397aed6cd2b2066bd73343ad861f0212e8357570
-ms.sourcegitcommit: e700497f962e4c2274df16d9e651059b42ff1a10
+ms.openlocfilehash: 4c3c2fecc26cf2d8bbf5d53598a7b28ce7db5612
+ms.sourcegitcommit: cfa04a73b26312bf18d8f6296891679166e2754d
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 08/17/2020
-ms.locfileid: "88483086"
+ms.lasthandoff: 10/19/2020
+ms.locfileid: "92195575"
 ---
 # <a name="driver-manager-connection-pooling"></a>드라이버 관리자 연결 풀링
 연결 풀링을 사용 하면 응용 프로그램에서 각 사용을 위해 다시 설정 하지 않아도 되는 연결 풀의 연결을 사용할 수 있습니다. 연결이 만들어지고 풀에 배치 되 면 응용 프로그램은 전체 연결 프로세스를 수행 하지 않고 해당 연결을 다시 사용할 수 있습니다.  
@@ -60,11 +60,11 @@ ms.locfileid: "88483086"
     > [!NOTE]  
     >  요청 된 연결이 풀링된 연결과 일치 하는 방법은 SQL_ATTR_CP_MATCH 환경 특성에 의해 결정 됩니다. 자세한 내용은 [SQLSetEnvAttr](../../../odbc/reference/syntax/sqlsetenvattr-function.md)를 참조 하세요.  
   
-     연결 풀링을 사용 하는 ODBC 응용 프로그램은 응용 프로그램을 초기화 하는 동안 [CoInitializeEx](https://go.microsoft.com/fwlink/?LinkID=116307) [를 호출](https://go.microsoft.com/fwlink/?LinkId=116310) 해야 합니다.  
+     연결 풀링을 사용 하는 ODBC 응용 프로그램은 응용 프로그램을 초기화 하는 동안 [CoInitializeEx](/windows/win32/api/combaseapi/nf-combaseapi-coinitializeex) [를 호출](/windows/win32/api/combaseapi/nf-combaseapi-couninitialize) 해야 합니다.  
   
 5.  연결이 완료 되 면 **Sqldisconnect** 를 호출 합니다. 연결이 연결 풀로 반환 되 고 다시 사용할 수 있게 됩니다.  
   
- 자세한 내용은 [Microsoft Data Access 구성 요소에서 풀링](https://go.microsoft.com/fwlink/?LinkId=120776)을 참조 하세요.  
+ 자세한 내용은 [Microsoft Data Access 구성 요소에서 풀링](/previous-versions/ms810829(v=msdn.10))을 참조 하세요.  
   
 ## <a name="connection-pooling-considerations"></a>연결 풀링 고려 사항  
  ODBC API를 통하지 않고 SQL 명령을 사용 하 여 다음 작업을 수행 하면 연결 상태에 영향을 줄 수 있으며 연결 풀링이 활성화 되어 있을 때 예기치 않은 문제가 발생할 수 있습니다.  
@@ -83,7 +83,7 @@ ms.locfileid: "88483086"
 ## <a name="driver-aware-connection-pooling"></a>드라이버 인식 연결 풀링  
  Windows 8부터 ODBC 드라이버는 풀의 연결을 보다 효율적으로 사용할 수 있습니다. 자세한 내용은 [드라이버 인식 연결 풀링](../../../odbc/reference/develop-app/driver-aware-connection-pooling.md)을 참조 하세요.  
   
-## <a name="see-also"></a>관련 항목  
+## <a name="see-also"></a>참고 항목  
  [데이터 원본 또는 드라이버에 연결](../../../odbc/reference/develop-app/connecting-to-a-data-source-or-driver.md)   
  [ODBC 드라이버 개발](../../../odbc/reference/develop-driver/developing-an-odbc-driver.md)   
- [Microsoft 데이터 액세스 구성 요소의 풀링](https://go.microsoft.com/fwlink/?LinkId=120776)
+ [Microsoft 데이터 액세스 구성 요소의 풀링](/previous-versions/ms810829(v=msdn.10))

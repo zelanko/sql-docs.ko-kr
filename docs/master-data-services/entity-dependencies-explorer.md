@@ -13,12 +13,12 @@ keywords:
 ms.assetid: 9d922118-1412-4a9d-9c02-70d6c48d6c0d
 author: lrtoyou1223
 ms.author: lle
-ms.openlocfilehash: 8a0fcbcee1d17a98025a1c8adbc02c3409b1db06
-ms.sourcegitcommit: e700497f962e4c2274df16d9e651059b42ff1a10
+ms.openlocfilehash: e0b20fde852e02662780f75bd14e4b9023e01d80
+ms.sourcegitcommit: cfa04a73b26312bf18d8f6296891679166e2754d
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 08/17/2020
-ms.locfileid: "88389299"
+ms.lasthandoff: 10/19/2020
+ms.locfileid: "92192411"
 ---
 # <a name="entity-dependencies-explorer"></a>엔터티 종속성 탐색기
 
@@ -29,7 +29,7 @@ ms.locfileid: "88389299"
   
 "내 엔터티를 사용하는 사람 및 방법?"의 질문에 답변하는 데 도움이 됩니다. 보기는 파생 계층 탐색기 페이지와 유사하지만 더욱 포괄적입니다. 특정 계층의 일부로 정의된 것 뿐만 아니라 모든 DBA 관계를 보여 줍니다. 표시된 계층 구조는 단순히 기존 DBA에서 유추되기 때문에 계층 정의는 필요하지 않습니다.  
   
-탐색기 페이지 메뉴에서 엔터티 종속성 메뉴 항목은 하나 이상의 엔터티에 의해 종속되는 모델의 모든 엔터티를 나열합니다(즉, 하나 이상의 엔터티는 나열된 엔터티를 참조하는 DBA를 가짐). 종속성(직접 및 간접)의 수는 엔터티 이름 옆에 표시되고 맨 위쪽에 가장 많이 참조된 엔터티와 함께 이 수로 목록이 정렬됩니다. [샘플 데이터](https://msdn.microsoft.com/library/master-data-services-sample.aspx)의 Customer 모델에서 가져온 아래 스크린샷은 BigArea 엔터티가 7개의 엔터티로 참조된 것(직접 또는 간접적으로)을 보여 줍니다.  
+탐색기 페이지 메뉴에서 엔터티 종속성 메뉴 항목은 하나 이상의 엔터티에 의해 종속되는 모델의 모든 엔터티를 나열합니다(즉, 하나 이상의 엔터티는 나열된 엔터티를 참조하는 DBA를 가짐). 종속성(직접 및 간접)의 수는 엔터티 이름 옆에 표시되고 맨 위쪽에 가장 많이 참조된 엔터티와 함께 이 수로 목록이 정렬됩니다. [샘플 데이터](./sql-server-samples-model-deployment-packages-mds.md)의 Customer 모델에서 가져온 아래 스크린샷은 BigArea 엔터티가 7개의 엔터티로 참조된 것(직접 또는 간접적으로)을 보여 줍니다.  
   
 ![MDS_EntityDependencies_Menu.jpg](../master-data-services/media/mds-entitydependencies-menu-jpg.jpg)  
     
@@ -47,5 +47,3 @@ ms.locfileid: "88389299"
   
   
   
-  
-

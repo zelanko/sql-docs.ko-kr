@@ -11,12 +11,12 @@ ms.topic: conceptual
 ms.assetid: 854f0bb4-17e9-489b-9595-eefffb8ba99f
 author: David-Engel
 ms.author: v-daenge
-ms.openlocfilehash: 324d7133a5d63b2b6322357be79daa0ce263e092
-ms.sourcegitcommit: e700497f962e4c2274df16d9e651059b42ff1a10
+ms.openlocfilehash: 6d5e24fff5ac5dff2860fcf0cc24bd6ed4ee1ccf
+ms.sourcegitcommit: cfa04a73b26312bf18d8f6296891679166e2754d
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 08/17/2020
-ms.locfileid: "88428805"
+ms.lasthandoff: 10/19/2020
+ms.locfileid: "92196167"
 ---
 # <a name="what39s-new-in-odbc-38"></a>ODBC 3.8의 새로운 기능&#39;
 Windows 8에는 업데이트 된 버전의 ODBC 3.8이 포함 되어 있습니다. Windows 8의 ODBC 3.8에는 다음과 같은 기능이 포함 되어 있습니다.  
@@ -25,9 +25,9 @@ Windows 8에는 업데이트 된 버전의 ODBC 3.8이 포함 되어 있습니�
   
 -   [비동기 실행(알림 방법)](../../odbc/reference/develop-app/asynchronous-execution-notification-method.md)  
   
--   [데이터 액세스 추적 (Windows 8)](https://msdn.microsoft.com/library/windows/desktop/hh829624.aspx)  
+-   [데이터 액세스 추적 (Windows 8)](/previous-versions/windows/desktop/hh829624(v=vs.85))  
   
--   명령줄에서 ODBC 데이터 원본, ODBC 드라이버, ODBC 성능 카운터 및 데이터 액세스 추적을 관리 하는 데 도움이 되는 PowerShell 명령이 추가 되었습니다.  자세한 내용은 [Windows Data Access Components PowerShell 명령](https://msdn.microsoft.com/library/windows/desktop/jj134064.aspx)을 참조 하세요.  
+-   명령줄에서 ODBC 데이터 원본, ODBC 드라이버, ODBC 성능 카운터 및 데이터 액세스 추적을 관리 하는 데 도움이 되는 PowerShell 명령이 추가 되었습니다.  자세한 내용은 [Windows Data Access Components PowerShell 명령](/previous-versions/windows/desktop/jj134064(v=vs.85))을 참조 하세요.  
   
  Windows 7에는 ODBC, ODBC 3.8의 업데이트 된 버전이 포함 되어 있습니다. ODBC 3.8에는 다음과 같은 기능이 포함 되어 있습니다.  
   

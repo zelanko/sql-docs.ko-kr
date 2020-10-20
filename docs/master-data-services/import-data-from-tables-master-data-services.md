@@ -11,12 +11,12 @@ ms.topic: conceptual
 ms.assetid: ad5b83b1-8e40-4ef8-9ba8-4ea17a58b672
 author: lrtoyou1223
 ms.author: lle
-ms.openlocfilehash: 119ee04be796eb58e0661f02e001ac0b1a2e7a85
-ms.sourcegitcommit: 6be9a0ff0717f412ece7f8ede07ef01f66ea2061
+ms.openlocfilehash: f4b7f610ca23940c676befc107331b406c124cb2
+ms.sourcegitcommit: cfa04a73b26312bf18d8f6296891679166e2754d
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 07/01/2020
-ms.locfileid: "85812969"
+ms.lasthandoff: 10/19/2020
+ms.locfileid: "92197027"
 ---
 # <a name="import-data-from-tables-master-data-services"></a>테이블에서 데이터 가져오기(Master Data Services)
 
@@ -28,7 +28,7 @@ ms.locfileid: "85812969"
   
 -   Stg에 데이터를 삽입할 수 있는 권한이 있어야 합니다. \<name> _Leaf, stg입니다. \<name> _Consolidated, stg. \<name> 데이터베이스의 _Relationship 테이블 [!INCLUDE[ssMDSshort](../includes/ssmdsshort-md.md)] 입니다.  
   
--   데이터베이스의 stg. udp_ \<name> _Leaf, stg. udp \_ \<name> _Consolidated 또는 stg. udp \_ \<name> _Relationship 저장 프로시저 [!INCLUDE[ssMDSshort](../includes/ssmdsshort-md.md)] 를 실행할 수 있는 권한이 있어야 합니다.  
+-   \<name>데이터베이스에서 stg.udp_ _Leaf, stg. udp \_ \<name> _Consolidated 또는 \_ \<name> _Relationship 저장 프로시저 [!INCLUDE[ssMDSshort](../includes/ssmdsshort-md.md)] 를 실행할 수 있는 권한이 있어야 합니다.  
   
 -   모델이 **커밋됨**상태가 아니어야 합니다.  
   
@@ -50,7 +50,7 @@ ms.locfileid: "85812969"
   
 2.  [!INCLUDE[ssManStudioFull](../includes/ssmanstudiofull-md.md)] 를 열고 [!INCLUDE[ssMDSshort](../includes/ssmdsshort-md.md)] 데이터베이스의 데이터베이스 엔진 인스턴스에 연결합니다.  
   
-     자세한 내용은 [SQL Server Management Studio](https://msdn.microsoft.com/library/66a6b7b1-de6a-4161-82bd-98ded486947b)를 참조 하세요.  
+     자세한 내용은 [SQL Server Management Studio](../ssms/sql-server-management-studio-ssms.md)를 참조 하세요.  
   
 3.  [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)] 가져오기 및 내보내기 마법사를 사용하여 준비 테이블로 데이터 가져옵니다.  
   
@@ -77,5 +77,4 @@ ms.locfileid: "85812969"
      마스터 데이터 관리자에서 모델의 **탐색기** 기능 영역으로 이동한 다음 비즈니스 규칙을 적용하여 데이터의 유효성을 검사합니다. 자세한 내용은 [비즈니스 규칙에 대해 특정 멤버 유효성 검사&#40;Master Data Services&#41;](../master-data-services/validate-specific-members-against-business-rules-master-data-services.md)를 참조하세요. 저장 프로시저를 사용하여 데이터의 유효성을 검사할 수도 있습니다. 자세한 내용은 [유효성 검사 저장 프로시저&#40;Master Data Services&#41;](../master-data-services/validation-stored-procedure-master-data-services.md)를 참조하세요.  
   
      준비 테이블에서 데이터를 로드하는 경우 비즈니스 규칙에 대해 데이터의 유효성이 자동으로 검사되지 않습니다. 유효성 검사 및 유효성 검사가 발생하는 경우에 대한 자세한 내용은 [유효성 검사&#40;Master Data Services&#41;](../master-data-services/validation-master-data-services.md)를 참조하세요.  
-  
   

@@ -11,12 +11,12 @@ ms.topic: conceptual
 ms.assetid: ''
 author: lrtoyou1223
 ms.author: lle
-ms.openlocfilehash: ceea117b0b266fdc7649e8e786b034039fae3507
-ms.sourcegitcommit: 7035d9471876c70b99c58bf9b46af5cce6e9c66c
+ms.openlocfilehash: a6cc30d907d6b8c0c14d177106da3457eb828bef
+ms.sourcegitcommit: cfa04a73b26312bf18d8f6296891679166e2754d
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 08/03/2020
-ms.locfileid: "87522007"
+ms.lasthandoff: 10/19/2020
+ms.locfileid: "92194101"
 ---
 # <a name="high-availability-and-disaster-recovery-for-master-data-services"></a>Master Data Services에 대한 고가용성 및 재해 복구
 
@@ -91,7 +91,7 @@ ms.locfileid: "87522007"
 
 WSFC는 애플리케이션 및 서비스의 고가용성을 향상시키는 기능입니다. 해당 인스턴스에서 실행 중인 Microsoft 장애 조치(Failover) 클러스터 서비스와 독립적인 Windows Server 인스턴스의 그룹으로 구성됩니다. Windows Server 인스턴스(때때로 노드라고도 함)가 연결되어 있어 서로 통신할 수 있으며 실패 감지를 수행할 수 있습니다. WSFC는 오류 감지 및 장애 조치 기능을 제공합니다. 클러스터의 노드 또는 서비스가 실패하고 오류가 감지되면 다른 노드가 자동 또는 수동으로 시작되어 실패한 노드에서 호스트된 서비스를 제공합니다. 따라서 사용자는 중단이 최소화된 서비스를 경험하게 되며, 서비스 가용성이 향상됩니다.  
 
-### <a name="prerequisites"></a>사전 요구 사항
+### <a name="prerequisites"></a>필수 구성 요소
 
 모든 인스턴스에서 Windows Server 운영 체제를 설치하고 모든 업데이트를 패치합니다.
 
@@ -180,13 +180,13 @@ Windows Server 인스턴스마다 다음 단계를 완료하여 각 인스턴스
 
    나중에 노드를 추가해야 하는 경우 **장애 조치 클러스터 관리자**의 오른쪽 창에서 **노드 추가** 작업을 클릭합니다.
 
-메모:
+참고:
 
 - WSFC 기능은 모든 Windows Server 버전에서 사용할 수 있는 것은 아닙니다. 버전에 이 기능이 있는지 확인합니다.
 
-- Active Directory에 WSFC를 설정하는 적절한 권한이 있는지 확인합니다. 문제가 있으면 [장애 조치 클러스터 단계별 가이드: Active Directory에서 계정 구성](https://technet.microsoft.com/library/cc731002(v=ws.10).aspx)을 참조하세요.
+- Active Directory에 WSFC를 설정하는 적절한 권한이 있는지 확인합니다. 문제가 있으면 [장애 조치 클러스터 단계별 가이드: Active Directory에서 계정 구성](/previous-versions/windows/it-pro/windows-server-2008-R2-and-2008/cc731002(v=ws.10))을 참조하세요.
 
-WSFC에 대한 더 자세한 내용은 [장애 조치 클러스터](https://technet.microsoft.com/library/cc732488(v=ws.10).aspx)를 참조하세요.
+WSFC에 대한 더 자세한 내용은 [장애 조치 클러스터](/previous-versions/windows/it-pro/windows-server-2008-R2-and-2008/cc732488(v=ws.10))를 참조하세요.
 
 ## <a name="sql-server-always-on-availability-group"></a>Always On 가용성 그룹 SQL Server
 
@@ -208,7 +208,7 @@ AG는 데이터베이스 수준의 가용성을 제공 합니다. AG(사용자 �
 
 FCIs는 인스턴스 수준의 고가용성을 제공 합니다. SQL Server 서비스와 관련 서비스는 WSFC에서 리소스로 등록 됩니다. 또한 FCI 솔루션은 WFC 클러스터의 모든 노드에 사용할 수 있어야 하는 SAN 또는 SMB 파일 공유와 같이 대칭 공유 디스크 스토리지가 필요합니다.
    
-### <a name="prerequisites"></a>사전 요구 사항
+### <a name="prerequisites"></a>필수 구성 요소
 
 - 모든 노드에서 SQL Server를 설치합니다. 자세한 내용은 [SQL Server 2016 설치](../../database-engine/install-windows/install-sql-server.md)를 참조하세요.
 
@@ -394,5 +394,4 @@ AG는 기존 데이터베이스에서만 만들 수 있습니다. 따라서 한 
 
 이 백서가 도움이 되었습니까? 문서 맨 위에 있는 **주석**을 클릭하여 여러분의 의견을 보내주세요. 
 
-사용자 의견은 배포하는 백서의 품질 향상에 도움이 됩니다. 
-
+사용자 의견은 배포하는 백서의 품질 향상에 도움이 됩니다.

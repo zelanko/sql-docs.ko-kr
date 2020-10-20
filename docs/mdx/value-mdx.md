@@ -9,12 +9,12 @@ ms.topic: reference
 ms.author: owend
 ms.reviewer: owend
 author: minewiskan
-ms.openlocfilehash: 3d6bf8edd7cbeefefa723c1acc374daa8d2c9407
-ms.sourcegitcommit: e700497f962e4c2274df16d9e651059b42ff1a10
+ms.openlocfilehash: 52224625f5e2e6fc70ca9a76f750ed374108c52c
+ms.sourcegitcommit: cfa04a73b26312bf18d8f6296891679166e2754d
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 08/17/2020
-ms.locfileid: "88449615"
+ms.lasthandoff: 10/19/2020
+ms.locfileid: "92196731"
 ---
 # <a name="value-mdx"></a>Value(MDX)
 
@@ -33,9 +33,9 @@ Member_Expression[.Value]
  멤버를 반환하는 유효한 MDX 식입니다.  
   
 ## <a name="remarks"></a>설명  
- **Value** 함수는 지정 된 멤버의 값을 문자열로 반환 합니다. 멤버의 값은 멤버의 기본 속성이 고 다른 값이 지정 되지 않은 경우 멤버에 대해 반환 되는 값 이므로 **value** 인수는 선택 사항입니다. 멤버의 속성에 대 한 자세한 내용은 [기본 멤버 속성 &#40;mdx&#41;](https://docs.microsoft.com/analysis-services/multidimensional-models/mdx/mdx-member-properties-intrinsic-member-properties) 및 [Mdx&#41;&#40;사용자 정의 멤버 속성 ](https://docs.microsoft.com/analysis-services/multidimensional-models/mdx/mdx-member-properties-user-defined-member-properties)을 참조 하세요.  
+ **Value** 함수는 지정 된 멤버의 값을 문자열로 반환 합니다. 멤버의 값은 멤버의 기본 속성이 고 다른 값이 지정 되지 않은 경우 멤버에 대해 반환 되는 값 이므로 **value** 인수는 선택 사항입니다. 멤버의 속성에 대 한 자세한 내용은 [기본 멤버 속성 &#40;mdx&#41;](/analysis-services/multidimensional-models/mdx/mdx-member-properties-intrinsic-member-properties) 및 [Mdx&#41;&#40;사용자 정의 멤버 속성 ](/analysis-services/multidimensional-models/mdx/mdx-member-properties-user-defined-member-properties)을 참조 하세요.  
   
-## <a name="examples"></a>예제  
+## <a name="examples"></a>예  
  다음 예에서는 멤버 값을 반환하고 멤버 이름을 명시적으로 반환합니다.  
   
 ```  
@@ -59,5 +59,4 @@ from [Adventure Works]
  [이름 &#40;MDX&#41;](../mdx/name-mdx.md)   
  [UniqueName &#40;MDX&#41;](../mdx/uniquename-mdx.md)   
  [MDX 함수 참조&#40;MDX&#41;](../mdx/mdx-function-reference-mdx.md)  
-  
   

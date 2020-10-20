@@ -9,12 +9,12 @@ ms.topic: reference
 ms.author: owend
 ms.reviewer: owend
 author: minewiskan
-ms.openlocfilehash: 759feb8b64a06e6238d338d4d619dd1433819dda
-ms.sourcegitcommit: e700497f962e4c2274df16d9e651059b42ff1a10
+ms.openlocfilehash: 7929238ecb672dd6c537772dafb15422ca52bce3
+ms.sourcegitcommit: cfa04a73b26312bf18d8f6296891679166e2754d
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 08/17/2020
-ms.locfileid: "88387539"
+ms.lasthandoff: 10/19/2020
+ms.locfileid: "92196057"
 ---
 # <a name="crossjoin-mdx"></a>Crossjoin(MDX)
 
@@ -47,9 +47,9 @@ Set_Expression1 * Set_Expression2 [* ...n]
  (x2, y*n*),..., (x*n*, y1), (x*n*, y2),..., (xn, y*n*)}  
   
 > [!IMPORTANT]  
->  크로스 조인의 집합이 동일한 차원에 있는 다른 특성 계층의 튜플로 구성된 경우 이 함수는 실제로 존재하는 튜플만 반환합니다. 자세한 내용은 [MDX의 주요 개념 &#40;Analysis Services&#41;](https://docs.microsoft.com/analysis-services/multidimensional-models/mdx/key-concepts-in-mdx-analysis-services)를 참조 하세요.  
+>  크로스 조인의 집합이 동일한 차원에 있는 다른 특성 계층의 튜플로 구성된 경우 이 함수는 실제로 존재하는 튜플만 반환합니다. 자세한 내용은 [MDX의 주요 개념 &#40;Analysis Services&#41;](/analysis-services/multidimensional-models/mdx/key-concepts-in-mdx-analysis-services)를 참조 하세요.  
   
-## <a name="examples"></a>예제  
+## <a name="examples"></a>예  
  다음 쿼리에서는 쿼리의 Columns 및 Rows 축에서 Crossjoin 함수를 사용하는 간단한 예를 보여 줍니다.  
   
  `SELECT`  
@@ -130,5 +130,4 @@ WHERE (Measures.[Internet Sales Amount],
   
 ## <a name="see-also"></a>참고 항목  
  [MDX 함수 참조&#40;MDX&#41;](../mdx/mdx-function-reference-mdx.md)  
-  
   

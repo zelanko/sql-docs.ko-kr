@@ -9,12 +9,12 @@ ms.topic: reference
 ms.author: owend
 ms.reviewer: owend
 author: minewiskan
-ms.openlocfilehash: d571ed020c1b36ea2e09beca7d2ccbef5899951f
-ms.sourcegitcommit: e700497f962e4c2274df16d9e651059b42ff1a10
+ms.openlocfilehash: cbdae47b3ede8ad2b22258e83a69b4f2776115d9
+ms.sourcegitcommit: cfa04a73b26312bf18d8f6296891679166e2754d
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 08/17/2020
-ms.locfileid: "88500476"
+ms.lasthandoff: 10/19/2020
+ms.locfileid: "92192343"
 ---
 # <a name="properties-mdx"></a>Properties(MDX)
 
@@ -36,7 +36,7 @@ Member_Expression.Properties(Property_Name [, TYPED])
  멤버 속성 이름의 유효한 문자열 식입니다.  
   
 ## <a name="remarks"></a>설명  
- **Properties** 함수는 지정 된 멤버 속성에 대해 지정 된 멤버의 값을 반환 합니다. 멤버 속성은 **NAME**, **ID**, **KEY**또는 **CAPTION**과 같은 기본 멤버 속성 이거나 사용자 정의 멤버 속성 일 수 있습니다. 자세한 내용은 mdx&#41;&#40;[내장 멤버 속성 &#40;mdx&#41;](https://docs.microsoft.com/analysis-services/multidimensional-models/mdx/mdx-member-properties-intrinsic-member-properties) 및 [사용자 정의 멤버 속성 ](https://docs.microsoft.com/analysis-services/multidimensional-models/mdx/mdx-member-properties-user-defined-member-properties)을 참조 하세요.  
+ **Properties** 함수는 지정 된 멤버 속성에 대해 지정 된 멤버의 값을 반환 합니다. 멤버 속성은 **NAME**, **ID**, **KEY**또는 **CAPTION**과 같은 기본 멤버 속성 이거나 사용자 정의 멤버 속성 일 수 있습니다. 자세한 내용은 mdx&#41;&#40;[내장 멤버 속성 &#40;mdx&#41;](/analysis-services/multidimensional-models/mdx/mdx-member-properties-intrinsic-member-properties) 및 [사용자 정의 멤버 속성 ](/analysis-services/multidimensional-models/mdx/mdx-member-properties-user-defined-member-properties)을 참조 하세요.  
   
  기본적으로 값은 문자열로 변환됩니다. **형식화** 된 경우 반환 값은 강력한 형식입니다.  
   
@@ -106,7 +106,6 @@ FROM [Adventure Works]
 ```  
   
 ## <a name="see-also"></a>참고 항목  
- [MDX&#41;&#40;멤버 속성 사용 ](https://docs.microsoft.com/analysis-services/multidimensional-models/mdx/mdx-member-properties)   
+ [MDX&#41;&#40;멤버 속성 사용 ](/analysis-services/multidimensional-models/mdx/mdx-member-properties)   
  [MDX 함수 참조&#40;MDX&#41;](../mdx/mdx-function-reference-mdx.md)  
-  
   

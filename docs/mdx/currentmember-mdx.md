@@ -9,12 +9,12 @@ ms.topic: reference
 ms.author: owend
 ms.reviewer: owend
 author: minewiskan
-ms.openlocfilehash: e04dd1146bc55d8d68475770a9077fc8d962b56d
-ms.sourcegitcommit: e700497f962e4c2274df16d9e651059b42ff1a10
+ms.openlocfilehash: 5778a8b1d56fa568fe97dba104c1b46da1a005cf
+ms.sourcegitcommit: cfa04a73b26312bf18d8f6296891679166e2754d
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 08/17/2020
-ms.locfileid: "88471875"
+ms.lasthandoff: 10/19/2020
+ms.locfileid: "92196047"
 ---
 # <a name="currentmember-mdx"></a>CurrentMember(MDX)
 
@@ -38,7 +38,7 @@ Hierarchy_Expression.CurrentMember
 > [!IMPORTANT]  
 >  차원에 표시 가능한 계층이 하나만 있는 경우 해당 차원 이름은 표시 가능한 유일한 계층으로 확인되므로 해당 계층을 차원 이름이나 계층 이름 중 하나로 참조할 수 있습니다. 예를 들어 `Measures.CurrentMember`는 Measures 차원의 유일한 계층으로 확인되므로 유효한 MDX 식입니다.  
   
-## <a name="examples"></a>예제  
+## <a name="examples"></a>예  
  다음 쿼리는 **Currentmember** 를 사용 하 여 열, 행 및 조각 축의 계층에서 현재 멤버를 찾는 방법을 보여 줍니다.  
   
  `WITH MEMBER MEASURES.CURRENTDATE AS`  
@@ -75,7 +75,7 @@ Hierarchy_Expression.CurrentMember
   
  `WHERE([Customer].[Customer Geography].[Country].&[Australia])`  
   
- 현재 멤버는 쿼리의 축에 사용된 계층에서 변경됩니다. 따라서 축에 사용 되지 않는 동일한 차원의 다른 계층에 있는 현재 멤버도 변경 될 수 있습니다. 이 동작을 ' 자동 존재 ' 라고 하며 자세한 내용은 [MDX &#40;Analysis Services&#41;의 주요 개념 ](https://docs.microsoft.com/analysis-services/multidimensional-models/mdx/key-concepts-in-mdx-analysis-services)에서 찾을 수 있습니다. 예를 들어 아래 쿼리에서는 Date 차원의 Calendar Year 계층에 있는 현재 멤버가 Rows 축에 표시되는 Calendar 계층의 현재 멤버와 함께 변경되는 방법을 보여 줍니다.  
+ 현재 멤버는 쿼리의 축에 사용된 계층에서 변경됩니다. 따라서 축에 사용 되지 않는 동일한 차원의 다른 계층에 있는 현재 멤버도 변경 될 수 있습니다. 이 동작을 ' 자동 존재 ' 라고 하며 자세한 내용은 [MDX &#40;Analysis Services&#41;의 주요 개념 ](/analysis-services/multidimensional-models/mdx/key-concepts-in-mdx-analysis-services)에서 찾을 수 있습니다. 예를 들어 아래 쿼리에서는 Date 차원의 Calendar Year 계층에 있는 현재 멤버가 Rows 축에 표시되는 Calendar 계층의 현재 멤버와 함께 변경되는 방법을 보여 줍니다.  
   
  `WITH MEMBER MEASURES.CURRENTYEAR AS`  
   
@@ -119,5 +119,4 @@ WHERE {[Date].[Calendar Year].[Calendar Year].&[2003]}
   
 ## <a name="see-also"></a>참고 항목  
  [MDX 함수 참조&#40;MDX&#41;](../mdx/mdx-function-reference-mdx.md)  
-  
   

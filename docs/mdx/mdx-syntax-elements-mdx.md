@@ -9,12 +9,12 @@ ms.topic: reference
 ms.author: owend
 ms.reviewer: owend
 author: minewiskan
-ms.openlocfilehash: 10a9aa360a50b43324ae9e41b77dee6ce84baf60
-ms.sourcegitcommit: e700497f962e4c2274df16d9e651059b42ff1a10
+ms.openlocfilehash: 27755806802e5238329b4a9ecb49e6a9f6ad5ce2
+ms.sourcegitcommit: cfa04a73b26312bf18d8f6296891679166e2754d
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 08/17/2020
-ms.locfileid: "88483896"
+ms.lasthandoff: 10/19/2020
+ms.locfileid: "92196943"
 ---
 # <a name="mdx-syntax-elements-mdx"></a>MDX 구문 요소(MDX)
 
@@ -30,9 +30,8 @@ ms.locfileid: "88483896"
 |[함수](../mdx/functions-mdx-syntax.md)|함수는 0개 이상의 입력 값을 받고 스칼라 값 또는 개체를 반환하는 구문 요소입니다. 예를 들어 여러 값을 추가 하는 [Sum](../mdx/sum-mdx.md) 함수, 차원 또는 수준에서 멤버 집합을 반환 하는 [멤버](../mdx/members-set-mdx.md) 함수 등이 있습니다.|  
 |[설명](../mdx/comments-mdx-syntax.md)|주석은 문의 용도를 설명하기 위해 MDX 문 또는 스크립트에 삽입하는 텍스트입니다. [!INCLUDE[ssASnoversion](../includes/ssasnoversion-md.md)] 주석을 실행 하지 않습니다.|  
 |[예약 키워드](../mdx/reserved-keywords-mdx-syntax.md)|예약된 키워드는 MDX에서 사용하도록 예약되어 있으며 MDX 문에서 개체 이름으로 사용할 수 없는 단어입니다.|  
-|[멤버, 튜플, 집합](https://docs.microsoft.com/analysis-services/multidimensional-models/mdx/working-with-members-tuples-and-sets-mdx)|멤버, 튜플 및 집합은 MDX 쿼리를 만들기 전에 이해해야 할 다차원 데이터의 핵심 개념입니다.|  
+|[멤버, 튜플, 집합](/analysis-services/multidimensional-models/mdx/working-with-members-tuples-and-sets-mdx)|멤버, 튜플 및 집합은 MDX 쿼리를 만들기 전에 이해해야 할 다차원 데이터의 핵심 개념입니다.|  
   
 ## <a name="see-also"></a>참고 항목  
  [MDX&#40;Multidimensional Expression&#41; 참조](../mdx/multidimensional-expressions-mdx-reference.md)  
-  
   

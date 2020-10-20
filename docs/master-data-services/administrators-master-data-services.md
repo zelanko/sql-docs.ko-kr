@@ -15,12 +15,12 @@ helpviewer_keywords:
 ms.assetid: d330aa4e-6ade-4b09-b376-1b15d6c78f7d
 author: lrtoyou1223
 ms.author: lle
-ms.openlocfilehash: b37c0ef345819c313bf2246df1dc01aec21d1299
-ms.sourcegitcommit: 827ad02375793090fa8fee63cc372d130f11393f
+ms.openlocfilehash: 7e65024ac3673e6579e614ad64931ab772b599f3
+ms.sourcegitcommit: cfa04a73b26312bf18d8f6296891679166e2754d
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 09/04/2020
-ms.locfileid: "89480324"
+ms.lasthandoff: 10/19/2020
+ms.locfileid: "92193669"
 ---
 # <a name="administrators-master-data-services"></a>관리자(Master Data Services)
 
@@ -65,18 +65,17 @@ ms.locfileid: "89480324"
   
 ## <a name="comparing-administrator-types"></a>관리자 유형 비교  
   
-|관리자 유형|설명|  
+|관리자 유형|Description|  
 |------------------------|-----------------|  
 |[!INCLUDE[ssMDSshort](../includes/ssmdsshort-md.md)] 슈퍼 사용자|[!INCLUDE[ssMDSmdm](../includes/ssmdsmdm-md.md)]에서 할당된 사용 권한은 관리자의 액세스 권한 아무런 영향을 주지 않습니다.<br /><br /> 명시적으로 할당된 기능 영역 권한 또는 그룹에서 상속된 권한에 따라 슈퍼 사용자로 지정될 수 있습니다.<br /><br /> 모든 모델에 대한 모든 권한이 자동으로 부여됩니다.<br /><br /> 모든 기능 영역에 대한 액세스 권한을 자동으로 가집니다.|  
 |모델 관리자|명시적으로 할당된 관리 권한 또는 그룹에서 상속된 사용 권한에 따라 모델 관리자로 지정될 수 있습니다.<br /><br /> 액세스 권한이 부여된 기능 영역에 대해서만 액세스 권한을 가집니다.<br /><br /> 특정 모델의 모든 개체 및 멤버에 대한 모든 권한이 자동으로 부여됩니다.|  
 |엔터티 관리자|명시적으로 할당된 관리자 권한 또는 그룹에서 상속된 사용 권한에 따라 엔터티 관리자로 지정될 수 있습니다.<br /><br /> 액세스 권한이 부여된 기능 영역에 대해서만 액세스 권한을 가집니다.<br /><br /> 특정 엔터티의 모든 개체 및 멤버에 대한 모든 권한이 자동으로 부여됩니다.<br /><br /> 엔터티 변경 시 승인이 필요한 경우 보류 중인 변경 집합을 승인할 수 있습니다.|  
   
 ## <a name="external-resources"></a>외부 리소스  
- msdn.com의 블로그 게시물 [향상된 보안 기능](https://docs.microsoft.com/archive/blogs/e7/improvements-to-autoplay)  
+ msdn.com의 블로그 게시물 [향상된 보안 기능](/archive/blogs/e7/improvements-to-autoplay)  
   
 ## <a name="see-also"></a>참고 항목  
  [모델 관리자 &#40;MDS(Master Data Services)를 만듭니다&#41;](../master-data-services/create-a-model-administrator-master-data-services.md)   
  [MDS(Master Data Services) 데이터베이스 만들기](../master-data-services/install-windows/create-a-master-data-services-database.md)   
  [알림&#40;Master Data Services&#41;](../master-data-services/notifications-master-data-services.md)  
-  
   

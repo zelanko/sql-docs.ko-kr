@@ -9,12 +9,12 @@ ms.topic: reference
 ms.author: owend
 ms.reviewer: owend
 author: minewiskan
-ms.openlocfilehash: b431d82f24e5bf531dfa407d459ff9f36b543160
-ms.sourcegitcommit: e700497f962e4c2274df16d9e651059b42ff1a10
+ms.openlocfilehash: 37f23c75d8a947e52daf47ef9648ccbd1587b9a8
+ms.sourcegitcommit: cfa04a73b26312bf18d8f6296891679166e2754d
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 08/17/2020
-ms.locfileid: "88341129"
+ms.lasthandoff: 10/19/2020
+ms.locfileid: "92192303"
 ---
 # <a name="using-cube-and-subcube-expressions"></a>큐브 및 하위 큐브 식 사용
 
@@ -70,10 +70,9 @@ ms.locfileid: "88341129"
  하위 큐브 식별자는 *Subcube_Name*표시 됩니다. 나타납니다.  
   
 ## <a name="see-also"></a>참고 항목  
- [MDX &#40;기본 MDX 쿼리&#41;](https://docs.microsoft.com/analysis-services/multidimensional-models/mdx/mdx-query-the-basic-query)   
- [Mdx &#40;mdx로 하위 큐브 작성&#41;](https://docs.microsoft.com/analysis-services/multidimensional-models/mdx/building-subcubes-in-mdx-mdx)   
+ [MDX &#40;기본 MDX 쿼리&#41;](/analysis-services/multidimensional-models/mdx/mdx-query-the-basic-query)   
+ [Mdx &#40;mdx로 하위 큐브 작성&#41;](/analysis-services/multidimensional-models/mdx/building-subcubes-in-mdx-mdx)   
  [MDX&#41;&#40;CREATE 하위 큐브 문 ](../mdx/mdx-data-definition-create-subcube.md)   
  [MDX &#40;식&#41;](../mdx/expressions-mdx.md)   
  [SCOPE 문&#40;MDX&#41;](../mdx/mdx-scripting-scope.md)  
-  
   

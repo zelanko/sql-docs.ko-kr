@@ -14,12 +14,12 @@ helpviewer_keywords:
 ms.assetid: ed42f083-c9e8-4ee4-9d64-d879bf955c78
 author: David-Engel
 ms.author: v-daenge
-ms.openlocfilehash: 07917cbe056b38be42e4697fcef52935bae3efe3
-ms.sourcegitcommit: e700497f962e4c2274df16d9e651059b42ff1a10
+ms.openlocfilehash: 15033816b953df764126853ada353452f00650d6
+ms.sourcegitcommit: cfa04a73b26312bf18d8f6296891679166e2754d
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 08/17/2020
-ms.locfileid: "88449295"
+ms.lasthandoff: 10/19/2020
+ms.locfileid: "92196177"
 ---
 # <a name="reserved-keyword-limitations"></a>예약 키워드 제한 사항
 
@@ -29,7 +29,6 @@ SQL 테이블 또는 관련 개체에서 ODBC 예약 키워드를 식별자로 �
 
 ODBC 예약 키워드 목록은 다음 위치에서 제공 됩니다.
 
-- [ODBC 예약 키워드](https://docs.microsoft.com/sql/odbc/reference/appendixes/reserved-keywords)입니다.
+- [ODBC 예약 키워드](../reference/appendixes/reserved-keywords.md)입니다.
 
-- *ODBC 프로그래머 참조 가이드*에서 [부록 C: SQL 문법](https://docs.microsoft.com/sql/odbc/reference/appendixes/appendix-c-sql-grammar)을 참조 하세요.
-
+- *ODBC 프로그래머 참조 가이드*에서 [부록 C: SQL 문법](../reference/appendixes/appendix-c-sql-grammar.md)을 참조 하세요.

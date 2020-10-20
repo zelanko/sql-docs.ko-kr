@@ -12,12 +12,12 @@ ms.assetid: 19519697-c219-44a8-9339-ee1b02545445
 author: v-redu
 ms.author: lle
 monikerRange: '>=sql-server-ver15||=sqlallproducts-allversions'
-ms.openlocfilehash: 616fa3791b0dbc154282f5273cd7fb4e1eb3c1f5
-ms.sourcegitcommit: a4ee6957708089f7d0dda15668804e325b8a240c
+ms.openlocfilehash: 671ae0d9578c81d56c3324f73a4240152594dd49
+ms.sourcegitcommit: cfa04a73b26312bf18d8f6296891679166e2754d
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 08/06/2020
-ms.locfileid: "87878941"
+ms.lasthandoff: 10/19/2020
+ms.locfileid: "92194435"
 ---
 # <a name="host-an-mds-database-on-a-managed-instance"></a>관리 되는 인스턴스에서 MDS 데이터베이스를 호스팅합니다.
 
@@ -31,15 +31,15 @@ ms.locfileid: "87878941"
 
 ### <a name="create-and-configure-the-database"></a>데이터베이스 만들기 및 구성
 
-1. 가상 네트워크를 사용 하 여 관리 되는 인스턴스를 만듭니다. 자세한 내용은 [빠른 시작: SQL Managed Instance 만들기를](https://docs.microsoft.com/azure/sql-database/sql-database-managed-instance-get-started) 참조 하세요.
+1. 가상 네트워크를 사용 하 여 관리 되는 인스턴스를 만듭니다. 자세한 내용은 [빠른 시작: SQL Managed Instance 만들기를](/azure/sql-database/sql-database-managed-instance-get-started) 참조 하세요.
 
-1. 지점 및 사이트 간 연결을 구성 합니다. 지침은 [네이티브 Azure 인증서 인증을 사용 하 여 VNet에 지점 및 사이트 간 연결 구성: Azure Portal](https://docs.microsoft.com/azure/vpn-gateway/vpn-gateway-howto-point-to-site-resource-manager-portal) 을 참조 하세요.
+1. 지점 및 사이트 간 연결을 구성 합니다. 지침은 [네이티브 Azure 인증서 인증을 사용 하 여 VNet에 지점 및 사이트 간 연결 구성: Azure Portal](/azure/vpn-gateway/vpn-gateway-howto-point-to-site-resource-manager-portal) 을 참조 하세요.
 
-1. SQL Managed Instance를 사용 하 여 Azure Active Directory 인증을 구성 합니다. 자세한 내용은 [SQL을 사용 하 여 Azure Active Directory 인증 구성 및 관리](https://docs.microsoft.com/azure/sql-database/sql-database-aad-authentication-configure) 를 참조 하세요.
+1. SQL Managed Instance를 사용 하 여 Azure Active Directory 인증을 구성 합니다. 자세한 내용은 [SQL을 사용 하 여 Azure Active Directory 인증 구성 및 관리](/azure/sql-database/sql-database-aad-authentication-configure) 를 참조 하세요.
 
 ### <a name="configure-web-application-machine"></a>웹 응용 프로그램 컴퓨터 구성
 
-1. 지점 및 사이트 간 연결 인증서와 VPN을 설치 하 여 컴퓨터가 관리 되는 인스턴스에 액세스할 수 있도록 합니다. 지침은 [네이티브 Azure 인증서 인증을 사용 하 여 VNet에 지점 및 사이트 간 연결 구성: Azure Portal](https://docs.microsoft.com/azure/vpn-gateway/vpn-gateway-howto-point-to-site-resource-manager-portal) 을 참조 하세요.
+1. 지점 및 사이트 간 연결 인증서와 VPN을 설치 하 여 컴퓨터가 관리 되는 인스턴스에 액세스할 수 있도록 합니다. 지침은 [네이티브 Azure 인증서 인증을 사용 하 여 VNet에 지점 및 사이트 간 연결 구성: Azure Portal](/azure/vpn-gateway/vpn-gateway-howto-point-to-site-resource-manager-portal) 을 참조 하세요.
 
 1. 다음 역할 및 기능을 설치 합니다.
    - 역할:
@@ -199,9 +199,9 @@ MDS는 다음 샘플 연결 문자열에 표시 된 것 처럼 Active Directory 
 
 ## <a name="upgrade-ssmdsshort_md-and-sql-database-version"></a>업그레이드 [!INCLUDE[ssMDSshort_md](../includes/ssmdsshort-md.md)] 및 SQL Database 버전
 
-### <a name="upgrade-ssmdsshort_md"></a>업그레이드할[!INCLUDE[ssMDSshort_md](../includes/ssmdsshort-md.md)]
+### <a name="upgrade-ssmdsshort_md"></a>업그레이드할 [!INCLUDE[ssMDSshort_md](../includes/ssmdsshort-md.md)]
 
-**SQL Server 2019 누적 업데이트**를 설치 합니다. [!INCLUDE[ssMDSshort_md](../includes/ssmdsshort-md.md)]자동으로 업데이트 됩니다.
+**SQL Server 2019 누적 업데이트**를 설치 합니다. [!INCLUDE[ssMDSshort_md](../includes/ssmdsshort-md.md)] 자동으로 업데이트 됩니다.
 
 ### <a name="upgrade-sql-server"></a>SQL Server 업그레이드
 
@@ -210,7 +210,7 @@ MDS는 다음 샘플 연결 문자열에 표시 된 것 처럼 Active Directory 
 
 이 문제를 해결 하려면 데이터베이스 버전을 업그레이드 해야 합니다.
 
-1. 를 연 [!INCLUDE[ssMDScfgmgr](../includes/ssmdscfgmgr-md.md)] 다음 왼쪽 창에서 **데이터베이스 구성** 을 선택 합니다.
+1. 를 연 [!INCLUDE[ssMDScfgmgr](../includes/ssmdscfgmgr-md.md)] 다음 왼쪽 창에서  **데이터베이스 구성** 을 선택 합니다.
 
 1. 의 **데이터베이스 구성** 페이지에서 [!INCLUDE[ssMDScfgmgr](../includes/ssmdscfgmgr-md.md)] **데이터베이스 선택**을 선택 합니다.
 

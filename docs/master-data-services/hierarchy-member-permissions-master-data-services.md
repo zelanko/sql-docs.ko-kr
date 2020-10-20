@@ -14,12 +14,12 @@ helpviewer_keywords:
 ms.assetid: b3880eed-1bf6-4f65-ab23-b08c194cc858
 author: lrtoyou1223
 ms.author: lle
-ms.openlocfilehash: 32b74832ff779ed01cb6821512187cd79d7af896
-ms.sourcegitcommit: 827ad02375793090fa8fee63cc372d130f11393f
+ms.openlocfilehash: e80ec1e7ffaa4f3bbce87363de109aa85132f74d
+ms.sourcegitcommit: cfa04a73b26312bf18d8f6296891679166e2754d
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 09/04/2020
-ms.locfileid: "89480665"
+ms.lasthandoff: 10/19/2020
+ms.locfileid: "92194066"
 ---
 # <a name="hierarchy-member-permissions-master-data-services"></a>계층 멤버 권한(Master Data Services)
 
@@ -38,13 +38,13 @@ ms.locfileid: "89480665"
   
  계층 멤버 권한은 할당 대상 모델 버전과 해당 버전의 모든 이후 복사본에 적용되며, 할당 대상 버전보다 이전 버전에는 적용되지 않습니다.  
   
-|사용 권한|설명|  
+|사용 권한|Description|  
 |----------------|-----------------|  
 |**읽기**|멤버가 표시됩니다.<br /><br /> <br /><br /> 참고: **루트** 에 **읽기**권한만 할당하면 **루트** 아래의 멤버는 읽기 전용이 되지만 명시적 계층 및 컬렉션에서는 사용자가 멤버를 **루트** 로 이동하고 **루트**에 새 멤버를 추가할 수 있습니다.|  
 |**만들기**|계층 멤버 권한에서는 만들기 권한이 제공되지 않습니다.|  
 |**Update**|멤버가 표시되며 사용자가 멤버를 변경할 수 있습니다. 또한 사용자는 멤버가 속한 모든 명시적 계층이나 컬렉션에서 멤버를 이동할 수도 있습니다.|  
 |**Delete**|멤버가 표시되며 사용자가 멤버를 삭제할 수 있습니다.|  
-|**Deny**|멤버가 표시되지 않습니다.|  
+|**거부**|멤버가 표시되지 않습니다.|  
   
  **계층 멤버** 탭에서 할당하는 사용 권한은 즉시 적용되지 않습니다. 사용 권한이 적용되는 주기는 **데이터베이스의 시스템 설정 테이블에 지정된** 멤버 보안 처리 간격 설정 [!INCLUDE[ssMDSshort](../includes/ssmdsshort-md.md)] 에 따라 다릅니다. [멤버 권한 즉시 적용&#40;Master Data Services&#41;](../master-data-services/immediately-apply-member-permissions-master-data-services.md)의 단계를 수행하여 멤버 권한을 즉시 적용할 수 있습니다.  
   
@@ -64,7 +64,7 @@ ms.locfileid: "89480665"
 -   한 계층 노드에는 **Create** / **Read** / **Update** / **Delete** 권한의 조합이 할당 되 고 다른 노드에는 **거부** 권한이 할당 된 경우에는 노드의 멤버에 대 한 액세스가 거부 됩니다.  
   
 ## <a name="external-resources"></a>외부 리소스  
- msdn.com의 블로그 게시물 [향상된 보안 기능](https://docs.microsoft.com/archive/blogs/e7/improvements-to-autoplay)  
+ msdn.com의 블로그 게시물 [향상된 보안 기능](/archive/blogs/e7/improvements-to-autoplay)  
   
 ## <a name="see-also"></a>참고 항목  
  [계층 멤버 권한 할당 &#40;MDS(Master Data Services)&#41;](../master-data-services/assign-hierarchy-member-permissions-master-data-services.md)   
@@ -72,5 +72,4 @@ ms.locfileid: "89480665"
  [멤버가 MDS(Master Data Services)를 &#40;&#41;](../master-data-services/members-master-data-services.md)   
  [계층 &#40;MDS(Master Data Services)&#41;](../master-data-services/hierarchies-master-data-services.md)   
  [멤버 권한 즉시 적용&#40;Master Data Services&#41;](../master-data-services/immediately-apply-member-permissions-master-data-services.md)  
-  
   

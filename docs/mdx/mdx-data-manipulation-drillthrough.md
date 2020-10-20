@@ -9,12 +9,12 @@ ms.topic: reference
 ms.author: owend
 ms.reviewer: owend
 author: minewiskan
-ms.openlocfilehash: ee68e6cbb22bc817d478490315ab88ccb87e4ad4
-ms.sourcegitcommit: e700497f962e4c2274df16d9e651059b42ff1a10
+ms.openlocfilehash: 8899c5a9325c638549383683b82724eefa2b1464
+ms.sourcegitcommit: cfa04a73b26312bf18d8f6296891679166e2754d
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 08/17/2020
-ms.locfileid: "88387044"
+ms.lasthandoff: 10/19/2020
+ms.locfileid: "92196187"
 ---
 # <a name="mdx-data-manipulation---drillthrough"></a>MDX 데이터 조작 - DRILLTHROUGH
 
@@ -50,7 +50,7 @@ DRILLTHROUGH[MAXROWSUnsigned_Integer]
   
  MDX 문은 제목 셀을 지정합니다. **MAXROWS** 인수에 지정 된 값은 결과 행 집합에서 반환 해야 하는 최대 행 수를 나타냅니다.  
   
- 기본적으로 반환되는 최대 행 수는 10,000개입니다. 즉, **MAXROWS** 를 지정 하지 않으면 1만 행이 더 줄어듭니다. 이 값이 시나리오에 적합 하지 않은 경우 **MAXROWS** 를와 같이 더 높은 수로 설정할 수 있습니다 `MAXROWS 20000` . 전체적으로 **OLAP\Query\DefaultDrillthroughMaxRows** 서버 속성을 변경 하 여 기본값을 늘릴 수 있습니다. 이 속성을 변경 하는 방법에 대 한 자세한 내용은 [Analysis Services의 서버 속성](https://docs.microsoft.com/analysis-services/server-properties/server-properties-in-analysis-services)을 참조 하세요.  
+ 기본적으로 반환되는 최대 행 수는 10,000개입니다. 즉, **MAXROWS** 를 지정 하지 않으면 1만 행이 더 줄어듭니다. 이 값이 시나리오에 적합 하지 않은 경우 **MAXROWS** 를와 같이 더 높은 수로 설정할 수 있습니다 `MAXROWS 20000` . 전체적으로 **OLAP\Query\DefaultDrillthroughMaxRows** 서버 속성을 변경 하 여 기본값을 늘릴 수 있습니다. 이 속성을 변경 하는 방법에 대 한 자세한 내용은 [Analysis Services의 서버 속성](/analysis-services/server-properties/server-properties-in-analysis-services)을 참조 하세요.  
   
  달리 지정되지 않은 경우 반환되는 열에는 다 대 다 차원 이외에 지정된 측정값의 측정값 그룹과 관련된 모든 차원 세분성 특성이 모두 포함됩니다. 차원과 측정값 그룹을 구별할 수 있도록 큐브 차원은 $로 시작됩니다. **RETURN** 절은 드릴스루 쿼리에서 반환 되는 열을 지정 하는 데 사용 됩니다. 다음 함수는 **RETURN** 절에 의해 단일 특성 또는 측정값에 적용 될 수 있습니다.  
   
@@ -99,5 +99,4 @@ RETURN
   
 ## <a name="see-also"></a>참고 항목  
  [Mdx 데이터 조작 문은 MDX를 &#40;&#41;](../mdx/mdx-data-manipulation-statements-mdx.md)  
-  
   

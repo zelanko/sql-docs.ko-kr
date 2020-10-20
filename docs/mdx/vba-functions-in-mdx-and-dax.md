@@ -9,24 +9,24 @@ ms.topic: reference
 ms.author: owend
 ms.reviewer: owend
 author: minewiskan
-ms.openlocfilehash: 10658daae1321ac7e22af337ef946f5cfb6004cd
-ms.sourcegitcommit: e700497f962e4c2274df16d9e651059b42ff1a10
+ms.openlocfilehash: 0dcbf0f0321ddc0c1959c4681c0b1dddf49c1aba
+ms.sourcegitcommit: cfa04a73b26312bf18d8f6296891679166e2754d
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 08/17/2020
-ms.locfileid: "88429705"
+ms.lasthandoff: 10/19/2020
+ms.locfileid: "92192293"
 ---
 # <a name="vba-functions-in-mdx-and-dax"></a>MDX 및 DAX의 VBA 함수
 
 
-  이 문서는 MDX에서 지원 되는 [Visual Basic for Applications 함수](https://msdn.microsoft.com/vba/language-reference-vba/articles/functions-visual-basic-for-applications) 에서 사용할 수 있는 모든 VBA 함수에 대 한 상호 참조를 포함 합니다. 또한 DAX 언어와 기능적으로 동일 하 게 작동 하는 경우 목록에는 메모를 포함 합니다.  
+  이 문서는 MDX에서 지원 되는 [Visual Basic for Applications 함수](/office/vba/Language/Reference/functions-visual-basic-for-applications) 에서 사용할 수 있는 모든 VBA 함수에 대 한 상호 참조를 포함 합니다. 또한 DAX 언어와 기능적으로 동일 하 게 작동 하는 경우 목록에는 메모를 포함 합니다.  
   
 ## <a name="visual-basic-for-applications-functions-reference"></a>Visual Basic for Applications 함수 참조  
   
-|함수 이름|지원됨|메모|  
+|함수 이름|지원됨|참고|  
 |-------------------|---------------|-----------|  
 |Abs|DAX, MDX||  
-|Array|지원되지 않음||  
+|배열|지원되지 않음||  
 |Asc|MDX만||  
 |AscW|MDX만||  
 |Atn|MDX만||  
@@ -68,8 +68,8 @@ ms.locfileid: "88429705"
 |FileAttr|지원되지 않음||  
 |FileDateTime|지원되지 않음||  
 |FileLen|지원되지 않음||  
-|필터|지원되지 않음|**경고** MDX는 이름이 같은 다른 함수를 구현 합니다. FILTER (Set_Expression, Logical_Expression) 함수는 지정 된 인수의 검색 조건에 따라 지정 된 집합을 필터링 한 결과 집합을 반환 합니다.<br /><br /> **경고** DAX는 이름이 같은 다른 함수를 구현 합니다. FILTER ( \<table> , \<filter> ) 함수는 지정 된 인수에서 다른 테이블이 나 식의 하위 집합을 나타내는 테이블을 반환 합니다.|  
-|수정|MDX만||  
+|Assert|지원되지 않음|**경고** MDX는 이름이 같은 다른 함수를 구현 합니다. FILTER (Set_Expression, Logical_Expression) 함수는 지정 된 인수의 검색 조건에 따라 지정 된 집합을 필터링 한 결과 집합을 반환 합니다.<br /><br /> **경고** DAX는 이름이 같은 다른 함수를 구현 합니다. FILTER ( \<table> , \<filter> ) 함수는 지정 된 인수에서 다른 테이블이 나 식의 하위 집합을 나타내는 테이블을 반환 합니다.|  
+|Fix|MDX만||  
 |Format(Visual Basic for Applications)|DAX, MDX||  
 |FormatCurrency|지원되지 않음||  
 |FormatDateTime|지원되지 않음||  
@@ -133,11 +133,11 @@ ms.locfileid: "88429705"
 |Rnd|MDX만||  
 |Round|DAX, MDX||  
 |RTrim|MDX만||  
-|초|DAX, MDX||  
+|Second|DAX, MDX||  
 |Seek|지원되지 않음||  
 |Sgn|DAX, MDX||  
 |셸|지원되지 않음||  
-|사인|MDX만||  
+|Sin|MDX만||  
 |SLN|MDX만||  
 |Space|MDX만||  
 |Spc|지원되지 않음||  
@@ -153,10 +153,10 @@ ms.locfileid: "88429705"
 |탭|지원되지 않음||  
 |Tan|MDX만||  
 |시간|지원되지 않음||  
-|타이머|MDX만||  
+|Timer|MDX만||  
 |TimeSerial|MDX만||  
 |TimeValue|DAX, MDX||  
-|Trim|DAX, MDX||  
+|공백 제거|DAX, MDX||  
 |TypeName|MDX만||  
 |UBound|지원되지 않음||  
 |UCase|MDX만||  
@@ -165,5 +165,4 @@ ms.locfileid: "88429705"
 |요일|DAX, MDX||  
 |WeekdayName|지원되지 않음||  
 |Year|DAX, MDX||  
-  
   

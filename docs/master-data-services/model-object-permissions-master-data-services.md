@@ -14,12 +14,12 @@ helpviewer_keywords:
 ms.assetid: fab6335b-4cae-47de-ae7c-6c4743e0680f
 author: lrtoyou1223
 ms.author: lle
-ms.openlocfilehash: 9d96811924faed2d48c58a3fcc516536e63d7385
-ms.sourcegitcommit: 827ad02375793090fa8fee63cc372d130f11393f
+ms.openlocfilehash: 79fcb613f985f363631b1ce26c75228bb7ab5862
+ms.sourcegitcommit: cfa04a73b26312bf18d8f6296891679166e2754d
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 09/04/2020
-ms.locfileid: "89480325"
+ms.lasthandoff: 10/19/2020
+ms.locfileid: "92193625"
 ---
 # <a name="model-object-permissions-master-data-services"></a>모델 개체 권한(Master Data Services)
 
@@ -41,7 +41,7 @@ ms.locfileid: "89480325"
  일반적으로 모델 개체에 **모든** 권한을 할당한 다음 그 아래 개체에 대한 사용 권한을 명시적으로 할당합니다.  
   
 ## <a name="external-resources"></a>외부 리소스  
- msdn.com의 블로그 게시물 [향상된 보안 기능](https://docs.microsoft.com/archive/blogs/e7/improvements-to-autoplay)  
+ msdn.com의 블로그 게시물 [향상된 보안 기능](/archive/blogs/e7/improvements-to-autoplay)  
   
 ## <a name="see-also"></a>참고 항목  
  [모델 개체 사용 권한 할당 &#40;MDS(Master Data Services)&#41;](../master-data-services/assign-model-object-permissions-master-data-services.md)   
@@ -49,5 +49,4 @@ ms.locfileid: "89480325"
  [기능 영역 권한 &#40;MDS(Master Data Services)&#41;](../master-data-services/functional-area-permissions-master-data-services.md)   
  [계층 멤버 권한 &#40;MDS(Master Data Services)&#41;](../master-data-services/hierarchy-member-permissions-master-data-services.md)   
  [사용 권한이 결정되는 방식&#40;Master Data Services&#41;](../master-data-services/how-permissions-are-determined-master-data-services.md)  
-  
   

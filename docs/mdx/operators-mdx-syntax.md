@@ -9,12 +9,12 @@ ms.topic: reference
 ms.author: owend
 ms.reviewer: owend
 author: minewiskan
-ms.openlocfilehash: 3d52751978dbe2973ecab9506094fad6a6f6c29a
-ms.sourcegitcommit: e700497f962e4c2274df16d9e651059b42ff1a10
+ms.openlocfilehash: b9ad1f77a8e023d55a34e64d6c40ad956b0dac92
+ms.sourcegitcommit: cfa04a73b26312bf18d8f6296891679166e2754d
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 08/17/2020
-ms.locfileid: "88471775"
+ms.lasthandoff: 10/19/2020
+ms.locfileid: "92193493"
 ---
 # <a name="operators-mdx-syntax"></a>연산자(MDX 구문)
 
@@ -83,7 +83,7 @@ ms.locfileid: "88471775"
 ### <a name="determining-results"></a>결과 확정  
  간단한 식들을 결합하여 복잡한 식을 구성하는 경우 연산자에 대한 규칙을 데이터 형식 우선 순위에 대한 규칙과 결합하면 결과 값의 데이터 형식이 결정됩니다.  
   
- 결과가 문자 또는 유니코드 값인 경우에는 연산자에 대한 규칙을 데이터 정렬 우선 순위에 대한 규칙과 결합하면 결과의 데이터 정렬이 결정됩니다. 데이터 정렬에 대 한 자세한 내용은 [Analysis Services&#41;&#40;언어 및 데이터 정렬 ](https://docs.microsoft.com/analysis-services/languages-and-collations-analysis-services)을 참조 하세요.  
+ 결과가 문자 또는 유니코드 값인 경우에는 연산자에 대한 규칙을 데이터 정렬 우선 순위에 대한 규칙과 결합하면 결과의 데이터 정렬이 결정됩니다. 데이터 정렬에 대 한 자세한 내용은 [Analysis Services&#41;&#40;언어 및 데이터 정렬 ](/analysis-services/languages-and-collations-analysis-services)을 참조 하세요.  
   
  간단한 식의 전체 자릿수, 소수 자릿수 및 길이를 기준으로 결과의 전체 자릿수, 소수 자릿수 및 길이를 결정하는 규칙도 있습니다.  
   
@@ -93,7 +93,7 @@ ms.locfileid: "88471775"
 |원본 형식|필요한 형식|변환|  
 |-------------------|-----------------|----------------|  
 |Level|설정|\<level>. 멤버|  
-|계층|멤버|\<hierarchy>. defaultmember|  
+|계층 구조|멤버|\<hierarchy>. defaultmember|  
 |멤버|Tuple|(\<Member>)|  
 |Tuple|멤버|\<tuple>. 항목 (0)|  
 |Tuple|스칼라|\<tuple>. 값|  
@@ -101,5 +101,4 @@ ms.locfileid: "88471775"
 ## <a name="see-also"></a>참고 항목  
  [Mdx 연산자 참조 &#40;MDX&#41;](../mdx/mdx-operator-reference-mdx.md)   
  [MDX 구문 요소&#40;MDX&#41;](../mdx/mdx-syntax-elements-mdx.md)  
-  
   

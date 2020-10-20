@@ -15,12 +15,12 @@ helpviewer_keywords:
 ms.assetid: 1332035c-d6ed-424d-8234-46ad21168319
 author: rothja
 ms.author: jroth
-ms.openlocfilehash: 2a6e723c8ad5ff8c97a3b57edb554092211da4d7
-ms.sourcegitcommit: 610e3ebe21ac6575850a29641a32f275e71557e3
+ms.openlocfilehash: 1be293f98a3b78280b16f80ab7dcfcb656f7e0ec
+ms.sourcegitcommit: cfa04a73b26312bf18d8f6296891679166e2754d
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 10/07/2020
-ms.locfileid: "91785161"
+ms.lasthandoff: 10/19/2020
+ms.locfileid: "92196909"
 ---
 # <a name="how-to-debug-clr-database-objects"></a>CLR 데이터베이스 개체를 디버깅 하는 방법
 
@@ -47,7 +47,7 @@ ms.locfileid: "91785161"
 
 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]의 디버깅은 각 연결 모델을 따릅니다. 디버거는 자신이 연결된 클라이언트 연결에 대해서만 작업을 감지하고 디버깅할 수 있습니다. 디버거 기능은 연결 유형의 제한을 받지 않으므로 TDS(Tabular Data Stream) 및 HTTP 연결을 모두 디버깅할 수 있습니다. 하지만 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]에서 기존 연결 디버깅은 허용되지 않습니다. 디버깅은 서버에서 실행 중인 루틴에서 대부분의 일반적인 디버깅 기능을 지원합니다. 디버거와 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 간의 상호 작용은 분산 COM(구성 요소 개체 모델)을 통해 이루어집니다.  
   
-관리 되는 저장 프로시저, 함수, 트리거, 사용자 정의 형식 및 집계를 디버깅 하는 방법에 대 한 자세한 내용 및 시나리오는 Visual Studio 설명서의 [CLR 통합 데이터베이스 디버깅 SQL Server](https://go.microsoft.com/fwlink/?LinkId=120378) 을 참조 하세요.  
+관리 되는 저장 프로시저, 함수, 트리거, 사용자 정의 형식 및 집계를 디버깅 하는 방법에 대 한 자세한 내용 및 시나리오는 Visual Studio 설명서의 [CLR 통합 데이터베이스 디버깅 SQL Server](/previous-versions/ms165050(v=vs.100)) 을 참조 하세요.  
   
 Visual Studio를 원격 개발, 디버깅 및 개발에 사용하려면 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 인스턴스에서 TCP/IP 네트워크 프로토콜을 사용할 수 있어야 합니다. 서버에서 TCP/IP 프로토콜을 사용 하도록 설정 하는 방법에 대 한 자세한 내용은 [클라이언트 프로토콜 구성](../../database-engine/configure-windows/configure-client-protocols.md)을 참조 하세요.  
   
@@ -60,7 +60,7 @@ Microsoft Visual Studio에서 CLR 데이터베이스 개체를 디버깅 하려�
 2. 새 SQL CLR 형식 만들기 (c #):
 
    1. **솔루션 탐색기**에서 프로젝트를 마우스 오른쪽 단추로 클릭 하 고 **추가**, **새 항목**...을 차례로 선택 합니다. 
-   1. **새 항목 추가** 창에서 **Sql Clr c # 저장 프로시저**, **Sql Clr c # 사용자 정의 함수**, **sql clr c # 사용자 정의 형식**, **Sql Clr c # 트리거**, **sql clr c # 집계**또는 **클래스**를 선택 합니다.
+   1. **새 항목 추가** 창에서 **Sql Clr c # 저장 프로시저**, **Sql clr c # User-Defined 함수**, **sql CLR c # User-Defined 형식**, **sql Clr c # 트리거**, **sql clr c # 집계**또는 **클래스**를 선택 합니다.
    1. 새 형식의 원본 파일에 대 한 이름을 지정 하 고 **추가**를 선택 합니다.
 
 3. 새 형식의 코드를 텍스트 편집기에 추가합니다. 예제 저장 프로시저에 대 한 예제 코드는이 문서의 다음 예 섹션을 참조 하세요.
@@ -116,6 +116,6 @@ EXEC GetVersion
 
 ## <a name="next-steps"></a>다음 단계
   
-Visual Studio를 사용 하 여 관리 코드를 디버깅 하는 방법에 대 한 자세한 내용은 Visual Studio 설명서에서 [관리 코드 디버깅](https://go.microsoft.com/fwlink/?LinkId=120377) 을 참조 하세요.  
+Visual Studio를 사용 하 여 관리 코드를 디버깅 하는 방법에 대 한 자세한 내용은 Visual Studio 설명서에서 [관리 코드 디버깅](/visualstudio/debugger/debugging-managed-code) 을 참조 하세요.  
 
 자세한 내용은 [공용 언어 런타임 통합 프로그래밍 개념](../../relational-databases/clr-integration/common-language-runtime-clr-integration-programming-concepts.md) 을 참조 하세요.  

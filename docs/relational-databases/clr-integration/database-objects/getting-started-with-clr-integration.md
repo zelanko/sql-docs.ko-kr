@@ -25,12 +25,12 @@ helpviewer_keywords:
 ms.assetid: c73e628a-f54a-411a-bfe3-6dae519316cc
 author: rothja
 ms.author: jroth
-ms.openlocfilehash: cc5169c81b53f45ca036b064b47d370f21ec2e32
-ms.sourcegitcommit: f7ac1976d4bfa224332edd9ef2f4377a4d55a2c9
+ms.openlocfilehash: c307172d7bf8b258cbd56b4ef4abfe6704750358
+ms.sourcegitcommit: cfa04a73b26312bf18d8f6296891679166e2754d
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 07/02/2020
-ms.locfileid: "85885923"
+ms.lasthandoff: 10/19/2020
+ms.locfileid: "92192363"
 ---
 # <a name="getting-started-with-clr-integration"></a>CLR 통합으로 작업 시작
 
@@ -90,7 +90,7 @@ End Class
   
 ```  
   
-이 간단한 프로그램에는 공용 클래스에 대한 정적 메서드 하나가 포함되어 있습니다. 이 메서드는 간단한 문자 메시지를 출력 하기 위해 관리 되는 데이터베이스 개체를 만들기 위해 **[Sqlcontext](https://msdn.microsoft.com/library/microsoft.sqlserver.server.sqlcontext.aspx)** 및 **[SqlPipe](https://msdn.microsoft.com/library/microsoft.sqlserver.server.sqlpipe.aspx)** 라는 두 개의 새로운 클래스를 사용 합니다. 또한 이 메서드는 "Hello world!"라는 문자열을 out 매개 변수 값으로 할당합니다. 이 메서드는 [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)]에서 저장 프로시저로 선언한 다음 [!INCLUDE[tsql](../../../includes/tsql-md.md)] 저장 프로시저와 같은 방식으로 실행할 수 있습니다.  
+이 간단한 프로그램에는 공용 클래스에 대한 정적 메서드 하나가 포함되어 있습니다. 이 메서드는 간단한 문자 메시지를 출력 하기 위해 관리 되는 데이터베이스 개체를 만들기 위해 **[Sqlcontext](/dotnet/api/microsoft.sqlserver.server.sqlcontext)** 및 **[SqlPipe](/dotnet/api/microsoft.sqlserver.server.sqlpipe)** 라는 두 개의 새로운 클래스를 사용 합니다. 또한 이 메서드는 "Hello world!"라는 문자열을 out 매개 변수 값으로 할당합니다. 이 메서드는 [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)]에서 저장 프로시저로 선언한 다음 [!INCLUDE[tsql](../../../includes/tsql-md.md)] 저장 프로시저와 같은 방식으로 실행할 수 있습니다.  
   
 이 프로그램을 라이브러리로 컴파일한 후에 로드 하 [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] 고 저장 프로시저로 실행 합니다.  
   
@@ -100,7 +100,7 @@ End Class
   
 `C:\Windows\Microsoft.NET\Framework\(version)`  
   
-version에는 설치된 .NET Framework 재배포 가능 패키지의 버전 번호가 포함됩니다. 예를 들어:  
+version에는 설치된 .NET Framework 재배포 가능 패키지의 버전 번호가 포함됩니다. 예를 들면 다음과 같습니다.  
   
 `C:\Windows\Microsoft.NET\Framework\v4.6.1`
 
@@ -138,7 +138,7 @@ EXTERNAL NAME helloworld.HelloWorldProc.HelloWorld
 -- EXTERNAL NAME helloworld.[MyNS.HelloWorldProc].HelloWorld  
 ```  
   
-프로시저가 만들어지면 [!INCLUDE[tsql](../../../includes/tsql-md.md)]로 작성된 일반적인 저장 프로시저와 마찬가지로 프로시저를 실행할 수 있습니다. 다음 명령을 실행합니다.  
+프로시저가 만들어지면 [!INCLUDE[tsql](../../../includes/tsql-md.md)]로 작성된 일반적인 저장 프로시저와 마찬가지로 프로시저를 실행할 수 있습니다. 다음 명령을 실행하십시오.  
   
 ```sql
 DECLARE @J nchar(25)  
@@ -175,7 +175,7 @@ IF EXISTS (SELECT name FROM sys.assemblies WHERE name = 'helloworld')
 
 SQL Server의 CLR 통합에 대 한 자세한 내용은 다음 문서를 참조 하세요.
 
-- [CLR 저장 프로시저](https://msdn.microsoft.com/library/bbdd51b2-a9b4-4916-ba6f-7957ac6c3f33)
+- [CLR 저장 프로시저](/dotnet/framework/data/adonet/sql/clr-stored-procedures)
 - [ADO.NET에 대한 SQL Server In-Process 전용 확장](../../../relational-databases/clr-integration-data-access-in-process-ado-net/sql-server-in-process-specific-extensions-to-ado-net.md)
 - [CLR 데이터베이스 개체 디버깅](../../../relational-databases/clr-integration/debugging-clr-database-objects.md)
 - [CLR 통합 보안](../../../relational-databases/clr-integration/security/clr-integration-security.md)

@@ -9,12 +9,12 @@ ms.topic: reference
 ms.author: owend
 ms.reviewer: owend
 author: minewiskan
-ms.openlocfilehash: 24f8ade9255543fcb1d2c23b7959a5def93b21dd
-ms.sourcegitcommit: e700497f962e4c2274df16d9e651059b42ff1a10
+ms.openlocfilehash: 34da0a8cc7f2b6aa069a45e0366d361b06102feb
+ms.sourcegitcommit: cfa04a73b26312bf18d8f6296891679166e2754d
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 08/17/2020
-ms.locfileid: "88477025"
+ms.lasthandoff: 10/19/2020
+ms.locfileid: "92193945"
 ---
 # <a name="mdx-data-definition---create-subcube"></a>MDX 데이터 정의 - CREATE SUBCUBE
 
@@ -53,7 +53,7 @@ CREATE SUBCUBE Cube_Name AS Select_Statement
   
  하위 큐브가 삭제되면 하위 큐브의 컨텍스트에서 생성된 세션 개체도 삭제됩니다.  
   
- 하위 큐브에 대 한 자세한 내용은 mdx [에서 하위 큐브 작성 &#40;mdx&#41;](https://docs.microsoft.com/analysis-services/multidimensional-models/mdx/building-subcubes-in-mdx-mdx)를 참조 하세요.  
+ 하위 큐브에 대 한 자세한 내용은 mdx [에서 하위 큐브 작성 &#40;mdx&#41;](/analysis-services/multidimensional-models/mdx/building-subcubes-in-mdx-mdx)를 참조 하세요.  
   
 ## <a name="example"></a>예제  
  다음 예에서는 큐브 공간을 Canada의 멤버로 제한하는 하위 큐브를 만듭니다. 그런 다음 **MEMBERS** 함수를 사용 하 여 캐나다의 국가만 반환 하는 Geography 사용자 정의 계층의 country 수준에 있는 모든 멤버를 반환 합니다.  
@@ -90,7 +90,7 @@ SELECT [Geography].[Country].[Country].MEMBERS ON 0
   
  반환되는 결과는 다음과 같습니다.  
   
-|비즈니스 유형 + 범주|All Products|Accessories|Clothing|  
+|비즈니스 유형 + 범주|All Products|액세서리|의류|  
 |-|-|-|-|  
 |All Resellers|$2031079.39|$506,172.45|$1,524,906.93|  
 |Value Added Reseller|$767388.52|$175,002.81|$592,385.71|  
@@ -118,7 +118,7 @@ SELECT [Geography].[Country].[Country].MEMBERS ON 0
   
  다음과 같이 다른 결과가 반환됩니다.  
   
-|비즈니스 유형 + 범주|All Products|Accessories|Clothing|  
+|비즈니스 유형 + 범주|All Products|액세서리|의류|  
 |-|-|-|-|  
 |All Resellers|$80,450,596.98|$571,297.93|$1,777,840.84|  
 |Value Added Reseller|$34,967,517.33|$175,002.81|$592,385.71|  
@@ -127,9 +127,8 @@ SELECT [Geography].[Country].[Country].MEMBERS ON 0
  [All Products] 및 [All Resellers]의 열 및 행에는 보이는 멤버뿐만 아니라 모든 멤버에 대한 합계가 포함됩니다.  
   
 ## <a name="see-also"></a>참고 항목  
- [MDX의 주요 개념 &#40;Analysis Services&#41;](https://docs.microsoft.com/analysis-services/multidimensional-models/mdx/key-concepts-in-mdx-analysis-services)   
+ [MDX의 주요 개념 &#40;Analysis Services&#41;](/analysis-services/multidimensional-models/mdx/key-concepts-in-mdx-analysis-services)   
  [Mdx 스크립팅 문 &#40;MDX&#41;](../mdx/mdx-scripting-statements-mdx.md)   
  [DROP 하위 큐브 문이 MDX를 &#40;&#41;](../mdx/mdx-data-definition-drop-subcube.md)   
  [SELECT 문&#40;MDX&#41;](../mdx/mdx-data-manipulation-select.md)  
-  
   

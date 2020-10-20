@@ -1,6 +1,6 @@
 ---
 description: ODBC 드라이버에서 연결 풀 인식 개발
-title: ODBC 드라이버에서 연결 풀 인식 개발 | Microsoft Docs
+title: ODBC 드라이버에서 Connection-Pool 인식 개발 | Microsoft Docs
 ms.custom: ''
 ms.date: 01/19/2017
 ms.prod: sql
@@ -11,17 +11,17 @@ ms.topic: conceptual
 ms.assetid: c63d5cae-24fc-4fee-89a9-ad0367cddc3e
 author: David-Engel
 ms.author: v-daenge
-ms.openlocfilehash: 519a2b64f6a5330b8c8fde458323c6c900941025
-ms.sourcegitcommit: e700497f962e4c2274df16d9e651059b42ff1a10
+ms.openlocfilehash: f22be001a7434c13158deae8677b8c7bcb2f0630
+ms.sourcegitcommit: cfa04a73b26312bf18d8f6296891679166e2754d
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 08/17/2020
-ms.locfileid: "88476275"
+ms.lasthandoff: 10/19/2020
+ms.locfileid: "92192313"
 ---
 # <a name="developing-connection-pool-awareness-in-an-odbc-driver"></a>ODBC 드라이버에서 연결 풀 인식 개발
 이 항목에서는 드라이버에서 연결 풀링 서비스를 제공 하는 방법에 대 한 정보가 포함 된 ODBC 드라이버 개발에 대 한 세부 정보를 설명 합니다.  
   
-## <a name="enabling-driver-aware-connection-pooling"></a>드라이버 인식 연결 풀링 사용  
+## <a name="enabling-driver-aware-connection-pooling"></a>Driver-Aware 연결 풀링을 사용 하도록 설정  
  드라이버는 다음 ODBC SPI (서비스 공급자 인터페이스) 함수를 구현 해야 합니다.  
   
 -   SQLSetConnectAttrForDbcInfo  
@@ -42,7 +42,7 @@ ms.locfileid: "88476275"
   
  드라이버 인식 풀링을 사용 하도록 설정할 수 있도록 드라이버는 다음과 같은 기존 함수도 구현 해야 합니다.  
   
-|기능|추가 된 기능|  
+|함수|추가 된 기능|  
 |--------------|-------------------------|  
 |[SQLAllocHandle](../../../odbc/reference/syntax/sqlallochandle-function.md)<br /><br /> [SQLFreeHandle](../../../odbc/reference/syntax/sqlfreehandle-function.md)<br /><br /> [SQLGetDiagField](../../../odbc/reference/syntax/sqlgetdiagfield-function.md)<br /><br /> [SQLGetDiagRec](../../../odbc/reference/syntax/sqlgetdiagrec-function.md)|새 핸들 형식 지원: SQL_HANDLE_DBC_INFO_TOKEN (아래 설명 참조).|  
 |[SQLSetConnectAttr](../../../odbc/reference/syntax/sqlsetconnectattr-function.md)|새 설정 전용 연결 특성을 지원 합니다. 연결을 다시 설정 하는 SQL_ATTR_DBC_INFO_TOKEN (아래 설명 참조).|  
@@ -68,7 +68,7 @@ ms.locfileid: "88476275"
 ## <a name="the-connection-rating"></a>연결 등급  
  새 연결을 설정 하는 것과 비교 하 여 풀링된 연결에서 일부 연결 정보 (예: 데이터베이스)를 다시 설정 하 여 더 나은 성능을 얻을 수 있습니다. 따라서 키 특성 집합에 데이터베이스 이름을 지정할 수 없습니다. 그렇지 않으면 각 데이터베이스에 대해 별도의 풀을 사용할 수 있습니다 .이는 고객이 다양 한 연결 문자열을 사용 하는 중간 계층 응용 프로그램에는 적합 하지 않을 수 있습니다.  
   
- 일부 특성이 일치 하지 않는 연결을 다시 사용할 때마다 새 응용 프로그램 요청에 따라 일치 하지 않는 특성을 다시 설정 해야 합니다. 그러면 반환 된 연결이 응용 프로그램 요청과 동일 하 게 됩니다 ( [SQLSetConnectAttr 함수](https://go.microsoft.com/fwlink/?LinkId=59368)에서 특성 SQL_ATTR_DBC_INFO_TOKEN 설명 참조). 그러나 이러한 특성을 다시 설정 하면 성능이 저하 될 수 있습니다. 예를 들어 데이터베이스를 다시 설정 하려면 서버에 대 한 네트워크 호출이 필요 합니다. 따라서 사용 가능한 경우 완벽 하 게 일치 하는 연결을 다시 사용 합니다.  
+ 일부 특성이 일치 하지 않는 연결을 다시 사용할 때마다 새 응용 프로그램 요청에 따라 일치 하지 않는 특성을 다시 설정 해야 합니다. 그러면 반환 된 연결이 응용 프로그램 요청과 동일 하 게 됩니다 ( [SQLSetConnectAttr 함수](../syntax/sqlsetconnectattr-function.md)에서 특성 SQL_ATTR_DBC_INFO_TOKEN 설명 참조). 그러나 이러한 특성을 다시 설정 하면 성능이 저하 될 수 있습니다. 예를 들어 데이터베이스를 다시 설정 하려면 서버에 대 한 네트워크 호출이 필요 합니다. 따라서 사용 가능한 경우 완벽 하 게 일치 하는 연결을 다시 사용 합니다.  
   
  드라이버의 등급 함수는 새 연결 요청에 대 한 기존 연결을 평가할 수 있습니다. 예를 들어 드라이버의 등급 함수는 다음을 확인할 수 있습니다.  
   

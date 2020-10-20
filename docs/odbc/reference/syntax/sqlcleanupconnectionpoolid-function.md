@@ -13,19 +13,19 @@ helpviewer_keywords:
 ms.assetid: 1fc61908-e003-4587-b91a-32f40569fb99
 author: David-Engel
 ms.author: v-daenge
-ms.openlocfilehash: 12046405d10c41796b8ad989f746aaac242f430d
-ms.sourcegitcommit: e700497f962e4c2274df16d9e651059b42ff1a10
+ms.openlocfilehash: 20ad05559aa172ff7e8937359bad93f85347a92a
+ms.sourcegitcommit: cfa04a73b26312bf18d8f6296891679166e2754d
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 08/17/2020
-ms.locfileid: "88448843"
+ms.lasthandoff: 10/19/2020
+ms.locfileid: "92193448"
 ---
 # <a name="sqlcleanupconnectionpoolid-function"></a>SQLCleanupConnectionPoolID 함수
 **규칙**  
  소개 된 버전: ODBC 3.81 표준 준수: ODBC  
   
  **요약**  
- **SQLCleanupConnectionPoolID** 는 풀 ID의 시간이 초과 되었음을 드라이버에 알립니다. 풀 id와 연결 된 풀의 모든 연결이 시간 초과 될 때마다 풀 ID가 시간 초과 될 수 있습니다. 연결 제한 시간에 대 한 자세한 내용은 [Microsoft 데이터 액세스 구성 요소의 풀링](https://msdn.microsoft.com/library/ms810829.aspx) 을 참조 하세요.  
+ **SQLCleanupConnectionPoolID** 는 풀 ID의 시간이 초과 되었음을 드라이버에 알립니다. 풀 id와 연결 된 풀의 모든 연결이 시간 초과 될 때마다 풀 ID가 시간 초과 될 수 있습니다. 연결 제한 시간에 대 한 자세한 내용은 [Microsoft 데이터 액세스 구성 요소의 풀링](/previous-versions/ms810829(v=msdn.10)) 을 참조 하세요.  
   
 ## <a name="syntax"></a>구문  
   
