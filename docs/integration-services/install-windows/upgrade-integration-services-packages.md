@@ -15,12 +15,12 @@ ms.assetid: 68dbdf81-032c-4a73-99f6-41420e053980
 author: MikeRayMSFT
 ms.author: mikeray
 manager: erikre
-ms.openlocfilehash: dca0076160c9e21b991c444986d1b27162941f5c
-ms.sourcegitcommit: e700497f962e4c2274df16d9e651059b42ff1a10
+ms.openlocfilehash: 7353d02985194024c24319df5c6eca1100607d29
+ms.sourcegitcommit: cfa04a73b26312bf18d8f6296891679166e2754d
 ms.translationtype: HT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 08/17/2020
-ms.locfileid: "88346219"
+ms.lasthandoff: 10/19/2020
+ms.locfileid: "92195879"
 ---
 # <a name="upgrade-integration-services-packages"></a>Integration Services 패키지 업그레이드
 
@@ -62,7 +62,7 @@ ms.locfileid: "88346219"
   
  [!INCLUDE[ssBIDevStudio](../../includes/ssbidevstudio-md.md)]를 사용하여 [!INCLUDE[ssKatmai](../../includes/sskatmai-md.md)], [!INCLUDE[ssKilimanjaro](../../includes/sskilimanjaro-md.md)], [!INCLUDE[ssSQL11](../../includes/sssql11-md.md)] 또는 [!INCLUDE[ssSQL14](../../includes/sssql14-md.md)] 사용자 지정 구성 요소가 포함된 패키지를 디자인하려면 *\<drive>* :\Program Files\Microsoft Visual Studio 10.0\Common7\IDE에 있는 devenv.exe.config 파일을 수정해야 합니다.  
   
- [!INCLUDE[ssCurrent](../../includes/sscurrent-md.md)]용 런타임을 사용하여 빌드된 사용자 지정 애플리케이션으로 이러한 패키지를 사용하려면 실행 파일에 대한 *.exe.config 파일의 구성 섹션에 리디렉션 파일을 포함하십시오. 규칙은 런타임 어셈블리를 버전 13.0.0.0([!INCLUDE[ssCurrent](../../includes/sscurrent-md.md)])으로 리디렉션합니다. 어셈블리 버전 리디렉션에 대한 자세한 내용은 [\<runtime>의 \<assemblyBinding>](https://msdn.microsoft.com/library/twy1dw1e.aspx) 요소를 참조하세요.  
+ [!INCLUDE[ssCurrent](../../includes/sscurrent-md.md)]용 런타임을 사용하여 빌드된 사용자 지정 애플리케이션으로 이러한 패키지를 사용하려면 실행 파일에 대한 *.exe.config 파일의 구성 섹션에 리디렉션 파일을 포함하십시오. 규칙은 런타임 어셈블리를 버전 13.0.0.0([!INCLUDE[ssCurrent](../../includes/sscurrent-md.md)])으로 리디렉션합니다. 어셈블리 버전 리디렉션에 대한 자세한 내용은 [\<runtime>의 \<assemblyBinding>](/dotnet/framework/configure-apps/file-schema/runtime/assemblybinding-element-for-runtime) 요소를 참조하세요.  
   
 ### <a name="locating-the-assemblies"></a>어셈블리 찾기  
  [!INCLUDE[ssCurrent](../../includes/sscurrent-md.md)]에서 [!INCLUDE[ssISnoversion](../../includes/ssisnoversion-md.md)] 어셈블리는 .NET 4.0으로 업그레이드되었습니다. *\<drive>* :\Windows\Microsoft.NET\assembly에는 .NET 4에 대한 별도의 전역 어셈블리 캐시가 있습니다. 이 경로, 주로 GAC_MSIL 폴더에서 모든 [!INCLUDE[ssISnoversion](../../includes/ssisnoversion-md.md)] 어셈블리를 찾을 수 있습니다.  
@@ -81,5 +81,4 @@ ms.locfileid: "88346219"
   
 ### <a name="scripts-that-depend-on-adodbdll"></a>ADODB.dll을 사용하는 스크립트  
  ADODB.dll을 명시적으로 참조하는 스크립트 태스크 및 스크립트 구성 요소 스크립트는 [!INCLUDE[ssManStudioFull](../../includes/ssmanstudiofull-md.md)] 또는 [!INCLUDE[ssBIDevStudioFull](../../includes/ssbidevstudiofull-md.md)] 가 설치되지 않은 시스템에서 실행되거나 업그레이드되지 않을 수 있습니다. 이러한 스크립트 태스크 또는 스크립트 구성 요소 스크립트를 업그레이드하려면 ADODB.dll에 대한 종속성을 제거하는 것이 좋습니다.  Ado.Net은 VB 및 C# 스크립트와 같은 관리 코드에 대한 권장 대안입니다.  
-  
   

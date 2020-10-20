@@ -11,12 +11,12 @@ ms.topic: conceptual
 ms.assetid: 5281f080-53d5-4679-aa26-f4cd4ac7a2df
 author: chugugrace
 ms.author: chugu
-ms.openlocfilehash: 5b3784e4af35afe5fdf0b84290cdf33fc8c77496
-ms.sourcegitcommit: e700497f962e4c2274df16d9e651059b42ff1a10
+ms.openlocfilehash: 05fefa983f3b58f8ca8be95772d3fbc49f3e9afb
+ms.sourcegitcommit: cfa04a73b26312bf18d8f6296891679166e2754d
 ms.translationtype: HT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 08/17/2020
-ms.locfileid: "88430155"
+ms.lasthandoff: 10/19/2020
+ms.locfileid: "92194075"
 ---
 # <a name="microsoft-connector-for-sap-bw"></a>Microsoft Connector for SAP BW
 
@@ -45,7 +45,7 @@ ms.locfileid: "88430155"
   
 -   **SAP BW 연결 관리자** - SAP BW 연결 관리자는 SAP BW 원본 또는 SAP BW 대상을 SAP Netweaver BW 버전 7 시스템으로 연결합니다.  
   
- SAP BW 연결 관리자, 원본 및 대상을 구성하고 사용하는 방법을 제시하는 연습은 [SAP BI 7.0에서 SQL Server Integration Services 사용](https://go.microsoft.com/fwlink/?LinkId=301897)백서를 참조하십시오. 또한 이 백서는 SAP BW에 필요한 개체를 구성하는 방법을 보여 줍니다.  
+ SAP BW 연결 관리자, 원본 및 대상을 구성하고 사용하는 방법을 제시하는 연습은 [SAP BI 7.0에서 SQL Server Integration Services 사용](/previous-versions/sql/sql-server-2008/dd299430(v=sql.100))백서를 참조하십시오. 또한 이 백서는 SAP BW에 필요한 개체를 구성하는 방법을 보여 줍니다.  
   
 ## <a name="documentation"></a>설명서  
  [!INCLUDE[msCoName](../includes/msconame-md.md)] Connector for SAP BW의 이 도움말 파일에는 다음 항목과 섹션이 포함되어 있습니다.  
@@ -58,5 +58,4 @@ ms.locfileid: "88430155"
   
  [Microsoft Connector for SAP BW F1 도움말](../integration-services/microsoft-connector-for-sap-bw-f1-help.md)  
  [!INCLUDE[msCoName](../includes/msconame-md.md)] Connector for SAP BW에 포함된 각 구성 요소의 사용자 인터페이스에 대해 설명합니다.  
-  
   

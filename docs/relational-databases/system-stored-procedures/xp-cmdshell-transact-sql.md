@@ -18,12 +18,12 @@ helpviewer_keywords:
 ms.assetid: 18935cf4-b320-4954-b6c1-e007fcefe358
 author: markingmyname
 ms.author: maghan
-ms.openlocfilehash: 3333e8d26c6f79bc3f99298e2854f05789caac9f
-ms.sourcegitcommit: dd36d1cbe32cd5a65c6638e8f252b0bd8145e165
+ms.openlocfilehash: 7f545d556069e31e349c0a8badf0fd9d95e6dcef
+ms.sourcegitcommit: ae474d21db4f724523e419622ce79f611e956a22
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 09/08/2020
-ms.locfileid: "89541060"
+ms.lasthandoff: 10/20/2020
+ms.locfileid: "92257610"
 ---
 # <a name="xp_cmdshell-transact-sql"></a>xp_cmdshell(Transact-SQL)
 [!INCLUDE [SQL Server](../../includes/applies-to-version/sqlserver.md)]
@@ -65,14 +65,15 @@ The command(s) completed successfully.
   
 ## <a name="remarks"></a>설명  
  **Xp_cmdshell** 로 생성 된 Windows 프로세스는 서비스 계정과 동일한 보안 권한을 갖습니다 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] .  
+ 
+> [!IMPORTANT]
+>  **xp_cmdshell** 은 매우 강력한 기능이 며 기본적으로 사용 하지 않도록 설정 되어 있습니다. 정책 기반 관리를 사용 하거나 **sp_configure**를 실행 하 여 **xp_cmdshell** 를 사용 하거나 사용 하지 않도록 설정할 수 있습니다. 자세한 내용은 [노출 영역 구성](../../relational-databases/security/surface-area-configuration.md) 및 [Xp_cmdshell 서버 구성 옵션](../../database-engine/configure-windows/xp-cmdshell-server-configuration-option.md)을 참조 하세요.  
   
- **xp_cmdshell** 동기적으로 작동 합니다. 명령 셸 명령이 완료되기 전에는 호출자에게 컨트롤이 반환되지 않습니다.  
-  
- 정책 기반 관리를 사용 하거나 **sp_configure**를 실행 하 여 **xp_cmdshell** 를 사용 하거나 사용 하지 않도록 설정할 수 있습니다. 자세한 내용은 [노출 영역 구성](../../relational-databases/security/surface-area-configuration.md) 및 [Xp_cmdshell 서버 구성 옵션](../../database-engine/configure-windows/xp-cmdshell-server-configuration-option.md)을 참조 하세요.  
-  
+ **xp_cmdshell** 동기적으로 작동 합니다. 명령 셸 명령이 완료되기 전에는 호출자에게 컨트롤이 반환되지 않습니다. 
+ 
 > [!IMPORTANT]
 >  일괄 처리 내에서 **xp_cmdshell** 실행 되 고 오류를 반환 하는 경우 일괄 처리가 실패 합니다. 이 동작은 기존 버전과 달라진 동작입니다. 이전 버전의에서는 [!INCLUDE[msCoName](../../includes/msconame-md.md)] [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 일괄 처리가 계속 실행 됩니다.  
-  
+ 
 ## <a name="xp_cmdshell-proxy-account"></a>xp_cmdshell  프록시 계정  
  **Sysadmin** 고정 서버 역할의 멤버가 아닌 사용자가 호출 하는 경우 **xp_cmdshell** **# #xp_cmdshell_proxy_account # #** 이라는 자격 증명에 저장 된 계정 이름과 암호를 사용 하 여 Windows에 연결 합니다. 이 프록시 자격 증명이 없으면 **xp_cmdshell** 실패 합니다.  
   
@@ -119,7 +120,7 @@ REVERT ;
   
 ```  
   
-## <a name="examples"></a>예제  
+## <a name="examples"></a>예  
   
 ### <a name="a-returning-a-list-of-executable-files"></a>A. 실행 파일의 목록 반환  
  다음 예에서는 디렉터리 명령을 실행하는 `xp_cmdshell` 확장 저장 프로시저를 보여 줍니다.  

@@ -19,12 +19,12 @@ helpviewer_keywords:
 ms.assetid: c1e81ad6-628b-46d4-9b09-d2866517b6ca
 author: chugugrace
 ms.author: chugu
-ms.openlocfilehash: c27f3936edfc031f336b487d90e185a56d366363
-ms.sourcegitcommit: e700497f962e4c2274df16d9e651059b42ff1a10
+ms.openlocfilehash: 1dfeeecf62ad33ab5d2d66e0fdf454f89036d047
+ms.sourcegitcommit: cfa04a73b26312bf18d8f6296891679166e2754d
 ms.translationtype: HT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 08/17/2020
-ms.locfileid: "88449778"
+ms.lasthandoff: 10/19/2020
+ms.locfileid: "92193831"
 ---
 # <a name="integration-services-ssis-variables"></a>Integration Services(SSIS) 변수
 
@@ -50,7 +50,7 @@ ms.locfileid: "88449778"
 ## <a name="system-and-user-defined-variables"></a>시스템 및 사용자 정의 변수  
  [!INCLUDE[ssISnoversion](../includes/ssisnoversion-md.md)] 에서는 사용자 정의 변수와 시스템 변수라는 두 가지 유형의 변수를 지원합니다. 사용자 정의 변수는 패키지 개발자에 의해 정의되며 시스템 변수는 [!INCLUDE[ssISnoversion](../includes/ssisnoversion-md.md)]에 의해 정의됩니다. 사용자 정의 변수는 패키지에 필요한 만큼 얼마든지 만들 수 있지만 시스템 변수는 추가로 만들 수 없습니다.  
   
- SQL 실행 태스크에서 SQL 문의 매개 변수에 변수를 매핑하는 데 사용하는 매개 변수 바인딩에 모든 변수, 즉 시스템 변수와 사용자 정의 변수를 사용할 수 있습니다. 자세한 내용은 [SQL 실행 태스크](../integration-services/control-flow/execute-sql-task.md) 및 [SQL 실행 태스크의 매개 변수 및 반환 코드](https://msdn.microsoft.com/library/a3ca65e8-65cf-4272-9a81-765a706b8663)를 참조하세요.  
+ SQL 실행 태스크에서 SQL 문의 매개 변수에 변수를 매핑하는 데 사용하는 매개 변수 바인딩에 모든 변수, 즉 시스템 변수와 사용자 정의 변수를 사용할 수 있습니다. 자세한 내용은 [SQL 실행 태스크](../integration-services/control-flow/execute-sql-task.md) 및 [SQL 실행 태스크의 매개 변수 및 반환 코드](./control-flow/execute-sql-task.md)를 참조하세요.  
   
 > [!NOTE]  
 >  사용자 정의 변수 및 시스템 변수의 이름은 대/소문자를 구분합니다.  
@@ -79,7 +79,7 @@ ms.locfileid: "88449778"
   
  각 컨테이너 유형에 따라 서로 다른 시스템 변수를 사용할 수 있습니다. 패키지 및 해당 요소에서 사용되는 시스템 변수에 대한 자세한 내용은 [System Variables](../integration-services/system-variables.md)를 참조하십시오.  
   
- 변수의 실제 사용 시나리오에 대한 자세한 내용은 [패키지에서 변수 사용](https://msdn.microsoft.com/library/7742e92d-46c5-4cc4-b9a3-45b688ddb787)을 참조하세요.  
+ 변수의 실제 사용 시나리오에 대한 자세한 내용은 [패키지에서 변수 사용]()을 참조하세요.  
   
 ## <a name="properties-of-variables"></a>변수 속성  
  **변수** 창이나 **속성** 창에서 다음 속성을 설정하여 사용자 정의 변수를 구성할 수 있습니다. 일부 속성은 속성 창에서만 사용할 수 있습니다.  
@@ -114,7 +114,7 @@ ms.locfileid: "88449778"
   
  변수는 패키지의 범위나 패키지에 들어 있는 컨테이너, 태스크 또는 이벤트 처리기의 범위 내에서 생성됩니다. 패키지 컨테이너는 컨테이너의 최상위 계층에 있으므로 패키지 범위의 변수는 전역 변수와 같은 기능을 수행하며 패키지의 모든 컨테이너에서 사용될 수 있습니다. 이와 비슷하게 For 루프 컨테이너와 같은 컨테이너의 범위 내에서 정의된 변수는 해당 For 루프 컨테이너 내의 모든 태스크 또는 컨테이너에서 사용될 수 있습니다.  
   
- 패키지에서 패키지 실행 태스크를 사용하여 다른 패키지가 실행되는 경우 호출한 패키지 또는 실행 패키지 태스크의 범위 내에서 정의된 변수는 부모 패키지 변수 구성 유형을 통해 호출된 패키지에서 사용할 수 있도록 설정될 수 있습니다. 자세한 내용은 [Package Configurations](../integration-services/packages/package-configurations.md)을 참조하세요.  
+ 패키지에서 패키지 실행 태스크를 사용하여 다른 패키지가 실행되는 경우 호출한 패키지 또는 실행 패키지 태스크의 범위 내에서 정의된 변수는 부모 패키지 변수 구성 유형을 통해 호출된 패키지에서 사용할 수 있도록 설정될 수 있습니다. 자세한 내용은 [Package Configurations](./packages/legacy-package-deployment-ssis.md)을 참조하세요.  
   
 **IncludeInDebugDump**  
  디버그 덤프 파일에 변수 값이 포함되는지 여부를 나타냅니다.  
@@ -159,13 +159,13 @@ ms.locfileid: "88449778"
   
  **데이터 흐름 식** 변수를 사용하여 파생 열 및 조건부 분할 변환에서 열을 채우기 위해 사용하는 식에 값을 제공하거나 데이터 행을 다른 변환 출력에 전송할 수 있습니다. 예를 들어 `@varSalutation + LastName`식은 `VarSalutation` 변수와 `LastName` 열의 값을 연결합니다. `Income < @HighIncome`식은 `Income` 열의 값이 `HighIncome` 변수의 값보다 작은 데이터 행을 출력에 전송합니다. 자세한 내용은 [파생 열 변환](../integration-services/data-flow/transformations/derived-column-transformation.md), [조건부 분할 변환](../integration-services/data-flow/transformations/conditional-split-transformation.md) 및 [Integration Services&#40;SSIS&#41; 식](../integration-services/expressions/integration-services-ssis-expressions.md)을 참조하세요.  
   
- **선행 제약 조건 식** 제약 조건이 지정된 실행 개체가 실행되는지 여부를 결정하기 위해 선행 제약 조건에서 사용할 값을 제공합니다. 식을 실행 결과(성공, 실패, 완료)와 함께 사용하거나 실행 결과 대신에 사용할 수 있습니다. 예를 들어 `@varMax > @varMin`식이 **true**로 계산될 경우 실행 개체가 실행됩니다. 자세한 내용은 [선행 제약 조건에 식 추가](https://msdn.microsoft.com/library/5574d89a-a68e-4b84-80ea-da93305e5ca1)를 참조하세요.  
+ **선행 제약 조건 식** 제약 조건이 지정된 실행 개체가 실행되는지 여부를 결정하기 위해 선행 제약 조건에서 사용할 값을 제공합니다. 식을 실행 결과(성공, 실패, 완료)와 함께 사용하거나 실행 결과 대신에 사용할 수 있습니다. 예를 들어 `@varMax > @varMin`식이 **true**로 계산될 경우 실행 개체가 실행됩니다. 자세한 내용은 [선행 제약 조건에 식 추가](./control-flow/precedence-constraints.md)를 참조하세요.  
   
- **매개 변수 및 반환 코드** 입력 매개 변수에 대한 값을 제공하거나 출력 매개 변수 및 반환 코드의 값을 저장합니다. 변수를 매개 변수 및 반환 값에 매핑하여 이 작업을 수행합니다. 예를 들어 `varProductId` 변수를 23으로 설정하고 SQL 문 `SELECT * from Production.Product WHERE ProductID = ?`를 실행할 경우 쿼리는 `ProductID` 가 23인 제품을 검색합니다. 자세한 내용은 [SQL 실행 태스크](../integration-services/control-flow/execute-sql-task.md) 및 [SQL 실행 태스크의 매개 변수 및 반환 코드](https://msdn.microsoft.com/library/a3ca65e8-65cf-4272-9a81-765a706b8663)를 참조하세요.  
+ **매개 변수 및 반환 코드** 입력 매개 변수에 대한 값을 제공하거나 출력 매개 변수 및 반환 코드의 값을 저장합니다. 변수를 매개 변수 및 반환 값에 매핑하여 이 작업을 수행합니다. 예를 들어 `varProductId` 변수를 23으로 설정하고 SQL 문 `SELECT * from Production.Product WHERE ProductID = ?`를 실행할 경우 쿼리는 `ProductID` 가 23인 제품을 검색합니다. 자세한 내용은 [SQL 실행 태스크](../integration-services/control-flow/execute-sql-task.md) 및 [SQL 실행 태스크의 매개 변수 및 반환 코드](./control-flow/execute-sql-task.md)를 참조하세요.  
   
  **For 루프 식** For 루프의 초기화, 계산 및 대입 식에서 사용할 값을 제공합니다. 예를 들어 `varCount` 변수가 2, `varMaxCount` 변수가 10, 초기화 식이 `@varCount`, 계산 식이  `@varCount < @varMaxCount`, 대입 식이 `@varCount =@varCount +1`인 경우 루프는 8번 반복됩니다. 자세한 내용은 [For 루프 컨테이너](../integration-services/control-flow/for-loop-container.md)가 될 때까지 워크플로를 반복합니다.  
   
- **부모 패키지 변수 구성** 부모 패키지에서 자식 패키지로 값을 전달합니다. 자식 패키지는 부모 패키지 변수 구성을 사용하여 부모 패키지의 변수에 액세스할 수 있습니다. 예를 들어 자식 패키지가 부모 패키지와 동일한 데이터를 사용해야 할 경우 자식 패키지는 부모 패키지의 GETDATE 함수에서 설정한 변수를 지정하는 부모 패키지 변수 구성을 정의할 수 있습니다. 자세한 내용은 [Execute Package Task](../integration-services/control-flow/execute-package-task.md) 및 [Package Configurations](../integration-services/packages/package-configurations.md)를 참조하세요.  
+ **부모 패키지 변수 구성** 부모 패키지에서 자식 패키지로 값을 전달합니다. 자식 패키지는 부모 패키지 변수 구성을 사용하여 부모 패키지의 변수에 액세스할 수 있습니다. 예를 들어 자식 패키지가 부모 패키지와 동일한 데이터를 사용해야 할 경우 자식 패키지는 부모 패키지의 GETDATE 함수에서 설정한 변수를 지정하는 부모 패키지 변수 구성을 정의할 수 있습니다. 자세한 내용은 [Execute Package Task](../integration-services/control-flow/execute-package-task.md) 및 [Package Configurations](./packages/legacy-package-deployment-ssis.md)를 참조하세요.  
   
  **스크립트 태스크 및 스크립트 구성 요소** 스크립트 태스크 또는 스크립트 구성 요소에 대한 읽기 전용 및 읽기/쓰기 변수 목록을 제공하고 스크립트 내에서 읽기/쓰기 변수를 업데이트한 다음 스크립트 내부 또는 외부에서 업데이트된 값을 사용합니다. 예를 들어 `numberOfCars = CType(Dts.Variables("NumberOfCars").Value, Integer)`코드에서 스크립트 변수 `numberOfCars` 는 `NumberOfCars`변수의 값에 의해 업데이트됩니다. 자세한 내용은 [Using Variables in the Script Task](../integration-services/extending-packages-scripting/task/using-variables-in-the-script-task.md)을 참조하세요.  
 
@@ -189,7 +189,7 @@ ms.locfileid: "88449778"
   
 6.  필요에 따라 **표 옵션** 아이콘을 클릭하고 **가변 눈금 옵션** 대화 상자에 표시할 추가 열을 선택한 다음 **확인**을 클릭합니다.  
   
-7.  필요에 따라 변수 속성을 설정합니다. 자세한 내용은 [사용자 정의 변수의 속성 설정](https://msdn.microsoft.com/library/f98ddbec-f668-4dba-a768-44ac3ae0536f)에 의해 정의됩니다.  
+7.  필요에 따라 변수 속성을 설정합니다. 자세한 내용은 [사용자 정의 변수의 속성 설정]()에 의해 정의됩니다.  
   
 8.  업데이트된 패키지를 저장하려면 **파일** 메뉴에서 **선택한 항목 저장** 을 클릭합니다.  
 
@@ -320,9 +320,9 @@ ms.locfileid: "88449778"
 8.  업데이트된 패키지를 저장하려면 **파일** 메뉴에서 **선택한 항목 저장**을 클릭합니다.  
 
 ## <a name="update-a-variable-dynamically-with-configurations"></a>구성에서 변수를 동적으로 업데이트  
- 변수를 동적으로 업데이트하려면 변수에 대한 구성을 만들고 패키지와 함께 구성을 배포한 다음 패키지를 배포할 때 구성 파일 내의 변수 값을 업데이트하십시오. 패키지는 런타임에 업데이트된 변수 값을 사용합니다. 자세한 내용은 [패키지 구성 만들기](../integration-services/packages/create-package-configurations.md)를 참조하세요.  
+ 변수를 동적으로 업데이트하려면 변수에 대한 구성을 만들고 패키지와 함께 구성을 배포한 다음 패키지를 배포할 때 구성 파일 내의 변수 값을 업데이트하십시오. 패키지는 런타임에 업데이트된 변수 값을 사용합니다. 자세한 내용은 [패키지 구성 만들기](./packages/legacy-package-deployment-ssis.md)를 참조하세요.  
 
 ## <a name="related-tasks"></a>관련 작업  
  [자식 패키지에서 변수 및 매개 변수의 값 사용](../integration-services/packages/legacy-package-deployment-ssis.md#child)  
   
- [쿼리 매개 변수를 데이터 흐름 구성 요소의 변수에 매핑](../integration-services/data-flow/map-query-parameters-to-variables-in-a-data-flow-component.md)  
+ [쿼리 매개 변수를 데이터 흐름 구성 요소의 변수에 매핑](../integration-services/data-flow/map-query-parameters-to-variables-in-a-data-flow-component.md)

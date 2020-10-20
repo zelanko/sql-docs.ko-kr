@@ -22,12 +22,12 @@ helpviewer_keywords:
 ms.assetid: 6f60cf93-35dc-431c-908d-2049c4ab66ba
 author: chugugrace
 ms.author: chugu
-ms.openlocfilehash: 7e2c7fb36708d615bd19dfb2c5854748081a9dbb
-ms.sourcegitcommit: e700497f962e4c2274df16d9e651059b42ff1a10
+ms.openlocfilehash: 235bd7cd4a46441156b4e4d2b262daf76c6faa23
+ms.sourcegitcommit: cfa04a73b26312bf18d8f6296891679166e2754d
 ms.translationtype: HT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 08/17/2020
-ms.locfileid: "88449848"
+ms.lasthandoff: 10/19/2020
+ms.locfileid: "92193875"
 ---
 # <a name="integration-services-ssis-event-handlers"></a>Integration Services(SSIS) 이벤트 처리기
 
@@ -100,7 +100,7 @@ ms.locfileid: "88449848"
   
  **이벤트 처리기** 탭이 활성화되면 **디자이너의 도구 상자에 있는** 제어 흐름 항목 **및** 유지 관리 계획 태스크 [!INCLUDE[ssIS](../includes/ssis-md.md)] 노드에 이벤트 처리기의 제어 흐름을 작성하기 위한 태스크와 컨테이너가 포함됩니다. **데이터 흐름 원본**, **변환**및 **데이터 흐름 대상** 노드에는 이벤트 처리기의 데이터 흐름을 작성하기 위한 데이터 원본, 변환 및 대상이 포함됩니다. 자세한 내용은 [Control Flow](../integration-services/control-flow/control-flow.md) 및 [Data Flow](../integration-services/data-flow/data-flow.md)를 참조하세요.  
   
- **이벤트 처리기** 탭에는 또한 이벤트 처리기에서 서버 및 데이터 원본에 연결하는 데 사용하는 연결 관리자를 만들고 수정할 수 있는 **연결 관리자** 영역이 포함됩니다. 자세한 내용은 [연결 관리자 만들기](https://msdn.microsoft.com/library/6ca317b8-0061-4d9d-b830-ee8c21268345)를 참조하세요.  
+ **이벤트 처리기** 탭에는 또한 이벤트 처리기에서 서버 및 데이터 원본에 연결하는 데 사용하는 연결 관리자를 만들고 수정할 수 있는 **연결 관리자** 영역이 포함됩니다. 자세한 내용은 [연결 관리자 만들기](./connection-manager/integration-services-ssis-connections.md)를 참조하세요.  
   
 ### <a name="add-an-event-handler-on-the-event-handlers-tab"></a>이벤트 처리기 탭에서 이벤트 처리기 추가  
   
@@ -129,11 +129,10 @@ ms.locfileid: "88449848"
 ## <a name="set-the-properties-of-an-event-handler"></a>이벤트 처리기의 속성 설정  
  [!INCLUDE[ssBIDevStudioFull](../includes/ssbidevstudiofull-md.md)] 의 **속성** 창을 사용하거나 프로그래밍 방식으로 속성을 설정할 수 있습니다.  
   
- [!INCLUDE[ssBIDevStudioFull](../includes/ssbidevstudiofull-md.md)]에서 이러한 속성을 설정하는 방법에 대한 자세한 내용은 [태스크 또는 컨테이너의 속성 설정](https://msdn.microsoft.com/library/52d47ca4-fb8c-493d-8b2b-48bb269f859b)을 참조하세요.  
+ [!INCLUDE[ssBIDevStudioFull](../includes/ssbidevstudiofull-md.md)]에서 이러한 속성을 설정하는 방법에 대한 자세한 내용은 [태스크 또는 컨테이너의 속성 설정](./control-flow/add-or-delete-a-task-or-a-container-in-a-control-flow.md)을 참조하세요.  
   
  이러한 속성을 프로그래밍 방식으로 설정하는 방법은 <xref:Microsoft.SqlServer.Dts.Runtime.DtsEventHandler>을 참조하세요.  
   
 ## <a name="related-tasks"></a>관련 작업  
- 패키지에 이벤트 처리기를 추가하는 방법에 대한 자세한 내용은 [패키지에 이벤트 처리기 추가](https://msdn.microsoft.com/library/5e56885d-8658-480a-bed9-3f2f8003fd78)를 참조하세요.  
-  
+ 패키지에 이벤트 처리기를 추가하는 방법에 대한 자세한 내용은 [패키지에 이벤트 처리기 추가]()를 참조하세요.  
   

@@ -17,12 +17,12 @@ helpviewer_keywords:
 ms.assetid: 41c3f2c4-ee04-460a-9822-bb9ae4036c2e
 author: chugugrace
 ms.author: chugu
-ms.openlocfilehash: 9d17bad386cc020be1a61696aec96a81b6126d8e
-ms.sourcegitcommit: e700497f962e4c2274df16d9e651059b42ff1a10
+ms.openlocfilehash: 013fffc66c8e40ca2124b949f555e0638df7967e
+ms.sourcegitcommit: cfa04a73b26312bf18d8f6296891679166e2754d
 ms.translationtype: HT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 08/17/2020
-ms.locfileid: "88393557"
+ms.lasthandoff: 10/19/2020
+ms.locfileid: "92194265"
 ---
 # <a name="ftp-task"></a>FTP 태스크
 
@@ -77,7 +77,7 @@ ms.locfileid: "88393557"
 ## <a name="related-tasks"></a>관련 작업  
  [!INCLUDE[ssIS](../../includes/ssis-md.md)] 디자이너를 사용하거나 프로그래밍 방식으로 속성을 설정할 수 있습니다.  
   
- [!INCLUDE[ssIS](../../includes/ssis-md.md)] 디자이너에서 이러한 속성을 설정하는 방법에 대한 자세한 내용은 [태스크 또는 컨테이너의 속성 설정](https://msdn.microsoft.com/library/52d47ca4-fb8c-493d-8b2b-48bb269f859b)을 참조하세요.  
+ [!INCLUDE[ssIS](../../includes/ssis-md.md)] 디자이너에서 이러한 속성을 설정하는 방법에 대한 자세한 내용은 [태스크 또는 컨테이너의 속성 설정](./add-or-delete-a-task-or-a-container-in-a-control-flow.md)을 참조하세요.  
   
  이러한 속성을 프로그래밍 방식으로 설정하는 방법에 대한 자세한 내용은 <xref:Microsoft.SqlServer.Dts.Tasks.FtpTask.FtpTask>를 참조하세요.  
   
@@ -91,7 +91,7 @@ ms.locfileid: "88393557"
 > [!IMPORTANT]  
 >  FTP 연결 관리자는 익명 인증과 기본 인증만 지원하며 Windows 인증은 지원하지 않습니다.  
   
- **관련 항목**: [FTP Connection Manager](../../integration-services/connection-manager/ftp-connection-manager.md), [FTP Connection Manager Editor](../../integration-services/connection-manager/ftp-connection-manager-editor.md)  
+ **관련 항목**: [FTP Connection Manager](../../integration-services/connection-manager/ftp-connection-manager.md), [FTP Connection Manager Editor](../connection-manager/ftp-connection-manager.md)  
   
  **StopOnFailure**  
  FTP 작업이 실패할 경우 FTP 태스크가 종료될지 여부를 나타냅니다.  
@@ -157,7 +157,7 @@ ms.locfileid: "88393557"
  **RemotePath**  
  기존 FTP 연결 관리자를 선택하거나 \<**New connection...**>을 클릭하여 연결 관리자를 만듭니다.  
   
- **관련 항목:** [FTP Connection Manager](../../integration-services/connection-manager/ftp-connection-manager.md), [FTP Connection Manager Editor](../../integration-services/connection-manager/ftp-connection-manager-editor.md)  
+ **관련 항목:** [FTP Connection Manager](../../integration-services/connection-manager/ftp-connection-manager.md), [FTP Connection Manager Editor](../connection-manager/ftp-connection-manager.md)  
   
 ### <a name="islocalpathvariable-dynamic-options"></a>IsLocalPathVariable 동적 옵션  
   
@@ -176,5 +176,4 @@ ms.locfileid: "88393557"
 ## <a name="see-also"></a>참고 항목  
  [Integration Services 태스크](../../integration-services/control-flow/integration-services-tasks.md)   
  [제어 흐름](../../integration-services/control-flow/control-flow.md)  
-  
   

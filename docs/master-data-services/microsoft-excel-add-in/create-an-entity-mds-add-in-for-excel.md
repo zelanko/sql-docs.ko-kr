@@ -1,5 +1,6 @@
 ---
-title: 엔터티 만들기(Excel용 MDS 추가 기능) | Microsoft Docs
+description: 엔터티 만들기(Excel용 MDS 추가 기능)
+title: 엔터티 만들기
 ms.custom: microsoft-excel-add-in
 ms.date: 03/01/2017
 ms.prod: sql
@@ -10,25 +11,25 @@ ms.topic: conceptual
 ms.assetid: d354abb3-88fe-4b40-a374-f6256b84ffae
 author: lrtoyou1223
 ms.author: lle
-ms.openlocfilehash: bae68b9b241f14af1267eaf84e32dc97a39b8ea8
-ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
+ms.openlocfilehash: 73161344ae6722e2b7e3ece9d1b8725779c82780
+ms.sourcegitcommit: e700497f962e4c2274df16d9e651059b42ff1a10
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 07/15/2019
-ms.locfileid: "68092460"
+ms.lasthandoff: 08/17/2020
+ms.locfileid: "92257701"
 ---
 # <a name="create-an-entity-mds-add-in-for-excel"></a>엔터티 만들기(Excel용 MDS 추가 기능)
 
-[!INCLUDE[appliesto-ss-xxxx-xxxx-xxx-md-winonly](../../includes/appliesto-ss-xxxx-xxxx-xxx-md-winonly.md)]
+[!INCLUDE [SQL Server Windows Only - ASDBMI ](../../includes/applies-to-version/sql-windows-only-asdbmi.md)]
 
   [!INCLUDE[ssMDSshort](../../includes/ssmdsshort-md.md)][!INCLUDE[ssMDSXLS](../../includes/ssmdsxls-md.md)]에서 관리자는 새 엔터티를 만들어 데이터를 저장할 수 있습니다. 엔터티를 만들 때 엔터티에 저장할 데이터의 샘플을 로드해야 합니다.  
   
-## <a name="prerequisites"></a>사전 요구 사항  
+## <a name="prerequisites"></a>필수 구성 요소  
  이 절차를 수행하려면  
   
 -   **시스템 관리** 와 **탐색기** 기능 영역에 액세스할 수 있는 권한이 있어야 합니다.  
   
--   모델 관리자여야 합니다. 자세한 내용은 [관리자&#40;Master Data Services&#41;](../../master-data-services/administrators-master-data-services.md)를 참조하세요.  
+-   모델 관리자여야 합니다. 자세한 내용은 [관리자 &#40;MDS(Master Data Services)&#41;](../../master-data-services/administrators-master-data-services.md)를 참조 하세요.  
   
 -   만든 엔터티를 포함할 기존 모델이 있어야 합니다. 자세한 내용은 [모델 만들기&#40;Master Data Services&#41;](../../master-data-services/create-a-model-master-data-services.md)를 참조하세요.  
   
@@ -68,7 +69,7 @@ ms.locfileid: "68092460"
   
 10. **코드** 목록에서 고유 식별자가 포함된 열을 선택하거나 코드가 자동으로 생성되도록 둡니다.  
   
-11. (선택 사항) **이름** 목록에서 각 멤버의 이름이 포함된 열을 선택합니다.  
+11. 선택 사항입니다. **이름** 목록에서 각 멤버의 이름이 포함된 열을 선택합니다.  
   
 12. **확인**을 클릭합니다. 엔터티가 만들어지면 새 머리글 행이 표시되고 셀이 강조 표시되며 엔터티 이름과 일치하도록 시트 이름이 업데이트됩니다.  
   
@@ -78,7 +79,7 @@ ms.locfileid: "68092460"
   
 -   예상한 데이터 형식으로 특성이 만들어졌는지 확인합니다.  
   
-## <a name="see-also"></a>관련 항목  
+## <a name="see-also"></a>참고 항목  
  [도메인 기반 특성 만들기&#40;Excel용 MDS 추가 기능&#41;](../../master-data-services/microsoft-excel-add-in/create-a-domain-based-attribute-mds-add-in-for-excel.md)  
   
   

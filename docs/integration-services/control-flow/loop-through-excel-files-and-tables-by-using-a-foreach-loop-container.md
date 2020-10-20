@@ -15,12 +15,12 @@ helpviewer_keywords:
 ms.assetid: a5393c1a-cc37-491a-a260-7aad84dbff68
 author: chugugrace
 ms.author: chugu
-ms.openlocfilehash: 0eaa6b0cbe19656096cdb47a31ec73b5fd4ade7d
-ms.sourcegitcommit: e700497f962e4c2274df16d9e651059b42ff1a10
+ms.openlocfilehash: 7c6e986f032f755f73db249f7ddeff539fca4a8c
+ms.sourcegitcommit: cfa04a73b26312bf18d8f6296891679166e2754d
 ms.translationtype: HT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 08/17/2020
-ms.locfileid: "88392629"
+ms.lasthandoff: 10/19/2020
+ms.locfileid: "92197177"
 ---
 # <a name="loop-through-excel-files-and-tables-with-a-foreach-loop-container"></a>Foreach 루프 컨테이너를 사용하여 Excel 파일 및 테이블 반복
 
@@ -40,7 +40,7 @@ ms.locfileid: "88392629"
   
      확장 속성 인수에 대한 변수를 사용하지 않으면 연결 문자열을 포함하는 식에 해당 변수를 수동으로 추가해야 합니다.  
   
-3.  **제어 흐름** 탭에 Foreach 루프 컨테이너를 추가합니다. Foreach 루프 컨테이너를 구성하는 방법에 대한 자세한 내용은 [Foreach 루프 컨테이너 구성](https://msdn.microsoft.com/library/519c6f96-5e1f-47d2-b96a-d49946948c25)을 참조하세요.  
+3.  **제어 흐름** 탭에 Foreach 루프 컨테이너를 추가합니다. Foreach 루프 컨테이너를 구성하는 방법에 대한 자세한 내용은 [Foreach 루프 컨테이너 구성](./foreach-loop-container.md)을 참조하세요.  
   
 4.  **Foreach 루프 편집기**의 **컬렉션** 페이지에서 Foreach 파일 열거자를 선택하고, Excel 통합 문서가 있는 폴더를 지정한 다음, 파일 필터(일반적으로 *.xlsx)를 지정합니다.  
   
@@ -48,7 +48,7 @@ ms.locfileid: "88392629"
   
 6.  **Foreach 루프 편집기**를 닫습니다.  
   
-7.  [패키지에서 연결 관리자 추가, 삭제 또는 공유](https://msdn.microsoft.com/library/6f2ba4ea-10be-4c40-9e80-7efcf6ee9655)에 설명된 대로 패키지에 Excel 연결 관리자를 추가합니다. 연결에 기존 Excel 통합 문서 파일을 선택하면 유효성 검사 오류를 방지할 수 있습니다.  
+7.  [패키지에서 연결 관리자 추가, 삭제 또는 공유](/previous-versions/sql/sql-server-2016/ms140237(v=sql.130))에 설명된 대로 패키지에 Excel 연결 관리자를 추가합니다. 연결에 기존 Excel 통합 문서 파일을 선택하면 유효성 검사 오류를 방지할 수 있습니다.  
   
     > [!IMPORTANT]  
     >  이 Excel 연결 관리자 관리자를 사용하는 태스크 및 데이터 흐름 구성 요소를 구성할 때 유효성 검사 오류가 발생하지 않도록 하려면 **Excel 연결 관리자 편집기**에서 기존 Excel 통합 문서를 선택합니다. 다음 단계에서 설명하는 대로 **ConnectionString** 속성에 대한 식을 구성하고 나면 연결 관리자는 런타임에 이 통합 문서를 사용하지 않습니다. 패키지를 만들고 구성한 다음에는 속성 창에서 **ConnectionString** 속성 값을 지울 수 있습니다. 그러나 이 값을 지우면 Foreach 루프가 실행될 때까지는 Excel 연결 관리자의 연결 문자열 속성이 유효하지 않게 됩니다. 따라서 연결 관리자가 사용된 태스크나 패키지에서 **DelayValidation** 속성을 **True** 로 설정하여 유효성 검사 오류를 방지해야 합니다.  
@@ -77,11 +77,11 @@ ms.locfileid: "88392629"
   
 ## <a name="to-loop-through-excel-tables-by-using-the-foreach-adonet-schema-rowset-enumerator"></a>Foreach ADO.NET 스키마 행 집합 열거자를 사용하여 Excel 테이블을 루핑하려면  
   
-1.  Microsoft ACE OLE DB 공급자를 사용하는 ADO.NET 연결 관리자를 만들어 Excel 통합 문서에 연결합니다. **연결 관리자** 대화 상자의 모든 페이지에서 Excel 버전을 확장 속성의 값으로 입력합니다(이 경우에 Excel 12.0). 자세한 내용은 [패키지에서 연결 관리자 추가, 삭제 또는 공유](https://msdn.microsoft.com/library/6f2ba4ea-10be-4c40-9e80-7efcf6ee9655)을 참조하세요.  
+1.  Microsoft ACE OLE DB 공급자를 사용하는 ADO.NET 연결 관리자를 만들어 Excel 통합 문서에 연결합니다. **연결 관리자** 대화 상자의 모든 페이지에서 Excel 버전을 확장 속성의 값으로 입력합니다(이 경우에 Excel 12.0). 자세한 내용은 [패키지에서 연결 관리자 추가, 삭제 또는 공유](/previous-versions/sql/sql-server-2016/ms140237(v=sql.130))을 참조하세요.  
   
 2.  루프 반복마다 현재 테이블의 이름을 받을 문자열 변수를 만듭니다.  
   
-3.  **제어 흐름** 탭에 Foreach 루프 컨테이너를 추가합니다. Foreach 루프 컨테이너를 구성하는 방법에 대한 자세한 내용은 [Foreach 루프 컨테이너 구성](https://msdn.microsoft.com/library/519c6f96-5e1f-47d2-b96a-d49946948c25)을 참조하세요.  
+3.  **제어 흐름** 탭에 Foreach 루프 컨테이너를 추가합니다. Foreach 루프 컨테이너를 구성하는 방법에 대한 자세한 내용은 [Foreach 루프 컨테이너 구성](./foreach-loop-container.md)을 참조하세요.  
   
 4.  **Foreach 루프 편집기** 의 **컬렉션**페이지에서 Foreach ADO.NET 스키마 행 집합 열거자를 선택합니다.  
   
@@ -100,11 +100,10 @@ ms.locfileid: "88392629"
   
 ## <a name="see-also"></a>관련 항목  
  [SSIS(SQL Server Integration Services)를 통해 Excel에서 데이터 로드](../load-data-to-from-excel-with-ssis.md)  
- [Foreach 루프 컨테이너 구성](https://msdn.microsoft.com/library/519c6f96-5e1f-47d2-b96a-d49946948c25)   
+ [Foreach 루프 컨테이너 구성](./foreach-loop-container.md)   
  [속성 식 추가 또는 변경](../../integration-services/expressions/add-or-change-a-property-expression.md)   
  [Excel 연결 관리자](../../integration-services/connection-manager/excel-connection-manager.md)   
  [Excel 원본](../../integration-services/data-flow/excel-source.md)   
  [Excel 대상](../../integration-services/data-flow/excel-destination.md)   
  [스크립트 태스크를 사용한 Excel 파일 작업](../../integration-services/extending-packages-scripting-task-examples/working-with-excel-files-with-the-script-task.md)  
-  
   

@@ -19,19 +19,20 @@ helpviewer_keywords:
 ms.assetid: b93e9701-72a0-408e-958c-dc196872c040
 author: stevestein
 ms.author: sstein
-ms.openlocfilehash: 828963dabc79c53c831efd3c2acac797d109555d
-ms.sourcegitcommit: da88320c474c1c9124574f90d549c50ee3387b4c
+ms.openlocfilehash: 42f8148fa7d0a648bd7ad34ee766ff2a4488dceb
+ms.sourcegitcommit: 22102f25db5ccca39aebf96bc861c92f2367c77a
 ms.translationtype: HT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 07/01/2020
-ms.locfileid: "85763558"
+ms.lasthandoff: 10/16/2020
+ms.locfileid: "92115746"
 ---
 # <a name="copy-databases-with-backup-and-restore"></a>백업 및 복원으로 데이터베이스 복사
  [!INCLUDE [SQL Server](../../includes/applies-to-version/sqlserver.md)]
 
   [!INCLUDE[ssCurrent](../../includes/sscurrent-md.md)]에서는 [!INCLUDE[ssVersion2005](../../includes/ssversion2005-md.md)] 이상 버전을 사용하여 만든 사용자 데이터베이스 백업을 복원하여 새 데이터베이스를 만들 수 있습니다. 그러나 이전 **버전을 사용하여 만든**master **,** model **및** msdb [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 백업은 [!INCLUDE[ssCurrent](../../includes/sscurrent-md.md)]를 통해 복원할 수 없습니다. 또한 [!INCLUDE[ssCurrent](../../includes/sscurrent-md.md)] 백업을 이전 버전의 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]로 복원할 수도 없습니다.  
   
->**중요!** SQL Server 2016는 이전 버전과는 다른 기본 경로를 사용합니다. 따라서 이전 버전의 기본 위치에 만든 데이터베이스 백업을 복원하려면 MOVE 옵션을 사용해야 합니다. 새 기본 경로에 대한 자세한 내용은 [SQL Server 기본 인스턴스 및 명명된 인스턴스의 파일 위치](../../sql-server/install/file-locations-for-default-and-named-instances-of-sql-server.md)를 참조하십시오. 데이터베이스 파일을 이동하는 방법은 이 항목의 뒷부분에 나오는 "데이터베이스 파일 이동"을 참조하십시오.  
+> [!IMPORTANT]
+> SQL Server 2016는 이전 버전과는 다른 기본 경로를 사용합니다. 따라서 이전 버전의 기본 위치에 만든 데이터베이스 백업을 복원하려면 MOVE 옵션을 사용해야 합니다. 새 기본 경로에 대한 자세한 내용은 [SQL Server 기본 인스턴스 및 명명된 인스턴스의 파일 위치](../../sql-server/install/file-locations-for-default-and-named-instances-of-sql-server.md)를 참조하십시오. 데이터베이스 파일을 이동하는 방법은 이 항목의 뒷부분에 나오는 "데이터베이스 파일 이동"을 참조하십시오.  
   
 ## <a name="general-steps-for-using-backup-and-restore-to-copy-a-database"></a>백업과 복원을 사용하여 데이터베이스를 복사하는 일반적인 단계  
  백업과 복원을 사용하여 SQL Server의 다른 인스턴스로 데이터베이스를 복사할 때는 SQL Server가 실행되는 모든 플랫폼이 원본 컴퓨터 및 대상 컴퓨터가 될 수 있습니다.  

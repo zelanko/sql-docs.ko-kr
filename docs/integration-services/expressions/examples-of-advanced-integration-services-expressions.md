@@ -16,12 +16,12 @@ helpviewer_keywords:
 ms.assetid: c7794ba3-0de5-466b-ae8a-9ddd27360049
 author: chugugrace
 ms.author: chugu
-ms.openlocfilehash: 5e0ab5a444d660d505ae6b71cd34cf5253686d3a
-ms.sourcegitcommit: e700497f962e4c2274df16d9e651059b42ff1a10
+ms.openlocfilehash: b5a0e9c219a1649385b337ea378dec751f7851d4
+ms.sourcegitcommit: cfa04a73b26312bf18d8f6296891679166e2754d
 ms.translationtype: HT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 08/17/2020
-ms.locfileid: "88477599"
+ms.lasthandoff: 10/19/2020
+ms.locfileid: "92194562"
 ---
 # <a name="examples-of-advanced-integration-services-expressions"></a>고급 Integration Services 식의 예
 
@@ -105,9 +105,8 @@ ms.locfileid: "88477599"
     ```  
   
 ## <a name="related-tasks"></a>관련 작업  
- [데이터 흐름 구성 요소에서 식 사용](https://msdn.microsoft.com/library/9181b998-d24a-41fb-bb3c-14eee34f910d)  
+ [데이터 흐름 구성 요소에서 식 사용](/previous-versions/sql/sql-server-2016/ms141007(v=sql.130))  
   
 ## <a name="related-content"></a>관련 내용  
  pragmaticworks.com의 기술 문서 - [SSIS 식 치트 시트](https://go.microsoft.com/fwlink/?LinkId=746575)  
-  
   

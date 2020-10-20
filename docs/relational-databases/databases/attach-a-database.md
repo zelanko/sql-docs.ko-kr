@@ -16,12 +16,12 @@ helpviewer_keywords:
 ms.assetid: b4efb0ae-cfe6-4d81-a4b4-6e4916885caa
 author: stevestein
 ms.author: sstein
-ms.openlocfilehash: 893de2f02f6f10d5c4132864903f6b55495fbfdf
-ms.sourcegitcommit: da88320c474c1c9124574f90d549c50ee3387b4c
+ms.openlocfilehash: c1987fae42f804e861c1f15e55deb60e273e0d3b
+ms.sourcegitcommit: cfa04a73b26312bf18d8f6296891679166e2754d
 ms.translationtype: HT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 07/01/2020
-ms.locfileid: "85789583"
+ms.lasthandoff: 10/19/2020
+ms.locfileid: "92194405"
 ---
 # <a name="attach-a-database"></a>데이터베이스 연결
  [!INCLUDE [SQL Server](../../includes/applies-to-version/sqlserver.md)]
@@ -42,7 +42,7 @@ ms.locfileid: "85789583"
 백업 및 복구에는 분리 및 연결 작업을 하지 않는 것이 좋습니다. 트랜잭션 로그 백업이 없으며 실수로 파일을 삭제할 수 있습니다.
   
 ###  <a name="security"></a><a name="Security"></a> 보안  
-파일 액세스 권한은 데이터베이스 분리, 연결 등의 여러 데이터베이스 작업 중에 설정됩니다. 데이터베이스를 분리 및 연결할 때마다 설정되는 파일 사용 권한에 대한 자세한 내용은 [온라인 설명서에서](https://technet.microsoft.com/library/ms189128.aspx) 데이터 및 로그 파일 보안 [!INCLUDE[ssKilimanjaro](../../includes/sskilimanjaro-md.md)] 을 참조하세요(현재도 제공됨). 
+파일 액세스 권한은 데이터베이스 분리, 연결 등의 여러 데이터베이스 작업 중에 설정됩니다. 데이터베이스를 분리 및 연결할 때마다 설정되는 파일 사용 권한에 대한 자세한 내용은 [온라인 설명서에서](/previous-versions/sql/sql-server-2008-r2/ms189128(v=sql.105)) 데이터 및 로그 파일 보안 [!INCLUDE[ssKilimanjaro](../../includes/sskilimanjaro-md.md)] 을 참조하세요(현재도 제공됨). 
   
 알 수 없거나 신뢰할 수 없는 출처의 데이터베이스는 연결 또는 복원하지 않는 것이 좋습니다. 이러한 데이터베이스에 포함된 악성 코드가 의도하지 않은 [!INCLUDE[tsql](../../includes/tsql-md.md)] 코드를 실행하거나 스키마 또는 물리적 데이터베이스 구조를 수정하여 오류가 발생할 수 있습니다. 알 수 없거나 신뢰할 수 없는 소스의 데이터베이스를 사용하기 전에 비프로덕션 서버의 데이터베이스에서 [DBCC CHECKDB](../../t-sql/database-console-commands/dbcc-checkdb-transact-sql.md) 를 실행하여 데이터베이스에서 코드(예: 저장 프로시저 또는 다른 사용자 정의 코드)를 시험해 보세요. 데이터베이스 연결에 대한 자세한 내용 및 데이터베이스를 연결할 때 메타데이터에 대해 이루어지는 변경에 대한 자세한 내용은 [데이터베이스 분리 및 연결(SQL Server)](../../relational-databases/databases/database-detach-and-attach-sql-server.md)을 참조하세요.  
   
@@ -129,7 +129,7 @@ ms.locfileid: "85789583"
   
 2.  표준 도구 모음에서 **새 쿼리**를 클릭합니다.  
   
-3.  `FOR ATTACH` 절이 포함된 [CREATE DATABASE](../../t-sql/statements/create-database-sql-server-transact-sql.md) 문을 사용합니다.  
+3.  `FOR ATTACH` 절이 포함된 [CREATE DATABASE](../../t-sql/statements/create-database-transact-sql.md) 문을 사용합니다.  
   
      다음 예를 복사하여 쿼리 창에 붙여 넣고 **실행**을 클릭합니다. 이 예에서는 [!INCLUDE[ssSampleDBnormal](../../includes/sssampledbnormal-md.md)] 데이터베이스의 파일을 연결하고 데이터베이스 이름을 `MyAdventureWorks`로 바꿉니다.  
   
@@ -157,8 +157,7 @@ EXEC sys.sp_cdc_vupgrade
 ``` 
  
 ## <a name="see-also"></a>참고 항목  
- [CREATE DATABASE&#40;SQL Server Transact-SQL&#41;](../../t-sql/statements/create-database-sql-server-transact-sql.md) 
+ [CREATE DATABASE&#40;SQL Server Transact-SQL&#41;](../../t-sql/statements/create-database-transact-sql.md) 
  <br>[다른 서버에서 데이터베이스를 사용할 수 있도록 할 때 메타데이터 관리](manage-metadata-when-making-a-database-available-on-another-server.md)  
  [데이터베이스 분리](../../relational-databases/databases/detach-a-database.md)  
-  
   

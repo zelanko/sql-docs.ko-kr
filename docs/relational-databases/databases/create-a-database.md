@@ -15,19 +15,19 @@ helpviewer_keywords:
 ms.assetid: 4c4beea2-6cbc-4352-9db6-49ea8130bb64
 author: stevestein
 ms.author: sstein
-ms.openlocfilehash: 463f442c15fdd6bfa29e97c650d5b7d8ee95fe91
-ms.sourcegitcommit: da88320c474c1c9124574f90d549c50ee3387b4c
+ms.openlocfilehash: 4fddf58b0f7473ea2ae46812d9908dcbbafb7b66
+ms.sourcegitcommit: cfa04a73b26312bf18d8f6296891679166e2754d
 ms.translationtype: HT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 07/01/2020
-ms.locfileid: "85631027"
+ms.lasthandoff: 10/19/2020
+ms.locfileid: "92195692"
 ---
 # <a name="create-a-database"></a>데이터베이스 만들기
  [!INCLUDE [SQL Server](../../includes/applies-to-version/sqlserver.md)]
   이 항목에서는 [!INCLUDE[ssCurrent](../../includes/sscurrent-md.md)] 또는 [!INCLUDE[ssManStudioFull](../../includes/ssmanstudiofull-md.md)] 을 사용하여 [!INCLUDE[tsql](../../includes/tsql-md.md)]에서 데이터베이스를 만드는 방법에 대해 설명합니다.  
 
 > [!NOTE]
-> T-SQL을 사용하여 Azure SQL Database에서 데이터베이스를 만들려면 [Azure SQL Database에서 데이터베이스 만들기](https://docs.microsoft.com/sql/t-sql/statements/create-database-azure-sql-database)를 참조하세요.
+> T-SQL을 사용하여 Azure SQL Database에서 데이터베이스를 만들려면 [Azure SQL Database에서 데이터베이스 만들기](../../t-sql/statements/create-database-transact-sql.md)를 참조하세요.
   
  **항목 내용**  
   
@@ -134,12 +134,11 @@ LOG ON
 GO  
 ```  
   
- 추가 예제를 보려면 [CREATE DATABASE&#40;SQL Server Transact-SQL&#41;](../../t-sql/statements/create-database-sql-server-transact-sql.md)를 참조하세요.  
+ 추가 예제를 보려면 [CREATE DATABASE&#40;SQL Server Transact-SQL&#41;](../../t-sql/statements/create-database-transact-sql.md)를 참조하세요.  
   
 ## <a name="see-also"></a>참고 항목  
  [Database Files and Filegroups](../../relational-databases/databases/database-files-and-filegroups.md)   
  [데이터베이스 분리 및 연결&#40;SQL Server&#41;](../../relational-databases/databases/database-detach-and-attach-sql-server.md)   
  [ALTER DATABASE &#40;Transact-SQL &#41;](../../t-sql/statements/alter-database-transact-sql.md)   
  [데이터베이스에 데이터 또는 로그 파일 추가](../../relational-databases/databases/add-data-or-log-files-to-a-database.md)  
-  
   

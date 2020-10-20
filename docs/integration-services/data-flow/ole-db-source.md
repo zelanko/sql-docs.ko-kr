@@ -19,12 +19,12 @@ helpviewer_keywords:
 ms.assetid: f87cc5f6-b078-40f3-9d87-7a65e13e4c86
 author: chugugrace
 ms.author: chugu
-ms.openlocfilehash: cd306ce541f3fe4f6cf352421e0087afb595c41e
-ms.sourcegitcommit: e700497f962e4c2274df16d9e651059b42ff1a10
+ms.openlocfilehash: a61d85e961b2572ce60d9766e7df0c83d042e84e
+ms.sourcegitcommit: cfa04a73b26312bf18d8f6296891679166e2754d
 ms.translationtype: HT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 08/17/2020
-ms.locfileid: "88430815"
+ms.lasthandoff: 10/19/2020
+ms.locfileid: "92195375"
 ---
 # <a name="ole-db-source"></a>OLE DB 원본
 
@@ -34,7 +34,7 @@ ms.locfileid: "88430815"
   OLE DB 원본은 데이터베이스 테이블, 뷰 또는 SQL 명령을 사용하여 다양한 OLE DB 호환 관계형 데이터베이스에서 데이터를 추출합니다. 예를 들어 OLE DB 원본은 [!INCLUDE[msCoName](../../includes/msconame-md.md)] Office Access 또는 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 데이터베이스의 테이블에서 데이터를 추출할 수 있습니다.  
   
 > [!NOTE]  
->  데이터 원본이 [!INCLUDE[msCoName](../../includes/msconame-md.md)] Office Excel 2007인 경우 이 데이터 원본에는 이전 버전의 Excel과 다른 연결 관리자가 필요합니다. 자세한 내용은 [Excel 통합 문서에 연결](../../integration-services/connection-manager/connect-to-an-excel-workbook.md)을 참조하세요.  
+>  데이터 원본이 [!INCLUDE[msCoName](../../includes/msconame-md.md)] Office Excel 2007인 경우 이 데이터 원본에는 이전 버전의 Excel과 다른 연결 관리자가 필요합니다. 자세한 내용은 [Excel 통합 문서에 연결](../load-data-to-from-excel-with-ssis.md)을 참조하세요.  
   
  OLE DB 원본은 데이터 추출을 위한 4가지 데이터 액세스 모델을 제공합니다.  
   
@@ -101,7 +101,7 @@ ms.locfileid: "88430815"
   
  **고급 편집기** 대화 상자에는 프로그래밍 방식으로 설정할 수 있는 속성이 표시됩니다. **고급 편집기** 대화 상자를 사용하거나 프로그래밍 방식으로 설정할 수 있는 속성에 대한 자세한 내용을 보려면 다음 항목 중 하나를 클릭하세요.  
   
--   [Common Properties](https://msdn.microsoft.com/library/51973502-5cc6-4125-9fce-e60fa1b7b796)  
+-   [Common Properties](./set-the-properties-of-a-data-flow-component.md)  
   
 -   [OLE DB 사용자 지정 속성](../../integration-services/data-flow/ole-db-custom-properties.md)  
   
@@ -122,9 +122,9 @@ ms.locfileid: "88430815"
   **OLE DB 원본 편집기** 대화 상자의 **연결 관리자** 페이지를 사용하여 원본의 OLE DB 연결 관리자를 선택할 수 있습니다. 이 페이지를 사용하면 데이터베이스에서 테이블이나 뷰를 선택할 수도 있습니다.  
   
 > [!NOTE]  
->  [!INCLUDE[msCoName](../../includes/msconame-md.md)] Office Excel 2007을 사용하는 데이터 원본에서 데이터를 로드하려면 OLE DB 원본을 사용하십시오. Excel 원본을 사용하여 Excel 2007 데이터 원본에서 데이터를 로드할 수 없습니다. 자세한 내용은 [Configure OLE DB Connection Manager](../../integration-services/connection-manager/configure-ole-db-connection-manager.md)을(를) 참조하세요.  
+>  [!INCLUDE[msCoName](../../includes/msconame-md.md)] Office Excel 2007을 사용하는 데이터 원본에서 데이터를 로드하려면 OLE DB 원본을 사용하십시오. Excel 원본을 사용하여 Excel 2007 데이터 원본에서 데이터를 로드할 수 없습니다. 자세한 내용은 [Configure OLE DB Connection Manager](../connection-manager/ole-db-connection-manager.md)을(를) 참조하세요.  
 >   
->  [!INCLUDE[msCoName](../../includes/msconame-md.md)] Office Excel 2003 이전 버전을 사용하는 데이터 원본에서 데이터를 로드하려면 Excel 원본을 사용하십시오. 자세한 내용은 [Excel 원본 편집기&#40;연결 관리자 페이지&#41;](../../integration-services/data-flow/excel-source-editor-connection-manager-page.md)를 참조하세요.  
+>  [!INCLUDE[msCoName](../../includes/msconame-md.md)] Office Excel 2003 이전 버전을 사용하는 데이터 원본에서 데이터를 로드하려면 Excel 원본을 사용하십시오. 자세한 내용은 [Excel 원본 편집기&#40;연결 관리자 페이지&#41;](./excel-source.md)를 참조하세요.  
   
 > [!NOTE]  
 >  OLE DB 원본의 **CommandTimeout** 속성은 **OLE DB 원본 편집기**에서 사용할 수 없지만 **고급 편집기**를 사용하여 설정할 수 있습니다. 이 속성에 대한 자세한 내용은 [OLE DB Custom Properties](../../integration-services/data-flow/ole-db-custom-properties.md)의 Excel 원본 섹션을 참조하십시오.  
@@ -150,7 +150,7 @@ ms.locfileid: "88430815"
 |옵션|Description|  
 |------------|-----------------|  
 |테이블 또는 뷰|OLE DB 데이터 원본에 있는 테이블이나 뷰에서 데이터를 검색합니다.|  
-|테이블 이름 또는 뷰 이름 변수|변수에 테이블 또는 뷰 이름을 지정합니다.<br /><br /> **관련 정보:** [패키지에서 변수 사용](https://msdn.microsoft.com/library/7742e92d-46c5-4cc4-b9a3-45b688ddb787)|  
+|테이블 이름 또는 뷰 이름 변수|변수에 테이블 또는 뷰 이름을 지정합니다.<br /><br /> **관련 정보:** [패키지에서 변수 사용](../integration-services-ssis-variables.md)|  
 |SQL 명령|SQL 쿼리를 사용하여 OLE DB 데이터 원본에서 데이터를 검색합니다.|  
 |변수를 사용한 SQL 명령|변수에 SQL 쿼리 텍스트를 지정합니다.|  
   
@@ -234,5 +234,4 @@ ms.locfileid: "88430815"
  [OLE DB 대상](../../integration-services/data-flow/ole-db-destination.md)   
  [Integration Services&#40;SSIS&#41; 변수](../../integration-services/integration-services-ssis-variables.md)   
  [데이터 흐름](../../integration-services/data-flow/data-flow.md)  
-  
   

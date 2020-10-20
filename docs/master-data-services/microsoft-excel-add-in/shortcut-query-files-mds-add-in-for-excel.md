@@ -1,5 +1,6 @@
 ---
-title: 바로 가기 쿼리 파일(Excel용 MDS 추가 기능) | Microsoft Docs
+description: 바로 가기 쿼리 파일(Excel용 MDS 추가 기능)
+title: 바로 가기 쿼리 파일
 ms.custom: microsoft-excel-add-in
 ms.date: 03/01/2017
 ms.prod: sql
@@ -10,16 +11,16 @@ ms.topic: conceptual
 ms.assetid: 1ba0219a-6c40-41fa-aff9-8c8f41ef3220
 author: lrtoyou1223
 ms.author: lle
-ms.openlocfilehash: 3028682669ae1a7e33cb85847fbf6e9456c11d42
-ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
+ms.openlocfilehash: 884e74db4cc6f8a3fd98d09757fc52245b275856
+ms.sourcegitcommit: e700497f962e4c2274df16d9e651059b42ff1a10
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 07/15/2019
-ms.locfileid: "68074376"
+ms.lasthandoff: 08/17/2020
+ms.locfileid: "92257900"
 ---
 # <a name="shortcut-query-files-mds-add-in-for-excel"></a>바로 가기 쿼리 파일(Excel용 MDS 추가 기능)
 
-[!INCLUDE[appliesto-ss-xxxx-xxxx-xxx-md-winonly](../../includes/appliesto-ss-xxxx-xxxx-xxx-md-winonly.md)]
+[!INCLUDE [SQL Server Windows Only - ASDBMI ](../../includes/applies-to-version/sql-windows-only-asdbmi.md)]
 
   [!INCLUDE[ssMDSshort](../../includes/ssmdsshort-md.md)][!INCLUDE[ssMDSXLS](../../includes/ssmdsxls-md.md)]에서는 바로 가기 쿼리 파일을 사용하여 자주 사용되는 데이터를 신속하게 연결하고 로드할 수 있습니다. 또한 다른 사용자와 MDS 데이터를 공유할 때에도 이를 사용할 수 있습니다. 워크시트를 저장하고 전자 메일로 전송하는 대신 바로 가기 쿼리 파일을 저장하고 이 파일을 대신 전자 메일로 전송해야 합니다. 이렇게 하면 MDS 저장소에 연결하여 최신 파일을 가져올 수 있습니다.  
   
@@ -38,9 +39,9 @@ ms.locfileid: "68074376"
  두 가지 방법으로 바로 가기 쿼리 파일을 열 수 있습니다. 가져오거나 두 번 클릭하여 QueryOpener 애플리케이션으로 자동으로 열 수 있습니다.  
   
 ## <a name="queryopener-application"></a>QueryOpener 애플리케이션  
- [!INCLUDE[ssMDSXLS](../../includes/ssmdsxls-md.md)] 을 설치한 모든 사용자에게는 QueryOpener라는 응용 프로그램이 설치되어 있습니다. 이 애플리케이션은 [!INCLUDE[ssMDSXLS](../../includes/ssmdsxls-md.md)]에서 바로 가기 쿼리 파일을 여는 데 사용됩니다. 바로 가기 쿼리 파일을 두 번 클릭하면 이 애플리케이션이 추가 기능에서 파일을 여는 데 자동으로 사용됩니다.  
+ [!INCLUDE[ssMDSXLS](../../includes/ssmdsxls-md.md)] 을 설치한 모든 사용자에게는 QueryOpener라는 애플리케이션이 설치되어 있습니다. 이 애플리케이션은 [!INCLUDE[ssMDSXLS](../../includes/ssmdsxls-md.md)]에서 바로 가기 쿼리 파일을 여는 데 사용됩니다. 바로 가기 쿼리 파일을 두 번 클릭하면 이 애플리케이션이 추가 기능에서 파일을 여는 데 자동으로 사용됩니다.  
   
- 이 애플리케이션에서 바로 가기 쿼리 파일을 열면 해당 연결을 "안전한" 연결 즉, 이 위치의 콘텐츠를 신뢰할 수 있는 연결로 지정하라는 메시지가 표시됩니다. 프롬프트 창에서 **이 주소에 대한 연결 항상 허용**을 선택하여 안전하게 연결할 수 있습니다. 연결을 안전한 연결로 표시할 때마다 연결이 목록에 추가됩니다. 이 목록을 지우려면 **설정** 대화 상자를 열고 **수신 허용 목록에 추가된 서버** 섹션에서 **모두 지우기**를 클릭합니다.  
+ 이 애플리케이션에서 바로 가기 쿼리 파일을 열면 해당 연결을 "안전한" 연결 즉, 이 위치의 콘텐츠를 신뢰할 수 있는 연결로 지정하라는 메시지가 표시됩니다. 프롬프트 창에서 **이 주소에 대한 연결 항상 허용** 을 선택하여 안전하게 연결할 수 있습니다. 연결을 안전한 연결로 표시할 때마다 연결이 목록에 추가됩니다. 이 목록을 지우려면 **설정** 대화 상자를 열고 **수신 허용 목록에 추가된 서버** 섹션에서 **모두 지우기**를 클릭합니다.  
   
  애플리케이션의 기본 위치는 *드라이브*:\Program Files\Microsoft SQL Server\130\Master Data Services\Excel Add-In\Microsoft.MasterDataServices.QueryOpener.exe입니다.  
   

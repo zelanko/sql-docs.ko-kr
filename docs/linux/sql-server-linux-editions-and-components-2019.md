@@ -25,12 +25,12 @@ helpviewer_keywords:
 author: VanMSFT
 ms.author: vanto
 ms.reviewer: vanto
-ms.openlocfilehash: 566750ead98f817d995c258ce992c94d9404be44
-ms.sourcegitcommit: 610e3ebe21ac6575850a29641a32f275e71557e3
+ms.openlocfilehash: 1c196ea3219f4bdbad2e4001240f754b106e3917
+ms.sourcegitcommit: 22102f25db5ccca39aebf96bc861c92f2367c77a
 ms.translationtype: HT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 10/07/2020
-ms.locfileid: "91785122"
+ms.lasthandoff: 10/16/2020
+ms.locfileid: "92115426"
 ---
 # <a name="editions-and-supported-features-of-sql-server-2019-on-linux"></a>SQL Server 2019 on Linux 버전 및 지원되는 기능
 
@@ -247,7 +247,5 @@ Developer, Enterprise Core 및 Evaluation Edition에서 지원하는 기능의 �
  [SQL Server 2019 버전 및 지원되는 기능 - Windows](../sql-server/editions-and-components-of-sql-server-version-15.md)  
  [SQL Server 2017 버전 및 지원되는 기능 - Windows](../sql-server/editions-and-components-of-sql-server-2017.md)  
  [SQL Server 2016 버전 및 지원되는 기능 - Windows](../sql-server/editions-and-components-of-sql-server-2016.md)  
- [SQL Server 설치](../database-engine/install-windows/installation-for-sql-server-2016.md)  
- [SQL Server에 대한 제품 사양](https://msdn.microsoft.com/library/6445fd53-6844-4170-a86b-7fe76a9f64cb)
-
-
+ [SQL Server 설치](../database-engine/install-windows/install-sql-server.md)  
+ [SQL Server에 대한 제품 사양](../sql-server/index.yml)

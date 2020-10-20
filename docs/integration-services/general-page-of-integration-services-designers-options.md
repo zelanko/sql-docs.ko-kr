@@ -13,12 +13,12 @@ f1_keywords:
 ms.assetid: d695690a-923b-4036-945e-7621e8651deb
 author: chugugrace
 ms.author: chugu
-ms.openlocfilehash: 9dfbe2a36695d3fcb776d9993243f9210df8082c
-ms.sourcegitcommit: e700497f962e4c2274df16d9e651059b42ff1a10
+ms.openlocfilehash: a55d74c1f7f75065cafa560cf1c6cc0bc70e2f99
+ms.sourcegitcommit: cfa04a73b26312bf18d8f6296891679166e2754d
 ms.translationtype: HT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 08/17/2020
-ms.locfileid: "88391119"
+ms.lasthandoff: 10/19/2020
+ms.locfileid: "92195225"
 ---
 # <a name="general-page-of-integration-services-designers-options"></a>Integration Services 디자이너 옵션의 일반 페이지
 
@@ -33,7 +33,7 @@ ms.locfileid: "88391119"
  **패키지 로드 시 디지털 서명 확인**  
  [!INCLUDE[ssISnoversion](../includes/ssisnoversion-md.md)] 에서 패키지 로드 시 디지털 서명을 확인하도록 하려면 선택합니다. [!INCLUDE[ssISnoversion](../includes/ssisnoversion-md.md)] 에서는 디지털 서명이 있는지, 유효한지 신뢰할 수 있는 원본에서 가져온 것인지 여부만 확인합니다. [!INCLUDE[ssISnoversion](../includes/ssisnoversion-md.md)] 에서는 패키지가 서명된 이후 변경되었는지 여부는 확인하지 않습니다.  
   
- **BlockedSignatureStates** 레지스트리 값을 설정하면 이 레지스트리 값으로 인해 **패키지 로드 시 디지털 서명 확인** 옵션이 무시됩니다. 자세한 내용은 [레지스트리 값을 설정하여 서명 정책 구현](../integration-services/packages/implement-a-signing-policy-by-setting-a-registry-value.md)을 참조하세요.  
+ **BlockedSignatureStates** 레지스트리 값을 설정하면 이 레지스트리 값으로 인해 **패키지 로드 시 디지털 서명 확인** 옵션이 무시됩니다. 자세한 내용은 [레지스트리 값을 설정하여 서명 정책 구현](./security/identify-the-source-of-packages-with-digital-signatures.md)을 참조하세요.  
   
  디지털 인증서 및 패키지에 대한 자세한 내용은 [디지털 서명을 사용하여 패키지 원본 확인](../integration-services/security/identify-the-source-of-packages-with-digital-signatures.md)을 참조하세요.  
   
@@ -61,5 +61,4 @@ ms.locfileid: "88391119"
 ## <a name="see-also"></a>관련 항목  
  [보안 개요&#40;Integration Services&#41;](../integration-services/security/security-overview-integration-services.md)   
  [스크립팅을 사용한 패키지 확장](../integration-services/extending-packages-scripting/extending-packages-with-scripting.md)  
-  
   

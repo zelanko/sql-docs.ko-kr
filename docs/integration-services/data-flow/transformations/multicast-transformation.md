@@ -19,12 +19,12 @@ helpviewer_keywords:
 ms.assetid: 32194784-1684-40cd-9f91-1aba4d8360d3
 author: chugugrace
 ms.author: chugu
-ms.openlocfilehash: 2eb7f7274075450c3372f264f4f78c36f0059524
-ms.sourcegitcommit: e700497f962e4c2274df16d9e651059b42ff1a10
+ms.openlocfilehash: 92dd1a4351c9cfdc1bedb0958e370e382b08ecc0
+ms.sourcegitcommit: cfa04a73b26312bf18d8f6296891679166e2754d
 ms.translationtype: HT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 08/17/2020
-ms.locfileid: "88477626"
+ms.lasthandoff: 10/19/2020
+ms.locfileid: "92197074"
 ---
 # <a name="multicast-transformation"></a>멀티캐스트 변환
 
@@ -42,7 +42,7 @@ ms.locfileid: "88477626"
 ## <a name="configuration-of-the-multicast-transformation"></a>멀티캐스트 변환 구성  
  [!INCLUDE[ssIS](../../../includes/ssis-md.md)] 디자이너를 사용하거나 프로그래밍 방식으로 속성을 설정할 수 있습니다.  
   
- 프로그래밍 방식으로 설정할 수 있는 속성에 대한 자세한 내용은 [Common Properties](https://msdn.microsoft.com/library/51973502-5cc6-4125-9fce-e60fa1b7b796)을 참조하십시오.  
+ 프로그래밍 방식으로 설정할 수 있는 속성에 대한 자세한 내용은 [Common Properties](../set-the-properties-of-a-data-flow-component.md)을 참조하십시오.  
   
 ## <a name="related-tasks"></a>관련 작업  
  이 구성 요소의 속성을 설정하는 방법에 대한 자세한 내용은 [데이터 흐름 구성 요소의 속성 설정](../../../integration-services/data-flow/set-the-properties-of-a-data-flow-component.md)을 참조하세요.  
@@ -60,5 +60,4 @@ ms.locfileid: "88477626"
 ## <a name="see-also"></a>참고 항목  
  [데이터 흐름](../../../integration-services/data-flow/data-flow.md)   
  [Integration Services 변환](../../../integration-services/data-flow/transformations/integration-services-transformations.md)  
-  
   

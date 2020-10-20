@@ -11,12 +11,12 @@ ms.topic: conceptual
 ms.assetid: 1ff4dcff-89b3-4b99-a725-5f7963e98abf
 author: chugugrace
 ms.author: chugu
-ms.openlocfilehash: bf91bcb1f0f9db399980c7650ae9b7491c47c78a
-ms.sourcegitcommit: e700497f962e4c2274df16d9e651059b42ff1a10
+ms.openlocfilehash: 3e1b6c318bd971e5352ad0191ccad51e20f5560a
+ms.sourcegitcommit: cfa04a73b26312bf18d8f6296891679166e2754d
 ms.translationtype: HT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 08/17/2020
-ms.locfileid: "88461973"
+ms.lasthandoff: 10/19/2020
+ms.locfileid: "92193807"
 ---
 # <a name="lesson-2-1---building-the-deployment-utility"></a>2-1단원 - 배포 유틸리티 작성
 
@@ -69,7 +69,6 @@ ms.locfileid: "88461973"
 [2단계: 배포 번들 확인](../integration-services/lesson-2-2-verifying-the-deployment-bundle.md)  
   
 ## <a name="see-also"></a>참고 항목  
-[배포 유틸리티 만들기](../integration-services/packages/create-a-deployment-utility.md)  
-  
+[배포 유틸리티 만들기](./packages/legacy-package-deployment-ssis.md)  
   
   

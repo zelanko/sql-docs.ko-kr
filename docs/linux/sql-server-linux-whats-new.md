@@ -7,12 +7,12 @@ ms.date: 04/10/2020
 ms.topic: conceptual
 ms.prod: sql
 ms.technology: linux
-ms.openlocfilehash: 489b2bda31554766a874fb7d09d259fbc96a3398
-ms.sourcegitcommit: 3ea082c778f6771b17d90fb597680ed334d3e0ec
+ms.openlocfilehash: 5f2b955579853c48f7899614f0e87dd996f3076e
+ms.sourcegitcommit: 22102f25db5ccca39aebf96bc861c92f2367c77a
 ms.translationtype: HT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 08/11/2020
-ms.locfileid: "88088747"
+ms.lasthandoff: 10/16/2020
+ms.locfileid: "92115586"
 ---
 # <a name="whats-new-for-sql-server-2017-on-linux"></a>SQL Server 2017 on Linux의 새로운 기능
 
@@ -57,7 +57,7 @@ SQL Server 2017 CU20부터 RHEL 8이 지원됩니다. [Red Hat에 SQL Server를 
 
 - 명령줄 구성 도구인 [mssql-conf](sql-server-linux-configure-mssql-conf.md).
 - [환경 변수](sql-server-linux-configure-environment-variables.md)를 사용한 무인 설치 지원.
-- 플랫폼 간 [Visual Studio Code mssql-server 확장](sql-server-linux-develop-use-vscode.md).
+- 플랫폼 간 [Visual Studio Code mssql-server 확장](../tools/visual-studio-code/sql-server-develop-use-vscode.md).
 - 플랫폼 간 스크립트 생성기인 [mssql-scripter](https://github.com/Microsoft/sql-xplat-cli/blob/dev/doc/usage_guide.md).
 - 플랫폼 간 DMV(동적 관리 뷰) 모니터인 [DBFS 도구](https://github.com/Microsoft/dbfs).
 

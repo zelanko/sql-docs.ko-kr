@@ -18,12 +18,12 @@ helpviewer_keywords:
 ms.assetid: 7049d37a-3e72-4e93-87a1-c96a6f0e2b99
 author: MladjoA
 ms.author: mlandzic
-ms.openlocfilehash: fc0cfc790f933935de0f9aee96dd7c6e7b66425f
-ms.sourcegitcommit: e700497f962e4c2274df16d9e651059b42ff1a10
+ms.openlocfilehash: a039118dc0abe85b065d74b96f551c2991820333
+ms.sourcegitcommit: 22dacedeb6e8721e7cdb6279a946d4002cfb5da3
 ms.translationtype: HT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 08/17/2020
-ms.locfileid: "88472543"
+ms.lasthandoff: 10/14/2020
+ms.locfileid: "92037071"
 ---
 # <a name="bufferwithtolerance-geometry-data-type"></a>BufferWithTolerance(geometry 데이터 형식)
 [!INCLUDE [SQL Server SQL Database](../../includes/applies-to-version/sql-asdb.md)]
@@ -83,7 +83,7 @@ ms.locfileid: "88472543"
   
  버퍼가 음수이면 **geometry** 인스턴스 경계에서 지정된 거리 내에 있는 모든 요소가 제거됩니다.  
   
- 이론 버퍼와 계산된 버퍼 간의 오류는 최대입니다(허용 오차, 익스텐트 \* 1.E-7). 여기서 허용 오차는 *tolerance* 매개 변수의 값입니다. 익스텐트에 대한 자세한 내용은 [geometry 데이터 형식 메서드 참조](https://msdn.microsoft.com/library/d88e632b-6b2f-4466-a15f-9fbef1a347a7)를 참조하세요.  
+ 이론 버퍼와 계산된 버퍼 간의 오류는 최대입니다(허용 오차, 익스텐트 \* 1.E-7). 여기서 허용 오차는 *tolerance* 매개 변수의 값입니다. 익스텐트에 대한 자세한 내용은 [geometry 데이터 형식 메서드 참조](./spatial-types-geometry-transact-sql.md)를 참조하세요.  
   
 ## <a name="examples"></a>예제  
  다음 예에서는 `Point` 인스턴스를 만들고 `BufferWithTolerance()`를 사용하여 인스턴스 주위의 대략적인 버퍼를 구합니다.  
@@ -98,5 +98,3 @@ SELECT @g.BufferWithTolerance(1, .5, 0).ToString();
  [STBuffer&#40;geometry 데이터 형식&#41;](../../t-sql/spatial-geometry/stbuffer-geometry-data-type.md)   
  [geometry 인스턴스의 확장 메서드](../../t-sql/spatial-geometry/extended-methods-on-geometry-instances.md)  
   
-  
-

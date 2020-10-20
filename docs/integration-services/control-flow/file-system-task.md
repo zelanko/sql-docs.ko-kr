@@ -16,12 +16,12 @@ helpviewer_keywords:
 ms.assetid: 7dd79a6a-e066-4028-a385-1d40f31056f8
 author: chugugrace
 ms.author: chugu
-ms.openlocfilehash: dea2596647ab9c5ac69befde2336ac126a84f2ef
-ms.sourcegitcommit: e700497f962e4c2274df16d9e651059b42ff1a10
+ms.openlocfilehash: 9d686ed80120622c2a53cbb9cc52eb4637cfd3f2
+ms.sourcegitcommit: cfa04a73b26312bf18d8f6296891679166e2754d
 ms.translationtype: HT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 08/17/2020
-ms.locfileid: "88393779"
+ms.lasthandoff: 10/19/2020
+ms.locfileid: "92196517"
 ---
 # <a name="file-system-task"></a>파일 시스템 태스크
 
@@ -68,13 +68,13 @@ ms.locfileid: "88393779"
   
  [!INCLUDE[ssIS](../../includes/ssis-md.md)] 디자이너에서 설정할 수 있는 속성에 대한 자세한 내용은 다음 항목을 참조하십시오.  
   
--   [파일 시스템 태스크 편집기&#40;일반 페이지&#41;](../../integration-services/control-flow/file-system-task-editor-general-page.md)  
+-   [파일 시스템 태스크 편집기&#40;일반 페이지&#41;]()  
   
 -   [식 페이지](../../integration-services/expressions/expressions-page.md)  
   
  [!INCLUDE[ssIS](../../includes/ssis-md.md)] 디자이너에서 이러한 속성을 설정하는 방법은 다음 항목을 참조하십시오.  
   
--   [태스크 또는 컨테이너의 속성 설정](https://msdn.microsoft.com/library/52d47ca4-fb8c-493d-8b2b-48bb269f859b)  
+-   [태스크 또는 컨테이너의 속성 설정](./add-or-delete-a-task-or-a-container-in-a-control-flow.md)  
   
  프로그래밍 방식으로 이러한 속성을 설정하는 방법은 다음 항목을 참조하십시오.  
   
@@ -86,7 +86,7 @@ ms.locfileid: "88393779"
 ## <a name="file-system-task-editor-general-page"></a>파일 시스템 태스크 편집기(일반 페이지)
   **파일 시스템 태스크 편집기** 대화 상자의 **일반** 페이지를 사용하여 태스크가 수행하는 파일 시스템 작업을 구성할 수 있습니다.  
   
- SourceConnection 및 DestinationConnection 속성을 설정하여 원본 및 대상 연결 관리자를 지정해야 합니다. 태스크에서 원본 또는 대상으로 사용하는 파일을 가리키는 파일 연결 관리자의 이름을 입력하거나 파일 경로가 변수에 저장되어 있는 경우 변수 이름을 입력할 수 있습니다. 변수를 사용하여 파일 경로를 저장하려면 먼저 원본 연결을 위한 IsSourcePathVariable 옵션 및 대상 연결을 위한 IsDestinationPatheVariable 옵션을 **True**로 설정해야 합니다. 그런 다음 기존 시스템 또는 사용자 정의 변수를 사용하도록 선택하거나 새로운 변수를 만들 수 있습니다. **변수 추가** 대화 상자에서 변수의 범위를 구성하고 지정할 수 있습니다. 변수의 범위는 파일 시스템 태스크 또는 부모 컨테이너여야 합니다. 자세한 내용은 [Integration Services&#40;SSIS&#41; 변수](../../integration-services/integration-services-ssis-variables.md) 및 [패키지에서 변수 사용](https://msdn.microsoft.com/library/7742e92d-46c5-4cc4-b9a3-45b688ddb787)을 참조하세요.  
+ SourceConnection 및 DestinationConnection 속성을 설정하여 원본 및 대상 연결 관리자를 지정해야 합니다. 태스크에서 원본 또는 대상으로 사용하는 파일을 가리키는 파일 연결 관리자의 이름을 입력하거나 파일 경로가 변수에 저장되어 있는 경우 변수 이름을 입력할 수 있습니다. 변수를 사용하여 파일 경로를 저장하려면 먼저 원본 연결을 위한 IsSourcePathVariable 옵션 및 대상 연결을 위한 IsDestinationPatheVariable 옵션을 **True**로 설정해야 합니다. 그런 다음 기존 시스템 또는 사용자 정의 변수를 사용하도록 선택하거나 새로운 변수를 만들 수 있습니다. **변수 추가** 대화 상자에서 변수의 범위를 구성하고 지정할 수 있습니다. 변수의 범위는 파일 시스템 태스크 또는 부모 컨테이너여야 합니다. 자세한 내용은 [Integration Services&#40;SSIS&#41; 변수](../../integration-services/integration-services-ssis-variables.md) 및 [패키지에서 변수 사용](../integration-services-ssis-variables.md)을 참조하세요.  
   
 > [!NOTE]  
 >  **SourceConnection** 및 **DestinationConnection** 속성에 대해 선택한 변수를 재정의하려면 **Source** 및 **Destination** 속성에 대한 식을 입력합니다. **파일 시스템 태스크 편집기** 의 **식**페이지에 식을 입력합니다. 예를 들어 태스크에서 대상으로 사용하는 파일 경로를 설정하기 위해 특정 조건에서 변수 A를 사용하고 다른 조건에서는 변수 B를 사용할 수 있습니다.  
@@ -147,13 +147,13 @@ ms.locfileid: "88393779"
  **DestinationVariable**  
  목록에서 변수 이름을 선택하거나 \<**New variable...**>를 클릭하여 새 변수를 만듭니다.  
   
- **관련 항목:** [Integration Services&#40;SSIS&#41; 변수](../../integration-services/integration-services-ssis-variables.md), [변수 추가](https://msdn.microsoft.com/library/d09b5d31-433f-4f7c-8c68-9df3a97785d5)  
+ **관련 항목:** [Integration Services&#40;SSIS&#41; 변수](../../integration-services/integration-services-ssis-variables.md), [변수 추가](../integration-services-ssis-variables.md)  
   
 #### <a name="isdestinationpathvariable--false"></a>IsDestinationPathVariable = False  
  **DestinationConnection**  
  목록에서 파일 연결 관리자를 선택하거나 \<**New connection...**>을 클릭하여 새 연결 관리자를 만듭니다.  
   
- **관련 항목:** [파일 연결 관리자](../../integration-services/connection-manager/file-connection-manager.md), [파일 연결 관리자 편집기](../../integration-services/connection-manager/file-connection-manager-editor.md)  
+ **관련 항목:** [파일 연결 관리자](../../integration-services/connection-manager/file-connection-manager.md), [파일 연결 관리자 편집기](../connection-manager/file-connection-manager.md)  
   
 ### <a name="issourcepathvariable-dynamic-options"></a>IsSourcePathVariable 동적 옵션  
   
@@ -161,7 +161,7 @@ ms.locfileid: "88393779"
  **SourceVariable**  
  목록에서 변수 이름을 선택하거나 \<**New variable...**>를 클릭하여 새 변수를 만듭니다.  
   
- **관련 항목:** [Integration Services&#40;SSIS&#41; 변수](../../integration-services/integration-services-ssis-variables.md), [변수 추가](https://msdn.microsoft.com/library/d09b5d31-433f-4f7c-8c68-9df3a97785d5)  
+ **관련 항목:** [Integration Services&#40;SSIS&#41; 변수](../../integration-services/integration-services-ssis-variables.md), [변수 추가](../integration-services-ssis-variables.md)  
   
 #### <a name="issourcepathvariable--false"></a>IsSourcePathVariable = False  
  **SourceConnection**  
@@ -191,5 +191,4 @@ ms.locfileid: "88393779"
 ## <a name="see-also"></a>참고 항목  
  [Integration Services 태스크](../../integration-services/control-flow/integration-services-tasks.md)   
  [제어 흐름](../../integration-services/control-flow/control-flow.md)  
-  
   

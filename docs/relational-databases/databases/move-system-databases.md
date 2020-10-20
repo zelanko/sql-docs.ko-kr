@@ -28,12 +28,12 @@ helpviewer_keywords:
 ms.assetid: 72bb62ee-9602-4f71-be51-c466c1670878
 author: stevestein
 ms.author: sstein
-ms.openlocfilehash: 799a5d9aeed185700015fcf9527e57e295d61020
-ms.sourcegitcommit: e700497f962e4c2274df16d9e651059b42ff1a10
+ms.openlocfilehash: c9edfd5b460a6a6b80900e1beced674b80bfce93
+ms.sourcegitcommit: cfa04a73b26312bf18d8f6296891679166e2754d
 ms.translationtype: HT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 08/17/2020
-ms.locfileid: "88471263"
+ms.lasthandoff: 10/19/2020
+ms.locfileid: "92195020"
 ---
 # <a name="move-system-databases"></a>시스템 데이터베이스 이동
  [!INCLUDE [SQL Server](../../includes/applies-to-version/sqlserver.md)]
@@ -124,7 +124,7 @@ ms.locfileid: "88471263"
     ALTER DATABASE database_name MODIFY FILE( NAME = logical_name , FILENAME = 'new_path\os_file_name' )  
     ```  
   
-     **sqlcmd** 유틸리티 사용에 대한 자세한 내용은 [sqlcmd 유틸리티 사용](../../relational-databases/scripting/sqlcmd-use-the-utility.md)을 참조하세요.  
+     **sqlcmd** 유틸리티 사용에 대한 자세한 내용은 [sqlcmd 유틸리티 사용](../../ssms/scripting/sqlcmd-use-the-utility.md)을 참조하세요.  
   
 4.  **sqlcmd** 유틸리티 또는 [!INCLUDE[ssManStudioFull](../../includes/ssmanstudiofull-md.md)]를 종료합니다.  
   
@@ -270,5 +270,4 @@ ms.locfileid: "88471263"
  [데이터베이스 엔진, SQL Server 에이전트 또는 SQL Server Browser 서비스 시작, 중지, 일시 중지, 재개 및 다시 시작](../../database-engine/configure-windows/start-stop-pause-resume-restart-sql-server-services.md)   
  [ALTER DATABASE &#40;Transact-SQL &#41;](../../t-sql/statements/alter-database-transact-sql.md)   
  [시스템 데이터베이스 다시 작성](../../relational-databases/databases/rebuild-system-databases.md)  
-  
   

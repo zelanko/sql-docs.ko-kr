@@ -27,12 +27,12 @@ helpviewer_keywords:
 ms.assetid: 8e896e73-af27-4cae-a725-7a156733f3bd
 author: rothja
 ms.author: jroth
-ms.openlocfilehash: ea7d90c70b68111e6ed9f1f63986c955f7bb1055
-ms.sourcegitcommit: e700497f962e4c2274df16d9e651059b42ff1a10
+ms.openlocfilehash: dec4eb37c00e524c019b07de3943efd4137e7ab9
+ms.sourcegitcommit: cfa04a73b26312bf18d8f6296891679166e2754d
 ms.translationtype: HT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 08/17/2020
-ms.locfileid: "88459206"
+ms.lasthandoff: 10/19/2020
+ms.locfileid: "92194955"
 ---
 # <a name="waitfor-transact-sql"></a>WAITFOR(Transact-SQL)
 [!INCLUDE [SQL Server SQL Database](../../includes/applies-to-version/sql-asdb.md)]
@@ -112,7 +112,7 @@ WAITFOR
 ### <a name="a-using-waitfor-time"></a>A. WAITFOR TIME 사용  
  다음 예에서는 msdb 데이터베이스에서 `sp_update_job` 저장 프로시저를 오후 10시 20분에 실행합니다. (`22:20`).  
   
-```  
+```sql  
 EXECUTE sp_add_job @job_name = 'TestJob';  
 BEGIN  
     WAITFOR TIME '22:20';  
@@ -125,7 +125,7 @@ GO
 ### <a name="b-using-waitfor-delay"></a>B. WAITFOR DELAY 사용  
  다음 예에서는 2시간 지연 후에 저장 프로시저를 실행합니다.  
   
-```  
+```sql  
 BEGIN  
     WAITFOR DELAY '02:00';  
     EXECUTE sp_helpdb;  
@@ -136,7 +136,7 @@ GO
 ### <a name="c-using-waitfor-delay-with-a-local-variable"></a>C. 지역 변수와 함께 WAITFOR DELAY 사용  
  다음 예에서는 지역 변수를 `WAITFOR DELAY` 옵션과 함께 사용하는 방법을 보여 줍니다. 이 저장 프로시저는 가변적인 시간 동안 기다린 다음, 경과된 시간, 분 및 초 단위로 사용자에게 정보를 반환합니다.  
   
-```  
+```sql  
 IF OBJECT_ID('dbo.TimeDelay_hh_mm_ss','P') IS NOT NULL  
     DROP PROCEDURE dbo.TimeDelay_hh_mm_ss;  
 GO  
@@ -145,7 +145,7 @@ CREATE PROCEDURE dbo.TimeDelay_hh_mm_ss
     @DelayLength char(8)= '00:00:00'  
     )  
 AS  
-DECLARE @ReturnInfo varchar(255)  
+DECLARE @ReturnInfo VARCHAR(255)  
 IF ISDATE('2000-01-01 ' + @DelayLength + '.000') = 0  
     BEGIN  
         SELECT @ReturnInfo = 'Invalid time ' + @DelayLength   

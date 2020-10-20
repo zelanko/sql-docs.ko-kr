@@ -18,12 +18,12 @@ helpviewer_keywords:
 ms.assetid: f5f39596-033e-4243-acbc-caa188b45b03
 author: MikeRayMSFT
 ms.author: mikeray
-ms.openlocfilehash: fca72f6462c3313a946a6b837097425b9e95a2aa
-ms.sourcegitcommit: cc23d8646041336d119b74bf239a6ac305ff3d31
+ms.openlocfilehash: c5e76db626c0129253f343075894825c114da4ec
+ms.sourcegitcommit: 22dacedeb6e8721e7cdb6279a946d4002cfb5da3
 ms.translationtype: HT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 09/23/2020
-ms.locfileid: "91111259"
+ms.lasthandoff: 10/14/2020
+ms.locfileid: "92037157"
 ---
 # <a name="getdescendant-database-engine"></a>GetDescendant(데이터베이스 엔진)
 [!INCLUDE [SQL Server SQL Database](../../includes/applies-to-version/sql-asdb.md)]
@@ -155,8 +155,7 @@ Console.Write(parent.GetDescendant(child1, child2).ToString());
 ```  
   
 ## <a name="see-also"></a>참고 항목
-[hierarchyid 데이터 형식 메서드 참조](https://msdn.microsoft.com/library/01a050f5-7580-4d5f-807c-7f11423cbb06)  
+[hierarchyid 데이터 형식 메서드 참조](./hierarchyid-data-type-method-reference.md)  
 [계층적 데이터&#40;SQL Server&#41;](../../relational-databases/hierarchical-data-sql-server.md)  
 [hierarchyid&#40;Transact-SQL&#41;](../../t-sql/data-types/hierarchyid-data-type-method-reference.md)
-  
   

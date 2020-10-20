@@ -9,12 +9,12 @@ ms.date: 11/27/2017
 ms.topic: conceptual
 ms.prod: sql
 ms.technology: linux
-ms.openlocfilehash: fa9fc496d10a189d75686e3c72f2453b89184626
-ms.sourcegitcommit: 610e3ebe21ac6575850a29641a32f275e71557e3
+ms.openlocfilehash: 411fe456ae96afdd5a01c0d6cb649035e121fb1b
+ms.sourcegitcommit: 22102f25db5ccca39aebf96bc861c92f2367c77a
 ms.translationtype: HT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 10/07/2020
-ms.locfileid: "91785133"
+ms.lasthandoff: 10/16/2020
+ms.locfileid: "92115646"
 ---
 # <a name="sql-server-availability-basics-for-linux-deployments"></a>Linux 배포의 SQL Server 가용성 기본 사항
 
@@ -216,7 +216,7 @@ Pacemaker 클러스터의 로그 위치는 배포에 따라 다릅니다.
 가상화된 AG 및 FCI의 경우 지정된 Pacemaker 클러스터의 노드에 대해 선호도 방지가 설정되어 있는지 확인합니다. AG 또는 FCI 구성에서 고가용성을 위해 구성된 경우 [!INCLUDE[ssnoversion-md](../includes/ssnoversion-md.md)]를 호스트하는 VM은 동일한 하이퍼바이저 호스트에서 실행되지 않아야 합니다. 예를 들어 2노드 FCI가 배포된 경우에는, 특히 Live Migration 또는 vMotion 같은 기능을 사용하는 경우 호스트 오류 발생 시 이동할 노드를 호스트하는 VM 중 하나에 사용할 위치가 있도록 ‘적어도’ 세 개의 하이퍼바이저 호스트가 있어야 합니다.
 
 자세한 내용은 다음을 참조하세요.
--   Hyper-V 설명서 - [Using Guest Clustering for High Availability](https://technet.microsoft.com/library/dn440540(v=ws.11).aspx)(고가용성을 위한 게스트 클러스터링 사용)
+-   Hyper-V 설명서 - [Using Guest Clustering for High Availability](/previous-versions/windows/it-pro/windows-server-2012-R2-and-2012/dn440540(v=ws.11))(고가용성을 위한 게스트 클러스터링 사용)
 -   백서(Windows 기반 배포를 위해 작성되었지만 대부분의 개념이 적용됨) - [Planning Highly Available, Mission Critical SQL Server Deployments with VMware vSphere](https://www.vmware.com/content/dam/digitalmarketing/vmware/en/pdf/solutions/vmware-vsphere-highly-available-mission-critical-sql-server-deployments.pdf)(VMware vSphere를 사용하여 중요 업무용 고가용성 SQL Server 배포 계획)
 
 ### <a name="networking"></a>네트워킹

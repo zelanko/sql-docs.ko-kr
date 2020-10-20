@@ -14,12 +14,12 @@ helpviewer_keywords:
 ms.assetid: 0cc1f95c-5815-4d78-8868-a900be15e674
 author: MashaMSFT
 ms.author: mathoma
-ms.openlocfilehash: 829d60517864d9df7f8019a92e00664c1a1337ea
-ms.sourcegitcommit: e8f6c51d4702c0046aec1394109bc0503ca182f0
+ms.openlocfilehash: dd4827f08c9e21ccd45f128bcc64ab9e03c1474b
+ms.sourcegitcommit: cfa04a73b26312bf18d8f6296891679166e2754d
 ms.translationtype: HT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 08/07/2020
-ms.locfileid: "87943770"
+ms.lasthandoff: 10/19/2020
+ms.locfileid: "92193423"
 ---
 # <a name="data-collection"></a>데이터 수집
  [!INCLUDE [SQL Server](../../includes/applies-to-version/sqlserver.md)]
@@ -30,7 +30,7 @@ ms.locfileid: "87943770"
   
  데이터 수집기를 사용하면 사용자의 테스트 및 프로덕션 환경에 맞도록 데이터 컬렉션의 범위를 조정할 수도 있습니다. 또한 데이터 수집기는 데이터에 다양한 보존 기간을 설정하여 수집 데이터를 관리할 수 있도록 하는 관련 데이터베이스인 데이터 웨어하우스를 사용합니다.  
   
- 데이터 수집기는 데이터 컬렉션에 대한 동적 튜닝을 지원하며 API를 통해 확장 가능합니다. 자세한 내용은 [Data Collector Programming](https://docs.microsoft.com/sql/relational-databases/system-functions/data-collector-functions-transact-sql)을 참조하세요.  
+ 데이터 수집기는 데이터 컬렉션에 대한 동적 튜닝을 지원하며 API를 통해 확장 가능합니다. 자세한 내용은 [Data Collector Programming](../system-functions/data-collector-functions-transact-sql.md)을 참조하세요.  
   
  다음 그림에서는 데이터 수집기가 [!INCLUDE[ssCurrent](../../includes/sscurrent-md.md)]의 데이터 컬렉션 및 데이터 관리를 위한 전반적인 전략에 어떻게 맞추는지를 보여 줍니다.  
   
@@ -51,7 +51,7 @@ ms.locfileid: "87943770"
   
 -   프록시 계정  
   
- 자세한 내용은 [관리 태스크 자동화&#40;SQL Server 에이전트&#41;](https://msdn.microsoft.com/library/541ee5ac-2c9f-4b74-b4f0-13b7bd5920b0)를 참조하세요.  
+ 자세한 내용은 [관리 태스크 자동화&#40;SQL Server 에이전트&#41;](../../ssms/agent/automated-administration-tasks-sql-server-agent.md)를 참조하세요.  
   
  [!INCLUDE[ssISnoversion](../../includes/ssisnoversion-md.md)] ([!INCLUDE[ssIS](../../includes/ssis-md.md)])는 개별 데이터 공급자에서 데이터를 수집하는 패키지를 실행하는 데 사용됩니다. 다음 [!INCLUDE[ssIS](../../includes/ssis-md.md)] 도구 및 개념에 대해 잘 알고 있어야 합니다.  
   
@@ -119,5 +119,3 @@ ms.locfileid: "87943770"
 |관리 데이터 웨어하우스를 사용하여 데이터 컬렉션 대상인 서버에서 데이터를 수집할 수 있습니다.|[관리 데이터 웨어하우스](../../relational-databases/data-collection/management-data-warehouse.md)| 
 |SQL Server Profiler의 서버 쪽 추적 기능을 이용하여 일반 SQL 추적 수집기 형식을 사용하는 컬렉션 집합을 만들기 위한 추적 정의를 내보냅니다.| [SQL Server 프로파일러를 사용하여 SQL 추적 컬렉션 집합 만들기(SQL Server Management Studio)](use-sql-server-profiler-to-create-a-sql-trace-collection-set.md)
   
-  
-

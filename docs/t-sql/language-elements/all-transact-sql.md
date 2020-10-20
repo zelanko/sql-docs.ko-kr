@@ -19,12 +19,12 @@ helpviewer_keywords:
 ms.assetid: 4b0c002e-1ffd-4425-a980-11fdc1f24af7
 author: rothja
 ms.author: jroth
-ms.openlocfilehash: 009f153b3d6d6f205c69a564270efed969e1888e
-ms.sourcegitcommit: e700497f962e4c2274df16d9e651059b42ff1a10
+ms.openlocfilehash: c8848a62320f33b2d55cae25b30375324df67af0
+ms.sourcegitcommit: cfa04a73b26312bf18d8f6296891679166e2754d
 ms.translationtype: HT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 08/17/2020
-ms.locfileid: "88459479"
+ms.lasthandoff: 10/19/2020
+ms.locfileid: "92196947"
 ---
 # <a name="all-transact-sql"></a>ALL(Transact-SQL)
 [!INCLUDE [SQL Server SQL Database](../../includes/applies-to-version/sql-asdb.md)]
@@ -36,7 +36,6 @@ ms.locfileid: "88459479"
 ## <a name="syntax"></a>구문  
   
 ```syntaxsql
-  
 scalar_expression { = | <> | != | > | >= | !> | < | <= | !< } ALL ( subquery )  
 ```  
   
@@ -70,10 +69,10 @@ scalar_expression { = | <> | != | > | >= | !> | < | <= | !< } ALL ( subquery )
 ## <a name="examples"></a>예  
  다음 예에서는 `SalesOrderID` 데이터베이스에서 지정한 [!INCLUDE[ssSampleDBnormal](../../includes/sssampledbnormal-md.md)]의 모든 구성 요소를 지정된 기간 내에 제조할 수 있는지 여부를 결정하는 저장 프로시저를 만듭니다. 이 예제에서는 하위 쿼리를 사용하여 특정 `DaysToManufacture`의 모든 구성 요소에 대한 `SalesOrderID` 값 수의 목록을 만든 다음, 모든 `DaysToManufacture`가 지정한 일 수 범위에 있는지 확인합니다.  
   
-```  
+```sql  
 -- Uses AdventureWorks  
   
-CREATE PROCEDURE DaysToBuild @OrderID int, @NumberOfDays int  
+CREATE PROCEDURE DaysToBuild @OrderID INT, @NumberOfDays INT  
 AS  
 IF   
 @NumberOfDays >= ALL  
@@ -87,12 +86,11 @@ IF
 PRINT 'All items for this order can be manufactured in specified number of days or less.'  
 ELSE   
 PRINT 'Some items for this order can''t be manufactured in specified number of days or less.' ;  
-  
 ```  
   
  프로시저를 테스트하려면 `SalesOrderID 49080`일이 필요한 한 개의 구성 요소 및 0일이 필요한 두 개의 구성 요소가 포함되어 있는 `2`을 사용하여 프로시저를 실행합니다. 아래 첫 번째 문은 조건을 만족합니다. 두 번째 쿼리는 만족하지 않습니다.  
   
-```  
+```sql  
 EXECUTE DaysToBuild 49080, 2 ;  
 ```  
   
@@ -100,7 +98,7 @@ EXECUTE DaysToBuild 49080, 2 ;
   
  `All items for this order can be manufactured in specified number of days or less.`  
   
-```  
+```sql  
 EXECUTE DaysToBuild 49080, 1 ;  
 ```  
   

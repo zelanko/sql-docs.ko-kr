@@ -12,12 +12,12 @@ author: ronortloff
 ms.author: rortloff
 ms.reviewer: ''
 monikerRange: '>= aps-pdw-2016 || = azure-sqldw-latest || = sqlallproducts-allversions'
-ms.openlocfilehash: aa0f0f3afb40492e398e316095a3458169d03eaf
-ms.sourcegitcommit: 76ab3b57718341c6057613c9bd38cf82fb17786e
+ms.openlocfilehash: f432d19a558b82abd52bef2839c0887dff70f7ba
+ms.sourcegitcommit: ae474d21db4f724523e419622ce79f611e956a22
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 10/14/2020
-ms.locfileid: "92059311"
+ms.lasthandoff: 10/20/2020
+ms.locfileid: "92254760"
 ---
 # <a name="sp_pdw_database_encryption_regenerate_system_keys-azure-synapse-analytics"></a>sp_pdw_database_encryption_regenerate_system_keys (Azure Synapse Analytics)
 
@@ -25,7 +25,7 @@ ms.locfileid: "92059311"
 
   어플라이언스에서 TDE를 사용 하는 경우 암호화 된 내부 데이터베이스에 대 한 인증서 및 데이터베이스 암호화 키를 회전 하려면 **sp_pdw_database_encryption_regenerate_system_keys** 을 사용 합니다. 여기에는 `tempdb`도 포함됩니다. TDE가 사용 하도록 설정 된 경우에만 성공 합니다.  
   
-## <a name="syntax"></a>Syntax  
+## <a name="syntax"></a>구문  
   
 ```syntaxsql  
 -- Syntax for Azure Synapse Analytics and Parallel Data Warehouse  
@@ -53,8 +53,7 @@ sp_pdw_database_encryption_regenerate_system_keys  ;
 EXEC sys.sp_pdw_database_encryption_regenerate_system_keys;  
 ```  
   
-## <a name="see-also"></a>참고 항목  
+## <a name="see-also"></a>참조  
  [Azure Synapse Analytics를 &#40;sp_pdw_database_encryption&#41;](../../relational-databases/system-stored-procedures/sp-pdw-database-encryption-sql-data-warehouse.md)   
  [Azure Synapse Analytics를 &#40;sp_pdw_log_user_data_masking&#41;](../../relational-databases/system-stored-procedures/sp-pdw-log-user-data-masking-sql-data-warehouse.md)  
-  
   

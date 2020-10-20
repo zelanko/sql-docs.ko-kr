@@ -16,12 +16,12 @@ helpviewer_keywords:
 ms.assetid: bb3c085b-1458-49fa-8348-6a76b6e97ea6
 author: chugugrace
 ms.author: chugu
-ms.openlocfilehash: 521bc0dd4a454472586c18f108a42e4393498323
-ms.sourcegitcommit: e700497f962e4c2274df16d9e651059b42ff1a10
+ms.openlocfilehash: 72529ac177ddd069ca7e8412da375db45fe958e2
+ms.sourcegitcommit: cfa04a73b26312bf18d8f6296891679166e2754d
 ms.translationtype: HT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 08/17/2020
-ms.locfileid: "88457568"
+ms.lasthandoff: 10/19/2020
+ms.locfileid: "92194913"
 ---
 # <a name="create-packages-in-sql-server-data-tools"></a>SQL Server Data Tools에서 패키지 만들기
 
@@ -48,9 +48,9 @@ ms.locfileid: "88457568"
   
      [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)] 가져오기 및 내보내기 마법사는 간단한 가져오기 또는 내보내기 수행하는 완전한 패키지를 만듭니다. 이 마법사는 연결, 원본 및 대상을 구성하고 가져오기 또는 내보내기를 즉시 실행하는 데 필요한 데이터 변환을 추가합니다. 필요에 따라 나중에 다시 실행하기 위해 패키지를 저장하거나 [!INCLUDE[ssBIDevStudio](../includes/ssbidevstudio-md.md)]에서 패키지를 향상시키고 구체화할 수 있습니다. 그러나 패키지를 저장하는 경우에는 [!INCLUDE[ssISnoversion](../includes/ssisnoversion-md.md)] 에서 패키지를 변경하거나 실행하기 전에 기존 [!INCLUDE[ssBIDevStudio](../includes/ssbidevstudio-md.md)]프로젝트에 패키지를 추가해야 합니다.  
   
- [!INCLUDE[ssBIDevStudioFull](../includes/ssbidevstudiofull-md.md)] 에서 [!INCLUDE[ssIS](../includes/ssis-md.md)] 디자이너를 사용하여 만드는 패키지는 파일 시스템에 저장됩니다. 패키지를 [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)] 또는 패키지 저장소에 저장하려면 패키지 복사본을 저장해야 합니다. 자세한 내용은 [패키지의 복사본 저장](https://msdn.microsoft.com/library/21482a20-e420-4452-b7eb-8f9fa1929f31)을 참조하세요.  
+ [!INCLUDE[ssBIDevStudioFull](../includes/ssbidevstudiofull-md.md)] 에서 [!INCLUDE[ssIS](../includes/ssis-md.md)] 디자이너를 사용하여 만드는 패키지는 파일 시스템에 저장됩니다. 패키지를 [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)] 또는 패키지 저장소에 저장하려면 패키지 복사본을 저장해야 합니다. 자세한 내용은 [패키지의 복사본 저장](./save-packages.md)을 참조하세요.  
 
- 기본 패키지 템플릿을 사용하여 기본 패키지를 만드는 방법을 보여 주는 비디오는 [기본 패키지 만들기(SQL Server 비디오)](https://go.microsoft.com/fwlink/?LinkId=131023)를 참조하세요.  
+ 기본 패키지 템플릿을 사용하여 기본 패키지를 만드는 방법을 보여 주는 비디오는 [기본 패키지 만들기(SQL Server 비디오)](/previous-versions/sql/sql-server-2008/cc952921(v=sql.100))를 참조하세요.  
 
 ## <a name="get-sql-server-data-tools"></a>SQL Server Data Tools 가져오기
 SSDT(SQL Server Data Tools)를 설치하려면 [SSDT(SQL Server Data Tools) 다운로드](../ssdt/download-sql-server-data-tools-ssdt.md)를 참조하세요.
@@ -77,5 +77,4 @@ SSDT(SQL Server Data Tools)를 설치하려면 [SSDT(SQL Server Data Tools) 다�
      ![프로젝트 속성 대화 상자의 TargetServerVersion 속성](../integration-services/media/targetserverversion2.png "프로젝트 속성 대화 상자의 TargetServerVersion 속성")  
   
  SQL Server 2016, SQL Server 2014 또는 SQL Server 2012를 대상으로하는 패키지를 만들고, 유지 관리하고 실행할 수 있습니다.  
-  
   

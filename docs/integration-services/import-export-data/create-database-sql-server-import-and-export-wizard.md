@@ -12,12 +12,12 @@ f1_keywords:
 ms.assetid: 56a8a79f-086c-4bdc-8888-0045bb4b0cbf
 author: chugugrace
 ms.author: chugu
-ms.openlocfilehash: 5c9788c6a7e23759352f22acd543358305ad0a9a
-ms.sourcegitcommit: e700497f962e4c2274df16d9e651059b42ff1a10
+ms.openlocfilehash: 6db38bcb37a0b7167a7d4c27b62a34438d77c343
+ms.sourcegitcommit: cfa04a73b26312bf18d8f6296891679166e2754d
 ms.translationtype: HT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 08/17/2020
-ms.locfileid: "88477291"
+ms.lasthandoff: 10/19/2020
+ms.locfileid: "92195891"
 ---
 # <a name="create-database-sql-server-import-and-export-wizard"></a>데이터베이스 만들기(SQL Server 가져오기 및 내보내기 마법사)
 
@@ -29,7 +29,7 @@ ms.locfileid: "88477291"
 마법사의 **데이터베이스 만들기** 대화 상자에는 새 SQL Server 데이터베이스를 만드는 데 사용할 수 있는 기본 옵션만 제공됩니다. 새 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 데이터베이스에 대한 모든 옵션을 보고 구성하려면 [!INCLUDE[ssManStudioFull](../../includes/ssmanstudiofull-md.md)]를 사용하여 데이터베이스를 만들거나, 마법사가 생성한 후에 데이터베이스를 구성하세요. 
 
 > [!NOTE]
-> [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 가져오기 및 내보내기 마법사의 **데이터베이스 만들기** 대화 상자가 아니라 [!INCLUDE[tsql](../../includes/tsql-md.md)] CREATE DATABASE 문에 대한 정보를 찾으려면 [CREATE DATABASE&#40;SQL Server Transact-SQL&#41;](../../t-sql/statements/create-database-sql-server-transact-sql.md)를 참조하세요.  
+> [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 가져오기 및 내보내기 마법사의 **데이터베이스 만들기** 대화 상자가 아니라 [!INCLUDE[tsql](../../includes/tsql-md.md)] CREATE DATABASE 문에 대한 정보를 찾으려면 [CREATE DATABASE&#40;SQL Server Transact-SQL&#41;](../../t-sql/statements/create-database-transact-sql.md)를 참조하세요.  
 
 ## <a name="screen-shot-of-the-create-database-page"></a>데이터베이스 만들기 페이지의 스크린샷  
 다음 스크린샷에서는 마법사의 **데이터베이스 만들기** 대화 상자를 보여 줍니다.  
@@ -89,8 +89,7 @@ SQL Server 명명 규칙에 따라 데이터베이스의 이름을 지정해야 
  로그 파일의 증가 단위(MB)를 지정합니다.  
 
 ### <a name="more-info"></a>추가 정보
-이 페이지에 표시되는 파일 크기 옵션에 대한 자세한 내용은 [CREATE DATABASE&#40;SQL Server Transact-SQL&#41;](../../t-sql/statements/create-database-sql-server-transact-sql.md)를 참조하세요. 
+이 페이지에 표시되는 파일 크기 옵션에 대한 자세한 내용은 [CREATE DATABASE&#40;SQL Server Transact-SQL&#41;](../../t-sql/statements/create-database-transact-sql.md)를 참조하세요. 
 
 ## <a name="whats-next"></a>다음 작업  
- 마법사에서 만들 새 데이터베이스의 이름을 지정하고 **확인**을 클릭하면 **데이터베이스 만들기** 대화 상자에서 **대상 선택** 페이지로 돌아갑니다. 자세한 내용은 [대상 선택](../../integration-services/import-export-data/choose-a-destination-sql-server-import-and-export-wizard.md)을 참조하세요.  
-
+ 마법사에서 만들 새 데이터베이스의 이름을 지정하고 **확인**을 클릭하면 **데이터베이스 만들기** 대화 상자에서 **대상 선택** 페이지로 돌아갑니다. 자세한 내용은 [대상 선택](../../integration-services/import-export-data/choose-a-destination-sql-server-import-and-export-wizard.md)을 참조하세요.

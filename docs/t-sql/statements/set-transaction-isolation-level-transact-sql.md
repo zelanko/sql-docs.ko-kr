@@ -28,12 +28,12 @@ ms.assetid: 016fb05e-a702-484b-bd2a-a6eabd0d76fd
 author: markingmyname
 ms.author: maghan
 monikerRange: '>=aps-pdw-2016||=azuresqldb-current||=azure-sqldw-latest||>=sql-server-2016||=sqlallproducts-allversions||>=sql-server-linux-2017||=azuresqldb-mi-current'
-ms.openlocfilehash: 88cbb1203595203af88cf9e9da6e122cc7db5322
-ms.sourcegitcommit: 8f062015c2a033f5a0d805ee4adabbe15e7c8f94
+ms.openlocfilehash: 6d8b590e304120015f6333546a08c8c78a26493c
+ms.sourcegitcommit: 22dacedeb6e8721e7cdb6279a946d4002cfb5da3
 ms.translationtype: HT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 09/25/2020
-ms.locfileid: "91227468"
+ms.lasthandoff: 10/14/2020
+ms.locfileid: "92038336"
 ---
 # <a name="set-transaction-isolation-level-transact-sql"></a>SET TRANSACTION ISOLATION LEVEL(Transact-SQL)
 [!INCLUDE [sql-asdb-asdbmi-asa-pdw](../../includes/applies-to-version/sql-asdb-asdbmi-asa-pdw.md)]
@@ -78,7 +78,7 @@ SET TRANSACTION ISOLATION LEVEL READ UNCOMMITTED
   
 -   READ_COMMITTED_SNAPSHOT 데이터베이스 옵션이 ON으로 설정된 READ COMMITTED 격리 수준  
   
--   SNAPSHOT 격리 수준 스냅샷 격리에 대한 자세한 내용은 [SQL Server에서의 스냅샷 격리](https://docs.microsoft.com/dotnet/framework/data/adonet/sql/snapshot-isolation-in-sql-server)를 참조하세요. 
+-   SNAPSHOT 격리 수준 스냅샷 격리에 대한 자세한 내용은 [SQL Server에서의 스냅샷 격리](/dotnet/framework/data/adonet/sql/snapshot-isolation-in-sql-server)를 참조하세요. 
   
  READ COMMITTED  
  다른 트랜잭션에 의해 수정되었지만 커밋되지 않은 데이터를 문이 읽을 수 없도록 지정합니다. 이렇게 하면 더티 읽기를 방지할 수 있습니다. 현재 트랜잭션 내에 있는 개별 문 간에 다른 트랜잭션에서 데이터를 변경하면 반복할 수 없는 읽기가 발생하거나 가상 데이터가 될 수 있습니다. 이 옵션은 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 기본값입니다.  
@@ -90,7 +90,7 @@ SET TRANSACTION ISOLATION LEVEL READ UNCOMMITTED
 -   READ_COMMITTED_SNAPSHOT이 ON(Azure SQL Database의 기본값)으로 설정되어 있으면 [!INCLUDE[ssDE](../../includes/ssde-md.md)]은 행 버전 관리를 사용하여 명령문 시작 시와 트랜잭션별로 데이터의 일관성이 유지된 스냅샷을 각 명령문에 제공합니다. 다른 트랜잭션에 의한 데이터 업데이트 차단을 위해 잠금이 사용되지는 않습니다.
 
 > [!IMPORTANT]  
-> 트랜잭션 격리 수준을 선택해도 데이터 수정 내용을 보호하기 위해 획득된 잠금에는 영향을 주지 않습니다. 설정된 격리 수준에 관계없이 트랜잭션은 항상 수정하는 데이터에 대해 배타적 잠금을 얻고 해당 트랜잭션이 완료될 때까지 이 잠금을 보유합니다. 또한 READ_COMMITTED 격리 수준에서 이루어진 업데이트는 선택된 데이터 행에 대한 업데이트 잠금을 사용하지만, SNAPSHOT 격리 수준에서 이루어진 업데이트는 행 버전을 사용하여 업데이트할 행을 선택합니다. 읽기 작업의 경우 트랜잭션 격리 수준은 대개 다른 트랜잭션에서 수정한 내용의 영향을 받지 않도록 보호 수준을 정의합니다. 자세한 내용은 [트랜잭션 잠금 및 행 버전 관리 지침](https://docs.microsoft.com/sql/relational-databases/sql-server-transaction-locking-and-row-versioning-guide)을 참조하세요.
+> 트랜잭션 격리 수준을 선택해도 데이터 수정 내용을 보호하기 위해 획득된 잠금에는 영향을 주지 않습니다. 설정된 격리 수준에 관계없이 트랜잭션은 항상 수정하는 데이터에 대해 배타적 잠금을 얻고 해당 트랜잭션이 완료될 때까지 이 잠금을 보유합니다. 또한 READ_COMMITTED 격리 수준에서 이루어진 업데이트는 선택된 데이터 행에 대한 업데이트 잠금을 사용하지만, SNAPSHOT 격리 수준에서 이루어진 업데이트는 행 버전을 사용하여 업데이트할 행을 선택합니다. 읽기 작업의 경우 트랜잭션 격리 수준은 대개 다른 트랜잭션에서 수정한 내용의 영향을 받지 않도록 보호 수준을 정의합니다. 자세한 내용은 [트랜잭션 잠금 및 행 버전 관리 지침](../../relational-databases/sql-server-transaction-locking-and-row-versioning-guide.md)을 참조하세요.
 
 > [!NOTE]  
 >  스냅샷 격리는 FILESTREAM 데이터를 지원합니다. 스냅샷 격리 모드에서는 트랜잭션의 문이 읽은 FILESTREAM 데이터가 트랜잭션 시작 시와 트랜잭션별로 데이터 버전의 일관성이 유지되도록 지정합니다.  
@@ -197,5 +197,4 @@ GO
  [SELECT&#40;Transact-SQL&#41;](../../t-sql/queries/select-transact-sql.md)   
  [SET 문&#40;Transact-SQL&#41;](../../t-sql/statements/set-statements-transact-sql.md)   
  [테이블 힌트&#40;Transact-SQL&#41;](../../t-sql/queries/hints-transact-sql-table.md)  
-  
   

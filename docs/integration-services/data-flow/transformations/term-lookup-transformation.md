@@ -24,12 +24,12 @@ helpviewer_keywords:
 ms.assetid: 3c0fa2f8-cb6a-4371-b184-7447be001de1
 author: chugugrace
 ms.author: chugu
-ms.openlocfilehash: d9c6826ac7b226dff7aa2652cac9285fa15cccea
-ms.sourcegitcommit: e700497f962e4c2274df16d9e651059b42ff1a10
+ms.openlocfilehash: 0138f45aed5a4c7153dbc1d8cf9da99d5ef66dda
+ms.sourcegitcommit: cfa04a73b26312bf18d8f6296891679166e2754d
 ms.translationtype: HT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 08/17/2020
-ms.locfileid: "88425685"
+ms.lasthandoff: 10/19/2020
+ms.locfileid: "92195917"
 ---
 # <a name="term-lookup-transformation"></a>용어 조회 변환
 
@@ -102,7 +102,7 @@ ms.locfileid: "88425685"
   
  **고급 편집기** 대화 상자를 사용하거나 프로그래밍 방식으로 설정할 수 있는 속성에 대한 자세한 내용을 보려면 다음 항목 중 하나를 클릭하세요.  
   
--   [Common Properties](https://msdn.microsoft.com/library/51973502-5cc6-4125-9fce-e60fa1b7b796)  
+-   [Common Properties](../set-the-properties-of-a-data-flow-component.md)  
   
 -   [변환 사용자 지정 속성](../../../integration-services/data-flow/transformations/transformation-custom-properties.md)  
   
@@ -125,7 +125,7 @@ ms.locfileid: "88425685"
  각 출력 열의 별칭을 입력합니다. 기본값은 열 이름이지만 설명이 포함된 고유 이름을 임의로 선택할 수 있습니다.  
   
  **오류 출력 구성**  
- [오류 출력 구성](https://msdn.microsoft.com/library/5f8da390-fab5-44f8-b268-d8fa313ce4b9) 대화 상자를 사용하여 오류 발생의 원인이 되는 행에 대한 오류 처리 옵션을 지정할 수 있습니다.  
+ [오류 출력 구성](../error-handling-in-data.md) 대화 상자를 사용하여 오류 발생의 원인이 되는 행에 대한 오류 처리 옵션을 지정할 수 있습니다.  
   
 ## <a name="term-lookup-transformation-editor-reference-table-tab"></a>용어 조회 변환 편집기(참조 테이블 탭)
   **용어 조회 변환 편집기** 대화 상자의 **참조 테이블** 탭을 사용하여 참조(조회) 테이블에 대한 연결을 지정할 수 있습니다.  
@@ -141,7 +141,7 @@ ms.locfileid: "88425685"
  목록에서 항목을 골라 데이터베이스의 조회 테이블 또는 뷰를 선택합니다. 테이블 또는 뷰는 원본 열의 텍스트와 비교할 수 있는 기존 용어 목록이 있는 열을 포함해야 합니다.  
   
  **오류 출력 구성**  
- [오류 출력 구성](https://msdn.microsoft.com/library/5f8da390-fab5-44f8-b268-d8fa313ce4b9) 대화 상자를 사용하여 오류 발생의 원인이 되는 행에 대한 오류 처리 옵션을 지정할 수 있습니다.  
+ [오류 출력 구성](../error-handling-in-data.md) 대화 상자를 사용하여 오류 발생의 원인이 되는 행에 대한 오류 처리 옵션을 지정할 수 있습니다.  
   
 ## <a name="term-lookup-transformation-editor-advanced-tab"></a>용어 조회 변환 편집기(고급 탭)
   **용어 조회 변환 편집기** 대화 상자의 **고급** 탭을 사용하여 조회에서 대/소문자를 구분할지 여부를 지정할 수 있습니다.  
@@ -151,9 +151,8 @@ ms.locfileid: "88425685"
  조회에서 대/소문자를 구분할지 여부를 표시합니다. 기본값은 **False**입니다.  
   
  **오류 출력 구성**  
- [오류 출력 구성](https://msdn.microsoft.com/library/5f8da390-fab5-44f8-b268-d8fa313ce4b9) 대화 상자를 사용하여 오류 발생의 원인이 되는 행에 대한 오류 처리 옵션을 지정할 수 있습니다.  
+ [오류 출력 구성](../error-handling-in-data.md) 대화 상자를 사용하여 오류 발생의 원인이 되는 행에 대한 오류 처리 옵션을 지정할 수 있습니다.  
   
 ## <a name="see-also"></a>참고 항목  
  [Integration Services 오류 및 메시지 참조](../../../integration-services/integration-services-error-and-message-reference.md)   
  [용어 추출 변환](../../../integration-services/data-flow/transformations/term-extraction-transformation.md)  
-  

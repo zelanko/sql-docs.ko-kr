@@ -13,12 +13,12 @@ ms.prod_service: linux
 ms.assetid: 82737f18-f5d6-4dce-a255-688889fdde69
 moniker: '>= sql-server-linux-2017 || >= sql-server-2017 || =sqlallproducts-allversions'
 zone_pivot_groups: cs1-command-shell
-ms.openlocfilehash: b58763dc5bf126e164ada0c0d808a75270819171
-ms.sourcegitcommit: 71a334c5120a1bc3809d7657294fe44f6c909282
+ms.openlocfilehash: 8e87ca7630fca5e72daf2a3e4eedfd38d50482fd
+ms.sourcegitcommit: 22102f25db5ccca39aebf96bc861c92f2367c77a
 ms.translationtype: HT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 09/09/2020
-ms.locfileid: "89614610"
+ms.lasthandoff: 10/16/2020
+ms.locfileid: "92115666"
 ---
 # <a name="quickstart-run-sql-server-container-images-with-docker"></a>빠른 시작: Docker에서 SQL Server 컨테이너 이미지 실행
 [!INCLUDE [SQL Server - Linux](../includes/applies-to-version/sql-linux.md)]
@@ -132,7 +132,7 @@ any changes to one section should be duplicated in the other-->
    > [!NOTE]
    > 암호는 SQL Server 기본 암호 정책이 따라야 합니다. 그렇지 않으면 컨테이너는 SQL 서버를 설정할 수 없어 작동이 중지됩니다. 기본적으로 암호는 8자 이상이어야 하며 대문자, 소문자, 십진수 숫자 및 기호의 네 가지 집합 중 세 집합의 문자를 포함해야 합니다. [docker 로그](https://docs.docker.com/engine/reference/commandline/logs/) 명령을 실행하여 오류 로그를 검사할 수 있습니다.
    >
-   > 기본적으로 이렇게 하면 개발자 버전의 SQL Server 2017를 사용하여 컨테이너를 만듭니다. 컨테이너에서 프로덕션 버전을 실행하는 프로세스는 약간 다릅니다. 자세한 내용은 [프로덕션 컨테이너 이미지 실행](sql-server-linux-configure-docker.md#production)을 참조하세요.
+   > 기본적으로 이렇게 하면 개발자 버전의 SQL Server 2017를 사용하여 컨테이너를 만듭니다. 컨테이너에서 프로덕션 버전을 실행하는 프로세스는 약간 다릅니다. 자세한 내용은 [프로덕션 컨테이너 이미지 실행](./sql-server-linux-docker-container-deployment.md#production)을 참조하세요.
 
    다음 표에서는 이전 `docker run` 보기의 매개 변수에 대해 설명합니다.
 
@@ -171,7 +171,7 @@ any changes to one section should be duplicated in the other-->
 
    ![Docker ps 명령 출력](./media/sql-server-linux-setup-docker/docker-ps-command.png)
 
-4. **상태** 열이 **Up**의 상태를 표시하는 경우, SQL Server는 컨테이너에서 실행되며 **포트** 열의 지정된 포트에서 수신 대기합니다. SQL Server 컨테이너의 **상태** 열이 **Exited**를 표시하는 경우, [구성 가이드의 문제 해결 섹션](sql-server-linux-configure-docker.md#troubleshooting)을 참조하세요.
+4. **상태** 열이 **Up**의 상태를 표시하는 경우, SQL Server는 컨테이너에서 실행되며 **포트** 열의 지정된 포트에서 수신 대기합니다. SQL Server 컨테이너의 **상태** 열이 **Exited**를 표시하는 경우, [구성 가이드의 문제 해결 섹션](./sql-server-linux-docker-container-troubleshooting.md)을 참조하세요.
 
 위에서 설명한 것처럼 `-h`(호스트 이름) 매개 변수는 컨테이너의 내부 이름을 사용자 지정 값으로 변경합니다. 이 값은 다음 Transact SQL 쿼리에서 반환되는 이름입니다.
 
@@ -223,7 +223,7 @@ SELECT @@SERVERNAME,
    > [!TIP]
    > 이 빠른 시작에서는 SQL Server 2019 Docker 이미지를 사용합니다. SQL Server 2017 이미지를 실행하려면 [이 문서의 SQL Server 2017 버전](quickstart-install-connect-docker.md?view=sql-server-linux-2017#pullandrun2017)을 참조하세요.
 
-   이전 명령은 Ubuntu를 기반으로 하는 SQL Server 2019 컨테이너 이미지를 끌어옵니다. RedHat을 기반으로 하는 컨테이너 이미지를 대신 사용하려면 [RHEL 기반 컨테이너 이미지 실행](sql-server-linux-configure-docker.md#rhel)을 참조하세요. 사용 가능한 모든 이미지를 보려면 [mssql-server-linux Docker 허브 페이지](https://hub.docker.com/_/microsoft-mssql-server)를 참조하세요.
+   이전 명령은 Ubuntu를 기반으로 하는 SQL Server 2019 컨테이너 이미지를 끌어옵니다. RedHat을 기반으로 하는 컨테이너 이미지를 대신 사용하려면 [RHEL 기반 컨테이너 이미지 실행](./sql-server-linux-docker-container-deployment.md#rhel)을 참조하세요. 사용 가능한 모든 이미지를 보려면 [mssql-server-linux Docker 허브 페이지](https://hub.docker.com/_/microsoft-mssql-server)를 참조하세요.
 
    ::: zone pivot="cs1-bash"
    이 문서의 bash 명령에는 `sudo`를 사용합니다. macOS에서는 `sudo`가 필요하지 않을 수도 있습니다. Linux에서 `sudo`로 Docker를 실행하지 않으려는 경우 **docker** 그룹을 구성하고 해당 그룹에 사용자를 추가할 수 있습니다. 자세한 내용은 [Linux용 설치 후 단계](https://docs.docker.com/install/linux/linux-postinstall/)를 참조하세요.
@@ -500,7 +500,7 @@ SQL 연결을 지원하는 모든 외부 Linux, Windows 또는 macOS 도구에�
 
 SQL Server에 연결할 다른 일반적인 도구는 다음과 같습니다.
 
-- [Visual Studio Code](sql-server-linux-develop-use-vscode.md)
+- [Visual Studio Code](../tools/visual-studio-code/sql-server-develop-use-vscode.md)
 - [Windows의 SSMS(SQL Server Management Studio)](sql-server-linux-manage-ssms.md)
 - [Azure Data Studio](../azure-data-studio/what-is.md)
 - [mssql-cli(미리 보기)](https://github.com/dbcli/mssql-cli/blob/master/doc/usage_guide.md)

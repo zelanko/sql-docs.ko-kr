@@ -10,11 +10,11 @@ ms.author: murshedz
 ms.reviewer: martinle
 ms.custom: seo-dt-2019
 ms.openlocfilehash: 499ac56d8a462f62dac92b97654a9ace12bd356e
-ms.sourcegitcommit: e042272a38fb646df05152c676e5cbeae3f9cd13
+ms.sourcegitcommit: ae474d21db4f724523e419622ce79f611e956a22
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 04/27/2020
-ms.locfileid: "79289691"
+ms.lasthandoff: 10/20/2020
+ms.locfileid: "92257449"
 ---
 # <a name="managing-permissions-in-parallel-data-warehouse"></a>병렬 데이터 웨어하우스의 사용 권한 관리
 이 문서에서는 SQL Server PDW에 대 한 데이터베이스 사용 권한을 관리 하기 위한 요구 사항 및 옵션을 설명 합니다.
@@ -48,9 +48,9 @@ SQL Server PDW에 대 한 데이터베이스 엔진 권한은 로그인을 통�
 
 5.  사용자 정의 데이터베이스 역할에 권한을 부여합니다.
 
-로그인은 서버 수준 개체 이며, [server_principals](../relational-databases/system-catalog-views/sys-server-principals-transact-sql.md)를 확인 하 여 나열할 수 있습니다. 서버 보안 주체에는 서버 수준 사용 권한만 부여할 수 있습니다.
+로그인은 서버 수준 개체 이며 [sys.server_principals](../relational-databases/system-catalog-views/sys-server-principals-transact-sql.md)표시 하 여 나열할 수 있습니다. 서버 보안 주체에는 서버 수준 사용 권한만 부여할 수 있습니다.
 
-사용자 및 데이터베이스 역할은 데이터베이스 수준 개체 이며,이 개체는 [sys. database_principals](../relational-databases/system-catalog-views/sys-database-principals-transact-sql.md)를 확인 하 여 나열할 수 있습니다. 데이터베이스 수준 사용 권한만 데이터베이스 보안 주체에 게 부여할 수 있습니다.
+사용자 및 데이터베이스 역할은 데이터베이스 수준 개체 이며 [sys.database_principals](../relational-databases/system-catalog-views/sys-database-principals-transact-sql.md)표시 하 여 나열할 수 있습니다. 데이터베이스 수준 사용 권한만 데이터베이스 보안 주체에 게 부여할 수 있습니다.
 
 ## <a name="default-permissions"></a><a name="BackupTypes"></a>기본 사용 권한
 다음 목록에서는 기본 사용 권한을 설명합니다.
@@ -63,7 +63,7 @@ SQL Server PDW에 대 한 데이터베이스 엔진 권한은 로그인을 통�
 
 -   로그인이 개체가 나 데이터베이스의 소유자가 되 면 해당 로그인에는 항상 개체 또는 데이터베이스에 대 한 모든 권한이 포함 됩니다. 소유권 권한은 명시적 사용 권한으로 표시 되지 않습니다. **GRANT**, **REVOKE**및 **DENY** 문은 소유권 권한에 영향을 주지 않습니다. [ALTER authorization](../t-sql/statements/alter-authorization-transact-sql.md) 문을 사용 하 여 소유권을 변경할 수 있습니다.
 
--    sa  로그인은 어플라이언스에 대한 모든 사용 권한을 가집니다. 소유권 사용 권한과 마찬가지로 sa 사용 권한도 변경할 수 없으며 명시적 사용 권한으로 표시되지 않습니다. **GRANT**, **REVOKE**및 **DENY** 문은 sa 사용 권한에 영향을 주지 않습니다.
+-   sa 로그인은 어플라이언스에 대한 모든 사용 권한을 가집니다. 소유권 사용 권한과 마찬가지로 sa 사용 권한도 변경할 수 없으며 명시적 사용 권한으로 표시되지 않습니다. **GRANT**, **REVOKE**및 **DENY** 문은 sa 사용 권한에 영향을 주지 않습니다.
 
 -   PUBLIC 서버 역할은 기본적으로 권한을 받지 않으며 다른 서버 역할의 사용 권한을 상속 하지 않습니다. PUBLIC 서버 역할에는 **GRANT**, **REVOKE**및 **DENY** 문을 사용 하 여 명시적 사용 권한을 지정할 수 있습니다.
 
@@ -84,7 +84,7 @@ SQL Server PDW에 대 한 데이터베이스 엔진 권한은 로그인을 통�
 로그인에 특정 작업을 수행할 수 있는 권한이 있는지 여부는 사용자가 멤버로 속해 있는 로그인, 사용자 및 역할에 부여 되거나 거부 된 사용 권한에 따라 달라 집니다. 서버 수준 권한 ( **로그인 만들기** 및 서버 **상태 보기**)은 서버 수준 보안 주체 (로그인)에서 사용할 수 있습니다. 데이터베이스 수준 사용 권한 (예: 테이블에서 **선택** 또는 프로시저에서 **실행** )은 데이터베이스 수준 보안 주체 (사용자 및 데이터베이스 역할)에 사용할 수 있습니다.
 
 ### <a name="implicit-and-explicit-permissions"></a>암시적 및 명시적 사용 권한
-*명시적 사용 권한*은 **GRANT** 또는 **DENY**문으로 보안 주체에게 주어진 **GRANT** 또는 **DENY** 사용 권한입니다. 데이터베이스 수준 사용 권한은 [sys. database_permissions](../relational-databases/system-catalog-views/sys-database-permissions-transact-sql.md) 뷰에 나열 됩니다. 서버 수준 사용 권한은 [sys. server_permissions](../relational-databases/system-catalog-views/sys-server-permissions-transact-sql.md) 뷰에 나열 됩니다.
+*명시적 사용 권한*은 **GRANT** 또는 **DENY**문으로 보안 주체에게 주어진 **GRANT** 또는 **DENY** 사용 권한입니다. 데이터베이스 수준 사용 권한은 [sys.database_permissions](../relational-databases/system-catalog-views/sys-database-permissions-transact-sql.md) 뷰에 나열 됩니다. 서버 수준 사용 권한은 [sys.server_permissions](../relational-databases/system-catalog-views/sys-server-permissions-transact-sql.md) 뷰에 나열 됩니다.
 
 *암시적 권한은* 보안 주체 (로그인 또는 서버 역할)가 상속 하는 **GRANT** 또는 **DENY** 권한입니다. 권한은 다음과 같은 방법으로 상속 될 수 있습니다.
 
@@ -92,7 +92,7 @@ SQL Server PDW에 대 한 데이터베이스 엔진 권한은 로그인을 통�
 
 -   주 서버에서 개체의 부모 범위 (예: 테이블의 스키마 또는 전체 데이터베이스에 대 한 사용 권한)에 대 한 사용 권한이 있는 경우 보안 주체가 하위 개체 (예: 테이블)에 대 한 사용 권한을 상속할 수 있습니다.
 
--   보안 주체는 하위 권한을 포함 하는 사용 권한을 사용 하 여 권한을 상속할 수 있습니다. 예를 들어 **alter ANY user** 권한에는 **CREATE user** 및 **alter ON user::** _<name>_ 권한이 모두 포함 됩니다.
+-   보안 주체는 하위 권한을 포함 하는 사용 권한을 사용 하 여 권한을 상속할 수 있습니다. 예를 들어 **ALTER ANY user** 권한에는 **CREATE USER** 및 **alter ON user::** 권한이 모두 포함 됩니다 _<name>_ .
 
 ### <a name="determining-permissions-when-performing-actions"></a>작업 수행 시 사용 권한 결정
 보안 주체에 할당할 권한을 결정 하는 프로세스는 복잡 합니다. 보안 주체는 여러 역할의 멤버가 될 수 있고 사용 권한이 역할 계층 구조의 여러 수준에서 전달 될 수 있으므로 암시적 사용 권한을 결정할 때 복잡성이 발생 합니다.
@@ -214,7 +214,7 @@ SQL Server는 서버에 대 한 사용 권한을 관리 하는 데 도움이 되
 고정 서버 역할은 SQL Server에 의해 자동으로 생성 됩니다. SQL Server PDW는 고정 서버 역할 SQL Server의 구현이 제한적입니다. **Sysadmin** 및 **공용** 만 사용자 로그인을 멤버로 가집니다. **Setupadmin** 및 **dbcreator** 역할은 SQL Server PDW에서 내부적으로 사용 됩니다. 역할에서 추가 멤버를 추가 하거나 제거할 수 없습니다.
 
 ### <a name="sysadmin-fixed-server-role"></a>sysadmin 고정 서버 역할
-**Sysadmin** 고정 서버 역할의 멤버는 서버에서 모든 작업을 수행할 수 있습니다. **Sa** 로그인은 **sysadmin** 고정 서버 역할의 유일한 멤버입니다. 추가 로그인은 **sysadmin** 고정 서버 역할에 추가할 수 없습니다. **CONTROL SERVER** 사용 권한 부여는 **sysadmin** 고정 서버 역할의 멤버 자격을 갖는 것과 비슷합니다. 다음 예에서는 Fay 라는 로그인에 대 한 **CONTROL SERVER** 권한을 부여 합니다.
+**sysadmin** 고정 서버 역할의 멤버는 서버에서 모든 작업을 수행할 수 있습니다. **Sa** 로그인은 **sysadmin** 고정 서버 역할의 유일한 멤버입니다. 추가 로그인은 **sysadmin** 고정 서버 역할에 추가할 수 없습니다. **CONTROL SERVER** 사용 권한 부여는 **sysadmin** 고정 서버 역할의 멤버 자격을 갖는 것과 비슷합니다. 다음 예에서는 Fay 라는 로그인에 대 한 **CONTROL SERVER** 권한을 부여 합니다.
 
 ```sql
 USE master;
@@ -229,7 +229,7 @@ GRANT CONTROL SERVER TO Fay;
 SQL Server PDW에 연결할 수 있는 모든 로그인은 **public** 서버 역할의 멤버입니다. 모든 로그인은 모든 개체에 대해 **public** 으로 부여 된 사용 권한을 상속 합니다. 개체를 모든 사용자가 사용할 수 있도록 하려는 경우에만 개체에 대 한 **public** 권한을 할당 합니다. **Public** 역할의 멤버 자격은 변경할 수 없습니다.
 
 > [!NOTE]
-> **public** 은 다른 역할과 다르게 구현 됩니다. 모든 서버 보안 주체는 public의 멤버 이기 때문에 **public** 역할의 멤버 자격은 **server_role_members** DMV에 나열 되지 않습니다.
+> **public** 은 다른 역할과 다르게 구현 됩니다. 모든 서버 보안 주체는 공용의 멤버 이기 때문에 **public** 역할의 멤버 자격은 **sys.server_role_members** DMV에 나열 되지 않습니다.
 
 ### <a name="fixed-server-roles-vs-granting-permissions"></a>고정 서버 역할 및 권한 부여
 고정 서버 역할 및 고정 데이터베이스 역할의 시스템은 1980에서 시작 된 레거시 시스템입니다. 고정 역할은 계속 지원 되며, 사용자가 적고 보안 요구 사항이 단순한 환경에서 유용 합니다. SQL Server 2005부터 사용 권한을 부여 하는 보다 세부적인 시스템을 만들었습니다. 이 새로운 시스템은 보다 세부적인 사용 권한을 부여 하 고 거부 하는 더 많은 옵션을 제공 합니다. 더 세부적인 시스템의 복잡성이 복잡할수록 학습 하기가 어려워집니다. 하지만 대부분의 엔터프라이즈 시스템은 고정 역할을 사용 하는 대신 권한을 부여 해야 합니다. <!-- MISSING LINKS The permissions are discussed and listed in the topic [Permissions: GRANT, DENY, REVOKE &#40;SQL Server PDW&#41;](../sqlpdw/permissions-grant-deny-revoke-sql-server-pdw.md).  -->

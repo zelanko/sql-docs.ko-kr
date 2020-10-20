@@ -1,5 +1,6 @@
 ---
-title: '개요: 데이터 Excel로 내보내기 (MDS 추가 기능 Excel 용) | Microsoft Docs'
+description: '개요: Excel로 데이터 내보내기(Excel용 MDS 추가 기능)'
+title: Excel로 데이터 내보내기
 ms.custom: microsoft-excel-add-in
 ms.date: 03/01/2017
 ms.prod: sql
@@ -10,16 +11,16 @@ ms.topic: conceptual
 ms.assetid: b628548b-982b-4e45-abf4-c8e83e3ab1c2
 author: lrtoyou1223
 ms.author: lle
-ms.openlocfilehash: 75a23041a3e822ec103012aa18475a092b27b816
-ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
+ms.openlocfilehash: 14ebf23101358677f0c9f0afdf4ed069199614ec
+ms.sourcegitcommit: e700497f962e4c2274df16d9e651059b42ff1a10
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 07/15/2019
-ms.locfileid: "68074504"
+ms.lasthandoff: 08/17/2020
+ms.locfileid: "92257650"
 ---
 # <a name="overview-exporting-data-to-excel-mds-add-in-for-excel"></a>개요: Excel로 데이터 내보내기(Excel용 MDS 추가 기능)
 
-[!INCLUDE[appliesto-ss-xxxx-xxxx-xxx-md-winonly](../../includes/appliesto-ss-xxxx-xxxx-xxx-md-winonly.md)]
+[!INCLUDE [SQL Server Windows Only - ASDBMI ](../../includes/applies-to-version/sql-windows-only-asdbmi.md)]
 
   [!INCLUDE[ssMDSshort](../../includes/ssmdsshort-md.md)][!INCLUDE[ssMDSXLS](../../includes/ssmdsxls-md.md)]에서 데이터를 사용하려면 먼저 MDS 리포지토리의 데이터를 활성 Excel 워크시트로 내보내야 합니다. 데이터 사용을 마쳤으면 다른 사용자가 공유할 수 있도록 다시 MDS 리포지토리로 가져옵니다.  
   
@@ -44,7 +45,7 @@ ms.locfileid: "68074504"
 |태스크 설명|항목|  
 |----------------------|-----------|  
 |MDS 데이터를 Excel에 로드하기 전에 필터링합니다.|[내보내기 전 데이터 필터링&#40;Excel용 MDS 추가 기능&#41;](../../master-data-services/microsoft-excel-add-in/filter-data-before-exporting-mds-add-in-for-excel.md)|  
-|MDS 데이터를 Excel로 로드합니다.|[Master Data Services에서 Excel로 데이터 내보내기](../../master-data-services/microsoft-excel-add-in/export-data-to-excel-from-master-data-services.md)|  
+|MDS 데이터를 Excel로 로드합니다.|[Export Data to Excel from Master Data Services](../../master-data-services/microsoft-excel-add-in/export-data-to-excel-from-master-data-services.md)|  
 |데이터를 다운로드하기 전에 열 순서를 변경합니다.|[열 순서 바꾸기&#40;Excel용 MDS 추가 기능&#41;](../../master-data-services/microsoft-excel-add-in/reorder-columns-mds-add-in-for-excel.md)|  
   
 ## <a name="related-content"></a>관련 내용  

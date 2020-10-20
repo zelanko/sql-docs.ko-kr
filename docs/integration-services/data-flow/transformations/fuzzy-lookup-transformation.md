@@ -34,12 +34,12 @@ helpviewer_keywords:
 ms.assetid: 019db426-3de2-4ca9-8667-79fd9a47a068
 author: chugugrace
 ms.author: chugu
-ms.openlocfilehash: df26e437d7c03510f7e634693296a928696a96b0
-ms.sourcegitcommit: e700497f962e4c2274df16d9e651059b42ff1a10
+ms.openlocfilehash: ab0e3826b20df90102bfc97d5d3730b4e83806dd
+ms.sourcegitcommit: cfa04a73b26312bf18d8f6296891679166e2754d
 ms.translationtype: HT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 08/17/2020
-ms.locfileid: "88430685"
+ms.lasthandoff: 10/19/2020
+ms.locfileid: "92195949"
 ---
 # <a name="fuzzy-lookup-transformation"></a>유사 항목 조회 변환
 
@@ -49,7 +49,7 @@ ms.locfileid: "88430685"
   유사 항목 조회 변환은 데이터 표준화, 데이터 수정, 누락된 값 제공 등 데이터 정리 태스크를 수행합니다.  
   
 > [!NOTE]  
->  성능 및 메모리 제한 사항을 포함하여 유사 항목 조회 변환에 대한 자세한 내용은 [Fuzzy Lookup and Fuzzy Grouping in SQL Server Integration Services 2005](https://go.microsoft.com/fwlink/?LinkId=96604)(SQL Server Integration Services 2005에서 유사 항목 조회 및 유사 항목 그룹화) 백서를 참조하세요.  
+>  성능 및 메모리 제한 사항을 포함하여 유사 항목 조회 변환에 대한 자세한 내용은 [Fuzzy Lookup and Fuzzy Grouping in SQL Server Integration Services 2005](/previous-versions/sql/sql-server-2005/administrator/ms345128(v=sql.90))(SQL Server Integration Services 2005에서 유사 항목 조회 및 유사 항목 그룹화) 백서를 참조하세요.  
   
  유사 항목 조회 변환 작업은 유사 항목 일치를 사용한다는 점에서 조회 변환과 다릅니다. 조회 변환은 동등 조인을 사용하여 참조 테이블에서 일치하는 레코드를 찾으며 일치하는 레코드가 하나 이상 있는 레코드와 일치하는 레코드가 없는 레코드를 반환합니다. 반대로 유사 항목 조회 변환은 유사 일치를 사용하여 참조 테이블에서 하나 이상의 근접하게 일치하는 항목을 반환합니다.  
   
@@ -134,7 +134,7 @@ ms.locfileid: "88430685"
   
  **고급 편집기** 대화 상자를 사용하거나 프로그래밍 방식으로 설정할 수 있는 속성에 대한 자세한 내용을 보려면 다음 항목 중 하나를 클릭하세요.  
   
--   [Common Properties](https://msdn.microsoft.com/library/51973502-5cc6-4125-9fce-e60fa1b7b796)  
+-   [Common Properties](../set-the-properties-of-a-data-flow-component.md)  
   
 -   [변환 사용자 지정 속성](../../../integration-services/data-flow/transformations/transformation-custom-properties.md)  
   
@@ -222,5 +222,4 @@ ms.locfileid: "88430685"
  [조회 변환](../../../integration-services/data-flow/transformations/lookup-transformation.md)   
  [Fuzzy Grouping Transformation](../../../integration-services/data-flow/transformations/fuzzy-grouping-transformation.md)   
  [Integration Services 변환](../../../integration-services/data-flow/transformations/integration-services-transformations.md)  
-  
   

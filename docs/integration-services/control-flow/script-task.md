@@ -19,12 +19,12 @@ helpviewer_keywords:
 ms.assetid: f6cce7df-4bd6-4b75-9f89-6c37b4bb5558
 author: chugugrace
 ms.author: chugu
-ms.openlocfilehash: 506b99d81a47df7a88a2ef33ea91815b99e165fb
-ms.sourcegitcommit: e700497f962e4c2274df16d9e651059b42ff1a10
+ms.openlocfilehash: 4f5f18f3306256906d6c419957aa3d97d3506e7d
+ms.sourcegitcommit: cfa04a73b26312bf18d8f6296891679166e2754d
 ms.translationtype: HT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 08/17/2020
-ms.locfileid: "88425885"
+ms.lasthandoff: 10/19/2020
+ms.locfileid: "92197144"
 ---
 # <a name="script-task"></a>스크립트 태스크
 
@@ -79,15 +79,15 @@ ms.locfileid: "88425885"
   
  [!INCLUDE[ssIS](../../includes/ssis-md.md)] 디자이너에서 설정할 수 있는 속성에 대한 자세한 내용은 다음 항목을 참조하십시오.  
   
--   [스크립트 태스크 편집기&#40;일반 페이지&#41;](../../integration-services/control-flow/script-task-editor-general-page.md)  
+-   [스크립트 태스크 편집기&#40;일반 페이지&#41;]()  
   
--   [스크립트 태스크 편집기&#40;스크립트 페이지&#41;](../../integration-services/control-flow/script-task-editor-script-page.md)  
+-   [스크립트 태스크 편집기&#40;스크립트 페이지&#41;]()  
   
 -   [식 페이지](../../integration-services/expressions/expressions-page.md)  
   
  [!INCLUDE[ssIS](../../includes/ssis-md.md)] 디자이너에서 이러한 속성을 설정하는 방법은 다음 항목을 참조하십시오.  
   
--   [태스크 또는 컨테이너의 속성 설정](https://msdn.microsoft.com/library/52d47ca4-fb8c-493d-8b2b-48bb269f859b)  
+-   [태스크 또는 컨테이너의 속성 설정](./add-or-delete-a-task-or-a-container-in-a-control-flow.md)  
   
 ### <a name="configuring-the-script-task-programmatically"></a>프로그래밍 방식으로 스크립트 태스크 구성  
  이러한 속성을 프로그래밍 방식으로 설정하는 방법은 다음 항목을 참조하십시오.  
@@ -123,7 +123,7 @@ ms.locfileid: "88425885"
   
  태스크에 대한 스크립트를 작성한 후에는 **ScriptLanguage** 속성의 값을 변경할 수 없습니다.  
   
- 스크립트 태스크에 대한 스크립트 언어를 설정하려면 **옵션** 대화 상자의 **일반** 페이지에서 **스크립트 언어** 옵션을 사용하십시오. 자세한 내용은 [General Page](../../integration-services/control-flow/script-task-editor-general-page.md)을 참조하세요.  
+ 스크립트 태스크에 대한 스크립트 언어를 설정하려면 **옵션** 대화 상자의 **일반** 페이지에서 **스크립트 언어** 옵션을 사용하십시오. 자세한 내용은 [General Page]()을 참조하세요.  
   
  **EntryPoint**  
  [!INCLUDE[ssISnoversion](../../includes/ssisnoversion-md.md)] 런타임이 스크립트 태스크 코드에 대한 진입점으로 호출하는 메서드를 지정합니다. 지정된 메서드는 [!INCLUDE[msCoName](../../includes/msconame-md.md)] VSTA([!INCLUDE[vsprvs](../../includes/vsprvs-md.md)] Tools for Applications) 프로젝트의 ScriptMain 클래스에 있어야 합니다. ScriptMain 클래스는 스크립트 템플릿에서 생성하는 기본 클래스입니다.  
@@ -148,5 +148,4 @@ ms.locfileid: "88425885"
 ## <a name="related-content"></a>관련 내용  
   
 -   shareourideas.com의 기술 문서 - [C#의 배달 알림으로 메일을 보내는 방법](https://go.microsoft.com/fwlink/?LinkId=237625)  
-  
   

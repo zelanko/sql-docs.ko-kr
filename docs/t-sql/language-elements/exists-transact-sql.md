@@ -26,12 +26,12 @@ ms.assetid: b6510a65-ac38-4296-a3d5-640db0c27631
 author: rothja
 ms.author: jroth
 monikerRange: '>=aps-pdw-2016||=azuresqldb-current||=azure-sqldw-latest||>=sql-server-2016||=sqlallproducts-allversions||>=sql-server-linux-2017||=azuresqldb-mi-current'
-ms.openlocfilehash: 21ea1933bc37001040beb6007fb877fa8765a24c
-ms.sourcegitcommit: e700497f962e4c2274df16d9e651059b42ff1a10
+ms.openlocfilehash: 3e5b3519a18f8729920e307ddd895d34a2449d93
+ms.sourcegitcommit: cfa04a73b26312bf18d8f6296891679166e2754d
 ms.translationtype: HT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 08/17/2020
-ms.locfileid: "88467695"
+ms.lasthandoff: 10/19/2020
+ms.locfileid: "92194972"
 ---
 # <a name="exists-transact-sql"></a>EXISTS(Transact-SQL)
 [!INCLUDE [sql-asdb-asdbmi-asa-pdw](../../includes/applies-to-version/sql-asdb-asdbmi-asa-pdw.md)]
@@ -42,7 +42,7 @@ ms.locfileid: "88467695"
   
 ## <a name="syntax"></a>구문  
   
-```  
+```syntaxsql  
 EXISTS ( subquery )  
 ```  
   
@@ -63,7 +63,7 @@ EXISTS ( subquery )
 ### <a name="a-using-null-in-a-subquery-to-still-return-a-result-set"></a>A. 하위 쿼리에서 NULL을 사용하여 결과 집합 계속 반환  
  다음 예에서는 하위 쿼리에 `NULL`을 지정하여 결과 집합을 반환하고 `EXISTS`를 사용하여 TRUE로 계속 평가됩니다.  
   
-```  
+```sql  
 -- Uses AdventureWorks  
   
 SELECT DepartmentID, Name   
@@ -75,7 +75,7 @@ ORDER BY Name ASC ;
 ### <a name="b-comparing-queries-by-using-exists-and-in"></a>B. EXISTS 및 IN을 사용하여 쿼리 비교  
  다음 예에서는 기능이 동일한 두 쿼리를 비교합니다. 첫 번째 쿼리에서는 `EXISTS`를 사용하고 두 번째 쿼리에서는 `IN`을 사용합니다.  
   
-```  
+```sql  
 -- Uses AdventureWorks  
   
 SELECT a.FirstName, a.LastName  
@@ -90,7 +90,7 @@ GO
   
  다음 쿼리에서는 `IN`을 사용합니다.  
   
-```  
+```sql  
 -- Uses AdventureWorks  
   
 SELECT a.FirstName, a.LastName  
@@ -118,7 +118,7 @@ Willis                                             Johnson
 ### <a name="c-comparing-queries-by-using-exists-and--any"></a>C. EXISTS 및 = ANY를 사용하여 쿼리 비교  
  다음 예에서는 공급업체와 이름이 동일한 상점을 찾는 두 개의 쿼리를 보여 줍니다. 첫 번째 쿼리에서는 `EXISTS`를 사용하고 두 번째 쿼리에서는 `=``ANY`를 사용합니다.  
   
-```  
+```sql  
 -- Uses AdventureWorks  
   
 SELECT DISTINCT s.Name  
@@ -132,7 +132,7 @@ GO
   
  다음 쿼리에서는 `= ANY`을 사용합니다.  
   
-```  
+```sql  
 -- Uses AdventureWorks  
   
 SELECT DISTINCT s.Name  
@@ -146,7 +146,7 @@ GO
 ### <a name="d-comparing-queries-by-using-exists-and-in"></a>D. EXISTS 및 IN을 사용하여 쿼리 비교  
  다음 예에서는 `P`로 시작되는 부서의 직원을 찾는 쿼리를 보여 줍니다.  
   
-```  
+```sql  
 -- Uses AdventureWorks  
   
 SELECT p.FirstName, p.LastName, e.JobTitle  
@@ -165,7 +165,7 @@ GO
   
  다음 쿼리에서는 `IN`을 사용합니다.  
   
-```  
+```sql  
 -- Uses AdventureWorks  
   
 SELECT p.FirstName, p.LastName, e.JobTitle  
@@ -183,7 +183,7 @@ GO
 ### <a name="e-using-not-exists"></a>E. NOT EXISTS 사용  
  NOT EXISTS는 EXISTS와 반대됩니다. 하위 쿼리에서 반환되는 행이 없는 경우에는 NOT EXISTS의 WHERE 절 조건이 충족됩니다. 다음 예에서는 이름이 `P`로 시작되는 부서에 속하지 않는 직원을 찾습니다.  
   
-```  
+```sql  
 SELECT p.FirstName, p.LastName, e.JobTitle  
 FROM Person.Person AS p   
 JOIN HumanResources.Employee AS e  
@@ -304,7 +304,7 @@ Peng                           Wu                             Quality Assurance 
 ### <a name="f-using-exists"></a>F. EXISTS 사용  
  다음 예제에서는 `ProspectiveBuyer` 테이블의 행이 `DimCustomer` 테이블의 행과 일치하는지 여부를 식별합니다. 쿼리는 두 테이블의 `LastName` 및 `BirthDate` 값이 모두 일치하는 경우에만 행을 반환합니다.  
   
-```  
+```sql
 -- Uses AdventureWorks  
   
 SELECT a.LastName, a.BirthDate  
@@ -318,7 +318,7 @@ WHERE EXISTS
 ### <a name="g-using-not-exists"></a>G. NOT EXISTS 사용  
  NOT EXISTS는 EXISTS와 반대됩니다. 하위 쿼리에서 반환되는 행이 없는 경우에는 NOT EXISTS의 WHERE 절 조건이 충족됩니다. 다음 예제에서는 `LastName` 및 `BirthDate`가 `ProspectiveBuyers` 테이블의 모든 항목에 일치하지 않는 행을 `DimCustomer` 테이블에서 찾습니다.  
   
-```  
+```sql  
 -- Uses AdventureWorks  
   
 SELECT a.LastName, a.BirthDate  

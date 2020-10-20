@@ -35,12 +35,12 @@ ms.assetid: 36b19e68-94f6-4539-aeb1-79f5312e4263
 author: VanMSFT
 ms.author: vanto
 monikerRange: '>=aps-pdw-2016||=azuresqldb-current||=azure-sqldw-latest||>=sql-server-2016||=sqlallproducts-allversions||>=sql-server-linux-2017||=azuresqldb-mi-current'
-ms.openlocfilehash: 93397f5529a30cb0de1ac82ed36ea07fb0dd6c26
-ms.sourcegitcommit: 8f062015c2a033f5a0d805ee4adabbe15e7c8f94
+ms.openlocfilehash: 9cc3f414e9e771eb48734a2c8c188d28ac8bc321
+ms.sourcegitcommit: 22dacedeb6e8721e7cdb6279a946d4002cfb5da3
 ms.translationtype: HT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 09/25/2020
-ms.locfileid: "91227237"
+ms.lasthandoff: 10/14/2020
+ms.locfileid: "92035866"
 ---
 # <a name="from-clause-plus-join-apply-pivot-transact-sql"></a>FROM 절과 JOIN, APPLY, PIVOT(Transact-SQL)
 
@@ -204,7 +204,7 @@ FROM { <table_source> [ ,...n ] }
 **적용 대상**: [!INCLUDE[ssKatmai](../../includes/sskatmai-md.md)] 이상 및 [!INCLUDE[sqldbesa](../../includes/sqldbesa-md.md)]  
 
   
- 테이블 참조 대신 사용할 수 있는 개체를 반환하는 행 집합 함수 중 하나(예: OPENROWSET)를 지정합니다. 행 집합 함수의 목록에 자세한 내용은 [행 집합 함수&#40;Transact-SQL&#41;](../../t-sql/functions/rowset-functions-transact-sql.md)를 참조하세요.  
+ 테이블 참조 대신 사용할 수 있는 개체를 반환하는 행 집합 함수 중 하나(예: OPENROWSET)를 지정합니다. 행 집합 함수의 목록에 자세한 내용은 [행 집합 함수&#40;Transact-SQL&#41;](../functions/opendatasource-transact-sql.md)를 참조하세요.  
   
  OPENROWSET 및 OPENQUERY 함수를 사용하여 원격 개체를 지정하는 것은 개체를 액세스하는 OLE DB 공급자의 기능에 따라 달라집니다.  
   
@@ -899,4 +899,4 @@ FROM Sales.Customer TABLESAMPLE SYSTEM (10 PERCENT) ;
  [OPENQUERY&#40;Transact-SQL&#41;](../../t-sql/functions/openquery-transact-sql.md)   
  [OPENROWSET&#40;Transact-SQL&#41;](../../t-sql/functions/openrowset-transact-sql.md)   
  [연산자&#40;Transact-SQL&#41;](../../t-sql/language-elements/operators-transact-sql.md)   
- [WHERE&#40;Transact-SQL&#41;](../../t-sql/queries/where-transact-sql.md)  
+ [WHERE&#40;Transact-SQL&#41;](../../t-sql/queries/where-transact-sql.md)

@@ -11,12 +11,12 @@ ms.topic: conceptual
 ms.assetid: 7b6867fa-1039-49b3-90fb-85b84678a612
 author: chugugrace
 ms.author: chugu
-ms.openlocfilehash: 206f7d54967eea85c96198e78471f026197a6a64
-ms.sourcegitcommit: e700497f962e4c2274df16d9e651059b42ff1a10
+ms.openlocfilehash: 27f8433667f68bb654fae4317295358a45c82825
+ms.sourcegitcommit: cfa04a73b26312bf18d8f6296891679166e2754d
 ms.translationtype: HT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 08/17/2020
-ms.locfileid: "88477258"
+ms.lasthandoff: 10/19/2020
+ms.locfileid: "92197075"
 ---
 # <a name="dtexec-utility"></a>dtexec 유틸리티
 
@@ -180,13 +180,13 @@ dtexec /option [value] [/option [value]]...
   
 -   **/Conf[igFile]** _filespec_: (선택 사항). 값을 추출할 구성 파일을 지정합니다. 이 옵션을 사용하면 패키지의 디자인 타임에 지정한 구성과 다르게 런타임 구성을 설정할 수 있습니다. 다른 구성 설정을 XML 구성 파일에 저장한 다음 패키지를 실행하기 전에 **ConfigFile** 옵션을 사용하여 이 설정을 로드할 수 있습니다.  
   
-     **/ConfigFile** 옵션을 사용하면 디자인 타임에 지정하지 않은 추가 구성을 런타임에 로드할 수 있습니다. 그러나 디자인 타임에도 지정한 구성 값을 **/ConfigFile** 옵션을 사용하여 바꿀 수는 없습니다. 패키지 구성이 적용되는 방법을 이해하려면 [Package Configurations](../../integration-services/packages/package-configurations.md)을 참조하십시오.  
+     **/ConfigFile** 옵션을 사용하면 디자인 타임에 지정하지 않은 추가 구성을 런타임에 로드할 수 있습니다. 그러나 디자인 타임에도 지정한 구성 값을 **/ConfigFile** 옵션을 사용하여 바꿀 수는 없습니다. 패키지 구성이 적용되는 방법을 이해하려면 [Package Configurations](./legacy-package-deployment-ssis.md)을 참조하십시오.  
   
 -   **/Conn[ection]** _id_or_name;connection_string [[;id_or_name;connection_string]...]_ : (선택 사항). 이름 또는 GUID가 지정된 연결 관리자가 패키지에 있음을 지정하고 연결 문자열을 지정합니다.  
   
      이 옵션을 사용하려면 두 매개 변수 모두를 지정해야 합니다. 즉, *id_or_name* 인수에 연결 관리자 이름 또는 GUID를 제공하고 *connection_string* 인수에 올바른 연결 문자열을 지정해야 합니다. 자세한 내용은 [Integration Services&#40;SSIS&#41; 연결](../../integration-services/connection-manager/integration-services-ssis-connections.md)을 참조하세요.  
   
-     런타임에 **/Connection** 옵션을 사용하면 디자인 타임에 지정한 위치와 다른 위치에서 패키지 구성을 로드할 수 있습니다. 그러면 원래 지정된 값이 이러한 구성 값으로 바뀝니다. 그러나 연결 관리자를 사용하는 **구성과 같은 구성에만** /Connection [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 옵션을 사용할 수 있습니다. 패키지 구성이 적용되는 방법을 이해하려면 [패키지 구성](../../integration-services/packages/package-configurations.md) 및 [SQL Server 2016 Integration Services 기능의 동작 변경](https://msdn.microsoft.com/library/611d22fa-5ac7-485e-9a40-7131e852f794)을 참조하세요.  
+     런타임에 **/Connection** 옵션을 사용하면 디자인 타임에 지정한 위치와 다른 위치에서 패키지 구성을 로드할 수 있습니다. 그러면 원래 지정된 값이 이러한 구성 값으로 바뀝니다. 그러나 연결 관리자를 사용하는 **구성과 같은 구성에만** /Connection [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 옵션을 사용할 수 있습니다. 패키지 구성이 적용되는 방법을 이해하려면 [패키지 구성](./legacy-package-deployment-ssis.md) 및 [SQL Server 2016 Integration Services 기능의 동작 변경](/previous-versions/sql/sql-server-2016/bb500430(v=sql.130))을 참조하세요.  
   
 -   **/Cons[oleLog]** [[*displayoptions*];[*list_options*;*src_name_or_guid*]...]: (선택 사항). 패키지 실행 중 지정된 로그 항목을 콘솔에 표시합니다. 이 옵션을 생략하면 콘솔에 로그 항목이 표시되지 않습니다. 표시를 제한하는 매개 변수 없이 이 옵션을 지정하면 모든 로그 항목이 표시됩니다. 콘솔에 표시되는 항목을 제한하려면 *displayoptions* 매개 변수를 사용하여 표시할 열을 지정하고 *list_options* 매개 변수를 사용하여 로그 항목 유형을 제한합니다.  
   
@@ -228,7 +228,7 @@ dtexec /option [value] [/option [value]]...
   
      **/ConsoleLog** 옵션에 관한 여러 가지 예는 **주의** 섹션을 참조하세요.  
   
--   **/D[ts]** _package_path_: (선택 사항). SSIS 패키지 저장소에서 패키지를 로드합니다. SSIS 패키지 저장소에 저장된 패키지는 레거시 패키지 배포 모델을 사용하여 배포됩니다. 프로젝트 배포 모델을 사용하여 [!INCLUDE[ssISnoversion](../../includes/ssisnoversion-md.md)] 서버에 배포된 패키지를 실행하려면 **/ISServer** 옵션을 사용합니다. 패키지 및 프로젝트 배포 모델에 대한 자세한 내용은 [Deployment of Projects and Packages](https://msdn.microsoft.com/library/hh213290.aspx)를 참조하십시오.  
+-   **/D[ts]** _package_path_: (선택 사항). SSIS 패키지 저장소에서 패키지를 로드합니다. SSIS 패키지 저장소에 저장된 패키지는 레거시 패키지 배포 모델을 사용하여 배포됩니다. 프로젝트 배포 모델을 사용하여 [!INCLUDE[ssISnoversion](../../includes/ssisnoversion-md.md)] 서버에 배포된 패키지를 실행하려면 **/ISServer** 옵션을 사용합니다. 패키지 및 프로젝트 배포 모델에 대한 자세한 내용은 [Deployment of Projects and Packages](./deploy-integration-services-ssis-projects-and-packages.md)를 참조하십시오.  
   
      *package_path* 인수는 SSIS 패키지 저장소의 루트에서 시작하여 [!INCLUDE[ssIS](../../includes/ssis-md.md)] 패키지의 상대 경로를 지정하고 [!INCLUDE[ssIS](../../includes/ssis-md.md)] 패키지의 이름을 포함합니다. *package_path* 인수에 지정된 경로나 파일 이름에 공백이 있는 경우 *package_path* 인수를 따옴표로 묶어야 합니다.  
   
@@ -417,13 +417,13 @@ dtexec /option [value] [/option [value]]...
   
      `/Project c:\project.ispac /Package Package1.dtsx /SET \Package.Variables[$Package::Parameter];1 /SET \Package.Variables[$Project::Parameter];1`  
   
-     **/Set** 옵션을 사용하면 패키지 구성이 로드되는 위치를 변경할 수 있습니다. 그러나 디자인 타임에 구성으로 지정한 값은 **/Set** 옵션을 사용하여 재정의할 수 없습니다. 패키지 구성이 적용되는 방법을 이해하려면 [패키지 구성](../../integration-services/packages/package-configurations.md) 및 [SQL Server 2016 Integration Services 기능의 동작 변경](https://msdn.microsoft.com/library/611d22fa-5ac7-485e-9a40-7131e852f794)을 참조하세요.  
+     **/Set** 옵션을 사용하면 패키지 구성이 로드되는 위치를 변경할 수 있습니다. 그러나 디자인 타임에 구성으로 지정한 값은 **/Set** 옵션을 사용하여 재정의할 수 없습니다. 패키지 구성이 적용되는 방법을 이해하려면 [패키지 구성](./legacy-package-deployment-ssis.md) 및 [SQL Server 2016 Integration Services 기능의 동작 변경](/previous-versions/sql/sql-server-2016/bb500430(v=sql.130))을 참조하세요.  
   
 -   **/Ser[ver]** _server_: (선택 사항). **/SQL** 또는 **/DTS** 옵션을 지정한 경우 이 옵션은 패키지를 검색할 서버의 이름을 지정합니다. **/Server** 옵션을 생략하고 **/SQL** 또는 **/DTS** 옵션을 지정하면 로컬 서버에 대해 패키지가 실행됩니다. *server_instance* 값은 따옴표로 묶을 수 있습니다.  
   
      **/ISServer** 옵션이 지정된 경우 **/Ser[ver]** 옵션이 필요합니다.  
   
--   **/SQ[L]** _package_path_: **msdb** 데이터베이스에서 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]에 저장된 패키지를 로드합니다. **msdb** 데이터베이스에 저장된 패키지는 패키지 배포 모델을 사용하여 배포됩니다. 프로젝트 배포 모델을 사용하여 [!INCLUDE[ssISnoversion](../../includes/ssisnoversion-md.md)] 서버에 배포된 패키지를 실행하려면 **/ISServer** 옵션을 사용합니다. 패키지 및 프로젝트 배포 모델에 대한 자세한 내용은 [Deployment of Projects and Packages](https://msdn.microsoft.com/library/hh213290.aspx)를 참조하십시오.   
+-   **/SQ[L]** _package_path_: **msdb** 데이터베이스에서 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]에 저장된 패키지를 로드합니다. **msdb** 데이터베이스에 저장된 패키지는 패키지 배포 모델을 사용하여 배포됩니다. 프로젝트 배포 모델을 사용하여 [!INCLUDE[ssISnoversion](../../includes/ssisnoversion-md.md)] 서버에 배포된 패키지를 실행하려면 **/ISServer** 옵션을 사용합니다. 패키지 및 프로젝트 배포 모델에 대한 자세한 내용은 [Deployment of Projects and Packages](./deploy-integration-services-ssis-projects-and-packages.md)를 참조하십시오.   
   
 -   *package_path* 인수는 검색할 패키지의 이름을 지정합니다. 경로에 폴더가 포함된 경우 백슬래시("\\")로 끝납니다. *package_path* 값은 따옴표로 묶을 수 있습니다. *package_path* 인수에 지정된 경로나 파일 이름에 공백이 있는 경우 *package_path* 인수를 따옴표로 묶어야 합니다.  
   
@@ -645,5 +645,4 @@ dtexec /isserver "\SSISDB\MyFolder\MyProject\MyPackage.dtsx" /server "."
   
 ## <a name="related-content"></a>관련 내용  
  [www.mattmasson.com](www.mattmasson.com) 의 [종료 코드, DTEXEC 및 SSIS 카탈로그](https://www.mattmasson.com/2012/02/exit-codes-dtexec-and-ssis-catalog/)블로그 항목  
-  
   
