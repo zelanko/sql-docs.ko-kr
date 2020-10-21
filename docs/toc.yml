@@ -352,6 +352,14 @@
               href: big-data-cluster/change-azdata-password.md
             - name: 루트가 아닌 컨테이너
               href: big-data-cluster/non-root-containers.md
+            - name: 미사용 암호화
+              items:
+                - name: 개념 및 구성
+                  href: big-data-cluster/encryption-at-rest-concepts-and-configuration.md
+                - name: SQL Server TDE
+                  href: big-data-cluster/encryption-at-rest-sql-server-tde.md
+                - name: HDFS 암호화 영역
+                  href: big-data-cluster/encryption-at-rest-hdfs-encryption-zones.md
         - name: Spark 작업
           items:
             - name: Azure Data Studio에서 Spark 작업 제출
