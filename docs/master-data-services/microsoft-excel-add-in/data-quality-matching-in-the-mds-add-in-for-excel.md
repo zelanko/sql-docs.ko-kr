@@ -1,6 +1,7 @@
 ---
-title: Excel용 MDS 추가 기능의 데이터 품질 일치 | Microsoft Docs
-ms.custom: microsoft-excel-add-in
+description: Excel용 MDS 추가 기능의 데이터 품질 일치
+title: 데이터 품질 일치
+ms.custom: microsoft-excel-add-in, seo-lt-2019
 ms.date: 03/14/2017
 ms.prod: sql
 ms.prod_service: mds
@@ -10,16 +11,16 @@ ms.topic: conceptual
 ms.assetid: be78d051-0d56-46d3-bb89-327e218dadd6
 author: lrtoyou1223
 ms.author: lle
-ms.openlocfilehash: 32e22f93dff6edb90c89896fca3495d27ac34dc0
-ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
+ms.openlocfilehash: 13b02667ef1ded9c18b070e69ed63b7bb15db5cf
+ms.sourcegitcommit: e700497f962e4c2274df16d9e651059b42ff1a10
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 07/15/2019
-ms.locfileid: "68092389"
+ms.lasthandoff: 08/17/2020
+ms.locfileid: "92257668"
 ---
 # <a name="data-quality-matching-in-the-mds-add-in-for-excel"></a>Excel용 MDS 추가 기능의 데이터 품질 일치
 
-[!INCLUDE[appliesto-ss-xxxx-xxxx-xxx-md-winonly](../../includes/appliesto-ss-xxxx-xxxx-xxx-md-winonly.md)]
+[!INCLUDE [SQL Server Windows Only - ASDBMI ](../../includes/applies-to-version/sql-windows-only-asdbmi.md)]
 
   시간이 지날수록 MDS 저장소에 추가하는 데이터가 늘어나게 됩니다. 데이터를 추가하기 전에 새 데이터와 MDS에서 관리되는 기존 데이터를 비교하면 중복되거나 정확하지 않은 데이터가 추가되는 것을 방지할 수 있습니다.  
   
@@ -43,7 +44,7 @@ ms.locfileid: "68092389"
   
 -   기본 기술 자료(DQS 데이터)는 DQS를 설치할 때 만들어집니다. Data Quality 클라이언트의 기본 기술 자료에 일치 정책을 추가하지 않고 기본 기술 자료를 사용하기로 선택할 경우 워크시트의 열을 기술 자료의 도메인에 매핑한 다음 선택한 도메인에 가중치 값을 할당해야 합니다.  
   
--   Data Quality 클라이언트를 사용하여 일치 정책을 포함한 새 기술 자료를 만들거나, 기본 기술 자료에 일치 정책을 추가할 수 있습니다. 이 경우 가중치 값은 이미 만들어 둔 일치 정책에 따라 결정되므로 도메인에 열을 매핑하기만 하면 됩니다. 자세한 내용은 [Create a Matching Policy](../../data-quality-services/create-a-matching-policy.md)을 참조하세요.  
+-   Data Quality 클라이언트를 사용하여 일치 정책을 포함한 새 기술 자료를 만들거나, 기본 기술 자료에 일치 정책을 추가할 수 있습니다. 이 경우 가중치 값은 이미 만들어 둔 일치 정책에 따라 결정되므로 도메인에 열을 매핑하기만 하면 됩니다. 자세한 내용은 [Create a Matching Policy](../../data-quality-services/create-a-matching-policy.md)를 참조하세요.  
   
  기술 자료에 대한 자세한 내용은 [DQS Knowledge Bases and Domains](../../data-quality-services/dqs-knowledge-bases-and-domains.md)을 참조하십시오.  
   
@@ -56,7 +57,7 @@ ms.locfileid: "68092389"
   
 ## <a name="related-content"></a>관련 내용  
   
--   [개요: Excel에서 데이터 가져오기 &#40;MDS 추가 기능에 Excel 용&#41;](../../master-data-services/microsoft-excel-add-in/overview-importing-data-from-excel-mds-add-in-for-excel.md)  
+-   [개요: Excel에서 데이터 가져오기&#40;Excel용 MDS 추가 기능&#41;](../../master-data-services/microsoft-excel-add-in/overview-importing-data-from-excel-mds-add-in-for-excel.md)  
   
 -   [데이터 일치](../../data-quality-services/data-matching.md)  
   

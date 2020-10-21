@@ -20,12 +20,12 @@ helpviewer_keywords:
 ms.assetid: cff8690c-07ac-46a0-aab5-20bd4848c677
 author: chugugrace
 ms.author: chugu
-ms.openlocfilehash: 7d8ed9805a62095f732f3f4621d3c133793ac7bf
-ms.sourcegitcommit: e700497f962e4c2274df16d9e651059b42ff1a10
+ms.openlocfilehash: a04463a998cec2903fb11c530144a103d296a6a9
+ms.sourcegitcommit: cfa04a73b26312bf18d8f6296891679166e2754d
 ms.translationtype: HT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 08/17/2020
-ms.locfileid: "88477640"
+ms.lasthandoff: 10/19/2020
+ms.locfileid: "92193193"
 ---
 # <a name="merge-transformation"></a>병합 변환
 
@@ -64,7 +64,7 @@ ms.locfileid: "88477640"
   
  프로그래밍 방식으로 설정할 수 있는 속성에 대한 자세한 내용을 보려면 다음 항목 중 하나를 클릭하십시오.  
   
--   [Common Properties](https://msdn.microsoft.com/library/51973502-5cc6-4125-9fce-e60fa1b7b796)  
+-   [Common Properties](../set-the-properties-of-a-data-flow-component.md)  
   
 -   [변환 사용자 지정 속성](../../../integration-services/data-flow/transformations/transformation-custom-properties.md)  
   
@@ -96,5 +96,4 @@ ms.locfileid: "88477640"
  [UNION ALL 변환](../../../integration-services/data-flow/transformations/union-all-transformation.md)   
  [데이터 흐름](../../../integration-services/data-flow/data-flow.md)   
  [Integration Services 변환](../../../integration-services/data-flow/transformations/integration-services-transformations.md)  
-  
   

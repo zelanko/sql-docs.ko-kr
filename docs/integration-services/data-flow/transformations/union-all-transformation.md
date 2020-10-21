@@ -19,12 +19,12 @@ helpviewer_keywords:
 ms.assetid: 942e4b90-9c41-4e9c-a6f3-80b3afe57f2f
 author: chugugrace
 ms.author: chugu
-ms.openlocfilehash: 9cb32c68f05e4be6b25d0fc20ae088aa6760bfd6
-ms.sourcegitcommit: e700497f962e4c2274df16d9e651059b42ff1a10
+ms.openlocfilehash: 59756c7690301d35a1ad53b9db5bde441ce74c24
+ms.sourcegitcommit: cfa04a73b26312bf18d8f6296891679166e2754d
 ms.translationtype: HT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 08/17/2020
-ms.locfileid: "88425625"
+ms.lasthandoff: 10/19/2020
+ms.locfileid: "92194617"
 ---
 # <a name="union-all-transformation"></a>UNION ALL 변환
 
@@ -47,7 +47,7 @@ ms.locfileid: "88425625"
 ## <a name="configuration-of-the-union-all-transformation"></a>UNION ALL 변환 구성  
  [!INCLUDE[ssIS](../../../includes/ssis-md.md)] 디자이너를 사용하거나 프로그래밍 방식으로 속성을 설정할 수 있습니다.  
   
- 프로그래밍 방식으로 설정할 수 있는 속성에 대한 자세한 내용은 [Common Properties](https://msdn.microsoft.com/library/51973502-5cc6-4125-9fce-e60fa1b7b796)을 참조하십시오.  
+ 프로그래밍 방식으로 설정할 수 있는 속성에 대한 자세한 내용은 [Common Properties](../set-the-properties-of-a-data-flow-component.md)을 참조하십시오.  
   
  속성 설정 방법을 보려면 다음 항목 중 하나를 클릭하세요.  
   
@@ -68,5 +68,4 @@ ms.locfileid: "88425625"
   
 ## <a name="related-tasks"></a>관련 작업  
  [UNION ALL 변환을 사용하여 데이터 병합](../../../integration-services/data-flow/transformations/merge-data-by-using-the-union-all-transformation.md)  
-  
   
