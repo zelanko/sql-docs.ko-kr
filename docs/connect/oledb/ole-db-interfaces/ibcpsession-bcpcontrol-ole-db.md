@@ -15,12 +15,12 @@ helpviewer_keywords:
 - BCPControl method
 author: David-Engel
 ms.author: v-daenge
-ms.openlocfilehash: 69b3d050fcfd04538036b3982aaaf1ccca5fa8e8
-ms.sourcegitcommit: c7f40918dc3ecdb0ed2ef5c237a3996cb4cd268d
+ms.openlocfilehash: dfb42fe378d428dbe272bb135492ab93c6eb619c
+ms.sourcegitcommit: 7eb80038c86acfef1d8e7bfd5f4e30e94aed3a75
 ms.translationtype: HT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 10/05/2020
-ms.locfileid: "91727004"
+ms.lasthandoff: 10/15/2020
+ms.locfileid: "92081832"
 ---
 # <a name="ibcpsessionbcpcontrol-ole-db"></a>IBCPSession::BCPControl(OLE DB)
 [!INCLUDE [SQL Server](../../../includes/applies-to-version/sql-asdb-asdbmi-asa-pdw.md)]
@@ -50,7 +50,7 @@ HRESULT BCPControl(
 |BCP_OPTION_ABORT|이미 진행 중인 대량 복사 작업을 중지합니다. 다른 스레드에서 값이 BCP_OPTION_ABORT인 *eOption* 인수와 함께 **BCPControl** 메서드를 호출하여 실행 중인 대량 복사 작업을 중지할 수 있습니다. *iValue* 인수는 무시됩니다.|  
 |BCP_OPTION_BATCH|일괄 처리당 행 수입니다. 기본값은 0으로, 데이터를 추출할 때 테이블에 있는 모든 행 수를 나타내거나 데이터를 [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)]로 복사할 때 사용자 데이터 파일에 있는 모든 행 수를 나타냅니다. 1보다 작은 값을 지정하면 BCP_OPTION_BATCH는 기본값으로 다시 설정됩니다.|  
 |BCP_OPTION_DELAYREADFMT|부울 값이 true로 설정된 경우 [IBCPSession::BCPReadFmt](../../oledb/ole-db-interfaces/ibcpsession-bcpreadfmt-ole-db.md)에서 실행 시 읽습니다. 부울 값이 false(기본값)로 설정된 경우, IBCPSession::BCPReadFmt에서 즉시 형식 파일을 읽습니다. **BCP_OPTION_DELAYREADFMT**가 true이고 IBCPSession::BCPColumns 또는 IBCPSession::BCPColFmt를 호출하는 경우 시퀀스 오류가 발생합니다.<br /><br /> `IBCPSession::BCPControl(BCPDELAYREADFMT, (void *)TRUE)` 및 IBCPSession::BCPWriteFmt를 호출한 후 `IBCPSession::BCPControl(BCPDELAYREADFMT, (void *)FALSE))`을 호출하는 경우에도 시퀀스 오류가 발생합니다.<br /><br /> 자세한 내용은 [메타데이터 검색](../../oledb/features/metadata-discovery.md)을 참조하세요.|  
-|BCP_OPTION_FILECP|*iValue* 인수는 데이터 파일의 코드 페이지 번호를 포함합니다. 1252나 850과 같은 코드 페이지 번호를 지정하거나 다음 값 중 하나를 지정할 수 있습니다.<br /><br /> BCP_FILECP_ACP: 파일의 데이터가 클라이언트의 Microsoft Windows® 코드 페이지에 있습니다.<br /><br /> BCP_FILECP_OEMCP: 파일의 데이터가 클라이언트의 OEM 코드 페이지에 있습니다(기본값).<br /><br /> BCP_FILECP_RAW: 파일의 데이터가 [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)]의 코드 페이지에 있습니다.|  
+|BCP_OPTION_FILECP|*iValue* 인수는 데이터 파일의 코드 페이지 번호를 포함합니다. 1252나 850과 같은 코드 페이지 번호를 지정하거나 다음 값 중 하나를 지정할 수 있습니다.<br /><br /> BCP_FILECP_ACP: 파일 데이터가 클라이언트의 Microsoft Windows(R) 코드 페이지에 있습니다.<br /><br /> BCP_FILECP_OEMCP: 파일의 데이터가 클라이언트의 OEM 코드 페이지에 있습니다(기본값).<br /><br /> BCP_FILECP_RAW: 파일의 데이터가 [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)]의 코드 페이지에 있습니다.|  
 |BCP_OPTION_FILEFMT|데이터 파일 형식의 버전 번호입니다. 이 값은 80([!INCLUDE[ssVersion2000](../../../includes/ssversion2000-md.md)]), 90([!INCLUDE[ssVersion2005](../../../includes/ssversion2005-md.md)]), 100([!INCLUDE[ssKatmai](../../../includes/sskatmai-md.md)] 또는 [!INCLUDE[ssKilimanjaro](../../../includes/sskilimanjaro-md.md)]) 또는 110([!INCLUDE[ssSQL11](../../../includes/sssql11-md.md)])이 될 수 있습니다. 기본값은 110입니다. 이 옵션은 이전 버전 서버에서 지원하는 형식으로 데이터를 가져오고 내보내는 데 유용합니다.  예를 들어 [!INCLUDE[ssVersion2000](../../../includes/ssversion2000-md.md)] 서버의 텍스트 열에서 얻은 데이터를 [!INCLUDE[ssVersion2005](../../../includes/ssversion2005-md.md)] 이상 서버의 **varchar(max)** 열로 가져오려면 80을 지정해야 합니다. 마찬가지로 **varchar(max)** 열에서 데이터를 내보낼 때 80을 지정하면 해당 데이터가 [!INCLUDE[ssVersion2000](../../../includes/ssversion2000-md.md)] 형식으로 텍스트 열이 저장되는 것과 같이 저장되어 [!INCLUDE[ssVersion2000](../../../includes/ssversion2000-md.md)] 서버의 텍스트 열로 가져올 수 있습니다.|  
 |BCP_OPTION_FIRST|복사할 파일이나 테이블의 첫 번째 데이터 행입니다. 기본값은 1입니다. 1보다 작은 값을 지정하면 이 옵션은 기본값으로 다시 설정됩니다.|  
 |BCP_OPTION_FIRSTEX|BCP out 작업의 경우 데이터 파일에 복사할 데이터베이스 테이블의 첫 번째 행을 지정합니다.<br /><br /> BCP in 작업의 경우 데이터베이스 테이블에 복사할 데이터 파일의 첫 번째 행을 지정합니다.<br /><br /> *iValue* 매개 변수는 값을 포함하는 부호 있는 64비트 정수 주소여야 합니다. BCPFIRSTEX에 전달할 수 있는 최대값은 2^63-1입니다.|  
@@ -77,7 +77,7 @@ HRESULT BCPControl(
  메서드가 성공했습니다.  
   
  E_FAIL  
- 공급자 관련 오류가 발생했습니다. 자세한 내용을 보려면 [ISQLServerErrorInfo](./isqlservererrorinfo-geterrorinfo-ole-db.md?view=sql-server-ver15) 인터페이스를 사용하세요.  
+ 공급자 관련 오류가 발생했습니다. 자세한 내용을 보려면 [ISQLServerErrorInfo](./isqlservererrorinfo-geterrorinfo-ole-db.md) 인터페이스를 사용하세요.  
   
  E_UNEXPECTED  
  예기치 않은 메서드가 호출되었습니다. 예를 들어 이 함수를 호출하기 전에 [IBCPSession::BCPInit](../../oledb/ole-db-interfaces/ibcpsession-bcpinit-ole-db.md) 메서드를 호출하지 않았습니다.  

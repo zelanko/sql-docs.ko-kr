@@ -20,12 +20,12 @@ helpviewer_keywords:
 ms.assetid: 2cddc9ea-0e28-4350-80ae-332412908e47
 author: maggiesMSFT
 ms.author: maggies
-ms.openlocfilehash: f236fe67a8d551cd7a7ada15550770c34503c026
-ms.sourcegitcommit: 9470c4d1fc8d2d9d08525c4f811282999d765e6e
+ms.openlocfilehash: dbfb5f58cae73931acf1c856b7e2675d50c8dc47
+ms.sourcegitcommit: fe59f8dc27fd633f5dfce54519d6f5dcea577f56
 ms.translationtype: HT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 07/17/2020
-ms.locfileid: "86455395"
+ms.lasthandoff: 10/09/2020
+ms.locfileid: "91934654"
 ---
 # <a name="specify-connections-for-custom-data-processing-extensions"></a>사용자 지정 데이터 처리 확장 프로그램에 대한 연결 지정
   보고서 서버에서 타사의 사용자 지정 데이터 처리 확장 프로그램을 만들거나 사용하여 지원되는 데이터 원본의 데이터 처리 기능을 향상시키거나 기본 설치된 [!INCLUDE[ssRSnoversion](../../includes/ssrsnoversion-md.md)] 에서는 사용할 수 없는 추가 형식의 데이터 원본을 지원할 수 있습니다. 연결은 구현에 따라 다르게 처리됩니다. 데이터 처리 확장 프로그램에 사용될 수 있는 구현은 다음과 같습니다.  
@@ -52,7 +52,7 @@ ms.locfileid: "86455395"
 |통합 보안|데이터 공급자에서 지원할 경우 Windows 통합 보안을 사용할 수 있습니다. 요청은 현재 사용자의 자격 증명을 사용하여 보내집니다.<br /><br /> 연결 문자열을 정의할 때는 통합 보안을 지정하는 인수를 포함해야 합니다. 예를 들어 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 데이터 원본에 연결할 때는 연결 문자열에 **Integrated Security=SSPI** 를 포함할 수 있습니다.|  
 |Windows 인증|데이터 공급자에서 지원할 경우 Windows 도메인 사용자 계정을 사용할 수 있습니다. 보고서 서버에서는 데이터 처리 확장 프로그램이 호출되기 전에 사용자 계정을 가장합니다.<br /><br /> 연결 문자열을 정의할 때는 통합 보안을 지정하는 인수를 포함해야 합니다. 예를 들어 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 데이터 원본에 연결할 때는 연결 문자열에 **Integrated Security=SSPI** 를 포함할 수 있습니다.|  
 |데이터베이스 자격 증명|사용자 지정 .NET 데이터 공급자를 통해 만들어진 연결의 경우 데이터베이스 인증이 지원되지 않습니다. 보고서 서버에서 모든 경우의 연결이 실패합니다.|  
-|자격 증명 사용 안 함|사용자 지정 .NET 데이터 공급자에 자격 증명 사용 안 함 옵션을 사용할 수 있습니다. 무인 실행 계정을 지정하면 연결 문자열에 따라 사용되는 자격 증명이 결정됩니다. 보고서 서버는 무인 실행 계정을 가장하여 연결합니다.<br /><br /> 무인 실행 계정을 정의하지 않은 경우 보고서 서버에서 연결이 실패합니다. 계정을 정의하는 방법에 대한 자세한 내용은 [무인 실행 계정 구성&#40;SSRS 구성 관리자&#41;](../../reporting-services/install-windows/configure-the-unattended-execution-account-ssrs-configuration-manager.md)을 참조하세요.|  
+|자격 증명 사용 안 함|사용자 지정 .NET 데이터 공급자에 자격 증명 사용 안 함 옵션을 사용할 수 있습니다. 무인 실행 계정을 지정하면 연결 문자열에 따라 사용되는 자격 증명이 결정됩니다. 보고서 서버는 무인 실행 계정을 가장하여 연결합니다.<br /><br /> 무인 실행 계정을 정의하지 않은 경우 보고서 서버에서 연결이 실패합니다. 계정을 정의하는 방법에 대한 자세한 내용은 [무인 실행 계정 구성&#40;보고서 서버 구성 관리자&#41;](../../reporting-services/install-windows/configure-the-unattended-execution-account-ssrs-configuration-manager.md)을 참조하세요.|  
   
 ## <a name="connections-for-idbconnection"></a>IDbConnection에 대한 연결  
  <xref:Microsoft.ReportingServices.DataProcessing.IDbConnection>만 지원하는 사용자 지정 데이터 처리 확장 프로그램을 사용하는 경우 다음과 같은 방법으로 연결을 지정해야 합니다.  
@@ -76,7 +76,7 @@ ms.locfileid: "86455395"
 |자격 증명 사용 안 함|무인 실행 계정을 지정하면 연결 문자열에 따라 사용되는 자격 증명이 결정됩니다.<br /><br /> 무인 실행 계정을 정의하지 않은 경우 보고서 서버에서 연결이 실패합니다.|  
   
 ## <a name="see-also"></a>참고 항목  
- [무인 실행 계정 구성&#40;SSRS 구성 관리자&#41;](../../reporting-services/install-windows/configure-the-unattended-execution-account-ssrs-configuration-manager.md)   
+ [무인 실행 계정 구성&#40;보고서 서버 구성 관리자&#41;](../../reporting-services/install-windows/configure-the-unattended-execution-account-ssrs-configuration-manager.md)   
  [보고서 데이터 원본에 대한 자격 증명 및 연결 정보 지정](../../reporting-services/report-data/specify-credential-and-connection-information-for-report-data-sources.md)   
  [데이터 연결 문자열 만들기 - 보고서 작성기 및 SSRS](../../reporting-services/report-data/data-connections-data-sources-and-connection-strings-report-builder-and-ssrs.md)   
  [데이터 처리 확장 프로그램 구현](../../reporting-services/extensions/data-processing/implementing-a-data-processing-extension.md)   

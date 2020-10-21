@@ -11,12 +11,12 @@ ms.topic: conceptual
 ms.assetid: a8b16fdc-c748-49be-acf2-a6ac7432d16b
 author: David-Engel
 ms.author: v-daenge
-ms.openlocfilehash: 92e2e9093c5435512f853c9680640784f82e9db6
-ms.sourcegitcommit: 129f8574eba201eb6ade1f1620c6b80dfe63b331
+ms.openlocfilehash: 15130a351548ab5ad1d21ef2142b5b8c68db11b8
+ms.sourcegitcommit: 7eb80038c86acfef1d8e7bfd5f4e30e94aed3a75
 ms.translationtype: HT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 07/30/2020
-ms.locfileid: "87435208"
+ms.lasthandoff: 10/15/2020
+ms.locfileid: "92081872"
 ---
 # <a name="pdoprepare"></a>PDO::prepare
 [!INCLUDE[Driver_PHP_Download](../../includes/driver_php_download.md)]
@@ -73,7 +73,7 @@ array(PDO::ATTR_CURSOR => PDO::CURSOR_SCROLL, PDO::SQLSRV_ATTR_CURSOR_SCROLL_TYP
 unset($stmt);
 ```
 
-## <a name="example"></a>예제
+## <a name="forward-only-example"></a>정방향 전용 예제
 이 예제에서는 매개 변수 표식 및 정방향 전용 커서와 함께 PDO::prepare를 사용하는 방법을 보여 줍니다.
 
 ```
@@ -100,7 +100,7 @@ unset($stmt);
 ?>
 ```
 
-## <a name="example"></a>예제
+## <a name="static-cursor-example"></a>정적 커서 예제
 이 예제에서는 서버 쪽 정적 커서와 함께 PDO::prepare를 사용하는 방법을 보여 줍니다. 클라이언트 쪽 커서를 보여 주는 예제는 [커서 형식 &#40;PDO_SQLSRV 드라이버&#41;](../../connect/php/cursor-types-pdo-sqlsrv-driver.md)을 참조하세요.
 
 ```
@@ -140,7 +140,7 @@ print_r($row);
 ?>
 ```
 
-## <a name="example"></a>예제
+## <a name="targeted-example"></a>대상 지정 예제
 다음 두 코드 조각은 CHAR/VARCHAR 열을 대상으로 하는 데이터로 PDO::prepare를 사용하는 방법을 보여줍니다. PDO::prepare의 기본 인코딩은 UTF-8이므로 사용자는 `PDO::SQLSRV_ENCODING_SYSTEM` 옵션을 사용하여 암시적 전환을 방지할 수 있습니다.
 
 **옵션 1**
@@ -169,7 +169,7 @@ $statement->bindParam(':myVarcharValue', $p, PDO::PARAM_STR, 0, PDO::SQLSRV_ENCO
 
 <a name="emulate-prepare" />
 
-## <a name="example"></a>예제
+## <a name="prepare-example"></a>prepare 예제
 
 이 예제에서는 `PDO::ATTR_EMULATE_PREPARES`를 true로 설정하여 PDO::prepare를 사용하는 방법을 보여 줍니다.
 

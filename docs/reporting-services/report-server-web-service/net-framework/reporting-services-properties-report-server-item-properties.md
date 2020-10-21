@@ -14,12 +14,12 @@ helpviewer_keywords:
 ms.assetid: 21edec6d-9897-48fb-8c75-182305b1dbdb
 author: maggiesMSFT
 ms.author: maggies
-ms.openlocfilehash: c1cd71f267fb6e249116cda4ba9c54069e8ee570
-ms.sourcegitcommit: ff82f3260ff79ed860a7a58f54ff7f0594851e6b
+ms.openlocfilehash: b368b02ebfe37e63b4d02e6e69d6eed2bdb831ea
+ms.sourcegitcommit: fe59f8dc27fd633f5dfce54519d6f5dcea577f56
 ms.translationtype: HT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 03/29/2020
-ms.locfileid: "79509645"
+ms.lasthandoff: 10/09/2020
+ms.locfileid: "91934591"
 ---
 # <a name="reporting-services-properties---report-server-item-properties"></a>Reporting Services 속성 - 보고서 서버 항목 속성
   항목 속성은 보고서 서버 데이터베이스의 항목에 대한 특정 속성입니다. 이러한 항목에는 보고서, 링크된 보고서, 폴더, 리소스, 모델 및 데이터 원본이 포함됩니다.  
@@ -59,7 +59,7 @@ ms.locfileid: "79509645"
 |**언어**|보고서에서 사용된 언어입니다. 값은 IETF(Internet Engineering Task Force) RFC1766 사양에 정의된 언어 코드입니다. 첫 번째 부분은 기본 언어를 지정하며 2자로 구성되어 있습니다. 하이픈으로 구분된 두 번째 부분은 해당 언어의 변형 또는 방언을 지정합니다. 보고서 정의에서 **Body** 요소와 연관된 **Style** 요소에 값이 지정되지 않은 경우 기본값은 보고서 서버의 언어입니다.|  
 |**ReportProcessingTimeout**|개별 보고서에 대한 제한 시간(초)입니다. 이 값이 설정된 경우 지정된 시간이 경과하면 보고서 서버에서 보고서 처리를 중지합니다. 유효한 값은 **-1** 에서 **2**까지,**147**,**483**,**647**입니다. 값이 **-1**이면 보고서 처리 중 시간 제한으로 인한 중지가 발생하지 않습니다. 값이 **null**이면 시스템 속성 **ReportProcessingTimeout**의 값이 보고서 처리 제한 시간에 사용됩니다. 기본값은 **null**입니다. 자세한 내용은 [보고서 서버 시스템 속성](../../../reporting-services/report-server-web-service/net-framework/reporting-services-properties-report-server-system-properties.md)을 참조하세요.|  
 |**ExecutionDate**|보고서에 대해 마지막으로 보고서 스냅샷이 만들어진 날짜와 시간입니다.|  
-|**CanRunUnattended**|보고서를 일정에 따라 무인 모드로 실행할 수 있는지 여부를 나타내는 값입니다. 이 속성을 **true**로 설정하면 보고서 매개 변수에 대한 기본값이 정의되고 데이터 원본 자격 증명이 보고서와 함께 저장되거나 자격 증명 검색 옵션이 **없음**으로 설정됩니다. 이 속성을 **false**로 설정하면 보고서를 무인 모드로 실행하기 위한 필수 조건이 충족되지 않습니다. 자세한 내용은 [무인 실행 계정 구성&#40;SSRS 구성 관리자&#41;](../../../reporting-services/install-windows/configure-the-unattended-execution-account-ssrs-configuration-manager.md)을 참조하세요.|  
+|**CanRunUnattended**|보고서를 일정에 따라 무인 모드로 실행할 수 있는지 여부를 나타내는 값입니다. 이 속성을 **true**로 설정하면 보고서 매개 변수에 대한 기본값이 정의되고 데이터 원본 자격 증명이 보고서와 함께 저장되거나 자격 증명 검색 옵션이 **없음**으로 설정됩니다. 이 속성을 **false**로 설정하면 보고서를 무인 모드로 실행하기 위한 필수 조건이 충족되지 않습니다. 자세한 내용은 [무인 실행 계정 구성&#40;보고서 서버 구성 관리자&#41;](../../../reporting-services/install-windows/configure-the-unattended-execution-account-ssrs-configuration-manager.md)를 참조하세요.|  
 |**HasParameterDefaultValues**|보고서에 모든 보고서 매개 변수에 대해 설정된 유효한 기본값이 있는지 여부를 나타내는 값입니다. 이 값은 보고서에 보고서 매개 변수가 없는 경우에도 **true**입니다. 이 속성을 **false**로 설정하면 보고서 매개 변수 하나 이상에 유효한 기본값이 없습니다.|  
 |**HasDataSourceCredentials**|보고서와 연관된 모든 데이터 원본에 대해 설정된 자격 증명 검색 옵션이 **없음**인지 아니면 **저장소**인지를 나타내는 값입니다. 이 속성을 **false**로 설정하면 보고서와 연관된 데이터 원본 중 하나에 대해 설정된 자격 증명 검색 옵션이 **통합** 또는 **프롬프트**입니다.|  
 |**IsSnapshotExecution**|보고서가 스냅샷인지 여부를 나타내는 값입니다.|  

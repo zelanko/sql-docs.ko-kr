@@ -28,12 +28,12 @@ ms.reviewer: ''
 ms.custom: seo-lt-2019
 ms.date: 09/11/2020
 monikerRange: '>=aps-pdw-2016||=azuresqldb-current||=azure-sqldw-latest||>=sql-server-2016||=sqlallproducts-allversions||>=sql-server-linux-2017'
-ms.openlocfilehash: 018bce8226fc534694b230c18bb2f272787ec144
-ms.sourcegitcommit: 1126792200d3b26ad4c29be1f561cf36f2e82e13
+ms.openlocfilehash: ff7316307676c15f96579631bdf2dd6eb9612acc
+ms.sourcegitcommit: a5398f107599102af7c8cda815d8e5e9a367ce7e
 ms.translationtype: HT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 09/14/2020
-ms.locfileid: "90076768"
+ms.lasthandoff: 10/13/2020
+ms.locfileid: "92005949"
 ---
 # <a name="sqlcmd-utility"></a>sqlcmd 유틸리티
 
@@ -65,8 +65,8 @@ ms.locfileid: "90076768"
 빌드 번호: 15.0.2000.5<br>
 릴리스 날짜: 2020년 9월 11일
 
-신규 버전의 SQLCMD는 Azure AD 인증을 지원하며, 여기에는 SQL Database, SQL Data Warehouse, Always Encrypted 기능에 대한 다단계 인증(MFA) 지원이 포함됩니다.
-신규 버전의 BCP는 Azure AD 인증을 지원하며, 여기에는 SQL Database, SQL Data Warehouse 기능에 대한 다단계 인증(MFA) 지원이 포함됩니다.
+최신 버전의 SQLCMD는 Azure AD 인증을 지원하며, 여기에는 SQL Database, Azure Synapse Analytics, Always Encrypted 기능에 대한 MFA(Multi-Factor Authentication) 지원이 포함됩니다.
+최신 BCP는 Azure AD 인증을 지원하며, 여기에는 SQL Database 및 Azure Synapse Analytics에 대한 MFA(Multi-Factor Authentication) 지원이 포함됩니다.
 
 **시스템 요구 사항** Windows 10 , Windows 7, Windows 8, Windows 8.1, Windows Server 2008~2019.
 
@@ -102,6 +102,7 @@ sqlcmd
    -c batch_terminator
    -C (trust the server certificate)
    -d db_name
+   -D
    -e (echo input)
    -E (use trusted connection)
    -f codepage | i:codepage[,o:codepage] | o:codepage[,i:codepage]
@@ -148,17 +149,23 @@ sqlcmd
 
 **로그인 관련 옵션**
 
-**-A**
-
+**-A**  
 DAC(관리자 전용 연결)를 사용하여 SQL Server에 로그인합니다. 이 연결 유형은 서버 문제를 해결하는 데 사용됩니다. 이 연결은 DAC를 지원하는 서버 컴퓨터에서만 작동합니다. DAC를 사용할 수 없는 경우 **sqlcmd**는 오류 메시지를 생성하고 종료됩니다. DAC에 대한 자세한 내용은 [데이터베이스 관리자를 위한 진단 연결](../database-engine/configure-windows/diagnostic-connection-for-database-administrators.md)을 참조하세요. -A 옵션은 -G 옵션과 함께 지원되지 않습니다. -A를 사용하여 SQL Database에 연결하는 경우 SQL Server 관리자여야 합니다. Azure Active Directory 관리자는 DAC를 사용할 수 없습니다.
 
-**-C** 이 스위치는 클라이언트에서 유효성 검사 없이 암시적으로 서버 인증서를 신뢰하는 데 사용됩니다. 이 옵션은 ADO.NET 옵션 `TRUSTSERVERCERTIFICATE = true`와 동일합니다.  
+**-C**  
+이 스위치는 클라이언트에서 유효성 검사 없이 암시적으로 서버 인증서를 신뢰하는 데 사용됩니다. 이 옵션은 ADO.NET 옵션 `TRUSTSERVERCERTIFICATE = true`와 동일합니다.  
 
 **-d** _db_name_  
 **sqlcmd**를 시작할 때 `USE` *db_name* 문을 실행합니다. 이 옵션은 **sqlcmd** 스크립팅 변수 SQLCMDDBNAME을 설정합니다. 이 매개 변수는 초기 데이터베이스를 지정합니다. 기본값은 사용자 로그인의 기본 데이터베이스 속성입니다. 데이터베이스가 없을 경우 오류 메시지가 생성되고 **sqlcmd** 가 종료됩니다.  
 
+**-D**  
+-S에 제공된 서버 이름을 호스트 이름이 아닌 DSN으로 해석합니다. 자세한 내용은 [sqlcmd를 사용하여 연결](../connect/odbc/linux-mac/connecting-with-sqlcmd.md)에서 _sqlcmd 및 bcp에서 DSN 지원_을 참조하세요.
+
+> [!NOTE]
+> -D 옵션은 Linux 및 MacOS 클라이언트에서만 사용할 수 있습니다. Windows 클라이언트에서 이전에 now-obsolete 옵션으로 불렸던 이 옵션은 이제 제거되었으며 무시됩니다.
+
 **-l** _login_timeout_  
-서버에 연결을 시도할 때 ODBC 드라이버에 대한 **sqlcmd** 로그인 시간 제한(초)을 지정합니다. 이 옵션은 **sqlcmd** 스크립팅 변수 SQLCMDLOGINTIMEOUT을 설정합니다. 기본 **sqlcmd** 로그인 제한 시간은 8초입니다. **-G** 옵션을 사용하여 SQL 데이터베이스 또는 SQL 데이터 웨어하우스에 연결하고 Azure Active Directory를 사용하여 인증하는 경우 최소 30초의 시간 제한 값이 권장됩니다. 로그인 제한 시간은 0에서 65534 사이의 숫자여야 합니다. 입력한 값이 숫자가 아니거나 이 범위에 속하지 않을 경우 **sqlcmd** 는 오류 메시지를 생성합니다. 값을 0으로 설정하면 제한 시간이 없습니다.
+서버에 연결을 시도할 때 ODBC 드라이버에 대한 **sqlcmd** 로그인 시간 제한(초)을 지정합니다. 이 옵션은 **sqlcmd** 스크립팅 변수 SQLCMDLOGINTIMEOUT을 설정합니다. 기본 **sqlcmd** 로그인 제한 시간은 8초입니다. **-G** 옵션을 사용하여 SQL Database 또는 Azure Synapse Analytics에 연결하고 Azure Active Directory를 통해 인증하는 경우 최소 30초의 시간 제한 값이 권장됩니다. 로그인 제한 시간은 0에서 65534 사이의 숫자여야 합니다. 입력한 값이 숫자가 아니거나 이 범위에 속하지 않을 경우 **sqlcmd** 는 오류 메시지를 생성합니다. 값을 0으로 설정하면 제한 시간이 없습니다.
 
 **-E**  
 사용자 이름과 암호를 사용하는 대신 트러스트된 연결을 사용하여 SQL Server에 로그인합니다. **-E** 를 지정하지 않으면 **sqlcmd** 는 기본적으로 트러스트된 연결 옵션을 사용합니다.  
@@ -169,7 +176,7 @@ DAC(관리자 전용 연결)를 사용하여 SQL Server에 로그인합니다. �
 열 암호화 설정을 `Enabled`로 설정합니다. 자세한 내용은 [Always Encrypted](../relational-databases/security/encryption/always-encrypted-database-engine.md)를 참조하세요. Windows 인증서 저장소에 저장된 마스터 키만 지원됩니다. -g 스위치를 사용하려면 적어도 **sqlcmd** 버전 [13.1](https://go.microsoft.com/fwlink/?LinkID=825643)이 필요합니다. 사용 중인 버전을 확인하려면 `sqlcmd -?`를 실행하세요.
 
 **-G**  
-이 스위치는 Azure Active Directory 인증을 사용하여 사용자를 인증하도록 지정하기 위해 SQL 데이터 웨어하우스 또는 SQL 데이터베이스에 연결할 때 클라이언트에서 사용됩니다. 이 옵션은 **sqlcmd** 스크립팅 변수 SQLCMDUSEAAD = true를 설정합니다. -G 스위치를 사용하려면 적어도 **sqlcmd** 버전 [13.1](https://go.microsoft.com/fwlink/?LinkID=825643)이 필요합니다. 사용 중인 버전을 확인하려면 `sqlcmd -?`를 실행하세요. 자세한 내용은 [Azure Active Directory 인증을 사용하여 SQL Database 및 SQL Data Warehouse에 연결](/azure/azure-sql/database/authentication-aad-overview)을 참조하세요. -A 옵션은-G 옵션과 함께 지원되지 않습니다.
+이 스위치는 SQL Database 또는 Azure Synapse Analytics에 연결할 때 클라이언트에서 Azure Active Directory 인증을 통해 사용자가 인증되도록 지정하는 데 사용됩니다. 이 옵션은 **sqlcmd** 스크립팅 변수 SQLCMDUSEAAD = true를 설정합니다. -G 스위치를 사용하려면 적어도 **sqlcmd** 버전 [13.1](https://go.microsoft.com/fwlink/?LinkID=825643)이 필요합니다. 사용 중인 버전을 확인하려면 `sqlcmd -?`를 실행하세요. 자세한 내용은 [Azure Active Directory 인증을 사용하여 SQL Database 또는 Azure Synapse Analytics에 연결](/azure/azure-sql/database/authentication-aad-overview)을 참조하세요. -A 옵션은-G 옵션과 함께 지원되지 않습니다.
 
 > [!IMPORTANT]
 > `-G` 옵션은 Azure SQL Database 및 Azure Data Warehouse에만 적용됩니다.
@@ -209,7 +216,7 @@ DAC(관리자 전용 연결)를 사용하여 SQL Server에 로그인합니다. �
 
 - **Azure Active Directory 대화형**
 
-    사용자는 Azure SQL Database와 SQL Data Warehouse의 Azure AD 대화형 인증으로 다단계 인증을 지원하는 대화형 메서드를 사용할 수 있습니다. 자세한 내용은 [Active Directory 대화형 인증](../ssdt/azure-active-directory.md#active-directory-interactive-authentication)을 참조하세요. 
+    Azure SQL Database 및 Azure Synapse Analytics에 대한 Azure AD 대화형 인증을 통해 사용자는 다단계 인증을 지원하는 대화형 방법을 사용할 수 있습니다. 자세한 내용은 [Active Directory 대화형 인증](../ssdt/azure-active-directory.md#active-directory-interactive-authentication)을 참조하세요. 
 
    Azure AD 대화형에는 **sqlcmd** [버전 15.0.1000.34](#download-the-latest-version-of-sqlcmd-utility) 이상과 [ODBC 버전 17.2 이상](https://aka.ms/downloadmsodbcsql)이 필요합니다.  
 

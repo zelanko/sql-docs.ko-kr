@@ -9,17 +9,17 @@ author: dphansen
 ms.author: davidph
 ms.custom: seo-lt-2019
 monikerRange: '>=sql-server-2016||>=sql-server-linux-ver15||=sqlallproducts-allversions'
-ms.openlocfilehash: 878c83f76a0235a43bcc22bb65e10dfa9eceb1b1
-ms.sourcegitcommit: 9b41725d6db9957dd7928a3620fe4db41eb51c6e
+ms.openlocfilehash: 94ca6070ec0b4558ab907f6945ac57dc9bc9ab5f
+ms.sourcegitcommit: 9122251ab8bbd46ea3c699e741d6842c995195fa
 ms.translationtype: HT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 08/13/2020
-ms.locfileid: "88179655"
+ms.lasthandoff: 10/08/2020
+ms.locfileid: "91847373"
 ---
 # <a name="monitor-python-and-r-script-execution-using-custom-reports-in-sql-server-management-studio"></a>SQL Server Management Studio에서 사용자 지정 보고서를 사용하여 Python 및 R 스크립트 실행 모니터링
 [!INCLUDE [SQL Server 2016 and later](../../includes/applies-to-version/sqlserver2016.md)]
 
-SSMS(SQL Server Management Studio)의 사용자 지정 보고서를 사용하여 외부 스크립트(Python 및 R)의 실행, 사용된 리소스, 문제 진단 및 SQL Server Machine Learning Services의 성능 조정을 모니터링합니다.
+[SSMS(SQL Server Management Studio)](../../ssms/download-sql-server-management-studio-ssms.md)의 사용자 지정 보고서를 사용하여 외부 스크립트(Python 및 R) 실행과 사용된 리소스를 모니터링하고, 문제를 진단하고, [SQL Server Machine Learning Services](../sql-server-machine-learning-services.md)의 성능을 튜닝할 수 있습니다.
 
 이러한 보고서에서 다음과 같은 세부 정보를 볼 수 있습니다.
 

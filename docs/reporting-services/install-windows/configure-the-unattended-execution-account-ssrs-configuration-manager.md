@@ -17,14 +17,14 @@ helpviewer_keywords:
 ms.assetid: 4e50733e-bd8c-4bf6-8379-98b1531bb9ca
 author: maggiesMSFT
 ms.author: maggies
-ms.openlocfilehash: b09992c53a680e19bd5676e8944b2ddab8358296
-ms.sourcegitcommit: ff82f3260ff79ed860a7a58f54ff7f0594851e6b
+ms.openlocfilehash: 616397e2032ca5855f9213073f495f1f7ec163db
+ms.sourcegitcommit: fe59f8dc27fd633f5dfce54519d6f5dcea577f56
 ms.translationtype: HT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 03/29/2020
-ms.locfileid: "74866320"
+ms.lasthandoff: 10/09/2020
+ms.locfileid: "91933553"
 ---
-# <a name="configure-the-unattended-execution-account-ssrs-configuration-manager"></a>무인 실행 계정 구성(SSRS 구성 관리자)
+# <a name="configure-the-unattended-execution-account-report-server-configuration-manager"></a>무인 실행 계정 구성(보고서 서버 구성 관리자)
   [!INCLUDE[ssRSnoversion](../../includes/ssrsnoversion-md.md)] 에서는 무인 모드로 보고서를 처리하고 네트워크를 통해 연결 요청을 전송하는 데 사용되는 특수 계정을 제공합니다. 이 계정은 다음과 같은 방법으로 사용됩니다.  
   
 -   데이터베이스 인증을 사용하는 보고서에 대해 네트워크로 연결 요청을 전송하거나 인증을 요구 또는 사용하지 않는 외부 보고서 데이터 원본에 연결합니다. 자세한 내용은 [보고서 데이터 원본에 대한 자격 증명 및 연결 정보 지정](../../reporting-services/report-data/specify-credential-and-connection-information-for-report-data-sources.md)을 참조하세요.
@@ -41,7 +41,7 @@ ms.locfileid: "74866320"
   
  [!INCLUDE[ssRSnoversion](../../includes/ssrsnoversion-md.md)] 구성 도구 또는 **rsconfig** 유틸리티를 사용하여 계정을 지정할 수 있습니다. 무인 실행 계정을 구성하는 가장 쉬운 방법은 [!INCLUDE[ssRSnoversion](../../includes/ssrsnoversion-md.md)] 구성 도구를 실행하여 실행 계정 페이지에서 자격 증명을 지정하는 것입니다.  
   
-1.  [!INCLUDE[ssRSnoversion](../../includes/ssrsnoversion-md.md)] 구성 도구를 시작한 후 구성하려는 보고서 서버 인스턴스에 연결합니다. 자세한 내용은 [Reporting Services 구성 관리자&#40;기본 모드&#41;](../../reporting-services/install-windows/reporting-services-configuration-manager-native-mode.md)를 참조하세요.  
+1.  [!INCLUDE[ssRSnoversion](../../includes/ssrsnoversion-md.md)] 구성 도구를 시작한 후 구성하려는 보고서 서버 인스턴스에 연결합니다. 자세한 내용은 [보고서 서버 구성 관리자&#40;기본 모드&#41;](../../reporting-services/install-windows/reporting-services-configuration-manager-native-mode.md)를 참조하세요.  
   
 2.  실행 계정 페이지에서 **실행 계정 지정**을 선택합니다.  
   
@@ -56,7 +56,7 @@ ms.locfileid: "74866320"
   
 3.  다음 명령을 입력하여 로컬 보고서 서버 인스턴스에서 계정을 구성합니다.  
   
-     **rsconfig -e -u\<도메인/사용자 이름> -p\<암호>**  
+     **rsconfig -e -u\<domain/username> -p\<password>**  
   
  **rsconfig -e** 는 추가 인수를 지원합니다. 구문에 대한 자세한 내용 및 명령 예제를 보려면 [rsconfig 유틸리티&#40;SSRS&#41;](../../reporting-services/tools/rsconfig-utility-ssrs.md)을 참조하세요.
  
@@ -106,6 +106,6 @@ ms.locfileid: "74866320"
  계정 정보가 RSReportServer.config 파일에서 제거됩니다.  
   
 ## <a name="see-also"></a>참고 항목  
- [Reporting Services 구성 관리자(SSRS 기본 모드)](../../reporting-services/install-windows/reporting-services-configuration-manager-native-mode.md)  
+ [보고서 서버 구성 관리자(SSRS 기본 모드)](../../reporting-services/install-windows/reporting-services-configuration-manager-native-mode.md)  
   
   

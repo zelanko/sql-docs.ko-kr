@@ -8,13 +8,13 @@ author: markingmyname
 ms.author: maghan
 ms.reviewer: alayu, sstein
 ms.custom: seodec18
-ms.date: 09/24/2018
-ms.openlocfilehash: 0cec5d79b62307053c3733f805101dd4638ba94e
-ms.sourcegitcommit: dc8a30a4a27e15fc6671ca2674da9b7c637ec255
+ms.date: 09/24/2019
+ms.openlocfilehash: 7f032d870952cdadbde79dbf56f4c63ae351d6e9
+ms.sourcegitcommit: 7eb80038c86acfef1d8e7bfd5f4e30e94aed3a75
 ms.translationtype: HT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 08/21/2020
-ms.locfileid: "88746153"
+ms.lasthandoff: 10/15/2020
+ms.locfileid: "92081572"
 ---
 # <a name="source-control-in-azure-data-studio"></a>Azure Data Studio의 소스 제어
 
@@ -22,12 +22,12 @@ Azure Data Studio는 버전/소스 제어를 위해 Git를 지원합니다.
 
 ## <a name="git-support-in-azure-data-studio"></a>Azure Data Studio에서 Git 지원
 
-Azure Data Studio는 Git SCM(소스 제어 관리자)과 함께 제공되지만, 먼저 [Git(버전 2.0.0 이상)을 설치](https://git-scm.com/download)해야 이러한 기능을 사용할 수 있습니다. 
+Azure Data Studio는 Git SCM(소스 제어 관리자)과 함께 제공되지만, 먼저 [Git(버전 2.0.0 이상)을 설치](https://git-scm.com/download)해야 이러한 기능을 사용할 수 있습니다.
 
 ## <a name="open-an-existing-git-repository"></a>기존 Git 리포지토리 열기
 
 1. **파일** 메뉴에서 **폴더 열기...** 를 선택합니다.
-2. git에서 추적한 파일이 포함된 폴더로 이동한 다음, **폴더 선택**을 클릭합니다. 여기서 로컬 리포지토리의 하위 폴더를 선택해도 됩니다.
+2. git에서 추적한 파일이 포함된 폴더로 이동한 다음, **폴더 선택**을 선택합니다. 여기서 로컬 리포지토리의 하위 폴더를 선택해도 됩니다.
 
 ## <a name="initialize-a-new-git-repository"></a>새로운 git 리포지토리 초기화
 

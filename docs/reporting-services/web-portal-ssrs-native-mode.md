@@ -9,12 +9,12 @@ ms.topic: conceptual
 ms.assetid: 7349e626-6ed5-4d21-b05f-cf042ad9ad70
 author: maggiesMSFT
 ms.author: maggies
-ms.openlocfilehash: 29181b0830ad767c71e73c709aa7f3eee5a49190
-ms.sourcegitcommit: da88320c474c1c9124574f90d549c50ee3387b4c
+ms.openlocfilehash: 4592e5b2bc35da9c2887e0c2552dc33cd3cecd5e
+ms.sourcegitcommit: a41e1f4199785a2b8019a419a1f3dcdc15571044
 ms.translationtype: HT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 07/01/2020
-ms.locfileid: "85759793"
+ms.lasthandoff: 10/13/2020
+ms.locfileid: "91987393"
 ---
 # <a name="the-web-portal-of-a-report-server-ssrs-native-mode"></a>보고서 서버의 웹 포털(SSRS 기본 모드)
 
@@ -48,7 +48,7 @@ Reporting Services 보고서 서버의 웹 포털은 웹 기반 환경입니다.
 
 일부 웹 포털 기능은 지정된 버전의 [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)]에서만 사용할 수 있습니다. 자세한 내용은 [SQL Server 버전에서 지원하는 Reporting Services 기능](../reporting-services/reporting-services-features-supported-by-the-editions-of-sql-server-2016.md)을 참조하세요.
 
-새로 설치하는 경우 로컬 관리자에게만 내용 및 설정을 사용할 수 있는 권한이 부여됩니다. 다른 사용자에게 사용 권한을 부여하려면 로컬 관리자가 보고서 서버에 대한 액세스 권한을 제공하는 역할 할당을 만들어야 합니다. 사용자가 이후에 액세스할 수 있는 애플리케이션 페이지 및 태스크는 해당 사용자에 대한 역할 할당에 따라 달라집니다. 자세한 내용은 [사용자에게 보고서 서버에 대한 액세스 권한 부여](security/grant-user-access-to-a-report-server-report-manager.md)를 참조하세요.
+새로 설치하는 경우 로컬 관리자에게만 내용 및 설정을 사용할 수 있는 권한이 부여됩니다. 다른 사용자에게 사용 권한을 부여하려면 로컬 관리자가 보고서 서버에 대한 액세스 권한을 제공하는 역할 할당을 만들어야 합니다. 사용자가 이후에 액세스할 수 있는 애플리케이션 페이지 및 태스크는 해당 사용자에 대한 역할 할당에 따라 달라집니다. 자세한 내용은 [사용자에게 보고서 서버에 대한 액세스 권한 부여](./security/grant-user-access-to-a-report-server.md)를 참조하세요.
 
 > [!NOTE]
 > 서버가 실행 중인 로컬 컴퓨터에서 웹 포털을 탐색하는 경우 이 폴더를 볼 수 없다는 메시지가 표시될 수 있습니다. 이유는 UAC(Universal Access Control) 때문이거나 브라우저를 관리자로 실행하고 있지 않기 때문일 수 있습니다. Microsoft Edge는 관리자로 실행할 수 없습니다. Internet Explorer를 사용해야 합니다. 서버를 원격으로 탐색하거나 Internet Explorer를 관리자 자격으로 시작하고 웹 포털을 탐색할 수 있습니다. 웹 포털을 원격에서 사용하려는 경우 계정 내용 관리자에게 폴더에 권한을 부여해야 합니다.  
@@ -115,7 +115,7 @@ Power BI Desktop 보고서 및 Excel 통합 문서에 대한 권한을 업로드
 ## <a name="see-also"></a>참고 항목
 
 [SQL Server 모바일 보고서 게시자를 사용하여 모바일 보고서 만들기](../reporting-services/mobile-reports/create-mobile-reports-with-sql-server-mobile-report-publisher.md)  
-[URL 구성(SSRS 구성 관리자)](../reporting-services/install-windows/configure-a-url-ssrs-configuration-manager.md)  
+[URL 구성(보고서 서버 구성 관리자)](../reporting-services/install-windows/configure-a-url-ssrs-configuration-manager.md)  
 [Reporting Services 도구](../reporting-services/tools/reporting-services-tools.md)  
 [Reporting Services 브라우저 지원 계획](../reporting-services/browser-support-for-reporting-services-and-power-view.md)  
 [SQL Server 버전에서 지원하는 Reporting Services 기능](../reporting-services/reporting-services-features-supported-by-the-editions-of-sql-server-2016.md)  

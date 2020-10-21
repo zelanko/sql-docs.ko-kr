@@ -20,12 +20,12 @@ helpviewer_keywords:
 ms.assetid: 53f1318d-bd2d-4c08-b19f-c8b698b5b3d3
 author: maggiesMSFT
 ms.author: maggies
-ms.openlocfilehash: c3acdc15b2d5eaf5e8e38e0929757fd44157a148
-ms.sourcegitcommit: c8e1553ff3fdf295e8dc6ce30d1c454d6fde8088
+ms.openlocfilehash: a38fe4c1a8b627b5a45e30254f8eeac62f4452ad
+ms.sourcegitcommit: a41e1f4199785a2b8019a419a1f3dcdc15571044
 ms.translationtype: HT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 07/22/2020
-ms.locfileid: "86916270"
+ms.lasthandoff: 10/13/2020
+ms.locfileid: "91988139"
 ---
 # <a name="rskeymgmt-utility-ssrs"></a>rskeymgmt 유틸리티(SSRS)
   중요한 보고서 서버 데이터를 무단 액세스로부터 보호하는 데 사용할 대칭 키를 추출, 복원, 생성 및 삭제합니다. 이 유틸리티를 사용하여 수평적 스케일 아웃 배포에서 보고서 서버 인스턴스를 결합할 수도 있습니다. *보고서 서버 수평적 스케일 아웃 배포* 란 하나의 보고서 서버 데이터베이스를 공유하는 여러 보고서 서버 인스턴스를 말합니다.  
@@ -129,7 +129,7 @@ rskeymgmt -a -f a:\backupkey\keys -p <password>
 ```  
   
 #### <a name="deleting-encryption-keys-and-encrypted-content"></a>암호화 키 및 암호화된 내용 삭제  
- 이 예에서는 보고서 서버에 저장된 모든 암호화 키를 삭제하는 방법을 보여 줍니다. 보고서 서버 수평적 스케일 아웃 배포로 설치한 경우 이 배포에 포함된 모든 보고서 서버 인스턴스의 암호화 키가 삭제됩니다. 암호화 키를 삭제하면 보고서 서버 데이터베이스에서 암호화된 기존 값도 삭제됩니다. 암호화된 내용에 대한 자세한 내용은 [암호화된 보고서 서버 데이터 저장&#40;SSRS Configuration Manager&#41;](../../reporting-services/install-windows/ssrs-encryption-keys-store-encrypted-report-server-data.md)를 참조하세요.  
+ 이 예에서는 보고서 서버에 저장된 모든 암호화 키를 삭제하는 방법을 보여 줍니다. 보고서 서버 수평적 스케일 아웃 배포로 설치한 경우 이 배포에 포함된 모든 보고서 서버 인스턴스의 암호화 키가 삭제됩니다. 암호화 키를 삭제하면 보고서 서버 데이터베이스에서 암호화된 기존 값도 삭제됩니다. 암호화된 콘텐츠에 대한 자세한 내용은 [암호화된 보고서 서버 데이터 저장&#40;보고서 서버 구성 관리자&#41;](../../reporting-services/install-windows/ssrs-encryption-keys-store-encrypted-report-server-data.md)을 참조하세요.  
   
 ```  
 rskeymgmt -d  
@@ -171,12 +171,11 @@ rskeymgmt -r <installationID>
   
  **rskeymgmt** 유틸리티를 사용하여 설치하는 동안 또는 초기화하는 동안 정의되는 키 집합을 관리할 수 있습니다. 이 유틸리티는 원격 프로시저 호출(RPC) 엔드포인트를 통해 로컬 보고서 서버 Windows 서비스에 연결합니다. 이 유틸리티가 올바르게 작동하려면 보고서 서버 Windows 서비스가 실행 중이어야 합니다.  
   
- 암호화 키에 대한 자세한 내용은 [암호화 키 구성 및 관리&#40;SSRS Configuration Manager&#41;](../../reporting-services/install-windows/ssrs-encryption-keys-manage-encryption-keys.md) 및 [보고서 서버 초기화&#40;SSRS Configuration Manager&#41;](../../reporting-services/install-windows/ssrs-encryption-keys-initialize-a-report-server.md)를 참조하세요.  
+ 암호화 키에 대한 자세한 내용은 [암호화 키 구성 및 관리&#40;보고서 서버 구성 관리자&#41;](../../reporting-services/install-windows/ssrs-encryption-keys-manage-encryption-keys.md) 및 [보고서 서버 초기화&#40;보고서 서버 구성 관리자&#41;](../../reporting-services/install-windows/ssrs-encryption-keys-initialize-a-report-server.md)를 참조하세요.  
   
 ## <a name="see-also"></a>참고 항목  
- [확장 배포 - Reporting Services 기본 모드&#40;구성 관리자&#41;](https://msdn.microsoft.com/library/4df38294-6f9d-4b40-9f03-1f01c1f0700c)   
+ [확장 배포 - Reporting Services 기본 모드&#40;구성 관리자&#41;](/previous-versions/sql/sql-server-2016/ms181357(v=sql.130))   
  [Reporting Services 보고서 서버&#40;기본 모드&#41;](../../reporting-services/report-server/reporting-services-report-server-native-mode.md)   
  [보고서 서버 명령 프롬프트 유틸리티&#40;SSRS&#41;](../../reporting-services/tools/report-server-command-prompt-utilities-ssrs.md)   
- [암호화 키 구성 및 관리&#40;SSRS 구성 관리자&#41;](../../reporting-services/install-windows/ssrs-encryption-keys-manage-encryption-keys.md)  
-  
+ [암호화 키 구성 및 관리&#40;보고서 서버 구성 관리자&#41;](../../reporting-services/install-windows/ssrs-encryption-keys-manage-encryption-keys.md)  
   

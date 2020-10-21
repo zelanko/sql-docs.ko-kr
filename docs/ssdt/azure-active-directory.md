@@ -1,6 +1,6 @@
 ---
 title: SSDT의 Azure Active Directory
-description: SSDT(SQL Server Data Tools)에서 Azure SQL Database 및 Azure SQL Data Warehouse용으로 제공되는 Azure Active Directory 인증 방법에 대해 알아봅니다.
+description: SSDT(SQL Server Data Tools)에서 Azure SQL Database 및 Azure Synapse Analytics용으로 제공되는 Azure Active Directory 인증 방법에 대해 알아봅니다.
 ms.prod: sql
 ms.technology: ssdt
 ms.topic: conceptual
@@ -10,18 +10,18 @@ reviewer: ''
 ms.custom: seo-lt-2019
 ms.date: 10/28/2019
 monikerRange: = azuresqldb-current || = azure-sqldw-latest || = sqlallproducts-allversions
-ms.openlocfilehash: f35d9ad1cf571708e547924d75efc9522db21cc1
-ms.sourcegitcommit: 827ad02375793090fa8fee63cc372d130f11393f
+ms.openlocfilehash: cde082f95bc7ff150c263742450a69fa9c90e6b7
+ms.sourcegitcommit: a5398f107599102af7c8cda815d8e5e9a367ce7e
 ms.translationtype: HT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 09/04/2020
-ms.locfileid: "89480847"
+ms.lasthandoff: 10/13/2020
+ms.locfileid: "92005914"
 ---
 # <a name="azure-active-directory-support-in-sql-server-data-tools-ssdt"></a>SSDT(SQL Server Data Tools)의 Azure Active Directory 지원
 
 [!INCLUDE[appliesto-xx-asdb-asdb-xxx-md.md](../includes/appliesto-xx-asdb-asdw-xxx-md.md)]
 
-SSDT(SQL Server Data Tools)는 여러 [Azure AD(Azure Active Directory)](https://docs.microsoft.com/azure/active-directory/active-directory-whatis) 인증 방법을 제공합니다.
+SSDT(SQL Server Data Tools)는 여러 [Azure AD(Azure Active Directory)](/azure/active-directory/active-directory-whatis) 인증 방법을 제공합니다.
 
 Visual Studio에서 **보기** 메뉴에서 **SQL Server 개체 탐색기**를 열고 **SQL Server 추가**를 선택합니다.
 
@@ -32,7 +32,7 @@ Visual Studio에서 **보기** 메뉴에서 **SQL Server 개체 탐색기**를 �
 이 문서에서는 [Azure 클라우드](https://azure.microsoft.com/)에서 다음 *Azure SQL 제품* 목록에 대해 Azure AD를 설명합니다.
 
 - Azure SQL Database
-- Azure SQL Data Warehouse
+- Azure Synapse Analytics
 
 ## <a name="active-directory-password-authentication"></a>Active Directory 암호 인증
 
@@ -41,18 +41,18 @@ Visual Studio에서 **보기** 메뉴에서 **SQL Server 개체 탐색기**를 �
 - Azure와 페더레이션되지 않은 도메인에서 자격 증명을 사용하여 Windows에 로그온합니다.
 - Azure AD와 함께 Azure AD 인증을 사용합니다. 이는 초기 또는 클라이언트 도메인에 기반합니다.
 
-자세한 내용은 [Azure Active Directory 인증을 사용하여 SQL Database에 연결](https://docs.microsoft.com/azure/sql-database/sql-database-aad-authentication)을 참조하세요.  
+자세한 내용은 [Azure Active Directory 인증을 사용하여 SQL Database에 연결](/azure/sql-database/sql-database-aad-authentication)을 참조하세요.  
 
 ## <a name="active-directory-integrated-authentication"></a>Active Directory 통합 인증
 
-*Active Directory 통합 인증*은 Azure AD(Azure Active Directory)에서 ID를 사용하여 나열된 Azure SQL 제품에 연결하는 메커니즘입니다. 페더레이션된 도메인에서 Azure Active Directory 자격 증명을 사용하여 Windows에 로그인하는 경우 이 방법으로 연결합니다. 자세한 내용은 [Azure Active Directory 인증을 사용하여 SQL Database에 연결](https://docs.microsoft.com/azure/sql-database/sql-database-aad-authentication)을 참조하세요.
+*Active Directory 통합 인증*은 Azure AD(Azure Active Directory)에서 ID를 사용하여 나열된 Azure SQL 제품에 연결하는 메커니즘입니다. 페더레이션된 도메인에서 Azure Active Directory 자격 증명을 사용하여 Windows에 로그인하는 경우 이 방법으로 연결합니다. 자세한 내용은 [Azure Active Directory 인증을 사용하여 SQL Database에 연결](/azure/sql-database/sql-database-aad-authentication)을 참조하세요.
 
 ## <a name="active-directory-interactive-authentication"></a>Active Directory 대화형 인증
 
-*Active Directory 대화형 인증*은 SSDT 그러나 [.NET Framework 4.7.2](https://docs.microsoft.com/dotnet/api/?view=netframework-4.7.2) 이상 버전만 사용하여 나열된 Azure SQL 제품에 연결할 때 사용할 수 있습니다.
+*Active Directory 대화형 인증*은 SSDT 그러나 [.NET Framework 4.7.2](/dotnet/api/?view=netframework-4.7.2) 이상 버전만 사용하여 나열된 Azure SQL 제품에 연결할 때 사용할 수 있습니다.
 
 - [.NET Framework 모든 버전을 다운로드하고 설치합니다](https://www.microsoft.com/net/download/all).
-- [Visual Studio 2017 버전 15.6](https://docs.microsoft.com/visualstudio/releasenotes/vs2017-relnotes) 또는 이상 버전.
+- [Visual Studio 2017 버전 15.6](/visualstudio/releasenotes/vs2017-relnotes) 또는 이상 버전.
 
 #### <a name="multi-factor-authentication-mfa"></a>MFA(Multi-Factor Authentication)
 
@@ -86,9 +86,9 @@ MFA 방법을 지정하면 **사용자 이름**을 지정해야 하며 **암호*
 
 ## <a name="see-also"></a>참고 항목  
 
-[다단계 인증](https://docs.microsoft.com/azure/sql-database/sql-database-ssms-mfa-authentication)  
-[SQL Database에서 Azure Active Directory 인증 ](https://docs.microsoft.com/azure/sql-database/sql-database-aad-authentication-configure)  
+[다단계 인증](/azure/sql-database/sql-database-ssms-mfa-authentication)  
+[SQL Database에서 Azure Active Directory 인증 ](/azure/sql-database/sql-database-aad-authentication-configure)  
 [SSDT MSDN 포럼](https://social.msdn.microsoft.com/Forums/sqlserver/home?forum=ssdt)  
-[SSDT 팀 블로그](https://docs.microsoft.com/archive/blogs/ssdt/)  
-[DACFx API 참조](https://msdn.microsoft.com/library/dn645454.aspx)  
-[SSMS(SQL Server Management Studio) 다운로드](../ssms/download-sql-server-management-studio-ssms.md)  
+[SSDT 팀 블로그](/archive/blogs/ssdt/)  
+[DACFx API 참조](/previous-versions/sql/sql-server-2014/dn645454(v=sql.120))  
+[SSMS(SQL Server Management Studio) 다운로드](../ssms/download-sql-server-management-studio-ssms.md)

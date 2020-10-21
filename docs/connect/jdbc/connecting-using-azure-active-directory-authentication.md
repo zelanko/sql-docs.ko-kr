@@ -11,12 +11,12 @@ ms.topic: conceptual
 ms.assetid: 9c9d97be-de1d-412f-901d-5d9860c3df8c
 author: David-Engel
 ms.author: v-daenge
-ms.openlocfilehash: 94950f346ddaf4264926438ca107c49350577b27
-ms.sourcegitcommit: c7f40918dc3ecdb0ed2ef5c237a3996cb4cd268d
+ms.openlocfilehash: cf829dfabdd291367990ef21280208ac0741154c
+ms.sourcegitcommit: 7eb80038c86acfef1d8e7bfd5f4e30e94aed3a75
 ms.translationtype: HT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 10/05/2020
-ms.locfileid: "91725474"
+ms.lasthandoff: 10/15/2020
+ms.locfileid: "92081312"
 ---
 # <a name="connecting-using-azure-active-directory-authentication"></a>Azure Active Directory 인증을 사용하여 연결
 
@@ -31,7 +31,7 @@ Microsoft JDBC Driver for SQL Server에서 Azure Active Directory 인증을 지�
     * **ActiveDirectoryMSI**
         * 드라이버 버전 **v7.2**부터 지원되며, `authentication=ActiveDirectoryMSI`를 사용하여 "ID" 지원이 사용하도록 설정된 Azure 리소스 내부로부터 Azure SQL Database/Data Warehouse에 연결할 수 있습니다. 필요에 따라 이 인증 모드와 함께 연결/데이터 원본 속성에 **msiClientId**를 지정할 수도 있습니다. 여기에는 연결 설정을 위한 **accessToken**을 획득하는 데 사용할 관리 ID의 클라이언트 ID가 포함되어야 합니다.
     * **ActiveDirectoryIntegrated**
-        * 드라이버 버전 **v6.0**부터 지원되며, `authentication=ActiveDirectoryIntegrated`를 사용하여 통합 인증을 통해 Azure SQL Database/Data Warehouse에 연결할 수 있습니다. 이 인증 모드를 사용하려면 온-프레미스 ADFS(Active Directory Federation Services)를 클라우드의 Azure Active Directory와 페더레이션해야 합니다. 설정되면 네이티브 라이브러리 ‘mssql-jdbc_auth-\<version>-\<arch>.dll’을 Windows OS의 애플리케이션 클래스 경로에 추가하거나 플랫폼 간 인증 지원을 위한 Kerberos 티켓을 설정하여 연결할 수 있습니다. 도메인 가입 컴퓨터에 로그인하는 경우 자격 증명을 묻는 메시지가 표시되지 않고 Azure SQL Database/SQL Data Warehouse에 액세스할 수 있습니다.
+        * 드라이버 버전 **v6.0**부터 지원되며, `authentication=ActiveDirectoryIntegrated`를 사용하여 통합 인증을 통해 Azure SQL Database/Data Warehouse에 연결할 수 있습니다. 이 인증 모드를 사용하려면 온-프레미스 ADFS(Active Directory Federation Services)를 클라우드의 Azure Active Directory와 페더레이션해야 합니다. 설정되면 네이티브 라이브러리 ‘mssql-jdbc_auth-\<version>-\<arch>.dll’을 Windows OS의 애플리케이션 클래스 경로에 추가하거나 플랫폼 간 인증 지원을 위한 Kerberos 티켓을 설정하여 연결할 수 있습니다. 도메인 가입 머신에 로그인한 경우 자격 증명을 제공하지 않고도 Azure SQL Database/Azure Synapse Analytics에 액세스할 수 있습니다.
     * **ActiveDirectoryPassword**
         * 드라이버 버전 **v6.0**부터 지원되며, `authentication=ActiveDirectoryPassword`를 사용하여 Azure AD 사용자 이름 및 암호를 통해 Azure SQL Database/Data Warehouse에 연결할 수 있습니다.
     * **SqlPassword**
@@ -286,8 +286,8 @@ You have successfully logged on as: <your user name>
     11. "키" 섹션에서 이름 필드를 입력하고 키의 기간을 선택한 다음 구성을 저장하여 키를 만듭니다. 값 필드는 비워 둡니다. 저장하면 값 필드가 자동으로 채워집니다. 생성된 값을 복사합니다. 클라이언트 비밀입니다.
     12. 왼쪽 패널에서 Azure Active Directory를 클릭합니다. "앱 등록"에서 "엔드포인트" 탭을 찾습니다. "OATH 2.0 토큰 엔드포인트"에서 URL을 복사합니다. 이것이 STS URL입니다.
     
-    ![JDBC_AAD_Token](media/jdbc_aad_token.png)  
-2. Azure SQL Server의 사용자 데이터베이스에 Azure Active Directory 관리자로 로그인하고 T-SQL 명령을 사용하여 애플리케이션 보안 주체에 대해 포함된 데이터베이스 사용자를 프로비전합니다. Azure Active Directory 관리자 및 포함된 데이터베이스 사용자를 만드는 방법에 대한 자세한 내용은 [Azure Active Directory 인증을 사용하여 SQL Database에 또는 SQL Data Warehouse에 연결](/azure/azure-sql/database/authentication-aad-overview)을 참조하세요.
+    ![Azure Portal 앱 등록 엔드포인트 - STS URL](media/jdbc_aad_token.png)  
+2. Azure SQL Server의 사용자 데이터베이스에 Azure Active Directory 관리자로 로그인하고 T-SQL 명령을 사용하여 애플리케이션 보안 주체에 대해 포함된 데이터베이스 사용자를 프로비전합니다. Azure Active Directory 관리자 및 포함된 데이터베이스 사용자를 만드는 방법에 대한 자세한 내용은 [Azure Active Directory 인증을 사용하여 SQL Database에 또는 Azure Synapse Analytics에 연결](/azure/azure-sql/database/authentication-aad-overview)을 참조하세요.
 
     ```
     CREATE USER [mytokentest] FROM EXTERNAL PROVIDER

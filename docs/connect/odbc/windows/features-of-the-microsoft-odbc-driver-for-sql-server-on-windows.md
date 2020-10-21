@@ -11,12 +11,12 @@ ms.topic: conceptual
 ms.assetid: 76326eeb-1144-4b9f-85db-50524c655d30
 author: v-makouz
 ms.author: v-daenge
-ms.openlocfilehash: 4a692483bc07ee6de0aa2a6793790ecf336f1f0a
-ms.sourcegitcommit: 37a3e2c022c578fc3a54ebee66d9957ff7476922
+ms.openlocfilehash: 5fc07a171e42338ca76d51d66c04af187cb6beda
+ms.sourcegitcommit: a5398f107599102af7c8cda815d8e5e9a367ce7e
 ms.translationtype: HT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 05/07/2020
-ms.locfileid: "82922089"
+ms.lasthandoff: 10/13/2020
+ms.locfileid: "92005911"
 ---
 # <a name="features-of-the-microsoft-odbc-driver-for-sql-server-on-windows"></a>Windows 기반 Microsoft ODBC Driver for SQL Server의 기능
 [!INCLUDE[Driver_ODBC_Download](../../../includes/driver_odbc_download.md)]
@@ -42,7 +42,7 @@ ODBC Driver 13.1 for SQL Server에는 이전 버전(11)의 모든 기능이 포�
   
 상시 암호화를 사용하면 클라이언트가 클라이언트 애플리케이션의 중요한 데이터를 암호화하고 암호화 키를 SQL Server에 표시하지 않을 수 있습니다. 클라이언트 컴퓨터에 설치된 상시 암호화 지원 드라이버가 SQL Server 클라이언트 애플리케이션의 중요한 데이터를 자동으로 암호화하고 암호 해독합니다. 드라이버는 데이터를 SQL Server로 전달하기 전에 중요한 열의 데이터를 암호화하고 애플리케이션에 대한 의미 체계가 유지되도록 자동으로 쿼리를 다시 작성합니다. 마찬가지로, 드라이버는 쿼리 결과에 포함되고 암호화된 데이터베이스 열에 저장된 데이터의 암호를 투명하게 해독합니다. 자세한 내용은 [상시 암호화와 ODBC 드라이버 사용](../../../connect/odbc/using-always-encrypted-with-the-odbc-driver.md)을 참조하세요.
  
-Azure Active Directory를 통해 사용자, DBA 및 애플리케이션 프로그래머는 Azure AD(Azure Active Directory)의 ID를 사용하여 Microsoft Azure SQL Database 및 Microsoft SQL Server 2016에 연결하는 메커니즘으로 Azure Active Directory 인증을 사용할 수 있습니다. 자세한 내용은 [ODBC 드라이버에서 Azure Active Directory 사용](../using-azure-active-directory.md) 및 [Azure Active Directory 인증을 사용하여 SQL Database 또는 SQL Data Warehouse에 연결](/azure/sql-database/sql-database-aad-authentication)을 참조하세요.   
+Azure Active Directory를 통해 사용자, DBA 및 애플리케이션 프로그래머는 Azure AD(Azure Active Directory)의 ID를 사용하여 Microsoft Azure SQL Database 및 Microsoft SQL Server 2016에 연결하는 메커니즘으로 Azure Active Directory 인증을 사용할 수 있습니다. 자세한 내용은 [ODBC 드라이버와 함께 Azure Active Directory 사용](../using-azure-active-directory.md) 및 [Azure Active Directory 인증을 사용하여 SQL Database 또는 Azure Synapse Analytics에 연결](/azure/sql-database/sql-database-aad-authentication)을 참조하세요.   
   
 ## <a name="microsoft-odbc-driver-11-for-sql-server-on-windows"></a>Windows의 Microsoft ODBC Driver 11 for SQL Server  
 

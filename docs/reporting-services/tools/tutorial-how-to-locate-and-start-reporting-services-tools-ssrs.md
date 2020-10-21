@@ -20,18 +20,18 @@ helpviewer_keywords:
 ms.assetid: 51ad69d8-fe92-4662-a7cd-d235692f0c03
 author: maggiesMSFT
 ms.author: maggies
-ms.openlocfilehash: f90a0f31355b5225533728efb25dfb5f6c96de16
-ms.sourcegitcommit: 6c2232c4d2c1ce5710296ce97b909f5ed9787f66
+ms.openlocfilehash: 22f5064c4d861c3f10f88ce4ff1a5727f545fb72
+ms.sourcegitcommit: fe59f8dc27fd633f5dfce54519d6f5dcea577f56
 ms.translationtype: HT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 06/05/2020
-ms.locfileid: "84462169"
+ms.lasthandoff: 10/09/2020
+ms.locfileid: "91934964"
 ---
 # <a name="tutorial-how-to-locate-and-start-reporting-services-tools-ssrs"></a>자습서: Reporting Services 도구 찾기 및 시작 방법(SSRS)
 
 이 자습서에서는 보고서 서버를 구성하고, 보고서 서버 콘텐츠 및 작업을 관리하고, 페이지를 매긴 보고서 및 모바일 [!INCLUDE[ssRSnoversion](../../includes/ssrsnoversion-md.md)] 보고서를 만들어 게시하는 데 사용되는 도구를 소개합니다. 도구 사용법을 이미 잘 알고 있다면 [!INCLUDE[ssRSnoversion](../../includes/ssrsnoversion-md.md)]사용을 위한 기술을 배울 수 있는 다른 자습서로 이동할 수 있습니다. 다른 자습서는 [Reporting Services&#40;SSRS&#41; 자습서](../../reporting-services/reporting-services-tutorials-ssrs.md)사용을 위한 기술을 배울 수 있는 다른 자습서로 이동할 수 있습니다.
 
-## <a name="reporting-services-configuration-manager-native-mode"></a><a name="bkmk_configuration_manager"></a> Reporting Services 구성 관리자(기본 모드)
+## <a name="report-server-configuration-manager-native-mode"></a><a name="bkmk_configuration_manager"></a> 보고서 서버 구성 관리자(기본 모드)
 기본 모드 구성 관리자를 사용하여 다음 작업을 완료합니다.
 
 - 서비스 계정을 지정합니다.
@@ -43,15 +43,15 @@ ms.locfileid: "84462169"
 
 **설치:** [!INCLUDE[ssRSnoversion](../../includes/ssrsnoversion-md.md)] 구성 관리자는 [!INCLUDE[ssRSnoversion](../../includes/ssrsnoversion-md.md)] 기본 모드를 설치할 때 함께 설치됩니다. 자세한 내용은 [Reporting Services 기본 모드 보고서 서버 설치](../../reporting-services/install-windows/install-reporting-services-native-mode-report-server.md)를 참조하세요.
 
-### <a name="to-start-the-reporting-services-configuration-manager"></a>Reporting Services 구성 관리자를 시작하려면
+### <a name="to-start-the-report-server-configuration-manager"></a>보고서 서버 구성 관리자를 시작하려면 다음을 수행합니다.
 
-1. Windows 시작 화면에서 **reporting** 을 입력하고 **앱** 검색 결과에서 **Reporting Services 구성 관리자**를 클릭합니다.
+1. Windows 시작 화면에서 **reporting**을 입력하고 **앱** 검색 결과에서 **보고서 서버 구성 관리자**를 클릭합니다.
 
-    ![Reporting Services 구성 관리자 시작](../../reporting-services/tools/media/bi-ssrs-configmanager-win8-startscreen.gif "Reporting Services 구성 관리자 시작")
+    ![시작 시의 보고서 서버 구성 관리자](../../reporting-services/tools/media/bi-ssrs-configmanager-win8-startscreen.gif "시작 시의 보고서 서버 구성 관리자")
 
     **Or**
 
-    **시작**, **프로그램**, [!INCLUDE[ssCurrentUI](../../includes/sscurrentui-md.md)], **구성 도구**를 차례로 클릭한 다음 **Reporting Services 구성 관리자**를 클릭합니다.
+    **시작**, **프로그램**, [!INCLUDE[ssCurrentUI](../../includes/sscurrentui-md.md)], **구성 도구**, **보고서 서버 구성 관리자**를 차례로 클릭합니다.
 
     구성할 보고서 서버 인스턴스를 선택할 수 있도록 **보고서 서버 설치 인스턴스 선택** 대화 상자가 나타납니다.
 
@@ -67,7 +67,7 @@ ms.locfileid: "84462169"
 
     ![Reporting Services 구성 도구](../../reporting-services/tools/media/rs-ui-reportserverconfigkatmai.png "Reporting Services 구성 도구")
 
- **다음 단계:** [보고서 서버 구성 및 관리&#40;SSRS 기본 모드&#41;](../../reporting-services/report-server/configure-and-administer-a-report-server-ssrs-native-mode.md) 및 [Reporting Services 구성 관리자&#40;기본 모드&#41;](../../reporting-services/install-windows/reporting-services-configuration-manager-native-mode.md).
+ **다음 단계:** [보고서 서버 구성 및 관리&#40;SSRS 기본 모드&#41;](../../reporting-services/report-server/configure-and-administer-a-report-server-ssrs-native-mode.md) 및 [보고서 서버 구성 관리자&#40;기본 모드&#41;](../../reporting-services/install-windows/reporting-services-configuration-manager-native-mode.md)
 
 ## <a name="web-portal-native-mode"></a>웹 포털(기본 모드)
 
@@ -81,7 +81,7 @@ ms.locfileid: "84462169"
 
 1. 브라우저를 엽니다. 지원되는 브라우저 및 브라우저 버전에 대한 자세한 내용은 [Reporting Services 및 파워 뷰에 대한 브라우저 지원](../../reporting-services/browser-support-for-reporting-services-and-power-view.md)을 참조하세요.
 
-2. 웹 브라우저의 주소 표시줄에 웹 포털 URL을 입력합니다. 기본적으로 이 URL은 `https://<serverName>/reports`사용을 위한 기술을 배울 수 있는 다른 자습서로 이동할 수 있습니다. Reporting Services 구성 도구를 사용하여 서버 이름과 URL을 확인할 수 있습니다. [!INCLUDE[ssRSnoversion](../../includes/ssrsnoversion-md.md)]에서 사용되는 URL에 대한 자세한 내용은 [보고서 서버 URL 구성&#40;SSRS 구성 관리자&#41;](../../reporting-services/install-windows/configure-report-server-urls-ssrs-configuration-manager.md)를 참조하세요.
+2. 웹 브라우저의 주소 표시줄에 웹 포털 URL을 입력합니다. 기본적으로 이 URL은 `https://<serverName>/reports`사용을 위한 기술을 배울 수 있는 다른 자습서로 이동할 수 있습니다. Reporting Services 구성 도구를 사용하여 서버 이름과 URL을 확인할 수 있습니다. [!INCLUDE[ssRSnoversion](../../includes/ssrsnoversion-md.md)]에서 사용되는 URL에 대한 자세한 내용은 [보고서 서버 URL 구성&#40;보고서 서버 구성 관리자&#41;](../../reporting-services/install-windows/configure-report-server-urls-ssrs-configuration-manager.md)을 참조하세요.
 
 3. 웹 포털이 브라우저 창에서 열립니다. 시작 페이지는 홈 폴더입니다. 사용 권한에 따라 추가 폴더, 보고서에 대한 하이퍼링크 및 시작 페이지 내의 리소스 파일을 볼 수 있습니다. 또한 도구 모음에서 추가적인 단추와 명령을 볼 수 있습니다.
 

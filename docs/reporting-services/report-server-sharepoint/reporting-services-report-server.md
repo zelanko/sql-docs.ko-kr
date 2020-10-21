@@ -8,12 +8,12 @@ ms.technology: report-server-sharepoint
 ms.topic: conceptual
 author: maggiesMSFT
 ms.author: maggies
-ms.openlocfilehash: 2d91801bd8fa23cdb14112c98af6584d9a7b9250
-ms.sourcegitcommit: e8f6c51d4702c0046aec1394109bc0503ca182f0
+ms.openlocfilehash: c5d469cdf48a6c03a332a370e4c2b173ae7d18d1
+ms.sourcegitcommit: fe59f8dc27fd633f5dfce54519d6f5dcea577f56
 ms.translationtype: HT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 08/07/2020
-ms.locfileid: "87934255"
+ms.lasthandoff: 10/09/2020
+ms.locfileid: "91934678"
 ---
 # <a name="comparing-native-and-sharepoint-reporting-services-report-servers"></a>기본 및 SharePoint Reporting Services 보고서 서버 비교
 
@@ -40,7 +40,7 @@ Reporting Services 보고서 서버는 기본 모드 또는 SharePoint 모드 �
   
  Reporting Services 보고서 서버에서는 보고서 서버 인스턴스에 대해 다음 두 가지 배포 모드가 지원됩니다.  
   
--   **기본 모드**(기본 모드와 SharePoint 웹 파트 포함): 보고서 서버가 Reporting Services 구성 요소를 통해 모든 처리 및 관리 기능을 배타적으로 제공하는 애플리케이션 서버로 실행됩니다. Reporting Services 구성 관리자 및 SQL Server Management Studio로 기본 모드 보고서 서버를 구성합니다.  
+-   **기본 모드**(기본 모드와 SharePoint 웹 파트 포함): 보고서 서버가 Reporting Services 구성 요소를 통해 모든 처리 및 관리 기능을 배타적으로 제공하는 애플리케이션 서버로 실행됩니다. 보고서 서버 구성 관리자 및 SQL Server Management Studio를 사용하여 기본 모드 보고서 서버를 구성합니다.  
   
 -   **SharePoint 모드**: 보고서 서버가 SharePoint 서버 팜의 일부로 설치됩니다.  PowerShell 명령 또는 SharePoint 콘텐츠 관리 페이지를 사용하여 SharePoint 모드를 배포 및 구성합니다.  
   
@@ -137,8 +137,8 @@ Reporting Services 보고서 서버는 기본 모드 또는 SharePoint 모드 �
   
 |Task|링크|  
 |----------|----------|  
-|하드웨어 및 소프트웨어 요구 사항을 검토합니다.|[Hardware and Software Requirements for Reporting Services in SharePoint Mode](https://msdn.microsoft.com/library/ed91877d-4f74-4266-a932-b824b4810c99)입니다.|  
-|SharePoint 모드로 Reporting Services를 설치합니다.|[SharePoint 2010용 Reporting Services SharePoint 모드 설치](https://docs.microsoft.com/sql/reporting-services/install-windows/install-the-first-report-server-in-sharepoint-mode)|  
+|하드웨어 및 소프트웨어 요구 사항을 검토합니다.|[Hardware and Software Requirements for Reporting Services in SharePoint Mode](/previous-versions/sql/sql-server-2016/jj714188(v=sql.130))입니다.|  
+|SharePoint 모드로 Reporting Services를 설치합니다.|[SharePoint 2010용 Reporting Services SharePoint 모드 설치](../install-windows/install-the-first-report-server-in-sharepoint-mode.md)|  
 |보고서 서버 웹 서비스 및 Windows 서비스에 대한 메모리 설정을 튜닝하는 방법에 대해 설명합니다.|[보고서 서버 애플리케이션을 위한 사용 가능한 메모리 구성](../../reporting-services/report-server/configure-available-memory-for-report-server-applications.md)|  
 |원격 관리를 위해 보고서 서버를 구성하는 권장 단계에 대해 설명합니다.|[원격 관리를 위한 보고서 서버 구성](../../reporting-services/report-server/configure-a-report-server-for-remote-administration.md)|  
 |기본 보고서 서버 인스턴스에서 **내 보고서** 의 가용성을 구성하는 방법에 대한 지침을 제공합니다.|[내 보고서 사용 및 사용 안 함 설정](../../reporting-services/report-server/enable-and-disable-my-reports.md)|  

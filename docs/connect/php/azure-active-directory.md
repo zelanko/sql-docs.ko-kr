@@ -11,17 +11,17 @@ helpviewer_keywords:
 - azure active directory, authentication, access token
 author: David-Engel
 ms.author: v-daenge
-ms.openlocfilehash: 7b0d644d362ad4105c4e0b4f0db8d50c92a7e8b1
-ms.sourcegitcommit: c7f40918dc3ecdb0ed2ef5c237a3996cb4cd268d
+ms.openlocfilehash: f7abb90d32f93975c9a984670ca450dc791a46ae
+ms.sourcegitcommit: a5398f107599102af7c8cda815d8e5e9a367ce7e
 ms.translationtype: HT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 10/05/2020
-ms.locfileid: "91726894"
+ms.lasthandoff: 10/13/2020
+ms.locfileid: "92004562"
 ---
 # <a name="connect-using-azure-active-directory-authentication"></a>Azure Active Directory 인증을 사용하여 연결
 [!INCLUDE[Driver_PHP_Download](../../includes/driver_php_download.md)]
 
-[Azure AD](/azure/active-directory/active-directory-whatis)(Azure Active Directory)는 [SQL Server 인증](how-to-connect-using-sql-server-authentication.md) 대신 사용 가능한 중앙 사용자 ID 관리 기술입니다. Azure AD는 Azure AD의 페더레이션 ID로 사용자 이름과 암호, Windows 통합 인증, 또는 Azure AD 액세스 토큰을 사용하여 Microsoft Azure SQL Database 및 SQL Data Warehouse에 대한 연결을 허용합니다. SQL Server의 PHP 드라이버는 이 기능을 부분적으로 지원합니다.
+[Azure AD](/azure/active-directory/active-directory-whatis)(Azure Active Directory)는 [SQL Server 인증](how-to-connect-using-sql-server-authentication.md) 대신 사용 가능한 중앙 사용자 ID 관리 기술입니다. Azure AD는 사용자 이름과 암호를 사용하는 Azure AD의 페더레이션 ID, Windows 통합 인증 또는 Azure AD 액세스 토큰으로 Microsoft Azure SQL Database 및 Azure Synapse Analytics에 연결할 수 있도록 허용합니다. SQL Server의 PHP 드라이버는 이 기능을 부분적으로 지원합니다.
 
 Azure AD를 사용하려면 다음 표에 나와 있는 것처럼 **인증** 또는 **AccessToken** 키워드를 사용합니다(함께 사용할 수 없음). 자세한 기술 정보는 [ODBC 드라이버에서 Azure Active Directory 사용](../odbc/using-azure-active-directory.md)을 참조하세요.
 

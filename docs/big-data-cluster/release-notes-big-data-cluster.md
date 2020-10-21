@@ -9,12 +9,12 @@ ms.date: 10/01/2020
 ms.topic: conceptual
 ms.prod: sql
 ms.technology: big-data-cluster
-ms.openlocfilehash: 4217e2be765e29fe58ff423be8632f7e18e1b2eb
-ms.sourcegitcommit: 32135463a8494d9ed1600a58f51819359e3c09dc
+ms.openlocfilehash: 28cfd7e9a78646527bb8c0508535a1475159e35c
+ms.sourcegitcommit: 783b35f6478006d654491cb52f6edf108acf2482
 ms.translationtype: HT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 10/08/2020
-ms.locfileid: "91834517"
+ms.lasthandoff: 10/09/2020
+ms.locfileid: "91891083"
 ---
 # <a name="sql-server-2019-big-data-clusters-release-notes"></a>SQL Server 2019 빅 데이터 클러스터 릴리스 정보
 
@@ -93,7 +93,7 @@ SQL Server 2019의 CU6(누적 업데이트 6) 릴리스입니다.
 이 릴리스에는 사소한 수정과 향상된 기능이 포함되어 있습니다. 다음 문서에는 이러한 업데이트와 관련된 정보가 포함되어 있습니다.
 
 - [Active Directory 모드에서 빅 데이터 클러스터 액세스 관리](manage-user-access.md)
-- [Active Directory 모드에서 [!INCLUDE[big-data-clusters-2019](../includes/ssbigdataclusters-ss-nover.md)] 배포](deploy-active-directory.md)
+- [Active Directory 모드에서 [!INCLUDE[big-data-clusters-2019](../includes/ssbigdataclusters-ss-nover.md)] 배포](active-directory-deploy.md)
 - [고가용성을 사용하여 SQL Server 빅 데이터 클러스터 배포](deployment-high-availability.md)
 - [SQL Server 빅 데이터 클러스터 구성](configure-cluster.md)
 - [빅 데이터 클러스터에서 Apache Spark 및 Apache Hadoop 구성](configure-spark-hdfs.md)
@@ -175,11 +175,11 @@ SQL Server 2019 GDR1(일반 배포 릴리스 1) - [!INCLUDE[big-data-clusters-20
 
 - **영향을 받는 릴리스**: 현재 누적 업데이트를 통해
 
-- **문제 및 고객에게 미치는 영향**: 업그레이드하는 동안 sparkhead에서 404 오류를 반환합니다.
+- **문제 및 고객에게 미치는 영향**: 업그레이드하는 동안 `sparkhead`에서 404 오류를 반환합니다.
 
 - **해결 방법**: BDC를 업그레이드하기 전에 활성 Livy 세션 또는 일괄 처리 작업이 없는지 확인합니다. 이 문제를 방지하려면 [지원되는 릴리스에서 업그레이드](deployment-upgrade.md#upgrade-from-supported-release)의 지침을 따르세요. 
 
-   업그레이드 프로세스 중에 Livy에서 404 오류를 반환하는 경우 두 sparkhead 노드 모두에서 Livy 서버를 다시 시작합니다. 예를 들어:
+   업그레이드 프로세스 중에 Livy에서 404 오류를 반환하는 경우 두 `sparkhead` 노드에서 모두 Livy 서버를 다시 시작합니다. 예를 들어:
 
    ```console
    kubectl -n <clustername> exec -it sparkhead-0/sparkhead-1 -c hadoop-livy-sparkhistory -- exec supervisorctl restart livy

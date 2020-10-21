@@ -18,12 +18,12 @@ helpviewer_keywords:
 ms.assetid: 4ce2df2c-083a-4a4d-a1e2-e866e63707d5
 author: David-Engel
 ms.author: v-daenge
-ms.openlocfilehash: 1e9b1d3357fe25ffd65492ba21b5dd74c819a66b
-ms.sourcegitcommit: e700497f962e4c2274df16d9e651059b42ff1a10
+ms.openlocfilehash: 1bcc9b0f7303a24bdd02d959e9b30044f3da26f2
+ms.sourcegitcommit: 7eb80038c86acfef1d8e7bfd5f4e30e94aed3a75
 ms.translationtype: HT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 08/17/2020
-ms.locfileid: "88426305"
+ms.lasthandoff: 10/15/2020
+ms.locfileid: "92080672"
 ---
 # <a name="sqlsrv_fetch_object"></a>sqlsrv_fetch_object
 [!INCLUDE[Driver_PHP_Download](../../includes/driver_php_download.md)]
@@ -92,7 +92,7 @@ SELECT SCOPE_IDENTITY()
 SELECT SCOPE_IDENTITY() AS PictureID
 ```
   
-## <a name="example"></a>예제  
+## <a name="object-example"></a>개체 예제  
 다음 예제는 결과 집합의 각 행을 PHP 개체로 검색합니다. 이 예제에서는 SQL Server 및 [AdventureWorks](https://github.com/Microsoft/sql-server-samples/tree/master/samples/databases/adventure-works) 데이터베이스가 로컬 컴퓨터에 설치된 것으로 가정합니다. 모든 출력은 명령줄에서 예제가 실행될 때 콘솔에 기록됩니다.  
   
 ``` 
@@ -131,7 +131,7 @@ sqlsrv_close( $conn);
 ?>  
 ```  
   
-## <a name="example"></a>예제  
+## <a name="class-example"></a>클래스 예제  
 다음 예제는 결과 집합의 각 행을 스크립트에서 정의된 *Product* 클래스의 인스턴스로 검색합니다. 예제에서는 AdventureWorks 데이터베이스의 *Purchasing.PurchaseOrderDetail* 및 *Production.Product* 테이블에서 지정된 마감일(*DueDate*) 및 지정된 값보다 재고량(*StockQty*)이 적은 제품에 대해 제품 정보를 검색합니다. 예제에서는 **sqlsrv_fetch_object**에 대한 호출에서 클래스를 지정할 때 적용하는 일부 규칙을 강조합니다.  
   
 -   *$product* 변수는 *Product* 클래스의 인스턴스입니다. 그 이유는 "제품"이 *$className* 매개 변수로 지정되었고 *Product* 클래스가 존재하기 때문입니다.  

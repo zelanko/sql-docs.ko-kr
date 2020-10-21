@@ -16,18 +16,18 @@ helpviewer_keywords:
 - SQL Server Management Studio for Analysis Services
 ms.custom: seo-lt-2019
 ms.date: 09/11/2019
-ms.openlocfilehash: 0b46427196ad48bc6dbfaeaca25fa7e327d114f8
-ms.sourcegitcommit: 827ad02375793090fa8fee63cc372d130f11393f
+ms.openlocfilehash: 91fc06c59f9e2be53409d67d0c00de1fe187e611
+ms.sourcegitcommit: 22dacedeb6e8721e7cdb6279a946d4002cfb5da3
 ms.translationtype: HT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 09/04/2020
-ms.locfileid: "89480454"
+ms.lasthandoff: 10/14/2020
+ms.locfileid: "92035987"
 ---
 # <a name="what-is-sql-server-management-studio-ssms"></a>SSMS(SQL Server Management Studio)란?
 
 [!INCLUDE [SQL Server ASDB, ASDBMI, ASDW ](../includes/applies-to-version/sql-asdb-asdbmi-asa.md)]
 
-[!INCLUDE[ssManStudioFull](../includes/ssmanstudiofull-md.md)](SSMS)는 모든 SQL 인프라를 관리하기 위한 통합 환경입니다. SSMS를 사용하여 [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)], Azure SQL Database 및 SQL Data Warehouse의 모든 구성 요소에 액세스하고, 이를 관리 및 개발할 수 있습니다. SSMS는 기술 수준에 상관없이 모든 개발자와 데이터베이스 관리자가 [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)]에 액세스할 수 있도록 수많은 서식 있는 스크립트 편집기와 광범위한 그래픽 도구 그룹을 결합하는 포괄적인 단일 유틸리티를 제공합니다.
+[!INCLUDE[ssManStudioFull](../includes/ssmanstudiofull-md.md)](SSMS)는 모든 SQL 인프라를 관리하기 위한 통합 환경입니다. SSMS를 사용하여 [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)], Azure SQL Database, Azure Synapse Analytics의 모든 구성 요소에 액세스하고 구성, 관리, 개발할 수 있습니다. SSMS는 기술 수준에 상관없이 모든 개발자와 데이터베이스 관리자가 [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)]에 액세스할 수 있도록 수많은 서식 있는 스크립트 편집기와 광범위한 그래픽 도구 그룹을 결합하는 포괄적인 단일 유틸리티를 제공합니다.
 
 - [**SSMS(SQL Server Management Studio) 다운로드**](download-sql-server-management-studio-ssms.md)
 - [**SQL Server Developer 다운로드**](https://my.visualstudio.com/Downloads?q=SQL%20Server%20Developer)
@@ -43,7 +43,7 @@ ms.locfileid: "89480454"
 |**템플릿 탐색기**를 사용하여 쿼리 및 스크립트 개발 속도를 높이는 데 사용하는 상용구 텍스트 파일을 작성 및 관리하는 방법입니다.|[템플릿 탐색기](../ssms/template/template-explorer.md)|  
 |사용되지 않는 **솔루션 탐색기** 를 사용하여 쿼리 및 스크립트와 같은 관리 항목을 관리하는 데 사용되는 프로젝트를 작성하는 방법입니다.|[솔루션 탐색기](../ssms/solution/solution-explorer.md)|  
 |[!INCLUDE[ssManStudio](../includes/ssmanstudio-md.md)]에 포함된 비주얼 디자인 도구를 사용하는 방법입니다.|[Visual Database Tools](../ssms/visual-db-tools/visual-database-tools.md)|  
-|[!INCLUDE[ssManStudio](../includes/ssmanstudio-md.md)] 언어 편집기를 사용하여 쿼리와 스크립트를 대화식으로 작성 및 디버깅하는 방법입니다.|[쿼리 및 텍스트 편집기](https://docs.microsoft.com/sql/ssms/f1-help/database-engine-query-editor-sql-server-management-studio?view=sql-server-ver15)
+|[!INCLUDE[ssManStudio](../includes/ssmanstudio-md.md)] 언어 편집기를 사용하여 쿼리와 스크립트를 대화식으로 작성 및 디버깅하는 방법입니다.|[쿼리 및 텍스트 편집기](./f1-help/database-engine-query-editor-sql-server-management-studio.md?view=sql-server-ver15)
 
 ## <a name="sql-server-management-studio-for-business-intelligence"></a>비즈니스 인텔리전스용 SQL Server Management Studio
 
@@ -58,7 +58,7 @@ ms.locfileid: "89480454"
 
 [!INCLUDE[ssManStudio](../includes/ssmanstudio-md.md)] MDX(Multidimensional Expressions), DMX(Data Mining Extensions) 및 XMLA(XML for Analysis)로 작성된 스크립트를 개발 및 저장할 수 있는 [!INCLUDE[ssASnoversion](../includes/ssasnoversion_md.md)] 스크립트 프로젝트를 제공합니다. [!INCLUDE[ssASnoversion](../includes/ssasnoversion_md.md)] 스크립트 프로젝트를 사용하여 [!INCLUDE[ssASnoversion](../includes/ssasnoversion_md.md)] 인스턴스에서 관리 태스크를 수행하거나 데이터베이스 및 큐브와 같은 개체를 다시 만들 수 있습니다. 예를 들어 기존 [!INCLUDE[ssASnoversion](../includes/ssasnoversion_md.md)] 인스턴스에 직접 새 개체를 만드는 [!INCLUDE[ssASnoversion](../includes/ssasnoversion_md.md)] 스크립트 프로젝트에서 XMLA 스크립트를 개발할 수 있습니다. [!INCLUDE[ssASnoversion](../includes/ssasnoversion_md.md)] 스크립트 프로젝트는 솔루션의 일부로 저장되어 원본 코드 제어와 함께 통합될 수 있습니다.
   
-[!INCLUDE[ssManStudioFull](../includes/ssmanstudiofull-md.md)]를 사용하는 방법에 대한 자세한 내용은 [SQL Server Management Studio를 사용한 개발 및 구현](https://docs.microsoft.com/analysis-services/instances/analysis-services-scripts-project-in-sql-server-management-studio)을 참조하세요.
+[!INCLUDE[ssManStudioFull](../includes/ssmanstudiofull-md.md)]를 사용하는 방법에 대한 자세한 내용은 [SQL Server Management Studio를 사용한 개발 및 구현](/analysis-services/instances/analysis-services-scripts-project-in-sql-server-management-studio)을 참조하세요.
   
 ### <a name="managing-integration-services-solutions-using-sql-server-management-studio"></a>SQL Server Management Studio를 사용하여 Integration Services 솔루션 관리
 
@@ -90,7 +90,7 @@ SQL Server Management Studio를 사용하여 Reporting Services 기능을 활성
 
 - SSMS 17.0부터는 SQL 도구 팀이 [Microsoft 최신 수명 주기 정책](https://support.microsoft.com/help/30881/modern-lifecycle-policy)을 채택했습니다.
 - 원래 [최신 수명 주기 정책 알림](https://support.microsoft.com/help/447912/announcing-microsoft-modern-lifecycle-policy)을 읽어 보세요. 자세한 내용은 [최신 정책 FAQ](https://support.microsoft.com/help/30882/modern-lifecycle-policy-faq)를 참조하세요.
-- 진단 데이터 수집 및 기능 사용에 대한 자세한 내용은 [SQL Server 개인 정보 보완](https://docs.microsoft.com/sql/sql-server/sql-server-privacy)을 참조하세요.
+- 진단 데이터 수집 및 기능 사용에 대한 자세한 내용은 [SQL Server 개인 정보 보완](../sql-server/sql-server-privacy.md)을 참조하세요.
 
 ## <a name="cross-platform-tool"></a>플랫폼 간 도구
 
@@ -101,8 +101,8 @@ SQL Server Management Studio를 사용하여 Reporting Services 기능을 활성
 ## <a name="next-steps"></a>다음 단계
 
 - [비영어 SSMS 버전 설치](install-other-languages.md)
-- [SQL Server 인스턴스에 연결 및 쿼리](tutorials/connect-query-sql-server.md)
-- [Transact-SQL 문 작성](https://msdn.microsoft.com/2addc9be-67d0-423d-a457-192fe9d7d058)
+- [SQL Server 인스턴스에 연결 및 쿼리](./quickstarts/connect-query-sql-server.md)
+- [Transact-SQL 문 작성](../t-sql/tutorial-writing-transact-sql-statements.md)
 - [Azure Data Studio](../azure-data-studio/what-is.md)
 
 [!INCLUDE[contribute-to-content](../includes/paragraph-content/contribute-to-content.md)]

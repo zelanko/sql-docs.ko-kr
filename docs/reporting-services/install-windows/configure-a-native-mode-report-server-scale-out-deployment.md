@@ -12,12 +12,12 @@ helpviewer_keywords:
 ms.assetid: b30d0308-4d9b-4f85-9f83-dece4dcb2775
 author: maggiesMSFT
 ms.author: maggies
-ms.openlocfilehash: a8e9e8fab90a0c2f21ae29d113ea896b471177f2
-ms.sourcegitcommit: e700497f962e4c2274df16d9e651059b42ff1a10
+ms.openlocfilehash: 7730435d762d6e9e9bc4690dbdc644f0801fe20a
+ms.sourcegitcommit: 783b35f6478006d654491cb52f6edf108acf2482
 ms.translationtype: HT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 08/17/2020
-ms.locfileid: "88460005"
+ms.lasthandoff: 10/09/2020
+ms.locfileid: "91890870"
 ---
 # <a name="configure-a-native-mode-report-server-scale-out-deployment"></a>기본 모드 보고서 서버 확장 배포 구성
 
@@ -62,7 +62,7 @@ SQL Server 2016 Reporting Services 이전 버전의 경우 SharePoint 모드 보
   
          서버 인스턴스를 공유 데이터베이스에 연결할 때 데이터베이스 호환성 오류가 발생하지 않도록 하려면 모든 인스턴스가 동일한 버전인지 확인합니다. 예를 들어 SQL Server 2016 보고서 서버 인스턴스를 사용하여 보고서 서버 데이터베이스를 만드는 경우 동일한 배포 내의 다른 모든 인스턴스도 SQL Server 2016이어야 합니다.  
   
-    -   공유 데이터베이스에 각 보고서 서버를 연결하려면 Reporting Services 구성 관리자를 사용합니다. 한 번에 하나의 보고서 서버에만 연결하여 구성할 수 있습니다.  
+    -   보고서 서버 구성 관리자를 사용하여 각 보고서 서버를 공유 데이터베이스에 연결합니다. 한 번에 하나의 보고서 서버에만 연결하여 구성할 수 있습니다.  
   
     -   보고서 서버 데이터베이스에 이미 연결된 첫 번째 보고서 서버 인스턴스에 새 보고서 서버 인스턴스를 조인하여 확장 배포를 완료하려면 Reporting Services 구성 도구를 사용합니다.  
   

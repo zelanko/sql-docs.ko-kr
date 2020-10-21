@@ -4,24 +4,24 @@ titleSuffix: SQL Server Language Extensions
 description: 확장성 프레임워크를 사용하여 SQL Server용 프로그래밍 언어 확장을 작성할 수 있습니다. Microsoft SQL Server용 확장성 프레임워크 API는 언어 확장에서 SQL Server와 상호 작용하고 데이터를 교환하는 데 사용할 수 있는 API입니다.
 author: dphansen
 ms.author: davidph
-ms.date: 04/09/2020
+ms.date: 10/09/2020
 ms.topic: reference
 ms.prod: sql
 ms.technology: language-extensions
 monikerRange: '>=sql-server-ver15||>=sql-server-linux-ver15||=sqlallproducts-allversions'
-ms.openlocfilehash: 5a918ca8acb263e843915c48fc16e563433d32c2
-ms.sourcegitcommit: 346a37242f889d76cd783f55aeed98023c693610
+ms.openlocfilehash: 3cc4e75f044476579859443b6a7407d01c3e92ea
+ms.sourcegitcommit: afb02c275b7c79fbd90fac4bfcfd92b00a399019
 ms.translationtype: HT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 10/06/2020
-ms.locfileid: "91765773"
+ms.lasthandoff: 10/12/2020
+ms.locfileid: "91956864"
 ---
 # <a name="extensibility-framework-api-for-sql-server"></a>SQL Server용 확장성 프레임워크 API
 [!INCLUDE [SQL Server 2019 and later](../../includes/applies-to-version/sqlserver2019.md)]
 
 확장성 프레임워크를 사용하여 SQL Server용 프로그래밍 언어 확장을 작성할 수 있습니다. Microsoft SQL Server용 확장성 프레임워크 API는 언어 확장에서 SQL Server와 상호 작용하고 데이터를 교환하는 데 사용할 수 있는 API입니다.
 
-언어 확장 작성자는 오픈 소스로 작성된 [SQL Server용 Java 언어 확장](../how-to/extensibility-sdk-java-sql-server.md)과 함께 이 참조를 사용하여 해당 API로 고유한 언어 확장을 작성하는 방법을 파악할 수 있습니다. Java 언어 확장의 소스 코드는 [aka.ms/mssql-lang-extensions](https://aka.ms/mssql-lang-extensions)에서 확인할 수 있습니다.
+언어 확장 작성자는 오픈 소스로 작성된 언어 확장과 함께 이 참조를 사용하여 API로 고유한 언어 확장을 작성하는 방법을 파악할 수 있습니다. 언어 확장의 소스 코드는 [aka.ms/mssql-lang-extensions](https://aka.ms/mssql-lang-extensions)에서 확인할 수 있습니다.
 
 모든 API 함수의 구문 및 인수 정보는 아래에서 확인할 수 있습니다.
 
@@ -36,7 +36,7 @@ ms.locfileid: "91765773"
 
 ## <a name="init"></a>Init
 
-이 함수는 한 번만 호출되며, 실행할 런타임을 초기화하는 데 사용됩니다. 예를 들어 Java 확장은 JVM을 초기화합니다.
+이 함수는 한 번만 호출되며, 실행할 런타임을 초기화하는 데 사용됩니다. 
 
 ### <a name="syntax"></a>구문
 
@@ -262,7 +262,7 @@ SQL_C_CHAR, SQL_C_WCHAR 및 SQL_C_BINARY 데이터 형식의 경우 값이 8000�
 *StrLen_or_Ind*  
 \[입력\] *ParamValue*의 길이(바이트)를 나타내는 정수 값이거나 데이터가 NULL임을 나타내는 SQL_NULL_DATA입니다.
 
-열이 null을 허용하지 않고 SQL_C_CHAR, SQL_C_WCHAR, SQL_C_BINARY, SQL_C_NUMERIC 또는 SQL_C_TYPE_TIMESTAMP 데이터 형식 중 하나를 나타내지 않는 경우에는 StrLen_or_Ind\[col\]을 무시할 수 있습니다. 그렇지 않으면 \[RowsNumber\] 요소가 포함된 유효한 배열을 가리킵니다. 여기서, 각 요소는 해당 길이나 null 표시기 데이터를 포함합니다.
+한 열이 null을 허용하지 않고 SQL_C_CHAR, SQL_C_WCHAR, SQL_C_BINARY, SQL_C_NUMERIC 또는 SQL_C_TYPE_TIMESTAMP 데이터 형식 중 하나를 나타내지 않는 경우에는 StrLen_or_Ind\[col\]을 무시할 수 있습니다. 그렇지 않으면 \[RowsNumber\] 요소가 포함된 유효한 배열을 가리킵니다. 여기서, 각 요소는 해당 길이나 null 표시기 데이터를 포함합니다.
 
 *InputOutputType*  
 \[입력\] 매개 변수의 형식입니다. *InputOutputType* 인수는 다음 값 중 하나입니다.
@@ -638,3 +638,5 @@ SQLRETURN UninstallExternalLibrary(
 ## <a name="next-steps"></a>다음 단계
 
 - [SQL Server에 대한 Java용 Microsoft 확장성 SDK](../how-to/extensibility-sdk-java-sql-server.md)
+- [Python 사용자 지정 런타임](../../machine-learning/install/custom-runtime-python.md)
+- [R 사용자 지정 런타임](../../machine-learning/install/custom-runtime-r.md)

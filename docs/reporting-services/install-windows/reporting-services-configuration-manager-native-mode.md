@@ -1,6 +1,6 @@
 ---
-description: Reporting Services 구성 관리자(기본 모드)
-title: Reporting Services 구성 관리자(기본 모드) | Microsoft Docs
+description: 보고서 서버 구성 관리자(기본 모드)
+title: 보고서 서버 구성 관리자(기본 모드) | Microsoft Docs
 ms.date: 09/20/2017
 ms.prod: reporting-services
 ms.prod_service: reporting-services-native
@@ -12,14 +12,14 @@ helpviewer_keywords:
 - components [Reporting Services], Reporting Services Configuration tool
 author: maggiesMSFT
 ms.author: maggies
-ms.openlocfilehash: 03df504d7ffc4c104db9673995fa58e455961ef5
-ms.sourcegitcommit: e700497f962e4c2274df16d9e651059b42ff1a10
+ms.openlocfilehash: ff3c1f00f91da57f91bdd0c7738929b1f5362f60
+ms.sourcegitcommit: 783b35f6478006d654491cb52f6edf108acf2482
 ms.translationtype: HT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 08/17/2020
-ms.locfileid: "88454581"
+ms.lasthandoff: 10/09/2020
+ms.locfileid: "91891323"
 ---
-# <a name="reporting-services-configuration-manager-native-mode"></a>Reporting Services 구성 관리자(기본 모드)
+# <a name="report-server-configuration-manager-native-mode"></a>보고서 서버 구성 관리자(기본 모드)
 
 [!INCLUDE [ssrs-appliesto](../../includes/ssrs-appliesto.md)] [!INCLUDE [ssrs-appliesto-2016-and-later](../../includes/ssrs-appliesto-2016-and-later.md)] [!INCLUDE[ssrs-appliesto-pbirsi](../../includes/ssrs-appliesto-pbirs.md)]
 
@@ -30,7 +30,7 @@ ms.locfileid: "88454581"
 > [!NOTE]
 > SQL Server 2016 이후부터 SharePoint와의 Reporting Services 통합을 사용할 수 없습니다. [!INCLUDE[ssSQL11](../../includes/sssql11-md.md)] 릴리스부터는 [!INCLUDE[ssRSnoversion](../../includes/ssrsnoversion-md.md)] 구성 관리자가 SharePoint 모드 보고서 서버를 관리하도록 디자인되지 않았습니다. SharePoint 모드는 SharePoint 중앙 관리 및 PowerShell 스크립트를 사용하여 관리 및 구성됩니다.  
   
-##  <a name="scenarios-to-use-reporting-services-configuration-manager"></a><a name="bkmk_scenarios"></a> Reporting Services 구성 관리자 사용 시나리오  
+##  <a name="scenarios-to-use-report-server-configuration-manager"></a><a name="bkmk_scenarios"></a> 보고서 서버 구성 관리자 사용 시나리오  
  [!INCLUDE[ssRSnoversion](../../includes/ssrsnoversion-md.md)] 구성 관리자를 사용하여 수행할 수 있는 태스크는 다음과 같습니다.  
   
 -   보고서 서버 서비스 계정 구성. 이 계정은 설치 중에 처음 구성되지만 암호를 업데이트하거나 다른 계정을 사용하려는 경우 [!INCLUDE[ssRSnoversion](../../includes/ssrsnoversion-md.md)] 구성 관리자를 사용하여 수정할 수 있습니다.  
@@ -63,19 +63,19 @@ ms.locfileid: "88454581"
 
 - 원격 보고서 서버 인스턴스에 연결하여 구성하기 전에 원격 WMI(Windows Management Instrumentation) 호출이 Windows 방화벽을 통과하도록 설정해야 합니다. 자세한 내용은 [원격 관리를 위한 보고서 서버 구성](../../reporting-services/report-server/configure-a-report-server-for-remote-administration.md)을 참조하세요.
 
-Reporting Services 구성 관리자는 SQL Server Reporting Services를 설치할 때 자동으로 설치됩니다.
+보고서 서버 구성 관리자는 SQL Server Reporting Services를 설치할 때 자동으로 설치됩니다.
 
-##  <a name="to-start-the-reporting-services-configuration-manager"></a><a name="bkmk_start_configuration_manager"></a> Reporting Services 구성 관리자를 시작하려면
+##  <a name="to-start-the-report-server-configuration-manager"></a><a name="bkmk_start_configuration_manager"></a> 보고서 서버 구성 관리자를 시작하려면 다음을 수행합니다.
 
 1.  사용자의 Microsoft Windows 버전에 적합한 방식으로 다음 단계를 사용합니다.
 
-    - Windows 시작 화면에서 **Reporting** 을 입력하고 검색 결과에서 **Reporting Services 구성 관리자** 를 선택합니다.
+    - Windows 시작 화면에서 **Reporting**을 입력하고 검색 결과에서 **보고서 서버 구성 관리자**를 선택합니다.
 
     - **시작**을 클릭하고 **모든 프로그램**, [!INCLUDE[ssCurrentUI](../../includes/sscurrentui-md.md)], **구성 도구**를 차례로 가리킵니다.
 
          [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]이전 버전의 보고서 서버 인스턴스를 구성하려면 해당 버전의 프로그램 폴더를 엽니다. 예를 들어 [!INCLUDE[ssSQL14](../../includes/sssql14-md.md)] 대신 [!INCLUDE[ssCurrentUI](../../includes/sscurrentui-md.md)] 을 가리켜서 [!INCLUDE[ssSQL14](../../includes/sssql14-md.md)] 서버 구성 요소에 대한 구성 도구를 엽니다.
 
-         **Reporting Services 구성 관리자**를 선택합니다.
+         **보고서 서버 구성 관리자**를 선택합니다.
 
 2. 구성할 보고서 서버 인스턴스를 선택할 수 있도록 **Reporting Services 구성 연결** 대화 상자가 나타납니다. **연결**을 선택합니다.
 

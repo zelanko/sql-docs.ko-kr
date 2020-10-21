@@ -11,12 +11,12 @@ ms.topic: conceptual
 ms.assetid: 98fa7488-aac3-45b4-8aa4-83ed6ab638b4
 author: David-Engel
 ms.author: v-daenge
-ms.openlocfilehash: fa84b420b4100e74a9e57047f1bfbbd386fa5fa6
-ms.sourcegitcommit: 129f8574eba201eb6ade1f1620c6b80dfe63b331
+ms.openlocfilehash: 266db3efac0fb737ccb36900ef3b27f24c8c8888
+ms.sourcegitcommit: 7eb80038c86acfef1d8e7bfd5f4e30e94aed3a75
 ms.translationtype: HT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 07/30/2020
-ms.locfileid: "87435316"
+ms.lasthandoff: 10/15/2020
+ms.locfileid: "92081682"
 ---
 # <a name="understanding-data-type-conversions"></a>데이터 형식 변환 이해
 
@@ -28,7 +28,7 @@ Java 프로그래밍 언어 데이터 형식을 [!INCLUDE[ssNoVersion](../../inc
 
 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 데이터 형식을 기반으로 하는 다음 차트에는 [SQLServerResultSet](../../connect/jdbc/reference/sqlserverresultset-class.md) 클래스의 get\<Type>() 메서드에 대한 JDBC Driver의 변환 맵과 [SQLServerCallableStatement](../../connect/jdbc/reference/sqlservercallablestatement-class.md) 클래스의 get\<Type> 메서드에서 지원되는 변환 등이 나와 있습니다.
 
-![JDBCGetterConversions](../../connect/jdbc/media/jdbcgetterconversions.gif "JDBCGetterConversions")
+![JDBC-SQL Server 형식 변환 매트릭스](../../connect/jdbc/media/jdbcgetterconversions.gif "JDBCGetterConversions")
 
 다음은 JDBC 드라이버의 getter 메서드에서 지원하는 세 가지 변환 범주입니다.
 

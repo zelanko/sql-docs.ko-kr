@@ -13,17 +13,17 @@ helpviewer_keywords:
 ms.assetid: cdad1529-bfa6-41fb-9863-d9ff1b802577
 author: maggiesMSFT
 ms.author: maggies
-ms.openlocfilehash: 9ceb9ccbbe9c54ab24b6a37e8f86c109f0e69bd6
-ms.sourcegitcommit: ff82f3260ff79ed860a7a58f54ff7f0594851e6b
+ms.openlocfilehash: 71c58ed673834c0226f9998b80fa4b12f14538e0
+ms.sourcegitcommit: 783b35f6478006d654491cb52f6edf108acf2482
 ms.translationtype: HT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 03/29/2020
-ms.locfileid: "74866006"
+ms.lasthandoff: 10/09/2020
+ms.locfileid: "91892083"
 ---
 # <a name="e-mail-settings---reporting-services-native-mode-configuration-manager"></a>전자 메일 설정 - Reporting Services 기본 모드(구성 관리자)
 SQL Server Reporting Services에는 메일을 통해 보고서를 배포할 수 있는 메일 배달 확장 프로그램이 있습니다. 전자 메일 구독을 정의하는 방법에 따라 배달은 알림, 링크, 첨부 파일 또는 포함된 보고서로 구성될 수 있습니다. 전자 메일 배달 확장 프로그램은 기존 메일 서버 기술을 사용합니다. 메일 서버는 SMTP 서버 또는 전달자여야 합니다. 보고서 서버는 운영 체제에서 제공하는 CDO(Collaboration Data Objects) 라이브러리(cdosys.dll)를 통해 SMTP 서버에 연결합니다.
 
-보고서 서버 전자 메일 배달 확장 프로그램은 기본적으로 구성되어 있지 않습니다. 따라서 Reporting Services 구성 관리자를 사용하여 확장 프로그램을 최소한으로 구성해야 합니다. 고급 속성을 설정하려면 RSReportServer.config 파일을 편집해야 합니다. 이 확장 프로그램을 사용할 수 있도록 보고서 서버를 구성할 수 없는 경우에는 보고서를 공유 폴더로 배달할 수 있습니다. 자세한 내용은 Reporting Services의 파일 공유 배달을 참조하세요.
+보고서 서버 전자 메일 배달 확장 프로그램은 기본적으로 구성되어 있지 않습니다. 따라서 보고서 서버 구성 관리자를 사용하여 확장 프로그램을 최소한으로 구성해야 합니다. 고급 속성을 설정하려면 RSReportServer.config 파일을 편집해야 합니다. 이 확장 프로그램을 사용할 수 있도록 보고서 서버를 구성할 수 없는 경우에는 보고서를 공유 폴더로 배달할 수 있습니다. 자세한 내용은 Reporting Services의 파일 공유 배달을 참조하세요.
 
 ## <a name="configuration-requirements"></a>구성 요구 사항
 
@@ -41,16 +41,16 @@ SQL Server Reporting Services에는 메일을 통해 보고서를 배포할 수 
 
 전자 메일 배달을 위한 보고서 서버를 구성하려면 다음을 수행합니다.
 
-- SMTP 서버와 전자 메일을 보낼 수 있는 권한이 있는 사용자 계정만 지정하는 경우 Reporting Services 구성 관리자를 사용합니다. 이는 보고서 서버 전자 메일 배달 확장 프로그램을 구성하는 데 필요한 최소 설정입니다.
+- 메일을 보낼 수 있는 권한이 있는 사용자 계정과 SMTP 서버만 지정하는 경우 보고서 서버 구성 관리자를 사용합니다. 이는 보고서 서버 전자 메일 배달 확장 프로그램을 구성하는 데 필요한 최소 설정입니다.
 
 - 텍스트 편집기를 사용하여 RSreportserver.config 파일에 추가 설정을 지정합니다(옵션). 이 파일에는 보고서 서버 전자 메일 배달을 위한 모든 구성 설정이 포함되어 있습니다. 로컬 SMTP 서버를 사용하거나 전자 메일 배달을 특정 호스트로 제한하는 경우 이러한 파일에 추가 설정을 지정해야 합니다. 구성 파일을 찾아서 수정하는 방법은 [Reporting Services 구성 파일 수정(RSreportserver.config)](../../reporting-services/report-server/modify-a-reporting-services-configuration-file-rsreportserver-config.md)을 참조하세요.
 
 > [!NOTE] 
 > 보고서 서버 전자 메일 설정은 CDO를 기반으로 합니다. 특정 설정에 대한 세부 정보를 보려면 CDO 제품 설명서를 참조하십시오.
 
-## <a name="configure-report-server-e-mail-using-the-reporting-services-configuration-manager"></a><a name="rsconfigman"/>Reporting Services 구성 관리자를 사용하여 보고서 서버 메일 구성
+## <a name="configure-report-server-e-mail-using-the-report-server-configuration-manager"></a><a name="rsconfigman"/>보고서 서버 구성 관리자를 사용하여 보고서 서버 메일 구성
 
-1. Reporting Services 구성 관리자를 시작한 후 보고서 서버 인스턴스에 연결합니다.
+1. 보고서 서버 구성 관리자를 시작한 후 보고서 서버 인스턴스에 연결합니다.
 
 2. **보낸 사람 주소**에 생성된 메일의 **보낸 사람:** 필드에 사용할 메일 주소를 입력합니다. 
 
@@ -137,12 +137,12 @@ SQL Server Reporting Services에는 메일을 통해 보고서를 배포할 수 
 
 - `<SMTPServerPort>` 는 기본적으로 포트 25에 대해 구성되어 있습니다.
 - `<SMTPAuthenticate>` 는 보고서 서버에서 원격 SMTP 서버에 연결하는 방법을 지정합니다. 기본값은 **0** (인증 없음)입니다. 이 경우 익명 액세스를 통해 연결이 설정됩니다. 도메인 구성에 따라 보고서 서버와 SMTP 서버가 동일한 도메인의 멤버여야 할 수도 있습니다.
-- 제한된 메일 그룹(예: 인증된 계정에서 보낸 메시지만 허용하는 메일 그룹)에 메일을 보내려면 `<SMTPAuthenticate>` 를 **1** 또는 **2**로 설정합니다. **1**로 설정하면 `<SendUserName>` 및 `<SendPassword>`도 설정해야 합니다. `<SendUserName>` 및 `<SendPassword>`에 대한 값을 암호화하므로 Reporting Services 구성 관리자를 통해 이 작업을 수행하는 것이 좋습니다.
+- 제한된 메일 그룹(예: 인증된 계정에서 보낸 메시지만 허용하는 메일 그룹)에 메일을 보내려면 `<SMTPAuthenticate>` 를 **1** 또는 **2**로 설정합니다. **1**로 설정하면 `<SendUserName>` 및 `<SendPassword>`도 설정해야 합니다. `<SendUserName>` 및 `<SendPassword>` 값이 암호화되도록 보고서 서버 구성 관리자를 통해 이 작업을 수행하는 것이 좋습니다.
 
 ### <a name="to-configure-a-remote-smtp-service-for-the-report-server"></a>보고서 서버에 대해 원격 SMTP 서비스를 구성하려면
 
 > [!NOTE] 
-> Reporting Services 구성 관리자를 통해 메일 서버를 구성하는 것이 좋습니다.
+> 보고서 서버 구성 관리자를 통해 메일 서버를 구성하는 것이 좋습니다.
 
 1. 보고서 서버 Windows 서비스에 SMTP 서버에 대한 **Send As** 권한이 있는지 확인합니다.
 
@@ -154,7 +154,7 @@ SQL Server Reporting Services에는 메일을 통해 보고서를 배포할 수 
      
 5. `<SMTPServer>`에 SMTP 서버 이름을 입력합니다. 이 값은 IP 주소, 회사 인트라넷에 있는 컴퓨터의 UNC 이름 또는 정규화된 도메인 이름일 수 있습니다.
 
-6. 보고서 서버에 대한 서비스 계정을 사용하려면 `<SendUsing>` 의 값을 **2** 로 설정합니다. 기본 인증을 위해 `<SendUsing>` 의 값을 **1** 로 설정합니다. **1**로 설정하면 `<SendUserName>` 및 `<SendPassword>`값을 추가로 제공해야 합니다. 해당 값을 암호화하려면 Reporting Services 구성 관리자 내에서 인증을 설정합니다.
+6. 보고서 서버에 대한 서비스 계정을 사용하려면 `<SendUsing>` 의 값을 **2** 로 설정합니다. 기본 인증을 위해 `<SendUsing>` 의 값을 **1** 로 설정합니다. **1**로 설정하면 `<SendUserName>` 및 `<SendPassword>`값을 추가로 제공해야 합니다. 해당 값을 암호화하려면 보고서 서버 구성 관리자 내에서 인증을 설정합니다.
 
 7. `<SMTPAuthenticate>` 을 1 또는 2로 설정하는 경우 **의 값을** 1 `<SendUsing>` 로 설정합니다.
 
@@ -222,7 +222,7 @@ SQL Server Reporting Services에는 메일을 통해 보고서를 배포할 수 
 17. 파일을 저장합니다.
   
 ## <a name="see-also"></a>참고 항목  
-[Reporting Services 구성 관리자(기본 모드)](../../reporting-services/install-windows/reporting-services-configuration-manager-native-mode.md)  
+[보고서 서버 구성 관리자(기본 모드)](../../reporting-services/install-windows/reporting-services-configuration-manager-native-mode.md)  
 [Modify a Reporting Services Configuration File (rsreportserver.config)](../../reporting-services/report-server/modify-a-reporting-services-configuration-file-rsreportserver-config.md)  
 [Rsreportserver.config 구성 파일](../../reporting-services/report-server/rsreportserver-config-configuration-file.md)
   

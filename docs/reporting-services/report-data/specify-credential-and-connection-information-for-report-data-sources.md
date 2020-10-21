@@ -27,12 +27,12 @@ helpviewer_keywords:
 ms.assetid: fee1a663-a313-424a-aed2-5082bfd114b3
 author: maggiesMSFT
 ms.author: maggies
-ms.openlocfilehash: ab7f9d0717cac0dae86eb2b5202fd02de254c5e0
-ms.sourcegitcommit: ff82f3260ff79ed860a7a58f54ff7f0594851e6b
+ms.openlocfilehash: f07e5cbcbe3604f140f197d64c4666d992f8112e
+ms.sourcegitcommit: fe59f8dc27fd633f5dfce54519d6f5dcea577f56
 ms.translationtype: HT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 03/29/2020
-ms.locfileid: "75244560"
+ms.lasthandoff: 10/09/2020
+ms.locfileid: "91934859"
 ---
 # <a name="specify-credential-and-connection-information-for-report-data-sources"></a>보고서 데이터 원본에 대한 자격 증명 및 연결 정보 지정
   보고서 서버에서는 자격 증명을 사용하여 보고서에 내용을 제공하거나 데이터 기반 구독에 받는 사람 정보를 제공하는 외부 데이터 원본에 연결합니다. Windows 인증, 데이터베이스 인증, 인증 안 함 또는 사용자 지정 인증을 사용하는 자격 증명을 지정할 수 있습니다. 네트워크를 통해 연결 요청을 보낼 경우 보고서 서버에서는 사용자 계정 또는 무인 실행 계정을 가장하게 됩니다. 연결 요청이 이루어지는 보안 컨텍스트에 대한 자세한 내용은 이 항목의 [데이터 원본 구성 및 네트워크 연결](#DataSourceConfigurationConnections) 을 더 참조하십시오.  
@@ -49,7 +49,7 @@ ms.locfileid: "75244560"
   
      보고서 서버나 SharePoint 사이트로 처음 저장, 게시 또는 이동할 때 자격 증명을 입력해야 할 수도 있습니다. 입력한 자격 증명은 보고서 작성기 세션이 종료될 때까지 사용됩니다. 이러한 자격 증명을 저장하도록 선택한 경우에는 해당 자격 증명이 사용자 설정과 함께 컴퓨터에 안전하게 저장됩니다. 이후의 보고서 작성기 세션에서 저장된 자격 증명은 같은 보고서 서버나 SharePoint 사이트에 연결하는 데 사용됩니다. 보고서 서버 관리자나 SharePoint 관리자는 사용할 자격 증명 유형을 지정합니다.  
   
--   포함된 데이터 원본에 대한 [데이터 원본 속성 대화 상자, 자격 증명&#40;보고서 작성기&#41;](https://msdn.microsoft.com/library/4531f09f-d653-4c05-a120-d7788838bc99) 페이지에 입력하는 데이터 원본 자격 증명  
+-   포함된 데이터 원본에 대한 [데이터 원본 속성 대화 상자, 자격 증명&#40;보고서 작성기&#41;](/previous-versions/sql/) 페이지에 입력하는 데이터 원본 자격 증명  
   
      보고서 서버에서는 이러한 자격 증명을 외부 데이터 원본으로 데이터를 연결하는 데 사용합니다. 일부 데이터 원본 유형의 경우 자격 증명을 보고서 서버에 안전하게 저장할 수 있습니다. 이러한 자격 증명을 사용하면 다른 사용자가 기본 데이터 연결에 자격 증명을 제공하지 않고 보고서를 실행할 수 있습니다.  
   
@@ -59,7 +59,7 @@ ms.locfileid: "75244560"
   
      공유 데이터 원본에 대해서는 **암호 저장** 옵션을 사용하여 자격 증명을 사용자 설정과 함께 컴퓨터에 로컬로 저장할 수 있습니다. 보고서 작성기는 해당 외부 데이터 원본에 연결할 때마다 저장된 자격 증명을 사용합니다.  
   
- 자세한 내용은 [데이터 원본 속성 대화 상자, 일반&#40;보고서 작성기&#41;](https://msdn.microsoft.com/library/b956f43a-8426-4679-acc1-00f405d5ff5b) 및 [보고서 작성기에서 보고서 미리 보기](../../reporting-services/report-builder/previewing-reports-in-report-builder.md)를 참조하세요.  
+ 자세한 내용은 [데이터 원본 속성 대화 상자, 일반&#40;보고서 작성기&#41;](/previous-versions/sql/) 및 [보고서 작성기에서 보고서 미리 보기](../../reporting-services/report-builder/previewing-reports-in-report-builder.md)를 참조하세요.  
   
 ## <a name="using-remote-data-sources"></a>원격 데이터 원본 사용  
  보고서가 원격 데이터베이스 서버에서 데이터를 검색하는 경우 다음 사항을 확인합니다.  
@@ -142,7 +142,7 @@ ms.locfileid: "75244560"
   
 -   보고서가 부모 보고서의 자격 증명을 사용하는 하위 보고서인 경우  
   
- 이러한 조건에서는 보고서 서버에서 사용자가 미리 정의해야 하는 무인 실행 계정을 사용하여 원격 데이터 원본에 연결합니다. 보고서 서버는 해당 서비스 자격 증명을 사용하여 원격 서버에 연결하지 않으므로 보고서 서버가 연결에 사용할 수 있는 계정을 지정해야 합니다. 이 계정을 만드는 방법은 [무인 실행 계정 구성&#40;SSRS 구성 관리자&#41;](../../reporting-services/install-windows/configure-the-unattended-execution-account-ssrs-configuration-manager.md)을 참조하세요.  
+ 이러한 조건에서는 보고서 서버에서 사용자가 미리 정의해야 하는 무인 실행 계정을 사용하여 원격 데이터 원본에 연결합니다. 보고서 서버는 해당 서비스 자격 증명을 사용하여 원격 서버에 연결하지 않으므로 보고서 서버가 연결에 사용할 수 있는 계정을 지정해야 합니다. 이 계정을 만드는 방법에 대한 자세한 내용은 [무인 실행 계정 구성&#40;보고서 서버 구성 관리자&#41;](../../reporting-services/install-windows/configure-the-unattended-execution-account-ssrs-configuration-manager.md)을 참조하세요.  
   
 ## <a name="user-name-and-password-login"></a>사용자 이름 및 암호 로그인  
  **이 사용자 이름 및 암호 사용**을 선택할 경우 사용자 이름과 암호를 제공해야 데이터 원본에 액세스할 수 있습니다. [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 데이터베이스의 경우 데이터베이스 로그인에 대해 자격 증명을 사용할 수 있습니다. 자격 증명은 인증을 위해 데이터 원본으로 전달됩니다.  
@@ -165,5 +165,4 @@ ms.locfileid: "75244560"
  [데이터 연결 문자열 만들기 - 보고서 작성기 및 SSRS](../../reporting-services/report-data/data-connections-data-sources-and-connection-strings-report-builder-and-ssrs.md)   
  [보고서 데이터 원본 관리](../../reporting-services/report-data/manage-report-data-sources.md)   
  [보고서의 데이터 원본 속성 구성](../../reporting-services/report-data/configure-data-source-properties-for-a-report-report-manager.md)  
-  
   

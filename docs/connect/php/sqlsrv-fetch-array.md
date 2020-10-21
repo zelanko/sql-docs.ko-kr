@@ -18,12 +18,12 @@ helpviewer_keywords:
 ms.assetid: 69270b9e-0791-42f4-856d-412da39dea63
 author: David-Engel
 ms.author: v-daenge
-ms.openlocfilehash: 3b3c3f296d0fd2ae05c3b88a08428c3ddb8a5f2c
-ms.sourcegitcommit: cb620c77fe6bdefb975968837706750c31048d46
+ms.openlocfilehash: a9067a7ffa6bd6379fb9384b915d07cb64893467
+ms.sourcegitcommit: 7eb80038c86acfef1d8e7bfd5f4e30e94aed3a75
 ms.translationtype: HT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 07/15/2020
-ms.locfileid: "86391808"
+ms.lasthandoff: 10/15/2020
+ms.locfileid: "92080643"
 ---
 # <a name="sqlsrv_fetch_array"></a>sqlsrv_fetch_array
 [!INCLUDE[Driver_PHP_Download](../../includes/driver_php_download.md)]
@@ -82,7 +82,7 @@ SELECT SCOPE_IDENTITY() AS PictureID
   
 결과 집합에 이름이 없는 여러 열이 포함된 경우 마지막으로 이름이 지정되지 않은 열의 값이 빈 문자열("") 키에 할당됩니다.  
   
-## <a name="example"></a>예제  
+## <a name="associative-array-example"></a>결합형 배열 예제  
 다음 예제는 결과 집합의 각 행을 결합형 **배열**로 검색합니다. 이 예제에서는 SQL Server 및 [AdventureWorks](https://github.com/Microsoft/sql-server-samples/tree/master/samples/databases/adventure-works) 데이터베이스가 로컬 컴퓨터에 설치된 것으로 가정합니다. 모든 출력은 명령줄에서 예제가 실행될 때 콘솔에 기록됩니다.  
   
 ```  
@@ -121,7 +121,7 @@ sqlsrv_close( $conn);
 ?>  
 ```  
   
-## <a name="example"></a>예제  
+## <a name="indexed-array-xample"></a>인덱싱된 배열 예제  
 다음 예제는 결과 집합의 각 행을 숫자로 인덱싱된 배열로 검색합니다.  
   
 예제에서는 AdventureWorks 데이터베이스의 *Purchasing.PurchaseOrderDetail* 테이블에서 지정된 날짜 및 지정된 값보다 재고량(*StockQty*)이 작은 제품에 대해 제품 정보를 검색합니다.  

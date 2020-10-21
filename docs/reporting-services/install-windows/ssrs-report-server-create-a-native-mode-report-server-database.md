@@ -12,14 +12,14 @@ helpviewer_keywords:
 ms.assetid: 81b9f4ad-800b-4688-8b47-a5a83dc8ff10
 author: maggiesMSFT
 ms.author: maggies
-ms.openlocfilehash: dbe8c7f4d755d18c0baa01f5f6ef37601292047b
-ms.sourcegitcommit: ff82f3260ff79ed860a7a58f54ff7f0594851e6b
+ms.openlocfilehash: 4cf54be2376dede022b0f6905e21685184a6b122
+ms.sourcegitcommit: fe59f8dc27fd633f5dfce54519d6f5dcea577f56
 ms.translationtype: HT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 03/29/2020
-ms.locfileid: "74866336"
+ms.lasthandoff: 10/09/2020
+ms.locfileid: "91934750"
 ---
-# <a name="create-a-native-mode-report-server-database-ssrs-configuration-manager"></a>기본 모드 보고서 서버 데이터베이스 만들기(SSRS 구성 관리자)
+# <a name="create-a-native-mode-report-server-database-report-server-configuration-manager"></a>기본 모드 보고서 서버 데이터베이스 만들기(보고서 서버 구성 관리자)
 
 [!INCLUDE[ssrs-appliesto-sql2016-preview](../../includes/ssrs-appliesto-sql2016-preview.md)]
 
@@ -36,7 +36,7 @@ ms.locfileid: "74866336"
  보고서 서버 데이터베이스를 만들거나 구성하려면 여러 단계를 수행해야 합니다. 보고서 서버 데이터베이스를 만들기 전에 다음 항목을 지정하는 방법을 고려해야 합니다.  
   
  **데이터베이스 서버 선택**  
- [보고서 서버 데이터베이스 만들기&#40;SSRS 구성 관리자&#41;](../../reporting-services/install-windows/ssrs-report-server-create-a-report-server-database.md) 항목에서 지원되는 버전 및 [!INCLUDE[ssDEnoversion](../../includes/ssdenoversion-md.md)]의 지원되는 버전을 검토합니다.  
+ 지원되는 [!INCLUDE[ssDEnoversion](../../includes/ssdenoversion-md.md)] 버전을 검토하고, [보고서 서버 데이터베이스 만들기&#40;보고서 서버 구성 관리자&#41;](../../reporting-services/install-windows/ssrs-report-server-create-a-report-server-database.md) 항목에서 지원되는 버전을 검토합니다.  
   
  **TCP/IP 연결 설정**  
  [!INCLUDE[ssDE](../../includes/ssde-md.md)]에 대해 TCP/IP 연결을 설정하십시오. 일부 [!INCLUDE[ssDE](../../includes/ssde-md.md)] 버전은 기본적으로 TCP/IP 연결을 설정하지 않습니다. 지침은 이 항목에 설명되어 있습니다.  
@@ -47,7 +47,7 @@ ms.locfileid: "74866336"
  **보고서 서버 자격 증명 결정**  
  보고서 서버가 보고서 서버 데이터베이스에 연결되는 방식을 결정하십시오. 자격 증명 유형에는 도메인 사용자 계정, [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 데이터베이스 사용자 계정 또는 보고서 서버 서비스 계정이 있습니다.  
   
- 이러한 자격 증명은 RSReportServer.config 파일에 암호화되어 저장됩니다. 보고서 서버는 보고서 서버 데이터베이스에 대한 지속적인 연결에 이 자격 증명을 사용합니다. Windows 사용자 계정 또는 데이터베이스 사용자 계정을 사용하려는 경우 이미 존재하는 계정을 지정해야 합니다. [!INCLUDE[ssRSnoversion](../../includes/ssrsnoversion-md.md)] 구성 관리자는 로그인을 만들고 필요한 사용 권한을 설정하지만 계정을 만들지는 않습니다. 자세한 내용은 [보고서 서버 데이터베이스 연결 구성&#40;SSRS 구성 관리자&#41;](../../reporting-services/install-windows/configure-a-report-server-database-connection-ssrs-configuration-manager.md)의 지원되는 버전을 검토합니다.  
+ 이러한 자격 증명은 RSReportServer.config 파일에 암호화되어 저장됩니다. 보고서 서버는 보고서 서버 데이터베이스에 대한 지속적인 연결에 이 자격 증명을 사용합니다. Windows 사용자 계정 또는 데이터베이스 사용자 계정을 사용하려는 경우 이미 존재하는 계정을 지정해야 합니다. [!INCLUDE[ssRSnoversion](../../includes/ssrsnoversion-md.md)] 구성 관리자는 로그인을 만들고 필요한 사용 권한을 설정하지만 계정을 만들지는 않습니다. 자세한 내용은 [보고서 서버 데이터베이스 연결 구성&#40;보고서 서버 구성 관리자&#41;](../../reporting-services/install-windows/configure-a-report-server-database-connection-ssrs-configuration-manager.md)을 참조하세요.  
   
  **보고서 서버 언어 결정**  
  보고서 서버에 대해 지정할 언어를 선택하십시오. 사용자가 브라우저의 다른 언어 버전을 사용하여 서버에 연결할 경우 미리 정의된 역할 이름, 설명 및 내 보고서 폴더는 다른 언어로 표시되지 않습니다.  
@@ -73,7 +73,7 @@ ms.locfileid: "74866336"
   
 ### <a name="to-create-a-local-report-server-database"></a>로컬 보고서 서버 데이터베이스를 만들려면  
   
-1.  [!INCLUDE[ssRSnoversion](../../includes/ssrsnoversion-md.md)] 구성 관리자를 시작한 다음 데이터베이스를 만들려는 보고서 서버 인스턴스에 연결합니다. 자세한 내용은 [Reporting Services 구성 관리자&#40;기본 모드&#41;](../../reporting-services/install-windows/reporting-services-configuration-manager-native-mode.md)을 참조하세요.  
+1.  [!INCLUDE[ssRSnoversion](../../includes/ssrsnoversion-md.md)] 구성 관리자를 시작한 다음 데이터베이스를 만들려는 보고서 서버 인스턴스에 연결합니다. 자세한 내용은 [보고서 서버 구성 관리자&#40;기본 모드&#41;](../../reporting-services/install-windows/reporting-services-configuration-manager-native-mode.md)를 참조하세요.  
   
 2.  데이터베이스 페이지에서 **데이터베이스 변경**을 선택합니다.  
   
@@ -119,7 +119,7 @@ ms.locfileid: "74866336"
 
 [!INCLUDE[ssRSnoversion](../../includes/ssrsnoversion-md.md)] 구성 관리자는 보고서 서버 데이터베이스에 연결할 때 보고서 서버에서 사용하는 계정을 다시 구성하는 단계를 안내하는 자격 증명 변경 마법사를 제공합니다. 자격 증명을 변경할 때 구성 관리자는 보고서 서버에서 현재 사용 중인 보고서 서버 데이터베이스의 데이터베이스 서버에 대한 모든 사용 권한과 데이터베이스 로그인 정보를 업데이트합니다. 
 
-1.  [!INCLUDE[ssRSnoversion](../../includes/ssrsnoversion-md.md)] 구성 관리자를 시작한 다음 데이터베이스를 만들려는 보고서 서버 인스턴스에 연결합니다. 자세한 내용은 [Reporting Services 구성 관리자&#40;기본 모드&#41;](../../reporting-services/install-windows/reporting-services-configuration-manager-native-mode.md)을 참조하세요.  
+1.  [!INCLUDE[ssRSnoversion](../../includes/ssrsnoversion-md.md)] 구성 관리자를 시작한 다음 데이터베이스를 만들려는 보고서 서버 인스턴스에 연결합니다. 자세한 내용은 [보고서 서버 구성 관리자&#40;기본 모드&#41;](../../reporting-services/install-windows/reporting-services-configuration-manager-native-mode.md)를 참조하세요.  
   
 2.  데이터베이스 페이지에서 **자격 증명 변경**을 선택합니다. 
 
@@ -151,6 +151,6 @@ ms.locfileid: "74866336"
 
 [보고서 서버 데이터베이스 연결 구성](../../reporting-services/install-windows/configure-a-report-server-database-connection-ssrs-configuration-manager.md)   
 [Reporting Services 기본 모드 보고서 서버 관리](../../reporting-services/report-server/manage-a-reporting-services-native-mode-report-server.md)   
-[Reporting Services 구성 관리자](../../reporting-services/install-windows/reporting-services-configuration-manager-native-mode.md)  
+[보고서 서버 구성 관리자](../../reporting-services/install-windows/reporting-services-configuration-manager-native-mode.md)  
 
 추가 질문이 있으신가요? [Reporting Services 포럼에서 질문하기](https://go.microsoft.com/fwlink/?LinkId=620231)

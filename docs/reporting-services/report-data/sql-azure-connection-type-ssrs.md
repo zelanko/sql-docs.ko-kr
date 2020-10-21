@@ -9,12 +9,12 @@ ms.technology: report-data
 ms.topic: conceptual
 ms.date: 02/15/2019
 monikerRange: '>= sql-server-2016 || = sqlallproducts-allversions'
-ms.openlocfilehash: d49fdea8dbc41624a565b685f9a2baa580b7a59c
-ms.sourcegitcommit: 822d4b3cfa53269535500a3db5877a82b5076728
+ms.openlocfilehash: f64ef01e248052667239f7516b0ccddc592871c7
+ms.sourcegitcommit: fe59f8dc27fd633f5dfce54519d6f5dcea577f56
 ms.translationtype: HT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 08/07/2020
-ms.locfileid: "87988472"
+ms.lasthandoff: 10/09/2020
+ms.locfileid: "91935190"
 ---
 # <a name="azure-sql-connection-type-ssrs"></a>Azure SQL 연결 형식(SSRS)
 
@@ -27,7 +27,7 @@ ms.locfileid: "87988472"
 > [!NOTE]  
 > [!INCLUDE[ssSDS](../../includes/sssds-md.md)]에 대한 연결을 열 때 연결 시간 제한을 30초로 설정하세요.
   
-자세한 내용은 [docs.microsoft.com의 Microsoft Azure SQL Database](https://docs.microsoft.com/azure/sql-database/)를 참조하세요.  
+자세한 내용은 [docs.microsoft.com의 Microsoft Azure SQL Database](/azure/sql-database/)를 참조하세요.  
   
 이 항목의 정보를 사용하여 데이터 원본을 작성할 수 있습니다. 단계별 지침은 [데이터 연결 추가 및 확인&#40;보고서 작성기 및 SSRS&#41;](../../reporting-services/report-data/add-and-verify-a-data-connection-report-builder-and-ssrs.md)을 참조하세요.  
   
@@ -55,7 +55,7 @@ Windows 인증(통합 보안)이 지원되지 않기 때문에 Windows 인증을
   
 - 저장된 사용자 이름 및 암호 사용. 보고서 데이터를 포함하는 데이터베이스가 보고서 서버와 다른 경우 발생하는 이중 홉을 협상하려면 Windows 자격 증명을 자격 증명으로 사용하도록 옵션을 선택합니다. 데이터 원본에 연결한 후 인증된 사용자를 가장하도록 선택할 수도 있습니다.  
   
-- 자격 증명 필요 없음. 이 옵션을 사용하려면 보고서 서버에서 무인 실행 계정을 구성해야 합니다. 자세한 내용은 [무인 실행 계정 구성&#40;SSRS 구성 관리자&#41;](../../reporting-services/install-windows/configure-the-unattended-execution-account-ssrs-configuration-manager.md)을 참조하세요.  
+- 자격 증명 필요 없음. 이 옵션을 사용하려면 보고서 서버에서 무인 실행 계정을 구성해야 합니다. 자세한 내용은 [무인 실행 계정 구성&#40;보고서 서버 구성 관리자&#41;](../../reporting-services/install-windows/configure-the-unattended-execution-account-ssrs-configuration-manager.md)를 참조하세요.  
   
 자세한 내용은 [데이터 연결 문자열 만들기 - 보고서 작성기 및 SSRS](../../reporting-services/report-data/data-connections-data-sources-and-connection-strings-report-builder-and-ssrs.md) 또는 [보고서 데이터 원본에 대한 자격 증명 및 연결 정보 지정](specify-credential-and-connection-information-for-report-data-sources.md)을 참조하세요.  
   
@@ -79,7 +79,7 @@ Windows 인증(통합 보안)이 지원되지 않기 때문에 Windows 인증을
   
 자세한 내용은 [관계형 쿼리 디자이너 사용자 인터페이스&#40;보고서 작성기&#41;](../../reporting-services/report-data/relational-query-designer-user-interface-report-builder.md) 및 [텍스트 기반 쿼리 디자이너 사용자 인터페이스&#40;보고서 작성기&#41;](../../reporting-services/report-data/text-based-query-designer-user-interface-report-builder.md)를 참조하세요.  
   
-[!INCLUDE[ssSDS](../../includes/sssds-md.md)] 에서 사용하는 그래픽 쿼리 디자이너는 요약 데이터만 검색하는 쿼리를 작성하는 데 도움이 되는 그룹화 및 집계를 기본적으로 지원합니다. [!INCLUDE[tsql](../../includes/tsql-md.md)] 언어 기능은 GROUP BY 절, DISTINCT 키워드 및 SUM, COUNT 등과 같은 집계입니다. 텍스트 기반 쿼리 디자이너는 그룹화 및 집계를 비롯한 [!INCLUDE[tsql](../../includes/tsql-md.md)] 언어를 완벽하게 지원합니다. [!INCLUDE[tsql](../../includes/tsql-md.md)]에 대한 자세한 내용은 [Transact-SQL 참조&#40;데이터베이스 엔진&#41;](../../t-sql/transact-sql-reference-database-engine.md)을 참조하세요.  
+[!INCLUDE[ssSDS](../../includes/sssds-md.md)] 에서 사용하는 그래픽 쿼리 디자이너는 요약 데이터만 검색하는 쿼리를 작성하는 데 도움이 되는 그룹화 및 집계를 기본적으로 지원합니다. [!INCLUDE[tsql](../../includes/tsql-md.md)] 언어 기능은 GROUP BY 절, DISTINCT 키워드 및 SUM, COUNT 등과 같은 집계입니다. 텍스트 기반 쿼리 디자이너는 그룹화 및 집계를 비롯한 [!INCLUDE[tsql](../../includes/tsql-md.md)] 언어를 완벽하게 지원합니다. [!INCLUDE[tsql](../../includes/tsql-md.md)]에 대한 자세한 내용은 [Transact-SQL 참조&#40;데이터베이스 엔진&#41;](../../t-sql/language-reference.md)을 참조하세요.  
   
 ### <a name="using-query-type-text"></a><a name="QueryText"></a> Text 쿼리 유형 사용
 
@@ -161,9 +161,9 @@ AAD(Azure Active Directory) 통과 인증을 통해 Azure SQL Database를 사용
 이 시나리오는 다음 항목을 올바르게 설정하는 경우 지원됩니다.
 
 - [ADALSQL(SQL Server용 Active Directory 인증 라이브러리)](https://www.microsoft.com/download/details.aspx?id=48742)은 보고서 서버에 설치됩니다.
-- [ADFS(Active Directory Federation Services)](https://docs.microsoft.com/windows-server/identity/active-directory-federation-services)는 온-프레미스 AD(Active Directory)와 AAD에서 페더레이션되도록 구성됩니다.
-- [KCD(Kerberos 제한 위임)](https://docs.microsoft.com/windows-server/security/kerberos/kerberos-constrained-delegation-overview)은 ADFS 서버에 대한 보고서 서버에서 구성됩니다.
-- 보고서를 보는 사용자로 [Azure SQL Database](https://docs.microsoft.com/azure/sql-database/sql-database-technical-overview)에 대해 인증되도록 보고서/데이터 원본을 구성합니다.
+- [ADFS(Active Directory Federation Services)](/windows-server/identity/active-directory-federation-services)는 온-프레미스 AD(Active Directory)와 AAD에서 페더레이션되도록 구성됩니다.
+- [KCD(Kerberos 제한 위임)](/windows-server/security/kerberos/kerberos-constrained-delegation-overview)은 ADFS 서버에 대한 보고서 서버에서 구성됩니다.
+- 보고서를 보는 사용자로 [Azure SQL Database](/azure/sql-database/sql-database-technical-overview)에 대해 인증되도록 보고서/데이터 원본을 구성합니다.
 
 ::: moniker-end
 
@@ -198,8 +198,7 @@ AAD(Azure Active Directory) 통과 인증을 통해 Azure SQL Database를 사용
   
 ## <a name="see-also"></a>참고 항목
 
-[docs.microsoft.com의 Microsoft Azure SQL Database](https://docs.microsoft.com/azure/sql-database/)  
+[docs.microsoft.com의 Microsoft Azure SQL Database](/azure/sql-database/)  
 [보고서 매개 변수&#40;보고서 작성기 및 보고서 디자이너&#41;](../../reporting-services/report-design/report-parameters-report-builder-and-report-designer.md)   
 [데이터 필터링, 그룹화 및 정렬&#40;보고서 작성기 및 SSRS&#41;](../../reporting-services/report-design/filter-group-and-sort-data-report-builder-and-ssrs.md)   
-[식&#40;보고서 작성기 및 SSRS&#41;](../../reporting-services/report-design/expressions-report-builder-and-ssrs.md)  
-
+[식&#40;보고서 작성기 및 SSRS&#41;](../../reporting-services/report-design/expressions-report-builder-and-ssrs.md)

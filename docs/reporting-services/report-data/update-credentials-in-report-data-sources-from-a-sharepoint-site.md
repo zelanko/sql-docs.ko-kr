@@ -9,12 +9,12 @@ ms.topic: conceptual
 ms.assetid: e0c50b6e-89e7-4b4d-8fe5-c90682c5d1b1
 author: maggiesMSFT
 ms.author: maggies
-ms.openlocfilehash: 335fdaee0e27a868a889de4ab00b55f06c372e15
-ms.sourcegitcommit: 9470c4d1fc8d2d9d08525c4f811282999d765e6e
+ms.openlocfilehash: e1dc0c59a6fbe96062e48e24e2f6b126770f0c84
+ms.sourcegitcommit: fe59f8dc27fd633f5dfce54519d6f5dcea577f56
 ms.translationtype: HT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 07/17/2020
-ms.locfileid: "86458959"
+ms.lasthandoff: 10/09/2020
+ms.locfileid: "91935154"
 ---
 # <a name="update-credentials-in-report-data-sources-from-a-sharepoint-site"></a>SharePoint 사이트의 보고서 데이터 원본에서 자격 증명 업데이트
   이 항목에서는 SharePoint 문서 라이브러리에 저장된 공유 데이터 원본 및 보고서에 포함된 데이터 원본을 업데이트하는 방법에 대해 설명합니다.  
@@ -43,7 +43,7 @@ ms.locfileid: "86458959"
   
      일부 상황에서는 **자격 증명 필요 없음** 옵션을 사용할 수도 있습니다.  
   
-     일부 데이터 원본 유형의 경우 보고서 서버에서 무인 실행 계정을 구성해야 합니다. 자세한 내용은 [외부 데이터 원본의 데이터 추가&#40;SSRS&#41;](../../reporting-services/report-data/add-data-from-external-data-sources-ssrs.md) 및 [무인 실행 계정 구성&#40;SSRS 구성 관리자&#41;](../../reporting-services/install-windows/configure-the-unattended-execution-account-ssrs-configuration-manager.md)의 해당하는 데이터 원본 유형에 대한 항목을 참조하세요.  
+     일부 데이터 원본 유형의 경우 보고서 서버에서 무인 실행 계정을 구성해야 합니다. 자세한 내용은 [외부 데이터 원본의 데이터 추가&#40;SSRS&#41;](../../reporting-services/report-data/add-data-from-external-data-sources-ssrs.md) 및 [무인 실행 계정 구성&#40;보고서 서버 구성 관리자&#41;](../../reporting-services/install-windows/configure-the-unattended-execution-account-ssrs-configuration-manager.md)에서 해당하는 데이터 원본 유형의 항목을 참조하세요.  
   
 7.  사용자 이름 및 암호를 입력합니다.  
   
@@ -69,7 +69,7 @@ ms.locfileid: "86458959"
   
      일부 상황에서는 **자격 증명 필요 없음** 옵션을 사용할 수도 있습니다. 이 옵션은 데이터 원본이 자격 증명을 허용하지 않거나 사용자가 다른 방법으로 자격 증명을 전달하는 경우에만 작동합니다.  
   
-     일부 데이터 원본 유형의 경우 보고서 서버에서 무인 실행 계정을 구성해야 합니다. 자세한 내용은 [외부 데이터 원본의 데이터 추가&#40;SSRS&#41;](../../reporting-services/report-data/add-data-from-external-data-sources-ssrs.md) 및 [무인 실행 계정 구성&#40;SSRS 구성 관리자&#41;](../../reporting-services/install-windows/configure-the-unattended-execution-account-ssrs-configuration-manager.md)의 해당하는 데이터 원본 유형에 대한 항목을 참조하세요.  
+     일부 데이터 원본 유형의 경우 보고서 서버에서 무인 실행 계정을 구성해야 합니다. 자세한 내용은 [외부 데이터 원본의 데이터 추가&#40;SSRS&#41;](../../reporting-services/report-data/add-data-from-external-data-sources-ssrs.md) 및 [무인 실행 계정 구성&#40;보고서 서버 구성 관리자&#41;](../../reporting-services/install-windows/configure-the-unattended-execution-account-ssrs-configuration-manager.md)에서 해당하는 데이터 원본 유형의 항목을 참조하세요.  
   
 5.  사용자 이름 및 암호를 입력합니다.  
   

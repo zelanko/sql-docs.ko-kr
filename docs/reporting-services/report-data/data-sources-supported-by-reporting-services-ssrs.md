@@ -19,12 +19,12 @@ helpviewer_keywords:
 ms.assetid: 9d11d055-a3be-45aa-99a7-46447a94ed42
 author: maggiesMSFT
 ms.author: maggies
-ms.openlocfilehash: 88c6ae8820997bf1544ac497df6cb251c215a1ac
-ms.sourcegitcommit: 2600a414c321cfd6dc6daf5b9bcbc9a99c049dc4
+ms.openlocfilehash: da34a74163bae218b13d8f95ebcf5797731790ac
+ms.sourcegitcommit: a5398f107599102af7c8cda815d8e5e9a367ce7e
 ms.translationtype: HT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 09/30/2020
-ms.locfileid: "91603490"
+ms.lasthandoff: 10/13/2020
+ms.locfileid: "92006462"
 ---
 # <a name="data-sources-supported-by-reporting-services-ssrs"></a>Reporting Services에서 지원하는 데이터 원본(SSRS)
   [!INCLUDE[ssRSnoversion](../../includes/ssrsnoversion-md.md)] 에서는 데이터 처리 확장 프로그램을 사용하는 확장 가능한 모듈식 데이터 계층을 통해 데이터 원본에서 보고서 데이터를 검색합니다. 데이터 원본에서 보고서 데이터를 검색하려면 데이터 원본 유형, 데이터 원본에서 실행 중인 소프트웨어 버전 및 데이터 원본 플랫폼(32비트 또는 64비트 [!INCLUDE[vcprx64](../../includes/vcprx64-md.md)])을 지원하는 데이터 처리 확장 프로그램을 선택해야 합니다.  
@@ -157,7 +157,7 @@ ms.locfileid: "91603490"
   
  그래픽 모드에서 이 쿼리 디자이너를 사용하면 쿼리가 분석되고 다시 작성될 수 있습니다. 텍스트 기반 쿼리 디자이너를 사용하여 쿼리를 작성할 수도 있습니다. 쿼리에 사용되는 [!INCLUDE[tsql](../../includes/tsql-md.md)] 구문을 정확히 제어하려면 텍스트 기반 쿼리 디자이너를 사용합니다.   
   
- [!INCLUDE[ssSDS](../../includes/sssds-md.md)]에서의 데이터 검색은 SQL Data Warehouse 및 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]와 비슷하지만 [!INCLUDE[ssSDS](../../includes/sssds-md.md)]에는 몇 가지 요구 사항이 적용됩니다. 자세한 내용은 [Azure SQL 연결 형식&#40;SSRS&#41;](../../reporting-services/report-data/sql-azure-connection-type-ssrs.md)을 참조하세요.  
+ [!INCLUDE[ssSDS](../../includes/sssds-md.md)], Azure Synapse Analytics, [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]에서 데이터를 검색하는 방법은 비슷하지만 [!INCLUDE[ssSDS](../../includes/sssds-md.md)]에만 적용되는 몇 가지 요구 사항이 있습니다. 자세한 내용은 [Azure SQL 연결 형식&#40;SSRS&#41;](../../reporting-services/report-data/sql-azure-connection-type-ssrs.md)을 참조하세요.  
   
  [데이터 원본 표로 돌아가기](#DataSourcesTable)  
   
@@ -171,7 +171,7 @@ ms.locfileid: "91603490"
   
  이 데이터 공급자는 ADOMD.NET 개체 모델을 사용하여 XMLA(XML for Analysis) 버전 1.1을 사용하는 쿼리를 만듭니다. 결과는 일반 행 집합으로 반환됩니다. 자세한 내용은 [MDX용 Analysis Services 연결 형식&#40;SSRS&#41;](../../reporting-services/report-data/analysis-services-connection-type-for-mdx-ssrs.md), [DMX용 Analysis Services 연결 형식&#40;SSRS&#41;](../../reporting-services/report-data/analysis-services-connection-type-for-dmx-ssrs.md), [Analysis Services MDX 쿼리 디자이너 사용자 인터페이스](../../reporting-services/report-data/analysis-services-mdx-query-designer-user-interface.md) 및 [Analysis Services DMX 쿼리 디자이너 사용자 인터페이스](../../reporting-services/report-data/analysis-services-dmx-query-designer-user-interface.md)를 참조하세요. 
  
- Azure Analysis Services 및 Power BI Premium 데이터 세트 데이터 원본의 경우 데이터 원본에 연결하는 데 사용되는 자격 증명에 대해 다단계 인증을 사용하지 않도록 설정해야 합니다. 사용자 환경에서 다단계 인증을 사용하도록 설정해야 하는 경우 데이터 원본에 사용되는 자격 증명에 다단계 인증을 사용하지 않도록 설정하는 옵션으로 <a href="https://docs.microsoft.com/azure/active-directory/conditional-access/overview">Azure Active Directory 조건부 액세스</a>를 검토합니다.
+ Azure Analysis Services 및 Power BI Premium 데이터 세트 데이터 원본의 경우 데이터 원본에 연결하는 데 사용되는 자격 증명에 대해 다단계 인증을 사용하지 않도록 설정해야 합니다. 사용자 환경에서 다단계 인증을 사용하도록 설정해야 하는 경우 데이터 원본에 사용되는 자격 증명에 다단계 인증을 사용하지 않도록 설정하는 옵션으로 <a href="/azure/active-directory/conditional-access/overview">Azure Active Directory 조건부 액세스</a>를 검토합니다.
   
  [!INCLUDE[ssASnoversion](../../includes/ssasnoversion-md.md)] 데이터 원본에 연결할 때 [!INCLUDE[msCoName](../../includes/msconame-md.md)] [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] [!INCLUDE[ssASnoversion](../../includes/ssasnoversion-md.md)] 데이터 처리 확장 프로그램은 다중값 매개 변수를 지원하고 셀 및 멤버 속성을 [!INCLUDE[ssRSnoversion](../../includes/ssrsnoversion-md.md)]에서 지원되는 확장 속성에 매핑합니다. 자세한 내용은 [Analysis Services 데이터베이스에 대한 확장 필드 속성 &#40;SSRS&#41;](../../reporting-services/report-data/extended-field-properties-for-an-analysis-services-database-ssrs.md)을 참조하세요.  
   
@@ -240,7 +240,7 @@ Oracle 클라이언트 도구를 설치하기 위해 다음을 수행할 수 있
   
  이 확장 프로그램은 명명된 매개 변수를 지원합니다. Oracle 버전 11g 이상의 경우 다중값 매개 변수가 지원됩니다. 위치에 종속적인 명명되지 않은 매개 변수의 경우 데이터 공급자 [!INCLUDE[msCoName](../../includes/msconame-md.md)] OLE DB Provider for Oracle과 함께 OLE DB 데이터 처리 확장 프로그램을 사용합니다. Oracle을 데이터 원본으로 구성하는 방법은 [Reporting Services를 사용하여 Oracle 데이터 원본을 구성하고 액세스하는 방법(How to use Reporting Services to configure and to access an Oracle data source)](https://support.microsoft.com/kb/834305)을 참조하십시오. 추가 사용 권한 구성에 대한 자세한 내용은 [기술 자료에서](https://support.microsoft.com/kb/870668) NETWORK SERVICE 보안 주체에 대한 사용 권한을 추가하는 방법 [!INCLUDE[msCoName](../../includes/msconame-md.md)] 을 참조하세요.  
   
- 다중 입력 매개 변수를 사용하여 저장 프로시저에서 데이터를 검색할 수 있지만 저장 프로시저는 하나의 출력 커서만 반환해야 합니다. 자세한 내용은 "DataReader를 사용하여 데이터 검색"의 [Oracle REF CURSOR를 사용하여 결과 반환](https://docs.microsoft.com/dotnet/framework/data/adonet/retrieving-data-using-a-datareader#returning-results-with-oracle-ref-cursors)을 참조하세요.
+ 다중 입력 매개 변수를 사용하여 저장 프로시저에서 데이터를 검색할 수 있지만 저장 프로시저는 하나의 출력 커서만 반환해야 합니다. 자세한 내용은 "DataReader를 사용하여 데이터 검색"의 [Oracle REF CURSOR를 사용하여 결과 반환](/dotnet/framework/data/adonet/retrieving-data-using-a-datareader#returning-results-with-oracle-ref-cursors)을 참조하세요.
   
  자세한 내용은 [Oracle 연결 형식&#40;SSRS&#41;](../../reporting-services/report-data/oracle-connection-type-ssrs.md)을 참조하세요. 연결된 쿼리 디자이너에 대한 자세한 내용은 [그래픽 쿼리 디자이너 사용자 인터페이스](../../reporting-services/report-data/graphical-query-designer-user-interface.md)를 참조하세요.  
   
@@ -317,5 +317,4 @@ Oracle 클라이언트 도구를 설치하기 위해 다음을 수행할 수 있
  [데이터 연결 문자열 만들기 - 보고서 작성기 및 SSRS](../../reporting-services/report-data/data-connections-data-sources-and-connection-strings-report-builder-and-ssrs.md)   
  [보고서 데이터 세트&#40;SSRS&#41;](../../reporting-services/report-data/report-datasets-ssrs.md)  
 추가 질문이 있으신가요? [Reporting Services 포럼을 이용해 보세요.](https://go.microsoft.com/fwlink/?LinkId=620231)
-  
   

@@ -1,30 +1,25 @@
 ---
 title: 명령 프롬프트에서 설치
-description: R 및 Python을 사용하여 Machine Learning Services를 SQL Server 데이터베이스 엔진 인스턴스에 추가하기 위해 SQL Server 명령줄 설치 프로그램을 실행합니다.
+description: SQL Server 명령줄 설치 프로그램을 실행하여 Python 및 R이 포함된 Machine Learning Services를 SQL Server 데이터베이스 엔진 인스턴스에 추가합니다.
 ms.prod: sql
 ms.technology: machine-learning-services
-ms.date: 09/30/2020
+ms.date: 10/12/2020
 ms.topic: how-to
 author: dphansen
 ms.author: davidph
 ms.custom: seo-lt-2019
 monikerRange: '>=sql-server-2016||>=sql-server-linux-ver15||=sqlallproducts-allversions'
-ms.openlocfilehash: 9769675d3901efc9e5ad794794705f924e494fe2
-ms.sourcegitcommit: c4d6804bde7eaf72d9233d6d43f77d77d1b17c4e
+ms.openlocfilehash: cd9e1e261790c301ceac8198a76fbe2906c8ccf6
+ms.sourcegitcommit: afb02c275b7c79fbd90fac4bfcfd92b00a399019
 ms.translationtype: HT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 10/01/2020
-ms.locfileid: "91624760"
+ms.lasthandoff: 10/12/2020
+ms.locfileid: "91956770"
 ---
 # <a name="install-sql-server-machine-learning-services-with-r-and-python-from-the-command-line"></a>명령줄에서 R 및 Python을 사용하여 SQL Server Machine Learning Services 설치
 [!INCLUDE [SQL Server 2016 and later](../../includes/applies-to-version/sqlserver2016.md)]
 
-이 문서에서는 명령줄에서 [SQL Server Machine Learning Services](../sql-server-machine-learning-services.md)를 설치하는 방법에 대한 지침을 제공합니다.
-
-+ [새 데이터베이스 내 인스턴스](#indb)
-+ [기존 데이터베이스 엔진 인스턴스에 추가](#add-existing)
-+ [자동 설치](#silent)
-+ [새 독립 실행형 서버](#shared-feature)
+이 문서에서는 명령줄에서 Python 및 R이 포함된 [SQL Server Machine Learning Services](../sql-server-machine-learning-services.md)를 설치하는 방법에 대한 지침을 제공합니다.
 
 자동, 기본, 전체 상호 작용 등 설치 프로그램 사용자 인터페이스 사용 방식을 지정할 수 있습니다. 이 문서에서는 R 및 Python 기계 학습 구성 요소에 고유한 매개 변수를 포함하여 [명령 프롬프트에서 SQL Server 설치](../../database-engine/install-windows/install-sql-server-from-the-command-prompt.md)를 보완합니다.
 
@@ -39,7 +34,6 @@ ms.locfileid: "91624760"
 + 도메인 컨트롤러에는 설치하지 마세요. 설치 시 Machine Learning Services 부분이 실패하게 됩니다.
 
 + 동일한 컴퓨터에 독립 실행형 인스턴스와 데이터베이스 내 인스턴스를 함께 설치하지 마세요. 독립 실행형 서버가 동일한 리소스에 대해 경합하여 두 설치 모두 성능이 저하됩니다.
-
 
 ## <a name="command-line-arguments"></a>명령줄 인수
 
@@ -202,7 +196,7 @@ Setup.exe /q /ACTION=Install /FEATURES=SQL_SHARED_MR
 
 설치가 완료되면 서버, Microsoft 패키지, R 및 Python의 오픈 소스 배포, 도구, 샘플 및 스크립트를 배포의 일부로 사용할 수 있습니다. 
 
-R 콘솔 창을 열려면 `\Program files\Microsoft SQL Server\150 (or 140/130)\R_SERVER\bin\x64`로 이동하고 **RGui.exe**를 두 번 클릭합니다. R을 처음 사용하세요? 다음 자습서를 사용해 보세요. [기본 R 명령 및 RevoScaleR 함수: 25개 공통 예제](https://docs.microsoft.com/machine-learning-server/r/tutorial-r-to-revoscaler).
+R 콘솔 창을 열려면 `\Program files\Microsoft SQL Server\150 (or 140/130)\R_SERVER\bin\x64`로 이동하고 **RGui.exe**를 두 번 클릭합니다. R을 처음 사용하세요? 다음 자습서를 사용해 보세요. [기본 R 명령 및 RevoScaleR 함수: 25개 공통 예제](/machine-learning-server/r/tutorial-r-to-revoscaler).
 
 Python 명령을 열려면 `\Program files\Microsoft SQL Server\150 (or 140)\PYTHON_SERVER\bin\x64`로 이동하고 **python.exe**를 두 번 클릭합니다.
 

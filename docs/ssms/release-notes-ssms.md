@@ -11,12 +11,12 @@ ms.author: drskwier
 ms.reviewer: maghan
 ms.custom: seo-lt-2019
 ms.date: 09/28/2020
-ms.openlocfilehash: 46a8b73155fea5c22ef7d94acc3f128f42138410
-ms.sourcegitcommit: 2600a414c321cfd6dc6daf5b9bcbc9a99c049dc4
+ms.openlocfilehash: 7115c3c36f79b35fbb66d39ec530b320d7929c0e
+ms.sourcegitcommit: 22dacedeb6e8721e7cdb6279a946d4002cfb5da3
 ms.translationtype: HT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 09/30/2020
-ms.locfileid: "91603444"
+ms.lasthandoff: 10/14/2020
+ms.locfileid: "92039157"
 ---
 # <a name="release-notes-for-sql-server-management-studio-ssms"></a>SSMS(SQL Server Management Studio) 릴리스 정보
 
@@ -66,8 +66,8 @@ SSMS 18.6은 SSMS의 최신 GA(일반 공급) 릴리스입니다. 이전 버전�
 | 데이터 분류 | SSMS가 PowerShell cmdlet을 통해 내보낸 정책의 가져오기/내보내기를 지원하도록 업데이트되었습니다. |
 | 플랫 파일 가져오기 | .csv/.tsv 파일이 각각 csv/tsv 파일로 구문 분석될 수 있도록 해당 파일의 고정 너비 파일 및 파일 형식 감지를 위한 지원이 추가되었습니다. |
 | Integration Services | Azure SQL Managed Instance 에이전트 작업이 Azure-SSIS IR의 패키지 스토어에서 SSIS 패키지를 실행하도록 하는 지원이 추가되었습니다. |
-| SMO/스크립팅 | [Azure Synapse Analytics](https://docs.microsoft.com/azure/synapse-analytics/sql-data-warehouse/sql-data-warehouse-overview-what-is)(이전 명칭: SQL Azure DW)에서 동적 데이터 마스킹 스크립팅을 위한 지원이 추가되었습니다. |
-| SMO/스크립팅 | [Azure Synapse Analytics](https://docs.microsoft.com/azure/synapse-analytics/sql-data-warehouse/sql-data-warehouse-overview-what-is)(이전 명칭: SQL DW)에서 보안 정책 스크립팅을 위한 지원이 추가되었습니다. |
+| SMO/스크립팅 | [Azure Synapse Analytics](/azure/synapse-analytics/sql-data-warehouse/sql-data-warehouse-overview-what-is)(이전 명칭: SQL Azure DW)에서 동적 데이터 마스킹 스크립팅을 위한 지원이 추가되었습니다. |
+| SMO/스크립팅 | [Azure Synapse Analytics](/azure/synapse-analytics/sql-data-warehouse/sql-data-warehouse-overview-what-is)(이전 명칭: SQL DW)에서 보안 정책 스크립팅을 위한 지원이 추가되었습니다. |
 
 ### <a name="bug-fixes-in-186"></a>18.6의 버그 수정
 
@@ -376,7 +376,7 @@ SSMS 18.6은 SSMS의 최신 GA(일반 공급) 릴리스입니다. 이전 버전�
 | 쿼리 실행 또는 결과 | 지정된 쿼리가 실행을 완료한 시간을 추적하기 위해 메시지에 *완료 시간*이 추가되었습니다. |
 | 쿼리 실행 또는 결과 | 추가 데이터를 표시하고(결과를 텍스트로) 셀에 저장할 수 있습니다(결과를 표 형태로). 이제 SSMS에서 이 두 옵션에 대해 최대 200만 자(각각 25만 6천 자와 6만 4천 자에서 증가)를 허용합니다. 또한 사용자가 표의 셀에서 43680자를 초과해서 가져올 수 없는 문제가 해결되었습니다. |
 | 실행 계획 | [인라인 스칼라 UDF 기능](../relational-databases/performance/intelligent-query-processing.md#scalar-udf-inlining)을 사용하도록 설정하는 경우 QueryPlan에 새 특성이 추가되었습니다(ContainsInlineScalarTsqlUdfs). |
-| SMO | *SQL 평가 API*에 대한 지원이 추가되었습니다. 자세한 내용은 [SQL 평가 API](https://docs.microsoft.com/sql/sql-assessment-api/sql-assessment-api-overview)를 참조하세요. |
+| SMO | *SQL 평가 API*에 대한 지원이 추가되었습니다. 자세한 내용은 [SQL 평가 API](../tools/sql-assessment-api/sql-assessment-api-overview.md)를 참조하세요. |
 |  |  |
 
 #### <a name="bug-fixes-in-182"></a>18.2의 버그 수정
@@ -526,7 +526,7 @@ SSMS 18.6은 SSMS의 최신 GA(일반 공급) 릴리스입니다. 이전 버전�
 |SSMS를 사용하려면 NetFx 4.7.2 이상 필요|최소 요구 사항을 NetFx4.6.1에서 NetFx4.7.2로 업그레이드했습니다. 이를 통해 새로운 프레임워크에서 제공하는 새로운 기능을 이용할 수 있습니다.|
 |SSMS 설정을 마이그레이션하는 기능| 처음 SSMS 18을 시작하면 사용자에게 17.x 설정을 마이그레이션하라는 메시지가 표시됩니다. 사용자 설정 파일은 이제 일반 XML 파일로 저장되므로 이식성이 향상되고 편집이 가능해집니다.|
 |높은 DPI 지원| 높은 DPI는 이제 기본적으로 활성화됩니다.|
-|SSMS는 Microsoft OLE DB 드라이버와 함께 제공됩니다.| 자세한 내용은 [SQL Server용 Microsoft OLE DB 드라이버 다운로드](https://docs.microsoft.com/sql/connect/oledb/download-oledb-driver-for-sql-server)를 참조하세요.|
+|SSMS는 Microsoft OLE DB 드라이버와 함께 제공됩니다.| 자세한 내용은 [SQL Server용 Microsoft OLE DB 드라이버 다운로드](../connect/oledb/download-oledb-driver-for-sql-server.md)를 참조하세요.|
 |SSMS는 Windows 8에서 지원되지 않습니다. Windows 10 및 Windows Server 2016에는 버전 1607(10.0.14393) 이상이 필요합니다.|NetFx 4.7.2의 새로운 종속성으로 인해 SSMS 18.0은 Windows 8, 이전 버전의 Windows 10 및 Windows Server 2016에 설치되지 않습니다. SSMS를 설치하면 위 시스템은 차단됩니다. Windows 8.1은 여전히 지원됩니다.|
 |SSMS는 더 이상 PATH 환경 변수에 추가되지 않습니다.|SSMS.EXE(및 일반적인 도구)의 경로는 더 이상 경로에 추가되지 않습니다. 사용자는 수동으로 추가하거나 최신 Windows 컴퓨터의 경우 시작 메뉴에서 사용할 수 있습니다.|
 |패키지 ID는 SSMS 확장을 개발하는 데 더 이상 필요하지 않습니다.| 과거에는 SSMS가 잘 알려진 패키지만 선택적으로 로드하여 개발자가 직접 패키지를 등록해야 했습니다. 더 이상 그렇지 않습니다.|
@@ -553,10 +553,10 @@ SSMS 18.6은 SSMS의 최신 GA(일반 공급) 릴리스입니다. 이전 버전�
 |보안 Enclave를 사용한 Always Encrypted| SQL Server 2019의 보안 enclave를 사용하는 Always Encrypted를 지원하기 위해 몇 가지 기능을 개선했습니다.  서버에 연결 대화 상자에서 enclave 증명 URL을 지정하기 위한 텍스트 필드(새로운 Always Encrypted 탭).  새 열 마스터 키가 enclave 계산을 허용하는지 여부를 제어하는 새 열 마스터 키 대화 상자의 새로운 확인란.  기타 Always Encrypted 키 관리 대화 상자에는 enclave 계산을 허용하는 열 마스터 키에 대한 정보를 제공합니다.|
 |감사 파일|스토리지 계정 키에서 Azure AD 기반 인증으로 인증 방법을 변경했습니다.|
 |데이터 분류| 재구성된 데이터 분류 작업 메뉴: 데이터베이스 작업 메뉴에 하위 메뉴를 추가하고, 먼저 데이터 분류 창을 열지 않고도 메뉴에서 보고서를 여는 옵션을 추가했습니다.|
-|데이터 분류|'데이터 분류' 기능이 SMO에 새로 추가되었습니다. 열 개체에서 새로운 SensitivityLabelName, SensitivityLabelId, SensitivityInformationTypeName, SensitivityInformationTypeId 및 IsClassified(읽기 전용) 속성을 표시합니다. 자세한 내용은 [ADD SENSITIVITY CLASSIFICATION(Transact-SQL)](https://docs.microsoft.com/sql/t-sql/statements/add-sensitivity-classification-transact-sql)을 참조하세요.|
+|데이터 분류|'데이터 분류' 기능이 SMO에 새로 추가되었습니다. 열 개체에서 새로운 SensitivityLabelName, SensitivityLabelId, SensitivityInformationTypeName, SensitivityInformationTypeId 및 IsClassified(읽기 전용) 속성을 표시합니다. 자세한 내용은 [ADD SENSITIVITY CLASSIFICATION(Transact-SQL)](../t-sql/statements/add-sensitivity-classification-transact-sql.md)을 참조하세요.|
 |데이터 분류|"분류 보고서" 메뉴 항목이 "데이터 분류" 플라이아웃에 새로 추가되었습니다.|
 |데이터 분류| 업데이트된 권장 사항.|
-|데이터베이스 호환성 수준 업그레이드|***데이터베이스 이름*** > ***작업*** > ***데이터베이스 업그레이드*** 아래에 새 옵션이 추가되었습니다. 그러면 새로운 **QTA(쿼리 튜닝 도우미)** 를 시작하여 사용자에게 다음 프로세스를 안내합니다. 데이터베이스 호환성 수준을 업그레이드하기 전에 성능 기준 수집 원하는 데이터베이스 호환성 수준으로 업그레이드  동일한 워크로드를 통해 두 번째 성능 데이터 전달 수집 워크로드 회귀 검색 및 워크로드 성능 향상을 위한 테스트된 권장 사항 제공  이는 QTA에서 이전에 알려진 정상 상태에 따라 권장 사항을 생성하지 않는 마지막 단계를 제외하고는 [쿼리 저장소 사용 시나리오](https://docs.microsoft.com/sql/relational-databases/performance/query-store-usage-scenarios#CEUpgrade)에 문서화된 데이터베이스 업그레이드 프로세스에 가깝습니다.|
+|데이터베이스 호환성 수준 업그레이드|***데이터베이스 이름*** > ***작업*** > ***데이터베이스 업그레이드*** 아래에 새 옵션이 추가되었습니다. 그러면 새로운 **QTA(쿼리 튜닝 도우미)** 를 시작하여 사용자에게 다음 프로세스를 안내합니다. 데이터베이스 호환성 수준을 업그레이드하기 전에 성능 기준 수집 원하는 데이터베이스 호환성 수준으로 업그레이드  동일한 워크로드를 통해 두 번째 성능 데이터 전달 수집 워크로드 회귀 검색 및 워크로드 성능 향상을 위한 테스트된 권장 사항 제공  이는 QTA에서 이전에 알려진 정상 상태에 따라 권장 사항을 생성하지 않는 마지막 단계를 제외하고는 [쿼리 저장소 사용 시나리오](../relational-databases/performance/query-store-usage-scenarios.md#CEUpgrade)에 문서화된 데이터베이스 업그레이드 프로세스에 가깝습니다.|
 |데이터 계층 애플리케이션 마법사|그래프 테이블을 통한 데이터 계층 애플리케이션 가져오기/내보내기 지원이 추가되었습니다.|
 |플랫 파일 가져오기 마법사|가져오기로 인해 열 이름이 변경되었을 수 있음을 사용자에게 알리는 논리가 추가되었습니다.|
 |Integration Services(SSIS)|고객이 Azure Government 클라우드에 있는 Azure-SSIS IR에서 SSIS 패키지를 예약할 수 있도록 하는 지원이 추가되었습니다.|
@@ -576,7 +576,7 @@ SSMS 18.6은 SSMS의 최신 GA(일반 공급) 릴리스입니다. 이전 버전�
 |실행 계획|“Materializer Operator(외부 Select)”를 표시하는 논리를 추가했습니다.|
 |실행 계획|"batch-mode scan on rowstores" 기능을 사용하는 쿼리를 쉽게 식별할 수 있도록 새로운 실행 계획 특성 BatchModeOnRowStoreUsed를 추가합니다. 쿼리가 batch-mode scan on rowstores를 수행할 때마다 새 특성(BatchModeOnRowStoreUsed="true")이 StmtSimple 요소에 추가됩니다.|
 |실행 계획|DW ROLLUP 및 CUBE에 대해 LocalCube RelOp에 실행 계획 지원이 추가되었습니다.|
-|실행 계획|Azure SQL Data Warehouse의 새로운 ROLLUP 및 CUBE 집계 기능에 대한 새 LocalCube 연산자입니다.|
+|실행 계획|Azure Synapse Analytics의 새로운 ROLLUP 및 CUBE 집계 기능에 대한 새 LocalCube 연산자입니다.|
 |SMO| 다시 시작 가능한 인덱스 생성을 위한 SMO 지원을 확장합니다.|
 |SMO| SMO 개체(“PropertyMissing”)에서 새 이벤트를 추가하여 애플리케이션 작성자가 SMO 성능 문제를 더 빨리 감지할 수 있도록 했습니다.|
 |SMO| "백업 체크섬 기본값" 서버 구성에 매핑되는 구성 개체에 대한 새로운 DefaultBackupChecksum 속성이 공개되었습니다.|

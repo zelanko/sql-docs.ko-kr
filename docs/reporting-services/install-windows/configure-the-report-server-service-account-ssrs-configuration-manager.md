@@ -8,14 +8,14 @@ ms.prod_service: reporting-services-native
 ms.topic: conceptual
 ms.custom: seo-lt-2019, seo-mmd-2019
 ms.date: 06/09/2020
-ms.openlocfilehash: 20a1d961035974c3c268be3e727133d731f673c3
-ms.sourcegitcommit: f7c9e562d6048f89d203d71685ba86f127d8d241
+ms.openlocfilehash: b0e5df690fd141a60a81a64c0d0a4ce9a72723ee
+ms.sourcegitcommit: fe59f8dc27fd633f5dfce54519d6f5dcea577f56
 ms.translationtype: HT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 09/12/2020
-ms.locfileid: "90042854"
+ms.lasthandoff: 10/09/2020
+ms.locfileid: "91935452"
 ---
-# <a name="configure-the-report-server-service-account-ssrs-configuration-manager"></a>보고서 서버 서비스 계정 구성(SSRS 구성 관리자)
+# <a name="configure-the-report-server-service-account-report-server-configuration-manager"></a>보고서 서버 서비스 계정 구성(보고서 서버 구성 관리자)
 
   [!INCLUDE[ssRSnoversion](../../includes/ssrsnoversion-md.md)] 는 예약된 보고서 처리와 구독 배달에 사용되는 백그라운드 처리 애플리케이션, 보고서 서버 웹 서비스 및 [!INCLUDE[ssRSWebPortal-Non-Markdown](../../includes/ssrswebportal-non-markdown-md.md)]를 포함하는 단일 서비스로 구현됩니다. 이 항목에서는 서비스 계정을 처음 구성하는 방법 Reporting Services 구성 도구를 사용하는 계정이나 암호를 수정하는 방법에 대해 설명합니다.  
   
@@ -99,7 +99,7 @@ ms.locfileid: "90042854"
   
 ## <a name="updating-an-expired-password"></a>만료된 암호 업데이트
 
- 보고서 서버 서비스가 도메인 계정으로 실행되며 Reporting Services 구성 관리자를 사용하여 이 서비스를 업데이트할 수 있게 되기 전에 암호가 만료된 경우 새 암호를 지정할 때까지 해당 서비스를 사용할 수 없습니다.  
+ 보고서 서버 서비스가 도메인 계정으로 실행되고, 보고서 서버 구성 관리자에서 업데이트할 수 있기 전에 암호가 만료된 경우 새 암호를 지정할 때까지 서비스가 시작되지 않습니다.  
   
  [!INCLUDE[ssDE](../../includes/ssde-md.md)] 의 서비스 계정 암호가 만료된 경우에는 보고서 서버에 연결하려고 할 때 **rsReportServerDatabaseUnavailable** 오류가 발생합니다. 이 오류를 해결하려면 암호를 다시 설정합니다.  
   
@@ -115,5 +115,4 @@ ms.locfileid: "90042854"
   
 ## <a name="next-steps"></a>다음 단계
 
- [보고서 서버 URL 구성&#40;SSRS 구성 관리자&#41;](../../reporting-services/install-windows/configure-report-server-urls-ssrs-configuration-manager.md)   
- [Reporting Services 구성 관리자&#40;기본 모드&#41;](../../reporting-services/install-windows/reporting-services-configuration-manager-native-mode.md)
+ [보고서 서버 URL 구성&#40;보고서 서버 구성 관리자&#41;](../../reporting-services/install-windows/configure-report-server-urls-ssrs-configuration-manager.md) [보고서 서버 구성 관리자&#40;기본 모드&#41;](../../reporting-services/install-windows/reporting-services-configuration-manager-native-mode.md)   

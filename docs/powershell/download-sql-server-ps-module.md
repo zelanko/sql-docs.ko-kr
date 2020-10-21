@@ -6,15 +6,15 @@ ms.technology: sql-server-powershell
 ms.topic: conceptual
 author: markingmyname
 ms.author: maghan
-ms.reviewer: matteot, aanelson
+ms.reviewer: matteot, drskwier
 ms.custom: ''
-ms.date: 06/11/2020
-ms.openlocfilehash: 3165a56d93ba78c387be0cdd23ef0c225b31c336
-ms.sourcegitcommit: a9f16d7819ed0e2b7ad8f4a7d4d2397437b2bbb2
+ms.date: 10/14/2020
+ms.openlocfilehash: 21730bf32e66c5954b2447037286dfdc10717e9c
+ms.sourcegitcommit: 7eb80038c86acfef1d8e7bfd5f4e30e94aed3a75
 ms.translationtype: HT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 08/21/2020
-ms.locfileid: "88714071"
+ms.lasthandoff: 10/15/2020
+ms.locfileid: "92081542"
 ---
 # <a name="install-the-sql-server-powershell-module"></a>SQL Server PowerShell 모듈 설치
 
@@ -35,8 +35,8 @@ SQL Server PowerShell 모듈에는 다음 두 가지가 있습니다.
 
 도움말 항목:
 
-- [SqlServer](https://docs.microsoft.com/powershell/module/sqlserver) cmdlet.
-- [SQLPS](https://docs.microsoft.com/powershell/module/sqlps) cmdlet.
+- [SqlServer](/powershell/module/sqlserver) cmdlet.
+- [SQLPS](/powershell/module/sqlps) cmdlet.
 
 ## <a name="sql-server-management-studio"></a>SQL Server Management Studio
 
@@ -49,7 +49,7 @@ SQL Server PowerShell 모듈에는 다음 두 가지가 있습니다.
 
 [Azure Data Studio](../azure-data-studio/download-azure-data-studio.md)도 PowerShell 모듈을 설치하지 않습니다. Azure Data Studio에서 PowerShell을 사용하려면 [PowerShell 갤러리](https://www.powershellgallery.com/packages/Sqlserver)에서 **SqlServer** 모듈을 설치합니다.
 
-Azure Data Studio에서 풍부한 PowerShell 편집기 지원을 제공하는 [PowerShell 확장](../azure-data-studio/powershell-extension.md)을 사용할 수 있습니다.
+Azure Data Studio에서 풍부한 PowerShell 편집기 지원을 제공하는 [PowerShell 확장](../azure-data-studio/extensions/powershell-extension.md)을 사용할 수 있습니다.
 
 ## <a name="installing-or-updating-the-sqlserver-module"></a>SqlServer 모듈 설치 또는 업데이트
 
@@ -118,14 +118,14 @@ Uninstall-module -Name SQLServer -RequiredVersion "<version number>" -AllowClobb
 
 ### <a name="troubleshooting"></a>문제 해결
 
-설치 시 문제가 발생할 경우 [Install-Module 설명서](https://www.powershellgallery.com/packages/PowerShellGet/2.2.1) 및 [Install-Module 참조](https://docs.microsoft.com/powershell/module/powershellget/Install-Module)를 참조하세요.
+설치 시 문제가 발생할 경우 [Install-Module 설명서](https://www.powershellgallery.com/packages/PowerShellGet/2.2.1) 및 [Install-Module 참조](/powershell/module/powershellget/Install-Module)를 참조하세요.
 
 ## <a name="using-a-specific-version-of-the-sqlserver-module"></a>특정 버전의 SqlServer 모듈 사용
 
 특정 버전의 모듈을 사용하려면 다음 명령과 비슷한 특정 버전 번호를 사용하여 가져옵니다.
 
 ```powershell
-Import-Module SqlServer -Version 21.1.18080
+Import-Module SqlServer -Version 21.1.18218
 ```
 
 ## <a name="pre-release-versions-of-the-sqlserver-module"></a>SqlServer 모듈의 시험판 버전
@@ -150,7 +150,7 @@ Find-Module SqlServer -AllowPrerelease
 다음 명령을 사용할 수 있습니다.
 
 ```powershell
-Install-Module SqlServer -RequiredVersion 21.1.18040-preview -AllowPrerelease
+Install-Module SqlServer -RequiredVersion 21.1.18218-preview -AllowPrerelease
 ```
 
 ## <a name="sql-server-powershell-on-linux"></a>Linux의 SQL Server PowerShell
@@ -163,6 +163,13 @@ Linux에서 SQL Server PowerShell을 설치하는 방법을 알아보려면 [Pow
 
 - [SqlServerDsc](https://www.powershellgallery.com/packages/SqlServerDsc/) - Microsoft SQL Server의 배포 및 구성을 위한 DSC 리소스가 포함된 모듈입니다.
 
+## <a name="cmdlet-reference"></a>Cmdlet 참조
+
+- [SqlServer cmdlet](https://docs.microsoft.com/powershell/module/sqlserver)
+- [SQLPS cmdlet](https://docs.microsoft.com/powershell/module/sqlps)
+
 ## <a name="next-steps"></a>다음 단계
 
-[SQL Server PowerShell](sql-server-powershell.md)
+- [SQL Server PowerShell](sql-server-powershell.md)
+- [SQL Server PowerShell cmdlet](https://docs.microsoft.com/powershell/module/sqlserver)
+- [Azure Data Studio와 함께 PowerShell 사용](../azure-data-studio/extensions/powershell-extension.md)

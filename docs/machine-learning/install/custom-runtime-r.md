@@ -9,18 +9,18 @@ author: cawrites
 ms.author: chadam
 ms.custom: seo-lt-2019
 monikerRange: '>=sql-server-ver15||>=sql-server-linux-ver15||=sqlallproducts-allversions'
-ms.openlocfilehash: 8d9ba741433cf5e010861dd3096ac9bf8b4f1707
-ms.sourcegitcommit: 8f062015c2a033f5a0d805ee4adabbe15e7c8f94
+ms.openlocfilehash: fb7f365fdbf4421093c11b5223bb3c1036a8d911
+ms.sourcegitcommit: afb02c275b7c79fbd90fac4bfcfd92b00a399019
 ms.translationtype: HT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 09/25/2020
-ms.locfileid: "91227165"
+ms.lasthandoff: 10/12/2020
+ms.locfileid: "91956372"
 ---
 # <a name="install-an-r-custom-runtime-for-sql-server"></a>SQL Server용 R 사용자 지정 런타임 설치
 
 [!INCLUDE [SQL Server 2019 and later](../../includes/applies-to-version/sqlserver2019.md)]
 
-이 문서에서는 SQL Server에서 R 스크립트를 실행하기 위한 사용자 지정 런타임을 설치하는 방법을 설명합니다. R에 대한 사용자 지정 런타임은 다음과 같은 시나리오에서 사용할 수 있습니다.
+이 문서에서는 SQL Server에서 R 스크립트를 실행하기 위한 사용자 지정 런타임을 설치하는 방법을 설명합니다. 사용자 지정 런타임은 확장성 프레임워크를 기반으로 하는 언어 확장 기술을 사용하여 외부 코드를 실행합니다. R에 대한 사용자 지정 런타임은 다음과 같은 시나리오에서 사용할 수 있습니다.
 
 + 확장성 프레임워크를 사용하는 SQL Server를 설치합니다.
 
@@ -71,7 +71,7 @@ R 사용자 지정 런타임을 설치하기 전에 다음을 설치합니다.
     + 데이터베이스 엔진 서비스
     + Machine Learning Services 및 언어 확장
 
-1. 설치가 완료된 후 컴퓨터를 다시 시작하라는 메시지가 나타나면 다시 시작합니다. 설치가 끝나면 설치 마법사에 표시되는 메시지를 읽어야 합니다. 자세한 내용은 [View and Read SQL Server Setup Log Files](https://docs.microsoft.com/sql/database-engine/install-windows/view-and-read-sql-server-setup-log-files)을 참조하세요.
+1. 설치가 완료된 후 컴퓨터를 다시 시작하라는 메시지가 나타나면 다시 시작합니다. 설치가 끝나면 설치 마법사에 표시되는 메시지를 읽어야 합니다. 자세한 내용은 [View and Read SQL Server Setup Log Files](../../database-engine/install-windows/view-and-read-sql-server-setup-log-files.md)을 참조하세요.
 
 ## <a name="install-r"></a>R 설치
 

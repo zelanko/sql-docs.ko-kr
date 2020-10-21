@@ -1,7 +1,7 @@
 ---
 title: SQL Server 언어 확장의 확장성 아키텍처
 titleSuffix: ''
-description: SQL Server에서 외부 코드를 실행할 수 있도록 하는 SQL Server 언어 확장에 사용되는 확장성 아키텍처에 대해 알아봅니다. SQL Server 2019에서는 Java가 지원됩니다. 이 코드는 언어 런타임 환경에서 코어 데이터베이스 엔진에 대한 확장으로 실행됩니다.
+description: SQL Server에서 외부 코드를 실행할 수 있도록 하는 SQL Server 언어 확장에 사용되는 확장성 아키텍처에 대해 알아봅니다. SQL Server 2019에서는 Java, Python, R이 지원됩니다. 이 코드는 언어 런타임 환경에서 코어 데이터베이스 엔진에 대한 확장으로 실행됩니다.
 author: dphansen
 ms.author: davidph
 ms.date: 11/05/2019
@@ -9,22 +9,22 @@ ms.topic: conceptual
 ms.prod: sql
 ms.technology: language-extensions
 monikerRange: '>=sql-server-ver15||>=sql-server-linux-ver15||=sqlallproducts-allversions'
-ms.openlocfilehash: 51780bbb0184bdd950e36eef45877da576cd2576
-ms.sourcegitcommit: 346a37242f889d76cd783f55aeed98023c693610
+ms.openlocfilehash: 40fd6b73bf28b6a201a1c0fedd1624a09d67b9c0
+ms.sourcegitcommit: fe59f8dc27fd633f5dfce54519d6f5dcea577f56
 ms.translationtype: HT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 10/06/2020
-ms.locfileid: "91765689"
+ms.lasthandoff: 10/09/2020
+ms.locfileid: "91935372"
 ---
 # <a name="extensibility-architecture-in-sql-server-language-extensions"></a>SQL Server 언어 확장의 확장성 아키텍처
 
 [!INCLUDE [SQL Server 2019 and later](../../includes/applies-to-version/sqlserver2019.md)]
 
-SQL Server에서 외부 코드를 실행할 수 있도록 하는 SQL Server 언어 확장에 사용되는 확장성 아키텍처에 대해 알아봅니다. SQL Server 2019에서는 Java가 지원됩니다. 이 코드는 언어 런타임 환경에서 코어 데이터베이스 엔진에 대한 확장으로 실행됩니다.
+SQL Server에서 외부 코드를 실행할 수 있도록 하는 SQL Server 언어 확장에 사용되는 확장성 아키텍처에 대해 알아봅니다. SQL Server 2019에서는 Java, Python, R이 지원됩니다. 이 코드는 언어 런타임 환경에서 코어 데이터베이스 엔진에 대한 확장으로 실행됩니다.
 
 ## <a name="background"></a>배경
 
-확장성 프레임워크의 목적은 SQL Server와 Java 등의 외부 언어 간에 인터페이스를 제공하는 것입니다. 데이터베이스 관리자는 SQL Server로 관리되는 보안 프레임워크 내에서 신뢰할 수 있는 언어를 실행하여 데이터 과학자가 엔터프라이즈 데이터에 액세스하도록 허용하는 동시에 보안을 유지할 수 있습니다.
+확장성 프레임워크의 목적은 SQL Server와 외부 언어 간의 인터페이스를 제공하는 것입니다. 데이터베이스 관리자는 SQL Server로 관리되는 보안 프레임워크 내에서 신뢰할 수 있는 언어를 실행하여 데이터 과학자가 엔터프라이즈 데이터에 액세스하도록 허용하는 동시에 보안을 유지할 수 있습니다.
 
 <!-- We need to get a diagram like the one below.
 The following diagram visually describes opportunities and benefits of the extensible architecture.
@@ -53,10 +53,6 @@ The following diagram visually describes opportunities and benefits of the exten
 ## <a name="launchpad"></a>실행 패드
 
 [!INCLUDE[rsql_launchpad_md](../../includes/rsql-launchpad-md.md)]는 스크립트 실행을 담당하는 외부 프로세스의 수명, 리소스 및 보안 경계를 관리하는 서비스입니다. 이는 전체 텍스트 인덱싱 및 쿼리 서비스가 전체 텍스트 쿼리를 처리하기 위해 별도의 호스트를 시작하는 방식과 비슷합니다. 실행 패드 서비스는 Microsoft에서 게시하거나 성능 및 리소스 관리 요구 사항을 충족시키는 것으로 Microsoft에서 인증한 신뢰할 수 있는 시작 관리자만 시작할 수 있습니다.
-
-| 신뢰할 수 있는 시작 관리자 | 내선 번호 | SQL Server 버전 |
-|-------------------|-----------|---------------------|
-| JavaLauncher.dll for Java | Java 확장 | SQL Server 2019 |
 
 [!INCLUDE[rsql_launchpad_md](../../includes/rsql-launchpad-md.md)] 서비스는 실행 격리를 위해 [AppContainers](/windows/desktop/secauthz/appcontainer-isolation)를 사용하는 **SQLRUserGroup**에서 실행됩니다.
 

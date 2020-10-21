@@ -1,6 +1,6 @@
 ---
 title: 구독 설정 및 파일 공유 계정(구성 관리자) | Microsoft Docs
-description: Reporting Services 구성 관리자의 구독 설정 페이지를 사용하면 기본 모드 보고서 서버 및 파일 공유 구독에 대한 파일 공유 계정을 구성할 수 있습니다.
+description: 보고서 서버 구성 관리자의 구독 설정 페이지에서 기본 모드 보고서 서버 및 파일 공유 구독에 사용할 파일 공유 계정을 구성할 수 있습니다.
 ms.date: 12/04/2019
 ms.prod: reporting-services
 ms.prod_service: reporting-services-native
@@ -11,14 +11,14 @@ f1_keywords:
 ms.assetid: fefa7bdb-b5f2-4db7-b91c-b58869279f3c
 author: maggiesMSFT
 ms.author: maggies
-ms.openlocfilehash: 9dd29c96f80ed24889356c72961f47de707037e6
-ms.sourcegitcommit: ff82f3260ff79ed860a7a58f54ff7f0594851e6b
+ms.openlocfilehash: 05441d59b725a172fddfb83ae116cda2d3ca5596
+ms.sourcegitcommit: fe59f8dc27fd633f5dfce54519d6f5dcea577f56
 ms.translationtype: HT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 03/29/2020
-ms.locfileid: "74866276"
+ms.lasthandoff: 10/09/2020
+ms.locfileid: "91935549"
 ---
-# <a name="subscription-settings-and-a-file-share-account-ssrs-configuration-manager"></a>구독 설정 및 파일 공유 계정(SSRS 구성 관리자)
+# <a name="subscription-settings-and-a-file-share-account-report-server-configuration-manager"></a>구독 설정 및 파일 공유 계정(보고서 서버 구성 관리자)
   **구성 관리자의** 구독 설정 [!INCLUDE[ssRSnoversion](../../includes/ssrsnoversion-md.md)] 페이지를 사용하면 기본 모드 보고서 서버 및 파일 공유 구독에 대한 파일 공유 계정을 구성할 수 있습니다. 파일 공유 계정을 사용하면 보고서를 파일 공유로 전달하는 여러 구독에서 단일 자격 증명 집합을 사용할 수 있습니다. 자격 증명을 변경해야 하는 경우 파일 공유 계정에 대한 구성을 변경하면 각각의 개별 구독을 업데이트할 필요가 없습니다.  
   
  [!INCLUDE[ssRSnoversion](../../includes/ssrsnoversion-md.md)] 파일 공유 구독에서 사용할 수 있는 두 가지 워크플로:  

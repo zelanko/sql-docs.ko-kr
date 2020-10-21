@@ -10,12 +10,12 @@ ms.topic: conceptual
 author: MikeRayMSFT
 ms.author: mikeray
 monikerRange: '>= aps-pdw-2016 || = azuresqldb-current || = azure-sqldw-latest || >= sql-server-2016 || >= sql-server-linux-2017 || = sqlallproducts-allversions'
-ms.openlocfilehash: 97b9d710ef77a7555d4e9bbe16157469ceaa4b74
-ms.sourcegitcommit: e700497f962e4c2274df16d9e651059b42ff1a10
+ms.openlocfilehash: 6a268ef27e1f2e5337e2325fb464656e255b454c
+ms.sourcegitcommit: a5398f107599102af7c8cda815d8e5e9a367ce7e
 ms.translationtype: HT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 08/17/2020
-ms.locfileid: "88480615"
+ms.lasthandoff: 10/13/2020
+ms.locfileid: "92005841"
 ---
 # <a name="how-to-contribute-to-sql-server-documentation"></a>SQL Server 설명서에 기여하는 방법
 
@@ -34,7 +34,7 @@ ms.locfileid: "88480615"
 
 ## <a name="edit-in-your-browser"></a><a id="githubui"></a> 브라우저에서 편집
 
-브라우저에서 SQL Server 콘텐츠를 간단하게 편집한 다음, Microsoft에 제출할 수 있습니다. 자세한 내용은 [Microsoft Docs 참여자 가이드 개요](https://docs.microsoft.com/contribute/#quick-edits-to-existing-documents)에서 확인할 수 있습니다. 
+브라우저에서 SQL Server 콘텐츠를 간단하게 편집한 다음, Microsoft에 제출할 수 있습니다. 자세한 내용은 [Microsoft Docs 참여자 가이드 개요](/contribute/#quick-edits-to-existing-documents)에서 확인할 수 있습니다. 
 
 다음 단계는 프로세스를 요약합니다. 
 
@@ -59,10 +59,10 @@ ms.locfileid: "88480615"
 
 이 방법을 사용하여 참여하려면 다음 문서를 참조하세요.
 
-- [GitHub 계정 만들기](https://docs.microsoft.com/contribute/get-started-setup-github)
-- [콘텐츠 제작 도구 설치](https://docs.microsoft.com/contribute/get-started-setup-tools)
-- [로컬로 Git 리포지토리 설정](https://docs.microsoft.com/contribute/get-started-setup-local)
-- [도구를 사용하여 참여](https://docs.microsoft.com/contribute/how-to-write-workflows-major)
+- [GitHub 계정 만들기](/contribute/get-started-setup-github)
+- [콘텐츠 제작 도구 설치](/contribute/get-started-setup-tools)
+- [로컬로 Git 리포지토리 설정](/contribute/get-started-setup-local)
+- [도구를 사용하여 참여](/contribute/how-to-write-workflows-major)
 
 설명서에 중요한 변경 내용이 있는 끌어오기 요청을 제출하는 경우 GitHub에서 온라인 **기여 CLA(라이선스 규약)** 를 제출하도록 요청하는 메시지를 받습니다. 끌어오기 요청을 수락되도록 하려면 온라인 양식을 완료해야 합니다.
 
@@ -107,13 +107,13 @@ ms.locfileid: "88480615"
 - 일반적으로 사용되는 목록은 [SQL Server 버전 및 applies-to include 파일](applies-to-includes.md)을 참조하세요.
 - 동일한 기능 또는 관련된 작업을 다루는 다른 문서를 살펴봅니다. 해당 문서를 편집하는 경우 applies-to include에 대한 Markdown을 복사할 수 있습니다(제출하지 않고 편집을 취소할 수 있음).
 - 텍스트 "applies-to"를 포함하는 파일에 대한 [docs/includes](https://github.com/MicrosoftDocs/sql-docs/tree/live/docs/includes) 디렉터리를 검색합니다. github에서 **찾기** 버튼을 사용하여 신속하게 필터링할 수 있습니다. 파일을 클릭하여 렌더링되는 방법을 확인합니다.
-- 명명 규칙에 유의하십시오. 이름에 x가 있는 경우 일반적으로 서비스에 대한 지원 부족을 나타내는 자리 표시자입니다. 예를 들어 **appliesto-xx-xxxx-asdw-xxx-md.md**는 **asdw**만 설명된 반면 다른 필드에는 x가 있으므로 Azure SQL Data Warehouse에 대한 지원만을 나타냅니다.
+- 명명 규칙에 유의하십시오. 이름에 x가 있는 경우 일반적으로 서비스에 대한 지원 부족을 나타내는 자리 표시자입니다. 예를 들어 **appliesto-xx-xxxx-asdw-xxx-md.md**는 **asdw**만 지정되고 다른 필드는 x로 표시되었기 때문에 Azure Synapse Analytics만 지원됨을 나타냅니다.
 - 일부 includes는 **tsql-appliesto-ss2017-xxxx-xxxx-xxx-md.md**와 같은 버전 번호를 지정합니다. 특정 버전의 SQL Server를 사용하여 도입된 기능을 아는 경우 이러한 includes를 사용합니다.
 
 ## <a name="contributor-resources"></a>참가자 리소스
 
-- [docs.microsoft.com에 대한 참가자 가이드](https://docs.microsoft.com/contribute/)
-- [Microsoft 스타일 가이드](https://docs.microsoft.com/teamblog/style-guide)
+- [docs.microsoft.com에 대한 참가자 가이드](/contribute/)
+- [Microsoft 스타일 가이드](/teamblog/style-guide)
 - [Markdown 기본 사항](https://help.github.com/articles/getting-started-with-writing-and-formatting-on-github/)
 
 > [!TIP]

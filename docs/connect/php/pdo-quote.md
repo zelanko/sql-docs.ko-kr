@@ -11,12 +11,12 @@ ms.topic: conceptual
 ms.assetid: ab9ddc48-42f8-4edf-aa8b-b0fc66706161
 author: David-Engel
 ms.author: v-daenge
-ms.openlocfilehash: 2cc39e175c46317428836af6562abc9af3d02dd9
-ms.sourcegitcommit: 331b8495e4ab37266945c81ff5b93d250bdaa6da
+ms.openlocfilehash: 31756cbc2f0ede497ea34077f1bdd760412c716c
+ms.sourcegitcommit: 7eb80038c86acfef1d8e7bfd5f4e30e94aed3a75
 ms.translationtype: HT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 08/20/2020
-ms.locfileid: "88645564"
+ms.lasthandoff: 10/15/2020
+ms.locfileid: "92081842"
 ---
 # <a name="pdoquote"></a>PDO::quote
 [!INCLUDE[Driver_PHP_Download](../../includes/driver_php_download.md)]
@@ -49,7 +49,7 @@ SQL 문에 전달할 수 있는 따옴표로 묶은 문자열이고, 실패하�
 ## <a name="remarks"></a>설명  
 PDO 지원이 [!INCLUDE[ssDriverPHP](../../includes/ssdriverphp_md.md)]의 버전 2.0에 추가되었습니다.  
   
-## <a name="example"></a>예제  
+## <a name="string-escape-example"></a>문자열 이스케이프 예제  
   
 ```  
 <?php  
@@ -70,7 +70,7 @@ $stmt->execute(array($param, $param2));
 ?>  
 ```  
   
-## <a name="example"></a>예제  
+## <a name="pdo-quote-example"></a>PDO quote 예제  
 
 다음 스크립트는 확장 문자열 형식이 PHP 7.2+를 사용하는 PDO::quote()에 미치는 영향에 관한 몇 가지 예를 보여 줍니다.
 

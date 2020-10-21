@@ -12,12 +12,12 @@ helpviewer_keywords:
 ms.assetid: 4091cf87-9d97-4048-a393-67f1f9207401
 author: maggiesMSFT
 ms.author: maggies
-ms.openlocfilehash: fcf80ef99c06487f25b65a928aab25a24bfccffe
-ms.sourcegitcommit: e700497f962e4c2274df16d9e651059b42ff1a10
+ms.openlocfilehash: 634fc0130942aacf7ec7c32971c9efa58e0bb16a
+ms.sourcegitcommit: 783b35f6478006d654491cb52f6edf108acf2482
 ms.translationtype: HT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 08/17/2020
-ms.locfileid: "88446008"
+ms.lasthandoff: 10/09/2020
+ms.locfileid: "91891173"
 ---
 # <a name="upgrade-a-report-server-database"></a>보고서 서버 데이터베이스 업그레이드
 
@@ -61,7 +61,7 @@ ms.locfileid: "88446008"
   
  그러나 원격 컴퓨터의 데이터베이스에 대한 **sysadmin** 권한이 없으면 다음과 같은 오류로 인해 연결이 거부됩니다.  
   
- `"Setup was not able to upgrade the report server database schema. You must update the database schema manually after setup is finished. To update the schema, run the Reporting Services Configuration Manager, open the Database Setup page, re-select the database, and click Apply. The database will be upgraded automatically."`  
+ `"Setup was not able to upgrade the report server database schema. You must update the database schema manually after setup is finished. To update the schema, run the Report Server Configuration Manager, open the Database Setup page, re-select the database, and click Apply. The database will be upgraded automatically."`  
   
  이때 보고서 서버 프로그램 파일은 업그레이드되지만 보고서 서버 데이터베이스는 이전 버전의 형식을 유지합니다. 데이터베이스를 수동으로 업그레이드하여 업그레이드 프로세스를 완료할 때까지 보고서 서버는 사용할 수 없습니다.  
   
@@ -70,7 +70,7 @@ ms.locfileid: "88446008"
   
 ## <a name="next-steps"></a>다음 단계
 
-[Reporting Services 구성 관리자](../../reporting-services/install-windows/reporting-services-configuration-manager-native-mode.md)   
+[보고서 서버 구성 관리자](../../reporting-services/install-windows/reporting-services-configuration-manager-native-mode.md)   
 [보고서 서버 데이터베이스 만들기](../../reporting-services/install-windows/ssrs-report-server-create-a-report-server-database.md)  
 [Reporting Services 업그레이드 및 마이그레이션](../../reporting-services/install-windows/upgrade-and-migrate-reporting-services.md)   
 [Reporting Services 설치 마이그레이션](../../reporting-services/install-windows/migrate-a-reporting-services-installation-native-mode.md)  

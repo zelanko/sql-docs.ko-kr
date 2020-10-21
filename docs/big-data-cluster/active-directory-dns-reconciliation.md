@@ -1,19 +1,19 @@
 ---
 title: 빅 데이터 클러스터 배포의 Active Directory 및 Kubernetes DNS 조정
-description: 빅 데이터 클러스터 액세스 관리
-author: mihaelablendea
-ms.author: mihaelab
+description: Active Directory 모드에서 SQL Server 빅 데이터 클러스터에 대한 DNS 조정 구성
+author: cloudmelon
+ms.author: melqin
 ms.reviewer: mikeray
-ms.date: 07/06/2020
+ms.date: 09/30/2020
 ms.topic: conceptual
 ms.prod: sql
 ms.technology: big-data-cluster
-ms.openlocfilehash: 411d713734db080b036a98bd18b0618326dbd70f
-ms.sourcegitcommit: dacd9b6f90e6772a778a3235fb69412662572d02
+ms.openlocfilehash: 63a5c53e64ece7650e65414fd24ddd82d6da5324
+ms.sourcegitcommit: 783b35f6478006d654491cb52f6edf108acf2482
 ms.translationtype: HT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 07/11/2020
-ms.locfileid: "86279434"
+ms.lasthandoff: 10/09/2020
+ms.locfileid: "91892463"
 ---
 # <a name="active-directory-and-kubernetes-dns-reconciliation-in-big-data-clusters-deployments"></a>빅 데이터 클러스터 배포의 Active Directory 및 Kubernetes DNS 조정
 
@@ -89,6 +89,6 @@ BDC가 삭제된 후에는 클러스터의 프로비저닝을 해제할 때 DNS 
 
 ## <a name="next-steps"></a>다음 단계
 
-- [Active Directory 모드에서 SQL Server 빅 데이터 클러스터 배포](deploy-active-directory.md)
+- [Active Directory 모드에서 SQL Server 빅 데이터 클러스터 배포](active-directory-deploy.md)
 - [Active Directory 모드에서 빅 데이터 클러스터 액세스 관리](active-directory-objects.md)
 - [Deploy multiple SQL Server Big Data Clusters in the same Active Directory domain](active-directory-deployment-background.md)(동일한 Active Directory 도메인에 여러 SQL Server 빅 데이터 클러스터 배포)

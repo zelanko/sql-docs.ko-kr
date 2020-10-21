@@ -9,12 +9,12 @@ ms.topic: conceptual
 ms.assetid: 44a9854d-e333-44f6-bdc7-8837b9f34416
 author: maggiesMSFT
 ms.author: maggies
-ms.openlocfilehash: 762bee43a32bed19b5646ad982467c67c933ed85
-ms.sourcegitcommit: ff82f3260ff79ed860a7a58f54ff7f0594851e6b
+ms.openlocfilehash: c8d602417a7423655ef5800d081432499d2761aa
+ms.sourcegitcommit: 783b35f6478006d654491cb52f6edf108acf2482
 ms.translationtype: HT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 03/29/2020
-ms.locfileid: "75254583"
+ms.lasthandoff: 10/09/2020
+ms.locfileid: "91891693"
 ---
 # <a name="moving-report-server-databases-to-another-computer-ssrs-native-mode"></a>다른 컴퓨터로 보고서 서버 데이터베이스 이동(SSRS 기본 모드)
 
@@ -222,7 +222,7 @@ GO
 [보고서 서버 서비스 시작 및 중지](../../reporting-services/report-server/start-and-stop-the-report-server-service.md)   
 [보고서 서버 데이터베이스 연결 구성](../../reporting-services/install-windows/configure-a-report-server-database-connection-ssrs-configuration-manager.md)   
 [무인 실행 계정 구성](../../reporting-services/install-windows/configure-the-unattended-execution-account-ssrs-configuration-manager.md)   
-[Reporting Services 구성 관리자](../../reporting-services/install-windows/reporting-services-configuration-manager-native-mode.md)   
+[보고서 서버 구성 관리자](../../reporting-services/install-windows/reporting-services-configuration-manager-native-mode.md)   
 [rsconfig 유틸리티](../../reporting-services/tools/rsconfig-utility-ssrs.md)   
 [암호화 키 구성 및 관리](../../reporting-services/install-windows/ssrs-encryption-keys-manage-encryption-keys.md)   
 [보고서 서버 데이터베이스](../../reporting-services/report-server/report-server-database-ssrs-native-mode.md)  

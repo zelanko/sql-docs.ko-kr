@@ -13,12 +13,12 @@ ms.reviewer: maghan
 ms.custom: seo-lt-2019
 ms.date: 02/20/2020
 monikerRange: '>=aps-pdw-2016||=azuresqldb-current||=azure-sqldw-latest||>=sql-server-2016||=sqlallproducts-allversions||=azuresqldb-mi-current'
-ms.openlocfilehash: 292736c937a2345e88964521ea294c69595729e5
-ms.sourcegitcommit: 27f95e50f11a98164e9e7a5130a3e00ac06b4cea
+ms.openlocfilehash: 39f1f79701a0a3fd871b2b273a48197b8b42187b
+ms.sourcegitcommit: a5398f107599102af7c8cda815d8e5e9a367ce7e
 ms.translationtype: HT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 09/28/2020
-ms.locfileid: "91412891"
+ms.lasthandoff: 10/13/2020
+ms.locfileid: "92005888"
 ---
 # <a name="download-sql-server-data-tools-ssdt-for-visual-studio"></a>Visual Studio용 SSDT(SQL Server Data Tools) 다운로드
 
@@ -39,7 +39,7 @@ Visual Studio 2019에서는 Analysis Services, Integration Services 및 Reportin
 
 ### <a name="install-ssdt-with-visual-studio-2019"></a>Visual Studio 2019를 사용하여 SSDT 설치
 
-[Visual Studio 2019](https://docs.microsoft.com/visualstudio/install/install-visual-studio?view=vs-2019&preserve-view=true)가 이미 설치된 경우 워크로드 목록을 편집하여 SSDT를 포함할 수 있습니다. Visual Studio 2019가 설치되지 않은 경우 [Visual Studio 2019 Community](https://visualstudio.microsoft.com/downloads/)를 다운로드하고 설치할 수 있습니다.
+[Visual Studio 2019](/visualstudio/install/install-visual-studio?preserve-view=true&view=vs-2019)가 이미 설치된 경우 워크로드 목록을 편집하여 SSDT를 포함할 수 있습니다. Visual Studio 2019가 설치되지 않은 경우 [Visual Studio 2019 Community](https://visualstudio.microsoft.com/downloads/)를 다운로드하고 설치할 수 있습니다.
 
 SSDT를 포함하도록 설치된 Visual Studio 워크로드를 수정하려면 Visual Studio 설치 관리자를 사용합니다.
 
@@ -164,7 +164,7 @@ Visual Studio 2017용 SSDT는 Visual Studio와 동일한 [시스템 요구 사�
 
 |프로젝트 템플릿|지원 되는 SQL 플랫폼|
 |-------------------|--------------------|
-|관계형 데이터베이스| SQL Server 2005\* - SQL Server 2017<br> (Visual Studio 2017에 대해 SSDT 17.x 또는 SSDT를 사용하여 [Linux의 SQL Server](../linux/sql-server-linux-overview.md)에 연결)<br /><br />Azure SQL Database<br /><br />Azure SQL Data Warehouse(쿼리만 지원, 데이터베이스 프로젝트는 아직 지원되지 않음)<br /><br /> \* SQL Server 2005는 더 이상 지원되지 않습니다.<br /><br /> 공식적으로 지원되는 SQL 버전으로 전환하세요.|
+|관계형 데이터베이스| SQL Server 2005\* - SQL Server 2017<br> (Visual Studio 2017에 대해 SSDT 17.x 또는 SSDT를 사용하여 [Linux의 SQL Server](../linux/sql-server-linux-overview.md)에 연결)<br /><br />Azure SQL Database<br /><br />Azure Synapse Analytics(쿼리만 지원, 데이터베이스 프로젝트는 아직 지원되지 않음)<br /><br /> \* SQL Server 2005는 더 이상 지원되지 않습니다.<br /><br /> 공식적으로 지원되는 SQL 버전으로 전환하세요.|
 |Analysis Services 모델<br /><br />Reporting Services 보고서 | SQL Server 2008 - SQL Server 2017|
 |Integration Services 패키지| SQL Server 2012 - SQL Server 2019 |
 
@@ -180,9 +180,9 @@ Visual Studio 2015용 SSDT 또는 SSDT의 이전 버전을 다운로드하고 �
 
 * [SSDT MSDN 포럼](https://social.msdn.microsoft.com/Forums/sqlserver/home?forum=ssdt) 
 
-* [SSDT 팀 블로그](https://docs.microsoft.com/archive/blogs/ssdt/)
+* [SSDT 팀 블로그](/archive/blogs/ssdt/)
 
-* [DACFx API 참조](https://msdn.microsoft.com/library/dn645454.aspx)
+* [DACFx API 참조](/previous-versions/sql/sql-server-2014/dn645454(v=sql.120))
 
 * [SSMS(SQL Server Management Studio) 다운로드](../ssms/download-sql-server-management-studio-ssms.md)
 
@@ -194,7 +194,7 @@ SSDT를 설치한 후에는 아래 자습서를 통해 SSDT를 사용하여 데�
 
 * [SSIS 자습서: 간단한 ETL 패키지 만들기](../integration-services/ssis-how-to-create-an-etl-package.md)
 
-* [Analysis Services 자습서](https://docs.microsoft.com/analysis-services/analysis-services-tutorials-ssas)
+* [Analysis Services 자습서](/analysis-services/analysis-services-tutorials-ssas)
 
 * [기본 테이블 보고서 만들기(SSRS 자습서)](../reporting-services/create-a-basic-table-report-ssrs-tutorial.md)
 

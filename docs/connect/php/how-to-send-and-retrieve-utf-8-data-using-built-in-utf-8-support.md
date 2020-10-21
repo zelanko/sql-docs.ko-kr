@@ -15,12 +15,12 @@ helpviewer_keywords:
 ms.assetid: 366c57cf-352f-4202-8074-6ddce44880d1
 author: David-Engel
 ms.author: v-daenge
-ms.openlocfilehash: d62ab2a7715360b8cceeecccada01717d87471c0
-ms.sourcegitcommit: c7f40918dc3ecdb0ed2ef5c237a3996cb4cd268d
+ms.openlocfilehash: c7c914306258394bde91d64e5cb84665d62ab2b4
+ms.sourcegitcommit: 7eb80038c86acfef1d8e7bfd5f4e30e94aed3a75
 ms.translationtype: HT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 10/05/2020
-ms.locfileid: "91726830"
+ms.lasthandoff: 10/15/2020
+ms.locfileid: "92081402"
 ---
 # <a name="how-to-send-and-retrieve-utf-8-data-using-built-in-utf-8-support"></a>방법: 기본 제공 UTF-8 지원을 사용하여 UTF-8 데이터 보내기 및 검색
 [!INCLUDE[Driver_PHP_Download](../../includes/driver_php_download.md)]
@@ -39,7 +39,7 @@ PDO_SQLSRV 드라이버를 사용하는 경우 PDO::SQLSRV_ATTR_ENCODING 특성�
   
 **CharacterSet**에 UTF-8 또는 SQLSRV_ENC_CHAR을 전달할 수 있습니다(그러나 SQLSRV_ENC_BINARY는 전달할 수 없음). 기본 인코딩은 SQLSRV_ENC_CHAR입니다.  
   
-## <a name="example"></a>예제  
+## <a name="connection-example"></a>연결 예제  
 다음 예제에서는 연결 시 UTF-8 문자 집합을 지정하여 UTF-8로 인코드된 데이터를 보내고 검색하는 방법을 보여 줍니다. 이 예제는 지정된 검토 ID에 대한 Production.ProductReview 테이블의 주석 열을 업데이트합니다. 또한 새로 업데이트된 데이터를 검색하고 표시합니다. 주석 열은 **nvarchar(3850)** 형식입니다. 또한 서버에 데이터를 보내기 전에 PHP **utf8_encode** 함수를 사용하여 UTF-8 인코딩으로 변환됩니다. 이는 예시용으로만 수행됩니다. 실제 애플리케이션 시나리오에서는 UTF-8 인코드된 데이터로 시작합니다.  
   
 이 예제에서는 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 및 [AdventureWorks](https://github.com/Microsoft/sql-server-samples/tree/master/samples/databases/adventure-works) 데이터베이스가 로컬 컴퓨터에 설치되어 있다고 가정합니다. 모든 출력은 브라우저에서 예제를 실행할 때 브라우저에 기록됩니다.  
@@ -128,7 +128,7 @@ sqlsrv_close( $conn);
   
 유니코드 데이터 저장에 대한 정보는 [유니코드 데이터로 작업](/previous-versions/sql/sql-server-2008-r2/ms175180(v=sql.105))을 참조하세요.  
   
-## <a name="example"></a>예제  
+## <a name="column-example"></a>열 예제  
 다음 예제에서는 첫 번째 예제와 유사하지만 연결에서 UTF-8 문자 집합 대신 열에서 UTF-8 문자 집합을 지정하는 방법을 보여 줍니다.  
   
 ```  

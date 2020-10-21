@@ -11,12 +11,12 @@ ms.topic: conceptual
 ms.assetid: f1b62700-f046-488d-bd6b-a5cd8fc345b7
 author: David-Engel
 ms.author: v-daenge
-ms.openlocfilehash: 9793fb9a130fdca5c11af671f7fd3412530a6a98
-ms.sourcegitcommit: c7f40918dc3ecdb0ed2ef5c237a3996cb4cd268d
+ms.openlocfilehash: a322af478215a215975942fb2b055a6cff755dfe
+ms.sourcegitcommit: 7eb80038c86acfef1d8e7bfd5f4e30e94aed3a75
 ms.translationtype: HT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 10/05/2020
-ms.locfileid: "91727564"
+ms.lasthandoff: 10/15/2020
+ms.locfileid: "92081702"
 ---
 # <a name="setting-the-connection-properties"></a>연결 속성 설정
 
@@ -109,7 +109,7 @@ ms.locfileid: "91727564"
 | trustStorePassword<br/><br/>String<br/><br/>null | trustStore 데이터의 무결성을 검사하는 데 사용되는 암호입니다.<br/><br/> trustStore 속성은 설정되어 있지만 trustStorePassword 속성이 설정되어 있지 않는 경우 trustStore의 무결성을 검사하지 않습니다.<br/><br/> trustStore 속성과 trustStorePassword 속성이 모두 지정되어 있지 않는 경우 드라이버에서 JVM 시스템 속성 "javax.net.ssl.trustStore" 및 "javax.net.ssl.trustStorePassword"를 사용합니다. "javax.net.ssl.trustStorePassword" 시스템 속성이 지정되어 있지 않는 경우 trustStore의 무결성을 검사하지 않습니다.<br/><br/> trustStore 속성은 설정되어 있지 않지만 trustStorePassword 속성이 설정되어 있는 경우 JDBC 드라이버에서는 "javax.net.ssl.trustStore"에 지정된 파일을 트러스트 저장소로 사용하여 지정된 trustStorePassword로 트러스트 저장소의 무결성을 검사합니다. 클라이언트 애플리케이션이 JVM 시스템 속성에 암호를 저장하지 않는 경우 이 방법이 필요할 수 있습니다.<br/><br/> **참고:**  trustStorePassword 속성은 TLS 암호화가 연결에 사용되고 **trustServerCertificate** 속성의 설정이 “false”인 경우에만 인증서 trustStore 조회에 영향을 줍니다. |
 | trustStoreType<br/><br/>String<br/><br/>JKS | FIPS 모드에 사용할 신뢰 저장소 유형을 지정하려면 이 속성을 설정합니다. <br/><br/>가능한 값은 **PKCS12**이거나 FIPS 공급자에 의해 정의된 형식 중 하나입니다. |
 | useBulkCopyFor...<br/>BatchInsert<br/><br/>boolean<br/>["true" &#124; "false"]<br/><br/>false | _useBulkCopyForBatchInsert_<br/><br/> SQL Server용 Microsoft JDBC Driver 7.0부터는 성능 향상을 위해 `java.sql.PreparedStatement`를 사용하여 일괄 처리 삽입 작업을 수행할 때 대량 복사 API를 사용하도록 이 연결 속성이 사용 설정될 수 있습니다. <br/><br/>이 기능은 대상 서버가 **Azure Data Warehouse** 유형일 경우에만 작동합니다. 기본적으로는 사용하지 않도록 설정되어 있으며, 이 속성을 "true"로 설정하면 기능이 사용 설정됩니다. <br/></br> **중요 정보:** 이 기능은 완전히 매개 변수가 있는 INSERT 쿼리만 지원합니다. INSERT 쿼리가 다른 SQL 쿼리와 결합되거나 값에 데이터를 포함하면 실행이 기본적인 일괄 처리 삽입 작업으로 대체됩니다. <br/><br/> 이 속성의 사용 방법에 대한 자세한 내용은 [일괄 처리 삽입 작업에 대량 복사 API 사용](use-bulk-copy-api-batch-insert-operation.md)을 참조하세요.|
-| useFmtOnly<br /><br />boolean<br />["true" &#124; "false"]<br /><br />false | SQL Server용 Microsoft JDBC Driver는 버전 7.4부터 **useFmtOnly** 연결 속성을 지정하여 서버의 매개 변수 메타데이터를 쿼리할 대안을 제공합니다. 이 속성이 "true"로 설정되면 매개 변수 메타데이터를 쿼리할 때 드라이버에서 `SET FMTONLY` 논리를 사용하도록 지정됩니다. 이 기능은 기본적으로 사용 설정되어 있지 않으며, `SET FMTONLY`에 사용 중단 표시가 되어 있으므로 이 속성을 사용하는 것 또한 권장하지 않습니다. **useFmtOnly**는 [`sp_describe_undeclared_parameters`](../../relational-databases/system-stored-procedures/sp-describe-undeclared-parameters-transact-sql.md?view=sql-server-2017)의 제한 사항과 알려진 문제를 해결하는 용도로만 사용할 수 있습니다.<br/><br/> 이 기능은 현재 단일 `SELECT/INSERT/UPDATE/DELETE` 쿼리만 지원합니다. 지원되지 않거나 여러 개인 쿼리로 이 기능을 사용하려 하면 드라이버가 쿼리의 구문 분석을 시도하게 되지만, 대부분의 경우에는 예외가 발생할 수 있습니다.<br/><br/> 자세한 내용은 [Retrieving ParameterMetaData via useFmtOnly](../../connect/jdbc/using-usefmtonly.md)를 참조하세요. |
+| useFmtOnly<br /><br />boolean<br />["true" &#124; "false"]<br /><br />false | SQL Server용 Microsoft JDBC Driver는 버전 7.4부터 **useFmtOnly** 연결 속성을 지정하여 서버의 매개 변수 메타데이터를 쿼리할 대안을 제공합니다. 이 속성이 "true"로 설정되면 매개 변수 메타데이터를 쿼리할 때 드라이버에서 `SET FMTONLY` 논리를 사용하도록 지정됩니다. 이 기능은 기본적으로 사용 설정되어 있지 않으며, `SET FMTONLY`에 사용 중단 표시가 되어 있으므로 이 속성을 사용하는 것 또한 권장하지 않습니다. **useFmtOnly**는 [`sp_describe_undeclared_parameters`](../../relational-databases/system-stored-procedures/sp-describe-undeclared-parameters-transact-sql.md)의 제한 사항과 알려진 문제를 해결하는 용도로만 사용할 수 있습니다.<br/><br/> 이 기능은 현재 단일 `SELECT/INSERT/UPDATE/DELETE` 쿼리만 지원합니다. 지원되지 않거나 여러 개인 쿼리로 이 기능을 사용하려 하면 드라이버가 쿼리의 구문 분석을 시도하게 되지만, 대부분의 경우에는 예외가 발생할 수 있습니다.<br/><br/> 자세한 내용은 [Retrieving ParameterMetaData via useFmtOnly](../../connect/jdbc/using-usefmtonly.md)를 참조하세요. |
 | userName,<br/>사용자<br/><br/>String<br/>[&lt;=128 char]<br/><br/>null | SQL 사용자 및 암호에 연결하는 경우의 데이터베이스 사용자입니다.<br/><br/>보안 주체 이름과 암호를 사용하는 Kerberos 연결의 경우 이 속성은 Kerberos 보안 주체 이름으로 설정됩니다. |
 | workstationID<br/><br/>String<br/>[&lt;=128 char]<br/><br/>&lt;빈 문자열&gt; | 워크스테이션 ID로, 다양한 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 프로파일링 및 로깅 도구에서 특정 워크스테이션을 식별하는 데 사용됩니다. <br/><br/>지정하지 않으면 &lt;빈 문자열&gt;이 사용됩니다. |
 | xopenStates<br/><br/>boolean<br/>["true" &#124; "false"]<br/><br/>false | "true"로 설정하면 드라이버에서 예외 발생 시 XOPEN 규격 상태 코드를 반환합니다. <br/><br/>기본값은 SQL 99 상태 코드를 반환하는 것입니다. |

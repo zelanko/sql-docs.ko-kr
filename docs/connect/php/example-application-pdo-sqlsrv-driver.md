@@ -11,12 +11,12 @@ ms.topic: conceptual
 ms.assetid: a153e4ce-992d-4211-9a0f-c0998c706402
 author: David-Engel
 ms.author: v-daenge
-ms.openlocfilehash: 67efc6d07c437288c96a954c2b6d748282102e29
-ms.sourcegitcommit: 8ffc23126609b1cbe2f6820f9a823c5850205372
+ms.openlocfilehash: afbf987cdebb4239d96d2c1cd4fcf87301093d76
+ms.sourcegitcommit: 7eb80038c86acfef1d8e7bfd5f4e30e94aed3a75
 ms.translationtype: HT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 04/17/2020
-ms.locfileid: "81629172"
+ms.lasthandoff: 10/15/2020
+ms.locfileid: "92081752"
 ---
 # <a name="example-application-pdo_sqlsrv-driver"></a>예제 애플리케이션(PDO_SQLSRV 드라이버)
 [!INCLUDE[Driver_PHP_Download](../../includes/driver_php_download.md)]
@@ -38,7 +38,7 @@ AdventureWorks 제품 검토 예제 애플리케이션을 실행하려면 해당
 -   [AdventureWorks2008](https://github.com/Microsoft/sql-server-samples/tree/master/samples/databases/adventure-works) 데이터베이스가 연결된 SQL Server 2005 또는 SQL Server 2008이 로컬 컴퓨터에 설치되어 있어야 합니다.  
 -   웹 브라우저가 설치됩니다.  
   
-## <a name="demonstrates"></a>데모  
+## <a name="adventureworks-example"></a>AdventureWorks 예제  
 AdventureWorks 제품 검토 예제 애플리케이션은 다음을 보여 줍니다.  
   
 -   Windows 인증을 사용하여 SQL Server에 대한 연결을 여는 방법  
@@ -46,8 +46,7 @@ AdventureWorks 제품 검토 예제 애플리케이션은 다음을 보여 줍�
 -   데이터를 검색하는 방법  
 -   오류를 확인하는 방법  
   
-## <a name="example"></a>예제  
-AdventureWorks 제품 검토 예제 애플리케이션은 데이터베이스에서 이름에 사용자가 입력한 문자열이 있는 제품에 대한 정보를 반환합니다. 반환된 제품 목록에서 사용자는 검토와 이미지를 보고, 이미지를 업로드하고, 선택한 제품에 대한 검토를 쓸 수 있습니다.  
+이 예제에서는 사용자가 입력한 문자열이 이름에 포함된 제품의 제품 정보를 데이터베이스에서 반환합니다. 반환된 제품 목록에서 사용자는 검토와 이미지를 보고, 이미지를 업로드하고, 선택한 제품에 대한 검토를 쓸 수 있습니다.  
   
 adventureworks_demo_pdo.php 파일에 다음 코드를 추가합니다.  
   
@@ -452,7 +451,7 @@ function PopulateProductsTable( $values )
 </html>  
 ```  
   
-## <a name="example"></a>예제  
+## <a name="lob-example"></a>LOB 예제  
 photo.php 스크립트는 지정된 **ProductID**에 대한 제품 사진을 반환합니다. 이 스크립트는 adventureworks_demo.php 스크립트에서 호출됩니다.  
   
 photo_pdo.php 파일에 다음 코드를 추가합니다.  

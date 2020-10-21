@@ -10,12 +10,12 @@ ms.author: maghan
 ms.reviewer: matteot
 ms.custom: ''
 ms.date: 06/11/2020
-ms.openlocfilehash: e320408fd569cbf747c9f9ada68f51dd2bea8a41
-ms.sourcegitcommit: a9f16d7819ed0e2b7ad8f4a7d4d2397437b2bbb2
+ms.openlocfilehash: 968bcd1560fd4fd24dddfaf45cfe606518235b60
+ms.sourcegitcommit: 7eb80038c86acfef1d8e7bfd5f4e30e94aed3a75
 ms.translationtype: HT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 08/21/2020
-ms.locfileid: "88714331"
+ms.lasthandoff: 10/15/2020
+ms.locfileid: "92081892"
 ---
 # <a name="sql-server-powershell"></a>SQL Server PowerShell
 
@@ -23,13 +23,19 @@ ms.locfileid: "88714331"
 
 **[SQL Server PowerShell 설치](download-sql-server-ps-module.md)**
 
-SQL Server PowerShell 모듈은 **SqlServer**와 **SQLPS**의 두 가지가 있습니다. **SQLPS** 모듈은 (이전 버전과의 호환성을 위해) SQL Server 설치에 포함되어 있지만 더 이상 업데이트되지는 않습니다. 최신 PowerShell 모듈은 **SqlServer** 모듈입니다. **SqlServer** 모듈은 **SQLPS**에 업데이트된 버전의 cmdlet이 포함되어 있으며, 최신 SQL 기능을 지원하는 새로운 cmdlet도 포함되어 있습니다.  
+SQL Server PowerShell 모듈에는 **[SqlServer](https://docs.microsoft.com/powershell/module/sqlserver)** 와 **[SQLPS](https://docs.microsoft.com/powershell/module/sqlps)** 의 두 가지가 있습니다.
 
-이전 버전의 **SqlServer** 모듈은 SSMS(SQL Server Management Studio)에 포함되었습니다(SSMS 16.x 버전만 해당).
+**SqlServer** 모듈이 사용할 현재 PowerShell 모듈입니다.
 
-SSMS 17.0 이상이 포함된 PowerShell을 사용하려면 PowerShell 갤러리에서 **SqlServer** 모듈을 설치해야 합니다.
+**SQLPS** 모듈은 이전 버전과의 호환성을 위해 SQL Server 설치에 포함되어 있지만 더 이상 업데이트되지 않습니다.
 
-**SqlServer** 모듈을 설치하려면 [SQL Server PowerShell 설치](download-sql-server-ps-module.md)를 참조하세요.
+**SqlServer** 모듈은 **SQLPS**에 있는 cmdlet의 업데이트된 버전을 포함하며, 최신 SQL 기능을 지원하는 새로운 cmdlet도 포함되어 있습니다.
+
+이전 버전의 **SqlServer** 모듈은 [SSMS(SQL Server Management Studio)](../ssms/download-sql-server-management-studio-ssms.md)에 포함되어 ‘있었습니다’(SSMS 16.x 버전만 해당).
+
+SSMS 17.0 이상에서 PowerShell을 사용하려면 [PowerShell 갤러리](https://www.powershellgallery.com/packages/SqlServer)에서 **SqlServer** 모듈을 설치합니다.
+
+[Azure Data Studio와 함께 PowerShell을 사용](../azure-data-studio/extensions/powershell-extension.md)할 수도 있습니다.
 
 **모듈이 SQLPS에서 SqlServer로 변경된 이유는 무엇인가요?**
 
@@ -47,7 +53,7 @@ SQLPS 모듈이 동일한 컴퓨터에 설치되어 있는 경우 Side-by-Side �
 
 **SqlServer** 모듈은 다음과 함께 제공됩니다.
 
-- 파일 시스템 경로와 유사한 간단한 탐색 메커니즘을 제공하는 [PowerShell 공급자](https://docs.microsoft.com/powershell/module/microsoft.powershell.core/about/about_providers). 드라이브가 SQL Server 관리 개체 모델과 연결되고 노드가 개체 모델 클래스를 기반으로 하는 파일 시스템 경로와 비슷한 경로를 작성할 수 있습니다. 그런 다음 명령 프롬프트 창에서 폴더를 탐색하는 것과 비슷한 방법으로 **cd** 및 **dir** 과 같은 친숙한 명령을 사용하여 경로를 탐색할 수 있습니다. **ren** 또는 **del**과 같은 다른 명령을 사용하여 경로의 노드에 동작을 수행할 수 있습니다.
+- 파일 시스템 경로와 유사한 간단한 탐색 메커니즘을 제공하는 [PowerShell 공급자](/powershell/module/microsoft.powershell.core/about/about_providers). 드라이브가 SQL Server 관리 개체 모델과 연결되고 노드가 개체 모델 클래스를 기반으로 하는 파일 시스템 경로와 비슷한 경로를 작성할 수 있습니다. 그런 다음 명령 프롬프트 창에서 폴더를 탐색하는 것과 비슷한 방법으로 **cd** 및 **dir** 과 같은 친숙한 명령을 사용하여 경로를 탐색할 수 있습니다. **ren** 또는 **del**과 같은 다른 명령을 사용하여 경로의 노드에 동작을 수행할 수 있습니다.
 
 - Transact-SQL 또는 XQuery 문이 포함된 **sqlcmd** 스크립트 실행과 같은 동작을 지원하는 cmdlet 집합.  
 
@@ -55,13 +61,13 @@ SQLPS 모듈이 동일한 컴퓨터에 설치되어 있는 경우 Side-by-Side �
 
 ## <a name="sql-server-versions"></a>SQL Server 버전
 
-SQL PowerShell cmdlet을 사용하여 Azure SQL Database, Azure SQL Data Warehouse 및 모든 [지원되는 SQL Server 제품](https://support.microsoft.com/lifecycle/search/1044)의 인스턴스를 관리할 수 있습니다.
+SQL PowerShell cmdlet을 사용하여 Azure SQL Database, Azure Synapse Analytics, [지원되는 모든 SQL Server 제품](https://support.microsoft.com/lifecycle/search/1044)의 인스턴스를 관리할 수 있습니다.
 
 ## <a name="sql-server-identifiers-that-contain-characters-not-supported-in-powershell-paths"></a>PowerShell 경로에서 지원되지 않는 문자가 포함된 SQL Server 식별자
 
 **Encode-Sqlname** 및 **Decode-Sqlname** cmdlet을 사용하면 PowerShell 경로에서 지원되지 않는 문자가 포함된 SQL Server 식별자를 지정할 수 있습니다. 자세한 내용은 [SQL Server Identifiers in PowerShell](sql-server-identifiers-in-powershell.md)을(를) 참조하세요.
 
-**Convert-UrnToPath** cmdlet을 사용하면 데이터베이스 엔진 개체의 URN을 SQL Server PowerShell 공급자의 경로로 변환할 수 있습니다. 자세한 내용은 [Convert URNs to SQL Server Provider Paths](https://docs.microsoft.com/powershell/module/sqlserver/Convert-UrnToPath)을(를) 참조하세요.
+**Convert-UrnToPath** cmdlet을 사용하면 데이터베이스 엔진 개체의 URN을 SQL Server PowerShell 공급자의 경로로 변환할 수 있습니다. 자세한 내용은 [Convert URNs to SQL Server Provider Paths](/powershell/module/sqlserver/Convert-UrnToPath)을(를) 참조하세요.
   
 ## <a name="query-expressions-and-unique-resource-names"></a>쿼리 식 및 Unique Resource Names  
 
@@ -80,9 +86,11 @@ Import-Module -Name SqlServer
 
 ## <a name="cmdlet-reference"></a>Cmdlet 참조
 
-- [SqlServer cmdlet](https://docs.microsoft.com/powershell/module/sqlserver)
-- [SQLPS cmdlet](https://docs.microsoft.com/powershell/module/sqlps)
+- [SqlServer cmdlet](/powershell/module/sqlserver)
+- [SQLPS cmdlet](/powershell/module/sqlps)
 
 ## <a name="next-steps"></a>다음 단계
 
-[SQL Server PowerShell 모듈 다운로드](download-sql-server-ps-module.md)
+- [SQL Server PowerShell 모듈 다운로드](download-sql-server-ps-module.md)
+- [SQL Server PowerShell cmdlet](/powershell/module/sqlserver)
+- [Azure Data Studio와 함께 PowerShell 사용](../azure-data-studio/extensions/powershell-extension.md)

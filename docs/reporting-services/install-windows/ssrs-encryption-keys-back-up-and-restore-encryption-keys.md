@@ -13,12 +13,12 @@ helpviewer_keywords:
 ms.assetid: 6773d5df-03ef-4781-beb7-9f6825bac979
 author: maggiesMSFT
 ms.author: maggies
-ms.openlocfilehash: 5da541204707bc3ad3b47a8ade5f1f1af6506ad5
-ms.sourcegitcommit: e700497f962e4c2274df16d9e651059b42ff1a10
+ms.openlocfilehash: fa300420df785fa27eacb68ae5090cd042f1ddbb
+ms.sourcegitcommit: fe59f8dc27fd633f5dfce54519d6f5dcea577f56
 ms.translationtype: HT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 08/17/2020
-ms.locfileid: "88454570"
+ms.lasthandoff: 10/09/2020
+ms.locfileid: "91933765"
 ---
 # <a name="ssrs-encryption-keys---back-up-and-restore-encryption-keys"></a>SSRS 암호화 키 - 암호화 키 백업 및 복원
 [!INCLUDE [sqlserver2016](../../includes/applies-to-version/sqlserver2016.md)]
@@ -32,7 +32,7 @@ ms.locfileid: "88454570"
   
  다음 이벤트가 발생할 경우 암호화 키의 백업 복사본을 복원해야 합니다.  
   
--   보고서 서버 Windows 서비스 계정 이름 변경 또는 암호 다시 설정. Reporting Services 구성 관리자를 사용할 경우 서비스 계정 이름 변경 작업의 일부로 키가 백업됩니다.  
+-   보고서 서버 Windows 서비스 계정 이름 변경 또는 암호 다시 설정. 보고서 서버 구성 관리자를 사용할 경우 서비스 계정 이름 변경 작업의 일부로 키가 백업됩니다.  
   
     > [!NOTE]
     > 암호를 다시 설정하는 것은 암호를 변경하는 것과 다릅니다. 암호를 다시 설정하려면 도메인 컨트롤러의 계정 정보를 덮어쓸 수 있는 권한이 있어야 합니다. 특정 암호를 잊어버리거나 알지 못할 경우 시스템 관리자가 암호를 다시 설정합니다. 대칭 키의 복원 작업은 암호를 다시 설정할 때만 필요합니다. 계정 정보를 주기적으로 변경할 경우에는 대칭 키를 다시 설정할 필요가 없습니다.  
@@ -47,7 +47,7 @@ ms.locfileid: "88454570"
 
  대칭 키를 백업하면 사용자가 지정한 파일에 키가 기록된 후 사용자가 제공한 암호를 사용하여 키가 스크램블됩니다. 대칭 키는 암호화되지 않은 상태로는 저장될 수 없으므로 디스크에 저장할 때 암호를 제공하여 키를 암호화해야 합니다. 파일이 생성되면 해당 파일을 안전한 위치에 저장하고 파일 잠금을 해제하는 데 사용되는 **암호를 기억해야** 합니다. 대칭 키를 백업하려면 다음과 같은 도구를 사용할 수 있습니다.  
   
- **기본 모드:** Reporting Services 구성 관리자 또는 **rskeymgmt** 유틸리티  
+ **기본 모드:** 보고서 서버 구성 관리자 또는 **rskeymgmt** 유틸리티  
 
 ::: moniker range="=sql-server-2016||=sqlallproducts-allversions"
   
@@ -58,7 +58,7 @@ ms.locfileid: "88454570"
 
 ::: moniker-end
   
-##  <a name="back-up-encryption-keys--reporting-services-configuration-manager-native-mode"></a><a name="bkmk_backup_configuration_manager"></a> 암호화 키 백업 - Reporting Services 구성 관리자(기본 모드)  
+##  <a name="back-up-encryption-keys--report-server-configuration-manager-native-mode"></a><a name="bkmk_backup_configuration_manager"></a> 암호화 키 백업 - 보고서 서버 구성 관리자(기본 모드)  
   
 1.  보고서 서버 Configuration Manager를 시작한 후 구성하려는 보고서 서버 인스턴스에 연결합니다.  
   
@@ -89,11 +89,11 @@ ms.locfileid: "88454570"
   
 -   이전에 저장한 대칭 키 데이터(예: 이전 배포의 보고서 서버 데이터베이스에 이미 있던 키 정보)가 삭제됩니다.  
   
- 암호화 키를 복원하려면 파일에 암호화 키 복사본이 있어야 합니다. 또한 저장된 파일의 잠금을 해제할 암호를 알아야 합니다. 키와 암호가 있으면 Reporting Services 구성 도구나 **rskeymgmt** 유틸리티를 실행하여 키를 복원할 수 있습니다. 대칭 키는 보고서 서버 데이터베이스에 현재 저장되어 있는 암호화된 데이터를 잠그거나 잠금을 해제하는 키와 같아야 합니다. 유효하지 않은 복사본을 복원하면 보고서 서버에서 보고서 서버 데이터베이스에 현재 저장되어 있는 암호화된 데이터에 액세스할 수 없습니다. 이 경우 유효한 키를 복원할 수 없으면 암호화된 값을 모두 삭제해야 합니다. 백업 복사본이 없는 경우와 같이 여타의 이유로 암호화 키를 복원할 수 없으면 기존 키 및 암호화된 내용을 삭제해야 합니다. 자세한 내용은 [암호화 키 삭제 및 다시 만들기&#40;SSRS 구성 관리자&#41;](../../reporting-services/install-windows/ssrs-encryption-keys-delete-and-re-create-encryption-keys.md)를 참조하세요. 대칭 키를 만드는 방법은 [보고서 서버 초기화&#40;SSRS 구성 관리자&#41;](../../reporting-services/install-windows/ssrs-encryption-keys-initialize-a-report-server.md)를 참조하세요.  
+ 암호화 키를 복원하려면 파일에 암호화 키 복사본이 있어야 합니다. 또한 저장된 파일의 잠금을 해제할 암호를 알아야 합니다. 키와 암호가 있으면 Reporting Services 구성 도구나 **rskeymgmt** 유틸리티를 실행하여 키를 복원할 수 있습니다. 대칭 키는 보고서 서버 데이터베이스에 현재 저장되어 있는 암호화된 데이터를 잠그거나 잠금을 해제하는 키와 같아야 합니다. 유효하지 않은 복사본을 복원하면 보고서 서버에서 보고서 서버 데이터베이스에 현재 저장되어 있는 암호화된 데이터에 액세스할 수 없습니다. 이 경우 유효한 키를 복원할 수 없으면 암호화된 값을 모두 삭제해야 합니다. 백업 복사본이 없는 경우와 같이 여타의 이유로 암호화 키를 복원할 수 없으면 기존 키 및 암호화된 내용을 삭제해야 합니다. 자세한 내용은 [암호화 키 삭제 및 다시 만들기&#40;보고서 서버 구성 관리자&#41;](../../reporting-services/install-windows/ssrs-encryption-keys-delete-and-re-create-encryption-keys.md)를 참조하세요. 대칭 키를 만드는 방법에 대한 자세한 내용은 [보고서 서버 초기화&#40;보고서 서버 구성 관리자&#41;](../../reporting-services/install-windows/ssrs-encryption-keys-initialize-a-report-server.md)를 참조하세요.  
   
-###  <a name="restore-encryption-keys--reporting-services-configuration-manager-native-mode"></a><a name="bkmk_restore_configuration_manager"></a> 암호화 키 복원 - Reporting Services 구성 관리자(기본 모드)  
+###  <a name="restore-encryption-keys--report-server-configuration-manager-native-mode"></a><a name="bkmk_restore_configuration_manager"></a> 암호화 키 복원 - 보고서 서버 구성 관리자(기본 모드)  
   
-1.  Reporting Services 구성 관리자를 시작한 후 구성하려는 보고서 서버 인스턴스에 연결합니다.  
+1.  보고서 서버 Configuration Manager를 시작한 후 구성하려는 보고서 서버 인스턴스에 연결합니다.  
   
 2.  암호화 키 페이지에서 **복원**을 선택합니다.  
   
@@ -112,6 +112,6 @@ ms.locfileid: "88454570"
     ```  
   
 ## <a name="see-also"></a>참고 항목  
- [암호화 키 구성 및 관리&#40;SSRS 구성 관리자&#41;](../../reporting-services/install-windows/ssrs-encryption-keys-manage-encryption-keys.md)  
+ [암호화 키 구성 및 관리&#40;보고서 서버 구성 관리자&#41;](../../reporting-services/install-windows/ssrs-encryption-keys-manage-encryption-keys.md)  
   
   

@@ -13,12 +13,12 @@ helpviewer_keywords:
 ms.assetid: c0225395-3a2e-4561-a2f2-8050ad11c8e2
 author: David-Engel
 ms.author: v-daenge
-ms.openlocfilehash: ae39afd504cd412ffe3f1182bcd2b3e5598c9376
-ms.sourcegitcommit: 66407a7248118bb3e167fae76bacaa868b134734
+ms.openlocfilehash: 69df287d23713b1465a44f46e68f190bf3e25b09
+ms.sourcegitcommit: 7eb80038c86acfef1d8e7bfd5f4e30e94aed3a75
 ms.translationtype: HT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 04/21/2020
-ms.locfileid: "81728352"
+ms.lasthandoff: 10/15/2020
+ms.locfileid: "92081742"
 ---
 # <a name="example-application-sqlsrv-driver"></a>예제 애플리케이션(SQLSRV 드라이버)
 [!INCLUDE[Driver_PHP_Download](../../includes/driver_php_download.md)]
@@ -40,7 +40,7 @@ AdventureWorks 제품 검토 예제 애플리케이션을 실행하려면 해당
 -   [AdventureWorks2008](https://github.com/Microsoft/sql-server-samples/tree/master/samples/databases/adventure-works) 데이터베이스가 연결된 SQL Server 2005 또는 SQL Server 2008이 로컬 컴퓨터에 설치되어 있어야 합니다.  
 -   웹 브라우저가 설치됩니다.  
   
-## <a name="demonstrates"></a>데모  
+## <a name="adventureworks-example"></a>AdventureWorks 예제  
 AdventureWorks 제품 검토 예제 애플리케이션은 다음을 보여 줍니다.  
   
 -   Windows 인증을 사용하여 SQL Server에 대한 연결을 여는 방법  
@@ -52,8 +52,7 @@ AdventureWorks 제품 검토 예제 애플리케이션은 다음을 보여 줍�
 -   데이터를 스트림으로 전송하는 방법  
 -   오류를 확인하는 방법  
   
-## <a name="example"></a>예제  
-AdventureWorks 제품 검토 예제 애플리케이션은 데이터베이스에서 이름에 사용자가 입력한 문자열이 있는 제품에 대한 정보를 반환합니다. 반환된 제품 목록에서 사용자는 검토와 이미지를 보고, 이미지를 업로드하고, 선택한 제품에 대한 검토를 쓸 수 있습니다.  
+이 예제에서는 사용자가 입력한 문자열이 이름에 포함된 제품의 제품 정보를 데이터베이스에서 반환합니다. 반환된 제품 목록에서 사용자는 검토와 이미지를 보고, 이미지를 업로드하고, 선택한 제품에 대한 검토를 쓸 수 있습니다.  
   
 adventureworks_demo.php 파일에 다음 코드를 추가합니다.  
   
@@ -492,7 +491,7 @@ function FormatErrors( $errors )
 </html>  
 ```  
   
-## <a name="example"></a>예제  
+## <a name="lob-example"></a>LOB 예제  
 photo.php 스크립트는 지정된 **ProductID**에 대한 제품 사진을 반환합니다. 이 스크립트는 adventureworks_demo.php 스크립트에서 호출됩니다.  
   
 photo.php 파일에 다음 코드를 추가합니다.  

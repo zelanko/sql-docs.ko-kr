@@ -10,12 +10,12 @@ ms.topic: conceptual
 author: pensivebrian
 ms.author: broneill
 manager: kenvh
-ms.openlocfilehash: 67e30169af049cbf9c3ac7ee3d06d779b77f67c6
-ms.sourcegitcommit: c74bb5944994e34b102615b592fdaabe54713047
+ms.openlocfilehash: 90485210bbc0fe657516306dd433f3241b5c90c9
+ms.sourcegitcommit: a5398f107599102af7c8cda815d8e5e9a367ce7e
 ms.translationtype: HT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 09/22/2020
-ms.locfileid: "90989436"
+ms.lasthandoff: 10/13/2020
+ms.locfileid: "92005974"
 ---
 # <a name="release-notes-for-sqlpackageexe"></a>SqlPackage.exe에 대한 릴리스 정보
 
@@ -51,7 +51,7 @@ Thanks.  GeneMi (MightyPen in GitHub).  2019-03-27
 | Always Encrypted | SQL Server 2019에서 보안 Enclave 가져오기 및 내보내기 지원을 추가했습니다. |
 | 배포 | Azure SQL Database에서 내보낼 때 변경 데이터 캡처 사용 테이블을 무시하는 지원을 추가했습니다. |
 | 배포 | Azure SQL Database에서 OPTIMIZE_FOR_SEQUENTIAL_KEY 인덱스 옵션 지원을 추가했습니다. |
-| 배포 | Azure SQL Data Warehouse에서 ID 열 지원을 추가했습니다. | 
+| 배포 | Azure Synapse Analytics에 대해 ID 열 지원을 추가했습니다. | 
 | 도움말 | 도움말(/?)에 sqlpackage 버전을 출력하고 /version 매개 변수를 지원합니다. | 
 
 ### <a name="fixes"></a>수정 프로그램
@@ -63,12 +63,12 @@ Thanks.  GeneMi (MightyPen in GitHub).  2019-03-27
 | 배포 | .NET Core에 대해 배포 시 dacpac 등록을 수정했습니다. | 
 | 배포 | /accessToken(/at) 매개 변수의 .NET Core 처리에 대해 sqlpackage를 수정했습니다. | 
 | 배포 | 저장 프로시저의 ALTER TABLE 문을 최상위가 아닌 문으로 허용합니다. | 
-| 배포 | 대/소문자를 구분하지 않도록 구체화된 뷰의 Azure SQL Data Warehouse 유효성 검사를 수정했습니다. | 
+| 배포 | 대/소문자를 구분하지 않도록 구체화된 뷰의 Azure Synapse Analytics 유효성 검사를 수정했습니다. | 
 
 ### <a name="known-issues"></a>알려진 문제
 | 기능 | 세부 정보 |
 | :------ | :------ |
-| 배포 | Azure SQL Data Warehouse 워크로드 관리 기능(워크로드 그룹 및 워크로드 분류자)은 아직 지원되지 않습니다. | 
+| 배포 | Azure Synapse Analytics 워크로드 관리 기능(워크로드 그룹 및 워크로드 분류자)은 아직 지원되지 않습니다. | 
 
 ## <a name="1851-sqlpackage"></a>18.5.1 sqlpackage
 
@@ -96,14 +96,14 @@ Thanks.  GeneMi (MightyPen in GitHub).  2019-03-27
 ### <a name="features"></a>기능
 | 기능 | 세부 정보 |
 | :------ | :------ |
-| 배포 | SQL Server 2008 이상, Azure SQL Database 및 Azure SQL Data Warehouse에서 데이터 민감도 분류가 지원됩니다. |
-| 배포 | 테이블 제약 조건을 위한 Azure SQL Data Warehouse 지원이 추가되었습니다. |
-| 배포 | 순서가 지정된 클러스터형 columnstore 인덱스를 위한 Azure SQL Data Warehouse 지원이 추가되었습니다. |
+| 배포 | SQL Server 2008 이상, Azure SQL Database, Azure Synapse Analytics에서 이제 데이터 민감도 분류가 지원됩니다. |
+| 배포 | Azure Synapse Analytics에 테이블 제약 조건 지원이 추가되었습니다. |
+| 배포 | Azure Synapse Analytics에 순서가 지정된 클러스터형 columnstore 인덱스 지원이 추가되었습니다. |
 | 배포 | Oracle, Teradata, MongoDB/CosmosDB, ODBC, Big Data Cluster용 외부 데이터 원본 지원과 SQL Server 2019 Big Data Cluster용 외부 테이블 지원이 추가되었습니다. |
 | 배포 | 지원되는 버전으로 SQL Database Edge 인스턴스가 추가되었습니다. |
 | 배포 | '\<server>.\<dnszone>.database.windows.net' 형식의 Managed Instance 서버 이름을 지원합니다. |
-| 배포 | Azure SQL Data Warehouse에 복사 명령에 대한 지원이 추가되었습니다. |
-| 배포 | Azure SQL Data Warehouse에 대해 테이블에서 파티션 함수가 변경된 경우 테이블이 다시 만들어지지 않도록 배포 옵션 게시 중에 ‘IgnoreTablePartitionOptions’가 추가되었습니다. |
+| 배포 | Azure Synapse Analytics에 복사 명령 지원이 추가되었습니다. |
+| 배포 | Azure Synapse Analytics 테이블의 파티션 함수가 변경되었을 때 테이블이 다시 만들어지지 않도록 게시 중에 ‘IgnoreTablePartitionOptions’ 배포 옵션이 추가되었습니다. |
 | .NET Core | sqlpackage의 .NET Core 버전에 Microsoft.Data.SqlClient에 대한 지원이 추가되었습니다. |
 | &nbsp; | &nbsp; |
 
@@ -114,9 +114,9 @@ Thanks.  GeneMi (MightyPen in GitHub).  2019-03-27
 | 배포 | AlterAnyDatabaseScopedConfiguration 및 AlterAnySensitivityClassification 권한에 대해 GRANT 문이 생성되는 문제가 수정되었습니다. |
 | 배포 | 외부 스크립트 권한이 인식되지 않는 문제가 수정되었습니다. |
 | 배포 | 인라인 속성이 수정되었습니다. 속성의 암시적인 추가는 차이에 표시되지 않아야 하나 스크립트를 통해 명시적인 언급이 표시되어야 합니다. |
-| 배포 | MV(구체화된 뷰)에 의해 참조되는 테이블을 변경하면 Azure SQL Data Warehouse에서 MV에 대해 지원되지 않는 뷰 변경 문이 생성되는 문제가 해결되었습니다. |
-| 배포 | Azure SQL Data Warehouse에 대해 데이터가 있는 테이블에 열을 추가하면 게시가 실패하는 문제가 수정되었습니다. |
-| 배포 | Azure SQL Data Warehouse에 대해 배포 열 유형을 변경할 때 데이터가 새 테이블로 이동되도록(데이터 손실 시나리오) 업데이트 스크립트가 수정되었습니다. |
+| 배포 | MV(구체화된 뷰)에서 참조된 테이블을 변경할 경우 Azure Synapse Analytics MV에서 지원되지 않는 Alter View 문이 생성되는 이슈가 해결되었습니다. |
+| 배포 | Azure Synapse Analytics 데이터가 있는 테이블에 열을 추가할 경우 게시되지 않는 이슈가 해결되었습니다. |
+| 배포 | Azure Synapse Analytics의 배포 열 유형을 변경하는 경우(데이터 손실 시나리오) 데이터를 새 테이블로 이동하도록 업데이트 스크립트가 수정되었습니다. |
 | ScriptDom | 인라인 인덱스 뒤에 정의된 인라인 제약 조건을 인식하지 않는 ScriptDom 버그가 수정되었습니다. |
 | ScriptDom | 일괄 처리 문에서 ScriptDom SYSTEM_TIME에 닫는 괄호가 누락된 문제가 수정되었습니다. |
 | Always Encrypted | sqlpackage가 다시 연결되었는데 연결이 끊기면 임시 테이블이 사라지므로 임시 테이블이 이미 사라진 경우 #tmpErrors 테이블이 삭제되지 않는 문제가 수정되었습니다. |
@@ -164,7 +164,7 @@ Thanks.  GeneMi (MightyPen in GitHub).  2019-03-27
 
 | 기능 | 세부 정보 |
 | :------ | :------ |
-| 배포 | Azure SQL Data Warehouse에 배포할 수 있도록 지원을 추가합니다(GA). | 
+| 배포 | Azure Synapse Analytics(GA)에 배포할 지원이 추가되었습니다. | 
 | 플랫폼 | macOS, Linux 및 Windows용 sqlpackage .NET Core GA. | 
 | 보안 | SHA1 코드 서명을 제거합니다. |
 | 배포 | 새 Azure 데이터베이스 버전에 대한 지원을 추가합니다. GeneralPurpose, BusinessCritical, Hyperscale |
@@ -203,7 +203,7 @@ Thanks.  GeneMi (MightyPen in GitHub).  2019-03-27
 
 | 기능 | 세부 정보 |
 | :------ | :------ |
-| 배포 | Azure SQL Data Warehouse에 배포할 수 있도록 지원을 추가합니다(미리 보기). | 
+| 배포 | Azure Synapse Analytics(미리 보기)에 배포할 지원이 추가되었습니다. | 
 | 배포 | sqlpackage에 /p:DatabaseLockTimeout=(INT32 '60') 매개 변수를 추가합니다. | 
 | 배포 | sqlpackage에 /p:LongRunningCommandTimeout=(INT32) 매개 변수를 추가합니다. |
 | 내보내기/추출 | sqlpackage에 /p:TempDirectoryForTableData=(STRING) 매개 변수를 추가합니다. |

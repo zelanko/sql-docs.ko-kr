@@ -16,14 +16,14 @@ helpviewer_keywords:
 ms.assetid: 201afe5f-acc9-4a37-b5ec-121dc7df2a61
 author: maggiesMSFT
 ms.author: maggies
-ms.openlocfilehash: 13f0237a987a87087f04da88f4a21173611c4437
-ms.sourcegitcommit: ff82f3260ff79ed860a7a58f54ff7f0594851e6b
+ms.openlocfilehash: 60e0814a72d09ff8612ef6d14a6ef7abfd2e92f1
+ms.sourcegitcommit: fe59f8dc27fd633f5dfce54519d6f5dcea577f56
 ms.translationtype: HT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 03/29/2020
-ms.locfileid: "74866306"
+ms.lasthandoff: 10/09/2020
+ms.locfileid: "91934659"
 ---
-# <a name="delete-and-recreate-encryption-keys-ssrs-configuration-manager"></a>암호화 키 삭제 및 다시 만들기(SSRS 구성 관리자)
+# <a name="delete-and-recreate-encryption-keys-report-server-configuration-manager"></a>암호화 키 삭제 및 다시 만들기(보고서 서버 구성 관리자)
   암호화 키를 삭제했다가 다시 만드는 작업은 정기적인 암호화 키 유지 관리 작업에 해당되지 않습니다. 보고서 서버가 위협을 받을 때나 보고서 서버 데이터베이스에 더 이상 액세스할 수 없을 때 마지막 수단으로 이러한 태스크를 수행합니다.  
   
 -   기존 대칭 키가 노출된 것으로 판단되면 대칭 키를 다시 만듭니다. 또한 보안을 향상시키기 위해 정기적으로 키를 다시 만들 수 있습니다.  
@@ -35,7 +35,7 @@ ms.locfileid: "74866306"
   
  보고서 서버가 작동 상태일 때만 대칭 키를 다시 만들 수 있습니다. 암호화 키를 다시 만들고 내용을 다시 암호화하면 서버 작동이 중단됩니다. 다시 암호화하는 동안 서버를 오프라인으로 만들어야 합니다. 다시 암호화하는 동안에는 보고서 서버에 대해 요청이 수행되면 안 됩니다.  
   
- Reporting Services 구성 도구나 **rskeymgmt** 유틸리티를 사용하여 대칭 키와 암호화된 데이터를 다시 설정할 수 있습니다. 대칭 키를 만드는 방법은 [보고서 서버 초기화&#40;SSRS 구성 관리자&#41;](../../reporting-services/install-windows/ssrs-encryption-keys-initialize-a-report-server.md)를 참조하세요.  
+ Reporting Services 구성 도구나 **rskeymgmt** 유틸리티를 사용하여 대칭 키와 암호화된 데이터를 다시 설정할 수 있습니다. 대칭 키를 만드는 방법에 대한 자세한 내용은 [보고서 서버 초기화&#40;보고서 서버 구성 관리자&#41;](../../reporting-services/install-windows/ssrs-encryption-keys-initialize-a-report-server.md)를 참조하세요.  
   
 ### <a name="how-to-recreate-encryption-keys-reporting-services-configuration-tool"></a>암호화 키를 다시 만드는 방법(Reporting Services 구성 도구)  
   
@@ -115,7 +115,7 @@ ms.locfileid: "74866306"
 4.  암호화된 데이터(파일 공유 배달 확장 프로그램과 암호화를 사용하는 타사의 배달 확장 프로그램 포함)를 사용하는 구독의 경우 각 구독을 열고 자격 증명을 다시 입력합니다. 보고서 서버 전자 메일 배달을 사용하는 구독은 암호화된 데이터를 사용하지 않으므로 키가 달라져도 영향을 받지 않습니다.  
   
 ## <a name="see-also"></a>참고 항목  
- [암호화 키 구성 및 관리&#40;SSRS 구성 관리자&#41;](../../reporting-services/install-windows/ssrs-encryption-keys-manage-encryption-keys.md)   
- [암호화된 보고서 서버 데이터 저장&#40;SSRS 구성 관리자&#41;](../../reporting-services/install-windows/ssrs-encryption-keys-store-encrypted-report-server-data.md)  
+ [암호화 키 구성 및 관리&#40;보고서 서버 구성 관리자&#41;](../../reporting-services/install-windows/ssrs-encryption-keys-manage-encryption-keys.md)   
+ [암호화된 보고서 서버 데이터 저장&#40;보고서 서버 구성 관리자&#41;](../../reporting-services/install-windows/ssrs-encryption-keys-store-encrypted-report-server-data.md)  
   
   

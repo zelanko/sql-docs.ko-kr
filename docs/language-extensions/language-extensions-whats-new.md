@@ -9,21 +9,28 @@ ms.topic: conceptual
 ms.prod: sql
 ms.technology: language-extensions
 monikerRange: '>=sql-server-ver15||>=sql-server-linux-ver15||=sqlallproducts-allversions'
-ms.openlocfilehash: f90d3d25009676f33f57c42ced48284dfae75bd2
-ms.sourcegitcommit: 346a37242f889d76cd783f55aeed98023c693610
+ms.openlocfilehash: ca15786b88c62b41202310bd537a3224ddea458e
+ms.sourcegitcommit: fe59f8dc27fd633f5dfce54519d6f5dcea577f56
 ms.translationtype: HT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 10/06/2020
-ms.locfileid: "91765753"
+ms.lasthandoff: 10/09/2020
+ms.locfileid: "91934878"
 ---
 # <a name="whats-new-in-sql-server-language-extensions"></a>SQL Server 언어 확장의 새로운 기능
 [!INCLUDE [SQL Server 2019 and later](../includes/applies-to-version/sqlserver2019.md)]
 
-Microsoft는 외부 언어와 데이터 플랫폼 간의 통합을 계속 확장하고 발전시키고 있으며, 릴리스마다 SQL Server에 [언어 확장](language-extensions-overview.md) 기능을 추가하고 있습니다. 
+Microsoft는 외부 언어와 데이터 플랫폼 간의 통합을 계속 확장하고 발전시키고 있으며, 릴리스마다 SQL Server에 [언어 확장](language-extensions-overview.md) 기능을 추가하고 있습니다.
 
-## <a name="new-in-sql-server-2019"></a>SQL Server 2019의 새로운 기능 
+## <a name="new-python-and-r-language-extensions-in-sql-server-2019"></a>SQL Server 2019의 새로운 Python 및 R 언어 확장
 
-이 릴리스에서는 SQL Server의 언어 확장에 대한 지원이 추가되었습니다. 이 릴리스의 모든 기능에 대한 자세한 내용은 [SQL Server 2019의 새로운 기능](../sql-server/what-s-new-in-sql-server-ver15.md) 및 [Release Notes for SQL Server 2019](../sql-server/sql-server-version-15-release-notes.md)(SQL Server 2019 릴리스 정보)를 참조하세요.
++ [Windows의 Python](../machine-learning/install/custom-runtime-python.md)에 사용자 지정 런타임을 사용할 수 있습니다. Linux에 설치하려면 [Linux에 SQL Server용 Python 사용자 지정 런타임 설치](../machine-learning/install/custom-runtime-python.md?view=sql-server-linux-ver15&preserve-view=true)를 참조하세요.
+
++ [Windows의 R](../machine-learning/install/custom-runtime-r.md)에 사용자 지정 런타임을 사용할 수 있습니다. Linux에 설치하려면 [Linux에 SQL Server용 R 사용자 지정 런타임 설치](../machine-learning/install/custom-runtime-r.md?view=sql-server-linux-ver15&preserve-view=true)를 참조하세요.
+
+
+## <a name="new-java-language-extension-in-sql-server-2019"></a>SQL Server 2019의 새로운 Java 언어 확장
+
+이 릴리스의 모든 기능에 대한 자세한 내용은 [SQL Server 2019의 새로운 기능](../sql-server/what-s-new-in-sql-server-ver15.md) 및 [Release Notes for SQL Server 2019](../sql-server/sql-server-version-15-release-notes.md)(SQL Server 2019 릴리스 정보)를 참조하세요.
 
 - Windows 및 Linux의 기본 Java 런타임은 Open Zulu JRE이며, [SQL Server Language Extensions installation on Windows](install/install-sql-server-language-extensions-on-windows.md)(Windows에 SQL Server 언어 확장 설치) 및 [Linux에 SQL Server 언어 확장 설치](../linux/sql-server-linux-setup-language-extensions.md)에 포함되어 있습니다.
 - 지원되는 [Java 데이터 형식](how-to/java-to-sql-data-types.md).

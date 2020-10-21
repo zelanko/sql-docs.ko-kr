@@ -12,12 +12,12 @@ ms.topic: conceptual
 author: David-Engel
 ms.author: v-daenge
 ms.reviewer: v-kaywon
-ms.openlocfilehash: 0f4ccc330491ba5699ed10de48a883792d896447
-ms.sourcegitcommit: c7f40918dc3ecdb0ed2ef5c237a3996cb4cd268d
+ms.openlocfilehash: 4d11586f380354d0cef98039fbe95d2f9ed3287b
+ms.sourcegitcommit: 7eb80038c86acfef1d8e7bfd5f4e30e94aed3a75
 ms.translationtype: HT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 10/05/2020
-ms.locfileid: "91725644"
+ms.lasthandoff: 10/15/2020
+ms.locfileid: "92081462"
 ---
 # <a name="handling-null-values"></a>NULL 값 처리
 
@@ -107,7 +107,7 @@ UDT 열의 경우 null은 항상 `DataColumn`과 연결된 형식에 따라 저�
   
 - <xref:System.Data.DataRow.IsNull%2A> 메서드는 `true` 및 `DbNull.Value`에 대해 `INullable.Null`를 반환합니다.  
   
-## <a name="assigning-null-values"></a>Null 값 할당  
+## <a name="assigning-null-values-to-sqltypes"></a>SqlTypes에 Null 값 할당  
 <xref:System.Data.SqlTypes> 인스턴스의 기본값은 null입니다.  
   
 <xref:System.Data.SqlTypes>의 null은 형식에 따라 달라지며 `DbNull`과 같은 단일 값으로 나타낼 수 없습니다. `IsNull` 속성을 사용하여 null을 확인합니다.  

@@ -16,14 +16,14 @@ helpviewer_keywords:
 ms.assetid: 58e61636-88a2-4338-ae5f-3dd210aee887
 author: maggiesMSFT
 ms.author: maggies
-ms.openlocfilehash: 250e522e922dc282f14628ae625a4a28db97787e
-ms.sourcegitcommit: ff82f3260ff79ed860a7a58f54ff7f0594851e6b
+ms.openlocfilehash: 0c354b399b80e668261b95f8b65f987da547c855
+ms.sourcegitcommit: fe59f8dc27fd633f5dfce54519d6f5dcea577f56
 ms.translationtype: HT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 03/29/2020
-ms.locfileid: "74866291"
+ms.lasthandoff: 10/09/2020
+ms.locfileid: "91934730"
 ---
-# <a name="configure-and-manage-encryption-keys-ssrs-configuration-manager"></a>암호화 키 구성 및 관리(SSRS 구성 관리자)
+# <a name="configure-and-manage-encryption-keys-report-server-configuration-manager"></a>암호화 키 구성 및 관리(보고서 서버 구성 관리자)
   [!INCLUDE[ssRSnoversion](../../includes/ssrsnoversion-md.md)] 는 암호화 키를 사용하여 보고서 서버 데이터베이스에 저장된 연결 정보 및 자격 증명을 보호합니다. [!INCLUDE[ssRSnoversion](../../includes/ssrsnoversion-md.md)]에서 암호화는 중요한 데이터를 보호하는 데 사용되는 퍼블릭 키, 프라이빗 키 및 대칭 키의 조합을 통해 지원됩니다. 대칭 키는 보고서 서버의 설치 또는 구성 과정에서 보고서 서버를 초기화하는 동안 생성되며, 보고서 서버에서 이 서버에 저장된 중요한 데이터를 암호화하는 데 사용됩니다. 퍼블릭 키 및 프라이빗 키는 운영 체제에서 생성되며 대칭 키를 보호하는 데 사용됩니다. 보고서 서버 데이터베이스의 중요한 데이터를 저장하는 각 보고서 서버 인스턴스당 하나의 퍼블릭 키 및 프라이빗 키 쌍이 생성됩니다.  
   
  암호화 키 관리는 대칭 키 백업 복사본을 만들고 키를 복원, 삭제 또는 변경하는 시기와 방법을 이해하는 작업으로 구성됩니다. 보고서 서버 설치를 마이그레이션하거나 수평적 스케일 아웃 배포를 구성하는 경우 새 설치에 적용할 수 있도록 대칭 키의 백업 복사본이 있어야 합니다.  
@@ -44,20 +44,20 @@ ms.locfileid: "74866291"
 -   여러 보고서 서버가 단일 보고서 서버 데이터베이스 및 해당 데이터베이스에 대해 해독 가능한 암호화를 제공하는 대칭 키를 공유하는 보고서 서버 스케일 아웃 배포에서 보고서 서버 인스턴스를 추가하거나 제거합니다.  
   
 ## <a name="in-this-section"></a>섹션 내용  
- [보고서 서버 초기화&#40;SSRS 구성 관리자&#41;](../../reporting-services/install-windows/ssrs-encryption-keys-initialize-a-report-server.md)  
+ [보고서 서버 초기화&#40;보고서 서버 구성 관리자&#41;](../../reporting-services/install-windows/ssrs-encryption-keys-initialize-a-report-server.md)  
  암호화 키의 생성 방법을 설명합니다.  
   
  [Reporting Services 암호화 키 백업 및 복원](../../reporting-services/install-windows/ssrs-encryption-keys-back-up-and-restore-encryption-keys.md)  
  암호화 키를 백업한 후 복원하여 보고서 서버 설치를 복구 또는 마이그레이션하는 방법을 설명합니다.  
   
- [암호화된 보고서 서버 데이터 저장&#40;SSRS 구성 관리자&#41;](../../reporting-services/install-windows/ssrs-encryption-keys-store-encrypted-report-server-data.md)  
+ [암호화된 보고서 서버 데이터 저장&#40;보고서 서버 구성 관리자&#41;](../../reporting-services/install-windows/ssrs-encryption-keys-store-encrypted-report-server-data.md)  
  보고서 서버의 암호화에 대해 설명합니다.  
   
- [암호화 키 삭제 및 다시 만들기&#40;SSRS 구성 관리자&#41;](../../reporting-services/install-windows/ssrs-encryption-keys-delete-and-re-create-encryption-keys.md)  
+ [암호화 키 삭제 및 다시 만들기&#40;보고서 서버 구성 관리자&#41;](../../reporting-services/install-windows/ssrs-encryption-keys-delete-and-re-create-encryption-keys.md)  
  대칭 키를 새 버전으로 바꾸는 방법과 대칭 키의 유효성을 검사할 수 없는 경우 다시 시작하는 방법을 설명합니다.  
   
- [확장 배포의 암호화 키 추가 및 제거&#40;SSRS 구성 관리자&#41;](../../reporting-services/install-windows/add-and-remove-encryption-keys-for-scale-out-deployment.md)  
+ [스케일 아웃 배포의 암호화 키 추가 및 제거&#40;보고서 서버 구성 관리자&#41;](../../reporting-services/install-windows/add-and-remove-encryption-keys-for-scale-out-deployment.md)  
  암호화 키를 추가 및 제거하여 스케일 아웃 배포에 속하는 보고서 서버를 제어하는 방법을 설명합니다.  
   
 ## <a name="see-also"></a>참고 항목  
-[Reporting Services 구성 관리자(기본 모드)](../../reporting-services/install-windows/reporting-services-configuration-manager-native-mode.md)
+[보고서 서버 구성 관리자(기본 모드)](../../reporting-services/install-windows/reporting-services-configuration-manager-native-mode.md)

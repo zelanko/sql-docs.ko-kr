@@ -8,12 +8,12 @@ ms.topic: conceptual
 author: maggiesMSFT
 ms.author: maggies
 monikerRange: '>= sql-server-2017 || = sqlallproducts-allversions'
-ms.openlocfilehash: 3539b53864f14c9d88f92a07f5217d619084c3fe
-ms.sourcegitcommit: e700497f962e4c2274df16d9e651059b42ff1a10
+ms.openlocfilehash: 74713128e0a7e1c749bcde676d02c63ec05e3632
+ms.sourcegitcommit: 783b35f6478006d654491cb52f6edf108acf2482
 ms.translationtype: HT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 08/17/2020
-ms.locfileid: "88484987"
+ms.lasthandoff: 10/09/2020
+ms.locfileid: "91891933"
 ---
 # <a name="install-sql-server-reporting-services"></a>SQL Server Reporting Services 설치
 
@@ -68,7 +68,7 @@ Reporting Services를 설치하기 전에 [SQL Server 설치를 위한 하드웨
     > [!NOTE]
     > 기본 경로는 C:\Program Files\Microsoft SQL Server Reporting Services입니다.
 
-7. 성공적으로 설치 후 **보고서 서버 구성**을 선택하여 Reporting Services 구성 관리자를 시작합니다.
+7. 설치를 완료한 후 **보고서 서버 구성**을 선택하여 보고서 서버 구성 관리자를 시작합니다.
 
 ## <a name="configure-your-report-server"></a>보고서 서버 구성
 

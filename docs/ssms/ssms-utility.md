@@ -17,12 +17,12 @@ ms.author: maghan
 ms.reviewer: ''
 ms.custom: seo-lt-2019
 ms.date: 07/24/2020
-ms.openlocfilehash: 5688b402cf4b7dafae7812e4e86985a48626da23
-ms.sourcegitcommit: e700497f962e4c2274df16d9e651059b42ff1a10
+ms.openlocfilehash: 4cc43babe2ae064731f293a0dc96219aaeced5a5
+ms.sourcegitcommit: 22dacedeb6e8721e7cdb6279a946d4002cfb5da3
 ms.translationtype: HT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 08/17/2020
-ms.locfileid: "88417889"
+ms.lasthandoff: 10/14/2020
+ms.locfileid: "92036010"
 ---
 # <a name="ssms-utility"></a>SSMS 유틸리티
 
@@ -30,7 +30,7 @@ ms.locfileid: "88417889"
 
 **SSMS** 유틸리티는 [!INCLUDE[ssManStudioFull](../includes/ssmanstudiofull-md.md)]를 엽니다. **Ssms** 를 지정하면 서버 연결도 설정되며 쿼리, 스크립트, 파일, 프로젝트 및 솔루션이 열립니다.
 
-쿼리, 프로젝트 또는 솔루션이 포함된 파일을 지정할 수 있습니다. 연결 정보를 제공했고 파일 형식이 해당 서버 유형에 연결된 경우 쿼리가 포함된 파일은 서버에 자동으로 연결됩니다. 예를 들어 .sql 파일은 [!INCLUDE[ssManStudioFull](../includes/ssmanstudiofull-md.md)]에서 SQL 쿼리 편집기 창을 열고 .mdx 파일은 [!INCLUDE[ssManStudioFull](../includes/ssmanstudiofull-md.md)]에서 MDX 쿼리 편집기 창을 엽니다. **에서** SQL Server 솔루션 및 프로젝트[!INCLUDE[ssManStudioFull](../includes/ssmanstudiofull-md.md)]가 열립니다. 
+쿼리, 프로젝트 또는 솔루션이 포함된 파일을 지정할 수 있습니다. 연결 정보를 제공했고 파일 형식이 해당 서버 유형에 연결된 경우 쿼리가 포함된 파일은 서버에 자동으로 연결됩니다. 예를 들어 .sql 파일은 [!INCLUDE[ssManStudioFull](../includes/ssmanstudiofull-md.md)]에서 SQL 쿼리 편집기 창을 열고 .mdx 파일은 [!INCLUDE[ssManStudioFull](../includes/ssmanstudiofull-md.md)]에서 MDX 쿼리 편집기 창을 엽니다. **에서** SQL Server 솔루션 및 프로젝트[!INCLUDE[ssManStudioFull](../includes/ssmanstudiofull-md.md)]가 열립니다.
 
 > [!NOTE]
 > **Ssms** 유틸리티는 쿼리를 실행하지 않습니다. 명령줄에서 쿼리를 실행하려면 **sqlcmd** 유틸리티를 사용합니다. 
@@ -62,7 +62,10 @@ Ssms
 
 [ **-U** _username_] ‘SQL 인증’을 사용하여 연결할 때 사용하는 사용자 이름
 
-[ **-P** _password_] ‘SQL 인증’을 사용하여 연결할 때 사용하는 암호입니다.
+> [!Note]
+> **-P**는 SSMS 버전 18.0에서 제거되었습니다.
+>
+> 해결 방법: UI를 사용하여 서버에 연결한 후 암호를 저장합니다.
 
 [ **-E**] Windows 인증을 사용하여 연결
 
@@ -91,40 +94,40 @@ Ssms
 
 다음 스크립트는 명령 프롬프트에서 기본 설정으로 [!INCLUDE[ssManStudioFull](../includes/ssmanstudiofull-md.md)] 를 엽니다.
 
-```
+```console
   Ssms
 ```
 
 다음 스크립트는 *Active Directory - 통합*을 사용하여 명령 프롬프트에서 [!INCLUDE[ssManStudioFull](../includes/ssmanstudiofull-md.md)]를 엽니다.
 
-```
+```console
 Ssms.exe -S servername.database.windows.net -G
 ```
 
 다음 스크립트는 명령 프롬프트에서 Windows 인증을 사용하여 시작 화면을 표시하지 않고 코드 편집기를 서버 [!INCLUDE[ssManStudioFull](../includes/ssmanstudiofull-md.md)] 로 설정한 상태로 `ACCTG and the database AdventureWorks2012,` 를 엽니다.
 
-```
+```console
 Ssms -E -S ACCTG -d AdventureWorks2012 -nosplash
 ```
 
 다음 스크립트는 명령 프롬프트에서 [!INCLUDE[ssManStudioFull](../includes/ssmanstudiofull-md.md)] 를 열고 MonthEndQuery 스크립트를 엽니다.
 
-```
+```console
 Ssms "C:\Documents and Settings\username\My Documents\SQL Server Management Studio Projects\FinanceScripts\FinanceScripts\MonthEndQuery.sql"
 ```
 
 다음 스크립트는 명령 프롬프트에서 [!INCLUDE[ssManStudioFull](../includes/ssmanstudiofull-md.md)] 를 열고 `developer`라는 컴퓨터에서 NewReportsProject 프로젝트를 엽니다.
 
-```
+```console
 Ssms "\\developer\fin\ReportProj\ReportProj\NewReportProj.ssmssqlproj"
 ```
 
 다음 스크립트는 명령 프롬프트에서 [!INCLUDE[ssManStudioFull](../includes/ssmanstudiofull-md.md)] 를 열고 MonthlyReports 솔루션을 엽니다. 
 
-```
+```console
 Ssms "C:\solutionsfolder\ReportProj\MonthlyReports.ssmssln"
 ```
 
 ## <a name="see-also"></a>참고 항목
 
-[SQL Server Management Studio 사용](https://msdn.microsoft.com/library/f289e978-14ca-46ef-9e61-e1fe5fd593be)
+[SQL Server Management Studio 사용](./sql-server-management-studio-ssms.md)

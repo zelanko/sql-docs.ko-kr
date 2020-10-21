@@ -9,12 +9,12 @@ ms.topic: conceptual
 ms.assetid: 5b55fff2-1b15-4156-83ef-15ad9cf9f509
 author: maggiesMSFT
 ms.author: maggies
-ms.openlocfilehash: 120e99440b77a27be4f83f8e4355a4ec75cab7bb
-ms.sourcegitcommit: 9470c4d1fc8d2d9d08525c4f811282999d765e6e
+ms.openlocfilehash: c4bbc8f1c5b96f659936cb955c1f6f31bd0ef0da
+ms.sourcegitcommit: fe59f8dc27fd633f5dfce54519d6f5dcea577f56
 ms.translationtype: HT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 07/17/2020
-ms.locfileid: "86458510"
+ms.lasthandoff: 10/09/2020
+ms.locfileid: "91933442"
 ---
 # <a name="xml-connection-type-ssrs"></a>XML 연결 형식(SSRS)
   보고서에 XML 데이터 원본의 데이터를 포함하려면 XML 유형의 보고서 데이터 원본에 기초하는 데이터 세트가 있어야 합니다. 이 기본 제공 데이터 원본 유형은 XML 데이터 확장 프로그램을 기반으로 합니다. 이 데이터 원본 유형을 사용하여 쿼리에 포함된 XML 문서, 웹 서비스 또는 XML에서 데이터에 연결하여 검색합니다.  
@@ -45,7 +45,7 @@ ms.locfileid: "86458510"
   
 -   현재 Windows 사용자(통합 보안)  
   
--   자격 증명 필요 없음. 자격 증명을 사용하지 않도록 선택하는 경우 익명 액세스가 사용됩니다. 보고서 서버에서 외부 데이터 원본에 연결할 수 있도록 무인 실행 계정을 정의했는지 확인합니다. XML 데이터 처리 확장 프로그램에서는 자격 증명을 대상 URL이나 웹 서비스로 전달하지 않으므로 무인 실행 계정을 정의하지 않은 경우에는 연결이 실패합니다. 자세한 내용은 [무인 실행 계정 구성&#40;SSRS 구성 관리자&#41;](../../reporting-services/install-windows/configure-the-unattended-execution-account-ssrs-configuration-manager.md)을 참조하세요.  
+-   자격 증명 필요 없음. 자격 증명을 사용하지 않도록 선택하는 경우 익명 액세스가 사용됩니다. 보고서 서버에서 외부 데이터 원본에 연결할 수 있도록 무인 실행 계정을 정의했는지 확인합니다. XML 데이터 처리 확장 프로그램에서는 자격 증명을 대상 URL이나 웹 서비스로 전달하지 않으므로 무인 실행 계정을 정의하지 않은 경우에는 연결이 실패합니다. 자세한 내용은 [무인 실행 계정 구성&#40;보고서 서버 구성 관리자&#41;](../../reporting-services/install-windows/configure-the-unattended-execution-account-ssrs-configuration-manager.md)를 참조하세요.  
   
  저장된 자격 증명 및 입력 정보를 요청하는 자격 증명은 지원되지 않습니다. Windows 통합 보안을 사용하지 않도록 설정한 경우 이를 사용하여 데이터를 검색할 수 없습니다. 저장된 자격 증명 및 입력 정보를 요청하는 자격 증명을 지정할 경우 런타임에 오류가 발생합니다.  
   

@@ -11,12 +11,12 @@ ms.topic: conceptual
 ms.assetid: f6f5e6d4-8ca9-4f06-89ed-de65ad3952a2
 author: David-Engel
 ms.author: v-daenge
-ms.openlocfilehash: 8f194c043ded9b8f663a6bcbfdb77ef408461468
-ms.sourcegitcommit: c7f40918dc3ecdb0ed2ef5c237a3996cb4cd268d
+ms.openlocfilehash: 851452d2fa7df6cab7771da294e01fea926b7af3
+ms.sourcegitcommit: 7eb80038c86acfef1d8e7bfd5f4e30e94aed3a75
 ms.translationtype: HT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 10/05/2020
-ms.locfileid: "91726794"
+ms.lasthandoff: 10/15/2020
+ms.locfileid: "92081852"
 ---
 # <a name="pdoquery"></a>PDO::query
 [!INCLUDE[Driver_PHP_Download](../../includes/driver_php_download.md)]
@@ -62,7 +62,7 @@ null로 설정하면 PDOStatement 개체를 닫을 수 있습니다.
   
 PDO 지원이 [!INCLUDE[ssDriverPHP](../../includes/ssdriverphp_md.md)]의 버전 2.0에 추가되었습니다.  
   
-## <a name="example"></a>예제  
+## <a name="query-example"></a>쿼리 예  
 이 예제에서는 여러 개의 쿼리를 보여 줍니다.  
   
 ```  
@@ -118,7 +118,7 @@ $stmt = null;
 ?>  
 ```
 
-## <a name="example"></a>예제
+## <a name="sql_variant-example"></a>Sql_variant 예제
 이 코드 샘플에서는 [sql_variant](../../t-sql/data-types/sql-variant-transact-sql.md) 형식의 테이블을 만들고 삽입된 데이터를 가져오는 방법을 보여 줍니다.
 
 ```

@@ -11,12 +11,12 @@ ms.topic: conceptual
 ms.assetid: 074f211e-984a-4b76-bb15-ee36f5946f12
 author: David-Engel
 ms.author: v-daenge
-ms.openlocfilehash: ba891b077e6144a97dfbfcb25597e00fc43b0b0d
-ms.sourcegitcommit: 883435b4c7366f06ac03579752093737b098feab
+ms.openlocfilehash: 1bcbaee78dc7dcb0de053756aacfe2e1711679fe
+ms.sourcegitcommit: a5398f107599102af7c8cda815d8e5e9a367ce7e
 ms.translationtype: HT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 08/28/2020
-ms.locfileid: "89062312"
+ms.lasthandoff: 10/13/2020
+ms.locfileid: "92005669"
 ---
 # <a name="release-notes-for-the-microsoft-jdbc-driver-for-sql-server"></a>SQL Server용 Microsoft JDBC 드라이버에 대한 릴리스 정보
 
@@ -361,9 +361,9 @@ JDBC 드라이버에서 이 기능을 사용하는 방법에 대한 자세한 �
 
 ### <a name="added-connection-property-usebulkcopyforbatchinsert"></a>추가된 연결 속성: useBulkCopyForBatchInsert
 
-SQL Server용 Microsoft JDBC Driver 7.0은 새 연결 속성 `useBulkCopyForBatchInsert`를 도입합니다. 이 속성은 Azure SQL Data Warehouse에서만 지원됩니다.
+SQL Server용 Microsoft JDBC Driver 7.0은 새 연결 속성 `useBulkCopyForBatchInsert`를 도입합니다. 이 속성은 Azure Synapse Analytics에 대해서만 지원됩니다.
 
-이 속성은 기본적으로 사용되지 않습니다. Azure SQL Data Warehouse로 많은 양의 데이터를 푸시하는 경우 이 기능을 사용하도록 설정하여 사용자 애플리케이션의 성능을 향상할 수 있습니다. 이 속성을 사용하도록 설정하면 일괄 삽입 작업의 동작이 바뀌어 사용자가 지정한 데이터를 사용한 대량 복사 작업으로 전환됩니다. 이 속성 및 해당 제한 사항에 대한 자세한 내용은 [Using Bulk Copy API for batch insert operation](use-bulk-copy-api-batch-insert-operation.md)(일괄 삽입 작업에 대량 복사 API 사용)을 참조하세요.
+이 속성은 기본적으로 사용되지 않습니다. Azure Synapse Analytics에 대량 데이터를 밀어넣는 경우 이 기능을 사용하도록 설정하여 사용자 애플리케이션의 성능을 향상할 수 있습니다. 이 속성을 사용하도록 설정하면 일괄 삽입 작업의 동작이 바뀌어 사용자가 지정한 데이터를 사용한 대량 복사 작업으로 전환됩니다. 이 속성 및 해당 제한 사항에 대한 자세한 내용은 [Using Bulk Copy API for batch insert operation](use-bulk-copy-api-batch-insert-operation.md)(일괄 삽입 작업에 대량 복사 API 사용)을 참조하세요.
 
 ### <a name="added-connection-property-cancelquerytimeout"></a>추가된 연결 속성: cancelQueryTimeout
 

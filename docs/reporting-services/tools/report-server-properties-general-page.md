@@ -11,12 +11,12 @@ f1_keywords:
 ms.assetid: 23537d52-4356-450f-a671-5921cef2431f
 author: maggiesMSFT
 ms.author: maggies
-ms.openlocfilehash: 718121027064cc44e540ea710097da9added0c0b
-ms.sourcegitcommit: c8e1553ff3fdf295e8dc6ce30d1c454d6fde8088
+ms.openlocfilehash: 1a7b6731d3dd7b8bbb5218119cc3548e302952ac
+ms.sourcegitcommit: fe59f8dc27fd633f5dfce54519d6f5dcea577f56
 ms.translationtype: HT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 07/22/2020
-ms.locfileid: "86916613"
+ms.lasthandoff: 10/09/2020
+ms.locfileid: "91935290"
 ---
 # <a name="report-server-properties-general-page"></a>보고서 서버 속성(일반 페이지)
   이 페이지를 사용하여 보고서 관리자에 사용된 제목을 보거나 수정하고, 내 보고서를 설정 또는 해제하고, 내 보고서의 보안에 대한 역할 정의를 선택하고 클라이언트 인쇄 컨트롤을 설정 또는 해제할 수 있습니다.  
@@ -42,7 +42,7 @@ ms.locfileid: "86916613"
  이 속성은 읽기 전용입니다. 보고서 서버 인스턴스에서 허용되는 인증 요청의 유형을 식별합니다. 인증 모드를 변경하려면 **RSReportServer.config** 파일을 편집해야 합니다. 자세한 내용은 [Authentication with the Report Server](../../reporting-services/security/authentication-with-the-report-server.md)을(를) 참조하세요.  
   
  **URL**  
- 이 속성은 읽기 전용입니다. 보고서 서버 웹 서비스에 대한 URL을 지정합니다. 이 값은 [!INCLUDE[ssRSnoversion](../../includes/ssrsnoversion-md.md)] 구성 도구에 지정됩니다. 자세한 내용은 [URL 구성&#40;SSRS 구성 관리자&#41;](../../reporting-services/install-windows/configure-a-url-ssrs-configuration-manager.md)을 참조하세요.  
+ 이 속성은 읽기 전용입니다. 보고서 서버 웹 서비스에 대한 URL을 지정합니다. 이 값은 [!INCLUDE[ssRSnoversion](../../includes/ssrsnoversion-md.md)] 구성 도구에 지정됩니다. 자세한 내용은 [URL 구성&#40;보고서 서버 구성 관리자&#41;](../../reporting-services/install-windows/configure-a-url-ssrs-configuration-manager.md)을 참조하세요.  
   
  **각 사용자에 대해 내 보고서 폴더 설정**  
  사용자가 **내 보고서** 를 사용할 수 있도록 합니다. 이 옵션은 기본 모드 보고서 서버에서만 사용할 수 있습니다.  

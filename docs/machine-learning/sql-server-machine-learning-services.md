@@ -8,13 +8,13 @@ ms.date: 06/19/2020
 ms.topic: overview
 author: dphansen
 ms.author: davidph
-monikerRange: '>=sql-server-2017||>=sql-server-linux-ver15||=sqlallproducts-allversions'
-ms.openlocfilehash: be0e80a5d6a54726fd77b753c9910764bf5f600d
-ms.sourcegitcommit: 9b41725d6db9957dd7928a3620fe4db41eb51c6e
+monikerRange: '>=sql-server-2017||>=sql-server-linux-ver15||=azuresqldb-mi-current||=sqlallproducts-allversions'
+ms.openlocfilehash: 31d95c5881c68e6e897c18a935e4fa85799be60c
+ms.sourcegitcommit: 783b35f6478006d654491cb52f6edf108acf2482
 ms.translationtype: HT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 08/13/2020
-ms.locfileid: "88180378"
+ms.lasthandoff: 10/09/2020
+ms.locfileid: "91892133"
 ---
 # <a name="what-is-sql-server-machine-learning-services-python-and-r"></a>SQL Server Machine Learning Services(Python 및 R)이란?
 [!INCLUDE [SQL Server 2017](../includes/applies-to-version/sqlserver2017.md)]
@@ -45,15 +45,23 @@ Machine Learning Services는 확장성 프레임워크를 사용하여 SQL Serve
 ## <a name="get-started-with-machine-learning-services"></a>Machine Learning Services 시작
 
 ::: moniker range=">=sql-server-ver15||>=sql-server-linux-ver15||=sqlallproducts-allversions"
-1. [Linux](../linux/sql-server-linux-setup-machine-learning.md?toc=/sql/machine-learning/toc.json) 또는 [Windows에 SQL Server Machine Learning Services를 설치합니다](install/sql-machine-learning-services-windows-install.md). [빅 데이터 클러스터에서 Machine Learning Services를 사용](../big-data-cluster/machine-learning-services.md)해도 됩니다.
+1. [Linux](../linux/sql-server-linux-setup-machine-learning.md?toc=/sql/machine-learning/toc.json) 또는 [Windows에 SQL Server Machine Learning Services를 설치합니다](install/sql-machine-learning-services-windows-install.md). [빅 데이터 클러스터의 Machine Learning Services](../big-data-cluster/machine-learning-services.md) 및 [Azure SQL Managed Instance의 Machine Learning Services\(미리 보기\)](/azure/azure-sql/managed-instance/machine-learning-services-overview)를 사용할 수도 있습니다.
 
 1. 개발 도구 구성. [Azure Data Studio Notebook에서 Python 및 R 스크립트를 실행](install/sql-machine-learning-azure-data-studio.md)할 수 있습니다. 또한 [Azure Data Studio](../azure-data-studio/what-is.md)에서 T-SQL을 실행할 수 있습니다.
 
 1. 첫 번째 Python 또는 R 스크립트를 작성합니다.
 
-    + [SQL 기계 학습용 Python 자습서](tutorials/python-tutorials.md)
-    + [SQL 기계 학습용 R 자습서](tutorials/r-tutorials.md)
+   + [SQL 기계 학습용 Python 자습서](tutorials/python-tutorials.md)
+   + [SQL 기계 학습용 R 자습서](tutorials/r-tutorials.md)
 ::: moniker-end
+
+::: moniker range="=azuresqldb-mi-current||=sqlallproducts-allversions"
++ 첫 번째 Python 또는 R 스크립트를 작성합니다.
+
+   + [SQL 기계 학습용 Python 자습서](tutorials/python-tutorials.md)
+   + [SQL 기계 학습용 R 자습서](tutorials/r-tutorials.md)
+::: moniker-end
+
 ::: moniker range="=sql-server-2017||=sqlallproducts-allversions"
 1. [Windows에 SQL Server Machine Learning Services 설치](install/sql-machine-learning-services-windows-install.md)
 
@@ -61,8 +69,8 @@ Machine Learning Services는 확장성 프레임워크를 사용하여 SQL Serve
 
 1. 첫 번째 Python 또는 R 스크립트를 작성합니다.
 
-    + [SQL 기계 학습용 Python 자습서](tutorials/python-tutorials.md)
-    + [SQL 기계 학습용 R 자습서](tutorials/r-tutorials.md)
+   + [SQL 기계 학습용 Python 자습서](tutorials/python-tutorials.md)
+   + [SQL 기계 학습용 R 자습서](tutorials/r-tutorials.md)
 ::: moniker-end
 
 <a name="versions"></a>
@@ -76,7 +84,7 @@ Machine Learning Services는 확장성 프레임워크를 사용하여 SQL Serve
 | SQL Server 2017 | 3.5.2 | 3.3.3 |
 | SQL Server 2019 | 3.7.3 | 3.5.2 |
 
-SQL Server 2016의 R 버전에 대한 자세한 내용은 [R Services란?의 R 버전 섹션](r/sql-server-r-services.md?view=sql-server-2016#version)을 참조하세요.
+SQL Server 2016의 R 버전에 대한 자세한 내용은 [R Services란?의 R 버전 섹션](r/sql-server-r-services.md?view=sql-server-2016&preserve-view=true#version)을 참조하세요.
 
 <a name="packages"></a>
 

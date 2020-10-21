@@ -1,5 +1,5 @@
 ---
-title: 릴리스 정보
+title: Azure Data Studio 릴리스 정보
 description: 이 문서에는 2017년 11월부터 현재까지의 Azure Data Studio 릴리스에 대한 릴리스 정보가 안내되어 있습니다. 요약된 문제 중 다수에 추가 세부 정보로 연결되는 링크가 있습니다.
 ms.prod: azure-data-studio
 ms.technology: azure-data-studio
@@ -8,17 +8,32 @@ author: yualan
 ms.author: alayu
 ms.reviewer: maghan
 ms.custom: seodec18
-ms.date: 09/30/2020
-ms.openlocfilehash: 1d23774a2e722c85593af0238ef924569585ff62
-ms.sourcegitcommit: c7f40918dc3ecdb0ed2ef5c237a3996cb4cd268d
+ms.date: 10/14/2020
+ms.openlocfilehash: c75105ddf77c62dd6c871b679dce32ec08c5364c
+ms.sourcegitcommit: 76ab3b57718341c6057613c9bd38cf82fb17786e
 ms.translationtype: HT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 10/05/2020
-ms.locfileid: "91725104"
+ms.lasthandoff: 10/14/2020
+ms.locfileid: "92059191"
 ---
 # <a name="release-notes-for-azure-data-studio"></a>Azure Data Studio의 릴리스 정보
 
 **[최신 릴리스 다운로드 및 설치](./download-azure-data-studio.md)**
+
+## <a name="october-2020"></a>2020년 10월
+
+2020년 10월 14일 &nbsp; / &nbsp; 버전: 1.23.0
+
+&nbsp;
+
+| 변경 | 세부 정보 |
+| ------ | ------- |
+| Azure SQL Edge | Azure SQL Edge 개체를 지원합니다. |
+| 버그 수정 | 전체 수정 목록은 [GitHub의 버그 및 이슈](https://github.com/microsoft/azuredatastudio/issues?q=is:issue+milestone:%22October+2020+Release%22+is:closed)를 참조하세요. |
+| 데이터베이스| 동일한 데이터베이스 참조를 지원합니다. |
+| 확장 업데이트 | [Azure Arc](extensions/azure-arc-extension.md)</br>[azdata](../azdata/install/deploy-install-azdata.md)</br>[Machine Learning](extensions/machine-learning-extension.md)</br>[Kusto(KQL)](extensions/kusto-extension.md)</br>[스키마 비교](extensions/schema-compare-extension.md)</br>SQL 평가</br>[SQL Database 프로젝트](extensions/sql-database-project-extension.md)</br>[SQL Server 가져오기](extensions/sql-server-import-extension.md) |
+| 새 배포 기능 | Azure SQL DB 및 VM 배포가 추가되었습니다. |
+| PowerShell | PowerShell 커널 결과 스트리밍 지원이 추가되었습니다. |
 
 ## <a name="september-2020-hotfix"></a>2020년 9월(핫픽스)
 
@@ -68,8 +83,8 @@ ms.locfileid: "91725104"
 
 | 변경 | 세부 정보 |
 | :----- | :------ |
-| 수정됨: 버그 #11372 개체 탐색기 끌어서 놓기 테이블이 테이블 이름을 잘못 래핑함 | [#11372](https://github.com/microsoft/azuredatastudio/issues/11372)  |
-| 수정됨: 버그 #11356 이제 어두운 테마가 기본 테마임 | [#11356](https://github.com/microsoft/azuredatastudio/issues/11356)  |
+| 수정됨: 버그 #11372 개체 탐색기 끌어서 놓기 테이블이 테이블 이름을 잘못 래핑함 | [#11372](https://github.com/microsoft/azuredatastudio/issues/11372) |
+| 수정됨: 버그 #11356 이제 어두운 테마가 기본 테마임 | [#11356](https://github.com/microsoft/azuredatastudio/issues/11356) |
 | &nbsp; | &nbsp; |
 
 ### <a name="known-issue"></a>알려진 문제
@@ -90,7 +105,6 @@ ms.locfileid: "91725104"
 | 작업 막대에 Azure 계정 아이콘이 추가됨 | 이제 사용자가 Azure에 로그인하는 위치를 쉽게 확인할 수 있습니다. |
 | 버그 및 이슈 해결 | 전체 수정 목록은 [GitHub의 버그 및 이슈](https://github.com/microsoft/azuredatastudio/issues?q=is%3Aissue+milestone%3A%22July+2020+Release%22+is%3Aclosed)를 참조하세요. |
 | &nbsp; | &nbsp; |
-
 
 ## <a name="june-2020"></a>2020년 6월
 
@@ -882,7 +896,7 @@ _0.32.8에는 0.32.7의 몇 가지 기능 저하_에 대한 수정([#1971](https
 
 | 변경 | 세부 정보 |
 | :----- | :------ |
-| 이제 Azure SQL Database 및 Azure SQL Data Warehouse에 대한 연결을 지원하는 방화벽 규칙 만들기 대화 상자를 사용할 수 있음 | &nbsp; |
+| 이제 방화벽 규칙 만들기 대화 상자를 사용하여 Azure SQL Database 및 Azure Synapse Analytics에 연결할 수 있습니다. | &nbsp; |
 | Windows 설치 프로그램과 Linux DEB 및 RPM 설치 패키지가 추가됨 | &nbsp; |
 | 대시보드 관리 시각적 레이아웃 편집기 | &nbsp; |
 | ‘Alter로 스크립트’ 및 ‘Execute로 스크립트’ 명령 | &nbsp; |
@@ -904,7 +918,7 @@ _0.32.8에는 0.32.7의 몇 가지 기능 저하_에 대한 수정([#1971](https
 
 - [SQL Server 연결 및 쿼리](quickstart-sql-server.md)
 - [Azure SQL Database 연결 및 쿼리](quickstart-sql-database.md)
-- [Azure Data Warehouse 연결 및 쿼리](quickstart-sql-dw.md)
+- [Azure Synapse Analytics 연결 및 쿼리](quickstart-sql-dw.md)
 
 Azure Data Studio에 참여:
 

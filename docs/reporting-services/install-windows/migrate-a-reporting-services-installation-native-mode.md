@@ -7,12 +7,12 @@ ms.topic: conceptual
 author: maggiesMSFT
 ms.author: maggies
 ms.date: 05/01/2020
-ms.openlocfilehash: 2a0796c1eff4459d37d03a97de8b9eee27e65c4e
-ms.sourcegitcommit: e700497f962e4c2274df16d9e651059b42ff1a10
+ms.openlocfilehash: d45e00b7d99f87ec3edc9bdd123d5392412dcf73
+ms.sourcegitcommit: fe59f8dc27fd633f5dfce54519d6f5dcea577f56
 ms.translationtype: HT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 08/17/2020
-ms.locfileid: "88454583"
+ms.lasthandoff: 10/09/2020
+ms.locfileid: "91934845"
 ---
 # <a name="migrate-a-reporting-services-installation-native-mode"></a>Reporting Services 설치 마이그레이션(기본 모드)
 
@@ -122,7 +122,7 @@ SQL Server Reporting Services의 변경 내용에 대한 자세한 내용은 업
 
  새 [!INCLUDE[ssRSnoversion](../../includes/ssrsnoversion-md.md)]인스턴스를 설치하기 전에 현재 설치의 모든 파일을 백업하십시오.  
   
-1. 보고서 서버 데이터베이스에 대한 암호화 키를 백업합니다. 이 단계는 성공적인 마이그레이션을 위해 매우 중요합니다. 나중에 마이그레이션 프로세스에서 보고서 서버가 암호화된 데이터에 다시 액세스할 수 있도록 이 키를 복원해야 하기 때문입니다. 키를 백업하려면 Reporting Services 구성 관리자를 사용합니다.  
+1. 보고서 서버 데이터베이스에 대한 암호화 키를 백업합니다. 이 단계는 성공적인 마이그레이션을 위해 매우 중요합니다. 나중에 마이그레이션 프로세스에서 보고서 서버가 암호화된 데이터에 다시 액세스할 수 있도록 이 키를 복원해야 하기 때문입니다. 키를 백업하려면 보고서 서버 구성 관리자를 사용합니다.  
   
 2. 지원되는 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 데이터베이스 백업 방법을 사용하여 보고서 데이터베이스를 백업합니다. 자세한 내용은 [다른 컴퓨터로 보고서 서버 데이터베이스 이동&#40;SSRS 기본 모드&#41;](../../reporting-services/report-server/moving-the-report-server-databases-to-another-computer-ssrs-native-mode.md)에 설명된 보고서 서버 데이터베이스 백업 방법에 대한 지침을 참조하세요.  
   
@@ -202,7 +202,7 @@ SQL Server Reporting Services의 변경 내용에 대한 자세한 내용은 업
   
 1. 어셈블리가 지원되거나 어셈블리를 다시 컴파일해야 하는지 확인합니다.
 
-    * 사용자 지정 보안 확장 프로그램은 [IAuthenticationExtension2](https://msdn.microsoft.com/library/microsoft.reportingservices.interfaces.iauthenticationextension2.aspx) 인터페이스를 사용하여 다시 작성해야 합니다. 
+    * 사용자 지정 보안 확장 프로그램은 [IAuthenticationExtension2](/dotnet/api/microsoft.reportingservices.interfaces.iauthenticationextension2) 인터페이스를 사용하여 다시 작성해야 합니다. 
   
     * [!INCLUDE[ssKatmai](../../includes/sskatmai-md.md)] [!INCLUDE[ssRSnoversion](../../includes/ssrsnoversion-md.md)]용 사용자 지정 렌더링 확장 프로그램은 ROM(렌더링 개체 모델)을 사용하여 다시 작성해야 합니다.  
   
@@ -237,15 +237,15 @@ SQL Server Reporting Services의 변경 내용에 대한 자세한 내용은 업
 > [!IMPORTANT]
 >  스케일 아웃 배포에 있는 보고서 서버 중 일부가 온라인이고 마이그레이션되지 않은 경우 업그레이드된 버전에 연결하면 이전 스키마가 사용되어 *rsInvalidReportServerDatabase* 예외가 발생할 수 있습니다.  
 
-마이그레이션한 보고서 서버가 스케일 아웃 배포를 위한 공유 데이터베이스로 구성된 경우에는 보고서 서버 서비스를 구성하기 전에 **ReportServer** 데이터베이스의 **Keys** 테이블에서 이전 암호화 키를 삭제해야 합니다. 키를 제거하지 않으면 마이그레이션된 보고서 서버가 스케일 아웃 배포 모드에서 초기화됩니다. 자세한 내용은 [확장 배포의 암호화 키 추가 및 제거&#40;SSRS 구성 관리자&#41;](../../reporting-services/install-windows/add-and-remove-encryption-keys-for-scale-out-deployment.md) 및 [암호화 키 구성 및 관리&#40;SSRS 구성 관리자&#41;](../../reporting-services/install-windows/ssrs-encryption-keys-manage-encryption-keys.md)를 참조하세요.  
+마이그레이션한 보고서 서버가 스케일 아웃 배포를 위한 공유 데이터베이스로 구성된 경우에는 보고서 서버 서비스를 구성하기 전에 **ReportServer** 데이터베이스의 **Keys** 테이블에서 이전 암호화 키를 삭제해야 합니다. 키를 제거하지 않으면 마이그레이션된 보고서 서버가 스케일 아웃 배포 모드에서 초기화됩니다. 자세한 내용은 [스케일 아웃 배포의 암호화 키 추가 및 제거&#40;보고서 서버 구성 관리자&#41;](../../reporting-services/install-windows/add-and-remove-encryption-keys-for-scale-out-deployment.md) 및 [암호화 키 구성 및 관리&#40;보고서 서버 구성 관리자&#41;](../../reporting-services/install-windows/ssrs-encryption-keys-manage-encryption-keys.md)를 참조하세요.  
 
 확장 키는 [!INCLUDE[ssRSnoversion](../../includes/ssrsnoversion-md.md)] 구성 관리자를 사용하여 삭제할 수 없습니다. SQL Server Management Studio를 사용하여 **Keys** 데이터베이스의 **ReportServer** 테이블에서 이전 키를 삭제해야 합니다. Keys 테이블의 모든 행을 삭제합니다. 그러면 테이블이 지워지므로 다음 단계에서 설명하는 대로 대칭 키만 복원할 수 있습니다.  
 
 키를 삭제하기 전에 먼저 대칭 암호화 키를 백업하는 것이 좋습니다. [!INCLUDE[ssRSnoversion](../../includes/ssrsnoversion-md.md)] 구성 관리자를 사용하여 키를 백업할 수 있습니다. 구성 관리자를 열고 암호화 키 탭을 클릭한 다음, **백업** 단추를 클릭합니다. WMI 명령을 스크립팅하여 암호화 키를 백업할 수도 있습니다. WMI에 대한 자세한 내용은 [BackupEncryptionKey 메서드&#40;WMI MSReportServer_ConfigurationSetting&#41;](../../reporting-services/wmi-provider-library-reference/configurationsetting-method-backupencryptionkey.md)을 참조하세요.  
   
-1. Reporting Services 구성 관리자를 시작하고 설치한 [!INCLUDE[ssRSnoversion](../../includes/ssrsnoversion-md.md)] 인스턴스에 연결합니다. 자세한 내용은 [Reporting Services 구성 관리자&#40;기본 모드&#41;](../../reporting-services/install-windows/reporting-services-configuration-manager-native-mode.md)을 참조하세요.  
+1. 보고서 서버 구성 관리자를 시작한 후 설치한 [!INCLUDE[ssRSnoversion](../../includes/ssrsnoversion-md.md)] 인스턴스에 연결합니다. 자세한 내용은 [보고서 서버 구성 관리자&#40;기본 모드&#41;](../../reporting-services/install-windows/reporting-services-configuration-manager-native-mode.md)를 참조하세요.  
   
-2. 보고서 서버와 웹 포털의 URL을 구성합니다. 자세한 내용은 [URL 구성&#40;SSRS 구성 관리자&#41;](../../reporting-services/install-windows/configure-a-url-ssrs-configuration-manager.md)을 참조하세요.  
+2. 보고서 서버와 웹 포털의 URL을 구성합니다. 자세한 내용은 [URL 구성&#40;보고서 서버 구성 관리자&#41;](../../reporting-services/install-windows/configure-a-url-ssrs-configuration-manager.md)을 참조하세요.  
   
 3. 이전 설치에서 기존 보고서 서버 데이터베이스를 선택하여 보고서 서버 데이터베이스를 구성합니다. 구성을 성공적으로 마치면 보고서 서버 서비스가 다시 시작되고, 보고서 서버 데이터베이스에 대한 연결이 설정되면 데이터베이스가 SQL Server Reporting Services로 자동 업그레이드됩니다. 보고서 서버 데이터베이스를 만들거나 선택하는 데 사용하는 데이터베이스 변경 마법사를 실행하는 방법은 [기본 모드 보고서 서버 데이터베이스 만들기](../../reporting-services/install-windows/ssrs-report-server-create-a-native-mode-report-server-database.md)를 참조하세요.  
   
@@ -300,6 +300,6 @@ SQL Server Reporting Services의 변경 내용에 대한 자세한 내용은 업
 * [보고서 서버 데이터베이스](../../reporting-services/report-server/report-server-database-ssrs-native-mode.md)   
 * [Reporting Services 업그레이드 및 마이그레이션](../../reporting-services/install-windows/upgrade-and-migrate-reporting-services.md)   
 * [Reporting Services의 이전 버전과의 호환성](../../reporting-services/reporting-services-backward-compatibility.md)   
-* [Reporting Services 구성 관리자](../../reporting-services/install-windows/reporting-services-configuration-manager-native-mode.md)  
+* [보고서 서버 구성 관리자](../../reporting-services/install-windows/reporting-services-configuration-manager-native-mode.md)  
 
 추가 질문이 있으신가요? [Reporting Services 포럼에서 질문하기](https://go.microsoft.com/fwlink/?LinkId=620231)

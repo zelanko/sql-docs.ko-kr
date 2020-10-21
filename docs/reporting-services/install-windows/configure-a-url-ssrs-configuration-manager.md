@@ -1,5 +1,5 @@
 ---
-description: URL 구성(SSRS 구성 관리자)
+description: URL 구성(보고서 서버 구성 관리자)
 title: URL 구성(구성 관리자) | Microsoft Docs
 ms.date: 05/26/2016
 ms.prod: reporting-services
@@ -10,14 +10,14 @@ helpviewer_keywords:
 ms.assetid: 851e163a-ad2a-491e-bc1e-4df92327092f
 author: maggiesMSFT
 ms.author: maggies
-ms.openlocfilehash: ea8162493584be5d4cb9d312c57af16ff40d08a2
-ms.sourcegitcommit: e700497f962e4c2274df16d9e651059b42ff1a10
+ms.openlocfilehash: b0ff8cd92d090424bbf7a17315dc09dfb7b8a06f
+ms.sourcegitcommit: fe59f8dc27fd633f5dfce54519d6f5dcea577f56
 ms.translationtype: HT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 08/17/2020
-ms.locfileid: "88427095"
+ms.lasthandoff: 10/09/2020
+ms.locfileid: "91934779"
 ---
-# <a name="configure-a-url--ssrs-configuration-manager"></a>URL 구성(SSRS 구성 관리자)
+# <a name="configure-a-url--report-server-configuration-manager"></a>URL 구성(보고서 서버 구성 관리자)
   [!INCLUDE[ssRSWebPortal](../../includes/ssrswebportal.md)] 또는 보고서 서버 웹 서비스를 사용하려면 먼저 각 애플리케이션에 대한 URL을 한 개 이상 구성해야 합니다. [!INCLUDE[ssRSnoversion](../../includes/ssrsnoversion-md.md)] 를 "파일만" 모드(즉, 설치 마법사의 보고서 서버 설치 옵션 페이지에서 **서버 구성 없이 설치** 옵션을 선택한 경우)에서 설치한 경우에는 URL을 반드시 구성해야 합니다. [!INCLUDE[ssRSnoversion](../../includes/ssrsnoversion-md.md)] 를 기본 구성으로 설치한 경우 각 애플리케이션에 대해 URL이 이미 구성되어 있습니다.  
   
  [!INCLUDE[ssRSnoversion](../../includes/ssrsnoversion-md.md)] 구성 도구를 사용하면 URL을 구성할 수 있습니다. URL의 모든 부분이 이 도구에 정의되어 있습니다. 이전 릴리스와는 달리 [!INCLUDE[ssRSnoversion](../../includes/ssrsnoversion-md.md)] 이상 버전에서는 IIS(인터넷 정보 서비스) 웹 사이트에서 더 이상 [!INCLUDE[ssKatmai](../../includes/sskatmai-md.md)] 애플리케이션에 액세스할 수 없습니다.  
@@ -32,7 +32,7 @@ ms.locfileid: "88427095"
   
 -   추가 URL을 정의하는 고급 URL 속성 설정  
   
- URL이 저장되고 유지 관리되는 방식 및 상호 운용성 문제에 대한 자세한 내용은 [URL 예약 및 등록 정보&#40;SSRS Configuration Manager&#41;](../../reporting-services/install-windows/about-url-reservations-and-registration-ssrs-configuration-manager.md) 및 [Reporting Services와 인터넷 정보 서비스 함께 설치&#40;SSRS 기본 모드&#41;](../../reporting-services/install-windows/install-reporting-and-internet-information-services-side-by-side.md)를 참조하세요. Reporting Services 설치에 자주 사용되는 URL에 대한 예를 검토하려면 이 항목에 포함된 [URL 예](#URLExamples) 를 참조하십시오.  
+ URL을 저장하고 유지 관리하는 방법 또는 상호 운용성 이슈에 대한 자세한 내용은 [URL 예약 및 등록 정보&#40;보고서 서버 구성 관리자&#41;](../../reporting-services/install-windows/about-url-reservations-and-registration-ssrs-configuration-manager.md) 및 [Reporting Services와 인터넷 정보 서비스 함께 설치&#40;SSRS 기본 모드&#41;](../../reporting-services/install-windows/install-reporting-and-internet-information-services-side-by-side.md)를 참조하세요. Reporting Services 설치에 자주 사용되는 URL에 대한 예를 검토하려면 이 항목에 포함된 [URL 예](#URLExamples) 를 참조하십시오.  
   
 ## <a name="prerequisites"></a>사전 요구 사항  
  URL을 만들거나 수정하기 전에 다음 사항을 유념하십시오.  
@@ -45,7 +45,7 @@ ms.locfileid: "88427095"
   
 -   보고서 작업이 적은 시간을 선택합니다. URL 예약이 변경될 때마다 보고서 서버 웹 서비스 및 [!INCLUDE[ssRSWebPortal](../../includes/ssrswebportal.md)] 에 대한 애플리케이션 도메인이 재활용될 수 있습니다.  
   
--   [!INCLUDE[ssRSnoversion](../../includes/ssrsnoversion-md.md)]에서 URL 생성 및 사용에 대한 개요는 [보고서 서버 URL 구성&#40;SSRS 구성 관리자&#41;](../../reporting-services/install-windows/configure-report-server-urls-ssrs-configuration-manager.md)을 참조하세요.  
+-   [!INCLUDE[ssRSnoversion](../../includes/ssrsnoversion-md.md)]에서 URL을 만들고 사용하는 방법에 대한 개요는 [보고서 서버 URL 구성&#40;보고서 서버 구성 관리자&#41;](../../reporting-services/install-windows/configure-report-server-urls-ssrs-configuration-manager.md)을 참조하세요.  
   
 ### <a name="to-configure-a-url-for-the-report-server-web-service"></a>보고서 서버 웹 서비스 URL을 구성하려면  
   
@@ -91,7 +91,7 @@ ms.locfileid: "88427095"
   
 9. **적용** 을 클릭하여 URL을 만듭니다.  
   
-10. 페이지의 **URL** 섹션에 있는 링크를 클릭하여 URL을 테스트합니다. URL을 테스트하려면 먼저 보고서 서버 데이터베이스를 만들어 구성해야 합니다. 자세한 내용은 [기본 모드 보고서 서버 데이터베이스 만들기&#40;SSRS 구성 관리자&#41;](../../reporting-services/install-windows/ssrs-report-server-create-a-native-mode-report-server-database.md)를 참조하세요.  
+10. 페이지의 **URL** 섹션에 있는 링크를 클릭하여 URL을 테스트합니다. URL을 테스트하려면 먼저 보고서 서버 데이터베이스를 만들어 구성해야 합니다. 자세한 내용은 [기본 모드 보고서 서버 데이터베이스 만들기&#40;보고서 서버 구성 관리자&#41;](../../reporting-services/install-windows/ssrs-report-server-create-a-native-mode-report-server-database.md)를 참조하세요.  
 
 > [!NOTE]
 >  기존 TLS 바인딩 및 URL 예약이 있는 상태에서 TLS 바인딩을 변경하려면(예: 다른 인증서 또는 호스트 헤더를 사용하는 경우) 다음 단계를 순서대로 수행하는 것이 좋습니다.  
@@ -161,7 +161,7 @@ ms.locfileid: "88427095"
 6.  브라우저 창을 열고 URL을 입력하여 URL을 테스트합니다.  
   
 ## <a name="urls-for-multiple-report-server-instances-on-the-same-computer"></a>같은 컴퓨터에 있는 여러 보고서 서버 인스턴스에 대한 URL  
- [!INCLUDE[ssRSnoversion](../../includes/ssrsnoversion-md.md)]의 여러 인스턴스에 대한 URL을 예약할 경우 이름이 충돌하지 않도록 다음 명명 규칙을 따라야 합니다. 자세한 내용은 [다중 인스턴스 보고서 서버 배포를 위한 URL 예약&#40;SSRS 구성 관리자&#41;](../../reporting-services/install-windows/url-reservations-for-multi-instance-report-server-deployments.md)을 참조하세요.  
+ [!INCLUDE[ssRSnoversion](../../includes/ssrsnoversion-md.md)]의 여러 인스턴스에 대한 URL을 예약할 경우 이름이 충돌하지 않도록 다음 명명 규칙을 따라야 합니다. 자세한 내용은 [다중 인스턴스 보고서 서버 배포를 위한 URL 예약&#40;보고서 서버 구성 관리자&#41;](../../reporting-services/install-windows/url-reservations-for-multi-instance-report-server-deployments.md)을 참조하세요.  
   
 ##  <a name="examples-of-url-configurations"></a><a name="URLExamples"></a> URL 구성 예  
  다음 목록에서는 보고서 서버 URL의 예를 보여 줍니다.  
@@ -192,6 +192,6 @@ ms.locfileid: "88427095"
   
 -   `https://www.adventure-works.com:8080/reports`  
   
-## <a name="see-also"></a>참고 항목  
- [Reporting Services 구성 관리자&#40;기본 모드&#41;](../../reporting-services/install-windows/reporting-services-configuration-manager-native-mode.md)   
- [보고서 서버 URL 구성&#40;SSRS 구성 관리자&#41;](../../reporting-services/install-windows/configure-report-server-urls-ssrs-configuration-manager.md)
+## <a name="see-also"></a>참고 항목
+
+ [보고서 서버 URL 구성&#40;보고서 서버 구성 관리자&#41;](../../reporting-services/install-windows/configure-report-server-urls-ssrs-configuration-manager.md) [보고서 서버 구성 관리자&#40;기본 모드&#41;](../../reporting-services/install-windows/reporting-services-configuration-manager-native-mode.md)   

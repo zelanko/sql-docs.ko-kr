@@ -10,12 +10,12 @@ ms.topic: conceptual
 author: rajmera3
 ms.author: raajmera
 ms.reviewer: mikeray
-ms.openlocfilehash: 47412f3781274fa242c03975295cdc5ba66b1669
-ms.sourcegitcommit: 5da46e16b2c9710414fe36af9670461fb07555dc
+ms.openlocfilehash: 059ecfb25389de1be0f8636a868e81e621e57bac
+ms.sourcegitcommit: 4d370399f6f142e25075b3714e5c2ce056b1bfd0
 ms.translationtype: HT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 09/01/2020
-ms.locfileid: "89284817"
+ms.lasthandoff: 10/09/2020
+ms.locfileid: "91867234"
 ---
 # <a name="apache-spark-connector-sql-server--azure-sql"></a>Apache Spark 커넥터: SQL Server 및 Azure SQL
 
@@ -25,7 +25,7 @@ SQL Server 및 Azure SQL용 Apache Spark 커넥터는 빅 데이터 분석에서
 
 [Apache Spark](https://spark.apache.org/)는 대규모 데이터를 처리하기 위한 통합 분석 엔진입니다.
 
-소스에서 커넥터를 빌드하거나 GitHub의 릴리스 섹션에서 jar 파일을 다운로드할 수 있습니다. 이 커넥터에 대한 최신 정보는 [SQL Spark 커넥터 GitHub 리포지토리](https://github.com/microsoft/sql-spark-connector)를 참조하세요.
+Maven 좌표(`com.microsoft.azure:spark-mssql-connector:1.0.0`)를 통해 커넥터를 프로젝트로 가져올 수 있습니다. 원본에서 커넥터를 빌드하거나, GitHub의 릴리스 섹션에서 jar을 다운로드할 수도 있습니다. 이 커넥터에 대한 최신 정보는 [SQL Spark 커넥터 GitHub 리포지토리](https://github.com/microsoft/sql-spark-connector)를 참조하세요.
 
 ## <a name="supported-features"></a>지원되는 기능
 
@@ -49,14 +49,15 @@ SQL Server 및 Azure SQL용 Apache Spark 커넥터는 빅 데이터 분석에서
 ### <a name="supported-options"></a>지원되는 옵션
 SQL Server 및 Azure SQL용 Apache Spark 커넥터는 여기에 정의된 옵션을 지원합니다. [SQL DataSource JDBC](https://spark.apache.org/docs/latest/sql-data-sources-jdbc.html)
 
-또한 다음과 같은 옵션이 지원됩니다.
+다음 옵션도 지원됩니다.
 
 | 옵션 | 기본값 | 설명 |
 | --------- | ------------------ | ------------------------------------------ |
-| `reliabilityLevel` | `BEST_EFFORT` | `BEST_EFFORT` 또는 `NO_DUPLICATES` `NO_DUPLICATES`는 실행기 다시 시작 시나리오에서 신뢰할 수 있는 삽입을 구현합니다. |
-| `dataPoolDataSource` | `none` | `none`은 값이 설정되지 않았고 커넥터가 SQL Server의 단일 인스턴스에 써야 함을 나타냅니다. SQL Server 빅 데이터 클러스터의 데이터 풀 테이블에 쓰려면 이 값을 데이터 원본 이름으로 설정합니다.|
+| `reliabilityLevel` | `BEST_EFFORT` | `BEST_EFFORT` 또는 `NO_DUPLICATES` `NO_DUPLICATES`는 실행기 다시 시작 시나리오에서 안정적인 삽입을 구현합니다. |
+| `dataPoolDataSource` | `none` | `none`은 값이 설정되지 않았으며 커넥터가 SQL Server 단일 인스턴스에 써야 함을 나타냅니다. 빅 데이터 클러스터의 데이터 풀 테이블에 쓰려면 이 값을 데이터 원본 이름으로 설정합니다.|
 | `isolationLevel` | `READ_COMMITTED` | 격리 수준을 지정합니다. |
 | `tableLock` | `false` | 쓰기 성능을 향상시키기 위해 `TABLOCK`을 사용하여 삽입 옵션을 구현합니다. |
+| `schemaCheckEnabled` | `true` | false로 설정하면 엄격한 데이터 프레임 및 SQL 테이블 스키마 검사가 사용되지 않습니다. |
 
 다른 [대량 복사 옵션](../jdbc/using-bulk-copy-with-the-jdbc-driver.md#sqlserverbulkcopyoptions)은 `dataframe` 옵션으로 설정될 수 있으며 쓰기 시 `bulkcopy` API에 전달됩니다.
 
@@ -227,3 +228,5 @@ Azure SQL 및 SQL Server용 Apache Spark 커넥터는 오픈 소스 프로젝트
 ## <a name="next-steps"></a>다음 단계
 
 [SQL Spark 커넥터 GitHub 리포지토리](https://github.com/microsoft/sql-spark-connector)를 참조하세요.
+
+격리 수준에 대한 자세한 내용은 [SET TRANSACTION ISOLATION LEVEL(Transact-SQL)](../../t-sql/statements/set-transaction-isolation-level-transact-sql.md)을 참조하세요.

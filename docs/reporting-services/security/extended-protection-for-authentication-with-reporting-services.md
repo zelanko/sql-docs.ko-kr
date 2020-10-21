@@ -9,12 +9,12 @@ ms.topic: conceptual
 ms.assetid: eb5c6f4a-3ed5-430b-a712-d5ed4b6b9b2b
 author: maggiesMSFT
 ms.author: maggies
-ms.openlocfilehash: 0c1103f32d08335e2f2dfc6c302db0b62ff93b3c
-ms.sourcegitcommit: e700497f962e4c2274df16d9e651059b42ff1a10
+ms.openlocfilehash: 7f152bf79c030fee3ce480d455c54fbdfad4b719
+ms.sourcegitcommit: fe59f8dc27fd633f5dfce54519d6f5dcea577f56
 ms.translationtype: HT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 08/17/2020
-ms.locfileid: "88373470"
+ms.lasthandoff: 10/09/2020
+ms.locfileid: "91935482"
 ---
 # <a name="extended-protection-for-authentication-with-reporting-services"></a>Reporting Services 인증에 대한 확장된 보호
 
@@ -154,7 +154,7 @@ SSRS는 운영 체제에서 사용하도록 설정된 확장된 보호를 지원
 |ComputerNamePhysicalDnsHostname|로컬 컴퓨터의 DNS 호스트 이름입니다. 로컬 컴퓨터가 클러스터의 노드인 경우 클러스터 가상 서버의 이름이 아니라 로컬 컴퓨터의 DNS 호스트 이름이 사용됩니다.|  
 |ComputerNamePhysicalNetBIOS|로컬 컴퓨터의 NetBIOS 이름입니다. 로컬 컴퓨터가 클러스터의 노드인 경우 클러스터 가상 서버의 이름이 아니라 로컬 컴퓨터의 NetBIOS 이름이 사용됩니다.|  
   
-자세한 내용은 [보고서 서버의 SPN&#40;서비스 사용자 이름&#41; 등록](../../reporting-services/report-server/register-a-service-principal-name-spn-for-a-report-server.md) 및 [URL 예약 및 등록 정보&#40;SSRS 구성 관리자&#41;](../../reporting-services/install-windows/about-url-reservations-and-registration-ssrs-configuration-manager.md)를 참조하세요.  
+자세한 내용은 [보고서 서버의 SPN&#40;서비스 사용자 이름&#41; 등록](../../reporting-services/report-server/register-a-service-principal-name-spn-for-a-report-server.md) 및 [URL 예약 및 등록 정보&#40;보고서 서버 구성 관리자&#41;](../../reporting-services/install-windows/about-url-reservations-and-registration-ssrs-configuration-manager.md)를 참조하세요.  
   
 ## <a name="next-steps"></a>다음 단계
 

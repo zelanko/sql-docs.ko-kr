@@ -11,12 +11,12 @@ ms.topic: conceptual
 ms.assetid: 3ee53aff-6fe4-44cd-a15b-51770c98c712
 author: David-Engel
 ms.author: v-daenge
-ms.openlocfilehash: ded33f50037c510fadd5016ffe2c72f664e70e12
-ms.sourcegitcommit: 331b8495e4ab37266945c81ff5b93d250bdaa6da
+ms.openlocfilehash: 9a815f72ef466442c601d0720243f9476a0cfc95
+ms.sourcegitcommit: 7eb80038c86acfef1d8e7bfd5f4e30e94aed3a75
 ms.translationtype: HT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 08/20/2020
-ms.locfileid: "88646230"
+ms.lasthandoff: 10/15/2020
+ms.locfileid: "92081672"
 ---
 # <a name="pdo__construct"></a>PDO::__construct
 [!INCLUDE[Driver_PHP_Download](../../includes/driver_php_download.md)]
@@ -54,7 +54,7 @@ PDOException
   
 PDO 지원이 [!INCLUDE[ssDriverPHP](../../includes/ssdriverphp_md.md)]의 버전 2.0에 추가되었습니다.  
   
-## <a name="example"></a>예제  
+## <a name="example-with-database"></a>데이터베이스를 사용하는 예제  
 이 예제는 Windows 인증을 사용하여 서버에 연결하고 데이터베이스를 지정하는 방법을 보여 줍니다.  
   
 ```  
@@ -70,7 +70,7 @@ PDO 지원이 [!INCLUDE[ssDriverPHP](../../includes/ssdriverphp_md.md)]의 버�
 ?>  
 ```  
   
-## <a name="example"></a>예제  
+## <a name="example-without-database"></a>데이터베이스를 사용하지 않는 예제  
 이 예제는 서버에 연결하여 나중에 데이터베이스를 지정하는 방법을 보여 줍니다.  
   
 ```  

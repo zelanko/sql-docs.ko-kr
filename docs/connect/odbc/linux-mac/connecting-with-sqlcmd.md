@@ -13,12 +13,12 @@ helpviewer_keywords:
 ms.assetid: 61a2ec0d-1bcb-4231-bea0-cff866c21463
 author: David-Engel
 ms.author: v-daenge
-ms.openlocfilehash: 3ab5cad910efcf73ab5b708f6a6a9bbf55c0df9b
-ms.sourcegitcommit: c7f40918dc3ecdb0ed2ef5c237a3996cb4cd268d
+ms.openlocfilehash: 5d69f1a19e0494b7426eebbac7d8732794f90be8
+ms.sourcegitcommit: a41e1f4199785a2b8019a419a1f3dcdc15571044
 ms.translationtype: HT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 10/05/2020
-ms.locfileid: "91727421"
+ms.lasthandoff: 10/13/2020
+ms.locfileid: "91987909"
 ---
 # <a name="connecting-with-sqlcmd"></a>sqlcmd를 사용하여 연결
 [!INCLUDE[Driver_ODBC_Download](../../../includes/driver_odbc_download.md)]
@@ -215,9 +215,13 @@ sqlcmd -Sxxx.xxx.xxx.xxx -Uxxx -Pxxx
   
 시스템 DSN이 ODBC SysConfigDir 디렉터리의 `odbc.ini` 파일에 저장됩니다(표준 설치에서는`/etc/odbc.ini`). 사용자 DSN이 사용자 홈 디렉터리의 `.odbc.ini`(`~/.odbc.ini`)에 저장됩니다.
 
+Windows 시스템에서 시스템 및 사용자 DSN은 레지스트리에 저장되고 odbcad32.exe를 통해 관리됩니다. bcp 및 sqlcmd는 파일 DSN을 지원하지 않습니다.
+
 드라이버가 지원하는 항목 목록은 [DSN 및 연결 문자열 키워드 및 특성](../dsn-connection-string-attribute.md)을 참조하세요.
 
-DSN에서는 DRIVER 항목만 필요하지만 서버에 연결하려면 `sqlcmd` 또는 `bcp`에서 SERVER 항목의 값이 필요합니다.  
+DSN에는 DRIVER 항목만 있으면 되지만, 원격 서버에 연결하려면 `sqlcmd` 또는 `bcp`에 SERVER 요소의 값이 필요합니다. SERVER 요소가 비어 있거나 DSN에 없는 경우 `sqlcmd` 및 `bcp`는 로컬 시스템의 기본 인스턴스에 연결을 시도합니다.
+
+Windows 시스템에서 bcp를 사용하는 경우 [!INCLUDE [sssql17-md](../../../includes/sssql17-md.md)] 및 이전 버전에서는 SQL Native Client 11 드라이버(sqlncli11.dll)가 필요하지만 [!INCLUDE [sssqlv15-md](../../../includes/sssqlv15-md.md)] 이상에서는 Microsoft ODBC Driver 17 for SQL Server 드라이버(msodbcsql17.dll)가 필요합니다.  
 
 동일한 옵션이 DSN 및 `sqlcmd` 또는 `bcp` 명령줄에서 지정된 경우 명령줄 옵션이 DSN에서 사용되는 값을 재정의합니다. 예를 들어 DSN에 DATABASE 항목이 있고 `sqlcmd` 명령줄이 **-d**를 포함하는 경우 **-d**에 전달된 값이 사용됩니다. **Trusted_Connection=yes**가 DSN에서 지정된 경우 Kerberos 인증이 사용되고 사용자 이름( **–U**) 및 암호( **–P**)(제공된 경우)가 무시됩니다.
 

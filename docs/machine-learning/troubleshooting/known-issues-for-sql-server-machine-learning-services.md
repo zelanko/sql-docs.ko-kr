@@ -3,18 +3,18 @@ title: Python 및 R의 알려진 문제
 description: 이 문서에서는 SQL Server Machine Learning Services 및 SQL Server 2016 R Services에서 제공되는 Python 및 R 구성 요소의 알려진 문제 또는 제한 사항을 설명합니다.
 ms.prod: sql
 ms.technology: machine-learning-services
-ms.date: 07/15/2020
+ms.date: 10/13/2020
 ms.topic: troubleshooting
 author: dphansen
 ms.author: davidph
 ms.custom: contperfq4
 monikerRange: '>=sql-server-2016||>=sql-server-linux-ver15||=sqlallproducts-allversions'
-ms.openlocfilehash: 914f8626a297dd233d6b22230d579623e0e98cf6
-ms.sourcegitcommit: e700497f962e4c2274df16d9e651059b42ff1a10
+ms.openlocfilehash: e756203bb9eba1ec4646ff3e40686cd3838a0dbf
+ms.sourcegitcommit: 76ab3b57718341c6057613c9bd38cf82fb17786e
 ms.translationtype: HT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 08/17/2020
-ms.locfileid: "88495054"
+ms.lasthandoff: 10/14/2020
+ms.locfileid: "92059561"
 ---
 # <a name="known-issues-in-sql-server-machine-learning-services"></a>SQL Server Machine Learning Services의 알려진 문제
 [!INCLUDE [SQL Server 2016 and later](../../includes/applies-to-version/sqlserver2016.md)]
@@ -603,7 +603,7 @@ SQL Server 2017 CU2부터 Python 코드가 성공적으로 실행되는 경우�
 
 이 문제는 SQL Server 2017 누적 업데이트 3(CU3)에서 해결되었습니다. 
 
-### <a name="5-numeric-decimal-and-money-data-types-not-supported"></a>5. 숫자, 10진수 및 money 데이터 형식이 지원되지 않음
+### <a name="5-numeric-decimal-and-money-data-types-not-supported"></a>5. 숫자, 10진수, money 데이터 형식이 지원되지 않음
 
 SQL Server 2017 누적 업데이트 12(CU12)부터 `sp_execute_external_script`에서 Python을 사용하는 경우 WITH RESULT SETS의 숫자, 10진수 및 Money 데이터 형식이 지원되지 않습니다. 다음 메시지가 나타날 수 있습니다.
 
@@ -718,7 +718,7 @@ sudo cp /opt/mssql/lib/libc++abi.so.1 /opt/mssql-extensibility/lib/
 
 ### <a name="9-cannot-install-tensorflow-package-using-sqlmlutils"></a>9. **sqlmlutils**를 사용하여 **tensorflow** 패키지를 설치할 수 없음
 
-[sqlmlutils 패키지](../package-management/install-additional-python-packages-on-sql-server.md?view=sql-server-ver15)는 SQL Server 2019에 Python 패키지를 설치하는 데 사용됩니다. 그러나 sqlmlutils를 사용하여 **tensorflow** 패키지를 설치할 수는 없습니다. tensorflow 패키지는 SQL Server에 설치된 버전보다 최신 버전의 numpy에 종속됩니다. 그러나 numpy는 미리 설치된 시스템 패키지이기 때문에 sqlmlutils가 tensorflow를 설치할 때 업데이트할 수 없습니다.
+[sqlmlutils 패키지](../package-management/install-additional-python-packages-on-sql-server.md?view=sql-server-ver15)는 SQL Server 2019에 Python 패키지를 설치하는 데 사용됩니다. [Microsoft Visual C++ 2015-2019 재배포 가능 패키지(x64)](https://visualstudio.microsoft.com/downloads/)를 다운로드하여 설치하고 업데이트해야 합니다. 그러나 sqlmlutils를 사용하여 **tensorflow** 패키지를 설치할 수는 없습니다. tensorflow 패키지는 SQL Server에 설치된 버전보다 최신 버전의 numpy에 종속됩니다. 그러나 numpy는 미리 설치된 시스템 패키지이기 때문에 sqlmlutils가 tensorflow를 설치할 때 업데이트할 수 없습니다.
 
 **해결 방법**
 

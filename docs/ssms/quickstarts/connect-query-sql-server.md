@@ -9,12 +9,12 @@ ms.author: maghan
 ms.reviewer: sstein
 ms.custom: seo-lt-2019
 ms.date: 09/28/2020
-ms.openlocfilehash: ba646353b0ded0a1cc4617c1b4c9ffc3c159662e
-ms.sourcegitcommit: 9386ae1b90705a39d37d5541b70c5e8a6564f253
+ms.openlocfilehash: d44e59e8dfdd9ba38feb2c860348f44af325c768
+ms.sourcegitcommit: 22dacedeb6e8721e7cdb6279a946d4002cfb5da3
 ms.translationtype: HT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 10/02/2020
-ms.locfileid: "91662839"
+ms.lasthandoff: 10/14/2020
+ms.locfileid: "92038389"
 ---
 # <a name="quickstart-connect-to-and-query-a-sql-server-instance-by-using-sql-server-management-studio-ssms"></a>빠른 시작: SSMS(SQL Server Management Studio)를 사용하여 SQL Server 인스턴스에 연결 및 쿼리
 
@@ -35,12 +35,12 @@ ms.locfileid: "91662839"
 
 이 문서를 완료하려면 SQL Server Management Studio 및 SQL Server 인스턴스에 대한 액세스 권한이 필요합니다.
 
-* [SQL Server Management Studio](https://docs.microsoft.com/sql/ssms/download-sql-server-management-studio-ssms)를 설치합니다.
+* [SQL Server Management Studio](../download-sql-server-management-studio-ssms.md)를 설치합니다.
 
 SQL Server 인스턴스에 대한 액세스 권한이 없는 경우 다음 링크에서 플랫폼을 선택합니다. SQL 인증을 선택한 경우 SQL Server 로그인 자격 증명을 사용합니다.
 
 * **Windows**: [SQL Server 2019 Developer Edition 다운로드](https://www.microsoft.com/sql-server/sql-server-downloads)
-* **macOS**: [Docker에서 SQL Server 2019 다운로드](https://docs.microsoft.com/sql/linux/quickstart-install-connect-docker)
+* **macOS**: [Docker에서 SQL Server 2019 다운로드](../../linux/quickstart-install-connect-docker.md)
 
 ## <a name="connect-to-a-sql-server-instance"></a>SQL Server 인스턴스에 연결
 
@@ -54,7 +54,7 @@ SQL Server 인스턴스에 대한 액세스 권한이 없는 경우 다음 링�
 
     * **서버 형식**에서 **데이터베이스 엔진**(일반적으로 기본 옵션)을 선택합니다.
     * **서버 이름**에서 SQL Server 인스턴스의 이름을 입력합니다. (이 아티클에서는 호스트 이름 NODE5[NODE5\SQL2016ST]에서 인스턴스 이름 SQL2016ST를 사용합니다.) SQL Server 인스턴스 이름을 확인하는 방법을 잘 모르는 경우 [SSMS를 사용하는 추가 팁과 요령](../tutorials/ssms-tricks.md#find-sql-server-instance-name)을 참조하세요.
-    * **인증**에서 **Windows 인증**을 선택합니다. 이 아티클에서는 Windows 인증을 사용하지만 SQL Server 로그인도 지원합니다. **SQL 로그인**을 선택하는 경우 사용자 이름 및 암호를 묻는 메시지가 표시됩니다. 인증 형식에 대한 자세한 내용은 [서버에 연결(데이터베이스 엔진)](https://docs.microsoft.com/sql/ssms/f1-help/connect-to-server-database-engine)을 참조하세요.
+    * **인증**에서 **Windows 인증**을 선택합니다. 이 아티클에서는 Windows 인증을 사용하지만 SQL Server 로그인도 지원합니다. **SQL 로그인**을 선택하는 경우 사용자 이름 및 암호를 묻는 메시지가 표시됩니다. 인증 형식에 대한 자세한 내용은 [서버에 연결(데이터베이스 엔진)](../f1-help/connect-to-server-database-engine.md)을 참조하세요.
 
     ![SQL Server 인스턴스를 사용하는 옵션을 포함한 "서버 이름" 필드](media/connect-query-sql-server/connection-2.png)
 
@@ -71,7 +71,7 @@ SQL Server 연결에 성공했는지 확인하려면 **개체 탐색기** 내에
 * SQL Azure DB에 연결 - 이 경우 msftestserver.database.windows.net: ![SQL Azure DB에 연결](media/connect-query-sql-server/connect-sql-azure.png)
 
 > [!NOTE]
-> 이 문서의 앞부분에서 ‘Windows 인증’을 사용하여 온-프레미스 SQL Server에 연결했지만 SQL Azure DB에는 이 방법이 지원되지 않습니다. 따라서 이 이미지는 SQL 인증을 사용하여 SQL Azure DB에 연결하는 방법을 보여 줍니다. 자세한 내용은 [SQL 온-프레미스 인증](../../relational-databases/security/choose-an-authentication-mode.md) 및 [SQL Azure 인증](https://docs.microsoft.com/azure/sql-database/sql-database-security-overview#access-management)을 참조하세요.
+> 이 문서의 앞부분에서 ‘Windows 인증’을 사용하여 온-프레미스 SQL Server에 연결했지만 SQL Azure DB에는 이 방법이 지원되지 않습니다. 따라서 이 이미지는 SQL 인증을 사용하여 SQL Azure DB에 연결하는 방법을 보여 줍니다. 자세한 내용은 [SQL 온-프레미스 인증](../../relational-databases/security/choose-an-authentication-mode.md) 및 [SQL Azure 인증](/azure/sql-database/sql-database-security-overview#access-management)을 참조하세요.
 
 ## <a name="create-a-database"></a>데이터베이스 만들기
 
@@ -198,7 +198,7 @@ SQL Server 연결에 성공했는지 확인하려면 **개체 탐색기** 내에
 
 ## <a name="azure-data-studio"></a>Azure Data Studio
 
-Azure Data Studio를 사용하여 [SQL Server](../../azure-data-studio/quickstart-sql-server.md), [Azure SQL Database](../../azure-data-studio/quickstart-sql-database.md) 및 [Azure SQL Data Warehouse](../../azure-data-studio/quickstart-sql-dw.md)를 연결하고 쿼리할 수도 있습니다.
+Azure Data Studio를 사용하여 [SQL Server](../../azure-data-studio/quickstart-sql-server.md), [Azure SQL Database](../../azure-data-studio/quickstart-sql-database.md), [Azure Synapse Analytics](../../azure-data-studio/quickstart-sql-dw.md)에 연결하고 쿼리할 수도 있습니다.
 
 ## <a name="next-steps"></a>다음 단계
 

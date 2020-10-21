@@ -8,12 +8,12 @@ ms.technology: security
 ms.topic: conceptual
 author: maggiesMSFT
 ms.author: maggies
-ms.openlocfilehash: cf1db4f6e07609ce6da38569732f7dba333f86ff
-ms.sourcegitcommit: b93beb4f03aee2c1971909cb1d15f79cd479a35c
+ms.openlocfilehash: 40ddab224d24e566ad346d64d5238ca5c81d9f48
+ms.sourcegitcommit: 783b35f6478006d654491cb52f6edf108acf2482
 ms.translationtype: HT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 09/29/2020
-ms.locfileid: "91497207"
+ms.lasthandoff: 10/09/2020
+ms.locfileid: "91891593"
 ---
 # <a name="configure-reporting-services-to-use-a-subject-alternative-name-san"></a>SAN(주체 대체 이름)을 사용하도록 Reporting Services 구성
 
@@ -33,11 +33,11 @@ Reporting Services의 TLS 설정에 대한 자세한 내용은 [기본 모드 �
   
 1.  보고서 서버 구성 관리자를 시작합니다.  
   
-     자세한 내용은 [Reporting Services 구성 관리자&#40;기본 모드&#41;](../../reporting-services/install-windows/reporting-services-configuration-manager-native-mode.md)을 참조하세요.  
+     자세한 내용은 [보고서 서버 구성 관리자&#40;기본 모드&#41;](../../reporting-services/install-windows/reporting-services-configuration-manager-native-mode.md)를 참조하세요.  
   
 2.  **웹 서비스 URL** 페이지에서 TLS/SSL 포트 및 TLS/SSL 인증서를 선택합니다.  
   
-     ![Reporting Services 구성 관리자](../../reporting-services/report-server-sharepoint/media/reportingservices-configurationmanager.png "Reporting Services 구성 관리자")  
+     ![보고서 서버 구성 관리자](../../reporting-services/report-server-sharepoint/media/reportingservices-configurationmanager.png "보고서 서버 구성 관리자")  
   
      구성 관리자가 포트에 대해 TLS/SSL 인증서를 등록합니다.  
   
@@ -155,7 +155,7 @@ Reporting Services의 TLS 설정에 대한 자세한 내용은 [기본 모드 �
 ## <a name="see-also"></a>참고 항목
 
  [RsReportServer.config 구성 파일](../../reporting-services/report-server/rsreportserver-config-configuration-file.md)   
- [Reporting Services 구성 관리자](../../reporting-services/install-windows/reporting-services-configuration-manager-native-mode.md)   
+ [보고서 서버 구성 관리자](../../reporting-services/install-windows/reporting-services-configuration-manager-native-mode.md)   
  [Reporting Services 구성 파일 수정](../../reporting-services/report-server/modify-a-reporting-services-configuration-file-rsreportserver-config.md)   
  [보고서 서버 URL 구성](../../reporting-services/install-windows/configure-report-server-urls-ssrs-configuration-manager.md)
 

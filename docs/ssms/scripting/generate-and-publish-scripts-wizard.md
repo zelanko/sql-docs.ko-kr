@@ -44,12 +44,12 @@ ms.author: maghan
 ms.custom: seo-lt-2019
 ms.date: 04/07/2020
 monikerRange: '>=aps-pdw-2016||=azuresqldb-current||=azure-sqldw-latest||>=sql-server-2016||=sqlallproducts-allversions||>=sql-server-linux-2017||=azuresqldb-mi-current'
-ms.openlocfilehash: bf51bcec55fbd11e386eb127a3bec57f37ec7f37
-ms.sourcegitcommit: 6d53ecfdc463914f045c20eda96da39dec22acca
+ms.openlocfilehash: edbce6b52c224bc95aad1b3a6088696dba4c4f6a
+ms.sourcegitcommit: 22dacedeb6e8721e7cdb6279a946d4002cfb5da3
 ms.translationtype: HT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 08/26/2020
-ms.locfileid: "88901370"
+ms.lasthandoff: 10/14/2020
+ms.locfileid: "92039023"
 ---
 # <a name="generate-and-publish-scripts-wizard"></a>스크립트 생성 및 게시 마법사
 
@@ -57,7 +57,7 @@ ms.locfileid: "88901370"
 
 **스크립트 생성 및 게시 마법사** 를 사용하면 [!INCLUDE[ssDEnoversion](../../includes/ssdenoversion-md.md)] 또는 [!INCLUDE[ssSDSFull](../../includes/sssdsfull-md.md)]인스턴스 간에 데이터베이스를 전송하는 스크립트를 만들 수 있습니다. 스크립트는 로컬 네트워크의 데이터베이스 인스턴스에 있는 데이터베이스나 [!INCLUDE[ssSDS](../../includes/sssds-md.md)]에서 생성할 수 있습니다. 생성된 스크립트는 데이터베이스 엔진의 다른 인스턴스나 [!INCLUDE[ssSDS](../../includes/sssds-md.md)]에서 실행할 수 있습니다. 마법사를 사용하여 데이터베이스 게시 서비스 프로젝트를 통해 생성된 웹 서비스에 직접 데이터베이스의 내용을 게시할 수도 있습니다. 전체 데이터베이스에 대한 스크립트를 만들거나 특정 개체로 제한할 수 있습니다.
 
-스크립트 생성 및 게시 마법사 사용에 대한 자세한 자습서는 [자습서: 스크립트 생성 마법사](https://docs.microsoft.com/sql/ssms/tutorials/scripting-ssms#script-databases)를 참조하세요.
+스크립트 생성 및 게시 마법사 사용에 대한 자세한 자습서는 [자습서: 스크립트 생성 마법사](../tutorials/scripting-ssms.md#script-databases)를 참조하세요.
 
 ## <a name="before-you-begin"></a>시작하기 전에
 
@@ -130,7 +130,7 @@ ms.locfileid: "88901370"
 
 ![Notebook으로 저장](media/generate-and-publish-scripts-wizard/save.png)
 
-- **[Notebook으로 저장](../../azure-data-studio/notebooks-guidance.md)** - 스크립트를 하나 이상의 .sql 파일로 저장합니다. 파일의 이름과 위치를 지정하려면 찾아보기 단추( **…** )를 선택합니다.
+- **[Notebook으로 저장](../../azure-data-studio/notebooks/notebooks-guidance.md)** - 스크립트를 하나 이상의 .sql 파일로 저장합니다. 파일의 이름과 위치를 지정하려면 찾아보기 단추( **…** )를 선택합니다.
 
 - **스크립트 파일로 저장** 스크립트를 하나 이상의 .sql 파일로 저장합니다. 파일의 이름과 위치를 지정하려면 찾아보기 단추 **(…)** 를 선택합니다. 이름이 같은 파일이 이미 있을 경우 해당 파일을 바꾸려면 **기존 파일 덮어쓰기** 확인란을 선택합니다. 스크립트를 생성하는 방법을 지정하려면 **단일 스크립트 파일** 또는 **개체당 하나의 스크립트 파일**을 선택합니다. 스크립트에 사용할 텍스트 유형을 지정하려면 **유니코드 텍스트** 또는 **ANSI 텍스트**를 클릭합니다.
 
@@ -246,7 +246,7 @@ ms.locfileid: "88901370"
 
 모든 설정이 올바르면 구성이 성공적으로 완료됩니다.
 
-## <a name="generating-scripts-on-azure-sql-data-warehouse"></a>Azure SQL 데이터 웨어하우스에서 스크립트 생성
+## <a name="generating-scripts-on-azure-synapse-analytics"></a>Azure Synapse Analytics에서 스크립트 생성
 
 "Script As..."를 사용할 때 생성된 구문이 [!INCLUDE[ssSDW_md](../../includes/sssdw-md.md)] 구문과 다르게 보이거나, 오류 메시지를 받은 경우 SQL Server Management Studio의 스크립팅 옵션을 [!INCLUDE[ssSDW_md](../../includes/sssdw-md.md)]로 설정해야 할 수 있습니다.
 

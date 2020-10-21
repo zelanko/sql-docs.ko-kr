@@ -14,12 +14,12 @@ helpviewer_keywords:
 ms.assetid: dc7d0ede-a9b6-4ce2-977e-4d1e7ec2131c
 author: David-Engel
 ms.author: v-daenge
-ms.openlocfilehash: 1fb2cb13055a53ba12a500b1a552e6fc2cdb431c
-ms.sourcegitcommit: cb620c77fe6bdefb975968837706750c31048d46
+ms.openlocfilehash: b146a03031f71b9385d5a51d161b822bd4ed832f
+ms.sourcegitcommit: 7eb80038c86acfef1d8e7bfd5f4e30e94aed3a75
 ms.translationtype: HT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 07/15/2020
-ms.locfileid: "86392811"
+ms.lasthandoff: 10/15/2020
+ms.locfileid: "92081802"
 ---
 # <a name="how-to-perform-parameterized-queries"></a>방법: 매개 변수가 있는 쿼리 수행
 [!INCLUDE[Driver_PHP_Download](../../includes/driver_php_download.md)]
@@ -45,7 +45,7 @@ ms.locfileid: "86392811"
 > [!NOTE]  
 > 매개 변수는 **sqlsrv_prepare**를 사용합니다. 즉, 매개 변수가 있는 쿼리가 **sqlsrv_prepare** 를 사용하여 준비되고 매개 변수 배열의 값이 업데이트되는 경우 다음 쿼리 실행 시 업데이트된 값이 사용됩니다. 자세한 내용은 이 항목의 두 번째 예제를 참조하세요.  
   
-## <a name="example"></a>예제  
+## <a name="query-example"></a>쿼리 예  
 다음 예제에서는 AdventureWorks 데이터베이스 *Production.ProductInventory* 테이블의 지정된 제품 ID 수량을 업데이트합니다. 수량 및 제품 ID는 UPDATE 쿼리의 매개 변수입니다.  
   
 다음 예제에서는 데이터베이스를 쿼리하여 수량이 올바르게 업데이트되었는지 확인합니다. 제품 ID는 SELECT 쿼리의 매개 변수입니다.  
@@ -113,7 +113,7 @@ sqlsrv_close( $conn);
   
 이전 예제에서는 쿼리를 실행하기 위해 **sqlsrv_query** 함수를 사용했습니다. 이 함수는 문을 준비하고 실행하므로 일회성 쿼리를 실행할 때 유용합니다. **sqlsrv_prepare**/**sqlsrv_execute** 조합은 다른 매개 변수 값을 사용하는 쿼리를 다시 실행할 때 적합합니다. 다른 매개 변수 값으로 쿼리를 다시 실행하는 예제를 확인하려면 다음 예제를 참조하세요.  
   
-## <a name="example"></a>예제  
+## <a name="prepare-example"></a>prepare 예제  
 다음 예제에서는 **sqlsrv_prepare** 함수를 사용할 때 변수의 암시적 바인딩을 보여 줍니다. 예제에서는 *Sales.SalesOrderDetail* 테이블에 여러 개의 판매 주문을 삽입합니다. *$params* 배열은 **sqlsrv_prepare**가 호출될 때 명령문( *$stmt*)에 바인딩됩니다. 테이블에 새 판매 주문을 삽입하는 각 쿼리를 실행하기 전에 *$params* 배열이 판매 주문 세부 사항에 해당하는 새 값으로 업데이트됩니다. 후속 쿼리를 실행할 때는 새 매개 변수 값을 사용합니다.  
   
 이 예제에서는 SQL Server 및 [AdventureWorks](https://github.com/Microsoft/sql-server-samples/tree/master/samples/databases/adventure-works) 데이터베이스가 로컬 컴퓨터에 설치된 것으로 가정합니다. 모든 출력은 명령줄에서 예제가 실행될 때 콘솔에 기록됩니다.  

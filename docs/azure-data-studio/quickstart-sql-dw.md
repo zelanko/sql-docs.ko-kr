@@ -1,6 +1,6 @@
 ---
-title: Azure SQL 데이터 웨어하우스 연결 및 쿼리
-description: 이 빠른 시작에서는 Azure Data Studio를 사용하여 Azure SQL Data Warehouse에 연결하고 쿼리를 실행하는 방법을 보여 줍니다.
+title: Azure Synapse Analytics를 사용하여 연결 및 쿼리
+description: 이 빠른 시작에서는 Azure Data Studio를 통해 Azure Synapse Analytics의 전용 SQL 풀 사용에 연결하고 쿼리를 실행하는 방법을 보여 줍니다.
 ms.prod: azure-data-studio
 ms.technology: azure-data-studio
 ms.reviewer: alayu, maghan, sstein
@@ -9,30 +9,30 @@ author: yualan
 ms.author: alayu
 ms.custom: seodec18; seo-lt-2019
 ms.date: 09/24/2018
-ms.openlocfilehash: e9c0ba08445eb1f9712b00b84cc07ac7eae310f1
-ms.sourcegitcommit: 7345e4f05d6c06e1bcd73747a4a47873b3f3251f
+ms.openlocfilehash: c2282220dff18a7f054cc5fd01b3670b6fd14d43
+ms.sourcegitcommit: a5398f107599102af7c8cda815d8e5e9a367ce7e
 ms.translationtype: HT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 08/24/2020
-ms.locfileid: "88766372"
+ms.lasthandoff: 10/13/2020
+ms.locfileid: "92005489"
 ---
-# <a name="quickstart-use-azure-data-studio-to-connect-and-query-data-in-azure-sql-data-warehouse"></a>빠른 시작: Azure Data Studio를 사용하여 Azure SQL 데이터 웨어하우스의 데이터 연결 및 쿼리
+# <a name="quickstart-use-azure-data-studio-to-connect-and-query-data-using-dedicated-sql-pool-in-azure-synapse-analytics"></a>빠른 시작: Azure Data Studio를 통해 Azure Synapse Analytics의 전용 SQL 풀을 사용하여 데이터 연결 및 쿼리
 
-이 빠른 시작에서는 Azure Data Studio를 사용하여 Azure SQL 데이터 웨어하우스에 연결한 다음, Transact-SQL 문을 사용하여 데이터를 만들고 삽입하고 선택하는 방법을 보여 줍니다. 
+이 빠른 시작에서는 Azure Data Studio를 통해 Azure Synapse Analytics의 전용 SQL 풀 사용에 연결한 다음, Transact-SQL 문을 통해 데이터를 만들고 삽입하고 선택하는 방법을 보여 줍니다. 
 
 ## <a name="prerequisites"></a>필수 구성 요소
-이 빠른 시작을 완료하려면 Azure Data Studio 및 Azure SQL 데이터 웨어하우스가 필요합니다.
+이 빠른 시작을 완료하려면 Azure Data Studio 및 Azure Synapse Analytics의 전용 SQL 풀이 필요합니다.
 
 - [Azure Data Studio를 설치](./download-azure-data-studio.md?view=sql-server-ver15)합니다.
 
-SQL Data Warehouse가 아직 없는 경우 [SQL Data Warehouse 만들기](/azure/sql-data-warehouse/sql-data-warehouse-get-started-provision)를 참조하세요.
+전용 SQL 풀이 아직 없는 경우 [전용 SQL 풀 만들기](/azure/sql-data-warehouse/sql-data-warehouse-get-started-provision)를 참조하세요.
 
 서버 이름 및 로그인 자격 증명을 알아둡니다.
 
 
-## <a name="connect-to-your-data-warehouse"></a>데이터 웨어하우스에 연결
+## <a name="connect-to-your-dedicated-sql-pool"></a>전용 SQL 풀에 연결
 
-Azure Data Studio를 사용하여 Azure SQL Data Warehouse 서버에 대한 연결을 설정합니다.
+Azure Data Studio를 통해 Azure Synapse Analytics 서버에 연결합니다.
 
 1. Azure Data Studio를 처음 실행하면 **연결** 페이지가 열립니다. **연결** 페이지가 표시되지 않으면 **연결 추가** 또는 **서버** 사이드바의 **새 연결** 아이콘을 클릭합니다.
    
@@ -58,7 +58,7 @@ Azure Data Studio를 사용하여 Azure SQL Data Warehouse 서버에 대한 연�
 
 4. 성공적으로 연결되면 서버가 ‘서버’ 사이드바에서 열립니다.
 
-## <a name="create-the-tutorial-data-warehouse"></a>자습서 데이터 웨어하우스 만들기
+## <a name="create-the-tutorial-dedicated-sql-pool"></a>자습서 전용 SQL 풀 만들기
 1. 개체 탐색기에서 서버를 마우스 오른쪽 단추로 클릭하고 **새 쿼리**를 선택합니다.
 
 1. 쿼리 편집기에 다음 코드 조각을 붙여넣고 **실행**을 클릭합니다.
@@ -145,4 +145,4 @@ Azure Data Studio를 사용하여 Azure SQL Data Warehouse 서버에 대한 연�
 
 ## <a name="next-steps"></a>다음 단계
 
-이제 Azure SQL Data Warehouse에 연결하고 쿼리를 실행했으므로 [코드 편집기 자습서](tutorial-sql-editor.md)를 사용해 보세요.
+이제 Azure Synapse Analytics에 연결하고 쿼리를 실행했으므로 [코드 편집기 자습서](tutorial-sql-editor.md)를 사용해 보세요.

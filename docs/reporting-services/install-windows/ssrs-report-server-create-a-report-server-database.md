@@ -8,14 +8,14 @@ ms.prod_service: reporting-services-native
 ms.topic: conceptual
 ms.custom: seodec18
 ms.date: 9/2/2020
-ms.openlocfilehash: a955c552ab3e78cd34cbb80269e1910b3a63a560
-ms.sourcegitcommit: 2600a414c321cfd6dc6daf5b9bcbc9a99c049dc4
+ms.openlocfilehash: 1169c75eb349f4b997a434acc5f7e0e7cc2792f3
+ms.sourcegitcommit: fe59f8dc27fd633f5dfce54519d6f5dcea577f56
 ms.translationtype: HT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 09/30/2020
-ms.locfileid: "91603386"
+ms.lasthandoff: 10/09/2020
+ms.locfileid: "91935573"
 ---
-# <a name="create-a-report-server-database-ssrs-configuration-manager"></a>보고서 서버 데이터베이스 만들기, SSRS 구성 관리자  
+# <a name="create-a-report-server-database-report-server-configuration-manager"></a>보고서 서버 데이터베이스 만들기, 보고서 서버 구성 관리자  
 
 [!INCLUDE [ssrs-appliesto](../../includes/ssrs-appliesto.md)] [!INCLUDE [ssrs-appliesto-2016-and-later](../../includes/ssrs-appliesto-2016-and-later.md)] [!INCLUDE[ssrs-appliesto-pbirsi](../../includes/ssrs-appliesto-pbirs.md)] [!INCLUDE[ssrs-appliesto-sharepoint-2013-2016i](../../includes/ssrs-appliesto-sharepoint-2013-2016.md)]
 
@@ -49,7 +49,7 @@ SQL Server [!INCLUDE[ssRSnoversion](../../includes/ssrsnoversion-md.md)] **Share
  ### <a name="native-mode"></a>기본 모드
  다음과 같은 방법으로 기본 모드 보고서 서버 데이터베이스를 만들 수 있습니다.  
   
-- **자동**. 기본 구성 설치 옵션을 선택하는 경우 SQL Server 설치 마법사를 사용합니다. SQL Server 설치 마법사에서 이 옵션은 **보고서 서버 설치 옵션** 페이지의 **설치 및 구성** 입니다. **설치만** 옵션을 선택한 경우 SQL Server Reporting Services 구성 관리자를 사용하여 데이터베이스를 만들어야 합니다.  
+- **자동**. 기본 구성 설치 옵션을 선택하는 경우 SQL Server 설치 마법사를 사용합니다. SQL Server 설치 마법사에서 이 옵션은 **보고서 서버 설치 옵션** 페이지의 **설치 및 구성** 입니다. **설치만** 옵션을 선택한 경우 SQL Server 보고서 서버 구성 관리자를 사용하여 데이터베이스를 만들어야 합니다.  
   
 - **수동**. SQL Server [!INCLUDE[ssRSnoversion](../../includes/ssrsnoversion-md.md)] 구성 관리자를 사용합니다. 원격 [!INCLUDE[ssDEnoversion](../../includes/ssdenoversion-md.md)]을 사용하여 데이터베이스를 호스팅하는 경우 보고서 서버 데이터베이스를 수동으로 만듭니다. 자세한 내용은 [기본 모드 보고서 서버 데이터베이스 만들기](../../reporting-services/install-windows/ssrs-report-server-create-a-native-mode-report-server-database.md)를 참조하세요.  
 
@@ -85,7 +85,7 @@ SQL Server [!INCLUDE[ssRSnoversion](../../includes/ssrsnoversion-md.md)] **Share
   
 - [!INCLUDE[ssSQL11](../../includes/sssql11-md.md)]  
 
-원격 컴퓨터에 보고서 서버 데이터베이스를 만드는 경우, 네트워크 액세스 권한이 있는 서비스 계정 또는 도메인 사용자 계정을 사용하도록 연결을 구성하세요. 원격 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 인스턴스를 사용하는 경우, 보고서 서버가 인스턴스에 연결할 때 사용해야 하는 자격 증명을 선택하세요. 자세한 내용은 [보고서 서버 데이터베이스 연결 구성&#40;SSRS Configuration Manager&#41;](../../reporting-services/install-windows/configure-a-report-server-database-connection-ssrs-configuration-manager.md)을 참조하세요.  
+원격 컴퓨터에 보고서 서버 데이터베이스를 만드는 경우, 네트워크 액세스 권한이 있는 서비스 계정 또는 도메인 사용자 계정을 사용하도록 연결을 구성하세요. 원격 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 인스턴스를 사용하는 경우, 보고서 서버가 인스턴스에 연결할 때 사용해야 하는 자격 증명을 선택하세요. 자세한 내용은 [보고서 서버 데이터베이스 연결 구성&#40;보고서 서버 구성 관리자&#41;](../../reporting-services/install-windows/configure-a-report-server-database-connection-ssrs-configuration-manager.md)을 참조하세요.  
   
 > [!IMPORTANT]  
 > 보고서 서버 데이터베이스를 호스팅하는 보고서 서버와 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 인스턴스는 서로 다른 도메인에 있을 수 있습니다. 인터넷 배포의 경우 방화벽으로 보호된 서버를 사용하는 것이 일반적입니다. 
@@ -98,6 +98,6 @@ SQL Server [!INCLUDE[ssRSnoversion](../../includes/ssrsnoversion-md.md)] **Share
 
 ## <a name="next-steps"></a>다음 단계
 
-[Reporting Services 구성 관리자](https://msdn.microsoft.com/63519ef4-e68a-42fb-9cf7-31228ea4e434)에 관해 읽어보세요.  
+[보고서 서버 구성 관리자](reporting-services-configuration-manager-native-mode.md)에 대해 알아봅니다.  
 
 추가 질문이 있으신가요? [Reporting Services 포럼](https://go.microsoft.com/fwlink/?LinkId=620231)에 문의하세요.

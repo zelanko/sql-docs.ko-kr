@@ -9,15 +9,15 @@ ms.topic: conceptual
 ms.assetid: 8bbb88df-72fd-4c27-91b7-b255afedd345
 author: maggiesMSFT
 ms.author: maggies
-ms.openlocfilehash: 5946e49610acd59603b6730381e586ea3456ac8d
-ms.sourcegitcommit: 68583d986ff5539fed73eacb7b2586a71c37b1fa
+ms.openlocfilehash: 968de0f9cf8c95b13a67f3fb2b0f36e3d8c09ced
+ms.sourcegitcommit: a41e1f4199785a2b8019a419a1f3dcdc15571044
 ms.translationtype: HT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 04/04/2020
-ms.locfileid: "80662790"
+ms.lasthandoff: 10/13/2020
+ms.locfileid: "91986115"
 ---
 # <a name="troubleshoot-server--database-connection-problems-with-reporting-services"></a>Reporting Services의 서버 및 데이터베이스 연결 문제 해결
-이 항목을 사용하여 보고서 서버에 연결할 때 발생하는 문제를 해결할 수 있습니다. 이 항목에서는 "오류" 메시지에 대한 정보를 제공합니다. 데이터 원본 구성 및 보고서 서버 연결 정보 구성에 대한 자세한 내용은 [보고서 데이터 원본에 대한 자격 증명 및 연결 정보 지정](../../reporting-services/report-data/specify-credential-and-connection-information-for-report-data-sources.md) 및 [보고서 서버 데이터베이스 연결 구성(SSRS 구성 관리자)](../../reporting-services/install-windows/configure-a-report-server-database-connection-ssrs-configuration-manager.md)를 참조하십시오.  
+이 항목을 사용하여 보고서 서버에 연결할 때 발생하는 문제를 해결할 수 있습니다. 이 항목에서는 "오류" 메시지에 대한 정보를 제공합니다. 데이터 원본 구성 및 보고서 서버 연결 정보 구성에 대한 자세한 내용은 [보고서 데이터 원본에 대한 자격 증명 및 연결 정보 지정](../../reporting-services/report-data/specify-credential-and-connection-information-for-report-data-sources.md) 및 [보고서 서버 데이터베이스 연결 구성(보고서 서버 구성 관리자)](../../reporting-services/install-windows/configure-a-report-server-database-connection-ssrs-configuration-manager.md)을 참조하세요.  
   
 ## <a name="cannot-create-a-connection-to-data-source-datasourcename-rserroropeningconnection"></a>데이터 원본 'datasourcename'에 대한 연결을 설정할 수 없습니다. (rsErrorOpeningConnection)  
 이는 보고서에 데이터를 제공하는 외부 데이터 원본에 대한 연결을 보고서 서버에서 열 수 없을 때 일반적으로 발생하는 오류입니다. 이 오류는 근본 원인을 나타내는 두 번째 오류 메시지와 함께 표시됩니다. 다음 추가 오류가 **rsErrorOpeningConnection**과 함께 표시될 수 있습니다.  
@@ -32,7 +32,7 @@ ms.locfileid: "80662790"
 SQL Server에 연결할 때 기본 설정에서 SQL Server가 원격 연결을 허용하지 않기 때문에 이 오류가 발생할 수 있습니다. (공급자: 명명된 파이프 공급자, 오류: 40 - SQL Server에 연결할 수 없습니다.) 이 오류는 보고서 서버 데이터베이스를 호스팅하는 데이터베이스 엔진의 인스턴스에서 반환됩니다. 대부분의 경우 이 오류는 SQL Server 서비스가 중지되어 발생합니다. 또는 SQL Server Express with Advanced Services나 명명된 인스턴스를 사용하는 경우에는 보고서 서버 데이터베이스의 연결 문자열이나 보고서 서버 URL이 올바르지 않아 이 오류가 발생합니다. 이러한 문제를 해결하려면 다음을 수행하십시오.  
   
 * SQL Server(**MSSQLSERVER**) 서비스가 시작되는지 확인합니다. 데이터베이스 엔진의 인스턴스를 호스팅하는 컴퓨터에서 시작, 관리 도구, 서비스를 차례로 클릭하고 SQL Server(**MSSQLSERVER**)로 스크롤합니다. 시작되지 않은 경우 이 서비스를 마우스 오른쪽 단추로 클릭하고 속성을 선택한 후 시작 유형에서 자동을 선택하고 적용, 시작을 차례로 클릭한 다음 확인을 클릭합니다.   
-* 보고서 서버 URL 및 보고서 서버 데이터베이스 연결 문자열이 올바른지 확인합니다. Reporting Services 또는 데이터베이스 엔진이 명명된 인스턴스로 설치된 경우 설치 중 만들어지는 기본 연결 문자열에 인스턴스 이름이 포함됩니다. 예를 들어 DEVSRV01이라는 이름의 서버에 SQL Server Express with Advanced Services의 기본 인스턴스를 설치한 경우 웹 포털 URL은 DEVSRV01\Reports$SQLEXPRESS가 됩니다. 또한 연결 문자열의 데이터베이스 서버 이름은 DEVSRV01\SQLEXPRESS와 유사하게 됩니다. SQL Server Express에 대한 URL 및 데이터 원본 연결 문자열에 대한 자세한 내용은 [SQL Server Express with Advanced Services의 Reporting Services](https://technet.microsoft.com/library/ms365166(v=sql.105).aspx)를 참조하십시오. 보고서 서버 데이터베이스의 연결 문자열을 확인하려면 Reporting Services 구성 도구를 시작하고 데이터베이스 설치 페이지를 확인합니다.  
+* 보고서 서버 URL 및 보고서 서버 데이터베이스 연결 문자열이 올바른지 확인합니다. Reporting Services 또는 데이터베이스 엔진이 명명된 인스턴스로 설치된 경우 설치 중 만들어지는 기본 연결 문자열에 인스턴스 이름이 포함됩니다. 예를 들어 DEVSRV01이라는 이름의 서버에 SQL Server Express with Advanced Services의 기본 인스턴스를 설치한 경우 웹 포털 URL은 DEVSRV01\Reports$SQLEXPRESS가 됩니다. 또한 연결 문자열의 데이터베이스 서버 이름은 DEVSRV01\SQLEXPRESS와 유사하게 됩니다. SQL Server Express에 대한 URL 및 데이터 원본 연결 문자열에 대한 자세한 내용은 [SQL Server Express with Advanced Services의 Reporting Services](/previous-versions/sql/sql-server-2008-r2/ms365166(v=sql.105))를 참조하십시오. 보고서 서버 데이터베이스의 연결 문자열을 확인하려면 Reporting Services 구성 도구를 시작하고 데이터베이스 설치 페이지를 확인합니다.  
   
 ### <a name="a-connection-cannot-be-made-ensure-that-the-server-is-running"></a>연결할 수 없습니다. 서버가 실행 중인지 확인하십시오.  
 ADOMD.NET 공급자에 의해 이 오류가 반환됩니다. 이 오류가 발생할 수 있는 이유에는 여러 가지가 있습니다. 서버를 "localhost"로 지정한 경우 다른 서버 이름을 지정해 보십시오. 이 오류는 새 연결에 메모리를 할당할 수 없는 경우에도 발생할 수 있습니다. 자세한 내용은 [기술 자료 문서 912017 - SQL Server 2005 Analysis Services의 인스턴스에 연결하는 경우 오류 메시지](https://support.microsoft.com/kb/912017)를 참조하십시오.  
@@ -69,7 +69,7 @@ ADOMD.NET 공급자에 의해 이 오류가 반환됩니다. 이 오류가 발�
   
 전체 오류 텍스트: "보고서 서버에서 보고서 서버 데이터베이스에 연결할 수 없습니다. 로그온하지 못했습니다(**rsReportServerDatabaseLogonFailed**). 로그온 실패: 알 수 없는 사용자 이름이거나 암호가 잘못되었습니다."  
   
-암호를 다시 설정하는 경우 연결을 업데이트해야 합니다. 자세한 내용은 [보고서 서버 데이터베이스 연결 구성(SSRS 구성 관리자)](../../reporting-services/install-windows/configure-a-report-server-database-connection-ssrs-configuration-manager.md)을 참조하십시오.  
+암호를 다시 설정하는 경우 연결을 업데이트해야 합니다. 자세한 내용은 [보고서 서버 데이터베이스 연결 구성(보고서 서버 구성 관리자)](../../reporting-services/install-windows/configure-a-report-server-database-connection-ssrs-configuration-manager.md)을 참조하세요.  
   
 ## <a name="the-report-server-cannot-open-a-connection-to-the-report-server-database-rsreportserverdatabaseunavailable"></a>보고서 서버에서 보고서 서버 데이터베이스에 연결할 수 없습니다. 합니다(rsReportServerDatabaseUnavailable).  
 전체 메시지: 보고서 서버에서 보고서 서버 데이터베이스에 연결할 수 없습니다. 모든 요청과 처리를 수행하려면 데이터베이스에 연결해야 합니다(rsReportServerDatabaseUnavailable).  
@@ -120,4 +120,3 @@ MSCS 클러스터에서 실행되는 가상 SQL Server에 보고서 서버 데�
   
 
 [!INCLUDE[feedback_stackoverflow_msdn_connect](../../includes/feedback-stackoverflow-msdn-connect-md.md)]
-

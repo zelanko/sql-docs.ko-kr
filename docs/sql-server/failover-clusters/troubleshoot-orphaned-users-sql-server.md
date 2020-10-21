@@ -20,12 +20,12 @@ ms.assetid: 11eefa97-a31f-4359-ba5b-e92328224133
 author: MikeRayMSFT
 ms.author: mikeray
 monikerRange: '>= aps-pdw-2016 || = azuresqldb-current || = azure-sqldw-latest || >= sql-server-2016 || = sqlallproducts-allversions'
-ms.openlocfilehash: 2e538c68882c1fc49a449767c51c39123ee222f6
-ms.sourcegitcommit: cc23d8646041336d119b74bf239a6ac305ff3d31
+ms.openlocfilehash: 435cc59989b8a06ac651ccc93f73bdfebec3946d
+ms.sourcegitcommit: a5398f107599102af7c8cda815d8e5e9a367ce7e
 ms.translationtype: HT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 09/23/2020
-ms.locfileid: "91115340"
+ms.lasthandoff: 10/13/2020
+ms.locfileid: "92006255"
 ---
 # <a name="troubleshoot-orphaned-users-sql-server"></a>분리된 사용자 문제 해결(SQL Server)
 [!INCLUDE[SQL Server Azure SQL Database Synapse Analytics PDW ](../../includes/applies-to-version/sql-asdb-asdbmi-asa-pdw.md)]
@@ -73,9 +73,9 @@ WHERE sp.SID IS NULL
   
  현재 데이터베이스에 있으며 어떤 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 로그인에도 연결되지 않은 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 인증 사용자와 이에 해당되는 SID(보안 ID)가 나열됩니다.  
 
-**SQL 데이터베이스 및 SQL 데이터 웨어하우스의 경우**
+**SQL Database 및 Azure Synapse Analytics의 경우**
 
-SQL 데이터베이스 또는 SQL 데이터 웨어하우스에서는 `sys.server_principals` 테이블을 사용할 수 없습니다. 이러한 환경에서 분리된 사용자를 확인하려면 다음 단계를 따르세요.
+SQL Database 또는 Azure Synapse Analytics에서는 `sys.server_principals` 테이블을 사용할 수 없습니다. 이러한 환경에서 분리된 사용자를 확인하려면 다음 단계를 따르세요.
 
 1. `master` 데이터베이스에 연결하고 다음 쿼리를 사용하여 로그인의 SID를 선택합니다.
     ```
