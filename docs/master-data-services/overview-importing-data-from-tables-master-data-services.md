@@ -1,5 +1,6 @@
 ---
-title: '개요: 테이블에서 데이터 가져오기(Master Data Services) | Microsoft Docs'
+title: 테이블에서 데이터를 가져오기
+description: MDS(Master Data Services)에서 데이터에 대 한 모델을 만든 후 테이블에서 데이터를 가져오고 데이터를 변경 합니다.
 ms.custom: ''
 ms.date: 03/14/2017
 ms.prod: sql
@@ -14,23 +15,23 @@ helpviewer_keywords:
 ms.assetid: 181d1e22-379c-45d1-b03c-e1e22ff14164
 author: lrtoyou1223
 ms.author: lle
-ms.openlocfilehash: 45dcf3f21a87d81289d6445014f4157db4ab8e67
-ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
+ms.openlocfilehash: 232900f14580db1e09fe0b54c4dfcd77e5310283
+ms.sourcegitcommit: 6be9a0ff0717f412ece7f8ede07ef01f66ea2061
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 07/15/2019
-ms.locfileid: "68097378"
+ms.lasthandoff: 07/01/2020
+ms.locfileid: "92257569"
 ---
 # <a name="overview-importing-data-from-tables-master-data-services"></a>개요: 테이블에서 데이터 가져오기(Master Data Services)
 
-[!INCLUDE[appliesto-ss-xxxx-xxxx-xxx-md-winonly](../includes/appliesto-ss-xxxx-xxxx-xxx-md-winonly.md)]
+[!INCLUDE [SQL Server - Windows only ASDBMI  ](../includes/applies-to-version/sql-windows-only-asdbmi.md)]
 
   [!INCLUDE[ssMDSshort](../includes/ssmdsshort-md.md)]에서 데이터에 대한 모델을 만들면 데이터 추가를 시작하고 데이터를 변경할 수 있습니다.   [!INCLUDE[ssMDSshort](../includes/ssmdsshort-md.md)] 준비 표, 저장 프로시저 및 마스터 데이터 관리자를 사용할 수 있습니다.  
   
  데이터를 추가 및 수정하는 방법에 대한 지침은 [테이블에서 데이터 가져오기&#40;Master Data Services&#41;](../master-data-services/import-data-from-tables-master-data-services.md)를 참조하세요.  
   
 > [!NOTE]
->  Excel에서 [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)][!INCLUDE[ssMDSshort](../includes/ssmdsshort-md.md)][!INCLUDE[ssMDSXLS](../includes/ssmdsxls-md.md)]을 사용하여 데이터를 MDS 리포지토리([!INCLUDE[ssMDSshort](../includes/ssmdsshort-md.md)] 데이터베이스)에 추가할 수도 있습니다. 자세한 내용은 [ 개요: Excel에서 데이터 가져오기&#40;Excel용 MDS 추가 기능&#41;](../master-data-services/microsoft-excel-add-in/overview-importing-data-from-excel-mds-add-in-for-excel.md)을 참조하세요.  
+>  Excel에서 [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)][!INCLUDE[ssMDSshort](../includes/ssmdsshort-md.md)][!INCLUDE[ssMDSXLS](../includes/ssmdsxls-md.md)]을 사용하여 데이터를 MDS 리포지토리([!INCLUDE[ssMDSshort](../includes/ssmdsshort-md.md)] 데이터베이스)에 추가할 수도 있습니다. 자세한 내용은 [개요: Excel에서 데이터 가져오기&#40;Excel용 MDS 추가 기능&#41;](../master-data-services/microsoft-excel-add-in/overview-importing-data-from-excel-mds-add-in-for-excel.md)를 참조하세요.  
   
  데이터를 추가 및 수정할 때 다음을 수행할 수 있습니다.  
   
@@ -89,11 +90,11 @@ ms.locfileid: "68097378"
   
  [!INCLUDE[ssMDSshort](../includes/ssmdsshort-md.md)] 는 다음 유형의 준비 저장 프로시저를 포함합니다.  
   
--   stg.udp_\<name>_Leaf  
+-   stg.udp_ \<name> _Leaf  
   
--   stg.udp_\<name>_Consolidated  
+-   stg.udp_ \<name> _Consolidated  
   
--   stg.udp_\<name>_Relationship  
+-   stg.udp_ \<name> _Relationship  
   
  모델의 각 엔터티에는 리프 멤버, 통합 멤버 및 관계 준비 표에 해당하는 3개의 저장 프로시저가 있습니다.  다음 이미지는 통화, 고객 및 제품 엔터티에 대한 준비 저장 프로시저를 보여 줍니다.  
   

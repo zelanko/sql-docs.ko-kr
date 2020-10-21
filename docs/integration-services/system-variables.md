@@ -17,12 +17,12 @@ helpviewer_keywords:
 ms.assetid: efecd0d4-1489-4eba-a8fe-275d647058b8
 author: chugugrace
 ms.author: chugu
-ms.openlocfilehash: 913345034da936d6ed7a0c9ea3678c427b4f34ef
-ms.sourcegitcommit: e700497f962e4c2274df16d9e651059b42ff1a10
+ms.openlocfilehash: cf44509a479e66175d89c38c42595e418dc6c750
+ms.sourcegitcommit: cfa04a73b26312bf18d8f6296891679166e2754d
 ms.translationtype: HT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 08/17/2020
-ms.locfileid: "88495326"
+ms.lasthandoff: 10/19/2020
+ms.locfileid: "92192409"
 ---
 # <a name="system-variables"></a>시스템 변수
 
@@ -109,6 +109,5 @@ ms.locfileid: "88495326"
  이 규칙은 사용자 정의 변수에도 적용됩니다. 그러나 시스템 변수 데이터 형식의 경우 변경할 수 없으므로 데이터 형식에 맞게 적절하게 사용해야 하는 반면 사용자 정의 데이터 형식은 보다 융통성이 높습니다. 매개 변수 바인딩에 사용되는 사용자 정의 변수는 일반적으로 매핑되는 매개 변수의 데이터 형식과 호환 가능한 데이터 형식으로 정의됩니다.  
   
 ## <a name="related-tasks"></a>관련 작업  
- [쿼리 매개 변수를 SQL 실행 태스크의 변수에 매핑](https://msdn.microsoft.com/library/6a164349-dfcf-4995-80bc-d4e7aee52a83)  
-  
+ [쿼리 매개 변수를 SQL 실행 태스크의 변수에 매핑](./control-flow/execute-sql-task.md)  
   

@@ -15,12 +15,12 @@ helpviewer_keywords:
 ms.assetid: e1340b6f-ef75-4b14-af6f-823586eff0ed
 author: chugugrace
 ms.author: chugu
-ms.openlocfilehash: 2d9422574f80febefc6458b389f04b4b1625b22c
-ms.sourcegitcommit: e700497f962e4c2274df16d9e651059b42ff1a10
+ms.openlocfilehash: 5189cda62a168db3cedff0d57666df7e15a0d65c
+ms.sourcegitcommit: cfa04a73b26312bf18d8f6296891679166e2754d
 ms.translationtype: HT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 08/17/2020
-ms.locfileid: "88425655"
+ms.lasthandoff: 10/19/2020
+ms.locfileid: "92193176"
 ---
 # <a name="transform-data-with-transformations"></a>변환을 사용하여 데이터 변환
 
@@ -49,7 +49,7 @@ ms.locfileid: "88425655"
   
  사용자 지정 변환을 작성할 수도 있습니다. 자세한 내용은 [사용자 지정 데이터 흐름 구성 요소 개발](../../../integration-services/extending-packages-custom-objects/data-flow/developing-a-custom-data-flow-component.md) 및 [특정 유형의 데이터 흐름 구성 요소 개발](../../../integration-services/extending-packages-custom-objects-data-flow-types/developing-specific-types-of-data-flow-components.md)을 참조하세요.  
   
- 데이터 흐름 디자이너에 변환을 추가한 다음 변환을 구성하기 전에 다른 변환 또는 데이터 흐름의 원본을 이 변환의 입력에 연결하여 데이터 흐름에 변환을 연결합니다. 두 데이터 흐름 구성 요소 간 연결선을 경로라고 합니다. 구성 요소 연결 및 경로 사용 방법은 [경로에 구성 요소 연결](https://msdn.microsoft.com/library/05633e4c-1370-4b05-802b-f36b07dd71c8)을 참조하세요.  
+ 데이터 흐름 디자이너에 변환을 추가한 다음 변환을 구성하기 전에 다른 변환 또는 데이터 흐름의 원본을 이 변환의 입력에 연결하여 데이터 흐름에 변환을 연결합니다. 두 데이터 흐름 구성 요소 간 연결선을 경로라고 합니다. 구성 요소 연결 및 경로 사용 방법은 [경로에 구성 요소 연결](../connect-components-in-a-data-flow.md)을 참조하세요.  
   
 ### <a name="to-add-a-transformation-to-a-data-flow"></a>데이터 흐름에 변환을 추가하려면  
   
@@ -66,8 +66,7 @@ ms.locfileid: "88425655"
 ## <a name="see-also"></a>관련 항목  
  [데이터 흐름 태스크](../../../integration-services/control-flow/data-flow-task.md)   
  [데이터 흐름](../../../integration-services/data-flow/data-flow.md)   
- [경로에 구성 요소 연결](https://msdn.microsoft.com/library/05633e4c-1370-4b05-802b-f36b07dd71c8)   
+ [경로에 구성 요소 연결](../connect-components-in-a-data-flow.md)   
  [데이터 오류 처리](../../../integration-services/data-flow/error-handling-in-data.md)   
  [데이터 흐름](../../../integration-services/data-flow/data-flow.md)  
-  
   

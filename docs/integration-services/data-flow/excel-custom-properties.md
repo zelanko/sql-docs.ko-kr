@@ -11,12 +11,12 @@ ms.topic: conceptual
 ms.assetid: bdcc72b8-8950-47bd-88bf-5db6d48cc6bf
 author: chugugrace
 ms.author: chugu
-ms.openlocfilehash: 18143ae1765ce4d2b306f43fd9756666629309df
-ms.sourcegitcommit: e700497f962e4c2274df16d9e651059b42ff1a10
+ms.openlocfilehash: 0ad1aa213b09afc77d507b874094122611f96dbf
+ms.sourcegitcommit: cfa04a73b26312bf18d8f6296891679166e2754d
 ms.translationtype: HT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 08/17/2020
-ms.locfileid: "88477895"
+ms.lasthandoff: 10/19/2020
+ms.locfileid: "92194835"
 ---
 # <a name="excel-custom-properties"></a>Excel 사용자 지정 속성
 
@@ -66,7 +66,6 @@ ms.locfileid: "88477895"
  자세한 내용은 [Excel Destination](../../integration-services/data-flow/excel-destination.md)을 참조하세요.  
   
 ## <a name="see-also"></a>관련 항목  
- [Common Properties](https://msdn.microsoft.com/library/51973502-5cc6-4125-9fce-e60fa1b7b796)  
+ [Common Properties](./set-the-properties-of-a-data-flow-component.md)  
  [SSIS(SQL Server Integration Services)를 통해 Excel에서 데이터 로드](../load-data-to-from-excel-with-ssis.md)
-  
   

@@ -9,12 +9,12 @@ ms.topic: conceptual
 ms.prod: sql
 ms.technology: linux
 monikerRange: '>= sql-server-linux-ver15  || >= sql-server-ver15 || = sqlallproducts-allversions'
-ms.openlocfilehash: 146ab5788e29045a55e6251be01e061f52d7bbb8
-ms.sourcegitcommit: 3ea082c778f6771b17d90fb597680ed334d3e0ec
+ms.openlocfilehash: c6f791cf96520f46c37bb061f30ac7df962695e5
+ms.sourcegitcommit: 22102f25db5ccca39aebf96bc861c92f2367c77a
 ms.translationtype: HT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 08/11/2020
-ms.locfileid: "88088935"
+ms.lasthandoff: 10/16/2020
+ms.locfileid: "92115692"
 ---
 # <a name="configure-persistent-memory-pmem-for-sql-server-on-linux"></a>SQL Server on Linux의 PMEM(영구적 메모리) 구성
 
@@ -87,7 +87,7 @@ mount -o dax,noatime /dev/pmem0 /mnt/dax
 
 디바이스가 `ndctl`을 통해 구성되고 생성 및 탑재되고 나면, 디바이스에 데이터베이스 파일을 배치하거나 새 데이터베이스를 만들 수 있습니다.
 
-PMEM 디바이스는 O_DIRECT(직접 I/O)로부터 안전하므로 강제 플러시 메커니즘을 해제하려면 추적 플래그 3979를 사용하도록 설정하는 것이 좋습니다. 자세한 내용은 [FUA 지원](https://support.microsoft.com/help/4131496/enable-forced-flush-mechanism-in-sql-server-2017-on-linux)을 참조하세요. 강제 단위 액세스 내부 요소는 [FUA 내부 요소](https://blogs.msdn.microsoft.com/bobsql/2018/12/18/sql-server-on-linux-forced-unit-access-fua-internals/)에서 설명합니다.
+PMEM 디바이스는 O_DIRECT(직접 I/O)로부터 안전하므로 강제 플러시 메커니즘을 해제하려면 추적 플래그 3979를 사용하도록 설정하는 것이 좋습니다. 자세한 내용은 [FUA 지원](https://support.microsoft.com/help/4131496/enable-forced-flush-mechanism-in-sql-server-2017-on-linux)을 참조하세요. 강제 단위 액세스 내부 요소는 [FUA 내부 요소](/archive/blogs/bobsql/sql-server-on-linux-forced-unit-access-fua-internals)에서 설명합니다.
 
 ## <a name="next-steps"></a>다음 단계
 

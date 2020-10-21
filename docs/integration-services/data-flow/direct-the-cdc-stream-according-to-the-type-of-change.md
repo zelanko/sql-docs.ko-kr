@@ -11,12 +11,12 @@ ms.topic: conceptual
 ms.assetid: 3afa531e-f425-40a4-a1bf-1c3e1727287e
 author: chugugrace
 ms.author: chugu
-ms.openlocfilehash: fc9b1025bc4b3d4399203d12253a1aa9caa38883
-ms.sourcegitcommit: e700497f962e4c2274df16d9e651059b42ff1a10
+ms.openlocfilehash: d4d6f406aa50176e60cabd72e348f1daeb0c56d3
+ms.sourcegitcommit: cfa04a73b26312bf18d8f6296891679166e2754d
 ms.translationtype: HT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 08/17/2020
-ms.locfileid: "88477889"
+ms.lasthandoff: 10/19/2020
+ms.locfileid: "92197138"
 ---
 # <a name="direct-the-cdc-stream-according-to-the-type-of-change"></a>변경 유형에 따라 CDC 스트림 전송
 
@@ -25,7 +25,7 @@ ms.locfileid: "88477889"
 
   CDC 분할자 변환을 추가 및 구성하려면 패키지에 적어도 하나 이상의 데이터 흐름 태스크와 하나의 CDC 원본이 들어 있어야 합니다.  
   
- 패키지에 추가되는 CDC 원본에는 NetCDC 처리 모드가 선택되어 있어야 합니다. 처리 모드 선택에 대한 자세한 내용은 [CDC 원본 편집기&#40;연결 관리자 페이지&#41;](../../integration-services/data-flow/cdc-source-editor-connection-manager-page.md)를 참조하세요.  
+ 패키지에 추가되는 CDC 원본에는 NetCDC 처리 모드가 선택되어 있어야 합니다. 처리 모드 선택에 대한 자세한 내용은 [CDC 원본 편집기&#40;연결 관리자 페이지&#41;](./cdc-source.md)를 참조하세요.  
   
 ### <a name="to-direct-the-cdc-stream-according-to-the-type-of-change"></a>변경 유형에 따라 CDC 스트림을 전송하려면  
   
@@ -59,5 +59,4 @@ ms.locfileid: "88477889"
   
 ## <a name="see-also"></a>참고 항목  
  [CDC 분할자](../../integration-services/data-flow/cdc-splitter.md)  
-  
   

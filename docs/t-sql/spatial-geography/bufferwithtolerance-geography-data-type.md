@@ -18,12 +18,12 @@ helpviewer_keywords:
 ms.assetid: f1783e6b-0f17-464f-b1c7-1c3f7d8aa042
 author: MladjoA
 ms.author: mlandzic
-ms.openlocfilehash: 50c8e19dd3ed6782a7a8fe8532ab0edb61cceb34
-ms.sourcegitcommit: e700497f962e4c2274df16d9e651059b42ff1a10
+ms.openlocfilehash: e278c50b6a467660c827e3e59181945fdb9985e7
+ms.sourcegitcommit: 22dacedeb6e8721e7cdb6279a946d4002cfb5da3
 ms.translationtype: HT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 08/17/2020
-ms.locfileid: "88360409"
+ms.lasthandoff: 10/14/2020
+ms.locfileid: "92035806"
 ---
 # <a name="bufferwithtolerance-geography-data-type"></a>BufferWithTolerance(geography 데이터 형식)
 [!INCLUDE [SQL Server SQL Database](../../includes/applies-to-version/sql-asdb.md)]
@@ -73,7 +73,7 @@ CLR 반환 형식: **SqlGeography**
   
 0.999 \* _π_ * minorAxis \* minorAxis / majorAxis (~0.999 \* 지구 둘레의 1/2)  
   
-이론 버퍼와 계산된 버퍼 간의 오류는 최대입니다(허용 오차, 익스텐트 \* 1.E-7). 여기서 허용 오차는 _tolerance_ 매개 변수의 값입니다. 익스텐트에 대한 자세한 내용은 [geometry 데이터 형식 메서드 참조](https://msdn.microsoft.com/library/028e6137-7128-4c74-90a7-f7bdd2d79f5e)를 확인하세요.  
+이론 버퍼와 계산된 버퍼 간의 오류는 최대입니다(허용 오차, 익스텐트 \* 1.E-7). 여기서 허용 오차는 _tolerance_ 매개 변수의 값입니다. 익스텐트에 대한 자세한 내용은 [geometry 데이터 형식 메서드 참조](./stequals-geography-data-type.md)를 확인하세요.  
   
 이 메서드는 정확하지 않습니다.  
   
@@ -89,5 +89,4 @@ SELECT @g.BufferWithTolerance(1, .5, 0).ToString();
 ## <a name="see-also"></a>관련 항목  
 [STBuffer &#40;geography 데이터 형식&#41;](../../t-sql/spatial-geography/stbuffer-geography-data-type.md)   
 [지리 인스턴스의 확장 메서드](../../t-sql/spatial-geography/extended-methods-on-geography-instances.md)  
-  
   

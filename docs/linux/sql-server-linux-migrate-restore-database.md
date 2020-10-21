@@ -9,12 +9,12 @@ ms.topic: conceptual
 ms.prod: sql
 ms.technology: linux
 ms.assetid: 9ac64d1a-9fe5-446e-93c3-d17b8f55a28f
-ms.openlocfilehash: e28b690a6231a77b09664b1c8680522f426e5e92
-ms.sourcegitcommit: 610e3ebe21ac6575850a29641a32f275e71557e3
+ms.openlocfilehash: 125e1b8fdadc04a7d3ba08807a72ef594b42388e
+ms.sourcegitcommit: 22102f25db5ccca39aebf96bc861c92f2367c77a
 ms.translationtype: HT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 10/07/2020
-ms.locfileid: "91785062"
+ms.lasthandoff: 10/16/2020
+ms.locfileid: "92115856"
 ---
 # <a name="migrate-a-sql-server-database-from-windows-to-linux-using-backup-and-restore"></a>백업 및 복원을 사용하여 Windows에서 Linux로 SQL Server 데이터베이스 마이그레이션
 
@@ -37,7 +37,7 @@ SQL Server Always On 가용성 그룹을 만들어 Windows에서 Linux로 SQL Se
 
 * 다음 조건을 충족하는 Windows 머신:
   * [SQL Server](https://www.microsoft.com/sql-server/sql-server-downloads)가 설치되어 있음
-  * [SQL Server Management Studio](https://docs.microsoft.com/sql/ssms/download-sql-server-management-studio-ssms)
+  * [SQL Server Management Studio](../ssms/download-sql-server-management-studio-ssms.md)
   * 마이그레이션할 대상 데이터베이스
 
 * 다음 조건을 충족하는 Linux 머신:
@@ -78,7 +78,7 @@ Windows에서 데이터베이스 백업 파일을 만드는 방법에는 여러 
 
 1. **scp**(보안 복사) 및 **ssh**(원격 로그인) 명령을 지원하는 Windows 머신에 Bash 셸을 설치합니다. 다음 두 가지 예가 있습니다.
 
-   * [Linux용 Windows 하위 시스템](https://msdn.microsoft.com/commandline/wsl/about)(Windows 10)
+   * [Linux용 Windows 하위 시스템](/windows/wsl/about)(Windows 10)
    * Git Bash 셸([)https://git-scm.com/downloads](https://git-scm.com/downloads)
 
 1. Windows에서 Bash 세션을 엽니다.

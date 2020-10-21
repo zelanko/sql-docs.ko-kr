@@ -19,12 +19,12 @@ ms.assetid: 0f23aa84-475d-40df-bed3-c923f8c1b520
 author: MashaMSFT
 ms.author: mathoma
 ms.custom: seo-lt-2019
-ms.openlocfilehash: 79e33cb5b5bea6c3eb264052dade0a3906a44efb
-ms.sourcegitcommit: f3321ed29d6d8725ba6378d207277a57cb5fe8c2
+ms.openlocfilehash: 9eb0bd04dc50aac286b72983ee4b3d196f04c60c
+ms.sourcegitcommit: 2b6760408de3b99193edeccce4b92a2f9ed5bcc6
 ms.translationtype: HT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 07/06/2020
-ms.locfileid: "86006548"
+ms.lasthandoff: 10/19/2020
+ms.locfileid: "92175913"
 ---
 # <a name="troubleshoot-a-full-transaction-log-sql-server-error-9002"></a>꽉 찬 트랜잭션 로그 문제 해결(SQL Server 오류 9002)
  [!INCLUDE [SQL Server](../../includes/applies-to-version/sqlserver.md)]
@@ -37,7 +37,7 @@ ms.locfileid: "86006548"
  
  지정된 경우에서 로그 잘림이 발생하지 않는 이유를 확인하려면 **sys.database** 카탈로그 뷰의 **log_reuse_wait** 및 **log_reuse_wait_desc** 열을 사용합니다. 자세한 내용은 [sys.databases&#40;Transact-SQL&#41;](../../relational-databases/system-catalog-views/sys-databases-transact-sql.md)를 참조하세요. 로그 잘림을 지연시킬 수 있는 요소에 대한 자세한 내용은 [트랜잭션 로그&#40;SQL Server&#41;](../../relational-databases/logs/the-transaction-log-sql-server.md)를 참조하세요.  
   
-> **중요!!**  
+> [!IMPORTANT]  
 >  데이터베이스 복구 중에 9002 오류가 발생한 경우에는 문제를 해결한 다음 [ALTER DATABASE *database_name* SET ONLINE](../../t-sql/statements/alter-database-transact-sql-set-options.md)을 사용하여 데이터베이스를 복구합니다.  
   
  트랜잭션 로그가 꽉 찬 경우의 대처 방법으로 다음 방법을 사용할 수도 있습니다.  
@@ -61,8 +61,8 @@ ms.locfileid: "86006548"
   
  **트랜잭션 로그 백업을 만들려면**  
   
-> **중요**  
->  데이터베이스가 손상된 경우 [비상 로그 백업&#40;SQL Server&#41;](../../relational-databases/backup-restore/tail-log-backups-sql-server.md)을 참조하세요.  
+> [!IMPORTANT]  
+> 데이터베이스가 손상된 경우 [비상 로그 백업&#40;SQL Server&#41;](../../relational-databases/backup-restore/tail-log-backups-sql-server.md)을 참조하세요.  
   
 -   [트랜잭션 로그 백업&#40;SQL Server&#41;](../../relational-databases/backup-restore/back-up-a-transaction-log-sql-server.md)  
   
@@ -74,7 +74,8 @@ ms.locfileid: "86006548"
 ### <a name="move-the-log-file-to-a-different-disk"></a>로그 파일을 다른 디스크로 이동  
  현재 로그 파일이 들어 있는 드라이브에서 충분한 디스크 공간을 확보할 수 없으면 공간이 충분한 다른 드라이브로 파일을 이동하십시오.  
   
-> **중요!!** 로그 파일은 압축 파일 시스템에 저장할 수 없습니다.  
+> [!IMPORTANT]
+> 로그 파일은 압축 파일 시스템에 저장할 수 없습니다.  
   
  **로그 파일 이동**  
   
@@ -91,7 +92,8 @@ ms.locfileid: "86006548"
   
 -   ALTER DATABASE 문으로 FILEGROWTH 옵션에 대해 0이 아닌 증분을 설정하여 자동 증가를 설정합니다.  
   
-> **참고** 두 경우 모두 현재 크기 제한에 도달하면 MAXSIZE 값을 늘리세요.  
+> [!NOTE]
+> 두 경우 모두 현재 크기 제한에 도달하면 MAXSIZE 값을 늘리십시오.  
   
 ### <a name="add-a-log-file-on-a-different-disk"></a>다른 디스크에 로그 파일 추가  
  ALTER DATABASE <database_name> ADD LOG FILE을 사용하여 공간이 충분한 다른 디스크의 데이터베이스에 새 로그 파일을 추가합니다.  

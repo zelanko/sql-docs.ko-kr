@@ -22,12 +22,12 @@ helpviewer_keywords:
 ms.assetid: 8aeadf51-286c-4748-bef2-d25858b250bf
 author: rothja
 ms.author: jroth
-ms.openlocfilehash: 4ad75032f362b3cbdef46eb247d1fd524275055f
-ms.sourcegitcommit: c8e1553ff3fdf295e8dc6ce30d1c454d6fde8088
+ms.openlocfilehash: 0434642595fb334c138e1c3d1764384760a38407
+ms.sourcegitcommit: cfa04a73b26312bf18d8f6296891679166e2754d
 ms.translationtype: HT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 07/22/2020
-ms.locfileid: "86919609"
+ms.lasthandoff: 10/19/2020
+ms.locfileid: "92193373"
 ---
 # <a name="kill-query-notification-subscription-transact-sql"></a>KILL QUERY NOTIFICATION SUBSCRIPTION(Transact-SQL)
 [!INCLUDE [SQL Server](../../includes/applies-to-version/sqlserver.md)]
@@ -39,7 +39,6 @@ ms.locfileid: "86919609"
 ## <a name="syntax"></a>구문  
   
 ```syntaxsql
-  
 KILL QUERY NOTIFICATION SUBSCRIPTION   
    { ALL | subscription_id }  
 ```  
@@ -68,14 +67,14 @@ KILL QUERY NOTIFICATION SUBSCRIPTION
 ### <a name="a-removing-all-query-notification-subscriptions-in-the-instance"></a>A. 인스턴스에서 모든 쿼리 알림 구독 제거  
  다음 예에서는 인스턴스에서 모든 쿼리 알림 구독을 제거합니다.  
   
-```  
+```sql  
 KILL QUERY NOTIFICATION SUBSCRIPTION ALL ;  
 ```  
   
 ### <a name="b-removing-a-single-query-notification-subscription"></a>B. 단일 쿼리 알림 구독 제거  
  다음 예에서는 ID가 `73`인 쿼리 알림 구독을 제거합니다.  
   
-```  
+```sql  
 KILL QUERY NOTIFICATION SUBSCRIPTION 73 ;  
 ```  
   

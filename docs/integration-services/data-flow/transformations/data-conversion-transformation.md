@@ -18,12 +18,12 @@ helpviewer_keywords:
 ms.assetid: fd515bbc-6f49-4d0c-ae7f-6ea3c3f24a1c
 author: chugugrace
 ms.author: chugu
-ms.openlocfilehash: cdd281be64879d56ec8c81eacc52ea3631fe0867
-ms.sourcegitcommit: e700497f962e4c2274df16d9e651059b42ff1a10
+ms.openlocfilehash: 642e6ad5d7d0b8ad1103571b5868ba16a509876d
+ms.sourcegitcommit: cfa04a73b26312bf18d8f6296891679166e2754d
 ms.translationtype: HT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 08/17/2020
-ms.locfileid: "88477715"
+ms.lasthandoff: 10/19/2020
+ms.locfileid: "92192669"
 ---
 # <a name="data-conversion-transformation"></a>데이터 변환
 
@@ -51,7 +51,7 @@ ms.locfileid: "88477715"
  이 변환에는 하나의 입력, 하나의 출력 및 하나의 오류 출력이 있습니다.  
   
 ## <a name="related-tasks"></a>관련 작업  
- [!INCLUDE[ssIS](../../../includes/ssis-md.md)] 디자이너를 사용하거나 프로그래밍 방식으로 속성을 설정할 수 있습니다. SSIS 디자이너에서 데이터 변환을 사용하는 방법은 [데이터 변환을 사용하여 데이터를 다른 데이터 형식으로 변환](../../../integration-services/data-flow/transformations/convert-data-type-by-using-data-conversion-transformation.md)을 참조하세요. 이 변환의 속성을 프로그래밍 방식으로 설정하는 방법은 [공용 속성](https://msdn.microsoft.com/library/51973502-5cc6-4125-9fce-e60fa1b7b796) 및 [변환 사용자 지정 속성](../../../integration-services/data-flow/transformations/transformation-custom-properties.md)을 참조하세요.  
+ [!INCLUDE[ssIS](../../../includes/ssis-md.md)] 디자이너를 사용하거나 프로그래밍 방식으로 속성을 설정할 수 있습니다. SSIS 디자이너에서 데이터 변환을 사용하는 방법은 [데이터 변환을 사용하여 데이터를 다른 데이터 형식으로 변환](../../../integration-services/data-flow/transformations/convert-data-type-by-using-data-conversion-transformation.md)을 참조하세요. 이 변환의 속성을 프로그래밍 방식으로 설정하는 방법은 [공용 속성](../set-the-properties-of-a-data-flow-component.md) 및 [변환 사용자 지정 속성](../../../integration-services/data-flow/transformations/transformation-custom-properties.md)을 참조하세요.  
   
 ## <a name="related-content"></a>관련 내용  
  blogs.msdn.com의 블로그 항목 - [SSIS 2008의 데이터 형식 변환 기술 간 성능 비교](https://techcommunity.microsoft.com/t5/datacat/performance-comparison-between-data-type-conversion-techniques/ba-p/305035)  
@@ -88,11 +88,10 @@ ms.locfileid: "88477715"
  DT_STR 유형의 열에 적절한 코드 페이지를 선택합니다.  
   
  **오류 출력 구성**  
- [오류 출력 구성](https://msdn.microsoft.com/library/5f8da390-fab5-44f8-b268-d8fa313ce4b9) 대화 상자를 사용하여 하위 수준 오류를 처리하는 방법을 지정합니다.  
+ [오류 출력 구성](../error-handling-in-data.md) 대화 상자를 사용하여 하위 수준 오류를 처리하는 방법을 지정합니다.  
   
 ## <a name="see-also"></a>참고 항목  
- [빠른 구문 분석](https://msdn.microsoft.com/library/6688707d-3c5b-404e-aa2f-e13092ac8d95)   
+ [빠른 구문 분석](../parsing-data.md)   
  [데이터 흐름](../../../integration-services/data-flow/data-flow.md)   
  [Integration Services 변환](../../../integration-services/data-flow/transformations/integration-services-transformations.md)  
-  
   

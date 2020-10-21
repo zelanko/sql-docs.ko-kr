@@ -53,12 +53,12 @@ ms.assetid: a0df1ac2-6699-4ac0-8f79-f362f23496f1
 author: julieMSFT
 ms.author: jrasnick
 monikerRange: '>=aps-pdw-2016||=azuresqldb-current||=azure-sqldw-latest||>=sql-server-2016||=sqlallproducts-allversions||>=sql-server-linux-2017||=azuresqldb-mi-current'
-ms.openlocfilehash: e6cc9b1df996d063a79f19982185950e52c4b059
-ms.sourcegitcommit: cc23d8646041336d119b74bf239a6ac305ff3d31
+ms.openlocfilehash: d54867712e48662ebb35d4d278710d06f06732a3
+ms.sourcegitcommit: cfa04a73b26312bf18d8f6296891679166e2754d
 ms.translationtype: HT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 09/23/2020
-ms.locfileid: "91116620"
+ms.lasthandoff: 10/19/2020
+ms.locfileid: "92192263"
 ---
 # <a name="odbc-scalar-functions-transact-sql"></a>ODBC 스칼라 함수(Transact-SQL)
 [!INCLUDE [sql-asdb-asdbmi-asa-pdw](../../includes/applies-to-version/sql-asdb-asdbmi-asa-pdw.md)]
@@ -66,7 +66,9 @@ ms.locfileid: "91116620"
   [ 문에서 ](https://go.microsoft.com/fwlink/?LinkID=88579)ODBC 스칼라 함수[!INCLUDE[tsql](../../includes/tsql-md.md)]를 사용할 수 있습니다. 이러한 문은 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]에서 해석되고, 저장 프로시저 및 사용자 정의 함수에 사용될 수 있습니다. 여기에는 문자열, 숫자, 시간, 날짜, 간격, 시스템 함수가 포함됩니다.  
   
 ## <a name="usage"></a>사용  
- `SELECT {fn <function_name> [ (<argument>,....n) ] }`  
+ ```syntaxsql
+ SELECT {fn <function_name> [ (<argument>,....n) ] }
+ ```
   
 ## <a name="functions"></a>Functions  
  다음 표에는 [!INCLUDE[tsql](../../includes/tsql-md.md)]에서 중복되지 않은 ODBC 스칼라 함수가 나와 있습니다.  
@@ -108,7 +110,8 @@ ms.locfileid: "91116620"
 ### <a name="a-using-an-odbc-function-in-a-stored-procedure"></a>A. 저장 프로시저에서 ODBC 함수 사용  
  다음 예에서는 저장 프로시저에 ODBC 함수를 사용합니다.  
   
-```sql  
+
+```sql 
 CREATE PROCEDURE dbo.ODBCprocedure  
 (  
     @string_exp NVARCHAR(4000)  
@@ -135,7 +138,6 @@ END ;
   
 SELECT dbo.ODBCudf('Returns the length.');  
 --Returns 38  
-  
 ```  
   
 ### <a name="c-using-an-odbc-functions-in-select-statements"></a>C. SELECT 문에서 ODBC 함수 사용  

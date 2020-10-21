@@ -15,12 +15,12 @@ helpviewer_keywords:
 ms.assetid: cedf5cad-2fac-42d0-ad91-9461e117d330
 author: chugugrace
 ms.author: chugu
-ms.openlocfilehash: 0d212a870d0b66108cb1b905249fc8ba2a611a91
-ms.sourcegitcommit: e700497f962e4c2274df16d9e651059b42ff1a10
+ms.openlocfilehash: 26f08ee42a1fae6ac5a5d3a50d8b32282c2a2fde
+ms.sourcegitcommit: cfa04a73b26312bf18d8f6296891679166e2754d
 ms.translationtype: HT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 08/17/2020
-ms.locfileid: "88477763"
+ms.lasthandoff: 10/19/2020
+ms.locfileid: "92192699"
 ---
 # <a name="create-and-deploy-a-cache-for-the-lookup-transformation"></a>조회 변환에 대한 캐시 만들기 및 배포
 
@@ -31,7 +31,7 @@ ms.locfileid: "88477763"
   
  조회 변환은 연결된 데이터 원본의 입력 열에 있는 데이터를 참조 데이터 세트의 열과 조인하여 조회합니다.  
   
- 캐시 연결 관리자와 캐시 변환을 사용하여 캐시 파일을 만듭니다. 자세한 내용은 [Cache Connection Manager](../../../integration-services/data-flow/transformations/cache-connection-manager.md) 및 [Cache Transform](../../../integration-services/data-flow/transformations/cache-transform.md)를 참조하세요.  
+ 캐시 연결 관리자와 캐시 변환을 사용하여 캐시 파일을 만듭니다. 자세한 내용은 [Cache Connection Manager](../../connection-manager/cache-connection-manager.md) 및 [Cache Transform](../../../integration-services/data-flow/transformations/cache-transform.md)를 참조하세요.  
   
  조회 변환 및 캐시 파일에 대한 자세한 내용은 [Lookup Transformation](../../../integration-services/data-flow/transformations/lookup-transformation.md)을 참조하십시오.  
   
@@ -65,11 +65,11 @@ ms.locfileid: "88477763"
     > [!NOTE]  
     >  조회 변환은 캐시 연결 관리자를 사용하도록 구성된 경우 참조 데이터 세트의 인덱스 열만 입력 열에 매핑할 수 있습니다. 또한 모든 인덱스 열을 매핑해야 합니다.  
   
-     자세한 내용은 [Cache Connection Manager Editor](../../../integration-services/data-flow/transformations/cache-connection-manager-editor.md)을 참조하세요.  
+     자세한 내용은 [Cache Connection Manager Editor](../../connection-manager/cache-connection-manager.md)을 참조하세요.  
   
 7.  필요한 경우 캐시 변환을 구성합니다.  
   
-     자세한 내용은 [캐시 변환 편집기&#40;연결 관리자 페이지&#41;](../../../integration-services/data-flow/transformations/cache-transformation-editor-connection-manager-page.md) 및 [캐시 변환 편집기&#40;매핑 페이지&#41;](../../../integration-services/data-flow/transformations/cache-transformation-editor-mappings-page.md)를 참조하세요.  
+     자세한 내용은 [캐시 변환 편집기&#40;연결 관리자 페이지&#41;](./cache-transform.md) 및 [캐시 변환 편집기&#40;매핑 페이지&#41;](./cache-transform.md)를 참조하세요.  
   
 8.  패키지를 실행합니다.  
   
@@ -77,7 +77,7 @@ ms.locfileid: "88477763"
   
 1.  [!INCLUDE[ssBIDevStudioFull](../../../includes/ssbidevstudiofull-md.md)]에서 원하는 패키지가 들어 있는 [!INCLUDE[ssISnoversion](../../../includes/ssisnoversion-md.md)] 프로젝트를 열고 패키지를 엽니다.  
   
-2.  필요에 따라 패키지 구성을 만듭니다. 자세한 내용은 [패키지 구성 만들기](../../../integration-services/packages/create-package-configurations.md)를 참조하세요.  
+2.  필요에 따라 패키지 구성을 만듭니다. 자세한 내용은 [패키지 구성 만들기](../../packages/legacy-package-deployment-ssis.md)를 참조하세요.  
   
 3.  다음을 수행하여 프로젝트에 캐시 파일을 추가합니다.  
   
@@ -89,13 +89,12 @@ ms.locfileid: "88477763"
   
      솔루션 탐색기의 **기타** 폴더에 파일이 표시됩니다.  
   
-4.  배치 유틸리티를 만들도록 프로젝트를 구성한 다음 프로젝트를 빌드합니다. 자세한 내용은 [Create a Deployment Utility](../../../integration-services/packages/create-a-deployment-utility.md)를 참조하세요.  
+4.  배치 유틸리티를 만들도록 프로젝트를 구성한 다음 프로젝트를 빌드합니다. 자세한 내용은 [Create a Deployment Utility](../../packages/legacy-package-deployment-ssis.md)를 참조하세요.  
   
      매니페스트 파일인 \<*project name*>.SSISDeploymentManifest.xml이 만들어집니다. 이 파일은 프로젝트, 패키지 및 패키지 구성에 기타 파일을 나열합니다.  
   
-5.  파일 시스템에 패키지를 배포합니다. 자세한 내용은 [Deploy Packages by Using the Deployment Utility](../../../integration-services/packages/deploy-packages-by-using-the-deployment-utility.md)를 참조하세요.  
+5.  파일 시스템에 패키지를 배포합니다. 자세한 내용은 [Deploy Packages by Using the Deployment Utility](../../packages/legacy-package-deployment-ssis.md)를 참조하세요.  
   
 ## <a name="see-also"></a>참고 항목  
- [배포 유틸리티 만들기](../../../integration-services/packages/create-a-deployment-utility.md)  
-  
+ [배포 유틸리티 만들기](../../packages/legacy-package-deployment-ssis.md)  
   

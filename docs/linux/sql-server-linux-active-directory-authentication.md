@@ -12,12 +12,12 @@ ms.custom: seodec18
 ms.technology: linux
 helpviewer_keywords:
 - Linux, AAD authentication
-ms.openlocfilehash: 7c93711eae4a6a2eea397940811089f366e47829
-ms.sourcegitcommit: f7ac1976d4bfa224332edd9ef2f4377a4d55a2c9
+ms.openlocfilehash: 003001752ee656483d7b4a1820f191aafc044f25
+ms.sourcegitcommit: 22102f25db5ccca39aebf96bc861c92f2367c77a
 ms.translationtype: HT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 07/02/2020
-ms.locfileid: "85896960"
+ms.lasthandoff: 10/16/2020
+ms.locfileid: "92115930"
 ---
 # <a name="tutorial-use-active-directory-authentication-with-sql-server-on-linux"></a>자습서: SQL Server on Linux와 Active Directory 인증 사용
 
@@ -53,9 +53,9 @@ SQL Server Linux 호스트를 Active Directory 도메인 컨트롤러에 연결�
 ## <a name="create-ad-user-or-msa-for-ssnoversion-and-set-spn"></a><a id="createuser"></a>[!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)]의 AD 사용자(또는 MSA) 만들기 및 SPN 설정
 
 > [!NOTE]
-> 다음 단계에서는 [정규화된 도메인 이름](https://en.wikipedia.org/wiki/Fully_qualified_domain_name)을 사용합니다. **Azure**에서 계속하기 전에 **[AD 사용자를 만들어야](https://docs.microsoft.com/azure/virtual-machines/linux/portal-create-fqdn)** 합니다.
+> 다음 단계에서는 [정규화된 도메인 이름](https://en.wikipedia.org/wiki/Fully_qualified_domain_name)을 사용합니다. **Azure**에서 계속하기 전에 **[AD 사용자를 만들어야](/azure/virtual-machines/linux/portal-create-fqdn)** 합니다.
 
-1. 도메인 컨트롤러에서 [New-ADUser](https://technet.microsoft.com/library/ee617253.aspx) PowerShell 명령을 실행하여 만료하지 않는 암호를 사용하여 새 AD 사용자를 만듭니다. 다음 예제에서는 계정의 이름을 `mssql`로 지정하지만 계정 이름은 원하는 대로 지정할 수 있습니다. 계정의 새 암호를 입력하라는 메시지가 표시됩니다.
+1. 도메인 컨트롤러에서 [New-ADUser](/previous-versions/windows/it-pro/windows-server-2008-R2-and-2008/ee617253(v=technet.10)) PowerShell 명령을 실행하여 만료하지 않는 암호를 사용하여 새 AD 사용자를 만듭니다. 다음 예제에서는 계정의 이름을 `mssql`로 지정하지만 계정 이름은 원하는 대로 지정할 수 있습니다. 계정의 새 암호를 입력하라는 메시지가 표시됩니다.
 
    ```PowerShell
    Import-Module ActiveDirectory
@@ -69,8 +69,8 @@ SQL Server Linux 호스트를 Active Directory 도메인 컨트롤러에 연결�
 2. **setspn.exe** 도구를 사용하여 이 계정의 SPN(서비스 사용자 이름)을 설정합니다. SPN은 다음 예제에 지정된 대로 정확하게 형식을 지정해야 합니다. [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)] 호스트에서 `hostname --all-fqdns`를 실행하여 [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)] 호스트 머신의 정규화된 도메인 이름을 찾을 수 있습니다. 다른 포트 번호를 사용하도록 [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)]를 구성한 경우가 아니면 TCP 포트는 1433이어야 합니다.
 
    ```PowerShell
-   setspn -A MSSQLSvc/**<fully qualified domain name of host machine>**:**<tcp port>** mssql
-   setspn -A MSSQLSvc/**<netbios name of the host machine>**:**<tcp port>** mssql
+   setspn -A MSSQLSvc/<fully qualified domain name of host machine>:<tcp port> mssql
+   setspn -A MSSQLSvc/<netbios name of the host machine>:<tcp port> mssql
    ```
 
    > [!NOTE]
@@ -96,11 +96,11 @@ SQL Server on Linux에 AD 인증을 구성하려면 이전 섹션에서 만든 A
    ```bash
    kinit user@CONTOSO.COM
    kvno user@CONTOSO.COM
-   kvno MSSQLSvc/**<fully qualified domain name of host machine>**:**<tcp port>**@CONTOSO.COM
+   kvno MSSQLSvc/<fully qualified domain name of host machine>:<tcp port>@CONTOSO.COM
    ```
 
    > [!NOTE]
-   > SPN은 도메인을 통해 전파되는 데 몇 분 정도 걸릴 수 있습니다(특히 도메인이 클 경우). `kvno: Server not found in Kerberos database while getting credentials for MSSQLSvc/**<fully qualified domain name of host machine>**:**<tcp port>**@CONTOSO.COM` 오류가 표시되면 몇 분 정도 기다린 후 다시 시도하세요.</br></br> 위 명령은 이전 섹션에서 설명한 것처럼 서버가 AD 도메인에 가입된 경우에만 작동합니다.
+   > SPN은 도메인을 통해 전파되는 데 몇 분 정도 걸릴 수 있습니다(특히 도메인이 클 경우). `kvno: Server not found in Kerberos database while getting credentials for MSSQLSvc/<fully qualified domain name of host machine>:<tcp port>@CONTOSO.COM` 오류가 표시되면 몇 분 정도 기다린 후 다시 시도하세요.</br></br> 위 명령은 이전 섹션에서 설명한 것처럼 서버가 AD 도메인에 가입된 경우에만 작동합니다.
 
 1. [**ktpass**](/windows-server/administration/windows-commands/ktpass)를 사용하여 Windows 머신 명령 프롬프트에서 다음 명령을 통해 각 SPN의 keytab 항목을 추가합니다.
 

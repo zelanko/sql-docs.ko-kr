@@ -21,12 +21,12 @@ ms.assetid: 6f2b4278-0dea-4603-bbd3-7cbad602a645
 author: rothja
 ms.author: jroth
 monikerRange: '>=aps-pdw-2016||=azuresqldb-current||=azure-sqldw-latest||>=sql-server-2016||=sqlallproducts-allversions||>=sql-server-linux-2017||=azuresqldb-mi-current'
-ms.openlocfilehash: b32f65b2dacb9f3a1c709df4f0a850fa08fec0ea
-ms.sourcegitcommit: e700497f962e4c2274df16d9e651059b42ff1a10
+ms.openlocfilehash: 06c47fb4561844cb92e40301b24068a35d573ccd
+ms.sourcegitcommit: cfa04a73b26312bf18d8f6296891679166e2754d
 ms.translationtype: HT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 08/17/2020
-ms.locfileid: "88459365"
+ms.lasthandoff: 10/19/2020
+ms.locfileid: "92196607"
 ---
 # <a name="else-ifelse-transact-sql"></a>ELSE(IF...ELSE)(Transact-SQL)
 [!INCLUDE [sql-asdb-asdbmi-asa-pdw](../../includes/applies-to-version/sql-asdb-asdbmi-asa-pdw.md)]
@@ -93,7 +93,7 @@ GO
 ```sql
 USE AdventureWorks2012;  
 GO  
-DECLARE @AvgWeight decimal(8,2), @BikeCount int  
+DECLARE @AvgWeight DECIMAL(8,2), @BikeCount INT  
 IF   
 (SELECT COUNT(*) FROM Production.Product WHERE Name LIKE 'Touring-3000%' ) > 5  
 BEGIN  
@@ -105,8 +105,8 @@ BEGIN
         (SELECT AVG(Weight)   
          FROM Production.Product   
          WHERE Name LIKE 'Touring-3000%');  
-   PRINT 'There are ' + CAST(@BikeCount AS varchar(3)) + ' Touring-3000 bikes.'  
-   PRINT 'The average weight of the top 5 Touring-3000 bikes is ' + CAST(@AvgWeight AS varchar(8)) + '.';  
+   PRINT 'There are ' + CAST(@BikeCount AS VARCHAR(3)) + ' Touring-3000 bikes.'  
+   PRINT 'The average weight of the top 5 Touring-3000 bikes is ' + CAST(@AvgWeight AS VARCHAR(8)) + '.';  
 END  
 ELSE   
 BEGIN  
@@ -114,7 +114,7 @@ SET @AvgWeight =
         (SELECT AVG(Weight)  
          FROM Production.Product   
          WHERE Name LIKE 'Touring-3000%' );  
-   PRINT 'Average weight of the Touring-3000 bikes is ' + CAST(@AvgWeight AS varchar(8)) + '.' ;  
+   PRINT 'Average weight of the Touring-3000 bikes is ' + CAST(@AvgWeight AS VARCHAR(8)) + '.' ;  
 END ;  
 GO  
 ```  
@@ -123,7 +123,7 @@ GO
  다음 예제에서는 IF... ELSE 문이 어떻게 다른 문에 중첩될 수 있는지를 보여 줍니다. `@Number` 변수를 `5`, `50` 및 `500`으로 설정하여 각 문을 테스트해 보십시오.  
   
 ```sql
-DECLARE @Number int;  
+DECLARE @Number INT;  
 SET @Number = 50;  
 IF @Number > 100  
    PRINT 'The number is large.';  
@@ -145,10 +145,10 @@ GO
 ```sql
 -- Uses AdventureWorks  
   
-DECLARE @maxWeight float, @productKey integer  
+DECLARE @maxWeight FLOAT, @productKey INTEGER  
 SET @maxWeight = 100.00  
 SET @productKey = 424  
-IF @maxWeight <= (SELECT Weight from DimProduct WHERE ProductKey=@productKey)   
+IF @maxWeight <= (SELECT Weight FROM DimProduct WHERE ProductKey=@productKey)   
     (SELECT @productKey, EnglishDescription, Weight, 'This product is too heavy to ship and is only available for pickup.' FROM DimProduct WHERE ProductKey=@productKey)  
 ELSE  
     (SELECT @productKey, EnglishDescription, Weight, 'This product is available for shipping or pickup.' FROM DimProduct WHERE ProductKey=@productKey)  

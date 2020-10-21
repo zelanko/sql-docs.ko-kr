@@ -15,12 +15,12 @@ helpviewer_keywords:
 ms.assetid: 48c8ed9a-b10d-490c-9ba7-4b77aa44e3dd
 author: chugugrace
 ms.author: chugu
-ms.openlocfilehash: 5e25927358f87c63c2c7d6dcbfb92b565d02994e
-ms.sourcegitcommit: e700497f962e4c2274df16d9e651059b42ff1a10
+ms.openlocfilehash: 88a927a23696e5de7a1e079cb517078dc318b69c
+ms.sourcegitcommit: cfa04a73b26312bf18d8f6296891679166e2754d
 ms.translationtype: HT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 08/17/2020
-ms.locfileid: "88495116"
+ms.lasthandoff: 10/19/2020
+ms.locfileid: "92193765"
 ---
 # <a name="use-annotations-in-packages"></a>패키지에서 주석 사용
 
@@ -31,7 +31,7 @@ ms.locfileid: "88495116"
   
  Enter 키를 누르면 텍스트가 다음 줄로 줄 바꿈됩니다. 텍스트 줄을 추가하면 주석 상자의 크기가 자동으로 늘어납니다. 패키지 파일의 CDATA 섹션에 있는 패키지 주석은 일반 텍스트로 유지됩니다.  
   
- 패키지 파일의 형식을 변경하는 방법에 대한 자세한 내용은 [SSIS 패키지 형식](https://msdn.microsoft.com/library/cfe0e5dc-5be3-4222-b721-fe83665edd94)을 참조하세요.  
+ 패키지 파일의 형식을 변경하는 방법에 대한 자세한 내용은 [SSIS 패키지 형식](./integration-services-ssis-packages.md)을 참조하세요.  
   
  패키지가 저장될 때 [!INCLUDE[ssIS](../includes/ssis-md.md)] 디자이너는 주석을 해당 패키지에 저장합니다.  
   
@@ -56,4 +56,4 @@ ms.locfileid: "88495116"
   
 7.  그룹에 주석을 추가하려면 주석을 마우스 오른쪽 단추로 클릭하고 **그룹**을 클릭합니다.  
   
-8.  업데이트된 패키지를 저장하려면 **파일** 메뉴에서 **모두 저장**을 클릭합니다.  
+8.  업데이트된 패키지를 저장하려면 **파일** 메뉴에서 **모두 저장**을 클릭합니다.

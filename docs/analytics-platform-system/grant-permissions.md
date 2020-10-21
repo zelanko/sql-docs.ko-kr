@@ -10,11 +10,11 @@ ms.author: murshedz
 ms.reviewer: martinle
 ms.custom: seo-dt-2019
 ms.openlocfilehash: 6bbe78979c393490a52e1051fe158ae138f93dcc
-ms.sourcegitcommit: e042272a38fb646df05152c676e5cbeae3f9cd13
+ms.sourcegitcommit: ae474d21db4f724523e419622ce79f611e956a22
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 04/27/2020
-ms.locfileid: "79289701"
+ms.lasthandoff: 10/20/2020
+ms.locfileid: "92257476"
 ---
 # <a name="grant-t-sql-permissions-for-parallel-data-warehouse"></a>병렬 데이터 웨어하우스에 대 한 T-sql 권한 부여
 병렬 데이터 웨어하우스의 데이터베이스 작업에 대해 T-sql 사용 권한을 부여 합니다.
@@ -63,7 +63,7 @@ GO
   
 **관리 콘솔 사용**  
   
-관리 콘솔을 사용 하려면 로그인에 서버 수준 **VIEW SERVER STATE** 권한이 필요 합니다. 다음 SQL 문은 Kim에서 관리 콘솔을 사용 하 여 SQL Server PDW 어플라이언스 `KimAbercrombie` 를 모니터링할 수 있도록 로그인에 **VIEW SERVER STATE** 권한을 부여 합니다.  
+관리 콘솔을 사용 하려면 로그인에 서버 수준 **VIEW SERVER STATE** 권한이 필요 합니다. 다음 SQL 문은 Kim에서 관리 콘솔을 사용 하 여 SQL Server PDW 어플라이언스를 모니터링할 수 있도록 로그인에 **VIEW SERVER STATE** 권한을 부여 합니다 `KimAbercrombie` .  
   
 ```sql  
 USE master;  
@@ -133,7 +133,7 @@ EXEC sp_addrolemember 'db_datawriter','BI_ETLUser';
 ## <a name="grant-permissions-to-manage-databases"></a>데이터베이스를 관리할 수 있는 권한 부여
 이 섹션에서는 SQL Server PDW 어플라이언스에서 데이터베이스를 관리 하기 위해 데이터베이스 사용자에 게 권한을 부여 하는 방법을 설명 합니다.  
   
-경우에 따라 회사는 데이터베이스에 대 한 관리자를 할당 합니다. 관리자는 데이터베이스에 대 한 다른 로그인 및 데이터베이스의 데이터 및 개체에 대 한 액세스를 제어 합니다. 데이터베이스의 모든 개체, 역할 및 사용자를 관리 하기 위해 사용자에 게 데이터베이스에 대 한 **CONTROL** 권한을 부여 합니다. 다음 문은 사용자 `KimAbercrombie`에 게 **AdventureWorksPDW2012** 데이터베이스에 대 한 **CONTROL** 권한을 부여 합니다.  
+경우에 따라 회사는 데이터베이스에 대 한 관리자를 할당 합니다. 관리자는 데이터베이스에 대 한 다른 로그인 및 데이터베이스의 데이터 및 개체에 대 한 액세스를 제어 합니다. 데이터베이스의 모든 개체, 역할 및 사용자를 관리 하기 위해 사용자에 게 데이터베이스에 대 한 **CONTROL** 권한을 부여 합니다. 다음 문은 사용자에 게 **AdventureWorksPDW2012** 데이터베이스에 대 한 **CONTROL** 권한을 부여 합니다 `KimAbercrombie` .  
   
 ```sql
 USE AdventureWorksPDW2012;  
@@ -221,7 +221,7 @@ For a list of all permissions, see [Permissions: GRANT, DENY, REVOKE &#40;SQL Se
 관리 콘솔 또는 SQL Server PDW 시스템 뷰를 사용 하 여 SQL Server PDW 어플라이언스를 모니터링할 수 있습니다. 로그인 하려면 어플라이언스를 모니터링 하려면 서버 수준 **VIEW SERVER STATE** 권한이 필요 합니다. 로그인에는 관리 콘솔 이나 **KILL** 명령을 사용 하 여 연결을 종료 하는 **ALTER ANY CONNECTION** 권한이 필요 합니다. 관리 콘솔을 사용 하는 데 필요한 사용 권한에 대 한 자세한 내용은 [관리자 콘솔을 사용할 수 있는 권한 부여 &#40;SQL Server PDW&#41;](#grant-permissions-to-use-the-admin-console)를 참조 하세요.  
   
 ### <a name="grant-permission-to-monitor-the-appliance-by-using-system-views"></a><a name="PermsAdminConsole"></a>시스템 뷰를 사용 하 여 어플라이언스를 모니터링할 수 있는 권한 부여  
-다음 SQL 문은 라는 `monitor_login` 로그인을 만들고 `monitor_login` 로그인에 **VIEW SERVER STATE** 권한을 부여 합니다.  
+다음 SQL 문은 라는 로그인을 만들고 `monitor_login` 로그인에 **VIEW SERVER STATE** 권한을 부여 합니다 `monitor_login` .  
   
 ```sql  
 USE master;  
@@ -232,7 +232,7 @@ GO
 ```  
   
 ### <a name="grant-permission-to-monitor-the-appliance-by-using-system-views-and-to-terminate-connections"></a>시스템 뷰를 사용 하 여 어플라이언스를 모니터링 하 고 연결을 종료할 수 있는 권한 부여  
-다음 SQL 문은 `monitor_and_terminate_login` 라는 로그인을 만들고이 로그인에 **VIEW SERVER STATE** `monitor_and_terminate_login` VIEW SERVER STATE 및 **ALTER ANY CONNECTION** 권한을 부여 합니다.  
+다음 SQL 문은 라는 로그인을 만들고이 로그인 `monitor_and_terminate_login` 에 **VIEW SERVER STATE** 및 **ALTER ANY CONNECTION** 권한을 부여 합니다 `monitor_and_terminate_login` .  
   
 ```sql  
 USE master;  
@@ -245,8 +245,8 @@ GO
   
 관리자 로그인을 만들려면 [고정 서버 역할](pdw-permissions.md#fixed-server-roles)을 참조 하세요.  
   
-## <a name="see-also"></a>참고 항목
-[로그인 만들기](../t-sql/statements/create-login-transact-sql.md)  
+## <a name="see-also"></a>참조
+[CREATE LOGIN](../t-sql/statements/create-login-transact-sql.md)  
 [사용자 만들기](../t-sql/statements/create-user-transact-sql.md)  
 [CREATE ROLE](../t-sql/statements/create-role-transact-sql.md)  
 [로드](load-overview.md)  

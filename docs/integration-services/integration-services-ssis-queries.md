@@ -18,12 +18,12 @@ helpviewer_keywords:
 ms.assetid: 8822bd29-4575-46c8-92a0-1a39bc2604c1
 author: chugugrace
 ms.author: chugu
-ms.openlocfilehash: 79d6e93c536828e0de44c77ebd1377fab5021d69
-ms.sourcegitcommit: e700497f962e4c2274df16d9e651059b42ff1a10
+ms.openlocfilehash: 54a577a2a94c64eafe3817ccd9a041125629f846
+ms.sourcegitcommit: cfa04a73b26312bf18d8f6296891679166e2754d
 ms.translationtype: HT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 08/17/2020
-ms.locfileid: "88449805"
+ms.lasthandoff: 10/19/2020
+ms.locfileid: "92193847"
 ---
 # <a name="integration-services-ssis-queries"></a>Integration Services(SSIS) 쿼리
 
@@ -62,13 +62,13 @@ ms.locfileid: "88449805"
   
  태스크 또는 데이터 흐름 구성 요소 대화 상자나 속성 창에 쿼리를 입력하여 직접 입력을 제공할 수 있습니다.  
   
- 자세한 내용은 [Query Builder](https://msdn.microsoft.com/library/780752c9-6e3c-4f44-aaff-4f4d5e5a45c5)을 참조하세요.  
+ 자세한 내용은 [Query Builder]()을 참조하세요.  
   
 ## <a name="sql-in-files"></a>파일 내의 SQL  
  SQL 실행 태스크의 SQL 문을 별도의 파일에 보관할 수 있습니다. 예를 들어 [!INCLUDE[ssManStudioFull](../includes/ssmanstudiofull-md.md)]의 쿼리 작성기와 같은 도구를 사용하여 쿼리를 작성하고 파일로 저장한 다음 패키지를 실행할 때 파일에서 쿼리를 읽을 수 있습니다. 이 파일에는 실행할 SQL 문과 주석만 포함될 수 있습니다. 파일에 저장된 SQL 문을 사용하려면 파일 이름 및 위치를 지정하는 파일 연결을 제공해야 합니다. 자세한 내용은 [File Connection Manager](../integration-services/connection-manager/file-connection-manager.md)를 참조하세요.  
   
 ## <a name="sql-in-variables"></a>변수 내의 SQL  
- SQL 실행 태스크의 SQL 문 원본이 변수인 경우 쿼리를 포함하는 변수의 이름을 지정하십시오. 쿼리 텍스트는 변수의 Value 속성에 포함됩니다. 변수의 ValueType 속성을 문자열 데이터 형식으로 설정한 다음 Value 속성에 SQL 문을 입력하거나 복사합니다. 자세한 내용은 [Integration Services&#40;SSIS&#41; 변수](../integration-services/integration-services-ssis-variables.md) 및 [패키지에서 변수 사용](https://msdn.microsoft.com/library/7742e92d-46c5-4cc4-b9a3-45b688ddb787)을 참조하세요.  
+ SQL 실행 태스크의 SQL 문 원본이 변수인 경우 쿼리를 포함하는 변수의 이름을 지정하십시오. 쿼리 텍스트는 변수의 Value 속성에 포함됩니다. 변수의 ValueType 속성을 문자열 데이터 형식으로 설정한 다음 Value 속성에 SQL 문을 입력하거나 복사합니다. 자세한 내용은 [Integration Services&#40;SSIS&#41; 변수](../integration-services/integration-services-ssis-variables.md) 및 [패키지에서 변수 사용](./integration-services-ssis-variables.md)을 참조하세요.  
 
 ## <a name="query-builder-dialog-box"></a>쿼리 작성기 대화 상자
 **쿼리 작성기** 대화 상자를 사용하여 SQL 실행 태스크, OLE DB 원본 및 대상, 조회 변환에서 사용할 쿼리를 만들 수 있습니다.  
@@ -85,9 +85,9 @@ ms.locfileid: "88449805"
   
  **쿼리 작성기** 대화 상자의 그래픽 도구를 사용하면 끌어서 놓기 작업을 통해 쿼리를 만들 수 있습니다. 기본적으로 쿼리 작성기 대화 상자에서 SELECT 쿼리를 생성하지만 사용자가 INSERT, UPDATE 또는 DELETE 쿼리를 작성할 수도 있습니다. 모든 유형의 SQL 문은 **쿼리 작성기** 대화 상자에서 구문을 분석하고 실행할 수 있습니다. 패키지의 SQL 문에 대한 자세한 내용은 [Integration Services&#40;SSIS&#41; 쿼리](../integration-services/integration-services-ssis-queries.md)를 참조하세요.  
   
- Transact-SQL 언어와 해당 구문에 대한 자세한 내용은 [Transact-SQL 참조&#40;데이터베이스 엔진&#41;](../t-sql/transact-sql-reference-database-engine.md)를 참조하세요.  
+ Transact-SQL 언어와 해당 구문에 대한 자세한 내용은 [Transact-SQL 참조&#40;데이터베이스 엔진&#41;](../t-sql/language-reference.md)를 참조하세요.  
   
- 쿼리에 변수를 사용하여 입력 매개 변수에 값을 제공하고 출력 매개 변수의 값을 캡처하며 반환 코드를 저장할 수도 있습니다. 패키지에서 사용하는 쿼리에서 변수를 사용하는 방법에 대한 자세한 내용은 [SQL 실행 태스크](../integration-services/control-flow/execute-sql-task.md), [OLE DB 원본](../integration-services/data-flow/ole-db-source.md) 및 [Integration Services&#40;SSIS&#41; 쿼리](../integration-services/integration-services-ssis-queries.md)를 참조하세요. SQL 실행 태스크에서 변수를 사용하는 방법에 대한 자세한 내용은 [SQL 실행 태스크의 매개 변수 및 반환 코드](https://msdn.microsoft.com/library/a3ca65e8-65cf-4272-9a81-765a706b8663) 및 [SQL 실행 태스크의 결과 집합](https://msdn.microsoft.com/library/62605b63-d43b-49e8-a863-e154011e6109)을 참조하세요.  
+ 쿼리에 변수를 사용하여 입력 매개 변수에 값을 제공하고 출력 매개 변수의 값을 캡처하며 반환 코드를 저장할 수도 있습니다. 패키지에서 사용하는 쿼리에서 변수를 사용하는 방법에 대한 자세한 내용은 [SQL 실행 태스크](../integration-services/control-flow/execute-sql-task.md), [OLE DB 원본](../integration-services/data-flow/ole-db-source.md) 및 [Integration Services&#40;SSIS&#41; 쿼리](../integration-services/integration-services-ssis-queries.md)를 참조하세요. SQL 실행 태스크에서 변수를 사용하는 방법에 대한 자세한 내용은 [SQL 실행 태스크의 매개 변수 및 반환 코드](./control-flow/execute-sql-task.md) 및 [SQL 실행 태스크의 결과 집합](./control-flow/execute-sql-task.md)을 참조하세요.  
   
  조회 및 유사 항목 조회 변환에서도 매개 변수와 반환 코드에 변수를 사용할 수 있습니다. OLE DB 원본에 대한 정보는 이러한 두 변환에도 적용됩니다.  
   
@@ -119,4 +119,3 @@ ms.locfileid: "88449805"
 |**SQL**|쿼리를 SQL 텍스트로 표시합니다. **다이어그램** 창 및 **표 형태** 창에서 변경한 내용은 이 창에 나타나고 여기에서 변경한 내용은 **다이어그램** 창 및 **표 형태** 창에 나타납니다.|  
 |**결과** 창|도구 모음에서 **실행** 을 클릭하면 쿼리 결과가 표시됩니다.| 
 
-  

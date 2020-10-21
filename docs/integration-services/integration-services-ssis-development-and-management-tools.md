@@ -19,12 +19,12 @@ helpviewer_keywords:
 ms.assetid: 4eb73e65-d9f3-4ac6-a408-abfa85afc537
 author: chugugrace
 ms.author: chugu
-ms.openlocfilehash: a84ff3b6f655ee0c0e797f7cfcda541ee6e964c7
-ms.sourcegitcommit: e700497f962e4c2274df16d9e651059b42ff1a10
+ms.openlocfilehash: fa32eb175339d3fa02afdf41e0c90471a7ef8ee5
+ms.sourcegitcommit: cfa04a73b26312bf18d8f6296891679166e2754d
 ms.translationtype: HT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 08/17/2020
-ms.locfileid: "88449855"
+ms.lasthandoff: 10/19/2020
+ms.locfileid: "92193885"
 ---
 # <a name="integration-services-ssis-development-and-management-tools"></a>SSIS(Integration Services) 배포 및 관리 도구
 
@@ -52,7 +52,7 @@ ms.locfileid: "88449855"
   
 -   패키지의 복사본을 [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)] msdb 데이터베이스, [!INCLUDE[ssIS](../includes/ssis-md.md)] 패키지 저장소 및 파일 시스템에 저장합니다.  
   
- [!INCLUDE[ssBIDevStudioFull](../includes/ssbidevstudiofull-md.md)]에 대한 자세한 내용은 [SQL Server Data Tools](https://msdn.microsoft.com/library/hh272686.aspx)를 참조하세요.  
+ [!INCLUDE[ssBIDevStudioFull](../includes/ssbidevstudiofull-md.md)]에 대한 자세한 내용은 [SQL Server Data Tools](/previous-versions/sql/sql-server-data-tools/hh272686(v=vs.103))를 참조하세요.  
   
 ## <a name="sql-server-management-studio"></a>SQL Server Management Studio  
  [!INCLUDE[ssManStudioFull](../includes/ssmanstudiofull-md.md)] 에서는 패키지를 관리하고 실행 중인 패키지를 모니터링하고 [!INCLUDE[ssISnoversion](../includes/ssisnoversion-md.md)] 및 [!INCLUDE[ssISnoversion](../includes/ssisnoversion-md.md)] 개체의 영향과 데이터 계보를 확인하는 데 사용되는 [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)] 서비스를 제공합니다.  
@@ -65,4 +65,4 @@ ms.locfileid: "88449855"
   
 -   패키지 실행 유틸리티를 실행하여 **dtexec** 명령 프롬프트 유틸리티(dtexec.exe)를 실행할 때 사용할 명령줄을 생성합니다.  
   
--   [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)] msdb 데이터베이스, [!INCLUDE[ssIS](../includes/ssis-md.md)] 패키지 저장소 및 파일 시스템에서 패키지를 가져오고 내보냅니다.  
+-   [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)] msdb 데이터베이스, [!INCLUDE[ssIS](../includes/ssis-md.md)] 패키지 저장소 및 파일 시스템에서 패키지를 가져오고 내보냅니다.

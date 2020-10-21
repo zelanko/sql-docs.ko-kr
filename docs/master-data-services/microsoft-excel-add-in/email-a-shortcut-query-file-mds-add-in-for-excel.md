@@ -1,5 +1,6 @@
 ---
-title: 바로 가기 쿼리 파일을 전자 메일로 보내기(Excel용 MDS 추가 기능) | Microsoft Docs
+description: 바로 가기 쿼리 파일을 전자 메일로 보내기(Excel용 MDS 추가 기능)
+title: 바로 가기 쿼리 파일을 전자 메일로 보내기
 ms.custom: microsoft-excel-add-in
 ms.date: 03/01/2017
 ms.prod: sql
@@ -10,20 +11,20 @@ ms.topic: conceptual
 ms.assetid: 5d46f20a-b04a-45c7-82af-02a2baaabbd7
 author: lrtoyou1223
 ms.author: lle
-ms.openlocfilehash: a9c800ecf5eabd6c97ab3f0c96dec998d911d11c
-ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
+ms.openlocfilehash: 9dae0ad64323ea2879f0e752fd8a8d737bf003d2
+ms.sourcegitcommit: e700497f962e4c2274df16d9e651059b42ff1a10
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 07/15/2019
-ms.locfileid: "68092409"
+ms.lasthandoff: 08/17/2020
+ms.locfileid: "92257651"
 ---
 # <a name="email-a-shortcut-query-file-mds-add-in-for-excel"></a>바로 가기 쿼리 파일을 전자 메일로 보내기(Excel용 MDS 추가 기능)
 
-[!INCLUDE[appliesto-ss-xxxx-xxxx-xxx-md-winonly](../../includes/appliesto-ss-xxxx-xxxx-xxx-md-winonly.md)]
+[!INCLUDE [SQL Server Windows Only - ASDBMI ](../../includes/applies-to-version/sql-windows-only-asdbmi.md)]
 
   [!INCLUDE[ssMDSshort](../../includes/ssmdsshort-md.md)][!INCLUDE[ssMDSXLS](../../includes/ssmdsxls-md.md)]에서는 사용자가 자신과 동일한 데이터를 사용 중인지 확인하려는 경우 해당 사용자에게 바로 가기 쿼리 파일을 메일로 보낼 수 있습니다. 워크시트를 저장하고 전자 메일로 보내는 대신 쿼리를 공유해야 합니다.  
   
-## <a name="prerequisites"></a>사전 요구 사항  
+## <a name="prerequisites"></a>필수 구성 요소  
  이 절차를 수행하려면  
   
 -   Outlook 2010 이상이 설치되어 있어야 합니다.  
@@ -40,7 +41,7 @@ ms.locfileid: "68092409"
   
 -   바로 가기 쿼리 파일을 열려면 전자 메일을 받는 사람이 MDS [!INCLUDE[ssMDSXLS](../../includes/ssmdsxls-md.md)] 을 설치해야 합니다. 받는 사람이 파일을 두 번 클릭하여 열 수 있습니다.  
   
-## <a name="see-also"></a>관련 항목  
+## <a name="see-also"></a>참고 항목  
  [바로 가기 쿼리 파일&#40;Excel용 MDS 추가 기능&#41;](../../master-data-services/microsoft-excel-add-in/shortcut-query-files-mds-add-in-for-excel.md)  
   
   

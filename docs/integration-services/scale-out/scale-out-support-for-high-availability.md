@@ -10,12 +10,12 @@ ms.technology: integration-services
 ms.topic: conceptual
 author: haoqian
 ms.author: haoqian
-ms.openlocfilehash: 75eeaf7b9402de747c49ad69f64731c2de6962c9
-ms.sourcegitcommit: 7035d9471876c70b99c58bf9b46af5cce6e9c66c
+ms.openlocfilehash: 19db6aeab39dc93c2dcfd6a869d3b54e0a1ceaa6
+ms.sourcegitcommit: cfa04a73b26312bf18d8f6296891679166e2754d
 ms.translationtype: HT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 08/03/2020
-ms.locfileid: "87522895"
+ms.lasthandoff: 10/19/2020
+ms.locfileid: "92192479"
 ---
 # <a name="scale-out-support-for-high-availability"></a>고가용성에 대한 Scale Out 지원
 
@@ -98,9 +98,9 @@ SSISDB에서 로깅은 **##MS_SSISLogDBWorkerAgentLogin##** 로그인으로 수�
 
 Azure 가상 머신에서 이 구성 단계는 추가 단계가 필요합니다. 이러한 개념 및 이러한 단계에 대한 자세한 설명은 이 문서의 범위를 벗어납니다.
 
-1.  Azure 도메인을 설정해야 합니다. Windows Server 장애 조치(failover) 클러스터링은 클러스터의 모든 구성 요소가 동일한 도메인의 구성원이 될 것을 요구합니다. 자세한 내용은 [Azure Portal을 사용하여 Azure Active Directory Domain Services 활성화](https://docs.microsoft.com/azure/active-directory-domain-services/create-instance)를 참조합니다.
+1.  Azure 도메인을 설정해야 합니다. Windows Server 장애 조치(failover) 클러스터링은 클러스터의 모든 구성 요소가 동일한 도메인의 구성원이 될 것을 요구합니다. 자세한 내용은 [Azure Portal을 사용하여 Azure Active Directory Domain Services 활성화](/azure/active-directory-domain-services/create-instance)를 참조합니다.
 
-2. Azure 부하 분산 장치를 설정해야 합니다. 가용성 그룹 수신기에 대한 요구 사항입니다. 자세한 내용은 [자습서: Azure Portal을 사용하여 VM에 Basic Load Balancer와 함께 내부 트래픽 부하 분산](https://docs.microsoft.com/azure/load-balancer/tutorial-load-balancer-basic-internal-portal)을 참조합니다.
+2. Azure 부하 분산 장치를 설정해야 합니다. 가용성 그룹 수신기에 대한 요구 사항입니다. 자세한 내용은 [자습서: Azure Portal을 사용하여 VM에 Basic Load Balancer와 함께 내부 트래픽 부하 분산](/azure/load-balancer/tutorial-load-balancer-basic-internal-portal)을 참조합니다.
 
 ## <a name="8-update-the-scale-out-master-address-in-ssisdb"></a>8. SSISDB에서 Scale Out 마스터 주소 업데이트
 

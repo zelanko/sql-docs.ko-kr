@@ -17,12 +17,12 @@ helpviewer_keywords:
 ms.assetid: aca5a0b5-34a9-45bc-a234-8e63ea51a1ee
 author: chugugrace
 ms.author: chugu
-ms.openlocfilehash: 0e34be2d218041a4c8994bf0bea5579942f444ba
-ms.sourcegitcommit: e700497f962e4c2274df16d9e651059b42ff1a10
+ms.openlocfilehash: b19a591448da6e14c6275462ba6cb5ae595092a0
+ms.sourcegitcommit: cfa04a73b26312bf18d8f6296891679166e2754d
 ms.translationtype: HT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 08/17/2020
-ms.locfileid: "88430985"
+ms.lasthandoff: 10/19/2020
+ms.locfileid: "92197217"
 ---
 # <a name="execute-process-task"></a>프로세스 실행 태스크
 
@@ -46,12 +46,12 @@ ms.locfileid: "88430985"
   
  [!INCLUDE[ssIS](../../includes/ssis-md.md)] 디자이너에서 이러한 속성을 설정하는 방법을 보려면 다음 항목을 클릭하십시오.  
   
--   [태스크 또는 컨테이너의 속성 설정](https://msdn.microsoft.com/library/52d47ca4-fb8c-493d-8b2b-48bb269f859b)  
+-   [태스크 또는 컨테이너의 속성 설정](./add-or-delete-a-task-or-a-container-in-a-control-flow.md)  
   
 ### <a name="property-settings"></a>속성 설정  
  프로세스 실행 태스크는 사용자 지정 애플리케이션을 실행할 때 다음 방법 중 하나 또는 모두를 통해 애플리케이션에 입력을 제공합니다.  
   
--   **StandardInputVariable** 속성 설정에서 지정하는 변수. 변수에 대한 자세한 내용은 [Integration Services&#40;SSIS&#41; 변수](../../integration-services/integration-services-ssis-variables.md) 및 [패키지에서 변수 사용](https://msdn.microsoft.com/library/7742e92d-46c5-4cc4-b9a3-45b688ddb787)을 참조하세요.  
+-   **StandardInputVariable** 속성 설정에서 지정하는 변수. 변수에 대한 자세한 내용은 [Integration Services&#40;SSIS&#41; 변수](../../integration-services/integration-services-ssis-variables.md) 및 [패키지에서 변수 사용](../integration-services-ssis-variables.md)을 참조하세요.  
   
 -   **Arguments** 속성 설정에서 지정하는 인수. 예를 들어 태스크가 Word 문서를 여는 경우 인수에서 .doc 파일의 이름을 지정할 수 있습니다.  
   
@@ -61,7 +61,7 @@ ms.locfileid: "88430985"
   
  여러 프로세스 실행 태스크 속성을 설정하는 식을 사용할 수 있습니다.  
   
- **StandardInputVariable** 속성을 사용하여 프로세스 실행 태스크에서 입력을 제공하도록 구성하는 경우 애플리케이션에서 **Console.ReadLine** 메서드를 호출하여 입력을 읽습니다. 자세한 내용은 [!INCLUDE[msCoName](../../includes/msconame-md.md)] [!INCLUDE[dnprdnshort](../../includes/dnprdnshort-md.md)] 클래스 라이브러리의 [Console.ReadLine 메서드](https://go.microsoft.com/fwlink/?LinkId=129201) 토픽을 참조하세요.  
+ **StandardInputVariable** 속성을 사용하여 프로세스 실행 태스크에서 입력을 제공하도록 구성하는 경우 애플리케이션에서 **Console.ReadLine** 메서드를 호출하여 입력을 읽습니다. 자세한 내용은 [!INCLUDE[msCoName](../../includes/msconame-md.md)] [!INCLUDE[dnprdnshort](../../includes/dnprdnshort-md.md)] 클래스 라이브러리의 [Console.ReadLine 메서드](/dotnet/api/system.console.readline) 토픽을 참조하세요.  
   
  **Arguments** 속성을 사용하여 프로세스 실행 태스크에서 입력을 제공하도록 구성하는 경우 다음 단계 중 하나를 수행하여 인수를 얻습니다.  
   
@@ -76,7 +76,7 @@ ms.locfileid: "88430985"
   
 -   Microsoft Visual C#을 사용하여 애플리케이션을 작성하는 경우 **Main** 메서드를 사용합니다.  
   
-     자세한 내용은 C# 프로그래밍 가이드의 [명령줄 인수(C# 프로그래밍 가이드)](https://go.microsoft.com/fwlink/?LinkId=129406)항목을 참조하세요.  
+     자세한 내용은 C# 프로그래밍 가이드의 [명령줄 인수(C# 프로그래밍 가이드)](/dotnet/csharp/programming-guide/main-and-command-args/command-line-arguments)항목을 참조하세요.  
   
  프로세스 실행 태스크에는 각각 애플리케이션의 표준 출력과 애플리케이션 표준 오류 출력을 사용하는 변수를 지정하는 **StandardOutputVariable** 및 **StandardErrorVariable** 속성도 있습니다.  
   
@@ -119,7 +119,7 @@ ms.locfileid: "88430985"
  **StandardInputVariable**  
  프로세스에 입력을 제공할 변수를 선택하거나 \<**New variable...**>를 클릭하여 새 변수를 만듭니다.  
   
- **관련 항목:** [변수 추가](https://msdn.microsoft.com/library/d09b5d31-433f-4f7c-8c68-9df3a97785d5)  
+ **관련 항목:** [변수 추가](../integration-services-ssis-variables.md)  
   
  **StandardOutputVariable**  
  프로세스 출력을 캡처할 변수를 선택하거나 \<**New variable...**>를 클릭하여 새 변수를 만듭니다.  
@@ -145,5 +145,4 @@ ms.locfileid: "88430985"
 ## <a name="see-also"></a>참고 항목  
  [Integration Services 태스크](../../integration-services/control-flow/integration-services-tasks.md)   
  [제어 흐름](../../integration-services/control-flow/control-flow.md)  
-  
   

@@ -10,12 +10,12 @@ ms.technology: integration-services
 author: swinarko
 ms.author: sawinark
 ms.reviewer: maghan
-ms.openlocfilehash: 41985e8d39de843c8319ac3ac5622c4cb8b4aa51
-ms.sourcegitcommit: fe5dedb2a43516450696b754e6fafac9f5fdf3cf
+ms.openlocfilehash: d92a41782ec094b323aaaec3eaff5fb584637dc7
+ms.sourcegitcommit: cfa04a73b26312bf18d8f6296891679166e2754d
 ms.translationtype: HT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 08/31/2020
-ms.locfileid: "89195139"
+ms.lasthandoff: 10/19/2020
+ms.locfileid: "92192529"
 ---
 # <a name="validate-sql-server-integration-services-ssis-packages-deployed-to-azure"></a>Azure에 배포된 SSIS(SQL Server Integration Services) 패키지 유효성 검사
 
@@ -33,7 +33,7 @@ Azure 서버의 SSIS 카탈로그(SSISDB)에 SQL Server Integration Services(SSI
 ## <a name="validate-connection-managers"></a>연결 관리자 유효성 검사
 
 마법사는 특정 연결 관리자가 다음 문제를 검사하여 연결이 실패할 수 있음을 나타냅니다.
-- **Windows 인증**. 연결 문자열에 Windows 인증이 사용되면 유효성 검사에서 경고를 표시합니다. Windows 인증을 위해서는 추가 구성 단계가 필요합니다. 자세한 정보는 [Windows 인증으로 데이터 및 파일 공유에 연결](ssis-azure-connect-with-windows-auth.md)을 참조합니다.
+- **Windows 인증**. 연결 문자열에 Windows 인증이 사용되면 유효성 검사에서 경고를 표시합니다. Windows 인증을 위해서는 추가 구성 단계가 필요합니다. 자세한 정보는 [Windows 인증으로 데이터 및 파일 공유에 연결](/azure/data-factory/ssis-azure-connect-with-windows-auth)을 참조합니다.
 - **파일 경로**. 연결 문자열에 `C:\\...`과 같이 하드 코딩된 로컬 파일 경로가 있으면 유효성 검사에서 경고를 표시합니다. 절대 경로를 포함하는 패키지가 실패할 수 있습니다.
 - **UNC 경로**. 연결 문자열에 UNC 경로가 포함되어 있으면 유효성 검사에서 경고가 발생합니다. 일반적으로 UNC 경로에 액세스하려면 Windows 인증이 필요하기 때문에 UNC 경로가 포함된 패키지가 실패할 수 있습니다.
 - **호스트 이름**. 서버 속성에 IP 주소 대신 호스트 이름이 포함되어 있으면 유효성 검사에서 경고를 표시합니다. 호스트 이름을 포함하는 패키지는 일반적으로 Azure 가상 네트워크가 DNS 이름 확인을 지원하기 위해 올바른 DNS 구성이 필요하기 때문에 실패할 수 있습니다.

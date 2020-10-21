@@ -17,12 +17,12 @@ helpviewer_keywords:
 ms.assetid: 26d2e242-7f60-4fa9-a70d-548a80eee667
 author: chugugrace
 ms.author: chugu
-ms.openlocfilehash: def15673fbc8c92148fa8ab025d6e1769b2ee236
-ms.sourcegitcommit: e700497f962e4c2274df16d9e651059b42ff1a10
+ms.openlocfilehash: 0e24e9006219d659a6a3700c8b922a8e0745166a
+ms.sourcegitcommit: cfa04a73b26312bf18d8f6296891679166e2754d
 ms.translationtype: HT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 08/17/2020
-ms.locfileid: "88425505"
+ms.lasthandoff: 10/19/2020
+ms.locfileid: "92190863"
 ---
 # <a name="integration-services-ssis-expressions"></a>Integration Services(SSIS) 식
 
@@ -68,12 +68,11 @@ ms.locfileid: "88425505"
  변수에는 범위가 있으며 식 작성기의 **변수** 폴더에는 범위 내에 있고 사용할 수 있는 변수만 나열됩니다. 자세한 내용은 [Integration Services&#40;SSIS&#41; 변수](../../integration-services/integration-services-ssis-variables.md)을 참조하세요.  
   
 ## <a name="related-tasks"></a>관련 작업  
- [데이터 흐름 구성 요소에서 식 사용](https://msdn.microsoft.com/library/9181b998-d24a-41fb-bb3c-14eee34f910d)  
+ [데이터 흐름 구성 요소에서 식 사용](/previous-versions/sql/sql-server-2016/ms141007(v=sql.130))  
   
 ## <a name="related-content"></a>관련 내용  
  social.technet.microsoft.com의 기술 문서 - [SSIS 식 예](https://go.microsoft.com/fwlink/?LinkId=220761)  
   
 ## <a name="see-also"></a>참고 항목  
  [SQL Server Integration Services](../../integration-services/sql-server-integration-services.md)  
-  
   

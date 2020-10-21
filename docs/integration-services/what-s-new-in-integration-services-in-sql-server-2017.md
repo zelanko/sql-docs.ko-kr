@@ -11,12 +11,12 @@ ms.topic: conceptual
 ms.assetid: e26d7884-e772-46fa-bfdc-38567fe976a1
 author: chugugrace
 ms.author: chugu
-ms.openlocfilehash: b7d0f0a75c924151b2548a71a2f52389abc95577
-ms.sourcegitcommit: e700497f962e4c2274df16d9e651059b42ff1a10
+ms.openlocfilehash: 3275ee19e271c6d9d98e7ad432ad3a772283b583
+ms.sourcegitcommit: cfa04a73b26312bf18d8f6296891679166e2754d
 ms.translationtype: HT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 08/17/2020
-ms.locfileid: "88456908"
+ms.lasthandoff: 10/19/2020
+ms.locfileid: "92193728"
 ---
 # <a name="what39s-new-in-integration-services-in-sql-server-2017"></a>SQL Server 2017 Integration Services의 새로운 기능
 
@@ -78,7 +78,7 @@ Azure용 Integration Services 기능 팩에는 SQL Server의 향상된 연결성
 -   Scale Out의 패키지 실행에 대해 SSISDB에 로깅하는 성능이 향상되었습니다. 이제 이벤트 메시지 및 메시지 컨텍스트 로그가 하나씩 기록되는 대신 일괄 처리 모드로 SSISDB에 기록됩니다. 이 향상된 기능에 대한 몇 가지 추가 참고 사항은 다음과 같습니다.        
     - SSMS(SQL Server Management Studio) 현재 버전의 일부 보고서에는 현재 Scale Out의 실행에 대한 이러한 로그가 표시되지 않습니다. SSMS의 다음 릴리스에서 지원될 예정됩니다. 영향을 받는 보고서로 Integration Services 대시보드의 *모든 연결* 보고서, *오류 컨텍스트* 보고서 및 *연결 정보* 섹션이 있습니다.
     - 새로운 **event_message_guid** 열이 추가되었습니다. Scale Out에서 이러한 실행 로그를 쿼리할 때 **event_message_id**를 사용하는 대신 [catalog]. [event_message_context] 뷰 및 [catalog]. [event_messages] 뷰에 이 열을 조인합니다.
--   SSIS Scale Out에 대한 관리 애플리케이션을 가져오려면 [SSMS(SQL Server Management Studio)](https://docs.microsoft.com/sql/ssms/download-sql-server-management-studio-ssms) 17.1 이상을 다운로드합니다.
+-   SSIS Scale Out에 대한 관리 애플리케이션을 가져오려면 [SSMS(SQL Server Management Studio)](../ssms/download-sql-server-management-studio-ssms.md) 17.1 이상을 다운로드합니다.
 
 ## <a name="new-in-ssis-in-sql-server-2017-ctp-20"></a>SQL Server 2017 CTP 2.0 SSIS의 새로운 기능
 
@@ -113,4 +113,3 @@ SQL Server 2017 CTP 1.1에는 새로운 SSIS 기능이 없습니다.
 ### <a name="support-for-microsoft-dynamics-online-resources"></a>Microsoft Dynamics Online 리소스 지원
 
 이제 OData 원본 및 OData 연결 관리자가 Microsoft Dynamics AX Online 및 Microsoft Dynamics CRM Online의 OData 피드에 연결할 수 있습니다.
-

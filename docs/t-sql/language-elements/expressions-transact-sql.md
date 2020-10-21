@@ -22,12 +22,12 @@ ms.assetid: ee53c5c8-e36c-40f9-8cd1-d933791b98fa
 author: rothja
 ms.author: jroth
 monikerRange: '>=aps-pdw-2016||=azuresqldb-current||=azure-sqldw-latest||>=sql-server-2016||=sqlallproducts-allversions||>=sql-server-linux-2017||=azuresqldb-mi-current'
-ms.openlocfilehash: 6b0a6f3b475e09a0a154bc6bcee83ca21167295f
-ms.sourcegitcommit: 8f062015c2a033f5a0d805ee4adabbe15e7c8f94
+ms.openlocfilehash: a9e762c88291deb0643acef0db3bfc7c4e79e8a1
+ms.sourcegitcommit: cfa04a73b26312bf18d8f6296891679166e2754d
 ms.translationtype: HT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 09/25/2020
-ms.locfileid: "91227228"
+ms.lasthandoff: 10/19/2020
+ms.locfileid: "92191973"
 ---
 # <a name="expressions-transact-sql"></a>식(Transact-SQL)
 [!INCLUDE [sql-asdb-asdbmi-asa-pdw](../../includes/applies-to-version/sql-asdb-asdbmi-asa-pdw.md)]
@@ -122,7 +122,7 @@ ms.locfileid: "91227228"
   
  C 또는 [!INCLUDE[msCoName](../../includes/msconame-md.md)] [!INCLUDE[vbprvb](../../includes/vbprvb-md.md)]과 같은 프로그래밍 언어에서 식은 항상 단일 결과로 평가됩니다. [!INCLUDE[tsql](../../includes/tsql-md.md)] SELECT 목록의 식은 이 규칙의 변형을 따릅니다. 즉 식은 결과 집합의 각 행에 대해 개별적으로 평가됩니다. 단일 식은 결과 집합의 각 행에 서로 다른 값을 가질 수 있습니다. 그러나 각 행은 식에 대해 단 하나의 값만을 가집니다. 예를 들어 다음 `SELECT` 문에서 `ProductID`에 대한 참조와 선택 목록의 `1+2` 항목은 모두 식입니다.  
   
-```  
+```sql  
 USE AdventureWorks2012;  
 GO  
 SELECT ProductID, 1+2  

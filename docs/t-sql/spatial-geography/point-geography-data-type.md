@@ -19,12 +19,12 @@ helpviewer_keywords:
 ms.assetid: 0dc6f422-7aae-4016-b7f4-3289fa8f989c
 author: MladjoA
 ms.author: mlandzic
-ms.openlocfilehash: f833aeaa63838281eaff92c0dfe1e9fed799cdb4
-ms.sourcegitcommit: e700497f962e4c2274df16d9e651059b42ff1a10
+ms.openlocfilehash: 47df12a85a22251a9cd962834e8e2a97170a4528
+ms.sourcegitcommit: 22dacedeb6e8721e7cdb6279a946d4002cfb5da3
 ms.translationtype: HT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 08/17/2020
-ms.locfileid: "88360329"
+ms.lasthandoff: 10/14/2020
+ms.locfileid: "92038329"
 ---
 # <a name="point-geography-data-type"></a>Point(geography 데이터 형식)
 [!INCLUDE [SQL Server SQL Database](../../includes/applies-to-version/sql-asdb.md)]
@@ -48,7 +48,7 @@ Point ( Lat, Long, SRID )
  생성할 **Point**의 x 좌표를 나타내는 **float** 식입니다. 유효한 위도와 경도 값에 대한 자세한 내용은 [Point](../../relational-databases/spatial/point.md)를 참조하세요.  
   
  *SRID*  
- 반환할 **geography** 인스턴스의 [SRID(Spatial Reference Identifier)](https://docs.microsoft.com/sql/relational-databases/spatial/spatial-reference-identifiers-srids)를 나타내는 **int** 식입니다.  
+ 반환할 **geography** 인스턴스의 [SRID(Spatial Reference Identifier)](../../relational-databases/spatial/spatial-reference-identifiers-srids.md)를 나타내는 **int** 식입니다.  
   
 > [!NOTE]  
 >  진입점(geography 데이터 형식) 메서드에 대한 인수의 좌표는 WKT에 비해 반전되었습니다.  
@@ -68,4 +68,4 @@ SELECT @g.ToString();
 ```  
   
 ## <a name="see-also"></a>참고 항목  
- [확장 정적 지리 메서드](../../t-sql/spatial-geography/extended-static-geography-methods.md)  
+ [확장 정적 지리 메서드](../../t-sql/spatial-geography/extended-static-geography-methods.md)

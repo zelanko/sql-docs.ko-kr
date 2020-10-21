@@ -23,12 +23,12 @@ helpviewer_keywords:
 ms.assetid: 55a8f9f1-3259-45c0-8ab9-60b9c088b4b4
 author: rothja
 ms.author: jroth
-ms.openlocfilehash: 439ca52d7678372ee6bf3adecccc99444631a311
-ms.sourcegitcommit: e700497f962e4c2274df16d9e651059b42ff1a10
+ms.openlocfilehash: a3d76f64539df36751f87cf3a9c3586b138ddbbb
+ms.sourcegitcommit: cfa04a73b26312bf18d8f6296891679166e2754d
 ms.translationtype: HT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 08/17/2020
-ms.locfileid: "88459333"
+ms.lasthandoff: 10/19/2020
+ms.locfileid: "92193360"
 ---
 # <a name="kill-stats-job-transact-sql"></a>KILL STATS JOB(Transact-SQL)
 [!INCLUDE [SQL Server](../../includes/applies-to-version/sqlserver.md)]
@@ -39,8 +39,7 @@ ms.locfileid: "88459333"
   
 ## <a name="syntax"></a>구문  
   
-```  
-  
+```syntaxsql
 KILL STATS JOB job_id   
 ```  
   
@@ -61,7 +60,7 @@ KILL STATS JOB job_id
 ## <a name="examples"></a>예제  
  다음 예에서는 *job_id* = `53`인 작업과 관련된 통계 업데이트를 종료하는 방법을 보여 줍니다.  
   
-```  
+```sql  
 KILL STATS JOB 53;  
 GO  
 ```  

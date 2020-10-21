@@ -374,7 +374,7 @@
 - name: 리소스
   items:
     - name: 릴리스 정보 2019 >
-      href: ../sql-server/sql-server-ver15-release-notes.md?toc=../toc.json
+      href: ../sql-server/sql-server-version-15-release-notes.md?toc=..%252ftoc.json
     - name: 릴리스 정보 2017 >
       href: ../sql-server/sql-server-2017-release-notes.md?toc=../toc.json
     - name: 릴리스 정보 2016 >

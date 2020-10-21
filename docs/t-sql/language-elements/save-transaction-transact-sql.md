@@ -26,12 +26,12 @@ helpviewer_keywords:
 ms.assetid: b953c3f1-f96d-42f1-95a2-30e314292b35
 author: rothja
 ms.author: jroth
-ms.openlocfilehash: 03af390ecf43a70d3d80ad876e1d9944cd9297bb
-ms.sourcegitcommit: e700497f962e4c2274df16d9e651059b42ff1a10
+ms.openlocfilehash: f13fcea7eaf2958ba2ebd9c856a86a743e050ffc
+ms.sourcegitcommit: cfa04a73b26312bf18d8f6296891679166e2754d
 ms.translationtype: HT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 08/17/2020
-ms.locfileid: "88445466"
+ms.lasthandoff: 10/19/2020
+ms.locfileid: "92195500"
 ---
 # <a name="save-transaction-transact-sql"></a>SAVE TRANSACTION(Transact-SQL)
 [!INCLUDE [SQL Server SQL Database](../../includes/applies-to-version/sql-asdb.md)]
@@ -43,7 +43,6 @@ ms.locfileid: "88445466"
  ## <a name="syntax"></a>구문  
   
 ```syntaxsql
-  
 SAVE { TRAN | TRANSACTION } { savepoint_name | @savepoint_variable }  
 [ ; ]  
 ```  
@@ -73,7 +72,7 @@ SAVE { TRAN | TRANSACTION } { savepoint_name | @savepoint_variable }
 ## <a name="examples"></a>예제  
  다음 예에서는 저장 프로시저가 실행되기 전에 활성 트랜잭션이 시작되는 경우 트랜잭션 저장점을 사용하여 저장 프로시저에서 수정된 내용만 롤백하는 방법을 보여 줍니다.  
   
-```  
+```sql  
 USE AdventureWorks2012;  
 GO  
 IF EXISTS (SELECT name FROM sys.objects  

@@ -11,12 +11,12 @@ ms.assetid: 9fb8656b-0e4e-4ada-b404-4db4d3eea995
 author: MikeRayMSFT
 ms.author: mikeray
 monikerRange: '>=aps-pdw-2016||=azuresqldb-current||=azure-sqldw-latest||>=sql-server-2016||=sqlallproducts-allversions||>=sql-server-linux-2017||=azuresqldb-mi-current'
-ms.openlocfilehash: 3a489da04d7a65bf854cebf06e8103e22c1abc12
-ms.sourcegitcommit: e700497f962e4c2274df16d9e651059b42ff1a10
+ms.openlocfilehash: 6405d6be70477297fb9ca02637c92b9e458144a5
+ms.sourcegitcommit: 22dacedeb6e8721e7cdb6279a946d4002cfb5da3
 ms.translationtype: HT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 08/17/2020
-ms.locfileid: "88459179"
+ms.lasthandoff: 10/14/2020
+ms.locfileid: "92035886"
 ---
 # <a name="lesson-1-create-and-query-database-objects"></a>1단원: 데이터베이스 개체 만들기 및 쿼리
 [!INCLUDE[tsql-appliesto-ss2008-all-md](../includes/tsql-appliesto-ss2008-all-md.md)]
@@ -38,11 +38,11 @@ ms.locfileid: "88459179"
 ## <a name="prerequisites"></a>전제 조건
 이 자습서를 완료하려면 SQL Server Management Studio 및 SQL Server 인스턴스에 대한 액세스 권한이 필요합니다. 
 
-- [SQL Server Management Studio](https://docs.microsoft.com/sql/ssms/download-sql-server-management-studio-ssms)를 설치합니다.
+- [SQL Server Management Studio](../ssms/download-sql-server-management-studio-ssms.md)를 설치합니다.
 
 SQL Server 인스턴스가 없는 경우 새로 만듭니다. 새로 만들려면 다음 링크에서 플랫폼을 선택합니다. SQL 인증을 선택한 경우 SQL Server 로그인 자격 증명을 사용합니다.
 - **Windows**: [SQL Server 2017 Developer Edition 다운로드](https://www.microsoft.com/sql-server/sql-server-downloads)
-- **macOS**: [Docker에서 SQL Server 2017 다운로드](https://docs.microsoft.com/sql/linux/quickstart-install-connect-docker)
+- **macOS**: [Docker에서 SQL Server 2017 다운로드](../linux/quickstart-install-connect-docker.md)
 
 ## <a name="create-a-database"></a>데이터베이스 만들기
 대부분의 [!INCLUDE[tsql](../includes/tsql-md.md)] 문과 마찬가지로, [`CREATE DATABASE`](statements/create-database-transact-sql.md) 문에는 필수 매개 변수로 데이터베이스 이름이 포함됩니다.` CREATE DATABASE` 에는 데이터베이스 파일을 저장할 디스크 위치 등의 많은 선택적 매개 변수도 있습니다. 선택적 매개 변수 없이 `CREATE DATABASE`를 실행할 경우 [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)]는 이러한 매개 변수에 기본값을 사용합니다.
@@ -241,7 +241,7 @@ SELECT 문에서 데이터 작업을 수행하는 데 사용할 수 있는 일�
         [수치 연산 함수&#40;Transact-SQL&#41;](../t-sql/functions/mathematical-functions-transact-sql.md)
     :::column-end:::
     :::column:::
-        [텍스트 및 이미지 함수&#40;Transact-SQL&#41;](https://msdn.microsoft.com/library/b9c70488-1bf5-4068-a003-e548ccbc5199)
+        [텍스트 및 이미지 함수&#40;Transact-SQL&#41;](./functions/text-and-image-functions-textptr-transact-sql.md)
     :::column-end:::
 :::row-end:::
 
@@ -304,6 +304,5 @@ SELECT 문에서 데이터 작업을 수행하는 데 사용할 수 있는 일�
 자세히 알아보려면 다음 문서로 이동합니다.
 > [!div class="nextstepaction"]
 > [다음 단계](../t-sql/lesson-2-configuring-permissions-on-database-objects.md)
-  
   
   

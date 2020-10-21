@@ -11,12 +11,12 @@ ms.topic: conceptual
 ms.assetid: 362bbcd8-b7b0-4bab-8afe-1212b2ad1af9
 author: chugugrace
 ms.author: chugu
-ms.openlocfilehash: c0c01d66062747788bd9bf05ca8cf06e8e5088a6
-ms.sourcegitcommit: e700497f962e4c2274df16d9e651059b42ff1a10
+ms.openlocfilehash: 933f79938c641ff1efd6a4143a788888c9362608
+ms.sourcegitcommit: cfa04a73b26312bf18d8f6296891679166e2754d
 ms.translationtype: HT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 08/17/2020
-ms.locfileid: "88430765"
+ms.lasthandoff: 10/19/2020
+ms.locfileid: "92192713"
 ---
 # <a name="odbc-source-custom-properties"></a>ODBC Source Custom Properties
 
@@ -43,6 +43,5 @@ ms.locfileid: "88430765"
   
 ## <a name="see-also"></a>참고 항목  
  [ODBC Source](../../integration-services/data-flow/odbc-source.md)   
- [ODBC 원본 편집기&#40;연결 관리자 페이지&#41;](../../integration-services/data-flow/odbc-source-editor-connection-manager-page.md)  
-  
+ [ODBC 원본 편집기&#40;연결 관리자 페이지&#41;](./odbc-source.md)  
   

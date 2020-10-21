@@ -7,12 +7,12 @@ ms.date: 10/23/2019
 ms.topic: conceptual
 ms.prod: sql
 ms.technology: linux
-ms.openlocfilehash: fa7cd3bd09f71555c826622030e3183d269abb4a
-ms.sourcegitcommit: 3ea082c778f6771b17d90fb597680ed334d3e0ec
+ms.openlocfilehash: 7b6583ce7fb4ae2d0b37d898b549a385cfc09763
+ms.sourcegitcommit: 22102f25db5ccca39aebf96bc861c92f2367c77a
 ms.translationtype: HT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 08/11/2020
-ms.locfileid: "88088905"
+ms.lasthandoff: 10/16/2020
+ms.locfileid: "92115458"
 ---
 # <a name="sql-server-on-linux-frequently-asked-questions-faq"></a>Linux의 SQL Server FAQ(질문과 대답)
 
@@ -95,7 +95,7 @@ ms.locfileid: "88088905"
 
 1. **Linux에서 SQL Server 무인 설치를 수행할 수 있나요?**
 
-   예. 무인 설치에 대한 설명은 [Linux의 SQL Server 설치 지침](sql-server-linux-setup.md#unattended)을 참조하세요. [Red Hat](sample-unattended-install-redhat.md), [SUSE Linux Enterprise Server](sample-unattended-install-suse.md) 및 [Ubuntu](sample-unattended-install-ubuntu.md)에 대한 샘플 스크립트를 참조하세요. SQL Server 고객 자문 팀에서 만든 [이 샘플 스크립트](https://blogs.msdn.microsoft.com/sqlcat/2017/10/03/unattended-install-and-configuration-for-sql-server-2017-on-linux/)를 검토할 수도 있습니다.
+   예. 무인 설치에 대한 설명은 [Linux의 SQL Server 설치 지침](sql-server-linux-setup.md#unattended)을 참조하세요. [Red Hat](sample-unattended-install-redhat.md), [SUSE Linux Enterprise Server](sample-unattended-install-suse.md) 및 [Ubuntu](sample-unattended-install-ubuntu.md)에 대한 샘플 스크립트를 참조하세요. SQL Server 고객 자문 팀에서 만든 [이 샘플 스크립트](/archive/blogs/sqlcat/unattended-install-and-configuration-for-sql-server-2017-on-linux)를 검토할 수도 있습니다.
 
 ## <a name="tools"></a>도구
 
@@ -117,7 +117,7 @@ ms.locfileid: "88088905"
 
 1. **Linux에서 SQL Server 성능을 모니터링하는 데 어떤 도구를 사용할 수 있나요?**
 
-   [시스템 DMV(동적 관리 뷰)](../relational-databases/system-dynamic-management-views/system-dynamic-management-views.md)를 사용하여 Linux 프로세스 정보를 비롯한 SQL Server에 대한 다양한 유형의 정보를 수집할 수 있습니다. [쿼리 저장소](../relational-databases/performance/monitoring-performance-by-using-the-query-store.md)를 사용하여 쿼리 성능을 향상시킬 수 있습니다. 기본 제공 [성능 대시보드](https://blogs.msdn.microsoft.com/sql_server_team/new-in-ssms-performance-dashboard-built-in/) 등의 기타 도구는 Windows의 SSMS(SQL Server Management Studio)에서 원격으로 작동합니다.
+   [시스템 DMV(동적 관리 뷰)](../relational-databases/system-dynamic-management-views/system-dynamic-management-views.md)를 사용하여 Linux 프로세스 정보를 비롯한 SQL Server에 대한 다양한 유형의 정보를 수집할 수 있습니다. [쿼리 저장소](../relational-databases/performance/monitoring-performance-by-using-the-query-store.md)를 사용하여 쿼리 성능을 향상시킬 수 있습니다. 기본 제공 [성능 대시보드](/archive/blogs/sql_server_team/new-in-ssms-performance-dashboard-built-in) 등의 기타 도구는 Windows의 SSMS(SQL Server Management Studio)에서 원격으로 작동합니다.
 
    > [!TIP]
    > 성능을 향상시키는 한 가지 방법은 Linux 운영 체제와 SQL Server 인스턴스를 올바르게 구성하는 것입니다. 자세한 내용은 [SQL Server on Linux의 성능 모범 사례 및 구성 지침](sql-server-linux-performance-best-practices.md)을 참조하세요.
@@ -130,7 +130,7 @@ ms.locfileid: "88088905"
 
 1. **Linux의 SQL Server는 동일한 호스트에서 여러 인스턴스를 지원하나요?**
 
-   호스트에서 여러 컨테이너를 실행하여 여러 개의 고유 인스턴스를 유지하는 것이 좋습니다. docker를 사용하면 쉽게 이렇게 할 수 있지만, 컨테이너마다 다른 포트에서 수신해야 합니다. 자세한 내용은 [여러 SQL Server 컨테이너 실행](sql-server-linux-configure-docker.md#run-multiple-sql-server-containers)을 참조하세요.
+   호스트에서 여러 컨테이너를 실행하여 여러 개의 고유 인스턴스를 유지하는 것이 좋습니다. docker를 사용하면 쉽게 이렇게 할 수 있지만, 컨테이너마다 다른 포트에서 수신해야 합니다. 자세한 내용은 [여러 SQL Server 컨테이너 실행](./sql-server-linux-docker-container-deployment.md#multiple)을 참조하세요.
 
 1. **Linux에서 Active Directory 인증이 지원되나요?**
 

@@ -30,12 +30,12 @@ ms.assetid: f8fe26a9-7911-497e-b348-4e69c7435dc1
 author: rothja
 ms.author: jroth
 monikerRange: '>=aps-pdw-2016||=azuresqldb-current||=azure-sqldw-latest||>=sql-server-2016||=sqlallproducts-allversions||>=sql-server-linux-2017||=azuresqldb-mi-current'
-ms.openlocfilehash: 3e890507e66f328d513a270e0f9f6258d626d9aa
-ms.sourcegitcommit: 8f062015c2a033f5a0d805ee4adabbe15e7c8f94
+ms.openlocfilehash: 252fdfd8accd33d8081b7f0770eec3264391a278
+ms.sourcegitcommit: cfa04a73b26312bf18d8f6296891679166e2754d
 ms.translationtype: HT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 09/25/2020
-ms.locfileid: "91227257"
+ms.lasthandoff: 10/19/2020
+ms.locfileid: "92196695"
 ---
 # <a name="commit-transaction-transact-sql"></a>COMMIT TRANSACTION(Transact-SQL)
 [!INCLUDE [sql-asdb-asdbmi-asa-pdw](../../includes/applies-to-version/sql-asdb-asdbmi-asa-pdw.md)]
@@ -102,7 +102,7 @@ COMMIT [ TRAN | TRANSACTION ]
 
 다음 예에서는 작업 후보를 삭제합니다. AdventureWorks를 사용합니다. 
   
-```   
+```sql   
 BEGIN TRANSACTION;   
 DELETE FROM HumanResources.JobCandidate  
     WHERE JobCandidateID = 13;   
@@ -114,17 +114,17 @@ COMMIT TRANSACTION;
 
 다음 예에서는 테이블을 만들고 3단계로 중첩된 트랜잭션을 생성한 다음 중첩된 트랜잭션을 커밋합니다. 각 `COMMIT TRANSACTION` 문에는 *transaction_name* 매개 변수가 있지만, `COMMIT TRANSACTION` 및 `BEGIN TRANSACTION` 문 사이에는 아무 관계가 없습니다. *transaction_name* 매개 변수는 프로그래머가 올바른 수의 커밋이 `@@TRANCOUNT`에서 0까지 감소하여 외부 트랜잭션을 커밋하도록 코딩되었는지 확인하는 데 도움이 됩니다. 
   
-```   
+```sql   
 IF OBJECT_ID(N'TestTran',N'U') IS NOT NULL  
     DROP TABLE TestTran;  
 GO  
-CREATE TABLE TestTran (Cola int PRIMARY KEY, Colb char(3));  
+CREATE TABLE TestTran (Cola INT PRIMARY KEY, Colb CHAR(3));  
 GO  
 -- This statement sets @@TRANCOUNT to 1.  
 BEGIN TRANSACTION OuterTran;  
   
 PRINT N'Transaction count after BEGIN OuterTran = '  
-    + CAST(@@TRANCOUNT AS nvarchar(10));  
+    + CAST(@@TRANCOUNT AS NVARCHAR(10));  
  
 INSERT INTO TestTran VALUES (1, 'aaa');  
  
@@ -132,7 +132,7 @@ INSERT INTO TestTran VALUES (1, 'aaa');
 BEGIN TRANSACTION Inner1;  
  
 PRINT N'Transaction count after BEGIN Inner1 = '  
-    + CAST(@@TRANCOUNT AS nvarchar(10));  
+    + CAST(@@TRANCOUNT AS NVARCHAR(10));  
   
 INSERT INTO TestTran VALUES (2, 'bbb');  
   
@@ -140,7 +140,7 @@ INSERT INTO TestTran VALUES (2, 'bbb');
 BEGIN TRANSACTION Inner2;  
   
 PRINT N'Transaction count after BEGIN Inner2 = '  
-    + CAST(@@TRANCOUNT AS nvarchar(10));  
+    + CAST(@@TRANCOUNT AS NVARCHAR(10));  
   
 INSERT INTO TestTran VALUES (3, 'ccc');  
   
@@ -149,21 +149,21 @@ INSERT INTO TestTran VALUES (3, 'ccc');
 COMMIT TRANSACTION Inner2;  
  
 PRINT N'Transaction count after COMMIT Inner2 = '  
-    + CAST(@@TRANCOUNT AS nvarchar(10));  
+    + CAST(@@TRANCOUNT AS NVARCHAR(10));  
  
 -- This statement decrements @@TRANCOUNT to 1.  
 -- Nothing is committed.  
 COMMIT TRANSACTION Inner1;  
  
 PRINT N'Transaction count after COMMIT Inner1 = '  
-    + CAST(@@TRANCOUNT AS nvarchar(10));  
+    + CAST(@@TRANCOUNT AS NVARCHAR(10));  
   
 -- This statement decrements @@TRANCOUNT to 0 and  
 -- commits outer transaction OuterTran.  
 COMMIT TRANSACTION OuterTran;  
   
 PRINT N'Transaction count after COMMIT OuterTran = '  
-    + CAST(@@TRANCOUNT AS nvarchar(10));  
+    + CAST(@@TRANCOUNT AS NVARCHAR(10));  
 ```  
   
 ## <a name="see-also"></a>참고 항목  

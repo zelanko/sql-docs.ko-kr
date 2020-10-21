@@ -20,12 +20,12 @@ helpviewer_keywords:
 ms.assetid: b5a121a1-b87c-441b-a42c-2cec628dc81c
 author: chugugrace
 ms.author: chugu
-ms.openlocfilehash: 6eaaacea73d119961f7db31e75ba7089387674c2
-ms.sourcegitcommit: e700497f962e4c2274df16d9e651059b42ff1a10
+ms.openlocfilehash: fd3951ce785fc8444009a0af9442a85a41b0fbfa
+ms.sourcegitcommit: cfa04a73b26312bf18d8f6296891679166e2754d
 ms.translationtype: HT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 08/17/2020
-ms.locfileid: "88484254"
+ms.lasthandoff: 10/19/2020
+ms.locfileid: "92193164"
 ---
 # <a name="design-time-methods-of-a-data-flow-component"></a>데이터 흐름 구성 요소의 디자인 타임 메서드
 
@@ -105,7 +105,7 @@ customProperty.TypeConverter = GetType(MyValidValues).AssemblyQualifiedName
 customProperty.Value = MyValidValues.ValueOne  
 ```  
   
- 자세한 내용은 [MSDN Library](https://go.microsoft.com/fwlink/?LinkId=7022)의 "일반화된 형식 변환" 및 "방법: 형식 변환기 구현"을 참조하세요.  
+ 자세한 내용은 [MSDN Library](../../../sql-server/index.yml)의 "일반화된 형식 변환" 및 "방법: 형식 변환기 구현"을 참조하세요.  
   
  다음 예와 같이 <xref:Microsoft.SqlServer.Dts.Pipeline.Wrapper.IDTSCustomProperty100.UITypeEditor%2A> 속성을 사용하여 사용자 지정 속성의 값에 사용자 지정 편집기 대화 상자를 지정할 수 있습니다. 요구 사항에 맞는 기존 UI 형식 편집기 클래스를 찾을 수 없는 경우 먼저 **System.Drawing.Design.UITypeEditor**에서 상속하는 사용자 지정 형식 편집기를 만들어야 합니다.  
   
@@ -139,9 +139,8 @@ customProperty.Name = "My Custom Property"
 customProperty.UITypeEditor = GetType(MyCustomTypeEditor).AssemblyQualifiedName  
 ```  
   
- 자세한 내용은 [MSDN Library](https://go.microsoft.com/fwlink/?LinkId=7022)의 "방법: UI 형식 편집기 구현"을 참조하세요.  
+ 자세한 내용은 [MSDN Library](../../../sql-server/index.yml)의 "방법: UI 형식 편집기 구현"을 참조하세요.  
   
 ## <a name="see-also"></a>참고 항목  
  [데이터 흐름 구성 요소의 런타임 메서드](../../../integration-services/extending-packages-custom-objects/data-flow/run-time-methods-of-a-data-flow-component.md)  
-  
   

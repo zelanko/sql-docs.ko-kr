@@ -14,12 +14,12 @@ ms.assetid: caa4f4a1-fd54-466e-975d-3e7e1cc5de54
 author: stevestein
 ms.author: sstein
 monikerRange: =azuresqldb-current||>=sql-server-2016||=sqlallproducts-allversions||>=sql-server-linux-2017||=azuresqldb-mi-current
-ms.openlocfilehash: a5bff24a63829f1820048bf371f4be497a95f6c7
-ms.sourcegitcommit: da88320c474c1c9124574f90d549c50ee3387b4c
+ms.openlocfilehash: 7b4588b18973beca0890b44ed1af0551d6bba0fe
+ms.sourcegitcommit: cfa04a73b26312bf18d8f6296891679166e2754d
 ms.translationtype: HT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 07/01/2020
-ms.locfileid: "85756239"
+ms.lasthandoff: 10/19/2020
+ms.locfileid: "92196755"
 ---
 # <a name="database-object-extended-properties-page"></a>데이터베이스 개체(확장 속성 페이지)
 [!INCLUDE [SQL Server Azure SQL Database](../../includes/applies-to-version/sql-asdb.md)]
@@ -42,6 +42,5 @@ ms.locfileid: "85756239"
  선택한 확장 속성을 제거합니다.  
   
 ## <a name="see-also"></a>참고 항목  
- [확장 속성 카탈로그 뷰&#40;Transact-SQL&#41;](https://msdn.microsoft.com/library/f39fd324-efd4-4468-884c-bf77ed1a026f)  
-  
+ [확장 속성 카탈로그 뷰&#40;Transact-SQL&#41;](../system-catalog-views/catalog-views-transact-sql.md)  
   

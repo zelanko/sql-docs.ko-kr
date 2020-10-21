@@ -19,12 +19,12 @@ helpviewer_keywords:
 ms.assetid: b9a2e460-cdbc-458f-8df8-06b8b2de3d67
 author: chugugrace
 ms.author: chugu
-ms.openlocfilehash: 919b6b31618b1fcf36f0834aa6a3c5c2436c198b
-ms.sourcegitcommit: e700497f962e4c2274df16d9e651059b42ff1a10
+ms.openlocfilehash: 3421b1c839504c01ecb256530cb579c18f043b86
+ms.sourcegitcommit: cfa04a73b26312bf18d8f6296891679166e2754d
 ms.translationtype: HT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 08/17/2020
-ms.locfileid: "88484532"
+ms.lasthandoff: 10/19/2020
+ms.locfileid: "92192803"
 ---
 # <a name="transfer-database-task"></a>데이터베이스 전송 태스크
 
@@ -47,7 +47,7 @@ ms.locfileid: "88484532"
 ## <a name="execution-value"></a>실행 값  
  다른 전송 태스크와 달리 데이터베이스 전송 태스크는 한 개의 데이터베이스만 전송할 수 있으므로 태스크의 **ExecutionValue** 속성에 정의된 실행 값은 1을 반환합니다.  
   
- 데이터베이스 전송 태스크의 **ExecValueVariable** 속성에 사용자 정의 변수를 할당하면 패키지 내의 다른 개체에서 오류 메시지 전송에 대한 정보를 사용할 수 있습니다. 자세한 내용은 [Integration Services&#40;SSIS&#41; 변수](../../integration-services/integration-services-ssis-variables.md) 및 [패키지에서 변수 사용](https://msdn.microsoft.com/library/7742e92d-46c5-4cc4-b9a3-45b688ddb787)을 참조하세요.  
+ 데이터베이스 전송 태스크의 **ExecValueVariable** 속성에 사용자 정의 변수를 할당하면 패키지 내의 다른 개체에서 오류 메시지 전송에 대한 정보를 사용할 수 있습니다. 자세한 내용은 [Integration Services&#40;SSIS&#41; 변수](../../integration-services/integration-services-ssis-variables.md) 및 [패키지에서 변수 사용](../integration-services-ssis-variables.md)을 참조하세요.  
   
 ## <a name="log-entries"></a>로그 항목  
  데이터베이스 전송 태스크는 다음 사용자 지정 로그 항목을 포함합니다.  
@@ -84,7 +84,7 @@ ms.locfileid: "88484532"
   
  [!INCLUDE[ssIS](../../includes/ssis-md.md)] 디자이너에서 이러한 속성을 설정하는 방법을 보려면 다음 항목을 클릭하십시오.  
   
--   [태스크 또는 컨테이너의 속성 설정](https://msdn.microsoft.com/library/52d47ca4-fb8c-493d-8b2b-48bb269f859b)  
+-   [태스크 또는 컨테이너의 속성 설정](./add-or-delete-a-task-or-a-container-in-a-control-flow.md)  
   
 ## <a name="programmatic-configuration-of-the-transfer-database-task"></a>데이터베이스 전송 태스크의 프로그래밍 방식 구성  
  이러한 속성을 프로그래밍 방식으로 설정하는 방법을 보려면 다음 항목을 클릭하십시오.  
@@ -210,4 +210,4 @@ ms.locfileid: "88484532"
   
  네트워크 파일 공유 위치를 입력하거나 찾아보기를 클릭하여 네트워크 파일 공유 위치를 찾습니다.  
   
- 오프라인 모드에서 데이터베이스를 전송할 때는 데이터베이스 파일이 **대상 폴더** 위치에 전송되기 전에 **네트워크 파일 공유** 위치에 복사됩니다.  
+ 오프라인 모드에서 데이터베이스를 전송할 때는 데이터베이스 파일이 **대상 폴더** 위치에 전송되기 전에 **네트워크 파일 공유** 위치에 복사됩니다.

@@ -26,12 +26,12 @@ ms.assetid: f93c662e-f405-486e-bf23-a2d03907b5bd
 author: rothja
 ms.author: jroth
 monikerRange: '>=aps-pdw-2016||=azuresqldb-current||=azure-sqldw-latest||>=sql-server-2016||=sqlallproducts-allversions||>=sql-server-linux-2017||=azuresqldb-mi-current'
-ms.openlocfilehash: a3c5c380472013176cdbe7ff745c588107d216b9
-ms.sourcegitcommit: e700497f962e4c2274df16d9e651059b42ff1a10
+ms.openlocfilehash: 284d4110c4c0a2b8b4b7a1c26c4a4148fb5c50a6
+ms.sourcegitcommit: cfa04a73b26312bf18d8f6296891679166e2754d
 ms.translationtype: HT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 08/17/2020
-ms.locfileid: "88467638"
+ms.lasthandoff: 10/19/2020
+ms.locfileid: "92193333"
 ---
 # <a name="-modulus-transact-sql"></a>%(모듈러스)(Transact-SQL)
 [!INCLUDE [sql-asdb-asdbmi-asa-pdw](../../includes/applies-to-version/sql-asdb-asdbmi-asa-pdw.md)]
@@ -42,7 +42,7 @@ ms.locfileid: "88467638"
   
 ## <a name="syntax"></a>구문  
   
-```  
+```syntaxsql  
 dividend % divisor  
 ```  
   
@@ -66,18 +66,18 @@ dividend % divisor
 ### <a name="a-simple-example"></a>A. 간단한 예  
  다음 예에서는 숫자 38을 5로 나눕니다. 결과의 정수 부분은 7이며 나머지 3을 반환하는 모듈로를 보여 줍니다.  
   
-```  
+```sql  
 SELECT 38 / 5 AS Integer, 38 % 5 AS Remainder;
 ```  
   
 ### <a name="b-example-using-columns-in-a-table"></a>B. 테이블에서 열을 사용한 예  
  다음 예에서는 제품 ID 수, 제품 단가 및 정수 값으로 변환된 각 제품의 가격을 주문한 제품의 수로 나눈 모듈로(나머지)를 반환합니다.  
   
-```  
+```sql  
 -- Uses AdventureWorks  
   
 SELECT TOP(100)ProductID, UnitPrice, OrderQty,  
-   CAST((UnitPrice) AS int) % OrderQty AS Modulo  
+   CAST((UnitPrice) AS INT) % OrderQty AS Modulo  
 FROM Sales.SalesOrderDetail;  
 GO  
 ```  
@@ -87,7 +87,7 @@ GO
 ### <a name="c-simple-example"></a>C: 간단한 예  
  다음 예제에서는 3을 2로 나눌 때 `%` 연산자에 대한 결과를 보여 줍니다.  
   
-```  
+```sql  
 -- Uses AdventureWorks  
   
 SELECT TOP(1) 3%2 FROM dimEmployee;  

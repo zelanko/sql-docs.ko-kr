@@ -23,12 +23,12 @@ ms.assetid: 52dd29ab-25d7-4fd3-a960-ac55c30c9ea9
 author: rothja
 ms.author: jroth
 monikerRange: '>=aps-pdw-2016||=azuresqldb-current||=azure-sqldw-latest||>=sql-server-2016||=sqlallproducts-allversions||>=sql-server-linux-2017||=azuresqldb-mi-current'
-ms.openlocfilehash: 9c99677be10dd8931be10c5902db036769312fd6
-ms.sourcegitcommit: 8f062015c2a033f5a0d805ee4adabbe15e7c8f94
+ms.openlocfilehash: a78db68519a0c4aa3a47f1ebaf27e7122a4ca598
+ms.sourcegitcommit: cfa04a73b26312bf18d8f6296891679166e2754d
 ms.translationtype: HT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 09/25/2020
-ms.locfileid: "91227378"
+ms.lasthandoff: 10/19/2020
+ms.locfileid: "92191430"
 ---
 # <a name="while-transact-sql"></a>WHILE(Transact-SQL)
 [!INCLUDE [sql-asdb-asdbmi-asa-pdw](../../includes/applies-to-version/sql-asdb-asdbmi-asa-pdw.md)]
@@ -79,7 +79,7 @@ WHILE Boolean_expression
 ### <a name="a-using-break-and-continue-with-nested-ifelse-and-while"></a>A. 중첩된 IF...ELSE 및 WHILE에서 BREAK 및 CONTINUE 사용  
  다음 예에서는 제품의 평균 정가가 `$300` 미만인 경우 `WHILE` 루프가 가격을 두 배로 한 다음 최대 가격을 선택합니다. 최대 가격이 `$500` 이하인 경우 `WHILE` 루프가 다시 시작되어 가격을 다시 두 배로 만듭니다. 이 루프는 최대 가격이 `$500`를 초과할 때까지 가격을 계속 두 배로 만든 다음 `WHILE` 루프를 종료하고 메시지를 출력합니다.  
   
-```  
+```sql  
 USE AdventureWorks2012;  
 GO  
 WHILE (SELECT AVG(ListPrice) FROM Production.Product) < $300  
@@ -98,9 +98,9 @@ PRINT 'Too much for the market to bear';
 ### <a name="b-using-while-in-a-cursor"></a>B. 커서에 WHILE 사용  
  다음 예에서는 `@@FETCH_STATUS`를 사용하여 `WHILE` 루프에서 커서 작업을 제어합니다.  
   
-```  
-DECLARE @EmployeeID as nvarchar(256)
-DECLARE @Title as nvarchar(50)
+```sql  
+DECLARE @EmployeeID as NVARCHAR(256)
+DECLARE @Title as NVARCHAR(50)
 
 DECLARE Employee_Cursor CURSOR FOR  
 SELECT LoginID, JobTitle   
@@ -123,7 +123,7 @@ GO
 ### <a name="c-simple-while-loop"></a>C: 단순 While 루프  
  다음 예에서는 제품의 평균 정가가 `$300` 미만인 경우 `WHILE` 루프가 가격을 두 배로 한 다음 최대 가격을 선택합니다. 최대 가격이 `$500` 이하인 경우 `WHILE` 루프가 다시 시작되어 가격을 다시 두 배로 만듭니다. 최대 가격이 `$500`를 초과할 때까지 이 루프는 가격을 계속 두 배로 늘린 다음, `WHILE` 루프를 종료합니다.  
   
-```  
+```sql  
 -- Uses AdventureWorks  
   
 WHILE ( SELECT AVG(ListPrice) FROM dbo.DimProduct) < $300  
@@ -134,7 +134,6 @@ BEGIN
     IF ( SELECT MAX (ListPrice) FROM dbo.DimProduct) > $500  
         BREAK;  
 END  
-  
 ```  
   
 ## <a name="see-also"></a>관련 항목  

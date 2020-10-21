@@ -11,12 +11,12 @@ ms.topic: conceptual
 ms.assetid: 339ec0a8-922e-48c0-97b3-fc5ee34f95e3
 author: chugugrace
 ms.author: chugu
-ms.openlocfilehash: fbcb0fa1f7618a7cf6d2a78b18d9193e09f81f02
-ms.sourcegitcommit: e700497f962e4c2274df16d9e651059b42ff1a10
+ms.openlocfilehash: 6ea049a657b5d0392841f8bd6e44954d2774c13c
+ms.sourcegitcommit: cfa04a73b26312bf18d8f6296891679166e2754d
 ms.translationtype: HT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 08/17/2020
-ms.locfileid: "88495850"
+ms.lasthandoff: 10/19/2020
+ms.locfileid: "92193233"
 ---
 # <a name="load-data-by-using-the-odbc-destination"></a>ODBC 대상을 사용하여 데이터 로드
 
@@ -56,8 +56,7 @@ ms.locfileid: "88495850"
 12. 업데이트된 패키지를 저장하려면 **파일** 메뉴에서 **선택한 항목 저장** 을 클릭합니다.  
   
 ## <a name="see-also"></a>참고 항목  
- [ODBC 대상 편집기&#40;연결 관리자 페이지&#41;](../../integration-services/data-flow/odbc-destination-editor-connection-manager-page.md)   
- [ODBC 대상 편집기&#40;매핑 페이지&#41;](../../integration-services/data-flow/odbc-destination-editor-mappings-page.md)   
- [ODBC 원본 편집기&#40;오류 출력 페이지&#41;](../../integration-services/data-flow/odbc-source-editor-error-output-page.md)  
-  
+ [ODBC 대상 편집기&#40;연결 관리자 페이지&#41;](./odbc-destination.md)   
+ [ODBC 대상 편집기&#40;매핑 페이지&#41;](./odbc-destination.md)   
+ [ODBC 원본 편집기&#40;오류 출력 페이지&#41;](./odbc-source.md)  
   

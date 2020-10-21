@@ -21,12 +21,12 @@ helpviewer_keywords:
 ms.assetid: 9266bc64-7e1a-4e78-913b-a8deaa9843bf
 author: chugugrace
 ms.author: chugu
-ms.openlocfilehash: 666e61788f402d405354f21bf583aa3f2e0b8286
-ms.sourcegitcommit: e700497f962e4c2274df16d9e651059b42ff1a10
+ms.openlocfilehash: f7dea5e9016b9168131c5b809e9f1776dbbd1236
+ms.sourcegitcommit: cfa04a73b26312bf18d8f6296891679166e2754d
 ms.translationtype: HT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 08/17/2020
-ms.locfileid: "88449822"
+ms.lasthandoff: 10/19/2020
+ms.locfileid: "92193860"
 ---
 # <a name="integration-services-ssis-packages"></a>Integration Services(SSIS) 패키지
 
@@ -61,7 +61,7 @@ ms.locfileid: "88449822"
 ### <a name="configurations"></a>구성  
  구성은 패키지와 해당 태스크의 속성, 컨테이너, 변수, 연결 및 패키지 실행 시의 이벤트 처리기를 정의하는 속성-값 쌍의 집합입니다. 구성을 사용하면 패키지를 수정하지 않아도 속성을 업데이트할 수 있습니다. 패키지를 실행하면 구성 정보가 로드되어 속성 값을 업데이트합니다. 예를 들어 구성은 연결의 연결 문자열을 업데이트할 수 있습니다.  
   
- 다른 컴퓨터에 패키지를 설치하면 구성이 저장되어 패키지와 함께 배포됩니다. 패키지를 설치할 때 구성의 값을 업데이트하여 다른 환경에서 패키지를 지원할 수 있습니다. 자세한 내용은 [패키지 구성 만들기](../integration-services/packages/create-package-configurations.md)를 참조하세요.  
+ 다른 컴퓨터에 패키지를 설치하면 구성이 저장되어 패키지와 함께 배포됩니다. 패키지를 설치할 때 구성의 값을 업데이트하여 다른 환경에서 패키지를 지원할 수 있습니다. 자세한 내용은 [패키지 구성 만들기](./packages/legacy-package-deployment-ssis.md)를 참조하세요.  
   
 ### <a name="logging-and-log-providers"></a>로깅 및 로그 공급자  
  로그는 패키지 실행 시 수집되는 패키지에 대한 정보 컬렉션입니다. 예를 들어 로그는 패키지 실행의 시작 시간과 종료 시간을 제공할 수 있습니다. 로그 공급자는 패키지와 해당 컨테이너 및 태스크가 런타임 정보를 기록하는 데 사용할 수 있는 대상 유형과 형식을 정의합니다. 로그는 패키지와 연결되지만 패키지의 태스크와 컨테이너는 임의의 패키지 로그에 정보를 기록할 수 있습니다. [!INCLUDE[ssISnoversion](../includes/ssisnoversion-md.md)] 에는 로깅을 위한 다양한 기본 제공 로그 공급자가 포함되어 있습니다. 예를 들어 [!INCLUDE[ssISnoversion](../includes/ssisnoversion-md.md)] 에는 [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)] 에 대한 로그 공급자와 텍스트 파일이 있습니다. 사용자 지정 로그 공급자를 만들어 로깅에 사용할 수도 있습니다. 자세한 내용은 [Integration Services&#40;SSIS&#41; 로깅](../integration-services/performance/integration-services-ssis-logging.md)을 참조하세요.  
@@ -117,5 +117,4 @@ ms.locfileid: "88449822"
 -   [SQL Server Data Tools에서 패키지 만들기](../integration-services/create-packages-in-sql-server-data-tools.md)  
   
 -   개발자 가이드의 [프로그래밍 방식으로 패키지 작성](../integration-services/building-packages-programmatically/building-packages-programmatically.md)을 참조하세요. 
-  
   

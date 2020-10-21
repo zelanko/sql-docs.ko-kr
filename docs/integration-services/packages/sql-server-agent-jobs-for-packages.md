@@ -16,12 +16,12 @@ helpviewer_keywords:
 ms.assetid: ecf7a5f9-b8a7-47f1-9ac0-bac07cb89e31
 author: chugugrace
 ms.author: chugu
-ms.openlocfilehash: 83eaa525c9cfa6ca80be2712fd0d21e42cc4f180
-ms.sourcegitcommit: e700497f962e4c2274df16d9e651059b42ff1a10
+ms.openlocfilehash: 04007ee3165838669fd1b0faefdcb20d09940af7
+ms.sourcegitcommit: cfa04a73b26312bf18d8f6296891679166e2754d
 ms.translationtype: HT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 08/17/2020
-ms.locfileid: "88425195"
+ms.lasthandoff: 10/19/2020
+ms.locfileid: "92192475"
 ---
 # <a name="sql-server-agent-jobs-for-packages"></a>패키지에 대한 SQL Server 에이전트 작업
 
@@ -45,17 +45,17 @@ ms.locfileid: "88425195"
 -   [예약 패키지 문제 해결](#trouble)  
   
 ##  <a name="scheduling-jobs-in-sql-server-agent"></a><a name="jobs"></a> Scheduling Jobs in SQL Server Agent  
- [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 에이전트는 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 에이전트 작업을 실행하여 태스크를 자동화 및 예약할 수 있도록 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 에서 설치하는 서비스입니다. [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 에이전트 서비스가 실행되고 있어야만 작업이 자동으로 실행될 수 있습니다. 자세한 내용은 [Configure SQL Server Agent](https://docs.microsoft.com/sql/ssms/agent/configure-sql-server-agent)을 참조하세요.  
+ [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 에이전트는 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 에이전트 작업을 실행하여 태스크를 자동화 및 예약할 수 있도록 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 에서 설치하는 서비스입니다. [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 에이전트 서비스가 실행되고 있어야만 작업이 자동으로 실행될 수 있습니다. 자세한 내용은 [Configure SQL Server Agent](../../ssms/agent/configure-sql-server-agent.md)을 참조하세요.  
   
  **SQL Server 에이전트** 노드는 [!INCLUDE[ssManStudioFull](../../includes/ssmanstudiofull-md.md)] 인스턴스에 연결하면 [!INCLUDE[ssDEnoversion](../../includes/ssdenoversion-md.md)]의 개체 탐색기에 표시됩니다.  
   
- 되풀이 태스크를 자동화하려면 **새 작업** 대화 상자를 사용하여 작업을 만들어야 합니다. 자세한 내용은 [작업 구현](https://docs.microsoft.com/sql/ssms/agent/implement-jobs)을 참조하세요.  
+ 되풀이 태스크를 자동화하려면 **새 작업** 대화 상자를 사용하여 작업을 만들어야 합니다. 자세한 내용은 [작업 구현](../../ssms/agent/implement-jobs.md)을 참조하세요.  
   
- 작업을 만든 후 하나 이상의 단계를 추가해야 합니다. 한 개의 작업은 각각 다른 태스크를 수행하는 여러 단계를 포함할 수 있습니다. 자세한 내용은 [Manage Job Steps](https://docs.microsoft.com/sql/ssms/agent/manage-job-steps)을(를) 참조하세요.  
+ 작업을 만든 후 하나 이상의 단계를 추가해야 합니다. 한 개의 작업은 각각 다른 태스크를 수행하는 여러 단계를 포함할 수 있습니다. 자세한 내용은 [Manage Job Steps](../../ssms/agent/manage-job-steps.md)을(를) 참조하세요.  
   
- 작업 및 작업 단계를 만든 다음에는 작업을 실행하는 일정을 만들 수 있습니다. 그러나 수동으로 실행되는 예약되지 않은 작업도 만들 수 있습니다. 자세한 내용은 [일정을 만들고 작업에 연결](https://docs.microsoft.com/sql/ssms/agent/create-and-attach-schedules-to-jobs)을 참조하세요.  
+ 작업 및 작업 단계를 만든 다음에는 작업을 실행하는 일정을 만들 수 있습니다. 그러나 수동으로 실행되는 예약되지 않은 작업도 만들 수 있습니다. 자세한 내용은 [일정을 만들고 작업에 연결](../../ssms/agent/create-and-attach-schedules-to-jobs.md)을 참조하세요.  
   
- 작업을 종료하거나 경고를 추가할 때 전자 메일 메시지를 보낼 운영자를 지정하는 등의 알림 옵션 설정으로 작업을 향상시킬 수 있습니다. 자세한 내용은 [경고](https://docs.microsoft.com/sql/ssms/agent/alerts)를 참조하세요.  
+ 작업을 종료하거나 경고를 추가할 때 전자 메일 메시지를 보낼 운영자를 지정하는 등의 알림 옵션 설정으로 작업을 향상시킬 수 있습니다. 자세한 내용은 [경고](../../ssms/agent/alerts.md)를 참조하세요.  
   
 ##  <a name="scheduling-integration-services-packages"></a><a name="packages"></a> Scheduling Integration Services Packages  
  [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 에이전트 작업을 만들어 [!INCLUDE[ssISnoversion](../../includes/ssisnoversion-md.md)] 패키지를 예약한 경우 **SQL Server Integration Services 패키지**에 하나 이상의 단계를 추가하고 단계 유형을 설정해야 합니다. 한 개의 작업은 각각 다른 패키지를 실행하는 여러 단계를 포함할 수 있습니다.  
@@ -64,14 +64,14 @@ ms.locfileid: "88425195"
   
  자세한 내용은 [SQL Server 에이전트를 사용하여 패키지 예약](#schedule)을 참조하세요.  
   
- [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 에이전트를 사용하여 패키지를 실행하는 방법을 보여 주는 비디오는 MSDN 라이브러리의 비디오 홈페이지에서 [방법: SQL Server 에이전트를 사용하여 패키지 실행 자동화(SQL Server 비디오)](https://go.microsoft.com/fwlink/?LinkId=141771)를 참조하세요.  
+ [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 에이전트를 사용하여 패키지를 실행하는 방법을 보여 주는 비디오는 MSDN 라이브러리의 비디오 홈페이지에서 [방법: SQL Server 에이전트를 사용하여 패키지 실행 자동화(SQL Server 비디오)](/previous-versions/sql/sql-server-2008/dd440761(v=sql.100))를 참조하세요.  
   
 ##  <a name="troubleshooting"></a><a name="trouble"></a> 문제 해결  
  [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 및 커맨드 라인에서 패키지가 성공적으로 실행되더라도 [!INCLUDE[ssBIDevStudioFull](../../includes/ssbidevstudiofull-md.md)] 에이전트 작업 단계를 시작하지 못할 수 있습니다. 이 문제에 대한 몇 가지 일반적인 이유와 권장 솔루션이 있습니다. 자세한 내용은 다음 리소스를 참조하세요.  
   
 -   [!INCLUDE[msCoName](../../includes/msconame-md.md)] 기술 자료 문서 - [SQL Server 에이전트 작업 단계에서 SSIS 패키지를 호출할 때 SSIS 패키지가 실행되지 않는다](https://support.microsoft.com/kb/918760)  
   
--   MSDN Library의 비디오 - [문제 해결: SQL Server 에이전트를 사용하여 패키지 실행(SQL Server 비디오)](https://go.microsoft.com/fwlink/?LinkId=141772).  
+-   MSDN Library의 비디오 - [문제 해결: SQL Server 에이전트를 사용하여 패키지 실행(SQL Server 비디오)](/previous-versions/sql/sql-server-2008/dd440760(v=sql.100)).  
   
  [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 에이전트 작업 단계에서 패키지를 시작한 후에 패키지 실행이 실패하거나 패키지가 성공적으로 실행되더라도 예기치 않은 결과가 발생할 수 있습니다. 이 문제를 해결하려면 다음 도구를 사용합니다.  
   
@@ -137,7 +137,7 @@ ms.locfileid: "88425195"
 
         > **참고:** 프록시 계정에 사용하는 자격 증명의 암호가 변경되면 자격 증명 암호를 업데이트해야 합니다. 그렇지 않으면 작업 단계가 실패합니다.  
 
-        SQL Server 에이전트 서비스 계정을 구성하는 방법에 대한 자세한 내용은 [SQL Server 에이전트의 서비스 시작 계정 설정&#40;SQL Server 구성 관리자&#41;](https://msdn.microsoft.com/library/46ffe818-ebb5-43a0-840b-923f219a2472)을 참조하세요.  
+        SQL Server 에이전트 서비스 계정을 구성하는 방법에 대한 자세한 내용은 [SQL Server 에이전트의 서비스 시작 계정 설정&#40;SQL Server 구성 관리자&#41;](../../ssms/agent/set-service-startup-account-sql-server-agent-sql-server-configuration-manager.md)을 참조하세요.  
 
 8.  **패키지 원본** 목록 상자에서 패키지의 원본을 클릭하고 작업 단계의 옵션을 구성합니다.  
   
@@ -182,7 +182,7 @@ ms.locfileid: "88425195"
     ||**암호**|  
     ||**패키지**<br /><br /> 줄임표 단추를 클릭하고 패키지를 선택합니다.<br /><br /> **개체 탐색기** 에서 **저장된 패키지**노드의 하위 폴더에 있는 패키지를 선택합니다.|  
     |**패키지**<br /><br /> 파일 시스템에 저장된 패키지의 탭 옵션입니다.|**패키지**<br /><br /> 패키지 파일의 전체 경로를 입력하거나 줄임표 단추를 클릭한 다음 패키지를 선택합니다.|  
-    |**구성**|특정 구성으로 패키지를 실행할 XML 구성 파일을 추가합니다. 패키지 구성을 사용하여 런타임 시 패키지 속성 값을 업데이트합니다.<br /><br /> 이 옵션은 **dtexec** 의 **/ConfigFile**옵션에 해당합니다.<br /><br /> 패키지 구성이 적용되는 방법을 이해하려면 [Package Configurations](../../integration-services/packages/package-configurations.md)을 참조하십시오. 패키지 구성을 만드는 방법은 [Create Package Configurations](../../integration-services/packages/create-package-configurations.md)를 참조하십시오.|  
+    |**구성**|특정 구성으로 패키지를 실행할 XML 구성 파일을 추가합니다. 패키지 구성을 사용하여 런타임 시 패키지 속성 값을 업데이트합니다.<br /><br /> 이 옵션은 **dtexec** 의 **/ConfigFile**옵션에 해당합니다.<br /><br /> 패키지 구성이 적용되는 방법을 이해하려면 [Package Configurations](./legacy-package-deployment-ssis.md)을 참조하십시오. 패키지 구성을 만드는 방법은 [Create Package Configurations](./legacy-package-deployment-ssis.md)를 참조하십시오.|  
     |**명령 파일**|**dtexec**에 실행할 추가 옵션을 별도 파일에 지정합니다.<br /><br /> 예를 들어 패키지를 실행하는 동안 하나 이상의 지정된 이벤트가 발생하는 경우 디버그 덤프 파일을 생성하려면 /Dump *errorcode* 옵션을 포함하는 파일을 포함할 수 있습니다.<br /><br /> **명령 파일** 옵션을 사용하면 여러 파일을 만들어서 적절한 파일을 지정하는 방법으로 한 패키지에 대해 다른 옵션 집합을 실행할 수 있습니다.<br /><br /> **명령 파일** 옵션은 **dtexec** 의 **/CommandFile**옵션에 해당합니다.|  
     |**데이터 원본**|패키지에 포함된 연결 관리자를 봅니다. 연결 문자열을 수정하려면 연결 관리자를 클릭하고 연결 문자열을 클릭합니다.<br /><br /> 이 옵션은 **dtexec** 의 **/Connection**옵션에 해당합니다.|  
     |**실행 옵션**|**유효성 검사 경고 발생 시 패키지 실패**<br /> 경고 메시지가 오류로 간주되는지 여부를 나타냅니다. 이 옵션을 선택하고 유효성 검사 중 경고가 발생하면 패키지는 유효성 검사 중 실패합니다. 이 옵션은 **dtexec** 의 **/WarnAsError**옵션에 해당합니다.<br /><br /> **패키지를 실행하지 않고 유효성 검사**<br /> 유효성 검사 단계 후에 실제로 패키지를 실행하지 않고 패키지 실행을 중지할지 여부를 나타냅니다. 이 옵션은 **dtexec** 의 **/Validate**옵션에 해당합니다.<br /><br /> **MacConcurrentExecutables 속성 무시**<br /> 패키지에서 동시에 실행할 수 있는 실행 파일 수를 지정합니다. -1 값은 패키지가 실행할 수 있는 최대 파일 수가 패키지를 실행하는 컴퓨터의 프로세서 총 수에 2를 더한 값과 같음을 의미합니다. 이 옵션은 **dtexec** 의 **/MaxConcurrent**옵션에 해당합니다.<br /><br /> **패키지 검사점 사용**<br /> 패키지 실행 중 검사점 사용 여부를 나타냅니다. 자세한 내용은 [검사점을 사용하여 패키지 다시 시작](../../integration-services/packages/restart-packages-by-using-checkpoints.md)을 참조하세요.<br /><br /> 이 옵션은 **dtexec** 의 **/CheckPointing**옵션에 해당합니다.<br /><br /> **다시 시작 옵션 무시**<br /> 패키지의 **CheckpointUsage** 속성에 대해 새 값이 설정되었는지를 나타냅니다. **다시 시작 옵션** 목록 상자에서 값을 선택합니다.<br /><br /> 이 옵션은 **dtexec** 의 **/Restart**옵션에 해당합니다.<br /><br /> **32비트 런타임 사용**<br /> 64비트 버전의 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 및 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 에이전트가 설치된 64비트 컴퓨터에서 32비트 버전의 dtexec 유틸리티를 사용하는 패키지의 실행 여부를 나타냅니다.<br /><br /> 예를 들어 64비트 버전에서 사용할 수 없는 네이티브 OLE DB 공급자를 패키지에서 사용하는 경우 32비트 버전의 dtexec를 사용하여 패키지를 실행해야 합니다. 자세한 내용은 [Integration Services에 대한 64비트 고려 사항](https://msdn.microsoft.com/library/ms141766\(SQL.105\).aspx)을 참조하십시오.<br /><br /> 기본적으로 **SQL Server Integration Services 패키지** 작업 단계 유형을 선택하면 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 에이전트는 시스템에서 자동으로 호출된 dtexec 유틸리티 버전을 사용하여 패키지를 실행합니다. 시스템은 컴퓨터 프로세서와 컴퓨터에서 실행 중인 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 및 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 에이전트 버전에 따라 32비트 또는 64비트 버전 유틸리티를 호출합니다.|  
@@ -212,14 +212,13 @@ ms.locfileid: "88425195"
   
 -   [웹 사이트의 기술 자료 문서 -](https://support.microsoft.com/kb/918760)SQL Server 에이전트 작업 단계에서 SSIS 패키지를 호출할 때 SSIS 패키지가 실행되지 않는다 [!INCLUDE[msCoName](../../includes/msconame-md.md)]  
   
--   MSDN Library의 비디오 - [문제 해결: SQL Server 에이전트를 사용하여 패키지 실행(SQL Server 비디오)](https://go.microsoft.com/fwlink/?LinkId=141772)  
+-   MSDN Library의 비디오 - [문제 해결: SQL Server 에이전트를 사용하여 패키지 실행(SQL Server 비디오)](/previous-versions/sql/sql-server-2008/dd440760(v=sql.100))  
   
--   MSDN Library의 비디오 - [방법: SQL Server 에이전트를 사용하여 패키지 실행 자동화(SQL Server 비디오)](https://go.microsoft.com/fwlink/?LinkId=141771)  
+-   MSDN Library의 비디오 - [방법: SQL Server 에이전트를 사용하여 패키지 실행 자동화(SQL Server 비디오)](/previous-versions/sql/sql-server-2008/dd440761(v=sql.100))  
   
 -   mssqltips.com의 기술 문서 - [Windows PowerShell을 사용하여 SQL Server 에이전트 작업 확인(Checking SQL Server Agent jobs using Windows PowerShell)](https://go.microsoft.com/fwlink/?LinkId=165675)  
   
 -   mssqltips.com의 기술 문서 - [SQL 에이전트 작업 설정 또는 해제 시 자동 경고](https://go.microsoft.com/fwlink/?LinkId=165676)  
   
 -   mssqltips.com의 블로그 항목 - [Windows 이벤트 로그에 쓰도록 SQL 에이전트 작업 구성](https://go.microsoft.com/fwlink/?LinkId=220745)  
-  
   
