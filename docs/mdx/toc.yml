@@ -169,7 +169,7 @@
           href: ../mdx/less-than-or-equal-to-mdx.md
         - name: <>(같지 않음)
           href: ../mdx/not-equal-to-mdx.md
-        - name: =(같음)
+        - name: '=(같음)'
           href: ../mdx/equal-to-mdx.md
         - name: '> (보다 큼)'
           href: ../mdx/greater-than-mdx.md

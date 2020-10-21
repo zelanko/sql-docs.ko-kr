@@ -177,7 +177,7 @@
               href: ../dmx/less-than-dmx.md
             - name: '> (보다 큼)'
               href: ../dmx/greater-than-dmx.md
-            - name: =(같음)
+            - name: '=(같음)'
               href: ../dmx/equal-to-dmx.md
             - name: <>(같지 않음)
               href: ../dmx/not-equal-to-dmx.md
