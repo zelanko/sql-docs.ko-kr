@@ -38,12 +38,12 @@ ms.assetid: 09974469-c5d2-4be8-bc5a-78e404660b2c
 author: VanMSFT
 ms.author: vanto
 monikerRange: '>=aps-pdw-2016||=azuresqldb-current||=azure-sqldw-latest||>=sql-server-2016||=sqlallproducts-allversions||>=sql-server-linux-2017||=azuresqldb-mi-current'
-ms.openlocfilehash: 4d51a3b2339fc1b44897bf3be9087b086bb81878
-ms.sourcegitcommit: 8f062015c2a033f5a0d805ee4adabbe15e7c8f94
+ms.openlocfilehash: 55a88376c7c12870455b2d575ffcb0da601c0dda
+ms.sourcegitcommit: cfa04a73b26312bf18d8f6296891679166e2754d
 ms.translationtype: HT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 09/25/2020
-ms.locfileid: "91226810"
+ms.lasthandoff: 10/19/2020
+ms.locfileid: "92187772"
 ---
 # <a name="search-condition-transact-sql"></a>검색 조건(Transact-SQL)
 [!INCLUDE [sql-asdb-asdbmi-asa-pdw](../../includes/applies-to-version/sql-asdb-asdbmi-asa-pdw.md)]
@@ -211,7 +211,7 @@ ms.locfileid: "91226810"
 ### <a name="a-using-where-with-like-and-escape-syntax"></a>A. WHERE 절에 LIKE 및 ESCAPE 구문 사용  
  다음 예제에서는 `LargePhotoFileName` 열에 `green_` 문자가 있는 행을 검색하고, _이 와일드카드 문자이므로 `ESCAPE` 옵션을 사용합니다. `ESCAPE` 옵션을 지정하지 않으면 쿼리에서 `green` 단어 뒤에 _ 문자가 아닌 임의의 단일 문자가 포함된 설명 값을 검색합니다.  
   
-```sql
+```sql  
 USE AdventureWorks2012 ;  
 GO  
 SELECT *   
@@ -222,7 +222,7 @@ WHERE LargePhotoFileName LIKE '%greena_%' ESCAPE 'a' ;
 ### <a name="b-using-where-and-like-syntax-with-unicode-data"></a>B. WHERE 및 LIKE 구문에 유니코드 데이터 사용  
  다음 예에서는 `WHERE` 절을 사용하여 미국(`US`) 이외의 국가에서 `Pa`으로 시작하는 시에 있는 모든 기업의 우편 주소를 검색합니다.  
   
-```sql
+```sql  
 USE AdventureWorks2012 ;  
 GO  
 SELECT AddressLine1, AddressLine2, City, PostalCode, CountryRegionCode    
@@ -237,7 +237,7 @@ AND City LIKE N'Pa%' ;
 ### <a name="c-using-where-with-like"></a>C. LIKE가 포함된 WHERE 사용  
  다음 예제에서는 `LastName` 열에 `and` 문자가 있는 행을 검색합니다.  
   
-```sql
+```sql  
 -- Uses AdventureWorks  
   
 SELECT EmployeeKey, LastName  
@@ -248,7 +248,7 @@ WHERE LastName LIKE '%and%';
 ### <a name="d-using-where-and-like-syntax-with-unicode-data"></a>D. WHERE 및 LIKE 구문에 유니코드 데이터 사용  
  다음 예제에서는 `WHERE` 절을 사용하여 `LastName` 열에서 유니코드 검색을 수행합니다.  
   
-```sql
+```sql  
 -- Uses AdventureWorks  
   
 SELECT EmployeeKey, LastName  

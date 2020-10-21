@@ -1,6 +1,7 @@
 ---
-title: Microsoft Excel용 Master Data Services 추가 기능 | Microsoft Docs
-ms.custom: microsoft-excel-add-in
+title: 개요
+description: MDS(Master Data Services)에서 Excel로 데이터를 로드 하 고 Excel용 Master Data Services 추가 기능를 사용 하 여 MDS(Master Data Services)에 다시 게시 하는 방법을 알아봅니다.
+ms.custom: microsoft-excel-add-in, seo-lt-2019
 ms.date: 07/25/2017
 ms.prod: sql
 ms.prod_service: mds
@@ -10,16 +11,16 @@ ms.topic: conceptual
 ms.assetid: 33d9c8fc-9602-494d-b9ab-8f0f42785974
 author: lrtoyou1223
 ms.author: lle
-ms.openlocfilehash: ec72b2bd94d1ac7fbf68943be3081f39ed2d3e1e
-ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
+ms.openlocfilehash: ec0059471e10db953db26cfdd4c7b620a3378316
+ms.sourcegitcommit: f7ac1976d4bfa224332edd9ef2f4377a4d55a2c9
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 07/15/2019
-ms.locfileid: "68074595"
+ms.lasthandoff: 07/02/2020
+ms.locfileid: "92257800"
 ---
 # <a name="master-data-services-add-in-for-microsoft-excel"></a>Microsoft Excel용 Master Data Services 추가 기능
 
-[!INCLUDE[appliesto-ss-xxxx-xxxx-xxx-md-winonly](../../includes/appliesto-ss-xxxx-xxxx-xxx-md-winonly.md)]
+[!INCLUDE [SQL Server Windows Only - ASDBMI ](../../includes/applies-to-version/sql-windows-only-asdbmi.md)]
 
   [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)][!INCLUDE[ssMDSshort](../../includes/ssmdsshort-md.md)][!INCLUDE[ssMDSXLS](../../includes/ssmdsxls-md.md)]를 사용하면 MDS의 필터링된 데이터 목록을 Excel에 로드하여 다른 데이터와 같은 방식으로 사용할 수 있습니다. 작업이 끝나면 데이터를 다시 중앙 방식으로 저장되는 MDS에 게시할 수 있습니다. 사용자가 보고 업데이트할 수 있는 데이터는 보안에 따라 결정됩니다.  
   
@@ -30,7 +31,7 @@ ms.locfileid: "68074595"
 ## <a name="downloads"></a>다운로드 
 >*  SQL Server 2016 SP2를 위한 Excel용 Master Data Services 추가 기능은 [이 Microsoft 다운로드 센터 페이지](https://www.microsoft.com/download/details.aspx?id=56838)에서 다운로드할 수 있습니다. 
 >* [이 Microsoft 다운로드 센터 페이지](https://go.microsoft.com/fwlink/?linkid=836867)에서 SQL Server 2017용 [!INCLUDE[ssMDSshort](../../includes/ssmdsshort-md.md)] [!INCLUDE[ssMDSXLS](../../includes/ssmdsxls-md.md)]를 다운로드합니다.
->*  SQL Server 2019 CTP에 대 한 Excel 용 Master Data Services 추가 기능에서는 다운로드 [Microsoft 다운로드 센터 페이지](https://go.microsoft.com/fwlink/?linkid=2086948)합니다. 
+>*  [이 Microsoft 다운로드 센터 페이지](https://go.microsoft.com/fwlink/?linkid=2086948)에서 SQL SERVER 2019 CTP에 대 한 Excel용 Master Data Services 추가 기능를 다운로드 합니다. 
  
   
 ## <a name="terms"></a>용어  
@@ -44,16 +45,16 @@ ms.locfileid: "68074595"
   
 -   *entity* 는 데이터 목록입니다. 엔터티는 데이터베이스에 있는 테이블로 생각할 수 있습니다. 예를 들어 **Color** 엔터티는 색 목록을 포함할 수 있습니다. 자세한 내용은 [엔터티&#40;Master Data Services&#41;](../../master-data-services/entities-master-data-services.md)를 참조하세요.  
   
--   *member*는 데이터 행(레코드)입니다. 각 엔터티에는 멤버가 포함되어 있습니다. 멤버의 예로는 **Blue**를 들 수 있습니다. 자세한 내용은 [멤버&#40;Master Data Services&#41;](../../master-data-services/members-master-data-services.md)를 참조하세요.  
+-   *member* 는 데이터 행(레코드)입니다. 각 엔터티에는 멤버가 포함되어 있습니다. 멤버의 예로는 **Blue**를 들 수 있습니다. 자세한 내용은 [멤버&#40;Master Data Services&#41;](../../master-data-services/members-master-data-services.md)를 참조하세요.  
   
--   *attribute* 은 데이터의 열입니다. 각 멤버에는 특성이 포함됩니다. 예를 들어 **Blue** 멤버에 대한 **Code** 특성은 **B**입니다. 특성에 대한 자세한 내용은 [특성&#40;Master Data Services&#41;](../../master-data-services/attributes-master-data-services.md)을 참조하세요.  
+-   *attribute* 은 데이터의 열입니다. 각 멤버에는 특성이 포함됩니다. 예를 들어 **Blue** 멤버에 대 한 **Code** 특성은 **B**입니다. 특성에 대 한 자세한 내용은 [특성 &#40;MDS(Master Data Services)&#41;](../../master-data-services/attributes-master-data-services.md)를 참조 하세요.  
   
 ## <a name="related-tasks"></a>관련 작업  
   
 |태스크 설명|항목|  
 |----------------------|-----------|  
 |[!INCLUDE[ssMDSshort](../../includes/ssmdsshort-md.md)] 저장소에 대한 연결 만들기|[MDS 리포지토리에 연결&#40;Excel용 MDS 추가 기능&#41;](../../master-data-services/microsoft-excel-add-in/connect-to-an-mds-repository-mds-add-in-for-excel.md)|  
-|MDS 관리 데이터를 Excel로 로드|[Master Data Services에서 Excel로 데이터 내보내기](../../master-data-services/microsoft-excel-add-in/export-data-to-excel-from-master-data-services.md)|  
+|MDS 관리 데이터를 Excel로 로드|[Export Data to Excel from Master Data Services](../../master-data-services/microsoft-excel-add-in/export-data-to-excel-from-master-data-services.md)|  
 |현재 표시된 MDS 관리 데이터를 이후에 열기 위해 사용할 수 있는 바로 가기 쿼리 저장|[바로 가기 쿼리 파일 저장&#40;Excel용 MDS 추가 기능&#41;](../../master-data-services/microsoft-excel-add-in/save-a-shortcut-query-file-mds-add-in-for-excel.md)|  
 |다른 사용자와 바로 가기 공유|[바로 가기 쿼리 파일을 메일로 보내기&#40;Excel용 MDS 추가 기능&#41;](../../master-data-services/microsoft-excel-add-in/email-a-shortcut-query-file-mds-add-in-for-excel.md)|  
 |멤버에 대해 수행된 모든 변경 내용 보기|[멤버에 대한 모든 주석 또는 트랜잭션 보기&#40;Excel용 MDS 추가 기능&#41;](../../master-data-services/microsoft-excel-add-in/view-all-annotations-or-transactions-for-a-member-mds-add-in-for-excel.md)|  
@@ -73,7 +74,7 @@ ms.locfileid: "68074595"
   
 -   [데이터 새로 고침&#40;Excel용 MDS 추가 기능&#41;](../../master-data-services/microsoft-excel-add-in/refreshing-data-mds-add-in-for-excel.md)  
   
--   [개요: Excel에서 데이터 가져오기 &#40;MDS 추가 기능에 Excel 용&#41;](../../master-data-services/microsoft-excel-add-in/overview-importing-data-from-excel-mds-add-in-for-excel.md)  
+-   [개요: Excel에서 데이터 가져오기&#40;Excel용 MDS 추가 기능&#41;](../../master-data-services/microsoft-excel-add-in/overview-importing-data-from-excel-mds-add-in-for-excel.md)  
   
 -   [데이터 유효성 검사&#40;Excel용 MDS 추가 기능&#41;](../../master-data-services/microsoft-excel-add-in/validating-data-mds-add-in-for-excel.md)  
   

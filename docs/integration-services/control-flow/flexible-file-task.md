@@ -13,12 +13,12 @@ f1_keywords:
 - SQL14.DTS.DESIGNER.AFPEXTFILETASK.F1
 author: chugugrace
 ms.author: chugu
-ms.openlocfilehash: 4a84bfa9b7aa9fc50d16268005ac02868f11784b
-ms.sourcegitcommit: e700497f962e4c2274df16d9e651059b42ff1a10
+ms.openlocfilehash: c93cecf5b261a888375ead03aac1eec07b76c63d
+ms.sourcegitcommit: cfa04a73b26312bf18d8f6296891679166e2754d
 ms.translationtype: HT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 08/17/2020
-ms.locfileid: "88393556"
+ms.lasthandoff: 10/19/2020
+ms.locfileid: "92196497"
 ---
 # <a name="flexible-file-task"></a>유연한 파일 작업
 
@@ -29,7 +29,7 @@ Flexible File Task를 사용하면 사용자가 지원되는 다양한 스토리
 
 - 로컬 파일 시스템
 - [Azure Blob Storage](https://azure.microsoft.com/services/storage/blobs/)
-- [Azure Data Lake Storage Gen2](https://docs.microsoft.com/azure/storage/blobs/data-lake-storage-introduction)
+- [Azure Data Lake Storage Gen2](/azure/storage/blobs/data-lake-storage-introduction)
 
 Flexible File Task는 [Azure용 SSIS(SQL Server Integration Services) 기능 팩](../../integration-services/azure-feature-pack-for-integration-services-ssis.md)의 구성 요소입니다.
 
@@ -62,12 +62,12 @@ Flexible File Task는 [Azure용 SSIS(SQL Server Integration Services) 기능 팩
 ***서비스 사용자 권한 구성에 대한 참고 사항***
 
 **테스트 연결**이 이뤄지려면(Blob Storage 또는 Data Lake Storage Gen2) 서비스 사용자에게 스토리지 계정에 대한 **Storage Blob 데이터 읽기 권한자** 역할을 하나 이상 할당해야 합니다.
-이 작업은 [RBAC](https://docs.microsoft.com/azure/storage/common/storage-auth-aad-rbac-portal#assign-rbac-roles-using-the-azure-portal)를 사용하여 수행됩니다.
+이 작업은 [RBAC](/azure/storage/common/storage-auth-aad-rbac-portal#assign-rbac-roles-using-the-azure-portal)를 사용하여 수행됩니다.
 
 Blob Storage의 경우 최소한 **Storage Blob 데이터 읽기 권한자** 및 **Storage Blob 데이터 기여자** 역할을 각각 할당하여 읽기 및 쓰기 권한을 부여합니다.
 
-Data Lake Storage Gen2의 경우 RBAC 및 [ACL](https://docs.microsoft.com/azure/storage/blobs/data-lake-storage-how-to-set-permissions-storage-explorer)을 통해 사용 권한이 결정됩니다.
-ACL은 [여기](https://docs.microsoft.com/azure/storage/blobs/data-lake-storage-access-control#how-do-i-set-acls-correctly-for-a-service-principal)에 자세히 설명된 대로 앱 등록에 서비스 사용자의 OID(개체 ID)를 사용하여 구성된다는 것에 주의합니다.
+Data Lake Storage Gen2의 경우 RBAC 및 [ACL](/azure/storage/blobs/data-lake-storage-how-to-set-permissions-storage-explorer)을 통해 사용 권한이 결정됩니다.
+ACL은 [여기](/azure/storage/blobs/data-lake-storage-access-control#how-do-i-set-acls-correctly-for-a-service-principal)에 자세히 설명된 대로 앱 등록에 서비스 사용자의 OID(개체 ID)를 사용하여 구성된다는 것에 주의합니다.
 RBAC 구성에 사용되는 애플리케이션(클라이언트) ID와는 다릅니다.
 기본 제공 역할 또는 사용자 지정 역할을 통해 보안 주체에 RBAC 데이터 권한이 부여된 경우 요청의 권한 부여 시 먼저 이러한 사용 권한이 평가됩니다.
 보안 주체의 RBAC 할당을 통해 요청한 작업의 권한이 부여된 경우 권한 부여가 즉시 확인되고 추가 ACL 검사가 수행되지 않습니다.
@@ -76,4 +76,4 @@ RBAC 구성에 사용되는 애플리케이션(클라이언트) ID와는 다릅�
 - 읽기 권한의 경우 복사할 파일에 대한 **읽기** 권한과 함께 원본 파일 시스템부터 최소한 **실행** 권한을 부여합니다. 또는 RBAC를 사용하여 최소한 **Storage Blob 데이터 읽기 권한자** 역할을 부여합니다.
 - 쓰기 권한의 경우 싱크 폴더에 대한 **쓰기** 권한과 함께 싱크 파일 시스템부터 최소한 **실행** 권한을 부여합니다. 또는 RBAC를 사용하여 최소한 **Storage Blob 데이터 기여자** 역할을 부여합니다.
 
-자세한 내용은 [이](https://docs.microsoft.com/azure/storage/blobs/data-lake-storage-access-control) 문서를 참조하세요.
+자세한 내용은 [이](/azure/storage/blobs/data-lake-storage-access-control) 문서를 참조하세요.

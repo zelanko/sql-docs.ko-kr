@@ -8,12 +8,12 @@ ms.topic: conceptual
 ms.prod: sql
 ms.technology: linux
 ms.assetid: 77f16adc-e6cb-4a57-82f3-7b9780369868
-ms.openlocfilehash: 6554acf46da19a9833cf649bce34a455cbc92e5b
-ms.sourcegitcommit: 3ea082c778f6771b17d90fb597680ed334d3e0ec
+ms.openlocfilehash: 9492b8fcdbcd4ddf930d9f5d1d5ee43415fb2a1c
+ms.sourcegitcommit: 22102f25db5ccca39aebf96bc861c92f2367c77a
 ms.translationtype: HT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 08/11/2020
-ms.locfileid: "88088813"
+ms.lasthandoff: 10/16/2020
+ms.locfileid: "92115776"
 ---
 # <a name="install-sql-server-agent-on-linux"></a>Linux에 SQL Server 에이전트 설치
 
@@ -21,7 +21,7 @@ ms.locfileid: "88088813"
 
 이 문서에서는 Linux에서 SQL Server 에이전트를 사용하도록 설정하거나 설치하는 방법을 설명합니다.
 
-[SQL Server 에이전트](https://docs.microsoft.com/sql/ssms/agent/sql-server-agent)는 예약된 SQL Server 작업을 실행합니다. SQL Server 2017 CU4부터 SQL Server 에이전트는 **mssql-server** 패키지에 포함되어 있으며 기본적으로 사용하지 않도록 설정됩니다. 버전 정보와 함께 이 SQL Server 에이전트 릴리스에 지원되는 기능에 대한 자세한 내용은 [릴리스 정보](sql-server-linux-release-notes.md)를 참조하세요.
+[SQL Server 에이전트](../ssms/agent/sql-server-agent.md)는 예약된 SQL Server 작업을 실행합니다. SQL Server 2017 CU4부터 SQL Server 에이전트는 **mssql-server** 패키지에 포함되어 있으며 기본적으로 사용하지 않도록 설정됩니다. 버전 정보와 함께 이 SQL Server 에이전트 릴리스에 지원되는 기능에 대한 자세한 내용은 [릴리스 정보](sql-server-linux-release-notes.md)를 참조하세요.
 
 ## <a name="instructions"></a>Instructions
 

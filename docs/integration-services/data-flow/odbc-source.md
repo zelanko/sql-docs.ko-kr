@@ -16,12 +16,12 @@ f1_keywords:
 ms.assetid: abcf34eb-9140-4100-82e6-b85bccd22abe
 author: chugugrace
 ms.author: chugu
-ms.openlocfilehash: 800c3e0b8af863cd7947e6847d3c8fe2e1ccab44
-ms.sourcegitcommit: e700497f962e4c2274df16d9e651059b42ff1a10
+ms.openlocfilehash: 12d70dc722250d33de52bf8d1f13d1ab06083108
+ms.sourcegitcommit: cfa04a73b26312bf18d8f6296891679166e2754d
 ms.translationtype: HT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 08/17/2020
-ms.locfileid: "88392119"
+ms.lasthandoff: 10/19/2020
+ms.locfileid: "92194779"
 ---
 # <a name="odbc-source"></a>ODBC 원본
 
@@ -51,7 +51,7 @@ ms.locfileid: "88392119"
   
 -   표준 출력 데이터 열입니다.  
   
- 오류 동작 설정에 따라 ODBC 원본은 추출 프로세스 중 발생하는 오류(데이터 변환, 잘림)를 오류 출력에 반환하는 작업을 지원합니다. 자세한 내용은 [ODBC 대상 편집기&#40;연결 관리자 페이지&#41;](../../integration-services/data-flow/odbc-destination-editor-connection-manager-page.md)를 참조하세요.  
+ 오류 동작 설정에 따라 ODBC 원본은 추출 프로세스 중 발생하는 오류(데이터 변환, 잘림)를 오류 출력에 반환하는 작업을 지원합니다. 자세한 내용은 [ODBC 대상 편집기&#40;연결 관리자 페이지&#41;](./odbc-destination.md)를 참조하세요.  
   
 ## <a name="data-type-support"></a>데이터 형식 지원  
  ODBC 원본이 지원하는 데이터 형식에 대한 자세한 내용은 Connector for ODBC(Open Database Connectivity)를 참조하세요.  
@@ -195,5 +195,4 @@ ms.locfileid: "88392119"
   
 #### <a name="redirect-flow"></a>흐름 리디렉션  
  오류 또는 잘림을 발생시키는 행이 ODBC 원본의 오류 출력으로 전송됩니다.  
-  
   

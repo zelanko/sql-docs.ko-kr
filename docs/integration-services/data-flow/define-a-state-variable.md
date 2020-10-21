@@ -11,12 +11,12 @@ ms.topic: conceptual
 ms.assetid: 45d66152-883a-49a7-a877-2e8ab45f8f79
 author: chugugrace
 ms.author: chugu
-ms.openlocfilehash: f72f8f6aff6b5861a9bf4ba91ff77ef6e80719b2
-ms.sourcegitcommit: e700497f962e4c2274df16d9e651059b42ff1a10
+ms.openlocfilehash: bbb4b442c50e8a40c0c0db20dd45073339ea48b8
+ms.sourcegitcommit: cfa04a73b26312bf18d8f6296891679166e2754d
 ms.translationtype: HT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 08/17/2020
-ms.locfileid: "88349349"
+ms.lasthandoff: 10/19/2020
+ms.locfileid: "92195407"
 ---
 # <a name="define-a-state-variable"></a>상태 변수 정의
 
@@ -85,12 +85,11 @@ ms.locfileid: "88349349"
   
  변수 정의의 일환으로 변수에 값을 지정하지 마십시오. 값은 CDC 제어 태스크에 의해 설정되어야 합니다.  
   
- **자동 상태 지속**과 함께 CDC 제어 태스크를 사용하려는 경우 CDC 상태 변수는 사용자가 지정하는 데이터베이스 상태 테이블에서 읽히고 해당 값이 변경될 때 동일한 테이블로 다시 업데이트됩니다. 상태 테이블에 대한 자세한 내용은 [CDC Control Task](../../integration-services/control-flow/cdc-control-task.md)및 [CDC Control Task Editor](../../integration-services/control-flow/cdc-control-task-editor.md)를 참조하십시오.  
+ **자동 상태 지속**과 함께 CDC 제어 태스크를 사용하려는 경우 CDC 상태 변수는 사용자가 지정하는 데이터베이스 상태 테이블에서 읽히고 해당 값이 변경될 때 동일한 테이블로 다시 업데이트됩니다. 상태 테이블에 대한 자세한 내용은 [CDC Control Task](../../integration-services/control-flow/cdc-control-task.md)및 [CDC Control Task Editor](../control-flow/cdc-control-task.md)를 참조하십시오.  
   
  자동 상태 지속과 함께 CDC 제어 태스크를 사용하지 않는 경우에는 패키지가 마지막으로 실행되었을 때 변수 값이 저장된 영구 스토리지에서 해당 값을 로드하고 현재 처리 범위에 대한 처리가 완료될 때 영구 스토리지에 다시 써야 합니다.  
   
 ## <a name="see-also"></a>참고 항목  
  [CDC Control Task](../../integration-services/control-flow/cdc-control-task.md)   
- [CDC 제어 태스크 편집기](../../integration-services/control-flow/cdc-control-task-editor.md)  
-  
+ [CDC 제어 태스크 편집기](../control-flow/cdc-control-task.md)  
   

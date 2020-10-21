@@ -8,12 +8,12 @@ ms.topic: conceptual
 ms.prod: sql
 ms.technology: linux
 ms.assetid: 99636ee8-2ba6-4316-88e0-121988eebcf9S
-ms.openlocfilehash: 99ac4b9fbd0ce616cebc707026eff1d5eb15895f
-ms.sourcegitcommit: 3ea082c778f6771b17d90fb597680ed334d3e0ec
+ms.openlocfilehash: 144da58b008e79e368e3505b7aebb2cb8e4d7035
+ms.sourcegitcommit: 22102f25db5ccca39aebf96bc861c92f2367c77a
 ms.translationtype: HT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 08/11/2020
-ms.locfileid: "88088757"
+ms.lasthandoff: 10/16/2020
+ms.locfileid: "92115803"
 ---
 # <a name="troubleshoot-sql-server-on-linux"></a>SQL Server on Linux 문제 해결
 
@@ -42,11 +42,11 @@ Linux SQL Server에 연결하는 데 어려움이 있는 경우 몇 가지 사�
    >   ```bash
    >   sudo ip addr show eth0 | grep "inet"
    >   ```
-   > 이 기술에는 Azure VM과 관련된 한 가지 예외가 있습니다. Azure VM의 경우 [Azure Portal에서 VM의 공용 IP를 찾습니다](https://docs.microsoft.com/azure/virtual-machines/linux/sql/provision-sql-server-linux-virtual-machine#connect).
+   > 이 기술에는 Azure VM과 관련된 한 가지 예외가 있습니다. Azure VM의 경우 [Azure Portal에서 VM의 공용 IP를 찾습니다](/azure/virtual-machines/linux/sql/provision-sql-server-linux-virtual-machine#connect).
 
 - 해당하는 경우 방화벽에서 SQL Server 포트(기본값 1433)를 열었는지 확인합니다.
 
-- Azure VM의 경우 [기본 SQL Server 포트에 대한 네트워크 보안 그룹 규칙](https://docs.microsoft.com/azure/virtual-machines/linux/sql/provision-sql-server-linux-virtual-machine#remote)이 있는지 확인합니다.
+- Azure VM의 경우 [기본 SQL Server 포트에 대한 네트워크 보안 그룹 규칙](/azure/virtual-machines/linux/sql/provision-sql-server-linux-virtual-machine#remote)이 있는지 확인합니다.
 
 - 사용자 이름 및 암호에 오타, 추가 공백 또는 잘못된 대/소문자가 포함되지 않았는지 확인합니다.
 
@@ -90,7 +90,7 @@ Linux SQL Server에 연결하는 데 어려움이 있는 경우 몇 가지 사�
    ```
 
 > [!TIP]
-> Docker에 대한 자세한 문제 해결 팁은 [SQL Server Docker 컨테이너 문제 해결](sql-server-linux-configure-docker.md#troubleshooting)을 참조하세요.
+> Docker에 대한 자세한 문제 해결 팁은 [SQL Server Docker 컨테이너 문제 해결](./sql-server-linux-docker-container-troubleshooting.md)을 참조하세요.
 
 ## <a name="access-the-log-files"></a>로그 파일 액세스
    
@@ -109,7 +109,7 @@ SQL Server 엔진은 Linux 및 Docker 설치의 /var/opt/mssql/log/errorlog 파�
    ```
 ## <a name="extended-events"></a>확장 이벤트
 
-SQL 명령을 통해 확장 이벤트를 쿼리할 수 있습니다.  확장 이벤트에 대한 자세한 내용은 [여기](https://technet.microsoft.com/library/bb630282.aspx)를 참조하세요.
+SQL 명령을 통해 확장 이벤트를 쿼리할 수 있습니다.  확장 이벤트에 대한 자세한 내용은 [여기](../relational-databases/extended-events/extended-events.md)를 참조하세요.
 
 ## <a name="crash-dumps"></a>크래시 덤프 
 
@@ -197,7 +197,7 @@ SQLCMD를 사용하여 단일 사용자 모드로 SQL Server 시작
 
 - [쿼리 저장소](../relational-databases/performance/monitoring-performance-by-using-the-query-store.md)
 - [시스템 DMV(동적 관리 뷰)](../relational-databases/system-dynamic-management-views/system-dynamic-management-views.md)
-- [SQL Server Management Studio의 성능 대시보드](https://blogs.msdn.microsoft.com/sql_server_team/new-in-ssms-performance-dashboard-built-in/)
+- [SQL Server Management Studio의 성능 대시보드](/archive/blogs/sql_server_team/new-in-ssms-performance-dashboard-built-in)
 
 ## <a name="common-issues"></a>일반적인 문제
 

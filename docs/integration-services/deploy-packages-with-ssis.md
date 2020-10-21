@@ -21,12 +21,12 @@ helpviewer_keywords:
 ms.assetid: de18468c-cff3-48f4-99ec-6863610e5886
 author: chugugrace
 ms.author: chugu
-ms.openlocfilehash: 4ba92220b368e1ef7ee1218d972e6113e1378d27
-ms.sourcegitcommit: e700497f962e4c2274df16d9e651059b42ff1a10
+ms.openlocfilehash: d82aae4ee0195adca300d16bf9f2a2217c40a38c
+ms.sourcegitcommit: cfa04a73b26312bf18d8f6296891679166e2754d
 ms.translationtype: HT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 08/17/2020
-ms.locfileid: "88430655"
+ms.lasthandoff: 10/19/2020
+ms.locfileid: "92194593"
 ---
 # <a name="deploy-packages-with-ssis"></a>SSIS를 사용하여 패키지 배포
 
@@ -37,9 +37,9 @@ ms.locfileid: "88430655"
     
 먼저 배포를 준비하기 위한 태스크를 수행합니다. [!INCLUDE[ssISnoversion](../includes/ssisnoversion-md.md)] 에서 새 [!INCLUDE[ssBIDevStudioFull](../includes/ssbidevstudiofull-md.md)] 프로젝트를 만들고 기존 패키지와 데이터 파일을 프로젝트에 추가합니다. 새 패키지를 처음부터 만드는 대신에 이 자습서용으로 만들어진 완성된 패키지만 사용하여 작업합니다. 이 자습서에서 패키지의 기능을 수정하지는 않습니다. 그러나 패키지를 프로젝트에 추가한 후에 [!INCLUDE[ssIS](../includes/ssis-md.md)] 디자이너에서 패키지를 열고 각 패키지의 내용을 검토하면 도움이 될 것입니다. 패키지를 검사하면 로그 파일과 같은 패키지 종속 파일과 패키지의 다른 흥미로운 기능에 대해 알 수 있습니다.    
     
-배포를 준비하면서 또한 구성을 사용하도록 패키지를 업데이트합니다. 구성은 패키지 및 패키지 개체의 속성을 런타임에 업데이트할 수 있게 만듭니다. 이 자습서에서는 구성을 사용하여 패키지가 사용하는 XML 및 XSD 파일의 위치와 로그 및 텍스트 파일의 연결 문자열을 업데이트합니다. 자세한 내용은 [패키지 구성](../integration-services/packages/package-configurations.md) 및 [패키지 구성 만들기](../integration-services/packages/create-package-configurations.md)를 참조하세요.    
+배포를 준비하면서 또한 구성을 사용하도록 패키지를 업데이트합니다. 구성은 패키지 및 패키지 개체의 속성을 런타임에 업데이트할 수 있게 만듭니다. 이 자습서에서는 구성을 사용하여 패키지가 사용하는 XML 및 XSD 파일의 위치와 로그 및 텍스트 파일의 연결 문자열을 업데이트합니다. 자세한 내용은 [패키지 구성](./packages/legacy-package-deployment-ssis.md) 및 [패키지 구성 만들기](./packages/legacy-package-deployment-ssis.md)를 참조하세요.    
     
-패키지가 [!INCLUDE[ssBIDevStudioFull](../includes/ssbidevstudiofull-md.md)]에서 성공적으로 실행되는지 확인한 후에 패키지를 설치하는 데 사용할 배포 번들을 만듭니다. 배포 번들은 [!INCLUDE[ssISnoversion](../includes/ssisnoversion-md.md)] 프로젝트에 추가한 패키지 파일 및 기타 항목, [!INCLUDE[ssISnoversion](../includes/ssisnoversion-md.md)] 에서 자동으로 포함하는 패키지 종속 파일 및 작성했던 배포 유틸리티로 구성됩니다. 자세한 내용은 [Create a Deployment Utility](../integration-services/packages/create-a-deployment-utility.md)를 참조하세요.    
+패키지가 [!INCLUDE[ssBIDevStudioFull](../includes/ssbidevstudiofull-md.md)]에서 성공적으로 실행되는지 확인한 후에 패키지를 설치하는 데 사용할 배포 번들을 만듭니다. 배포 번들은 [!INCLUDE[ssISnoversion](../includes/ssisnoversion-md.md)] 프로젝트에 추가한 패키지 파일 및 기타 항목, [!INCLUDE[ssISnoversion](../includes/ssisnoversion-md.md)] 에서 자동으로 포함하는 패키지 종속 파일 및 작성했던 배포 유틸리티로 구성됩니다. 자세한 내용은 [Create a Deployment Utility](./packages/legacy-package-deployment-ssis.md)를 참조하세요.    
     
 그런 다음 배포 번들을 대상 컴퓨터에 복사하고 패키지 설치 마법사를 실행하여 패키지와 패키지 종속 파일을 설치합니다. 패키지는 msdb SQL Server 데이터베이스에 설치되고 지원 및 보조 파일은 파일 시스템에 설치됩니다. 배포된 패키지에서 구성이 사용되므로 새 환경에서 패키지가 성공적으로 실행될 수 있게 하는 새 값을 사용하도록 구성을 업데이트합니다.    
     
@@ -98,5 +98,3 @@ ms.locfileid: "88430655"
     
 [3단원: SSIS 패키지 설치](../integration-services/lesson-3-install-ssis-packages.md)    
 이 단원에서는 배포 번들을 대상 컴퓨터에 복사하고 패키지를 설치한 다음 패키지를 실행합니다.    
-    
-

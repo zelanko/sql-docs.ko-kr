@@ -22,12 +22,12 @@ helpviewer_keywords:
 ms.assetid: 2a2f1750-2cda-4dda-9dca-623a96a6b3c0
 author: chugugrace
 ms.author: chugu
-ms.openlocfilehash: 94a94ba7bcd71510f82769ebb1517caef7e5a0fe
-ms.sourcegitcommit: e700497f962e4c2274df16d9e651059b42ff1a10
+ms.openlocfilehash: b10ca4ddff49785c1b5b6e33d7510985fd801c85
+ms.sourcegitcommit: cfa04a73b26312bf18d8f6296891679166e2754d
 ms.translationtype: HT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 08/17/2020
-ms.locfileid: "88425855"
+ms.lasthandoff: 10/19/2020
+ms.locfileid: "92194865"
 ---
 # <a name="ado-net-source"></a>ADO.NET 원본
 
@@ -36,12 +36,12 @@ ms.locfileid: "88425855"
 
   ADO.NET 원본은 .NET 공급자의 데이터를 사용하며 데이터 흐름에서 해당 데이터를 사용할 수 있도록 합니다.  
   
- ADO NET 원본을 사용하여 [!INCLUDE[msCoName](../../includes/msconame-md.md)] [!INCLUDE[ssSDSFull](../../includes/sssdsfull-md.md)]에 연결할 수 있습니다. OLE DB를 사용하여 [!INCLUDE[ssSDS](../../includes/sssds-md.md)] 에 연결할 수는 없습니다. [!INCLUDE[ssSDS](../../includes/sssds-md.md)]에 대한 자세한 내용은 [일반 지침 및 제한 사항(Azure SQL Database)](https://go.microsoft.com/fwlink/?LinkId=248228)을 참조하세요.  
+ ADO NET 원본을 사용하여 [!INCLUDE[msCoName](../../includes/msconame-md.md)] [!INCLUDE[ssSDSFull](../../includes/sssdsfull-md.md)]에 연결할 수 있습니다. OLE DB를 사용하여 [!INCLUDE[ssSDS](../../includes/sssds-md.md)] 에 연결할 수는 없습니다. [!INCLUDE[ssSDS](../../includes/sssds-md.md)]에 대한 자세한 내용은 [일반 지침 및 제한 사항(Azure SQL Database)](/previous-versions/azure/ee336245(v=azure.100))을 참조하세요.  
   
 ## <a name="data-type-support"></a>데이터 형식 지원  
  원본은 특정 [!INCLUDE[ssISnoversion](../../includes/ssisnoversion-md.md)] 데이터 형식에 매핑되지 않는 모든 데이터 형식을 DT_NTEXT [!INCLUDE[ssISnoversion](../../includes/ssisnoversion-md.md)] 데이터 형식으로 변환합니다. 데이터 형식이 **System.Object**인 경우에도 이러한 변환이 발생합니다.  
   
- DT_NTEXT 데이터 형식을 DT_WSTR 데이터 형식으로 변경하거나 DT_WSTR을 DT_NTEXT로 변경할 수 있습니다. 데이터 형식을 변경하려면 ADO.NET 원본의 **고급 편집기** 대화 상자에서 **DataType** 속성을 설정하면 됩니다. 자세한 내용은 [Common Properties](https://msdn.microsoft.com/library/51973502-5cc6-4125-9fce-e60fa1b7b796)을(를) 참조하세요.  
+ DT_NTEXT 데이터 형식을 DT_WSTR 데이터 형식으로 변경하거나 DT_WSTR을 DT_NTEXT로 변경할 수 있습니다. 데이터 형식을 변경하려면 ADO.NET 원본의 **고급 편집기** 대화 상자에서 **DataType** 속성을 설정하면 됩니다. 자세한 내용은 [Common Properties](./set-the-properties-of-a-data-flow-component.md)을(를) 참조하세요.  
   
  ADO.NET 원본 뒤에 데이터 변환을 사용하여 DT_NTEXT 데이터 형식을 DT_BYTES 또는 DT_STR 데이터 형식으로 변환할 수도 있습니다. 자세한 내용은 [Data Conversion Transformation](../../integration-services/data-flow/transformations/data-conversion-transformation.md)을 참조하세요.  
   
@@ -87,7 +87,7 @@ ms.locfileid: "88425855"
   
  **고급 편집기** 대화 상자를 사용하거나 프로그래밍 방식으로 설정할 수 있는 속성에 대한 자세한 내용을 보려면 다음 항목 중 하나를 클릭하세요.  
   
--   [Common Properties](https://msdn.microsoft.com/library/51973502-5cc6-4125-9fce-e60fa1b7b796)  
+-   [Common Properties](./set-the-properties-of-a-data-flow-component.md)  
   
 -   [ADO.NET 사용자 지정 속성](../../integration-services/data-flow/ado-net-custom-properties.md)  
   
@@ -207,5 +207,4 @@ ms.locfileid: "88425855"
  [DataReader 대상](../../integration-services/data-flow/datareader-destination.md)   
  [ADO.NET 대상](../../integration-services/data-flow/ado-net-destination.md)   
  [데이터 흐름](../../integration-services/data-flow/data-flow.md)  
-  
   

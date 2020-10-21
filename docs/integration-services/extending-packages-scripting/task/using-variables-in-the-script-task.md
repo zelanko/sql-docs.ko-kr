@@ -21,12 +21,12 @@ helpviewer_keywords:
 ms.assetid: 593b5961-4bfa-4ce1-9531-a251c34e89d3
 author: chugugrace
 ms.author: chugu
-ms.openlocfilehash: c319ec2d8deca78787ca0cec80e2afc7947eaa41
-ms.sourcegitcommit: e700497f962e4c2274df16d9e651059b42ff1a10
+ms.openlocfilehash: b68f0dc3ac5b5591dc556c81bc083a62aa8d4606
+ms.sourcegitcommit: cfa04a73b26312bf18d8f6296891679166e2754d
 ms.translationtype: HT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 08/17/2020
-ms.locfileid: "88430215"
+ms.lasthandoff: 10/19/2020
+ms.locfileid: "92195240"
 ---
 # <a name="using-variables-in-the-script-task"></a>스크립트 태스크에서 변수 사용
 
@@ -121,6 +121,5 @@ public class ScriptMain
   
 ## <a name="see-also"></a>참고 항목  
  [Integration Services&#40;SSIS&#41; 변수](../../../integration-services/integration-services-ssis-variables.md)   
- [패키지에서 변수 사용](https://msdn.microsoft.com/library/7742e92d-46c5-4cc4-b9a3-45b688ddb787)  
-  
+ [패키지에서 변수 사용](../../integration-services-ssis-variables.md)  
   

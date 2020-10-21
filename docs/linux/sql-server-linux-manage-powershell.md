@@ -8,12 +8,12 @@ ms.topic: conceptual
 ms.prod: sql
 ms.technology: linux
 ms.assetid: a3492ce1-5d55-4505-983c-d6da8d1a94ad
-ms.openlocfilehash: 4539ce49614004d9187d8f503fe165eb14bee2b0
-ms.sourcegitcommit: 3ea082c778f6771b17d90fb597680ed334d3e0ec
+ms.openlocfilehash: 89f048ea2caf80412d3b8d607582016d8a88f8b7
+ms.sourcegitcommit: 22102f25db5ccca39aebf96bc861c92f2367c77a
 ms.translationtype: HT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 08/11/2020
-ms.locfileid: "88088883"
+ms.lasthandoff: 10/16/2020
+ms.locfileid: "92115637"
 ---
 # <a name="use-powershell-on-windows-to-manage-sql-server-on-linux"></a>Windows의 PowerShell을 사용하여 SQL Server on Linux 관리
 
@@ -92,7 +92,7 @@ your_server_instance            14.0.3048  RTM          CU13         Linux      
 
 ## <a name="using-the-sql-server-powershell-provider"></a>SQL Server PowerShell 공급자 사용
 
-SQL Server 인스턴스에 연결하는 또 다른 옵션은 [SQL Server PowerShell 공급자](https://docs.microsoft.com/sql/powershell/sql-server-powershell-provider)를 사용하는 것입니다.  이 공급자를 사용하면 개체 탐색기에서 트리 구조를 탐색하는 것처럼 SQL Server 인스턴스를 명령줄에서 탐색할 수 있습니다.  기본적으로 이 공급자는 도메인 계정이 액세스할 수 SQL Server 인스턴스를 연결 및 탐색하는 데 사용할 수 있는 `SQLSERVER:\`라는 PSDrive로 표시됩니다.  SQL Server on Linux의 Active Directory 인증을 설정하는 방법에 대한 자세한 내용은 [구성 단계](https://docs.microsoft.com/sql/linux/sql-server-linux-active-directory-auth-overview#configuration-steps)를 참조하세요.
+SQL Server 인스턴스에 연결하는 또 다른 옵션은 [SQL Server PowerShell 공급자](../powershell/sql-server-powershell-provider.md)를 사용하는 것입니다.  이 공급자를 사용하면 개체 탐색기에서 트리 구조를 탐색하는 것처럼 SQL Server 인스턴스를 명령줄에서 탐색할 수 있습니다.  기본적으로 이 공급자는 도메인 계정이 액세스할 수 SQL Server 인스턴스를 연결 및 탐색하는 데 사용할 수 있는 `SQLSERVER:\`라는 PSDrive로 표시됩니다.  SQL Server on Linux의 Active Directory 인증을 설정하는 방법에 대한 자세한 내용은 [구성 단계](./sql-server-linux-active-directory-auth-overview.md#configuration-steps)를 참조하세요.
 
 SQL Server PowerShell 공급자를 통해 SQL 인증을 사용할 수도 있습니다. 이렇게 하려면 `New-PSDrive` cmdlet을 사용하여 새 PSDrive을 만들고 연결하는 데 사용할 적절한 자격 증명을 제공합니다.
 
@@ -128,7 +128,7 @@ AdventureWorksDW2016 Normal      172.00 MB   74.76 MB Simple       130 sa
 AdventureWorksDW2017 Normal      208.00 MB   40.57 MB Simple       140 sa
 ```
 
-인스턴스의 모든 데이터베이스를 확인해야 하는 경우 한 가지 옵션은 [Get-SqlDatabase](https://docs.microsoft.com/powershell/module/sqlserver/Get-SqlDatabase) cmdlet을 사용하는 것입니다.
+인스턴스의 모든 데이터베이스를 확인해야 하는 경우 한 가지 옵션은 [Get-SqlDatabase](/powershell/module/sqlserver/Get-SqlDatabase) cmdlet을 사용하는 것입니다.
 
 ## <a name="examine-sql-server-error-logs"></a>SQL Server 오류 로그 검사
 
@@ -152,5 +152,5 @@ Get-SqlErrorLog -ServerInstance $serverInstance -Credential $credential -Since Y
 # done
 ```
 ## <a name="see-also"></a>참고 항목
-- [SQL Server PowerShell](../relational-databases/scripting/sql-server-powershell.md)
-- [SqlServer cmdlet](https://docs.microsoft.com/powershell/module/sqlserver)
+- [SQL Server PowerShell](../powershell/sql-server-powershell.md)
+- [SqlServer cmdlet](/powershell/module/sqlserver)

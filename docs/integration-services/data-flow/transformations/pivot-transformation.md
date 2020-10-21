@@ -19,12 +19,12 @@ helpviewer_keywords:
 ms.assetid: 55f5db6e-6777-435f-8a06-b68c129f8437
 author: chugugrace
 ms.author: chugu
-ms.openlocfilehash: 5f09d86cc1bf5ba9301de4da8e869b3a054d55ee
-ms.sourcegitcommit: e700497f962e4c2274df16d9e651059b42ff1a10
+ms.openlocfilehash: 5166b67a52cc93190c9dc6c273d9336c0f6d7552
+ms.sourcegitcommit: cfa04a73b26312bf18d8f6296891679166e2754d
 ms.translationtype: HT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 08/17/2020
-ms.locfileid: "88477671"
+ms.lasthandoff: 10/19/2020
+ms.locfileid: "92195329"
 ---
 # <a name="pivot-transformation"></a>피벗 변환
 
@@ -131,7 +131,7 @@ ms.locfileid: "88477671"
   
  **고급 편집기** 대화 상자에서 설정할 수 있는 속성에 대한 자세한 내용을 보려면 다음 항목 중 하나를 클릭하십시오.  
   
--   [Common Properties](https://msdn.microsoft.com/library/51973502-5cc6-4125-9fce-e60fa1b7b796)  
+-   [Common Properties](../set-the-properties-of-a-data-flow-component.md)  
   
 -   [변환 사용자 지정 속성](../../../integration-services/data-flow/transformations/transformation-custom-properties.md)  
   
@@ -142,5 +142,4 @@ ms.locfileid: "88477671"
  [피벗 해제 변환](../../../integration-services/data-flow/transformations/unpivot-transformation.md)   
  [데이터 흐름](../../../integration-services/data-flow/data-flow.md)   
  [Integration Services 변환](../../../integration-services/data-flow/transformations/integration-services-transformations.md)  
-  
   

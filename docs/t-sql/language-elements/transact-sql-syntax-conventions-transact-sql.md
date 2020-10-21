@@ -29,12 +29,12 @@ ms.assetid: 35fbcf7f-8b55-46cd-a957-9b8c7b311241
 author: rothja
 ms.author: jroth
 monikerRange: '>=aps-pdw-2016||=azuresqldb-current||=azure-sqldw-latest||>=sql-server-2016||=sqlallproducts-allversions||>=sql-server-linux-2017||=azuresqldb-mi-current'
-ms.openlocfilehash: 427310d9693e4845290b1cbb06dba13a3d3101d5
-ms.sourcegitcommit: e700497f962e4c2274df16d9e651059b42ff1a10
+ms.openlocfilehash: 6525a5ba3352a2d841cea556bcaffc40c1ce5472
+ms.sourcegitcommit: 22dacedeb6e8721e7cdb6279a946d4002cfb5da3
 ms.translationtype: HT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 08/17/2020
-ms.locfileid: "88467627"
+ms.lasthandoff: 10/14/2020
+ms.locfileid: "92037113"
 ---
 # <a name="transact-sql-syntax-conventions-transact-sql"></a>Transact-SQL 구문 표기 규칙(Transact-SQL)
 [!INCLUDE [sql-asdb-asdbmi-asa-pdw](../../includes/applies-to-version/sql-asdb-asdbmi-asa-pdw.md)]
@@ -118,10 +118,8 @@ _object\_name_
 문서의 일반적인 주제를 제품에서 사용할 수 있지만 경우에 따라 일부 인수가 지원되지 않습니다. 예를 들어 포함된 데이터베이스 사용자가 [!INCLUDE[ssSQL11](../../includes/sssql11-md.md)]에서 도입되었습니다. 모든 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 제품에서 **CREATE USER** 문을 사용할 수 있지만, **WITH PASSWORD** 구문은 이전 버전에서 사용할 수 없습니다. 추가적인 **적용 대상** 섹션이 항목 본문의 적절한 인수 설명에 삽입됩니다.  
   
 ## <a name="see-also"></a>참고 항목  
-[Transact-SQL 참조 &#40;데이터베이스 엔진&#41;](../../t-sql/transact-sql-reference-database-engine.md)    
+[Transact-SQL 참조 &#40;데이터베이스 엔진&#41;](../language-reference.md)    
 [예약 키워드 &#40;Transact SQL&#41;](../../t-sql/language-elements/reserved-keywords-transact-sql.md)      
-[Transact-SQL 디자인 문제](https://msdn.microsoft.com/library/dd193411.aspx)    
-[Transact-SQL 명명 문제](https://msdn.microsoft.com/library/dd193246.aspx)        
-[Transact-SQL 성능 문제](https://msdn.microsoft.com/library/dd172117.aspx)    
-
-
+[Transact-SQL 디자인 문제](/previous-versions/visualstudio/visual-studio-2010/dd193411(v=vs.100))    
+[Transact-SQL 명명 문제](/previous-versions/visualstudio/visual-studio-2010/dd193246(v=vs.100))        
+[Transact-SQL 성능 문제](/previous-versions/visualstudio/visual-studio-2010/dd172117(v=vs.100))

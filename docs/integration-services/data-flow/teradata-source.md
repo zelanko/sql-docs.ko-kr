@@ -10,12 +10,12 @@ ms.technology: integration-services
 ms.topic: conceptual
 author: chugugrace
 ms.author: chugu
-ms.openlocfilehash: 5c1595b8212f5232155d77c3dc82ab1393a397b6
-ms.sourcegitcommit: e700497f962e4c2274df16d9e651059b42ff1a10
+ms.openlocfilehash: 5b4e64c2d7ada0db923f1aa623576e7b2994d8e6
+ms.sourcegitcommit: cfa04a73b26312bf18d8f6296891679166e2754d
 ms.translationtype: HT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 08/17/2020
-ms.locfileid: "88484489"
+ms.lasthandoff: 10/19/2020
+ms.locfileid: "92194705"
 ---
 # <a name="connect-to-the-teradata-source"></a>Teradata 원본에 연결
 
@@ -31,7 +31,7 @@ Teradata 원본은 다음을 사용하여 Teradata 데이터베이스에서 데�
 
 Teradata 원본이 TPT(Teradata Parallel Transporter) API에 대해 수행하는 호출을 기록할 수 있습니다. 이렇게 하려면 패키지 로깅을 사용하도록 설정하고 패키지 수준에서 **진단** 이벤트를 선택합니다.
 
-ODBC(Open Database Connectivity) 드라이버 관리자 추적을 사용하도록 설정하여 Teradada 원본이 Teradata ODBC 드라이버에 대해 수행하는 ODBC 호출을 기록할 수 있습니다. 자세한 내용은 [ODBC 데이터 원본 관리자를 사용하여 ODBC 추적을 생성하는 방법](https://docs.microsoft.com/sql/odbc/admin/setting-tracing-options)을 참조하세요.
+ODBC(Open Database Connectivity) 드라이버 관리자 추적을 사용하도록 설정하여 Teradada 원본이 Teradata ODBC 드라이버에 대해 수행하는 ODBC 호출을 기록할 수 있습니다. 자세한 내용은 [ODBC 데이터 원본 관리자를 사용하여 ODBC 추적을 생성하는 방법](../../odbc/admin/setting-tracing-options.md)을 참조하세요.
 
 ## <a name="parallelism"></a>병렬 처리
 

@@ -25,12 +25,12 @@ helpviewer_keywords:
 ms.assetid: 1d9c8247-fd89-4544-be9c-01c95b745db0
 author: rothja
 ms.author: jroth
-ms.openlocfilehash: 6ea26a56bf28b555123bf456d607f79e7e443597
-ms.sourcegitcommit: e700497f962e4c2274df16d9e651059b42ff1a10
+ms.openlocfilehash: 837c84bbeda46bf78d670124cc2d33f820fe9891
+ms.sourcegitcommit: cfa04a73b26312bf18d8f6296891679166e2754d
 ms.translationtype: HT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 08/17/2020
-ms.locfileid: "88417089"
+ms.lasthandoff: 10/19/2020
+ms.locfileid: "92195525"
 ---
 # <a name="return-transact-sql"></a>RETURN(Transact-SQL)
 [!INCLUDE [SQL Server SQL Database](../../includes/applies-to-version/sql-asdb.md)]
@@ -42,7 +42,6 @@ ms.locfileid: "88417089"
 ## <a name="syntax"></a>구문  
   
 ```syntaxsql
-  
 RETURN [ integer_expression ]   
 ```  
   
@@ -68,7 +67,7 @@ RETURN [ integer_expression ]
 ### <a name="a-returning-from-a-procedure"></a>A. 프로시저에서 반환  
  다음 예에서는 `findjobs`를 실행할 때 매개 변수로 사용자 이름을 지정하지 않은 경우 `RETURN`으로 사용자의 화면에 메시지를 보낸 다음 프로시저를 종료하는 방법을 보여 줍니다. 사용자 이름을 지정하면 현재 데이터베이스에서 이 사용자가 만든 모든 개체 이름을 해당 시스템 테이블에서 가져옵니다.  
   
-```  
+```sql  
 CREATE PROCEDURE findjobs @nm sysname = NULL  
 AS   
 IF @nm IS NULL  
@@ -88,10 +87,10 @@ ELSE
 ### <a name="b-returning-status-codes"></a>B. 상태 코드 반환  
  다음 예에서는 지정된 연락처 ID의 주를 확인하는 방법을 보여 줍니다. 주가 워싱턴(`WA`)인 경우 `1`이 반환됩니다. 그 외 다른 조건(`2` 또는 `WA`가 `StateProvince` 이외의 값)인 경우 `ContactID`가 반환됩니다.  
   
-```  
+```sql  
 USE AdventureWorks2012;  
 GO  
-CREATE PROCEDURE checkstate @param varchar(11)  
+CREATE PROCEDURE checkstate @param VARCHAR(11)  
 AS  
 IF (SELECT StateProvince FROM Person.vAdditionalContactInfo WHERE ContactID = @param) = 'WA'  
     RETURN 1  
@@ -102,8 +101,8 @@ GO
   
  다음 예는 `checkstate` 실행의 반환 상태를 보여 줍니다. 첫 번째 예는 워싱턴의 연락처를 두 번째 예는 워싱턴에 없는 연락처를 세 번째는 유효하지 않은 연락처를 보여 줍니다. `@return_status` 지역 변수를 선언해야 이를 사용할 수 있습니다.  
   
-```  
-DECLARE @return_status int;  
+```sql  
+DECLARE @return_status INT;  
 EXEC @return_status = checkstate '2';  
 SELECT 'Return Status' = @return_status;  
 GO  
@@ -121,8 +120,8 @@ GO
   
  다른 연락처를 지정하여 쿼리를 다시 실행합니다.  
   
-```  
-DECLARE @return_status int;  
+```sql  
+DECLARE @return_status INT;  
 EXEC @return_status = checkstate '6';  
 SELECT 'Return Status' = @return_status;  
 GO  
@@ -139,8 +138,8 @@ GO
   
  또 다른 연락처를 지정하여 쿼리를 다시 실행합니다.  
   
-```  
-DECLARE @return_status int  
+```sql  
+DECLARE @return_status INT  
 EXEC @return_status = checkstate '12345678901';  
 SELECT 'Return Status' = @return_status;  
 GO  

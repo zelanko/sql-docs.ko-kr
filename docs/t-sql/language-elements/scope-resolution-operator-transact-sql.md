@@ -13,12 +13,12 @@ dev_langs:
 ms.assetid: 764d8f91-957b-4037-997b-a9b6b533c504
 author: rothja
 ms.author: jroth
-ms.openlocfilehash: 1372950c3262f86ca1b0d85ca7026d6560f4afb2
-ms.sourcegitcommit: e700497f962e4c2274df16d9e651059b42ff1a10
+ms.openlocfilehash: 6c319d0e7e67605f09954e88434842be9b8ae1df
+ms.sourcegitcommit: cfa04a73b26312bf18d8f6296891679166e2754d
 ms.translationtype: HT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 08/17/2020
-ms.locfileid: "88459277"
+ms.lasthandoff: 10/19/2020
+ms.locfileid: "92195466"
 ---
 # <a name="-scope-resolution-transact-sql"></a>:: (범위 결정) (Transact-SQL)
 [!INCLUDE[tsql-appliesto-ss2012-xxxx-xxxx-xxx_md](../../includes/tsql-appliesto-ss2012-xxxx-xxxx-xxx-md.md)]
@@ -28,7 +28,7 @@ ms.locfileid: "88459277"
 ## <a name="examples"></a>예제  
  다음 예에서는 범위 결정 연산자를 사용하여 `GetRoot()` 형식의 `hierarchyid` 멤버에 액세스하는 방법을 보여 줍니다.  
   
-```  
+```sql  
 DECLARE @hid hierarchyid;  
 SELECT @hid = hierarchyid::GetRoot();  
 PRINT @hid.ToString();  

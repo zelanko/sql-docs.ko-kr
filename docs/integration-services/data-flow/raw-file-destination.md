@@ -21,12 +21,12 @@ helpviewer_keywords:
 ms.assetid: d311b458-aefc-4b4d-b1a1-4c0ebbb34214
 author: chugugrace
 ms.author: chugu
-ms.openlocfilehash: 9cf51661228dcb9b6dd5e42ff900b3770b540898
-ms.sourcegitcommit: e700497f962e4c2274df16d9e651059b42ff1a10
+ms.openlocfilehash: 27b28672540d25fe84573c37004161992d3d3827
+ms.sourcegitcommit: cfa04a73b26312bf18d8f6296891679166e2754d
 ms.translationtype: HT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 08/17/2020
-ms.locfileid: "88495787"
+ms.lasthandoff: 10/19/2020
+ms.locfileid: "92194207"
 ---
 # <a name="raw-file-destination"></a>Raw File Destination
 
@@ -129,7 +129,7 @@ ms.locfileid: "88495787"
   
  **고급 편집기** 대화 상자에는 프로그래밍 방식으로 설정할 수 있는 속성이 표시됩니다. **고급 편집기** 대화 상자를 사용하거나 프로그래밍 방식으로 설정할 수 있는 속성에 대한 자세한 내용을 보려면 다음 항목 중 하나를 클릭하세요.  
   
--   [Common Properties](https://msdn.microsoft.com/library/51973502-5cc6-4125-9fce-e60fa1b7b796)  
+-   [Common Properties](./set-the-properties-of-a-data-flow-component.md)  
   
 -   [원시 파일 사용자 지정 속성](../../integration-services/data-flow/raw-file-custom-properties.md)  
   
@@ -226,5 +226,4 @@ ms.locfileid: "88495787"
 ## <a name="see-also"></a>참고 항목  
  [원시 파일 원본](../../integration-services/data-flow/raw-file-source.md)   
  [데이터 흐름](../../integration-services/data-flow/data-flow.md)  
-  
   

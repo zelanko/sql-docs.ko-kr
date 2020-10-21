@@ -10,12 +10,12 @@ ms.topic: conceptual
 ms.assetid: d7e7067b-f5a5-482f-b97e-9d82fe8e9f76
 author: chugugrace
 ms.author: chugu
-ms.openlocfilehash: ea6e8b6a3628fb0f8d93aaa6b8775999b0481266
-ms.sourcegitcommit: e700497f962e4c2274df16d9e651059b42ff1a10
+ms.openlocfilehash: cbbd57a1f195b3e2363357e653ff77129bb9f224
+ms.sourcegitcommit: cfa04a73b26312bf18d8f6296891679166e2754d
 ms.translationtype: HT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 08/17/2020
-ms.locfileid: "88495654"
+ms.lasthandoff: 10/19/2020
+ms.locfileid: "92195195"
 ---
 # <a name="connect-to-a-flat-file-data-source-sql-server-import-and-export-wizard"></a>플랫 파일 데이터 원본에 연결(SQL Server 가져오기 및 내보내기 마법사)
 
@@ -261,7 +261,7 @@ ms.locfileid: "88495654"
  **새로 고침**  
  **새로 고침**을 클릭하여 건너뛸 행 수의 변경 결과를 검토합니다. 이 단추는 다른 연결 옵션을 변경한 후에만 표시됩니다.  
  
-**미리 보기** 페이지에 대한 자세한 내용은 Integration Services 참조 페이지 - [플랫 파일 연결 관리자 편집기&#40;미리 보기 페이지&#41;](../../integration-services/connection-manager/flat-file-connection-manager-editor-preview-page.md)를 참조하세요.
+**미리 보기** 페이지에 대한 자세한 내용은 Integration Services 참조 페이지 - [플랫 파일 연결 관리자 편집기&#40;미리 보기 페이지&#41;](../connection-manager/flat-file-connection-manager.md)를 참조하세요.
 
 ## <a name="connect-to-a-flat-file-destination"></a>플랫 파일 대상에 연결
 플랫 파일 대상의 경우, 다음 스크린 샷과 같이 옵션 페이지는 하나뿐입니다. 파일을 검색하여 선택한 다음 **형식** 섹션에서 설정을 확인합니다.
@@ -303,4 +303,3 @@ ms.locfileid: "88495654"
 ## <a name="see-also"></a>참고 항목
 [데이터 원본 선택](../../integration-services/import-export-data/choose-a-data-source-sql-server-import-and-export-wizard.md)  
 [대상 선택](../../integration-services/import-export-data/choose-a-destination-sql-server-import-and-export-wizard.md)
-

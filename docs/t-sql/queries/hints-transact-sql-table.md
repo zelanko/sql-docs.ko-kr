@@ -37,12 +37,12 @@ helpviewer_keywords:
 ms.assetid: 8bf1316f-c0ef-49d0-90a7-3946bc8e7a89
 author: VanMSFT
 ms.author: vanto
-ms.openlocfilehash: 0c783f9db966605a3eeccaca453e7a5c249b8495
-ms.sourcegitcommit: b6ee0d434b3e42384b5d94f1585731fd7d0eff6f
+ms.openlocfilehash: 830b03042589ac1e9f03e94b134a48d510a37c31
+ms.sourcegitcommit: 22dacedeb6e8721e7cdb6279a946d4002cfb5da3
 ms.translationtype: HT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 09/02/2020
-ms.locfileid: "89288255"
+ms.lasthandoff: 10/14/2020
+ms.locfileid: "92035839"
 ---
 # <a name="hints-transact-sql---table"></a>힌트(Transact-SQL) - 테이블
 [!INCLUDE [SQL Server SQL Database](../../includes/applies-to-version/sql-asdb.md)]
@@ -398,7 +398,7 @@ GO
 쿼리 최적화 프로그램은 SET 옵션에 필터링된 인덱스에 대한 필수 값이 없으면 인덱스 힌트를 인식하지 않습니다. 자세한 내용은 [CREATE INDEX&#40;Transact-SQL&#41;](../../t-sql/statements/create-index-transact-sql.md)를 참조하세요.  
   
 ## <a name="using-noexpand"></a>NOEXPAND 사용  
-NOEXPAND는 *인덱싱된 뷰*에만 적용됩니다. 인덱싱된 뷰란 고유한 클러스터형 인덱스가 만들어져 있는 뷰를 의미합니다. 인덱싱된 뷰와 기본 테이블 모두에 있는 열에 대한 참조가 포함된 쿼리의 경우 쿼리 최적화 프로그램이 쿼리를 실행하는 데 인덱싱된 뷰를 사용하는 것이 최상의 방법이라고 결정하면 뷰의 인덱스를 사용합니다. 이 기능은 *인덱싱된 뷰 일치*라고 합니다. [!INCLUDE[ssSQL15_md](../../includes/sssql15-md.md)] SP1 이전에는 쿼리 최적화 프로그램에서 인덱싱된 뷰를 자동으로 사용하는 것은 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]의 특정 버전에서만 지원됩니다. [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 버전에서 지원되는 기능 목록은 [SQL Server 버전 2016에서 지원되는 기능](../../sql-server/editions-and-supported-features-for-sql-server-2016.md), [SQL Server 서버 2017에서 지원되는 기능](../../SQL-server/editions-and-components-of-SQL-server-2017.md), [SQL Server 버전 2019에서 지원되는 기능](../../sql-server/editions-and-components-of-sql-server-version-15.md)을 참조하세요.  
+NOEXPAND는 *인덱싱된 뷰*에만 적용됩니다. 인덱싱된 뷰란 고유한 클러스터형 인덱스가 만들어져 있는 뷰를 의미합니다. 인덱싱된 뷰와 기본 테이블 모두에 있는 열에 대한 참조가 포함된 쿼리의 경우 쿼리 최적화 프로그램이 쿼리를 실행하는 데 인덱싱된 뷰를 사용하는 것이 최상의 방법이라고 결정하면 뷰의 인덱스를 사용합니다. 이 기능은 *인덱싱된 뷰 일치*라고 합니다. [!INCLUDE[ssSQL15_md](../../includes/sssql15-md.md)] SP1 이전에는 쿼리 최적화 프로그램에서 인덱싱된 뷰를 자동으로 사용하는 것은 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]의 특정 버전에서만 지원됩니다. [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 버전에서 지원되는 기능 목록은 [SQL Server 버전 2016에서 지원되는 기능](../../sql-server/editions-and-components-of-sql-server-2016.md), [SQL Server 서버 2017에서 지원되는 기능](../../SQL-server/editions-and-components-of-SQL-server-2017.md), [SQL Server 버전 2019에서 지원되는 기능](../../sql-server/editions-and-components-of-sql-server-version-15.md)을 참조하세요.  
   
 단, 쿼리 최적화 프로그램에서 일치시킬 인덱싱된 뷰를 고려하거나 NOEXPAND 힌트로 참조된 인덱싱된 뷰를 사용하려면 다음 SET 옵션을 ON으로 설정해야 합니다.  
 
@@ -482,5 +482,4 @@ AND (d.OrderQty > 5 OR d.LineTotal < 1000.00);
  [OPENROWSET&#40;Transact-SQL&#41;](../../t-sql/functions/openrowset-transact-sql.md)   
  [힌트&#40;Transact SQL&#41;](../../t-sql/queries/hints-transact-sql.md)   
  [쿼리 힌트&#40;Transact-SQL&#41;](../../t-sql/queries/hints-transact-sql-query.md)  
-  
   

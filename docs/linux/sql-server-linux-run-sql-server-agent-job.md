@@ -8,12 +8,12 @@ ms.topic: conceptual
 ms.prod: sql
 ms.technology: linux
 ms.assetid: 1d93d95e-9c89-4274-9b3f-fa2608ec2792
-ms.openlocfilehash: 49d8dab49fef03b3bf06269ef4397656dfa888e3
-ms.sourcegitcommit: 3ea082c778f6771b17d90fb597680ed334d3e0ec
+ms.openlocfilehash: e7cc33b3f01ae9562f1d9fb1a84830df7a807c9b
+ms.sourcegitcommit: 22102f25db5ccca39aebf96bc861c92f2367c77a
 ms.translationtype: HT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 08/11/2020
-ms.locfileid: "88088823"
+ms.lasthandoff: 10/16/2020
+ms.locfileid: "92115836"
 ---
 # <a name="create-and-run-sql-server-agent-jobs-on-linux"></a>Linux에서 SQL Server 에이전트 작업 만들기 및 실행
 
@@ -39,7 +39,7 @@ Linux의 SQL Server 에이전트에 대한 알려진 문제는 [릴리스 정보
 선택적 필수 조건은 다음과 같습니다.
 
 * SSMS를 사용하는 Windows 머신:
-  * 선택적 SSMS 단계를 위한 [SQL Server Management Studio](https://docs.microsoft.com/sql/ssms/download-sql-server-management-studio-ssms).
+  * 선택적 SSMS 단계를 위한 [SQL Server Management Studio](../ssms/download-sql-server-management-studio-ssms.md).
 
 ## <a name="enable-sql-server-agent"></a>SQL Server 에이전트 사용
 
@@ -81,7 +81,7 @@ Linux에서 SQL Server 에이전트를 사용하려면 먼저 SQL Server가 설�
 다음 단계에서는 Transact-SQL 명령을 사용하여 Linux에서 SQL Server 에이전트 작업을 만듭니다. 이 작업은 샘플 데이터베이스 **SampleDB**의 일별 백업을 실행합니다.
 
 > [!TIP]
-> 모든 T-SQL 클라이언트를 사용하여 이 명령을 실행할 수 있습니다. 예를 들어 Linux에서 [sqlcmd](sql-server-linux-setup-tools.md) 또는 [Visual Studio Code](sql-server-linux-develop-use-vscode.md)를 사용할 수 있습니다. 원격 Windows Server에서는 SSMS(SQL Server Management Studio)에서 쿼리를 실행하거나 다음 섹션에 설명된 대로 작업 관리에 UI 인터페이스를 사용할 수도 있습니다.
+> 모든 T-SQL 클라이언트를 사용하여 이 명령을 실행할 수 있습니다. 예를 들어 Linux에서 [sqlcmd](sql-server-linux-setup-tools.md) 또는 [Visual Studio Code](../tools/visual-studio-code/sql-server-develop-use-vscode.md)를 사용할 수 있습니다. 원격 Windows Server에서는 SSMS(SQL Server Management Studio)에서 쿼리를 실행하거나 다음 섹션에 설명된 대로 작업 관리에 UI 인터페이스를 사용할 수도 있습니다.
 
 1. [sp_add_job](../relational-databases/system-stored-procedures/sp-add-job-transact-sql.md)을 사용하여 `Daily SampleDB Backup` 작업을 만듭니다.
 
@@ -200,4 +200,4 @@ Windows에서 SSMS(SQL Server Management Studio)를 사용하여 작업을 원�
 다음으로, 작업을 만들고 관리하기 위한 다른 기능을 살펴봅니다.
 
 > [!div class="nextstepaction"]
->[SQL Server 에이전트 설명서](https://docs.microsoft.com/sql/ssms/agent/sql-server-agent)
+>[SQL Server 에이전트 설명서](../ssms/agent/sql-server-agent.md)

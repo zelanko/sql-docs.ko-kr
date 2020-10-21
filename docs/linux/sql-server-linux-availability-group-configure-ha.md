@@ -10,12 +10,12 @@ ms.topic: conceptual
 ms.prod: sql
 ms.technology: linux
 ms.assetid: ''
-ms.openlocfilehash: cfe799e9a0abb8731642ee8b2d8d293c8a8851a2
-ms.sourcegitcommit: 610e3ebe21ac6575850a29641a32f275e71557e3
+ms.openlocfilehash: 03c9c90f1c9382c85141853ff19cc5d76b40f093
+ms.sourcegitcommit: 22102f25db5ccca39aebf96bc861c92f2367c77a
 ms.translationtype: HT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 10/07/2020
-ms.locfileid: "91784849"
+ms.lasthandoff: 10/16/2020
+ms.locfileid: "92115941"
 ---
 # <a name="configure-sql-server-always-on-availability-group-for-high-availability-on-linux"></a>Linux에서 고가용성을 위한 SQL Server Always On 가용성 그룹 구성
 
@@ -80,7 +80,7 @@ Linux 서버에서 고가용성을 위한 AG를 만드는 단계는 Windows Serv
 >[!NOTE]
 >가용성 그룹에 동기 또는 비동기 복제본을 추가로 포함할 수 있습니다. 
 
-Linux에서 고가용성을 위한 AG를 만듭니다. [CREATE AVAILABILITY GROUP](https://docs.microsoft.com/sql/t-sql/statements/create-availability-group-transact-sql)에 `CLUSTER_TYPE = EXTERNAL`을 사용합니다. 
+Linux에서 고가용성을 위한 AG를 만듭니다. [CREATE AVAILABILITY GROUP](../t-sql/statements/create-availability-group-transact-sql.md)에 `CLUSTER_TYPE = EXTERNAL`을 사용합니다. 
 
 * 가용성 그룹 - `CLUSTER_TYPE = EXTERNAL`로 설정합니다. 외부 클러스터 엔터티가 AG를 관리함을 나타냅니다. Pacemaker는 외부 클러스터 엔터티의 예입니다. AG 클러스터 유형이 external인 경우, 
 

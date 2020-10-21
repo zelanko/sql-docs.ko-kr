@@ -26,12 +26,12 @@ helpviewer_keywords:
 ms.assetid: 13f81c3e-2b18-4f83-b445-a2f4a2c560aa
 author: chugugrace
 ms.author: chugu
-ms.openlocfilehash: 1e1c63721be4575f49a6f72e2eeb8d6520cda9af
-ms.sourcegitcommit: e700497f962e4c2274df16d9e651059b42ff1a10
+ms.openlocfilehash: cbc245edb977a2d499f82c6a4dcaa066b0c9259e
+ms.sourcegitcommit: cfa04a73b26312bf18d8f6296891679166e2754d
 ms.translationtype: HT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 08/17/2020
-ms.locfileid: "88457028"
+ms.lasthandoff: 10/19/2020
+ms.locfileid: "92195861"
 ---
 # <a name="set-package-properties"></a>패키지 속성 설정
 
@@ -64,7 +64,7 @@ ms.locfileid: "88457028"
   
 ### <a name="to-set-package-properties-in-the-properties-window"></a>속성 창에서 패키지 속성을 설정하려면  
   
--   [패키지의 속성 설정](https://msdn.microsoft.com/library/0d20346e-475c-412f-b3ff-7bce25242b7a)  
+-   [패키지의 속성 설정]()  
   
 ## <a name="properties-by-category"></a>항목별 속성  
  다음 표에서는 항목별 패키지 속성을 나열합니다.  
@@ -172,4 +172,3 @@ ms.locfileid: "88457028"
 4.  **속성** 창에서 패키지 속성을 편집합니다.  
   
 5.  **파일** 메뉴에서 **선택한 항목 저장** 을 클릭하여 업데이트된 패키지를 저장합니다.  
-  

@@ -9,17 +9,17 @@ ms.topic: conceptual
 ms.prod: sql
 ms.technology: linux
 ms.assetid: ''
-ms.openlocfilehash: d40072ea8b347001feba5d74e6e08c8c4c8ae340
-ms.sourcegitcommit: 3ea082c778f6771b17d90fb597680ed334d3e0ec
+ms.openlocfilehash: 49f47819a6ca128ce45f950c9cd6881e325bec59
+ms.sourcegitcommit: 22102f25db5ccca39aebf96bc861c92f2367c77a
 ms.translationtype: HT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 08/11/2020
-ms.locfileid: "88089033"
+ms.lasthandoff: 10/16/2020
+ms.locfileid: "92115606"
 ---
 # <a name="quickstart-run-sql-server-in-the-cloud"></a>빠른 시작: 클라우드에서 SQL Server 실행
 [!INCLUDE [SQL Server - Linux](../includes/applies-to-version/sql-linux.md)]
 
-이 빠른 시작에서는 선택한 클라우드에서 RHEL(Red Hat Enterprise Linux), SLES(SUSE Linux Enterprise Server) 또는 Ubuntu에 SQL Server를 설치합니다. [Azure Portal 에서 Linux SQL Server 가상 머신 프로비저닝](https://docs.microsoft.com/azure/virtual-machines/linux/sql/provision-sql-server-linux-virtual-machine?toc=/sql/toc/toc.json)으로 이동하여 Azure에서 SQL Server on Linux를 실행합니다.
+이 빠른 시작에서는 선택한 클라우드에서 RHEL(Red Hat Enterprise Linux), SLES(SUSE Linux Enterprise Server) 또는 Ubuntu에 SQL Server를 설치합니다. [Azure Portal 에서 Linux SQL Server 가상 머신 프로비저닝](/azure/virtual-machines/linux/sql/provision-sql-server-linux-virtual-machine?toc=%252fsql%252ftoc%252ftoc.json)으로 이동하여 Azure에서 SQL Server on Linux를 실행합니다.
 
 > [!NOTE]
 > 유료 버전의 SQL Server를 실행하도록 선택하면 사용자 라이선스가 필요합니다(BYOL).

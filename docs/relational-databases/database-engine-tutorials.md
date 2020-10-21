@@ -12,12 +12,12 @@ ms.assetid: 32bd8af8-a832-4dc8-afff-01668e6b2b51
 author: rothja
 ms.author: jroth
 monikerRange: =azuresqldb-current||>=sql-server-2016||=sqlallproducts-allversions||>=sql-server-linux-2017||=azuresqldb-mi-current
-ms.openlocfilehash: 4814fe709fb28141d00fd5302feab845d39d5331
-ms.sourcegitcommit: 9470c4d1fc8d2d9d08525c4f811282999d765e6e
+ms.openlocfilehash: f58faca8cb3e83057cef9c2e214ffcccabf9dd9f
+ms.sourcegitcommit: cfa04a73b26312bf18d8f6296891679166e2754d
 ms.translationtype: HT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 07/17/2020
-ms.locfileid: "86458529"
+ms.lasthandoff: 10/19/2020
+ms.locfileid: "92196197"
 ---
 # <a name="database-engine-tutorials"></a>데이터베이스 엔진 자습서
 [!INCLUDE [SQL Server Azure SQL Database](../includes/applies-to-version/sql-asdb.md)]
@@ -26,7 +26,7 @@ ms.locfileid: "86458529"
 [자습서: 데이터베이스 엔진 시작](../relational-databases/tutorial-getting-started-with-the-database-engine.md)  
 이 자습서에서는 [!INCLUDE[ssDE](../includes/ssde-md.md)]의 인스턴스에 연결하는 방법에 대해 설명합니다.  
   
-[자습서: SQL Server Management Studio](../tools/sql-server-management-studio/tutorial-sql-server-management-studio.md)  
+[자습서: SQL Server Management Studio](../ssms/quickstarts/connect-query-sql-server.md)  
 이 자습서에서는 [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)] 인프라 관리를 위한 통합 환경을 소개합니다. [!INCLUDE[ssManStudioFull](../includes/ssmanstudiofull-md.md)] 는 [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)]인스턴스 구성, 모니터링 및 관리를 위한 그래픽 인터페이스를 제공합니다. 또한 데이터베이스 및 데이터 웨어하우스 등 애플리케이션에 사용되는 데이터 계층 구성 요소를 배포, 모니터링 및 업그레이드할 수도 있습니다. [!INCLUDE[ssManStudioFull](../includes/ssmanstudiofull-md.md)] 는 스크립트 편집 및 디버그를 위한 [!INCLUDE[tsql](../includes/tsql-md.md)], MDX, DMX 및 XML 언어 편집기도 제공합니다.  
   
 [자습서: Transact-SQL 문 작성](../t-sql/tutorial-writing-transact-sql-statements.md)  
@@ -58,5 +58,3 @@ ms.locfileid: "86458529"
 [TechNet WIKI: SQL Server 2012 샘플](https://go.microsoft.com/fwlink/?linkID=220734)  
   
   
-  
-

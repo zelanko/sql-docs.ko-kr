@@ -10,12 +10,12 @@ ms.technology: integration-services
 ms.topic: conceptual
 author: chugugrace
 ms.author: chugu
-ms.openlocfilehash: af9683fe11a5d739e753ba451a4d621c6bfe8497
-ms.sourcegitcommit: e700497f962e4c2274df16d9e651059b42ff1a10
+ms.openlocfilehash: 5919aa313147b54e52289aa0c1d530a5f0064aab
+ms.sourcegitcommit: cfa04a73b26312bf18d8f6296891679166e2754d
 ms.translationtype: HT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 08/17/2020
-ms.locfileid: "88430735"
+ms.lasthandoff: 10/19/2020
+ms.locfileid: "92195355"
 ---
 # <a name="oracle-source"></a>Oracle 원본
 
@@ -162,7 +162,7 @@ Oracle 원본 편집기는 아래 그림에 나와 있습니다. 여기에는 �
 **오류 동작**
 
 Oracle 원본에서 흐름의 오류를 처리하는 방법을 선택합니다. 오류 무시, 행 리디렉션 또는 구성 요소 실패를 지정할 수 있습니다.
-**관련 섹션**: [데이터 오류 처리](https://docs.microsoft.com/sql/integration-services/data-flow/error-handling-in-data?view=sql-server-2017)
+**관련 섹션**: [데이터 오류 처리](./error-handling-in-data.md?view=sql-server-2017)
 
 **잘림**
 

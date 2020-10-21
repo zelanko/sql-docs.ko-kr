@@ -26,12 +26,12 @@ helpviewer_keywords:
 ms.assetid: 6c7975ff-acec-4e6e-82e5-a641e3a98afe
 author: chugugrace
 ms.author: chugu
-ms.openlocfilehash: ae472556993fafc52719fcf929bf88c35098e196
-ms.sourcegitcommit: e700497f962e4c2274df16d9e651059b42ff1a10
+ms.openlocfilehash: 41d40f419497ccb2917052ac477c888a9338c135
+ms.sourcegitcommit: cfa04a73b26312bf18d8f6296891679166e2754d
 ms.translationtype: HT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 08/17/2020
-ms.locfileid: "88392159"
+ms.lasthandoff: 10/19/2020
+ms.locfileid: "92195265"
 ---
 # <a name="dtutil-utility"></a>Encrypt
 
@@ -268,7 +268,7 @@ dtutil /FILE srcPackage.dtsx /SIGN FILE;destpkg.dtsx;1767832648918a9d989fdac9819
 > [!NOTE]  
 >  이 예에 사용된 해시는 실제 해시가 아닙니다.  
   
- 자세한 내용은 [Authenticode로 코드 서명 및 확인(Signing and Checking Code with Authenticode)](https://go.microsoft.com/fwlink/?LinkId=78100)의 CertMgr 섹션을 참조하십시오.  
+ 자세한 내용은 [Authenticode로 코드 서명 및 확인(Signing and Checking Code with Authenticode)](/previous-versions/windows/internet-explorer/ie-developer/platform-apis/ms537364(v=vs.85))의 CertMgr 섹션을 참조하십시오.  
   
 ### <a name="encrypt-examples"></a>암호화 예  
  다음 예에서는 암호와 함께 전체 패키지 암호화를 사용하여 파일 기반 PackageToEncrypt.dtsx를 파일 기반 EncryptedPackage.dts로 암호화합니다. 암호화에 사용된 암호는 *EncPswd*입니다.  
@@ -279,5 +279,4 @@ dtutil /FILE PackageToEncrypt.dtsx /ENCRYPT file;EncryptedPackage.dtsx;3;EncPswd
   
 ## <a name="see-also"></a>참고 항목  
 [Integration Services(SSIS) 패키지 실행](../integration-services/packages/run-integration-services-ssis-packages.md)  
-  
   

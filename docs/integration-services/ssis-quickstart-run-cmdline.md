@@ -9,12 +9,12 @@ ms.custom: ''
 ms.technology: integration-services
 author: chugugrace
 ms.author: chugu
-ms.openlocfilehash: bc97eb4c3c8d554a86a773910508c2d1ba936459
-ms.sourcegitcommit: e700497f962e4c2274df16d9e651059b42ff1a10
+ms.openlocfilehash: e9efc610f33e2f58a8c1ae66b43480fb1d1da164
+ms.sourcegitcommit: cfa04a73b26312bf18d8f6296891679166e2754d
 ms.translationtype: HT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 08/17/2020
-ms.locfileid: "88495428"
+ms.lasthandoff: 10/19/2020
+ms.locfileid: "92195827"
 ---
 # <a name="run-an-ssis-package-from-the-command-prompt-with-dtexecexe"></a>명령 프롬프트에서 DTExec.exe를 사용하여 SSIS 패키지 실행
 
@@ -26,7 +26,7 @@ ms.locfileid: "88495428"
 > [!NOTE]
 > 이 문서에 설명된 메서드는 Azure SQL Database 서버에 배포되는 패키지에서 테스트를 거치지 않았습니다.
 
-`DTExec.exe`에 대한 자세한 내용은 [dtexec Utility](https://docs.microsoft.com/sql/integration-services/packages/dtexec-utility)를 참조하세요.
+`DTExec.exe`에 대한 자세한 내용은 [dtexec Utility](./packages/dtexec-utility.md)를 참조하세요.
 
 ## <a name="supported-platforms"></a>지원되는 플랫폼
 
@@ -58,4 +58,4 @@ ms.locfileid: "88495428"
     - [Transact-SQL(SSMS)을 사용하여 SSIS 패키지 실행](./ssis-quickstart-run-tsql-ssms.md)
     - [Transact-SQL(VS Code)을 사용하여 SSIS 패키지 실행](ssis-quickstart-run-tsql-vscode.md)
     - [PowerShell을 사용하여 SSIS 패키지 실행](ssis-quickstart-run-powershell.md)
-    - [C#을 사용하여 SSIS 패키지 실행](./ssis-quickstart-run-dotnet.md) 
+    - [C#을 사용하여 SSIS 패키지 실행](./ssis-quickstart-run-dotnet.md)

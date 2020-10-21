@@ -18,12 +18,12 @@ helpviewer_keywords:
 ms.assetid: 81577d7e-8ff6-4e73-b7f4-94c03d4921e7
 author: MikeRayMSFT
 ms.author: mikeray
-ms.openlocfilehash: 0dc98efb298d06682b29c53c05b14e014ad8361a
-ms.sourcegitcommit: cc23d8646041336d119b74bf239a6ac305ff3d31
+ms.openlocfilehash: f0aa604a88902dc8bfba522556f11b267fa1e184
+ms.sourcegitcommit: 22dacedeb6e8721e7cdb6279a946d4002cfb5da3
 ms.translationtype: HT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 09/23/2020
-ms.locfileid: "91111256"
+ms.lasthandoff: 10/14/2020
+ms.locfileid: "92037166"
 ---
 # <a name="getlevel-database-engine"></a>GetLevel(데이터베이스 엔진)
 
@@ -94,7 +94,6 @@ this.GetLevel()
 ```  
   
 ## <a name="see-also"></a>참고 항목
-[hierarchyid 데이터 형식 메서드 참조](https://msdn.microsoft.com/library/01a050f5-7580-4d5f-807c-7f11423cbb06)  
+[hierarchyid 데이터 형식 메서드 참조](./hierarchyid-data-type-method-reference.md)  
 [계층적 데이터&#40;SQL Server&#41;](../../relational-databases/hierarchical-data-sql-server.md)  
 [hierarchyid&#40;Transact-SQL&#41;](../../t-sql/data-types/hierarchyid-data-type-method-reference.md)
-  

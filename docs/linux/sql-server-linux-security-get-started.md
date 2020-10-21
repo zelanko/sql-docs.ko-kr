@@ -8,12 +8,12 @@ ms.topic: conceptual
 ms.prod: sql
 ms.technology: linux
 ms.assetid: ecc72850-8b01-492e-9a27-ec817648f0e0
-ms.openlocfilehash: 031005dcb6a5353e9e4f0b73a7a45d667d2212e7
-ms.sourcegitcommit: 3ea082c778f6771b17d90fb597680ed334d3e0ec
+ms.openlocfilehash: 4a9137ad71947d222d246df046c6ab573fb4500d
+ms.sourcegitcommit: 22102f25db5ccca39aebf96bc861c92f2367c77a
 ms.translationtype: HT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 08/11/2020
-ms.locfileid: "88088809"
+ms.lasthandoff: 10/16/2020
+ms.locfileid: "92115816"
 ---
 # <a name="walkthrough-for-the-security-features-of-sql-server-on-linux"></a>SQL Server on Linux의 보안 기능 연습
 
@@ -250,7 +250,7 @@ TDE를 제거하려면 `ALTER DATABASE AdventureWorks2014 SET ENCRYPTION OFF;`�
 > [!WARNING]
 >  TDE가 사용된 데이터베이스의 백업 파일도 데이터베이스 암호화 키를 사용하여 암호화됩니다. 따라서 이러한 백업 파일을 복원하려면 데이터베이스 암호화 키를 보호하는 인증서를 사용할 수 있어야 합니다. 즉, 데이터베이스 백업뿐만 아니라 데이터 손실을 방지하기 위해 서버 인증서의 백업도 유지 관리해야 합니다. 인증서를 더 이상 사용할 수 없을 경우 데이터 손실이 발생합니다. 자세한 내용은 [SQL Server Certificates and Asymmetric Keys](../relational-databases/security/sql-server-certificates-and-asymmetric-keys.md)을 참조하세요.  
 
-TDE에 대한 자세한 내용은 [TDE(투명한 데이터 암호화)](../relational-databases/security/encryption/transparent-data-encryption-tde.md)를 참조하세요.   
+TDE에 대한 자세한 내용은 [TDE(투명한 데이터 암호화)](../relational-databases/security/encryption/transparent-data-encryption.md)를 참조하세요.   
 
 
 ## <a name="configure-backup-encryption"></a>백업 암호화 구성

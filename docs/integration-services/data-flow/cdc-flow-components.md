@@ -11,12 +11,12 @@ ms.topic: conceptual
 ms.assetid: 5ae69ddf-27c3-467c-9af1-c89ec383f661
 author: chugugrace
 ms.author: chugu
-ms.openlocfilehash: bb7897aa3f14a043eef6f983daafe8121a07c8bf
-ms.sourcegitcommit: 827ad02375793090fa8fee63cc372d130f11393f
+ms.openlocfilehash: 0306e266f48259d0a7cc68a455116ec5a5ce847f
+ms.sourcegitcommit: cfa04a73b26312bf18d8f6296891679166e2754d
 ms.translationtype: HT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 09/04/2020
-ms.locfileid: "89480895"
+ms.lasthandoff: 10/19/2020
+ms.locfileid: "92196487"
 ---
 # <a name="cdc-flow-components"></a>CDC 흐름 구성 요소
 
@@ -86,7 +86,7 @@ CDC 구성 요소를 설치한 후 SQL [!INCLUDE[ssBIDevStudio](../../includes/s
   
  이 [!INCLUDE[ssCurrent](../../includes/sscurrent-md.md)][!INCLUDE[ssISnoversion](../../includes/ssisnoversion-md.md)] 제어 흐름에는 CDC 제어 태스크 및 데이터 흐름 태스크라는 두 가지 태스크가 포함되어 있습니다. **CDC 처리 범위 가져오기** 라는 첫 번째 태스크는 **변경 내용 처리**라는 데이터 흐름 태스크에서 처리되는 변경 내용에 대한 LSN 범위를 설정합니다. 이 범위는 마지막 패키지 실행 중에 처리되고 영구 저장소에 저장된 작업에 따라 설정됩니다.  
   
- CDC 제어 태스크를 사용하는 방법은 [CDC Control Task](../../integration-services/control-flow/cdc-control-task.md) 및 [CDC Control Task Editor](../../integration-services/control-flow/cdc-control-task-editor.md)를 참조하십시오.  
+ CDC 제어 태스크를 사용하는 방법은 [CDC Control Task](../../integration-services/control-flow/cdc-control-task.md) 및 [CDC Control Task Editor](../control-flow/cdc-control-task.md)를 참조하십시오.  
   
  다음 그림에서는 변경 내용의 처리 방식을 개념적으로 보여 주는 **변경 내용 처리** 데이터 흐름을 보여 줍니다.  
   
@@ -104,11 +104,11 @@ CDC 구성 요소를 설치한 후 SQL [!INCLUDE[ssBIDevStudio](../../includes/s
   
  [CDC 원본](../../integration-services/data-flow/cdc-source.md)  
   
- [CDC 원본 편집기&#40;연결 관리자 페이지&#41;](../../integration-services/data-flow/cdc-source-editor-connection-manager-page.md)  
+ [CDC 원본 편집기&#40;연결 관리자 페이지&#41;](./cdc-source.md)  
   
- [CDC 원본 편집기&#40;열 페이지&#41;](../../integration-services/data-flow/cdc-source-editor-columns-page.md)  
+ [CDC 원본 편집기&#40;열 페이지&#41;](./cdc-source.md)  
   
- [CDC 원본 편집기&#40;오류 출력 페이지&#41;](../../integration-services/data-flow/cdc-source-editor-error-output-page.md)  
+ [CDC 원본 편집기&#40;오류 출력 페이지&#41;](./cdc-source.md)  
   
  CDC 분할자에 대한 자세한 내용은 다음을 참조하십시오.  
   
@@ -217,9 +217,8 @@ CDC 구성 요소를 설치한 후 SQL [!INCLUDE[ssBIDevStudio](../../includes/s
   
 -   social.technet.microsoft.com의 기술 문서, [Attunity Oracle용 Microsoft 변경 데이터 캡처의 CDC 인스턴스 오류 문제 해결](https://go.microsoft.com/fwlink/?LinkId=252961)  
   
--   technet.microsoft.com의 비디오, [CDC for Oracle Databases using SQL Server Integration Services 2012 (SQL Server Video)](https://technet.microsoft.com/sqlserver/jj218898)(SQL Server Integration Services 2012를 사용하는 Oracle 데이터베이스에 대한 CDC(SQL Server 비디오))  
+-   technet.microsoft.com의 비디오, [CDC for Oracle Databases using SQL Server Integration Services 2012 (SQL Server Video)](/previous-versions/dn912438(v=msdn.10))(SQL Server Integration Services 2012를 사용하는 Oracle 데이터베이스에 대한 CDC(SQL Server 비디오))  
   
 ## <a name="see-also"></a>참고 항목  
  [CDC Control Task](../../integration-services/control-flow/cdc-control-task.md)  
-  
   

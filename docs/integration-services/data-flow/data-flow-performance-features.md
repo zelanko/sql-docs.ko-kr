@@ -24,12 +24,12 @@ helpviewer_keywords:
 ms.assetid: c4bbefa6-172b-4547-99a1-a0b38e3e2b05
 author: chugugrace
 ms.author: chugu
-ms.openlocfilehash: cf9cc8d20f6cf8c380524806700373229cf22995
-ms.sourcegitcommit: 827ad02375793090fa8fee63cc372d130f11393f
+ms.openlocfilehash: 1956aeb1fc5895eea47ef46eb093a1eea435078b
+ms.sourcegitcommit: cfa04a73b26312bf18d8f6296891679166e2754d
 ms.translationtype: HT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 09/04/2020
-ms.locfileid: "89480885"
+ms.lasthandoff: 10/19/2020
+ms.locfileid: "92196443"
 ---
 # <a name="data-flow-performance-features"></a>데이터 흐름 성능 기능
 
@@ -139,7 +139,7 @@ ms.locfileid: "89480885"
  한 데이터 흐름에 여러 집계를 만들어야 하는 경우 여러 변환을 만드는 대신 하나의 집계 변환을 사용하는 여러 집계를 만드십시오. 이 방법을 사용하면 한 집계가 다른 집계의 하위 집합인 경우 성능이 향상됩니다. 이는 변환이 한 번만 들어오는 데이터를 검색하고 내부 스토리지를 최적화할 수 있기 때문입니다. 예를 들어 집계에서 GROUP BY 절 및 AVG 집계를 사용하는 경우 이를 하나의 변환으로 조합하면 성능을 향상시킬 수 있습니다. 그러나 하나의 집계 변환 내에서 여러 집계를 수행하면 집계 작업이 직렬화되므로 여러 집계가 독립적으로 계산되어야 하는 경우 성능이 향상되지 않을 수 있습니다.  
   
 #### <a name="fuzzy-lookup-and-fuzzy-grouping-transformations"></a>유사 항목 조회 및 유사 항목 그룹화 변환  
- 유사 항목 조회 및 유사 항목 그룹화 변환의 성능 최적화에 대한 자세한 내용은 백서 [SQL Server 2005 데이터 변환 서비스의 퍼지 조회 및 퍼지 그룹화](https://go.microsoft.com/fwlink/?LinkId=96604)를 참조하십시오.  
+ 유사 항목 조회 및 유사 항목 그룹화 변환의 성능 최적화에 대한 자세한 내용은 백서 [SQL Server 2005 데이터 변환 서비스의 퍼지 조회 및 퍼지 그룹화](/previous-versions/sql/sql-server-2005/administrator/ms345128(v=sql.90))를 참조하십시오.  
   
 #### <a name="lookup-transformation"></a>조회 변환  
  필요한 열만 조회하는 SELECT 문을 입력하여 메모리에서 참조 데이터의 크기를 최소화합니다. 이 옵션은 불필요한 데이터를 대량 반환하는 전체 테이블 또는 뷰 선택 작업보다 성능을 향상시킵니다.  
@@ -175,15 +175,15 @@ ms.locfileid: "89480885"
 ## <a name="related-content"></a>관련 내용  
  **기사와 블로그 게시물**  
   
--   technet.microsoft.com의 기술 문서 [SQL Server 2005 Integration Services: 성능에 대한 전략](https://go.microsoft.com/fwlink/?LinkId=98899)  
+-   technet.microsoft.com의 기술 문서 [SQL Server 2005 Integration Services: 성능에 대한 전략](/previous-versions/sql/sql-server-2005/administrator/cc966530(v=technet.10))  
   
--   technet.microsoft.com의 기술 문서 [Integration Services: 성능 튜닝 기술](https://go.microsoft.com/fwlink/?LinkId=98900)  
+-   technet.microsoft.com의 기술 문서 [Integration Services: 성능 튜닝 기술](/previous-versions/sql/sql-server-2005/administrator/cc966529(v=technet.10))  
   
 -   _SQLCAT의 BI 및 분석 가이드_의 기술 문서 - [동기 변환을 여러 태스크로 분할하여 파이프라인의 처리량 증가](https://download.microsoft.com/download/0/F/B/0FBFAA46-2BFD-478F-8E56-7BF3C672DF9D/SQLCAT's%20Guide%20to%20BI%20and%20Analytics.pdf)
   
--   msdn.microsoft.com의 기술 문서 - [데이터 로드 성능 가이드](https://go.microsoft.com/fwlink/?LinkId=220816)  
+-   msdn.microsoft.com의 기술 문서 - [데이터 로드 성능 가이드](/previous-versions/sql/sql-server-2008/dd425070(v=sql.100))  
   
--   msdn.microsoft.com의 기술 문서 - [SSIS를 사용하여 30분 이내에 1TB 로드](https://go.microsoft.com/fwlink/?LinkId=220817)  
+-   msdn.microsoft.com의 기술 문서 - [SSIS를 사용하여 30분 이내에 1TB 로드](/previous-versions/sql/sql-server-2008/dd537533(v=sql.100))  
   
 -   sqlcat.com의 기술 문서 - [SQL Server Integration Services의 상위 10가지 모범 사례](https://go.microsoft.com/fwlink/?LinkId=220818)  
   
@@ -195,18 +195,17 @@ ms.locfileid: "89480885"
   
 -   비디오 시리즈, [엔터프라이즈에서 SSIS 패키지의 성능 설계 및 조정(SQL 비디오 시리즈)](https://go.microsoft.com/fwlink/?LinkId=400878)  
   
--   technet.microsoft.com의 비디오, [엔터프라이즈에서 SSIS 패키지 데이터 흐름 튜닝(SQL Server 비디오)](https://technet.microsoft.com/sqlserver/ff686901.aspx)  
+-   technet.microsoft.com의 비디오, [엔터프라이즈에서 SSIS 패키지 데이터 흐름 튜닝(SQL Server 비디오)](/previous-versions/ff686901(v=msdn.10))  
   
--   technet.microsoft.com의 비디오, [SSIS 데이터 흐름 버퍼 이해(SQL Server 비디오)](https://technet.microsoft.com/sqlserver/ff686905.aspx)  
+-   technet.microsoft.com의 비디오, [SSIS 데이터 흐름 버퍼 이해(SQL Server 비디오)](/previous-versions/ff686905(v=msdn.10))  
   
 -   channel9.msdn.com의 비디오 - [Microsoft SQL Server Integration Services 성능 디자인 패턴](https://go.microsoft.com/fwlink/?LinkID=233698&clcid=0x409)  
   
 -   sqlcat.com의 프레젠테이션 - [Microsoft IT의 SQL Server 2008 SSIS 데이터 흐름 엔진 향상 기능 활용 방법](https://go.microsoft.com/fwlink/?LinkId=217660)  
   
--   technet.microsoft.com의 비디오 - [Balanced Data Distributor](https://go.microsoft.com/fwlink/?LinkID=226278&clcid=0x409)  
+-   technet.microsoft.com의 비디오 - [Balanced Data Distributor](/previous-versions/dn912438(v=msdn.10))  
   
 ## <a name="see-also"></a>참고 항목  
  [패키지 배포 문제 해결 도구](../../integration-services/troubleshooting/troubleshooting-tools-for-package-development.md)   
  [패키지 실행 문제 해결 도구](../../integration-services/troubleshooting/troubleshooting-tools-for-package-execution.md)  
-  
   

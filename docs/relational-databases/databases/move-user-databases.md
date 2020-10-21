@@ -25,12 +25,12 @@ helpviewer_keywords:
 ms.assetid: ad9a4e92-13fb-457d-996a-66ffc2d55b79
 author: stevestein
 ms.author: sstein
-ms.openlocfilehash: 0892e0a2a6db25e6a82f56177544572b8a5af388
-ms.sourcegitcommit: e700497f962e4c2274df16d9e651059b42ff1a10
+ms.openlocfilehash: feb85bc9b14169c862447c8465ce47c4637b5c32
+ms.sourcegitcommit: cfa04a73b26312bf18d8f6296891679166e2754d
 ms.translationtype: HT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 08/17/2020
-ms.locfileid: "88471262"
+ms.lasthandoff: 10/19/2020
+ms.locfileid: "92195025"
 ---
 # <a name="move-user-databases"></a>사용자 데이터베이스 이동
  [!INCLUDE [SQL Server](../../includes/applies-to-version/sqlserver.md)]
@@ -129,7 +129,7 @@ ms.locfileid: "88471262"
     ALTER DATABASE database_name MODIFY FILE( NAME = logical_name , FILENAME = 'new_path\os_file_name' );  
     ```  
   
-     **sqlcmd** 유틸리티 사용 방법은 [sqlcmd 유틸리티 사용](../../relational-databases/scripting/sqlcmd-use-the-utility.md)을 참조하세요.  
+     **sqlcmd** 유틸리티 사용 방법은 [sqlcmd 유틸리티 사용](../../ssms/scripting/sqlcmd-use-the-utility.md)을 참조하세요.  
   
 4.  **sqlcmd** 유틸리티 또는 [!INCLUDE[ssManStudioFull](../../includes/ssmanstudiofull-md.md)]를 종료합니다.  
   
@@ -179,12 +179,11 @@ WHERE database_id = DB_ID(N'AdventureWorks2012')
   
 ## <a name="see-also"></a>참고 항목  
  [ALTER DATABASE &#40;Transact-SQL &#41;](../../t-sql/statements/alter-database-transact-sql.md)   
- [CREATE DATABASE&#40;SQL Server Transact-SQL&#41;](../../t-sql/statements/create-database-sql-server-transact-sql.md)   
+ [CREATE DATABASE&#40;SQL Server Transact-SQL&#41;](../../t-sql/statements/create-database-transact-sql.md)   
  [데이터베이스 분리 및 연결&#40;SQL Server&#41;](../../relational-databases/databases/database-detach-and-attach-sql-server.md)   
  [시스템 데이터베이스 이동](../../relational-databases/databases/move-system-databases.md)   
  [데이터베이스 파일 이동](../../relational-databases/databases/move-database-files.md)   
  [BACKUP&#40;Transact-SQL&#41;](../../t-sql/statements/backup-transact-sql.md)   
  [RESTORE&#40;Transact-SQL&#41;](../../t-sql/statements/restore-statements-transact-sql.md)   
  [데이터베이스 엔진, SQL Server 에이전트 또는 SQL Server Browser 서비스 시작, 중지, 일시 중지, 재개 및 다시 시작](../../database-engine/configure-windows/start-stop-pause-resume-restart-sql-server-services.md)  
-  
   

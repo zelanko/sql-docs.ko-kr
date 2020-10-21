@@ -9,12 +9,12 @@ ms.prod: sql
 ms.custom: seo-lt-2019
 ms.technology: linux
 ms.assetid: 31c8c92e-12fe-4728-9b95-4bc028250d85
-ms.openlocfilehash: cce5af380f3706ef6fd6f22578c2b693aff1ad7c
-ms.sourcegitcommit: 56f6892b3795da308d226d4b3c5c859ead2e830a
+ms.openlocfilehash: 95581e7cfd8fbddd80aff1f4086d7f44e5812159
+ms.sourcegitcommit: 22102f25db5ccca39aebf96bc861c92f2367c77a
 ms.translationtype: HT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 07/17/2020
-ms.locfileid: "86438115"
+ms.lasthandoff: 10/16/2020
+ms.locfileid: "92115966"
 ---
 # <a name="quickstart-install-sql-server-and-create-a-database-on-ubuntu"></a>빠른 시작: Ubuntu에 SQL Server 설치 및 데이터베이스 만들기
 [!INCLUDE [SQL Server - Linux](../includes/applies-to-version/sql-linux.md)]
@@ -47,17 +47,17 @@ ms.locfileid: "86438115"
 
 **최소 2GB**의 메모리를 포함하는 Ubuntu 16.04 또는 18.04 머신이 있어야 합니다.
 
-고유한 머신에 Ubuntu 18.04를 설치하려면 <http://releases.ubuntu.com/bionic/>으로 이동합니다. Azure에서 Ubuntu 가상 머신을 만들 수도 있습니다. [Azure CLI를 사용하여 Linux VM 만들기 및 관리](https://docs.microsoft.com/azure/virtual-machines/linux/tutorial-manage-vm)를 참조하세요.
+고유한 머신에 Ubuntu 18.04를 설치하려면 <http://releases.ubuntu.com/bionic/>으로 이동합니다. Azure에서 Ubuntu 가상 머신을 만들 수도 있습니다. [Azure CLI를 사용하여 Linux VM 만들기 및 관리](/azure/virtual-machines/linux/tutorial-manage-vm)를 참조하세요.
 
 > [!NOTE]
-> 현재 Windows 10의 [Linux용 Windows 하위 시스템](https://msdn.microsoft.com/commandline/wsl/about)은 설치 대상으로 지원되지 않습니다.
+> 현재 Windows 10의 [Linux용 Windows 하위 시스템](/windows/wsl/about)은 설치 대상으로 지원되지 않습니다.
 
 기타 시스템 요구 사항은 [SQL Server on Linux에 대한 시스템 요구 사항](sql-server-linux-setup.md#system)을 참조하세요.
 
 > [!NOTE]
 > SQL Server 2017 CU20부터 Ubuntu 18.04가 지원됩니다. Ubuntu 18.04에서 이 문서의 지침을 사용하려면 `16.04`대신 올바른 [리포지토리 경로](sql-server-linux-change-repo.md)인 `18.04`를 사용해야 합니다.
 >
-> 더 낮은 버전에서 SQL Server를 실행하는 경우 [수정](https://blogs.msdn.microsoft.com/sql_server_team/installing-sql-server-2017-for-linux-on-ubuntu-18-04-lts/)하여 구성할 수 있습니다.
+> 더 낮은 버전에서 SQL Server를 실행하는 경우 [수정](/archive/blogs/sql_server_team/installing-sql-server-2017-for-linux-on-ubuntu-18-04-lts)하여 구성할 수 있습니다.
 
 ::: moniker-end
 
@@ -66,10 +66,10 @@ ms.locfileid: "86438115"
 
 **최소 2GB**의 메모리를 포함하는 Ubuntu 16.04 또는 18.04 머신이 있어야 합니다.
 
-고유한 머신에 Ubuntu 18.04를 설치하려면 <http://releases.ubuntu.com/bionic/>으로 이동합니다. Azure에서 Ubuntu 가상 머신을 만들 수도 있습니다. [Azure CLI를 사용하여 Linux VM 만들기 및 관리](https://docs.microsoft.com/azure/virtual-machines/linux/tutorial-manage-vm)를 참조하세요.
+고유한 머신에 Ubuntu 18.04를 설치하려면 <http://releases.ubuntu.com/bionic/>으로 이동합니다. Azure에서 Ubuntu 가상 머신을 만들 수도 있습니다. [Azure CLI를 사용하여 Linux VM 만들기 및 관리](/azure/virtual-machines/linux/tutorial-manage-vm)를 참조하세요.
 
 > [!NOTE]
-> 현재 Windows 10의 [Linux용 Windows 하위 시스템](https://msdn.microsoft.com/commandline/wsl/about)은 설치 대상으로 지원되지 않습니다.
+> 현재 Windows 10의 [Linux용 Windows 하위 시스템](/windows/wsl/about)은 설치 대상으로 지원되지 않습니다.
 
 기타 시스템 요구 사항은 [SQL Server on Linux에 대한 시스템 요구 사항](sql-server-linux-setup.md#system)을 참조하세요.
 

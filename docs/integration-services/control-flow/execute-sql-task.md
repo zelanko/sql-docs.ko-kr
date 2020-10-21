@@ -21,12 +21,12 @@ helpviewer_keywords:
 ms.assetid: bebb2e8c-0410-43b2-ac2f-6fc80c8f2e9e
 author: chugugrace
 ms.author: chugu
-ms.openlocfilehash: 6138e30bf4794fff847dd7a0750d59c8d8fb884a
-ms.sourcegitcommit: e700497f962e4c2274df16d9e651059b42ff1a10
+ms.openlocfilehash: 0b8155db361eeffd3b84ba1aadf313ecef4652e9
+ms.sourcegitcommit: cfa04a73b26312bf18d8f6296891679166e2754d
 ms.translationtype: HT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 08/17/2020
-ms.locfileid: "88394169"
+ms.lasthandoff: 10/19/2020
+ms.locfileid: "92196545"
 ---
 # <a name="execute-sql-task"></a>SQL 실행 태스크
 
@@ -69,7 +69,7 @@ ms.locfileid: "88394169"
 >  SQL 실행 태스크 외부에서 작성된 SQL 문은 유효하더라도 SQL 실행 태스크에서 성공적으로 구문 분석되지 않을 수도 있습니다.  
   
 > [!NOTE]  
->  SQL 실행 태스크는 **RecognizeAll** ParseMode 열거형 값을 사용합니다. 자세한 내용은 [ManagedBatchParser 네임스페이스](https://go.microsoft.com/fwlink/?LinkId=223617)를 참조하십시오.  
+>  SQL 실행 태스크는 **RecognizeAll** ParseMode 열거형 값을 사용합니다. 자세한 내용은 [ManagedBatchParser 네임스페이스](/dotnet/api/managedbatchparser)를 참조하십시오.  
   
 ## <a name="send-multiple-statements-in-a-batch"></a>여러 개의 문을 일괄 처리로 전송  
  SQL 실행 태스크에 여러 개의 문이 포함된 경우 문을 그룹화하여 일괄 처리로 실행할 수 있습니다. 일괄 처리의 마지막을 알리려면 GO 명령을 사용합니다. 두 GO 명령 사이의 모든 SQL 문은 일괄 처리로 실행되도록 OLE DB Provider에 전송됩니다. SQL 명령은 GO 명령으로 구분된 여러 개의 일괄 처리를 포함할 수 있습니다.  
@@ -115,7 +115,7 @@ ms.locfileid: "88394169"
 ## <a name="general-page---execute-sql-task-editor"></a>일반 페이지 - SQL 실행 태스크 편집기
  **SQL 실행 태스크 편집기** 대화 상자의 **일반** 페이지를 사용하여 SQL 실행 태스크를 구성하고 해당 태스크에서 실행할 SQL 문을 제공할 수 있습니다.  
 
-Transact-SQL 쿼리 언어에 대한 자세한 내용은 [Transact-SQL 참조&#40;데이터베이스 엔진&#41;](../../t-sql/transact-sql-reference-database-engine.md)를 참조하세요.  
+Transact-SQL 쿼리 언어에 대한 자세한 내용은 [Transact-SQL 참조&#40;데이터베이스 엔진&#41;](../../t-sql/language-reference.md)를 참조하세요.  
   
 ### <a name="static-options"></a>정적 옵션  
  **이름**  
@@ -186,19 +186,19 @@ Transact-SQL 쿼리 언어에 대한 자세한 내용은 [Transact-SQL 참조&#4
  **SQLStatement**  
  실행할 SQL 문을 옵션 상자에 입력하거나, 찾아보기 단추(...)를 클릭하여 **SQL 쿼리 입력** 대화 상자에 SQL 문을 입력하거나, **쿼리 작성**을 클릭하고 **쿼리 작성기** 대화 상자를 사용하여 SQL 문을 작성합니다.  
   
- **관련 항목:** [쿼리 작성기](https://msdn.microsoft.com/library/780752c9-6e3c-4f44-aaff-4f4d5e5a45c5)  
+ **관련 항목:** [쿼리 작성기](../integration-services-ssis-queries.md)  
   
 #### <a name="sqlsourcetype--file-connection"></a>SQLSourceType = 파일 연결  
  **FileConnection**  
  기존 파일 연결 관리자를 선택하거나 \<**New connection...**>을 클릭하여 새 연결 관리자를 만듭니다.  
   
- **관련 항목:** [파일 연결 관리자](../../integration-services/connection-manager/file-connection-manager.md), [파일 연결 관리자 편집기](../../integration-services/connection-manager/file-connection-manager-editor.md)  
+ **관련 항목:** [파일 연결 관리자](../../integration-services/connection-manager/file-connection-manager.md), [파일 연결 관리자 편집기](../connection-manager/file-connection-manager.md)  
   
 #### <a name="sqlsourcetype--variable"></a>SQLSourceType = 변수  
  **SourceVariable**  
  기존 변수를 선택하거나 \<**New variable...**>를 클릭하여 새 변수를 만듭니다.  
   
- **관련 항목:** [Integration Services&#40;SSIS&#41; 변수](../../integration-services/integration-services-ssis-variables.md), [변수 추가](https://msdn.microsoft.com/library/d09b5d31-433f-4f7c-8c68-9df3a97785d5)  
+ **관련 항목:** [Integration Services&#40;SSIS&#41; 변수](../../integration-services/integration-services-ssis-variables.md), [변수 추가](../integration-services-ssis-variables.md)  
  
 ## <a name="parameter-mapping-page---execute-sql-task-editor"></a>매개 변수 매핑 페이지 - SQL 실행 태스크 편집기
 **SQL 실행 태스크 편집기** 대화 상자의 **매개 변수 매핑** 페이지를 사용하여 변수를 SQL 문의 매개 변수에 매핑할 수 있습니다.  
@@ -385,7 +385,7 @@ SQL 문과 저장 프로시저에서는 일반적으로 **input** 매개 변수,
 |연결 형식|EXEC 구문|  
 |---------------------|-----------------|  
 |EXCEL 및 OLEDB|`EXEC uspGetBillOfMaterials ?, ?`|  
-|ODBC|`{call uspGetBillOfMaterials(?, ?)}`<br /><br /> ODBC 호출 구문에 대한 자세한 내용은 MSDN Library의 ODBC 프로그래머 참조에서 [프로시저 매개 변수](https://go.microsoft.com/fwlink/?LinkId=89462)항목을 참조하십시오.|  
+|ODBC|`{call uspGetBillOfMaterials(?, ?)}`<br /><br /> ODBC 호출 구문에 대한 자세한 내용은 MSDN Library의 ODBC 프로그래머 참조에서 [프로시저 매개 변수](../../odbc/reference/develop-app/procedure-parameters.md)항목을 참조하십시오.|  
 |ADO|IsQueryStoredProcedure가 **False**로 설정된 경우 `EXEC uspGetBillOfMaterials ?, ?`<br /><br /> IsQueryStoredProcedure가 **True**로 설정된 경우 `uspGetBillOfMaterials`|  
 |[!INCLUDE[vstecado](../../includes/vstecado-md.md)]|IsQueryStoredProcedure가 **False**로 설정된 경우 `EXEC uspGetBillOfMaterials @StartProductID, @CheckDate`<br /><br /> IsQueryStoredProcedure가 **True**로 설정된 경우 `uspGetBillOfMaterials`|  
   
@@ -448,7 +448,7 @@ SQL 문과 저장 프로시저에서는 일반적으로 **input** 매개 변수,
     |ODBC|1, 2, 3, ...|  
     |EXCEL 및 OLE DB|0, 1, 2, 3, ...|  
   
-10. **변수 이름** 목록에서 변수를 선택합니다. 자세한 내용은 [패키지에서 사용자 정의 변수의 범위 추가, 삭제, 변경](https://msdn.microsoft.com/library/cbf40c7f-3c8a-48cd-aefa-8b37faf8b40e)을 참조하세요.  
+10. **변수 이름** 목록에서 변수를 선택합니다. 자세한 내용은 [패키지에서 사용자 정의 변수의 범위 추가, 삭제, 변경](../integration-services-ssis-variables.md)을 참조하세요.  
   
 11. **방향** 목록에서 매개 변수가 입력, 출력 또는 반환 값인지 여부를 지정합니다.  
   
@@ -474,7 +474,7 @@ SQL 문과 저장 프로시저에서는 일반적으로 **input** 매개 변수,
 |연결 형식|EXEC 구문|  
 |---------------------|-----------------|  
 |EXCEL 및 OLEDB|`EXEC ? = myStoredProcedure 1`|  
-|ODBC|`{? = call myStoredProcedure(1)}`<br /><br /> ODBC 호출 구문에 대한 자세한 내용은 MSDN Library의 ODBC 프로그래머 참조에서 [프로시저 매개 변수](https://go.microsoft.com/fwlink/?LinkId=89462)항목을 참조하십시오.|  
+|ODBC|`{? = call myStoredProcedure(1)}`<br /><br /> ODBC 호출 구문에 대한 자세한 내용은 MSDN Library의 ODBC 프로그래머 참조에서 [프로시저 매개 변수](../../odbc/reference/develop-app/procedure-parameters.md)항목을 참조하십시오.|  
 |ADO|IsQueryStoreProcedure가 **False**로 설정된 경우 `EXEC ? = myStoredProcedure 1`<br /><br /> IsQueryStoreProcedure가 **True**로 설정된 경우 `myStoredProcedure`|  
 |[!INCLUDE[vstecado](../../includes/vstecado-md.md)]|Set IsQueryStoreProcedure가 **True**로 설정됩니다.<br /><br /> `myStoredProcedure`|  
   
@@ -557,7 +557,7 @@ SQL 문과 저장 프로시저에서는 일반적으로 **input** 매개 변수,
   
 8.  결과 집합 매핑을 추가하려면 **추가**를 클릭합니다.  
   
-9. **변수 이름** 목록에서 변수를 선택하거나 새 변수를 만듭니다. 자세한 내용은 [패키지에서 사용자 정의 변수의 범위 추가, 삭제, 변경](https://msdn.microsoft.com/library/cbf40c7f-3c8a-48cd-aefa-8b37faf8b40e)을 참조하세요.  
+9. **변수 이름** 목록에서 변수를 선택하거나 새 변수를 만듭니다. 자세한 내용은 [패키지에서 사용자 정의 변수의 범위 추가, 삭제, 변경](../integration-services-ssis-variables.md)을 참조하세요.  
   
 10. 필요에 따라 **결과 이름** 목록에서 결과 집합의 이름을 수정합니다.  
   
@@ -579,5 +579,4 @@ SQL 문과 저장 프로시저에서는 일반적으로 **input** 매개 변수,
   
 |로그 항목|Description|  
 |---------------|-----------------|  
-|**ExecuteSQLExecutingQuery**|SQL 문의 실행 단계에 대한 정보를 제공합니다. 로그 항목은 태스크에서 데이터베이스에 대한 연결을 설정할 때, 태스크에서 SQL 문 준비를 시작할 때 또는 SQL 문 실행이 완료된 후에 기록됩니다. 준비 단계에 대한 로그 항목은 태스크에서 사용하는 SQL 문을 포함합니다.|  
-
+|**ExecuteSQLExecutingQuery**|SQL 문의 실행 단계에 대한 정보를 제공합니다. 로그 항목은 태스크에서 데이터베이스에 대한 연결을 설정할 때, 태스크에서 SQL 문 준비를 시작할 때 또는 SQL 문 실행이 완료된 후에 기록됩니다. 준비 단계에 대한 로그 항목은 태스크에서 사용하는 SQL 문을 포함합니다.|

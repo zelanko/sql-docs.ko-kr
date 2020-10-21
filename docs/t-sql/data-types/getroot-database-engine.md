@@ -18,12 +18,12 @@ helpviewer_keywords:
 ms.assetid: 240b70f1-eeda-44ab-b4bb-9e4af80fa7c0
 author: MikeRayMSFT
 ms.author: mikeray
-ms.openlocfilehash: 5db6206cd555705ec5b167dc023f585293f45bf8
-ms.sourcegitcommit: cc23d8646041336d119b74bf239a6ac305ff3d31
+ms.openlocfilehash: 645c39d8108ba52212788a65ae2d6116ee629e34
+ms.sourcegitcommit: 22dacedeb6e8721e7cdb6279a946d4002cfb5da3
 ms.translationtype: HT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 09/23/2020
-ms.locfileid: "91111231"
+ms.lasthandoff: 10/14/2020
+ms.locfileid: "92037136"
 ---
 # <a name="getroot-database-engine"></a>GetRoot(데이터베이스 엔진)
 
@@ -72,8 +72,7 @@ SqlHierarchyId.GetRoot()
 ```  
   
 ## <a name="see-also"></a>참고 항목
-[hierarchyid 데이터 형식 메서드 참조](https://msdn.microsoft.com/library/01a050f5-7580-4d5f-807c-7f11423cbb06)  
+[hierarchyid 데이터 형식 메서드 참조](./hierarchyid-data-type-method-reference.md)  
 [계층적 데이터&#40;SQL Server&#41;](../../relational-databases/hierarchical-data-sql-server.md)  
 [hierarchyid&#40;Transact-SQL&#41;](../../t-sql/data-types/hierarchyid-data-type-method-reference.md)
-  
   

@@ -8,12 +8,12 @@ ms.date: 11/04/2019
 ms.topic: conceptual
 ms.prod: sql
 ms.technology: linux
-ms.openlocfilehash: 8d137a12cdb11fc0f5d5cd9065db9a758de57154
-ms.sourcegitcommit: f7ac1976d4bfa224332edd9ef2f4377a4d55a2c9
+ms.openlocfilehash: 96c58159a020ba11708b12a4e5732438044b3291
+ms.sourcegitcommit: 22102f25db5ccca39aebf96bc861c92f2367c77a
 ms.translationtype: HT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 07/02/2020
-ms.locfileid: "85902346"
+ms.lasthandoff: 10/16/2020
+ms.locfileid: "92115739"
 ---
 # <a name="configure-usage--diagnostic-data-collection-for-sql-server-on-linux"></a>SQL Server on Linux의 사용량 및 진단 데이터 수집 구성
 
@@ -21,7 +21,7 @@ ms.locfileid: "85902346"
 
 기본적으로 Microsoft SQL Server는 고객이 애플리케이션을 사용하는 방법에 대한 정보를 수집합니다. 특히, SQL Server는 설치 환경, 사용 및 성능에 대한 정보를 수집합니다. 이 정보는 Microsoft에서 고객의 요구에 맞게 제품을 향상시키는 데 도움이 됩니다. 예를 들어 Microsoft는 관련 버그를 수정하고, SQL Server 사용 방법에 대한 설명서를 개선하고, 고객에게 더 나은 서비스를 제공하기 위해 제품에 기능을 추가할지 여부를 결정할 수 있도록 고객에게 발생하는 오류 코드 종류에 대한 정보를 수집합니다.
 
-이 문서에서는 수집되는 정보 종류와 수집된 정보를 Microsoft에 보내도록 Microsoft SQL Server on Linux를 구성하는 방법을 자세히 설명합니다. SQL Server 2017에는 사용자로부터 수집하는 정보와 수집하지 않는 정보를 설명하는 개인정보처리방침이 포함되어 있습니다. 자세한 내용은 [개인정보처리방침](https://go.microsoft.com/fwlink/?LinkID=868444)을 참조하세요.
+이 문서에서는 수집되는 정보 종류와 수집된 정보를 Microsoft에 보내도록 Microsoft SQL Server on Linux를 구성하는 방법을 자세히 설명합니다. SQL Server 2017에는 사용자로부터 수집하는 정보와 수집하지 않는 정보를 설명하는 개인정보처리방침이 포함되어 있습니다. 자세한 내용은 [개인정보처리방침](../sql-server/sql-server-privacy.md)을 참조하세요.
 
 특히 Microsoft는 이러한 메커니즘을 통해 다음과 같은 유형의 정보는 전송하지 않습니다.
 
@@ -56,7 +56,7 @@ SQL Server 2017은 고객이 경험하는 설치 문제를 빠르게 찾아 해�
    ```
    
 ### <a name="on-docker"></a>Docker
-docker에서 사용량 및 진단 데이터 수집을 사용하지 않도록 설정하려면 Docker를 통해 [데이터를 유지](sql-server-linux-configure-docker.md)해야 합니다. 
+docker에서 사용량 및 진단 데이터 수집을 사용하지 않도록 설정하려면 Docker를 통해 [데이터를 유지](./sql-server-linux-docker-container-deployment.md)해야 합니다. 
 
 <!--SQL Server 2017 on Linux -->
 ::: moniker range="= sql-server-linux-2017 || = sql-server-2017"
@@ -143,7 +143,7 @@ SQL Server on Linux에서 로컬 감사는 SQL Server 데이터베이스 엔진�
    ```
    
 ### <a name="on-docker"></a>Docker
-docker에서 로컬 감사를 사용하도록 설정하려면 Docker를 통해 [데이터를 유지](sql-server-linux-configure-docker.md)해야 합니다. 
+docker에서 로컬 감사를 사용하도록 설정하려면 Docker를 통해 [데이터를 유지](./sql-server-linux-docker-container-deployment.md)해야 합니다. 
 
 <!--SQL Server 2017 on Linux -->
 ::: moniker range="= sql-server-linux-2017 || = sql-server-2017"

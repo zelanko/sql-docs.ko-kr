@@ -1,5 +1,6 @@
 ---
-title: 보안(Master Data Services) | Microsoft Docs
+title: 보안
+description: 사용자 유형, 보안 설정 방법, Excel 용 추가 기능 및 관련 작업을 포함 하 여 MDS(Master Data Services)의 보안에 대해 알아봅니다.
 ms.custom: ''
 ms.date: 03/01/2017
 ms.prod: sql
@@ -10,22 +11,22 @@ ms.topic: conceptual
 ms.assetid: 56bc41ea-de28-4184-aa7e-99111ae55af5
 author: lrtoyou1223
 ms.author: lle
-ms.openlocfilehash: 8bb6507ef56537561847eeaee017d81c65292085
-ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
+ms.openlocfilehash: 9501014be6fdd311c37fd8f446ae01f0f2939f90
+ms.sourcegitcommit: 6be9a0ff0717f412ece7f8ede07ef01f66ea2061
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 07/15/2019
-ms.locfileid: "68085667"
+ms.lasthandoff: 07/01/2020
+ms.locfileid: "92257830"
 ---
 # <a name="security-master-data-services"></a>보안(Master Data Services)
 
-[!INCLUDE[appliesto-ss-xxxx-xxxx-xxx-md-winonly](../includes/appliesto-ss-xxxx-xxxx-xxx-md-winonly.md)]
+[!INCLUDE [SQL Server - Windows only ASDBMI  ](../includes/applies-to-version/sql-windows-only-asdbmi.md)]
 
   [!INCLUDE[ssMDSshort](../includes/ssmdsshort-md.md)]에서 보안을 사용하면 사용자가 작업을 수행하는 데 필요한 특정 마스터 데이터에 액세스할 수 있도록 하며 사용해서는 안 되는 데이터에는 액세스할 수 없도록 할 수 있습니다.  
   
  또한 보안을 사용하여 사용자를 특정 모델 및 기능 영역의 관리자로 지정할 수도 있습니다. 예를 들어 특정 사용자에게 Customer 모델의 버전을 만들 수 있도록 허용하거나 보안 권한을 설정하는 능력을 부여할 수 있습니다.  
   
- [!INCLUDE[ssMDSshort](../includes/ssmdsshort-md.md)] 보안은 로컬 또는 Active Directory 도메인 사용자 및 그룹을 기반으로 합니다. MDS 보안을 사용하면 사용자가 액세스할 수 있는 데이터를 결정할 때 세부 정보를 사용할 수 있습니다. 이러한 세분성 때문에 보안은 쉽게 복잡해질 수 있으므로 겹치는 사용자 및 그룹을 사용할 때는 주의해야 합니다. 자세한 내용은 [겹치는 사용자 및 그룹 권한&#40;Master Data Services&#41;](../master-data-services/overlapping-user-and-group-permissions-master-data-services.md)을 참조하세요.  
+ [!INCLUDE[ssMDSshort](../includes/ssmdsshort-md.md)] 보안은 로컬 또는 Active Directory 도메인 사용자 및 그룹을 기반으로 합니다. MDS 보안을 사용하면 사용자가 액세스할 수 있는 데이터를 결정할 때 세부 정보를 사용할 수 있습니다. 이러한 세분성 때문에 보안은 쉽게 복잡해질 수 있으므로 겹치는 사용자 및 그룹을 사용할 때는 주의해야 합니다. 자세한 내용은 [겹치는 사용자 및 그룹 권한&#40;Master Data Services&#41;](../master-data-services/overlapping-user-and-group-permissions-master-data-services.md)를 참조하세요.  
   
  **웹 애플리케이션의** 사용자 및 그룹 권한 [!INCLUDE[ssMDSmdm](../includes/ssmdsmdm-md.md)] 기능 영역에서 또는 웹 서비스를 사용하여 보안 액세스를 할당할 수 있습니다.  
   
@@ -62,12 +63,12 @@ ms.locfileid: "68085667"
 |모델 개체에 사용 권한을 할당하여 특성 값에 사용 권한을 할당합니다.|[모델 개체 사용 권한 할당&#40;Master Data Services&#41;](../master-data-services/assign-model-object-permissions-master-data-services.md)|  
 |계층 노드에 사용 권한을 할당하여 멤버에 사용 권한을 할당합니다.|[계층 멤버 권한 할당&#40;Master Data Services&#41;](../master-data-services/assign-hierarchy-member-permissions-master-data-services.md)|  
   
-## <a name="see-also"></a>관련 항목  
- [관리자&#40;Master Data Services&#41;](../master-data-services/administrators-master-data-services.md)   
- [사용자 및 그룹&#40;Master Data Services&#41;](../master-data-services/users-and-groups-master-data-services.md)   
- [기능 영역 권한&#40;Master Data Services&#41;](../master-data-services/functional-area-permissions-master-data-services.md)   
- [모델 개체 권한&#40;Master Data Services&#41;](../master-data-services/model-object-permissions-master-data-services.md)   
- [계층 멤버 권한&#40;Master Data Services&#41;](../master-data-services/hierarchy-member-permissions-master-data-services.md)   
+## <a name="see-also"></a>참고 항목  
+ [관리자는 MDS(Master Data Services) &#40;&#41;](../master-data-services/administrators-master-data-services.md)   
+ [사용자 및 그룹 &#40;MDS(Master Data Services)&#41;](../master-data-services/users-and-groups-master-data-services.md)   
+ [기능 영역 권한 &#40;MDS(Master Data Services)&#41;](../master-data-services/functional-area-permissions-master-data-services.md)   
+ [모델 개체 사용 권한 &#40;MDS(Master Data Services)&#41;](../master-data-services/model-object-permissions-master-data-services.md)   
+ [계층 멤버 권한 &#40;MDS(Master Data Services)&#41;](../master-data-services/hierarchy-member-permissions-master-data-services.md)   
  [사용 권한이 결정되는 방식&#40;Master Data Services&#41;](../master-data-services/how-permissions-are-determined-master-data-services.md)  
   
   

@@ -11,12 +11,12 @@ ms.topic: conceptual
 ms.assetid: 10f25703-49a2-4d45-abab-6b4da2a57ba5
 author: chugugrace
 ms.author: chugu
-ms.openlocfilehash: 6684e36201e20ee84821f25694dd8326915aaf46
-ms.sourcegitcommit: e700497f962e4c2274df16d9e651059b42ff1a10
+ms.openlocfilehash: 26df10981a17b2c5f94fbe47c6e765264c8944e1
+ms.sourcegitcommit: cfa04a73b26312bf18d8f6296891679166e2754d
 ms.translationtype: HT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 08/17/2020
-ms.locfileid: "88430865"
+ms.lasthandoff: 10/19/2020
+ms.locfileid: "92194815"
 ---
 # <a name="extract-data-by-using-the-odbc-source"></a>ODBC 원본을 사용하여 데이터 추출
 
@@ -56,8 +56,7 @@ ms.locfileid: "88430865"
 11. 업데이트된 패키지를 저장하려면 **파일** 메뉴에서 **선택한 항목 저장** 을 클릭합니다.  
   
 ## <a name="see-also"></a>참고 항목  
- [ODBC 원본 편집기&#40;연결 관리자 페이지&#41;](../../integration-services/data-flow/odbc-source-editor-connection-manager-page.md)   
- [ODBC 원본 편집기&#40;열 페이지&#41;](../../integration-services/data-flow/odbc-source-editor-columns-page.md)   
- [ODBC 원본 편집기&#40;오류 출력 페이지&#41;](../../integration-services/data-flow/odbc-source-editor-error-output-page.md)  
-  
+ [ODBC 원본 편집기&#40;연결 관리자 페이지&#41;](./odbc-source.md)   
+ [ODBC 원본 편집기&#40;열 페이지&#41;](./odbc-source.md)   
+ [ODBC 원본 편집기&#40;오류 출력 페이지&#41;](./odbc-source.md)  
   

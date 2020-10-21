@@ -10,12 +10,12 @@ ms.technology: integration-services
 ms.topic: conceptual
 author: chugugrace
 ms.author: chugu
-ms.openlocfilehash: e029637f90afbb27e4b27c79c8a515a2e3aad823
-ms.sourcegitcommit: e700497f962e4c2274df16d9e651059b42ff1a10
+ms.openlocfilehash: 5c1bb607326233dccdafa8fc57e3ce9d32cf20c9
+ms.sourcegitcommit: cfa04a73b26312bf18d8f6296891679166e2754d
 ms.translationtype: HT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 08/17/2020
-ms.locfileid: "88430785"
+ms.lasthandoff: 10/19/2020
+ms.locfileid: "92195365"
 ---
 # <a name="oracle-destination"></a>Oracle 대상
 
@@ -200,7 +200,7 @@ Oracle 대상 편집기 대화 상자의 오류 출력 페이지를 사용하여
 **오류 동작**
 
 Oracle 원본에서 흐름의 오류를 처리하는 방법을 선택합니다. 오류 무시, 행 리디렉션 또는 구성 요소 실패를 지정할 수 있습니다.
-**관련 섹션**: [데이터 오류 처리](https://docs.microsoft.com/sql/integration-services/data-flow/error-handling-in-data?view=sql-server-2017)
+**관련 섹션**: [데이터 오류 처리](./error-handling-in-data.md?view=sql-server-2017)
 
 **잘림**
 

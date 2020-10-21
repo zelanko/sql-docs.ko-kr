@@ -8,12 +8,12 @@ ms.topic: conceptual
 ms.prod: sql
 ms.technology: linux
 moniker: '>= sql-server-linux-2017 || >= sql-server-2017 || =sqlallproducts-allversions'
-ms.openlocfilehash: 5d5fd2e96e9d0695f098eab02fb3d4ab86e5d256
-ms.sourcegitcommit: f7ac1976d4bfa224332edd9ef2f4377a4d55a2c9
+ms.openlocfilehash: 0e35acbb3bd331117170a41eb3665ddc2fb9f9ab
+ms.sourcegitcommit: 22102f25db5ccca39aebf96bc861c92f2367c77a
 ms.translationtype: HT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 07/02/2020
-ms.locfileid: "85902336"
+ms.lasthandoff: 10/16/2020
+ms.locfileid: "92115866"
 ---
 # <a name="restore-a-sql-server-database-in-a-linux-docker-container"></a>Linux Docker 컨테이너에서 SQL Server 데이터베이스 복원
 
@@ -85,7 +85,7 @@ ms.locfileid: "85902336"
    이 명령은 Developer Edition(기본값)을 사용하여 SQL Server 2017 컨테이너를 만듭니다. SQL Server 포트 **1433**은 호스트에서 포트 **1401**로 공개됩니다. 선택적 `-v sql1data:/var/opt/mssql` 매개 변수는 **sql1ddata**라는 데이터 볼륨 컨테이너를 만듭니다. 이 컨테이너는 SQL Server에서 생성된 데이터를 유지하는 데 사용됩니다.
 
    > [!IMPORTANT]
-   > 이 예제에서는 Docker 내의 데이터 볼륨 컨테이너를 사용합니다. 대신 호스트 디렉터리를 매핑하도록 선택한 경우, Mac 및 Windows용 Docker에서는 이 방법에 제한 사항이 있습니다. 자세한 내용은 [Docker에서 SQL Server 컨테이너 이미지 구성](sql-server-linux-configure-docker.md#persist)을 참조하세요.
+   > 이 예제에서는 Docker 내의 데이터 볼륨 컨테이너를 사용합니다. 대신 호스트 디렉터리를 매핑하도록 선택한 경우, Mac 및 Windows용 Docker에서는 이 방법에 제한 사항이 있습니다. 자세한 내용은 [Docker에서 SQL Server 컨테이너 이미지 구성](./sql-server-linux-docker-container-configure.md#persist)을 참조하세요.
 
 1. Docker 컨테이너를 보려면 `docker ps` 명령을 사용합니다.
 
@@ -97,7 +97,7 @@ ms.locfileid: "85902336"
    docker ps -a
    ```
 
-1. **상태** 열이 **Up**의 상태를 표시하는 경우, SQL Server는 컨테이너에서 실행되며 **포트** 열의 지정된 포트에서 수신 대기합니다. SQL Server 컨테이너의 **상태** 열이 **Exited**를 표시하는 경우, [구성 가이드의 문제 해결 섹션](sql-server-linux-configure-docker.md#troubleshooting)을 참조하세요.
+1. **상태** 열이 **Up**의 상태를 표시하는 경우, SQL Server는 컨테이너에서 실행되며 **포트** 열의 지정된 포트에서 수신 대기합니다. SQL Server 컨테이너의 **상태** 열이 **Exited**를 표시하는 경우, [구성 가이드의 문제 해결 섹션](./sql-server-linux-docker-container-troubleshooting.md)을 참조하세요.
 
   ```bash
   $ sudo docker ps -a
@@ -153,7 +153,7 @@ ms.locfileid: "85902336"
    docker ps -a
    ```
 
-1. **상태** 열이 **Up**의 상태를 표시하는 경우, SQL Server는 컨테이너에서 실행되며 **포트** 열의 지정된 포트에서 수신 대기합니다. SQL Server 컨테이너의 **상태** 열이 **Exited**를 표시하는 경우, [구성 가이드의 문제 해결 섹션](sql-server-linux-configure-docker.md#troubleshooting)을 참조하세요.
+1. **상태** 열이 **Up**의 상태를 표시하는 경우, SQL Server는 컨테이너에서 실행되며 **포트** 열의 지정된 포트에서 수신 대기합니다. SQL Server 컨테이너의 **상태** 열이 **Exited**를 표시하는 경우, [구성 가이드의 문제 해결 섹션](./sql-server-linux-docker-container-troubleshooting.md)을 참조하세요.
 
    ```bash
    $ sudo docker ps -a
@@ -170,7 +170,7 @@ ms.locfileid: "85902336"
 
 ## <a name="copy-a-backup-file-into-the-container"></a>컨테이너에 백업 파일 복사
 
-이 자습서에서는 [Wide World Importers 샘플 데이터베이스](../sample/world-wide-importers/wide-world-importers-documentation.md)를 사용합니다. 다음 단계를 사용하여 Wide World Importers 데이터베이스 백업 파일을 다운로드하고 SQL Server 컨테이너에 복사합니다.
+이 자습서에서는 [Wide World Importers 샘플 데이터베이스](../samples/wide-world-importers-what-is.md)를 사용합니다. 다음 단계를 사용하여 Wide World Importers 데이터베이스 백업 파일을 다운로드하고 SQL Server 컨테이너에 복사합니다.
 
 1. 먼저 **docker exec**를 사용하여 백업 폴더를 만듭니다. 다음 명령은 SQL Server 컨테이너 내부에 **/var/opt/mssql/backup** 디렉터리를 만듭니다.
 
@@ -208,7 +208,7 @@ ms.locfileid: "85902336"
 이제 백업 파일이 컨테이너 내부에 있습니다. 백업을 복원하기 전에 백업 내의 논리적 파일 이름 및 파일 형식을 알고 있어야 합니다. 다음 Transact-SQL 명령은 백업을 검사하고 컨테이너에서 **sqlcmd**를 사용하여 복원을 수행합니다.
 
 > [!TIP]
-> 컨테이너에 이 도구가 미리 설치되어 제공되므로 이 자습서에서는 컨테이너 내부에서 **sqlcmd**를 사용합니다. 그러나 컨테이너 외부에서 [Visual Studio Code](sql-server-linux-develop-use-vscode.md) 또는 [SQL Server Management Studio](sql-server-linux-manage-ssms.md)와 같은 다른 클라이언트 도구를 사용하여 Transact-SQL 문을 실행할 수도 있습니다. 연결하려면 컨테이너에서 포트 1433에 매핑된 호스트 포트를 사용합니다. 이 예제에서 해당 호스트 포트는 호스트 머신의 **localhost,1401** 및 원격으로 **Host_IP_Address,1401**입니다.
+> 컨테이너에 이 도구가 미리 설치되어 제공되므로 이 자습서에서는 컨테이너 내부에서 **sqlcmd**를 사용합니다. 그러나 컨테이너 외부에서 [Visual Studio Code](../tools/visual-studio-code/sql-server-develop-use-vscode.md) 또는 [SQL Server Management Studio](sql-server-linux-manage-ssms.md)와 같은 다른 클라이언트 도구를 사용하여 Transact-SQL 문을 실행할 수도 있습니다. 연결하려면 컨테이너에서 포트 1433에 매핑된 호스트 포트를 사용합니다. 이 예제에서 해당 호스트 포트는 호스트 머신의 **localhost,1401** 및 원격으로 **Host_IP_Address,1401**입니다.
 
 1. 컨테이너 내에서 **sqlcmd**를 실행하여 백업 내부 논리적 파일 이름 및 경로를 나열합니다. 이 작업에는 **RESTORE FILELISTONLY** Transact-SQL 문을 사용합니다.
 
@@ -545,4 +545,4 @@ docker exec -it sql1 /opt/mssql-tools/bin/sqlcmd `
 다음으로, 다른 Docker 구성 및 문제 해결 시나리오를 검토합니다.
 
 > [!div class="nextstepaction"]
->[Docker의 SQL Server 2017에 대한 구성 가이드](sql-server-linux-configure-docker.md)
+>[Docker의 SQL Server 2017에 대한 구성 가이드](./sql-server-linux-docker-container-deployment.md)

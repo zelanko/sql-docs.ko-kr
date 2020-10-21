@@ -17,12 +17,12 @@ helpviewer_keywords:
 ms.assetid: 1df60fd6-c019-405d-8155-c330dbac2cc1
 author: chugugrace
 ms.author: chugu
-ms.openlocfilehash: 7ff8e4b35d30e9b2504dd128ca9694007647f5eb
-ms.sourcegitcommit: e700497f962e4c2274df16d9e651059b42ff1a10
+ms.openlocfilehash: e7aa2c4e59ced60c31467b13a4de154887c84f52
+ms.sourcegitcommit: cfa04a73b26312bf18d8f6296891679166e2754d
 ms.translationtype: HT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 08/17/2020
-ms.locfileid: "88477931"
+ms.lasthandoff: 10/19/2020
+ms.locfileid: "92195415"
 ---
 # <a name="transfer-logins-task"></a>로그인 전송 태스크
 
@@ -40,7 +40,7 @@ ms.locfileid: "88477931"
  태스크는 로그인 전송의 진행률을 보고하지 않으며 0% 및 100 %(완료)만 보고합니다.  
   
 ## <a name="execution-value"></a>실행 값  
- 태스크의 **ExecutionValue** 속성에 정의된 실행 값은 전송된 로그인 수를 반환합니다. 사용자 정의 변수를 로그인 전송 태스크의 **ExecValueVariable** 속성에 할당하여 로그인 전송에 대한 정보를 패키지에 있는 다른 개체에서 사용할 수 있습니다. 자세한 내용은 [Integration Services&#40;SSIS&#41; 변수](../../integration-services/integration-services-ssis-variables.md) 및 [패키지에서 변수 사용](https://msdn.microsoft.com/library/7742e92d-46c5-4cc4-b9a3-45b688ddb787)을 참조하세요.  
+ 태스크의 **ExecutionValue** 속성에 정의된 실행 값은 전송된 로그인 수를 반환합니다. 사용자 정의 변수를 로그인 전송 태스크의 **ExecValueVariable** 속성에 할당하여 로그인 전송에 대한 정보를 패키지에 있는 다른 개체에서 사용할 수 있습니다. 자세한 내용은 [Integration Services&#40;SSIS&#41; 변수](../../integration-services/integration-services-ssis-variables.md) 및 [패키지에서 변수 사용](../integration-services-ssis-variables.md)을 참조하세요.  
   
 ## <a name="log-entries"></a>로그 항목  
  로그인 전송 태스크는 다음과 같은 사용자 지정 로그 항목을 포함합니다.  
@@ -79,7 +79,7 @@ ms.locfileid: "88477931"
   
  [!INCLUDE[ssIS](../../includes/ssis-md.md)] 디자이너에서 이러한 속성을 설정하는 방법을 보려면 다음 항목을 클릭하십시오.  
   
--   [태스크 또는 컨테이너의 속성 설정](https://msdn.microsoft.com/library/52d47ca4-fb8c-493d-8b2b-48bb269f859b)  
+-   [태스크 또는 컨테이너의 속성 설정](./add-or-delete-a-task-or-a-container-in-a-control-flow.md)  
   
 ## <a name="programmatic-configuration-of-the-transfer-logins-task"></a>로그인 전송 태스크의 프로그래밍 방식 구성  
  이러한 속성을 프로그래밍 방식으로 설정하는 방법을 보려면 다음 항목을 클릭하십시오.  
@@ -140,4 +140,3 @@ ms.locfileid: "88477931"
   
  **CopySids**  
  로그인에 연결된 보안 식별자를 대상 서버로 복사할지 여부를 선택합니다. 로그인 전송 태스크를 데이터베이스 전송 동작과 함께 사용하는 경우에는**CopySids** 를 **True** 로 설정해야 합니다. 그렇게 하지 않으면 복사된 로그인을 전송된 데이터베이스에서 인식하지 않습니다.  
-  

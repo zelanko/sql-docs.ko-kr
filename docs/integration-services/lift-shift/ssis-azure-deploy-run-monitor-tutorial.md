@@ -10,12 +10,12 @@ ms.technology: integration-services
 author: swinarko
 ms.author: sawinark
 ms.reviewer: maghan
-ms.openlocfilehash: b4bcae3e857fd6dfa7a64acd828529bf9a599552
-ms.sourcegitcommit: c74bb5944994e34b102615b592fdaabe54713047
+ms.openlocfilehash: 3be7312cceacd7d6cef6c60fbe54515c7577c5f2
+ms.sourcegitcommit: cfa04a73b26312bf18d8f6296891679166e2754d
 ms.translationtype: HT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 09/22/2020
-ms.locfileid: "90990036"
+ms.lasthandoff: 10/19/2020
+ms.locfileid: "92194105"
 ---
 # <a name="tutorial-deploy-and-run-a-sql-server-integration-services-ssis-package-in-azure"></a>자습서: Azure에 SSIS(SQL Server Integration Services) 패키지 배포 및 실행
 
@@ -26,9 +26,9 @@ ms.locfileid: "90990036"
 
 ## <a name="prerequisites"></a>사전 요구 사항
 
-시작하기 전에 SQL Server Management Studio 버전 17.2 이상이 설치되어 있는지 확인합니다. SSMS의 최신 버전을 다운로드하려면 [SSMS(SQL Server Management Studio) 다운로드](https://docs.microsoft.com/sql/ssms/download-sql-server-management-studio-ssms)를 참조하세요.
+시작하기 전에 SQL Server Management Studio 버전 17.2 이상이 설치되어 있는지 확인합니다. SSMS의 최신 버전을 다운로드하려면 [SSMS(SQL Server Management Studio) 다운로드](../../ssms/download-sql-server-management-studio-ssms.md)를 참조하세요.
 
-또한 Azure에서 SSISDB 데이터베이스를 설정하고 Azure-SSIS Integration Runtime을 프로비전했는지 확인합니다. Azure에서 SSIS를 프로비전하는 방법에 대한 자세한 내용은 [Azure에 SQL Server Integration Services 패키지 배포](https://docs.microsoft.com/azure/data-factory/tutorial-deploy-ssis-packages-azure)를 참조하세요.
+또한 Azure에서 SSISDB 데이터베이스를 설정하고 Azure-SSIS Integration Runtime을 프로비전했는지 확인합니다. Azure에서 SSIS를 프로비전하는 방법에 대한 자세한 내용은 [Azure에 SQL Server Integration Services 패키지 배포](/azure/data-factory/tutorial-deploy-ssis-packages-azure)를 참조하세요.
 
 ## <a name="for-azure-sql-database-get-the-connection-info"></a>Azure SQL Database에서 연결 정보 가져오기
 
@@ -192,7 +192,7 @@ Integration Services 서버에서 현재 실행 중인 Integration Services 작�
 
 또한 [개체 탐색기]에서 패키지를 선택하여 마우스 오른쪽 단추로 클릭하고, **보고서**, **표준 보고서**, **모든 실행**을 차례로 선택할 수도 있습니다.
 
-SSMS에서 실행 중인 패키지를 모니터링하는 방법에 대한 자세한 내용은 [실행 중인 패키지 및 기타 작업 모니터링](https://docs.microsoft.com/sql/integration-services/performance/monitor-running-packages-and-other-operations)을 참조하세요.
+SSMS에서 실행 중인 패키지를 모니터링하는 방법에 대한 자세한 내용은 [실행 중인 패키지 및 기타 작업 모니터링](../performance/monitor-running-packages-and-other-operations.md)을 참조하세요.
 
 ## <a name="monitor-the-execute-ssis-package-activity"></a>SSIS 패키지 작업 실행 모니터링
 
@@ -204,7 +204,7 @@ SSIS 패키지 작업 실행을 사용하여 Azure Data Factory 파이프라인�
 
 패키지가 실행 중인 Azure-SSIS Integration Runtime에 대한 상태 정보를 가져오려면 다음 PowerShell 명령을 사용합니다. 각 명령에서 Data Factory, Azure SSIS IR 및 리소스 그룹의 이름을 제공합니다.
 
-자세한 내용은 [Azure-SSIS Integration Runtime 모니터](https://docs.microsoft.com/azure/data-factory/monitor-integration-runtime#azure-ssis-integration-runtime)를 참조하세요.
+자세한 내용은 [Azure-SSIS Integration Runtime 모니터](/azure/data-factory/monitor-integration-runtime#azure-ssis-integration-runtime)를 참조하세요.
 
 ### <a name="get-metadata-about-the-azure-ssis-integration-runtime"></a>Azure-SSIS Integration Runtime에 대한 메타데이터 가져오기
 

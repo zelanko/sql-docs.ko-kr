@@ -16,12 +16,12 @@ helpviewer_keywords:
 ms.assetid: bc137daa-9f37-4c01-9766-8b7350c75af8
 author: MashaMSFT
 ms.author: mathoma
-ms.openlocfilehash: 1056cfe7d80bdf97c97c344d3b9f3dfc4dc6fdcd
-ms.sourcegitcommit: e700497f962e4c2274df16d9e651059b42ff1a10
+ms.openlocfilehash: 754aff825e0da8fd888deafb927936599a4d8631
+ms.sourcegitcommit: cfa04a73b26312bf18d8f6296891679166e2754d
 ms.translationtype: HT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 08/17/2020
-ms.locfileid: "88494696"
+ms.lasthandoff: 10/19/2020
+ms.locfileid: "92196767"
 ---
 # <a name="manage-data-collection"></a>데이터 컬렉션 관리
  [!INCLUDE [SQL Server](../../includes/applies-to-version/sqlserver.md)]
@@ -65,7 +65,7 @@ ms.locfileid: "88494696"
   
 >**중요!!** 일반적인 저장 프로시저와 달리 데이터 수집기 저장 프로시저는 정확하게 입력된 매개 변수를 사용하며 데이터 형식 자동 변환을 지원하지 않습니다. 이러한 매개 변수를 인수 설명에 지정된 올바른 입력 매개 변수 데이터 형식으로 호출하지 않으면 저장 프로시저가 오류를 반환합니다.  
   
- [!INCLUDE[ssManStudioFull](../../includes/ssmanstudiofull-md.md)] 를 사용하여 제공된 코드 예제를 만들고 실행할 수 있습니다. 자세한 내용은 [개체 탐색기](../../ssms/object/object-explorer.md)를 참조하세요. 임의의 편집기에서 쿼리를 만들어 이를 확장명이 .sql인 텍스트 파일에 저장할 수도 있습니다. Windows 명령 프롬프트에서 **sqlcmd** 유틸리티를 사용하여 쿼리를 실행할 수 있습니다. 자세한 내용은 [sqlcmd 유틸리티 사용](../../relational-databases/scripting/sqlcmd-use-the-utility.md)을 참조하세요.  
+ [!INCLUDE[ssManStudioFull](../../includes/ssmanstudiofull-md.md)] 를 사용하여 제공된 코드 예제를 만들고 실행할 수 있습니다. 자세한 내용은 [개체 탐색기](../../ssms/object/object-explorer.md)를 참조하세요. 임의의 편집기에서 쿼리를 만들어 이를 확장명이 .sql인 텍스트 파일에 저장할 수도 있습니다. Windows 명령 프롬프트에서 **sqlcmd** 유틸리티를 사용하여 쿼리를 실행할 수 있습니다. 자세한 내용은 [sqlcmd 유틸리티 사용](../../ssms/scripting/sqlcmd-use-the-utility.md)을 참조하세요.  
   
 ### <a name="stored-procedures-and-views"></a>저장 프로시저 및 뷰  
  **데이터 수집기 작업**  
@@ -174,7 +174,6 @@ ms.locfileid: "88494696"
   
 ## <a name="see-also"></a>참고 항목  
  [저장 프로시저 실행](../../relational-databases/stored-procedures/execute-a-stored-procedure.md)   
- [SQL Server Management Studio 사용](https://msdn.microsoft.com/library/f289e978-14ca-46ef-9e61-e1fe5fd593be)   
+ [SQL Server Management Studio 사용](../../ssms/sql-server-management-studio-ssms.md)   
  [데이터 컬렉션](../../relational-databases/data-collection/data-collection.md)  
-  
   

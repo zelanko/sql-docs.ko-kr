@@ -1,6 +1,7 @@
 ---
-title: Excel에서 Master Data Services로 데이터 가져오기(Excel용 MDS 추가 기능) | Microsoft Docs
-ms.custom: microsoft-excel-add-in
+description: Excel에서 Master Data Services로 데이터 가져오기(Excel용 MDS 추가 기능)
+title: Excel에서 데이터 가져오기
+ms.custom: microsoft-excel-add-in, seo-lt-2019
 ms.date: 03/01/2017
 ms.prod: sql
 ms.prod_service: mds
@@ -10,16 +11,16 @@ ms.topic: conceptual
 ms.assetid: 89fce454-a816-4b33-a26a-d1b9741d269b
 author: lrtoyou1223
 ms.author: lle
-ms.openlocfilehash: 093f8a471210b73b8c3cdaf1b2bb083b31980c52
-ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
+ms.openlocfilehash: a06d8338f334074ede68f34c8145f0d8fecb529f
+ms.sourcegitcommit: e700497f962e4c2274df16d9e651059b42ff1a10
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 07/15/2019
-ms.locfileid: "68092286"
+ms.lasthandoff: 08/17/2020
+ms.locfileid: "92257750"
 ---
 # <a name="import-data-from-excel-to-master-data-services-mds-add-in-for-excel"></a>Excel에서 Master Data Services로 데이터 가져오기(Excel용 MDS 추가 기능)
 
-[!INCLUDE[appliesto-ss-xxxx-xxxx-xxx-md-winonly](../../includes/appliesto-ss-xxxx-xxxx-xxx-md-winonly.md)]
+[!INCLUDE [SQL Server Windows Only - ASDBMI ](../../includes/applies-to-version/sql-windows-only-asdbmi.md)]
 
   [!INCLUDE[ssMDSshort](../../includes/ssmdsshort-md.md)][!INCLUDE[ssMDSXLS](../../includes/ssmdsxls-md.md)]에서는 Excel에서 작업을 마치고 다른 사용자가 데이터 액세스할 수 있도록 변경 내용을 저장하려는 경우 데이터를 MDS 리포지토리에 게시합니다.  
   
@@ -27,22 +28,22 @@ ms.locfileid: "68092286"
 >  -   변경 내용을 게시하면 MDS 관리 셀에 대한 주석이 삭제됩니다.  
 > -   MDS 관리 셀에서는 수식을 사용할 수 없습니다. MDS 관리 셀의 수식은 텍스트 값으로 처리됩니다.  
   
-## <a name="prerequisites"></a>사전 요구 사항  
+## <a name="prerequisites"></a>필수 구성 요소  
  이 절차를 수행하려면  
   
 -   **탐색기** 기능 영역에 액세스할 수 있는 권한이 있어야 합니다.  
   
 -   활성 워크시트에는 MDS 관리 데이터가 포함되어야 하며, 사용자가 MDS 관리 데이터에서 항목을 변경했거나 추가했어야 합니다.  
   
--   멤버를 추가하는 경우 엔터티에 대한 코드를 자동으로 생성하는 경우 **코드** 값을 지정할 필요가 없습니다. 자세한 내용은 [코드 자동 생성&#40;Master Data Services&#41;](../../master-data-services/automatic-code-creation-master-data-services.md)을 참조하세요.  
+-   멤버를 추가하는 경우 엔터티에 대한 코드를 자동으로 생성하는 경우 **코드** 값을 지정할 필요가 없습니다. 자세한 내용은 [MDS(Master Data Services)&#41;&#40;자동 코드 만들기 ](../../master-data-services/automatic-code-creation-master-data-services.md)를 참조 하세요.  
   
 ### <a name="to-publish-data-to-the-mds-repository"></a>MDS 저장소에 데이터를 게시하려면  
   
 1.  **게시 및 유효성 검사** 그룹에서 **게시**를 클릭합니다.  
   
-2.  (선택 사항) **게시 및 주석** 대화 상자가 표시되면 모든 업데이트에 대해 동일한 주석(설명)을 공유하거나 각 변경 내용에 대해 개별적으로 주석을 달도록 선택합니다.  
+2.  선택 사항입니다. **게시 및 주석** 대화 상자가 표시되면 모든 업데이트에 대해 동일한 주석(설명)을 공유하거나 각 변경 내용에 대해 개별적으로 주석을 달도록 선택합니다.  
   
-3.  (선택 사항) **이 대화 상자를 다시 표시 안 함** 확인란을 선택합니다. 이후에 언제라도 **설정** 을 선택하고 **게시할 때 게시 및 주석 대화 상자 표시** 확인란을 선택하여 대화 상자를 표시할 수 있습니다.  
+3.  선택 사항입니다. **이 대화 상자를 다시 표시 안 함** 확인란을 선택합니다. 이후에 언제라도 **설정** 을 선택하고 **게시할 때 게시 및 주석 대화 상자 표시** 확인란을 선택하여 대화 상자를 표시할 수 있습니다.  
   
 4.  **게시**를 클릭합니다.  
   
@@ -52,8 +53,8 @@ ms.locfileid: "68092286"
 ## <a name="next-steps"></a>다음 단계  
  [비즈니스 규칙 적용&#40;Excel용 MDS 추가 기능&#41;](../../master-data-services/microsoft-excel-add-in/apply-business-rules-mds-add-in-for-excel.md)  
   
-## <a name="see-also"></a>관련 항목  
- [개요: Excel에서 데이터 가져오기&#40;Excel용 MDS 추가 기능&#41;](../../master-data-services/microsoft-excel-add-in/overview-importing-data-from-excel-mds-add-in-for-excel.md)   
+## <a name="see-also"></a>참고 항목  
+ [개요: Excel &#40;Excel용 MDS 추가 기능에서 데이터 가져오기&#41;](../../master-data-services/microsoft-excel-add-in/overview-importing-data-from-excel-mds-add-in-for-excel.md)   
  [데이터 유효성 검사&#40;Excel용 MDS 추가 기능&#41;](../../master-data-services/microsoft-excel-add-in/validating-data-mds-add-in-for-excel.md)  
   
   

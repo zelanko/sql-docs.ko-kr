@@ -18,12 +18,12 @@ helpviewer_keywords:
 ms.assetid: be973cf1-c4ff-49f8-987e-314c08ef98e4
 author: chugugrace
 ms.author: chugu
-ms.openlocfilehash: 75027180045921b52377567bd90c0fa10c5fed1a
-ms.sourcegitcommit: e700497f962e4c2274df16d9e651059b42ff1a10
+ms.openlocfilehash: 2e840a22a2946e1278aae09b294952129d737713
+ms.sourcegitcommit: cfa04a73b26312bf18d8f6296891679166e2754d
 ms.translationtype: HT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 08/17/2020
-ms.locfileid: "88484589"
+ms.lasthandoff: 10/19/2020
+ms.locfileid: "92194163"
 ---
 # <a name="recordset-destination"></a>레코드 집합 대상
 
@@ -43,7 +43,7 @@ ms.locfileid: "88484589"
   
  **고급 편집기** 대화 상자에는 프로그래밍 방식으로 설정할 수 있는 속성이 표시됩니다. **고급 편집기** 대화 상자를 사용하거나 프로그래밍 방식으로 설정할 수 있는 속성에 대한 자세한 내용을 보려면 다음 항목 중 하나를 클릭하세요.  
   
--   [Common Properties](https://msdn.microsoft.com/library/51973502-5cc6-4125-9fce-e60fa1b7b796)  
+-   [Common Properties](./set-the-properties-of-a-data-flow-component.md)  
   
 -   [레코드 집합 대상 사용자 지정 속성](../../integration-services/data-flow/recordset-destination-custom-properties.md)  
   
@@ -51,5 +51,4 @@ ms.locfileid: "88484589"
   
 ## <a name="related-tasks"></a>관련 작업  
  [레코드 집합 대상 사용](../../integration-services/data-flow/use-a-recordset-destination.md)  
-  
   
