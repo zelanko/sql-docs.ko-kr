@@ -20,12 +20,12 @@ helpviewer_keywords:
 ms.assetid: 8eba755e-8e48-4233-bd1e-09a46bf2692f
 author: chugugrace
 ms.author: chugu
-ms.openlocfilehash: 93548684fb17ce59e5cee78e2a7a268dfce903ea
-ms.sourcegitcommit: e700497f962e4c2274df16d9e651059b42ff1a10
+ms.openlocfilehash: df48a338c2fe6cbc938284ed85b3b08fdc06f1cc
+ms.sourcegitcommit: cfa04a73b26312bf18d8f6296891679166e2754d
 ms.translationtype: HT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 08/17/2020
-ms.locfileid: "88430695"
+ms.lasthandoff: 10/19/2020
+ms.locfileid: "92193221"
 ---
 # <a name="derived-column-transformation"></a>파생 열 변환
 
@@ -66,7 +66,7 @@ ms.locfileid: "88430695"
   
  **고급 편집기** 대화 상자에는 프로그래밍 방식으로 설정할 수 있는 속성이 표시됩니다. **고급 편집기** 대화 상자를 사용하거나 프로그래밍 방식으로 설정할 수 있는 속성에 대한 자세한 내용을 보려면 다음 항목 중 하나를 클릭하세요.  
   
--   [Common Properties](https://msdn.microsoft.com/library/51973502-5cc6-4125-9fce-e60fa1b7b796)  
+-   [Common Properties](../set-the-properties-of-a-data-flow-component.md)  
   
 -   [변환 사용자 지정 속성](../../../integration-services/data-flow/transformations/transformation-custom-properties.md)  
   
@@ -117,7 +117,7 @@ ms.locfileid: "88430695"
  새 열에 데이터를 추가하는 경우 **파생 열 변환 편집기** 대화 상자가 DT_STR 데이터 형식에 대한 코드 페이지를 자동으로 설정합니다. **코드 페이지**를 업데이트할 수 있습니다.  
   
  **오류 출력 구성**  
- [오류 출력 구성](https://msdn.microsoft.com/library/5f8da390-fab5-44f8-b268-d8fa313ce4b9) 대화 상자를 사용하여 오류 처리 방법을 지정합니다.  
+ [오류 출력 구성](../error-handling-in-data.md) 대화 상자를 사용하여 오류 처리 방법을 지정합니다.  
   
 ## <a name="related-content"></a>관련 내용  
- social.technet.microsoft.com의 기술 문서 - [SSIS 식 예](https://go.microsoft.com/fwlink/?LinkId=220761)  
+ social.technet.microsoft.com의 기술 문서 - [SSIS 식 예](https://go.microsoft.com/fwlink/?LinkId=220761)

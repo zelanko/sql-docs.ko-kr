@@ -16,12 +16,12 @@ helpviewer_keywords:
 ms.assetid: 5defc5b9-dfd3-4859-a7fe-ac8c2b5480f8
 author: chugugrace
 ms.author: chugu
-ms.openlocfilehash: f9beaaa54cf6016c881903edd4fe141c37edaac8
-ms.sourcegitcommit: e700497f962e4c2274df16d9e651059b42ff1a10
+ms.openlocfilehash: 2455138c200097adc1547d3d57fbe4014b2be022
+ms.sourcegitcommit: cfa04a73b26312bf18d8f6296891679166e2754d
 ms.translationtype: HT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 08/17/2020
-ms.locfileid: "88392859"
+ms.lasthandoff: 10/19/2020
+ms.locfileid: "92194261"
 ---
 # <a name="history-cleanup-task"></a>기록 정리 태스크
 
@@ -61,10 +61,9 @@ ms.locfileid: "88392859"
   
  [!INCLUDE[ssIS](../../includes/ssis-md.md)] 디자이너에서 이러한 속성을 설정하는 방법을 보려면 다음 항목을 클릭하십시오.  
   
--   [태스크 또는 컨테이너의 속성 설정](https://msdn.microsoft.com/library/52d47ca4-fb8c-493d-8b2b-48bb269f859b)  
+-   [태스크 또는 컨테이너의 속성 설정](./add-or-delete-a-task-or-a-container-in-a-control-flow.md)  
   
 ## <a name="see-also"></a>참고 항목  
  [Integration Services 태스크](../../integration-services/control-flow/integration-services-tasks.md)   
  [제어 흐름](../../integration-services/control-flow/control-flow.md)  
-  
   

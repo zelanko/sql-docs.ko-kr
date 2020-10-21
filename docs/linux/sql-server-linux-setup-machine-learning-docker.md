@@ -11,12 +11,12 @@ ms.topic: conceptual
 ms.prod: sql
 ms.technology: machine-learning-services
 monikerRange: '>=sql-server-ver15||>=sql-server-linux-ver15||=sqlallproducts-allversions'
-ms.openlocfilehash: 6bf07a7c949c76ebeae0d17b632d47e4a87fce1b
-ms.sourcegitcommit: 9b41725d6db9957dd7928a3620fe4db41eb51c6e
+ms.openlocfilehash: 128510b920e171b39bddacebca89624289d67213
+ms.sourcegitcommit: 22102f25db5ccca39aebf96bc861c92f2367c77a
 ms.translationtype: HT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 08/13/2020
-ms.locfileid: "88178244"
+ms.lasthandoff: 10/16/2020
+ms.locfileid: "92115751"
 ---
 # <a name="install-sql-server-machine-learning-services-python-and-r-on-docker"></a>Docker에 SQL Server Machine Learning Services(Python 및 R) 설치
 
@@ -93,7 +93,7 @@ ms.locfileid: "88178244"
    ```
   
    > [!NOTE]
-   > 컨테이너에서 프로덕션 SQL Server 버전을 실행하는 프로세스는 약간 다릅니다. 자세한 내용은 [Docker에서 SQL Server 컨테이너 이미지 구성](sql-server-linux-configure-docker.md)을 참조하세요. 동일한 컨테이너 이름 및 포트를 사용하는 경우 이 연습의 나머지 부분은 프로덕션 컨테이너에서도 계속 작동합니다.
+   > 컨테이너에서 프로덕션 SQL Server 버전을 실행하는 프로세스는 약간 다릅니다. 자세한 내용은 [Docker에서 SQL Server 컨테이너 이미지 구성](./sql-server-linux-docker-container-deployment.md)을 참조하세요. 동일한 컨테이너 이름 및 포트를 사용하는 경우 이 연습의 나머지 부분은 프로덕션 컨테이너에서도 계속 작동합니다.
 
 2. Docker 컨테이너를 보려면 `docker ps` 명령 실행:
 
@@ -101,7 +101,7 @@ ms.locfileid: "88178244"
    sudo docker ps -a
    ```
 
-3. **STATUS** 열이 **Up**의 상태를 표시하는 경우, SQL Server는 컨테이너에서 실행되며 **PORTS** 열에 지정된 포트에서 수신을 대기합니다. SQL Server 컨테이너의 **상태** 열이 **Exited**를 표시하는 경우, [구성 가이드의 문제 해결 섹션](sql-server-linux-configure-docker.md#troubleshooting)을 참조하세요.
+3. **STATUS** 열이 **Up**의 상태를 표시하는 경우, SQL Server는 컨테이너에서 실행되며 **PORTS** 열에 지정된 포트에서 수신을 대기합니다. SQL Server 컨테이너의 **상태** 열이 **Exited**를 표시하는 경우, [구성 가이드의 문제 해결 섹션](./sql-server-linux-docker-container-troubleshooting.md)을 참조하세요.
 
  
     출력:
@@ -130,4 +130,4 @@ Python 개발자는 다음 자습서에 따라 SQL Server에서 Python을 사용
 R 개발자는 몇 가지 간단한 예제를 시작하고 R이 SQL Server에서 작동하는 방식의 기초를 알아볼 수 있습니다. 다음 단계로 가려면 아래 링크를 참조하세요.
 
 + [빠른 시작: T-SQL에서 R 사용](../machine-learning/tutorials/quickstart-r-create-script.md)
-+ [자습서: R 개발자를 위한 데이터베이스 내 분석](../machine-learning/tutorials/sqldev-in-database-r-for-sql-developers.md)
++ [자습서: R 개발자를 위한 데이터베이스 내 분석](../machine-learning/tutorials/r-taxi-classification-introduction.md)

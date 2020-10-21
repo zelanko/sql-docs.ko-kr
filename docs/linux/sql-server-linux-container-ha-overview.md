@@ -9,12 +9,12 @@ ms.topic: article
 ms.prod: sql
 ms.technology: linux
 monikerRange: '>=sql-server-2017||>=sql-server-linux-2017||=sqlallproducts-allversions'
-ms.openlocfilehash: c4d14e0b7f76aaebd0a0bdac00c93267b91d0ab8
-ms.sourcegitcommit: 610e3ebe21ac6575850a29641a32f275e71557e3
+ms.openlocfilehash: d7e15c070b17fd0a3682f5572c9b7cd3ce2c1dee
+ms.sourcegitcommit: 22102f25db5ccca39aebf96bc861c92f2367c77a
 ms.translationtype: HT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 10/07/2020
-ms.locfileid: "91785113"
+ms.lasthandoff: 10/16/2020
+ms.locfileid: "92115656"
 ---
 # <a name="high-availability-for-sql-server-containers"></a>SQL Server 컨테이너의 고가용성
 
@@ -43,5 +43,5 @@ Kubernetes에서 컨테이너를 만들려면 [Kubernetes에 SQL Server 컨테�
 ## <a name="next-steps"></a>다음 단계
 
 AKS(Azure Kubernetes Service)에 SQL Server 컨테이너를 배포하려면 다음 예제를 참조하세요.
-* [Docker 컨테이너에 SQL Server 배포](sql-server-linux-configure-docker.md)
+* [Docker 컨테이너에 SQL Server 배포](./sql-server-linux-docker-container-deployment.md)
 * [Kubernetes에 SQL Server 컨테이너 배포](tutorial-sql-server-containers-kubernetes.md)

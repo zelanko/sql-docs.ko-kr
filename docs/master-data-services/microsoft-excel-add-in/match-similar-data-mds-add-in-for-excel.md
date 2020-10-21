@@ -1,5 +1,6 @@
 ---
-title: 유사한 데이터 일치(Excel용 MDS 추가 기능) | Microsoft Docs
+description: 유사한 데이터 일치(Excel용 MDS 추가 기능)
+title: 유사한 데이터 일치
 ms.custom: microsoft-excel-add-in
 ms.date: 03/01/2017
 ms.prod: sql
@@ -10,16 +11,16 @@ ms.topic: conceptual
 ms.assetid: f6fd6fc1-3569-42a5-b6cb-87a921c88f3b
 author: lrtoyou1223
 ms.author: lle
-ms.openlocfilehash: 34a8e6ac8d40e23e1ccf99eacff9d391e79a48a7
-ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
+ms.openlocfilehash: 650c85f68003bda41e19e6f765898a23290480b6
+ms.sourcegitcommit: e700497f962e4c2274df16d9e651059b42ff1a10
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 07/15/2019
-ms.locfileid: "68074579"
+ms.lasthandoff: 08/17/2020
+ms.locfileid: "92255195"
 ---
 # <a name="match-similar-data-mds-add-in-for-excel"></a>유사한 데이터 일치(Excel용 MDS 추가 기능)
 
-[!INCLUDE[appliesto-ss-xxxx-xxxx-xxx-md-winonly](../../includes/appliesto-ss-xxxx-xxxx-xxx-md-winonly.md)]
+[!INCLUDE [SQL Server Windows Only - ASDBMI ](../../includes/applies-to-version/sql-windows-only-asdbmi.md)]
 
   [!INCLUDE[ssMDSshort](../../includes/ssmdsshort-md.md)][!INCLUDE[ssMDSXLS](../../includes/ssmdsxls-md.md)]에서 DQS(Data Quality Services) 기능을 사용하여 데이터의 유사성을 찾을 수 있습니다.  
   
@@ -29,11 +30,11 @@ ms.locfileid: "68074579"
   
 -   고유의 사용자 지정 DQS 기술 자료 및 일치 정책을 만듭니다. 자세한 내용은 [Create a Matching Policy](../../data-quality-services/create-a-matching-policy.md)를 참조하세요.  
   
-## <a name="prerequisites"></a>사전 요구 사항  
+## <a name="prerequisites"></a>필수 구성 요소  
   
 -   MDS 관리 데이터가 포함된 워크시트가 있어야 합니다. 자세한 내용은 [Master Data Services에서 Excel로 데이터 내보내기](../../master-data-services/microsoft-excel-add-in/export-data-to-excel-from-master-data-services.md)를 참조하세요.  
   
--   (선택 사항) 유사성을 검사하기 전에 다른 데이터와 MDS 관리 데이터를 결합할 수 있습니다. 자세한 내용은 [데이터 결합&#40;Excel용 MDS 추가 기능&#41;](../../master-data-services/microsoft-excel-add-in/combine-data-mds-add-in-for-excel.md)를 참조하십시오.  
+-   선택 사항입니다. 유사성을 검사하기 전에 다른 데이터와 MDS 관리 데이터를 결합할 수 있습니다. 자세한 내용은 [데이터 결합&#40;Excel용 MDS 추가 기능&#41;](../../master-data-services/microsoft-excel-add-in/combine-data-mds-add-in-for-excel.md)를 참조하십시오.  
   
 ### <a name="to-find-similarities-by-using-the-default-knowledge-base"></a>기본 기술 자료를 사용하여 유사성을 찾으려면  
   
@@ -59,7 +60,7 @@ ms.locfileid: "68074579"
   
 -   추가 정보를 보고 어떤 데이터가 비슷한지 결정합니다. 자세한 내용은 [데이터 품질 일치 열&#40;Excel용 MDS 추가 기능&#41;](../../master-data-services/microsoft-excel-add-in/data-quality-matching-columns-mds-add-in-for-excel.md)을 참조하세요.  
   
-## <a name="see-also"></a>관련 항목  
+## <a name="see-also"></a>참고 항목  
  [Excel용 MDS 추가 기능의 데이터 품질 일치](../../master-data-services/microsoft-excel-add-in/data-quality-matching-in-the-mds-add-in-for-excel.md)   
  [데이터 일치](../../data-quality-services/data-matching.md)  
   

@@ -13,12 +13,12 @@ helpviewer_keywords:
 ms.assetid: a2942509-39a2-4903-b504-ae80a300a9de
 author: stevestein
 ms.author: sstein
-ms.openlocfilehash: 5726487c9582a7f99b26154bdb92fa61647b1190
-ms.sourcegitcommit: e700497f962e4c2274df16d9e651059b42ff1a10
+ms.openlocfilehash: 5ddfed49481df7de8c63db08c8a184247c30857a
+ms.sourcegitcommit: cfa04a73b26312bf18d8f6296891679166e2754d
 ms.translationtype: HT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 08/17/2020
-ms.locfileid: "88465413"
+ms.lasthandoff: 10/19/2020
+ms.locfileid: "92194312"
 ---
 # <a name="modified-features-contained-database"></a>수정된 기능(포함된 데이터베이스)
  [!INCLUDE [SQL Server](../../includes/applies-to-version/sqlserver.md)]
@@ -35,7 +35,7 @@ ms.locfileid: "88465413"
  포함된 데이터베이스 외부에서 사용되는 ALTER DATABASE의 구문은 포함되지 않은 데이터베이스에 사용될 때의 구문과 다릅니다. 이러한 변경 사항은 데이터베이스 경계를 넘는 문제를 방지합니다. 자세한 내용은 [ALTER DATABASE&#40;Transact-SQL&#41;](../../t-sql/statements/alter-database-transact-sql.md)를 참조하세요.  
   
 ## <a name="create-database"></a>CREATE DATABASE  
- 포함된 데이터베이스에 대한 CREATE DATABASE 구문은 포함되지 않은 데이터베이스에 대한 CREATE DATABASE 구문과 다릅니다. 새 구문 요구 사항 및 허용 사항에 대한 자세한 내용은 [CREATE DATABASE&#40;SQL Server Transact-SQL&#41;](../../t-sql/statements/create-database-sql-server-transact-sql.md)를 참조하세요.  
+ 포함된 데이터베이스에 대한 CREATE DATABASE 구문은 포함되지 않은 데이터베이스에 대한 CREATE DATABASE 구문과 다릅니다. 새 구문 요구 사항 및 허용 사항에 대한 자세한 내용은 [CREATE DATABASE&#40;SQL Server Transact-SQL&#41;](../../t-sql/statements/create-database-transact-sql.md)를 참조하세요.  
   
 ## <a name="temporary-tables"></a>임시 테이블  
  로컬 임시 테이블은 포함된 데이터베이스 내에 허용되지만 해당 동작은 포함되지 않은 데이터베이스에서의 동작과 다릅니다. 포함되지 않은 데이터베이스에서 임시 테이블 데이터는 **tempdb**의 데이터 정렬에서 데이터 정렬됩니다. 포함된 데이터베이스에서 임시 테이블 데이터는 포함된 데이터베이스의 데이터 정렬에서 데이터 정렬됩니다.  
@@ -55,5 +55,4 @@ ms.locfileid: "88465413"
 ## <a name="see-also"></a>참고 항목  
  [포함된 데이터베이스 데이터 정렬](../../relational-databases/databases/contained-database-collations.md)   
  [포함된 데이터베이스](../../relational-databases/databases/contained-databases.md)  
-  
   

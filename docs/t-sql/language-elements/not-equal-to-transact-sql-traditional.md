@@ -25,12 +25,12 @@ ms.assetid: 34cf9b38-d589-4be9-925a-116e224609a0
 author: rothja
 ms.author: jroth
 monikerRange: '>=aps-pdw-2016||=azuresqldb-current||=azure-sqldw-latest||>=sql-server-2016||=sqlallproducts-allversions||>=sql-server-linux-2017||=azuresqldb-mi-current'
-ms.openlocfilehash: 391c463740ddf0b211908e3f9fec48b84dbc6495
-ms.sourcegitcommit: e700497f962e4c2274df16d9e651059b42ff1a10
+ms.openlocfilehash: 2fdd50143dd1ca8bc0b4dbed97aa1b9ab08ca1b2
+ms.sourcegitcommit: cfa04a73b26312bf18d8f6296891679166e2754d
 ms.translationtype: HT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 08/17/2020
-ms.locfileid: "88479570"
+ms.lasthandoff: 10/19/2020
+ms.locfileid: "92187648"
 ---
 # <a name="not-equal-to-transact-sql---traditional"></a>같지 않음(Transact SQL) - 기존
 [!INCLUDE [sql-asdb-asdbmi-asa-pdw](../../includes/applies-to-version/sql-asdb-asdbmi-asa-pdw.md)]
@@ -41,7 +41,7 @@ ms.locfileid: "88479570"
   
 ## <a name="syntax"></a>구문  
   
-```  
+```syntaxsql  
 expression <> expression  
 ```  
   
@@ -59,13 +59,12 @@ expression <> expression
 ### <a name="a-using--in-a-simple-query"></a>A. 간단한 쿼리에서 <> 사용  
  다음 예에서는 `Production.ProductCategory` 테이블에서 `ProductCategoryID`의 값이 3  또는 2가 아닌 모든 행을 반환합니다.  
   
-```  
+```sql  
 -- Uses AdventureWorks  
   
 SELECT ProductCategoryID, Name  
 FROM Production.ProductCategory  
 WHERE ProductCategoryID <> 3 AND ProductCategoryID <> 2;  
-  
 ```  
   
  [!INCLUDE[ssResult](../../includes/ssresult-md.md)]  

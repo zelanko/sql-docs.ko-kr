@@ -10,12 +10,12 @@ ms.technology: integration-services
 author: swinarko
 ms.author: sawinark
 ms.reviewer: maghan
-ms.openlocfilehash: 9a69ebabab91a9c257e96afb312e5498217bb967
-ms.sourcegitcommit: 21bedbae28840e2f96f5e8b08bcfc794f305c8bc
+ms.openlocfilehash: 2681515e691478d095149a7dc4a8a578c6a89bf3
+ms.sourcegitcommit: cfa04a73b26312bf18d8f6296891679166e2754d
 ms.translationtype: HT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 08/06/2020
-ms.locfileid: "87864610"
+ms.lasthandoff: 10/19/2020
+ms.locfileid: "92192533"
 ---
 # <a name="schedule-the-execution-of-ssis-packages-deployed-in-azure-with-sql-server-management-studio-ssms"></a>SQL Server Management Studio(SSMS)를 사용하여 Azure에 배포된 SSIS 패키지 실행 예약
 
@@ -75,5 +75,5 @@ SSMS를 사용하여 패키지를 예약하면 SSIS에서 선택된 패키지의
 SSIS 패키지를 예약하는 다른 방법에 대해 알아보려면 [Azure에서 SSIS 패키지의 실행 예약](ssis-azure-schedule-packages.md)을 참조하세요.
 
 Azure Data Factory 파이프라인, 활동 및 트리거에 대해 자세히 알아보려면 다음 아티클을 참조하세요.
--   [Azure Data Factory의 파이프라인 및 작업](https://docs.microsoft.com/azure/data-factory/concepts-pipelines-activities)
--   [Azure Data Factory의 파이프라인 실행 및 트리거](https://docs.microsoft.com/azure/data-factory/concepts-pipeline-execution-triggers)
+-   [Azure Data Factory의 파이프라인 및 작업](/azure/data-factory/concepts-pipelines-activities)
+-   [Azure Data Factory의 파이프라인 실행 및 트리거](/azure/data-factory/concepts-pipeline-execution-triggers)

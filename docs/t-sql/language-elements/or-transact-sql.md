@@ -21,12 +21,12 @@ ms.assetid: b730a256-4a63-4880-9906-65b05cd9caf2
 author: rothja
 ms.author: jroth
 monikerRange: '>=aps-pdw-2016||=azuresqldb-current||=azure-sqldw-latest||>=sql-server-2016||=sqlallproducts-allversions||>=sql-server-linux-2017||=azuresqldb-mi-current'
-ms.openlocfilehash: 11dbf45f7376a1a5557331dbd0466443bbd92739
-ms.sourcegitcommit: e700497f962e4c2274df16d9e651059b42ff1a10
+ms.openlocfilehash: e4924d983b55592cbc7a6be5794e0fd32fc10748
+ms.sourcegitcommit: cfa04a73b26312bf18d8f6296891679166e2754d
 ms.translationtype: HT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 08/17/2020
-ms.locfileid: "88422497"
+ms.lasthandoff: 10/19/2020
+ms.locfileid: "92191493"
 ---
 # <a name="or-transact-sql"></a>OR(Transact-SQL)
 [!INCLUDE [sql-asdb-asdbmi-asa-pdw](../../includes/applies-to-version/sql-asdb-asdbmi-asa-pdw.md)]
@@ -65,7 +65,7 @@ boolean_expression OR boolean_expression
 ## <a name="examples"></a>예제  
  다음 예에서는 `vEmployeeDepartmentHistory` 뷰를 사용하여 저녁 시간 또는 야간 교대 근무조에 속해 있는 `Quality Assurance` 직원의 이름을 검색합니다. 괄호를 생략하면 이 쿼리는 저녁 시간 근무조에 속한 `Quality Assurance` 직원과 야간 교대 근무조에 속한 모든 직원을 반환합니다.  
   
-```  
+```sql  
 -- Uses AdventureWorks  
   
 SELECT FirstName, LastName, Shift   
@@ -86,7 +86,7 @@ WHERE Department = 'Quality Assurance'
 ## <a name="examples-sssdwfull-and-sspdw"></a>예: [!INCLUDE[ssSDWfull](../../includes/sssdwfull-md.md)] 및 [!INCLUDE[ssPDW](../../includes/sspdw-md.md)]  
  다음 예제에서는 20 미만인 `BaseRate`를 획득하거나 2001년 1월 1일 이후에 `HireDate`인 직원의 이름을 검색합니다.  
   
-```  
+```sql  
 -- Uses AdventureWorks  
   
 SELECT FirstName, LastName, BaseRate, HireDate   

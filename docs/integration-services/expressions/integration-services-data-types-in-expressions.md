@@ -14,12 +14,12 @@ helpviewer_keywords:
 ms.assetid: c296ad10-4080-4988-8c2c-2c250f7a1884
 author: chugugrace
 ms.author: chugu
-ms.openlocfilehash: f1812ac61d34e5d2d25738cffed0b5caf117ee82
-ms.sourcegitcommit: e700497f962e4c2274df16d9e651059b42ff1a10
+ms.openlocfilehash: 6dd901474ae9c866a7f0ac67b70b2a40a3611c4a
+ms.sourcegitcommit: cfa04a73b26312bf18d8f6296891679166e2754d
 ms.translationtype: HT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 08/17/2020
-ms.locfileid: "88425535"
+ms.lasthandoff: 10/19/2020
+ms.locfileid: "92196425"
 ---
 # <a name="integration-services-data-types-in-expressions"></a>식에서의 Integration Services 데이터 형식
 
@@ -135,12 +135,11 @@ ms.locfileid: "88425535"
  많은 연산 및 함수 결과에는 미리 결정된 데이터 형식이 있습니다. 인수의 데이터 형식이거나 식 계산기가 결과를 캐스팅하는 데이터 형식일 수 있습니다. 예를 들어 논리적 OR 연산자(||)의 결과는 항상 부울이고 ABS 함수의 결과는 인수의 숫자 데이터 형식이며 곱하기의 결과는 손실 없이 결과를 유지할 수 있는 가장 작은 숫자 데이터 형식입니다. 결과의 데이터 형식에 대한 자세한 내용은 [연산자&#40;SSIS 식&#41;](../../integration-services/expressions/operators-ssis-expression.md) 및 [함수&#40;SSIS 식&#41;](../../integration-services/expressions/functions-ssis-expression.md)를 참조하세요.  
   
 ## <a name="related-tasks"></a>관련 작업  
- [데이터 흐름 구성 요소에서 식 사용](https://msdn.microsoft.com/library/9181b998-d24a-41fb-bb3c-14eee34f910d)  
+ [데이터 흐름 구성 요소에서 식 사용](/previous-versions/sql/sql-server-2016/ms141007(v=sql.130))  
   
 ## <a name="related-content"></a>관련 내용  
   
 -   pragmaticworks.com의 기술 문서 - [SSIS 식 치트 시트](https://go.microsoft.com/fwlink/?LinkId=746575)  
   
 -   social.technet.microsoft.com의 기술 문서 - [SSIS 식 예](https://go.microsoft.com/fwlink/?LinkId=220761)  
-  
   

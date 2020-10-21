@@ -22,12 +22,12 @@ helpviewer_keywords:
 ms.assetid: 1f717ad6-f67b-4980-9397-577ecb0e5789
 author: rothja
 ms.author: jroth
-ms.openlocfilehash: f620e240605b72e52b84204bed74ad083388fe01
-ms.sourcegitcommit: e700497f962e4c2274df16d9e651059b42ff1a10
+ms.openlocfilehash: db6bf2a03ee0b187345de9b9c406b9c2ca86cc29
+ms.sourcegitcommit: cfa04a73b26312bf18d8f6296891679166e2754d
 ms.translationtype: HT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 08/17/2020
-ms.locfileid: "88445442"
+ms.lasthandoff: 10/19/2020
+ms.locfileid: "92195482"
 ---
 # <a name="some--any-transact-sql"></a>SOME | ANY(Transact-SQL)
 [!INCLUDE [SQL Server SQL Database](../../includes/applies-to-version/sql-asdb.md)]
@@ -39,7 +39,6 @@ ms.locfileid: "88445442"
 ## <a name="syntax"></a>구문  
   
 ```syntaxsql
-  
 scalar_expression { = | < > | ! = | > | > = | ! > | < | < = | ! < }   
      { SOME | ANY } ( subquery )   
 ```  
@@ -73,9 +72,9 @@ scalar_expression { = | < > | ! = | > | > = | ! > | < | < = | ! < }
 ### <a name="a-running-a-simple-example"></a>A. 간단한 예 실행  
  다음 문에서는 간단한 테이블을 만들고 `1` 열에 값 `2`, `3`, `4` 및 `ID`를 추가합니다.  
   
-```  
+```sql  
 CREATE TABLE T1  
-(ID int) ;  
+(ID INT) ;  
 GO  
 INSERT T1 VALUES (1) ;  
 INSERT T1 VALUES (2) ;  
@@ -85,7 +84,7 @@ INSERT T1 VALUES (4) ;
   
  다음 쿼리는 `TRUE`이 테이블의 일부 값보다 작기 때문에 `3`를 반환합니다.  
   
-```  
+```sql  
 IF 3 < SOME (SELECT ID FROM T1)  
 PRINT 'TRUE'   
 ELSE  
@@ -94,7 +93,7 @@ PRINT 'FALSE' ;
   
  다음 쿼리는 `FALSE`이 테이블의 모든 값보다 작기 때문에 `3`를 반환합니다.  
   
-```  
+```sql  
 IF 3 < ALL (SELECT ID FROM T1)  
 PRINT 'TRUE'   
 ELSE  
@@ -104,10 +103,10 @@ PRINT 'FALSE' ;
 ### <a name="b-running-a-practical-example"></a>B. 실제 예 실행  
  다음 예에서는 `SalesOrderID` 데이터베이스에서 지정한 `AdventureWorks2012`의 모든 구성 요소를 지정된 기간 내에 제조할 수 있는지 여부를 결정하는 저장 프로시저를 만듭니다. 이 예에서는 하위 쿼리를 사용하여 특정 `DaysToManufacture`의 모든 구성 요소에 대해 `SalesOrderID` 값의 숫자 목록을 만든 다음 하위 쿼리에서 반환한 값 중 지정된 일 수를 초과하는 값이 있는지 테스트합니다. 반환된 `DaysToManufacture`의 모든 값이 제공된 숫자보다 작을 경우 조건은 TRUE이며 첫 번째 메시지가 출력됩니다.  
   
-```  
+```sql  
 -- Uses AdventureWorks  
   
-CREATE PROCEDURE ManyDaysToComplete @OrderID int, @NumberOfDays int  
+CREATE PROCEDURE ManyDaysToComplete @OrderID INT, @NumberOfDays INT  
 AS  
 IF   
 @NumberOfDays < SOME  
@@ -126,7 +125,7 @@ PRINT 'All items for this order can be manufactured in the specified number of d
   
  프로시저를 테스트하려면 `SalesOrderID``49080`일이 필요한 한 개의 구성 요소 및 0일이 필요한 두 개의 구성 요소가 포함되어 있는 `2`을 사용하여 프로시저를 실행합니다. 첫 번째 문은 조건을 만족합니다. 두 번째 쿼리는 만족하지 않습니다.  
   
-```  
+```sql  
 EXECUTE ManyDaysToComplete 49080, 2 ;  
 ```  
   

@@ -21,12 +21,12 @@ helpviewer_keywords:
 ms.assetid: 01aa0b88-d477-4581-9a3b-2efc3de2b133
 author: chugugrace
 ms.author: chugu
-ms.openlocfilehash: 9e45f6fc97531038c7d1d16c34eb18fc19d189cb
-ms.sourcegitcommit: e700497f962e4c2274df16d9e651059b42ff1a10
+ms.openlocfilehash: 9d663d75f7588ad91973f3bce5f416136bc5583e
+ms.sourcegitcommit: cfa04a73b26312bf18d8f6296891679166e2754d
 ms.translationtype: HT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 08/17/2020
-ms.locfileid: "88487688"
+ms.lasthandoff: 10/19/2020
+ms.locfileid: "92193788"
 ---
 # <a name="security-overview-integration-services"></a>보안 개요(Integration Services)
 
@@ -100,7 +100,7 @@ ms.locfileid: "88487688"
   
  구성을 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]대신 파일 시스템에 저장하는 경우 패키지 구성 파일이 들어 있는 폴더에 대한 보안을 설정해야 합니다.  
   
- 구성에 대한 자세한 내용은 [Package Configurations](../../integration-services/packages/package-configurations.md)을 참조하십시오.  
+ 구성에 대한 자세한 내용은 [Package Configurations](../packages/legacy-package-deployment-ssis.md)을 참조하십시오.  
   
 ### <a name="controlling-access-to-the-integration-services-service"></a>Integration Services 서비스에 대한 액세스 제어  
  [!INCLUDE[ssManStudioFull](../../includes/ssmanstudiofull-md.md)] 에서는 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 서비스를 사용하여 저장된 패키지를 나열합니다. 로컬 및 원격 컴퓨터에 저장된 패키지에 대한 정보를 무단으로 열람하여 개인 정보를 습득할 수 없게 하려면 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 서비스를 실행하는 컴퓨터에 대한 액세스를 제한해야 합니다.  
@@ -121,7 +121,7 @@ ms.locfileid: "88487688"
 ### <a name="configuration-files"></a>구성 파일  
  구성에 로그인 및 암호 정보와 같은 중요한 정보가 포함된 경우 구성을 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]에 저장하거나 ACL(액세스 제어 목록)을 사용하여 파일이 저장된 위치나 폴더에 대한 액세스를 제한하고 특정 계정에만 액세스할 수 있도록 해야 합니다. 일반적으로 패키지를 실행하도록 허용할 계정이나 구성, 검사점 및 로그 파일의 내용에 대한 검토를 비롯하여 패키지를 관리하고 문제를 해결하는 계정에 대해 액세스 권한을 부여합니다. [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 는 서버 및 데이터베이스 수준에서 보호하므로 보다 안전한 스토리지를 제공합니다. 구성을 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]에 저장하려면 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 구성 유형을 사용하고 파일 시스템을 저장하려면 XML 구성 유형을 사용합니다.  
   
- 자세한 내용은 [패키지 구성](../../integration-services/packages/package-configurations.md), [패키지 구성 만들기](../../integration-services/packages/create-package-configurations.md)및 [SQL Server 설치에 대한 보안 고려 사항](../../sql-server/install/security-considerations-for-a-sql-server-installation.md)을 참조하세요.  
+ 자세한 내용은 [패키지 구성](../packages/legacy-package-deployment-ssis.md), [패키지 구성 만들기](../packages/legacy-package-deployment-ssis.md)및 [SQL Server 설치에 대한 보안 고려 사항](../../sql-server/install/security-considerations-for-a-sql-server-installation.md)을 참조하세요.  
   
 ### <a name="checkpoint-files"></a>검사점 파일  
  이와 비슷하게 패키지에서 사용되는 검사점 파일에 중요한 정보가 들어 있는 경우 ACL(액세스 제어 목록)을 사용하여 파일 저장 위치 또는 폴더를 보호해야 합니다. 검사점 파일은 패키지 진행 중에 현재 상태 정보와 현재 변수 값을 저장합니다. 예를 들어 패키지에는 전화 번호가 포함된 사용자 지정 변수가 포함될 수 있습니다. 자세한 내용은 [검사점을 사용하여 패키지 다시 시작](../../integration-services/packages/restart-packages-by-using-checkpoints.md)을 참조하세요.  
@@ -147,4 +147,4 @@ ms.locfileid: "88487688"
   
 -   [디지털 인증서를 사용하여 패키지 서명](../../integration-services/security/identify-the-source-of-packages-with-digital-signatures.md#cert)  
   
--   [패키지 보호 수준 설정 또는 변경](../../integration-services/security/access-control-for-sensitive-data-in-packages.md#set_protection)  
+-   [패키지 보호 수준 설정 또는 변경](../../integration-services/security/access-control-for-sensitive-data-in-packages.md#set_protection)

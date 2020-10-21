@@ -16,12 +16,12 @@ ms.assetid: ce4053fb-e37a-4851-b711-8e504059a780
 author: stevestein
 ms.author: sstein
 monikerRange: =azuresqldb-current||>=sql-server-2016||=sqlallproducts-allversions||>=sql-server-linux-2017||=azuresqldb-mi-current
-ms.openlocfilehash: 30e481590a41e5c5670360bac265a0d7656fff9f
-ms.sourcegitcommit: 3efd8bbf91f4f78dce3a4ac03348037d8c720e6a
+ms.openlocfilehash: c49e89d9ed81950d0c8781d39c57eef3e408482b
+ms.sourcegitcommit: cfa04a73b26312bf18d8f6296891679166e2754d
 ms.translationtype: HT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 09/23/2020
-ms.locfileid: "91024345"
+ms.lasthandoff: 10/19/2020
+ms.locfileid: "92195561"
 ---
 # <a name="tempdb-database"></a>tempdb 데이터베이스
 
@@ -40,9 +40,9 @@ ms.locfileid: "91024345"
   > [!IMPORTANT]
   > Azure SQL Database 단일 데이터베이스 및 탄력적 풀은 `tempdb`에 저장되고 데이터베이스 수준을 범위로 하는 전역 임시 테이블 및 전역 임시 저장 프로시저를 지원합니다. 
   >
-  > 글로벌 임시 테이블 및 글로벌 임시 저장 프로시저는 동일한 SQL 데이터베이스 내의 모든 사용자 세션에 대해 공유됩니다. 다른 SQL 데이터베이스의 사용자 세션은 전역 임시 테이블에 액세스할 수 없습니다. 자세한 내용은 [데이터베이스 범위 전역 임시 테이블(Azure SQL Database)](../../t-sql/statements/create-table-transact-sql.md#database-scoped-global-temporary-tables-azure-sql-database)을 참조하세요. [Azure SQL Managed Instance](https://docs.microsoft.com/azure/sql-database/sql-database-managed-instance)는 SQL Server에서 지원하는 것과 동일한 임시 개체를 지원합니다.
+  > 글로벌 임시 테이블 및 글로벌 임시 저장 프로시저는 동일한 SQL 데이터베이스 내의 모든 사용자 세션에 대해 공유됩니다. 다른 SQL 데이터베이스의 사용자 세션은 전역 임시 테이블에 액세스할 수 없습니다. 자세한 내용은 [데이터베이스 범위 전역 임시 테이블(Azure SQL Database)](../../t-sql/statements/create-table-transact-sql.md#database-scoped-global-temporary-tables-azure-sql-database)을 참조하세요. [Azure SQL Managed Instance](/azure/sql-database/sql-database-managed-instance)는 SQL Server에서 지원하는 것과 동일한 임시 개체를 지원합니다.
   >
-  > Azure SQL Database 단일 데이터베이스와 탄력적 풀의 경우 master 데이터베이스 및 `tempdb` 데이터베이스만 적용됩니다. 자세한 내용은 [Azure SQL Database 서버란?](https://docs.microsoft.com/azure/sql-database/sql-database-servers-databases#what-is-an-azure-sql-database-server)을 참조하세요. Azure SQL Database 단일 데이터베이스와 탄력적 풀의 컨텍스트에서 `tempdb`의 설명은 [Azure SQL Database 단일 데이터베이스와 탄력적 풀의 tempdb 데이터베이스](#tempdb-database-in-sql-database)를 참조하세요. 
+  > Azure SQL Database 단일 데이터베이스와 탄력적 풀의 경우 master 데이터베이스 및 `tempdb` 데이터베이스만 적용됩니다. 자세한 내용은 [Azure SQL Database 서버란?](/azure/sql-database/sql-database-servers-databases#what-is-an-azure-sql-database-server)을 참조하세요. Azure SQL Database 단일 데이터베이스와 탄력적 풀의 컨텍스트에서 `tempdb`의 설명은 [Azure SQL Database 단일 데이터베이스와 탄력적 풀의 tempdb 데이터베이스](#tempdb-database-in-sql-database)를 참조하세요. 
   >
   > Azure SQL Managed Instance의 경우 모든 시스템 데이터베이스가 적용됩니다.
 
@@ -149,7 +149,7 @@ ms.locfileid: "91024345"
 
 ### <a name="tempdb-sizes-for-vcore-based-service-tiers"></a>vCore 기반 서비스 계층에 대한 tempdb 크기
 
-[vCore 기반 리소스 제한](https://docs.microsoft.com/azure/sql-database/sql-database-vcore-resource-limits) 참조
+[vCore 기반 리소스 제한](/azure/sql-database/sql-database-vcore-resource-limits) 참조
 
 ## <a name="restrictions"></a>제한 사항
 
@@ -223,7 +223,7 @@ GO
 - `tempdb`의 모든 할당에는 단일 범위가 사용됩니다. [추적 플래그 1118](../../t-sql/database-console-commands/dbcc-traceon-trace-flags-transact-sql.md)은 더 이상 필요하지 않습니다.  
 - 주 파일 그룹의 경우 `AUTOGROW_ALL_FILES` 속성이 설정되며 수정할 수 없습니다.
 
-`tempdb`의 성능 개선에 대한 자세한 내용은 블로그 게시물 [TEMPDB - Files and Trace Flags and Updates, Oh My!](https://blogs.msdn.microsoft.com/sql_server_team/tempdb-files-and-trace-flags-and-updates-oh-my/)를 참조하세요.
+`tempdb`의 성능 개선에 대한 자세한 내용은 블로그 게시물 [TEMPDB - Files and Trace Flags and Updates, Oh My!](/archive/blogs/sql_server_team/tempdb-files-and-trace-flags-and-updates-oh-my)를 참조하세요.
 
 ## <a name="memory-optimized-tempdb-metadata"></a>메모리 최적화 tempdb 메타데이터
 `tempdb`의 메타데이터 경합으로 인해 기존에는 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]에서 실행하는 많은 워크로드의 확장성에 병목 상태가 발생했습니다. [!INCLUDE[sql-server-2019](../../includes/sssqlv15-md.md)]에는 [메모리 내 데이터베이스](../in-memory-database.md) 기능 제품군에 속하는 새로운 기능인 메모리 액세스에 최적화된 tempdb 메타데이터가 도입되었습니다. 
@@ -355,4 +355,3 @@ GROUP BY R2.session_id, R1.internal_objects_alloc_page_count,
 [sys.databases](../../relational-databases/system-catalog-views/sys-databases-transact-sql.md)    
 [sys.master_files](../../relational-databases/system-catalog-views/sys-master-files-transact-sql.md)    
 [데이터베이스 파일 이동](../../relational-databases/databases/move-database-files.md)    
-  

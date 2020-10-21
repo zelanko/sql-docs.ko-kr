@@ -1,5 +1,6 @@
 ---
-title: 멤버 또는 컬렉션 다시 활성화(Master Data Services) | Microsoft Docs
+description: 멤버 또는 컬렉션 다시 활성화(Master Data Services)
+title: 멤버 또는 컬렉션 다시 활성화
 ms.custom: ''
 ms.date: 04/01/2016
 ms.prod: sql
@@ -17,16 +18,16 @@ helpviewer_keywords:
 ms.assetid: bb4884c0-3658-4763-92d1-636804278b1c
 author: lrtoyou1223
 ms.author: lle
-ms.openlocfilehash: b07555b2c770cb1a4c9a6ad81348baac8f75114c
-ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
+ms.openlocfilehash: dce90b3bf8b151ec5ea24dda8ea3628852a8dcfe
+ms.sourcegitcommit: e700497f962e4c2274df16d9e651059b42ff1a10
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 07/15/2019
-ms.locfileid: "68093108"
+ms.lasthandoff: 08/17/2020
+ms.locfileid: "92257940"
 ---
 # <a name="reactivate-a-member-or-collection-master-data-services"></a>멤버 또는 컬렉션 다시 활성화(Master Data Services)
 
-[!INCLUDE[appliesto-ss-xxxx-xxxx-xxx-md-winonly](../includes/appliesto-ss-xxxx-xxxx-xxx-md-winonly.md)]
+[!INCLUDE [SQL Server - Windows only ASDBMI  ](../includes/applies-to-version/sql-windows-only-asdbmi.md)]
 
   [!INCLUDE[ssMDSshort](../includes/ssmdsshort-md.md)]에서는 다음과 같은 멤버를 다시 활성화할 수 있습니다.  
   
@@ -42,12 +43,12 @@ ms.locfileid: "68093108"
   
  컬렉션이나 멤버를 다시 활성화하면 이전 트랜잭션이 모두 복원됩니다.  
   
-## <a name="prerequisites"></a>사전 요구 사항  
+## <a name="prerequisites"></a>필수 구성 요소  
  이 절차를 수행하려면  
   
 -   [!INCLUDE[ssMDSmdm](../includes/ssmdsmdm-md.md)]에서는 **버전 관리** 기능 영역에 액세스할 수 있는 권한이 있어야 합니다.  
   
--   모델 관리자여야 합니다. 자세한 내용은 [관리자&#40;Master Data Services&#41;](../master-data-services/administrators-master-data-services.md)를 참조하세요.  
+-   모델 관리자여야 합니다. 자세한 내용은 [관리자 &#40;MDS(Master Data Services)&#41;](../master-data-services/administrators-master-data-services.md)를 참조 하세요.  
   
 ### <a name="to-reactivate-a-member-or-collection"></a>멤버 또는 컬렉션을 다시 활성화하려면  
   
@@ -65,9 +66,9 @@ ms.locfileid: "68093108"
   
 7.  확인 대화 상자에서 **확인**을 클릭합니다. 새 트랜잭션이 추가되고 **새 값** 열에 **활성** 이 표시됩니다.  
   
-## <a name="see-also"></a>관련 항목  
- [멤버 또는 컬렉션 삭제&#40;Master Data Services&#41;](../master-data-services/delete-a-member-or-collection-master-data-services.md)   
- [멤버&#40;Master Data Services&#41;](../master-data-services/members-master-data-services.md)   
+## <a name="see-also"></a>참고 항목  
+ [MDS(Master Data Services) &#40;멤버 또는 컬렉션을 삭제&#41;](../master-data-services/delete-a-member-or-collection-master-data-services.md)   
+ [멤버가 MDS(Master Data Services)를 &#40;&#41;](../master-data-services/members-master-data-services.md)   
  [컬렉션&#40;Master Data Services&#41;](../master-data-services/collections-master-data-services.md)  
   
   

@@ -9,12 +9,12 @@ ms.date: 09/01/2020
 ms.topic: tutorial
 ms.prod: sql
 ms.technology: linux
-ms.openlocfilehash: 1e9234e6d429dcd95fa9556426871a4726f4f7f9
-ms.sourcegitcommit: 04cf7905fa32e0a9a44575a6f9641d9a2e5ac0f8
+ms.openlocfilehash: c8563738c8d1465c6573ca2a92f0839f54c8e29c
+ms.sourcegitcommit: 43b92518c5848489d03c68505bd9905f8686cbc0
 ms.translationtype: HT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 10/07/2020
-ms.locfileid: "91808709"
+ms.lasthandoff: 10/17/2020
+ms.locfileid: "92155101"
 ---
 # <a name="deploy-a-sql-server-container-in-kubernetes-with-azure-kubernetes-services-aks"></a>AKS(Azure Kubernetes Services)를 사용하여 Kubernetes에 SQL Server 컨테이너 배포
 
@@ -52,7 +52,7 @@ Kubernetes 1.6 이상에서는 [스토리지 클래스](https://kubernetes.io/do
 * **Kubernetes 클러스터**
    - 이 자습서를 완료하려면 Kubernetes 클러스터가 필요합니다. 이 단계에서는 [kubectl](https://kubernetes.io/docs/user-guide/kubectl/)을 사용하여 클러스터를 관리합니다. 
 
-   - `kubectl`을 사용하여 AKS에서 단일 노드 Kubernetes 클러스터를 만들고 연결하려면 [AKS(Azure Kubernetes Service) 클러스터 배포](https://docs.microsoft.com/azure/aks/tutorial-kubernetes-deploy-cluster)를 참조하세요. 
+   - `kubectl`을 사용하여 AKS에서 단일 노드 Kubernetes 클러스터를 만들고 연결하려면 [AKS(Azure Kubernetes Service) 클러스터 배포](/azure/aks/tutorial-kubernetes-deploy-cluster)를 참조하세요. 
 
    >[!NOTE]
    >노드 오류로부터 보호하려면 Kubernetes 클러스터에 두 개 이상의 노드가 필요합니다.
@@ -175,6 +175,7 @@ Kubernetes 클러스터에서 [영구적 볼륨](https://kubernetes.io/docs/conc
            app: mssql
        spec:
          terminationGracePeriodSeconds: 30
+         hostname: mssqlinst
          securityContext:
            fsGroup: 10001
          containers:
@@ -296,9 +297,9 @@ Kubernetes 클러스터에서 [영구적 볼륨](https://kubernetes.io/docs/conc
 
 다음 애플리케이션을 사용하여 SQL Server 인스턴스에 연결할 수 있습니다. 
 
-* [SSMS](https://docs.microsoft.com/sql/linux/sql-server-linux-manage-ssms)
+* [SSMS](./sql-server-linux-manage-ssms.md)
 
-* [SSDT](https://docs.microsoft.com/sql/linux/sql-server-linux-develop-use-ssdt)
+* [SSDT](./sql-server-linux-develop-use-ssdt.md)
 
 * sqlcmd
 
@@ -349,4 +350,4 @@ Kubernetes는 Pod를 자동으로 다시 만들어 SQL Server 인스턴스를 �
 ## <a name="next-steps"></a>다음 단계
 
 > [!div class="nextstepaction"]
->[Kubernetes 소개](https://docs.microsoft.com/azure/aks/intro-kubernetes)
+>[Kubernetes 소개](/azure/aks/intro-kubernetes)

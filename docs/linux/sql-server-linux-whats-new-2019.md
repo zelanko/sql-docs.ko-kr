@@ -7,12 +7,12 @@ ms.date: 03/12/2020
 ms.topic: conceptual
 ms.prod: sql
 ms.technology: linux
-ms.openlocfilehash: 9610ca6f434f78d332eb85fbf4ed71a4d477946a
-ms.sourcegitcommit: 039fb38c583019b3fd06894160568387a19ba04e
+ms.openlocfilehash: d0cd1e6c7af5fd4d2f8742e88b4b8853645fe5a7
+ms.sourcegitcommit: 22102f25db5ccca39aebf96bc861c92f2367c77a
 ms.translationtype: HT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 07/30/2020
-ms.locfileid: "87442902"
+ms.lasthandoff: 10/16/2020
+ms.locfileid: "92115457"
 ---
 # <a name="whats-new-for-sql-server-2019-on-linux"></a>SQL Server 2019 on Linux의 새로운 기능
 
@@ -42,7 +42,7 @@ SQL Server 2019 on Linux에서 업데이트가 수행되었습니다.
 | Linux의 PolyBase. | Hadoop이 아닌 커넥터에 대한 Linux에 [PolyBase를 설치](../relational-databases/polybase/polybase-linux-setup.md)합니다.<br/><br/>[PolyBase 형식 매핑](../relational-databases/polybase/polybase-type-mapping.md). |
 | CDC(변경 데이터 캡처) 지원 | CDC(변경 데이터 캡처)는 이제 SQL Server 2019용 Linux에서 지원됩니다. |
 | Microsoft Container Registry | 이제 [Microsoft Container Registry](https://azure.microsoft.com/blog/microsoft-syndicates-container-catalog/)가 Docker Hub 대신 [!INCLUDE[sql-server-2019](../includes/sssqlv15-md.md)]를 비롯한 새 공식적인 Microsoft 컨테이너 이미지를 제공합니다. |
-| 루트가 아닌 컨테이너 | [!INCLUDE[sql-server-2019](../includes/sssqlv15-md.md)]에서는 기본적으로 [!INCLUDE[sql-server](../includes/ssnoversion-md.md)] 프로세스를 루트가 아닌 사용자로 시작하여 더 안전한 컨테이너를 만들 수 있습니다. 자세한 내용은 [루트가 아닌 사용자 권한으로 SQL Server 컨테이너 빌드 및 실행](sql-server-linux-configure-docker.md#buildnonrootcontainer)을 참조하세요. |
+| 루트가 아닌 컨테이너 | [!INCLUDE[sql-server-2019](../includes/sssqlv15-md.md)]에서는 기본적으로 [!INCLUDE[sql-server](../includes/ssnoversion-md.md)] 프로세스를 루트가 아닌 사용자로 시작하여 더 안전한 컨테이너를 만들 수 있습니다. 자세한 내용은 [루트가 아닌 사용자 권한으로 SQL Server 컨테이너 빌드 및 실행](./sql-server-linux-docker-container-security.md#buildnonrootcontainer)을 참조하세요. |
 
 ## <a name="next-steps"></a>다음 단계
 

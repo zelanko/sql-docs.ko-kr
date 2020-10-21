@@ -11,12 +11,12 @@ ms.topic: conceptual
 ms.prod: sql
 ms.technology: machine-learning-services
 monikerRange: '>=sql-server-ver15||>=sql-server-linux-ver15||=sqlallproducts-allversions'
-ms.openlocfilehash: ed29244d06e0fcf08c5f56af59c3e1f9feeb2883
-ms.sourcegitcommit: 9b41725d6db9957dd7928a3620fe4db41eb51c6e
+ms.openlocfilehash: 6efa57a482943b6dbef2ebecdc0668dac017a01a
+ms.sourcegitcommit: 22102f25db5ccca39aebf96bc861c92f2367c77a
 ms.translationtype: HT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 08/13/2020
-ms.locfileid: "88178258"
+ms.lasthandoff: 10/16/2020
+ms.locfileid: "92115766"
 ---
 # <a name="install-sql-server-machine-learning-services-python-and-r-on-linux"></a>Linux에 SQL Server Machine Learning Services(Python 및 R) 설치
 
@@ -47,7 +47,7 @@ ms.locfileid: "88178258"
 
 * T-SQL 명령을 실행하기 위한 도구가 있어야 합니다. 
 
-  * Linux, Windows 및 macOS에서 실행되는 무료 데이터베이스 도구인 [Azure Data Studio](https://docs.microsoft.com/sql/azure-data-studio/download-azure-data-studio)를 사용할 수 있습니다.
+  * Linux, Windows 및 macOS에서 실행되는 무료 데이터베이스 도구인 [Azure Data Studio](../azure-data-studio/download-azure-data-studio.md)를 사용할 수 있습니다.
 
 ## <a name="package-list"></a>패키지 목록
 
@@ -439,4 +439,4 @@ Python 개발자는 다음 자습서에 따라 SQL Server에서 Python을 사용
 R 개발자는 몇 가지 간단한 예제를 시작하고 R이 SQL Server에서 작동하는 방식의 기초를 알아볼 수 있습니다. 다음 단계로 가려면 아래 링크를 참조하세요.
 
 + [빠른 시작: T-SQL에서 R 사용](../machine-learning/tutorials/quickstart-r-create-script.md)
-+ [자습서: R 개발자를 위한 데이터베이스 내 분석](../machine-learning/tutorials/sqldev-in-database-r-for-sql-developers.md)
++ [자습서: R 개발자를 위한 데이터베이스 내 분석](../machine-learning/tutorials/r-taxi-classification-introduction.md)

@@ -13,12 +13,12 @@ ms.assetid: 4b8b61bd-4bd1-43cd-b6e5-c6ed2e101dce
 author: stevestein
 ms.author: sstein
 ms.custom: seo-dt-2019
-ms.openlocfilehash: 318ba0af0be327cbe938fd9498dcbce9e418650d
-ms.sourcegitcommit: e700497f962e4c2274df16d9e651059b42ff1a10
+ms.openlocfilehash: 44252fa011dcdeaca457d6aa7f9819f581dbeb11
+ms.sourcegitcommit: cfa04a73b26312bf18d8f6296891679166e2754d
 ms.translationtype: HT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 08/17/2020
-ms.locfileid: "88385809"
+ms.lasthandoff: 10/19/2020
+ms.locfileid: "92192583"
 ---
 # <a name="configure-sql-server-agent-mail-to-use-database-mail"></a>데이터베이스 메일을 사용하도록 SQL Server 에이전트 메일 구성
  [!INCLUDE [SQL Server](../../includes/applies-to-version/sqlserver.md)]
@@ -37,7 +37,7 @@ ms.locfileid: "88385809"
 ##  <a name="before-you-begin"></a><a name="BeforeYouBegin"></a> 시작하기 전에  
   
   > [!NOTE]
-  > Managed Instance의 SQL 에이전트는 항상 데이터베이스 메일을 사용하도록 구성되므로 Managed Instance에는 이 내용이 적용되지 않습니다. Managed Instance에서 데이터베이스 메일에 SQL 에이전트를 바인딩하려면 **[AzureManagedInstance_dbmail_profile](https://docs.microsoft.com/azure/sql-database/sql-database-managed-instance-transact-sql-information#sql-server-agent)** 이라는 프로필이 있어야 합니다. 
+  > Managed Instance의 SQL 에이전트는 항상 데이터베이스 메일을 사용하도록 구성되므로 Managed Instance에는 이 내용이 적용되지 않습니다. Managed Instance에서 데이터베이스 메일에 SQL 에이전트를 바인딩하려면 **[AzureManagedInstance_dbmail_profile](/azure/sql-database/sql-database-managed-instance-transact-sql-information#sql-server-agent)** 이라는 프로필이 있어야 합니다. 
   
 ###  <a name="prerequisites"></a><a name="Prerequisites"></a> 필수 조건  
   
@@ -81,5 +81,4 @@ ms.locfileid: "88385809"
 -   [연산자](../../ssms/agent/operators.md)  
   
      운영자는 전자 알림을 받을 수 있는 사람 또는 그룹의 별칭입니다.  
-  
   

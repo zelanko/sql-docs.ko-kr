@@ -15,12 +15,12 @@ helpviewer_keywords:
 ms.assetid: a04a2aba-d07a-4423-ab8a-0a31658f6317
 author: stevestein
 ms.author: sstein
-ms.openlocfilehash: 8d4425da7d337a6628ae6197bedbe03d84897910
-ms.sourcegitcommit: e700497f962e4c2274df16d9e651059b42ff1a10
+ms.openlocfilehash: 5b13b4fcc5fd0071a5b008f4fa8186379ffecf41
+ms.sourcegitcommit: cfa04a73b26312bf18d8f6296891679166e2754d
 ms.translationtype: HT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 08/17/2020
-ms.locfileid: "88386939"
+ms.lasthandoff: 10/19/2020
+ms.locfileid: "92193053"
 ---
 # <a name="data-tier-applications"></a>데이터 계층 애플리케이션
 [!INCLUDE [SQL Server Azure SQL Database](../../includes/applies-to-version/sql-asdb.md)]
@@ -97,7 +97,7 @@ ms.locfileid: "88386939"
 -   **업그레이드** - DACPAC를 사용하여 데이터베이스를 업그레이드할 수 있습니다. 이전에 데이터 계층 애플리케이션으로 등록되지 않은 데이터베이스에서도 업그레이드가 지원되지만 업그레이드할 경우 데이터베이스가 암시적으로 등록됩니다.  
   
 ## <a name="bacpac"></a>BACPAC  
- BACPAC는 데이터베이스의 스키마와 데이터를 캡슐화 하는 확장명이 .bacpac인 Windows 파일입니다. BACPAC는 서버 간에 데이터베이스를 이동하거나 [로컬 서버에서 클라우드로 데이터베이스를 마이그레이션](https://azure.microsoft.com/documentation/articles/sql-database-cloud-migrate/)하고 기존 데이터베이스를 개방 형식으로 보관하는 데 주로 사용됩니다.  
+ BACPAC는 데이터베이스의 스키마와 데이터를 캡슐화 하는 확장명이 .bacpac인 Windows 파일입니다. BACPAC는 서버 간에 데이터베이스를 이동하거나 [로컬 서버에서 클라우드로 데이터베이스를 마이그레이션](/azure/azure-sql/database/migrate-to-database-from-sql-server)하고 기존 데이터베이스를 개방 형식으로 보관하는 데 주로 사용됩니다.  
  DACPAC와 비슷하게 BACPAC 파일 형식도 개방형이며, BACPAC의 스키마 콘텐츠는 DACPAC의 스키마 콘텐츠와 동일합니다. BACPAC의 데이터는 JSON 형식으로 저장됩니다.  
   
  DACPAC와 BACPAC는 서로 비슷하지만 대상 시나리오가 서로 다릅니다. DACPAC는 기존 데이터베이스의 업그레이드를 포함하여 스키마를 캡처하고 배포하는 데 사용됩니다. DACPAC는 엄격하게 정의된 스키마를 개발, 테스트, 프로덕션 환경에 순차적으로 배포하는 데 주로 사용됩니다. 또한 그 반대로, 프로덕션 환경의 스키마를 캡처하여 테스트 및 개발 환경에 다시 적용할 때도 사용됩니다.  
@@ -130,6 +130,5 @@ ms.locfileid: "88386939"
 |마법사를 사용하여 기존 데이터베이스를 배포하는 방법에 대해 설명합니다. 마법사는 DAC를 사용하여 배포를 수행합니다.|[DAC를 사용하여 데이터베이스 배포](../../relational-databases/data-tier-applications/deploy-a-database-by-using-a-dac.md)|  
   
 ## <a name="see-also"></a>참고 항목  
- [SQL Server 개체 및 버전에 대한 DAC 지원](../../relational-databases/data-tier-applications/dac-support-for-sql-server-objects-and-versions.md)  
-  
+ [SQL Server 개체 및 버전에 대한 DAC 지원](/previous-versions/sql/sql-server-2012/ee210549(v=sql.110))  
   

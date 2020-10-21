@@ -16,12 +16,12 @@ helpviewer_keywords:
 ms.assetid: e62083ec-d127-48ea-aaa4-cca6017a29cb
 author: chugugrace
 ms.author: chugu
-ms.openlocfilehash: 1eec7f57655dd86ef62ee8cef40f2c2a9454a8f2
-ms.sourcegitcommit: e700497f962e4c2274df16d9e651059b42ff1a10
+ms.openlocfilehash: 5459096926d477795edede0666ce27027310f8f7
+ms.sourcegitcommit: cfa04a73b26312bf18d8f6296891679166e2754d
 ms.translationtype: HT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 08/17/2020
-ms.locfileid: "88349309"
+ms.lasthandoff: 10/19/2020
+ms.locfileid: "92194940"
 ---
 # <a name="select-variables-page"></a>변수 선택 페이지
 
@@ -43,6 +43,5 @@ ms.locfileid: "88349309"
  변수의 데이터 형식을 지정합니다.  
   
 ## <a name="see-also"></a>참고 항목  
- [스크립트 태스크 편집기&#40;스크립트 페이지&#41;](../../integration-services/control-flow/script-task-editor-script-page.md)  
-  
+ [스크립트 태스크 편집기&#40;스크립트 페이지&#41;](./script-task.md)  
   

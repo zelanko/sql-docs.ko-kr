@@ -18,12 +18,12 @@ helpviewer_keywords:
 ms.assetid: f8849151-c171-4725-bd25-f2c33a40f4fe
 author: chugugrace
 ms.author: chugu
-ms.openlocfilehash: d037d4f8a002a0c5636d005ec7b0be28adf3a1b6
-ms.sourcegitcommit: e700497f962e4c2274df16d9e651059b42ff1a10
+ms.openlocfilehash: e46178bf0929eda71b91c7bec1ee26a7ed2a17fd
+ms.sourcegitcommit: cfa04a73b26312bf18d8f6296891679166e2754d
 ms.translationtype: HT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 08/17/2020
-ms.locfileid: "88425715"
+ms.lasthandoff: 10/19/2020
+ms.locfileid: "92195285"
 ---
 # <a name="slowly-changing-dimension-transformation"></a>느린 변경 차원 변환
 
@@ -94,7 +94,7 @@ ms.locfileid: "88425715"
   
  **고급 편집기** 대화 상자를 사용하거나 프로그래밍 방식으로 설정할 수 있는 속성에 대한 자세한 내용을 보려면 다음 항목 중 하나를 클릭하세요.  
   
--   [Common Properties](https://msdn.microsoft.com/library/51973502-5cc6-4125-9fce-e60fa1b7b796)  
+-   [Common Properties](../set-the-properties-of-a-data-flow-component.md)  
   
 -   [변환 사용자 지정 속성](../../../integration-services/data-flow/transformations/transformation-custom-properties.md)  
   
@@ -114,5 +114,4 @@ ms.locfileid: "88425715"
   
 -   [SSIS에서 느린 변경 차원 처리](https://techcommunity.microsoft.com/t5/SQL-Server-Integration-Services/Handling-Slowly-Changing-Dimensions-in-SSIS/ba-p/387599)
 -   [느린 변경 차원 마법사 최적화](https://techcommunity.microsoft.com/t5/SQL-Server-Integration-Services/Optimizing-the-Slowly-Changing-Dimension-Wizard/ba-p/387702)
-  
   

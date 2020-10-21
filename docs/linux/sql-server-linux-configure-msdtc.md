@@ -7,12 +7,12 @@ ms.date: 08/12/2020
 ms.topic: conceptual
 ms.prod: sql
 ms.technology: linux
-ms.openlocfilehash: 77df45c3eb4cded79e4485e8c93262a6b5ed43fc
-ms.sourcegitcommit: 9b41725d6db9957dd7928a3620fe4db41eb51c6e
+ms.openlocfilehash: f4f323e1649e022487ca9505ac5a6a949087b00f
+ms.sourcegitcommit: 22102f25db5ccca39aebf96bc861c92f2367c77a
 ms.translationtype: HT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 08/13/2020
-ms.locfileid: "88180022"
+ms.lasthandoff: 10/16/2020
+ms.locfileid: "92115516"
 ---
 # <a name="how-to-configure-the-microsoft-distributed-transaction-coordinator-msdtc-on-linux"></a>Linux에서 MSDTC(Microsoft Distributed Transaction Coordinator)를 구성하는 방법
 
@@ -204,8 +204,8 @@ Windows 운영 체제의 클라이언트가SQL Server on Linux을 사용하여 �
 
 | 운영 체제 | 최소 버전 | OS 빌드 |
 |---|---|---|
-| [Windows Server](https://docs.microsoft.com/windows-server/get-started/windows-server-release-info) | 1903 | 18362.30.190401-1528 |
-| [Windows 10](https://docs.microsoft.com/windows/release-information/) | 1903 | 18362.267 |
+| [Windows Server](/windows-server/get-started/windows-server-release-info) | 1903 | 18362.30.190401-1528 |
+| [Windows 10](/windows/release-information/) | 1903 | 18362.267 |
 
 ## <a name="next-steps"></a>다음 단계
 

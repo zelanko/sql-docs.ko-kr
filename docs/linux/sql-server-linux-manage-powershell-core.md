@@ -8,12 +8,12 @@ ms.topic: conceptual
 author: SQLvariant
 ms.author: aanelson
 ms.reviewer: vanto
-ms.openlocfilehash: fed5ca919a78f3051ba7677f46f786b7c62f9b27
-ms.sourcegitcommit: 3ea082c778f6771b17d90fb597680ed334d3e0ec
+ms.openlocfilehash: d9df9281926008ddac99b6827c41a0b6e73b2290
+ms.sourcegitcommit: 22102f25db5ccca39aebf96bc861c92f2367c77a
 ms.translationtype: HT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 08/11/2020
-ms.locfileid: "88088856"
+ms.lasthandoff: 10/16/2020
+ms.locfileid: "92115601"
 ---
 # <a name="manage-sql-server-on-linux-with-powershell-core"></a>PowerShell Core를 사용하여 SQL Server on Linux 관리
 
@@ -21,16 +21,16 @@ ms.locfileid: "88088856"
 
 ## <a name="cross-platform-editor-options"></a>플랫폼 간 편집기 옵션
 
-아래 PowerShell Core의 모든 단계는 일반 터미널에서 수행하거나 VS Code 또는 Azure Data Studio 내의 터미널에서 실행할 수 있습니다.  VS Code와 Azure Data Studio는 모두 macOS 및 Linux에서 사용할 수 있습니다.  Azure Data Studio에 대한 자세한 내용은 [이 빠른 시작](https://docs.microsoft.com/sql/azure-data-studio/quickstart-sql-server)을 참조하세요.  [PowerShell 확장](https://docs.microsoft.com/sql/azure-data-studio/powershell-extension)을 사용할 수도 있습니다.
+아래 PowerShell Core의 모든 단계는 일반 터미널에서 수행하거나 VS Code 또는 Azure Data Studio 내의 터미널에서 실행할 수 있습니다.  VS Code와 Azure Data Studio는 모두 macOS 및 Linux에서 사용할 수 있습니다.  Azure Data Studio에 대한 자세한 내용은 [이 빠른 시작](../azure-data-studio/quickstart-sql-server.md)을 참조하세요.  [PowerShell 확장](../azure-data-studio/extensions/powershell-extension.md)을 사용할 수도 있습니다.
 
 ## <a name="installing-powershell-core"></a>PowerShell Core 설치
 
 지원되는 다양한 실험적 플랫폼에서 PowerShell Core를 설치하는 방법에 관한 자세한 내용은 다음 문서를 참조하세요.
 
-- [Windows에서 PowerShell Core 설치](https://docs.microsoft.com/powershell/scripting/install/installing-powershell-core-on-windows?view=powershell-6)
-- [Linux에서 PowerShell Core 설치](https://docs.microsoft.com/powershell/scripting/install/installing-powershell-core-on-linux?view=powershell-6)
-- [macOS에서 PowerShell Core 설치](https://docs.microsoft.com/powershell/scripting/install/installing-powershell-core-on-macos?view=powershell-6)
-- [ARM에서 PowerShell Core 설치](https://docs.microsoft.com/powershell/scripting/install/powershell-core-on-arm?view=powershell-6)
+- [Windows에서 PowerShell Core 설치](/powershell/scripting/install/installing-powershell-core-on-windows?view=powershell-6)
+- [Linux에서 PowerShell Core 설치](/powershell/scripting/install/installing-powershell-core-on-linux?view=powershell-6)
+- [macOS에서 PowerShell Core 설치](/powershell/scripting/install/installing-powershell-core-on-macos?view=powershell-6)
+- [ARM에서 PowerShell Core 설치](/powershell/scripting/install/powershell-core-on-arm?view=powershell-6)
 
 ## <a name="install-the-sqlserver-module"></a>SqlServer 모듈 설치
 
@@ -108,7 +108,7 @@ your_server_instance            14.0.3048  RTM          CU13         Linux      
 
 ## <a name="using-the-sql-server-powershell-provider"></a>SQL Server PowerShell 공급자 사용
 
-SQL Server 인스턴스에 연결하는 또 다른 옵션은 [SQL Server PowerShell 공급자](https://docs.microsoft.com/sql/powershell/sql-server-powershell-provider)를 사용하는 것입니다.  공급자를 사용하면 개체 탐색기에서 트리 구조를 탐색할 때처럼 SQL Server 인스턴스를 명령줄에서 탐색할 수 있습니다.  기본적으로 이 공급자는 도메인 계정이 액세스할 수 SQL Server 인스턴스를 연결 및 탐색하는 데 사용할 수 있는 `SQLSERVER:\`라는 PSDrive로 표시됩니다.  SQL Server on Linux의 Active Directory 인증을 설정하는 방법에 대한 자세한 내용은 [구성 단계](https://docs.microsoft.com/sql/linux/sql-server-linux-active-directory-auth-overview#configuration-steps)를 참조하세요.
+SQL Server 인스턴스에 연결하는 또 다른 옵션은 [SQL Server PowerShell 공급자](../powershell/sql-server-powershell-provider.md)를 사용하는 것입니다.  공급자를 사용하면 개체 탐색기에서 트리 구조를 탐색할 때처럼 SQL Server 인스턴스를 명령줄에서 탐색할 수 있습니다.  기본적으로 이 공급자는 도메인 계정이 액세스할 수 SQL Server 인스턴스를 연결 및 탐색하는 데 사용할 수 있는 `SQLSERVER:\`라는 PSDrive로 표시됩니다.  SQL Server on Linux의 Active Directory 인증을 설정하는 방법에 대한 자세한 내용은 [구성 단계](./sql-server-linux-active-directory-auth-overview.md#configuration-steps)를 참조하세요.
 
 SQL Server PowerShell 공급자를 통해 SQL 인증을 사용할 수도 있습니다. 이렇게 하려면 `New-PSDrive` cmdlet을 사용하여 새 PSDrive을 만들고 연결할 적절한 자격 증명을 제공합니다.
 
@@ -198,7 +198,7 @@ Get-SqlErrorLog -ServerInstance $serverInstance -Credential $credential -Since Y
 ```
 
 ## <a name="explore-cmdlets-currently-available-in-ps-core"></a>현재 PS Core에서 사용할 수 있는 cmdlet 살펴보기
-SqlServer 모듈에는 현재 Windows PowerShell에서 사용할 수 있는 109개 cmdlet이 있지만 PSCore에서는 109개 중 62개만 사용할 수 있습니다. 현재 사용할 수 있는 62개 cmdlet의 전체 목록은 아래와 같습니다.  Sqlserver 모듈의 모든 cmdlet에 대한 자세한 설명서는 SqlServer [cmdlet reference](https://docs.microsoft.com/powershell/module/sqlserver/)(cmdlet 참조)를 참조하세요.
+SqlServer 모듈에는 현재 Windows PowerShell에서 사용할 수 있는 109개 cmdlet이 있지만 PSCore에서는 109개 중 62개만 사용할 수 있습니다. 현재 사용할 수 있는 62개 cmdlet의 전체 목록은 아래와 같습니다.  Sqlserver 모듈의 모든 cmdlet에 대한 자세한 설명서는 SqlServer [cmdlet reference](/powershell/module/sqlserver/)(cmdlet 참조)를 참조하세요.
 
 다음 명령을 실행하면 사용 중인 PowerShell 버전에서 사용할 수 있는 모든 cmdlet이 표시됩니다.
 
@@ -272,4 +272,4 @@ SELECT Name
 - Convert-UrnToPath
 
 ## <a name="see-also"></a>참고 항목
-- [SQL Server PowerShell](../relational-databases/scripting/sql-server-powershell.md)
+- [SQL Server PowerShell](../powershell/sql-server-powershell.md)

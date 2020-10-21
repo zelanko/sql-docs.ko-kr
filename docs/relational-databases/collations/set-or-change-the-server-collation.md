@@ -12,12 +12,12 @@ helpviewer_keywords:
 ms.assetid: 3242deef-6f5f-4051-a121-36b3b4da851d
 author: stevestein
 ms.author: sstein
-ms.openlocfilehash: 3bd3a3de0bf42300075af11ddafb088dd746f954
-ms.sourcegitcommit: dd36d1cbe32cd5a65c6638e8f252b0bd8145e165
+ms.openlocfilehash: 3ddd5615aafaa52a6bd0bb672f144e51d497c183
+ms.sourcegitcommit: cfa04a73b26312bf18d8f6296891679166e2754d
 ms.translationtype: HT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 09/08/2020
-ms.locfileid: "89539786"
+ms.lasthandoff: 10/19/2020
+ms.locfileid: "92193451"
 ---
 # <a name="set-or-change-the-server-collation"></a>서버 데이터 정렬 설정 또는 변경
 
@@ -62,7 +62,7 @@ ms.locfileid: "89539786"
 > [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 인스턴스의 기본 데이터 정렬을 변경하는 대신 `CREATE DATABASE` 및 `ALTER DATABASE` 문의 `COLLATE` 절을 통해 생성한 각 새 데이터베이스의 기본 데이터 정렬을 지정해도 됩니다. 자세한 내용은 [Set or Change the Database Collation](set-or-change-the-database-collation.md)을 참조하세요.  
   
 ## <a name="setting-the-server-collation-in-managed-instance"></a>Managed Instance에서 서버 데이터 정렬 설정
-Azure SQL Managed Instance의 서버 수준 데이터 정렬은 인스턴스가 생성될 때 지정될 수 있고 나중에 변경될 수 없습니다. 인스턴스를 만드는 동안 [Azure Portal](https://docs.microsoft.com/azure/sql-database/sql-database-managed-instance-get-started#create-a-managed-instance) 또는 [PowerShell 및 Resource Manager 템플릿](https://docs.microsoft.com/azure/sql-database/scripts/sql-managed-instance-create-powershell-azure-resource-manager-template)을 통해 서버 수준 데이터 정렬을 설정할 수 있습니다. 기본 서버 수준 데이터 정렬은 **SQL_Latin1_General_CP1_CI_AS**입니다. 유니코드 전용 및 새 UTF-8 데이터 정렬은 서버 수준 데이터 정렬로 지정할 수 없습니다.
+Azure SQL Managed Instance의 서버 수준 데이터 정렬은 인스턴스가 생성될 때 지정될 수 있고 나중에 변경될 수 없습니다. 인스턴스를 만드는 동안 [Azure Portal](/azure/sql-database/sql-database-managed-instance-get-started#create-a-managed-instance) 또는 [PowerShell 및 Resource Manager 템플릿](/azure/sql-database/scripts/sql-managed-instance-create-powershell-azure-resource-manager-template)을 통해 서버 수준 데이터 정렬을 설정할 수 있습니다. 기본 서버 수준 데이터 정렬은 **SQL_Latin1_General_CP1_CI_AS**입니다. 유니코드 전용 및 새 UTF-8 데이터 정렬은 서버 수준 데이터 정렬로 지정할 수 없습니다.
 데이터베이스를 SQL Server에서 Managed Instance로 마이그레이션하는 경우 `SERVERPROPERTY(N'Collation')` 함수를 사용하여 원본 SQL Server에서 서버 데이터 정렬을 확인하고 SQL Server의 데이터 정렬과 일치하는 Managed Instance를 만듭니다. 일치하지 않는 서버 수준 데이터 정렬을 사용하여 SQL Server에서 Managed Instance로 데이터베이스를 마이그레이션하면 쿼리에서 몇 가지 예기치 않은 오류가 발생할 수 있습니다. 기존 Managed Instance에서 서버 수준 데이터 정렬을 변경할 수 없습니다.
 
 ## <a name="see-also"></a>참고 항목
@@ -71,4 +71,3 @@ Azure SQL Managed Instance의 서버 수준 데이터 정렬은 인스턴스가 
  [데이터베이스 데이터 정렬 설정 또는 변경](../../relational-databases/collations/set-or-change-the-database-collation.md)   
  [열 데이터 정렬 설정 또는 변경](../../relational-databases/collations/set-or-change-the-column-collation.md)   
  [시스템 데이터베이스 다시 작성](../../relational-databases/databases/rebuild-system-databases.md)  
- 

@@ -11,12 +11,12 @@ ms.topic: conceptual
 ms.assetid: 98b2914e-7147-40af-ba7d-87253bbe8bf9
 author: stevestein
 ms.author: sstein
-ms.openlocfilehash: 503fe13d4f2d24c1795993bea84f2e04fb4ba0e1
-ms.sourcegitcommit: e700497f962e4c2274df16d9e651059b42ff1a10
+ms.openlocfilehash: b7865180ffd1bcf090e51eafd1542e12c97d17ac
+ms.sourcegitcommit: cfa04a73b26312bf18d8f6296891679166e2754d
 ms.translationtype: HT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 08/17/2020
-ms.locfileid: "88471181"
+ms.lasthandoff: 10/19/2020
+ms.locfileid: "92195008"
 ---
 # <a name="publish-a-database-sql-server-management-studio"></a>데이터베이스 게시(SQL Server Management Studio)
  [!INCLUDE [SQL Server](../../includes/applies-to-version/sqlserver.md)]
@@ -47,7 +47,6 @@ ms.locfileid: "88471181"
 5.  **스크립트 저장 또는 게시** 페이지에서 게시 진행률을 모니터링합니다.  
 
 ## <a name="see-also"></a>관련 항목  
- [스크립트 생성&#40;SQL Server Management Studio&#41;](../../relational-databases/scripting/generate-scripts-sql-server-management-studio.md)   
+ [스크립트 생성&#40;SQL Server Management Studio&#41;](../../ssms/scripting/generate-scripts-sql-server-management-studio.md)   
  [데이터베이스를 다른 서버로 복사](../../relational-databases/databases/copy-databases-to-other-servers.md)  
-  
   

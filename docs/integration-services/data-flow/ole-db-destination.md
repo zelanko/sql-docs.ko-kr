@@ -24,12 +24,12 @@ helpviewer_keywords:
 ms.assetid: 873a2fa0-2a02-41fc-a80a-ec9767f36a8a
 author: chugugrace
 ms.author: chugu
-ms.openlocfilehash: fa8723e3db746c614d3a9e44c37ea702506d2c45
-ms.sourcegitcommit: a41e1f4199785a2b8019a419a1f3dcdc15571044
+ms.openlocfilehash: cdf54622b3db05b661f5c71c3f3b6a2e67fbd1ff
+ms.sourcegitcommit: cfa04a73b26312bf18d8f6296891679166e2754d
 ms.translationtype: HT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 10/13/2020
-ms.locfileid: "91987663"
+ms.lasthandoff: 10/19/2020
+ms.locfileid: "92195385"
 ---
 # <a name="ole-db-destination"></a>OLE DB 대상
 
@@ -39,7 +39,7 @@ ms.locfileid: "91987663"
   OLE DB 대상은 데이터베이스 테이블이나 뷰 또는 SQL 명령을 사용하여 다양한 OLE DB 호환 데이터베이스로 데이터를 로드합니다. 예를 들어 OLE DB 원본은 [!INCLUDE[msCoName](../../includes/msconame-md.md)] Office Access 및 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 데이터베이스의 테이블로 데이터를 로드할 수 있습니다.  
   
 > [!NOTE]  
->  데이터 원본이 [!INCLUDE[msCoName](../../includes/msconame-md.md)] Office Excel 2007인 경우 이 데이터 원본에는 이전 버전의 Excel과 다른 연결 관리자가 필요합니다. 자세한 내용은 [Excel 통합 문서에 연결](../../integration-services/connection-manager/connect-to-an-excel-workbook.md)을 참조하세요.  
+>  데이터 원본이 [!INCLUDE[msCoName](../../includes/msconame-md.md)] Office Excel 2007인 경우 이 데이터 원본에는 이전 버전의 Excel과 다른 연결 관리자가 필요합니다. 자세한 내용은 [Excel 통합 문서에 연결](../load-data-to-from-excel-with-ssis.md)을 참조하세요.  
   
  OLE DB 대상은 데이터 로드를 위한 5가지 데이터 액세스 모드를 제공합니다.  
   
@@ -112,7 +112,7 @@ ms.locfileid: "91987663"
   
  **고급 편집기** 대화 상자에는 프로그래밍 방식으로 설정할 수 있는 속성이 표시됩니다. **고급 편집기** 대화 상자를 사용하거나 프로그래밍 방식으로 설정할 수 있는 속성에 대한 자세한 내용을 보려면 다음 항목 중 하나를 클릭하세요.  
   
--   [Common Properties](https://msdn.microsoft.com/library/51973502-5cc6-4125-9fce-e60fa1b7b796)  
+-   [Common Properties](./set-the-properties-of-a-data-flow-component.md)  
   
 -   [OLE DB 사용자 지정 속성](../../integration-services/data-flow/ole-db-custom-properties.md)  
   
@@ -126,7 +126,7 @@ ms.locfileid: "91987663"
   **OLE DB 대상 편집기** 대화 상자의 **연결 관리자** 페이지를 사용하여 대상에 대한 OLE DB 연결을 선택할 수 있습니다. 이 페이지를 사용하면 데이터베이스에서 테이블이나 뷰를 선택할 수도 있습니다.  
   
 > [!NOTE]  
->  데이터 원본이 [!INCLUDE[msCoName](../../includes/msconame-md.md)] Office Excel 2007인 경우 이 데이터 원본에는 이전 버전의 Excel과 다른 연결 관리자가 필요합니다. 자세한 내용은 [Excel 통합 문서에 연결](../../integration-services/connection-manager/connect-to-an-excel-workbook.md)을 참조하세요.  
+>  데이터 원본이 [!INCLUDE[msCoName](../../includes/msconame-md.md)] Office Excel 2007인 경우 이 데이터 원본에는 이전 버전의 Excel과 다른 연결 관리자가 필요합니다. 자세한 내용은 [Excel 통합 문서에 연결](../load-data-to-from-excel-with-ssis.md)을 참조하세요.  
   
 > [!NOTE]  
 >  OLE DB 대상의 **CommandTimeout** 속성은 **OLE DB 대상 편집기**에서 사용할 수 없지만 **고급 편집기**를 사용하여 설정할 수 있습니다. 또한 특정 빠른 로드 옵션은 **고급 편집기**에서만 사용할 수 있습니다. 이러한 속성에 대한 자세한 내용은 [OLE DB Custom Properties](../../integration-services/data-flow/ole-db-custom-properties.md)의 OLE DB 대상 섹션을 참조하십시오.  
@@ -147,7 +147,7 @@ ms.locfileid: "91987663"
 |------------|-----------------|  
 |테이블 또는 뷰|OLE DB 대상의 테이블 또는 뷰로 데이터를 로드합니다.|  
 |테이블 또는 뷰 - 빠른 로드|빠른 로드 옵션을 사용하여 OLE DB 대상의 테이블 또는 뷰로 데이터를 로드합니다. 대량 삽입에 최적화된 빠른 로드 데이터 액세스 모드에 대한 자세한 내용은 [OLE DB Destination](../../integration-services/data-flow/ole-db-destination.md)을 참조하십시오.|  
-|테이블 이름 또는 뷰 이름 변수|변수에 테이블 또는 뷰 이름을 지정합니다.<br /><br /> **관련 정보**: [패키지에서 변수 사용](https://msdn.microsoft.com/library/7742e92d-46c5-4cc4-b9a3-45b688ddb787)|  
+|테이블 이름 또는 뷰 이름 변수|변수에 테이블 또는 뷰 이름을 지정합니다.<br /><br /> **관련 정보**: [패키지에서 변수 사용](../integration-services-ssis-variables.md)|  
 |테이블 이름 또는 뷰 이름 변수 - 빠른 로드|변수에 테이블 이름 또는 뷰 이름을 지정하고 빠른 로드 옵션을 사용하여 데이터를 로드합니다. 대량 삽입에 최적화된 빠른 로드 데이터 액세스 모드에 대한 자세한 내용은 [OLE DB Destination](../../integration-services/data-flow/ole-db-destination.md)을 참조하십시오.|  
 |SQL 명령|SQL 쿼리를 사용하여 OLE DB 대상으로 데이터를 로드합니다.|  
   
@@ -309,5 +309,4 @@ ms.locfileid: "91987663"
  [Integration Services&#40;SSIS&#41; 변수](../../integration-services/integration-services-ssis-variables.md)  
   
  [데이터 흐름](../../integration-services/data-flow/data-flow.md)  
-  
   

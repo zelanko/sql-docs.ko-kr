@@ -15,12 +15,12 @@ f1_keywords:
 ms.assetid: 552ff592-eeef-46e8-b4a2-9b2384c869aa
 author: chugugrace
 ms.author: chugu
-ms.openlocfilehash: 2523c8ac095a576d243aef661092e7939e27863b
-ms.sourcegitcommit: e700497f962e4c2274df16d9e651059b42ff1a10
+ms.openlocfilehash: 9c67835df192436ce3b8264849589a1db3f66fee
+ms.sourcegitcommit: cfa04a73b26312bf18d8f6296891679166e2754d
 ms.translationtype: HT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 08/17/2020
-ms.locfileid: "88487669"
+ms.lasthandoff: 10/19/2020
+ms.locfileid: "92192383"
 ---
 # <a name="ssis-toolbox"></a>SSIS 도구 상자
 
@@ -34,7 +34,7 @@ ms.locfileid: "88487669"
  > [!NOTE]
 > 도구 상자가 보이지 않으면 보기 -> 다른 창 -> SSIS 도구 상자로 이동합니다.
  
-도구 상자의 구성 요소에 대한 자세한 내용을 보려면 구성 요소를 클릭하여 도구 상자의 맨 아래에 있는 설명을 참조하세요. 일부 구성 요소의 경우 구성 요소를 구성하고 사용하는 방법을 보여 주는 예제에도 액세스할 수 있습니다. 예제는 [MSDN](https://go.microsoft.com/fwlink/?LinkId=259189)에서 찾아볼 수 있습니다. **SSIS 도구 상자**에서 예제에 액세스하려면 설명 아래에 표시되는 **샘플 찾기** 링크를 클릭합니다.  
+도구 상자의 구성 요소에 대한 자세한 내용을 보려면 구성 요소를 클릭하여 도구 상자의 맨 아래에 있는 설명을 참조하세요. 일부 구성 요소의 경우 구성 요소를 구성하고 사용하는 방법을 보여 주는 예제에도 액세스할 수 있습니다. 예제는 [MSDN](/samples/browse/)에서 찾아볼 수 있습니다. **SSIS 도구 상자**에서 예제에 액세스하려면 설명 아래에 표시되는 **샘플 찾기** 링크를 클릭합니다.  
   
 > [!NOTE]
 > 설치된 구성 요소는 도구 상자에서 *제거*할 수 없습니다.  
@@ -65,5 +65,4 @@ ms.locfileid: "88487669"
   
 ## <a name="refresh-the-ssis-toolbox"></a>SSIS 도구 상자 새로 고침  
   
-1.  SSIS 도구 상자를 마우스 오른쪽 단추로 클릭한 다음 **도구 상자 새로 고침**을 클릭합니다.  
-
+1.  SSIS 도구 상자를 마우스 오른쪽 단추로 클릭한 다음 **도구 상자 새로 고침**을 클릭합니다.

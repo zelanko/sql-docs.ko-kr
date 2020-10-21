@@ -8,12 +8,12 @@ ms.topic: conceptual
 ms.prod: sql
 ms.technology: linux
 ms.assetid: 6bd8eb0b-593d-467e-87ea-ab1c4dbcd1ea
-ms.openlocfilehash: 51feab9c5cc38f1e9b67b3de68ce29c597cdb83a
-ms.sourcegitcommit: f7ac1976d4bfa224332edd9ef2f4377a4d55a2c9
+ms.openlocfilehash: 899d215abe7d0308c4fd0c42ed992defa3b198da
+ms.sourcegitcommit: 22102f25db5ccca39aebf96bc861c92f2367c77a
 ms.translationtype: HT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 07/02/2020
-ms.locfileid: "85883908"
+ms.lasthandoff: 10/16/2020
+ms.locfileid: "92115566"
 ---
 # <a name="choose-the-right-tool-to-manage-sql-server-on-linux"></a>SQL Server on Linux를 관리할 올바른 도구 선택
 
@@ -27,7 +27,7 @@ ms.locfileid: "85883908"
 
 ## <a name="transact-sql"></a>Transact-SQL
 
-클라이언트 도구에서 수행할 수 있는 거의 모든 작업은 Transact-SQL 문을 사용하여 수행할 수도 있습니다. SQL Server는 SQL Server의 상태와 구성을 쿼리하는 [DMV(동적 관리 뷰)](../relational-databases/system-dynamic-management-views/system-dynamic-management-views.md)를 제공합니다. 데이터베이스 관리 작업을 위한 [Transact-SQL 명령](../t-sql/language-reference.md)도 있습니다. SQL Server에 대한 연결 및 Transact-SQL 쿼리 실행을 지원하는 [sqlcmd](sql-server-linux-setup-tools.md) 또는 [Visual Studio Code](sql-server-linux-develop-use-vscode.md) 같은 모든 클라이언트 도구에서 이 명령을 실행할 수 있습니다.
+클라이언트 도구에서 수행할 수 있는 거의 모든 작업은 Transact-SQL 문을 사용하여 수행할 수도 있습니다. SQL Server는 SQL Server의 상태와 구성을 쿼리하는 [DMV(동적 관리 뷰)](../relational-databases/system-dynamic-management-views/system-dynamic-management-views.md)를 제공합니다. 데이터베이스 관리 작업을 위한 [Transact-SQL 명령](../t-sql/language-reference.md)도 있습니다. SQL Server에 대한 연결 및 Transact-SQL 쿼리 실행을 지원하는 [sqlcmd](sql-server-linux-setup-tools.md) 또는 [Visual Studio Code](../tools/visual-studio-code/sql-server-develop-use-vscode.md) 같은 모든 클라이언트 도구에서 이 명령을 실행할 수 있습니다.
 
 ## <a name="azure-data-studio"></a>Azure Data Studio
 

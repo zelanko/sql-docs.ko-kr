@@ -17,12 +17,12 @@ helpviewer_keywords:
 ms.assetid: 1bf33885-9c5b-47e4-a549-f5920b66a1de
 author: chugugrace
 ms.author: chugu
-ms.openlocfilehash: 5eaf7aca7e96aaf3aae3e095e92fecfa749cb1ee
-ms.sourcegitcommit: e700497f962e4c2274df16d9e651059b42ff1a10
+ms.openlocfilehash: ab4dfc14db0efacfe03ee7289c27f684b3e4a9eb
+ms.sourcegitcommit: cfa04a73b26312bf18d8f6296891679166e2754d
 ms.translationtype: HT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 08/17/2020
-ms.locfileid: "88430975"
+ms.lasthandoff: 10/19/2020
+ms.locfileid: "92192798"
 ---
 # <a name="transfer-jobs-task"></a>작업 전송 태스크
 
@@ -50,7 +50,7 @@ ms.locfileid: "88430975"
  작업 전송 태스크는 전송된 작업 수를 보고하는 정보 이벤트와 작업을 덮어씀을 알리는 경고 이벤트를 생성합니다. 태스크는 작업 전송의 진행률을 보고하지 않으며 0% 및 100%(완료)만 보고합니다.  
   
 ## <a name="execution-value"></a>실행 값  
- 태스크의 **ExecutionValue** 속성에 정의된 실행 값은 전송된 작업 수를 반환합니다. 사용자 정의 변수를 작업 전송 태스크의 **ExecValueVariable** 속성에 할당하여 작업 전송에 대한 정보를 패키지에 있는 다른 개체에서 사용할 수 있습니다. 자세한 내용은 [Integration Services&#40;SSIS&#41; 변수](../../integration-services/integration-services-ssis-variables.md) 및 [패키지에서 변수 사용](https://msdn.microsoft.com/library/7742e92d-46c5-4cc4-b9a3-45b688ddb787)을 참조하세요.  
+ 태스크의 **ExecutionValue** 속성에 정의된 실행 값은 전송된 작업 수를 반환합니다. 사용자 정의 변수를 작업 전송 태스크의 **ExecValueVariable** 속성에 할당하여 작업 전송에 대한 정보를 패키지에 있는 다른 개체에서 사용할 수 있습니다. 자세한 내용은 [Integration Services&#40;SSIS&#41; 변수](../../integration-services/integration-services-ssis-variables.md) 및 [패키지에서 변수 사용](../integration-services-ssis-variables.md)을 참조하세요.  
   
 ## <a name="log-entries"></a>로그 항목  
  작업 전송 태스크는 다음과 같은 사용자 지정 로그 항목을 포함합니다.  
@@ -78,7 +78,7 @@ ms.locfileid: "88430975"
 ## <a name="related-tasks"></a>관련 작업  
  [!INCLUDE[ssIS](../../includes/ssis-md.md)] 디자이너에서 이러한 속성을 설정하는 방법을 보려면 다음 항목을 클릭하십시오.  
   
--   [태스크 또는 컨테이너의 속성 설정](https://msdn.microsoft.com/library/52d47ca4-fb8c-493d-8b2b-48bb269f859b)  
+-   [태스크 또는 컨테이너의 속성 설정](./add-or-delete-a-task-or-a-container-in-a-control-flow.md)  
   
 ## <a name="transfer-jobs-task-editor-general-page"></a>작업 전송 태스크 편집기(일반 페이지)
   **작업 전송 태스크 편집기** 대화 상자의 **일반** 페이지를 사용하여 작업 전송 태스크의 이름을 지정하고 해당 태스크를 설명할 수 있습니다.  
@@ -151,5 +151,4 @@ ms.locfileid: "88430975"
 ## <a name="see-also"></a>참고 항목  
  [Integration Services 태스크](../../integration-services/control-flow/integration-services-tasks.md)   
  [제어 흐름](../../integration-services/control-flow/control-flow.md)  
-  
   

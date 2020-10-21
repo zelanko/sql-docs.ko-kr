@@ -1,5 +1,6 @@
 ---
-title: 도메인 기반 특성 만들기(Excel용 MDS 추가 기능) | Microsoft Docs
+description: 도메인 기반 특성 만들기(Excel용 MDS 추가 기능)
+title: 도메인 기반 특성 만들기
 ms.custom: microsoft-excel-add-in
 ms.date: 07/25/2017
 ms.prod: sql
@@ -10,30 +11,30 @@ ms.topic: conceptual
 ms.assetid: 7b3e30dc-8f41-4a5d-8009-ae5a4426a64b
 author: lrtoyou1223
 ms.author: lle
-ms.openlocfilehash: c38d850cb7f20f61f709f7e27161d84fa9b84dc6
-ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
+ms.openlocfilehash: 963d07399e91b89e18ac355b9d205ef57d2c26e8
+ms.sourcegitcommit: e700497f962e4c2274df16d9e651059b42ff1a10
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 07/15/2019
-ms.locfileid: "67988122"
+ms.lasthandoff: 08/17/2020
+ms.locfileid: "92257704"
 ---
 # <a name="create-a-domain-based-attribute-mds-add-in-for-excel"></a>도메인 기반 특성 만들기(Excel용 MDS 추가 기능)
 
-[!INCLUDE[appliesto-ss-xxxx-xxxx-xxx-md-winonly](../../includes/appliesto-ss-xxxx-xxxx-xxx-md-winonly.md)]
+[!INCLUDE [SQL Server Windows Only - ASDBMI ](../../includes/applies-to-version/sql-windows-only-asdbmi.md)]
 
   [!INCLUDE[ssMDSshort](../../includes/ssmdsshort-md.md)][!INCLUDE[ssMDSXLS](../../includes/ssmdsxls-md.md)]에서 관리자는 열에 있는 값을 특정 값 집합으로 제약하려는 경우 도메인 기반 특성을 만들 수 있습니다.  
   
  워크시트에 이미 있는 값이나 기존 엔터티에서 가져온 값으로 제약할 수 있습니다.  
   
 > [!NOTE]  
->  목록에서 값을 선택하는 대신 제약된 열에 값을 입력하면 값이 게시될 때 **$InputStatus$** 열에 오류가 표시됩니다.  
+>   목록에서 값을 선택하는 대신 제약된 열에 값을 입력하면 값이 게시될 때 **$InputStatus$** 열에 오류가 표시됩니다.  
   
-## <a name="prerequisites"></a>사전 요구 사항  
+## <a name="prerequisites"></a>필수 구성 요소  
  이 절차를 수행하려면  
   
 -   **시스템 관리** 와 **탐색기** 기능 영역에 액세스할 수 있는 권한이 있어야 합니다.  
   
--   모델 관리자여야 합니다. 자세한 내용은 [관리자&#40;Master Data Services&#41;](../../master-data-services/administrators-master-data-services.md)를 참조하세요.  
+-   모델 관리자여야 합니다. 자세한 내용은 [관리자 &#40;MDS(Master Data Services)&#41;](../../master-data-services/administrators-master-data-services.md)를 참조 하세요.  
   
 -   모델과 엔터티가 이미 있어야 합니다.  
   
@@ -63,9 +64,9 @@ ms.locfileid: "67988122"
   
 -   제약된 목록에 값을 추가하거나 목록에서 값을 삭제하려면 특성의 기반이 되는 엔터티를 로드합니다. 엔터티를 로드하는 방법에 대한 자세한 내용은 [Master Data Services에서 Excel로 데이터 내보내기](../../master-data-services/microsoft-excel-add-in/export-data-to-excel-from-master-data-services.md)를 참조하세요.  
   
-## <a name="see-also"></a>관련 항목  
- [도메인 기반 특성&#40;Master Data Services&#41;](../../master-data-services/domain-based-attributes-master-data-services.md)   
- [엔터티 만들기&#40;Excel용 MDS 추가 기능&#41;](../../master-data-services/microsoft-excel-add-in/create-an-entity-mds-add-in-for-excel.md)   
+## <a name="see-also"></a>참고 항목  
+ [도메인 기반 특성 &#40;MDS(Master Data Services)&#41;](../../master-data-services/domain-based-attributes-master-data-services.md)   
+ [엔터티 &#40;Excel용 MDS 추가 기능를 만듭니다&#41;](../../master-data-services/microsoft-excel-add-in/create-an-entity-mds-add-in-for-excel.md)   
  [모델 작성&#40;Excel용 MDS 추가 기능&#41;](../../master-data-services/microsoft-excel-add-in/building-a-model-mds-add-in-for-excel.md)  
   
   

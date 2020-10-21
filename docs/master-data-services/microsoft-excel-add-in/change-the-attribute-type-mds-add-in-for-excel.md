@@ -1,5 +1,6 @@
 ---
-title: 특성 유형 변경(Excel용 MDS 추가 기능) | Microsoft Docs
+description: 특성 유형 변경(Excel용 MDS 추가 기능)
+title: 특성 유형 변경
 ms.custom: microsoft-excel-add-in
 ms.date: 03/15/2017
 ms.prod: sql
@@ -10,16 +11,16 @@ ms.topic: conceptual
 ms.assetid: 9d3001d9-8d0f-4e4a-8e04-4f666bf0df69
 author: lrtoyou1223
 ms.author: lle
-ms.openlocfilehash: 785d65d17f1f14cc7fb2e7b7ec80b609d2950fb7
-ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
+ms.openlocfilehash: 1fd0e7f0acbe6792a5d303d50ef66014ebc5c1cf
+ms.sourcegitcommit: e700497f962e4c2274df16d9e651059b42ff1a10
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 07/15/2019
-ms.locfileid: "68092478"
+ms.lasthandoff: 08/17/2020
+ms.locfileid: "92257578"
 ---
 # <a name="change-the-attribute-type-mds-add-in-for-excel"></a>특성 유형 변경(Excel용 MDS 추가 기능)
 
-[!INCLUDE[appliesto-ss-xxxx-xxxx-xxx-md-winonly](../../includes/appliesto-ss-xxxx-xxxx-xxx-md-winonly.md)]
+[!INCLUDE [SQL Server Windows Only - ASDBMI ](../../includes/applies-to-version/sql-windows-only-asdbmi.md)]
 
   [!INCLUDE[ssMDSshort](../../includes/ssmdsshort-md.md)][!INCLUDE[ssMDSXLS](../../includes/ssmdsxls-md.md)]에서 관리자는 허용되는 문자 개수 또는 데이터 형식이 잘못된 경우 특성 유형을 변경할 수 있습니다.  
   
@@ -28,12 +29,12 @@ ms.locfileid: "68092478"
 > [!NOTE]  
 >  **이름** 또는 **코드** 열의 유형이나 길이는 업데이트할 수 없습니다.  
   
-## <a name="prerequisites"></a>사전 요구 사항  
+## <a name="prerequisites"></a>필수 구성 요소  
  이 절차를 수행하려면  
   
 -   **시스템 관리** 와 **탐색기** 기능 영역에 액세스할 수 있는 권한이 있어야 합니다.  
   
--   모델 관리자여야 합니다. 자세한 내용은 [관리자&#40;Master Data Services&#41;](../../master-data-services/administrators-master-data-services.md)를 참조하세요.  
+-   모델 관리자여야 합니다. 자세한 내용은 [관리자 &#40;MDS(Master Data Services)&#41;](../../master-data-services/administrators-master-data-services.md)를 참조 하세요.  
   
 -   기존 모델, 엔터티 및 특성이 있어야 합니다.  
   
@@ -58,8 +59,8 @@ ms.locfileid: "68092478"
   
 -   이전 값을 가진 "_old" 접미사를 사용해서 특성의 복사본을 생성합니다. 이를 사용되지 않는 특성이라고 부릅니다.  
   
-## <a name="see-also"></a>관련 항목  
- [특성&#40;Master Data Services&#41;](../../master-data-services/attributes-master-data-services.md)   
+## <a name="see-also"></a>참고 항목  
+ [특성 &#40;MDS(Master Data Services)&#41;](../../master-data-services/attributes-master-data-services.md)   
  [모델 작성&#40;Excel용 MDS 추가 기능&#41;](../../master-data-services/microsoft-excel-add-in/building-a-model-mds-add-in-for-excel.md)  
   
   

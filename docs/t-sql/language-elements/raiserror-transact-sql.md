@@ -30,12 +30,12 @@ ms.assetid: 483588bd-021b-4eae-b4ee-216268003e79
 author: rothja
 ms.author: jroth
 monikerRange: '>=aps-pdw-2016||=azuresqldb-current||=azure-sqldw-latest||>=sql-server-2016||=sqlallproducts-allversions||>=sql-server-linux-2017||=azuresqldb-mi-current'
-ms.openlocfilehash: a4c2ec582a2900986906ee127ad48462dcb43c58
-ms.sourcegitcommit: 8f062015c2a033f5a0d805ee4adabbe15e7c8f94
+ms.openlocfilehash: 1696a1fdcf2e27b8c13b24cbc5ae5b7a43cb1eec
+ms.sourcegitcommit: cfa04a73b26312bf18d8f6296891679166e2754d
 ms.translationtype: HT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 09/25/2020
-ms.locfileid: "91227233"
+ms.lasthandoff: 10/19/2020
+ms.locfileid: "92196828"
 ---
 # <a name="raiserror-transact-sql"></a>RAISERROR(Transact-SQL)
 [!INCLUDE [sql-asdb-asdbmi-asa-pdw](../../includes/applies-to-version/sql-asdb-asdbmi-asa-pdw.md)]
@@ -141,7 +141,7 @@ RAISERROR ( { msg_str | @local_variable }
   
  다음 예와 같이 -1을 지정하여 오류와 연결된 심각도 값을 반환할 수 있습니다.  
   
-```  
+```sql  
 RAISERROR (15600,-1,-1, 'mysp_CreateCustomer');  
 ```  
   
@@ -186,7 +186,7 @@ RAISERROR (15600,-1,-1, 'mysp_CreateCustomer');
   
  일반적으로 연속적인 인수는 첫 번째 인수가 첫 번째 변환 사양을, 두 번째 인수가 두 번째 변환 사양을 대체하는 식으로 연속적인 변환 사양을 대체합니다. 예를 들어 다음 `RAISERROR` 문에서 첫 번째 인수인 `N'number'`는 첫 번째 변환 사양인 `%s`를 대체하고 두 번째 인수인 `5`는 두 번째 변환 사양인 `%d.`를 대체합니다.  
   
-```  
+```sql  
 RAISERROR (N'This is message %s %d.', -- Message text.  
            10, -- Severity,  
            1, -- State,  
@@ -200,7 +200,7 @@ GO
   
  예를 들어 다음 `RAISERROR` 문은 모두 동일한 문자열을 반환합니다. 첫 번째 경우는 인수 목록에서 너비와 전체 자릿수를 지정하며 두 번째 경우는 변환 사양에서 이를 지정합니다.  
   
-```  
+```sql  
 RAISERROR (N'<\<%*.*s>>', -- Message text.  
            10, -- Severity,  
            1, -- State,  
@@ -225,7 +225,7 @@ GO
 > [!NOTE]  
 >  RAISERROR는 1에서 127까지 상태의 오류만 생성합니다. [!INCLUDE[ssDE](../../includes/ssde-md.md)]은 상태 0의 오류를 발생시킬 수 있으므로 RAISERROR의 상태 매개 변수 값으로 전달하기 전에 ERROR_STATE에서 반환된 오류 상태를 확인하는 것이 좋습니다.  
   
-```  
+```sql  
 BEGIN TRY  
     -- RAISERROR with severity 11-19 will cause execution to   
     -- jump to the CATCH block.  
@@ -257,7 +257,7 @@ END CATCH;
 ### <a name="b-creating-an-ad-hoc-message-in-sysmessages"></a>B. sys.messages에 임시 메시지 만들기  
  다음 예에서는 sys.messages 카탈로그 뷰에 저장된 메시지를 발생시키는 방법을 보여 줍니다. `sp_addmessage` 시스템 저장 프로시저를 사용하여 sys.messages 카탈로그 뷰에 `50005`의 메시지 번호로 메시지가 추가되었습니다.  
   
-```  
+```sql  
 sp_addmessage @msgnum = 50005,  
               @severity = 10,  
               @msgtext = N'<\<%7.3s>>';  
@@ -275,7 +275,7 @@ GO
 ### <a name="c-using-a-local-variable-to-supply-the-message-text"></a>C. 지역 변수를 사용한 메시지 텍스트 제공  
  다음 코드 예제에서는 지역 변수를 사용하여 `RAISERROR` 문에 메시지 텍스트를 제공하는 방법을 보여 줍니다.  
   
-```  
+```sql  
 DECLARE @StringVariable NVARCHAR(50);  
 SET @StringVariable = N'<\<%7.3s>>';  
   

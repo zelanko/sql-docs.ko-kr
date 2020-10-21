@@ -19,12 +19,12 @@ ms.assetid: d410e06e-061b-4c25-9973-b2dc9b60bd85
 author: rothja
 ms.author: jroth
 monikerRange: '>=aps-pdw-2016||=azuresqldb-current||=azure-sqldw-latest||>=sql-server-2016||=sqlallproducts-allversions||>=sql-server-linux-2017||=azuresqldb-mi-current'
-ms.openlocfilehash: 5b89c02db6622381f8f8104068e85004b6cd0d94
-ms.sourcegitcommit: 8f062015c2a033f5a0d805ee4adabbe15e7c8f94
+ms.openlocfilehash: b5f27289f3363ea503e365c9398d387dcb71222b
+ms.sourcegitcommit: cfa04a73b26312bf18d8f6296891679166e2754d
 ms.translationtype: HT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 09/25/2020
-ms.locfileid: "91227365"
+ms.lasthandoff: 10/19/2020
+ms.locfileid: "92195508"
 ---
 # <a name="set-local_variable-transact-sql"></a>SET @local_variable(Transact-SQL)
 [!INCLUDE [sql-asdb-asdbmi-asa-pdw](../../includes/applies-to-version/sql-asdb-asdbmi-asa-pdw.md)]
@@ -194,8 +194,8 @@ public 역할의 멤버 자격이 필요합니다. 모든 사용자는 SET **@**
 ### <a name="a-printing-the-value-of-a-variable-initialized-by-using-set"></a>A. SET을 사용하여 초기화된 변수 값 인쇄  
 다음 예제에서는 `@myvar` 변수를 만들고, 문자열 값을 변수에 넣고, `@myvar` 변수 값을 출력합니다.  
   
-```  
-DECLARE @myvar char(20);  
+```sql  
+DECLARE @myvar CHAR(20);  
 SET @myvar = 'This is a test';  
 SELECT @myvar;  
 GO  
@@ -204,10 +204,10 @@ GO
 ### <a name="b-using-a-local-variable-assigned-a-value-by-using-set-in-a-select-statement"></a>B. SELECT 문에서 SET을 사용하여 값이 할당된 지역 변수 사용  
 다음 예에서는 `@state`라는 지역 변수를 만들고 이 변수를 `SELECT` 문에 사용하여 `Oregon` 주에 사는 모든 직원의 이름과 성을 찾습니다.  
   
-```  
+```sql  
 USE AdventureWorks2012;  
 GO  
-DECLARE @state char(25);  
+DECLARE @state CHAR(25);  
 SET @state = N'Oregon';  
 SELECT RTRIM(FirstName) + ' ' + RTRIM(LastName) AS Name, City  
 FROM HumanResources.vEmployee  
@@ -217,15 +217,15 @@ WHERE StateProvinceName = @state;
 ### <a name="c-using-a-compound-assignment-for-a-local-variable"></a>C. 지역 변수에 복합 할당 사용  
 다음 두 예는 동일한 결과를 생성합니다. `@NewBalance`라고 하는 지역 변수를 만들고 여기에 10을 곱한 다음 이 지역 변수의 새 값을 `SELECT` 문에 표시합니다. 두 번째 예에서는 복합 할당 연산자를 사용합니다.  
   
-```  
+```sql  
 /* Example one */  
-DECLARE  @NewBalance  int ;  
+DECLARE  @NewBalance  INT ;  
 SET  @NewBalance  =  10;  
 SET  @NewBalance  =  @NewBalance  *  10;  
 SELECT  @NewBalance;  
   
 /* Example Two */  
-DECLARE @NewBalance int = 10;  
+DECLARE @NewBalance INT = 10;  
 SET @NewBalance *= 10;  
 SELECT @NewBalance;  
 ```  
@@ -233,7 +233,7 @@ SELECT @NewBalance;
 ### <a name="d-using-set-with-a-global-cursor"></a>D. 전역 커서와 함께 SET 사용  
 다음 예에서는 지역 변수를 만든 후 커서 변수를 전역 커서 이름으로 설정합니다.  
   
-```  
+```sql  
 DECLARE my_cursor CURSOR GLOBAL   
 FOR SELECT * FROM Purchasing.ShipMethod  
 DECLARE @my_variable CURSOR ;  
@@ -248,7 +248,7 @@ DEALLOCATE my_cursor;
 ### <a name="e-defining-a-cursor-by-using-set"></a>E. SET을 사용하여 커서 정의  
 다음 예에서는 `SET` 문을 사용하여 커서를 정의합니다.  
   
-```  
+```sql  
 DECLARE @CursorVar CURSOR;  
   
 SET @CursorVar = CURSOR SCROLL DYNAMIC  
@@ -272,10 +272,10 @@ DEALLOCATE @CursorVar;
 ### <a name="f-assigning-a-value-from-a-query"></a>F. 쿼리에서 값 할당  
 다음 예에서는 쿼리를 사용하여 변수에 값을 할당합니다.  
   
-```  
+```sql  
 USE AdventureWorks2012;  
 GO  
-DECLARE @rows int;  
+DECLARE @rows INT;  
 SET @rows = (SELECT COUNT(*) FROM Sales.Customer);  
 SELECT @rows;  
 ```  
@@ -283,7 +283,7 @@ SELECT @rows;
 ### <a name="g-assigning-a-value-to-a-user-defined-type-variable-by-modifying-a-property-of-the-type"></a>G. 사용자 정의 형식의 속성을 수정하여 사용자 정의 형식 변수에 값 할당  
 다음 예에서는 사용자 정의 형식의 `Point` 속성 값을 수정하여 사용자 정의 형식 `X`의 값을 설정합니다.  
   
-```  
+```sql  
 DECLARE @p Point;  
 SET @p.X = @p.X + 1.1;  
 SELECT @p;  
@@ -293,7 +293,7 @@ GO
 ### <a name="h-assigning-a-value-to-a-user-defined-type-variable-by-invoking-a-method-of-the-type"></a>H. 사용자 정의 형식의 메서드를 호출하여 사용자 정의 형식 변수에 값 할당  
 다음 예제에서는 형식의 `SetXY` 메서드를 호출하여 **point** 사용자 정의 형식의 값을 설정합니다.  
   
-```  
+```sql  
 DECLARE @p Point;  
 SET @p=point.SetXY(23.5, 23.5);  
 ```  
@@ -301,8 +301,8 @@ SET @p=point.SetXY(23.5, 23.5);
 ### <a name="i-creating-a-variable-for-a-clr-type-and-calling-a-mutator-method"></a>9\. CLR 유형에 대한 변수를 만들고 변경자(mutator) 메서드 호출  
 다음 예에서는 유형 `Point`에 대한 변수를 만들고 `Point`에서 변경자(mutator) 메서드를 실행합니다.  
   
-```  
-CREATE ASSEMBLY mytest from 'c:\test.dll' WITH PERMISSION_SET = SAFE  
+```sql  
+CREATE ASSEMBLY mytest FROM 'c:\test.dll' WITH PERMISSION_SET = SAFE  
 CREATE TYPE Point EXTERNAL NAME mytest.Point  
 GO  
 DECLARE @p Point = CONVERT(Point, '')  
@@ -314,20 +314,19 @@ SET @p.SetXY(22, 23);
 ### <a name="j-printing-the-value-of-a-variable-initialized-by-using-set"></a>J. SET을 사용하여 초기화된 변수 값 인쇄  
 다음 예제에서는 `@myvar` 변수를 만들고, 문자열 값을 변수에 넣고, `@myvar` 변수 값을 출력합니다.  
   
-```  
-DECLARE @myvar char(20);  
+```sql  
+DECLARE @myvar CHAR(20);  
 SET @myvar = 'This is a test';  
-SELECT top 1 @myvar FROM sys.databases;  
-  
+SELECT TOP 1 @myvar FROM sys.databases;
 ```  
   
 ### <a name="k-using-a-local-variable-assigned-a-value-by-using-set-in-a-select-statement"></a>11. SELECT 문에서 SET을 사용하여 값이 할당된 지역 변수 사용  
 다음 예제에서는 `@dept`라는 지역 변수를 만들고, 이 지역 변수를 `SELECT` 문에 사용하여 `Marketing` 부서에서 근무하는 모든 직원의 이름과 성을 찾습니다.  
   
-```  
+```sql  
 -- Uses AdventureWorks  
   
-DECLARE @dept char(25);  
+DECLARE @dept CHAR(25);  
 SET @dept = N'Marketing';  
 SELECT RTRIM(FirstName) + ' ' + RTRIM(LastName) AS Name  
 FROM DimEmployee   
@@ -337,15 +336,15 @@ WHERE DepartmentName = @dept;
 ### <a name="l-using-a-compound-assignment-for-a-local-variable"></a>12. 지역 변수에 복합 할당 사용  
 다음 두 예는 동일한 결과를 생성합니다. `@NewBalance`라고 하는 지역 변수를 만들고 여기에 `10`을 곱한 다음 이 지역 변수의 새 값을 `SELECT` 문으로 표시합니다. 두 번째 예에서는 복합 할당 연산자를 사용합니다.  
   
-```  
+```sql  
 /* Example one */  
-DECLARE  @NewBalance  int ;  
+DECLARE  @NewBalance INT;  
 SET  @NewBalance  =  10;  
 SET  @NewBalance  =  @NewBalance  *  10;  
-SELECT  TOP 1 @NewBalance FROM sys.tables;  
+SELECT TOP 1 @NewBalance FROM sys.tables;  
   
 /* Example Two */  
-DECLARE @NewBalance int = 10;  
+DECLARE @NewBalance INT = 10;  
 SET @NewBalance *= 10;  
 SELECT TOP 1 @NewBalance FROM sys.tables;  
 ```  
@@ -353,10 +352,10 @@ SELECT TOP 1 @NewBalance FROM sys.tables;
 ### <a name="m-assigning-a-value-from-a-query"></a>13. 쿼리에서 값 할당  
 다음 예에서는 쿼리를 사용하여 변수에 값을 할당합니다.  
   
-```  
+```sql  
 -- Uses AdventureWorks  
   
-DECLARE @rows int;  
+DECLARE @rows INT;  
 SET @rows = (SELECT COUNT(*) FROM dbo.DimCustomer);  
 SELECT TOP 1 @rows FROM sys.tables;  
 ```  

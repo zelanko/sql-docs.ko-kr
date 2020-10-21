@@ -14,12 +14,12 @@ helpviewer_keywords:
 ms.assetid: ca1929a6-0ae6-47d7-b65f-08173b143720
 author: chugugrace
 ms.author: chugu
-ms.openlocfilehash: b4887fd9ea7151c75940d919bcec128e4933f05b
-ms.sourcegitcommit: 827ad02375793090fa8fee63cc372d130f11393f
+ms.openlocfilehash: 8064836dcfe27a19339363301b876ab723b78294
+ms.sourcegitcommit: cfa04a73b26312bf18d8f6296891679166e2754d
 ms.translationtype: HT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 09/04/2020
-ms.locfileid: "89479576"
+ms.lasthandoff: 10/19/2020
+ms.locfileid: "92193153"
 ---
 # <a name="developing-custom-objects-for-integration-services"></a>Integration Services용 사용자 지정 개체 개발
 
@@ -113,10 +113,9 @@ ms.locfileid: "89479576"
   
 ## <a name="external-resources"></a>외부 리소스  
   
--   blogs.msdn.com의 블로그 항목 - [Visual Studio 솔루션 빌드 프로세스에서 SSIS 참조 때문에 .NET Framework 어셈블리에 대한 간접 종속성 경고를 제공함](https://docs.microsoft.com/archive/blogs/jason_howell/visual-studio-2010-solution-build-process-give-a-warning-about-indirect-dependency-on-the-net-framework-assembly-due-to-ssis-references)  
+-   blogs.msdn.com의 블로그 항목 - [Visual Studio 솔루션 빌드 프로세스에서 SSIS 참조 때문에 .NET Framework 어셈블리에 대한 간접 종속성 경고를 제공함](/archive/blogs/jason_howell/visual-studio-2010-solution-build-process-give-a-warning-about-indirect-dependency-on-the-net-framework-assembly-due-to-ssis-references)  
   
 ## <a name="see-also"></a>참고 항목  
  [사용자 지정 개체 지속](../../integration-services/extending-packages-custom-objects/persisting-custom-objects.md)   
  [사용자 지정 개체 빌드, 배포 및 디버그](../../integration-services/extending-packages-custom-objects/building-deploying-and-debugging-custom-objects.md)  
-  
   

@@ -40,12 +40,12 @@ f1_keywords:
 ms.assetid: 7edc21d4-ccf3-42a9-84c0-3f70333efce6
 author: stevestein
 ms.author: sstein
-ms.openlocfilehash: ecf2233470afe15337c41a0a6051b41f18e0f40f
-ms.sourcegitcommit: e700497f962e4c2274df16d9e651059b42ff1a10
+ms.openlocfilehash: daf9915e1aff8cf800fbc68929e7efdd6f95f4a2
+ms.sourcegitcommit: cfa04a73b26312bf18d8f6296891679166e2754d
 ms.translationtype: HT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 08/17/2020
-ms.locfileid: "88421087"
+ms.lasthandoff: 10/19/2020
+ms.locfileid: "92192598"
 ---
 # <a name="configure-database-mail"></a>데이터베이스 메일 구성
  [!INCLUDE [SQL Server](../../includes/applies-to-version/sqlserver.md)]
@@ -440,7 +440,7 @@ ms.locfileid: "88421087"
  테스트 메일 메시지의 **mailitem_id** 입니다.  
   
  **문제 해결**  
- 온라인 설명서의 [데이터베이스 메일 문제 해결](https://msdn.microsoft.com/library/ms188663.aspx)항목을 열려면 클릭합니다.  
+ 온라인 설명서의 [데이터베이스 메일 문제 해결](/previous-versions/sql/sql-server-2008-r2/ms188663(v=sql.105))항목을 열려면 클릭합니다.  
   
  [데이터베이스 메일 구성 마법사](#DBWizard)  
   
@@ -460,5 +460,4 @@ ms.locfileid: "88421087"
 6.  스크립트를 실행하여 구성을 만듭니다.  
   
 7.  스크립트는 데이터베이스 사용자에게 프로필에 대한 액세스를 부여하지 않습니다. 따라서 기본적으로 프로필은 **sysadmin** 고정 보안 역할의 멤버만 사용할 수 있습니다. 프로필에 대한 액세스 권한 부여에 대한 자세한 내용은 [sysmail_add_principalprofile_sp&#40;Transact-SQL&#41;](../../relational-databases/system-stored-procedures/sysmail-add-principalprofile-sp-transact-sql.md)를 참조하세요.  
-  
   

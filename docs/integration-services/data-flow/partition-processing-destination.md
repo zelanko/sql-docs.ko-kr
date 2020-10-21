@@ -20,19 +20,19 @@ helpviewer_keywords:
 ms.assetid: 36c592ff-3f78-4a58-b496-31c1c8eee131
 author: chugugrace
 ms.author: chugu
-ms.openlocfilehash: ba6441215b1f1462195b83a99ce040da11d694fb
-ms.sourcegitcommit: e700497f962e4c2274df16d9e651059b42ff1a10
+ms.openlocfilehash: d98fda12251dafb69ab3738ea90f1eaf0298df46
+ms.sourcegitcommit: cfa04a73b26312bf18d8f6296891679166e2754d
 ms.translationtype: HT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 08/17/2020
-ms.locfileid: "88457323"
+ms.lasthandoff: 10/19/2020
+ms.locfileid: "92192703"
 ---
 # <a name="partition-processing-destination"></a>파티션 처리 대상
 
 [!INCLUDE[sqlserver-ssis](../../includes/applies-to-version/sqlserver-ssis.md)]
 
 
-  파티션 처리 대상은 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] [!INCLUDE[ssASnoversion](../../includes/ssasnoversion-md.md)] 파티션을 로드하고 처리합니다. 파티션에 대한 자세한 내용은 [파티션&#40;Analysis Services - 다차원 데이터&#41;](https://docs.microsoft.com/analysis-services/multidimensional-models-olap-logical-cube-objects/partitions-analysis-services-multidimensional-data)을 참조하세요.  
+  파티션 처리 대상은 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] [!INCLUDE[ssASnoversion](../../includes/ssasnoversion-md.md)] 파티션을 로드하고 처리합니다. 파티션에 대한 자세한 내용은 [파티션&#40;Analysis Services - 다차원 데이터&#41;](/analysis-services/multidimensional-models-olap-logical-cube-objects/partitions-analysis-services-multidimensional-data)을 참조하세요.  
   
  파티션 처리 대상에는 다음 기능이 포함됩니다.  
   
@@ -42,7 +42,7 @@ ms.locfileid: "88457323"
   
 -   입력 열을 파티션 열에 매핑  
   
- [!INCLUDE[ssASnoversion](../../includes/ssasnoversion-md.md)] 개체를 처리하는 방법에 대한 자세한 내용은 [처리 옵션 및 설정&#40;Analysis Services&#41;](https://docs.microsoft.com/analysis-services/multidimensional-models/processing-options-and-settings-analysis-services)을 참조하세요.  
+ [!INCLUDE[ssASnoversion](../../includes/ssasnoversion-md.md)] 개체를 처리하는 방법에 대한 자세한 내용은 [처리 옵션 및 설정&#40;Analysis Services&#41;](/analysis-services/multidimensional-models/processing-options-and-settings-analysis-services)을 참조하세요.  
   
 > [!NOTE]  
 >  여기에서 설명하는 태스크는 Analysis Services 테이블 형식 모델에 적용되지 않습니다.  테이블 형식 모델의 경우 입력 열을 파티션 열에 매핑할 수 없습니다. 대신 [Analysis Services Execute DDL Task](../../integration-services/control-flow/analysis-services-execute-ddl-task.md) 를 사용하여 파티션을 처리할 수 있습니다.  
@@ -184,4 +184,4 @@ ms.locfileid: "88457323"
  오류 로그의 경로를 선택합니다.  
   
 ## <a name="see-also"></a>참고 항목  
- [Integration Services 오류 및 메시지 참조](../../integration-services/integration-services-error-and-message-reference.md)   
+ [Integration Services 오류 및 메시지 참조](../../integration-services/integration-services-error-and-message-reference.md)

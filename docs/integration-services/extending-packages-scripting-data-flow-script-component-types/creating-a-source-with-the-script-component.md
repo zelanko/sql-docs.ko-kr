@@ -17,12 +17,12 @@ helpviewer_keywords:
 ms.assetid: 547c4179-ea82-4265-8c6f-04a2aa77a3c0
 author: chugugrace
 ms.author: chugu
-ms.openlocfilehash: 0e1d40b856409ab1e4d7859c818f1259133dc60b
-ms.sourcegitcommit: e700497f962e4c2274df16d9e651059b42ff1a10
+ms.openlocfilehash: 19fe9c40aa87d4ee1cdc7b719e06911de9a1f167
+ms.sourcegitcommit: cfa04a73b26312bf18d8f6296891679166e2754d
 ms.translationtype: HT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 08/17/2020
-ms.locfileid: "88477263"
+ms.lasthandoff: 10/19/2020
+ms.locfileid: "92193141"
 ---
 # <a name="creating-a-source-with-the-script-component"></a>스크립트 구성 요소를 사용하여 원본 만들기
 
@@ -55,7 +55,7 @@ ms.locfileid: "88477263"
   
  스크립트 구성 요소에서 연결 관리자를 사용하는 방법에 대한 일반적은 내용은 [스크립트 구성 요소에서 데이터 원본에 연결](../../integration-services/extending-packages-scripting/data-flow-script-component/connecting-to-data-sources-in-the-script-component.md)을 참조하세요.  
   
- **스크립트 변환 편집기**의 **연결 관리자** 페이지에 대한 자세한 내용은 [스크립트 변환 편집기&#40;연결 관리자 페이지&#41;](../../integration-services/data-flow/transformations/script-transformation-editor-connection-managers-page.md)를 참조하세요.  
+ **스크립트 변환 편집기**의 **연결 관리자** 페이지에 대한 자세한 내용은 [스크립트 변환 편집기&#40;연결 관리자 페이지&#41;](../data-flow/transformations/script-component.md)를 참조하세요.  
   
 ### <a name="configuring-outputs-and-output-columns"></a>출력 및 출력 열 구성  
  원본 구성 요소는 입력을 사용하지 않으며 하나 이상의 출력을 지원합니다. **스크립트 변환 편집기**의 **입/출력** 페이지에는 기본적으로 단일 출력이 만들어져 있지만 출력 열은 만들어져 있지 않습니다. 편집기의 이 페이지에서 다음과 같은 항목을 구성할 수 있습니다.  
@@ -71,7 +71,7 @@ ms.locfileid: "88477263"
   
 -   일반적으로 동일한 **ExclusionGroup**의 여러 출력에는 동일한 출력 열 집합이 있습니다. 그러나 시뮬레이션된 오류 출력을 만드는 경우 오류 정보를 저장할 다른 열을 추가할 수 있습니다. 데이터 흐름 엔진에서 오류 행을 처리하는 방법은 [데이터 흐름 구성 요소에서 오류 출력 사용](../../integration-services/extending-packages-custom-objects/data-flow/using-error-outputs-in-a-data-flow-component.md)을 참조하세요. 그러나 스크립트 구성 요소에서는 개발자가 직접 코드를 작성하여 추가 열을 적절한 오류 정보로 채워야 합니다. 자세한 내용은 [스크립트 구성 요소의 오류 출력 시뮬레이션](../../integration-services/extending-packages-scripting-data-flow-script-component-examples/simulating-an-error-output-for-the-script-component.md)을 참조하세요.  
   
- **스크립트 변환 편집기**의 **입/출력** 페이지에 대한 자세한 내용은 [스크립트 변환 편집기&#40;입/출력 페이지&#41;](../../integration-services/data-flow/transformations/script-transformation-editor-inputs-and-outputs-page.md)를 참조하세요.  
+ **스크립트 변환 편집기**의 **입/출력** 페이지에 대한 자세한 내용은 [스크립트 변환 편집기&#40;입/출력 페이지&#41;](../data-flow/transformations/script-component.md)를 참조하세요.  
   
 ### <a name="adding-variables"></a>변수 추가  
  스크립트에 사용하려는 값을 포함하는 기존 변수가 있는 경우 **스크립트 변환 편집기**의 **스크립트** 페이지에서 **ReadOnlyVariables** 및 **ReadWriteVariables** 속성 필드에 해당 변수를 추가할 수 있습니다.  
@@ -80,7 +80,7 @@ ms.locfileid: "88477263"
   
  스크립트 구성 요소에서 변수를 사용하는 방법에 대한 일반적인 내용은 [스크립트 구성 요소에서 변수 사용](../../integration-services/extending-packages-scripting/data-flow-script-component/using-variables-in-the-script-component.md)을 참조하세요.  
   
- **스크립트 변환 편집기**의 **스크립트** 페이지에 대한 자세한 내용은 [스크립트 변환 편집기&#40;스크립트 페이지&#41;](../../integration-services/data-flow/transformations/script-transformation-editor-script-page.md)를 참조하세요.  
+ **스크립트 변환 편집기**의 **스크립트** 페이지에 대한 자세한 내용은 [스크립트 변환 편집기&#40;스크립트 페이지&#41;](../data-flow/transformations/script-component.md)를 참조하세요.  
   
 ## <a name="scripting-a-source-component-in-code-design-mode"></a>코드 디자인 모드에서 원본 구성 요소 스크립팅  
  구성 요소에 대한 메타데이터를 구성한 후에는 [!INCLUDE[msCoName](../../includes/msconame-md.md)] VSTA([!INCLUDE[vsprvs](../../includes/vsprvs-md.md)] Tools for Applications) IDE를 열고 사용자 지정 스크립트를 코딩합니다. VSTA를 열려면 **스크립트 변환 편집기**의 **스크립트** 페이지에서 **스크립트 편집**을 클릭합니다. **ScriptLanguage** 속성에서 선택한 스크립트 언어에 따라 [!INCLUDE[msCoName](../../includes/msconame-md.md)] Visual Basic 또는 [!INCLUDE[msCoName](../../includes/msconame-md.md)] Visual C# 중 하나를 사용하여 스크립트를 작성할 수 있습니다.  
@@ -394,5 +394,4 @@ ms.locfileid: "88477263"
 ## <a name="see-also"></a>참고 항목  
  [스크립트 구성 요소를 사용하여 대상 만들기](../../integration-services/extending-packages-scripting-data-flow-script-component-types/creating-a-destination-with-the-script-component.md)   
  [사용자 지정 원본 구성 요소 개발](../../integration-services/extending-packages-custom-objects-data-flow-types/developing-a-custom-source-component.md)  
-  
   

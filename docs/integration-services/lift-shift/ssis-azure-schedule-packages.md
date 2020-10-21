@@ -10,12 +10,12 @@ ms.technology: integration-services
 author: swinarko
 ms.author: sawinark
 ms.reviewer: maghan
-ms.openlocfilehash: 42624909f59c1e25d8c75b99c60c19da8b04da85
-ms.sourcegitcommit: c74bb5944994e34b102615b592fdaabe54713047
+ms.openlocfilehash: 7c61b1b032ef4ff08301c91f080f188d89e2aadc
+ms.sourcegitcommit: cfa04a73b26312bf18d8f6296891679166e2754d
 ms.translationtype: HT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 09/22/2020
-ms.locfileid: "90989976"
+ms.lasthandoff: 10/19/2020
+ms.locfileid: "92195175"
 ---
 # <a name="schedule-the-execution-of-sql-server-integration-services-ssis-packages-deployed-in-azure"></a>Azure에 배포된 SSIS(SQL Server Integration Services) 실행 예약
 
@@ -44,13 +44,13 @@ SSMS(SQL Server Management Studio)에서 SSIS 카탈로그 데이터베이스인
 
 ## <a name="schedule-a-package-with-sql-database-elastic-jobs"></a><a name="elastic"></a> SQL Database 탄력적 작업을 사용하여 패키지 예약
 
-SQL Database의 탄력적 작업에 대한 자세한 내용은 [규모가 확장된 클라우드 데이터베이스 관리](https://docs.microsoft.com/azure/sql-database/sql-database-elastic-jobs-overview)를 참조하세요.
+SQL Database의 탄력적 작업에 대한 자세한 내용은 [규모가 확장된 클라우드 데이터베이스 관리](/azure/sql-database/sql-database-elastic-jobs-overview)를 참조하세요.
 
 ### <a name="prerequisites"></a>사전 요구 사항
 
 탄력적 작업을 사용하여 Azure SQL Database 서버의 SSISDB 카탈로그 데이터베이스에 저장된 SSIS 패키지를 예약하려면 다음 작업을 수행해야 합니다.
 
-1.  Elastic Database 작업 구성 요소를 설치하고 구성합니다. 자세한 내용은 [Elastic Database 작업 설치 개요](https://docs.microsoft.com/azure/sql-database/sql-database-elastic-jobs-service-installation)를 참조하세요.
+1.  Elastic Database 작업 구성 요소를 설치하고 구성합니다. 자세한 내용은 [Elastic Database 작업 설치 개요](/azure/sql-database/sql-database-elastic-jobs-service-installation)를 참조하세요.
 
 2. 작업에서 SSIS 카탈로그 데이터베이스에 명령을 보내는 데 사용할 수 있는 데이터베이스 범위 자격 증명을 만듭니다. 자세한 내용은 [CREATE DATABASE SCOPED CREDENTIAL(Transact-SQL)](../../t-sql/statements/create-database-scoped-credential-transact-sql.md)을 참조하세요.
 
@@ -166,17 +166,17 @@ SSIS 패키지를 실행하는 Azure Data Factory 파이프라인을 실행하�
 
 Data Factory 파이프라인을 예약하려면 다음 트리거 중 하나를 사용합니다.
 
-- [일정 트리거](https://docs.microsoft.com/azure/data-factory/how-to-create-schedule-trigger)
+- [일정 트리거](/azure/data-factory/how-to-create-schedule-trigger)
 
-- [연속 창(tumbling window) 트리거](https://docs.microsoft.com/azure/data-factory/how-to-create-tumbling-window-trigger)
+- [연속 창(tumbling window) 트리거](/azure/data-factory/how-to-create-tumbling-window-trigger)
 
-- [이벤트 기반 트리거](https://docs.microsoft.com/azure/data-factory/how-to-create-event-trigger)
+- [이벤트 기반 트리거](/azure/data-factory/how-to-create-event-trigger)
 
 Data Factory 파이프라인의 일부로 SSIS 패키지를 실행하려면 다음 작업 중 하나를 사용합니다.
 
-- [SSIS 패키지 작업 실행](https://docs.microsoft.com/azure/data-factory/how-to-invoke-ssis-package-ssis-activity).
+- [SSIS 패키지 작업 실행](/azure/data-factory/how-to-invoke-ssis-package-ssis-activity).
 
-- [저장 프로시저 작업](https://docs.microsoft.com/azure/data-factory/how-to-invoke-ssis-package-stored-procedure-activity).
+- [저장 프로시저 작업](/azure/data-factory/how-to-invoke-ssis-package-stored-procedure-activity).
 
 ## <a name="next-steps"></a>다음 단계
 

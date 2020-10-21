@@ -17,12 +17,12 @@ helpviewer_keywords:
 ms.assetid: fe86d6e5-e415-406c-88f3-dc3ef71bd5f0
 author: chugugrace
 ms.author: chugu
-ms.openlocfilehash: 2cd15daac2c287c2dc750e1f79032f855d5640d6
-ms.sourcegitcommit: e700497f962e4c2274df16d9e651059b42ff1a10
+ms.openlocfilehash: 7162d2eb4c718330fb3fec38dceddc4f0bf8e04e
+ms.sourcegitcommit: cfa04a73b26312bf18d8f6296891679166e2754d
 ms.translationtype: HT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 08/17/2020
-ms.locfileid: "88349169"
+ms.lasthandoff: 10/19/2020
+ms.locfileid: "92192773"
 ---
 # <a name="transfer-sql-server-objects-task"></a>SQL Server 개체 전송 태스크
 
@@ -86,7 +86,7 @@ ms.locfileid: "88349169"
  [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 개체 전송 태스크는 개체를 전송하는 진행 과정은 보고하지 않으며 0% 및 100% 완료만 보고합니다.  
   
 ## <a name="execution-value"></a>실행 값  
- 태스크의 **ExecutionValue** 속성에 저장된 실행 값은 전송된 개체 수를 반환합니다. SQL Server 개체 전송 태스크의 **ExecValueVariable** 속성에 사용자 정의 변수를 할당하면 패키지의 다른 개체에서 개체 전송에 대한 정보를 사용할 수 있습니다. 자세한 내용은 [Integration Services&#40;SSIS&#41; 변수](../../integration-services/integration-services-ssis-variables.md) 및 [패키지에서 변수 사용](https://msdn.microsoft.com/library/7742e92d-46c5-4cc4-b9a3-45b688ddb787)을 참조하세요.  
+ 태스크의 **ExecutionValue** 속성에 저장된 실행 값은 전송된 개체 수를 반환합니다. SQL Server 개체 전송 태스크의 **ExecValueVariable** 속성에 사용자 정의 변수를 할당하면 패키지의 다른 개체에서 개체 전송에 대한 정보를 사용할 수 있습니다. 자세한 내용은 [Integration Services&#40;SSIS&#41; 변수](../../integration-services/integration-services-ssis-variables.md) 및 [패키지에서 변수 사용](../integration-services-ssis-variables.md)을 참조하세요.  
   
 ## <a name="log-entries"></a>로그 항목  
  SQL Server 개체 전송 태스크에는 다음 사용자 지정 로그 항목이 포함됩니다.  
@@ -117,7 +117,7 @@ ms.locfileid: "88349169"
   
  [!INCLUDE[ssIS](../../includes/ssis-md.md)] 디자이너에서 이러한 속성을 설정하는 방법을 보려면 다음 항목을 클릭하십시오.  
   
--   [태스크 또는 컨테이너의 속성 설정](https://msdn.microsoft.com/library/52d47ca4-fb8c-493d-8b2b-48bb269f859b)  
+-   [태스크 또는 컨테이너의 속성 설정](./add-or-delete-a-task-or-a-container-in-a-control-flow.md)  
   
 ## <a name="programmatic-configuration-of-the-transfer-sql-server-objects-task"></a>SQL Server 개체 전송 태스크의 프로그래밍 방식 구성  
  이러한 속성을 프로그래밍 방식으로 설정하는 방법을 보려면 다음 항목을 클릭하십시오.  
@@ -331,7 +331,7 @@ ms.locfileid: "88349169"
 ## <a name="see-also"></a>참고 항목  
  [Integration Services 오류 및 메시지 참조](../../integration-services/integration-services-error-and-message-reference.md)   
  [Integration Services 태스크](../../integration-services/control-flow/integration-services-tasks.md)   
- [SQL Server 개체 전송 태스크 편집기&#40;일반 페이지&#41;](../../integration-services/control-flow/transfer-sql-server-objects-task-editor-general-page.md)   
+ [SQL Server 개체 전송 태스크 편집기&#40;일반 페이지&#41;]()   
  [식 페이지](../../integration-services/expressions/expressions-page.md)   
  [대량 가져오기 또는 대량 내보내기를 위한 데이터 형식&#40;SQL Server&#41;](../../relational-databases/import-export/data-formats-for-bulk-import-or-bulk-export-sql-server.md)   
- [SQL Server 설치에 대한 보안 고려 사항](../../sql-server/install/security-considerations-for-a-sql-server-installation.md)  
+ [SQL Server 설치에 대한 보안 고려 사항](../../sql-server/install/security-considerations-for-a-sql-server-installation.md)

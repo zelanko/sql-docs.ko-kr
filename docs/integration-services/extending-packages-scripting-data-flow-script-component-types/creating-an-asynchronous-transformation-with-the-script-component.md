@@ -17,12 +17,12 @@ helpviewer_keywords:
 ms.assetid: 0d814404-21e4-4a68-894c-96fa47ab25ae
 author: chugugrace
 ms.author: chugu
-ms.openlocfilehash: 05d28638ebb8981c0ccce4e6bb38ab7179565d00
-ms.sourcegitcommit: e700497f962e4c2274df16d9e651059b42ff1a10
+ms.openlocfilehash: d271139edbde0f1c67467b6fe880f916fb6c5142
+ms.sourcegitcommit: cfa04a73b26312bf18d8f6296891679166e2754d
 ms.translationtype: HT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 08/17/2020
-ms.locfileid: "88495621"
+ms.lasthandoff: 10/19/2020
+ms.locfileid: "92193116"
 ---
 # <a name="creating-an-asynchronous-transformation-with-the-script-component"></a>스크립트 구성 요소를 사용하여 비동기 변환 만들기
 
@@ -53,7 +53,7 @@ ms.locfileid: "88495621"
   
  **스크립트 변환 편집기**의 **입력 열** 페이지에 나타나는 열 목록에는 업스트림 데이터 흐름 구성 요소의 출력에서 가져온 사용 가능한 열이 표시됩니다. 이 목록에서 변환하거나 전달할 열을 선택합니다. 현재 위치에서 변환할 모든 열은 읽기/쓰기로 표시합니다.  
   
- **스크립트 변환 편집기**의 **입력 열** 페이지에 대한 자세한 내용은 [스크립트 변환 편집기&#40;입력 열 페이지&#41;](../../integration-services/data-flow/transformations/script-transformation-editor-input-columns-page.md)를 참조하세요.  
+ **스크립트 변환 편집기**의 **입력 열** 페이지에 대한 자세한 내용은 [스크립트 변환 편집기&#40;입력 열 페이지&#41;](../data-flow/transformations/script-component.md)를 참조하세요.  
   
 ### <a name="configuring-inputs-outputs-and-output-columns"></a>입력, 출력 및 출력 열 구성  
  변환 구성 요소는 하나 이상의 출력을 지원합니다.  
@@ -70,7 +70,7 @@ ms.locfileid: "88495621"
   
 -   추가 정보를 포함할 열을 추가할 수 있습니다. 이 경우 추가 열에 데이터를 채우기 위한 코드를 직접 작성해야 합니다. 표준 오류 출력의 동작을 재현하는 방법에 대한 자세한 내용은 [스크립트 구성 요소의 오류 출력 시뮬레이션](../../integration-services/extending-packages-scripting-data-flow-script-component-examples/simulating-an-error-output-for-the-script-component.md)을 참조하세요.  
   
- **스크립트 변환 편집기**의 **입/출력** 페이지에 대한 자세한 내용은 [스크립트 변환 편집기&#40;입/출력 페이지&#41;](../../integration-services/data-flow/transformations/script-transformation-editor-inputs-and-outputs-page.md)를 참조하세요.  
+ **스크립트 변환 편집기**의 **입/출력** 페이지에 대한 자세한 내용은 [스크립트 변환 편집기&#40;입/출력 페이지&#41;](../data-flow/transformations/script-component.md)를 참조하세요.  
   
 ### <a name="adding-variables"></a>변수 추가  
  스크립트에 사용하려는 값을 포함하는 기존 변수가 있는 경우 스크립트 변환 편집기의 스크립트 페이지에서 **ReadOnlyVariables** 및 **ReadWriteVariables** 속성 필드에 해당 변수를 추가할 수 있습니다.  
@@ -79,7 +79,7 @@ ms.locfileid: "88495621"
   
  스크립트 구성 요소에서 변수를 사용하는 방법에 대한 일반적인 내용은 [스크립트 구성 요소에서 변수 사용](../../integration-services/extending-packages-scripting/data-flow-script-component/using-variables-in-the-script-component.md)을 참조하세요.  
   
- **스크립트 변환 편집기**의 **스크립트** 페이지에 대한 자세한 내용은 [스크립트 변환 편집기&#40;스크립트 페이지&#41;](../../integration-services/data-flow/transformations/script-transformation-editor-script-page.md)를 참조하세요.  
+ **스크립트 변환 편집기**의 **스크립트** 페이지에 대한 자세한 내용은 [스크립트 변환 편집기&#40;스크립트 페이지&#41;](../data-flow/transformations/script-component.md)를 참조하세요.  
   
 ## <a name="scripting-an-asynchronous-transformation-component-in-code-design-mode"></a>코드 디자인 모드에서 비동기 변환 구성 요소 스크립팅  
  구성 요소에 대한 메타데이터를 모두 구성한 후에는 사용자 지정 스크립트를 작성할 수 있습니다. **스크립트 변환 편집기**의 **스크립트** 페이지에서 **스크립트 편집**을 클릭하여 사용자 지정 스크립트를 추가할 수 있는 [!INCLUDE[msCoName](../../includes/msconame-md.md)] VSTA([!INCLUDE[vsprvs](../../includes/vsprvs-md.md)] Tools for Applications) IDE를 엽니다. 사용하는 스크립트 언어는 **스크립트** 페이지에서 **ScriptLanguage** 속성에 대한 스크립트 언어로 [!INCLUDE[msCoName](../../includes/msconame-md.md)] Visual Basic 또는 [!INCLUDE[msCoName](../../includes/msconame-md.md)] Visual C# 중에서 선택한 언어에 따라 달라집니다.  
@@ -238,5 +238,4 @@ public class ScriptMain:
  [동기 및 비동기 변환 이해](../../integration-services/understanding-synchronous-and-asynchronous-transformations.md)   
  [스크립트 구성 요소를 사용하여 동기 변환 만들기](../../integration-services/extending-packages-scripting-data-flow-script-component-types/creating-a-synchronous-transformation-with-the-script-component.md)   
  [비동기 출력을 사용하여 사용자 지정 변환 구성 요소 개발](../../integration-services/extending-packages-custom-objects-data-flow-types/developing-a-custom-transformation-component-with-asynchronous-outputs.md)  
-  
   

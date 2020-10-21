@@ -13,12 +13,12 @@ f1_keywords:
 ms.assetid: d32d9761-93fb-4020-bf82-231439c6f3ac
 author: chugugrace
 ms.author: chugu
-ms.openlocfilehash: 1df84869443257dbfc73d5ef3984f3e37a15b6c0
-ms.sourcegitcommit: e700497f962e4c2274df16d9e651059b42ff1a10
+ms.openlocfilehash: d8a02e714f78f830da467cb35cf227d73e3a6277
+ms.sourcegitcommit: cfa04a73b26312bf18d8f6296891679166e2754d
 ms.translationtype: HT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 08/17/2020
-ms.locfileid: "88425645"
+ms.lasthandoff: 10/19/2020
+ms.locfileid: "92194580"
 ---
 # <a name="walkthrough-publish-an-ssis-package-as-a-sql-view"></a>연습: SSIS 패키지를 SQL 뷰로 게시
 
@@ -256,7 +256,7 @@ SELECT * FROM OPENQUERY(<LinkedServer Name>, N'Folder=<Folder Name from SSIS Cat
   
  Timeout은 SSIS용 OLE DB 공급자가 SSIS 패키지에서 새 데이터가 도착할 때까지 대기할 수 있는 시간(초)입니다. 기본적으로 제한 시간은 60초입니다. 20에서 32000 사이의 정수를 시간 제한 값으로 지정할 수 있습니다.  
   
- Parameters는 패키지 매개 변수 값과 프로젝트 매개 변수 값을 모두 포함합니다. 매개 변수에 대한 규칙은 [DTExec](https://msdn.microsoft.com/library/hh231187.aspx)의 매개 변수와 동일합니다.  
+ Parameters는 패키지 매개 변수 값과 프로젝트 매개 변수 값을 모두 포함합니다. 매개 변수에 대한 규칙은 [DTExec](../packages/dtexec-utility.md)의 매개 변수와 동일합니다.  
   
  다음 목록은 쿼리 절에 허용되는 특수 문자를 지정합니다.  
   
@@ -270,6 +270,5 @@ SELECT * FROM OPENQUERY(<LinkedServer Name>, N'Folder=<Folder Name from SSIS Cat
   
 ## <a name="see-also"></a>참고 항목  
  [데이터 스트리밍 대상](../../integration-services/data-flow/data-streaming-destination.md)   
- [데이터 스트리밍 대상 구성](../../integration-services/data-flow/configure-data-streaming-destination.md)  
-  
+ [데이터 스트리밍 대상 구성](./data-streaming-destination.md)  
   

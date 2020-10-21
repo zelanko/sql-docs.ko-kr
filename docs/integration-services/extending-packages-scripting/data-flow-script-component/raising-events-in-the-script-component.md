@@ -13,12 +13,12 @@ helpviewer_keywords:
 ms.assetid: bb389073-e1d0-4794-8d29-c8b293b6a5e3
 author: chugugrace
 ms.author: chugu
-ms.openlocfilehash: aa7e77defb74e1bd606536064788c4430322a6ac
-ms.sourcegitcommit: e700497f962e4c2274df16d9e651059b42ff1a10
+ms.openlocfilehash: 812a2db47243f48d13dd2adf6f5b8098046f1c40
+ms.sourcegitcommit: cfa04a73b26312bf18d8f6296891679166e2754d
 ms.translationtype: HT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 08/17/2020
-ms.locfileid: "88430265"
+ms.lasthandoff: 10/19/2020
+ms.locfileid: "92193073"
 ---
 # <a name="raising-events-in-the-script-component"></a>스크립트 구성 요소에서 이벤트 발생
 
@@ -49,6 +49,5 @@ ms.locfileid: "88430265"
   
 ## <a name="see-also"></a>참고 항목  
  [Integration Services&#40;SSIS&#41; 이벤트 처리기](../../../integration-services/integration-services-ssis-event-handlers.md)   
- [패키지에 이벤트 처리기 추가](https://msdn.microsoft.com/library/5e56885d-8658-480a-bed9-3f2f8003fd78)  
-  
+ [패키지에 이벤트 처리기 추가](../../integration-services-ssis-event-handlers.md)  
   

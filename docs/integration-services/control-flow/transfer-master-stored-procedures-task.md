@@ -17,12 +17,12 @@ helpviewer_keywords:
 ms.assetid: 81702560-48a3-46d1-a469-e41304c7af8e
 author: chugugrace
 ms.author: chugu
-ms.openlocfilehash: db0b4fccce21cd319049a4e313c27da6c4202a72
-ms.sourcegitcommit: e700497f962e4c2274df16d9e651059b42ff1a10
+ms.openlocfilehash: a053581c9f6ca8f9592aef42c1649511ecc51a02
+ms.sourcegitcommit: cfa04a73b26312bf18d8f6296891679166e2754d
 ms.translationtype: HT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 08/17/2020
-ms.locfileid: "88495965"
+ms.lasthandoff: 10/19/2020
+ms.locfileid: "92194225"
 ---
 # <a name="transfer-master-stored-procedures-task"></a>Master 저장 프로시저 전송 태스크
 
@@ -52,7 +52,7 @@ ms.locfileid: "88495965"
  Master 저장 프로시저 전송 태스크는 로그인 전송의 진행 상황은 보고하지 않으며 0% 및 100% 완료만 보고합니다.  
   
 ## <a name="execution-value"></a>실행 값  
- 태스크의 **ExecutionValue** 속성에 정의된 실행 값은 전송된 저장 프로시저의 수를 반환합니다. master 저장 프로시저 전송 태스크의 **ExecValueVariable** 속성에 사용자 정의 변수를 할당하면 패키지 내의 다른 개체에서 저장 프로시저 전송에 대한 정보를 사용할 수 있습니다. 자세한 내용은 [Integration Services&#40;SSIS&#41; 변수](../../integration-services/integration-services-ssis-variables.md) 및 [패키지에서 변수 사용](https://msdn.microsoft.com/library/7742e92d-46c5-4cc4-b9a3-45b688ddb787)을 참조하세요.  
+ 태스크의 **ExecutionValue** 속성에 정의된 실행 값은 전송된 저장 프로시저의 수를 반환합니다. master 저장 프로시저 전송 태스크의 **ExecValueVariable** 속성에 사용자 정의 변수를 할당하면 패키지 내의 다른 개체에서 저장 프로시저 전송에 대한 정보를 사용할 수 있습니다. 자세한 내용은 [Integration Services&#40;SSIS&#41; 변수](../../integration-services/integration-services-ssis-variables.md) 및 [패키지에서 변수 사용](../integration-services-ssis-variables.md)을 참조하세요.  
   
 ## <a name="log-entries"></a>로그 항목  
  Master 저장 프로시저 전송 태스크는 다음 사용자 지정 로그 항목을 포함합니다.  
@@ -82,7 +82,7 @@ ms.locfileid: "88495965"
 ## <a name="related-tasks"></a>관련 작업  
  [!INCLUDE[ssIS](../../includes/ssis-md.md)] 디자이너에서 이러한 속성을 설정하는 방법을 보려면 다음 항목을 클릭하십시오.  
   
--   [태스크 또는 컨테이너의 속성 설정](https://msdn.microsoft.com/library/52d47ca4-fb8c-493d-8b2b-48bb269f859b)  
+-   [태스크 또는 컨테이너의 속성 설정](./add-or-delete-a-task-or-a-container-in-a-control-flow.md)  
   
 ## <a name="transfer-master-stored-procedures-task-editor-general-page"></a>master 저장 프로시저 전송 태스크 편집기(일반 페이지)
   **master 저장 프로시저 전송 태스크 편집기** 대화 상자의 **일반** 페이지를 사용하여 master 저장 프로시저 전송 태스크의 이름을 지정하고 해당 태스크를 설명할 수 있습니다.  
@@ -139,5 +139,4 @@ ms.locfileid: "88495965"
  [SQL Server 개체 전송 태스크](../../integration-services/control-flow/transfer-sql-server-objects-task.md)   
  [Integration Services 태스크](../../integration-services/control-flow/integration-services-tasks.md)   
  [제어 흐름](../../integration-services/control-flow/control-flow.md)  
-  
   

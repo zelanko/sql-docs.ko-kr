@@ -9,12 +9,12 @@ ms.topic: conceptual
 ms.prod: sql
 ms.technology: linux
 ms.assetid: ''
-ms.openlocfilehash: a09f79c3e5dec6c181855119e36ff0d4f0d7210e
-ms.sourcegitcommit: f7ac1976d4bfa224332edd9ef2f4377a4d55a2c9
+ms.openlocfilehash: 66a40af981670fd30f8ff6d20c34364ba084e3dd
+ms.sourcegitcommit: 22102f25db5ccca39aebf96bc861c92f2367c77a
 ms.translationtype: HT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 07/02/2020
-ms.locfileid: "85899635"
+ms.lasthandoff: 10/16/2020
+ms.locfileid: "92115541"
 ---
 # <a name="configure-sql-server-settings-with-environment-variables-on-linux"></a>Linux에서 환경 변수를 사용하여 SQL Server 설정 구성
 
@@ -128,7 +128,7 @@ docker run -e ACCEPT_EULA=Y -e MSSQL_PID="Developer" -e MSSQL_SA_PASSWORD="<Your
 ```
 
 > [!NOTE]
-> 컨테이너에서 프로덕션 버전을 실행하는 프로세스는 약간 다릅니다. 자세한 내용은 [프로덕션 컨테이너 이미지 실행](sql-server-linux-configure-docker.md#production)을 참조하세요.
+> 컨테이너에서 프로덕션 버전을 실행하는 프로세스는 약간 다릅니다. 자세한 내용은 [프로덕션 컨테이너 이미지 실행](./sql-server-linux-docker-container-deployment.md#production)을 참조하세요.
 
 ::: moniker-end
 <!--SQL Server 2019 on Linux-->

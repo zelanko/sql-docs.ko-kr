@@ -24,12 +24,12 @@ helpviewer_keywords:
 ms.assetid: de1cc8de-e7af-4727-b5a5-a1f0a739aa09
 author: chugugrace
 ms.author: chugu
-ms.openlocfilehash: f6daf6002a66dcffc032e9953cf400f91d725d91
-ms.sourcegitcommit: 827ad02375793090fa8fee63cc372d130f11393f
+ms.openlocfilehash: b3c2abcfbb15fa1d2adcd6683e2c2ead5e4572f1
+ms.sourcegitcommit: cfa04a73b26312bf18d8f6296891679166e2754d
 ms.translationtype: HT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 09/04/2020
-ms.locfileid: "89480911"
+ms.lasthandoff: 10/19/2020
+ms.locfileid: "92193222"
 ---
 # <a name="lookup-transformation"></a>조회 변환
 
@@ -38,7 +38,7 @@ ms.locfileid: "89480911"
 
   조회 변환은 입력 열의 데이터를 참조 데이터 세트의 열과 조인하여 조회합니다. 조회를 사용하면 공통 열의 값을 기반으로 하는 관련 테이블의 추가 정보에 액세스할 수 있습니다.  
   
- 참조 데이터 세트는 캐시 파일, 기존 테이블이나 뷰, 새 테이블 또는 SQL 쿼리의 결과일 수 있습니다. 조회 변환은 OLE DB 연결 관리자 또는 캐시 연결 관리자를 사용하여 참조 데이터 세트에 연결합니다. 자세한 내용은 [OLE DB Connection Manager](../../../integration-services/connection-manager/ole-db-connection-manager.md) 및 [Cache Connection Manager](../../../integration-services/data-flow/transformations/cache-connection-manager.md)을 참조하세요.  
+ 참조 데이터 세트는 캐시 파일, 기존 테이블이나 뷰, 새 테이블 또는 SQL 쿼리의 결과일 수 있습니다. 조회 변환은 OLE DB 연결 관리자 또는 캐시 연결 관리자를 사용하여 참조 데이터 세트에 연결합니다. 자세한 내용은 [OLE DB Connection Manager](../../../integration-services/connection-manager/ole-db-connection-manager.md) 및 [Cache Connection Manager](../../connection-manager/cache-connection-manager.md)을 참조하세요.  
   
  다음과 같은 방법으로 조회 변환을 구성할 수 있습니다.  
   
@@ -91,7 +91,7 @@ ms.locfileid: "89480911"
   
  캐시를 파일로 저장할 경우의 추가 이점은 다음과 같습니다.  
   
--   ***여러 패키지에서 캐시 파일을 공유합니다. 자세한 내용은***  [캐시 연결 관리자 변환을 사용하여 전체 캐시 모드에서 조회 변환 구현](../../../integration-services/data-flow/transformations/lookup-transformation-full-cache-mode-cache-connection-manager.md) ***을 참조하세요.***  
+-   ***여러 패키지에서 캐시 파일을 공유합니다. 자세한 내용은***  [캐시 연결 관리자 변환을 사용하여 전체 캐시 모드에서 조회 변환 구현](../../connection-manager/lookup-transformation-full-cache-mode-cache-connection-manager.md) ***을 참조하세요.***  
   
 -   패키지와 함께 캐시 파일을 배포합니다. ***그러면 데이터를 여러 컴퓨터에서 사용할 수 있습니다.*** 자세한 내용은 [조회 변환에 대한 캐시 만들기 및 배포](../../../integration-services/data-flow/transformations/create-and-deploy-a-cache-for-the-lookup-transformation.md)를 참조하세요.  
   
@@ -108,7 +108,7 @@ ms.locfileid: "89480911"
   
      이 캐싱 옵션은 [!INCLUDE[ssISversion2005](../../../includes/ssisversion2005-md.md)]의 조회 변환에서 제공되는 전체 캐싱 옵션과 호환됩니다.  
   
--   조회 변환이 실행되기 전에 데이터 흐름의 연결된 데이터 원본 또는 캐시 파일로부터 참조 데이터 세트가 생성되고 캐시에 로드됩니다. 캐시 연결 관리자 및 캐시 변환(선택 사항)을 사용하여 데이터 세트에 액세스할 수 있습니다. 자세한 내용은 [Cache Connection Manager](../../../integration-services/data-flow/transformations/cache-connection-manager.md) 및 [Cache Transform](../../../integration-services/data-flow/transformations/cache-transform.md)를 참조하세요.  
+-   조회 변환이 실행되기 전에 데이터 흐름의 연결된 데이터 원본 또는 캐시 파일로부터 참조 데이터 세트가 생성되고 캐시에 로드됩니다. 캐시 연결 관리자 및 캐시 변환(선택 사항)을 사용하여 데이터 세트에 액세스할 수 있습니다. 자세한 내용은 [Cache Connection Manager](../../connection-manager/cache-connection-manager.md) 및 [Cache Transform](../../../integration-services/data-flow/transformations/cache-transform.md)를 참조하세요.  
   
 -   조회 변환이 실행되는 동안 테이블, 뷰 또는 SQL 쿼리를 사용하여 참조 데이터 세트가 생성됩니다. 참조 데이터 세트와 일치하는 항목이 있는 행과 일치하는 항목이 없는 행이 캐시에 로드됩니다.  
   
@@ -127,15 +127,15 @@ ms.locfileid: "89480911"
   
 -   [캐시 없음 또는 부분 캐시 모드로 조회 구현](../../../integration-services/data-flow/transformations/implement-a-lookup-in-no-cache-or-partial-cache-mode.md)  
   
--   [캐시 연결 관리자 변환을 사용하여 전체 캐시 모드에서 조회 변환 구현](../../../integration-services/data-flow/transformations/lookup-transformation-full-cache-mode-cache-connection-manager.md)  
+-   [캐시 연결 관리자 변환을 사용하여 전체 캐시 모드에서 조회 변환 구현](../../connection-manager/lookup-transformation-full-cache-mode-cache-connection-manager.md)  
   
--   [OLE DB 연결 관리자를 사용하여 전체 캐시 모드에서 조회 변환 구현](../../../integration-services/data-flow/transformations/lookup-transformation-full-cache-mode-ole-db-connection-manager.md)  
+-   [OLE DB 연결 관리자를 사용하여 전체 캐시 모드에서 조회 변환 구현](../../connection-manager/lookup-transformation-full-cache-mode-ole-db-connection-manager.md)  
   
 -   [데이터 흐름 구성 요소의 속성 설정](../../../integration-services/data-flow/set-the-properties-of-a-data-flow-component.md)  
   
 ## <a name="related-content"></a>관련 내용  
   
--   msdn.microsoft.com의 비디오 - [방법: 전체 캐시 모드에서 조회 변환 구현](https://go.microsoft.com/fwlink/?LinkId=131031)  
+-   msdn.microsoft.com의 비디오 - [방법: 전체 캐시 모드에서 조회 변환 구현](/previous-versions/sql/sql-server-2008/cc952929(v=sql.100))  
   
 -   blogs.msdn.com의 블로그 항목 - [조회 변환 캐시 모드를 사용하는 최선의 구현 방법(Best Practices for Using the Lookup Transformation Cache Modes)](https://go.microsoft.com/fwlink/?LinkId=146623)  
   
@@ -198,7 +198,7 @@ ms.locfileid: "89480911"
  목록에서 기존 테이블 또는 뷰를 선택하거나 **새로 만들기**를 클릭하여 새 테이블을 만듭니다.  
   
 > [!NOTE]  
->  **조회 변환 편집기** 의 **고급**페이지에서 SQL 문을 지정하는 경우 해당 SQL 문이 여기서 선택한 테이블 이름을 재정의하고 대체합니다. 자세한 내용은 [조회 변환 편집기&#40;고급 페이지&#41;](../../../integration-services/data-flow/transformations/lookup-transformation-editor-advanced-page.md)을 참조하십시오.  
+>  **조회 변환 편집기** 의 **고급**페이지에서 SQL 문을 지정하는 경우 해당 SQL 문이 여기서 선택한 테이블 이름을 재정의하고 대체합니다. 자세한 내용은 [조회 변환 편집기&#40;고급 페이지&#41;]()을 참조하십시오.  
   
  **새로 만들기**  
  **테이블 만들기** 대화 상자를 사용하여 새 테이블을 만듭니다.  
@@ -270,7 +270,7 @@ ms.locfileid: "89480911"
  참조 데이터 세트를 생성하는 데 사용되는 SQL 문을 수정합니다.  
   
 > [!NOTE]  
->  이 페이지에서 지정하는 선택적 SQL 문이 **조회 변환 편집기** 의 **연결**페이지에서 지정한 테이블 이름을 재정의하고 대체합니다. 자세한 내용은 [조회 변환 편집기&#40;연결 페이지&#41;](../../../integration-services/data-flow/transformations/lookup-transformation-editor-connection-page.md)을 참조하십시오.  
+>  이 페이지에서 지정하는 선택적 SQL 문이 **조회 변환 편집기** 의 **연결**페이지에서 지정한 테이블 이름을 재정의하고 대체합니다. 자세한 내용은 [조회 변환 편집기&#40;연결 페이지&#41;]()을 참조하십시오.  
   
  **매개 변수**  
  **쿼리 매개 변수 설정** 대화 상자를 사용하여 입력 열을 매개 변수에 매핑합니다.  
@@ -283,5 +283,4 @@ ms.locfileid: "89480911"
  [용어 조회 변환](../../../integration-services/data-flow/transformations/term-lookup-transformation.md)   
  [데이터 흐름](../../../integration-services/data-flow/data-flow.md)   
  [Integration Services 변환](../../../integration-services/data-flow/transformations/integration-services-transformations.md)  
-  
   

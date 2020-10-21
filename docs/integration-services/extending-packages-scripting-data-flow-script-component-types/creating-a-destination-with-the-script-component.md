@@ -17,12 +17,12 @@ helpviewer_keywords:
 ms.assetid: 214e22e8-7e7d-4876-b690-c138e5721b81
 author: chugugrace
 ms.author: chugu
-ms.openlocfilehash: 416f9721802690688d82838bd477aa028e1301fe
-ms.sourcegitcommit: e700497f962e4c2274df16d9e651059b42ff1a10
+ms.openlocfilehash: f02b74a6e5e28fc44a1bab9eb3f101b91610d481
+ms.sourcegitcommit: cfa04a73b26312bf18d8f6296891679166e2754d
 ms.translationtype: HT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 08/17/2020
-ms.locfileid: "88477276"
+ms.lasthandoff: 10/19/2020
+ms.locfileid: "92193140"
 ---
 # <a name="creating-a-destination-with-the-script-component"></a>스크립트 구성 요소를 사용하여 대상 만들기
 
@@ -57,18 +57,18 @@ ms.locfileid: "88477276"
   
  스크립트 구성 요소에서 연결 관리자를 사용하는 방법에 대한 일반적은 내용은 [스크립트 구성 요소에서 데이터 원본에 연결](../../integration-services/extending-packages-scripting/data-flow-script-component/connecting-to-data-sources-in-the-script-component.md)을 참조하세요.  
   
- **스크립트 변환 편집기**의 **연결 관리자** 페이지에 대한 자세한 내용은 [스크립트 변환 편집기&#40;연결 관리자 페이지&#41;](../../integration-services/data-flow/transformations/script-transformation-editor-connection-managers-page.md)를 참조하세요.  
+ **스크립트 변환 편집기**의 **연결 관리자** 페이지에 대한 자세한 내용은 [스크립트 변환 편집기&#40;연결 관리자 페이지&#41;](../data-flow/transformations/script-component.md)를 참조하세요.  
   
 ### <a name="configuring-inputs-and-input-columns"></a>입력 및 입력 열 구성  
  대상 구성 요소에는 하나의 입력이 포함되며 출력은 포함되지 않습니다.  
   
  **스크립트 변환 편집기**의 **입력 열** 페이지에서 열 목록에는 데이터 흐름에 있는 업스트림 구성 요소의 출력에서 사용 가능한 열이 표시됩니다. 이 목록에서 저장할 열을 선택합니다.  
   
- **스크립트 변환 편집기**의 **입력 열** 페이지에 대한 자세한 내용은 [스크립트 변환 편집기&#40;입력 열 페이지&#41;](../../integration-services/data-flow/transformations/script-transformation-editor-input-columns-page.md)를 참조하세요.  
+ **스크립트 변환 편집기**의 **입력 열** 페이지에 대한 자세한 내용은 [스크립트 변환 편집기&#40;입력 열 페이지&#41;](../data-flow/transformations/script-component.md)를 참조하세요.  
   
  **스크립트 변환 편집기**의 **입/출력** 페이지에는 이름을 바꿀 수 있는 단일 입력이 표시됩니다. 스크립트에서는 자동 생성 코드에서 만들어진 접근자 속성을 사용하여 입력을 이름으로 참조합니다.  
   
- **스크립트 변환 편집기**의 **입/출력** 페이지에 대한 자세한 내용은 [스크립트 변환 편집기&#40;입/출력 페이지&#41;](../../integration-services/data-flow/transformations/script-transformation-editor-inputs-and-outputs-page.md)를 참조하세요.  
+ **스크립트 변환 편집기**의 **입/출력** 페이지에 대한 자세한 내용은 [스크립트 변환 편집기&#40;입/출력 페이지&#41;](../data-flow/transformations/script-component.md)를 참조하세요.  
   
 ### <a name="adding-variables"></a>변수 추가  
  스크립트에서 기존 변수를 사용하려는 경우 **스크립트 변환 편집기**의 **스크립트** 페이지에 있는 **ReadOnlyVariables** 및 **ReadWriteVariables** 속성 필드에서 해당 변수를 추가할 수 있습니다.  
@@ -77,7 +77,7 @@ ms.locfileid: "88477276"
   
  스크립트 구성 요소에서 변수를 사용하는 방법에 대한 일반적인 내용은 [스크립트 구성 요소에서 변수 사용](../../integration-services/extending-packages-scripting/data-flow-script-component/using-variables-in-the-script-component.md)을 참조하세요.  
   
- **스크립트 변환 편집기**의 **스크립트** 페이지에 대한 자세한 내용은 [스크립트 변환 편집기&#40;스크립트 페이지&#41;](../../integration-services/data-flow/transformations/script-transformation-editor-script-page.md)를 참조하세요.  
+ **스크립트 변환 편집기**의 **스크립트** 페이지에 대한 자세한 내용은 [스크립트 변환 편집기&#40;스크립트 페이지&#41;](../data-flow/transformations/script-component.md)를 참조하세요.  
   
 ## <a name="scripting-a-destination-component-in-code-design-mode"></a>코드 디자인 모드에서 대상 구성 요소 스크립팅  
  구성 요소에 대한 메타데이터를 구성한 후에는 사용자 지정 스크립트를 작성할 수 있습니다. **스크립트 변환 편집기**의 **스크립트** 페이지에서 **스크립트 편집**을 클릭하여 사용자 지정 스크립트를 추가할 수 있는 [!INCLUDE[msCoName](../../includes/msconame-md.md)] VSTA([!INCLUDE[vsprvs](../../includes/vsprvs-md.md)] Tools for Applications) IDE를 엽니다. 사용하는 스크립트 언어는 **스크립트** 페이지에서 **ScriptLanguage** 속성에 대한 스크립트 언어로 [!INCLUDE[msCoName](../../includes/msconame-md.md)] Visual Basic 또는 [!INCLUDE[msCoName](../../includes/msconame-md.md)] Visual C# 중에서 선택한 언어에 따라 달라집니다.  
@@ -357,5 +357,4 @@ public class ScriptMain:
 ## <a name="see-also"></a>참고 항목  
  [스크립트 구성 요소를 사용하여 원본 만들기](../../integration-services/extending-packages-scripting-data-flow-script-component-types/creating-a-source-with-the-script-component.md)   
  [사용자 지정 대상 구성 요소 개발](../../integration-services/extending-packages-custom-objects-data-flow-types/developing-a-custom-destination-component.md)  
-  
   

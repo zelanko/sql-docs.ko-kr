@@ -20,12 +20,12 @@ helpviewer_keywords:
 ms.assetid: b2ca6791-3a07-4209-ba8e-2248a92dd738
 author: rothja
 ms.author: jroth
-ms.openlocfilehash: 973c8eb74a26047dfa8472497e403385e3678326
-ms.sourcegitcommit: e700497f962e4c2274df16d9e651059b42ff1a10
+ms.openlocfilehash: 6b342052d848597a7422adf5594e25a2b799c7b3
+ms.sourcegitcommit: cfa04a73b26312bf18d8f6296891679166e2754d
 ms.translationtype: HT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 08/17/2020
-ms.locfileid: "88445417"
+ms.lasthandoff: 10/19/2020
+ms.locfileid: "92193280"
 ---
 # <a name="sql-server-utilities-statements---go"></a>SQL Server 유틸리티 문 - GO
 [!INCLUDE [SQL Server](../../includes/applies-to-version/sqlserver.md)]
@@ -38,7 +38,7 @@ ms.locfileid: "88445417"
   
 ## <a name="syntax"></a>구문  
   
-```  
+```syntaxsql  
 GO [count]  
 ```  
   
@@ -57,7 +57,7 @@ GO [count]
   
  사용자는 일괄 처리 규칙을 따라야 합니다. 예를 들어 일괄 처리에서 첫 번째 문 다음에 실행되는 저장 프로시저에는 EXECUTE 키워드가 들어 있어야 합니다. 사용자 정의 지역 변수의 범위는 일괄 처리로 제한되므로 GO 명령 다음에 참조될 수 없습니다.  
   
-```  
+```sql  
 USE AdventureWorks2012;  
 GO  
 DECLARE @MyMsg VARCHAR(50)  
@@ -81,7 +81,7 @@ GO
   
  GO 후에는 문 종결자로 세미콜론을 사용하지 마십시오.
  
-```
+```sql
 -- Yields an error because ; is not permitted after GO  
 SELECT @@VERSION;  
 GO;  
@@ -93,21 +93,21 @@ GO;
 ## <a name="examples"></a>예  
  다음 예에서는 일괄 처리를 두 개 만듭니다. 첫 번째 일괄 처리에는 데이터베이스 컨텍스트를 설정하는 `USE AdventureWorks2012` 문만 있습니다. 나머지 문에는 지역 변수를 사용합니다. 따라서 모든 지역 변수 선언을 단일 일괄 처리로 그룹화해야 합니다. 변수를 참조하는 마지막 문 다음까지 `GO` 명령을 사용하지 않으면 됩니다.  
   
-```  
+```sql  
 USE AdventureWorks2012;  
 GO  
-DECLARE @NmbrPeople int  
+DECLARE @NmbrPeople INT  
 SELECT @NmbrPeople = COUNT(*)  
 FROM Person.Person;  
 PRINT 'The number of people as of ' +  
-      CAST(GETDATE() AS char(20)) + ' is ' +  
-      CAST(@NmbrPeople AS char (10));  
+      CAST(GETDATE() AS CHAR(20)) + ' is ' +  
+      CAST(@NmbrPeople AS CHAR(10));  
 GO  
 ```  
   
  다음 예에서는 일괄 처리에서 문을 두 번 실행합니다.  
   
-```  
+```sql  
 SELECT DB_NAME();  
 SELECT USER_NAME();  
 GO 2  

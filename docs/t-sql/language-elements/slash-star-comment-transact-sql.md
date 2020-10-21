@@ -22,12 +22,12 @@ helpviewer_keywords:
 ms.assetid: 4d9ab1b2-4bbb-4c16-beb1-cafc1af7417c
 author: rothja
 ms.author: jroth
-ms.openlocfilehash: 481701a7d2167e1d45f5aa77f715a380a63e97af
-ms.sourcegitcommit: e700497f962e4c2274df16d9e651059b42ff1a10
+ms.openlocfilehash: 161c90803b636ff8aacd67f773c739b0d0153150
+ms.sourcegitcommit: cfa04a73b26312bf18d8f6296891679166e2754d
 ms.translationtype: HT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 08/17/2020
-ms.locfileid: "88459235"
+ms.lasthandoff: 10/19/2020
+ms.locfileid: "92195435"
 ---
 # <a name="slash-star-block-comment-transact-sql"></a>슬래시 별(주석 블록)(Transact-SQL)
 [!INCLUDE[tsql-appliesto-ss2008-asdb-xxxx-xxx_md](../../includes/tsql-appliesto-ss2008-asdb-xxxx-xxx-md.md)]
@@ -39,8 +39,7 @@ ms.locfileid: "88459235"
   
 ## <a name="syntax"></a>구문  
   
-```  
-  
+```syntaxsql
 /*  
 text_of_comment  
 */  
@@ -61,8 +60,8 @@ text_of_comment
   
  예를 들면 다음 코드는 오류를 생성합니다.  
   
-```  
-DECLARE @comment AS varchar(20);  
+```sql  
+DECLARE @comment AS VARCHAR(20);  
 GO  
 /*  
 SELECT @comment = '/*';  
@@ -73,21 +72,20 @@ GO
   
  오류를 해결하려면 다음과 같이 변경하세요.  
   
-```  
-DECLARE @comment AS varchar(20);  
+```sql  
+DECLARE @comment AS VARCHAR(20);  
 GO  
 /*  
 SELECT @comment = '/*';  
 */ */  
 SELECT @@VERSION;  
 GO  
-  
 ```  
   
 ## <a name="examples"></a>예제  
  다음 예에서는 코드 섹션에서 수행되는 작업을 설명하기 위해 주석을 사용합니다.  
   
-```  
+```sql  
 USE AdventureWorks2012;  
 GO  
 /*  

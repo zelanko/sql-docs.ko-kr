@@ -11,12 +11,12 @@ ms.topic: conceptual
 ms.assetid: d9422412-8a3d-45ae-af7f-072c902a09ba
 author: chugugrace
 ms.author: chugu
-ms.openlocfilehash: 4508244cb9558cc63c9e1b2185c89c5a43d659cf
-ms.sourcegitcommit: e700497f962e4c2274df16d9e651059b42ff1a10
+ms.openlocfilehash: cc1bddc579ccce64b4068fd2a5235481fc7b7629
+ms.sourcegitcommit: cfa04a73b26312bf18d8f6296891679166e2754d
 ms.translationtype: HT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 08/17/2020
-ms.locfileid: "88477676"
+ms.lasthandoff: 10/19/2020
+ms.locfileid: "92193203"
 ---
 # <a name="map-columns-to-composite-domains"></a>복합 도메인에 열 매핑
 
@@ -41,7 +41,7 @@ ms.locfileid: "88477676"
   
 5.  필요에 따라 **원본 별칭**, **출력 별칭**및 **상태 별칭** 필드에 나타나는 이름을 수정합니다.  
   
-6.  필요에 따라 **고급** 탭에서 속성을 설정합니다. 속성에 대한 자세한 내용은 [DQS Cleansing Transformation Editor Dialog Box](../../../integration-services/data-flow/transformations/dqs-cleansing-transformation-editor-dialog-box.md)를 참조하십시오.  
+6.  필요에 따라 **고급** 탭에서 속성을 설정합니다. 속성에 대한 자세한 내용은 [DQS Cleansing Transformation Editor Dialog Box](./dqs-cleansing-transformation.md)를 참조하십시오.  
   
 ### <a name="to-map-a-column-with-delimited-values-to-a-composite-domain"></a>구분된 값을 가진 열을 복합 도메인에 매핑하려면  
   
@@ -55,9 +55,8 @@ ms.locfileid: "88477676"
   
 5.  필요에 따라 **원본 별칭**, **출력 별칭**및 **상태 별칭** 필드에 나타나는 이름을 수정합니다.  
   
-6.  필요에 따라 **고급** 탭에서 속성을 설정합니다. 속성에 대한 자세한 내용은 [DQS Cleansing Transformation Editor Dialog Box](../../../integration-services/data-flow/transformations/dqs-cleansing-transformation-editor-dialog-box.md)를 참조하십시오.  
+6.  필요에 따라 **고급** 탭에서 속성을 설정합니다. 속성에 대한 자세한 내용은 [DQS Cleansing Transformation Editor Dialog Box](./dqs-cleansing-transformation.md)를 참조하십시오.  
   
 ## <a name="see-also"></a>참고 항목  
  [DQS 정리 변환](../../../integration-services/data-flow/transformations/dqs-cleansing-transformation.md)  
-  
   

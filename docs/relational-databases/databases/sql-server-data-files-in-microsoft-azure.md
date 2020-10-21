@@ -11,12 +11,12 @@ ms.topic: conceptual
 ms.assetid: 38ffd9c2-18a5-43d2-b674-e425addec4e4
 author: MikeRayMSFT
 ms.author: mikeray
-ms.openlocfilehash: 5aed55fa41bfd3998b4580e5ee0b66a35997b942
-ms.sourcegitcommit: a41e1f4199785a2b8019a419a1f3dcdc15571044
+ms.openlocfilehash: 23b04ae0e205a70b195b7da39a666256463bfa1c
+ms.sourcegitcommit: cfa04a73b26312bf18d8f6296891679166e2754d
 ms.translationtype: HT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 10/13/2020
-ms.locfileid: "91987592"
+ms.lasthandoff: 10/19/2020
+ms.locfileid: "92192853"
 ---
 # <a name="sql-server-data-files-in-microsoft-azure"></a>Microsoft Azure의 SQL Server 데이터 파일
  [!INCLUDE [SQL Server](../../includes/applies-to-version/sqlserver.md)]
@@ -54,7 +54,7 @@ Azure 디스크는 엔터프라이즈 수준 비즈니스 연속성 및 재해 �
 ### <a name="azure-storage-concepts"></a>Azure Storage 개념  
 Azure의 SQL Server 데이터 파일 기능을 사용할 경우 Azure에서 스토리지 계정과 컨테이너를 만들어야 합니다. 그런 다음 컨테이너에 액세스하는 데 필요한 공유 액세스 서명과 컨테이너 정책에 대한 정보가 들어 있는 SQL Server 자격 증명을 만들어야 합니다.  
 
-[Microsoft Azure](https://azure.microsoft.com)에서 [Azure Storage](https://azure.microsoft.com/services/storage/) 계정은 Blob에 액세스하는 데 필요한 가장 높은 수준의 네임스페이스를 나타냅니다. 스토리지 계정에 포함될 수 있는 컨테이너의 개수 제한은 없지만 총 크기가 스토리지 용량 한도 미만이어야 합니다. 스토리지 제한에 대한 최신 정보는 [Azure 구독 및 서비스 제한, 할당량 및 제약 조건](https://docs.microsoft.com/azure/azure-subscription-service-limits)(영문)을 참조하세요. 컨테이너는 [Blob](https://docs.microsoft.com/azure/storage/common/storage-introduction#blob-storage) 세트의 그룹화를 제공합니다. 모든 Blob은 컨테이너에 있어야 합니다. 계정에 포함될 수 있는 컨테이너의 개수 제한은 없습니다. 마찬가지로 컨테이너에 저장될 수 있는 Blob의 개수가 제한되지 않습니다. Azure Blob Storage 서비스에 저장할 수 있는 Blob 유형에는 블록과 페이지 Blob 두 가지가 있습니다. 이 새로운 기능은 페이지 Blob을 사용하며, 파일의 바이트 범위가 자주 수정될 때 더 효율적입니다. URL 형식 `https://storageaccount.blob.core.windows.net/<container>/<blob>`을 사용하여 Blob에 액세스할 수 있습니다.  
+[Microsoft Azure](https://azure.microsoft.com)에서 [Azure Storage](https://azure.microsoft.com/services/storage/) 계정은 Blob에 액세스하는 데 필요한 가장 높은 수준의 네임스페이스를 나타냅니다. 스토리지 계정에 포함될 수 있는 컨테이너의 개수 제한은 없지만 총 크기가 스토리지 용량 한도 미만이어야 합니다. 스토리지 제한에 대한 최신 정보는 [Azure 구독 및 서비스 제한, 할당량 및 제약 조건](/azure/azure-subscription-service-limits)(영문)을 참조하세요. 컨테이너는 [Blob](/azure/storage/common/storage-introduction#blob-storage) 세트의 그룹화를 제공합니다. 모든 Blob은 컨테이너에 있어야 합니다. 계정에 포함될 수 있는 컨테이너의 개수 제한은 없습니다. 마찬가지로 컨테이너에 저장될 수 있는 Blob의 개수가 제한되지 않습니다. Azure Blob Storage 서비스에 저장할 수 있는 Blob 유형에는 블록과 페이지 Blob 두 가지가 있습니다. 이 새로운 기능은 페이지 Blob을 사용하며, 파일의 바이트 범위가 자주 수정될 때 더 효율적입니다. URL 형식 `https://storageaccount.blob.core.windows.net/<container>/<blob>`을 사용하여 Blob에 액세스할 수 있습니다.  
 
 ### <a name="azure-billing-considerations"></a>Azure 청구 고려 사항  
 
@@ -91,7 +91,7 @@ ON
 >[!IMPORTANT]
 >컨테이너의 데이터 파일에 대한 활성 참조가 있는 경우 해당 SQL Server 자격 증명을 삭제하려고 하면 실패합니다.
 
-자세한 내용은 [Azure Storage 리소스에 대한 액세스 관리](https://docs.microsoft.com/azure/storage/blobs/storage-manage-access-to-resources)를 참조하십시오.  
+자세한 내용은 [Azure Storage 리소스에 대한 액세스 관리](/azure/storage/blobs/storage-manage-access-to-resources)를 참조하십시오.  
 
 ### <a name="security"></a>보안  
  Azure Storage에 SQL Server 데이터 파일을 저장할 경우의 보안 고려 사항 및 요구 사항은 다음과 같습니다.
@@ -120,7 +120,7 @@ ON
   
 - Azure의 SQL Server 데이터 파일 기능을 사용할 경우 스토리지 계정에 대한 지리적 복제는 지원되지 않습니다. 스토리지 계정이 지리적으로 복제되는 동안 지리적 장애 조치(failover)가 발생할 경우 데이터베이스가 손상될 수 있습니다.  
   
-- 용량 제한은 [Blob Storage 소개](https://docs.microsoft.com/azure/storage/blobs/storage-blobs-introduction)를 참조하세요.  
+- 용량 제한은 [Blob Storage 소개](/azure/storage/blobs/storage-blobs-introduction)를 참조하세요.  
   
 - Azure Storage의 SQL Server 데이터 파일 기능을 사용하여 Blob Storage에 메모리 내 OLTP 데이터를 저장할 수 없습니다. 메모리 내 OLTP는 **FileStream** 에 종속되지만 이 기능의 현재 릴리스에서는 Azure Storage에 **FileStream** 데이터를 저장할 수 없기 때문입니다.  
   
@@ -166,10 +166,10 @@ ON
     해결 방법: Azure Storage에서 활성 데이터베이스 파일이 사용 중인 자격 증명을 삭제하려고 하면 이 오류가 나타날 수 있습니다. 자격 증명을 삭제하려면 이 데이터베이스 파일을 포함하는 연결된 BLOB을 먼저 삭제해야 합니다. 활성 임대가 있는 Blob을 삭제하려면 먼저 임대를 해제해야 합니다.  
   
 - *공유 액세스 서명이 컨테이너에서 올바르게 만들어지지 않습니다.*    
-     해결 방법: 컨테이너에서 공유 액세스 서명을 올바르게 만들었는지 확인하세요. [자습서: SQL Server 2016 데이터베이스와 함께 Microsoft Azure Blob 스토리지 서비스 사용](../lesson-2-create-a-sql-server-credential-using-a-shared-access-signature.md)에서 참조하세요.  
+     해결 방법: 컨테이너에서 공유 액세스 서명을 올바르게 만들었는지 확인하세요. [자습서: SQL Server 2016 데이터베이스와 함께 Microsoft Azure Blob 스토리지 서비스 사용](../tutorial-use-azure-blob-storage-service-with-sql-server-2016.md#2---create-a-sql-server-credential-using-a-shared-access-signature)에서 참조하세요.  
   
 - *SQL Server 자격 증명이 올바르게 만들어지지 않았습니다.*    
-    해결 방법: **ID** 필드에서 '공유 액세스 서명'을 사용하고 암호를 올바르게 만들었는지 확인합니다. 3단원에 나오는 지침인 [ SQL Server 2016 데이터베이스와 함께 Microsoft Azure Blob 스토리지 서비스 사용](../lesson-3-database-backup-to-url.md)에서 참조하세요.  
+    해결 방법: **ID** 필드에서 '공유 액세스 서명'을 사용하고 암호를 올바르게 만들었는지 확인합니다. 3단원에 나오는 지침인 [ SQL Server 2016 데이터베이스와 함께 Microsoft Azure Blob 스토리지 서비스 사용](../tutorial-use-azure-blob-storage-service-with-sql-server-2016.md#3---database-backup-to-url)에서 참조하세요.  
   
  **임대 BLOB 오류:**  
   

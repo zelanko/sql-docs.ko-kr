@@ -13,12 +13,12 @@ helpviewer_keywords:
 ms.assetid: 187fbba3-c555-4030-9bdf-0f01994c5230
 author: stevestein
 ms.author: sstein
-ms.openlocfilehash: 7e1d10976a795570a1bfded3d4d379284dc317b3
-ms.sourcegitcommit: 9122251ab8bbd46ea3c699e741d6842c995195fa
+ms.openlocfilehash: 39110067ea0abb2722da0ee88f70946d2875ccee
+ms.sourcegitcommit: cfa04a73b26312bf18d8f6296891679166e2754d
 ms.translationtype: HT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 10/08/2020
-ms.locfileid: "91847353"
+ms.lasthandoff: 10/19/2020
+ms.locfileid: "92192575"
 ---
 # <a name="create-a-database-snapshot-transact-sql"></a>Create a Database Snapshot (Transact-SQL)
  [!INCLUDE [SQL Server](../../includes/applies-to-version/sqlserver.md)]
@@ -120,7 +120,7 @@ AdventureWorks_snapshot_evening
   
      [;]  
   
-     여기서 *source_**database_name*은 원본 데이터베이스이고, *logical_file_name*은 SQL Server에서 파일을 참조할 때 사용되는 논리적 이름이고, *os_file_name*은 운영 체제에서 파일을 만드는 데 사용되는 경로 및 파일 이름이고, *database_snapshot_name*은 데이터베이스를 되돌릴 스냅샷의 이름입니다. 이 구문에 대한 자세한 내용은 [CREATE DATABASE&#40;SQL Server Transact-SQL&#41;](../../t-sql/statements/create-database-sql-server-transact-sql.md)을 사용해서만 만들 수 있습니다.  
+     여기서 *source_**database_name*은 원본 데이터베이스이고, *logical_file_name*은 SQL Server에서 파일을 참조할 때 사용되는 논리적 이름이고, *os_file_name*은 운영 체제에서 파일을 만드는 데 사용되는 경로 및 파일 이름이고, *database_snapshot_name*은 데이터베이스를 되돌릴 스냅샷의 이름입니다. 이 구문에 대한 자세한 내용은 [CREATE DATABASE&#40;SQL Server Transact-SQL&#41;](../../t-sql/statements/create-database-transact-sql.md)을 사용해서만 만들 수 있습니다.  
   
     > [!NOTE]  
     >  데이터베이스 스냅샷을 만들 때 로그 파일, 오프라인 파일, 복원 파일 및 존재하지 않는 파일은 CREATE DATABASE 문에 사용할 수 없습니다.  
@@ -148,7 +148,7 @@ GO
 ```  
   
 ####  <a name="b-creating-a-snapshot-on-the-sales-database"></a><a name="Creating_on_Sales"></a> 2. Sales 데이터베이스에 대한 스냅샷 만들기  
- 이 예에서는 `sales_snapshot1200`데이터베이스에 대한 데이터베이스 스냅샷 `Sales` 을 만듭니다. 이 데이터베이스는 [CREATE DATABASE(SQL Server Transact-SQL)](../../t-sql/statements/create-database-sql-server-transact-sql.md)의 "파일 그룹을 가진 데이터베이스 만들기" 예제에서 만들었습니다.  
+ 이 예에서는 `sales_snapshot1200`데이터베이스에 대한 데이터베이스 스냅샷 `Sales` 을 만듭니다. 이 데이터베이스는 [CREATE DATABASE(SQL Server Transact-SQL)](../../t-sql/statements/create-database-transact-sql.md)의 "파일 그룹을 가진 데이터베이스 만들기" 예제에서 만들었습니다.  
   
 ```  
 --Creating sales_snapshot1200 as snapshot of the  
@@ -179,8 +179,6 @@ GO
 -   [데이터베이스 스냅샷 삭제&#40;Transact-SQL&#41;](../../relational-databases/databases/drop-a-database-snapshot-transact-sql.md)  
   
 ## <a name="see-also"></a>참고 항목  
- [CREATE DATABASE&#40;SQL Server Transact-SQL&#41;](../../t-sql/statements/create-database-sql-server-transact-sql.md)   
+ [CREATE DATABASE&#40;SQL Server Transact-SQL&#41;](../../t-sql/statements/create-database-transact-sql.md)   
  [데이터베이스 스냅샷&#40;SQL Server&#41;](../../relational-databases/databases/database-snapshots-sql-server.md)  
   
-  
-
