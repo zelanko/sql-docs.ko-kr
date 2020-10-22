@@ -7,7 +7,12 @@ ms.technology: ssms
 ms.topic: conceptual
 f1_keywords:
 - sql13.swb.tsqlquery.f1
-- sql23.swb.tsqlresults.f1
+- sql13.swb.tsqlresults.f1
+- sql13.swb.query.advanced.f1
+- sql13.swb.query.ansi.f1
+- sql13.swb.query.general.f1
+- sql13.swb.query.general.f1
+- sql13.swb.sqleditors.multiserverresultssettings
 dev_langs:
 - TSQL
 helpviewer_keywords:
@@ -38,12 +43,12 @@ ms.author: maghan
 ms.reviewer: ''
 ms.custom: seo-lt-2019, contperfq1
 ms.date: 08/28/2020
-ms.openlocfilehash: 3ba349fc37aa4aae0aea7af7000380d1de031091
-ms.sourcegitcommit: 22dacedeb6e8721e7cdb6279a946d4002cfb5da3
+ms.openlocfilehash: 219ebb8a431b997951b22d443877dfb751665384
+ms.sourcegitcommit: 5f3e0eca9840db20038f0362e5d88a84ff3424af
 ms.translationtype: HT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 10/14/2020
-ms.locfileid: "92035470"
+ms.lasthandoff: 10/21/2020
+ms.locfileid: "92344069"
 ---
 # <a name="sql-server-management-studio-ssms-query-editor"></a>SSMS(SQL Server Management Studio) 쿼리 편집기
 
@@ -300,8 +305,8 @@ Microsoft DTA(데이터베이스 엔진 튜닝 관리자)는 데이터베이스�
 | 텍스트를 스크립트의 한 위치에서 다른 위치로 끌어서 놓습니다.| [텍스트 끌어다 놓기](../scripting/drag-and-drop-text.md) |
 | 코드의 중요 한 부분을 더 쉽게 찾기 위해 책갈피를 설정하는 방법입니다. | [책갈피 관리](../scripting/manage-bookmarks.md) |
 | 창 또는 표에서 스크립트 또는 결과를 인쇄하는 방법입니다.| [코드 및 결과 인쇄](../scripting/print-code-and-results.md) |
-| MDX 쿼리 편집기에서 기본 기능을 보거나 사용합니다. | [Analysis Services 스크립트 만들기](/analysis-services/instances/create-analysis-services-scripts-in-management-studio?view=asallproducts-allversions) |
-| DMX 쿼리 편집기에서 기본 기능을 보거나 사용합니다. | [DMX 쿼리 만들기](/analysis-services/data-mining/create-a-dmx-query-in-sql-server-management-studio?view=asallproducts-allversions) |
+| MDX 쿼리 편집기에서 기본 기능을 보거나 사용합니다. | [Analysis Services 스크립트 만들기](/analysis-services/instances/create-analysis-services-scripts-in-management-studio) |
+| DMX 쿼리 편집기에서 기본 기능을 보거나 사용합니다. | [DMX 쿼리 만들기](/analysis-services/data-mining/create-a-dmx-query-in-sql-server-management-studio) |
 | XML/A 쿼리 편집기에서 기본 기능을 보거나 사용합니다. | [XML 편집기](../scripting/xml-editor-sql-server-management-studio.md) |
 | 데이터베이스 엔진 쿼리 편집기에서 sqlcmd 기능을 사용하는 방법입니다.| [SQLCMD 스크립트 편집](../scripting/edit-sqlcmd-scripts-with-query-editor.md) |
 | 데이터베이스 엔진 쿼리 편집기에서 코드 조각을 사용하는 방법입니다. 코드 조각은 일반적으로 사용되는 문 또는 블록에 대한 템플릿이며, 사이트별 코드 조각을 포함하도록 사용자 지정하거나 확장할 수 있습니다.| [T-SQL 코드 조각](../scripting/add-transact-sql-snippets.md) |

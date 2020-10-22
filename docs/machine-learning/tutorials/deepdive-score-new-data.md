@@ -9,17 +9,17 @@ author: dphansen
 ms.author: davidph
 ms.custom: seo-lt-2019
 monikerRange: '>=sql-server-2016||>=sql-server-linux-ver15||=sqlallproducts-allversions'
-ms.openlocfilehash: ee2a12b8b45169d43b9dc86077fb0879c7413226
-ms.sourcegitcommit: 9b41725d6db9957dd7928a3620fe4db41eb51c6e
+ms.openlocfilehash: e3204c5ba30831f0355113f7882727decad08866
+ms.sourcegitcommit: cfa04a73b26312bf18d8f6296891679166e2754d
 ms.translationtype: HT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 08/13/2020
-ms.locfileid: "88178627"
+ms.lasthandoff: 10/19/2020
+ms.locfileid: "92195087"
 ---
 # <a name="score-new-data-sql-server-and-revoscaler-tutorial"></a>새 데이터 점수 매기기(SQL Server 및 RevoScaleR 자습서)
 [!INCLUDE [SQL Server 2016 and later](../../includes/applies-to-version/sqlserver2016.md)]
 
-이것은 SQL Server에서 [RevoScaleR 함수](https://docs.microsoft.com/machine-learning-server/r-reference/revoscaler/revoscaler)를 사용하는 방법에 대한 [RevoScaleR 자습서 시리즈](deepdive-data-science-deep-dive-using-the-revoscaler-packages.md) 중 자습서 8에 해당됩니다.
+이것은 SQL Server에서 [RevoScaleR 함수](/machine-learning-server/r-reference/revoscaler/revoscaler)를 사용하는 방법에 대한 [RevoScaleR 자습서 시리즈](deepdive-data-science-deep-dive-using-the-revoscaler-packages.md) 중 자습서 8에 해당됩니다.
 
 이 자습서에서는 이전 자습서에서 만든 로지스틱 회귀 분석 모델을 사용하여 입력과 같은 독립 변수를 사용하는 다른 데이터 세트에 대한 점수를 계산합니다.
 
@@ -59,7 +59,7 @@ ms.locfileid: "88178627"
   
 4. 예방 차원에서 출력 테이블이 있는지 확인하세요. 이름이 같은 항목이 이미 있으면 새 테이블을 작성하려고 할 때 오류가 발생합니다.
   
-    이렇게 하려면 [rxSqlServerTableExists](https://docs.microsoft.com/machine-learning-server/r-reference/revoscaler/rxsqlserverdroptable) 및 [rxSqlServerDropTable](https://docs.microsoft.com/machine-learning-server/r-reference/revoscaler/rxsqlserverdroptable)함수를 호출하여 테이블 이름을 입력으로 전달합니다.
+    이렇게 하려면 [rxSqlServerTableExists](/machine-learning-server/r-reference/revoscaler/rxsqlserverdroptable) 및 [rxSqlServerDropTable](/machine-learning-server/r-reference/revoscaler/rxsqlserverdroptable)함수를 호출하여 테이블 이름을 입력으로 전달합니다.
   
     ```R
     if (rxSqlServerTableExists("ccScoreOutput"))     rxSqlServerDropTable("ccScoreOutput")
@@ -68,7 +68,7 @@ ms.locfileid: "88178627"
     + **rxSqlServerTableExists**는 ODBC 드라이버를 쿼리하고, 테이블이 있으면 TRUE를 반환하고, 그렇지 않으면 FALSE를 반환합니다.
     + **rxSqlServerDropTable**은 DDL을 실행하고, 테이블이 성공적으로 삭제되었으면 TRUE를 반환하고, 그렇지 않으면 FALSE를 반환합니다.
 
-5. [rxPredict](https://docs.microsoft.com/machine-learning-server/r-reference/revoscaler/rxpredict)를 실행하여 점수를 만들어 데이터 원본 sqlScoreDS에 정의된 새 테이블에 저장합니다.
+5. [rxPredict](/machine-learning-server/r-reference/revoscaler/rxpredict)를 실행하여 점수를 만들어 데이터 원본 sqlScoreDS에 정의된 새 테이블에 저장합니다.
   
     ```R
     rxPredict(modelObject = logitObj,
@@ -80,7 +80,7 @@ ms.locfileid: "88178627"
         overwrite = TRUE)
     ```
   
-    **rxPredict** 함수는 원격 컴퓨팅 컨텍스트에서의 실행을 지원하는 또 다른 함수입니다. **rxPredict** 함수를 사용하여 [rxLinMod](https://docs.microsoft.com/machine-learning-server/r-reference/revoscaler/rxlinmod), [rxLogit](https://docs.microsoft.com/machine-learning-server/r-reference/revoscaler/rxlogit) 또는 [rxGlm](https://docs.microsoft.com/machine-learning-server/r-reference/revoscaler/rxglm)을 기반으로 하는 모델에서 점수를 만들 수 있습니다.
+    **rxPredict** 함수는 원격 컴퓨팅 컨텍스트에서의 실행을 지원하는 또 다른 함수입니다. **rxPredict** 함수를 사용하여 [rxLinMod](/machine-learning-server/r-reference/revoscaler/rxlinmod), [rxLogit](/machine-learning-server/r-reference/revoscaler/rxlogit) 또는 [rxGlm](/machine-learning-server/r-reference/revoscaler/rxglm)을 기반으로 하는 모델에서 점수를 만들 수 있습니다.
   
     - 여기서는 *writeModelVars* 매개 변수가 **TRUE** 로 설정되었습니다. 이 경우 예측에 사용된 변수가 새 테이블에 포함됩니다.
   
@@ -118,7 +118,7 @@ ms.locfileid: "88178627"
 
      이 예제에서는 **RxSqlServerData** 데이터 원본 개체를 사용하여 SQL 쿼리, 함수 또는 저장 프로시저를 기반으로 임의 데이터 세트를 정의한 다음, 이를 R 코드에서 사용하기가 얼마나 쉬운지를 확인할 수 있습니다. 변수는 실제 값을 저장하는 것이 아니라 데이터 원본 정의를 저장할 뿐입니다. 쿼리는 **rxImport**와 같은 함수에서 변수를 사용할 때만 실행되어 값을 생성합니다.
       
-2. [rxImport](https://docs.microsoft.com/machine-learning-server/r-reference/revoscaler/rximport) 함수를 호출하여 컴퓨팅 컨텍스트 간에 공유할 수 있는 데이터 프레임에 값을 저장합니다.
+2. [rxImport](/machine-learning-server/r-reference/revoscaler/rximport) 함수를 호출하여 컴퓨팅 컨텍스트 간에 공유할 수 있는 데이터 프레임에 값을 저장합니다.
   
     ```R
     minMaxVals <- rxImport(sqlMinMax)

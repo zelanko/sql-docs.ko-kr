@@ -9,12 +9,12 @@ author: dphansen
 ms.author: davidph
 ms.custom: seo-lt-2019
 monikerRange: '>=sql-server-2016||>=sql-server-linux-ver15||=sqlallproducts-allversions'
-ms.openlocfilehash: 5b6643cec32cc3581c0f91e4479fff0d908e7532
-ms.sourcegitcommit: 9b41725d6db9957dd7928a3620fe4db41eb51c6e
+ms.openlocfilehash: 01fab32210e231b371ce31cd70a94bca1cb9455f
+ms.sourcegitcommit: cfa04a73b26312bf18d8f6296891679166e2754d
 ms.translationtype: HT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 08/13/2020
-ms.locfileid: "88178430"
+ms.lasthandoff: 10/19/2020
+ms.locfileid: "92196237"
 ---
 # <a name="create-graphs-and-plots-using-sql-and-r-walkthrough"></a>SQL 및 R을 사용하여 그래프 및 플롯 만들기(연습)
 [!INCLUDE [SQL Server 2016](../../includes/applies-to-version/sqlserver2016.md)]
@@ -33,7 +33,7 @@ ms.locfileid: "88178430"
 
 ## <a name="create-a-histogram"></a>히스토그램 만들기
 
-1. [rxHistogram](https://docs.microsoft.com/r-server/r-reference/revoscaler/rxdatasource) 함수를 사용하여 첫 번째 그림을 생성합니다.  rxHistogram 함수는 오픈 소스 R 패키지에 있는 것과 유사한 기능을 제공하지만 원격 실행 컨텍스트에서 실행할 수 있습니다.
+1. [rxHistogram](/r-server/r-reference/revoscaler/rxdatasource) 함수를 사용하여 첫 번째 그림을 생성합니다.  rxHistogram 함수는 오픈 소스 R 패키지에 있는 것과 유사한 기능을 제공하지만 원격 실행 컨텍스트에서 실행할 수 있습니다.
 
     ```R
     # Plot fare amount on SQL Server and return the plot
@@ -73,7 +73,7 @@ ms.locfileid: "88178430"
 
     + *mapPlot* 함수는 앞에서 RxSqlServerData를 사용하여 정의한 기존 데이터 개체와 클라이언트에서 전달된 지도 표현의 두 인수를 사용합니다.
     + *ds* 변수로 시작하는 줄에서 rxImport를 사용하여 이전에 만든 데이터 원본 *inDataSource*에서 메모리 데이터를 로드합니다. (이 데이터 원본에는 1,000개의 행만 포함되어 있습니다. 더 많은 데이터 요소가 포함된 지도를 만들려면 다른 데이터 원본을 대체할 수 있습니다.)
-    + 오픈 소스 R 함수를 사용할 때마다 로컬 메모리의 데이터 프레임에 데이터를 로드해야 합니다. 그러나 [rxImport](https://docs.microsoft.com/r-server/r-reference/revoscaler/rximport) 함수를 호출하여 원격 컴퓨팅 컨텍스트의 메모리에서 실행할 수 있습니다.
+    + 오픈 소스 R 함수를 사용할 때마다 로컬 메모리의 데이터 프레임에 데이터를 로드해야 합니다. 그러나 [rxImport](/r-server/r-reference/revoscaler/rximport) 함수를 호출하여 원격 컴퓨팅 컨텍스트의 메모리에서 실행할 수 있습니다.
 
 2. 컴퓨팅 컨텍스트를 로컬로 변경하고 지도를 만드는 데 필요한 라이브러리를 로드합니다.
 
@@ -89,7 +89,7 @@ ms.locfileid: "88178430"
 
     + `googmap` 으로 시작하는 줄에서는 지정된 좌표가 중심인 지도를 생성합니다.
 
-3. SQL Server 컴퓨팅 컨텍스트로 전환하고 여기에 표시된 것처럼 [rxExec](https://docs.microsoft.com/r-server/r-reference/revoscaler/rxexec)에 플롯 함수를 래핑하여 결과를 렌더링합니다. rxExec 함수는 **RevoScaleR** 패키지에 포함되어 있으며 원격 컴퓨팅 컨텍스트에서 임의의 R 함수 실행을 지원합니다.
+3. SQL Server 컴퓨팅 컨텍스트로 전환하고 여기에 표시된 것처럼 [rxExec](/r-server/r-reference/revoscaler/rxexec)에 플롯 함수를 래핑하여 결과를 렌더링합니다. rxExec 함수는 **RevoScaleR** 패키지에 포함되어 있으며 원격 컴퓨팅 컨텍스트에서 임의의 R 함수 실행을 지원합니다.
 
     ```R
     rxSetComputeContext(sqlcc)

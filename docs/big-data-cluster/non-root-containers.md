@@ -9,12 +9,12 @@ ms.date: 06/22/2020
 ms.topic: conceptual
 ms.prod: sql
 ms.technology: big-data-cluster
-ms.openlocfilehash: 6371d142609b095eb6d30fcdac63cb051db22c4f
-ms.sourcegitcommit: d973b520f387b568edf1d637ae37d117e1d4ce32
+ms.openlocfilehash: e74e08146ea4c92f23ba17816738122147150e7b
+ms.sourcegitcommit: ae474d21db4f724523e419622ce79f611e956a22
 ms.translationtype: HT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 06/23/2020
-ms.locfileid: "85218182"
+ms.lasthandoff: 10/20/2020
+ms.locfileid: "92257123"
 ---
 # <a name="non-root-big-data-clusters-containers"></a>루트가 아닌 빅 데이터 클러스터 컨테이너
 
@@ -47,7 +47,7 @@ SQL Server 2019 CU5에는 루트가 아닌 컨테이너 관련 지원이 도입�
 
 Azure Data Studio는 게이트웨이를 통한 연결에 대해 자격 증명 변경을 투명하게 처리하여 개체 탐색기에서 HDFS 검색 환경을 사용하거나 Notebook을 통해 Spark 작업을 제출할 수 있도록 설정합니다. [최신 Azure Data Studio 참가자 빌드](../azure-data-studio/download-azure-data-studio.md#download-insiders-build-of-azure-data-studio)를 설치합니다. 이 빌드에는 이 사용 사례에 필요한 변경 내용이 포함되어 있습니다.
 
-게이트웨이를 통해 서비스에 액세스하기 위해 자격 증명을 제공해야 하는 다른 시나리오(예: `azdata`를 사용하여 로그인, Spark의 웹 대시보드에 액세스)의 경우 올바른 자격 증명이 사용되는지 확인합니다. CU5 이전에 배포된 기존 클러스터를 대상으로 하는 경우 클러스터를 CU5로 업그레이드한 후에도 계속 `root` 사용자 이름을 사용하여 게이트웨이에 연결합니다. CU5 빌드를 사용하여 새 클러스터를 배포하는 경우 `AZDATA_USERNAME` 환경 변수에 해당하는 사용자 이름을 제공하여 로그인합니다.
+게이트웨이를 통해 서비스에 액세스하기 위해 자격 증명을 제공해야 하는 다른 시나리오(예: [!INCLUDE [azure-data-cli-azdata](../includes/azure-data-cli-azdata.md)]를 사용하여 로그인, Spark의 웹 대시보드에 액세스)의 경우 올바른 자격 증명이 사용되는지 확인합니다. CU5 이전에 배포된 기존 클러스터를 대상으로 하는 경우 클러스터를 CU5로 업그레이드한 후에도 계속 `root` 사용자 이름을 사용하여 게이트웨이에 연결합니다. CU5 빌드를 사용하여 새 클러스터를 배포하는 경우 `AZDATA_USERNAME` 환경 변수에 해당하는 사용자 이름을 제공하여 로그인합니다.
 
 ## <a name="configuration-file-switches"></a>구성 파일 스위치
 

@@ -9,17 +9,17 @@ author: dphansen
 ms.author: davidph
 ms.custom: seo-lt-2019
 monikerRange: '>=sql-server-2016||>=sql-server-linux-ver15||=sqlallproducts-allversions'
-ms.openlocfilehash: e2fcd1719c63d88eb20156aa2c4d84884cca1efc
-ms.sourcegitcommit: 9b41725d6db9957dd7928a3620fe4db41eb51c6e
+ms.openlocfilehash: 31aafedd59bc94d5b80359c8335421569dd510bf
+ms.sourcegitcommit: cfa04a73b26312bf18d8f6296891679166e2754d
 ms.translationtype: HT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 08/13/2020
-ms.locfileid: "88178841"
+ms.lasthandoff: 10/19/2020
+ms.locfileid: "92196297"
 ---
 # <a name="create-new-sql-server-table-using-rxdatastep-sql-server-and-revoscaler-tutorial"></a>rxDataStep을 사용하여 새 SQL Server 테이블 만들기(SQL Server 및 RevoScaleR 자습서)
 [!INCLUDE [SQL Server 2016 and later](../../includes/applies-to-version/sqlserver2016.md)]
 
-이 자습서는 SQL Server에서 [RevoScaleR 함수](https://docs.microsoft.com/machine-learning-server/r-reference/revoscaler/revoscaler)를 사용하는 방법에 대한 [RevoScaleR 자습서 시리즈](deepdive-data-science-deep-dive-using-the-revoscaler-packages.md) 중 자습서 11에 해당됩니다.
+이 자습서는 SQL Server에서 [RevoScaleR 함수](/machine-learning-server/r-reference/revoscaler/revoscaler)를 사용하는 방법에 대한 [RevoScaleR 자습서 시리즈](deepdive-data-science-deep-dive-using-the-revoscaler-packages.md) 중 자습서 11에 해당됩니다.
 
 이 자습서에서는 메모리 내 데이터 프레임, [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 컨텍스트 및 로컬 파일 간에 데이터를 이동하는 방법을 알아봅니다.
 
@@ -34,7 +34,7 @@ ms.locfileid: "88178841"
 
 **XDF란?**
 
-XDF 형식은 고차원 데이터를 위해 개발된 XML 표준이며, [Machine Learning Server](https://docs.microsoft.com/machine-learning-server/r/concept-what-is-xdf)에서 사용되는 네이티브 파일 형식입니다. 또한 행 및 열 처리와 분석을 최적화하는 R 인터페이스가 포함된 이진 파일 형식입니다.  XDF 형식을 사용하여 데이터를 이동하고 분석에 유용한 데이터의 하위 집합을 저장할 수 있습니다.
+XDF 형식은 고차원 데이터를 위해 개발된 XML 표준이며, [Machine Learning Server](/machine-learning-server/r/concept-what-is-xdf)에서 사용되는 네이티브 파일 형식입니다. 또한 행 및 열 처리와 분석을 최적화하는 R 인터페이스가 포함된 이진 파일 형식입니다.  XDF 형식을 사용하여 데이터를 이동하고 분석에 유용한 데이터의 하위 집합을 저장할 수 있습니다.
 
 1. 컴퓨팅 컨텍스트를 로컬 워크스테이션으로 설정합니다. **이 단계를 수행하려면 DDL 권한이 필요합니다.**
 
@@ -50,7 +50,7 @@ XDF 형식은 고차원 데이터를 위해 개발된 XML 표준이며, [Machine
     xdfAirDemo <- RxXdfData(file.path(rxGetOption("sampleDataDir"),  "AirlineDemoSmall.xdf"))
     ```
 
-3. 메모리 내 데이터에서 [rxGetVarInfo](https://docs.microsoft.com/machine-learning-server/r-reference/revoscaler/rxgetvarinfoxdf)를 호출하여 데이터 세트 요약을 확인합니다.
+3. 메모리 내 데이터에서 [rxGetVarInfo](/machine-learning-server/r-reference/revoscaler/rxgetvarinfoxdf)를 호출하여 데이터 세트 요약을 확인합니다.
   
     ```R
     rxGetVarInfo(xdfAirDemo)

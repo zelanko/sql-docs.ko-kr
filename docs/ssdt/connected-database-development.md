@@ -4,18 +4,20 @@ description: SQL Server Data Tools가 연결된 데이터베이스에서 작동�
 ms.prod: sql
 ms.technology: ssdt
 ms.topic: conceptual
+f1_keywords:
+- sql.data.tools.sqlserverobjectexplorer
 ms.assetid: 21f7f959-7b8e-4335-8681-bebcd957692c
 author: markingmyname
 ms.author: maghan
 ms.reviewer: “”
 ms.custom: seo-lt-2019
 ms.date: 02/09/2017
-ms.openlocfilehash: 340df9136dd674f4d340779dfc3d2d5e4db32042
-ms.sourcegitcommit: b860fe41b873977649dca8c1fd5619f294c37a58
+ms.openlocfilehash: b1b9e9d3bcdfbd9ca02b26da9c20cc086081502e
+ms.sourcegitcommit: bd3a135f061e4a49183bbebc7add41ab11872bae
 ms.translationtype: HT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 06/29/2020
-ms.locfileid: "85519073"
+ms.lasthandoff: 10/21/2020
+ms.locfileid: "92300341"
 ---
 # <a name="connected-database-development"></a>연결된 데이터베이스 개발
 

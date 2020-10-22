@@ -3,21 +3,21 @@ title: DMV를 사용하여 스크립트 모니터링
 description: SQL Server Machine Learning Services에서 DMV(동적 관리 뷰)를 사용하여 Python 및 R 외부 스크립트 실행을 모니터링합니다.
 ms.prod: sql
 ms.technology: machine-learning-services
-ms.date: 09/17/2019
+ms.date: 10/14/2019
 ms.topic: how-to
 author: dphansen
 ms.author: davidph
 ms.custom: seo-lt-2019
-monikerRange: '>=sql-server-2016||>=sql-server-linux-ver15||=sqlallproducts-allversions'
-ms.openlocfilehash: aee3aac6fa0f53314b28cc6064200fc398702dac
-ms.sourcegitcommit: 9b41725d6db9957dd7928a3620fe4db41eb51c6e
+monikerRange: '>=sql-server-2016||>=sql-server-linux-ver15||=azuresqldb-mi-current||=sqlallproducts-allversions'
+ms.openlocfilehash: 09a01937611b239aeb6db1df406fc057063eb634
+ms.sourcegitcommit: 22102f25db5ccca39aebf96bc861c92f2367c77a
 ms.translationtype: HT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 08/13/2020
-ms.locfileid: "88173344"
+ms.lasthandoff: 10/16/2020
+ms.locfileid: "92115550"
 ---
 # <a name="monitor-sql-server-machine-learning-services-using-dynamic-management-views-dmvs"></a>DMV(동적 관리 뷰)를 사용하여 SQL Server Machine Learning Services 모니터링
-[!INCLUDE [SQL Server 2016 and later](../../includes/applies-to-version/sqlserver2016.md)]
+[!INCLUDE [SQL Server 2016 SQL MI](../../includes/applies-to-version/sqlserver2016-asdbmi.md)]
 
 DMV(동적 관리 뷰)를 사용하여 외부 스크립트(Python 및 R)의 실행, 사용된 리소스, 문제 진단 및 SQL Server Machine Learning Services의 성능 조정을 모니터링합니다.
 
@@ -79,12 +79,12 @@ WHERE name = 'external scripts enabled';
 
 이 쿼리는 다음 열을 반환합니다.
 
-| 열 | Description |
-|--------|-------------|
-| IsMLServicesInstalled | 인스턴스에 대한 Machine Learning Services SQL Server가 설치된 경우 1을 반환합니다. 그렇지 않으면 0을 반환합니다. |
-| ExternalScriptsEnabled | 인스턴스에 외부 스크립트를 사용하도록 설정된 경우 1을 반환합니다. 그렇지 않으면 0을 반환합니다. |
+| 열                       | Description |
+|------------------------------|-------------|
+| IsMLServicesInstalled        | 인스턴스에 대한 Machine Learning Services SQL Server가 설치된 경우 1을 반환합니다. 그렇지 않으면 0을 반환합니다. |
+| ExternalScriptsEnabled       | 인스턴스에 외부 스크립트를 사용하도록 설정된 경우 1을 반환합니다. 그렇지 않으면 0을 반환합니다. |
 | ImpliedAuthenticationEnabled | 묵시적 인증을 사용하도록 설정된 경우 1을 반환합니다. 그렇지 않으면 0을 반환합니다. 묵시적 인증에 대한 구성은 SQLRUserGroup에 대한 로그인이 있는지 확인하는 방법으로 검사합니다. |
-| IsTcpEnabled | 인스턴스에 TCP/IP 프로토콜을 사용하도록 설정된 경우 1을 반환합니다. 그렇지 않으면 0을 반환합니다. 자세한 내용은 [기본 SQL Server 네트워크 프로토콜 구성](../../database-engine/configure-windows/default-sql-server-network-protocol-configuration.md)을 참조하세요. |
+| IsTcpEnabled                 | 인스턴스에 TCP/IP 프로토콜을 사용하도록 설정된 경우 1을 반환합니다. 그렇지 않으면 0을 반환합니다. 자세한 내용은 [기본 SQL Server 네트워크 프로토콜 구성](../../database-engine/configure-windows/default-sql-server-network-protocol-configuration.md)을 참조하세요. |
 
 ## <a name="active-sessions"></a>Active sessions
 
@@ -107,24 +107,24 @@ ON s.session_id = r.session_id;
 
 이 쿼리는 다음 열을 반환합니다.
 
-| 열 | Description |
-|--------|-------------|
-| session_id | 각각의 기본 활성 연결과 연결된 세션을 식별합니다. |
-| blocking_session_id | 요청을 차단하고 있는 세션의 ID입니다. 이 열이 NULL이면 요청이 차단되지 않거나 차단 세션의 세션 정보를 사용할 수 없습니다(또는 식별할 수 없음). |
-| 상태 | 요청의 상태입니다. |
-| database_name | 각 세션에 대한 현재 데이터베이스의 이름입니다. |
-| login_name | 현재 세션이 실행되고 있는 SQL Server 로그인 이름입니다. |
-| wait_time | 요청이 현재 차단된 경우 이 열은 현재 대기의 기간(밀리초)을 반환합니다. Null을 허용하지 않습니다. |
-| wait_type | 요청이 현재 차단된 경우 이 열은 대기 유형을 반환합니다. 대기 유형에 대한 자세한 내용은 [sys.dm_os_wait_stats](../../relational-databases/system-dynamic-management-views/sys-dm-os-wait-stats-transact-sql.md)를 참조하세요. |
-| last_wait_type | 이 요청이 이전에 차단된 경우 이 열은 마지막 대기의 유형을 반환합니다. |
-| total_elapsed_time | 요청이 도착한 이후 경과한 총 시간(밀리초)입니다. |
-| cpu_time | 요청에 사용된 CPU 시간(밀리초)입니다. |
-| reads | 이 요청에서 수행된 읽기 수입니다. |
-| logical_reads | 요청에서 수행된 논리적 읽기 수입니다. |
-| writes | 이 요청에서 수행된 쓰기 수입니다. |
-| 언어 | 지원되는 스크립트 언어를 나타내는 키워드입니다. |
+| 열                | Description |
+|-----------------------|-------------|
+| session_id            | 각각의 기본 활성 연결과 연결된 세션을 식별합니다. |
+| blocking_session_id   | 요청을 차단하고 있는 세션의 ID입니다. 이 열이 NULL이면 요청이 차단되지 않거나 차단 세션의 세션 정보를 사용할 수 없습니다(또는 식별할 수 없음). |
+| 상태                | 요청의 상태입니다. |
+| database_name         | 각 세션에 대한 현재 데이터베이스의 이름입니다. |
+| login_name            | 현재 세션이 실행되고 있는 SQL Server 로그인 이름입니다. |
+| wait_time             | 요청이 현재 차단된 경우 이 열은 현재 대기의 기간(밀리초)을 반환합니다. Null을 허용하지 않습니다. |
+| wait_type             | 요청이 현재 차단된 경우 이 열은 대기 유형을 반환합니다. 대기 유형에 대한 자세한 내용은 [sys.dm_os_wait_stats](../../relational-databases/system-dynamic-management-views/sys-dm-os-wait-stats-transact-sql.md)를 참조하세요. |
+| last_wait_type        | 이 요청이 이전에 차단된 경우 이 열은 마지막 대기의 유형을 반환합니다. |
+| total_elapsed_time    | 요청이 도착한 이후 경과한 총 시간(밀리초)입니다. |
+| cpu_time              | 요청에 사용된 CPU 시간(밀리초)입니다. |
+| reads                 | 이 요청에서 수행된 읽기 수입니다. |
+| logical_reads         | 요청에서 수행된 논리적 읽기 수입니다. |
+| writes                | 이 요청에서 수행된 쓰기 수입니다. |
+| 언어              | 지원되는 스크립트 언어를 나타내는 키워드입니다. |
 | degree_of_parallelism | 생성된 병렬 프로세스의 수를 나타내는 숫자입니다. 이 값은 요청된 병렬 프로세스의 수와 다를 수 있습니다. |
-| external_user_name | 스크립트가 실행된 Windows 작업자 계정입니다. |
+| external_user_name    | 스크립트가 실행된 Windows 작업자 계정입니다. |
 
 ## <a name="execution-statistics"></a>실행 통계
 
@@ -143,10 +143,10 @@ ORDER BY language, counter_name;
 
 이 쿼리는 다음 열을 반환합니다.
 
-| 열 | Description |
-|--------|-------------|
-| 언어 | 등록된 외부 스크립트 언어의 이름입니다. |
-| counter_name | 등록된 외부 스크립트 함수의 이름입니다. |
+| 열        | Description |
+|---------------|-------------|
+| 언어      | 등록된 외부 스크립트 언어의 이름입니다. |
+| counter_name  | 등록된 외부 스크립트 함수의 이름입니다. |
 | counter_value | 서버에서 등록된 외부 스크립트 함수를 호출한 총 인스턴스 수입니다. 이 값은 누적되며, 인스턴스에 기능이 설치된 시간부터 시작되어 다시 설정할 수 없습니다. |
 
 ## <a name="performance-counters"></a>성능 카운터
@@ -165,15 +165,15 @@ WHERE object_name LIKE '%External Scripts%'
 
 **sys.dm_os_performance_counters**는 외부 스크립트에 대해 다음과 같은 성능 카운터를 출력합니다.
 
-| 카운터 | Description |
-|---------|-------------|
-| 모든 실행 | 로컬 또는 원격 호출에 의해 시작된 외부 프로세스 수입니다. |
-| 병렬 실행 | 스크립트에 _\@병렬_ 사양이 포함되어 있고 [!INCLUDE[ssNoVersion_md](../../includes/ssnoversion-md.md)]에서 병렬 쿼리 계획을 생성하여 사용할 수 있었던 횟수입니다. |
-| 스트림 실행 | 스트리밍 기능이 호출된 횟수입니다. |
-| SQL CC 실행 | 호출이 원격으로 인스턴스화되었으며 SQL Server가 컴퓨팅 컨텍스트로 사용된 외부 스크립트 실행 횟수입니다. |
-| 묵시적 인증 로그인 | 묵시적 인증을 사용하여 ODBC 루프백 호출이 수행된 횟수, 즉 [!INCLUDE[ssNoVersion_md](../../includes/ssnoversion-md.md)]에서 스크립트 요청을 보내는 사용자를 대신하여 호출을 실행한 횟수입니다. |
+| 카운터                   | Description |
+|---------------------------|-------------|
+| 모든 실행          | 로컬 또는 원격 호출에 의해 시작된 외부 프로세스 수입니다. |
+| 병렬 실행       | 스크립트에 _\@병렬_ 사양이 포함되어 있고 [!INCLUDE[ssNoVersion_md](../../includes/ssnoversion-md.md)]에서 병렬 쿼리 계획을 생성하여 사용할 수 있었던 횟수입니다. |
+| 스트림 실행      | 스트리밍 기능이 호출된 횟수입니다. |
+| SQL CC 실행         | 호출이 원격으로 인스턴스화되었으며 SQL Server가 컴퓨팅 컨텍스트로 사용된 외부 스크립트 실행 횟수입니다. |
+| 묵시적 인증 로그인      | 묵시적 인증을 사용하여 ODBC 루프백 호출이 수행된 횟수, 즉 [!INCLUDE[ssNoVersion_md](../../includes/ssnoversion-md.md)]에서 스크립트 요청을 보내는 사용자를 대신하여 호출을 실행한 횟수입니다. |
 | 총 실행 시간(ms) | 호출 시점과 호출 완료 시점 사이에 경과한 시간입니다. |
-| 실행 오류 | 스크립트에서 오류를 보고한 횟수입니다. 이 횟수에는 R 또는 Python 오류가 포함되지 않습니다. |
+| 실행 오류          | 스크립트에서 오류를 보고한 횟수입니다. 이 횟수에는 R 또는 Python 오류가 포함되지 않습니다. |
 
 ## <a name="memory-usage"></a>메모리 사용량
 
@@ -193,11 +193,11 @@ FROM sys.dm_os_sys_info;
 
 이 쿼리는 다음 열을 반환합니다.
 
-| 열 | Description |
-|--------|-------------|
-| physical_memory_kb | 머신에 있는 실제 메모리의 총 양입니다. |
-| committed_kb | 메모리 관리자의 커밋된 메모리(KB)입니다. 메모리 관리자의 예약된 메모리는 포함하지 않습니다. |
-| external_pool_peak_memory_kb | 모든 외부 리소스 풀에 사용되는 최대 메모리 양의 합계(KB)입니다. |
+| 열                       | Description                                                                                                           |
+|------------------------------|-----------------------------------------------------------------------------------------------------------------------|
+| physical_memory_kb           | 머신에 있는 실제 메모리의 총 양입니다.                                                                   |
+| committed_kb                 | 메모리 관리자의 커밋된 메모리(KB)입니다. 메모리 관리자의 예약된 메모리는 포함하지 않습니다. |
+| external_pool_peak_memory_kb | 모든 외부 리소스 풀에 사용되는 최대 메모리 양의 합계(KB)입니다.                          |
 
 ## <a name="memory-configuration"></a>메모리 구성
 
@@ -222,9 +222,9 @@ FROM sys.dm_resource_governor_external_resource_pools AS ep;
 
 이 쿼리는 다음 열을 반환합니다.
 
-| 열 | Description |
-|--------|-------------|
-| name | 외부 리소스 풀 또는 SQL Server의 이름입니다. |
+| 열             | Description |
+|--------------------|-------------|
+| name               | 외부 리소스 풀 또는 SQL Server의 이름입니다. |
 | max_memory_percent | SQL Server 또는 외부 리소스 풀에서 사용할 수 있는 최대 메모리입니다. |
 
 ## <a name="resource-pools"></a>리소스 풀
@@ -247,12 +247,12 @@ FROM sys.dm_resource_governor_external_resource_pools AS ep;
 
 이 쿼리는 다음 열을 반환합니다.
 
-| 열 | Description |
-|--------|-------------|
-| pool_name | 리소스 풀의 이름입니다. SQL Server 리소스 풀에는 `SQL Server` 접두사가 붙고 외부 리소스 풀에는 `External Pool` 접두사가 붙습니다.
-| total_cpu_usage_hours | Resource Governor 통계를 다시 설정한 후 누적된 CPU 사용량(밀리초)입니다. |
-| read_io_completed_total | 리소스 관리자 통계를 다시 설정한 후 완료된 총 읽기 IO입니다. |
-| write_io_completed_total | 리소스 관리자 통계를 다시 설정한 후 완료된 총 쓰기 IO입니다. |
+| 열                   | Description  |
+|--------------------------|--------------|
+| pool_name                | 리소스 풀의 이름입니다. SQL Server 리소스 풀에는 `SQL Server` 접두사가 붙고 외부 리소스 풀에는 `External Pool` 접두사가 붙습니다. |
+| total_cpu_usage_hours    | Resource Governor 통계를 다시 설정한 후 누적된 CPU 사용량(밀리초)입니다. |
+| read_io_completed_total  | 리소스 관리자 통계를 다시 설정한 후 완료된 총 읽기 IO입니다.              |
+| write_io_completed_total | 리소스 관리자 통계를 다시 설정한 후 완료된 총 쓰기 IO입니다.             |
 
 ## <a name="installed-packages"></a>설치된 패키지
 
@@ -267,7 +267,7 @@ SQL Server Machine Learning Services에 설치된 R 패키지를 봅니다.
 이 출력을 가져오려면 아래 쿼리를 실행합니다. 이 쿼리는 R 스크립트를 사용하여 SQL Server와 함께 설치된 R 패키지를 확인합니다.
 
 ```sql
-EXEC sp_execute_external_script @language = N'R'
+EXECUTE sp_execute_external_script @language = N'R'
 , @script = N'
 OutputDataSet <- data.frame(installed.packages()[,c("Package", "Version", "Depends", "License", "LibPath")]);'
 WITH result sets((Package NVARCHAR(255), Version NVARCHAR(100), Depends NVARCHAR(4000)
@@ -276,13 +276,13 @@ WITH result sets((Package NVARCHAR(255), Version NVARCHAR(100), Depends NVARCHAR
 
 반환되는 열은 다음과 같습니다.
 
-| 열 | Description |
-|--------|-------------|
-| 패키지 | 설치된 패키지의 이름입니다. |
-| 버전 | 패키지 버전입니다. |
+| 열  | Description                                                 |
+|---------|-------------------------------------------------------------|
+| 패키지 | 설치된 패키지의 이름입니다.                              |
+| 버전 | 패키지 버전입니다.                                     |
 | 개체 | 설치된 패키지가 종속된 패키지를 나열합니다. |
-| License | 설치된 패키지의 라이선스입니다. |
-| LibPath | 패키지를 찾을 수 있는 디렉터리입니다. |
+| License | 설치된 패키지의 라이선스입니다.                          |
+| LibPath | 패키지를 찾을 수 있는 디렉터리입니다.                   |
 
 ### <a name="installed-packages-for-python"></a>Python에 대해 설치된 패키지
 
@@ -293,19 +293,20 @@ SQL Server Machine Learning Services에 설치된 Python 패키지를 봅니다.
 이 출력을 가져오려면 아래 쿼리를 실행합니다. 이 쿼리는 Python 스크립트를 사용하여 SQL Server와 함께 설치된 Python 패키지를 확인합니다.
 
 ```sql
-EXEC sp_execute_external_script @language = N'Python'
+EXECUTE sp_execute_external_script @language = N'Python'
 , @script = N'
-import pip
-OutputDataSet = pandas.DataFrame([(i.key, i.version, i.location) for i in pip.get_installed_distributions()])'
+import pkg_resources
+import pandas
+OutputDataSet = pandas.DataFrame(sorted([(i.key, i.version, i.location) for i in pkg_resources.working_set]))'
 WITH result sets((Package NVARCHAR(128), Version NVARCHAR(128), Location NVARCHAR(1000)));
 ```
 
 반환되는 열은 다음과 같습니다.
 
-| 열 | Description |
-|--------|-------------|
-| 패키지 | 설치된 패키지의 이름입니다. |
-| 버전 | 패키지 버전입니다. |
+| 열   | Description                               |
+|----------|-------------------------------------------|
+| 패키지  | 설치된 패키지의 이름입니다.            |
+| 버전  | 패키지 버전입니다.                   |
 | 위치 | 패키지를 찾을 수 있는 디렉터리입니다. |
 
 ## <a name="next-steps"></a>다음 단계

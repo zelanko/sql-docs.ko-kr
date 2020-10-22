@@ -9,12 +9,12 @@ author: dphansen
 ms.author: davidph
 ms.custom: seo-lt-2019
 monikerRange: '>=sql-server-2016||>=sql-server-linux-ver15||=sqlallproducts-allversions'
-ms.openlocfilehash: cc423acd1e8c703b5890984df556b65f46cf5d4a
-ms.sourcegitcommit: 9b41725d6db9957dd7928a3620fe4db41eb51c6e
+ms.openlocfilehash: 7dbb9e32c1b5f68334ae1ccab17a85c23c069112
+ms.sourcegitcommit: cfa04a73b26312bf18d8f6296891679166e2754d
 ms.translationtype: HT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 08/13/2020
-ms.locfileid: "88179772"
+ms.lasthandoff: 10/19/2020
+ms.locfileid: "92192623"
 ---
 # <a name="tutorial-sql-development-for-r-data-scientists"></a>자습서: R 데이터 과학자를 위한 SQL 개발
 [!INCLUDE [SQL Server 2016](../../includes/applies-to-version/sqlserver2016.md)]
@@ -33,7 +33,7 @@ R 코드, [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 데이터 �
 
 + [데이터베이스 사용 권한](../security/user-permission.md) 및 SQL Server 데이터베이스 사용자 로그인
 
-+ [SQL Server Management Studio](https://docs.microsoft.com/sql/ssms/download-sql-server-management-studio-ssms)
++ [SQL Server Management Studio](../../ssms/download-sql-server-management-studio-ssms.md)
 
 + [NYC Taxi 데모 데이터베이스](demo-data-nyctaxi-in-sql.md)
 
@@ -47,7 +47,7 @@ R 코드, [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 데이터 �
 + C:\Program Files\Microsoft SQL Server\MSSQL14.MSSQLSERVER\R_SERVICES\library\RevoScaleR
 
 > [!NOTE]
-> R 클라이언트 대신 [Machine Learning Server](https://docs.microsoft.com/machine-learning-server/) 또는 [Data Science Virtual Machine](https://docs.microsoft.com/azure/machine-learning/data-science-virtual-machine/)을 사용하는 경우 RevoScaleR 경로는 C:\Program Files\Microsoft\ML Server\R_SERVER\library\RevoScaleR입니다.
+> R 클라이언트 대신 [Machine Learning Server](/machine-learning-server/) 또는 [Data Science Virtual Machine](/azure/machine-learning/data-science-virtual-machine/)을 사용하는 경우 RevoScaleR 경로는 C:\Program Files\Microsoft\ML Server\R_SERVER\library\RevoScaleR입니다.
 
 <a name="add-packages"></a>
 

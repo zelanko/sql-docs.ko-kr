@@ -9,12 +9,12 @@ ms.date: 09/30/2020
 ms.topic: conceptual
 ms.prod: sql
 ms.technology: big-data-cluster
-ms.openlocfilehash: bd8da3642d0a650ea10c54b7ed8e46a54fba2971
-ms.sourcegitcommit: 783b35f6478006d654491cb52f6edf108acf2482
+ms.openlocfilehash: 547337ea7573429bcccc1eb9b9c36914f286a2a5
+ms.sourcegitcommit: ae474d21db4f724523e419622ce79f611e956a22
 ms.translationtype: HT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 10/09/2020
-ms.locfileid: "91898743"
+ms.lasthandoff: 10/20/2020
+ms.locfileid: "92257310"
 ---
 # <a name="connect-big-data-clusters-2019-active-directory-mode"></a>[!INCLUDE[big-data-clusters-2019](../includes/ssbigdataclusters-ss-nover.md)] 연결: Active Directory 모드
 
@@ -57,7 +57,7 @@ Azure Data Studio에서:
 
 ### <a name="connect-to-controller-with-ad-authentication-from-linuxmac"></a>Linux/Mac에서 AD 인증을 사용하여 컨트롤러에 연결
 
-`azdata` 및 AD 인증을 사용하여 컨트롤러 엔드포인트에 연결하는 두 가지 옵션이 있습니다. *--endpoint/-e* 매개 변수를 사용할 수 있습니다.
+[!INCLUDE [azure-data-cli-azdata](../includes/azure-data-cli-azdata.md)] 및 AD 인증을 사용하여 컨트롤러 엔드포인트에 연결하는 두 가지 옵션이 있습니다. *--endpoint/-e* 매개 변수를 사용할 수 있습니다.
 
 ```bash
 kinit <username>@<domain name>

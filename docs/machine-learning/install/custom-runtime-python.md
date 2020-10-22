@@ -9,12 +9,12 @@ author: cawrites
 ms.author: chadam
 ms.custom: seo-lt-2019
 monikerRange: '>=sql-server-ver15||>=sql-server-linux-ver15||=sqlallproducts-allversions'
-ms.openlocfilehash: d02217eaae3cf402a1ccb6e08780f4e9406d446f
-ms.sourcegitcommit: afb02c275b7c79fbd90fac4bfcfd92b00a399019
+ms.openlocfilehash: 4a625684b3196fc246b2753fc7b7e38b3e603f6e
+ms.sourcegitcommit: 43b92518c5848489d03c68505bd9905f8686cbc0
 ms.translationtype: HT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 10/12/2020
-ms.locfileid: "91956373"
+ms.lasthandoff: 10/17/2020
+ms.locfileid: "92155068"
 ---
 # <a name="install-a-python-custom-runtime-for-sql-server"></a>SQL Server용 Python 사용자 지정 런타임 설치
 [!INCLUDE [SQL Server 2019 and later](../../includes/applies-to-version/sqlserver2019.md)]
@@ -41,7 +41,7 @@ Python 사용자 지정 런타임을 설치하기 전에 다음을 설치합니�
   > [!NOTE]
   > Python 사용자 지정 런타임은 SQL Server 2019용 CU(누적 업데이트) 3 이상이 필요합니다.
 
-+ [확장성 프레임워크가 포함된 Windows의 SQL Server 언어 확장](../../language-extensions/install/install-sql-server-language-extensions-on-windows.md)
++ [확장성 프레임워크가 포함된 Windows의 SQL Server 언어 확장](../../language-extensions/install/windows-java.md)
 
 + [Python 3.7]( https://www.python.org/downloads/release/python-379/)
 
@@ -170,7 +170,7 @@ SQL Server on Linux를 설치하는 경우 Microsoft 리포지토리를 구성�
   > [!NOTE]
   > Python 사용자 지정 런타임은 SQL Server 2019용 CU(누적 업데이트) 3 이상이 필요합니다.
 
-+ [확장성 프레임워크를 사용하는 Linux의 SQL Server](../../linux/sql-server-linux-setup-language-extensions.md)
++ [확장성 프레임워크를 사용하는 Linux의 SQL Server](../../linux/sql-server-linux-setup-language-extensions-java.md)
 
 + [Python 3.7](https://www.python.org/downloads/release/python-379/)
 

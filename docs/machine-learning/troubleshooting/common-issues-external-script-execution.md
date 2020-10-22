@@ -9,12 +9,12 @@ author: dphansen
 ms.author: davidph
 ms.custom: seo-lt-2019
 monikerRange: '>=sql-server-2016||>=sql-server-linux-ver15||=sqlallproducts-allversions'
-ms.openlocfilehash: e814e135c7e7054231aea3988a30afe755e1fc9d
-ms.sourcegitcommit: 04fb4c2d7ccddd30745b334b319d9d2dd34325d6
+ms.openlocfilehash: 0e2fb03c2b4b79db7d97a3ad66d46d79e669983c
+ms.sourcegitcommit: cfa04a73b26312bf18d8f6296891679166e2754d
 ms.translationtype: HT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 09/09/2020
-ms.locfileid: "89570295"
+ms.lasthandoff: 10/19/2020
+ms.locfileid: "92194525"
 ---
 # <a name="troubleshoot-issues-with-launchpad-service-and-external-script-execution-in-sql-server"></a>SQL Server에서 실행 패드 서비스 및 외부 스크립트 실행에 대한 문제 해결
 [!INCLUDE [SQL Server 2016 and later](../../includes/applies-to-version/sqlserver2016.md)]
@@ -23,7 +23,7 @@ ms.locfileid: "89570295"
 
 ## <a name="determine-whether-launchpad-is-running"></a>실행 패드 실행 여부 확인
 
-1. **서비스** 패널(Services.msc)을 엽니다. 또는 명령줄에서 **SQLServerManager13.msc** 또는 **SQLServerManager14.msc**를 입력하여 [SQL Server 구성 관리자](https://docs.microsoft.com/sql/relational-databases/sql-server-configuration-manager)를 엽니다.
+1. **서비스** 패널(Services.msc)을 엽니다. 또는 명령줄에서 **SQLServerManager13.msc** 또는 **SQLServerManager14.msc**를 입력하여 [SQL Server 구성 관리자](../../relational-databases/sql-server-configuration-manager.md)를 엽니다.
 
 2. 실행 패드를 실행하는 서비스 계정을 적어 둡니다. R 또는 Python이 사용하도록 설정된 각 인스턴스에는 실행 패드 서비스의 고유한 인스턴스가 있어야 합니다. 예를 들어 명명된 인스턴스의 서비스는 _MSSQLLaunchpad$InstanceName_과 같이 표시될 수 있습니다.
 
@@ -121,7 +121,7 @@ R 사용자의 Windows 그룹(Python에도 사용됨)이 R Services를 실행하
 
 기계 학습을 설치한 후 사용하도록 설정했지만 R 또는 Python 스크립트를 실행할 때 이 오류가 발생한다면 인스턴스에 대한 실행 패드 서비스의 실행이 중지되었을 수 있습니다.
 
-1. Windows 명령 프롬프트에서 SQL Server 구성 관리자를 엽니다. 자세한 내용은 [SQL Server Configuration Manager](https://docs.microsoft.com/sql/relational-databases/sql-server-configuration-manager)을 참조하세요.
+1. Windows 명령 프롬프트에서 SQL Server 구성 관리자를 엽니다. 자세한 내용은 [SQL Server Configuration Manager](../../relational-databases/sql-server-configuration-manager.md)을 참조하세요.
 
 2. 인스턴스의 SQL Server 실행 패드를 마우스 오른쪽 단추로 클릭한 후 **속성**을 선택합니다.
 
@@ -223,7 +223,7 @@ R을 설치하는 볼륨에서 짧은 파일 이름을 지원하지 않는 경�
 
 해결 방법으로, SQL Server와 R Services가 설치된 볼륨에서 8dot3 표기법을 사용하도록 설정할 수 있습니다. 그런 다음 R Services 구성 파일에서 작업 디렉터리의 짧은 이름을 제공해야 합니다.
 
-1. 8dot3 표기법을 사용하려면 [fsutil 8dot3name](https://technet.microsoft.com/library/ff621566(v=ws.11).aspx)에 설명된 대로 *8dot3name* 인수를 사용하여 fsutil 유틸리티를 실행합니다.
+1. 8dot3 표기법을 사용하려면 [fsutil 8dot3name](/previous-versions/windows/it-pro/windows-server-2012-R2-and-2012/ff621566(v=ws.11))에 설명된 대로 *8dot3name* 인수를 사용하여 fsutil 유틸리티를 실행합니다.
 
 2. 8dot3 표기법을 사용하도록 설정한 후 RLauncher.config 파일을 열고 `WORKING_DIRECTORY` 속성을 기록해 둡니다. 이 파일을 찾는 방법에 대한 자세한 내용은 [Machine Learning 문제 해결을 위한 데이터 수집](data-collection-ml-troubleshooting-process.md)을 참조하세요.
 

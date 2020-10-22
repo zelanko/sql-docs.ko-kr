@@ -9,19 +9,19 @@ author: dphansen
 ms.author: davidph
 ms.custom: seo-lt-2019
 monikerRange: '>=sql-server-2016||>=sql-server-linux-ver15||=sqlallproducts-allversions'
-ms.openlocfilehash: 95390a1eb5418a43883a9605c7498e6a86876e7e
-ms.sourcegitcommit: 9b41725d6db9957dd7928a3620fe4db41eb51c6e
+ms.openlocfilehash: 7d3b2da6c649c514dff31225253292642212cd41
+ms.sourcegitcommit: cfa04a73b26312bf18d8f6296891679166e2754d
 ms.translationtype: HT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 08/13/2020
-ms.locfileid: "88178900"
+ms.lasthandoff: 10/19/2020
+ms.locfileid: "92195794"
 ---
 # <a name="set-up-a-data-science-client-for-r-development-on-sql-server"></a>SQL Server에서 R 개발을 위한 데이터 과학 클라이언트 설정
 [!INCLUDE [SQL Server 2016 and later](../../includes/applies-to-version/sqlserver2016.md)]
 
 R 통합은 [SQL Server 2016 R Services](../install/sql-r-services-windows-install.md) 또는 [SQL Server Machine Learning Services(데이터베이스 내)](../install/sql-machine-learning-services-windows-install.md) 설치에 R 언어 옵션을 포함하는 경우 SQL Server 2016 이상에서 사용할 수 있습니다. 
 
-SQL Server에 대한 R 솔루션을 개발하고 배포하려면 개발 워크스테이션에 [Microsoft R Client](https://docs.microsoft.com/machine-learning-server/r-client/what-is-microsoft-r-client)를 설치하여 [RevoScaleR](https://docs.microsoft.com/machine-learning-server/r-reference/revoscaler/revoscaler) 및 기타 R 라이브러리를 가져옵니다. 원격 SQL Server 인스턴스에도 필요한 RevoScaleR 라이브러리는 두 시스템 간에 컴퓨팅 요청을 조정합니다. 
+SQL Server에 대한 R 솔루션을 개발하고 배포하려면 개발 워크스테이션에 [Microsoft R Client](/machine-learning-server/r-client/what-is-microsoft-r-client)를 설치하여 [RevoScaleR](/machine-learning-server/r-reference/revoscaler/revoscaler) 및 기타 R 라이브러리를 가져옵니다. 원격 SQL Server 인스턴스에도 필요한 RevoScaleR 라이브러리는 두 시스템 간에 컴퓨팅 요청을 조정합니다. 
 
 이 문서에서는 기계 학습 및 R 통합에 사용하도록 설정된 원격 SQL Server와 상호 작용할 수 있도록 R 클라이언트 개발 워크스테이션을 구성하는 방법에 대해 알아봅니다. 이 문서의 단계를 완료하면 SQL Server에 있는 것과 동일한 R 라이브러리가 만들어집니다. 또한 SQL Server의 로컬 R 세션에서 원격 R 세션으로 계산을 푸시하는 방법도 알아봅니다.
 
@@ -34,7 +34,7 @@ SQL Server에 대한 R 솔루션을 개발하고 배포하려면 개발 워크�
 
 ## <a name="commonly-used-tools"></a>일반적으로 사용되는 도구
 
-SQL에 익숙하지 않은 R 개발자이거나 R 및 데이터베이스 내 분석을 위한 SQL 개발자인 경우 데이터베이스 내 분석의 모든 기능을 실행하려면 R 개발 도구와 [SSMS(SQL Server Management Studio)](https://docs.microsoft.com/sql/ssms/download-sql-server-management-studio-ssms) 같은 T-SQL 쿼리 편집기가 모두 필요합니다.
+SQL에 익숙하지 않은 R 개발자이거나 R 및 데이터베이스 내 분석을 위한 SQL 개발자인 경우 데이터베이스 내 분석의 모든 기능을 실행하려면 R 개발 도구와 [SSMS(SQL Server Management Studio)](../../ssms/download-sql-server-management-studio-ssms.md) 같은 T-SQL 쿼리 편집기가 모두 필요합니다.
 
 간단한 R 개발 시나리오의 경우 MRO 및 SQL Server의 기본 R 배포에 포함된 RGUI 실행 파일을 사용할 수 있습니다. 이 문서에서는 로컬 및 원격 R 세션에 모두 RGUI를 사용하는 방법을 설명합니다. 생산성 향상을 위해 [RStudio 또는 Visual Studio](#install-ide)와 같이 모든 기능을 갖춘 IDE를 사용해야 합니다.
 
@@ -42,7 +42,7 @@ SSMS는 R 코드를 포함하는 저장 프로시저를 포함하여 SQL Server�
 
 ## <a name="1---install-r-packages"></a>1 - R 패키지 설치
 
-Microsoft의 R 패키지는 여러 제품 및 서비스에서 사용할 수 있습니다. 로컬 워크스테이션에 Microsoft R Client를 설치하는 것이 좋습니다. R Client는 [RevoScaleR](https://docs.microsoft.com/machine-learning-server/r-reference/revoscaler/revoscaler), [MicrosoftML](https://docs.microsoft.com/machine-learning-server/r-reference/microsoftml/microsoftml-package), [SQLRUtils](https://docs.microsoft.com/machine-learning-server/r-reference/sqlrutils/sqlrutils) 및 기타 R 패키지를 제공합니다.
+Microsoft의 R 패키지는 여러 제품 및 서비스에서 사용할 수 있습니다. 로컬 워크스테이션에 Microsoft R Client를 설치하는 것이 좋습니다. R Client는 [RevoScaleR](/machine-learning-server/r-reference/revoscaler/revoscaler), [MicrosoftML](/machine-learning-server/r-reference/microsoftml/microsoftml-package), [SQLRUtils](/machine-learning-server/r-reference/sqlrutils/sqlrutils) 및 기타 R 패키지를 제공합니다.
 
 1. [Microsoft R Client를 다운로드](https://aka.ms/rclient/download)합니다.
 
@@ -103,7 +103,7 @@ SQL Server 인스턴스에 연결하여 스크립트를 실행하고 데이터�
 
 ## <a name="5---test-connections"></a>5 - 연결 테스트
 
-확인 단계로 **RGUI** 및 RevoScaleR을 사용하여 원격 서버에 대한 연결을 확인합니다. SQL Server에서 [원격 연결](https://docs.microsoft.com/sql/database-engine/configure-windows/view-or-configure-remote-server-connection-options-sql-server)을 사용하도록 설정해야 하며, 사용자 로그인 및 연결할 데이터베이스를 포함하여 권한이 있어야 합니다. 
+확인 단계로 **RGUI** 및 RevoScaleR을 사용하여 원격 서버에 대한 연결을 확인합니다. SQL Server에서 [원격 연결](../../database-engine/configure-windows/view-or-configure-remote-server-connection-options-sql-server.md)을 사용하도록 설정해야 하며, 사용자 로그인 및 연결할 데이터베이스를 포함하여 권한이 있어야 합니다. 
 
 다음 단계에서는 데모 데이터베이스 [NYCTaxi_Sample](../tutorials/demo-data-nyctaxi-in-sql.md) 및 Windows 인증을 가정합니다.
 
@@ -219,8 +219,8 @@ RStudio를 다시 열면 R Client(또는 독립 실행형 서버)의 R 실행 �
 R의 기본 설정 IDE가 아직 없는 경우 **Visual Studio용 R 도구**를 추천합니다.
 
 + [RTVS(Visual Studio용 R 도구) 다운로드](https://marketplace.visualstudio.com/items?itemName=MikhailArkhipov007.RTVS2019)
-+ [설치 지침](https://docs.microsoft.com/visualstudio/rtvs/installing-r-tools-for-visual-studio) - RTVS는 여러 버전의 Visual Studio에서 사용할 수 있습니다.
-+ [Visual Studio용 R 도구 시작](https://docs.microsoft.com/visualstudio/rtvs/getting-started-with-r)
++ [설치 지침](/visualstudio/rtvs/installing-r-tools-for-visual-studio) - RTVS는 여러 버전의 Visual Studio에서 사용할 수 있습니다.
++ [Visual Studio용 R 도구 시작](/visualstudio/rtvs/getting-started-with-r)
 
 ### <a name="connect-to-sql-server-from-rtvs"></a>RTVS에서 SQL Server에 연결
 

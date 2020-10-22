@@ -9,12 +9,12 @@ author: dphansen
 ms.author: davidph
 ms.custom: seo-lt-2019
 monikerRange: '>=sql-server-2016||>=sql-server-linux-ver15||=sqlallproducts-allversions'
-ms.openlocfilehash: 8eccd11403f93b1307995a44d38100d680fa8149
-ms.sourcegitcommit: 9b41725d6db9957dd7928a3620fe4db41eb51c6e
+ms.openlocfilehash: 661ce31839d08b36e7a51f1d09965b68e5350317
+ms.sourcegitcommit: cfa04a73b26312bf18d8f6296891679166e2754d
 ms.translationtype: HT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 08/13/2020
-ms.locfileid: "88179767"
+ms.lasthandoff: 10/19/2020
+ms.locfileid: "92193647"
 ---
 # <a name="deploy-the-r-model-and-use-it-in-sql-server-walkthrough"></a>R 모델을 배포하고 SQL Server에서 사용(연습)
 [!INCLUDE [SQL Server 2016](../../includes/applies-to-version/sqlserver2016.md)]
@@ -216,7 +216,7 @@ ms.locfileid: "88179767"
     ```
 
     >[!TIP]
-    > RTVS(Visual Studio용 R 도구)를 사용하면 SQL Server 및 R과 보다 잘 연결됩니다. SQL Server 연결에서 RODBC를 사용하는 방법에 대한 추가 예제를 보려면 다음 문서를 참조하세요. [SQL Server 및 R 사용](https://docs.microsoft.com/visualstudio/rtvs/sql-server)
+    > RTVS(Visual Studio용 R 도구)를 사용하면 SQL Server 및 R과 보다 잘 연결됩니다. SQL Server 연결에서 RODBC를 사용하는 방법에 대한 추가 예제를 보려면 다음 문서를 참조하세요. [SQL Server 및 R 사용](/visualstudio/rtvs/sql-server)
 
 ## <a name="next-steps"></a>다음 단계
 
@@ -229,5 +229,5 @@ ms.locfileid: "88179767"
 
 + [데이터 과학 시나리오 및 솔루션 템플릿](data-science-scenarios-and-solution-templates.md)
 + [데이터베이스 내 고급 분석](r-taxi-classification-introduction.md)
-+ [Machine Learning Server 방법 가이드](https://docs.microsoft.com/machine-learning-server/r/how-to-introduction)
-+ [Machine Learning Server 추가 리소스](https://docs.microsoft.com//machine-learning-server/resources-more)
++ [Machine Learning Server 방법 가이드](/machine-learning-server/r/how-to-introduction)
++ [Machine Learning Server 추가 리소스](//machine-learning-server/resources-more)

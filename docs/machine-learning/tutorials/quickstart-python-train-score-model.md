@@ -11,12 +11,12 @@ ms.author: chadam
 ms.reviewer: davidph
 ms.custom: seo-lt-2019
 monikerRange: '>=sql-server-2017||>=sql-server-linux-ver15||=azuresqldb-mi-current||=sqlallproducts-allversions'
-ms.openlocfilehash: 43453738d9351a18e4ed6e9887fdf75bb2e9521a
-ms.sourcegitcommit: 32135463a8494d9ed1600a58f51819359e3c09dc
+ms.openlocfilehash: e5a64e3de5dae2e879c4537783d33aab81dd9662
+ms.sourcegitcommit: cfa04a73b26312bf18d8f6296891679166e2754d
 ms.translationtype: HT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 10/08/2020
-ms.locfileid: "91834049"
+ms.lasthandoff: 10/19/2020
+ms.locfileid: "92194472"
 ---
 # <a name="quickstart-create-and-score-a-predictive-model-in-python-with-sql-machine-learning"></a>빠른 시작: Python에서 SQL 기계 학습을 사용하여 예측 모델 만들기 및 점수 매기기
 [!INCLUDE [SQL Server 2017 SQL MI](../../includes/applies-to-version/sqlserver2017-asdbmi.md)]
@@ -95,7 +95,7 @@ SQL에서 실행되는 두 개의 저장 프로시저를 만들고 실행합니�
 
 이 단계에서는 포함된 코드를 실행하는 프로시저를 실행하고, 그 출력으로 학습 및 직렬화된 모델을 만듭니다. 
 
-데이터베이스에서 다시 사용하기 위해 저장된 모델은 바이트 스트림으로 직렬화되어 데이터베이스 테이블의 VARBINARY(MAX) 열에 저장됩니다. 모델이 생성되고, 학습되고, 직렬화되고, 데이터베이스에 저장된 후에는 다른 프로시저 또는 채점 워크로드의 [PREDICT T-SQL](https://docs.microsoft.com/sql/t-sql/queries/predict-transact-sql) 함수를 사용하여 모델을 호출할 수 있습니다.
+데이터베이스에서 다시 사용하기 위해 저장된 모델은 바이트 스트림으로 직렬화되어 데이터베이스 테이블의 VARBINARY(MAX) 열에 저장됩니다. 모델이 생성되고, 학습되고, 직렬화되고, 데이터베이스에 저장된 후에는 다른 프로시저 또는 채점 워크로드의 [PREDICT T-SQL](../../t-sql/queries/predict-transact-sql.md) 함수를 사용하여 모델을 호출할 수 있습니다.
 
 1. 다음 스크립트를 실행하여 프로시저를 실행합니다. 저장 프로시저를 실행하는 특정 문은 네 번째 줄의 `EXECUTE`입니다.
 

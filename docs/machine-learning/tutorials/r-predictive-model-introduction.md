@@ -11,12 +11,12 @@ ms.reviewer: garye, davidph
 ms.date: 05/26/2020
 ms.custom: seo-lt-2019
 monikerRange: '>=sql-server-2016||>=sql-server-linux-ver15||=azuresqldb-mi-current||=sqlallproducts-allversions'
-ms.openlocfilehash: f9179c69b5c559578a44e50ffbe2e3b685e4a837
-ms.sourcegitcommit: 9b41725d6db9957dd7928a3620fe4db41eb51c6e
+ms.openlocfilehash: 93eecbaaa68e788e69997942d5bf91b5a545c520
+ms.sourcegitcommit: cfa04a73b26312bf18d8f6296891679166e2754d
 ms.translationtype: HT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 08/13/2020
-ms.locfileid: "88173283"
+ms.lasthandoff: 10/19/2020
+ms.locfileid: "92193715"
 ---
 # <a name="tutorial-develop-a-predictive-model-in-r-with-sql-machine-learning"></a>자습서: R에서 SQL 기계 학습을 사용하여 예측 모델 개발
 [!INCLUDE [SQL Server 2016 SQL MI](../../includes/applies-to-version/sqlserver2016-asdbmi.md)]
@@ -70,7 +70,7 @@ ms.locfileid: "88173283"
 
 * RODBC - 이 드라이버는 이 자습서에서 개발할 R 스크립트에 사용됩니다. 아직 설치하지 않았으면 R 명령 `install.packages("RODBC")`를 사용하여 설치합니다. RODBC에 대한 자세한 내용은 [CRAN - Package RODBC](https://CRAN.R-project.org/package=RODBC)를 참조하세요.
 
-* SQL 쿼리 도구 - 이 자습서에서는 [Azure Data Studio](../../azure-data-studio/what-is.md)를 사용한다고 가정합니다. 자세한 내용은 [Azure Data Studio에서 Notebook을 사용하는 방법](../../azure-data-studio/sql-notebooks.md)을 참조하세요.
+* SQL 쿼리 도구 - 이 자습서에서는 [Azure Data Studio](../../azure-data-studio/what-is.md)를 사용한다고 가정합니다. 자세한 내용은 [Azure Data Studio에서 Notebook을 사용하는 방법](../../azure-data-studio/notebooks/notebooks-guidance.md)을 참조하세요.
 
 ## <a name="restore-the-sample-database"></a>샘플 데이터베이스 복원
 

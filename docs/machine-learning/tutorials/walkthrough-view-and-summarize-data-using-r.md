@@ -9,12 +9,12 @@ author: dphansen
 ms.author: davidph
 ms.custom: seo-lt-2019
 monikerRange: '>=sql-server-2016||>=sql-server-linux-ver15||=sqlallproducts-allversions'
-ms.openlocfilehash: bff067202bccf585cce43c35443d466c033eff7d
-ms.sourcegitcommit: 9b41725d6db9957dd7928a3620fe4db41eb51c6e
+ms.openlocfilehash: 7e48e25444acc2f84794afc487c95bdd5af64f30
+ms.sourcegitcommit: cfa04a73b26312bf18d8f6296891679166e2754d
 ms.translationtype: HT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 08/13/2020
-ms.locfileid: "88179781"
+ms.lasthandoff: 10/19/2020
+ms.locfileid: "92195075"
 ---
 # <a name="view-and-summarize-sql-server-data-using-r-walkthrough"></a>R을 사용하여 SQL Server 데이터 보기 및 요약(연습)
 [!INCLUDE [SQL Server 2016](../../includes/applies-to-version/sqlserver2016.md)]
@@ -69,11 +69,11 @@ ms.locfileid: "88179781"
 
     - R에서는 워크스테이션과 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 컴퓨터 간에 R 개체를 직렬화할 때 임시 디렉터리를 사용합니다. *sqlShareDir*로 사용되는 로컬 디렉터리를 지정하거나 기본값을 적용할 수 있습니다.
   
-    - *sqlWait*를 사용하여 서버에서 R에서 결과를 대기할지 여부를 지정합니다.  대기 중인 작업 및 대기 중이 아닌 작업에 대한 자세한 내용은 [Microsoft R의 RevoScaleR을 사용한 분산 및 병렬 컴퓨팅](https://docs.microsoft.com/r-server/r/how-to-revoscaler-distributed-computing)을 참조하세요.
+    - *sqlWait*를 사용하여 서버에서 R에서 결과를 대기할지 여부를 지정합니다.  대기 중인 작업 및 대기 중이 아닌 작업에 대한 자세한 내용은 [Microsoft R의 RevoScaleR을 사용한 분산 및 병렬 컴퓨팅](/r-server/r/how-to-revoscaler-distributed-computing)을 참조하세요.
   
     - *sqlConsoleOutput* 인수를 사용하여 R 콘솔의 출력을 표시하지 않도록 지정합니다.
 
-4. [RxInSqlServer](https://docs.microsoft.com/r-server/r-reference/revoscaler/rxinsqlserver) 구문을 호출하여 이미 정의된 변수 및 연결 문자열로 컴퓨팅 컨텍스트 개체를 만들고 새 개체를 R 변수 *sqlcc*에 저장합니다.
+4. [RxInSqlServer](/r-server/r-reference/revoscaler/rxinsqlserver) 구문을 호출하여 이미 정의된 변수 및 연결 문자열로 컴퓨팅 컨텍스트 개체를 만들고 새 개체를 R 변수 *sqlcc*에 저장합니다.
   
     ```R
     sqlcc <- RxInSqlServer(connectionString = connStr, shareDir = sqlShareDir, wait = sqlWait, consoleOutput = sqlConsoleOutput)
@@ -85,14 +85,14 @@ ms.locfileid: "88179781"
     rxSetComputeContext(sqlcc)
     ```
 
-    + [rxSetComputeContext](https://docs.microsoft.com/machine-learning-server/r-reference/revoscaler/rxsetcomputecontext)는 이전에 활성화된 컴퓨팅 컨텍스트를 사용할 수 있도록 보이지 않게 반환합니다.
-    + [rxGetComputeContext](https://docs.microsoft.com/machine-learning-server/r-reference/revoscaler/rxsetcomputecontext)는 활성 컴퓨팅 컨텍스트를 반환합니다.
+    + [rxSetComputeContext](/machine-learning-server/r-reference/revoscaler/rxsetcomputecontext)는 이전에 활성화된 컴퓨팅 컨텍스트를 사용할 수 있도록 보이지 않게 반환합니다.
+    + [rxGetComputeContext](/machine-learning-server/r-reference/revoscaler/rxsetcomputecontext)는 활성 컴퓨팅 컨텍스트를 반환합니다.
     
     컴퓨팅 컨텍스트 설정은 **RevoScaleR** 패키지의 함수를 사용하는 작업에만 영향을 줍니다. 컴퓨팅 컨텍스트는 오픈 소스 R 작업의 수행 방식에는 영향을 주지 않습니다.
 
 ## <a name="create-a-data-source-using-rxsqlserver"></a>RxSqlServer를 사용하여 데이터 원본 만들기
 
-RevoScaleR 및 MicrosoftML과 같은 Microsoft R 라이브러리를 사용하는 경우 *데이터 원본*은 RevoScaleR 함수를 사용하여 만든 개체입니다. 데이터 원본 개체는 모델 학습 또는 기능 추출을 비롯하여 태스크에 사용하려는 일부 데이터 세트를 지정합니다. SQL Server를 포함하는 다양한 원본에서 데이터를 가져올 수 있습니다. 현재 지원되는 원본 목록은 [RxDataSource](https://docs.microsoft.com/r-server/r-reference/revoscaler/rxdatasource)를 참조하세요.
+RevoScaleR 및 MicrosoftML과 같은 Microsoft R 라이브러리를 사용하는 경우 *데이터 원본*은 RevoScaleR 함수를 사용하여 만든 개체입니다. 데이터 원본 개체는 모델 학습 또는 기능 추출을 비롯하여 태스크에 사용하려는 일부 데이터 세트를 지정합니다. SQL Server를 포함하는 다양한 원본에서 데이터를 가져올 수 있습니다. 현재 지원되는 원본 목록은 [RxDataSource](/r-server/r-reference/revoscaler/rxdatasource)를 참조하세요.
 
 이전에는 연결 문자열을 정의하고 해당 정보를 R 변수에 저장했습니다. 해당 연결 정보를 다시 사용하여 가져올 데이터를 지정할 수 있습니다.
 
@@ -104,7 +104,7 @@ RevoScaleR 및 MicrosoftML과 같은 Microsoft R 라이브러리를 사용하는
 
     여기서는 TOP 절을 사용하여 작업을 더 빠르게 실행했지만 쿼리에 의해 반환되는 실제 행은 순서에 따라 달라질 수 있습니다. 따라서 요약 결과도 아래에 나열된 것과 다를 수 있습니다. TOP 절은 얼마든지 제거해도 됩니다.
 
-2. 쿼리 정의를 인수로 [RxSqlServerData](https://docs.microsoft.com/r-server/r-reference/revoscaler/rxsqlserverdata) 함수에 전달합니다.
+2. 쿼리 정의를 인수로 [RxSqlServerData](/r-server/r-reference/revoscaler/rxsqlserverdata) 함수에 전달합니다.
 
     ```R
     inDataSource <- RxSqlServerData(
@@ -120,7 +120,7 @@ RevoScaleR 및 MicrosoftML과 같은 Microsoft R 라이브러리를 사용하는
   
     + *rowsPerRead* 인수는 메모리 사용량 및 효율적인 계산을 관리하는 데 중요합니다.  [!INCLUDE[rsql_productname](../../includes/rsql-productname-md.md)] 에서 대부분의 향상된 분석 함수는 데이터를 청크로 처리하고 중간 결과를 누적하며, 모든 데이터를 읽은 후 최종 계산을 반환합니다.  *rowsPerRead* 매개 변수를 추가하면 처리를 위해 각 청크로 읽어오는 데이터 행 수를 제어할 수 있습니다.  이 매개 변수의 값이 너무 크면 큰 데이터 청크를 효율적으로 처리할 수 있는 메모리가 없기 때문에 데이터 액세스 속도가 느려질 수 있습니다.  일부 시스템에서는 *rowsPerRead*를 과도하게 작은 값으로 설정하는 경우에도 성능이 저하될 수 있습니다.
 
-3. 이때는 *inDataSource* 개체를 만들었지만 이 개체에는 데이터가 들어 있지 않습니다. [rxImport](https://docs.microsoft.com/r-server/r-reference/revoscaler/rxdatastep) 또는 [rxSummary](https://docs.microsoft.com/r-server/r-reference/revoscaler/rxsummary)와 같은 함수를 실행할 때까지 SQL 쿼리의 데이터가 로컬 환경으로 이동되지 않습니다.
+3. 이때는 *inDataSource* 개체를 만들었지만 이 개체에는 데이터가 들어 있지 않습니다. [rxImport](/r-server/r-reference/revoscaler/rxdatastep) 또는 [rxSummary](/r-server/r-reference/revoscaler/rxsummary)와 같은 함수를 실행할 때까지 SQL 쿼리의 데이터가 로컬 환경으로 이동되지 않습니다.
 
     그러나 이제 데이터 개체를 정의했으므로 다른 함수의 인수로 사용할 수 있습니다.
 
@@ -128,7 +128,7 @@ RevoScaleR 및 MicrosoftML과 같은 Microsoft R 라이브러리를 사용하는
 
 이 섹션에서는 원격 컴퓨팅 컨텍스트를 지원하는, [!INCLUDE[rsql_productname](../../includes/rsql-productname-md.md)]에서 제공하는 여러 함수를 사용해 보겠습니다. 데이터 원본에 R 함수를 적용하여 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 데이터를 살펴보고, 요약하고, 차트로 작성할 수 있습니다.
 
-1. [rxGetVarInfo](https://docs.microsoft.com/r-server/r-reference/revoscaler/rxgetvarinfo) 함수를 호출하여 데이터 원본의 변수 목록과 해당 데이터 형식을 가져옵니다.
+1. [rxGetVarInfo](/r-server/r-reference/revoscaler/rxgetvarinfo) 함수를 호출하여 데이터 원본의 변수 목록과 해당 데이터 형식을 가져옵니다.
 
     **rxGetVarInfo**는 편리한 함수입니다. 원격 데이터 개체의 모든 데이터 프레임 또는 데이터 세트에서 호출하여 최댓값 및 최솟값, 데이터 형식, 요소 열의 수준 수 등의 정보를 가져올 수 있습니다.
     
@@ -153,7 +153,7 @@ RevoScaleR 및 MicrosoftML과 같은 Microsoft R 라이브러리를 사용하는
     Var 10: dropoff_longitude, Type: numeric
     ```
 
-2. 이제 RevoScaleR 함수 [rxSummary](https://docs.microsoft.com/r-server/r-reference/revoscaler/rxsummary)를 호출하여 개별 변수에 대한 자세한 통계를 가져옵니다.
+2. 이제 RevoScaleR 함수 [rxSummary](/r-server/r-reference/revoscaler/rxsummary)를 호출하여 개별 변수에 대한 자세한 통계를 가져옵니다.
 
     rxSummary는 R `summary` 함수를 기준으로 하지만 몇 가지 추가 기능과 이점도 제공합니다. rxSummary는 여러 컴퓨팅 컨텍스트에서 작동하며 청크를 지원합니다.  RxSummary를 사용하여 값을 변환하거나 요소 수준에 따라 요약할 수도 있습니다.
     
@@ -205,7 +205,7 @@ print(paste("It takes CPU Time=", round(used.time[1]+used.time[2],2)," seconds,
 ```
 
 > [!TIP]
-> 이 작업을 실행하는 동안 [프로세스 탐색기](https://technet.microsoft.com/sysinternals/processexplorer.aspx) 또는 SQL Profiler와 같은 도구를 사용하여 연결되는 방법과 SQL Server 서비스를 사용하여 R 코드를 실행하는 방법을 확인할 수 있습니다.
+> 이 작업을 실행하는 동안 [프로세스 탐색기](/sysinternals/downloads/process-explorer) 또는 SQL Profiler와 같은 도구를 사용하여 연결되는 방법과 SQL Server 서비스를 사용하여 R 코드를 실행하는 방법을 확인할 수 있습니다.
 
 ## <a name="next-steps"></a>다음 단계
 

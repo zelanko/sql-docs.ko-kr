@@ -10,12 +10,12 @@ author: dphansen
 ms.author: davidph
 ms.custom: seo-lt-2019
 monikerRange: '>=sql-server-2016||>=sql-server-linux-ver15||>=azuresqldb-mi-current||=sqlallproducts-allversions'
-ms.openlocfilehash: ffebcaa9afc8f2caa8717170d9746787c17593b3
-ms.sourcegitcommit: 9b41725d6db9957dd7928a3620fe4db41eb51c6e
+ms.openlocfilehash: d5132b0616dd223e195f47b1333308a920fb2572
+ms.sourcegitcommit: cfa04a73b26312bf18d8f6296891679166e2754d
 ms.translationtype: HT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 08/13/2020
-ms.locfileid: "88173607"
+ms.lasthandoff: 10/19/2020
+ms.locfileid: "92196280"
 ---
 # <a name="r-tutorial-run-predictions-in-sql-stored-procedures"></a>R 자습서: SQL 저장 프로시저에서 예측 실행
 [!INCLUDE [SQL Server 2016 SQL MI](../../includes/applies-to-version/sqlserver2016-asdbmi.md)]
@@ -70,7 +70,7 @@ GO
 
 + SELECT 문은 데이터베이스에서 직렬화된 모델을 가져와서 R을 사용한 추가 처리를 위해 R 변수 `mod` 에 모델을 저장합니다.
 
-+ 새로운 채점 사례는 저장 프로시저의 첫 번째 매개 변수인 `@inquery`에 지정된 [!INCLUDE[tsql](../../includes/tsql-md.md)] 쿼리에서 가져옵니다. 쿼리 데이터를 읽으면 행이 기본 데이터 프레임 `InputDataSet`에 저장됩니다. 이 데이터 프레임은 점수를 생성하는 [RevoScaleR](https://docs.microsoft.com/machine-learning-server/r-reference/revoscaler/revoscaler)의 [rxPredict](https://docs.microsoft.com/machine-learning-server/r-reference/revoscaler/rxpredict) 함수에 전달됩니다.
++ 새로운 채점 사례는 저장 프로시저의 첫 번째 매개 변수인 `@inquery`에 지정된 [!INCLUDE[tsql](../../includes/tsql-md.md)] 쿼리에서 가져옵니다. 쿼리 데이터를 읽으면 행이 기본 데이터 프레임 `InputDataSet`에 저장됩니다. 이 데이터 프레임은 점수를 생성하는 [RevoScaleR](/machine-learning-server/r-reference/revoscaler/revoscaler)의 [rxPredict](/machine-learning-server/r-reference/revoscaler/rxpredict) 함수에 전달됩니다.
   
   `OutputDataSet<-rxPredict(modelObject = mod, data = InputDataSet, outData = NULL, predVarNames = "Score", type = "response", writeModelVars = FALSE, overwrite = TRUE);`
   
@@ -193,7 +193,7 @@ GO
    @dropoff_longitude = -73.977303
    ```
 
-   또는 다음과 같은 더 짧은 지원 양식을 [저장 프로시저에 대한 매개변수](https://docs.microsoft.com/sql/relational-databases/stored-procedures/specify-parameters)로 사용합니다.
+   또는 다음과 같은 더 짧은 지원 양식을 [저장 프로시저에 대한 매개변수](../../relational-databases/stored-procedures/specify-parameters.md)로 사용합니다.
   
    ```sql
    EXEC [dbo].[RxPredictSingleRow] 'RxTrainLogit_model', 1, 2.5, 631, 40.763958,-73.973373, 40.782139,-73.977303

@@ -9,17 +9,17 @@ author: dphansen
 ms.author: davidph
 ms.custom: seo-lt-2019
 monikerRange: '>=sql-server-2016||>=sql-server-linux-ver15||=sqlallproducts-allversions'
-ms.openlocfilehash: 664deeae61b664d3818f7d748ad6177b79917d86
-ms.sourcegitcommit: 9b41725d6db9957dd7928a3620fe4db41eb51c6e
+ms.openlocfilehash: e53accf27dbc3c573596c5ebaf1d83667480a34e
+ms.sourcegitcommit: cfa04a73b26312bf18d8f6296891679166e2754d
 ms.translationtype: HT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 08/13/2020
-ms.locfileid: "88178810"
+ms.lasthandoff: 10/19/2020
+ms.locfileid: "92196287"
 ---
 # <a name="create-sql-server-data-objects-using-rxsqlserverdata-sql-server-and-revoscaler-tutorial"></a>RxSqlServerData를 사용하여 SQL Server 데이터 개체 만들기(SQL Server 및 RevoScaleR 자습서)
 [!INCLUDE [SQL Server 2016 and later](../../includes/applies-to-version/sqlserver2016.md)]
 
-이것은 SQL Server에서 [RevoScaleR 함수](https://docs.microsoft.com/machine-learning-server/r-reference/revoscaler/revoscaler)를 사용하는 방법에 대한 [RevoScaleR 자습서 시리즈](deepdive-data-science-deep-dive-using-the-revoscaler-packages.md) 중 자습서 2에 해당됩니다.
+이것은 SQL Server에서 [RevoScaleR 함수](/machine-learning-server/r-reference/revoscaler/revoscaler)를 사용하는 방법에 대한 [RevoScaleR 자습서 시리즈](deepdive-data-science-deep-dive-using-the-revoscaler-packages.md) 중 자습서 2에 해당됩니다.
 
 이 자습서는 테이블을 추가하고 데이터를 로드하는 데이터 생성 작업에 이어지는 것입니다. [자습서 2](deepdive-work-with-sql-server-data-using-r.md)에서 DBA가 데이터베이스 및 로그인을 만들었다면 RStudio와 같은 R IDE 또는 **Rgui** 같은 기본 제공 도구를 사용하여 테이블을 추가할 수 있습니다.
 
@@ -103,7 +103,7 @@ R 작업 영역에서 연결 문자열 및 기타 매개 변수를 변수로 이
 
 이제 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 테이블을 만들었으므로 적절한 **Rx** 함수를 사용하여 해당 테이블에 데이터를 로드할 수 있습니다.
 
-**RevoScaleR** 패키지에는 데이터 원본 유형과 관련된 함수가 포함되어 있습니다. 텍스트 데이터의 경우 [RxTextData](https://docs.microsoft.com/machine-learning-server/r-reference/revoscaler/rxtextdata)를 사용하여 데이터 원본 개체를 생성합니다. Hadoop 데이터, ODBC 데이터 등에서 데이터 원본 개체를 만들기 위한 추가 함수가 있습니다.
+**RevoScaleR** 패키지에는 데이터 원본 유형과 관련된 함수가 포함되어 있습니다. 텍스트 데이터의 경우 [RxTextData](/machine-learning-server/r-reference/revoscaler/rxtextdata)를 사용하여 데이터 원본 개체를 생성합니다. Hadoop 데이터, ODBC 데이터 등에서 데이터 원본 개체를 만들기 위한 추가 함수가 있습니다.
 
 > [!NOTE]
 > 이 섹션을 수행하려면 데이터베이스에 대한 **DDL 실행** 권한이 있어야 합니다.
@@ -116,7 +116,7 @@ R 작업 영역에서 연결 문자열 및 기타 매개 변수를 변수로 이
     ccFraudCsv <- file.path(rxGetOption("sampleDataDir"), "ccFraudSmall.csv")
     ```
   
-    **RevoScaleR**의 [rxOptions](https://docs.microsoft.com/machine-learning-server/r-reference/revoscaler/rxoptions)와 연결된 GET 메서드인 **rxGetOption**에 대한 호출을 확인하세요. 기본 공유 디렉터리 또는 계산에 사용할 프로세서(코어) 수와 같은 로컬 및 원격 컴퓨팅 컨텍스트와 관련된 옵션을 설정하고 나열하려면 이 유틸리티를 사용합니다.
+    **RevoScaleR**의 [rxOptions](/machine-learning-server/r-reference/revoscaler/rxoptions)와 연결된 GET 메서드인 **rxGetOption**에 대한 호출을 확인하세요. 기본 공유 디렉터리 또는 계산에 사용할 프로세서(코어) 수와 같은 로컬 및 원격 컴퓨팅 컨텍스트와 관련된 옵션을 설정하고 나열하려면 이 유틸리티를 사용합니다.
     
     이 함수는 코드를 실행하는 위치와 관계없이 올바른 라이브러리에서 샘플을 가져옵니다. 예를 들어 SQL Server 및 개발 컴퓨터에서 함수를 실행해 보고 경로가 어떻게 다른지 확인하세요.
   
@@ -137,7 +137,7 @@ R 작업 영역에서 연결 문자열 및 기타 매개 변수를 변수로 이
   
     로컬 작업 영역에서 R 데이터 개체를 만들었지만 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 데이터베이스에서는 테이블이 생성되지 않은 것을 볼 수 있습니다. 텍스트 파일에서 R 변수로 로드된 데이터도 없습니다.
   
-4. [rxDataStep](https://docs.microsoft.com/machine-learning-server/r-reference/revoscaler/rxdatastep) 함수를 호출하여 데이터를 삽입합니다.
+4. [rxDataStep](/machine-learning-server/r-reference/revoscaler/rxdatastep) 함수를 호출하여 데이터를 삽입합니다.
   
     ```R
     rxDataStep(inData = inTextData, outFile = sqlFraudDS, overwrite = TRUE)
@@ -188,7 +188,7 @@ R 작업 영역에서 연결 문자열 및 기타 매개 변수를 변수로 이
 
 ## <a name="more-about-rxdatastep"></a>RxDataStep에 대한 자세한 정보
 
-[rxDataStep](https://docs.microsoft.com/machine-learning-server/r-reference/revoscaler/rxdatastep)은 R 데이터 프레임에서 여러 변환을 수행할 수 있는 강력한 함수입니다. rxDataStep을 사용하여 대상에 필요한 표현으로 데이터를 변환할 수도 있습니다(이 경우 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]).
+[rxDataStep](/machine-learning-server/r-reference/revoscaler/rxdatastep)은 R 데이터 프레임에서 여러 변환을 수행할 수 있는 강력한 함수입니다. rxDataStep을 사용하여 대상에 필요한 표현으로 데이터를 변환할 수도 있습니다(이 경우 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]).
 
 필요에 따라 **rxDataStep**에 대한 인수에 R 함수를 사용하여 데이터에 대한 변환을 지정할 수 있습니다. 이러한 작업의 예는 이 자습서의 뒷부분에서 제공됩니다.
 

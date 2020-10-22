@@ -9,12 +9,12 @@ author: dphansen
 ms.author: davidph
 ms.custom: seo-lt-2019
 monikerRange: '>=sql-server-2016||>=sql-server-linux-ver15||=sqlallproducts-allversions'
-ms.openlocfilehash: 38b00fd3a5f300a4038c6c302c1311a2f135d97b
-ms.sourcegitcommit: 9b41725d6db9957dd7928a3620fe4db41eb51c6e
+ms.openlocfilehash: f9a089bb123698a8a06c92bb1a95e8b2c3956907
+ms.sourcegitcommit: cfa04a73b26312bf18d8f6296891679166e2754d
 ms.translationtype: HT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 08/13/2020
-ms.locfileid: "88180408"
+ms.lasthandoff: 10/19/2020
+ms.locfileid: "92193043"
 ---
 # <a name="sql-server-launchpad-service-configuration"></a>SQL Server 실행 패드 서비스 구성
 [!INCLUDE [SQL Server 2016 and later](../../includes/applies-to-version/sqlserver2016.md)]
@@ -27,16 +27,16 @@ ms.locfileid: "88180408"
 
 기본적으로 SQL Server 실행 패드는 외부 스크립트 실행을 위한 모든 필수 권한이 프로비저닝되어 있는 **NT Service\MSSQLLaunchpad** 아래에서 실행되도록 구성되어 있습니다. 이 계정에서 권한을 제거하면 실행 패드 시작 또는 외부 스크립트를 실행해야 하는 SQL Server 인스턴스 액세스가 실패할 수 있습니다.
 
-서비스 계정을 수정할 경우 [로컬 보안 정책 콘솔](https://docs.microsoft.com/windows/security/threat-protection/security-policy-settings/how-to-configure-security-policy-settings)을 사용해야 합니다.
+서비스 계정을 수정할 경우 [로컬 보안 정책 콘솔](/windows/security/threat-protection/security-policy-settings/how-to-configure-security-policy-settings)을 사용해야 합니다.
 
 이 계정에 필요한 권한은 다음 표에 나열되어 있습니다.
 
 | 그룹 정책 설정 | 상수 이름 |
 |----------------------|---------------|
-| [프로세스에 대한 메모리 할당량 조정](https://docs.microsoft.com/windows/security/threat-protection/security-policy-settings/adjust-memory-quotas-for-a-process) | SeIncreaseQuotaPrivilege | 
-| [트래버스 검사 바이패스](https://docs.microsoft.com/windows/security/threat-protection/security-policy-settings/bypass-traverse-checking) | SeChangeNotifyPrivilege | 
-| [서비스로 로그온](https://docs.microsoft.com/windows/security/threat-protection/security-policy-settings/log-on-as-a-service) | SeServiceLogonRight | 
-| [프로세스 수준의 토큰 대체](https://docs.microsoft.com/windows/security/threat-protection/security-policy-settings/replace-a-process-level-token) | SeAssignPrimaryTokenPrivilege | 
+| [프로세스에 대한 메모리 할당량 조정](/windows/security/threat-protection/security-policy-settings/adjust-memory-quotas-for-a-process) | SeIncreaseQuotaPrivilege | 
+| [트래버스 검사 바이패스](/windows/security/threat-protection/security-policy-settings/bypass-traverse-checking) | SeChangeNotifyPrivilege | 
+| [서비스로 로그온](/windows/security/threat-protection/security-policy-settings/log-on-as-a-service) | SeServiceLogonRight | 
+| [프로세스 수준의 토큰 대체](/windows/security/threat-protection/security-policy-settings/replace-a-process-level-token) | SeAssignPrimaryTokenPrivilege | 
 
 SQL Server 서비스를 실행하는 데 필요한 권한에 대한 자세한 내용은 [Windows 서비스 계정 및 권한 구성](../../database-engine/configure-windows/configure-windows-service-accounts-and-permissions.md)을 참조하세요.
 

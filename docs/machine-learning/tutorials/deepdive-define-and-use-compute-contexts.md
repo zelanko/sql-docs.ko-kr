@@ -9,19 +9,19 @@ author: dphansen
 ms.author: davidph
 ms.custom: seo-lt-2019
 monikerRange: '>=sql-server-2016||>=sql-server-linux-ver15||=sqlallproducts-allversions'
-ms.openlocfilehash: 62b18fbdd0a4c59b8458b2bc1f757ef189db5de3
-ms.sourcegitcommit: 9b41725d6db9957dd7928a3620fe4db41eb51c6e
+ms.openlocfilehash: 7bf4385405c227fb337dda910c3f1ef158eff223
+ms.sourcegitcommit: cfa04a73b26312bf18d8f6296891679166e2754d
 ms.translationtype: HT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 08/13/2020
-ms.locfileid: "88178780"
+ms.lasthandoff: 10/19/2020
+ms.locfileid: "92195145"
 ---
 # <a name="define-and-use-compute-contexts-sql-server-and-revoscaler-tutorial"></a>계산 컨텍스트 정의 및 사용(SQL Server 및 RevoScaleR 자습서)
 [!INCLUDE [SQL Server 2016 and later](../../includes/applies-to-version/sqlserver2016.md)]
 
-이것은 SQL Server에서 [RevoScaleR 함수](https://docs.microsoft.com/machine-learning-server/r-reference/revoscaler/revoscaler)를 사용하는 방법에 대한 [RevoScaleR 자습서 시리즈](deepdive-data-science-deep-dive-using-the-revoscaler-packages.md) 중 자습서 4에 해당됩니다.
+이것은 SQL Server에서 [RevoScaleR 함수](/machine-learning-server/r-reference/revoscaler/revoscaler)를 사용하는 방법에 대한 [RevoScaleR 자습서 시리즈](deepdive-data-science-deep-dive-using-the-revoscaler-packages.md) 중 자습서 4에 해당됩니다.
 
-이전 자습서에서는 **RevoScaleR** 함수를 사용하여 데이터 개체를 검사했습니다. 이 자습서에서는 원격 SQL Server에 대한 컴퓨팅 컨텍스트를 정의할 수 있게 해주는 [RxInSqlServer](https://docs.microsoft.com/machine-learning-server/r-reference/revoscaler/rxinsqlserver) 함수를 소개합니다. 원격 계산 컨텍스트에서는 서버의 로컬 세션에서 원격 세션으로 R 실행을 전환할 수 있습니다. 
+이전 자습서에서는 **RevoScaleR** 함수를 사용하여 데이터 개체를 검사했습니다. 이 자습서에서는 원격 SQL Server에 대한 컴퓨팅 컨텍스트를 정의할 수 있게 해주는 [RxInSqlServer](/machine-learning-server/r-reference/revoscaler/rxinsqlserver) 함수를 소개합니다. 원격 계산 컨텍스트에서는 서버의 로컬 세션에서 원격 세션으로 R 실행을 전환할 수 있습니다. 
 
 > [!div class="checklist"]
 > * 원격 SQL Server 계산 컨텍스트에 대한 요소 알아보기
@@ -63,7 +63,7 @@ SQL Server 계산 컨텍스트를 만드는 **RxInSqlServer** 함수는 다음 �
   
     *RxInSqlServer* 에 대한 **wait** 인수는 다음 옵션을 지원합니다.
   
-    -   **TRUE**. 작업이 차단 작업으로 구성되고 완료 또는 실패할 때까지 반환되지 않습니다.  자세한 내용은 [Machine Learning Server의 분산 및 병렬 계산](https://docs.microsoft.com/machine-learning-server/r/how-to-revoscaler-distributed-computing)을 참조하세요.
+    -   **TRUE**. 작업이 차단 작업으로 구성되고 완료 또는 실패할 때까지 반환되지 않습니다.  자세한 내용은 [Machine Learning Server의 분산 및 병렬 계산](/machine-learning-server/r/how-to-revoscaler-distributed-computing)을 참조하세요.
   
     -   **FALSE**. 작업이 비차단 작업으로 구성되고 즉시 반환되며, 사용자가 다른 R 코드 실행을 계속할 수 있습니다. 그러나 비차단 모드에서도 작업이 실행되는 동안 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 와의 클라이언트 연결을 유지해야 합니다.
 
@@ -90,9 +90,9 @@ SQL Server 계산 컨텍스트를 만드는 **RxInSqlServer** 함수는 다음 �
     
     **RxInSqlServer** 구문은 이전에 데이터 원본을 정의하기 위해 사용한 **RxSqlServerData** 함수의 구문과 거의 동일합니다. 하지만 다음과 같은 점에서 중요한 차이가 있습니다.
       
-    - [RxSqlServerData](https://docs.microsoft.com/machine-learning-server/r-reference/revoscaler/rxsqlserverdata)함수를 사용하여 정의한 데이터 원본 개체는 데이터가 저장되는 위치를 지정합니다.
+    - [RxSqlServerData](/machine-learning-server/r-reference/revoscaler/rxsqlserverdata)함수를 사용하여 정의한 데이터 원본 개체는 데이터가 저장되는 위치를 지정합니다.
     
-    - 반면에 계산 컨텍스트([RxInSqlServer](https://docs.microsoft.com/machine-learning-server/r-reference/revoscaler/rxinsqlserver) 함수를 사용하여 정의됨)는 집계 및 기타 컴퓨팅이 수행되는 위치를 나타냅니다.
+    - 반면에 계산 컨텍스트([RxInSqlServer](/machine-learning-server/r-reference/revoscaler/rxinsqlserver) 함수를 사용하여 정의됨)는 집계 및 기타 컴퓨팅이 수행되는 위치를 나타냅니다.
     
     컴퓨팅 컨텍스트 정의는 워크스테이션에서 수행할 수 있는 다른 모든 제네릭 R 컴퓨팅에 영향을 주지 않으며 데이터의 원본을 변경하지 않습니다. 예를 들어 로컬 텍스트 파일을 데이터 원본으로 정의하지만 컴퓨팅 컨텍스트를 SQL Server로 변경하지 않고 SQL Server 컴퓨터에서 데이터에 대한 모든 읽기 및 요약을 수행할 수 있습니다.
 
@@ -135,7 +135,7 @@ SQL Server 계산 컨텍스트를 만드는 **RxInSqlServer** 함수는 다음 �
   
    이 예제에서는 *traceLevel* 속성이 7로 설정되었으며 이는 "모든 추적 정보 표시"를 의미합니다.
 
-2. [rxSetComputeContext](https://docs.microsoft.com/machine-learning-server/r-reference/revoscaler/rxsetcomputecontext) 함수를 사용하여 추적이 사용 설정된 계산 컨텍스트를 이름으로 지정합니다.
+2. [rxSetComputeContext](/machine-learning-server/r-reference/revoscaler/rxsetcomputecontext) 함수를 사용하여 추적이 사용 설정된 계산 컨텍스트를 이름으로 지정합니다.
 
     ```R
     rxSetComputeContext(sqlComputeTrace)

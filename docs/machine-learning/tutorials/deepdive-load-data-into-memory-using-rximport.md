@@ -9,21 +9,21 @@ author: dphansen
 ms.author: davidph
 ms.custom: seo-lt-2019
 monikerRange: '>=sql-server-2016||>=sql-server-linux-ver15||=sqlallproducts-allversions'
-ms.openlocfilehash: 7c31650525934b14bf31135264d9b86c52d85119
-ms.sourcegitcommit: 9b41725d6db9957dd7928a3620fe4db41eb51c6e
+ms.openlocfilehash: 5be5c314cf50add1c215bbe52b5cf0d94a77a237
+ms.sourcegitcommit: cfa04a73b26312bf18d8f6296891679166e2754d
 ms.translationtype: HT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 08/13/2020
-ms.locfileid: "88179950"
+ms.lasthandoff: 10/19/2020
+ms.locfileid: "92195135"
 ---
 # <a name="load-data-into-memory-using-rximport-sql-server-and-revoscaler-tutorial"></a>rxImport를 사용하여 메모리에 데이터 로드(SQL Server 및 RevoScaleR 자습서)
 [!INCLUDE [SQL Server 2016 and later](../../includes/applies-to-version/sqlserver2016.md)]
 
-이것은 SQL Server에서 [RevoScaleR 함수](https://docs.microsoft.com/machine-learning-server/r-reference/revoscaler/revoscaler)를 사용하는 방법에 대한 [RevoScaleR 자습서 시리즈](deepdive-data-science-deep-dive-using-the-revoscaler-packages.md) 중 자습서 10에 해당됩니다.
+이것은 SQL Server에서 [RevoScaleR 함수](/machine-learning-server/r-reference/revoscaler/revoscaler)를 사용하는 방법에 대한 [RevoScaleR 자습서 시리즈](deepdive-data-science-deep-dive-using-the-revoscaler-packages.md) 중 자습서 10에 해당됩니다.
 
 이 자습서에서는 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]에서 데이터를 가져온 다음, **rxImport** 함수를 사용하여 관심 있는 데이터를 로컬 파일에 저장하는 방법을 알아봅니다. 이렇게 하면 데이터베이스를 다시 쿼리하지 않고도 로컬 컴퓨팅 컨텍스트에서 반복하여 데이터를 분석할 수 있습니다.
 
-[rxImport](https://docs.microsoft.com/machine-learning-server/r-reference/revoscaler/rximport) 함수를 사용하여 데이터 원본의 데이터를 세션 메모리의 데이터 프레임 또는 디스크의 XDF 파일로 이동할 수 있습니다. 파일을 대상으로 지정하지 않으면 데이터는 메모리에 데이터 프레임으로 저장됩니다.
+[rxImport](/machine-learning-server/r-reference/revoscaler/rximport) 함수를 사용하여 데이터 원본의 데이터를 세션 메모리의 데이터 프레임 또는 디스크의 XDF 파일로 이동할 수 있습니다. 파일을 대상으로 지정하지 않으면 데이터는 메모리에 데이터 프레임으로 저장됩니다.
 
 ## <a name="extract-a-subset-of-data-from-sql-server-to-local-memory"></a>SQL Server에서 로컬 메모리로 데이터 하위 집합 추출
 
@@ -44,7 +44,7 @@ ms.locfileid: "88179950"
         connectionString = sqlConnString)
     ```
 
-3. [rxImport](https://docs.microsoft.com/machine-learning-server/r-reference/revoscaler/rximport) 함수를 호출하여 로컬 R 세션의 데이터 프레임으로 데이터를 읽습니다.
+3. [rxImport](/machine-learning-server/r-reference/revoscaler/rximport) 함수를 호출하여 로컬 R 세션의 데이터 프레임으로 데이터를 읽습니다.
 
     ```R
     highRisk <- rxImport(sqlServerProbDS)

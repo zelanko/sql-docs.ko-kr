@@ -9,19 +9,19 @@ author: dphansen
 ms.author: davidph
 ms.custom: seo-lt-2019
 monikerRange: '>=sql-server-2016||>=sql-server-linux-ver15||=sqlallproducts-allversions'
-ms.openlocfilehash: ad18fc08a06a647c626972cf3b3141d9d9861c87
-ms.sourcegitcommit: 9b41725d6db9957dd7928a3620fe4db41eb51c6e
+ms.openlocfilehash: a6fe6713479c0a9c62c1f56e358c27084dc9bbdc
+ms.sourcegitcommit: cfa04a73b26312bf18d8f6296891679166e2754d
 ms.translationtype: HT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 08/13/2020
-ms.locfileid: "88178800"
+ms.lasthandoff: 10/19/2020
+ms.locfileid: "92195165"
 ---
 # <a name="tutorial-use-revoscaler-r-functions-with-sql-server-data"></a>자습서: RevoScaleR R 함수를 SQL Server 데이터와 함께 사용
 [!INCLUDE [SQL Server 2016 and later](../../includes/applies-to-version/sqlserver2016.md)]
 
 여러 부분으로 이루어진 이 자습서 시리즈에서는 데이터 과학과 관련된 작업에 필요한 다양한 **RevoScaleR** 함수를 소개합니다. 이 프로세스에서는 원격 컴퓨팅 컨텍스트를 만들고, 로컬 및 원격 컴퓨팅 컨텍스트 간에 데이터를 이동하고, 원격 SQL Server에서 R 코드를 실행하는 방법을 알아봅니다. 또한 로컬 및 원격 서버에서 데이터를 분석하고 그리는 방법과 모델을 만들고 배포하는 방법을 알아봅니다.
 
-[RevoScaleR](https://docs.microsoft.com/machine-learning-server/r-reference/revoscaler/revoscaler)은 데이터 과학 및 기계 학습 워크로드에 대한 분산 및 병렬 처리를 제공하는 Microsoft R 패키지입니다. SQL Server에서 R을 개발하는 경우에 사용되는 **RevoScaleR**은 데이터 원본 개체를 만들고, 컴퓨팅 컨텍스트를 설정하고, 패키지를 관리하고, 가져오기부터 시각화 및 분석까지 엔드투엔드 데이터 작업(가장 중요)에 필요한 함수가 포함된 핵심 기본 제공 패키지 중 하나입니다. SQL Server Machine Learning 알고리즘은 **RevoScaleR** 데이터 원본에 대한 종속성이 있습니다. **RevoScaleR**의 중요성을 고려하여 해당 함수를 호출하는 시기와 방법을 알고 있어야 합니다. 
+[RevoScaleR](/machine-learning-server/r-reference/revoscaler/revoscaler)은 데이터 과학 및 기계 학습 워크로드에 대한 분산 및 병렬 처리를 제공하는 Microsoft R 패키지입니다. SQL Server에서 R을 개발하는 경우에 사용되는 **RevoScaleR**은 데이터 원본 개체를 만들고, 컴퓨팅 컨텍스트를 설정하고, 패키지를 관리하고, 가져오기부터 시각화 및 분석까지 엔드투엔드 데이터 작업(가장 중요)에 필요한 함수가 포함된 핵심 기본 제공 패키지 중 하나입니다. SQL Server Machine Learning 알고리즘은 **RevoScaleR** 데이터 원본에 대한 종속성이 있습니다. **RevoScaleR**의 중요성을 고려하여 해당 함수를 호출하는 시기와 방법을 알고 있어야 합니다. 
 
 ## <a name="prerequisites"></a>사전 요구 사항
 
@@ -29,7 +29,7 @@ ms.locfileid: "88178800"
   
 + [데이터베이스 사용 권한](../security/user-permission.md) 및 SQL Server 데이터베이스 사용자 로그인
 
-+ [SQL Server Management Studio](https://docs.microsoft.com/sql/ssms/download-sql-server-management-studio-ssms)
++ [SQL Server Management Studio](../../ssms/download-sql-server-management-studio-ssms.md)
 
 + RStudio와 같은 IDE 또는 R에 포함된 기본 제공 RGUI 도구
 

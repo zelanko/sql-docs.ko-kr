@@ -9,19 +9,19 @@ ms.author: davidph
 author: dphansen
 ms.custom: seo-lt-2019
 monikerRange: '>=sql-server-ver15||>=sql-server-linux-ver15||=sqlallproducts-allversions'
-ms.openlocfilehash: 85ab092eb606fcc6896fa6a084a2cef0e5f018df
-ms.sourcegitcommit: 9b41725d6db9957dd7928a3620fe4db41eb51c6e
+ms.openlocfilehash: ec0323d35c05c34de763fbdece37546f7c8252df
+ms.sourcegitcommit: cfa04a73b26312bf18d8f6296891679166e2754d
 ms.translationtype: HT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 08/13/2020
-ms.locfileid: "88179733"
+ms.lasthandoff: 10/19/2020
+ms.locfileid: "92193664"
 ---
 # <a name="tutorial-create-partition-based-models-in-r-on-sql-server"></a>자습서: SQL Server의 R에서 파티션 기반 모델 만들기
 [!INCLUDE [SQL Server 2016](../../includes/applies-to-version/sqlserver2016.md)]
 
 SQL Server 2019의 파티션 기반 모델링은 분할된 데이터에 대한 모델을 만들고 학습시키는 기능입니다. 지리적 지역, 날짜 및 시간, 연령 또는 성별 등의 특정 분류 스키마로 자연스럽게 분할되는 계층화 데이터의 경우 모든 작업에서 온전하게 유지되는 파티션을 모델링하고, 학습시키고, 채점하는 기능을 사용하여 전체 데이터 세트에 대해 스크립트를 실행할 수 있습니다. 
 
-파티션 기반 모델링은 [sp_execute_external_script](https://docs.microsoft.com/sql/relational-databases/system-stored-procedures/sp-execute-external-script-transact-sql)에서 다음 두 가지 새 매개 변수를 통해 사용하도록 설정됩니다.
+파티션 기반 모델링은 [sp_execute_external_script](../../relational-databases/system-stored-procedures/sp-execute-external-script-transact-sql.md)에서 다음 두 가지 새 매개 변수를 통해 사용하도록 설정됩니다.
 
 + **input_data_1_partition_by_columns** - 분할 기준이 되는 열을 지정합니다.
 + **input_data_1_order_by_columns** - 정렬 기준이 되는 열을 지정합니다. 
@@ -39,7 +39,7 @@ SQL Server 2019의 파티션 기반 모델링은 분할된 데이터에 대한 �
 
 + 충분한 시스템 리소스. 데이터 세트가 크고 학습 작업은 리소스를 많이 사용합니다. 되도록이면 8GB 이상의 RAM이 있는 시스템을 사용하세요. 또는 작은 데이터 세트를 사용하여 리소스 제약 조건을 피할 수 있습니다. 데이터 세트를 줄이기 위한 지침은 인라인으로 제공됩니다. 
 
-+ [SQL Server Management Studio](https://docs.microsoft.com/sql/ssms/download-sql-server-management-studio-ssms) 같은 T-SQL 쿼리 실행 도구
++ [SQL Server Management Studio](../../ssms/download-sql-server-management-studio-ssms.md) 같은 T-SQL 쿼리 실행 도구
 
 + [NYCTaxi_Sample.bak](https://sqlmldoccontent.blob.core.windows.net/sqlml/NYCTaxi_Sample.bak) - 로컬 데이터베이스 엔진 인스턴스에 [다운로드하고 복원](demo-data-nyctaxi-in-sql.md)할 수 있습니다. 파일 크기는 약 90MB입니다.
 
@@ -105,7 +105,7 @@ GO
 
 이 자습서에서는 R 스크립트를 저장 프로시저에 래핑합니다. 이 단계에서는 R을 사용하여 입력 데이터 세트를 만들고, 팁 결과를 예측하기 위한 분류 모델을 빌드하고, 데이터베이스에 모델을 저장하는 저장 프로시저를 만듭니다.
 
-이 스크립트에 사용되는 매개 변수 입력 중에서 **input_data_1_partition_by_columns** 및 **input_data_1_order_by_columns**가 보일 것입니다. 이러한 매개 변수는 분할된 모델링이 발생하는 메커니즘입니다. 이러한 매개 변수는 [sp_execute_external_script](https://docs.microsoft.com/sql/relational-databases/system-stored-procedures/sp-execute-external-script-transact-sql)에 입력으로 전달되어 파티션마다 한 번씩 실행되는 외부 스크립트를 사용하여 파티션을 처리합니다. 
+이 스크립트에 사용되는 매개 변수 입력 중에서 **input_data_1_partition_by_columns** 및 **input_data_1_order_by_columns**가 보일 것입니다. 이러한 매개 변수는 분할된 모델링이 발생하는 메커니즘입니다. 이러한 매개 변수는 [sp_execute_external_script](../../relational-databases/system-stored-procedures/sp-execute-external-script-transact-sql.md)에 입력으로 전달되어 파티션마다 한 번씩 실행되는 외부 스크립트를 사용하여 파티션을 처리합니다. 
 
 이 저장 프로시저의 경우 완료 시간을 단축할 수 있도록 [병렬 처리를 사용](#parallel)하세요.
 
@@ -169,7 +169,7 @@ GO
 
 ### <a name="parallel-execution"></a>병렬 실행
 
-[sp_execute_external_script](https://docs.microsoft.com/sql/relational-databases/system-stored-procedures/sp-execute-external-script-transact-sql) 입력은 병렬 처리를 사용하도록 설정하는 데 사용되는 `@parallel=1`을 포함하고 있습니다. 이전 릴리스와는 달리, SQL Server 2019에서는 `@parallel=1`을 설정하면 쿼리 최적화 프로그램에 더 강력한 힌트가 제공되므로 병렬 실행의 결과를 얻을 확률이 훨씬 높습니다.
+[sp_execute_external_script](../../relational-databases/system-stored-procedures/sp-execute-external-script-transact-sql.md) 입력은 병렬 처리를 사용하도록 설정하는 데 사용되는 `@parallel=1`을 포함하고 있습니다. 이전 릴리스와는 달리, SQL Server 2019에서는 `@parallel=1`을 설정하면 쿼리 최적화 프로그램에 더 강력한 힌트가 제공되므로 병렬 실행의 결과를 얻을 확률이 훨씬 높습니다.
 
 기본적으로 쿼리 최적화 프로그램은 행이 256개를 초과하는 테이블의 `@parallel=1`에서 작동하는 경향이 있지만, 가능하다면 이 스크립트에서 보여드리는 것처럼 `@parallel=1`을 설정하여 명시적으로 처리할 수 있습니다.
 
@@ -336,8 +336,7 @@ FROM prediction_results;
 
 ## <a name="next-steps"></a>다음 단계
 
-이 자습서에서는 [sp_execute_external_script](https://docs.microsoft.com/sql/relational-databases/system-stored-procedures/sp-execute-external-script-transact-sql)를 사용하여 분할된 데이터를 대상으로 작업을 반복합니다. 저장 프로시저의 외부 스크립트를 호출하고 RevoScaleR 함수를 사용하는 방법을 자세히 살펴보려면 다음 자습서를 계속 진행하세요.
+이 자습서에서는 [sp_execute_external_script](../../relational-databases/system-stored-procedures/sp-execute-external-script-transact-sql.md)를 사용하여 분할된 데이터를 대상으로 작업을 반복합니다. 저장 프로시저의 외부 스크립트를 호출하고 RevoScaleR 함수를 사용하는 방법을 자세히 살펴보려면 다음 자습서를 계속 진행하세요.
 
 > [!div class="nextstepaction"]
 > [R 및 SQL Server 연습](walkthrough-data-science-end-to-end-walkthrough.md)
-

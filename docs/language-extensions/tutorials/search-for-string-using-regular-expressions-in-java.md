@@ -8,12 +8,12 @@ ms.topic: conceptual
 ms.prod: sql
 ms.technology: language-extensions
 monikerRange: '>=sql-server-ver15||>=sql-server-linux-ver15||=sqlallproducts-allversions'
-ms.openlocfilehash: 9de0a8e595cca3009be4a44b63ce268d673b6dff
-ms.sourcegitcommit: 346a37242f889d76cd783f55aeed98023c693610
+ms.openlocfilehash: bc69f01a3cc05f1f1b128ac7ed9fd99d84c7e757
+ms.sourcegitcommit: 43b92518c5848489d03c68505bd9905f8686cbc0
 ms.translationtype: HT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 10/06/2020
-ms.locfileid: "91765745"
+ms.lasthandoff: 10/17/2020
+ms.locfileid: "92155045"
 ---
 # <a name="tutorial-search-for-a-string-using-regular-expressions-regex-in-java"></a>자습서: Java에서 regex(정규식)를 사용하여 문자열 검색
 [!INCLUDE [SQL Server 2019 and later](../../includes/applies-to-version/sqlserver2019.md)]
@@ -26,7 +26,7 @@ ms.locfileid: "91765745"
 
 ## <a name="prerequisites"></a>사전 요구 사항
 
-+ [Windows](../install/install-sql-server-language-extensions-on-windows.md) 또는 [Linux](../../linux/sql-server-linux-setup-language-extensions.md)에 대한 확장성 프레임워크 및 Java 프로그래밍 확장을 포함하는 SQL Server 2019 데이터베이스 엔진 인스턴스. 자세한 내용은 [SQL Server 2019 언어 확장](../language-extensions-overview.md)을 참조하세요. 코딩 요구 사항에 대한 자세한 내용은 [SQL Server에서 Java를 호출하는 방법](../how-to/call-java-from-sql.md)을 참조하세요.
++ [Windows](../install/windows-java.md) 또는 [Linux](../../linux/sql-server-linux-setup-language-extensions-java.md)에 대한 확장성 프레임워크 및 Java 프로그래밍 확장을 포함하는 SQL Server 2019 데이터베이스 엔진 인스턴스. 자세한 내용은 [SQL Server 2019 언어 확장](../language-extensions-overview.md)을 참조하세요. 코딩 요구 사항에 대한 자세한 내용은 [SQL Server에서 Java를 호출하는 방법](../how-to/call-java-from-sql.md)을 참조하세요.
 
 + T-SQL을 실행하기 위한 SQL Server Management Studio 또는 Azure Data Studio.
 
@@ -255,7 +255,7 @@ Java 코드를 실행하려면 사용자에게 해당 언어에서 외부 스크
 > [!NOTE]
 > 이전 단계에서 외부 라이브러리를 사용한 경우 이 단계를 건너뜁니다. `.jar` 파일에서 외부 라이브러리를 만드는 것이 좋습니다.
 
-외부 라이브러리를 사용하지 않으려면 필요한 권한을 설정해야 합니다. 프로세스 ID가 코드에 액세스할 수 있는 경우에만 스크립트 실행이 성공합니다. 권한 설정에 대한 자세한 내용은 [설치 가이드](../install/install-sql-server-language-extensions-on-windows.md)에서 확인할 수 있습니다.
+외부 라이브러리를 사용하지 않으려면 필요한 권한을 설정해야 합니다. 프로세스 ID가 코드에 액세스할 수 있는 경우에만 스크립트 실행이 성공합니다. 권한 설정에 대한 자세한 내용은 [설치 가이드](../install/windows-java.md)에서 확인할 수 있습니다.
 
 ### <a name="on-linux"></a>Linux
 

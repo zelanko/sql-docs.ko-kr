@@ -9,12 +9,12 @@ author: dphansen
 ms.author: davidph
 ms.custom: seo-lt-2019
 monikerRange: '>=sql-server-2016||>=sql-server-linux-ver15||=sqlallproducts-allversions'
-ms.openlocfilehash: 3e2f21808bcd45224027ae7ddc28c8a07f0d85db
-ms.sourcegitcommit: 9b41725d6db9957dd7928a3620fe4db41eb51c6e
+ms.openlocfilehash: 6e4b05970efde3519e29e51cfb3925ba1bbf4c16
+ms.sourcegitcommit: cfa04a73b26312bf18d8f6296891679166e2754d
 ms.translationtype: HT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 08/13/2020
-ms.locfileid: "88173606"
+ms.lasthandoff: 10/19/2020
+ms.locfileid: "92192633"
 ---
 # <a name="create-data-features-using-r-and-sql-server-walkthrough"></a>R 및 SQL Server를 사용하여 데이터 기능 만들기(연습)
 [!INCLUDE [SQL Server 2016](../../includes/applies-to-version/sqlserver2016.md)]
@@ -56,7 +56,7 @@ R 사용자에게 익숙한 방식부터 해보겠습니다. 즉, 데이터를 �
     featureDataSource <- RxSqlServerData(sqlQuery = bigQuery,colClasses = c(pickup_longitude = "numeric", pickup_latitude = "numeric", dropoff_longitude = "numeric", dropoff_latitude = "numeric", passenger_count  = "numeric", trip_distance  = "numeric", trip_time_in_secs  = "numeric", direct_distance  = "numeric"), connectionString = connStr);
     ```
 
-    - [RxSqlServerData](https://docs.microsoft.com/r-server/r-reference/revoscaler/rxsqlserverdata)는 _sqlQuery_ 매개 변수의 인수로 제공되는 유효한 SELECT 쿼리로 구성된 쿼리, 또는 _table_ 매개 변수로 제공된 테이블 개체의 이름을 사용할 수 있습니다.
+    - [RxSqlServerData](/r-server/r-reference/revoscaler/rxsqlserverdata)는 _sqlQuery_ 매개 변수의 인수로 제공되는 유효한 SELECT 쿼리로 구성된 쿼리, 또는 _table_ 매개 변수로 제공된 테이블 개체의 이름을 사용할 수 있습니다.
     
     - 테이블의 데이터를 샘플링하려면 _sqlQuery_ 매개 변수를 사용하고, T-SQL TABLESAMPLE 절을 사용하여 샘플링 매개 변수를 정의하고, _rowBuffering_ 인수를 FALSE로 설정해야 합니다.
 
@@ -91,7 +91,7 @@ R 사용자에게 익숙한 방식부터 해보겠습니다. 즉, 데이터를 �
     rxSetComputeContext("local");
     ```
 
-5. [rxDataStep](https://docs.microsoft.com/r-server/r-reference/revoscaler/rxdatastep) 함수를 호출하여 기능 엔지니어링 데이터를 가져오고, `env$ComputeDist` 함수를 메모리의 데이터에 적용합니다.
+5. [rxDataStep](/r-server/r-reference/revoscaler/rxdatastep) 함수를 호출하여 기능 엔지니어링 데이터를 가져오고, `env$ComputeDist` 함수를 메모리의 데이터에 적용합니다.
 
     ```R
     start.time <- proc.time();
@@ -109,7 +109,7 @@ R 사용자에게 익숙한 방식부터 해보겠습니다. 즉, 데이터를 �
     print(paste("It takes CPU Time=", round(used.time[1]+used.time[2],2)," seconds, Elapsed Time=", round(used.time[3],2), " seconds to generate features.", sep=""));
     ```
 
-    + rxDataStep 함수는 제자리에서 데이터를 수정하는 다양한 방법을 지원합니다. 자세한 내용은 다음 문서를 참조하세요.  [Microsft R에서 데이터를 변환하고 하위 세트로 만드는 방법](https://docs.microsoft.com/r-server/r/how-to-revoscaler-data-transform)
+    + rxDataStep 함수는 제자리에서 데이터를 수정하는 다양한 방법을 지원합니다. 자세한 내용은 다음 문서를 참조하세요.  [Microsft R에서 데이터를 변환하고 하위 세트로 만드는 방법](/r-server/r/how-to-revoscaler-data-transform)
     
     그러나 rxDataStep와 관련하여 몇 가지 주의할 사항이 있습니다. 
     
@@ -117,7 +117,7 @@ R 사용자에게 익숙한 방식부터 해보겠습니다. 즉, 데이터를 �
 
     이전 코드를 더 큰 데이터 세트에서 실행하면 경고 메시지가 생성될 수도 있습니다. 행 수와 생성되는 열 수를 곱한 값이 설정된 값(기본값은 3,000,000)을 초과하면 rxDataStep은 경고를 반환하고, 반환된 데이터 프레임의 행 수는 잘립니다. 이 경고를 제거하려면 rxDataStep 함수에서 _maxRowsByCols_ 인수를 수정하면 됩니다. 그러나 _maxRowsByCols_가 너무 크면 데이터 프레임을 메모리에 로드할 때 문제가 발생할 수 있습니다.
 
-7. 원한다면 [rxGetVarInfo](https://docs.microsoft.com/r-server/r-reference/revoscaler/rxgetvarinfo)를 호출하여 변환된 데이터 원본의 스키마를 검사할 수 있습니다.
+7. 원한다면 [rxGetVarInfo](/r-server/r-reference/revoscaler/rxgetvarinfo)를 호출하여 변환된 데이터 원본의 스키마를 검사할 수 있습니다.
 
     ```R
     rxGetVarInfo(data = changed_ds);
@@ -127,7 +127,7 @@ R 사용자에게 익숙한 방식부터 해보겠습니다. 즉, 데이터를 �
 
 이 연습에서는 사용자 지정 R 함수 대신 SQL 함수를 사용하여 동일한 작업을 수행하는 방법에 대해 알아봅니다. 
 
-[SQL Server Management Studio](https://docs.microsoft.com/sql/ssms/download-sql-server-management-studio-ssms) 또는 다른 쿼리 편집기로 전환하여 T-SQL 스크립트를 실행합니다.
+[SQL Server Management Studio](../../ssms/download-sql-server-management-studio-ssms.md) 또는 다른 쿼리 편집기로 전환하여 T-SQL 스크립트를 실행합니다.
 
 1. *fnCalculateDistance*라는 SQL 함수를 사용합니다. 이 함수가 이미 NYCTaxi_Sample 데이터베이스에 있어야 합니다. 개체 탐색기에서 데이터베이스 > NYCTaxi_Sample > 프로그래밍 기능 > 함수 > 스칼라 반환 함수 > dbo.fnCalculateDistance 경로를 탐색하여 이 함수가 있는지 확인합니다.
 
@@ -252,4 +252,3 @@ SQL 사용자 지정 함수 예제에서 이 코드를 사용하여 SQL 함수�
 
 > [!div class="nextstepaction"]
 > [R 모델을 빌드하여 SQL에 저장](walkthrough-build-and-save-the-model.md)
-

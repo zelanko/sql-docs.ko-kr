@@ -9,12 +9,12 @@ author: dphansen
 ms.author: davidph
 ms.custom: seo-lt-2019
 monikerRange: '>=sql-server-2016||>=sql-server-linux-ver15||=sqlallproducts-allversions'
-ms.openlocfilehash: f9d4d3eab9f8f6d1d19b107eaf3825e9488df382
-ms.sourcegitcommit: 9b41725d6db9957dd7928a3620fe4db41eb51c6e
+ms.openlocfilehash: feaa53fa47591ecdb3f1f0bc66ab390def8fbbb1
+ms.sourcegitcommit: cfa04a73b26312bf18d8f6296891679166e2754d
 ms.translationtype: HT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 08/13/2020
-ms.locfileid: "88180475"
+ms.lasthandoff: 10/19/2020
+ms.locfileid: "92195777"
 ---
 # <a name="sql-server-configuration-for-use-with-r"></a>R 사용을 위한 SQL Server 구성
 [!INCLUDE [SQL Server 2016 and later](../../includes/applies-to-version/sqlserver2016.md)]
@@ -22,7 +22,7 @@ ms.locfileid: "88180475"
 이 문서는 두 가지 사례 연구를 기준으로 R 서비스를 위한 성능 최적화를 기술하는 시리즈의 두 번째 문서입니다.  이 문서에서는 SQL Server R Services 실행을 위해 사용되는 컴퓨터의 하드웨어 및 네트워크 구성에 대한 지침을 제공합니다. 또한 솔루션에 사용되는 SQL Server 인스턴스, 데이터베이스 또는 테이블을 구성하기 위한 방법에 대한 정보도 포함되어 있습니다. SQL Server에서 NUMA를 사용하면 하드웨어 및 데이터베이스 최적화 간의 경계가 흐려지기 때문에 세 번째 섹션에서는 CPU affinitization 및 리소스 거버넌스에 대해 자세히 설명합니다.
 
 > [!TIP]
-> SQL Server에 익숙치 않으면 SQL Server 성능 튜닝 가이드도 살펴보는 것이 좋습니다. [성능 모니터링 및 튜닝](https://docs.microsoft.com/sql/relational-databases/performance/monitor-and-tune-for-performance).
+> SQL Server에 익숙치 않으면 SQL Server 성능 튜닝 가이드도 살펴보는 것이 좋습니다. [성능 모니터링 및 튜닝](../../relational-databases/performance/monitor-and-tune-for-performance.md).
 
 ## <a name="hardware-optimization"></a>하드웨어 최적화
 
@@ -149,7 +149,7 @@ FROM sys.dm_os_memory_clerks
 
 쿼리에서 하나의 메모리 노드(노드 0)만 반환되면 하드웨어 NUMA가 없거나 해당 하드웨어가 인터리브(비-NUMA)로 구성되어 있는 것입니다. SQL Server는 또한 CPU가 4개 이하이거나 하나 이상의 노드에 CPU가 하나만 포함된 경우 하드웨어 NUMA를 무시합니다.
 
-컴퓨터에 여러 프로세서가 있지만 하드웨어 NUMA가 없다면 [Soft-NUMA](https://docs.microsoft.com/sql/database-engine/configure-windows/soft-numa-sql-server)를 사용하여 CPU를 더 작은 그룹으로 분할할 수도 있습니다.  SQL Server 2016 및 SQL Server 2017 모두, SQL Server 서비스를 시작할 때 Soft-NUMA 기능이 자동으로 사용 설정됩니다.
+컴퓨터에 여러 프로세서가 있지만 하드웨어 NUMA가 없다면 [Soft-NUMA](../../database-engine/configure-windows/soft-numa-sql-server.md)를 사용하여 CPU를 더 작은 그룹으로 분할할 수도 있습니다.  SQL Server 2016 및 SQL Server 2017 모두, SQL Server 서비스를 시작할 때 Soft-NUMA 기능이 자동으로 사용 설정됩니다.
 
 Soft-NUMA가 사용 설정되면 SQL Server가 노드를 자동으로 관리하지만, 특정 워크로드를 최적화하기 위해 _소프트 선호도_를 사용하지 않도록 설정하고 Soft NUMA 노드에 대해 CPU 선호도를 수동으로 구성할 수 있습니다. 이렇게 하면 특히 리소스 거버넌스를 지원하는 SQL Server 버전을 사용할 경우 할당할 워크로드 및 노드를 더 세부적으로 제어할 수 있습니다. CPU 선호도를 지정하고 리소스 풀을 CPU 그룹에 맞게 정렬하면, 대기 시간을 줄이고, 동일한 NUMA 노드 내에서 관련 프로세스가 수행되도록 보장할 수 있습니다.
 
@@ -164,7 +164,7 @@ R 워크로드를 지원하도록 Soft-NUMA 및 CPU 선호도를 구성하는 �
 
 **기타 리소스:**
 
-+ [SQL Server의 Soft-NUMA](https://docs.microsoft.com/sql/database-engine/configure-windows/soft-numa-sql-server)
++ [SQL Server의 Soft-NUMA](../../database-engine/configure-windows/soft-numa-sql-server.md)
     
     CPU에 Soft-NUMA 노드 매핑 방법
 
@@ -178,7 +178,7 @@ R에서 한 가지 문제는 일반적으로 단일 CPU에서 처리된다는 �
 
 기능 엔지니어링의 성능을 향상시키는 방법은 여러 가지가 있습니다. R 코드를 최적화하고 기능 추출을 모델링 프로세스 내에 유지하거나, 기능 엔지니어링 프로세스를 SQL로 이동할 수 있습니다.
 
-- R 사용. 함수를 정의한 후 이를 학습 중 [rxTransform](https://docs.microsoft.com/r-server/r-reference/revoscaler/rxtransform)에 대한 인수로 전달합니다. 모델에서 병렬 처리가 지원될 경우에는 여러 CPU를 사용해서 기능 엔지니어링 작업을 처리할 수 있습니다. 이 방법을 통해 데이터 과학 팀은 채점 시간 측면에서 16% 성능 향상을 관찰했습니다. 하지만 이 방법을 위해서는 병렬화를 지원하는 모델과 병렬 계획을 사용해서 실행될 수 있는 쿼리가 필요합니다.
+- R 사용. 함수를 정의한 후 이를 학습 중 [rxTransform](/r-server/r-reference/revoscaler/rxtransform)에 대한 인수로 전달합니다. 모델에서 병렬 처리가 지원될 경우에는 여러 CPU를 사용해서 기능 엔지니어링 작업을 처리할 수 있습니다. 이 방법을 통해 데이터 과학 팀은 채점 시간 측면에서 16% 성능 향상을 관찰했습니다. 하지만 이 방법을 위해서는 병렬화를 지원하는 모델과 병렬 계획을 사용해서 실행될 수 있는 쿼리가 필요합니다.
 
 - SQL 컴퓨팅 컨텍스트에서 R 사용. 개별 일괄 처리 실행을 위해 격리된 리소스가 제공되는 다중 프로세서 환경에서는 테이블에서 데이터를 추출하고 동일한 워크로드 그룹으로 데이터를 제한하기 위해 각 일괄 처리에 사용되는 SQL 쿼리를 격리하여 효율성을 더 높일 수 있습니다. 일괄 처리를 격리시키기 위해 사용되는 방법에는 분할 방법과 개별 쿼리를 병렬로 실행하기 위한 PowerShell 사용 방법이 포함됩니다.
 

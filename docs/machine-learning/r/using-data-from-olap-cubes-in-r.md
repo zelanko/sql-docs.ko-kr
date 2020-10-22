@@ -9,12 +9,12 @@ author: dphansen
 ms.author: davidph
 ms.custom: seo-lt-2019
 monikerRange: '>=sql-server-2016||>=sql-server-linux-ver15||=sqlallproducts-allversions'
-ms.openlocfilehash: 4ae9985ae7d203387eb268a50d97ee91849b33a8
-ms.sourcegitcommit: 9b41725d6db9957dd7928a3620fe4db41eb51c6e
+ms.openlocfilehash: 5a5219b034abdd390a77e1dacd6b2b71d83a770e
+ms.sourcegitcommit: cfa04a73b26312bf18d8f6296891679166e2754d
 ms.translationtype: HT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 08/13/2020
-ms.locfileid: "88180450"
+ms.lasthandoff: 10/19/2020
+ms.locfileid: "92195767"
 ---
 # <a name="using-data-from-olap-cubes-in-r"></a>R에서 OLAP 큐브의 데이터 사용
 [!INCLUDE [SQL Server 2016 and later](../../includes/applies-to-version/sqlserver2016.md)]
@@ -30,7 +30,7 @@ ms.locfileid: "88180450"
 
 OLAP은 온라인 분석 처리의 약어입니다. OLAP 솔루션은 시간에 따라 중요한 비즈니스 데이터를 캡처하고 저장하는 데 광범위하게 사용됩니다. OLAP 데이터는 다양한 도구, 대시보드 및 시각화에서 비즈니스 분석에 사용됩니다. 자세한 내용은 [온라인 분석 처리](https://en.wikipedia.org/wiki/Online_analytical_processing)를 참조하세요.
 
-Microsoft는 [큐브](https://docs.microsoft.com/sql/analysis-services/analysis-services) 또는 _테이블 형식 모델_의 형태로 OLAP 데이터를 디자인, 배포 및 쿼리할 수 있는 _Analysis Services_를 제공합니다. 큐브는 다차원 데이터베이스입니다. _차원_은 데이터의 패싯 또는 R의 요소와 비슷합니다. 차원을 사용하여 요약 또는 분석할 데이터의 특정 하위 세트를 식별할 수 있습니다. 예를 들어 시간은 중요한 차원이므로, 대부분의 OLAP 솔루션은 데이터를 분리하고 요약할 때 사용할 수 있도록 기본적으로 정의된 여러 달력을 포함하고 있습니다. 
+Microsoft는 [큐브](/analysis-services/analysis-services-overview) 또는 _테이블 형식 모델_의 형태로 OLAP 데이터를 디자인, 배포 및 쿼리할 수 있는 _Analysis Services_를 제공합니다. 큐브는 다차원 데이터베이스입니다. _차원_은 데이터의 패싯 또는 R의 요소와 비슷합니다. 차원을 사용하여 요약 또는 분석할 데이터의 특정 하위 세트를 식별할 수 있습니다. 예를 들어 시간은 중요한 차원이므로, 대부분의 OLAP 솔루션은 데이터를 분리하고 요약할 때 사용할 수 있도록 기본적으로 정의된 여러 달력을 포함하고 있습니다. 
 
 성능상의 이유로, OLAP 데이터베이스가 요약(또는 _집계_)을 미리 계산한 다음, 더 빠른 검색을 위해 요약을 저장하는 경우가 종종 있습니다. 요약은 숫자 데이터에 적용할 수 있는 수식을 나타내는 *측정값*를 기반으로 합니다. 차원을 사용하여 데이터의 하위 세트를 정의한 다음, 해당 데이터를 대상으로 측정값을 컴퓨팅합니다. 예를 들어 측정값을 사용하여 여러 분기 동안 판매된 특정 제품 라인의 총 매출에서 세금을 제한 금액을 컴퓨팅하고, 특정 공급업체의 평균 배송 비용, 올해 초부터 현재까지 지급된 누적 임금 등을 보고할 수 있습니다.
 
@@ -95,11 +95,11 @@ SQL Server Management Studio 같은 클라이언트를 사용하여 Analysis Ser
 
 두 가지 모델 유형에 대한 일반적인 내용은 다음 문서를 참조하세요.
 
-+ [다차원 모델과 테이블 형식 모델 비교](https://docs.microsoft.com/sql/analysis-services/comparing-tabular-and-multidimensional-solutions-ssas)
++ [다차원 모델과 테이블 형식 모델 비교](/analysis-services/comparing-tabular-and-multidimensional-solutions-ssas)
 
 서버 속성 쿼리에 대한 내용은 다음 문서를 참조하세요.
 
-+ [OLAP용 OLE DB 스키마 행 집합](https://docs.microsoft.com/previous-versions/sql/sql-server-2012/ms126079(v=sql.110))
++ [OLAP용 OLE DB 스키마 행 집합](/previous-versions/sql/sql-server-2012/ms126079(v=sql.110))
 
 ### <a name="writeback-is-not-supported"></a>쓰기 저장은 지원되지 않습니다.
 
@@ -107,9 +107,9 @@ SQL Server Management Studio 같은 클라이언트를 사용하여 Analysis Ser
 
 일반적으로 큐브에 쓰기 저장을 사용하도록 설정된 경우에도 제한된 작업만 지원되며, 추가 구성이 필요할 수도 있습니다. 이러한 작업에는 MDX를 사용하는 것이 좋습니다.
 
-+ [쓰기 가능 차원](https://docs.microsoft.com/sql/analysis-services/multidimensional-models-olap-logical-dimension-objects/write-enabled-dimensions)
-+ [쓰기 가능 파티션](https://docs.microsoft.com/sql/analysis-services/multidimensional-models-olap-logical-cube-objects/partitions-write-enabled-partitions)
-+ [셀 데이터에 대한 사용자 지정 액세스 설정](https://docs.microsoft.com/sql/analysis-services/multidimensional-models/grant-custom-access-to-cell-data-analysis-services)
++ [쓰기 가능 차원](/analysis-services/multidimensional-models-olap-logical-dimension-objects/write-enabled-dimensions)
++ [쓰기 가능 파티션](/analysis-services/multidimensional-models-olap-logical-cube-objects/partitions-write-enabled-partitions)
++ [셀 데이터에 대한 사용자 지정 액세스 설정](/analysis-services/multidimensional-models/grant-custom-access-to-cell-data-analysis-services)
 
 ### <a name="long-running-mdx-queries-block-cube-processing"></a>장기 실행 MDX 쿼리는 큐브 처리를 차단
 
