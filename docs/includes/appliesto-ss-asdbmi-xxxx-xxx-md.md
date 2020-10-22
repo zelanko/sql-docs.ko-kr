@@ -1,1 +1,0 @@
-<Token>**적용 대상:** ![ 예 ](media/yes-icon.png) SQL Server ![ ](media/yes-icon.png) azure sql Managed Instance ![ no ](media/no-icon.png) AZURE Synapse Analytics (SQL DW) 아니요 ![ ](media/no-icon.png) 병렬 데이터 웨어하우스</Token>
