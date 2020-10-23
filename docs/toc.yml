@@ -58,7 +58,7 @@
           items:
             - name: 빅 데이터 도구 설치
               href: big-data-cluster/deploy-big-data-tools.md
-            - name: Azdata 설치
+            - name: Azure Data CLI 설치
               items:
                 - name: 설치
                   href: azdata/install/deploy-install-azdata.md
@@ -196,7 +196,7 @@
               href: big-data-cluster/data-ingestion-restore-database.md
         - name: 앱 배포 및 사용
           items:
-            - name: Azdata를 사용하여 배포
+            - name: Azure Data CLI를 사용하여 배포
               href: big-data-cluster/app-create.md
             - name: VS Code를 사용하여 배포
               href: big-data-cluster/app-deployment-extension.md
@@ -402,9 +402,9 @@
               href: big-data-cluster/reference-config-master-instance.md
             - name: Apache Spark 및 Apache Hadoop
               href: big-data-cluster/reference-config-spark-hadoop.md
-        - name: azdata 참조
+        - name: Azure Data CLI 참조
           items:
-            - name: azdata
+            - name: Azure Data CLI
               items:
                 - name: azdata
                   href: azdata/reference/reference-azdata.md

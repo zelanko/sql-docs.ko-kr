@@ -21,16 +21,15 @@ keywords:
 ms.assetid: adafeeef-4255-4924-8042-02f503d599ca
 author: dzsquared
 ms.author: drskwier
-manager: viharp
 ms.reviewer: maghan
 ms.custom: seo-lt-2019
-ms.date: 09/28/2020
-ms.openlocfilehash: 3919719b19cadb63e54a54dc5786f955a11ab5f5
-ms.sourcegitcommit: 22102f25db5ccca39aebf96bc861c92f2367c77a
+ms.date: 10/20/2020
+ms.openlocfilehash: 02526928d102dd9dba8a0f19b7a05f36a7de3bcc
+ms.sourcegitcommit: ae474d21db4f724523e419622ce79f611e956a22
 ms.translationtype: HT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 10/16/2020
-ms.locfileid: "92115762"
+ms.lasthandoff: 10/20/2020
+ms.locfileid: "92257991"
 ---
 # <a name="download-sql-server-management-studio-ssms"></a>SSMS(SQL Server Management Studio) 다운로드
 
@@ -40,23 +39,21 @@ SSMS(SQL Server Management Studio)는 SQL Server에서 Azure SQL Database까지 
 
 로컬 컴퓨터 또는 클라우드 등 어디에서나 SSMS를 사용하여 데이터베이스 및 데이터 웨어하우스를 쿼리, 디자인 및 관리할 수 있습니다.
 
-SSMS는 무료입니다.
-
 ## <a name="download-ssms"></a>SSMS 다운로드
 
 :::image type="icon" source="media/download-icon.png" border="false"::: **[SSMS(SQL Server Management Studio) 다운로드](https://aka.ms/ssmsfullsetup)**
 
-SSMS 18.6은 SSMS의 최신 GA(일반 공급) 버전입니다. 이전 GA 버전의 SSMS 18이 설치된 경우 SSMS 18.6을 설치하면 이 버전이 18.6으로 업그레이드됩니다.
+SSMS 18.7은 SSMS의 최신 GA(일반 공급) 버전입니다. 이전 GA 버전의 SSMS 18이 설치된 경우 SSMS 18.7을 설치하면 이 버전이 18.7로 업그레이드됩니다.
 
-### <a name="version-information"></a>버전 정보
+[!INCLUDE [ssms-ads-install](../includes/ssms-azure-data-studio-install.md)]
 
-- 릴리스 번호: 18.6
-- 빌드 번호: 15.0.18338.0
-- 릴리스 날짜: 2020년 7월 22일
+- 릴리스 번호: 18.7
+- 빌드 번호: 15.0.18357.0
+- 릴리스 날짜: 2020년 10월 20일
 
 의견 또는 제안 사항이 있거나 문제를 보고하려는 경우 SSMS 팀에 연락하는 가장 좋은 방법은 [SQL Server 사용자 피드백](https://aka.ms/sqlfeedback)을 사용하는 것입니다.
 
-SSMS 18.x 설치는 SSMS 17.x 이전 버전을 업그레이드 또는 대체하지 않습니다. SSMS 18.x는 이전 버전과 함께 설치되므로 두 버전을 모두 사용할 수 있습니다. 그러나 SSMS 18.x의 ‘미리 보기’ 버전이 설치된 경우에는 해당 버전을 제거한 후에 SSMS 18.6을 설치해야 합니다. **도움말 > 정보** 창으로 이동하여 미리 보기 버전이 있는지 확인할 수 있습니다.
+SSMS 18.x 설치는 SSMS 17.x 이전 버전을 업그레이드 또는 대체하지 않습니다. SSMS 18.x는 이전 버전과 함께 설치되므로 두 버전을 모두 사용할 수 있습니다. 그러나 SSMS 18.x의 ‘미리 보기’ 버전이 설치된 경우에는 해당 버전을 제거한 후에 SSMS 18.7을 설치해야 합니다. **도움말 > 정보** 창으로 이동하여 미리 보기 버전이 있는지 확인할 수 있습니다.
 
 컴퓨터에 SSMS가 병렬로 설치되어 있으면 특정 요구에 맞는 올바른 버전을 시작해야 합니다. 최신 버전에는 **Microsoft SQL Server Management Studio 18** 레이블이 지정됩니다.
 
@@ -67,8 +64,8 @@ SSMS 18.x 설치는 SSMS 17.x 이전 버전을 업그레이드 또는 대체하�
 
 이 SSMS 릴리스는 다음 언어로 설치할 수 있습니다.
 
-SQL Server Management Studio 18.6:  
-[중국어(간체)](https://go.microsoft.com/fwlink/?linkid=2135491&clcid=0x804) | [중국어(번체)](https://go.microsoft.com/fwlink/?linkid=2135491&clcid=0x404) | [영어(미국)](https://go.microsoft.com/fwlink/?linkid=2135491&clcid=0x409) | [프랑스어](https://go.microsoft.com/fwlink/?linkid=2135491&clcid=0x40c) | [독일어](https://go.microsoft.com/fwlink/?linkid=2135491&clcid=0x407) | [이탈리아어](https://go.microsoft.com/fwlink/?linkid=2135491&clcid=0x410) | [일본어](https://go.microsoft.com/fwlink/?linkid=2135491&clcid=0x411) | [한국어](https://go.microsoft.com/fwlink/?linkid=2135491&clcid=0x412) | [포르투갈어(브라질)](https://go.microsoft.com/fwlink/?linkid=2135491&clcid=0x416) | [러시아어](https://go.microsoft.com/fwlink/?linkid=2135491&clcid=0x419) | [스페인어](https://go.microsoft.com/fwlink/?linkid=2135491&clcid=0x40a)
+SQL Server Management Studio 18.7:  
+[중국어(간체)](https://go.microsoft.com/fwlink/?linkid=2146265&clcid=0x804) | [중국어(번체)](https://go.microsoft.com/fwlink/?linkid=2146265&clcid=0x404) | [영어(미국)](https://go.microsoft.com/fwlink/?linkid=2146265&clcid=0x409) | [프랑스어](https://go.microsoft.com/fwlink/?linkid=2146265&clcid=0x40c) | [독일어](https://go.microsoft.com/fwlink/?linkid=2146265&clcid=0x407) | [이탈리아어](https://go.microsoft.com/fwlink/?linkid=2146265&clcid=0x410) | [일본어](https://go.microsoft.com/fwlink/?linkid=2146265&clcid=0x411) | [한국어](https://go.microsoft.com/fwlink/?linkid=2146265&clcid=0x412) | [포르투갈어(브라질)](https://go.microsoft.com/fwlink/?linkid=2146265&clcid=0x416) | [러시아어](https://go.microsoft.com/fwlink/?linkid=2146265&clcid=0x419) | [스페인어](https://go.microsoft.com/fwlink/?linkid=2146265&clcid=0x40a)
 
 > [!NOTE]
 > SQL Server PowerShell 모듈은 PowerShell 갤러리를 통해 별도로 설치됩니다. 자세한 내용은 [SQL Server PowerShell 모듈 다운로드](download-sql-server-ps-module.md)를 참조하세요.
@@ -77,7 +74,7 @@ SQL Server Management Studio 18.6:
 
 이 릴리스의 새로운 기능에 대한 자세한 내용은 S[SSMS 릴리스 정보](release-notes-ssms.md)를 참조하세요.
 
-이 릴리스에는 몇 가지 [알려진 문제](release-notes-ssms.md#known-issues-186)가 있습니다.
+이 릴리스에는 몇 가지 [알려진 문제](release-notes-ssms.md#known-issues-187)가 있습니다.
 
 ## <a name="previous-versions"></a>이전 버전
 
@@ -115,6 +112,7 @@ SSMS를 제거한 후에도 설치된 상태로 유지되는 공유 구성 요�
 
 설치된 상태로 유지되는 공유 구성 요소는 다음과 같습니다.
 
+- Azure Data Studio
 - Microsoft .NET Framework 4.7.2
 - SQL Server용 Microsoft OLE DB 드라이버
 - Microsoft ODBC Driver 17 for SQL Server
@@ -158,11 +156,11 @@ SSMS를 제거한 후에도 설치된 상태로 유지되는 공유 구성 요�
 
 ## <a name="next-steps"></a>다음 단계
 
-- [자습서: SQL Server Management Studio](tutorials/tutorial-sql-server-management-studio.md)
+- [SQL 도구](../tools/overview-sql-tools.md)
 - [SQL Server Management Studio 설명서](sql-server-management-studio-ssms.md)
-- [최신 업데이트](../database-engine/install-windows/latest-updates-for-microsoft-sql-server.md)
 - [Azure Data Studio](../azure-data-studio/what-is.md)
 - [SSDT(SQL Server Data Tools) 다운로드](../ssdt/download-sql-server-data-tools-ssdt.md)
+- [최신 업데이트](../database-engine/install-windows/latest-updates-for-microsoft-sql-server.md)
 - [Azure 데이터 아키텍처 가이드](https://docs.microsoft.com/azure/architecture/data-guide/)
 
 [!INCLUDE[contribute-to-content](../includes/paragraph-content/contribute-to-content.md)]

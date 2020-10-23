@@ -1,6 +1,6 @@
 ---
 description: sys.dm_xtp_gc_queue_stats(Transact-SQL)
-title: sys. dm_xtp_gc_queue_stats (Transact-sql) | Microsoft Docs
+title: sys.dm_xtp_gc_queue_stats (Transact-sql) | Microsoft Docs
 ms.custom: ''
 ms.date: 08/02/2016
 ms.prod: sql
@@ -20,12 +20,12 @@ ms.assetid: addef774-318d-46a7-85df-f93168a800cb
 author: markingmyname
 ms.author: maghan
 monikerRange: = azuresqldb-current || = azuresqldb-mi-current || >= sql-server-2016 || >= sql-server-linux-2017 || = sqlallproducts-allversions
-ms.openlocfilehash: 5431cba1f886aee939d9a70d9b05fd65398184ce
-ms.sourcegitcommit: dd36d1cbe32cd5a65c6638e8f252b0bd8145e165
+ms.openlocfilehash: f1c2a816af4936d51473cd9770e6c52f46f277fa
+ms.sourcegitcommit: fb8724fb99c46ecf3a6d7b02a743af9b590402f0
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 09/08/2020
-ms.locfileid: "89539244"
+ms.lasthandoff: 10/23/2020
+ms.locfileid: "92439480"
 ---
 # <a name="sysdm_xtp_gc_queue_stats-transact-sql"></a>sys.dm_xtp_gc_queue_stats(Transact-SQL)
 
@@ -55,7 +55,7 @@ ms.locfileid: "89539244"
 ## <a name="user-scenario"></a>사용자 시나리오  
  이 출력은 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]가 4개의 코어에서 실행되고 있거나 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 인스턴스에서 선호도가 4개의 코어로 설정되었음을 보여 줍니다.  
   
- 이 출력은 큐에 처리할 작업 항목이 없음을 보여 줍니다. 큐 0의 경우 SQL 시작 후 큐에서 나온 총 작업 항목은 15625개이며 최대 큐 깊이는 215625였습니다.  
+ 이 출력은 큐에 처리할 작업 항목이 없음을 보여 줍니다. 큐 0의 경우 SQL 시작 이후 큐에서 제거 된 총 작업 항목 수는 15625이 고 최대 큐 깊이는 15625입니다.  
   
 ```  
 queue_id total_enqueues total_dequeues current_queue_depth  maximum_queue_depth  last_service_ticks  

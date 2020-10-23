@@ -14,12 +14,12 @@ ms.assetid: ''
 author: chugugrace
 ms.author: chugu
 ms.custom: seo-lt-2019
-ms.openlocfilehash: 1dcae45aef82859a961202ff30c3daca18e909b8
-ms.sourcegitcommit: c7f40918dc3ecdb0ed2ef5c237a3996cb4cd268d
+ms.openlocfilehash: 20f216b920eb16651ca0d06a6b8090e431f8c592
+ms.sourcegitcommit: fb8724fb99c46ecf3a6d7b02a743af9b590402f0
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 10/05/2020
-ms.locfileid: "91726316"
+ms.lasthandoff: 10/23/2020
+ms.locfileid: "92439407"
 ---
 # <a name="perform-a-sql-server-integration-service-migration-assessment-with-data-migration-assistant"></a>Data Migration Assistant를 사용 하 여 SQL Server Integration Service 마이그레이션 평가 수행
 
@@ -55,12 +55,12 @@ SSIS (SQL Server Integration Service) 패키지를 평가 하려면 아래 구�
 1. 필드 SSIS 패키지를 포함 하는 폴더 경로를 입력 하십시오.
 1. 필드 해당 하는 경우 패키지 암호화 암호를 입력 합니다.
 1. 원본 SQL server에 **연결** 을 클릭 합니다.
-  ![소스 추가](media/dma-assess-ssis/dma-assess-ssis-addsource.png)
+  ![SSIS 패키지를 포함 하는 폴더 경로를 입력 하십시오. 옵션을 사용 하 여 서버에 연결 창을 표시 하 고 해당 하는 경우 패키지 암호화 암호를 입력 합니다 (해당 하는 경우).](media/dma-assess-ssis/dma-assess-ssis-addsource.png)
 
 ## <a name="add-sources-to-assess"></a>평가할 소스 추가
 
 1. 평가할 SSIS 패키지 저장소 유형을 선택 하 고 **추가**를 선택 합니다.
-![소스 추가](media/dma-assess-ssis/dma-assess-ssis-addsource-type.png)
+![소스 추가 창을 보여 주는 스크린샷](media/dma-assess-ssis/dma-assess-ssis-addsource-type.png)
 1. 여러 폴더를 평가 해야 하는 경우 **원본 추가** 를 선택 하 여 연결 플라이 아웃 메뉴를 엽니다.
 1. **Start Assessment**(평가 시작)를 클릭합니다.
   ![평가 시작](media/dma-assess-ssis/dma-assess-ssis-assess.png)
