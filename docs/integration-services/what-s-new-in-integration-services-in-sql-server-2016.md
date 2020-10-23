@@ -15,12 +15,12 @@ helpviewer_keywords:
 ms.assetid: da6999c7-e5e3-4a59-a284-1da635995af1
 author: chugugrace
 ms.author: chugu
-ms.openlocfilehash: 16844bfb5c173fdb6527777950a8d80f1b177994
-ms.sourcegitcommit: 827ad02375793090fa8fee63cc372d130f11393f
+ms.openlocfilehash: a458d0bcf700341951d79c775fb06fde37585362
+ms.sourcegitcommit: cfa04a73b26312bf18d8f6296891679166e2754d
 ms.translationtype: HT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 09/04/2020
-ms.locfileid: "89480833"
+ms.lasthandoff: 10/19/2020
+ms.locfileid: "92193740"
 ---
 # <a name="what39s-new-in-integration-services-in-sql-server-2016"></a>SQL Server 2016 Integration Services의 새로운 기능
 
@@ -112,7 +112,7 @@ ms.locfileid: "89480833"
         
         -   [Azure Data Lake Store에 대한 지원이 릴리스됨](#datalakestore)
         
-        -   [Azure SQL Data Warehouse에 대한 지원이 릴리스됨](#sqldwupload)
+        -   [릴리스된 Azure Synapse Analytics에 대한 지원](#sqldwupload)
   
 -   **유용성 및 생산성**  
   
@@ -309,7 +309,7 @@ SQL Server 2016 서비스 팩 1을 설치하면 이제 OData 원본 및 OData �
 
 최신 버전의 Azure 기능 팩에는 연결 관리자, Azure Data Lake Store에서 데이터를 이동할 원본 및 대상이 포함되어 있습니다. 자세한 내용은 [Integration Services용 Azure 기능 팩&#40;SSIS&#41;](../integration-services/azure-feature-pack-for-integration-services-ssis.md)을 참조하세요.
 
-#### <a name="support-for-azure-sql-data-warehouse-released"></a><a name="sqldwupload"></a>SSMS의 Azure SQL Data Warehouse 지원
+#### <a name="support-for-azure-synapse-analytics-released"></a><a name="sqldwupload"></a> 릴리스된 Azure Synapse Analytics에 대한 지원
 
 최신 버전의 Azure 기능 팩에는 SQL Data Warehouse를 데이터로 채우기 위한 Azure SQL DW 업로드 작업이 포함되어 있습니다. 자세한 내용은 [Integration Services용 Azure 기능 팩&#40;SSIS&#41;](../integration-services/azure-feature-pack-for-integration-services-ssis.md)을 참조하세요.
 
@@ -376,4 +376,4 @@ SQL Server 2016 서비스 팩 1을 설치하면 이제 OData 원본 및 OData �
 
 ## <a name="see-also"></a>참고 항목  
  [SQL Server 2016의 새로운 기능](../sql-server/what-s-new-in-sql-server-2016.md)   
- [SQL Server 2016의 버전 및 지원하는 기능](../sql-server/editions-and-supported-features-for-sql-server-2016.md)
+ [SQL Server 2016의 버전 및 지원하는 기능](../sql-server/editions-and-components-of-sql-server-2016.md)

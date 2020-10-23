@@ -23,12 +23,12 @@ ms.assetid: c963e8b4-5a85-4bd0-9d48-3f8da8f6516b
 author: MikeRayMSFT
 ms.author: mikeray
 monikerRange: '>=aps-pdw-2016||=azuresqldb-current||=azure-sqldw-latest||>=sql-server-2016||=sqlallproducts-allversions||>=sql-server-linux-2017||=azuresqldb-mi-current'
-ms.openlocfilehash: 9fdec32c3c5b23da531b78100e41cf426f357cbf
-ms.sourcegitcommit: e700497f962e4c2274df16d9e651059b42ff1a10
+ms.openlocfilehash: 0d6246c3b8318ae2596dfd1f4240692be7941e49
+ms.sourcegitcommit: 2b6760408de3b99193edeccce4b92a2f9ed5bcc6
 ms.translationtype: HT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 08/17/2020
-ms.locfileid: "88468298"
+ms.lasthandoff: 10/19/2020
+ms.locfileid: "92175953"
 ---
 # <a name="date-transact-sql"></a>date(Transact-SQL)
 
@@ -65,7 +65,7 @@ ms.locfileid: "88468298"
   
 |알파벳|Description|  
 |------------------|-----------------|  
-|mon [dd][,] yyyy<br /><br /> mon dd[,] [yy<br /><br /> mon yyyy [dd]<br /><br /> [dd] mon[,] yyyy<br /><br /> dd mon[,][yy]yy<br /><br /> dd [yy]yy mon<br /><br /> [dd] yyyy mon<br /><br /> yyyy mon [dd]<br /><br /> yyyy [dd] mon|**mon**은 현재 언어에서 지정된 월의 전체 이름 또는 약어를 나타냅니다. 쉼표는 선택 사항이며 대문자는 무시됩니다.<br /><br /> 모호성을 피하려면 4자리 연도를 사용하세요.<br /><br /> 일이 생략된 경우 해당 월의 첫째 날이 사용됩니다.|  
+|mon [dd][,] yyyy<br /><br /> mon dd[,] [yy]<br /><br /> mon yyyy [dd]<br /><br /> [dd] mon[,] yyyy<br /><br /> dd mon[,][yy]yy<br /><br /> dd [yy]yy mon<br /><br /> [dd] yyyy mon<br /><br /> yyyy mon [dd]<br /><br /> yyyy [dd] mon|**mon**은 현재 언어에서 지정된 월의 전체 이름 또는 약어를 나타냅니다. 쉼표는 선택 사항이며 대문자는 무시됩니다.<br /><br /> 모호성을 피하려면 4자리 연도를 사용하세요.<br /><br /> 일이 생략된 경우 해당 월의 첫째 날이 사용됩니다.|  
   
 |ISO 8601|Description|  
 |--------------|----------------|  

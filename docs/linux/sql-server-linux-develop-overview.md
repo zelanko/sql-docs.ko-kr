@@ -8,12 +8,12 @@ ms.topic: conceptual
 ms.prod: sql
 ms.technology: linux
 ms.assetid: 758cb738-b018-465b-9ab0-59a24b892e66
-ms.openlocfilehash: 09bdea851ed3b9efeca1c69a09c12108706bbb22
-ms.sourcegitcommit: f7ac1976d4bfa224332edd9ef2f4377a4d55a2c9
+ms.openlocfilehash: f9623feab13740d9b328d97a248742711871ffa3
+ms.sourcegitcommit: 22102f25db5ccca39aebf96bc861c92f2367c77a
 ms.translationtype: HT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 07/02/2020
-ms.locfileid: "85896499"
+ms.lasthandoff: 10/16/2020
+ms.locfileid: "92115486"
 ---
 # <a name="how-to-get-started-developing-applications-for-sql-server-on-linux"></a>Linux의 SQL Server용 애플리케이션 개발을 시작하는 방법
 
@@ -24,7 +24,7 @@ C#, Java, Node.js, PHP, Python, Ruby, C++ 등의 다양한 프로그래밍 언�
 > [!VIDEO https://channel9.msdn.com/events/Connect/2017/T153/player]
 
 > [!TIP]
-> 이와 동일한 개발 옵션을 사용하여 다른 플랫폼의 SQL Server를 대상으로 지정할 수도 있습니다. 애플리케이션은 온-프레미스 또는 클라우드, macOS의 Linux, Windows 또는 Docker에서 실행되는 SQL Server를 대상으로 할 수 있습니다. 또는 Azure SQL Database 및 Azure SQL Data Warehouse를 대상으로 지정할 수 있습니다.
+> 이와 동일한 개발 옵션을 사용하여 다른 플랫폼의 SQL Server를 대상으로 지정할 수도 있습니다. 애플리케이션은 온-프레미스 또는 클라우드, macOS의 Linux, Windows 또는 Docker에서 실행되는 SQL Server를 대상으로 할 수 있습니다. 또는 Azure SQL Database 및 Azure Synapse Analytics를 대상으로 지정할 수 있습니다.
 
 ## <a name="try-the-tutorials"></a>자습서 사용해 보기
 
@@ -62,7 +62,7 @@ SSMS, SSDT, PowerShell 등 Windows에서 현재 실행되는 도구는 Linux의 
 
 Linux, macOS 및 Windows에서 [Visual Studio Code](https://code.visualstudio.com)의 새로운 [mssql 확장](https://aka.ms/mssql-marketplace)을 사용할 수 있습니다. 단계별 연습을 진행하려면 다음 자습서를 참조하세요.
 
-- [Visual Studio Code 사용](sql-server-linux-develop-use-vscode.md)
+- [Visual Studio Code 사용](../tools/visual-studio-code/sql-server-develop-use-vscode.md)
 
 또한 Linux에 기본적으로 제공되는 새 명령줄 도구를 사용할 수도 있습니다. 이러한 도구에는 다음이 포함됩니다.
 

@@ -17,16 +17,16 @@ ms.assetid: cc5bf181-18a0-44d5-8bd7-8060d227c927
 author: julieMSFT
 ms.author: jrasnick
 monikerRange: =azuresqldb-current||>=sql-server-2016||=sqlallproducts-allversions||>=sql-server-linux-2017||=azuresqldb-mi-current
-ms.openlocfilehash: 1cdad35826cf23244264057c059d2f2c79f2049a
-ms.sourcegitcommit: 783b35f6478006d654491cb52f6edf108acf2482
+ms.openlocfilehash: e02e5e2e6449a1c8c62072d0cd5a86d44cdf22ce
+ms.sourcegitcommit: a5398f107599102af7c8cda815d8e5e9a367ce7e
 ms.translationtype: HT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 10/09/2020
-ms.locfileid: "91891013"
+ms.lasthandoff: 10/13/2020
+ms.locfileid: "92006001"
 ---
 # <a name="partitioned-tables-and-indexes"></a>Partitioned Tables and Indexes
 [!INCLUDE [SQL Server Azure SQL Database](../../includes/applies-to-version/sql-asdb.md)]
-  [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 에서는 테이블 및 인덱스 분할을 지원합니다. 분할 테이블 및 인덱스의 데이터는 데이터베이스에서 두 개 이상의 파일 그룹으로 분할될 수 있는 단위로 나뉩니다. 행 그룹이 개별 파티션에 매핑되도록 데이터는 수평적으로 분할됩니다. 단일 인덱스나 테이블의 모든 파티션은 동일 데이터베이스에 상주해야 합니다. 데이터에서 쿼리나 업데이트가 수행되면 테이블이나 인덱스는 단일 논리적 엔터티로 처리됩니다. [!INCLUDE[ssSQL15_md](../../includes/sssql15-md.md)] SP1 전에는 분할된 테이블 및 인덱스를 일부 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 버전에서만 사용할 수 있습니다. [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 버전에서 지원되는 기능 목록은 [SQL Server 2016 버전에 대한 버전 및 지원하는 기능](../../sql-server/editions-and-components-of-sql-server-2016.md)을 참조하세요.  
+  [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 에서는 테이블 및 인덱스 분할을 지원합니다. 분할 테이블 및 인덱스의 데이터는 필요에 따라 데이터베이스에서 두 개 이상의 파일 그룹으로 분할될 수 있는 단위로 나뉩니다. 행 그룹이 개별 파티션에 매핑되도록 데이터는 수평적으로 분할됩니다. 단일 인덱스나 테이블의 모든 파티션은 동일 데이터베이스에 상주해야 합니다. 데이터에서 쿼리나 업데이트가 수행되면 테이블이나 인덱스는 단일 논리적 엔터티로 처리됩니다. [!INCLUDE[ssSQL15_md](../../includes/sssql15-md.md)] SP1 전에는 분할된 테이블 및 인덱스를 일부 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 버전에서만 사용할 수 있습니다. [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 버전에서 지원되는 기능 목록은 [SQL Server 2016 버전에 대한 버전 및 지원하는 기능](../../sql-server/editions-and-components-of-sql-server-2016.md)을 참조하세요.  
   
 > [!IMPORTANT]  
 > [!INCLUDE[ssCurrent](../../includes/sscurrent-md.md)] 는 기본적으로 최대 15,000개의 파티션을 지원합니다. [!INCLUDE[ssSQL11](../../includes/sssql11-md.md)] 이전 버전에서는 파티션 수가 기본적으로 1,000개로 제한되었습니다. x86 기반 시스템에서는 파티션 수가 1,000개를 초과하는 테이블 또는 인덱스를 만들 수 있지만 해당 테이블 또는 인덱스는 지원되지 않습니다.  
@@ -40,9 +40,12 @@ ms.locfileid: "91891013"
   
 -   자주 실행하는 쿼리 유형과 사용 중인 하드웨어 구성에 따라 쿼리 성능이 향상될 수 있습니다. 예를 들어 쿼리 최적화 프로그램에서는 분할 열이 테이블이 조인된 열과 동일한 경우 2개 이상의 분할된 테이블 간의 동등 조인 쿼리를 더 빠르게 처리할 수 있습니다. 자세한 정보는 아래 [쿼리](#queries)를 참조하세요.
   
-[!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 가 I/O 작업을 위해 데이터를 정렬할 때 먼저 파티션을 기준으로 데이터가 정렬됩니다. [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 가 한 번에 한 드라이브에 액세스하므로 성능이 저하될 수 있습니다. 데이터 저장 성능을 향상시키려면 RAID를 설정하여 두 개 이상의 디스크 간에 파티션의 데이터 파일을 스트라이프합니다. 이렇게 하면 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 가 여전히 파티션을 기준으로 데이터를 정렬하지만 동시에 각 파티션의 모든 드라이브에 액세스할 수 있습니다.  
+[!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 가 I/O 작업을 위해 데이터를 정렬할 때 먼저 파티션을 기준으로 데이터가 정렬됩니다. 데이터 저장 성능을 향상시키려면 RAID를 설정하여 두 개 이상의 디스크 간에 파티션의 데이터 파일을 스트라이프합니다. 이렇게 하면 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 가 여전히 파티션을 기준으로 데이터를 정렬하지만 동시에 각 파티션의 모든 드라이브에 액세스할 수 있습니다.  
   
 또한 전체 테이블이 아니라 파티션 수준에서 잠금 에스컬레이션을 설정하여 성능을 향상시킬 수 있습니다. 따라서 테이블의 잠금 경합을 줄일 수 있습니다. 파티션에 잠금 에스컬레이션을 허용하여 잠금 경합을 줄이려면 `ALTER TABLE` 문의 `LOCK_ESCALATION` 옵션을 AUTO로 설정합니다. 
+
+> [!TIP]
+> 테이블 또는 인덱스의 파티션을 한 파일 그룹(예: `PRIMARY` 파일 그룹) 또는 여러 파일 그룹에 배치할 수 있습니다. 계층화된 스토리지를 사용하는 경우 여러 파일 그룹을 사용하면 특정 파티션을 특정 스토리지 계층에 할당할 수 있습니다. 다른 모든 분할 이점은 사용된 파일 그룹 수 또는 특정 파일 그룹의 파티션 배치에 관계없이 적용됩니다.
   
 ## <a name="components-and-concepts"></a>구성 요소 및 개념  
 테이블 및 인덱스 분할에 적용되는 용어는 다음과 같습니다.  
@@ -114,6 +117,8 @@ ms.locfileid: "91891013"
 -  같은 수의 파티션을 정의하는 경우
 -  파티션에 대해 같은 경계 값을 정의하는 경우
 이러한 방식을 통해 파티션 자체를 조인할 수 있기 때문에 쿼리 최적화 프로그램에서 조인을 보다 빠르게 처리할 수 있습니다. 쿼리가 조인하는 두 테이블이 배치되지 않았거나 조인 필드에서 분할되지 않았으면 파티션으로 인해 쿼리 처리가 빨라지는 대신 실제로 느려질 수 있습니다.
+
+쿼리 처리 시 파티션 처리에 대한 자세한 내용은 [분할된 테이블 및 인덱스에서의 향상된 쿼리 처리](../../relational-databases/query-processing-architecture-guide.md#query-processing-enhancements-on-partitioned-tables-and-indexes)를 참조하세요.
 
 ## <a name="behavior-changes-in-statistics-computation-during-partitioned-index-operations"></a>분할된 인덱스 작업 중 통계 계산의 동작 변경 내용  
  [!INCLUDE[ssSQL11](../../includes/sssql11-md.md)]부터 분할된 인덱스를 만들거나 다시 작성할 때 테이블의 모든 행을 검사하여 통계를 작성하지 않습니다. 대신 쿼리 최적화 프로그램에서 기본 샘플링 알고리즘을 사용하여 통계를 생성합니다. 분할된 인덱스로 데이터베이스를 업그레이드한 후 인덱스에 대한 히스토그램 데이터가 달라집니다. 이 동작 변경이 쿼리 성능에는 영향을 주지 않을 수 있습니다. 테이블의 모든 행을 검사하여 분할된 인덱스에 대한 통계를 얻으려면 `FULLSCAN` 절에서 `CREATE STATISTICS` 또는 `UPDATE STATISTICS`를 사용합니다.  

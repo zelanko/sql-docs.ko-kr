@@ -13,12 +13,12 @@ author: MikeRayMSFT
 ms.author: mikeray
 ms.reviewer: ''
 monikerRange: '>= sql-server-linux-ver15 || >= sql-server-2016 || =sqlallproducts-allversions'
-ms.openlocfilehash: 137a4156dde6cfe89ff76998b383fb4ab17ea672
-ms.sourcegitcommit: 783b35f6478006d654491cb52f6edf108acf2482
+ms.openlocfilehash: 2f52e71caddf2c2c7800e094ba3e40905a8d8833
+ms.sourcegitcommit: a5398f107599102af7c8cda815d8e5e9a367ce7e
 ms.translationtype: HT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 10/09/2020
-ms.locfileid: "91891343"
+ms.lasthandoff: 10/13/2020
+ms.locfileid: "92005710"
 ---
 # <a name="polybase-transact-sql-reference"></a>PolyBase Transact-SQL 참조
 
@@ -121,7 +121,7 @@ CREATE STATISTICS StatsForSensors on CarSensor_Data(CustomerKey, Speed)
 ```  
 
 ## <a name="create-external-tables-for-azure-blob-storage"></a>Azure blob 스토리지에 대한 외부 테이블 만들기  
-적용 대상: SQL Server(2016부터), Azure SQL Data Warehouse, 병렬 데이터 웨어하우스
+적용 대상: SQL Server(2016 이상), Azure Synapse Analytics, 병렬 데이터 웨어하우스
 
 **1. 데이터베이스 범위 자격 증명 만들기**  
 
@@ -196,7 +196,7 @@ CREATE STATISTICS StatsForSensors on CarSensor_Data(CustomerKey, Speed)
 ```  
 
 ## <a name="create-external-tables-for-azure-data-lake-store"></a>Azure Data Lake Store의 외부 테이블 만들기
-적용 대상: Azure SQL Data Warehouse
+적용 대상: Azure Synapse Analytics
 
 자세한 내용은 [Azure Data Lake Store를 사용하여 로드](/azure/sql-data-warehouse/sql-data-warehouse-load-from-azure-data-lake-store)를 참조하세요.
 

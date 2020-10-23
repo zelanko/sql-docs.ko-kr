@@ -8,12 +8,12 @@ ms.topic: conceptual
 ms.prod: sql
 ms.technology: linux
 ms.assetid: 7b93d0d7-7946-4b78-b33a-57d6307cdfa9
-ms.openlocfilehash: 447304bf0927b08e76a668e93ca750f3f8bfc779
-ms.sourcegitcommit: f7ac1976d4bfa224332edd9ef2f4377a4d55a2c9
+ms.openlocfilehash: 1d4c924652ec21ab4ed8e7c79d01d7f36835715b
+ms.sourcegitcommit: a5398f107599102af7c8cda815d8e5e9a367ce7e
 ms.translationtype: HT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 07/02/2020
-ms.locfileid: "85896279"
+ms.lasthandoff: 10/13/2020
+ms.locfileid: "92006557"
 ---
 # <a name="bulk-copy-data-with-bcp-to-sql-server-on-linux"></a>bcp를 사용하여 SQL Server on Linux로 데이터 대량 복사
 
@@ -21,7 +21,7 @@ ms.locfileid: "85896279"
 
 이 문서에서는 [bcp](../tools/bcp-utility.md) 명령줄 유틸리티를 사용하여 SQL Server on Linux 인스턴스와 사용자 지정 형식의 데이터 파일 간에 데이터를 대량 복사하는 방법을 보여 줍니다.
 
-`bcp`를 사용하여 다수의 행을 SQL Server 테이블로 가져오거나 SQL Server 테이블에서 데이터 파일로 데이터를 내보낼 수 있습니다. queryout 옵션과 함께 사용하는 경우를 제외하고 `bcp`에는 Transact-SQL 지식이 필요하지 않습니다. `bcp` 명령줄 유틸리티는 Linux, Windows 또는 Docker에서 온-프레미스 또는 클라우드로 실행되는 Microsoft SQL Server와 Azure SQL Database 및 Azure SQL Data Warehouse에서 작동합니다.
+`bcp`를 사용하여 다수의 행을 SQL Server 테이블로 가져오거나 SQL Server 테이블에서 데이터 파일로 데이터를 내보낼 수 있습니다. queryout 옵션과 함께 사용하는 경우를 제외하고 `bcp`에는 Transact-SQL 지식이 필요하지 않습니다. `bcp` 명령줄 유틸리티는 Linux, Windows 또는 Docker에서 온-프레미스 또는 클라우드로 실행되는 Microsoft SQL Server와 Azure SQL Database 및 Azure Synapse Analytics에서 작동합니다.
 
 이 아티클에서는 다음을 수행하는 방법을 보여줍니다.
 - `bcp in` 명령을 사용하여 테이블로 데이터 가져오기

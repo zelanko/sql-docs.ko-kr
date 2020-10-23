@@ -8,12 +8,12 @@ ms.date: 01/09/2018
 ms.topic: conceptual
 ms.prod: sql
 ms.technology: linux
-ms.openlocfilehash: a459924450582e57ff17af2cc8f48c9156ab8bb2
-ms.sourcegitcommit: 3ea082c778f6771b17d90fb597680ed334d3e0ec
+ms.openlocfilehash: e513f6783e827617a8c0cc4a1fa0ea4644dcb6e7
+ms.sourcegitcommit: 22102f25db5ccca39aebf96bc861c92f2367c77a
 ms.translationtype: HT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 08/11/2020
-ms.locfileid: "88088873"
+ms.lasthandoff: 10/16/2020
+ms.locfileid: "92115846"
 ---
 # <a name="extract-transform-and-load-data-on-linux-with-ssis"></a>SSIS를 사용하여 Linux에서 데이터 추출, 변환 및 로드
 
@@ -21,7 +21,7 @@ ms.locfileid: "88088873"
 
 이 문서에서는 Linux에서 SSIS(SQL Server Integration Services) 패키지를 실행하는 방법을 설명합니다. SSIS는 여러 원본 및 형식에서 데이터를 추출하여 변환 및 정리한 다음, 여러 대상으로 데이터를 로드하여 복잡한 데이터 통합 문제를 해결합니다. 
 
-Linux에서 실행되는 SSIS 패키지는 Windows 온-프레미스 또는 클라우드, Linux 또는 Docker에서 실행되는 Microsoft SQL Server에 연결할 수 있습니다. Azure SQL Database, Azure SQL Data Warehouse, ODBC 데이터 원본, 플랫 파일 및 ADO.NET 원본, XML 파일, OData 서비스를 비롯한 기타 데이터 원본에 연결할 수도 있습니다.
+Linux에서 실행되는 SSIS 패키지는 Windows 온-프레미스 또는 클라우드, Linux 또는 Docker에서 실행되는 Microsoft SQL Server에 연결할 수 있습니다. Azure SQL Database, Azure Synapse Analytics, ODBC 데이터 원본, 플랫 파일 및 ADO.NET 원본, XML 파일, OData 서비스를 비롯한 기타 데이터 원본에 연결할 수도 있습니다.
 
 SSIS의 기능에 대한 자세한 내용은 [SQL Server Integration Services](../integration-services/sql-server-integration-services.md)를 참조하세요.
 
@@ -94,7 +94,7 @@ Linux SSIS에 대한 자세한 내용은 다음 블로그 게시물을 참조하
 
 ## <a name="more-info-about-ssis"></a>SSIS에 대한 자세한 정보
 
-Microsoft SSIS(SQL Server Integration Services)는 데이터 웨어하우징용 ETL(추출, 변환 및 로드) 패키지를 포함하여 고성능 데이터 통합 솔루션을 빌드하기 위한 플랫폼입니다. SSIS에 대한 자세한 내용은 [SQL Server Integration Services](/sql/integration-services/sql-server-integration-services)를 참조하세요.
+Microsoft SSIS(SQL Server Integration Services)는 데이터 웨어하우징용 ETL(추출, 변환 및 로드) 패키지를 포함하여 고성능 데이터 통합 솔루션을 빌드하기 위한 플랫폼입니다. SSIS에 대한 자세한 내용은 [SQL Server Integration Services](../integration-services/sql-server-integration-services.md)를 참조하세요.
 
 SSIS에는 다음과 같은 기능이 포함되어 있습니다.
 - Windows에서 패키지를 빌드하고 디버깅하기 위한 그래픽 도구 및 마법사

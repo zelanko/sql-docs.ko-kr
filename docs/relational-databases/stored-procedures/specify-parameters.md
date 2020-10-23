@@ -16,12 +16,12 @@ ms.assetid: 902314fe-5f9c-4d0d-a0b7-27e67c9c70ec
 author: stevestein
 ms.author: sstein
 monikerRange: '>=aps-pdw-2016||=azuresqldb-current||=azure-sqldw-latest||>=sql-server-2016||=sqlallproducts-allversions||>=sql-server-linux-2017||=azuresqldb-mi-current'
-ms.openlocfilehash: eb9b80387573d0145c6510d9377ac959939dd536
-ms.sourcegitcommit: 75f767c7b1ead31f33a870fddab6bef52f99906b
+ms.openlocfilehash: 1e101fe01c421dbd75b7d0426f13539fb0688e3d
+ms.sourcegitcommit: a5398f107599102af7c8cda815d8e5e9a367ce7e
 ms.translationtype: HT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 07/28/2020
-ms.locfileid: "87332362"
+ms.lasthandoff: 10/13/2020
+ms.locfileid: "92005857"
 ---
 # <a name="specify-parameters"></a>매개 변수 지정
 [!INCLUDE[SQL Server Azure SQL Database Synapse Analytics PDW ](../../includes/applies-to-version/sql-asdb-asdbmi-asa-pdw.md)]
@@ -86,7 +86,7 @@ GO
 >  기본값이 공백 또는 문장 부호가 포함된 문자열이거나 6xxx와 같이 숫자로 시작하면 기본값을 곧은 작은 따옴표로 묶어야 합니다.  
 
 > [!NOTE] 
-> 기본 매개 변수는 Azure SQL Data Warehouse 또는 병렬 데이터 웨어하우스에서 지원되지 않습니다. 
+> 기본 매개 변수는 Azure Synapse Analytics 또는 병렬 데이터 웨어하우스에서 지원되지 않습니다. 
   
  매개 변수에 적당한 기본값을 지정할 수 없을 때는 NULL을 기본값으로 지정합니다. 프로시저가 매개 변수 값이 없이 실행되는 경우 프로시저에서 사용자 지정 메시지를 반환하는 것이 좋습니다.  
   

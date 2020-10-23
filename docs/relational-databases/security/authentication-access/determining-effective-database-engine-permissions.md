@@ -15,12 +15,12 @@ ms.assetid: 273ea09d-60ee-47f5-8828-8bdc7a3c3529
 author: VanMSFT
 ms.author: vanto
 monikerRange: '>=aps-pdw-2016||=azuresqldb-current||=azure-sqldw-latest||>=sql-server-2016||=sqlallproducts-allversions||>=sql-server-linux-2017||=azuresqldb-mi-current'
-ms.openlocfilehash: f4e26da02da69955a3bc3f589753efa1007ae3a1
-ms.sourcegitcommit: f3321ed29d6d8725ba6378d207277a57cb5fe8c2
+ms.openlocfilehash: e3c6120613ee79acb8219f35678f17fd9239962a
+ms.sourcegitcommit: a5398f107599102af7c8cda815d8e5e9a367ce7e
 ms.translationtype: HT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 07/06/2020
-ms.locfileid: "86005620"
+ms.lasthandoff: 10/13/2020
+ms.locfileid: "92006594"
 ---
 # <a name="determining-effective-database-engine-permissions"></a>효과적인 데이터베이스 엔진 사용 권한 결정
 [!INCLUDE [SQL Server](../../../includes/applies-to-version/sql-asdb-asdbmi-asa-pdw.md)]
@@ -52,7 +52,7 @@ ms.locfileid: "86005620"
 
 고정 서버 역할과 고정 데이터베이스 역할에는 변경할 수 없는 미리 구성된 사용 권한이 있습니다. 고정 서버 역할의 멤버를 확인하려면 다음 쿼리를 실행합니다.    
 > [!NOTE]
->  서버 수준 사용 권한을 사용할 수 없는 SQL Database 또는 SQL Data Warehouse에는 적용되지 않습니다. `sys.server_principals`의 `is_fixed_role` 열이 SQL Server 2012에 추가되었습니다. 이전 버전의 SQL Server에는 필요하지 않습니다.  
+>  서버 수준 사용 권한을 사용할 수 없는 SQL Database 또는 Azure Synapse Analytics에는 적용되지 않습니다. `sys.server_principals`의 `is_fixed_role` 열이 SQL Server 2012에 추가되었습니다. 이전 버전의 SQL Server에는 필요하지 않습니다.  
 > ```sql
 > SELECT SP1.name AS ServerRoleName, 
 >  isnull (SP2.name, 'No members') AS LoginName   
@@ -107,7 +107,7 @@ Windows 사용자(예: 엔지니어 및 관리자)는 둘 이상의 Windows 그�
 
 다음 쿼리는 서버 수준에서 부여되거나 거부된 사용 권한 목록을 반환합니다. 이 쿼리는 master 데이터베이스에서 실행해야 합니다.   
 > [!NOTE]
->  서버 수준 사용 권한은 SQL Database 또는 SQL Data Warehouse에서 부여하거나 쿼리할 수 없습니다.   
+>  서버 수준 사용 권한은 SQL Database 또는 Azure Synapse Analytics에서 부여하거나 쿼리할 수 없습니다.   
 > ```sql
 > SELECT pr.type_desc, pr.name, 
 >  isnull (pe.state_desc, 'No permission statements') AS state_desc, 

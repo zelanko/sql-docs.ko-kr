@@ -19,12 +19,12 @@ ms.assetid: ed2a5522-f4d2-4111-95a4-d3e1e5081739
 author: VanMSFT
 ms.author: vanto
 monikerRange: '>=aps-pdw-2016||=azuresqldb-current||=azure-sqldw-latest||>=sql-server-2016||=sqlallproducts-allversions||>=sql-server-linux-2017||=azuresqldb-mi-current'
-ms.openlocfilehash: faa0ea1e841edfde76cdfeb4f3285116a47a50fd
-ms.sourcegitcommit: f3321ed29d6d8725ba6378d207277a57cb5fe8c2
+ms.openlocfilehash: 72b1c23ddc584f909661b07058e519347be045fa
+ms.sourcegitcommit: a5398f107599102af7c8cda815d8e5e9a367ce7e
 ms.translationtype: HT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 07/06/2020
-ms.locfileid: "86005706"
+ms.lasthandoff: 10/13/2020
+ms.locfileid: "92005400"
 ---
 # <a name="create-a-database-schema"></a>데이터베이스 스키마 만들기
 [!INCLUDE [SQL Server](../../../includes/applies-to-version/sql-asdb-asdbmi-asa-pdw.md)]
@@ -63,7 +63,7 @@ ms.locfileid: "86005706"
 6.  [!INCLUDE[clickOK](../../../includes/clickok-md.md)]  
 
 > [!NOTE]
-> **Azure SQL Database** 또는 **Azure SQL Data Warehouse**에 대해 SSMS를 사용하여 스키마를 만드는 경우 대화 상자가 표시되지 않습니다. 생성된 스키마 템플릿 T-SQL 문 만들기를 실행해야 합니다.
+> **Azure SQL Database** 또는 **Azure Synapse Analytics**에 대해 SSMS를 사용하여 스키마를 만드는 경우 대화 상자가 표시되지 않습니다. 생성된 스키마 템플릿 T-SQL 문 만들기를 실행해야 합니다.
   
 ### <a name="additional-options"></a>추가 옵션  
  **스키마 - 신규** 대화 상자에는 또한 **사용 권한** 및 **확장 속성**의 두 가지 추가 페이지의 옵션이 제공됩니다.  

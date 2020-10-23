@@ -8,12 +8,12 @@ ms.topic: conceptual
 ms.prod: sql
 ms.technology: linux
 ms.assetid: b2fcf858-21c3-462a-8d49-50c85647d092
-ms.openlocfilehash: 8520c3741102597ac3b7e93aceabc3ec6c114230
-ms.sourcegitcommit: f7ac1976d4bfa224332edd9ef2f4377a4d55a2c9
+ms.openlocfilehash: 0b118b1daa1b8b825d4b68ff1e436fd2f0b624f2
+ms.sourcegitcommit: 22102f25db5ccca39aebf96bc861c92f2367c77a
 ms.translationtype: HT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 07/02/2020
-ms.locfileid: "85883923"
+ms.lasthandoff: 10/16/2020
+ms.locfileid: "92115623"
 ---
 # <a name="use-sql-server-management-studio-on-windows-to-manage-sql-server-on-linux"></a>Windows에서 SQL Server Management Studio를 사용하여 SQL Server on Linux 관리
 
@@ -24,7 +24,7 @@ ms.locfileid: "85883923"
 > [!TIP]
 > SSMS를 실행할 Windows 머신이 없는 경우 새 [Azure Data Studio](../azure-data-studio/index.yml)을 고려합니다. 이 항목은 SQL Server를 관리하기 위한 도구를 제공하고 Linux 및 Windows에서 실행됩니다.
 
-[SSMS(SQL Server Management Studio)](../ssms/sql-server-management-studio-ssms.md)는 Microsoft에서 개발 및 관리를 위해 체험용으로 제공하는 SQL 도구 모음의 일부입니다. SSMS는 SQL Server의 모든 구성 요소를 액세스, 구성, 관리, 운영 및 개발하기 위한 통합 환경입니다. 온-프레미스, Docker 컨테이너 및 클라우드의 모든 플랫폼에서 실행되는 SQL Server에 연결할 수 있습니다. 또한 Azure SQL Database 및 Azure SQL Data Warehouse에 연결합니다. SSMS는 수많은 풍부한 스크립트 편집기와 광범위한 그래픽 도구 그룹을 결합하여 기술 수준에 상관없이 모든 개발자와 관리자에게 SQL Server에 대한 액세스 권한을 제공합니다.
+[SSMS(SQL Server Management Studio)](../ssms/sql-server-management-studio-ssms.md)는 Microsoft에서 개발 및 관리를 위해 체험용으로 제공하는 SQL 도구 모음의 일부입니다. SSMS는 SQL Server의 모든 구성 요소를 액세스, 구성, 관리, 운영 및 개발하기 위한 통합 환경입니다. 온-프레미스, Docker 컨테이너 및 클라우드의 모든 플랫폼에서 실행되는 SQL Server에 연결할 수 있습니다. 또한 Azure SQL Database 및 Azure Synapse Analytics에 연결합니다. SSMS는 수많은 풍부한 스크립트 편집기와 광범위한 그래픽 도구 그룹을 결합하여 기술 수준에 상관없이 모든 개발자와 관리자에게 SQL Server에 대한 액세스 권한을 제공합니다.
 
 SSMS는 다음과 같은 도구를 비롯하여 SQL Server에 대한 다양한 개발 및 관리 기능 세트를 제공합니다.
 
@@ -107,7 +107,7 @@ Transact-SQL 쿼리를 사용하여 거의 모든 관리 작업을 수행할 수
 
 3. ‘새 데이터베이스’ 대화 상자에서 새 데이터베이스의 이름을 입력한 다음, ‘확인’을 클릭합니다. 
 
-새 데이터베이스가 서버에서 생성되었습니다. T-SQL을 사용하여 새 데이터베이스를 만들려면 [CREATE DATABASE(SQL Server Transact-SQL)](../t-sql/statements/create-database-sql-server-transact-sql.md)를 참조하세요.
+새 데이터베이스가 서버에서 생성되었습니다. T-SQL을 사용하여 새 데이터베이스를 만들려면 [CREATE DATABASE(SQL Server Transact-SQL)](../t-sql/statements/create-database-transact-sql.md)를 참조하세요.
 
 ### <a name="drop-a-database"></a>데이터베이스 삭제
 
@@ -143,6 +143,6 @@ Transact-SQL 쿼리를 사용하여 거의 모든 관리 작업을 수행할 수
 ## <a name="see-also"></a>참고 항목
 - [SSMS란 무엇인가요?](../ssms/sql-server-management-studio-ssms.md)
 - [SSMS를 사용하여 데이터베이스 내보내기 및 가져오기](sql-server-linux-migrate-ssms.md)
-- [자습서: SQL Server Management Studio](../ssms/tutorials/tutorial-sql-server-management-studio.md)
+- [자습서: SQL Server Management Studio](../ssms/quickstarts/connect-query-sql-server.md)
 - [자습서: Transact-SQL 문 작성](../t-sql/tutorial-writing-transact-sql-statements.md)
 - [서버 성능 및 작업 모니터링](../relational-databases/performance/server-performance-and-activity-monitoring.md)

@@ -41,12 +41,12 @@ helpviewer_keywords:
 ms.assetid: 864b393f-225f-4895-8c8d-4db59ea60032
 author: markingmyname
 ms.author: maghan
-ms.openlocfilehash: 4c576e23b52c4e9f34e803474a67967440b4cd2e
-ms.sourcegitcommit: 3efd8bbf91f4f78dce3a4ac03348037d8c720e6a
+ms.openlocfilehash: 6286c5804c30e021c794e8ecf69bdb328ab8db38
+ms.sourcegitcommit: 22dacedeb6e8721e7cdb6279a946d4002cfb5da3
 ms.translationtype: HT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 09/23/2020
-ms.locfileid: "91024518"
+ms.lasthandoff: 10/14/2020
+ms.locfileid: "92037076"
 ---
 # <a name="create-function-transact-sql"></a>CREATE FUNCTION(Transact-SQL)
 
@@ -73,7 +73,7 @@ ms.locfileid: "91024518"
 > [!NOTE]
 >
 > - 이 문서에서는 .NET Framework CLR을 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]에 통합하는 방법을 설명합니다. [!INCLUDE[ssSDSfull](../../includes/sssdsfull-md.md)]에는 CLR 통합이 적용되지 않습니다.
-> - [!INCLUDE[ssSDW](../../includes/sssdw-md.md)]의 경우 [CREATE FUNCTION([!INCLUDE[ssSDW](../../includes/sssdwfull-md.md)])](../../t-sql/statements/create-function-sql-data-warehouse.md)을 참조하세요.
+> - [!INCLUDE[ssSDW](../../includes/sssdw-md.md)]의 경우 [CREATE FUNCTION(Azure Synapse Analytics)](../../t-sql/statements/create-function-sql-data-warehouse.md)을 참조하세요.
 
 ![항목 링크 아이콘](../../database-engine/configure-windows/media/topic-link.gif "항목 링크 아이콘") [Transact-SQL 구문 표기 규칙](../../t-sql/language-elements/transact-sql-syntax-conventions-transact-sql.md)
 

@@ -8,18 +8,18 @@ ms.topic: conceptual
 ms.prod: sql
 ms.technology: linux
 ms.assetid: 2210cfc3-c23a-4025-a551-625890d6845f
-ms.openlocfilehash: f83f95fa17e99c20754bbde9d1d4a7fb388df74b
-ms.sourcegitcommit: f7ac1976d4bfa224332edd9ef2f4377a4d55a2c9
+ms.openlocfilehash: f0e1d76ae7977eac4d761c76a27e10619f300ca1
+ms.sourcegitcommit: 22102f25db5ccca39aebf96bc861c92f2367c77a
 ms.translationtype: HT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 07/02/2020
-ms.locfileid: "85887838"
+ms.lasthandoff: 10/16/2020
+ms.locfileid: "92115696"
 ---
 # <a name="export-and-import-a-database-on-linux-with-ssms-or-sqlpackageexe-on-windows"></a>Windows에서 SSMS 또는 SqlPackage를 사용하여 Linux에서 데이터베이스 내보내기 및 가져오기
 
 [!INCLUDE [SQL Server - Linux](../includes/applies-to-version/sql-linux.md)]
 
-이 문서에서는 SSMS([SQL Server Management Studio](../ssms/download-sql-server-management-studio-ssms.md)) 및 [SqlPackage.exe](https://msdn.microsoft.com/library/hh550080.aspx)를 사용하여 Linux의 SQL Server에서 데이터베이스를 내보내고 가져오는 방법을 보여 줍니다. SSMS 및 SqlPackage.exe는 Windows 애플리케이션이므로 Linux의 원격 SQL Server 인스턴스에 연결할 수 있는 Windows 컴퓨터가 있는 경우 이 기술을 사용합니다.
+이 문서에서는 SSMS([SQL Server Management Studio](../ssms/download-sql-server-management-studio-ssms.md)) 및 [SqlPackage.exe](../tools/sqlpackage.md)를 사용하여 Linux의 SQL Server에서 데이터베이스를 내보내고 가져오는 방법을 보여 줍니다. SSMS 및 SqlPackage.exe는 Windows 애플리케이션이므로 Linux의 원격 SQL Server 인스턴스에 연결할 수 있는 Windows 컴퓨터가 있는 경우 이 기술을 사용합니다.
 
 [Windows의 SSMS를 사용하여 Linux의 SQL Server에 연결](sql-server-linux-manage-ssms.md)에 설명된 대로 항상 최신 버전의 SSMS(SQL Server Management Studio)를 설치한 후 사용해야 합니다.
 
@@ -32,7 +32,7 @@ ms.locfileid: "85887838"
 
     ![SQL Server Management Studio](./media/sql-server-linux-manage-ssms/ssms.png) 
 
-2. 개체 탐색기에서 원본 데이터베이스에 연결합니다. 원본 데이터베이스는 온-프레미스 또는 클라우드, Linux, Windows 또는 Docker, Azure SQL Database 또는 Azure SQL Data Warehouse에서 실행되는 Microsoft SQL Server에 있을 수 있습니다.
+2. 개체 탐색기에서 원본 데이터베이스에 연결합니다. 원본 데이터베이스는 Linux, Windows 또는 Docker에서 온-프레미스 또는 클라우드로 실행되는 Microsoft SQL Server 및 Azure SQL Database 또는 Azure Synapse Analytics에 있을 수 있습니다.
 
 3. 개체 탐색기에서 원본 데이터베이스를 마우스 오른쪽 단추로 클릭하고 **작업**을 가리킨 다음, **데이터 계층 애플리케이션 내보내기...** 를 클릭합니다.
 
@@ -50,7 +50,7 @@ ms.locfileid: "85887838"
 
     ![SQL Server Management Studio](./media/sql-server-linux-manage-ssms/ssms.png) 
 
-2. 개체 탐색기에서 대상 서버에 연결합니다. 대상 서버는 온-프레미스 또는 클라우드, Linux, Windows 또는 Docker, Azure SQL Database 또는 Azure SQL Data Warehouse에서 실행되는 Microsoft SQL Server에 있을 수 있습니다.
+2. 개체 탐색기에서 대상 서버에 연결합니다. 대상 서버는 Linux, Windows 또는 Docker에서 온-프레미스 또는 클라우드로 실행되는 Microsoft SQL Server 및 Azure SQL Database 또는 Azure Synapse Analytics에 있을 수 있습니다.
 
 3. 개체 탐색기에서 **데이터베이스** 폴더를 마우스 오른쪽 단추로 클릭하고 **데이터 계층 애플리케이션 가져오기...** 를 클릭합니다.
 
@@ -64,7 +64,7 @@ ms.locfileid: "85887838"
 
 ## <a name="sqlpackage-command-line-option"></a><a id="sqlpackage"></a> SqlPackage 명령줄 옵션
 
-또한 SSDT(SQL Server Data Tools) 명령줄 도구인 [SqlPackage.exe](https://msdn.microsoft.com/library/hh550080.aspx)를 사용하여 BACPAC 파일을 내보내고 가져올 수도 있습니다.
+또한 SSDT(SQL Server Data Tools) 명령줄 도구인 [SqlPackage.exe](../tools/sqlpackage.md)를 사용하여 BACPAC 파일을 내보내고 가져올 수도 있습니다.
 
 다음 예제 명령은 BACPAC 파일을 내보냅니다.
 
@@ -80,4 +80,4 @@ SqlPackage.exe /a:Import /tsn:tcp:<your_server> /tdn:<your_database> /tu:<userna
 ```
 
 ## <a name="see-also"></a>참고 항목
-SSMS 사용 방법에 대한 자세한 내용은 [SQL Server Management Studio 사용](https://msdn.microsoft.com/library/ms174173.aspx)을 참조하세요. SqlPackage.exe에 대한 자세한 내용은 [SqlPackage 참조 설명서](https://msdn.microsoft.com/library/hh550080.aspx)를 참조하세요.
+SSMS 사용 방법에 대한 자세한 내용은 [SQL Server Management Studio 사용](../ssms/sql-server-management-studio-ssms.md)을 참조하세요. SqlPackage.exe에 대한 자세한 내용은 [SqlPackage 참조 설명서](../tools/sqlpackage.md)를 참조하세요.

@@ -33,12 +33,12 @@ ms.assetid: ''
 author: shkale-msft
 ms.author: shkale
 monikerRange: '>=sql-server-2017||=sqlallproducts-allversions||>=sql-server-linux-2017||=azuresqldb-mi-current'
-ms.openlocfilehash: fc39fbcb191810f7e357167f15c4d0ca084711d8
-ms.sourcegitcommit: ac9feb0b10847b369b77f3c03f8200c86ee4f4e0
+ms.openlocfilehash: 325e6d949cfede5bec7ccdb958dac2c82e9d9efa
+ms.sourcegitcommit: a5398f107599102af7c8cda815d8e5e9a367ce7e
 ms.translationtype: HT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 09/16/2020
-ms.locfileid: "90688671"
+ms.lasthandoff: 10/13/2020
+ms.locfileid: "92005589"
 ---
 # <a name="create-table-sql-graph"></a>CREATE TABLE(SQL Server)
 [!INCLUDE[SQL Server 2017](../../includes/applies-to-version/sqlserver2017.md)]
@@ -119,13 +119,17 @@ CREATE TABLE
  *table_constraint*   
  테이블에 추가한 PRIMARY KEY, UNIQUE, FOREIGN KEY, CONNECTION 제약 조건, CHECK 제약 조건이나 DEFAULT 정의의 속성을 지정합니다.
  
+ > [!NOTE]   
+ > CONNECTION 제약 조건은 에지 테이블 형식에만 적용됩니다.
+ 
  ON { partition_scheme | filegroup | "default" }    
  테이블이 저장된 파티션 구성표 또는 파일 그룹을 지정합니다. partition_scheme을 지정하면 해당 테이블은 partition_scheme에 지정된 하나 이상의 파일 그룹 세트에 파티션이 저장되는 분할된 테이블이 됩니다. filegroup을 지정한 경우에는 테이블이 명명된 파일 그룹에 저장됩니다. 파일 그룹은 데이터베이스 내에 있어야 합니다. "default"를 지정하거나 ON을 전혀 지정하지 않으면 기본 파일 그룹에 테이블이 저장됩니다. CREATE TABLE에 지정된 테이블의 스토리지 메커니즘은 곧이어 변경할 수 없습니다.
 
  ON {partition_scheme | filegroup | "default"}    
  PRIMARY KEY나 UNIQUE 제약 조건에도 지정할 수 있습니다. 이러한 제약 조건은 인덱스를 만듭니다. filegroup을 지정한 경우에는 인덱스가 명명된 파일 그룹에 저장됩니다. "default"를 지정하거나 ON을 전혀 지정하지 않으면 테이블과 동일한 파일 그룹에 인덱스가 저장됩니다. PRIMARY KEY 또는 UNIQUE 제약 조건이 클러스터형 인덱스를 만드는 경우에는 테이블에 대한 데이터 페이지가 인덱스와 동일한 파일 그룹에 저장됩니다. CLUSTERED를 지정하거나 아니면 제약 조건이 클러스터형 인덱스를 만들고 테이블 정의의 partition_scheme 또는 filegroup과는 다르게 partition_scheme을 지정하거나 그 반대인 경우에는 제약 조건 정의만 유지하고 나머지는 무시합니다.
   
-## <a name="remarks"></a>설명  
+## <a name="remarks"></a>설명
+
 임시 테이블을 노드 또는 에지 테이블로 만드는 것은 지원되지 않습니다.  
 
 노드 또는 에지 테이블을 임시 테이블로 만드는 것은 지원되지 않습니다.
@@ -163,6 +167,16 @@ Stretch Database는 노드 또는 에지 테이블에서 지원되지 않습니�
 ```sql
  -- Create a likes edge table, this table does not have any user defined attributes   
  CREATE TABLE likes AS EDGE;
+```
+
+다음 예제에서는 **사람만** 다른 사람과 친구가 될 수 있는 규칙을 모델링합니다. 즉, 이 에지는 Person이 아닌 다른 노드에 대한 참조를 허용하지 않습니다.
+
+```
+/* Create friend edge table with CONSTRAINT, restricts for nodes and it direction */
+CREATE TABLE dbo.FriendOf(
+  CONSTRAINT cnt_Person_FriendOf_Person
+    CONNECTION (dbo.Person TO dbo.Person) 
+)AS EDGE;
 ```
 
 
