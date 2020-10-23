@@ -11,12 +11,12 @@ author: dphansen
 ms.author: davidph
 ms.custom: seo-lt-2019
 monikerRange: '>=sql-server-2016||>=sql-server-linux-ver15||=azuresqldb-mi-current||=sqlallproducts-allversions'
-ms.openlocfilehash: e5a1f9c36b6dc59988951a693be05b4e10e580f4
-ms.sourcegitcommit: e700497f962e4c2274df16d9e651059b42ff1a10
+ms.openlocfilehash: 22695214f9f3b375d285a8b3bb03bc1471535b17
+ms.sourcegitcommit: cfa04a73b26312bf18d8f6296891679166e2754d
 ms.translationtype: HT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 08/17/2020
-ms.locfileid: "88495006"
+ms.lasthandoff: 10/19/2020
+ms.locfileid: "92192379"
 ---
 # <a name="iris-demo-data-for-python-and-r-tutorials-with-sql-machine-learning"></a>SQL 기계 학습을 사용하는 Python 및 R 자습서용 아이리스 데모 데이터
 [!INCLUDE [SQL Server 2016 SQL MI](../../includes/applies-to-version/sqlserver2016-asdbmi.md)]
@@ -130,7 +130,7 @@ R 또는 Python에서 기본 제공되는 아이리스 데이터를 가져올 �
     EXEC dbo.get_iris_dataset;
     ```
 
-    T-SQL을 처음 사용하는 경우 INSERT 문이 새 데이터만 추가한다는 점에 유의해야 합니다. 기존 데이터를 확인하거나 테이블을 삭제하고 다시 빌드하지는 않습니다. 동일한 데이터의 여러 복사본이 테이블에 표시되지 않도록 하려면 먼저 `TRUNCATE TABLE iris_data` 문을 실행하면 됩니다. T-SQL [TRUNCATE TABLE](https://docs.microsoft.com/sql/t-sql/statements/truncate-table-transact-sql) 문은 기존 데이터를 삭제하지만 테이블 구조는 그대로 유지합니다.
+    T-SQL을 처음 사용하는 경우 INSERT 문이 새 데이터만 추가한다는 점에 유의해야 합니다. 기존 데이터를 확인하거나 테이블을 삭제하고 다시 빌드하지는 않습니다. 동일한 데이터의 여러 복사본이 테이블에 표시되지 않도록 하려면 먼저 `TRUNCATE TABLE iris_data` 문을 실행하면 됩니다. T-SQL [TRUNCATE TABLE](../../t-sql/statements/truncate-table-transact-sql.md) 문은 기존 데이터를 삭제하지만 테이블 구조는 그대로 유지합니다.
 
 ## <a name="query-the-data"></a>데이터 쿼리
 

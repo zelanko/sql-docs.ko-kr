@@ -10,12 +10,12 @@ ms.metadata: seo-lt-2019
 ms.topic: conceptual
 ms.prod: sql
 ms.technology: big-data-cluster
-ms.openlocfilehash: 12767b789fee400130990f6451a8a29e5bce6605
-ms.sourcegitcommit: c7f40918dc3ecdb0ed2ef5c237a3996cb4cd268d
+ms.openlocfilehash: 307d1cf41c319debad4b0fc06b8ba0da516491bd
+ms.sourcegitcommit: ae474d21db4f724523e419622ce79f611e956a22
 ms.translationtype: HT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 10/05/2020
-ms.locfileid: "91725094"
+ms.lasthandoff: 10/20/2020
+ms.locfileid: "92257323"
 ---
 # <a name="consume-an-app-deployed-on-big-data-clusters-2019-using-a-restful-web-service"></a>RESTful 웹 서비스를 사용하여 [!INCLUDE[big-data-clusters-2019](../includes/ssbigdataclusters-ss-nover.md)]에 배포된 앱을 사용합니다.
 
@@ -26,7 +26,7 @@ ms.locfileid: "91725094"
 ## <a name="prerequisites"></a>사전 요구 사항
 
 - [SQL Server 빅 데이터 클러스터](deployment-guidance.md)
-- [azdata 명령줄 유틸리티](../azdata/install/deploy-install-azdata.md)
+- [[!INCLUDE [azure-data-cli-azdata](../includes/azure-data-cli-azdata.md)]](../azdata/install/deploy-install-azdata.md)
 - [azdata](app-create.md) 또는 [앱 배포 확장](app-deployment-extension.md)을 사용하여 배포된 앱
 
 > [!NOTE]

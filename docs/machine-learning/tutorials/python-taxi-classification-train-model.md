@@ -10,12 +10,12 @@ author: dphansen
 ms.author: davidph
 ms.custom: seo-lt-2019
 monikerRange: '>=sql-server-2017||>=sql-server-linux-ver15||>=azuresqldb-mi-current||=sqlallproducts-allversions'
-ms.openlocfilehash: 98c7f5b8c7cc634212769f910152322a94054d66
-ms.sourcegitcommit: 9b41725d6db9957dd7928a3620fe4db41eb51c6e
+ms.openlocfilehash: 18cd0c279493dcb41d043d3f76d6debe71eb402c
+ms.sourcegitcommit: cfa04a73b26312bf18d8f6296891679166e2754d
 ms.translationtype: HT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 08/13/2020
-ms.locfileid: "88178560"
+ms.lasthandoff: 10/19/2020
+ms.locfileid: "92194481"
 ---
 # <a name="python-tutorial-train-and-save-a-python-model-using-t-sql"></a>Python 자습서: T-SQL을 사용하여 Python 모델 학습 및 저장
 [!INCLUDE [SQL Server 2017 SQL MI](../../includes/applies-to-version/sqlserver2017-asdbmi.md)]
@@ -145,7 +145,7 @@ SQL Server 저장 프로시저를 통해 모듈을 로드하고 필요한 함수
 
 이 저장 프로시저는 새로운 Python용 패키지인 새로운 **revoscalepy** 패키지를 사용합니다. 여기에는 R 언어의 **RevoScaleR** 패키지에 제공되는 것과 유사한 개체, 변환 및 알고리즘이 포함되어 있습니다. 
 
-**revoscalepy**를 사용하여 로지스틱 및 선형 회귀, 의사 결정 트리 등과 같이 널리 사용되는 알고리즘을 통해 원격 컴퓨팅 컨텍스트를 만들고, 컴퓨팅 컨텍스트 간에 데이터를 이동하고, 데이터를 변환하고, 예측 모델을 학습시킬 수 있습니다. 자세한 내용은 [SQL Server의 revoscalepy 모듈](../python/ref-py-revoscalepy.md) 및 [revoscalepy 함수 참조](https://docs.microsoft.com/r-server/python-reference/revoscalepy/revoscalepy-package)를 참조하세요.
+**revoscalepy**를 사용하여 로지스틱 및 선형 회귀, 의사 결정 트리 등과 같이 널리 사용되는 알고리즘을 통해 원격 컴퓨팅 컨텍스트를 만들고, 컴퓨팅 컨텍스트 간에 데이터를 이동하고, 데이터를 변환하고, 예측 모델을 학습시킬 수 있습니다. 자세한 내용은 [SQL Server의 revoscalepy 모듈](../python/ref-py-revoscalepy.md) 및 [revoscalepy 함수 참조](/r-server/python-reference/revoscalepy/revoscalepy-package)를 참조하세요.
 
 1. [!INCLUDE[ssManStudio](../../includes/ssmanstudio-md.md)]에서 새 **쿼리** 창을 열고 다음 명령문을 실행하여 저장 프로시저 _TrainTipPredictionModelRxPy_를 만듭니다.  저장 프로시저에는 입력 데이터 정의가 이미 포함되어 있으므로 입력 쿼리를 제공하지 않아도 됩니다.
 

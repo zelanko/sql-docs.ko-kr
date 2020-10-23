@@ -10,12 +10,12 @@ ms.date: 06/22/2020
 ms.topic: conceptual
 ms.prod: sql
 ms.technology: big-data-cluster
-ms.openlocfilehash: 4bde49046ab8d4f4ea7217970ec85c7a7966f487
-ms.sourcegitcommit: 7345e4f05d6c06e1bcd73747a4a47873b3f3251f
+ms.openlocfilehash: 65a7c0afc57cc29d8ec5df7beb4c3107470e2d31
+ms.sourcegitcommit: ae474d21db4f724523e419622ce79f611e956a22
 ms.translationtype: HT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 08/24/2020
-ms.locfileid: "88765332"
+ms.lasthandoff: 10/20/2020
+ms.locfileid: "92257263"
 ---
 # <a name="what-is-application-deployment-on-a-big-data-cluster"></a>빅 데이터 클러스터의 애플리케이션 배포란?
 
@@ -78,7 +78,7 @@ allowedCapabilities:
 ## <a name="how-to-work-with-application-deployment"></a>애플리케이션 배포를 사용하는 방법
 
 애플리케이션 배포의 두 가지 주요 인터페이스는 다음과 같습니다. 
-- [명령줄 인터페이스 `azdata`](app-create.md)
+- [명령줄 인터페이스 [!INCLUDE [azure-data-cli-azdata](../includes/azure-data-cli-azdata.md)]](app-create.md)
 - [Visual Studio Code 및 Azure Data Studio 확장](app-deployment-extension.md)
 
 RESTful 웹 서비스를 사용하여 애플리케이션을 실행할 수도 있습니다. 자세한 내용은 [빅 데이터 클러스터에서 애플리케이션 사용](app-consume.md)을 참조하세요.

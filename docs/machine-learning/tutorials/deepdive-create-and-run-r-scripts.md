@@ -9,17 +9,17 @@ author: dphansen
 ms.author: davidph
 ms.custom: seo-lt-2019
 monikerRange: '>=sql-server-2016||>=sql-server-linux-ver15||=sqlallproducts-allversions'
-ms.openlocfilehash: db549cf5b3ee7620806c1b87713211d5eb201c90
-ms.sourcegitcommit: 9b41725d6db9957dd7928a3620fe4db41eb51c6e
+ms.openlocfilehash: 3d8b04d384d7ee5f846197ff3465b9c0914ca94c
+ms.sourcegitcommit: cfa04a73b26312bf18d8f6296891679166e2754d
 ms.translationtype: HT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 08/13/2020
-ms.locfileid: "88178868"
+ms.lasthandoff: 10/19/2020
+ms.locfileid: "92196317"
 ---
 # <a name="compute-summary-statistics-in-r-sql-server-and-revoscaler-tutorial"></a>R의 컴퓨팅 요약 통계(SQL Server 및 RevoScaleR 자습서)
 [!INCLUDE [SQL Server 2016 and later](../../includes/applies-to-version/sqlserver2016.md)]
 
-이것은 SQL Server에서 [RevoScaleR 함수](https://docs.microsoft.com/machine-learning-server/r-reference/revoscaler/revoscaler)를 사용하는 방법에 대한 [RevoScaleR 자습서 시리즈](deepdive-data-science-deep-dive-using-the-revoscaler-packages.md) 중 자습서 5에 해당됩니다.
+이것은 SQL Server에서 [RevoScaleR 함수](/machine-learning-server/r-reference/revoscaler/revoscaler)를 사용하는 방법에 대한 [RevoScaleR 자습서 시리즈](deepdive-data-science-deep-dive-using-the-revoscaler-packages.md) 중 자습서 5에 해당됩니다.
 
 이 자습서는 이전 자습서에서 만든 기존 데이터 원본 및 컴퓨팅 컨텍스트를 사용하여 고성능 R 스크립트를 실행합니다. 이 자습서에서는 다음 작업에 로컬 및 원격 서버 컴퓨팅 컨텍스트를 사용합니다.
 
@@ -46,13 +46,13 @@ R 코드를 원격으로 실행하기 전에 원격 컴퓨팅 컨텍스트를 �
     rxSetComputeContext(sqlCompute)
     ```
 
-2. [rxSummary](https://docs.microsoft.com/machine-learning-server/r-reference/revoscaler/rxsummary) 함수를 호출하고 수식 및 데이터 원본과 같은 필수 인수를 전달하고 결과를 변수 `sumOut`에 할당합니다.
+2. [rxSummary](/machine-learning-server/r-reference/revoscaler/rxsummary) 함수를 호출하고 수식 및 데이터 원본과 같은 필수 인수를 전달하고 결과를 변수 `sumOut`에 할당합니다.
   
     ```R
     sumOut <- rxSummary(formula = ~gender + balance + numTrans + numIntlTrans + creditLine, data = sqlFraudDS)
     ```
   
-    R 언어는 많은 요약 함수를 제공하지만 **RevoScaleR**의 **rxSummary**는 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]를 비롯한 다양한 원격 컴퓨팅 컨텍스트에서의 실행을 지원합니다. 유사한 함수에 대한 자세한 내용은 [RevoScaleR을 사용한 데이터 요약](https://docs.microsoft.com/machine-learning-server/r/how-to-revoscaler-data-summaries)을 참조하세요.
+    R 언어는 많은 요약 함수를 제공하지만 **RevoScaleR**의 **rxSummary**는 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]를 비롯한 다양한 원격 컴퓨팅 컨텍스트에서의 실행을 지원합니다. 유사한 함수에 대한 자세한 내용은 [RevoScaleR을 사용한 데이터 요약](/machine-learning-server/r/how-to-revoscaler-data-summaries)을 참조하세요.
   
 3. sumOut의 내용을 콘솔에 인쇄합니다.
   

@@ -9,12 +9,12 @@ ms.date: 06/01/2020
 ms.topic: how-to
 ms.prod: sql
 ms.technology: big-data-cluster
-ms.openlocfilehash: 2de422caf8567f1473d1436a27a094fef9144085
-ms.sourcegitcommit: 7397706bbbc7296946e92ca9d4de93d4a5313c66
+ms.openlocfilehash: d631a74bc71c814a70ef0ecfa33485ee4631ccd4
+ms.sourcegitcommit: ae474d21db4f724523e419622ce79f611e956a22
 ms.translationtype: HT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 05/29/2020
-ms.locfileid: "84206047"
+ms.lasthandoff: 10/20/2020
+ms.locfileid: "92257080"
 ---
 # <a name="troubleshoot-pyspark-notebook"></a>`pyspark` Notebook 문제 해결
 
@@ -30,7 +30,7 @@ PySpark 세션의 문제를 효율적으로 해결하기 위해 Livy, YARN, Spar
 
 이 문제 해결 단계를 수행하려면 다음이 필요합니다.
 
-1. `azdata`가 설치되어 있고, 클러스터에 맞게 구성되어 있습니다.
+1. [!INCLUDE [azure-data-cli-azdata](../includes/azure-data-cli-azdata.md)]가 설치되어 있고, 클러스터에 맞게 구성되어 있습니다.
 2. 실행 중인 Linux 명령 및 일부 로그 문제 해결 기술을 잘 알고 있어야 합니다.
 
 ## <a name="troubleshooting-steps"></a>문제 해결 단계
@@ -127,7 +127,7 @@ PySpark 세션의 문제를 효율적으로 해결하기 위해 Livy, YARN, Spar
 
 1. 애플리케이션 ID와 개별 application_master 및 컨테이너 로그를 확인합니다.
 
-   :::image type="content" source="media/troubleshoot-pyspark-notebook/15-hadoop-dashboard.png" alt-text="애플리케이션 ID 확인":::
+   :::image type="content" source="media/troubleshoot-pyspark-notebook/15-hadoop-dashboard.png" alt-text="실패한 셀":::
 
 1. YARN 애플리케이션 로그를 검토합니다.
 
@@ -165,7 +165,7 @@ PySpark 세션의 문제를 효율적으로 해결하기 위해 Livy, YARN, Spar
 
 1. SPARK UI를 검토합니다.
 
-   :::image type="content" source="media/troubleshoot-pyspark-notebook/30-spark-ui.png" alt-text="Spark UI":::
+   :::image type="content" source="media/troubleshoot-pyspark-notebook/30-spark-ui.png" alt-text="실패한 셀":::
 
    단계 작업을 드릴다운하여 오류를 찾습니다.
 

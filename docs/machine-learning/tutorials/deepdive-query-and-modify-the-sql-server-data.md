@@ -9,17 +9,17 @@ author: dphansen
 ms.author: davidph
 ms.custom: seo-lt-2019
 monikerRange: '>=sql-server-2016||>=sql-server-linux-ver15||=sqlallproducts-allversions'
-ms.openlocfilehash: 0120faa6d3989df7b7ae1c5da63c37423dead540
-ms.sourcegitcommit: 9b41725d6db9957dd7928a3620fe4db41eb51c6e
+ms.openlocfilehash: d66452796f3c3cd669784ae7233fb9dcf8e5bc5c
+ms.sourcegitcommit: cfa04a73b26312bf18d8f6296891679166e2754d
 ms.translationtype: HT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 08/13/2020
-ms.locfileid: "88178611"
+ms.lasthandoff: 10/19/2020
+ms.locfileid: "92195105"
 ---
 # <a name="query-and-modify-the-sql-server-data-sql-server-and-revoscaler-tutorial"></a>SQL Server 데이터 쿼리 및 수정(SQL Server 및 RevoScaleR 자습서)
 [!INCLUDE [SQL Server 2016 and later](../../includes/applies-to-version/sqlserver2016.md)]
 
-이것은 SQL Server에서 [RevoScaleR 함수](https://docs.microsoft.com/machine-learning-server/r-reference/revoscaler/revoscaler)를 사용하는 방법에 대한 [RevoScaleR 자습서 시리즈](deepdive-data-science-deep-dive-using-the-revoscaler-packages.md) 중 자습서 3에 해당됩니다.
+이것은 SQL Server에서 [RevoScaleR 함수](/machine-learning-server/r-reference/revoscaler/revoscaler)를 사용하는 방법에 대한 [RevoScaleR 자습서 시리즈](deepdive-data-science-deep-dive-using-the-revoscaler-packages.md) 중 자습서 3에 해당됩니다.
 
 이전 자습서에서는 데이터를 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]에 로드했습니다. 이 자습서에서는 **RevoScaleR**을 사용하여 데이터를 탐색하고 수정할 수 있습니다.
 
@@ -33,7 +33,7 @@ ms.locfileid: "88178611"
 
 R IDE 또는 RGui.exe를 사용하여 R 스크립트를 실행합니다. 
 
-먼저, 열과 해당 데이터 형식 목록을 가져옵니다. [rxGetVarInfo](https://docs.microsoft.com/machine-learning-server/r-reference/revoscaler/rxgetvarinfoxdf) 함수를 사용하여 분석할 데이터 원본을 지정할 수 있습니다. **RevoScaleR** 버전에 따라 [rxGetVarNames](https://docs.microsoft.com/machine-learning-server/r-reference/revoscaler/rxgetvarnames)를 사용할 수도 있습니다. 
+먼저, 열과 해당 데이터 형식 목록을 가져옵니다. [rxGetVarInfo](/machine-learning-server/r-reference/revoscaler/rxgetvarinfoxdf) 함수를 사용하여 분석할 데이터 원본을 지정할 수 있습니다. **RevoScaleR** 버전에 따라 [rxGetVarNames](/machine-learning-server/r-reference/revoscaler/rxgetvarnames)를 사용할 수도 있습니다. 
   
 ```R
 rxGetVarInfo(data = sqlFraudDS)

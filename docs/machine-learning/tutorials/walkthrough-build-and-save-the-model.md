@@ -9,17 +9,17 @@ author: dphansen
 ms.author: davidph
 ms.custom: seo-lt-2019
 monikerRange: '>=sql-server-2016||>=sql-server-linux-ver15||=sqlallproducts-allversions'
-ms.openlocfilehash: 9ab81bc27b2dfd8f32004b9289ab02a8ce1d3007
-ms.sourcegitcommit: 9b41725d6db9957dd7928a3620fe4db41eb51c6e
+ms.openlocfilehash: 3a0a37da48ed367a3fc735e9bc6d805cfd5bfff3
+ms.sourcegitcommit: cfa04a73b26312bf18d8f6296891679166e2754d
 ms.translationtype: HT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 08/13/2020
-ms.locfileid: "88178712"
+ms.lasthandoff: 10/19/2020
+ms.locfileid: "92196252"
 ---
 # <a name="build-an-r-model-and-save-to-sql-server-walkthrough"></a>R 모델을 빌드하여 SQL Server에 저장(연습)
 [!INCLUDE [SQL Server 2016](../../includes/applies-to-version/sqlserver2016.md)]
 
-이 단계에서는 기계 학습 모델을 작성하고 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]에 저장하는 방법을 알아봅니다. 모델을 저장하면 시스템 저장 프로시저 [sp_execute_external_script](../../relational-databases/system-stored-procedures/sp-execute-external-script-transact-sql.md) 또는 [PREDICT (T-SQL) function](https://docs.microsoft.com/sql/t-sql/queries/predict-transact-sql)을 사용하여 [!INCLUDE[tsql](../../includes/tsql-md.md)] 코드에서 직접 호출할 수 있습니다.
+이 단계에서는 기계 학습 모델을 작성하고 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]에 저장하는 방법을 알아봅니다. 모델을 저장하면 시스템 저장 프로시저 [sp_execute_external_script](../../relational-databases/system-stored-procedures/sp-execute-external-script-transact-sql.md) 또는 [PREDICT (T-SQL) function](../../t-sql/queries/predict-transact-sql.md)을 사용하여 [!INCLUDE[tsql](../../includes/tsql-md.md)] 코드에서 직접 호출할 수 있습니다.
 
 ## <a name="prerequisites"></a>사전 요구 사항
 
@@ -67,7 +67,7 @@ GO
 
 모델은 택시 기사가 특정 여정에서 팁을 받을 가능성이 있는지 여부를 예측하는 이진 분류자입니다. 이전 단원에서 만든 데이터 원본을 사용하여 로지스틱 회귀를 통해 팁 분류자를 학습합니다.
 
-1. [RevoScaleR](https://docs.microsoft.com/r-server/r-reference/revoscaler/rxlogit) 패키지에 포함된 **rxLogit** 함수를 호출하여 로지스틱 회귀 모델을 만듭니다. 
+1. [RevoScaleR](/r-server/r-reference/revoscaler/rxlogit) 패키지에 포함된 **rxLogit** 함수를 호출하여 로지스틱 회귀 모델을 만듭니다. 
 
     ```R
     system.time(logitObj <- rxLogit(tipped ~ passenger_count + trip_distance + trip_time_in_secs + direct_distance, data = featureDataSource));
@@ -109,7 +109,7 @@ GO
 
 이제 모델이 작성되었으므로 모델을 사용하여 기사가 특정 여정에서 팁을 받을 가능성이 있는지 여부를 예측할 수 있습니다.
 
-1. 먼저 [RxSqlServerData](https://docs.microsoft.com/r-server/r-reference/revoscaler/rxsqlserverdata) 함수를 사용하여 채점 결과를 저장하기 위한 데이터 원본 개체를 정의합니다.
+1. 먼저 [RxSqlServerData](/r-server/r-reference/revoscaler/rxsqlserverdata) 함수를 사용하여 채점 결과를 저장하기 위한 데이터 원본 개체를 정의합니다.
 
     ```R
     scoredOutput <- RxSqlServerData(
@@ -123,7 +123,7 @@ GO
   
     + 예측된 값을 저장하는 테이블을 만들려면 rxSqlServer 데이터 함수를 실행하는 SQL 로그인에 데이터베이스에 대한 DDL 권한이 있어야 합니다. 로그인이 테이블을 만들 수 없는 경우에는 문이 실패합니다.
 
-2. [rxPredict](https://docs.microsoft.com/r-server/r-reference/revoscaler/rxpredict) 함수를 호출하여 결과를 생성합니다.
+2. [rxPredict](/r-server/r-reference/revoscaler/rxpredict) 함수를 호출하여 결과를 생성합니다.
 
     ```R
     rxPredict(modelObject = logitObj,
@@ -138,7 +138,7 @@ GO
 
 ## <a name="plot-model-accuracy"></a>모델 정확도 그리기
 
-모델의 정확도를 파악하기 위해 [rxRoc](https://docs.microsoft.com/r-server/r-reference/revoscaler/rxroc) 함수를 사용하여 수신기 운영 곡선을 그릴 수 있습니다. rxRoc는 RevoScaleR 패키지에서 제공하는 새 함수 중 하나로, 원격 컴퓨팅 컨텍스트를 지원하며 다음 두 가지 옵션을 사용할 수 있습니다.
+모델의 정확도를 파악하기 위해 [rxRoc](/r-server/r-reference/revoscaler/rxroc) 함수를 사용하여 수신기 운영 곡선을 그릴 수 있습니다. rxRoc는 RevoScaleR 패키지에서 제공하는 새 함수 중 하나로, 원격 컴퓨팅 컨텍스트를 지원하며 다음 두 가지 옵션을 사용할 수 있습니다.
 
 + rxRoc 함수를 사용하여 원격 컴퓨팅 컨텍스트에서 플롯을 실행한 다음, 로컬 클라이언트에 플롯을 반환할 수 있습니다.
 
@@ -173,7 +173,7 @@ GO
 
 명령 프롬프트에서 `rxGetComputeContext()`를 실행하여 컴퓨팅 컨텍스트가 로컬인지 확인할 수 있습니다. 반환 값은 “RxLocalSeq 컴퓨팅 컨텍스트”여야 합니다.
 
-1. 로컬 컴퓨팅 컨텍스트의 경우 프로세스는 거의 동일합니다. [rxImport](https://docs.microsoft.com/r-server/r-reference/revoscaler/rximport) 함수를 사용하여 지정된 데이터를 로컬 R 환경으로 가져옵니다.
+1. 로컬 컴퓨팅 컨텍스트의 경우 프로세스는 거의 동일합니다. [rxImport](/r-server/r-reference/revoscaler/rximport) 함수를 사용하여 지정된 데이터를 로컬 R 환경으로 가져옵니다.
 
     ```R
     scoredOutput = rxImport(scoredOutput)

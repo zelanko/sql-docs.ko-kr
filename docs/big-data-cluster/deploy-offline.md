@@ -9,12 +9,12 @@ ms.date: 11/04/2019
 ms.topic: conceptual
 ms.prod: sql
 ms.technology: big-data-cluster
-ms.openlocfilehash: c0218bd24bd24ee17a8d6addfbcf071788a48156
-ms.sourcegitcommit: e274d51df09f9163fa6e22b36d48c60bc3d7c7d1
+ms.openlocfilehash: 0437880dbcf3bef50184daa9e52f8eba2a7e31b4
+ms.sourcegitcommit: ae474d21db4f724523e419622ce79f611e956a22
 ms.translationtype: HT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 09/10/2020
-ms.locfileid: "89875562"
+ms.lasthandoff: 10/20/2020
+ms.locfileid: "92257183"
 ---
 # <a name="perform-an-offline-deployment-of-a-sql-server-big-data-cluster"></a>SQL Server 빅 데이터 클러스터의 오프라인 배포 수행
 
@@ -77,7 +77,6 @@ ms.locfileid: "89875562"
 - **mssql-monitor-influxdb**
 - **mssql-monitor-kibana**
 - **mssql-monitor-telegraf**
-- **mssql-security-domainctl**
 - **mssql-security-knox**
 - **mssql-security-support**
 - **mssql-server-controller**
@@ -121,7 +120,7 @@ ms.locfileid: "89875562"
 
 ## <a name="install-tools-offline"></a>도구 오프라인 설치
 
-빅 데이터 클러스터 배포를 사용하려면 **Python**, `azdata` 및 **kubectl**을 비롯한 여러 가지 도구가 필요합니다. 다음 단계를 사용하여 이러한 도구를 오프라인 서버에 설치합니다.
+빅 데이터 클러스터 배포를 사용하려면 **Python**, [!INCLUDE [azure-data-cli-azdata](../includes/azure-data-cli-azdata.md)] 및 **kubectl**을 비롯한 여러 가지 도구가 필요합니다. 다음 단계를 사용하여 이러한 도구를 오프라인 서버에 설치합니다.
 
 ### <a name="install-python-offline"></a><a id="python"></a> python 오프라인 설치
 
@@ -143,7 +142,7 @@ ms.locfileid: "89875562"
 
 ### <a name="install-azdata-offline"></a><a id="azdata"></a> azdata 오프라인 설치
 
-1. 인터넷에 액세스할 수 있고 [Python](https://wiki.python.org/moin/BeginnersGuide/Download)이 설치된 머신에서 다음 명령을 실행하여 `azdata` 패키지를 현재 폴더로 모두 다운로드합니다.
+1. 인터넷에 액세스할 수 있고 [Python](https://wiki.python.org/moin/BeginnersGuide/Download)이 설치된 머신에서 다음 명령을 실행하여 [!INCLUDE [azure-data-cli-azdata](../includes/azure-data-cli-azdata.md)] 패키지를 현재 폴더로 모두 다운로드합니다.
 
    ```PowerShell
    pip download -r https://aka.ms/azdata
@@ -167,7 +166,7 @@ ms.locfileid: "89875562"
 
 ## <a name="deploy-from-private-repository"></a>프라이빗 리포지토리에서 배포
 
-프라이빗 리포지토리에서 배포하려면 [배포 가이드](deployment-guidance.md)에 설명된 단계를 사용하되, 프라이빗 Docker 리포지토리 정보를 지정하는 사용자 지정 배포 구성 파일을 사용합니다. 다음 `azdata` 명령은 `control.json`이라는 사용자 지정 배포 구성 파일의 Docker 설정을 변경하는 방법을 보여 줍니다.
+프라이빗 리포지토리에서 배포하려면 [배포 가이드](deployment-guidance.md)에 설명된 단계를 사용하되, 프라이빗 Docker 리포지토리 정보를 지정하는 사용자 지정 배포 구성 파일을 사용합니다. 다음 [!INCLUDE [azure-data-cli-azdata](../includes/azure-data-cli-azdata.md)] 명령은 `control.json`이라는 사용자 지정 배포 구성 파일의 Docker 설정을 변경하는 방법을 보여 줍니다.
 
 ```bash
 azdata bdc config replace --config-file custom/control.json --json-values "$.spec.docker.repository=<your-docker-repository>"

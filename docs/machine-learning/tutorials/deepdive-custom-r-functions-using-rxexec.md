@@ -9,21 +9,21 @@ author: dphansen
 ms.author: davidph
 ms.custom: seo-lt-2019
 monikerRange: '>=sql-server-2016||>=sql-server-linux-ver15||=sqlallproducts-allversions'
-ms.openlocfilehash: 6c8fab6b5ecc6a548c5213f4401494f6803acc42
-ms.sourcegitcommit: 9b41725d6db9957dd7928a3620fe4db41eb51c6e
+ms.openlocfilehash: b8f03c64dc86e6d23113f3a35ae669f216b66489
+ms.sourcegitcommit: cfa04a73b26312bf18d8f6296891679166e2754d
 ms.translationtype: HT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 08/13/2020
-ms.locfileid: "88178790"
+ms.lasthandoff: 10/19/2020
+ms.locfileid: "92195155"
 ---
 # <a name="run-custom-r-functions-on-sql-server-using-rxexec-sql-server-and-revoscaler-tutorial"></a>rxExec(SQL Server 및 RevoScaleR 자습서)를 사용하여 SQL Server에서 사용자 지정 R 함수 실행
 [!INCLUDE [SQL Server 2016 and later](../../includes/applies-to-version/sqlserver2016.md)]
 
-이것은 SQL Server에서 [RevoScaleR 함수](https://docs.microsoft.com/machine-learning-server/r-reference/revoscaler/revoscaler)를 사용하는 방법에 대한 [RevoScaleR 자습서 시리즈](deepdive-data-science-deep-dive-using-the-revoscaler-packages.md) 중 자습서 14에 해당됩니다.
+이것은 SQL Server에서 [RevoScaleR 함수](/machine-learning-server/r-reference/revoscaler/revoscaler)를 사용하는 방법에 대한 [RevoScaleR 자습서 시리즈](deepdive-data-science-deep-dive-using-the-revoscaler-packages.md) 중 자습서 14에 해당됩니다.
 
 이 자습서에서는 시뮬레이션된 데이터를 사용하여 원격 서버에서 실행되는 사용자 지정 R 함수를 실행하는 방법을 보여줍니다.
 
-[rxExec](https://docs.microsoft.com/machine-learning-server/r-reference/revoscaler/rxexec)를 통해 함수를 전달하여 SQL Server 컨텍스트에서 사용자 지정 R 함수를 실행할 수 있습니다.이 경우 스크립트에 필요한 모든 라이브러리도 서버에 설치되고 해당 라이브러리가 R의 기본 배포판과 호환된다고 가정합니다. 
+[rxExec](/machine-learning-server/r-reference/revoscaler/rxexec)를 통해 함수를 전달하여 SQL Server 컨텍스트에서 사용자 지정 R 함수를 실행할 수 있습니다.이 경우 스크립트에 필요한 모든 라이브러리도 서버에 설치되고 해당 라이브러리가 R의 기본 배포판과 호환된다고 가정합니다. 
 
 **RevoScaleR**의 **rxExec** 함수는 필요한 R 스크립트를 실행할 수 있는 메커니즘을 제공합니다. 또한 **rxExec**는 단일 서버의 여러 코어에 작업을 명시적으로 배포하여 네이티브 R 엔진의 리소스 제약 조건으로 제한되는 스크립트에 규모를 추가할 수 있습니다.
 

@@ -9,12 +9,12 @@ author: dphansen
 ms.author: davidph
 ms.custom: contperfq4
 monikerRange: '>=sql-server-2016||>=sql-server-linux-ver15||=sqlallproducts-allversions'
-ms.openlocfilehash: e756203bb9eba1ec4646ff3e40686cd3838a0dbf
-ms.sourcegitcommit: 76ab3b57718341c6057613c9bd38cf82fb17786e
+ms.openlocfilehash: c0089390202f6bebfc0ecce8b41b70adee7348c6
+ms.sourcegitcommit: cfa04a73b26312bf18d8f6296891679166e2754d
 ms.translationtype: HT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 10/14/2020
-ms.locfileid: "92059561"
+ms.lasthandoff: 10/19/2020
+ms.locfileid: "92196348"
 ---
 # <a name="known-issues-in-sql-server-machine-learning-services"></a>SQL Server Machine Learning Services의 알려진 문제
 [!INCLUDE [SQL Server 2016 and later](../../includes/applies-to-version/sqlserver2016.md)]
@@ -136,7 +136,7 @@ SQL Server 2016 컴퓨팅 컨텍스트에서 R 코드를 실행하면 다음과 
 이 메시지는 다음 두 문장 중 하나가 참인 경우 표시됩니다.
 
 + [!INCLUDE[ssSQLv14_md](../../includes/sssqlv14-md.md)] 설치 마법사를 사용하여 클라이언트 컴퓨터에 Microsoft R Server(독립 실행형)를 설치했습니다.
-+ [별도의 Windows Installer](https://docs.microsoft.com/machine-learning-server/install/r-server-install-windows)를 사용하여 Microsoft R Server를 설치했습니다.
++ [별도의 Windows Installer](/machine-learning-server/install/r-server-install-windows)를 사용하여 Microsoft R Server를 설치했습니다.
 
 서버와 클라이언트가 동일한 버전을 사용하도록 하려면 Microsoft R Server 9.0 이상 릴리스에서 지원되는 _바인딩_을 사용하여 SQL Server 2016 인스턴스의 R 구성 요소를 업그레이드해야 할 수 있습니다. 업그레이드 지원이 가능한 R Services 버전인지 확인하려면 [SqlBindR.exe를 사용하여 R Services 인스턴스 업그레이드](../install/upgrade-r-and-python.md)를 참조하세요.
 
@@ -254,7 +254,7 @@ Oct 18 14:03:21 sqlextmls launchpadd[57471]: [launchpad] 2019/10/18 14:03:21 WAR
 
 ### <a name="15-installation-or-upgrade-error-on-fips-enabled-servers"></a>15. FIPS 사용 서버에서 설치 또는 업그레이드 오류
 
-[FIPS(Federal Information Processing Standard)](https://docs.microsoft.com/windows/security/threat-protection/security-policy-settings/system-cryptography-use-fips-compliant-algorithms-for-encryption-hashing-and-signing) 사용 서버에서 **Machine Learning Services 및 언어 확장** 기능을 사용하여 SQL Server 2019를 설치하거나 SQL Server 인스턴스를 업그레이드하면 다음 오류가 표시됩니다.
+[FIPS(Federal Information Processing Standard)](/windows/security/threat-protection/security-policy-settings/system-cryptography-use-fips-compliant-algorithms-for-encryption-hashing-and-signing) 사용 서버에서 **Machine Learning Services 및 언어 확장** 기능을 사용하여 SQL Server 2019를 설치하거나 SQL Server 인스턴스를 업그레이드하면 다음 오류가 표시됩니다.
 
 > 확장성 기능을 설치하는 동안 오류가 발생했습니다. 오류 메시지: AppContainer를 만들지 못했습니다. 오류 메시지 없음, 이 구현은 Windows Platform FIPS 유효성을 검사한 암호화 알고리즘의 일부가 아닙니다.
 
@@ -268,7 +268,7 @@ Oct 18 14:03:21 sqlextmls launchpadd[57471]: [launchpad] 2019/10/18 14:03:21 WAR
 
 이 섹션에는 SQL Server에서의 R 실행과 관련된 알려진 문제뿐 아니라 RevoScaleR를 포함하여 Microsoft에서 게시한 R 라이브러리 및 도구와 관련된 몇 가지 문제가 포함되어 있습니다.
 
-R 솔루션에 영향을 줄 수 있는 알려진 추가 문제는 [Machine Learning Server](https://docs.microsoft.com/machine-learning-server/resources-known-issues) 사이트를 참조하세요.
+R 솔루션에 영향을 줄 수 있는 알려진 추가 문제는 [Machine Learning Server](/machine-learning-server/resources-known-issues) 사이트를 참조하세요.
 
 ### <a name="1-access-denied-warning-when-executing-r-scripts-on-sql-server-in-a-non-default-location"></a>1. 기본 위치가 아닌 위치에 있는 SQL Server에서 R 스크립트를 실행할 때 액세스 거부 경고
 
@@ -288,7 +288,7 @@ SQL Server를 기본 위치에 설치한 경우에는 모든 Windows 사용자�
 
 > *memDecompress(데이터, 유형 = 압축 풀기) 내부 오류의 오류 -3/memDecompress(2).*
 
-이 오류는 직렬화 함수 [rxSerializeModel](https://docs.microsoft.com/machine-learning-server/r-reference/revoscaler/rxserializemodel)의 최신 버전을 사용하여 모델을 저장했지만 모델을 역직렬화하는 SQL Server 인스턴스에 SQL Server 2017 CU2 이전 버전의 RevoScaleR API 이전 버전이 있는 경우에 발생합니다.
+이 오류는 직렬화 함수 [rxSerializeModel](/machine-learning-server/r-reference/revoscaler/rxserializemodel)의 최신 버전을 사용하여 모델을 저장했지만 모델을 역직렬화하는 SQL Server 인스턴스에 SQL Server 2017 CU2 이전 버전의 RevoScaleR API 이전 버전이 있는 경우에 발생합니다.
 
 해결 방법으로 SQL Server 2017 인스턴스를 CU3 이상으로 업그레이드할 수 있습니다.
 
@@ -300,7 +300,7 @@ API 버전이 동일하거나 이전 직렬화 함수를 사용하여 저장된 
 
 의사 결정 트리 또는 의사 결정 포리스트 방법을 사용하 여 모델을 만들고 학습 속도를 지정하는 경우 `sp_rxpredict` 또는 SQL `PREDICT` 함수를 사용하면 `rxPredict`를 사용할 때에 비해 일관되지 않은 결과가 나타날 수 있습니다.
 
-원인은 직렬화된 모델을 처리하는 API의 오류이며, `learningRate` 매개 변수(예: [rxBTrees](https://docs.microsoft.com/machine-learning-server/r-reference/revoscaler/rxbtrees)에서 또는)로 제한됩니다. 또는
+원인은 직렬화된 모델을 처리하는 API의 오류이며, `learningRate` 매개 변수(예: [rxBTrees](/machine-learning-server/r-reference/revoscaler/rxbtrees)에서 또는)로 제한됩니다. 또는
 
 이 문제는 예정된 서비스 릴리스에서 해결됩니다.
 
@@ -396,7 +396,7 @@ varchar 열의 유니코드 데이터를 [!INCLUDE[ssNoVersion](../../includes/s
 
 R에서 이진 데이터 형식(R **원시** 데이터 형식)이 반환되는 경우 값은 출력 데이터 프레임으로 전송되어야 합니다.
 
-**원시** 이외의 데이터 형식의 경우 OUTPUT 키워드를 추가하여 저장 프로시저의 결과와 함께 매개 변수 값을 반환할 수 있습니다. 자세한 내용은 [매개 변수](https://docs.microsoft.com/sql/relational-databases/stored-procedures/parameters)를 참조하세요.
+**원시** 이외의 데이터 형식의 경우 OUTPUT 키워드를 추가하여 저장 프로시저의 결과와 함께 매개 변수 값을 반환할 수 있습니다. 자세한 내용은 [매개 변수](../../relational-databases/stored-procedures/parameters.md)를 참조하세요.
 
 **원시** 형식의 값을 포함하는 여러 출력 집합을 사용하려는 경우 한 가지 가능한 해결 방법은 저장 프로시저를 여러 번 호출하거나 ODBC를 사용하여 결과 집합을 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]로 다시 보내는 것입니다.
 
@@ -544,7 +544,7 @@ SQL Server 2019는 병렬 실행을 사용하는 R 스크립트에 영향을 주
 
 ## <a name="python-script-execution-issues"></a>Python 스크립트 실행 문제
 
-이 섹션에는 SQL Server에서의 R 실행과 관련된 알려진 문제뿐 아니라 [revoscalepy](https://docs.microsoft.com/r-server/python-reference/revoscalepy/revoscalepy-package) 및 [microsoftml](https://docs.microsoft.com/r-server/python-reference/microsoftml/microsoftml-package)을 포함하여 Microsoft에서 게시한 Python 패키지와 관련된 문제가 포함되어 있습니다.
+이 섹션에는 SQL Server에서의 R 실행과 관련된 알려진 문제뿐 아니라 [revoscalepy](/r-server/python-reference/revoscalepy/revoscalepy-package) 및 [microsoftml](/r-server/python-reference/microsoftml/microsoftml-package)을 포함하여 Microsoft에서 게시한 Python 패키지와 관련된 문제가 포함되어 있습니다.
 
 ### <a name="1-call-to-pretrained-model-fails-if-path-to-model-is-too-long"></a>1. 모델 경로가 너무 긴 경우 미리 학습된 모델에 대한 호출 실패
 
@@ -554,12 +554,12 @@ SQL Server 2017의 초기 릴리스에 미리 학습된 모델을 설치한 경�
 
 + 미리 학습된 모델을 설치하는 경우 사용자 지정 위치를 선택합니다.
 + 가능하면 경로가 짧은 사용자 지정 설치 경로(예: C:\SQL\MSSQL14.MSSQLSERVER)에 SQL Server 인스턴스를 설치합니다.
-+ Windows 유틸리티 [Fsutil](https://technet.microsoft.com/library/cc788097(v=ws.11).aspx)을 사용하여 모델 파일을 더 짧은 경로에 매핑하는 하드 링크를 만듭니다.
++ Windows 유틸리티 [Fsutil](/previous-versions/windows/it-pro/windows-server-2012-R2-and-2012/cc788097(v=ws.11))을 사용하여 모델 파일을 더 짧은 경로에 매핑하는 하드 링크를 만듭니다.
 + 최신 서비스 릴리스로 업데이트합니다.
 
 ### <a name="2-error-when-saving-serialized-model-to-sql-server"></a>2. 직렬화된 모델을 SQL Server에 저장할 때 오류 발생
 
-원격 SQL Server 인스턴스에 모델을 전달하고 [revoscalepy](https://docs.microsoft.com/machine-learning-server/python-reference/revoscalepy/revoscalepy-package)에서 `rx_unserialize` 함수를 사용하여 이진 모델을 읽으려고 하면 다음 오류가 발생할 수 있습니다. 
+원격 SQL Server 인스턴스에 모델을 전달하고 [revoscalepy](/machine-learning-server/python-reference/revoscalepy/revoscalepy-package)에서 `rx_unserialize` 함수를 사용하여 이진 모델을 읽으려고 하면 다음 오류가 발생할 수 있습니다. 
 
 > *NameError: 이름 'rx_unserialize_model'이 정의되지 않았습니다.*
 

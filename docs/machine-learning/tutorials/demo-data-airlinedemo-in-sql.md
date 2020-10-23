@@ -10,19 +10,19 @@ author: dphansen
 ms.author: davidph
 ms.custom: seo-lt-2019
 monikerRange: '>=sql-server-2016||>=sql-server-linux-ver15||=sqlallproducts-allversions'
-ms.openlocfilehash: e00d3814b20f774568da007ba1e60f6784b1c9fb
-ms.sourcegitcommit: e700497f962e4c2274df16d9e651059b42ff1a10
+ms.openlocfilehash: 7ec47525a79738eafc2746808a669ee50df0363a
+ms.sourcegitcommit: cfa04a73b26312bf18d8f6296891679166e2754d
 ms.translationtype: HT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 08/17/2020
-ms.locfileid: "88484076"
+ms.lasthandoff: 10/19/2020
+ms.locfileid: "92194495"
 ---
 #  <a name="airline-flight-arrival-demo-data-for-sql-server-python-and-r-tutorials"></a>SQL Server Python 및 R 자습서에 대한 항공 비행 도착 데모 데이터
 [!INCLUDE [SQL Server 2016 and later](../../includes/applies-to-version/sqlserver2016.md)]
 
 이 연습에서는 R 또는 Python 기본 제공 Airline 데모 데이터 세트에서 가져온 데이터를 저장할 SQL Server 데이터베이스를 만듭니다. R 및 Python 배포는 Management Studio를 사용하여 SQL Server 데이터베이스로 가져올 수 있는 동일한 데이터를 제공합니다.
 
-이 연습을 완료하려면 [SQL Server Management Studio](https://docs.microsoft.com/sql/ssms/download-sql-server-management-studio-ssms?view=sql-server-2017) 또는 T-SQL 쿼리를 실행할 수 있는 다른 도구가 있어야 합니다.
+이 연습을 완료하려면 [SQL Server Management Studio](../../ssms/download-sql-server-management-studio-ssms.md?view=sql-server-2017) 또는 T-SQL 쿼리를 실행할 수 있는 다른 도구가 있어야 합니다.
 
 이 데이터 세트를 사용하는 자습서 및 빠른 시작에는 다음이 포함됩니다.
 

@@ -9,17 +9,17 @@ author: dphansen
 ms.author: davidph
 ms.custom: seo-lt-2019
 monikerRange: '>=sql-server-2016||>=sql-server-linux-ver15||=sqlallproducts-allversions'
-ms.openlocfilehash: 1d8f4419e468bfd0f82f064f59d9b3bdd1036f15
-ms.sourcegitcommit: 9b41725d6db9957dd7928a3620fe4db41eb51c6e
+ms.openlocfilehash: 6260905faa886383ea41d913d1645fa47dc8ce7d
+ms.sourcegitcommit: cfa04a73b26312bf18d8f6296891679166e2754d
 ms.translationtype: HT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 08/13/2020
-ms.locfileid: "88178647"
+ms.lasthandoff: 10/19/2020
+ms.locfileid: "92195095"
 ---
 # <a name="transform-data-using-r-sql-server-and-revoscaler-tutorial"></a>R을 사용하여 데이터 변환(SQL Server 및 RevoScaleR 자습서)
 [!INCLUDE [SQL Server 2016 and later](../../includes/applies-to-version/sqlserver2016.md)]
 
-이것은 SQL Server에서 [RevoScaleR 함수](https://docs.microsoft.com/machine-learning-server/r-reference/revoscaler/revoscaler)를 사용하는 방법에 대한 [RevoScaleR 자습서 시리즈](deepdive-data-science-deep-dive-using-the-revoscaler-packages.md) 중 자습서 9에 해당됩니다.
+이것은 SQL Server에서 [RevoScaleR 함수](/machine-learning-server/r-reference/revoscaler/revoscaler)를 사용하는 방법에 대한 [RevoScaleR 자습서 시리즈](deepdive-data-science-deep-dive-using-the-revoscaler-packages.md) 중 자습서 9에 해당됩니다.
 
 이 자습서에서는 다양한 분석 단계에서 데이터를 변환하기 위한 **RevoScaleR** 함수에 대해 알아봅니다.
 
@@ -31,7 +31,7 @@ ms.locfileid: "88178647"
 
 ## <a name="use-rxdatastep-to-transform-variables"></a>rxDataStep을 사용하여 변수 변환
 
-[rxDataStep](https://docs.microsoft.com/machine-learning-server/r-reference/revoscaler/rxdatastep) 함수는 하나의 데이터 원본에서 읽어 다른 데이터 원본에 쓰면서 한 번에 하나씩 데이터 청크를 처리합니다. 변환할 열, 로드할 변환 등을 지정할 수 있습니다.
+[rxDataStep](/machine-learning-server/r-reference/revoscaler/rxdatastep) 함수는 하나의 데이터 원본에서 읽어 다른 데이터 원본에 쓰면서 한 번에 하나씩 데이터 청크를 처리합니다. 변환할 열, 로드할 변환 등을 지정할 수 있습니다.
 
 이 예제를 흥미롭게 만들기 위해 다른 R 패키지의 함수를 사용하여 데이터를 변환해 보겠습니다. **boot** 패키지는 "권장" 패키지 중 하나이므로, **boot** 는 R의 모든 배포에 포함되지만 시작할 때 자동으로 로드되지 않습니다. 따라서 패키지는 R 통합을 위해 구성된 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 인스턴스에서 이미 사용할 수 있어야 합니다.
 
@@ -76,7 +76,7 @@ ms.locfileid: "88178647"
         overwrite = TRUE)
     ```
 
-    각 열에 적용되는 변환을 정의할 때 변환에 필요한 추가 R 패키지를 지정할 수도 있습니다.  수행할 수 있는 변환 유형에 대한 자세한 내용은 [RevoScaleR을 사용하여 데이터를 변환하고 하위 집합하는 방법](https://docs.microsoft.com/machine-learning-server/r/how-to-revoscaler-data-transform)을 참조하세요.
+    각 열에 적용되는 변환을 정의할 때 변환에 필요한 추가 R 패키지를 지정할 수도 있습니다.  수행할 수 있는 변환 유형에 대한 자세한 내용은 [RevoScaleR을 사용하여 데이터를 변환하고 하위 집합하는 방법](/machine-learning-server/r/how-to-revoscaler-data-transform)을 참조하세요.
   
 6. **rxGetVarInfo** 를 호출하여 새 데이터 집합의 변수 요약을 확인합니다.
   

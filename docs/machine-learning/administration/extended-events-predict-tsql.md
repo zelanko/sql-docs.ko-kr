@@ -8,16 +8,16 @@ ms.topic: how-to
 author: dphansen
 ms.author: davidph
 ms.custom: seo-lt-2019
-monikerRange: '>=sql-server-2017||>=sql-server-linux-ver15||=sqlallproducts-allversions'
-ms.openlocfilehash: 3d312a74a8920031015e0a985d8b30933cfc039a
-ms.sourcegitcommit: afb02c275b7c79fbd90fac4bfcfd92b00a399019
+monikerRange: '>=sql-server-2017||>=sql-server-linux-ver15||=azuresqldb-mi-current||=sqlallproducts-allversions'
+ms.openlocfilehash: bbe54a44113ebadc07c837887f0d92e7bfb44cb4
+ms.sourcegitcommit: 22102f25db5ccca39aebf96bc861c92f2367c77a
 ms.translationtype: HT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 10/12/2020
-ms.locfileid: "91956848"
+ms.lasthandoff: 10/16/2020
+ms.locfileid: "92115403"
 ---
 # <a name="monitor-predict-t-sql-statements-with-extended-events-in-sql-server-machine-learning-services"></a>SQL Server Machine Learning Services에서 확장 이벤트를 사용하여 PREDICT T-SQL 문 모니터링
-[!INCLUDE [SQL Server 2017 and later](../../includes/applies-to-version/sqlserver2017.md)]
+[!INCLUDE [SQL Server 2017 SQL MI](../../includes/applies-to-version/sqlserver2017-asdbmi.md)]
 
 확장 이벤트를 사용하여 SQL Server Machine Learning Services에서 [PREDICT](../../t-sql/queries/predict-transact-sql.md) T-SQL 문을 모니터링하고 문제를 해결하는 방법에 대해 알아봅니다.
 
@@ -25,22 +25,22 @@ ms.locfileid: "91956848"
 
 [PREDICT](../../t-sql/queries/predict-transact-sql.md) T-SQL 문을 지원하는 모든 버전의 SQL Server에서 다음 확장 이벤트를 사용할 수 있습니다. 
 
-|name |object_type|description| 
-|----|----|----|
-|predict_function_completed |이벤트  |기본 제공 실행 시간 중단점|
-|predict_model_cache_hit |이벤트|PREDICT 함수 모델 캐시에서 모델을 검색할 때 발생합니다. 다른 predict_model_cache_* 이벤트와 함께 이 이벤트를 사용하여 PREDICT 함수 모델 캐시에서 발생한 문제를 해결하세요.|
-|predict_model_cache_insert |이벤트  |   모델이 PREDICT 함수 모델 캐시에 삽입될 때 발생합니다. 다른 predict_model_cache_* 이벤트와 함께 이 이벤트를 사용하여 PREDICT 함수 모델 캐시에서 발생한 문제를 해결하세요.    |
-|predict_model_cache_miss   |이벤트|PREDICT 함수 모델 캐시에서 모델을 찾을 수 없을 때 발생합니다. 이 이벤트가 자주 발생하면 SQL Server에 더 많은 메모리가 필요함을 나타낼 수 있습니다. 다른 predict_model_cache_* 이벤트와 함께 이 이벤트를 사용하여 PREDICT 함수 모델 캐시에서 발생한 문제를 해결하세요.|
-|predict_model_cache_remove |이벤트| PREDICT 함수를 위해 모델 캐시에서 모델을 제거할 때 발생합니다. 다른 predict_model_cache_* 이벤트와 함께 이 이벤트를 사용하여 PREDICT 함수 모델 캐시에서 발생한 문제를 해결하세요.|
+| name                       | object_type | description |
+|----------------------------|-------------|-------------|
+| predict_function_completed | 이벤트       | 기본 제공 실행 시간 중단점|
+| predict_model_cache_hit    | 이벤트       | PREDICT 함수 모델 캐시에서 모델을 검색할 때 발생합니다. 다른 predict_model_cache_* 이벤트와 함께 이 이벤트를 사용하여 PREDICT 함수 모델 캐시에서 발생한 문제를 해결하세요.|
+| predict_model_cache_insert | 이벤트       | 모델이 PREDICT 함수 모델 캐시에 삽입될 때 발생합니다. 다른 predict_model_cache_* 이벤트와 함께 이 이벤트를 사용하여 PREDICT 함수 모델 캐시에서 발생한 문제를 해결하세요.   |
+| predict_model_cache_miss   | 이벤트       | PREDICT 함수 모델 캐시에서 모델을 찾을 수 없을 때 발생합니다. 이 이벤트가 자주 발생하면 SQL Server에 더 많은 메모리가 필요함을 나타낼 수 있습니다. 다른 predict_model_cache_* 이벤트와 함께 이 이벤트를 사용하여 PREDICT 함수 모델 캐시에서 발생한 문제를 해결하세요.|
+| predict_model_cache_remove | 이벤트       | PREDICT 함수를 위해 모델 캐시에서 모델을 제거할 때 발생합니다. 다른 predict_model_cache_* 이벤트와 함께 이 이벤트를 사용하여 PREDICT 함수 모델 캐시에서 발생한 문제를 해결하세요.|
 
 ## <a name="query-for-related-events"></a>관련 이벤트 쿼리
 
 이러한 이벤트에 대해 반환된 모든 열의 목록을 보려면 SQL Server Management Studio에서 다음 쿼리를 실행합니다.
 
 ```sql
-SELECT * 
-FROM sys.dm_xe_object_columns 
-WHERE object_name LIKE `predict%'
+SELECT *
+FROM sys.dm_xe_object_columns
+WHERE object_name LIKE 'predict%'
 ```
 
 ## <a name="examples"></a>예

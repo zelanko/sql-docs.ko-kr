@@ -10,24 +10,24 @@ author: dphansen
 ms.author: davidph
 ms.custom: seo-lt-2019
 monikerRange: '>=sql-server-2017||>=sql-server-linux-ver15||=azuresqldb-mi-current||=sqlallproducts-allversions'
-ms.openlocfilehash: 8436564dc7e4aff17b280c136bf45040e18e583b
-ms.sourcegitcommit: 9b41725d6db9957dd7928a3620fe4db41eb51c6e
+ms.openlocfilehash: 17ed4f8f3cd938fe38dbee7dcc0933dae8109c65
+ms.sourcegitcommit: cfa04a73b26312bf18d8f6296891679166e2754d
 ms.translationtype: HT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 08/13/2020
-ms.locfileid: "88180374"
+ms.lasthandoff: 10/19/2020
+ms.locfileid: "92194463"
 ---
 # <a name="python-tutorial-predict-ski-rental-with-linear-regression-with-sql-machine-learning"></a>Python 자습서: SQL 기계 학습에서 선형 회귀를 사용하여 스키 대여 수량 예측
 [!INCLUDE [SQL Server 2017 SQL MI](../../includes/applies-to-version/sqlserver2017-asdbmi.md)]
 
 ::: moniker range=">=sql-server-ver15||>=sql-server-linux-ver15||=sqlallproducts-allversions"
-4부로 구성된 이 자습서 시리즈에서는 [SQL Server Machine Learning Services](../sql-server-machine-learning-services.md) 또는 [빅 데이터 클러스터](../../big-data-cluster/machine-learning-services.md)에서 Python 및 선형 회귀를 사용하여 스키 대여 수량을 예측합니다. 이 자습서에서는 [Azure Data Studio의 Python Notebook](../../azure-data-studio/sql-notebooks.md)을 사용합니다.
+4부로 구성된 이 자습서 시리즈에서는 [SQL Server Machine Learning Services](../sql-server-machine-learning-services.md) 또는 [빅 데이터 클러스터](../../big-data-cluster/machine-learning-services.md)에서 Python 및 선형 회귀를 사용하여 스키 대여 수량을 예측합니다. 이 자습서에서는 [Azure Data Studio의 Python Notebook](../../azure-data-studio/notebooks/notebooks-guidance.md)을 사용합니다.
 ::: moniker-end
 ::: moniker range="=sql-server-2017||=sqlallproducts-allversions"
-네 부분으로 구성된 이 자습서 시리즈에서는 [SQL Server Machine Learning Services](../sql-server-machine-learning-services.md)에서 Python 및 선형 회귀를 사용하여 스키 대여 건수를 예측합니다. 이 자습서에서는 [Azure Data Studio의 Python Notebook](../../azure-data-studio/sql-notebooks.md)을 사용합니다.
+네 부분으로 구성된 이 자습서 시리즈에서는 [SQL Server Machine Learning Services](../sql-server-machine-learning-services.md)에서 Python 및 선형 회귀를 사용하여 스키 대여 건수를 예측합니다. 이 자습서에서는 [Azure Data Studio의 Python Notebook](../../azure-data-studio/notebooks/notebooks-guidance.md)을 사용합니다.
 ::: moniker-end
 ::: moniker range="=azuresqldb-mi-current||=sqlallproducts-allversions"
-4부로 구성된 이 자습서 시리즈에서는 [Azure SQL Managed Instance Machine Learning Services](/azure/azure-sql/managed-instance/machine-learning-services-overview)에서 Python 및 선형 회귀를 사용하여 스키 대여 건수를 예측합니다. 이 자습서에서는 [Azure Data Studio의 Python Notebook](../../azure-data-studio/sql-notebooks.md)을 사용합니다.
+4부로 구성된 이 자습서 시리즈에서는 [Azure SQL Managed Instance Machine Learning Services](/azure/azure-sql/managed-instance/machine-learning-services-overview)에서 Python 및 선형 회귀를 사용하여 스키 대여 건수를 예측합니다. 이 자습서에서는 [Azure Data Studio의 Python Notebook](../../azure-data-studio/notebooks/notebooks-guidance.md)을 사용합니다.
 ::: moniker-end
 
 스키 대여 업체 소유자로서 향후 날짜의 대여 건수를 예측하려는 경우를 가정해 보겠습니다. 이 정보는 재고, 직원 및 시설을 준비하는 데 도움이 됩니다.
@@ -59,7 +59,7 @@ ms.locfileid: "88180374"
 * 샘플 데이터베이스를 Azure SQL Managed Instance로 복원하기 위한 [SQL Server Management Studio](../../ssms/download-sql-server-management-studio-ssms.md).
 ::: moniker-end
 
-* Python IDE - 이 자습서에서는 [Azure Data Studio](../../azure-data-studio/what-is.md)의 Python Notebook을 사용합니다. 자세한 내용은 [Azure Data Studio에서 Notebook을 사용하는 방법](../../azure-data-studio/sql-notebooks.md)을 참조하세요.
+* Python IDE - 이 자습서에서는 [Azure Data Studio](../../azure-data-studio/what-is.md)의 Python Notebook을 사용합니다. 자세한 내용은 [Azure Data Studio에서 Notebook을 사용하는 방법](../../azure-data-studio/notebooks/notebooks-guidance.md)을 참조하세요.
 
 * SQL 쿼리 도구 - 이 자습서에서는 [Azure Data Studio](../../azure-data-studio/what-is.md)를 사용한다고 가정합니다.
 

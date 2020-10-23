@@ -9,12 +9,12 @@ author: dphansen
 ms.author: davidph
 ms.custom: seo-lt-2019
 monikerRange: '>=sql-server-2016||>=sql-server-linux-ver15||=sqlallproducts-allversions'
-ms.openlocfilehash: e0f7cf6f904768f8394b690c1a45d3cfb4c9bd71
-ms.sourcegitcommit: 9b41725d6db9957dd7928a3620fe4db41eb51c6e
+ms.openlocfilehash: cf9cf80d6ced7cfcfefecbff4f31095f82e04e1c
+ms.sourcegitcommit: cfa04a73b26312bf18d8f6296891679166e2754d
 ms.translationtype: HT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 08/13/2020
-ms.locfileid: "88173474"
+ms.lasthandoff: 10/19/2020
+ms.locfileid: "92194515"
 ---
 # <a name="collect-data-to-troubleshoot-sql-machine-learning"></a>SQL Machine Learning 문제를 해결하기 위해 데이터 수집
 
@@ -36,7 +36,7 @@ SQL Server 2017 이상에는 Python 언어 통합이 있습니다. 이전 릴리
 
 일반적으로 R Services 기능 또는 Machine Learning Services 기능을 선택할 때 설치되는 Microsoft R 버전은 SQL Server 빌드 번호에 의해 결정됩니다. SQL Server를 업그레이드하거나 패치하는 경우 R 구성 요소도 업그레이드하거나 패치해야 합니다.
 
-릴리스 목록과 R 구성 요소 다운로드에 대한 링크는 [인터넷에 액세스하지 않고 기계 학습 구성 요소 설치](/sql/machine-learning/install/sql-ml-component-install-without-internet-access)를 참조하세요. 인터넷에 액세스할 수 있는 컴퓨터에서는 필요한 R 버전이 자동으로 식별되고 설치됩니다.
+릴리스 목록과 R 구성 요소 다운로드에 대한 링크는 [인터넷에 액세스하지 않고 기계 학습 구성 요소 설치](../install/sql-ml-component-install-without-internet-access.md)를 참조하세요. 인터넷에 액세스할 수 있는 컴퓨터에서는 필요한 R 버전이 자동으로 식별되고 설치됩니다.
 
 바인딩이라는 하는 프로세스에서 SQL Server 데이터베이스 엔진과 별도로 R 서버 구성 요소를 업그레이드할 수 있습니다. 따라서 SQL Server에서 R 코드를 실행할 때 사용하는 R 버전은 설치된 SQL Server 버전과 서버를 최신 R 버전으로 마이그레이션했는지 여부에 따라 다를 수 있습니다.
 

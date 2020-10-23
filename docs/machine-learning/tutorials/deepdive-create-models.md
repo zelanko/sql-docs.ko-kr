@@ -9,17 +9,17 @@ author: dphansen
 ms.author: davidph
 ms.custom: seo-lt-2019
 monikerRange: '>=sql-server-2016||>=sql-server-linux-ver15||=sqlallproducts-allversions'
-ms.openlocfilehash: 9c37608146b0ebf75cd0042f12ffc004f1273960
-ms.sourcegitcommit: 9b41725d6db9957dd7928a3620fe4db41eb51c6e
+ms.openlocfilehash: c17b74aff83412dd7f74d3c9a9cb1fb7ec711b19
+ms.sourcegitcommit: cfa04a73b26312bf18d8f6296891679166e2754d
 ms.translationtype: HT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 08/13/2020
-ms.locfileid: "88178820"
+ms.lasthandoff: 10/19/2020
+ms.locfileid: "92196307"
 ---
 # <a name="create-r-models-sql-server-and-revoscaler-tutorial"></a>R 모델 만들기(SQL Server 및 RevoScaleR 자습서)
 [!INCLUDE [SQL Server 2016 and later](../../includes/applies-to-version/sqlserver2016.md)]
 
-이것은 SQL Server에서 [RevoScaleR 함수](https://docs.microsoft.com/machine-learning-server/r-reference/revoscaler/revoscaler)를 사용하는 방법에 대한 [RevoScaleR 자습서 시리즈](deepdive-data-science-deep-dive-using-the-revoscaler-packages.md) 중 자습서 7에 해당됩니다.
+이것은 SQL Server에서 [RevoScaleR 함수](/machine-learning-server/r-reference/revoscaler/revoscaler)를 사용하는 방법에 대한 [RevoScaleR 자습서 시리즈](deepdive-data-science-deep-dive-using-the-revoscaler-packages.md) 중 자습서 7에 해당됩니다.
 
 학습 데이터를 보강했습니다. 이 자습서에서는 회귀 모델링을 사용하여 데이터를 분석합니다. 선형 모델은 예측 분석 분야에서 중요한 도구입니다. **RevoScaleR** 패키지에는 워크로드를 세분화하고 병렬로 실행할 수 있는 회귀 알고리즘이 포함되어 있습니다.
 
@@ -31,7 +31,7 @@ ms.locfileid: "88178820"
 
 이 단계에서는 *gender* 및 *creditLine* 열의 값을 독립 변수로 사용하여 고객의 신용 카드 잔액을 추정하는 간단한 선형 모델을 만듭니다.
   
-이렇게 하려면 원격 컴퓨팅 컨텍스트를 지원하는 [rxLinMod](https://docs.microsoft.com/machine-learning-server/r-reference/revoscaler/rxlinmod) 함수를 사용합니다.
+이렇게 하려면 원격 컴퓨팅 컨텍스트를 지원하는 [rxLinMod](/machine-learning-server/r-reference/revoscaler/rxlinmod) 함수를 사용합니다.
   
 1. R 변수를 만들어 완료된 모델을 저장하고 **rxLinMod**를 호출하여 적절한 수식을 전달합니다.
   
@@ -75,7 +75,7 @@ Condition number: 1.0184
 
 ## <a name="create-a-logistic-regression-model"></a>로지스틱 회귀 모델 만들기
 
-다음으로, 특정 고객이 사기 위험인지 여부를 나타내는 로지스틱 회귀 모델을 만듭니다. 원격 컴퓨팅 컨텍스트에서 로지스틱 회귀 분석 모델의 맞춤을 지원하는 **RevoScaleR** [rxLogit](https://docs.microsoft.com/machine-learning-server/r-reference/revoscaler/rxlogit) 함수를 사용합니다.
+다음으로, 특정 고객이 사기 위험인지 여부를 나타내는 로지스틱 회귀 모델을 만듭니다. 원격 컴퓨팅 컨텍스트에서 로지스틱 회귀 분석 모델의 맞춤을 지원하는 **RevoScaleR** [rxLogit](/machine-learning-server/r-reference/revoscaler/rxlogit) 함수를 사용합니다.
 
 컴퓨팅 컨텍스트를 그대로 유지합니다. 또한 계속해서 같은 데이터 원본을 사용합니다.
 

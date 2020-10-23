@@ -9,12 +9,12 @@ author: dphansen
 ms.author: davidph
 ms.custom: seo-lt-2019
 monikerRange: '>=sql-server-2016||>=sql-server-linux-ver15||=sqlallproducts-allversions'
-ms.openlocfilehash: 2982a0d449d031ba6f211f29a919c588a507a4ba
-ms.sourcegitcommit: 04fb4c2d7ccddd30745b334b319d9d2dd34325d6
+ms.openlocfilehash: 1a9a7dc3b4df2738d775cbb08ef8a7c547ec21aa
+ms.sourcegitcommit: cfa04a73b26312bf18d8f6296891679166e2754d
 ms.translationtype: HT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 09/09/2020
-ms.locfileid: "89569931"
+ms.lasthandoff: 10/19/2020
+ms.locfileid: "92196337"
 ---
 # <a name="common-r-scripting-errors-in-sql-server"></a>SQL Server에서 일반적인 R 스크립팅 오류
 [!INCLUDE [SQL Server 2016 and later](../../includes/applies-to-version/sqlserver2016.md)]
@@ -31,7 +31,7 @@ ms.locfileid: "89569931"
 
 2. 메시지를 검토하여 입력 데이터 또는 출력 데이터에 호환되지 않거나 지원되지 않는 데이터 형식의 열이 포함되어 있는지 확인합니다. 예를 들어 SQL 데이터베이스에 대한 쿼리는 종종 GUID 또는 RowGUID를 반환하며, 둘 다 지원되지 않습니다. 자세한 내용은 [R 라이브러리 및 데이터 형식](../r/r-libraries-and-data-types.md)을 참조하세요.
 
-3. 개별 R 함수에 대한 도움말 페이지를 검토하여 모든 매개 변수가 SQL Server 컴퓨팅 컨텍스트에 지원되는지 여부를 확인합니다. ScaleR 도움말을 보려면 인라인 R 도움말 명령을 사용하거나 [패키지 참조](https://docs.microsoft.com/r-server/r-reference/revoscaler/revoscaler)를 확인하세요.
+3. 개별 R 함수에 대한 도움말 페이지를 검토하여 모든 매개 변수가 SQL Server 컴퓨팅 컨텍스트에 지원되는지 여부를 확인합니다. ScaleR 도움말을 보려면 인라인 R 도움말 명령을 사용하거나 [패키지 참조](/r-server/r-reference/revoscaler/revoscaler)를 확인하세요.
 
 R 런타임이 작동하지만 스크립트에서 오류를 반환하는 경우 Visual Studio용 R 도구와 같은 전용 R 개발 환경에서 스크립트 디버깅을 시도하는 것이 좋습니다.
 

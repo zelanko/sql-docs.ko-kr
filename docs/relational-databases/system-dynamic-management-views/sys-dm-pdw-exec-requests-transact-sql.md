@@ -13,12 +13,12 @@ ms.assetid: 390225cc-23e8-4051-a5f6-221e33e4c0b4
 author: XiaoyuMSFT
 ms.author: xiaoyul
 monikerRange: '>= aps-pdw-2016 || = azure-sqldw-latest || = sqlallproducts-allversions'
-ms.openlocfilehash: fbd7b7f6c286a3d782ed8a40441260f3faea248e
-ms.sourcegitcommit: 22dacedeb6e8721e7cdb6279a946d4002cfb5da3
+ms.openlocfilehash: 544991790a86e1738474b7b71c39bcbcb7fc395a
+ms.sourcegitcommit: ead0b8c334d487a07e41256ce5d6acafa2d23c9d
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 10/14/2020
-ms.locfileid: "92035366"
+ms.lasthandoff: 10/22/2020
+ms.locfileid: "92412508"
 ---
 # <a name="sysdm_pdw_exec_requests-transact-sql"></a>sys.dm_pdw_exec_requests (Transact-sql)
 
@@ -46,6 +46,7 @@ ms.locfileid: "92035366"
 |classifier_name|**sysname**|리소스를 활용 하는 요청의 경우 리소스 및 중요도를 할당 하는 데 사용 되는 분류자의 이름입니다.||
 |resource_allocation_percentage|**decimal (5, 2)**|요청에 할당 된 리소스의 비율입니다.</br>적용 대상: Azure Synapse Analytics|
 |result_cache_hit|**int**|완료 된 쿼리가 결과 집합 캐시를 사용 했는지 여부를 자세히 나타냅니다.  </br>적용 대상: Azure Synapse Analytics| 1 = 결과 집합 캐시 적중 </br> 0 = 결과 집합 캐시 누락 </br> 음수 정수 값 = 결과 집합 캐싱이 사용 되지 않는 이유입니다.  자세한 내용은 설명 부분을 참조 하세요.|
+|command2|**nvarchar9max)**|사용자가 제출한 요청의 전체 텍스트를 저장 합니다. 4000 자 보다 긴 쿼리를 보관 합니다.|모든 유효한 쿼리 또는 요청 텍스트입니다. NULL = 길이가 4000 자 이하인 쿼리, 이러한 쿼리를 위해 명령 열에서 전체 텍스트를 찾을 수 있습니다.|
 ||||
   
 ## <a name="remarks"></a>설명 
