@@ -9,12 +9,12 @@ author: cawrites
 ms.author: chadam
 ms.custom: seo-lt-2019
 monikerRange: '>=sql-server-2017||=sqlallproducts-allversions'
-ms.openlocfilehash: f00bbceefd5691bf4f78111aaa73f03f35bfb812
-ms.sourcegitcommit: afb02c275b7c79fbd90fac4bfcfd92b00a399019
+ms.openlocfilehash: abe3a4d1315ab8192a35e9e8a5a2c64f2a99158a
+ms.sourcegitcommit: 43b92518c5848489d03c68505bd9905f8686cbc0
 ms.translationtype: HT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 10/12/2020
-ms.locfileid: "91956994"
+ms.lasthandoff: 10/17/2020
+ms.locfileid: "92155058"
 ---
 # <a name="install-sql-server-machine-learning-services-python-and-r-on-windows"></a>Windows에 SQL Server Machine Learning Services(Python 및 R) 설치
 
@@ -110,7 +110,7 @@ Machine Learning Services와 Python 및 R 통합을 지원하는 SQL Server 버�
      Microsoft Python 패키지, Python 3.5 실행 파일을 추가하고 Anaconda 배포에서 라이브러리를 선택하려면 이 옵션을 선택합니다.
      
    ::: moniker range="=sql-server-ver15||=sqlallproducts-allversions"
-   Java 설치와 사용에 대한 자세한 내용은 [Windows에 SQL Server 언어 확장 설치](../../language-extensions/install/install-sql-server-language-extensions-on-windows.md)를 참조하세요.
+   Java 설치와 사용에 대한 자세한 내용은 [Windows에 SQL Server 언어 확장 설치](../../language-extensions/install/windows-java.md)를 참조하세요.
    ::: moniker-end
    
    ::: moniker range="=sql-server-2017||=sqlallproducts-allversions"

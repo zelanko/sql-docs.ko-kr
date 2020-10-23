@@ -10,19 +10,19 @@ author: dphansen
 ms.author: davidph
 ms.custom: seo-lt-2019
 monikerRange: '>=sql-server-2016||>=sql-server-linux-ver15||>=azuresqldb-mi-current||=sqlallproducts-allversions'
-ms.openlocfilehash: 12f964b71bd7dee79eeb3287efc7b67273abb65e
-ms.sourcegitcommit: 9b41725d6db9957dd7928a3620fe4db41eb51c6e
+ms.openlocfilehash: a0cacd4beee72cef845fa161d1a1bcd0263a7e6b
+ms.sourcegitcommit: cfa04a73b26312bf18d8f6296891679166e2754d
 ms.translationtype: HT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 08/13/2020
-ms.locfileid: "88180372"
+ms.lasthandoff: 10/19/2020
+ms.locfileid: "92193691"
 ---
 # <a name="r-tutorial-explore-and-visualize-data"></a>R 자습서: 데이터 탐색 및 시각화
 [!INCLUDE [SQL Server 2016 SQL MI](../../includes/applies-to-version/sqlserver2016-asdbmi.md)]
 
 이 5부 자습서 시리즈의 2부에서는 샘플 데이터를 검토하고 몇 가지 플롯을 생성합니다. 그 다음에는 Python에서 그래픽 개체를 직렬화한 후, 개체를 역직렬화하고 플롯을 만드는 방법을 알아봅니다.
 
-이 5부 자습서 시리즈의 2부에서는 샘플 데이터를 검토한 다음 [RevoScaleR](https://docs.microsoft.com/machine-learning-server/r-reference/revoscaler/revoscaler)의 [rxHistogram](https://docs.microsoft.com/machine-learning-server/r-reference/revoscaler/rxhistogram) 및 기본 R의 제네릭 [Hist](https://www.rdocumentation.org/packages/graphics/versions/3.5.0/topics/hist) 함수를 사용하여 몇 가지 플롯을 생성합니다.
+이 5부 자습서 시리즈의 2부에서는 샘플 데이터를 검토한 다음 [RevoScaleR](/machine-learning-server/r-reference/revoscaler/revoscaler)의 [rxHistogram](/machine-learning-server/r-reference/revoscaler/rxhistogram) 및 기본 R의 제네릭 [Hist](https://www.rdocumentation.org/packages/graphics/versions/3.5.0/topics/hist) 함수를 사용하여 몇 가지 플롯을 생성합니다.
 
 이 문서의 핵심 목표는 저장 프로시저의 [!INCLUDE[tsql](../../includes/tsql-md.md)]에서 R 함수를 호출하고 결과를 애플리케이션 파일 형식으로 저장하는 방법을 보여주는 것입니다.
 
@@ -83,7 +83,7 @@ ms.locfileid: "88180372"
 > SQL Server 2019부터 격리 메커니즘을 사용하려면 플롯 파일이 저장된 디렉터리에 대한 적절한 권한을 부여해야 합니다. 이러한 권한을 설정하는 방법에 대한 자세한 내용은 [Windows의 SQL Server 2019: Machine Learning Services에 대한 격리 변경 내용의 파일 사용 권한 섹션](../install/sql-server-machine-learning-services-2019.md#file-permissions)을 참조하세요.
 ::: moniker-end
 
-플롯을 만들려면 [RevoScaleR](https://docs.microsoft.com/machine-learning-server/r-reference/revoscaler/revoscaler)에 제공되는 향상된 R 함수 중 하나인 [rxHistogram](https://docs.microsoft.com/machine-learning-server/r-reference/revoscaler/rxhistogram)을 사용합니다. 이 단계에서는 [!INCLUDE[tsql](../../includes/tsql-md.md)] 쿼리의 데이터를 기반으로 하는 히스토그램을 그립니다. 이 함수를 저장 프로시저 **RxPlotHistogram**에 래핑할 수 있습니다.
+플롯을 만들려면 [RevoScaleR](/machine-learning-server/r-reference/revoscaler/revoscaler)에 제공되는 향상된 R 함수 중 하나인 [rxHistogram](/machine-learning-server/r-reference/revoscaler/rxhistogram)을 사용합니다. 이 단계에서는 [!INCLUDE[tsql](../../includes/tsql-md.md)] 쿼리의 데이터를 기반으로 하는 히스토그램을 그립니다. 이 함수를 저장 프로시저 **RxPlotHistogram**에 래핑할 수 있습니다.
 
 1. [!INCLUDE[ssManStudioFull](../../includes/ssmanstudiofull-md.md)]의 개체 탐색기에서 **NYCTaxi_Sample** 데이터베이스를 마우스 오른쪽 단추로 클릭하고 **새 쿼리**를 선택합니다.
 
@@ -114,7 +114,7 @@ ms.locfileid: "88180372"
 
 이 스크립트에서 이해해야 할 핵심 사항은 다음과 같습니다.
   
-+ `@query` 변수는 스크립트 입력 변수`'SELECT tipped FROM nyctaxi_sample'`에 대한 인수로 R 스크립트에 전달되는 쿼리 텍스트( `@input_data_1`)를 정의합니다. 외부 프로세스로 실행되는 R 스크립트의 경우 스크립트에 대한 입력과 SQL Server에서 R 세션을 시작하는 [sp_execute_external_script](https://docs.microsoft.com/sql/relational-databases/system-stored-procedures/sp-execute-external-script-transact-sql) 시스템 저장 프로시저에 대한 입력 간의 일대일 매핑이 있어야 합니다.
++ `@query` 변수는 스크립트 입력 변수`'SELECT tipped FROM nyctaxi_sample'`에 대한 인수로 R 스크립트에 전달되는 쿼리 텍스트( `@input_data_1`)를 정의합니다. 외부 프로세스로 실행되는 R 스크립트의 경우 스크립트에 대한 입력과 SQL Server에서 R 세션을 시작하는 [sp_execute_external_script](../../relational-databases/system-stored-procedures/sp-execute-external-script-transact-sql.md) 시스템 저장 프로시저에 대한 입력 간의 일대일 매핑이 있어야 합니다.
   
 + R 스크립트 내에 이미지를 저장하는 변수(`image_file`)가 정의됩니다.
 
