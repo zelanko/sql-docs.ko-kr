@@ -15,12 +15,12 @@ ms.assetid: e57519bb-e7f4-459b-ba2f-fd42865ca91d
 author: VanMSFT
 ms.author: vanto
 monikerRange: =azuresqldb-current||>=sql-server-2016||=azure-sqldw-latest||=sqlallproducts-allversions||>=sql-server-linux-2017||=azuresqldb-mi-current
-ms.openlocfilehash: 935729861e3cd2a1119290cab46eaa76a1b36621
-ms.sourcegitcommit: 4d370399f6f142e25075b3714e5c2ce056b1bfd0
+ms.openlocfilehash: decbd12174f6000a44a3cfd95b145c70de10740c
+ms.sourcegitcommit: a5398f107599102af7c8cda815d8e5e9a367ce7e
 ms.translationtype: HT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 10/09/2020
-ms.locfileid: "91864042"
+ms.lasthandoff: 10/13/2020
+ms.locfileid: "92004664"
 ---
 # <a name="contained-database-users---making-your-database-portable"></a>포함된 데이터베이스 사용자 - 이식 가능한 데이터베이스 만들기
 
@@ -41,7 +41,7 @@ ms.locfileid: "91864042"
 
  포함된 데이터베이스 사용자 모델에서 master 데이터베이스의 로그인은 존재하지 않습니다. 대신 인증 프로세스가 사용자 데이터베이스에서 일어나며 사용자 데이터베이스에 포함된 데이터베이스 사용자는 master 데이터베이스에 연관된 로그인을 갖지 않습니다. 포함된 데이터베이스 사용자 모델은 Windows 인증 및 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 인증을 모두 지원하고 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 및 [!INCLUDE[ssSDS](../../includes/sssds-md.md)]모두에 사용할 수 있습니다. 포함된 데이터베이스 사용자로 연결하려면 [!INCLUDE[ssDE](../../includes/ssde-md.md)] 에서 인증 프로세스를 관리할 책임이 있는 데이터베이스를 알 수 있도록 연결 문자열은 사용자 데이터베이스에 대한 매개 변수를 항상 포함해야 합니다. 포함된 데이터베이스 사용자의 활동은 데이터베이스 인증으로 제한되기 때문에 포함된 데이터베이스 사용자로 연결하는 경우 데이터베이스 사용자 계정은 반드시 사용자가 필요로 하는 각각의 데이터베이스에 독립적으로 생성되어야 합니다. 데이터베이스를 변경하려면 [!INCLUDE[ssSDS](../../includes/sssds-md.md)] 사용자가 새 연결을 만들어야 합니다. [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 의 포함된 데이터베이스 사용자는 동일한 사용자가 다른 데이터베이스에 존재하면 데이터베이스를 변경할 수 있습니다.  
   
-**Azure:** [!INCLUDE[sqldbesa](../../includes/sqldbesa-md.md)] 및 [!INCLUDE[ssSDW_md](../../includes/sssdw-md.md)] 는 Azure Active Directory ID를 포함된 데이터베이스 사용자로 지원합니다. [!INCLUDE[ssSDS_md](../../includes/sssds-md.md)] 는 [!INCLUDE[ssNoVersion_md](../../includes/ssnoversion-md.md)] 인증을 사용하여 포함된 데이터베이스 사용자를 지원하지만 [!INCLUDE[ssSDW_md](../../includes/sssdw-md.md)] 는 그렇지 않습니다. 자세한 내용은 [Azure Active Directory 인증을 사용하여 SQL Database에 연결](/azure/azure-sql/database/authentication-aad-overview)을 참조하세요. Azure Active Directory 인증을 사용할 경우 Active Directory 유니버설 인증을 사용하여 SSMS에서 연결됩니다.  관리자는 전화 통화, 문자 메시지, PIN을 사용하는 스마트 카드, 모바일 앱 알림을 사용하여 ID를 확인하는 Multi-Factor Authentication이 필요하도록 유니버설 인증을 구성할 수 있습니다. 자세한 내용은 [SQL Database 및 SQL Data Warehouse를 사용한 Azure AD MFA에 대한 SSMS 지원](/azure/azure-sql/database/authentication-mfa-ssms-overview)을 참조하세요.  
+**Azure:** [!INCLUDE[sqldbesa](../../includes/sqldbesa-md.md)] 및 [!INCLUDE[ssSDW_md](../../includes/sssdw-md.md)] 는 Azure Active Directory ID를 포함된 데이터베이스 사용자로 지원합니다. [!INCLUDE[ssSDS_md](../../includes/sssds-md.md)] 는 [!INCLUDE[ssNoVersion_md](../../includes/ssnoversion-md.md)] 인증을 사용하여 포함된 데이터베이스 사용자를 지원하지만 [!INCLUDE[ssSDW_md](../../includes/sssdw-md.md)] 는 그렇지 않습니다. 자세한 내용은 [Azure Active Directory 인증을 사용하여 SQL Database에 연결](/azure/azure-sql/database/authentication-aad-overview)을 참조하세요. Azure Active Directory 인증을 사용할 경우 Active Directory 유니버설 인증을 사용하여 SSMS에서 연결됩니다.  관리자는 전화 통화, 문자 메시지, PIN을 사용하는 스마트 카드, 모바일 앱 알림을 사용하여 ID를 확인하는 Multi-Factor Authentication이 필요하도록 유니버설 인증을 구성할 수 있습니다. 자세한 내용은 [SQL Database 및 Azure Synapse Analytics를 사용한 Azure AD MFA에 대한 SSMS 지원](/azure/azure-sql/database/authentication-mfa-ssms-overview)을 참조하세요.  
   
  [!INCLUDE[ssSDS](../../includes/sssds-md.md)] 및 [!INCLUDE[ssSDW_md](../../includes/sssdw-md.md)]의 경우, 연결 문자열에 데이터베이스 이름이 항상 필요하므로 기존 모델에서 포함된 데이터베이스 사용자 모델로 전환 시 연결 문자열을 변경하지 않아도 됩니다. [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 연결은 데이터베이스 이름이 (이미 존재하지 않는 경우) 연결 문자열에 반드시 추가되어야 합니다.  
   

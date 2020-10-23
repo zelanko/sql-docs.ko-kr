@@ -13,12 +13,12 @@ ms.assetid: 5b13b5ac-1e4c-45e7-bda7-ebebe2784551
 author: pmasl
 ms.author: jrasnick
 monikerRange: =azuresqldb-current||>=sql-server-2016||=sqlallproducts-allversions||= azure-sqldw-latest||>=sql-server-linux-2017||=azuresqldb-mi-current
-ms.openlocfilehash: aab93dcc8036e0e1273a1c9444d7418214ad8926
-ms.sourcegitcommit: 783b35f6478006d654491cb52f6edf108acf2482
+ms.openlocfilehash: 1ad9bb98b55e654efd60c028187d6085f698e1f9
+ms.sourcegitcommit: cfa04a73b26312bf18d8f6296891679166e2754d
 ms.translationtype: HT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 10/09/2020
-ms.locfileid: "91891053"
+ms.lasthandoff: 10/19/2020
+ms.locfileid: "92194345"
 ---
 # <a name="best-practices-with-query-store"></a>쿼리 저장소에 대한 모범 사례
 
@@ -434,7 +434,7 @@ WHERE is_forced_plan = 1;
 > [!INCLUDE[ssSQL15](../../includes/sssql15-md.md)]에서 Just-In-Time 워크로드 인사이트를 위해 쿼리 저장소를 사용하는 경우, 최대한 빨리 [!INCLUDE[ssSQL15](../../includes/sssql15-md.md)] SP2 CU2([KB 4340759](https://support.microsoft.com/help/4340759))의 성능 확장성 기능 향상을 설치하세요. 이러한 기능 향상이 없으면 데이터베이스의 작업량이 많을 때 스핀 잠금 경합이 발생할 수 있으며 서버 성능이 저하될 수 있습니다. 특히 `QUERY_STORE_ASYNC_PERSIST` 스핀 잠금 또는 `SPL_QUERY_STORE_STATS_COOKIE_CACHE` 스핀 잠금에 상당한 경합이 발생할 수 있습니다. 이러한 기능 향상이 적용되면 쿼리 저장소에서 더 이상 스핀 잠금 경합이 발생하지 않습니다.
 
 > [!IMPORTANT]
-> [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]([!INCLUDE[ssSQL15](../../includes/sssql15-md.md)]~[!INCLUDE[ssSQL17](../../includes/sssql17-md.md)])에서 Just-In-Time 워크로드 인사이트를 위해 쿼리 저장소를 사용하는 경우, 최대한 빨리 [!INCLUDE[ssSQL15](../../includes/sssql15-md.md)] SP2 CU15 및 [!INCLUDE[ssSQL17](../../includes/sssql17-md.md)] CU22의 성능 확장성 기능 향상을 설치하세요. 이러한 기능 향상을 사용하지 않으면 데이터베이스의 사용량이 많은 경우에는 쿼리 저장소에서 많은 양의 메모리를 사용할 수 있으며 서버 성능이 저하될 수 있습니다. 이러한 기능 향상이 적용되면 쿼리 저장소의 다양한 구성 요소에서 사용할 수 있는 메모리 양에 대한 내부 제한을 적용하고 [!INCLUDE[ssde_md](../../includes/ssde_md.md)]에 충분한 메모리가 반환될 때까지 자동으로 작업 모드를 읽기 전용으로 전환할 수 있습니다. 쿼리 저장소 내부 메모리 제한은 변경될 수 있으므로 문서화되지 않습니다.  
+> [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]([!INCLUDE[ssSQL15](../../includes/sssql15-md.md)]~[!INCLUDE[ssSQL17](../../includes/sssql17-md.md)])에서 Just-In-Time 워크로드 인사이트를 위해 쿼리 저장소를 사용하는 경우, 가능한 빨리 [!INCLUDE[ssSQL15](../../includes/sssql15-md.md)] SP2 CU15, [!INCLUDE[ssSQL17](../../includes/sssql17-md.md)] CU22 및 [!INCLUDE[sql-server-2019](../../includes/sssqlv15-md.md)] CU8의 성능 확장성 기능 향상을 설치하세요. 이러한 기능 향상을 사용하지 않으면 데이터베이스의 사용량이 많은 경우에는 쿼리 저장소에서 많은 양의 메모리를 사용할 수 있으며 서버 성능이 저하될 수 있습니다. 이러한 기능 향상이 적용되면 쿼리 저장소의 다양한 구성 요소에서 사용할 수 있는 메모리 양에 대한 내부 제한을 적용하고 [!INCLUDE[ssde_md](../../includes/ssde_md.md)]에 충분한 메모리가 반환될 때까지 자동으로 작업 모드를 읽기 전용으로 전환할 수 있습니다. 쿼리 저장소 내부 메모리 제한은 변경될 수 있으므로 문서화되지 않습니다.  
 
 ## <a name="see-also"></a>참고 항목
 

@@ -11,15 +11,15 @@ ms.assetid: ae357f9b-e3e2-4cdf-af02-012acda2e466
 author: MladjoA
 ms.author: mlandzic
 monikerRange: =azuresqldb-current||>=sql-server-2016||=sqlallproducts-allversions||>=sql-server-linux-2017||=azuresqldb-mi-current
-ms.openlocfilehash: 83f1b6753aa679c5e54fd14475ab30f2d498a23e
-ms.sourcegitcommit: e700497f962e4c2274df16d9e651059b42ff1a10
+ms.openlocfilehash: 60254364eb7dd4151ee309258f75039bd59628a1
+ms.sourcegitcommit: a5398f107599102af7c8cda815d8e5e9a367ce7e
 ms.translationtype: HT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 08/17/2020
-ms.locfileid: "88455453"
+ms.lasthandoff: 10/13/2020
+ms.locfileid: "92006370"
 ---
 # <a name="compoundcurve"></a>CompoundCurve
-[!INCLUDE [SQL Server Azure SQL Database](../../includes/applies-to-version/sql-asdb.md)]
+[!INCLUDE [SQL Server Azure SQL Database Azure SQL Managed Instance](../../includes/applies-to-version/sql-asdb-asdbmi.md)]
   **CompoundCurve** 는 geometry 또는 geography 유형의 연속적인 **CircularString** 또는 **LineString** 인스턴스가 하나 이상 포함된 컬렉션입니다.  
   
 빈 **CompoundCurve** 인스턴스를 인스턴스화할 수 있지만 **CompoundCurve** 가 유효한 인스턴스가 되려면 다음 조건을 충족해야 합니다.  
@@ -33,7 +33,7 @@ ms.locfileid: "88455453"
 ## <a name="compoundcurve-instances"></a>CompoundCurve 인스턴스  
 다음 그림에서는 유효한 **CompoundCurve** 형식을 보여 줍니다.  
   
-![f278742e-b861-4555-8b51-3d972b7602bf](../../relational-databases/spatial/media/f278742e-b861-4555-8b51-3d972b7602bf.gif)  
+![CompoundCurve 예제](../../relational-databases/spatial/media/f278742e-b861-4555-8b51-3d972b7602bf.gif)  
  
 ### <a name="accepted-instances"></a>허용되는 인스턴스  
  **CompoundCurve** 인스턴스는 빈 인스턴스이거나 다음 조건을 충족하는 경우 허용됩니다.  

@@ -16,12 +16,12 @@ helpviewer_keywords:
 author: stevestein
 ms.author: sstein
 monikerRange: =azuresqldb-current||>=sql-server-2016||=sqlallproducts-allversions||>=sql-server-linux-2017||=azuresqldb-mi-current
-ms.openlocfilehash: f5f00ffc9ce946c3c6116ba85af0c4ff7c82405b
-ms.sourcegitcommit: 331b8495e4ab37266945c81ff5b93d250bdaa6da
+ms.openlocfilehash: 87a05942a1061db1f074266d0b5df3b1797f5e73
+ms.sourcegitcommit: a5398f107599102af7c8cda815d8e5e9a367ce7e
 ms.translationtype: HT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 08/20/2020
-ms.locfileid: "88645797"
+ms.lasthandoff: 10/13/2020
+ms.locfileid: "92006125"
 ---
 # <a name="rename-tables-database-engine"></a>테이블 이름 바꾸기(데이터베이스 엔진)
 
@@ -29,7 +29,7 @@ ms.locfileid: "88645797"
 
 SQL Server 또는 Azure SQL Database에서 테이블의 이름을 바꿉니다.
 
-Azure SQL Data Warehouse 또는 병렬 데이터 웨어하우스에서 테이블의 이름을 바꾸려면 t-sql [RENAME OBJECT](../../t-sql/statements/rename-transact-sql.md) 문을 사용합니다. 
+Azure Synapse Analytics 또는 병렬 데이터 웨어하우스에서 테이블의 이름을 바꾸려면 t-sql [RENAME OBJECT](../../t-sql/statements/rename-transact-sql.md) 문을 사용합니다. 
   
 > [!CAUTION]  
 >  테이블 이름을 바꿀 때는 신중한 검토가 필요합니다. 기존의 쿼리, 뷰, 사용자 정의 함수, 저장 프로시저 또는 프로그램에서 해당 테이블을 참조하는 경우 이름 수정으로 인해 이러한 개체가 유효하지 않게 됩니다.  

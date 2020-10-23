@@ -10,12 +10,12 @@ author: MikeRayMSFT
 ms.author: mikeray
 ms.reviewer: mikeray
 monikerRange: '>= sql-server-linux-ver15 || >= sql-server-ver15 || =sqlallproducts-allversions'
-ms.openlocfilehash: 31b07b70e5a90d36a7094f38eab7b99f3bac821e
-ms.sourcegitcommit: 32135463a8494d9ed1600a58f51819359e3c09dc
+ms.openlocfilehash: 23eadb2089e3f692e5e054441b7617e09e71ac01
+ms.sourcegitcommit: a5398f107599102af7c8cda815d8e5e9a367ce7e
 ms.translationtype: HT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 10/08/2020
-ms.locfileid: "91834027"
+ms.lasthandoff: 10/13/2020
+ms.locfileid: "92005848"
 ---
 # <a name="configure-polybase-to-access-external-data-in-sql-server"></a>SQL Server의 외부 데이터에 액세스하도록 PolyBase 구성
 
@@ -81,7 +81,7 @@ SQL Server 데이터 원본의 데이터를 쿼리하려면 외부 데이터를 
 
 ## <a name="sql-server-connector-compatible-types"></a>SQL Server 커넥터 호환 형식
 
-SQL Server 연결을 인식하는 다른 데이터 원본에 연결할 수 있습니다. SQL Server PolyBase 커넥터를 사용하여 Azure SQL Data Warehouse와 Azure SQL Database의 외부 테이블을 만듭니다. 이 작업을 수행하려면 이전에 나열된 것과 동일한 단계를 수행합니다. 데이터베이스 범위 자격 증명, 서버 주소, 포트 및 위치 문자열이 연결할 호환 가능한 데이터 원본의 자격 증명과 연관되는지 확인합니다.
+SQL Server 연결을 인식하는 다른 데이터 원본에 연결할 수 있습니다. SQL Server PolyBase 커넥터를 사용하여 Azure Synapse Analytics 및 Azure SQL Database의 외부 테이블을 만듭니다. 이 작업을 수행하려면 이전에 나열된 것과 동일한 단계를 수행합니다. 데이터베이스 범위 자격 증명, 서버 주소, 포트 및 위치 문자열이 연결할 호환 가능한 데이터 원본의 자격 증명과 연관되는지 확인합니다.
 
 ## <a name="next-steps"></a>다음 단계
 

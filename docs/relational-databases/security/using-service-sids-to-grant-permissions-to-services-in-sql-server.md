@@ -8,16 +8,16 @@ ms.date: 05/02/2019
 ms.topic: conceptual
 ms.prod: sql
 ms.prod_service: database-engine, sql-database
-ms.openlocfilehash: 0174ce5aae88406719fbf57c53734d535476a799
-ms.sourcegitcommit: 4d370399f6f142e25075b3714e5c2ce056b1bfd0
+ms.openlocfilehash: ab9af4d073cbec00736bab6a24817502d353ffd8
+ms.sourcegitcommit: 2b6760408de3b99193edeccce4b92a2f9ed5bcc6
 ms.translationtype: HT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 10/09/2020
-ms.locfileid: "91868152"
+ms.lasthandoff: 10/19/2020
+ms.locfileid: "92175927"
 ---
 # <a name="using-service-sids-to-grant-permissions-to-services-in-sql-server"></a>서비스 SID를 사용하여 SQL Server의 서비스에 사용 권한 부여
 
-SQL Server는 [서비스별 보안 식별자(SID)](https://support.microsoft.com/help/2620201/sql-server-uses-a-service-sid-to-provide-service-isolation)를 사용하여 사용 권한을 특정 서비스에 직접 부여할 수 있습니다. 이 메서드는 SQL Server에서 엔진 및 에이전트 서비스(각각 NT SERVICE\MSSQL$<InstanceName> 및 NT SERVICE\SQLAGENT$<InstanceName>)에 사용 권한을 부여하기 위해 사용됩니다. 이 메서드를 사용하면 해당 서비스는 서비스가 실행 중일 때만 데이터베이스 엔진에 액세스할 수 있습니다.
+SQL Server는 [서비스별 SID(보안 식별자)](https://support.microsoft.com/help/2620201/sql-server-uses-a-service-sid-to-provide-service-isolation)(서비스 보안 주체라고도 함)를 사용하여 사용 권한을 특정 서비스에 직접 부여할 수 있습니다. 이 메서드는 SQL Server에서 엔진 및 에이전트 서비스(각각 NT SERVICE\MSSQL$<InstanceName> 및 NT SERVICE\SQLAGENT$<InstanceName>)에 사용 권한을 부여하기 위해 사용됩니다. 이 메서드를 사용하면 해당 서비스는 서비스가 실행 중일 때만 데이터베이스 엔진에 액세스할 수 있습니다.
 
 다른 서비스에 사용 권한을 부여할 때도 이와 동일한 메서드를 사용할 수 있습니다. 서비스 SID를 사용하면 서비스 계정 관리 및 유지의 오버헤드가 제거되고 시스템 리소스에 부여된 사용 권한을 보다 강력하고 세밀하게 제어할 수 있습니다.
 
@@ -101,6 +101,35 @@ GO
 GRANT VIEW SERVER STATE TO [NT SERVICE\ClusSvc]
 GO
 ```
+
+  > [!NOTE]
+  > 서비스 SID 로그인을 제거하거나 sysadmin 서버 역할에서 제거하면 SQL Server 데이터베이스 엔진에 연결되는 SQL Server의 다양한 구성 요소에 문제가 발생할 수 있습니다. 몇 가지 문제는 다음과 같습니다.
+  > - SQL Server 에이전트가 시작할 수 없거나 SQL Server 서비스에 연결할 수 없습니다.
+  > - SQL Server 설치 프로그램에서 다음 Microsoft 기술 자료 문서에 설명된 문제가 발생합니다. https://support.microsoft.com/help/955813/you-may-be-unable-to-restart-the-sql-server-agent-service-after-you-re
+  >
+  > SQL Server의 기본 인스턴스인 경우 다음 Transact-SQL 명령을 사용하여 서비스 SID를 추가하여 이 문제를 해결할 수 있습니다.
+  >
+  > ```sql
+  > CREATE LOGIN [NT SERVICE\MSSQLSERVER] FROM WINDOWS WITH DEFAULT_DATABASE=[master], DEFAULT_LANGUAGE=[us_english]
+  > 
+  > ALTER ROLE sysadmin ADD MEMBER [NT SERVICE\MSSQLSERVER]
+  > 
+  > CREATE LOGIN [NT SERVICE\SQLSERVERAGENT] FROM WINDOWS WITH DEFAULT_DATABASE=[master], DEFAULT_LANGUAGE=[us_english]
+  > 
+  > ALTER ROLE sysadmin ADD MEMBER [NT SERVICE\SQLSERVERAGENT]
+  > ```
+  > SQL Server의 명명된 인스턴스를 사용하려면 다음 Transact-SQL 명령을 사용하세요.
+  > ```sql
+  > CREATE LOGIN [NT SERVICE\MSSQL$SQL2019] FROM WINDOWS WITH DEFAULT_DATABASE=[master], DEFAULT_LANGUAGE=[us_english]
+  > 
+  > ALTER ROLE sysadmin ADD MEMBER [NT SERVICE\MSSQL$SQL2019]
+  > 
+  > CREATE LOGIN [NT SERVICE\SQLAgent$SQL2019] FROM WINDOWS WITH DEFAULT_DATABASE=[master], DEFAULT_LANGUAGE=[us_english]
+  > 
+  > ALTER ROLE sysadmin ADD MEMBER [NT SERVICE\SQLAgent$SQL2019]
+  > 
+  > ```
+  > 이 예제에서 `SQL2019`는 SQL Server의 인스턴스 이름입니다.
 
 ## <a name="next-steps"></a>다음 단계
 

@@ -15,12 +15,12 @@ ms.assetid: 44c69d35-abcb-4da3-9370-5e0bc9a28496
 author: stevestein
 ms.author: sstein
 monikerRange: =azuresqldb-current||>=sql-server-2016||=sqlallproducts-allversions||>=sql-server-linux-2017||=azuresqldb-mi-current
-ms.openlocfilehash: 0d6131b3481be154cda88aee47bd226ce293613e
-ms.sourcegitcommit: e700497f962e4c2274df16d9e651059b42ff1a10
+ms.openlocfilehash: b81e565875074e3ba3fc08dd85f27b9c077ebb08
+ms.sourcegitcommit: a5398f107599102af7c8cda815d8e5e9a367ce7e
 ms.translationtype: HT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 08/17/2020
-ms.locfileid: "88471186"
+ms.lasthandoff: 10/13/2020
+ms.locfileid: "92005512"
 ---
 # <a name="rename-a-database"></a>데이터베이스 이름 바꾸기
 
@@ -44,7 +44,7 @@ ms.locfileid: "88471186"
 - **Follow Up:**  [After renaming a database](#backup-after-renaming-a-database)  
 
 > [!NOTE]
-> Azure SQL Data Warehouse 또는 Parallel Data Warehouse에서 데이터베이스의 이름을 바꾸려면 [RENAME(Transact-SQL)](../../t-sql/statements/rename-transact-sql.md) 문을 사용합니다.
+> Azure Synapse Analytics 또는 병렬 데이터 웨어하우스에서 데이터베이스의 이름을 바꾸려면 [RENAME(Transact-SQL)](../../t-sql/statements/rename-transact-sql.md) 문을 사용합니다.
   
 ## <a name="before-you-begin"></a>시작하기 전에
   

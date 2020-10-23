@@ -4,16 +4,16 @@ description: 이 문서에서는 SQL Server on Linux를 실행하기 위한 성�
 author: tejasaks
 ms.author: tejasaks
 ms.reviewer: vanto
-ms.date: 09/16/2020
+ms.date: 10/13/2020
 ms.topic: conceptual
 ms.prod: sql
 ms.technology: linux
-ms.openlocfilehash: 41ed6122e2ff75220d0fc45a75d4769804d0638c
-ms.sourcegitcommit: 4d370399f6f142e25075b3714e5c2ce056b1bfd0
+ms.openlocfilehash: ddeb5d106de872b507c88a199050cfc883a63a4c
+ms.sourcegitcommit: a5398f107599102af7c8cda815d8e5e9a367ce7e
 ms.translationtype: HT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 10/09/2020
-ms.locfileid: "91867213"
+ms.lasthandoff: 10/13/2020
+ms.locfileid: "92005690"
 ---
 # <a name="performance-best-practices-and-configuration-guidelines-for-sql-server-on-linux"></a>SQL Server on Linux의 성능 모범 사례 및 구성 지침
 
@@ -85,10 +85,10 @@ sysctl -w kernel.numa_balancing=0
 
 ### <a name="kernel-settings-for-virtual-address-space"></a>가상 주소 공간의 커널 설정
 
-**vm.max_map_count**의 기본 설정(65536)이 SQL Server 설치에 충분히 높지 않을 수 있습니다. 이런 이유로, SQL Server 배포의 경우 **vm.max_map_count** 값을 262144로 변경합니다. 커널 매개 변수의 추가 튜닝에 대해서는 [튜닝된 mssql 프로필을 사용하는 권장 Linux 설정](#proposed-linux-settings-using-a-tuned-mssql-profile) 섹션을 참조하세요. vm.max_map_count의 최댓값은 2147483647입니다.
+**vm.max_map_count**의 기본 설정(65536)이 SQL Server 설치에 충분히 높지 않을 수 있습니다. 이런 이유로, SQL Server 배포의 경우 **vm.max_map_count** 값을 262144 이상으로 변경합니다. 커널 매개 변수의 추가 튜닝에 대해서는 [튜닝된 mssql 프로필을 사용하는 권장 Linux 설정](#proposed-linux-settings-using-a-tuned-mssql-profile) 섹션을 참조하세요. vm.max_map_count의 최댓값은 2147483647입니다.
 
 ```bash
-sysctl -w vm.max_map_count=262144
+sysctl -w vm.max_map_count=1600000
 ```
 
 ### <a name="proposed-linux-settings-using-a-tuned-mssql-profile"></a>조정된 mssql 프로필을 사용하는 권장 Linux 설정

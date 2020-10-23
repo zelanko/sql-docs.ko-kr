@@ -9,18 +9,18 @@ ms.custom: ''
 ms.technology: integration-services
 author: chugugrace
 ms.author: chugu
-ms.openlocfilehash: 29cef6bf700c6d837c77f02e16debe50e1f1a267
-ms.sourcegitcommit: 777704aefa7e574f4b7d62ad2a4c1b10ca1731ff
+ms.openlocfilehash: 1cc68be44a45ece8ad844585162b0cff651ae487
+ms.sourcegitcommit: cfa04a73b26312bf18d8f6296891679166e2754d
 ms.translationtype: HT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 08/06/2020
-ms.locfileid: "87823485"
+ms.lasthandoff: 10/19/2020
+ms.locfileid: "92194086"
 ---
-# <a name="sql-server-integration-services-ssis-devops-tools"></a>SSIS(SQL Server Integration Services) DevOps 도구
+# <a name="sql-server-integration-services-ssis-devops-tools-azure-devops-extension"></a>SSIS(SQL Server Integration Services) DevOps 도구 Azure DevOps 확장
 
 [SSIS DevOps 도구](https://marketplace.visualstudio.com/items?itemName=SSIS.ssis-devops-tools) 확장은 **Azure DevOps** Marketplace에서 제공됩니다.
 
-**Azure DevOps** 조직이 없는 경우 먼저 [Azure Pipelines](https://docs.microsoft.com/azure/devops/pipelines/get-started/pipelines-sign-up?view=azure-devops)에 등록한 다음, [단계](https://docs.microsoft.com/azure/devops/marketplace/overview?view=azure-devops&tabs=browser#add-an-extension)에 따라 **SSIS DevOps 도구** 확장을 추가합니다.
+**Azure DevOps** 조직이 없는 경우 먼저 [Azure Pipelines](/azure/devops/pipelines/get-started/pipelines-sign-up?view=azure-devops)에 등록한 다음, [단계](/azure/devops/marketplace/overview?tabs=browser&view=azure-devops#add-an-extension)에 따라 **SSIS DevOps 도구** 확장을 추가합니다.
 
 **Ssis DevOps 도구**에는 **SSIS 빌드** 작업, **SSIS 배포** 릴리스 작업 및 **SSIS 카탈로그 구성 작업**이 포함되어 있습니다.
 
@@ -58,13 +58,13 @@ ms.locfileid: "87823485"
 
 #### <a name="output-path"></a>출력 경로
 
-빌드 결과를 저장할 별도 폴더의 경로이며, [빌드 아티팩트 게시 작업](https://docs.microsoft.com/azure/devops/pipelines/tasks/utility/publish-build-artifacts?view=azure-devops)을 통해 빌드 아티팩트로 게시할 수 있습니다.
+빌드 결과를 저장할 별도 폴더의 경로이며, [빌드 아티팩트 게시 작업](/azure/devops/pipelines/tasks/utility/publish-build-artifacts?view=azure-devops)을 통해 빌드 아티팩트로 게시할 수 있습니다.
 
 ### <a name="limitations-and-known-issues"></a>제한 사항 및 알려진 문제
 
 - SSIS 빌드 작업은 빌드 에이전트의 필수 요소인 Visual Studio 및 SSIS 디자이너를 사용합니다. 따라서 파이프라인에서 SSIS 빌드 작업을 실행하려면 Microsoft 호스팅 에이전트를 위해 **vs2017-win2016**을 선택하거나, 자체 호스팅 에이전트에 Visual Studio 및 SSIS 디자이너(VS2017 + SSDT2017 또는 VS2019 + SSIS 프로젝트 확장)를 설치해야 합니다.
 
-- OOB 구성 요소(SSIS Azure 기능 팩 및 기타 타사 구성 요소 포함)를 사용하여 SSIS 프로젝트를 빌드하려면 파이프라인 에이전트가 실행되는 머신에 OOB 구성 요소를 설치해야 합니다.  Microsoft 호스팅 에이전트의 경우 사용자가 [PowerShell 스크립트 작업](https://docs.microsoft.com/azure/devops/pipelines/tasks/utility/powershell?view=azure-devops) 또는 [명령줄 스크립트 작업](https://docs.microsoft.com/azure/devops/pipelines/tasks/utility/command-line?view=azure-devops)을 추가하여 SSIS 빌드 작업이 실행되기 전에 구성 요소를 다운로드하고 설치할 수 있습니다. 다음은 Azure 기능 팩을 설치하는 샘플 PowerShell 스크립트입니다. 
+- OOB 구성 요소(SSIS Azure 기능 팩 및 기타 타사 구성 요소 포함)를 사용하여 SSIS 프로젝트를 빌드하려면 파이프라인 에이전트가 실행되는 머신에 OOB 구성 요소를 설치해야 합니다.  Microsoft 호스팅 에이전트의 경우 사용자가 [PowerShell 스크립트 작업](/azure/devops/pipelines/tasks/utility/powershell?view=azure-devops) 또는 [명령줄 스크립트 작업](/azure/devops/pipelines/tasks/utility/command-line?view=azure-devops)을 추가하여 SSIS 빌드 작업이 실행되기 전에 구성 요소를 다운로드하고 설치할 수 있습니다. 다음은 Azure 기능 팩을 설치하는 샘플 PowerShell 스크립트입니다. 
 
 ```powershell
 wget -Uri https://download.microsoft.com/download/E/E/0/EE0CB6A0-4105-466D-A7CA-5E39FA9AB128/SsisAzureFeaturePack_2017_x86.msi -OutFile AFP.msi
@@ -172,7 +172,7 @@ SSIS 카탈로그 구성 JSON 파일의 원본입니다. “파일 경로” 또
 
 SSIS 카탈로그 구성 JSON 파일의 경로입니다. 이 속성은 구성 파일 원본으로 “파일 경로”를 선택한 경우에만 표시됩니다.
 
-구성 JSON 파일에서 [파이프라인 변수](/azure/devops/pipelines/process/variables)를 사용하려면 이 작업 앞에 [파일 변환 작업](https://docs.microsoft.com/azure/devops/pipelines/tasks/utility/file-transform?view=azure-devops)을 추가하여 구성 값을 파이프라인 변수로 대체해야 합니다. 자세한 내용은 [JSON variable substitution](https://docs.microsoft.com/azure/devops/pipelines/tasks/transforms-variable-substitution?view=azure-devops&tabs=Classic#json-variable-substitution)(JSON 변수 대체)을 참조하세요.
+구성 JSON 파일에서 [파이프라인 변수](/azure/devops/pipelines/process/variables)를 사용하려면 이 작업 앞에 [파일 변환 작업](/azure/devops/pipelines/tasks/utility/file-transform?view=azure-devops)을 추가하여 구성 값을 파이프라인 변수로 대체해야 합니다. 자세한 내용은 [JSON variable substitution](/azure/devops/pipelines/tasks/transforms-variable-substitution?tabs=Classic&view=azure-devops#json-variable-substitution)(JSON 변수 대체)을 참조하세요.
 
 #### <a name="inline-configuration-json"></a>인라인 구성 JSON
 

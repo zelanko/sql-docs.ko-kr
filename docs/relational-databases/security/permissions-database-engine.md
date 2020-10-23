@@ -20,19 +20,20 @@ ms.assetid: f28e3dea-24e6-4a81-877b-02ec4c7e36b9
 author: VanMSFT
 ms.author: vanto
 monikerRange: '>=aps-pdw-2016||=azuresqldb-current||=azure-sqldw-latest||>=sql-server-2016||=sqlallproducts-allversions||>=sql-server-linux-2017||=azuresqldb-mi-current'
-ms.openlocfilehash: 3f6155dd29c2d4afd5f422ad3499521451ccfc82
-ms.sourcegitcommit: f3321ed29d6d8725ba6378d207277a57cb5fe8c2
+ms.openlocfilehash: 42c08d58ed1f5688d66ff6e903c27ba360d6a2d0
+ms.sourcegitcommit: 7eb80038c86acfef1d8e7bfd5f4e30e94aed3a75
 ms.translationtype: HT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 07/06/2020
-ms.locfileid: "86009396"
+ms.lasthandoff: 10/15/2020
+ms.locfileid: "92081952"
 ---
 # <a name="permissions-database-engine"></a>사용 권한(데이터베이스 엔진)
 [!INCLUDE[SQL Server Azure SQL Database Synapse Analytics PDW ](../../includes/applies-to-version/sql-asdb-asdbmi-asa-pdw.md)]
 
 모든 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 보안 개체에는 보안 주체에 부여될 수 있는 연결된 사용 권한이 있습니다. [!INCLUDE[ssDE](../../includes/ssde-md.md)] 의 권한은 로그인 및 서버 역할에 할당된 서버 수준에서 관리되고 데이터베이스 사용자 및 데이터베이스 역할에 할당된 데이터베이스 수준에서 관리됩니다. [!INCLUDE[ssSDSfull](../../includes/sssdsfull-md.md)] 에 대한 모델은 데이터베이스 권한에 대하여 동일한 시스템을 갖지만 서버 수준 권한은 사용할 수 없습니다. 이 항목에는 전체 권한 목록이 포함됩니다. 권한에 대한 일반적인 구현은 [Getting Started with Database Engine Permissions](../../relational-databases/security/authentication-access/getting-started-with-database-engine-permissions.md)을(를) 참조하십시오.  
   
-[!INCLUDE[ssSQLv14_md](../../includes/sssqlv14-md.md)] 및 [!INCLUDE[ssSDSfull](../../includes/sssdsfull-md.md)]의 총 권한 수는 237개입니다. 대부분의 권한은 모든 플랫폼에 적용되지만 그렇지 않은 경우도 있습니다. 예를 들어, [!INCLUDE[ssSDSfull](../../includes/sssdsfull-md.md)]에는 서버 수준 권한을 부여할 수 없으며 [!INCLUDE[ssSDSfull](../../includes/sssdsfull-md.md)]에는 몇 가지 권한만 적용됩니다. [!INCLUDE[ssSQL15](../../includes/sssql15-md.md)] 에서는 230개의 권한이 있습니다. [!INCLUDE[ssSQL14](../../includes/sssql14-md.md)] 에서는 219개의 권한이 있습니다. [!INCLUDE[ssSQL11](../../includes/sssql11-md.md)] 에서는 214개의 권한이 있습니다. [!INCLUDE[ssKilimanjaro](../../includes/sskilimanjaro-md.md)] 에서는 195개의 권한이 있습니다. [sys.fn_builtin_permissions](../../relational-databases/system-functions/sys-fn-builtin-permissions-transact-sql.md) 항목은 최신 버전의 새로운 항목을 지정합니다.
+[!INCLUDE[ssSQLv15_md](../../includes/sssqlv15-md.md)]의 총 권한 수는 248개입니다. [!INCLUDE[ssSDSfull](../../includes/sssdsfull-md.md)]에는 254개의 권한이 있습니다. 대부분의 권한은 모든 플랫폼에 적용되지만 그렇지 않은 경우도 있습니다. 예를 들어, [!INCLUDE[ssSDSfull](../../includes/sssdsfull-md.md)]에는 서버 수준 권한을 부여할 수 없으며 [!INCLUDE[ssSDSfull](../../includes/sssdsfull-md.md)]에는 몇 가지 권한만 적용됩니다.
+[!INCLUDE[ssSQLv14_md](../../includes/sssqlv14-md.md)]에는 238개의 권한이 있습니다. [!INCLUDE[ssSQL15](../../includes/sssql15-md.md)] 에서는 230개의 권한이 있습니다. [!INCLUDE[ssSQL14](../../includes/sssql14-md.md)] 에서는 219개의 권한이 있습니다. [!INCLUDE[ssSQL11](../../includes/sssql11-md.md)] 에서는 214개의 권한이 있습니다. [!INCLUDE[ssKilimanjaro](../../includes/sskilimanjaro-md.md)] 에서는 195개의 권한이 있습니다. [sys.fn_builtin_permissions](../../relational-databases/system-functions/sys-fn-builtin-permissions-transact-sql.md) 항목은 최신 버전의 새로운 항목을 지정합니다.
 
 권한을 이해했으면 [GRANT](../../t-sql/statements/grant-transact-sql.md), [REVOKE](../../t-sql/statements/revoke-transact-sql.md)및 [DENY](../../t-sql/statements/deny-transact-sql.md) 문을 사용하여 로그인 및 데이터베이스 수준 권한 사용자에게 서버 수준 권한을 적용합니다. 예를 들면 다음과 같습니다.   
 ```sql

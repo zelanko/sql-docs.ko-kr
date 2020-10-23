@@ -19,12 +19,12 @@ helpviewer_keywords:
 ms.assetid: bd20fd3a-414b-4581-959d-ebba4ddf5a55
 author: chugugrace
 ms.author: chugu
-ms.openlocfilehash: 86ef2c561979d7f2578863f35366ee33cb21dcdc
-ms.sourcegitcommit: c8e1553ff3fdf295e8dc6ce30d1c454d6fde8088
+ms.openlocfilehash: 613546be790bac993f1242c6bfba470e95eb8685
+ms.sourcegitcommit: cfa04a73b26312bf18d8f6296891679166e2754d
 ms.translationtype: HT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 07/22/2020
-ms.locfileid: "86915887"
+ms.lasthandoff: 10/19/2020
+ms.locfileid: "92197049"
 ---
 # <a name="install-integration-services-ssis"></a>Integration Services(SSIS) 설치
 
@@ -115,7 +115,7 @@ ETL(추출, 변환 및 로드) 프로세스에 전용 서버를 사용하려면 
 
 - **SQL Server Data Tools(SSDT)** . Visual Studio 2019에 대한 SSDT 독립 실행형 설치 프로그램이 중단되었습니다. 이제 Visual Studio 2019의 경우 [VS 마켓플레이스](https://marketplace.visualstudio.com/items?itemName=SSIS.SqlServerIntegrationServicesProjects&ssr=false#overview)에서 SSIS 디자이너 확장을 가져올 수 있습니다.
 
-- **Azure용 integration Services 기능 팩**. 기능 팩을 다운로드하여 설치하려면 [Azure용 Microsoft SQL Server 2017 Integration Services 기능 팩](https://docs.microsoft.com/sql/integration-services/azure-feature-pack-for-integration-services-ssis?view=sql-server-2017)을 참조하세요. 기능 팩을 설치하면 패키지에서 다음 서비스를 포함한 Azure 클라우드의 스토리지 및 분석 서비스에 연결할 수 있습니다.
+- **Azure용 integration Services 기능 팩**. 기능 팩을 다운로드하여 설치하려면 [Azure용 Microsoft SQL Server 2017 Integration Services 기능 팩](../azure-feature-pack-for-integration-services-ssis.md?view=sql-server-2017)을 참조하세요. 기능 팩을 설치하면 패키지에서 다음 서비스를 포함한 Azure 클라우드의 스토리지 및 분석 서비스에 연결할 수 있습니다.
 
   - Azure Blob Storage.
 
@@ -123,7 +123,7 @@ ETL(추출, 변환 및 로드) 프로세스에 전용 서버를 사용하려면 
 
   - Azure Data Lake Store.
 
-  - Azure SQL Data Warehouse.
+  - Azure Synapse Analytics.
 
   - Azure Data Lake Storage(Gen2).
 

@@ -23,18 +23,18 @@ helpviewer_keywords:
 - data manipulation language [SQL Server], MERGE statement
 - inserting data
 ms.assetid: c17996d6-56a6-482f-80d8-086a3423eecc
-author: markingmyname
-ms.author: maghan
-ms.openlocfilehash: c0e716d7405580dcda3cd4f3aa4d175141469b2b
-ms.sourcegitcommit: 8f062015c2a033f5a0d805ee4adabbe15e7c8f94
+author: XiaoyuMSFT
+ms.author: XiaoyuL
+ms.openlocfilehash: 86f620b1c99345134a0768574d44da2bbae11c6b
+ms.sourcegitcommit: 9774e2cb8c07d4f6027fa3a5bb2852e4396b3f68
 ms.translationtype: HT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 09/25/2020
-ms.locfileid: "91227306"
+ms.lasthandoff: 10/15/2020
+ms.locfileid: "92098852"
 ---
 # <a name="merge-transact-sql"></a>MERGE(Transact-SQL)
 
-[!INCLUDE [SQL Server SQL Database](../../includes/applies-to-version/sql-asdb.md)]
+[!INCLUDE [SQL Server SQL Database](../../includes/applies-to-version/sql-asdb-asa.md)]
 
 원본 테이블과의 조인 결과를 기반으로 대상 테이블에서 삽입, 업데이트 또는 삭제 작업을 실행합니다. 예를 들어 원본 테이블과의 차이점에 따라 대상 테이블에서 행을 삽입, 업데이트 및 삭제하여 두 테이블을 동기화합니다.  
   
@@ -52,6 +52,8 @@ WHERE NOT EXISTS (SELECT col FROM tbl_A A2 WHERE A2.col = tbl_B.col);
 ## <a name="syntax"></a>구문  
   
 ```syntaxsql
+
+-- SQL Server and Azure SQL Database
 [ WITH <common_table_expression> [,...n] ]  
 MERGE
     [ TOP ( expression ) [ PERCENT ] ]
@@ -96,9 +98,25 @@ MERGE
 <clause_search_condition> ::=  
     <search_condition> 
 ```  
-  
 [!INCLUDE[sql-server-tsql-previous-offline-documentation](../../includes/sql-server-tsql-previous-offline-documentation.md)]
 
+```syntaxsql
+-- MERGE (Preview) for Azure Synapse Analytics 
+[ WITH <common_table_expression> [,...n] ]  
+MERGE
+    [ INTO ] <target_table> [ [ AS ] table_alias ]  
+    USING <table_source> [ [ AS ] table_alias ]
+    ON <merge_search_condition>  
+    [ WHEN MATCHED [ AND <clause_search_condition> ]  
+        THEN <merge_matched> ] [ ...n ]  
+    [ WHEN NOT MATCHED [ BY TARGET ] [ AND <clause_search_condition> ]  
+        THEN <merge_not_matched> ]  
+    [ WHEN NOT MATCHED BY SOURCE [ AND <clause_search_condition> ]  
+        THEN <merge_matched> ] [ ...n ]
+    [ OPTION ( <query_hint> [ ,...n ] ) ]
+;  -- The semi-colon is required, or the query will return syntax  error. 
+```
+ 
 ## <a name="arguments"></a>인수
 
 WITH \<common_table_expression>  
@@ -212,6 +230,16 @@ DEFAULT VALUES
 그래프 일치 패턴을 지정합니다. 이 절의 인수에 대한 자세한 내용은 [MATCH &#40;Transact-SQL&#41;](../../t-sql/queries/match-sql-graph.md)을 참조하세요.
   
 ## <a name="remarks"></a>설명
+>[!NOTE]
+> Azure Synapse Analytics에서 MERGE 명령(미리 보기)은 SQL Server 및 Azure SQL Database에 비해 다음과 같은 차이점이 있습니다.  
+> - MERGE 업데이트는 삭제 및 삽입 쌍으로 구현됩니다. MERGE 업데이트의 영향을 받는 행 수에는 삭제된 행과 삽입된 행이 포함됩니다. 
+> - 다음 표에서는 배포 유형이 다른 테이블에 대한 지원을 설명합니다.
+
+>|Azure Synapse Analytics의 MERGE CLAUSE|지원되는 대상 배포 테이블| 지원되는 원본 배포 테이블|의견|  
+>|-----------------|---------------|-----------------|-----------|  
+>|**WHEN MATCHED**| HASH, ROUND_ROBIN, REPLICATE |모든 배포 유형||  
+>|**NOT MATCHED BY TARGET**|HASH |모든 배포 유형|UPDATE/DELETE FROM…JOIN을 사용하여 두 테이블을 동기화합니다. |
+>|**NOT MATCHED BY SOURCE**|모든 배포 유형|모든 배포 유형|UPDATE/DELETE FROM…JOIN을 사용하여 두 테이블을 동기화합니다.||  
 
 세 개의 MATCHED 절 중 최소한 하나를 지정해야 하지만 임의의 순서로 지정할 수 있습니다. 변수는 동일한 MATCHED 절에서 두 번 이상 업데이트할 수 없습니다.  
   
@@ -224,7 +252,8 @@ MERGE 후에 [@@ROWCOUNT &#40;Transact-SQL&#41;](../../t-sql/functions/rowcount-
 MERGE는 데이터베이스 호환성 수준이 100 이상으로 설정된 경우 완전 예약 키워드입니다. MERGE 문은 데이터베이스 호환성 수준이 90 미만인 경우나 100 미만인 경우 모두 사용 가능합니다. 그러나 데이터베이스 호환성 수준이 90으로 설정된 경우에는 키워드가 완전히 예약되지 않습니다.  
   
 지연 업데이트 복제를 사용하는 경우 **MERGE** 문을 사용하지 마세요. **MERGE** 및 지연된 업데이트 트리거는 호환되지 않습니다. **MERGE** 문을 insert 또는 update 문으로 바꾸세요.  
-  
+
+
 ## <a name="trigger-implementation"></a>트리거 구현
 
 MERGE 문에 지정된 모든 삽입, 업데이트 또는 삭제 동작에 대해 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]는 대상 테이블에 정의된 해당 AFTER 트리거를 실행하지만 트리거를 첫 번째 또는 마지막으로 실행하는 동작을 지정하지는 않습니다. 동일한 동작에 대해 정의된 트리거는 사용자가 지정하는 순서대로 실행됩니다. 트리거 실행 순서를 설정하는 방법은 [시작 및 끝 트리거 지정](../../relational-databases/triggers/specify-first-and-last-triggers.md)을 참조하세요.  
@@ -321,7 +350,7 @@ MERGE 문을 사용하여 `OPENROWSET(BULK…)` 절을 테이블 원본으로 �
 - [sys.dm_exec_plan_attributes](../../relational-databases/system-dynamic-management-views/sys-dm-exec-plan-attributes-transact-sql.md) 동적 관리 함수의 merge_action_type 특성을 사용하여 MERGE 문의 결과로 사용되는 트리거 실행 계획의 유형을 반환할 수 있습니다.
 - SQL 추적을 사용하여 다른 DML(데이터 조작 언어) 문에 대해 사용하는 것과 동일한 방식으로 MERGE 문에 대한 문제 해결 데이터를 수집할 수 있습니다. 자세한 내용은 [SQL Trace](../../relational-databases/sql-trace/sql-trace.md)을(를) 참조하세요.
 
-## <a name="examples"></a>예제  
+## <a name="examples"></a>예  
 
 ### <a name="a-using-merge-to-do-insert-and-update-operations-on-a-table-in-a-single-statement"></a>A. MERGE를 사용하여 단일 문에서 테이블에 INSERT 및 UPDATE 작업 수행
 
@@ -483,9 +512,6 @@ GO
 ### <a name="e-using-merge-to-do-insert-or-update-on-a-target-edge-table-in-a-graph-database"></a>E. MERGE를 사용하여 그래프 데이터베이스의 대상 에지 테이블에 대해 INSERT 또는 UPDATE 수행
 
 이 예제에서는 노드 테이블 `Person` 및 `City`와 에지 테이블 `livesIn`을 만듭니다. `livesIn` 에지가 `Person` 및 `City` 사이에 아직 없으면 이 에지에 대해 MERGE 문을 사용하여 새 행을 삽입합니다. 에지가 이미 있는 경우 `livesIn` 에지에 대해 StreetAddress 특성만 업데이트하면 됩니다.
-
-> [!NOTE]
-> 다음 예제는 SQL Server 2019 이상에 적용됩니다.
 
 ```sql
 -- CREATE node and edge tables

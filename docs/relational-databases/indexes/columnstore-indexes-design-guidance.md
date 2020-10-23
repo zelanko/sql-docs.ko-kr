@@ -12,12 +12,12 @@ ms.assetid: fc3e22c2-3165-4ac9-87e3-bf27219c820f
 author: MikeRayMSFT
 ms.author: mikeray
 monikerRange: '>=aps-pdw-2016||=azuresqldb-current||=azure-sqldw-latest||>=sql-server-2016||=sqlallproducts-allversions||>=sql-server-linux-2017||=azuresqldb-mi-current'
-ms.openlocfilehash: c2af78d5af858f6faad29c8baaf260610f377cb4
-ms.sourcegitcommit: 4d370399f6f142e25075b3714e5c2ce056b1bfd0
+ms.openlocfilehash: e4cf6107c1e200620f1ba48f4e774c440ccdcd7a
+ms.sourcegitcommit: a5398f107599102af7c8cda815d8e5e9a367ce7e
 ms.translationtype: HT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 10/09/2020
-ms.locfileid: "91868654"
+ms.lasthandoff: 10/13/2020
+ms.locfileid: "92006620"
 ---
 # <a name="columnstore-indexes---design-guidance"></a>Columnstore 인덱스 - 디자인 지침
 [!INCLUDE[SQL Server Azure SQL Database Synapse Analytics PDW ](../../includes/applies-to-version/sql-asdb-asdbmi-asa-pdw.md)]
@@ -190,6 +190,6 @@ columnstore 인덱스는 데이터를 정렬하지 않지만 메타데이터를 
 빈 columnstore 인덱스를 만들려면
 
 * [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 또는 [!INCLUDE[ssSDS](../../includes/sssds-md.md)]의 경우 [CREATE TABLE(Transact-SQL)](../../t-sql/statements/create-table-transact-sql.md)을 참조하세요.
-* [!INCLUDE[ssSDW](../../includes/sssdw-md.md)]의 경우 [CREATE TABLE(Azure SQL Data Warehouse)](../../t-sql/statements/create-table-as-select-azure-sql-data-warehouse.md)을 참조하세요.
+* [!INCLUDE[ssSDW](../../includes/sssdw-md.md)]의 경우 [CREATE TABLE(Azure Synapse Analytics)](../../t-sql/statements/create-table-as-select-azure-sql-data-warehouse.md)을 참조하세요.
 
 기존 rowstore 힙 또는 B-트리 인덱스를 클러스터형 columnstore 인덱스로 변환하는 방법 또는 비클러스터형 columnstore 인덱스를 만드는 방법에 대한 자세한 내용은 [CREATE COLUMNSTORE INDEX(TRANSACT-SQL)](../../t-sql/statements/create-columnstore-index-transact-sql.md)를 참조하세요.

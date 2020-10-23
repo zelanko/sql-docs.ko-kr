@@ -14,12 +14,12 @@ ms.author: jovanpop
 ms.reviewer: jroth
 ms.custom: seo-dt-2019
 monikerRange: =azuresqldb-current||= azure-sqldw-latest||>=sql-server-2016||=sqlallproducts-allversions||>=sql-server-linux-2017||=azuresqldb-mi-current
-ms.openlocfilehash: ffc15af15be20b4ba1bbcd5566c5e63ac0d7226f
-ms.sourcegitcommit: e700497f962e4c2274df16d9e651059b42ff1a10
+ms.openlocfilehash: c24de4dba33fce34eb88333b8c877d13a4a1ebb0
+ms.sourcegitcommit: a5398f107599102af7c8cda815d8e5e9a367ce7e
 ms.translationtype: HT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 08/17/2020
-ms.locfileid: "88490930"
+ms.lasthandoff: 10/13/2020
+ms.locfileid: "92006590"
 ---
 # <a name="json-data-in-sql-server"></a>SQL Server의 JSON 데이터
 
@@ -194,7 +194,7 @@ OUTER APPLY OPENJSON(skills)
 ### <a name="convert-sql-server-data-to-json-or-export-json"></a>SQL Server 데이터를 JSON으로 변환하거나 JSON 내보내기
 
 >[!NOTE]
->Azure SQL Data Warehouse 데이터를 JSON으로 변환하거나 JSON을 내보낼 수 없습니다.
+>Azure Synapse Analytics 데이터를 JSON으로 변환하거나 JSON을 내보낼 수 없습니다.
 
 **SELECT** 문에 **FOR JSON** 절을 추가하여 SQL Server 데이터 또는 SQL 쿼리 결과를 JSON으로 서식 지정합니다. **FOR JSON**을 사용하여 JSON 출력의 형식을 클라이언트 애플리케이션에서 SQL Server로 위임합니다. 자세한 내용은 [FOR JSON을 사용하여 쿼리 결과 서식을 JSON으로 지정(SQL Server)](../../relational-databases/json/format-query-results-as-json-with-for-json-sql-server.md)을 참조하세요.  
   

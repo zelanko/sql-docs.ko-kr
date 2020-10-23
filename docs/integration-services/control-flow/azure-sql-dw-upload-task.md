@@ -14,12 +14,12 @@ f1_keywords:
 ms.assetid: eef82c89-228a-4dc7-9bd0-ea00f57692f5
 author: Lingxi-Li
 ms.author: lingxl
-ms.openlocfilehash: a374a5eaa64eb69d96ddfe609fb8561a1dc983b6
-ms.sourcegitcommit: c7f40918dc3ecdb0ed2ef5c237a3996cb4cd268d
+ms.openlocfilehash: c0864f868cc046fcd1f0763fff7e5a97e2fe8607
+ms.sourcegitcommit: a5398f107599102af7c8cda815d8e5e9a367ce7e
 ms.translationtype: HT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 10/05/2020
-ms.locfileid: "91725987"
+ms.lasthandoff: 10/13/2020
+ms.locfileid: "92006208"
 ---
 # <a name="azure-sql-dw-upload-task"></a>Azure SQL DW 업로드 태스크
 
@@ -27,8 +27,8 @@ ms.locfileid: "91725987"
 
 
 
-**Azure SQL DW 업로드 태스크**를 사용하면 SSIS 패키지가 파일 시스템이나 Azure Blob Storage에서 Azure SQL DW(Data Warehouse)로 테이블 형식 데이터를 복사할 수 있습니다.
-이 태스크는 [Azure SQL Data Warehouse 로딩 패턴 및 전략](/archive/blogs/sqlcat/azure-sql-data-warehouse-loading-patterns-and-strategies) 문서에 설명된 대로 PolyBase를 활용하여 성능을 향상합니다.
+**Azure SQL DW 업로드 태스크**를 사용하면 SSIS 패키지가 파일 시스템이나 Azure Blob Storage에서 Azure Synapse Analytics(DW)로 테이블 형식 데이터를 복사할 수 있습니다.
+이 태스크는 [Azure Synapse Analytics 로딩 패턴 및 전략](/archive/blogs/sqlcat/azure-sql-data-warehouse-loading-patterns-and-strategies) 문서에 설명된 대로 PolyBase를 활용하여 성능을 향상합니다.
 현재 지원되는 원본 데이터 파일 형식은 UTF8 인코딩 방식의 구분 기호로 분리된 텍스트입니다.
 파일 시스템에서 복사할 때는 먼저 준비를 위해 데이터가 Azure Blob Storage에 업로드된 후 Azure SQL DW로 업로드됩니다. 따라서 Azure Blob Storage 계정이 필요합니다.
 

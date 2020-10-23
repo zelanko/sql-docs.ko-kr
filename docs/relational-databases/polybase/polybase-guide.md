@@ -19,12 +19,12 @@ author: MikeRayMSFT
 ms.author: mikeray
 ms.reviewer: ''
 monikerRange: '>=sql-server-2016||>=sql-server-linux-2017||=sqlallproducts-allversions||>=aps-pdw-2016||=azure-sqldw-latest'
-ms.openlocfilehash: 0772efddcd9743f23e1658c5e29e12310b029275
-ms.sourcegitcommit: 9a0824aa9bf54b24039c6a533d11474cfb5423ef
+ms.openlocfilehash: fa517d2ee19d4adc5a6d9acff56ed6f240acc1ee
+ms.sourcegitcommit: a5398f107599102af7c8cda815d8e5e9a367ce7e
 ms.translationtype: HT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 06/16/2020
-ms.locfileid: "84818198"
+ms.lasthandoff: 10/13/2020
+ms.locfileid: "92005778"
 ---
 # <a name="what-is-polybase"></a>PolyBase란?
 
@@ -60,11 +60,11 @@ PolyBase는 Microsoft의 다음 SQL 제품에 대해 동일한 이 기능을 제
 
 - SQL Server 2016 이상 버전(Windows만 해당)
 - 분석 플랫폼 시스템(이전의 병렬 데이터 웨어하우스)
-- Azure SQL Data Warehouse
+- Azure Synapse Analytics
 
 ### <a name="azure-integration"></a>Azure 통합
 
-PolyBase의 기본 지원을 통해 T-SQL 쿼리도 Azure Blob Storage에서 데이터를 가져오고 내보낼 수 있습니다. 또한 PolyBase는 Azure SQL Data Warehouse가 Azure Data Lake Store 및 Azure Blob Storage에서 데이터를 가져오고 내보낼 수 있도록 합니다.
+PolyBase의 기본 지원을 통해 T-SQL 쿼리도 Azure Blob Storage에서 데이터를 가져오고 내보낼 수 있습니다. 또한 PolyBase는 Azure Synapse Analytics가 Azure Data Lake Store 및 Azure Blob Storage에서 데이터를 가져오고 내보낼 수 있도록 합니다.
 
 ## <a name="why-use-polybase"></a>PolyBase를 사용하는 이유는?
 

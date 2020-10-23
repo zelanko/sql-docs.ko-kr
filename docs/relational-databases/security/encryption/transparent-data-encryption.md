@@ -19,12 +19,12 @@ author: jaszymas
 ms.author: jaszymas
 ms.reviewer: vanto
 monikerRange: '>=aps-pdw-2016||=azuresqldb-current||=azure-sqldw-latest||>=sql-server-2016||=sqlallproducts-allversions||>=sql-server-linux-2017||=azuresqldb-mi-current'
-ms.openlocfilehash: d6cd4c4988b07e19c04d72efe2fc19200313f355
-ms.sourcegitcommit: 4d370399f6f142e25075b3714e5c2ce056b1bfd0
+ms.openlocfilehash: edb5d6b73305b9acc840c2f34461c3056a3b9cbd
+ms.sourcegitcommit: a5398f107599102af7c8cda815d8e5e9a367ce7e
 ms.translationtype: HT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 10/09/2020
-ms.locfileid: "91866635"
+ms.lasthandoff: 10/13/2020
+ms.locfileid: "92006482"
 ---
 # <a name="transparent-data-encryption-tde"></a>TDE(투명한 데이터 암호화)
 
@@ -52,7 +52,7 @@ TDE는 데이터 및 로그 파일인 미사용 데이터를 보호합니다. �
 >**관련 항목:**
 >
 > - [Azure SQL Database를 사용한 투명한 데이터 암호화](/azure/azure-sql/database/transparent-data-encryption-tde-overview)
-> - [SQL Data Warehouse에서 TDE(투명한 데이터 암호화) 시작](/azure/synapse-analytics/sql-data-warehouse/sql-data-warehouse-encryption-tde-tsql)
+> - [Azure Synapse Analytics에서 TDE(투명한 데이터 암호화) 시작하기](/azure/synapse-analytics/sql-data-warehouse/sql-data-warehouse-encryption-tde-tsql)
 > - [다른 SQL Server로 TDE 보호 데이터베이스 이동](../../../relational-databases/security/encryption/move-a-tde-protected-database-to-another-sql-server.md)
 > - [EKM을 사용하여 SQL Server에서 TDE를 사용하도록 설정](../../../relational-databases/security/encryption/enable-tde-on-sql-server-using-ekm.md)
 > - [SQL 암호화 기능을 통해 SQL Server 커넥터 사용](../../../relational-databases/security/encryption/use-sql-server-connector-with-sql-encryption-features.md)
@@ -325,7 +325,7 @@ TDE는 메모리 내 OLTP 개체가 포함된 데이터베이스에서 TDE를 �
 ## <a name="related-content"></a>관련 콘텐츠
 
 [Azure SQL Database를 사용한 투명한 데이터 암호화](/azure/azure-sql/database/transparent-data-encryption-tde-overview)  
-[SQL Data Warehouse에서 TDE(투명한 데이터 암호화) 시작](/azure/synapse-analytics/sql-data-warehouse/sql-data-warehouse-encryption-tde-tsql)  
+[Azure Synapse Analytics에서 TDE(투명한 데이터 암호화) 시작하기](/azure/synapse-analytics/sql-data-warehouse/sql-data-warehouse-encryption-tde-tsql)  
 [SQL Server 암호화](../../../relational-databases/security/encryption/sql-server-encryption.md)  
 [SQL Server 및 데이터베이스 암호화 키(데이터베이스 엔진)](../../../relational-databases/security/encryption/sql-server-and-database-encryption-keys-database-engine.md)  
 

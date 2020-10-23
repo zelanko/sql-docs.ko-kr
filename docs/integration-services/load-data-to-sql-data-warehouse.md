@@ -1,6 +1,6 @@
 ---
-title: SSIS(SQL Server Integration Services)를 사용하여 Azure SQL Data Warehouse로 데이터 로드 | Microsoft Docs
-description: SSIS(SQL Server Integration Services) 패키지를 만들어 다양한 데이터 원본에서 Azure SQL Data Warehouse로 데이터를 이동하는 방법을 보여줍니다.
+title: SSIS(SQL Server Integration Services)를 사용하여 Azure Synapse Analytics로 데이터 로드 | Microsoft Docs
+description: SSIS(SQL Server Integration Services) 패키지를 만들어 다양한 데이터 원본에서 Azure Synapse Analytics로 데이터를 이동하는 방법을 보여 줍니다.
 documentationcenter: NA
 ms.prod: sql
 ms.prod_service: integration-services
@@ -10,20 +10,20 @@ ms.custom: loading
 ms.date: 08/09/2018
 ms.author: chugu
 author: chugugrace
-ms.openlocfilehash: 317a17d667c9c09009c3fcbd9bab6565108110ad
-ms.sourcegitcommit: 591bbf4c7e4e2092f8abda6a2ffed263cb61c585
+ms.openlocfilehash: 3cd591bd087170e6f5a6329c4411b2674d19b4f3
+ms.sourcegitcommit: cfa04a73b26312bf18d8f6296891679166e2754d
 ms.translationtype: HT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 07/22/2020
-ms.locfileid: "86943205"
+ms.lasthandoff: 10/19/2020
+ms.locfileid: "92192503"
 ---
-# <a name="load-data-into-azure-sql-data-warehouse-with-sql-server-integration-services-ssis"></a>SSIS(SQL Server Integration Services)를 사용하여 Azure SQL Data Warehouse로 데이터 로드
+# <a name="load-data-into-azure-synapse-analytics-with-sql-server-integration-services-ssis"></a>SSIS(SQL Server Integration Services)를 사용하여 Azure Synapse Analytics로 데이터 로드
 
 [!INCLUDE[sqlserver-ssis](../includes/applies-to-version/sqlserver-ssis.md)]
 
 
 
-SSIS(SQL Server Integration Services) 패키지를 만들어 [Azure SQL Data Warehouse](/azure/sql-data-warehouse/index)로 데이터를 로드합니다. SSIS 데이터 흐름을 통해 전달될 때 필요에 따라 데이터를 재구성, 변형 및 정리할 수 있습니다.
+SSIS(SQL Server Integration Services) 패키지를 만들어 [Azure Synapse Analytics](/azure/sql-data-warehouse/index)로 데이터를 로드합니다. SSIS 데이터 흐름을 통해 전달될 때 필요에 따라 데이터를 재구성, 변형 및 정리할 수 있습니다.
 
 이 아티클에서는 다음을 수행하는 방법을 보여줍니다.
 
@@ -46,7 +46,7 @@ SSIS(SQL Server Integration Services)는 SQL Data Warehouse에 연결하고 데�
 
 1. 최상의 성능을 제공하는 기본 설정 메서드는 데이터를 로드하기 위해 [Azure SQL DW 업로드 태스크](control-flow/azure-sql-dw-upload-task.md)를 사용하는 패키지를 만드는 것입니다. 이 태스크는 원본 및 대상 정보를 모두 캡슐화합니다. 원본 데이터가 구분 기호로 분리된 텍스트 파일에 로컬로 저장된다고 가정합니다.
 
-2. 또는 원본 및 대상이 포함된 데이터 흐름 태스크를 사용하는 패키지를 만들 수 있습니다. 이 방법은 SQL Server 및 Azure SQL Data Warehouse를 포함하는 다양한 데이터 원본을 지원합니다.
+2. 또는 원본 및 대상이 포함된 데이터 흐름 태스크를 사용하는 패키지를 만들 수 있습니다. 이 방법은 SQL Server 및 Azure Synapse Analytics를 포함하는 다양한 데이터 원본을 지원합니다.
 
 ## <a name="prerequisites"></a>사전 요구 사항
 이 자습서를 단계별로 실행하려면 다음 항목이 필요합니다.
@@ -54,7 +54,7 @@ SSIS(SQL Server Integration Services)는 SQL Data Warehouse에 연결하고 데�
 1. **SSIS(SQL Server Integration Services)** SSIS는 SQL Server의 구성 요소이며 SQL Server의 라이선스 버전 또는 개발자나 평가 버전이 필요합니다. SQL Server의 평가 버전을 가져오려면 [SQL Server 평가](https://www.microsoft.com/evalcenter/evaluate-sql-server-2017-rtm)를 참조하세요.
 2. **Visual Studio**(선택 사항) Visual Studio Community Edition을 체험하려면 [Visual Studio Community][Visual Studio Community]를 참조하세요. Visual Studio를 설치하지 않으려는 경우 SSDT(SQL Server Data Tools)만을 설치할 수 있습니다. SSDT는 제한된 기능을 포함한 Visual Studio 버전을 설치합니다.
 3. **Visual Studio용 SSDT(SQL Server Data Tools)** Visual Studio용 SQL Server Data Tools를 가져오려면 [SSDT(SQL Server Data Tools) 다운로드][Download SQL Server Data Tools (SSDT)]를 참조하세요.
-4. **Azure SQL Data Warehouse 데이터베이스 및 사용 권한** 이 자습서에서는 SQL Data Warehouse 인스턴스에 연결하고 데이터를 로드합니다. 연결하고, 테이블을 만들고, 데이터를 로드하는 사용 권한이 있어야 합니다.
+4. **Azure Synapse Analytics 데이터베이스 및 사용 권한**. 이 자습서에서는 SQL Data Warehouse 인스턴스에 연결하고 데이터를 로드합니다. 연결하고, 테이블을 만들고, 데이터를 로드하는 사용 권한이 있어야 합니다.
 
 ## <a name="create-a-new-integration-services-project"></a>새 Integration Services 프로젝트 만들기
 1. Visual Studio를 시작합니다.
@@ -80,7 +80,7 @@ Visual Studio가 열리고 새 Integration Services(SSIS) 프로젝트를 만듭
 
 - [Azure용 Microsoft SQL Server Integration Services 기능 팩][Microsoft SQL Server 2017 Integration Services Feature Pack for Azure] SQL DW 업로드 태스크는 기능 팩의 구성 요소입니다.
 
-- [Azure Blob Storage](https://docs.microsoft.com/azure/storage/) 계정 SQL DW 업로드 태스크는 Azure Blob Storage에서 Azure SQL Data Warehouse로 데이터를 로드합니다. Blob Storage에 이미 있는 파일을 로드할 수 있습니다. 또는 컴퓨터에서 파일을 로드할 수 있습니다. 컴퓨터에서 파일을 선택하면 SQL DW 업로드 태스크는 스테이징을 위해 Blob Storage에 업로드한 다음, SQL Data Warehouse로 로드합니다.
+- [Azure Blob Storage](/azure/storage/) 계정 SQL DW 업로드 태스크는 Azure Blob Storage에서 Azure Synapse Analytics로 데이터를 로드합니다. Blob Storage에 이미 있는 파일을 로드할 수 있습니다. 또는 컴퓨터에서 파일을 로드할 수 있습니다. 컴퓨터에서 파일을 선택하면 SQL DW 업로드 태스크는 스테이징을 위해 Blob Storage에 업로드한 다음, SQL Data Warehouse로 로드합니다.
 
 ### <a name="add-and-configure-the-sql-dw-upload-task"></a>SQL DW 업로드 태스크 추가 및 구성
 
@@ -98,11 +98,11 @@ Visual Studio가 열리고 새 Integration Services(SSIS) 프로젝트를 만듭
 
 1. Azure Blob 업로드 태스크를 사용하여 Azure Blob Storage에 데이터를 저장합니다. Azure Blob 업로드 작업을 가져오려면 [Azure용 Microsoft SQL Server Integration Services 기능 팩][Microsoft SQL Server 2017 Integration Services Feature Pack for Azure]을 다운로드합니다.
 
-2. 그런 다음, SSIS 실행 SQL 태스크를 사용하여 데이터를 SQL Data Warehouse로 로드하는 PolyBase 스크립트를 시작합니다. Azure Blob Storage에서 (SSIS가 아닌) SQL Data Warehouse로 데이터를 로드하는 예제는 [자습서: Azure SQL Data Warehouse로 데이터 로드](/azure/sql-data-wAREHOUSE/load-data-wideworldimportersdw)를 참조하세요.
+2. 그런 다음, SSIS 실행 SQL 태스크를 사용하여 데이터를 SQL Data Warehouse로 로드하는 PolyBase 스크립트를 시작합니다. Azure Blob Storage에서 SQL Data Warehouse로 데이터를 로드하는 예제(SSIS가 아닌)는 [자습서: Azure Synapse Analytics에 데이터 로드](/azure/sql-data-warehouse/load-data-wideworldimportersdw)를 참조하세요.
 
 ## <a name="option-2---use-a-source-and-destination"></a>옵션 2 - 원본 및 대상 사용
 
-두 번째 방법은 원본 및 대상이 포함된 데이터 흐름 태스크를 사용하는 일반적인 패키지입니다. 이 방법은 SQL Server 및 Azure SQL Data Warehouse를 포함하는 다양한 데이터 원본을 지원합니다.
+두 번째 방법은 원본 및 대상이 포함된 데이터 흐름 태스크를 사용하는 일반적인 패키지입니다. 이 방법은 SQL Server 및 Azure Synapse Analytics를 포함하는 다양한 데이터 원본을 지원합니다.
 
 이 자습서에서는 데이터 원본으로 SQL Server를 사용합니다. SQL Server는 온-프레미스 또는 Azure 가상 머신에서 실행됩니다.
 
@@ -171,7 +171,7 @@ SQL Server 및 SQL Data Warehouse에 연결하려면 ADO.NET 연결 관리자와
 1. 대상 어댑터를 두 번 클릭하여 **ADO.NET 대상 편집기**를 엽니다.
    
     ![ADO.NET 대상 편집기 스크린샷. 연결 관리자 탭이 표시되어 있고 컨트롤을 사용하여 데이터 흐름 속성을 구성할 수 있습니다.][11]
-2. **ADO.NET 대상 편집기**의 **연결 관리자** 탭에서 **연결 관리자** 목록 옆의 **새로 만들기** 단추를 클릭하여 **ADO.NET 연결 관리자 구성** 대화 상자를 열고 이 자습서에서 데이터를 로드하는 Azure SQL Data Warehouse 데이터베이스에 대한 연결 설정을 만듭니다.
+2. **ADO.NET 대상 편집기**의 **연결 관리자** 탭에서 **연결 관리자** 목록 옆의 **새로 만들기** 단추를 클릭하여 **ADO.NET 연결 관리자 구성** 대화 상자를 열고 이 자습서에서 데이터를 로드하는 Azure Synapse Analytics 데이터베이스에 대한 연결 설정을 만듭니다.
 3. **ADO.NET 연결 관리자 구성** 대화 상자에서 **새로 만들기** 단추를 클릭하여 **연결 관리자** 대화 상자를 열고 새 데이터 연결을 만듭니다.
 4. **연결 관리자** 대화 상자에서 다음을 수행합니다.
    1. **공급자**의 경우 SqlClient 데이터 공급자를 선택합니다.
@@ -189,7 +189,7 @@ SQL Server 및 SQL Data Warehouse에 연결하려면 ADO.NET 연결 관리자와
    
    1. 대상 테이블의 이름을 **SalesOrderDetail**로 변경합니다.
    2. **rowguid** 열을 제거합니다. **uniqueidentifier** 데이터 형식은 SQL Data Warehouse에서 지원되지 않습니다.
-   3. **LineTotal** 열의 데이터 형식을 **money**로 변경합니다. **10진수** 데이터 형식은 SQL Data Warehouse에서 지원되지 않습니다. 지원되는 데이터 형식에 대한 정보는 [테이블 만들기(Azure SQL Data Warehouse, 병렬 데이터 웨어하우스)][CREATE TABLE (Azure SQL Data Warehouse, Parallel Data Warehouse)]를 참조하세요.
+   3. **LineTotal** 열의 데이터 형식을 **money**로 변경합니다. **10진수** 데이터 형식은 SQL Data Warehouse에서 지원되지 않습니다. 지원되는 데이터 형식에 대한 정보는 [테이블 만들기(Azure Synapse Analytics, 병렬 데이터 웨어하우스)][CREATE TABLE (Azure Synapse Analytics, Parallel Data Warehouse)]를 참조하세요.
       
        ![LineTotal이 money열이고 rowguid 열은 없는 SalesOrderDetail이라는 테이블을 만드는 코드를 포함하는 테이블 만들기 대화 상자 스크린샷.][12b]
    4. **확인**을 클릭하여 테이블을 만들고 **ADO.NET 대상 편집기**로 돌아갑니다.
@@ -211,7 +211,7 @@ SQL Server 및 SQL Data Warehouse에 연결하려면 ADO.NET 연결 관리자와
 
 ![원본 및 대상 어댑터를 보여 주는 스크린샷. 각 어댑터 위에 녹색 확인 표시가 있고, 그 가운데에 “121317개 행”이라는 텍스트가 있습니다.][15]
 
-축하합니다! SQL Server Integration Services를 사용하여 Azure SQL Data Warehouse로 데이터를 성공적으로 로드했습니다.
+축하합니다! SQL Server Integration Services를 사용하여 Azure Synapse Analytics로 데이터를 성공적으로 로드했습니다.
 
 ## <a name="next-steps"></a>다음 단계
 
@@ -242,7 +242,7 @@ SQL Server 및 SQL Data Warehouse에 연결하려면 ADO.NET 연결 관리자와
 <!-- MSDN references -->
 [PolyBase Guide]: ../relational-databases/polybase/polybase-guide.md
 [Download SQL Server Data Tools (SSDT)]: ../ssdt/download-sql-server-data-tools-ssdt.md
-[CREATE TABLE (Azure SQL Data Warehouse, Parallel Data Warehouse)]: ../t-sql/statements/create-table-azure-sql-data-warehouse.md
+[CREATE TABLE (Azure Synapse Analytics, Parallel Data Warehouse)]: ../t-sql/statements/create-table-azure-sql-data-warehouse.md
 [Data Flow]: ./data-flow/data-flow.md
 [Troubleshooting Tools for Package Development]: ./troubleshooting/troubleshooting-tools-for-package-development.md
 [Deployment of Projects and Packages]: ./packages/deploy-integration-services-ssis-projects-and-packages.md

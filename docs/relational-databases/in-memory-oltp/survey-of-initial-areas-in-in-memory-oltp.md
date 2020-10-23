@@ -12,12 +12,12 @@ ms.assetid: 1c25a164-547d-43c4-8484-6b5ee3cbaf3a
 author: MightyPen
 ms.author: genemi
 monikerRange: =azuresqldb-current||>=sql-server-2016||=sqlallproducts-allversions||>=sql-server-linux-2017||=azuresqldb-mi-current
-ms.openlocfilehash: 92be3a1844fde38aca090dd8032736f34fe99361
-ms.sourcegitcommit: 4d370399f6f142e25075b3714e5c2ce056b1bfd0
+ms.openlocfilehash: 4ed52b1ddfe0a55a4a443dd865f980367b90f973
+ms.sourcegitcommit: a5398f107599102af7c8cda815d8e5e9a367ce7e
 ms.translationtype: HT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 10/09/2020
-ms.locfileid: "91866679"
+ms.lasthandoff: 10/13/2020
+ms.locfileid: "92005674"
 ---
 # <a name="survey-of-initial-areas-in-in-memory-oltp"></a>메모리 내 OLTP에서 초기 영역 설문 조사
 
@@ -72,8 +72,8 @@ Transact-SQL 계산을 많이 처리하는 시스템도 적합합니다.
 다음 두 가지 주요 시나리오가 있습니다.  
   
 - *배치 운영 분석* 은 업무 시간 이후 또는 트랜잭션 데이터의 복사본이 있는 보조 하드웨어에서 실행되는 집계 프로세스를 가리킵니다.  
-  - [Azure SQL 데이터 웨어하우스](/azure/synapse-analytics/sql-data-warehouse/sql-data-warehouse-overview-what-is) 도 배치 운영 분석과 관련이 있습니다.  
-- *실시간 운영 분석* 은 업무 시간 중 및 트랜잭션 작업에 사용되는 주 하드웨어에서 실행되는 집계 프로세스를 가리킵니다.  
+  - [Azure Synapse Analytics](/azure/synapse-analytics/sql-data-warehouse/sql-data-warehouse-overview-what-is)는 일괄 처리 운영 분석과도 관련이 있습니다.  
+- 실시간 운영 분석은 업무 시간 중 및 트랜잭션 작업에 사용되는 주 하드웨어에서 실행되는 집계 프로세스를 가리킵니다.  
   
   
 현재 문서에서는 분석이 아닌 OLTP에 중점을 둡니다. columnstore 인덱스에서 분석을 SQL로 가져오는 방법에 대한 자세한 내용은 다음을 참조하세요.  
@@ -97,14 +97,14 @@ Transact-SQL 계산을 많이 처리하는 시스템도 적합합니다.
 3. [실시간 운영 분석: SQL Server 2016에서 NCCI(비클러스터형 columnstore 인덱스)를 사용하는 간단한 예제](/archive/blogs/sqlserverstorageengine/real-time-operational-analytics-simple-example-using-nonclustered-clustered-columnstore-index-ncci)
 4. [실시간 운영 분석: SQL Server 2016의 DML 작업 및 NCCI(비클러스터형 columnstore 인덱스)](/archive/blogs/sqlserverstorageengine/real-time-operational-analytics-dml-operations-and-nonclustered-columnstore-index-ncci-in-sql-server-2016)
 5. [실시간 운영 분석: 필터링된 NCCI(비클러스터형 columnstore 인덱스)](/archive/blogs/sqlserverstorageengine/real-time-operational-analytics-filtered-nonclustered-columnstore-index-ncci)
-6. [실시간 운영 분석: NCCI(비클러스터형 Columnstore 인덱스)의 압축 지연 옵션](/archive/blogs/sqlserverstorageengine/real-time-operational-analytics-compression-delay-option-for-nonclustered-columnstore-index-ncci)
+6. [실시간 운영 분석: NCCI(비클러스터형 columnstore 인덱스)의 압축 지연 옵션](/archive/blogs/sqlserverstorageengine/real-time-operational-analytics-compression-delay-option-for-nonclustered-columnstore-index-ncci)
 7. [실시간 운영 분석: NCCI의 압축 지연 옵션 및 성능](/archive/blogs/sqlserverstorageengine/real-time-operational-analytics-compression-delay-option-with-ncci-and-the-performance)
-8. [실시간 운영 분석: 메모리 최적화 테이블 및 Columnstore 인덱스](/archive/blogs/sqlserverstorageengine/real-time-operational-analytics-memory-optimized-table-and-columnstore-index)
+8. [실시간 운영 분석: 메모리 최적화 테이블 및 columnstore 인덱스](/archive/blogs/sqlserverstorageengine/real-time-operational-analytics-memory-optimized-table-and-columnstore-index)
 
 #### <a name="defragment-a-columnstore-index"></a>Columnstore 인덱스를 조각 모음합니다.
 
-1. [REORGANIZE 명령을 사용하여 Columnstore 인덱스 조각 모음](/archive/blogs/sqlserverstorageengine/columnstore-index-defragmentation-using-reorganize-command)
-2. [REORGANIZE의 Columnstore 인덱스 병합 정책](/archive/blogs/sqlserverstorageengine/columnstore-index-merge-policy-for-reorganize)
+1. [REORGANIZE 명령을 사용하여 columnstore 인덱스 조각 모음](/archive/blogs/sqlserverstorageengine/columnstore-index-defragmentation-using-reorganize-command)
+2. [REORGANIZE의 columnstore 인덱스 병합 정책](/archive/blogs/sqlserverstorageengine/columnstore-index-merge-policy-for-reorganize)
 
 #### <a name="bulk-importation-of-data"></a>데이터 대량 가져오기
 

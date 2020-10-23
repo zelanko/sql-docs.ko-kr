@@ -2,7 +2,7 @@
 description: CREATE FUNCTION(Azure Synapse Analytics)
 title: CREATE FUNCTION(Azure Synapse Analytics) | Microsoft Docs
 ms.custom: ''
-ms.date: 08/10/2017
+ms.date: 09/17/2020
 ms.prod: sql
 ms.prod_service: sql-data-warehouse, pdw
 ms.reviewer: ''
@@ -14,17 +14,17 @@ ms.assetid: 8cad1b2c-5ea0-4001-9060-2f6832ccd057
 author: juliemsft
 ms.author: jrasnick
 monikerRange: '>= aps-pdw-2016 || = azure-sqldw-latest || = sqlallproducts-allversions'
-ms.openlocfilehash: 4dbe21949a1912eef8aad4de122a8b0a263eec7c
-ms.sourcegitcommit: 2f868a77903c1f1c4cecf4ea1c181deee12d5b15
+ms.openlocfilehash: 8a655a2226ff7104fa7649ce851cbf9bd6da9355
+ms.sourcegitcommit: 22dacedeb6e8721e7cdb6279a946d4002cfb5da3
 ms.translationtype: HT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 10/02/2020
-ms.locfileid: "91671166"
+ms.lasthandoff: 10/14/2020
+ms.locfileid: "92037056"
 ---
 # <a name="create-function-azure-synapse-analytics"></a>CREATE FUNCTION(Azure Synapse Analytics)
 [!INCLUDE[applies-to-version/asa-pdw](../../includes/applies-to-version/asa-pdw.md)]
 
-  [!INCLUDE[ssSDW](../../includes/sssdw-md.md)]에서 사용자 정의 함수를 만듭니다. 사용자 정의 함수는 매개 변수를 허용하고 복잡한 계산 등의 동작을 수행하며 해당 동작의 결과를 값으로 반환하는 [!INCLUDE[tsql](../../includes/tsql-md.md)] 루틴입니다. 반환 값은 스칼라(단일) 값이어야 합니다. 이 문을 사용하여 다음과 같은 상황에서 다시 사용할 수 있는 루틴을 만들 수 있습니다.  
+  [!INCLUDE[ssSDW](../../includes/ssazuresynapse_md.md)] 및 [!INCLUDE[ssPDW](../../includes/sspdw-md.md)]에서 사용자 정의 함수를 만듭니다. 사용자 정의 함수는 매개 변수를 허용하고 복잡한 계산 등의 동작을 수행하며 해당 동작의 결과를 값으로 반환하는 [!INCLUDE[tsql](../../includes/tsql-md.md)] 루틴입니다. [!INCLUDE[ssPDW](../../includes/sspdw-md.md)]에서 반환 값은 스칼라(단일) 값이어야 합니다. [!INCLUDE[ssSDWfull](../../includes/sssdwfull-md.md)]CREATE FUNCTION은 인라인 테이블 반환 함수(미리 보기) 구문을 사용하여 테이블을 반환하거나 스칼라 반환 함수 구문을 사용하여 단일 값을 반환할 수 있습니다. 이 문을 사용하여 다음과 같은 상황에서 다시 사용할 수 있는 루틴을 만들 수 있습니다.  
   
 -   SELECT 등의 [!INCLUDE[tsql](../../includes/tsql-md.md)] 문  
   
@@ -36,12 +36,14 @@ ms.locfileid: "91671166"
   
 -   저장 프로시저 바꾸기  
   
+-   인라인 함수를 보안 정책의 필터 조건자로 사용  
+  
  ![항목 링크 아이콘](../../database-engine/configure-windows/media/topic-link.gif "항목 링크 아이콘") [Transact-SQL 구문 표기 규칙](../../t-sql/language-elements/transact-sql-syntax-conventions-transact-sql.md)  
   
 ## <a name="syntax"></a>구문  
   
 ```syntaxsql
---Transact-SQL Scalar Function Syntax  
+-- Transact-SQL Scalar Function Syntax  (in Azure Synapse Analytics and Parallel Data Warehouse)
 CREATE FUNCTION [ schema_name. ] function_name   
 ( [ { @parameter_name [ AS ] parameter_data_type   
     [ = default ] }   
@@ -62,10 +64,24 @@ RETURNS return_data_type
     [ SCHEMABINDING ]  
   | [ RETURNS NULL ON NULL INPUT | CALLED ON NULL INPUT ]  
 }  
-  
 ```
 
 [!INCLUDE[synapse-analytics-od-unsupported-syntax](../../includes/synapse-analytics-od-unsupported-syntax.md)]
+
+```syntaxsql
+-- Transact-SQL Inline Table-Valued Function Syntax (Preview in Azure Synapse Analytics only)
+CREATE FUNCTION [ schema_name. ] function_name
+( [ { @parameter_name [ AS ] parameter_data_type
+    [ = default ] }
+    [ ,...n ]
+  ]
+)
+RETURNS TABLE
+    [ WITH SCHEMABINDING ]
+    [ AS ]
+    RETURN [ ( ] select_stmt [ ) ]
+[ ; ]
+```
   
 ## <a name="arguments"></a>인수  
  *schema_name*  
@@ -105,6 +121,14 @@ RETURNS return_data_type
   
  *scalar_expression*  
  스칼라 함수가 반환하는 스칼라 값을 지정합니다.  
+
+ *select_stmt* **적용 대상**: Azure Synapse Analytics  
+ 인라인 테이블 반환 함수(미리 보기)의 반환 값을 정의하는 단일 SELECT 문입니다.
+
+ TABLE **적용 대상**: Azure Synapse Analytics  
+ TVF(테이블 반환 함수)의 반환 값이 테이블임을 지정합니다. 상수 및 @*local_variables*만 TVF에 전달할 수 있습니다.
+
+ 인라인 TVF(미리 보기)에서 TABLE 반환 값은 단일 SELECT 문을 통해 정의됩니다. 인라인 함수에는 연관된 반환 변수가 없습니다.
   
  **\<function_option>::=** 
   
@@ -140,13 +164,15 @@ RETURNS return_data_type
 -   함수를 만들 때 WITH SCHEMABINDING 절을 지정합니다. 이렇게 하면 함수도 수정되지 않는 한 함수 정의에서 참조된 개체를 수정할 수 없습니다.  
   
 ## <a name="interoperability"></a>상호 운용성  
- 함수에서 유효한 문은 다음과 같습니다.  
+ 스칼라 반환 함수에서 유효한 문은 다음과 같습니다.  
   
 -   대입 문  
   
 -   TRY...CATCH 문을 제외한 흐름 제어 문  
   
 -   로컬 데이터 변수를 정의하는 DECLARE 문  
+
+인라인 테이블 반환 함수(미리 보기)에서는 단일 select 문만 사용할 수 있습니다.
   
 ## <a name="limitations-and-restrictions"></a>제한 사항  
  사용자 정의 함수는 데이터베이스 상태 수정 동작을 수행하는 데 사용할 수 없습니다.  
@@ -193,8 +219,47 @@ GO
   
 SELECT dbo.ConvertInput(15) AS 'ConvertedValue';  
 ```  
+
+## <a name="examples-sssdwfull"></a>예제: [!INCLUDE[ssSDWfull](../../includes/sssdwfull-md.md)]  
+
+### <a name="a-creating-an-inline-table-valued-function-preview"></a>A. 인라인 테이블 반환 함수(미리 보기) 만들기
+ 다음 예제에서는 `objectType` 매개 변수를 기준으로 필터링하여 모듈에 대한 일부 키 정보를 반환하는 인라인 테이블 반환 함수를 만듭니다. 함수가 DEFAULT 매개 변수를 사용하여 호출될 때 모든 모듈을 반환하는 기본값을 포함합니다. 이 예제에서는 [메타데이터](#metadata)에 설명된 일부 시스템 카탈로그 뷰를 사용합니다.
+
+```sql
+CREATE FUNCTION dbo.ModulesByType(@objectType CHAR(2) = '%%')
+RETURNS TABLE
+AS
+RETURN
+(
+    SELECT 
+        sm.object_id AS 'Object Id',
+        o.create_date AS 'Date Created',
+        OBJECT_NAME(sm.object_id) AS 'Name',
+        o.type AS 'Type',
+        o.type_desc AS 'Type Description', 
+        sm.definition AS 'Module Description'
+    FROM sys.sql_modules AS sm  
+    JOIN sys.objects AS o ON sm.object_id = o.object_id
+    WHERE o.type like '%' + @objectType + '%'
+);
+GO
+```
+그러면 다음을 사용하여 함수를 호출해 모든 뷰(**V**) 개체를 반환할 수 있습니다.
+```sql
+select * from dbo.ModulesByType('V');
+```
+
+### <a name="b-combining-results-of-an-inline-table-valued-function-preview"></a>B. 인라인 테이블 반환 함수(미리 보기)의 결과 결합
+ 이 간단한 예제에서는 이전에 만든 인라인 TVF에서 cross apply를 사용하여 결과를 다른 테이블과 결합할 수 있는 방법을 보여 줍니다. 여기서는 sys.objects에서 모든 열을 선택하고 유형 열에서 일치하는 모든 행의 `ModulesByType` 결과도 선택합니다. APPLY 사용에 대한 자세한 내용은 [FROM 절과 JOIN, APPLY, PIVOT](../../t-sql/queries/from-transact-sql.md)을 참조하세요.
+
+```sql
+SELECT * 
+FROM sys.objects o
+CROSS APPLY dbo.ModulesByType(o.type);
+GO
+```
   
-## <a name="see-also"></a>참고 항목  
+## <a name="see-also"></a>참조  
  [ALTER FUNCTION(SQL Server PDW)](https://msdn.microsoft.com/25ff3798-eb54-4516-9973-d8f707a13f6c)   
  [DROP FUNCTION(SQL Server PDW)](https://msdn.microsoft.com/1792a90d-0d06-4852-9dec-6de1b9cd229e)  
   
