@@ -14,12 +14,12 @@ ms.assetid: ''
 author: rajeshsetlem
 ms.author: rajpo
 ms.custom: seo-lt-2019
-ms.openlocfilehash: e989e524a35763927ac949a88592b38c28a18dc5
-ms.sourcegitcommit: c7f40918dc3ecdb0ed2ef5c237a3996cb4cd268d
+ms.openlocfilehash: 03ea9cc4d6b7842739f4431fea2e9a418e0f3f9e
+ms.sourcegitcommit: 67befbf7435f256e766bbce6c1de57799e1db9ad
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 10/05/2020
-ms.locfileid: "91727804"
+ms.lasthandoff: 10/24/2020
+ms.locfileid: "92523920"
 ---
 # <a name="assess-an-enterprise-and-consolidate-assessment-reports-with-dma"></a>엔터프라이즈 평가 및 DMA에 평가 보고서 통합
 
@@ -96,7 +96,7 @@ Csv 파일을 사용 하 여 데이터를 가져올 때 데이터 **인스턴스
 - DatabaseName
 - AssessmentFlag
 
-![SQL Server 테이블 내용](../dma/media//dma-consolidatereports/dma-sql-server-table-contents-database-inventory.png)
+![SQL Server 테이블을 사용 중인 경우 SQL Server 테이블 내용의 스크린샷](../dma/media//dma-consolidatereports/dma-sql-server-table-contents-database-inventory.png)
 
 이 데이터베이스가 tools 컴퓨터에 없으면 도구 컴퓨터에이 SQL Server 인스턴스에 대 한 네트워크 연결이 설정 되어 있는지 확인 합니다.
 
@@ -113,7 +113,7 @@ CSV 파일에 SQL Server 테이블을 사용 하면 평가 플래그 열을 사�
 - 포트
 - AssessmentFlag
 
-![SQL Server 테이블 내용](../dma/media//dma-consolidatereports/dma-sql-server-table-contents-instance-inventory.png)
+![인스턴스 인벤토리를 사용 하는 경우 SQL Server 테이블 내용의 스크린샷](../dma/media//dma-consolidatereports/dma-sql-server-table-contents-instance-inventory.png)
 
 ## <a name="running-a-scaled-assessment"></a>크기 조정 된 평가 실행
 
@@ -123,7 +123,7 @@ CSV 파일에 SQL Server 테이블을 사용 하면 평가 플래그 열을 사�
 
 DmaDataCollector 함수와 연결 된 매개 변수는 다음 표에 설명 되어 있습니다.
 
-|매개 변수  |Description |
+|매개 변수  |설명 |
 |---------|---------|
 |**getServerListFrom** | 사용자의 인벤토리에 있습니다. 가능한 값은 **SqlServer** 및 **CSV**입니다.<br/>자세한 내용은 [SQL server 인벤토리 만들기](#create-inventory)를 참조 하세요. |
 |**csvPath** | CSV 인벤토리 파일의 경로입니다.  **Getserverlistfrom** 이 **CSV**로 설정 된 경우에만 사용 됩니다. |
@@ -147,7 +147,7 @@ DmaDataCollector 함수와 연결 된 매개 변수는 다음 표에 설명 되�
 
 DmaProcessor 함수와 연결 된 매개 변수는 다음 표에 설명 되어 있습니다.
 
-|매개 변수  |Description |
+|매개 변수  |설명 |
 |---------|---------|
 |**processTo** | JSON 파일을 처리 하는 위치입니다. 가능한 값은 **SQLServer** 및 **AzureSQLDatabase**입니다. |
 |**serverName** | 데이터가 처리 될 SQL Server 인스턴스입니다.  **Processto** 매개 변수에 대해 **AzureSQLDatabase** 를 지정 하는 경우 SQL Server 이름만 포함 합니다 (database.windows.net는 포함 하지 않음). Azure SQL Database를 대상으로 지정 하는 경우 두 개의 로그인을 묻는 메시지가 표시 됩니다. 첫 번째는 Azure 테 넌 트 자격 증명 이며, 두 번째는 Azure SQL Server에 대 한 관리자 로그인입니다. |

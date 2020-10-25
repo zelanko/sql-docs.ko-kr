@@ -9,18 +9,18 @@ ms.date: 04/17/2018
 ms.author: murshedz
 ms.reviewer: martinle
 ms.custom: seo-dt-2019
-ms.openlocfilehash: bcb0e667424767fd53a5fc7e027e84d512022203
-ms.sourcegitcommit: e042272a38fb646df05152c676e5cbeae3f9cd13
+ms.openlocfilehash: 770359a9ddb04eb8aaf45af7dd5b95447c30f264
+ms.sourcegitcommit: 67befbf7435f256e766bbce6c1de57799e1db9ad
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 04/27/2020
-ms.locfileid: "74401080"
+ms.lasthandoff: 10/24/2020
+ms.locfileid: "92523870"
 ---
 # <a name="import-the-scom-management-pack---analytics-platform-system"></a>SCOM 관리 팩-분석 플랫폼 시스템 가져오기
 다음 단계를 수행 하 여 APS (Analytics Platform System) 용 SCOM (System Center Operations Manager) 관리 팩을 가져옵니다. 관리 팩은 SCOM에서 병렬 데이터 웨어하우스를 모니터링 하는 데 필요 합니다. 
   
-## <a name="before-you-begin"></a><a name="BeforeBegin"></a>시작 하기 전에  
-**필수 구성 요소**  
+## <a name="before-you-begin"></a><a name="BeforeBegin"></a>시작하기 전 주의 사항  
+**전제 조건**  
   
 System Center Operations Manager 2007 r 2를 설치 하 고 실행 해야 합니다.  
   
@@ -50,7 +50,7 @@ System Center Operations Manager 2007 r 2를 설치 하 고 실행 해야 합니
   
 7.  **Install**을 클릭합니다.  
   
-    ![설치 클릭](./media/import-the-scom-management-pack-for-pdw/SCOM_IMP5.png "SCOM_IMP5")  
+    ![설치 옵션이 빨간색 원으로 표시 된 관리 팩 선택 단계에서 관리 팩 가져오기 마법사를 보여 주는 스크린샷](./media/import-the-scom-management-pack-for-pdw/SCOM_IMP5.png "SCOM_IMP5")  
   
 8.  완료 되 면 **닫기**를 클릭 합니다.  
   
@@ -70,7 +70,7 @@ System Center Operations Manager 2007 r 2를 설치 하 고 실행 해야 합니
   
 4.  **Install**을 클릭합니다.  
   
-    ![설치 클릭](./media/import-the-scom-management-pack-for-pdw/SCOM_PDW3.png "SCOM_PDW3")  
+    ![설치 옵션을 선택 하 고 관리 팩 선택 단계에서 빨간색 원으로 원으로 설정 된 관리 팩 가져오기 마법사의 또 다른 스크린샷](./media/import-the-scom-management-pack-for-pdw/SCOM_PDW3.png "SCOM_PDW3")  
   
 5.  **닫기**를 클릭합니다.  
   

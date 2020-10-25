@@ -15,12 +15,12 @@ ms.assetid: ''
 author: rajeshsetlem
 ms.author: rajpo
 ms.custom: ''
-ms.openlocfilehash: f81cddcb5f1279bd444799884b150294a037b3e1
-ms.sourcegitcommit: 4d370399f6f142e25075b3714e5c2ce056b1bfd0
+ms.openlocfilehash: 35465a761258fb5a7865e711e2809d740b9b9fee
+ms.sourcegitcommit: d35d0901296580bfceda6e0ab2e14cf2b7e99a0f
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 10/09/2020
-ms.locfileid: "91867690"
+ms.lasthandoff: 10/24/2020
+ms.locfileid: "92496813"
 ---
 # <a name="dmacmd-assess-readiness-of-a-sql-server-data-estate-migrating-to-azure-sql"></a>Azure SQL로 마이그레이션하는 SQL Server 데이터 공간 준비 평가 
 
@@ -28,7 +28,12 @@ ms.locfileid: "91867690"
 
 [Data Migration Assistant (DMA)](dma-overview.md) 는 특정 azure sql 대상에 대 한 SQL Server 인스턴스를 평가 하 고, azure sql로 마이그레이션하는 SQL Server 데이터베이스의 준비 상태를 측정 하는 데 도움이 됩니다. 전체 데이터 공간에 대 한 중앙 집중식 준비 보기를 위해 DMA 평가 결과를 Azure Migrate 허브에 업로드 합니다. 
 
-이 문서에서는 대규모로 평가를 수행 하 고 DMA 명령줄 인터페이스 (DMACMD)를 사용 하 여 Azure Migrate 허브에 결과를 업로드 하는 방법을 설명 합니다. 또는 [DMA GUI](dma-assess-sql-data-estate-to-sqldb.md) 를 사용 하 여 평가를 대신 수행할 수 있습니다. 
+이 문서에서는 대규모로 평가를 수행 하 고 DMA 명령줄 인터페이스 (DMACMD)를 사용 하 여 Azure Migrate 허브에 결과를 업로드 하는 방법을 설명 합니다. 또는 [DMA GUI](dma-assess-sql-data-estate-to-sqldb.md) 를 사용 하 여 평가를 대신 수행할 수 있습니다.
+
+자세히 알아보려면 다음 Channel9 비디오를 참조 하세요.
+
+>
+> [!VIDEO https://channel9.msdn.com/Shows/Data-Exposed/How-to-Assess-Readiness-of-SQL-Server-Data-Estate-Migrating-to-Azure-SQL/player?WT.mc_id=dataexposed-c9-niner]
 
 ## <a name="prerequisites"></a>사전 요구 사항 
 
@@ -139,3 +144,4 @@ JSON result file      : C:\Demo\ScaleAssessment\Scale-Assessment-for-AzureSQLMan
 * [DMA(Data Migration Assistant)](../dma/dma-overview.md)
 * [Data Migration Assistant: 구성 설정](../dma/dma-configurationsettings.md)
 * [Data Migration Assistant: 모범 사례](../dma/dma-bestpractices.md)
+

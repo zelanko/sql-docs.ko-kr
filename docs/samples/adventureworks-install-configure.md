@@ -10,12 +10,12 @@ ms.topic: conceptual
 author: MashaMSFT
 ms.author: mathoma
 ms.custom: seo-lt-2019
-ms.openlocfilehash: f4140db7be7367105832ff564d927ba6bc40ed25
-ms.sourcegitcommit: afb02c275b7c79fbd90fac4bfcfd92b00a399019
+ms.openlocfilehash: 1482104a0c8ffea7f7f2502b83b9b268b7bb08d2
+ms.sourcegitcommit: 67befbf7435f256e766bbce6c1de57799e1db9ad
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 10/12/2020
-ms.locfileid: "91955894"
+ms.lasthandoff: 10/24/2020
+ms.locfileid: "92523960"
 ---
 # <a name="adventureworks-sample-databases"></a>AdventureWorks 예제 데이터베이스
 [!INCLUDE[SQL Server Azure SQL Database Synapse Analytics PDW ](../includes/applies-to-version/sql-asdb-asdbmi-asa-pdw.md)]
@@ -24,7 +24,7 @@ ms.locfileid: "91955894"
 
 예제에 대 한 자세한 내용은 [샘플 GitHub 리포지토리](https://github.com/microsoft/sql-server-samples/tree/master/samples/databases)를 참조 하세요. 
 
-## <a name="prerequisites"></a>필수 구성 요소
+## <a name="prerequisites"></a>사전 요구 사항
 
 - [SQL Server](https://www.microsoft.com/evalcenter/evaluate-sql-server-2019) 또는 [Azure SQL Database](https://azure.microsoft.com/services/sql-database/)
 - [SQL Server Management Studio](../ssms/download-sql-server-management-studio-ssms.md) 또는 [Azure Data Studio](../azure-data-studio/download-azure-data-studio.md)
@@ -75,7 +75,7 @@ SQL Server Management Studio에서 데이터베이스를 복원 하려면 다음
 3. SSMS (SQL Server Management Studio)를 열고의 SQL Server에 연결 합니다. 
 4. 데이터베이스 복원 개체 탐색기 **에서 데이터베이스를 마우스** 오른쪽 단추로 클릭 **Object Explorer**  >  **Restore Database...** 하 여 **데이터베이스 복원** 마법사를 시작 합니다. 
 
-   :::image type="content" source="media/adventureworks-install-configure/restore-db-ssms.png" alt-text="개체 탐색기에서 데이터베이스를 마우스 오른쪽 단추로 클릭 하 고 데이터베이스 복원을 선택 하 여 데이터베이스를 복원 하도록 선택 합니다.":::
+   :::image type="content" source="media/adventureworks-install-configure/restore-db-ssms.png" alt-text="개체 탐색기에서 데이터베이스를 마우스 오른쪽 단추로 클릭 한 다음 데이터베이스 복원을 선택 하 여 데이터베이스를 복원 하도록 선택 하는 방법을 보여 주는 스크린샷":::
 
 
 1. **장치** 를 선택 하 고 줄임표 **(...)** 를 선택 하 여 장치를 선택 합니다. 
@@ -84,11 +84,11 @@ SQL Server Management Studio에서 데이터베이스를 복원 하려면 다음
 1. **파일** 탭을 확인 하 여 **데이터베이스 복원** 마법사에서 위치 및 파일 이름이 원하는 위치 및 파일 이름과 일치 하는지 **확인 합니다.** 
 1. **확인**을 선택하여 데이터베이스를 복원합니다. 
 
-   :::image type="content" source="media/adventureworks-install-configure/restore-db-wizard-ssms.png" alt-text="개체 탐색기에서 데이터베이스를 마우스 오른쪽 단추로 클릭 하 고 데이터베이스 복원을 선택 하 여 데이터베이스를 복원 하도록 선택 합니다.":::
+   :::image type="content" source="media/adventureworks-install-configure/restore-db-wizard-ssms.png" alt-text="개체 탐색기에서 데이터베이스를 마우스 오른쪽 단추로 클릭 한 다음 데이터베이스 복원을 선택 하 여 데이터베이스를 복원 하도록 선택 하는 방법을 보여 주는 스크린샷":::
 
 SQL Server 데이터베이스 복원에 대 한 자세한 내용은 SSMS를 [사용 하 여 데이터베이스 백업 복원](../relational-databases/backup-restore/restore-a-database-backup-using-ssms.md)을 참조 하세요.
 
-# <a name="transact-sql-t-sql"></a>[Transact-SQL(T-SQL)](#tab/tsql)
+# <a name="transact-sql-t-sql"></a>[Transact-sql (T-sql)](#tab/tsql)
 
 Transact-sql (T-sql)을 사용 하 여 샘플 데이터베이스를 복원할 수 있습니다. AdventureWorks2019 복원에 대 한 예제는 아래에 제공 되지만 데이터베이스 이름과 설치 파일 경로는 사용자 환경에 따라 다를 수 있습니다. 
 
@@ -117,25 +117,25 @@ Azure Data Studio에서 데이터베이스를 복원 하려면 다음 단계를 
 1. Azure Data Studio Studio를 열고 SQL Server 인스턴스에 연결 합니다.
 1. 서버를 마우스 오른쪽 단추로 클릭 하 고 **관리**를 선택 합니다.
 
-   :::image type="content" source="media/adventureworks-install-configure/ads-manage.png" alt-text="개체 탐색기에서 데이터베이스를 마우스 오른쪽 단추로 클릭 하 고 데이터베이스 복원을 선택 하 여 데이터베이스를 복원 하도록 선택 합니다.":::
+   :::image type="content" source="media/adventureworks-install-configure/ads-manage.png" alt-text="개체 탐색기에서 데이터베이스를 마우스 오른쪽 단추로 클릭 한 다음 데이터베이스 복원을 선택 하 여 데이터베이스를 복원 하도록 선택 하는 방법을 보여 주는 스크린샷":::
 
 1. **복원** 선택
 
-   :::image type="content" source="media/adventureworks-install-configure/ads-restore-database.png" alt-text="개체 탐색기에서 데이터베이스를 마우스 오른쪽 단추로 클릭 하 고 데이터베이스 복원을 선택 하 여 데이터베이스를 복원 하도록 선택 합니다.":::
+   :::image type="content" source="media/adventureworks-install-configure/ads-restore-database.png" alt-text="개체 탐색기에서 데이터베이스를 마우스 오른쪽 단추로 클릭 한 다음 데이터베이스 복원을 선택 하 여 데이터베이스를 복원 하도록 선택 하는 방법을 보여 주는 스크린샷":::
 
 1. **일반** 탭에서 **원본**아래에 나열 된 값을 입력 합니다.
     1. 다음 **에서 복원**에서 *백업 파일*을 선택 합니다.
     1. **백업 파일 경로**아래에서 .bak 파일을 저장 한 위치를 선택 합니다. 
     
-   :::image type="content" source="media/adventureworks-install-configure/ads-source.png" alt-text="개체 탐색기에서 데이터베이스를 마우스 오른쪽 단추로 클릭 하 고 데이터베이스 복원을 선택 하 여 데이터베이스를 복원 하도록 선택 합니다.":::
+   :::image type="content" source="media/adventureworks-install-configure/ads-source.png" alt-text="개체 탐색기에서 데이터베이스를 마우스 오른쪽 단추로 클릭 한 다음 데이터베이스 복원을 선택 하 여 데이터베이스를 복원 하도록 선택 하는 방법을 보여 주는 스크린샷":::
     
     그러면 **데이터베이스**, **대상 데이터베이스** 및 **복원과**같은 나머지 필드를 자동으로 채웁니다. 
 
-   :::image type="content" source="media/adventureworks-install-configure/ads-destination-restore-plan.png" alt-text="개체 탐색기에서 데이터베이스를 마우스 오른쪽 단추로 클릭 하 고 데이터베이스 복원을 선택 하 여 데이터베이스를 복원 하도록 선택 합니다.":::
+   :::image type="content" source="media/adventureworks-install-configure/ads-destination-restore-plan.png" alt-text="개체 탐색기에서 데이터베이스를 마우스 오른쪽 단추로 클릭 한 다음 데이터베이스 복원을 선택 하 여 데이터베이스를 복원 하도록 선택 하는 방법을 보여 주는 스크린샷":::
 
 1. **복원** 을 선택 하 여 데이터베이스를 복원 합니다. 
 
-   :::image type="content" source="media/adventureworks-install-configure/ads-restore.png" alt-text="개체 탐색기에서 데이터베이스를 마우스 오른쪽 단추로 클릭 하 고 데이터베이스 복원을 선택 하 여 데이터베이스를 복원 하도록 선택 합니다.":::
+   :::image type="content" source="media/adventureworks-install-configure/ads-restore.png" alt-text="개체 탐색기에서 데이터베이스를 마우스 오른쪽 단추로 클릭 한 다음 데이터베이스 복원을 선택 하 여 데이터베이스를 복원 하도록 선택 하는 방법을 보여 주는 스크린샷":::
 
 ---
 
@@ -157,7 +157,7 @@ Azure SQL Database에서 새 데이터베이스를 만들 때 빈 데이터베�
 1. 요청 된 정보를 입력 하 여 데이터베이스를 만듭니다. 
 1. **추가 설정** 탭에서 **데이터 원본**아래의 기존 데이터로 **샘플** 을 선택 합니다. 
 
-   :::image type="content" source="media/adventureworks-install-configure/deploy-sample-to-azure.png" alt-text="개체 탐색기에서 데이터베이스를 마우스 오른쪽 단추로 클릭 하 고 데이터베이스 복원을 선택 하 여 데이터베이스를 복원 하도록 선택 합니다.":::
+   :::image type="content" source="media/adventureworks-install-configure/deploy-sample-to-azure.png" alt-text="개체 탐색기에서 데이터베이스를 마우스 오른쪽 단추로 클릭 한 다음 데이터베이스 복원을 선택 하 여 데이터베이스를 복원 하도록 선택 하는 방법을 보여 주는 스크린샷":::
 
 1. **만들기** 를 선택 하 여 AdventureWorksLT 데이터베이스의 복원 된 복사본 인 새 SQL Database를 만듭니다. 
 
@@ -172,7 +172,7 @@ SQL Server에서 Azure SQL Database으로 예제 데이터베이스를 배포 �
 1. 아직 수행 하지 않은 경우 [SQL Server에 샘플 데이터베이스를 복원](#restore-to-sql-server)합니다. 
 1. **개체 탐색기**  >  **작업**  >  **Microsoft Azure SQL Database에 데이터베이스 배포**...를 클릭 하 여 복원 된 데이터베이스를 마우스 오른쪽 단추로 클릭 합니다. 
 
-   :::image type="content" source="media/adventureworks-install-configure/deploy-db-to-azure.png" alt-text="개체 탐색기에서 데이터베이스를 마우스 오른쪽 단추로 클릭 하 고 데이터베이스 복원을 선택 하 여 데이터베이스를 복원 하도록 선택 합니다.":::
+   :::image type="content" source="media/adventureworks-install-configure/deploy-db-to-azure.png" alt-text="개체 탐색기에서 데이터베이스를 마우스 오른쪽 단추로 클릭 한 다음 데이터베이스 복원을 선택 하 여 데이터베이스를 복원 하도록 선택 하는 방법을 보여 주는 스크린샷":::
 
 1. 마법사에 따라 Azure SQL Database에 연결 하 고 데이터베이스를 배포 합니다. 
 

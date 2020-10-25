@@ -15,12 +15,12 @@ ms.assetid: ''
 author: rajeshsetlem
 ms.author: rajpo
 ms.custom: seo-lt-2019
-ms.openlocfilehash: 095c14150a3f78f49a8e1dd6d711b5fefc617d49
-ms.sourcegitcommit: c7f40918dc3ecdb0ed2ef5c237a3996cb4cd268d
+ms.openlocfilehash: 9aae42b92c6d7d9bb5c26c84e49c49a8cde6bc57
+ms.sourcegitcommit: 67befbf7435f256e766bbce6c1de57799e1db9ad
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 10/05/2020
-ms.locfileid: "91726344"
+ms.lasthandoff: 10/24/2020
+ms.locfileid: "92523880"
 ---
 # <a name="assess-the-readiness-of-a-sql-server-data-estate-migrating-to-azure-sql-database-using-the-data-migration-assistant"></a>Data Migration Assistant를 사용 하 여 Azure SQL Database으로 마이그레이션하는 SQL Server 데이터 공간 준비 상태를 평가 합니다.
 
@@ -35,7 +35,7 @@ ms.locfileid: "91726344"
 
 Azure 구독에 새 Azure Migrate 프로젝트를 설정 하 고 도구를 추가 합니다.
 
-Azure Migrate 프로젝트는 평가 하거나 마이그레이션하는 환경에서 수집 된 검색, 평가 및 마이그레이션 메타 데이터를 저장 하는 데 사용 됩니다. 또한 프로젝트를 사용 하 여 검색 된 자산을 추적 하 고 평가 및 마이그레이션을 오케스트레이션 합니다.
+Azure Migrate 프로젝트는 평가하거나 마이그레이션하는 환경에서 수집된 검색, 평가 및 마이그레이션 메타데이터를 저장하는 데 사용됩니다. 또한 프로젝트를 사용 하 여 검색 된 자산을 추적 하 고 평가 및 마이그레이션을 오케스트레이션 합니다.
 
 1. Azure Portal에 로그인 하 고 **모든 서비스**를 선택한 다음 Azure Migrate를 검색 합니다.
 2. **서비스** 아래에서 **Azure Migrate**를 선택합니다.
@@ -132,11 +132,11 @@ Azure Migrate 프로젝트는 평가 하거나 마이그레이션하는 환경�
 
 5. 평가가 완료 되 면 **Azure Migrate 업로드를**선택 합니다.
 
-   ![Azure Migrate-Data Migration Assistant-결과 검토 화면](../dma/media//dma-assess-sql-data-estate-to-sqldb/dms-dma-review-results-screen.png)
+   ![Azure Migrate에 업로드 옵션을 호출한 Data Migration Assistant를 보여 주는 스크린샷](../dma/media//dma-assess-sql-data-estate-to-sqldb/dms-dma-review-results-screen.png)
 
 6. Azure Portal에 로그인합니다.
 
-   ![Azure Migrate-Data Migration Assistant-결과 검토 화면](../dma/media//dma-assess-sql-data-estate-to-sqldb/dms-azure-migrate-portal-signin.png)
+   ![Azure Portal 로그인 창을 보여 주는 Data Migration Assistant의 스크린샷](../dma/media//dma-assess-sql-data-estate-to-sqldb/dms-azure-migrate-portal-signin.png)
 
 7. 평가 결과를 업로드 하려는 구독 및 Azure Migrate 프로젝트를 선택 하 고 **업로드**를 선택 합니다.
 

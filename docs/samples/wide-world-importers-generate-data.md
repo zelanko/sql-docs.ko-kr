@@ -1,7 +1,7 @@
 ---
 title: SQL 샘플에서 데이터 생성 WideWorldImporters
 description: 다음 SQL 문을 사용 하 여 WideWorldImporters 예제 데이터베이스에 대 한 현재 날짜로 샘플 데이터를 생성 하 고 가져옵니다.
-ms.date: 04/04/2018
+ms.date: 10/23/2020
 ms.reviewer: ''
 ms.prod: sql
 ms.prod_service: sql
@@ -10,12 +10,12 @@ ms.topic: conceptual
 author: MashaMSFT
 ms.author: mathoma
 ms.custom: seo-lt-2019
-ms.openlocfilehash: 2936ac69cc4053e68fc92d2bb5c2cae95ac68673
-ms.sourcegitcommit: 591bbf4c7e4e2092f8abda6a2ffed263cb61c585
+ms.openlocfilehash: f60ad250ea68f58a98fb93da9f3c5853ad68bd47
+ms.sourcegitcommit: 67befbf7435f256e766bbce6c1de57799e1db9ad
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 07/22/2020
-ms.locfileid: "86942194"
+ms.lasthandoff: 10/24/2020
+ms.locfileid: "92523938"
 ---
 # <a name="wideworldimporters-data-generation"></a>WideWorldImporters 데이터 생성
 [!INCLUDE [SQL Server Azure SQL Database](../includes/applies-to-version/sql-asdb.md)]
@@ -39,9 +39,12 @@ WideWorldImporters 및 WideWorldImportersDW 데이터베이스의 릴리스 버�
             @AreDatesPrinted = 1;
     ```
 
-    이 문은 예제 판매 및 구매 데이터를 데이터베이스에 현재 날짜로 추가 합니다. 일별 데이터 생성의 진행 상태를 표시 합니다. 데이터 생성은 데이터를 필요로 하는 모든 연도에 대해 약 10 분이 소요 될 수 있습니다. 데이터 생성의 임의 요소로 인해 실행 간에 생성 되는 데이터에는 약간의 차이가 있습니다.
+    이 문은 예제 판매 및 구매 데이터를 데이터베이스에 현재 날짜로 추가 합니다. 일별 데이터 생성의 진행 상태를 표시 합니다. 데이터 생성의 임의 요소로 인해 실행 간에 생성 되는 데이터에는 약간의 차이가 있습니다.
 
     매일 주문에 대해 생성 되는 데이터의 양을 늘리거나 줄이려면 매개 변수의 값을 변경 `@AverageNumberOfCustomerOrdersPerDay` 합니다. 및 매개 변수를 사용 `@SaturdayPercentageOfNormalWorkDay` `@SundayPercentageOfNormalWorkDay` 하 여 주말의 주문 볼륨을 확인 합니다.
+
+> [!TIP]
+> 데이터베이스에서 [지연 된 내구성](../relational-databases/logs/control-transaction-durability.md) 을 강제 적용 하면 특히 데이터베이스 트랜잭션 로그가 대기 시간이 긴 저장소 하위 시스템에 있는 경우 데이터 생성 속도를 향상 시킬 수 있습니다. 지연 된 내구성을 사용 하는 경우 [데이터 손실](../relational-databases/logs/control-transaction-durability.md#bkmk_DataLoss) 가능성을 파악 하 고 데이터를 생성 하는 동안 지연 된 내 구성을 사용 하도록 설정 하는 것이 좋습니다.
 
 ## <a name="import-generated-data-in-wideworldimportersdw"></a>WideWorldImportersDW에서 생성 된 데이터 가져오기
 
@@ -67,7 +70,7 @@ WideWorldImportersDW는 성능 테스트를 위해 데이터 크기를 임의로
 
 ### <a name="procedure-details"></a>프로시저 세부 정보
 
-#### <a name="name"></a>Name
+#### <a name="name"></a>이름
 
 `Application.Configuration_PopulateLargeSaleTable`
 
