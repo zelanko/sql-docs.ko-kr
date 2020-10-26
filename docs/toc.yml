@@ -128,6 +128,8 @@
           href: big-data-cluster/concept-compute-pool.md
         - name: 보안
           href: big-data-cluster/concept-security.md
+        - name: 관리 리소스
+          href: big-data-cluster/view-cluster-status.md
         - name: Active Directory 모드
           items:
             - name: 필수 구성 요소
@@ -332,14 +334,30 @@
           items:
             - name: 연결
               href: big-data-cluster/connect-to-big-data-cluster.md
-            - name: 클러스터 상태 보기
-              href: big-data-cluster/view-cluster-status.md
             - name: 컨트롤러 대시보드로 관리
               href: big-data-cluster/manage-with-controller-dashboard.md
             - name: 기존 전자 필기장 관리
               href: big-data-cluster/notebooks-manage-bdc.md
             - name: Spark를 사용하여 Notebook 실행
               href: big-data-cluster/notebooks-tutorial-spark.md
+            - name: 작업 전자 필기장 나열
+              href: big-data-cluster/cluster-manage-notebooks.md
+        - name: 모니터
+          items:
+            - name: Azure Data Studio로 모니터링
+              href: big-data-cluster/cluster-monitor-ads.md
+            - name: cmdlet으로 모니터링
+              href: big-data-cluster/cluster-monitor-cmdlet.md
+            - name: 전자 필기장으로 모니터링
+              href: big-data-cluster/cluster-common-notebooks.md
+            - name: 모니터 - Grafana
+              href: big-data-cluster/cluster-monitor-grafana.md
+            - name: 로깅 - Kibana
+              href: big-data-cluster/cluster-logging-kibana.md
+            - name: 모니터링 전자 필기장 나열
+              href: big-data-cluster/cluster-monitor-notebooks.md
+            - name: 로깅 전자 필기장 나열
+              href: big-data-cluster/cluster-logging-notebooks.md
         - name: 성능
           items:
             - name: 튜닝 가이드
@@ -388,6 +406,8 @@
                   href: big-data-cluster/troubleshoot-ad-login-failed-untrusted-domain.md
             - name: HDFS 관리자 권한 문제 해결
               href: big-data-cluster/troubleshoot-hdfs-restore-admin.md
+            - name: 클러스터 문제 해결 전자 필기장
+              href: big-data-cluster/cluster-troubleshooter-notebooks.md
     - name: 참조
       items:
         - name: BDC 파트너
@@ -8301,10 +8321,10 @@
           href: ssdt/release-notes-ssdt.md
         - name: SSDT 및 SSDT-BI의 이전 릴리스
           href: ssdt/previous-releases-of-sql-server-data-tools-ssdt-and-ssdt-bi.md
+        - name: SQL Server Data Tools
+          href: ssdt/sql-server-data-tools.md
         - name: Azure Active Directory 지원
           href: ssdt/azure-active-directory.md
-        - name: SQL Server 도구
-          href: ssdt/sql-server-tools.md
         - name: 프로젝트 기반 오프라인 데이터베이스 개발
           href: ssdt/project-oriented-offline-database-development.md
           items:
