@@ -1,7 +1,7 @@
 ---
-title: macOS용 azdata 설치
+title: macOS용 Azure Data CLI(azdata) 설치
 titleSuffix: ''
-description: macOS에 azdata 도구를 설치하는 방법을 알아봅니다.
+description: macOS에 Azure Data CLI(azdata) 도구를 설치하는 방법을 알아봅니다.
 author: MikeRayMSFT
 ms.author: mikeray
 ms.reviewer: mihaelab
@@ -9,14 +9,14 @@ ms.date: 09/30/2020
 ms.topic: conceptual
 ms.prod: sql
 ms.technology: big-data-cluster
-ms.openlocfilehash: 19a3542f77708dcf779cf01d5299e7ff6add8273
-ms.sourcegitcommit: c7f40918dc3ecdb0ed2ef5c237a3996cb4cd268d
+ms.openlocfilehash: 0e3d7217ef917c794f1c497f7c5548588c2da1ba
+ms.sourcegitcommit: ae474d21db4f724523e419622ce79f611e956a22
 ms.translationtype: HT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 10/05/2020
-ms.locfileid: "91725244"
+ms.lasthandoff: 10/20/2020
+ms.locfileid: "92257383"
 ---
-# <a name="install-azdata-on-macos"></a>macOS에 `azdata` 설치
+# <a name="install-azure-data-cli-azdata-on-macos"></a>macOS에 [!INCLUDE [azure-data-cli-azdata](../../includes/azure-data-cli-azdata.md)] 설치
 
 macOS 플랫폼의 경우, Homebrew 패키지 관리자를 사용하여 `azdata-cli`를 설치할 수 있습니다. CLI 패키지는 다음과 같은 macOS 버전에서 테스트되었습니다.
 

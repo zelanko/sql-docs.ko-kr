@@ -4,16 +4,16 @@ ms.prod: sql
 ms.topic: include
 ms.date: 01/07/2020
 ms.author: mikeray
-ms.openlocfilehash: 401d214495cd8df8ec3401c0b18db8ebe8773226
-ms.sourcegitcommit: ff82f3260ff79ed860a7a58f54ff7f0594851e6b
+ms.openlocfilehash: 0c15fb58bb076724402ab72f81e58ce46c8b7b1e
+ms.sourcegitcommit: ae474d21db4f724523e419622ce79f611e956a22
 ms.translationtype: HT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 03/29/2020
-ms.locfileid: "75721537"
+ms.lasthandoff: 10/20/2020
+ms.locfileid: "92257418"
 ---
 ### <a name="pythonpip-installation"></a>Python/Pip 설치
 
-Linux(yum, apt 또는 zypper 사용)나 macOS(Homebrew 설치 패키지 관리자 사용)에 `azdata`를 설치할 수 있습니다. 패키지 관리자가 출시되기 전에는 설치하려면 Python과 pip가 필요했습니다.
+Linux(yum, apt 또는 zypper 사용) 또는 macOS(Homebrew 설치 패키지 관리자 사용)에 [!INCLUDE [azure-data-cli-azdata](../includes/azure-data-cli-azdata.md)]를 설치할 수 있습니다. 패키지 관리자가 출시되기 전에는 설치하려면 Python과 pip가 필요했습니다.
 
 >[!IMPORTANT]
 >계속하기 전에 시스템 전역 Python에 설치되어 있던 `azdata` 설치를 제거해야 합니다. 새 설치 프로그램 또는 네이티브 패키지는 `azdata`를 경로에 추가하지만 어떤 항목이 먼저인지는 알 수 없습니다.

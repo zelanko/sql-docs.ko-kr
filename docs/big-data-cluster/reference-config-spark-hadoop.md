@@ -9,12 +9,12 @@ ms.date: 08/04/2020
 ms.topic: reference
 ms.prod: sql
 ms.technology: big-data-cluster
-ms.openlocfilehash: 4f8705f44159faac9bd6d5b9ca0b2cb7f0274c70
-ms.sourcegitcommit: 331b8495e4ab37266945c81ff5b93d250bdaa6da
+ms.openlocfilehash: ecb7fd295eded45995941c8a32e0519f10c8b78b
+ms.sourcegitcommit: cfa04a73b26312bf18d8f6296891679166e2754d
 ms.translationtype: HT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 08/20/2020
-ms.locfileid: "88645754"
+ms.lasthandoff: 10/19/2020
+ms.locfileid: "92196119"
 ---
 # <a name="apache-spark--apache-hadoop-hdfs-configuration-properties"></a>Apache Spark 및 Apache Hadoop(HDFS) 구성 속성
 
@@ -276,6 +276,7 @@ JSON에 나열된 설정은 BDC 관련 기본값입니다. 필요한 경우 배�
 |          |                             |                               | hadoop.http.authentication.kerberos.keytab            |
 |          |                             |                               | hadoop.http.filter.initializers                       |
 |          |                             |                               | hadoop.security.group.mapping.*                       |                               |
+|          |                             |                               | hadoop.security.key.provider.path                     |                               |
 |          | mapred-env                  | mapred-env.sh                 |                                                       |
 |          | hdfs-site                   | hdfs-site.xml                 | dfs.namenode.name.dir                                 |
 |          |                             |                               | dfs.datanode.data.dir                                 |

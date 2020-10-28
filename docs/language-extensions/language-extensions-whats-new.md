@@ -9,12 +9,12 @@ ms.topic: conceptual
 ms.prod: sql
 ms.technology: language-extensions
 monikerRange: '>=sql-server-ver15||>=sql-server-linux-ver15||=sqlallproducts-allversions'
-ms.openlocfilehash: ca15786b88c62b41202310bd537a3224ddea458e
-ms.sourcegitcommit: fe59f8dc27fd633f5dfce54519d6f5dcea577f56
+ms.openlocfilehash: 1583ab8c54d16d7bcf129e401c2e540fabb342b3
+ms.sourcegitcommit: 43b92518c5848489d03c68505bd9905f8686cbc0
 ms.translationtype: HT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 10/09/2020
-ms.locfileid: "91934878"
+ms.lasthandoff: 10/17/2020
+ms.locfileid: "92155094"
 ---
 # <a name="whats-new-in-sql-server-language-extensions"></a>SQL Server 언어 확장의 새로운 기능
 [!INCLUDE [SQL Server 2019 and later](../includes/applies-to-version/sqlserver2019.md)]
@@ -32,7 +32,7 @@ Microsoft는 외부 언어와 데이터 플랫폼 간의 통합을 계속 확장
 
 이 릴리스의 모든 기능에 대한 자세한 내용은 [SQL Server 2019의 새로운 기능](../sql-server/what-s-new-in-sql-server-ver15.md) 및 [Release Notes for SQL Server 2019](../sql-server/sql-server-version-15-release-notes.md)(SQL Server 2019 릴리스 정보)를 참조하세요.
 
-- Windows 및 Linux의 기본 Java 런타임은 Open Zulu JRE이며, [SQL Server Language Extensions installation on Windows](install/install-sql-server-language-extensions-on-windows.md)(Windows에 SQL Server 언어 확장 설치) 및 [Linux에 SQL Server 언어 확장 설치](../linux/sql-server-linux-setup-language-extensions.md)에 포함되어 있습니다.
+- Windows 및 Linux의 기본 Java 런타임은 Open Zulu JRE이며, [SQL Server Language Extensions installation on Windows](install/windows-java.md)(Windows에 SQL Server 언어 확장 설치) 및 [Linux에 SQL Server 언어 확장 설치](../linux/sql-server-linux-setup-language-extensions-java.md)에 포함되어 있습니다.
 - 지원되는 [Java 데이터 형식](how-to/java-to-sql-data-types.md).
 - SQL Server에서 외부 언어(예: Java)를 등록하는 데 사용되는 [CREATE EXTERNAL LANGUAGE](../t-sql/statements/create-external-language-transact-sql.md).
 - [Microsoft Extensibility SDK for Java](how-to/extensibility-sdk-java-sql-server.md)(Java용 Microsoft 확장성 SDK).
@@ -41,4 +41,4 @@ Microsoft는 외부 언어와 데이터 플랫폼 간의 통합을 계속 확장
 
 ## <a name="next-steps"></a>다음 단계
 
-+ [Windows에 SQL Server 언어 확장 설치](install/install-sql-server-language-extensions-on-windows.md) 또는 [Linux에 SQL Server 언어 확장 설치](../linux/sql-server-linux-setup-language-extensions.md)
++ [Windows에 SQL Server 언어 확장 설치](install/windows-java.md) 또는 [Linux에 SQL Server 언어 확장 설치](../linux/sql-server-linux-setup-language-extensions-java.md)

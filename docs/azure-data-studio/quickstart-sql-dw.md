@@ -9,14 +9,14 @@ ms.author: alayu
 ms.reviewer: alayu, jrasnick
 ms.custom: seodec18; seo-lt-2019
 ms.date: 10/15/2020
-ms.openlocfilehash: f0d6ba76868bb1b8a226145b2aa1306db46baa17
-ms.sourcegitcommit: 22102f25db5ccca39aebf96bc861c92f2367c77a
+ms.openlocfilehash: 1679f7416306b8dda564576779ae2e315f589311
+ms.sourcegitcommit: ae474d21db4f724523e419622ce79f611e956a22
 ms.translationtype: HT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 10/16/2020
-ms.locfileid: "92115905"
+ms.lasthandoff: 10/20/2020
+ms.locfileid: "92257335"
 ---
-# <a name="quickstart-use-azure-data-studio-to-connect-and-query-data-using-dedicated-sql-pool-in-azure-synapse-analytics"></a>빠른 시작: Azure Data Studio를 통해 Azure Synapse Analytics의 전용 SQL 풀을 사용하여 데이터 연결 및 쿼리
+# <a name="quickstart-use-azure-data-studio-to-connect-and-query-data-using-a-dedicated-sql-pool-in-azure-synapse-analytics"></a>빠른 시작: Azure Data Studio를 통해 Azure Synapse Analytics의 전용 SQL 풀을 사용하여 데이터 연결 및 쿼리
 
 이 빠른 시작에서는 Azure Data Studio를 사용하여 Azure Synapse Analytics에서 전용 SQL 풀에 연결하는 방법을 보여 줍니다.
 
@@ -42,7 +42,7 @@ Azure Data Studio를 통해 Azure Synapse Analytics 서버에 연결합니다.
 
    |   설정    | 제안 값 | Description |
    |--------------|-----------------|-------------| 
-   | **서버 이름** | 정규화된 서버 이름 | 예를 들어 **sqlpoolservername.database.windows.net**과 같은 이름이 표시됩니다. |
+   | **서버 이름** | 정규화된 서버 이름 | 예를 들어 **sqlpoolservername.database.windows.net** 과 같은 이름이 표시됩니다. |
    | **인증** | SQL 로그인| 이 자습서에서는 SQL 인증을 사용합니다. |
    | **사용자 이름** | 서버 관리자 계정 | 서버를 만들 때 지정한 계정입니다. |
    | **암호(SQL 로그인)** | 서버 관리자 계정의 암호 | 서버를 만들 때 지정한 암호입니다. |
@@ -56,9 +56,9 @@ Azure Data Studio를 통해 Azure Synapse Analytics 서버에 연결합니다.
 
 ## <a name="create-a-database-in-your-dedicated-sql-pool"></a>전용 SQL 풀에서 데이터베이스 만들기
 
-1. 개체 탐색기에서 서버를 마우스 오른쪽 단추로 클릭하고 **새 쿼리**를 선택합니다.
+1. 개체 탐색기에서 서버를 마우스 오른쪽 단추로 클릭하고 **새 쿼리** 를 선택합니다.
 
-2. 쿼리 편집기에 다음 코드 조각을 붙여넣고 **실행**을 선택합니다.
+2. 쿼리 편집기에 다음 코드 조각을 붙여넣고 **실행** 을 선택합니다.
 
    ```sql
     IF NOT EXISTS (
@@ -77,12 +77,12 @@ Azure Data Studio를 통해 Azure Synapse Analytics 서버에 연결합니다.
 
 쿼리 편집기는 여전히 *master* 데이터베이스에 연결되어 있지만 *TutorialDB* 데이터베이스에 테이블을 만들려고 합니다. 
 
-1. 연결 컨텍스트를 **TutorialDB**로 변경합니다.
+1. 연결 컨텍스트를 **TutorialDB** 로 변경합니다.
 
-2. 쿼리 편집기에 다음 코드 조각을 붙여넣고 **실행**을 선택합니다.
+2. 쿼리 편집기에 다음 코드 조각을 붙여넣고 **실행** 을 선택합니다.
 
    > [!NOTE]
-   > 편집기에서 이전 쿼리에 추가하거나 이전 쿼리를 덮어쓸 수 있습니다. **실행**을 선택하면 선택한 쿼리만 실행됩니다. 아무것도 선택하지 않은 경우 **실행**을 선택하면 편집기의 모든 쿼리가 실행됩니다.
+   > 편집기에서 이전 쿼리에 추가하거나 이전 쿼리를 덮어쓸 수 있습니다. **실행** 을 선택하면 선택한 쿼리만 실행됩니다. 아무것도 선택하지 않은 경우 **실행** 을 선택하면 편집기의 모든 쿼리가 실행됩니다.
 
    ```sql
    -- Create a new table called 'Customers' in schema 'dbo'
@@ -106,7 +106,7 @@ Azure Data Studio를 통해 Azure Synapse Analytics 서버에 연결합니다.
 
 ## <a name="insert-rows"></a>행 삽입
 
-1. 쿼리 편집기에 다음 코드 조각을 붙여넣고 **실행**을 선택합니다.
+1. 쿼리 편집기에 다음 코드 조각을 붙여넣고 **실행** 을 선택합니다.
 
    ```sql
    -- Insert rows into table 'Customers'
@@ -122,7 +122,7 @@ Azure Data Studio를 통해 Azure Synapse Analytics 서버에 연결합니다.
 
 ## <a name="view-the-result"></a>결과 보기
 
-1. 쿼리 편집기에 다음 코드 조각을 붙여넣고 **실행**을 선택합니다.
+1. 쿼리 편집기에 다음 코드 조각을 붙여넣고 **실행** 을 선택합니다.
 
    ```sql
    -- Select rows from table 'Customers'
@@ -139,5 +139,6 @@ Azure Data Studio를 통해 Azure Synapse Analytics 서버에 연결합니다.
 이 문서에서 만든 샘플 데이터베이스로 계속 작업을 수행하지 않으려는 경우 [리소스 그룹을 삭제](/azure/azure/synapse-analytics/sql-data-warehouse/create-data-warehouse-portal#clean-up-resources)합니다.
 
 ## <a name="next-steps"></a>다음 단계
+자세한 내용은 [Azure Data Studio를 사용하여 Synapse SQL에 연결](https://docs.microsoft.com/azure/synapse-analytics/sql/get-started-azure-data-studio)을 참조하세요.
 
 이제 Azure Synapse Analytics에 연결하고 쿼리를 실행했으므로 [코드 편집기 자습서](tutorial-sql-editor.md)를 사용해 보세요.

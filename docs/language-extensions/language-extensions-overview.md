@@ -9,12 +9,12 @@ ms.topic: overview
 ms.prod: sql
 ms.technology: language-extensions
 monikerRange: '>=sql-server-ver15||>=sql-server-linux-ver15||=sqlallproducts-allversions'
-ms.openlocfilehash: 09d5643b3a39493843adc0ad2da716b7fda1b332
-ms.sourcegitcommit: fe59f8dc27fd633f5dfce54519d6f5dcea577f56
+ms.openlocfilehash: c4482adb86f9a2f205bd64044a18f342cf3e13c5
+ms.sourcegitcommit: 43b92518c5848489d03c68505bd9905f8686cbc0
 ms.translationtype: HT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 10/09/2020
-ms.locfileid: "91934905"
+ms.lasthandoff: 10/17/2020
+ms.locfileid: "92154948"
 ---
 # <a name="what-is-sql-server-language-extensions"></a>SQL Server 언어 확장이란?
 [!INCLUDE [SQL Server 2019 and later](../includes/applies-to-version/sqlserver2019.md)]
@@ -42,5 +42,5 @@ SQL Server 2019에서는 Java, Python, R이 지원됩니다.
 
 + [SQL Server용 Python 사용자 지정 런타임](../machine-learning/install/custom-runtime-python.md) 설치
 + [SQL Server용 R 사용자 지정 런타임](../machine-learning/install/custom-runtime-r.md) 설치
-+ [Windows에 SQL Server 언어 확장 설치](install/install-sql-server-language-extensions-on-windows.md) 또는 [Linux에 SQL Server 언어 확장 설치](../linux/sql-server-linux-setup-language-extensions.md)
++ [Windows에 SQL Server 언어 확장 설치](install/windows-java.md) 또는 [Linux에 SQL Server 언어 확장 설치](../linux/sql-server-linux-setup-language-extensions-java.md)
 + [Java 용 Microsoft 확장성 SDK](how-to/extensibility-sdk-java-sql-server.md) 설치

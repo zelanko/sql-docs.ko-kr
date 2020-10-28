@@ -9,12 +9,12 @@ ms.date: 04/21/2020
 ms.topic: how-to
 ms.prod: sql
 ms.technology: big-data-cluster
-ms.openlocfilehash: 1dbe3505616fa95c429faf6d1f018f947bd60930
-ms.sourcegitcommit: 783b35f6478006d654491cb52f6edf108acf2482
+ms.openlocfilehash: 63086a762e8c55109a43a32e39868b65808108f9
+ms.sourcegitcommit: ae474d21db4f724523e419622ce79f611e956a22
 ms.translationtype: HT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 10/09/2020
-ms.locfileid: "91891033"
+ms.lasthandoff: 10/20/2020
+ms.locfileid: "92257093"
 ---
 # <a name="ad-mode-deployment-stopped---missing-reverse-lookup-zone-entry-for-dc"></a>AD 모드 배포 중지됨 - DC에 대한 역방향 조회 영역 항목이 없음
 
@@ -90,12 +90,12 @@ azdata bdc debug copy-logs -n mssql-cluster -c security-support
 로그를 추출한 다음, `\mssql-cluster\control-<identifier>\controller\control-rts5t-controller-stdout.log`를 찾습니다.
 
 > [!TIP]
-> 로그를 수집하는 방법은 여러 가지가 있습니다. `azdata`를 사용하여 로그를 복사하는 대신 Azure Data Studio에서 노트북을 사용할 수 있습니다.
+> 로그를 수집하는 방법은 여러 가지가 있습니다. [!INCLUDE [azure-data-cli-azdata](../includes/azure-data-cli-azdata.md)]를 사용하여 로그를 복사하는 대신 Azure Data Studio에서 노트북을 사용할 수 있습니다.
 > Azure Data Studio에서 Kubernetes 클러스터에 연결하고 적절한 문제 해결 노트북을 실행합니다. 노트북의 예는 다음과 같습니다.
 >
 > - TSG027 - 클러스터 배포 관찰
 > - TSG061 - BDC 네임스페이스의 Pod에 대한 모든 컨테이너 로그의 끝부분 가져오기
-> - TSG001 - `azdata` copy-logs 실행
+> - TSG001 - `azdata copy-logs` 실행
 >
 
 ## <a name="inspect-the-logs"></a>로그를 검사합니다.

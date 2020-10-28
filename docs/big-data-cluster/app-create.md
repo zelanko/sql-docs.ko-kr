@@ -10,12 +10,12 @@ ms.date: 12/13/2019
 ms.topic: conceptual
 ms.prod: sql
 ms.technology: big-data-cluster
-ms.openlocfilehash: 890b029833e7d34da7663b9f0e6ccfa63195c6d5
-ms.sourcegitcommit: c7f40918dc3ecdb0ed2ef5c237a3996cb4cd268d
+ms.openlocfilehash: 8e91315b5ec79c136b4d84a7fbc36a707cc3d82f
+ms.sourcegitcommit: ae474d21db4f724523e419622ce79f611e956a22
 ms.translationtype: HT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 10/05/2020
-ms.locfileid: "91725084"
+ms.lasthandoff: 10/20/2020
+ms.locfileid: "92257313"
 ---
 # <a name="how-to-deploy-an-app-on-sql-server-big-data-clusters"></a>SQL Server 빅 데이터 클러스터에 앱을 배포하는 방법
 
@@ -32,7 +32,7 @@ SQL Server BDC(빅 데이터 클러스터)에 배포된 애플리케이션은 �
 - 추가 애플리케이션 유형, 즉 SSIS(SQL Server Integration Services) 및 MLeap 호스팅을 지원합니다.
 - 애플리케이션 배포를 관리하기 위한 [Visual Studio Code 확장](app-deployment-extension.md).
 
-애플리케이션은 `azdata` 명령줄 유틸리티를 사용하여 배포 및 관리합니다. 이 문서에서는 명령줄에서 앱을 배포하는 방법의 예제를 제공합니다. Visual Studio Code에서 이를 사용하는 방법에 대해 알아보려면 [Visual Studio Code 확장](app-deployment-extension.md)을 참조하세요.
+애플리케이션은 [!INCLUDE [azure-data-cli-azdata](../includes/azure-data-cli-azdata.md)]를 사용하여 배포되고 관리됩니다. 이 문서에서는 명령줄에서 앱을 배포하는 방법의 예제를 제공합니다. Visual Studio Code에서 이를 사용하는 방법에 대해 알아보려면 [Visual Studio Code 확장](app-deployment-extension.md)을 참조하세요.
 
 지원되는 앱 유형은 다음과 같습니다.
 
@@ -44,11 +44,11 @@ SQL Server BDC(빅 데이터 클러스터)에 배포된 애플리케이션은 �
 ## <a name="prerequisites"></a>사전 요구 사항
 
 - [SQL Server 2019 빅 데이터 클러스터](deployment-guidance.md)
-- [azdata 명령줄 유틸리티](../azdata/install/deploy-install-azdata.md)
+- [[!INCLUDE [azure-data-cli-azdata](../includes/azure-data-cli-azdata.md)]](../azdata/install/deploy-install-azdata.md)
 
 ## <a name="capabilities"></a>기능
 
-SQL Server 2019에서 애플리케이션을 만들고, 삭제, 설명, 초기화, 나열, 실행 및 업데이트할 수 있습니다. 다음 표에서는 **azdata**와 함께 사용할 수 있는 애플리케이션 배포 명령을 설명합니다.
+SQL Server 2019에서 애플리케이션을 만들고, 삭제, 설명, 초기화, 나열, 실행 및 업데이트할 수 있습니다. 다음 표에서는 **azdata** 와 함께 사용할 수 있는 애플리케이션 배포 명령을 설명합니다.
 
 |명령 |Description |
 |:---|:---|
@@ -114,7 +114,7 @@ spec.yaml
 
 ## <a name="create-an-app"></a>앱 만들기
 
-애플리케이션을 만들려면 `app create` 명령과 함께 `azdata`를 사용합니다. 이 파일은 앱을 만들 때 사용한 머신에 로컬로 상주합니다.
+애플리케이션을 만들려면 `app create` 명령과 함께 [!INCLUDE [azure-data-cli-azdata](../includes/azure-data-cli-azdata.md)]를 사용합니다. 이 파일은 앱을 만들 때 사용한 머신에 로컬로 상주합니다.
 
 다음 구문을 사용하여 빅 데이터 클러스터에 새 앱을 만듭니다.
 

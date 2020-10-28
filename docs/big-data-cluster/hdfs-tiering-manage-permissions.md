@@ -9,12 +9,12 @@ ms.date: 11/04/2019
 ms.topic: conceptual
 ms.prod: sql
 ms.technology: big-data-cluster
-ms.openlocfilehash: 126bb1ae7daddbaeb4d0ab72440051807f71cd5c
-ms.sourcegitcommit: c7f40918dc3ecdb0ed2ef5c237a3996cb4cd268d
+ms.openlocfilehash: ef2a1097d07494ca74ed2afe50c93922de83838c
+ms.sourcegitcommit: ae474d21db4f724523e419622ce79f611e956a22
 ms.translationtype: HT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 10/05/2020
-ms.locfileid: "91725834"
+ms.lasthandoff: 10/20/2020
+ms.locfileid: "92257173"
 ---
 # <a name="manage-hdfs-permissions-for-big-data-clusters-2019"></a>[!INCLUDE[big-data-clusters-2019](../includes/ssbigdataclusters-ss-nover.md)]에 대한 HDFS 권한 관리
 
@@ -22,7 +22,7 @@ ms.locfileid: "91725834"
 
 파일 시스템으로서의 HDFS는 파일 권한을 위해 POSIX를 사용하는 Linux 기반 파일 시스템과 비슷합니다. HDFS는 기존의 POSIX 권한 모델 외에도 POSIX ACL(액세스 제어 목록)을 지원합니다. 자세한 내용은 [ACL에 관한 Apache Hadoop 문서](https://hadoop.apache.org/docs/current/hadoop-project-dist/hadoop-hdfs/HdfsPermissionsGuide.html#ACLs_.28Access_Control_Lists.29)를 참조하세요.
 
-이어지는 섹션에서는 `azdata` CLI를 사용하여 HDFS 파일 및 디렉터리 권한을 관리하는 방법을 설명하는 예제를 보여 줍니다.
+이후 섹션에서는 [!INCLUDE [azure-data-cli-azdata](../includes/azure-data-cli-azdata.md)]를 사용하여 HDFS 파일 및 디렉터리 권한을 관리하는 방법을 설명하는 예제를 보여 줍니다.
 
 ## <a name="prerequisites"></a>사전 요구 사항
 
@@ -31,7 +31,7 @@ ms.locfileid: "91725834"
   
 ## <a name="hdfs-shell"></a>HDFS 셸
 
-`azdata`의 `hdfs` 셸 기능을 사용하면 파일 및 디렉터리에 대한 HDFS 권한을 관리하는 명령을 셸에서 직접 실행할 수 있습니다. 기본 메커니즘은 WebHdfs 호출을 사용하여 명령을 실행합니다.
+[!INCLUDE [azure-data-cli-azdata](../includes/azure-data-cli-azdata.md)]의 `hdfs` 셸 기능을 사용하면 파일 및 디렉터리에 대한 HDFS 권한을 관리하는 명령을 셸에서 직접 실행할 수 있습니다. 기본 메커니즘은 WebHdfs 호출을 사용하여 명령을 실행합니다.
 
 다음 명령을 실행하면 셸이 열립니다.
 
@@ -72,7 +72,7 @@ acl modify: Change completed.
 }
 ```
 
-## <a name="create-a-directory-in-hdfs-using-azdata"></a>`azdata`를 사용하여 HDFS에 디렉터리 만들기
+## <a name="create-a-directory-in-hdfs-using-azure-data-cli-azdata"></a>[!INCLUDE [azure-data-cli-azdata](../includes/azure-data-cli-azdata.md)]를 사용하여 HDFS에 디렉터리 만들기
 
 경로 `/sales`에 디렉터리 `data`를 만듭니다.
 
@@ -110,7 +110,7 @@ azdata bdc hdfs chmod --path /sales/users --permission 1750
 
 ## <a name="setting-acls-on-files-and-directories"></a>파일 및 디렉터리에 ACL 설정
 
-HDFS에서 파일 및 디렉터리에 ACL을 설정하려면 `azdata` 명령을 사용합니다.
+HDFS에서 파일 및 디렉터리에 ACL을 설정하려면 [!INCLUDE [azure-data-cli-azdata](../includes/azure-data-cli-azdata.md)] 명령을 사용합니다.
 
 디렉터리에 ACL을 설정하고 명명된 사용자 *`tom`* 에게 디렉터리 *`data`* 에 대한 읽기, 쓰기 및 실행 권한을 부여합니다. 
 
@@ -133,6 +133,6 @@ azdata bdc hdfs acl set --path '/sale' --aclspec  'user::rw-,user:tom:rwx,group:
 
 ## <a name="next-steps"></a>다음 단계
 
-- [`azdata` 참조](../azdata/reference/reference-azdata.md)
+- [[!INCLUDE [azure-data-cli-azdata](../includes/azure-data-cli-azdata.md)] 참조](../azdata/reference/reference-azdata.md)
 
 - [[!INCLUDE[big-data-clusters-2019](../includes/ssbigdataclusters-ver15.md)]란 무엇인가요?](big-data-cluster-overview.md)

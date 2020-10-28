@@ -9,12 +9,12 @@ ms.date: 06/22/2020
 ms.topic: conceptual
 ms.prod: sql
 ms.technology: big-data-cluster
-ms.openlocfilehash: f0d19589c057df0af9ffea711edd8963bc381e2d
-ms.sourcegitcommit: da88320c474c1c9124574f90d549c50ee3387b4c
+ms.openlocfilehash: 7e3be3a3ea0d3f3b3d452bfea058ff85dd8a9141
+ms.sourcegitcommit: ae474d21db4f724523e419622ce79f611e956a22
 ms.translationtype: HT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 07/01/2020
-ms.locfileid: "85730681"
+ms.lasthandoff: 10/20/2020
+ms.locfileid: "92257253"
 ---
 # <a name="security-concepts-for-big-data-clusters-2019"></a>[!INCLUDE[big-data-clusters-2019](../includes/ssbigdataclusters-ss-nover.md)]의 보안 개념
 
@@ -37,7 +37,7 @@ ms.locfileid: "85730681"
 
 빅 데이터 클러스터에 액세스하는 5개 진입점이 있습니다.
 
-* 마스터 인스턴스 - SSMS 또는 Azure Data Studio 같은 데이터베이스 도구와 애플리케이션을 사용하여 클러스터의 SQL Server 마스터 인스턴스에 액세스할 수 있는 TDS 엔드포인트입니다. azdata에서 HDFS 또는 SQL Server 명령을 사용하는 경우 도구가 작업에 따라 다른 엔드포인트에 연결합니다.
+* 마스터 인스턴스 - SSMS 또는 Azure Data Studio 같은 데이터베이스 도구와 애플리케이션을 사용하여 클러스터의 SQL Server 마스터 인스턴스에 액세스할 수 있는 TDS 엔드포인트입니다. [!INCLUDE [azure-data-cli-azdata](../includes/azure-data-cli-azdata.md)]에서 HDFS 또는 SQL Server 명령을 사용하는 경우 도구가 작업에 따라 다른 엔드포인트에 연결합니다.
 
 * HDFS 파일, Spark(Knox)에 액세스하는 게이트웨이 - webHDFS 및 Spark와 같은 서비스에 액세스하기 위한 HTTPS 엔드포인트입니다.
 
@@ -59,16 +59,23 @@ ms.locfileid: "85730681"
 
 안전한 빅 데이터 클러스터는 SQL Server 및 HDFS/Spark 모두에서 인증 및 권한 부여 시나리오가 일관성 있게 지원됨을 의미합니다. 인증은 사용자 또는 서비스의 ID를 검증하고 본인이 맞는지 확인하는 프로세스입니다. 권한 부여는 요청하는 사용자의 ID에 따라 특정 리소스에 대한 액세스를 허용하거나 거부하는 작업을 말합니다. 이 단계는 인증을 통해 사용자를 확인한 후에 수행됩니다.
 
-빅 데이터 컨텍스트의 권한 부여는 일반적으로 사용자 ID를 특정 사용 권한에 연결하는 ACL(액세스 제어 목록)을 통해 수행됩니다. HDFS는 서비스 API, HDFS 파일 및 작업 실행에 대한 액세스를 제한하여 권한 부여를 지원합니다.
+빅 데이터 컨텍스트의 권한 부여는 사용자 ID를 특정 사용 권한에 연결하는 ACL(액세스 제어 목록)을 통해 수행됩니다. HDFS는 서비스 API, HDFS 파일 및 작업 실행에 대한 액세스를 제한하여 권한 부여를 지원합니다.
 
-## <a name="encryption-and-other-security-mechanisms"></a>암호화 및 기타 보안 메커니즘
+## <a name="encryption-in-flight-and-other-security-mechanisms"></a>전송 데이터 암호화 및 기타 보안 메커니즘
 
 클라이언트 간의 통신을 외부 엔드포인트로 암호화하고, 클러스터 내 구성 요소 간의 통신은 인증서를 사용하여 TLS/SSL로 보호됩니다.
 
 데이터 풀과 통신하는 SQL 마스터 인스턴스처럼 모든 SQL Server-SQL Server 간 통신은 SQL 로그인을 사용하여 보호됩니다.
 
 > [!IMPORTANT]
->  빅 데이터 클러스터는 etcd를 사용하여 자격 증명을 저장합니다. 모범 사례로서, Kubernetes 클러스터가 etcd 암호화를 사용하도록 구성되어 있는지 확인해야 합니다. 기본적으로 etcd에 저장된 비밀은 암호화되지 않습니다. Kubernetes 설명서에서는 이 관리 작업 https://kubernetes.io/docs/tasks/administer-cluster/kms-provider/ 및 https://kubernetes.io/docs/tasks/administer-cluster/encrypt-data/ 에 대한 세부 정보를 제공합니다.
+>  빅 데이터 클러스터는 `etcd`를 사용하여 자격 증명을 저장합니다. 모범 사례로서, Kubernetes 클러스터가 `etcd` 미사용 데이터 암호화를 사용하도록 해야 합니다. 기본적으로 `etcd`에 저장된 비밀은 암호화되지 않습니다. Kubernetes 설명서에서는 이 관리 작업 https://kubernetes.io/docs/tasks/administer-cluster/kms-provider/ 및 https://kubernetes.io/docs/tasks/administer-cluster/encrypt-data/ 에 대한 세부 정보를 제공합니다.
+
+## <a name="data-encryption-at-rest"></a>휴지 상태의 암호화
+
+SQL Server 빅 데이터 클러스터 미사용 데이터 암호화 기능에서는 SQL Server 및 HDFS 구성 요소에 대한 애플리케이션 수준 암호화의 핵심 시나리오를 지원합니다. 전체 기능 사용 가이드는[미사용 데이터 암호화 개념 및 구성 가이드](encryption-at-rest-concepts-and-configuration.md) 문서를 참조하세요.
+
+> [!IMPORTANT]
+> 볼륨 암호화는 모든 SQL Server 빅 데이터 클러스터 배포에 권장됩니다. Kubernetes 클러스터에서 구성된 고객 제공 스토리지 볼륨은 미사용 데이터 암호화에 대한 포괄적인 접근 방식으로 암호화되어야 합니다. SQL Server 빅 데이터 클러스터 미사용 데이터 암호화 기능은 추가 보안 계층으로, SQL Server 데이터 및 로그 파일의 애플리케이션 수준 암호화 및 HDFS 암호화 영역 지원을 제공합니다.
 
 
 ## <a name="basic-administrator-login"></a>기본 관리자 로그인

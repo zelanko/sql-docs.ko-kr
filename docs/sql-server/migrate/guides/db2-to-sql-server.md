@@ -13,12 +13,12 @@ helpviewer_keywords:
 - maximum number of processors supported
 author: MashaMSFT
 ms.author: mathoma
-ms.openlocfilehash: 1c7d4e0507667429e4f97674ef302a7d5aed8102
-ms.sourcegitcommit: b93beb4f03aee2c1971909cb1d15f79cd479a35c
+ms.openlocfilehash: 016d0e1a48e9f14356cae9dd4915fedd2b45374b
+ms.sourcegitcommit: ae474d21db4f724523e419622ce79f611e956a22
 ms.translationtype: HT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 09/29/2020
-ms.locfileid: "91510290"
+ms.lasthandoff: 10/20/2020
+ms.locfileid: "92258009"
 ---
 # <a name="migration-guide-db2-to-sql-server"></a>마이그레이션 가이드: DB2에서 SQL Server로 마이그레이션
 [!INCLUDE[sqlserver](../../../includes/applies-to-version/sql-asdb-asdbmi.md)]
@@ -33,7 +33,7 @@ ms.locfileid: "91510290"
 DB2 데이터베이스를 SQL Server로 마이그레이션하려면 다음을 수행해야 합니다.
 
 - 원본 환경이 지원되는지 확인해야 합니다.
-- [DB2용 SSMA(SQL Server Migration Assistant)](https://www.microsoft.com/download/details.aspx?id=54254)를 다운로드해야 합니다.
+- [DB2용 SSMA(SQL Server Migration Assistant)](https://www.microsoft.com/download/details.aspx?id=54254)
 
 
 
@@ -41,15 +41,15 @@ DB2 데이터베이스를 SQL Server로 마이그레이션하려면 다음을 �
 
 필수 조건을 충족하면 사용자 환경의 토폴로지를 검색하고 마이그레이션의 적합성을 평가할 준비가 된 것입니다. 
 
-### <a name="assess-and-convert"></a>평가 및 변환
+### <a name="assess"></a>평가 
 
 SSMA(SQL Server Migration Assistant)를 사용하여 평가를 만듭니다. 
 
 평가를 만들려면 다음 단계를 따릅니다.
 
 1. DB2용 SSMA(SQL Server Migration Assistant)를 엽니다. 
-1. **파일**을 선택한 다음, **새 프로젝트**를 선택합니다. 
-1. 프로젝트 이름과 프로젝트를 저장할 위치를 입력한 다음, 드롭다운에서 SQL Server 마이그레이션 대상을 선택합니다. **확인**을 선택합니다. 
+1. **파일** 을 선택한 다음, **새 프로젝트** 를 선택합니다. 
+1. 프로젝트 이름과 프로젝트를 저장할 위치를 입력한 다음, 드롭다운에서 SQL Server 마이그레이션 대상을 선택합니다. **확인** 을 선택합니다. 
 
    :::image type="content" source="media/db2-to-sql-server/new-project.png" alt-text="프로젝트 세부 정보를 제공하고 확인을 선택하여 저장":::
 
@@ -59,7 +59,7 @@ SSMA(SQL Server Migration Assistant)를 사용하여 평가를 만듭니다.
    :::image type="content" source="media/db2-to-sql-server/connect-to-db2.png" alt-text="프로젝트 세부 정보를 제공하고 확인을 선택하여 저장":::
 
 
-1. 마이그레이션할 DB2 스키마를 마우스 오른쪽 단추로 클릭한 다음, **보고서 만들기**를 선택합니다. 그러면 HTML 보고서가 생성됩니다. 또는 스키마를 선택한 후 탐색 모음에서 **보고서 만들기**를 선택할 수 있습니다. 
+1. 마이그레이션할 DB2 스키마를 마우스 오른쪽 단추로 클릭한 다음, **보고서 만들기** 를 선택합니다. 그러면 HTML 보고서가 생성됩니다. 또는 스키마를 선택한 후 탐색 모음에서 **보고서 만들기** 를 선택할 수 있습니다. 
 
    :::image type="content" source="media/db2-to-sql-server/create-report.png" alt-text="프로젝트 세부 정보를 제공하고 확인을 선택하여 저장":::
 
@@ -74,28 +74,28 @@ SSMA(SQL Server Migration Assistant)를 사용하여 평가를 만듭니다.
 
 기본 데이터 형식 매핑의 유효성을 검사하고 필요한 경우 요구 사항에 따라 해당 매핑을 변경합니다. 이렇게 하려면 다음 단계를 따르십시오. 
 
-1. 메뉴에서 **도구**를 선택합니다. 
-1. **프로젝트 설정**을 선택합니다. 
+1. 메뉴에서 **도구** 를 선택합니다. 
+1. **프로젝트 설정** 을 선택합니다. 
 1. **형식 매핑** 탭을 선택합니다. 
 
    :::image type="content" source="media/db2-to-sql-server/type-mapping.png" alt-text="프로젝트 세부 정보를 제공하고 확인을 선택하여 저장":::
 
-1. **DB2 메타데이터 탐색기**에서 테이블을 선택하여 각 테이블의 형식 매핑을 변경할 수 있습니다. 
+1. **DB2 메타데이터 탐색기** 에서 테이블을 선택하여 각 테이블의 형식 매핑을 변경할 수 있습니다. 
 
-### <a name="schema-conversion"></a>스키마 변환 
+### <a name="convert-schema"></a>스키마 변환 
 
 스키마를 변환하려면 다음 단계를 따릅니다.
 
-1. (선택 사항) 동적 또는 임시 쿼리를 문에 추가합니다. 노드를 마우스 오른쪽 단추로 클릭한 다음, **문 추가**를 선택합니다. 
-1. **SQL Server에 연결**을 선택합니다. 
+1. (선택 사항) 동적 또는 임시 쿼리를 문에 추가합니다. 노드를 마우스 오른쪽 단추로 클릭한 다음, **문 추가** 를 선택합니다. 
+1. **SQL Server에 연결** 을 선택합니다. 
     1. 연결 세부 정보를 입력하여 SQL Server 인스턴스에 연결합니다. 
     1. 대상 서버에서 기존 데이터베이스에 연결하도록 선택하거나, 새 이름을 입력하여 대상 서버에 새 데이터베이스를 만듭니다. 
-    1. **연결**을 선택합니다. 
+    1. **연결** 을 선택합니다. 
 
    :::image type="content" source="media/db2-to-sql-server/connect-to-sql-server.png" alt-text="프로젝트 세부 정보를 제공하고 확인을 선택하여 저장":::
 
 
-1. 스키마를 마우스 오른쪽 단추로 클릭한 다음, **스키마 변환**을 선택합니다. 또는 스키마를 선택한 후 맨 위 탐색 모음에서 **스키마 변환**을 선택할 수 있습니다. 
+1. 스키마를 마우스 오른쪽 단추로 클릭한 다음, **스키마 변환** 을 선택합니다. 또는 스키마를 선택한 후 맨 위 탐색 모음에서 **스키마 변환** 을 선택할 수 있습니다. 
 
    :::image type="content" source="media/db2-to-sql-server/convert-schema.png" alt-text="프로젝트 세부 정보를 제공하고 확인을 선택하여 저장":::
 
@@ -103,7 +103,7 @@ SSMA(SQL Server Migration Assistant)를 사용하여 평가를 만듭니다.
 
    :::image type="content" source="media/db2-to-sql-server/compare-review-schema-structure.png" alt-text="프로젝트 세부 정보를 제공하고 확인을 선택하여 저장":::
 
-1. 오프라인 스키마 수정 연습을 위해 프로젝트를 로컬로 저장합니다. **파일** 메뉴에서 **프로젝트 저장**을 선택합니다. 
+1. 오프라인 스키마 수정 연습을 위해 프로젝트를 로컬로 저장합니다. **파일** 메뉴에서 **프로젝트 저장** 을 선택합니다. 
 
 
 ## <a name="migrate"></a>마이그레이션
@@ -112,16 +112,16 @@ SSMA(SQL Server Migration Assistant)를 사용하여 평가를 만듭니다.
 
 스키마를 게시하고 데이터를 마이그레이션하려면 다음 단계를 따릅니다.
 
-1. 스키마 게시: **SQL Server 메타데이터 탐색기**의 **데이터베이스** 노드에서 데이터베이스를 마우스 오른쪽 단추로 클릭하고 **데이터베이스와 동기화**를 선택합니다.
+1. 스키마 게시: **SQL Server 메타데이터 탐색기** 의 **데이터베이스** 노드에서 데이터베이스를 마우스 오른쪽 단추로 클릭하고 **데이터베이스와 동기화** 를 선택합니다.
 
    :::image type="content" source="media/db2-to-sql-server/synchronize-with-database.png" alt-text="프로젝트 세부 정보를 제공하고 확인을 선택하여 저장":::
 
-1. 데이터 마이그레이션: **DB2 메타데이터 탐색기**에서 스키마를 마우스 오른쪽 단추로 클릭하고 **데이터 마이그레이션**을 선택합니다. 
+1. 데이터 마이그레이션: **DB2 메타데이터 탐색기** 에서 스키마를 마우스 오른쪽 단추로 클릭하고 **데이터 마이그레이션** 을 선택합니다. 
 
    :::image type="content" source="media/db2-to-sql-server/migrate-data.png" alt-text="프로젝트 세부 정보를 제공하고 확인을 선택하여 저장":::
 
 1. DB2 및 SQL Server 인스턴스의 연결 세부 정보를 둘 다 제공합니다. 
-1. **데이터 마이그레이션 보고서**를 확인합니다. 
+1. **데이터 마이그레이션 보고서** 를 확인합니다. 
 
    :::image type="content" source="media/db2-to-sql-server/data-migration-report.png" alt-text="프로젝트 세부 정보를 제공하고 확인을 선택하여 저장":::
 
@@ -141,10 +141,10 @@ SSMA(SQL Server Migration Assistant)를 사용하여 평가를 만듭니다.
 
 데이터베이스 마이그레이션의 테스트 접근 방식은 다음 작업으로 구성됩니다.
 
-1. **유효성 검사 테스트 개발**: 데이터베이스 마이그레이션을 테스트하려면 SQL 쿼리를 사용해야 합니다. 원본 데이터베이스와 대상 데이터베이스 둘 다에서 실행할 유효성 검사 쿼리를 만들어야 합니다. 유효성 검사 쿼리는 정의한 범위를 포함해야 합니다.
-1. **테스트 환경 설정**: 테스트 환경에는 원본 데이터베이스와 대상 데이터베이스의 복사본이 포함되어야 합니다. 테스트 환경을 격리해야 합니다.
-1. **유효성 검사 테스트 실행**: 원본 및 대상에서 유효성 검사 테스트를 실행한 다음, 결과를 분석합니다.
-1. **성능 테스트 실행**: 원본 및 대상에서 성능 테스트를 실행한 다음, 결과를 분석하고 비교합니다.
+1. **유효성 검사 테스트 개발** : 데이터베이스 마이그레이션을 테스트하려면 SQL 쿼리를 사용해야 합니다. 원본 데이터베이스와 대상 데이터베이스 둘 다에서 실행할 유효성 검사 쿼리를 만들어야 합니다. 유효성 검사 쿼리는 정의한 범위를 포함해야 합니다.
+1. **테스트 환경 설정** : 테스트 환경에는 원본 데이터베이스와 대상 데이터베이스의 복사본이 포함되어야 합니다. 테스트 환경을 격리해야 합니다.
+1. **유효성 검사 테스트 실행** : 원본 및 대상에서 유효성 검사 테스트를 실행한 다음, 결과를 분석합니다.
+1. **성능 테스트 실행** : 원본 및 대상에서 성능 테스트를 실행한 다음, 결과를 분석하고 비교합니다.
 
    > [!NOTE]
    > 마이그레이션 후 유효성 검사 테스트를 개발하고 실행하는 데 도움이 필요한 경우 파트너 [QuerySurge](https://www.querysurge.com/company/partners/microsoft)에서 제공하는 데이터 품질 솔루션을 사용하는 것이 좋습니다. 

@@ -1,25 +1,25 @@
 ---
-title: Azdata 설치
+title: Azure Data CLI(azdata) 설치
 titleSuffix: ''
-description: azdata 도구를 설치하는 방법을 알아봅니다.
+description: Azure Data CLI(azdata) 도구를 설치하는 방법에 대해 알아봅니다.
 author: MikeRayMSFT
 ms.author: mikeray
 ms.reviewer: mihaelab
 ms.date: 01/07/2020
 ms.topic: conceptual
 ms.prod: sql
-ms.openlocfilehash: 83da4e1554e1a6fa112c6fc8f629d30cbcb97d4d
-ms.sourcegitcommit: c7f40918dc3ecdb0ed2ef5c237a3996cb4cd268d
+ms.openlocfilehash: 82aa3a2795328804a10a76e9ecd8af80f3bf7152
+ms.sourcegitcommit: ae474d21db4f724523e419622ce79f611e956a22
 ms.translationtype: HT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 10/05/2020
-ms.locfileid: "91725259"
+ms.lasthandoff: 10/20/2020
+ms.locfileid: "92257423"
 ---
-# <a name="install-azdata"></a>`azdata` 설치
+# <a name="install-azure-data-cli-azdata"></a>[!INCLUDE [azure-data-cli-azdata](../../includes/azure-data-cli-azdata.md)] 설치
 
 [!INCLUDE[azdata](../../includes/applies-to-version/azdata.md)]
 
-`azdata`는 REST API를 통해 데이터 서비스를 부트스트랩하고 관리할 수 있도록 Python으로 작성된 명령줄 유틸리티입니다. 
+[!INCLUDE [azure-data-cli-azdata](../../includes/azure-data-cli-azdata.md)]는 REST API를 통해 데이터 서비스를 부트스트랩하고 관리할 수 있도록 Python으로 작성된 명령줄 유틸리티입니다. 
 
 ## <a name="find-latest-version"></a>최신 버전 찾기
 

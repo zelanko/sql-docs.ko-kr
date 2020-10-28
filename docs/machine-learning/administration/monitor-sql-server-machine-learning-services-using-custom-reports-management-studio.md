@@ -3,21 +3,21 @@ title: 사용자 지정 보고서를 사용하여 스크립트 모니터링
 description: SSMS(SQL Server Management Studio)의 사용자 지정 보고서를 사용하여 외부 스크립트(Python 및 R)의 실행, 사용된 리소스, 문제 진단 및 SQL Server Machine Learning Services의 성능 조정을 모니터링합니다.
 ms.prod: sql
 ms.technology: machine-learning-services
-ms.date: 09/17/2019
+ms.date: 10/14/2020
 ms.topic: how-to
 author: dphansen
 ms.author: davidph
 ms.custom: seo-lt-2019
-monikerRange: '>=sql-server-2016||>=sql-server-linux-ver15||=sqlallproducts-allversions'
-ms.openlocfilehash: 94ca6070ec0b4558ab907f6945ac57dc9bc9ab5f
-ms.sourcegitcommit: 9122251ab8bbd46ea3c699e741d6842c995195fa
+monikerRange: '>=sql-server-2016||>=sql-server-linux-ver15||=azuresqldb-mi-current||=sqlallproducts-allversions'
+ms.openlocfilehash: ed72d25320caef7e946ffc317541665ca37c5b6d
+ms.sourcegitcommit: 22102f25db5ccca39aebf96bc861c92f2367c77a
 ms.translationtype: HT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 10/08/2020
-ms.locfileid: "91847373"
+ms.lasthandoff: 10/16/2020
+ms.locfileid: "92115396"
 ---
 # <a name="monitor-python-and-r-script-execution-using-custom-reports-in-sql-server-management-studio"></a>SQL Server Management Studio에서 사용자 지정 보고서를 사용하여 Python 및 R 스크립트 실행 모니터링
-[!INCLUDE [SQL Server 2016 and later](../../includes/applies-to-version/sqlserver2016.md)]
+[!INCLUDE [SQL Server 2016 SQL MI](../../includes/applies-to-version/sqlserver2016-asdbmi.md)]
 
 [SSMS(SQL Server Management Studio)](../../ssms/download-sql-server-management-studio-ssms.md)의 사용자 지정 보고서를 사용하여 외부 스크립트(Python 및 R) 실행과 사용된 리소스를 모니터링하고, 문제를 진단하고, [SQL Server Machine Learning Services](../sql-server-machine-learning-services.md)의 성능을 튜닝할 수 있습니다.
 
@@ -41,9 +41,14 @@ SQL Server Management Studio의 보고서에 대한 자세한 내용은 [Managem
 
 1. GitHub에서 SQL Server Machine Learning Services에 대한 [SSMS 사용자 지정 보고서](https://github.com/Microsoft/sql-server-samples/tree/master/samples/features/machine-learning-services/ssms-custom-reports)를 다운로드합니다.
 
+   ::: moniker range="=azuresqldb-mi-current||=sqlallproducts-allversions"
+   >[!NOTE]
+   > **ML Services - 인스턴스 구성** 사용자 지정 보고서는 SQL Managed Instance에서 지원되지 않습니다.
+   ::: moniker-end
+
 2. Management Studio에 보고서 복사
 
-    1. SQL Server Management Studio에 사용되는 사용자 지정 보고서 폴더를 찾습니다. 기본적으로 사용자 지정 보고서는이 폴더에 저장됩니다(여기서 **user_name**은 Windows 사용자 이름임).
+    1. SQL Server Management Studio에 사용되는 사용자 지정 보고서 폴더를 찾습니다. 기본적으로 사용자 지정 보고서는이 폴더에 저장됩니다(여기서 **user_name** 은 Windows 사용자 이름임).
 
         `C:\Users\user_name\Documents\SQL Server Management Studio\Custom Reports`
 
@@ -55,11 +60,11 @@ SQL Server Management Studio의 보고서에 대한 자세한 내용은 [Managem
 
     1. 보고서를 실행할 인스턴스의 **데이터베이스** 노드를 Management Studio에서 마우스 오른쪽 단추로 클릭합니다.
 
-    2. **보고서**를 클릭하고 **사용자 지정 보고서**를 클릭합니다.
+    2. **보고서** 를 클릭하고 **사용자 지정 보고서** 를 클릭합니다.
 
     3. **파일 열기** 대화 상자에서 사용자 지정 보고서 폴더를 찾습니다.
 
-    4. 다운로드한 RDL 파일 중 하나를 선택한 다음 **열기**를 클릭합니다.
+    4. 다운로드한 RDL 파일 중 하나를 선택한 다음 **열기** 를 클릭합니다.
 
 ## <a name="reports"></a>보고서
 

@@ -9,25 +9,25 @@ ms.date: 06/22/2020
 ms.topic: conceptual
 ms.prod: sql
 ms.technology: big-data-cluster
-ms.openlocfilehash: 48a2c99a029517ebbab24b017bbaeba906b1c6cb
-ms.sourcegitcommit: c7f40918dc3ecdb0ed2ef5c237a3996cb4cd268d
+ms.openlocfilehash: cef348aee2b917b0a6afd61d30b5e4f7fa7da665
+ms.sourcegitcommit: ae474d21db4f724523e419622ce79f611e956a22
 ms.translationtype: HT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 10/05/2020
-ms.locfileid: "91725867"
+ms.lasthandoff: 10/20/2020
+ms.locfileid: "92257204"
 ---
 # <a name="configure-deployment-settings-for-cluster-resources-and-services"></a>클러스터 리소스 및 서비스에 대한 배포 설정 구성
 
 [!INCLUDE[SQL Server 2019](../includes/applies-to-version/sqlserver2019.md)]
 
-`azdata` 관리 도구에 기본적으로 제공되는 미리 정의된 구성 프로필 세트에서 시작하여 BDC 워크로드 요구 사항에 더 잘 맞도록 기본 설정을 쉽게 수정할 수 있습니다. 구성 파일의 구조를 사용하면 리소스의 각 서비스에 대한 설정을 세부적으로 업데이트할 수 있습니다.
+[!INCLUDE [azure-data-cli-azdata](../includes/azure-data-cli-azdata.md)] 관리 도구에 기본적으로 제공되는 미리 정의된 구성 프로필 세트에서 시작하여 BDC 워크로드 요구 사항에 더 잘 맞도록 기본 설정을 쉽게 수정할 수 있습니다. 구성 파일의 구조를 사용하면 리소스의 각 서비스에 대한 설정을 세부적으로 업데이트할 수 있습니다.
 
 빅 데이터 클러스터 구성에 대한 개요는 13분 분량의 다음 동영상을 시청하세요.
 
 > [!VIDEO https://channel9.msdn.com/Shows/Data-Exposed/Big-Data-Cluster-Configuration/player?WT.mc_id=dataexposed-c9-niner]
 
 > [!TIP]
-> 고가용성 서비스를 배포하는 방법에 대한 자세한 내용은 [SQL Server 마스터](deployment-high-availability.md) 또는 [HDFS 이름 노드](deployment-high-availability-hdfs-spark.md)와 같은 중요 업무용 구성 요소에 **고가용성**을 구성하는 방법에 대한 문서를 참조하세요.
+> 고가용성 서비스를 배포하는 방법에 대한 자세한 내용은 [SQL Server 마스터](deployment-high-availability.md) 또는 [HDFS 이름 노드](deployment-high-availability-hdfs-spark.md)와 같은 중요 업무용 구성 요소에 **고가용성** 을 구성하는 방법에 대한 문서를 참조하세요.
 
 또한 리소스 수준 구성을 설정하거나 리소스의 모든 서비스에 대한 구성을 업데이트할 수도 있습니다. `bdc.json` 구조에 대한 요약은 다음과 같습니다.
 
@@ -648,7 +648,7 @@ ElasticSearch를 실행하는 컨테이너를 특권 모드에서 실행되지 �
 }
 ```
 
-`control.json`을 수동으로 편집하고 위의 섹션을 `spec`에 추가하거나, 아래와 같이 `elasticsearch-patch.json` 패치 파일을 만들고 `azdata` CLI를 사용하여 `control.json` 파일을 패치할 수 있습니다.
+`control.json`을 수동으로 편집하고 위의 섹션을 `spec`에 추가하거나, 아래와 같이 `elasticsearch-patch.json` 패치 파일을 만들고 [!INCLUDE [azure-data-cli-azdata](../includes/azure-data-cli-azdata.md)]를 사용하여 `control.json` 파일을 패치할 수 있습니다.
 
 ```json
 {
@@ -677,7 +677,7 @@ azdata bdc config patch --config-file custom-bdc/control.json --patch-file elast
 
 ## <a name="turn-pods-and-nodes-metrics-collection-onoff"></a>Pod 및 노드 메트릭 수집 설정/해제
 
-SQL Server 2019 CU5에서는 Pod 및 노드 메트릭의 수집을 제어하는 두 가지 기능 스위치를 사용하도록 설정했습니다. Kubernetes 인프라를 모니터링하기 위해 다른 솔루션을 사용하는 경우 *control.json* 배포 구성 파일에서 *allowNodeMetricsCollection* 및 *allowPodMetricsCollection*을 *false*로 설정하면 기본 제공되는 Pod 및 호스트 노드 메트릭 수집을 해제할 수 있습니다. OpenShift 환경의 경우 Pod 및 노드 메트릭을 수집하려면 권한 기능이 필요하므로 기본 제공 배포 프로필에서 이 설정은 기본적으로 *false*로 설정됩니다.
+SQL Server 2019 CU5에서는 Pod 및 노드 메트릭의 수집을 제어하는 두 가지 기능 스위치를 사용하도록 설정했습니다. Kubernetes 인프라를 모니터링하기 위해 다른 솔루션을 사용하는 경우 *control.json* 배포 구성 파일에서 *allowNodeMetricsCollection* 및 *allowPodMetricsCollection* 을 *false* 로 설정하면 기본 제공되는 Pod 및 호스트 노드 메트릭 수집을 해제할 수 있습니다. OpenShift 환경의 경우 Pod 및 노드 메트릭을 수집하려면 권한 기능이 필요하므로 기본 제공 배포 프로필에서 이 설정은 기본적으로 *false* 로 설정됩니다.
 *azdata* CLI를 사용하여 사용자 지정 구성 파일에서 이 설정의 값을 업데이트하려면 다음 명령을 실행합니다.
 
 ```bash

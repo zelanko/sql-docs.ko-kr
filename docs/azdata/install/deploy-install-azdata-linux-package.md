@@ -1,6 +1,6 @@
 ---
-title: apt를 사용하여 azdata 설치
-description: apt를 사용하여 azdata 도구를 설치하는 방법을 알아봅니다.
+title: apt를 사용하여 Azure Data CLI(azdata) 설치
+description: apt를 사용하여 Azure Data CLI(azdata) 도구를 설치하는 방법을 알아봅니다.
 author: MikeRayMSFT
 ms.author: mikeray
 ms.reviewer: mihaelab
@@ -8,14 +8,14 @@ ms.date: 09/30/2020
 ms.topic: conceptual
 ms.prod: sql
 ms.technology: big-data-cluster
-ms.openlocfilehash: 0d268bc5ed31f844c28499b95054e5edbbd14848
-ms.sourcegitcommit: c7f40918dc3ecdb0ed2ef5c237a3996cb4cd268d
+ms.openlocfilehash: 2f248978e09be4670d702805873a5ae6f4f7c9de
+ms.sourcegitcommit: ae474d21db4f724523e419622ce79f611e956a22
 ms.translationtype: HT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 10/05/2020
-ms.locfileid: "91725294"
+ms.lasthandoff: 10/20/2020
+ms.locfileid: "92257466"
 ---
-# <a name="install-azdata-with-apt"></a>apt를 사용하여 `azdata` 설치
+# <a name="install-azure-data-cli-azdata-with-apt"></a>apt를 사용하여 [!INCLUDE [azure-data-cli-azdata](../../includes/azure-data-cli-azdata.md)] 설치
 
 [!INCLUDE[azdata](../../includes/applies-to-version/azdata.md)]
 

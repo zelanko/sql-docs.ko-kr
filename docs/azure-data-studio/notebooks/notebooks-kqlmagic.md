@@ -9,16 +9,16 @@ ms.author: maghan
 ms.reviewer: jukoesma
 ms.custom: ''
 ms.date: 04/27/2020
-ms.openlocfilehash: 61b87d2dae44f30f84b513f6809ba8597de7712f
-ms.sourcegitcommit: 8f062015c2a033f5a0d805ee4adabbe15e7c8f94
+ms.openlocfilehash: 7f77f26ffbaa0dab14e41654fdcddda3dd4ab278
+ms.sourcegitcommit: bd3a135f061e4a49183bbebc7add41ab11872bae
 ms.translationtype: HT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 09/25/2020
-ms.locfileid: "91226973"
+ms.lasthandoff: 10/21/2020
+ms.locfileid: "92300482"
 ---
 # <a name="kqlmagic-in-azure-data-studio"></a>Azure Data Studio의 Kqlmagic
 
-**Kqlmagic**은 **[Azure Data Studio Notebook](./notebooks-guidance.md)** 에서 Python 커널의 기능을 확장하는 명령입니다. Python과 **[KQL(Kusto 쿼리 언어)](/azure/data-explorer/kusto/query)** 을 결합하여, `render` 명령이 통합된 Plot.ly 라이브러리를 사용하여 데이터를 쿼리하고 시각화할 수 있습니다. Kqlmagic은 하나의 위치에서 Notebook, 데이터 분석 및 풍부한 Python 기능이라는 장점을 제공합니다. Kqlmagic이 지원되는 데이터 원본에는 **[Azure Data Explorer](/azure/data-explorer/data-explorer-overview)** , **[Application Insights](/azure/azure-monitor/app/app-insights-overview)** , **[Azure Monitor 로그](/azure/azure-monitor/platform/data-platform-logs)** 등이 있습니다.
+**Kqlmagic** 은 **[Azure Data Studio Notebook](./notebooks-guidance.md)** 에서 Python 커널의 기능을 확장하는 명령입니다. Python과 **[KQL(Kusto 쿼리 언어)](/azure/data-explorer/kusto/query)** 을 결합하여, `render` 명령이 통합된 Plot.ly 라이브러리를 사용하여 데이터를 쿼리하고 시각화할 수 있습니다. Kqlmagic은 하나의 위치에서 Notebook, 데이터 분석 및 풍부한 Python 기능이라는 장점을 제공합니다. Kqlmagic이 지원되는 데이터 원본에는 **[Azure Data Explorer](/azure/data-explorer/data-explorer-overview)** , **[Application Insights](/azure/azure-monitor/app/app-insights-overview)** , **[Azure Monitor 로그](/azure/azure-monitor/platform/data-platform-logs)** 등이 있습니다.
 
 이 문서에서는 Azure Data Studio에서 Azure Data Explorer 클러스터, Application Insights 로그 및 Azure Monitor 로그용 Kqlmagic 확장을 사용하여 Notebook을 만들고 실행하는 방법을 보여 줍니다.
 
@@ -31,11 +31,11 @@ ms.locfileid: "91226973"
 
 이 섹션의 단계는 모두 Azure Data Studio Notebook에서 실행됩니다.
 
-1. 새 Notebook을 만들고 **커널**을 *Python 3*으로 변경합니다.
+1. 새 Notebook을 만들고 **커널** 을 *Python 3* 으로 변경합니다.
 
    ![새 Notebook](media/notebooks-kqlmagic/install-new-notebook.png)
 
-2. 메시지가 표시되면 **예**를 선택하여 Python 패키지를 업그레이드합니다.
+2. 메시지가 표시되면 **예** 를 선택하여 Python 패키지를 업그레이드합니다.
 
    ![예](media/notebooks-kqlmagic/install-python-yes.png)
 
@@ -90,7 +90,7 @@ ms.locfileid: "91226973"
    > [!Note]
    > Azure Data Studio에서 새 Notebook을 만들 때마다 Kqlmagic 확장을 로드해야 합니다.
 
-1. **커널**이 *Python3*으로 설정되었는지 확인합니다.
+1. **커널** 이 *Python3* 으로 설정되었는지 확인합니다.
 
    ![커널 변경](media/notebooks-kqlmagic/change-kernel.png)
 
@@ -112,7 +112,7 @@ ms.locfileid: "91226973"
     > 고유의 ADX 클러스터를 사용하는 경우 다음과 같이 연결 문자열에서 지역을 포함해야 합니다.   
     ```%kql azuredataexplorer://code;cluster='mycluster.westus';database='mykustodb'```
 
-   인증에는 디바이스 로그인을 사용합니다. 출력에서 코드를 복사하고 **인증**을 선택하면 열리는 브라우저에 코드를 붙여넣습니다. 인증에 성공하면 Azure Data Studio로 돌아가서 스크립트의 나머지 부분을 계속 진행할 수 있습니다.
+   인증에는 디바이스 로그인을 사용합니다. 출력에서 코드를 복사하고 **인증** 을 선택하면 열리는 브라우저에 코드를 붙여넣습니다. 인증에 성공하면 Azure Data Studio로 돌아가서 스크립트의 나머지 부분을 계속 진행할 수 있습니다.
 
    ![Azure Data Explorer 인증](media/notebooks-kqlmagic/ade-auth.png)
 
@@ -157,7 +157,7 @@ ms.locfileid: "91226973"
 
 ### <a name="load-and-authenticate-kqlmagic-for-application-insights"></a><a name="appin-load-auth"></a> Application Insights용 Kqlmagic 로드 및 인증
 
-1. **커널**이 *Python3*으로 설정되었는지 확인합니다.
+1. **커널** 이 *Python3* 으로 설정되었는지 확인합니다.
 
    ![커널](media/notebooks-kqlmagic/change-kernel.png)
 
@@ -212,7 +212,7 @@ ms.locfileid: "91226973"
 
 ### <a name="load-and-authenticate-kqlmagic-for-azure-monitor-logs"></a><a name="aml-load-auth"></a> Azure Monitor 로그용 Kqlmagic 로드 및 인증
 
-1. **커널**이 *Python3*으로 설정되었는지 확인합니다.
+1. **커널** 이 *Python3* 으로 설정되었는지 확인합니다.
 
    ![변경](media/notebooks-kqlmagic/change-kernel.png)
 
@@ -254,8 +254,10 @@ ms.locfileid: "91226973"
 
 Notebook 및 Kqlmagic에 대한 자세한 정보:
 
+- [Azure Data Studio용 Kusto(KQL) 확장(미리 보기)](https://docs.microsoft.com/sql/azure-data-studio/extensions/kusto-extension)
+- [Kusto(KQL) Notebook(미리 보기) 만들기 및 실행](https://docs.microsoft.com/sql/azure-data-studio/notebooks/notebooks-kusto-kernel)
 - [Azure Data Explorer에서 Jupyter Notebook 및 kqlmagic 확장을 사용하여 데이터 분석하기](/azure/data-explorer/Kqlmagic)
-- [Extension (Magic) to Jupyter notebook and Jupyter lab, that enable notebook experience working with Kusto, Application Insights, and LogAnalytics data](https://github.com/Microsoft/jupyter-Kqlmagic)(Kusto, Application Insights 및 LogAnalytics 데이터로 작업할 수 있는 Notebook 환경을 지원하는 Jupyter Notebook 및 Jupyter Lab으로 확장(매직))
+- Kusto, Application Insights 및 LogAnalytics 데이터로 작업할 수 있는 Notebook 환경을 지원하는 [Jupyter Notebook 및 Jupyter Lab으로 확장(Magic)](https://github.com/Microsoft/jupyter-Kqlmagic).
 - [Kqlmagic](https://pypi.org/project/Kqlmagic/)
 - [KustoMagicSamples](https://notebooks.azure.com/RknDzgn/projects/KustoMagicSamples/html/Getting%20Started%20with%20Kqlmagic%20on%20Azure%20Data%20Explorer-Copy.ipynb)
 - [Azure Data Studio에서 Notebook을 사용하는 방법](./notebooks-guidance.md)

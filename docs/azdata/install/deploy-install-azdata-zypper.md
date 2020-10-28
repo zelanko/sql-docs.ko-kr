@@ -1,7 +1,7 @@
 ---
-title: zypper를 사용하여 azdata 설치
+title: zypper를 사용하여 Azure Data CLI(azdata) 설치
 titleSuffix: ''
-description: zypper를 사용하여 azdata 도구를 설치하는 방법을 알아봅니다.
+description: zypper를 사용하여 Azure Data CLI(azdata) 도구를 설치하는 방법을 알아봅니다.
 author: MikeRayMSFT
 ms.author: mikeray
 ms.reviewer: mihaelab
@@ -9,14 +9,14 @@ ms.date: 09/30/2020
 ms.topic: conceptual
 ms.prod: sql
 ms.technology: big-data-cluster
-ms.openlocfilehash: ec87d5739e3707c056f7945a2c882eb00700464d
-ms.sourcegitcommit: c7f40918dc3ecdb0ed2ef5c237a3996cb4cd268d
+ms.openlocfilehash: d43a1f9c65aa17fae3d262a51f45105b5f583cdd
+ms.sourcegitcommit: ae474d21db4f724523e419622ce79f611e956a22
 ms.translationtype: HT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 10/05/2020
-ms.locfileid: "91725267"
+ms.lasthandoff: 10/20/2020
+ms.locfileid: "92257516"
 ---
-# <a name="install-azdata-with-zypper"></a>zypper를 사용하여 `azdata` 설치
+# <a name="install-azure-data-cli-azdata-with-zypper"></a>zypper를 사용하여 [!INCLUDE [azure-data-cli-azdata](../../includes/azure-data-cli-azdata.md)] 설치
 
 [!INCLUDE[azdata](../../includes/applies-to-version/azdata.md)]
 

@@ -3,24 +3,24 @@ title: Oracle에서 외부 데이터 쿼리
 titleSuffix: SQL Server big data clusters
 description: 이 자습서에서는 SQL Server 2019 빅 데이터 클러스터에서 Oracle 데이터를 쿼리하는 방법을 보여줍니다. Oracle에서 데이터에 대해 외부 테이블을 만든 다음, 쿼리를 실행합니다.
 author: MikeRayMSFT
-ms.author: mikeray
-ms.reviewer: ''
-ms.date: 08/21/2019
+ms.author: dacoelho
+ms.reviewer: mikeray
+ms.date: 10/01/2020
 ms.topic: tutorial
 ms.prod: sql
 ms.technology: big-data-cluster
-ms.openlocfilehash: 7695cf6d88fd05fdbffba28663c910889797ace9
-ms.sourcegitcommit: da88320c474c1c9124574f90d549c50ee3387b4c
+ms.openlocfilehash: 48d7fb0f41446fa54f1376a9a84f7dbff7017960
+ms.sourcegitcommit: cfa04a73b26312bf18d8f6296891679166e2754d
 ms.translationtype: HT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 07/01/2020
-ms.locfileid: "85772846"
+ms.lasthandoff: 10/19/2020
+ms.locfileid: "92196088"
 ---
-# <a name="tutorial-query-oracle-from-a-sql-server-big-data-cluster"></a>자습서: SQL Server 빅 데이터 클러스터에서 Oracle 쿼리
+# <a name="tutorial-query-oracle-from-sql-server-big-data-cluster"></a>자습서: SQL Server 빅 데이터 클러스터에서 Oracle 쿼리
 
 [!INCLUDE[SQL Server 2019](../includes/applies-to-version/sqlserver2019.md)]
 
-이 자습서에서는 SQL Server 2019 빅 데이터 클러스터에서 Oracle 데이터를 쿼리하는 방법을 보여 줍니다. 이 자습서를 실행하려면 Oracle 서버에 대한 액세스 권한이 있어야 합니다. 액세스 권한이 없는 경우 이 자습서를 통해 SQL Server 빅 데이터 클러스터에서 외부 데이터 원본에 대해 데이터 가상화가 작동하는 방식을 이해할 수 있습니다.
+이 자습서에서는 SQL Server 2019 빅 데이터 클러스터에서 Oracle 데이터를 쿼리하는 방법을 보여 줍니다. 이 자습서를 실행하려면 Oracle 서버에 대한 액세스 권한이 있어야 합니다. 외부 개체에 대한 읽기 권한이 있는 Oracle 사용자 계정이 필요합니다. Oracle 프록시 사용자 인증이 지원됩니다. 액세스 권한이 없는 경우 이 자습서를 통해 SQL Server 빅 데이터 클러스터에서 외부 데이터 원본에 대해 데이터 가상화가 작동하는 방식을 이해할 수 있습니다.
 
 이 자습서에서는 다음 작업 방법을 알아봅니다.
 
@@ -67,7 +67,7 @@ ms.locfileid: "85772846"
 
 1. Azure Data Studio에서 빅 데이터 클러스터의 SQL Server 마스터 인스턴스에 연결합니다. 자세한 내용은 [SQL Server 마스터 인스턴스에 연결](connect-to-big-data-cluster.md#master)을 참조하세요.
 
-1. **서버** 창에서 연결을 두 번 클릭하여 SQL Server 마스터 인스턴스의 서버 대시보드를 표시합니다. **새 쿼리**를 선택합니다.
+1. **서버** 창에서 연결을 두 번 클릭하여 SQL Server 마스터 인스턴스의 서버 대시보드를 표시합니다. **새 쿼리** 를 선택합니다.
 
    ![SQL Server 마스터 인스턴스 쿼리](./media/tutorial-query-oracle/sql-server-master-instance-query.png)
 
@@ -92,9 +92,33 @@ ms.locfileid: "85772846"
    WITH (LOCATION = 'oracle://<oracle_server,nvarchar(100)>',CREDENTIAL = [OracleCredential]);
    ```
 
+### <a name="optional-oracle-proxy-authentication"></a>선택 사항: Oracle 프록시 인증
+
+Oracle은 프록시 인증을 지원하여 세부적인 액세스 제어를 제공합니다. 프록시 사용자는 해당 자격 증명을 사용하여 Oracle 데이터베이스에 연결하고 데이터베이스에서 다른 사용자를 가장합니다. 
+
+가장된 사용자에 비해 제한된 액세스 권한을 갖도록 프록시 사용자를 구성할 수 있습니다. 예를 들어 프록시 사용자는 가장된 사용자의 특정 데이터베이스 역할을 사용하여 연결하도록 허용될 수 있습니다. 프록시 사용자를 통해 Oracle 데이터베이스에 연결하는 사용자의 ID는 여러 사용자가 프록시 인증을 사용하여 연결하는 경우에도 연결에서 유지됩니다. Oracle은 이를 통해 액세스 제어를 적용하고 실제 사용자를 대신하여 수행된 작업을 감사할 수 있습니다.
+
+시나리오에서 Oracle 프록시 사용자를 사용해야 하는 경우 __위의 4단계 및 5 단계를 다음으로 바꿉니다__ .
+
+4. Oracle 서버에 연결하기 위한 데이터베이스 범위 자격 증명을 만듭니다. 다음 문에서 Oracle 서버에 적절한 Oracle 프록시 사용자 자격 증명을 제공합니다.
+
+   ```sql
+   CREATE DATABASE SCOPED CREDENTIAL [OracleProxyCredential]
+   WITH IDENTITY = '<oracle_proxy_user,nvarchar(100),SYSTEM>', SECRET = '<oracle_proxy_user_password,nvarchar(100),manager>';
+   ```
+
+5. Oracle 서버를 가리키는 외부 데이터 원본을 만듭니다.
+
+   ```sql
+   CREATE EXTERNAL DATA SOURCE [OracleSalesSrvr]
+   WITH (LOCATION = 'oracle://<oracle_server,nvarchar(100)>',
+   CONNECTION_OPTIONS = 'ImpersonateUser=% CURRENT_USER',
+   CREDENTIAL = [OracleProxyCredential]);
+   ```
+
 ## <a name="create-an-external-table"></a>외부 테이블 만들기
 
-그런 다음, Oracle 서버의 `INVENTORY` 테이블에 **iventory_ora**라는 외부 테이블을 만듭니다.
+그런 다음, Oracle 서버의 `INVENTORY` 테이블에 **iventory_ora** 라는 외부 테이블을 만듭니다.
 
 ```sql
 CREATE EXTERNAL TABLE [inventory_ora]

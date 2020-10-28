@@ -9,12 +9,12 @@ ms.date: 08/04/2020
 ms.topic: conceptual
 ms.prod: sql
 ms.technology: big-data-cluster
-ms.openlocfilehash: 79ea97a0824d7213f0758d75f8b552372bba51c2
-ms.sourcegitcommit: a4ee6957708089f7d0dda15668804e325b8a240c
+ms.openlocfilehash: 315752ffc775aa1db1970e3fef5c807e0f8e1708
+ms.sourcegitcommit: ae474d21db4f724523e419622ce79f611e956a22
 ms.translationtype: HT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 08/06/2020
-ms.locfileid: "87879048"
+ms.lasthandoff: 10/20/2020
+ms.locfileid: "92257134"
 ---
 # <a name="kubernetes-rbac-model--impact-on-users-and-service-accounts-managing-bdc"></a>Kubernetes RBAC 모델과 BDC를 관리하는 사용자 및 서비스 계정에 대한 영향
 
@@ -25,7 +25,7 @@ ms.locfileid: "87879048"
 
 ## <a name="role-required-for-deployment"></a>배포에 필요한 역할
 
-BDC는 서비스 계정(예: `sa-mssql-controller` 또는 `master`)을 사용하여 클러스터 Pod, 서비스, 고가용성, 모니터링 등의 프로비저닝을 오케스트레이션합니다. BDC 배포가 시작되면 (예: `azdata bdc create`) `azdata`가 다음 작업을 수행합니다.
+BDC는 서비스 계정(예: `sa-mssql-controller` 또는 `master`)을 사용하여 클러스터 Pod, 서비스, 고가용성, 모니터링 등의 프로비저닝을 오케스트레이션합니다. BDC 배포가 시작되면 (예: `azdata bdc create`) [!INCLUDE [azure-data-cli-azdata](../includes/azure-data-cli-azdata.md)]가 다음 작업을 수행합니다.
 
 1. 제공된 네임스페이스가 존재하는지 확인합니다.
 2. 존재하지 않는 경우 네임스페이스를 만들고 `MSSQL_CLUSTER` 레이블을 적용합니다.
@@ -105,7 +105,7 @@ SQL Server 2019 CU5부터, Telegraf에는 Pod 및 노드 메트릭을 수집하�
 ## <a name="default-service-account-usage-from-within-a-bdc-pod"></a>BDC Pod 내부로부터 기본 서비스 계정 사용
 
 보안 모델을 강화하기 위해 SQL Server 2019 CU5에서는 BDC Pod 내 기본 Kubernetes 서비스 계정에 대한 자격 증명을 기본적으로 탑재하지 않도록 설정했습니다. 이는 CU5 이상 버전의 새 배포와 업그레이드된 배포 모두에 적용됩니다.
-Pod 내부의 자격 증명 토큰을 사용하여 Kubernetes API 서버에 액세스할 수 있으며 권한 수준은 Kubernetes 권한 부여 정책 설정에 따라 달라집니다. 이전 CU5 동작으로 되돌려야 하는 특정 사용 사례가 있는 경우 CU6에서는 배포 시에만 자동 탑재를 켤 수 있도록 새 기능 스위치를 도입했습니다. 이렇게 하려면 control.json 구성 배포 파일을 사용하고 *automountServiceAccountToken*을 *true*로 설정합니다. `azdata` CLI를 사용하여 다음 명령을 실행해 *control.json* 사용자 지정 구성 파일에서 이 설정을 업데이트합니다. 
+Pod 내부의 자격 증명 토큰을 사용하여 Kubernetes API 서버에 액세스할 수 있으며 권한 수준은 Kubernetes 권한 부여 정책 설정에 따라 달라집니다. 이전 CU5 동작으로 되돌려야 하는 특정 사용 사례가 있는 경우 CU6에서는 배포 시에만 자동 탑재를 켤 수 있도록 새 기능 스위치를 도입했습니다. 이렇게 하려면 control.json 구성 배포 파일을 사용하고 *automountServiceAccountToken* 을 *true* 로 설정합니다. [!INCLUDE [azure-data-cli-azdata](../includes/azure-data-cli-azdata.md)]를 사용하여 다음 명령을 실행해 *control.json* 사용자 지정 구성 파일에서 이 설정을 업데이트합니다. 
 
 ``` bash
 azdata bdc config replace -c custom-bdc/control.json -j "$.security.automountServiceAccountToken=true"

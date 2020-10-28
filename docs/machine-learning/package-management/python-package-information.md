@@ -10,12 +10,12 @@ author: garyericson
 ms.author: garye
 ms.reviewer: davidph
 monikerRange: '>=sql-server-2017||>=sql-server-linux-ver15||=azuresqldb-mi-current||=sqlallproducts-allversions'
-ms.openlocfilehash: 6513c3333bb852b0d899b785073f4ecbc31daab3
-ms.sourcegitcommit: afb02c275b7c79fbd90fac4bfcfd92b00a399019
+ms.openlocfilehash: 3e088597a52a9f220c0aecb62c66df085b287955
+ms.sourcegitcommit: 22102f25db5ccca39aebf96bc861c92f2367c77a
 ms.translationtype: HT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 10/12/2020
-ms.locfileid: "91956957"
+ms.lasthandoff: 10/16/2020
+ms.locfileid: "92115506"
 ---
 # <a name="get-python-package-information"></a>Python 패키지 정보 가져오기
 
@@ -61,6 +61,11 @@ sp_configure 'external scripts enabled', 1;
 RECONFIGURE WITH override;
 ```
 
+::: moniker range="=azuresqldb-mi-current||=sqlallproducts-allversions"
+> [!IMPORTANT]
+> SQL Managed Instance에서 sp_configure 및 RECONFIGURE 명령을 실행하면 RG 설정을 적용하기 위해 SQL Server 다시 시작이 트리거됩니다. 이 경우 몇 초 동안 사용이 불가능할 수 있습니다.
+::: moniker-end
+
 현재 인스턴스의 기본 라이브러리를 확인하려면 다음 SQL 문을 실행합니다. 이 예제에서는 Python `sys.path` 변수에 포함된 폴더 목록을 반환합니다. 이 목록에는 현재 디렉터리와 표준 라이브러리 경로가 포함됩니다.
 
 ```sql
@@ -73,7 +78,7 @@ EXECUTE sp_execute_external_script
 
 ::: moniker range=">=sql-server-ver15||>=sql-server-linux-ver15||=azuresqldb-mi-current||=sqlallproducts-allversions"
 > [!NOTE]
-> **pip** 또는 유사한 메서드를 사용하여 SQL 패키지 라이브러리에 직접 Python 패키지를 설치하지 마세요. 대신 **sqlmlutils**를 사용하여 SQL 인스턴스에 패키지를 설치합니다. 자세한 내용은 [sqlmlutils를 사용하여 Python 패키지 설치](install-additional-python-packages-on-sql-server.md)를 참조하세요.
+> **pip** 또는 유사한 메서드를 사용하여 SQL 패키지 라이브러리에 직접 Python 패키지를 설치하지 마세요. 대신 **sqlmlutils** 를 사용하여 SQL 인스턴스에 패키지를 설치합니다. 자세한 내용은 [sqlmlutils를 사용하여 Python 패키지 설치](install-additional-python-packages-on-sql-server.md)를 참조하세요.
 ::: moniker-end
 
 ## <a name="default-microsoft-python-packages"></a>기본 Microsoft Python 패키지
@@ -105,17 +110,13 @@ EXECUTE sp_execute_external_script
 다음 예제 스크립트는 SQL Server 인스턴스에 설치된 모든 Python 패키지 목록을 표시합니다.
 
 ```sql
-EXECUTE sp_execute_external_script 
-  @language = N'Python', 
+EXECUTE sp_execute_external_script
+  @language = N'Python',
   @script = N'
 import pkg_resources
-import pandas as pd
-installed_packages = pkg_resources.working_set
-installed_packages_list = sorted(["%s==%s" % (i.key, i.version) for i in installed_packages])
-df = pd.DataFrame(installed_packages_list)
-OutputDataSet = df
-'
-WITH RESULT SETS (( PackageVersion nvarchar (150) ))
+import pandas
+OutputDataSet = pandas.DataFrame(sorted([(i.key, i.version) for i in pkg_resources.working_set]))'
+WITH result sets((Package NVARCHAR(128), Version NVARCHAR(128)));
 ```
 
 ## <a name="find-a-single-python-package"></a>단일 Python 패키지 찾기

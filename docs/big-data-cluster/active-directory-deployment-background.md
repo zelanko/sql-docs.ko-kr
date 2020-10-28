@@ -9,12 +9,12 @@ ms.date: 09/30/2020
 ms.topic: conceptual
 ms.prod: sql
 ms.technology: big-data-cluster
-ms.openlocfilehash: 4d5c30e4c3d7c3188920ecd15104b20a5472e306
-ms.sourcegitcommit: 783b35f6478006d654491cb52f6edf108acf2482
+ms.openlocfilehash: a2b95ef0934c1eb01944df562c4c34cd73d8e0d0
+ms.sourcegitcommit: ae474d21db4f724523e419622ce79f611e956a22
 ms.translationtype: HT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 10/09/2020
-ms.locfileid: "91892503"
+ms.lasthandoff: 10/20/2020
+ms.locfileid: "92257343"
 ---
 # <a name="deploy-multiple-big-data-clusters-2019-in-the-same-active-directory-domain"></a>동일한 Active Directory 도메인에 여러 [!INCLUDE[big-data-clusters-2019](../includes/ssbigdataclusters-ss-nover.md)] 배포
 
@@ -88,7 +88,7 @@ Active Directory 구성 사양에서 새로 도입된 하위 도메인 매개 �
 
 ## <a name="impact-on-setting-up-the-deployment-configuration-file-used-for-the-bdc-deployment"></a>BDC 배포에 사용되는 배포 구성 파일 설정에 미치는 영향 
 
-컨트롤 플레인 구성 *control.json*의 *activeDirectory* 섹션에는 `subdomain`, `accountPrefix` 등 두 가지 옵션 매개 변수가 있습니다. 각 항목에 대해 클러스터 이름을 사용하는 기본 동작을 재정의하려는 경우에만 이러한 설정에 값을 제공하세요. 클러스터 이름은 네임스페이스 이름과 동일합니다.
+컨트롤 플레인 구성 *control.json* 의 *activeDirectory* 섹션에는 `subdomain`, `accountPrefix` 등 두 가지 옵션 매개 변수가 있습니다. 각 항목에 대해 클러스터 이름을 사용하는 기본 동작을 재정의하려는 경우에만 이러한 설정에 값을 제공하세요. 클러스터 이름은 네임스페이스 이름과 동일합니다.
 
 또한 원하는 엔드포인트 DNS 이름(정규화된 이름인 경우)을 사용할 수 있으며, 동일한 도메인에 배포된 두 개의 빅 데이터 클러스터 간에 이름이 충돌하지 않습니다. 필요에 따라 하위 도메인 매개 변수 값을 사용하여 여러 클러스터에서 DNS 이름이 서로 다른지 확인할 수 있습니다.  예를 들어 게이트웨이 엔드포인트를 생각해 보겠습니다. 엔드포인트에 이름 `gateway`를 사용하고 BDC 배포의 일부로 DNS 서버에 자동으로 등록하려면 DNS 이름으로 `gateway.bdc1.contoso.local`을 사용합니다. `bdc1`은 하위 도메인이고 `contoso.local`은 AD DNS 도메인 이름입니다. 허용되는 다른 값은 `gateway-bdc1.contoso.local` 또는 간단히 `gateway.contoso.local`입니다.
 
@@ -140,7 +140,7 @@ Active Directory 구성 사양에서 새로 도입된 하위 도메인 매개 �
 
 ### <a name="how-to-revert-back-to-the-pre-cu5-behavior"></a>CU5 이전 동작으로 되돌리려면 어떻게 해야 하나요?
 
-새로 도입된 `subdomain` 매개 변수를 수용할 수 없는 시나리오가 있을 수도 있습니다. 이미 `azdata` CLI로 업그레이드했으며 CU5 이전 릴리스를 배포해야 하는 경우를 예를 들겠습니다. 이런 경우는 매우 드물지만, CU5 이전 동작으로 되돌려야 하는 경우 `control.json`의 Active Directory 섹션에서 `false` 매개 변수를 `useSubdomain`로 설정하면 됩니다.
+새로 도입된 `subdomain` 매개 변수를 수용할 수 없는 시나리오가 있을 수도 있습니다. 이미 [!INCLUDE [azure-data-cli-azdata](../includes/azure-data-cli-azdata.md)]로 업그레이드했으며 CU5 이전 릴리스를 배포해야 하는 경우를 예로 들어 보겠습니다. 이런 경우는 매우 드물지만, CU5 이전 동작으로 되돌려야 하는 경우 `control.json`의 Active Directory 섹션에서 `false` 매개 변수를 `useSubdomain`로 설정하면 됩니다.
 
 다음은 이런 시나리오의 경우 `useSubdomain`을 `false`로 설정하는 예입니다.
 
