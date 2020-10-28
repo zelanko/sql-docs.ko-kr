@@ -19,12 +19,12 @@ ms.assetid: 7a3a3b2a-1408-4767-a376-c690e3c1fc5b
 author: VanMSFT
 ms.author: vanto
 monikerRange: =azuresqldb-current||=azure-sqldw-latest||>=sql-server-2016||=sqlallproducts-allversions||>=sql-server-linux-2017||=azuresqldb-mi-current
-ms.openlocfilehash: 7f1aff8d7d8496604983c54099f818e98fffbf18
-ms.sourcegitcommit: e700497f962e4c2274df16d9e651059b42ff1a10
+ms.openlocfilehash: 462c857e6067e6431248e86edb72d007e56d84e7
+ms.sourcegitcommit: b09f069c6bef0655b47e9953a4385f1b52bada2b
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 08/17/2020
-ms.locfileid: "88493073"
+ms.lasthandoff: 10/27/2020
+ms.locfileid: "92734615"
 ---
 # <a name="sp_set_session_context-transact-sql"></a>sp_set_session_context (Transact-sql)
 [!INCLUDE [sqlserver2016-asdb-asdbmi-asa](../../includes/applies-to-version/sqlserver2016-asdb-asdbmi-asa.md)]
@@ -44,26 +44,26 @@ sp_set_session_context [ @key= ] N'key', [ @value= ] 'value'
   
 ## <a name="arguments"></a>인수  
  [ @key =] N'key '  
- **Sysname**형식의 설정 되는 키입니다. 최대 키 크기는 128 바이트입니다.  
+ **Sysname** 형식의 설정 되는 키입니다. 최대 키 크기는 128 바이트입니다.  
   
  [ @value =] ' value '  
- **Sql_variant**형식의 지정 된 키에 대 한 값입니다. NULL 값을 설정 하면 메모리를 해제 합니다. 최대 크기는 8,000바이트입니다.  
+ **Sql_variant** 형식의 지정 된 키에 대 한 값입니다. NULL 값을 설정 하면 메모리를 해제 합니다. 최대 크기는 8,000바이트입니다.  
   
  [ @read_only =] {0 | 1}  
- **Bit**형식의 플래그입니다. 1 인 경우이 논리 연결에서 지정 된 키의 값을 다시 변경할 수 없습니다. 0 (기본값) 이면 값을 변경할 수 있습니다.  
+ **Bit** 형식의 플래그입니다. 1 인 경우이 논리 연결에서 지정 된 키의 값을 다시 변경할 수 없습니다. 0 (기본값) 이면 값을 변경할 수 있습니다.  
   
-## <a name="permissions"></a>사용 권한  
+## <a name="permissions"></a>권한  
  모든 사용자는 세션에 대 한 세션 컨텍스트를 설정할 수 있습니다.  
   
 ## <a name="remarks"></a>설명  
  다른 저장 프로시저와 마찬가지로 리터럴 및 변수 (식 또는 함수 호출 아님)만 매개 변수로 전달할 수 있습니다.  
   
- 세션 컨텍스트의 총 크기는 1mb로 제한 됩니다. 이 제한을 초과 하는 값을 설정 하면 문이 실패 합니다. [Dm_os_memory_objects &#40;transact-sql&#41;](../../relational-databases/system-dynamic-management-views/sys-dm-os-memory-objects-transact-sql.md)에서 전체 메모리 사용량을 모니터링할 수 있습니다.  
+ 세션 컨텍스트의 총 크기는 1mb로 제한 됩니다. 이 제한을 초과 하는 값을 설정 하면 문이 실패 합니다. [Sys.dm_os_memory_objects &#40;transact-sql&#41;](../../relational-databases/system-dynamic-management-views/sys-dm-os-memory-objects-transact-sql.md)에서 전체 메모리 사용량을 모니터링할 수 있습니다.  
   
- 다음과 같이 [dm_os_memory_cache_counters &#40;transact-sql&#41;](../../relational-databases/system-dynamic-management-views/sys-dm-os-memory-cache-counters-transact-sql.md) 을 쿼리하여 전체 메모리 사용량을 모니터링할 수 있습니다. `SELECT * FROM sys.dm_os_memory_cache_counters WHERE type = 'CACHESTORE_SESSION_CONTEXT';`  
+ 다음과 같이 [sys.dm_os_memory_cache_counters &#40;transact-sql&#41;](../../relational-databases/system-dynamic-management-views/sys-dm-os-memory-cache-counters-transact-sql.md) 을 쿼리하여 전체 메모리 사용량을 모니터링할 수 있습니다. `SELECT * FROM sys.dm_os_memory_cache_counters WHERE type = 'CACHESTORE_SESSION_CONTEXT';`  
   
-## <a name="examples"></a>예제  
- 다음 예에서는 값이 영어 인 세션 컨텍스트 키를 설정 하 고 반환 하는 방법을 보여 줍니다.  
+## <a name="examples"></a>예  
+A. 다음 예에서는 값이 영어 인 세션 컨텍스트 키를 설정 하 고 반환 하는 방법을 보여 줍니다.  
   
 ```  
 EXEC sys.sp_set_session_context @key = N'language', @value = 'English';  
@@ -75,12 +75,22 @@ SELECT SESSION_CONTEXT(N'language');
 ```  
 EXEC sys.sp_set_session_context @key = N'user_id', @value = 4, @read_only = 1;  
 ```  
-  
+
+B. 다음 예제에서는 값이 12323ad 인 client_correlation_id 이라는 세션 컨텍스트 키를 설정 하 고 검색 하는 방법을 보여 줍니다.
+```
+-- set value
+EXEC sp_set_session_context 'client_correlation_id', '12323ad'; 
+
+--check value
+SELECT SESSION_CONTEXT(N'client_correlation_id');
+
+```
+
 ## <a name="see-also"></a>참고 항목  
- [Transact-sql&#41;CURRENT_TRANSACTION_ID &#40;](../../t-sql/functions/current-transaction-id-transact-sql.md)   
+ [CURRENT_TRANSACTION_ID &#40;Transact-SQL&#41;](../../t-sql/functions/current-transaction-id-transact-sql.md)   
  [Transact-sql&#41;SESSION_CONTEXT &#40;](../../t-sql/functions/session-context-transact-sql.md)   
  [행 수준 보안](../../relational-databases/security/row-level-security.md)   
- [Transact-sql&#41;CONTEXT_INFO &#40;](../../t-sql/functions/context-info-transact-sql.md)   
+ [CONTEXT_INFO  &#40;Transact-SQL&#41;](../../t-sql/functions/context-info-transact-sql.md)   
  [SET CONTEXT_INFO&#40;Transact-SQL&#41;](../../t-sql/statements/set-context-info-transact-sql.md)  
   
   

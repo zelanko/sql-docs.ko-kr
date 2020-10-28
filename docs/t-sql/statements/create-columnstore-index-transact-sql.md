@@ -30,12 +30,12 @@ ms.assetid: 7e1793b3-5383-4e3d-8cef-027c0c8cb5b1
 author: markingmyname
 ms.author: maghan
 monikerRange: '>=aps-pdw-2016||=azuresqldb-current||=azure-sqldw-latest||>=sql-server-2016||=sqlallproducts-allversions||>=sql-server-linux-2017||=azuresqldb-mi-current'
-ms.openlocfilehash: d879b6a7be0b279ab34dfa9a66bf3a8cbe58330e
-ms.sourcegitcommit: 3efd8bbf91f4f78dce3a4ac03348037d8c720e6a
+ms.openlocfilehash: 1421ba7d2f03ecdf6f8a687e4e6d662702fe464a
+ms.sourcegitcommit: bd3a135f061e4a49183bbebc7add41ab11872bae
 ms.translationtype: HT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 09/23/2020
-ms.locfileid: "91024387"
+ms.lasthandoff: 10/21/2020
+ms.locfileid: "92300440"
 ---
 # <a name="create-columnstore-index-transact-sql"></a>CREATE COLUMNSTORE INDEX(Transact-SQL)
 [!INCLUDE [sql-asdb-asdbmi-asa-pdw](../../includes/applies-to-version/sql-asdb-asdbmi-asa-pdw.md)]
@@ -136,7 +136,7 @@ CREATE CLUSTERED COLUMNSTORE INDEX index_name
   
 테이블에 클러스터형 columnstore 인덱스가 이미 있다면 같은 이름을 기존 인덱스로 지정하거나 DROP EXISTING 옵션을 사용하여 새 이름을 지정할 수 있습니다.  
   
-ON [*database_name*. [*schema_name* ] . | *schema_name* . ] *table_name*
+ON [ *database_name* . [ *schema_name* ] . | *schema_name* . ] *table_name*
 
 클러스터형 columnstore 인덱스로 저장할 테이블의 한, 두 또는 세 부분으로 이루어진 이름을 지정합니다. 테이블이 힙 또는 클러스터형 인덱스인 경우 테이블이 rowstore에서 columnstore로 변환됩니다. 테이블이 이미 columnstore인 경우 이 명령문은 클러스터형 columnstore 인덱스를 다시 작성합니다. 순서가 지정된 클러스터형 열 저장소 인덱스로 변환하려면 기존 인덱스가 클러스터형 columnstore 인덱스여야 합니다.
   
@@ -167,7 +167,7 @@ CREATE CLUSTERED COLUMNSTORE INDEX cci ON Sales.OrderLines
    자세한 내용은 [max degree of parallelism 서버 구성 옵션 구성](../../database-engine/configure-windows/configure-the-max-degree-of-parallelism-server-configuration-option.md) 및 [병렬 인덱스 작업 구성](../../relational-databases/indexes/configure-parallel-index-operations.md)을 참조하세요.  
  
 ###### <a name="compression_delay--0--delay--minutes-"></a>COMPRESSION_DELAY = **0** | *delay* [ Minutes ]  
-   디스크 기반 테이블의 경우 *지연*은 CLOSED 상태의 델타 rowgroup이 SQL Server에서 압축된 rowgroup으로 압축할 수 있게 될 때까지 델타 rowgroup에 남아 있어야 하는 최소 분 수를 지정합니다. 디스크 기반 테이블은 개별 행에 대한 삽입 및 업데이트 시간을 추적하지 않으므로 SQL Server가 CLOSED 상태의 델타 rowgroup에 지연을 적용합니다.  
+   디스크 기반 테이블의 경우 *지연* 은 CLOSED 상태의 델타 rowgroup이 SQL Server에서 압축된 rowgroup으로 압축할 수 있게 될 때까지 델타 rowgroup에 남아 있어야 하는 최소 분 수를 지정합니다. 디스크 기반 테이블은 개별 행에 대한 삽입 및 업데이트 시간을 추적하지 않으므로 SQL Server가 CLOSED 상태의 델타 rowgroup에 지연을 적용합니다.  
    기본값은 0분입니다.  
    
 ```sql
@@ -203,7 +203,7 @@ CREATE CLUSTERED COLUMNSTORE INDEX cci ON Sales.OrderLines
    *partition_scheme_name* **(** _column_name_ **)**  
    테이블의 파티션 구성표를 지정합니다. 파티션 구성표가 데이터베이스에 이미 있어야 합니다. 파티션 구성표를 만들려면 [CREATE PARTITION SCHEME](../../t-sql/statements/create-partition-scheme-transact-sql.md)을 참조하세요.  
  
-   *column_name*은 분할된 인덱스가 분할되는 기준으로 사용할 열을 지정합니다. 이 열은 *partition_scheme_name*에서 사용하는 파티션 함수의 인수와 데이터 형식, 길이 및 전체 자릿수가 일치해야 합니다.  
+   *column_name* 은 분할된 인덱스가 분할되는 기준으로 사용할 열을 지정합니다. 이 열은 *partition_scheme_name* 에서 사용하는 파티션 함수의 인수와 데이터 형식, 길이 및 전체 자릿수가 일치해야 합니다.  
 
    *filegroup_name*  
    클러스터형 columnstore 인덱스를 저장할 파일 그룹을 지정합니다. 지정된 위치가 없고 테이블이 분할되지 않은 경우 인덱스는 기본 테이블 또는 뷰와 동일한 파일 그룹을 사용합니다. 파일 그룹은 이미 존재해야 합니다.  
@@ -217,13 +217,13 @@ CREATE CLUSTERED COLUMNSTORE INDEX cci ON Sales.OrderLines
 힙 또는 클러스터형 인덱스로 저장된 rowstore 테이블에 메모리 내 비 클러스터형 columnstore 인덱스를 만듭니다. 인덱스는 필터링된 조건을 가질 수 있으며 기본 테이블의 모든 열을 포함할 필요가 없습니다. Columnstore 인덱스에 데이터 복사본을 저장할 충분한 공간이 필요합니다. 업데이트가 가능하며 기본 테이블이 변경될 때 업데이트됩니다. 클러스터형 인덱스에 대한 비 클러스터형 columnstore 인덱스는 실시간 분석이 가능합니다.  
   
 *index_name*  
-   인덱스의 이름을 지정합니다. *index_name*은 테이블에서 고유해야 하지만 데이터베이스에서 고유할 필요는 없습니다. 인덱스 이름은 [식별자](../../relational-databases/databases/database-identifiers.md) 규칙을 따라야 합니다.  
+   인덱스의 이름을 지정합니다. *index_name* 은 테이블에서 고유해야 하지만 데이터베이스에서 고유할 필요는 없습니다. 인덱스 이름은 [식별자](../../relational-databases/databases/database-identifiers.md) 규칙을 따라야 합니다.  
   
- **(** _column_  [ **,** ...*n* ] **)**  
+ **(** _column_  [ **,** ... *n* ] **)**  
     저장할 열을 지정합니다. 비클러스터형 columnstore 인덱스는 1024개 열로 제한됩니다.  
    각 열은 columnstore 인덱스에 대해 지원되는 데이터 형식이어야 합니다. 지원되는 데이터 형식 목록은 [제한 사항](../../t-sql/statements/create-columnstore-index-transact-sql.md#LimitRest)을 참조하세요.  
 
-ON [*database_name*. [*schema_name* ] . | *schema_name* . ] *table_name*  
+ON [ *database_name* . [ *schema_name* ] . | *schema_name* . ] *table_name*  
    인덱스를 포함할 테이블의 1, 2 또는 3 부분 이름을 지정합니다.  
 
 #### <a name="with-options"></a>WITH 옵션
@@ -243,7 +243,7 @@ ON [*database_name*. [*schema_name* ] . | *schema_name* . ] *table_name*
    자세한 내용은 [병렬 인덱스 작업 구성](../../relational-databases/indexes/configure-parallel-index-operations.md)을 참조하세요.  
   
 > [!NOTE]
->  병렬 인덱스 작업은 일부 [!INCLUDE[msC](../../includes/msconame-md.md)][!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 버전에서 사용할 수 있습니다. [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 버전에서 지원되는 기능 목록은 [SQL Server 2016 버전에 대한 버전 및 지원하는 기능](../../sql-server/editions-and-supported-features-for-sql-server-2016.md)을 참조하세요.  
+>  병렬 인덱스 작업은 일부 [!INCLUDE[msC](../../includes/msconame-md.md)][!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 버전에서 사용할 수 있습니다. [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 버전에서 지원되는 기능 목록은 [SQL Server 2016 버전에 대한 버전 및 지원하는 기능](../../sql-server/editions-and-components-of-sql-server-2016.md)을 참조하세요.  
   
 ###### <a name="online--on--off"></a>ONLINE = [ON | OFF]   
 - `ON`은 인덱스 새 복사본이 작성되는 동안 columnstore 인덱스가 온라인 상태를 유지하고 있으며 사용할 수 있음을 지정합니다.
@@ -282,13 +282,13 @@ CREATE COLUMNSTORE INDEX ncci ON Sales.OrderLines (StockItemID, Quantity, UnitPr
   
 *partition_scheme_name* **(** _column_name_ **)**  
    분할된 인덱스의 파티션이 매핑될 파일 그룹을 정의하는 파티션 구성표를 지정합니다. 파티션 구성표는 [CREATE PARTITION SCHEME](../../t-sql/statements/create-partition-scheme-transact-sql.md)을 실행하여 데이터베이스 내에 포함해야 합니다. 
-   *column_name*은 분할된 인덱스가 분할되는 기준으로 사용할 열을 지정합니다. 이 열은 *partition_scheme_name*에서 사용하는 파티션 함수의 인수와 데이터 형식, 길이 및 전체 자릿수가 일치해야 합니다. *column_name*은 인덱스 정의의 열만 사용할 필요는 없으며 columnstore 인덱스를 분할하는 경우 [!INCLUDE[ssDE](../../includes/ssde-md.md)]에서는 인덱스의 열이 아직 지정되지 않은 경우 분할 열을 인덱스의 열로 추가합니다.  
-   *partition_scheme_name* 또는 *filegroup*이 지정되지 않고 테이블이 분할된 경우 인덱스는 동일한 분할 열을 사용하여 동일한 파티션 구성표에 기본 테이블로 배치됩니다.  
+   *column_name* 은 분할된 인덱스가 분할되는 기준으로 사용할 열을 지정합니다. 이 열은 *partition_scheme_name* 에서 사용하는 파티션 함수의 인수와 데이터 형식, 길이 및 전체 자릿수가 일치해야 합니다. *column_name* 은 인덱스 정의의 열만 사용할 필요는 없으며 columnstore 인덱스를 분할하는 경우 [!INCLUDE[ssDE](../../includes/ssde-md.md)]에서는 인덱스의 열이 아직 지정되지 않은 경우 분할 열을 인덱스의 열로 추가합니다.  
+   *partition_scheme_name* 또는 *filegroup* 이 지정되지 않고 테이블이 분할된 경우 인덱스는 동일한 분할 열을 사용하여 동일한 파티션 구성표에 기본 테이블로 배치됩니다.  
    분할된 테이블의 Columnstore 인덱스는 파티션 정렬됩니다.  
    분할된 인덱스에 대한 자세한 내용은 [Partitioned Tables and Indexes](../../relational-databases/partitions/partitioned-tables-and-indexes.md)를 참조하세요.  
 
 *filegroup_name*  
-   인덱스를 만들 파일 그룹 이름을 지정합니다. *filegroup_name*이 지정되지 않고 테이블이 분할되지 않은 경우 인덱스는 기본 테이블과 동일한 파일 그룹을 사용합니다. 파일 그룹은 이미 존재해야 합니다.  
+   인덱스를 만들 파일 그룹 이름을 지정합니다. *filegroup_name* 이 지정되지 않고 테이블이 분할되지 않은 경우 인덱스는 기본 테이블과 동일한 파일 그룹을 사용합니다. 파일 그룹은 이미 존재해야 합니다.  
  
 **"** default **"**  
 기본 파일 그룹에 지정된 인덱스를 만듭니다.  
@@ -380,7 +380,7 @@ CREATE COLUMNSTORE INDEX ncci ON Sales.OrderLines (StockItemID, Quantity, UnitPr
 -   최대 1,024개의 열만 사용할 수 있습니다.
 -   제약 조건 기반 인덱스로 만들 수 없습니다. columnstore 인덱스가 있는 테이블에 고유한 제약 조건, 기본 키 제약 조건 또는 외래 키 제약 조건을 가질 수 없습니다. 제약 조건은 항상 행 저장소 인덱스에서 적용됩니다. 제약 조건은 columnstore(클러스터형 또는 비클러스터형) 인덱스에서 적용될 수 없습니다.
 -   스파스 열을 포함할 수 없습니다.  
--   **ALTER INDEX** 문을 사용하여 변경할 수 없습니다. 비클러스터형 인덱스를 변경하려면 인덱스를 삭제하고 해당 columnstore 인덱스를 대신 다시 만들어야 합니다. **ALTER INDEX**를 사용하여 columnstore 인덱스를 해제하고 다시 만들 수 있습니다.  
+-   **ALTER INDEX** 문을 사용하여 변경할 수 없습니다. 비클러스터형 인덱스를 변경하려면 인덱스를 삭제하고 해당 columnstore 인덱스를 대신 다시 만들어야 합니다. **ALTER INDEX** 를 사용하여 columnstore 인덱스를 해제하고 다시 만들 수 있습니다.  
 -   **INCLUDE** 키워드를 사용하여 만들 수 없습니다.  
 -   인덱스를 정렬하기 위해 **ASC** 또는 **DESC** 키워드를 포함할 수 없습니다. columnstore 인덱스는 압축 알고리즘에 따라 정렬됩니다. 정렬을 사용하면 성능상의 많은 이점이 없어집니다.  
 -   비클러스터형 열 저장소 인덱스에는 nvarchar(max), varchar(max) 및 varbinary(max) 형식의 LOB(대형 개체) 열을 포함할 수 없습니다. 클러스터형 columnstore 인덱스 만이 [!INCLUDE[ssSQLv14_md](../../includes/sssqlv14-md.md)] 버전부터 LOB 형식 및 프리미엄 계층, 표준 계층(S3 이상)에서 구성된 Azure SQL Database 및 모든 VCore 제품 계층을 지원합니다. 참고: 이전 버전에서는 클러스터형 및 비클러스터형 columnstore 인덱스에서 LOB 형식을 지원하지 않습니다.
@@ -782,5 +782,3 @@ CREATE CLUSTERED COLUMNSTORE INDEX cci ON Sales.OrderLines
 ORDER ( PRODUCTKEY,SHIPDATE );
 WITH (DROP_EXISTING = ON)
 ```
-
-

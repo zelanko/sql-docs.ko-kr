@@ -21,12 +21,12 @@ ms.assetid: abd5ec8c-1a0e-4d38-a374-8ce3401bc60c
 author: markingmyname
 ms.author: maghan
 monikerRange: '>=aps-pdw-2016||=azure-sqldw-latest||>=sql-server-2016||=sqlallproducts-allversions||>=sql-server-linux-2017||=azuresqldb-mi-current'
-ms.openlocfilehash: 9f9db43b930baffc31529a3e36fb014225957a39
-ms.sourcegitcommit: d56a834269132a83e5fe0a05b033936776cda8bb
+ms.openlocfilehash: 4f979bc7b5dd8a3a3e67c499480003c45a8c4ebd
+ms.sourcegitcommit: ae474d21db4f724523e419622ce79f611e956a22
 ms.translationtype: HT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 09/29/2020
-ms.locfileid: "91529394"
+ms.lasthandoff: 10/20/2020
+ms.locfileid: "92255780"
 ---
 # <a name="create-external-file-format-transact-sql"></a>CREATE EXTERNAL FILE FORMAT(Transact-SQL)
 [!INCLUDE [sqlserver2016-asdbmi-asa-pdw](../../includes/applies-to-version/sqlserver2016-asdbmi-asa-pdw.md)]
@@ -87,6 +87,9 @@ WITH (
     }  
     [ , DATA_COMPRESSION = 'org.apache.hadoop.io.compress.DefaultCodec' ]);
 ```
+
+[!INCLUDE[synapse-analytics-od-unsupported-syntax](../../includes/synapse-analytics-od-unsupported-syntax.md)]
+
 ### <a name="orc"></a>[ORC](#tab/orc)
 ```syntaxsql  
 --Create an external file format for ORC file.  
@@ -98,6 +101,9 @@ WITH (
       | 'org.apache.hadoop.io.compress.DefaultCodec'      }  
     ]);  
 ```
+
+[!INCLUDE[synapse-analytics-od-unsupported-syntax](../../includes/synapse-analytics-od-unsupported-syntax.md)]
+
 ### <a name="parquet"></a>[Parquet](#tab/parquet)
 ```syntaxsql
 --Create an external file format for PARQUET files.  
@@ -121,6 +127,9 @@ WITH (
       | 'org.apache.hadoop.io.compress.DefaultCodec'  }  
     ]);  
 ```
+
+[!INCLUDE[synapse-analytics-od-unsupported-syntax](../../includes/synapse-analytics-od-unsupported-syntax.md)]
+
 ---
   
 ## <a name="arguments"></a>인수  
@@ -137,7 +146,7 @@ WITH (
 - ORC  
   ORC(최적화된 행 열 형식) 형식을 지정합니다. 이 옵션에는 버전 이상 0.11 외부 Hadoop 클러스터에서 하이브가 필요합니다. Hadoop에서는 ORC 파일 형식이RCFILE 파일 형식보다 압축과 성능이 더 낫습니다.
 
-- RCFILE(SERDE_METHOD = *SERDE_method*와 함께) RcFile(Record Columnar file) 형식을 지정합니다. 이 옵션을 사용하려면 Hive 직렬 변환기와 역직렬화 변환기(SerDe) 메서드를 지정해야 합니다. Hadoop에서 Hive/HiveQL을 사용하여 RC 파일을 쿼리할 때도 요구 사항은 같습니다. SerDe 메서드는 대소문자를 구분합니다.
+- RCFILE(SERDE_METHOD = *SERDE_method* 와 함께) RcFile(Record Columnar file) 형식을 지정합니다. 이 옵션을 사용하려면 Hive 직렬 변환기와 역직렬화 변환기(SerDe) 메서드를 지정해야 합니다. Hadoop에서 Hive/HiveQL을 사용하여 RC 파일을 쿼리할 때도 요구 사항은 같습니다. SerDe 메서드는 대소문자를 구분합니다.
 
   PolyBase가 지원하는 두 SerDe 메서드를 사용하여 RCFile을 지정하는 예제입니다.
 
@@ -244,7 +253,7 @@ PolyBase 로드 중에 모든 파일에서 첫 번째로 읽을 행 번호를 �
 > [!IMPORTANT]
 > 사용자 지정 `DATE_FORMAT`을 지정하면 모든 기본 형식이 재정의됩니다. 즉, 파일의 모든 날짜/시간, 날짜 및 시간 셀에 동일한 날짜 형식이 있어야 합니다. 재정의된 `DATE_FORMAT`이 있으면 날짜 및 시간 값 형식이 서로 다를 수 없습니다.
 
-**날짜 형식 예**는 다음 표에 있습니다.
+**날짜 형식 예** 는 다음 표에 있습니다.
   
 테이블 관련 참고 사항  
   
@@ -356,7 +365,7 @@ PolyBase 로드 중에 모든 파일에서 첫 번째로 읽을 행 번호를 �
 ## <a name="examples"></a>예제  
   
 ### <a name="a-create-a-delimitedtext-external-file-format"></a>A. DELIMITEDTEXT 외부 파일 형식 만들기  
- 이 예제에서는 구분 기호로 분리된 텍스트 파일에 대해 이름이 *textdelimited1*인 외부 파일 형식을 만듭니다. FORMAT\_OPTIONS에 대해 나열된 옵션은 파일의 필드가 파이프 문자 '|'를 사용하여 구분되어야 함을 지정합니다. 또한 텍스트 파일은 Gzip 코덱을 사용하여 압축됩니다. DATA\_COMPRESSION을 지정하지 않은 경우 텍스트 파일이 압축되지 않습니다.
+ 이 예제에서는 구분 기호로 분리된 텍스트 파일에 대해 이름이 *textdelimited1* 인 외부 파일 형식을 만듭니다. FORMAT\_OPTIONS에 대해 나열된 옵션은 파일의 필드가 파이프 문자 '|'를 사용하여 구분되어야 함을 지정합니다. 또한 텍스트 파일은 Gzip 코덱을 사용하여 압축됩니다. DATA\_COMPRESSION을 지정하지 않은 경우 텍스트 파일이 압축되지 않습니다.
   
  구분 기호로 분리된 텍스트 파일의 경우 데이터 압축 메서드는 기본 코덱 'org.apache.hadoop.io.compress.DefaultCodec’ 또는 Gzip 코덱 'org.apache.hadoop.io.compress.GzipCodec'이 될 수 있습니다.
   

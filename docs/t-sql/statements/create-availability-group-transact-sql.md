@@ -25,12 +25,12 @@ helpviewer_keywords:
 ms.assetid: a3d55df7-b4e4-43f3-a14b-056cba36ab98
 author: MikeRayMSFT
 ms.author: mikeray
-ms.openlocfilehash: db4140d13fa0e521264a70bfcfb2363260327bdb
-ms.sourcegitcommit: 827ad02375793090fa8fee63cc372d130f11393f
+ms.openlocfilehash: af27cbc5aaa05412052940b020ce9268a1c74ea3
+ms.sourcegitcommit: bd3a135f061e4a49183bbebc7add41ab11872bae
 ms.translationtype: HT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 09/04/2020
-ms.locfileid: "89480464"
+ms.lasthandoff: 10/21/2020
+ms.locfileid: "92300415"
 ---
 # <a name="create-availability-group-transact-sql"></a>CREATE AVAILABILITY GROUP(Transact-SQL)
 
@@ -120,7 +120,7 @@ CREATE AVAILABILITY GROUP group_name
 ## <a name="arguments"></a>인수
 
 *group_name*  
-새 가용성 그룹의 이름을 지정합니다. *group_name*은 유효한 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)][identifier](../../relational-databases/databases/database-identifiers.md) 식별자이고 WSFC 클러스터의 모든 가용성 그룹에서 고유해야 합니다. 가용성 그룹 이름의 최대 길이는 128자입니다.  
+새 가용성 그룹의 이름을 지정합니다. *group_name* 은 유효한 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)][identifier](../../relational-databases/databases/database-identifiers.md) 식별자이고 WSFC 클러스터의 모든 가용성 그룹에서 고유해야 합니다. 가용성 그룹 이름의 최대 길이는 128자입니다.  
 
 AUTOMATED_BACKUP_PREFERENCE **=** { PRIMARY \| SECONDARY_ONLY \| SECONDARY \| NONE }  
  백업을 수행할 위치를 선택할 때 백업 작업에서 주 복제본을 평가하는 방식에 관한 기본 설정을 지정합니다. 자동화된 백업 기본 설정을 고려하도록 지정한 백업 작업을 스크립팅할 수 있습니다. 기본 설정은 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]에서 적용하는 것이 아니므로 임시 백업에 영향을 미치지 않는다는 것을 이해해야 합니다.  
@@ -155,7 +155,7 @@ AUTOMATED_BACKUP_PREFERENCE **=** { PRIMARY \| SECONDARY_ONLY \| SECONDARY \| NO
   
 |Level|오류 상태|  
 |-----------|-----------------------|  
-|1|다음과 같은 경우 자동 장애 조치(failover)를 시작하도록 지정합니다.<br /><br /> -[!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 서비스가 다운된 경우<br /><br /> -서버 인스턴스로부터 ACK를 받지 못해 WSFC 클러스터에 연결할 가용성 그룹의 임대가 만료된 경우 자세한 내용은 [작동 방법: SQL Server Always On 임대 시간 제한](https://docs.microsoft.com/archive/blogs/psssql/how-it-works-sql-server-alwayson-lease-timeout)을 참조하세요.|  
+|1|다음과 같은 경우 자동 장애 조치(failover)를 시작하도록 지정합니다.<br /><br /> -[!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 서비스가 다운된 경우<br /><br /> -서버 인스턴스로부터 ACK를 받지 못해 WSFC 클러스터에 연결할 가용성 그룹의 임대가 만료된 경우 자세한 내용은 [작동 방법: SQL Server Always On 임대 시간 제한](/archive/blogs/psssql/how-it-works-sql-server-alwayson-lease-timeout)을 참조하세요.|  
 |2|다음과 같은 경우 자동 장애 조치(failover)를 시작하도록 지정합니다.<br /><br /> -[!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 인스턴스가 클러스터에 연결되어 있지 않고 가용성 그룹의 사용자 지정 HEALTH_CHECK_TIMEOUT 임계값이 초과된 경우<br /><br /> -가용성 복제본이 실패 상태인 경우|  
 |3|분리된 spinlock, 중대한 쓰기 액세스 위반 또는 과도한 덤프와 같이 심각한 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 내부 오류가 발생할 경우 자동 장애 조치(failover)를 시작하도록 지정합니다.<br /><br /> 기본 동작입니다.|  
 |4|[!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 내부 리소스 풀에서 지속적인 메모리 부족 상태와 같은 일반적인 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 내부 오류가 발생할 경우 자동 장애 조치(failover)를 시작하도록 지정합니다.|  
@@ -164,7 +164,7 @@ AUTOMATED_BACKUP_PREFERENCE **=** { PRIMARY \| SECONDARY_ONLY \| SECONDARY \| NO
 > [!NOTE]  
 >  클라이언트 요청에 대해 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 인스턴스의 응답이 없는 것은 가용성 그룹과 관련이 없습니다.  
   
- FAILURE_CONDITION_LEVEL 및 HEALTH_CHECK_TIMEOUT 값은 지정된 그룹에 대한 *유연한 장애 조치(failover) 정책*을 정의합니다. 유연한 장애 조치(failover) 정책을 통해 자동 장애 조치(failover)를 수행해야 하는 상태를 세부적으로 제어할 수 있습니다. 자세한 내용은 [가용성 그룹 자동 장애 조치에 대한 유연한 장애 조치 정책&#40;SQL Server&#41;](../../database-engine/availability-groups/windows/flexible-automatic-failover-policy-availability-group.md)을 참조하세요.  
+ FAILURE_CONDITION_LEVEL 및 HEALTH_CHECK_TIMEOUT 값은 지정된 그룹에 대한 *유연한 장애 조치(failover) 정책* 을 정의합니다. 유연한 장애 조치(failover) 정책을 통해 자동 장애 조치(failover)를 수행해야 하는 상태를 세부적으로 제어할 수 있습니다. 자세한 내용은 [가용성 그룹 자동 장애 조치에 대한 유연한 장애 조치 정책&#40;SQL Server&#41;](../../database-engine/availability-groups/windows/configure-flexible-automatic-failover-policy.md)을 참조하세요.  
   
  HEALTH_CHECK_TIMEOUT **=** *milliseconds*  
  [sp_server_diagnostics](../../relational-databases/system-stored-procedures/sp-server-diagnostics-transact-sql.md) 시스템 저장 프로시저에서 서버 상태 정보를 반환할 때까지 허용되는 대기 시간(밀리초)을 지정합니다. 이 시간이 경과하면 WSFC 클러스터에서는 서버 인스턴스가 느리거나 응답하지 않는 것으로 간주합니다. HEALTH_CHECK_TIMEOUT은 그룹 수준에서 설정되지만 자동 장애 조치(failover)를 지원하는 동기-커밋 가용성 모드(AVAILABILITY_MODE **=** SYNCHRONOUS_COMMIT)에 대해 구성된 가용성 복제본에서만 적절합니다.  또한 상태 확인 시간 제한은 복제본과 보조 복제본 모두 자동 장애 조치 모드(FAILOVER_MODE **=** AUTOMATIC)에 대해 구성되고 보조 복제본이 현재 주 복제본과 동기화된 경우에만 자동 장애 조치(failover)를 트리거할 수 있습니다.  
@@ -186,7 +186,7 @@ AUTOMATED_BACKUP_PREFERENCE **=** { PRIMARY \| SECONDARY_ONLY \| SECONDARY \| NO
  기본 가용성 그룹을 만드는 데 사용됩니다. 기본 가용성 그룹은 하나의 데이터베이스와 두 개의 복제본(주 복제본과 보조 복제본)으로 제한됩니다. 이 옵션은 SQL Server Standard Edition에서 더 이상 사용되지 않는 데이터베이스 미러링 기능을 대체합니다. 자세한 내용은 [기본 가용성 그룹&#40;Always On 가용성 그룹&#41;](../../database-engine/availability-groups/windows/basic-availability-groups-always-on-availability-groups.md)을 참조하세요. 기본 가용성 그룹은 [!INCLUDE[ssSQL15](../../includes/sssql15-md.md)]부터 지원됩니다.  
 
  DISTRIBUTED  
- 분산형 가용성 그룹을 만드는 데 사용됩니다. 이 옵션은 AVAILABILITY GROUP ON 매개 변수와 함께 사용되어 별도의 Windows Server 장애 조치(failover) 클러스터에 있는 두 개의 가용성 그룹을 연결합니다.  자세한 내용은 [분산된 가용성 그룹&#40;Always On 가용성 그룹&#41;](../../database-engine/availability-groups/windows/distributed-availability-groups-always-on-availability-groups.md)을 참조하세요. 분산형 가용성 그룹은 [!INCLUDE[ssSQL15](../../includes/sssql15-md.md)]부터 지원됩니다. 
+ 분산형 가용성 그룹을 만드는 데 사용됩니다. 이 옵션은 AVAILABILITY GROUP ON 매개 변수와 함께 사용되어 별도의 Windows Server 장애 조치(failover) 클러스터에 있는 두 개의 가용성 그룹을 연결합니다.  자세한 내용은 [분산된 가용성 그룹&#40;Always On 가용성 그룹&#41;](../../database-engine/availability-groups/windows/distributed-availability-groups.md)을 참조하세요. 분산형 가용성 그룹은 [!INCLUDE[ssSQL15](../../includes/sssql15-md.md)]부터 지원됩니다. 
 
  REQUIRED_SYNCHRONIZED_SECONDARIES_TO_COMMIT   
  SQL Server 2017에서 도입되었습니다. 주 복제본이 트랜잭션을 커밋하기 전에 커밋하는 데 필요한 최소 동기 보조 복제본 수를 설정하는 데 사용됩니다. 트랜잭션 로그가 보조 복제본의 최소 수에서 업데이트될 때까지 SQL Server 트랜잭션이 대기하도록 보장합니다. 기본값은 0으로 SQL Server 2016과 동일한 동작을 제공합니다. 최솟값은 0입니다. 최댓값은 복제본 수에서 1을 뺀 수입니다. 이 옵션은 동기 커밋 모드의 복제본과 관련이 있습니다. 복제본이 동기 커밋 모드에 있는 경우 주 복제본의 쓰기는 보조 동기 복제본의 쓰기가 복제본 데이터베이스 트랜잭션 로그에 커밋될 때까지 기다립니다. 보조 동기 복제본을 호스팅하는 SQL Server가 응답을 중지하는 경우 주 복제본을 호스팅하는 SQL Server는 보조 복제본을 NOT SYNCHRONIZED로 표시하고 진행합니다. 응답하지 않는 데이터베이스가 다시 온라인 상태가 되면 "동기화 되지 않음" 상태가 되고 복제본은 주 복제본이 다시 동기화할 수 있을 때까지 비정상으로 표시됩니다. 이 설정은 최소 복제본 수가 각 트랜잭션을 커밋할 때까지 기본 복제본이 대기하도록 보장합니다. 최소 복제본 수를 사용할 수 없는 경우 주 복제본에 커밋은 실패합니다. 클러스터 형식 `EXTERNAL`의 경우 가용성 그룹이 클러스터 리소스에 추가될 때 설정이 변경됩니다. [가용성 그룹 구성을 위한 고가용성 및 데이터 보호](../../linux/sql-server-linux-availability-group-ha.md)를 참조하세요.
@@ -214,7 +214,7 @@ AUTOMATED_BACKUP_PREFERENCE **=** { PRIMARY \| SECONDARY_ONLY \| SECONDARY \| NO
   
  \<server_instance> 복제본의 호스트인 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]의 인스턴스 주소를 지정합니다. 주소 형식은 다음과 같이 인스턴스가 기본 인스턴스이거나 명명된 인스턴스인지 그리고 독립형 인스턴스이거나 FCI(장애 조치(failover) 클러스터 인스턴스)인지에 따라 달라집니다.  
   
- { '*system_name*[\\*instance_name*]' | '*FCI_network_name*[\\*instance_name*]' }  
+ { ' *system_name* [\\*instance_name* ]' | ' *FCI_network_name* [\\*instance_name* ]' }  
   
  이 주소의 구성 요소는 다음과 같습니다.  
   
@@ -222,13 +222,13 @@ AUTOMATED_BACKUP_PREFERENCE **=** { PRIMARY \| SECONDARY_ONLY \| SECONDARY \| NO
  [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]의 대상 인스턴스가 있는 컴퓨터 시스템의 NetBIOS 이름입니다. 이 컴퓨터는 WSFC 노드여야 합니다.  
   
  *FCI_network_name*  
- [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 장애 조치(failover) 클러스터에 액세스하는 데 사용되는 네트워크 이름입니다. 서버 인스턴스가 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]장애 조치(failover) 파트너로 참여하는 경우 이 인수를 사용합니다. FCI 서버 인스턴스에서 SELECT [@@SERVERNAME](../../t-sql/functions/servername-transact-sql.md)을 실행하면 전체 복제본 이름인 '*FCI_network_name*[\\*instance_name*]' 문자열 전체가 반환됩니다.  
+ [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 장애 조치(failover) 클러스터에 액세스하는 데 사용되는 네트워크 이름입니다. 서버 인스턴스가 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]장애 조치(failover) 파트너로 참여하는 경우 이 인수를 사용합니다. FCI 서버 인스턴스에서 SELECT [@@SERVERNAME](../../t-sql/functions/servername-transact-sql.md)을 실행하면 전체 복제본 이름인 ' *FCI_network_name* [\\*instance_name* ]' 문자열 전체가 반환됩니다.  
   
  *instance_name*  
- *system_name* 또는 *FCI_network_name*으로 호스팅되고 HADR 서비스를 사용하도록 설정된 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 인스턴스의 이름입니다. 기본 서버 인스턴스의 경우 *instance_name* 은 선택 사항입니다. 인스턴스 이름은 대/소문자를 구분하지 않습니다. 명명된 인스턴스에서 이 값 이름은 `select ServerProperty(N'InstanceName');`를 실행하여 반환되는 값과 같습니다.  
+ *system_name* 또는 *FCI_network_name* 으로 호스팅되고 HADR 서비스를 사용하도록 설정된 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 인스턴스의 이름입니다. 기본 서버 인스턴스의 경우 *instance_name* 은 선택 사항입니다. 인스턴스 이름은 대/소문자를 구분하지 않습니다. 명명된 인스턴스에서 이 값 이름은 `select ServerProperty(N'InstanceName');`를 실행하여 반환되는 값과 같습니다.  
   
  \  
- *system_name* 또는 *FCI_network_name*에서 구분하기 위해 *instance_name*을 지정하는 경우에만 사용되는 구분 기호입니다.  
+ *system_name* 또는 *FCI_network_name* 에서 구분하기 위해 *instance_name* 을 지정하는 경우에만 사용되는 구분 기호입니다.  
   
  WSFC 노드 및 서버 인스턴스의 필수 조건에 대한 자세한 내용은 [Always On 가용성 그룹에 대한 필수 조건, 제한 사항 및 권장 사항&#40;SQL Server&#41;](../../database-engine/availability-groups/windows/prereqs-restrictions-recommendations-always-on-availability.md)을 참조하세요.  
   
@@ -287,7 +287,7 @@ AUTOMATED_BACKUP_PREFERENCE **=** { PRIMARY \| SECONDARY_ONLY \| SECONDARY \| NO
  직접 시드를 활성화합니다. 이 메서드는 네트워크를 통해 보조 복제본을 시드합니다. 이 메서드를 사용하면 복제본에서 주 데이터베이스의 복사본을 백업 및 복원할 필요가 없습니다.  
   
 > [!NOTE]  
->  직접 시드를 위해 **GRANT CREATE ANY DATABASE** 옵션으로 **ALTER AVAILABILITY GROUP**을 호출하여 각 보조 복제본에서 데이터베이스 생성을 허용해야 합니다.  
+>  직접 시드를 위해 **GRANT CREATE ANY DATABASE** 옵션으로 **ALTER AVAILABILITY GROUP** 을 호출하여 각 보조 복제본에서 데이터베이스 생성을 허용해야 합니다.  
   
  MANUAL  
  수동 시드(기본값)를 지정합니다. 이 메서드를 사용하면 주 복제본에서 데이터베이스의 백업을 만들고 보조 복제본에서 해당 백업을 수동으로 복원해야 합니다.  
@@ -313,7 +313,7 @@ AUTOMATED_BACKUP_PREFERENCE **=** { PRIMARY \| SECONDARY_ONLY \| SECONDARY \| NO
  이 복제본의 보조 데이터베이스에 대한 사용자 연결이 허용되지 않습니다. 즉, 읽기 액세스가 가능하지 않습니다. 기본 동작입니다.  
   
  READ_ONLY  
- 애플리케이션 의도 속성이 **ReadOnly**로 설정된 경우에만 보조 복제본의 데이터베이스에 연결할 수 있습니다. 이 속성에 대한 자세한 내용은 [Using Connection String Keywords with SQL Server Native Client](../../relational-databases/native-client/applications/using-connection-string-keywords-with-sql-server-native-client.md)을 참조하십시오.  
+ 애플리케이션 의도 속성이 **ReadOnly** 로 설정된 경우에만 보조 복제본의 데이터베이스에 연결할 수 있습니다. 이 속성에 대한 자세한 내용은 [Using Connection String Keywords with SQL Server Native Client](../../relational-databases/native-client/applications/using-connection-string-keywords-with-sql-server-native-client.md)을 참조하십시오.  
   
  ALL  
  보조 복제본의 데이터베이스에 대해 읽기 전용 액세스를 위한 모든 연결이 허용됩니다.  
@@ -323,9 +323,9 @@ AUTOMATED_BACKUP_PREFERENCE **=** { PRIMARY \| SECONDARY_ONLY \| SECONDARY \| NO
  READ_ONLY_ROUTING_URL **='** TCP **://** _system-address_ **:** _port_ **'**  
  이 가용성 복제본에 대한 읽기 전용 연결 요청을 라우팅하는 데 사용할 URL을 지정합니다. 이 URL은 SQL Server 데이터베이스 엔진이 수신하는 URL입니다. 일반적으로 SQL Server 데이터베이스 엔진의 기본 인스턴스는 TCP 포트 1433에서 수신합니다.  
   
- 명명된 인스턴스의 경우 [sys.dm_tcp_listener_states](../../relational-databases/system-dynamic-management-views/sys-dm-tcp-listener-states-transact-sql.md) 동적 관리 뷰의 **port** 및 **type_desc** 열을 쿼리하여 포트 번호를 가져올 수 있습니다. 서버 인스턴스는 Transact-SQL 수신기를 사용합니다(**type_desc='TSQL'** ).  
+ 명명된 인스턴스의 경우 [sys.dm_tcp_listener_states](../../relational-databases/system-dynamic-management-views/sys-dm-tcp-listener-states-transact-sql.md) 동적 관리 뷰의 **port** 및 **type_desc** 열을 쿼리하여 포트 번호를 가져올 수 있습니다. 서버 인스턴스는 Transact-SQL 수신기를 사용합니다( **type_desc='TSQL'** ).  
   
- 복제본에 대한 읽기 전용 라우팅 URL을 계산하는 방법에 대한 자세한 내용은 [Always On에 대한 read_only_routing_url 계산](https://docs.microsoft.com/archive/blogs/mattn/calculating-read_only_routing_url-for-alwayson)을 참조하세요.  
+ 복제본에 대한 읽기 전용 라우팅 URL을 계산하는 방법에 대한 자세한 내용은 [Always On에 대한 read_only_routing_url 계산](/archive/blogs/mattn/calculating-read_only_routing_url-for-alwayson)을 참조하세요.  
   
 > [!NOTE]  
 >  [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]의 명명된 인스턴스의 경우 Transact-SQL 수신기가 특정 포트를 사용하도록 구성되어야 합니다. 자세한 내용은 [특정 TCP 포트로 수신하도록 서버 구성&#40;SQL Server 구성 관리자&#41;](../../database-engine/configure-windows/configure-a-server-to-listen-on-a-specific-tcp-port.md)을 참조하세요.  
@@ -344,7 +344,7 @@ AUTOMATED_BACKUP_PREFERENCE **=** { PRIMARY \| SECONDARY_ONLY \| SECONDARY \| NO
  ALL  
  주 복제본의 데이터베이스에 대한 모든 연결이 허용됩니다. 기본 동작입니다.  
   
- READ_ONLY_ROUTING_LIST **=** { **('** \<server_instance> **'** [ **,** ...*n* ] **)** | NONE } 보조 역할로 실행 중일 때 다음과 같은 요구 사항을 충족하는 이 가용성 그룹에 대한 가용성 복제본을 호스팅하는 서버 인스턴스의 쉼표로 구분된 목록을 지정합니다.  
+ READ_ONLY_ROUTING_LIST **=** { **('** \<server_instance> **'** [ **,** ... *n* ] **)** | NONE } 보조 역할로 실행 중일 때 다음과 같은 요구 사항을 충족하는 이 가용성 그룹에 대한 가용성 복제본을 호스팅하는 서버 인스턴스의 쉼표로 구분된 목록을 지정합니다.  
   
 -   모든 연결 또는 읽기 전용 연결을 허용하도록 구성되어야 합니다(위에서 SECONDARY_ROLE 옵션의 ALLOW_CONNECTIONS 인수 참조).  
   
@@ -440,7 +440,7 @@ AUTOMATED_BACKUP_PREFERENCE **=** { PRIMARY \| SECONDARY_ONLY \| SECONDARY \| NO
  *dns_name*  
  가용성 그룹 수신기의 DNS 호스트 이름을 지정합니다. 수신기의 DNS 이름은 도메인 및 NetBIOS에서 고유해야 합니다.  
   
- *dns_name*은 문자열 값입니다. 이 이름은 순서에 관계없이 영숫자 문자, 대시(-) 및 하이픈(_)만 포함할 수 있습니다. DNS 호스트 이름은 대/소문자를 구분하지 않습니다. 최대 길이는 63자입니다.  
+ *dns_name* 은 문자열 값입니다. 이 이름은 순서에 관계없이 영숫자 문자, 대시(-) 및 하이픈(_)만 포함할 수 있습니다. DNS 호스트 이름은 대/소문자를 구분하지 않습니다. 최대 길이는 63자입니다.  
   
  의미 있는 문자열을 지정하는 것이 좋습니다. 예를 들어, `AG1`이라는 가용성 그룹의 경우 `ag1-listener`와 같은 의미 있는 DNS 호스트 이름을 지정합니다.  
   
@@ -459,7 +459,7 @@ AUTOMATED_BACKUP_PREFERENCE **=** { PRIMARY \| SECONDARY_ONLY \| SECONDARY \| NO
   
  `WITH DHCP ON ('10.120.19.0','255.255.254.0')`  
   
- WITH IP **(** { **('** _four\_part\_ipv4\_address_ **','** _four\_part\_ipv4\_mask_ **')**  |  **('** _ipv6\_address_ **')** } [ **,** ...*n* ] **)** [ **,** PORT **=** _listener\_port_ ]  
+ WITH IP **(** { **('** _four\_part\_ipv4\_address_ **','** _four\_part\_ipv4\_mask_ **')**  |  **('** _ipv6\_address_ **')** } [ **,** ... *n* ] **)** [ **,** PORT **=** _listener\_port_ ]  
  DHCP를 사용하는 대신 가용성 그룹 수신기가 하나 이상의 고정 IP 주소를 사용할지 여부를 지정합니다. 여러 서브넷에서 가용성 그룹을 만들려면 각 서브넷의 수신기 구성에 하나의 고정 IP 주소가 필요합니다. 지정된 서브넷에 대해 고정 IP 주소는 IPv4 주소이거나 IPv6 주소일 수 있습니다. 새 가용성 그룹에 대한 복제본을 호스팅할 각 서브넷의 고정 IP 주소를 얻으려면 네트워크 관리자에게 문의하십시오.  
   
  예를 들면 다음과 같습니다.  
@@ -476,7 +476,7 @@ AUTOMATED_BACKUP_PREFERENCE **=** { PRIMARY \| SECONDARY_ONLY \| SECONDARY \| NO
  가용성 그룹 수신기의 IPv6 주소를 지정합니다. 예들 들어 `2001::4898:23:1002:20f:1fff:feff:b3a3`입니다.  
   
  PORT **=** *listener_port*  
- WITH IP 절에서 지정된 가용성 그룹 수신기에서 사용될 포트 번호(*listener_port*)를 지정합니다. PORT는 선택적입니다.  
+ WITH IP 절에서 지정된 가용성 그룹 수신기에서 사용될 포트 번호( *listener_port* )를 지정합니다. PORT는 선택적입니다.  
   
  기본 포트 번호 1433이 지원됩니다. 그러나 보안이 중요한 경우에는 다른 포트 번호를 사용하는 것이 좋습니다.  
   
@@ -507,7 +507,7 @@ AUTOMATED_BACKUP_PREFERENCE **=** { PRIMARY \| SECONDARY_ONLY \| SECONDARY \| NO
   
 |복제본 옵션|`COMPUTER01`의 설정|`COMPUTER02`의 설정|`COMPUTER03`의 설정|Description|  
 |--------------------|-----------------------------|-----------------------------|-----------------------------|-----------------|  
-|ENDPOINT_URL|TCP://*COMPUTER01:5022*|TCP://*COMPUTER02:5022*|TCP://*COMPUTER03:5022*|이 예에서는 시스템이 같은 도메인에 있으므로 엔드포인트 URL에서 컴퓨터 시스템의 이름을 시스템 주소로 사용할 수 있습니다.|  
+|ENDPOINT_URL|TCP:// *COMPUTER01:5022*|TCP:// *COMPUTER02:5022*|TCP:// *COMPUTER03:5022*|이 예에서는 시스템이 같은 도메인에 있으므로 엔드포인트 URL에서 컴퓨터 시스템의 이름을 시스템 주소로 사용할 수 있습니다.|  
 |AVAILABILITY_MODE|SYNCHRONOUS_COMMIT|SYNCHRONOUS_COMMIT|ASYNCHRONOUS_COMMIT|두 복제본이 동기-커밋 모드를 사용합니다. 동기화된 복제본은 데이터 손실 없는 장애 조치(failover)를 지원합니다. 비동기-커밋을 가용성 모드를 사용하는 세 번째 복제본입니다.|  
 |FAILOVER_MODE|AUTOMATIC|AUTOMATIC|MANUAL|동기-커밋 복제본은 자동 장애 조치(failover) 및 계획된 수동 장애 조치(failover)를 지원합니다. 동기-커밋 가용성 모드 복제본은 강제 수동 장애 조치(failover)만 지원합니다.|  
 |BACKUP_PRIORITY|30|30|90|동기-커밋 복제본보다 높은 우선 순위인 90이 비동기-커밋 복제본에 할당됩니다. 대개 백업은 비동기-커밋 복제본을 호스팅하는 서버 인스턴스에서 수행됩니다.|  
@@ -588,4 +588,4 @@ GO
  [DROP AVAILABILITY GROUP&#40;Transact-SQL&#41;](../../t-sql/statements/drop-availability-group-transact-sql.md)   
  [Always On 가용성 그룹 구성 문제 해결&#40;SQL Server&#41;](../../database-engine/availability-groups/windows/troubleshoot-always-on-availability-groups-configuration-sql-server.md)   
  [Always On 가용성 그룹 개요&#40;SQL Server&#41;](../../database-engine/availability-groups/windows/overview-of-always-on-availability-groups-sql-server.md)   
- [가용성 그룹 수신기, 클라이언트 연결 및 애플리케이션 장애 조치(failover)&#40;SQL Server&#41;](../../database-engine/availability-groups/windows/listeners-client-connectivity-application-failover.md)  
+ [가용성 그룹 수신기, 클라이언트 연결 및 애플리케이션 장애 조치(failover)&#40;SQL Server&#41;](../../database-engine/availability-groups/windows/listeners-client-connectivity-application-failover.md)

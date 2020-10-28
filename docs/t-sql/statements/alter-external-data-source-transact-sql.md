@@ -19,12 +19,12 @@ helpviewer_keywords:
 ms.assetid: a34b9e90-199d-46d0-817a-a7e69387bf5f
 author: markingmyname
 ms.author: maghan
-ms.openlocfilehash: 8a17a153aedecac36acb02946e726d07a50e4c60
-ms.sourcegitcommit: d56a834269132a83e5fe0a05b033936776cda8bb
+ms.openlocfilehash: b66c95d7818144abd41b7a5b9fbedb93ba81aded
+ms.sourcegitcommit: bd3a135f061e4a49183bbebc7add41ab11872bae
 ms.translationtype: HT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 09/29/2020
-ms.locfileid: "91529474"
+ms.lasthandoff: 10/21/2020
+ms.locfileid: "92300455"
 ---
 # <a name="alter-external-data-source-transact-sql"></a>ALTER EXTERNAL DATA SOURCE(Transact-SQL)
 [!INCLUDE [sqlserver2016-asdbmi-asa-pdw](../../includes/applies-to-version/sqlserver2016-asdbmi-asa-pdw.md)]
@@ -71,7 +71,7 @@ ALTER EXTERNAL DATA SOURCE data_source_name
 TYPE = [HADOOP | BLOB_STORAGE]   
 **적용 대상:** [!INCLUDE[ssSQLv14_md](../../includes/sssqlv14-md.md)].
 대량 작업의 경우에만 `LOCATION`은 Azure Blob 스토리지의 URL에 유효해야 합니다. `LOCATION` URL 끝에 **/** , 파일 이름 또는 공유 액세스 서명 매개 변수를 두지 마십시오.
-사용되는 자격 증명은 `SHARED ACCESS SIGNATURE`을 ID로 사용하여 만들어져야 합니다. 공유 액세스 서명에 대한 자세한 내용은 [SAS(공유 액세스 서명) 사용](https://docs.microsoft.com/azure/storage/storage-dotnet-shared-access-signature-part-1)을 참조하세요.
+사용되는 자격 증명은 `SHARED ACCESS SIGNATURE`을 ID로 사용하여 만들어져야 합니다. 공유 액세스 서명에 대한 자세한 내용은 [SAS(공유 액세스 서명) 사용](/azure/storage/storage-dotnet-shared-access-signature-part-1)을 참조하세요.
 
   
 

@@ -12,12 +12,12 @@ ms.assetid: ea21c73c-40e8-4c54-83d4-46ca36b2cf73
 author: julieMSFT
 ms.author: jrasnick
 monikerRange: '>= aps-pdw-2016 || = azure-sqldw-latest || = sqlallproducts-allversions'
-ms.openlocfilehash: 106be8b84605016e3fa0d9217d75355f7109221e
-ms.sourcegitcommit: c74bb5944994e34b102615b592fdaabe54713047
+ms.openlocfilehash: 64cbc15572d8d7316d5d61cc65190960aa496357
+ms.sourcegitcommit: bd3a135f061e4a49183bbebc7add41ab11872bae
 ms.translationtype: HT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 09/22/2020
-ms.locfileid: "90989825"
+ms.lasthandoff: 10/21/2020
+ms.locfileid: "92300203"
 ---
 # <a name="create-table-azure-synapse-analytics"></a>CREATE TABLE(Azure Synapse Analytics)
 
@@ -140,8 +140,8 @@ CREATE TABLE { database_name.schema_name.table_name | schema_name.table_name | t
  
  `HEAP`은 테이블을 힙으로 저장합니다. 이 동작은 [!INCLUDE[ssPDW](../../includes/sspdw-md.md)]의 기본값입니다.  
   
- `CLUSTERED INDEX` ( *index_column_name* [ ,...*n* ] )  
- 하나 이상의 키 열과 함께 클러스터형 인덱스로 테이블을 저장합니다. 이 동작은 데이터를 행별로 저장합니다. *index_column_name*을 사용하여 인덱스에 하나 이상의 키 열 이름을 지정할 수 있습니다.  자세한 내용은 일반 설명의 Rowstore 테이블을 참조하세요.
+ `CLUSTERED INDEX` ( *index_column_name* [ ,... *n* ] )  
+ 하나 이상의 키 열과 함께 클러스터형 인덱스로 테이블을 저장합니다. 이 동작은 데이터를 행별로 저장합니다. *index_column_name* 을 사용하여 인덱스에 하나 이상의 키 열 이름을 지정할 수 있습니다.  자세한 내용은 일반 설명의 Rowstore 테이블을 참조하세요.
  
  `LOCATION = USER_DB` 이 옵션은 더 이상 사용되지 않습니다. 구문적으로는 수락되지만 더 이상 필요하지 않으며 동작에 영향을 주지 않습니다.   
   
@@ -149,7 +149,7 @@ CREATE TABLE { database_name.schema_name.table_name | schema_name.table_name | t
 
 최적의 배포 방법을 선택하고 분산 테이블을 사용하는 방법을 알아보려면 [[!INCLUDE[ssSDW](../../includes/sssdwfull-md.md)]에서 테이블 배포](https://azure.microsoft.com/documentation/articles/sql-data-warehouse-tables-distribute/)를 참조하세요.
 
-`DISTRIBUTION = HASH`( *distribution_column_name* ) *distribution_column_name*에 저장된 값을 해시하여 각 행을 하나의 배포에 할당합니다. 알고리즘은 결정적입니다. 즉, 항상 동일한 값을 동일한 배포에 해시한다는 뜻입니다.  NULL이 있는 모든 행은 동일한 분산에 할당되므로 배포 열은 NOT NULL로 정의되어야 합니다.
+`DISTRIBUTION = HASH`( *distribution_column_name* ) *distribution_column_name* 에 저장된 값을 해시하여 각 행을 하나의 배포에 할당합니다. 알고리즘은 결정적입니다. 즉, 항상 동일한 값을 동일한 배포에 해시한다는 뜻입니다.  NULL이 있는 모든 행은 동일한 분산에 할당되므로 배포 열은 NOT NULL로 정의되어야 합니다.
 
 `DISTRIBUTION = ROUND_ROBIN`은 행을 라운드 로빈 방식으로 모든 분산에서 동일하게 배포합니다. 이 동작은 [!INCLUDE[ssSDW](../../includes/sssdw-md.md)]의 기본값입니다.
 
@@ -158,7 +158,7 @@ CREATE TABLE { database_name.schema_name.table_name | schema_name.table_name | t
 ### <a name="table-partition-options"></a><a name="TablePartitionOptions"></a> 테이블 파티션 옵션
 테이블 파티션 사용 방법에 대한 지침은 [[!INCLUDE[ssSDW](../../includes/sssdwfull-md.md)]에서 테이블 분할](https://azure.microsoft.com/documentation/articles/sql-data-warehouse-tables-partition/)을 참조하세요.
 
- `PARTITION` ( *partition_column_name* `RANGE` [ `LEFT` | `RIGHT` ] `FOR VALUES` ( [ *boundary_value* [,...*n*] ] ))   
+ `PARTITION` ( *partition_column_name* `RANGE` [ `LEFT` | `RIGHT` ] `FOR VALUES` ( [ *boundary_value* [,... *n* ] ] ))   
 하나 이상의 테이블 파티션을 만듭니다. 이 파티션은 힙, 클러스터형 인덱스 또는 클러스터형 columnstore 인덱스에 테이블을 저장하는지 여부에 관계 없이 행의 하위 집합에 작업을 적용할 수 있도록 하는 가로 테이블 조각입니다. 배포 열과 달리 테이블 파티션은 각 행이 저장된 배포를 결정하지 않습니다. 대신, 테이블 파티션은 행이 그룹화되고 각 배포 내에 저장되는 방식을 결정합니다.  
 
 | 인수 | 설명 |
@@ -166,7 +166,7 @@ CREATE TABLE { database_name.schema_name.table_name | schema_name.table_name | t
 |*partition_column_name*| [!INCLUDE[ssSDW](../../includes/sssdw-md.md)]가 행을 분할하는 데 사용하는 열을 지정합니다. 이 열은 모든 데이터 형식일 수 있습니다. [!INCLUDE[ssSDW](../../includes/sssdw-md.md)]는 파티션 열 값을 오름차순으로 정렬합니다. 낮음-높은 순서는 `LEFT` 지정의 `RIGHT`에서 `RANGE`로 진행됩니다. |  
 | `RANGE LEFT` | 왼쪽(낮은 값)에서 파티션에 속하는 경계 값을 지정합니다. 기본값은 LEFT입니다. |
 | `RANGE RIGHT` | 오른쪽(높은 값)에서 파티션에 속하는 경계 값을 지정합니다. | 
-| `FOR VALUES` ( *boundary_value* [,...*n*] ) | 파티션에 대한 경계 값을 지정합니다. *boundary_value*는 상수 식입니다. NULL일 수 없습니다. *partition_column_name*의 데이터 형식과 일치하거나 암시적으로 변환할 수 있어야 합니다. 암시적으로 변환하는 동안에는 자를 수 없습니다. 그러면 값의 크기와 배율이 *partition_column_name*의 데이터 형식과 일치하지 않습니다.<br></br><br></br>`PARTITION` 절은 지정하되 경계 값을 지정하지 않으면 [!INCLUDE[ssSDW](../../includes/sssdw-md.md)]는 하나의 파티션으로 분할된 테이블을 만듭니다. 해당하는 경우 나중에 두 개의 파티션으로 테이블을 분할할 수 있습니다.<br></br><br></br>하나의 경계 값을 지정한 경우 결과 테이블은 경계 값보다 낮은 값에 대한 파티션 하나와 경계 값보다 높은 값에 대한 파티션 하나 이렇게 두 개의 파티션을 갖습니다. 분할되지 않은 테이블에 파티션을 이동하는 경우 분할되지 않은 테이블은 데이터를 받되 해당 메타데이터의 파티션 경계는 없습니다.| 
+| `FOR VALUES` ( *boundary_value* [,... *n* ] ) | 파티션에 대한 경계 값을 지정합니다. *boundary_value* 는 상수 식입니다. NULL일 수 없습니다. *partition_column_name* 의 데이터 형식과 일치하거나 암시적으로 변환할 수 있어야 합니다. 암시적으로 변환하는 동안에는 자를 수 없습니다. 그러면 값의 크기와 배율이 *partition_column_name* 의 데이터 형식과 일치하지 않습니다.<br></br><br></br>`PARTITION` 절은 지정하되 경계 값을 지정하지 않으면 [!INCLUDE[ssSDW](../../includes/sssdw-md.md)]는 하나의 파티션으로 분할된 테이블을 만듭니다. 해당하는 경우 나중에 두 개의 파티션으로 테이블을 분할할 수 있습니다.<br></br><br></br>하나의 경계 값을 지정한 경우 결과 테이블은 경계 값보다 낮은 값에 대한 파티션 하나와 경계 값보다 높은 값에 대한 파티션 하나 이렇게 두 개의 파티션을 갖습니다. 분할되지 않은 테이블에 파티션을 이동하는 경우 분할되지 않은 테이블은 데이터를 받되 해당 메타데이터의 파티션 경계는 없습니다.| 
 
  예제 섹션의 [분할된 테이블 만들기](#PartitionedTable)를 참조하세요.
 
@@ -176,24 +176,24 @@ CCI(클러스터형 columnstore 인덱스)는 [!INCLUDE[ssSDW](../../includes/ss
 
 문자열 열을 제외하고 [!INCLUDE[ssSDW](../../includes/sssdwfull-md.md)]에서 지원되는 모든 데이터 형식의 열에 순서가 지정된 CCI를 만들 수 있습니다.  
 
-사용자는 **sys.index_columns**의 **column_store_order_ordinal** 열에서 테이블이 정렬되고 정렬에 순서가 있는 열을 쿼리할 수 있습니다.  
+사용자는 **sys.index_columns** 의 **column_store_order_ordinal** 열에서 테이블이 정렬되고 정렬에 순서가 있는 열을 쿼리할 수 있습니다.  
 
-자세한 내용은 [순서가 지정된 클러스터형 columnstore 인덱스를 사용한 성능 튜닝](https://docs.microsoft.com/azure/sql-data-warehouse/performance-tuning-ordered-cci)을 참조하세요.   
+자세한 내용은 [순서가 지정된 클러스터형 columnstore 인덱스를 사용한 성능 튜닝](/azure/sql-data-warehouse/performance-tuning-ordered-cci)을 참조하세요.   
 
 ### <a name="data-type"></a><a name="DataTypes"></a> 데이터 형식
 
 [!INCLUDE[ssSDW](../../includes/sssdw-md.md)]는 가장 일반적으로 사용되는 데이터 형식을 지원합니다. 다음은 세부 정보 및 스토리지 바이트가 포함된 지원되는 데이터 형식의 목록입니다. 데이터 형식 및 데이터 형식 사용 방법을 자세히 알아보려면 [[!INCLUDE[ssSDW](../../includes/sssdwfull-md.md)]의 테이블 데이터 형식](https://azure.microsoft.com/documentation/articles/sql-data-warehouse-tables-data-types)을 참조하세요.
 
-데이터 형식 변환의 테이블의 경우 [CAST 및 CONVERT(Transact-SQL)](https://msdn.microsoft.com/library/ms187928/)에 있는 암시적 변환 섹션을 참조하세요.
+데이터 형식 변환의 테이블의 경우 [CAST 및 CONVERT(Transact-SQL)](../functions/cast-and-convert-transact-sql.md)에 있는 암시적 변환 섹션을 참조하세요.
 
 >[!NOTE]
->자세한 내용은 [날짜 및 시간 데이터 형식 및 함수&#40;Transact-SQL&#41;](/sql/t-sql/functions/date-and-time-data-types-and-functions-transact-sql)를 참조하세요.
+>자세한 내용은 [날짜 및 시간 데이터 형식 및 함수&#40;Transact-SQL&#41;](../functions/date-and-time-data-types-and-functions-transact-sql.md)를 참조하세요.
 
 `datetimeoffset` [ ( *n* ) ]  
- *n*의 기본값은 7입니다.  
+ *n* 의 기본값은 7입니다.  
   
  `datetime2` [ ( *n* ) ]  
-소수 자릿수 초 숫자를 지정할 수 있다는 점 외에는 `datetime`과 동일합니다. *n*의 기본값은 `7`입니다.  
+소수 자릿수 초 숫자를 지정할 수 있다는 점 외에는 `datetime`과 동일합니다. *n* 의 기본값은 `7`입니다.  
   
 |*n* 값|자릿수|확장|  
 |--:|--:|-:|  
@@ -216,17 +216,17 @@ CCI(클러스터형 columnstore 인덱스)는 [!INCLUDE[ssSDW](../../includes/ss
  그레고리력에 따라 연도, 월 및 일에 대해 최대 10자를 사용하여 날짜를 저장합니다. 스토리지 크기는 3바이트입니다. 날짜는 정수로 저장됩니다.  
   
  `time` [ ( *n* ) ]  
- *n*의 기본값은 `7`입니다.  
+ *n* 의 기본값은 `7`입니다.  
   
  `float` [ ( *n* ) ]  
- 부동 소수점 숫자 데이터에 사용하는 근사 숫자 데이터 형식입니다. 부동 소수점 데이터는 근사값이므로 해당 데이터 형식 범위에 있는 모든 값을 정확하게 표현할 수는 없습니다. *n*은 과학적 표기법으로 `float`의 가수를 저장하는 데 사용되는 비트 수를 지정합니다. *n*은 전체 자릿수 및 스토리지 크기를 결정합니다. *n*이 지정된 경우 그 값은 `1`에서 `53` 사이여야 합니다. *n*의 기본값은 `53`입니다.  
+ 부동 소수점 숫자 데이터에 사용하는 근사 숫자 데이터 형식입니다. 부동 소수점 데이터는 근사값이므로 해당 데이터 형식 범위에 있는 모든 값을 정확하게 표현할 수는 없습니다. *n* 은 과학적 표기법으로 `float`의 가수를 저장하는 데 사용되는 비트 수를 지정합니다. *n* 은 전체 자릿수 및 스토리지 크기를 결정합니다. *n* 이 지정된 경우 그 값은 `1`에서 `53` 사이여야 합니다. *n* 의 기본값은 `53`입니다.  
   
 | *n* 값 | 자릿수 | 스토리지 크기 |  
 | --------: | --------: | -----------: |  
 | 1-24   | 7자리  | 4바이트      |  
 | 25-53  | 15자리 | 8바이트      |  
   
- [!INCLUDE[ssSDW](../../includes/sssdw-md.md)]에서는 *n*을 가능한 두 값 중 하나로 처리합니다. `1`<= *n* <= `24`이면 *n*은 `24`으로 처리됩니다. `25` <= *n* <= `53`이면 *n*은 `53`으로 처리됩니다.  
+ [!INCLUDE[ssSDW](../../includes/sssdw-md.md)]에서는 *n* 을 가능한 두 값 중 하나로 처리합니다. `1`<= *n* <= `24`이면 *n* 은 `24`으로 처리됩니다. `25` <= *n* <= `53`이면 *n* 은 `53`으로 처리됩니다.  
   
  [!INCLUDE[ssSDW](../../includes/sssdw-md.md)] `float` 데이터 형식은 *부터* 까지의 모든 `1`n`53` 값에 대해 ISO 표준을 준수합니다. 배정밀도의 동의어는 `float(53)`입니다.  
   
@@ -240,7 +240,7 @@ CCI(클러스터형 columnstore 인덱스)는 [!INCLUDE[ssSDW](../../includes/ss
  소수점 왼쪽과 오른쪽에 저장할 수 있는 10진수의 최대 총 수입니다. 전체 자릿수 값은 `1`에서 최대 전체 자릿수인 `38` 사이여야 합니다. 기본 전체 자릿수는 `18`입니다.  
   
  *scale*  
- 소수점 오른쪽에 저장할 수 있는 10진수의 최대 수입니다. *Scale* 값은 `0`에서 *precision* 사이여야 합니다. *precision*이 지정된 경우 *scale*만 지정할 수 있습니다 기본 비율은 `0`이므로 `0` <= *scale* <= *precision*입니다. 전체 자릿수에 따라 최대 스토리지 크기가 달라집니다.  
+ 소수점 오른쪽에 저장할 수 있는 10진수의 최대 수입니다. *Scale* 값은 `0`에서 *precision* 사이여야 합니다. *precision* 이 지정된 경우 *scale* 만 지정할 수 있습니다 기본 비율은 `0`이므로 `0` <= *scale* <= *precision* 입니다. 전체 자릿수에 따라 최대 스토리지 크기가 달라집니다.  
   
 | 자릿수 | 스토리지 크기(바이트)  |  
 | ---------: |-------------: |  
@@ -271,22 +271,22 @@ CCI(클러스터형 columnstore 인덱스)는 [!INCLUDE[ssSDW](../../includes/ss
  `1`, `0` 또는 NULL 값을 가질 수 있는 정수 데이터 형식입니다. [!INCLUDE[ssSDW](../../includes/sssdw-md.md)]에서는 bit 열의 스토리지를 최적화합니다. 테이블에 8개 이하의 bit 열이 있는 경우 열은 1바이트로 저장되고, 9-16개의 bit 열이 있을 경우 2바이트로 저장되는 식입니다.  
   
  `nvarchar` [ ( *n* | `max` ) ]  -- `max`는 [!INCLUDE[ssSDW](../../includes/sssdw-md.md)]에만 적용됩니다.  
- 가변 길이 유니코드 문자 데이터입니다. *n*은 1부터 4000 사이의 값이 될 수 있습니다. `max`는 최대 스토리지 크기가 2^31-1바이트(2GB)임을 나타냅니다. 스토리지 크기(바이트)는 입력된 문자 수의 두 배 + 2바이트입니다. 입력된 데이터의 길이가 0자일수도 있습니다.  
+ 가변 길이 유니코드 문자 데이터입니다. *n* 은 1부터 4000 사이의 값이 될 수 있습니다. `max`는 최대 스토리지 크기가 2^31-1바이트(2GB)임을 나타냅니다. 스토리지 크기(바이트)는 입력된 문자 수의 두 배 + 2바이트입니다. 입력된 데이터의 길이가 0자일수도 있습니다.  
   
  `nchar` [ ( *n* ) ]  
- 길이가 *n*자인 고정 길이의 유니코드 문자 데이터입니다. *n*은 `1`과 `4000` 사이의 값이어야 합니다. 스토리지 크기는 *n*바이트의 두 배입니다.  
+ 길이가 *n* 자인 고정 길이의 유니코드 문자 데이터입니다. *n* 은 `1`과 `4000` 사이의 값이어야 합니다. 스토리지 크기는 *n* 바이트의 두 배입니다.  
   
  `varchar` [ ( *n*  | `max` ) ]  -- `max`는 [!INCLUDE[ssSDW](../../includes/sssdw-md.md)]에만 적용됩니다.   
- 길이가 *n*바이트인 가변 길이의 비 유니코드 문자 데이터입니다. *n*은 `1`과 `8000` 사이의 값이어야 합니다. `max`는 최대 스토리지 크기가 2^31-1바이트(2GB)임을 나타냅니다. 스토리지 크기는 입력된 데이터의 실제 길이 + 2바이트입니다.  
+ 길이가 *n* 바이트인 가변 길이의 비 유니코드 문자 데이터입니다. *n* 은 `1`과 `8000` 사이의 값이어야 합니다. `max`는 최대 스토리지 크기가 2^31-1바이트(2GB)임을 나타냅니다. 스토리지 크기는 입력된 데이터의 실제 길이 + 2바이트입니다.  
   
  `char` [ ( *n* ) ]  
- 길이가 *n*바이트인 고정 길이의 비 유니코드 문자 데이터입니다. *n*은 `1`과 `8000` 사이의 값이어야 합니다. 스토리지 크기는 *n* 바이트입니다. *n*에 대한 기본값은 `1`입니다.  
+ 길이가 *n* 바이트인 고정 길이의 비 유니코드 문자 데이터입니다. *n* 은 `1`과 `8000` 사이의 값이어야 합니다. 스토리지 크기는 *n* 바이트입니다. *n* 에 대한 기본값은 `1`입니다.  
   
  `varbinary` [ ( *n*  | `max` ) ]  -- `max`는 [!INCLUDE[ssSDW](../../includes/sssdw-md.md)]에만 적용됩니다.  
- 가변 길이 이진 데이터입니다. *n*은 `1`과 `8000` 사이의 값이어야 합니다. `max`는 최대 스토리지 크기가 2^31-1바이트(2GB)임을 나타냅니다. 스토리지 크기는 실제 입력된 데이터의 길이 + 2바이트입니다. *n*의 기본값은 7입니다.  
+ 가변 길이 이진 데이터입니다. *n* 은 `1`과 `8000` 사이의 값이어야 합니다. `max`는 최대 스토리지 크기가 2^31-1바이트(2GB)임을 나타냅니다. 스토리지 크기는 실제 입력된 데이터의 길이 + 2바이트입니다. *n* 의 기본값은 7입니다.  
   
  `binary` [ ( *n* ) ]  
- 길이가 *n*바이트인 고정 길이 이진 데이터입니다. *n*은 `1`과 `8000` 사이의 값이어야 합니다. 스토리지 크기는 *n* 바이트입니다. *n*의 기본값은 `7`입니다.  
+ 길이가 *n* 바이트인 고정 길이 이진 데이터입니다. *n* 은 `1`과 `8000` 사이의 값이어야 합니다. 스토리지 크기는 *n* 바이트입니다. *n* 의 기본값은 `7`입니다.  
   
  `uniqueidentifier`  
  16바이트 GUID입니다.  
@@ -326,7 +326,7 @@ columnstore 테이블은 열별 순서로 저장된 테이블입니다. columnst
 rowstore 테이블을 columnstore 테이블로 변경하려면 테이블에서 모든 기존 인덱스를 삭제하고 클러스터형 columnstore 인덱스를 만듭니다. 예제를 보려면 [CREATE COLUMNSTORE INDEX&#40;Transact-SQL&#41;](../../t-sql/statements/create-columnstore-index-transact-sql.md)를 참조하세요.
 
 자세한 내용은 다음 문서를 참조하세요.
-- [버전이 지정된 columnstore 인덱스 기능 요약](https://msdn.microsoft.com/library/dn934994/)
+- [버전이 지정된 columnstore 인덱스 기능 요약](/sql/relational-databases/indexes/columnstore-indexes-what-s-new)
 - [[!INCLUDE[ssSDW](../../includes/sssdwfull-md.md)]에서 테이블 인덱싱](https://azure.microsoft.com/documentation/articles/sql-data-warehouse-tables-index/)
 - [Columnstore 인덱스 가이드](~/relational-databases/indexes/columnstore-indexes-overview.md) 
 
@@ -341,7 +341,7 @@ rowstore 테이블을 columnstore 테이블로 변경하려면 테이블에서 �
 CREATE TABLE t1 ( c1 varchar(20) COLLATE Divehi_90_CI_AS_KS_WS) WITH (PARTITION (c1 RANGE FOR VALUES (N'')))
 ```  
  
- *boundary_value*가 *partition_column_name*의 데이터 형식으로 암시적으로 변환해야 하는 리터럴 값인 경우 불일치가 발생합니다. 리터럴 값은 [!INCLUDE[ssSDW](../../includes/sssdw-md.md)] 시스템 뷰를 통해 표시되지만 변환된 값은 [!INCLUDE[tsql](../../includes/tsql-md.md)] 작업에 사용됩니다. 
+ *boundary_value* 가 *partition_column_name* 의 데이터 형식으로 암시적으로 변환해야 하는 리터럴 값인 경우 불일치가 발생합니다. 리터럴 값은 [!INCLUDE[ssSDW](../../includes/sssdw-md.md)] 시스템 뷰를 통해 표시되지만 변환된 값은 [!INCLUDE[tsql](../../includes/tsql-md.md)] 작업에 사용됩니다. 
 
 ### <a name="temporary-tables"></a>임시 테이블
 
@@ -596,5 +596,4 @@ WITH
 [CREATE TABLE AS SELECT&#40;Azure Synapse Analytics&#41;](../../t-sql/statements/create-table-as-select-azure-sql-data-warehouse.md)   
 [DROP TABLE&#40;Transact-SQL&#41;](../../t-sql/statements/drop-table-transact-sql.md)   
 [ALTER TABLE&#40;Transact-SQL&#41;](../../t-sql/statements/alter-table-transact-sql.md)   
-[sys.index_columns&#40;Transact-SQL&#41;](/sql/relational-databases/system-catalog-views/sys-index-columns-transact-sql?view=azure-sqldw-latest) 
-  
+[sys.index_columns&#40;Transact-SQL&#41;](../../relational-databases/system-catalog-views/sys-index-columns-transact-sql.md?view=azure-sqldw-latest) 

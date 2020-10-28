@@ -18,12 +18,12 @@ ms.assetid: 966b75b5-ca87-4203-8bf9-95c4e00cb0b5
 author: VanMSFT
 ms.author: vanto
 monikerRange: = azuresqldb-current || = azure-sqldw-latest || = sqlallproducts-allversions
-ms.openlocfilehash: 21b259f692a324e163ed74b32366f6c8ec21a90f
-ms.sourcegitcommit: ac9feb0b10847b369b77f3c03f8200c86ee4f4e0
+ms.openlocfilehash: 00cfd711ce130fa9c90c11000a6853082494e9bd
+ms.sourcegitcommit: bd3a135f061e4a49183bbebc7add41ab11872bae
 ms.translationtype: HT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 09/16/2020
-ms.locfileid: "90688357"
+ms.lasthandoff: 10/21/2020
+ms.locfileid: "92300311"
 ---
 # <a name="alter-database-scoped-credential-transact-sql"></a>ALTER DATABASE SCOPED CREDENTIAL(Transact-SQL)
 [!INCLUDE [sql-asdb-asdbmi-asa-pdw](../../includes/applies-to-version/sql-asdb-asdbmi-asa-pdw.md)]
@@ -45,17 +45,17 @@ ALTER DATABASE SCOPED CREDENTIAL credential_name WITH IDENTITY = 'identity_name'
  *credential_name*  
  변경할 데이터베이스 범위 자격 증명의 이름을 지정합니다.  
   
- IDENTITY **='***identity_name***'**  
- 서버 외부에 연결할 때 사용할 계정의 이름을 지정합니다. Azure Blob 스토리지에서 파일을 가져오려면 ID 이름이 `SHARED ACCESS SIGNATURE`여야 합니다.  공유 액세스 서명에 대한 자세한 내용은 [SAS(공유 액세스 서명) 사용](https://docs.microsoft.com/azure/storage/storage-dotnet-shared-access-signature-part-1)을 참조하세요.  
+ IDENTITY **=' ***identity_name*** '**  
+ 서버 외부에 연결할 때 사용할 계정의 이름을 지정합니다. Azure Blob 스토리지에서 파일을 가져오려면 ID 이름이 `SHARED ACCESS SIGNATURE`여야 합니다.  공유 액세스 서명에 대한 자세한 내용은 [SAS(공유 액세스 서명) 사용](/azure/storage/storage-dotnet-shared-access-signature-part-1)을 참조하세요.  
     
   
- SECRET **='***secret***'**  
- 나가는 인증에 필요한 암호를 지정합니다. *secret*은 Azure Blob 스토리지에서 파일을 가져오는 데 필요합니다. *secret*은 다른 용도에 대해서는 선택 사항이 될 수 있습니다.   
+ SECRET **=' ***secret*** '**  
+ 나가는 인증에 필요한 암호를 지정합니다. *secret* 은 Azure Blob 스토리지에서 파일을 가져오는 데 필요합니다. *secret* 은 다른 용도에 대해서는 선택 사항이 될 수 있습니다.   
 > [!WARNING]
 >  SAS 키 값은 '?'(물음표)로 시작될 수 있습니다. SAS 키를 사용할 때는 앞의 '?'를 제거해야 합니다. 그렇지 않으면 작업이 차단될 수 있습니다.    
   
 ## <a name="remarks"></a>설명  
- 데이터베이스 범위 자격 증명이 변경되면 *identity_name*과 *secret*의 값이 모두 다시 설정됩니다. 옵션인 SECRET 인수를 지정하지 않으면 저장된 암호 값이 NULL로 설정됩니다.  
+ 데이터베이스 범위 자격 증명이 변경되면 *identity_name* 과 *secret* 의 값이 모두 다시 설정됩니다. 옵션인 SECRET 인수를 지정하지 않으면 저장된 암호 값이 NULL로 설정됩니다.  
   
  암호는 서비스 마스터 키를 사용하여 암호화됩니다. 서비스 마스터 키가 다시 생성되면 암호가 새 서비스 마스터 키를 사용하여 다시 암호화됩니다.  
   
@@ -90,5 +90,4 @@ GO
  [sys.database_scoped_credentials](../../relational-databases/system-catalog-views/sys-database-scoped-credentials-transact-sql.md)   
  [CREATE CREDENTIAL &#40;Transact-SQL&#41;](../../t-sql/statements/create-credential-transact-sql.md)   
  [sys.credentials&#40;Transact-SQL&#41;](../../relational-databases/system-catalog-views/sys-credentials-transact-sql.md)  
-  
   

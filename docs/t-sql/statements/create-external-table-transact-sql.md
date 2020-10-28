@@ -22,12 +22,12 @@ ms.assetid: 6a6fd8fe-73f5-4639-9908-2279031abdec
 author: markingmyname
 ms.author: maghan
 monikerRange: '>=aps-pdw-2016||=azuresqldb-current||=azure-sqldw-latest||>=sql-server-2016||=sqlallproducts-allversions||>=sql-server-linux-2017||=azuresqldb-mi-current'
-ms.openlocfilehash: 606548b95d1d825341c44e03eb406c271763c12b
-ms.sourcegitcommit: dd36d1cbe32cd5a65c6638e8f252b0bd8145e165
+ms.openlocfilehash: 76deea6c09a14a420ac5916248d0a3944ea5609a
+ms.sourcegitcommit: bd3a135f061e4a49183bbebc7add41ab11872bae
 ms.translationtype: HT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 09/08/2020
-ms.locfileid: "89541396"
+ms.lasthandoff: 10/21/2020
+ms.locfileid: "92300635"
 ---
 # <a name="create-external-table-transact-sql"></a>CREATE EXTERNAL TABLE(Transact-SQL)
 
@@ -62,11 +62,11 @@ ms.locfileid: "89541396"
 
 이 명령은 Hadoop 클러스터나 Azure Blob 스토리지에 저장된 데이터를 참조하는 Hadoop 클러스터나 Azure Blob 스토리지 PolyBase 외부 테이블에 저장된 데이터에 액세스하는 PolyBase용 외부 테이블을 만듭니다.
 
-**적용 대상**: SQL Server 2016 이상
+**적용 대상** : SQL Server 2016 이상
 
 PolyBase 쿼리에 대한 외부 데이터 원본이 있는 외부 테이블을 사용합니다. 외부 데이터 원본은 연결을 설정하고 다음과 같은 기본 사용 사례를 지원하는 데 사용됩니다.
 
-- [PolyBase](https://docs.microsoft.com/sql/relational-databases/polybase/polybase-guide)를 사용하여 데이터 가상화 및 데이터 로드
+- [PolyBase](../../relational-databases/polybase/polybase-guide.md)를 사용하여 데이터 가상화 및 데이터 로드
 - `BULK INSERT` 또는 `OPENROWSET`를 통해 SQL Server 또는 SQL Database를 사용한 대량 로드 작업
 
 [CREATE EXTERNAL DATA SOURCE](../../t-sql/statements/create-external-data-source-transact-sql.md) 및 [DROP EXTERNAL TABLE](../../t-sql/statements/drop-external-table-transact-sql.md)도 참조하세요.
@@ -102,13 +102,13 @@ column_name <data_type>
 
 *{ database_name.schema_name.table_name | schema_name.table_name | table_name }* 만들려는 테이블의 한 부분에서 세 부분으로 이루어진 이름입니다. 외부 테이블의 경우 SQL은 Hadoop 또는 Azure Blob 스토리지에서 참조되는 파일이나 폴더에 대한 기본 통계와 함께 메타데이터만 저장합니다. 실제 데이터가 이동되거나 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]에 저장되지 않습니다.
 
-\<column_definition> [ ,...*n* ] CREATE EXTERNAL TABLE은 열 이름, 데이터 형식, Null 허용 여부 및 데이터 정렬을 구성하는 기능을 지원합니다. 외부 테이블에 DEFAULT CONSTRAINT를 사용할 수 없습니다.
+\<column_definition> [ ,... *n* ] CREATE EXTERNAL TABLE은 열 이름, 데이터 형식, Null 허용 여부 및 데이터 정렬을 구성하는 기능을 지원합니다. 외부 테이블에 DEFAULT CONSTRAINT를 사용할 수 없습니다.
 
 데이터 형식 및 열 수를 포함한 열 정의는 외부 파일의 데이터와 일치해야 합니다. 불일치가 있는 경우 실제 데이터를 쿼리할 때 파일 행이 거부됩니다.
 
-LOCATION = '*folder_or_filepath*' Hadoop 또는 Azure Blob 스토리지의 실제 데이터에 대한 폴더 또는 파일 경로 및 파일 이름을 지정합니다. 위치는 루트 폴더에서 시작합니다. 루트 폴더는 외부 데이터 원본에 지정된 데이터 위치입니다.
+LOCATION = ' *folder_or_filepath* ' Hadoop 또는 Azure Blob 스토리지의 실제 데이터에 대한 폴더 또는 파일 경로 및 파일 이름을 지정합니다. 위치는 루트 폴더에서 시작합니다. 루트 폴더는 외부 데이터 원본에 지정된 데이터 위치입니다.
 
-SQL Server에서는 CREATE EXTERNAL TABLE 문이 경로 및 폴더가 없으면 만듭니다. 그런 다음, INSERT INTO를 사용하여 로컬 SQL Server 테이블에서 외부 데이터 원본으로 데이터를 내보냅니다. 자세한 내용은 [PolyBase 쿼리](/sql/relational-databases/polybase/polybase-queries)를 참조하세요.
+SQL Server에서는 CREATE EXTERNAL TABLE 문이 경로 및 폴더가 없으면 만듭니다. 그런 다음, INSERT INTO를 사용하여 로컬 SQL Server 테이블에서 외부 데이터 원본으로 데이터를 내보냅니다. 자세한 내용은 [PolyBase 쿼리](../../relational-databases/polybase/polybase-queries.md)를 참조하세요.
 
 위치(LOCATION)를 폴더로 지정할 경우, 외부 테이블에서 선택하는 PolyBase 쿼리는 폴더 및 해당 폴더의 모든 하위 폴더에서 파일을 검색합니다. Hadoop과 마찬가지로 PolyBase도 숨겨진 폴더를 반환하지 않습니다. 또한 파일 이름이 밑줄(_) 또는 마침표(.)로 시작하는 파일을 반환하지 않습니다.
 
@@ -128,26 +128,26 @@ FILE_FORMAT = *external_file_format_name* 외부 데이터에 대한 파일 형�
 
 REJECT_TYPE = **value** | percentage REJECT_VALUE 옵션이 리터럴 값으로 지정되는지 또는 백분율로 지정되는지 구체화합니다.
 
-value REJECT_VALUE는 백분율이 아닌 리터럴 값입니다. PolyBase 쿼리는 거부된 행 수가 *reject_value*를 초과하면 실패합니다.
+value REJECT_VALUE는 백분율이 아닌 리터럴 값입니다. PolyBase 쿼리는 거부된 행 수가 *reject_value* 를 초과하면 실패합니다.
 
 예를 들어 REJECT_VALUE = 5이고 REJECT_TYPE = value인 경우, PolyBase SELECT 쿼리는 5개 행이 거부된 후 실패합니다.
 
-percentage REJECT_VALUE는 리터럴 값이 아닌 백분율입니다. PolyBase 쿼리는 실패한 행의 백분율(*percentage*)이 *reject_value*를 초과하면 실패합니다. 실패한 행의 백분율은 일정 간격으로 계산됩니다.
+percentage REJECT_VALUE는 리터럴 값이 아닌 백분율입니다. PolyBase 쿼리는 실패한 행의 백분율( *percentage* )이 *reject_value* 를 초과하면 실패합니다. 실패한 행의 백분율은 일정 간격으로 계산됩니다.
 
 REJECT_VALUE = *reject_value* 쿼리가 실패할 때까지 거부될 수 있는 값 또는 행의 백분율을 지정합니다.
 
-REJECT_TYPE = value인 경우, *reject_value*는 0에서 2,147,483,647 사이의 정수여야 합니다.
+REJECT_TYPE = value인 경우, *reject_value* 는 0에서 2,147,483,647 사이의 정수여야 합니다.
 
-REJECT_TYPE = percentage인 경우, *reject_value*는 0에서 100 사이의 부동 소수점 수이어야 합니다.
+REJECT_TYPE = percentage인 경우, *reject_value* 는 0에서 100 사이의 부동 소수점 수이어야 합니다.
 
 REJECT_SAMPLE_VALUE = *reject_sample_value* 이 특성은 REJECT_TYPE = percentage를 지정한 경우에 필요합니다. PolyBase가 거부된 행의 백분율을 다시 계산하기 전까지 검색을 시도하는 행 수를 결정합니다.
 
 *reject_sample_value* 매개 변수는 0에서 2,147,483,647 사이의 정수여야 합니다.
 
-예를 들어 REJECT_SAMPLE_VALUE = 1000인 경우, PolyBase는 외부 데이터 파일에서 행 1000개 가져오기를 시도한 후 실패한 행의 백분율을 계산합니다. 실패한 행의 백분율이 *reject_value*보다 작은 경우, PolyBase는 또 다른 행 1000개의 검색을 시도합니다. 계속해서 추가로 행 1000개의 가져오기를 시도한 후마다 실패한 행의 백분율을 다시 계산합니다.
+예를 들어 REJECT_SAMPLE_VALUE = 1000인 경우, PolyBase는 외부 데이터 파일에서 행 1000개 가져오기를 시도한 후 실패한 행의 백분율을 계산합니다. 실패한 행의 백분율이 *reject_value* 보다 작은 경우, PolyBase는 또 다른 행 1000개의 검색을 시도합니다. 계속해서 추가로 행 1000개의 가져오기를 시도한 후마다 실패한 행의 백분율을 다시 계산합니다.
 
 > [!NOTE]
-> PolyBase는 실패한 행의 백분율을 일정 간격으로 계산하므로 실패한 행의 실제 백분율은 *reject_value*를 초과할 수 있습니다.
+> PolyBase는 실패한 행의 백분율을 일정 간격으로 계산하므로 실패한 행의 실제 백분율은 *reject_value* 를 초과할 수 있습니다.
 
 예제:
 
@@ -163,7 +163,7 @@ SCHEMA_NAME: SCHEMA_NAME 절은 외부 테이블 정의를 원격 데이터베�
 
 OBJECT_NAME: OBJECT_NAME 절은 외부 테이블 정의를 원격 데이터베이스의 다른 이름을 가진 테이블에 매핑하는 기능을 제공합니다. 이 절을 사용하여 로컬 데이터베이스와 원격 데이터베이스 모두에 존재하는 개체 이름 사이를 구분합니다.
 
-배포 옵션입니다. 이 인수는 SHARD_MAP_MANAGER 형식의 데이터베이스에 대해서만 필요합니다. 이 인수는 테이블이 분할된 테이블로 처리되는지 아니면 복제된 테이블로 처리되는지를 제어합니다. **SHARDED**(*열 이름*) 테이블을 사용하면 서로 다른 테이블의 데이터가 겹치지 않습니다. **REPLICATED**는 테이블이 모든 분할된 데이터베이스에서 같은 데이터를 갖도록 지정합니다. **ROUND_ROBIN**은 애플리케이션 관련 방법을 사용하여 데이터를 배포하도록 지정합니다.
+배포 옵션입니다. 이 인수는 SHARD_MAP_MANAGER 형식의 데이터베이스에 대해서만 필요합니다. 이 인수는 테이블이 분할된 테이블로 처리되는지 아니면 복제된 테이블로 처리되는지를 제어합니다. **SHARDED** ( *열 이름* ) 테이블을 사용하면 서로 다른 테이블의 데이터가 겹치지 않습니다. **REPLICATED** 는 테이블이 모든 분할된 데이터베이스에서 같은 데이터를 갖도록 지정합니다. **ROUND_ROBIN** 은 애플리케이션 관련 방법을 사용하여 데이터를 배포하도록 지정합니다.
 
 ## <a name="permissions"></a>사용 권한
 
@@ -231,7 +231,7 @@ SCHEMARESOLUTION 개체에 대한 공유 잠금입니다.
 
 ### <a name="a-create-an-external-table-with-data-in-text-delimited-format"></a>A. 텍스트로 구분된 형식의 데이터를 사용하여 외부 테이블 만들기
 
-이 예제에서는 텍스트로 구분된 파일 형식의 데이터를 가진 외부 테이블을 만드는 데 필요한 모든 단계를 보여 줍니다. 즉, 외부 데이터 원본 *mydatasource* 및 외부 파일 형식 *myfileformat*을 만듭니다. 이러한 데이터베이스 수준 개체는 나중에 CREATE EXTERNAL TABLE 문에 참조됩니다. 자세한 내용은 [CREATE EXTERNAL DATA SOURCE](../../t-sql/statements/create-external-data-source-transact-sql.md) 및 [CREATE EXTERNAL FILE FORMAT](../../t-sql/statements/create-external-file-format-transact-sql.md)을 참조하세요.
+이 예제에서는 텍스트로 구분된 파일 형식의 데이터를 가진 외부 테이블을 만드는 데 필요한 모든 단계를 보여 줍니다. 즉, 외부 데이터 원본 *mydatasource* 및 외부 파일 형식 *myfileformat* 을 만듭니다. 이러한 데이터베이스 수준 개체는 나중에 CREATE EXTERNAL TABLE 문에 참조됩니다. 자세한 내용은 [CREATE EXTERNAL DATA SOURCE](../../t-sql/statements/create-external-data-source-transact-sql.md) 및 [CREATE EXTERNAL FILE FORMAT](../../t-sql/statements/create-external-file-format-transact-sql.md)을 참조하세요.
 
 ```sql
 CREATE EXTERNAL DATA SOURCE mydatasource
@@ -261,7 +261,7 @@ WITH (
 
 ### <a name="b-create-an-external-table-with-data-in-rcfile-format"></a>B. RCFile 형식의 데이터를 사용하여 외부 테이블 만들기
 
-이 예제에서는 RCFile 형식의 데이터를 가진 외부 테이블을 만드는 데 필요한 모든 단계를 보여 줍니다. 즉, 외부 데이터 원본 *mydatasource_rc* 및 외부 파일 형식 *myfileformat_rc*를 만듭니다. 이러한 데이터베이스 수준 개체는 나중에 CREATE EXTERNAL TABLE 문에 참조됩니다. 자세한 내용은 [CREATE EXTERNAL DATA SOURCE](../../t-sql/statements/create-external-data-source-transact-sql.md) 및 [CREATE EXTERNAL FILE FORMAT](../../t-sql/statements/create-external-file-format-transact-sql.md)을 참조하세요.
+이 예제에서는 RCFile 형식의 데이터를 가진 외부 테이블을 만드는 데 필요한 모든 단계를 보여 줍니다. 즉, 외부 데이터 원본 *mydatasource_rc* 및 외부 파일 형식 *myfileformat_rc* 를 만듭니다. 이러한 데이터베이스 수준 개체는 나중에 CREATE EXTERNAL TABLE 문에 참조됩니다. 자세한 내용은 [CREATE EXTERNAL DATA SOURCE](../../t-sql/statements/create-external-data-source-transact-sql.md) 및 [CREATE EXTERNAL FILE FORMAT](../../t-sql/statements/create-external-file-format-transact-sql.md)을 참조하세요.
 
 ```sql
 CREATE EXTERNAL DATA SOURCE mydatasource_rc
@@ -344,7 +344,7 @@ WHERE cs.url = 'msdn.microsoft.com'
 
 ### <a name="f-import-data-from-hadoop-into-a-sql-table"></a>F. SQL 테이블로 Hadoop의 데이터 가져오기
 
-이 예제에서는 표준 SQL 테이블 *user*와 외부 테이블 *ClickStream* 간 조인의 결과를 영구적으로 저장하는 새 SQL 케이블 ms_user입니다.
+이 예제에서는 표준 SQL 테이블 *user* 와 외부 테이블 *ClickStream* 간 조인의 결과를 영구적으로 저장하는 새 SQL 케이블 ms_user입니다.
 
 ```sql
 SELECT DISTINCT user.FirstName, user.LastName
@@ -629,7 +629,7 @@ column_name <data_type>
 
 *{ database_name.schema_name.table_name | schema_name.table_name | table_name }* 만들려는 테이블의 한 부분에서 세 부분으로 이루어진 이름입니다. 외부 테이블의 경우 SQL은 Azure SQL Database에서 참조되는 파일이나 폴더에 대한 기본 통계와 함께 메타데이터만 저장합니다. 실제 데이터가 이동되거나 Azure SQL Database에 저장되지 않습니다.
 
-\<column_definition> [ ,...*n* ] CREATE EXTERNAL TABLE은 열 이름, 데이터 형식, Null 허용 여부 및 데이터 정렬을 구성하는 기능을 지원합니다. 외부 테이블에 DEFAULT CONSTRAINT를 사용할 수 없습니다.
+\<column_definition> [ ,... *n* ] CREATE EXTERNAL TABLE은 열 이름, 데이터 형식, Null 허용 여부 및 데이터 정렬을 구성하는 기능을 지원합니다. 외부 테이블에 DEFAULT CONSTRAINT를 사용할 수 없습니다.
 
 > [!NOTE]
 > `Text`, `nText` 및 `XML`은(는) Azure SQL Database의 외부 테이블에 있는 열에서 지원되지 않는 데이터 형식입니다.
@@ -638,11 +638,11 @@ column_name <data_type>
 
 분할된 데이터베이스 외부 테이블 옵션
 
-[탄력적 쿼리](https://azure.microsoft.com/documentation/articles/sql-database-elastic-query-overview/)의 외부 데이터 원본(비 SQL Server 데이터 원본) 및 배포 방법을 지정합니다.
+[탄력적 쿼리](/azure/azure-sql/database/elastic-query-overview)의 외부 데이터 원본(비 SQL Server 데이터 원본) 및 배포 방법을 지정합니다.
 
-DATA_SOURCE. DATA_SOURCE 절은 외부 테이블에 사용되는 외부 데이터 원본(분할된 데이터베이스 맵)을 정의합니다. 예제는 [외부 테이블 만들기](https://docs.microsoft.com/azure/sql-database/sql-database-elastic-query-horizontal-partitioning#13-create-external-tables)를 참조하세요.
+DATA_SOURCE. DATA_SOURCE 절은 외부 테이블에 사용되는 외부 데이터 원본(분할된 데이터베이스 맵)을 정의합니다. 예제는 [외부 테이블 만들기](/azure/sql-database/sql-database-elastic-query-horizontal-partitioning#13-create-external-tables)를 참조하세요.
 
-SCHEMA_NAME 및 OBJECT_NAME. SCHEMA_NAME 및 OBJECT_NAME 절은 외부 테이블 정의를 다른 스키마의 테이블에 매핑합니다. 생략할 경우 원격 개체의 스키마를 “dbo”라 가정하고 그 이름이 정의하는 외부 테이블 이름과 동일하다고 간주합니다. 외부 테이블을 만들려는 데이터베이스에서 이미 원격 테이블의 이름을 가져온 경우에 유용합니다. 수평 확장된 데이터 계층에서 DMV의 카탈로그 뷰 집계를 가져오기 위해 외부 테이블을 정의하는 경우를 예로 들 수 있습니다. 카탈로그 뷰와 DMV는 이미 로컬로 존재하므로 외부 테이블 정의에 그 이름을 사용할 수 없습니다. 대신, 다른 이름을 사용하고 SCHEMA_NAME 및/또는 OBJECT_NAME 절에 카탈로그 뷰 또는 DMV의 이름을 사용합니다. 예제는 [외부 테이블 만들기](https://docs.microsoft.com/azure/sql-database/sql-database-elastic-query-horizontal-partitioning#13-create-external-tables)를 참조하세요.
+SCHEMA_NAME 및 OBJECT_NAME. SCHEMA_NAME 및 OBJECT_NAME 절은 외부 테이블 정의를 다른 스키마의 테이블에 매핑합니다. 생략할 경우 원격 개체의 스키마를 “dbo”라 가정하고 그 이름이 정의하는 외부 테이블 이름과 동일하다고 간주합니다. 외부 테이블을 만들려는 데이터베이스에서 이미 원격 테이블의 이름을 가져온 경우에 유용합니다. 수평 확장된 데이터 계층에서 DMV의 카탈로그 뷰 집계를 가져오기 위해 외부 테이블을 정의하는 경우를 예로 들 수 있습니다. 카탈로그 뷰와 DMV는 이미 로컬로 존재하므로 외부 테이블 정의에 그 이름을 사용할 수 없습니다. 대신, 다른 이름을 사용하고 SCHEMA_NAME 및/또는 OBJECT_NAME 절에 카탈로그 뷰 또는 DMV의 이름을 사용합니다. 예제는 [외부 테이블 만들기](/azure/sql-database/sql-database-elastic-query-horizontal-partitioning#13-create-external-tables)를 참조하세요.
 
 DISTRIBUTION. DISTRIBUTION 절은 이 테이블에 사용되는 데이터 배포를 지정합니다. 쿼리 프로세서는 가장 효율적인 쿼리 계획을 구성하기 위해 DISTRIBUTION에서 제공하는 정보를 활용합니다.
 
@@ -719,9 +719,9 @@ WITH
 
 ## <a name="see-also"></a>참고 항목
 
-- [Azure SQL Database 탄력적 쿼리 개요](https://docs.microsoft.com/azure/sql-database/sql-database-elastic-query-overview)
-- [확장된 클라우드 데이터베이스에서 보고](https://docs.microsoft.com/azure/sql-database/sql-database-elastic-query-horizontal-partitioning)
-- [데이터베이스 간 쿼리 시작(수직 분할)](https://docs.microsoft.com/azure/sql-database/sql-database-elastic-query-getting-started-vertical)
+- [Azure SQL Database 탄력적 쿼리 개요](/azure/sql-database/sql-database-elastic-query-overview)
+- [확장된 클라우드 데이터베이스에서 보고](/azure/sql-database/sql-database-elastic-query-horizontal-partitioning)
+- [데이터베이스 간 쿼리 시작(수직 분할)](/azure/sql-database/sql-database-elastic-query-getting-started-vertical)
 
 ::: moniker-end
 ::: moniker range="=azure-sqldw-latest||=sqlallproducts-allversions"
@@ -785,14 +785,14 @@ column_name <data_type>
 
 *{ database_name.schema_name.table_name | schema_name.table_name | table_name }* 만들려는 테이블의 한 부분에서 세 부분으로 이루어진 이름입니다. 외부 테이블의 경우, Azure Data Lake, Hadoop 또는 Azure Blob 스토리지에서 참조되는 파일이나 폴더에 대한 기본 통계와 함께 메타데이터만 해당합니다. 외부 테이블을 만들 때 실제 데이터가 이동하거나 저장되지 않습니다.
 
-\<column_definition> [ ,...*n* ] CREATE EXTERNAL TABLE은 열 이름, 데이터 형식, Null 허용 여부 및 데이터 정렬을 구성하는 기능을 지원합니다. 외부 테이블에 DEFAULT CONSTRAINT를 사용할 수 없습니다.
+\<column_definition> [ ,... *n* ] CREATE EXTERNAL TABLE은 열 이름, 데이터 형식, Null 허용 여부 및 데이터 정렬을 구성하는 기능을 지원합니다. 외부 테이블에 DEFAULT CONSTRAINT를 사용할 수 없습니다.
 
 > [!NOTE]
 > `Text`, `nText` 및`XML` 은 Azure SQL Warehouse의 외부 테이블에 있는 열에서 지원되지는 않는 데이터 형식입니다.
 
 데이터 형식 및 열 수를 포함한 열 정의는 외부 파일의 데이터와 일치해야 합니다. 불일치가 있는 경우 실제 데이터를 쿼리할 때 파일 행이 거부됩니다.
 
-LOCATION = '*folder_or_filepath*' Azure Data Lake, Hadoop 또는 Azure Blob 스토리지의 실제 데이터에 대한 폴더 또는 파일 경로 및 파일 이름을 지정합니다. 위치는 루트 폴더에서 시작합니다. 루트 폴더는 외부 데이터 원본에 지정된 데이터 위치입니다. [CREATE EXTERNAL TABLE AS SELECT](create-external-table-as-select-transact-sql.md) 문이 경로 및 폴더가 없으면 만듭니다. `CREATE EXTERNAL TABLE`은 경로 및 폴더를 만들지 않습니다.
+LOCATION = ' *folder_or_filepath* ' Azure Data Lake, Hadoop 또는 Azure Blob 스토리지의 실제 데이터에 대한 폴더 또는 파일 경로 및 파일 이름을 지정합니다. 위치는 루트 폴더에서 시작합니다. 루트 폴더는 외부 데이터 원본에 지정된 데이터 위치입니다. [CREATE EXTERNAL TABLE AS SELECT](create-external-table-as-select-transact-sql.md) 문이 경로 및 폴더가 없으면 만듭니다. `CREATE EXTERNAL TABLE`은 경로 및 폴더를 만들지 않습니다.
 
 위치(LOCATION)를 폴더로 지정할 경우, 외부 테이블에서 선택하는 PolyBase 쿼리는 폴더 및 해당 폴더의 모든 하위 폴더에서 파일을 검색합니다. Hadoop과 마찬가지로 PolyBase도 숨겨진 폴더를 반환하지 않습니다. 또한 파일 이름이 밑줄(_) 또는 마침표(.)로 시작하는 파일을 반환하지 않습니다.
 
@@ -812,26 +812,26 @@ FILE_FORMAT = *external_file_format_name* 외부 데이터에 대한 파일 형�
 
 REJECT_TYPE = **value** | percentage REJECT_VALUE 옵션이 리터럴 값으로 지정되는지 또는 백분율로 지정되는지 구체화합니다.
 
-value REJECT_VALUE는 백분율이 아닌 리터럴 값입니다. PolyBase 쿼리는 거부된 행 수가 *reject_value*를 초과하면 실패합니다.
+value REJECT_VALUE는 백분율이 아닌 리터럴 값입니다. PolyBase 쿼리는 거부된 행 수가 *reject_value* 를 초과하면 실패합니다.
 
 예를 들어 REJECT_VALUE = 5이고 REJECT_TYPE = value인 경우, PolyBase SELECT 쿼리는 5개 행이 거부된 후 실패합니다.
 
-percentage REJECT_VALUE는 리터럴 값이 아닌 백분율입니다. PolyBase 쿼리는 실패한 행의 백분율(*percentage*)이 *reject_value*를 초과하면 실패합니다. 실패한 행의 백분율은 일정 간격으로 계산됩니다.
+percentage REJECT_VALUE는 리터럴 값이 아닌 백분율입니다. PolyBase 쿼리는 실패한 행의 백분율( *percentage* )이 *reject_value* 를 초과하면 실패합니다. 실패한 행의 백분율은 일정 간격으로 계산됩니다.
 
 REJECT_VALUE = *reject_value* 쿼리가 실패할 때까지 거부될 수 있는 값 또는 행의 백분율을 지정합니다.
 
-REJECT_TYPE = value인 경우, *reject_value*는 0에서 2,147,483,647 사이의 정수여야 합니다.
+REJECT_TYPE = value인 경우, *reject_value* 는 0에서 2,147,483,647 사이의 정수여야 합니다.
 
-REJECT_TYPE = percentage인 경우, *reject_value*는 0에서 100 사이의 부동 소수점 수이어야 합니다.
+REJECT_TYPE = percentage인 경우, *reject_value* 는 0에서 100 사이의 부동 소수점 수이어야 합니다.
 
 REJECT_SAMPLE_VALUE = *reject_sample_value* 이 특성은 REJECT_TYPE = percentage를 지정한 경우에 필요합니다. PolyBase가 거부된 행의 백분율을 다시 계산하기 전까지 검색을 시도하는 행 수를 결정합니다.
 
 *reject_sample_value* 매개 변수는 0에서 2,147,483,647 사이의 정수여야 합니다.
 
-예를 들어 REJECT_SAMPLE_VALUE = 1000인 경우, PolyBase는 외부 데이터 파일에서 행 1000개 가져오기를 시도한 후 실패한 행의 백분율을 계산합니다. 실패한 행의 백분율이 *reject_value*보다 작은 경우, PolyBase는 또 다른 행 1000개의 검색을 시도합니다. 계속해서 추가로 행 1000개의 가져오기를 시도한 후마다 실패한 행의 백분율을 다시 계산합니다.
+예를 들어 REJECT_SAMPLE_VALUE = 1000인 경우, PolyBase는 외부 데이터 파일에서 행 1000개 가져오기를 시도한 후 실패한 행의 백분율을 계산합니다. 실패한 행의 백분율이 *reject_value* 보다 작은 경우, PolyBase는 또 다른 행 1000개의 검색을 시도합니다. 계속해서 추가로 행 1000개의 가져오기를 시도한 후마다 실패한 행의 백분율을 다시 계산합니다.
 
 > [!NOTE]
-> PolyBase는 실패한 행의 백분율을 일정 간격으로 계산하므로 실패한 행의 실제 백분율은 *reject_value*를 초과할 수 있습니다.
+> PolyBase는 실패한 행의 백분율을 일정 간격으로 계산하므로 실패한 행의 실제 백분율은 *reject_value* 를 초과할 수 있습니다.
 
 예제:
 
@@ -1025,11 +1025,11 @@ column_name <data_type>
 
 *{ database_name.schema_name.table_name | schema_name.table_name | table_name }* 만들려는 테이블의 한 부분에서 세 부분으로 이루어진 이름입니다. 외부 테이블의 경우 Analytics Platform System은 Hadoop 또는 Azure Blob 스토리지에서 참조되는 파일이나 폴더에 대한 기본 통계와 함께 메타데이터만 저장합니다. 실제 데이터가 이동되거나 Analytics Platform System에 저장되지 않습니다.
 
-\<column_definition> [ ,...*n* ] CREATE EXTERNAL TABLE은 열 이름, 데이터 형식, Null 허용 여부 및 데이터 정렬을 구성하는 기능을 지원합니다. 외부 테이블에 DEFAULT CONSTRAINT를 사용할 수 없습니다.
+\<column_definition> [ ,... *n* ] CREATE EXTERNAL TABLE은 열 이름, 데이터 형식, Null 허용 여부 및 데이터 정렬을 구성하는 기능을 지원합니다. 외부 테이블에 DEFAULT CONSTRAINT를 사용할 수 없습니다.
 
 데이터 형식 및 열 수를 포함한 열 정의는 외부 파일의 데이터와 일치해야 합니다. 불일치가 있는 경우 실제 데이터를 쿼리할 때 파일 행이 거부됩니다.
 
-LOCATION = '*folder_or_filepath*' Hadoop 또는 Azure Blob 스토리지의 실제 데이터에 대한 폴더 또는 파일 경로 및 파일 이름을 지정합니다. 위치는 루트 폴더에서 시작합니다. 루트 폴더는 외부 데이터 원본에 지정된 데이터 위치입니다.
+LOCATION = ' *folder_or_filepath* ' Hadoop 또는 Azure Blob 스토리지의 실제 데이터에 대한 폴더 또는 파일 경로 및 파일 이름을 지정합니다. 위치는 루트 폴더에서 시작합니다. 루트 폴더는 외부 데이터 원본에 지정된 데이터 위치입니다.
 
 Analytics Platform System에서는 [CREATE EXTERNAL TABLE AS SELECT](create-external-table-as-select-transact-sql.md) 문이 존재하지 않는 경로 및 폴더를 만듭니다. `CREATE EXTERNAL TABLE`은 경로 및 폴더를 만들지 않습니다.
 
@@ -1051,26 +1051,26 @@ FILE_FORMAT = *external_file_format_name* 외부 데이터에 대한 파일 형�
 
 REJECT_TYPE = **value** | percentage REJECT_VALUE 옵션이 리터럴 값으로 지정되는지 또는 백분율로 지정되는지 구체화합니다.
 
-value REJECT_VALUE는 백분율이 아닌 리터럴 값입니다. PolyBase 쿼리는 거부된 행 수가 *reject_value*를 초과하면 실패합니다.
+value REJECT_VALUE는 백분율이 아닌 리터럴 값입니다. PolyBase 쿼리는 거부된 행 수가 *reject_value* 를 초과하면 실패합니다.
 
 예를 들어 REJECT_VALUE = 5이고 REJECT_TYPE = value인 경우, PolyBase SELECT 쿼리는 5개 행이 거부된 후 실패합니다.
 
-percentage REJECT_VALUE는 리터럴 값이 아닌 백분율입니다. PolyBase 쿼리는 실패한 행의 백분율(*percentage*)이 *reject_value*를 초과하면 실패합니다. 실패한 행의 백분율은 일정 간격으로 계산됩니다.
+percentage REJECT_VALUE는 리터럴 값이 아닌 백분율입니다. PolyBase 쿼리는 실패한 행의 백분율( *percentage* )이 *reject_value* 를 초과하면 실패합니다. 실패한 행의 백분율은 일정 간격으로 계산됩니다.
 
 REJECT_VALUE = *reject_value* 쿼리가 실패할 때까지 거부될 수 있는 값 또는 행의 백분율을 지정합니다.
 
-REJECT_TYPE = value인 경우, *reject_value*는 0에서 2,147,483,647 사이의 정수여야 합니다.
+REJECT_TYPE = value인 경우, *reject_value* 는 0에서 2,147,483,647 사이의 정수여야 합니다.
 
-REJECT_TYPE = percentage인 경우, *reject_value*는 0에서 100 사이의 부동 소수점 수이어야 합니다.
+REJECT_TYPE = percentage인 경우, *reject_value* 는 0에서 100 사이의 부동 소수점 수이어야 합니다.
 
 REJECT_SAMPLE_VALUE = *reject_sample_value* 이 특성은 REJECT_TYPE = percentage를 지정한 경우에 필요합니다. PolyBase가 거부된 행의 백분율을 다시 계산하기 전까지 검색을 시도하는 행 수를 결정합니다.
 
 *reject_sample_value* 매개 변수는 0에서 2,147,483,647 사이의 정수여야 합니다.
 
-예를 들어 REJECT_SAMPLE_VALUE = 1000인 경우, PolyBase는 외부 데이터 파일에서 행 1000개 가져오기를 시도한 후 실패한 행의 백분율을 계산합니다. 실패한 행의 백분율이 *reject_value*보다 작은 경우, PolyBase는 또 다른 행 1000개의 검색을 시도합니다. 계속해서 추가로 행 1000개의 가져오기를 시도한 후마다 실패한 행의 백분율을 다시 계산합니다.
+예를 들어 REJECT_SAMPLE_VALUE = 1000인 경우, PolyBase는 외부 데이터 파일에서 행 1000개 가져오기를 시도한 후 실패한 행의 백분율을 계산합니다. 실패한 행의 백분율이 *reject_value* 보다 작은 경우, PolyBase는 또 다른 행 1000개의 검색을 시도합니다. 계속해서 추가로 행 1000개의 가져오기를 시도한 후마다 실패한 행의 백분율을 다시 계산합니다.
 
 > [!NOTE]
-> PolyBase는 실패한 행의 백분율을 일정 간격으로 계산하므로 실패한 행의 실제 백분율은 *reject_value*를 초과할 수 있습니다.
+> PolyBase는 실패한 행의 백분율을 일정 간격으로 계산하므로 실패한 행의 실제 백분율은 *reject_value* 를 초과할 수 있습니다.
 
 예제:
 

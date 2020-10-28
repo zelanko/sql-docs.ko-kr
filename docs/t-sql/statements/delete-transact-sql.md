@@ -26,12 +26,12 @@ ms.assetid: ed6b2105-0f35-408f-ba51-e36ade7ad5b2
 author: markingmyname
 ms.author: maghan
 monikerRange: '>=aps-pdw-2016||=azuresqldb-current||=azure-sqldw-latest||>=sql-server-2016||=sqlallproducts-allversions||>=sql-server-linux-2017||=azuresqldb-mi-current'
-ms.openlocfilehash: b6751bab3fd7f8c10ead78da4dff44d2c3a19212
-ms.sourcegitcommit: c74bb5944994e34b102615b592fdaabe54713047
+ms.openlocfilehash: 0de7a61b92599b82aabc0f0197c02098c7758384
+ms.sourcegitcommit: bd3a135f061e4a49183bbebc7add41ab11872bae
 ms.translationtype: HT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 09/22/2020
-ms.locfileid: "90990099"
+ms.lasthandoff: 10/21/2020
+ms.locfileid: "92300515"
 ---
 # <a name="delete-transact-sql"></a>DELETE (Transact-SQL)
 
@@ -128,9 +128,9 @@ DELETE
  행을 삭제할 테이블 또는 뷰를 나타내는 FROM *table_source* 절에 지정되는 별칭입니다.  
   
  *server_name*  
- **적용 대상**: [!INCLUDE[ssKatmai](../../includes/sskatmai-md.md)] 이상  
+ **적용 대상** : [!INCLUDE[ssKatmai](../../includes/sskatmai-md.md)] 이상  
   
- 테이블이나 뷰가 위치한 서버의 이름입니다. 연결된 서버 이름 또는 [OPENDATASOURCE](../../t-sql/functions/opendatasource-transact-sql.md) 함수를 서버 이름으로 사용합니다. *server_name*이 지정되면 *database_name*과 *schema_name*이 필요합니다.  
+ 테이블이나 뷰가 위치한 서버의 이름입니다. 연결된 서버 이름 또는 [OPENDATASOURCE](../../t-sql/functions/opendatasource-transact-sql.md) 함수를 서버 이름으로 사용합니다. *server_name* 이 지정되면 *database_name* 과 *schema_name* 이 필요합니다.  
   
  *database_name*  
  데이터베이스의 이름입니다.  
@@ -143,14 +143,14 @@ DELETE
   
  테이블 변수는 해당 범위 내에서 DELETE 문의 테이블 원본으로도 사용될 수 있습니다.  
   
- *table_or_view_name*에서 참조되는 뷰는 업데이트가 가능해야 하며 해당 뷰 정의의 FROM 절에서 정확히 하나의 기본 테이블을 참조해야 합니다. 업데이트할 수 있는 뷰에 대한 자세한 내용은 [CREATE VIEW&#40;Transact-SQL&#41;](../../t-sql/statements/create-view-transact-sql.md)를 참조하세요.  
+ *table_or_view_name* 에서 참조되는 뷰는 업데이트가 가능해야 하며 해당 뷰 정의의 FROM 절에서 정확히 하나의 기본 테이블을 참조해야 합니다. 업데이트할 수 있는 뷰에 대한 자세한 내용은 [CREATE VIEW&#40;Transact-SQL&#41;](../../t-sql/statements/create-view-transact-sql.md)를 참조하세요.  
   
  *rowset_function_limited*  
- **적용 대상**: [!INCLUDE[ssKatmai](../../includes/sskatmai-md.md)] 이상  
+ **적용 대상** : [!INCLUDE[ssKatmai](../../includes/sskatmai-md.md)] 이상  
   
  공급자 기능에 관련된 [OPENQUERY](../../t-sql/functions/openquery-transact-sql.md) 또는 [OPENROWSET](../../t-sql/functions/openrowset-transact-sql.md) 함수입니다.  
   
- WITH **(** \<table_hint_limited> [... *n*] **)**  
+ WITH **(** \<table_hint_limited> [... *n* ] **)**  
  대상 테이블에 허용되는 하나 이상의 테이블 힌트를 지정합니다. WITH 키워드와 괄호가 필요합니다. NOLOCK 및 READUNCOMMITTED는 허용되지 않습니다. 테이블 힌트에 대한 자세한 내용은 [테이블 힌트&#40;Transact-SQL&#41;](../../t-sql/queries/hints-transact-sql-table.md)를 참조하세요.  
   
  \<OUTPUT_Clause>  
@@ -168,7 +168,7 @@ DELETE
   
  WHERE 절에 지정된 내용에 따라 두 가지 형식의 삭제 작업이 있습니다.  
   
--   검색 결과 삭제는 삭제할 행을 한정하는 검색 조건을 지정합니다. 예를 들어,WHERE *column_name* = *값*.  
+-   검색 결과 삭제는 삭제할 행을 한정하는 검색 조건을 지정합니다. 예를 들어,WHERE *column_name* = *값* .  
   
 -   위치 지정 삭제는 커서를 지정하는 CURRENT OF 절을 사용합니다. 이 경우 커서의 현재 위치에서 삭제 작업이 발생합니다. 이것은 WHERE *search_condition* 절을 사용하여 삭제될 행을 한정하는 검색 결과 DELETE 문보다 정확한 방법입니다. 검색 결과 DELETE 문은 검색 조건이 한 행을 고유하게 식별하지 못할 경우 여러 행을 삭제할 수 있습니다.  
   
@@ -179,15 +179,15 @@ DELETE
  지정한 커서의 현재 위치에서 DELETE가 수행되도록 지정합니다.  
   
  GLOBAL  
- *cursor_name*이 전역 커서를 참조하도록 지정합니다.  
+ *cursor_name* 이 전역 커서를 참조하도록 지정합니다.  
   
  *cursor_name*  
- 인출이 수행되는 열린 커서의 이름입니다. 이름이 *cursor_name*인 전역 커서와 로컬 커서가 모두 있는 경우 이 인수는 GLOBAL이 지정되면 전역 커서를 참조하고, 그렇지 않으면 로컬 커서를 참조합니다. 커서는 업데이트될 수 있어야 합니다.  
+ 인출이 수행되는 열린 커서의 이름입니다. 이름이 *cursor_name* 인 전역 커서와 로컬 커서가 모두 있는 경우 이 인수는 GLOBAL이 지정되면 전역 커서를 참조하고, 그렇지 않으면 로컬 커서를 참조합니다. 커서는 업데이트될 수 있어야 합니다.  
   
  *cursor_variable_name*  
  커서 변수의 이름입니다. 커서 변수는 업데이트를 허용하는 커서를 참조해야 합니다.  
   
- OPTION **(** \<query_hint> [ **,** ... *n*] **)**  
+ OPTION **(** \<query_hint> [ **,** ... *n* ] **)**  
  [!INCLUDE[ssDE](../../includes/ssde-md.md)]에서 최적화 프로그램 힌트를 사용하여 문을 처리하는 방법을 사용자 지정한다는 것을 나타내는 키워드입니다. 자세한 내용은 [쿼리 힌트&#40;Transact-SQL&#41;](../../t-sql/queries/hints-transact-sql-query.md)를 참조하세요.  
   
 ## <a name="best-practices"></a>모범 사례  
@@ -338,7 +338,7 @@ DELETE spqh
 ```  
   
 #### <a name="e-using-top-to-limit-the-number-of-rows-deleted"></a>E. TOP를 사용하여 삭제되는 행 수 제한  
- DELETE 문에 TOP(*n*) 절을 사용하면 *n*개의 행을 임의로 선택하여 삭제 작업이 수행됩니다. 다음 예에서는 `20` 데이터베이스의 `PurchaseOrderDetail` 테이블에서 기한이 2006년 7월 1일 이전인 행 중 [!INCLUDE[ssSampleDBnormal](../../includes/sssampledbnormal-md.md)]개의 행을 임의로 선택하여 삭제합니다.  
+ DELETE 문에 TOP( *n* ) 절을 사용하면 *n* 개의 행을 임의로 선택하여 삭제 작업이 수행됩니다. 다음 예에서는 `20` 데이터베이스의 `PurchaseOrderDetail` 테이블에서 기한이 2006년 7월 1일 이전인 행 중 [!INCLUDE[ssSampleDBnormal](../../includes/sssampledbnormal-md.md)]개의 행을 임의로 선택하여 삭제합니다.  
   
 ```sql
 DELETE TOP (20)   
@@ -359,12 +359,12 @@ GO
 ```  
   
 ###  <a name="deleting-rows-from-a-remote-table"></a><a name="RemoteTables"></a> 원격 테이블에서 행 삭제  
- 이 섹션의 예에서는 원격 테이블을 참조하는 [연결된 서버](../../relational-databases/system-stored-procedures/sp-addlinkedserver-transact-sql.md) 또는 [행 집합 함수](../../t-sql/functions/rowset-functions-transact-sql.md) 를 사용하여 원격 테이블에서 행을 삭제하는 방법을 보여 줍니다. 원격 테이블은 SQL Server의 다른 서버 또는 인스턴스에 있습니다.  
+ 이 섹션의 예에서는 원격 테이블을 참조하는 [연결된 서버](../../relational-databases/system-stored-procedures/sp-addlinkedserver-transact-sql.md) 또는 [행 집합 함수](../functions/opendatasource-transact-sql.md) 를 사용하여 원격 테이블에서 행을 삭제하는 방법을 보여 줍니다. 원격 테이블은 SQL Server의 다른 서버 또는 인스턴스에 있습니다.  
   
-**적용 대상**: [!INCLUDE[ssKatmai](../../includes/sskatmai-md.md)] 이상  
+**적용 대상** : [!INCLUDE[ssKatmai](../../includes/sskatmai-md.md)] 이상  
   
 #### <a name="f-deleting-data-from-a-remote-table-by-using-a-linked-server"></a>F. 연결된 서버를 사용하여 원격 테이블에서 데이터 삭제  
- 다음 예에서는 원격 테이블에서 행을 삭제합니다. 먼저 [sp_addlinkedserver](../../relational-databases/system-stored-procedures/sp-addlinkedserver-transact-sql.md)를 사용하여 원격 데이터 원본에 대한 링크를 만듭니다. 그런 다음, 연결된 서버 이름 `MyLinkServer`가 *server.catalog.schema.object*와 같이 네 부분으로 구성된 개체 이름의 일부로 지정됩니다.  
+ 다음 예에서는 원격 테이블에서 행을 삭제합니다. 먼저 [sp_addlinkedserver](../../relational-databases/system-stored-procedures/sp-addlinkedserver-transact-sql.md)를 사용하여 원격 데이터 원본에 대한 링크를 만듭니다. 그런 다음, 연결된 서버 이름 `MyLinkServer`가 *server.catalog.schema.object* 와 같이 네 부분으로 구성된 개체 이름의 일부로 지정됩니다.  
   
 ```sql
 USE master;  
@@ -541,5 +541,3 @@ FROM dbo.Table2
  [WITH common_table_expression&#40;Transact-SQL&#41;](../../t-sql/queries/with-common-table-expression-transact-sql.md)   
  [@@ROWCOUNT&#40;Transact-SQL&#41;](../../t-sql/functions/rowcount-transact-sql.md)  
   
-  
-

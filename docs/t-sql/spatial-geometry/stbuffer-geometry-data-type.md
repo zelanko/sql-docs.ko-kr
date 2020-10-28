@@ -18,12 +18,12 @@ helpviewer_keywords:
 ms.assetid: ca6bf2dc-1d38-4503-b87e-f2ea033d36ba
 author: MladjoA
 ms.author: mlandzic
-ms.openlocfilehash: c916977259dc82638117b800e5fc6c2d306edf04
-ms.sourcegitcommit: e700497f962e4c2274df16d9e651059b42ff1a10
+ms.openlocfilehash: 7644e25159a7df28d2de51d5e1a08a0e1b36ef05
+ms.sourcegitcommit: bd3a135f061e4a49183bbebc7add41ab11872bae
 ms.translationtype: HT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 08/17/2020
-ms.locfileid: "88454278"
+ms.lasthandoff: 10/21/2020
+ms.locfileid: "92300378"
 ---
 # <a name="stbuffer-geometry-data-type"></a>STBuffer(geometry 데이터 형식)
 [!INCLUDE [SQL Server SQL Database](../../includes/applies-to-version/sql-asdb.md)]
@@ -41,7 +41,7 @@ ms.locfileid: "88454278"
 
 ## <a name="arguments"></a>인수
  *distance*  
- 해당 버퍼를 계산할 geometry 인스턴스와의 거리를 지정하는 **float**(.NET Framework의 경우 **double**) 형식의 값입니다.  
+ 해당 버퍼를 계산할 geometry 인스턴스와의 거리를 지정하는 **float** (.NET Framework의 경우 **double** ) 형식의 값입니다.  
   
 ## <a name="return-types"></a>반환 형식  
  [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 반환 형식: **geometry**  
@@ -49,12 +49,12 @@ ms.locfileid: "88454278"
  CLR 반환 형식: **SqlGeometry**  
   
 ## <a name="remarks"></a>설명  
- `STBuffer()`는 *허용 오차* = distance\*.001 및 *relative* = **false**로 지정하여 [BufferWithTolerance](../../t-sql/spatial-geometry/bufferwithtolerance-geometry-data-type.md)와 동일한 방식으로 버퍼를 계산합니다.  
+ `STBuffer()`는 *허용 오차* = distance\*.001 및 *relative* = **false** 로 지정하여 [BufferWithTolerance](../../t-sql/spatial-geometry/bufferwithtolerance-geometry-data-type.md)와 동일한 방식으로 버퍼를 계산합니다.  
   
  *distance* > 0이면, **Polygon** 또는 **MultiPolygon** 인스턴스가 반환됩니다.  
   
 > [!NOTE]  
->  거리가 **float**이므로 매우 작은 값은 0으로 계산될 수 있습니다.  이 경우 호출 **geometry** 인스턴스의 복사본이 반환됩니다.  [float 및 real &#40;Transact-SQL&#41;](../../t-sql/data-types/float-and-real-transact-sql.md) 참조  
+>  거리가 **float** 이므로 매우 작은 값은 0으로 계산될 수 있습니다.  이 경우 호출 **geometry** 인스턴스의 복사본이 반환됩니다.  [float 및 real &#40;Transact-SQL&#41;](../../t-sql/data-types/float-and-real-transact-sql.md) 참조  
   
  *distance* = 0이면, 호출 **geometry** 인스턴스의 복사본이 반환됩니다.  
   
@@ -69,7 +69,7 @@ ms.locfileid: "88454278"
   
  버퍼가 음수이면 geometry 경계에서 지정된 거리 내에 있는 모든 요소가 제거됩니다.  
   
- 이론적 버퍼와 계산된 버퍼 간의 오차는 허용 오차 = 거리 \* .001인 max(허용 오차, 익스텐트 * 1.E-7)입니다. 익스텐트에 대한 자세한 내용은 [geometry 데이터 형식 메서드 참조](https://msdn.microsoft.com/library/d88e632b-6b2f-4466-a15f-9fbef1a347a7)를 참조하세요.  
+ 이론적 버퍼와 계산된 버퍼 간의 오차는 허용 오차 = 거리 \* .001인 max(허용 오차, 익스텐트 * 1.E-7)입니다. 익스텐트에 대한 자세한 내용은 [geometry 데이터 형식 메서드 참조](./spatial-types-geometry-transact-sql.md)를 참조하세요.  
   
 ## <a name="examples"></a>예제  
   
@@ -163,11 +163,9 @@ ms.locfileid: "88454278"
  SELECT @g.STBuffer(1.6).ToString();
  ```  
   
- 처음 두 **SELECT** 문은 매개 변수 *distance*가 두 요소(1 1)과(1 4) 사이 거리의 1/2보다 작거나 같기 때문에 `MultiPolygon` 인스턴스를 반환합니다. 세 번째 **SELECT** 문은 두 요소(1 1)과(1 4)의 버퍼링된 인스턴스가 겹치기 때문에 `Polygon` 인스턴스를 반환합니다.  
+ 처음 두 **SELECT** 문은 매개 변수 *distance* 가 두 요소(1 1)과(1 4) 사이 거리의 1/2보다 작거나 같기 때문에 `MultiPolygon` 인스턴스를 반환합니다. 세 번째 **SELECT** 문은 두 요소(1 1)과(1 4)의 버퍼링된 인스턴스가 겹치기 때문에 `Polygon` 인스턴스를 반환합니다.  
   
 ## <a name="see-also"></a>참고 항목  
  [BufferWithTolerance &#40;geometry 데이터 형식&#41;](../../t-sql/spatial-geometry/bufferwithtolerance-geometry-data-type.md)   
  [geometry 인스턴스의 OGC 메서드](../../t-sql/spatial-geometry/ogc-methods-on-geometry-instances.md)  
   
-  
-

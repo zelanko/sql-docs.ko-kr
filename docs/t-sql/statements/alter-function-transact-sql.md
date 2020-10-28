@@ -21,12 +21,12 @@ ms.assetid: 89f066ee-05ac-4439-ab04-d8c3d5911179
 author: markingmyname
 ms.author: maghan
 monikerRange: '>=aps-pdw-2016||=azuresqldb-current||>=sql-server-2016||=sqlallproducts-allversions||>=sql-server-linux-2017||=azuresqldb-mi-current'
-ms.openlocfilehash: 165af0a279cf9b7e19cc7c5dbf7a20ca51272661
-ms.sourcegitcommit: dd36d1cbe32cd5a65c6638e8f252b0bd8145e165
+ms.openlocfilehash: d8b8fc08aaf5f083d22938adf37c356c445d4b6f
+ms.sourcegitcommit: bd3a135f061e4a49183bbebc7add41ab11872bae
 ms.translationtype: HT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 09/08/2020
-ms.locfileid: "89549460"
+ms.lasthandoff: 10/21/2020
+ms.locfileid: "92300593"
 ---
 # <a name="alter-function-transact-sql"></a>ALTER FUNCTION(Transact-SQL)
 [!INCLUDE[tsql-appliesto-ss2008-asdb-xxxx-pdw-md](../../includes/tsql-appliesto-ss2008-asdb-xxxx-pdw-md.md)]
@@ -223,9 +223,9 @@ RETURNS return_data_type
 >  저장 프로시저 또는 사용자 정의 함수에 매개 변수를 전달할 때 또는 일괄 처리 문에서 변수를 선언하고 설정할 때 ANSI_WARNINGS는 인식되지 않습니다. 예를 들어 변수가 **char(3)** 로 정의된 경우 3자보다 큰 값으로 설정하면 해당 데이터가 정의된 크기로 잘리고 INSERT 또는 UPDATE 문은 성공합니다.  
   
  [ *type_schema_name.* ] *parameter_data_type*  
- 매개 변수 데이터 형식이며 매개 변수 데이터 형식이 속한 스키마가 될 수도 있습니다. [!INCLUDE[tsql](../../includes/tsql-md.md)] 함수의 경우 **timestamp** 데이터 형식을 제외하고 CLR 사용자 정의 형식을 비롯한 모든 데이터 형식이 허용됩니다. CLR 함수의 경우 **text**, **ntext**, **image** 및 **timestamp** 데이터 형식을 제외하고 CLR 사용자 정의 형식을 비롯한 모든 데이터 형식이 허용됩니다. [!INCLUDE[tsql](../../includes/tsql-md.md)] 또는 CLR 함수에는 비스칼라 형식 **cursor** 및 **table**을 매개 변수 데이터 형식으로 지정할 수 없습니다.  
+ 매개 변수 데이터 형식이며 매개 변수 데이터 형식이 속한 스키마가 될 수도 있습니다. [!INCLUDE[tsql](../../includes/tsql-md.md)] 함수의 경우 **timestamp** 데이터 형식을 제외하고 CLR 사용자 정의 형식을 비롯한 모든 데이터 형식이 허용됩니다. CLR 함수의 경우 **text** , **ntext** , **image** 및 **timestamp** 데이터 형식을 제외하고 CLR 사용자 정의 형식을 비롯한 모든 데이터 형식이 허용됩니다. [!INCLUDE[tsql](../../includes/tsql-md.md)] 또는 CLR 함수에는 비스칼라 형식 **cursor** 및 **table** 을 매개 변수 데이터 형식으로 지정할 수 없습니다.  
   
- *type_schema_name*을 지정하지 않으면 [!INCLUDE[ssDEversion2005](../../includes/ssdeversion2005-md.md)]에서는 다음 순서로 *parameter_data_type*을 참조합니다.  
+ *type_schema_name* 을 지정하지 않으면 [!INCLUDE[ssDEversion2005](../../includes/ssdeversion2005-md.md)]에서는 다음 순서로 *parameter_data_type* 을 참조합니다.  
   
 -   SQL Server 시스템 데이터 형식의 이름이 들어 있는 스키마  
   
@@ -242,32 +242,32 @@ RETURNS return_data_type
  함수의 매개 변수에 기본값이 지정되면 기본값을 가져오는 함수를 호출할 때 DEFAULT 키워드를 지정해야 합니다. 이 동작은 매개 변수를 생략할 경우 자동으로 기본값이 사용되는 저장 프로시저에서 기본값이 있는 매개 변수를 사용하는 것과는 다릅니다.  
   
  *return_data_type*  
- 스칼라 사용자 정의 함수의 반환 값입니다. [!INCLUDE[tsql](../../includes/tsql-md.md)] 함수의 경우 **timestamp** 데이터 형식을 제외하고 CLR 사용자 정의 형식을 비롯한 모든 데이터 형식이 허용됩니다. CLR 함수의 경우 **text**, **ntext**, **image** 및 **timestamp** 데이터 형식을 제외하고 CLR 사용자 정의 형식을 비롯한 모든 데이터 형식이 허용됩니다. [!INCLUDE[tsql](../../includes/tsql-md.md)] 또는 CLR 함수에는 비스칼라 형식 **cursor** 및 **table**을 반환 데이터 형식으로 지정할 수 없습니다.  
+ 스칼라 사용자 정의 함수의 반환 값입니다. [!INCLUDE[tsql](../../includes/tsql-md.md)] 함수의 경우 **timestamp** 데이터 형식을 제외하고 CLR 사용자 정의 형식을 비롯한 모든 데이터 형식이 허용됩니다. CLR 함수의 경우 **text** , **ntext** , **image** 및 **timestamp** 데이터 형식을 제외하고 CLR 사용자 정의 형식을 비롯한 모든 데이터 형식이 허용됩니다. [!INCLUDE[tsql](../../includes/tsql-md.md)] 또는 CLR 함수에는 비스칼라 형식 **cursor** 및 **table** 을 반환 데이터 형식으로 지정할 수 없습니다.  
   
  *function_body*  
- 테이블을 수정하는 경우처럼 함께 사용해도 부작용이 나타나지 않으며 함수의 값을 정의하는 일련의 [!INCLUDE[tsql](../../includes/tsql-md.md)] 문을 지정합니다. *function_body*는 스칼라 함수와 다중 문 테이블 반환 함수에서만 사용됩니다.  
+ 테이블을 수정하는 경우처럼 함께 사용해도 부작용이 나타나지 않으며 함수의 값을 정의하는 일련의 [!INCLUDE[tsql](../../includes/tsql-md.md)] 문을 지정합니다. *function_body* 는 스칼라 함수와 다중 문 테이블 반환 함수에서만 사용됩니다.  
   
- 스칼라 함수에서 *function_body*는 함께 계산되어 스칼라 값을 반환하는 일련의 [!INCLUDE[tsql](../../includes/tsql-md.md)] 문입니다.  
+ 스칼라 함수에서 *function_body* 는 함께 계산되어 스칼라 값을 반환하는 일련의 [!INCLUDE[tsql](../../includes/tsql-md.md)] 문입니다.  
   
- 다중 문 테이블 반환 함수에서 *function_body*는 TABLE 반환 변수를 채우는 일련의 [!INCLUDE[tsql](../../includes/tsql-md.md)] 문입니다.  
+ 다중 문 테이블 반환 함수에서 *function_body* 는 TABLE 반환 변수를 채우는 일련의 [!INCLUDE[tsql](../../includes/tsql-md.md)] 문입니다.  
   
  *scalar_expression*  
  스칼라 함수가 스칼라 값을 반환하도록 지정합니다.  
   
  TABLE  
- 테이블 반환 함수의 반환 값이 테이블임을 지정합니다. 상수 및 **@** _local\_variables_만 테이블 반환 함수에 전달할 수 있습니다.  
+ 테이블 반환 함수의 반환 값이 테이블임을 지정합니다. 상수 및 **@** _local\_variables_ 만 테이블 반환 함수에 전달할 수 있습니다.  
   
  인라인 테이블 반환 함수에서 TABLE 반환 값은 단일 SELECT 문을 통해 정의됩니다. 인라인 함수에는 연관된 반환 변수가 없습니다.  
   
- 다중 문 테이블 반환 함수에서 **@** _return\_variable_은 TABLE 변수이며 함수의 값으로 반환되어야 하는 행을 저장하고 누적하는 데 사용됩니다. **@** _return\_variable_은 [!INCLUDE[tsql](../../includes/tsql-md.md)] 함수에서만 지정할 수 있으며 CLR 함수에서는 지정할 수 없습니다.  
+ 다중 문 테이블 반환 함수에서 **@** _return\_variable_ 은 TABLE 변수이며 함수의 값으로 반환되어야 하는 행을 저장하고 누적하는 데 사용됩니다. **@** _return\_variable_ 은 [!INCLUDE[tsql](../../includes/tsql-md.md)] 함수에서만 지정할 수 있으며 CLR 함수에서는 지정할 수 없습니다.  
   
  *select-stmt*  
  인라인 테이블 반환 함수의 반환 값을 정의하는 단일 SELECT 문입니다.  
   
- EXTERNAL NAME \<method_specifier>*assembly_name.class_name*.*method_name*  
- **적용 대상**: [!INCLUDE[ssKatmai](../../includes/sskatmai-md.md)] 이상  
+ EXTERNAL NAME \<method_specifier>*assembly_name.class_name* . *method_name*  
+ **적용 대상** : [!INCLUDE[ssKatmai](../../includes/sskatmai-md.md)] 이상  
   
- 함수와 바인딩할 어셈블리의 메서드를 지정합니다. *assembly_name*은 표시 유형이 지정되어 있는 현재 데이터베이스에 있는 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]의 기존 어셈블리와 일치해야 합니다. *class_name*은 유효한 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 식별자여야 하며 어셈블리에서 클래스로 존재해야 합니다. 클래스가 마침표( **.** )를 사용하여 네임스페이스 부분을 구분하는 네임스페이스로 한정된 이름을 가질 경우 클래스 이름은 대괄호( **[]** ) 또는 큰따옴표( **""** )를 사용하여 구분되어야 합니다. *method_name*은 유효한 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 식별자여야 하며 지정된 클래스에서 정적 메서드로 존재해야 합니다.  
+ 함수와 바인딩할 어셈블리의 메서드를 지정합니다. *assembly_name* 은 표시 유형이 지정되어 있는 현재 데이터베이스에 있는 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]의 기존 어셈블리와 일치해야 합니다. *class_name* 은 유효한 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 식별자여야 하며 어셈블리에서 클래스로 존재해야 합니다. 클래스가 마침표( **.** )를 사용하여 네임스페이스 부분을 구분하는 네임스페이스로 한정된 이름을 가질 경우 클래스 이름은 대괄호( **[]** ) 또는 큰따옴표( **""** )를 사용하여 구분되어야 합니다. *method_name* 은 유효한 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 식별자여야 하며 지정된 클래스에서 정적 메서드로 존재해야 합니다.  
   
 > [!NOTE]  
 >  기본적으로 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]에서는 CLR 코드를 실행할 수 없습니다. 공용 언어 런타임 모듈을 참조하는 데이터베이스 개체를 생성, 수정 및 삭제할 수 있지만 [clr enabled 옵션](../../database-engine/configure-windows/clr-enabled-server-configuration-option.md)을 설정할 때까지 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]에서 이러한 참조를 실행할 수 없습니다. 이 옵션을 설정하려면 [sp_configure](../../relational-databases/system-stored-procedures/sp-configure-transact-sql.md)를 사용합니다.  
@@ -275,10 +275,10 @@ RETURNS return_data_type
 > [!NOTE]  
 >  포함된 데이터베이스에서는 이 옵션을 사용할 수 없습니다.  
   
- _\<_table\_type\_definition_\>_ **(** { \<column_definition\> \<column\_constraint\> | \<computed\_column\_definition\> } [ \<table\_constraint\> ] [ **,** ...*n* ] **)**  
+ _\<_table\_type\_definition_\>_ **(** { \<column_definition\> \<column\_constraint\> | \<computed\_column\_definition\> } [ \<table\_constraint\> ] [ **,** ... *n* ] **)**  
  [!INCLUDE[tsql](../../includes/tsql-md.md)] 함수에 대한 테이블 데이터 형식을 정의합니다. 테이블 선언에는 열 정의와 열 또는 테이블 제약 조건이 포함됩니다.  
   
-\< clr_table_type_definition \> **(** { *column_name**data_type* } [ **,** ...*n* ] **)** **적용 대상**: [!INCLUDE[ssKatmai](../../includes/sskatmai-md.md)] 이상, [!INCLUDE[sqldbesa](../../includes/sqldbesa-md.md)]([일부 지역에서 미리 보기](https://azure.microsoft.com/documentation/articles/sql-database-preview-whats-new/?WT.mc_id=TSQL_GetItTag)).  
+\< clr_table_type_definition \> **(** { *column_name**data_type* } [ **,** ... *n* ] **)** **적용 대상** : [!INCLUDE[ssKatmai](../../includes/sskatmai-md.md)] 이상, [!INCLUDE[sqldbesa](../../includes/sqldbesa-md.md)]( [일부 지역에서 미리 보기](/azure/azure-sql/database/features-comparison?WT.mc_id=TSQL_GetItTag)).  
   
  CLR 함수에 대한 테이블 데이터 형식을 정의합니다. 테이블 선언에는 열 이름과 데이터 형식만 포함됩니다.  
   
@@ -301,7 +301,7 @@ RETURNS return_data_type
  함수에 다음 옵션 중 하나 이상이 적용되도록 지정합니다.  
   
  ENCRYPTION  
- **적용 대상**: [!INCLUDE[ssKatmai](../../includes/sskatmai-md.md)] 이상  
+ **적용 대상** : [!INCLUDE[ssKatmai](../../includes/sskatmai-md.md)] 이상  
   
  [!INCLUDE[ssDE](../../includes/ssde-md.md)]에서 ALTER FUNCTION 문의 텍스트가 포함된 카탈로그 뷰 열을 암호화하도록 지정합니다. ENCRYPTION을 사용하면 함수가 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 복제의 일부로 게시되는 것을 방지할 수 있습니다. CLR 함수에는 ENCRYPTION을 지정할 수 없습니다.  
   
@@ -331,21 +331,21 @@ RETURNS return_data_type
   
 **\< column_definition >::=**
   
- 테이블 데이터 형식을 정의합니다. 테이블 선언에는 열 정의와 제약 조건이 포함됩니다. CLR 함수의 경우 *column_name* 및 *data_type*만 지정할 수 있습니다.  
+ 테이블 데이터 형식을 정의합니다. 테이블 선언에는 열 정의와 제약 조건이 포함됩니다. CLR 함수의 경우 *column_name* 및 *data_type* 만 지정할 수 있습니다.  
   
  *column_name*  
- 테이블에 있는 열 이름입니다. 열 이름은 식별자에 대한 규칙을 따라야 하며 테이블에서 고유해야 합니다. *column_name*은 1~128자로 구성될 수 있습니다.  
+ 테이블에 있는 열 이름입니다. 열 이름은 식별자에 대한 규칙을 따라야 하며 테이블에서 고유해야 합니다. *column_name* 은 1~128자로 구성될 수 있습니다.  
   
  *data_type*  
- 열 데이터 형식을 지정합니다. [!INCLUDE[tsql](../../includes/tsql-md.md)] 함수의 경우 **timestamp**를 제외하고 CLR 사용자 정의 형식을 비롯한 모든 데이터 형식이 허용됩니다. CLR 함수의 경우 **text**, **ntext**, **image**, **char**, **varchar**, **varchar(max)** 및 **timestamp**를 제외하고 CLR 사용자 정의 형식을 비롯한 모든 데이터 형식이 허용됩니다. [!INCLUDE[tsql](../../includes/tsql-md.md)] 또는 CLR 함수에는 비스칼라 형식의 **cursor**를 열 데이터 형식으로 지정할 수 없습니다.  
+ 열 데이터 형식을 지정합니다. [!INCLUDE[tsql](../../includes/tsql-md.md)] 함수의 경우 **timestamp** 를 제외하고 CLR 사용자 정의 형식을 비롯한 모든 데이터 형식이 허용됩니다. CLR 함수의 경우 **text** , **ntext** , **image** , **char** , **varchar** , **varchar(max)** 및 **timestamp** 를 제외하고 CLR 사용자 정의 형식을 비롯한 모든 데이터 형식이 허용됩니다. [!INCLUDE[tsql](../../includes/tsql-md.md)] 또는 CLR 함수에는 비스칼라 형식의 **cursor** 를 열 데이터 형식으로 지정할 수 없습니다.  
   
  DEFAULT *constant_expression*  
- 삽입 중에 값이 명시적으로 지정되지 않은 경우에 열에 대해 제공되는 값을 지정합니다. *constant_expression*은 상수, NULL 또는 시스템 함수 값입니다. DEFAULT 정의는 IDENTITY 속성을 갖는 열을 제외한 모든 열에 적용할 수 있습니다. CLR 테이블 반환 함수에는 DEFAULT를 지정할 수 없습니다.  
+ 삽입 중에 값이 명시적으로 지정되지 않은 경우에 열에 대해 제공되는 값을 지정합니다. *constant_expression* 은 상수, NULL 또는 시스템 함수 값입니다. DEFAULT 정의는 IDENTITY 속성을 갖는 열을 제외한 모든 열에 적용할 수 있습니다. CLR 테이블 반환 함수에는 DEFAULT를 지정할 수 없습니다.  
   
  COLLATE *collation_name*  
  열에 대한 데이터 정렬을 지정합니다. 이를 지정하지 않으면 열에 데이터베이스의 기본 데이터 정렬이 할당됩니다. 데이터 정렬 이름으로는 Windows 데이터 정렬 이름 또는 SQL 데이터 정렬 이름을 사용할 수 있습니다. 목록 및 자세한 내용은 [Windows 데이터 정렬 이름&#40;Transact-SQL&#41;](../../t-sql/statements/windows-collation-name-transact-sql.md) 및 [SQL Server 데이터 정렬 이름&#40;Transact-SQL&#41;](../../t-sql/statements/sql-server-collation-name-transact-sql.md)을 참조하십시오.  
   
- COLLATE 절은 **char**, **varchar**, **nchar** 및 **nvarchar** 데이터 형식의 열에 데이터 정렬을 변경하는 데만 사용할 수 있습니다.  
+ COLLATE 절은 **char** , **varchar** , **nchar** 및 **nvarchar** 데이터 형식의 열에 데이터 정렬을 변경하는 데만 사용할 수 있습니다.  
   
  CLR 테이블 반환 함수에는 COLLATE를 지정할 수 없습니다.  
   
@@ -355,7 +355,7 @@ RETURNS return_data_type
  ROWGUIDCOL 속성은 열에 저장된 값이 고유하도록 강제 적용하지 않습니다. 또한 테이블에 삽입된 새 행에 대한 값을 자동으로 생성하지도 않습니다. 각 열에 대해 고유한 값을 생성하려면 INSERT 문에 NEWID 함수를 사용하세요. 기본값을 지정할 수 있지만 NEWID는 기본값으로 지정할 수 없습니다.  
   
  IDENTITY  
- 새 열이 ID 열임을 나타냅니다. 테이블에 새 행이 추가되면 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]는 열에 대해 고유한 증가값을 제공합니다. ID 열은 일반적으로 PRIMARY KEY 제약 조건과 함께 사용되어 테이블에 대한 고유한 행 식별자 역할을 합니다. IDENTITY 속성은 **tinyint**, **smallint**, **int**, **bigint**, **decimal(p,0)** 또는 **numeric(p,0)** 열에 할당할 수 있습니다. ID 열은 테이블당 하나만 만들 수 있습니다. ID 열에는 바인딩된 기본값 및 DEFAULT 제약 조건을 사용할 수 없습니다. *초기값*과 *증가값*을 모두 지정하거나 모두 지정하지 않아야 합니다. 둘 다 지정하지 않은 경우에는 기본값 (1,1)이 사용됩니다.  
+ 새 열이 ID 열임을 나타냅니다. 테이블에 새 행이 추가되면 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]는 열에 대해 고유한 증가값을 제공합니다. ID 열은 일반적으로 PRIMARY KEY 제약 조건과 함께 사용되어 테이블에 대한 고유한 행 식별자 역할을 합니다. IDENTITY 속성은 **tinyint** , **smallint** , **int** , **bigint** , **decimal(p,0)** 또는 **numeric(p,0)** 열에 할당할 수 있습니다. ID 열은 테이블당 하나만 만들 수 있습니다. ID 열에는 바인딩된 기본값 및 DEFAULT 제약 조건을 사용할 수 없습니다. *초기값* 과 *증가값* 을 모두 지정하거나 모두 지정하지 않아야 합니다. 둘 다 지정하지 않은 경우에는 기본값 (1,1)이 사용됩니다.  
   
  CLR 테이블 반환 함수에는 IDENTITY를 지정할 수 없습니다.  
   
@@ -363,7 +363,7 @@ RETURNS return_data_type
  테이블의 첫 번째 행에 할당되는 정수 값입니다.  
   
  *increment*  
- 테이블의 연속된 행에 대해 *초기*값에 추가되는 정수 값입니다.  
+ 테이블의 연속된 행에 대해 *초기* 값에 추가되는 정수 값입니다.  
   
 **\< column_constraint >::= 및 \< table_constraint>::=**
   
@@ -409,7 +409,7 @@ RETURNS return_data_type
  인덱스 패딩을 지정합니다. 기본값은 OFF입니다.  
   
  FILLFACTOR = *fillfactor*  
- [!INCLUDE[ssDE](../../includes/ssde-md.md)]에서 인덱스 생성 또는 변경 중에 각 인덱스 페이지의 리프 수준에 대한 채우기 정도를 나타내는 비율을 지정합니다. *fillfactor*는 1에서 100 사이의 정수 값이어야 하며 기본값은 0입니다.  
+ [!INCLUDE[ssDE](../../includes/ssde-md.md)]에서 인덱스 생성 또는 변경 중에 각 인덱스 페이지의 리프 수준에 대한 채우기 정도를 나타내는 비율을 지정합니다. *fillfactor* 는 1에서 100 사이의 정수 값이어야 하며 기본값은 0입니다.  
   
  IGNORE_DUP_KEY = { ON | OFF }  
  삽입 작업에서 고유 인덱스에 중복된 키 값을 삽입하려는 경우에 대한 오류 응답을 지정합니다. IGNORE_DUP_KEY 옵션은 인덱스를 만들거나 다시 작성한 후의 삽입 작업에만 적용됩니다. 기본값은 OFF입니다.  
@@ -443,5 +443,4 @@ RETURNS return_data_type
  [DROP FUNCTION &#40;Transact-SQL&#41;](../../t-sql/statements/drop-function-transact-sql.md)   
  [게시 데이터베이스의 스키마 변경](../../relational-databases/replication/publish/make-schema-changes-on-publication-databases.md)   
  [EVENTDATA&#40;Transact-SQL&#41;](../../t-sql/functions/eventdata-transact-sql.md)  
-  
   

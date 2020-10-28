@@ -1,7 +1,7 @@
 ---
 title: Azure로의 관리형 백업 사용
 description: 데이터베이스 및 인스턴스 수준에서 Microsoft Azure로 SQL Server 관리형 백업을 사용하도록 설정하고, 알림을 설정하고, 백업 활동을 모니터링하는 방법을 알아봅니다.
-ms.custom: seo-lt-2019
+ms.custom: seo-lt-2019, devx-track-azurecli
 ms.date: 12/17/2019
 ms.prod: sql
 ms.prod_service: backup-restore
@@ -11,12 +11,12 @@ ms.topic: conceptual
 ms.assetid: 68ebb53e-d5ad-4622-af68-1e150b94516e
 author: MikeRayMSFT
 ms.author: mikeray
-ms.openlocfilehash: 9dcbab028ec47adcf569554d464634a4813e5914
-ms.sourcegitcommit: 04cf7905fa32e0a9a44575a6f9641d9a2e5ac0f8
+ms.openlocfilehash: 30c53bedf4f5946088e35c94e8902554c6da0049
+ms.sourcegitcommit: fb8724fb99c46ecf3a6d7b02a743af9b590402f0
 ms.translationtype: HT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 10/07/2020
-ms.locfileid: "91810179"
+ms.lasthandoff: 10/23/2020
+ms.locfileid: "92439472"
 ---
 # <a name="enable-sql-server-managed-backup-to-azure"></a>Azure로의 SQL Server 관리형 백업 사용
 

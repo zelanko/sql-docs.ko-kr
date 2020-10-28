@@ -13,12 +13,12 @@ ms.assetid: 390225cc-23e8-4051-a5f6-221e33e4c0b4
 author: XiaoyuMSFT
 ms.author: xiaoyul
 monikerRange: '>= aps-pdw-2016 || = azure-sqldw-latest || = sqlallproducts-allversions'
-ms.openlocfilehash: 544991790a86e1738474b7b71c39bcbcb7fc395a
-ms.sourcegitcommit: ead0b8c334d487a07e41256ce5d6acafa2d23c9d
+ms.openlocfilehash: f62aebfe079ed8a701301ca7d5d3a5c70127407a
+ms.sourcegitcommit: 22e97435c8b692f7612c4a6d3fe9e9baeaecbb94
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 10/22/2020
-ms.locfileid: "92412508"
+ms.lasthandoff: 10/27/2020
+ms.locfileid: "92678902"
 ---
 # <a name="sysdm_pdw_exec_requests-transact-sql"></a>sys.dm_pdw_exec_requests (Transact-sql)
 
@@ -41,14 +41,14 @@ ms.locfileid: "92412508"
 |database_id|**int**|명시적 컨텍스트에서 사용 되는 데이터베이스의 식별자입니다 (예: DB_X 사용).|[&#40;transact-sql&#41;](../../relational-databases/system-catalog-views/sys-databases-transact-sql.md)에서 ID를 참조 하십시오.|  
 |명령을 사용합니다.|**nvarchar(4000)**|사용자가 제출한 요청의 전체 텍스트를 저장 합니다.|모든 유효한 쿼리 또는 요청 텍스트입니다. 4000 바이트 보다 긴 쿼리는 잘립니다.|  
 |resource_class|**nvarchar (20)**|이 요청에 사용 되는 작업 그룹입니다. |정적 리소스 클래스</br>staticrc10</br>staticrc20</br>staticrc30</br>staticrc40</br>staticrc50</br>staticrc60</br>staticrc70</br>staticrc80</br>            </br>동적 리소스 클래스</br>SmallRC</br>MediumRC</br>LargeRC</br>XLargeRC|
-|importance|**nvarchar(128)**|요청을 실행 하는 중요도를 설정 합니다.  이 작업 그룹 및 공유 리소스에 대 한 작업 그룹에 있는 요청의 상대적 중요도입니다.  분류자에 지정 된 중요도는 작업 그룹 중요도 설정을 재정의 합니다.</br>적용 대상: Azure Synapse Analytics|NULL</br>low</br>below_normal</br>보통 (기본값)</br>above_normal</br>high|
-|group_name|**sysname** |리소스를 활용 하는 요청의 경우 group_name은 요청을 실행 중인 작업 그룹의 이름입니다.  요청에서 리소스를 사용 하지 않는 경우 group_name은 null입니다.</br>적용 대상: Azure Synapse Analytics|
+|importance|**nvarchar(128)**|요청을 실행 하는 중요도를 설정 합니다.  이 작업 그룹 및 공유 리소스에 대 한 작업 그룹에 있는 요청의 상대적 중요도입니다.  분류자에 지정 된 중요도는 작업 그룹 중요도 설정을 재정의 합니다.</br>적용 대상: Azure SQL Data Warehouse|NULL</br>low</br>below_normal</br>보통 (기본값)</br>above_normal</br>high|
+|group_name|**sysname** |리소스를 활용 하는 요청의 경우 group_name은 요청을 실행 중인 작업 그룹의 이름입니다.  요청에서 리소스를 사용 하지 않는 경우 group_name은 null입니다.</br>적용 대상: Azure SQL Data Warehouse|
 |classifier_name|**sysname**|리소스를 활용 하는 요청의 경우 리소스 및 중요도를 할당 하는 데 사용 되는 분류자의 이름입니다.||
-|resource_allocation_percentage|**decimal (5, 2)**|요청에 할당 된 리소스의 비율입니다.</br>적용 대상: Azure Synapse Analytics|
-|result_cache_hit|**int**|완료 된 쿼리가 결과 집합 캐시를 사용 했는지 여부를 자세히 나타냅니다.  </br>적용 대상: Azure Synapse Analytics| 1 = 결과 집합 캐시 적중 </br> 0 = 결과 집합 캐시 누락 </br> 음수 정수 값 = 결과 집합 캐싱이 사용 되지 않는 이유입니다.  자세한 내용은 설명 부분을 참조 하세요.|
-|command2|**nvarchar9max)**|사용자가 제출한 요청의 전체 텍스트를 저장 합니다. 4000 자 보다 긴 쿼리를 보관 합니다.|모든 유효한 쿼리 또는 요청 텍스트입니다. NULL = 길이가 4000 자 이하인 쿼리, 이러한 쿼리를 위해 명령 열에서 전체 텍스트를 찾을 수 있습니다.|
+|resource_allocation_percentage|**decimal (5, 2)**|요청에 할당 된 리소스의 비율입니다.</br>적용 대상: Azure SQL Data Warehouse|
+|result_cache_hit|**int**|완료 된 쿼리가 결과 집합 캐시를 사용 했는지 여부를 자세히 나타냅니다.  </br>적용 대상: Azure SQL Data Warehouse| 1 = 결과 집합 캐시 적중 </br> 0 = 결과 집합 캐시 누락 </br> 음수 정수 값 = 결과 집합 캐싱이 사용 되지 않는 이유입니다.  자세한 내용은 설명 부분을 참조 하세요.|
+|client_correlation_id|**nvarchar(255)**|클라이언트 세션에 대 한 선택적 사용자 정의 이름입니다.  세션에 대해 설정 하려면 ' client_correlation_id ', ' ' sp_set_session_context 호출 <CorrelationIDName> 합니다.  `SELECT SESSION_CONTEXT(N'client_correlation_id')`을 실행 하 여 값을 검색 합니다.|
 ||||
-  
+
 ## <a name="remarks"></a>설명 
  이 보기에 의해 유지 되는 최대 행에 대 한 자세한 내용은 [용량 제한](/azure/sql-data-warehouse/sql-data-warehouse-service-capacity-limits#metadata) 항목에서 메타 데이터 섹션을 참조 하세요.
 
@@ -57,18 +57,17 @@ Result_cache_hit 열의 음의 정수 값은 쿼리의 결과 집합을 캐시�
 |값            |Description  |  
 |-----------------|-----------------|  
 |**1**|결과 집합 캐시 적중|  
-|**0x00** (**0**)|결과 집합 캐시 누락|  
-|-**0x01** (**-1**)|데이터베이스에서 결과 집합 캐싱이 사용 되지 않습니다.|  
-|-**0x02** (**-2**)|세션에서 결과 집합 캐싱이 사용 되지 않습니다. | 
-|-**0x04** (**-4**)|쿼리의 데이터 원본이 없기 때문에 결과 집합 캐싱이 사용 하지 않도록 설정 되었습니다.|  
-|-**0x08** (**-8**)|행 수준 보안 조건자로 인해 결과 집합 캐싱이 사용 하지 않도록 설정 되었습니다.|  
-|-**0x10** (**-16**)|쿼리에서 시스템 테이블, 임시 테이블 또는 외부 테이블을 사용 하 여 결과 집합 캐싱을 사용할 수 없습니다.|  
-|-**0x20** (**-32**)|쿼리는 런타임 상수, 사용자 정의 함수 또는 비 결정적인 함수를 포함 하기 때문에 결과 집합 캐싱을 사용할 수 없습니다.|  
-|-**0x40**(**-64**)|예상 결과 집합 >크기가 10GB로 설정 되어 결과 집합 캐싱이 사용 하지 않도록 설정 되었습니다.|  
-|-**0x80**(**-128**) |결과 집합에 크기가 큰 행 (>64kb)이 포함 되어 있으므로 결과 집합 캐싱이 사용 되지 않습니다.|  
-|-**0x100**(**-256**) |세부적인 동적 데이터 마스킹을 사용 하 여 결과 집합 캐싱을 사용할 수 없습니다.|  
+|**0x00** ( **0** )|결과 집합 캐시 누락|  
+|-**0x01** ( **-1** )|데이터베이스에서 결과 집합 캐싱이 사용 되지 않습니다.|  
+|-**0x02** ( **-2** )|세션에서 결과 집합 캐싱이 사용 되지 않습니다. | 
+|-**0x04** ( **-4** )|쿼리의 데이터 원본이 없기 때문에 결과 집합 캐싱이 사용 하지 않도록 설정 되었습니다.|  
+|-**0x08** ( **-8** )|행 수준 보안 조건자로 인해 결과 집합 캐싱이 사용 하지 않도록 설정 되었습니다.|  
+|-**0x10** ( **-16** )|쿼리에서 시스템 테이블, 임시 테이블 또는 외부 테이블을 사용 하 여 결과 집합 캐싱을 사용할 수 없습니다.|  
+|-**0x20** ( **-32** )|쿼리는 런타임 상수, 사용자 정의 함수 또는 비 결정적인 함수를 포함 하기 때문에 결과 집합 캐싱을 사용할 수 없습니다.|  
+|-**0x40** ( **-64** )|예상 결과 집합 >크기가 10GB로 설정 되어 결과 집합 캐싱이 사용 하지 않도록 설정 되었습니다.|  
+|-**0x80** ( **-128** ) |결과 집합에 크기가 큰 행 (>64kb)이 포함 되어 있으므로 결과 집합 캐싱이 사용 되지 않습니다.|  
+|-**0x100** ( **-256** ) |세부적인 동적 데이터 마스킹을 사용 하 여 결과 집합 캐싱을 사용할 수 없습니다.|  
 
-  
 ## <a name="permissions"></a>사용 권한
 
  VIEW SERVER STATE 권한이 필요합니다.  
@@ -82,4 +81,4 @@ Result_cache_hit 열의 음의 정수 값은 쿼리의 결과 집합을 캐시�
   
 ## <a name="see-also"></a>참고 항목
 
- [Transact-sql&#41;&#40;Azure Synapse 분석 및 병렬 데이터 웨어하우스 동적 관리 뷰 ](../../relational-databases/system-dynamic-management-views/sql-and-parallel-data-warehouse-dynamic-management-views.md)
+ [Transact-sql&#41;&#40;SQL Data Warehouse 및 병렬 데이터 웨어하우스 동적 관리 뷰 ](../../relational-databases/system-dynamic-management-views/sql-and-parallel-data-warehouse-dynamic-management-views.md)

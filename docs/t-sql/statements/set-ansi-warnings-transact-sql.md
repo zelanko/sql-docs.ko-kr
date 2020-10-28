@@ -24,12 +24,12 @@ ms.assetid: f82aaab0-334f-427b-89b0-de4af596b4fa
 author: markingmyname
 ms.author: maghan
 monikerRange: '>=aps-pdw-2016||=azuresqldb-current||=azure-sqldw-latest||>=sql-server-2016||=sqlallproducts-allversions||>=sql-server-linux-2017||=azuresqldb-mi-current'
-ms.openlocfilehash: d33d1b9e1369128bc3eeae3df1ca48c4dbbb69e8
-ms.sourcegitcommit: 8f062015c2a033f5a0d805ee4adabbe15e7c8f94
+ms.openlocfilehash: 8b41f37f996015de4b853c9443ef700b16242b44
+ms.sourcegitcommit: bd3a135f061e4a49183bbebc7add41ab11872bae
 ms.translationtype: HT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 09/25/2020
-ms.locfileid: "91227094"
+ms.lasthandoff: 10/21/2020
+ms.locfileid: "92300834"
 ---
 # <a name="set-ansi_warnings-transact-sql"></a>SET ANSI_WARNINGS(Transact-SQL)
 [!INCLUDE [sql-asdb-asdbmi-asa-pdw](../../includes/applies-to-version/sql-asdb-asdbmi-asa-pdw.md)]
@@ -59,7 +59,7 @@ SET ANSI_WARNINGS ON
   
 -   ON으로 설정한 경우 SUM, AVG, MAX, MIN, STDEV, STDEVP, VAR, VARP, COUNT 등의 집계 함수에 NULL 값이 있으면 경고 메시지가 생성됩니다. OFF로 설정한 경우에는 경고가 발생하지 않습니다.  
   
--   ON으로 설정한 경우 0으로 나누기 및 산술 오버플로 오류가 발생하면 문이 롤백되고 오류 메시지가 생성됩니다. OFF로 설정한 경우 0으로 나누기 및 산술 오버플로 오류가 발생하면 NULL 값이 반환됩니다. 새 값의 길이가 열의 최대 크기를 초과하는 **character**, Unicode 또는 **binary** 열에 INSERT나 UPDATE를 시도하면 0으로 나누기 또는 산술 오버플로 오류로 인해 Null 값이 반환될 수 있습니다. SET ANSI_WARNINGS 옵션이 ON이면 ISO 표준에 지정된 대로 INSERT나 UPDATE가 취소됩니다. 문자 열에 대해서는 후행 공백이, 이진 열에 대해서는 후행 NULL 값이 무시됩니다. 이 옵션이 OFF이면 열의 크기에 맞게 데이터가 잘리고 문이 성공적으로 실행됩니다.  
+-   ON으로 설정한 경우 0으로 나누기 및 산술 오버플로 오류가 발생하면 문이 롤백되고 오류 메시지가 생성됩니다. OFF로 설정한 경우 0으로 나누기 및 산술 오버플로 오류가 발생하면 NULL 값이 반환됩니다. 새 값의 길이가 열의 최대 크기를 초과하는 **character** , Unicode 또는 **binary** 열에 INSERT나 UPDATE를 시도하면 0으로 나누기 또는 산술 오버플로 오류로 인해 Null 값이 반환될 수 있습니다. SET ANSI_WARNINGS 옵션이 ON이면 ISO 표준에 지정된 대로 INSERT나 UPDATE가 취소됩니다. 문자 열에 대해서는 후행 공백이, 이진 열에 대해서는 후행 NULL 값이 무시됩니다. 이 옵션이 OFF이면 열의 크기에 맞게 데이터가 잘리고 문이 성공적으로 실행됩니다.  
   
 > [!NOTE]  
 > **binary** 또는 **varbinary** 데이터로 또는 그 역으로의 변환에서 잘림이 일어날 때는 SET 옵션에 상관없이 경고나 오류가 생성되지 않습니다.  
@@ -76,7 +76,7 @@ sp_configure의 user options를 사용하여 서버의 모든 연결에 대해 A
 > [!IMPORTANT]
 > 분산 쿼리를 실행할 때는 ANSI_WARNINGS를 ON으로 설정해야 합니다.  
   
-[!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] Native Client ODBC 드라이버, [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]에 대한 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] Native Client OLE DB 공급자 및 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]용 Microsoft JDBC Driver와 같은 클라이언트는 연결 플래그를 사용하여 자동으로 ANSI_WARNINGS를 ON으로 설정합니다. 이 옵션은 연결하기 전에 애플리케이션에 설정된 ODBC 데이터 원본과 ODBC 연결 특성에서 구성할 수 있습니다. DB-Library 애플리케이션으로부터 연결할 때 SET ANSI_WARNINGS의 기본값은 OFF입니다. 자세한 내용은 TDS(Tabular Data Stream) 프로토콜 사양에서 [LOGIN7](https://docs.microsoft.com/openspecs/windows_protocols/ms-tds/773a62b6-ee89-4c02-9e5e-344882630aac)을 참조하세요. 
+[!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] Native Client ODBC 드라이버, [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]에 대한 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] Native Client OLE DB 공급자 및 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]용 Microsoft JDBC Driver와 같은 클라이언트는 연결 플래그를 사용하여 자동으로 ANSI_WARNINGS를 ON으로 설정합니다. 이 옵션은 연결하기 전에 애플리케이션에 설정된 ODBC 데이터 원본과 ODBC 연결 특성에서 구성할 수 있습니다. DB-Library 애플리케이션으로부터 연결할 때 SET ANSI_WARNINGS의 기본값은 OFF입니다. 자세한 내용은 TDS(Tabular Data Stream) 프로토콜 사양에서 [LOGIN7](/openspecs/windows_protocols/ms-tds/773a62b6-ee89-4c02-9e5e-344882630aac)을 참조하세요. 
 
 ANSI_DEFAULTS 옵션이 ON이면 ANSI_WARNINGS가 활성화됩니다.  
   
@@ -188,5 +188,4 @@ DROP TABLE T1;
  [SET 문&#40;Transact-SQL&#41;](../../t-sql/statements/set-statements-transact-sql.md)   
  [SET ANSI_DEFAULTS &#40;Transact-SQL&#41;](../../t-sql/statements/set-ansi-defaults-transact-sql.md)   
  [SESSIONPROPERTY&#40;Transact-SQL&#41;](../../t-sql/functions/sessionproperty-transact-sql.md)  
-  
   

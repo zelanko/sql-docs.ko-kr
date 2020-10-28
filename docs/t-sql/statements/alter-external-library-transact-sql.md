@@ -18,12 +18,12 @@ author: dphansen
 ms.author: davidph
 manager: cgronlund
 monikerRange: '>=sql-server-2017||>=sql-server-linux-ver15||=azuresqldb-mi-current||=sqlallproducts-allversions'
-ms.openlocfilehash: 61ece1ff1d43d0a60d136ce140bcc6e1ae8f8259
-ms.sourcegitcommit: ac9feb0b10847b369b77f3c03f8200c86ee4f4e0
+ms.openlocfilehash: d2a53c17787810aa3ebdd47c64810caab42844c2
+ms.sourcegitcommit: bd3a135f061e4a49183bbebc7add41ab11872bae
 ms.translationtype: HT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 09/16/2020
-ms.locfileid: "90688393"
+ms.lasthandoff: 10/21/2020
+ms.locfileid: "92300443"
 ---
 # <a name="alter-external-library-transact-sql"></a>ALTER EXTERNAL LIBRARY(Transact-SQL)  
 [!INCLUDE [SQL Server 2017 SQL MI](../../includes/applies-to-version/sqlserver2017-asdbmi.md)]
@@ -37,7 +37,7 @@ ms.locfileid: "90688393"
 
 ::: moniker range="=azuresqldb-mi-current"
 > [!NOTE]
-> Azure SQL Managed Instance에서 라이브러리를 제거한 다음 **sqlmlutils**를 사용하여 변경된 버전을 설치하면 라이브러리를 변경할 수 있습니다. **sqlmlutils**에 대한 자세한 내용은 [sqlmlutils를 사용하여 Python 패키지 설치](https://docs.microsoft.com/sql/machine-learning/package-management/install-additional-python-packages-on-sql-server?context=/azure/azure-sql/managed-instance/context/ml-context&view=azuresqldb-mi-current) 및 [sqlmlutils를 사용하여 새 R 패키지 설치](https://docs.microsoft.com/sql/machine-learning/package-management/install-additional-r-packages-on-sql-server?context=%2Fazure%2Fazure-sql%2Fmanaged-instance%2Fcontext%2Fml-context&view=azuresqldb-mi-current)를 참조하세요.
+> Azure SQL Managed Instance에서 라이브러리를 제거한 다음 **sqlmlutils** 를 사용하여 변경된 버전을 설치하면 라이브러리를 변경할 수 있습니다. **sqlmlutils** 에 대한 자세한 내용은 [sqlmlutils를 사용하여 Python 패키지 설치](../../machine-learning/package-management/install-additional-python-packages-on-sql-server.md?context=%252fazure%252fazure-sql%252fmanaged-instance%252fcontext%252fml-context&view=azuresqldb-mi-current) 및 [sqlmlutils를 사용하여 새 R 패키지 설치](../../machine-learning/package-management/install-additional-r-packages-on-sql-server.md?context=%252fazure%252fazure-sql%252fmanaged-instance%252fcontext%252fml-context&view=azuresqldb-mi-current)를 참조하세요.
 ::: moniker-end
 
 ::: moniker range=">=sql-server-ver15||>=sql-server-linux-ver15||=sqlallproducts-allversions"
@@ -196,13 +196,13 @@ SQL Server 2019에서는 Windows 및 Linux 플랫폼이 지원됩니다.
 ::: moniker range="=azuresqldb-mi-current||=sqlallproducts-allversions"
 **language**
 
-패키지의 언어를 지정합니다. Azure SQL Managed Instance에서 값은 **R** 또는 **Python**일 수 있습니다.
+패키지의 언어를 지정합니다. Azure SQL Managed Instance에서 값은 **R** 또는 **Python** 일 수 있습니다.
 ::: moniker-end
 
 ::: moniker range=">=sql-server-ver15||>=sql-server-linux-ver15||=sqlallproducts-allversions"
 **language**
 
-패키지의 언어를 지정합니다. 값은 **R**, **Python** 또는 외부 언어의 이름일 수 있습니다([CREATE EXTERNAL LANGUAGE](create-external-language-transact-sql.md) 참조).
+패키지의 언어를 지정합니다. 값은 **R** , **Python** 또는 외부 언어의 이름일 수 있습니다( [CREATE EXTERNAL LANGUAGE](create-external-language-transact-sql.md) 참조).
 ::: moniker-end
 
 [!INCLUDE[sql-server-tsql-previous-offline-documentation](../../includes/sql-server-tsql-previous-offline-documentation.md)]
@@ -278,4 +278,4 @@ Python 언어의 경우 `'R'`을 `'Python'`으로 바꾸면 이 예제가 작동
 [CREATE EXTERNAL LIBRARY(Transact-SQL)](create-external-library-transact-sql.md)  
 [DROP EXTERNAL LIBRARY(Transact-SQL)](drop-external-library-transact-sql.md)  
 [sys.external_library_files](../../relational-databases/system-catalog-views/sys-external-library-files-transact-sql.md)  
-[sys.external_libraries](../../relational-databases/system-catalog-views/sys-external-libraries-transact-sql.md) 
+[sys.external_libraries](../../relational-databases/system-catalog-views/sys-external-libraries-transact-sql.md)

@@ -15,6 +15,7 @@ f1_keywords:
 - CREATE_SEARCH_PROPERTY_TSQL
 - CREATE SEARCH PROPERTY
 - CREATE SEARCH PROPERTY LIST
+- sql13.swb.spl.newsearchpropertylist.f1
 dev_langs:
 - TSQL
 helpviewer_keywords:
@@ -24,12 +25,12 @@ helpviewer_keywords:
 ms.assetid: 5440cbb8-3403-4d27-a2f9-8e1f5a1bc12b
 author: markingmyname
 ms.author: maghan
-ms.openlocfilehash: f2b347260ffc65ddf640678aed8d2728a087f981
-ms.sourcegitcommit: ac9feb0b10847b369b77f3c03f8200c86ee4f4e0
+ms.openlocfilehash: 22ae11a8e37109e7ba90e2b02e9e4351510f9ae7
+ms.sourcegitcommit: 5f3e0eca9840db20038f0362e5d88a84ff3424af
 ms.translationtype: HT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 09/16/2020
-ms.locfileid: "90688879"
+ms.lasthandoff: 10/21/2020
+ms.locfileid: "92344079"
 ---
 # <a name="create-search-property-list-transact-sql"></a>CREATE SEARCH PROPERTY LIST(Transact-SQL)
 [!INCLUDE [SQL Server Azure SQL Database ](../../includes/applies-to-version/sql-asdb.md)]
@@ -51,18 +52,18 @@ CREATE SEARCH PROPERTY LIST new_list_name
 
 ## <a name="arguments"></a>인수
  *new_list_name*  
- 새 검색 속성 목록 이름입니다. *new_list_name*은 최대 128자의 식별자입니다. *new_list_name*은 목록에서 고유해야 하며 식별자 규칙을 따릅니다. *new_list_name*은 전체 텍스트 인덱스를 만들 때 사용합니다.  
+ 새 검색 속성 목록 이름입니다. *new_list_name* 은 최대 128자의 식별자입니다. *new_list_name* 은 목록에서 고유해야 하며 식별자 규칙을 따릅니다. *new_list_name* 은 전체 텍스트 인덱스를 만들 때 사용합니다.  
   
  *database_name*  
- *source_list_name*에 지정된 속성 목록이 있는 데이터베이스의 이름입니다. *database_name*을 지정하지 않으면 기본적으로 현재 데이터베이스가 됩니다.  
+ *source_list_name* 에 지정된 속성 목록이 있는 데이터베이스의 이름입니다. *database_name* 을 지정하지 않으면 기본적으로 현재 데이터베이스가 됩니다.  
   
- *database_name*은 기존 데이터베이스 이름을 지정해야 합니다. 현재 연결의 로그인은 *database_name*에 지정된 데이터베이스의 기존 사용자 ID와 연결되어야 합니다. 데이터베이스에 대한 필수 [사용 권한](#Permissions)도 있어야 합니다.  
+ *database_name* 은 기존 데이터베이스 이름을 지정해야 합니다. 현재 연결의 로그인은 *database_name* 에 지정된 데이터베이스의 기존 사용자 ID와 연결되어야 합니다. 데이터베이스에 대한 필수 [사용 권한](#Permissions)도 있어야 합니다.  
   
  *source_list_name*  
- *database_name*에서 기존 속성 목록을 복사하여 새로운 속성 목록을 만들도록 지정합니다. *source_list_name*이 없으면 CREATE SEARCH PROPERTY LIST가 실패하고 오류가 발생합니다. *source_list_name*의 검색 등록 정보는 *new_list_name*에 의해 상속됩니다.  
+ *database_name* 에서 기존 속성 목록을 복사하여 새로운 속성 목록을 만들도록 지정합니다. *source_list_name* 이 없으면 CREATE SEARCH PROPERTY LIST가 실패하고 오류가 발생합니다. *source_list_name* 의 검색 등록 정보는 *new_list_name* 에 의해 상속됩니다.  
   
  AUTHORIZATION *owner_name*  
- 속성 목록을 소유할 사용자 또는 역할 이름을 지정합니다. *owner_name*은 현재 사용자가 멤버로 속한 역할의 이름이어야 합니다. 그렇지 않으면 현재 사용자가 *owner_name*에 대한 IMPERSONATE 권한이 있어야 합니다. 값을 지정하지 않으면 현재 사용자에게 소유권이 부여됩니다.  
+ 속성 목록을 소유할 사용자 또는 역할 이름을 지정합니다. *owner_name* 은 현재 사용자가 멤버로 속한 역할의 이름이어야 합니다. 그렇지 않으면 현재 사용자가 *owner_name* 에 대한 IMPERSONATE 권한이 있어야 합니다. 값을 지정하지 않으면 현재 사용자에게 소유권이 부여됩니다.  
   
 > [!NOTE]  
 >  [ALTER AUTHORIZATION](../../t-sql/statements/alter-authorization-transact-sql.md)[!INCLUDE[tsql](../../includes/tsql-md.md)] 문을 사용하여 소유자를 변경할 수 있습니다.  
@@ -76,9 +77,9 @@ CREATE SEARCH PROPERTY LIST new_list_name
   
  다음 조건에서는 CREATE SEARCH PROPERTY LIST 문이 실패합니다.  
   
--   *database_name*으로 지정한 데이터베이스가 없을 경우  
+-   *database_name* 으로 지정한 데이터베이스가 없을 경우  
   
--   *source_list_name*으로 지정한 목록이 없을 경우  
+-   *source_list_name* 으로 지정한 목록이 없을 경우  
   
 -   올바른 사용 권한이 없을 경우  
   

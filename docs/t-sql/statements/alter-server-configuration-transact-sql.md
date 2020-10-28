@@ -21,12 +21,12 @@ helpviewer_keywords:
 ms.assetid: f3059e42-5f6f-4a64-903c-86dca212a4b4
 author: markingmyname
 ms.author: maghan
-ms.openlocfilehash: 34fd954475d308d8989be17063e9122bf821c3da
-ms.sourcegitcommit: dd36d1cbe32cd5a65c6638e8f252b0bd8145e165
+ms.openlocfilehash: d3381300671d2303f8766351e19018d8122c861f
+ms.sourcegitcommit: bd3a135f061e4a49183bbebc7add41ab11872bae
 ms.translationtype: HT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 09/08/2020
-ms.locfileid: "89547819"
+ms.lasthandoff: 10/21/2020
+ms.locfileid: "92300919"
 ---
 # <a name="alter-server-configuration-transact-sql"></a>ALTER SERVER CONFIGURATION(Transact-SQL)
 [!INCLUDE [SQL Server](../../includes/applies-to-version/sqlserver.md)]
@@ -144,7 +144,7 @@ NUMA  노드 또는 NUMA  노드의 범위를 지정합니다.
   
 **\<diagnostic_log> ::=**  
   
-**적용 대상**: [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] ([!INCLUDE[ssSQL11](../../includes/sssql11-md.md)]부터)  
+**적용 대상** : [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] ([!INCLUDE[ssSQL11](../../includes/sssql11-md.md)]부터)  
 
   
 DIAGNOSTICS  LOG  
@@ -167,7 +167,7 @@ MAX_FILES  =  {  'max_file_count'  |  DEFAULT  }
   
 **\<failover_cluster_property> ::=**  
   
-**적용 대상**: [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] ([!INCLUDE[ssSQL11](../../includes/sssql11-md.md)]부터)    
+**적용 대상** : [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] ([!INCLUDE[ssSQL11](../../includes/sssql11-md.md)]부터)    
   
 FAILOVER  CLUSTER  PROPERTY  
 SQL  Server  리소스의 프라이빗 장애 조치(failover)  클러스터 속성을 수정합니다.  
@@ -200,10 +200,10 @@ SQL  Server  데이터베이스 엔진 리소스 DLL이 SQL  Server  인스턴�
   
 **\<hadr_cluster_context> ::=**  
   
-**적용 대상**: [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] ([!INCLUDE[ssSQL11](../../includes/sssql11-md.md)]부터)   
+**적용 대상** : [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] ([!INCLUDE[ssSQL11](../../includes/sssql11-md.md)]부터)   
   
 HADR CLUSTER CONTEXT **=** { **‘** _remote\_windows\_cluster_ **’** | LOCAL }  
-서버 인스턴스의 HADR 클러스터 컨텍스트를 지정된 WSFC(Windows Server 장애 조치(Failover) 클러스터)로 전환합니다. *HADR 클러스터 컨텍스트*는 서버 인스턴스에서 호스팅하는 가용성 복제본에 대한 메타데이터를 관리하는 WSFC를 결정합니다. 새 WSFC에서 [!INCLUDE[ssSQL11SP1](../../includes/sssql11sp1-md.md)] 또는 상위 버전 인스턴스로 [!INCLUDE[ssHADR](../../includes/sshadr-md.md)]의 클러스터 간 마이그레이션을 수행하는 동안에만 SET HADR CLUSTER CONTEXT 옵션을 사용합니다.  
+서버 인스턴스의 HADR 클러스터 컨텍스트를 지정된 WSFC(Windows Server 장애 조치(Failover) 클러스터)로 전환합니다. *HADR 클러스터 컨텍스트* 는 서버 인스턴스에서 호스팅하는 가용성 복제본에 대한 메타데이터를 관리하는 WSFC를 결정합니다. 새 WSFC에서 [!INCLUDE[ssSQL11SP1](../../includes/sssql11sp1-md.md)] 또는 상위 버전 인스턴스로 [!INCLUDE[ssHADR](../../includes/sshadr-md.md)]의 클러스터 간 마이그레이션을 수행하는 동안에만 SET HADR CLUSTER CONTEXT 옵션을 사용합니다.  
   
 HADR 클러스터 컨텍스트는 로컬 WSFC에서 원격 WSFC로 전환한 다음, 다시 원격 WSFC에서 로컬 WSFC로만 전환할 수 있습니다. HADR 클러스터 컨텍스트는 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 인스턴스에서 가용성 복제본을 호스트하지 않을 때만 원격 클러스터로 전환할 수 있습니다.  
   
@@ -224,10 +224,10 @@ LOCAL
   
 **\<buffer_pool_extension>::=**  
   
-**적용 대상**: [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] ([!INCLUDE[ssSQL14](../../includes/sssql14-md.md)]부터)    
+**적용 대상** : [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] ([!INCLUDE[ssSQL14](../../includes/sssql14-md.md)]부터)    
   
 켜기  
-버퍼 풀 확장 옵션을 설정합니다. 이 옵션은 비휘발성 스토리지를 사용해서 버퍼 풀 크기를 확장합니다. SSD(반도체 드라이브)와 같은 비휘발성 스토리지는 무결한 데이터 페이지를 풀에 저장합니다. 이 기능에 대한 자세한 내용은 [버퍼 풀 확장](../../database-engine/configure-windows/buffer-pool-extension.md)을 참조하세요. 모든 SQL Server 버전에서 버퍼 풀 확장을 사용할 수 있는 것은 아닙니다. 자세한 내용은 [SQL Server 2016의 버전과 지원하는 기능](../../sql-server/editions-and-supported-features-for-sql-server-2016.md)을 참조하세요.  
+버퍼 풀 확장 옵션을 설정합니다. 이 옵션은 비휘발성 스토리지를 사용해서 버퍼 풀 크기를 확장합니다. SSD(반도체 드라이브)와 같은 비휘발성 스토리지는 무결한 데이터 페이지를 풀에 저장합니다. 이 기능에 대한 자세한 내용은 [버퍼 풀 확장](../../database-engine/configure-windows/buffer-pool-extension.md)을 참조하세요. 모든 SQL Server 버전에서 버퍼 풀 확장을 사용할 수 있는 것은 아닙니다. 자세한 내용은 [SQL Server 2016의 버전과 지원하는 기능](../../sql-server/editions-and-components-of-sql-server-2016.md)을 참조하세요.  
   
 FILENAME = 'os_file_path_and_name'  
 버퍼 풀 확장 캐시 파일의 디렉터리 경로 및 이름을 정의합니다. 파일 확장명은 .BPE로 지정해야 합니다. FILENAME을 수정하기 전에 BUFFER POOL EXTENSION을 끕니다.  
@@ -245,7 +245,7 @@ OFF
   
 **\<soft_numa>**  
 
-**적용 대상**: [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] ([!INCLUDE[ssSQL15](../../includes/sssql15-md.md)]부터)  
+**적용 대상** : [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] ([!INCLUDE[ssSQL15](../../includes/sssql15-md.md)]부터)  
   
 켜기  
 큰 NUMA 하드웨어 노드를 더 작은 NUMA 노드로 분할하도록 자동 분할을 사용합니다. 실행 중인 값을 변경하려면 데이터베이스 엔진을 다시 시작해야 합니다.  
@@ -264,7 +264,7 @@ OFF
 
 **\<memory_optimized> ::=**
 
-**적용 대상**: [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] ([!INCLUDE[sql-server-2019](../../includes/sssqlv15-md.md)]부터)
+**적용 대상** : [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] ([!INCLUDE[sql-server-2019](../../includes/sssqlv15-md.md)]부터)
 
 켜기 <br>
 [IMDB](../../relational-databases/in-memory-database.md) 기능군의 일부인 모든 인스턴스 수준 기능을 사용합니다. 이는 현재 [메모리 최적화 tempdb 메타데이터](../../relational-databases/databases/tempdb-database.md#memory-optimized-tempdb-metadata) 및 [하이브리드 버퍼 풀](../../database-engine/configure-windows/hybrid-buffer-pool.md)을 포함합니다. 적용하려면 다시 시작해야 합니다.
@@ -359,7 +359,7 @@ SET PROCESS AFFINITY CPU=AUTO;
   
 ###  <a name="setting-diagnostic-log-options"></a><a name="Diagnostic"></a> Setting diagnostic log options  
   
-**적용 대상**: [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] ([!INCLUDE[ssSQL11](../../includes/sssql11-md.md)]부터)    
+**적용 대상** : [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] ([!INCLUDE[ssSQL11](../../includes/sssql11-md.md)]부터)    
   
 이 섹션의 예에서는 진단 로그 옵션 값을 설정하는 방법을 보여 줍니다.  
   
@@ -395,7 +395,7 @@ SET DIAGNOSTICS LOG MAX_SIZE = 10 MB;
   
 ###  <a name="setting-failover-cluster-properties"></a><a name="Failover"></a> 장애 조치(failover) 클러스터 속성 설정  
   
-**적용 대상**: [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] ([!INCLUDE[ssSQL11](../../includes/sssql11-md.md)]부터)   
+**적용 대상** : [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] ([!INCLUDE[ssSQL11](../../includes/sssql11-md.md)]부터)   
   
 다음 예에서는 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 장애 조치(failover)  클러스터 리소스의 속성 값을 설정하는 방법을 보여 줍니다.  
   
@@ -418,7 +418,7 @@ ALTER SERVER CONFIGURATION SET HADR CLUSTER CONTEXT = 'clus01.xyz.com';
   
 ####  <a name="a-setting-the-buffer-pool-extension-option"></a><a name="BufferPoolExtension"></a> 1. 버퍼 풀 확장 옵션 설정  
   
-**적용 대상**: [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] ([!INCLUDE[ssSQL14](../../includes/sssql14-md.md)]부터)    
+**적용 대상** : [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] ([!INCLUDE[ssSQL14](../../includes/sssql14-md.md)]부터)    
   
 다음 예에서는 버퍼 풀 확장 옵션을 설정하고 파일 이름과 크기를 지정합니다.  
   
@@ -447,7 +447,7 @@ GO
 
 ### <a name="setting-in-memory-database-options"></a><a name="MemoryOptimized"></a>IMDB 옵션 설정
 
-**적용 대상**: [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] ([!INCLUDE[sql-server-2019](../../includes/sssqlv15-md.md)]부터)
+**적용 대상** : [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] ([!INCLUDE[sql-server-2019](../../includes/sssqlv15-md.md)]부터)
 
 #### <a name="a-enable-all-in-memory-database-features-with-default-options"></a>A. 기본 옵션으로 모든 IMDB 기능 사용
 
@@ -484,5 +484,4 @@ GO
 [sys.dm_os_memory_nodes&#40;Transact-SQL&#41;](../../relational-databases/system-dynamic-management-views/sys-dm-os-memory-nodes-transact-sql.md)   
 [sys.dm_os_buffer_pool_extension_configuration&#40;Transact-SQL&#41;](../../relational-databases/system-dynamic-management-views/sys-dm-os-buffer-pool-extension-configuration-transact-sql.md)   
 [버퍼 풀 확장](../../database-engine/configure-windows/buffer-pool-extension.md)  
-  
   

@@ -20,12 +20,12 @@ helpviewer_keywords:
 author: markingmyname
 ms.author: maghan
 monikerRange: '>=aps-pdw-2016||=azuresqldb-current||=azure-sqldw-latest||>=sql-server-2016||=sqlallproducts-allversions||>=sql-server-linux-2017||=azuresqldb-mi-current'
-ms.openlocfilehash: 17ddca3961a7167a725b21ce1292062bd2c8ef9a
-ms.sourcegitcommit: dd36d1cbe32cd5a65c6638e8f252b0bd8145e165
+ms.openlocfilehash: 562063245f2c8aaf5204385be20e6687554d5d46
+ms.sourcegitcommit: bd3a135f061e4a49183bbebc7add41ab11872bae
 ms.translationtype: HT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 09/08/2020
-ms.locfileid: "89547510"
+ms.lasthandoff: 10/21/2020
+ms.locfileid: "92300182"
 ---
 # <a name="create-external-data-source-transact-sql"></a>CREATE EXTERNAL DATA SOURCE(Transact-SQL)
 
@@ -63,7 +63,7 @@ PolyBase 쿼리에 대한 외부 데이터 원본을 만듭니다. 외부 데이
 - [PolyBase][intro_pb]를 사용하여 데이터 가상화 및 데이터 로드
 - `BULK INSERT` 또는 `OPENROWSET`를 사용한 대량 로드 작업
 
-**적용 대상**: [!INCLUDE[ssSQL15](../../includes/sssql15-md.md)]로 시작
+**적용 대상** : [!INCLUDE[ssSQL15](../../includes/sssql15-md.md)]로 시작
 
 ## <a name="syntax"></a>구문
 
@@ -119,7 +119,7 @@ WITH
 - `ODBC`를 통해 연결할 때 `Driver={<Name of Driver>}`를 지정합니다.
 - `wasbs`는 선택 사항이지만, 데이터가 보안 TLS/SSL 연결을 사용하여 전송되므로 Azure Storage 계정에 액세스하는 데 권장됩니다.
 - `abfs` 또는 `abfss` API는 Azure Storage 계정에 액세스할 때 지원되지 않습니다.
-- Azure Storage 계정(V2)의 계층 구조 네임스페이스 옵션은 지원되지 않습니다. 이 옵션이 **비활성화**되어 있는지 확인하세요.
+- Azure Storage 계정(V2)의 계층 구조 네임스페이스 옵션은 지원되지 않습니다. 이 옵션이 **비활성화** 되어 있는지 확인하세요.
 - Hadoop `Namenode` 장애 조치(failover) 중에 PolyBase 쿼리를 성공적으로 수행하려면 Hadoop 클러스터의 `Namenode`에 대한 가상 IP 주소 사용을 고려하세요. 그렇지 않은 경우 [ALTER EXTERNAL DATA SOURCE][alter_eds] 명령을 실행하여 새 위치를 가리킵니다.
 
 ### <a name="connection_options--key_value_pair"></a>CONNECTION_OPTIONS = *key_value_pair*
@@ -398,28 +398,28 @@ WITH
 
 <!-- links to external pages -->
 <!-- SQL Docs -->
-[bulk_insert]: https://docs.microsoft.com/sql/t-sql/statements/bulk-insert-transact-sql
-[bulk_insert_example]: https://docs.microsoft.com/sql/t-sql/statements/bulk-insert-transact-sql#f-importing-data-from-a-file-in-azure-storage
-[openrowset]: https://docs.microsoft.com/sql/t-sql/functions/openrowset-transact-sql
+[bulk_insert]: ./bulk-insert-transact-sql.md
+[bulk_insert_example]: ./bulk-insert-transact-sql.md#f-importing-data-from-a-file-in-azure-blob-storage
+[openrowset]: ../functions/openrowset-transact-sql.md
 
-[create_dsc]: https://docs.microsoft.com/sql/t-sql/statements/create-database-scoped-credential-transact-sql
-[create_eff]: https://docs.microsoft.com/sql/t-sql/statements/create-external-file-format-transact-sql
-[create_etb]: https://docs.microsoft.com/sql/t-sql/statements/create-external-table-transact-sql
-[create_etb_as_sel]: https://docs.microsoft.com/sql/t-sql/statements/create-external-table-as-select-transact-sql?view=azure-sqldw-latest
-[create_tbl_as_sel]: https://docs.microsoft.com/sql/t-sql/statements/create-table-as-select-azure-sql-data-warehouse?view=azure-sqldw-latest
+[create_dsc]: ./create-database-scoped-credential-transact-sql.md
+[create_eff]: ./create-external-file-format-transact-sql.md
+[create_etb]: ./create-external-table-transact-sql.md
+[create_etb_as_sel]: ./create-external-table-as-select-transact-sql.md?view=azure-sqldw-latest
+[create_tbl_as_sel]: ./create-table-as-select-azure-sql-data-warehouse.md?view=azure-sqldw-latest
 
-[alter_eds]: https://docs.microsoft.com/sql/t-sql/statements/alter-external-data-source-transact-sql
+[alter_eds]: ./alter-external-data-source-transact-sql.md
 
-[cat_eds]: https://docs.microsoft.com/sql/relational-databases/system-catalog-views/sys-external-data-sources-transact-sql
+[cat_eds]: ../../relational-databases/system-catalog-views/sys-external-data-sources-transact-sql.md
 <!-- PolyBase docs -->
-[intro_pb]: https://docs.microsoft.com/sql/relational-databases/polybase/polybase-guide
-[mongodb_pb]: https://docs.microsoft.com/sql/relational-databases/polybase/polybase-configure-mongodb
+[intro_pb]: ../../relational-databases/polybase/polybase-guide.md
+[mongodb_pb]: ../../relational-databases/polybase/polybase-configure-mongodb.md
 [connectivity_pb]:https://docs.microsoft.com/sql/database-engine/configure-windows/polybase-connectivity-configuration-transact-sql
-[connection_options]: https://docs.microsoft.com/sql/relational-databases/native-client/applications/using-connection-string-keywords-with-sql-server-native-client
-[hint_pb]: https://docs.microsoft.com/sql/relational-databases/polybase/polybase-pushdown-computation#force-pushdown
+[connection_options]: ../../relational-databases/native-client/applications/using-connection-string-keywords-with-sql-server-native-client.md
+[hint_pb]: ../../relational-databases/polybase/polybase-pushdown-computation.md#force-pushdown
 
 <!-- Azure Docs -->
-[sas_token]: https://docs.microsoft.com/azure/storage/storage-dotnet-shared-access-signature-part-1
+[sas_token]: /azure/storage/storage-dotnet-shared-access-signature-part-1
 
 ::: moniker-end
 ::: moniker range="=azuresqldb-current||=sqlallproducts-allversions"
@@ -625,29 +625,29 @@ WITH
 
 <!-- links to external pages -->
 <!-- SQL Docs -->
-[bulk_insert]: https://docs.microsoft.com/sql/t-sql/statements/bulk-insert-transact-sql
-[bulk_insert_example]: https://docs.microsoft.com/sql/t-sql/statements/bulk-insert-transact-sql#f-importing-data-from-a-file-in-azure-storage
-[openrowset]: https://docs.microsoft.com/sql/t-sql/functions/openrowset-transact-sql
-[create_dsc]: https://docs.microsoft.com/sql/t-sql/statements/create-database-scoped-credential-transact-sql
+[bulk_insert]: ./bulk-insert-transact-sql.md
+[bulk_insert_example]: ./bulk-insert-transact-sql.md#f-importing-data-from-a-file-in-azure-blob-storage
+[openrowset]: ../functions/openrowset-transact-sql.md
+[create_dsc]: ./create-database-scoped-credential-transact-sql.md
 [create_etb]: https://docs.microsoft.com/sql/t-sql/statements/create-external-data-source
-[alter_eds]: https://docs.microsoft.com/sql/t-sql/statements/alter-external-data-source-transact-sql
-[cat_eds]: https://docs.microsoft.com/sql/relational-databases/system-catalog-views/sys-external-data-sources-transact-sql
+[alter_eds]: ./alter-external-data-source-transact-sql.md
+[cat_eds]: ../../relational-databases/system-catalog-views/sys-external-data-sources-transact-sql.md
 <!-- PolyBase docs -->
-[intro_pb]: https://docs.microsoft.com/sql/relational-databases/polybase/polybase-guide
-[mongodb_pb]: https://docs.microsoft.com/sql/relational-databases/polybase/polybase-configure-mongodb
+[intro_pb]: ../../relational-databases/polybase/polybase-guide.md
+[mongodb_pb]: ../../relational-databases/polybase/polybase-configure-mongodb.md
 [connectivity_pb]:https://docs.microsoft.com/sql/database-engine/configure-windows/polybase-connectivity-configuration-transact-sql
-[connection_options]: https://docs.microsoft.com/sql/relational-databases/native-client/applications/using-connection-string-keywords-with-sql-server-native-client
-[hint_pb]: https://docs.microsoft.com/sql/relational-databases/polybase/polybase-pushdown-computation#force-pushdown
+[connection_options]: ../../relational-databases/native-client/applications/using-connection-string-keywords-with-sql-server-native-client.md
+[hint_pb]: ../../relational-databases/polybase/polybase-pushdown-computation.md#force-pushdown
 <!-- Elastic Query Docs -->
-[intro_eq]: https://azure.microsoft.com/documentation/articles/sql-database-elastic-query-overview/
-[remote_eq]: https://azure.microsoft.com/documentation/articles/sql-database-elastic-query-getting-started-vertical/
-[remote_eq_tutorial]: https://azure.microsoft.com/documentation/articles/sql-database-elastic-query-getting-started-vertical/
-[sharded_eq]: https://azure.microsoft.com/documentation/articles/sql-database-elastic-query-getting-started/
-[sharded_eq_tutorial]: https://azure.microsoft.com/documentation/articles/sql-database-elastic-query-getting-started/
+[intro_eq]: /azure/azure-sql/database/elastic-query-overview
+[remote_eq]: /azure/azure-sql/database/elastic-query-getting-started-vertical
+[remote_eq_tutorial]: /azure/azure-sql/database/elastic-query-getting-started-vertical
+[sharded_eq]: /azure/azure-sql/database/elastic-query-getting-started
+[sharded_eq_tutorial]: /azure/azure-sql/database/elastic-query-getting-started
 
 <!-- Azure Docs -->
-[azure_ad]: https://docs.microsoft.com/azure/data-lake-store/data-lake-store-authenticate-using-active-directory
-[sas_token]: https://docs.microsoft.com/azure/storage/storage-dotnet-shared-access-signature-part-1
+[azure_ad]: /azure/data-lake-store/data-lake-store-authenticate-using-active-directory
+[sas_token]: /azure/storage/storage-dotnet-shared-access-signature-part-1
 
 ::: moniker-end
 ::: moniker range="=azure-sqldw-latest||=sqlallproducts-allversions"
@@ -879,35 +879,35 @@ WITH
 
 <!-- links to external pages -->
 <!-- SQL Docs -->
-[bulk_insert]: https://docs.microsoft.com/sql/t-sql/statements/bulk-insert-transact-sql
-[bulk_insert_example]: https://docs.microsoft.com/sql/t-sql/statements/bulk-insert-transact-sql#f-importing-data-from-a-file-in-azure-storage
-[openrowset]: https://docs.microsoft.com/sql/t-sql/functions/openrowset-transact-sql
+[bulk_insert]: ./bulk-insert-transact-sql.md
+[bulk_insert_example]: ./bulk-insert-transact-sql.md#f-importing-data-from-a-file-in-azure-blob-storage
+[openrowset]: ../functions/openrowset-transact-sql.md
 
-[create_dsc]: https://docs.microsoft.com/sql/t-sql/statements/create-database-scoped-credential-transact-sql
-[create_eff]: https://docs.microsoft.com/sql/t-sql/statements/create-external-file-format-transact-sql
+[create_dsc]: ./create-database-scoped-credential-transact-sql.md
+[create_eff]: ./create-external-file-format-transact-sql.md
 [create_etb]: https://docs.microsoft.com/sql/t-sql/statements/create-external-data-source
-[create_etb_as_sel]: https://docs.microsoft.com/sql/t-sql/statements/create-external-table-as-select-transact-sql?view=azure-sqldw-latest
-[create_tbl_as_sel]: https://docs.microsoft.com/sql/t-sql/statements/create-table-as-select-azure-sql-data-warehouse?view=azure-sqldw-latest
+[create_etb_as_sel]: ./create-external-table-as-select-transact-sql.md?view=azure-sqldw-latest
+[create_tbl_as_sel]: ./create-table-as-select-azure-sql-data-warehouse.md?view=azure-sqldw-latest
 
-[alter_eds]: https://docs.microsoft.com/sql/t-sql/statements/alter-external-data-source-transact-sql
+[alter_eds]: ./alter-external-data-source-transact-sql.md
 
-[cat_eds]: https://docs.microsoft.com/sql/relational-databases/system-catalog-views/sys-external-data-sources-transact-sql
+[cat_eds]: ../../relational-databases/system-catalog-views/sys-external-data-sources-transact-sql.md
 <!-- PolyBase docs -->
-[intro_pb]: https://docs.microsoft.com/sql/relational-databases/polybase/polybase-guide
-[mongodb_pb]: https://docs.microsoft.com/sql/relational-databases/polybase/polybase-configure-mongodb
+[intro_pb]: ../../relational-databases/polybase/polybase-guide.md
+[mongodb_pb]: ../../relational-databases/polybase/polybase-configure-mongodb.md
 [connectivity_pb]:https://docs.microsoft.com/sql/database-engine/configure-windows/polybase-connectivity-configuration-transact-sql
-[connection_options]: https://docs.microsoft.com/sql/relational-databases/native-client/applications/using-connection-string-keywords-with-sql-server-native-client
-[hint_pb]: https://docs.microsoft.com/sql/relational-databases/polybase/polybase-pushdown-computation#force-pushdown
+[connection_options]: ../../relational-databases/native-client/applications/using-connection-string-keywords-with-sql-server-native-client.md
+[hint_pb]: ../../relational-databases/polybase/polybase-pushdown-computation.md#force-pushdown
 <!-- Elastic Query Docs -->
-[intro_eq]: https://azure.microsoft.com/documentation/articles/sql-database-elastic-query-overview/
-[remote_eq]: https://azure.microsoft.com/documentation/articles/sql-database-elastic-query-getting-started-vertical/
-[remote_eq_tutorial]: https://azure.microsoft.com/documentation/articles/sql-database-elastic-query-getting-started-vertical/
-[sharded_eq]: https://azure.microsoft.com/documentation/articles/sql-database-elastic-query-getting-started/
-[sharded_eq_tutorial]: https://azure.microsoft.com/documentation/articles/sql-database-elastic-query-getting-started/
+[intro_eq]: /azure/azure-sql/database/elastic-query-overview
+[remote_eq]: /azure/azure-sql/database/elastic-query-getting-started-vertical
+[remote_eq_tutorial]: /azure/azure-sql/database/elastic-query-getting-started-vertical
+[sharded_eq]: /azure/azure-sql/database/elastic-query-getting-started
+[sharded_eq_tutorial]: /azure/azure-sql/database/elastic-query-getting-started
 
 <!-- Azure Docs -->
-[azure_ad]: https://docs.microsoft.com/azure/data-lake-store/data-lake-store-authenticate-using-active-directory
-[sas_token]: https://docs.microsoft.com/azure/storage/storage-dotnet-shared-access-signature-part-1
+[azure_ad]: /azure/data-lake-store/data-lake-store-authenticate-using-active-directory
+[sas_token]: /azure/storage/storage-dotnet-shared-access-signature-part-1
 
 ::: moniker-end
 ::: moniker range=">=aps-pdw-2016||=sqlallproducts-allversions"
@@ -1125,34 +1125,34 @@ WITH
 
 <!-- links to external pages -->
 <!-- SQL Docs -->
-[bulk_insert]: https://docs.microsoft.com/sql/t-sql/statements/bulk-insert-transact-sql
-[bulk_insert_example]: https://docs.microsoft.com/sql/t-sql/statements/bulk-insert-transact-sql#f-importing-data-from-a-file-in-azure-storage
-[openrowset]: https://docs.microsoft.com/sql/t-sql/functions/openrowset-transact-sql
+[bulk_insert]: ./bulk-insert-transact-sql.md
+[bulk_insert_example]: ./bulk-insert-transact-sql.md#f-importing-data-from-a-file-in-azure-blob-storage
+[openrowset]: ../functions/openrowset-transact-sql.md
 
-[create_dsc]: https://docs.microsoft.com/sql/t-sql/statements/create-database-scoped-credential-transact-sql
-[create_eff]: https://docs.microsoft.com/sql/t-sql/statements/create-external-file-format-transact-sql
+[create_dsc]: ./create-database-scoped-credential-transact-sql.md
+[create_eff]: ./create-external-file-format-transact-sql.md
 [create_etb]: https://docs.microsoft.com/sql/t-sql/statements/create-external-data-source
-[create_etb_as_sel]: https://docs.microsoft.com/sql/t-sql/statements/create-external-table-as-select-transact-sql?view=azure-sqldw-latest
-[create_tbl_as_sel]: https://docs.microsoft.com/sql/t-sql/statements/create-table-as-select-azure-sql-data-warehouse?view=azure-sqldw-latest
+[create_etb_as_sel]: ./create-external-table-as-select-transact-sql.md?view=azure-sqldw-latest
+[create_tbl_as_sel]: ./create-table-as-select-azure-sql-data-warehouse.md?view=azure-sqldw-latest
 
-[alter_eds]: https://docs.microsoft.com/sql/t-sql/statements/alter-external-data-source-transact-sql
+[alter_eds]: ./alter-external-data-source-transact-sql.md
 
-[cat_eds]: https://docs.microsoft.com/sql/relational-databases/system-catalog-views/sys-external-data-sources-transact-sql
+[cat_eds]: ../../relational-databases/system-catalog-views/sys-external-data-sources-transact-sql.md
 <!-- PolyBase docs -->
-[intro_pb]: https://docs.microsoft.com/sql/relational-databases/polybase/polybase-guide
-[mongodb_pb]: https://docs.microsoft.com/sql/relational-databases/polybase/polybase-configure-mongodb
+[intro_pb]: ../../relational-databases/polybase/polybase-guide.md
+[mongodb_pb]: ../../relational-databases/polybase/polybase-configure-mongodb.md
 [connectivity_pb]:https://docs.microsoft.com/sql/database-engine/configure-windows/polybase-connectivity-configuration-transact-sql
-[connection_options]: https://docs.microsoft.com/sql/relational-databases/native-client/applications/using-connection-string-keywords-with-sql-server-native-client
-[hint_pb]: https://docs.microsoft.com/sql/relational-databases/polybase/polybase-pushdown-computation#force-pushdown
+[connection_options]: ../../relational-databases/native-client/applications/using-connection-string-keywords-with-sql-server-native-client.md
+[hint_pb]: ../../relational-databases/polybase/polybase-pushdown-computation.md#force-pushdown
 <!-- Elastic Query Docs -->
-[intro_eq]: https://azure.microsoft.com/documentation/articles/sql-database-elastic-query-overview/
-[remote_eq]: https://azure.microsoft.com/documentation/articles/sql-database-elastic-query-getting-started-vertical/
-[remote_eq_tutorial]: https://azure.microsoft.com/documentation/articles/sql-database-elastic-query-getting-started-vertical/
-[sharded_eq]: https://azure.microsoft.com/documentation/articles/sql-database-elastic-query-getting-started/
-[sharded_eq_tutorial]: https://azure.microsoft.com/documentation/articles/sql-database-elastic-query-getting-started/
+[intro_eq]: /azure/azure-sql/database/elastic-query-overview
+[remote_eq]: /azure/azure-sql/database/elastic-query-getting-started-vertical
+[remote_eq_tutorial]: /azure/azure-sql/database/elastic-query-getting-started-vertical
+[sharded_eq]: /azure/azure-sql/database/elastic-query-getting-started
+[sharded_eq_tutorial]: /azure/azure-sql/database/elastic-query-getting-started
 
 <!-- Azure Docs -->
-[azure_ad]: https://docs.microsoft.com/azure/data-lake-store/data-lake-store-authenticate-using-active-directory
-[sas_token]: https://docs.microsoft.com/azure/storage/storage-dotnet-shared-access-signature-part-1
+[azure_ad]: /azure/data-lake-store/data-lake-store-authenticate-using-active-directory
+[sas_token]: /azure/storage/storage-dotnet-shared-access-signature-part-1
 
 ::: moniker-end

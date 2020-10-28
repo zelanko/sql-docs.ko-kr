@@ -11,12 +11,12 @@ ms.author: negust
 ms.reviewer: dphansen
 manager: cgronlun
 monikerRange: '>=sql-server-ver15||>=sql-server-linux-ver15||=sqlallproducts-allversions'
-ms.openlocfilehash: 28972df677bc52ed9128331bd279a1ee5802f8e7
-ms.sourcegitcommit: ac9feb0b10847b369b77f3c03f8200c86ee4f4e0
+ms.openlocfilehash: 006a0577292ba825a3d28cd63cc573ac35cc5771
+ms.sourcegitcommit: bd3a135f061e4a49183bbebc7add41ab11872bae
 ms.translationtype: HT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 09/16/2020
-ms.locfileid: "90688407"
+ms.lasthandoff: 10/21/2020
+ms.locfileid: "92300431"
 ---
 # <a name="alter-external-language-transact-sql"></a>ALTER EXTERNAL LANGUAGE(Transact-SQL)
 [!INCLUDE [SQL Server 2019 and later](../../includes/applies-to-version/sqlserver2019.md)]
@@ -111,11 +111,11 @@ ALTER EXTERNAL LANGUAGE language_name
 
 ## <a name="remarks"></a>설명
 
-현재 **PARAMETERS** 및 **ENVIRONMENT_VARIABLES**는 지원되지 않습니다.
+현재 **PARAMETERS** 및 **ENVIRONMENT_VARIABLES** 는 지원되지 않습니다.
 
 ## <a name="permissions"></a>사용 권한
 
-`ALTER ANY EXTERNAL LANGUAGE` 권한이 필요합니다. 기본적으로 **db_owner** 역할의 멤버인 **dbo**가 있는 사용자는 외부 언어를 변경할 사용 권한이 있습니다. 기타 모든 사용자의 경우, 권한으로 ALTER ANY EXTERNAL LIBRARY를 지정하는 [GRANT](https://docs.microsoft.com/sql/t-sql/statements/grant-database-permissions-transact-sql) 문을 사용하여 명시적으로 권한을 부여해야 합니다.
+`ALTER ANY EXTERNAL LANGUAGE` 권한이 필요합니다. 기본적으로 **db_owner** 역할의 멤버인 **dbo** 가 있는 사용자는 외부 언어를 변경할 사용 권한이 있습니다. 기타 모든 사용자의 경우, 권한으로 ALTER ANY EXTERNAL LIBRARY를 지정하는 [GRANT](./grant-database-permissions-transact-sql.md) 문을 사용하여 명시적으로 권한을 부여해야 합니다.
 
 ## <a name="examples"></a>예
 
@@ -134,4 +134,4 @@ GO
 [CREATE EXTERNAL LANGUAGE(Transact-SQL)](create-external-language-transact-sql.md)  
 [DROP EXTERNAL LANGUAGE(Transact-SQL)](drop-external-language-transact-sql.md)  
 [sys.external_languages](../../relational-databases/system-catalog-views/sys-external-languages-transact-sql.md)  
-[sys.external_language_files](../../relational-databases/system-catalog-views/sys-external-language-files-transact-sql.md)  
+[sys.external_language_files](../../relational-databases/system-catalog-views/sys-external-language-files-transact-sql.md)

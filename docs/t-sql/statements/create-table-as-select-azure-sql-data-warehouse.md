@@ -12,12 +12,12 @@ ms.assetid: d1e08f88-64ef-4001-8a66-372249df2533
 author: julieMSFT
 ms.author: jrasnick
 monikerRange: '>= aps-pdw-2016 || = azure-sqldw-latest || = sqlallproducts-allversions'
-ms.openlocfilehash: ab6d2ce34991dfaf4d2266ca0b0d900eb93fdde6
-ms.sourcegitcommit: c74bb5944994e34b102615b592fdaabe54713047
+ms.openlocfilehash: 0ab6f4ff4d5681d0dfeb30ded57447ddbb8b24a0
+ms.sourcegitcommit: bd3a135f061e4a49183bbebc7add41ab11872bae
 ms.translationtype: HT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 09/22/2020
-ms.locfileid: "90990156"
+ms.lasthandoff: 10/21/2020
+ms.locfileid: "92300543"
 ---
 # <a name="create-table-as-select-azure-synapse-analytics"></a>CREATE TABLE AS SELECT(Azure Synapse Analytics)
 [!INCLUDE[applies-to-version/asa-pdw](../../includes/applies-to-version/asa-pdw.md)]
@@ -32,7 +32,7 @@ CREATE TABLE AS SELECT(CTAS)는 사용할 수 있는 매우 중요한 T-SQL 기�
 -   외부 데이터를 쿼리하거나 가져옵니다.  
 
 > [!NOTE]  
-> CTAS는 테이블을 만드는 기능에 추가되므로 이 토픽에서는 CREATE TABLE 토픽을 반복하지 않으려고 합니다. 그 대신, CTAS와 CREATE TABLE 문의 차이점을 설명합니다. CREATE TABLE 세부 정보는 [CREATE TABLE(Azure Synapse Analytics)](https://msdn.microsoft.com/library/mt203953/) 문을 참조하세요. 
+> CTAS는 테이블을 만드는 기능에 추가되므로 이 토픽에서는 CREATE TABLE 토픽을 반복하지 않으려고 합니다. 그 대신, CTAS와 CREATE TABLE 문의 차이점을 설명합니다. CREATE TABLE 세부 정보는 [CREATE TABLE(Azure Synapse Analytics)](./create-table-azure-sql-data-warehouse.md) 문을 참조하세요. 
   
  ![항목 링크 아이콘](../../database-engine/configure-windows/media/topic-link.gif "항목 링크 아이콘") [Transact-SQL 구문 표기 규칙](../../t-sql/language-elements/transact-sql-syntax-conventions-transact-sql.md)  
   
@@ -81,13 +81,13 @@ CREATE TABLE { database_name.schema_name.table_name | schema_name.table_name | t
 <a name="arguments-bk"></a>
   
 ## <a name="arguments"></a>인수  
-자세한 내용은 CREATE TABLE의 [인수 섹션](https://msdn.microsoft.com/library/mt203953/#Arguments)을 참조하세요.  
+자세한 내용은 CREATE TABLE의 [인수 섹션](./create-table-azure-sql-data-warehouse.md#Arguments)을 참조하세요.  
 
 <a name="column-options-bk"></a>
 
 ### <a name="column-options"></a>열 옵션
 `column_name` [ ,...`n` ]   
- 열 이름은 CREATE TABLE에서 설명한 [열 옵션](https://msdn.microsoft.com/library/mt203953/#ColumnOptions)을 허용하지 않습니다.  그 대신, 새 테이블에 대해 하나 이상의 열 이름으로 이루어진 선택적 목록을 제공할 수 있습니다. 새 테이블의 열은 지정하는 이름을 사용합니다. 열 이름을 지정하는 경우 열 목록의 열 수가 선택 결과의 열 수와 일치해야 합니다. 열 이름을 지정하지 않으면 새 대상 테이블은 SELECT 문 결과의 열 이름을 사용합니다. 
+ 열 이름은 CREATE TABLE에서 설명한 [열 옵션](./create-table-azure-sql-data-warehouse.md#ColumnOptions)을 허용하지 않습니다.  그 대신, 새 테이블에 대해 하나 이상의 열 이름으로 이루어진 선택적 목록을 제공할 수 있습니다. 새 테이블의 열은 지정하는 이름을 사용합니다. 열 이름을 지정하는 경우 열 목록의 열 수가 선택 결과의 열 수와 일치해야 합니다. 열 이름을 지정하지 않으면 새 대상 테이블은 SELECT 문 결과의 열 이름을 사용합니다. 
   
  데이터 형식, 데이터 정렬 또는 NULL 허용 여부 등의 다른 열 옵션을 지정할 수 없습니다. 이러한 각각의 특성은 `SELECT` 문의 결과에서 파생됩니다. 그러나 SELECT 문을 사용하여 특성을 변경할 수 있습니다. 예제는 [CTAS를 사용하여 열 특성 변경](#ctas-change-column-attributes-bk)을 참조하세요.   
 
@@ -95,17 +95,17 @@ CREATE TABLE { database_name.schema_name.table_name | schema_name.table_name | t
 
 ### <a name="table-distribution-options"></a>테이블 분포 옵션
 
-`DISTRIBUTION` = `HASH`(*distribution_column_name*) | ROUND_ROBIN | REPLICATE      
+`DISTRIBUTION` = `HASH`( *distribution_column_name* ) | ROUND_ROBIN | REPLICATE      
 CTAS 문은 분포 옵션을 요구하며 기본값을 갖지 않습니다. 이 점이 기본값을 갖는 CREATE TABLE과 다릅니다. 
 
-세부 정보 및 최선의 분포 열을 선택하는 방법을 이해하려면 CREATE TABLE의 [테이블 분포 옵션](https://msdn.microsoft.com/library/mt203953/#TableDistributionOptions) 섹션을 참조하세요. 
+세부 정보 및 최선의 분포 열을 선택하는 방법을 이해하려면 CREATE TABLE의 [테이블 분포 옵션](./create-table-azure-sql-data-warehouse.md#TableDistributionOptions) 섹션을 참조하세요. 
 
 <a name="table-partition-options-bk"></a>
 
 ### <a name="table-partition-options"></a>테이블 파티션 옵션
 CTAS 문은 원본 테이블이 분할되었더라도 기본적으로 분할되지 않은 테이블을 만듭니다. CTAS 문으로 분할된 테이블을 만들려면 파티션 옵션을 지정해야 합니다. 
 
-자세한 내용은 CREATE TABLE의 [테이블 파티션 옵션](https://msdn.microsoft.com/library/mt203953/#TablePartitionOptions)을 참조하세요.
+자세한 내용은 CREATE TABLE의 [테이블 파티션 옵션](./create-table-azure-sql-data-warehouse.md#TablePartitionOptions)을 참조하세요.
 
 <a name="select-options-bk"></a>
 
@@ -116,7 +116,7 @@ SELECT 문은 CTAS와 CREATE TABLE 간의 기본적인 차이점입니다.
  CTE(공통 테이블 식)라고도 하는 임시로 이름이 지정된 결과 집합을 지정합니다. 자세한 내용은 [WITH common_table_expression&#40;Transact-SQL&#41;](../../t-sql/queries/with-common-table-expression-transact-sql.md)을 참조하세요.  
   
  `SELECT` *select_criteria*  
- 새 테이블을 SELECT 문의 결과로 채웁니다. *select_criteria*는새 테이블에 복사할 데이터를 결정하는 SELECT 문의 본문입니다. SELECT 문에 대한 자세한 내용은 [SELECT&#40;Transact-SQL&#41;](../../t-sql/queries/select-transact-sql.md)을 참조하세요.  
+ 새 테이블을 SELECT 문의 결과로 채웁니다. *select_criteria* 는새 테이블에 복사할 데이터를 결정하는 SELECT 문의 본문입니다. SELECT 문에 대한 자세한 내용은 [SELECT&#40;Transact-SQL&#41;](../../t-sql/queries/select-transact-sql.md)을 참조하세요.  
  
 ### <a name="query-hint"></a>쿼리 힌트
 사용자는 MAXDOP를 정수 값으로 설정하여 최대 병렬 처리 수준을 제어할 수 있습니다.  MAXDOP를 1로 설정하면 단일 스레드에서 쿼리가 실행됩니다.
@@ -125,14 +125,14 @@ SELECT 문은 CTAS와 CREATE TABLE 간의 기본적인 차이점입니다.
 <a name="permissions-bk"></a>  
   
 ## <a name="permissions"></a>사용 권한  
-CTAS를 사용하려면 *select_criteria*에 참조된 임의의 개체에 대한 `SELECT` 권한이 필요합니다.
+CTAS를 사용하려면 *select_criteria* 에 참조된 임의의 개체에 대한 `SELECT` 권한이 필요합니다.
 
-테이블을 만들기 위한 권한은 CREATE TABLE의 [권한](https://msdn.microsoft.com/library/mt203953/#Permissions)을 참조하세요. 
+테이블을 만들기 위한 권한은 CREATE TABLE의 [권한](./create-table-azure-sql-data-warehouse.md#Permissions)을 참조하세요. 
   
 <a name="general-remarks-bk"></a>
   
 ## <a name="general-remarks"></a>일반적인 주의 사항
-자세한 내용은 CREATE TABLE의 [일반적인 참고사항](https://msdn.microsoft.com/library/mt203953/#GeneralRemarks)을 참조하세요.
+자세한 내용은 CREATE TABLE의 [일반적인 참고사항](./create-table-azure-sql-data-warehouse.md#GeneralRemarks)을 참조하세요.
 
 <a name="limitations-bk"></a>
 
@@ -147,7 +147,7 @@ CTAS를 사용하려면 *select_criteria*에 참조된 임의의 개체에 대�
 <a name="locking-behavior-bk"></a>
   
 ## <a name="locking-behavior"></a>잠금 동작  
- 자세한 내용은 CREATE TABLE의 [잠금 동작](https://msdn.microsoft.com/library/mt203953/#LockingBehavior)을 참조하세요.
+ 자세한 내용은 CREATE TABLE의 [잠금 동작](./create-table-azure-sql-data-warehouse.md#LockingBehavior)을 참조하세요.
  
 <a name="performance-bk"></a>
  
@@ -847,8 +847,5 @@ OPTION (MAXDOP 1);
  [CREATE TABLE&#40;Azure Synapse Analytics&#41;](../../t-sql/statements/create-table-azure-sql-data-warehouse.md) [DROP TABLE&#40;Transact-SQL&#41;](../../t-sql/statements/drop-table-transact-sql.md)   
  [DROP EXTERNAL TABLE &#40;Transact-SQL&#41;](../../t-sql/statements/drop-external-table-transact-sql.md)   
  [ALTER TABLE&#40;Transact-SQL&#41;](../../t-sql/statements/alter-table-transact-sql.md)   
- [ALTER EXTERNAL TABLE &#40;Transact-SQL&#41;](https://msdn.microsoft.com/library/4ae1b23c-67f6-41d0-b614-7a8de914d145)  
+ [ALTER EXTERNAL TABLE &#40;Transact-SQL&#41;](./create-external-table-transact-sql.md)  
   
-  
-
-

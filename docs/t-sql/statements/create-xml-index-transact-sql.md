@@ -28,12 +28,12 @@ helpviewer_keywords:
 ms.assetid: c510cfbc-68be-4736-b3cc-dc5b7aa51f14
 author: MightyPen
 ms.author: genemi
-ms.openlocfilehash: 9ae874a6b9b734b6fe0ab802a3b1aa9d2ebb2ff3
-ms.sourcegitcommit: ac9feb0b10847b369b77f3c03f8200c86ee4f4e0
+ms.openlocfilehash: a1ca67466a58dea0b374d9da14e66de64ba02d81
+ms.sourcegitcommit: bd3a135f061e4a49183bbebc7add41ab11872bae
 ms.translationtype: HT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 09/16/2020
-ms.locfileid: "90688653"
+ms.lasthandoff: 10/21/2020
+ms.locfileid: "92300509"
 ---
 # <a name="create-xml-index-transact-sql"></a>CREATE XML INDEX(Transact-SQL)
 [!INCLUDE [SQL Server SQL Database](../../includes/applies-to-version/sql-asdb.md)]
@@ -87,7 +87,7 @@ CREATE [ PRIMARY ] XML INDEX index_name
   
 -   **xml** 열에 기본 XML 인덱스가 있어야 이 열에 보조 XML 인덱스를 만들 수 있습니다.  
   
--   XML 인덱스는 단일 **xml** 열에만 만들 수 있습니다. **xml**이 아닌 열에 XML 인덱스를 만들 수 없으며 **xml** 열에 관계형 인덱스를 만들 수 없습니다.  
+-   XML 인덱스는 단일 **xml** 열에만 만들 수 있습니다. **xml** 이 아닌 열에 XML 인덱스를 만들 수 없으며 **xml** 열에 관계형 인덱스를 만들 수 없습니다.  
   
 -   뷰의 **xml** 열, **xml** 열이 있는 테이블 반환 변수 또는 **xml** 형식 변수에 기본 XML 인덱스 또는 보조 XML 인덱스를 만들 수 없습니다.  
   
@@ -141,15 +141,15 @@ CREATE [ PRIMARY ] XML INDEX index_name
  인덱스 패딩을 지정합니다. 기본값은 OFF입니다.  
   
  켜기  
- *fillfactor*로 지정된 사용 가능한 공간의 비율이 인덱스의 중간 수준 페이지에 적용됩니다.  
+ *fillfactor* 로 지정된 사용 가능한 공간의 비율이 인덱스의 중간 수준 페이지에 적용됩니다.  
   
- OFF 또는 *fillfactor*를 지정되지 않음  
+ OFF 또는 *fillfactor* 를 지정되지 않음  
  중간 수준 페이지는 중간 페이지의 키 집합을 고려하며 인덱스가 가질 수 있는 최대 크기의 한 행에 필요한 공간을 충분히 남기고 용량을 거의 채웁니다.  
   
  PAD_INDEX는 FILLFACTOR에 지정된 비율을 사용하므로 FILLFACTOR가 지정된 경우에만 PAD_INDEX 옵션을 사용할 수 있습니다. FILLFACTOR에 지정된 비율이 한 행을 저장하기에도 부족하면 [!INCLUDE[ssDE](../../includes/ssde-md.md)]은 내부적으로 허용된 최소 비율을 무시합니다. *fillfactor* 값이 아무리 작더라도 중간 인덱스 페이지의 행 수는 두 개 이상입니다.  
   
  FILLFACTOR **=** _fillfactor_  
- 인덱스를 만들거나 다시 작성할 때 [!INCLUDE[ssDE](../../includes/ssde-md.md)]에서 각 인덱스 페이지의 리프 수준을 채우는 비율을 지정합니다. *fillfactor*는 1에서 100 사이의 정수 값이어야 하며 기본값은 0입니다. *fillfactor*가 100또는 0이면 [!INCLUDE[ssDE](../../includes/ssde-md.md)]은 리프 페이지가 꽉 찬 인덱스를 만듭니다.  
+ 인덱스를 만들거나 다시 작성할 때 [!INCLUDE[ssDE](../../includes/ssde-md.md)]에서 각 인덱스 페이지의 리프 수준을 채우는 비율을 지정합니다. *fillfactor* 는 1에서 100 사이의 정수 값이어야 하며 기본값은 0입니다. *fillfactor* 가 100또는 0이면 [!INCLUDE[ssDE](../../includes/ssde-md.md)]은 리프 페이지가 꽉 찬 인덱스를 만듭니다.  
   
 > [!NOTE]  
 >  채우기 비율 값 0과 100은 모든 면에서 동일합니다.  
@@ -162,15 +162,15 @@ CREATE [ PRIMARY ] XML INDEX index_name
  자세한 내용은 [인덱스의 채우기 비율 지정](../../relational-databases/indexes/specify-fill-factor-for-an-index.md)을 참조하세요.  
   
  SORT_IN_TEMPDB **=** { ON | **OFF** }  
- **tempdb**에 임시 정렬 결과를 저장할지 여부를 지정합니다. 기본값은 OFF입니다.  
+ **tempdb** 에 임시 정렬 결과를 저장할지 여부를 지정합니다. 기본값은 OFF입니다.  
   
  켜기  
- 인덱스 작성에 사용된 중간 정렬 결과가 **tempdb**에 저장됩니다. 이 경우 사용자 데이터베이스가 아닌 다른 디스크 집합에 **tempdb**가 있으면 인덱스 생성에 필요한 시간이 단축될 수 있습니다. 그러나 인덱스 작성 중에 사용되는 디스크 공간의 크기는 커집니다.  
+ 인덱스 작성에 사용된 중간 정렬 결과가 **tempdb** 에 저장됩니다. 이 경우 사용자 데이터베이스가 아닌 다른 디스크 집합에 **tempdb** 가 있으면 인덱스 생성에 필요한 시간이 단축될 수 있습니다. 그러나 인덱스 작성 중에 사용되는 디스크 공간의 크기는 커집니다.  
   
  OFF  
  중간 정렬 결과가 인덱스와 같은 데이터베이스에 저장됩니다.  
   
- 사용자 데이터베이스에서 인덱스를 만드는 데 필요한 공간 외에 **tempdb**에는 중간 정렬 결과를 저장할 정도의 동일한 공간이 추가로 필요합니다. 자세한 내용은 [인덱스에 대한 SORT_IN_TEMPDB 옵션](../../relational-databases/indexes/sort-in-tempdb-option-for-indexes.md)을 참조하세요.  
+ 사용자 데이터베이스에서 인덱스를 만드는 데 필요한 공간 외에 **tempdb** 에는 중간 정렬 결과를 저장할 정도의 동일한 공간이 추가로 필요합니다. 자세한 내용은 [인덱스에 대한 SORT_IN_TEMPDB 옵션](../../relational-databases/indexes/sort-in-tempdb-option-for-indexes.md)을 참조하세요.  
   
  IGNORE_DUP_KEY **=OFF**  
  인덱스 유형은 고유할 수 없으므로 XML 인덱스에 영향을 미치지 않습니다. 이 옵션을 ON으로 설정하지 마세요. ON으로 설정하면 오류가 발생합니다.  
@@ -192,7 +192,7 @@ CREATE [ PRIMARY ] XML INDEX index_name
  XML 인덱스를 작성, 다시 작성 또는 삭제하는 오프라인 인덱스 작업은 테이블에 대해 SCH-M(스키마 수정) 잠금을 획득합니다. 이 경우 작업 중에 모든 사용자가 기본 테이블에 액세스할 수 없게 됩니다.  
   
 > [!NOTE]
->  온라인 인덱스 작업은 일부 [!INCLUDE[msCoName](../../includes/msconame-md.md)][!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]버전에서 사용할 수 있습니다. [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 버전에서 지원되는 기능 목록은 [SQL Server 2016 버전에 대한 버전 및 지원하는 기능](../../sql-server/editions-and-supported-features-for-sql-server-2016.md)을 참조하세요.  
+>  온라인 인덱스 작업은 일부 [!INCLUDE[msCoName](../../includes/msconame-md.md)][!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]버전에서 사용할 수 있습니다. [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 버전에서 지원되는 기능 목록은 [SQL Server 2016 버전에 대한 버전 및 지원하는 기능](../../sql-server/editions-and-components-of-sql-server-2016.md)을 참조하세요.  
   
  ALLOW_ROW_LOCKS **=** { **ON** | OFF }  
  행 잠금의 허용 여부를 지정합니다. 기본값은 ON입니다.  
@@ -218,7 +218,7 @@ CREATE [ PRIMARY ] XML INDEX index_name
 > [!IMPORTANT]  
 >  MAXDOP 옵션은 모든 XML 인덱스에 대해 구문으로는 지원되지만 기본 XML 인덱스의 경우 CREATE XML INDEX는 단일 프로세서만 사용합니다.  
   
- *max_degree_of_parallelism*은 다음 중 하나일 수 있습니다.  
+ *max_degree_of_parallelism* 은 다음 중 하나일 수 있습니다.  
   
  1  
  병렬 계획이 생성되지 않습니다.  
@@ -232,7 +232,7 @@ CREATE [ PRIMARY ] XML INDEX index_name
  자세한 내용은 [병렬 인덱스 작업 구성](../../relational-databases/indexes/configure-parallel-index-operations.md)을 참조하세요.  
   
 > [!NOTE]
->  병렬 인덱스 작업은 일부 [!INCLUDE[msCoName](../../includes/msconame-md.md)][!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 버전에서 사용할 수 있습니다. [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 버전에서 지원되는 기능 목록은 [SQL Server 2016 버전에 대한 버전 및 지원하는 기능](../../sql-server/editions-and-supported-features-for-sql-server-2016.md)을 참조하세요.  
+>  병렬 인덱스 작업은 일부 [!INCLUDE[msCoName](../../includes/msconame-md.md)][!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 버전에서 사용할 수 있습니다. [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 버전에서 지원되는 기능 목록은 [SQL Server 2016 버전에 대한 버전 및 지원하는 기능](../../sql-server/editions-and-components-of-sql-server-2016.md)을 참조하세요.  
   
 ## <a name="remarks"></a>설명  
  **xml** 데이터 형식에서 파생된 계산 열은 계산 열 데이터 형식이 인덱스 키 열 또는 키가 아닌 열에 허용되는 경우에 한해 키 또는 키가 아닌 포괄 열로 인덱싱될 수 있습니다. 계산된 **xml** 열에 기본 XML 인덱스를 만들 수 없습니다.  
@@ -297,5 +297,3 @@ GO
  [EVENTDATA&#40;Transact-SQL&#41;](../../t-sql/functions/eventdata-transact-sql.md)   
  [XML 인덱스&#40;SQL Server&#41;](../../relational-databases/xml/xml-indexes-sql-server.md)  
   
-  
-

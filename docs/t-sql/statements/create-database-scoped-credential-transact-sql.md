@@ -23,12 +23,12 @@ ms.assetid: fe830577-11ca-44e5-953b-2d589d54d045
 author: VanMSFT
 ms.author: vanto
 monikerRange: =azuresqldb-current||=azure-sqldw-latest||>=sql-server-2016||=sqlallproducts-allversions||>=aps-pdw-2016||>=sql-server-linux-2017||=azuresqldb-mi-current
-ms.openlocfilehash: 560c5c4c3888c36ef77030db2151f09a47b1dcc0
-ms.sourcegitcommit: 32135463a8494d9ed1600a58f51819359e3c09dc
+ms.openlocfilehash: cfca6f2f7e40593e4480c90ecf543eb39fc810be
+ms.sourcegitcommit: bd3a135f061e4a49183bbebc7add41ab11872bae
 ms.translationtype: HT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 10/08/2020
-ms.locfileid: "91834208"
+ms.lasthandoff: 10/21/2020
+ms.locfileid: "92300941"
 ---
 # <a name="create-database-scoped-credential-transact-sql"></a>CREATE DATABASE SCOPED CREDENTIAL(Transact-SQL)
 
@@ -51,9 +51,9 @@ WITH IDENTITY = 'identity_name'
 
 ## <a name="arguments"></a>인수
 
-*credential_name* 만들려는 데이터베이스 범위 자격 증명의 이름을 지정합니다. *credential_name*은 번호(#) 기호로 시작할 수 없습니다. 시스템 자격 증명은 ##으로 시작합니다.
+*credential_name* 만들려는 데이터베이스 범위 자격 증명의 이름을 지정합니다. *credential_name* 은 번호(#) 기호로 시작할 수 없습니다. 시스템 자격 증명은 ##으로 시작합니다.
 
-IDENTITY **=’** _identity\_name_ **’** 서버 외부에 연결할 때 사용할 계정의 이름을 지정합니다. Azure Blob Storage에서 공유 키를 사용하여 파일을 가져오려면 ID 이름이 `SHARED ACCESS SIGNATURE`여야 합니다. SQL DW로 데이터를 로드하기 위해 ID에 모든 유효한 값을 사용할 수 있습니다. 공유 액세스 서명에 대한 자세한 내용은 [SAS(공유 액세스 서명) 사용](https://docs.microsoft.com/azure/storage/storage-dotnet-shared-access-signature-part-1)을 참조하세요. Kerberos(Windows Active Directory 또는 MIT KDC)를 사용하는 경우에는 IDENTITY 인수에 도메인 이름을 사용하지 않습니다. 계정 이름만 사용해야 합니다.
+IDENTITY **=’** _identity\_name_ **’** 서버 외부에 연결할 때 사용할 계정의 이름을 지정합니다. Azure Blob Storage에서 공유 키를 사용하여 파일을 가져오려면 ID 이름이 `SHARED ACCESS SIGNATURE`여야 합니다. SQL DW로 데이터를 로드하기 위해 ID에 모든 유효한 값을 사용할 수 있습니다. 공유 액세스 서명에 대한 자세한 내용은 [SAS(공유 액세스 서명) 사용](/azure/storage/storage-dotnet-shared-access-signature-part-1)을 참조하세요. Kerberos(Windows Active Directory 또는 MIT KDC)를 사용하는 경우에는 IDENTITY 인수에 도메인 이름을 사용하지 않습니다. 계정 이름만 사용해야 합니다.
 
 > [!IMPORTANT]
 > PolyBase용 SQL, Oracle, Teradata, MongoDB ODBC 커넥터는 기본 인증만 지원하고 Kerberos 인증은 지원하지 않습니다.
@@ -85,7 +85,7 @@ IDENTITY가 Windows 사용자인 경우 암호는 해당 사용자의 암호일 
 
 - [!INCLUDE[ssSDS](../../includes/sssds-md.md)]는 데이터베이스 범위 자격 증명을 사용하여 확장 이벤트 파일을 Azure BLOB 스토리지에 씁니다.
 
-- [!INCLUDE[ssSDS](../../includes/sssds-md.md)]는 탄력적 풀에 데이터베이스 범위 자격 증명을 사용합니다. 자세한 내용은 [탄력적 데이터베이스로 폭발적인 증가에 대처하기](https://azure.microsoft.com/documentation/articles/sql-database-elastic-pool/)를 참조하세요.
+- [!INCLUDE[ssSDS](../../includes/sssds-md.md)]는 탄력적 풀에 데이터베이스 범위 자격 증명을 사용합니다. 자세한 내용은 [탄력적 데이터베이스로 폭발적인 증가에 대처하기](/azure/azure-sql/database/elastic-pool-overview)를 참조하세요.
 
 - [BULK INSERT](../../t-sql/statements/bulk-insert-transact-sql.md)와 [OPENROWSET](../../t-sql/functions/openrowset-transact-sql.md)은 데이터베이스 범위 자격 증명을 사용하여 Azure BLOB 스토리지의 데이터에 액세스합니다. 자세한 내용은 [Azure Blob Storage의 데이터에 대량 액세스 예제](../../relational-databases/import-export/examples-of-bulk-access-to-data-in-azure-blob-storage.md)를 참조하세요. 
 
@@ -127,7 +127,7 @@ SECRET = 'QLYMgmSXMklt%2FI1U6DcVrQixnlU5Sgbtk1qDRakUBGs%3D';
 다음 예제에서는 [!INCLUDE[ssSDW](../../includes/sssdwfull-md.md)]의 PolyBase에서 사용되는 [외부 데이터 원본](../../t-sql/statements/create-external-data-source-transact-sql.md)을 만드는 데 사용할 수 있는 데이터베이스 범위 자격 증명을 만듭니다.
 
 Azure Data Lake Store는 서비스 간 인증에 Azure Active Directory 애플리케이션을 사용합니다.
-데이터베이스 범위 자격 증명을 만들려면 그 전에 [AAD 애플리케이션을 만들고](https://docs.microsoft.com/azure/data-lake-store/data-lake-store-authenticate-using-active-directory) client_id, OAuth_2.0_Token_EndPoint 및 Key를 문서화하십시오.
+데이터베이스 범위 자격 증명을 만들려면 그 전에 [AAD 애플리케이션을 만들고](/azure/data-lake-store/data-lake-store-authenticate-using-active-directory) client_id, OAuth_2.0_Token_EndPoint 및 Key를 문서화하십시오.
 
 ```sql
 -- Create a db master key if one does not already exist, using your own password.
@@ -148,4 +148,4 @@ WITH
 - [DROP DATABASE SCOPED CREDENTIAL&#40;Transact-SQL&#41;](../../t-sql/statements/drop-database-scoped-credential-transact-sql.md)
 - [sys.database_scoped_credentials](../../relational-databases/system-catalog-views/sys-database-scoped-credentials-transact-sql.md)
 - [CREATE CREDENTIAL &#40;Transact-SQL&#41;](../../t-sql/statements/create-credential-transact-sql.md)
-- [sys.credentials&#40;Transact-SQL&#41;](../../relational-databases/system-catalog-views/sys-credentials-transact-sql.md)  
+- [sys.credentials&#40;Transact-SQL&#41;](../../relational-databases/system-catalog-views/sys-credentials-transact-sql.md)

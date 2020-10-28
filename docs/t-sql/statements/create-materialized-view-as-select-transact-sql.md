@@ -38,12 +38,12 @@ ms.assetid: aecc2f73-2ab5-4db9-b1e6-2f9e3c601fb9
 author: XiaoyuMSFT
 ms.author: xiaoyul
 monikerRange: =azure-sqldw-latest||=sqlallproducts-allversions
-ms.openlocfilehash: cda76ce52f9b14c732cb4effb95c3ff523dd460b
-ms.sourcegitcommit: 9122251ab8bbd46ea3c699e741d6842c995195fa
+ms.openlocfilehash: 3d6bc9b46d089a51a12d6b399dc4946d743b4480
+ms.sourcegitcommit: bd3a135f061e4a49183bbebc7add41ab11872bae
 ms.translationtype: HT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 10/08/2020
-ms.locfileid: "91847343"
+ms.lasthandoff: 10/21/2020
+ms.locfileid: "92300591"
 ---
 # <a name="create-materialized-view-as-select-transact-sql"></a>CREATE MATERIALIZED VIEW AS SELECT(Transact-SQL)  
 
@@ -111,7 +111,7 @@ MIN/MAX 집계가 구체화된 뷰 정의의 SELECT 목록에 사용될 경우 �
   
 ## <a name="remarks"></a>설명
 
-Azure Data Warehouse의 구체화된 뷰는 SQL Server의 인덱싱된 뷰와 비슷합니다.구체화된 뷰는 집계 함수를 지원한다는 점을 제외하고, 인덱싱된 뷰와 거의 같은 제한을 공유합니다([인덱싱된 뷰 만들기](/sql/relational-databases/views/create-indexed-views)에서 자세한 내용 참조).   
+Azure Data Warehouse의 구체화된 뷰는 SQL Server의 인덱싱된 뷰와 비슷합니다.구체화된 뷰는 집계 함수를 지원한다는 점을 제외하고, 인덱싱된 뷰와 거의 같은 제한을 공유합니다([인덱싱된 뷰 만들기](../../relational-databases/views/create-indexed-views.md)에서 자세한 내용 참조).   
 
 >[!Note]
 >CREATE MATERIALIZED VIEW는 COUNT, DISTINCT, COUNT(DISTINCT 식) 또는 COUNT_BIG(DISTINCT 식)을 지원하지 않지만, Synapse SQL 최적화 프로그램이 사용자 쿼리의 집계를 기존의 구체화된 뷰와 일치하도록 자동으로 다시 작성할 수 있으므로 해당 함수를 포함하는 SELECT 쿼리가 성능 향상을 위해 구체화된 뷰를 활용할 수 있습니다.  자세한 내용은 이 문서의 예제 섹션을 참조하세요. 
@@ -140,13 +140,13 @@ ALTER TABLE SWITCH는 구체화된 뷰에서 참조되는 테이블에서 지원
 
 만들어진 구체화된 뷰는 SQL Server Management Studio에서 [!INCLUDE[ssSDW](../../includes/sssdwfull-md.md)] 인스턴스의 views 폴더 아래에 표시됩니다.
 
-사용자는 [SP_SPACEUSED](/sql/relational-databases/system-stored-procedures/sp-spaceused-transact-sql?view=azure-sqldw-latest) 및 [DBCC PDW_SHOWSPACEUSED](/sql/t-sql/database-console-commands/dbcc-pdw-showspaceused-transact-sql?view=azure-sqldw-latest)를 실행하여 구체화된 뷰에서 사용되는 공간을 확인할 수 있습니다.  
+사용자는 [SP_SPACEUSED](../../relational-databases/system-stored-procedures/sp-spaceused-transact-sql.md?view=azure-sqldw-latest) 및 [DBCC PDW_SHOWSPACEUSED](../database-console-commands/dbcc-pdw-showspaceused-transact-sql.md?view=azure-sqldw-latest)를 실행하여 구체화된 뷰에서 사용되는 공간을 확인할 수 있습니다.  
 
 구체화된 뷰는 DROP VIEW를 통해 삭제할 수 있습니다.  ALTER MATERIALIZED VIEW를 사용하여 구체화된 뷰를 사용하지 않도록 설정하거나 다시 작성할 수 있습니다.   
 
 EXPLAIN 계획과 SQL Server Management Studio의 그래픽 예상 실행 계획은 쿼리 최적화 프로그램이 쿼리 실행을 위해 구체화된 뷰를 고려하는지 여부를 나타냅니다. 또한 SQL Server Management Studio의 그래픽 예상 실행 계획은 쿼리 최적화 프로그램이 쿼리 실행을 위해 구체화된 뷰를 고려하는지 여부를 나타냅니다.
 
-SQL 문이 새 구체화된 뷰로 인해 개선될 수 있는지 확인하려면 `EXPLAIN` 명령과 `WITH_RECOMMENDATIONS`를 실행합니다.  자세한 내용은 [EXPLAIN (Transact-SQL)](/sql/t-sql/queries/explain-transact-sql?view=azure-sqldw-latest)을 참조하세요.
+SQL 문이 새 구체화된 뷰로 인해 개선될 수 있는지 확인하려면 `EXPLAIN` 명령과 `WITH_RECOMMENDATIONS`를 실행합니다.  자세한 내용은 [EXPLAIN (Transact-SQL)](../queries/explain-transact-sql.md?view=azure-sqldw-latest)을 참조하세요.
 
 ## <a name="permissions"></a>사용 권한
 
@@ -199,13 +199,13 @@ select DATEDIFF(ms,@timerstart,@timerend);
 ## <a name="see-also"></a>참고 항목
 
 [구체화된 뷰로 성능 조정](/azure/sql-data-warehouse/performance-tuning-materialized-views)   
-[ALTER MATERIALIZED VIEW &#40;Transact-SQL&#41;](/sql/t-sql/statements/alter-materialized-view-transact-sql?view=azure-sqldw-latest)      
-[DROP VIEW](/sql/t-sql/statements/drop-view-transact-sql?view=azure-sqldw-latest)  
-[EXPLAIN &#40;Transact-SQL&#41;](/sql/t-sql/queries/explain-transact-sql?view=azure-sqldw-latest)   
-[sys.pdw_materialized_view_column_distribution_properties &#40;Transact-SQL&#41;](/sql/relational-databases/system-catalog-views/sys-pdw-materialized-view-column-distribution-properties-transact-sql?view=azure-sqldw-latest)   
-[sys.pdw_materialized_view_distribution_properties &#40;Transact-SQL&#41;](/sql/relational-databases/system-catalog-views/sys-pdw-materialized-view-distribution-properties-transact-sql?view=azure-sqldw-latest)   
-[sys.pdw_materialized_view_mappings &#40;Transact-SQL&#41;](/sql/relational-databases/system-catalog-views/sys-pdw-materialized-view-mappings-transact-sql?view=azure-sqldw-latest)   
-[DBCC PDW_SHOWMATERIALIZEDVIEWOVERHEAD &#40;Transact-SQL&#41;](/sql/t-sql/database-console-commands/dbcc-pdw-showmaterializedviewoverhead-transact-sql?view=azure-sqldw-latest)   
+[ALTER MATERIALIZED VIEW &#40;Transact-SQL&#41;](./alter-materialized-view-transact-sql.md?view=azure-sqldw-latest)      
+[DROP VIEW](./drop-view-transact-sql.md?view=azure-sqldw-latest)  
+[EXPLAIN &#40;Transact-SQL&#41;](../queries/explain-transact-sql.md?view=azure-sqldw-latest)   
+[sys.pdw_materialized_view_column_distribution_properties &#40;Transact-SQL&#41;](../../relational-databases/system-catalog-views/sys-pdw-materialized-view-column-distribution-properties-transact-sql.md?view=azure-sqldw-latest)   
+[sys.pdw_materialized_view_distribution_properties &#40;Transact-SQL&#41;](../../relational-databases/system-catalog-views/sys-pdw-materialized-view-distribution-properties-transact-sql.md?view=azure-sqldw-latest)   
+[sys.pdw_materialized_view_mappings &#40;Transact-SQL&#41;](../../relational-databases/system-catalog-views/sys-pdw-materialized-view-mappings-transact-sql.md?view=azure-sqldw-latest)   
+[DBCC PDW_SHOWMATERIALIZEDVIEWOVERHEAD &#40;Transact-SQL&#41;](../database-console-commands/dbcc-pdw-showmaterializedviewoverhead-transact-sql.md?view=azure-sqldw-latest)   
 [[!INCLUDE[ssSDW](../../includes/sssdwfull-md.md)] 및 [!INCLUDE[ssPDW](../../includes/sspdw-md.md)] 카탈로그 뷰](../../relational-databases/system-catalog-views/sql-data-warehouse-and-parallel-data-warehouse-catalog-views.md)   
 [Azure [!INCLUDE[ssSDW](../../includes/sssdwfull-md.md)]에서 지원되는 시스템 뷰](/azure/sql-data-warehouse/sql-data-warehouse-reference-tsql-system-views)   
 [Azure [!INCLUDE[ssSDW](../../includes/sssdwfull-md.md)]에서 지원되는 T-SQL 문](/azure/sql-data-warehouse/sql-data-warehouse-reference-tsql-statements)

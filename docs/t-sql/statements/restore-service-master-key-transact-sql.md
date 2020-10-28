@@ -24,12 +24,12 @@ helpviewer_keywords:
 ms.assetid: a68fd0ee-70ce-4104-aca0-fcae5f41fc38
 author: VanMSFT
 ms.author: vanto
-ms.openlocfilehash: b0885db2ec41ff998c9be69d8ce92133175a5e00
-ms.sourcegitcommit: b93beb4f03aee2c1971909cb1d15f79cd479a35c
+ms.openlocfilehash: 38193c05ecfa6c030954c6cbcbfcc50a1927d913
+ms.sourcegitcommit: bd3a135f061e4a49183bbebc7add41ab11872bae
 ms.translationtype: HT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 09/29/2020
-ms.locfileid: "91498072"
+ms.lasthandoff: 10/21/2020
+ms.locfileid: "92300501"
 ---
 # <a name="restore-service-master-key-transact-sql"></a>RESTORE SERVICE MASTER KEY(Transact-SQL)
 [!INCLUDE [SQL Server](../../includes/applies-to-version/sqlserver.md)]
@@ -49,7 +49,7 @@ RESTORE SERVICE MASTER KEY FROM FILE = 'path_to_file'
 
 ## <a name="arguments"></a>인수
  FILE **=‘** _path\_to\_file_ **’**  
- 저장된 서비스 마스터 키에 대해 파일 이름을 포함한 전체 경로를 지정합니다. *path_to_file*은 로컬 경로 또는 네트워크 위치에 대한 UNC 경로일 수 있습니다.  
+ 저장된 서비스 마스터 키에 대해 파일 이름을 포함한 전체 경로를 지정합니다. *path_to_file* 은 로컬 경로 또는 네트워크 위치에 대한 UNC 경로일 수 있습니다.  
   
  PASSWORD **='** _password_ **'**  
  파일에서 가져올 서비스 마스터 키의 암호를 해독하는 데 필요한 암호를 지정합니다.  
@@ -81,7 +81,7 @@ GO
 ```  
   
 ## <a name="see-also"></a>참고 항목  
- [Service Master Key](../../relational-databases/security/encryption/service-master-key.md)   
+ [Service Master Key](../../relational-databases/security/encryption/sql-server-and-database-encryption-keys-database-engine.md)   
  [ALTER SERVICE MASTER KEY &#40;Transact-SQL&#41;](../../t-sql/statements/alter-service-master-key-transact-sql.md)   
  [BACKUP SERVICE MASTER KEY &#40;Transact-SQL&#41;](../../t-sql/statements/backup-service-master-key-transact-sql.md)   
  [암호화 계층](../../relational-databases/security/encryption/encryption-hierarchy.md)

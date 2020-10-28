@@ -24,12 +24,12 @@ helpviewer_keywords:
 ms.assetid: 87bca678-4e79-40e1-bb8b-bd5ed8f34853
 author: markingmyname
 ms.author: maghan
-ms.openlocfilehash: 9edfba19ad84a0334f85e6990f0e3cd1c2ccee81
-ms.sourcegitcommit: ac9feb0b10847b369b77f3c03f8200c86ee4f4e0
+ms.openlocfilehash: 781d61c5cde33ae51b7ecb94d56a8c3cadff1595
+ms.sourcegitcommit: bd3a135f061e4a49183bbebc7add41ab11872bae
 ms.translationtype: HT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 09/16/2020
-ms.locfileid: "90688691"
+ms.lasthandoff: 10/21/2020
+ms.locfileid: "92300220"
 ---
 # <a name="alter-assembly-transact-sql"></a>ALTER ASSEMBLY(Transact-SQL)
 [!INCLUDE [SQL Server - ASDBMI](../../includes/applies-to-version/sql-asdbmi.md)]
@@ -72,12 +72,12 @@ ALTER ASSEMBLY assembly_name
 
 ## <a name="arguments"></a>인수
  *assembly_name*  
- 수정하려는 어셈블리의 이름입니다. *assembly_name*은 데이터베이스에 이미 있어야 합니다.  
+ 수정하려는 어셈블리의 이름입니다. *assembly_name* 은 데이터베이스에 이미 있어야 합니다.  
   
  FROM \<client_assembly_specifier> | \<assembly_bits>  
  어셈블리의 구현을 유지하는 [!INCLUDE[dnprdnshort](../../includes/dnprdnshort-md.md)] 모듈의 최신 복사본으로 어셈블리를 업데이트합니다. 지정한 어셈블리와 관련된 파일이 없는 경우에만 이 옵션을 사용할 수 있습니다.  
   
- \<client_assembly_specifier>는 새로 고칠 어셈블리가 있는 네트워크 위치나 로컬 위치를 지정합니다. 네트워크 위치에는 컴퓨터 이름, 공유 이름 및 해당 공유 내의 경로가 포함됩니다. *manifest_file_name*은 어셈블리의 매니페스트가 들어 있는 파일의 이름을 지정합니다.  
+ \<client_assembly_specifier>는 새로 고칠 어셈블리가 있는 네트워크 위치나 로컬 위치를 지정합니다. 네트워크 위치에는 컴퓨터 이름, 공유 이름 및 해당 공유 내의 경로가 포함됩니다. *manifest_file_name* 은 어셈블리의 매니페스트가 들어 있는 파일의 이름을 지정합니다.  
 
 > [!IMPORTANT]
 > Azure SQL Database는 파일 참조를 지원하지 않습니다.
@@ -95,7 +95,7 @@ ALTER ASSEMBLY assembly_name
 >  포함된 데이터베이스에서는 EXTERNAL_ACCESS 및 UNSAFE 옵션을 사용할 수 없습니다.  
   
  VISIBILITY = { ON | OFF }  
- 어셈블리에 대해 CLR(공용 언어 런타임) 함수, 저장 프로시저, 트리거, 사용자 정의 형식 및 사용자 정의 집계 함수를 만들 때 어셈블리를 표시할지 여부를 나타냅니다. 이 인수가 OFF로 설정되어 있으면 어셈블리가 다른 어셈블리에서 호출되는 용도로만 사용됩니다. 어셈블리에 대해 생성된 기존 CLR 데이터베이스가 있는 경우 어셈블리의 표시 유형을 변경할 수 없습니다. *assembly_name*으로 참조되는 모든 어셈블리는 기본적으로 표시되지 않는 상태로 업로드됩니다.  
+ 어셈블리에 대해 CLR(공용 언어 런타임) 함수, 저장 프로시저, 트리거, 사용자 정의 형식 및 사용자 정의 집계 함수를 만들 때 어셈블리를 표시할지 여부를 나타냅니다. 이 인수가 OFF로 설정되어 있으면 어셈블리가 다른 어셈블리에서 호출되는 용도로만 사용됩니다. 어셈블리에 대해 생성된 기존 CLR 데이터베이스가 있는 경우 어셈블리의 표시 유형을 변경할 수 없습니다. *assembly_name* 으로 참조되는 모든 어셈블리는 기본적으로 표시되지 않는 상태로 업로드됩니다.  
   
  UNCHECKED DATA  
  기본적으로 개별 테이블 행의 일관성을 확인해야 하는 경우 ALTER ASSEMBLY가 실패합니다. 이 옵션을 사용하면 나중에 DBCC CHECKTABLE을 사용할 때까지 일관성 확인을 연기할 수 있습니다. 이 옵션을 지정하면 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]는 데이터베이스에 다음을 포함하는 테이블이 있는 경우에도 ALTER ASSEMBLY 문을 실행합니다.  
@@ -104,7 +104,7 @@ ALTER ASSEMBLY assembly_name
   
 -   직접 또는 간접적으로 어셈블리의 메서드를 참조하는 CHECK 제약 조건  
   
--   어셈블리에 종속된 CLR 사용자 정의 유형의 열 - 이 유형은 **UserDefined**(비**네이티브**) 직렬화 형식을 구현합니다.  
+-   어셈블리에 종속된 CLR 사용자 정의 유형의 열 - 이 유형은 **UserDefined** (비 **네이티브** ) 직렬화 형식을 구현합니다.  
   
 -   WITH SCHEMABINDING을 사용하여 생성된 뷰를 참조하는 CLR 사용자 정의 형식의 열  
   
@@ -116,14 +116,14 @@ ALTER ASSEMBLY assembly_name
   
  자세한 내용은 [Implementing Assemblies](../../relational-databases/clr-integration/assemblies-implementing.md)를 참조하세요.  
   
- [ DROP FILE { *file_name*[ **,** _...n_] | ALL } ]  
+ [ DROP FILE { *file_name* [ **,** _...n_ ] | ALL } ]  
  어셈블리와 관련된 특정 파일이나 모든 파일을 데이터베이스에서 제거합니다. ADD FILE이 뒤따를 경우 DROP FILE이 먼저 실행됩니다. 이 기능을 사용하여 같은 파일 이름의 파일을 대체할 수 있습니다.  
   
 > [!NOTE]  
 >  이 옵션은 포함된 데이터베이스 또는 Azure SQL Database에서 사용할 수 없습니다.  
   
- [ ADD FILE FROM { *client_file_specifier* [ AS *file_name*] | *file_bits*AS *file_name*}  
- 원본 코드, 디버그 파일 또는 기타 관련 정보와 같은 어셈블리와 관련된 파일을 서버로 업로드하고 **sys.assembly_files** 카탈로그 뷰에 표시합니다. *client_file_specifier*는 업로드할 파일이 있는 위치를 지정합니다. 이 옵션 대신 *file_bits*를 사용하면 파일을 구성하는 이진 값 목록을 지정할 수 있습니다. *file_name*은 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 인스턴스에 저장되어야 하는 파일 이름을 지정합니다. *file_bits*가 지정되면 *file_name*가 지정되어야 하고 *client_file_specifier*가 지정되면 선택적입니다. *file_name*을 지정하지 않으면 *client_file_specifier*의 file_name 부분이 *file_name*으로 사용됩니다.  
+ [ ADD FILE FROM { *client_file_specifier* [ AS *file_name* ] | *file_bits* AS *file_name* }  
+ 원본 코드, 디버그 파일 또는 기타 관련 정보와 같은 어셈블리와 관련된 파일을 서버로 업로드하고 **sys.assembly_files** 카탈로그 뷰에 표시합니다. *client_file_specifier* 는 업로드할 파일이 있는 위치를 지정합니다. 이 옵션 대신 *file_bits* 를 사용하면 파일을 구성하는 이진 값 목록을 지정할 수 있습니다. *file_name* 은 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 인스턴스에 저장되어야 하는 파일 이름을 지정합니다. *file_bits* 가 지정되면 *file_name* 가 지정되어야 하고 *client_file_specifier* 가 지정되면 선택적입니다. *file_name* 을 지정하지 않으면 *client_file_specifier* 의 file_name 부분이 *file_name* 으로 사용됩니다.  
   
 > [!NOTE]  
 >  이 옵션은 포함된 데이터베이스 또는 Azure SQL Database에서 사용할 수 없습니다.  
@@ -201,7 +201,7 @@ ALTER ASSEMBLY assembly_name
  다음 예에서는 `ComplexNumber` 어셈블리를 어셈블리의 구현을 유지하는 [!INCLUDE[dnprdnshort](../../includes/dnprdnshort-md.md)] 모듈의 최신 복사본으로 업데이트합니다.  
   
 > [!NOTE]  
->  `ComplexNumber` 어셈블리는 UserDefinedDataType 예제 스크립트를 실행하여 만들 수 있습니다. 자세한 내용은 [사용자 정의 형식](https://msdn.microsoft.com/library/a9b75f36-d7f5-47f7-94d6-b4448c6a2191)을 참조하세요.  
+>  `ComplexNumber` 어셈블리는 UserDefinedDataType 예제 스크립트를 실행하여 만들 수 있습니다. 자세한 내용은 [사용자 정의 형식](/previous-versions/sql/sql-server-2016/ms131078(v=sql.130))을 참조하세요.  
   
  ```sql
  ALTER ASSEMBLY ComplexNumber 
@@ -233,5 +233,4 @@ ALTER ASSEMBLY ComplexNumber WITH PERMISSION_SET = EXTERNAL_ACCESS;
  [CREATE ASSEMBLY&#40;Transact-SQL&#41;](../../t-sql/statements/create-assembly-transact-sql.md)   
  [DROP ASSEMBLY&#40;Transact-SQL&#41;](../../t-sql/statements/drop-assembly-transact-sql.md)   
  [EVENTDATA&#40;Transact-SQL&#41;](../../t-sql/functions/eventdata-transact-sql.md)  
-  
   

@@ -24,12 +24,12 @@ ms.assetid: d8d1d245-c2c3-4325-be52-4fc1122c2079
 author: markingmyname
 ms.author: maghan
 monikerRange: =azuresqldb-mi-current||>=sql-server-2016||=sqlallproducts-allversions||>=sql-server-linux-2017
-ms.openlocfilehash: 11142e761dd575dc5d07c16fdda854f7c2eca683
-ms.sourcegitcommit: dd36d1cbe32cd5a65c6638e8f252b0bd8145e165
+ms.openlocfilehash: badcd52070da65122e113116be763c903b3e509a
+ms.sourcegitcommit: bd3a135f061e4a49183bbebc7add41ab11872bae
 ms.translationtype: HT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 09/08/2020
-ms.locfileid: "89547534"
+ms.lasthandoff: 10/21/2020
+ms.locfileid: "92300157"
 ---
 # <a name="create-assembly-transact-sql"></a>CREATE ASSEMBLY(Transact-SQL)
 [!INCLUDE[tsql-appliesto-ss2008-asdbmi-xxxx-xxx-md](../../includes/tsql-appliesto-ss2008-asdbmi-xxxx-xxx-md.md )]
@@ -62,7 +62,7 @@ FROM { <client_assembly_specifier> | <assembly_bits> [ ,...n ] }
  어셈블리의 이름입니다. 이 이름은 데이터베이스 내에서 고유해야 하며 유효한 [식별자](../../relational-databases/databases/database-identifiers.md)여야 합니다.  
   
  AUTHORIZATION *owner_name*  
- 어셈블리 소유자인 사용자 또는 역할의 이름을 지정합니다. *owner_name*은 현재 사용자가 멤버로 속한 역할의 이름이어야 합니다. 그렇지 않으면 현재 사용자가 *owner_name*에 대한 IMPERSONATE 권한이 있어야 합니다. 값을 지정하지 않으면 현재 사용자에게 소유권이 부여됩니다.  
+ 어셈블리 소유자인 사용자 또는 역할의 이름을 지정합니다. *owner_name* 은 현재 사용자가 멤버로 속한 역할의 이름이어야 합니다. 그렇지 않으면 현재 사용자가 *owner_name* 에 대한 IMPERSONATE 권한이 있어야 합니다. 값을 지정하지 않으면 현재 사용자에게 소유권이 부여됩니다.  
   
  \<client_assembly_specifier>  
 업로드할 어셈블리가 있는 로컬 경로나 네트워크 위치와 어셈블리에 해당하는 매니페스트 파일 이름을 지정합니다.  \<client_assembly_specifier>는 고정 문자열로 나타내거나 변수가 있으며 고정 문자열로 평가되는 식으로 나타낼 수 있습니다. CREATE ASSEMBLY로는 다중 모듈 어셈블리를 로드할 수 없습니다. [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]에서는 동일한 위치에서 이 어셈블리의 모든 종속 어셈블리를 찾은 다음 동일한 소유자를 사용하여 해당 종속 어셈블리를 루트 수준 어셈블리로 업로드합니다. 이러한 종속 어셈블리를 찾을 수 없으며 현재 데이터베이스에 종속 어셈블리가 로드되어 있지 않은 경우 CREATE ASSEMBLY는 실패합니다. 종속 어셈블리가 현재 데이터베이스에 로드되어 있는 경우 해당 어셈블리의 소유자는 새로 만든 어셈블리의 소유자와 동일해야 합니다.
@@ -120,7 +120,7 @@ FROM { <client_assembly_specifier> | <assembly_bits> [ ,...n ] }
   
 \<client_assembly_specifier>에 지정된 어셈블리에 액세스하는 경우 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]는 현재 Windows 로그인의 보안 컨텍스트를 가장합니다. \<client_assembly_specifier> 에서 네트워크 위치(UNC 경로)를 지정하는 경우에는 위임 제한 때문에 현재 로그인의 가장이 해당 네트워크 위치로 전달되지 않습니다. 이 경우에는 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 서비스 계정의 보안 컨텍스트를 사용하여 액세스합니다. 자세한 내용은 [자격 증명 &#40;데이터베이스 엔진&#41;](../../relational-databases/security/authentication-access/credentials-database-engine.md)를 참조하세요.
   
- *assembly_name*에서 지정한 루트 어셈블리 외에도 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]은 업로드할 루트 어셈블리에서 참조하는 모든 어셈블리를 업로드합니다. 참조하는 어셈블리가 이전의 CREATE ASSEMBLY 문에 의해 이미 데이터베이스에 업로드된 경우에는 루트 어셈블리에서 사용할 수 있으므로 해당 어셈블리는 업로드되지 않습니다. 종속 어셈블리가 이전에 업로드되지 않았지만 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]가 원본 디렉터리에서 해당 매니페스트 파일을 찾지 못하는 경우 CREATE ASSEMBLY는 오류를 반환합니다.  
+ *assembly_name* 에서 지정한 루트 어셈블리 외에도 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]은 업로드할 루트 어셈블리에서 참조하는 모든 어셈블리를 업로드합니다. 참조하는 어셈블리가 이전의 CREATE ASSEMBLY 문에 의해 이미 데이터베이스에 업로드된 경우에는 루트 어셈블리에서 사용할 수 있으므로 해당 어셈블리는 업로드되지 않습니다. 종속 어셈블리가 이전에 업로드되지 않았지만 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]가 원본 디렉터리에서 해당 매니페스트 파일을 찾지 못하는 경우 CREATE ASSEMBLY는 오류를 반환합니다.  
   
  루트 어셈블리에서 참조하는 종속 어셈블리가 데이터베이스에 없으며 암시적으로 루트 어셈블리와 함께 로드되는 경우 해당 종속 어셈블리의 권한 집합은 루트 수준 어셈블리와 동일합니다. 종속 어셈블리를 루트 수준 어셈블리와 다른 권한 집합을 사용하여 만들어야 한다면 적절한 권한 집합을 사용하여 루트 수준 어셈블리보다 먼저 명시적으로 업로드해야 합니다.  
   
@@ -170,9 +170,9 @@ FROM { <client_assembly_specifier> | <assembly_bits> [ ,...n ] }
   
 ### <a name="example-a-creating-an-assembly-from-a-dll"></a>예제 A: dll에서 어셈블리 만들기  
   
-**적용 대상**: [!INCLUDE[ssKatmai](../../includes/sskatmai-md.md)] 이상  
+**적용 대상** : [!INCLUDE[ssKatmai](../../includes/sskatmai-md.md)] 이상  
   
- 다음 예에서는 [!INCLUDE[ssDEnoversion](../../includes/ssdenoversion-md.md)] 예제를 로컬 컴퓨터의 기본 위치에 설치하고 HelloWorld.csproj 예제 애플리케이션을 컴파일했다고 가정합니다. 자세한 내용은 [Hello World 예제](https://msdn.microsoft.com/library/fed6c358-f5ee-4d4c-9ad6-089778383ba7)를 참조하세요.  
+ 다음 예에서는 [!INCLUDE[ssDEnoversion](../../includes/ssdenoversion-md.md)] 예제를 로컬 컴퓨터의 기본 위치에 설치하고 HelloWorld.csproj 예제 애플리케이션을 컴파일했다고 가정합니다. 자세한 내용은 [Hello World 예제](/previous-versions/sql/sql-server-2016/ff878250(v=sql.130))를 참조하세요.  
   
 ```sql  
 CREATE ASSEMBLY HelloWorld   
@@ -185,7 +185,7 @@ WITH PERMISSION_SET = SAFE;
   
 ### <a name="example-b-creating-an-assembly-from-assembly-bits"></a>예제 B: 어셈블리 비트에서 어셈블리 만들기  
   
-**적용 대상**: [!INCLUDE[ssKatmai](../../includes/sskatmai-md.md)] 이상  
+**적용 대상** : [!INCLUDE[ssKatmai](../../includes/sskatmai-md.md)] 이상  
   
  샘플 비트(완전하거나 유효하지 않은)를 사용자 어셈블리 비트로 대체 합니다.  
   
@@ -204,6 +204,5 @@ WITH PERMISSION_SET = SAFE;
  [CREATE TYPE&#40;Transact-SQL&#41;](../../t-sql/statements/create-type-transact-sql.md)   
  [CREATE AGGREGATE&#40;Transact-SQL&#41;](../../t-sql/statements/create-aggregate-transact-sql.md)   
  [EVENTDATA&#40;Transact-SQL&#41;](../../t-sql/functions/eventdata-transact-sql.md)   
- [공용 언어 런타임 &#40;CLR&#41; 통합에 대한 사용 시나리오 및 예제](https://msdn.microsoft.com/library/33aac25f-abb4-4f29-af88-4a0dacd80ae7)  
-  
+ [공용 언어 런타임 &#40;CLR&#41; 통합에 대한 사용 시나리오 및 예제](/previous-versions/sql/sql-server-2016/ms131078(v=sql.130))  
   

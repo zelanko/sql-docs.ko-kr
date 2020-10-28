@@ -18,12 +18,12 @@ dev_langs:
 author: kevinvngo
 ms.author: kevin
 monikerRange: =sqlallproducts-allversions||=azure-sqldw-latest
-ms.openlocfilehash: b0acdd99ed178329210bdab83e4492b7a4bfc2a7
-ms.sourcegitcommit: c4d6804bde7eaf72d9233d6d43f77d77d1b17c4e
+ms.openlocfilehash: 0951081be190fff9c2d7f88d28f88b14f793eb43
+ms.sourcegitcommit: bd3a135f061e4a49183bbebc7add41ab11872bae
 ms.translationtype: HT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 10/01/2020
-ms.locfileid: "91624820"
+ms.lasthandoff: 10/21/2020
+ms.locfileid: "92300286"
 ---
 # <a name="copy-transact-sql"></a>COPY(Transact-SQL)
 
@@ -33,7 +33,7 @@ ms.locfileid: "91624820"
 
 - 권한이 낮은 사용자를 사용하여 데이터 웨어하우스에 대한 엄격한 제어 권한 없이 로드
 - 추가 데이터베이스 개체를 만들 필요 없이 단일 T-SQL 문을 실행
-- **구분 기호**(문자열, 필드, 행)**가** **문자열로 구분된 열 내에서 이스케이프**되는 경우 CSV 파일을 올바르게 구문 분석하고 로드
+- **구분 기호** (문자열, 필드, 행) **가** **문자열로 구분된 열 내에서 이스케이프** 되는 경우 CSV 파일을 올바르게 구문 분석하고 로드
 - SAS(공유 액세스 서명)를 사용하여 스토리지 계정 키를 노출하지 않고 보다 세부적인 사용 권한 모델을 지정
 - ERRORFILE 위치(REJECTED_ROW_LOCATION)에 대해 다른 스토리지 계정을 사용
 - 각 대상 열에 대한 기본값을 사용자 지정하고 원본 데이터 필드를 지정하여 특정 대상 열에 로드
@@ -43,9 +43,9 @@ ms.locfileid: "91624820"
 
 COPY 문을 사용하는 포괄적인 예제 및 빠른 시작은 다음 설명서를 참조하세요.
 
-- [빠른 시작: COPY 문을 사용하여 데이터 대량 로드](https://docs.microsoft.com/azure/synapse-analytics/sql-data-warehouse/quickstart-bulk-load-copy-tsql)
-- [빠른 시작: COPY 문 및 지원되는 인증 방법을 사용하는 예제](https://docs.microsoft.com/azure/synapse-analytics/sql-data-warehouse/quickstart-bulk-load-copy-tsql-examples)
-- [빠른 시작: 풍부한 Synapse Studio UI를 사용하여 COPY 문 만들기(작업 영역 미리 보기)](https://docs.microsoft.com/azure/synapse-analytics/quickstart-load-studio-sql-pool)
+- [빠른 시작: COPY 문을 사용하여 데이터 대량 로드](/azure/synapse-analytics/sql-data-warehouse/quickstart-bulk-load-copy-tsql)
+- [빠른 시작: COPY 문 및 지원되는 인증 방법을 사용하는 예제](/azure/synapse-analytics/sql-data-warehouse/quickstart-bulk-load-copy-tsql-examples)
+- [빠른 시작: 풍부한 Synapse Studio UI를 사용하여 COPY 문 만들기(작업 영역 미리 보기)](/azure/synapse-analytics/quickstart-load-studio-sql-pool)
 
 ## <a name="syntax"></a>구문  
 
@@ -75,13 +75,13 @@ WITH
 ## <a name="arguments"></a>인수  
 
 *schema_name*  
-작업을 수행하는 사용자의 기본 스키마가 지정된 테이블의 스키마인 경우에는 선택 사항입니다. *schema*가 지정되지 않고 COPY 작업을 수행하는 사용자의 기본 스키마가 지정된 테이블과 다를 경우 COPY가 취소되고 오류 메시지가 반환됩니다.  
+작업을 수행하는 사용자의 기본 스키마가 지정된 테이블의 스키마인 경우에는 선택 사항입니다. *schema* 가 지정되지 않고 COPY 작업을 수행하는 사용자의 기본 스키마가 지정된 테이블과 다를 경우 COPY가 취소되고 오류 메시지가 반환됩니다.  
 
 *table_name*  
 데이터를 복사할 대상 테이블의 이름입니다. 대상 테이블은 임시 또는 영구 테이블일 수 있으며, 데이터베이스에 이미 있어야 합니다. 
 
 *(column_list)*  
-데이터를 로드하기 위해 원본 데이터 필드를 대상 테이블 열로 매핑하는 데 사용되는 하나 이상의 열에 대한 선택적 목록입니다. *column_list*는 괄호로 묶고 쉼표로 구분해야 합니다. 열 목록은 다음과 같은 형식입니다.
+데이터를 로드하기 위해 원본 데이터 필드를 대상 테이블 열로 매핑하는 데 사용되는 하나 이상의 열에 대한 선택적 목록입니다. *column_list* 는 괄호로 묶고 쉼표로 구분해야 합니다. 열 목록은 다음과 같은 형식입니다.
 
 [(Column_name [Default_value] [Field_number] [,...n])]
 
@@ -95,8 +95,8 @@ WITH
 *외부 위치*</br>
 데이터가 포함된 파일이 준비되는 위치입니다. 현재 ADLS(Azure Data Lake Storage) Gen2 및 Azure Blob Storage가 지원됩니다.
 
-- Blob Storage의 *외부 위치*: https://<account>.blob.core.windows.net/<container>/<path>
-- ADLS Gen2의 *외부 위치*: https://<account>. dfs.core.windows.net/<container>/<path>
+- Blob Storage의 *외부 위치* : https://<account>.blob.core.windows.net/<container>/<path>
+- ADLS Gen2의 *외부 위치* : https://<account>. dfs.core.windows.net/<container>/<path>
 
 > [!NOTE]  
 > .blob 엔드포인트는 ADLS Gen2에서도 사용할 수 있으며 현재 최상의 성능을 제공합니다. 인증 방법에 .dfs가 필요하지 않은 경우에는 .blob 엔드포인트를 사용합니다.
@@ -121,7 +121,7 @@ WITH
 - ‘ https://<account>.blob.core.windows.net/<container>/<path>’, ‘ https://<account>.blob.core.windows.net/<container>/<path>’…
 
 *FILE_TYPE = { ‘CSV’ | ‘PARQUET’ | ‘ORC’ }*</br>
-*FILE_TYPE*은 외부 데이터의 형식을 지정합니다.
+*FILE_TYPE* 은 외부 데이터의 형식을 지정합니다.
 
 - CSV: [RFC 4180](https://tools.ietf.org/html/rfc4180) 표준을 준수하는 쉼표로 구분된 값 파일을 지정합니다.
 - PARQUET: Parquet 형식을 지정합니다.
@@ -131,19 +131,19 @@ WITH
 >Polybase의 '구분된 텍스트' 파일 형식은 FIELDTERMINATOR 매개 변수를 통해 기본 쉼표 구분 기호를 구성할 수 있는 ‘CSV’ 파일 형식으로 대체됩니다. 
 
 *FILE_FORMAT = external_file_format_name*</br>
-*FILE_FORMAT*은 Parquet 및 ORC 파일에만 적용되면 외부 데이터에 대한 파일 형식과 압축 방법을 저장하는 외부 파일 형식 개체의 이름을 지정합니다. 외부 파일 형식을 만들려면 [CREATE EXTERNAL FILE FORMAT](create-external-file-format-transact-sql.md?view=azure-sqldw-latest)을 사용합니다.
+*FILE_FORMAT* 은 Parquet 및 ORC 파일에만 적용되면 외부 데이터에 대한 파일 형식과 압축 방법을 저장하는 외부 파일 형식 개체의 이름을 지정합니다. 외부 파일 형식을 만들려면 [CREATE EXTERNAL FILE FORMAT](create-external-file-format-transact-sql.md?view=azure-sqldw-latest)을 사용합니다.
 
 *CREDENTIAL (IDENTITY = ‘’, SECRET = ‘’)*</br>
-*자격 증명*은 외부 스토리지 계정에 액세스하기 위한 인증 메커니즘을 지정합니다. 인증 방법은 다음과 같습니다.
+*자격 증명* 은 외부 스토리지 계정에 액세스하기 위한 인증 메커니즘을 지정합니다. 인증 방법은 다음과 같습니다.
 
 |                          |                CSV                |                      Parquet                       |                        ORC                         |
 | :----------------------: | :-------------------------------: | :------------------------------------------------: | :------------------------------------------------: |
 |  **Azure Blob 스토리지**  | SAS/MSI/SERVICE PRINCIPAL/KEY/AAD |                      SAS/KEY                       |                      SAS/KEY                       |
 | **Azure Data Lake Gen2** | SAS/MSI/SERVICE PRINCIPAL/KEY/AAD | SAS(blob<sup>1</sup>)/MSI(dfs<sup>2</sup>)/SERVICE PRINCIPAL/KEY/AAD | SAS(blob<sup>1</sup>)/MSI(dfs<sup>2</sup>)/SERVICE PRINCIPAL/KEY/AAD |
 
-1: 이 인증 방법에는 외부 위치 경로의 .blob 엔드포인트( **.blob**.core.windows.net)가 필요합니다.
+1: 이 인증 방법에는 외부 위치 경로의 .blob 엔드포인트( **.blob** .core.windows.net)가 필요합니다.
 
-2: 이 인증 방법에는 외부 위치 경로의 .dfs 엔드포인트( **.dfs**.core.windows.net)가 필요합니다.
+2: 이 인증 방법에는 외부 위치 경로의 .dfs 엔드포인트( **.dfs** .core.windows.net)가 필요합니다.
 
 
 > [!NOTE]  
@@ -179,14 +179,14 @@ WITH
   - 필요한 최소 RBAC 역할: Storage Blob 데이터 기여자 또는 AAD 사용자용 Storage Blob 데이터 소유자
 
 *ERRORFILE = 디렉터리 위치*</br>
-*ERRORFILE*는 CSV에만 적용됩니다. 거부된 행과 해당 오류 파일을 작성해야 하는 COPY 문 내의 디렉터리를 지정합니다. 스토리지 계정의 전체 경로를 지정하거나 컨테이너와 관련된 경로를 지정할 수 있습니다. 지정된 경로가 존재하지 않으면 사용자를 대신하여 경로를 만듭니다. "_rejectedrows"라는 이름의 하위 디렉터리가 생성됩니다. "_ " 문자는 위치 매개 변수에 명시적으로 명명되지 않는 한, 다른 데이터 처리를 위해 디렉터리를 이스케이프합니다. 
+*ERRORFILE* 는 CSV에만 적용됩니다. 거부된 행과 해당 오류 파일을 작성해야 하는 COPY 문 내의 디렉터리를 지정합니다. 스토리지 계정의 전체 경로를 지정하거나 컨테이너와 관련된 경로를 지정할 수 있습니다. 지정된 경로가 존재하지 않으면 사용자를 대신하여 경로를 만듭니다. " _rejectedrows"라는 이름의 하위 디렉터리가 생성됩니다. "_ " 문자는 위치 매개 변수에 명시적으로 명명되지 않는 한, 다른 데이터 처리를 위해 디렉터리를 이스케이프합니다. 
 
 이 디렉터리 내에는 로드 제출 시간을 기준으로 YearMonthDay -HourMinuteSecond 형식에 따라 생성된 폴더가 있습니다(예: 20180330-173205). 이 폴더에는 queryID, distributionID 및 파일 guid가 각각 사전에 추가된 이유(오류) 파일과 데이터(행) 파일의 두 가지 유형의 파일이 작성됩니다. data와 reason은 별도의 파일에 있으므로 해당 파일에는 일치하는 접두사가 있습니다.
 
 ERRORFILE에 정의된 스토리지 계정의 전체 경로가 있는 경우 ERRORFILE_CREDENTIAL이 해당 스토리지에 연결하는 데 사용됩니다. 그렇지 않으면 자격 증명에 대해 언급된 값이 사용됩니다.
 
 *ERRORFILE_CREDENTIAL = (IDENTITY= ‘’, SECRET = ‘’)*</br>
-*ERRORFILE_CREDENTIAL*은 CSV 파일에만 적용됩니다. 지원되는 데이터 원본 및 인증 방법은 다음과 같습니다.
+*ERRORFILE_CREDENTIAL* 은 CSV 파일에만 적용됩니다. 지원되는 데이터 원본 및 인증 방법은 다음과 같습니다.
 
 - Azure Blob Storage - SAS/SERVICE PRINCIPAL/KEY/AAD
 - Azure Data Lake Gen2 -   SAS/MSI/SERVICE PRINCIPAL/KEY/AAD
@@ -220,10 +220,10 @@ ERRORFILE에 정의된 스토리지 계정의 전체 경로가 있는 경우 ERR
 > ERRORFILE에 동일한 스토리지 계정을 사용하고 컨테이너 루트에 상대적인 ERRORFILE 경로를 지정하는 경우 ERROR_CREDENTIAL을 지정할 필요가 없습니다.
 
 *MAXERRORS = max_errors*</br>
-*MAXERRORS*는 COPY 작업이 취소되기 전에 로드에서 허용되는 최대 거부 행 수를 지정합니다. COPY 작업으로 가져올 수 없는 각 행은 무시되고 하나의 오류로 계산됩니다. max_errors를 지정하지 않으면 기본값은 0입니다.
+*MAXERRORS* 는 COPY 작업이 취소되기 전에 로드에서 허용되는 최대 거부 행 수를 지정합니다. COPY 작업으로 가져올 수 없는 각 행은 무시되고 하나의 오류로 계산됩니다. max_errors를 지정하지 않으면 기본값은 0입니다.
 
 *COMPRESSION = { 'DefaultCodec '\| ’Snappy’ \| ‘GZIP’ \| ‘NONE’}*</br>
-*COMPRESSION*은 선택 사항이며 외부 데이터에 대한 데이터 압축 메서드를 지정합니다.
+*COMPRESSION* 은 선택 사항이며 외부 데이터에 대한 데이터 압축 메서드를 지정합니다.
 
 - CSV에서 GZIP 지원
 - Parquet은 GZIP 및 Snappy를 지원합니다.
@@ -234,10 +234,10 @@ COPY 명령은 이 매개 변수가 지정되지 않은 경우 파일 확장명�
 
 - .gz  - **GZIP**
 - .snappy – **Snappy**
-- .deflate - **DefaultCodec**(Parquet 및 ORC만 해당)
+- .deflate - **DefaultCodec** (Parquet 및 ORC만 해당)
 
  *FIELDQUOTE = 'field_quote'*</br>
-*FIELDQUOTE*는 CSV에 적용되며 CSV 파일에서 따옴표 문자(문자열 구분 기호)로 사용될 단일 문자를 지정합니다. 지정하지 않으면 RFC 4180 표준에 정의한 대로 따옴표 문자(")가 따옴표 문자로 사용됩니다. 확장 ASCII 및 멀티바이트 문자는 FIELDQUOTE의 UTF-8에 지원되지 않습니다.
+*FIELDQUOTE* 는 CSV에 적용되며 CSV 파일에서 따옴표 문자(문자열 구분 기호)로 사용될 단일 문자를 지정합니다. 지정하지 않으면 RFC 4180 표준에 정의한 대로 따옴표 문자(")가 따옴표 문자로 사용됩니다. 확장 ASCII 및 멀티바이트 문자는 FIELDQUOTE의 UTF-8에 지원되지 않습니다.
 
 > [!NOTE]  
 > FIELDQUOTE 문자는 이중 FIELDQUOTE(구분 기호)가 있는 문자열 열에서 이스케이프됩니다. 
@@ -253,13 +253,13 @@ COPY 명령은 \n(줄 바꿈)을 지정할 때 \r 문자를 접두사하여 \r\n
 확장 ASCII 및 멀티바이트 문자는 ROW TERMINATOR의 UTF-8에 지원되지 않습니다.
 
 *FIRSTROW  = First_row_int*</br>
-*FIRSTROW*는 CSV에 적용되며 COPY 명령의 모든 파일에서 먼저 읽을 행 번호를 지정합니다. 값은 1부터 시작되며 이것이 기본값입니다. 값이 2로 설정되면 데이터를 로드할 때 모든 파일의 첫 행(헤더 행)을 건너뜁니다. 행 종결자의 존재에 따라 행을 건너뜁니다.
+*FIRSTROW* 는 CSV에 적용되며 COPY 명령의 모든 파일에서 먼저 읽을 행 번호를 지정합니다. 값은 1부터 시작되며 이것이 기본값입니다. 값이 2로 설정되면 데이터를 로드할 때 모든 파일의 첫 행(헤더 행)을 건너뜁니다. 행 종결자의 존재에 따라 행을 건너뜁니다.
 
 *DATEFORMAT = { ‘mdy’ \| ‘dmy’ \| ‘ymd’ \| ‘ydm’ \| ‘myd’ \| ‘dym’ }*</br>
 DATEFORMAT은 CSV에만 적용되며 SQL Server 날짜 형식에 대한 날짜 매핑의 날짜 형식을 지정합니다. 모든 Transact-SQL 날짜/시간 데이터 형식 및 함수에 대한 개요는 [날짜/시간 데이터 형식 및 함수(Transact-SQL)](../functions/date-and-time-data-types-and-functions-transact-sql.md?view=sql-server-ver15)를 참조하세요. COPY 명령 내의 DATEFORMAT은 [세션 수준에서 구성된 DATEFORMAT](set-dateformat-transact-sql.md?view=sql-server-ver15)보다 우선합니다.
 
 *ENCODING = ‘UTF8’ | ‘UTF16’*</br>
-*ENCODING*은 CSV에만 적용됩니다. 기본값은 UTF8입니다. COPY 명령으로 로드된 파일의 데이터 인코딩 표준을 지정합니다. 
+*ENCODING* 은 CSV에만 적용됩니다. 기본값은 UTF8입니다. COPY 명령으로 로드된 파일의 데이터 인코딩 표준을 지정합니다. 
 
 *IDENTITY_INSERT = ‘ON’ | ‘OFF’*</br>
 IDENTITY_INSERT는 가져온 데이터 파일의 ID 값 또는 값을 ID 열에 사용할지 여부를 지정합니다. IDENTITY_INSERT가 OFF(기본값)이면 이 열의 ID 값은 확인되지만 가져오지는 않습니다. SQL DW는 테이블 생성 중에 지정된 시드 및 증분 값을 기준으로 고유 값을 자동으로 할당합니다. COPY 명령을 사용하여 다음 동작을 기록합니다.

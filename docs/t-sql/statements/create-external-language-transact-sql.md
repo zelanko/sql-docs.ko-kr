@@ -10,20 +10,20 @@ author: dphansen
 ms.author: davidph
 manager: cgronlun
 monikerRange: '>=sql-server-ver15||>=sql-server-linux-ver15||=sqlallproducts-allversions'
-ms.openlocfilehash: 24bdf85af4a165a77694af5e65c262fdf5b97edd
-ms.sourcegitcommit: e3460309b301a77d0babec032f53de330da001a9
+ms.openlocfilehash: 3e97f98a4e9080ceffdf4925c4467bfc27fc40d9
+ms.sourcegitcommit: bd3a135f061e4a49183bbebc7add41ab11872bae
 ms.translationtype: HT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 09/24/2020
-ms.locfileid: "91136391"
+ms.lasthandoff: 10/21/2020
+ms.locfileid: "92300145"
 ---
 # <a name="create-external-language-transact-sql"></a>CREATE EXTERNAL LANGUAGE(Transact-SQL)
 [!INCLUDE [SQL Server 2019 and later](../../includes/applies-to-version/sqlserver2019.md)]
 
-지정된 파일 경로 또는 바이트 스트림에서 데이터베이스의 외부 언어 확장을 등록합니다. 이 명령문은 데이터베이스 관리자가 SQL Server에서 지원되는 OS 플랫폼에 새 외부 언어를 등록하는 일반 메커니즘의 역할을 합니다. 자세한 내용은 [언어 확장](https://docs.microsoft.com/sql/language-extensions/language-extensions-overview)을 참조하세요.
+지정된 파일 경로 또는 바이트 스트림에서 데이터베이스의 외부 언어 확장을 등록합니다. 이 명령문은 데이터베이스 관리자가 SQL Server에서 지원되는 OS 플랫폼에 새 외부 언어를 등록하는 일반 메커니즘의 역할을 합니다. 자세한 내용은 [언어 확장](../../language-extensions/language-extensions-overview.md)을 참조하세요.
 
 > [!NOTE]
-> **R** 및 **Python**은 예약된 이름이며 해당 특정 이름을 사용하여 외부 언어를 만들 수 없습니다. **R** 및 **Python** 사용 방법에 대한 자세한 내용은 [SQL Server Machine Learning Services](https://docs.microsoft.com/sql/machine-learning/)를 참조하세요.
+> **R** 및 **Python** 은 예약된 이름이며 해당 특정 이름을 사용하여 외부 언어를 만들 수 없습니다. **R** 및 **Python** 사용 방법에 대한 자세한 내용은 [SQL Server Machine Learning Services](../../machine-learning/index.yml)를 참조하세요.
 
 ## <a name="syntax"></a>구문
 
@@ -109,7 +109,7 @@ FROM <file_spec> [ ,...2 ]
 
 ## <a name="permissions"></a>사용 권한
 
-`CREATE EXTERNAL LANGUAGE` 권한이 필요합니다. 기본적으로 **db_owner** 역할의 멤버인 **dbo**가 있는 사용자는 외부 언어를 만들 사용 권한이 있습니다. 기타 모든 사용자의 경우, 권한으로 CREATE EXTERNAL LIBRARY를 지정하는 [GRANT](https://docs.microsoft.com/sql/t-sql/statements/grant-database-permissions-transact-sql) 문을 사용하여 명시적으로 권한을 부여해야 합니다.
+`CREATE EXTERNAL LANGUAGE` 권한이 필요합니다. 기본적으로 **db_owner** 역할의 멤버인 **dbo** 가 있는 사용자는 외부 언어를 만들 사용 권한이 있습니다. 기타 모든 사용자의 경우, 권한으로 CREATE EXTERNAL LIBRARY를 지정하는 [GRANT](./grant-database-permissions-transact-sql.md) 문을 사용하여 명시적으로 권한을 부여해야 합니다.
 
 라이브러리를 수정하려면 별도의 권한 `ALTER ANY EXTERNAL LANGUAGE`가 필요합니다.
 
@@ -153,7 +153,7 @@ GO
 ```
 ### <a name="c-grant-permissions-to-execute-external-script"></a>C. 외부 스크립트 실행 권한 부여
 
-다음 예제에서는 **Java** 외부 언어를 사용하여 스크립트를 실행할 수 있도록 **mylogin**에 보안 주체 액세스 권한을 부여합니다.
+다음 예제에서는 **Java** 외부 언어를 사용하여 스크립트를 실행할 수 있도록 **mylogin** 에 보안 주체 액세스 권한을 부여합니다.
 
 ```sql
 GRANT EXECUTE EXTERNAL SCRIPT ON EXTERNAL LANGUAGE ::Java 
@@ -166,4 +166,4 @@ TO mylogin;
 [ALTER EXTERNAL LANGUAGE(Transact-SQL)](alter-external-language-transact-sql.md)  
 [DROP EXTERNAL LANGUAGE(Transact-SQL)](drop-external-language-transact-sql.md)  
 [sys.external_languages](../../relational-databases/system-catalog-views/sys-external-languages-transact-sql.md)  
-[sys.external_language_files](../../relational-databases/system-catalog-views/sys-external-language-files-transact-sql.md)  
+[sys.external_language_files](../../relational-databases/system-catalog-views/sys-external-language-files-transact-sql.md)

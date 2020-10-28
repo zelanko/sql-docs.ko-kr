@@ -20,12 +20,12 @@ author: dphansen
 ms.author: davidph
 manager: cgronlund
 monikerRange: '>=sql-server-2017||>=sql-server-linux-ver15||=azuresqldb-mi-current||=sqlallproducts-allversions'
-ms.openlocfilehash: b25b64b9e6cde8f7546ca21f7c3383460b3e1fce
-ms.sourcegitcommit: ac9feb0b10847b369b77f3c03f8200c86ee4f4e0
+ms.openlocfilehash: d484d2e95f3b2f0030744a87f00c7dc3f220aa40
+ms.sourcegitcommit: bd3a135f061e4a49183bbebc7add41ab11872bae
 ms.translationtype: HT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 09/16/2020
-ms.locfileid: "90688496"
+ms.lasthandoff: 10/21/2020
+ms.locfileid: "92300224"
 ---
 # <a name="create-external-library-transact-sql"></a>CREATE EXTERNAL LIBRARY(Transact-SQL)  
 [!INCLUDE [SQL Server 2017 SQL MI](../../includes/applies-to-version/sqlserver2017-asdbmi.md)]
@@ -41,7 +41,7 @@ R, Python 또는 Java 패키지 파일을 지정된 바이트 스트림 또는 �
 R 또는 Python 패키지 파일을 지정된 바이트 스트림 또는 파일 경로의 데이터베이스에 업로드합니다. 이 문은 데이터베이스 관리자가 필요한 아티팩트를 업로드하기 위한 일반 메커니즘의 역할을 합니다. 
 
 > [!NOTE]
-> Azure SQL Managed Instance에서 **sqlmlutils**를 사용하여 라이브러리를 설치할 수 있습니다. 자세한 내용은 [sqlmlutils를 사용하여 Python 패키지 설치](https://docs.microsoft.com/sql/machine-learning/package-management/install-additional-python-packages-on-sql-server?context=/azure/azure-sql/managed-instance/context/ml-context&view=azuresqldb-mi-current) 및 [sqlmlutils를 사용하여 새 R 패키지 설치](https://docs.microsoft.com/sql/machine-learning/package-management/install-additional-r-packages-on-sql-server?context=%2Fazure%2Fazure-sql%2Fmanaged-instance%2Fcontext%2Fml-context&view=azuresqldb-mi-current)를 참조하세요.
+> Azure SQL Managed Instance에서 **sqlmlutils** 를 사용하여 라이브러리를 설치할 수 있습니다. 자세한 내용은 [sqlmlutils를 사용하여 Python 패키지 설치](../../machine-learning/package-management/install-additional-python-packages-on-sql-server.md?context=%252fazure%252fazure-sql%252fmanaged-instance%252fcontext%252fml-context&view=azuresqldb-mi-current) 및 [sqlmlutils를 사용하여 새 R 패키지 설치](../../machine-learning/package-management/install-additional-r-packages-on-sql-server.md?context=%252fazure%252fazure-sql%252fmanaged-instance%252fcontext%252fml-context&view=azuresqldb-mi-current)를 참조하세요.
 ::: moniker-end
 
 ::: moniker range=">=sql-server-ver15||>=sql-server-linux-ver15||=sqlallproducts-allversions"
@@ -150,7 +150,7 @@ WITH ( LANGUAGE = <language> )
 
 인스턴스에 업로드된 라이브러리는 퍼블릭 또는 프라이빗일 수 있습니다. 라이브러리가 `dbo`의 멤버에 의해 만들어진 경우, 라이브러리는 공용이며 모든 사용자와 공유될 수 있습니다. 그렇지 않으면 라이브러리는 해당 사용자에게만 프라이빗으로 제공됩니다.
 
-라이브러리 이름은 특정 사용자 또는 소유자의 컨텍스트 내에서 고유해야 합니다. 예를 들어 두 사용자 **RUser1** 및 **RUser2**는 모두 R 라이브러리 `ggplot2`를 개별적으로 업로드할 수도 있고 따로 업로드할 수도 있습니다. 그러나 **RUser1**이 새 버전의 `ggplot2`를 업로드하려는 경우 두 번째 인스턴스는 이름을 다르게 지정하거나 기존 라이브러리를 대체해야 합니다.
+라이브러리 이름은 특정 사용자 또는 소유자의 컨텍스트 내에서 고유해야 합니다. 예를 들어 두 사용자 **RUser1** 및 **RUser2** 는 모두 R 라이브러리 `ggplot2`를 개별적으로 업로드할 수도 있고 따로 업로드할 수도 있습니다. 그러나 **RUser1** 이 새 버전의 `ggplot2`를 업로드하려는 경우 두 번째 인스턴스는 이름을 다르게 지정하거나 기존 라이브러리를 대체해야 합니다.
 
 라이브러리 이름은 임의로 할당될 수 없으며, 라이브러리 이름은 외부 스크립트에서 라이브러리를 로드하는 데 필요한 이름과 같아야 합니다.
 
@@ -160,7 +160,7 @@ WITH ( LANGUAGE = <language> )
 
 데이터베이스 소유자가 소유한 라이브러리는 데이터베이스 및 런타임에 대해 전역인 것으로 간주합니다. 다시 말해서 데이터베이스 소유자는 많은 사용자가 공유하는 라이브러리 또는 패키지의 공통 집합을 포함하는 라이브러리를 만들 수 있습니다. 외부 라이브러리가 `dbo` 사용자 이외의 사용자가 만든 경우, 외부 라이브러리는 해당 사용자에게만 프라이빗으로 제공됩니다.
 
-사용자 **RUser1**이 외부 스크립트를 실행하는 경우 `libPath`의 값은 여러 경로를 포함할 수 있습니다. 첫 번째 경로는 언제나 데이터베이스 소유자가 만든 공유 라이브러리에 대한 경로입니다. `libPath`의 두 번째 부분은 **RUser1**에 의해 개별적으로 업로드된 패키지를 포함하는 경로를 지정합니다.
+사용자 **RUser1** 이 외부 스크립트를 실행하는 경우 `libPath`의 값은 여러 경로를 포함할 수 있습니다. 첫 번째 경로는 언제나 데이터베이스 소유자가 만든 공유 라이브러리에 대한 경로입니다. `libPath`의 두 번째 부분은 **RUser1** 에 의해 개별적으로 업로드된 패키지를 포함하는 경로를 지정합니다.
 
 ::: moniker range=">=sql-server-2017||>=sql-server-linux-ver15||=sqlallproducts-allversions"
 **file_spec**
@@ -235,7 +235,7 @@ Python 언어의 경우 .whl 또는 .zip 파일의 패키지는 압축된 보관
 
 ## <a name="permissions"></a>사용 권한
 
-`CREATE EXTERNAL LIBRARY` 권한이 필요합니다. 기본적으로 **db_owner** 역할의 멤버인 **dbo**가 있는 사용자는 외부 라이브러리를 만들 수 있는 권한이 있습니다. 기타 모든 사용자의 경우, 권한으로 CREATE EXTERNAL LIBRARY를 지정하는 [GRANT](https://docs.microsoft.com/sql/t-sql/statements/grant-database-permissions-transact-sql) 문을 사용하여 명시적으로 권한을 부여해야 합니다.
+`CREATE EXTERNAL LIBRARY` 권한이 필요합니다. 기본적으로 **db_owner** 역할의 멤버인 **dbo** 가 있는 사용자는 외부 라이브러리를 만들 수 있는 권한이 있습니다. 기타 모든 사용자의 경우, 권한으로 CREATE EXTERNAL LIBRARY를 지정하는 [GRANT](./grant-database-permissions-transact-sql.md) 문을 사용하여 명시적으로 권한을 부여해야 합니다.
 
 ::: moniker range=">=sql-server-ver15||>=sql-server-linux-ver15||=sqlallproducts-allversions"
 SQL Server 2019에서 'CREATE EXTERNAL LIBRARY' 권한 외에도 사용자가 해당 외부 언어에 대한 외부 라이브러리를 만들기 위해서는 외부 언어에 대한 참조 권한도 필요합니다.
@@ -287,7 +287,7 @@ SQL Server 2019의 Python 언어의 경우, 이 예제는 `'R'`을 `'Python'`으
 
 `packageA`의 설치에 성공하려면 SQL Server에 `packageA`를 추가하는 것과 동시에 `packageB` 및 `packageC`에 대한 라이브러리를 만들어야 합니다. 필요한 패키지 버전도 확인해야 합니다.
 
-실제로 인기 있는 패키지에 대한 패키지 종속성은 대개 이처럼 간단한 예제보다 훨씬 더 복잡합니다. 예를 들어 **ggplot2**에는 30개가 넘는 패키지가 필요할 수 있으며 그러한 패키지에는 서버에서 사용할 수 없는 추가 패키지가 필요할 수 있습니다. 누락된 패키지 또는 잘못된 패키지 버전을 사용하면 설치가 실패할 수 있습니다.
+실제로 인기 있는 패키지에 대한 패키지 종속성은 대개 이처럼 간단한 예제보다 훨씬 더 복잡합니다. 예를 들어 **ggplot2** 에는 30개가 넘는 패키지가 필요할 수 있으며 그러한 패키지에는 서버에서 사용할 수 없는 추가 패키지가 필요할 수 있습니다. 누락된 패키지 또는 잘못된 패키지 버전을 사용하면 설치가 실패할 수 있습니다.
 
 단지 패키지 매니페스트만 조사하여 모든 종속성을 결정하기는 어려울 수 있으므로 [miniCRAN](https://cran.r-project.org/web/packages/miniCRAN/index.html) 같은 패키지를 사용하여 설치를 성공적으로 완료하는 데 필요할 수 있는 모든 패키지를 식별하는 것이 좋습니다.
 
@@ -400,4 +400,4 @@ library(packageA)
 [ALTER EXTERNAL LIBRARY(Transact-SQL)](alter-external-library-transact-sql.md)  
 [DROP EXTERNAL LIBRARY(Transact-SQL)](drop-external-library-transact-sql.md)  
 [sys.external_library_files](../../relational-databases/system-catalog-views/sys-external-library-files-transact-sql.md)  
-[sys.external_libraries](../../relational-databases/system-catalog-views/sys-external-libraries-transact-sql.md)  
+[sys.external_libraries](../../relational-databases/system-catalog-views/sys-external-libraries-transact-sql.md)

@@ -15,12 +15,12 @@ helpviewer_keywords:
 ms.assetid: 29ac8f68-a28a-4a77-b67b-a8663001308c
 author: MashaMSFT
 ms.author: mathoma
-ms.openlocfilehash: f70601ac1b686576f643e511873e0dfb860ec771
-ms.sourcegitcommit: e700497f962e4c2274df16d9e651059b42ff1a10
+ms.openlocfilehash: 91eef4cfd2a1097b7879c507cbccb0b3d3a7e909
+ms.sourcegitcommit: 22e97435c8b692f7612c4a6d3fe9e9baeaecbb94
 ms.translationtype: HT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 08/17/2020
-ms.locfileid: "88447978"
+ms.lasthandoff: 10/27/2020
+ms.locfileid: "92679005"
 ---
 # <a name="implement-event-notifications"></a>이벤트 알림 구현
  [!INCLUDE [SQL Server](../../includes/applies-to-version/sqlserver.md)]
@@ -43,7 +43,7 @@ https://schemas.microsoft.com/SQL/Notifications/PostEventNotification
 1.  메시지를 받을 큐를 만듭니다.  
   
     > [!NOTE]  
-    >  큐에서 `https://schemas.microsoft.com/SQL/Notifications/QueryNotification`의 메시지 유형을 받습니다.  
+    >  큐에서 `http://schemas.microsoft.com/SQL/Notifications/QueryNotification`의 메시지 유형을 받습니다.  
   
 2.  이벤트 알림 계약을 참조하는 큐에 서비스를 만듭니다.  
   
@@ -60,7 +60,7 @@ GO
 CREATE SERVICE NotifyService  
 ON QUEUE NotifyQueue  
 (  
-[https://schemas.microsoft.com/SQL/Notifications/PostEventNotification]  
+[http://schemas.microsoft.com/SQL/Notifications/PostEventNotification]  
 );  
 GO  
 CREATE ROUTE NotifyRoute  

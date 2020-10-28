@@ -23,12 +23,12 @@ helpviewer_keywords:
 ms.assetid: 67683027-2b0f-47aa-b223-604731af8b4d
 author: markingmyname
 ms.author: maghan
-ms.openlocfilehash: f3830563da106d8446a3ae8aadff5fa8e8ecc39f
-ms.sourcegitcommit: dd36d1cbe32cd5a65c6638e8f252b0bd8145e165
+ms.openlocfilehash: 793db1e49becc3ea8b16076adae308c2b6c7f237
+ms.sourcegitcommit: bd3a135f061e4a49183bbebc7add41ab11872bae
 ms.translationtype: HT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 09/08/2020
-ms.locfileid: "89547548"
+ms.lasthandoff: 10/21/2020
+ms.locfileid: "92300192"
 ---
 # <a name="create-event-session-transact-sql"></a>CREATE EVENT SESSION(Transact-SQL)
 
@@ -110,23 +110,23 @@ ON { SERVER | DATABASE }
 
 ## <a name="arguments"></a>인수
 
-*event_session_name* 이벤트 세션의 사용자 정의 이름입니다. *event_session_name*은 영숫자로 최대 128자를 사용할 수 있으며 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]의 인스턴스 내에서 중복되지 않아야 하고 [식별자](../../relational-databases/databases/database-identifiers.md)에 대한 규칙을 따라야 합니다.
+*event_session_name* 이벤트 세션의 사용자 정의 이름입니다. *event_session_name* 은 영숫자로 최대 128자를 사용할 수 있으며 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]의 인스턴스 내에서 중복되지 않아야 하고 [식별자](../../relational-databases/databases/database-identifiers.md)에 대한 규칙을 따라야 합니다.
 
-ADD EVENT [ *event_module_guid* ].*event_package_name*.*event_name* 이벤트 세션과 연결할 이벤트입니다. 여기서 각 매개 변수의 의미는 다음과 같습니다.
+ADD EVENT [ *event_module_guid* ]. *event_package_name* . *event_name* 이벤트 세션과 연결할 이벤트입니다. 여기서 각 매개 변수의 의미는 다음과 같습니다.
 
-- *event_module_guid*는 이벤트가 포함된 모듈의 GUID입니다.
-- *event_package_name*은 동작 개체가 포함된 패키지입니다.
-- *event_name*은 이벤트 개체입니다.
+- *event_module_guid* 는 이벤트가 포함된 모듈의 GUID입니다.
+- *event_package_name* 은 동작 개체가 포함된 패키지입니다.
+- *event_name* 은 이벤트 개체입니다.
 
 이벤트는 sys.dm_xe_objects 뷰에 object_type 'event'로 표시됩니다.
 
-SET { *event_customizable_attribute*= \<value> [ ,...*n*] } 이벤트의 사용자 지정 가능한 특성을 설정합니다. 사용자 지정 가능한 특성은 sys.dm_xe_object_columns 뷰에 column_type 'customizable' 및 object_name = *event_name*으로 표시됩니다.
+SET { *event_customizable_attribute*= \<value> [ ,... *n* ] } 이벤트의 사용자 지정 가능한 특성을 설정합니다. 사용자 지정 가능한 특성은 sys.dm_xe_object_columns 뷰에 column_type 'customizable' 및 object_name = *event_name* 으로 표시됩니다.
 
-ACTION ( { [*event_module_guid*].*event_package_name*.*action_name* [ **,** ...*n*] }) 이벤트 세션과 연결할 동작입니다. 여기서 각 매개 변수의 의미는 다음과 같습니다.
+ACTION ( { [ *event_module_guid* ]. *event_package_name* . *action_name* [ **,** ... *n* ] }) 이벤트 세션과 연결할 동작입니다. 여기서 각 매개 변수의 의미는 다음과 같습니다.
 
-- *event_module_guid*는 이벤트가 포함된 모듈의 GUID입니다.
-- *event_package_name*은 동작 개체가 포함된 패키지입니다.
-- *action_name*은 동작 개체입니다.
+- *event_module_guid* 는 이벤트가 포함된 모듈의 GUID입니다.
+- *event_package_name* 은 동작 개체가 포함된 패키지입니다.
+- *action_name* 은 동작 개체입니다.
 
 동작은 sys.dm_xe_objects 뷰에 object_type 'action'으로 표시됩니다.
 
@@ -134,36 +134,36 @@ WHERE \<predicate_expression> 이벤트 처리 여부를 확인하는 데 사용
 
 *event_field_name* 조건자 원본을 식별하는 이벤트 필드의 이름입니다.
 
-[*event_module_guid*].*event_package_name*.*predicate_source_name* 전역 조건자 원본의 이름입니다. 여기서 각 매개 변수의 의미는 다음과 같습니다.
+[ *event_module_guid* ]. *event_package_name* . *predicate_source_name* 전역 조건자 원본의 이름입니다. 여기서 각 매개 변수의 의미는 다음과 같습니다.
 
-- *event_module_guid*는 이벤트가 포함된 모듈의 GUID입니다.
-- *event_package_name*은 조건자 개체가 포함된 패키지입니다.
-- *predicate_source_name*은 sys.dm_xe_objects 뷰에서 object_type 'pred_source'로 정의됩니다.
+- *event_module_guid* 는 이벤트가 포함된 모듈의 GUID입니다.
+- *event_package_name* 은 조건자 개체가 포함된 패키지입니다.
+- *predicate_source_name* 은 sys.dm_xe_objects 뷰에서 object_type 'pred_source'로 정의됩니다.
 
-[*event_module_guid*].*event_package_name*.*predicate_compare_name* 이벤트와 연결할 조건자 개체의 이름입니다. 여기서 각 매개 변수의 의미는 다음과 같습니다.
+[ *event_module_guid* ]. *event_package_name* . *predicate_compare_name* 이벤트와 연결할 조건자 개체의 이름입니다. 여기서 각 매개 변수의 의미는 다음과 같습니다.
 
-- *event_module_guid*는 이벤트가 포함된 모듈의 GUID입니다.
-- *event_package_name*은 조건자 개체가 포함된 패키지입니다.
-- *predicate_compare_name*은 sys.dm_xe_objects 뷰에서 object_type 'pred_compare'로 정의된 전역 원본입니다.
+- *event_module_guid* 는 이벤트가 포함된 모듈의 GUID입니다.
+- *event_package_name* 은 조건자 개체가 포함된 패키지입니다.
+- *predicate_compare_name* 은 sys.dm_xe_objects 뷰에서 object_type 'pred_compare'로 정의된 전역 원본입니다.
 
 *number* **decimal** 을 포함한 모든 숫자 유형입니다. 단, 사용 가능한 실제 메모리가 부족한 경우나 값이 너무 커서 64비트 정수로 표현할 수 없는 숫자는 제외됩니다.
 
-'*string*' 조건자 비교에 필요한 ANSI 또는 유니코드 문자열입니다. 조건자 비교 함수에 대해서는 암시적 문자열 유형 변환이 수행되지 않습니다. 잘못된 유형을 전달하면 오류가 발생합니다.
+' *string* ' 조건자 비교에 필요한 ANSI 또는 유니코드 문자열입니다. 조건자 비교 함수에 대해서는 암시적 문자열 유형 변환이 수행되지 않습니다. 잘못된 유형을 전달하면 오류가 발생합니다.
 
-ADD TARGET [*event_module_guid*].*event_package_name*.*target_name* 이벤트 세션과 연결할 대상입니다. 여기서 각 매개 변수의 의미는 다음과 같습니다.
+ADD TARGET [ *event_module_guid* ]. *event_package_name* . *target_name* 이벤트 세션과 연결할 대상입니다. 여기서 각 매개 변수의 의미는 다음과 같습니다.
 
-- *event_module_guid*는 이벤트가 포함된 모듈의 GUID입니다.
-- *event_package_name*은 동작 개체가 포함된 패키지입니다.
-- *target_name*이 대상입니다. 대상은 sys.dm_xe_objects 뷰에 object_type 'target'으로 표시됩니다.
+- *event_module_guid* 는 이벤트가 포함된 모듈의 GUID입니다.
+- *event_package_name* 은 동작 개체가 포함된 패키지입니다.
+- *target_name* 이 대상입니다. 대상은 sys.dm_xe_objects 뷰에 object_type 'target'으로 표시됩니다.
 
-SET { *target_parameter_name*= \<value> [, ...*n*] } 대상 매개 변수를 설정합니다. 대상 매개 변수는 sys.dm_xe_object_columns 뷰에 column_type 'customizable' 및 object_name = *target_name*으로 표시됩니다.
+SET { *target_parameter_name*= \<value> [, ... *n* ] } 대상 매개 변수를 설정합니다. 대상 매개 변수는 sys.dm_xe_object_columns 뷰에 column_type 'customizable' 및 object_name = *target_name* 으로 표시됩니다.
 
 > [!IMPORTANT]
-> 링 버퍼 대상을 사용하는 경우 XML 출력의 데이터 잘림을 피하려면 max_memory 대상 매개 변수를 2048KB로 설정하는 것이 좋습니다. 다양한 대상 유형을 사용할 경우에 대한 자세한 내용은 [SQL Server 확장 이벤트 대상](https://msdn.microsoft.com/library/e281684c-40d1-4cf9-a0d4-7ea1ecffa384)을 참조하세요.
+> 링 버퍼 대상을 사용하는 경우 XML 출력의 데이터 잘림을 피하려면 max_memory 대상 매개 변수를 2048KB로 설정하는 것이 좋습니다. 다양한 대상 유형을 사용할 경우에 대한 자세한 내용은 [SQL Server 확장 이벤트 대상](/previous-versions/sql/sql-server-2016/bb630339(v=sql.130))을 참조하세요.
 
-WITH ( \<event_session_options> [ ,...*n*] ) 이벤트 세션에 사용할 옵션을 지정합니다.
+WITH ( \<event_session_options> [ ,... *n* ] ) 이벤트 세션에 사용할 옵션을 지정합니다.
 
-MAX_MEMORY =*size* [ KB | **MB** ] 이벤트 버퍼링을 위해 세션에 할당할 최대 메모리 양을 지정하며 기본값은 4MB입니다. *크기*는 정수이며 KB 또는 MB 값일 수 있습니다. 최대 크기는 2GB(2048MB보다 작음)를 초과할 수 없습니다. 그러나 GB 범위의 메모리 값은 사용하지 않는 것이 좋습니다.
+MAX_MEMORY = *size* [ KB | **MB** ] 이벤트 버퍼링을 위해 세션에 할당할 최대 메모리 양을 지정하며 기본값은 4MB입니다. *크기* 는 정수이며 KB 또는 MB 값일 수 있습니다. 최대 크기는 2GB(2048MB보다 작음)를 초과할 수 없습니다. 그러나 GB 범위의 메모리 값은 사용하지 않는 것이 좋습니다.
 
 EVENT_RETENTION_MODE = { **ALLOW_SINGLE_EVENT_LOSS** | ALLOW_MULTIPLE_EVENT_LOSS | NO_EVENT_LOSS } 이벤트 손실을 처리하는 데 사용할 이벤트 보존 모드를 지정합니다.
 
@@ -175,14 +175,14 @@ NO_EVENT_LOSS 이벤트 손실이 허용되지 않습니다. 이 옵션을 사�
 
 MAX_DISPATCH_LATENCY = { *seconds* SECONDS | **INFINITE** } 이벤트가 이벤트 세션 대상에 디스패치되기 전에 메모리에 버퍼링될 시간을 지정합니다. 기본적으로 이 값은 30초로 설정됩니다.
 
-*seconds* SECONDS 버퍼를 대상에 플러시하기 시작할 때까지 대기하는 초 단위 시간입니다. *초*는 정수입니다. 최소 대기 시간 값은 1초입니다. 값으로 0을 사용하면 INFINITE 대기를 지정할 수 있습니다.
+*seconds* SECONDS 버퍼를 대상에 플러시하기 시작할 때까지 대기하는 초 단위 시간입니다. *초* 는 정수입니다. 최소 대기 시간 값은 1초입니다. 값으로 0을 사용하면 INFINITE 대기를 지정할 수 있습니다.
 
 **INFINITE** 버퍼가 가득 차거나 이벤트 세션이 종료된 경우에만 버퍼를 대상에 플러시합니다.
 
 > [!NOTE]
 > MAX_DISPATCH_LATENCY = 0 SECONDS는 MAX_DISPATCH_LATENCY = INFINITE와 같습니다.
 
-MAX_EVENT_SIZE =*size* [ KB | **MB** ] 이벤트에 허용되는 최대 크기를 지정합니다. MAX_EVENT_SIZE는 단일 이벤트가 MAX_MEMORY보다 크도록 설정해야만 합니다. 단일 이벤트가 MAX_MEMORY보다 작을 경우 오류가 발생합니다. *크기*는 정수이며 KB 또는 MB 값일 수 있습니다. *크기*가 KB로 지정되는 경우 최소 허용 크기는 64KB입니다. MAX_EVENT_SIZE가 설정된 경우 MAX_MEMORY 외에 *크기*의 두 버퍼가 생깁니다. 이는 이벤트 버퍼링에 사용되는 총 메모리가 MAX_MEMORY + 2 * MAX_EVENT_SIZE임을 의미합니다.
+MAX_EVENT_SIZE = *size* [ KB | **MB** ] 이벤트에 허용되는 최대 크기를 지정합니다. MAX_EVENT_SIZE는 단일 이벤트가 MAX_MEMORY보다 크도록 설정해야만 합니다. 단일 이벤트가 MAX_MEMORY보다 작을 경우 오류가 발생합니다. *크기* 는 정수이며 KB 또는 MB 값일 수 있습니다. *크기* 가 KB로 지정되는 경우 최소 허용 크기는 64KB입니다. MAX_EVENT_SIZE가 설정된 경우 MAX_MEMORY 외에 *크기* 의 두 버퍼가 생깁니다. 이는 이벤트 버퍼링에 사용되는 총 메모리가 MAX_MEMORY + 2 * MAX_EVENT_SIZE임을 의미합니다.
 
 MEMORY_PARTITION_MODE = { **NONE** | PER_NODE | PER_CPU } 이벤트 버퍼가 만들어지는 위치를 지정합니다.
 
@@ -233,7 +233,7 @@ GO
 ```
 ### <a name="sql-database-example"></a>SQL Database 예제
 
-Azure SQL Database 예제는 [Event File target code for extended events in SQL Database](https://docs.microsoft.com/azure/sql-database/sql-database-xevent-code-event-file#transact-sql-code)(SQL Database의 확장된 이벤트에 대한 이벤트 파일 대상 코드)의 예제를 참조하세요.
+Azure SQL Database 예제는 [Event File target code for extended events in SQL Database](/azure/sql-database/sql-database-xevent-code-event-file#transact-sql-code)(SQL Database의 확장된 이벤트에 대한 이벤트 파일 대상 코드)의 예제를 참조하세요.
 
 ### <a name="code-examples-can-differ-for-azure-sql-database"></a>코드 예제는 Azure SQL Database와 다를 수 있음
 

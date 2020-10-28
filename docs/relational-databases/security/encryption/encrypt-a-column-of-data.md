@@ -2,6 +2,7 @@
 title: 데이터 열 암호화 | Microsoft 문서
 description: Transact-SQL을 사용하는 SQL Server에서 열 수준 또는 셀 수준 암호화라고도 하는 대칭 암호화를 사용하여 데이터 열을 암호화하는 방법을 알아봅니다.
 ms.custom: ''
+titleSuffix: SQL Server & Azure Synapse Analytics & Azure SQL Database & SQL Managed Instance
 ms.date: 01/02/2019
 ms.prod: sql
 ms.prod_service: database-engine, sql-database
@@ -17,14 +18,15 @@ ms.assetid: 38e9bf58-10c6-46ed-83cb-e2d76cda0adc
 author: jaszymas
 ms.author: jaszymas
 monikerRange: =azuresqldb-current||>=sql-server-2016||=sqlallproducts-allversions||>=sql-server-linux-2017||=azuresqldb-mi-current||=azure-sqldw-latest
-ms.openlocfilehash: 90987ec581d734116f386e1a0f3bfd72e4bf15b6
-ms.sourcegitcommit: 8515bb2021cfbc7791318527b8554654203db4ad
+ms.openlocfilehash: 882a99eafed8c913ef0edef213b09ef23a0990f7
+ms.sourcegitcommit: fb8724fb99c46ecf3a6d7b02a743af9b590402f0
 ms.translationtype: HT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 07/08/2020
-ms.locfileid: "86091750"
+ms.lasthandoff: 10/23/2020
+ms.locfileid: "92439337"
 ---
 # <a name="encrypt-a-column-of-data"></a>데이터 열 암호화
+
 [!INCLUDE [SQL Server Azure SQL Database](../../../includes/applies-to-version/sql-asdb-asdbmi-asa.md)]  
 
   이 문서에서는 [!INCLUDE[ssCurrent](../../../includes/sscurrent-md.md)] 을 통해 [!INCLUDE[tsql](../../../includes/tsql-md.md)]에서 대칭 암호화를 사용하여 데이터 열을 암호화하는 방법에 대해 설명합니다. 열 수준 암호화 또는 셀 수준 암호화라고 합니다. 이 기능은 Azure Synapse Analytics(SQL DW)에서는 미리 보기로 제공됩니다.
@@ -55,11 +57,11 @@ PASSWORD = '<some strong password>';
 
 ### <a name="to-encrypt-a-column-of-data-using-symmetric-encryption-that-includes-an-authenticator"></a>인증자를 포함하는 대칭 암호화를 사용하여 데이터 열을 암호화하려면  
   
-1. **개체 탐색기**에서 [!INCLUDE[ssDE](../../../includes/ssde-md.md)]인스턴스에 연결합니다.  
+1. **개체 탐색기** 에서 [!INCLUDE[ssDE](../../../includes/ssde-md.md)]인스턴스에 연결합니다.  
   
-2. 표준 도구 모음에서 **새 쿼리**를 클릭합니다.  
+2. 표준 도구 모음에서 **새 쿼리** 를 클릭합니다.  
   
-3. 다음 예를 복사하여 쿼리 창에 붙여 넣고 **실행**을 클릭합니다.  
+3. 다음 예를 복사하여 쿼리 창에 붙여 넣고 **실행** 을 클릭합니다.  
 
     ```sql
     USE AdventureWorks2012;  
@@ -113,11 +115,11 @@ PASSWORD = '<some strong password>';
   
 ### <a name="to-encrypt-a-column-of-data-using-a-simple-symmetric-encryption"></a>간단한 대칭 암호화를 사용하여 데이터 열을 암호화하려면  
   
-1. **개체 탐색기**에서 [!INCLUDE[ssDE](../../../includes/ssde-md.md)]인스턴스에 연결합니다.  
+1. **개체 탐색기** 에서 [!INCLUDE[ssDE](../../../includes/ssde-md.md)]인스턴스에 연결합니다.  
   
-2. 표준 도구 모음에서 **새 쿼리**를 클릭합니다.  
+2. 표준 도구 모음에서 **새 쿼리** 를 클릭합니다.  
   
-3. 다음 예를 복사하여 쿼리 창에 붙여 넣고 **실행**을 클릭합니다.  
+3. 다음 예를 복사하여 쿼리 창에 붙여 넣고 **실행** 을 클릭합니다.  
   
     ```sql
     USE AdventureWorks2012;  

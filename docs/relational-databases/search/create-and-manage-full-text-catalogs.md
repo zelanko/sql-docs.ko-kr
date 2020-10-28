@@ -1,11 +1,13 @@
 ---
+title: 전체 텍스트 카탈로그 만들기 및 관리
 description: 전체 텍스트 카탈로그 만들기 및 관리
-title: 전체 텍스트 카탈로그 만들기 및 관리 | Microsoft 문서
 ms.date: 03/14/2017
 ms.prod: sql
 ms.prod_service: search, sql-database
 ms.technology: search
 ms.topic: conceptual
+f1_keywords:
+- sql13.swb.fulltextsearch.ftcatalog.general.f1
 helpviewer_keywords:
 - full-text catalogs [SQL Server], creating
 - full-text search [SQL Server], using SQL Server Management Studio
@@ -14,14 +16,15 @@ author: pmasl
 ms.author: pelopes
 ms.reviewer: mikeray
 monikerRange: =azuresqldb-current||>=sql-server-2016||=sqlallproducts-allversions||>=sql-server-linux-2017||=azuresqldb-mi-current
-ms.openlocfilehash: f95811113261f10701e0fcfc41c70e348891f6a9
-ms.sourcegitcommit: 4d370399f6f142e25075b3714e5c2ce056b1bfd0
+ms.openlocfilehash: ff19e0cd9ef6b88dae2410edbc4cae74e911c1a0
+ms.sourcegitcommit: 5f3e0eca9840db20038f0362e5d88a84ff3424af
 ms.translationtype: HT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 10/09/2020
-ms.locfileid: "91868092"
+ms.lasthandoff: 10/21/2020
+ms.locfileid: "92344005"
 ---
 # <a name="create-and-manage-full-text-catalogs"></a>전체 텍스트 카탈로그 만들기 및 관리
+
 [!INCLUDE [SQL Server Azure SQL Database](../../includes/applies-to-version/sql-asdb.md)]
 전체 텍스트 카탈로그는 전체 텍스트 인덱스 그룹에 대한 논리적 컨테이너입니다. 전체 텍스트 인덱스를 만들려면 먼저 전체 텍스트 카탈로그를 만들어야 합니다.
 
@@ -40,11 +43,11 @@ GO
 ``` 
 
 ### <a name="create-a-full-text-catalog-with-management-studio"></a>Management Studio를 사용하여 전체 텍스트 카탈로그 만들기
-1.  개체 탐색기에서 서버, **데이터베이스**를 차례로 확장한 다음 전체 텍스트 카탈로그를 만들려는 데이터베이스를 확장합니다.  
+1.  개체 탐색기에서 서버, **데이터베이스** 를 차례로 확장한 다음 전체 텍스트 카탈로그를 만들려는 데이터베이스를 확장합니다.  
   
-2.  **스토리지**를 확장한 다음 **전체 텍스트 카탈로그**를 마우스 오른쪽 단추로 클릭합니다.  
+2.  **스토리지** 를 확장한 다음 **전체 텍스트 카탈로그** 를 마우스 오른쪽 단추로 클릭합니다.  
   
-3.  **새 전체 텍스트 카탈로그**를 선택합니다.  
+3.  **새 전체 텍스트 카탈로그** 를 선택합니다.  
   
 4.  **새 전체 텍스트 카탈로그** 대화 상자에서 다시 만들려는 카탈로그에 대한 정보를 지정합니다. 자세한 내용은 [새 전체 텍스트 카탈로그&#40;일반 페이지&#41;](../../t-sql/statements/create-fulltext-catalog-transact-sql.md)를 참조하세요.  
   
@@ -54,7 +57,7 @@ GO
 5.  [!INCLUDE[clickOK](../../includes/clickok-md.md)]  
 
 ##  <a name="get-the-properties-of-a-full-text-catalog"></a><a name="props"></a> 전체 텍스트 카탈로그의 속성 가져오기  
-[!INCLUDE[tsql](../../includes/tsql-md.md)] 함수인 **FULLTEXTCATALOGPROPERTY**를 사용하여 전체 텍스트 카탈로그와 관련된 다양한 속성 값을 가져올 수 있습니다. 자세한 내용은 [FULLTEXTCATALOGPROPERTY](../../t-sql/functions/fulltextcatalogproperty-transact-sql.md)를 참조하세요.
+[!INCLUDE[tsql](../../includes/tsql-md.md)] 함수인 **FULLTEXTCATALOGPROPERTY** 를 사용하여 전체 텍스트 카탈로그와 관련된 다양한 속성 값을 가져올 수 있습니다. 자세한 내용은 [FULLTEXTCATALOGPROPERTY](../../t-sql/functions/fulltextcatalogproperty-transact-sql.md)를 참조하세요.
 
 예를 들어 다음 쿼리를 실행하여 전체 텍스트 카탈로그 `Catalog1`의 인덱스 개수를 가져옵니다.
 
@@ -83,27 +86,27 @@ GO
 Transact-SQL 문 [ALTER FULLTEXT CATALOG ... REBUILD](
 ../../t-sql/statements/alter-fulltext-catalog-transact-sql.md)를 실행하거나 SSMS(SQL Server Management Studio)에서 다음 작업을 수행합니다.
 
-1.  SSMS의 개체 탐색기에서 서버, **데이터베이스**를 차례로 확장한 다음 다시 작성할 전체 텍스트 카탈로그가 포함된 데이터베이스를 확장합니다.  
+1.  SSMS의 개체 탐색기에서 서버, **데이터베이스** 를 차례로 확장한 다음 다시 작성할 전체 텍스트 카탈로그가 포함된 데이터베이스를 확장합니다.  
   
-2.  **스토리지**를 확장한 다음 **전체 텍스트 카탈로그**를 확장합니다.  
+2.  **스토리지** 를 확장한 다음 **전체 텍스트 카탈로그** 를 확장합니다.  
   
-3.  다시 작성하려는 전체 텍스트 카탈로그의 이름을 마우스 오른쪽 단추로 클릭하고 **다시 작성**을 선택합니다.  
+3.  다시 작성하려는 전체 텍스트 카탈로그의 이름을 마우스 오른쪽 단추로 클릭하고 **다시 작성** 을 선택합니다.  
   
-4.  **전체 텍스트 카탈로그를 삭제하고 다시 작성하시겠습니까?** 라는 질문에 **확인**을 클릭합니다.  
+4.  **전체 텍스트 카탈로그를 삭제하고 다시 작성하시겠습니까?** 라는 질문에 **확인** 을 클릭합니다.  
   
-5.  **전체 텍스트 카탈로그 다시 작성** 대화 상자에서 **닫기**를 클릭합니다.  
+5.  **전체 텍스트 카탈로그 다시 작성** 대화 상자에서 **닫기** 를 클릭합니다.  
    
 ##  <a name="rebuild-all-full-text-catalogs-for-a-database"></a><a name="rebuildall"></a> 데이터베이스의 전체 텍스트 카탈로그 모두 다시 작성  
 
-1.  SSMS의 개체 탐색기에서 서버, **데이터베이스**를 차례로 확장한 다음 다시 작성할 전체 텍스트 카탈로그가 포함된 데이터베이스를 확장합니다.  
+1.  SSMS의 개체 탐색기에서 서버, **데이터베이스** 를 차례로 확장한 다음 다시 작성할 전체 텍스트 카탈로그가 포함된 데이터베이스를 확장합니다.  
   
-2.  **스토리지**를 확장한 다음 **전체 텍스트 카탈로그**를 마우스 오른쪽 단추로 클릭합니다.  
+2.  **스토리지** 를 확장한 다음 **전체 텍스트 카탈로그** 를 마우스 오른쪽 단추로 클릭합니다.  
   
-3.  **모두 다시 작성**을 선택합니다.  
+3.  **모두 다시 작성** 을 선택합니다.  
   
-4.  **전체 텍스트 카탈로그를 모두 삭제하고 다시 작성하시겠습니까?** 라고 질문에 **확인**을 클릭합니다.  
+4.  **전체 텍스트 카탈로그를 모두 삭제하고 다시 작성하시겠습니까?** 라고 질문에 **확인** 을 클릭합니다.  
   
-5.  **전체 텍스트 카탈로그 모두 다시 작성** 대화 상자에서 **닫기**를 클릭합니다.  
+5.  **전체 텍스트 카탈로그 모두 다시 작성** 대화 상자에서 **닫기** 를 클릭합니다.  
   
   
   
@@ -112,13 +115,13 @@ Transact-SQL 문 [ALTER FULLTEXT CATALOG ... REBUILD](
 Transact-SQL 문 [DROP FULLTEXT CATALOG](
 ../../t-sql/statements/drop-fulltext-catalog-transact-sql.md)를 실행하거나 SSMS(SQL Server Management Studio)에서 다음 작업을 수행합니다.
 
-1.  SSMS의 개체 탐색기에서 서버, **데이터베이스**를 차례로 확장한 다음 제거할 전체 텍스트 카탈로그가 포함된 데이터베이스를 확장합니다.  
+1.  SSMS의 개체 탐색기에서 서버, **데이터베이스** 를 차례로 확장한 다음 제거할 전체 텍스트 카탈로그가 포함된 데이터베이스를 확장합니다.  
   
-2.  **스토리지**를 확장한 다음 **전체 텍스트 카탈로그**를 확장합니다.  
+2.  **스토리지** 를 확장한 다음 **전체 텍스트 카탈로그** 를 확장합니다.  
   
-3.  제거할 전체 텍스트 카탈로그를 마우스 오른쪽 단추로 클릭한 다음 **삭제**를 선택합니다.  
+3.  제거할 전체 텍스트 카탈로그를 마우스 오른쪽 단추로 클릭한 다음 **삭제** 를 선택합니다.  
   
-4.  **개체 삭제** 대화 상자에서 **확인**을 클릭합니다.  
+4.  **개체 삭제** 대화 상자에서 **확인** 을 클릭합니다.  
 
 ## <a name="next-step"></a>다음 단계
 [전체 텍스트 인덱스 만들기 및 관리](../../relational-databases/search/create-and-manage-full-text-indexes.md)

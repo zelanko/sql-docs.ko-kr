@@ -22,12 +22,12 @@ helpviewer_keywords:
 ms.assetid: 62eebc19-9f15-4245-94fa-b3fcd64a9d42
 author: markingmyname
 ms.author: maghan
-ms.openlocfilehash: 7c6ae2579cad1a04239f6d4abc4691982a49d0ab
-ms.sourcegitcommit: dd36d1cbe32cd5a65c6638e8f252b0bd8145e165
+ms.openlocfilehash: ff8efe5476597a85a26034cc278730c2d867ddae
+ms.sourcegitcommit: bd3a135f061e4a49183bbebc7add41ab11872bae
 ms.translationtype: HT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 09/08/2020
-ms.locfileid: "89547553"
+ms.lasthandoff: 10/21/2020
+ms.locfileid: "92300240"
 ---
 # <a name="create-aggregate-transact-sql"></a>CREATE AGGREGATE(Transact-SQL)
 [!INCLUDE [SQL Server](../../includes/applies-to-version/sqlserver.md)]
@@ -67,10 +67,10 @@ EXTERNAL NAME assembly_name [ .class_name ]
  사용자 정의 집계에 포함된 하나 이상의 매개 변수입니다. 매개 변수의 값은 집계 함수를 실행할 때 사용자가 제공해야 합니다. "at" 기호( **@** )를 첫 번째 문자로 사용하여 매개 변수 이름을 지정하십시오. 매개 변수 이름은 [식별자](../../relational-databases/databases/database-identifiers.md)에 대한 규칙을 따라야 합니다. 매개 변수는 함수에서 로컬로 사용됩니다.  
   
  *system_scalar_type*  
- 입력 매개 변수의 값 또는 반환 값을 보유하는 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 시스템 스칼라 데이터 형식 중 하나입니다. **text**, **ntext** 및 **image**를 제외한 모든 스칼라 데이터 형식을 사용자 정의 집계에 대한 매개 변수로 사용할 수 있습니다. **cursor** 및 **table**과 같은 비스칼라 형식은 지정할 수 없습니다.  
+ 입력 매개 변수의 값 또는 반환 값을 보유하는 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 시스템 스칼라 데이터 형식 중 하나입니다. **text** , **ntext** 및 **image** 를 제외한 모든 스칼라 데이터 형식을 사용자 정의 집계에 대한 매개 변수로 사용할 수 있습니다. **cursor** 및 **table** 과 같은 비스칼라 형식은 지정할 수 없습니다.  
   
  *udt_schema_name*  
- CLR 사용자 정의 형식이 속한 스키마의 이름입니다. 이 인수를 지정하지 않을 경우 [!INCLUDE[ssDE](../../includes/ssde-md.md)]에서는 다음 순서로 *udt_type_name*을 참조합니다.  
+ CLR 사용자 정의 형식이 속한 스키마의 이름입니다. 이 인수를 지정하지 않을 경우 [!INCLUDE[ssDE](../../includes/ssde-md.md)]에서는 다음 순서로 *udt_type_name* 을 참조합니다.  
   
 -   네이티브 SQL 유형 네임스페이스  
   
@@ -79,10 +79,10 @@ EXTERNAL NAME assembly_name [ .class_name ]
 -   현재 데이터베이스의 **dbo** 스키마  
   
  *udt_type_name*  
- 현재 데이터베이스에 생성되어 있는 CLR 사용자 정의 형식의 이름입니다. *udt_schema_name*을 지정하지 않을 경우 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]은 형식이 현재 사용자의 스키마에 속하는 것으로 간주합니다.  
+ 현재 데이터베이스에 생성되어 있는 CLR 사용자 정의 형식의 이름입니다. *udt_schema_name* 을 지정하지 않을 경우 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]은 형식이 현재 사용자의 스키마에 속하는 것으로 간주합니다.  
   
  *assembly_name* [ **.** _class_name_ ]  
- 사용자 정의 집계 함수와 바인딩할 어셈블리를 지정하고 필요에 따라 어셈블리가 속한 스키마의 이름과 사용자 정의 집계를 구현하는 어셈블리의 클래스 이름을 지정합니다. 어셈블리는 CREATE ASSEMBLY 문을 사용하여 데이터베이스에 이미 생성되어 있어야 합니다. *class_name*은 유효한 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 식별자여야 하며 어셈블리에 있는 클래스의 이름과 일치해야 합니다. *class_name*은 클래스를 작성할 때 사용된 프로그래밍 언어가 C#과 같은 네임스페이스를 사용하는 경우 네임스페이스로 한정된 이름일 수 있습니다. *class_name*을 지정하지 않을 경우 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]은 *aggregate_name*과 동일한 것으로 간주합니다.  
+ 사용자 정의 집계 함수와 바인딩할 어셈블리를 지정하고 필요에 따라 어셈블리가 속한 스키마의 이름과 사용자 정의 집계를 구현하는 어셈블리의 클래스 이름을 지정합니다. 어셈블리는 CREATE ASSEMBLY 문을 사용하여 데이터베이스에 이미 생성되어 있어야 합니다. *class_name* 은 유효한 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 식별자여야 하며 어셈블리에 있는 클래스의 이름과 일치해야 합니다. *class_name* 은 클래스를 작성할 때 사용된 프로그래밍 언어가 C#과 같은 네임스페이스를 사용하는 경우 네임스페이스로 한정된 이름일 수 있습니다. *class_name* 을 지정하지 않을 경우 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]은 *aggregate_name* 과 동일한 것으로 간주합니다.  
   
 ## <a name="remarks"></a>설명  
  기본적으로 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]의 CLR 코드 실행 기능은 해제됩니다. 관리 코드 모듈을 참조하는 데이터베이스 개체를 만들고 수정하고 삭제할 수 있지만 [sp_configure](../../relational-databases/system-stored-procedures/sp-configure-transact-sql.md)를 사용하여 [clr enabled 옵션](../../database-engine/configure-windows/clr-enabled-server-configuration-option.md)을 설정해야 이러한 모듈의 코드가 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 인스턴스에서 실행됩니다.  
@@ -93,7 +93,7 @@ EXTERNAL NAME assembly_name [ .class_name ]
  EXTERNAL NAME 절에 지정된 어셈블리에 대한 REFERENCES 권한과 CREATE AGGREGATE 권한이 필요합니다.  
   
 ## <a name="examples"></a>예제  
- 다음 예에서는 StringUtilities.csproj 예제 애플리케이션이 컴파일된다고 가정합니다. 자세한 내용은 [문자열 유틸리티 함수 예제](https://msdn.microsoft.com/library/9623013f-15f1-4614-8dac-1155e57c880c)를 참조합니다.  
+ 다음 예에서는 StringUtilities.csproj 예제 애플리케이션이 컴파일된다고 가정합니다. 자세한 내용은 [문자열 유틸리티 함수 예제](/previous-versions/sql/sql-server-2016/ff878119(v=sql.130))를 참조합니다.  
   
  이 예에서는 집계 `Concatenate`를 만듭니다. 집계를 만들기 전에 `StringUtilities.dll` 어셈블리가 로컬 데이터베이스에 등록됩니다.  
   
@@ -120,5 +120,4 @@ GO
   
 ## <a name="see-also"></a>참고 항목  
  [DROP AGGREGATE &#40;Transact-SQL&#41;](../../t-sql/statements/drop-aggregate-transact-sql.md)  
-  
   

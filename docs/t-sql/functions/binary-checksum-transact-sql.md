@@ -20,12 +20,12 @@ ms.assetid: 07fece4d-58e3-446e-a3b5-92fe24d2d1fb
 author: markingmyname
 ms.author: maghan
 monikerRange: =azuresqldb-current||=azure-sqldw-latest||>=sql-server-2016||=sqlallproducts-allversions||>=sql-server-linux-2017||=azuresqldb-mi-current
-ms.openlocfilehash: 3c8caff3b757de461c79081976623ec493efffc4
-ms.sourcegitcommit: cc23d8646041336d119b74bf239a6ac305ff3d31
+ms.openlocfilehash: 2dd65d2923d063440e292884da2bb4c6aecf0ec4
+ms.sourcegitcommit: ae474d21db4f724523e419622ce79f611e956a22
 ms.translationtype: HT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 09/23/2020
-ms.locfileid: "91116818"
+ms.lasthandoff: 10/20/2020
+ms.locfileid: "92255471"
 ---
 # <a name="binary_checksum--transact-sql"></a>BINARY_CHECKSUM(Transact-SQL)
 [!INCLUDE [sql-asdb-asdbmi-asa-pdw](../../includes/applies-to-version/sql-asdb-asdbmi-asa.md)]
@@ -40,6 +40,8 @@ ms.locfileid: "91116818"
 BINARY_CHECKSUM ( * | expression [ ,...n ] )   
 ```  
   
+[!INCLUDE[synapse-analytics-od-unsupported-syntax](../../includes/synapse-analytics-od-unsupported-syntax.md)]
+
 [!INCLUDE[sql-server-tsql-previous-offline-documentation](../../includes/sql-server-tsql-previous-offline-documentation.md)]
 
 ## <a name="arguments"></a>인수
@@ -75,7 +77,7 @@ BINARY_CHECKSUM ( * | expression [ ,...n ] )
 
 또는  
 
-* **sql_variant**(**sql_variant**의 기본 형식이 문자열 데이터 형식인 경우)입니다.  
+* **sql_variant** ( **sql_variant** 의 기본 형식이 문자열 데이터 형식인 경우)입니다.  
   
 예를 들어 "McCavity" 및 "Mccavity" 문자열에는 서로 다른 `BINARY_CHECKSUM` 값이 있습니다. 그러나 대소문자를 구분하지 않는 서버의 경우 `CHECKSUM`은 해당 문자열에 대해 같은 체크섬 값을 반환합니다. `CHECKSUM` 값과 `BINARY_CHECKSUM` 값의 비교는 피해야 합니다.
  

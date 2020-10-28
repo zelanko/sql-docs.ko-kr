@@ -11,15 +11,15 @@ ms.assetid: a62f4ff9-2953-42ca-b7d8-1f8f527c4d66
 author: VanMSFT
 ms.author: vanto
 monikerRange: =azuresqldb-current||=azure-sqldw-latest||>=sql-server-2016||=sqlallproducts-allversions||>=sql-server-linux-2017||=azuresqldb-mi-current
-ms.openlocfilehash: 67122a47bfa252ae9a55f6e7b5d2bba72ffd06c6
-ms.sourcegitcommit: 4d370399f6f142e25075b3714e5c2ce056b1bfd0
+ms.openlocfilehash: 9da4fe7d516453b91ab5d60ec170431035146b6b
+ms.sourcegitcommit: d35d0901296580bfceda6e0ab2e14cf2b7e99a0f
 ms.translationtype: HT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 10/09/2020
-ms.locfileid: "91866927"
+ms.lasthandoff: 10/24/2020
+ms.locfileid: "92496954"
 ---
 # <a name="dynamic-data-masking"></a>동적 데이터 마스킹
-[!INCLUDE [SQL Server ASDB, ASDBMI, ASDW ](../../includes/applies-to-version/sql-asdb-asdbmi-asa.md)]
+[!INCLUDE [SQL Server 2016 ASDB, ASDBMI, ASDW ](../../includes/applies-to-version/sqlserver2016-asdb-asdbmi-asa.md)]
 
 ![동적 데이터 마스킹](../../relational-databases/security/media/dynamic-data-masking.png)
 
@@ -41,7 +41,7 @@ DDM(동적 데이터 마스킹)에서는 권한이 없는 사용자로 마스킹
   
 |함수|Description|예제|  
 |--------------|-----------------|--------------|  
-|기본값|지정된 필드의 데이터 형식에 따라 전체 마스킹.<br /><br /> 문자열 데이터 형식의 경우 필드의 크기가 4자 미만인 경우 XXXX 미만의 X를 사용합니다(**char**, **nchar**,  **varchar**, **nvarchar**, **text**, **ntext**).  <br /><br /> 숫자 데이터 형식의 경우 영(0) 값을 사용합니다(**bigint**, **bit**, **decimal**, **int**, **money**, **numeric**, **smallint**, **smallmoney**, **tinyint**, **float**, **real**).<br /><br /> 날짜 및 시간 데이터 형식의 경우 01.01.1900 00:00:00.0000000(**date**, **datetime2**, **datetime**, **datetimeoffset**, **smalldatetime**, **time**)을 사용합니다.<br /><br />이진 데이터 형식의 경우 단일 바이트의 ASCII 값 0을 사용합니다(**binary**, **varbinary**, **image**).|열 정의 구문 예제: `Phone# varchar(12) MASKED WITH (FUNCTION = 'default()') NULL`<br /><br /> 변경 구문의 예제: `ALTER COLUMN Gender ADD MASKED WITH (FUNCTION = 'default()')`|  
+|기본값|지정된 필드의 데이터 형식에 따라 전체 마스킹.<br /><br /> 문자열 데이터 형식의 경우 필드의 크기가 4자 미만인 경우 XXXX 미만의 X를 사용합니다( **char** , **nchar** ,  **varchar** , **nvarchar** , **text** , **ntext** ).  <br /><br /> 숫자 데이터 형식의 경우 영(0) 값을 사용합니다( **bigint** , **bit** , **decimal** , **int** , **money** , **numeric** , **smallint** , **smallmoney** , **tinyint** , **float** , **real** ).<br /><br /> 날짜 및 시간 데이터 형식의 경우 01.01.1900 00:00:00.0000000( **date** , **datetime2** , **datetime** , **datetimeoffset** , **smalldatetime** , **time** )을 사용합니다.<br /><br />이진 데이터 형식의 경우 단일 바이트의 ASCII 값 0을 사용합니다( **binary** , **varbinary** , **image** ).|열 정의 구문 예제: `Phone# varchar(12) MASKED WITH (FUNCTION = 'default()') NULL`<br /><br /> 변경 구문의 예제: `ALTER COLUMN Gender ADD MASKED WITH (FUNCTION = 'default()')`|  
 |Email|이메일 주소의 형식에서 이메일 주소의 첫 번째 문자와 상수 접미사 ".com"을 표시하는 마스킹 방법입니다. `aXXX@XXXX.com`.|정의 구문 예제: `Email varchar(100) MASKED WITH (FUNCTION = 'email()') NULL`<br /><br /> 변경 구문의 예제: `ALTER COLUMN Email ADD MASKED WITH (FUNCTION = 'email()')`|  
 |임의|지정된 범위 내에서 임의 값으로 원래 값을 마스킹하기 위해 숫자 유형에서 사용할 임의 마스킹 함수입니다.|정의 구문 예제: `Account_Number bigint MASKED WITH (FUNCTION = 'random([start range], [end range])')`<br /><br /> 변경 구문의 예제: `ALTER COLUMN [Month] ADD MASKED WITH (FUNCTION = 'random(1, 12)')`|  
 |사용자 지정 문자열|첫 번째 및 마지막 문자를 표시하고 가운데에 사용자 지정 안쪽 여백 문자열을 추가하는 마스킹 방법입니다. `prefix,[padding],suffix`<br /><br /> 참고: 원래 값이 너무 짧아서 전체 마스크를 완료할 수 없는 경우 접두사 또는 접미사 부분이 표시되지 않습니다.|정의 구문 예제: `FirstName varchar(100) MASKED WITH (FUNCTION = 'partial(prefix,[padding],suffix)') NULL`<br /><br /> 변경 구문의 예제: `ALTER COLUMN [Phone Number] ADD MASKED WITH (FUNCTION = 'partial(1,"XXXXXXX",0)')`<br /><br /> 추가 예제:<br /><br /> `ALTER COLUMN [Phone Number] ADD MASKED WITH (FUNCTION = 'partial(5,"XXXXXXX",0)')`|  
@@ -61,7 +61,7 @@ DDM(동적 데이터 마스킹)에서는 권한이 없는 사용자로 마스킹
   
 -   `SELECT INTO` 또는 `INSERT INTO` 을 사용하여 데이터를 마스크된 열에서 다른 테이블로 복사하면 대상 테이블에 마스크된 데이터가 생성됩니다.  
   
--   [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 가져오기 및 내보내기 실행 시 동적 데이터 마스킹이 적용됩니다. 마스킹된 열을 포함한 데이터베이스를 사용하면 마스킹된 데이터가 있는 내보내는 데이터 파일이 생성되며(**UNMASK** 권한이 없는 사용자가 내보낸다고 가정), 가져온 데이터베이스에는 정적으로 마스킹된 데이터가 포함됩니다.  
+-   [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 가져오기 및 내보내기 실행 시 동적 데이터 마스킹이 적용됩니다. 마스킹된 열을 포함한 데이터베이스를 사용하면 마스킹된 데이터가 있는 내보내는 데이터 파일이 생성되며( **UNMASK** 권한이 없는 사용자가 내보낸다고 가정), 가져온 데이터베이스에는 정적으로 마스킹된 데이터가 포함됩니다.  
   
 ## <a name="querying-for-masked-columns"></a>마스크된 열에 대한 쿼리  
  **sys.masked_columns** 뷰를 사용하여 마스킹 함수가 적용되어 있는 테이블-열에 대해 쿼리합니다. 이 보기는 **sys.columns** 보기에서 상속됩니다. **sys.columns** 뷰의 모든 열과 열이 마스킹되었는지, 그렇다면 정의된 마스킹 함수가 무엇인지 나타내는 **is_masked** 및 **masking_function** 열을 반환합니다. 이 보기는 마스킹 함수가 적용된 열만 보여줍니다.  
@@ -87,7 +87,7 @@ WHERE is_masked = 1;
   
 -   데이터 마스킹이 있는 열은 FULLTEXT 인덱스에 대한 키가 될 수 없습니다.  
   
- **UNMASK** 권한이 없는 사용자의 경우, 사용되지 않은 **READTEXT**, **UPDATETEXT**및 **WRITETEXT** 문은 동적 데이터 마스킹용으로 구성된 열에서 제대로 작동하지 않습니다. 
+ **UNMASK** 권한이 없는 사용자의 경우, 사용되지 않은 **READTEXT** , **UPDATETEXT** 및 **WRITETEXT** 문은 동적 데이터 마스킹용으로 구성된 열에서 제대로 작동하지 않습니다. 
  
  동적 데이터 마스크 추가는 기본 테이블에 대한 스키마 변경으로 구현되므로 종속성이 있는 열에서 수행할 수 없습니다. 이 제한을 해결하려면 먼저 종속성을 제거하고 동적 데이터 마스크를 추가한 다음 종속성을 다시 만들면 됩니다. 예를 들어 해당 열에 종속된 인덱스로 인해 종속성이 있는 경우 해당 인덱스를 삭제하고 마스크를 추가한 다음 종속 인덱스를 다시 만들면 됩니다.
  

@@ -26,12 +26,12 @@ helpviewer_keywords:
 ms.assetid: be3984e1-5ab3-4226-a539-a9f58e1e01e2
 author: markingmyname
 ms.author: maghan
-ms.openlocfilehash: 1b8e0ae12bb4b0d0f7cce0ca5ff690af83531be0
-ms.sourcegitcommit: 783b35f6478006d654491cb52f6edf108acf2482
+ms.openlocfilehash: 852957ca30b73c1b252c27a4581679f360f1e96e
+ms.sourcegitcommit: bd3a135f061e4a49183bbebc7add41ab11872bae
 ms.translationtype: HT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 10/09/2020
-ms.locfileid: "91891153"
+ms.lasthandoff: 10/21/2020
+ms.locfileid: "92300728"
 ---
 # <a name="bulk-insert-transact-sql"></a>BULK INSERT(Transact-SQL)
 
@@ -85,13 +85,13 @@ BULK INSERT
 
 *database_name* 지정한 테이블 또는 뷰가 상주하는 데이터베이스 이름입니다. 지정하지 않으면 기본값은 현재 데이터베이스입니다.
 
-*schema_name* 테이블 또는 뷰 스키마의 이름입니다. 대량 가져오기 작업을 수행하는 사용자의 기본 스키마가 지정한 테이블이나 뷰의 스키마인 경우에는 *schema_name*을 지정하지 않아도 됩니다. *schema*를 지정하지 않은 경우 대량 가져오기 작업을 수행하는 사용자의 기본 스키마가 지정된 테이블이나 뷰와 다르면 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]에서 오류 메시지를 반환하고 대량 가져오기 작업이 취소됩니다.
+*schema_name* 테이블 또는 뷰 스키마의 이름입니다. 대량 가져오기 작업을 수행하는 사용자의 기본 스키마가 지정한 테이블이나 뷰의 스키마인 경우에는 *schema_name* 을 지정하지 않아도 됩니다. *schema* 를 지정하지 않은 경우 대량 가져오기 작업을 수행하는 사용자의 기본 스키마가 지정된 테이블이나 뷰와 다르면 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]에서 오류 메시지를 반환하고 대량 가져오기 작업이 취소됩니다.
 
 *table_name* 데이터를 대량으로 가져올 테이블 또는 뷰의 이름입니다. 모든 열이 동일한 기본 테이블을 참조하는 뷰만 사용할 수 있습니다. 뷰에 데이터를 로드하는 경우의 제한 사항에 대한 자세한 내용은 [INSERT&#40;Transact-SQL&#41;](../../t-sql/statements/insert-transact-sql.md)를 참조하세요.
 
 **‘** _data_file_ **’** 지정한 테이블 또는 뷰로 가져올 데이터가 포함된 데이터 파일의 전체 경로입니다. BULK INSERT는 디스크 또는 Azure Blob Storage(예: 네트워크, 플로피 디스크, 하드 디스크 등)에서 데이터를 가져올 수 있습니다.
 
-*data_file*은 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]가 실행 중인 서버에서 유효한 경로를 지정해야 합니다. *data_file*이 원격 파일일 경우 UNC(Universal Naming Convention) 이름을 지정합니다. UNC 이름의 형식은 \\\\*Systemname*\\*ShareName*\\*Path*\\*FileName*입니다. 예를 들면 다음과 같습니다.
+*data_file* 은 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]가 실행 중인 서버에서 유효한 경로를 지정해야 합니다. *data_file* 이 원격 파일일 경우 UNC(Universal Naming Convention) 이름을 지정합니다. UNC 이름의 형식은 \\\\*Systemname*\\*ShareName*\\*Path*\\*FileName* 입니다. 예를 들면 다음과 같습니다.
 
 ```sql
 BULK INSERT Sales.Orders
@@ -122,7 +122,7 @@ CHECK_CONSTRAINTS 대량 가져오기 작업 중 대상 테이블 또는 뷰의 
 > [!NOTE]
 > MAXERRORS 옵션은 제약 조건 확인에 적용되지 않습니다.
 
-CODEPAGE **=** { **'** ACP **'** \| **'** OEM **'** \| **'** RAW **'** \| **'** _code_page_ **'** } 데이터 파일에 있는 데이터의 코드 페이지를 지정합니다. CODEPAGE는 문자 값이 **127**보다 크거나 **32**보다 작은 **char**, **varchar**또는 **text** 열이 데이터에 포함된 경우에만 적합합니다. 예제는 [코드 페이지 지정](#d-specifying-a-code-page)을 참조하세요.
+CODEPAGE **=** { **'** ACP **'** \| **'** OEM **'** \| **'** RAW **'** \| **'** _code_page_ **'** } 데이터 파일에 있는 데이터의 코드 페이지를 지정합니다. CODEPAGE는 문자 값이 **127** 보다 크거나 **32** 보다 작은 **char** , **varchar** 또는 **text** 열이 데이터에 포함된 경우에만 적합합니다. 예제는 [코드 페이지 지정](#d-specifying-a-code-page)을 참조하세요.
 
 > [!IMPORTANT]
 > CODEPAGE는 [!INCLUDE[ssSQLv14_md](../../includes/sssqlv14-md.md)]의 경우 Linux에서 지원되는 옵션이 아닙니다. [!INCLUDE[ssSQLv15_md](../../includes/sssqlv15-md.md)]의 경우 CODEPAGE에 대해 **'RAW'** 옵션만 허용됩니다.
@@ -132,8 +132,8 @@ CODEPAGE **=** { **'** ACP **'** \| **'** OEM **'** \| **'** RAW **'** \| **'** 
 
 |CODEPAGE 값|Description|
 |--------------------|-----------------|
-|ACP|**char**, **varchar** 또는 **text** 데이터 형식의 열은 [!INCLUDE[vcpransi](../../includes/vcpransi-md.md)]/[!INCLUDE[msCoName](../../includes/msconame-md.md)] Windows 코드 페이지(ISO 1252)에서 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 코드 페이지로 변환됩니다.|
-|OEM(기본값)|**char**, **varchar** 또는 **text** 데이터 형식의 열은 시스템 OEM 코드 페이지에서 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 코드 페이지로 변환됩니다.|
+|ACP|**char** , **varchar** 또는 **text** 데이터 형식의 열은 [!INCLUDE[vcpransi](../../includes/vcpransi-md.md)]/[!INCLUDE[msCoName](../../includes/msconame-md.md)] Windows 코드 페이지(ISO 1252)에서 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 코드 페이지로 변환됩니다.|
+|OEM(기본값)|**char** , **varchar** 또는 **text** 데이터 형식의 열은 시스템 OEM 코드 페이지에서 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 코드 페이지로 변환됩니다.|
 |RAW|다른 코드 페이지로의 변환이 이루어지지 않는 가장 빠른 옵션입니다.|
 |*code_page*|특정 코드 페이지 번호(예: 850)입니다.<br /><br /> **&#42;&#42; 중요 &#42;&#42;** [!INCLUDE[ssSQL15](../../includes/sssql15-md.md)] 이전 버전은 코드 페이지 65001(UTF-8 인코딩)을 지원하지 않습니다.|
 | &nbsp; | &nbsp; |
@@ -144,10 +144,10 @@ DATAFILETYPE **=** { **'char'** \| **'native'** \| **'widechar'** \| **'widenati
 
 |DATAFILETYPE 값|모든 데이터 표시 형식|
 |------------------------|------------------------------|
-|**char**(기본값)|문자 형식<br /><br /> 자세한 내용은 [문자 형식을 사용하여 데이터 가져오기 또는 내보내기&#40;SQL Server&#41;](../../relational-databases/import-export/use-character-format-to-import-or-export-data-sql-server.md)를 참조하세요.|
+|**char** (기본값)|문자 형식<br /><br /> 자세한 내용은 [문자 형식을 사용하여 데이터 가져오기 또는 내보내기&#40;SQL Server&#41;](../../relational-databases/import-export/use-character-format-to-import-or-export-data-sql-server.md)를 참조하세요.|
 |**native**|네이티브(데이터베이스) 데이터 형식. **bcp** 유틸리티를 사용하여 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]에서 데이터를 대량으로 가져와 원시 데이터 파일을 만듭니다.<br /><br /> 네이티브 값은 char 값을 대체하여 보다 뛰어난 성능을 제공합니다. 확장/DBCS(더블바이트 문자 집합) 문자가 포함되어 있지 않은 데이터 파일을 사용하여 여러 개의 SQL Server 인스턴스 간에 데이터를 대량 전송할 때는 네이티브 형식을 사용하는 것이 좋습니다.<br /><br /> 자세한 내용은 [네이티브 형식을 사용하여 데이터 가져오기 또는 내보내기&#40;SQL Server&#41;](../../relational-databases/import-export/use-native-format-to-import-or-export-data-sql-server.md)를 참조하세요.|
 |**widechar**|유니코드 문자<br /><br /> 자세한 내용은 [유니코드 문자 형식을 사용하여 데이터 가져오기 또는 내보내기&#40;SQL Server&#41;](../../relational-databases/import-export/use-unicode-character-format-to-import-or-export-data-sql-server.md)를 참조하세요.|
-|**widenative**|**char**, **varchar** 및 **text** 열을 제외하고 데이터가 유니코드로 저장되는 원시(데이터베이스) 데이터 형식입니다. **bcp** 유틸리티를 사용하여 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]에서 데이터를 대량으로 가져와 **widenative** 데이터 파일을 만듭니다.<br /><br /> **widenative** 값은 **widechar** 값을 대체하여 보다 뛰어난 성능을 제공합니다. 데이터 파일에 [!INCLUDE[vcpransi](../../includes/vcpransi-md.md)] 확장 문자가 포함되어 있으면 **widenative**를 지정하십시오.<br /><br /> 자세한 내용은 [유니코드 네이티브 형식을 사용하여 데이터 가져오기 또는 내보내기&#40;SQL Server&#41;](../../relational-databases/import-export/use-unicode-native-format-to-import-or-export-data-sql-server.md)을 참조하세요.|
+|**widenative**|**char** , **varchar** 및 **text** 열을 제외하고 데이터가 유니코드로 저장되는 원시(데이터베이스) 데이터 형식입니다. **bcp** 유틸리티를 사용하여 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]에서 데이터를 대량으로 가져와 **widenative** 데이터 파일을 만듭니다.<br /><br /> **widenative** 값은 **widechar** 값을 대체하여 보다 뛰어난 성능을 제공합니다. 데이터 파일에 [!INCLUDE[vcpransi](../../includes/vcpransi-md.md)] 확장 문자가 포함되어 있으면 **widenative** 를 지정하십시오.<br /><br /> 자세한 내용은 [유니코드 네이티브 형식을 사용하여 데이터 가져오기 또는 내보내기&#40;SQL Server&#41;](../../relational-databases/import-export/use-unicode-native-format-to-import-or-export-data-sql-server.md)을 참조하세요.|
 | &nbsp; | &nbsp; |
 
 ERRORFILE **=’** _file_name_ **’** 서식 오류가 있어 OLE DB 행 집합으로 변환할 수 없는 행을 수집하는 데 사용되는 파일을 지정합니다. 이러한 행은 데이터 파일에서 "있는 그대로" 이 오류 파일에 복사됩니다.
@@ -177,11 +177,11 @@ ID 값의 보관에 대한 자세한 내용은 [데이터를 대량으로 가져
 
 KEEPNULLS 대량 가져오기 작업 시 삽입된 열에 기본값을 지정하는 대신 빈 열에 Null 값을 유지하도록 지정합니다. 자세한 내용은 [대량 가져오기 수행 중 Null 유지 또는 기본값 사용&#40;SQL Server&#41;](../../relational-databases/import-export/keep-nulls-or-use-default-values-during-bulk-import-sql-server.md)을 참조하세요.
 
-KILOBYTES_PER_BATCH **=** _kilobytes_per_batch_ 일괄 처리당 데이터의 근사치 크기(KB)를 *kilobytes_per_batch*로 지정합니다. 기본적으로 KILOBYTES_PER_BATCH는 알 수 없습니다. 성능 고려 사항에 대한 자세한 내용은 이 항목의 뒷부분에 나오는 "주의"를 참조하십시오.
+KILOBYTES_PER_BATCH **=** _kilobytes_per_batch_ 일괄 처리당 데이터의 근사치 크기(KB)를 *kilobytes_per_batch* 로 지정합니다. 기본적으로 KILOBYTES_PER_BATCH는 알 수 없습니다. 성능 고려 사항에 대한 자세한 내용은 이 항목의 뒷부분에 나오는 "주의"를 참조하십시오.
 
 LASTROW **=** _last_row_ 로드할 마지막 행의 번호를 지정합니다. 기본값은 0이며 지정한 데이터 파일의 마지막 행을 가리킵니다.
 
-MAXERRORS **=** _max_errors_ 대량 가져오기 작업을 취소하기 전에 데이터에서 허용되는 최대 구문 오류 수를 지정합니다. 대량 가져오기 작업으로 가져올 수 없는 각 행은 무시되고 하나의 오류로 계산됩니다. *max_errors*를 지정하지 않으면 기본값은 10입니다.
+MAXERRORS **=** _max_errors_ 대량 가져오기 작업을 취소하기 전에 데이터에서 허용되는 최대 구문 오류 수를 지정합니다. 대량 가져오기 작업으로 가져올 수 없는 각 행은 무시되고 하나의 오류로 계산됩니다. *max_errors* 를 지정하지 않으면 기본값은 10입니다.
 
 > [!NOTE]
 > MAX_ERRORS 옵션은 제약 조건 확인이나 **money** 및 **bigint** 데이터 형식 변환에 적용되지 않습니다.
@@ -194,7 +194,7 @@ ROWS_PER_BATCH **=** _rows_per_batch_ 데이터 파일에 있는 대략적인 �
 
 기본적으로 데이터 파일의 모든 데이터는 단일 트랜잭션으로 서버에 전송되며 일괄 처리의 행 수는 쿼리 최적화 프로그램에 알려지지 않습니다. ROWS_PER_BATCH를 0보다 큰 값으로 지정하면 서버에서 이 값을 사용하여 대량 가져오기 작업을 최적화합니다. ROWS_PER_BATCH에 지정된 값은 실제 행 수와 대략적으로 동일해야 합니다. 성능 고려 사항에 대한 자세한 내용은 이 항목의 뒷부분에 나오는 "주의"를 참조하십시오.
 
-TABLOCK 대량 가져오기 작업이 진행되는 동안 테이블 수준 잠금을 획득하도록 지정합니다. 테이블에 인덱스가 없고 TABLOCK이 지정되어 있으면 여러 클라이언트가 동시에 테이블을 로드할 수 있습니다. 기본적으로 잠금 동작은 **table lock on bulk load**테이블 옵션에 의해 결정됩니다. 대량 가져오기 작업이 진행되는 동안에만 잠금을 보유하면 테이블에 대한 잠금 경합이 줄어들고 이 경우 성능이 크게 향상됩니다. 성능 고려 사항에 대한 자세한 내용은 이 항목의 뒷부분에 나오는 "주의"를 참조하십시오.
+TABLOCK 대량 가져오기 작업이 진행되는 동안 테이블 수준 잠금을 획득하도록 지정합니다. 테이블에 인덱스가 없고 TABLOCK이 지정되어 있으면 여러 클라이언트가 동시에 테이블을 로드할 수 있습니다. 기본적으로 잠금 동작은 **table lock on bulk load** 테이블 옵션에 의해 결정됩니다. 대량 가져오기 작업이 진행되는 동안에만 잠금을 보유하면 테이블에 대한 잠금 경합이 줄어들고 이 경우 성능이 크게 향상됩니다. 성능 고려 사항에 대한 자세한 내용은 이 항목의 뒷부분에 나오는 "주의"를 참조하십시오.
 
 columnstore 인덱스의 경우. 내부적으로 여러 개의 행 집합으로 나뉘기 때문에 잠금 동작은 다릅니다. 각 스레드가 행 집합에 대해 X 잠금을 수행하여 데이터를 각 행 집합에 배타적으로 로드하므로 동시 데이터 로드 세션에서 병렬 데이터 로드가 가능합니다. TABLOCK 옵션을 사용하면 스레드가 테이블에 대해 X 잠금을 수행하여(기존 행 집합에 대한 BU 잠금과 달리) 다른 동시 스레드가 동시에 데이터를 로드하지 못하게 합니다.
 
@@ -212,7 +212,7 @@ WITH ( FORMAT='CSV');
 FIELDQUOTE **=** ‘field_quote’ **적용 대상:** [!INCLUDE[ssSQLv14_md](../../includes/sssqlv14-md.md)] CTP 1.1.
 CSV 파일에 따옴표 문자로 사용될 문자를 지정합니다. 지정하지 않으면 [RFC 4180](https://tools.ietf.org/html/rfc4180) 표준에 정의한 대로 따옴표 문자(")가 따옴표 문자로 사용됩니다.
 
-FORMATFILE **=** ‘_format_file_path_’ 서식 파일의 전체 경로를 지정합니다. 서식 파일이란 동일한 테이블이나 뷰에서 **bcp** 유틸리티를 사용하여 생성된 저장 응답을 포함하는 데이터 파일을 말합니다. 다음과 같은 경우에 서식 파일이 사용됩니다.
+FORMATFILE **=** ‘ _format_file_path_ ’ 서식 파일의 전체 경로를 지정합니다. 서식 파일이란 동일한 테이블이나 뷰에서 **bcp** 유틸리티를 사용하여 생성된 저장 응답을 포함하는 데이터 파일을 말합니다. 다음과 같은 경우에 서식 파일이 사용됩니다.
 
 - 데이터 파일의 열이 테이블 또는 뷰보다 많거나 적을 경우
 - 열 순서가 다를 경우
@@ -224,7 +224,7 @@ FORMATFILE **=** ‘_format_file_path_’ 서식 파일의 전체 경로를 지�
 
 FIELDTERMINATOR **=’** _field_terminator_ **’** **char** 및 **widechar** 데이터 파일에 사용할 필드 종결자를 지정합니다. 기본 필드 종결자는 \t(탭 문자)입니다. 자세한 내용은 [필드 및 행 종결자 지정&#40;SQL Server&#41;](../../relational-databases/import-export/specify-field-and-row-terminators-sql-server.md)을 참조하세요.
 
-ROWTERMINATOR **=’** _row_terminator_ **’** **char** 및 **widechar** 데이터 파일에 사용할 행 종결자를 지정합니다. 기본 행 종결자는 **\r\n**(줄 바꿈 문자)입니다. 자세한 내용은 [필드 및 행 종결자 지정&#40;SQL Server&#41;](../../relational-databases/import-export/specify-field-and-row-terminators-sql-server.md)을 참조하세요.
+ROWTERMINATOR **=’** _row_terminator_ **’** **char** 및 **widechar** 데이터 파일에 사용할 행 종결자를 지정합니다. 기본 행 종결자는 **\r\n** (줄 바꿈 문자)입니다. 자세한 내용은 [필드 및 행 종결자 지정&#40;SQL Server&#41;](../../relational-databases/import-export/specify-field-and-row-terminators-sql-server.md)을 참조하세요.
 
 ## <a name="compatibility"></a>호환성
 
@@ -330,7 +330,7 @@ BULK INSERT 문은 데이터를 테이블 또는 뷰로 가져올 사용자 정�
 
 사용자가 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 로그인을 사용하는 경우 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 프로세스 계정의 보안 프로필이 사용됩니다. SQL Server 인증을 사용하는 로그인은 데이터베이스 엔진 외부에서 인증될 수 없습니다. 따라서 BULK INSERT 명령이 SQL Server 인증을 사용하는 로그인에 의해 시작되면 데이터에 대한 연결이 SQL Server 프로세스 계정(SQL Server 데이터베이스 엔진 서비스에서 사용하는 계정)의 보안 컨텍스트를 사용하여 설정됩니다. 원본 데이터를 성공적으로 읽으려면 SQL Server 데이터베이스 엔진에서 사용하는 계정에 원본 데이터에 대한 액세스 권한을 부여해야 합니다. 반면에 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 사용자가 Windows 인증을 사용하여 로그온한 경우에는 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 프로세스의 보안 프로필에 관계없이 해당 사용자 계정으로 액세스할 수 있는 파일만 읽을 수 있습니다.
 
-**sqlcmd** 또는 **osql**을 사용하는 BULK INSERT 문을 실행하는 경우 한 컴퓨터에서 두 번째 컴퓨터의 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]에 데이터를 삽입하고 UNC 경로를 사용하여 세 번째 컴퓨터에서 *data_file*을 지정하면 4861 오류가 발생할 수 있습니다.
+**sqlcmd** 또는 **osql** 을 사용하는 BULK INSERT 문을 실행하는 경우 한 컴퓨터에서 두 번째 컴퓨터의 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]에 데이터를 삽입하고 UNC 경로를 사용하여 세 번째 컴퓨터에서 *data_file* 을 지정하면 4861 오류가 발생할 수 있습니다.
 
 이러한 오류를 해결하려면 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 인증을 사용하고 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 프로세스 계정의 보안 프로필을 사용하는 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 로그인을 지정하거나 보안 계정 위임을 사용하도록 Windows를 구성하십시오. 위임용으로 사용자 계정이 트러스트될 수 있도록 설정하는 방법은 Windows 도움말을 참조하십시오.
 
@@ -406,7 +406,7 @@ EXEC(@bulk_cmd);
 ```
 
 > [!NOTE]
-> Microsoft Windows에서 텍스트 파일을 처리하는 방법으로 인해 **(\n**은 **\r\n)** 으로 자동으로 바뀝니다.
+> Microsoft Windows에서 텍스트 파일을 처리하는 방법으로 인해 **(\n** 은 **\r\n)** 으로 자동으로 바뀝니다.
 
 > [!IMPORTANT]
 > Azure SQL Database는 Azure Blob Storage에서 읽기만 지원합니다.

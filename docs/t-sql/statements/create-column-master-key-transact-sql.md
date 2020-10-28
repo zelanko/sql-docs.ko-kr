@@ -27,12 +27,12 @@ helpviewer_keywords:
 ms.assetid: f8926b95-e146-4e3f-b56b-add0c0d0a30e
 author: jaszymas
 ms.author: jaszymas
-ms.openlocfilehash: a92d256d376b9931924a7bf6672769bcd19917f4
-ms.sourcegitcommit: 331b8495e4ab37266945c81ff5b93d250bdaa6da
+ms.openlocfilehash: 081941d580e51188f63c54953caa30004c83c6d0
+ms.sourcegitcommit: bd3a135f061e4a49183bbebc7add41ab11872bae
 ms.translationtype: HT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 08/20/2020
-ms.locfileid: "88645959"
+ms.lasthandoff: 10/21/2020
+ms.locfileid: "92300394"
 ---
 # <a name="create-column-master-key-transact-sql"></a>CREATE COLUMN MASTER KEY(Transact-SQL)
 [!INCLUDE [sqlserver2016-asdb-asdbmi](../../includes/applies-to-version/sqlserver2016-asdb-asdbmi.md)]
@@ -84,7 +84,7 @@ Always Encrypted를 통해 사용 가능한 클라이언트 드라이버는 다�
     |'MSSQL_CERTIFICATE_STORE'|Windows 인증서 저장소| 
     |'MSSQL_CSP_PROVIDER'|Microsoft CryptoAPI를 지원하는 HSM(하드웨어 보안 모듈) 같은 저장소입니다.|
     |'MSSQL_CNG_STORE'|CryptoAPI: Next Generation를 지원하는 HSM 같은 저장소입니다.|  
-    |'AZURE_KEY_VAULT'|[Azure Key Vault 시작](https://azure.microsoft.com/documentation/articles/key-vault-get-started/) 참조|  
+    |'AZURE_KEY_VAULT'|[Azure Key Vault 시작](/azure/key-vault/general/overview) 참조|  
     |'MSSQL_JAVA_KEYSTORE'| Java Key Store.}
   
 
@@ -101,7 +101,7 @@ key_path
      위치:  
   
     *CertificateStoreLocation*  
-    현재 사용자나 로컬 컴퓨터여야 하는 인증서 저장소입니다. 자세한 내용은 [로컬 컴퓨터 및 현재 사용자 인증서 저장소](https://msdn.microsoft.com/library/windows/hardware/ff548653.aspx)를 참조합니다.  
+    현재 사용자나 로컬 컴퓨터여야 하는 인증서 저장소입니다. 자세한 내용은 [로컬 컴퓨터 및 현재 사용자 인증서 저장소](/windows-hardware/drivers/install/local-machine-and-current-user-certificate-stores)를 참조합니다.  
   
     *CertificateStore*  
     인증서 저장소 이름에 예를 들어 '나의'를 사용합니다.  
@@ -166,7 +166,7 @@ ENCLAVE_COMPUTATIONS
 열 마스터 키를 Enclave 사용 키로 지정합니다. 이 열 마스터 키로 암호화된 모든 열 암호화 키를 서버 쪽 보안 Enclave와 공유하고 Enclave 내의 계산에 사용할 수 있습니다. 자세한 내용은 [보안 Enclave를 사용한 Always Encrypted](../../relational-databases/security/encryption/always-encrypted-enclaves.md)를 참조하세요.
 
 *서명*  
-이진 리터럴은 ‘키 경로’ 및 ENCLAVE_COMPUTATIONS 설정을 열 마스터 키로 디지털 서명한 결과입니다.** 이 서명은 ENCLAVE_COMPUTATIONS가 지정되었는지 여부를 반영합니다. 이 서명은 권한 없는 사용자가 서명된 값을 변경하지 못하도록 보호합니다. Always Encrypted 사용 가능 클라이언트 드라이버는 서명을 확인하고, 서명이 유효하지 않은 경우 애플리케이션에 오류를 반환합니다. 이 서명은 클라이언트 쪽 도구를 사용하여 생성해야 합니다. 자세한 내용은 [보안 Enclave를 사용한 Always Encrypted](../../relational-databases/security/encryption/always-encrypted-enclaves.md)를 참조하세요.
+이진 리터럴은 ‘키 경로’ 및 ENCLAVE_COMPUTATIONS 설정을 열 마스터 키로 디지털 서명한 결과입니다.  이 서명은 ENCLAVE_COMPUTATIONS가 지정되었는지 여부를 반영합니다. 이 서명은 권한 없는 사용자가 서명된 값을 변경하지 못하도록 보호합니다. Always Encrypted 사용 가능 클라이언트 드라이버는 서명을 확인하고, 서명이 유효하지 않은 경우 애플리케이션에 오류를 반환합니다. 이 서명은 클라이언트 쪽 도구를 사용하여 생성해야 합니다. 자세한 내용은 [보안 Enclave를 사용한 Always Encrypted](../../relational-databases/security/encryption/always-encrypted-enclaves.md)를 참조하세요.
 
 ## <a name="remarks"></a>설명
 
@@ -252,4 +252,3 @@ WITH (
 * [보안 enclave를 사용한 Always Encrypted](../../relational-databases/security/encryption/always-encrypted-enclaves.md)   
 * [상시 암호화를 위한 키 관리 개요](../../relational-databases/security/encryption/overview-of-key-management-for-always-encrypted.md)   
 * [보안 Enclave를 사용한 Always Encrypted 키 관리](../../relational-databases/security/encryption/always-encrypted-enclaves-manage-keys.md)   
-  

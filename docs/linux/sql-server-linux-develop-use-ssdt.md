@@ -8,12 +8,12 @@ ms.topic: conceptual
 ms.prod: sql
 ms.technology: linux
 ms.assetid: 1e924704-e07c-4a8b-b243-8c1dd8cff0d3
-ms.openlocfilehash: dc8975a1454996ffbbab38e3e443f3f3847dc8a1
-ms.sourcegitcommit: 22102f25db5ccca39aebf96bc861c92f2367c77a
+ms.openlocfilehash: dd4de5567d2bafd21b321dc388068b6ee6c24ed5
+ms.sourcegitcommit: 67befbf7435f256e766bbce6c1de57799e1db9ad
 ms.translationtype: HT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 10/16/2020
-ms.locfileid: "92115474"
+ms.lasthandoff: 10/24/2020
+ms.locfileid: "92523928"
 ---
 # <a name="use-visual-studio-to-create-databases-for-sql-server-on-linux"></a>Visual Studio를 사용하여 SQL Server on Linux 데이터베이스 만들기
 
@@ -25,9 +25,9 @@ SSDT(SQL Server Data Tools)를 통해 Visual Studio는 SQL Server on Linux를 �
 
 1. Windows 머신에서 Visual Studio를 아직 설치하지 않은 경우 [Visual Studio를 다운로드하여 설치](https://visualstudio.microsoft.com/downloads/)합니다. Visual Studio 라이선스가 없으면 학생, 오픈 소스 및 개인 개발자를 위한 모든 기능을 갖춘 체험 IDE인 Visual Studio Community 버전을 사용할 수 있습니다.
 
-2. Visual Studio 설치 중에 **설치 유형 선택** 옵션에서 **사용자 지정**을 선택합니다. **다음**을 클릭합니다.
+2. Visual Studio 설치 중에 **설치 유형 선택** 옵션에서 **사용자 지정** 을 선택합니다. **다음** 을 클릭합니다.
 
-3. 기능 선택 목록에서 **Microsoft SQL Server Data Tools**, **Git for Windows** 및 **GitHub Extension for Visual Studio**를 선택합니다.
+3. 기능 선택 목록에서 **Microsoft SQL Server Data Tools** , **Git for Windows** 및 **GitHub Extension for Visual Studio** 를 선택합니다.
 
    <img src="./media/sql-server-linux-develop-use-ssdt/ssdt-setup.png" alt="ssdt setup" style="width: 400px;"/>
 
@@ -43,49 +43,49 @@ SQL Server on Linux는 SSDT 버전 17.0 RC 이상에서 지원됩니다.
 
 1. Visual Studio를 시작합니다.
 
-2. **보기** 메뉴에서 **팀 탐색기**를 선택합니다. 
+2. **보기** 메뉴에서 **팀 탐색기** 를 선택합니다. 
 
-3. **연결** 페이지의 **로컬 Git 리포지토리** 섹션에서 **새로 만들기**를 클릭합니다.
+3. **연결** 페이지의 **로컬 Git 리포지토리** 섹션에서 **새로 만들기** 를 클릭합니다.
 
-   <img src="./media/sql-server-linux-develop-use-ssdt/git-repository.png" alt="local repository" style="width: 300px;"/>
+   <img src="./media/sql-server-linux-develop-use-ssdt/git-repository.png" alt="Screenshot of the Local Git Repository section with the New option called out." style="width: 300px;"/>
 
-4. **만들기**를 클릭합니다. 로컬 Git 리포지토리를 만든 후에 **SSDTRepo**를 두 번 클릭합니다.
+4. **만들기** 를 클릭합니다. 로컬 Git 리포지토리를 만든 후에 **SSDTRepo** 를 두 번 클릭합니다.
 
-5. **솔루션** 섹션에서 **새로 만들기**를 클릭합니다. **새 프로젝트** 대화 상자의 **기타 언어** 노드에서 **SQL Server**를 선택합니다.
+5. **솔루션** 섹션에서 **새로 만들기** 를 클릭합니다. **새 프로젝트** 대화 상자의 **기타 언어** 노드에서 **SQL Server** 를 선택합니다.
 
-   <img src="./media/sql-server-linux-develop-use-ssdt/new-project.png" alt="local repository" style="width: 480px;"/>
+   <img src="./media/sql-server-linux-develop-use-ssdt/new-project.png" alt="Screenshot of the Solutions section with the New option and SQL Server option called out." style="width: 480px;"/>
 
-6. 이름으로 **TutorialDB**를 입력하고 **확인**을 클릭하여 새 데이터베이스 프로젝트를 만듭니다.
+6. 이름으로 **TutorialDB** 를 입력하고 **확인** 을 클릭하여 새 데이터베이스 프로젝트를 만듭니다.
 
 ## <a name="create-a-new-table-in-the-database-project"></a>데이터베이스 프로젝트에서 새 테이블 만들기
 
-1. **보기** 메뉴에서 **솔루션 탐색기**를 선택합니다.
+1. **보기** 메뉴에서 **솔루션 탐색기** 를 선택합니다.
 
-2. 솔루션 탐색기에서 **TutorialDB**를 마우스 오른쪽 단추로 클릭하여 데이터베이스 프로젝트 메뉴를 엽니다.
+2. 솔루션 탐색기에서 **TutorialDB** 를 마우스 오른쪽 단추로 클릭하여 데이터베이스 프로젝트 메뉴를 엽니다.
 
-3. **추가** 아래에서 **테이블**을 선택합니다.
+3. **추가** 아래에서 **테이블** 을 선택합니다.
 
    <img src="./media/sql-server-linux-develop-use-ssdt/create-table.png" alt="create table" style="width: 480px;"/>
 
 4. 테이블 디자이너를 사용하여 그림에 표시된 대로 이름 `nvarchar(50)` 및 위치 `nvarchar(50)` 열 2개를 추가합니다. 디자이너에서 열을 추가하면 SSDT가 `CREATE TABLE` 스크립트를 생성합니다.
 
-   <img src="./media/sql-server-linux-develop-use-ssdt/add-columns.png" alt="add columns" style="width: 480px;"/>
+   <img src="./media/sql-server-linux-develop-use-ssdt/add-columns.png" alt="Screenshot of the table designer with the Name and Location values called out." style="width: 480px;"/>
 
 5. **Table1.sql** 파일을 저장합니다.
 
 ## <a name="build-and-validate-the-database"></a>데이터베이스 빌드 및 유효성 검사
 
-1. **TutorialDB**에서 데이터베이스 프로젝트 메뉴를 열고 **빌드**를 선택합니다. SSDT는 프로젝트의 .sql 소스 코드 파일을 컴파일하고 dacpac(데이터 계층 애플리케이션 패키지) 파일을 빌드합니다. 이 파일을 사용하여 Linux의 SQL Server 인스턴스에 데이터베이스를 게시할 수 있습니다. 
+1. **TutorialDB** 에서 데이터베이스 프로젝트 메뉴를 열고 **빌드** 를 선택합니다. SSDT는 프로젝트의 .sql 소스 코드 파일을 컴파일하고 dacpac(데이터 계층 애플리케이션 패키지) 파일을 빌드합니다. 이 파일을 사용하여 Linux의 SQL Server 인스턴스에 데이터베이스를 게시할 수 있습니다. 
 
-   <img src="./media/sql-server-linux-develop-use-ssdt/build.png" alt="add columns" style="width: 400px;"/>
+   <img src="./media/sql-server-linux-develop-use-ssdt/build.png" alt="Screenshot showing the TutorialDB with the Build option called out." style="width: 400px;"/>
 
 2. Visual Studio의 **출력** 창에서 빌드 성공 메시지를 확인합니다. 
 
 ## <a name="publish-the-database-to-sql-server-instance-on-linux"></a>Linux의 SQL Server 인스턴스에 데이터베이스 게시
 
-1. **TutorialDB**에서 데이터베이스 프로젝트 메뉴를 열고 **게시**를 선택합니다.
+1. **TutorialDB** 에서 데이터베이스 프로젝트 메뉴를 열고 **게시** 를 선택합니다.
 
-2. **편집**을 클릭하여 Linux에서 해당 SQL Server 인스턴스를 선택합니다.
+2. **편집** 을 클릭하여 Linux에서 해당 SQL Server 인스턴스를 선택합니다.
 
    <img src="./media/sql-server-linux-develop-use-ssdt/publish-dialog.png" alt="publish dialog" style="width: 480px;"/>
 
@@ -97,7 +97,7 @@ SQL Server on Linux는 SSDT 버전 17.0 RC 이상에서 지원됩니다.
 
 5. **Data Tools 작업** 창에서 게시 상태를 확인합니다.
 
-6. **결과 보기** 또는 **스크립트 보기**를 클릭하여 SQL Server on Linux의 데이터베이스 게시 결과 정보를 확인합니다.
+6. **결과 보기** 또는 **스크립트 보기** 를 클릭하여 SQL Server on Linux의 데이터베이스 게시 결과 정보를 확인합니다.
 
    <img src="./media/sql-server-linux-develop-use-ssdt/publish-result.png" alt="publish result" style="width: 480px;"/>
 
