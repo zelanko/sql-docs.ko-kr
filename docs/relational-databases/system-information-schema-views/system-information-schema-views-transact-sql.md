@@ -19,12 +19,12 @@ helpviewer_keywords:
 ms.assetid: 7e9f1dfe-27e9-40e7-8fc7-bfc5cae6be10
 author: markingmyname
 ms.author: maghan
-ms.openlocfilehash: a9d764f4f2e56137dc89f346c6235d0978ef82a9
-ms.sourcegitcommit: dd36d1cbe32cd5a65c6638e8f252b0bd8145e165
+ms.openlocfilehash: 8c283777fea2999d7948a3282b623cd92f0baf54
+ms.sourcegitcommit: ea0bf89617e11afe85ad85309e0ec731ed265583
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 09/08/2020
-ms.locfileid: "89542124"
+ms.lasthandoff: 10/28/2020
+ms.locfileid: "92907389"
 ---
 # <a name="system-information-schema-views-transact-sql"></a>시스템 정보 스키마 뷰 (Transact-sql)
 
@@ -41,7 +41,7 @@ ms.locfileid: "89542124"
 |---------------------|-----------------------------------------------|
 |데이터베이스|카탈로그|
 |스키마|스키마|
-|Object|Object|
+|개체|개체|
 |사용자 정의 데이터 형식|도메인|
 
 이 이름 매핑 규칙은 다음 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] ISO 호환 뷰에 적용됩니다.
@@ -100,6 +100,12 @@ SELECT TABLE_CATALOG, TABLE_SCHEMA, TABLE_NAME, COLUMN_NAME, COLUMN_DEFAULT
 FROM AdventureWorks2012.INFORMATION_SCHEMA.COLUMNS
 WHERE TABLE_NAME = N'Product';
 ```
+
+## <a name="permissions"></a>사용 권한  
+정보 스키마 보기에서 메타 데이터의 표시 여부는 사용자가 소유 하 고 있거나 일부 사용 권한이 부여 된 보안 개체로 제한 됩니다. 자세한 내용은 [Metadata Visibility Configuration](../../relational-databases/security/metadata-visibility-configuration.md)을 참조하세요.
+
+> [!NOTE]  
+> 정보 스키마 뷰는 서버 전체에 정의 되므로 사용자 데이터베이스의 컨텍스트 내에서 거부할 수 없습니다. 액세스를 취소 하거나 거부 하려면 (SELECT) master 데이터베이스를 사용 해야 합니다. 기본적으로 public 역할에는 모든 정보 스키마 뷰에 대 한 SELECT 권한이 있지만 콘텐츠는 메타 데이터 표시 유형 규칙을 사용 하 여 제한 됩니다.
 
 ## <a name="see-also"></a>참고 항목
 
