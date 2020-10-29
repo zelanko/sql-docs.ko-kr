@@ -9,12 +9,12 @@ author: dphansen
 ms.author: davidph
 ms.custom: seo-lt-2019
 monikerRange: '>=sql-server-2016||>=sql-server-linux-ver15||=sqlallproducts-allversions'
-ms.openlocfilehash: 661ce31839d08b36e7a51f1d09965b68e5350317
-ms.sourcegitcommit: cfa04a73b26312bf18d8f6296891679166e2754d
+ms.openlocfilehash: 5585f26247ad360fa848a24109416a59c49c94a6
+ms.sourcegitcommit: ef20f39a17fd4395dd2dd37b8dd91b57328a751c
 ms.translationtype: HT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 10/19/2020
-ms.locfileid: "92193647"
+ms.lasthandoff: 10/28/2020
+ms.locfileid: "92793780"
 ---
 # <a name="deploy-the-r-model-and-use-it-in-sql-server-walkthrough"></a>R 모델을 배포하고 SQL Server에서 사용(연습)
 [!INCLUDE [SQL Server 2016](../../includes/applies-to-version/sqlserver2016.md)]
@@ -24,12 +24,12 @@ ms.locfileid: "92193647"
 이 문서에서는 점수 매기기에서 모델을 사용하는 다음과 같은 가장 일반적인 두 가지 방법을 보여 줍니다.
 
 > [!div class="checklist"]
-> * **일괄 처리 점수 매기기 모드**: 여러 예측 생성
-> * **개별 점수 매기기 모드**: 한 번에 하나씩 예측 생성
+> * **일괄 처리 점수 매기기 모드** : 여러 예측 생성
+> * **개별 점수 매기기 모드** : 한 번에 하나씩 예측 생성
 
 ## <a name="batch-scoring"></a>일괄 처리 점수 매기기
 
-여러 예측을 생성하고 SQL 쿼리 또는 테이블을 입력으로 전달하는 저장 프로시저 *PredictTipBatchMode*를 만듭니다. 결과 테이블이 반환되며 테이블에 직접 삽입하거나 파일에 쓸 수 있습니다.
+여러 예측을 생성하고 SQL 쿼리 또는 테이블을 입력으로 전달하는 저장 프로시저 *PredictTipBatchMode* 를 만듭니다. 결과 테이블이 반환되며 테이블에 직접 삽입하거나 파일에 쓸 수 있습니다.
 
 - 입력 데이터 집합을 SQL 쿼리로 가져오기
 - 이전 단원에서 저장한 학습된 로지스틱 회귀 모델 호출
@@ -72,13 +72,13 @@ ms.locfileid: "92193647"
     END
     ```
 
-    + SELECT 문을 사용하여 SQL 테이블에서 저장된 모델을 호출합니다. 테이블에서 **varbinary(max)** 데이터로 모델을 검색하고, SQL 변수 _\@lmodel2_에 저장한 다음, 시스템 저장 프로시저 [sp_execute_external_script](../../relational-databases/system-stored-procedures/sp-execute-external-script-transact-sql.md)에 *mod* 매개 변수로 전달합니다.
+    + SELECT 문을 사용하여 SQL 테이블에서 저장된 모델을 호출합니다. 테이블에서 **varbinary(max)** 데이터로 모델을 검색하고, SQL 변수 _\@lmodel2_ 에 저장한 다음, 시스템 저장 프로시저 [sp_execute_external_script](../../relational-databases/system-stored-procedures/sp-execute-external-script-transact-sql.md)에 *mod* 매개 변수로 전달합니다.
 
-    + 점수 매기기에 대한 입력으로 사용되는 데이터는 SQL 쿼리로 정의되고 SQL 변수 _\@input_에 문자열로 저장됩니다. 데이터베이스에서 검색된 데이터는 [sp_execute_external_script](../../relational-databases/system-stored-procedures/sp-execute-external-script-transact-sql.md) 프로시저에 대한 입력 데이터의 기본 이름인 *InputDataSet* 데이터 프레임에 저장됩니다. 필요한 경우 매개 변수 _\@input_data_1_name_을 사용하여 다른 변수 이름을 정의할 수 있습니다.
+    + 점수 매기기에 대한 입력으로 사용되는 데이터는 SQL 쿼리로 정의되고 SQL 변수 _\@input_ 에 문자열로 저장됩니다. 데이터베이스에서 검색된 데이터는 [sp_execute_external_script](../../relational-databases/system-stored-procedures/sp-execute-external-script-transact-sql.md) 프로시저에 대한 입력 데이터의 기본 이름인 *InputDataSet* 데이터 프레임에 저장됩니다. 필요한 경우 매개 변수 _\@input_data_1_name_ 을 사용하여 다른 변수 이름을 정의할 수 있습니다.
 
     + 점수를 생성하기 위해 저장 프로시저가 **RevoScaleR** 라이브러리에서 rxPredict 함수를 호출합니다.
 
-    + 반환 값 *Score*는 지정된 모델에서 운전 기사가 팁을 받을 확률입니다. 필요한 경우 반환된 값에 일종의 필터를 쉽게 적용하여 반환 값을 "tip" 및 "no tip" 그룹으로 분류할 수 있습니다.  예를 들어 확률이 0.5 미만이면 팁이 없을 가능성이 큽니다.
+    + 반환 값 *Score* 는 지정된 모델에서 운전 기사가 팁을 받을 확률입니다. 필요한 경우 반환된 값에 일종의 필터를 쉽게 적용하여 반환 값을 "tip" 및 "no tip" 그룹으로 분류할 수 있습니다.  예를 들어 확률이 0.5 미만이면 팁이 없을 가능성이 큽니다.
   
 2.  일괄 처리 모드에서 저장 프로시저를 호출하려면 필요한 쿼리를 저장 프로시저에 대한 입력으로 정의합니다. 다음은 SSMS에서 실행하여 작동하는지 확인할 수 있는 SQL 쿼리입니다.
 
@@ -192,13 +192,13 @@ ms.locfileid: "92193647"
     END
     ```
 
-2. SQL Server Management Studio에서 [!INCLUDE[tsql](../../includes/tsql-md.md)] **EXEC** 프로시저(또는 **EXECUTE**)를 사용하여 저장 프로시저를 호출하고 필요한 입력을 전달합니다. 예를 들어, Management Studio에서 다음 문을 실행해 봅니다.
+2. SQL Server Management Studio에서 [!INCLUDE[tsql](../../includes/tsql-md.md)] **EXEC** 프로시저(또는 **EXECUTE** )를 사용하여 저장 프로시저를 호출하고 필요한 입력을 전달합니다. 예를 들어, Management Studio에서 다음 문을 실행해 봅니다.
 
     ```sql
     EXEC [dbo].[PredictTipSingleMode] 1, 2.5, 631, 40.763958,-73.973373, 40.782139,-73.977303
     ```
 
-    여기서 전달되는 값은 각각 _passenger\_count_, _trip_distance_, _trip\_time\_in\_secs_, _pickup\_latitude_, _pickup\_longitude_, _dropoff\_latitude_ 및 _dropoff\_longitude_ 변수에 사용됩니다.
+    여기서 전달되는 값은 각각 _passenger\_count_ , _trip_distance_ , _trip\_time\_in\_secs_ , _pickup\_latitude_ , _pickup\_longitude_ , _dropoff\_latitude_ 및 _dropoff\_longitude_ 변수에 사용됩니다.
 
 3. R 코드에서 이 동일한 호출을 실행하려면 다음과 같이 전체 저장 프로시저 호출이 포함된 R 변수를 정의하면 됩니다.
 
@@ -206,9 +206,9 @@ ms.locfileid: "92193647"
     q2 = "EXEC PredictTipSingleMode 1, 2.5, 631, 40.763958,-73.973373, 40.782139,-73.977303 ";
     ```
 
-    여기서 전달되는 값은 각각 _passenger\_count_, _trip\_distance_, _trip\_time\_in\_secs_, _pickup\_latitude_, _pickup\_longitude_, _dropoff\_latitude_ 및 _dropoff\_longitude_ 변수에 사용됩니다.
+    여기서 전달되는 값은 각각 _passenger\_count_ , _trip\_distance_ , _trip\_time\_in\_secs_ , _pickup\_latitude_ , _pickup\_longitude_ , _dropoff\_latitude_ 및 _dropoff\_longitude_ 변수에 사용됩니다.
 
-4. `sqlQuery`(**RODBC** 패키지에서)를 호출하고 저장 프로시저 호출이 포함된 문자열 변수 및 연결 문자열을 함께 전달합니다.
+4. `sqlQuery`( **RODBC** 패키지에서)를 호출하고 저장 프로시저 호출이 포함된 문자열 변수 및 연결 문자열을 함께 전달합니다.
 
     ```R
     # predict with stored procedure in single mode
@@ -230,4 +230,4 @@ ms.locfileid: "92193647"
 + [데이터 과학 시나리오 및 솔루션 템플릿](data-science-scenarios-and-solution-templates.md)
 + [데이터베이스 내 고급 분석](r-taxi-classification-introduction.md)
 + [Machine Learning Server 방법 가이드](/machine-learning-server/r/how-to-introduction)
-+ [Machine Learning Server 추가 리소스](//machine-learning-server/resources-more)
++ [Machine Learning Server 추가 리소스](/machine-learning-server/resources-more)

@@ -4,18 +4,18 @@ titleSuffix: SQL machine learning
 description: 이 5부 자습서 시리즈에서는 이진 분류를 사용하여 뉴욕시 택시 요금을 예측하기 위해 SQL Machine Learning을 통해 SQL Server 저장 프로시저 및 T-SQL 함수에 R 코드를 포함하는 방법을 알아봅니다.
 ms.prod: sql
 ms.technology: machine-learning
-ms.date: 07/30/2020
+ms.date: 10/15/2020
 ms.topic: tutorial
 author: dphansen
 ms.author: davidph
 ms.custom: seo-lt-2019
 monikerRange: '>=sql-server-2016||>=sql-server-linux-ver15||>=azuresqldb-mi-current||=sqlallproducts-allversions'
-ms.openlocfilehash: c1f9f1b43b9c49cebaed706bf3c8448881c4df46
-ms.sourcegitcommit: 9b41725d6db9957dd7928a3620fe4db41eb51c6e
+ms.openlocfilehash: 9b3f8d66d7197e2e55a07f7a5b6de5da1b4ee24a
+ms.sourcegitcommit: ead0b8c334d487a07e41256ce5d6acafa2d23c9d
 ms.translationtype: HT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 08/13/2020
-ms.locfileid: "88173660"
+ms.lasthandoff: 10/22/2020
+ms.locfileid: "92412561"
 ---
 # <a name="r-tutorial-predict-nyc-taxi-fares-with-binary-classification"></a>R 자습서: 이진 분류를 사용하여 뉴욕시 택시 요금 예측
 [!INCLUDE [SQL Server 2016 SQL MI](../../includes/applies-to-version/sqlserver2016-asdbmi.md)]
@@ -72,6 +72,10 @@ SQL 프로그래머를 위한 이 5부 자습서 시리즈에서는 [Azure SQL M
 + [R 라이브러리](../package-management/r-package-information.md)를 설치
 
 + [Python 스크립트를 실행할 수 있는 권한을 부여](../security/user-permission.md)
+
+::: moniker range=">=sql-server-ver15||>=sql-server-linux-ver15||=sqlallproducts-allversions"
++ SQL Server 2019부터 격리 메커니즘을 사용하려면 플롯 파일이 저장된 디렉터리에 대한 적절한 권한을 부여해야 합니다. 이러한 권한을 설정하는 방법에 대한 자세한 내용은 [Windows의 SQL Server 2019: Machine Learning Services에 대한 격리 변경 내용의 파일 사용 권한 섹션](../install/sql-server-machine-learning-services-2019.md#file-permissions)을 참조하세요.
+::: moniker-end
 
 + [뉴욕시 택시 데모 데이터베이스](demo-data-nyctaxi-in-sql.md)를 복원
 

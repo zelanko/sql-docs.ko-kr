@@ -8,12 +8,12 @@ ms.reviewer: mikeray
 ms.date: 09/10/2020
 ms.topic: conceptual
 ms.prod: sql
-ms.openlocfilehash: 36d4581756cd89e016658f8e415aaec6fbe9a35b
-ms.sourcegitcommit: a41e1f4199785a2b8019a419a1f3dcdc15571044
+ms.openlocfilehash: 0bd60864615e1ffbf2aecac5eb41efa86407ba68
+ms.sourcegitcommit: b09f069c6bef0655b47e9953a4385f1b52bada2b
 ms.translationtype: HT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 10/13/2020
-ms.locfileid: "91988009"
+ms.lasthandoff: 10/27/2020
+ms.locfileid: "92734384"
 ---
 # <a name="connect-sql-server-instances-to-azure-arc-at-scale"></a>SQL Server 인스턴스를 Azure Arc에 대규모로 연결
 
@@ -79,10 +79,10 @@ Connected Machine 에이전트를 설치하고 구성하는 설치 메서드는 
 
 각 대상 머신에 [Azure CLI가 설치](/cli/azure/install-azure-cli)되어 있어야 합니다. 서비스 주체 자격 증명이 제공되었으며 이미 로그인한 다른 사용자가 없는 경우 등록 스크립트는 해당 자격 증명을 사용하여 Azure에 자동으로 로그인합니다. 다음 단계를 수행하여 여러 Linux 머신의 SQL Server 인스턴스를 연결합니다.
 
-1. [‘az ad sp create-for-rbac’](/cli/azure/ad/sp.md#az_ad_sp_create_for_rbac) 명령을 사용하여 서비스 주체를 만듭니다. 
+1. [‘az ad sp create-for-rbac’](/cli/azure/ad/sp#az_ad_sp_create_for_rbac) 명령을 사용하여 서비스 주체를 만듭니다.
 
    ```azurecli-interactive
-   az ad sp create-for-rbac --name <your service principal name> --role <your custom role name>    
+   az ad sp create-for-rbac --name <your service principal name> --role <your custom role name>
    ```
 
    ```output

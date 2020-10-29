@@ -8,12 +8,12 @@ ms.topic: how-to
 author: dphansen
 ms.author: davidph
 monikerRange: '>=sql-server-2016||>=sql-server-linux-ver15||=sqlallproducts-allversions'
-ms.openlocfilehash: ea99f736af30fb1989bd8728896bed3f12c4c59c
-ms.sourcegitcommit: afb02c275b7c79fbd90fac4bfcfd92b00a399019
+ms.openlocfilehash: cdb11607fe7424c8c1159ba767e6f8292361065f
+ms.sourcegitcommit: ef20f39a17fd4395dd2dd37b8dd91b57328a751c
 ms.translationtype: HT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 10/12/2020
-ms.locfileid: "91956636"
+ms.lasthandoff: 10/28/2020
+ms.locfileid: "92793760"
 ---
 # <a name="create-ssis-and-ssrs-workflows-with-r-on-sql-server"></a>SQL Server에서 R을 사용하여 SSIS 및 SSRS 워크플로 만들기
 [!INCLUDE [SQL Server 2016 and later](../../includes/applies-to-version/sqlserver2016.md)]
@@ -83,7 +83,7 @@ begin
 end;
 ```
 
-SSIS 디자이너에서 방금 정의한 저장 프로시저를 실행하는 [SQL 실행 태스크](../../integration-services/control-flow/execute-sql-task.md)를 만듭니다. **SQLStatement**의 스크립트는 기존 데이터를 제거하고 삽입할 데이터를 지정한 다음, 저장 프로시저를 호출하여 데이터를 제공합니다.
+SSIS 디자이너에서 방금 정의한 저장 프로시저를 실행하는 [SQL 실행 태스크](../../integration-services/control-flow/execute-sql-task.md)를 만듭니다. **SQLStatement** 의 스크립트는 기존 데이터를 제거하고 삽입할 데이터를 지정한 다음, 저장 프로시저를 호출하여 데이터를 제공합니다.
 
 ```T-SQL
 truncate table ssis_iris;
@@ -127,7 +127,7 @@ end;
 GO
 ```
 
-SSIS 디자이너에서 [SQL 실행 태스크](../../integration-services/control-flow/execute-sql-task.md)를 만들어 **generate_iris_rx_model** 저장 프로시저를 실행합니다. 모델이 serialize되어 ssis_iris_models 테이블에 저장됩니다. **SQLStatement**에 대한 스크립트는 다음과 같습니다.
+SSIS 디자이너에서 [SQL 실행 태스크](../../integration-services/control-flow/execute-sql-task.md)를 만들어 **generate_iris_rx_model** 저장 프로시저를 실행합니다. 모델이 serialize되어 ssis_iris_models 테이블에 저장됩니다. **SQLStatement** 에 대한 스크립트는 다음과 같습니다.
 
 ```T-SQL
 insert into ssis_iris_models (model)
@@ -143,7 +143,7 @@ update ssis_iris_models set model_name = 'rxLinMod' where model_name = 'default 
 
 이제 학습 데이터를 로드하고 모델을 생성하는 코드를 만들었으므로 남은 단계는 이 모델을 사용해서 예측을 생성하는 것입니다. 
 
-이렇게 하려면 SQL 쿼리에 R 스크립트를 추가하여 ssis_iris_model에서 [rxPredict](//machine-learning-server/r-reference/revoscaler/rxpredict) 기본 제공 R 함수를 트리거합니다. **predict_species_length** 저장 프로시저가 이 작업을 수행합니다.
+이렇게 하려면 SQL 쿼리에 R 스크립트를 추가하여 ssis_iris_model에서 [rxPredict](/machine-learning-server/r-reference/revoscaler/rxpredict) 기본 제공 R 함수를 트리거합니다. **predict_species_length** 저장 프로시저가 이 작업을 수행합니다.
 
 ```T-SQL
 Create procedure predict_species_length (@model varchar(100))

@@ -9,12 +9,12 @@ author: dphansen
 ms.author: davidph
 ms.custom: seo-lt-2019
 monikerRange: '>=sql-server-2016||>=sql-server-linux-ver15||=sqlallproducts-allversions'
-ms.openlocfilehash: a509b16abc2c52f504cf3783f5fb22370faaef94
-ms.sourcegitcommit: afb02c275b7c79fbd90fac4bfcfd92b00a399019
+ms.openlocfilehash: 6407ed2cd23b8fad1f63a1b670a4cce2ad54790c
+ms.sourcegitcommit: ef20f39a17fd4395dd2dd37b8dd91b57328a751c
 ms.translationtype: HT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 10/12/2020
-ms.locfileid: "91956754"
+ms.lasthandoff: 10/28/2020
+ms.locfileid: "92793750"
 ---
 # <a name="install-pre-trained-machine-learning-models-on-sql-server"></a>SQL Server에 미리 학습된 기계 학습 모델 설치
 [!INCLUDE [SQL Server 2016 and later](../../includes/applies-to-version/sqlserver2016.md)]
@@ -27,7 +27,7 @@ ms.locfileid: "91956754"
 
 | R 함수(MicrosoftML) | Python 함수(microsoftml) | 사용 |
 |--------------------------|-------------------------------|-------|
-| [getSentiment](/machine-learning-server/r-reference/microsoftml/getsentiment) | [get_sentiment](//machine-learning-server/python-reference/microsoftml/get-sentiment) | 텍스트 입력에 대한 긍정-부정 감정 점수를 생성합니다. |
+| [getSentiment](/machine-learning-server/r-reference/microsoftml/getsentiment) | [get_sentiment](/machine-learning-server/python-reference/microsoftml/get-sentiment) | 텍스트 입력에 대한 긍정-부정 감정 점수를 생성합니다. |
 | [featurizeImage](/machine-learning-server/r-reference/microsoftml/featurizeimage) | [featurize_image](/machine-learning-server/python-reference/microsoftml/featurize-image) | 이미지 파일 입력에서 텍스트 정보를 추출합니다. |
 
 ## <a name="prerequisites"></a>사전 요구 사항
@@ -77,7 +77,7 @@ R 및 Python 모델의 설치 경로는 다음과 같습니다.
 
 ## <a name="execute-with-elevated-privileges"></a>상승된 권한으로 실행
 
-1. PowerShell을 시작합니다. 작업 표시줄에서 PowerShell 프로그램 아이콘을 마우스 오른쪽 단추로 클릭하고 **관리자 권한으로 실행**을 선택합니다.
+1. PowerShell을 시작합니다. 작업 표시줄에서 PowerShell 프로그램 아이콘을 마우스 오른쪽 단추로 클릭하고 **관리자 권한으로 실행** 을 선택합니다.
 2. 설치 스크립트 파일의 정규화된 경로를 입력하고 인스턴스 이름을 포함합니다. 다운로드 폴더와 기본 인스턴스를 가정하면 명령은 다음과 같이 표시될 수 있습니다.
 
    ```powershell
@@ -106,7 +106,7 @@ R 및 Python을 사용하여 인터넷에 연결된 SQL Server Machine Learning 
 
 ### <a name="r-verification-steps"></a>R 확인 단계
 
-1. C:\Program Files\Microsoft SQL Server\MSSQL14.MSSQLSERVER\R_SERVICES\bin\x64에서 **RGUI.EXE**를 시작합니다.
+1. C:\Program Files\Microsoft SQL Server\MSSQL14.MSSQLSERVER\R_SERVICES\bin\x64에서 **RGUI.EXE** 를 시작합니다.
 
 2. 명령 프롬프트에 다음 R 스크립트를 붙여넣습니다.
 
@@ -146,7 +146,7 @@ R 및 Python을 사용하여 인터넷에 연결된 SQL Server Machine Learning 
 
 ### <a name="python-verification-steps"></a>Python 확인 단계
 
-1. C:\Program Files\Microsoft SQL Server\MSSQL14.MSSQLSERVER\PYTHON_SERVICES에서 **Python.exe**를 시작합니다.
+1. C:\Program Files\Microsoft SQL Server\MSSQL14.MSSQLSERVER\PYTHON_SERVICES에서 **Python.exe** 를 시작합니다.
 
 2. 명령 프롬프트에 다음 Python 스크립트 붙여넣기
 
@@ -196,7 +196,7 @@ R 및 Python을 사용하여 인터넷에 연결된 SQL Server Machine Learning 
 
 ## <a name="research-and-resources"></a>연구 및 리소스
 
-현재 사용할 수 있는 모델은 감정 분석 및 이미지 분류를 위한 심층 신경망(DNN) 모델입니다. 미리 학습된 모든 모델은 Microsoft의 [Computation Network Toolkit](https://cntk.ai/Features/Index.html), 즉 **CNTK**를 사용하여 학습되었습니다.
+현재 사용할 수 있는 모델은 감정 분석 및 이미지 분류를 위한 심층 신경망(DNN) 모델입니다. 미리 학습된 모든 모델은 Microsoft의 [Computation Network Toolkit](https://cntk.ai/Features/Index.html), 즉 **CNTK** 를 사용하여 학습되었습니다.
 
 각 네트워크의 구성은 다음 참조 구현을 기반으로 합니다.
 

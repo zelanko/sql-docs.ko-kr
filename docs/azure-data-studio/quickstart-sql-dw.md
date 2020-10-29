@@ -9,12 +9,12 @@ ms.author: alayu
 ms.reviewer: alayu, jrasnick
 ms.custom: seodec18; seo-lt-2019
 ms.date: 10/15/2020
-ms.openlocfilehash: 31eeef17d539682b2d7061edec4891ad4c39c43b
-ms.sourcegitcommit: fb8724fb99c46ecf3a6d7b02a743af9b590402f0
+ms.openlocfilehash: 526349f9e6ca186b8555d52f76f3663c0862503c
+ms.sourcegitcommit: ef20f39a17fd4395dd2dd37b8dd91b57328a751c
 ms.translationtype: HT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 10/23/2020
-ms.locfileid: "92439267"
+ms.lasthandoff: 10/28/2020
+ms.locfileid: "92793700"
 ---
 # <a name="quickstart-use-azure-data-studio-to-connect-and-query-data-using-a-dedicated-sql-pool-in-azure-synapse-analytics"></a>빠른 시작: Azure Data Studio를 통해 Azure Synapse Analytics의 전용 SQL 풀을 사용하여 데이터 연결 및 쿼리
 
@@ -136,7 +136,7 @@ Azure Data Studio를 통해 Azure Synapse Analytics 서버에 연결합니다.
 
 ## <a name="clean-up-resources"></a>리소스 정리
 
-이 문서에서 만든 샘플 데이터베이스로 계속 작업을 수행하지 않으려는 경우 [리소스 그룹을 삭제](/azure/azure/synapse-analytics/sql-data-warehouse/create-data-warehouse-portal#clean-up-resources)합니다.
+이 문서에서 만든 샘플 데이터베이스로 계속 작업을 수행하지 않으려는 경우 [리소스 그룹을 삭제](/azure/synapse-analytics/sql-data-warehouse/create-data-warehouse-portal#clean-up-resources)합니다.
 
 ## <a name="next-steps"></a>다음 단계
 자세한 내용은 [Azure Data Studio를 사용하여 Synapse SQL에 연결](https://docs.microsoft.com/azure/synapse-analytics/sql/get-started-azure-data-studio)을 참조하세요.

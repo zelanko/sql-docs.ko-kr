@@ -4,18 +4,18 @@ titleSuffix: SQL machine learning
 description: 이 5부 자습서 시리즈의 3부에서는 SQL Machine Learning을 통해 T-SQL 함수를 사용하여 샘플 데이터로부터 기능을 만들고 저장합니다.
 ms.prod: sql
 ms.technology: machine-learning
-ms.date: 07/30/2020
+ms.date: 10/15/2020
 ms.topic: tutorial
 author: dphansen
 ms.author: davidph
 ms.custom: seo-lt-2019
 monikerRange: '>=sql-server-2016||>=sql-server-linux-ver15||>=azuresqldb-mi-current||=sqlallproducts-allversions'
-ms.openlocfilehash: 25f61771524d170ade9914605916c6f2cffc6d3b
-ms.sourcegitcommit: cfa04a73b26312bf18d8f6296891679166e2754d
+ms.openlocfilehash: e498b76d1b7924a4ee4154c35c4e492612b9c801
+ms.sourcegitcommit: ead0b8c334d487a07e41256ce5d6acafa2d23c9d
 ms.translationtype: HT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 10/19/2020
-ms.locfileid: "92193705"
+ms.lasthandoff: 10/22/2020
+ms.locfileid: "92412571"
 ---
 # <a name="r-tutorial-create-data-features"></a>R 자습서: 데이터 기능 만들기
 [!INCLUDE [SQL Server 2016 SQL MI](../../includes/applies-to-version/sqlserver2016-asdbmi.md)]
@@ -40,11 +40,11 @@ ms.locfileid: "92193705"
 
 ## <a name="about-feature-engineering"></a>기능 엔지니어링 정보
 
-데이터 탐색을 여러 번 수행한 후 데이터에서 몇 가지 유용한 정보를 수집했으며 *기능 엔지니어링*으로 넘어갈 준비가 되었습니다. 원시 데이터에서 의미 있는 기능을 만드는 이 프로세스는 분석 모델을 만드는 데 중요한 단계입니다.
+데이터 탐색을 여러 번 수행한 후 데이터에서 몇 가지 유용한 정보를 수집했으며 *기능 엔지니어링* 으로 넘어갈 준비가 되었습니다. 원시 데이터에서 의미 있는 기능을 만드는 이 프로세스는 분석 모델을 만드는 데 중요한 단계입니다.
 
 이 데이터 세트에서 거리 값은 보고된 미터 거리를 기반으로 하며 지리적 거리나 실제 이동 거리를 나타내지 않을 수도 있습니다. 따라서 원본 NYC Taxi 데이터 세트에서 사용할 수 있는 좌표를 통해 승하차 지점 사이의 직접 거리를 계산해야 합니다. 이렇게 하려면 사용자 지정 [함수에](https://en.wikipedia.org/wiki/Haversine_formula) Haversine 수식 [!INCLUDE[tsql](../../includes/tsql-md.md)] 을 사용합니다.
 
-사용자 지정 T-SQL 함수 _fnCalculateDistance_를 사용하여 Haversine 수식을 통해 거리를 컴퓨팅하고 두 번째 사용자 지정 T-SQL 함수 _fnEngineerFeatures_를 사용하여 모든 기능이 포함된 테이블을 만듭니다.
+사용자 지정 T-SQL 함수 _fnCalculateDistance_ 를 사용하여 Haversine 수식을 통해 거리를 컴퓨팅하고 두 번째 사용자 지정 T-SQL 함수 _fnEngineerFeatures_ 를 사용하여 모든 기능이 포함된 테이블을 만듭니다.
 
 전반적인 프로세스는 다음과 같습니다.
 
@@ -58,9 +58,9 @@ ms.locfileid: "92193705"
 
 이 자습서 준비의 일환으로 _fnCalculateDistance_ 함수를 다운로드하여 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]에 등록한 상태여야 합니다. 코드를 검토하는 데 몇 분 정도가 걸립니다.
   
-1. [!INCLUDE[ssManStudio](../../includes/ssmanstudio-md.md)]에서 **프로그래밍 기능**, **함수** , **스칼라 반환 함수**를 차례로 확장합니다.   
+1. [!INCLUDE[ssManStudio](../../includes/ssmanstudio-md.md)]에서 **프로그래밍 기능** , **함수** , **스칼라 반환 함수** 를 차례로 확장합니다.   
 
-2. _fnCalculateDistance_를 마우스 오른쪽 단추로 클릭하고 **수정** 을 선택하여 새 쿼리 창에서 [!INCLUDE[tsql](../../includes/tsql-md.md)] 스크립트를 엽니다.
+2. _fnCalculateDistance_ 를 마우스 오른쪽 단추로 클릭하고 **수정** 을 선택하여 새 쿼리 창에서 [!INCLUDE[tsql](../../includes/tsql-md.md)] 스크립트를 엽니다.
   
    ```sql
    CREATE FUNCTION [dbo].[fnCalculateDistance] (@Lat1 float, @Long1 float, @Lat2 float, @Long2 float)  
@@ -90,11 +90,11 @@ ms.locfileid: "92193705"
   
    + 여정 승하차 위치에서 얻은 위도 및 경도 값을 입력으로 사용합니다. Haversine 수식은 위치를 라디안으로 변환하고 해당 값을 사용하여 두 위치 사이의 직접 거리(마일)를 컴퓨팅합니다.
 
-## <a name="generate-the-features-using-_fnengineerfeatures_"></a>_fnEngineerFeatures_를 사용하여 기능 생성
+## <a name="generate-the-features-using-_fnengineerfeatures_"></a>_fnEngineerFeatures_ 를 사용하여 기능 생성
 
-모델 학습에 사용할 수 있는 테이블에 계산된 값을 추가하려면 다른 함수 _fnEngineerFeatures_를 사용합니다. 새 함수는 이전에 만든 T-SQL 함수 _fnCalculateDistance_를 호출하여 승하차 위치 사이의 직접 거리를 가져옵니다. 
+모델 학습에 사용할 수 있는 테이블에 계산된 값을 추가하려면 다른 함수 _fnEngineerFeatures_ 를 사용합니다. 새 함수는 이전에 만든 T-SQL 함수 _fnCalculateDistance_ 를 호출하여 승하차 위치 사이의 직접 거리를 가져옵니다. 
 
-1. 이 연습을 위한 준비 과정에서 만들어진 사용자 지정 T-SQL 함수 _fnEngineerFeatures_의 코드를 검토합니다.
+1. 이 연습을 위한 준비 과정에서 만들어진 사용자 지정 T-SQL 함수 _fnEngineerFeatures_ 의 코드를 검토합니다.
   
    ```sql
    CREATE FUNCTION [dbo].[fnEngineerFeatures] (  

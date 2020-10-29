@@ -10,10 +10,10 @@ ms.assetid: 47a882b7-efe5-4ee6-bef4-06118eb56903
 author: maggiesMSFT
 ms.author: maggies
 ms.openlocfilehash: a62e0e1c47cd6df4d2d5e4f28b35294af694a824
-ms.sourcegitcommit: 216f377451e53874718ae1645a2611cdb198808a
+ms.sourcegitcommit: ead0b8c334d487a07e41256ce5d6acafa2d23c9d
 ms.translationtype: HT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 07/28/2020
+ms.lasthandoff: 10/22/2020
 ms.locfileid: "87243274"
 ---
 # <a name="lesson-1-creating-a-sample-subscriber-database"></a>1단원: 샘플 구독자 데이터베이스 만들기
@@ -28,7 +28,7 @@ ms.locfileid: "87243274"
   
 2.  데이터베이스를 마우스 오른쪽 단추로 클릭한 다음 **새 데이터베이스...** 를 선택합니다.  
   
-3.  새 데이터베이스 대화 상자의 **데이터베이스 이름**에 *Subscribers*를 입력합니다. 
+3.  새 데이터베이스 대화 상자의 **데이터베이스 이름** 에 *Subscribers* 를 입력합니다. 
 4. [!INCLUDE[clickOK](../includes/clickok-md.md)]  
   
 5.  도구 모음에서 **새 쿼리** 단추를 클릭합니다.  
@@ -56,7 +56,7 @@ ms.locfileid: "87243274"
     GO  
     ```  
   
-7.  **! 실행**을 도구 모음에서 클릭합니다.  
+7.  **! 실행** 을 도구 모음에서 클릭합니다.  
   
 8.  SELECT 문을 사용하여 세 개의 데이터 행이 있는지 확인합니다. 예: `select * from OrderInfo`  
   

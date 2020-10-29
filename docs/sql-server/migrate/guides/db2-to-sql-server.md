@@ -13,15 +13,15 @@ helpviewer_keywords:
 - maximum number of processors supported
 author: MashaMSFT
 ms.author: mathoma
-ms.openlocfilehash: 016d0e1a48e9f14356cae9dd4915fedd2b45374b
-ms.sourcegitcommit: ae474d21db4f724523e419622ce79f611e956a22
+ms.openlocfilehash: 4a4aa024d94908800c020fdc5d2362d48d03becd
+ms.sourcegitcommit: b09f069c6bef0655b47e9953a4385f1b52bada2b
 ms.translationtype: HT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 10/20/2020
-ms.locfileid: "92258009"
+ms.lasthandoff: 10/27/2020
+ms.locfileid: "92734661"
 ---
 # <a name="migration-guide-db2-to-sql-server"></a>마이그레이션 가이드: DB2에서 SQL Server로 마이그레이션
-[!INCLUDE[sqlserver](../../../includes/applies-to-version/sql-asdb-asdbmi.md)]
+[!INCLUDE[sqlserver](../../../includes/applies-to-version/sqlserver.md)]
 
 이 마이그레이션 가이드에서는 DB2용 SQL Server Migration Assistant를 사용하여 DB2에서 SQL Server로 사용자 데이터베이스를 마이그레이션하는 방법을 설명합니다. 
 
@@ -161,49 +161,6 @@ SSMA(SQL Server Migration Assistant)를 사용하여 평가를 만듭니다.
 |[Azure에서 DB2 LUW 기본 스케일링 - 설정 가이드](https://github.com/Microsoft/DataMigrationTeam/blob/master/Whitepapers/DB2%20PureScale%20on%20Azure.pdf)|이 가이드는 DB2 구현 계획의 시작점으로 사용됩니다. 비즈니스 요구 사항은 다르지만 동일한 기본 패턴이 적용됩니다. 이 아키텍처 패턴은 Azure에서 OLAP 애플리케이션에도 사용할 수 있습니다.|
 
 위 리소스는 Azure 데이터 그룹 엔지니어링 팀에서 후원하는 Data SQL Ninja 프로그램의 일부로 개발되었습니다. Data SQL Ninja 프로그램의 핵심 선언은 복잡한 현대화의 장애물을 제거하고 속도를 높이며 Microsoft의 Azure 데이터 플랫폼에 대한 데이터 플랫폼 마이그레이션 기회를 놓고 경쟁하는 것입니다. 조직이 Data SQL Ninja 프로그램에 참여하는 데 관심이 있다고 생각되면 계정 팀에 문의하여 추천서를 제출하도록 요청하세요.
-
-## <a name="partners"></a>파트너
-
-다음 파트너는 마이그레이션을 위한 대체 방법도 제공할 수 있습니다. 
-
-:::row:::
-   :::column span="":::
-      [:::image type="content" source="media/db2-to-sql-server/blitzz-logo.png" alt-text="프로젝트 세부 정보를 제공하고 확인을 선택하여 저장":::](https://www.blitzz.io/product)
-   :::column-end:::
-   :::column span="":::
-      [:::image type="content" source="media/db2-to-sql-server/blueprint-logo.png" alt-text="프로젝트 세부 정보를 제공하고 확인을 선택하여 저장":::](https://bpcs.com/what-we-do)
-   :::column-end:::
-   :::column span="":::
-      [:::image type="content" source="media/db2-to-sql-server/cognizant-logo.png" alt-text="프로젝트 세부 정보를 제공하고 확인을 선택하여 저장":::](https://www.cognizant.com/partners/microsoft)
-   :::column-end:::   
-:::row-end:::
-:::row:::
-   :::column span="":::
-      [:::image type="content" source="media/db2-to-sql-server/dxc-logo.png" alt-text="프로젝트 세부 정보를 제공하고 확인을 선택하여 저장":::](https://www.dxc.technology/application_services/offerings/139843/142343-application_services_for_microsoft_azure)
-   :::column-end:::
-   :::column span="":::
-      [:::image type="content" source="media/db2-to-sql-server/hvr-logo.png" alt-text="프로젝트 세부 정보를 제공하고 확인을 선택하여 저장":::](https://www.hvr-software.com/solutions/azure-data-integration/)
-   :::column-end:::
-   :::column span="":::
-      [:::image type="content" source="media/db2-to-sql-server/infosys-logo.png" alt-text="프로젝트 세부 정보를 제공하고 확인을 선택하여 저장":::](https://www.infosys.com/services/)
-   :::column-end:::   
-:::row-end:::
-:::row:::
-   :::column span="":::
-     [:::image type="content" source="media/db2-to-sql-server/ispirer-logo.png" alt-text="프로젝트 세부 정보를 제공하고 확인을 선택하여 저장":::](https://www.ispirer.com/blog/migration-to-the-microsoft-technology-stack)
-   :::column-end:::
-   :::column span="":::
-      [:::image type="content" source="media/db2-to-sql-server/querysurge-logo.png" alt-text="프로젝트 세부 정보를 제공하고 확인을 선택하여 저장":::](https://www.querysurge.com/company/partners/microsoft)
-   :::column-end:::
-   :::column span="":::
-     [:::image type="content" source="media/db2-to-sql-server/scalability-experts-logo.png" alt-text="프로젝트 세부 정보를 제공하고 확인을 선택하여 저장":::](http://www.scalabilityexperts.com/products/index.html)
-   :::column-end:::   
-:::row-end:::
-:::row:::
-   :::column span="":::
-     [:::image type="content" source="media/db2-to-sql-server/wipro-logo.png" alt-text="프로젝트 세부 정보를 제공하고 확인을 선택하여 저장":::](https://www.wipro.com/analytics/)
-   :::column-end:::
-:::row-end:::
 
 ## <a name="next-steps"></a>다음 단계
 

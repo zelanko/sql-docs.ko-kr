@@ -15,12 +15,12 @@ ms.assetid: 20a99dcb-83bd-4aa6-9139-92e2e5ba4887
 author: markingmyname
 ms.author: maghan
 ms.reviewer: ''
-ms.openlocfilehash: 51728a73872bed843c8ea34190be21a19906cd1b
-ms.sourcegitcommit: e700497f962e4c2274df16d9e651059b42ff1a10
+ms.openlocfilehash: a1d8686e1502fab121e49abed19f8f01488d22b7
+ms.sourcegitcommit: fb8724fb99c46ecf3a6d7b02a743af9b590402f0
 ms.translationtype: HT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 08/17/2020
-ms.locfileid: "88462803"
+ms.lasthandoff: 10/23/2020
+ms.locfileid: "92439357"
 ---
 # <a name="how-the-query-and-view-designer-represents-joins-visual-database-tools"></a>쿼리 및 뷰 디자이너의 조인 표시 방법(Visual Database Tools)
 [!INCLUDE[SQL Server Azure SQL Database Synapse Analytics PDW ](../../includes/applies-to-version/sql-asdb-asdbmi-asa-pdw.md)]
@@ -41,26 +41,26 @@ ms.locfileid: "88462803"
   
 |**조인 선 아이콘**|**설명**|  
 |----------------------|-------------------|  
-|![Visual Database Tools 아이콘](../../ssms/visual-db-tools/media/dv3wbih.gif "Visual Database Tools 아이콘")|등호(=)를 사용하여 만든 내부 조인|  
-|![Visual Database Tools 아이콘](../../ssms/visual-db-tools/media/dv3wbii.gif "Visual Database Tools 아이콘")|">" 연산자를 기반으로 하는 내부 조인|  
-|![Visual Database Tools 아이콘](../../ssms/visual-db-tools/media/dv3wbij.gif "Visual Database Tools 아이콘")|관련 테이블에 일치하는 내용이 없는 경우에도 왼쪽에 나타난 테이블의 모든 행을 포함하는 외부 조인|  
-|![Visual Database Tools 아이콘](../../ssms/visual-db-tools/media/dv3wbik.gif "Visual Database Tools 아이콘")|관련 테이블에 일치하는 내용이 없는 경우에도 오른쪽에 나타난 테이블의 모든 행을 포함하는 외부 조인|  
-|![Visual Database Tools 아이콘](../../ssms/visual-db-tools/media/dv3wbil.gif "Visual Database Tools 아이콘")|관련 테이블에 일치하는 내용이 없는 경우에도 양쪽 테이블의 모든 행을 포함하는 완전 외부 조인|  
+|:::image type="icon" source="../../ssms/visual-db-tools/media/dv3wbih.gif":::|등호(=)를 사용하여 만든 내부 조인|  
+|:::image type="icon" source="../../ssms/visual-db-tools/media/dv3wbii.gif":::|">" 연산자를 기반으로 하는 내부 조인|  
+|:::image type="icon" source="../../ssms/visual-db-tools/media/dv3wbij.gif":::|관련 테이블에 일치하는 내용이 없는 경우에도 왼쪽에 나타난 테이블의 모든 행을 포함하는 외부 조인|  
+|:::image type="icon" source="../../ssms/visual-db-tools/media/dv3wbik.gif":::|관련 테이블에 일치하는 내용이 없는 경우에도 오른쪽에 나타난 테이블의 모든 행을 포함하는 외부 조인|  
+|:::image type="icon" source="../../ssms/visual-db-tools/media/dv3wbil.gif":::|관련 테이블에 일치하는 내용이 없는 경우에도 양쪽 테이블의 모든 행을 포함하는 완전 외부 조인|  
   
 조인 선의 끝에 있는 기호는 조인 형식을 나타냅니다. 다음 표는 조인 형식과 조인 선의 끝에 표시되는 아이콘 목록입니다.  
   
 |**조인 선 끝의 아이콘**|**조인 형식**|  
 |---------------------------------|--------------------|  
-|![Visual Database Tools 아이콘](../../ssms/visual-db-tools/media/dv3wbim.gif "Visual Database Tools 아이콘")|일 대 일 조인|  
-|![Visual Database Tools 아이콘](../../ssms/visual-db-tools/media/dv3wbin.gif "Visual Database Tools 아이콘")|일 대 다 조인|  
-|![Visual Database Tools 아이콘](../../ssms/visual-db-tools/media/dv3wbio.gif "Visual Database Tools 아이콘")|쿼리 및 뷰 디자이너는 조인 형식을 결정할 수 없습니다. 조인을 수동으로 만든 경우 이러한 상황이 자주 발생합니다.|  
+|:::image type="icon" source="../../ssms/visual-db-tools/media/dv3wbim.gif":::|일 대 일 조인|  
+|:::image type="icon" source="../../ssms/visual-db-tools/media/dv3wbin.gif":::|일 대 다 조인|  
+|:::image type="icon" source="../../ssms/visual-db-tools/media/dv3wbio.gif":::|쿼리 및 뷰 디자이너는 조인 형식을 결정할 수 없습니다. 조인을 수동으로 만든 경우 이러한 상황이 자주 발생합니다.|  
   
 ## <a name="sql-pane"></a>SQL 창  
 SQL 문에서는 다양한 방법으로 조인을 표현할 수 있습니다. 정확한 구문은 사용 중인 데이터베이스 및 조인을 정의하는 방법에 따라 다릅니다.  
   
 테이블 조인과 관련된 구문 옵션은 다음과 같습니다.  
   
--   **FROM 절의 JOIN 한정자**.   키워드 INNER 및 OUTER가 조인 형식을 지정합니다. 이 구문은 ANSI 92 SQL 표준입니다.  
+-   **FROM 절의 JOIN 한정자** .   키워드 INNER 및 OUTER가 조인 형식을 지정합니다. 이 구문은 ANSI 92 SQL 표준입니다.  
   
     예를 들어, 각 테이블의 `publishers` 열을 기반으로 하여 `pub_info` 테이블과 `pub_id` 테이블을 조인하는 경우 결과 SQL 문은 다음과 같습니다.  
   
@@ -72,7 +72,7 @@ SQL 문에서는 다양한 방법으로 조인을 표현할 수 있습니다. �
   
     외부 조인을 만드는 경우 INNER 대신에 LEFT OUTER 또는 RIGHT OUTER가 나타납니다.  
   
--   **두 테이블의 열을 비교하는 WHERE 절**.   데이터베이스에서 JOIN 구문이 지원되지 않거나 사용자가 JOIN 구문을 직접 입력한 경우 WHERE 절이 나타납니다. WHERE 절에서 조인을 만들면 두 테이블 이름이 FROM 절에 나타납니다.  
+-   **두 테이블의 열을 비교하는 WHERE 절** .   데이터베이스에서 JOIN 구문이 지원되지 않거나 사용자가 JOIN 구문을 직접 입력한 경우 WHERE 절이 나타납니다. WHERE 절에서 조인을 만들면 두 테이블 이름이 FROM 절에 나타납니다.  
   
     예를 들어, 아래 문은 `publishers` 테이블과 `pub_info` 테이블을 조인합니다.  
   

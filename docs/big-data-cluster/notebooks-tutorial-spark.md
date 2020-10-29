@@ -9,12 +9,12 @@ ms.date: 03/30/2020
 ms.topic: tutorial
 ms.prod: sql
 ms.technology: big-data-cluster
-ms.openlocfilehash: 32cdcca2e4052374e7f26d59a3caf35f200cd47d
-ms.sourcegitcommit: c7f40918dc3ecdb0ed2ef5c237a3996cb4cd268d
+ms.openlocfilehash: 6961dd76f35316dbd3923bb24849011a20f184c0
+ms.sourcegitcommit: ef20f39a17fd4395dd2dd37b8dd91b57328a751c
 ms.translationtype: HT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 10/05/2020
-ms.locfileid: "91725811"
+ms.lasthandoff: 10/28/2020
+ms.locfileid: "92793740"
 ---
 # <a name="run-a-sample-notebook-using-spark"></a>Spark를 사용하여 샘플 Notebook 실행
 
@@ -35,7 +35,7 @@ ms.locfileid: "91725811"
 
 ## <a name="download-the-sample-notebook-file"></a>샘플 Notebook 파일 다운로드
 
-다음 지침에 따라 샘플 Notebook 파일 **spark-sql.ipynb**를 Azure Data Studio에 로드합니다.
+다음 지침에 따라 샘플 Notebook 파일 **spark-sql.ipynb** 를 Azure Data Studio에 로드합니다.
 
 1. bash 명령 프롬프트(Linux) 또는 Windows PowerShell을 엽니다.
 
@@ -44,7 +44,7 @@ ms.locfileid: "91725811"
 1. 다음 **curl** 명령을 실행하여 GitHub에서 Notebook 파일을 다운로드합니다.
 
    ```bash
-   curl 'https://raw.githubusercontent.com/Microsoft/sql-server-samples/master/samples/features/sql-big-data-cluster/spark/data-loading/transform-csv-files.ipynb' -o transform-csv-files.ipynb
+   curl https://raw.githubusercontent.com/Microsoft/sql-server-samples/master/samples/features/sql-big-data-cluster/spark/data-loading/transform-csv-files.ipynb -o transform-csv-files.ipynb
    ```
 
 ## <a name="open-the-notebook"></a>Notebook 열기
@@ -53,11 +53,11 @@ ms.locfileid: "91725811"
 
 1. Azure Data Studio에서 빅 데이터 클러스터의 마스터 인스턴스에 연결합니다. 자세한 내용은 [빅 데이터 클러스터에 연결](connect-to-big-data-cluster.md)을 참조하세요.
 
-1. **서버** 창에서 HDFS/Spark 게이트웨이 연결을 두 번 클릭합니다. 그런 다음, **Notebook 열기**를 선택합니다.
+1. **서버** 창에서 HDFS/Spark 게이트웨이 연결을 두 번 클릭합니다. 그런 다음, **Notebook 열기** 를 선택합니다.
 
    ![Notebook 열기](media/notebook-tutorial-spark/azure-data-studio-open-notebook.png)
 
-1. **커널** 및 대상 컨텍스트(**연결 대상**)가 채워질 때까지 기다립니다. **커널**을 **PySpark3**으로, **연결 대상**을 빅 데이터 클러스터 엔드포인트의 IP 주소로 설정합니다.
+1. **커널** 및 대상 컨텍스트( **연결 대상** )가 채워질 때까지 기다립니다. **커널** 을 **PySpark3** 으로, **연결 대상** 을 빅 데이터 클러스터 엔드포인트의 IP 주소로 설정합니다.
 
    ![커널 및 연결 대상 설정](media/notebook-tutorial-spark/set-kernel-and-attach-to.png)
 
