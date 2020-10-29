@@ -23,13 +23,13 @@ author: dzsquared
 ms.author: drskwier
 ms.reviewer: maghan
 ms.custom: seo-lt-2019
-ms.date: 10/20/2020
-ms.openlocfilehash: e86a46603aeac49d0622f17c0520eb7d16970948
-ms.sourcegitcommit: ead0b8c334d487a07e41256ce5d6acafa2d23c9d
+ms.date: 10/27/2020
+ms.openlocfilehash: 3dec5e211db8ae21d7b5425c4d66c727bf1b4efd
+ms.sourcegitcommit: b09f069c6bef0655b47e9953a4385f1b52bada2b
 ms.translationtype: HT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 10/22/2020
-ms.locfileid: "92412637"
+ms.lasthandoff: 10/27/2020
+ms.locfileid: "92734656"
 ---
 # <a name="download-sql-server-management-studio-ssms"></a>SSMS(SQL Server Management Studio) 다운로드
 
@@ -43,17 +43,17 @@ SSMS(SQL Server Management Studio)는 SQL Server에서 Azure SQL Database까지 
 
 :::image type="icon" source="media/download-icon.png" border="false"::: **[SSMS(SQL Server Management Studio) 다운로드](https://aka.ms/ssmsfullsetup)**
 
-SSMS 18.7은 SSMS의 최신 GA(일반 공급) 버전입니다. 이전 GA 버전의 SSMS 18이 설치된 경우 SSMS 18.7을 설치하면 이 버전이 18.7로 업그레이드됩니다.
+SSMS 18.7.1은 SSMS의 최신 GA(일반 공급) 버전입니다. 이전 GA 버전의 SSMS 18이 설치된 경우 SSMS 18.7.1을 설치하면 이 버전이 18.7.1로 업그레이드됩니다.
 
 [!INCLUDE [ssms-ads-install](../includes/ssms-azure-data-studio-install.md)]
 
-- 릴리스 번호: 18.7
-- 빌드 번호: 15.0.18357.0
-- 릴리스 날짜: 2020년 10월 20일
+- 릴리스 번호: 18.7.1
+- 빌드 번호: 15.0.18358.0
+- 릴리스 날짜: 2020년 10월 27일
 
 의견 또는 제안 사항이 있거나 문제를 보고하려는 경우 SSMS 팀에 연락하는 가장 좋은 방법은 [SQL Server 사용자 피드백](https://aka.ms/sqlfeedback)을 사용하는 것입니다.
 
-SSMS 18.x 설치는 SSMS 17.x 이전 버전을 업그레이드 또는 대체하지 않습니다. SSMS 18.x는 이전 버전과 함께 설치되므로 두 버전을 모두 사용할 수 있습니다. 그러나 SSMS 18.x의 ‘미리 보기’ 버전이 설치된 경우에는 해당 버전을 제거한 후에 SSMS 18.7을 설치해야 합니다. **도움말 > 정보** 창으로 이동하여 미리 보기 버전이 있는지 확인할 수 있습니다.
+SSMS 18.x 설치는 SSMS 17.x 이전 버전을 업그레이드 또는 대체하지 않습니다. SSMS 18.x는 이전 버전과 함께 설치되므로 두 버전을 모두 사용할 수 있습니다. 그러나 SSMS 18.x의 ‘미리 보기’ 버전이 설치된 경우에는 해당 버전을 제거한 후에 SSMS 18.7.1을 설치해야 합니다. **도움말 > 정보** 창으로 이동하여 미리 보기 버전이 있는지 확인할 수 있습니다.
 
 컴퓨터에 SSMS가 병렬로 설치되어 있으면 특정 요구에 맞는 올바른 버전을 시작해야 합니다. 최신 버전에는 **Microsoft SQL Server Management Studio 18** 레이블이 지정됩니다.
 
@@ -64,8 +64,8 @@ SSMS 18.x 설치는 SSMS 17.x 이전 버전을 업그레이드 또는 대체하�
 
 이 SSMS 릴리스는 다음 언어로 설치할 수 있습니다.
 
-SQL Server Management Studio 18.7:  
-[중국어(간체)](https://go.microsoft.com/fwlink/?linkid=2146265&clcid=0x804) | [중국어(번체)](https://go.microsoft.com/fwlink/?linkid=2146265&clcid=0x404) | [영어(미국)](https://go.microsoft.com/fwlink/?linkid=2146265&clcid=0x409) | [프랑스어](https://go.microsoft.com/fwlink/?linkid=2146265&clcid=0x40c) | [독일어](https://go.microsoft.com/fwlink/?linkid=2146265&clcid=0x407) | [이탈리아어](https://go.microsoft.com/fwlink/?linkid=2146265&clcid=0x410) | [일본어](https://go.microsoft.com/fwlink/?linkid=2146265&clcid=0x411) | [한국어](https://go.microsoft.com/fwlink/?linkid=2146265&clcid=0x412) | [포르투갈어(브라질)](https://go.microsoft.com/fwlink/?linkid=2146265&clcid=0x416) | [러시아어](https://go.microsoft.com/fwlink/?linkid=2146265&clcid=0x419) | [스페인어](https://go.microsoft.com/fwlink/?linkid=2146265&clcid=0x40a)
+SQL Server Management Studio 18.7.1:  
+[중국어(간체)](https://go.microsoft.com/fwlink/?linkid=2147207&clcid=0x804) | [중국어(번체)](https://go.microsoft.com/fwlink/?linkid=2147207&clcid=0x404) | [영어(미국)](https://go.microsoft.com/fwlink/?linkid=2147207&clcid=0x409) | [프랑스어](https://go.microsoft.com/fwlink/?linkid=2147207&clcid=0x40c) | [독일어](https://go.microsoft.com/fwlink/?linkid=2147207&clcid=0x407) | [이탈리아어](https://go.microsoft.com/fwlink/?linkid=2147207&clcid=0x410) | [일본어](https://go.microsoft.com/fwlink/?linkid=2147207&clcid=0x411) | [한국어](https://go.microsoft.com/fwlink/?linkid=2147207&clcid=0x412) | [포르투갈어(브라질)](https://go.microsoft.com/fwlink/?linkid=2147207&clcid=0x416) | [러시아어](https://go.microsoft.com/fwlink/?linkid=2147207&clcid=0x419) | [스페인어](https://go.microsoft.com/fwlink/?linkid=2147207&clcid=0x40a)
 
 > [!NOTE]
 > SQL Server PowerShell 모듈은 PowerShell 갤러리를 통해 별도로 설치됩니다. 자세한 내용은 [SQL Server PowerShell 모듈 다운로드](download-sql-server-ps-module.md)를 참조하세요.
@@ -74,7 +74,7 @@ SQL Server Management Studio 18.7:
 
 이 릴리스의 새로운 기능에 대한 자세한 내용은 S[SSMS 릴리스 정보](release-notes-ssms.md)를 참조하세요.
 
-이 릴리스에는 몇 가지 [알려진 문제](release-notes-ssms.md#known-issues-187)가 있습니다.
+이 릴리스에는 몇 가지 [알려진 문제](release-notes-ssms.md#known-issues-1871)가 있습니다.
 
 ## <a name="previous-versions"></a>이전 버전
 
@@ -102,7 +102,7 @@ GUI 프롬프트 없이 백그라운드에서 SSMS를 설치하려면 아래 단
     start "" /w %systemdrive%\SSMSfrom\SSMS-Setup-ENU.exe /Quiet SSMSInstallRoot=%systemdrive%\SSMSto
     ```
 
-    */Quiet* 대신 */Passive*를 전달하여 설치 UI를 표시할 수도 있습니다.
+    */Quiet* 대신 */Passive* 를 전달하여 설치 UI를 표시할 수도 있습니다.
 
 3. 모두 제대로 완료되면, 예제의 경우 SSMS가 %systemdrive%\SSMSto\Common7\IDE\Ssms.exe에 설치된 것을 확인할 수 있습니다. 오류가 발생한 경우에는 반환된 오류 코드를 검사하고 %TEMP%\SSMSSetup에서 로그 파일을 살펴볼 수 있습니다.
 

@@ -4,7 +4,7 @@ title: MERGE(Transact-SQL) | Microsoft Docs
 ms.custom: ''
 ms.date: 08/20/2019
 ms.prod: sql
-ms.prod_service: database-engine, sql-database
+ms.prod_service: database-engine, sql-database, sql-data-warehouse
 ms.reviewer: ''
 ms.technology: t-sql
 ms.topic: language-reference
@@ -25,20 +25,23 @@ helpviewer_keywords:
 ms.assetid: c17996d6-56a6-482f-80d8-086a3423eecc
 author: XiaoyuMSFT
 ms.author: XiaoyuL
-ms.openlocfilehash: 86f620b1c99345134a0768574d44da2bbae11c6b
-ms.sourcegitcommit: 9774e2cb8c07d4f6027fa3a5bb2852e4396b3f68
+ms.openlocfilehash: 664ef8a40e341f52bda0658d532849a278ae49b9
+ms.sourcegitcommit: 22e97435c8b692f7612c4a6d3fe9e9baeaecbb94
 ms.translationtype: HT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 10/15/2020
-ms.locfileid: "92098852"
+ms.lasthandoff: 10/27/2020
+ms.locfileid: "92679081"
 ---
 # <a name="merge-transact-sql"></a>MERGE(Transact-SQL)
 
 [!INCLUDE [SQL Server SQL Database](../../includes/applies-to-version/sql-asdb-asa.md)]
 
-원본 테이블과의 조인 결과를 기반으로 대상 테이블에서 삽입, 업데이트 또는 삭제 작업을 실행합니다. 예를 들어 원본 테이블과의 차이점에 따라 대상 테이블에서 행을 삽입, 업데이트 및 삭제하여 두 테이블을 동기화합니다.  
+원본 테이블과의 조인 결과를 기반으로 대상 테이블에서 삽입, 업데이트 또는 삭제 작업을 실행합니다. 예를 들어 원본 테이블과의 차이점에 따라 대상 테이블에서 행을 삽입, 업데이트 및 삭제하여 두 테이블을 동기화합니다. 
+
+> [!NOTE]
+> MERGE는 현재 Azure Synapse Analytics에서 미리 보기로 제공됩니다.
   
-**성능 팁:** MERGE 문에 대해 설명된 조건부 동작은 두 테이블에 일치하는 특성이 복합적으로 혼합되어 있는 경우 가장 효과적입니다. 예를 들어, 행이 없는 경우 행을 삽입하고 행이 일치하지 않는 경우 행을 업데이트합니다. 다른 테이블의 행을 기반으로 한 테이블을 단순히 업데이트하는 경우 기본 INSERT, UPDATE 및 DELETE 문을 사용하여 성능 및 확장성을 향상합니다. 다음은 그 예입니다.   
+**성능 팁:** MERGE 문에 대해 설명된 조건부 동작은 두 테이블에 일치하는 특성이 복합적으로 혼합되어 있는 경우 가장 효과적입니다. 예를 들어, 행이 없는 경우 행을 삽입하고 행이 일치하지 않는 경우 행을 업데이트합니다. 다른 테이블의 행을 기반으로 한 테이블을 단순히 업데이트하는 경우 기본 INSERT, UPDATE 및 DELETE 문을 사용하여 성능 및 확장성을 향상합니다. 예를 들면 다음과 같습니다.  
   
 ```sql
 INSERT tbl_A (col, col2)  
@@ -123,30 +126,30 @@ WITH \<common_table_expression>
 MERGE 문의 범위 내에 정의된 임시로 명명된 결과 집합 또는 뷰(공통 테이블 식)를 지정합니다. 결과 집합은 단순 쿼리에서 파생되며 MERGE 문에서 참조됩니다. 자세한 내용은 [WITH common_table_expression&#40;Transact-SQL&#41;](../../t-sql/queries/with-common-table-expression-transact-sql.md)을 참조하세요.  
   
 TOP ( *expression* ) [ PERCENT ]  
-영향을 받는 행의 개수 또는 비율을 지정합니다. *식*은 행의 수 또는 비율일 수 있습니다. TOP 식에서 참조하는 행은 어떠한 순서로도 정렬되지 않습니다. 자세한 내용은 [TOP&#40;Transact-SQL&#41;](../../t-sql/queries/top-transact-sql.md)을 참조하세요.  
+영향을 받는 행의 개수 또는 비율을 지정합니다. *식* 은 행의 수 또는 비율일 수 있습니다. TOP 식에서 참조하는 행은 어떠한 순서로도 정렬되지 않습니다. 자세한 내용은 [TOP&#40;Transact-SQL&#41;](../../t-sql/queries/top-transact-sql.md)을 참조하세요.  
   
 TOP 절은 전체 원본 테이블과 전체 대상 테이블이 조인되고 조인된 행 중 삽입, 업데이트 또는 삭제 동작에 적합하지 않은 행이 제거된 후에 적용됩니다. TOP 절은 조인된 행 수를 지정된 값으로 더 줄입니다. 삽입, 업데이트 또는 삭제 동작은 나머지 조인된 행에 순서 없이 적용됩니다. 즉, 행은 WHEN 절에 정의된 동작에 순서 없이 분산됩니다. 예를 들어 TOP (10)을 지정하면 10개 행이 영향을 받습니다. 이 10개의 행 중 7개가 업데이트되고 3개가 삽입되거나, 1개가 삭제되고 5개가 업데이트되고 4개가 삽입될 수 있습니다.  
   
 MERGE 문은 원본과 대상 테이블 모두에 전체 테이블 검색을 수행하므로 큰 테이블을 수정하기 위해 TOP 절을 사용하여 다중 일괄 처리를 생성하는 경우에는 I/O 성능에 영향을 주는 경우도 있습니다. 이러한 시나리오에서 연속된 모든 일괄 처리는 새로운 행을 대상으로 해야 합니다.  
   
 *database_name*  
-*target_table*이 있는 데이터베이스의 이름입니다.  
+*target_table* 이 있는 데이터베이스의 이름입니다.  
   
 *schema_name*  
-*target_table*이 속해 있는 스키마의 이름입니다.  
+*target_table* 이 속해 있는 스키마의 이름입니다.  
   
 *target_table*  
-\<clause_search_condition>을 기준으로 \<table_source>의 데이터 행과 일치하는 테이블이나 뷰입니다. *target_table*은 MERGE 문의 WHEN 절에 지정된 삽입, 업데이트 또는 삭제 작업의 대상입니다.  
+\<clause_search_condition>을 기준으로 \<table_source>의 데이터 행과 일치하는 테이블이나 뷰입니다. *target_table* 은 MERGE 문의 WHEN 절에 지정된 삽입, 업데이트 또는 삭제 작업의 대상입니다.  
   
-*target_table*이 뷰일 경우 이에 대한 모든 동작은 뷰 업데이트 조건을 충족해야 합니다. 자세한 내용은 [뷰를 통해 데이터 수정](../../relational-databases/views/modify-data-through-a-view.md)을 참조하세요.  
+*target_table* 이 뷰일 경우 이에 대한 모든 동작은 뷰 업데이트 조건을 충족해야 합니다. 자세한 내용은 [뷰를 통해 데이터 수정](../../relational-databases/views/modify-data-through-a-view.md)을 참조하세요.  
   
-*target_table*은 원격 테이블일 수 없습니다. 또한 *target_table*은 정의된 규칙을 포함할 수 없습니다.  
+*target_table* 은 원격 테이블일 수 없습니다. 또한 *target_table* 은 정의된 규칙을 포함할 수 없습니다.  
   
 [ AS ] *table_alias*  
-*target_table*의 테이블을 참조하기 위한 대체 이름입니다.  
+*target_table* 의 테이블을 참조하기 위한 대체 이름입니다.  
   
 USING \<table_source>  
-\<merge_search condition>을 기준으로 *target_table*의 데이터 행과 일치하는 데이터 원본을 지정합니다. 이 결과는 MERGE 문의 WHEN 절에서 수행할 동작을 나타냅니다. \<table_source>는 원격 테이블이나 원격 테이블에 액세스하는 파생 테이블일 수 있습니다.
+\<merge_search condition>을 기준으로 *target_table* 의 데이터 행과 일치하는 데이터 원본을 지정합니다. 이 결과는 MERGE 문의 WHEN 절에서 수행할 동작을 나타냅니다. \<table_source>는 원격 테이블이나 원격 테이블에 액세스하는 파생 테이블일 수 있습니다.
   
 \<table_source>는 [!INCLUDE[tsql](../../includes/tsql-md.md)] [테이블 값 생성자](../../t-sql/queries/table-value-constructor-transact-sql.md)를 사용해 여러 행을 지정하여 테이블을 생성하는 파생 테이블일 수 있습니다.  
   
@@ -156,7 +159,7 @@ table_source의 테이블을 참조하기 위한 대체 이름입니다.
 이 절의 구문 및 인수에 대한 자세한 내용은 [FROM &#40;Transact-SQL&#41;](../../t-sql/queries/from-transact-sql.md)을 참조하세요.  
   
 ON \<merge_search_condition>  
-일치하는 부분을 확인하기 위해 \<table_source>와 *target_table*을 조인하는 조건을 지정합니다.
+일치하는 부분을 확인하기 위해 \<table_source>와 *target_table* 을 조인하는 조건을 지정합니다.
   
 > [!CAUTION]  
 > 일치 용도로 사용되는 대상 테이블에서는 열만 지정하는 것이 중요합니다. 즉, 대상 테이블에서 원본 테이블의 해당 열과 비교할 열을 지정해야 합니다. 예를 들어 `AND NOT target_table.column_x = value`를 지정하는 것과 같이 ON 절에서 대상 테이블의 행을 필터링하여 쿼리 성능을 향상하려고 하면 안 됩니다. 그렇게 하면 예기치 않은 잘못된 결과가 반환될 수 있습니다.  
@@ -164,10 +167,10 @@ ON \<merge_search_condition>
 WHEN MATCHED THEN \<merge_matched>  
 \<table_source> ON \<merge_search_condition>에서 반환되는 행과 일치하고 추가 검색 조건을 만족하는 *target_table의 모든 행이 \<merge_matched> 절에 따라 업데이트되거나 삭제되도록 지정합니다.  
   
-MERGE 문에는 최대 두 개의 WHEN MATCHED 절이 포함될 수 있습니다. WHEN MATCHED 절을 두 개 지정할 경우 첫 번째 절과 함께 AND \<search_condition> 절을 지정해야 합니다. 지정된 행에 대해 두 번째 WHEN MATCHED 절은 첫 번째 WHEN MATCHED 절이 적용되지 않은 경우에만 적용됩니다. WHEN MATCHED 절이 두 개 있는 경우 하나는 UPDATE 동작을 지정해야 하고 다른 하나는 DELETE 동작을 지정해야 합니다. UPDATE가 \<merge_matched> 절에 지정되어 있고 \<merge_search_condition>을 기준으로 둘 이상의 \<table_source> 행이 *target_table*의 행과 일치하면 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]는 오류를 반환합니다. MERGE 문은 동일한 행을 여러 번 업데이트하거나 업데이트하고 삭제할 수 없습니다.  
+MERGE 문에는 최대 두 개의 WHEN MATCHED 절이 포함될 수 있습니다. WHEN MATCHED 절을 두 개 지정할 경우 첫 번째 절과 함께 AND \<search_condition> 절을 지정해야 합니다. 지정된 행에 대해 두 번째 WHEN MATCHED 절은 첫 번째 WHEN MATCHED 절이 적용되지 않은 경우에만 적용됩니다. WHEN MATCHED 절이 두 개 있는 경우 하나는 UPDATE 동작을 지정해야 하고 다른 하나는 DELETE 동작을 지정해야 합니다. UPDATE가 \<merge_matched> 절에 지정되어 있고 \<merge_search_condition>을 기준으로 둘 이상의 \<table_source> 행이 *target_table* 의 행과 일치하면 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]는 오류를 반환합니다. MERGE 문은 동일한 행을 여러 번 업데이트하거나 업데이트하고 삭제할 수 없습니다.  
   
 WHEN NOT MATCHED [ BY TARGET ] THEN \<merge_not_matched>  
-\<table_source> ON \<merge_search_condition>에서 반환되는 행 중 *target_table*의 행과 일치하지 않지만 추가 검색 조건(있을 경우)을 충족하는 모든 행에 대해 *target_table*에 행이 삽입되도록 지정합니다. 삽입할 값은 \<merge_not_matched> 절에 지정됩니다. MERGE 문에는 WHEN NOT MATCHED [ BY TARGET ] 절이 하나만 포함될 수 있습니다.
+\<table_source> ON \<merge_search_condition>에서 반환되는 행 중 *target_table* 의 행과 일치하지 않지만 추가 검색 조건(있을 경우)을 충족하는 모든 행에 대해 *target_table* 에 행이 삽입되도록 지정합니다. 삽입할 값은 \<merge_not_matched> 절에 지정됩니다. MERGE 문에는 WHEN NOT MATCHED [ BY TARGET ] 절이 하나만 포함될 수 있습니다.
 
 WHEN NOT MATCHED BY SOURCE THEN \<merge_matched>  
 \<table_source> ON \<merge_search_condition>에서 반환되는 행과 일치하지 않고 추가 검색 조건을 만족하는 *target_table의 모든 행이 \<merge_matched> 절에 따라 업데이트되거나 삭제되도록 지정합니다.  
@@ -193,13 +196,13 @@ INDEX ( index_val [ ,...n ] )
 원본 테이블과의 암시적 조인을 수행하는 대상 테이블에 있는 하나 이상의 인덱스에 대한 이름 또는 ID를 지정합니다. 자세한 내용은 [테이블 힌트&#40;Transact-SQL&#41;](../../t-sql/queries/hints-transact-sql-table.md)를 참조하세요.  
   
 \<output_clause>  
-업데이트, 삽입 또는 삭제되는 *target_table*의 모든 행과 일치하는 행을 임의의 순서로 반환합니다. **$action**은 OUTPUT 절에서 지정할 수 있습니다. **$action**은 각 행에 대한 세 가지 값 중 하나를 반환하는 **nvarchar(10)** 형식의 열입니다. 이 열은 해당 행에서 수행된 동작에 따라 'INSERT', 'UPDATE' 또는 'DELETE' 중 하나를 각 행의 값으로 반환합니다. 이 절의 인수 및 동작에 대한 자세한 내용은 [OUTPUT Clause &#40;Transact-SQL&#41;](../../t-sql/queries/output-clause-transact-sql.md)을 참조하세요.  
+업데이트, 삽입 또는 삭제되는 *target_table* 의 모든 행과 일치하는 행을 임의의 순서로 반환합니다. **$action** 은 OUTPUT 절에서 지정할 수 있습니다. **$action** 은 각 행에 대한 세 가지 값 중 하나를 반환하는 **nvarchar(10)** 형식의 열입니다. 이 열은 해당 행에서 수행된 동작에 따라 'INSERT', 'UPDATE' 또는 'DELETE' 중 하나를 각 행의 값으로 반환합니다. 이 절의 인수 및 동작에 대한 자세한 내용은 [OUTPUT Clause &#40;Transact-SQL&#41;](../../t-sql/queries/output-clause-transact-sql.md)을 참조하세요.  
   
 OPTION ( \<query_hint> [ ,...n ] )  
 최적화 프로그램 힌트를 사용하여 데이터베이스 엔진이 문을 처리하는 방법을 사용자 지정하도록 지정합니다. 자세한 내용은 [쿼리 힌트&#40;Transact-SQL&#41;](../../t-sql/queries/hints-transact-sql-query.md)를 참조하세요.  
   
 \<merge_matched>  
-\<table_source> ON \<merge_search_condition>에서 반환되는 행과 일치하지 않고 추가 검색 조건을 만족하는 *target_table*의 모든 행에 적용되는 업데이트 또는 삭제 동작을 지정합니다.  
+\<table_source> ON \<merge_search_condition>에서 반환되는 행과 일치하지 않고 추가 검색 조건을 만족하는 *target_table* 의 모든 행에 적용되는 업데이트 또는 삭제 동작을 지정합니다.  
   
 UPDATE SET \<set_clause>  
 대상 테이블에서 업데이트할 열 또는 변수 이름의 목록 및 이 목록을 업데이트하는 데 사용할 값을 지정합니다.  
@@ -207,15 +210,15 @@ UPDATE SET \<set_clause>
 이 절의 인수에 대한 자세한 내용은 [UPDATE &#40;Transact-SQL&#41;](../../t-sql/queries/update-transact-sql.md)을 참조하세요. 변수를 열과 동일한 값으로 설정할 수는 없습니다.  
   
 Delete  
-*target_table*의 행과 일치하는 행이 삭제되도록 지정합니다.  
+*target_table* 의 행과 일치하는 행이 삭제되도록 지정합니다.  
   
 \<merge_not_matched>  
 대상 테이블에 삽입할 값을 지정합니다.  
   
-(*column_list*)  
-데이터를 삽입할 대상 테이블에 있는 하나 이상의 열 목록입니다. 열은 한 부분으로 구성된 이름으로 지정해야 합니다. 그러지 않으면 MERGE 문이 실패합니다. *column_list*는 괄호로 묶고 쉼표로 구분해야 합니다.  
+( *column_list* )  
+데이터를 삽입할 대상 테이블에 있는 하나 이상의 열 목록입니다. 열은 한 부분으로 구성된 이름으로 지정해야 합니다. 그러지 않으면 MERGE 문이 실패합니다. *column_list* 는 괄호로 묶고 쉼표로 구분해야 합니다.  
   
-VALUES ( *values_list*)  
+VALUES ( *values_list* )  
 대상 테이블에 삽입할 값을 반환하는 상수, 변수 또는 식의 쉼표로 구분된 목록입니다. 식에는 EXECUTE 문이 포함될 수 없습니다.  
   
 DEFAULT VALUES  
@@ -233,6 +236,7 @@ DEFAULT VALUES
 >[!NOTE]
 > Azure Synapse Analytics에서 MERGE 명령(미리 보기)은 SQL Server 및 Azure SQL Database에 비해 다음과 같은 차이점이 있습니다.  
 > - MERGE 업데이트는 삭제 및 삽입 쌍으로 구현됩니다. MERGE 업데이트의 영향을 받는 행 수에는 삭제된 행과 삽입된 행이 포함됩니다. 
+> - 미리 보기 중에는 UNIQUE 제약 조건이 있는 테이블에서 MERGE 명령이 작동하지 않습니다.  이 문제는 향후 릴리스에서 곧 해결될 예정입니다.
 > - 다음 표에서는 배포 유형이 다른 테이블에 대한 지원을 설명합니다.
 
 >|Azure Synapse Analytics의 MERGE CLAUSE|지원되는 대상 배포 테이블| 지원되는 원본 배포 테이블|의견|  
@@ -260,9 +264,9 @@ MERGE 문에 지정된 모든 삽입, 업데이트 또는 삭제 동작에 대�
   
 대상 테이블에 MERGE 문에서 수행하는 삽입, 업데이트 또는 삭제 동작에 대해 정의된 INSTEAD OF 트리거가 활성화되어 있으면 MERGE 문에 지정된 모든 동작에 대해서도 INSTEAD OF 트리거가 활성화되어 있어야 합니다.  
   
-*target_table*에 INSTEAD OF UPDATE 또는 INSTEAD OF DELETE 트리거가 정의되어 있으면 업데이트 또는 삭제 작업이 실행되지 않습니다. 대신 트리거가 실행되고 이에 따라 **inserted** 및 **deleted** 테이블이 채워집니다.  
+*target_table* 에 INSTEAD OF UPDATE 또는 INSTEAD OF DELETE 트리거가 정의되어 있으면 업데이트 또는 삭제 작업이 실행되지 않습니다. 대신 트리거가 실행되고 이에 따라 **inserted** 및 **deleted** 테이블이 채워집니다.  
   
-*target_table*에 INSTEAD OF INSERT 트리거가 정의되어 있으면 삽입 작업이 수행되지 않습니다. 대신, 이에 따라 테이블이 채워집니다.  
+*target_table* 에 INSTEAD OF INSERT 트리거가 정의되어 있으면 삽입 작업이 수행되지 않습니다. 대신, 이에 따라 테이블이 채워집니다.  
   
 ## <a name="permissions"></a>사용 권한
 

@@ -1830,7 +1830,7 @@
       items:
         - name: 관리
           items:
-            - name: 생성
+            - name: 만들기
               href: relational-databases/tables/create-tables-database-engine.md
             - name: DELETE
               href: relational-databases/tables/delete-tables-database-engine.md
@@ -7143,7 +7143,7 @@
             - name: Stack Overflow >>
               href: 'https://stackoverflow.com/questions/tagged/sql-server'
             - name: Microsoft Q & A >>
-              href: 'https://https://docs.microsoft.com/answers/products/sql-server'
+              href: 'https://docs.microsoft.com/answers/products/sql-server'
             - name: 사용자 의견 보내기 >>
               href: 'https://feedback.azure.com/forums/908035-sql-server'
             - name: Reddit >>
@@ -7996,8 +7996,6 @@
           href: tools/profiler-utility.md
         - name: sqlagent90 애플리케이션
           href: tools/sqlagent90-application.md
-        - name: sqlcmd
-          href: tools/sqlcmd-utility.md
         - name: SQLdiag
           href: tools/sqldiag-utility.md
         - name: sqlmaint
@@ -8291,6 +8289,8 @@
               href: tools/configuration-manager/viewing-the-windows-application-log.md
     - name: SQLCMD
       items:
+        - name: sqlcmd 개요
+          href: tools/sqlcmd-utility.md
         - name: 유틸리티 시작
           href: ssms/scripting/sqlcmd-start-the-utility.md
         - name: 유틸리티 사용
@@ -10099,7 +10099,7 @@
                       href: linux/sql-server-linux-availability-group-cluster-sles.md
                     - name: Ubuntu에서 구성
                       href: linux/sql-server-linux-availability-group-cluster-ubuntu.md
-                    - name: 장애 조치
+                    - name: '장애 조치 '
                       href: linux/sql-server-linux-availability-group-failover-ha.md
                     - name: 운영
                       href: linux/sql-server-linux-availability-group-operate-ha.md

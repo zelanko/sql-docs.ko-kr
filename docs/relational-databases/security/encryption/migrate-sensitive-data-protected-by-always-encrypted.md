@@ -14,12 +14,12 @@ ms.assetid: b2ca08ed-a927-40fb-9059-09496752595e
 author: jaszymas
 ms.author: jaszymas
 monikerRange: =azuresqldb-current||>=sql-server-2016||=sqlallproducts-allversions||>=sql-server-linux-2017||=azuresqldb-mi-current
-ms.openlocfilehash: 22ad17c49a2f084453c87f26b9c782404f93483d
-ms.sourcegitcommit: da88320c474c1c9124574f90d549c50ee3387b4c
+ms.openlocfilehash: 435c9e512278d3954c46e543ab6d68610f1cbdfc
+ms.sourcegitcommit: 22e97435c8b692f7612c4a6d3fe9e9baeaecbb94
 ms.translationtype: HT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 07/01/2020
-ms.locfileid: "85784031"
+ms.lasthandoff: 10/27/2020
+ms.locfileid: "92679264"
 ---
 # <a name="bulk-load-encrypted-data-to-columns-using-always-encrypted"></a>Always Encrypted를 사용하여 암호화된 데이터를 열에 대량 로드
 [!INCLUDE [SQL Server Azure SQL Database](../../../includes/applies-to-version/sql-asdb.md)]
@@ -32,7 +32,7 @@ ms.locfileid: "85784031"
 ## <a name="data-migration-scenarios"></a>데이터 마이그레이션 시나리오  
 다음 표는 몇 가지 마이그레이션 시나리오에 적합한 권장된 설정을 보여줍니다.  
  
-![always-encrypted-migration](../../../relational-databases/security/encryption/media/always-encrypted-migration.PNG "always-encrypted-migration")  
+![몇 가지 마이그레이션 시나리오에 적합한 권장 설정을 보여 주는 표 스크린샷](../../../relational-databases/security/encryption/media/always-encrypted-migration.PNG "always-encrypted-migration")  
 
 ## <a name="bulk-loading-of-encrypted-data"></a>암호화된 데이터의 대량 로드  
 다음 프로세스를 사용하여 암호화된 데이터를 로드합니다.  
@@ -58,7 +58,7 @@ ms.locfileid: "85784031"
 
 1.  옵션은 사용자에 대해 ON으로 설정되어 있습니다.  
  
-2.  사용자는 데이터베이스에 연결하는 애플리케이션을 실행합니다. 애플리케이션은 대량 API를 사용하여 일반 텍스트 값을 암호화된 열에 삽입합니다. 애플리케이션은 상시 암호화가 사용 설정된 클라이언트 드라이버가 삽입 시 데이터를 암호할 것을 예상합니다. 그러나 애플리케이션이 잘못 구성되어 있으므로, 상시 암호화를 지원하지 않는 드라이버 사용을 종료하거나 연결 문자열에 **column encryption setting=enabled**가 포함되지 않습니다.  
+2.  사용자는 데이터베이스에 연결하는 애플리케이션을 실행합니다. 애플리케이션은 대량 API를 사용하여 일반 텍스트 값을 암호화된 열에 삽입합니다. 애플리케이션은 상시 암호화가 사용 설정된 클라이언트 드라이버가 삽입 시 데이터를 암호할 것을 예상합니다. 그러나 애플리케이션이 잘못 구성되어 있으므로, 상시 암호화를 지원하지 않는 드라이버 사용을 종료하거나 연결 문자열에 **column encryption setting=enabled** 가 포함되지 않습니다.  
 
 3.  애플리케이션은 서버에 일반 텍스트 값을 보냅니다. 암호화 메타데이터 검사가 사용자에 대해 서버에서 사용하지 않도록 설정되어 있으므로, 서버는 잘못된 데이터(올바르게 암호화된 암호 텍스트 대신 일반 텍스트)를 암호화된 열로 삽입하게 됩니다.  
  

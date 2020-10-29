@@ -10,12 +10,12 @@ ms.topic: conceptual
 ms.assetid: 861862fa-9900-4ec0-9494-9874ef52ce65
 author: julieMSFT
 ms.author: jrasnick
-ms.openlocfilehash: 438bb53d76763ecb7179638591f0353cb1bedf6f
-ms.sourcegitcommit: 783b35f6478006d654491cb52f6edf108acf2482
+ms.openlocfilehash: 7f95a343074ce2fb9f7f54c3121b0db6beafe34d
+ms.sourcegitcommit: 22e97435c8b692f7612c4a6d3fe9e9baeaecbb94
 ms.translationtype: HT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 10/09/2020
-ms.locfileid: "91891893"
+ms.lasthandoff: 10/27/2020
+ms.locfileid: "92679237"
 ---
 # <a name="configuring-storage-spaces-with-a-nvdimm-n-write-back-cache"></a>NVDIMM-N 쓰기 저장 캐시를 사용하여 스토리지 공간 구성
  [!INCLUDE [SQL Server](../../includes/applies-to-version/sqlserver.md)]
@@ -30,7 +30,7 @@ ms.locfileid: "91891893"
 Get-PhysicalDisk | Select FriendlyName, MediaType, BusType  
 ```  
   
- ![Get-PhysicalDisk](../../relational-databases/performance/media/get-physicaldisk.png "Get-PhysicalDisk")  
+ ![Get-PhysicalDisk cmdlet의 출력을 보여 주는 Windows Powershell 창 스크린샷](../../relational-databases/performance/media/get-physicaldisk.png "Get-PhysicalDisk")  
   
 > [!NOTE]  
 >  NVDIMM-N 디바이스에서는 더 이상 쓰기 저장 캐시 대상이 될 수 있는 디바이스를 특별히 선택하지 않아도 됩니다.  
@@ -47,7 +47,7 @@ $pd =  Get-PhysicalDisk | Select FriendlyName, MediaType, BusType | WHere-Object
 $pd | Select FriendlyName, MediaType, BusType  
 ```  
   
- ![Select FriendlyName](../../relational-databases/performance/media/select-friendlyname.png "Select FriendlyName")  
+ ![$pd cmdlet의 출력을 보여 주는 Windows Powershell 창 스크린샷](../../relational-databases/performance/media/select-friendlyname.png "Select FriendlyName")  
   
 ## <a name="creating-the-storage-pool"></a>스토리지 풀 만들기  
  PhysicalDisks를 포함하는 $pd 변수를 사용하면 New-StoragePool PowerShell cmdlet을 사용하여 스토리지 풀을 쉽게 빌드할 수 있습니다.  
@@ -56,7 +56,7 @@ $pd | Select FriendlyName, MediaType, BusType
 New-StoragePool -StorageSubSystemFriendlyName "Windows Storage*" -FriendlyName NVDIMM_Pool -PhysicalDisks $pd  
 ```  
   
- ![New-StoragePool](../../relational-databases/performance/media/new-storagepool.png "New-StoragePool")  
+ ![New-StoragePool cmdlet의 출력을 보여 주는 Windows Powershell 창 스크린샷](../../relational-databases/performance/media/new-storagepool.png "New-StoragePool")  
   
 ## <a name="creating-the-virtual-disk-and-volume"></a>가상 디스크 및 볼륨 만들기  
  이제 풀을 만들었으며 다음 단계는 가상 디스크를 지정하고 서식을 지정하는 것입니다. 이 경우 하나의 가상 디스크만 만들어지고 New-Volume PowerShell cmdlet을 사용하여 이 프로세스를 간소화할 수 있습니다.  
@@ -65,15 +65,15 @@ New-StoragePool -StorageSubSystemFriendlyName "Windows Storage*" -FriendlyName N
 New-Volume -StoragePool (Get-StoragePool -FriendlyName NVDIMM_Pool) -FriendlyName Log_Space -Size 300GB -FileSystem NTFS -AccessPath S: -ResiliencySettingName Mirror  
 ```  
   
- ![New-Volume](../../relational-databases/performance/media/new-volume.png "New-Volume")  
+ ![New-Volume cmdlet의 출력을 보여 주는 Windows Powershell 창 스크린샷](../../relational-databases/performance/media/new-volume.png "New-Volume")  
   
  가상 디스크가 만들어지고 초기화되며 NTFS로 포맷됩니다. 아래 화면 캡처에서 가상 디스크 크기는 300GB, 쓰기 캐시 크기는 1GB로, NVDIMM-N에서 호스트됩니다.  
   
- ![Get-VirtualDisk](../../relational-databases/performance/media/get-virtualdisk.png "Get-VirtualDisk")  
+ ![Get-VirtualDisk cmdlet의 출력을 보여 주는 Windows Powershell 창 스크린샷](../../relational-databases/performance/media/get-virtualdisk.png "Get-VirtualDisk")  
   
  이제 서버에 이 새 볼륨이 표시되는 것을 볼 수 있습니다. 이제 SQL Server 트랜잭션 로그에 이 드라이브를 사용할 수 있습니다.  
   
- ![Log_Space Drive](../../relational-databases/performance/media/log-space-drive.png "Log_Space Drive")  
+ ![Log_Space 드라이브를 보여 주는 이 PC 페이지의 파일 탐색기 창 스크린샷](../../relational-databases/performance/media/log-space-drive.png "Log_Space Drive")  
   
 ## <a name="see-also"></a>참고 항목  
  [Windows 10에서 Windows 스토리지 공간](https://windows.microsoft.com/windows-10/storage-spaces-windows-10)   

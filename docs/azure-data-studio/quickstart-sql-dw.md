@@ -9,12 +9,12 @@ ms.author: alayu
 ms.reviewer: alayu, jrasnick
 ms.custom: seodec18; seo-lt-2019
 ms.date: 10/15/2020
-ms.openlocfilehash: 1679f7416306b8dda564576779ae2e315f589311
-ms.sourcegitcommit: ae474d21db4f724523e419622ce79f611e956a22
+ms.openlocfilehash: 31eeef17d539682b2d7061edec4891ad4c39c43b
+ms.sourcegitcommit: fb8724fb99c46ecf3a6d7b02a743af9b590402f0
 ms.translationtype: HT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 10/20/2020
-ms.locfileid: "92257335"
+ms.lasthandoff: 10/23/2020
+ms.locfileid: "92439267"
 ---
 # <a name="quickstart-use-azure-data-studio-to-connect-and-query-data-using-a-dedicated-sql-pool-in-azure-synapse-analytics"></a>빠른 시작: Azure Data Studio를 통해 Azure Synapse Analytics의 전용 SQL 풀을 사용하여 데이터 연결 및 쿼리
 
@@ -36,7 +36,7 @@ Azure Data Studio를 통해 Azure Synapse Analytics 서버에 연결합니다.
 
 1. Azure Data Studio를 처음 실행하면 **연결** 페이지가 열립니다. **연결** 페이지가 표시되지 않으면 **연결 추가** 또는 **서버** 사이드바의 **새 연결** 아이콘을 선택합니다.
    
-   ![새 연결 아이콘](media/quickstart-sql-dw/new-connection-icon.png)
+   ![새 연결 아이콘이 호출된 연결 페이지 스크린샷](media/quickstart-sql-dw/new-connection-icon.png)
 
 2. 이 문서에서는 ‘SQL 로그인’을 사용하지만 ‘Windows 인증’도 지원됩니다.  Azure SQL Server의 서버 이름, 사용자 이름 및 암호를 사용하여 다음과 같이 필드를 채웁니다.
 
