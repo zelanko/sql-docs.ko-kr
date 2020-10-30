@@ -7,7 +7,7 @@
 - name: 개요
   items:
     - name: Azure Data Studio
-      href: what-is.md
+      href: what-is-azure-data-studio.md
 - name: 빠른 시작
   items:
     - name: SQL Server 연결 및 쿼리
