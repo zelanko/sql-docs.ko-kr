@@ -4,22 +4,30 @@ description: 각 릴리스에 대 한 MySQL (MySQLToSQL)에 대 한 변경 SQL S
 author: nahk-ivanov
 ms.prod: sql
 ms.custom: ''
-ms.date: 9/28/2020
+ms.date: 10/28/2020
 ms.reviewer: ''
 ms.technology: ssma
 ms.topic: conceptual
 ms.assetid: 1451a0b0-6713-4d0c-954f-ea3d8fce1d31
 ms.author: alexiva
-ms.openlocfilehash: 75a82f8f87997dfa028a5e0b1ee7bae73c3913e6
-ms.sourcegitcommit: b93beb4f03aee2c1971909cb1d15f79cd479a35c
+ms.openlocfilehash: efd716c1e41597e276c4b33bb19122d70b91dd03
+ms.sourcegitcommit: 9c6130d498f1cfe11cde9f2e65c306af2fa8378d
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 09/29/2020
-ms.locfileid: "91497886"
+ms.lasthandoff: 10/30/2020
+ms.locfileid: "93036039"
 ---
 # <a name="whats-new-in-ssma-for-mysql-mysqltosql"></a>MySQL용 SSMA의 새로운 기능(MySQLToSql)
 
 이 문서에서는 각 릴리스의 MySQL 변경 내용에 대 한 SSMA (SQL Server Migration Assistant)를 나열 합니다.
+
+## <a name="ssma-v815"></a>SSMA v 8.15
+
+몇 가지 내게 필요한 옵션 개선 사항 외에도, MySQL 용 SSMA의 v 8.15 릴리스에는 다음과 같은 변경 내용이 포함 되어 있습니다.
+
+* 최신 브라우저에서 작동 하는 Revamp 평가 보고서
+* Azure AD 인증을 위해 데이터베이스에서 제공 하는 사용 권한
+* 파일에서 로드 된 문의 이름 향상
 
 ## <a name="ssma-v814"></a>SSMA v 8.14
 
@@ -75,7 +83,7 @@ MySQL 용 SSMA의 v2.0 릴리스에는 그래픽 사용자 인터페이스의 �
 
 사용자가 변환 된 코드에서 SSMA 확장 속성을 생략할 수 있도록 하는 설정을 추가 하 여 MySQL 용 SSMA의 v 8.6 릴리스가 향상 되었습니다.
 
-이 설정을 활용 하려면 MySQL 용 ssma에서 **도구**  >  **프로젝트 설정**  >  **일반**  >  **변환**으로 이동한 다음 **기타**에서 **확장 속성 생략** 설정의 값을 **예**로 업데이트 합니다.
+이 설정을 활용 하려면 MySQL 용 ssma에서 **도구**  >  **프로젝트 설정**  >  **일반**  >  **변환** 으로 이동한 다음 **기타** 에서 **확장 속성 생략** 설정의 값을 **예** 로 업데이트 합니다.
 
 ![확장 속성 설정 생략](../mysql/media/ssma-omit-extended-properties.png)
 
@@ -129,7 +137,7 @@ MySQL 용 SSMA의 v 8.0 릴리스는 품질 및 변환 메트릭을 개선 하�
 
   ![SQL MI 프로젝트](../media/ssma-newproject-sqldbmi.png)
 
-* 변환 후 **수정 관리자**입니다. [여기](https://blogs.msdn.microsoft.com/datamigration/2019/02/17/%20accelerate-your-oracle-migrations-with-new-machine-learning-capabilities-in-ssma/)에서 자세히 알아보세요.
+* 변환 후 **수정 관리자** 입니다. [여기](https://blogs.msdn.microsoft.com/datamigration/2019/02/17/%20accelerate-your-oracle-migrations-with-new-machine-learning-capabilities-in-ssma/)에서 자세히 알아보세요.
 
 * 예비 데이터베이스/스키마 선택.
 
@@ -315,14 +323,14 @@ MySQL 용 SSMA의 7 월 2010 릴리스에는 다음과 같은 기능이 포함 �
   
 **5. 데이터 마이그레이션에 대 한 향상 된 기능:**  
   
-* 서버 쪽 및 클라이언트 쪽 데이터 마이그레이션 엔진을 모두 사용 하 여 데이터 마이그레이션 지원
+* Server-Side 및 Client-Side 데이터 마이그레이션 엔진을 모두 사용 하 여 데이터 마이그레이션 지원
 * 공간 데이터 마이그레이션에 대 한 지원
 * 테이블에 대 한 데이터 마이그레이션에 대 한 사용자 지정 SQL
   
 **6. MySQL 용 SSMA 콘솔:**  
   
 * MySQL 용 SSMA의 지원 콘솔 기능  
-* 스크립트 수준 상호 작용에 대 한 지원  
+* Script-Level 상호 작용에 대 한 지원  
   
 ## <a name="january-2010"></a>2010년 1월
 

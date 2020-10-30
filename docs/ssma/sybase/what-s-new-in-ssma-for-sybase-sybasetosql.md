@@ -4,22 +4,30 @@ description: 각 릴리스에 대 한 Sybase (SybaseToSQL)의 SQL Server Migrati
 author: nahk-ivanov
 ms.prod: sql
 ms.custom: ''
-ms.date: 9/28/2020
+ms.date: 10/28/2020
 ms.reviewer: ''
 ms.technology: ssma
 ms.topic: conceptual
 ms.assetid: 2be0cf8d-6dbe-443a-abbd-036249922205
 ms.author: alexiva
-ms.openlocfilehash: fdbe37ddb915e64c5f947a64078e574a8eed8bbd
-ms.sourcegitcommit: b93beb4f03aee2c1971909cb1d15f79cd479a35c
+ms.openlocfilehash: 57b589ef62259904d63106298326dd537d33fc15
+ms.sourcegitcommit: 9c6130d498f1cfe11cde9f2e65c306af2fa8378d
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 09/29/2020
-ms.locfileid: "91497798"
+ms.lasthandoff: 10/30/2020
+ms.locfileid: "93036067"
 ---
 # <a name="whats-new-in-ssma-for-sap-ase-sybasetosql"></a>SAP ASE 용 SSMA의 새로운 기능 (SybaseToSQL)
 
 이 문서에서는 각 릴리스의 SAP ASE (이전에는 Sybase 용 SSMA) 변경 내용에 대 한 SSMA (SQL Server Migration Assistant)를 나열 합니다.
+
+## <a name="ssma-v815"></a>SSMA v 8.15
+
+몇 가지 내게 필요한 옵션 개선 사항 외에도 SAP ASE 용 SSMA의 v 8.15 릴리스에는 다음과 같은 변경 내용이 포함 되어 있습니다.
+
+* 최신 브라우저에서 작동 하는 Revamp 평가 보고서
+* Azure AD 인증을 위해 데이터베이스에서 제공 하는 사용 권한
+* 파일에서 로드 된 문의 이름 향상
 
 ## <a name="ssma-v814"></a>SSMA v 8.14
 
@@ -73,7 +81,7 @@ SAP ASE 용 SSMA의 v2.0 릴리스에는 그래픽 사용자 인터페이스의 
 
 사용자가 변환 된 코드에서 SSMA 확장 속성을 생략할 수 있도록 하는 설정을 추가 하 여 SAP ASE 용 SSMA의 hyper-v 8.6 릴리스를 향상 시켰습니다.
 
-이 설정을 활용 하려면 SAP ASE 용 ssma에서 **도구**  >  **프로젝트 설정**  >  **일반**  >  **변환**으로 이동한 다음 **기타**에서 **확장 속성 생략** 설정의 값을 **예**로 업데이트 합니다.
+이 설정을 활용 하려면 SAP ASE 용 ssma에서 **도구**  >  **프로젝트 설정**  >  **일반**  >  **변환** 으로 이동한 다음 **기타** 에서 **확장 속성 생략** 설정의 값을 **예** 로 업데이트 합니다.
 
 ![확장 속성 설정 생략](../sybase/media/ssma-omit-extended-properties.png)
 
@@ -129,7 +137,7 @@ SAP ASE 용 SSMA의 v 8.0 릴리스는 품질 및 변환 메트릭을 개선 하
 
   ![SQL Database MI 프로젝트](../media/ssma-newproject-sqldbmi.png)
 
-* 변환 후 **수정 관리자**입니다. [여기](https://blogs.msdn.microsoft.com/datamigration/2019/02/17/%20accelerate-your-oracle-migrations-with-new-machine-learning-capabilities-in-ssma/)에서 자세히 알아보세요.
+* 변환 후 **수정 관리자** 입니다. [여기](https://blogs.msdn.microsoft.com/datamigration/2019/02/17/%20accelerate-your-oracle-migrations-with-new-machine-learning-capabilities-in-ssma/)에서 자세히 알아보세요.
 
 * 예비 데이터베이스/스키마 선택.
 
@@ -154,7 +162,7 @@ SAP ASE 용 SSMA의 v 7.9 릴리스에는 다음과 같은 변경 내용이 포�
 
 SAP ASE 용 SSMA의 v 7.8 릴리스에는 다음과 같은 변경 내용이 포함 되어 있습니다.
 
-* **프로젝트 설정**에서 강조 표시 된 형식 매핑을 변경 합니다.
+* **프로젝트 설정** 에서 강조 표시 된 형식 매핑을 변경 합니다.
 * 사용자가 원격 분석을 사용 하지 않도록 설정할 수 있는 기능입니다.
 
 ## <a name="ssma-v77"></a>SSMA v 7.7
@@ -299,7 +307,7 @@ Sybase 용 SSMA의 7 월 2010 릴리스를 추가 했습니다.
 
 * SQL Server 2008 R2로의 마이그레이션을 지원 합니다.
 * 명령줄 실행을 위한 새 SSMA 콘솔 응용 프로그램입니다.
-* 서버 쪽 및 클라이언트 쪽 데이터 마이그레이션 엔진을 모두 사용 하 여 데이터 마이그레이션을 지원 합니다.
+* Server-Side 및 Client-Side 데이터 마이그레이션 엔진을 사용 하 여 데이터 마이그레이션을 지원 합니다.
 * 데이터 마이그레이션에서 "Custom SELECT" 문을 지원 합니다.
 * Sybase ASE 15.0.3 및 15.5에서의 마이그레이션 지원.
 
