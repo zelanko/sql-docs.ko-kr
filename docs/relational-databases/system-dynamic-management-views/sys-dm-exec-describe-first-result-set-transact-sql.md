@@ -1,8 +1,6 @@
 ---
+title: sys.dm_exec_describe_first_result_set(Transact-SQL)
 description: sys.dm_exec_describe_first_result_set(Transact-SQL)
-title: sys. dm_exec_describe_first_result_set (Transact-sql) | Microsoft Docs
-ms.custom: ''
-ms.date: 06/10/2016
 ms.prod: sql
 ms.prod_service: database-engine, sql-database
 ms.reviewer: ''
@@ -18,20 +16,23 @@ helpviewer_keywords:
 ms.assetid: 6ea88346-0bdb-4f0e-9f1f-4d85e3487d23
 author: markingmyname
 ms.author: maghan
+ms.custom: ''
+ms.date: 06/10/2016
 monikerRange: =azuresqldb-current||>=sql-server-2016||=sqlallproducts-allversions||>=sql-server-linux-2017||=azuresqldb-mi-current
-ms.openlocfilehash: cd08d567368ec62627c3383ad88ab70062253404
-ms.sourcegitcommit: dd36d1cbe32cd5a65c6638e8f252b0bd8145e165
+ms.openlocfilehash: 94773e515b4bb184b1ff669c2bddb05c5723e208
+ms.sourcegitcommit: 894c1a23e922dc29b82c1d2c34c7b0ff28b38654
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 09/08/2020
-ms.locfileid: "89548616"
+ms.lasthandoff: 10/30/2020
+ms.locfileid: "93067367"
 ---
 # <a name="sysdm_exec_describe_first_result_set-transact-sql"></a>sys.dm_exec_describe_first_result_set(Transact-SQL)
+
 [!INCLUDE [SQL Server Azure SQL Database ](../../includes/applies-to-version/sql-asdb.md)]
 
-  이 동적 관리 함수는 [!INCLUDE[tsql](../../includes/tsql-md.md)] 문을 매개 변수로 사용 하 고 문의 첫 번째 결과 집합에 대 한 메타 데이터를 설명 합니다.  
+이 동적 관리 함수는 [!INCLUDE[tsql](../../includes/tsql-md.md)] 문을 매개 변수로 사용 하 고 문의 첫 번째 결과 집합에 대 한 메타 데이터를 설명 합니다.  
   
- **dm_exec_describe_first_result_set** 는 [dm_exec_describe_first_result_set_for_object &#40;transact-sql&#41;](../../relational-databases/system-dynamic-management-views/sys-dm-exec-describe-first-result-set-for-object-transact-sql.md) 와 동일한 결과 집합 정의가 있으며 [sp_describe_first_result_set &#40;transact-sql&#41;](../../relational-databases/system-stored-procedures/sp-describe-first-result-set-transact-sql.md)와 비슷합니다.  
+ **sys.dm_exec_describe_first_result_set** 는 [transact-sql&#41;&#40;sys.dm_exec_describe_first_result_set_for_object](../../relational-databases/system-dynamic-management-views/sys-dm-exec-describe-first-result-set-for-object-transact-sql.md) 와 동일한 결과 집합 정의가 있으며 sp_describe_first_result_set [&#40;transact-sql&#41;](../../relational-databases/system-stored-procedures/sp-describe-first-result-set-transact-sql.md)와 비슷합니다.  
   
 
  ![항목 링크 아이콘](../../database-engine/configure-windows/media/topic-link.gif "항목 링크 아이콘") [Transact-SQL 구문 표기 규칙](../../t-sql/language-elements/transact-sql-syntax-conventions-transact-sql.md)  
@@ -45,12 +46,12 @@ sys.dm_exec_describe_first_result_set(@tsql, @params, @include_browse_informatio
   
 ## <a name="arguments"></a>인수  
  *\@tsql*  
- 하나 이상의 [!INCLUDE[tsql](../../includes/tsql-md.md)] 문입니다. *SQL_batch* 는 **nvarchar (***n***)** 또는 **nvarchar (max)** 일 수 있습니다.  
+ 하나 이상의 [!INCLUDE[tsql](../../includes/tsql-md.md)] 문입니다. *SQL_batch* 는 **nvarchar (**_n_*_)_* 또는 **nvarchar (max)** 일 수 있습니다.  
   
  *\@params*  
  \@params는 [!INCLUDE[tsql](../../includes/tsql-md.md)] sp_executesql와 유사 하 게 일괄 처리에 대 한 매개 변수에 대 한 선언 문자열을 제공 합니다. 매개 변수는 **nvarchar (n)** 또는 **nvarchar (max)** 일 수 있습니다.  
   
- _Batch에 포함 된 모든 매개 변수의 정의를 포함 하는 하나의 문자열입니다 [!INCLUDE[tsql](../../includes/tsql-md.md)] *_batch*. 문자열은 유니코드 상수 또는 유니코드 변수여야 합니다. 각 매개 변수의 정의는 매개 변수 이름과 데이터 형식으로 구성됩니다. *n* 은 추가 매개 변수 정의를 나타내는 자리 표시자입니다. Stmt에 지정 된 모든 매개 변수는 params에 정의 되어야 합니다 \@ . 문의 [!INCLUDE[tsql](../../includes/tsql-md.md)] 문 또는 일괄 처리에 매개 변수가 없는 경우 \@ params가 필요 하지 않습니다. NULL이 이 매개 변수의 기본값입니다.  
+ _Batch에 포함 된 모든 매개 변수의 정의를 포함 하는 하나의 문자열입니다 [!INCLUDE[tsql](../../includes/tsql-md.md)] *_batch* . 문자열은 유니코드 상수 또는 유니코드 변수여야 합니다. 각 매개 변수의 정의는 매개 변수 이름과 데이터 형식으로 구성됩니다. *n* 은 추가 매개 변수 정의를 나타내는 자리 표시자입니다. Stmt에 지정 된 모든 매개 변수는 params에 정의 되어야 합니다 \@ . 문의 [!INCLUDE[tsql](../../includes/tsql-md.md)] 문 또는 일괄 처리에 매개 변수가 없는 경우 \@ params가 필요 하지 않습니다. NULL이 이 매개 변수의 기본값입니다.  
   
  *\@include_browse_information*  
  1로 설정되면 쿼리에 FOR BROWSE 옵션이 있는 것처럼 각 쿼리가 분석됩니다. 추가 키 열과 원본 테이블 정보가 반환됩니다.  
@@ -66,7 +67,7 @@ sys.dm_exec_describe_first_result_set(@tsql, @params, @include_browse_informatio
 |**is_nullable**|**bit**|다음 값을 포함합니다.<br /><br /> 열에서 NULL을 허용하면 값이 1입니다.<br /><br /> 열에서 NULL을 허용하지 않으면 값이 0입니다.<br /><br /> 열에서 NULL을 허용하는지 확인할 수 없으면 값이 1입니다.|  
 |**system_type_id**|**int**|Sys. types에 지정 된 열 데이터 형식의 system_type_id를 포함 합니다. CLR 형식의 경우 system_type_name 열에서 NULL을 반환해도 이 열은 값 240을 반환합니다.|  
 |**system_type_name**|**nvarchar(256)**|열의 데이터 형식에 지정한 이름 및 인수(length, precision, scale 등)를 포함합니다.<br /><br /> 데이터 형식이 사용자 정의 별칭 형식일 경우 기본 시스템 형식이 여기에 지정됩니다.<br /><br /> 데이터 형식이 CLR 사용자 정의 형식일 경우 이 열에 NULL이 반환됩니다.|  
-|**max_length**|**smallint**|열의 최대 길이(바이트)입니다.<br /><br /> -1 = 열 데이터 형식이 **varchar (max)**, **nvarchar (max)**, **varbinary (max)** 또는 **xml**입니다.<br /><br /> **텍스트** 열의 경우 **max_length** 값은 16 이거나 **' text in row ' sp_tableoption**값으로 설정 됩니다.|  
+|**max_length**|**smallint**|열의 최대 길이(바이트)입니다.<br /><br /> -1 = 열 데이터 형식이 **varchar (max)** , **nvarchar (max)** , **varbinary (max)** 또는 **xml** 입니다.<br /><br /> **텍스트** 열의 경우 **max_length** 값은 16 이거나 **' text in row ' sp_tableoption** 값으로 설정 됩니다.|  
 |**전체 자릿수**|**tinyint**|숫자 기반일 경우 열의 전체 자릿수이고 그렇지 않으면 0을 반환합니다.|  
 |**scale**|**tinyint**|숫자 기반일 경우 열의 소수 자릿수이고 그렇지 않으면 0을 반환합니다.|  
 |**collation_name**|**sysname**|문자 기반일 경우 열의 데이터 정렬 이름이고 그렇지 않으면 NULL을 반환합니다.|  
@@ -103,11 +104,11 @@ sys.dm_exec_describe_first_result_set(@tsql, @params, @include_browse_informatio
 |**error_type_desc**|**nvarchar(60)**|반환할 오류를 나타내는 간단한 대문자 문자열을 포함합니다. error_type에 매핑됩니다. 주의 아래의 목록을 참조하세요.|  
   
 ## <a name="remarks"></a>설명  
- 이 함수는 **sp_describe_first_result_set**와 동일한 알고리즘을 사용합니다. 자세한 내용은 [sp_describe_first_result_set &#40;transact-sql&#41;](../../relational-databases/system-stored-procedures/sp-describe-first-result-set-transact-sql.md)를 참조 하세요.  
+ 이 함수는 **sp_describe_first_result_set** 와 동일한 알고리즘을 사용합니다. 자세한 내용은 [sp_describe_first_result_set &#40;transact-sql&#41;](../../relational-databases/system-stored-procedures/sp-describe-first-result-set-transact-sql.md)를 참조 하세요.  
   
  다음 표에서는 오류 유형 및 설명을 나열합니다.  
   
-|error_type|error_type|Description|  
+|error_type|error_type|설명|  
 |-----------------|-----------------|-----------------|  
 |1|MISC|설명하지 않은 모든 오류입니다.|  
 |2|SYNTAX|일괄 처리에 발생한 구문 오류입니다.|  
@@ -118,16 +119,16 @@ sys.dm_exec_describe_first_result_set(@tsql, @params, @include_browse_informatio
 |7|EXTENDED_PROCEDURE|확장 저장 프로시저가 첫 번째 결과를 반환할 수 있으므로 결과를 확인할 수 없습니다.|  
 |8|UNDECLARED_PARAMETER|결과 집합의 열 중 하나 이상의 데이터 형식이 선언 되지 않은 매개 변수에 종속 될 수 있으므로 결과를 확인할 수 없습니다.|  
 |9|RECURSION|일괄 처리에 재귀 문이 포함되어 있어 결과를 확인할 수 없습니다.|  
-|10|TEMPORARY_TABLE|일괄 처리에 임시 테이블이 포함되고 **sp_describe_first_result_set**에서 일괄 처리를 지원하지 않으므로 결과를 확인할 수 없습니다.|  
-|11|UNSUPPORTED_STATEMENT|**sp_describe_first_result_set**에서 지원하지 않는 문(예: FETCH, REVERT 등)이 일괄 처리에 포함되어 있어 결과를 확인할 수 없습니다.|  
+|10|TEMPORARY_TABLE|일괄 처리에 임시 테이블이 포함되고 **sp_describe_first_result_set** 에서 일괄 처리를 지원하지 않으므로 결과를 확인할 수 없습니다.|  
+|11|UNSUPPORTED_STATEMENT|**sp_describe_first_result_set** 에서 지원하지 않는 문(예: FETCH, REVERT 등)이 일괄 처리에 포함되어 있어 결과를 확인할 수 없습니다.|  
 |12|OBJECT_TYPE_NOT_SUPPORTED|\@함수에 전달 된 object_id은 지원 되지 않습니다 (예: 저장 프로시저가 아님).|  
 |13|OBJECT_DOES_NOT_EXIST|\@함수에 전달 된 object_id를 시스템 카탈로그에서 찾을 수 없습니다.|  
   
 ## <a name="permissions"></a>사용 권한  
  Tsql 인수를 실행할 수 있는 권한이 필요 \@ 합니다.  
   
-## <a name="examples"></a>예제  
- **Dm_exec_describe_first_result_set**를 사용 하도록 [transact-sql&#41;&#40;sp_describe_first_result_set](../../relational-databases/system-stored-procedures/sp-describe-first-result-set-transact-sql.md) 항목의 추가 예를 수정할 수 있습니다.  
+## <a name="examples"></a>예  
+ **Sys.dm_exec_describe_first_result_set** 를 사용 하도록 [transact-sql&#41;&#40;sp_describe_first_result_set](../../relational-databases/system-stored-procedures/sp-describe-first-result-set-transact-sql.md) 항목의 추가 예를 수정할 수 있습니다.  
   
 ### <a name="a-returning-information-about-a-single-transact-sql-statement"></a>A. 단일 Transact-SQL 문에 대한 정보 반환  
  다음 코드에서는 [!INCLUDE[tsql](../../includes/tsql-md.md)] 문 결과에 대한 정보를 반환합니다.  
@@ -140,7 +141,7 @@ SELECT * FROM sys.dm_exec_describe_first_result_set
 ```  
   
 ### <a name="b-returning-information-about-a-procedure"></a>B. 프로시저에 대한 정보 반환  
- 다음 예에서는 두 개의 결과 집합을 반환 하는 pr_TestProc 라는 저장 프로시저를 만듭니다. 그런 다음 **sys.dm_exec_describe_first_result_set**가 프로시저의 첫 번째 결과 집합 정보를 반환하는 것을 보여 줍니다.  
+ 다음 예에서는 두 개의 결과 집합을 반환 하는 pr_TestProc 라는 저장 프로시저를 만듭니다. 그런 다음 **sys.dm_exec_describe_first_result_set** 가 프로시저의 첫 번째 결과 집합 정보를 반환하는 것을 보여 줍니다.  
   
 ```  
 USE AdventureWorks2012;  
@@ -173,6 +174,6 @@ GO
 ## <a name="see-also"></a>참고 항목  
  [Transact-sql&#41;sp_describe_first_result_set &#40;](../../relational-databases/system-stored-procedures/sp-describe-first-result-set-transact-sql.md)   
  [Transact-sql&#41;sp_describe_undeclared_parameters &#40;](../../relational-databases/system-stored-procedures/sp-describe-undeclared-parameters-transact-sql.md)   
- [dm_exec_describe_first_result_set_for_object &#40;Transact-sql&#41;](../../relational-databases/system-dynamic-management-views/sys-dm-exec-describe-first-result-set-for-object-transact-sql.md)  
+ [Transact-sql&#41;sys.dm_exec_describe_first_result_set_for_object &#40;](../../relational-databases/system-dynamic-management-views/sys-dm-exec-describe-first-result-set-for-object-transact-sql.md)  
   
   

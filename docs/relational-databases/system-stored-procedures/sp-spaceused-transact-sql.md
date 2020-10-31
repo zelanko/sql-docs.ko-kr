@@ -19,12 +19,12 @@ ms.assetid: c6253b48-29f5-4371-bfcd-3ef404060621
 author: markingmyname
 ms.author: maghan
 monikerRange: '>=aps-pdw-2016||=azuresqldb-current||=azure-sqldw-latest||>=sql-server-2016||=sqlallproducts-allversions||>=sql-server-linux-2017||=azuresqldb-mi-current'
-ms.openlocfilehash: 5eb32803d759ff89a7c41addde56d9fa5dd76644
-ms.sourcegitcommit: dd36d1cbe32cd5a65c6638e8f252b0bd8145e165
+ms.openlocfilehash: 0f2e03e32842a9187761c0f4471d871277682005
+ms.sourcegitcommit: 894c1a23e922dc29b82c1d2c34c7b0ff28b38654
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 09/08/2020
-ms.locfileid: "89540498"
+ms.lasthandoff: 10/30/2020
+ms.locfileid: "93067515"
 ---
 # <a name="sp_spaceused-transact-sql"></a>sp_spaceused(Transact-SQL)
 [!INCLUDE [sql-asdb-asdbmi-asa-pdw](../../includes/applies-to-version/sql-asdb-asdbmi-asa-pdw.md)]
@@ -42,6 +42,7 @@ sp_spaceused [[ @objname = ] 'objname' ]
 [, [ @oneresultset = ] oneresultset ]  
 [, [ @include_total_xtp_storage = ] include_total_xtp_storage ]
 ```  
+[!INCLUDE[synapse-analytics-od-unsupported-syntax](../../includes/synapse-analytics-od-unsupported-syntax.md)]
   
 ## <a name="arguments"></a>인수  
 
@@ -55,13 +56,13 @@ sp_spaceused [[ @objname = ] 'objname' ]
 > [!NOTE]  
 > [!INCLUDE[sssdw-md](../../includes/sssdw-md.md)] 및는 [!INCLUDE[sspdw-md](../../includes/sspdw-md.md)] 데이터베이스 및 테이블 개체만 지원 합니다.
   
-`[ @updateusage = ] 'updateusage'` 공간 사용량 정보를 업데이트 하기 위해 DBCC UPDATEUSAGE을 실행 해야 함을 나타냅니다. *Objname* 을 지정 하지 않으면 전체 데이터베이스에서 문이 실행 됩니다. 그렇지 않으면 문이 *objname*에 대해 실행 됩니다. 값은 **true** 또는 **false**일 수 있습니다. *updateusage* 은 **varchar (5)** 이며 기본값은 **false**입니다.  
+`[ @updateusage = ] 'updateusage'` 공간 사용량 정보를 업데이트 하기 위해 DBCC UPDATEUSAGE을 실행 해야 함을 나타냅니다. *Objname* 을 지정 하지 않으면 전체 데이터베이스에서 문이 실행 됩니다. 그렇지 않으면 문이 *objname* 에 대해 실행 됩니다. 값은 **true** 또는 **false** 일 수 있습니다. *updateusage* 은 **varchar (5)** 이며 기본값은 **false** 입니다.  
   
 `[ @mode = ] 'mode'` 결과의 범위를 나타냅니다. 스트레치 된 테이블이 나 데이터베이스의 경우 *mode* 매개 변수를 사용 하 여 개체의 원격 부분을 포함 하거나 제외할 수 있습니다. 자세한 내용은 [Stretch Database](../../sql-server/stretch-database/stretch-database.md)를 참조하십시오.  
   
  *Mode* 인수는 다음과 같은 값을 가질 수 있습니다.  
   
-|값|Description|  
+|값|설명|  
 |-----------|-----------------|  
 |ALL|로컬 부분과 원격 부분을 모두 포함 하는 개체 또는 데이터베이스의 저장소 통계를 반환 합니다.|  
 |LOCAL_ONLY|개체 또는 데이터베이스의 로컬 부분에 대 한 저장소 통계만 반환 합니다. 스트레치를 사용 하지 않는 개체 또는 데이터베이스는 when = ALL과 동일한 통계를 반환 합니다 @mode .|  
@@ -71,12 +72,12 @@ sp_spaceused [[ @objname = ] 'objname' ]
   
 `[ @oneresultset = ] oneresultset` 단일 결과 집합을 반환할지 여부를 나타냅니다. *Oneresultset* 인수에는 다음 값을 사용할 수 있습니다.  
   
-|값|Description|  
+|값|설명|  
 |-----------|-----------------|  
-|0|* \@ Objname* 이 null 이거나 지정 되지 않은 경우 두 개의 결과 집합이 반환 됩니다. 두 개의 결과 집합이 기본 동작입니다.|  
-|1|* \@ Objname* = null 또는를 지정 하지 않으면 단일 결과 집합이 반환 됩니다.|  
+|0|*\@ Objname* 이 null 이거나 지정 되지 않은 경우 두 개의 결과 집합이 반환 됩니다. 두 개의 결과 집합이 기본 동작입니다.|  
+|1|*\@ Objname* = null 또는를 지정 하지 않으면 단일 결과 집합이 반환 됩니다.|  
   
- *oneresultset* 는 **bit**이며 기본값은 **0**입니다.  
+ *oneresultset* 는 **bit** 이며 기본값은 **0** 입니다.  
 
 `[ @include_total_xtp_storage] 'include_total_xtp_storage'`
 **적용 대상:** [!INCLUDE[sssql17-md](../../includes/sssql17-md.md)] , [!INCLUDE[sssds-md](../../includes/sssds-md.md)] .  
@@ -118,11 +119,11 @@ sp_spaceused [[ @objname = ] 'objname' ]
   
 |열 이름|데이터 형식|Description|  
 |-----------------|---------------|-----------------|  
-|**name**|**nvarchar(128)**|공간 사용 정보가 필요한 개체의 이름입니다.<br /><br /> 개체의 스키마 이름은 반환되지 않습니다. 스키마 이름이 필요한 경우 [dm_db_partition_stats](../../relational-databases/system-dynamic-management-views/sys-dm-db-partition-stats-transact-sql.md) 또는 [dm_db_index_physical_stats](../../relational-databases/system-dynamic-management-views/sys-dm-db-index-physical-stats-transact-sql.md) 동적 관리 뷰를 사용 하 여 해당 하는 크기 정보를 가져옵니다.|  
+|**name**|**nvarchar(128)**|공간 사용 정보가 필요한 개체의 이름입니다.<br /><br /> 개체의 스키마 이름은 반환되지 않습니다. 스키마 이름이 필요한 경우 [sys.dm_db_partition_stats](../../relational-databases/system-dynamic-management-views/sys-dm-db-partition-stats-transact-sql.md) 또는 [sys.dm_db_index_physical_stats](../../relational-databases/system-dynamic-management-views/sys-dm-db-index-physical-stats-transact-sql.md) 동적 관리 뷰를 사용 하 여 해당 하는 크기 정보를 가져옵니다.|  
 |**rows**|**char (20)**|테이블에 있는 행 수입니다. 지정된 개체가 [!INCLUDE[ssSB](../../includes/sssb-md.md)] 큐일 경우 이 열은 큐에 있는 메시지 수를 나타냅니다.|  
-|**쓰이는**|**varchar (18)**|*Objname*에 대해 예약 된 공간의 전체 크기입니다.|  
-|**data**|**varchar (18)**|*Objname*의 데이터에 사용 되는 총 공간입니다.|  
-|**index_size**|**varchar (18)**|*Objname*의 인덱스에서 사용 하는 총 공간입니다.|  
+|**쓰이는**|**varchar (18)**|*Objname* 에 대해 예약 된 공간의 전체 크기입니다.|  
+|**data**|**varchar (18)**|*Objname* 의 데이터에 사용 되는 총 공간입니다.|  
+|**index_size**|**varchar (18)**|*Objname* 의 인덱스에서 사용 하는 총 공간입니다.|  
 |**사용 되지 않는**|**varchar (18)**|*Objname* 에 대해 예약 되었지만 아직 사용 되지 않은 총 공간입니다.|  
  
 매개 변수가 지정 되지 않은 경우 기본 모드입니다. 다음 결과 집합은 디스크에 대 한 데이터베이스 크기 정보를 자세히 반환 합니다. 
@@ -161,18 +162,18 @@ sp_spaceused [[ @objname = ] 'objname' ]
 |**data**|**varchar (18)**|데이터가 사용하는 총 공간입니다.|  
 |**index_size**|**varchar (18)**|인덱스가 사용하는 총 공간입니다.|  
 |**사용 되지 않는**|**varchar (18)**|데이터베이스의 개체에 예약되었지만 아직 사용되지 않은 총 공간입니다.|
-|**xtp_precreated**|**varchar (18)**|상태가 사전 생성 된 검사점 파일의 총 크기 (KB)입니다. 이는 전체 데이터베이스의 할당 되지 않은 공간을 계산 합니다. 하나 이상의 컨테이너를 포함 하는 memory_optimized_data 파일 그룹이 데이터베이스에 없는 경우 NULL을 반환 합니다. *이 열은 @include_total_xtp_storage = 1 인 경우에만 포함 됩니다*.| 
-|**xtp_used**|**varchar (18)**|생성, 활성 및 병합 대상에서 상태의 검사점 파일의 총 크기 (KB)입니다. 메모리 최적화 테이블의 데이터에 적극적으로 사용 되는 디스크 공간입니다. 하나 이상의 컨테이너를 포함 하는 memory_optimized_data 파일 그룹이 데이터베이스에 없는 경우 NULL을 반환 합니다. *이 열은 @include_total_xtp_storage = 1 인 경우에만 포함 됩니다*.| 
+|**xtp_precreated**|**varchar (18)**|상태가 사전 생성 된 검사점 파일의 총 크기 (KB)입니다. 이는 전체 데이터베이스의 할당 되지 않은 공간을 계산 합니다. 하나 이상의 컨테이너를 포함 하는 memory_optimized_data 파일 그룹이 데이터베이스에 없는 경우 NULL을 반환 합니다. *이 열은 @include_total_xtp_storage = 1 인 경우에만 포함 됩니다* .| 
+|**xtp_used**|**varchar (18)**|생성, 활성 및 병합 대상에서 상태의 검사점 파일의 총 크기 (KB)입니다. 메모리 최적화 테이블의 데이터에 적극적으로 사용 되는 디스크 공간입니다. 하나 이상의 컨테이너를 포함 하는 memory_optimized_data 파일 그룹이 데이터베이스에 없는 경우 NULL을 반환 합니다. *이 열은 @include_total_xtp_storage = 1 인 경우에만 포함 됩니다* .| 
 |**xtp_pending_truncation**|**varchar (18)**|상태 WAITING_FOR_LOG_TRUNCATION의 전체 검사점 파일 크기 (KB)입니다. 로그 잘림이 발생 한 후 정리를 대기 중인 검사점 파일에 사용 되는 디스크 공간입니다. 하나 이상의 컨테이너를 포함 하는 memory_optimized_data 파일 그룹이 데이터베이스에 없는 경우 NULL을 반환 합니다. 이 열은 인 경우에만 포함 됩니다 `@include_total_xtp_storage=1` .|
 
 ## <a name="remarks"></a>설명  
- **database_size** 은 **reserved**  +  로그 파일의 크기를 포함 하기 때문에 예약 된**할당 되지 않은 공간의** 합계 보다 일반적으로 더 큽니다. **예약** 된 공간 및 **unallocated_space** 데이터 페이지만 고려 합니다. Azure Synapse Analytics를 사용 하는 경우이 문은 true가 아닐 수 있습니다. 
+ **database_size** 은 **reserved**  +  로그 파일의 크기를 포함 하기 때문에 예약 된 **할당 되지 않은 공간의** 합계 보다 일반적으로 더 큽니다. **예약** 된 공간 및 **unallocated_space** 데이터 페이지만 고려 합니다. Azure Synapse Analytics를 사용 하는 경우이 문은 true가 아닐 수 있습니다. 
   
  XML 인덱스 및 전체 텍스트 인덱스에 사용 되는 페이지는 두 결과 집합의 **index_size** 에 포함 됩니다. *Objname* 을 지정 하면 개체의 XML 인덱스 및 전체 텍스트 인덱스에 대 한 페이지도 총 **예약** 된 결과와 **index_size** 결과에 계산 됩니다.  
   
- 데이터베이스 또는 공간 인덱스를 포함 하는 개체에 대해 공간 사용량이 계산 된 경우 **database_size**, **예약 됨**, **index_size**등의 공간 크기 열에는 공간 인덱스의 크기가 포함 됩니다.  
+ 데이터베이스 또는 공간 인덱스를 포함 하는 개체에 대해 공간 사용량이 계산 된 경우 **database_size** , **예약 됨** , **index_size** 등의 공간 크기 열에는 공간 인덱스의 크기가 포함 됩니다.  
   
- *Updateusage* 를 지정 하면는 [!INCLUDE[ssDEnoversion](../../includes/ssdenoversion-md.md)] 데이터베이스의 데이터 페이지를 검색 하 고, 각 테이블에서 사용 하는 저장소 공간에 대 한 및 **sys. 파티션** 카탈로그 뷰에 필요한 **allocation_units** 수정 사항을 만듭니다. 인덱스가 삭제된 후처럼 테이블에 대한 공간 정보가 최신 상태가 아닌 경우도 있습니다. *updateusage* 는 많은 테이블이 나 데이터베이스에서 실행 하는 데 다소 시간이 걸릴 수 있습니다. 잘못 된 값이 반환 되 고 의심 되는 경우와 데이터베이스의 다른 사용자 또는 프로세스에 부정적인 영향을 주지 않는 경우에만 *updateusage* 를 사용 합니다. 원하는 경우에는 DBCC UPDATEUSAGE를 별도로 실행할 수 있습니다.  
+ *Updateusage* 를 지정 하면는 [!INCLUDE[ssDEnoversion](../../includes/ssdenoversion-md.md)] 데이터베이스의 데이터 페이지를 검색 하 고, 각 테이블에서 사용 하는 저장소 공간 **sys.partitions** 에 대 한 **sys.allocation_units** 및 카탈로그 뷰에 필요한 수정 사항을 만듭니다. 인덱스가 삭제된 후처럼 테이블에 대한 공간 정보가 최신 상태가 아닌 경우도 있습니다. *updateusage* 는 많은 테이블이 나 데이터베이스에서 실행 하는 데 다소 시간이 걸릴 수 있습니다. 잘못 된 값이 반환 되 고 의심 되는 경우와 데이터베이스의 다른 사용자 또는 프로세스에 부정적인 영향을 주지 않는 경우에만 *updateusage* 를 사용 합니다. 원하는 경우에는 DBCC UPDATEUSAGE를 별도로 실행할 수 있습니다.  
   
 > [!NOTE]  
 >  대형 인덱스를 삭제하거나 다시 작성할 때 또는 대형 테이블을 삭제하거나 자를 때 [!INCLUDE[ssDE](../../includes/ssde-md.md)]에서는 트랜잭션이 커밋될 때까지 실제 페이지 할당 해제 및 관련 잠금을 연기합니다. 삭제 작업이 지연되어도 할당된 공간이 즉시 해제되지는 않습니다. 따라서 대량 개체를 삭제 하거나 자른 직후 **sp_spaceused** 에서 반환 하는 값에는 사용 가능한 실제 디스크 공간이 반영 되지 않을 수 있습니다.  
@@ -180,7 +181,7 @@ sp_spaceused [[ @objname = ] 'objname' ]
 ## <a name="permissions"></a>사용 권한  
  **sp_spaceused** 를 실행할 수 있는 사용 권한은 **public** 역할에 부여됩니다. **db_owner** 고정 데이터베이스 역할의 멤버만 **\@updateusage** 매개 변수를 지정할 수 있습니다.  
   
-## <a name="examples"></a>예제  
+## <a name="examples"></a>예  
   
 ### <a name="a-displaying-disk-space-information-about-a-table"></a>A. 테이블에 관한 디스크 공간 정보 표시  
  다음 예에서는 `Vendor` 테이블 및 해당 인덱스의 디스크 공간 정보를 알려 줍니다.  
@@ -203,7 +204,7 @@ GO
 ```  
   
 ### <a name="c-displaying-space-usage-information-about-the-remote-table-associated-with-a-stretch-enabled-table"></a>C. 스트레치 사용 테이블에 연결 된 원격 테이블에 대 한 공간 사용량 정보 표시  
- 다음 예에서는 ** \@ mode** 인수를 사용 하 여 원격 대상을 지정 하 여 스트레치 사용 테이블에 연결 된 원격 테이블에 사용 되는 공간을 요약 합니다. 자세한 내용은 [Stretch Database](../../sql-server/stretch-database/stretch-database.md)를 참조하십시오.  
+ 다음 예에서는 **\@ mode** 인수를 사용 하 여 원격 대상을 지정 하 여 스트레치 사용 테이블에 연결 된 원격 테이블에 사용 되는 공간을 요약 합니다. 자세한 내용은 [Stretch Database](../../sql-server/stretch-database/stretch-database.md)를 참조하십시오.  
   
 ```sql  
 USE StretchedAdventureWorks2016  
