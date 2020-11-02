@@ -14,12 +14,12 @@ author: jovanpop-msft
 ms.author: jovanpop
 ms.reviewer: jroth
 monikerRange: =azuresqldb-current||>=sql-server-2016||=sqlallproducts-allversions||>=sql-server-linux-2017||=azuresqldb-mi-current
-ms.openlocfilehash: 1e1de8032c72f829dbc564bae38b12b120f13695
-ms.sourcegitcommit: e700497f962e4c2274df16d9e651059b42ff1a10
+ms.openlocfilehash: 81ba47199707e4f59094ec0070017610f61d3187
+ms.sourcegitcommit: fb8724fb99c46ecf3a6d7b02a743af9b590402f0
 ms.translationtype: HT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 08/17/2020
-ms.locfileid: "88499263"
+ms.lasthandoff: 10/23/2020
+ms.locfileid: "92439464"
 ---
 # <a name="index-json-data"></a>JSON 데이터 인덱싱
 [!INCLUDE [SQL Server Azure SQL Database](../../includes/applies-to-version/sql-asdb.md)]
@@ -70,7 +70,7 @@ ON Sales.SalesOrderHeader(vCustomerName)
 ### <a name="execution-plan-for-this-example"></a>이 예제에 대한 실행 계획
 다음은 이 예제의 쿼리 실행 계획입니다.  
   
-![실행 계획](../../relational-databases/json/media/jsonindexblog1.png "실행 계획")  
+![이 예제의 실행 계획 스크린샷](../../relational-databases/json/media/jsonindexblog1.png "실행 계획")  
   
 SQL Server는 전체 테이블을 검색하지 않고 비클러스터형 인덱스에서 인덱스 검색하여 지정된 조건을 충족하는 행을 찾습니다. 그런 다음 `SalesOrderHeader` 테이블에서 키 조회를 사용하여 쿼리에서 참조된 다른 열(이 예제에서는 `SalesOrderNumber` 및 `OrderDate`)을 가져옵니다.  
  
@@ -138,13 +138,13 @@ ORDER BY JSON_VALUE(json,'$.name')
   
  실제 실행 계획을 보면 비클러스터형 인덱스에서 정렬된 값을 사용함을 확인할 수 있습니다.  
   
- ![실행 계획](../../relational-databases/json/media/jsonindexblog2.png "실행 계획")  
+ ![비클러스터형 인덱스의 정렬된 값을 사용하는 실행 계획 스크린샷](../../relational-databases/json/media/jsonindexblog2.png "실행 계획")  
   
  쿼리에 `ORDER BY` 절이 있지만 실행 계획은 Sort 연산자를 사용하지 않습니다. JSON 인덱스는 이미 세르비아어 키릴 자모 규칙에 따라 정렬됩니다. 따라서 SQL Server는 결과가 이미 정렬된 비클러스터형 인덱스를 사용합니다.  
   
  그러나 `ORDER BY` 식의 데이터 정렬을 변경하면(예: `JSON_VALUE` 함수 뒤에 `COLLATE French_100_CI_AS_SC` 추가) 다른 쿼리 실행 계획이 제공됩니다.  
   
- ![실행 계획](../../relational-databases/json/media/jsonindexblog3.png "실행 계획")  
+ ![다른 실행 계획 스크린샷](../../relational-databases/json/media/jsonindexblog3.png "실행 계획")  
   
  인덱스 값 순서는 프랑스어 데이터 정렬 규칙을 따르지 않으므로 SQL Server는 정렬 결과에 대한 인덱스를 사용할 수 없습니다. 따라서 프랑스어 데이터 정렬 규칙을 사용하여 결과를 정렬하는 정렬 연산자를 추가합니다.  
  

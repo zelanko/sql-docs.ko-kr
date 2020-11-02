@@ -21,12 +21,12 @@ ms.assetid: 32dfe254-6df7-4437-bfd6-ca7d37557b0a
 author: ronortloff
 ms.author: rortloff
 monikerRange: '>= aps-pdw-2016 || = azure-sqldw-latest || = sqlallproducts-allversions'
-ms.openlocfilehash: bbb0773d4c89b7b9879b0ff250e9ffaf6e465654
-ms.sourcegitcommit: 3efd8bbf91f4f78dce3a4ac03348037d8c720e6a
+ms.openlocfilehash: 1085686f4c83198a043855e701ec2ef38d17541f
+ms.sourcegitcommit: d35d0901296580bfceda6e0ab2e14cf2b7e99a0f
 ms.translationtype: HT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 09/23/2020
-ms.locfileid: "91024355"
+ms.lasthandoff: 10/24/2020
+ms.locfileid: "92496939"
 ---
 # <a name="create-external-table-as-select-transact-sql"></a>CREATE EXTERNAL TABLE AS SELECT(Transact-SQL)
 [!INCLUDE[applies-to-version/asa-pdw](../../includes/applies-to-version/asa-pdw.md)]
@@ -63,32 +63,32 @@ CREATE EXTERNAL TABLE [ [database_name  . [ schema_name ] . ] | schema_name . ] 
 ## <a name="arguments"></a>인수
  **[ [ *database_name* . [ *schema_name* ] . ] | *schema_name* . ] *table_name*** 은 데이터베이스에서 만들어지는 하나에서 세 부분으로 된 테이블 이름입니다. 외부 테이블의 경우 테이블 메타데이터만 관계형 데이터베이스에 저장됩니다. 
 
- **LOCATION =  '*hdfs_folder*'** 는 SELECT 문의 결과를 외부 데이터 원본에 기록할 위치를 지정합니다. 위치는 폴더 이름이며 Hadoop 클러스터 또는 Blob Storage의 루트 폴더에 대한 상대 경로를 포함할 수 있습니다(선택 사항). PolyBase는 아직 존재하지 않는 경우 경로 및 폴더를 만듭니다.
+ **LOCATION =  ' *hdfs_folder* '** 는 SELECT 문의 결과를 외부 데이터 원본에 기록할 위치를 지정합니다. 위치는 폴더 이름이며 Hadoop 클러스터 또는 Blob Storage의 루트 폴더에 대한 상대 경로를 포함할 수 있습니다(선택 사항). PolyBase는 아직 존재하지 않는 경우 경로 및 폴더를 만듭니다.
 
-외부 파일은 *hdfs_folder*에 기록되고 *QueryID_date_time_ID.format*로 명명되며, 여기서 *ID*는 증분 식별자이고 *format*은 내보낸 데이터 형식입니다. 예를 들면 QID776_20160130_182739_0.orc입니다.
+외부 파일은 *hdfs_folder* 에 기록되고 *QueryID_date_time_ID.format* 로 명명되며, 여기서 *ID* 는 증분 식별자이고 *format* 은 내보낸 데이터 형식입니다. 예를 들면 QID776_20160130_182739_0.orc입니다.
 
  **DATA_SOURCE = *external_data_source_name*** 은 외부 데이터가 저장된 또는 저장될 위치를 포함하는 외부 데이터 원본 개체의 이름을 지정합니다. 위치는 Hadoop 클러스터 또는 Azure Blob Storage 중 하나입니다. 외부 데이터 원본을 만들려면 [CREATE EXTERNAL DATA SOURCE &#40;Transact-SQL&#41;](../../t-sql/statements/create-external-data-source-transact-sql.md)을 사용합니다.
 
  **FILE_FORMAT = *external_file_format_name*** 은 외부 데이터 파일에 대한 형식을 포함하는 외부 파일 형식 개체의 이름을 지정합니다. 외부 파일 형식을 만들려면 [CREATE EXTERNAL FILE FORMAT &#40;Transact-SQL&#41;](../../t-sql/statements/create-external-file-format-transact-sql.md)을 사용합니다.
 
- **REJECT 옵션**은 이 CREATE EXTERNAL TABLE AS SELECT 문이 실행될 때 적용되지 않습니다. 그 대신, 나중에 데이터베이스가 외부 테이블에서 데이터를 가져올 때 사용할 수 있도록 이곳에 지정됩니다. 나중에 CREATE TABLE AS SELECT 문이 외부 테이블에서 데이터를 선택할 때 데이터베이스는 거부 옵션을 사용하여 가져오기를 중지하는 기준이 되는 가져오기 실패의 행 수 또는 백분율을 결정합니다.
+ **REJECT 옵션** 은 이 CREATE EXTERNAL TABLE AS SELECT 문이 실행될 때 적용되지 않습니다. 그 대신, 나중에 데이터베이스가 외부 테이블에서 데이터를 가져올 때 사용할 수 있도록 이곳에 지정됩니다. 나중에 CREATE TABLE AS SELECT 문이 외부 테이블에서 데이터를 선택할 때 데이터베이스는 거부 옵션을 사용하여 가져오기를 중지하는 기준이 되는 가져오기 실패의 행 수 또는 백분율을 결정합니다.
 
    - **REJECT_VALUE = *reject_value*** 는 데이터베이스가 가져오기를 중지하는 기준이 되는 가져오기 실패 값 또는 행 수를 지정합니다.
 
-   - **REJECT_TYPE = **value** | percentage**는 REJECT_VALUE 옵션이 리터럴 값으로 지정되는지 또는 백분율로 지정되는지 구체화합니다.
+   - **REJECT_TYPE = **value** | percentage** 는 REJECT_VALUE 옵션이 리터럴 값으로 지정되는지 또는 백분율로 지정되는지 구체화합니다.
 
-      - REJECT_VALUE가 백분율이 아닌 리터럴 값인 경우 **Value**가 사용됩니다. 데이터베이스는 실패한 행 수가 *reject_value*를 초과하면 외부 데이터 파일에서 행 가져오기를 중지합니다.
+      - REJECT_VALUE가 백분율이 아닌 리터럴 값인 경우 **Value** 가 사용됩니다. 데이터베이스는 실패한 행 수가 *reject_value* 를 초과하면 외부 데이터 파일에서 행 가져오기를 중지합니다.
 
         예를 들어 REJECT_VALUE = 5이고 REJECT_TYPE = value인 경우, 데이터베이스는 행을 가져오는 데 5번 실패한 후 행 가져오기를 중지합니다.
 
-      - REJECT_VALUE가 리터럴 값이 아닌 백분율인 경우 **Percentage**가 사용됩니다. 데이터베이스는 실패한 행의 *백분율*이 *reject_value*를 초과하는 경우 외부 데이터 파일에서 행 가져오기를 중지합니다. 실패한 행의 백분율은 일정 간격으로 계산됩니다.
+      - REJECT_VALUE가 리터럴 값이 아닌 백분율인 경우 **Percentage** 가 사용됩니다. 데이터베이스는 실패한 행의 *백분율* 이 *reject_value* 를 초과하는 경우 외부 데이터 파일에서 행 가져오기를 중지합니다. 실패한 행의 백분율은 일정 간격으로 계산됩니다.
 
    - **REJECT_SAMPLE_VALUE = *reject_sample_value*** 는 REJECT_TYPE = percentage일 때 필요하며 데이터베이스가 실패한 행 백분율을 다시 계산하려 시도하는 행 수를 지정합니다.
 
-      예를 들어 REJECT_SAMPLE_VALUE = 1000인 경우, 데이터베이스는 외부 데이터 파일에서 행 1000개 가져오기를 시도한 후 실패한 행의 백분율을 계산합니다. 실패한 행의 백분율이 *reject_value*보다 작은 경우, 데이터베이스는 또 다른 행 1000개의 로드를 시도합니다. 계속해서 데이터베이스는 추가로 행 1000개의 가져오기를 시도한 후마다 실패한 행의 백분율을 다시 계산합니다.
+      예를 들어 REJECT_SAMPLE_VALUE = 1000인 경우, 데이터베이스는 외부 데이터 파일에서 행 1000개 가져오기를 시도한 후 실패한 행의 백분율을 계산합니다. 실패한 행의 백분율이 *reject_value* 보다 작은 경우, 데이터베이스는 또 다른 행 1000개의 로드를 시도합니다. 계속해서 데이터베이스는 추가로 행 1000개의 가져오기를 시도한 후마다 실패한 행의 백분율을 다시 계산합니다.
 
      > [!NOTE]
-     >  데이터베이스는 실패한 행의 백분율을 일정 간격으로 계산하므로 실패한 행의 실제 백분율은 *reject_value*를 초과할 수 있습니다.
+     >  데이터베이스는 실패한 행의 백분율을 일정 간격으로 계산하므로 실패한 행의 실제 백분율은 *reject_value* 를 초과할 수 있습니다.
 
      **예제:**
 
@@ -102,7 +102,7 @@ CREATE EXTERNAL TABLE [ [database_name  . [ schema_name ] . ] | schema_name . ] 
 
  **WITH *common_table_expression*** 은 CTE(공통 테이블 식)라고도 하는 임시로 이름이 지정된 결과 집합을 지정합니다. 자세한 내용은 [WITH common_table_expression&#40;Transact-SQL&#41;](../../t-sql/queries/with-common-table-expression-transact-sql.md)을 참조하세요. 
 
- **SELECT \<select_criteria>** 는 새 테이블을 SELECT 문의 결과로 채웁니다. *select_criteria*는새 테이블에 복사할 데이터를 결정하는 SELECT 문의 본문입니다. SELECT 문에 대한 자세한 내용은 [SELECT&#40;Transact-SQL&#41;](../../t-sql/queries/select-transact-sql.md)을 참조하세요.
+ **SELECT \<select_criteria>** 는 새 테이블을 SELECT 문의 결과로 채웁니다. *select_criteria* 는새 테이블에 복사할 데이터를 결정하는 SELECT 문의 본문입니다. SELECT 문에 대한 자세한 내용은 [SELECT&#40;Transact-SQL&#41;](../../t-sql/queries/select-transact-sql.md)을 참조하세요.
 
 ## <a name="permissions"></a>사용 권한
 
@@ -110,7 +110,7 @@ CREATE EXTERNAL TABLE [ [database_name  . [ schema_name ] . ] | schema_name . ] 
 
 - **db_ddladmin** 고정 데이터베이스 역할에 새 테이블 또는 멤버 자격을 포함할 로컬 스키마에 대한 **ALTER SCHEMA** 권한.
 - **db_ddladmin** 고정 데이터베이스 역할의 **CREATE TABLE** 권한 또는 멤버 자격.
-- *select_criteria*에 참조된 임의의 개체에 대한 **SELECT** 권한.
+- *select_criteria* 에 참조된 임의의 개체에 대한 **SELECT** 권한.
 
  로그인하려면 다음 권한이 모두 필요합니다.
 
@@ -136,7 +136,7 @@ CREATE EXTERNAL TABLE [ [database_name  . [ schema_name ] . ] | schema_name . ] 
 
  외부 테이블 이름과 정의는 데이터베이스 메타데이터에 저장됩니다. 데이터는 외부 데이터 원본에 저장됩니다.
 
- 외부 파일의 이름은 *QueryID_date_time_ID.format*입니다. 여기서 *ID* 는 증분 식별자이고 *형식* 은 내보낸된 데이터 형식입니다. 예를 들면 QID776_20160130_182739_0.orc입니다.
+ 외부 파일의 이름은 *QueryID_date_time_ID.format* 입니다. 여기서 *ID* 는 증분 식별자이고 *형식* 은 내보낸된 데이터 형식입니다. 예를 들면 QID776_20160130_182739_0.orc입니다.
 
  CREATE EXTERNAL TABLE AS SELECT 문은 원본 테이블이 분할되었더라도 언제나 분할되지 않은 테이블을 만듭니다.
 
@@ -175,7 +175,7 @@ Parquet 또는 ORC 파일에 대한 CREATE EXTERNAL TABLE AS SELECT는 데이터
 - /r
 - /n
 
-이러한 문자가 포함된 CREATE EXTERNAL TABLE AS SELECT를 사용하려면 먼저 CREATE EXTERNAL TABLE AS SELECT를 실행하여 구분된 텍스트 파일로 데이터를 내보냅니다. 이 텍스트 파일을 외부 도구를 통해 Parquet 또는 ORC로 변환할 수 있습니다.
+위의 문자가 포함된 CREATE EXTERNAL TABLE AS SELECT를 사용하려면 먼저 CREATE EXTERNAL TABLE AS SELECT 문을 실행하여 데이터를 구분된 텍스트 파일로 내보내야 합니다. 그런 다음, 외부 도구를 사용하여 Parquet 또는 ORC로 변환할 수 있습니다.
 
 ## <a name="locking"></a>잠금
  SCHEMARESOLUTION 개체에 대한 공유 잠금을 실행합니다.
@@ -186,7 +186,7 @@ Parquet 또는 ORC 파일에 대한 CREATE EXTERNAL TABLE AS SELECT는 데이터
 
  다음 예제에서는 원본 테이블 `dimCustomer`의 열 정의 및 데이터를 사용하여 `hdfsCustomer`라는 새 외부 테이블을 만듭니다.
 
- 테이블 정의는 데이터베이스에 저장되며 SELECT 문의 결과를 Hadoop 외부 데이터 원본 *customer_ds*의 '/pdwdata/customer.tbl' 파일로 내보냅니다. 파일은 외부 파일 형식 *customer_ff*에 따라 서식 지정됩니다.
+ 테이블 정의는 데이터베이스에 저장되며 SELECT 문의 결과를 Hadoop 외부 데이터 원본 *customer_ds* 의 '/pdwdata/customer.tbl' 파일로 내보냅니다. 파일은 외부 파일 형식 *customer_ff* 에 따라 서식 지정됩니다.
 
  파일 이름은 데이터베이스에 의해 생성되며 파일을 생성한 쿼리와 파일을 정렬하기 쉽도록 쿼리 ID를 포함합니다.
 

@@ -1,6 +1,6 @@
 기존 사용자 정의 리소스 관리자 작업 그룹을 삭제합니다.
 
-![항목 링크 아이콘](../database-engine/configure-windows/media/topic-link.gif "항목 링크 아이콘") [Transact-SQL 구문 규칙](../t-sql/language-elements/transact-sql-syntax-conventions-transact-sql.md).
+:::image type="icon" source="../database-engine/configure-windows/media/topic-link.gif"::: [Transact-SQL 구문 표기 규칙](../t-sql/language-elements/transact-sql-syntax-conventions-transact-sql.md)
 
 ## <a name="syntax"></a>구문
 

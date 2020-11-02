@@ -25,12 +25,12 @@ ms.assetid: e247b84e-c99e-4af8-8b50-57586e1cb1c5
 author: VanMSFT
 ms.author: vanto
 monikerRange: '>=aps-pdw-2016||=azuresqldb-current||=azure-sqldw-latest||>=sql-server-2016||=sqlallproducts-allversions||>=sql-server-linux-2017||=azuresqldb-mi-current'
-ms.openlocfilehash: 5a0355e777d05ba9b8257f57a65999e6973c53b3
-ms.sourcegitcommit: e700497f962e4c2274df16d9e651059b42ff1a10
+ms.openlocfilehash: 875859d70488bd536223e400e183bcc88a3b4d99
+ms.sourcegitcommit: d35d0901296580bfceda6e0ab2e14cf2b7e99a0f
 ms.translationtype: HT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 08/17/2020
-ms.locfileid: "88458864"
+ms.lasthandoff: 10/24/2020
+ms.locfileid: "92497013"
 ---
 # <a name="alter-login-transact-sql"></a>ALTER LOGIN(Transact-SQL)
 
@@ -50,7 +50,7 @@ ms.locfileid: "88458864"
         [SQL 데이터베이스](alter-login-transact-sql.md?view=azuresqldb-current)
     :::column-end:::
     :::column:::
-        [SQL Database<br />Managed Instance](alter-login-transact-sql.md?view=azuresqldb-mi-current)
+        [SQL Managed Instance](alter-login-transact-sql.md?view=azuresqldb-mi-current)
     :::column-end:::
     :::column:::
         [Azure Synapse<br />Analytics](alter-login-transact-sql.md?view=azure-sqldw-latest)
@@ -153,13 +153,13 @@ CHECK_POLICY가 ON으로 변경되면 다음 동작이 수행됩니다.
 
 - CHECK_EXPIRATION도 OFF로 설정됩니다.
 - 암호 기록이 삭제됩니다.
-- *lockout_time*의 값이 재설정됩니다.
+- *lockout_time* 의 값이 재설정됩니다.
 
 MUST_CHANGE를 지정한 경우에는 CHECK_EXPIRATION  및 CHECK_POLICY를 ON으로 설정해야 합니다. 그렇지 않으면 문이 실패합니다.
 
 CHECK_POLICY를 OFF로 설정한 경우에는 CHECK_EXPIRATION을 ON으로 설정할 수 없습니다. 이 옵션 조합을 사용하면 ALTER LOGIN 문이 실패합니다.
 
-ALTER LOGIN에 DISABLE 인수를 사용하여 Windows 그룹에 대한 액세스를 거부할 수 없습니다. 예를 들어 ALTER LOGIN [*domain\group*] DISABLE은 다음 오류 메시지를 반환합니다.
+ALTER LOGIN에 DISABLE 인수를 사용하여 Windows 그룹에 대한 액세스를 거부할 수 없습니다. 예를 들어 ALTER LOGIN [ *domain\group* ] DISABLE은 다음 오류 메시지를 반환합니다.
 
 `"Msg 15151, Level 16, State 1, Line 1
 "Cannot alter the login '*Domain\Group*', because it does not exist or you do not have permission."`
@@ -284,7 +284,7 @@ GO
         **_\* SQL Database \*_**
     :::column-end:::
     :::column:::
-        [SQL Database<br />Managed Instance](alter-login-transact-sql.md?view=azuresqldb-mi-current)
+        [SQL Managed Instance](alter-login-transact-sql.md?view=azuresqldb-mi-current)
     :::column-end:::
     :::column:::
         [Azure Synapse<br />Analytics](alter-login-transact-sql.md?view=azure-sqldw-latest)
@@ -398,7 +398,7 @@ ALTER LOGIN John2 WITH CREDENTIAL = Custodian04;
 다음 예에서는 `Mary5` 로그인을 `EKMProvider1` EKM 자격 증명에 매핑합니다.
 
 
-**적용 대상**: [!INCLUDE[ssKatmai](../../includes/sskatmai-md.md)] 이상
+**적용 대상** : [!INCLUDE[ssKatmai](../../includes/sskatmai-md.md)] 이상
 
 ```sql
 ALTER LOGIN Mary5
@@ -428,7 +428,7 @@ GO
 
 다음 예에서는 `TestUser` 로그인의 암호를 이미 해시된 값으로 변경합니다.
 
-**적용 대상**: [!INCLUDE[ssKatmai](../../includes/sskatmai-md.md)] 이상
+**적용 대상** : [!INCLUDE[ssKatmai](../../includes/sskatmai-md.md)] 이상
 
 ```sql
 ALTER LOGIN TestUser WITH
@@ -456,7 +456,7 @@ GO
         [SQL 데이터베이스](alter-login-transact-sql.md?view=azuresqldb-current)
     :::column-end:::
     :::column:::
-        **_\* SQL Database<br />Managed Instance \*_**
+        **_\* SQL Managed Instance \*_**
     :::column-end:::
     :::column:::
         [Azure Synapse<br />Analytics](alter-login-transact-sql.md?view=azure-sqldw-latest)
@@ -533,7 +533,7 @@ ALTER LOGIN login_name
 
 ### <a name="arguments-applicable-to-sql-and-azure-ad-logins"></a>SQL 및 Azure AD 로그인에 적용 가능한 인수
 
-*login_name* 변경할 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 로그인의 이름을 지정합니다. Azure AD 로그인은 user@domain으로 지정해야 합니다. 예를 들어 john.smith@contoso.com이나 Azure AD 그룹 또는 애플리케이션 이름으로 지정합니다. Azure AD 로그인의 경우 *login_name*은 master 데이터베이스에서 만든 기존 Azure AD 로그인과 일치해야 합니다.
+*login_name* 변경할 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 로그인의 이름을 지정합니다. Azure AD 로그인은 user@domain으로 지정해야 합니다. 예를 들어 john.smith@contoso.com이나 Azure AD 그룹 또는 애플리케이션 이름으로 지정합니다. Azure AD 로그인의 경우 *login_name* 은 master 데이터베이스에서 만든 기존 Azure AD 로그인과 일치해야 합니다.
 
 ENABLE | DISABLE 로그인을 사용하거나 사용하지 않도록 설정합니다. 로그인 비활성화는 이미 연결된 로그인 동작에 영향을 주지 않습니다. (기존 연결을 종료하려면 `KILL` 문을 사용합니다.) 비활성화된 로그인은 권한을 유지하며 계속 가장될 수 있습니다.
 
@@ -584,13 +584,13 @@ CHECK_POLICY가 ON으로 변경되면 다음 동작이 수행됩니다.
 
 - CHECK_EXPIRATION도 OFF로 설정됩니다.
 - 암호 기록이 삭제됩니다.
-- *lockout_time*의 값이 재설정됩니다.
+- *lockout_time* 의 값이 재설정됩니다.
 
 MUST_CHANGE를 지정한 경우에는 CHECK_EXPIRATION  및 CHECK_POLICY를 ON으로 설정해야 합니다. 그렇지 않으면 문이 실패합니다.
 
 CHECK_POLICY를 OFF로 설정한 경우에는 CHECK_EXPIRATION을 ON으로 설정할 수 없습니다. 이 옵션 조합을 사용하면 ALTER LOGIN 문이 실패합니다.
 
-ALTER_LOGIN에 DISABLE 인수를 사용하여 Windows 그룹에 대한 액세스를 거부할 수 없습니다. 이것은 의도적인 것입니다. 예를 들어 ALTER_LOGIN [*domain\group*] DISABLE은 다음 오류 메시지를 반환합니다.
+ALTER_LOGIN에 DISABLE 인수를 사용하여 Windows 그룹에 대한 액세스를 거부할 수 없습니다. 이것은 의도적인 것입니다. 예를 들어 ALTER_LOGIN [ *domain\group* ] DISABLE은 다음 오류 메시지를 반환합니다.
 
 `"Msg 15151, Level 16, State 1, Line 1
 "Cannot alter the login '*Domain\Group*', because it does not exist or you do not have permission."`
@@ -655,7 +655,7 @@ ALTER LOGIN John2 WITH CREDENTIAL = Custodian04;
 
 다음 예에서는 `Mary5` 로그인을 `EKMProvider1` EKM 자격 증명에 매핑합니다.
 
-**적용 대상**: [!INCLUDE[ssKatmai](../../includes/sskatmai-md.md)] 이상 및 Azure SQL Managed Instance.
+**적용 대상** : [!INCLUDE[ssKatmai](../../includes/sskatmai-md.md)] 이상 및 Azure SQL Managed Instance.
 
 ```sql
 ALTER LOGIN Mary5
@@ -685,7 +685,7 @@ GO
 
 다음 예에서는 `TestUser` 로그인의 암호를 이미 해시된 값으로 변경합니다.
 
-**적용 대상**: [!INCLUDE[ssKatmai](../../includes/sskatmai-md.md)] 이상 및 Azure SQL Managed Instance.
+**적용 대상** : [!INCLUDE[ssKatmai](../../includes/sskatmai-md.md)] 이상 및 Azure SQL Managed Instance.
 
 ```sql
 ALTER LOGIN TestUser WITH
@@ -721,7 +721,7 @@ ALTER LOGIN [joe@contoso.com] DISABLE
         [SQL 데이터베이스](alter-login-transact-sql.md?view=azuresqldb-current)
     :::column-end:::
     :::column:::
-        [SQL Database<br />Managed Instance](alter-login-transact-sql.md?view=azuresqldb-mi-current)
+        [SQL Managed Instance](alter-login-transact-sql.md?view=azuresqldb-mi-current)
     :::column-end:::
     :::column:::
         **_\* Azure Synapse<br />Analytics \*_**
@@ -832,7 +832,7 @@ ALTER LOGIN John2 WITH CREDENTIAL = Custodian04;
 
 다음 예에서는 `Mary5` 로그인을 `EKMProvider1` EKM 자격 증명에 매핑합니다.
 
-**적용 대상**: [!INCLUDE[ssKatmai](../../includes/sskatmai-md.md)] 이상
+**적용 대상** : [!INCLUDE[ssKatmai](../../includes/sskatmai-md.md)] 이상
 
 ```sql
 ALTER LOGIN Mary5
@@ -862,7 +862,7 @@ GO
 
 다음 예에서는 `TestUser` 로그인의 암호를 이미 해시된 값으로 변경합니다.
 
-**적용 대상**: [!INCLUDE[ssKatmai](../../includes/sskatmai-md.md)] 이상
+**적용 대상** : [!INCLUDE[ssKatmai](../../includes/sskatmai-md.md)] 이상
 
 ```sql
 ALTER LOGIN TestUser WITH
@@ -890,7 +890,7 @@ GO
         [SQL 데이터베이스](alter-login-transact-sql.md?view=azuresqldb-current)
     :::column-end:::
     :::column:::
-        [SQL Database<br />Managed Instance](alter-login-transact-sql.md?view=azuresqldb-mi-current)
+        [SQL Managed Instance](alter-login-transact-sql.md?view=azuresqldb-mi-current)
     :::column-end:::
     :::column:::
         [Azure Synapse<br />Analytics](alter-login-transact-sql.md?view=azure-sqldw-latest)
@@ -966,13 +966,13 @@ CHECK_POLICY가 ON으로 변경되면 다음 동작이 수행됩니다.
 
 - CHECK_EXPIRATION도 OFF로 설정됩니다.
 - 암호 기록이 삭제됩니다.
-- *lockout_time*의 값이 재설정됩니다.
+- *lockout_time* 의 값이 재설정됩니다.
 
 MUST_CHANGE를 지정한 경우에는 CHECK_EXPIRATION  및 CHECK_POLICY를 ON으로 설정해야 합니다. 그렇지 않으면 문이 실패합니다.
 
 CHECK_POLICY를 OFF로 설정한 경우에는 CHECK_EXPIRATION을 ON으로 설정할 수 없습니다. 이 옵션 조합을 사용하면 ALTER LOGIN 문이 실패합니다.
 
-ALTER_LOGIN에 DISABLE 인수를 사용하여 Windows 그룹에 대한 액세스를 거부할 수 없습니다. 이것은 의도적인 것입니다. 예를 들어 ALTER_LOGIN [*domain\group*] DISABLE은 다음 오류 메시지를 반환합니다.
+ALTER_LOGIN에 DISABLE 인수를 사용하여 Windows 그룹에 대한 액세스를 거부할 수 없습니다. 이것은 의도적인 것입니다. 예를 들어 ALTER_LOGIN [ *domain\group* ] DISABLE은 다음 오류 메시지를 반환합니다.
 
 `"Msg 15151, Level 16, State 1, Line 1
 "Cannot alter the login '*Domain\Group*', because it does not exist or you do not have permission."`
@@ -1035,7 +1035,7 @@ ALTER LOGIN John2 WITH CREDENTIAL = Custodian04;
 
 다음 예에서는 `Mary5` 로그인을 `EKMProvider1` EKM 자격 증명에 매핑합니다.
 
-**적용 대상**: [!INCLUDE[ssKatmai](../../includes/sskatmai-md.md)] 이상
+**적용 대상** : [!INCLUDE[ssKatmai](../../includes/sskatmai-md.md)] 이상
 
 ```sql
 ALTER LOGIN Mary5
@@ -1065,7 +1065,7 @@ GO
 
 다음 예에서는 `TestUser` 로그인의 암호를 이미 해시된 값으로 변경합니다.
 
-**적용 대상**: [!INCLUDE[ssKatmai](../../includes/sskatmai-md.md)] 이상
+**적용 대상** : [!INCLUDE[ssKatmai](../../includes/sskatmai-md.md)] 이상
 
 ```sql
 ALTER LOGIN TestUser WITH

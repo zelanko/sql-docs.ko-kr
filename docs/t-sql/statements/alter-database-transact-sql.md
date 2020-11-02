@@ -27,12 +27,12 @@ ms.assetid: 15f8affd-8f39-4021-b092-0379fc6983da
 author: markingmyname
 ms.author: maghan
 monikerRange: '>=sql-server-2016||>=sql-server-linux-2017||=azuresqldb-current||=azuresqldb-mi-current||=azure-sqldw-latest||>=aps-pdw-2016||=sqlallproducts-allversions'
-ms.openlocfilehash: 5f41b3cc0e5a9d895d83c6696105bdded8302217
-ms.sourcegitcommit: c7f40918dc3ecdb0ed2ef5c237a3996cb4cd268d
+ms.openlocfilehash: 73525f3a89fd0e132de819deefee840c8db8944a
+ms.sourcegitcommit: d35d0901296580bfceda6e0ab2e14cf2b7e99a0f
 ms.translationtype: HT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 10/05/2020
-ms.locfileid: "91725914"
+ms.lasthandoff: 10/24/2020
+ms.locfileid: "92497029"
 ---
 # <a name="alter-database-transact-sql"></a>ALTER DATABASE(Transact-SQL)
 
@@ -54,7 +54,7 @@ ms.locfileid: "91725914"
         [SQL 데이터베이스](alter-database-transact-sql.md?view=azuresqldb-current)
     :::column-end:::
     :::column:::
-        [SQL Database<br />Managed Instance](alter-database-transact-sql.md?view=azuresqldb-mi-current)
+        [SQL Managed Instance](alter-database-transact-sql.md?view=azuresqldb-mi-current)
     :::column-end:::
     :::column:::
         [Azure Synapse<br />Analytics](alter-database-transact-sql.md?view=azure-sqldw-latest)
@@ -140,23 +140,23 @@ ALTER DATABASE { database_name | CURRENT }
 > [!NOTE]
 > 포함된 데이터베이스에서는 이 옵션을 사용할 수 없습니다.
 
-CURRENT **적용 대상**: [!INCLUDE[ssSQL11](../../includes/sssql11-md.md)] 이상
+CURRENT **적용 대상** : [!INCLUDE[ssSQL11](../../includes/sssql11-md.md)] 이상
 
 현재 사용 중인 데이터베이스를 변경하도록 지정합니다.
 
-MODIFY NAME **=** _new_database_name_ 데이터베이스의 이름을 지정된 이름 *new_database_name*으로 바꿉니다.
+MODIFY NAME **=** _new_database_name_ 데이터베이스의 이름을 지정된 이름 *new_database_name* 으로 바꿉니다.
 
-COLLATE *collation_name* 데이터베이스에 대한 데이터 정렬을 지정합니다. *collation_name*으로는 Windows 데이터 정렬 이름 또는 SQL 데이터 정렬 이름을 사용할 수 있습니다. 이를 지정하지 않으면 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 인스턴스의 데이터 정렬이 지정됩니다.
+COLLATE *collation_name* 데이터베이스에 대한 데이터 정렬을 지정합니다. *collation_name* 으로는 Windows 데이터 정렬 이름 또는 SQL 데이터 정렬 이름을 사용할 수 있습니다. 이를 지정하지 않으면 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 인스턴스의 데이터 정렬이 지정됩니다.
 
 > [!NOTE]
 > [!INCLUDE[ssSDSfull](../../includes/sssdsfull-md.md)]에서 데이터베이스를 만든 후에는 데이터 정렬을 변경할 수 없습니다.
 
-기본 데이터 정렬이 아닌 데이터 정렬로 데이터베이스를 만들 경우 데이터베이스의 데이터는 항상 지정된 데이터 정렬을 따릅니다. [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]의 경우 포함된 데이터베이스를 만들 때 내부 카탈로그 정보는 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 기본 데이터 정렬인 **Latin1_General_100_CI_AS_WS_KS_SC**를 통해 유지됩니다.
+기본 데이터 정렬이 아닌 데이터 정렬로 데이터베이스를 만들 경우 데이터베이스의 데이터는 항상 지정된 데이터 정렬을 따릅니다. [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]의 경우 포함된 데이터베이스를 만들 때 내부 카탈로그 정보는 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 기본 데이터 정렬인 **Latin1_General_100_CI_AS_WS_KS_SC** 를 통해 유지됩니다.
 
 Windows 데이터 정렬 이름 및 SQL 데이터 정렬 이름에 대한 자세한 내용은 [COLLATE](~/t-sql/statements/collations.md)를 참조하세요.
 
 **\<delayed_durability_option> ::=** 
-**적용 대상**: [!INCLUDE[ssSQL14](../../includes/sssql14-md.md)] 이상.
+**적용 대상** : [!INCLUDE[ssSQL14](../../includes/sssql14-md.md)] 이상.
 
 자세한 내용은 [ALTER DATABASE SET 옵션](../../t-sql/statements/alter-database-transact-sql-set-options.md) 및 [트랜잭션 내구성 제어](../../relational-databases/logs/control-transaction-durability.md)를 참조하세요.
 
@@ -205,7 +205,7 @@ Windows 데이터 정렬 이름 및 SQL 데이터 정렬 이름에 대한 자세
 - 현재 데이터베이스를 사용하고 있는 다른 사용자가 없습니다.
 - 데이터베이스의 데이터 정렬에 종속된 스키마 바운드 개체가 없습니다.
 
-데이터베이스 데이터 정렬에 종속되는 다음과 같은 개체가 데이터베이스에 있는 경우 ALTER DATABASE*database_name*COLLATE 문은 실패하게 됩니다. [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]는 `ALTER` 동작을 차단하는 각 개체에 대해 오류 메시지를 반환합니다.
+데이터베이스 데이터 정렬에 종속되는 다음과 같은 개체가 데이터베이스에 있는 경우 ALTER DATABASE *database_name* COLLATE 문은 실패하게 됩니다. [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]는 `ALTER` 동작을 차단하는 각 개체에 대해 오류 메시지를 반환합니다.
 
 - SCHEMABINDING으로 생성된 사용자 정의 함수 및 뷰
 - 계산 열
@@ -252,7 +252,7 @@ GO
 
 다음 예에서는 `testdb`S 데이터 정렬을 사용하여 `SQL_Latin1_General_CP1_CI_A`라는 데이터베이스를 만든 다음 `testdb` 데이터베이스의 데이터 정렬을 `COLLATE French_CI_AI`로 변경합니다.
 
-**적용 대상**: [!INCLUDE[ssKatmai](../../includes/sskatmai-md.md)] 이상
+**적용 대상** : [!INCLUDE[ssKatmai](../../includes/sskatmai-md.md)] 이상
 
 ```sql
 USE master;
@@ -295,7 +295,7 @@ GO
         **_\* SQL Database \*_** &nbsp;
     :::column-end:::
     :::column:::
-        [SQL Database<br />Managed Instance](alter-database-transact-sql.md?view=azuresqldb-mi-current)
+        [SQL Managed Instance](alter-database-transact-sql.md?view=azuresqldb-mi-current)
     :::column-end:::
     :::column:::
         [Azure Synapse<br />Analytics](alter-database-transact-sql.md?view=azure-sqldw-latest)
@@ -407,7 +407,7 @@ ALTER DATABASE { database_name | CURRENT }
 
 CURRENT 현재 사용 중인 데이터베이스를 변경하도록 지정합니다.
 
-MODIFY NAME **=** _new_database_name_ 데이터베이스의 이름을 지정된 이름 *new_database_name*으로 바꿉니다. 다음 예에서는 `db1` 데이터베이스의 이름을 `db2`로 변경합니다.
+MODIFY NAME **=** _new_database_name_ 데이터베이스의 이름을 지정된 이름 *new_database_name* 으로 바꿉니다. 다음 예에서는 `db1` 데이터베이스의 이름을 `db2`로 변경합니다.
 
 ```sql
 ALTER DATABASE db1
@@ -462,7 +462,7 @@ MODIFY (MAXSIZE **=** [100MB \| 500MB \| 1 \| 1024...4096]GB) 데이터베이스
 |1024GB|N/A|√|√|√|√ (D)|
 |1024GB에서 최대 4096GB(256 GB*로 증분)|N/A|N/A|N/A|N/A|√|
 
-\* P11과 P15는 기본 크기인 1024를 사용하여 MAXSIZE를 최대 4TB까지 허용합니다. P11 및 P15는 추가 비용 없이 최대 4TB가 포함된 스토리지를 사용할 수 있습니다. 프리미엄 계층에서 1TB 초과 MAXSIZE는 현재 다음 지역에서 사용할 수 있습니다. 미국 동부2, 미국 서부, US Gov 버지니아, 서유럽, 독일 중부, 동남 아시아, 일본 동부, 오스트레일리아 동부, 캐나다 중부 및 캐나다 동부. DTU 모델에 대한 리소스 제한에 관한 자세한 내용은 [DTU 리소스 제한](https://docs.microsoft.com/azure/sql-database/sql-database-dtu-resource-limits)을 참조하세요.
+\* P11과 P15는 기본 크기인 1024를 사용하여 MAXSIZE를 최대 4TB까지 허용합니다. P11 및 P15는 추가 비용 없이 최대 4TB가 포함된 스토리지를 사용할 수 있습니다. 프리미엄 계층에서 1TB 초과 MAXSIZE는 현재 다음 지역에서 사용할 수 있습니다. 미국 동부2, 미국 서부, US Gov 버지니아, 서유럽, 독일 중부, 동남 아시아, 일본 동부, 오스트레일리아 동부, 캐나다 중부 및 캐나다 동부. DTU 모델에 대한 리소스 제한에 관한 자세한 내용은 [DTU 리소스 제한](/azure/sql-database/sql-database-dtu-resource-limits)을 참조하세요.
 
 DTU 모델에 대한 MAXSIZE 값은 지정된 경우 지정된 서비스 계층에 대한 위의 표에 표시된 유효한 값이어야 합니다.
 
@@ -558,7 +558,7 @@ DTU 모델에 대한 MAXSIZE 값은 지정된 경우 지정된 서비스 계층�
 |:----- | -------: | -------: | -------: | -------: | -------: |
 |최대 데이터 크기(GB)|1280|1536|2048|4096|4096|
 
-vCore 모델을 사용할 때 `MAXSIZE`값이 설정되지 않은 경우 기본값은 32GB입니다. vCore 모델에 대한 리소스 제한에 관한 자세한 내용은 [vCore 리소스 제한](https://docs.microsoft.com/azure/sql-database/sql-database-dtu-resource-limits)을 참조하세요.
+vCore 모델을 사용할 때 `MAXSIZE`값이 설정되지 않은 경우 기본값은 32GB입니다. vCore 모델에 대한 리소스 제한에 관한 자세한 내용은 [vCore 리소스 제한](/azure/sql-database/sql-database-dtu-resource-limits)을 참조하세요.
 
 MAXSIZE 및 EDITION 인수에는 다음과 같은 규칙이 적용됩니다.
 
@@ -586,9 +586,9 @@ SERVICE_OBJECTIVE
 
   - 컴퓨팅 크기(서비스 목표)를 지정합니다. 서비스 목표의 사용 가능한 값은 `HS_GEN4_1` `HS_GEN4_2` `HS_GEN4_4` `HS_GEN4_8` `HS_GEN4_16`, `HS_GEN4_24`, `HS_Gen5_2`, `HS_Gen5_4`, `HS_Gen5_8`, `HS_Gen5_16`, `HS_Gen5_24`, `HS_Gen5_32`, `HS_Gen5_48`, `HS_Gen5_80`입니다.
 
-서비스 목표 설명과 크기, 버전 및 서비스 목표 조합 등의 정보에 대한 자세한 내용은 [Azure SQL Database 서비스 계층 및 성능 수준](https://azure.microsoft.com/documentation/articles/sql-database-service-tiers/), [DTU 리소스 제한](https://docs.microsoft.com/azure/sql-database/sql-database-dtu-resource-limits) 및 [vCore 리소스 제한](https://docs.microsoft.com/azure/sql-database/sql-database-dtu-resource-limits)을 참조하세요. PRS 서비스 목표에 대한 지원이 제거되었습니다. 질문에 대해서는, 이메일 별칭(premium-rs@microsoft.com)을 사용하세요.
+서비스 목표 설명과 크기, 버전 및 서비스 목표 조합 등의 정보에 대한 자세한 내용은 [Azure SQL Database 서비스 계층 및 성능 수준](/azure/azure-sql/database/purchasing-models), [DTU 리소스 제한](/azure/sql-database/sql-database-dtu-resource-limits) 및 [vCore 리소스 제한](/azure/sql-database/sql-database-dtu-resource-limits)을 참조하세요. PRS 서비스 목표에 대한 지원이 제거되었습니다. 질문에 대해서는, 이메일 별칭(premium-rs@microsoft.com)을 사용하세요.
 
-MODIFY (SERVICE_OBJECTIVE = ELASTIC\_POOL (name = \<elastic_pool_name>) 탄력적 풀에 기존 데이터베이스를 추가하려면 데이터베이스의 SERVICE_OBJECTIVE를 ELASTIC_POOL로 설정하고 탄력적 풀의 이름을 입력합니다. 동일한 서버 내의 다른 탄력적 풀에 데이터베이스를 변경하려면 이 옵션을 사용할 수도 있습니다. 자세한 내용은 [SQL Database 탄력적 풀 만들기 및 관리](https://azure.microsoft.com/documentation/articles/sql-database-elastic-pool-portal/)를 참조하세요. 탄력적 풀에서 데이터베이스를 제거하려면 ALTER DATABASE를 사용하여 SERVICE_OBJECTIVE를 단일 데이터베이스 컴퓨팅 크기(서비스 목표)로 설정합니다.
+MODIFY (SERVICE_OBJECTIVE = ELASTIC\_POOL (name = \<elastic_pool_name>) 탄력적 풀에 기존 데이터베이스를 추가하려면 데이터베이스의 SERVICE_OBJECTIVE를 ELASTIC_POOL로 설정하고 탄력적 풀의 이름을 입력합니다. 동일한 서버 내의 다른 탄력적 풀에 데이터베이스를 변경하려면 이 옵션을 사용할 수도 있습니다. 자세한 내용은 [SQL Database 탄력적 풀 만들기 및 관리](/azure/azure-sql/database/elastic-pool-overview)를 참조하세요. 탄력적 풀에서 데이터베이스를 제거하려면 ALTER DATABASE를 사용하여 SERVICE_OBJECTIVE를 단일 데이터베이스 컴퓨팅 크기(서비스 목표)로 설정합니다.
 
 > [!NOTE]
 > 하이퍼스케일 서비스 계층의 데이터베이스는 탄력적 풀에 추가할 수 없습니다.
@@ -763,7 +763,7 @@ ALTER DATABASE db1 MODIFY BACKUP_STORAGE_REDUNDANCY = 'ZONE'
         [SQL 데이터베이스](alter-database-transact-sql.md?view=azuresqldb-current)
     :::column-end:::
     :::column:::
-        **_\* SQL Database<br />Managed Instance \*_** &nbsp;
+        **_\* SQL Managed Instance \*_** &nbsp;
     :::column-end:::
     :::column:::
         [Azure Synapse<br />Analytics](alter-database-transact-sql.md?view=azure-sqldw-latest)
@@ -899,7 +899,7 @@ ALTER DATABASE WideWorldImporters
         [SQL 데이터베이스](alter-database-transact-sql.md?view=azuresqldb-current)
     :::column-end:::
     :::column:::
-        [SQL Database<br />Managed Instance](alter-database-transact-sql.md?view=azuresqldb-mi-current)
+        [SQL Managed Instance](alter-database-transact-sql.md?view=azuresqldb-mi-current)
     :::column-end:::
     :::column:::
         **_\* Azure Synapse<br />Analytics \*_** &nbsp;
@@ -986,7 +986,7 @@ ALTER DATABASE { database_name | Current }
 
 *database_name* 수정할 데이터베이스의 이름을 지정합니다.
 
-MODIFY NAME = *new_database_name* 데이터베이스의 이름을 지정된 이름 *new_database_name*으로 바꿉니다.
+MODIFY NAME = *new_database_name* 데이터베이스의 이름을 지정된 이름 *new_database_name* 으로 바꿉니다.
 
 MAXSIZE 기본값은 245,760GB(240TB)입니다.
 
@@ -998,7 +998,7 @@ MAXSIZE 기본값은 245,760GB(240TB)입니다.
 
 데이터베이스의 rowstore 데이터에 허용되는 최대 크기입니다. Rowstore 테이블, columnstore 인덱스의 deltastore 또는 클러스터된 columnstore 인덱스의 비클러스터된 인덱스에 저장된 데이터는 MAXSIZE 보다 커질 수 없습니다. columnstore 형식으로 압축된 데이터에는 크기 제한이 없으며 MAXSIZE에 의해 제한되지 않습니다.
 
-SERVICE_OBJECTIVE 컴퓨팅 크기(서비스 목표)를 지정합니다. Azure Synapse의 서비스 목표에 대한 자세한 내용은 [DWU(데이터 웨어하우스 단위)](https://docs.microsoft.com/azure/sql-data-warehouse/what-is-a-data-warehouse-unit-dwu-cdwu)를 참조하세요.
+SERVICE_OBJECTIVE 컴퓨팅 크기(서비스 목표)를 지정합니다. Azure Synapse의 서비스 목표에 대한 자세한 내용은 [DWU(데이터 웨어하우스 단위)](/azure/sql-data-warehouse/what-is-a-data-warehouse-unit-dwu-cdwu)를 참조하세요.
 
 ## <a name="permissions"></a>사용 권한
 
@@ -1011,9 +1011,9 @@ SERVICE_OBJECTIVE 컴퓨팅 크기(서비스 목표)를 지정합니다. Azure S
 
 ## <a name="general-remarks"></a>일반적인 주의 사항
 
-현재 데이터베이스는 변경된 것과 다른 데이터베이스여야 합니다. 따라서 **ALTER는 master 데이터베이스에 연결되어 있는 동안 실행되어야 합니다**.
+현재 데이터베이스는 변경된 것과 다른 데이터베이스여야 합니다. 따라서 **ALTER는 master 데이터베이스에 연결되어 있는 동안 실행되어야 합니다** .
 
-SQL Analytics의 COMPATIBILITY_LEVEL은 기본적으로 130으로 설정되며 변경할 수 없습니다. 자세한 내용은 [Azure SQL Database의 호환성 수준 130으로 향상된 쿼리 성능](https://azure.microsoft.com/documentation/articles/sql-database-compatibility-level-query-performance-130/)을 참조하세요.
+SQL Analytics의 COMPATIBILITY_LEVEL은 기본적으로 130으로 설정되며 변경할 수 없습니다. 자세한 내용은 [Azure SQL Database의 호환성 수준 130으로 향상된 쿼리 성능](./alter-database-transact-sql-compatibility-level.md)을 참조하세요.
 
 > [!NOTE]
 > COMPATIBILITY_LEVEL은 프로비전된 리소스(풀)에만 적용됩니다.
@@ -1030,7 +1030,7 @@ SQL Analytics의 COMPATIBILITY_LEVEL은 기본적으로 130으로 설정되며 �
 
 ## <a name="examples"></a>예제
 
-이러한 예제를 실행하기 전에 변경하는 데이터베이스가 현재 데이터베이스가 아닌지 확인합니다. 현재 데이터베이스는 변경된 것과 다른 데이터베이스여야 합니다. 따라서 **ALTER는 master 데이터베이스에 연결되어 있는 동안 실행되어야 합니다**.
+이러한 예제를 실행하기 전에 변경하는 데이터베이스가 현재 데이터베이스가 아닌지 확인합니다. 현재 데이터베이스는 변경된 것과 다른 데이터베이스여야 합니다. 따라서 **ALTER는 master 데이터베이스에 연결되어 있는 동안 실행되어야 합니다** .
 
 ### <a name="a-change-the-name-of-the-database"></a>A. 데이터베이스의 이름을 변경합니다.
 
@@ -1060,7 +1060,7 @@ ALTER DATABASE dw1 MODIFY ( MAXSIZE=10240 GB, SERVICE_OBJECTIVE= 'DW1200' );
 ## <a name="see-also"></a>참고 항목
 
 - [CREATE DATABASE(Azure Synapse Analytics)](../../t-sql/statements/create-database-transact-sql.md?view=aps-pdw-2016-au7)
-- [Azure Synapse Analytics 참조 문서 목록](https://azure.microsoft.com/documentation/articles/sql-data-warehouse-overview-reference/)
+- [Azure Synapse Analytics 참조 문서 목록](/azure/synapse-analytics/sql-data-warehouse/sql-data-warehouse-reference-tsql-language-elements)
 
 ::: moniker-end
 ::: moniker range=">=aps-pdw-2016||=sqlallproducts-allversions"
@@ -1073,7 +1073,7 @@ ALTER DATABASE dw1 MODIFY ( MAXSIZE=10240 GB, SERVICE_OBJECTIVE= 'DW1200' );
         [SQL 데이터베이스](alter-database-transact-sql.md?view=azuresqldb-current)
     :::column-end:::
     :::column:::
-        [SQL Database<br />Managed Instance](alter-database-transact-sql.md?view=azuresqldb-mi-current)
+        [SQL Managed Instance](alter-database-transact-sql.md?view=azuresqldb-mi-current)
     :::column-end:::
     :::column:::
         [Azure Synapse<br />Analytics](alter-database-transact-sql.md?view=azure-sqldw-latest)
@@ -1124,7 +1124,7 @@ DISTRIBUTED_SIZE = *size* [GB] 변경되는 데이터베이스에 모든 분산�
 
 LOG_SIZE = *size* [GB] 변경되는 데이터베이스에 모든 트랜잭션 로그를 저장하기 위해 데이터베이스당 최대 기가바이트를 새로 지정합니다. 해당 크기는 어플라이언스의 모든 컴퓨팅 노드에 분산됩니다.
 
-ENCRYPTION { ON | OFF } 데이터베이스를 암호화하거나(ON) 암호화하지 않도록(OFF) 설정합니다. [sp_pdw_database_encryption](../../relational-databases/system-stored-procedures/sp-pdw-database-encryption-sql-data-warehouse.md)이 **1**로 설정된 경우 [!INCLUDE[ssPDW](../../includes/sspdw-md.md)]에 대한 암호화를 구성할 수 있습니다. 투명한 데이터 암호화를 구성하기 전에 데이터베이스 암호화 키를 만들어야 합니다. 데이터 암호화에 대한 자세한 내용은 [TDE(투명한 데이터 암호화)](../../relational-databases/security/encryption/transparent-data-encryption.md)를 참조하세요.
+ENCRYPTION { ON | OFF } 데이터베이스를 암호화하거나(ON) 암호화하지 않도록(OFF) 설정합니다. [sp_pdw_database_encryption](../../relational-databases/system-stored-procedures/sp-pdw-database-encryption-sql-data-warehouse.md)이 **1** 로 설정된 경우 [!INCLUDE[ssPDW](../../includes/sspdw-md.md)]에 대한 암호화를 구성할 수 있습니다. 투명한 데이터 암호화를 구성하기 전에 데이터베이스 암호화 키를 만들어야 합니다. 데이터 암호화에 대한 자세한 내용은 [TDE(투명한 데이터 암호화)](../../relational-databases/security/encryption/transparent-data-encryption.md)를 참조하세요.
 
 SET AUTO_CREATE_STATISTICS { ON | OFF } 자동 통계 작성 옵션인 AUTO_CREATE_STATISTICS가 ON으로 설정된 경우 쿼리 최적화 프로그램은 필요에 따라 쿼리 조건자의 개별 열에 대한 통계를 작성하므로 쿼리 계획에 대한 카디널리티 예상치의 정확도가 높아집니다. 이러한 단일 열 통계는 기존 통계 개체에 히스토그램이 없는 열에 대해 작성됩니다.
 
@@ -1142,7 +1142,7 @@ SET AUTO_UPDATE_STATISTICS_ASYNC { ON | OFF } 비동기 통계 업데이트 옵�
 
 기본값은 AU7로 업그레이드한 후 생성된 새 데이터베이스에 대해 ON입니다. 기본값은 업그레이드 이전에 생성된 데이터베이스에 대해 OFF입니다.
 
-통계에 대한 자세한 내용은 [통계](/sql/relational-databases/statistics/statistics)를 참조하세요.
+통계에 대한 자세한 내용은 [통계](../../relational-databases/statistics/statistics.md)를 참조하세요.
 
 ## <a name="permissions"></a>사용 권한
 

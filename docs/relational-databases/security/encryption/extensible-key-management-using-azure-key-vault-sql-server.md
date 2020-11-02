@@ -17,12 +17,12 @@ helpviewer_keywords:
 ms.assetid: 3efdc48a-8064-4ea6-a828-3fbf758ef97c
 author: jaszymas
 ms.author: jaszymas
-ms.openlocfilehash: 3b4cb86e387e076ac6dab0ca86642a3cb7860cd3
-ms.sourcegitcommit: 4d370399f6f142e25075b3714e5c2ce056b1bfd0
+ms.openlocfilehash: a70ae767aa0f9ed079b616402f3857e03fc3d9dc
+ms.sourcegitcommit: 22e97435c8b692f7612c4a6d3fe9e9baeaecbb94
 ms.translationtype: HT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 10/09/2020
-ms.locfileid: "91867838"
+ms.lasthandoff: 10/27/2020
+ms.locfileid: "92679060"
 ---
 # <a name="extensible-key-management-using-azure-key-vault-sql-server"></a>Azure 키 자격 증명 모음(SQL Server)을 사용한 확장 가능 키 관리
 [!INCLUDE [SQL Server](../../../includes/applies-to-version/sqlserver.md)]
@@ -36,7 +36,7 @@ ms.locfileid: "91867838"
    
  다음 이미지는 기존 서비스 관리 키 계층과 Azure 주요 자격 증명 모음 시스템을 비교합니다.  
   
- ![ekm-key-hierarchy-traditional](../../../relational-databases/security/encryption/media/ekm-key-hierarchy-traditional.png "ekm-key-hierarchy-traditional")  
+ ![기존 서비스 관리 키 계층 구조와 Azure Key Vault 시스템을 비교하는 다이어그램](../../../relational-databases/security/encryption/media/ekm-key-hierarchy-traditional.png "ekm-key-hierarchy-traditional")  
   
    
  [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] 커넥터는 [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] 및 Azure 주요 자격 증명 모음 간 브리지 역할을 하므로 [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] 은(는) Azure 주요 자격 증명 모음 서비스의 확장성, 고성능 및 고가용성을 활용할 수 있습니다. 다음 이미지는 키 계층이 Azure 주요 자격 증명 모음 및 [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] 커넥터를 사용하여 EKM 공급자 아키텍처에서 작동하는 방법을 보여 줍니다.  

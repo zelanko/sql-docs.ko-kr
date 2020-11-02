@@ -20,12 +20,12 @@ helpviewer_keywords:
 author: julieMSFT
 ms.author: jrasnick
 monikerRange: '>=sql-server-2016||=sqlallproducts-allversions||>=sql-server-linux-2017||=azure-sqldw-latest||=azuresqldb-mi-current'
-ms.openlocfilehash: 67106682f9302c7849b8f5523e88aa1dd2aa4475
-ms.sourcegitcommit: e700497f962e4c2274df16d9e651059b42ff1a10
+ms.openlocfilehash: 51db0074dda0a311dfbea84f51144d8b48ab90ce
+ms.sourcegitcommit: d35d0901296580bfceda6e0ab2e14cf2b7e99a0f
 ms.translationtype: HT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 08/17/2020
-ms.locfileid: "88444747"
+ms.lasthandoff: 10/24/2020
+ms.locfileid: "92496892"
 ---
 # <a name="create-workload-group-transact-sql"></a>CREATE WORKLOAD GROUP(Transact-SQL)
 
@@ -38,7 +38,7 @@ ms.locfileid: "88444747"
         **_\* SQL Server \*_** &nbsp;
     :::column-end:::
     :::column:::
-        [SQL Database<br />Managed Instance](create-workload-group-transact-sql.md?view=azuresqldb-mi-current)
+        [SQL Managed Instance](create-workload-group-transact-sql.md?view=azuresqldb-mi-current)
     :::column-end:::
     :::column:::
         [Azure Synapse<br />Analytics](create-workload-group-transact-sql.md?view=azure-sqldw-latest)
@@ -59,7 +59,7 @@ ms.locfileid: "88444747"
         [SQL Server](create-workload-group-transact-sql.md?view=sql-server-2017)
     :::column-end:::
     :::column:::
-        **_\* SQL Database<br />Managed Instance \*_** &nbsp;
+        **_\* SQL Managed Instance \*_** &nbsp;
     :::column-end:::
     :::column:::
         [Azure Synapse<br />Analytics](create-workload-group-transact-sql.md?view=azure-sqldw-latest)
@@ -80,7 +80,7 @@ ms.locfileid: "88444747"
         [SQL Server](create-workload-group-transact-sql.md?view=sql-server-2017)
     :::column-end:::
     :::column:::
-        [SQL Database<br />Managed Instance](create-workload-group-transact-sql.md?view=azuresqldb-mi-current)
+        [SQL Managed Instance](create-workload-group-transact-sql.md?view=azuresqldb-mi-current)
     :::column-end:::
     :::column:::
         **_\* Azure Synapse<br />Analytics \*_** &nbsp;
@@ -93,7 +93,7 @@ ms.locfileid: "88444747"
 
 워크로드 그룹을 만듭니다. 워크로드 그룹은 요청 세트에 대한 컨테이너로, 시스템에서 워크로드 관리를 구성하는 방법에 대한 기본 사항에 해당합니다. 워크로드 그룹은 워크로드 격리를 위해 리소스를 예약하고, 리소스를 포함하고, 요청별로 리소스를 정의하고, 실행 규칙을 따르도록 하는 기능을 제공합니다. 문이 완료되면 설정이 적용됩니다.
 
- ![항목 링크 아이콘](../../database-engine/configure-windows/media/topic-link.gif "항목 링크 아이콘") [Transact-SQL 구문 규칙](../../t-sql/language-elements/transact-sql-syntax-conventions-transact-sql.md).
+:::image type="icon" source="../../database-engine/configure-windows/media/topic-link.gif"::: [Transact-SQL 구문 표기 규칙](../../t-sql/language-elements/transact-sql-syntax-conventions-transact-sql.md)
 
 ```syntaxsql
 CREATE WORKLOAD GROUP group_name
@@ -109,16 +109,16 @@ CREATE WORKLOAD GROUP group_name
 ```
 
 *group_name*</br>
-워크로드 그룹을 식별하는 이름을 지정합니다. *group_name*은 sysname입니다. 최대 128자까지 가능하며 인스턴스 내에서 고유해야 합니다.
+워크로드 그룹을 식별하는 이름을 지정합니다. *group_name* 은 sysname입니다. 최대 128자까지 가능하며 인스턴스 내에서 고유해야 합니다.
 
 *MIN_PERCENTAGE_RESOURCE* = value</br>
-이 워크로드 그룹에 대해 다른 작업 그룹과 공유되지 않도록 보장된 최소 리소스 할당을 지정합니다. *value*는 0에서 100 사이의 정수 범위입니다. 모든 워크로드 그룹에서 min_percentage_resource의 합계는 100을 초과할 수 없습니다. min_percentage_resource 값은 cap_percentage_resource보다 클 수 없습니다. 서비스 수준에 따라 허용되는 최소 유효 값이 있습니다. 자세한 내용은 [유효 값](#effective-values)을 참조하세요.
+이 워크로드 그룹에 대해 다른 작업 그룹과 공유되지 않도록 보장된 최소 리소스 할당을 지정합니다. *value* 는 0에서 100 사이의 정수 범위입니다. 모든 워크로드 그룹에서 min_percentage_resource의 합계는 100을 초과할 수 없습니다. min_percentage_resource 값은 cap_percentage_resource보다 클 수 없습니다. 서비스 수준에 따라 허용되는 최소 유효 값이 있습니다. 자세한 내용은 [유효 값](#effective-values)을 참조하세요.
 
 *CAP_PERCENTAGE_RESOURCE* = value</br>
 워크로드 그룹의 모든 요청에 대한 최대 리소스 사용률을 지정합니다. 허용되는 정수 값의 범위는 1에서 100까지입니다. cap_percentage_resource 값은 min_percentage_resource보다 커야 합니다. 다른 워크로드 그룹에서 min_percentage_resource가 0보다 크게 구성된 경우 cap_percentage_resource의 유효 값이 줄어들 수 있습니다.
 
 *REQUEST_MIN_RESOURCE_GRANT_PERCENT* = value</br>
-요청별로 할당된 최소 리소스 크기를 설정합니다. *value*는 0.75에서 100.00 사이의 10 진수 범위에 속하는 필수 매개 변수입니다. request_min_resource_grant_percent 값은 0.25의 배수여야 하고 min_percentage_resource의 요소여야 하며, cap_percentage_resource보다 작아야 합니다. 서비스 수준에 따라 허용되는 최소 유효 값이 있습니다. 자세한 내용은 [유효 값](#effective-values)을 참조하세요.
+요청별로 할당된 최소 리소스 크기를 설정합니다. *value* 는 0.75에서 100.00 사이의 10 진수 범위에 속하는 필수 매개 변수입니다. request_min_resource_grant_percent 값은 0.25의 배수여야 하고 min_percentage_resource의 요소여야 하며, cap_percentage_resource보다 작아야 합니다. 서비스 수준에 따라 허용되는 최소 유효 값이 있습니다. 자세한 내용은 [유효 값](#effective-values)을 참조하세요.
 
 다음은 그 예입니다.
 
@@ -141,7 +141,7 @@ WITH
 |||
 
 *REQUEST_MAX_RESOURCE_GRANT_PERCENT* = value</br>         
-요청별로 할당된 최대 리소스 크기를 설정합니다. *value*는 기본값이 request_min_resource_grant_percent와 같은 선택적 10진수 매개 변수입니다. *value*는 request_min_resource_grant_percent보다 크거나 같아야 합니다. request_max_resource_grant_percent 값이 request_min_resource_grant_percent보다 크고, 시스템 리소스를 사용할 수 있는 경우 추가 리소스가 요청에 할당됩니다.
+요청별로 할당된 최대 리소스 크기를 설정합니다. *value* 는 기본값이 request_min_resource_grant_percent와 같은 선택적 10진수 매개 변수입니다. *value* 는 request_min_resource_grant_percent보다 크거나 같아야 합니다. request_max_resource_grant_percent 값이 request_min_resource_grant_percent보다 크고, 시스템 리소스를 사용할 수 있는 경우 추가 리소스가 요청에 할당됩니다.
 
 *IMPORTANCE* = { LOW \| BELOW_NORMAL \| NORMAL \| ABOVE_NORMAL \| HIGH }</br>        
 워크로드 그룹에 대한 요청의 기본 중요도를 지정합니다. 중요도는 다음 중 하나이며 NORMAL이 기본값입니다.
@@ -155,7 +155,7 @@ WITH
 워크로드 그룹에 설정된 중요도는 워크로드 그룹의 모든 요청에 대한 기본 중요도입니다. 또한 사용자는 분류자 수준에서 중요도를 설정할 수 있으며 이 중요도로 워크로드 그룹 중요도 설정을 재정의할 수 있습니다. 이렇게 하면 워크로드 그룹 내에서 요청의 중요도를 차별화하여 예약되지 않은 리소스에 더 빠르게 액세스할 수 있습니다. 워크로드 그룹의 min_percentage_resource 합계가 100보다 작으면 예약되지 않은 리소스가 중요도를 기준으로 할당됩니다.
 
 *QUERY_EXECUTION_TIMEOUT_SEC* = value</br>     
-쿼리가 취소되기 전에 실행될 수 있는 최대 시간(초)을 지정합니다. *value*는 0 또는 양의 정수여야 합니다. value의 기본 설정인 0은 쿼리 시간이 제한되지 않음을 의미합니다. QUERY_EXECUTION_TIMEOUT_SEC는 쿼리가 큐에 대기할 때가 아니라 실행 중 상태로 전환된 후 계산됩니다.
+쿼리가 취소되기 전에 실행될 수 있는 최대 시간(초)을 지정합니다. *value* 는 0 또는 양의 정수여야 합니다. value의 기본 설정인 0은 쿼리 시간이 제한되지 않음을 의미합니다. QUERY_EXECUTION_TIMEOUT_SEC는 쿼리가 큐에 대기할 때가 아니라 실행 중 상태로 전환된 후 계산됩니다.
 
 ## <a name="remarks"></a>설명
 

@@ -37,12 +37,12 @@ ms.assetid: 29ddac46-7a0f-4151-bd94-75c1908c89f8
 author: markingmyname
 ms.author: maghan
 monikerRange: '>=sql-server-2016||>=sql-server-linux-2017||=azuresqldb-current||=azuresqldb-mi-current||=azure-sqldw-latest||>=aps-pdw-2016||=sqlallproducts-allversions'
-ms.openlocfilehash: b488b5861c807bbac66599b71feb71d70d261ba9
-ms.sourcegitcommit: c7f40918dc3ecdb0ed2ef5c237a3996cb4cd268d
+ms.openlocfilehash: 211ed452674eb5cfc8d33d648fbefc66913ba4bd
+ms.sourcegitcommit: d35d0901296580bfceda6e0ab2e14cf2b7e99a0f
 ms.translationtype: HT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 10/05/2020
-ms.locfileid: "91723514"
+ms.lasthandoff: 10/24/2020
+ms.locfileid: "92496915"
 ---
 # <a name="create-database"></a>CREATE DATABASE
 
@@ -64,7 +64,7 @@ ms.locfileid: "91723514"
         [SQL 데이터베이스](create-database-transact-sql.md?view=azuresqldb-current)
     :::column-end:::
     :::column:::
-        [SQL Database<br />Managed Instance](create-database-transact-sql.md?view=azuresqldb-mi-current)
+        [SQL Managed Instance](create-database-transact-sql.md?view=azuresqldb-mi-current)
     :::column-end:::
     :::column:::
         [Azure Synapse<br />Analytics](create-database-transact-sql.md?view=azure-sqldw-latest)
@@ -176,13 +176,13 @@ CREATE DATABASE database_snapshot_name
 
 *database_name* 새 데이터베이스의 이름입니다. 데이터베이스 이름은 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 인스턴스 내에서 고유해야 하고 [식별자](../../relational-databases/databases/database-identifiers.md) 규칙을 따라야 합니다.
 
-로그 파일에 논리적 이름을 지정하는 경우 *database_name*은 최대 128자가 될 수 있습니다. 논리적 로그 파일 이름을 지정하지 않으면 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]에서 *database_name*에 접미사를 추가하여 로그의 *logical_file_name*과 *os_file_name*을 생성합니다. 생성할 논리적 파일 이름이 128자를 넘지 않도록 *database_name*은 123자로 제한됩니다.
+로그 파일에 논리적 이름을 지정하는 경우 *database_name* 은 최대 128자가 될 수 있습니다. 논리적 로그 파일 이름을 지정하지 않으면 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]에서 *database_name* 에 접미사를 추가하여 로그의 *logical_file_name* 과 *os_file_name* 을 생성합니다. 생성할 논리적 파일 이름이 128자를 넘지 않도록 *database_name* 은 123자로 제한됩니다.
 
-데이터 파일 이름을 지정하지 않으면 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]는 *database_name*을 *logical_file_name* 및 *os_file_name*으로 사용합니다. 기본 경로는 레지스트리에서 가져옵니다. 기본 경로는 [!INCLUDE[ssManStudio](../../includes/ssmanstudio-md.md)]에서 **서버 속성(데이터베이스 설정 페이지)** 을 사용하여 변경할 수 있습니다. 기본 경로를 변경하려면 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]를 다시 시작해야 합니다.
+데이터 파일 이름을 지정하지 않으면 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]는 *database_name* 을 *logical_file_name* 및 *os_file_name* 으로 사용합니다. 기본 경로는 레지스트리에서 가져옵니다. 기본 경로는 [!INCLUDE[ssManStudio](../../includes/ssmanstudio-md.md)]에서 **서버 속성(데이터베이스 설정 페이지)** 을 사용하여 변경할 수 있습니다. 기본 경로를 변경하려면 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]를 다시 시작해야 합니다.
 
 CONTAINMENT = { NONE | PARTIAL }
 
-**적용 대상**: [!INCLUDE[ssSQL11](../../includes/sssql11-md.md)] 이상
+**적용 대상** : [!INCLUDE[ssSQL11](../../includes/sssql11-md.md)] 이상
 
 데이터베이스의 포함 상태를 지정합니다. NONE = 포함되지 않은 데이터베이스입니다. PARTIAL = 부분적으로 포함된 데이터베이스입니다.
 
@@ -208,7 +208,7 @@ Windows 데이터 정렬 이름 및 SQL 데이터 정렬 이름에 대한 자세
 WITH \<option>
  **\<filestream_option>**
 
-NON_TRANSACTED_ACCESS = { **OFF** | READ_ONLY | FULL } **적용 대상**: [!INCLUDE[ssSQL11](../../includes/sssql11-md.md)] 이상
+NON_TRANSACTED_ACCESS = { **OFF** | READ_ONLY | FULL } **적용 대상** : [!INCLUDE[ssSQL11](../../includes/sssql11-md.md)] 이상
 
 데이터베이스에 대한 비트랜잭션 FILESTREAM 액세스 수준을 지정합니다.
 
@@ -219,7 +219,7 @@ NON_TRANSACTED_ACCESS = { **OFF** | READ_ONLY | FULL } **적용 대상**: [!INCL
 |FULL|FILESTREAM FileTable에 대한 전체 비트랜잭션 액세스를 사용할 수 있습니다.|
 
 DIRECTORY_NAME = \<directory_name>
-**적용 대상**: [!INCLUDE[ssSQL11](../../includes/sssql11-md.md)] 이상
+**적용 대상** : [!INCLUDE[ssSQL11](../../includes/sssql11-md.md)] 이상
 
 Windows 호환 디렉터리 이름입니다. 이 이름은 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 인스턴스의 모든 Database_Directory 이름 중에서 고유해야 합니다. 고유성 비교는 대/소문자를 구분하며 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 데이터 정렬 설정과 관계가 없습니다. 데이터베이스에 FileTable을 만들기 전에 이 옵션을 설정해야 합니다.
 
@@ -227,25 +227,25 @@ CONTAINMENT가 PARTIAL로 설정된 경우에만 다음 옵션을 사용할 수 
 
 - **DEFAULT_FULLTEXT_LANGUAGE = \<lcid> | \<language name> | \<language alias>**
 
-  **적용 대상**: [!INCLUDE[ssSQL11](../../includes/sssql11-md.md)] 이상
+  **적용 대상** : [!INCLUDE[ssSQL11](../../includes/sssql11-md.md)] 이상
 
   이 옵션에 대한 전체 설명은 [기본 전체 텍스트 언어 서버 구성 옵션 구성](../../database-engine/configure-windows/configure-the-default-full-text-language-server-configuration-option.md)을 참조하세요.
 
 - **DEFAULT_LANGUAGE = \<lcid> | \<language name> | \<language alias>**
 
-  **적용 대상**: [!INCLUDE[ssSQL11](../../includes/sssql11-md.md)] 이상
+  **적용 대상** : [!INCLUDE[ssSQL11](../../includes/sssql11-md.md)] 이상
 
   이 옵션에 대한 전체 설명은 [기본 언어 서버 구성 옵션 구성](../../database-engine/configure-windows/configure-the-default-language-server-configuration-option.md)을 참조하세요.
 
 - **NESTED_TRIGGERS = { OFF | ON}**
 
-  **적용 대상**: [!INCLUDE[ssSQL11](../../includes/sssql11-md.md)] 이상
+  **적용 대상** : [!INCLUDE[ssSQL11](../../includes/sssql11-md.md)] 이상
 
   이 옵션에 대한 전체 설명은 [nested triggers 서버 구성 옵션 구성](../../database-engine/configure-windows/configure-the-nested-triggers-server-configuration-option.md)을 참조하세요.
 
 - **TRANSFORM_NOISE_WORDS = { OFF | ON}**
 
-  **적용 대상**: [!INCLUDE[ssSQL11](../../includes/sssql11-md.md)] 이상
+  **적용 대상** : [!INCLUDE[ssSQL11](../../includes/sssql11-md.md)] 이상
 
   이 옵션에 대한 전체 설명은 [의미 없는 단어 변환 서버 구성 옵션](../../database-engine/configure-windows/transform-noise-words-server-configuration-option.md)을 참조하세요.
 
@@ -276,7 +276,7 @@ CONTAINMENT가 PARTIAL로 설정된 경우에만 다음 옵션을 사용할 수 
 
 - **PERSISTENT_LOG_BUFFER=ON ( DIRECTORY_NAME='' )**
 
-  이 옵션을 지정하면 트랜잭션 로그 버퍼는 스토리지 클래스 메모리(NVDIMM-N 비휘발성 스토리지)로 지원되는 디스크 디바이스에 있는 볼륨에서 생성되며 영구적 로그 버퍼라고도 합니다. 자세한 내용은 [스토리지 클래스 메모리를 사용하는 트랜잭션 커밋 대기 시간 가속화](https://blogs.msdn.microsoft.com/sqlserverstorageengine/2016/12/02/transaction-commit-latency-acceleration-using-storage-class-memory-in-windows-server-2016sql-server-2016-sp1/) 를 참조하세요. **적용 대상**: [!INCLUDE[ssSQL17](../../includes/sssql17-md.md)] 이상.
+  이 옵션을 지정하면 트랜잭션 로그 버퍼는 스토리지 클래스 메모리(NVDIMM-N 비휘발성 스토리지)로 지원되는 디스크 디바이스에 있는 볼륨에서 생성되며 영구적 로그 버퍼라고도 합니다. 자세한 내용은 [스토리지 클래스 메모리를 사용하는 트랜잭션 커밋 대기 시간 가속화](https://blogs.msdn.microsoft.com/sqlserverstorageengine/2016/12/02/transaction-commit-latency-acceleration-using-storage-class-memory-in-windows-server-2016sql-server-2016-sp1/) 를 참조하세요. **적용 대상** : [!INCLUDE[ssSQL17](../../includes/sssql17-md.md)] 이상.
 
 FOR ATTACH [ WITH \< attach_database_option > ] 기존 운영 체제 파일 집합을 [연결](../../relational-databases/databases/database-detach-and-attach-sql-server.md)하여 데이터베이스를 만들도록 지정합니다. 여기에는 주 파일을 지정하는 \<filespec> 항목이 반드시 필요합니다. 또한 데이터베이스를 처음 만들었거나 마지막으로 연결했을 때의 경로와 다른 경로를 가진 파일의 \<filespec> 항목이 필요합니다. 이러한 파일에는 반드시 \<filespec> 항목을 지정해야 합니다.
 
@@ -292,7 +292,7 @@ FOR ATTACH를 사용하려면 다음과 같은 조건을 충족해야 합니다.
 
 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]에서는 연결 중인 데이터베이스에 속한 모든 전체 텍스트 파일이 데이터베이스에 연결됩니다. 전체 텍스트 카탈로그의 새 경로를 지정하려면 전체 텍스트 운영 체제 파일 이름을 제외한 새 위치를 지정합니다. 자세한 내용은 예 섹션을 참조하십시오.
 
-"Directory name"이 있는 FILESTREAM 옵션을 포함하는 데이터베이스를 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 인스턴스에 연결하면 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]에 Database_Directory 이름이 고유한지 확인하라는 메시지가 표시됩니다. 고유하지 않으면 연결 작업이 실패하고 "FILESTREAM Database_Directory 이름 \<name>이(가) 이 SQL Server 인스턴스에서 고유하지 않습니다"와 같은 오류 메시지가 표시됩니다. 이 오류를 방지하려면 선택적 매개 변수 *directory_name*이 이 작업에 전달되어야 합니다.
+"Directory name"이 있는 FILESTREAM 옵션을 포함하는 데이터베이스를 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 인스턴스에 연결하면 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]에 Database_Directory 이름이 고유한지 확인하라는 메시지가 표시됩니다. 고유하지 않으면 연결 작업이 실패하고 "FILESTREAM Database_Directory 이름 \<name>이(가) 이 SQL Server 인스턴스에서 고유하지 않습니다"와 같은 오류 메시지가 표시됩니다. 이 오류를 방지하려면 선택적 매개 변수 *directory_name* 이 이 작업에 전달되어야 합니다.
 
 데이터베이스 스냅샷에는 FOR ATTACH를 지정할 수 없습니다.
 
@@ -347,7 +347,7 @@ FOR ATTACH_REBUILD_LOG를 사용하려면 다음과 같은 조건을 충족해�
 
 NAME *logical_file_name* 파일의 논리적 이름을 지정합니다. FOR ATTACH 절 중 하나를 지정하는 경우가 아니면 FILENAME이 지정될 때 NAME이 필요합니다. FILESTREAM 파일 그룹 이름은 PRIMARY로 지정할 수 없습니다.
 
-*logical_file_name* 파일 참조 시 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]에서 사용하는 논리적 이름입니다. *Logical_file_name*은 데이터베이스에서 고유해야 하며 [식별자](../../relational-databases/databases/database-identifiers.md)에 대한 규칙을 따라야 합니다. 이 이름은 문자 상수, 유니코드 상수, 일반 식별자 또는 구분 식별자가 될 수 있습니다.
+*logical_file_name* 파일 참조 시 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]에서 사용하는 논리적 이름입니다. *Logical_file_name* 은 데이터베이스에서 고유해야 하며 [식별자](../../relational-databases/databases/database-identifiers.md)에 대한 규칙을 따라야 합니다. 이 이름은 문자 상수, 유니코드 상수, 일반 식별자 또는 구분 식별자가 될 수 있습니다.
 
 FILENAME { **'** _os\_file\_name_ **'** | **'** _filestream\_path_ **'** } 운영 체제(물리적) 파일 이름을 지정합니다.
 
@@ -355,7 +355,7 @@ FILENAME { **'** _os\_file\_name_ **'** | **'** _filestream\_path_ **'** } 운�
 
 파일에 UNC 경로가 지정되면 SIZE, MAXSIZE 및 FILEGROWTH 매개 변수를 설정할 수 있습니다.
 
-파일이 원시 파티션에 있는 경우 *os_file_name*은 기존 원시 파티션의 드라이브 문자만 지정해야 합니다. 각 원시 파티션에는 데이터 파일을 하나만 만들 수 있습니다.
+파일이 원시 파티션에 있는 경우 *os_file_name* 은 기존 원시 파티션의 드라이브 문자만 지정해야 합니다. 각 원시 파티션에는 데이터 파일을 하나만 만들 수 있습니다.
 
 파일이 읽기 전용 보조 파일이 아니거나 데이터베이스가 읽기 전용이 아니면 데이터 파일을 압축 파일 시스템에 저장하지 마십시오. 또한 로그 파일을 압축 파일 시스템에 저장하면 안 됩니다.
 
@@ -367,24 +367,24 @@ SIZE 및 FILEGROWTH 속성은 FILESTREAM 파일 그룹에 적용되지 않습니
 
 SIZE *size* 파일의 크기를 지정합니다.
 
-*os_file_name*이 UNC 경로로 지정된 경우에는 SIZE를 지정할 수 없습니다. SIZE는 FILESTREAM 파일 그룹에 적용되지 않습니다.
+*os_file_name* 이 UNC 경로로 지정된 경우에는 SIZE를 지정할 수 없습니다. SIZE는 FILESTREAM 파일 그룹에 적용되지 않습니다.
 
 *size* 파일의 처음 크기입니다.
 
-기본 파일에 대해 *size*를 지정하지 않으면 [!INCLUDE[ssDE](../../includes/ssde-md.md)]에서는 model 데이터베이스의 기본 파일 크기를 사용합니다. model의 기본 크기는 8MB([!INCLUDE[ssSQL15](../../includes/sssql15-md.md)]부터) 또는 1MB(이전 버전)입니다. 보조 데이터 파일 또는 로그 파일을 지정하고 해당 파일의 *size*를 지정하지 않으면 [!INCLUDE[ssDE](../../includes/ssde-md.md)]에서 파일 크기를 8MB([!INCLUDE[ssSQL15](../../includes/sssql15-md.md)]부터) 또는 1MB(이전 버전)로 지정합니다. 주 파일에 지정된 크기는 최소한 model 데이터베이스의 주 파일 크기와 같아야 합니다.
+기본 파일에 대해 *size* 를 지정하지 않으면 [!INCLUDE[ssDE](../../includes/ssde-md.md)]에서는 model 데이터베이스의 기본 파일 크기를 사용합니다. model의 기본 크기는 8MB([!INCLUDE[ssSQL15](../../includes/sssql15-md.md)]부터) 또는 1MB(이전 버전)입니다. 보조 데이터 파일 또는 로그 파일을 지정하고 해당 파일의 *size* 를 지정하지 않으면 [!INCLUDE[ssDE](../../includes/ssde-md.md)]에서 파일 크기를 8MB([!INCLUDE[ssSQL15](../../includes/sssql15-md.md)]부터) 또는 1MB(이전 버전)로 지정합니다. 주 파일에 지정된 크기는 최소한 model 데이터베이스의 주 파일 크기와 같아야 합니다.
 
-KB(킬로바이트), MB(메가바이트), GB(기가바이트) 또는 TB(테라바이트) 접미사를 사용할 수 있습니다. 기본값은 MB입니다. 소수점이 포함되지 않은 정수를 지정하십시오. *Size*는 정수 값입니다. 2147483647보다 큰 값에는 더 큰 단위를 사용합니다.
+KB(킬로바이트), MB(메가바이트), GB(기가바이트) 또는 TB(테라바이트) 접미사를 사용할 수 있습니다. 기본값은 MB입니다. 소수점이 포함되지 않은 정수를 지정하십시오. *Size* 는 정수 값입니다. 2147483647보다 큰 값에는 더 큰 단위를 사용합니다.
 
-MAXSIZE *max_size* 파일이 증가할 수 있는 최대 크기를 지정합니다. *os_file_name*이 UNC 경로로 지정된 경우에는 MAXSIZE를 지정할 수 없습니다.
+MAXSIZE *max_size* 파일이 증가할 수 있는 최대 크기를 지정합니다. *os_file_name* 이 UNC 경로로 지정된 경우에는 MAXSIZE를 지정할 수 없습니다.
 
-*max_size* 최대 파일 크기입니다. KB, MB, GB 및 TB 접미사를 사용할 수 있습니다. 기본값은 MB입니다. 소수점이 포함되지 않은 정수를 지정하십시오. *max_size*를 지정하지 않으면 디스크가 꽉 찰 때까지 파일이 커집니다. *Max_size*는 정수 값입니다. 2147483647보다 큰 값에는 더 큰 단위를 사용합니다.
+*max_size* 최대 파일 크기입니다. KB, MB, GB 및 TB 접미사를 사용할 수 있습니다. 기본값은 MB입니다. 소수점이 포함되지 않은 정수를 지정하십시오. *max_size* 를 지정하지 않으면 디스크가 꽉 찰 때까지 파일이 커집니다. *Max_size* 는 정수 값입니다. 2147483647보다 큰 값에는 더 큰 단위를 사용합니다.
 
 UNLIMITED 디스크가 꽉 찰 때까지 파일 크기가 증가하도록 지정합니다. [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]에서 무제한 증가로 지정된 로그 파일의 최대 크기는 2TB이고 데이터 파일의 최대 크기는 16TB입니다.
 
 > [!NOTE]
 > 이 옵션이 FILESTREAM 컨테이너에 지정되면 최대 크기가 없습니다. 디스크가 꽉 찰 때까지 파일이 증가합니다.
 
-FILEGROWTH *growth_increment* 파일의 자동 증분을 지정합니다. 파일의 FILEGROWTH 설정은 MAXSIZE 설정을 초과할 수 없습니다. *os_file_name*이 UNC 경로로 지정된 경우에는 FILEGROWTH를 지정할 수 없습니다. FILEGROWTH는 FILESTREAM 파일 그룹에 적용되지 않습니다.
+FILEGROWTH *growth_increment* 파일의 자동 증분을 지정합니다. 파일의 FILEGROWTH 설정은 MAXSIZE 설정을 초과할 수 없습니다. *os_file_name* 이 UNC 경로로 지정된 경우에는 FILEGROWTH를 지정할 수 없습니다. FILEGROWTH는 FILESTREAM 파일 그룹에 적용되지 않습니다.
 
 *growth_increment* 공간이 새로 필요할 때마다 파일에 추가되는 공간 크기입니다.
 
@@ -405,19 +405,19 @@ FILEGROWTH를 지정하지 않은 경우 기본값은 다음과 같습니다.
 FILEGROUP *filegroup_name* 파일 그룹의 논리적 이름입니다.
 
 *filegroup_name*
-*filegroup_name*은 데이터베이스 내에서 고유해야 하고 시스템에서 제공한 이름인 PRIMARY 및 PRIMARY_LOG일 수 없습니다. 이 이름은 문자 상수, 유니코드 상수, 일반 식별자 또는 구분 식별자가 될 수 있습니다. 이 이름은 [식별자](../../relational-databases/databases/database-identifiers.md)에 대한 규칙을 따라야 합니다.
+*filegroup_name* 은 데이터베이스 내에서 고유해야 하고 시스템에서 제공한 이름인 PRIMARY 및 PRIMARY_LOG일 수 없습니다. 이 이름은 문자 상수, 유니코드 상수, 일반 식별자 또는 구분 식별자가 될 수 있습니다. 이 이름은 [식별자](../../relational-databases/databases/database-identifiers.md)에 대한 규칙을 따라야 합니다.
 
 CONTAINS FILESTREAM 파일 그룹이 FILESTREAM BLOB(Binary Large Object)을 파일 시스템에 저장하도록 지정합니다.
 
 CONTAINS MEMORY_OPTIMIZED_DATA
 
-**적용 대상**: [!INCLUDE[ssSQL14](../../includes/sssql14-md.md)] 이상
+**적용 대상** : [!INCLUDE[ssSQL14](../../includes/sssql14-md.md)] 이상
 
 파일 그룹이 memory_optimized 데이터를 파일 시스템에 저장하도록 지정합니다. 자세한 내용은 [메모리 내 OLTP - 메모리 내 최적화](../../relational-databases/in-memory-oltp/in-memory-oltp-in-memory-optimization.md)를 참조하세요. 데이터베이스당 MEMORY_OPTIMIZED_DATA 파일 그룹이 하나만 허용됩니다. 메모리 최적화 데이터를 저장하기 위해 파일 그룹을 만드는 코드 샘플은 [메모리 최적화 테이블 및 고유하게 컴파일된 저장 프로시저 만들기](../../relational-databases/in-memory-oltp/creating-a-memory-optimized-table-and-a-natively-compiled-stored-procedure.md)를 참조하세요.
 
 DEFAULT 명명한 파일 그룹을 데이터베이스의 기본 파일 그룹으로 지정합니다.
 
-*database_snapshot_name* 새 데이터베이스 스냅샷의 이름입니다. 데이터베이스 스냅샷 이름은 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 인스턴스 내에서 고유해야 하며 식별자에 대한 규칙을 따라야 합니다. *database_snapshot_name*은 최대 128자까지 가능합니다.
+*database_snapshot_name* 새 데이터베이스 스냅샷의 이름입니다. 데이터베이스 스냅샷 이름은 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 인스턴스 내에서 고유해야 하며 식별자에 대한 규칙을 따라야 합니다. *database_snapshot_name* 은 최대 128자까지 가능합니다.
 
 ON **(** NAME **=** _logical\_file\_name_ **,** FILENAME **='** _os\_file\_name_ **')** [ **,** ... *n* ] 데이터베이스 스냅샷을 만들기 위해 원본 데이터베이스의 파일 목록을 지정합니다. 스냅샷이 동작하려면 모든 데이터 파일을 개별적으로 지정해야 합니다. 그러나 데이터베이스 스냅샷에는 로그 파일이 허용되지 않습니다. FILESTREAM 파일 그룹은 데이터베이스 스냅샷에서 지원되지 않습니다. FILESTREAM 데이터 파일이 CREATE DATABASE ON 절에 포함되어 있으면 문이 실패하고 오류가 발생합니다.
 
@@ -426,7 +426,7 @@ NAME, FILENAME 및 각 값에 대한 설명은 해당 \<filespec> 값의 설명�
 > [!NOTE]
 > 데이터베이스 스냅샷을 만들 때는 다른 \<filespec> 옵션 및 PRIMARY 키워드를 사용할 수 없습니다.
 
-AS SNAPSHOT OF *source_database_name* 만들고 있는 데이터베이스를 *source_database_name*에 지정된 원본 데이터베이스의 데이터베이스 스냅샷으로 지정합니다. 스냅샷 및 원본 데이터베이스는 같은 인스턴스에 있어야 합니다.
+AS SNAPSHOT OF *source_database_name* 만들고 있는 데이터베이스를 *source_database_name* 에 지정된 원본 데이터베이스의 데이터베이스 스냅샷으로 지정합니다. 스냅샷 및 원본 데이터베이스는 같은 인스턴스에 있어야 합니다.
 
 자세한 내용은 주의 사항 섹션의 [데이터베이스 스냅샷](#database-snapshots)을 참조하세요.
 
@@ -456,7 +456,7 @@ AS SNAPSHOT OF *source_database_name* 만들고 있는 데이터베이스를 *so
 
 ## <a name="database-files-and-filegroups"></a>데이터베이스 파일 및 파일 그룹
 
-모든 데이터베이스에는 *주 파일*과 *트랜잭션 로그 파일*이라는 2개의 파일과 하나 이상의 파일 그룹이 있습니다. 각 데이터베이스에 최대 32,767개의 파일과 32,767개의 파일 그룹을 지정할 수 있습니다.
+모든 데이터베이스에는 *주 파일* 과 *트랜잭션 로그 파일* 이라는 2개의 파일과 하나 이상의 파일 그룹이 있습니다. 각 데이터베이스에 최대 32,767개의 파일과 32,767개의 파일 그룹을 지정할 수 있습니다.
 
 데이터베이스를 만들 때는 데이터베이스에서 예상되는 최대 데이터 크기를 고려하여 데이터 파일을 가능한 한 크게 만드는 것이 좋습니다.
 
@@ -464,7 +464,7 @@ AS SNAPSHOT OF *source_database_name* 만들고 있는 데이터베이스를 *so
 
 ## <a name="database-snapshots"></a>데이터베이스 스냅샷
 
-`CREATE DATABASE` 문을 사용하여 *원본 데이터베이스*의 읽기 전용 정적 뷰인 *데이터베이스 스냅샷*을 만들 수 있습니다. 데이터베이스 스냅샷은 스냅샷을 만들었을 당시의 원본 데이터베이스와 트랜잭션 측면에서 일관성을 가집니다. 원본 데이터베이스 하나에 스냅샷이 여러 개 있을 수 있습니다.
+`CREATE DATABASE` 문을 사용하여 *원본 데이터베이스* 의 읽기 전용 정적 뷰인 *데이터베이스 스냅샷* 을 만들 수 있습니다. 데이터베이스 스냅샷은 스냅샷을 만들었을 당시의 원본 데이터베이스와 트랜잭션 측면에서 일관성을 가집니다. 원본 데이터베이스 하나에 스냅샷이 여러 개 있을 수 있습니다.
 
 > [!NOTE]
 > 데이터베이스 스냅샷을 만드는 경우 `CREATE DATABASE` 문은 로그 파일, 오프라인 파일, 복원 파일 및 존재하지 않는 파일을 참조할 수 없습니다.
@@ -485,7 +485,7 @@ AS SNAPSHOT OF *source_database_name* 만들고 있는 데이터베이스를 *so
 
 크기 매개 변수를 추가하지 않고 `CREATE DATABASE <database_name>` 문을 지정하면 model 데이터베이스의 주 파일과 크기가 같은 주 데이터 파일이 만들어집니다.
 
-`FOR ATTACH`를 지정하지 않은 경우 모든 새 데이터베이스는 model 데이터베이스에서 데이터베이스 옵션 설정을 상속합니다. 예를 들어 자동 축소와 같은 데이터베이스 옵션은 model 데이터베이스와 새로 만드는 모든 데이터베이스에서 **true**로 설정됩니다. model 데이터베이스에서 옵션을 변경하면 새로 만드는 모든 데이터베이스에 이러한 새 옵션 설정이 사용됩니다. 기존 데이터베이스는 model 데이터베이스 변경 내용의 영향을 받지 않습니다. CREATE DATABASE 문에 FOR ATTACH를 지정하는 경우 새 데이터베이스는 원본 데이터베이스의 데이터베이스 옵션 설정을 상속합니다.
+`FOR ATTACH`를 지정하지 않은 경우 모든 새 데이터베이스는 model 데이터베이스에서 데이터베이스 옵션 설정을 상속합니다. 예를 들어 자동 축소와 같은 데이터베이스 옵션은 model 데이터베이스와 새로 만드는 모든 데이터베이스에서 **true** 로 설정됩니다. model 데이터베이스에서 옵션을 변경하면 새로 만드는 모든 데이터베이스에 이러한 새 옵션 설정이 사용됩니다. 기존 데이터베이스는 model 데이터베이스 변경 내용의 영향을 받지 않습니다. CREATE DATABASE 문에 FOR ATTACH를 지정하는 경우 새 데이터베이스는 원본 데이터베이스의 데이터베이스 옵션 설정을 상속합니다.
 
 ## <a name="viewing-database-information"></a>데이터베이스 정보 보기
 
@@ -869,7 +869,7 @@ GO
         **_\* SQL Database \*_**
     :::column-end:::
     :::column:::
-        [SQL Database<br />Managed Instance](create-database-transact-sql.md?view=azuresqldb-mi-current)
+        [SQL Managed Instance](create-database-transact-sql.md?view=azuresqldb-mi-current)
     :::column-end:::
     :::column:::
         [Azure Synapse<br />Analytics](create-database-transact-sql.md?view=azure-sqldw-latest)
@@ -908,7 +908,7 @@ CREATE DATABASE database_name [ COLLATE collation_name ]
 <edition_options> ::=
 {
 
-  MAXSIZE = { 100 MB | 250 MB | 500 MB | 1 ... 1024 ... 4096 GB }
+  MAXSIZE = { 100 MB | 500 MB | 1 ... 1024 ... 4096 GB }
   | ( EDITION = { 'Basic' | 'Standard' | 'Premium' | 'GeneralPurpose' | 'BusinessCritical' | 'Hyperscale' }
   | SERVICE_OBJECTIVE =
     { 'Basic' | 'S0' | 'S1' | 'S2' | 'S3' | 'S4'| 'S6'| 'S7'| 'S9'| 'S12'
@@ -972,9 +972,9 @@ CREATE DATABASE database_name
 
 Windows 및 SQL 데이터 정렬 이름에 대한 자세한 내용은 [COLLATE(Transact-SQL)](../../t-sql/statements/collations.md)를 참조하세요.
 
-CATALOG_COLLATION 메타데이터 카탈로그의 기본 데이터 정렬을 지정합니다. *DATABASE_DEFAULT*는 시스템 뷰와 시스템 테이블에 사용된 메타데이터 카탈로그가 데이터베이스의 기본 데이터 정렬과 일치하게 데이터를 정렬하도록 지정합니다. 이것은 SQL Server에서 발견되는 동작입니다.
+CATALOG_COLLATION 메타데이터 카탈로그의 기본 데이터 정렬을 지정합니다. *DATABASE_DEFAULT* 는 시스템 뷰와 시스템 테이블에 사용된 메타데이터 카탈로그가 데이터베이스의 기본 데이터 정렬과 일치하게 데이터를 정렬하도록 지정합니다. 이것은 SQL Server에서 발견되는 동작입니다.
 
-*SQL_Latin1_General_CP1_CI_AS*는 시스템 뷰와 테이블에 사용된 메타데이터 카탈로그가 고정된 SQL_Latin1_General_CP1_CI_AS 데이터 정렬로 정렬되도록 지정합니다. 이것이 지정되지 않은 경우 Azure SQL Database의 기본 설정입니다.
+*SQL_Latin1_General_CP1_CI_AS* 는 시스템 뷰와 테이블에 사용된 메타데이터 카탈로그가 고정된 SQL_Latin1_General_CP1_CI_AS 데이터 정렬로 정렬되도록 지정합니다. 이것이 지정되지 않은 경우 Azure SQL Database의 기본 설정입니다.
 
 BACKUP_STORAGE_REDUNDANCY 데이터베이스에 대한 지정 시간 복원 및 장기 보존 백업을 복제하는 방법을 지정합니다. 지역 복구 또는 지역 가동 중단에서 복구하는 기능은 'GEO' 백업 스토리지 중복성을 통해 데이터베이스를 만든 경우에만 사용할 수 있습니다. 명시적으로 지정되지 않은 한 T-SQL로 생성된 데이터베이스는 지역 중복 백업 스토리지를 사용합니다. 
 
@@ -995,7 +995,6 @@ MAXSIZE 데이터베이스의 최대 크기를 지정합니다. MAXSIZE는 지�
 |**MAXSIZE**|**기본**|**S0-S2**|**S3-S12**|**P1-P6**| **P11-P15** |
 |:---|:---|:---|:---|:---|:---|
 |100MB|√|√|√|√|√|
-|250MB|√|√|√|√|√|
 |500MB|√|√|√|√|√|
 |1 GB|√|√|√|√|√|
 |2GB|√ (D)|√|√|√|√|
@@ -1009,12 +1008,12 @@ MAXSIZE 데이터베이스의 최대 크기를 지정합니다. MAXSIZE는 지�
 |150GB|해당 없음|√|√|√|√|
 |200GB|해당 없음|√|√|√|√|
 |250GB|해당 없음|√ (D)|√ (D)|√|√|
-|300GB|N/A|N/A|√|√|√|
+|300GB|해당 없음|해당 없음|√|√|√|
 |400GB|N/A|N/A|√|√|√|
 |500GB|N/A|N/A|√|√ (D)|√|
 |750GB|N/A|N/A|√|√|√|
 |1024GB|N/A|N/A|√|√|√ (D)|
-|1024GB에서 최대 4096GB(256 GB*로 증분) |N/A|N/A|N/A|N/A|√|√|
+|1024GB에서 최대 4096GB(256 GB*로 증분) |N/A|N/A|해당 없음|해당 없음|√|√|
 
 \* P11과 P15는 기본 크기인 1024를 사용하여 MAXSIZE를 최대 4TB까지 허용합니다. P11 및 P15는 추가 비용 없이 최대 4TB가 포함된 스토리지를 사용할 수 있습니다. 프리미엄 계층에서 1TB 초과 MAXSIZE는 현재 다음 지역에서 사용할 수 있습니다. 미국 동부2, 미국 서부, US Gov 버지니아, 서유럽, 독일 중부, 동남 아시아, 일본 동부, 오스트레일리아 동부, 캐나다 중부 및 캐나다 동부. DTU 모델에 대한 리소스 제한에 관한 자세한 내용은 [DTU 리소스 제한](https://docs.microsoft.com/azure/sql-database/sql-database-dtu-resource-limits)을 참조하세요.
 
@@ -1299,7 +1298,7 @@ CREATE DATABASE test_zone_redundancy
         [SQL 데이터베이스](create-database-transact-sql.md?view=azuresqldb-current)
     :::column-end:::
     :::column:::
-        **_\* SQL Database<br />Managed Instance \*_**
+        **_\* SQL Managed Instance \*_**
     :::column-end:::
     :::column:::
         [Azure Synapse<br />Analytics](create-database-transact-sql.md?view=azure-sqldw-latest)
@@ -1383,7 +1382,7 @@ CREATE DATABASE TestDB1;
         [SQL 데이터베이스](create-database-transact-sql.md?view=azuresqldb-current)
     :::column-end:::
     :::column:::
-        [SQL Database<br />Managed Instance](create-database-transact-sql.md?view=azuresqldb-mi-current)
+        [SQL Managed Instance](create-database-transact-sql.md?view=azuresqldb-mi-current)
     :::column-end:::
     :::column:::
         **_\* Azure Synapse<br />Analytics \*_**
@@ -1515,7 +1514,7 @@ CREATE DATABASE TestDW COLLATE Latin1_General_100_CI_AS_KS_WS
         [SQL 데이터베이스](create-database-transact-sql.md?view=azuresqldb-current)
     :::column-end:::
     :::column:::
-        [SQL Database<br />Managed Instance](create-database-transact-sql.md?view=azuresqldb-mi-current)
+        [SQL Managed Instance](create-database-transact-sql.md?view=azuresqldb-mi-current)
     :::column-end:::
     :::column:::
         [Azure Synapse<br />Analytics](create-database-transact-sql.md?view=azure-sqldw-latest)
@@ -1549,25 +1548,25 @@ WITH (
 
 *database_name* 새 데이터베이스의 이름입니다. 허용된 데이터베이스 이름에 대한 자세한 내용은 [!INCLUDE[pdw-product-documentation](../../includes/pdw-product-documentation-md.md)]에서 "개체 명명 규칙" 및 "예약된 데이터베이스 이름"을 참조합니다.
 
-AUTOGROW = ON | **OFF** 이 데이터베이스에 대한 *replicated_size*, *distributed_size* 및 *log_size* 매개 변수가 지정된 크기를 넘어 필요에 따라 자동으로 증가하는지 여부를 지정합니다. 기본값은 **OFF**입니다.
+AUTOGROW = ON | **OFF** 이 데이터베이스에 대한 *replicated_size* , *distributed_size* 및 *log_size* 매개 변수가 지정된 크기를 넘어 필요에 따라 자동으로 증가하는지 여부를 지정합니다. 기본값은 **OFF** 입니다.
 
-AUTOGROW가 ON인 경우 *replicated_size*, *distributed_size* 및 *log_size*가 각 데이터 삽입, 업데이트 또는 이미 할당된 것보다 더 많은 스토리지 용량이 필요한 기타 작업의 필요에 따라(지정된 초기 크기의 블록에서가 아니라) 성장하게 됩니다.
+AUTOGROW가 ON인 경우 *replicated_size* , *distributed_size* 및 *log_size* 가 각 데이터 삽입, 업데이트 또는 이미 할당된 것보다 더 많은 스토리지 용량이 필요한 기타 작업의 필요에 따라(지정된 초기 크기의 블록에서가 아니라) 성장하게 됩니다.
 
-AUTOGROW가 OFF이면 크기가 자동으로 증가하지 않습니다. [!INCLUDE[ssPDW](../../includes/sspdw-md.md)]은 *replicated_size*, *distributed_size* 또는 *log_size*가 지정된 값을 초과하여 성장할 것을 요구하는 작업을 시도할 경우 오류를 반환합니다.
+AUTOGROW가 OFF이면 크기가 자동으로 증가하지 않습니다. [!INCLUDE[ssPDW](../../includes/sspdw-md.md)]은 *replicated_size* , *distributed_size* 또는 *log_size* 가 지정된 값을 초과하여 성장할 것을 요구하는 작업을 시도할 경우 오류를 반환합니다.
 
-AUTOGROW는 모든 크기에 대해 ON이거나 OFF입니다. 예를 들어 *log_size*에 대해 AUTOGROW를 ON으로 설정하는 것이 가능하지 않지만 *replicated_size*에 대해서는 ON으로 설정하지 않습니다.
+AUTOGROW는 모든 크기에 대해 ON이거나 OFF입니다. 예를 들어 *log_size* 에 대해 AUTOGROW를 ON으로 설정하는 것이 가능하지 않지만 *replicated_size* 에 대해서는 ON으로 설정하지 않습니다.
 
 *replicated_size* [ GB ] 양수입니다. *각 컴퓨팅 노드에서* 복제된 테이블과 해당 데이터에 할당된 총 공간에 대한 크기(정수 또는 10진 기가바이트로)를 설정합니다. 최소 및 최대 *replicated_size* 요구 사항은 [!INCLUDE[pdw-product-documentation](../../includes/pdw-product-documentation-md.md)]에서 "최소 및 최대 값"를 참조합니다.
 
 AUTOGROW가 ON인 경우 복제된 테이블이 이 제한을 초과해 성장하도록 허용됩니다.
 
-AUTOGROW가 OFF인 경우 사용자가 *replicated_size*를 초과하여 크기가 증가하는 식으로 새로 복제된 테이블을 만들고 기존 복제된 테이블에 데이터를 삽입하고 또는 기존 복제된 테이블을 업데이트하려고 하면 오류가 반환됩니다.
+AUTOGROW가 OFF인 경우 사용자가 *replicated_size* 를 초과하여 크기가 증가하는 식으로 새로 복제된 테이블을 만들고 기존 복제된 테이블에 데이터를 삽입하고 또는 기존 복제된 테이블을 업데이트하려고 하면 오류가 반환됩니다.
 
 *distributed_size* [ GB ] 양수입니다. *어플라이언스 전반에 걸쳐* 복제된 테이블(및 해당 데이터)에 할당된 총 공간에 대한 정수 또는 10진 기가바이트로 표시된 크기입니다. 최소 및 최대 *distributed_size* 요구 사항은 [!INCLUDE[pdw-product-documentation](../../includes/pdw-product-documentation-md.md)]에서 "최소 및 최대 값"를 참조합니다.
 
 AUTOGROW가 ON인 경우 분산된 테이블이 이 제한을 초과해 성장하도록 허용됩니다.
 
-AUTOGROW가 OFF인 경우 사용자가 *distributed_size*를 초과하여 크기가 증가하는 식으로 새로 분산된 테이블을 만들고 기존 분산된 테이블에 데이터를 삽입하고 또는 기존 분산된 테이블을 업데이트하려고 하면 오류가 반환됩니다.
+AUTOGROW가 OFF인 경우 사용자가 *distributed_size* 를 초과하여 크기가 증가하는 식으로 새로 분산된 테이블을 만들고 기존 분산된 테이블에 데이터를 삽입하고 또는 기존 분산된 테이블을 업데이트하려고 하면 오류가 반환됩니다.
 
 *log_size* [ GB ] 양수입니다. *어플라이언스 전반에 걸친* 트랜잭션 로그에 대한 크기(정수 또는 10진 기가바이트로 표시된)입니다.
 
@@ -1575,7 +1574,7 @@ AUTOGROW가 OFF인 경우 사용자가 *distributed_size*를 초과하여 크기
 
 AUTOGROW가 ON인 경우 로그 파일은 이 제한을 초과하여 성장하도록 허용됩니다. 로그 파일의 크기를 원래 크기로 줄이려면 [DBCC SHRINKLOG(Azure Synapse Analytics)](../../t-sql/database-console-commands/dbcc-shrinklog-azure-sql-data-warehouse.md) 문을 사용합니다.
 
-AUTOGROW가 OFF인 경우 *log_size*를 초과한 개별 컴퓨팅 노드에서 로그 크기를 증가시키는 모든 작업에 대해서 사용자에게 오류가 반환됩니다.
+AUTOGROW가 OFF인 경우 *log_size* 를 초과한 개별 컴퓨팅 노드에서 로그 크기를 증가시키는 모든 작업에 대해서 사용자에게 오류가 반환됩니다.
 
 ## <a name="permissions"></a>사용 권한
 
@@ -1600,11 +1599,11 @@ GO
 
 데이터베이스에 대한 최소 및 최대 제약 조건에 관한 자세한 내용은 [!INCLUDE[pdw-product-documentation](../../includes/pdw-product-documentation-md.md)]에서 “최소 및 최대 값”을 참조합니다.
 
-데이터베이스를 만들 경우 다음 크기의 총합계를 할당하기 위해 *각 컴퓨팅 노드*에 충분히 사용할 수 있는 여유 공간이 있어야 합니다.
+데이터베이스를 만들 경우 다음 크기의 총합계를 할당하기 위해 *각 컴퓨팅 노드* 에 충분히 사용할 수 있는 여유 공간이 있어야 합니다.
 
 - *replicated_table_size* 크기의 테이블이 있는 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 데이터베이스입니다.
-- (*distributed_table_size* / 컴퓨팅 노드 수) 크기의 테이블이 있는 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 데이터베이스입니다.
-- (*log_size* / 컴퓨팅 노드 수) 크기의 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 로그입니다.
+- ( *distributed_table_size* / 컴퓨팅 노드 수) 크기의 테이블이 있는 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 데이터베이스입니다.
+- ( *log_size* / 컴퓨팅 노드 수) 크기의 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 로그입니다.
 
 ## <a name="locking"></a>잠금
 

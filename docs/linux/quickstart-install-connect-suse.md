@@ -8,12 +8,12 @@ ms.topic: conceptual
 ms.prod: sql
 ms.technology: linux
 ms.assetid: 31ddfb80-f75c-4f51-8540-de6213cb68b8
-ms.openlocfilehash: 8babcb8b849360ba4a025d62a8e89f5ad92175c2
-ms.sourcegitcommit: 22102f25db5ccca39aebf96bc861c92f2367c77a
+ms.openlocfilehash: c9ac655959814370058059e86814d4ae1abcbc9a
+ms.sourcegitcommit: d35d0901296580bfceda6e0ab2e14cf2b7e99a0f
 ms.translationtype: HT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 10/16/2020
-ms.locfileid: "92115947"
+ms.lasthandoff: 10/24/2020
+ms.locfileid: "92496992"
 ---
 # <a name="quickstart-install-sql-server-and-create-a-database-on-suse-linux-enterprise-server"></a>빠른 시작: SQL Server 설치 및 SUSE Linux Enterprise Server에 데이터베이스 만들기
 
@@ -22,13 +22,13 @@ ms.locfileid: "92115947"
 <!--SQL Server 2017 on Linux-->
 ::: moniker range="= sql-server-linux-2017 || = sql-server-2017"
 
-이 빠른 시작에서는 SLES(SUSE Linux Enterprise Server) v12 SP2에 SQL Server 2017 또는 SQL Server 2019를 설치합니다. 그런 다음, **sqlcmd**를 통해 연결하여 첫 번째 데이터베이스를 만들고 쿼리를 실행합니다.
+이 빠른 시작에서는 SLES(SUSE Linux Enterprise Server) v12 SP2에 SQL Server 2017 또는 SQL Server 2019를 설치합니다. 그런 다음, **sqlcmd** 를 통해 연결하여 첫 번째 데이터베이스를 만들고 쿼리를 실행합니다.
 
 ::: moniker-end
 <!--SQL Server 2019 on Linux-->
 ::: moniker range=">= sql-server-linux-ver15 || >= sql-server-ver15 || =sqlallproducts-allversions"
 
-이 빠른 시작에서는 SLES(SUSE Linux Enterprise Server) v12에 SQL Server 2019를 설치합니다. 그런 다음, **sqlcmd**를 통해 연결하여 첫 번째 데이터베이스를 만들고 쿼리를 실행합니다.
+이 빠른 시작에서는 SLES(SUSE Linux Enterprise Server) v12에 SQL Server 2019를 설치합니다. 그런 다음, **sqlcmd** 를 통해 연결하여 첫 번째 데이터베이스를 만들고 쿼리를 실행합니다.
 
 > [!IMPORTANT]
 > SQL Server 2019는 SUSE Enterprise Linux Server v12 SP2, SP3, SP4 또는 SP5에서 지원됩니다.
@@ -43,14 +43,14 @@ ms.locfileid: "92115947"
 <!--SQL Server 2017 on Linux-->
 ::: moniker range="= sql-server-linux-2017 || = sql-server-2017"
 
-**최소 2GB**의 메모리를 포함하는 SLES v12 SP2 머신이 있어야 합니다. 파일 시스템은 **XFS** 또는 **EXT4**여야 합니다. **BTRFS** 등의 다른 파일 시스템은 지원되지 않습니다.
+**최소 2GB** 의 메모리를 포함하는 SLES v12 SP2 머신이 있어야 합니다. 파일 시스템은 **XFS** 또는 **EXT4** 여야 합니다. **BTRFS** 등의 다른 파일 시스템은 지원되지 않습니다.
 
 ::: moniker-end
 
 <!--SQL Server 2019 on Linux-->
 ::: moniker range=">= sql-server-linux-ver15 || >= sql-server-ver15 || =sqlallproducts-allversions"
 
-**최소 2GB**의 메모리를 사용하는 SLES v12 SP2, SP3, SP4 또는 SP5 머신이 있어야 합니다. 파일 시스템은 **XFS** 또는 **EXT4**여야 합니다. **BTRFS** 등의 다른 파일 시스템은 지원되지 않습니다.
+**최소 2GB** 의 메모리를 사용하는 SLES v12 SP2, SP3, SP4 또는 SP5 머신이 있어야 합니다. 파일 시스템은 **XFS** 또는 **EXT4** 여야 합니다. **BTRFS** 등의 다른 파일 시스템은 지원되지 않습니다.
 
 ::: moniker-end
 
@@ -66,9 +66,9 @@ ms.locfileid: "92115947"
 <!--SQL Server 2017 on Linux-->
 ::: moniker range="= sql-server-linux-2017 || = sql-server-2017"
 
-## <a name="install-sql-server"></a><a id="install"></a>SQL Server 설치
+## <a name="install-sql-server-2017"></a><a id="install"></a>SQL Server 2017 설치
 
-SLES에서 SQL Server을 구성하려면 터미널에서 다음 명령을 실행하여 **mssql-server** 패키지를 설치합니다.
+SLES에서 SQL Server 2017을 구성하려면 터미널에서 다음 명령을 실행하여 **mssql-server** 패키지를 설치합니다.
 
 1. Microsoft SQL Server 2017 SLES 리포지토리 구성 파일을 다운로드합니다.
 
@@ -101,7 +101,7 @@ SLES에서 SQL Server을 구성하려면 터미널에서 다음 명령을 실행
    sudo zypper install -y mssql-server
    ```
 
-4. 패키지 설치가 완료되면 **mssql-conf setup**을 실행하고, 프롬프트에 따라 SA 암호를 설정하고, 버전을 선택합니다.
+4. 패키지 설치가 완료되면 **mssql-conf setup** 을 실행하고, 프롬프트에 따라 SA 암호를 설정하고, 버전을 선택합니다.
 
    ```bash
    sudo /opt/mssql/bin/mssql-conf setup
@@ -131,9 +131,9 @@ SLES에서 SQL Server을 구성하려면 터미널에서 다음 명령을 실행
 <!--SQL Server 2019 on Linux-->
 ::: moniker range=">= sql-server-linux-ver15 || >= sql-server-ver15 || =sqlallproducts-allversions"
 
-## <a name="install-sql-server"></a><a id="install"></a>SQL Server 설치
+## <a name="install-sql-server-2019"></a><a id="install"></a>SQL Server 2019 설치
 
-SLES에서 SQL Server을 구성하려면 터미널에서 다음 명령을 실행하여 **mssql-server** 패키지를 설치합니다.
+SLES에서 SQL Server 2019를 구성하려면 터미널에서 다음 명령을 실행하여 **mssql-server** 패키지를 설치합니다.
 
 1. Microsoft SQL Server 2019 SLES 리포지토리 구성 파일을 다운로드합니다.
 
@@ -146,9 +146,9 @@ SLES에서 SQL Server을 구성하려면 터미널에서 다음 명령을 실행
    ```bash
    sudo zypper --gpg-auto-import-keys refresh 
    ```
-   
+
    Microsoft 패키지 서명 키가 시스템에 설치되어 있는지 확인하려면 다음 명령을 사용하여 키를 가져옵니다. 
-   
+
    ```bash
    sudo rpm --import https://packages.microsoft.com/keys/microsoft.asc
    ```
@@ -159,7 +159,7 @@ SLES에서 SQL Server을 구성하려면 터미널에서 다음 명령을 실행
    sudo zypper install -y mssql-server
    ```
 
-4. 패키지 설치가 완료되면 **mssql-conf setup**을 실행하고, 프롬프트에 따라 SA 암호를 설정하고, 버전을 선택합니다.
+4. 패키지 설치가 완료되면 **mssql-conf setup** 을 실행하고, 프롬프트에 따라 SA 암호를 설정하고, 버전을 선택합니다.
 
    ```bash
    sudo /opt/mssql/bin/mssql-conf setup
@@ -196,13 +196,13 @@ SLES에서 SQL Server을 구성하려면 터미널에서 다음 명령을 실행
    sudo zypper --gpg-auto-import-keys refresh
    ```
 
-1. unixODBC 개발자 패키지와 함께 **mssql-tools**를 설치합니다. 자세한 내용은 [Microsoft ODBC Driver for SQL Server(Linux) 설치](../connect/odbc/linux-mac/installing-the-microsoft-odbc-driver-for-sql-server.md)를 참조하세요.
+1. unixODBC 개발자 패키지와 함께 **mssql-tools** 를 설치합니다. 자세한 내용은 [Microsoft ODBC Driver for SQL Server(Linux) 설치](../connect/odbc/linux-mac/installing-the-microsoft-odbc-driver-for-sql-server.md)를 참조하세요.
 
    ```bash
    sudo zypper install -y mssql-tools unixODBC-devel
    ```
 
-1. 편의를 위해 **PATH** 환경 변수에 `/opt/mssql-tools/bin/`를 추가합니다. 이렇게 하면 전체 경로를 지정하지 않고 도구를 실행할 수 있습니다. 다음 명령을 실행하여 로그인 세션과 대화형/비로그인 세션에 대한 **PATH**를 수정합니다.
+1. 편의를 위해 **PATH** 환경 변수에 `/opt/mssql-tools/bin/`를 추가합니다. 이렇게 하면 전체 경로를 지정하지 않고 도구를 실행할 수 있습니다. 다음 명령을 실행하여 로그인 세션과 대화형/비로그인 세션에 대한 **PATH** 를 수정합니다.
 
    ```bash
    echo 'export PATH="$PATH:/opt/mssql-tools/bin"' >> ~/.bash_profile

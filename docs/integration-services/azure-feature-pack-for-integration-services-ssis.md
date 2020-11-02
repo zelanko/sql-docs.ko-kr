@@ -14,12 +14,12 @@ f1_keywords:
 ms.assetid: 31de555f-ae62-4f2f-a6a6-77fea1fa8189
 author: chugugrace
 ms.author: chugu
-ms.openlocfilehash: e1a3bcdf7a5ade98e659b376e7ad3845e64875c3
-ms.sourcegitcommit: c7f40918dc3ecdb0ed2ef5c237a3996cb4cd268d
+ms.openlocfilehash: 63e40e66003737798c444f220058feceab69411a
+ms.sourcegitcommit: 22e97435c8b692f7612c4a6d3fe9e9baeaecbb94
 ms.translationtype: HT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 10/05/2020
-ms.locfileid: "91727619"
+ms.lasthandoff: 10/27/2020
+ms.locfileid: "92678923"
 ---
 # <a name="azure-feature-pack-for-integration-services-ssis"></a>Integration Services에 대한 Azure 기능 팩(SSIS)
 
@@ -112,17 +112,17 @@ Java 빌드의 아키텍처(32/64비트)는 사용할 SSIS 런타임과 일치�
 
 1. zip 패키지를 다운로드하여 추출합니다.
 2. 명령 프롬프트에서 `sysdm.cpl`을 실행합니다.
-3. **고급** 탭에서 **환경 변수**를 선택합니다.
-4. **시스템 변수** 섹션 아래에서 **새로 만들기**를 선택합니다.
-5. **변수 이름**에 대해 `JAVA_HOME`을 입력합니다.
-6. **디렉터리 찾아보기**를 선택하여 추출된 폴더로 이동하고, `jre` 하위 폴더를 선택합니다.
-   그런 다음, **확인**을 선택하면 **변수 값**이 자동으로 채워집니다.
-7. **확인**을 선택하여 **새 시스템 변수** 대화 상자를 닫습니다.
-8. **확인**을 선택하여 **환경 변수** 대화 상자를 닫습니다.
-9. **확인**을 선택하여 **시스템 속성** 대화 상자를 닫습니다.
+3. **고급** 탭에서 **환경 변수** 를 선택합니다.
+4. **시스템 변수** 섹션 아래에서 **새로 만들기** 를 선택합니다.
+5. **변수 이름** 에 대해 `JAVA_HOME`을 입력합니다.
+6. **디렉터리 찾아보기** 를 선택하여 추출된 폴더로 이동하고, `jre` 하위 폴더를 선택합니다.
+   그런 다음, **확인** 을 선택하면 **변수 값** 이 자동으로 채워집니다.
+7. **확인** 을 선택하여 **새 시스템 변수** 대화 상자를 닫습니다.
+8. **확인** 을 선택하여 **환경 변수** 대화 상자를 닫습니다.
+9. **확인** 을 선택하여 **시스템 속성** 대화 상자를 닫습니다.
 
 > [!TIP]
-> Parquet 형식을 사용하고 "Java를 호출할 때 오류가 발생했습니다. 메시지: **java.lang.OutOfMemoryError:Java heap space**"라는 오류가 발생하는 경우 환경 변수 *`_JAVA_OPTIONS`* 를 추가하여 JVM의 최소/최대 힙 크기를 조정할 수 있습니다.
+> Parquet 형식을 사용하고 "Java를 호출할 때 오류가 발생했습니다. 메시지: **java.lang.OutOfMemoryError:Java heap space** "라는 오류가 발생하는 경우 환경 변수 *`_JAVA_OPTIONS`* 를 추가하여 JVM의 최소/최대 힙 크기를 조정할 수 있습니다.
 >
 >![jvm heap](media/azure-feature-pack-jvm-heap-size.png)
 >
@@ -149,7 +149,7 @@ powershell.exe -file install_openjdk.ps1
 ~~~
 
 > [!TIP]
-> Parquet 형식을 사용하고 "Java를 호출할 때 오류가 발생했습니다. 메시지: **java.lang.OutOfMemoryError:Java heap space**"라는 오류가 발생하는 경우 *`main.cmd`* 명령을 추가하여 JVM의 최소/최대 힙 크기를 조정할 수 있습니다. 예제:
+> Parquet 형식을 사용하고 "Java를 호출할 때 오류가 발생했습니다. 메시지: **java.lang.OutOfMemoryError:Java heap space** "라는 오류가 발생하는 경우 *`main.cmd`* 명령을 추가하여 JVM의 최소/최대 힙 크기를 조정할 수 있습니다. 예제:
 > ~~~
 > setx /M _JAVA_OPTIONS "-Xms256m -Xmx16g"
 > ~~~
@@ -180,18 +180,18 @@ Expand-Archive zulu8.33.0.1-jdk8.0.192-win_x64.zip -DestinationPath C:\
 
 5.  Azure HDInsight Blob 다운로드 태스크를 사용하여 Azure Blob Storage에서 Pig/Hive 출력 데이터를 다운로드합니다.
 
-![SSIS-AzureConnector-BigDataScenario](../integration-services/media/ssis-azureconnector-bigdatascenario.png)
+![SSIS Azure 커넥터 빅 데이터 시나리오를 보여 주는 스크린샷](../integration-services/media/ssis-azureconnector-bigdatascenario.png)
  
 ## <a name="scenario-managing-data-in-the-cloud"></a>시나리오: 클라우드의 데이터 관리
  SSIS 패키지의 Azure Blob 대상을 사용하여 Azure Blob Storage에 출력 데이터를 쓰거나 Azure Blob 원본을 사용하여 Azure Blob Storage에서 데이터를 읽습니다.
 
-![SSIS-AzureConnector-CloudArchive-1](../integration-services/media/ssis-azureconnector-cloudarchive-1.png)
+![OLE DB 원본에서 Azure Blob 대상으로의 데이터 흐름을 보여 주는 스크린샷](../integration-services/media/ssis-azureconnector-cloudarchive-1.png)
  
- ![SSIS-AzureConnector-CloudArchive-2](../integration-services/media/ssis-azureconnector-cloudarchive-2.png)
+ ![Azure Blob 원본에서 OLE DB 대상으로의 데이터 흐름을 보여 주는 스크린샷](../integration-services/media/ssis-azureconnector-cloudarchive-2.png)
 
  Azure Blob 열거자에서 Foreach 루프 컨테이너를 사용하여 다중 blob 파일의 데이터를 처리합니다.
 
-![SSIS-AzureConnector-CloudArchive-3](../integration-services/media/ssis-azureconnector-cloudarchive-3.png)
+![제어 흐름 Foreach 루프 컨테이너를 보여 주는 스크린샷](../integration-services/media/ssis-azureconnector-cloudarchive-3.png)
 
 ## <a name="release-notes"></a>릴리스 정보
 

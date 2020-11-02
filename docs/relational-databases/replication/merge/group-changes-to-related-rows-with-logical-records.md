@@ -15,12 +15,12 @@ helpviewer_keywords:
 ms.assetid: ad76799c-4486-4b98-9705-005433041321
 author: MashaMSFT
 ms.author: mathoma
-ms.openlocfilehash: da2699b397d7c5440adc9cdddb3e2b4c1b239fe7
-ms.sourcegitcommit: 4d370399f6f142e25075b3714e5c2ce056b1bfd0
+ms.openlocfilehash: ec09eb43fdd00d57860abf1f40e5010084eded97
+ms.sourcegitcommit: 67befbf7435f256e766bbce6c1de57799e1db9ad
 ms.translationtype: HT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 10/09/2020
-ms.locfileid: "91866999"
+ms.lasthandoff: 10/24/2020
+ms.locfileid: "92524035"
 ---
 # <a name="group-changes-to-related-rows-with-logical-records"></a>논리적 레코드를 사용하여 관련된 행의 변경 내용 그룹화
 [!INCLUDE [SQL Server](../../../includes/applies-to-version/sqlserver.md)]
@@ -37,11 +37,11 @@ ms.locfileid: "91866999"
   
  ![열 이름만 포함하는 3개 테이블 논리적 레코드](../../../relational-databases/replication/merge/media/logical-records-01.gif "열 이름만 포함하는 3개 테이블 논리적 레코드")  
   
- 이 관계의 부모 테이블인 **Customers** 테이블에는 기본 키 열 **CustID**가 있습니다. **Orders** 테이블에는 기본 키 열 **OrderID**가 있으며 **Customers** 테이블의 **CustID** 열을 참조하는 FOREIGN KEY 제약 조건이 이 테이블의 **CustID** 열에 있습니다. 마찬가지로 **OrderItems** 테이블에는 기본 키 열 **OrderItemID**가 있으며 **Orders** 테이블의 **OrderID** 열을 참조하는 FOREIGN KEY 제약 조건이 이 테이블의 **OrderID** 열에 있습니다.  
+ 이 관계의 부모 테이블인 **Customers** 테이블에는 기본 키 열 **CustID** 가 있습니다. **Orders** 테이블에는 기본 키 열 **OrderID** 가 있으며 **Customers** 테이블의 **CustID** 열을 참조하는 FOREIGN KEY 제약 조건이 이 테이블의 **CustID** 열에 있습니다. 마찬가지로 **OrderItems** 테이블에는 기본 키 열 **OrderItemID** 가 있으며 **Orders** 테이블의 **OrderID** 열을 참조하는 FOREIGN KEY 제약 조건이 이 테이블의 **OrderID** 열에 있습니다.  
   
  이 예에서 논리적 레코드는 단일 **CustID** 값에 관련된 **Orders** 테이블의 모든 행 및 **Orders** 테이블의 해당 행과 관련된 **OrderItems** 테이블의 모든 행으로 구성되어 있습니다. 이 다이어그램에서는 Customer2에 대한 논리적 레코드에 있는 3개 테이블의 모든 행을 보여 줍니다.  
   
- ![값을 포함하는 3개 테이블 논리적 레코드](../../../relational-databases/replication/merge/media/logical-records-02.gif "값을 포함하는 3개 테이블 논리적 레코드")  
+ ![값을 포함하는 3개 테이블 논리적 레코드의 첫 번째 스크린샷](../../../relational-databases/replication/merge/media/logical-records-02.gif "값을 포함하는 3개 테이블 논리적 레코드")  
   
  아티클 간 논리적 레코드 관계를 정의하려면 [병합 테이블 기사 간의 논리적 레코드 관계 정의](../../../relational-databases/replication/publish/define-a-logical-record-relationship-between-merge-table-articles.md)를 참조하십시오.  
   
@@ -55,7 +55,7 @@ ms.locfileid: "91866999"
 ### <a name="the-application-of-changes-as-a-unit"></a>변경 내용을 하나의 단위로 적용  
  연결이 끊기는 경우와 같이 병합 프로세스가 중단되는 경우 논리적 레코드를 사용하면 관련 복제된 변경 내용 중 부분적으로 완료된 변경 내용 집합이 롤백됩니다. 예를 들어 구독자가 **OrderID** = 6인 새 주문과 **OrderID** = 6에 대해 **OrderItemID** = 10 및 **OrderItemID** = 11인 두 개의 새 행을 **OrderItems** 테이블에 추가하는 경우를 살펴봅시다.  
   
- ![값을 포함하는 3개 테이블 논리적 레코드](../../../relational-databases/replication/merge/media/logical-records-04.gif "값을 포함하는 3개 테이블 논리적 레코드")  
+ ![값을 포함하는 3개 테이블 논리적 레코드의 두 번째 스크린샷](../../../relational-databases/replication/merge/media/logical-records-04.gif "값을 포함하는 3개 테이블 논리적 레코드")  
   
  **OrderID** = 6에 대한 **Orders** 행은 완료되었지만 **OrderItems** 10 및 11이 완료되기 전에 복제 프로세스가 중단되고 논리적 레코드가 사용되지 않는 경우 **OrderID** = 6에 대한 **OrderTotal** 값이 **OrderItems** 행에 대한 **OrderAmount** 값의 합계와 일치하지 않게 됩니다. 논리적 레코드가 사용되는 경우에는 관련 **OrderItems** 변경 내용이 복제될 때까지 **OrderID** = 6에 대한 **Orders** 행이 커밋되지 않습니다.  
   
@@ -131,11 +131,11 @@ ms.locfileid: "91866999"
   
      ![둘 이상의 부모 테이블이 있는 자식 테이블](../../../relational-databases/replication/merge/media/logical-records-03.gif "둘 이상의 부모 테이블이 있는 자식 테이블")  
   
-     **ClassMembers** 의 행이 기본 키 행과 연결되어 있지 않았기 때문에 논리적 레코드를 사용하여 이 관계에 있는 3개의 테이블을 나타낼 수 없습니다. **ClassMembers** 테이블과 **Students** 테이블 간에 논리적 레코드를 만들 수 있듯이 **Classes** 테이블과 **ClassMembers**테이블 간에도 논리적 레코드를 만들 수 있지만 이 3개의 테이블 간에는 논리적 레코드를 만들 수 없습니다.  
+     **ClassMembers** 의 행이 기본 키 행과 연결되어 있지 않았기 때문에 논리적 레코드를 사용하여 이 관계에 있는 3개의 테이블을 나타낼 수 없습니다. **ClassMembers** 테이블과 **Students** 테이블 간에 논리적 레코드를 만들 수 있듯이 **Classes** 테이블과 **ClassMembers** 테이블 간에도 논리적 레코드를 만들 수 있지만 이 3개의 테이블 간에는 논리적 레코드를 만들 수 없습니다.  
   
 -   게시에는 순환 조인 필터 관계가 포함될 수 없습니다.  
   
-     **Customers**, **Orders**및 **OrderItems**테이블의 예를 들면 **Orders** 테이블에도 **OrderItems** 테이블을 참조하는 FOREIGN KEY 제약 조건이 있는 경우에는 논리적 레코드를 사용할 수 없습니다.  
+     **Customers** , **Orders** 및 **OrderItems** 테이블의 예를 들면 **Orders** 테이블에도 **OrderItems** 테이블을 참조하는 FOREIGN KEY 제약 조건이 있는 경우에는 논리적 레코드를 사용할 수 없습니다.  
   
 ## <a name="performance-implications-of-logical-records"></a>논리적 레코드가 성능에 미치는 영향  
  논리적 레코드 기능을 사용하면 성능이 다소 떨어집니다. 논리적 레코드를 사용하지 않는 경우 복제 에이전트는 지정된 아티클에 대한 모든 변경 내용을 동시에 처리할 수 있으며 변경 내용이 행 단위로 적용되므로 변경 내용 적용에 대해 최소의 잠금 및 트랜잭션 로그 요구 사항만 필요합니다.  

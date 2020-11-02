@@ -9,12 +9,12 @@ author: yualan
 ms.author: alayu
 ms.custom: seodec18; sqlfreshmay19; seo-lt-2019
 ms.date: 05/14/2019
-ms.openlocfilehash: fc3ff2a1edea509318040edd90e693b8eaf839df
-ms.sourcegitcommit: 7345e4f05d6c06e1bcd73747a4a47873b3f3251f
+ms.openlocfilehash: 7eb89be3b94565f7a8642dad893642176a22822b
+ms.sourcegitcommit: fb8724fb99c46ecf3a6d7b02a743af9b590402f0
 ms.translationtype: HT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 08/24/2020
-ms.locfileid: "88766442"
+ms.lasthandoff: 10/23/2020
+ms.locfileid: "92439297"
 ---
 # <a name="quickstart-use-azure-data-studio-to-connect-and-query-azure-sql-database"></a>빠른 시작: Azure Data Studio를 사용한 Azure SQL 데이터베이스 연결 및 쿼리
 
@@ -37,9 +37,9 @@ Azure SQL Server가 없는 경우 다음 Azure SQL Database 빠른 시작 중 �
 
 Azure Data Studio를 사용하여 Azure SQL Database 서버에 대한 연결을 설정합니다.
 
-1. Azure Data Studio를 처음 실행하면 **시작** 페이지가 열립니다. **시작** 페이지가 표시되지 않으면 **도움말** > **시작**을 선택합니다. **새 연결**을 선택하여 **연결** 창을 엽니다.
+1. Azure Data Studio를 처음 실행하면 **시작** 페이지가 열립니다. **시작** 페이지가 표시되지 않으면 **도움말** > **시작** 을 선택합니다. **새 연결** 을 선택하여 **연결** 창을 엽니다.
    
-   ![새 연결 아이콘](media/quickstart-sql-database/new-connection-icon.png)
+   ![다음 연결 옵션이 설명선으로 표시된 Azure Delta Studio 시작 대화 상자 스크린샷](media/quickstart-sql-database/new-connection-icon.png)
 
 2. 이 문서에서는 SQL 로그인을 사용하지만 Windows 인증도 지원합니다. 해당 Azure SQL Server의 서버 이름, 사용자 이름 및 암호를 사용하여 다음 필드를 채웁니다.
 
@@ -49,13 +49,13 @@ Azure Data Studio를 사용하여 Azure SQL Database 서버에 대한 연결을 
    | **인증** | SQL 로그인| 이 자습서에서는 SQL 인증을 사용합니다. |
    | **사용자 이름** | 서버 관리자 계정 사용자 이름 | 서버를 만드는 데 사용된 계정의 사용자 이름입니다. |
    | **암호(SQL 로그인)** | 서버 관리자 계정 암호 | 서버를 만드는 데 사용된 계정의 암호입니다. |
-   | **암호를 저장하시겠습니까?** | Yes 또는 No | 암호를 매번 입력하지 않으려면 **예**를 선택합니다. |
+   | **암호를 저장하시겠습니까?** | Yes 또는 No | 암호를 매번 입력하지 않으려면 **예** 를 선택합니다. |
    | **데이터베이스 이름** | ‘비워 둠’ | 여기서는 서버에만 연결합니다. |
    | **서버 그룹** | <Default> 선택 | 직접 만든 특정 서버 그룹으로 이 필드를 설정할 수 있습니다. | 
 
-   ![새 연결 아이콘](media/quickstart-sql-database/new-connection-screen.png)  
+   ![Azure Data Studio - 연결 페이지 스크린샷](media/quickstart-sql-database/new-connection-screen.png)  
 
-3. **연결**을 선택합니다.
+3. **연결** 을 선택합니다.
 
 4. 서버에 Azure Data Studio 연결을 허용하는 방화벽 규칙이 없으면 **새 방화벽 규칙 만들기** 양식이 열립니다. 양식을 완료하여 새 방화벽 규칙을 만듭니다. 자세한 내용은 [방화벽 규칙](/azure/sql-database/sql-database-firewall-configure)을 참조하세요.
 
@@ -67,7 +67,7 @@ Azure Data Studio를 사용하여 Azure SQL Database 서버에 대한 연결을 
 
 다음 섹션에서는 다른 Azure Data Studio 자습서에서 사용되는 TutorialDB 데이터베이스를 만듭니다.
 
-1. **서버** 사이드바에서 Azure SQL Server를 마우스 오른쪽 단추로 클릭하고 **새 쿼리**를 선택합니다.
+1. **서버** 사이드바에서 Azure SQL Server를 마우스 오른쪽 단추로 클릭하고 **새 쿼리** 를 선택합니다.
 
 1. 이 SQL을 쿼리 편집기에 붙여넣습니다.
 
@@ -84,7 +84,7 @@ Azure Data Studio를 사용하여 Azure SQL Database 서버에 대한 연결을 
    GO
    ```
 
-1. 도구 모음에서 **실행**을 선택합니다. **메시지** 창에 알림이 표시되어 쿼리 진행률을 보여 줍니다.
+1. 도구 모음에서 **실행** 을 선택합니다. **메시지** 창에 알림이 표시되어 쿼리 진행률을 보여 줍니다.
 
 ## <a name="create-a-table"></a>테이블 만들기
 
@@ -98,7 +98,7 @@ Azure Data Studio를 사용하여 Azure SQL Database 서버에 대한 연결을 
 
 1. `Customers` 테이블을 만듭니다. 
 
-   쿼리 편집기의 이전 쿼리를 다음 쿼리로 바꾸고 **실행**을 선택합니다.
+   쿼리 편집기의 이전 쿼리를 다음 쿼리로 바꾸고 **실행** 을 선택합니다.
 
    ```sql
    -- Create a new table called 'Customers' in schema 'dbo'
@@ -120,7 +120,7 @@ Azure Data Studio를 사용하여 Azure SQL Database 서버에 대한 연결을 
 
 ## <a name="insert-rows-into-the-table"></a>테이블에 행 삽입
 
-이전 쿼리를 다음 쿼리로 바꾸고 **실행**을 선택합니다.
+이전 쿼리를 다음 쿼리로 바꾸고 **실행** 을 선택합니다.
 
    ```sql
    -- Insert rows into table 'Customers'
@@ -136,7 +136,7 @@ Azure Data Studio를 사용하여 Azure SQL Database 서버에 대한 연결을 
 
 ## <a name="view-the-result"></a>결과 보기
 
-이전 쿼리를 다음 쿼리로 바꾸고 **실행**을 선택합니다.
+이전 쿼리를 다음 쿼리로 바꾸고 **실행** 을 선택합니다.
 
    ```sql
    -- Select rows from table 'Customers'

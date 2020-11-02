@@ -16,12 +16,12 @@ helpviewer_keywords:
 ms.assetid: 44fadbee-b5fe-40c0-af8a-11a1eecf6cb5
 author: pmasl
 ms.author: pelopes
-ms.openlocfilehash: b06b51e5c8f1cbe7d542c8ecf04df0ded859d775
-ms.sourcegitcommit: 783b35f6478006d654491cb52f6edf108acf2482
+ms.openlocfilehash: 62ea3f9484c232112317af9f0cb7bf8d8facde2f
+ms.sourcegitcommit: 544706f6725ec6cdca59da3a0ead12b99accb2cc
 ms.translationtype: HT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 10/09/2020
-ms.locfileid: "91892443"
+ms.lasthandoff: 10/27/2020
+ms.locfileid: "92639026"
 ---
 # <a name="query-processing-architecture-guide"></a>쿼리 처리 아키텍처 가이드
 [!INCLUDE [SQL Server Azure SQL Database](../includes/applies-to-version/sql-asdb.md)]
@@ -34,13 +34,13 @@ ms.locfileid: "91892443"
 - 일괄 처리 모드 실행
 
 ### <a name="row-mode-execution"></a>행 모드 실행
-*행 모드 실행*은 데이터가 행 형식으로 저장되어 있는 경우 기존 RDMBS 테이블에서 사용된 쿼리 처리 메서드입니다. 쿼리가 실행되고 행 저장 테이블의 데이터에 액세스하는 경우 실행 트리 연산자 및 자식 연산자는 테이블 스키마에서 지정된 모든 열에 걸쳐 필요한 각 행을 읽습니다. 읽은 각 행에서 [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)]는 SELECT 문, 조인 조건자 또는 필터 조건자에 의해 참조된 것처럼 결과 집합에 필요한 열을 검색합니다.
+*행 모드 실행* 은 데이터가 행 형식으로 저장되어 있는 경우 기존 RDMBS 테이블에서 사용된 쿼리 처리 메서드입니다. 쿼리가 실행되고 행 저장 테이블의 데이터에 액세스하는 경우 실행 트리 연산자 및 자식 연산자는 테이블 스키마에서 지정된 모든 열에 걸쳐 필요한 각 행을 읽습니다. 읽은 각 행에서 [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)]는 SELECT 문, 조인 조건자 또는 필터 조건자에 의해 참조된 것처럼 결과 집합에 필요한 열을 검색합니다.
 
 > [!NOTE]
 > 행 모드 실행은 OLTP 시나리오에 매우 효율적이지만 많은 양의 데이터(예를 들어 데이터 웨어하우징 시나리오에서)를 검사할 때는 효율성이 떨어질 수 있습니다.
 
 ### <a name="batch-mode-execution"></a>일괄 처리 모드 실행  
-*일괄 처리 모드 실행*은 여러 행을 함께 처리하는 쿼리 처리 방법입니다(따라서 용어 일괄처리). 일괄 처리 내에서 각 열은 메모리의 별도 영역에 벡터로 저장되므로 일괄 처리 모드는 벡터 기반 처리입니다. 또한 일괄 처리 모드 처리는 다중 코어 CPU에 최적화된 알고리즘 및 최신 하드웨어에 있는 증가된 메모리 처리량을 사용합니다.      
+*일괄 처리 모드 실행* 은 여러 행을 함께 처리하는 쿼리 처리 방법입니다(따라서 용어 일괄처리). 일괄 처리 내에서 각 열은 메모리의 별도 영역에 벡터로 저장되므로 일괄 처리 모드는 벡터 기반 처리입니다. 또한 일괄 처리 모드 처리는 다중 코어 CPU에 최적화된 알고리즘 및 최신 하드웨어에 있는 증가된 메모리 처리량을 사용합니다.      
 
 배치 모드 실행은 columnstore 스토리지 형식과 긴밀히 통합되고 그에 맞게 최적화되어 있습니다. 일괄 처리 모드는 가능한 경우 압축된 데이터에서 작동하고 행 모드 실행에서 사용하는 [교환 연산자](../relational-databases/showplan-logical-and-physical-operators-reference.md#exchange)를 제거합니다. 그 결과로 병렬 처리가 더 나아졌고 성능이 더 빨라졌습니다.    
 
@@ -127,9 +127,9 @@ GO
 
 > [!NOTE]
 > [!INCLUDE[ssManStudioFull](../includes/ssmanstudiofull-md.md)]에는 실행 계획을 표시하는 세 가지 옵션이 있습니다.        
-> -  쿼리 최적화 프로그램에서 생성한 컴파일된 계획인 ***[예상 실행 계획](../relational-databases/performance/display-the-estimated-execution-plan.md)***.        
-> -  컴파일된 계획 및 관련 실행 컨텍스트와 동일한 ***[실제 실행 계획](../relational-databases/performance/display-an-actual-execution-plan.md)***. 여기에는 실행 경고와 같이 실행이 완료된 후에 사용할 수 있는 런타임 정보가 포함되거나 최신 버전의 [!INCLUDE[ssde_md](../includes/ssde_md.md)]에서는 실행 중에 사용되는 경과 및 CPU 시간이 포함됩니다.        
-> -  컴파일된 계획 및 관련 실행 컨텍스트와 동일한 ***[활성 쿼리 통계](../relational-databases/performance/live-query-statistics.md)***. 여기에는 실행되는 동안 제공되는 런타임 정보가 포함되며 1초마다 업데이트됩니다. 예를 들어 런타임 정보에는 연산자를 통해 흐르는 실제 행 수가 포함됩니다.       
+> -  쿼리 최적화 프로그램에서 생성한 컴파일된 계획인 * *_[예상 실행 계획](../relational-databases/performance/display-the-estimated-execution-plan.md)_* _        
+> -  컴파일된 계획 및 관련 실행 컨텍스트와 동일한 _*_ [실제 실행 계획](../relational-databases/performance/display-an-actual-execution-plan.md) _*_ 여기에는 실행 경고와 같이 실행이 완료된 후에 사용할 수 있는 런타임 정보가 포함되거나 최신 버전의 [!INCLUDE[ssde_md](../includes/ssde_md.md)]에서는 실행 중에 사용되는 경과 및 CPU 시간이 포함됩니다.        
+> -  컴파일된 계획 및 관련 실행 컨텍스트와 동일한 _*_ [라이브 쿼리 통계](../relational-databases/performance/live-query-statistics.md) _*_ 여기에는 실행되는 동안 제공되는 런타임 정보가 포함되며 1초마다 업데이트됩니다. 예를 들어 런타임 정보에는 연산자를 통해 흐르는 실제 행 수가 포함됩니다.       
 
 ### <a name="processing-a-select-statement"></a>SELECT 문 처리
 [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)]가 단일 SELECT 문을 처리하는 데 사용하는 기본 단계는 다음과 같습니다. 
@@ -145,10 +145,10 @@ GO
 
 #### <a name="foldable-expressions"></a>폴딩 가능 식
 [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)]에서는 다음 유형의 식에 상수 폴딩을 사용합니다.
-- 상수만 포함된 산술 식(예: 1+1, 5/3*2)
+- 상수만 포함된 산술 식(예: 1+1, 5/3_2)
 - 상수만 포함된 논리 식(1=1 and 1>2 AND 3>4)
 - `CAST` 및 `CONVERT`를 비롯하여 [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)]에서 폴딩 가능한 것으로 간주하는 기본 제공 함수. 일반적으로 입력으로만 사용되고, SET 옵션, 언어 설정, 데이터베이스 옵션 및 암호화 키와 같은 다른 컨텍스트 정보를 제공하지 않는 내장 함수가 폴딩 가능한 함수입니다. 비결정적 함수는 폴딩 가능하지 않습니다. 몇 가지 예외를 제외하고 결정적 기본 제공 함수는 폴딩 가능 함수입니다.
-- CLR 사용자 정의 형식의 결정적 메서드 및 결정적 스칼라 반환 CLR 사용자 정의 함수([!INCLUDE[ssSQL11](../includes/sssql11-md.md)]부터). 자세한 내용은 [CLR 사용자 정의 함수 및 메서드를 위한 상수 폴딩](/previous-versions/sql/2014/database-engine/behavior-changes-to-database-engine-features-in-sql-server-2014?view=sql-server-2014#constant-folding-for-clr-user-defined-functions-and-methods)을 참조하세요.
+- CLR 사용자 정의 형식의 결정적 메서드 및 결정적 스칼라 반환 CLR 사용자 정의 함수([!INCLUDE[ssSQL11](../includes/sssql11-md.md)]부터). 자세한 내용은 [CLR 사용자 정의 함수 및 메서드를 위한 상수 폴딩](/previous-versions/sql/2014/database-engine/behavior-changes-to-database-engine-features-in-sql-server-2014#constant-folding-for-clr-user-defined-functions-and-methods)을 참조하세요.
 
 > [!NOTE] 
 > 큰 개체 유형의 경우에는 예외입니다. 폴딩 프로세스의 출력 유형이 큰 개체 유형(text, ntext, image, nvarchar(max), varchar(max), varbinary(max) 또는 XML)이면 [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)]에서 식을 폴딩하지 않습니다.
@@ -223,7 +223,7 @@ BEGIN
 END;
 ```
 
-[!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)]에서 *MyProc2*의 `SELECT` 문을 최적화할 때 `@d2` 값이 알려지지 않습니다. 따라서 쿼리 최적화 프로그램에서는 `OrderDate > @d2`의 선택도에 대해 기본 추정값(이 예의 경우 30%)을 사용합니다.
+[!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)]에서 *MyProc2* 의 `SELECT` 문을 최적화할 때 `@d2` 값이 알려지지 않습니다. 따라서 쿼리 최적화 프로그램에서는 `OrderDate > @d2`의 선택도에 대해 기본 추정값(이 예의 경우 30%)을 사용합니다.
 
 ### <a name="processing-other-statements"></a>다른 문 처리
 `SELECT` 문 처리를 위해 설명된 기본 단계는 `INSERT`, `UPDATE` 및 `DELETE`와 같은 다른 [!INCLUDE[tsql](../includes/tsql-md.md)] 문에도 적용됩니다. `UPDATE` 및 `DELETE` 문은 둘 다 수정되거나 삭제될 행 집합을 대상으로 해야 합니다. 이러한 행을 식별하는 프로세스는 `SELECT` 문의 결과 집합을 구하는 데 사용되는 원본 행을 식별하는 방식과 동일합니다. `UPDATE` 및 `INSERT` 문은 모두 업데이트되거나 삽입될 데이터 값을 제공하는 `SELECT` 문을 포함할 수 있습니다.
@@ -443,7 +443,7 @@ WHERE name LIKE '%plans%';
 
 [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)] 실행 계획은 다음으로 구성됩니다. 
 
-- **컴파일된 계획**(또는 쿼리 계획)     
+- **컴파일된 계획** (또는 쿼리 계획)     
   컴파일 프로세스에서 생성되는 쿼리 계획은 주로 여러 사용자가 사용하는 재진입용 읽기 전용 데이터 구조입니다. 다음 정보를 저장합니다.
   -  논리 연산자가 설명한 작업을 구현하는 물리 연산자. 
   -  데이터가 액세스, 필터링 및 집계되는 순서를 결정하는 해당 작업의 순서. 
@@ -540,17 +540,17 @@ GO
 
 ### <a name="caching-multiple-plans-for-the-same-query"></a>동일한 쿼리의 여러 계획 캐싱 
 쿼리와 실행 계획은 지문과 비슷하게 [!INCLUDE[ssde_md](../includes/ssde_md.md)]에서 고유하게 식별할 수 있습니다.
--  **쿼리 계획 해시**는 지정된 쿼리의 실행 계획에서 계산되는 이진 해시 값으로, 비슷한 실행 계획을 고유하게 식별하는 데 사용됩니다. 
--  **쿼리 해시**는 쿼리의 [!INCLUDE[tsql](../includes/tsql-md.md)] 텍스트에서 계산되는 이진 해시 값으로, 쿼리를 고유하게 식별하는 데 사용됩니다. 
+-  **쿼리 계획 해시** 는 지정된 쿼리의 실행 계획에서 계산되는 이진 해시 값으로, 비슷한 실행 계획을 고유하게 식별하는 데 사용됩니다. 
+-  **쿼리 해시** 는 쿼리의 [!INCLUDE[tsql](../includes/tsql-md.md)] 텍스트에서 계산되는 이진 해시 값으로, 쿼리를 고유하게 식별하는 데 사용됩니다. 
 
-계획이 캐시에 남아 있는 동안에만 일정하게 유지되는 임시 식별자인 **계획 핸들**을 사용하여 계획 캐시에서 컴파일된 계획을 검색할 수 있습니다. 계획 핸들은 전체 일괄 처리의 컴파일된 계획에서 파생되는 해시 값입니다. 일괄 처리에서 하나 이상의 문이 다시 컴파일되는 경우에도 컴파일된 계획의 계획 핸들은 동일하게 유지됩니다.
+계획이 캐시에 남아 있는 동안에만 일정하게 유지되는 임시 식별자인 **계획 핸들** 을 사용하여 계획 캐시에서 컴파일된 계획을 검색할 수 있습니다. 계획 핸들은 전체 일괄 처리의 컴파일된 계획에서 파생되는 해시 값입니다. 일괄 처리에서 하나 이상의 문이 다시 컴파일되는 경우에도 컴파일된 계획의 계획 핸들은 동일하게 유지됩니다.
 
 > [!NOTE]
 > 계획이 단일 문 대신 일괄 처리용으로 컴파일된 경우 계획 핸들 및 문 오프셋을 사용하여 일괄 처리에 있는 개별 문의 계획을 검색할 수 있습니다.     
 > `sys.dm_exec_requests` DMV는 현재 실행 중인 일괄 처리 또는 지속형 개체의 현재 실행 중인 문을 참조하는 각 레코드의 `statement_start_offset` 및 `statement_end_offset` 열을 포함합니다. 자세한 내용은 [dm_exec_requests(Transact-SQL)](../relational-databases/system-dynamic-management-views/sys-dm-exec-requests-transact-sql.md)를 참조하세요.       
 > `sys.dm_exec_query_stats` DMV는 일괄 처리 또는 지속형 개체 내에서 문의 위치를 참조하는 각 레코드의 해당 열도 포함합니다. 자세한 내용은 [dm_exec_query_stats(Transact-SQL)](../relational-databases/system-dynamic-management-views/sys-dm-exec-query-stats-transact-sql.md)를 참조하세요.     
 
-일괄 처리의 실제 [!INCLUDE[tsql](../includes/tsql-md.md)] 텍스트는 **SQL 관리자** 캐시(SQLMGR)라는 계획 캐시의 별도 메모리 공간에 저장됩니다. 식별자를 참조하는 하나 이상의 계획이 계획 캐시에 남아 있는 동안에만 일정하게 유지되는 임시 식별자인 **SQL 핸들**을 사용하여 SQL 관리자 캐시에서 컴파일된 계획의 [!INCLUDE[tsql](../includes/tsql-md.md)] 텍스트는 검색할 수 있습니다. SQL 핸들은 전체 일괄 처리 텍스트에서 파생되는 해시 값이며 모든 일괄 처리에서 고유하게 됩니다.
+일괄 처리의 실제 [!INCLUDE[tsql](../includes/tsql-md.md)] 텍스트는 **SQL 관리자** 캐시(SQLMGR)라는 계획 캐시의 별도 메모리 공간에 저장됩니다. 식별자를 참조하는 하나 이상의 계획이 계획 캐시에 남아 있는 동안에만 일정하게 유지되는 임시 식별자인 **SQL 핸들** 을 사용하여 SQL 관리자 캐시에서 컴파일된 계획의 [!INCLUDE[tsql](../includes/tsql-md.md)] 텍스트는 검색할 수 있습니다. SQL 핸들은 전체 일괄 처리 텍스트에서 파생되는 해시 값이며 모든 일괄 처리에서 고유하게 됩니다.
 
 > [!NOTE]
 > 컴파일된 계획처럼 [!INCLUDE[tsql](../includes/tsql-md.md)] 텍스트는 주석을 포함하여 일괄 처리별로 저장됩니다. SQL 핸들은 전체 일괄 처리 텍스트의 MD5 해시를 포함하며 모든 일괄 처리에서 고유하게 됩니다.
@@ -695,7 +695,9 @@ sql_handle
 * 실행 계획은 자주 참조되므로 비용이 절대로 0이 되지 않습니다. 메모리가 부족하지 않고 현재 비용이 0이 아닌 경우 계획이 계획 캐시에 남아 있고 제거되지 않습니다.
 * 임시 실행 계획이 삽입되고 메모리 부족 현상이 발생하기 전에 다시 참조되지 않습니다. 임시 계획의 현재 비용이 0으로 초기화되므로 [!INCLUDE[ssDEnoversion](../includes/ssdenoversion-md.md)]에서 실행 계획을 조사할 때 현재 비용이 0임을 확인하고 해당 계획을 계획 캐시에서 제거합니다. 메모리가 부족하지 않으면 현재 비용이 0인 임시 실행 계획이 계획 캐시에 남아 있습니다.
 
-단일 계획이나 모든 계획을 캐시에서 수동으로 제거하려면 [DBCC FREEPROCCACHE](../t-sql/database-console-commands/dbcc-freeproccache-transact-sql.md)를 사용하세요. [!INCLUDE[ssSQL15](../includes/sssql15-md.md)]부터 `ALTER DATABASE SCOPED CONFIGURATION CLEAR PROCEDURE_CACHE`를 사용하여 범위에 있는 데이터베이스의 프로시저(계획) 캐시를 지웁니다.
+단일 계획이나 모든 계획을 캐시에서 수동으로 제거하려면 [DBCC FREEPROCCACHE](../t-sql/database-console-commands/dbcc-freeproccache-transact-sql.md)를 사용하세요. [DBCC FREESYSTEMCACHE](../t-sql/database-console-commands/dbcc-freesystemcache-transact-sql.md)를 사용하여 계획 캐시를 비롯한 모든 캐시를 지울 수도 있습니다. [!INCLUDE[ssSQL15](../includes/sssql15-md.md)]부터 `ALTER DATABASE SCOPED CONFIGURATION CLEAR PROCEDURE_CACHE`를 사용하여 범위에 있는 데이터베이스의 프로시저(계획) 캐시를 지웁니다. 또한 [sp_configure](system-stored-procedures/sp-configure-transact-sql.md) 및 [다시 구성](../t-sql/language-elements/reconfigure-transact-sql.md)을 통해 일부 구성 설정을 변경하면 계획 캐시에서 계획이 제거됩니다. 구성 설정 목록은 [DBCC FREEPROCCACHE](../t-sql/database-console-commands/dbcc-freeproccache-transact-sql.md#remarks) 문서의 설명 섹션에서 확인할 수 있습니다. 이와 같은 구성 변경은 오류 로그에 다음 정보 메시지를 로그합니다.
+
+> `SQL Server has encountered %d occurrence(s) of cachestore flush for the '%s' cachestore (part of plan cache) due to some database maintenance or reconfigure operations.`
 
 ### <a name="recompiling-execution-plans"></a>실행 계획 다시 컴파일
 
@@ -1075,15 +1077,15 @@ DOP(병렬 처리 수준)에 따라 사용되는 최대 CPU 수가 결정됩니�
 ### <a name="degree-of-parallelism"></a><a name="DOP"></a> 병렬 처리 수준
 [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)]에서는 병렬 쿼리 실행 또는 인덱스 DDL(데이터 정의 언어) 작업 각각의 인스턴스에 대해 가장 적합한 병렬 처리 수준이 자동으로 검색됩니다. 이것은 다음과 조건을 기준으로 수행됩니다. 
 
-1. SMP(대칭적 다중 처리) 컴퓨터와 같이 **둘 이상의 마이크로프로세서 또는 CPU가 있는 컴퓨터**에서 [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)]가 실행 중인지 여부. 두 개 이상의 CPU가 있는 컴퓨터에서만 병렬 쿼리를 사용할 수 있습니다. 
+1. SMP(대칭적 다중 처리) 컴퓨터와 같이 **둘 이상의 마이크로프로세서 또는 CPU가 있는 컴퓨터** 에서 [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)]가 실행 중인지 여부. 두 개 이상의 CPU가 있는 컴퓨터에서만 병렬 쿼리를 사용할 수 있습니다. 
 
-2. **사용할 수 있는 작업자 스레드 수가 충분**한지 여부. 각 쿼리 또는 인덱스 작업을 실행하려면 일정 수의 작업자 스레드가 필요합니다. 병렬 계획을 실행하려면 직렬 계획보다 많은 작업자 스레드가 필요하고, 필요한 작업자 스레드의 수는 병렬 처리 수준에 따라 증가합니다. 특정 병렬 처리 수준에 대한 병렬 계획의 작업자 스레드 요구 사항이 충족되지 않는 경우에는 [!INCLUDE[ssDEnoversion](../includes/ssdenoversion-md.md)]에서 병렬 처리 수준을 자동으로 낮추거나 지정된 작업 컨텍스트의 병렬 계획을 완전히 중단합니다. 그런 다음 하나의 작업자 스레드만 사용되는 직렬 계획을 실행합니다. 
+2. **사용할 수 있는 작업자 스레드 수가 충분** 한지 여부. 각 쿼리 또는 인덱스 작업을 실행하려면 일정 수의 작업자 스레드가 필요합니다. 병렬 계획을 실행하려면 직렬 계획보다 많은 작업자 스레드가 필요하고, 필요한 작업자 스레드의 수는 병렬 처리 수준에 따라 증가합니다. 특정 병렬 처리 수준에 대한 병렬 계획의 작업자 스레드 요구 사항이 충족되지 않는 경우에는 [!INCLUDE[ssDEnoversion](../includes/ssdenoversion-md.md)]에서 병렬 처리 수준을 자동으로 낮추거나 지정된 작업 컨텍스트의 병렬 계획을 완전히 중단합니다. 그런 다음 하나의 작업자 스레드만 사용되는 직렬 계획을 실행합니다. 
 
-3. **실행한 쿼리 또는 인덱스 작업의 유형**. 병렬 계획은 인덱스를 새로 작성 또는 다시 작성하거나 클러스터형 인덱스 및 CPU 주기 사용량이 큰 쿼리를 삭제하는 등의 인덱스 작업에 적합합니다. 예를 들어 대형 테이블의 조인, 대규모 집계 및 대형 결과 집합의 정렬이 병렬 쿼리에 적절합니다. 주로 트랜잭션 처리 애플리케이션에서 사용되는 단순 쿼리의 경우 이 쿼리를 병렬로 실행하는 데 필요한 추가 조정 작업은 성능을 향상시키기보다는 부담이 됩니다. 병렬 처리로 유용한 쿼리와 그렇지 않은 쿼리를 구분하기 위해, [!INCLUDE[ssDEnoversion](../includes/ssdenoversion-md.md)]은 쿼리 또는 인덱스 작업 실행 시 예상 비용을 [병렬 처리에 대한 비용 임계값](../database-engine/configure-windows/configure-the-cost-threshold-for-parallelism-server-configuration-option.md) 값과 비교합니다. 적절한 테스트를 통해 다른 값이 워크로드 실행에 더 적합하다고 확인되는 경우 사용자들은 [sp_configure](../relational-databases/system-stored-procedures/sp-configure-transact-sql.md)를 사용하여 기본값 5를 변경할 수 있습니다. 
+3. **실행한 쿼리 또는 인덱스 작업의 유형** . 병렬 계획은 인덱스를 새로 작성 또는 다시 작성하거나 클러스터형 인덱스 및 CPU 주기 사용량이 큰 쿼리를 삭제하는 등의 인덱스 작업에 적합합니다. 예를 들어 대형 테이블의 조인, 대규모 집계 및 대형 결과 집합의 정렬이 병렬 쿼리에 적절합니다. 주로 트랜잭션 처리 애플리케이션에서 사용되는 단순 쿼리의 경우 이 쿼리를 병렬로 실행하는 데 필요한 추가 조정 작업은 성능을 향상시키기보다는 부담이 됩니다. 병렬 처리로 유용한 쿼리와 그렇지 않은 쿼리를 구분하기 위해, [!INCLUDE[ssDEnoversion](../includes/ssdenoversion-md.md)]은 쿼리 또는 인덱스 작업 실행 시 예상 비용을 [병렬 처리에 대한 비용 임계값](../database-engine/configure-windows/configure-the-cost-threshold-for-parallelism-server-configuration-option.md) 값과 비교합니다. 적절한 테스트를 통해 다른 값이 워크로드 실행에 더 적합하다고 확인되는 경우 사용자들은 [sp_configure](../relational-databases/system-stored-procedures/sp-configure-transact-sql.md)를 사용하여 기본값 5를 변경할 수 있습니다. 
 
-4. **처리할 행 수가 충분**한지 여부. 쿼리 최적화 프로그램에서 행 수가 부족하다고 판단하는 경우 행을 배포하기 위해 교환 연산자를 사용하지 않습니다. 결과적으로 연산자는 직렬로 실행됩니다. 시작, 배포 및 조정 비용이 병렬 연산자 실행으로 얻은 이익보다 큰 경우 연산자를 직렬 계획으로 실행하면 이 시나리오를 피할 수 있습니다.
+4. **처리할 행 수가 충분** 한지 여부. 쿼리 최적화 프로그램에서 행 수가 부족하다고 판단하는 경우 행을 배포하기 위해 교환 연산자를 사용하지 않습니다. 결과적으로 연산자는 직렬로 실행됩니다. 시작, 배포 및 조정 비용이 병렬 연산자 실행으로 얻은 이익보다 큰 경우 연산자를 직렬 계획으로 실행하면 이 시나리오를 피할 수 있습니다.
 
-5. **최신 배포 통계를 사용**할 수 있는지 여부. 가장 높은 병렬 처리 수준을 제공할 수 없는 경우 병렬 처리를 중단하기 전에 더 낮은 병렬 처리 수준이 가능한지 확인합니다. 예를 들어 뷰에서 클러스터형 인덱스를 만드는 경우 클러스터형 인덱스가 아직 생성되지 않았으므로 배포 통계를 계산할 수 없습니다. 이 경우 [!INCLUDE[ssDEnoversion](../includes/ssdenoversion-md.md)]은 이 인덱스 작업에는 가장 높은 병렬 처리 수준을 할당하지 않습니다. 그러나 이 경우에도 정렬 또는 검색과 같은 일부 연산자에는 병렬 처리의 이점이 적용될 수 있습니다.
+5. **최신 배포 통계를 사용** 할 수 있는지 여부. 가장 높은 병렬 처리 수준을 제공할 수 없는 경우 병렬 처리를 중단하기 전에 더 낮은 병렬 처리 수준이 가능한지 확인합니다. 예를 들어 뷰에서 클러스터형 인덱스를 만드는 경우 클러스터형 인덱스가 아직 생성되지 않았으므로 배포 통계를 계산할 수 없습니다. 이 경우 [!INCLUDE[ssDEnoversion](../includes/ssdenoversion-md.md)]은 이 인덱스 작업에는 가장 높은 병렬 처리 수준을 할당하지 않습니다. 그러나 이 경우에도 정렬 또는 검색과 같은 일부 연산자에는 병렬 처리의 이점이 적용될 수 있습니다.
 
 > [!NOTE]
 > 병렬 인덱스 작업은 [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)] Enterprise, Developer 및 Evaluation Edition에서만 사용할 수 있습니다.
@@ -1299,7 +1301,7 @@ CREATE PARTITION FUNCTION myRangePF1 (int) AS RANGE LEFT FOR VALUES (3, 7, 10);
 
 ### <a name="displaying-partitioning-information-in-query-execution-plans"></a>쿼리 실행 계획의 분할 정보 표시
 
-분할 테이블과 인덱스에서의 쿼리 실행 계획은 [!INCLUDE[tsql](../includes/tsql-md.md)] `SET` 문 `SET SHOWPLAN_XML` 또는 `SET STATISTICS XML`을 사용하거나 [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)] Management Studio의 그래픽 실행 플랜 출력을 사용하여 검사할 수 있습니다. 예를 들어 쿼리 편집기 도구 모음에서 *예상 실행 계획 표시* 를 클릭하여 컴파일 시간 실행 계획을 표시할 수 있고 *실제 실행 계획 포함*을 클릭하여 런타임 계획을 표시할 수 있습니다. 
+분할 테이블과 인덱스에서의 쿼리 실행 계획은 [!INCLUDE[tsql](../includes/tsql-md.md)] `SET` 문 `SET SHOWPLAN_XML` 또는 `SET STATISTICS XML`을 사용하거나 [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)] Management Studio의 그래픽 실행 플랜 출력을 사용하여 검사할 수 있습니다. 예를 들어 쿼리 편집기 도구 모음에서 *예상 실행 계획 표시* 를 클릭하여 컴파일 시간 실행 계획을 표시할 수 있고 *실제 실행 계획 포함* 을 클릭하여 런타임 계획을 표시할 수 있습니다. 
 
 이러한 도구를 사용하여 다음 정보를 확인할 수 있습니다.
 

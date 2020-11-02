@@ -12,19 +12,19 @@ f1_keywords:
 ms.assetid: 83259509-71d6-4a64-a7f2-4e9603b30bd4
 author: chugugrace
 ms.author: chugu
-ms.openlocfilehash: 1ce2552519eeecb654478f522d3dd3b8880d2697
-ms.sourcegitcommit: e700497f962e4c2274df16d9e651059b42ff1a10
+ms.openlocfilehash: cda6ec744ca603c1a03df22bcb391b6d75bbff58
+ms.sourcegitcommit: fb8724fb99c46ecf3a6d7b02a743af9b590402f0
 ms.translationtype: HT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 08/17/2020
-ms.locfileid: "88347279"
+ms.lasthandoff: 10/23/2020
+ms.locfileid: "92439347"
 ---
 # <a name="performing-operation-sql-server-import-and-export-wizard"></a>작업을 수행하는 중(SQL Server 가져오기 및 내보내기 마법사)
 
 [!INCLUDE[sqlserver-ssis](../../includes/applies-to-version/sqlserver-ssis.md)]
 
 
-마법사에서 선택한 항목을 검토하고 **마법사 완료** 페이지에서 **마침** 클릭하면 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 가져오기 및 내보내기 마법사에 **작업을 수행하는 중**이 표시됩니다. 이 페이지에는 이전 페이지에서 구성한 작업의 진행률 및 결과가 표시됩니다. 이 페이지에서는 어떤 작업도 수행할 필요가 없습니다.
+마법사에서 선택한 항목을 검토하고 **마법사 완료** 페이지에서 **마침** 클릭하면 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 가져오기 및 내보내기 마법사에 **작업을 수행하는 중** 이 표시됩니다. 이 페이지에는 이전 페이지에서 구성한 작업의 진행률 및 결과가 표시됩니다. 이 페이지에서는 어떤 작업도 수행할 필요가 없습니다.
 
 ## <a name="screen-shot---operation-in-progress"></a>스크린샷 - 작업 진행 중 
  다음 스크린샷에서는 작업이 계속 진행되는 동안 표시되는 마법사의 **작업을 수행하는 중** 페이지를 보여 줍니다.  
@@ -34,7 +34,7 @@ ms.locfileid: "88347279"
 ## <a name="screen-shot---operation-completed"></a>스크린샷 - 작업 완료됨 
  다음 스크린샷에서는 작업이 완료된 후 표시되는 마법사의 **작업을 수행하는 중** 페이지를 보여 줍니다. 해당 단계에 대한 자세한 내용을 보려면 **메시지** 열의 항목을 클릭하세요.  
   
- ![가져오기 및 내보내기 마법사의 작업 수행 중 페이지](../../integration-services/import-export-data/media/performing-operation2.png "가져오기 및 내보내기 마법사의 작업 수행 중 페이지")  
+ ![가져오기 및 내보내기 마법사의 성공 페이지 스크린샷](../../integration-services/import-export-data/media/performing-operation2.png "가져오기 및 내보내기 마법사의 작업 수행 중 페이지")  
   
 ## <a name="watch-the-progress-of-the-operation"></a>작업 진행률 확인
  **동작**  
@@ -53,7 +53,7 @@ ms.locfileid: "88347279"
  **Report**  
  결과 보고서를 보거나, 보고서를 파일에 저장하거나, 보고서를 클립보드에 복사하거나, 보고서를 전자 메일로 보냅니다.  
   
-## <a name="whats-next"></a>다음 작업  
+## <a name="whats-next"></a>새로운 기능  
  구성한 작업이 실행되고 완료되면 실행 중인 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 가져오기 및 내보내기 마법사를 마친 것입니다.  
 -   즉시 작업을 실행한 경우 선택한 대상을 열어 마법사에서 복사한 데이터를 검토할 수 있습니다.  
 -   마법사에서 만든 SSIS 패키지를 저장한 경우 SQL Server Data Tools에서 열어 사용자 지정하고 다시 사용할 수 있습니다. 저장된 패키지를 사용자 지정하고 나중에 다시 실행하는 방법에 대한 자세한 내용은 [SSIS 패키지 저장](../../integration-services/import-export-data/save-ssis-package-sql-server-import-and-export-wizard.md)을 참조하세요.

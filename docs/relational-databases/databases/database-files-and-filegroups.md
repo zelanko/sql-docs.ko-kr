@@ -33,12 +33,12 @@ helpviewer_keywords:
 ms.assetid: 9ca11918-480d-4838-9198-cec221ef6ad0
 author: stevestein
 ms.author: sstein
-ms.openlocfilehash: 787d6d914cd290f7edc3847663690b63f58babeb
-ms.sourcegitcommit: cfa04a73b26312bf18d8f6296891679166e2754d
+ms.openlocfilehash: b9a4fc2995b0442f46794ad8ad226b48bfa4726b
+ms.sourcegitcommit: d35d0901296580bfceda6e0ab2e14cf2b7e99a0f
 ms.translationtype: HT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 10/19/2020
-ms.locfileid: "92192283"
+ms.lasthandoff: 10/24/2020
+ms.locfileid: "92497007"
 ---
 # <a name="database-files-and-filegroups"></a>데이터베이스 파일 및 파일 그룹
  [!INCLUDE [SQL Server](../../includes/applies-to-version/sqlserver.md)]
@@ -53,7 +53,7 @@ ms.locfileid: "92192283"
 |보조|선택적 사용자 정의 데이터 파일입니다. 각 파일을 서로 다른 디스크 드라이브에 배치하여 데이터를 여러 디스크에 분산시킬 수 있습니다. 권장되는 보조 데이터 파일 확장명은 .ndf입니다.|  
 |트랜잭션 로그|이 로그에는 데이터베이스 복구에 사용되는 정보가 저장됩니다. 데이터베이스마다 최소한 하나의 로그 파일이 있어야 합니다. 권장되는 트랜잭션 로그 파일 확장명은 .ldf입니다.|  
   
- 예를 들어 **Sales**라는 단순한 데이터베이스에는 모든 데이터와 개체를 포함하는 하나의 주 파일과 트랜잭션 로그 정보를 포함하는 로그 파일이 있습니다. 1개의 주 파일과 5개의 보조 파일을 포함하는 **Orders**라는 더 복잡한 데이터베이스를 만들 수도 있습니다. 데이터베이스 내의 데이터와 개체는 6개의 파일에 분산되고 트랜잭션 로그 정보는 4개의 로그 파일에 포함됩니다.  
+ 예를 들어 **Sales** 라는 단순한 데이터베이스에는 모든 데이터와 개체를 포함하는 하나의 주 파일과 트랜잭션 로그 정보를 포함하는 로그 파일이 있습니다. 1개의 주 파일과 5개의 보조 파일을 포함하는 **Orders** 라는 더 복잡한 데이터베이스를 만들 수도 있습니다. 데이터베이스 내의 데이터와 개체는 6개의 파일에 분산되고 트랜잭션 로그 정보는 4개의 로그 파일에 포함됩니다.  
   
  기본적으로 데이터와 트랜잭션 로그는 단일 디스크 시스템을 처리하기 위해 동일한 드라이브와 경로에 배치됩니다. 이 선택은 프로덕션 환경에서는 최적이 아닐 수도 있습니다. 데이터와 로그 파일은 서로 다른 디스크에 배치하는 것이 좋습니다.  
 
@@ -212,6 +212,7 @@ GO
 - 동일한 조인 쿼리에서 사용되는 여러 테이블은 여러 파일 그룹에 배치합니다. 이 단계는 조인된 데이터에서 병렬 디스크 I/O 검색을 하기 때문에 성능이 향상됩니다.
 - 자주 액세스되는 테이블과 해당 테이블에 속한 비클러스터형 인덱스는 여러 파일 그룹에 배치합니다. 여러 파일 그룹을 사용하면 파일이 여러 물리적 디스크에 있을 경우 병렬 I/O가 수행되기 때문에 성능이 향상됩니다.
 - 트랜잭션 로그 파일은 다른 파일 및 파일 그룹과 동일한 물리적 디스크에 배치하지 마세요.
+- [Diskpart](/windows-server/administration/windows-commands/diskpart) 등의 도구를 사용하여 데이터베이스 파일이 있는 볼륨 또는 파티션을 확장해야 하는 경우 먼저 모든 시스템 및 사용자 데이터베이스를 백업하고 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 서비스를 중지해야 합니다. 또한 디스크 볼륨이 성공적으로 확장되고 나면 [`DBCC CHECKDB`](../../t-sql/database-console-commands/dbcc-checkdb-transact-sql.md) 명령을 실행하여 해당 볼륨에 있는 모든 데이터베이스의 물리적 무결성을 보장해야 합니다.
 
 트랜잭션 로그 파일 관리 권장 사항에 대한 자세한 내용은 [트랜잭션 로그 파일의 크기 관리](../../relational-databases/logs/manage-the-size-of-the-transaction-log-file.md#Recommendations)를 참조하세요.   
 

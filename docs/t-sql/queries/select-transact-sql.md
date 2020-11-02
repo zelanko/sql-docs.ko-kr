@@ -26,31 +26,31 @@ ms.assetid: dc85caea-54d1-49af-b166-f3aa2f3a93d0
 author: VanMSFT
 ms.author: vanto
 monikerRange: '>=aps-pdw-2016||=azuresqldb-current||=azure-sqldw-latest||>=sql-server-2016||=sqlallproducts-allversions||>=sql-server-linux-2017||=azuresqldb-mi-current'
-ms.openlocfilehash: 1d3bc17bec08636983f5a8c85395da758720a3e0
-ms.sourcegitcommit: 8f062015c2a033f5a0d805ee4adabbe15e7c8f94
+ms.openlocfilehash: faece054ca8f125e8c3594eb588ffa8cf97ddc16
+ms.sourcegitcommit: 5f3e0eca9840db20038f0362e5d88a84ff3424af
 ms.translationtype: HT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 09/25/2020
-ms.locfileid: "91227207"
+ms.lasthandoff: 10/21/2020
+ms.locfileid: "92344905"
 ---
 # <a name="select-transact-sql"></a>SELECT (Transact-SQL)
 [!INCLUDE [sql-asdb-asdbmi-asa-pdw](../../includes/applies-to-version/sql-asdb-asdbmi-asa-pdw.md)]
 
   데이터베이스에서 행을 검색하고 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]에서 하나 이상의 테이블에서 하나 이상의 행 또는 열을 선택할 수 있도록 합니다. SELECT 문의 전체 구문은 복잡하지만 주요 절은 다음과 같이 요약할 수 있습니다.  
   
-[ WITH { [ XMLNAMESPACES ,] [ \<common_table_expression> ] } ]
+[ WITH { [[ XMLNAMESPACES ,]](../../t-sql/xml/with-xmlnamespaces.md) [[ \<common_table_expression> ]](../../t-sql/queries/with-common-table-expression-transact-sql.md) } ]
   
- SELECT *select_list* [ INTO *new_table* ]  
+ [SELECT *select_list*](../../t-sql/queries/select-clause-transact-sql.md) [ [INTO *new_table*](../../t-sql/queries/select-into-clause-transact-sql.md) ]  
   
- [ FROM *table_source* ] [ WHERE *search_condition* ]  
+ [ [FROM *table_source*](../../t-sql/queries/from-transact-sql.md) ] [ [WHERE *search_condition*](../../t-sql/queries/where-transact-sql.md) ]  
   
- [ GROUP BY *group_by_expression* ]  
+ [ [GROUP BY *group_by_expression*](../../t-sql/queries/select-group-by-transact-sql.md) ]  
   
- [ HAVING *search_condition* ]  
+ [ [HAVING *search_condition*](../../t-sql/queries/select-having-transact-sql.md) ]  
   
- [ ORDER BY *order_expression* [ ASC | DESC ] ]  
+ [ [ORDER BY *order_expression* [ ASC | DESC ] ](../../t-sql/queries/select-order-by-clause-transact-sql.md)]  
   
- UNION, EXCEPT 및 INTERSECT 연산자는 쿼리 간에 결과를 비교하거나 하나의 결과 집합으로 결합하는 데 사용됩니다.  
+ [UNION](../../t-sql/language-elements/set-operators-union-transact-sql.md), [EXCEPT, INTERSECT](../../t-sql/language-elements/set-operators-except-and-intersect-transact-sql.md) 연산자는 쿼리 간에 결과를 비교하거나 하나의 결과 집합으로 결합하는 데 사용됩니다.  
   
  ![항목 링크 아이콘](../../database-engine/configure-windows/media/topic-link.gif "항목 링크 아이콘") [Transact-SQL 구문 표기 규칙](../../t-sql/language-elements/transact-sql-syntax-conventions-transact-sql.md)  
   
@@ -62,8 +62,7 @@ ms.locfileid: "91227207"
 <SELECT statement> ::=    
     [ WITH { [ XMLNAMESPACES ,] [ <common_table_expression> [,...n] ] } ]  
     <query_expression>   
-    [ ORDER BY { order_by_expression | column_position [ ASC | DESC ] }   
-  [ ,...n ] ]   
+    [ ORDER BY <order_by_expression> ] 
     [ <FOR Clause>]   
     [ OPTION ( <query_hint> [ ,...n ] ) ]   
 <query_expression> ::=   
@@ -188,10 +187,10 @@ SELECT <select_criteria>
 > [!WARNING]
 > 위의 순서는 일반적으로 맞습니다. 그러나 순서가 달라지는 특수한 경우가 있을 수 있습니다.
 >
-> 예를 들어 뷰에 클라스터형 인덱스가 있고 이 뷰가 일부 테이블 행을 제외하며 이 뷰의 SELECT 열 목록에서 *varchar* 데이터 형식을 *정수*로 바꾸는 CONVERT를 사용한다고 가정해 봅니다. 이런 상황에서 CONVERT는 WHERE 문이 실행되기 전에 실행될 수 있습니다. 물론 일반적이지 않습니다. 필요한 상황에서 다른 순서를 방지하기 위해 뷰를 수정하는 방법이 있는 경우가 종종 있습니다. 
+> 예를 들어 뷰에 클라스터형 인덱스가 있고 이 뷰가 일부 테이블 행을 제외하며 이 뷰의 SELECT 열 목록에서 *varchar* 데이터 형식을 *정수* 로 바꾸는 CONVERT를 사용한다고 가정해 봅니다. 이런 상황에서 CONVERT는 WHERE 문이 실행되기 전에 실행될 수 있습니다. 물론 일반적이지 않습니다. 필요한 상황에서 다른 순서를 방지하기 위해 뷰를 수정하는 방법이 있는 경우가 종종 있습니다. 
 
 ## <a name="permissions"></a>사용 권한  
- 데이터를 선택하려면 테이블이나 뷰에 대한 **SELECT** 권한이 있어야 합니다. 이 권한은 스키마에 대한 **SELECT** 권한이나 테이블에 대한 **CONTROL** 권한과 같은 상위 범위에서 상속할 수 있습니다. 또는 **db_datareader** 또는 **db_owner** 고정 데이터베이스 역할이거나 **sysadmin** 고정 서버 역할의 멤버 자격이 필요합니다. **SELECT INTO**를 사용하여 새 테이블을 만들려면 **CREATE TABLE** 권한과 새 테이블을 소유하는 스키마에 대한 **ALTER SCHEMA** 권한이 모두 있어야 합니다.  
+ 데이터를 선택하려면 테이블이나 뷰에 대한 **SELECT** 권한이 있어야 합니다. 이 권한은 스키마에 대한 **SELECT** 권한이나 테이블에 대한 **CONTROL** 권한과 같은 상위 범위에서 상속할 수 있습니다. 또는 **db_datareader** 또는 **db_owner** 고정 데이터베이스 역할이거나 **sysadmin** 고정 서버 역할의 멤버 자격이 필요합니다. **SELECT INTO** 를 사용하여 새 테이블을 만들려면 **CREATE TABLE** 권한과 새 테이블을 소유하는 스키마에 대한 **ALTER SCHEMA** 권한이 모두 있어야 합니다.  
   
 ## <a name="examples"></a>예제:   
 다음 예에서는 [!INCLUDE[ssawPDW](../../includes/ssawpdw-md.md)] 데이터베이스를 사용합니다.

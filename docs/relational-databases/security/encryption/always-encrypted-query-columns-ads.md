@@ -10,12 +10,12 @@ ms.topic: conceptual
 author: jaszymas
 ms.author: jaszymas
 monikerRange: =azuresqldb-current||>=sql-server-2016||=sqlallproducts-allversions||>=sql-server-linux-2017||=azuresqldb-mi-current
-ms.openlocfilehash: 3c1f91effdea8225df62e3782e43ff5e863d827c
-ms.sourcegitcommit: 4d370399f6f142e25075b3714e5c2ce056b1bfd0
+ms.openlocfilehash: 82315c744073fa5f497f0aaf78eb6dedc04126a9
+ms.sourcegitcommit: 22e97435c8b692f7612c4a6d3fe9e9baeaecbb94
 ms.translationtype: HT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 10/09/2020
-ms.locfileid: "91866699"
+ms.lasthandoff: 10/27/2020
+ms.locfileid: "92679047"
 ---
 # <a name="query-columns-using-always-encrypted-with-azure-data-studio"></a>Azure Data Studio를 사용하여 Always Encrypted를 이용하는 열 쿼리
 [!INCLUDE [SQL Server Azure SQL Database](../../../includes/applies-to-version/sql-asdb.md)]
@@ -35,7 +35,7 @@ ms.locfileid: "91866699"
 ### <a name="example"></a>예제
 `SSN` 이 `Patients` 테이블의 암호화된 열이라고 가정할 경우, 아래 표시된 쿼리는 데이터베이스 연결에 Always Encrypted가 사용되지 않는 경우 이진 암호 텍스트 값을 검색합니다.   
 
-![always-encrypted-ads-query-ciphertext](../../../relational-databases/security/encryption/media/always-encrypted-ads-query-ciphertext.png)
+![SELECT * FROM [dbo].[Patients] 쿼리 및 이진 암호 텍스트 값으로 표시된 쿼리 결과 스크린샷](../../../relational-databases/security/encryption/media/always-encrypted-ads-query-ciphertext.png)
  
 ## <a name="retrieving-plaintext-values-stored-in-encrypted-columns"></a>암호화된 열에 저장된 일반 텍스트 값 검색    
 이 섹션에서는 암호화된 열에 암호 텍스트로 저장된 데이터를 검색하는 방법을 설명합니다.
@@ -52,7 +52,7 @@ ms.locfileid: "91866699"
 ### <a name="example"></a>예제
 SSN이 `Patients` 테이블의 암호화된 열이라고 가정할 경우 아래 표시된 쿼리는 Always Encrypted가 데이터베이스 연결에 사용되고 `SSN` 열에 대해 구성된 열 마스터 키에 대한 액세스 권한이 있는 경우 일반 텍스트 값을 반환합니다.   
 
-![always-encryptedads-query-plaintext](../../../relational-databases/security/encryption/media/always-encrypted-ads-query-plaintext.png)
+![SELECT * FROM [dbo].[Patients] 쿼리 및 일반 텍스트 값으로 표시된 쿼리 결과 스크린샷](../../../relational-databases/security/encryption/media/always-encrypted-ads-query-plaintext.png)
  
 ## <a name="sending-plaintext-values-targeting-encrypted-columns"></a>암호화된 열을 대상으로 하는 일반 텍스트 값 보내기       
 이 섹션에서는 암호화된 열을 대상으로 값을 보내는 쿼리를 실행하는 방법을 설명합니다. 예를 들어 암호화된 열에 저장된 값을 삽입, 업데이트 또는 필터링하는 쿼리를 실행할 수 있습니다.
@@ -71,7 +71,7 @@ SSN이 `Patients` 테이블의 암호화된 열이라고 가정할 경우 아래
 ### <a name="example"></a>예제
 `SSN`을 `Patients` 테이블에 있는 `char(11)` 열이라고 가정하는 아래 스크립트는 SSN 열에서 `'795-73-9838'`을 포함하는 행을 찾습니다. 데이터베이스 연결에 대한 Always Encrypted를 사용 설정하고, 쿼리 창에서 Always Encrypted에 대한 매개 변수화를 사용 설정했으며, `SSN` 열에 대해 구성한 열 마스터 키에 액세스할 수 있다면 결과가 반환됩니다.   
 
-![-encrypted-ads-query-parameters](../../../relational-databases/security/encryption/media/always-encrypted-ads-query-parameters.png)
+![DECLARE @SSN char(11) = '795-73-9838' SELECT * FROM [dbo].[Patients] WHERE [SSN] = @SSN 쿼리 및 쿼리 결과 스크린샷](../../../relational-databases/security/encryption/media/always-encrypted-ads-query-parameters.png)
 
 ## <a name="permissions-for-querying-encrypted-columns"></a>암호화된 열을 쿼리하기 위한 권한
 
@@ -80,7 +80,7 @@ SSN이 `Patients` 테이블의 암호화된 열이라고 가정할 경우 아래
 위 권한 외에도 쿼리 결과의 암호를 해독하거나 쿼리 매개 변수(Transact-SQL 변수를 매개 변수화하여 생성된)를 암호화하려면 대상 열을 보호하는 열 마스터 키에 대한 액세스 권한도 필요합니다.
 
 - **인증서 저장소: 로컬 컴퓨터:** 열 마스터 키로 사용되는 인증서에 대한 **읽기** 권한이 있거나 컴퓨터의 관리자여야 합니다.   
-- **Azure Key Vault:** 열 마스터 키를 포함하는 키 자격 증명 모음에 대한 **get**, **unwrapKey** 및 **verify** 권한이 필요합니다.
+- **Azure Key Vault:** 열 마스터 키를 포함하는 키 자격 증명 모음에 대한 **get** , **unwrapKey** 및 **verify** 권한이 필요합니다.
 
 자세한 내용은 [열 마스터 키 만들기 및 저장(상시 암호화)](../../../relational-databases/security/encryption/create-and-store-column-master-keys-always-encrypted.md)를 참조하세요.
 
@@ -99,14 +99,14 @@ Azure Data Studio에서 데이터베이스에 연결하는 경우 데이터베�
 
 Always Encrypted를 사용하거나 사용하지 않도록 설정하려면 다음을 수행합니다.
 1. **연결** 대화 상자에서 **고급...** 을 클릭합니다.
-2. 연결에 대해 Always Encrypted를 사용하도록 설정하려면 **Always Encrypted** 필드를 **사용**으로 설정합니다. Always Encrypted를 사용하지 않도록 설정하려면 **Always Encrypted** 필드를 비워 두거나 **사용 안 함**으로 설정합니다.
-3. [!INCLUDE [sssqlv15-md](../../../includes/sssqlv15-md.md)]를 사용하며 SQL Server 인스턴스가 보안 enclave로 구성되었다면 enclave 프로토콜 및 enclave 증명 URL을 지정할 수 있습니다. SQL Server 인스턴스에서 보안 enclave를 사용하지 않는다면 **증명 프로토콜**과 **Enclave 증명 URL** 필드를 비워 두어야 합니다. 자세한 내용은 [보안 Enclave를 사용한 Always Encrypted](always-encrypted-enclaves.md)를 참조하세요.
-4. **확인**을 클릭하여 **고급 속성**을 닫습니다.
+2. 연결에 대해 Always Encrypted를 사용하도록 설정하려면 **Always Encrypted** 필드를 **사용** 으로 설정합니다. Always Encrypted를 사용하지 않도록 설정하려면 **Always Encrypted** 필드를 비워 두거나 **사용 안 함** 으로 설정합니다.
+3. [!INCLUDE [sssqlv15-md](../../../includes/sssqlv15-md.md)]를 사용하며 SQL Server 인스턴스가 보안 enclave로 구성되었다면 enclave 프로토콜 및 enclave 증명 URL을 지정할 수 있습니다. SQL Server 인스턴스에서 보안 enclave를 사용하지 않는다면 **증명 프로토콜** 과 **Enclave 증명 URL** 필드를 비워 두어야 합니다. 자세한 내용은 [보안 Enclave를 사용한 Always Encrypted](always-encrypted-enclaves.md)를 참조하세요.
+4. **확인** 을 클릭하여 **고급 속성** 을 닫습니다.
 
-![always-encrypted-ads-parameterization](../../../relational-databases/security/encryption/media/always-encrypted-ads-connect.gif)
+![연결에 Always Encrypted를 사용하도록 설정하는 단계를 보여 주는 짧은 동영상](../../../relational-databases/security/encryption/media/always-encrypted-ads-connect.gif)
 
 > [!TIP]
-> 기존 쿼리 창에 대해 Always Encrypted을 사용하거나 사용하지 않도록 전환하려면 **연결 끊기**를 클릭하고 **연결**을 클릭한 다음 위의 단계를 모두 완료하여 원하는 **Always Encrypted** 필드 값으로 데이터베이스를 다시 연결합니다. 
+> 기존 쿼리 창에 대해 Always Encrypted을 사용하거나 사용하지 않도록 전환하려면 **연결 끊기** 를 클릭하고 **연결** 을 클릭한 다음 위의 단계를 모두 완료하여 원하는 **Always Encrypted** 필드 값으로 데이터베이스를 다시 연결합니다. 
 
 > [!NOTE] 
 > 현재 쿼리 창의 **연결 변경** 단추로는 Always Encrypted를 사용하거나 사용하지 않도록 전환할 수 없습니다.
@@ -129,12 +129,12 @@ Always Encrypted에 대한 매개 변수화를 기본적으로 사용하지 않�
 
 Always Encrypted에 대한 매개 변수화를 사용하거나 사용하지 않는 방법:
 
-1. **파일** > **기본 설정** > **설정**(Mac에서는 **코드** > **기본 설정** > **설정**)을 선택합니다.
-2. **데이터** > **Microsoft SQL Server**로 이동합니다.
-3. **Always Encrypted에 대해 매개 변수화 사용**을 선택하거나 선택 취소합니다.
+1. **파일** > **기본 설정** > **설정** (Mac에서는 **코드** > **기본 설정** > **설정** )을 선택합니다.
+2. **데이터** > **Microsoft SQL Server** 로 이동합니다.
+3. **Always Encrypted에 대해 매개 변수화 사용** 을 선택하거나 선택 취소합니다.
 4. **설정** 창을 닫습니다.
 
-![always-encrypted-ads-parameterization](../../../relational-databases/security/encryption/media/always-encrypted-ads-parameterization.gif)
+![Always Encrypted에 매개 변수화를 사용하거나 사용하지 않도록 설정하는 방법을 보여 주는 짧은 동영상](../../../relational-databases/security/encryption/media/always-encrypted-ads-parameterization.gif)
 
 > [!NOTE]
 > Always Encrypted에 대한 매개 변수화는 Always Encrypted가 설정된 데이터베이스 연결을 사용하는 쿼리 창에서만 작동합니다( [데이터베이스 연결에 Always Encrypted 사용/사용 안 함](#enabling-and-disabling-always-encrypted-for-a-database-connection) 참조). 쿼리 창에서 Always Encrypted가 설정되지 않은 데이터베이스 연결을 사용하는 경우에는 Transact-SQL 변수가 매개 변수화되지 않습니다.
@@ -180,7 +180,7 @@ DECLARE @Number int = 1.1 -- the type of the literal does not match the type of 
 
 Azure Data Studio는 Intellisense를 사용하여 성공적으로 매개 변수화할 수 있는 변수와 매개 변수화 시도에 실패하는 변수(및 이유)를 알려 줍니다.   
 
-성공적으로 매개 변수화할 수 있는 변수의 선언은 쿼리 창에 정보 메시지 밑줄로 표시됩니다. 정보 메시지 밑줄이 표시된 선언 문에 마우스 커서를 놓으면 결과 [SqlParameter Class](/dotnet/api/microsoft.data.sqlclient.sqlparameter) 개체( [SqlDbType](/dotnet/api/microsoft.data.sqlclient.sqlparameter.dbtype), [크기](/dotnet/api/microsoft.data.sqlclient.sqlparameter.size), [정밀도](/dotnet/api/microsoft.data.sqlclient.sqlparameter.precision), [배율](/dotnet/api/microsoft.data.sqlclient.sqlparameter.scale), [SqlValue](/dotnet/api/microsoft.data.sqlclient.sqlparameter.sqlvalue)로 매핑된 변수)의 키 속성 값을 비롯한 매개 변수화 프로세스의 결과를 포함하는 메시지가 표시됩니다. **문제** 보기에서 성공적으로 매개 변수화된 모든 변수의 전체 목록을 볼 수 있습니다. **문제** 보기를 열려면 **보기** > **문제**를 선택합니다.    
+성공적으로 매개 변수화할 수 있는 변수의 선언은 쿼리 창에 정보 메시지 밑줄로 표시됩니다. 정보 메시지 밑줄이 표시된 선언 문에 마우스 커서를 놓으면 결과 [SqlParameter Class](/dotnet/api/microsoft.data.sqlclient.sqlparameter) 개체( [SqlDbType](/dotnet/api/microsoft.data.sqlclient.sqlparameter.dbtype), [크기](/dotnet/api/microsoft.data.sqlclient.sqlparameter.size), [정밀도](/dotnet/api/microsoft.data.sqlclient.sqlparameter.precision), [배율](/dotnet/api/microsoft.data.sqlclient.sqlparameter.scale), [SqlValue](/dotnet/api/microsoft.data.sqlclient.sqlparameter.sqlvalue)로 매핑된 변수)의 키 속성 값을 비롯한 매개 변수화 프로세스의 결과를 포함하는 메시지가 표시됩니다. **문제** 보기에서 성공적으로 매개 변수화된 모든 변수의 전체 목록을 볼 수 있습니다. **문제** 보기를 열려면 **보기** > **문제** 를 선택합니다.    
 
 
 

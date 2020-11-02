@@ -26,12 +26,12 @@ ms.assetid: 0e09d210-6f23-4129-aedb-3d56b2980683
 author: pmasl
 ms.author: umajay
 monikerRange: '>=aps-pdw-2016||=azure-sqldw-latest||>=sql-server-2016||=sqlallproducts-allversions||>=sql-server-linux-2017||=azuresqldb-mi-current'
-ms.openlocfilehash: 44c696a3c912f52fef2ca5d5ece3411e59dba5d3
-ms.sourcegitcommit: afb02c275b7c79fbd90fac4bfcfd92b00a399019
+ms.openlocfilehash: 51c7252e957a9f19d83c6d2b840f91a7261af02b
+ms.sourcegitcommit: 544706f6725ec6cdca59da3a0ead12b99accb2cc
 ms.translationtype: HT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 10/12/2020
-ms.locfileid: "91957015"
+ms.lasthandoff: 10/27/2020
+ms.locfileid: "92639006"
 ---
 # <a name="dbcc-freeproccache-transact-sql"></a>DBCC FREEPROCCACHE(Transact-SQL)
 [!INCLUDE [sql-asdb-asdbmi-asa-pdw](../../includes/applies-to-version/sql-asdb-asdbmi-asa-pdw.md)]
@@ -43,17 +43,16 @@ ms.locfileid: "91957015"
   
 ![항목 링크 아이콘](../../database-engine/configure-windows/media/topic-link.gif "항목 링크 아이콘") [Transact-SQL 구문 표기 규칙](../../t-sql/language-elements/transact-sql-syntax-conventions-transact-sql.md)
   
-## <a name="syntax"></a>구문
+## <a name="syntax"></a>구문  
+[!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 구문:
 
-[!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 및 [!INCLUDE[ssSOD](../../includes/sssodfull-md.md)] 구문:
-
-```syntaxsql
+```sql
 DBCC FREEPROCCACHE [ ( { plan_handle | sql_handle | pool_name } ) ] [ WITH NO_INFOMSGS ]  
 ```  
 
 [!INCLUDE[ssSDW](../../includes/sssdwfull-md.md)] 및 [!INCLUDE[ssPDW](../../includes/sspdw-md.md)] 구문:
   
-```syntaxsql
+```sql
 DBCC FREEPROCCACHE [ ( COMPUTE | ALL ) ] 
      [ WITH NO_INFOMSGS ]   
 [;]  
@@ -63,20 +62,20 @@ DBCC FREEPROCCACHE [ ( COMPUTE | ALL ) ]
 
 ## <a name="arguments"></a>인수
  ( { *plan_handle* | *sql_handle* | *pool_name* } )  
-*plan_handle*은 실행된 일괄 처리에 대한 쿼리 계획을 고유하게 식별하며, 해당 계획은 계획 캐시에 있습니다. *plan_handle*은 **varbinary(64)** 이며, 다음 동적 관리 개체에서 가져올 수 있습니다.  
+*plan_handle* 은 실행된 일괄 처리에 대한 쿼리 계획을 고유하게 식별하며, 해당 계획은 계획 캐시에 있습니다. *plan_handle* 은 **varbinary(64)** 이며, 다음 동적 관리 개체에서 가져올 수 있습니다.  
  -   [sys.dm_exec_cached_plans](../../relational-databases/system-dynamic-management-views/sys-dm-exec-cached-plans-transact-sql.md)  
  -   [sys.dm_exec_requests](../../relational-databases/system-dynamic-management-views/sys-dm-exec-requests-transact-sql.md)  
  -   [sys.dm_exec_query_memory_grants](../../relational-databases/system-dynamic-management-views/sys-dm-exec-query-memory-grants-transact-sql.md)  
  -   [sys.dm_exec_query_stats](../../relational-databases/system-dynamic-management-views/sys-dm-exec-query-stats-transact-sql.md)  
 
-*sql_handle*은 지우려는 일괄 처리의 SQL 핸들입니다. *sql_handle*은 **varbinary(64)** 이며, 다음 동적 관리 개체에서 가져올 수 있습니다.  
+*sql_handle* 은 지우려는 일괄 처리의 SQL 핸들입니다. *sql_handle* 은 **varbinary(64)** 이며, 다음 동적 관리 개체에서 가져올 수 있습니다.  
  -   [sys.dm_exec_query_stats](../../relational-databases/system-dynamic-management-views/sys-dm-exec-query-stats-transact-sql.md)  
  -   [sys.dm_exec_requests](../../relational-databases/system-dynamic-management-views/sys-dm-exec-requests-transact-sql.md)  
  -   [sys.dm_exec_cursors](../../relational-databases/system-dynamic-management-views/sys-dm-exec-cursors-transact-sql.md)  
  -   [sys.dm_exec_xml_handles](../../relational-databases/system-dynamic-management-views/sys-dm-exec-xml-handles-transact-sql.md)  
  -   [sys.dm_exec_query_memory_grants](../../relational-databases/system-dynamic-management-views/sys-dm-exec-query-memory-grants-transact-sql.md)  
 
-*pool_name*은 Resource Governor 리소스 풀의 이름입니다. *pool_name*은 **sysname**이며, [sys.dm_resource_governor_resource_pools](../../relational-databases/system-dynamic-management-views/sys-dm-resource-governor-resource-pools-transact-sql.md) 동적 관리 뷰를 쿼리하여 가져올 수 있습니다.  
+*pool_name* 은 Resource Governor 리소스 풀의 이름입니다. *pool_name* 은 **sysname** 이며, [sys.dm_resource_governor_resource_pools](../../relational-databases/system-dynamic-management-views/sys-dm-resource-governor-resource-pools-transact-sql.md) 동적 관리 뷰를 쿼리하여 가져올 수 있습니다.  
  Resource Governor 작업 그룹을 리소스 풀에 연결하려면 [sys.dm_resource_governor_workload_groups](../../relational-databases/system-dynamic-management-views/sys-dm-resource-governor-workload-groups-transact-sql.md) 동적 관리 뷰를 쿼리합니다. 세션의 작업 그룹에 대한 자세한 내용은 [sys.dm_exec_sessions](../../relational-databases/system-dynamic-management-views/sys-dm-exec-sessions-transact-sql.md) 동적 관리 뷰를 쿼리하세요.  
 
   
@@ -95,7 +94,11 @@ DBCC FREEPROCCACHE [ ( COMPUTE | ALL ) ]
 ## <a name="remarks"></a>설명  
 계획 캐시를 신중하게 지우려면 DBCC FREEPROCCACHE를 사용합니다. 프로시저(계획) 캐시를 지우면 모든 계획이 제거되고, 이전에 캐시된 계획을 다시 사용하지 않고 들어오는 쿼리를 실행하면 새 계획이 컴파일됩니다. 
 
-이로 인해 새 컴파일 횟수가 증가함에 따라 쿼리 성능이 갑자기 일시적으로 저하될 수 있습니다. [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 오류 로그에 "'DBCC FREEPROCCACHE' 또는 'DBCC FREESYSTEMCACHE' 작업으로 인해 '%s' 캐시스토어(계획 캐시의 일부)에 대한 캐시스토어 플러시가 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]에서 %d번 발견되었습니다"라는 계획 캐시의 삭제된 각 캐시스토어에 대한 정보 메시지가 있습니다. 이 메시지는 캐시가 해당 시간 간격 내에 플러시되는 동안 5분마다 기록됩니다.
+이로 인해 새 컴파일 횟수가 증가함에 따라 쿼리 성능이 갑자기 일시적으로 저하될 수 있습니다. 계획 캐시에서 지워진 각 캐시스토어에 대한 다음 정보 메시지가 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 오류 로그에 포함됩니다.
+
+> `SQL Server has encountered %d occurrence(s) of cachestore flush for the '%s' cachestore (part of plan cache) due to 'DBCC FREEPROCCACHE' or 'DBCC FREESYSTEMCACHE' operations.` 
+
+이 메시지는 캐시가 해당 시간 간격 내에 플러시되는 동안 5분마다 기록됩니다.
 
 다음과 같은 다시 구성 작업은 프로시저 캐시도 지웁니다.
 -   access check cache bucket count  

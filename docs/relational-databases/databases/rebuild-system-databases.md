@@ -16,12 +16,12 @@ helpviewer_keywords:
 ms.assetid: af457ecd-523e-4809-9652-bdf2e81bd876
 author: stevestein
 ms.author: sstein
-ms.openlocfilehash: 6d263df7b2b76684f121ce9e699fc619370e3ee1
-ms.sourcegitcommit: c0f92739c81221fbcdb7c40b53a71038105df44f
+ms.openlocfilehash: 2365440fd87789a30e67c8c5effcbf0e85b8bc24
+ms.sourcegitcommit: 544706f6725ec6cdca59da3a0ead12b99accb2cc
 ms.translationtype: HT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 09/24/2020
-ms.locfileid: "91210628"
+ms.lasthandoff: 10/27/2020
+ms.locfileid: "92638996"
 ---
 # <a name="rebuild-system-databases"></a>시스템 데이터베이스 다시 작성
  [!INCLUDE [SQL Server](../../includes/applies-to-version/sqlserver.md)]
@@ -107,10 +107,10 @@ ms.locfileid: "91210628"
     |--------------------|-----------------|  
     |/QUIET 또는 /Q|설치 프로그램이 사용자 인터페이스 없이 실행되도록 지정합니다.|  
     |/ACTION=REBUILDDATABASE|설치 시 시스템 데이터베이스를 다시 작성하도록 지정합니다.|  
-    |/INSTANCENAME=*InstanceName*|[!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]인스턴스의 이름입니다. 기본 인스턴스의 경우 MSSQLSERVER를 입력합니다.|  
-    |/SQLSYSADMINACCOUNTS=*accounts*|**sysadmin** 고정 서버 역할에 추가할 Windows 그룹이나 개별 계정을 지정합니다. 둘 이상의 계정을 지정할 경우 각 계정 이름을 공백으로 구분합니다. 예를 들면 **BUILTIN\Administrators MyDomain\MyUser**와 같이 입력합니다. 계정 이름에 공백이 포함되어 있는 계정을 지정할 때는 계정을 큰따옴표로 묶습니다. 예를 들면 **NT AUTHORITY\SYSTEM**과 같이 입력합니다.|  
-    |[ /SAPWD=*StrongPassword* ]|[!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] **sa** 계정의 암호를 지정합니다. 해당 인스턴스에서 혼합 인증([!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 및 Windows 인증) 모드를 사용할 경우 이 매개 변수가 필요합니다.<br /><br /> **&#42;&#42;보안 정보&#42;&#42;** **sa** 계정은 잘 알려진 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 계정이므로 악의적인 사용자의 공격 대상이 되는 경우가 많습니다. **sa** 로그인에 대해 강력한 암호를 사용하도록 합니다.<br /><br /> Windows 인증 모드에 이 매개 변수를 지정하지 마세요.|  
-    |[ /SQLCOLLATION=*CollationName* ]|서버 수준 데이터 정렬을 새로 지정합니다. 이 매개 변수는 선택 사항입니다. 지정하지 않으면 서버의 현재 데이터 정렬이 사용됩니다.<br /><br /> **\*\* 중요 \*\*** 서버 수준 데이터 정렬을 변경해도 기존 사용자 데이터베이스의 데이터 정렬은 변경되지 않습니다. 새로 만드는 모든 사용자 데이터베이스는 기본적으로 새로운 데이터 정렬을 사용하게 됩니다.<br /><br /> 자세한 내용은 [서버 데이터 정렬 설정 또는 변경](../../relational-databases/collations/set-or-change-the-server-collation.md)을 참조하세요.|  
+    |/INSTANCENAME= *InstanceName*|[!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]인스턴스의 이름입니다. 기본 인스턴스의 경우 MSSQLSERVER를 입력합니다.|  
+    |/SQLSYSADMINACCOUNTS= *accounts*|**sysadmin** 고정 서버 역할에 추가할 Windows 그룹이나 개별 계정을 지정합니다. 둘 이상의 계정을 지정할 경우 각 계정 이름을 공백으로 구분합니다. 예를 들면 **BUILTIN\Administrators MyDomain\MyUser** 와 같이 입력합니다. 계정 이름에 공백이 포함되어 있는 계정을 지정할 때는 계정을 큰따옴표로 묶습니다. 예를 들면 **NT AUTHORITY\SYSTEM** 과 같이 입력합니다.|  
+    |[ /SAPWD= *StrongPassword* ]|[!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] **sa** 계정의 암호를 지정합니다. 해당 인스턴스에서 혼합 인증([!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 및 Windows 인증) 모드를 사용할 경우 이 매개 변수가 필요합니다.<br /><br /> **&#42;&#42;보안 정보&#42;&#42;** **sa** 계정은 잘 알려진 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 계정이므로 악의적인 사용자의 공격 대상이 되는 경우가 많습니다. **sa** 로그인에 대해 강력한 암호를 사용하도록 합니다.<br /><br /> Windows 인증 모드에 이 매개 변수를 지정하지 마세요.|  
+    |[ /SQLCOLLATION= *CollationName* ]|서버 수준 데이터 정렬을 새로 지정합니다. 이 매개 변수는 선택 사항입니다. 지정하지 않으면 서버의 현재 데이터 정렬이 사용됩니다.<br /><br /> **\*\* 중요 \*\*** 서버 수준 데이터 정렬을 변경해도 기존 사용자 데이터베이스의 데이터 정렬은 변경되지 않습니다. 새로 만드는 모든 사용자 데이터베이스는 기본적으로 새로운 데이터 정렬을 사용하게 됩니다.<br /><br /> 자세한 내용은 [서버 데이터 정렬 설정 또는 변경](../../relational-databases/collations/set-or-change-the-server-collation.md)을 참조하세요.|  
     |[ /SQLTEMPDBFILECOUNT=NumberOfFiles ]|tempdb 데이터 파일 수를 지정합니다. 이 값은 최대 8 또는 코어 수 중에서 더 높은 값까지 높일 수 있습니다.<br /><br /> 기본값: 8 또는 코어 수 중 낮은 값.|  
     |[ /SQLTEMPDBFILESIZE=FileSizeInMB ]|각 tempdb 데이터 파일의 초기 크기를 MB 단위로 지정합니다. 설치에서는 최대 1024MB의 크기를 지원합니다.<br /><br /> 기본값: 8|  
     |[ /SQLTEMPDBFILEGROWTH=FileSizeInMB ]|각 tempdb 데이터 파일의 파일 증가 증분을 MB 단위로 지정합니다. 값이 0이면 자동 증가가 해제되어 있고 추가 공간이 허용되지 않음을 나타냅니다. 설치에서는 최대 1024MB의 크기를 지원합니다.<br /><br /> 기본값: 64|  
@@ -149,15 +149,15 @@ ms.locfileid: "91210628"
   
 1.  배포 미디어에서 [!INCLUDE[ssCurrent](../../includes/sscurrent-md.md)] 설치 프로그램(setup.exe)을 실행합니다.  
   
-2.  왼쪽의 탐색 영역에서 **유지 관리**를 클릭한 다음 **복구**를 클릭합니다.  
+2.  왼쪽의 탐색 영역에서 **유지 관리** 를 클릭한 다음 **복구** 를 클릭합니다.  
   
 3.  시스템에 사전 요구 사항가 설치되어 있고 컴퓨터가 설치 유효성 검사 규칙을 통과하는지 확인하기 위해 설치 지원 규칙 및 파일 루틴이 실행됩니다. 계속하려면 **확인** 또는 **설치** 를 클릭합니다.  
   
-4.  인스턴스 선택 페이지에서 복구할 인스턴스를 선택한 후 **다음**을 클릭합니다.  
+4.  인스턴스 선택 페이지에서 복구할 인스턴스를 선택한 후 **다음** 을 클릭합니다.  
   
-5.  작업이 유효한지 검사하는 복구 규칙이 실행됩니다. 계속하려면 **다음**을 클릭합니다.  
+5.  작업이 유효한지 검사하는 복구 규칙이 실행됩니다. 계속하려면 **다음** 을 클릭합니다.  
   
-6.  **복구 준비** 페이지에서 **복구**를 클릭합니다. 완료 페이지에서 작업이 완료되었음을 알려 줍니다.  
+6.  **복구 준비** 페이지에서 **복구** 를 클릭합니다. 완료 페이지에서 작업이 완료되었음을 알려 줍니다.  
   
 ##  <a name="create-a-new-msdb-database"></a><a name="CreateMSDB"></a> 새 msdb 데이터베이스 만들기  
 
@@ -192,9 +192,9 @@ ms.locfileid: "91210628"
 
 ##  <a name="rebuild-the-tempdb-database"></a><a name="RebuildTempdb"></a> tempdb 데이터베이스 다시 빌드  
 
-**tempdb** 데이터베이스가 손상되고 데이터베이스 엔진이 시작되지 않으면 모든 시스템 데이터베이스를 다시 빌드할 필요 없이 **tempdb**만 다시 빌드할 수 있습니다.
+**tempdb** 데이터베이스가 손상되고 데이터베이스 엔진이 시작되지 않으면 모든 시스템 데이터베이스를 다시 빌드할 필요 없이 **tempdb** 만 다시 빌드할 수 있습니다.
   
-1. 현재 Tempdb.mdf 및 Templog.ldf 파일이 있다면 이름을 바꿉니다. 
+1. 현재 tempdb.mdf 및 templog.ldf 파일이 있는 경우 이름을 바꿉니다. 
 1. 명령 프롬프트에서 다음 명령을 사용하여 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]을 시작합니다. 
 
    ```sql
@@ -206,10 +206,10 @@ ms.locfileid: "91210628"
    > [!Note] 
    > [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]이 시작된 후에도 명령 프롬프트 창이 계속 열려 있어야 합니다. 명령 프롬프트 창을 닫으면 프로세스가 종료됩니다.
 
-1. **sqlcmd**를 사용하여 서버에 연결하고, 다음 저장 프로시저를 사용하여 tempdb 데이터베이스의 상태를 초기화합니다.
+1. **sqlcmd** 를 사용하여 서버에 연결하고, 다음 저장 프로시저를 사용하여 tempdb 데이터베이스의 상태를 초기화합니다.
 
    ```sql
-   exec master..sp_resetstatus Tempdb
+   exec master..sp_resetstatus tempdb
    ```
 
 1. 명령 프롬프트 창에서 CTRL+C를 눌러 서버를 종료합니다.

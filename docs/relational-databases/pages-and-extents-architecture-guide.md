@@ -15,12 +15,12 @@ ms.assetid: 83a4aa90-1c10-4de6-956b-7c3cd464c2d2
 author: rothja
 ms.author: jroth
 monikerRange: '>=aps-pdw-2016||=azuresqldb-current||=azure-sqldw-latest||>=sql-server-2016||=sqlallproducts-allversions||>=sql-server-linux-2017||=azuresqldb-mi-current'
-ms.openlocfilehash: dbee5b80fdb6f74ae3840f7728ae0eab2d24c28d
-ms.sourcegitcommit: 18a98ea6a30d448aa6195e10ea2413be7e837e94
+ms.openlocfilehash: 56bd6740a6b016bd06084b2e44958e61adc7ca89
+ms.sourcegitcommit: fb8724fb99c46ecf3a6d7b02a743af9b590402f0
 ms.translationtype: HT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 08/27/2020
-ms.locfileid: "88991854"
+ms.lasthandoff: 10/23/2020
+ms.locfileid: "92439397"
 ---
 # <a name="pages-and-extents-architecture-guide"></a>페이지 및 익스텐트 아키텍처 가이드
 [!INCLUDE[SQL Server Azure SQL Database Synapse Analytics PDW ](../includes/applies-to-version/sql-asdb-asdbmi-asa-pdw.md)]
@@ -97,7 +97,7 @@ ms.locfileid: "88991854"
 > [!NOTE]
 > [!INCLUDE[ssSQL14](../includes/sssql14-md.md)]까지, 추적 플래그 1118을 사용하여 항상 균일 익스텐트를 사용하도록 기본 할당을 변경할 수 있습니다. 이 추적 플래그에 대한 자세한 내용은 [DBCC TRACEON - 추적 플래그](../t-sql/database-console-commands/dbcc-traceon-trace-flags-transact-sql.md)를 참조하세요.   
 >   
-> [!INCLUDE[ssSQL15](../includes/sssql15-md.md)]부터 TF 1118에서 제공하는 기능이 tempdb에서 자동으로 사용됩니다. 사용자 데이터베이스의 경우 이 동작은 기본값이 OFF로 설정된 `ALTER DATABASE`의 `SET MIXED_PAGE_ALLOCATION` 옵션에 의해 제어되며, 추적 플래그 1118은 영향을 미치지 않습니다. 자세한 내용은 [ALTER DATABASE SET 옵션(Transact-SQL)](../t-sql/statements/alter-database-transact-sql-set-options.md)을 참조하세요.
+> [!INCLUDE[ssSQL15](../includes/sssql15-md.md)]부터 TF 1118에서 제공하는 기능이 tempdb 및 모든 사용자 데이터베이스에서 자동으로 사용됩니다. 사용자 데이터베이스의 경우 이 동작은 기본값이 OFF로 설정된 `ALTER DATABASE`의 `SET MIXED_PAGE_ALLOCATION` 옵션에 의해 제어되며, 추적 플래그 1118은 영향을 미치지 않습니다. 자세한 내용은 [ALTER DATABASE SET 옵션(Transact-SQL)](../t-sql/statements/alter-database-transact-sql-set-options.md)을 참조하세요.
 
 [!INCLUDE[ssSQL11](../includes/sssql11-md.md)]부터 `sys.dm_db_database_page_allocations` 시스템 함수는 데이터베이스, 테이블, 인덱스 및 파티션에 대한 페이지 할당 정보를 보고할 수 있습니다.
 
@@ -182,7 +182,7 @@ IAM 페이지는 필요에 따라 각 할당 단위에 대해 할당되고 파�
 
 [!INCLUDE[ssDEnoversion](../includes/ssdenoversion-md.md)]은 삽입되는 행을 보관하기에 충분한 공간을 가진 기존 익스텐트에서 페이지를 빠르게 찾을 수 없을 때만 할당 단위에 새 익스텐트를 할당합니다. 
 
-<a name="ProportionalFill"></a>[!INCLUDE[ssDEnoversion](../includes/ssdenoversion-md.md)]는 **비례 채우기 할당 알고리즘**을 사용하여 파일 그룹에서 사용할 수 있는 파일의 익스텐트를 할당합니다. 동일한 파일 그룹에 두 개의 파일이 있고 이 중 한 파일이 다른 파일에 비해 2배의 빈 공간을 가지는 경우 빈 공간이 더 많은 파일에서 두 페이지가 할당되고 빈 공간이 적은 다른 파일에서 한 페이지가 할당되는 방식으로 할당이 수행됩니다. 따라서 파일 그룹의 모든 파일이 유사한 공간 비율을 사용하게 됩니다. 
+<a name="ProportionalFill"></a>[!INCLUDE[ssDEnoversion](../includes/ssdenoversion-md.md)]는 **비례 채우기 할당 알고리즘** 을 사용하여 파일 그룹에서 사용할 수 있는 파일의 익스텐트를 할당합니다. 동일한 파일 그룹에 두 개의 파일이 있고 이 중 한 파일이 다른 파일에 비해 2배의 빈 공간을 가지는 경우 빈 공간이 더 많은 파일에서 두 페이지가 할당되고 빈 공간이 적은 다른 파일에서 한 페이지가 할당되는 방식으로 할당이 수행됩니다. 따라서 파일 그룹의 모든 파일이 유사한 공간 비율을 사용하게 됩니다. 
 
 ## <a name="tracking-modified-extents"></a>수정된 익스텐트 추적 
 

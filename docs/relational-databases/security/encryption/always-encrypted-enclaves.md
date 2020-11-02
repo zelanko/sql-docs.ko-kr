@@ -11,12 +11,12 @@ ms.topic: conceptual
 author: jaszymas
 ms.author: jaszymas
 monikerRange: '>= sql-server-ver15 || = sqlallproducts-allversions'
-ms.openlocfilehash: e33b72c93022a02538c143f976d4114589998b6f
-ms.sourcegitcommit: 4d370399f6f142e25075b3714e5c2ce056b1bfd0
+ms.openlocfilehash: 64680ae71e34d1da94bf0ec8b2ab1ef75cd3c4d3
+ms.sourcegitcommit: 22e97435c8b692f7612c4a6d3fe9e9baeaecbb94
 ms.translationtype: HT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 10/09/2020
-ms.locfileid: "91867250"
+ms.lasthandoff: 10/27/2020
+ms.locfileid: "92679024"
 ---
 # <a name="always-encrypted-with-secure-enclaves"></a>보안 Enclave를 사용한 Always Encrypted
 [!INCLUDE [sqlserver2019-windows-only](../../../includes/applies-to-version/sqlserver2019-windows-only.md)]
@@ -57,13 +57,13 @@ Always Encrypted는 다음 다이어그램에 설명된 것처럼 보안 Enclave
 
 SQL Server 엔진 내의 보안 Enclave는 암호화된 데이터베이스 열에 저장된 중요한 데이터와 일반 텍스트로 나타낸 해당 열 암호화 키에 액세스할 수 있습니다. Enclave 계산을 포함하는 쿼리를 SQL Server로 제출하기 전에, 애플리케이션 내의 클라이언트 드라이버는 지정된 기술(예: VBS)에 따라 보안 Enclave가 정품 Enclave인지 확인하고, Enclave 내에서 실행되는 코드가 Enclave 내에서 실행될 수 있게 서명되었는지 확인해야 합니다. 
 
-Enclave를 확인하는 프로세스를 **Enclave 증명**이라고 하며, 애플리케이션 내의 클라이언트 드라이버와 SQL Server가 둘 다 외부 증명 서비스에 연결합니다. 증명 프로세스의 사양은 Enclave 기술과 증명 서비스에 따라 좌우됩니다.
+Enclave를 확인하는 프로세스를 **Enclave 증명** 이라고 하며, 애플리케이션 내의 클라이언트 드라이버와 SQL Server가 둘 다 외부 증명 서비스에 연결합니다. 증명 프로세스의 사양은 Enclave 기술과 증명 서비스에 따라 좌우됩니다.
 
 [!INCLUDE[sql-server-2019](../../../includes/sssqlv15-md.md)]에서 SQL Server가 VBS 보안 Enclave를 지원하는 증명 프로세스를 Windows Defender System Guard 런타임 증명이라고 하며 이 프로세스는 HGS(호스트 보호 서비스)를 증명 서비스로 사용합니다. 사용자 환경에서 HGS를 구성하고 HGS에서 SQL Server 인스턴스를 호스트하는 컴퓨터를 등록해야 합니다. 또한 HGS 증명을 사용하여 클라이언트 애플리케이션 또는 도구(예: SQL Server Management Studio)를 구성해야 합니다.
 
 ## <a name="supported-client-drivers"></a>지원되는 클라이언트 드라이버
 
-보안 Enclave를 사용한 Always Encrypted를 사용하려면 애플리케이션은 해당 기능을 지원하는 클라이언트 드라이버를 사용해야 합니다. 애플리케이션 및 클라이언트 드라이버에서 Enclave 계산 및 Enclave 증명을 사용하도록 구성해야 합니다. 지원되는 클라이언트 드라이버 목록을 비롯한 자세한 내용은 [보안 Enclave를 사용한 Always Encrypted](always-encrypted-enclaves.md)를 참조하세요.
+보안 Enclave를 사용한 Always Encrypted를 사용하려면 애플리케이션은 해당 기능을 지원하는 클라이언트 드라이버를 사용해야 합니다. 애플리케이션 및 클라이언트 드라이버에서 Enclave 계산 및 Enclave 증명을 사용하도록 구성해야 합니다. 지원되는 클라이언트 드라이버 목록을 비롯한 자세한 내용은 [Always Encrypted를 사용하여 애플리케이션 개발](always-encrypted-client-development.md)을 참조하세요.
 
 ## <a name="enclave-enabled-keys"></a>Enclave 사용 키
 
@@ -87,7 +87,7 @@ Enclave 사용 열은 Enclave 사용 열 암호화 키로 암호화한 데이터
 
 다음 표에서는 열이 Enclave 사용 열 암호화 키 및 암호화 유형을 사용하는지 여부에 따라 암호화된 열에 사용할 수 있는 기능을 요약해서 보여 줍니다.
 
-| **연산**| **열이 Enclave 사용 열이 아님** |**열이 Enclave 사용 열이 아님**| **열이 Enclave 사용 열임**.  |**열이 Enclave 사용 열임**. |
+| **연산**| **열이 Enclave 사용 열이 아님** |**열이 Enclave 사용 열이 아님**| **열이 Enclave 사용 열임** .  |**열이 Enclave 사용 열임** . |
 |:---|:---|:---|:---|:---|
 | | **임의 암호화**  | **결정적 암호화**     | **임의 암호화**      | **결정적 암호화**     |
 | **바로 암호화** | 지원되지 않음  | 지원되지 않음   | 지원됨         | 지원됨    |
@@ -123,7 +123,7 @@ Enclave 사용 열은 Enclave 사용 열 암호화 키로 암호화한 데이터
 SQL Server 인스턴스에서 오류가 발생하면 데이터베이스가 불완전한 트랜잭션으로 인한 수정 내용이 데이터 파일에 포함된 상태로 남겨질 수 있습니다. 인스턴스를 시작하면 트랜잭션 로그에서 발견된 불완전한 트랜잭션을 모두 롤백하여 데이터베이스의 무결성을 유지하는 [데이터베이스 복구](../../logs/the-transaction-log-sql-server.md#recovery-of-all-incomplete-transactions-when--is-started) 프로세스가 실행됩니다. 불완전한 트랜잭션이 인덱스를 변경한 경우 해당 변경 내용도 취소해야 합니다. 예를 들어 인덱스의 일부 키 값을 제거하거나 다시 삽입해야 할 수 있습니다.
 
 > [!IMPORTANT]
-> 데이터베이스에 대해 [ADR(가속 데이터베이스 복구)](../../backup-restore/restore-and-recovery-overview-sql-server.md#adr)을 사용하도록 설정한 **다음**, 임의 암호화로 암호화된 enclave 사용 열에 첫 번째 인덱스를 만드는 것이 좋습니다.
+> 데이터베이스에 대해 [ADR(가속 데이터베이스 복구)](../../backup-restore/restore-and-recovery-overview-sql-server.md#adr)을 사용하도록 설정한 **다음** , 임의 암호화로 암호화된 enclave 사용 열에 첫 번째 인덱스를 만드는 것이 좋습니다.
 
 인덱스의 변경 내용을 취소하는 [기존 데이터베이스 복구 프로세스](/azure/sql-database/sql-database-accelerated-database-recovery#the-current-database-recovery-process)([ARIES](https://people.eecs.berkeley.edu/~brewer/cs262/Aries.pdf) 복구 모델을 따름)에서는 애플리케이션이 열의 열 암호화 키를 enclave에 제공할 때까지 SQL Server에서 기다려야 하며, 오랜 시간이 걸릴 수 있습니다. ADR을 사용하면 enclave 내부 캐시에서 열 암호화 키를 사용할 수 없어 지연되어야 하는 실행 취소 작업 수가 훨씬 줄어듭니다. 따라서 새 트랜잭션이 차단될 가능성이 최소화되어 데이터베이스 가용성이 상당히 증가합니다. ADR을 사용하는 경우에도 SQL Server에서 이전 데이터 버전 정리를 완료하려면 열 암호화 키가 필요할 수 있지만 백그라운드 작업으로 수행하기 때문에 데이터베이스 또는 사용자 트랜잭션의 가용성에는 영향을 주지 않습니다. 그러나 누락된 열 암호화 키로 인해 실패한 정리 작업을 나타내는 오류 메시지가 오류 로그에 표시될 수 있습니다.
 

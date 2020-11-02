@@ -11,12 +11,12 @@ ms.topic: conceptual
 ms.assetid: 22ec8a5c-9550-4d38-8a4a-485ec3e53ea8
 author: chugugrace
 ms.author: chugu
-ms.openlocfilehash: 0854e117ccc765b9e4b47011e589244e71730810
-ms.sourcegitcommit: e700497f962e4c2274df16d9e651059b42ff1a10
+ms.openlocfilehash: 715ff2845d686d5cff37a66fdd26866e47c51a99
+ms.sourcegitcommit: ae474d21db4f724523e419622ce79f611e956a22
 ms.translationtype: HT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 08/17/2020
-ms.locfileid: "88351219"
+ms.lasthandoff: 10/20/2020
+ms.locfileid: "92257970"
 ---
 # <a name="change-data-capture-service-for-oracle-by-attunity"></a>Attunity Oracle CDC Service
 
@@ -27,7 +27,11 @@ ms.locfileid: "88351219"
   
 ## <a name="installation"></a>설치  
 
-Microsoft SQL Server 2016용 Microsoft Change Data Capture Designer and Service for Oracle by Attunity는 SQL Server 2016 기능 팩의 일부입니다. [SQL Server 2016 기능 팩 웹 페이지](https://go.microsoft.com/fwlink/?LinkId=746297)에서 기능 팩의 구성 요소를 다운로드합니다.
+아래 링크에서 해당 SQL Server 버전의 Microsoft Change Data Capture Designer and Service for Oracle by Attunity를 다운로드합니다.
+
+- [Microsoft SQL Server 2016 Integration Services Attunity Oracle CDC Designer/Service 기능 팩](https://www.microsoft.com/download/details.aspx?id=55802)
+- [Microsoft SQL Server 2017 Integration Services Attunity Oracle CDC Designer/Service 기능 팩](https://www.microsoft.com/download/details.aspx?id=56610)
+- [Microsoft SQL Server 2019 Integration Services 기능 팩](https://www.microsoft.com/download/details.aspx?id=100303)
   
  캡처되는 원본 Oracle 데이터베이스와 대상 CDC 데이터베이스가 위치하는 대상 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 에 액세스할 수 있는 지원되는 Windows 컴퓨터에 Oracle CDC Service를 설치할 수 있습니다. CDC Service는 Oracle 데이터베이스와 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 데이터베이스의 로컬 설치가 필요 없으며 지원되는 클라이언트만 있으면 됩니다. 필요한 데이터베이스 구성 요소를 설치하는 위치에 대한 자세한 내용은 이 항목의 **데이터베이스 필수 구성 요소** 를 참조하십시오.  
   
@@ -44,7 +48,7 @@ Microsoft SQL Server 2016용 Microsoft Change Data Capture Designer and Service 
 -   Windows Server 2016
   
 ## <a name="database-prerequisites"></a>데이터베이스 필수 구성 요소  
- Oracle CDC Service를 사용하려면 [!INCLUDE[ssCurrent](../../includes/sscurrent-md.md)] Native Client Oracle 소프트웨어를 설치해야 합니다. 이 항목은 Oracle CDC Service를 설치하기 전에 Oracle에서 구하여 설치해야 하는 필수 구성 요소입니다. 또한 SQL Server 설치 프로그램을 사용하여 SQL Server ODBC 클라이언트를 설치해야 합니다.  
+ CDC Service for Oracle을 사용하려면 Oracle 데이터베이스 버전과 호환되는 Oracle 클라이언트를 설치해야 합니다. 이 항목은 Oracle CDC Service를 설치하기 전에 Oracle에서 구하여 설치해야 하는 필수 구성 요소입니다. 또한 SQL Server 설치 프로그램을 사용하여 SQL Server ODBC 클라이언트를 설치해야 합니다.  
   
  Oracle CDC Service는 다음 버전을 지원합니다.  
   
@@ -55,7 +59,7 @@ Microsoft SQL Server 2016용 Microsoft Change Data Capture Designer and Service 
 -   클래식 설치의 Oracle Database 12c. (다중 테넌트 설치는 지원되지 않습니다.)  
   
 ### <a name="target-sql-server-database"></a>대상 SQL Server 데이터베이스  
- [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]버전에서 지원되는 기능 목록은 [SQL Server 2016 버전에서 지원하는 기능](~/sql-server/editions-and-supported-features-for-sql-server-2016.md)을 참조하세요.  
+ [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]버전에서 지원되는 기능 목록은 [SQL Server 버전에서 지원하는 기능](~/sql-server/editions-and-supported-features-for-sql-server-2016.md)을 참조하세요.  
   
 ## <a name="running-the-installation-program"></a>설치 프로그램 실행  
  Oracle CDC Service를 설치하려면 사용 중인 Windows 플랫폼(32/64비트)에 맞는 설치 마법사를 열고 화면에 나타나는 지침을 따릅니다.  
@@ -85,7 +89,7 @@ Microsoft SQL Server 2016용 Microsoft Change Data Capture Designer and Service 
   
 -   [Attunity Oracle CDC Service 방법 가이드](../../integration-services/change-data-capture/change-data-capture-service-for-oracle-by-attunity-how-to-guide.md)  
   
-## <a name="see-also"></a>관련 항목  
+## <a name="see-also"></a>참고 항목  
  [Oracle CDC Service 작업](../../integration-services/change-data-capture/working-with-the-oracle-cdc-service.md)  
   
   

@@ -30,12 +30,12 @@ ms.assetid: 3f7adbf7-6e40-4396-a8ca-71cbb843b5c2
 author: VanMSFT
 ms.author: vanto
 monikerRange: '>=aps-pdw-2016||=azuresqldb-current||=azure-sqldw-latest||>=sql-server-2016||=sqlallproducts-allversions||>=sql-server-linux-2017||=azuresqldb-mi-current'
-ms.openlocfilehash: 0ae2f5840120a24cbb0a1c0426c70e36084bd407
-ms.sourcegitcommit: a5398f107599102af7c8cda815d8e5e9a367ce7e
+ms.openlocfilehash: ef45a3ade9123288b8d89a44dbfb18b8e626ed5d
+ms.sourcegitcommit: 22e97435c8b692f7612c4a6d3fe9e9baeaecbb94
 ms.translationtype: HT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 10/13/2020
-ms.locfileid: "92004808"
+ms.lasthandoff: 10/27/2020
+ms.locfileid: "92678939"
 ---
 # <a name="principals-database-engine"></a>보안 주체(데이터베이스 엔진)
 [!INCLUDE [SQL Server](../../../includes/applies-to-version/sql-asdb-asdbmi-asa-pdw.md)]
@@ -85,7 +85,7 @@ ms.locfileid: "92004808"
  이러한 사용자 계정은 Microsoft에 발급된 인증서에 기반하므로 관리자에 의해 변경될 수 있는 암호를 갖지 않습니다.
   
 ## <a name="the-guest-user"></a>guest 사용자  
- 각 데이터베이스에는 `guest`에서 변경되었습니다. `guest` 사용자에게 부여된 권한은 데이터베이스에 대한 액세스 권한이 있지만 데이터베이스에 사용자 계정이 없는 사용자가 상속합니다. `guest` 사용자는 삭제할 수 없지만 CONNECT 권한을 취소하여 해제할 수 있습니다. CONNECT 권한은 `master` 또는 `tempdb`가 아닌 임의의 데이터베이스 내에서 `REVOKE CONNECT FROM GUEST;`를 실행하여 취소할 수 있습니다.  
+ 각 데이터베이스에는 `guest`에서 변경되었습니다. `guest` 사용자에게 부여된 권한은 데이터베이스에 대한 액세스 권한이 있지만 데이터베이스에 사용자 계정이 없는 사용자가 상속합니다. `guest` 사용자를 삭제할 수는 없지만 CONNECT 권한을 철회하여 사용하지 않도록 설정할 수 있습니다. CONNECT 권한은 `master` 또는 `tempdb`가 아닌 임의의 데이터베이스 내에서 `REVOKE CONNECT FROM GUEST;`를 실행하여 취소할 수 있습니다.  
   
   
 ## <a name="related-tasks"></a>관련 작업  

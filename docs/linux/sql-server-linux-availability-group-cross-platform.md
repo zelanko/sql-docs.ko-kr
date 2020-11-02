@@ -10,12 +10,12 @@ ms.prod: sql
 ms.technology: linux
 ms.assetid: ''
 monikerRange: '>= sql-server-2017 || = sqlallproducts-allversions'
-ms.openlocfilehash: ac19c1c8e0dfc2e8a8cf4711400eb3c5cb29b5f2
-ms.sourcegitcommit: 610e3ebe21ac6575850a29641a32f275e71557e3
+ms.openlocfilehash: 3800029fb04f058f6f2a0f00ed3f859d1385782e
+ms.sourcegitcommit: 67befbf7435f256e766bbce6c1de57799e1db9ad
 ms.translationtype: HT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 10/07/2020
-ms.locfileid: "91784832"
+ms.lasthandoff: 10/24/2020
+ms.locfileid: "92523898"
 ---
 # <a name="configure-sql-server-always-on-availability-group-on-windows-and-linux-cross-platform"></a>Windows 및 Linux에서 SQL Server Always On 가용성 그룹 구성(플랫폼 간)
 
@@ -69,7 +69,7 @@ AG를 만드는 단계는 읽기 확장 워크로드를 위한 AG를 만드는 �
 
    다음 그림은 이 전체 단계를 보여 줍니다.
 
-   ![가용성 그룹 Linux 사용](./media/sql-server-linux-availability-group-cross-platform/2-sqlserver-linux-set-hadr.png)
+   ![명령이 표시된 Git Bash 창 스크린샷](./media/sql-server-linux-availability-group-cross-platform/2-sqlserver-linux-set-hadr.png)
 
 1. 두 서버에서 모두 hosts 파일을 구성하거나 서버 이름을 DNS에 등록합니다.
 
@@ -110,7 +110,7 @@ AG를 만드는 단계는 읽기 확장 워크로드를 위한 AG를 만드는 �
 
    다음 다이어그램에서는 인증서 및 키의 소유권과 그룹이 올바르게 설정되었습니다.
 
-   ![가용성 그룹 Linux 사용](./media/sql-server-linux-availability-group-cross-platform/3-cert-key-owner-group.png)
+   ![/var/opt/mssql/data 폴더의 .cer 및 .pvk가 표시된 Git Bash 창 스크린샷](./media/sql-server-linux-availability-group-cross-platform/3-cert-key-owner-group.png)
 
 
 1. 보조 복제본에서 데이터베이스 로그인 및 암호를 만든 다음, 마스터 키를 만듭니다.

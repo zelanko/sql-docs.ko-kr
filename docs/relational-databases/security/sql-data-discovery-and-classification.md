@@ -11,23 +11,23 @@ ms.topic: conceptual
 ms.date: 06/10/2020
 ms.author: datrigan
 author: DavidTrigano
-ms.openlocfilehash: 90c219cd2e1034df4cc714247ae8d983bf54ff01
-ms.sourcegitcommit: 4d370399f6f142e25075b3714e5c2ce056b1bfd0
+ms.openlocfilehash: ed1b0cb22d26895d5b01e59d36ede00f44ce4cd1
+ms.sourcegitcommit: fb8724fb99c46ecf3a6d7b02a743af9b590402f0
 ms.translationtype: HT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 10/09/2020
-ms.locfileid: "91867768"
+ms.lasthandoff: 10/23/2020
+ms.locfileid: "92439497"
 ---
 # <a name="sql-data-discovery-and-classification"></a>SQL 데이터 검색 및 분류
 [!INCLUDE [SQL Server](../../includes/applies-to-version/sqlserver.md)]
 
-데이터 검색 및 분류는 데이터베이스에서 중요한 데이터를 **검색**, **분류**, **레이블 지정** & **보고**하기 위해 [SSMS(SQL Server Management Studio)](../../ssms/download-sql-server-management-studio-ssms.md)에 기본 제공된 새로운 도구를 소개합니다.
+데이터 검색 및 분류는 데이터베이스에서 중요한 데이터를 **검색** , **분류** , **레이블 지정** & **보고** 하기 위해 [SSMS(SQL Server Management Studio)](../../ssms/download-sql-server-management-studio-ssms.md)에 기본 제공된 새로운 도구를 소개합니다.
 가장 중요한 데이터(비즈니스, 재무, 보건 등)를 검색하고 분류하면 조직 정보 보호 수준에서 중요한 역할을 담당할 수 있습니다. 다음에 대한 인프라를 제공할 수 있습니다.
 * 데이터 개인 정보 보호 표준을 충족하도록 지원합니다.
 * 매우 중요한 데이터가 포함된 데이터베이스/열에 대한 액세스를 제어하고 보안을 강화합니다.
 
 > [!NOTE]
-> 데이터 검색 및 분류는 **SQL Server 2012 이상에 지원되며, [SSMS 17.5](../../ssms/download-sql-server-management-studio-ssms.md) 이상에서 사용할 수 있습니다**. Azure SQL Database는 [Azure SQL Database 데이터 검색 및 분류](/azure/sql-database/sql-database-data-discovery-and-classification/)를 참조하세요.
+> 데이터 검색 및 분류는 **SQL Server 2012 이상에 지원되며, [SSMS 17.5](../../ssms/download-sql-server-management-studio-ssms.md) 이상에서 사용할 수 있습니다** . Azure SQL Database는 [Azure SQL Database 데이터 검색 및 분류](/azure/sql-database/sql-database-data-discovery-and-classification/)를 참조하세요.
 
 ## <a name="overview"></a><a id="subheading-1"></a>개요
 데이터 검색 및 분류는 고급 서비스의 집합을 소개하고 데이터베이스뿐만 아니라 데이터를 보호 대상으로 지정하는 새로운 SQL Information Protection 패러다임을 형성합니다.
@@ -49,47 +49,47 @@ ms.locfileid: "91867768"
 
 2. SSMS 개체 탐색기에서 분류하려는 데이터베이스를 마우스 오른쪽 단추로 클릭하고 **작업** > **데이터 검색 및 분류** > **데이터 분류...** 를 선택합니다.
 
-   ![탐색 창][0]
+   ![작업 > 데이터 검색 및 분류 > 데이터 분류...가 선택된 SSMS 개체 탐색기 스크린샷][0]
 
 3. 분류 엔진은 잠재적으로 중요한 데이터를 포함하는 열에서 데이터베이스를 검사하고 **권장된 열 분류** 목록을 제공합니다.
 
     * 권장된 열 분류 목록을 보려면 위쪽에서 권장 사항 알림 상자 또는 창의 아래쪽에서 권장 사항 패널을 클릭합니다.
 
-        ![탐색 창][2]
+        ![분류 권장 사항이 있는 열을 39개 찾았습니다. 열을 보려면 여기를 클릭하세요. 알림 스크린샷][2]
 
-        ![탐색 창][3]
+        ![분류 권장 사항이 있는 열 39개(보려면 클릭) 알림 스크린샷][3]
 
     * 권장 사항 목록을 검토합니다.
-        * 특정 열에 대한 권장 사항을 허용하려면 관련 행의 왼쪽 열에서 확인란을 선택합니다. 권장 사항 테이블 헤더에서 확인란을 선택하여 *모든 권장 사항*을 수락됨으로 표시할 수도 있습니다.
+        * 특정 열에 대한 권장 사항을 허용하려면 관련 행의 왼쪽 열에서 확인란을 선택합니다. 권장 사항 테이블 헤더에서 확인란을 선택하여 *모든 권장 사항* 을 수락됨으로 표시할 수도 있습니다.
 
         * 드롭다운 상자를 사용하여 권장되는 정보 형식 및 민감도 레이블을 변경할 수도 있습니다.        
 
-        ![탐색 창][4]
+        ![권장 사항 목록 스크린샷][4]
 
     * 선택한 권장 사항을 적용하려면 파란색 **선택한 권장 사항 허용** 단추를 클릭합니다.
 
-        ![탐색 창][5]
+        ![선택한 권장 사항 적용 단추 스크린샷][5]
 
-4. 대안으로 열을 **수동으로 분류**하거나 권장 사항 기반 분류로 지정할 수도 있습니다.
+4. 대안으로 열을 **수동으로 분류** 하거나 권장 사항 기반 분류로 지정할 수도 있습니다.
 
-    * 창의 위쪽 메뉴에서 **분류 추가**를 클릭합니다.
+    * 창의 위쪽 메뉴에서 **분류 추가** 를 클릭합니다.
 
-        ![탐색 창][6]
+        ![분류 추가 옵션이 설명선으로 표시된 최상위 메뉴 스크린샷][6]
 
     * 열려 있는 컨텍스트 창에서 분류하려는 스키마 > 테이블 > 열을 선택하고 정보 형식 및 민감도 레이블을 선택합니다. 컨텍스트 창의 아래쪽에 있는 파란색 **분류 추가** 단추를 클릭합니다.
 
-        ![탐색 창][7]
+        ![분류 추가 컨텍스트 창 스크린샷][7]
 
-5. 새 분류 메타데이터를 사용하여 분류를 완료하고 영구적으로 데이터베이스 열의 레이블(태그)을 지정하려면 창의 최상위 메뉴에서 **저장**을 클릭합니다.
+5. 새 분류 메타데이터를 사용하여 분류를 완료하고 영구적으로 데이터베이스 열의 레이블(태그)을 지정하려면 창의 최상위 메뉴에서 **저장** 을 클릭합니다.
 
-    ![탐색 창][8]
+    ![저장 옵션이 설명선으로 표시된 최상위 메뉴 스크린샷][8]
 
 
-6. 데이터베이스 분류 상태의 전체 요약을 사용하여 보고서를 생성하려면 창의 최상위 메뉴에서 **보고서 보기**를 클릭합니다. SSMS를 사용하여 보고서를 생성할 수도 있습니다. 보고서를 생성하려는 데이터베이스를 마우스 오른쪽 단추로 클릭하고 **작업** > **데이터 검색 및 분류** > **보고서 생성...** 을 선택합니다.
+6. 데이터베이스 분류 상태의 전체 요약을 사용하여 보고서를 생성하려면 창의 최상위 메뉴에서 **보고서 보기** 를 클릭합니다. SSMS를 사용하여 보고서를 생성할 수도 있습니다. 보고서를 생성하려는 데이터베이스를 마우스 오른쪽 단추로 클릭하고 **작업** > **데이터 검색 및 분류** > **보고서 생성...** 을 선택합니다.
 
-    ![탐색 창][9]
+    ![보고서 보기 옵션이 설명선으로 표시된 최상위 메뉴 스크린샷][9]
 
-    ![탐색 창][10]
+    ![SQL 데이터 분류 보고서 스크린샷][10]
 
 ## <a name="manage-information-protection-policy-with-ssms"></a><a id="subheading-3"></a>SSMS를 사용하여 정보 보호 정책 관리
 
@@ -97,19 +97,19 @@ ms.locfileid: "91867768"
 
 1. SSMS(SQL Server Management Studio)에서 SQL Server에 연결합니다.
 
-2. SSMS 개체 탐색기에서 데이터베이스 중 하나를 마우스 오른쪽 단추로 클릭하고 **작업** > **데이터 검색 및 분류**를 선택합니다.
+2. SSMS 개체 탐색기에서 데이터베이스 중 하나를 마우스 오른쪽 단추로 클릭하고 **작업** > **데이터 검색 및 분류** 를 선택합니다.
 
    다음 메뉴 옵션을 사용하여 정보 보호 정책을 관리할 수 있습니다.
 
-* **정보 보호 정책 파일 설정**: 선택한 JSON 파일에 정의된 정보 보호 정책을 사용합니다.
+* **정보 보호 정책 파일 설정** : 선택한 JSON 파일에 정의된 정보 보호 정책을 사용합니다.
 
-* **정보 보호 정책 내보내기**: 정보 보호 정책을 JSON 파일로 내보냅니다.
+* **정보 보호 정책 내보내기** : 정보 보호 정책을 JSON 파일로 내보냅니다.
 
-* **정보 보호 정책 다시 설정**: 정보 보호 정책을 기본 정보 보호 정책으로 다시 설정합니다.
+* **정보 보호 정책 다시 설정** : 정보 보호 정책을 기본 정보 보호 정책으로 다시 설정합니다.
 
 > [!IMPORTANT]
 > 정보 보호 정책 파일은 SQL Server에 저장되지 않습니다.
-> SSMS는 기본 정보 보호 정책을 사용합니다. 사용자 지정된 정보 보호 정책이 실패할 경우 SSMS는 기본 정책을 사용할 수 없습니다. 데이터 분류에 실패합니다. 문제를 해결하려면 **정보 보호 정책 다시 설정**을 클릭하여 기본 정책을 사용하고 데이터 분류를 다시 사용하도록 설정합니다.
+> SSMS는 기본 정보 보호 정책을 사용합니다. 사용자 지정된 정보 보호 정책이 실패할 경우 SSMS는 기본 정책을 사용할 수 없습니다. 데이터 분류에 실패합니다. 문제를 해결하려면 **정보 보호 정책 다시 설정** 을 클릭하여 기본 정책을 사용하고 데이터 분류를 다시 사용하도록 설정합니다.
 
 ## <a name="accessing-the-classification-metadata"></a><a id="subheading-4"></a>분류 메타데이터에 액세스
 
@@ -118,7 +118,7 @@ SQL Server 2019에서는 [`sys.sensitivity_classifications`](../system-catalog-v
 > [!NOTE]
 > 이 뷰를 사용하려면 **VIEW ANY SENSITIVITY CLASSIFICATION** 권한이 필요합니다. 자세한 내용은 [Metadata Visibility Configuration](./metadata-visibility-configuration.md?view=sql-server-ver15)을 참조하세요.
 
-SQL Server 2019 인스턴스에서는 `sys.sensitivity_classifications`를 쿼리하여 분류된 모든 열과 해당 분류를 검토합니다. 다음은 그 예입니다. 
+SQL Server 2019 인스턴스에서는 `sys.sensitivity_classifications`를 쿼리하여 분류된 모든 열과 해당 분류를 검토합니다. 예를 들면 다음과 같습니다. 
 
 ```sql
 SELECT 
@@ -190,8 +190,8 @@ FROM
 # <a name="t-sql"></a>[T-SQL](#tab/t-sql)
 T-SQL을 사용하여 열 분류를 추가/제거하고 전체 데이터베이스에 대한 모든 분류를 검색할 수 있습니다.
 
-- 하나 이상의 열 분류 추가/업데이트: [민감도 분류 추가](../../t-sql/statements/add-sensitivity-classification-transact-sql.md)
-- 하나 이상의 열에서 분류 제거: [민감도 분류 삭제](../../t-sql/statements/drop-sensitivity-classification-transact-sql.md)
+- 하나 이상의 열 분류 추가/업데이트: [ADD SENSITIVITY CLASSIFICATION](../../t-sql/statements/add-sensitivity-classification-transact-sql.md)
+- 하나 이상의 열에서 분류 제거: [DROP SENSITIVITY CLASSIFICATION](../../t-sql/statements/drop-sensitivity-classification-transact-sql.md)
 
 # <a name="powershell-cmdlet"></a>[PowerShell Cmdlet](#tab/sql-powelshell)
 PowerShell Cmdlet을 사용하여 열 분류를 추가/제거하고 모든 분류를 검색하며 전체 데이터베이스의 권장 사항을 가져올 수 있습니다.

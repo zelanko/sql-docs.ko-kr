@@ -28,12 +28,12 @@ ms.assetid: f938a666-fdd1-4233-b97f-719f27b1a0e6
 author: markingmyname
 ms.author: maghan
 monikerRange: '>=aps-pdw-2016||=azuresqldb-current||=azure-sqldw-latest||>=sql-server-2016||=sqlallproducts-allversions||>=sql-server-linux-2017||=azuresqldb-mi-current'
-ms.openlocfilehash: e00e040e74faf9e37b58a258dfe93a84388be767
-ms.sourcegitcommit: b93beb4f03aee2c1971909cb1d15f79cd479a35c
+ms.openlocfilehash: 14ff75ebf7d8498ed35d5e2a0e5ef55cec14831c
+ms.sourcegitcommit: 22e97435c8b692f7612c4a6d3fe9e9baeaecbb94
 ms.translationtype: HT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 09/29/2020
-ms.locfileid: "91497777"
+ms.lasthandoff: 10/27/2020
+ms.locfileid: "92679073"
 ---
 # <a name="set-arithabort-transact-sql"></a>SET ARITHABORT(Transact-SQL)
 [!INCLUDE [sql-asdb-asdbmi-asa-pdw](../../includes/applies-to-version/sql-asdb-asdbmi-asa-pdw.md)]
@@ -118,35 +118,35 @@ INSERT INTO t1
 VALUES (255, 1);  
 GO  
   
-PRINT '*** SET ARITHABORT ON';  
+PRINT '**_ SET ARITHABORT ON';  
 GO  
 -- SET ARITHABORT ON and testing.  
 SET ARITHABORT ON;  
 GO  
   
-PRINT '*** Testing divide by zero during SELECT';  
+PRINT '_*_ Testing divide by zero during SELECT';  
 GO  
 SELECT a / b AS ab   
 FROM t1;  
 GO  
   
-PRINT '*** Testing divide by zero during INSERT';  
+PRINT '_*_ Testing divide by zero during INSERT';  
 GO  
 INSERT INTO t2  
 SELECT a / b AS ab    
 FROM t1;  
 GO  
   
-PRINT '*** Testing tinyint overflow';  
+PRINT '_*_ Testing tinyint overflow';  
 GO  
 INSERT INTO t2  
 SELECT a + b AS ab   
 FROM t1;  
 GO  
   
-PRINT '*** Resulting data - should be no data';  
+PRINT '_*_ Resulting data - should be no data';  
 GO  
-SELECT *   
+SELECT _   
 FROM t2;  
 GO  
   
@@ -161,29 +161,29 @@ SET ARITHABORT OFF;
 GO  
   
 -- This works properly.  
-PRINT '*** Testing divide by zero during SELECT';  
+PRINT '**_ Testing divide by zero during SELECT';  
 GO  
 SELECT a / b AS ab    
 FROM t1;  
 GO  
   
 -- This works as if SET ARITHABORT was ON.  
-PRINT '*** Testing divide by zero during INSERT';  
+PRINT '_*_ Testing divide by zero during INSERT';  
 GO  
 INSERT INTO t2  
 SELECT a / b AS ab    
 FROM t1;  
 GO  
-PRINT '*** Testing tinyint overflow';  
+PRINT '_*_ Testing tinyint overflow';  
 GO  
 INSERT INTO t2  
 SELECT a + b AS ab   
 FROM t1;  
 GO  
   
-PRINT '*** Resulting data - should be 0 rows';  
+PRINT '_*_ Resulting data - should be 0 rows';  
 GO  
-SELECT *   
+SELECT _   
 FROM t2;  
 GO  
   

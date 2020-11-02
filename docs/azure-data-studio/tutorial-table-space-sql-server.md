@@ -9,12 +9,12 @@ ms.author: maghan
 ms.reviewer: alayu, maghan, sstein
 ms.custom: seodec18; seo-lt-2019
 ms.date: 09/10/2019
-ms.openlocfilehash: 276cb3535e3ee0623816aa329446e81b2feaf12e
-ms.sourcegitcommit: dc8a30a4a27e15fc6671ca2674da9b7c637ec255
+ms.openlocfilehash: d0dd2b33c5f37b58e1442c4ba4cef2a4f38f293c
+ms.sourcegitcommit: fb8724fb99c46ecf3a6d7b02a743af9b590402f0
 ms.translationtype: HT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 08/21/2020
-ms.locfileid: "88745623"
+ms.lasthandoff: 10/23/2020
+ms.locfileid: "92439277"
 ---
 # <a name="tutorial-enable-the-table-space-usage-sample-insight-widget-using-azure-data-studio"></a>자습서: Azure Data Studio를 사용하여 테이블 공간 사용량 샘플 인사이트 위젯 사용
 
@@ -27,7 +27,7 @@ ms.locfileid: "88745623"
 
 ## <a name="prerequisites"></a>필수 구성 요소
 
-이 자습서를 완료하려면 SQL Server 또는 Azure SQL Database *TutorialDB*가 필요합니다. *TutorialDB* 데이터베이스를 만들려면 다음 빠른 시작 중 하나를 완료합니다.
+이 자습서를 완료하려면 SQL Server 또는 Azure SQL Database *TutorialDB* 가 필요합니다. *TutorialDB* 데이터베이스를 만들려면 다음 빠른 시작 중 하나를 완료합니다.
 
 * [[!INCLUDE[name-sos-short](../includes/name-sos-short.md)]를 사용하여 SQL Server 연결 및 쿼리](quickstart-sql-server.md)
 * [[!INCLUDE[name-sos-short](../includes/name-sos-short.md)]를 사용하여 Azure SQL Database 연결 및 쿼리](quickstart-sql-database.md)
@@ -36,17 +36,17 @@ ms.locfileid: "88745623"
 
 Azure Data Studio에는 데이터베이스 테이블에서 사용되는 공간을 모니터링하는 기본 제공 샘플 위젯이 있습니다.
 
-1. **Ctrl+Shift+P**를 눌러 ‘명령 팔레트’를 열고 ‘사용자 설정’을 엽니다. 
+1. **Ctrl+Shift+P** 를 눌러 ‘명령 팔레트’를 열고 ‘사용자 설정’을 엽니다. 
 
-2. 검색 상자에 ‘설정’을 입력하고 **기본 설정: 사용자 설정 열기**를 선택합니다.
+2. 검색 상자에 ‘설정’을 입력하고 **기본 설정: 사용자 설정 열기** 를 선택합니다.
 
-3. 설정 검색 입력 상자에 ‘대시보드’를 입력하고 **dashboard.database.widgets**를 찾습니다.
+3. 설정 검색 입력 상자에 ‘대시보드’를 입력하고 **dashboard.database.widgets** 를 찾습니다.
 
 4. **dashboard.database.widgets** 설정을 사용자 지정하려면 **사용자 설정** 섹션에서 **dashboard.database.widgets** 항목을 편집해야 합니다.
 
-   ![설정 검색](media/tutorial-table-space-sql-server/search-settings.png)
+   ![대시보드 > 데이터베이스 위젯 섹션이 설명선으로 표시된 사용자 설정 섹션 스크린샷](media/tutorial-table-space-sql-server/search-settings.png)
 
-   **사용자 설정** 섹션에 **dashboard.database.widgets**가 없으면 기본 설정 열의 **dashboard.database.widgets** 텍스트를 마우스로 가리킨 다음, 텍스트 왼쪽에 나타나는 *톱니* 아이콘을 클릭하고 **JSON 설정으로 복사**를 클릭합니다. 팝업에 **설정에서 바꾸기**가 표시되면 클릭하지 않습니다. 오른쪽의 **사용자 설정** 열로 이동하여 **dashboard.database.widgets** 섹션을 찾고 다음 단계를 진행합니다.
+   **사용자 설정** 섹션에 **dashboard.database.widgets** 가 없으면 기본 설정 열의 **dashboard.database.widgets** 텍스트를 마우스로 가리킨 다음, 텍스트 왼쪽에 나타나는 *톱니* 아이콘을 클릭하고 **JSON 설정으로 복사** 를 클릭합니다. 팝업에 **설정에서 바꾸기** 가 표시되면 클릭하지 않습니다. 오른쪽의 **사용자 설정** 열로 이동하여 **dashboard.database.widgets** 섹션을 찾고 다음 단계를 진행합니다.
 
 5. **dashboard.database.widgets** 섹션에서 다음 줄을 추가합니다.
 
@@ -65,11 +65,11 @@ Azure Data Studio에는 데이터베이스 테이블에서 사용되는 공간�
 
    **dashboard.database.widgets** 섹션이 다음 그림과 같이 표시됩니다.
 
-    ![설정 검색](./media/tutorial-table-space-sql-server/insight-table-space.png)
+    ![dashboard.database.widgets 배열의 첫 번째 개체가 표시된 settings.json 파일 스크린샷](./media/tutorial-table-space-sql-server/insight-table-space.png)
 
-6. **Ctrl+S**를 눌러 설정을 저장합니다.
+6. **Ctrl+S** 를 눌러 설정을 저장합니다.
 
-7. **TutorialDB**를 마우스 오른쪽 단추로 클릭하고 **관리**를 클릭하여 데이터베이스 대시보드를 엽니다.
+7. **TutorialDB** 를 마우스 오른쪽 단추로 클릭하고 **관리** 를 클릭하여 데이터베이스 대시보드를 엽니다.
 
 8. 다음 그림과 같이 ‘테이블 공간’ 인사이트 위젯을 봅니다.
 

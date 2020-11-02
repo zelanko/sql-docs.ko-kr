@@ -12,12 +12,12 @@ ms.assetid: 7a458b9c-3423-4e24-823d-99573544c877
 author: markingmyname
 ms.author: maghan
 monikerRange: =azuresqldb-current||>=sql-server-2016||=sqlallproducts-allversions||>=sql-server-linux-2017||=azuresqldb-mi-current
-ms.openlocfilehash: dcaae9b53ace5a79e3e1e2c5ccc3e0dc2449306c
-ms.sourcegitcommit: dd36d1cbe32cd5a65c6638e8f252b0bd8145e165
+ms.openlocfilehash: 08a3bbf542911c31681f72c74ed783cf6ae79d99
+ms.sourcegitcommit: fb8724fb99c46ecf3a6d7b02a743af9b590402f0
 ms.translationtype: HT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 09/08/2020
-ms.locfileid: "89545204"
+ms.lasthandoff: 10/23/2020
+ms.locfileid: "92439529"
 ---
 # <a name="monitor-and-troubleshoot-memory-usage"></a>메모리 사용량 모니터링 및 문제 해결
 [!INCLUDE [SQL Server Azure SQL Database](../../includes/applies-to-version/sql-asdb.md)]
@@ -46,7 +46,7 @@ ms.locfileid: "89545204"
   
 1.  [!INCLUDE[ssManStudioFull](../../includes/ssmanstudiofull-md.md)]를 시작합니다.  
   
-2.  **새 쿼리**를 클릭합니다.  
+2.  **새 쿼리** 를 클릭합니다.  
   
 3.  새 쿼리 창에 이 코드를 붙여 넣고 각 섹션을 실행합니다.  
 
@@ -138,13 +138,13 @@ ms.locfileid: "89545204"
   
 2.  개체 탐색기에서 보고하려는 데이터베이스를 마우스 오른쪽 단추로 클릭합니다.  
   
-3.  상황에 맞는 메뉴에서 **보고서** -> **Standard 보고서** -> **메모리 액세스에 최적화된 개체의 메모리 사용량**을 선택합니다.  
+3.  상황에 맞는 메뉴에서 **보고서** -> **Standard 보고서** -> **메모리 액세스에 최적화된 개체의 메모리 사용량** 을 선택합니다.  
   
- ![HK_MM_SSMS](../../relational-databases/in-memory-oltp/media/hk-mm-ssms-stdrpt-memuse.gif "HK_MM_SSMS")  
+ ![보고서 > 표준 보고서 > 메모리 최적화 개체별 메모리 사용량이 선택된 개체 탐색기 스크린샷](../../relational-databases/in-memory-oltp/media/hk-mm-ssms-stdrpt-memuse.gif "HK_MM_SSMS")  
   
  이 보고서는 위에서 만든 데이터베이스의 메모리 사용을 보여 줍니다.  
   
- ![HK_MM_SSMS](../../relational-databases/in-memory-oltp/media/hk-mm-ssms-stdrpt-memuserpt.gif "HK_MM_SSMS")  
+ ![메모리 최적화 개체별 총 메모리 사용량 보고서 스크린샷](../../relational-databases/in-memory-oltp/media/hk-mm-ssms-stdrpt-memuserpt.gif "HK_MM_SSMS")  
   
 ###  <a name="using-dmvs"></a><a name="bkmk_UsingDMVs"></a> DMVs 사용  
  메모리 최적화 테이블, 인덱스, 시스템 개체 및 런타임 구조에서 사용하는 메모리를 모니터링하는 데 사용할 수 있는 다양한 DMV가 있습니다.  

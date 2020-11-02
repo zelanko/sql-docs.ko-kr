@@ -15,12 +15,12 @@ author: MashaMSFT
 ms.author: mathoma
 monikerRange: '>=aps-pdw-2016||=azuresqldb-current||=azure-sqldw-latest||>=sql-server-2016||=sqlallproducts-allversions||>=sql-server-linux-2017||=azuresqldb-mi-current'
 ms.custom: seo-lt-2019
-ms.openlocfilehash: dcad505d75528f17c65263f3b3a68defdcb6fb30
-ms.sourcegitcommit: a5398f107599102af7c8cda815d8e5e9a367ce7e
+ms.openlocfilehash: b893b6dc0c3ad11225d1144f757f206fcf5500d5
+ms.sourcegitcommit: 22e97435c8b692f7612c4a6d3fe9e9baeaecbb94
 ms.translationtype: HT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 10/13/2020
-ms.locfileid: "92005582"
+ms.lasthandoff: 10/27/2020
+ms.locfileid: "92678971"
 ---
 # <a name="use-a-format-file-to-bulk-import-data-sql-server"></a>서식 파일을 사용하여 데이터 대량 가져오기(SQL Server)
 [!INCLUDE[SQL Server Azure SQL Database Synapse Analytics PDW ](../../includes/applies-to-version/sql-asdb-asdbmi-asa-pdw.md)]
@@ -30,9 +30,9 @@ ms.locfileid: "92005582"
 ## <a name="before-you-begin"></a>시작하기 전에
 * 유니코드 문자 데이터 파일에 서식 파일을 사용하려면 모든 입력 필드가 유니코드 텍스트 문자열(즉, 고정 크기 또는 문자 종료 유니코드 문자열)이어야 합니다.
 * [SQLXML](../../relational-databases/import-export/examples-of-bulk-import-and-export-of-xml-documents-sql-server.md) 데이터를 대량으로 내보내거나 가져오려면 서식 파일에서 다음 데이터 형식 중 하나를 사용합니다.
-  * SQLCHAR 또는 SQLVARYCHAR(데이터를 클라이언트 코드 페이지나 데이터 정렬에 포함된 코드 페이지로 보냅니다.)
+  * SQLCHAR 또는 SQLVARCHAR(데이터를 클라이언트 코드 페이지나 데이터 정렬에 포함된 코드 페이지로 보냅니다.)
   * SQLNCHAR 또는 SQLNVARCHAR(데이터를 유니코드로 보냅니다.)
-  * SQLBINARY 또는 SQLVARYBIN(데이터를 변환하지 않고 보냅니다.)
+  * SQLBINARY 또는 SQLVARBIN(데이터를 변환하지 않고 보냅니다.)
 * Azure SQL Database 및 Azure Synapse Analytics는 [bcp](../../tools/bcp-utility.md)만 지원합니다.  자세한 내용은 다음을 참조하세요.
   * [Azure Synapse Analytics에 데이터 로드](/azure/synapse-analytics/sql-data-warehouse/design-elt-data-loading)
   * [SQL Server에서 Azure Synapse Analytics로 데이터 로드(플랫 파일)](/azure/synapse-analytics/sql-data-warehouse/design-elt-data-loading)
@@ -142,8 +142,8 @@ XML 서식 파일 `D:\BCP\myFirstImport.xml` 은 다음과 같이 표시됩니�
  </RECORD>
  <ROW>
   <COLUMN SOURCE="1" NAME="PersonID" xsi:type="SQLSMALLINT"/>
-  <COLUMN SOURCE="2" NAME="FirstName" xsi:type="SQLVARYCHAR"/>
-  <COLUMN SOURCE="3" NAME="LastName" xsi:type="SQLVARYCHAR"/>
+  <COLUMN SOURCE="2" NAME="FirstName" xsi:type="SQLVARCHAR"/>
+  <COLUMN SOURCE="3" NAME="LastName" xsi:type="SQLVARCHAR"/>
   <COLUMN SOURCE="4" NAME="BirthDate" xsi:type="SQLDATE"/>
  </ROW>
 </BCPFORMAT>

@@ -8,12 +8,12 @@ ms.topic: conceptual
 ms.prod: sql
 ms.technology: linux
 ms.assetid: 1d93d95e-9c89-4274-9b3f-fa2608ec2792
-ms.openlocfilehash: e7cc33b3f01ae9562f1d9fb1a84830df7a807c9b
-ms.sourcegitcommit: 22102f25db5ccca39aebf96bc861c92f2367c77a
+ms.openlocfilehash: 61790d066d6cdf0d3e2a520cca740823b78fc6dc
+ms.sourcegitcommit: 67befbf7435f256e766bbce6c1de57799e1db9ad
 ms.translationtype: HT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 10/16/2020
-ms.locfileid: "92115836"
+ms.lasthandoff: 10/24/2020
+ms.locfileid: "92524048"
 ---
 # <a name="create-and-run-sql-server-agent-jobs-on-linux"></a>Linux에서 SQL Server 에이전트 작업 만들기 및 실행
 
@@ -60,11 +60,11 @@ Linux에서 SQL Server 에이전트를 사용하려면 먼저 SQL Server가 설�
 
 ## <a name="create-a-sample-database"></a>예제 데이터베이스 만들기
 
-다음 단계를 사용하여 **SampleDB**라는 샘플 데이터베이스를 만듭니다. 이 데이터베이스는 일별 백업 작업에 사용됩니다.
+다음 단계를 사용하여 **SampleDB** 라는 샘플 데이터베이스를 만듭니다. 이 데이터베이스는 일별 백업 작업에 사용됩니다.
 
 1. Linux 머신에서 bash 터미널 세션을 엽니다.
 
-1. **sqlcmd**를 사용하여 Transact-SQL **CREATE DATABASE** 명령을 실행합니다.
+1. **sqlcmd** 를 사용하여 Transact-SQL **CREATE DATABASE** 명령을 실행합니다.
 
    ```bash
    /opt/mssql-tools/bin/sqlcmd -S localhost -U SA -Q 'CREATE DATABASE SampleDB'
@@ -78,7 +78,7 @@ Linux에서 SQL Server 에이전트를 사용하려면 먼저 SQL Server가 설�
 
 ## <a name="create-a-job-with-transact-sql"></a>Transact-SQL을 사용하여 작업 만들기
 
-다음 단계에서는 Transact-SQL 명령을 사용하여 Linux에서 SQL Server 에이전트 작업을 만듭니다. 이 작업은 샘플 데이터베이스 **SampleDB**의 일별 백업을 실행합니다.
+다음 단계에서는 Transact-SQL 명령을 사용하여 Linux에서 SQL Server 에이전트 작업을 만듭니다. 이 작업은 샘플 데이터베이스 **SampleDB** 의 일별 백업을 실행합니다.
 
 > [!TIP]
 > 모든 T-SQL 클라이언트를 사용하여 이 명령을 실행할 수 있습니다. 예를 들어 Linux에서 [sqlcmd](sql-server-linux-setup-tools.md) 또는 [Visual Studio Code](../tools/visual-studio-code/sql-server-develop-use-vscode.md)를 사용할 수 있습니다. 원격 Windows Server에서는 SSMS(SQL Server Management Studio)에서 쿼리를 실행하거나 다음 섹션에 설명된 대로 작업 관리에 UI 인터페이스를 사용할 수도 있습니다.
@@ -155,7 +155,7 @@ Windows에서 SSMS(SQL Server Management Studio)를 사용하여 작업을 원�
 
 1. Windows에서 SSMS를 시작하고 Linux SQL Server 인스턴스에 연결합니다. 자세한 내용은 [SSMS를 사용하여 SQL Server on Linux 관리](sql-server-linux-manage-ssms.md)를 참조하세요.
 
-1. **SampleDB**라는 샘플 데이터베이스를 만들었는지 확인합니다.
+1. **SampleDB** 라는 샘플 데이터베이스를 만들었는지 확인합니다.
 
    <img src="./media/sql-server-linux-run-sql-server-agent-job/ssms-agent-0.png" alt="Create a SampleDB database" style="width: 550px;"/>
 
@@ -179,9 +179,9 @@ Windows에서 SSMS(SQL Server Management Studio)를 사용하여 작업을 원�
 
 1. 새 작업 일정을 만듭니다.
 
-   ![작업 일정](./media/sql-server-linux-run-sql-server-agent-job/ssms-agent-6.png)
+   ![일정 옵션이 강조 표시되고 새 옵션이 설명선으로 표시된 새 작업 대화 상자 스크린샷](./media/sql-server-linux-run-sql-server-agent-job/ssms-agent-6.png)
 
-   ![작업 일정](./media/sql-server-linux-run-sql-server-agent-job/ssms-agent-8.png)
+   ![확인 옵션이 설명선으로 표시된 새 작업 대화 상자 스크린샷](./media/sql-server-linux-run-sql-server-agent-job/ssms-agent-8.png)
 
 1. 작업을 시작합니다.
 

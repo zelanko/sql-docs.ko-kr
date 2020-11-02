@@ -9,12 +9,12 @@ ms.custom: ''
 ms.technology: integration-services
 author: chugugrace
 ms.author: chugu
-ms.openlocfilehash: 1cc68be44a45ece8ad844585162b0cff651ae487
-ms.sourcegitcommit: cfa04a73b26312bf18d8f6296891679166e2754d
+ms.openlocfilehash: 597792aa200edf6dcb9cfe49c95ab5e1befa0c55
+ms.sourcegitcommit: 5f3e0eca9840db20038f0362e5d88a84ff3424af
 ms.translationtype: HT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 10/19/2020
-ms.locfileid: "92194086"
+ms.lasthandoff: 10/21/2020
+ms.locfileid: "92343655"
 ---
 # <a name="sql-server-integration-services-ssis-devops-tools-azure-devops-extension"></a>SSIS(SQL Server Integration Services) DevOps 도구 Azure DevOps 확장
 
@@ -22,7 +22,7 @@ ms.locfileid: "92194086"
 
 **Azure DevOps** 조직이 없는 경우 먼저 [Azure Pipelines](/azure/devops/pipelines/get-started/pipelines-sign-up?view=azure-devops)에 등록한 다음, [단계](/azure/devops/marketplace/overview?tabs=browser&view=azure-devops#add-an-extension)에 따라 **SSIS DevOps 도구** 확장을 추가합니다.
 
-**Ssis DevOps 도구**에는 **SSIS 빌드** 작업, **SSIS 배포** 릴리스 작업 및 **SSIS 카탈로그 구성 작업**이 포함되어 있습니다.
+**Ssis DevOps 도구** 에는 **SSIS 빌드** 작업, **SSIS 배포** 릴리스 작업 및 **SSIS 카탈로그 구성 작업** 이 포함되어 있습니다.
 
 - **[SSIS 빌드](#ssis-build-task)** 작업은 프로젝트 배포 모델 또는 패키지 배포 모델의 dtproj 파일 빌드를 지원합니다.
 
@@ -50,7 +50,7 @@ ms.locfileid: "92194086"
 
 빌드할 프로젝트 폴더 또는 파일의 경로입니다. 폴더 경로를 지정하면 SSIS 빌드 작업은 이 폴더 아래에 있는 모든 dtproj 파일을 재귀적으로 검색하고 모두 빌드합니다.
 
-프로젝트 경로는 *비워 둘 수 없으며*, **.** 으로 설정해야 리포지토리의 루트 폴더에서 빌드할 수 있습니다.
+프로젝트 경로는 *비워 둘 수 없으며* , **.** 으로 설정해야 리포지토리의 루트 폴더에서 빌드할 수 있습니다.
 
 #### <a name="project-configuration"></a>프로젝트 구성
 
@@ -62,7 +62,7 @@ ms.locfileid: "92194086"
 
 ### <a name="limitations-and-known-issues"></a>제한 사항 및 알려진 문제
 
-- SSIS 빌드 작업은 빌드 에이전트의 필수 요소인 Visual Studio 및 SSIS 디자이너를 사용합니다. 따라서 파이프라인에서 SSIS 빌드 작업을 실행하려면 Microsoft 호스팅 에이전트를 위해 **vs2017-win2016**을 선택하거나, 자체 호스팅 에이전트에 Visual Studio 및 SSIS 디자이너(VS2017 + SSDT2017 또는 VS2019 + SSIS 프로젝트 확장)를 설치해야 합니다.
+- SSIS 빌드 작업은 빌드 에이전트의 필수 요소인 Visual Studio 및 SSIS 디자이너를 사용합니다. 따라서 파이프라인에서 SSIS 빌드 작업을 실행하려면 Microsoft 호스팅 에이전트를 위해 **vs2017-win2016** 을 선택하거나, 자체 호스팅 에이전트에 Visual Studio 및 SSIS 디자이너(VS2017 + SSDT2017 또는 VS2019 + SSIS 프로젝트 확장)를 설치해야 합니다.
 
 - OOB 구성 요소(SSIS Azure 기능 팩 및 기타 타사 구성 요소 포함)를 사용하여 SSIS 프로젝트를 빌드하려면 파이프라인 에이전트가 실행되는 머신에 OOB 구성 요소를 설치해야 합니다.  Microsoft 호스팅 에이전트의 경우 사용자가 [PowerShell 스크립트 작업](/azure/devops/pipelines/tasks/utility/powershell?view=azure-devops) 또는 [명령줄 스크립트 작업](/azure/devops/pipelines/tasks/utility/command-line?view=azure-devops)을 추가하여 SSIS 빌드 작업이 실행되기 전에 구성 요소를 다운로드하고 설치할 수 있습니다. 다음은 Azure 기능 팩을 설치하는 샘플 PowerShell 스크립트입니다. 
 
@@ -74,7 +74,7 @@ start -Wait -FilePath msiexec -Args "/i AFP.msi /quiet /l* log.txt"
 cat log.txt
 ```
 
-- 보호 수준 **EncryptSensitiveWithPassword** 및 **EncryptAllWithPassword**는 SSIS 빌드 작업에서 지원되지 않습니다. 코드베이스의 모든 SSIS 프로젝트에서 이러한 두 보호 수준을 사용하지 않는지 확인하세요. 사용하면 SSIS 빌드 작업이 실행 중에 응답하지 않고 시간 초과됩니다.
+- 보호 수준 **EncryptSensitiveWithPassword** 및 **EncryptAllWithPassword** 는 SSIS 빌드 작업에서 지원되지 않습니다. 코드베이스의 모든 SSIS 프로젝트에서 이러한 두 보호 수준을 사용하지 않는지 확인하세요. 사용하면 SSIS 빌드 작업이 실행 중에 응답하지 않고 시간 초과됩니다.
 
 ## <a name="ssis-deploy-task"></a>SSIS 배포 작업
 
@@ -91,7 +91,7 @@ cat log.txt
 대상 유형입니다. 현재 SSIS 배포 작업은 다음 두 가지 유형을 지원합니다.
 
 - ‘파일 시스템’: SSISDeploymentManifest 파일 및 관련 파일을 지정된 파일 시스템에 배포합니다. 온-프레미스와 Azure 파일 공유가 모두 지원됩니다.
-- *SSISDB*: 온-프레미스 SQL Server 또는 Azure-SSIS Integration Runtime에 호스트될 수 있는 지정된 SSIS 카탈로그에 ISPAC 파일을 배포합니다.
+- *SSISDB* : 온-프레미스 SQL Server 또는 Azure-SSIS Integration Runtime에 호스트될 수 있는 지정된 SSIS 카탈로그에 ISPAC 파일을 배포합니다.
 
 #### <a name="destination-server"></a>대상 서버
 
@@ -297,7 +297,7 @@ SSIS 카탈로그 구성의 인라인 JSON입니다. 이 속성은 구성 파일
 |속성  |설명  |참고  |
 |---------|---------|---------|
 |name  |카탈로그 폴더의 이름입니다.|폴더가 존재하지 않는 경우 생성됩니다.|
-|description|카탈로그 폴더에 대한 설명입니다.|*null*의 값은 건너뜁니다.|
+|description|카탈로그 폴더에 대한 설명입니다.|*null* 의 값은 건너뜁니다.|
 |projects|프로젝트 개체의 배열입니다. 각 개체에는 하나의 프로젝트에 대한 구성 정보가 포함되어 있습니다.|프로젝트 개체의 스키마는 ‘프로젝트 특성’을 참조하세요.|
 |environments|환경 개체의 배열입니다. 각 개체에는 하나의 환경에 대한 구성 정보가 포함되어 있습니다.|환경 개체의 스키마는 ‘환경 특성’을 참조하세요.|
 
@@ -314,9 +314,9 @@ SSIS 카탈로그 구성의 인라인 JSON입니다. 이 속성은 구성 파일
 |속성  |설명  |참고  |
 |---------|---------|---------|
 |name|매개 변수의 이름입니다.|<li>매개 변수는 ‘프로젝트 매개 변수’ 또는 ‘패키지 매개 변수’일 수 있습니다. <li>매개 변수가 없으면 건너뜁니다. <li>매개 변수가 연결 관리자 속성이면 이름은 **CM.\<Connection Manager Name>.\<Property Name>** 형식이어야 합니다. |
-|container|매개 변수의 컨테이너입니다.|<li>매개 변수가 프로젝트 매개 변수이면 *container*는 프로젝트 이름이어야 합니다. <li>매개 변수가 패키지 매개 변수이면 *container*는 **.dtsx** 확장자를 갖는 패키지 이름이어야 합니다.|
-|값|매개 변수의 값입니다.|<li>*valueType*이 *referenced*인 경우: 값은 ‘문자열’ 형식의 환경 변수에 대한 참조입니다. <li> *valueType*이 *literal*인 경우: 이 특성은 임의의 유효한 ‘부울’, ‘숫자’ 및 ‘문자열’ JSON 값을 지원합니다. <li> 값은 대상 매개 변수 형식으로 변환됩니다. 변환할 수 없는 경우 오류가 발생합니다.<li> *null* 값은 유효하지 않습니다. 작업은 이 매개 변수 개체를 건너뛰고 경고를 표시합니다.|
-|valueType|매개 변수 값의 유형입니다.|유효한 유형은 다음과 같습니다. <br> *literal*: *value* 특성이 리터럴 값을 나타냅니다. <br> *referenced*: *value* 특성이 환경 변수에 대한 참조를 나타냅니다.|
+|container|매개 변수의 컨테이너입니다.|<li>매개 변수가 프로젝트 매개 변수이면 *container* 는 프로젝트 이름이어야 합니다. <li>매개 변수가 패키지 매개 변수이면 *container* 는 **.dtsx** 확장자를 갖는 패키지 이름이어야 합니다.|
+|값|매개 변수의 값입니다.|<li>*valueType* 이 *referenced* 인 경우: 값은 ‘문자열’ 형식의 환경 변수에 대한 참조입니다. <li> *valueType* 이 *literal* 인 경우: 이 특성은 임의의 유효한 ‘부울’, ‘숫자’ 및 ‘문자열’ JSON 값을 지원합니다. <li> 값은 대상 매개 변수 형식으로 변환됩니다. 변환할 수 없는 경우 오류가 발생합니다.<li> *null* 값은 유효하지 않습니다. 작업은 이 매개 변수 개체를 건너뛰고 경고를 표시합니다.|
+|valueType|매개 변수 값의 유형입니다.|유효한 유형은 다음과 같습니다. <br> *literal* : *value* 특성이 리터럴 값을 나타냅니다. <br> *referenced* : *value* 특성이 환경 변수에 대한 참조를 나타냅니다.|
 
 ##### <a name="reference-attributes"></a>참조 특성
 
@@ -330,7 +330,7 @@ SSIS 카탈로그 구성의 인라인 JSON입니다. 이 속성은 구성 파일
 |속성  |설명  |참고  |
 |---------|---------|---------|
 |name|환경의 이름입니다.|환경이 존재하지 않는 경우 생성됩니다.|
-|description|환경에 대한 설명입니다.|*null*의 값은 건너뜁니다.|
+|description|환경에 대한 설명입니다.|*null* 의 값은 건너뜁니다.|
 |variables|변수 개체의 배열입니다.|각 개체에는 하나의 환경 변수에 대한 구성 정보가 포함되어 있습니다. 변수 개체의 스키마는 ‘변수 특성’을 참조하세요.|
 
 ##### <a name="variable-attributes"></a>변수 특성
@@ -339,11 +339,17 @@ SSIS 카탈로그 구성의 인라인 JSON입니다. 이 속성은 구성 파일
 |---------|---------|---------|
 |name|환경 변수의 이름입니다.|환경 변수가 존재하지 않는 경우 생성됩니다.|
 |type|환경 변수의 데이터 형식입니다.|유효한 유형은 다음과 같습니다. <br> *boolean* <br> *바이트* <br> *datetime* <br> decimal <br> *double* <br> *int16* <br> *int32* <br> *int64* <br> *sbyte* <br> *single* <br> *string* <br> *uint32* <br> *uint64*|
-|description|환경 변수에 대한 설명입니다.|*null*의 값은 건너뜁니다.|
+|description|환경 변수에 대한 설명입니다.|*null* 의 값은 건너뜁니다.|
 |값|환경 변수의 값입니다.|이 특성은 임의의 유효한 부울, 숫자 및 문자열 JSON 값을 지원합니다.<br> 값은 **type** 특성으로 지정된 형식으로 변환됩니다. 변환에 실패하면 오류가 발생합니다.<br>*null* 값은 유효하지 않습니다. 작업은 이 환경 변수 개체를 건너뛰고 경고를 표시합니다.|
 |sensitive|환경 변수의 값이 민감한지 여부입니다.|잘못된 입력: <br> *true* <br> *false*|
 
 ## <a name="release-notes"></a>릴리스 정보
+
+### <a name="version-103"></a>버전 1.0.3
+
+릴리스 날짜: 2020년 10월 21일
+
+- SSIS 배포 작업 및 SSIS 카탈로그 구성 작업에 연결 문자열 접미사를 지정할 수 있도록 허용합니다.
 
 ### <a name="version-102"></a>버전 1.0.2
 
