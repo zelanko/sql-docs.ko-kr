@@ -21,17 +21,17 @@ ms.assetid: 6ff79bbf-4acf-4f75-926f-38637ca8a943
 author: markingmyname
 ms.author: maghan
 monikerRange: '>=aps-pdw-2016||>=sql-server-2016||=sqlallproducts-allversions||>=sql-server-linux-2017||=azuresqldb-mi-current'
-ms.openlocfilehash: 783452973a10a8f692b7fe3a3406665a2ed0eb86
-ms.sourcegitcommit: dd36d1cbe32cd5a65c6638e8f252b0bd8145e165
+ms.openlocfilehash: e9f566216c0dfd9f30a35c9472db433ad71e2f3c
+ms.sourcegitcommit: f888ac94c7b5f6b6f138ab75719dadca04e8284a
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 09/08/2020
-ms.locfileid: "89544688"
+ms.lasthandoff: 11/03/2020
+ms.locfileid: "93294394"
 ---
 # <a name="backupset-transact-sql"></a>backupset(Transact-SQL)
 [!INCLUDE [sql-asdbmi-pdw](../../includes/applies-to-version/sql-asdbmi-pdw.md)]
 
-  각 백업 세트마다 하나의 행을 포함합니다. *백업 세트*에는 하나의 성공한 백업 작업의 백업이 포함됩니다. RESTORE, RESTORE FILELISTONLY, RESTORE HEADERONLY 및 RESTORE VERIFYONLY 문은 지정한 백업 디바이스의 미디어 세트 내에 있는 단일 백업 세트에서 작동합니다.  
+  각 백업 세트마다 하나의 행을 포함합니다. *백업 세트* 에는 하나의 성공한 백업 작업의 백업이 포함됩니다. RESTORE, RESTORE FILELISTONLY, RESTORE HEADERONLY 및 RESTORE VERIFYONLY 문은 지정한 백업 디바이스의 미디어 세트 내에 있는 단일 백업 세트에서 작동합니다.  
   
  이 테이블은 **msdb** 데이터베이스에 저장 됩니다.  
 
@@ -56,7 +56,7 @@ ms.locfileid: "89544688"
 |**software_major_version**|**tinyint**|[!INCLUDE[msCoName](../../includes/msconame-md.md)][!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]주 버전 번호입니다. NULL일 수 있습니다.|  
 |**software_minor_version**|**tinyint**|[!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 부 버전 번호입니다. NULL일 수 있습니다.|  
 |**software_build_version**|**smallint**|[!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 빌드 번호입니다. NULL일 수 있습니다.|  
-|**time_zone**|**smallint**|15분 간격으로 백업 작업이 수행되는 현지 시간과 UCT 간의 차이입니다. 값은 -48에서 +48까지 사용할 수 있으며 각 값을 포함합니다. 값 127은 알 수 없음을 의미합니다. 예를 들어 -20은 EST(동부 표준시) 또는 UTC 이후 5시간을 의미합니다. NULL일 수 있습니다.|  
+|**time_zone**|**smallint**|백업 작업이 시작 될 때 15 분 간격으로 수행 되는 현지 시간 (백업 작업이 발생 하는 위치)과 UTC (협정 세계시)의 차이입니다. 값은 -48에서 +48까지 사용할 수 있으며 각 값을 포함합니다. 값 127은 알 수 없음을 의미합니다. 예를 들어 -20은 EST(동부 표준시) 또는 UTC 이후 5시간을 의미합니다. NULL일 수 있습니다.|  
 |**mtf_minor_version**|**tinyint**|[!INCLUDE[msCoName](../../includes/msconame-md.md)] Tape Format의 부 버전 번호입니다. NULL일 수 있습니다.|  
 |**first_lsn**|**numeric(25,0)**|백업 세트에서 첫 번째 또는 가장 오래된 로그 레코드의 로그 시퀀스 번호입니다. NULL일 수 있습니다.|  
 |**last_lsn**|**numeric(25,0)**|백업 세트 다음에 오는 로그 레코드의 로그 시퀀스 번호입니다. NULL일 수 있습니다.|  
@@ -90,14 +90,14 @@ ms.locfileid: "89544688"
 |**has_incomplete_metadata**|**bit**|1 = 메타데이터가 완전하지 않은 비상 로그 백업입니다. 자세한 내용은 [비상 로그 백업&#40;SQL Server&#41;](../../relational-databases/backup-restore/tail-log-backups-sql-server.md)을 참조하세요.|  
 |**is_force_offline**|**bit**|1 = 백업이 수행될 때 NORECOVERY 옵션을 사용하여 데이터베이스가 오프라인 상태가 되었습니다.|  
 |**is_copy_only**|**bit**|1 = 복사 전용 백업입니다. 자세한 내용은 [복사 전용 백업&#40;SQL Server&#41;](../../relational-databases/backup-restore/copy-only-backups-sql-server.md)를 참조하세요.|  
-|**first_recovery_fork_guid**|**uniqueidentifier**|복구 분기 시작 지점의 ID입니다. 이는 RESTORE HEADERONLY의 **Firstrecoveryforkid** 에 해당 합니다.<br /><br /> 데이터 백업의 경우 **first_recovery_fork_guid** **last_recovery_fork_guid**와 같습니다.|  
-|**last_recovery_fork_guid**|**uniqueidentifier**|복구 분기 끝 지점의 ID입니다. 이는 RESTORE HEADERONLY의 **Recoveryforkid** 에 해당 합니다.<br /><br /> 데이터 백업의 경우 **first_recovery_fork_guid** **last_recovery_fork_guid**와 같습니다.|  
-|**fork_point_lsn**|**numeric(25,0)**|**First_recovery_fork_guid** **last_recovery_fork_guid**같지 않은 경우 분기 지점의 로그 시퀀스 번호입니다. 그렇지 않으면 값은 NULL입니다.|  
+|**first_recovery_fork_guid**|**uniqueidentifier**|복구 분기 시작 지점의 ID입니다. 이는 RESTORE HEADERONLY의 **Firstrecoveryforkid** 에 해당 합니다.<br /><br /> 데이터 백업의 경우 **first_recovery_fork_guid** **last_recovery_fork_guid** 와 같습니다.|  
+|**last_recovery_fork_guid**|**uniqueidentifier**|복구 분기 끝 지점의 ID입니다. 이는 RESTORE HEADERONLY의 **Recoveryforkid** 에 해당 합니다.<br /><br /> 데이터 백업의 경우 **first_recovery_fork_guid** **last_recovery_fork_guid** 와 같습니다.|  
+|**fork_point_lsn**|**numeric(25,0)**|**First_recovery_fork_guid** **last_recovery_fork_guid** 같지 않은 경우 분기 지점의 로그 시퀀스 번호입니다. 그렇지 않으면 값은 NULL입니다.|  
 |**database_guid**|**uniqueidentifier**|데이터베이스에 대한 고유 ID입니다. 복원 HEADERONLY의 **Bindingid** 에 해당 합니다. 데이터베이스를 복원하면 새 값이 할당됩니다.|  
 |**family_guid**|**uniqueidentifier**|생성 시 원래 데이터베이스의 고유 ID입니다. 이 값은 데이터베이스가 다른 이름으로 복원되는 경우에도 동일하게 유지됩니다.|  
 |**differential_base_lsn**|**numeric(25,0)**|차등 백업에 대한 기본 LSN입니다. 단일 기반 차등 백업의 경우 **differential_base_lsn** 보다 크거나 같은 lsn의 변경 내용은 차등 백업에 포함 됩니다.<br /><br /> 백업의 경우 차등의 경우 값은 NULL 이며 기본 LSN은 파일 수준에서 결정 해야 합니다 ( [backupfile &#40;transact-sql&#41;](../../relational-databases/system-tables/backupfile-transact-sql.md)참조).<br /><br /> 비차등 백업 유형의 경우 값은 항상 NULL입니다.|  
 |**differential_base_guid**|**uniqueidentifier**|단일 백업을 기준으로 하는 차등 백업의 경우 값은 차등 기반의 고유 식별자입니다.<br /><br /> 여러 백업을 기반으로 하는 차등 백업의 경우 값은 NULL이며 기본 차등 백업은 파일 수준에서 결정해야 합니다.<br /><br /> 비차등 백업 유형의 경우 값은 NULL입니다.|  
-|**compressed_backup_size**|**숫자 (20, 0)**|디스크에 저장된 백업의 총 바이트 수입니다.<br /><br /> 압축 비율을 계산 하려면 **compressed_backup_size** 와 **backup_size**를 사용 합니다.<br /><br /> **Msdb** 를 업그레이드 하는 동안이 값은 NULL로 설정 됩니다. 백업이 압축되지 않았음을 나타냅니다.|  
+|**compressed_backup_size**|**숫자 (20, 0)**|디스크에 저장된 백업의 총 바이트 수입니다.<br /><br /> 압축 비율을 계산 하려면 **compressed_backup_size** 와 **backup_size** 를 사용 합니다.<br /><br /> **Msdb** 를 업그레이드 하는 동안이 값은 NULL로 설정 됩니다. 백업이 압축되지 않았음을 나타냅니다.|  
 |**key_algorithm**|**nvarchar(32)**|백업을 암호화하는 데 사용되는 암호화 알고리즘입니다. NO_Encryption 값은 백업이 암호화되지 않았음을 나타냅니다.|  
 |**encryptor_thumbprint**|**varbinary(20)**|데이터베이스에서 인증서나 비대칭 키를 찾는 데 사용할 수 있는 암호기의 지문입니다. 백업이 암호화되지 않은 경우 이 값은 NULL입니다.|  
 |**encryptor_type**|**nvarchar(32)**|사용되는 암호기 유형으로 인증서 또는 비대칭 키를 반환합니다. . 백업이 암호화되지 않은 경우 이 값은 NULL입니다.|  

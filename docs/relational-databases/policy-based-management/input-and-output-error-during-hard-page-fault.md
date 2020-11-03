@@ -20,7 +20,7 @@ ms.contentlocale: ko-KR
 ms.lasthandoff: 10/09/2020
 ms.locfileid: "91892473"
 ---
-# <a name="input-and-output-error-during-hard-page-fault"></a>Input and Output Error During Hard Page Fault
+# <a name="input-and-output-error-during-hard-page-fault"></a>하드 페이지 폴트 중 입력 및 출력 오류
  [!INCLUDE [SQL Server](../../includes/applies-to-version/sqlserver.md)]
   이 규칙은 시스템 이벤트 로그에서 EventId 51을 검사합니다. 이 오류는 하드 페이지 폴트 중에 오류로 인해 발생합니다.  
   
