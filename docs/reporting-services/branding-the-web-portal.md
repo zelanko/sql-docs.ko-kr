@@ -8,12 +8,12 @@ description: 브랜드 패키지를 통해 비즈니스에 웹 포털의 모양�
 ms.topic: conceptual
 author: maggiesMSFT
 ms.author: maggies
-ms.openlocfilehash: 55b0557f6b6cf1a80219a492d4ce79a897be22ae
-ms.sourcegitcommit: f7ac1976d4bfa224332edd9ef2f4377a4d55a2c9
+ms.openlocfilehash: 2079a44a4b9f3977ae09f83685efa122e9467a96
+ms.sourcegitcommit: ea0bf89617e11afe85ad85309e0ec731ed265583
 ms.translationtype: HT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 07/02/2020
-ms.locfileid: "85888120"
+ms.lasthandoff: 10/28/2020
+ms.locfileid: "92907211"
 ---
 # <a name="branding-the-web-portal"></a>웹 포털 브랜딩
 
@@ -85,7 +85,7 @@ LESS 스타일시트에는 다음과 같이 사전 정의된 LESS 변수를 참�
 "primaryContrast":"#ffffff"   
 ```
 
-처리된 출력은 **\@@primaryButtonBg** LESS 변수를 조회하고 **primary**라고 하는 json 속성(이 예제의 경우 #009900)으로 매핑된 것을 확인할 수 있습니다. 따라서 올바른 CSS가 출력됩니다.  
+처리된 출력은 **\@@primaryButtonBg** LESS 변수를 조회하고 **primary** 라고 하는 json 속성(이 예제의 경우 #009900)으로 매핑된 것을 확인할 수 있습니다. 따라서 올바른 CSS가 출력됩니다.  
 
 ```css
     .btn-primary {   
@@ -98,8 +98,8 @@ LESS 스타일시트에는 다음과 같이 사전 정의된 LESS 변수를 참�
   
 Reporting Services의 colors.json 파일에는 항목이 그룹화되는 두 가지 기본 범주가 있습니다.  
   
-- **인터페이스**: Reporting Services 웹 포털에만 해당하는 항목이 포함됩니다.  
-- **테마**: 만들고 있는 모바일 보고서에만 해당하는 항목이 포함됩니다.  
+- **인터페이스** : Reporting Services 웹 포털에만 해당하는 항목이 포함됩니다.  
+- **테마** : 만들고 있는 모바일 보고서에만 해당하는 항목이 포함됩니다.  
   
 인터페이스 섹션은 다음 그룹으로 나누어집니다.  
   
@@ -116,7 +116,7 @@ Reporting Services의 colors.json 파일에는 항목이 그룹화되는 두 가
 
 모바일 보고서 게시자를 사용하여 브랜드 패키지가 배포된 서버에 처음으로 연결하면 테마가 응용 프로그램의 오른쪽 위에서 사용할 수 있는 테마에 추가됩니다.  
   
-![ssRSBrandingMobileReportPublisher](../reporting-services/media/ssrsbrandingmobilereportpublisher.png)  
+![색상표 선택 대화 상자의 스크린샷](../reporting-services/media/ssrsbrandingmobilereportpublisher.png)  
   
 그러면 테마를 배포한 서버와 동일한 서버용이 아닐 경우에도 사용자가 작성하는 모바일 보고서에 해당 테마를 사용할 수 있습니다.   
   
@@ -132,13 +132,13 @@ Reporting Services의 colors.json 파일에는 항목이 그룹화되는 두 가
   
 1.  오른쪽 상단에서 **기어 모양** 을 선택합니다.  
   
-2.  **사이트 설정**을 선택합니다.  
+2.  **사이트 설정** 을 선택합니다.  
   
-    ![ssRSGearMenu](../reporting-services/media/ssrsgearmenu.png)  
+    ![사이트 설정 옵션이 설명선으로 표시된 설정 드롭다운 목록의 스크린샷](../reporting-services/media/ssrsgearmenu.png)  
   
-3.  **브랜딩**을 선택합니다.  
+3.  **브랜딩** 을 선택합니다.  
   
-    ![ssRSBranding](../reporting-services/media/ssrsbranding.png)  
+    ![브랜딩 옵션이 선택된 사이트 설정 페이지의 스크린샷](../reporting-services/media/ssrsbranding.png) 
   
 **현재 설치된 브랜드 패키지** 에 업로드된 패키지의 이름이 표시되거나 없음이 표시됩니다.  
   
@@ -150,7 +150,7 @@ Reporting Services의 colors.json 파일에는 항목이 그룹화되는 두 가
 
 ```xml
 <?xml version="1.0" encoding="utf-8"?>  
-<SystemResourcePackage xmlns="https://schemas.microsoft.com/sqlserver/reporting/2016/01/systemresourcepackagemetadata"  
+<SystemResourcePackage xmlns="http://schemas.microsoft.com/sqlserver/reporting/2016/01/systemresourcepackagemetadata"  
     type="UniversalBrand"  
     version="2.0.2"  
     name="Multicolored example brand"  

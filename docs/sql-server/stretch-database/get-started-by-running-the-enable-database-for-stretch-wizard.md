@@ -22,12 +22,12 @@ ms.assetid: 855dd9fc-f80c-4dbc-bf46-55a9736bfe15
 author: rothja
 ms.author: jroth
 ms.custom: seo-dt-2019
-ms.openlocfilehash: 6b06f82e5c51aa1c3843abec0daa7d3bebabe40a
-ms.sourcegitcommit: e700497f962e4c2274df16d9e651059b42ff1a10
+ms.openlocfilehash: b9356ae3c4783df003233c4db7ab4bbaf9501a2d
+ms.sourcegitcommit: 67befbf7435f256e766bbce6c1de57799e1db9ad
 ms.translationtype: HT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 08/17/2020
-ms.locfileid: "88454364"
+ms.lasthandoff: 10/24/2020
+ms.locfileid: "92523954"
 ---
 # <a name="get-started-by-running-the-enable-database-for-stretch-wizard"></a>Stretch에 데이터베이스 사용 마법사를 실행하여 시작
 [!INCLUDE [sqlserver2016-windows-only](../../includes/applies-to-version/sqlserver2016-windows-only.md)]
@@ -44,7 +44,7 @@ ms.locfileid: "88454364"
   
 1.  SQL Server Management Studio의 개체 탐색기에서 스트레치를 사용하도록 설정하려는 데이터베이스를 선택합니다.  
   
-2.  마우스 오른쪽 단추를 클릭하고 **태스크**를 선택한 다음 **스트레치**를 선택하고 **사용** 을 선택하여 마법사를 시작합니다.  
+2.  마우스 오른쪽 단추를 클릭하고 **태스크** 를 선택한 다음 **스트레치** 를 선택하고 **사용** 을 선택하여 마법사를 시작합니다.  
   
 ##  <a name="introduction"></a><a name="Intro"></a> 소개  
  마법사의 용도 및 필수 구성 요소를 검토합니다.  
@@ -69,7 +69,7 @@ ms.locfileid: "88454364"
 |**Name**|데이터베이스에서 테이블 이름을 지정합니다.|  
 |(제목 없음)|이 열의 기호는 경고를 나타내지만 선택한 테이블에서 스트레치를 사용할 수는 있습니다. 또한 예를 들어 지원되지 않는 데이터 형식을 사용하는 등 선택한 테이블에서 스트레치를 사용하지 못하게 하는 차단 문제를 나타낼 수도 있습니다. 기호 위로 마우스를 올려 놓으면 도구 설명에 추가 정보가 표시됩니다. 자세한 내용은 [스트레치 데이터베이스에 대한 제한 사항](../../sql-server/stretch-database/limitations-for-stretch-database.md)을 참조하세요.|  
 |**확대됨**|테이블이 이미 스트레치에 대해 활성화되었는지 여부를 나타냅니다.|  
-|**마이그레이션**|전체 테이블(**전체 테이블**)을 마이그레이션하거나 테이블의 기존 열에 필터를 지정할 수 있습니다. 다른 필터 함수를 사용하여 마이그레이션할 행을 선택하려면 마법사를 종료한 다음 ALTER TABLE 문을 실행하여 필터 함수를 지정합니다. 필터 함수에 대한 자세한 내용은 [필터 함수를 사용하여 마이그레이션할 행 선택](../../sql-server/stretch-database/select-rows-to-migrate-by-using-a-filter-function-stretch-database.md)을 참조하세요. 함수를 적용하는 방법은 [테이블에서 Stretch Database 활성화](../../sql-server/stretch-database/enable-stretch-database-for-a-table.md) 또는 [ALTER TABLE&#40;Transact-SQL&#41;](../../t-sql/statements/alter-table-transact-sql.md)을 참조하세요.|  
+|**마이그레이션**|전체 테이블( **전체 테이블** )을 마이그레이션하거나 테이블의 기존 열에 필터를 지정할 수 있습니다. 다른 필터 함수를 사용하여 마이그레이션할 행을 선택하려면 마법사를 종료한 다음 ALTER TABLE 문을 실행하여 필터 함수를 지정합니다. 필터 함수에 대한 자세한 내용은 [필터 함수를 사용하여 마이그레이션할 행 선택](../../sql-server/stretch-database/select-rows-to-migrate-by-using-a-filter-function-stretch-database.md)을 참조하세요. 함수를 적용하는 방법은 [테이블에서 Stretch Database 활성화](../../sql-server/stretch-database/enable-stretch-database-for-a-table.md) 또는 [ALTER TABLE&#40;Transact-SQL&#41;](../../t-sql/statements/alter-table-transact-sql.md)을 참조하세요.|  
 |**행**|테이블의 행 수를 지정합니다.|  
 |**크기(KB)**|테이블의 크기(KB)를 지정합니다.|  
   
@@ -80,13 +80,13 @@ ms.locfileid: "88454364"
   
      ![날짜 기반 필터 조건자 정의](../../sql-server/stretch-database/media/stretch-wizard-2a.png "날짜 기반 필터 조건자 정의")  
   
-2.  **스트레치할 행 선택** 대화 상자에서 **행 선택**을 선택합니다.  
+2.  **스트레치할 행 선택** 대화 상자에서 **행 선택** 을 선택합니다.  
   
-3.  **이름 필드**에 필터 함수의 이름을 제공합니다.  
+3.  **이름 필드** 에 필터 함수의 이름을 제공합니다.  
   
 4.  **Where** 절의 경우 테이블에서 열을 선택하고, 연산자를 선택한 다음 값을 제공합니다.  
   
-5.  **확인** 을 클릭하여 함수를 테스트합니다. 함수에서 테이블의 결과를 반환하면, 즉 조건을 만족하는 마이그레이션할 행이 있는 경우 테스트에서 **성공**을 보고합니다.  
+5.  **확인** 을 클릭하여 함수를 테스트합니다. 함수에서 테이블의 결과를 반환하면, 즉 조건을 만족하는 마이그레이션할 행이 있는 경우 테스트에서 **성공** 을 보고합니다.  
 
 > [!NOTE] 
 > 필터 쿼리를 표시하는 입력란은 읽기 전용입니다. 입력란의 쿼리를 편집할 수 없습니다.
@@ -116,7 +116,7 @@ ms.locfileid: "88454364"
   
 3.  Stretch Database에 사용할 Azure 지역을 선택합니다.
     -   새 서버를 만드는 경우 이 지역에 서버가 만들어집니다.  
-    -   선택한 지역에 기존 서버가 있는 경우 **기존 서버**를 선택할 때 이러한 서버가 나열됩니다.
+    -   선택한 지역에 기존 서버가 있는 경우 **기존 서버** 를 선택할 때 이러한 서버가 나열됩니다.
   
      대기 시간을 최소화하려면 SQL Server가 위치해 있는 Azure 지역을 선택합니다. 지역에 대한 자세한 내용은 [Azure 지역](https://azure.microsoft.com/regions/)을 참조하세요.  
   
@@ -138,7 +138,7 @@ ms.locfileid: "88454364"
   
         2.  인증 방법을 선택합니다.  
   
-            -   **SQL Server 인증**을 선택하는 경우 관리 로그인 및 암호를 입력합니다.  
+            -   **SQL Server 인증** 을 선택하는 경우 관리 로그인 및 암호를 입력합니다.  
   
             -   SQL Server가 원격 Azure 서버와 통신하는 데 페더레이션된 서비스 계정을 사용하려면 **Active Directory 통합 인증** 을 선택합니다. 선택한 서버가 Azure Active Directory와 통합되어 있지 않으면 이 옵션이 표시되지 않습니다.
   
@@ -149,11 +149,11 @@ ms.locfileid: "88454364"
   
  데이터베이스 마스터 키가 이미 있는 경우 암호를 입력합니다.  
   
- ![Stretch Database 마법사의 보안 자격 증명 페이지](../../sql-server/stretch-database/media/stretch-wizard-6b.PNG "Stretch Database 마법사의 보안 자격 증명 페이지")  
+ ![암호 텍스트 상자가 비어 있는 Stretch Database 마법사의 보안 자격 증명 페이지를 보여 주는 스크린샷](../../sql-server/stretch-database/media/stretch-wizard-6b.PNG "Stretch Database 마법사의 보안 자격 증명 페이지")  
   
  데이터베이스에 기존 마스터 키가 없는 경우 강력한 암호를 입력하여 데이터베이스 마스터 키를 만듭니다.  
   
- ![Stretch Database 마법사의 보안 자격 증명 페이지](../../relational-databases/tables/media/stretch-wizard-6.png "Stretch Database 마법사의 보안 자격 증명 페이지")  
+ ![새 암호와 암호 확인 텍스트 상자가 채워진 Stretch Database 마법사의 보안 자격 증명 페이지를 보여 주는 스크린샷](../../relational-databases/tables/media/stretch-wizard-6.png "Stretch Database 마법사의 보안 자격 증명 페이지")  
   
  데이터베이스 마스터 키에 대한 자세한 내용은 [CREATE MASTER KEY&#40;Transact-SQL&#41;](../../t-sql/statements/create-master-key-transact-sql.md) 및 [데이터베이스 마스터 키 만들기](../../relational-databases/security/encryption/create-a-database-master-key.md)를 참조하세요. 마법사에서 생성하는 자격 증명에 대한 자세한 내용은 [CREATE DATABASE SCOPED CREDENTIAL&#40;Transact-SQL&#41;](../../t-sql/statements/create-database-scoped-credential-transact-sql.md)을 참조하세요.  
   

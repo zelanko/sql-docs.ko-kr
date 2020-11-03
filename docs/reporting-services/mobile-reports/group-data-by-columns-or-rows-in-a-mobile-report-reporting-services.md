@@ -9,12 +9,12 @@ ms.topic: conceptual
 ms.assetid: b9ebd36c-a337-47ae-83e5-6c2f2144eb52
 author: maggiesMSFT
 ms.author: maggies
-ms.openlocfilehash: f28c3feb8d8cd2fe68ab093241ac4390768b6487
-ms.sourcegitcommit: ff82f3260ff79ed860a7a58f54ff7f0594851e6b
+ms.openlocfilehash: d775b0346ce2838abeec4bebce55762afd3b0adc
+ms.sourcegitcommit: ea0bf89617e11afe85ad85309e0ec731ed265583
 ms.translationtype: HT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 03/29/2020
-ms.locfileid: "79448235"
+ms.lasthandoff: 10/28/2020
+ms.locfileid: "92907331"
 ---
 # <a name="group-data-by-columns-or-rows-in-a-mobile-report--reporting-services"></a>모바일 보고서에서 열 또는 행을 기준으로 데이터 그룹화 | Reporting Services
 [!INCLUDE[SS_MobileReptPub_Short](../../includes/ss-mobilereptpub-short.md)]의 많은 차트 종류에서 열 또는 행을 기준으로 데이터를 구성할 수 있습니다. 이 단계별 지침을 따릅니다.
@@ -27,37 +27,37 @@ ms.locfileid: "79448235"
 
 1. **레이아웃** 탭에서 **비교 합계 차트** 를 디자인 화면으로 끌어 놓고 확장합니다.
 
-2. **데이터** 탭을 선택합니다. SimulatedTable 테이블에는 **Metric1**부터 **Metric5**까지, **Comparison1**부터 **Comparison5**까지의 열 계열이 있습니다. 
+2. **데이터** 탭을 선택합니다. SimulatedTable 테이블에는 **Metric1** 부터 **Metric5** 까지, **Comparison1** 부터 **Comparison5** 까지의 열 계열이 있습니다. 
 
-   ![mobile-report-data-group-column](../../reporting-services/mobile-reports/media/mobile-report-data-group-column.png)
+   ![모바일 보고서 데이터 그룹 열의 스크린샷](../../reporting-services/mobile-reports/media/mobile-report-data-group-column.png)
 
-3. **데이터 속성** 창에서 **주 계열** 은 **SimulatedTable**입니다. **주 계열**옆의 상자에 있는 화살표를 선택하면 **Metric1** 부터 **Metric5** 까지 선택됩니다.
+3. **데이터 속성** 창에서 **주 계열** 은 **SimulatedTable** 입니다. **주 계열** 옆의 상자에 있는 화살표를 선택하면 **Metric1** 부터 **Metric5** 까지 선택됩니다.
 
-   ![mobile-report-properties-columns](../../reporting-services/mobile-reports/media/mobile-report-properties-columns.png)
+   ![주 계열 옆에 있는 옵션의 스크린샷](../../reporting-services/mobile-reports/media/mobile-report-properties-columns.png)
 
    **비교 계열** -- **Comparison1** 부터 **Comparison5** 까지에 대해서도 선택됩니다.
    
-4. **미리 보기**를 선택합니다.
+4. **미리 보기** 를 선택합니다.
 
-   ![mobile-report-chart-by-columns](../../reporting-services/mobile-reports/media/mobile-report-chart-by-columns.png)
+   ![비교 합계 차트 미리 보기의 스크린샷](../../reporting-services/mobile-reports/media/mobile-report-chart-by-columns.png)
 
    차트의 각 막대는 테이블의 한 열을 나타냅니다. 더 두꺼운 막대가 Metrics 열이고 더 얇은 막대가 Comparison 열입니다.
 
 5. 미리 보기 모드를 종료하려면 왼쪽 위의 뒤로 화살표를 선택합니다.
 
-6. **시각적 속성** 창의 **레이아웃** 탭에서 **데이터 구조** 가 **열별** 에서 **행별**로 변경됩니다.  
+6. **시각적 속성** 창의 **레이아웃** 탭에서 **데이터 구조** 가 **열별** 에서 **행별** 로 변경됩니다.  
 
 7. **데이터** 탭을 선택합니다. 이제 SimulatedTable 테이블에는 **Category** 열뿐만 아니라 **Metric** 및 **Comparison** 열, 범주 A부터 E까지 있습니다. 
 
-   ![mobile-report-data-group-rows](../../reporting-services/mobile-reports/media/mobile-report-data-group-rows.png)
+   ![모바일 보고서 데이터 그룹 행의 스크린샷](../../reporting-services/mobile-reports/media/mobile-report-data-group-rows.png)
 
 8.  이제 **데이터 속성** 창의 범주 열 상자에 SimulatedTable의 범주 열이 나열됩니다. 주 계열에서 값에 사용할 열을 선택할 수 있습니다. 기본적으로 [!INCLUDE[SS_MobileReptPub_Short](../../includes/ss-mobilereptpub-short.md)] 는 주 계열에서 Metric1부터 Metric5까지, 비교 계열에서 Comparison1부터 Comparison5까지 선택합니다. 
 
-    ![mobile-report-properties-rows](../../reporting-services/mobile-reports/media/mobile-report-properties-rows.png)
+    ![비교 계열 옆에 있는 옵션의 스크린샷](../../reporting-services/mobile-reports/media/mobile-report-properties-rows.png)
 
-9. **미리 보기**를 선택합니다.
+9. **미리 보기** 를 선택합니다.
 
-   ![mobile-report-chart-by-rows](../../reporting-services/mobile-reports/media/mobile-report-chart-by-rows.png)
+   ![업데이트된 비교 합계 차트 미리 보기의 스크린샷](../../reporting-services/mobile-reports/media/mobile-report-chart-by-rows.png)
 
    이제 차트의 각 막대는 Category 열의 각 범주에 대한 값을 나타냅니다.
 

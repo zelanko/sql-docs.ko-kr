@@ -15,24 +15,24 @@ ms.assetid: ''
 author: shkale-msft
 ms.author: shkale
 monikerRange: =azuresqldb-current||>=sql-server-2017||=sqlallproducts-allversions||>=sql-server-linux-2017||=azuresqldb-mi-current
-ms.openlocfilehash: eeb6cde4e4b24d9ef7b5e67de8bfd155808fd649
-ms.sourcegitcommit: 75f767c7b1ead31f33a870fddab6bef52f99906b
+ms.openlocfilehash: 57051ece8e432ed56c2b376c6586ff5a147b25b6
+ms.sourcegitcommit: 442fbe1655d629ecef273b02fae1beb2455a762e
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 07/28/2020
-ms.locfileid: "87331053"
+ms.lasthandoff: 11/03/2020
+ms.locfileid: "93235554"
 ---
 # <a name="create-a-graph-database-and-run-some-pattern-matching-queries-using-t-sql"></a>T-sql을 사용 하 여 그래프 데이터베이스 만들기 및 일부 패턴 일치 쿼리 실행
 
 [!INCLUDE[sqlserver2017-asdb](../../includes/applies-to-version/sqlserver2017-asdb.md)]
 
-이 샘플에서는 [!INCLUDE[tsql-md](../../includes/tsql-md.md)] 노드 및 가장자리가 포함 된 그래프 데이터베이스를 만든 다음 새 MATCH 절을 사용 하 여 일부 패턴과 일치 하 고 그래프를 통과 하는 스크립트를 제공 합니다. 이 샘플 스크립트는 두 Azure SQL Database 모두에서 작동 합니다.[!INCLUDE[sssqlv14](../../includes/sssqlv14-md.md)]  
+이 샘플에서는 [!INCLUDE[tsql-md](../../includes/tsql-md.md)] 노드 및 가장자리가 포함 된 그래프 데이터베이스를 만든 다음 새 MATCH 절을 사용 하 여 일부 패턴과 일치 하 고 그래프를 통과 하는 스크립트를 제공 합니다. 이 샘플 스크립트는 두 Azure SQL Database 모두에서 작동 합니다. [!INCLUDE[sssqlv14](../../includes/sssqlv14-md.md)]  
 
 ## <a name="sample-schema"></a>샘플 스키마
 
 이 샘플은 그림 1에 표시 된 것 처럼 사람, 식당 및 도시 노드가 있는 가상 소셜 네트워크에 대 한 그래프 스키마를 만듭니다. 이러한 노드는에 지에서 친구, 좋아요, LivesIn 및 LocatedIn을 사용 하 여 서로 연결 됩니다.
 
-![개인-도시-식당-테이블](../../relational-databases/graphs/media/person-cities-restaurants-tables.png "Sql graph 데이터베이스 샘플")  
+![식당, 구/군/시, person 노드 및 LivesIn, LocatedIn, 좋아요를 포함 하는 샘플 스키마를 보여 주는 다이어그램입니다.](../../relational-databases/graphs/media/person-cities-restaurants-tables.png "Sql graph 데이터베이스 샘플")  
 그림 1: 식당, 구/군/시, person 노드 및 LivesIn, LocatedIn, 좋아요를 포함 하는 샘플 스키마
 
 ## <a name="sample-script"></a>예제 스크립트

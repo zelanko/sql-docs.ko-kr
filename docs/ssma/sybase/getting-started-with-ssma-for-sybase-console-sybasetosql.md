@@ -14,12 +14,12 @@ helpviewer_keywords:
 ms.assetid: 43219dbe-bcfa-427d-9242-f07b1455f15f
 author: nahk-ivanov
 ms.author: alexiva
-ms.openlocfilehash: e59cb5565ca518dc927f29e684401bf8fc6d5822
-ms.sourcegitcommit: e700497f962e4c2274df16d9e651059b42ff1a10
+ms.openlocfilehash: 34e0a493140a31099dc4b9ed9f6234743bf0c8c1
+ms.sourcegitcommit: 442fbe1655d629ecef273b02fae1beb2455a762e
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 08/17/2020
-ms.locfileid: "88418319"
+ms.lasthandoff: 11/03/2020
+ms.locfileid: "93235370"
 ---
 # <a name="getting-started-with-the-ssma-for-sybase-console-sybasetosql"></a>Sybase 용 SSMA 콘솔 시작 (SybaseToSQL)
 이 섹션에서는 Sybase 콘솔 응용 프로그램용 SSMA를 시작 하 고 시작 하는 절차에 대해 설명 합니다. 또한 일반적인 SSMA 콘솔 출력 창에서 사용 되는 규칙도 여기에 나와 있습니다.  
@@ -53,13 +53,13 @@ Windows 시스템에서 콘솔이 성공적으로 시작 된 후에는 다음 �
 ## <a name="ssma-console-output-conventions"></a>SSMA 콘솔 출력 규칙  
 SSMA 스크립트 명령 및 옵션을 실행 하면 콘솔 프로그램은 콘솔의 사용자에 게 결과와 메시지 (정보, 오류 등)를 표시 하거나 필요한 경우 xml 출력 파일로 리디렉션합니다. 출력의 각 메시지 형식은 고유한 색으로 표시 됩니다. 예를 들어 흰색의 텍스트 메시지는 스크립트 파일 명령을 나타냅니다. 녹색으로 표시 되는 색은 사용자 입력에 대 한 프롬프트를 나타냅니다.  
   
-![SSMA 콘솔 출력_Sybase](../../ssma/sybase/media/ssmaconsoleoutput_sybase.JPG "SSMA 콘솔 출력_Sybase")  
+![SSMA 콘솔 Sybase 출력의 예를 보여 주는 스크린샷](../../ssma/sybase/media/ssmaconsoleoutput_sybase.JPG "SSMA 콘솔 출력_Sybase")  
   
 콘솔 출력의 색 해석을 다음 표에 표시 됩니다.  
   
 |색|Description|  
 |---------|---------------|  
-|빨강|실행 하는 동안 심각한 오류가 발생 했습니다.|  
+|빨간색|실행 하는 동안 심각한 오류가 발생 했습니다.|  
 |회색|날짜 및 시간 스탬프, 사용자에 대 한 메시지|  
 |흰색|스크립트 파일 명령, 메시지 유형|  
 |노란색|경고|  

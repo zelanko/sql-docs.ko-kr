@@ -13,16 +13,16 @@ f1_keywords:
 ms.assetid: b43f4b97-17b9-4004-a824-f77b9e145741
 author: markingmyname
 ms.author: maghan
-ms.openlocfilehash: 94d40ea597c0d9c09fd463e8a5cd8f9e965b6908
-ms.sourcegitcommit: e700497f962e4c2274df16d9e651059b42ff1a10
+ms.openlocfilehash: 36e62c2d30e4678c8b41223003db35b13e8d15ac
+ms.sourcegitcommit: 22e97435c8b692f7612c4a6d3fe9e9baeaecbb94
 ms.translationtype: HT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 08/17/2020
-ms.locfileid: "88370827"
+ms.lasthandoff: 10/27/2020
+ms.locfileid: "92679245"
 ---
 # <a name="options-designers---table-and-database-designers-page"></a>옵션(디자이너 - 테이블 및 데이터베이스 디자이너 페이지)
 [!INCLUDE[SQL Server Azure SQL Database Synapse Analytics PDW ](../../includes/applies-to-version/sql-asdb-asdbmi-asa-pdw.md)]
-이 페이지를 사용하여 디자이너의 기본 동작을 결정할 수 있습니다. 이 설정에 액세스하려면 **도구** 메뉴에서 **옵션**을 클릭하고 **디자이너** 폴더를 확장한 다음 **테이블 디자이너**를 클릭합니다.  
+이 페이지를 사용하여 디자이너의 기본 동작을 결정할 수 있습니다. 이 설정에 액세스하려면 **도구** 메뉴에서 **옵션** 을 클릭하고 **디자이너** 폴더를 확장한 다음 **테이블 디자이너** 를 클릭합니다.  
   
 ## <a name="ui-element-list"></a>UI 요소 목록  
 **테이블 디자이너 업데이트에 대한 연결 문자열 제한 시간 값 재정의**  
@@ -73,7 +73,7 @@ ms.locfileid: "88370827"
   
 -   **테이블 이름만**  
   
-    테이블 이름이 있는 테이블 머리글만 표시합니다.  
+    이름이 있는 테이블 머리글만 표시합니다.  
   
 -   **Custom**  
   

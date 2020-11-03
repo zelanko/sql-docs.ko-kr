@@ -9,12 +9,12 @@ ms.topic: reference
 ms.author: owend
 ms.reviewer: owend
 author: minewiskan
-ms.openlocfilehash: 5f0ae1e59a46c03300018f3243926bb30cef0398
-ms.sourcegitcommit: e700497f962e4c2274df16d9e651059b42ff1a10
+ms.openlocfilehash: f275628747d0b17ede6c76f67961fe5233e788c4
+ms.sourcegitcommit: 80701484b8f404316d934ad2a85fd773e26ca30c
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 08/17/2020
-ms.locfileid: "88412867"
+ms.lasthandoff: 11/03/2020
+ms.locfileid: "93243542"
 ---
 # <a name="toppercent-mdx"></a>TopPercent(MDX)
 
@@ -52,7 +52,10 @@ TopPercent(Set_Expression, Percentage, Numeric_Expression)
 > [!IMPORTANT]  
 >  [BottomPercent](../mdx/bottompercent-mdx.md) 함수와 마찬가지로 **TopPercent** 함수는 항상 계층 구조를 중단 합니다.  
   
-## <a name="example"></a>예제  
+## <a name="examples"></a>예  
+
+### <a name="a-return-toppercent"></a>A. TopPercent 반환
+
  다음 예에서는 Bike 범주에 대해 대리점의 상위 10% 매출에 기여하는 최고의 도시를 반환합니다. 결과는 매출액이 가장 높은 도시부터 내림차순으로 정렬됩니다.  
   
 ```  
@@ -68,11 +71,11 @@ WHERE([Product].[Product Categories].[Bikes])
   
  위의 식은 다음 결과를 생성합니다.  
   
-|도시|Reseller Sales Amount|  
+|구/군/시|Reseller Sales Amount|  
 |-|---------------------------|  
 |Toronto|$3508904.84|  
 |London|$1521530.09|  
-|Seattle|$1209418.16|  
+|시애틀|$1209418.16|  
 |파리|$1170425.18|  
   
  원래 데이터 집합은 다음 쿼리로 얻을 수 있으며 588개의 행을 반환합니다.  
@@ -89,8 +92,9 @@ WHERE([Product].[Product Categories].[Bikes])
   
 ```  
   
-## <a name="example"></a>예제  
- 다음 연습은 *Numeric_Expression*음수 값의 효과를 이해 하는 데 도움이 됩니다. 우선 동작을 나타낼 수 있는 컨텍스트를 만들어 보겠습니다.  
+### <a name="b-understand-the-effect-of-negative-values"></a>B. 음수 값의 영향 이해
+
+ 다음 연습은 *Numeric_Expression* 음수 값의 효과를 이해 하는 데 도움이 됩니다. 우선 동작을 나타낼 수 있는 컨텍스트를 만들어 보겠습니다.  
   
  다음 쿼리는 수익의 내림차순으로 정렬된 Resellers 'Sales Amount', 'Total Product Cost' 및 'Gross Profit'의 테이블을 반환합니다. 수익이 음수 값만 있으므로 가장 적은 손해가 위쪽에 나타납니다.  
   

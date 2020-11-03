@@ -10,12 +10,12 @@ ms.topic: conceptual
 ms.assetid: e198575e-b154-4342-b944-2bf19ec49bfd
 author: maggiesMSFT
 ms.author: maggies
-ms.openlocfilehash: 5fc718243db6a816fb2a0593131362007facce89
-ms.sourcegitcommit: 6c2232c4d2c1ce5710296ce97b909f5ed9787f66
+ms.openlocfilehash: 4013c119093adda0fbb721c376eef502a7b05a38
+ms.sourcegitcommit: ea0bf89617e11afe85ad85309e0ec731ed265583
 ms.translationtype: HT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 06/05/2020
-ms.locfileid: "84462357"
+ms.lasthandoff: 10/28/2020
+ms.locfileid: "92907251"
 ---
 # <a name="sql-server-mobile-reports-end-to-end-walk-through"></a>SQL Server 모바일 보고서: 엔드투엔드 연습
 [!INCLUDE[PRODUCT_NAME](../../includes/ss-mobilereptpub-long.md)] 웹 포털의 [!INCLUDE[ssRSnoversion_md](../../includes/ssrsnoversion-md.md)] 를 사용하여 모든 화면 크기에 적합한 모바일 보고서를 만들고 Power BI 모바일 앱에 표시하는 방법을 알아봅니다.
@@ -46,14 +46,14 @@ ms.locfileid: "84462357"
   
 Reporting Services에서 지원하는 모든 데이터 원본에서 모바일 보고서에 대한 공유 데이터 원본을 만들 수 있습니다. [지원되는 데이터 원본 목록](../report-data/data-sources-supported-by-reporting-services-ssrs.md)을 참조하세요.  
   
-1. [!INCLUDE[PRODUCT_NAME](../../includes/ssrsnoversion.md)] 웹 포털에서 **새로 만들기** > **데이터 원본**을 클릭합니다.  
+1. [!INCLUDE[PRODUCT_NAME](../../includes/ssrsnoversion.md)] 웹 포털에서 **새로 만들기** > **데이터 원본** 을 클릭합니다.  
   
    ![PBI_SSMRP_NewMenu](../../reporting-services/mobile-reports/media/pbi-ssmrp-newmenu.png)  
-3. 데이터 원본 정보를 입력하고 **확인**을 클릭합니다.  
+3. 데이터 원본 정보를 입력하고 **확인** 을 클릭합니다.  
   
     기본적으로 데이터 원본은 포털에 표시되지 않습니다.    
    
-5. 데이터 원본을 보려면 **표시** > **데이터 원본**을 클릭합니다.  
+5. 데이터 원본을 보려면 **표시** > **데이터 원본** 을 클릭합니다.  
   
    ![PBI_SSMRP_DisplayDataSources](../../reporting-services/mobile-reports/media/pbi-ssmrp-displaydatasources.png)  
    
@@ -70,18 +70,18 @@ Reporting Services에서 지원하는 모든 데이터 원본에서 모바일 �
 1. [!INCLUDE[PRODUCT_NAME](../../includes/ssrsnoversion.md)] 웹 포털에서 **새로 만들기** > **페이지가 매겨진 보고서** 를 클릭하여 [!INCLUDE[PRODUCT_NAME](../../includes/ssrbnoversion.md)]를 시작합니다.  
   
    ![PBI_SSMRP_NewMenu](../../reporting-services/mobile-reports/media/pbi-ssmrp-newmenu.png)   
-2. **새 데이터 세트**를 클릭합니다.  
+2. **새 데이터 세트** 를 클릭합니다.  
   
    ![PBI_SSMRP_RBNewDataset](../../reporting-services/mobile-reports/media/pbi-ssmrp-rbnewdataset.png)  
    
-3. **다른 데이터 원본 찾아보기**를 클릭합니다.  
+3. **다른 데이터 원본 찾아보기** 를 클릭합니다.  
    
 4. 이름 필드에 데이터 원본을 저장한 서버의 이름을 다음 형식으로 입력합니다.   
    
-   이름: https://*localhost*/ReportServer  
+   이름: https:// *localhost* /ReportServer  
    항목 유형: 데이터 원본(*.rsds)  
    
-5. **열기**를 클릭하여 해당 서버에서 만든 데이터 원본으로 이동합니다.  
+5. **열기** 를 클릭하여 해당 서버에서 만든 데이터 원본으로 이동합니다.  
    
 6. 데이터 원본을 선택하고 **열기** 를 다시 클릭합니다.    
   
@@ -96,16 +96,16 @@ Reporting Services에서 지원하는 모든 데이터 원본에서 모바일 �
 ## <a name=""></a><a name="create-KPI">KPI 만들기</a>  
 [!INCLUDE[PRODUCT_NAME](../../includes/ssrsnoversion.md)] 웹 포털에서 바로 KPI를 만듭니다.    
   
-1. 웹 포털 오른쪽 위에서 **새로 만들기** > **새 KPI**를 클릭합니다.   
+1. 웹 포털 오른쪽 위에서 **새로 만들기** > **새 KPI** 를 클릭합니다.   
   
    ![PBI_SSMRP_NewMenu](../../reporting-services/mobile-reports/media/pbi-ssmrp-newmenu.png)  
       
    KPI 만들기 화면에서 수동으로 값을 입력하거나 공유 데이터 세트를 사용할 수 있습니다.    
-2. **값**을 **수동 설정**에서 **데이터 세트 필드**로 변경합니다.  
+2. **값** 을 **수동 설정** 에서 **데이터 세트 필드** 로 변경합니다.  
    
    ![PBI_SSMRP_KPI_DatasetField](../../reporting-services/mobile-reports/media/pbi-ssmrp-kpi-datasetfield.png)  
    
-3. **데이터 세트 필드 선택**상자에서 줄임표( **...** )를 클릭하고 이전 단계에서 데이터 세트를 선택합니다.  
+3. **데이터 세트 필드 선택** 상자에서 줄임표( **...** )를 클릭하고 이전 단계에서 데이터 세트를 선택합니다.  
    
    ![PBI_SSMRP_KPIPickDataset](../../reporting-services/mobile-reports/media/pbi-ssmrp-kpipickdataset.png)  
    
@@ -115,19 +115,19 @@ Reporting Services에서 지원하는 모든 데이터 원본에서 모바일 �
      
 5. 원하는 집계를 선택합니다. KPI는 숫자만 표시할 수 있으므로 이 숫자를 표시하도록 필드가 집계됩니다.
 
-   ![reporting-services-kpi-pick-aggregation](../../reporting-services/mobile-reports/media/reporting-services-kpi-pick-aggregation.png)
+   ![평균 집계 섹션을 보여 주는 AWSalesYTD에서 필드 선택 섹션의 스크린샷](../../reporting-services/mobile-reports/media/reporting-services-kpi-pick-aggregation.png)
 
-6. **확인**을 클릭합니다.
+6. **확인** 을 클릭합니다.
 
-7. **추세 집합** 상자에서 **데이터 세트 추세**를 클릭합니다.  
+7. **추세 집합** 상자에서 **데이터 세트 추세** 를 클릭합니다.  
   
 6. **데이터 세트 추세 선택** 상자에서 줄임표( **...** )를 클릭합니다.  
    
-7. 필드를 선택하고 **확인**을 클릭합니다.  
+7. 필드를 선택하고 **확인** 을 클릭합니다.  
 
    ![PBI_SSMRP_KPIPickTrend](../../reporting-services/mobile-reports/media/pbi-ssmrp-kpipicktrend.png)  
   
-8. KPI의 이름을 지정하고 시각화 유형을 선택한 후 **만들기**를 클릭합니다.   
+8. KPI의 이름을 지정하고 시각화 유형을 선택한 후 **만들기** 를 클릭합니다.   
   
    KPI가 [!INCLUDE[PRODUCT_NAME](../../includes/ssrsnoversion.md)] 웹 포털에 표시됩니다.  
    
@@ -183,12 +183,12 @@ Reporting Services 모바일 보고서를 만들려면 [SQL Server Mobile 보고
   
 4. 서버를 선택한 다음, 사용자가 만든 데이터 세트를 선택합니다.  
    
-3. 다시 **데이터** 탭의 **데이터 속성** 창에서 **크기 표현**, **색 표현**및 기타 속성을 사용자 고유의 데이터에 있는 필드로 변경합니다. 
+3. 다시 **데이터** 탭의 **데이터 속성** 창에서 **크기 표현** , **색 표현** 및 기타 속성을 사용자 고유의 데이터에 있는 필드로 변경합니다. 
    
-   *  **크기 표현**, **색 표현**및 **사용자 지정 중앙값** 은 숫자 값이 있는 필드해야 합니다. 
+   *  **크기 표현** , **색 표현** 및 **사용자 지정 중앙값** 은 숫자 값이 있는 필드해야 합니다. 
    *  **그룹화 방법** 은 범주이므로 텍스트 필드입니다.
    
-   ![ssrs-mobile-report-data-properties](../../reporting-services/mobile-reports/media/ssrs-mobile-report-data-properties.png)
+   ![데이터 속성 섹션의 스크린샷](../../reporting-services/mobile-reports/media/ssrs-mobile-report-data-properties.png)
    
 6. **미리 보기** 를 선택하여 사용자 데이터로 업데이트된 트리 맵을 확인합니다.  
 
@@ -200,19 +200,19 @@ Reporting Services 모바일 보고서를 만들려면 [SQL Server Mobile 보고
 
 2. 이번에도 시뮬레이션된 데이터로 시작합니다. 
 
-   **시각적 개체 속성**에서 **값이 높을수록 좋음**및 **델타 레이블** 은 **대상 백분율**입니다. 변경할 수 있는 기본 **범위 중지** 가 있지만 지금은 적절합니다.
+   **시각적 개체 속성** 에서 **값이 높을수록 좋음** 및 **델타 레이블** 은 **대상 백분율** 입니다. 변경할 수 있는 기본 **범위 중지** 가 있지만 지금은 적절합니다.
 
-   ![ssrs-mobile-report-donut-visual-properties](../../reporting-services/mobile-reports/media/ssrs-mobile-report-donut-visual-properties.png)
+   ![모바일 보고서 도넛형 시각적 개체 속성의 범위 설정 섹션 스크린샷](../../reporting-services/mobile-reports/media/ssrs-mobile-report-donut-visual-properties.png)
    
-3. **데이터** 탭에서 데이터가 있는 테이블을 선택하고 **주 값** 필드와 **비교 값**에서 비교할 필드를 선택합니다.
+3. **데이터** 탭에서 데이터가 있는 테이블을 선택하고 **주 값** 필드와 **비교 값** 에서 비교할 필드를 선택합니다.
 
-4. 여러 집계를 선택하여 **주 값** 과 **비교 값**각각에 대한 숫자를 지정할 수 있습니다. 이는 기본적으로 합계입니다.
+4. 여러 집계를 선택하여 **주 값** 과 **비교 값** 각각에 대한 숫자를 지정할 수 있습니다. 이는 기본적으로 합계입니다.
 
-   ![ssrs-mobile-report-donut-sum](../../reporting-services/mobile-reports/media/ssrs-mobile-report-donut-sum.png)
+   ![옵션 또는 비교 값의 스크린샷](../../reporting-services/mobile-reports/media/ssrs-mobile-report-donut-sum.png)
 
 5. **미리 보기** 를 선택하여 모양을 확인합니다. 
 
-   ![ssrs-mobile-report-donut-preview](../../reporting-services/mobile-reports/media/ssrs-mobile-report-donut-preview.png)
+   ![모바일 보고서 도넛형 미리 보기의 스크린샷](../../reporting-services/mobile-reports/media/ssrs-mobile-report-donut-preview.png)
 
 ## <a name="add-a-selection-list-as-a-filter"></a>선택 목록을 필터로 추가
 
@@ -220,19 +220,19 @@ Reporting Services 모바일 보고서를 만들려면 [SQL Server Mobile 보고
 
 1. **레이아웃** 탭에서 트리 맵의 오른쪽으로 선택 목록을 끌고 오른쪽 아래 모서리를 끌어 캔버스와 같은 높이로 2x5(가로x세로) 사각형으로 만듭니다. 
 
-   ![ssrs-mobile-report-selection-list](../../reporting-services/mobile-reports/media/ssrs-mobile-report-selection-list.png)
+   ![모바일 보고서 선택 목록의 스크린샷](../../reporting-services/mobile-reports/media/ssrs-mobile-report-selection-list.png)
 
-2. **데이터** 탭의 **데이터 속성**에서 **키** 및 **레이블** 을 필터링할 데이터의 필드로 설정합니다.
+2. **데이터** 탭의 **데이터 속성** 에서 **키** 및 **레이블** 을 필터링할 데이터의 필드로 설정합니다.
 
-   ![ssrs-mobile-report-selection-list-data-properties](../../reporting-services/mobile-reports/media/ssrs-mobile-report-selection-list-data-properties.png)
+   ![모바일 보고서 선택 목록의 데이터 속성 섹션 스크린샷](../../reporting-services/mobile-reports/media/ssrs-mobile-report-selection-list-data-properties.png)
    
 ## <a name="create-a-mobile-report-for-phones"></a>휴대폰용 모바일 보고서 만들기  
   
 마스터 레이아웃에서 시각적 개체를 만들었으므로 이제 특별히 휴대폰 사용자용으로 최적화된 레이아웃의 모바일 보고서를 만들 수 있습니다.    
   
-1. 오른쪽 위에서 캔버스 아이콘 > **전화**를 클릭합니다.  
+1. 오른쪽 위에서 캔버스 아이콘 > **전화** 를 클릭합니다.  
   
-2. 레이아웃 탭의 **제어 인스턴스**아래에 사용자가 만든 두 개의 차트가 표시됩니다.   
+2. 레이아웃 탭의 **제어 인스턴스** 아래에 사용자가 만든 두 개의 차트가 표시됩니다.   
   
 3. 트리 맵을 전화 캔버스로 끌어 4개의 열과 3개의 행으로 만듭니다.  
   
@@ -242,11 +242,11 @@ Reporting Services 모바일 보고서를 만들려면 [SQL Server Mobile 보고
   
 1. 왼쪽 위에서 저장 아이콘을 클릭합니다.   
    
-2. 다른 사람과 공유하고 모바일 디바이스에서 보려면 **를 서버에 저장**을 클릭합니다.  
+2. 다른 사람과 공유하고 모바일 디바이스에서 보려면 **를 서버에 저장** 을 클릭합니다.  
   
 3. 서버에서 모바일 보고서를 저장할 폴더로 이동합니다.  
   
-4. **폴더 선택** > **저장**을 클릭합니다.  
+4. **폴더 선택** > **저장** 을 클릭합니다.  
   
    보고서가 저장되었음을 확인하는 메시지가 제공됩니다.  
     
@@ -268,10 +268,10 @@ Reporting Services 모바일 보고서를 만들려면 [SQL Server Mobile 보고
   
 1.  모바일 디바이스에서 Power BI 앱을 열고 로그인합니다.  
     
-2.  Reporting Services 모바일 보고서 및 KPI를 보려면 **Reporting Services**를 탭합니다.  
+2.  Reporting Services 모바일 보고서 및 KPI를 보려면 **Reporting Services** 를 탭합니다.  
 ![PBI_iPad_GetStartedSm](../../reporting-services/mobile-reports/media/pbi-ipad-getstartedsm.png)  
   
-3. 왼쪽 위에서 옵션 아이콘 ![PBI_iPad_OptionsIcon](../../reporting-services/mobile-reports/media/pbi-ipad-optionsicon.png) 을 탭하고 **서버에 연결**을 탭합니다.  
+3. 왼쪽 위에서 옵션 아이콘 ![PBI_iPad_OptionsIcon](../../reporting-services/mobile-reports/media/pbi-ipad-optionsicon.png) 을 탭하고 **서버에 연결** 을 탭합니다.  
   
    ![PBI_iPad_SSMRP_ConnectCrop](../../reporting-services/mobile-reports/media/pbi-ipad-ssmrp-connectcrop.png)  
   

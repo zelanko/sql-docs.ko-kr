@@ -10,12 +10,12 @@ author: markingmyname
 ms.author: maghan
 ms.reviewer: pmasl
 monikerRange: '>=sql-server-2016||=sqlallproducts-allversions'
-ms.openlocfilehash: a4c032315ef6fb17578ffcdfc7116f3a93293ac8
-ms.sourcegitcommit: 21bedbae28840e2f96f5e8b08bcfc794f305c8bc
+ms.openlocfilehash: f0eabc247645000d95f9b9c83c17ababc47c6cc2
+ms.sourcegitcommit: ef20f39a17fd4395dd2dd37b8dd91b57328a751c
 ms.translationtype: HT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 08/06/2020
-ms.locfileid: "87862934"
+ms.lasthandoff: 10/28/2020
+ms.locfileid: "92793820"
 ---
 # <a name="what-are-extended-security-updates-for-sql-server"></a>SQL Server의 연장 보안 업데이트란 무엇입니까?
 [!INCLUDE [SQL Server Windows Only - ASDBMI ](../../includes/applies-to-version/sql-windows-only-asdbmi.md)]
@@ -35,7 +35,7 @@ ESU 패치는 제공되는 즉시 적용하여 [!INCLUDE[ssNoVersion](../../incl
 ## <a name="what-are-extended-security-updates"></a>연장 보안 업데이트 정의
 [!INCLUDE[ssKatmai](../../includes/ssKatmai-md.md)] 및 [!INCLUDE[ssKilimanjaro](../../includes/ssKilimanjaro-md.md)]에 대한 ESU(연장 보안 업데이트)는 확장 지원 업데이트 구독을 구매한 고객에 대한 보안 업데이트 프로비전을 포함합니다.
 
-[MSRC(Microsoft 보안 대응 센터)](https://portal.msrc.microsoft.com)에 의해 보안 취약성이 발견되어 **중요**로 평가되면 **필요한 경우** ESU를 사용할 수 있습니다. 따라서 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] ESU에 대한 정기 릴리스 주기가 없습니다.
+[MSRC(Microsoft 보안 대응 센터)](https://portal.msrc.microsoft.com)에 의해 보안 취약성이 발견되어 **중요** 로 평가되면 **필요한 경우** ESU를 사용할 수 있습니다. 따라서 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] ESU에 대한 정기 릴리스 주기가 없습니다.
 
 ESU에는 다음이 포함되지 않습니다.
 - 새로운 기능
@@ -52,11 +52,11 @@ ESU에는 기술 지원이 포함되지 않지만, 온-프레미스를 유지하
 Azure, 온-프레미스 또는 호스팅 환경에서 워크로드를 실행하는 고객은 ESU를 사용할 수 있습니다.
 
 ### <a name="azure-virtual-machines"></a>Azure Virtual Machines
-워크로드를 Azure Virtual Machines(IaaS)로 마이그레이션하는 경우 지원 종료 후 최대 3년 동안 [!INCLUDE[ssKatmai](../../includes/ssKatmai-md.md)] 및 [!INCLUDE[ssKilimanjaro](../../includes/ssKilimanjaro-md.md)]에 대한 연장 보안 업데이트에 액세스할 수 있으며, 이 경우에는 가상 머신을 실행하는 비용 이외에 **추가 요금**이 발생하지 않습니다. 고객은 Azure에서 연장 보안 업데이트를 받기 위해 소프트웨어 보증이 필요하지 않습니다. 
+워크로드를 Azure Virtual Machines(IaaS)로 마이그레이션하는 경우 지원 종료 후 최대 3년 동안 [!INCLUDE[ssKatmai](../../includes/ssKatmai-md.md)] 및 [!INCLUDE[ssKilimanjaro](../../includes/ssKilimanjaro-md.md)]에 대한 연장 보안 업데이트에 액세스할 수 있으며, 이 경우에는 가상 머신을 실행하는 비용 이외에 **추가 요금** 이 발생하지 않습니다. 고객은 Azure에서 연장 보안 업데이트를 받기 위해 소프트웨어 보증이 필요하지 않습니다. 
 
-**Windows Server 2008 R2 이상**에서 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]를 실행하는 Azure Virtual Machines는 가상 머신이 [자동화된 패치](/azure/virtual-machines/windows/sql/virtual-machines-windows-sql-automated-patching)를 사용하여 구성된 경우 기존의 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 업데이트 채널을 통해 자동으로 ESU를 수신합니다.
+**Windows Server 2008 R2 이상** 에서 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]를 실행하는 Azure Virtual Machines는 가상 머신이 [자동화된 패치](/azure/virtual-machines/windows/sql/virtual-machines-windows-sql-automated-patching)를 사용하여 구성된 경우 기존의 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 업데이트 채널을 통해 자동으로 ESU를 수신합니다.
 
-**Windows Server 2008**에서 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]을 실행하는 Azure VM(가상 머신) 또는 **[자동화된 패치](/azure/virtual-machines/windows/sql/virtual-machines-windows-sql-automated-patching)에 대해 구성되지 않은** VM은 [온-프레미스 또는 호스티드 환경](#on-premises-or-hosted-environments) 섹션에서 설명한 대로 ESU 패치를 수동으로 다운로드하여 배포해야 합니다. 
+**Windows Server 2008** 에서 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]을 실행하는 Azure VM(가상 머신) 또는 **[자동화된 패치](/azure/virtual-machines/windows/sql/virtual-machines-windows-sql-automated-patching)에 대해 구성되지 않은** VM은 [온-프레미스 또는 호스티드 환경](#on-premises-or-hosted-environments) 섹션에서 설명한 대로 ESU 패치를 수동으로 다운로드하여 배포해야 합니다. 
 
 ### <a name="on-premises-or-hosted-environments"></a>온-프레미스 또는 호스티드 환경
 Software Assurance가 있는 경우 EA(기업계약), EAS(기업 정기가입 계약), SCE(서버 및 클라우드 등록) 또는 EES(교육 솔루션 등록)에 따라 지원 종료일 이후 최대 3년간 ESU(연장된 보안 업데이트)를 구매할 수 있습니다. 적용해야 하는 서버에 대한 ESU만 구매할 수 있습니다. Microsoft 또는 Microsoft 라이선스 파트너에서 직접 ESU를 구매할 수 있습니다. 
@@ -82,16 +82,16 @@ SQL Server 레지스트리를 만들려면 다음 단계를 수행합니다.
 1. [Azure Portal](https://portal.azure.com)에 로그인합니다. 
 1. **리소스 만들기** 옵션을 선택하여 리소스를 만듭니다. 
 1. 검색 상자에 `SQL Server registry`를 입력합니다.  
-1. [!INCLUDE[msCoName](../../includes/msconame-md.md)]에서 게시한 **SQL Server 레지스트리** 옵션을 선택한 다음 **만들기**를 선택합니다. 
+1. [!INCLUDE[msCoName](../../includes/msconame-md.md)]에서 게시한 **SQL Server 레지스트리** 옵션을 선택한 다음 **만들기** 를 선택합니다. 
 
-   ![SQL Server 레지스트리 서비스를 선택합니다.](media/sql-server-extended-security-updates/sql-server-registry-service.png)
+   ![SQL Server 레지스트리를 만드는 방법을 보여 주는 Azure Portal의 스크린샷](media/sql-server-extended-security-updates/sql-server-registry-service.png)
 
-1. **프로젝트 세부 정보**의 드롭다운에서 구독을 선택합니다. 그런 다음 기존 **리소스 그룹**을 선택하거나 **새로 만들기**를 선택하여 새 SQL Server 레지스트리 서비스에 대한 새 리소스 그룹을 만듭니다. 
-1. **서비스 세부 정보**에서 새 **SQL Server 레지스트리** 리소스의 이름과 지역을 제공합니다. 
+1. **프로젝트 세부 정보** 의 드롭다운에서 구독을 선택합니다. 그런 다음 기존 **리소스 그룹** 을 선택하거나 **새로 만들기** 를 선택하여 새 SQL Server 레지스트리 서비스에 대한 새 리소스 그룹을 만듭니다. 
+1. **서비스 세부 정보** 에서 새 **SQL Server 레지스트리** 리소스의 이름과 지역을 제공합니다. 
 
-   ![SQL Server 레지스트리 서비스를 선택합니다.](media/sql-server-extended-security-updates/create-new-sql-server-registry.png)
+   ![기본 탭을 보여 주는 SQL Server 레지스트리의 스크린샷](media/sql-server-extended-security-updates/create-new-sql-server-registry.png)
 
-1. **검토 + 만들기**를 선택하여 **SQL Server 레지스트리**에 대한 세부 정보를 검토합니다. 유효성 검사가 성공하면 **만들기**를 선택합니다. 
+1. **검토 + 만들기** 를 선택하여 **SQL Server 레지스트리** 에 대한 세부 정보를 검토합니다. 유효성 검사가 성공하면 **만들기** 를 선택합니다. 
 
 ## <a name="register-instances-for-esus"></a>ESU용 인스턴스 등록
 
@@ -103,11 +103,11 @@ SQL Server 레지스트리를 만들려면 다음 단계를 수행합니다.
 
 1. [Azure Portal](https://portal.azure.com)에 로그인합니다. 
 1. **SQL Server 레지스트리** 리소스로 이동합니다. 
-1. **개요** 창에서 **+ 등록**을 선택합니다. 
+1. **개요** 창에서 **+ 등록** 을 선택합니다. 
 
    ![등록을 선택하여 SQL Server의 단일 인스턴스를 등록](media/sql-server-extended-security-updates/register-single-sql-server-instance.png)
 
-1. 이 표에 설명된 대로 필요한 정보를 입력한 다음 **등록**을 선택합니다. 
+1. 이 표에 설명된 대로 필요한 정보를 입력한 다음 **등록** 을 선택합니다. 
 
    |**값**| **설명**|
    | :-------| :------------- |
@@ -135,18 +135,18 @@ SQL Server 레지스트리를 만들려면 다음 단계를 수행합니다.
 
 1. [Azure Portal](https://portal.azure.com)에 로그인합니다. 
 1. **SQL Server 레지스트리** 리소스로 이동합니다. 
-1. **개요** 창에서 **대량 등록**을 선택합니다.  
+1. **개요** 창에서 **대량 등록** 을 선택합니다.  
 
    ![대량 등록을 선택하여 SQL Server의 여러 인스턴스를 등록](media/sql-server-extended-security-updates/bulk-register-sql-server-instances.png)
 
-1. 파일 아이콘을 선택하여 .CSV 파일 위치로 이동합니다. .CSV 파일을 선택합니다. 그런 다음 **등록**을 선택하여 파일을 업로드하고 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]의 여러 인스턴스를 등록합니다. 
+1. 파일 아이콘을 선택하여 .CSV 파일 위치로 이동합니다. .CSV 파일을 선택합니다. 그런 다음 **등록** 을 선택하여 파일을 업로드하고 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]의 여러 인스턴스를 등록합니다. 
 
    ![CSV 파일을 업로드하여 SQL Server의 여러 인스턴스를 등록](media/sql-server-extended-security-updates/upload-csv-file-for-bulk-registration.png)
 
 ### <a name="formatting-requirements-for-csv-file"></a>CSV 파일에 대한 서식 지정 요구 사항
 - 값은 쉼표로 구분됩니다.
 - 값이 작은따옴표나 큰따옴표가 아닙니다.
-- 열 이름은 대/소문자를 구분하지 않지만 아래와 같이 **명명**되어야 합니다. 
+- 열 이름은 대/소문자를 구분하지 않지만 아래와 같이 **명명** 되어야 합니다. 
   - name
   - 버전
   - edition
@@ -201,7 +201,7 @@ ESU를 다운로드하려면 다음 단계를 수행합니다.
 
 1. [Azure Portal](https://portal.azure.com)에 로그인합니다. 
 1. **SQL Server 레지스트리** 리소스로 이동합니다. 
-1. 탐색 창에서 **보안 업데이트**를 선택합니다. 
+1. 탐색 창에서 **보안 업데이트** 를 선택합니다. 
 
    ![사용 가능한 업데이트에 대한 보안 업데이트 창 확인](media/sql-server-extended-security-updates/security-updates-sql-registry.png)
 
@@ -209,7 +209,7 @@ ESU를 다운로드하려면 다음 단계를 수행합니다.
 
 ## <a name="configure-regional-redundancy"></a>지역 중복 구성 
 
-**SQL Server 레지스트리**에 대한 지역 중복이 필요한 고객은 두 개의 고유한 지역에 등록 데이터를 만들 수 있습니다. 그러면 고객은 **SQL Server 레지스트리** 서비스 가용성에 따라 어느 지역에서나 보안 업데이트를 다운로드할 수 있습니다. 
+**SQL Server 레지스트리** 에 대한 지역 중복이 필요한 고객은 두 개의 고유한 지역에 등록 데이터를 만들 수 있습니다. 그러면 고객은 **SQL Server 레지스트리** 서비스 가용성에 따라 어느 지역에서나 보안 업데이트를 다운로드할 수 있습니다. 
 
 지역 중복을 위해 **SQL Server 레지스트리** 서비스를 두 개의 다른 지역에 만들어야 하며, SQL Server 인벤토리는 이러한 두 서비스 간에 분할되어야 합니다. 이러한 방식으로 SQL Server의 절반은 한 지역의 레지스트리 서비스에 등록 되고 SQL Server의 나머지 절반은 다른 지역의 레지스트리 서비스에 등록 됩니다. 
 
@@ -248,7 +248,7 @@ Microsoft 수명 주기 정책은 비즈니스 및 개발자 제품(예: [!INCLU
 
 **연장 보안 업데이트에는 무엇이 포함되나요?** 
 
-연장 보안 업데이트에는 2019년 7월 9일 이후 [Microsoft 보안 응답 센터(MSRC)](https://portal.msrc.microsoft.com/)에 의해 **중요**로 평가된 보안 업데이트 및 공지의 프로비전이 포함됩니다. 사용 가능해지면 연장 보안 업데이트가 배포됩니다. 연장 보안 업데이트에는 기술 지원이 포함되지 않지만 다른 [!INCLUDE[msCoName](../../includes/msconame-md.md)] 지원 계획을 사용하여 연장 보안 업데이트가 적용되는 워크로드에 대한 [!INCLUDE[ssKatmai](../../includes/ssKatmai-md.md)] 및 [!INCLUDE[ssKilimanjaro](../../includes/ssKilimanjaro-md.md)] 질문에 대한 지원을 받을 수 있습니다. 연장 보안 업데이트에는 새로운 기능, 기능 향상 또는 고객이 요청한 수정 사항이 포함되지 않습니다. 그러나 [!INCLUDE[msCoName](../../includes/msconame-md.md)]는 필요한 것으로 간주되는 비보안 픽스를 포함할 수 있습니다.
+연장 보안 업데이트에는 2019년 7월 9일 이후 [Microsoft 보안 응답 센터(MSRC)](https://portal.msrc.microsoft.com/)에 의해 **중요** 로 평가된 보안 업데이트 및 공지의 프로비전이 포함됩니다. 사용 가능해지면 연장 보안 업데이트가 배포됩니다. 연장 보안 업데이트에는 기술 지원이 포함되지 않지만 다른 [!INCLUDE[msCoName](../../includes/msconame-md.md)] 지원 계획을 사용하여 연장 보안 업데이트가 적용되는 워크로드에 대한 [!INCLUDE[ssKatmai](../../includes/ssKatmai-md.md)] 및 [!INCLUDE[ssKilimanjaro](../../includes/ssKilimanjaro-md.md)] 질문에 대한 지원을 받을 수 있습니다. 연장 보안 업데이트에는 새로운 기능, 기능 향상 또는 고객이 요청한 수정 사항이 포함되지 않습니다. 그러나 [!INCLUDE[msCoName](../../includes/msconame-md.md)]는 필요한 것으로 간주되는 비보안 픽스를 포함할 수 있습니다.
 
 **SQL Server 2008 및 2008 R2에 대한 연장 보안 업데이트가 "중요" 업데이트만 제공하는 이유는 무엇입니까?**
 
@@ -323,7 +323,7 @@ Azure 가상 머신에서 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.m
 - [SQL Server 2008/2008 R2 지원 종료 페이지](https://aka.ms/sqleos)
 - [연장 보안 업데이트 FAQ(질문과 대답)](https://aka.ms/sqleosfaq)
 - [Microsoft 보안 응답 센터(MSRC)](https://portal.msrc.microsoft.com/security-guidance/summary)
-- [Azure Automation을 사용하여 Windows 업데이트 관리](/azure/automation/automation-tutorial-update-management)
+- [Azure Automation을 사용하여 Windows 업데이트 관리](/azure/automation/update-management/overview)
 - [SQL Server VM 자동화된 패치 적용](/azure/virtual-machines/windows/sql/virtual-machines-windows-sql-automated-patching)
 - [Microsoft 데이터 마이그레이션 가이드](https://datamigration.microsoft.com/)
 - [Azure 마이그레이션: 현재 SQL Server 2008/2008 R2를 Azure VM으로 이동하는 리프트 앤 시프트 옵션](https://azure.microsoft.com/services/azure-migrate/)

@@ -10,12 +10,12 @@ ms.topic: conceptual
 author: pensivebrian
 ms.author: broneill
 manager: kenvh
-ms.openlocfilehash: 90485210bbc0fe657516306dd433f3241b5c90c9
-ms.sourcegitcommit: a5398f107599102af7c8cda815d8e5e9a367ce7e
+ms.openlocfilehash: d78df7ed144c1cb94f486a20bd65ffc9c1c9cafb
+ms.sourcegitcommit: d35d0901296580bfceda6e0ab2e14cf2b7e99a0f
 ms.translationtype: HT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 10/13/2020
-ms.locfileid: "92005974"
+ms.lasthandoff: 10/24/2020
+ms.locfileid: "92496704"
 ---
 # <a name="release-notes-for-sqlpackageexe"></a>SqlPackage.exe에 대한 릴리스 정보
 
@@ -57,7 +57,7 @@ Thanks.  GeneMi (MightyPen in GitHub).  2019-03-27
 ### <a name="fixes"></a>수정 프로그램
 | 기능 | 세부 정보 |
 | :------ | :------ | 
-| 배포 | sysadmin이 아닌 사용자로 Azure SQL Database Managed Instance를 대상으로 지정할 때 생성되는 잘못된 배포 스크립트를 수정했습니다.  | 
+| 배포 | sysadmin이 아닌 사용자로 Azure SQL Managed Instance를 대상으로 지정할 때 생성되는 잘못된 배포 스크립트를 수정했습니다.  | 
 | 배포 | 스크립트 작업 실행 시 배포 기여자 로드를 수정했습니다. | 
 | 도움말 | 작업이 1일보다 오래 걸리는 경우 sqlpackage에 경과된 시간을 올바르게 출력합니다. | 
 | 배포 | .NET Core에 대해 배포 시 dacpac 등록을 수정했습니다. | 
@@ -356,7 +356,7 @@ Thanks.  GeneMi (MightyPen in GitHub).  2019-03-27
 
 | Fix | 세부 정보 |
 | :-- | :------ |
-| 가져오기 | Azure SQL Database .bacpac를 온-프레미스 인스턴스로 가져올 때 _이 버전의 SQL Server에서는 암호가 없는 데이터베이스 마스터 키가 지원되지 않습니다_로 인한 오류를 수정했습니다. |
+| 가져오기 | Azure SQL Database .bacpac를 온-프레미스 인스턴스로 가져올 때 _이 버전의 SQL Server에서는 암호가 없는 데이터베이스 마스터 키가 지원되지 않습니다_ 로 인한 오류를 수정했습니다. |
 | 그래프 | 그래프 테이블에 대한 확인되지 않은 의사(pseudo) 열 오류를 수정했습니다. |
 | 스키마 비교 | 스키마를 비교하는 SQL 인증을 수정했습니다. | 
 | &nbsp; | &nbsp; |

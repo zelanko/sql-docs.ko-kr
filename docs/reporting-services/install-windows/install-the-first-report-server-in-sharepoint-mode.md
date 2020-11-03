@@ -8,12 +8,12 @@ ms.topic: conceptual
 author: maggiesMSFT
 ms.author: maggies
 monikerRange: '>=sql-server-2016 <=sql-server-2016||=sqlallproducts-allversions'
-ms.openlocfilehash: 3ccffdc3beca07d53302b7a7dceff0e30bbb6331
-ms.sourcegitcommit: 783b35f6478006d654491cb52f6edf108acf2482
+ms.openlocfilehash: eb16c276b9cc716f52e6ce73da5ec4ba3843dfbd
+ms.sourcegitcommit: 22e97435c8b692f7612c4a6d3fe9e9baeaecbb94
 ms.translationtype: HT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 10/09/2020
-ms.locfileid: "91891223"
+ms.lasthandoff: 10/27/2020
+ms.locfileid: "92678889"
 ---
 # <a name="install-the-first-report-server-in-sharepoint-mode"></a>SharePoint 모드에서 첫 번째 보고서 서버 설치
 
@@ -86,7 +86,7 @@ ms.locfileid: "91891223"
  
  2. 관리자로 **SharePoint 2016 관리 셸** 을 시작합니다. 
   
-    **SharePoint 2016 관리 셸** 을 마우스 오른쪽 단추로 클릭하고 **관리자 권한으로 실행**을 선택합니다.
+    **SharePoint 2016 관리 셸** 을 마우스 오른쪽 단추로 클릭하고 **관리자 권한으로 실행** 을 선택합니다.
 
 3. PowerShell 명령 프롬프트에서 다음 명령을 실행합니다.
 
@@ -105,66 +105,66 @@ ms.locfileid: "91891223"
     Get-SPServer SERVERNAME 
     ```
  
- 6. **역할** 에 **사용자 지정**이 나열됩니다.
+ 6. **역할** 에 **사용자 지정** 이 나열됩니다.
  
  ### <a name="install-reporting-services"></a>Reporting Services 설치
   
 1.  SQL Server 설치 마법사(Setup.exe)를 실행합니다.  
   
-2.  마법사의 왼쪽에서 **설치** 를 선택하고 **새 SQL Server 독립 실행형 설치 또는 기존 설치에 기능 추가**를 선택합니다.  
+2.  마법사의 왼쪽에서 **설치** 를 선택하고 **새 SQL Server 독립 실행형 설치 또는 기존 설치에 기능 추가** 를 선택합니다.  
 
 3.  **제품 키** 페이지가 표시되면 키를 입력하거나 기본값인 '평가판' 버전을 적용합니다.  
   
-     **다음**을 선택합니다.  
+     **다음** 을 선택합니다.  
   
 4.  사용 조건 페이지가 표시되면 사용 조건을 검토하고 동의합니다. 제품 기능 및 지원 향상에 도움이 되는 기능 사용량 현황 데이터 전송에 동의한 것에 감사한다는 메시지가 표시됩니다.  
   
-     **다음**을 선택합니다.  
+     **다음** 을 선택합니다.  
 
 5.  **Microsoft 업데이트를 사용하여 업데이트를 확인합니다(권장)** 를 선택하는 것이 좋습니다. 이 구성 요소는 선택 사항입니다.
   
-     **다음**을 선택합니다.   
+     **다음** 을 선택합니다.   
   
 6.  이미 컴퓨터에 설치된 기능에 따라 **설치 파일 설치** 페이지에 다음과 같은 메시지가 표시될 수 있습니다.  
   
     -   "영향을 받는 하나 이상의 파일에 보류 중인 작업이 있습니다. 설치 프로세스가 완료된 후 컴퓨터를 다시 시작해야 합니다."  
   
-    -   **다음**을 선택합니다.  
+    -   **다음** 을 선택합니다.  
   
-7.  **설치 규칙** 페이지가 표시되면 경고 또는 차단 문제를 검토합니다. 그런 후 **다음**을 선택합니다.
+7.  **설치 규칙** 페이지가 표시되면 경고 또는 차단 문제를 검토합니다. 그런 후 **다음** 을 선택합니다.
  
 8. **기능 선택** 페이지에서 다음을 선택합니다.  
   
     -   **Reporting Services – SharePoint**  
   
-    -   **SharePoint 제품용 Reporting Services 추가 기능**.  
+    -   **SharePoint 제품용 Reporting Services 추가 기능** .  
   
     -   SharePoint 데이터베이스를 호스트하는 SQL Server 데이터베이스 엔진 인스턴스가 있어야 하지만 필요에 따라 전체 환경에 **데이터베이스 엔진 서비스** 를 선택할 수도 있습니다.  
   
-     **다음**을 선택합니다.  
+     **다음** 을 선택합니다.  
   
-     ![rs_SetupFeatureSelection_SharePoint_with_circles](../../reporting-services/install-windows/media/rs-setupfeatureselection-sharepoint-with-circles.png)
+     ![Reporting Services - SharePoint 및 SharePoint 제품용 Reporting Services 추가 기능 옵션이 선택된 기능 선택 페이지의 스크린샷](../../reporting-services/install-windows/media/rs-setupfeatureselection-sharepoint-with-circles.png)
   
-9. 데이터베이스 엔진 서비스를 선택한 경우 **인스턴스 구성** 페이지에서 **MSSQLSERVER** 의 기본 인스턴스를 적용하고 **다음**을 클릭합니다.  
+9. 데이터베이스 엔진 서비스를 선택한 경우 **인스턴스 구성** 페이지에서 **MSSQLSERVER** 의 기본 인스턴스를 적용하고 **다음** 을 클릭합니다.  
   
      ![참고](/analysis-services/analysis-services/instances/install-windows/media/ssrs-fyi-note.png "참고")Reporting Services SharePoint 서비스 아키텍처는 이전 Reporting Services 아키텍처처럼 SQL Server "인스턴스"를 기반으로 하지 않습니다.  
   
-10. **서버 구성** 페이지가 표시되면 적합한 자격 증명을 입력합니다. Reporting Services 데이터 경고 또는 가입 기능을 사용하려면 SQL Server 에이전트의 **시작 유형**을 **자동**으로 변경해야 합니다. 컴퓨터에 이미 설치된 기능에 따라 **서버 구성** 페이지가 표시되지 않을 수 있습니다.  
+10. **서버 구성** 페이지가 표시되면 적합한 자격 증명을 입력합니다. Reporting Services 데이터 경고 또는 가입 기능을 사용하려면 SQL Server 에이전트의 **시작 유형** 을 **자동** 으로 변경해야 합니다. 컴퓨터에 이미 설치된 기능에 따라 **서버 구성** 페이지가 표시되지 않을 수 있습니다.  
   
-     **다음**을 선택합니다.  
+     **다음** 을 선택합니다.  
   
-11. 데이터베이스 엔진 서비스를 선택한 경우 **데이터베이스 엔진 구성** 페이지가 표시되면 해당 계정을 SQL 관리자 목록에 추가하고 **다음**을 선택합니다.  
+11. 데이터베이스 엔진 서비스를 선택한 경우 **데이터베이스 엔진 구성** 페이지가 표시되면 해당 계정을 SQL 관리자 목록에 추가하고 **다음** 을 선택합니다.  
   
 12. **Reporting Services 구성** 페이지에서 **설치만** 옵션이 선택된 상태로 표시되어야 합니다. 이 옵션은 보고서 서버 파일을 설치하고 Reporting Services용 SharePoint 환경을 구성하지 않습니다.  
   
     > [!NOTE]
     > SQL Server 설치가 완료되면 이 항목의 다른 섹션을 따라 SharePoint 환경을 구성합니다. 이 절차에는 Reporting Services 공유 서비스 설치 및 Reporting Services 서비스 애플리케이션 생성이 포함됩니다.  
   
-     ![ssRS-2016-setup-configuration](../../reporting-services/install-windows/media/ssrs-2016-setup-configuration.png)
+     ![설치만 옵션이 선택되고 설명선으로 표시된 Reporting Services SharePoint 통합 모드 섹션의 스크린샷](../../reporting-services/install-windows/media/ssrs-2016-setup-configuration.png)
   
 13. 이 페이지에서 중지하는 경우 경고를 검토한 다음 **기능 구성 규칙** 페이지에서 **다음** 을 선택합니다.  
   
-14. **설치 준비** 페이지에서 설치 요약을 검토합니다. 요약에 **SharePointFilesOnlyMode** 값을 표시하는 **Reporting Services SharePoint 모드**하위 노드가 포함됩니다. **설치**를 선택합니다.  
+14. **설치 준비** 페이지에서 설치 요약을 검토합니다. 요약에 **SharePointFilesOnlyMode** 값을 표시하는 **Reporting Services SharePoint 모드** 하위 노드가 포함됩니다. **설치** 를 선택합니다.  
   
 15. 설치하는 데 몇 분 정도 걸립니다. 기능 목록 및 각 기능의 상태가 표시된 **완료** 페이지가 나타납니다. 컴퓨터를 다시 시작해야 함을 나타내는 정보 대화 상자가 표시될 수 있습니다.  
   
@@ -188,18 +188,18 @@ ms.locfileid: "91891223"
   
 2.  **Microsoft SharePoint 2016 제품** 또는 **Microsoft SharePoint 2013 제품** 그룹을 선택합니다.  
   
-3.  **SharePoint 2016 관리 셸**또는 **SharePoint 2013 관리 셸**을 마우스 오른쪽 단추로 클릭하고 **관리자 권한으로 실행**을 선택합니다. 
+3.  **SharePoint 2016 관리 셸** 또는 **SharePoint 2013 관리 셸** 을 마우스 오른쪽 단추로 클릭하고 **관리자 권한으로 실행** 을 선택합니다. 
 
     > [!NOTE]
-    > SharePoint 명령은 표준 Windows PowerShell 창에서 인식되지 않습니다. **SharePoint 관리 셸**을 사용합니다.  
+    > SharePoint 명령은 표준 Windows PowerShell 창에서 인식되지 않습니다. **SharePoint 관리 셸** 을 사용합니다.  
   
-4.  다음 PowerShell 명령을 실행하여 Reporting Services SharePoint 서비스를 설치합니다. 명령을 성공적으로 완료하면 관리 셸에 새 줄이 표시됩니다. 명령을 성공적으로 완료하면**메시지가 관리 셸로 반환되지 않습니다.**  
+4.  다음 PowerShell 명령을 실행하여 Reporting Services SharePoint 서비스를 설치합니다. 명령을 성공적으로 완료하면 관리 셸에 새 줄이 표시됩니다. 명령을 성공적으로 완료하면 **메시지가 관리 셸로 반환되지 않습니다.**  
   
     ```  
     Install-SPRSService  
     ```  
   
-5.  다음 PowerShell 명령을 실행하여 Reporting Services 서비스 프록시를 설치합니다. 명령을 성공적으로 완료하면 관리 셸에 새 줄이 표시됩니다. 명령을 성공적으로 완료하면**메시지가 관리 셸로 반환되지 않습니다.**  
+5.  다음 PowerShell 명령을 실행하여 Reporting Services 서비스 프록시를 설치합니다. 명령을 성공적으로 완료하면 관리 셸에 새 줄이 표시됩니다. 명령을 성공적으로 완료하면 **메시지가 관리 셸로 반환되지 않습니다.**  
   
     ```  
     Install-SPRSServiceProxy  
@@ -226,22 +226,22 @@ ms.locfileid: "91891223"
   
 2.  **SQL Server Reporting Services 서비스** 를 찾고 동작 열의 **시작** 을 클릭합니다.  
   
-3.  Reporting Services 서비스 상태가 **중지됨** 에서 **시작됨**으로 변경됩니다. Reporting Services 서비스가 목록에 없으면 PowerShell을 사용하여 서비스를 설치합니다.  
+3.  Reporting Services 서비스 상태가 **중지됨** 에서 **시작됨** 으로 변경됩니다. Reporting Services 서비스가 목록에 없으면 PowerShell을 사용하여 서비스를 설치합니다.  
   
     > [!NOTE]  
-    >  Reporting Services 서비스가 **시작 중** 상태를 유지하고 **시작됨**으로 변경되지 않을 경우 'SharePoint 2013 관리' 서비스가 Windows Server Manager에서 시작되었는지 확인합니다.  
+    >  Reporting Services 서비스가 **시작 중** 상태를 유지하고 **시작됨** 으로 변경되지 않을 경우 'SharePoint 2013 관리' 서비스가 Windows Server Manager에서 시작되었는지 확인합니다.  
   
 ##  <a name="step-3-create-a-reporting-services-service-application"></a><a name="bkmk_create_serrviceapplication"></a> 3단계: Reporting Services 서비스 애플리케이션 만들기  
  이 섹션에서는 서비스 애플리케이션을 만드는 단계와 속성에 대한 설명(기존 서비스 애플리케이션을 검토하려는 경우)을 제공합니다.  
   
-1.  SharePoint 중앙 관리의 **애플리케이션 관리** 그룹에서 **서비스 애플리케이션 관리**를 선택합니다.  
+1.  SharePoint 중앙 관리의 **애플리케이션 관리** 그룹에서 **서비스 애플리케이션 관리** 를 선택합니다.  
   
 2.  SharePoint 리본에서 **새로 만들기** 단추를 선택합니다.  
   
-3.  새로 만들기 메뉴에서 **SQL Server Reporting Services 서비스 애플리케이션**을 선택합니다.  
+3.  새로 만들기 메뉴에서 **SQL Server Reporting Services 서비스 애플리케이션** 을 선택합니다.  
   
     > [!IMPORTANT]  
-    >  Reporting Services 옵션이 목록에 나타나지 않으면 **Reporting Services 공유 서비스가 설치되어 있지 않음을 나타냅니다**. PowerShell cmdlt을 사용하여 Reporting Services 서비스를 설치하는 방법에 대한 이전 섹션을 검토합니다.  
+    >  Reporting Services 옵션이 목록에 나타나지 않으면 **Reporting Services 공유 서비스가 설치되어 있지 않음을 나타냅니다** . PowerShell cmdlt을 사용하여 Reporting Services 서비스를 설치하는 방법에 대한 이전 섹션을 검토합니다.  
   
 4.  **SQL Server Reporting Services 서비스 애플리케이션 만들기** 페이지에서 애플리케이션의 이름을 입력합니다. 여러 개의 Reporting Services 서비스 애플리케이션을 만들 경우 설명이 포함된 이름이나 명명 규칙을 사용하면 관리 및 운영 작업을 구성하는 데 도움이 됩니다.  
   
@@ -249,15 +249,15 @@ ms.locfileid: "91891223"
   
      애플리케이션 풀에 대한 보안 계정을 선택하거나 만듭니다. 도메인 사용자 계정을 지정하세요. 도메인 사용자 계정을 사용하면 SharePoint의 관리되는 계정 기능을 사용할 수 있으므로 암호 및 계정 정보를 한 곳에서 업데이트할 수 있습니다. 같은 ID로 실행할 추가 서비스 인스턴스를 포함하도록 배포를 확장하려는 경우에도 도메인 계정이 필요합니다.  
   
-6.  **데이터베이스 서버**에서 현재 서버를 사용하거나 다른 SQL Server를 선택할 수 있습니다.  
+6.  **데이터베이스 서버** 에서 현재 서버를 사용하거나 다른 SQL Server를 선택할 수 있습니다.  
   
 7.  **데이터베이스 이름** 에서 기본값은 `ReportingService_<guid>`이고 고유한 데이터베이스 이름입니다. 새 값을 입력하는 경우 고유한 값을 입력합니다. 이 데이터베이스는 서비스 애플리케이션용으로 새로 만든 것입니다.  
   
-8.  **데이터베이스 인증**에서 기본값은 Windows  인증입니다. **SQL 인증**을 선택하는 경우 SharePoint 배포에서 이 인증 유형을 사용하는 최선의 구현 방법은 SharePoint 설명서를 참조하세요.  
+8.  **데이터베이스 인증** 에서 기본값은 Windows  인증입니다. **SQL 인증** 을 선택하는 경우 SharePoint 배포에서 이 인증 유형을 사용하는 최선의 구현 방법은 SharePoint 설명서를 참조하세요.  
   
 9. **웹 애플리케이션 연결** 섹션에서 현재 Reporting Services 서비스 애플리케이션에 의해 액세스하기 위해 프로비전 대상 웹 애플리케이션을 선택합니다. 하나의 Reporting Services 서비스 애플리케이션을 하나의 웹 애플리케이션에 연결할 수 있습니다. 모든 현재 웹 애플리케이션이 이미 Reporting Services 서비스 애플리케이션에 연결된 경우 경고 메시지가 표시됩니다.  
   
-10. **확인**을 선택합니다.  
+10. **확인** 을 선택합니다.  
   
 11. 서비스 애플리케이션 만들기를 완료하는 데 몇 분이 걸릴 수 있습니다. 완료되면 확인 메시지와 **구독 및 경고 프로비전** 페이지로 이동하는 링크가 표시됩니다. Reporting Services 구독 기능 및 데이터 경고 기능을 사용하려면 프로비전 단계를 완료합니다. 자세한 내용은 [SSRS 서비스 애플리케이션에 대한 구독 및 경고 프로비전](../../reporting-services/install-windows/provision-subscriptions-and-alerts-for-ssrs-service-applications.md)을 참조하세요.  
   
@@ -275,19 +275,19 @@ ms.locfileid: "91891223"
   
 #### <a name="to-activate-or-verify-the-power-view-site-collection-feature"></a>파워 뷰 사이트 모음 기능을 활성화하거나 확인하려면  
   
-1.  다음 단계에서는 SharePoint 사이트가 SharePoint 2013에 대한 2013 **환경 버전**에 대해 구성되었다고 가정합니다.  
+1.  다음 단계에서는 SharePoint 사이트가 SharePoint 2013에 대한 2013 **환경 버전** 에 대해 구성되었다고 가정합니다.  
   
      원하는 SharePoint 사이트로 브라우저를 엽니다. 예: https://\<servername>/sites/bi  
   
 2.  **설정**![SharePoint 설정](/analysis-services/analysis-services/media/as-sharepoint2013-settings-gear.gif "SharePoint 설정")을 선택합니다.  
   
-3.  **사이트 설정**을 선택합니다.  
+3.  **사이트 설정** 을 선택합니다.  
   
-4.  **사이트 모음 관리** 그룹에서 **사이트 모음 기능**을 선택합니다.  
+4.  **사이트 모음 관리** 그룹에서 **사이트 모음 기능** 을 선택합니다.  
   
 5.  목록에서 **Power View 통합 기능** 을 찾습니다.  
   
-6.  **활성화**를 선택합니다. 기능 상태가 **활성**으로 변경됩니다.  
+6.  **활성화** 를 선택합니다. 기능 상태가 **활성** 으로 변경됩니다.  
   
  이 절차는 사이트 모음별로 완료됩니다. 자세한 내용은 [SharePoint에서 보고서 서버 및 파워 뷰 통합 사이트 모음 기능 활성화](../../reporting-services/report-server-sharepoint/site-collection-features-report-server-and-power-view.md)를 참조하세요.  
   

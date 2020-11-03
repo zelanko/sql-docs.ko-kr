@@ -13,15 +13,15 @@ helpviewer_keywords:
 ms.assetid: 8cd21734-ef8e-4066-afd5-1f340e213f9c
 author: David-Engel
 ms.author: v-daenge
-ms.openlocfilehash: 17199fb610f707c77a6610d34c8b1a5f0166de13
-ms.sourcegitcommit: e700497f962e4c2274df16d9e651059b42ff1a10
+ms.openlocfilehash: b2767a89347329ee084c8b055bcb444dc4e78117
+ms.sourcegitcommit: 80701484b8f404316d934ad2a85fd773e26ca30c
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 08/17/2020
-ms.locfileid: "88424855"
+ms.lasthandoff: 11/03/2020
+ms.locfileid: "93243532"
 ---
 # <a name="asynchronous-execution-polling-method"></a>비동기 실행(폴링 메서드)
-ODBC 3.8 및 Windows 7 SDK 이전에는 문 함수 에서만 비동기 작업을 수행할 수 있었습니다. 자세한 내용은이 항목의 뒷부분에 나오는 **문 작업을 비동기적으로 실행**을 참조 하세요.  
+ODBC 3.8 및 Windows 7 SDK 이전에는 문 함수 에서만 비동기 작업을 수행할 수 있었습니다. 자세한 내용은이 항목의 뒷부분에 나오는 **문 작업을 비동기적으로 실행** 을 참조 하세요.  
   
  Windows 7 SDK의 ODBC 3.8에는 연결 관련 작업에 대 한 비동기 실행이 도입 되었습니다. 자세한 내용은이 항목의 뒷부분에 나오는 **비동기 연결 작업 실행** 섹션을 참조 하십시오.  
   
@@ -201,7 +201,7 @@ while ((rc = SQLExecDirect(hstmt1, SQLStatement, SQL_NTS)) == SQL_STILL_EXECUTIN
   
  특정 연결을 사용 하 여 실행 되는 함수가 비동기적으로 실행 되도록 지정 하려면 응용 프로그램은 **SQLSetConnectAttr** 를 호출 하 고 SQL_ATTR_ASYNC_DBC_FUNCTIONS_ENABLE 특성을 SQL_ASYNC_DBC_ENABLE_ON로 설정 합니다. 연결을 설정 하기 전에 연결 특성을 설정 하는 것은 항상 동기적으로 실행 됩니다. 또한 **SQLSetConnectAttr** 를 사용 하 여 SQL_ATTR_ASYNC_DBC_FUNCTIONS_ENABLE 연결 특성을 설정 하는 작업은 항상 동기적으로 실행 됩니다.  
   
- 응용 프로그램은 연결을 만들기 전에 비동기 작업을 사용 하도록 설정할 수 있습니다. 드라이버 관리자는 연결을 설정 하기 전에 사용할 드라이버를 결정할 수 없기 때문에 드라이버 관리자는 항상 **SQLSetConnectAttr**에서 성공을 반환 합니다. 그러나 ODBC 드라이버가 비동기 작업을 지원 하지 않는 경우 연결에 실패할 수 있습니다.  
+ 응용 프로그램은 연결을 만들기 전에 비동기 작업을 사용 하도록 설정할 수 있습니다. 드라이버 관리자는 연결을 설정 하기 전에 사용할 드라이버를 결정할 수 없기 때문에 드라이버 관리자는 항상 **SQLSetConnectAttr** 에서 성공을 반환 합니다. 그러나 ODBC 드라이버가 비동기 작업을 지원 하지 않는 경우 연결에 실패할 수 있습니다.  
   
  일반적으로 특정 연결 핸들이 나 문 핸들과 연결 된 비동기적으로 실행 되는 함수는 최대 하나만 있을 수 있습니다. 그러나 연결 핸들에는 두 개 이상의 연결 된 문 핸들이 있을 수 있습니다. 연결 핸들에서 실행 중인 비동기 작업이 없으면 연결 된 문 핸들이 비동기 작업을 실행할 수 있습니다. 마찬가지로, 연결 된 문 핸들에 대해 진행 중인 비동기 작업이 없는 경우 연결 핸들에 대해 비동기 작업을 수행할 수 있습니다. 현재 비동기 작업을 실행 하는 핸들을 사용 하 여 비동기 작업을 실행 하려는 시도는 HY010, "함수 시퀀스 오류"를 반환 합니다.  
   
@@ -233,23 +233,22 @@ while ((rc = SQLExecDirect(hstmt1, SQLStatement, SQL_NTS)) == SQL_STILL_EXECUTIN
   
  연결이 비동기적으로 열리거나 닫힐 때 응용 프로그램이 SQL_SUCCESS를 받거나 원래 함수 호출에서 SQL_SUCCESS_WITH_INFO 때 작업이 완료 됩니다.  
   
- 새 함수가 ODBC 3.8, **Sqlcancelhandle**에 추가 되었습니다. 이 함수는 6 개의 연결 함수 (**SQLBrowseConnect**, **SQLConnect**, **sqldisconnect**, **SQLDriverConnect**, **sqlendtran**및 **SQLSetConnectAttr**)를 취소 합니다. 응용 프로그램은 **SQLGetFunctions** 를 호출 하 여 드라이버가 **sqlcancelhandle**을 지원 하는지 확인 해야 합니다. **Sqlcancel**을 사용 하는 것 처럼 **sqlcancelhandle** 이 success를 반환 하는 경우 작업이 취소 된 것을 의미 하지는 않습니다. 응용 프로그램은 원래 함수를 다시 호출 하 여 작업이 취소 되었는지 여부를 확인 해야 합니다. **Sqlcancelhandle** 을 사용 하면 연결 핸들이 나 문 핸들에 대 한 비동기 작업을 취소할 수 있습니다. **Sqlcancelhandle** 을 사용 하 여 문 핸들에 대 한 작업을 취소 하는 것은 **sqlcancel**을 호출 하는 것과 같습니다.  
+ 새 함수가 ODBC 3.8, **Sqlcancelhandle** 에 추가 되었습니다. 이 함수는 6 개의 연결 함수 ( **SQLBrowseConnect** , **SQLConnect** , **sqldisconnect** , **SQLDriverConnect** , **sqlendtran** 및 **SQLSetConnectAttr** )를 취소 합니다. 응용 프로그램은 **SQLGetFunctions** 를 호출 하 여 드라이버가 **sqlcancelhandle** 을 지원 하는지 확인 해야 합니다. **Sqlcancel** 을 사용 하는 것 처럼 **sqlcancelhandle** 이 success를 반환 하는 경우 작업이 취소 된 것을 의미 하지는 않습니다. 응용 프로그램은 원래 함수를 다시 호출 하 여 작업이 취소 되었는지 여부를 확인 해야 합니다. **Sqlcancelhandle** 을 사용 하면 연결 핸들이 나 문 핸들에 대 한 비동기 작업을 취소할 수 있습니다. **Sqlcancelhandle** 을 사용 하 여 문 핸들에 대 한 작업을 취소 하는 것은 **sqlcancel** 을 호출 하는 것과 같습니다.  
   
- **Sqlcancelhandle** 과 비동기 연결 작업을 동시에 지원할 필요는 없습니다. 드라이버는 비동기 연결 작업을 지원할 수 있지만 **Sqlcancelhandle**은 지원할 수 없으며 그 반대의 경우도 마찬가지입니다.  
+ **Sqlcancelhandle** 과 비동기 연결 작업을 동시에 지원할 필요는 없습니다. 드라이버는 비동기 연결 작업을 지원할 수 있지만 **Sqlcancelhandle** 은 지원할 수 없으며 그 반대의 경우도 마찬가지입니다.  
   
  Odbc 3.8 드라이버 및 odbc 3.8 드라이버 관리자를 사용 하 여 ODBC 2.x 및 odbc 2.x 응용 프로그램에서 비동기 연결 작업 및 **Sqlcancelhandle** 을 사용할 수도 있습니다. 이전 응용 프로그램에서 이후 ODBC 버전의 새 기능을 사용 하도록 설정 하는 방법에 대 한 자세한 내용은 [호환성 매트릭스](../../../odbc/reference/develop-app/compatibility-matrix.md)를 참조 하세요.  
   
 ### <a name="connection-pooling"></a>연결 풀링  
- 연결 풀링을 사용 하도록 설정할 때마다 비동기 작업은 **SQLConnect** 및 **SQLDriverConnect**를 사용 하 여 연결을 설정 하 고 **sqldisconnect**를 사용 하 여 연결을 닫을 때만 최소한으로 지원 됩니다. 하지만 응용 프로그램은 **SQLConnect**, **SQLDriverConnect**및 **sqldisconnect**의 SQL_STILL_EXECUTING 반환 값을 처리할 수 있어야 합니다.  
+ 연결 풀링을 사용 하도록 설정할 때마다 비동기 작업은 **SQLConnect** 및 **SQLDriverConnect** 를 사용 하 여 연결을 설정 하 고 **sqldisconnect** 를 사용 하 여 연결을 닫을 때만 최소한으로 지원 됩니다. 하지만 응용 프로그램은 **SQLConnect** , **SQLDriverConnect** 및 **sqldisconnect** 의 SQL_STILL_EXECUTING 반환 값을 처리할 수 있어야 합니다.  
   
  연결 풀링을 사용 하도록 설정 하면 **Sqlendtran** 및 **SQLSetConnectAttr** 이 비동기 작업에 대해 지원 됩니다.  
   
-## <a name="example"></a>예제  
+## <a name="examples"></a>예  
   
-### <a name="description"></a>설명  
+### <a name="a-enable-asynchronous-execution-of-connection-functions"></a>A. 연결 함수의 비동기 실행 사용
+
  다음 예제에서는 **SQLSetConnectAttr** 를 사용 하 여 연결 관련 함수에 대해 비동기 실행을 사용 하도록 설정 하는 방법을 보여 줍니다.  
-  
-### <a name="code"></a>코드  
   
 ```  
 BOOL AsyncConnect (SQLHANDLE hdbc)   
@@ -298,12 +297,9 @@ BOOL AsyncConnect (SQLHANDLE hdbc)
   
 ```  
   
-## <a name="example"></a>예제  
-  
-### <a name="description"></a>설명  
+### <a name="b-asynchronous-commit-operations"></a>B. 비동기 커밋 작업 
+
  이 예제에서는 비동기 커밋 작업을 보여 줍니다. 이러한 방식으로 롤백 작업을 수행할 수도 있습니다.  
-  
-### <a name="code"></a>코드  
   
 ```  
 BOOL AsyncCommit ()   
@@ -330,4 +326,4 @@ BOOL AsyncCommit ()
 ```  
   
 ## <a name="see-also"></a>참고 항목  
- [문 실행 ODBC](../../../odbc/reference/develop-app/executing-statements-odbc.md)
+ [명령문 ODBC 실행](../../../odbc/reference/develop-app/executing-statements-odbc.md)

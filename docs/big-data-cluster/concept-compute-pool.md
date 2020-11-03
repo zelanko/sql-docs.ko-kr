@@ -9,18 +9,18 @@ ms.date: 10/15/2020
 ms.topic: conceptual
 ms.prod: sql
 ms.technology: big-data-cluster
-ms.openlocfilehash: 9c3374b0820233e20ee73b85947ed2b8a61847c0
-ms.sourcegitcommit: 4d370399f6f142e25075b3714e5c2ce056b1bfd0
+ms.openlocfilehash: b07b1480412dc8dd67535f58fcc4d223a9e91baa
+ms.sourcegitcommit: ab9ddcc16fdfc245cf9a49d1e90bb1ffe3958c38
 ms.translationtype: HT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 10/09/2020
-ms.locfileid: "91866821"
+ms.lasthandoff: 10/29/2020
+ms.locfileid: "92914323"
 ---
-# <a name="what-are-compute-pools-sql-server-big-data-clusters"></a>SQL Server 빅 데이터 클러스터의 컴퓨팅 풀이란?
+# <a name="what-are-compute-pools-in-a-sql-server-big-data-cluster"></a>SQL Server 빅 데이터 클러스터의 컴퓨팅 풀이란?
 
 [!INCLUDE[SQL Server 2019](../includes/applies-to-version/sqlserver2019.md)]
 
-이 문서에서는 SQL Server 빅 데이터 클러스터에서 ‘SQL Server 컴퓨팅 풀’의 역할을 설명합니다. 컴퓨팅 풀은 빅 데이터 클러스터에 스케일 아웃 계산 리소스를 제공합니다. SQL Server 마스터 인스턴스에서 계산 작업 또는 중간 결과 집합을 오프로드하는 데 사용됩니다. 다음 섹션에서는 컴퓨팅 풀의 아키텍처, 기능, 사용 시나리오에 대해 설명합니다.
+이 문서에서는 SQL Server 빅 데이터 클러스터에서 *SQL Server 컴퓨팅 풀* 의 역할을 설명합니다. 컴퓨팅 풀은 SQL Server 빅 데이터 클러스터에 스케일 아웃 컴퓨팅 리소스를 제공합니다. SQL Server 마스터 인스턴스에서 계산 작업 또는 중간 결과 집합을 오프로드하는 데 사용됩니다. 다음 섹션에서는 컴퓨팅 풀의 아키텍처, 기능, 사용 시나리오에 대해 설명합니다.
 
 컴퓨팅 풀을 소개하는 5분 분량의 다음 동영상을 시청할 수도 있습니다.
 
@@ -34,7 +34,7 @@ ms.locfileid: "91866821"
 
 ## <a name="scale-out-groups"></a>확장 그룹
 
-컴퓨팅 풀은 SQL Server, Oracle, MongoDB, Teradata, HDFS 등의 다양한 외부 데이터 원본에 대한 분산 쿼리를 위한 PolyBase 스케일 아웃 그룹 역할을 할 수 있습니다. Kubernetes의 컴퓨팅 Pod를 사용함으로써 빅 데이터 클러스터는 PolyBase 스케일 아웃 그룹의 컴퓨팅 Pod 생성 및 구성을 자동화할 수 있습니다.
+컴퓨팅 풀은 SQL Server, Oracle, MongoDB, Teradata, HDFS 등의 다양한 외부 데이터 원본에 대한 분산 쿼리를 위한 PolyBase 스케일 아웃 그룹 역할을 할 수 있습니다. SQL Server 빅 데이터 클러스터는 Kubernetes의 컴퓨팅 Pod를 사용하여 PolyBase 스케일 아웃 그룹의 컴퓨팅 Pod 생성 및 구성을 자동화할 수 있습니다.
 
 ## <a name="compute-pool-scenarios"></a>컴퓨팅 풀 시나리오
 

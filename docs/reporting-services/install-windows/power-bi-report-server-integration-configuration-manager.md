@@ -7,12 +7,12 @@ ms.prod: reporting-services
 ms.prod_service: reporting-services-native
 ms.topic: conceptual
 ms.date: 09/17/2017
-ms.openlocfilehash: 66893eb9b35ac0635600d6628c3ef0121d5d37c9
-ms.sourcegitcommit: 783b35f6478006d654491cb52f6edf108acf2482
+ms.openlocfilehash: 47964ebf5702542452227589e1426948825cc216
+ms.sourcegitcommit: 22e97435c8b692f7612c4a6d3fe9e9baeaecbb94
 ms.translationtype: HT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 10/09/2020
-ms.locfileid: "91891303"
+ms.lasthandoff: 10/27/2020
+ms.locfileid: "92678876"
 ---
 # <a name="power-bi-report-server-integration-configuration-manager"></a>Power BI 보고서 서버 통합(구성 관리자)
 
@@ -50,7 +50,7 @@ ms.locfileid: "91891303"
 
 1. [!INCLUDE[sspowerbi](../../includes/sspowerbi-md.md)] 통합 페이지를 선택합니다.
 
-2. **Power BI에 등록**을 선택합니다.
+2. **Power BI에 등록** 을 선택합니다.
 
     >[!Note]
     > 포트 443이 차단되지 않았는지 확인합니다.
@@ -79,17 +79,17 @@ ms.locfileid: "91891303"
 
 보고서 서버의 구성이 변경된 경우 **등록 업데이트** 를 사용합니다. 예를 들어 사용자가 [!INCLUDE[ssRSWebPortal](../../includes/ssrswebportal.md)]로 이동하는 데 사용하는 URL을 추가하거나 제거하려는 경우가 여기에 해당합니다.
 
-- [!INCLUDE[ssRSnoversion](../../includes/ssrsnoversion-md.md)] 구성 관리자에서 **웹 포털 URL**을 선택합니다.
+- [!INCLUDE[ssRSnoversion](../../includes/ssrsnoversion-md.md)] 구성 관리자에서 **웹 포털 URL** 을 선택합니다.
 
-     **고급**을 선택합니다.
+     **고급** 을 선택합니다.
 
-- **추가** 를 선택하여 [!INCLUDE[ssRSWebPortal](../../includes/ssrswebportal.md)] 에 대한 새 HTTP ID를 추가한 다음 **확인**을 선택합니다.
+- **추가** 를 선택하여 [!INCLUDE[ssRSWebPortal](../../includes/ssrswebportal.md)] 에 대한 새 HTTP ID를 추가한 다음 **확인** 을 선택합니다.
 
      서버 구성이 변경되었음을 나타내도록 [!INCLUDE[sspowerbi](../../includes/sspowerbi-md.md)] 아이콘이 변경됩니다.  ![ssrs_powebi_icon_warning](../../reporting-services/install-windows/media/ssrs-powebi-icon-warning.png "ssrs_powebi_icon_warning")
 
-- **Power BI 통합** 페이지에서 **등록 업데이트**를 선택합니다.
+- **Power BI 통합** 페이지에서 **등록 업데이트** 를 선택합니다.
 
-     Azure AD에 로그인하라는 메시지가 표시됩니다. 페이지가 새로 고쳐지고 **리디렉션 URL**에 새 URL이 나열됩니다.
+     Azure AD에 로그인하라는 메시지가 표시됩니다. 페이지가 새로 고쳐지고 **리디렉션 URL** 에 새 URL이 나열됩니다.
 
 ##  <a name="summary-of-the-power-bi-integration-and-pin-process"></a><a name="bkmk_integration_process"></a> Power BI 통합 및 고정 프로세스 요약
 
@@ -125,11 +125,11 @@ ms.locfileid: "91891303"
 
 7. 대시보드 타일에서 보고서 항목의 예약된 새로 고침을 관리하기 위해 [!INCLUDE[ssRSnoversion](../../includes/ssrsnoversion-md.md)] 구독이 만들어집니다. 이 구독에서는 사용자가 로그인할 때 생성된 보안 토큰을 사용합니다.
 
-     토큰은 **90일**동안 유효합니다. 이후에는 사용자가 다시 로그인하여 새 사용자 토큰을 만들어야 합니다. 토큰이 만료된 경우 고정된 타일은 대시보드에 계속 표시되지만 데이터가 더 이상 새로 고쳐지지 않습니다.  새 사용자 토큰이 만들어질 때까지 고정된 항목에 사용된 [!INCLUDE[ssRSnoversion](../../includes/ssrsnoversion-md.md)] 구독에서 오류가 발생합니다. [Power BI 통합을 위한 내 설정&#40;웹 포털&#41;](../my-settings-for-power-bi-integration-web-portal.md)을 참조하세요. 이동하세요.
+     토큰은 **90일** 동안 유효합니다. 이후에는 사용자가 다시 로그인하여 새 사용자 토큰을 만들어야 합니다. 토큰이 만료된 경우 고정된 타일은 대시보드에 계속 표시되지만 데이터가 더 이상 새로 고쳐지지 않습니다.  새 사용자 토큰이 만들어질 때까지 고정된 항목에 사용된 [!INCLUDE[ssRSnoversion](../../includes/ssrsnoversion-md.md)] 구독에서 오류가 발생합니다. [Power BI 통합을 위한 내 설정&#40;웹 포털&#41;](../my-settings-for-power-bi-integration-web-portal.md)을 참조하세요. 이동하세요.
 
 사용자가 두 번째로 항목을 고정하는 경우에는 1~4단계를 건너뛰고 대신 앱 ID와 URL이 ReportServer 데이터베이스에서 검색되며 5단계로 진행됩니다.
 
-![ssRS-pin-to-powerbi-flow](../../reporting-services/install-windows/media/ssrs-pin-to-powerbi-flow.png)
+![사용자가 대시보드에 보고서 항목을 고정할 때 발생하는 프로세스를 보여 주는 다이어그램](../../reporting-services/install-windows/media/ssrs-pin-to-powerbi-flow.png)
 
  **대시보드 타일을 새로 고치기 위해 구독이 실행되는 경우**
 
@@ -143,7 +143,7 @@ ms.locfileid: "91891303"
 
 5. 토큰이 유효하지 않은 경우 오류가 반환되고 보고서 서버에 기록됩니다.  상태 또는 기타 정보가 대시보드에 전송되지 않습니다.
 
-![ssRS-subscription-to-powerbi-flow](../../reporting-services/install-windows/media/ssrs-subscription-to-powerbi-flow.png)
+![대시보드 타일을 새로 고치기 위해 구독이 실행될 때 발생하는 프로세스를 보여 주는 다이어그램](../../reporting-services/install-windows/media/ssrs-subscription-to-powerbi-flow.png)
 
    <iframe width="560" height="315" src="https://www.youtube.com/embed/QhPQObqmMPc" frameborder="0" allowfullscreen></iframe>
 

@@ -10,13 +10,13 @@ author: dzsquared
 ms.author: drskwier
 ms.reviewer: maghan
 ms.custom: seo-lt-2019
-ms.date: 10/20/2020
-ms.openlocfilehash: f70911bbb2f7907e5fa083622ae11d9e947aa592
-ms.sourcegitcommit: ae474d21db4f724523e419622ce79f611e956a22
+ms.date: 10/27/2020
+ms.openlocfilehash: ce232d98e441d6ce217a2f97f6b8b1b5e130b7f3
+ms.sourcegitcommit: b09f069c6bef0655b47e9953a4385f1b52bada2b
 ms.translationtype: HT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 10/20/2020
-ms.locfileid: "92257880"
+ms.lasthandoff: 10/27/2020
+ms.locfileid: "92734643"
 ---
 # <a name="release-notes-for-sql-server-management-studio-ssms"></a>SSMS(SQL Server Management Studio) 릴리스 정보
 
@@ -25,6 +25,64 @@ ms.locfileid: "92257880"
 이 문서에서는 SSMS의 현재 버전과 이전 버전에 대한 업데이트, 향상 및 버그 수정에 대한 세부 정보를 제공합니다.
 
 ## <a name="current-ssms-release"></a>현재 SSMS 릴리스
+
+### <a name="1871"></a>18.7.1
+
+![다운로드](media/download-icon.png) [SSMS 18.7 다운로드](download-sql-server-management-studio-ssms.md)
+
+- 릴리스 번호: 18.7.1
+- 빌드 번호: 15.0.18358.0
+- 릴리스 날짜: 2020년 10월 27일
+
+[중국어(간체)](https://go.microsoft.com/fwlink/?linkid=2147207&clcid=0x804) | [중국어(번체)](https://go.microsoft.com/fwlink/?linkid=2147207&clcid=0x404) | [영어(미국)](https://go.microsoft.com/fwlink/?linkid=2147207&clcid=0x409) | [프랑스어](https://go.microsoft.com/fwlink/?linkid=2147207&clcid=0x40c) | [독일어](https://go.microsoft.com/fwlink/?linkid=2147207&clcid=0x407) | [이탈리아어](https://go.microsoft.com/fwlink/?linkid=2147207&clcid=0x410) | [일본어](https://go.microsoft.com/fwlink/?linkid=2147207&clcid=0x411) | [한국어](https://go.microsoft.com/fwlink/?linkid=2147207&clcid=0x412) | [포르투갈어(브라질)](https://go.microsoft.com/fwlink/?linkid=2147207&clcid=0x416) | [러시아어](https://go.microsoft.com/fwlink/?linkid=2147207&clcid=0x419) | [스페인어](https://go.microsoft.com/fwlink/?linkid=2147207&clcid=0x40a)
+
+SSMS 18.7은 SSMS의 최신 GA(일반 공급) 릴리스입니다. 이전 버전의 SSMS가 필요한 경우 [이전 SSMS 릴리스](release-notes-ssms.md#previous-ssms-releases)를 참조하세요.
+
+#### <a name="whats-new-in-1871"></a>18.7.1의 새로운 기능
+
+[!INCLUDE [ssms-ads-install](../includes/ssms-azure-data-studio-install.md)]
+
+
+#### <a name="bug-fixes-in-1871"></a>18.7.1의 버그 수정
+
+| 새 항목 | 세부 정보 |
+|----------|---------|
+| 쿼리 저장소 | 쿼리 저장소의 개체 탐색기 노드를 마우스 오른쪽 단추로 클릭할 때 발생하는 오류를 수정했습니다. |
+
+
+#### <a name="known-issues-1871"></a>알려진 문제(18.7.1)
+
+| 새 항목 | 세부 정보 | 해결 방법 |
+|----------|---------|------------|
+| Analysis Services | msmdpump.dll을 통해 SSAS에 연결할 때 오류가 발생합니다. [SQL Server 사용자 피드백](https://feedback.azure.com/forums/908035-sql-server/suggestions/40144696)을 참조하세요. | 해당 없음 |
+| Analysis Services | 드물지만 업그레이드 설치 프로그램을 사용할 때 SSMS를 업그레이드한 후 DAX 편집기를 열려고 하면 "개체가 개체의 인스턴스로 설정되지 않았음" 오류가 발생할 수 있습니다. | 이 문제를 해결하려면 SSMS를 제거한 다음 다시 설치합니다. |
+| 일반 SSMS | 새 서버 감사 사양 대화 상자에서 SSMS가 액세스 위반 오류로 인해 충돌을 일으킬 수 있습니다. | 해당 없음 |
+| 일반 SSMS | SMO를 사용하는 SSMS 확장을 새로운 SSMS용 v161 패키지를 대상으로 지정하여 다시 컴파일해야 합니다. https://www.nuget.org/packages/Microsoft.SqlServer.SqlManagementObjects.SSMS/ 에서 미리 보기 버전을 사용할 수 있습니다. </br></br> Microsoft.SqlServer.SqlManagementObjects 패키지의 이전 160개 버전에 대해 컴파일된 확장도 계속해서 작동합니다. | 해당 없음 |
+| Integration Services | Azure-SSIS Integration Runtime에서 패키지를 가져오거나 내보낼 때 Integration Services 스크립트 태스크/구성 요소가 포함된 패키지에 대한 스크립트가 손실됩니다. 해결 방법: “C:\Program Files (x86)\Microsoft SQL Server Management Studio 18\Common7\IDE\CommonExtensions\MSBuild” 폴더를 제거합니다. | 해당 없음 |
+| Integration Services | 최신 운영 체제에서 Integration Services에 대한 원격 연결이 "지정된 서비스가 설치된 서비스로 존재하지 않습니다." 오류와 함께 실패할 수 있습니다. 해결 방법: Computer\HKEY_CLASSES_ROOT\AppID & Computer\HKEY_CLASSES_ROOT\ WOW6432Node\AppID에서 Integration Services 관련 레지스트리 위치를 확인하고, 이러한 하이브 내에서 연결하려는 특정 버전의 Integration Services에 대해 'LocalService'라는 레지스트리 키 이름을 'LocalService_A'로 바꿉니다. | 해당 없음 |
+| 개체 탐색기 | 18.7 이전의 SSMS 릴리스는 [Azure Synapse Analytics SQL 주문형](https://docs.microsoft.com/azure/synapse-analytics/sql/on-demand-workspace-overview)과 관련된 엔진 변경 사항으로 인해 개체 탐색기에서 호환성이 손상되는 변경이 적용되었습니다. | Azure Synapse Analytics SQL 주문형 SSMS에서 개체 탐색기를 계속 활용하려면 SSMS 18.7 이상이 필요합니다. |
+
+다른 알려진 문제를 확인하고 제품 팀에 피드백을 제공하려면 [SQL Server 사용자 피드백](https://feedback.azure.com/forums/908035-sql-server)을 참조하세요.
+
+## <a name="previous-ssms-releases"></a>이전 SSMS 릴리스
+
+[!INCLUDE[ssms-connect-aazure-ad](../includes/ssms-connect-azure-ad.md)]
+
+관련 섹션에서 다운로드 링크를 선택하여 이전 SSMS 버전을 다운로드합니다.
+
+| SSMS 버전 | 빌드 번호 | 릴리스 날짜 |
+|--------------|--------------|--------------|
+| [18.7](#187) | 15.0.18357.0 | 2020년 10월 20일 |
+| [18.6](#186) | 15.0.18338.0 | 2020년 7월 22일 |
+| [18.5.1](#1851) | 15.0.18333.0 | 2020년 6월 9일 |
+| [18.5](#185) | 15.0.18330.0 | 2020년 4월 7일 |
+| [18.4](#184) | 15.0.18206.0 | 2019년 11월 4일 |
+| [18.3.1](#1831) | 15.0.18183.0 | 2019년 10월 2일 |
+| [18.2](#182) | 15.0.18142.0 | 2019년 7월 25일 |
+| [18.1](#181) | 15.0.18131.0 | 2019년 6월 11일 |
+| [18.0](#180) | 15.0.18118.0 | 2019년 4월 24일 |
+| [17.9.1](#1791) | 14.0.17289.0 | 2018년 11월 21일 |
+| [16.5.3](#1653) | 13.0.16106.4 | 2017년 1월 30일 |
 
 ### <a name="187"></a>18.7
 
@@ -38,7 +96,7 @@ ms.locfileid: "92257880"
 
 SSMS 18.7은 SSMS의 최신 GA(일반 공급) 릴리스입니다. 이전 버전의 SSMS가 필요한 경우 [이전 SSMS 릴리스](release-notes-ssms.md#previous-ssms-releases)를 참조하세요.
 
-### <a name="whats-new-in-187"></a>18.7의 새로운 기능
+#### <a name="whats-new-in-187"></a>18.7의 새로운 기능
 
 [!INCLUDE [ssms-ads-install](../includes/ssms-azure-data-studio-install.md)]
 
@@ -53,7 +111,7 @@ SSMS 18.7은 SSMS의 최신 GA(일반 공급) 릴리스입니다. 이전 버전�
 | 실행 계획 | PREDICT 연산자를 추가했습니다. |
 | XEvent UI | wait_type 이름을 사용하여 확장 이벤트를 스크립팅하는 기능이 추가되었습니다. 사용자들이 버전을 업그레이드하는 동안 키 값이 변경될 수 있으므로 wait_type 필터 조건자에서 map_key 대신 map_value 열의 값을 사용할 수 있도록 요청했습니다. 해결 방법: 확인란을 추가하여 사용자가 wait_type 필터 조건자 값에 map_value 또는 map_key을 선택할 수 있는 옵션을 추가했습니다. |
 
-### <a name="bug-fixes-in-187"></a>18.7의 버그 수정
+#### <a name="bug-fixes-in-187"></a>18.7의 버그 수정
 
 | 새 항목 | 세부 정보 |
 |----------|---------|
@@ -101,28 +159,8 @@ SSMS 18.7은 SSMS의 최신 GA(일반 공급) 릴리스입니다. 이전 버전�
 | 일반 SSMS | SMO를 사용하는 SSMS 확장을 새로운 SSMS용 v161 패키지를 대상으로 지정하여 다시 컴파일해야 합니다. https://www.nuget.org/packages/Microsoft.SqlServer.SqlManagementObjects.SSMS/ 에서 미리 보기 버전을 사용할 수 있습니다. </br></br> Microsoft.SqlServer.SqlManagementObjects 패키지의 이전 160개 버전에 대해 컴파일된 확장도 계속해서 작동합니다. | 해당 없음 |
 | Integration Services | Azure-SSIS Integration Runtime에서 패키지를 가져오거나 내보낼 때 Integration Services 스크립트 태스크/구성 요소가 포함된 패키지에 대한 스크립트가 손실됩니다. 해결 방법: “C:\Program Files (x86)\Microsoft SQL Server Management Studio 18\Common7\IDE\CommonExtensions\MSBuild” 폴더를 제거합니다. | 해당 없음 |
 | Integration Services | 최신 운영 체제에서 Integration Services에 대한 원격 연결이 "지정된 서비스가 설치된 서비스로 존재하지 않습니다." 오류와 함께 실패할 수 있습니다. 해결 방법: Computer\HKEY_CLASSES_ROOT\AppID & Computer\HKEY_CLASSES_ROOT\ WOW6432Node\AppID에서 Integration Services 관련 레지스트리 위치를 확인하고, 이러한 하이브 내에서 연결하려는 특정 버전의 Integration Services에 대해 'LocalService'라는 레지스트리 키 이름을 'LocalService_A'로 바꿉니다. | 해당 없음 |
-| 개체 탐색기 | 18.7 이전의 SSMS 릴리스는 [Azure Synapse Analytics SQL 주문형](https://docs.microsoft.com/azure/synapse-analytics/sql/on-demand-workspace-overview)과 관련된 엔진 변경 사항으로 인해 개체 탐색기에서 호환성이 손상되는 변경이 적용되었습니다. | Azure Synapse Analytics SQL 주문형 SSMS에서 개체 탐색기를 계속 활용하려면 SSMS 18.7 이상이 필요합니다.
-
-다른 알려진 문제를 확인하고 제품 팀에 피드백을 제공하려면 [SQL Server 사용자 피드백](https://feedback.azure.com/forums/908035-sql-server)을 참조하세요.
-
-## <a name="previous-ssms-releases"></a>이전 SSMS 릴리스
-
-[!INCLUDE[ssms-connect-aazure-ad](../includes/ssms-connect-azure-ad.md)]
-
-관련 섹션에서 다운로드 링크를 선택하여 이전 SSMS 버전을 다운로드합니다.
-
-| SSMS 버전 | 빌드 번호 | 릴리스 날짜 |
-|--------------|--------------|--------------|
-| [18.6](#186) | 15.0.18338.0 | 2020년 7월 22일 |
-| [18.5.1](#1851) | 15.0.18333.0 | 2020년 6월 9일 |
-| [18.5](#185) | 15.0.18330.0 | 2020년 4월 7일 |
-| [18.4](#184) | 15.0.18206.0 | 2019년 11월 4일 |
-| [18.3.1](#1831) | 15.0.18183.0 | 2019년 10월 2일 |
-| [18.2](#182) | 15.0.18142.0 | 2019년 7월 25일 |
-| [18.1](#181) | 15.0.18131.0 | 2019년 6월 11일 |
-| [18.0](#180) | 15.0.18118.0 | 2019년 4월 24일 |
-| [17.9.1](#1791) | 14.0.17289.0 | 2018년 11월 21일 |
-| [16.5.3](#1653) | 13.0.16106.4 | 2017년 1월 30일 |
+| 개체 탐색기 | 18.7 이전의 SSMS 릴리스는 [Azure Synapse Analytics SQL 주문형](https://docs.microsoft.com/azure/synapse-analytics/sql/on-demand-workspace-overview)과 관련된 엔진 변경 사항으로 인해 개체 탐색기에서 호환성이 손상되는 변경이 적용되었습니다. | Azure Synapse Analytics SQL 주문형 SSMS에서 개체 탐색기를 계속 활용하려면 SSMS 18.7 이상이 필요합니다. |
+| 쿼리 저장소 | 쿼리 저장소의 개체 탐색기 노드를 마우스 오른쪽 단추로 클릭하면 오류가 발생합니다. | 노드를 확장하고 개별 하위 옵션을 마우스 오른쪽 단추로 클릭하여 항목에 직접 액세스합니다. |
 
 ### <a name="186"></a>18.6
 
@@ -134,7 +172,7 @@ SSMS 18.7은 SSMS의 최신 GA(일반 공급) 릴리스입니다. 이전 버전�
 
 [중국어(간체)](https://go.microsoft.com/fwlink/?linkid=2135491&clcid=0x804) | [중국어(번체)](https://go.microsoft.com/fwlink/?linkid=2135491&clcid=0x404) | [영어(미국)](https://go.microsoft.com/fwlink/?linkid=2135491&clcid=0x409) | [프랑스어](https://go.microsoft.com/fwlink/?linkid=2135491&clcid=0x40c) | [독일어](https://go.microsoft.com/fwlink/?linkid=2135491&clcid=0x407) | [이탈리아어](https://go.microsoft.com/fwlink/?linkid=2135491&clcid=0x410) | [일본어](https://go.microsoft.com/fwlink/?linkid=2135491&clcid=0x411) | [한국어](https://go.microsoft.com/fwlink/?linkid=2135491&clcid=0x412) | [포르투갈어(브라질)](https://go.microsoft.com/fwlink/?linkid=2135491&clcid=0x416) | [러시아어](https://go.microsoft.com/fwlink/?linkid=2135491&clcid=0x419) | [스페인어](https://go.microsoft.com/fwlink/?linkid=2135491&clcid=0x40a)
 
-### <a name="whats-new-in-186"></a>18.6의 새로운 기능
+#### <a name="whats-new-in-186"></a>18.6의 새로운 기능
 
 | 새 항목 | 세부 정보 |
 |----------|---------|
@@ -147,7 +185,7 @@ SSMS 18.7은 SSMS의 최신 GA(일반 공급) 릴리스입니다. 이전 버전�
 | SMO/스크립팅 | [Azure Synapse Analytics](/azure/synapse-analytics/sql-data-warehouse/sql-data-warehouse-overview-what-is)(이전 명칭: SQL Azure DW)에서 동적 데이터 마스킹 스크립팅을 위한 지원이 추가되었습니다. |
 | SMO/스크립팅 | [Azure Synapse Analytics](/azure/synapse-analytics/sql-data-warehouse/sql-data-warehouse-overview-what-is)(이전 명칭: SQL DW)에서 보안 정책 스크립팅을 위한 지원이 추가되었습니다. |
 
-### <a name="bug-fixes-in-186"></a>18.6의 버그 수정
+#### <a name="bug-fixes-in-186"></a>18.6의 버그 수정
 
 | 새 항목 | 세부 정보 |
 |----------|---------|
@@ -193,7 +231,7 @@ SSMS 18.7은 SSMS의 최신 GA(일반 공급) 릴리스입니다. 이전 버전�
 
 [중국어(간체)](https://go.microsoft.com/fwlink/?linkid=2132606&clcid=0x804) | [중국어(번체)](https://go.microsoft.com/fwlink/?linkid=2132606&clcid=0x404) | [영어(미국)](https://go.microsoft.com/fwlink/?linkid=2132606&clcid=0x409) | [프랑스어](https://go.microsoft.com/fwlink/?linkid=2132606&clcid=0x40c) | [독일어](https://go.microsoft.com/fwlink/?linkid=2132606&clcid=0x407) | [이탈리아어](https://go.microsoft.com/fwlink/?linkid=2132606&clcid=0x410) | [일본어](https://go.microsoft.com/fwlink/?linkid=2132606&clcid=0x411) | [한국어](https://go.microsoft.com/fwlink/?linkid=2132606&clcid=0x412) | [포르투갈어(브라질)](https://go.microsoft.com/fwlink/?linkid=2132606&clcid=0x416) | [러시아어](https://go.microsoft.com/fwlink/?linkid=2132606&clcid=0x419) | [스페인어](https://go.microsoft.com/fwlink/?linkid=2132606&clcid=0x40a)
 
-### <a name="bug-fixes-in-1851"></a>18.5.1의 버그 수정
+#### <a name="bug-fixes-in-1851"></a>18.5.1의 버그 수정
 
 | 새 항목 | 세부 정보 |
 |----------|---------|
@@ -202,7 +240,7 @@ SSMS 18.7은 SSMS의 최신 GA(일반 공급) 릴리스입니다. 이전 버전�
 | Analysis Services | 사용자가 셀 데이터 권한으로 SSAS 2017 및 이전 버전을 쿼리할 수 없도록 하는 문제를 해결했습니다. |
 | 일반 SSMS | [테이블 디자이너 - 테이블 디자이너 그리드에서 TAB 키를 사용하려고 할 때 발생하는 경고음이 해결했습니다](https://feedback.azure.com/forums/908035/suggestions/40318435) |
 
-### <a name="known-issues-1851"></a>알려진 문제(18.5.1)
+#### <a name="known-issues-1851"></a>알려진 문제(18.5.1)
 
 | 새 항목 | 세부 정보 | 해결 방법 |
 |----------|---------|------------|
@@ -221,7 +259,7 @@ SSMS 18.7은 SSMS의 최신 GA(일반 공급) 릴리스입니다. 이전 버전�
 
 [중국어(간체)](https://go.microsoft.com/fwlink/?linkid=2125901&clcid=0x804) | [중국어(번체)](https://go.microsoft.com/fwlink/?linkid=2125901&clcid=0x404) | [영어(미국)](https://go.microsoft.com/fwlink/?linkid=2125901&clcid=0x409) | [프랑스어](https://go.microsoft.com/fwlink/?linkid=2125901&clcid=0x40c) | [독일어](https://go.microsoft.com/fwlink/?linkid=2125901&clcid=0x407) | [이탈리아어](https://go.microsoft.com/fwlink/?linkid=2125901&clcid=0x410) | [일본어](https://go.microsoft.com/fwlink/?linkid=2125901&clcid=0x411) | [한국어](https://go.microsoft.com/fwlink/?linkid=2125901&clcid=0x412) | [포르투갈어(브라질)](https://go.microsoft.com/fwlink/?linkid=2125901&clcid=0x416) | [러시아어](https://go.microsoft.com/fwlink/?linkid=2125901&clcid=0x419) | [스페인어](https://go.microsoft.com/fwlink/?linkid=2125901&clcid=0x40a)
 
-### <a name="whats-new-in-185"></a>18.5의 새로운 기능
+#### <a name="whats-new-in-185"></a>18.5의 새로운 기능
 
 | 새 항목 | 세부 정보 |
 |----------|---------|
@@ -242,7 +280,7 @@ SSMS 18.7은 SSMS의 최신 GA(일반 공급) 릴리스입니다. 이전 버전�
 | SMO/스크립팅 | [SQL 평가 API](../tools/sql-assessment-api/sql-assessment-api-overview.md) - Platform, Name 및 engineEdition 필드에는 이제 일반적인 쉼표로 구분된 목록( *platform* : \[*Windows* , *Linux*\])뿐 아니라 정규식( *platform* : *\/Windows\|Linux\/* )도 포함될 수 있습니다.
 | SMO/스크립팅 | [SQL 평가 API](../tools/sql-assessment-api/sql-assessment-api-overview.md) - 13개의 평가 규칙이 추가되었습니다. 자세한 내용은 [GitHub](https://github.com/microsoft/sql-server-samples/tree/master/samples/manage/sql-assessment-api))를 참조하세요. |
 
-### <a name="bug-fixes-in-185"></a>18.5의 버그 수정
+#### <a name="bug-fixes-in-185"></a>18.5의 버그 수정
 
 | 새 항목 | 세부 정보 |
 |----------|---------|
@@ -298,7 +336,7 @@ SSMS 18.7은 SSMS의 최신 GA(일반 공급) 릴리스입니다. 이전 버전�
 | SMO/스크립팅 | [SQL 평가 API](../tools/sql-assessment-api/sql-assessment-api-overview.md) - XTPHashAvgChainBuckets 규칙에서 도움말 링크가 잘못되었습니다. |
 | XEvent UI | 표에서 마우스로 가리키면 항목이 선택되는 문제를 수정했습니다. [SQL Server 사용자 피드백](https://feedback.azure.com/forums/908035/suggestions/38262124) 및 [SQL Server 사용자 피드백](https://feedback.azure.com/forums/908035-sql-server/suggestions/37873921)을 참조하세요. |
 
-### <a name="known-issues-185"></a>알려진 문제(18.5)
+#### <a name="known-issues-185"></a>알려진 문제(18.5)
 
 | 새 항목 | 세부 정보 | 해결 방법 |
 |----------|---------|------------|
@@ -432,7 +470,7 @@ SSMS 18.7은 SSMS의 최신 GA(일반 공급) 릴리스입니다. 이전 버전�
 
 [중국어(간체)](https://go.microsoft.com/fwlink/?linkid=2099720&clcid=0x804) | [중국어(번체)](https://go.microsoft.com/fwlink/?linkid=2099720&clcid=0x404) | [영어(미국)](https://go.microsoft.com/fwlink/?linkid=2099720&clcid=0x409) | [프랑스어](https://go.microsoft.com/fwlink/?linkid=2099720&clcid=0x40c) | [독일어](https://go.microsoft.com/fwlink/?linkid=2099720&clcid=0x407) | [이탈리아어](https://go.microsoft.com/fwlink/?linkid=2094583&clcid=0x410) | [일본어](https://go.microsoft.com/fwlink/?linkid=2099720&clcid=0x411) | [한국어](https://go.microsoft.com/fwlink/?linkid=2099720&clcid=0x412) | [포르투갈어(브라질)](https://go.microsoft.com/fwlink/?linkid=2099720&clcid=0x416) | [러시아어](https://go.microsoft.com/fwlink/?linkid=2099720&clcid=0x419) | [스페인어](https://go.microsoft.com/fwlink/?linkid=2099720&clcid=0x40a)
 
-### <a name="whats-new-in-182"></a>18.2의 새로운 기능
+#### <a name="whats-new-in-182"></a>18.2의 새로운 기능
 
 | 새 항목 | 세부 정보 |
 |----------|---------|
@@ -623,7 +661,7 @@ SSMS 18.7은 SSMS의 최신 GA(일반 공급) 릴리스입니다. 이전 버전�
 |데이터 분류|'데이터 분류' 기능이 SMO에 새로 추가되었습니다. 열 개체에서 새로운 SensitivityLabelName, SensitivityLabelId, SensitivityInformationTypeName, SensitivityInformationTypeId 및 IsClassified(읽기 전용) 속성을 표시합니다. 자세한 내용은 [ADD SENSITIVITY CLASSIFICATION(Transact-SQL)](../t-sql/statements/add-sensitivity-classification-transact-sql.md)을 참조하세요.|
 |데이터 분류|"분류 보고서" 메뉴 항목이 "데이터 분류" 플라이아웃에 새로 추가되었습니다.|
 |데이터 분류| 업데이트된 권장 사항.|
-|데이터베이스 호환성 수준 업그레이드|***데이터베이스 이름*** > ***작업*** > ***데이터베이스 업그레이드*** 아래에 새 옵션이 추가되었습니다. 그러면 새로운 **QTA(쿼리 튜닝 도우미)** 를 시작하여 사용자에게 다음 프로세스를 안내합니다. 데이터베이스 호환성 수준을 업그레이드하기 전에 성능 기준 수집 원하는 데이터베이스 호환성 수준으로 업그레이드  동일한 워크로드를 통해 두 번째 성능 데이터 전달 수집 워크로드 회귀 검색 및 워크로드 성능 향상을 위한 테스트된 권장 사항 제공  이는 QTA에서 이전에 알려진 정상 상태에 따라 권장 사항을 생성하지 않는 마지막 단계를 제외하고는 [쿼리 저장소 사용 시나리오](../relational-databases/performance/query-store-usage-scenarios.md#CEUpgrade)에 문서화된 데이터베이스 업그레이드 프로세스에 가깝습니다.|
+|데이터베이스 호환성 수준 업그레이드|**_데이터베이스 이름_ *_ > _* _작업_ *_ > _* _데이터베이스 업그레이드_ *_ 아래에 새 옵션이 추가되었습니다. 이 옵션은 새로운 _* QTA(쿼리 튜닝 도우미)** 를 시작하여 사용자에게 다음 프로세스를 안내합니다. 데이터베이스 호환성 수준을 업그레이드하기 전에 성능 기준 수집 원하는 데이터베이스 호환성 수준으로 업그레이드  동일한 워크로드를 통해 두 번째 성능 데이터 전달 수집 워크로드 회귀 검색 및 워크로드 성능 향상을 위한 테스트된 권장 사항 제공  이는 QTA에서 이전에 알려진 정상 상태에 따라 권장 사항을 생성하지 않는 마지막 단계를 제외하고는 [쿼리 저장소 사용 시나리오](../relational-databases/performance/query-store-usage-scenarios.md#CEUpgrade)에 문서화된 데이터베이스 업그레이드 프로세스에 가깝습니다.|
 |데이터 계층 애플리케이션 마법사|그래프 테이블을 통한 데이터 계층 애플리케이션 가져오기/내보내기 지원이 추가되었습니다.|
 |플랫 파일 가져오기 마법사|가져오기로 인해 열 이름이 변경되었을 수 있음을 사용자에게 알리는 논리가 추가되었습니다.|
 |Integration Services(SSIS)|고객이 Azure Government 클라우드에 있는 Azure-SSIS IR에서 SSIS 패키지를 예약할 수 있도록 하는 지원이 추가되었습니다.|

@@ -9,12 +9,12 @@ ms.topic: conceptual
 ms.assetid: 675671ca-e6c9-48a2-82e9-386778f3a49f
 author: maggiesMSFT
 ms.author: maggies
-ms.openlocfilehash: 6c4ed5c985340e45b46b664dc4b6a53ff70f1b1a
-ms.sourcegitcommit: 83e5cfd2654233befd95e3ff37de936f9dc8549c
+ms.openlocfilehash: ac84fb8cf355103b28fbac8f5411943aa4ee51a8
+ms.sourcegitcommit: 22e97435c8b692f7612c4a6d3fe9e9baeaecbb94
 ms.translationtype: HT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 09/04/2020
-ms.locfileid: "89468348"
+ms.lasthandoff: 10/27/2020
+ms.locfileid: "92679050"
 ---
 # <a name="lesson-1-create-a-report-server-project-reporting-services"></a>1단원: 보고서 서버 프로젝트 만들기(Reporting Services)
 
@@ -27,39 +27,39 @@ ms.locfileid: "89468348"
 
 ## <a name="to-create-a-report-server-project"></a>보고서 서버 프로젝트를 만들려면
   
-1. **파일** 메뉴에서 **새로 만들기** > **프로젝트**를 선택합니다.  
+1. **파일** 메뉴에서 **새로 만들기** > **프로젝트** 를 선택합니다.  
 
-    ![ssrs-ssdt-file-01-new-project](../reporting-services/media/ssrs-ssdt-file-01-new-project.png)
+    ![파일 > 새로 만들기 > 프로젝트가 선택된 경우를 보여 주는 Visual Studio의 스크린샷](../reporting-services/media/ssrs-ssdt-file-01-new-project.png)
   
-2. 맨 왼쪽 열의 **설치됨** 아래에서 **Reporting Services**를 선택합니다. **비즈니스 인텔리전스** 그룹 아래에 표시되는 경우도 있습니다.
+2. 맨 왼쪽 열의 **설치됨** 아래에서 **Reporting Services** 를 선택합니다. **비즈니스 인텔리전스** 그룹 아래에 표시되는 경우도 있습니다.
 
-    ![select-report-server-project-template](../reporting-services/media/lesson-1-creating-a-report-server-project-reporting-services/select-report-server-project-template.png)
+    ![Reporting Services가 선택되고 보고서 서버 프로젝트 템플릿이 강조 표시된 경우를 보여 주는 새 프로젝트 대화 상자의 스크린샷](../reporting-services/media/lesson-1-creating-a-report-server-project-reporting-services/select-report-server-project-template.png)
 
     > [!IMPORTANT]
-    > VS에서 왼쪽 열에 Reporting Services가 표시되지 않는 경우, SSDT 워크로드를 설치하여 보고서 디자이너를 추가합니다. **도구** 메뉴에서 **도구 및 기능 가져오기...** 를 선택한 다음, 표시되는 워크로드에서 **SQL Server Data Tools**를 선택합니다. 가운데 열에 Report Services 개체가 표시되지 않는 경우 Reporting Services 확장을 추가합니다. **도구** 메뉴에서 **확장 및 업데이트** > **온라인**을 선택합니다. 가운데 열에 표시된 확장에서 **Microsoft Reporting Services Projects** > **다운로드**를 선택합니다. SSDT의 경우 [SSDT(SQL Server Data Tools) 다운로드](../ssdt/download-sql-server-data-tools-ssdt.md)를 참조하세요. Visual Studio 2019에서 위의 단계가 작동하지 않는 경우 [Microsoft 보고 서비스 프로젝트 확장](https://marketplace.visualstudio.com/items?itemName=ProBITools.MicrosoftReportProjectsforVisualStudio)을 설치해 보세요.
+    > VS에서 왼쪽 열에 Reporting Services가 표시되지 않는 경우, SSDT 워크로드를 설치하여 보고서 디자이너를 추가합니다. **도구** 메뉴에서 **도구 및 기능 가져오기...** 를 선택한 다음, 표시되는 워크로드에서 **SQL Server Data Tools** 를 선택합니다. 가운데 열에 Report Services 개체가 표시되지 않는 경우 Reporting Services 확장을 추가합니다. **도구** 메뉴에서 **확장 및 업데이트** > **온라인** 을 선택합니다. 가운데 열에 표시된 확장에서 **Microsoft Reporting Services Projects** > **다운로드** 를 선택합니다. SSDT의 경우 [SSDT(SQL Server Data Tools) 다운로드](../ssdt/download-sql-server-data-tools-ssdt.md)를 참조하세요. Visual Studio 2019에서 위의 단계가 작동하지 않는 경우 [Microsoft 보고 서비스 프로젝트 확장](https://marketplace.visualstudio.com/items?itemName=ProBITools.MicrosoftReportProjectsforVisualStudio)을 설치해 보세요.
 
 
 3. **새 프로젝트** 대화 상자의 가운데 열에서 **보고서 서버 프로젝트** 아이콘 &nbsp;&nbsp;![ssrs_ssdt_report_server_project](media/ssrs-ssdt-report-server-project.png)를 선택합니다.&nbsp;&nbsp;
 
 4. **이름** 텍스트 상자에 프로젝트 이름으로 “Tutorial”을 입력합니다. 기본적으로, **위치** 텍스트 상자에는 "Documents\Visual Studio 20xx\Projects\" 폴더의 경로가 표시됩니다. 보고서 디자이너는 이 경로 아래에 Tutorial이라는 폴더를 만들고, 이 폴더에 Tutorial 프로젝트를 만듭니다. 프로젝트가 VS 솔루션에 속하지 않는 경우 VS도 솔루션 파일(.sln)을 만듭니다.
 
-5. **확인**을 선택하여 프로젝트를 만듭니다. 오른쪽의 **솔루션 탐색기** 창에 Tutorial 프로젝트가 표시됩니다.
+5. **확인** 을 선택하여 프로젝트를 만듭니다. 오른쪽의 **솔루션 탐색기** 창에 Tutorial 프로젝트가 표시됩니다.
   
 ## <a name="creating-a-report-definition-file-rdl"></a>보고서 정의 파일(RDL) 만들기  
   
-1. **솔루션 탐색기** 창에서 **보고서** 폴더를 마우스 오른쪽 단추로 클릭합니다. **솔루션 탐색기** 창이 표시되지 않는 경우 **보기** 메뉴 > **솔루션 탐색기**를 선택합니다.
+1. **솔루션 탐색기** 창에서 **보고서** 폴더를 마우스 오른쪽 단추로 클릭합니다. **솔루션 탐색기** 창이 표시되지 않는 경우 **보기** 메뉴 > **솔루션 탐색기** 를 선택합니다.
 
-2. **추가** > **새 항목**을 선택합니다.
+2. **추가** > **새 항목** 을 선택합니다.
 
-    ![ssrs_ssdt_add_report](../reporting-services/media/ssrs-ssdt-add-report.png)
+    ![보고서 > 추가 > 새 항목이 선택된 경우를 보여 주는 솔루션 탐색기의 스크린샷](../reporting-services/media/ssrs-ssdt-add-report.png)
 
 3. **새 항목 추가** 창에서 **보고서** 아이콘을 선택합니다.
 
 4. **이름** 텍스트 상자에 “Sales Orders.rdl”을 입력합니다.
 
-5. **새 항목 추가** 대화 상자의 오른쪽 아래에 있는 **단추 추가**를 선택하여 프로세스를 완료합니다. 보고서 디자이너가 열리고 Sales Orders 보고서 파일이 디자인 뷰에 표시됩니다.
+5. **새 항목 추가** 대화 상자의 오른쪽 아래에 있는 **단추 추가** 를 선택하여 프로세스를 완료합니다. 보고서 디자이너가 열리고 Sales Orders 보고서 파일이 디자인 뷰에 표시됩니다.
 
-    ![ssrs-ssdt-01-new-report-designer](media/ssrs-ssdt-01-new-report-designer.png)
+    ![디자인 뷰의 보고서 디자이너 및 Sales Orders 보고서를 보여 주는 Visual Studio의 스크린샷](media/ssrs-ssdt-01-new-report-designer.png)
 
 ## <a name="next-steps"></a>다음 단계
 

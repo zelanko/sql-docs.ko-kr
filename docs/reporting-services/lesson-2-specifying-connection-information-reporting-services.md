@@ -9,12 +9,12 @@ ms.topic: conceptual
 ms.assetid: 54405a3a-d7fa-4d95-8963-9aa224e5901e
 author: maggiesMSFT
 ms.author: maggies
-ms.openlocfilehash: 9d4e12a0322a35e96bd930c4fa6f1f852daf2bdd
-ms.sourcegitcommit: ff82f3260ff79ed860a7a58f54ff7f0594851e6b
+ms.openlocfilehash: a3000abfed5258f02d47148ce351a6390cb225c7
+ms.sourcegitcommit: 22e97435c8b692f7612c4a6d3fe9e9baeaecbb94
 ms.translationtype: HT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 03/29/2020
-ms.locfileid: "75258460"
+ms.lasthandoff: 10/27/2020
+ms.locfileid: "92678881"
 ---
 # <a name="lesson-2-specifying-connection-information-reporting-services"></a>2단원: 연결 정보 지정(Reporting Services)
 
@@ -26,9 +26,9 @@ ms.locfileid: "75258460"
 
 ## <a name="to-set-up-a-connection"></a>연결을 설정하려면  
 
-1. **보고서 데이터** 창에서 **새로 만들기** > **데이터 원본**을 선택합니다. **보고서 데이터** 창이 표시되지 않는 경우 **보기** 메뉴 > **보고서 데이터**를 선택합니다.
+1. **보고서 데이터** 창에서 **새로 만들기** > **데이터 원본** 을 선택합니다. **보고서 데이터** 창이 표시되지 않는 경우 **보기** 메뉴 > **보고서 데이터** 를 선택합니다.
 
-    ![ssrs-table-tutorial-2-new-data-source](media/ssrs-table-tutorial-2-new-data-source.png)
+    ![새로 만들기 > 데이터 원본이 선택된 보고서 데이터 창의 스크린샷](media/ssrs-table-tutorial-2-new-data-source.png)
 
     **데이터 원본 속성** 대화 상자가 열리고 **일반** 섹션이 표시됩니다.
 
@@ -55,7 +55,7 @@ ms.locfileid: "75258460"
 
 6. **자격 증명** 탭을 선택하고, **데이터 원본에 연결하는 데 사용되는 자격 증명을 변경하세요.** 섹션 아래에서 **Windows 인증 사용(통합 보안)** 라디오 단추를 선택합니다.
 
-7. **확인**을 선택하여 프로세스를 완료합니다.
+7. **확인** 을 선택하여 프로세스를 완료합니다.
 
 보고서 디자이너의 **보고서 데이터** 창에 데이터 원본 AdventureWorks2016이 추가됩니다.
 

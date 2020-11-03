@@ -11,12 +11,12 @@ ms.topic: conceptual
 ms.assetid: 9803a8a0-a8f1-4b65-87b8-989b06850194
 author: markingmyname
 ms.author: maghan
-ms.openlocfilehash: 700944b707416a89d16b5ce53eee471692779870
-ms.sourcegitcommit: 22dacedeb6e8721e7cdb6279a946d4002cfb5da3
+ms.openlocfilehash: bd161a78bb0b5249d0ce6f802760acd2048014f6
+ms.sourcegitcommit: 67befbf7435f256e766bbce6c1de57799e1db9ad
 ms.translationtype: HT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 10/14/2020
-ms.locfileid: "92037656"
+ms.lasthandoff: 10/24/2020
+ms.locfileid: "92523979"
 ---
 # <a name="connect-to-a-sql-server-or-azure-sql-database"></a>SQL Server 또는 Azure SQL Database에 연결
 
@@ -27,25 +27,25 @@ ms.locfileid: "92037656"
   
 ## <a name="connecting-to-a-server"></a>Server에 연결  
 
-1. **개체 탐색기**에서 **연결 > 데이터베이스 엔진... **을 클릭합니다.
+1. **개체 탐색기** 에서 **연결 > 데이터베이스 엔진...** 을 클릭합니다.
 
-   ![connect](../media/connect-to-server/connect-db-engine.png)
+   ![연결](../media/connect-to-server/connect-db-engine.png)
 
-1. **서버에 연결** 양식을 입력하고 **연결**을 클릭합니다.
+1. **서버에 연결** 양식을 입력하고 **연결** 을 클릭합니다.
 
    ![서버에 연결](../media/connect-to-server/connect.png)
 
-1. Azure SQL Server에 연결하는 경우 방화벽 규칙을 만들려면 로그인하라는 메시지가 표시될 수 있습니다. **로그인... **(그렇지 않은 경우 아래 6단계로 건너뜀)을 클릭합니다.
+1. Azure SQL Server에 연결하는 경우 방화벽 규칙을 만들려면 로그인하라는 메시지가 표시될 수 있습니다. **로그인...** (그렇지 않은 경우 아래 6단계로 건너뜀)을 클릭합니다.
 
-   ![방화벽](../media/connect-to-server/firewall-rule-sign-in.png)
+   ![로그인 옵션이 설명선으로 표시된 새 방화벽 규칙 대화 상자의 스크린샷](../media/connect-to-server/firewall-rule-sign-in.png)
 
 1. 성공적으로 로그인하면 특정 IP 주소로 양식이 미리 채워져 있습니다. IP 주소를 자주 변경하는 경우 범위에 액세스 권한을 쉽게 부여할 수 있으므로 환경에 가장 적합한 옵션을 선택합니다. 
 
-   ![방화벽](../media/connect-to-server/new-firewall-rule.png)
+   ![내 클라이언트 IP 주소 추가 옵션이 선택되고 확인 옵션이 설명선으로 표시된 새 방화벽 규칙 대화 상자의 스크린샷](../media/connect-to-server/new-firewall-rule.png)
 
-1. 방화벽 규칙을 만들고 서버에 연결하려면 **확인**을 클릭합니다.
+1. 방화벽 규칙을 만들고 서버에 연결하려면 **확인** 을 클릭합니다.
 
-1. 성공적으로 연결되면 서버가 **개체 탐색기**에 표시됩니다.
+1. 성공적으로 연결되면 서버가 **개체 탐색기** 에 표시됩니다.
 
    ![연결됨](../media/connect-to-server/connected.png)
 

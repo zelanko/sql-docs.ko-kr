@@ -11,12 +11,12 @@ ms.assetid: 9cba6a0d-5f21-49af-ac5a-17d199973590
 author: David-Engel
 ms.author: v-daenge
 ms.reviewer: v-kaywon
-ms.openlocfilehash: 2e9f0619f26abf8b077059c7e12c7fc34c51a2e6
-ms.sourcegitcommit: 7eb80038c86acfef1d8e7bfd5f4e30e94aed3a75
+ms.openlocfilehash: 433f94f07aaefc98a94959ce995cf5d966536e08
+ms.sourcegitcommit: fb8724fb99c46ecf3a6d7b02a743af9b590402f0
 ms.translationtype: HT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 10/15/2020
-ms.locfileid: "92081302"
+ms.lasthandoff: 10/23/2020
+ms.locfileid: "92439375"
 ---
 # <a name="step-1-configure-development-environment-for-adonet-development"></a>1단계: ADO.NET 개발을 위한 개발 환경 구성
 
@@ -30,9 +30,9 @@ ms.locfileid: "92081302"
 
 ### <a name="adonet-for-windows"></a>Windows용 ADO.NET
 
-- ![Framework 다운로드 화살표(원)](../../ssms/media/download-icon.png)[ADO.NET 등의 .NET Framework를 다운로드하여 설치합니다.](../sql-connection-libraries.md#anchor-20-drivers-relational-access)
+- :::image type="icon" source="../../ssms/media/download-icon.png"::: [ADO.NET 등의 .NET Framework 다운로드 및 설치](../sql-connection-libraries.md#anchor-20-drivers-relational-access)
 
-- C# 소스 코드를 작성하고 컴파일하기 위한 Visual Studio Community 또는 그와 유사한 IDE(통합 개발 환경)를 설치합니다. Microsoft는 이제 Visual Studio 커뮤니티를 *무료*로 제공합니다.  
+- C# 소스 코드를 작성하고 컴파일하기 위한 Visual Studio Community 또는 그와 유사한 IDE(통합 개발 환경)를 설치합니다. Microsoft는 이제 Visual Studio 커뮤니티를 *무료* 로 제공합니다.  
     - [Visual Studio Community 다운로드](https://www.visualstudio.com/products/visual-studio-community-vs)  
     - [무료 Visual Studio에 대한 더 많은 옵션](https://www.visualstudio.com/products/free-developer-offers-vs.aspx)  
 
@@ -41,4 +41,4 @@ ms.locfileid: "92081302"
 
 운영 체제별 .NET Core의 다운로드 링크는 다음에서 제공됩니다.
 
-- ![Core 다운로드 화살표(원)](../../ssms/media/download-icon.png)[.NET Core를 다운로드하여 설치합니다.](../sql-connection-libraries.md#anchor-20-drivers-relational-access)
+- :::image type="icon" source="../../ssms/media/download-icon.png"::: [.NET Core 다운로드 및 설치](../sql-connection-libraries.md#anchor-20-drivers-relational-access)

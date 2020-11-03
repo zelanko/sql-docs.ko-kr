@@ -5,22 +5,24 @@ description: 이 문서에서는 Azure Data Studio에서 PROSE Code Accelerator�
 author: dphansen
 ms.author: davidph
 ms.reviewer: mihaelab
-ms.date: 12/06/2018
+ms.date: 10/12/2020
 ms.topic: conceptual
 ms.prod: sql
 ms.technology: machine-learning-bdc
-ms.openlocfilehash: 9768c406ca94cd16e8e9075bd5247434b8359d5c
-ms.sourcegitcommit: c7f40918dc3ecdb0ed2ef5c237a3996cb4cd268d
+ms.openlocfilehash: 3357757c0cca35be0b3410795cfd89ca75f34dc3
+ms.sourcegitcommit: 544706f6725ec6cdca59da3a0ead12b99accb2cc
 ms.translationtype: HT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 10/05/2020
-ms.locfileid: "91725764"
+ms.lasthandoff: 10/27/2020
+ms.locfileid: "92638976"
 ---
 # <a name="data-wrangling-using-prose-code-accelerator"></a>PROSE Code Accelerator를 사용한 데이터 랭글링
 
 [!INCLUDE[SQL Server 2019](../includes/applies-to-version/sqlserver2019.md)]
 
-PROSE Code Accelerator는 데이터 랭글링 작업에 대해 판독 가능한 Python 코드를 생성합니다. Azure Data Studio 내에서 Notebook으로 작업하면서 생성한 코드와 손으로 작성한 코드를 원활하게 혼합할 수 있습니다. 이 문서에서는 Code Accelerator를 사용하는 방법을 간략히 설명합니다.
+PROSE Code Accelerator는 데이터 랭글링 작업에 대해 판독 가능한 Python 코드를 생성합니다. Azure Data Studio 내의 Notebook에서 작업하면서 생성된 코드와 사용자가 작성한 코드를 혼합할 수 있습니다.
+
+이 문서에서는 Code Accelerator를 사용하는 방법을 간략히 설명합니다.
 
  > [!NOTE]
  > PROSE(Program Synthesis using Examples)는 AI를 사용하여 사람이 읽을 수 있는 코드를 생성하는 Microsoft 기술입니다. 이를 위해 사용자의 의도와 데이터를 분석하고, 여러 후보 프로그램을 생성하고, 순위 알고리즘을 사용하여 최상의 프로그램을 선택합니다. PROSE 기술에 대한 자세한 내용을 보려면 [PROSE 홈 페이지](https://microsoft.github.io/prose/)를 방문하세요.
@@ -41,9 +43,11 @@ Code Accelerator 메서드의 일반적인 개요를 보려면 [설명서](/pyth
 
 ## <a name="reading-data-from-a-file-to-a-dataframe"></a>파일의 데이터를 데이터 프레임으로 읽기
 
-종종, 데이터 프레임으로 파일을 읽어오면 파일의 내용을 보고, 데이터 로드 라이브러리에 전달할 올바른 매개 변수를 결정하게 됩니다. 파일의 복잡도에 따라 올바른 매개 변수를 식별하는 데 몇 가지 반복 작업이 필요할 수 있습니다.
+데이터 프레임으로 파일을 읽으면 파일의 콘텐츠를 확인하고, 데이터 로드 라이브러리에 전달할 올바른 매개 변수를 결정하게 됩니다.
 
-PROSE Code Accelerator는 데이터 파일의 구조를 분석하고 파일을 로드하는 코드를 자동으로 생성하여 이 문제를 해결합니다. 대부분의 경우 생성된 코드는 데이터를 올바르게 구문 분석합니다. 일부 경우에는 요구 사항에 맞게 코드를 조정해야 할 수 있습니다.
+파일의 복잡도에 따라 올바른 매개 변수를 식별하는 데 몇 가지 반복 작업이 필요할 수 있습니다.
+
+PROSE Code Accelerator는 데이터 파일의 구조를 분석하고 파일을 로드하는 코드를 자동으로 생성하여 이 문제를 해결합니다. 일반적으로, 생성된 코드는 데이터를 올바르게 구문 분석합니다. 일부 경우에는 요구 사항에 맞게 코드를 조정해야 할 수 있습니다.
 
 다음과 같은 예제를 참조하세요.
 
@@ -90,9 +94,9 @@ Code Accelerator는 구분된, JSON 및 고정 너비 파일을 데이터 프레
 
 ## <a name="fixing-data-types-in-a-dataframe"></a>데이터 프레임의 데이터 형식 수정
 
-pandas 또는 pyspark 데이터 프레임에 잘못된 데이터 형식이 지정되는 경우가 일반적입니다. 열에 소수의 비규격 값이 포함되어 있기 때문인 경우가 많습니다. 그 결과 Integer는 Float 또는 String으로 읽고, Date는 String으로 읽습니다. 데이터 형식을 수동으로 수정할 경우 열 개수만큼 작업량이 늘어납니다.
+Pandas 또는 Pyspark 데이터 프레임에 잘못된 데이터 형식이 지정되는 경우가 일반적입니다. 열에 소수의 비준수 값이 포함되어 있기 때문에 잘못된 데이터 형식이 발생합니다. 그 결과 Integer는 Float 또는 String으로 읽고, Date는 String으로 읽습니다. 데이터 형식을 수동으로 수정할 경우 열 개수만큼 작업량이 늘어납니다.
 
-이러한 상황에서는 `DetectTypesBuilder`를 사용할 수 있습니다. 이 기능은 데이터를 분석하고, 데이터 형식을 블랙 박스 방식으로 수정하는 대신, 데이터 형식을 수정하는 코드를 생성합니다. 이 코드는 시작 지점으로 사용됩니다. 필요에 따라 코드를 검토하거나 사용하거나 수정할 수 있습니다.
+이러한 상황에서는 `DetectTypesBuilder`를 사용할 수 있습니다. DetectTypesBuilder는 데이터를 분석하고 데이터 형식을 수정하는 코드를 생성합니다. 이 코드는 시작 지점으로 사용됩니다. 필요에 따라 코드를 검토하거나 사용하거나 수정할 수 있습니다.
 
 ```python
 import prose.codeaccelerator as cx
@@ -110,7 +114,7 @@ builder.learn().code()
 
 ## <a name="identifying-patterns-in-strings"></a>문자열의 패턴 식별
 
-또 다른 일반적인 시나리오는 정리 또는 그룹화의 목적으로 문자열 열의 패턴을 검색하는 것입니다. 예를 들어, 여러 다른 형식의 날짜를 포함하는 날짜 열이 있을 수 있습니다. 값을 표준화하기 위해 정규식을 사용하여 조건문을 작성할 수 있습니다.
+p.
 
 
 |행|Name                      |BirthDate      |

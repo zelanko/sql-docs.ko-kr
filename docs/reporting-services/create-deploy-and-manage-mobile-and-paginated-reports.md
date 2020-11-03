@@ -15,12 +15,12 @@ helpviewer_keywords:
 ms.assetid: b8d18d3d-9db0-43e7-8286-7b46cc3a37ed
 author: maggiesMSFT
 ms.author: maggies
-ms.openlocfilehash: e75947d7ea4b47c7c2fef3e37cfd6b5b73b48533
-ms.sourcegitcommit: 4231364ab5bc15b74952ca5d20508b7ba9ca347e
+ms.openlocfilehash: db705ffc6bd3f7f961ea569883b77934e9689f9f
+ms.sourcegitcommit: 22e97435c8b692f7612c4a6d3fe9e9baeaecbb94
 ms.translationtype: HT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 07/13/2020
-ms.locfileid: "86291150"
+ms.lasthandoff: 10/27/2020
+ms.locfileid: "92679199"
 ---
 # <a name="what-is-sql-server-reporting-services-ssrs"></a>SSRS(SQL Server Reporting Services)란?
 
@@ -38,7 +38,7 @@ SSRS 솔루션은 필요한 사용자에게 적절한 정보를 유연하게 제
 
 SQL Server Reporting Services는 업데이트된 제품군을 제공합니다.
 
-* **"기존의" 페이지를 매긴 보고서**는 최신 상태로 전환되므로 보고서를 만드는 업데이트된 도구 및 새 기능을 사용하여 현대적인 모양의 보고서를 만들 수 있습니다.
+* **"기존의" 페이지를 매긴 보고서** 는 최신 상태로 전환되므로 보고서를 만드는 업데이트된 도구 및 새 기능을 사용하여 현대적인 모양의 보고서를 만들 수 있습니다.
 * **새 모바일 보고서** 보고서를 보유하는 다양한 디바이스 및 다양한 방식에 맞게 조정되는 반응형 레이아웃을 사용합니다.
 * **최신 웹 포털** 모든 최신 브라우저에서 볼 수 있습니다. 새 포털에서 모바일 및 페이지가 매겨진 Reporting Services 보고서 및 KPI를 구성하고 표시할 수 있습니다. 포털에서 Excel 통합 문서를 저장할 수도 있습니다.
 
@@ -54,7 +54,7 @@ SQL Server Reporting Services는 업데이트된 제품군을 제공합니다.
 
 ## <a name="paginated-reports"></a>페이지를 매긴 보고서
 
-![ssrs-paginated-reports](../reporting-services/media/ssrs-paginated-reports.png)
+![데스크톱 화면과 태블릿 디바이스에 있는 페이지를 매긴 보고서의 이미지](../reporting-services/media/ssrs-paginated-reports.png)
 
 Reporting Services는 PDF, Word 파일 등 인쇄용으로 최적화된 고정 레이아웃 문서에 적합한, “기존”의 페이지를 매긴 보고서와 연결되어 있습니다.
 
@@ -67,7 +67,7 @@ Reporting Services는 PDF, Word 파일 등 인쇄용으로 최적화된 고정 �
 
 ## <a name="mobile-reports"></a>모바일 보고서
 
-![ssrs-mobile-reports](../reporting-services/media/ssrs-mobile-reports.png)
+![데스크톱 화면과 태블릿 디바이스에 있는 모바일 보고서의 이미지](../reporting-services/media/ssrs-mobile-reports.png)
 
 모바일 컴퓨팅으로 인해 작업해야 하는 디바이스가 이동되었습니다. 즉, 오늘날 사람마다 보고 요구 사항이 다릅니다. 태블릿 및 휴대폰을 도입하는 경우 고정 레이아웃 보고서 환경이 제대로 작동하지 않습니다. 넓은 PC 화면용으로 디자인된 환경은 더 작을 뿐만 아니라 세로 또는 가로 방향이 있는 작은 휴대폰 화면에 적합하지 않습니다.
 
@@ -79,7 +79,7 @@ Reporting Services는 PDF, Word 파일 등 인쇄용으로 최적화된 고정 �
 
 ## <a name="web-portal"></a>웹 포털
 
-![ssrs-web-portal](../reporting-services/media/ssrs-web-portal.png)
+![웹 포털 노트북의 이미지](../reporting-services/media/ssrs-web-portal.png)
 
 기본 모드 Reporting Services의 최종 사용자에게 현관은 대부분의 브라우저에서 볼 수 있는 최신 웹 포털입니다. 새 포털에서 모든 Reporting Services 모바일, 페이지를 매긴 보고서 및 KPI에 액세스할 수 있습니다. KPI는 보고서를 열지 않고도 주요 비즈니스 메트릭을 한번에 브라우저에 표시할 수 있습니다.
 

@@ -9,12 +9,12 @@ ms.date: 01/07/2020
 ms.topic: overview
 ms.prod: sql
 ms.technology: big-data-cluster
-ms.openlocfilehash: d21f5c3f572356a18f8567f798af8af10f58c001
-ms.sourcegitcommit: 7345e4f05d6c06e1bcd73747a4a47873b3f3251f
+ms.openlocfilehash: bd3a092906bf2a7d46c7f343b7edf913bdd4d9cf
+ms.sourcegitcommit: ab9ddcc16fdfc245cf9a49d1e90bb1ffe3958c38
 ms.translationtype: HT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 08/24/2020
-ms.locfileid: "88765742"
+ms.lasthandoff: 10/29/2020
+ms.locfileid: "92914348"
 ---
 # <a name="what-are-big-data-clusters-2019"></a>[!INCLUDE[big-data-clusters-2019](../includes/ssbigdataclusters-ss-nover.md)]란 무엇인가요?
 
@@ -22,9 +22,7 @@ ms.locfileid: "88765742"
 
 [!INCLUDE[SQL Server 2019](../includes/sssqlv15-md.md)]부터 [!INCLUDE[big-data-clusters-2019](../includes/ssbigdataclusters-ss-nover.md)]를 사용하면 Kubernetes에서 실행되는 SQL Server, Spark 및 HDFS 컨테이너의 확장 가능한 클러스터를 배포할 수 있습니다. 이러한 구성 요소는 동시에 실행되므로 Transact-SQL 또는 Spark에서 빅 데이터 읽기, 쓰기 및 처리할 수 있으며, 대용량의 빅 데이터를 사용하여 가치 높은 관계형 데이터를 쉽게 조합하고 분석할 수 있습니다.
 
-[!INCLUDE[SQL Server 2019](../includes/sssqlv15-md.md)]부터 SQL Server 빅 데이터 클러스터가 도입되었습니다.
-
-SQL Server 빅 데이터 클러스터는 다음과 같은 용도로 사용할 수 있습니다.
+[!INCLUDE[big-data-clusters-2019](../includes/ssbigdataclusters-ss-nover.md)] 를 사용하여 다음을 수행할 수 있습니다.
 
 - Kubernetes에서 실행되는 SQL Server, Spark 및 HDFS 컨테이너의 [확장성 있는 클러스터 배포](./deploy-get-started.md) 
 - Transact-SQL 또는 Spark에서 빅 데이터 읽기, 쓰기 및 처리
@@ -45,13 +43,13 @@ SQL Server 빅 데이터 클러스터는 다음과 같은 용도로 사용할 �
 
 ### <a name="data-virtualization"></a>데이터 가상화
 
-[SQL Server PolyBase](../relational-databases/polybase/polybase-guide.md)를 활용하므로 [!INCLUDE[big-data-clusters-2019](../includes/ssbigdataclusters-ss-nover.md)]는 데이터를 이동하거나 복사하지 않고도 외부 데이터 원본을 쿼리할 수 있습니다. [!INCLUDE[SQL Server 2019](../includes/sssqlv15-md.md)]에서는 데이터 원본에 대한 새 커넥터를 도입했습니다.
+[!INCLUDE[big-data-clusters-2019](../includes/ssbigdataclusters-ss-nover.md)]는 [PolyBase](../relational-databases/polybase/polybase-guide.md)를 활용하여 데이터를 이동하거나 복사하지 않고도 외부 데이터 원본을 쿼리할 수 있습니다. [!INCLUDE[SQL Server 2019](../includes/sssqlv15-md.md)]에서는 데이터 원본에 대한 새 커넥터를 도입했습니다.
 
 ![데이터 가상화](media/big-data-cluster-overview/data-virtualization.png)
 
 ### <a name="data-lake"></a>Data Lake
 
-SQL Server 빅 데이터 클러스터에는 확장 가능한 HDFS *스토리지 풀*이 포함되어 있습니다. 이를 사용하여 여러 외부 원본에서 수집될 수 있는 빅 데이터를 저장할 수 있습니다. 빅 데이터를 빅 데이터 클러스터의 HDFS에 저장한 후에는 데이터를 분석 및 쿼리하고 관계형 데이터와 결합할 수 있습니다.
+SQL Server 빅 데이터 클러스터에는 확장 가능한 HDFS *스토리지 풀* 이 포함되어 있습니다. 이를 사용하여 여러 외부 원본에서 수집될 수 있는 빅 데이터를 저장할 수 있습니다. 빅 데이터를 빅 데이터 클러스터의 HDFS에 저장한 후에는 데이터를 분석 및 쿼리하고 관계형 데이터와 결합할 수 있습니다.
 
 ![Data Lake](media/big-data-cluster-overview/data-lake.png)
 
@@ -75,7 +73,7 @@ SQL Server 빅 데이터 클러스터에는 확장 가능한 HDFS *스토리지 
 - 일반적인 관리 작업을 위한 기본 제공 코드 조각
 - HDFS를 찾아보고, 파일을 업로드하고, 파일을 미리 보고, 디렉터리를 만드는 기능
 - Jupyter 호환 Notebook을 만들고 열고 실행하는 기능
-- 외부 데이터 원본 만들기를 간소화하기 위한 데이터 가상화 마법사(**데이터 가상화 확장**에 의해 사용하도록 설정됨).
+- 외부 데이터 원본 만들기를 간소화하기 위한 데이터 가상화 마법사( **데이터 가상화 확장** 에 의해 사용하도록 설정됨).
 
 ## <a name="architecture"></a><a id="architecture"></a> 아키텍처
 
@@ -96,7 +94,7 @@ Kubernetes는 컨테이너 배포를 필요에 따라 확장할 수 있는 오�
 
 ### <a name="big-data-clusters-architecture"></a>빅 데이터 클러스터 아키텍처
 
-다음 다이어그램에서는 SQL Server의 빅 데이터 클러스터 구성 요소를 보여 줍니다.
+다음 다이어그램에서는 SQL Server 빅 데이터 클러스터 구성 요소를 보여 줍니다.
 
 ![아키텍처 개요](media/big-data-cluster-overview/architecture-diagram-overview.png)
 
@@ -106,7 +104,7 @@ Kubernetes는 컨테이너 배포를 필요에 따라 확장할 수 있는 오�
 
 ### <a name="compute-pool"></a><a id="computeplane"></a> 컴퓨팅 풀
 
-컴퓨팅 풀은 클러스터에 컴퓨팅 리소스를 제공합니다. 여기에는 SQL Server on Linux pod를 실행하는 노드가 포함됩니다. 컴퓨팅 풀의 pod는 특정 처리 작업을 위한 *SQL 컴퓨팅 인스턴스*로 나뉩니다. 
+컴퓨팅 풀은 클러스터에 컴퓨팅 리소스를 제공합니다. 여기에는 SQL Server on Linux pod를 실행하는 노드가 포함됩니다. 컴퓨팅 풀의 pod는 특정 처리 작업을 위한 *SQL 컴퓨팅 인스턴스* 로 나뉩니다. 
 
 ### <a name="data-pool"></a><a id="dataplane"></a> 데이터 풀
 
@@ -121,4 +119,4 @@ Kubernetes는 컨테이너 배포를 필요에 따라 확장할 수 있는 오�
 
 ## <a name="next-steps"></a>다음 단계
 
-SQL Server 빅 데이터 클러스터 배포에 대한 자세한 내용은 [SQL Server 빅 데이터 클러스터 시작](deploy-get-started.md)을 참조하세요.
+[!INCLUDE[big-data-clusters-2019](../includes/ssbigdataclusters-ss-nover.md)] 배포에 대한 자세한 내용은 [[!INCLUDE[big-data-clusters-2019](../includes/ssbigdataclusters-ss-nover.md)] 시작](deploy-get-started.md)을 참조하세요.

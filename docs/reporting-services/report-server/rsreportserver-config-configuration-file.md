@@ -9,12 +9,12 @@ ms.topic: conceptual
 ms.assetid: 60e0a0b2-8a47-4eda-a5df-3e5e403dbdbc
 author: maggiesMSFT
 ms.author: maggies
-ms.openlocfilehash: 5e480c0b24a05a42ba7cb53a3d35125a7e2b3976
-ms.sourcegitcommit: fe59f8dc27fd633f5dfce54519d6f5dcea577f56
+ms.openlocfilehash: e371d024f9166988663439fdcce54a06e13a1c4f
+ms.sourcegitcommit: fb8724fb99c46ecf3a6d7b02a743af9b590402f0
 ms.translationtype: HT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 10/09/2020
-ms.locfileid: "91934911"
+ms.lasthandoff: 10/23/2020
+ms.locfileid: "92439287"
 ---
 # <a name="rsreportserverconfig-configuration-file"></a>RsReportServer.config Configuration File
 [!INCLUDE[ssRSnoversion](../../includes/ssrsnoversion-md.md)]**RsReportServer.config** 파일은 보고서 서버 웹 서비스 및 백그라운드 처리에 사용되는 설정을 저장합니다. 모든 [!INCLUDE[ssRSnoversion](../../includes/ssrsnoversion-md.md)] 애플리케이션은 RSReportServer.config 파일에 저장된 구성 설정을 읽는 단일 프로세스 내에서 실행됩니다. 기본 모드 및 SharePoint 모드 보고서 서버에는 모두 RSReportServer.config가 사용되지만 두 모드가 구성 파일에서 모두 동일한 설정을 사용하지는 않습니다. 이 파일의 SharePoint 모드 버전은 SharePoint 모드의 설정 대부분이 파일이 아니라 SharePoint 구성 데이터베이스에 저장되기 때문에 더 작습니다. 이 항목에서는 기본 모드 및 SharePoint 모드에서 설치되는 기본 구성 파일과 구성 파일을 통해 제어되는 일부 중요한 설정 및 동작에 대해 설명합니다.  
@@ -71,25 +71,25 @@ C:\Program Files\Common Files\Microsoft Shared\Web Server Extensions\15\WebServi
 |설정|Description|Mode|  
 |-------------|-----------------|----------|  
 |**Dsn**|보고서 서버 데이터베이스를 호스팅하는 데이터베이스 서버에 대한 연결 문자열을 지정합니다. 이 값은 보고서 서버 데이터베이스를 만들 때 암호화되어 구성 파일에 추가됩니다. Sharepoint에 대한 데이터베이스 연결 정보는 SharePoint 구성 데이터베이스에서 가져옵니다.|N,S|  
-|**ConnectionType**|보고서 서버에서 보고서 서버 데이터베이스 연결에 사용하는 자격 증명 유형을 지정합니다. 유효한 값은 **Default** 및 **Impersonate**입니다. 보고서 서버가**로그인 또는 서비스 계정을 사용하여 보고서 서버 데이터베이스에 연결하도록 구성된 경우** Default [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 가 지정됩니다. 보고서 서버가 Windows 계정을 사용하여 보고서 서버 데이터베이스에 연결하는 경우에는**Impersonate** 가 지정됩니다.|N|  
-|**LogonUser, LogonDomain, LogonCred**|보고서 서버가 보고서 서버 데이터베이스에 연결하는 데 사용하는 도메인 계정의 도메인, 사용자 이름 및 암호를 저장합니다. **LogonUser**, **LogonDomain**및 **LogonCred** 의 값은 보고서 서버 연결에서 도메인 계정을 사용하도록 구성될 때 생성됩니다. 보고서 서버 데이터베이스 연결에 대한 자세한 내용은 [보고서 서버 데이터베이스 연결 구성&#40;보고서 서버 구성 관리자&#41;](../../reporting-services/install-windows/configure-a-report-server-database-connection-ssrs-configuration-manager.md)을 참조하세요.|N|  
+|**ConnectionType**|보고서 서버에서 보고서 서버 데이터베이스 연결에 사용하는 자격 증명 유형을 지정합니다. 유효한 값은 **Default** 및 **Impersonate** 입니다. 보고서 서버가 **로그인 또는 서비스 계정을 사용하여 보고서 서버 데이터베이스에 연결하도록 구성된 경우** Default [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 가 지정됩니다. 보고서 서버가 Windows 계정을 사용하여 보고서 서버 데이터베이스에 연결하는 경우에는 **Impersonate** 가 지정됩니다.|N|  
+|**LogonUser, LogonDomain, LogonCred**|보고서 서버가 보고서 서버 데이터베이스에 연결하는 데 사용하는 도메인 계정의 도메인, 사용자 이름 및 암호를 저장합니다. **LogonUser** , **LogonDomain** 및 **LogonCred** 의 값은 보고서 서버 연결에서 도메인 계정을 사용하도록 구성될 때 생성됩니다. 보고서 서버 데이터베이스 연결에 대한 자세한 내용은 [보고서 서버 데이터베이스 연결 구성&#40;보고서 서버 구성 관리자&#41;](../../reporting-services/install-windows/configure-a-report-server-database-connection-ssrs-configuration-manager.md)을 참조하세요.|N|  
 |**InstanceID**|보고서 서버 인스턴스의 식별자입니다. 보고서 서버 인스턴스 이름은 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 인스턴스 이름을 기반으로 합니다. 이 값은 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 인스턴스 이름을 지정합니다. 기본적으로 이 값은 **MSRS12** _\<instancename>_ 입니다. 이 설정은 수정하지 마세요. 다음은 전체 값을 보여주는 예입니다. `<InstanceId>MSRS13.MSSQLSERVER</InstanceId>`<br /><br /> 다음은 SharePoint 모드의 예입니다.<br /><br /> `<InstanceId>MSRS12.@Sharepoint</InstanceId>`|N,S|  
 |**InstallationID**|설치 프로그램에서 만드는 보고서 서버 설치의 ID입니다. 이 값은 GUID로 설정됩니다. 이 설정은 수정하지 마세요.|N|  
 |**SecureConnectionLevel**|웹 서비스 호출이 이전에 SSL(Secure Sockets Layer)로 알려진 TLS(전송 계층 보안)를 사용해야 하는 정도를 지정합니다. 이 설정은 보고서 서버 웹 서비스와 웹 포털에 모두 사용됩니다. 이 값은 [!INCLUDE[ssRSnoversion](../../includes/ssrsnoversion-md.md)] 구성 도구에서 사용할 URL(HTTP 또는 HTTPS)을 구성할 때 설정됩니다. SQL Server 2008 R2에서 SecureConnectionLevel은 설정/해제가 전환됩니다. SQL Server 2008 R2보다 이전 버전의 경우 유효한 값의 범위는 0에서 3 사이입니다. 여기서 0은 가장 안전하지 않습니다. 자세한 내용은 [ConfigurationSetting 메서드 - SetSecureConnectionLevel](../../reporting-services/wmi-provider-library-reference/configurationsetting-method-setsecureconnectionlevel.md), [보안 웹 서비스 메서드 사용](../../reporting-services/report-server-web-service/net-framework/using-secure-web-service-methods.md) 및 [기본 모드 보고서 서버에서 TLS 연결 구성](../../reporting-services/security/configure-ssl-connections-on-a-native-mode-report-server.md)을 참조하세요.|N,S|
 |**DisableSecureFormsAuthenticationCookie**|기본값은 False입니다.<br /><br /> 보안되도록 표시할 폼 및 사용자 지정 인증에 사용된 쿠키를 강제로 적용하지 않도록 설정할지 여부를 지정합니다. SQL Server 2012부터 [!INCLUDE[ssRSnoversion](../../includes/ssrsnoversion-md.md)] 에서는 사용자 지정 인증 확장 프로그램에 사용된 폼 인증 쿠키를 클라이언트에 전송할 때 보안 쿠키로 표시합니다. 보고서 서버 관리자 및 사용자 지정 보안 확장 프로그램 작성자는 이 속성을 변경하여, 사용자 지정 보안 확장 프로그램 작성자가 쿠키를 보안 쿠키로 표시할지 여부를 결정할 수 있도록 한 이전 동작으로 되돌릴 수 있습니다. 네트워크 스니핑과 재생 공격을 방지하도록 폼 인증에 보안 쿠키를 사용하는 것이 좋습니다.|N|  
-|**CleanupCycleMinutes**|보고서 서버 데이터베이스에서 기존 세션 및 만료된 스냅샷을 제거할 시간 주기(분)를 지정합니다. 유효한 값은 0에서 최대 정수 사이입니다. 기본값은 10입니다. 이 값을 0으로 설정하면 데이터베이스 정리 프로세스가 해제됩니다.|N,S|  
+|**CleanupCycleMinutes**|보고서 서버 데이터베이스에서 기존 세션 및 만료된 스냅샷을 제거할 시간 주기(분)를 지정합니다. 유효한 값은 1에서 최대 정수 사이입니다. 기본값은 10입니다. |N,S|  
 |**MaxActiveReqForOneUser**|사용자 한 명이 동시에 처리할 수 있는 보고서의 최대 수를 지정합니다. 최대 수에 도달한 후에는 추가적인 보고서 처리 요청이 모두 거부됩니다. 유효한 값은 1에서 최대 정수 사이입니다. 기본값은 20입니다.<br /><br /> 대부분의 요청은 대단히 빠르게 처리되므로 단일 사용자가 지정된 시간에 연결이 20개 이상 열린 상태에서 작업할 가능성은 없습니다. 사용자가 많은 프로세스가 진행되는 보고서를 15개 이상 열 경우 이 값을 늘려야 할 수 있습니다.<br /><br /> SharePoint 통합 모드에서 실행되는 보고서 서버의 경우에는 이 설정이 무시됩니다.|N,S|  
 |**MaxActiveReqForAnonymous**|동시에 처리할 수 있는 익명 요청의 최대 수를 지정합니다. 최대 수에 도달한 후에는 추가적인 처리 요청이 거부됩니다. 유효한 값은 1에서 최대 정수 사이입니다. 기본값은 200입니다.
 |**DatabaseQueryTimeout**|보고서 서버 데이터베이스에 대한 연결이 종료되는 시간(초)을 지정합니다. 이 값은 System.Data.SQLClient.SQLCommand.CommandTimeout 속성으로 전달됩니다. 유효한 값은 0에서 2147483647 사이입니다. 기본값은 120입니다. 값 0은 무제한 대기 시간을 지정하므로 사용하지 않는 것이 좋습니다.|N|  
 |**AlertingCleanupCycleMinutes**|기본값은 20입니다.<br /><br /> 경고 데이터베이스에 저장된 임시 데이터를 정리하는 빈도를 결정합니다.|S|  
 |**AlertingDataCleanupMinutes**|기본값은 360입니다.<br /><br /> 경고 정의에 대한 만들기 또는 편집에 사용된 세션 데이터를 경고 데이터베이스 내에서 유지할 기간을 결정합니다. 기본값은 6시간입니다.|S|  
-|**AlertingExecutionLogCleanup**Minutes|기본값은 10080입니다.<br /><br /> 경고 실행 로그 값을 유지할 기간을 결정합니다. 기본값은 7일입니다.|S|  
+|**AlertingExecutionLogCleanup** Minutes|기본값은 10080입니다.<br /><br /> 경고 실행 로그 값을 유지할 기간을 결정합니다. 기본값은 7일입니다.|S|  
 |**AlertingMaxDataRetentionDays**|기본값은 180입니다.<br /><br /> 경고 데이터가 변경되지 않은 경우 중복 경고 메시지를 방지하는 데 필요한 경고 데이터를 유지할 기간을 결정합니다.|S|  
 |**RunningRequestsScavengerCycle**|분리 및 만료 요청 취소 간격을 지정합니다. 이 값은 초 단위로 지정됩니다. 유효한 값은 0에서 최대 정수 사이입니다. 기본값은 60입니다.|N,S|  
 |**RunningRequestsDbCycle**|보고서 서버에서 실행 중인 작업을 평가하는 간격을 지정하여, 이러한 작업이 보고서 실행 제한 시간을 초과했는지와 웹 포털의 [작업 관리] 페이지에 실행 중인 작업 정보를 표시하는 시점을 확인합니다. 이 값은 초 단위로 지정됩니다. 유효한 값은 0에서 2147483647 사이입니다. 기본값은 60입니다.|N,S|  
 |**RunningRequestsAge**|실행 중인 작업의 상태를 "신규"에서 "실행 중"으로 변경할 시간 간격(초)을 지정합니다. 유효한 값은 0에서 2147483647 사이입니다. 기본값은 30입니다.|N,S|  
-|**MaxScheduleWait**|**다음 실행 시간**이 요청되는 경우 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 에이전트 서비스가 일정을 업데이트하는 동안 보고서 서버 Windows 서비스가 대기하는 시간(초)을 지정합니다. 유효한 값은 1에서 60 사이입니다.<br /><br /> 기본 구성 파일에서는 MaxScheduleWait가 **5**로 설정되어 있습니다.<br /><br /> 보고서 서버에서 구성 파일을 찾지 못하거나 읽을 수 없는 경우 서버 기본값 MaxScheduleWait를 1로 설정합니다.|N,S|  
-|**DisplayErrorLink**|오류 발생 시 [!INCLUDE[msCoName](../../includes/msconame-md.md)] 도움말 및 지원 사이트에 대한 링크를 표시할지 여부를 나타냅니다. 이 링크는 오류 메시지에 나타납니다. 사용자는 링크를 클릭하여 해당 사이트에 대한 업데이트된 오류 메시지 내용을 열 수 있습니다. 유효한 값은 **True** (기본값) 및 **False**입니다.|N,S|  
+|**MaxScheduleWait**|**다음 실행 시간** 이 요청되는 경우 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 에이전트 서비스가 일정을 업데이트하는 동안 보고서 서버 Windows 서비스가 대기하는 시간(초)을 지정합니다. 유효한 값은 1에서 60 사이입니다.<br /><br /> 기본 구성 파일에서는 MaxScheduleWait가 **5** 로 설정되어 있습니다.<br /><br /> 보고서 서버에서 구성 파일을 찾지 못하거나 읽을 수 없는 경우 서버 기본값 MaxScheduleWait를 1로 설정합니다.|N,S|  
+|**DisplayErrorLink**|오류 발생 시 [!INCLUDE[msCoName](../../includes/msconame-md.md)] 도움말 및 지원 사이트에 대한 링크를 표시할지 여부를 나타냅니다. 이 링크는 오류 메시지에 나타납니다. 사용자는 링크를 클릭하여 해당 사이트에 대한 업데이트된 오류 메시지 내용을 열 수 있습니다. 유효한 값은 **True** (기본값) 및 **False** 입니다.|N,S|  
 |**WebServiceuseFileShareStorage**|사용자 세션 동안 보고서 서버 웹 서비스에서 만든 캐시된 보고서와 임시 스냅샷을 파일 시스템에 저장할지 여부를 지정합니다. 유효한 값은 **True** 및 **False** (기본값)입니다. 이 값을 false로 설정하면 임시 데이터가 reportservertempdb 데이터베이스에 저장됩니다.|N,S|  
 |**ProcessTimeout**|보고서 서버 프로세스 모니터가 서비스를 중지하기 전에 모든 서비스 작업이 완료될 때까지 대기하는 시간(초)을 지정합니다. 유효한 값은 0에서 최대 정수 사이입니다. 기본값은 150입니다. 이 설정은 기본적으로 사용하지 않도록 설정되어 있으며 주석 구문(```<!-- and -->```)을 제거하여 사용하도록 설정할 수 있습니다.|N|  
 |**ProcessTimeoutGcExtension**|보고서 서버 프로세스 모니터가 서비스를 중지하기 전에 특정 서비스 작업이 완료될 때까지 대기하는 시간(초)을 지정합니다. 이 설정은 .NET 가비지 수집이 진행 중이고 ProcessTimeout 값에 도달하는 경우에만 적용됩니다. 유효한 값은 0에서 최대 정수 사이입니다. 기본값은 30입니다. 이 설정은 기본적으로 사용하지 않도록 설정되어 있으며 주석 구문(```<!-- and -->```)을 제거하여 사용하도록 설정할 수 있습니다.|N|  
@@ -109,7 +109,7 @@ C:\Program Files\Common Files\Microsoft Shared\Web Server Extensions\15\WebServi
   
  표의 마지막 열은 해당 설정이 기본 모드 보고서 서버에 적용되는지(N) 또는 SharePoint 모드 보고서 서버에 적용되는지(S) 또는 두 가지 서버 모두에 적용되는지를 나타냅니다.  
   
-|설정|Description|Mode|  
+|설정|설명|Mode|  
 |-------------|-----------------|----------|  
 |**애플리케이션**|[!INCLUDE[ssRSnoversion](../../includes/ssrsnoversion-md.md)] 애플리케이션에 대한 설정을 포함합니다.|N|  
 |**이름**|[!INCLUDE[ssRSnoversion](../../includes/ssrsnoversion-md.md)] 애플리케이션을 지정합니다. 유효한 값은 ReportServerWebService나 ReportManager입니다.|N|  
@@ -117,12 +117,12 @@ C:\Program Files\Common Files\Microsoft Shared\Web Server Extensions\15\WebServi
 |**URL**|애플리케이션에 대한 하나 이상의 URL 예약을 포함합니다.|N|  
 |**UrlString**|HTTP.SYS에 유효한 URL 구문을 지정합니다. 구문에 대한 자세한 내용은 [URL 예약 구문&#40;보고서 서버 구성 관리자&#41;](../../reporting-services/install-windows/url-reservation-syntax-ssrs-configuration-manager.md)을 참조하세요.|N|  
 |**AccountSid**|URL 예약을 만들 대상 계정의 SID(보안 식별자)를 지정합니다. 이 계정은 보고서 서버 서비스가 실행되는 계정이어야 합니다. SID가 서비스 계정과 일치하지 않으면 보고서 서버가 해당 URL에서 요청을 수신하지 못할 수 있습니다.|N|  
-|**AccountName**|**AccountSid**에 해당하는 읽을 수 있는 계정 이름을 지정합니다. 이 이름은 사용되지 않지만 URL 예약에 사용된 계정의 서비스 계정을 쉽게 확인할 수 있도록 파일에 나타납니다.|N|  
+|**AccountName**|**AccountSid** 에 해당하는 읽을 수 있는 계정 이름을 지정합니다. 이 이름은 사용되지 않지만 URL 예약에 사용된 계정의 서비스 계정을 쉽게 확인할 수 있도록 파일에 나타납니다.|N|  
   
 ##  <a name="authentication-rsreportserverconfig-file"></a><a name="bkmk_Authentication"></a> Authentication(RSReportServer.config 파일)  
  **Authentication** 은 보고서 서버에서 허용되는 하나 이상의 인증 유형을 지정합니다. 기본 설정 및 값은 이 섹션에 사용할 수 있는 설정 및 값의 하위 집합입니다. 기본 설정만 자동으로 추가됩니다. 다른 설정을 추가하려면 텍스트 편집기를 사용하여 RSReportServer.config 파일에 요소 구조를 추가하고 값을 설정해야 합니다.  
   
- 기본값은 **RSWindowsNegotiate** 가 **RSWindowsNTLM** 로 설정된 **EnableAuthPersistance** 및 **True**입니다.  
+ 기본값은 **RSWindowsNegotiate** 가 **RSWindowsNTLM** 로 설정된 **EnableAuthPersistance** 및 **True** 입니다.  
   
 ```  
    <Authentication>  
@@ -138,20 +138,20 @@ C:\Program Files\Common Files\Microsoft Shared\Web Server Extensions\15\WebServi
   
  다음 표의 마지막 열은 해당 설정이 기본 모드 보고서 서버에 적용되는지(N) 또는 SharePoint 모드 보고서 서버에 적용되는지(S) 또는 두 가지 서버 모두에 적용되는지를 나타냅니다.  
   
-|설정|Description|Mode|  
+|설정|설명|Mode|  
 |-------------|-----------------|----------|  
-|**AuthenticationTypes**|하나 이상의 인증 유형을 지정합니다. 유효한 값은 다음과 같습니다. **RSWindowsNegotiate**, **RSWindowsKerberos**, **RSWindowsNTLM**, **RSWindowsBasic**및 **Custom**입니다.<br /><br /> **RSWindows** 유형 및 **Custom** 은 함께 사용할 수 없습니다.<br /><br /> **RSWindowsNegotiate**, **RSWindowsKerberos**, **RSWindowsNTLM**및 **RSWindowsBasic** 은 누적되며 이 섹션의 앞부분에 나오는 기본값 예에서처럼 함께 사용할 수 있습니다.<br /><br /> 다양한 유형의 인증을 사용하는 여러 클라이언트 애플리케이션 또는 브라우저에서 요청을 받는 경우 여러 인증 유형을 지정해야 합니다.<br /><br /> 지원되는 브라우저 종류 중 일부로 브라우저 지원이 제한되므로 **RSWindowsNTLM**을 제거하지 마십시오. 자세한 내용은 [Reporting Services 및 파워 뷰에 대한 브라우저 지원](../../reporting-services/browser-support-for-reporting-services-and-power-view.md)을 참조하세요.|N|  
+|**AuthenticationTypes**|하나 이상의 인증 유형을 지정합니다. 유효한 값은 다음과 같습니다. **RSWindowsNegotiate** , **RSWindowsKerberos** , **RSWindowsNTLM** , **RSWindowsBasic** 및 **Custom** 입니다.<br /><br /> **RSWindows** 유형 및 **Custom** 은 함께 사용할 수 없습니다.<br /><br /> **RSWindowsNegotiate** , **RSWindowsKerberos** , **RSWindowsNTLM** 및 **RSWindowsBasic** 은 누적되며 이 섹션의 앞부분에 나오는 기본값 예에서처럼 함께 사용할 수 있습니다.<br /><br /> 다양한 유형의 인증을 사용하는 여러 클라이언트 애플리케이션 또는 브라우저에서 요청을 받는 경우 여러 인증 유형을 지정해야 합니다.<br /><br /> 지원되는 브라우저 종류 중 일부로 브라우저 지원이 제한되므로 **RSWindowsNTLM** 을 제거하지 마십시오. 자세한 내용은 [Reporting Services 및 파워 뷰에 대한 브라우저 지원](../../reporting-services/browser-support-for-reporting-services-and-power-view.md)을 참조하세요.|N|  
 |**RSWindowsNegotiate**|보고서 서버가 Kerberos 또는 NTLM 보안 토큰을 수락합니다. 이 설정은 보고서 서버를 기본 모드에서 실행할 경우의 기본값이며 서비스 계정은 네트워크 서비스입니다. 보고서 서버를 기본 모드에서 실행하고 서비스 계정이 도메인 사용자 계정으로 구성된 경우에는 이 설정이 무시됩니다.<br /><br /> 보고서 서버 서비스 계정에 대해 도메인 계정이 구성되고 보고서 서버에 대해 SPN(서비스 사용자 이름)이 구성되지 않은 경우 이 설정을 사용하면 사용자가 서버에 로그온하지 못할 수 있습니다.|N|  
 |**RSWindowsNTLM**|서버가 NTLM 보안 토큰을 수락합니다.<br /><br /> 이 설정을 제거하면 지원되는 일부 브라우저 유형에 대한 브라우저 지원이 제한될 수 있습니다. 자세한 내용은 [Reporting Services 및 파워 뷰에 대한 브라우저 지원](../../reporting-services/browser-support-for-reporting-services-and-power-view.md)을 참조하세요.|N, S|  
 |**RSWindowsKerberos**|서버가 Kerberos 보안 토큰을 수락합니다.<br /><br /> 제한된 위임 인증 체계에서 Kerberos 인증을 사용할 경우에는 이 설정이나 RSWindowsNegotiate를 사용합니다.|N|  
 |**RSWindowsBasic**|서버가 기본 자격 증명을 수락하고, 자격 증명 없이 연결할 경우 시도/응답을 실행합니다.<br /><br /> 기본 인증을 사용하면 HTTP 요청 시 자격 증명이 일반 텍스트로 전달됩니다. 기본 인증을 사용할 경우 TLS를 사용하여 보고서 서버와의 네트워크 트래픽을 암호화해야 합니다. [!INCLUDE[ssRSnoversion](../../includes/ssrsnoversion-md.md)]의 기본 인증에 대한 구성 구문 예를 보려면 [보고서 서버 인증](../../reporting-services/security/authentication-with-the-report-server.md)을 참조하세요.|N|  
 |**Custom**|보고서 서버 컴퓨터에 사용자 지정 보안 확장 프로그램을 배포한 경우 이 값을 지정합니다. 자세한 내용은 [Implementing a Security Extension](../../reporting-services/extensions/security-extension/implementing-a-security-extension.md)을 참조하세요.|N|  
-|**LogonMethod**|이 값은 **RSWindowsBasic**에 대한 로그온 유형을 지정합니다. **RSWindowsBasic**을 지정하는 경우 이 값이 필요합니다. 유효한 값은 2 또는 3입니다. 각 값에 대한 설명은 다음과 같습니다.<br /><br /> **2** = 일반 텍스트 암호를 인증하기 위한 네트워크 로그온 고성능 서버입니다.<br /><br /> **3** = 각 HTTP 요청과 함께 전송되는 인증 패키지에 로그온 자격 증명을 유지하여 서버가 네트워크의 다른 서버에 연결할 때 사용자를 가장할 수 있도록 하는 일반 텍스트 로그온입니다.<br /><br /> <br /><br /> 참고: 값 0(대화형 로그온) 및 1(일괄 처리 로그온)은 [!INCLUDE[ssRSCurrent](../../includes/ssrscurrent-md.md)]에서 지원되지 않습니다.|N|  
-|**Realm**|이 값은 **RSWindowsBasic**에 사용됩니다. Realm은 조직의 보호된 리소스에 대한 액세스를 제어하는 데 사용되는 권한 부여 및 인증 기능이 포함된 리소스 파티션을 지정합니다.|N|  
-|**DefaultDomain**|이 값은 **RSWindowsBasic**에 사용됩니다. DefaultDomain은 사용자를 인증할 때 서버가 사용하는 도메인을 결정하는 데 사용됩니다. 이 값은 선택 사항이지만 생략하면 보고서 서버가 컴퓨터 이름을 도메인으로 사용합니다. 도메인 컨트롤러에 보고서 서버를 설치한 경우에는 컴퓨터에서 제어되는 도메인이 사용됩니다.|N|  
-|**RSWindowsExtendedProtectionLevel**|기본값은 **해제**입니다. 자세한 내용은 [Extended Protection for Authentication with Reporting Services](../../reporting-services/security/extended-protection-for-authentication-with-reporting-services.md)를 참조하세요.|N|  
-|**RSWindowsExtendedProtectionScenario**|기본값은 **프록시**입니다.|N|  
-|**EnableAuthPersistence**|인증을 연결 시 수행할지, 아니면 요청마다 수행할지를 결정합니다.<br /><br /> 유효한 값은 **True** (기본값) 또는 **False**입니다. **True**로 설정하면 같은 연결의 이후 요청이 첫 번째 요청의 가장 컨텍스트를 가정합니다.<br /><br /> ISA 서버와 같은 프록시 서버 소프트웨어를 사용하여 보고서 서버에 액세스하는 경우에는 이 값을 **False** 로 설정해야 합니다. 프록시 서버를 사용하면 여러 사용자가 프록시 서버의 단일 연결을 사용할 수 있습니다. 이 시나리오에서는 각 사용자 요청이 별도로 인증되도록 인증 지속성을 사용하지 않아야 합니다. **EnableAuthPersistence** 를 **False**로 설정하지 않으면 모든 사용자가 첫 번째 요청의 가장 컨텍스트를 사용하여 연결합니다.|N,S|  
+|**LogonMethod**|이 값은 **RSWindowsBasic** 에 대한 로그온 유형을 지정합니다. **RSWindowsBasic** 을 지정하는 경우 이 값이 필요합니다. 유효한 값은 2 또는 3입니다. 각 값에 대한 설명은 다음과 같습니다.<br /><br /> **2** = 일반 텍스트 암호를 인증하기 위한 네트워크 로그온 고성능 서버입니다.<br /><br /> **3** = 각 HTTP 요청과 함께 전송되는 인증 패키지에 로그온 자격 증명을 유지하여 서버가 네트워크의 다른 서버에 연결할 때 사용자를 가장할 수 있도록 하는 일반 텍스트 로그온입니다.<br /><br /> <br /><br /> 참고: 값 0(대화형 로그온) 및 1(일괄 처리 로그온)은 [!INCLUDE[ssRSCurrent](../../includes/ssrscurrent-md.md)]에서 지원되지 않습니다.|N|  
+|**Realm**|이 값은 **RSWindowsBasic** 에 사용됩니다. Realm은 조직의 보호된 리소스에 대한 액세스를 제어하는 데 사용되는 권한 부여 및 인증 기능이 포함된 리소스 파티션을 지정합니다.|N|  
+|**DefaultDomain**|이 값은 **RSWindowsBasic** 에 사용됩니다. DefaultDomain은 사용자를 인증할 때 서버가 사용하는 도메인을 결정하는 데 사용됩니다. 이 값은 선택 사항이지만 생략하면 보고서 서버가 컴퓨터 이름을 도메인으로 사용합니다. 도메인 컨트롤러에 보고서 서버를 설치한 경우에는 컴퓨터에서 제어되는 도메인이 사용됩니다.|N|  
+|**RSWindowsExtendedProtectionLevel**|기본값은 **해제** 입니다. 자세한 내용은 [Extended Protection for Authentication with Reporting Services](../../reporting-services/security/extended-protection-for-authentication-with-reporting-services.md)를 참조하세요.|N|  
+|**RSWindowsExtendedProtectionScenario**|기본값은 **프록시** 입니다.|N|  
+|**EnableAuthPersistence**|인증을 연결 시 수행할지, 아니면 요청마다 수행할지를 결정합니다.<br /><br /> 유효한 값은 **True** (기본값) 또는 **False** 입니다. **True** 로 설정하면 같은 연결의 이후 요청이 첫 번째 요청의 가장 컨텍스트를 가정합니다.<br /><br /> ISA 서버와 같은 프록시 서버 소프트웨어를 사용하여 보고서 서버에 액세스하는 경우에는 이 값을 **False** 로 설정해야 합니다. 프록시 서버를 사용하면 여러 사용자가 프록시 서버의 단일 연결을 사용할 수 있습니다. 이 시나리오에서는 각 사용자 요청이 별도로 인증되도록 인증 지속성을 사용하지 않아야 합니다. **EnableAuthPersistence** 를 **False** 로 설정하지 않으면 모든 사용자가 첫 번째 요청의 가장 컨텍스트를 사용하여 연결합니다.|N,S|  
   
 ##  <a name="service-rsreportserverconfig-file"></a><a name="bkmk_service"></a> Service(RSReportServer.config 파일)  
  **Service** 는 서비스 전체에 적용되는 애플리케이션 설정을 지정합니다.  
@@ -159,21 +159,21 @@ C:\Program Files\Common Files\Microsoft Shared\Web Server Extensions\15\WebServi
  다음 표에서 마지막 열은 해당 설정이 기본 모드 보고서 서버(N), SharePoint 모드 보고서 서버(S) 또는 Power BI Report Server(P)에 적용되는지 나타냅니다.  
 
   
-|설정|Description|Mode|  
+|설정|설명|Mode|  
 |-------------|-----------------|----------|  
-|**IsSchedulingService**|[!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 사용자가 만든 일정 및 구독에 해당하는 [!INCLUDE[ssRSnoversion](../../includes/ssrsnoversion-md.md)] 에이전트 작업 집합을 보고서 서버가 유지 관리하는지 여부를 지정합니다. 유효한 값은 **True** (기본값) 및 **False**입니다.<br /><br /> 정책 기반 관리의 Reporting Services 패싯에 대한 노출 영역 구성을 사용하여 [!INCLUDE[ssRSnoversion](../../includes/ssrsnoversion-md.md)] 기능을 설정하거나 해제하면 이 설정이 영향을 받습니다. 자세한 내용은 [보고서 서버 서비스 시작 및 중지](../../reporting-services/report-server/start-and-stop-the-report-server-service.md)를 참조하세요.|N,S,P|  
-|**IsNotificationService**|보고서 서버가 알림 및 배달을 처리하는지 여부를 지정합니다. 유효한 값은 **True** (기본값) 및 **False**입니다. 값이 **False**이면 구독이 배달되지 않습니다.<br /><br /> 정책 기반 관리의 Reporting Services 패싯에 대한 노출 영역 구성을 사용하여 [!INCLUDE[ssRSnoversion](../../includes/ssrsnoversion-md.md)] 기능을 설정하거나 해제하면 이 설정이 영향을 받습니다. 자세한 내용은 [보고서 서버 서비스 시작 및 중지](../../reporting-services/report-server/start-and-stop-the-report-server-service.md)를 참조하세요.|N,S,P|  
-|**IsEventService**|서비스가 이벤트 큐의 이벤트를 처리하는 지 여부를 지정합니다. 유효한 값은 **True** (기본값) 및 **False**입니다. 값이 **False**이면 보고서 서버가 일정 또는 구독에 대해 작업을 수행하지 않습니다.<br /><br /> 정책 기반 관리의 Reporting Services 패싯에 대한 노출 영역 구성을 사용하여 [!INCLUDE[ssRSnoversion](../../includes/ssrsnoversion-md.md)] 기능을 설정하거나 해제하면 이 설정이 영향을 받습니다. 자세한 내용은 [보고서 서버 서비스 시작 및 중지](../../reporting-services/report-server/start-and-stop-the-report-server-service.md)를 참조하세요.|N,S,P|  
-|**IsAlertingService**|기본값은 **True**입니다.|S|  
+|**IsSchedulingService**|[!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 사용자가 만든 일정 및 구독에 해당하는 [!INCLUDE[ssRSnoversion](../../includes/ssrsnoversion-md.md)] 에이전트 작업 집합을 보고서 서버가 유지 관리하는지 여부를 지정합니다. 유효한 값은 **True** (기본값) 및 **False** 입니다.<br /><br /> 정책 기반 관리의 Reporting Services 패싯에 대한 노출 영역 구성을 사용하여 [!INCLUDE[ssRSnoversion](../../includes/ssrsnoversion-md.md)] 기능을 설정하거나 해제하면 이 설정이 영향을 받습니다. 자세한 내용은 [보고서 서버 서비스 시작 및 중지](../../reporting-services/report-server/start-and-stop-the-report-server-service.md)를 참조하세요.|N,S,P|  
+|**IsNotificationService**|보고서 서버가 알림 및 배달을 처리하는지 여부를 지정합니다. 유효한 값은 **True** (기본값) 및 **False** 입니다. 값이 **False** 이면 구독이 배달되지 않습니다.<br /><br /> 정책 기반 관리의 Reporting Services 패싯에 대한 노출 영역 구성을 사용하여 [!INCLUDE[ssRSnoversion](../../includes/ssrsnoversion-md.md)] 기능을 설정하거나 해제하면 이 설정이 영향을 받습니다. 자세한 내용은 [보고서 서버 서비스 시작 및 중지](../../reporting-services/report-server/start-and-stop-the-report-server-service.md)를 참조하세요.|N,S,P|  
+|**IsEventService**|서비스가 이벤트 큐의 이벤트를 처리하는 지 여부를 지정합니다. 유효한 값은 **True** (기본값) 및 **False** 입니다. 값이 **False** 이면 보고서 서버가 일정 또는 구독에 대해 작업을 수행하지 않습니다.<br /><br /> 정책 기반 관리의 Reporting Services 패싯에 대한 노출 영역 구성을 사용하여 [!INCLUDE[ssRSnoversion](../../includes/ssrsnoversion-md.md)] 기능을 설정하거나 해제하면 이 설정이 영향을 받습니다. 자세한 내용은 [보고서 서버 서비스 시작 및 중지](../../reporting-services/report-server/start-and-stop-the-report-server-service.md)를 참조하세요.|N,S,P|  
+|**IsAlertingService**|기본값은 **True** 입니다.|S|  
 |**PollingInterval**|보고서 서버가 이벤트 테이블을 폴링하는 간격(초)을 지정합니다. 유효한 값은 0에서 최대 정수 사이입니다. 기본값은 10입니다.|N,S,P|  
-|**IsDataModelRefreshService**|서비스가 Power BI 보고서에 예약된 데이터 모델 새로 고침 이벤트를 처리할지 여부를 지정합니다. 유효한 값은 **True** (기본값) 및 **False**입니다. 값이 **False**이면 보고서 서버가 예약된 데이터 모델 새로 고침에 대한 작업을 수행하지 않습니다.|N|  
+|**IsDataModelRefreshService**|서비스가 Power BI 보고서에 예약된 데이터 모델 새로 고침 이벤트를 처리할지 여부를 지정합니다. 유효한 값은 **True** (기본값) 및 **False** 입니다. 값이 **False** 이면 보고서 서버가 예약된 데이터 모델 새로 고침에 대한 작업을 수행하지 않습니다.|N|  
 |**WindowsServiceUseFileShareStorage**|사용자 세션 동안 보고서 서버 서비스가 만든 캐시된 보고서와 임시 스냅샷을 파일 시스템에 저장할지 여부를 지정합니다. 유효한 값은 **True** 및 **False** (기본값)입니다.|N,S,P|  
-|**MemorySafetyMargin**|보통 및 낮음 가중 시나리오 간 경계를 정의하는 **WorkingSetMaximum**의 비율을 지정합니다. 기본값은 80입니다. **WorkingSetMaximum** 및 사용 가능한 메모리 구성에 대한 자세한 내용은 [보고서 서버 애플리케이션을 위한 사용 가능한 메모리 구성](../../reporting-services/report-server/configure-available-memory-for-report-server-applications.md)을 참조하세요.|N,S,P|  
-|**MemoryThreshold**|높음 및 보통 가중 시나리오 간 경계를 정의하는 **WorkingSetMaximum** 의 비율을 지정합니다. 기본값은 **90**입니다. 이 값은 **MemorySafetyMargin**에 설정된 값보다 커야 합니다. 자세한 내용은 [보고서 서버 애플리케이션을 위한 사용 가능한 메모리 구성](../../reporting-services/report-server/configure-available-memory-for-report-server-applications.md)을 참조하세요.|N,S,P|  
+|**MemorySafetyMargin**|보통 및 낮음 가중 시나리오 간 경계를 정의하는 **WorkingSetMaximum** 의 비율을 지정합니다. 기본값은 80입니다. **WorkingSetMaximum** 및 사용 가능한 메모리 구성에 대한 자세한 내용은 [보고서 서버 애플리케이션을 위한 사용 가능한 메모리 구성](../../reporting-services/report-server/configure-available-memory-for-report-server-applications.md)을 참조하세요.|N,S,P|  
+|**MemoryThreshold**|높음 및 보통 가중 시나리오 간 경계를 정의하는 **WorkingSetMaximum** 의 비율을 지정합니다. 기본값은 **90** 입니다. 이 값은 **MemorySafetyMargin** 에 설정된 값보다 커야 합니다. 자세한 내용은 [보고서 서버 애플리케이션을 위한 사용 가능한 메모리 구성](../../reporting-services/report-server/configure-available-memory-for-report-server-applications.md)을 참조하세요.|N,S,P|  
 |**WorkingSetMaximum**|값 초과 시 보고서 서버 애플리케이션에 대한 새 메모리 할당 요청이 더 이상 허가되지 않는 메모리 임계값을 지정합니다. 기본적으로 보고서 서버는 WorkingSetMaximum을 컴퓨터에서 사용 가능한 메모리 양으로 설정합니다. 이 값은 서비스가 시작될 때 검색됩니다. 이 설정을 직접 추가하지 않으면 RSReportServer.config 파일에 나타나지 않습니다. 유효한 값은 0에서 최대 정수 사이입니다. 이 값은 KB로 표시됩니다. 자세한 내용은 [보고서 서버 애플리케이션을 위한 사용 가능한 메모리 구성](../../reporting-services/report-server/configure-available-memory-for-report-server-applications.md)을 참조하세요.|N|  
-|**WorkingSetMinimum**|메모리 소비량의 하한값을 지정합니다. 전체 메모리 사용량이 이 값을 하회하는 경우 보고서 서버는 메모리를 해제하지 않습니다. 기본적으로 이 값은 서비스 시작 시 계산되며 초기 메모리 할당 요청은 **WorkingSetMaximum**의 60%입니다. 이 설정을 직접 추가하지 않으면 RSReportServer.config 파일에 나타나지 않습니다. 이 값을 사용자 지정하려는 경우 RSReportServer.config 파일에 **WorkingSetMaximum** 요소를 추가해야 합니다. 유효한 값은 0에서 최대 정수 사이입니다. 이 값은 KB로 표시됩니다. 자세한 내용은 [보고서 서버 애플리케이션을 위한 사용 가능한 메모리 구성](../../reporting-services/report-server/configure-available-memory-for-report-server-applications.md)을 참조하세요.|N| 
+|**WorkingSetMinimum**|메모리 소비량의 하한값을 지정합니다. 전체 메모리 사용량이 이 값을 하회하는 경우 보고서 서버는 메모리를 해제하지 않습니다. 기본적으로 이 값은 서비스 시작 시 계산되며 초기 메모리 할당 요청은 **WorkingSetMaximum** 의 60%입니다. 이 설정을 직접 추가하지 않으면 RSReportServer.config 파일에 나타나지 않습니다. 이 값을 사용자 지정하려는 경우 RSReportServer.config 파일에 **WorkingSetMaximum** 요소를 추가해야 합니다. 유효한 값은 0에서 최대 정수 사이입니다. 이 값은 KB로 표시됩니다. 자세한 내용은 [보고서 서버 애플리케이션을 위한 사용 가능한 메모리 구성](../../reporting-services/report-server/configure-available-memory-for-report-server-applications.md)을 참조하세요.|N| 
 |**RecycleTime**|애플리케이션 도메인에 대한 재활용 시간(분)을 지정합니다. 유효한 값은 0에서 최대 정수 사이입니다. 기본값은 720입니다.|N,S|  
-|**MaxAppDomainUnloadTime**|재활용 작업 중 애플리케이션 도메인 언로드 작업이 허용되는 간격을 지정합니다. 이 기간 동안 재활용이 완료되지 않으면 애플리케이션 도메인의 모든 처리가 중지됩니다. 자세한 내용은 [Application Domains for Report Server Applications](../../reporting-services/report-server/application-domains-for-report-server-applications.md)을 참조하세요.<br /><br /> 이 값은 분 단위로 지정됩니다. 유효한 값은 0에서 최대 정수 사이입니다. 기본값은 **30**입니다.|N,S,P|  
+|**MaxAppDomainUnloadTime**|재활용 작업 중 애플리케이션 도메인 언로드 작업이 허용되는 간격을 지정합니다. 이 기간 동안 재활용이 완료되지 않으면 애플리케이션 도메인의 모든 처리가 중지됩니다. 자세한 내용은 [Application Domains for Report Server Applications](../../reporting-services/report-server/application-domains-for-report-server-applications.md)을 참조하세요.<br /><br /> 이 값은 분 단위로 지정됩니다. 유효한 값은 0에서 최대 정수 사이입니다. 기본값은 **30** 입니다.|N,S,P|  
 |**MaxQueueThreads**|보고서 서버 Windows 서비스에서 구독 및 알림을 동시에 처리하기 위해 사용하는 스레드 수를 지정합니다. 유효한 값은 0에서 최대 정수 사이입니다. 기본값은 0입니다. 0을 선택하면 보고서 서버가 최대 스레드 수를 결정합니다. 정수를 지정하면 사용자가 지정한 값이 한 번에 만들 수 있는 스레드 개수 상한값으로 설정됩니다. 보고서 서버 Windows 서비스의 프로세스 실행을 위한 메모리 관리 방법에 대한 자세한 내용은 [보고서 서버 애플리케이션을 위한 사용 가능한 메모리 구성](../../reporting-services/report-server/configure-available-memory-for-report-server-applications.md)을 참조하세요.|N,S,P|  
 |**UrlRoot**|보고서 서버 배달 확장 프로그램에서 이메일 및 파일 공유 구독에 배달되는 보고서에 사용되는 URL을 작성하는 데 사용되며, Globals!ReportServerUrl을 사용하여 식을 해결할 때 보고서 처리에도 사용됩니다. 이 값은 게시된 보고서를 액세스하는 보고서 서버에 대해 유효한 URL 주소여야 합니다. 보고서 서버가 오프라인 또는 무인 액세스를 위한 URL을 생성하는 데 사용합니다. 이러한 URL은 내보낸 보고서 및 배달 확장 프로그램에서 전자 메일의 링크와 같이 배달 메시지에 포함된 URL을 작성할 때 사용합니다. 보고서 서버는 다음과 같은 동작을 기반으로 보고서의 URL을 결정합니다.<br /><br /> **UrlRoot** 가 비어 있고(기본값) 예약된 URL이 있으면 보고서 서버는 ListReportServerUrls 메서드에 대해 URL이 생성되는 방식과 동일하게 URL을 자동으로 결정합니다. ListReportServerUrls 메서드에서 반환하는 첫 번째 URL이 사용되거나, SecureConnectionLevel이 0보다 큰 경우 첫 번째 TLS URL이 사용됩니다.<br /><br /> **UrlRoot** 에 특정 값을 설정하면 해당 값이 사용됩니다.<br /><br /> **UrlRoot** 가 비어 있고 URL 예약도 구성되어 있지 않으면 렌더링된 보고서 및 전자 메일 링크에 잘못된 URL이 사용됩니다.|N,S,P|  
 |**UnattendedExecutionAccount**|보고서 서버에서 보고서를 실행하는 데 사용하는 사용자 이름, 암호 및 도메인을 지정합니다. 이러한 값은 암호화되어 있습니다. [!INCLUDE[ssRSnoversion](../../includes/ssrsnoversion-md.md)] 구성 도구 또는 **rsconfig** 유틸리티를 사용하여 이러한 값을 설정합니다. 자세한 내용은 [무인 실행 계정 구성&#40;보고서 서버 구성 관리자&#41;](../../reporting-services/install-windows/configure-the-unattended-execution-account-ssrs-configuration-manager.md)를 참조하세요.<br /><br /> SharePoint 모드의 경우 SharePoint 중앙 관리를 사용하여 [!INCLUDE[ssRSnoversion](../../includes/ssrsnoversion-md.md)] 서비스 애플리케이션에 대한 실행 계정을 설정합니다. 자세한 내용은 [Reporting Services SharePoint 서비스 애플리케이션 관리](../../reporting-services/report-server-sharepoint/manage-a-reporting-services-sharepoint-service-application.md)를 참조하세요.|N,P|  
@@ -181,21 +181,21 @@ C:\Program Files\Common Files\Microsoft Shared\Web Server Extensions\15\WebServi
 |**IsWebServiceEnabled**|보고서 서버 웹 서비스가 SOAP 및 URL 액세스 요청에 응답할지 여부를 지정합니다. 정책 기반 관리의 Reporting Services에 대한 노출 영역 구성 패싯을 사용하여 서비스를 설정하거나 해제하면 이 값이 설정됩니다.|N,S|  
 |**IsReportManagerEnabled**|이 설정은 SQL Server 2016 Reporting Services 누적 업데이트 2부터 사용되지 않습니다. 웹 포털은 항상 사용할 수 있습니다.|N|  
 |**FileShareStorageLocation**|파일 시스템에 임시 스냅샷을 저장할 단일 폴더를 지정합니다. 폴더 경로를 UNC 경로로 지정할 수 있지만 이 방법은 사용하지 않는 것이 좋습니다. 기본값은 비어 있습니다.<br /><br /> `<FileShareStorageLocation>`<br /><br /> `<Path>`<br /><br /> `</Path>`<br /><br /> `</FileShareStorageLocation>`|N,S,P|  
-|**IsRdceEnabled**|RDCE(Report Definition Customization Extension) 설정 여부를 지정합니다. 유효한 값은 **True** 및 **False**입니다.|N,S,P|
-|**IsDataModelRefreshService**|서버가 Power BI 보고서 새로 고침을 처리해야 하는지 여부를 지정합니다. 유효한 값은 **True** 및 **False**입니다.|P|
+|**IsRdceEnabled**|RDCE(Report Definition Customization Extension) 설정 여부를 지정합니다. 유효한 값은 **True** 및 **False** 입니다.|N,S,P|
+|**IsDataModelRefreshService**|서버가 Power BI 보고서 새로 고침을 처리해야 하는지 여부를 지정합니다. 유효한 값은 **True** 및 **False** 입니다.|P|
 |**MaxCatalogConnectionPoolSizePerProcess**|서버 카탈로그에 연결할 때 연결 풀의 최대 크기를 지정합니다. 기본값은 0입니다. 0을 선택하면 보고서 서버는 reportingservices.exe 프로세스에 대한 최대 연결 수를 결정하고, 다른 프로세스의 경우에는 [Sql Client Default](https://docs.microsoft.com/dotnet/api/system.data.sqlclient.sqlconnectionstringbuilder.maxpoolsize)입니다.|P|  
 
   
 ##  <a name="ui-rsreportserverconfig-file"></a><a name="bkmk_UI"></a> UI(RSReportServer.config 파일)  
- **UI**는 웹 포털 애플리케이션에 적용되는 구성 설정을 지정합니다.  
+ **UI** 는 웹 포털 애플리케이션에 적용되는 구성 설정을 지정합니다.  
   
  다음 표의 마지막 열은 해당 설정이 기본 모드 보고서 서버에 적용되는지(N) 또는 SharePoint 모드 보고서 서버에 적용되는지(S) 또는 두 가지 서버 모두에 적용되는지를 나타냅니다.  
   
 |설정|설명|Mode|  
 |-------------|-----------------|----------|  
 |**ReportServerUrl**|웹 포털이 연결하는 보고서 서버의 URL을 지정합니다. 다른 인스턴스 또는 원격 컴퓨터의 보고서 서버에 연결하도록 웹 포털을 구성하는 경우에만 이 값을 수정합니다.|N,S|  
-|**ReportBuilderTrustLevel**|이 값을 수정하지 마세요. 이 값은 구성할 수 없습니다. [!INCLUDE[ssKatmai](../../includes/sskatmai-md.md)] [!INCLUDE[ssRSnoversion](../../includes/ssrsnoversion-md.md)] 이상 버전에서 보고서 작성기는 **FullTrust**에서만 실행됩니다. 부분 신뢰 모드 중단에 대한 자세한 내용은 [SQL Server 2016의 SQL Server Reporting Services에서 중단된 기능](../../reporting-services/discontinued-functionality-to-sql-server-reporting-services-in-sql-server.md)을 참조하세요.|N,S|  
-|**PageCountMode**|웹 포털에만 해당하는 이 설정은 보고서가 렌더링되기 전에 보고서 서버가 페이지 수 값을 계산하는지, 아니면 보고서를 볼 때 보고서 서버가 페이지 수 값을 계산하는지를 지정합니다. 유효한 값은 **Estimate** (기본값) 및 **Actual**입니다. 사용자가 보고서를 볼 때 페이지 수 정보를 계산하려면 **Estimate** 를 사용합니다. 처음에 페이지 수는 2(현재 페이지와 추가 한 페이지)로 설정되지만 사용자가 보고서 페이지를 이동할 때 상향 조정됩니다. 보고서가 표시되기 전에 미리 페이지 수를 계산하려면 **Actual** 을 사용합니다. **Actual** 은 이전 버전과의 호환성을 위해 제공됩니다. **PageCountMode** 를 **Actual**로 설정하면 올바른 페이지 수를 얻기 위해 전체 보고서를 처리해야 하므로 보고서가 표시될 때까지의 대기 시간이 증가합니다.|N,S|  
+|**ReportBuilderTrustLevel**|이 값을 수정하지 마세요. 이 값은 구성할 수 없습니다. [!INCLUDE[ssKatmai](../../includes/sskatmai-md.md)] [!INCLUDE[ssRSnoversion](../../includes/ssrsnoversion-md.md)] 이상 버전에서 보고서 작성기는 **FullTrust** 에서만 실행됩니다. 부분 신뢰 모드 중단에 대한 자세한 내용은 [SQL Server 2016의 SQL Server Reporting Services에서 중단된 기능](../../reporting-services/discontinued-functionality-to-sql-server-reporting-services-in-sql-server.md)을 참조하세요.|N,S|  
+|**PageCountMode**|웹 포털에만 해당하는 이 설정은 보고서가 렌더링되기 전에 보고서 서버가 페이지 수 값을 계산하는지, 아니면 보고서를 볼 때 보고서 서버가 페이지 수 값을 계산하는지를 지정합니다. 유효한 값은 **Estimate** (기본값) 및 **Actual** 입니다. 사용자가 보고서를 볼 때 페이지 수 정보를 계산하려면 **Estimate** 를 사용합니다. 처음에 페이지 수는 2(현재 페이지와 추가 한 페이지)로 설정되지만 사용자가 보고서 페이지를 이동할 때 상향 조정됩니다. 보고서가 표시되기 전에 미리 페이지 수를 계산하려면 **Actual** 을 사용합니다. **Actual** 은 이전 버전과의 호환성을 위해 제공됩니다. **PageCountMode** 를 **Actual** 로 설정하면 올바른 페이지 수를 얻기 위해 전체 보고서를 처리해야 하므로 보고서가 표시될 때까지의 대기 시간이 증가합니다.|N,S|  
   
 ##  <a name="extensions-rsreportserverconfig-file-native-mode"></a><a name="bkmk_extensions"></a> 확장 프로그램(RSReportServer.config 파일) 기본 모드  
  확장 프로그램 섹션은 **기본 모드** 보고서 서버의 경우에만 rsreportserver.config 파일에 표시됩니다. SharePoint 모드 보고서 서버의 확장 정보는 SharePoint 구성 데이터베이스에 저장되며 [!INCLUDE[ssRSnoversion](../../includes/ssrsnoversion-md.md)] 서비스 애플리케이션에 따라 구성됩니다.  
@@ -237,7 +237,7 @@ C:\Program Files\Common Files\Microsoft Shared\Web Server Extensions\15\WebServi
   
  배달 확장 프로그램에 대한 자세한 내용은 [구독 및 배달&#40;Reporting Services&#41;](../../reporting-services/subscriptions/subscriptions-and-delivery-reporting-services.md)를 참조하세요.  
   
- 모든 배달 확장 프로그램에는 **Extension Name**, **MaxRetries**, **SecondsBeforeRetry**및 **Configuration**이 있습니다. 이러한 공유 설정은 먼저 설명됩니다. 확장 프로그램별 설정에 대한 설명은 두 번째 표에 나와 있습니다.  
+ 모든 배달 확장 프로그램에는 **Extension Name** , **MaxRetries** , **SecondsBeforeRetry** 및 **Configuration** 이 있습니다. 이러한 공유 설정은 먼저 설명됩니다. 확장 프로그램별 설정에 대한 설명은 두 번째 표에 나와 있습니다.  
   
 |설정|Description|  
 |-------------|-----------------|  
@@ -251,7 +251,7 @@ C:\Program Files\Common Files\Microsoft Shared\Web Server Extensions\15\WebServi
   
 |설정|설명|  
 |-------------|-----------------|  
-|**ExcludedRenderFormats**, **RenderingExtension**|이러한 설정은 파일 공유 배달과 제대로 작동하지 않는 내보내기 형식을 의도적으로 제외하는 데 사용됩니다. 이러한 형식은 일반적으로 대화형 보고/미리 보기에 사용되거나 보고서 캐시를 미리 로드하는 데 사용됩니다. 이러한 형식은 데스크톱 애플리케이션에서 쉽게 볼 수 있는 애플리케이션 파일을 생성하지 않습니다.<br /><br /> HTMLOWC<br /><br /> RGDI<br /><br /> Null|  
+|**ExcludedRenderFormats** , **RenderingExtension**|이러한 설정은 파일 공유 배달과 제대로 작동하지 않는 내보내기 형식을 의도적으로 제외하는 데 사용됩니다. 이러한 형식은 일반적으로 대화형 보고/미리 보기에 사용되거나 보고서 캐시를 미리 로드하는 데 사용됩니다. 이러한 형식은 데스크톱 애플리케이션에서 쉽게 볼 수 있는 애플리케이션 파일을 생성하지 않습니다.<br /><br /> HTMLOWC<br /><br /> RGDI<br /><br /> Null|  
   
 ####  <a name="report-server-e-mail-extension-configuration-settings"></a><a name="bkmk_email_extension"></a> 보고서 서버 전자 메일 확장 프로그램 구성 설정  
  보고서 서버 전자 메일은 SMTP 네트워크 디바이스를 사용하여 보고서를 전자 메일 주소로 보냅니다. 이 배달 확장 프로그램을 사용하려면 먼저 구성해야 합니다. 자세한 내용은 [Reporting Services의 전자 메일 배달](../../reporting-services/subscriptions/e-mail-delivery-in-reporting-services.md)을 참조하세요.  
@@ -270,9 +270,9 @@ C:\Program Files\Common Files\Microsoft Shared\Web Server Extensions\15\WebServi
 |**EmbeddedRenderFormats, RenderingExtension**|전자 메일 메시지 본문에 보고서를 캡슐화하는 데 사용되는 렌더링 형식을 지정합니다. 보고서 내의 이미지는 보고서 내에 포함됩니다. 유효한 값은 MHTML 및 HTML4.0입니다.|  
 |**PrivilegedUserRenderFormats**|"모든 구독 관리" 태스크 통해 구독이 설정되면 사용자가 보고서 구독에 대해 선택할 수 있는 렌더링 형식을 지정합니다. 이 값을 설정하지 않으면 의도적으로 제외하지 않은 모든 렌더링 형식을 사용할 수 있습니다.|  
 |**ExcludedRenderFormats, RenderingExtension**|지정된 배달 확장 프로그램에서 제대로 작동하지 않는 형식을 제외합니다. 같은 렌더링 확장 프로그램의 여러 인스턴스를 제외할 수는 없습니다. 여러 인스턴스를 제외하면 보고서 서버에서 구성 파일을 읽을 때 오류가 발생합니다. 기본적으로 다음 확장 프로그램은 전자 메일 배달에서 제외됩니다.<br /><br /> HTMLOWC<br /><br /> Null<br /><br /> RGDI|  
-|**SendEmailToUserAlias**|이 값은 **DefaultHostName**과 함께 작동합니다.<br /><br /> **SendEmailToUserAlias** 를 **True**로 설정하면 개별 구독을 정의하는 사용자가 보고서를 받는 사람으로 자동 지정됩니다. **받는 사람** 필드는 숨겨집니다. 이 값이 **False**이면 **받는 사람** 필드가 표시됩니다. 보고서 배포를 최대한 제어하려면 이 값을 **True** 로 설정합니다. 유효한 값은 다음과 같습니다.<br /><br /> **True**=구독을 만든 사용자의 전자 메일 주소가 사용됩니다. 이것은 기본값입니다.<br /><br /> **False**=임의의 전자 메일 주소를 지정할 수 있습니다.|  
-|**DefaultHostName**|이 값은 **SendEmailToUserAlias**와 함께 작동합니다.<br /><br /> **SendEmailToUserAlias** 를 true로 설정하면 사용자 별칭에 추가할 호스트 이름을 나타내는 문자열 값을 지정합니다. 이 값은 DNS(Domain Name System) 이름 또는 IP 주소일 수 있습니다.|  
-|**PermittedHosts**|전자 메일 배달을 받을 호스트를 명시적으로 지정하여 보고서 배포를 제한합니다. **PermittedHosts**내에서 각 호스트는 **HostName** 요소로 지정됩니다. 해당 값은 IP 주소 또는 DNS 이름이 됩니다.<br /><br /> 호스트에 정의된 전자 메일 계정만 받는 사람으로 유효합니다. **DefaultHostName**을 지정한 경우 해당 호스트를 **PermittedHosts** 의 **HostName**요소로 포함시켜야 합니다. 이 값은 하나 이상의 DNS 이름이거나 IP 주소입니다. 기본적으로 이 값은 설정되어 있지 않습니다. 이 값이 설정되어 있지 않으면 전자 메일로 보낸 보고서를 받을 수 있는 사용자에 제한이 없습니다.|  
+|**SendEmailToUserAlias**|이 값은 **DefaultHostName** 과 함께 작동합니다.<br /><br /> **SendEmailToUserAlias** 를 **True** 로 설정하면 개별 구독을 정의하는 사용자가 보고서를 받는 사람으로 자동 지정됩니다. **받는 사람** 필드는 숨겨집니다. 이 값이 **False** 이면 **받는 사람** 필드가 표시됩니다. 보고서 배포를 최대한 제어하려면 이 값을 **True** 로 설정합니다. 유효한 값은 다음과 같습니다.<br /><br /> **True** =구독을 만든 사용자의 전자 메일 주소가 사용됩니다. 이것은 기본값입니다.<br /><br /> **False** =임의의 전자 메일 주소를 지정할 수 있습니다.|  
+|**DefaultHostName**|이 값은 **SendEmailToUserAlias** 와 함께 작동합니다.<br /><br /> **SendEmailToUserAlias** 를 true로 설정하면 사용자 별칭에 추가할 호스트 이름을 나타내는 문자열 값을 지정합니다. 이 값은 DNS(Domain Name System) 이름 또는 IP 주소일 수 있습니다.|  
+|**PermittedHosts**|전자 메일 배달을 받을 호스트를 명시적으로 지정하여 보고서 배포를 제한합니다. **PermittedHosts** 내에서 각 호스트는 **HostName** 요소로 지정됩니다. 해당 값은 IP 주소 또는 DNS 이름이 됩니다.<br /><br /> 호스트에 정의된 전자 메일 계정만 받는 사람으로 유효합니다. **DefaultHostName** 을 지정한 경우 해당 호스트를 **PermittedHosts** 의 **HostName** 요소로 포함시켜야 합니다. 이 값은 하나 이상의 DNS 이름이거나 IP 주소입니다. 기본적으로 이 값은 설정되어 있지 않습니다. 이 값이 설정되어 있지 않으면 전자 메일로 보낸 보고서를 받을 수 있는 사용자에 제한이 없습니다.|  
   
 ####  <a name="report-server-sharepoint-document-library-extension-configuration"></a><a name="bkmk_documentlibrary_extension"></a> 보고서 서버 SharePoint 문서 라이브러리의 확장 구성  
  보고서 서버 문서 라이브러리는 문서 라이브러리에 애플리케이션 파일 형식으로 내보내진 보고서를 보냅니다. 이 배달 확장 프로그램은 SharePoint 통합 모드에서 실행되도록 구성된 보고서 서버에서만 사용할 수 있습니다. 자세한 내용은 [SharePoint Library Delivery in Reporting Services](../../reporting-services/subscriptions/sharepoint-library-delivery-in-reporting-services.md)을 참조하세요.  
@@ -289,9 +289,9 @@ C:\Program Files\Common Files\Microsoft Shared\Web Server Extensions\15\WebServi
   
 |설정|Description|  
 |-------------|-----------------|  
-|**DefaultDeliveryExtension**|이 설정은 구독 정의 페이지의 배달 유형 목록에서 맨 위에 표시되는 배달 확장 프로그램을 결정합니다. 이 설정은 배달 확장 프로그램 하나에만 포함될 수 있습니다. 유효한 값은 **True** 나 **False**입니다. 이 값이 **True**로 설정된 확장 프로그램이 기본으로 선택됩니다.|  
+|**DefaultDeliveryExtension**|이 설정은 구독 정의 페이지의 배달 유형 목록에서 맨 위에 표시되는 배달 확장 프로그램을 결정합니다. 이 설정은 배달 확장 프로그램 하나에만 포함될 수 있습니다. 유효한 값은 **True** 나 **False** 입니다. 이 값이 **True** 로 설정된 확장 프로그램이 기본으로 선택됩니다.|  
 |**Configuration**|배달 확장 프로그램에 대한 구성 옵션을 지정합니다. 각 배달 확장 프로그램에 대한 기본 렌더링 형식을 설정할 수 있습니다. 유효한 값은 rsreportserver.config 파일의 render 섹션에 지정된 렌더링 확장 프로그램 이름입니다.|  
-|**DefaultRenderingExtension**|배달 확장 프로그램이 기본값인지 여부를 지정합니다. 보고서 서버 전자 메일이 기본 배달 확장 프로그램입니다. 유효한 값은 **True** 나 **False**입니다. 둘 이상의 확장 프로그램에 **True**값이 포함되어 있으면 첫 번째 확장 프로그램을 기본 확장 프로그램으로 간주합니다.|  
+|**DefaultRenderingExtension**|배달 확장 프로그램이 기본값인지 여부를 지정합니다. 보고서 서버 전자 메일이 기본 배달 확장 프로그램입니다. 유효한 값은 **True** 나 **False** 입니다. 둘 이상의 확장 프로그램에 **True** 값이 포함되어 있으면 첫 번째 확장 프로그램을 기본 확장 프로그램으로 간주합니다.|  
   
 ###  <a name="rendering-extensions-general-configuration"></a><a name="bkmk_rendering"></a> 렌더링 확장 프로그램 일반 구성  
  보고서 프레젠테이션에 사용되는 (사용자 지정) 렌더링 확장 프로그램 및 기본 확장 프로그램을 지정합니다.  
@@ -400,7 +400,7 @@ C:\Program Files\Common Files\Microsoft Shared\Web Server Extensions\15\WebServi
 |**MaxConnections**|Bing Maps 웹 서비스에 대한 최대 연결 수를 지정합니다.|  
 |**Timeout**|Bing Maps 웹 서비스의 응답을 기다리는 제한 시간(초 단위)을 지정합니다.|  
 |**AppID**|Bing Maps 웹 서비스에 사용할 애플리케이션 식별자(AppID)를 지정합니다. **(Default)** 는 [!INCLUDE[ssRSnoversion](../../includes/ssrsnoversion-md.md)] 기본 AppID를 지정합니다.<br /><br /> 보고서에서 Bing 지도 타일을 사용하는 방법은 [추가 사용 조건(Additional Terms of Use)](https://go.microsoft.com/fwlink/?LinkId=151371)을 참조하세요.<br /><br /> 고유한 Bing Maps 사용권 계약을 위해 사용자 지정 AppID를 지정해야 하는 경우가 아니라면 이 값을 변경하지 마세요. AppID를 변경한 경우 변경 내용을 적용하기 위해 [!INCLUDE[ssRSnoversion](../../includes/ssrsnoversion-md.md)] 를 다시 시작할 필요는 없습니다.|  
-|**CacheLevel**|System.Net.Cache의 HttpRequestCacheLevel 열거형 값을 지정합니다. 기본값은 **Default**입니다. 자세한 내용은 [HttpRequestCacheLevel 열거형](https://go.microsoft.com/fwlink/?LinkId=153353)을 참조하십시오.|  
+|**CacheLevel**|System.Net.Cache의 HttpRequestCacheLevel 열거형 값을 지정합니다. 기본값은 **Default** 입니다. 자세한 내용은 [HttpRequestCacheLevel 열거형](https://go.microsoft.com/fwlink/?LinkId=153353)을 참조하십시오.|  
   
 ##  <a name="default-configuration-file-for-a-native-mode-report-server"></a><a name="bkmk_nativedefaultfile"></a> 기본 모드 보고서 서버에 대한 기본 구성 파일  
  rsreportserver.config 파일은 기본적으로 다음 위치에 설치됩니다.  

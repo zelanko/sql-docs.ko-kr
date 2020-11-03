@@ -9,12 +9,12 @@ ms.date: 08/21/2019
 ms.topic: conceptual
 ms.prod: sql
 ms.technology: big-data-cluster
-ms.openlocfilehash: 01ff6844019cfed0dbfa614fee156680ecd8f38e
-ms.sourcegitcommit: d1051f05a7db81ec62d9785bb6af572408f3d4e0
+ms.openlocfilehash: 74f3306167a4c2fbc248f65e5384ea9847f48f7a
+ms.sourcegitcommit: 22e97435c8b692f7612c4a6d3fe9e9baeaecbb94
 ms.translationtype: HT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 08/20/2020
-ms.locfileid: "88680605"
+ms.lasthandoff: 10/27/2020
+ms.locfileid: "92678917"
 ---
 # <a name="how-to-use-visual-studio-code-to-deploy-applications-to-big-data-clusters-2019"></a>Visual Studio Code를 사용하여 [!INCLUDE[big-data-clusters-2019](../includes/ssbigdataclusters-ss-nover.md)]에 애플리케이션을 배포하는 방법
 
@@ -81,7 +81,7 @@ Visual Studio Code에서 적절한 엔드포인트, 사용자 이름 및 암호�
 azdata bdc endpoint list
 ```
 
-나열된 서비스의 엔드포인트를 찾을 수 있는 Azure Data Studio 서버에서 **관리**를 마우스 오른쪽 단추로 클릭해도 이 정보를 볼 수 있습니다.
+나열된 서비스의 엔드포인트를 찾을 수 있는 Azure Data Studio 서버에서 **관리** 를 마우스 오른쪽 단추로 클릭해도 이 정보를 볼 수 있습니다.
 
 ![ADS 엔드포인트](media/vs-extension/ads_end_point.png)
 
@@ -153,7 +153,7 @@ Visual Studio Code에서 앱의 아티팩트를 저장할 *작업 영역을 열�
 
 `Links`를 클릭하면 배포된 앱의 `swagger.json`에 액세스할 수 있으므로, 해당 앱을 호출하는 고유한 클라이언트를 작성할 수 있습니다.
 
-![Swagger](media/vs-extension/swagger.png)
+![swagger.json 파일을 보여 주는 VS Code UI의 스크린샷](media/vs-extension/swagger.png)
 
 자세한 내용은 [빅 데이터 클러스터에서 애플리케이션 사용](app-consume.md)을 참조하세요.
 

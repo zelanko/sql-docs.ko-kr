@@ -10,16 +10,18 @@ ms.date: 06/22/2020
 ms.topic: conceptual
 ms.prod: sql
 ms.technology: big-data-cluster
-ms.openlocfilehash: 65a7c0afc57cc29d8ec5df7beb4c3107470e2d31
-ms.sourcegitcommit: ae474d21db4f724523e419622ce79f611e956a22
+ms.openlocfilehash: ac26973c4d1ff8b2a9e689f3aa372d3888f939d6
+ms.sourcegitcommit: ab9ddcc16fdfc245cf9a49d1e90bb1ffe3958c38
 ms.translationtype: HT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 10/20/2020
-ms.locfileid: "92257263"
+ms.lasthandoff: 10/29/2020
+ms.locfileid: "92914302"
 ---
-# <a name="what-is-application-deployment-on-a-big-data-cluster"></a>빅 데이터 클러스터의 애플리케이션 배포란?
+# <a name="what-is-application-deployment-on-a-sql-server-big-data-cluster"></a>SQL Server 빅 데이터 클러스터의 애플리케이션 배포란?
 
-애플리케이션 배포는 애플리케이션을 만들고 관리 및 실행하기 위한 인터페이스를 제공하여 빅 데이터 클러스터에 애플리케이션을 배포할 수 있게 합니다. 빅 데이터 클러스터에 배포된 애플리케이션은 클러스터의 계산 능력을 활용하며, 클러스터에서 사용할 수 있는 데이터에 액세스할 수 있습니다. 이로 인해 데이터가 있는 애플리케이션을 관리하는 동시에 애플리케이션의 확장성과 성능이 향상됩니다. SQL Server 빅 데이터 클러스터에서 지원되는 애플리케이션 런타임은 R, Python, SSIS, MLeap입니다.
+[!INCLUDE[SQL Server 2019](../includes/applies-to-version/sqlserver2019.md)]
+
+애플리케이션 배포는 애플리케이션을 만들고 관리 및 실행하기 위한 인터페이스를 제공하여 SQL Server 빅 데이터 클러스터에 애플리케이션을 배포할 수 있게 합니다. SQL Server 빅 데이터 클러스터에 배포된 애플리케이션은 클러스터의 컴퓨팅 기능을 활용하며, 클러스터에서 사용할 수 있는 데이터에 액세스할 수 있습니다. 이로 인해 데이터가 있는 애플리케이션을 관리하는 동시에 애플리케이션의 확장성과 성능이 향상됩니다. [!INCLUDE[big-data-clusters-2019](../includes/ssbigdataclusters-ss-nover.md)]에서 지원되는 애플리케이션 런타임은 R, Python, SSIS, MLeap입니다.
 
 다음 섹션에서는 애플리케이션 배포의 아키텍처 및 기능을 설명합니다.
 
@@ -59,7 +61,7 @@ SQL Server 2019 CU5는 Red Hat OpenShift의 빅 데이터 클러스터 배포뿐
 
 CU5 릴리스 시점에 [앱 배포]() 인터페이스를 사용하여 배포되는 애플리케이션의 설치 단계는 여전히 ‘루트’ 사용자로 실행됩니다. 이 동작은 설치 도중에 애플리케이션에서 사용할 추가 패키지가 설치되기 때문에 필요합니다. 애플리케이션의 일부로 배포된 다른 사용자 코드는 권한이 낮은 사용자로 실행됩니다. 
 
-또한 **CAP_AUDIT_WRITE** 기능은 cron 작업을 사용하여 SSIS 애플리케이션 예약을 허용하는 데 필요한 선택적 기능입니다. 애플리케이션의 yaml 사양 파일에서 일정을 지정하는 경우 애플리케이션은 추가 기능을 필요로 하는 cron 작업을 통해 트리거됩니다.  또는 *azdata app run*을 사용하여 웹 서비스 호출을 통해 요청 시 애플리케이션을 트리거할 수 있으며, 여기에는 CAP_AUDIT_WRITE 기능이 필요하지 않습니다. 
+또한 **CAP_AUDIT_WRITE** 기능은 cron 작업을 사용하여 SSIS 애플리케이션 예약을 허용하는 데 필요한 선택적 기능입니다. 애플리케이션의 yaml 사양 파일에서 일정을 지정하는 경우 애플리케이션은 추가 기능을 필요로 하는 cron 작업을 통해 트리거됩니다.  또는 *azdata app run* 을 사용하여 웹 서비스 호출을 통해 요청 시 애플리케이션을 트리거할 수 있으며, 여기에는 CAP_AUDIT_WRITE 기능이 필요하지 않습니다. 
 
 > [!NOTE]
 > [OpenShift 배포 문서](deploy-openshift.md)의 사용자 지정 SCC는 빅 데이터 클러스터의 기본 배포에 필요하지 않기 때문에 이 기능을 포함하지 않습니다. 이 기능을 사용하도록 설정하려면 먼저 사용자 지정 SCC yaml 파일을 업데이트하여 다음 위치에 CAP_AUDIT_WRITE를 포함해야 합니다. 
@@ -67,9 +69,9 @@ CU5 릴리스 시점에 [앱 배포]() 인터페이스를 사용하여 배포되
 ```yml
 ...
 allowedCapabilities:
-- SETUID
-- SETGID
-- CHOWN
+- SETUID
+- SETGID
+- CHOWN
 - SYS_PTRACE
 - AUDIT_WRITE
 ...

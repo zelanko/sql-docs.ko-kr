@@ -1,1 +1,1 @@
-**적용 대상:** ![예](media/yes-icon.png)SQL Server 2016 ![예](media/yes-icon.png)Power BI Report Server
+**적용 대상:** :::image type="icon" source="media/yes-icon.png":::SQL Server 2016 :::image type="icon" source="media/yes-icon.png":::Power BI Report Server

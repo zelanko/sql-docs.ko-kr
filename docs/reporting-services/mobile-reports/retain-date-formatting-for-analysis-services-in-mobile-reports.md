@@ -9,12 +9,12 @@ ms.topic: conceptual
 ms.assetid: e9a9a199-40e3-4381-b250-1b99fb83aa62
 author: maggiesMSFT
 ms.author: maggies
-ms.openlocfilehash: 17294f4e7f26b3402655e0033cddedeb7bc69a3c
-ms.sourcegitcommit: ff82f3260ff79ed860a7a58f54ff7f0594851e6b
+ms.openlocfilehash: 5fef66452820975107e06e20a4085978163d957d
+ms.sourcegitcommit: ea0bf89617e11afe85ad85309e0ec731ed265583
 ms.translationtype: HT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 03/29/2020
-ms.locfileid: "79448451"
+ms.lasthandoff: 10/28/2020
+ms.locfileid: "92907101"
 ---
 # <a name="retain-date-formatting-for-analysis-services-in-mobile-reports"></a>모바일 보고서에서 Analysis Services에 대한 날짜 형식 지정 유지
 보고서 작성기의 공유 데이터 세트에 측정값을 추가하므로 [!INCLUDE[ssASnoversion_md](../../includes/ssasnoversion-md.md)] 데이터 원본의 날짜가 [!INCLUDE[SS_MobileReptPub_Long](../../includes/ss-mobilereptpub-short.md)]의 데이터 형식을 유지합니다.
@@ -27,15 +27,15 @@ ms.locfileid: "79448451"
 
 ## <a name="create-a-measure-to-retain-a-date-field-data-type"></a>측정값을 만들어 날짜 필드 데이터 형식 유지
 
-1. 측정값을 만들어 요청한 날짜 필드 값을 유지하고, 수식 필드에서 날짜의 계층/수준을 선택하고 **.CurrentMember.MemberValue**를 추가합니다. 다음은 그 예입니다.
+1. 측정값을 만들어 요청한 날짜 필드 값을 유지하고, 수식 필드에서 날짜의 계층/수준을 선택하고 **.CurrentMember.MemberValue** 를 추가합니다. 다음은 그 예입니다.
  
    [Internet Sales].[Ship Date].CurrentMember.MemberValue
    
-   ![ssas-calculated-member-report-builder](../../reporting-services/mobile-reports/media/ssas-calculated-member-report-builder.png)
+   ![식 텍스트 상자가 설명선으로 표시된 계산 멤버 작성기 대화 상자의 스크린샷](../../reporting-services/mobile-reports/media/ssas-calculated-member-report-builder.png)
    
 2. 이제 왼쪽 아래의 계산 멤버 목록에서 끌어 오른쪽의 열 표에 놓는 방법으로 열 집합에 이 계산 멤버를 추가할 수 있습니다.  
 
-   ![ssas-query-designer-calculated-member-report-builder](../../reporting-services/mobile-reports/media/ssas-query-designer-calculated-member-report-builder.png) 
+   ![계산 멤버 섹션이 설명선으로 표시된 쿼리 디자이너의 스크린샷](../../reporting-services/mobile-reports/media/ssas-query-designer-calculated-member-report-builder.png) 
    
 ### <a name="see-also"></a>참고 항목
 

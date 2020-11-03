@@ -9,12 +9,12 @@ ms.topic: conceptual
 ms.assetid: e141f50e-49a9-46c6-983c-f656013aa07c
 author: maggiesMSFT
 ms.author: maggies
-ms.openlocfilehash: 6749853bc1717077a4d65f4f27546c0fe260cdaf
-ms.sourcegitcommit: ff82f3260ff79ed860a7a58f54ff7f0594851e6b
+ms.openlocfilehash: 640f8a5b04f9045f905f86ef6d34924ea849bd80
+ms.sourcegitcommit: ea0bf89617e11afe85ad85309e0ec731ed265583
 ms.translationtype: HT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 03/29/2020
-ms.locfileid: "79448204"
+ms.lasthandoff: 10/28/2020
+ms.locfileid: "92907097"
 ---
 # <a name="add-navigators-to-reporting-services-mobile-reports"></a>Add navigators to Reporting Services mobile reports
 [!INCLUDE[SS_MobileReptPub_Long](../../includes/ss-mobilereptpub-long.md)]에서 시각화의 데이터를 시간별 또는 선택 항목별로 필터링하려면 *탐색기* 를 추가합니다. 
@@ -42,7 +42,7 @@ ms.locfileid: "79448204"
   
 시간 탐색기에서 시각화의 연결을 끊을 수 있습니다.   
 1. 시각화를 선택한 다음 **데이터** 탭을 선택합니다.  
-2. **데이터 속성**에서 **옵션**을 선택합니다.  
+2. **데이터 속성** 에서 **옵션** 을 선택합니다.  
 3. **필터링 기준** 확인란의 선택을 취소합니다.  
   
    ![SSMRP_ClearTimeFilter](../../reporting-services/mobile-reports/media/ssmrp-cleartimefilter.png)  
@@ -53,25 +53,25 @@ ms.locfileid: "79448204"
 
 1. **레이아웃** 탭에서 **선택 목록** 을 디자인 화면으로 끌어서 원하는 방법으로 크기를 조정합니다.
 
-2. **데이터** 탭을 선택하고 **키** 아래의 **데이터 속성**창에서 필터로 사용할 테이블 및 열을 선택합니다. 
+2. **데이터** 탭을 선택하고 **키** 아래의 **데이터 속성** 창에서 필터로 사용할 테이블 및 열을 선택합니다. 
 
-3. **레이블**아래에서 표시되는 레이블이 있는 열을 선택합니다. 키 열과 레이블 열은 같을 수 있습니다.  
+3. **레이블** 아래에서 표시되는 레이블이 있는 열을 선택합니다. 키 열과 레이블 열은 같을 수 있습니다.  
   
    계층적 트리 데이터의 경우 부모 키 열을 선택합니다.  
   
-4. 데이터 속성을 설정한 후 **선택 목록으로 필터링된 테이블**아래에서 필터링할 테이블 및 필터링 기준이 되는 열을 선택합니다. 이 열은 선택 목록의 키 열에 있는 값과 일치해야 합니다. 
+4. 데이터 속성을 설정한 후 **선택 목록으로 필터링된 테이블** 아래에서 필터링할 테이블 및 필터링 기준이 되는 열을 선택합니다. 이 열은 선택 목록의 키 열에 있는 값과 일치해야 합니다. 
 
 선택 목록에서 필터링하려는 모바일 보고서의 각 시각화의 경우:
 
 1. 시각화를 선택하고 **데이터** 탭을 선택한 다음 **데이터 속성** 창에서 필드 이름 옆의 **옵션** 을 선택합니다.
 
-   ![mobile-report-set-selection-list](../../reporting-services/mobile-reports/media/mobile-report-set-selection-list.png)
+   ![주/지역으로 필터링 옵션이 선택되어 있는 확장된 범주 열 옵션의 스크린샷](../../reporting-services/mobile-reports/media/mobile-report-set-selection-list.png)
 
-2. **필터링 기준**아래에서 선택 목록을 선택합니다.
+2. **필터링 기준** 아래에서 선택 목록을 선택합니다.
 
 미리 보기 또는 [!INCLUDE[ssRSnoversion_md](../../includes/ssrsnoversion-md.md)] 웹 포털에서 모바일 보고서를 보고 선택 목록에서 값을 선택할 때 모바일 보고서의 다른 시각화 요소가 필터링됩니다.
 
-![mobile-report-selection-list-filtering](../../reporting-services/mobile-reports/media/mobile-report-selection-list-filtering.png) 
+![주/지역 목록에서 워싱턴이 선택되고 워싱턴의 도시가 반환된 결과에 표시된 모바일 보고서를 보여 주는 스크린샷](../../reporting-services/mobile-reports/media/mobile-report-selection-list-filtering.png) 
      
 ## <a name="scorecard-grid"></a>성과 기록표 표  
   
@@ -79,11 +79,11 @@ ms.locfileid: "79448204"
 
 1. **레이아웃** 탭에서 **성과 기록표 표** 를 디자인 화면으로 끌어서 원하는 방법으로 크기를 조정합니다.
 
-2. **데이터** 탭을 선택하고 **키** 아래의 **데이터 속성**창에서 필터로 사용할 테이블 및 열을 선택합니다. 
+2. **데이터** 탭을 선택하고 **키** 아래의 **데이터 속성** 창에서 필터로 사용할 테이블 및 열을 선택합니다. 
 
-3. **레이블**아래에서 표시되는 레이블이 있는 열을 선택합니다. 키 열과 레이블 열은 같을 수 있습니다.  
+3. **레이블** 아래에서 표시되는 레이블이 있는 열을 선택합니다. 키 열과 레이블 열은 같을 수 있습니다.  
   
-4. 점수 표시기를 추가하려면 **데이터 열** 창에서 **점수 추가**를 선택합니다.   
+4. 점수 표시기를 추가하려면 **데이터 열** 창에서 **점수 추가** 를 선택합니다.   
   
 5. 점수 표시기의 이름을 지정하고 **옵션** 을 선택하여 데이터 표의 표시기에 설정한 것과 동일한 속성을 설정합니다.  
   
@@ -92,17 +92,17 @@ ms.locfileid: "79448204"
    * 비교 필드
    * 값 방향
   
-6. 값 표시기를 추가하려면 **데이터 열** 창에서 **값 추가**를 선택합니다.
+6. 값 표시기를 추가하려면 **데이터 열** 창에서 **값 추가** 를 선택합니다.
 
 7. 이름을 원하는 대로 지정하고 테이블에서 원본 열을 선택한 후 포맷 방법을 선택합니다.  
 
-   ![mobile-report-scorecard-grid-data-properties](../../reporting-services/mobile-reports/media/mobile-report-scorecard-grid-data-properties.png)
+   ![새 점수에 사용할 수 있는 옵션을 보여 주는 스크린샷](../../reporting-services/mobile-reports/media/mobile-report-scorecard-grid-data-properties.png)
 
-8. 데이터 속성을 설정한 후 **선택 목록으로 필터링된 테이블**아래에서 필터링할 테이블 및 필터링 기준이 되는 열을 선택합니다. 이 열은 선택 목록의 키 열에 있는 값과 일치해야 합니다. 
+8. 데이터 속성을 설정한 후 **선택 목록으로 필터링된 테이블** 아래에서 필터링할 테이블 및 필터링 기준이 되는 열을 선택합니다. 이 열은 선택 목록의 키 열에 있는 값과 일치해야 합니다. 
 
 미리 보기 또는 [!INCLUDE[ssRSnoversion_md](../../includes/ssrsnoversion-md.md)] 웹 포털에서 모바일 보고서를 보고 성과 기록표 표에서 값을 선택할 때 모바일 보고서의 다른 시각화 요소가 필터링됩니다.
 
-![mobile-report-scorecard-grid](../../reporting-services/mobile-reports/media/mobile-report-scorecard-grid.png)
+![모바일 보고서 성과 기록표의 스크린샷](../../reporting-services/mobile-reports/media/mobile-report-scorecard-grid.png)
     
 ## <a name="set-which-visualizations-are-filtered"></a>필터링될 시각화 설정  
   
@@ -112,9 +112,9 @@ ms.locfileid: "79448204"
 
 1. 시각화를 선택하고 **데이터** 탭을 선택한 다음 **데이터 속성** 창에서 필드 이름 옆의 **옵션** 을 선택합니다.
 
-   ![mobile-report-set-selection-list](../../reporting-services/mobile-reports/media/mobile-report-set-selection-list.png)
+   ![주/지역으로 필터링 옵션이 선택되어 있는 확장된 범주 열 옵션의 또 다른 스크린샷](../../reporting-services/mobile-reports/media/mobile-report-set-selection-list.png)
 
-2. **필터링 기준**아래에서 탐색기를 선택합니다. 각 시각화는 여러 탐색기에서 필터링될 수 있습니다.
+2. **필터링 기준** 아래에서 탐색기를 선택합니다. 각 시각화는 여러 탐색기에서 필터링될 수 있습니다.
   
 ## <a name="cascading-filters"></a>필터 캐스케이드   
   

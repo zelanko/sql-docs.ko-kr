@@ -9,12 +9,12 @@ ms.topic: conceptual
 ms.assetid: 6d9192a4-fd5c-41ad-b9ef-f88f9496afed
 author: maggiesMSFT
 ms.author: maggies
-ms.openlocfilehash: d846d6ce9a206dc632dec3033707b645bd7c1b55
-ms.sourcegitcommit: 93e4fd75e8fe0cc85e7949c9adf23b0e1c275465
+ms.openlocfilehash: ce0edeb4d0d78f43da0c510b09e74e7972f5d301
+ms.sourcegitcommit: ea0bf89617e11afe85ad85309e0ec731ed265583
 ms.translationtype: HT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 06/01/2020
-ms.locfileid: "84255502"
+ms.lasthandoff: 10/28/2020
+ms.locfileid: "92907111"
 ---
 # <a name="keep-headers-visible-when-scrolling-through-a-report-report-builder-and-ssrs"></a>보고서를 스크롤할 때 머리글 계속 표시(보고서 작성기 및 SSRS)
   보고서를 렌더링한 다음 스크롤할 때 행 및 열 레이블이 화면에서 사라지지 않도록 하려면 행 또는 열 머리글을 고정할 수 있습니다.  
@@ -28,20 +28,20 @@ ms.locfileid: "84255502"
   
  다음 이미지에서는 표를 보여 줍니다.  
   
- ![테이블](../../reporting-services/report-design/media/table.png "테이블")  
+ ![테이블의 스크린샷](../../reporting-services/report-design/media/table.png "테이블")  
   
  다음 이미지에서는 행렬을 보여 줍니다.  
   
- ![행렬](../../reporting-services/report-design/media/matrix.png "행렬")  
+ ![행렬의 스크린샷](../../reporting-services/report-design/media/matrix.png "행렬")  
   
 > [!NOTE]  
 >  [!INCLUDE[ssRBRDDup](../../includes/ssrbrddup-md.md)]  
   
 ### <a name="to-keep-matrix-group-headers-visible-while-scrolling"></a>스크롤하는 동안 행렬 그룹 머리글을 계속 표시하려면  
   
-1.  테이블릭스 데이터 영역에서 행, 열 또는 모퉁이 핸들을 마우스 오른쪽 단추로 클릭한 다음 **테이블릭스 속성**을 클릭합니다.  
+1.  테이블릭스 데이터 영역에서 행, 열 또는 모퉁이 핸들을 마우스 오른쪽 단추로 클릭한 다음 **테이블릭스 속성** 을 클릭합니다.  
   
-2.  **일반** 탭의 **행 머리글** 또는 **열 머리글**아래에서 **스크롤하는 동안 머리글 계속 표시**를 선택합니다.  
+2.  **일반** 탭의 **행 머리글** 또는 **열 머리글** 아래에서 **스크롤하는 동안 머리글 계속 표시** 를 선택합니다.  
   
 3.  [!INCLUDE[clickOK](../../includes/clickok-md.md)]  
   
@@ -53,13 +53,13 @@ ms.locfileid: "84255502"
   
      행 그룹 창에 행 그룹 계층 구조의 정적 및 동적 멤버 계층이 표시되고 열 그룹 창에 열 그룹 계층 구조의 비슷한 정적 및 동적 멤버 계층이 표시됩니다.  
   
-2.  그룹화 창의 오른쪽에서 아래쪽 화살표를 클릭한 다음 **고급 모드**를 클릭합니다.  
+2.  그룹화 창의 오른쪽에서 아래쪽 화살표를 클릭한 다음 **고급 모드** 를 클릭합니다.  
   
 3.  스크롤하는 동안 계속 표시할 정적 멤버(행 또는 열)를 클릭합니다. 속성 창에 **테이블릭스 멤버** 속성이 표시됩니다.  
   
      ![테이블릭스 멤버 속성](../../reporting-services/report-design/media/grouppane-tablixmember-updated.png "테이블릭스 멤버 속성")  
   
-4.  속성 창에서 **FixedData** 를 **True**로 설정합니다.  
+4.  속성 창에서 **FixedData** 를 **True** 로 설정합니다.  
   
 5.  스크롤하는 동안 계속 표시할 인접 멤버의 수만큼 이 과정을 반복합니다.  
   

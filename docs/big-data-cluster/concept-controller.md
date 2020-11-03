@@ -9,18 +9,18 @@ ms.date: 11/04/2019
 ms.topic: conceptual
 ms.prod: sql
 ms.technology: big-data-cluster
-ms.openlocfilehash: 97df8916b713feae56a7cd5344e7fbdc93038317
-ms.sourcegitcommit: 29a2be59c56f8a4b630af47760ef38d2bf56a3eb
+ms.openlocfilehash: 70ca43a017edaa760a5ffa999f40d99516f232bb
+ms.sourcegitcommit: ab9ddcc16fdfc245cf9a49d1e90bb1ffe3958c38
 ms.translationtype: HT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 10/22/2020
-ms.locfileid: "92358501"
+ms.lasthandoff: 10/29/2020
+ms.locfileid: "92914352"
 ---
 # <a name="what-is-the-controller-on-a-sql-server-big-data-cluster"></a>SQL Server 빅 데이터 클러스터의 컨트롤러란?
 
 [!INCLUDE[SQL Server 2019](../includes/applies-to-version/sqlserver2019.md)]
 
-컨트롤러는 빅 데이터 클러스터를 배포하고 관리하기 위한 핵심 논리를 호스트합니다. Kubernetes, 클러스터에 속한 SQL Server 인스턴스 및 기타 구성 요소(예: HDFS 및 Spark)와의 상호 작용을 모두 처리합니다.
+컨트롤러는 SQL Server 빅 데이터 클러스터를 배포하고 관리하기 위한 핵심 논리를 호스트합니다. Kubernetes, 클러스터에 속한 SQL Server 인스턴스 및 기타 구성 요소(예: HDFS 및 Spark)와의 상호 작용을 모두 처리합니다.
 
 컨트롤러 서비스는 다음과 같은 핵심 기능을 제공합니다.
 
@@ -44,11 +44,11 @@ ms.locfileid: "92358501"
 
 **azdata** 명령 중 하나를 사용하여 컨트롤러 서비스를 통해 클러스터를 관리할 수 있습니다. 동일한 네임스페이스에 Pod 등의 추가 Kubernetes 개체를 배포하는 경우 해당 개체는 컨트롤러 서비스에서 관리되거나 모니터링되지 않습니다. **kubectl** 명령을 사용하여 Kubernetes 수준에서 클러스터를 관리할 수도 있습니다. 자세한 내용은 [모니터링 및 문제 해결[!INCLUDE[big-data-clusters-2019](../includes/ssbigdataclusters-ss-nover.md)]](cluster-troubleshooting-commands.md)을 참조하세요.
 
-빅 데이터 클러스터에 대해 만들어진 컨트롤러 및 Kubernetes 개체(상태 저장 세트, Pod, 비밀 등)는 전용 Kubernetes 네임스페이스에 상주합니다. Kubernetes 클러스터 관리자가 해당 네임스페이스의 모든 리소스를 관리할 수 있는 권한을 컨트롤러 서비스에 부여합니다.  이 시나리오에 대한 RBAC 정책은 최초 클러스터 배포 과정에서 **azdata**를 사용하여 자동으로 구성됩니다.
+빅 데이터 클러스터에 대해 만들어진 컨트롤러 및 Kubernetes 개체(상태 저장 세트, Pod, 비밀 등)는 전용 Kubernetes 네임스페이스에 상주합니다. Kubernetes 클러스터 관리자가 해당 네임스페이스의 모든 리소스를 관리할 수 있는 권한을 컨트롤러 서비스에 부여합니다.  이 시나리오에 대한 RBAC 정책은 최초 클러스터 배포 과정에서 **azdata** 를 사용하여 자동으로 구성됩니다.
 
 ### <a name="azdata"></a>azdata
 
-**azdata**는 Python으로 작성된 명령줄 유틸리티로, 클러스터 관리자가 컨트롤러 서비스에서 공개된 REST API를 통해 빅 데이터 클러스터를 부트스트랩하고 관리할 수 있도록 합니다.
+**azdata** 는 Python으로 작성된 명령줄 유틸리티로, 클러스터 관리자가 컨트롤러 서비스에서 공개된 REST API를 통해 빅 데이터 클러스터를 부트스트랩하고 관리할 수 있도록 합니다.
 
 ## <a name="controller-service-security"></a>컨트롤러 서비스 보안
 

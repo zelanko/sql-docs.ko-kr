@@ -9,12 +9,12 @@ author: dphansen
 ms.author: davidph
 ms.custom: seo-lt-2019
 monikerRange: '>=sql-server-2016||>=sql-server-linux-ver15||=azuresqldb-mi-current||=sqlallproducts-allversions'
-ms.openlocfilehash: 09a01937611b239aeb6db1df406fc057063eb634
-ms.sourcegitcommit: 22102f25db5ccca39aebf96bc861c92f2367c77a
+ms.openlocfilehash: 6d94fc2d85ac0012347cb55f4981a25ba107f5df
+ms.sourcegitcommit: 22e97435c8b692f7612c4a6d3fe9e9baeaecbb94
 ms.translationtype: HT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 10/16/2020
-ms.locfileid: "92115550"
+ms.lasthandoff: 10/27/2020
+ms.locfileid: "92679215"
 ---
 # <a name="monitor-sql-server-machine-learning-services-using-dynamic-management-views-dmvs"></a>DMV(동적 관리 뷰)를 사용하여 SQL Server Machine Learning Services 모니터링
 [!INCLUDE [SQL Server 2016 SQL MI](../../includes/applies-to-version/sqlserver2016-asdbmi.md)]
@@ -163,7 +163,7 @@ FROM sys.dm_os_performance_counters
 WHERE object_name LIKE '%External Scripts%'
 ```
 
-**sys.dm_os_performance_counters**는 외부 스크립트에 대해 다음과 같은 성능 카운터를 출력합니다.
+**sys.dm_os_performance_counters** 는 외부 스크립트에 대해 다음과 같은 성능 카운터를 출력합니다.
 
 | 카운터                   | Description |
 |---------------------------|-------------|
@@ -251,8 +251,8 @@ FROM sys.dm_resource_governor_external_resource_pools AS ep;
 |--------------------------|--------------|
 | pool_name                | 리소스 풀의 이름입니다. SQL Server 리소스 풀에는 `SQL Server` 접두사가 붙고 외부 리소스 풀에는 `External Pool` 접두사가 붙습니다. |
 | total_cpu_usage_hours    | Resource Governor 통계를 다시 설정한 후 누적된 CPU 사용량(밀리초)입니다. |
-| read_io_completed_total  | 리소스 관리자 통계를 다시 설정한 후 완료된 총 읽기 IO입니다.              |
-| write_io_completed_total | 리소스 관리자 통계를 다시 설정한 후 완료된 총 쓰기 IO입니다.             |
+| read_io_completed_total  | Resource Governor 통계를 다시 설정한 후 완료된 총 읽기 IO입니다.              |
+| write_io_completed_total | Resource Governor 통계를 다시 설정한 후 완료된 총 쓰기 IO입니다.             |
 
 ## <a name="installed-packages"></a>설치된 패키지
 

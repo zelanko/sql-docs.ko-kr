@@ -9,12 +9,12 @@ ms.date: 11/04/2019
 ms.topic: conceptual
 ms.prod: sql
 ms.technology: big-data-cluster
-ms.openlocfilehash: 970b049ec7933af9fab1d213d7441f101e01f7c1
-ms.sourcegitcommit: 7345e4f05d6c06e1bcd73747a4a47873b3f3251f
+ms.openlocfilehash: 563dc8fbbb7f866dd91f7a982813fe2e5b0a2e83
+ms.sourcegitcommit: ea0bf89617e11afe85ad85309e0ec731ed265583
 ms.translationtype: HT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 08/24/2020
-ms.locfileid: "88765692"
+ms.lasthandoff: 10/28/2020
+ms.locfileid: "92907361"
 ---
 # <a name="data-persistence-with-sql-server-big-data-cluster-in-kubernetes"></a>Kubernetes에서 SQL Server 빅 데이터 클러스터를 사용한 데이터 지속성
 
@@ -36,7 +36,7 @@ SQL Server 빅 데이터 클러스터는 [스토리지 클래스](https://kubern
 
 - 스토리지 풀 크기 조정 요구 사항을 계산할 때는 HDFS가 어떤 복제 계수로 구성되었는지를 고려해야 합니다.  복제 계수는 클러스터 배포 구성 파일에서 배포 시점에 구성할 수 있습니다. 개발-테스트 프로필(`aks-dev-test` 또는 `kubeadm-dev-test`)의 기본값은 2이고, 프로덕션 배포용으로 권장되는 프로필(`kubeadm-prod`)의 기본값은 3입니다. 가장 좋은 방법은 빅 데이터 클러스터의 프로덕션 배포를 3 이상의 HDFS용 복제 계수로 구성하는 것입니다. 복제 계수의 값은 스토리지 풀에 있는 인스턴스의 개수에 영향을 줍니다. 따라서 적어도 복제 계수의 값보다 크거나 같은 스토리지 풀 인스턴스를 배포해야 합니다. 이에 더해, HDFS에서 복제 계수 값의 배수만큼 복제되는 데이터를 고려하여 스토리지의 크기를 정해야 합니다. HDFS에서의 데이터 복제에 대한 자세한 내용은 [여기](https://hadoop.apache.org/docs/r3.2.1/hadoop-project-dist/hadoop-hdfs/HdfsDesign.html#Data_Replication)에서 확인할 수 있습니다. 
 
-- SQL Server 2019 CU1 릴리스부터는 배포 후에 스토리지 구성 설정을 수정할 수 없습니다. 이 제약 조건 때문에 각 인스턴스에 대한 영구적 볼륨 클레임의 크기를 수정할 수도 없고 배포 후 크기 조정 작업도 수행할 수 없습니다. 따라서 빅 데이터 클러스터를 배포하기 전에 스토리지 레이아웃을 계획하는 것이 중요합니다.
+- SQL Server 2019 CU1 릴리스부터 배포 후에 BDC를 사용하여 스토리지 구성 설정을 업데이트할 수 없습니다. 이 제약 조건으로 인해 배포 후에 BDC 작업을 사용하여 각 인스턴스에 대한 영구적 볼륨 클레임의 크기를 수정하거나 풀을 스케일링할 수 없습니다. 따라서 빅 데이터 클러스터를 배포하기 전에 스토리지 레이아웃을 계획하는 것이 중요합니다. 하지만 Kubernetes API를 사용하여 영구적 볼륨 크기를 직접 확장할 수 있습니다. 이 경우 BDC 메타데이터는 업데이트되지 않으며, 구성 클러스터 메타데이터의 볼륨 크기와 관련된 불일치가 표시됩니다.
 
 - Kubernetes에 컨테이너화된 애플리케이션으로 배포하고 상태 저장 세트 및 영구적 스토리지와 같은 기능을 사용하여 Kubernetes는 상태 문제가 발생하면 Pod를 다시 시작하여 동일한 영구적 스토리지에 연결합니다. 그러나 노드 오류가 발생하여 Pod를 다른 노드에서 다시 시작해야 하는 경우에는 스토리지가 실패한 노드에 로컬이면 서비스를 사용할 수 없게 될 위험이 증가합니다. 이 위험을 완화하려면 추가 중복성을 구성하고 [고가용성 기능](deployment-high-availability.md)을 사용하도록 설정하거나 원격 중복 스토리지를 사용해야 합니다. 다음은 빅 데이터 클러스터의 다양한 구성 요소에 대한 스토리지 옵션의 개요입니다.
 

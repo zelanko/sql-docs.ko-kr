@@ -9,12 +9,12 @@ ms.topic: conceptual
 ms.assetid: ae46712d-a5bf-44c0-9929-e30ccc1e7e33
 author: maggiesMSFT
 ms.author: maggies
-ms.openlocfilehash: 7c9ca24186a1b3b2a9fed9f1b3fa9454aa020f9b
-ms.sourcegitcommit: fe59f8dc27fd633f5dfce54519d6f5dcea577f56
+ms.openlocfilehash: 6b756d7db3a41787da2a9a1a30f1c82b9a72317c
+ms.sourcegitcommit: ea0bf89617e11afe85ad85309e0ec731ed265583
 ms.translationtype: HT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 10/09/2020
-ms.locfileid: "91934937"
+ms.lasthandoff: 10/28/2020
+ms.locfileid: "92907181"
 ---
 # <a name="specify-an-axis-interval-report-builder-and-ssrs"></a>축 간격 지정(보고서 작성기 및 SSRS)
 [!INCLUDE[ssRSnoversion_md](../../includes/ssrsnoversion-md.md)] 의 페이지를 매긴 보고서에서 축 간격을 설정하여 차트에서 범주(x) 축에 레이블 수와 눈금 수를 변경하는 방법을 알아 봅니다.
@@ -36,24 +36,24 @@ ms.locfileid: "91934937"
 
 이 세로 막대형 차트에서 가로 레이블 간격은 자동으로 설정됩니다.
 
-![report-builder-column-chart-preview-x-axis-interval-auto](../../reporting-services/report-design/media/report-builder-column-chart-preview-x-axis-interval-auto.png)
+![x-축 간격이 자동으로 설정된 보고서 작성기 세로 막대형 차트 미리 보기의 스크린샷](../../reporting-services/report-design/media/report-builder-column-chart-preview-x-axis-interval-auto.png)
   
-1.  범주 축을 마우스 오른쪽 단추로 클릭한 다음 **가로 축 속성**을 클릭합니다.   
+1.  범주 축을 마우스 오른쪽 단추로 클릭한 다음 **가로 축 속성** 을 클릭합니다.   
 
-    ![report-builder-column-chart-x-axis-labels](../../reporting-services/report-design/media/report-builder-column-chart-x-axis-labels.png)
+    ![x-축 레이블을 설정하는 방법을 보여 주는 보고서 작성기 세로 막대형 차트의 스크린샷](../../reporting-services/report-design/media/report-builder-column-chart-x-axis-labels.png)
   
-2.  **가로 축 속성** 대화 상자 > **축 옵션** 탭에서 **간격**을 **1**로 설정하여 모든 범주 그룹 레이블을 표시합니다. x축에 다른 모든 범주 그룹 레이블을 표시하려면 **2**를 입력합니다. 
+2.  **가로 축 속성** 대화 상자 > **축 옵션** 탭에서 **간격** 을 **1** 로 설정하여 모든 범주 그룹 레이블을 표시합니다. x축에 다른 모든 범주 그룹 레이블을 표시하려면 **2** 를 입력합니다. 
 
-     ![report-builder-column-chart-x-axis-interval-one](../../reporting-services/report-design/media/report-builder-column-chart-x-axis-interval-one.png)
+     ![x-축 간격을 1로 설정하는 방법을 보여 주는 보고서 작성기 세로 막대형 차트의 스크린샷](../../reporting-services/report-design/media/report-builder-column-chart-x-axis-interval-one.png)
   
-3.  [!INCLUDE[clickOK](../../includes/clickok-md.md)]  
-
-    이제 세로 막대형 차트에 가로 축 레이블이 모두 표시됩니다.
-
-    ![report-builder-column-chart-preview-x-axis-interval-one](../../reporting-services/report-design/media/report-builder-column-chart-preview-x-axis-interval-one.png)
-  
-    > [!NOTE]  
-    >  축 간격이 설정되면 모든 자동 레이블 지정이 비활성화됩니다. 축 간격에 대한 값을 지정할 경우 범주 축의 범주 수에 따라 예측할 수 없는 레이블 동작이 발생할 수 있습니다.  
+3. [!INCLUDE[clickOK](../../includes/clickok-md.md)]
+     
+     이제 세로 막대형 차트에 가로 축 레이블이 모두 표시됩니다.
+     
+     ![x-축 레이블을 보여 주는 보고서 작성기 세로 막대형 차트 미리 보기의 스크린샷](../../reporting-services/report-design/media/report-builder-column-chart-preview-x-axis-interval-one.png)
+     
+     > [!NOTE]  
+     >  축 간격이 설정되면 모든 자동 레이블 지정이 비활성화됩니다. 축 간격에 대한 값을 지정할 경우 범주 축의 범주 수에 따라 예측할 수 없는 레이블 동작이 발생할 수 있습니다.  
 
 ## <a name="change-the-label-interval-in-properties-pane"></a>속성 창에서 레이블 간격을 변경합니다.
 
@@ -61,15 +61,15 @@ ms.locfileid: "91934937"
 
 1.  보고서 디자인 뷰에서 차트를 클릭한 다음 가로 축 레이블을 선택합니다.
 
-3. 속성 창에서 LabelInterval을 **1**로 설정합니다.
+3. 속성 창에서 LabelInterval을 **1** 로 설정합니다.
 
-    ![report-builder-column-chart-set-label-interval](../../reporting-services/media/report-builder-column-chart-set-label-interval.png)
+    ![레이블 간격을 설정하는 방법을 보여 주는 보고서 작성기 세로 막대형 차트의 스크린샷](../../reporting-services/media/report-builder-column-chart-set-label-interval.png)
 
     차트는 디자인 뷰에서 동일하게 보입니다. 
     
 5.  **실행** 을 클릭하여 보고서를 미리 봅니다.
 
-    ![report-builder-column-chart-label-interval-one-preview](../../reporting-services/media/report-builder-column-chart-label-interval-one-preview.png)
+    ![레이블 간격이 1인 경우를 보여 주는 보고서 작성기 세로 막대형 차트 미리 보기의 스크린샷](../../reporting-services/media/report-builder-column-chart-label-interval-one-preview.png)
     
     이제 차트에 해당하는 모든 레이블이 표시됩니다.
   
@@ -77,9 +77,9 @@ ms.locfileid: "91934937"
 
 기본적으로 [!INCLUDE[ssRSnoversion](../../includes/ssrsnoversion-md.md)] 에서는 축 간격을 자동으로 설정합니다. 다음 절차에서는 기본값으로 다시 설정하는 방법을 설명합니다. 
   
-1.  변경할 차트 축을 마우스 오른쪽 단추로 클릭한 다음 **축 속성**을 클릭합니다. 
+1.  변경할 차트 축을 마우스 오른쪽 단추로 클릭한 다음 **축 속성** 을 클릭합니다. 
   
-2.  **가로 축 속성** 대화 상자 > **축 옵션** 탭에서 **간격**을 **자동**으로 설정합니다. 차트에 축을 따라 배치할 수 있는 최적의 범주 레이블 수가 표시됩니다.  
+2.  **가로 축 속성** 대화 상자 > **축 옵션** 탭에서 **간격** 을 **자동** 으로 설정합니다. 차트에 축을 따라 배치할 수 있는 최적의 범주 레이블 수가 표시됩니다.  
   
 3.  [!INCLUDE[clickOK](../../includes/clickok-md.md)]  
   

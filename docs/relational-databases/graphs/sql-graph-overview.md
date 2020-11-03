@@ -16,12 +16,12 @@ author: shkale-msft
 ms.author: shkale
 ms.custom: seo-dt-2019
 monikerRange: =azuresqldb-current||>=sql-server-2017||=sqlallproducts-allversions||>=sql-server-linux-2017||=azuresqldb-mi-current
-ms.openlocfilehash: 40acaf67fedc76495f52aced7b7d0f61b76cb530
-ms.sourcegitcommit: e700497f962e4c2274df16d9e651059b42ff1a10
+ms.openlocfilehash: 79ffa64e3a567a219e192c9108b04e2c96efaf5c
+ms.sourcegitcommit: 442fbe1655d629ecef273b02fae1beb2455a762e
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 08/17/2020
-ms.locfileid: "88494202"
+ms.lasthandoff: 11/03/2020
+ms.locfileid: "93235636"
 ---
 # <a name="graph-processing-with-sql-server-and-azure-sql-database"></a>SQL Server 및 Azure SQL Database를 사용한 Graph 처리
 [!INCLUDE[sqlserver2017-asdb](../../includes/applies-to-version/sqlserver2017-asdb.md)]
@@ -48,18 +48,18 @@ ms.locfileid: "88494202"
 
 
 ### <a name="create-graph-objects"></a>그래프 개체 만들기
-[!INCLUDE[tsql-md](../../includes/tsql-md.md)] 확장을 통해 사용자는 노드 또는에 지 테이블을 만들 수 있습니다. 노드와 가장자리 모두에 연결 된 속성을 가질 수 있습니다. 에서는 노드와 가장자리가 테이블로 저장 되므로 관계형 테이블에서 지원 되는 모든 작업은 노드 또는에 지 테이블에서 지원 됩니다. 예를 들면 다음과 같습니다.  
+[!INCLUDE[tsql-md](../../includes/tsql-md.md)] 확장을 통해 사용자는 노드 또는에 지 테이블을 만들 수 있습니다. 노드와 가장자리 모두에 연결 된 속성을 가질 수 있습니다. 에서는 노드와 가장자리가 테이블로 저장 되므로 관계형 테이블에서 지원 되는 모든 작업은 노드 또는에 지 테이블에서 지원 됩니다. 다음은 예제입니다.  
 
 ```   
 CREATE TABLE Person (ID INTEGER PRIMARY KEY, Name VARCHAR(100), Age INT) AS NODE;
 CREATE TABLE friends (StartDate date) AS EDGE;
 ```   
 
-![사람-친구-테이블](../../relational-databases/graphs/media/person-friends-tables.png "Person 노드 및 친구에 지 테이블")  
+![노드 및 가장자리가 테이블로 저장 되는 다이어그램입니다.](../../relational-databases/graphs/media/person-friends-tables.png "Person 노드 및 친구에 지 테이블")  
 노드 및 가장자리가 테이블로 저장 됩니다.  
 
 ### <a name="query-language-extensions"></a>쿼리 언어 확장  
-New `MATCH` 절은 그래프를 통해 패턴 일치 및 다중 홉 탐색을 지원 하기 위해 도입 되었습니다. `MATCH`함수는 패턴 일치에 ASCII 아트 스타일 구문을 사용 합니다. 예를 들어 다음과 같은 가치를 제공해야 합니다.  
+New `MATCH` 절은 그래프를 통해 패턴 일치 및 다중 홉 탐색을 지원 하기 위해 도입 되었습니다. `MATCH`함수는 패턴 일치에 ASCII 아트 스타일 구문을 사용 합니다. 다음은 그 예입니다.   
 
 ```   
 -- Find friends of John

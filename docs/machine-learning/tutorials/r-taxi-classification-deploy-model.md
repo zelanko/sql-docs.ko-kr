@@ -4,18 +4,18 @@ titleSuffix: SQL machine learning
 description: 이 5부 자습서 시리즈의 5부에서는 SQL Machine Learning을 통해 T-SQL을 사용하여 SQL 저장 프로시저에 포함된 R 스크립트를 운영합니다.
 ms.prod: sql
 ms.technology: machine-learning
-ms.date: 07/30/2020
+ms.date: 10/15/2020
 ms.topic: tutorial
 author: dphansen
 ms.author: davidph
 ms.custom: seo-lt-2019
 monikerRange: '>=sql-server-2016||>=sql-server-linux-ver15||>=azuresqldb-mi-current||=sqlallproducts-allversions'
-ms.openlocfilehash: d5132b0616dd223e195f47b1333308a920fb2572
-ms.sourcegitcommit: cfa04a73b26312bf18d8f6296891679166e2754d
+ms.openlocfilehash: e7657dcfe382ed87b31ca17e6c36d9019d1b84e2
+ms.sourcegitcommit: ead0b8c334d487a07e41256ce5d6acafa2d23c9d
 ms.translationtype: HT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 10/19/2020
-ms.locfileid: "92196280"
+ms.lasthandoff: 10/22/2020
+ms.locfileid: "92412520"
 ---
 # <a name="r-tutorial-run-predictions-in-sql-stored-procedures"></a>R 자습서: SQL 저장 프로시저에서 예측 실행
 [!INCLUDE [SQL Server 2016 SQL MI](../../includes/applies-to-version/sqlserver2016-asdbmi.md)]
@@ -24,9 +24,9 @@ ms.locfileid: "92196280"
 
 이 문서에서는 채점을 수행하는 두 가지 방법을 보여 줍니다.
 
-+ **일괄 처리 채점 모드**: 저장 프로시저에 대한 입력으로 SELECT 쿼리를 사용합니다. 저장 프로시저에서 입력 사례에 해당하는 관찰 테이블을 반환합니다.
++ **일괄 처리 채점 모드** : 저장 프로시저에 대한 입력으로 SELECT 쿼리를 사용합니다. 저장 프로시저에서 입력 사례에 해당하는 관찰 테이블을 반환합니다.
 
-+ **개별 점수 매기기 모드**: 개별 매개 변수 값 집합을 입력으로 전달합니다.  저장 프로시저에서 단일 행 또는 값을 반환합니다.
++ **개별 점수 매기기 모드** : 개별 매개 변수 값 집합을 입력으로 전달합니다.  저장 프로시저에서 단일 행 또는 값을 반환합니다.
 
 이 문서에서는 다음을 수행합니다.
 
@@ -44,39 +44,39 @@ ms.locfileid: "92196280"
 
 ## <a name="basic-scoring"></a>기본 채점
 
-저장 프로시저 **RxPredict**는 저장 프로시저에 RevoScaleR rxPredict 호출을 래핑하기 위한 기본 구문을 보여줍니다.
+저장 프로시저 **RPredict** 는 `PREDICT` 호출을 저장 프로시저에 래핑하는 기본 구문을 보여 줍니다.
 
 ```sql
-CREATE PROCEDURE [dbo].[RxPredict] (@model varchar(250), @inquery nvarchar(max))
+CREATE PROCEDURE [dbo].[RPredict] (@model varchar(250), @inquery nvarchar(max))
 AS 
 BEGIN 
 
 DECLARE @lmodel2 varbinary(max) = (SELECT model FROM nyc_taxi_models WHERE name = @model);  
 EXEC sp_execute_external_script @language = N'R',
   @script = N' 
-    mod <- unserialize(as.raw(model)); 
-    print(summary(mod)) 
-    OutputDataSet<-rxPredict(modelObject = mod, data = InputDataSet, outData = NULL, predVarNames = "Score", type = "response", writeModelVars = FALSE, overwrite = TRUE); 
-    str(OutputDataSet) 
-    print(OutputDataSet) 
-    ', 
-  @input_data_1 = @inquery, 
+    mod <- unserialize(as.raw(model));
+    print(summary(mod))
+    OutputDataSet <- data.frame(predict(mod, InputDataSet, type = "response"));
+    str(OutputDataSet)
+    print(OutputDataSet)
+    ',
+  @input_data_1 = @inquery,
   @params = N'@model varbinary(max)',
   @model = @lmodel2 
-  WITH RESULT SETS ((Score float));
+  WITH RESULT SETS (("Score" float));
 END
 GO
 ```
 
 + SELECT 문은 데이터베이스에서 직렬화된 모델을 가져와서 R을 사용한 추가 처리를 위해 R 변수 `mod` 에 모델을 저장합니다.
 
-+ 새로운 채점 사례는 저장 프로시저의 첫 번째 매개 변수인 `@inquery`에 지정된 [!INCLUDE[tsql](../../includes/tsql-md.md)] 쿼리에서 가져옵니다. 쿼리 데이터를 읽으면 행이 기본 데이터 프레임 `InputDataSet`에 저장됩니다. 이 데이터 프레임은 점수를 생성하는 [RevoScaleR](/machine-learning-server/r-reference/revoscaler/revoscaler)의 [rxPredict](/machine-learning-server/r-reference/revoscaler/rxpredict) 함수에 전달됩니다.
++ 새로운 채점 사례는 저장 프로시저의 첫 번째 매개 변수인 `@inquery`에 지정된 [!INCLUDE[tsql](../../includes/tsql-md.md)] 쿼리에서 가져옵니다. 쿼리 데이터를 읽으면 행이 기본 데이터 프레임 `InputDataSet`에 저장됩니다. 이 데이터 프레임은 점수를 생성하는 [PREDICT](/sql/t-sql/queries/predict-transact-sql) 함수에 전달됩니다.
   
-  `OutputDataSet<-rxPredict(modelObject = mod, data = InputDataSet, outData = NULL, predVarNames = "Score", type = "response", writeModelVars = FALSE, overwrite = TRUE);`
+  `OutputDataSet <- data.frame(predict(mod, InputDataSet, type = "response"));`
   
   data.frame에 단일 행이 포함될 수 있으므로 일괄 처리 또는 단일 점수 매기기에 동일한 코드를 사용할 수 있습니다.
   
-+ `rxPredict` 함수로 반환되는 값은 운전사가 금액에 관계없이 팁을 받게 될 확률을 나타내는 **float**입니다.
++ `PREDICT` 함수로 반환되는 값은 운전사가 금액에 관계없이 팁을 받게 될 확률을 나타내는 **float** 입니다.
 
 ## <a name="batch-scoring-a-list-of-predictions"></a>일괄 채점(예측 목록)
 
@@ -101,16 +101,16 @@ GO
    **샘플 결과**
 
    ```text
-   passenger_count   trip_time_in_secs    trip_distance  dropoff_datetime   direct_distance
-   1  283 0.7 2013-03-27 14:54:50.000   0.5427964547
-   1  289 0.7 2013-02-24 12:55:29.000   0.3797099614
-   1  214 0.7 2013-06-26 13:28:10.000   0.6970098661
+   passenger_count   trip_time_in_secs    trip_distance  dropoff_datetime          direct_distance
+   1                 283                  0.7            2013-03-27 14:54:50.000   0.5427964547
+   1                 289                  0.7            2013-02-24 12:55:29.000   0.3797099614
+   1                 214                  0.7            2013-06-26 13:28:10.000   0.6970098661
    ```
 
-2. [!INCLUDE[ssManStudio](../../includes/ssmanstudio-md.md)]에서 **RxPredictBatchOutput**이라는 저장 프로시저를 만듭니다.
+2. [!INCLUDE[ssManStudio](../../includes/ssmanstudio-md.md)]에서 **RPredictBatchOutput** 이라는 저장 프로시저를 만듭니다.
 
    ```sql
-   CREATE PROCEDURE [dbo].[RxPredictBatchOutput] (@model varchar(250), @inquery nvarchar(max))
+   CREATE PROCEDURE [dbo].[RPredictBatchOutput] (@model varchar(250), @inquery nvarchar(max))
    AS
    BEGIN
    DECLARE @lmodel2 varbinary(max) = (SELECT model FROM nyc_taxi_models WHERE name = @model);
@@ -119,7 +119,7 @@ GO
      @script = N'
        mod <- unserialize(as.raw(model));
        print(summary(mod))
-       OutputDataSet<-rxPredict(modelObject = mod, data = InputDataSet, outData = NULL, predVarNames = "Score", type = "response", writeModelVars = FALSE, overwrite = TRUE);
+       OutputDataSet <- data.frame(predict(mod, InputDataSet, type = "response"));
        str(OutputDataSet)
        print(OutputDataSet)
      ',
@@ -138,13 +138,12 @@ GO
    SET @query_string='SELECT TOP 10 a.passenger_count as passenger_count, a.trip_time_in_secs AS trip_time_in_secs, a.trip_distance AS trip_distance, a.dropoff_datetime AS dropoff_datetime, dbo.fnCalculateDistance(pickup_latitude, pickup_longitude, dropoff_latitude,dropoff_longitude) AS direct_distance FROM  (SELECT medallion, hack_license, pickup_datetime, passenger_count,trip_time_in_secs,trip_distance, dropoff_datetime, pickup_latitude, pickup_longitude, dropoff_latitude, dropoff_longitude FROM nyctaxi_sample  )a   LEFT OUTER JOIN (SELECT medallion, hack_license, pickup_datetime FROM nyctaxi_sample TABLESAMPLE (70 percent) REPEATABLE (98052))b ON a.medallion=b.medallion AND a.hack_license=b.hack_license AND a.pickup_datetime=b.pickup_datetime WHERE b.medallion is null'
    
    -- Call the stored procedure for scoring and pass the input data
-   EXEC [dbo].[RxPredictBatchOutput] @model = 'RxTrainLogit_model', @inquery = @query_string;
+   EXEC [dbo].[RPredictBatchOutput] @model = 'RTrainLogit_model', @inquery = @query_string;
    ```
   
 저장 프로시저에서 각 상위 10개의 여정에 대한 예측을 나타내는 일련의 값을 반환합니다. 하지만 이러한 상위 여정은 이동 거리가 비교적 짧고 단일 승객이 탑승한 여정이며, 운전사가 팁을 받을 가능성이 낮습니다.
 
 > [!TIP]
-> 
 > 단순히 "팁 있음" 및 "팁 없음" 결과를 반환하는 대신 예측의 확률 점수를 반환한 다음, _Score_ 열 값에 WHERE 절을 적용하여 0.5 또는 0.7과 같은 임계값을 사용해서 "팁 가능성 높음" 또는 "팁 가능성 낮음"으로 점수를 분류할 수도 있습니다. 이 단계는 저장 프로시저에 포함되어 있지 않지만 쉽게 구현할 수 있습니다.
 
 ## <a name="single-row-scoring-of-multiple-inputs"></a>여러 입력의 단일 행 채점
@@ -155,10 +154,10 @@ GO
   
 외부 애플리케이션에서 저장 프로시저를 호출하는 경우 데이터가 R 모델의 요구 사항과 일치하는지 확인합니다. 여기에는 입력 데이터를 R 데이터 형식으로 캐스팅 또는 변환할 수 있는지 확인, 데이터 형식 및 데이터 길이의 유효성 검사 등이 포함될 수 있습니다.
 
-1. 저장 프로시저 **RxPredictSingleRow**를 만듭니다.
+1. 저장 프로시저 **RPredictSingleRow** 를 만듭니다.
   
    ```sql
-   CREATE PROCEDURE [dbo].[RxPredictSingleRow] @model varchar(50), @passenger_count int = 0, @trip_distance float = 0, @trip_time_in_secs int = 0, @pickup_latitude float = 0, @pickup_longitude float = 0, @dropoff_latitude float = 0, @dropoff_longitude float = 0
+   CREATE PROCEDURE [dbo].[RPredictSingleRow] @model varchar(50), @passenger_count int = 0, @trip_distance float = 0, @trip_time_in_secs int = 0, @pickup_latitude float = 0, @pickup_longitude float = 0, @dropoff_latitude float = 0, @dropoff_longitude float = 0
    AS
    BEGIN
    DECLARE @inquery nvarchar(max) = N'SELECT * FROM [dbo].[fnEngineerFeatures](@passenger_count, @trip_distance, @trip_time_in_secs,  @pickup_latitude, @pickup_longitude, @dropoff_latitude, @dropoff_longitude)';
@@ -168,7 +167,7 @@ GO
      @script = N'  
        mod <- unserialize(as.raw(model));  
        print(summary(mod));  
-       OutputDataSet<-rxPredict(modelObject = mod, data = InputDataSet, outData = NULL, predVarNames = "Score", type = "response", writeModelVars = FALSE, overwrite = TRUE);  
+       OutputDataSet <- data.frame(predict(mod, InputDataSet, type = "response"));
        str(OutputDataSet);
        print(OutputDataSet); 
        ',  
@@ -183,7 +182,7 @@ GO
    새 **쿼리** 창을 열고 각 매개 변수 값을 제공하여 저장 프로시저를 호출합니다. 매개 변수는 모델에 사용되며 필수인 기능 열을 나타냅니다.
 
    ```sql
-   EXEC [dbo].[RxPredictSingleRow] @model = 'RxTrainLogit_model',
+   EXEC [dbo].[RPredictSingleRow] @model = 'RTrainLogit_model',
    @passenger_count = 1,
    @trip_distance = 2.5,
    @trip_time_in_secs = 631,
@@ -196,7 +195,7 @@ GO
    또는 다음과 같은 더 짧은 지원 양식을 [저장 프로시저에 대한 매개변수](../../relational-databases/stored-procedures/specify-parameters.md)로 사용합니다.
   
    ```sql
-   EXEC [dbo].[RxPredictSingleRow] 'RxTrainLogit_model', 1, 2.5, 631, 40.763958,-73.973373, 40.782139,-73.977303
+   EXEC [dbo].[RPredictSingleRow] 'RTrainLogit_model', 1, 2.5, 631, 40.763958,-73.973373, 40.782139,-73.977303
    ```
 
 3. 모두 주행 거리가 비교적 짧은 단일 승객 여정이기 때문에 결과는 이러한 상위 10개의 여정에서 팁을 받을 확률이 낮음(0)을 나타냅니다.

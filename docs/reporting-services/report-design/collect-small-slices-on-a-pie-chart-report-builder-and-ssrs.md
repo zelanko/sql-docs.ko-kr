@@ -9,12 +9,12 @@ ms.topic: conceptual
 ms.assetid: 21c2b8cb-b9ca-4bc0-bf49-50ba432562f6
 author: maggiesMSFT
 ms.author: maggies
-ms.openlocfilehash: 5a4dc5671d5a23448f3549e383b26097026cc021
-ms.sourcegitcommit: 6c2232c4d2c1ce5710296ce97b909f5ed9787f66
+ms.openlocfilehash: 4e51e1a12f28ae18ff6ba833ace19a1a97ba72dd
+ms.sourcegitcommit: ea0bf89617e11afe85ad85309e0ec731ed265583
 ms.translationtype: HT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 06/05/2020
-ms.locfileid: "84462067"
+ms.lasthandoff: 10/28/2020
+ms.locfileid: "92907241"
 ---
 # <a name="collect-small-slices-on-a-pie-chart-report-builder-and-ssrs"></a>원형 차트에서 작은 조각 수집(보고서 작성기 및 SSRS)
 너무 많은 조각이 있는 원형 차트는 복잡하게 보일 수 있습니다. [!INCLUDE[ssRSnoversion_md](../../includes/ssrsnoversion-md.md)] 페이지가 매겨진 보고서에서 원형 차트의 많은 작은 조각을 하나의 단일 조각으로 수집하는 방법을 알아봅니다.
@@ -23,7 +23,7 @@ ms.locfileid: "84462067"
  
  [자습서: 보고서에 원형 차트 추가(보고서 작성기)](../tutorial-add-a-pie-chart-to-your-report-report-builder.md)는 이 샘플 데이터로 먼저 시도하려는 경우 작은 조각을 단일 조각으로 수집하는 것을 안내합니다.
  
- ![report-builder-pie-chart-other-slice](../../reporting-services/report-design/media/report-builder-pie-chart-other-slice.png)
+ ![기타 조각을 보여 주는 보고서 작성기 원형 차트의 스크린샷](../../reporting-services/report-design/media/report-builder-pie-chart-other-slice.png)
   
  첫 번째 원형 차트에서 수집된 조각으로 만든 두 번째 원형 차트에 작은 조각을 수집할 수도 있습니다. 두 번째 원형 차트는 첫 번째 원형 차트의 오른쪽에 그려집니다.  
   
@@ -38,26 +38,26 @@ ms.locfileid: "84462067"
   
 3.  **일반** 섹션에서 **CustomAttributes** 노드를 확장합니다.  
   
-4.  CollectedStyle 속성을 **SingleSlice**로 설정합니다.  
+4.  CollectedStyle 속성을 **SingleSlice** 로 설정합니다.  
 
-    ![report-builder-pie-chart-single-slice-property](../../reporting-services/media/report-builder-pie-chart-single-slice-property.png)
+    ![단일 조각 속성을 구성하는 방법을 보여 주는 보고서 작성기 원형 차트의 스크린샷](../../reporting-services/media/report-builder-pie-chart-single-slice-property.png)
   
 5.  수집된 임계값 및 임계값의 유형을 설정합니다. 다음 예는 수집된 임계값을 설정하는 일반적인 방법입니다.  
   
     -   **백분율로 설정.** 예를 들어 원형 차트에서 10% 미만의 모든 조각을 한 개의 조각으로 수집하려면  
   
-         CollectedThresholdUsePercent 속성을 **True**로 설정합니다.  
+         CollectedThresholdUsePercent 속성을 **True** 로 설정합니다.  
   
-         CollectedThreshold 속성을 **10**으로 설정합니다.  
+         CollectedThreshold 속성을 **10** 으로 설정합니다.  
   
         > [!NOTE]  
-        >  CollectedStyle을 **SingleSlice**로 설정하고, CollectedThreshold를 **100**보다 큰 값으로 설정하고, CollectedThresholdUsePercent가 **True**인 경우 백분율을 계산할 수 없기 때문에 차트에서 예외가 발생합니다. 이 문제를 해결하려면 CollectedThreshold를 **100**보다 작은 값으로 설정합니다.  
+        >  CollectedStyle을 **SingleSlice** 로 설정하고, CollectedThreshold를 **100** 보다 큰 값으로 설정하고, CollectedThresholdUsePercent가 **True** 인 경우 백분율을 계산할 수 없기 때문에 차트에서 예외가 발생합니다. 이 문제를 해결하려면 CollectedThreshold를 **100** 보다 작은 값으로 설정합니다.  
   
     -   **데이터 값으로.** 예를 들어 원형 차트에서 5000개 미만의 모든 조각을 한 개의 조각으로 수집하려면  
   
-         CollectedThresholdUsePercent 속성을 **False**로 설정합니다.  
+         CollectedThresholdUsePercent 속성을 **False** 로 설정합니다.  
   
-         CollectedThreshold 속성을 **5000**으로 설정합니다.  
+         CollectedThreshold 속성을 **5000** 으로 설정합니다.  
   
 6.  CollectedLabel 속성을 수집된 조각에 표시할 텍스트 레이블을 나타내는 문자열로 설정합니다.  
   
@@ -67,9 +67,9 @@ ms.locfileid: "84462067"
   
 1.  위의 1-3단계를 수행합니다.  
   
-2.  CollectedStyle 속성을 **CollectedPie**로 설정합니다.  
+2.  CollectedStyle 속성을 **CollectedPie** 로 설정합니다.  
   
-3.  CollectedThreshold 속성을 작은 조각을 한 조각으로 수집할 임계값을 나타내는 값으로 설정합니다. CollectedStyle 속성을 **CollectedPie**로 설정하면 CollectedThresholdUsePercent 속성은 항상 **True**로 설정되며 수집된 임계값은 항상 백분율로 측정됩니다.  
+3.  CollectedThreshold 속성을 작은 조각을 한 조각으로 수집할 임계값을 나타내는 값으로 설정합니다. CollectedStyle 속성을 **CollectedPie** 로 설정하면 CollectedThresholdUsePercent 속성은 항상 **True** 로 설정되며 수집된 임계값은 항상 백분율로 측정됩니다.  
   
 4.  (선택 사항) CollectedColor, CollectedLabel, CollectedLegendText 및 CollectedToolTip 속성을 설정합니다. "Collected"로 명명된 다른 모든 속성은 수집된 원형에 적용되지 않습니다.  
   
