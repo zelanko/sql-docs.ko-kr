@@ -9,30 +9,30 @@ ms.date: 10/01/2020
 ms.topic: conceptual
 ms.prod: sql
 ms.technology: big-data-cluster
-ms.openlocfilehash: 4d810220e0bd1148d4f572638c3ac67d4c3b44c0
-ms.sourcegitcommit: ae474d21db4f724523e419622ce79f611e956a22
+ms.openlocfilehash: e8bc204c3f93d4a4ebbd26876bc8c3e23bad8047
+ms.sourcegitcommit: ab9ddcc16fdfc245cf9a49d1e90bb1ffe3958c38
 ms.translationtype: HT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 10/20/2020
-ms.locfileid: "92257245"
+ms.lasthandoff: 10/29/2020
+ms.locfileid: "92914296"
 ---
-# <a name="what-is-the-storage-pool-big-data-clusters-2019"></a>스토리지 풀이란([!INCLUDE[big-data-clusters-2019](../includes/ssbigdataclusters-ss-nover.md)])?
+# <a name="what-is-the-storage-pool-in-a-sql-server-big-data-cluster"></a>SQL Server 빅 데이터 클러스터의 스토리지 풀이란?
 
 [!INCLUDE[SQL Server 2019](../includes/applies-to-version/sqlserver2019.md)]
 
-이 문서에서는 [!INCLUDE[big-data-clusters-2019](../includes/ssbigdataclusters-ver15.md)](BDC)에서 *SQL Server 스토리지 풀*의 역할을 설명합니다. 다음 섹션에서는 SQL 스토리지 풀의 아키텍처 및 기능을 설명합니다.
+이 문서에서는 SQL Server 빅 데이터 클러스터에서 *SQL Server 스토리지 풀* 의 역할을 설명합니다. 다음 섹션에서는 스토리지 풀의 아키텍처 및 기능을 설명합니다.
 
 ## <a name="storage-pool-architecture"></a>스토리지 풀 아키텍처
 
-스토리지 풀은 SQL Server BDC 에코시스템의 로컬 HDFS(Hadoop) 클러스터입니다. 구조화되지 않은 데이터 및 반구조화된 데이터의 영구 스토리지를 제공합니다. Parquet 또는 구분된 텍스트와 같은 데이터 파일은 스토리지 풀에 저장할 수 있습니다. 스토리지를 유지하기 위해 풀의 각 Pod에 영구 볼륨이 연결되어 있습니다. 스토리지 풀 파일은 SQL Server에서 [PolyBase](../relational-databases/polybase/polybase-guide.md)를 통해 액세스하거나 Apache Knox Gateway를 사용하여 직접 액세스할 수 있습니다.
+스토리지 풀은 SQL Server 빅 데이터 클러스터의 로컬 HDFS(Hadoop) 클러스터입니다. 구조화되지 않은 데이터 및 반구조화된 데이터의 영구 스토리지를 제공합니다. Parquet 또는 구분된 텍스트와 같은 데이터 파일은 스토리지 풀에 저장할 수 있습니다. 스토리지를 유지하기 위해 풀의 각 Pod에 영구적 볼륨이 연결되어 있습니다. 스토리지 풀 파일은 SQL Server에서 [PolyBase](../relational-databases/polybase/polybase-guide.md)를 통해 액세스하거나 Apache Knox Gateway를 사용하여 직접 액세스할 수 있습니다.
 
-기존의 HDFS 설정은 스토리지가 연결된 상용 하드웨어 컴퓨터의 집합으로 구성됩니다. 내결함성 및 병렬 처리 활용을 위해 노드 전체에 걸쳐 데이터가 블록으로 분산됩니다. 클러스터의 노드 중 하나는 이름 노드로 작동하며 데이터 노드에 있는 파일에 대한 메타데이터 정보를 포함합니다.
+기존의 HDFS 설정은 스토리지가 연결된 상용 하드웨어 컴퓨터의 집합으로 구성됩니다. 내결함성 및 병렬 처리 활용을 위해 노드 전체에 걸쳐 데이터가 블록으로 분산됩니다. 클러스터의 노드 중 하나는 이름 노드로 작동하며, 데이터 노드에 있는 파일에 대한 메타데이터 정보를 포함합니다.
 
 ![기존의 HDFS 설정](media/concept-storage-pool/classic-hdfs-setup.png)
 
 스토리지 풀은 HDFS 클러스터의 구성원인 스토리지 노드로 구성됩니다. 스토리지 풀은 다음 컨테이너를 호스트하는 각 Pod에서 하나 이상의 Kubernetes Pod를 실행합니다.
 
-- 영구 볼륨(스토리지)에 연결된 Hadoop 컨테이너. 이 형식의 모든 컨테이너는 함께 Hadoop 클러스터를 형성합니다. Hadoop 컨테이너 내에는 주문형 Apache Spark 작업자 프로세스를 만들 수 있는 YARN 노드 관리자 프로세스가 있습니다. Spark 헤드 노드는 Hive metastore, Spark 기록 및 YARN 작업 기록 컨테이너를 호스트합니다.
+- 영구적 볼륨(스토리지)에 연결된 Hadoop 컨테이너. 이 형식의 모든 컨테이너는 함께 Hadoop 클러스터를 형성합니다. Hadoop 컨테이너 내에는 주문형 Apache Spark 작업자 프로세스를 만들 수 있는 YARN 노드 관리자 프로세스가 있습니다. Spark 헤드 노드는 Hive metastore, Spark 기록 및 YARN 작업 기록 컨테이너를 호스트합니다.
 - OpenRowSet 기술을 사용하여 HDFS에서 데이터를 읽는 SQL Server 인스턴스.
 - 메트릭 데이터를 수집하기 위한 `collectd`.
 - 로그 데이터를 수집하기 위한 `fluentbit`.
