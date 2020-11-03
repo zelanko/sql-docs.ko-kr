@@ -8,13 +8,13 @@ author: markingmyname
 ms.author: maghan
 ms.reviewer: jukoesma
 ms.custom: ''
-ms.date: 04/27/2020
-ms.openlocfilehash: 7f77f26ffbaa0dab14e41654fdcddda3dd4ab278
-ms.sourcegitcommit: bd3a135f061e4a49183bbebc7add41ab11872bae
+ms.date: 10/29/2020
+ms.openlocfilehash: 436c176e469e7ce0f34e26a883fae4cdd6bb59a1
+ms.sourcegitcommit: 894c1a23e922dc29b82c1d2c34c7b0ff28b38654
 ms.translationtype: HT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 10/21/2020
-ms.locfileid: "92300482"
+ms.lasthandoff: 10/30/2020
+ms.locfileid: "93067245"
 ---
 # <a name="kqlmagic-in-azure-data-studio"></a>Azure Data Studio의 Kqlmagic
 
@@ -259,5 +259,4 @@ Notebook 및 Kqlmagic에 대한 자세한 정보:
 - [Azure Data Explorer에서 Jupyter Notebook 및 kqlmagic 확장을 사용하여 데이터 분석하기](/azure/data-explorer/Kqlmagic)
 - Kusto, Application Insights 및 LogAnalytics 데이터로 작업할 수 있는 Notebook 환경을 지원하는 [Jupyter Notebook 및 Jupyter Lab으로 확장(Magic)](https://github.com/Microsoft/jupyter-Kqlmagic).
 - [Kqlmagic](https://pypi.org/project/Kqlmagic/)
-- [KustoMagicSamples](https://notebooks.azure.com/RknDzgn/projects/KustoMagicSamples/html/Getting%20Started%20with%20Kqlmagic%20on%20Azure%20Data%20Explorer-Copy.ipynb)
 - [Azure Data Studio에서 Notebook을 사용하는 방법](./notebooks-guidance.md)

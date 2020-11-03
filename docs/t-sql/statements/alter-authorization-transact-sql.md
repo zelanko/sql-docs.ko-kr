@@ -27,12 +27,12 @@ ms.assetid: 8c805ae2-91ed-4133-96f6-9835c908f373
 author: VanMSFT
 ms.author: vanto
 monikerRange: '>=aps-pdw-2016||=azuresqldb-current||=azure-sqldw-latest||>=sql-server-2016||=sqlallproducts-allversions||>=sql-server-linux-2017||=azuresqldb-mi-current'
-ms.openlocfilehash: ae54518c8ff2d7a7ad4b6f55dd3b16ce9d0528eb
-ms.sourcegitcommit: d56a834269132a83e5fe0a05b033936776cda8bb
+ms.openlocfilehash: 5ada149941022761d0135adff7b1b65db592cc48
+ms.sourcegitcommit: 894c1a23e922dc29b82c1d2c34c7b0ff28b38654
 ms.translationtype: HT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 09/29/2020
-ms.locfileid: "91529462"
+ms.lasthandoff: 10/30/2020
+ms.locfileid: "93067463"
 ---
 # <a name="alter-authorization-transact-sql"></a>ALTER AUTHORIZATION(Transact-SQL)
 
@@ -121,6 +121,7 @@ ALTER AUTHORIZATION ON
     | [ schema_name. ] object_name    
 }    
 ```    
+[!INCLUDE[synapse-analytics-od-unsupported-syntax](../../includes/synapse-analytics-od-unsupported-syntax.md)]
     
 [!INCLUDE[sql-server-tsql-previous-offline-documentation](../../includes/sql-server-tsql-previous-offline-documentation.md)]
 
@@ -129,33 +130,33 @@ ALTER AUTHORIZATION ON
     
 |클래스|Product|    
 |-|-|    
-|OBJECT|**적용 대상**: [!INCLUDE[ssKatmai](../../includes/sskatmai-md.md)] 이상, [!INCLUDE[ssSDSfull](../../includes/sssdsfull-md.md)], [!INCLUDE[ssSDW](../../includes/sssdwfull-md.md)], [!INCLUDE[ssPDW](../../includes/sspdw-md.md)]|    
-|ASSEMBLY|**적용 대상**: [!INCLUDE[ssKatmai](../../includes/sskatmai-md.md)] 이상, [!INCLUDE[ssSDSfull](../../includes/sssdsfull-md.md)].|    
-|ASYMMETRIC KEY|**적용 대상**: [!INCLUDE[ssKatmai](../../includes/sskatmai-md.md)] 이상, [!INCLUDE[ssSDSfull](../../includes/sssdsfull-md.md)].|    
-|AVAILABILITY GROUP |**적용 대상**: SQL Server 2012 이상|
-|인증서|**적용 대상**: [!INCLUDE[ssKatmai](../../includes/sskatmai-md.md)] 이상, [!INCLUDE[ssSDSfull](../../includes/sssdsfull-md.md)].|    
-|CONTRACT|**적용 대상**: [!INCLUDE[ssKatmai](../../includes/sskatmai-md.md)] 이상|    
-|DATABASE|**적용 대상**: [!INCLUDE[ssKatmai](../../includes/sskatmai-md.md)] 이상, [!INCLUDE[ssSDSfull](../../includes/sssdsfull-md.md)]. 자세한 내용은 아래의 [데이터베이스에 대한 ALTER AUTHORIZATION](#AlterDB) 섹션 참조하세요.|    
-|엔드포인트|**적용 대상**: [!INCLUDE[ssKatmai](../../includes/sskatmai-md.md)] 이상|    
-|FULLTEXT CATALOG|**적용 대상**: [!INCLUDE[ssKatmai](../../includes/sskatmai-md.md)] 이상, [!INCLUDE[ssSDSfull](../../includes/sssdsfull-md.md)].|    
-|FULLTEXT STOPLIST|**적용 대상**: [!INCLUDE[ssKatmai](../../includes/sskatmai-md.md)] 이상, [!INCLUDE[ssSDSfull](../../includes/sssdsfull-md.md)].|    
-|MESSAGE TYPE|**적용 대상**: [!INCLUDE[ssKatmai](../../includes/sskatmai-md.md)] 이상|    
-|REMOTE SERVICE BINDING|**적용 대상**: [!INCLUDE[ssKatmai](../../includes/sskatmai-md.md)] 이상|    
-|ROLE|**적용 대상**: [!INCLUDE[ssKatmai](../../includes/sskatmai-md.md)] 이상, [!INCLUDE[ssSDSfull](../../includes/sssdsfull-md.md)].|    
-|ROUTE|**적용 대상**: [!INCLUDE[ssKatmai](../../includes/sskatmai-md.md)] 이상|    
-|SCHEMA|**적용 대상**: [!INCLUDE[ssKatmai](../../includes/sskatmai-md.md)] 이상, [!INCLUDE[ssSDSfull](../../includes/sssdsfull-md.md)], [!INCLUDE[ssSDW](../../includes/sssdwfull-md.md)], [!INCLUDE[ssPDW](../../includes/sspdw-md.md)]|    
-|SEARCH PROPERTY LIST|**적용 대상**: [!INCLUDE[ssSQL11](../../includes/sssql11-md.md)] 이상, [!INCLUDE[ssSDSfull](../../includes/sssdsfull-md.md)].|    
-|SERVER ROLE|**적용 대상**: [!INCLUDE[ssKatmai](../../includes/sskatmai-md.md)] 이상|    
-|SERVICE|**적용 대상**: [!INCLUDE[ssKatmai](../../includes/sskatmai-md.md)] 이상|    
-|SYMMETRIC KEY|**적용 대상**: [!INCLUDE[ssKatmai](../../includes/sskatmai-md.md)] 이상, [!INCLUDE[ssSDSfull](../../includes/sssdsfull-md.md)].|    
-|TYPE|**적용 대상**: [!INCLUDE[ssKatmai](../../includes/sskatmai-md.md)] 이상, [!INCLUDE[ssSDSfull](../../includes/sssdsfull-md.md)].|    
-|XML SCHEMA COLLECTION|**적용 대상**: [!INCLUDE[ssKatmai](../../includes/sskatmai-md.md)] 이상, [!INCLUDE[ssSDSfull](../../includes/sssdsfull-md.md)].|    
+|OBJECT|**적용 대상** : [!INCLUDE[ssKatmai](../../includes/sskatmai-md.md)] 이상, [!INCLUDE[ssSDSfull](../../includes/sssdsfull-md.md)], [!INCLUDE[ssSDW](../../includes/sssdwfull-md.md)], [!INCLUDE[ssPDW](../../includes/sspdw-md.md)]|    
+|ASSEMBLY|**적용 대상** : [!INCLUDE[ssKatmai](../../includes/sskatmai-md.md)] 이상, [!INCLUDE[ssSDSfull](../../includes/sssdsfull-md.md)].|    
+|ASYMMETRIC KEY|**적용 대상** : [!INCLUDE[ssKatmai](../../includes/sskatmai-md.md)] 이상, [!INCLUDE[ssSDSfull](../../includes/sssdsfull-md.md)].|    
+|AVAILABILITY GROUP |**적용 대상** : SQL Server 2012 이상|
+|인증서|**적용 대상** : [!INCLUDE[ssKatmai](../../includes/sskatmai-md.md)] 이상, [!INCLUDE[ssSDSfull](../../includes/sssdsfull-md.md)].|    
+|CONTRACT|**적용 대상** : [!INCLUDE[ssKatmai](../../includes/sskatmai-md.md)] 이상|    
+|DATABASE|**적용 대상** : [!INCLUDE[ssKatmai](../../includes/sskatmai-md.md)] 이상, [!INCLUDE[ssSDSfull](../../includes/sssdsfull-md.md)]. 자세한 내용은 아래의 [데이터베이스에 대한 ALTER AUTHORIZATION](#AlterDB) 섹션 참조하세요.|    
+|엔드포인트|**적용 대상** : [!INCLUDE[ssKatmai](../../includes/sskatmai-md.md)] 이상|    
+|FULLTEXT CATALOG|**적용 대상** : [!INCLUDE[ssKatmai](../../includes/sskatmai-md.md)] 이상, [!INCLUDE[ssSDSfull](../../includes/sssdsfull-md.md)].|    
+|FULLTEXT STOPLIST|**적용 대상** : [!INCLUDE[ssKatmai](../../includes/sskatmai-md.md)] 이상, [!INCLUDE[ssSDSfull](../../includes/sssdsfull-md.md)].|    
+|MESSAGE TYPE|**적용 대상** : [!INCLUDE[ssKatmai](../../includes/sskatmai-md.md)] 이상|    
+|REMOTE SERVICE BINDING|**적용 대상** : [!INCLUDE[ssKatmai](../../includes/sskatmai-md.md)] 이상|    
+|ROLE|**적용 대상** : [!INCLUDE[ssKatmai](../../includes/sskatmai-md.md)] 이상, [!INCLUDE[ssSDSfull](../../includes/sssdsfull-md.md)].|    
+|ROUTE|**적용 대상** : [!INCLUDE[ssKatmai](../../includes/sskatmai-md.md)] 이상|    
+|SCHEMA|**적용 대상** : [!INCLUDE[ssKatmai](../../includes/sskatmai-md.md)] 이상, [!INCLUDE[ssSDSfull](../../includes/sssdsfull-md.md)], [!INCLUDE[ssSDW](../../includes/sssdwfull-md.md)], [!INCLUDE[ssPDW](../../includes/sspdw-md.md)]|    
+|SEARCH PROPERTY LIST|**적용 대상** : [!INCLUDE[ssSQL11](../../includes/sssql11-md.md)] 이상, [!INCLUDE[ssSDSfull](../../includes/sssdsfull-md.md)].|    
+|SERVER ROLE|**적용 대상** : [!INCLUDE[ssKatmai](../../includes/sskatmai-md.md)] 이상|    
+|SERVICE|**적용 대상** : [!INCLUDE[ssKatmai](../../includes/sskatmai-md.md)] 이상|    
+|SYMMETRIC KEY|**적용 대상** : [!INCLUDE[ssKatmai](../../includes/sskatmai-md.md)] 이상, [!INCLUDE[ssSDSfull](../../includes/sssdsfull-md.md)].|    
+|TYPE|**적용 대상** : [!INCLUDE[ssKatmai](../../includes/sskatmai-md.md)] 이상, [!INCLUDE[ssSDSfull](../../includes/sssdsfull-md.md)].|    
+|XML SCHEMA COLLECTION|**적용 대상** : [!INCLUDE[ssKatmai](../../includes/sskatmai-md.md)] 이상, [!INCLUDE[ssSDSfull](../../includes/sssdsfull-md.md)].|    
     
  *entity_name*    
  엔터티의 이름입니다.    
     
  *principal_name* | 스키마 소유자    
- 엔터티를 소유하게 될 보안 주체의 이름입니다. 데이터베이스 보안 주체 즉, 데이터베이스 사용자 또는 역할이 데이터베이스 개체를 소유해야 합니다. 서버 보안 주체(로그인)가 서버 개체(예: 데이터베이스)를 소유해야 합니다. **스키마 소유자**를 *principal_name*으로 지정하여 개체의 스키마를 소유하는 보안 주체가 해당 개체를 소유하도록 표시합니다.    
+ 엔터티를 소유하게 될 보안 주체의 이름입니다. 데이터베이스 보안 주체 즉, 데이터베이스 사용자 또는 역할이 데이터베이스 개체를 소유해야 합니다. 서버 보안 주체(로그인)가 서버 개체(예: 데이터베이스)를 소유해야 합니다. **스키마 소유자** 를 *principal_name* 으로 지정하여 개체의 스키마를 소유하는 보안 주체가 해당 개체를 소유하도록 표시합니다.    
     
 ## <a name="remarks"></a>설명    
  ALTER AUTHORIZATION을 사용하면 소유자가 있는 엔터티의 소유권을 변경할 수 있습니다. 데이터베이스 수준 엔터티의 소유권은 데이터베이스 수준의 모든 보안 주체에게 이전할 수 있습니다. 서버 수준 엔터티의 소유권은 서버 수준 보안 주체에게만 이전할 수 있습니다.    
@@ -195,7 +196,7 @@ ALTER AUTHORIZATION ON
 |엔드포인트|보안 주체는 로그인이어야 합니다.|    
   
 ## <a name="alter-authorization-for-databases"></a><a name="AlterDB"></a> 데이터베이스에 대한 ALTER AUTHORIZATION  
-**적용 대상**: [!INCLUDE[ssSQL15](../../includes/sscurrent-md.md)], [!INCLUDE[ssSDSfull](../../includes/sssdsfull-md.md)].  
+**적용 대상** : [!INCLUDE[ssSQL15](../../includes/sscurrent-md.md)], [!INCLUDE[ssSDSfull](../../includes/sssdsfull-md.md)].  
 ### <a name="for-sql-server"></a>SQL Server의 경우.  
 **새 소유자 요구 사항:**    
 새 소유자 보안 주체는 다음 중 하나여야 합니다.  
@@ -333,7 +334,7 @@ GO
 ### <a name="d-transfer-ownership-of-an-endpoint-to-a-sql-server-login"></a>D. 엔드포인트의 소유권을 SQL Server 로그인에게 이전    
  다음 예에서는 `CantabSalesServer1` 엔드포인트의 소유권을 `JaePak`에게 이전합니다. 엔드포인트는 서버 수준의 보안 개체이므로 서버 수준 보안 주체에게만 소유권을 이전할 수 있습니다.    
     
-**적용 대상**: [!INCLUDE[ssKatmai](../../includes/sskatmai-md.md)] 이상    
+**적용 대상** : [!INCLUDE[ssKatmai](../../includes/sskatmai-md.md)] 이상    
     
 ```sql    
 ALTER AUTHORIZATION ON ENDPOINT::CantabSalesServer1 TO JaePak;    
@@ -351,7 +352,7 @@ ALTER AUTHORIZATION ON OBJECT::dbo.Sprockets TO MichikoOsada;
 ```    
     
 ### <a name="f-changing-the-owner-of-a-database"></a>F. 데이터베이스의 소유자 변경    
- **적용 대상**: [!INCLUDE[ssKatmai](../../includes/sskatmai-md.md)] 이상, [!INCLUDE[ssPDW](../../includes/sspdw-md.md)], [!INCLUDE[ssSDS_md](../../includes/sssds-md.md)].    
+ **적용 대상** : [!INCLUDE[ssKatmai](../../includes/sskatmai-md.md)] 이상, [!INCLUDE[ssPDW](../../includes/sspdw-md.md)], [!INCLUDE[ssSDS_md](../../includes/sssds-md.md)].    
     
  다음 예에서는 `Parts` 데이터베이스의 소유자를 로그인 `MichikoOsada`로 변경합니다.    
     

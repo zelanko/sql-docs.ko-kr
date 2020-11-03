@@ -24,12 +24,12 @@ ms.assetid: da4dc25e-72e0-4036-87ce-22de83160836
 author: VanMSFT
 ms.author: vanto
 monikerRange: '>=aps-pdw-2016||=azuresqldb-current||>=sql-server-2016||=sqlallproducts-allversions||>=sql-server-linux-2017||=azuresqldb-mi-current||=azure-sqldw-latest'
-ms.openlocfilehash: 37580f0069d4621f759d258e238ba3f8cf2d7d14
-ms.sourcegitcommit: ac9feb0b10847b369b77f3c03f8200c86ee4f4e0
+ms.openlocfilehash: faee93b7e3185b11f2c603c0017f88f51f21f232
+ms.sourcegitcommit: 894c1a23e922dc29b82c1d2c34c7b0ff28b38654
 ms.translationtype: HT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 09/16/2020
-ms.locfileid: "90688079"
+ms.lasthandoff: 10/30/2020
+ms.locfileid: "93067484"
 ---
 # <a name="alter-certificate-transact-sql"></a>ALTER CERTIFICATE(Transact-SQL)
 
@@ -76,7 +76,7 @@ ALTER CERTIFICATE certificate_name
         DECRYPTION BY PASSWORD = '<key password>' )
 }  
 ```  
-  
+[!INCLUDE[synapse-analytics-od-unsupported-syntax](../../includes/synapse-analytics-od-unsupported-syntax.md)]  
 
 [!INCLUDE[sql-server-tsql-previous-offline-documentation](../../includes/sql-server-tsql-previous-offline-documentation.md)]
 
@@ -89,27 +89,27 @@ ALTER CERTIFICATE certificate_name
   
  WITH PRIVATE KEY 인증서의 프라이빗 키가 SQL Server에 저장되도록 지정합니다.
 
- FILE ='*path_to_private_key*'  
+ FILE =' *path_to_private_key* '  
  프라이빗 키에 대해 파일 이름을 포함하여 전체 경로를 지정합니다. 이 매개 변수는 로컬 경로이거나 네트워크 위치에 대한 UNC 경로가 될 수 있습니다. 이 파일은 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 서비스 계정의 보안 컨텍스트 내에서 액세스할 수 있습니다. 이 옵션을 사용할 경우 서비스 계정이 지정된 파일에 액세스할 수 있는지 확인합니다.
  
  파일 이름만 지정하는 경우 파일은 인스턴스의 기본 사용자 데이터 폴더에 저장됩니다. 이 폴더는 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] DATA 폴더일 수도 있고 아닐 수도 있습니다. SQL Server Express LocalDB의 경우 인스턴스의 기본 사용자 데이터 폴더는 인스턴스를 생성한 계정의 `%USERPROFILE%` 환경 변수에 의해 지정된 경로입니다.  
   
- BINARY ='*private_key_bits*'  
- **적용 대상**: [!INCLUDE[ssSQL11](../../includes/sssql11-md.md)] 이상  
+ BINARY =' *private_key_bits* '  
+ **적용 대상** : [!INCLUDE[ssSQL11](../../includes/sssql11-md.md)] 이상  
   
  이진 상수로 지정되는 프라이빗 키 비트입니다. 이러한 비트는 암호화된 형식일 수 있습니다. 암호화된 경우 사용자는 해독 암호를 입력해야 합니다. 이 암호에 대해서는 암호 정책 확인이 수행되지 않습니다. 프라이빗 키 비트는 PVK 파일 형식이어야 합니다.  
   
- DECRYPTION BY PASSWORD ='*current_password*'  
+ DECRYPTION BY PASSWORD =' *current_password* '  
  프라이빗 키를 해독하는 데 필요한 암호를 지정합니다.  
   
- ENCRYPTION BY PASSWORD ='*new_password*'  
- 데이터베이스에서 인증서의 프라이빗 키를 암호화하는 데 사용되는 암호를 지정합니다. *new_password*는 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 인스턴스를 실행하는 컴퓨터의 Windows 암호 정책 요구 사항을 충족해야 합니다. 자세한 내용은 [Password Policy](../../relational-databases/security/password-policy.md)을 참조하세요.  
+ ENCRYPTION BY PASSWORD =' *new_password* '  
+ 데이터베이스에서 인증서의 프라이빗 키를 암호화하는 데 사용되는 암호를 지정합니다. *new_password* 는 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 인스턴스를 실행하는 컴퓨터의 Windows 암호 정책 요구 사항을 충족해야 합니다. 자세한 내용은 [Password Policy](../../relational-databases/security/password-policy.md)을 참조하세요.  
   
  ACTIVE FOR BEGIN_DIALOG **=** { ON | OFF }  
  [!INCLUDE[ssSB](../../includes/sssb-md.md)] 대화 기능의 시작자가 인증서를 사용할 수 있게 합니다.  
   
 ## <a name="remarks"></a>설명  
- 프라이빗 키는 *certificate_name*으로 지정한 퍼블릭 키와 일치해야 합니다.  
+ 프라이빗 키는 *certificate_name* 으로 지정한 퍼블릭 키와 일치해야 합니다.  
   
  파일에 있는 암호가 Null 암호로 보호되는 경우에는 DECRYPTION BY PASSWORD 절을 생략할 수 있습니다.  
   

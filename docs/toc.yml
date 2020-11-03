@@ -1830,7 +1830,7 @@
       items:
         - name: 관리
           items:
-            - name: 만들기
+            - name: 생성
               href: relational-databases/tables/create-tables-database-engine.md
             - name: DELETE
               href: relational-databases/tables/delete-tables-database-engine.md
@@ -1869,7 +1869,7 @@
           items:
             - name: 생성
               href: relational-databases/tables/create-edge-constraints.md
-            - name: 삭제
+            - name: DELETE
               href: relational-databases/tables/delete-edge-constraint.md
             - name: 수정
               href: relational-databases/tables/modify-edge-constraint.md
@@ -10099,7 +10099,7 @@
                       href: linux/sql-server-linux-availability-group-cluster-sles.md
                     - name: Ubuntu에서 구성
                       href: linux/sql-server-linux-availability-group-cluster-ubuntu.md
-                    - name: '장애 조치 '
+                    - name: 장애 조치
                       href: linux/sql-server-linux-availability-group-failover-ha.md
                     - name: 운영
                       href: linux/sql-server-linux-availability-group-operate-ha.md
@@ -10180,6 +10180,8 @@
   items:
     - name: 개요
       href: sql-server/azure-arc/overview.md
+    - name: 릴리스 정보
+      href: sql-server/azure-arc/release-notes.md
     - name: 연결
       href: sql-server/azure-arc/connect.md
     - name: 대규모로 연결

@@ -16,10 +16,10 @@ ms.assetid: da6999c7-e5e3-4a59-a284-1da635995af1
 author: chugugrace
 ms.author: chugu
 ms.openlocfilehash: a458d0bcf700341951d79c775fb06fde37585362
-ms.sourcegitcommit: cfa04a73b26312bf18d8f6296891679166e2754d
+ms.sourcegitcommit: 894c1a23e922dc29b82c1d2c34c7b0ff28b38654
 ms.translationtype: HT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 10/19/2020
+ms.lasthandoff: 11/01/2020
 ms.locfileid: "92193740"
 ---
 # <a name="what39s-new-in-integration-services-in-sql-server-2016"></a>SQL Server 2016 Integration Services의 새로운 기능
@@ -203,7 +203,7 @@ ms.locfileid: "92193740"
  SSIS 카탈로그에서 새 **RuntimeLineage** 로깅 수준에서는 데이터 흐름의 계보 정보를 추적하는 데 필요한 데이터를 수집합니다. 이 계보 정보를 구문 분석하여 작업 간의 계보 관계를 매핑할 수 있습니다. ISV와 개발자가 이 정보로 사용자 지정 계보 매핑 도구를 빌드할 수 있습니다. 
 
 ####  <a name="new-custom-logging-level-in-the-ssis-catalog"></a><a name="CustomLogging"></a> SSIS 카탈로그에서 새 사용자 지정 로깅 수준  
- SSIS 카탈로그의 이전 버전을 사용하면 패키지를 실행할 때 네 가지 기본 제공 로깅 수준 **없음, 기본, 성능, 자세한 정보 표시**에서 선택할 수 있습니다. SQL Server 2016에서는 **RuntimeLineage** 로깅 수준을 추가합니다. 또한 이제 SSIS 카탈로그에서 사용자 지정된 로깅 수준을 여러 개 만들고 저장할 수 있으며, 패키지를 실행할 때마다 사용할 로깅 수준을 선택할 수 있습니다. 각 사용자 지정된 로깅 수준에 대해 캡처할 통계 및 이벤트를 선택합니다. 필요에 따라 변수 값, 연결 문자열 및 작업 속성을 표시하는 이벤트 컨텍스트를 포함합니다. 자세한 내용은 [SSIS 서버에서 패키지 실행에 대한 로깅 설정](../integration-services/performance/integration-services-ssis-logging.md#server_logging)를 참조하십시오. 
+ SSIS 카탈로그의 이전 버전을 사용하면 패키지를 실행할 때 네 가지 기본 제공 로깅 수준 **없음, 기본, 성능, 자세한 정보 표시** 에서 선택할 수 있습니다. SQL Server 2016에서는 **RuntimeLineage** 로깅 수준을 추가합니다. 또한 이제 SSIS 카탈로그에서 사용자 지정된 로깅 수준을 여러 개 만들고 저장할 수 있으며, 패키지를 실행할 때마다 사용할 로깅 수준을 선택할 수 있습니다. 각 사용자 지정된 로깅 수준에 대해 캡처할 통계 및 이벤트를 선택합니다. 필요에 따라 변수 값, 연결 문자열 및 작업 속성을 표시하는 이벤트 컨텍스트를 포함합니다. 자세한 내용은 [SSIS 서버에서 패키지 실행에 대한 로깅 설정](../integration-services/performance/integration-services-ssis-logging.md#server_logging)를 참조하십시오. 
 
 ####  <a name="column-names-for-errors-in-the-data-flow"></a><a name="ErrorColumn"></a> 데이터 흐름의 오류에 대한 열 이름  
  오류 출력에 오류를 포함 하는 데이터 흐름에서 행을 리디렉션하는 경우 출력 오류가 발생 했지만 열 이름이 표시 되지 않는 열에 대 한 숫자 식별자를 포함 합니다. 이제 여러 가지 방법을 사용하여 오류가 발생할 때 열 이름을 찾아 표시할 수 있습니다.  
@@ -232,10 +232,10 @@ ms.locfileid: "92193740"
 >  RC0에서 이 메서드는 새 <xref:Microsoft.SqlServer.Dts.Pipeline.Wrapper.IDTSComponentMetaData130> 인터페이스로 이동되었습니다. 자세한 내용은 [API의 새로운 IDTSComponentMetaData130 인터페이스](#CMD130)를 참조하세요.  
 
 ####  <a name="support-for-server-wide-default-logging-level"></a><a name="ServerLogLevel"></a> 서버 차원의 기본 로깅 수준 지원  
- SQL Server **서버 속성**의 **서버 로깅 수준** 속성 아래에서 이제 기본 서버 차원의 로깅 수준을 선택할 수 있습니다. 기본 제공 로깅 수준인 기본, 없음, 자세한 정보 표시, 성능 또는 런타임 계보 중 하나에서 선택하거나 기존 사용자 지정된 로깅 수준을 선택할 수 있습니다. 선택한 로깅 수준은 SSIS 카탈로그에 배포하는 모든 패키지에 적용됩니다. 또한 SSIS 패키지를 실행하는 SQL 에이전트 작업 단계에 기본적으로 적용됩니다.  
+ SQL Server **서버 속성** 의 **서버 로깅 수준** 속성 아래에서 이제 기본 서버 차원의 로깅 수준을 선택할 수 있습니다. 기본 제공 로깅 수준인 기본, 없음, 자세한 정보 표시, 성능 또는 런타임 계보 중 하나에서 선택하거나 기존 사용자 지정된 로깅 수준을 선택할 수 있습니다. 선택한 로깅 수준은 SSIS 카탈로그에 배포하는 모든 패키지에 적용됩니다. 또한 SSIS 패키지를 실행하는 SQL 에이전트 작업 단계에 기본적으로 적용됩니다.  
 
 ####  <a name="new-idtscomponentmetadata130-interface-in-the-api"></a><a name="CMD130"></a> API의 새로운 IDTSComponentMetaData130 인터페이스  
- SSIS 카탈로그에서 새 <xref:Microsoft.SqlServer.Dts.Pipeline.Wrapper.IDTSComponentMetaData130> 인터페이스는 SQL Server 2016의 새 기능, 특히 <xref:Microsoft.SqlServer.Dts.Pipeline.Wrapper.IDTSComponentMetaData100> 메서드를 기존 <xref:Microsoft.SqlServer.Dts.Pipeline.Wrapper.IDTSComponentMetaData130.GetIdentificationStringByID%2A> 인터페이스에 추가합니다. (**GetIdentificationStringByID** 메서드는 <xref:Microsoft.SqlServer.Dts.Pipeline.Wrapper.IDTSComponentMetaData100> 인터페이스에서 새 인터페이스로 이동되었습니다.) 또한 <xref:Microsoft.SqlServer.Dts.Pipeline.Wrapper.IDTSInputColumn130> 및 <xref:Microsoft.SqlServer.Dts.Pipeline.Wrapper.IDTSOutputColumn130> 인터페이스도 새로 추가되었으며 두 인터페이스 모두 **LineageIdentificationString** 속성을 제공합니다. 자세한 내용은 [데이터 흐름의 오류에 대한 열 이름](#ErrorColumn)를 참조하십시오.  
+ SSIS 카탈로그에서 새 <xref:Microsoft.SqlServer.Dts.Pipeline.Wrapper.IDTSComponentMetaData130> 인터페이스는 SQL Server 2016의 새 기능, 특히 <xref:Microsoft.SqlServer.Dts.Pipeline.Wrapper.IDTSComponentMetaData100> 메서드를 기존 <xref:Microsoft.SqlServer.Dts.Pipeline.Wrapper.IDTSComponentMetaData130.GetIdentificationStringByID%2A> 인터페이스에 추가합니다. ( **GetIdentificationStringByID** 메서드는 <xref:Microsoft.SqlServer.Dts.Pipeline.Wrapper.IDTSComponentMetaData100> 인터페이스에서 새 인터페이스로 이동되었습니다.) 또한 <xref:Microsoft.SqlServer.Dts.Pipeline.Wrapper.IDTSInputColumn130> 및 <xref:Microsoft.SqlServer.Dts.Pipeline.Wrapper.IDTSOutputColumn130> 인터페이스도 새로 추가되었으며 두 인터페이스 모두 **LineageIdentificationString** 속성을 제공합니다. 자세한 내용은 [데이터 흐름의 오류에 대한 열 이름](#ErrorColumn)를 참조하십시오.  
 
 ### <a name="better-package-management"></a>패키지 관리 향상
 
@@ -243,7 +243,7 @@ ms.locfileid: "92193740"
  SSIS 프로젝트를 이전 버전에서 현재 버전으로 업그레이드할 때 프로젝트 수준 연결 관리자는 예상한 대로 작업을 계속 수행하고 패키지 레이아웃 및 주석은 유지됩니다.  
 
 ####  <a name="autoadjustbuffersize-property-automatically-calculates-buffer-size-for-data-flow"></a><a name="BufferSize"></a> AutoAdjustBufferSize 속성에서 데이터 흐름에 대한 버퍼 크기를 자동으로 계산  
- 새 **AutoAdjustBufferSize** 속성 값을 **true**로 설정하면 데이터 흐름 엔진에서 데이터 흐름에 대한 버퍼 크기를 자동으로 계산합니다. 자세한 내용은 [Data Flow Performance Features](../integration-services/data-flow/data-flow-performance-features.md)를 참조하십시오.  
+ 새 **AutoAdjustBufferSize** 속성 값을 **true** 로 설정하면 데이터 흐름 엔진에서 데이터 흐름에 대한 버퍼 크기를 자동으로 계산합니다. 자세한 내용은 [Data Flow Performance Features](../integration-services/data-flow/data-flow-performance-features.md)를 참조하십시오.  
 
 ####  <a name="reusable-control-flow-templates"></a><a name="Templates"></a> 재사용 가능한 제어 흐름 템플릿  
  일반적으로 사용되는 제어 흐름 태스크 또는 컨테이너를 독립 실행형 템플릿 파일에 저장하고 제어 흐름 템플릿을 사용하여 이 파일을 프로젝트의 하나 이상의 패키지에 여러 번 재사용합니다. 이 재사용 기능으로 인해 SSIS 패키지 디자인 및 유지 관리가 좀 더 간편해집니다. 자세한 내용은 [제어 흐름 패키지 파트를 사용하여 패키지에 대해 제어 흐름 재사용](../integration-services/reuse-control-flow-across-packages-by-using-control-flow-package-parts.md)을 참조하세요.  
@@ -325,7 +325,7 @@ SQL Server 2016 서비스 팩 1을 설치하면 이제 OData 원본 및 OData �
 ####  <a name="multi-targeting-and-multi-version-support-in-ssis-designer"></a><a name="OneDesigner"></a> SSIS 디자이너에서 멀티 타기팅 및 다중 버전 지원  
  이제 Visual Studio 2015용 SSDT(SQL Server Data Tools)에서 SSIS 디자이너를 사용하여 SQL Server 2016, SQL Server 2014 또는 SQL Server 2012를 대상으로 하는 패키지를 만들고, 유지 관리하고, 실행할 수 있습니다. SSDT를 다운로드하려면 [최신 SQL Server Data Tools 다운로드](../ssdt/download-sql-server-data-tools-ssdt.md)를 참조하세요. 
 
- 솔루션 탐색기에서 Integration Services 프로젝트를 마우스 오른쪽 단추로 클릭하고 **속성** 을 선택하여 프로젝트에 대한 속성 페이지를 엽니다. **구성 속성** 의 **일반**탭에서 **TargetServerVersion** 속성을 선택하고 SQL Server 2016, SQL Server 2014 또는 SQL Server 2012를 선택합니다.  
+ 솔루션 탐색기에서 Integration Services 프로젝트를 마우스 오른쪽 단추로 클릭하고 **속성** 을 선택하여 프로젝트에 대한 속성 페이지를 엽니다. **구성 속성** 의 **일반** 탭에서 **TargetServerVersion** 속성을 선택하고 SQL Server 2016, SQL Server 2014 또는 SQL Server 2012를 선택합니다.  
    
  ![프로젝트 속성 대화 상자의 TargetServerVersion 속성](../integration-services/media/targetserverversion2.png "프로젝트 속성 대화 상자의 TargetServerVersion 속성")  
 

@@ -29,12 +29,12 @@ ms.assetid: 2ee95a32-5140-41bd-9ab3-a947b9990688
 author: VanMSFT
 ms.author: vanto
 monikerRange: '>=aps-pdw-2016||>=sql-server-2016||=sqlallproducts-allversions||>=sql-server-linux-2017||=azuresqldb-mi-current||=azure-sqldw-latest'
-ms.openlocfilehash: e5d833b75641c20116c49a7ab4907b9cb8522ab6
-ms.sourcegitcommit: ac9feb0b10847b369b77f3c03f8200c86ee4f4e0
+ms.openlocfilehash: e3ed7051503f4e4242cf75d22cca2fd5017f5c55
+ms.sourcegitcommit: 894c1a23e922dc29b82c1d2c34c7b0ff28b38654
 ms.translationtype: HT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 09/16/2020
-ms.locfileid: "90688109"
+ms.lasthandoff: 10/30/2020
+ms.locfileid: "93067417"
 ---
 # <a name="create-database-encryption-key-transact-sql"></a>CREATE DATABASE ENCRYPTION KEY(Transact-SQL)
 
@@ -70,6 +70,7 @@ CREATE DATABASE ENCRYPTION KEY
    ENCRYPTION BY SERVER CERTIFICATE Encryptor_Name   
 [ ; ]  
 ```  
+[!INCLUDE[synapse-analytics-od-unsupported-syntax](../../includes/synapse-analytics-od-unsupported-syntax.md)]
 
 [!INCLUDE[sql-server-tsql-previous-offline-documentation](../../includes/sql-server-tsql-previous-offline-documentation.md)]
 
@@ -88,7 +89,7 @@ ENCRYPTION BY SERVER ASYMMETRIC KEY Encryptor_Name
 데이터베이스 암호화 키를 암호화하는 데 사용되는 비대칭 키의 이름을 지정합니다. 비대칭 키로 데이터베이스 암호화 키를 암호화하려면 비대칭 키가 확장 가능 키 관리 공급자에 있어야 합니다.  
   
 ## <a name="remarks"></a>설명  
-데이터베이스 암호화 키가 있어야 TDE(*Transparent Database Encryption*)를 사용하여 데이터베이스를 암호화할 수 있습니다. 데이터베이스가 명시적으로 암호화되면 특수 코드의 수정 없이 전체 데이터베이스가 파일 수준에서 암호화됩니다. 데이터베이스 암호화 키를 암호화하는 데 사용되는 인증서 또는 비대칭 키는 master 시스템 데이터베이스에 있어야 합니다.  
+데이터베이스 암호화 키가 있어야 TDE( *Transparent Database Encryption* )를 사용하여 데이터베이스를 암호화할 수 있습니다. 데이터베이스가 명시적으로 암호화되면 특수 코드의 수정 없이 전체 데이터베이스가 파일 수준에서 암호화됩니다. 데이터베이스 암호화 키를 암호화하는 데 사용되는 인증서 또는 비대칭 키는 master 시스템 데이터베이스에 있어야 합니다.  
   
 데이터베이스 암호화 문은 사용자 데이터베이스에서만 사용할 수 있습니다.  
   

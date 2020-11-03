@@ -14,12 +14,12 @@ helpviewer_keywords:
 ms.assetid: 850b9c26-5c7c-47b9-a61c-5cf9bb5948cf
 author: chugugrace
 ms.author: chugu
-ms.openlocfilehash: 0475b5adb825339c2c3c7a0927aabbea2bf889ea
-ms.sourcegitcommit: e700497f962e4c2274df16d9e651059b42ff1a10
+ms.openlocfilehash: 5386c10a85d548a59e68b33009d5ed46e95d85d0
+ms.sourcegitcommit: 80701484b8f404316d934ad2a85fd773e26ca30c
 ms.translationtype: HT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 08/17/2020
-ms.locfileid: "88422097"
+ms.lasthandoff: 11/03/2020
+ms.locfileid: "93243657"
 ---
 # <a name="catalogrevoke_permission-ssisdb-database"></a>catalog.revoke_permission(SSISDB 데이터베이스)
 
@@ -41,16 +41,16 @@ catalog.revoke_permission [ @object_type = ] object_type
   
 ## <a name="arguments"></a>인수  
  [ @object_type = ] *object_type*  
- 보안 개체의 유형입니다. 보안 개체 유형에는 폴더(`1`), 프로젝트(`2`), 환경(`3`) 및 작업(`4`)이 있습니다. *object_type*은 **smallint**_입니다._  
+ 보안 개체의 유형입니다. 보안 개체 유형에는 폴더(`1`), 프로젝트(`2`), 환경(`3`) 및 작업(`4`)이 있습니다. *object_type* 은 **smallint**_입니다._  
   
  [ @object_id = ] *object_id*  
- 보안 개체의 고유 식별자(ID)입니다. *object_id*는 **bigint**입니다.  
+ 보안 개체의 고유 식별자(ID)입니다. *object_id* 는 **bigint** 입니다.  
   
  [ @principal_id = ] *principal_id*  
- 사용 권한을 취소할 보안 주체의 ID입니다. *principal_id*는 **int**입니다.  
+ 사용 권한을 취소할 보안 주체의 ID입니다. *principal_id* 는 **int** 입니다.  
   
  [ @permission_type = ] *permission_type*  
- 사용 권한의 유형입니다. *permission_type*은 **smallint**입니다.  
+ 사용 권한의 유형입니다. *permission_type* 은 **smallint** 입니다.  
   
 ## <a name="return-code-values"></a>반환 코드 값  
  0(성공)  
@@ -66,9 +66,6 @@ catalog.revoke_permission [ @object_type = ] object_type
  5(기타 오류)  
   
 ## <a name="result-sets"></a>결과 집합  
- None  
-  
-## <a name="remarks"></a>설명  
  None  
   
 ## <a name="permissions"></a>사용 권한  

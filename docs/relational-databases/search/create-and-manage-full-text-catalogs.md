@@ -8,6 +8,7 @@ ms.technology: search
 ms.topic: conceptual
 f1_keywords:
 - sql13.swb.fulltextsearch.ftcatalog.general.f1
+- sql13.swb.fulltextsearch.fulltextindexproperties.general.f1
 helpviewer_keywords:
 - full-text catalogs [SQL Server], creating
 - full-text search [SQL Server], using SQL Server Management Studio
@@ -16,12 +17,12 @@ author: pmasl
 ms.author: pelopes
 ms.reviewer: mikeray
 monikerRange: =azuresqldb-current||>=sql-server-2016||=sqlallproducts-allversions||>=sql-server-linux-2017||=azuresqldb-mi-current
-ms.openlocfilehash: ff19e0cd9ef6b88dae2410edbc4cae74e911c1a0
-ms.sourcegitcommit: 5f3e0eca9840db20038f0362e5d88a84ff3424af
+ms.openlocfilehash: a431635fdca556023a5e598502919bfdc9e40db6
+ms.sourcegitcommit: 894c1a23e922dc29b82c1d2c34c7b0ff28b38654
 ms.translationtype: HT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 10/21/2020
-ms.locfileid: "92344005"
+ms.lasthandoff: 10/30/2020
+ms.locfileid: "93067356"
 ---
 # <a name="create-and-manage-full-text-catalogs"></a>전체 텍스트 카탈로그 만들기 및 관리
 

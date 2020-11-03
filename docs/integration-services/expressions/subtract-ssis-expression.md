@@ -14,12 +14,12 @@ helpviewer_keywords:
 ms.assetid: b48da086-37dd-460a-8a4b-912f52c9b158
 author: chugugrace
 ms.author: chugu
-ms.openlocfilehash: f0615678e5c6613b5b709f711dc3f2cf9e7dfa8a
-ms.sourcegitcommit: e700497f962e4c2274df16d9e651059b42ff1a10
+ms.openlocfilehash: 6d4235e64f59814075a5d0d57e24d5345b9876a0
+ms.sourcegitcommit: 80701484b8f404316d934ad2a85fd773e26ca30c
 ms.translationtype: HT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 08/17/2020
-ms.locfileid: "88425365"
+ms.lasthandoff: 11/03/2020
+ms.locfileid: "93243690"
 ---
 # <a name="--subtract-ssis-expression"></a>-(빼기)(SSIS 식)
 
@@ -44,10 +44,9 @@ numeric_expression1 - numeric_expression2
  두 인수의 데이터 형식에 따라 결정됩니다. 자세한 내용은 [Integration Services Data Types in Expressions](../../integration-services/expressions/integration-services-data-types-in-expressions.md)을 참조하세요.  
   
 ## <a name="remarks"></a>설명  
- 식이 올바른 순서로 계산되도록 단항 빼기 식을 괄호로 묶으십시오.  
-  
-## <a name="remarks"></a>설명  
- 두 피연산자 중 하나가 Null이면 결과도 Null입니다.  
+ - 식이 올바른 순서로 계산되도록 단항 빼기 식을 괄호로 묶으십시오.  
+
+ - 두 피연산자 중 하나가 Null이면 결과도 Null입니다.  
   
 ## <a name="expression-examples"></a>식 예  
  이 예에서는 숫자 리터럴을 뺍니다.  

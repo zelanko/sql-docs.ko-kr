@@ -9,16 +9,16 @@ ms.author: davidph
 ms.reviewer: sstein
 ms.custom: ''
 ms.date: 05/19/2020
-ms.openlocfilehash: 77cb3141a27fa8e68f8cdfb556784cc63fd07543
-ms.sourcegitcommit: c7f40918dc3ecdb0ed2ef5c237a3996cb4cd268d
+ms.openlocfilehash: 163f5efca97e99609cbdbaae8f713c4576cc4e0b
+ms.sourcegitcommit: 9c6130d498f1cfe11cde9f2e65c306af2fa8378d
 ms.translationtype: HT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 10/05/2020
-ms.locfileid: "91725148"
+ms.lasthandoff: 10/30/2020
+ms.locfileid: "93035979"
 ---
 # <a name="machine-learning-extension-for-azure-data-studio-preview"></a>Azure Data Studio용 Machine Learning 확장(미리 보기)
 
-[Azure Data Studio](../what-is.md)용 Machine Learning 확장을 사용하면 패키지를 관리하고, 기계 학습 모델을 가져오고, 예측을 만들고, SQL 데이터베이스에 대한 실험을 실행하는 notebook을 만들 수 있습니다. 이 확장은 현재 미리 보기로 제공됩니다.
+[Azure Data Studio](../what-is-azure-data-studio.md)용 Machine Learning 확장을 사용하면 패키지를 관리하고, 기계 학습 모델을 가져오고, 예측을 만들고, SQL 데이터베이스에 대한 실험을 실행하는 notebook을 만들 수 있습니다. 이 확장은 현재 미리 보기로 제공됩니다.
 
 ## <a name="prerequisites"></a>필수 구성 요소
 
@@ -46,7 +46,7 @@ Requirement already satisfied: jupyter
 
 - [Homebrew](https://brew.sh)(선택 사항). Homebrew를 설치하고 명령줄에서 `brew update`를 실행합니다.
 
-- *openssl*(선택 사항). 다음으로 `brew install openssl`을 실행합니다.
+- *openssl* (선택 사항). 다음으로 `brew install openssl`을 실행합니다.
 
 ## <a name="install-the-extension"></a>확장 설치
 
@@ -56,9 +56,9 @@ Azure Data Studio에서 Machine Learning 확장을 설치하려면 다음 단계
 
 1. **Machine Learning** 확장을 선택하고 세부 정보를 확인합니다.
 
-1. **설치**를 선택합니다.
+1. **설치** 를 선택합니다.
 
-1. **다시 로드**를 선택하여 확장을 사용하도록 설정합니다. (확장을 처음 설치할 때만 필요합니다.)
+1. **다시 로드** 를 선택하여 확장을 사용하도록 설정합니다. (확장을 처음 설치할 때만 필요합니다.)
 
 <a name="settings"></a>
 
@@ -85,17 +85,17 @@ Machine Learning 확장 설정을 변경하려면 다음 단계를 수행하세�
 > [!IMPORTANT]
 > Machine Learning의 기능 대부분이 작동하려면 Python을 사용 설정하고 구성해야 합니다. 데이터베이스 기능에서 Python 패키지 관리를 사용하지 않을 때도 마찬가집니다.
 
-1. **Machine Learning: Python 사용 설정**이 활성화되어 있는지 확인합니다. 이 설정은 기본적으로 사용하도록 설정됩니다.
+1. **Machine Learning: Python 사용 설정** 이 활성화되어 있는지 확인합니다. 이 설정은 기본적으로 사용하도록 설정됩니다.
 
-1. **Machine Learning: Python 경로**에 기존 Python 설치 경로를 입력합니다. Python 실행 파일의 전체 경로이거나 실행 파일이 있는 폴더일 수 있습니다. Azure Data Studio에서 [Python 커널 notebook](../notebooks/notebooks-python-kernel.md)을 사용한다면 이 확장은 기본적으로 notebook의 경로를 사용합니다.
+1. **Machine Learning: Python 경로** 에 기존 Python 설치 경로를 입력합니다. Python 실행 파일의 전체 경로이거나 실행 파일이 있는 폴더일 수 있습니다. Azure Data Studio에서 [Python 커널 notebook](../notebooks/notebooks-python-kernel.md)을 사용한다면 이 확장은 기본적으로 notebook의 경로를 사용합니다.
 
 ### <a name="enable-r"></a>R 사용 설정
 
 데이터베이스에서 Machine Learning 확장과 R 패키지 관리를 모두 사용하려면 아래 단계를 수행하세요.
 
-1. **Machine Learning: R 사용 설정**이 활성화되어 있는지 확인합니다. 이 설정은 기본적으로 사용하지 않도록 설정됩니다.
+1. **Machine Learning: R 사용 설정** 이 활성화되어 있는지 확인합니다. 이 설정은 기본적으로 사용하지 않도록 설정됩니다.
 
-1. **Machine Learning: R 경로**에 기존 R 설치 경로를 입력합니다. R 실행 파일의 전체 경로여야 합니다. 
+1. **Machine Learning: R 경로** 에 기존 R 설치 경로를 입력합니다. R 실행 파일의 전체 경로여야 합니다. 
 
 ## <a name="use-the-machine-learning-extension"></a>Machine Learning 확장 사용
 
@@ -103,11 +103,11 @@ Azure Data Studio에서 Machine Learning 확장을 사용하려면 다음 단계
 
 1. Azure Data Studio에서 **연결** 뷰렛을 엽니다.
 
-1. 서버를 마우스 오른쪽 단추로 선택하고 **관리**를 선택합니다.
+1. 서버를 마우스 오른쪽 단추로 선택하고 **관리** 를 선택합니다.
 
-1. **일반**의 왼쪽 메뉴에서 **Machine Learning**을 선택합니다.
+1. **일반** 의 왼쪽 메뉴에서 **Machine Learning** 을 선택합니다.
 
-**다음 단계**에 있는 링크를 사용하면 Machine Learning 확장을 사용하여 패키지를 관리하고, 예측을 만들고, 데이터베이스에 모델을 가져오는 방법을 확인할 수 있습니다.
+**다음 단계** 에 있는 링크를 사용하면 Machine Learning 확장을 사용하여 패키지를 관리하고, 예측을 만들고, 데이터베이스에 모델을 가져오는 방법을 확인할 수 있습니다.
 
 ## <a name="next-steps"></a>다음 단계
 

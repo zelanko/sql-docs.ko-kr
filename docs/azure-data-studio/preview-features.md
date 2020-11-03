@@ -9,12 +9,12 @@ ms.author: hanqin
 ms.reviewer: maghan
 ms.custom: ''
 ms.date: 10/14/2020
-ms.openlocfilehash: 8284300858be0dc8bcbf8bdf8f381e839fd7ae96
-ms.sourcegitcommit: 76ab3b57718341c6057613c9bd38cf82fb17786e
+ms.openlocfilehash: bfb4ea0b745fa61ea6d7c688ab90eaf369b2a5bb
+ms.sourcegitcommit: 9c6130d498f1cfe11cde9f2e65c306af2fa8378d
 ms.translationtype: HT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 10/14/2020
-ms.locfileid: "92060912"
+ms.lasthandoff: 10/30/2020
+ms.locfileid: "93036000"
 ---
 # <a name="preview-features-in-azure-data-studio"></a>Azure Data Studio의 미리 보기 기능
 
@@ -32,13 +32,13 @@ Azure Data Studio에서는 새로운 기능과 개선 사항이 출시(GA)되기
 
 언제든지 설정에서 미리 보기 기능을 사용하거나 사용하지 않도록 설정할 수 있습니다.
 
-1. 왼쪽 아래에 있는 **기어** 아이콘을 선택하고 상황에 맞는 메뉴에서 **설정**을 선택합니다. 설정 탭이 열립니다.
+1. 왼쪽 아래에 있는 **기어** 아이콘을 선택하고 상황에 맞는 메뉴에서 **설정** 을 선택합니다. 설정 탭이 열립니다.
 
    ![ADS의 설정에 액세스하기 위한 기어 아이콘](./media/settings/open-settings-menu.png)
 
 2. 검색 창에 “미리 보기 기능 사용”을 입력합니다.
 
-3. 미리 보기 기능을 사용하도록 설정하려면 **Workbench: 미리 보기 기능 사용**에서 **릴리스되지 않은 미리 보기 기능 사용** 확인란을 선택합니다. 미리 보기 기능을 사용하지 않도록 설정하려면 확인란의 선택을 취소합니다.
+3. 미리 보기 기능을 사용하도록 설정하려면 **Workbench: 미리 보기 기능 사용** 에서 **릴리스되지 않은 미리 보기 기능 사용** 확인란을 선택합니다. 미리 보기 기능을 사용하지 않도록 설정하려면 확인란의 선택을 취소합니다.
 
    ![ADS의 미리 보기 기능 사용 설정](./media/settings/preview-features-settings.png)
 
@@ -97,4 +97,4 @@ Azure Data Studio에서는 새로운 기능과 개선 사항이 출시(GA)되기
 
 ## <a name="next-steps"></a>다음 단계
 
-* [Azure Data Studio](what-is.md)
+* [Azure Data Studio](what-is-azure-data-studio.md)
