@@ -21,12 +21,12 @@ ms.assetid: 6ff79bbf-4acf-4f75-926f-38637ca8a943
 author: markingmyname
 ms.author: maghan
 monikerRange: '>=aps-pdw-2016||>=sql-server-2016||=sqlallproducts-allversions||>=sql-server-linux-2017||=azuresqldb-mi-current'
-ms.openlocfilehash: e9f566216c0dfd9f30a35c9472db433ad71e2f3c
-ms.sourcegitcommit: f888ac94c7b5f6b6f138ab75719dadca04e8284a
+ms.openlocfilehash: 84c61b1e6517bc98e8acb32a8215f2dad853d7e5
+ms.sourcegitcommit: 985e2e8e494badeac6d6b652cd35765fd9c12d80
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 11/03/2020
-ms.locfileid: "93294394"
+ms.lasthandoff: 11/04/2020
+ms.locfileid: "93328596"
 ---
 # <a name="backupset-transact-sql"></a>backupset(Transact-SQL)
 [!INCLUDE [sql-asdbmi-pdw](../../includes/applies-to-version/sql-asdbmi-pdw.md)]
@@ -56,7 +56,7 @@ ms.locfileid: "93294394"
 |**software_major_version**|**tinyint**|[!INCLUDE[msCoName](../../includes/msconame-md.md)][!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]주 버전 번호입니다. NULL일 수 있습니다.|  
 |**software_minor_version**|**tinyint**|[!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 부 버전 번호입니다. NULL일 수 있습니다.|  
 |**software_build_version**|**smallint**|[!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 빌드 번호입니다. NULL일 수 있습니다.|  
-|**time_zone**|**smallint**|백업 작업이 시작 될 때 15 분 간격으로 수행 되는 현지 시간 (백업 작업이 발생 하는 위치)과 UTC (협정 세계시)의 차이입니다. 값은 -48에서 +48까지 사용할 수 있으며 각 값을 포함합니다. 값 127은 알 수 없음을 의미합니다. 예를 들어 -20은 EST(동부 표준시) 또는 UTC 이후 5시간을 의미합니다. NULL일 수 있습니다.|  
+|**time_zone**|**smallint**|백업 작업이 시작 된 시점에 표준 시간대 정보를 사용 하 여 15 분 간격으로 백업 작업이 수행 되는 현지 시간과 UTC (협정 세계시) 사이의 차이입니다. 값은 -48에서 +48까지 사용할 수 있으며 각 값을 포함합니다. 값 127은 알 수 없음을 의미합니다. 예를 들어 -20은 EST(동부 표준시) 또는 UTC 이후 5시간을 의미합니다. NULL일 수 있습니다.|  
 |**mtf_minor_version**|**tinyint**|[!INCLUDE[msCoName](../../includes/msconame-md.md)] Tape Format의 부 버전 번호입니다. NULL일 수 있습니다.|  
 |**first_lsn**|**numeric(25,0)**|백업 세트에서 첫 번째 또는 가장 오래된 로그 레코드의 로그 시퀀스 번호입니다. NULL일 수 있습니다.|  
 |**last_lsn**|**numeric(25,0)**|백업 세트 다음에 오는 로그 레코드의 로그 시퀀스 번호입니다. NULL일 수 있습니다.|  
