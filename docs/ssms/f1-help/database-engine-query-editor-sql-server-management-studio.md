@@ -6,13 +6,13 @@ ms.prod_service: sql-tools
 ms.technology: ssms
 ms.topic: conceptual
 f1_keywords:
-- sql13.swb.tsqlquery.f1
-- sql13.swb.tsqlresults.f1
 - sql13.swb.query.advanced.f1
 - sql13.swb.query.ansi.f1
 - sql13.swb.query.general.f1
-- sql13.swb.query.general.f1
+- sql13.swb.query.grid.f1
 - sql13.swb.sqleditors.multiserverresultssettings
+- sql13.swb.tsqlquery.f1
+- sql13.swb.tsqlresults.f1
 dev_langs:
 - TSQL
 helpviewer_keywords:
@@ -43,12 +43,12 @@ ms.author: maghan
 ms.reviewer: ''
 ms.custom: seo-lt-2019, contperfq1
 ms.date: 08/28/2020
-ms.openlocfilehash: 219ebb8a431b997951b22d443877dfb751665384
-ms.sourcegitcommit: 5f3e0eca9840db20038f0362e5d88a84ff3424af
+ms.openlocfilehash: 7450a77549d05dab5a024b39be6d2b4aef6c09de
+ms.sourcegitcommit: b3a711a673baebb2ff10d7142b209982b46973ae
 ms.translationtype: HT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 10/21/2020
-ms.locfileid: "92344069"
+ms.lasthandoff: 11/05/2020
+ms.locfileid: "93364854"
 ---
 # <a name="sql-server-management-studio-ssms-query-editor"></a>SSMS(SQL Server Management Studio) 쿼리 편집기
 
@@ -70,7 +70,7 @@ SSMS의 편집기는 일반적인 아키텍처를 공유합니다. 텍스트 편
 
 쿼리 편집기가 열려 있으면 다음 단추를 포함하는 SQL 편집기 도구 모음이 표시됩니다.
 
-**보기** 메뉴를 선택하고 **도구 모음**을 선택한 다음 **SQL 편집기**를 선택하여 SQL 편집기 도구 모음을 추가할 수도 있습니다. 쿼리 편집기 창이 열려 있지 않을 때 SQL 편집기 도구 모음을 추가하면 모든 단추를 사용할 수 없습니다.
+**보기** 메뉴를 선택하고 **도구 모음** 을 선택한 다음 **SQL 편집기** 를 선택하여 SQL 편집기 도구 모음을 추가할 수도 있습니다. 쿼리 편집기 창이 열려 있지 않을 때 SQL 편집기 도구 모음을 추가하면 모든 단추를 사용할 수 없습니다.
 
 ![편집기 도구 모음](media/database-engine-query-editor-sql-server-management-studio/editor-toolbar.png)
 
@@ -94,7 +94,7 @@ SSMS의 편집기는 일반적인 아키텍처를 공유합니다. 텍스트 편
 
 선택한 코드를 실행하거나, 코드를 선택하지 않은 경우 모든 쿼리 편집기 코드를 실행합니다.
 
-F5 키를 선택하거나 [상황에 맞는 메뉴](#execute-using-the-context-menu)에서 쿼리를 **실행**할 수도 있습니다.
+F5 키를 선택하거나 [상황에 맞는 메뉴](#execute-using-the-context-menu)에서 쿼리를 **실행** 할 수도 있습니다.
 
 ### <a name="cancel-executing-query-using-the-editor-toolbar"></a>편집기 도구 모음을 사용하여 쿼리 실행 취소
 
@@ -118,31 +118,31 @@ Ctrl + L을 선택하거나 [상황에 맞는 메뉴](#display-estimated-executi
 
 **쿼리 옵션** 대화 상자를 엽니다. 이 대화 상자를 사용하여 쿼리 실행 및 쿼리 결과에 대한 기본 옵션을 구성합니다.
 
-[상황에 맞는 메뉴](#query-options-using-the-context-menu)에서 **쿼리 옵션**을 선택할 수도 있습니다.
+[상황에 맞는 메뉴](#query-options-using-the-context-menu)에서 **쿼리 옵션** 을 선택할 수도 있습니다.
 
 ### <a name="intellisense-enabled-using-the-editor-toolbar"></a>편집기 도구 모음을 사용하여 IntelliSense 사용 설정
 
 데이터베이스 엔진 쿼리 편집기에서 [IntelliSense](../scripting/configure-intellisense-sql-server-management-studio.md) 기능을 사용할지를 지정합니다. 이 옵션은 기본적으로 설정되어 있습니다.
 
-Ctrl+B, Ctrl+I를 차례로 선택하거나 [상황에 맞는 메뉴](#intellisense-enabled-using-the-context-menu)에서 **IntelliSense 사용**을 선택할 수도 있습니다.
+Ctrl+B, Ctrl+I를 차례로 선택하거나 [상황에 맞는 메뉴](#intellisense-enabled-using-the-context-menu)에서 **IntelliSense 사용** 을 선택할 수도 있습니다.
 
 ### <a name="include-actual-execution-plan-using-the-editor-toolbar"></a>편집기 도구 모음을 사용하여 실제 실행 계획 포함
 
 쿼리를 실행하고, 쿼리 결과를 반환하고, 쿼리 실행 계획을 사용합니다. 쿼리는 **실행 계획** 창에 그래픽 쿼리 계획으로 표시됩니다.
 
-Ctrl + M을 선택하거나 [상황에 맞는 메뉴](#include-actual-execution-plan-using-the-context-menu)에서 **실제 실행 계획 포함**을 선택할 수도 있습니다.
+Ctrl + M을 선택하거나 [상황에 맞는 메뉴](#include-actual-execution-plan-using-the-context-menu)에서 **실제 실행 계획 포함** 을 선택할 수도 있습니다.
 
 ### <a name="include-live-query-statistics-using-the-editor-toolbar"></a>편집기 도구 모음을 사용하여 활성 쿼리 통계 포함
 
 제어권이 한 쿼리 계획 연산자에서 다른 연산자로 흘러갈 때 쿼리 실행 프로세스를 실시간으로 파악할 수 있습니다.
 
-[상황에 맞는 메뉴](#include-live-query-statistics-using-the-context-menu)에서 **활성 쿼리 통계 포함**을 선택할 수도 있습니다.
+[상황에 맞는 메뉴](#include-live-query-statistics-using-the-context-menu)에서 **활성 쿼리 통계 포함** 을 선택할 수도 있습니다.
 
 ### <a name="include-client-statistics-using-the-editor-toolbar"></a>편집기 도구 모음을 사용하여 클라이언트 통계 포함
 
 쿼리 통계와 네트워크 패킷 통계 및 쿼리 경과 시간이 표시된 **클라이언트 통계** 창을 포함합니다.
 
-Shift + Alt + S를 선택하거나 [상황에 맞는 메뉴](#include-client-statistics-using-the-context-menu)에서 **활성 쿼리 통계 포함**을 선택할 수 있습니다.
+Shift + Alt + S를 선택하거나 [상황에 맞는 메뉴](#include-client-statistics-using-the-context-menu)에서 **활성 쿼리 통계 포함** 을 선택할 수 있습니다.
 
 ### <a name="results-to-text-using-the-editor-toolbar"></a>편집기 도구 모음을 사용하여 텍스트로 결과 표시
 
@@ -158,7 +158,7 @@ Ctrl + D를 선택하거나 [상황에 맞는 메뉴](#results-using-the-context
 
 ### <a name="results-to-file-using-the-editor-toolbar"></a>편집기 도구 모음을 사용하여 파일로 결과 저장
 
-쿼리를 실행하면 **결과 저장** 대화 상자가 열립니다. **저장 위치**에서 파일을 저장할 폴더를 선택합니다. **파일 이름**에 파일 이름을 입력하고 **저장**을 선택하여 쿼리 결과를 확장명이 .rpt인 **보고서** 파일로 저장합니다. 고급 옵션을 보려면 **저장** 단추의 아래쪽 화살표를 선택한 다음 **인코딩하여 저장**을 선택합니다.
+쿼리를 실행하면 **결과 저장** 대화 상자가 열립니다. **저장 위치** 에서 파일을 저장할 폴더를 선택합니다. **파일 이름** 에 파일 이름을 입력하고 **저장** 을 선택하여 쿼리 결과를 확장명이 .rpt인 **보고서** 파일로 저장합니다. 고급 옵션을 보려면 **저장** 단추의 아래쪽 화살표를 선택한 다음 **인코딩하여 저장** 을 선택합니다.
 
 Ctrl + Shift + F를 선택하거나 [상황에 맞는 메뉴](#results-using-the-context-menu)에서 결과를 텍스트로 반환할 수도 있습니다.
 
@@ -188,7 +188,7 @@ Ctrl+K, Ctrl+U를 차례로 선택하여 줄의 주석 처리를 제거할 수�
 
 ## <a name="context-menu"></a>상황에 맞는 메뉴
 
-쿼리 편집기의 아무 곳이나 *마우스 오른쪽 단추로 클릭*하여 상황에 맞는 메뉴에 액세스할 수 있습니다. 상황에 맞는 메뉴의 옵션은 SQL 편집기 도구 모음과 비슷합니다. 상황에 맞는 메뉴를 사용하여 **연결** 및 **실행**과 같은 옵션을 볼 수 있지만 **코드 조각 삽입** 및 **코드 감싸기**와 같은 다른 옵션도 나열됩니다.
+쿼리 편집기의 아무 곳이나 *마우스 오른쪽 단추로 클릭* 하여 상황에 맞는 메뉴에 액세스할 수 있습니다. 상황에 맞는 메뉴의 옵션은 SQL 편집기 도구 모음과 비슷합니다. 상황에 맞는 메뉴를 사용하여 **연결** 및 **실행** 과 같은 옵션을 볼 수 있지만 **코드 조각 삽입** 및 **코드 감싸기** 와 같은 다른 옵션도 나열됩니다.
 
 ![옵션](media/database-engine-query-editor-sql-server-management-studio/context-menu.png)
 
@@ -264,7 +264,7 @@ Microsoft DTA(데이터베이스 엔진 튜닝 관리자)는 데이터베이스�
 
 - **표 형태로 결과 표시** - **결과** 창에 쿼리 결과를 하나 이상의 표로 표시합니다.
 
-- **파일로 결과 저장** - 쿼리를 실행하면 **결과 저장** 대화 상자가 열립니다. **저장 위치**에서 파일을 저장할 폴더를 선택합니다. **파일 이름**에 파일 이름을 입력하고 **저장**을 선택하여 쿼리 결과를 **보고서** 파일(확장명 .rpt)로 저장합니다. 고급 옵션을 보려면 **저장** 단추의 아래쪽 화살표를 선택한 다음 **인코딩하여 저장**을 선택합니다.
+- **파일로 결과 저장** - 쿼리를 실행하면 **결과 저장** 대화 상자가 열립니다. **저장 위치** 에서 파일을 저장할 폴더를 선택합니다. **파일 이름** 에 파일 이름을 입력하고 **저장** 을 선택하여 쿼리 결과를 **보고서** 파일(확장명 .rpt)로 저장합니다. 고급 옵션을 보려면 **저장** 단추의 아래쪽 화살표를 선택한 다음 **인코딩하여 저장** 을 선택합니다.
 
 ### <a name="properties-window-using-the-context-menu"></a>상황에 맞는 메뉴를 사용하는 속성 창
 

@@ -1,8 +1,6 @@
 ---
-description: 쿼리 및 뷰 디자이너 열기(Visual Database Tools)
 title: 쿼리 및 뷰 디자이너 열기
-ms.custom: seo-lt-2019
-ms.date: 01/19/2017
+description: 쿼리 및 뷰 디자이너 열기(Visual Database Tools)
 ms.prod: sql
 ms.prod_service: sql-tools
 ms.technology: ssms
@@ -16,15 +14,19 @@ ms.assetid: b473f258-d53c-41c0-9ad9-528a2ff141f4
 author: markingmyname
 ms.author: maghan
 ms.reviewer: ''
-ms.openlocfilehash: 56d9aec3b6768a45ddad6fec107fded037656eb1
-ms.sourcegitcommit: e700497f962e4c2274df16d9e651059b42ff1a10
+ms.custom: seo-lt-2019
+ms.date: 01/19/2017
+ms.openlocfilehash: ea9bd06205846401d4e6bd65690f0af4e34bdf63
+ms.sourcegitcommit: 894c1a23e922dc29b82c1d2c34c7b0ff28b38654
 ms.translationtype: HT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 08/17/2020
-ms.locfileid: "88369289"
+ms.lasthandoff: 10/30/2020
+ms.locfileid: "93067357"
 ---
 # <a name="open-the-query-and-view-designer-visual-database-tools"></a>쿼리 및 뷰 디자이너 열기(Visual Database Tools)
+
 [!INCLUDE[appliesto-ss-asdb-asdw-pdw-md](../../includes/applies-to-version/sql-asdb.md)]
+
 쿼리 및 뷰 디자이너는 뷰의 정의를 열거나, 쿼리 또는 뷰의 결과를 표시하거나, 쿼리를 만들거나 열 때 나타납니다. 이 디자이너는 네 개의 개별 창으로 구성되어 있습니다.  
   
 -   다이어그램 창은 데이터 연결에서 선택한 테이블 또는 테이블 반환 개체를 그래픽으로 표시합니다. 또한 이들 사이의 조인 관계도 보여 줍니다.  
@@ -41,9 +43,9 @@ ms.locfileid: "88369289"
   
 ### <a name="to-open-the-query-and-view-designer-for-a-view"></a>뷰의 쿼리 및 뷰 디자이너를 열려면  
   
-1.  개체 탐색기에서 열려는 뷰를 마우스 오른쪽 단추로 클릭한 다음 **디자인** 또는 **뷰 열기**를 클릭합니다.  
+1.  개체 탐색기에서 열려는 뷰를 마우스 오른쪽 단추로 클릭한 다음 **디자인** 또는 **뷰 열기** 를 클릭합니다.  
   
-    **디자인**을 선택한 경우 **옵션** 대화 상자에서 선택한 옵션에 따라 쿼리 및 뷰 디자이너 창이 열립니다. **뷰 열기**를 선택한 경우에는 기본적으로 결과 창만 열립니다.  
+    **디자인** 을 선택한 경우 **옵션** 대화 상자에서 선택한 옵션에 따라 쿼리 및 뷰 디자이너 창이 열립니다. **뷰 열기** 를 선택한 경우에는 기본적으로 결과 창만 열립니다.  
   
 ### <a name="to-open-the-query-and-view-designer-for-an-existing-query"></a>기존 쿼리에 대해 쿼리 및 뷰 디자이너를 열려면  
   
@@ -51,7 +53,7 @@ ms.locfileid: "88369289"
   
 2.  열려는 쿼리를 두 번 클릭합니다.  
   
-3.  해당 쿼리 문을 강조 표시하고 강조 표시된 영역을 마우스 오른쪽 단추로 클릭한 다음 **편집기에서 쿼리 디자인**을 클릭합니다.  
+3.  해당 쿼리 문을 강조 표시하고 강조 표시된 영역을 마우스 오른쪽 단추로 클릭한 다음 **편집기에서 쿼리 디자인** 을 클릭합니다.  
   
 ## <a name="see-also"></a>참고 항목  
 [쿼리 및 뷰 디자인 방법 도움말 항목&#40;Visual Database Tools&#41;](../../ssms/visual-db-tools/design-queries-and-views-how-to-topics-visual-database-tools.md)  
