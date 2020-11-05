@@ -18,12 +18,12 @@ helpviewer_keywords:
 ms.assetid: c12ef6df-58c6-4391-bbbf-683ea874bd81
 author: markingmyname
 ms.author: maghan
-ms.openlocfilehash: b1a185ef8fe998a614de8ca56451966894a461f4
-ms.sourcegitcommit: dd36d1cbe32cd5a65c6638e8f252b0bd8145e165
+ms.openlocfilehash: 9ea62e350628099685b372362a3d6d075a90367b
+ms.sourcegitcommit: b3a711a673baebb2ff10d7142b209982b46973ae
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 09/08/2020
-ms.locfileid: "89549954"
+ms.lasthandoff: 11/05/2020
+ms.locfileid: "93364845"
 ---
 # <a name="sp_columns_ex-transact-sql"></a>sp_columns_ex(Transact-SQL)
 [!INCLUDE [SQL Server](../../includes/applies-to-version/sqlserver.md)]
@@ -45,17 +45,17 @@ sp_columns_ex [ @table_server = ] 'table_server'
 ```  
   
 ## <a name="arguments"></a>인수  
-`[ @table_server = ] 'table_server'` 열 정보를 반환할 연결 된 서버의 이름입니다. *table_server* 는 **sysname**이며 기본값은 없습니다.  
+`[ @table_server = ] 'table_server'` 열 정보를 반환할 연결 된 서버의 이름입니다. *table_server* 는 **sysname** 이며 기본값은 없습니다.  
   
-`[ @table_name = ] 'table_name'` 열 정보를 반환할 테이블의 이름입니다. *table_name* 는 **sysname**이며 기본값은 NULL입니다.  
+`[ @table_name = ] 'table_name'` 열 정보를 반환할 테이블의 이름입니다. *table_name* 는 **sysname** 이며 기본값은 NULL입니다.  
   
-`[ @table_schema = ] 'table_schema'` 열 정보를 반환할 테이블의 스키마 이름입니다. *table_schema* 는 **sysname**이며 기본값은 NULL입니다.  
+`[ @table_schema = ] 'table_schema'` 열 정보를 반환할 테이블의 스키마 이름입니다. *table_schema* 는 **sysname** 이며 기본값은 NULL입니다.  
   
-`[ @table_catalog = ] 'table_catalog'` 열 정보를 반환할 테이블의 카탈로그 이름입니다. *table_catalog* 는 **sysname**이며 기본값은 NULL입니다.  
+`[ @table_catalog = ] 'table_catalog'` 열 정보를 반환할 테이블의 카탈로그 이름입니다. *table_catalog* 는 **sysname** 이며 기본값은 NULL입니다.  
   
-`[ @column_name = ] 'column'` 정보를 제공 하는 데이터베이스 열의 이름입니다. *열* 은 **sysname**이며 기본값은 NULL입니다.  
+`[ @column_name = ] 'column'` 정보를 제공 하는 데이터베이스 열의 이름입니다. *열* 은 **sysname** 이며 기본값은 NULL입니다.  
   
-`[ @ODBCVer = ] 'ODBCVer'` 사용 중인 ODBC의 버전입니다. *ODBCVer* 는 **int**이며 기본값은 2입니다. 이 값은 ODBC 버전 2를 나타내며 유효한 값은 2 또는 3입니다. 버전 2와 버전 3의 동작 차이에 대한 자세한 내용은 ODBC SQLColumns 사양을 참조하십시오.  
+`[ @ODBCVer = ] 'ODBCVer'` 사용 중인 ODBC의 버전입니다. *ODBCVer* 는 **int** 이며 기본값은 2입니다. 이 값은 ODBC 버전 2를 나타내며 유효한 값은 2 또는 3입니다. 버전 2와 버전 3의 동작 차이에 대한 자세한 내용은 ODBC SQLColumns 사양을 참조하십시오.  
   
 ## <a name="return-code-values"></a>반환 코드 값  
  None  
@@ -64,7 +64,7 @@ sp_columns_ex [ @table_server = ] 'table_server'
   
 |열 이름|데이터 형식|Description|  
 |-----------------|---------------|-----------------|  
-|**TABLE_CAT**|**sysname**|테이블 또는 뷰 한정자 이름입니다. 다양 한 DBMS 제품에서 테이블에 대해 세 부분으로 구성 되는 이름 (_한정자_)을 지원**합니다.** _소유자_**.** _이름_). [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]에서 이 열은 데이터베이스 이름을 나타냅니다. 일부 제품에서는 테이블 데이터베이스 환경의 서버 이름을 나타냅니다. 이 필드는 NULL이 될 수 있습니다.|  
+|**TABLE_CAT**|**sysname**|테이블 또는 뷰 한정자 이름입니다. 다양 한 DBMS 제품에서 테이블에 대해 세 부분으로 구성 되는 이름 ( _한정자_ )을 지원 **합니다.** _소유자_**.** _이름_ ). [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]에서 이 열은 데이터베이스 이름을 나타냅니다. 일부 제품에서는 테이블 데이터베이스 환경의 서버 이름을 나타냅니다. 이 필드는 NULL이 될 수 있습니다.|  
 |**TABLE_SCHEM**|**sysname**|테이블 또는 뷰 소유자 이름입니다. [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]에서 이 열은 테이블을 만든 데이터베이스 사용자의 이름을 나타냅니다. 이 필드는 항상 값을 반환합니다.|  
 |**TABLE_NAME**|**sysname**|테이블 또는 뷰 이름입니다. 이 필드는 항상 값을 반환합니다.|  
 |**COLUMN_NAME**|**sysname**|반환 된 **TABLE_NAME** 의 각 열에 대 한 열 이름입니다. 이 필드는 항상 값을 반환합니다.|  
@@ -87,17 +87,16 @@ sp_columns_ex [ @table_server = ] 'table_server'
  자세한 내용은 Microsoft ODBC 설명서를 참조하십시오.  
   
 ## <a name="remarks"></a>설명  
- **sp_columns_ex** 는 *table_server*에 해당 하는 OLE DB 공급자의 **IDBSchemaRowset** 인터페이스의 columns 행 집합을 쿼리하여 실행 됩니다. *Table_name*, *table_schema*, *table_catalog*및 *열* 매개 변수는 반환 되는 행을 제한 하기 위해이 인터페이스에 전달 됩니다.  
+- **sp_columns_ex** 는 *table_server* 에 해당 하는 OLE DB 공급자의 **IDBSchemaRowset** 인터페이스의 columns 행 집합을 쿼리하여 실행 됩니다. *Table_name* , *table_schema* , *table_catalog* 및 *열* 매개 변수는 반환 되는 행을 제한 하기 위해이 인터페이스에 전달 됩니다.  
   
- 지정한 연결 된 서버의 OLE DB 공급자가 **IDBSchemaRowset** 인터페이스의 columns 행 집합을 지원 하지 않는 경우 빈 결과 집합을 반환 합니다. **sp_columns_ex**  
+- 지정한 연결 된 서버의 OLE DB 공급자가 **IDBSchemaRowset** 인터페이스의 columns 행 집합을 지원 하지 않는 경우 빈 결과 집합을 반환 합니다. **sp_columns_ex**  
+  
+- **sp_columns_ex** 구분 식별자에 대 한 요구 사항을 따릅니다. 자세한 내용은 [Database Identifiers](../../relational-databases/databases/database-identifiers.md)을 참조하세요.  
   
 ## <a name="permissions"></a>사용 권한  
  스키마에 대한 SELECT 권한이 필요합니다.  
   
-## <a name="remarks"></a>설명  
- **sp_columns_ex** 구분 식별자에 대 한 요구 사항을 따릅니다. 자세한 내용은 [Database Identifiers](../../relational-databases/databases/database-identifiers.md)을 참조하세요.  
-  
-## <a name="examples"></a>예제  
+## <a name="examples"></a>예  
  다음 예에서는 연결된 서버 `JobTitle`의 [!INCLUDE[ssSampleDBobject](../../includes/sssampledbobject-md.md)] 데이터베이스에 있는 `HumanResources.Employee` 테이블의 `Seattle1` 열에 대한 데이터 형식을 반환합니다.  
   
 ```  

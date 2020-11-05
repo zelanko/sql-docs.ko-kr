@@ -14,12 +14,12 @@ ms.assetid: 0e72b48a-fc5a-4656-8cf5-39f57d8c1565
 author: markingmyname
 ms.author: maghan
 monikerRange: '>=aps-pdw-2016||=azuresqldb-current||=azure-sqldw-latest||>=sql-server-2016||=sqlallproducts-allversions||>=sql-server-linux-2017||=azuresqldb-mi-current'
-ms.openlocfilehash: 2622fc28743da2e2eed4224e7a2f0eb21c09e665
-ms.sourcegitcommit: e700497f962e4c2274df16d9e651059b42ff1a10
+ms.openlocfilehash: d1cf4610efc2ea021b8cd9260f463af079d28dc9
+ms.sourcegitcommit: b3a711a673baebb2ff10d7142b209982b46973ae
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 08/17/2020
-ms.locfileid: "88423783"
+ms.lasthandoff: 11/05/2020
+ms.locfileid: "93364857"
 ---
 # <a name="set-cursor-options-odbc"></a>커서 옵션 설정(ODBC)
 [!INCLUDE [SQL Server](../../../includes/applies-to-version/sql-asdb-asdbmi-asa-pdw.md)]
@@ -38,7 +38,10 @@ ms.locfileid: "88423783"
   
  SQL_ATTR_CURSOR_TYPE 및 SQL_ATTR_CONCURRENCY를 설정하거나 SQL_ATTR_CURSOR_SENSITIVITY 및 SQL_ATTR_CURSOR_SCROLLABLE을 설정하여 사용되는 커서 유형을 제어할 수 있습니다. 커서 동작을 지정할 때 이 두 방법을 함께 사용하면 안 됩니다.  
   
-## <a name="example"></a>예제  
+## <a name="examples"></a>예  
+
+### <a name="a-set-a-dynamic-cursor"></a>A. 동적 커서 설정
+
  다음 예에서는 문 핸들을 할당하고, 행 버전 관리 낙관적 동시성을 사용하여 동적 커서 유형을 설정한 다음 SELECT를 실행합니다.  
   
 ```  
@@ -48,7 +51,7 @@ retcode = SQLSetStmtAttr(hstmt1, SQL_ATTR_CONCURRENCY, SQLPOINTER)SQL_CONCUR_ROW
 retcode = SQLExecDirect(hstmt1, SELECT au_lname FROM authors", SQL_NTS);  
 ```  
   
-## <a name="example"></a>예제  
+### <a name="b-set-a-scrollable-sensitive-cursor"></a>B. 스크롤 가능 하 고 중요 한 커서 설정
  다음 예에서는 문 핸들을 할당하고, 스크롤 가능한 sensitive 커서를 설정한 다음 SELECT를 실행합니다.  
   
 ```  

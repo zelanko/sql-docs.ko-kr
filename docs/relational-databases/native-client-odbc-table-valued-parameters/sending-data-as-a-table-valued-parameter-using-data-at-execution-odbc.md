@@ -14,12 +14,12 @@ ms.assetid: 361e6442-34de-4cac-bdbd-e05f04a21ce4
 author: markingmyname
 ms.author: maghan
 monikerRange: '>=aps-pdw-2016||=azuresqldb-current||=azure-sqldw-latest||>=sql-server-2016||=sqlallproducts-allversions||>=sql-server-linux-2017||=azuresqldb-mi-current'
-ms.openlocfilehash: 48823426052fec8f16989facc77a676ed8d3e2c6
-ms.sourcegitcommit: 4d370399f6f142e25075b3714e5c2ce056b1bfd0
+ms.openlocfilehash: 6447c5088e0fd338618a4601abf47c8b3344d796
+ms.sourcegitcommit: b3a711a673baebb2ff10d7142b209982b46973ae
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 10/09/2020
-ms.locfileid: "91868215"
+ms.lasthandoff: 11/05/2020
+ms.locfileid: "93364757"
 ---
 # <a name="sending-data-as-a-table-valued-parameter-using-data-at-execution-odbc"></a>실행 시 데이터를 사용하여 테이블 반환 매개 변수로 데이터 전송(ODBC)
 [!INCLUDE[SQL Server Azure SQL Database Synapse Analytics PDW ](../../includes/applies-to-version/sql-asdb-asdbmi-asa-pdw.md)]
@@ -185,9 +185,9 @@ from @Items
     }  
     ```  
   
-## <a name="example"></a>예제  
+## <a name="examples"></a>예  
   
-### <a name="description"></a>설명  
+### <a name="a-use-row-streaming-one-row-per-call"></a>A. 행 스트리밍을 사용 하 여 호출 당 한 행씩
  이 예제에서는 BCP.exe를 사용 하 여 데이터베이스에 데이터를 로드 하는 방법과 유사한 방법으로, ODBC TVP를 사용 하 여 SQLPutData에 대 한 호출 당 행 스트리밍을 사용할 수 있음을 보여 줍니다.  
   
  예제를 빌드하기 전에 연결 문자열의 서버 이름을 변경합니다.  
@@ -215,7 +215,7 @@ create procedure MCLOGInsert (@TableVariable MCLOGType READONLY)
 go  
 ```  
   
-### <a name="code"></a>코드  
+#### <a name="code"></a>코드  
   
 ```cpp
 #define UNICODE  
@@ -373,9 +373,7 @@ EXIT:
 }  
 ```  
   
-## <a name="example"></a>예제  
-  
-### <a name="description"></a>설명  
+### <a name="b-use-row-streaming-multiple-rows-per-call"></a>B. 행 스트리밍 사용, 호출 당 여러 행  
  이 예제에서는 BCP.exe를 사용 하 여 데이터베이스에 데이터를 로드 하는 방법과 유사한 방법으로 ODBC TVP를 사용 하 여 SQLPutData에 대 한 호출 당 여러 행을 포함 하는 행 스트리밍을 사용할 수 있음을 보여 줍니다.  
   
  예제를 빌드하기 전에 연결 문자열의 서버 이름을 변경합니다.  
@@ -403,7 +401,7 @@ create procedure MCLOGInsert (@TableVariable MCLOGType READONLY)
 go  
 ```  
   
-### <a name="code"></a>코드  
+#### <a name="code"></a>코드  
   
 ```cpp
 #define UNICODE  
