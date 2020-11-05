@@ -1869,7 +1869,7 @@
           items:
             - name: 생성
               href: relational-databases/tables/create-edge-constraints.md
-            - name: DELETE
+            - name: 삭제
               href: relational-databases/tables/delete-edge-constraint.md
             - name: 수정
               href: relational-databases/tables/modify-edge-constraint.md
@@ -8811,6 +8811,8 @@
               href: ssms/configure-wmi-to-show-server-status-in-sql-server-tools.md
             - name: 로그인 감사 구성
               href: ssms/configure-login-auditing-sql-server-management-studio.md
+            - name: 찾기 및 바꾸기 창에서 복사 사용
+              href: ssms/troubleshoot/enable-copying-find-replace-window.md
             - name: 문제 해결
               items:
                 - name: 전체 메모리 덤프 가져오기
@@ -10172,7 +10174,7 @@
   items:
     - name: Azure SQL Database >
       href: /azure/sql-database/
-    - name: Azure SQL Data Warehouse >
+    - name: Azure Synapse Analytics >
       href: /azure/sql-data-warehouse/sql-data-warehouse-overview-what-is
     - name: Azure VM의 SQL Server >
       href: /azure/virtual-machines/windows/sql/virtual-machines-windows-sql-server-iaas-overview
@@ -11943,7 +11945,7 @@
               href: relational-databases/system-catalog-views/sys-spatial-indexes-transact-sql.md
             - name: sys.spatial_reference_systems
               href: relational-databases/system-catalog-views/sys-spatial-reference-systems-transact-sql.md
-        - name: SQL Data Warehouse
+        - name: Azure Synapse Analytics
           href: relational-databases/system-catalog-views/sql-data-warehouse-and-parallel-data-warehouse-catalog-views.md
           items:
             - name: sys.pdw_column_distribution_properties
@@ -12550,7 +12552,7 @@
           items:
             - name: sys.dm_db_objects_disabled_on_compatibility_level_change
               href: relational-databases/system-dynamic-management-views/spatial-data-sys-dm-db-objects-disabled-on-compatibility-level-change.md
-        - name: SQL Data Warehouse 및 병렬 데이터 웨어하우스
+        - name: Azure Synapse Analytics 및 병렬 데이터 웨어하우스
           href: relational-databases/system-dynamic-management-views/sql-and-parallel-data-warehouse-dynamic-management-views.md
           items:
             - name: sys.dm_pdw_component_health_active_alerts
@@ -14231,7 +14233,7 @@
               href: relational-databases/system-stored-procedures/snapshot-backup-sp-delete-backup-file-snapshot.md
             - name: sp_delete_backup
               href: relational-databases/system-stored-procedures/snapshot-backup-sp-delete-backup.md
-        - name: SQL Data Warehouse
+        - name: Azure Synapse Analytics
           href: relational-databases/system-stored-procedures/sql-data-warehouse-stored-procedures.md
           items:
             - name: sp_datatype_info_90
@@ -16304,7 +16306,7 @@
               items:
                 - name: AT TIME ZONE
                   href: t-sql/queries/at-time-zone-transact-sql.md
-                - name: '별칭 지정(Azure SQL Data Warehouse, 병렬 데이터 웨어하우스)'
+                - name: '별칭 지정(Azure Synapse Analytics, 병렬 데이터 웨어하우스)'
                   href: t-sql/queries/aliasing-azure-sql-data-warehouse-parallel-data-warehouse.md
                 - name: EXPLAIN
                   href: t-sql/queries/explain-transact-sql.md
@@ -16318,7 +16320,7 @@
                   href: t-sql/queries/readtext-transact-sql.md
                 - name: 검색 조건
                   href: t-sql/queries/search-condition-transact-sql.md
-                - name: '하위 쿼리(Azure SQL Data Warehouse, 병렬 데이터 웨어하우스)'
+                - name: '하위 쿼리(Azure Synapse Analytics, 병렬 데이터 웨어하우스)'
                   href: t-sql/queries/subqueries-azure-sql-data-warehouse-parallel-data-warehouse.md
                 - name: 테이블 값 생성자
                   href: t-sql/queries/table-value-constructor-transact-sql.md
@@ -16638,7 +16640,7 @@
                   href: t-sql/statements/create-fulltext-stoplist-transact-sql.md
                 - name: FUNCTION
                   href: t-sql/statements/create-function-transact-sql.md
-                - name: FUNCTION(SQL Data Warehouse)
+                - name: FUNCTION(Azure Synapse Analytics)
                   href: t-sql/statements/create-function-sql-data-warehouse.md
                 - name: INDEX
                   href: t-sql/statements/create-index-transact-sql.md
@@ -16698,11 +16700,11 @@
                   href: t-sql/statements/create-synonym-transact-sql.md
                 - name: TABLE
                   href: t-sql/statements/create-table-transact-sql.md
-                - name: TABLE(Azure SQL Data Warehouse)
+                - name: TABLE(Azure Synapse Analytics)
                   href: t-sql/statements/create-table-azure-sql-data-warehouse.md
                 - name: TABLE(SQL Graph)
                   href: t-sql/statements/create-table-sql-graph.md
-                - name: TABLE AS SELECT(Azure SQL Data Warehouse)
+                - name: TABLE AS SELECT(Azure Synapse Analytics)
                   href: t-sql/statements/create-table-as-select-azure-sql-data-warehouse.md
                 - name: TABLE IDENTITY(속성)
                   href: t-sql/statements/create-table-transact-sql-identity-property.md
@@ -16962,7 +16964,7 @@
                   href: t-sql/statements/open-master-key-transact-sql.md
                 - name: OPEN SYMMETRIC KEY
                   href: t-sql/statements/open-symmetric-key-transact-sql.md
-                - name: '사용 권한: GRANT, DENY, REVOKE(Azure SQL Data Warehouse, 병렬 Data Warehouse)'
+                - name: '사용 권한: GRANT, DENY, REVOKE(Azure Synapse Analytics, 병렬 데이터 웨어하우스)'
                   href: t-sql/statements/permissions-grant-deny-revoke-azure-sql-data-warehouse-parallel-data-warehouse.md
                 - name: REVERT
                   href: t-sql/statements/revert-transact-sql.md
