@@ -14,12 +14,12 @@ ms.assetid: 6f7c6ac5-e6d3-4dca-831e-b28442ba535b
 author: stevestein
 ms.author: sstein
 monikerRange: '>=aps-pdw-2016||=azuresqldb-current||=azure-sqldw-latest||>=sql-server-2016||=sqlallproducts-allversions||>=sql-server-linux-2017||=azuresqldb-mi-current'
-ms.openlocfilehash: de52eb6abbcbcbb23638c07663d78a80ccffd22f
-ms.sourcegitcommit: e700497f962e4c2274df16d9e651059b42ff1a10
+ms.openlocfilehash: 9d1826e8c9291dbfb92b7cccbd48ac0bf34fe690
+ms.sourcegitcommit: 442fbe1655d629ecef273b02fae1beb2455a762e
 ms.translationtype: HT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 08/17/2020
-ms.locfileid: "88463843"
+ms.lasthandoff: 11/03/2020
+ms.locfileid: "93235506"
 ---
 # <a name="create-tables-database-engine"></a>테이블 만들기(데이터베이스 엔진)
 [!INCLUDE [sqlserver2016-asdb-asdbmi-asa-pdw](../../includes/applies-to-version/sqlserver2016-asdb-asdbmi-asa-pdw.md)]
@@ -38,47 +38,47 @@ ms.locfileid: "88463843"
  
 ## <a name="using-table-designer"></a>테이블 디자이너 사용  
   
-1.  SSMS의 **개체 탐색기**에서 수정할 데이터베이스를 포함하는 [!INCLUDE[ssDE](../../includes/ssde-md.md)] 인스턴스에 연결합니다.  
+1.  SSMS의 **개체 탐색기** 에서 수정할 데이터베이스를 포함하는 [!INCLUDE[ssDE](../../includes/ssde-md.md)] 인스턴스에 연결합니다.  
   
-2.  **개체 탐색기**에서 **데이터베이스** 노드를 확장한 후 새 테이블을 포함할 데이터베이스를 확장합니다.  
+2.  **개체 탐색기** 에서 **데이터베이스** 노드를 확장한 후 새 테이블을 포함할 데이터베이스를 확장합니다.  
   
-3.  개체 탐색기에서 데이터베이스의 **테이블** 노드를 마우스 오른쪽 단추로 클릭한 다음 **새 테이블**을 클릭합니다.  
+3.  개체 탐색기에서 데이터베이스의 **테이블** 노드를 마우스 오른쪽 단추로 클릭한 다음 **새 테이블** 을 클릭합니다.  
   
 4.  다음 그림과 같이 각 열에 대해 열 이름을 입력하고, 데이터 형식을 선택하고, null 허용 여부를 선택합니다.  
   
-     ![AddColumnsinTableDesigner](../../relational-databases/tables/media/addcolumnsintabledesigner.gif "AddColumnsinTableDesigner")  
+     ![ModifiedDate 열에 대해 선택된 Null 허용 옵션을 보여 주는 스크린샷](../../relational-databases/tables/media/addcolumnsintabledesigner.gif "AddColumnsinTableDesigner")  
   
 5.  ID 또는 계산 열 값 등 열의 더 많은 속성을 지정하려면 열을 클릭하고 열 속성 탭에서 적절한 속성을 선택합니다. 열 속성에 대한 자세한 내용은 [테이블 열 속성&#40;SQL Server Management Studio&#41;](../../relational-databases/tables/table-column-properties-sql-server-management-studio.md)을 참조하세요.  
   
-6.  열을 기본 키로 지정하려면 열을 마우스 오른쪽 단추로 클릭하고 **기본 키 설정**을 선택합니다. 자세한 내용은 [Create Primary Keys](../../relational-databases/tables/create-primary-keys.md)을 참조하세요.  
+6.  열을 기본 키로 지정하려면 열을 마우스 오른쪽 단추로 클릭하고 **기본 키 설정** 을 선택합니다. 자세한 내용은 [Create Primary Keys](../../relational-databases/tables/create-primary-keys.md)을 참조하세요.  
   
 7.  외래 키 관계를 만들려면 제약 조건 또는 인덱스를 확인하고 테이블 디자이너 창에서 마우스 오른쪽 단추로 클릭하고 다음 그림과 같이 목록에서 개체를 선택합니다.  
   
-     ![AddTableObjects](../../relational-databases/tables/media/addtableobjects.gif "AddTableObjects")  
+     ![관계 옵션을 보여 주는 스크린샷](../../relational-databases/tables/media/addtableobjects.gif "AddTableObjects")  
   
      이러한 개체에 대한 자세한 내용은 [Create Foreign Key Relationships](../../relational-databases/tables/create-foreign-key-relationships.md), [Create Check Constraints](../../relational-databases/tables/create-check-constraints.md) 및 [Indexes](../../relational-databases/indexes/indexes.md)를 참조하세요.  
   
 8.  기본적으로 테이블은 **dbo** 스키마에 포함되어 있습니다. 테이블에 다른 스키마를 지정하려면 다음 그림과 같이 테이블 디자이너 창에서 마우스 오른쪽 단추로 클릭하고 **속성** 을 선택합니다. **스키마** 드롭다운 목록에서 적절한 스키마를 선택합니다.  
   
-     ![Specifyatableschema](../../relational-databases/tables/media/specifyatableschema.gif "Specifyatableschema")  
+     ![스키마 옵션을 보여 주는 속성 창의 스크린샷](../../relational-databases/tables/media/specifyatableschema.gif "Specifyatableschema")  
   
      스키마에 대한 자세한 내용은 [Create a Database Schema](../../relational-databases/security/authentication-access/create-a-database-schema.md)를 참조하세요.  
   
-9. **파일** 메뉴에서 ‘테이블 이름’ **저장**을 선택합니다.  
+9. **파일** 메뉴에서 ‘테이블 이름’ **저장** 을 선택합니다.  
   
-10. **이름 선택** 대화 상자에서 테이블의 이름을 입력하고 **확인**을 클릭합니다.  
+10. **이름 선택** 대화 상자에서 테이블의 이름을 입력하고 **확인** 을 클릭합니다.  
   
-11. 새 테이블을 보려면 **개체 탐색기**에서 **테이블** 노드를 확장하고 **F5** 를 눌러 개체 목록을 새로 고칩니다. 테이블 목록에 새 테이블이 표시됩니다.  
+11. 새 테이블을 보려면 **개체 탐색기** 에서 **테이블** 노드를 확장하고 **F5** 를 눌러 개체 목록을 새로 고칩니다. 테이블 목록에 새 테이블이 표시됩니다.  
   
 ##  <a name="using-transact-sql"></a><a name="TsqlProcedure"></a> Transact-SQL 사용  
   
 ## <a name="using-query-editor"></a>쿼리 편집기 사용  
   
-1.  **개체 탐색기**에서 [!INCLUDE[ssDE](../../includes/ssde-md.md)]인스턴스에 연결합니다.  
+1.  **개체 탐색기** 에서 [!INCLUDE[ssDE](../../includes/ssde-md.md)]인스턴스에 연결합니다.  
   
-2.  표준 도구 모음에서 **새 쿼리**를 클릭합니다.  
+2.  표준 도구 모음에서 **새 쿼리** 를 클릭합니다.  
   
-3.  다음 예를 복사하여 쿼리 창에 붙여 넣고 **실행**을 클릭합니다.  
+3.  다음 예를 복사하여 쿼리 창에 붙여 넣고 **실행** 을 클릭합니다.  
   
     ```  
     CREATE TABLE dbo.PurchaseOrderDetail  

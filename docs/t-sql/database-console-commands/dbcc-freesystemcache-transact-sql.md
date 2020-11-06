@@ -25,12 +25,12 @@ helpviewer_keywords:
 ms.assetid: 4b5c460b-e4ad-404a-b4ca-d65aba38ebbb
 author: pmasl
 ms.author: umajay
-ms.openlocfilehash: f99d6e50aed43273dbcaa659f95a8bb8a1fe73d3
-ms.sourcegitcommit: 544706f6725ec6cdca59da3a0ead12b99accb2cc
+ms.openlocfilehash: 0069e1fc2a6991df71291fd377aaa76e10f23256
+ms.sourcegitcommit: b09f069c6bef0655b47e9953a4385f1b52bada2b
 ms.translationtype: HT
 ms.contentlocale: ko-KR
 ms.lasthandoff: 10/27/2020
-ms.locfileid: "92638986"
+ms.locfileid: "92734633"
 ---
 # <a name="dbcc-freesystemcache-transact-sql"></a>DBCC FREESYSTEMCACHE(Transact-SQL)
 [!INCLUDE [SQL Server SQL Database](../../includes/applies-to-version/sql-asdb.md)]
@@ -53,7 +53,13 @@ DBCC FREESYSTEMCACHE
 ## <a name="arguments"></a>인수
 ( 'ALL' [, _pool\_name_ ] )  
 ALL은 지원되는 모든 캐시를 지정합니다.  
-_pool\_name_ 은 Resource Governor 풀 캐시를 지정합니다. 이 풀과 연결된 항목만 해제됩니다.  
+_pool\_name_ 은 Resource Governor 풀 캐시를 지정합니다. 이 풀과 연결된 항목만 해제됩니다. 사용 가능한 풀 이름을 나열하려면 다음을 실행합니다.
+
+```sql
+SELECT name FROM sys.dm_os_memory_clerks
+```
+
+이 명령을 사용하여 대부분의(전부는 아님) 캐시를 개별적으로 해제할 수 있습니다.
   
 MARK_IN_USE_FOR_REMOVAL  
 현재 사용 중인 항목을 더 이상 사용하지 않게 되면 각 캐시에서 비동기적으로 해제합니다. DBCC FREESYSTEMCACHE WITH MARK_IN_USE_FOR_REMOVAL이 실행된 후 캐시에 만들어진 새 항목은 영향을 받지 않습니다.  
@@ -62,7 +68,7 @@ NO_INFOMSGS
 모든 정보 메시지를 표시하지 않습니다.  
   
 ## <a name="remarks"></a>설명  
-DBCC FREESYSTEMCACHE를 실행하면 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 인스턴스에 대한 계획 캐시가 삭제됩니다. 계획 캐시를 삭제하면 모든 예정된 실행 계획이 다시 컴파일되며 일시적으로 갑자기 쿼리 성능이 저하될 수 있습니다. 계획 캐시에서 지워진 각 캐시스토어에 대한 다음 정보 메시지가 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 오류 로그에 포함됩니다. 
+DBCC FREESYSTEMCACHE를 실행하면 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 인스턴스에 대한 계획 캐시가 삭제됩니다. 계획 캐시를 삭제하면 모든 예정된 실행 계획이 다시 컴파일되며 일시적으로 갑자기 쿼리 성능이 저하될 수 있습니다. 계획 캐시의 삭제된 각 캐시 저장소에 대해 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 오류 로그에 다음과 같은 정보 메시지가 있습니다.
 
 >`SQL Server has encountered %d occurrence(s) of cachestore flush for the '%s' cachestore (part of plan cache) due to 'DBCC FREEPROCCACHE' or 'DBCC FREESYSTEMCACHE' operations.`
 

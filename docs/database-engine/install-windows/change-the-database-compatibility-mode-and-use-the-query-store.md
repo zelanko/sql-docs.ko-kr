@@ -15,12 +15,12 @@ ms.assetid: 7e02a137-6867-4f6a-a45a-2b02674f7e65
 author: MashaMSFT
 ms.author: mathoma
 monikerRange: '>=sql-server-2016||=sqlallproducts-allversions'
-ms.openlocfilehash: 91b08dcd61e6e038f03bd4af22707fc0f518fdc4
-ms.sourcegitcommit: f7ac1976d4bfa224332edd9ef2f4377a4d55a2c9
+ms.openlocfilehash: 09451cc9897962566905f66400cb185a5d2211da
+ms.sourcegitcommit: 80701484b8f404316d934ad2a85fd773e26ca30c
 ms.translationtype: HT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 07/02/2020
-ms.locfileid: "85895389"
+ms.lasthandoff: 11/03/2020
+ms.locfileid: "93243713"
 ---
 # <a name="change-the-database-compatibility-level-and-use-the-query-store"></a>데이터베이스 호환성 수준 변경 및 쿼리 저장소 사용
 
@@ -46,7 +46,7 @@ ms.locfileid: "85895389"
   
 쿼리 프로세서를 코드의 최신 버전으로 업그레이드하는 권장되는 워크플로는 [쿼리 저장소 사용 시나리오의 최신 SQL Server 섹션으로 업그레이드하는 동안 성능 안정성 유지](../../relational-databases/performance/query-store-usage-scenarios.md#CEUpgrade)에서 문서화됩니다.  
   
-![query-store-usage-5](../../relational-databases/performance/media/query-store-usage-5.png "query-store-usage-5") 
+![쿼리 프로세서를 코드의 최신 버전으로 업그레이드하기 위해 권장되는 워크플로를 보여 주는 다이어그램](../../relational-databases/performance/media/query-store-usage-5.png "query-store-usage-5") 
 
 [!INCLUDE[ssManStudioFull](../../includes/ssmanstudiofull-md.md)] v18부터 쿼리 튜닝 도우미를 사용하여 권장 워크플로를 통해 사용자를 안내할 수 있습니다. 자세한 내용은 [쿼리 튜닝 도우미를 사용하여 데이터베이스 업그레이드](../../relational-databases/performance/upgrade-dbcompat-using-qta.md)를 참조하세요.
  

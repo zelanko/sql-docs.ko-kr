@@ -12,12 +12,12 @@ ms.assetid: 7925ebef-cdb1-4cfe-b660-a8604b9d2153
 author: markingmyname
 ms.author: maghan
 monikerRange: =azuresqldb-current||>=sql-server-2016||=sqlallproducts-allversions||>=sql-server-linux-2017||=azuresqldb-mi-current
-ms.openlocfilehash: 322f977207bb593ddc6a4c8c78fae7621bd2aad4
-ms.sourcegitcommit: 04cf7905fa32e0a9a44575a6f9641d9a2e5ac0f8
+ms.openlocfilehash: 7d1c849a1828664fa24d8e2473dfe9c692c048cd
+ms.sourcegitcommit: 80701484b8f404316d934ad2a85fd773e26ca30c
 ms.translationtype: HT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 10/07/2020
-ms.locfileid: "91810689"
+ms.lasthandoff: 11/03/2020
+ms.locfileid: "93243615"
 ---
 # <a name="manage-retention-of-historical-data-in-system-versioned-temporal-tables"></a>시스템 버전 관리된 temporal 테이블에서 기록 데이터의 보존 관리
 
@@ -66,23 +66,23 @@ Stretch Database 접근 방식을 사용하면 기록 데이터 일부 또는 �
 > [!NOTE]
 > Stretch Database는 데이터를 Azure로 마이그레이션합니다. 따라서 대금 청구를 위해 Azure 계정 및 구독이 있어야 합니다. Azure 평가판 계정을 얻으려면 [1개월 평가판](https://azure.microsoft.com/pricing/free-trial/)을 클릭하세요.
 
-스트레치 마법사 또는 TRANSACT-SQL을 사용하여 스트레치를 위해 임시 기록 테이블을 구성할 수 있으며 시스템 버전 관리가 **ON**으로 설정되어 있어도 임시 기록 테이블에 스트레치를 사용하도록 설정할 수 있습니다. 현재 테이블을 스트레치하는 것은 의미가 없으므로 허용되지 않습니다.
+스트레치 마법사 또는 TRANSACT-SQL을 사용하여 스트레치를 위해 임시 기록 테이블을 구성할 수 있으며 시스템 버전 관리가 **ON** 으로 설정되어 있어도 임시 기록 테이블에 스트레치를 사용하도록 설정할 수 있습니다. 현재 테이블을 스트레치하는 것은 의미가 없으므로 허용되지 않습니다.
 
 ### <a name="using-the-stretch-wizard-to-stretch-the-entire-history-table"></a>스트레치 마법사를 사용하여 전체 기록 테이블 스트레치
 
 초보자를 위한 가장 쉬운 방법은 스트레치 마법사를 사용하여 전체 데이터베이스에 대해 스트레치를 사용하도록 설정한 다음 스트레치 마법사 내에서 temporal 기록 테이블을 선택 하는 것입니다(이 예에서는 다른 빈 데이터베이스에서 Department 테이블을 시스템 버전 관리된 temporal 테이블로 구성했다고 가정). [!INCLUDE[ssSQL15](../../includes/sssql15-md.md)]에서는 임시 기록 테이블 자체를 마우스 오른쪽 단추로 클릭하고 스트레치를 클릭할 수 없습니다.
 
-1. 데이터베이스를 마우스 오른쪽 단추로 클릭하고 **태스크**, **스트레치**를 차례로 클릭하고 **사용** 을 클릭하여 마법사를 시작합니다.
+1. 데이터베이스를 마우스 오른쪽 단추로 클릭하고 **태스크** , **스트레치** 를 차례로 클릭하고 **사용** 을 클릭하여 마법사를 시작합니다.
 2. **테이블 선택** 창에서 임시 기록 테이블에 대한 확인란을 선택하고 다음을 클릭합니다.
 
     ![테이블 선택 페이지에서 기록 테이블 선택](../../relational-databases/tables/media/stretch-wizard-2-for-temporal.png "테이블 선택 페이지에서 기록 테이블 선택")
-3. **Azure 구성** 창에서 로그인 자격 증명을 제공합니다. Microsoft Azure에 로그인하거나 계정을 등록합니다. 사용할 구독을 선택하고 Azure 지역을 선택합니다. 그런 다음 새 서버를 만들거나 기존 서버를 선택합니다. **다음**을 클릭합니다.
+3. **Azure 구성** 창에서 로그인 자격 증명을 제공합니다. Microsoft Azure에 로그인하거나 계정을 등록합니다. 사용할 구독을 선택하고 Azure 지역을 선택합니다. 그런 다음 새 서버를 만들거나 기존 서버를 선택합니다. **다음** 을 클릭합니다.
 
     ![새 Azure 서버 만들기 - Stretch Database 마법사](../../relational-databases/tables/media/stretch-wizard-4.png "새 Azure 서버 만들기 - Stretch Database 마법사")
 4. **보안 자격 증명** 창에서 원본 SQL Server 데이터베이스 자격 증명을 보호하기 위해 데이터베이스 마스터 키에 대한 암호를 제공하고 다음을 클릭합니다.
 
     ![Stretch Database 마법사의 보안 자격 증명 페이지](../../relational-databases/tables/media/stretch-wizard-6.png "Stretch Database 마법사의 보안 자격 증명 페이지")
-5. **IP 주소 선택** 창에서 Azure 서버가 SQL Server와 통신할 수 있도록 SQL Server에 대한 IP 주소 범위를 제공합니다. 방화벽 규칙이 이미 있는 기존 서버를 선택한 경우 여기서 [다음]을 클릭하기만 하면 기존 방화벽 규칙을 사용할 수 있습니다. **다음**을 클릭하고 **마침**을 클릭하여 Stretch Database를 사용하도록 설정한 다음, temporal 기록 테이블을 스트레치합니다.
+5. **IP 주소 선택** 창에서 Azure 서버가 SQL Server와 통신할 수 있도록 SQL Server에 대한 IP 주소 범위를 제공합니다. 방화벽 규칙이 이미 있는 기존 서버를 선택한 경우 여기서 [다음]을 클릭하기만 하면 기존 방화벽 규칙을 사용할 수 있습니다. **다음** 을 클릭하고 **마침** 을 클릭하여 Stretch Database를 사용하도록 설정한 다음, temporal 기록 테이블을 스트레치합니다.
 
     ![Stretch Database 마법사의 IP 주소 선택 페이지](../../relational-databases/tables/media/stretch-wizard-7.png "Stretch Database 마법사의 IP 주소 선택 페이지")
 6. 마법사가 완료되면 데이터베이스에 스트레치가 사용하도록 설정되었는지 확인합니다. 개체 탐색기에서 데이터베이스가 스트레치되었는지 나타내는 아이콘을 살펴봅니다.
@@ -180,7 +180,7 @@ SQL Server 에이전트 또는 일부 다른 예약 메커니즘을 사용하여
 
 다음 그림은 6개월 분량의 데이터 보관을 위한 초기 분할 구성을 보여 줍니다.
 
-![분할](../../relational-databases/tables/media/partitioning.png "분할")
+![6개월 분량의 데이터를 유지하는 초기 분할 구성을 보여 주는 다이어그램](../../relational-databases/tables/media/partitioning.png "분할")
 
 > [!NOTE]
 > 분할 구성 시 RANGE LEFT와 RANGE RIGHT를 사용할 때 성능에 미치는 영향에 대한 자세한 내용은 아래의 테이블 분할 시 성능 고려 사항을 참조하세요.
@@ -189,7 +189,7 @@ SQL Server 에이전트 또는 일부 다른 예약 메커니즘을 사용하여
 
 다음 그림은 반복적인 파티션 유지 관리 작업을 보여 줍니다(자세한 단계는 아래 참조).
 
-![Partitioning2](../../relational-databases/tables/media/partitioning2.png "Partitioning2")
+![반복되는 파티션 유지 관리 태스크를 보여 주는 다이어그램](../../relational-databases/tables/media/partitioning2.png "Partitioning2")
 
 반복적인 파티션 유지 관리 작업 단계는 아래와 같습니다.
 
@@ -323,7 +323,7 @@ COMMIT TRANSACTION
 
 먼저 시각적으로 RANGE LEFT 및 RANGE RIGHT 옵션의 의미에 대해 시각적으로 설명해 보겠습니다.
 
-![Partitioning3](../../relational-databases/tables/media/partitioning3.png "Partitioning3")
+![RANGE LEFT 및 RANGE RIGHT 옵션을 보여 주는 다이어그램](../../relational-databases/tables/media/partitioning3.png "Partitioning3")
 
 파티션 함수를 RANGE LEFT로 정의하면 지정된 값은 파티션 상한이 됩니다. RANGE RIGHT를 사용하면 지정된 값은 파티션 하한이 됩니다. MERGE RANGE를 사용하여 파티션 정의 범위에서 경계를 제거할 경우 기본적으로 경계가 포함된 파티션도 제거되도록 구현됩니다. 해당 파티션이 비어 있지 않으면 데이터는 MERGE RANGE 작업의 결과로 생성되는 파티션으로 이동합니다.
 
@@ -332,11 +332,11 @@ COMMIT TRANSACTION
 - RANGE LEFT 사례: RANGE LEFT의 경우, 가장 낮은 파티션 경계가 파티션 전환 후 비어 있는 파티션 1에 속하여 MERGE RANGE로 데이터 이동이 발생되지 않습니다.
 - RANGE RIGHT 사례: RANGE RIGHT의 경우, 전환을 통해 파티션 1이 비었다고 가정하므로 가장 낮은 파티션 경계가 비어 있지 않은 파티션 2에 속합니다. 이 경우 MERGE RANGE에서 데이터 이동이 발생합니다. 즉 파티션 2의 데이터가 파티션 1로 이동합니다. 이 문제를 방지하려면 슬라이딩 윈도우 시나리오에서 RANGE RIGHT에는 항상 빈 상태인 파티션 1이 있어야 합니다. 다시 말하면 RANGE RIGHT를 사용할 경우 RANGE LEFT 경우와 비교되는 추가 파티션을 하나 만들어 유지 관리해야 합니다.
 
-**결론**: 슬라이딩 파티션에서 RANGE LEFT를 사용하면 파티션 관리가 훨씬 간단해지고 데이터 이동이 발생하지 않습니다. 하지만 RANGE RIGHT를 사용하여 파티션 경계를 정의하는 것이 datetime 시간 틱 문제를 처리하지 않아도 되므로 좀 더 간단합니다.
+**결론** : 슬라이딩 파티션에서 RANGE LEFT를 사용하면 파티션 관리가 훨씬 간단해지고 데이터 이동이 발생하지 않습니다. 하지만 RANGE RIGHT를 사용하여 파티션 경계를 정의하는 것이 datetime 시간 틱 문제를 처리하지 않아도 되므로 좀 더 간단합니다.
 
 ## <a name="using-custom-cleanup-script-approach"></a>사용자 지정 정리 스크립트 방식 사용
 
-Stretch Database 및 테이블 분할 방식이 실행 가능한 옵션이 아닐 경우 세 번째로 사용자 지정 정리 스크립트를 사용하여 기록 데이터에서 데이터를 삭제하는 방법이 있습니다. **SYSTEM_VERSIONING = OFF**일 경우에만 기록 테이블에서 데이터를 삭제할 수 있습니다. 데이터 불일치를 방지하기 위해서는 유지 관리 창(데이터 수정 작업이 활성 상태가 아닌 경우) 또는 트랜잭션(효율적으로 다른 작업 차단) 내에서 정리를 수행해야 합니다. 이 작업을 수행하려면 현재 및 기록 테이블에 **CONTROL** 권한이 있어야 합니다.
+Stretch Database 및 테이블 분할 방식이 실행 가능한 옵션이 아닐 경우 세 번째로 사용자 지정 정리 스크립트를 사용하여 기록 데이터에서 데이터를 삭제하는 방법이 있습니다. **SYSTEM_VERSIONING = OFF** 일 경우에만 기록 테이블에서 데이터를 삭제할 수 있습니다. 데이터 불일치를 방지하기 위해서는 유지 관리 창(데이터 수정 작업이 활성 상태가 아닌 경우) 또는 트랜잭션(효율적으로 다른 작업 차단) 내에서 정리를 수행해야 합니다. 이 작업을 수행하려면 현재 및 기록 테이블에 **CONTROL** 권한이 있어야 합니다.
 
 일반 애플리케이션 및 사용자 쿼리를 최소한으로 차단하려면 트랜잭션 내에서 정리 스크립트를 수행할 때 지연을 두고 더 작은 청크로 데이터를 삭제합니다. 모든 시나리오에서 삭제할 각 데이터 청크에 적합한 크기는 없지만, 단일 트랜잭션에서 10,000개 이상의 행을 삭제하면 상당한 영향을 미칠 수 있습니다.
 
@@ -344,7 +344,7 @@ Stretch Database 및 테이블 분할 방식이 실행 가능한 옵션이 아�
 
 다음 다이어그램에서는 실행 중인 작업에 미치는 영향을 줄이기 위해 단일 테이블에 대해 정리 논리를 구성하는 방식을 보여 줍니다.
 
-![CustomCleanUpScriptDiagram](../../relational-databases/tables/media/customcleanupscriptdiagram.png "CustomCleanUpScriptDiagram")
+![실행 중인 작업에 미치는 영향을 줄이기 위해 단일 테이블에 대해 정리 논리를 구성하는 방식을 보여 주는 다이어그램](../../relational-databases/tables/media/customcleanupscriptdiagram.png "CustomCleanUpScriptDiagram")
 
 다음은 프로세스의 구현을 위한 높은 수준의 몇 가지 지침입니다. 정리 논리를 매일 실행하고 데이터 정리에 필요한 모든 temporal 테이블에서 반복될 수 있게 예약합니다. SQL Server 에이전트 또는 다른 도구를 사용하여 다음 프로세스를 예약합니다.
 
@@ -440,7 +440,7 @@ SELECT is_temporal_history_retention_enabled, name
 FROM sys.databases
 ```
 
-데이터베이스 플래그 **is_temporal_history_retention_enabled**는 기본적으로 ON으로 설정되어 있지만 사용자가 ALTER DATABASE 문을 사용하여 변경할 수 있습니다. 특정 시점 복원 작업 후에도 자동으로 OFF로 설정됩니다. 데이터베이스에 대한 temporal 기록 보존 정리를 사용하도록 설정하려면 다음 문을 실행합니다.
+데이터베이스 플래그 **is_temporal_history_retention_enabled** 는 기본적으로 ON으로 설정되어 있지만 사용자가 ALTER DATABASE 문을 사용하여 변경할 수 있습니다. 특정 시점 복원 작업 후에도 자동으로 OFF로 설정됩니다. 데이터베이스에 대한 temporal 기록 보존 정리를 사용하도록 설정하려면 다음 문을 실행합니다.
 
 ```sql
 ALTER DATABASE <myDB>
@@ -494,7 +494,7 @@ ON T1.history_table_id = T2.object_id WHERE T1.temporal_type = 2
 
 ### <a name="how-sql-database-deletes-aged-rows"></a>SQL Database에서 오래된 행을 삭제하는 방법
 
-정리 프로세스는 기록 테이블의 인덱스 레이아웃에 따라 달라집니다. *클러스터형 인덱스(B-트리 또는 columnstore)를 사용하는 기록 테이블에만 유한 보존 정책을 구성할 수 있다*는 점을 기억해야 합니다. 보존 기간이 한정된 모든 temporal 테이블에 대한 오래된 데이터 정리를 수행하는 백그라운드 태스크가 만들어집니다. rowstore(B-트리) 클러스터형 인덱스에 대한 정리 논리에서는 더 작은 청크(최대 10K)의 오래된 행을 삭제하여 데이터베이스 로그 및 I/O 하위 시스템에 주는 부담을 최소화합니다. 정리 논리에서 필요한 B-트리 인덱스를 활용하긴 하지만 보존 기간보다 오래된 행의 삭제 순서를 확실히 보장할 수는 없습니다. 따라서 *애플리케이션의 정리 순서를 신뢰하지 마세요*.
+정리 프로세스는 기록 테이블의 인덱스 레이아웃에 따라 달라집니다. *클러스터형 인덱스(B-트리 또는 columnstore)를 사용하는 기록 테이블에만 유한 보존 정책을 구성할 수 있다* 는 점을 기억해야 합니다. 보존 기간이 한정된 모든 temporal 테이블에 대한 오래된 데이터 정리를 수행하는 백그라운드 태스크가 만들어집니다. rowstore(B-트리) 클러스터형 인덱스에 대한 정리 논리에서는 더 작은 청크(최대 10K)의 오래된 행을 삭제하여 데이터베이스 로그 및 I/O 하위 시스템에 주는 부담을 최소화합니다. 정리 논리에서 필요한 B-트리 인덱스를 활용하긴 하지만 보존 기간보다 오래된 행의 삭제 순서를 확실히 보장할 수는 없습니다. 따라서 *애플리케이션의 정리 순서를 신뢰하지 마세요*.
 
 클러스터형 columnstore에 대한 정리 태스크는 전체 행 그룹을 한 번에 제거하므로(일반적으로 각 그룹에 1백만 개 행 포함) 매우 효율적이며, 기록 데이터가 빠른 속도로 생성되는 경우 특히 효율적입니다.
 

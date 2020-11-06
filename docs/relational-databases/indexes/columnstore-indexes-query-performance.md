@@ -12,12 +12,12 @@ ms.assetid: 83acbcc4-c51e-439e-ac48-6d4048eba189
 author: MikeRayMSFT
 ms.author: mikeray
 monikerRange: '>=aps-pdw-2016||=azuresqldb-current||=azure-sqldw-latest||>=sql-server-2016||=sqlallproducts-allversions||>=sql-server-linux-2017||=azuresqldb-mi-current'
-ms.openlocfilehash: f2e5fe98b5ec7d6fc141b41869e0caef7f6cb665
-ms.sourcegitcommit: e700497f962e4c2274df16d9e651059b42ff1a10
+ms.openlocfilehash: a7e2aaa0e01a5ca5295bc9f315c44cd7358b1d9f
+ms.sourcegitcommit: 9c6130d498f1cfe11cde9f2e65c306af2fa8378d
 ms.translationtype: HT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 08/17/2020
-ms.locfileid: "88408799"
+ms.lasthandoff: 10/30/2020
+ms.locfileid: "93036117"
 ---
 # <a name="columnstore-indexes---query-performance"></a>Columnstore 인덱스 쿼리 성능
 
@@ -95,7 +95,7 @@ ms.locfileid: "88408799"
  행 그룹에 대한 자세한 내용은 [columnstore 인덱스 디자인 지침](../../relational-databases/sql-server-index-design-guide.md#columnstore_index)을 참조하세요.    
     
 ### <a name="batch-mode-execution"></a>일괄 처리 모드 실행    
- 일괄 처리 모드 실행이란 실행 효율성을 위해 일반적으로 최대 900개의 행을 함께 행 집합으로 처리하는 것을 말합니다. 예를 들어 `SELECT SUM (Sales) FROM SalesData` 쿼리는 SalesData 테이블에서의 총 판매액을 집계합니다. 일괄 처리 모드 실행에서 쿼리 실행 엔진은 집계를 900개 값으로 이루어진 그룹으로 계산합니다. 이렇게 하면 각 행에 대한 비용을 부담하지 않고 모든 행에서 메타데이터 액세스 비용과 기타 오버헤드 유형을 일괄 처리로 분산하여 코드 경로가 상당히 줄어듭니다. 일괄 처리 모드는 가능한 경우 압축된 데이터에서 작동하고 행 모드 처리에서 사용하는 교환 연산자 중 일부를 제거합니다. 이렇게 하면 크기 순서대로 정렬되어 분석 쿼리 실행 속도가 향상됩니다.    
+ [일괄 처리 모드 실행](../../relational-databases/query-processing-architecture-guide.md#batch-mode-execution)이란 실행 효율성을 위해 일반적으로 최대 900개의 행을 함께 행 세트로 처리하는 것을 말합니다. 예를 들어 `SELECT SUM (Sales) FROM SalesData` 쿼리는 SalesData 테이블에서의 총 판매액을 집계합니다. 일괄 처리 모드 실행에서 쿼리 실행 엔진은 집계를 900개 값으로 이루어진 그룹으로 계산합니다. 이렇게 하면 각 행에 대한 비용을 부담하지 않고 모든 행에서 메타데이터 액세스 비용과 기타 오버헤드 유형을 일괄 처리로 분산하여 코드 경로가 상당히 줄어듭니다. 일괄 처리 모드는 가능한 경우 압축된 데이터에서 작동하고 행 모드 처리에서 사용하는 교환 연산자 중 일부를 제거합니다. 이렇게 하면 크기 순서대로 정렬되어 분석 쿼리 실행 속도가 향상됩니다.    
     
  일부 쿼리 실행 연산자는 일괄 처리 모드에서 실행할 수 없습니다. 예를 들어 Insert, Delete 또는 Update와 같은 DML 작업은 한 번에 행에서 실행됩니다. 일괄 처리 모드 연산자는 쿼리 성능 속도 향상을 위해 Scan, Join, Aggregate, Sort 등과 같은 연산자를 대상으로 합니다. Columnstore 인덱스는 [!INCLUDE[ssSQL11](../../includes/sssql11-md.md)]에서 처음으로 사용되었으므로 일괄 처리 모드로 실행할 수 있는 연산자를 지속적으로 확장하려고 노력합니다. 다음 표에서 제품 버전에 따라 일괄 처리 모드로 실행되는 연산자를 보여 줍니다.    
     
@@ -119,6 +119,8 @@ ms.locfileid: "88408799"
 |창 집계||해당 없음|해당 없음|예|[!INCLUDE[ssSQL15](../../includes/sssql15-md.md)]의 새 연산자.|    
     
 <sup>1</sup>[!INCLUDE[ssSQL15](../../includes/sssql15-md.md)], [!INCLUDE[ssSDS](../../includes/sssds-md.md)] 프리미엄 계층, 표준 계층 - S3 이상 및 모든 vCore 계층 및 [!INCLUDE[ssPDW](../../includes/sspdw-md.md)]에 적용    
+
+자세한 내용은 [쿼리 처리 아키텍처 가이드](../../relational-databases/query-processing-architecture-guide.md#batch-mode-execution)를 참조하세요.
     
 ### <a name="aggregate-pushdown"></a>집계 푸시 다운    
  SCAN 노드에서 조건에 맞는 행을 가져와 일괄 처리 모드에서 값을 집계하는 집계 계산을 위한 일반 실행 경로입니다. 이러한 실행으로 좋은 성능이 제공되긴 하지만 [!INCLUDE[ssSQL15](../../includes/sssql15-md.md)]에서 집계 작업은 SCAN 노드로 푸시되어 다음 조건이 충족되면 일괄 처리 모드 실행 시 크기 순서대로 정렬되므로 집계 계산 성능을 향상시킬 수 있습니다. 

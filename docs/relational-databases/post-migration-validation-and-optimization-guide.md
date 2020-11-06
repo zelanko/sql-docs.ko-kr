@@ -13,12 +13,12 @@ helpviewer_keywords:
 ms.assetid: 11f8017e-5bc3-4bab-8060-c16282cfbac1
 author: pelopes
 ms.author: harinid
-ms.openlocfilehash: 5324b953f70a9f0f64a4988c50ae02d1653d94f5
-ms.sourcegitcommit: 783b35f6478006d654491cb52f6edf108acf2482
+ms.openlocfilehash: 01b629b65c7f8ab1571aa53a944a8525bd09a0b0
+ms.sourcegitcommit: 442fbe1655d629ecef273b02fae1beb2455a762e
 ms.translationtype: HT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 10/09/2020
-ms.locfileid: "91891133"
+ms.lasthandoff: 11/03/2020
+ms.locfileid: "93235462"
 ---
 # <a name="post-migration-validation-and-optimization-guide"></a>마이그레이션 후 유효성 검사 및 최적화 가이드
 
@@ -44,7 +44,7 @@ ms.locfileid: "91891133"
 
 [데이터베이스 호환성 수준](../relational-databases/databases/view-or-change-the-compatibility-level-of-a-database.md)을 소스 버전으로 변경하고 다음 그림에 나온 권장 업그레이드 워크플로를 따릅니다.
 
-![query-store-usage-5](../relational-databases/performance/media/query-store-usage-5.png "query-store-usage-5")  
+![권장 업그레이드 워크플로를 보여 주는 다이어그램](../relational-databases/performance/media/query-store-usage-5.png "query-store-usage-5")  
 
 이 항목에 대한 자세한 내용은 [Keep performance stability during the upgrade to newer SQL Server](../relational-databases/performance/query-store-usage-scenarios.md#CEUpgrade)(최신 SQL Server로 업그레이드하는 동안 성능 안정성 유지)를 참조하세요.
 
@@ -94,7 +94,7 @@ ms.locfileid: "91891133"
 > [!NOTE]
 > [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)]에서 [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)]로의 마이그레이션은 이 문제가 원본 [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)]에 있는 경우 최신 버전의 [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)]로 그대로 마이그레이션해도 이 시나리오가 해결되지 않습니다.
 
-[!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)] 쿼리 최적화 프로그램은 컴파일 시간에 알려진 정보만 설명할 수 있습니다. 작업에서 실행 시간에만 알 수 있는 조건자를 사용하는 경우 잘못된 계획을 선택할 가능성이 증가합니다. 계획의 품질을 개선하려면 조건자가 **SARGable** 또는 **S**earch **Arg**ument**able**이어야 합니다.
+[!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)] 쿼리 최적화 프로그램은 컴파일 시간에 알려진 정보만 설명할 수 있습니다. 작업에서 실행 시간에만 알 수 있는 조건자를 사용하는 경우 잘못된 계획을 선택할 가능성이 증가합니다. 계획의 품질을 개선하려면 조건자가 **SARGable** 또는 **S** earch **Arg** ument **able** 이어야 합니다.
 
 SARGable이 아닌 조건자의 몇 가지 예:
 -   VARCHAR에서 NVARCHAR로, INT에서 VARCHAR로 등의 암시적 데이터 변환. 실제 실행 계획에서 런타임 CONVERT_IMPLICIT 경고를 찾습니다. 형식을 다른 형식으로 변환하면 정밀도도 떨어질 수 있습니다.

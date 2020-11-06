@@ -2,7 +2,7 @@
 title: 사용 권한(데이터베이스 엔진) | Microsoft 문서
 description: 사용 중인 플랫폼에 적용되는 사용 권한을 확인하려면 이 SQL Server 사용 권한 전체 목록을 참조하세요.
 ms.custom: ''
-ms.date: 01/03/2017
+ms.date: 10/30/2020
 ms.prod: sql
 ms.prod_service: database-engine, sql-database, sql-data-warehouse, pdw
 ms.reviewer: ''
@@ -17,15 +17,15 @@ helpviewer_keywords:
 - security [SQL Server], permissions
 - naming conventions [SQL Server]
 ms.assetid: f28e3dea-24e6-4a81-877b-02ec4c7e36b9
-author: VanMSFT
-ms.author: vanto
+author: AndreasWolter
+ms.author: anwolter
 monikerRange: '>=aps-pdw-2016||=azuresqldb-current||=azure-sqldw-latest||>=sql-server-2016||=sqlallproducts-allversions||>=sql-server-linux-2017||=azuresqldb-mi-current'
-ms.openlocfilehash: 42c08d58ed1f5688d66ff6e903c27ba360d6a2d0
-ms.sourcegitcommit: 7eb80038c86acfef1d8e7bfd5f4e30e94aed3a75
+ms.openlocfilehash: 5da1bad65cf04093be339e1f2e55bddd30efffbf
+ms.sourcegitcommit: 80701484b8f404316d934ad2a85fd773e26ca30c
 ms.translationtype: HT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 10/15/2020
-ms.locfileid: "92081952"
+ms.lasthandoff: 11/03/2020
+ms.locfileid: "93243647"
 ---
 # <a name="permissions-database-engine"></a>사용 권한(데이터베이스 엔진)
 [!INCLUDE[SQL Server Azure SQL Database Synapse Analytics PDW ](../../includes/applies-to-version/sql-asdb-asdbmi-asa-pdw.md)]
@@ -33,7 +33,7 @@ ms.locfileid: "92081952"
 모든 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 보안 개체에는 보안 주체에 부여될 수 있는 연결된 사용 권한이 있습니다. [!INCLUDE[ssDE](../../includes/ssde-md.md)] 의 권한은 로그인 및 서버 역할에 할당된 서버 수준에서 관리되고 데이터베이스 사용자 및 데이터베이스 역할에 할당된 데이터베이스 수준에서 관리됩니다. [!INCLUDE[ssSDSfull](../../includes/sssdsfull-md.md)] 에 대한 모델은 데이터베이스 권한에 대하여 동일한 시스템을 갖지만 서버 수준 권한은 사용할 수 없습니다. 이 항목에는 전체 권한 목록이 포함됩니다. 권한에 대한 일반적인 구현은 [Getting Started with Database Engine Permissions](../../relational-databases/security/authentication-access/getting-started-with-database-engine-permissions.md)을(를) 참조하십시오.  
   
 [!INCLUDE[ssSQLv15_md](../../includes/sssqlv15-md.md)]의 총 권한 수는 248개입니다. [!INCLUDE[ssSDSfull](../../includes/sssdsfull-md.md)]에는 254개의 권한이 있습니다. 대부분의 권한은 모든 플랫폼에 적용되지만 그렇지 않은 경우도 있습니다. 예를 들어, [!INCLUDE[ssSDSfull](../../includes/sssdsfull-md.md)]에는 서버 수준 권한을 부여할 수 없으며 [!INCLUDE[ssSDSfull](../../includes/sssdsfull-md.md)]에는 몇 가지 권한만 적용됩니다.
-[!INCLUDE[ssSQLv14_md](../../includes/sssqlv14-md.md)]에는 238개의 권한이 있습니다. [!INCLUDE[ssSQL15](../../includes/sssql15-md.md)] 에서는 230개의 권한이 있습니다. [!INCLUDE[ssSQL14](../../includes/sssql14-md.md)] 에서는 219개의 권한이 있습니다. [!INCLUDE[ssSQL11](../../includes/sssql11-md.md)] 에서는 214개의 권한이 있습니다. [!INCLUDE[ssKilimanjaro](../../includes/sskilimanjaro-md.md)] 에서는 195개의 권한이 있습니다. [sys.fn_builtin_permissions](../../relational-databases/system-functions/sys-fn-builtin-permissions-transact-sql.md) 항목은 최신 버전의 새로운 항목을 지정합니다.
+새 사용 권한은 새 릴리스와 함께 점진적으로 도입되고 있습니다. [!INCLUDE[ssSQLv14_md](../../includes/sssqlv14-md.md)]에는 238개의 권한이 있습니다. [!INCLUDE[ssSQL15](../../includes/sssql15-md.md)] 에서는 230개의 권한이 있습니다. [!INCLUDE[ssSQL14](../../includes/sssql14-md.md)] 에서는 219개의 권한이 있습니다. [!INCLUDE[ssSQL11](../../includes/sssql11-md.md)] 에서는 214개의 권한이 있습니다. [!INCLUDE[ssKilimanjaro](../../includes/sskilimanjaro-md.md)] 에서는 195개의 권한이 있습니다. [sys.fn_builtin_permissions](../../relational-databases/system-functions/sys-fn-builtin-permissions-transact-sql.md) 항목은 최신 버전의 새로운 사용 권한을 지정합니다.
 
 권한을 이해했으면 [GRANT](../../t-sql/statements/grant-transact-sql.md), [REVOKE](../../t-sql/statements/revoke-transact-sql.md)및 [DENY](../../t-sql/statements/deny-transact-sql.md) 문을 사용하여 로그인 및 데이터베이스 수준 권한 사용자에게 서버 수준 권한을 적용합니다. 예를 들면 다음과 같습니다.   
 ```sql
@@ -53,13 +53,13 @@ REVOKE SELECT ON OBJECT::HumanResources.Employee TO Larry;
   
      특정 보안 개체의 소유권을 제외한 속성을 변경할 수 있는 사용 권한을 줍니다. 범위에 부여된 경우 ALTER는 또한 해당 범위 내에 포함된 임의의 보안 개체를 변경하고, 만들고, 삭제할 수 있는 기능을 부여합니다. 예를 들어 스키마의 ALTER 권한에는 스키마에서 개체를 만들고, 변경하고, 삭제할 수 있는 기능이 포함됩니다.  
   
--   ALTER ANY \<*Server Securable*>(여기서 *Server Securable*은 임의의 서버 보안 개체)  
+-   ALTER ANY \<*Server Securable*>(여기서 *Server Securable* 은 임의의 서버 보안 개체)  
   
-     *Server Securable*의 개별 항목을 만들거나 변경하거나 삭제할 수 있는 기능을 제공합니다. 예를 들어 ALTER ANY LOGIN은 인스턴스의 모든 로그인을 만들거나 변경하거나 삭제할 수 있는 기능을 제공합니다.  
+     *Server Securable* 의 개별 항목을 만들거나 변경하거나 삭제할 수 있는 기능을 제공합니다. 예를 들어 ALTER ANY LOGIN은 인스턴스의 모든 로그인을 만들거나 변경하거나 삭제할 수 있는 기능을 제공합니다.  
   
--   ALTER ANY \<*Database Securable*>(여기서 *Database Securable*은 데이터베이스 수준의 임의의 보안 개체)  
+-   ALTER ANY \<*Database Securable*>(여기서 *Database Securable* 은 데이터베이스 수준의 임의의 보안 개체)  
   
-     *Database Securable*의 개별 항목을 만들거나(CREATE) 변경하거나(ALTER) 삭제(DROP)할 수 있는 기능을 제공합니다. 예를 들어 ALTER ANY SCHEMA는 데이터베이스의 모든 스키마를 만들거나 변경하거나 삭제할 수 있는 기능을 제공합니다.  
+     *Database Securable* 의 개별 항목을 만들거나(CREATE) 변경하거나(ALTER) 삭제(DROP)할 수 있는 기능을 제공합니다. 예를 들어 ALTER ANY SCHEMA는 데이터베이스의 모든 스키마를 만들거나 변경하거나 삭제할 수 있는 기능을 제공합니다.  
   
 -   TAKE OWNERSHIP  
   
@@ -75,11 +75,11 @@ REVOKE SELECT ON OBJECT::HumanResources.Employee TO Larry;
   
 -   CREATE \<*Server Securable*>  
   
-     피부여자에게 *Server Securable*을 만들 수 있는 기능을 제공합니다.  
+     피부여자에게 *Server Securable* 을 만들 수 있는 기능을 제공합니다.  
   
 -   CREATE \<*Database Securable*>  
   
-     피부여자에게 *Database Securable*을 만들 수 있는 기능을 제공합니다.  
+     피부여자에게 *Database Securable* 을 만들 수 있는 기능을 제공합니다.  
   
 -   CREATE \<*Schema-contained Securable*>  
   
@@ -364,7 +364,7 @@ REVOKE SELECT ON OBJECT::HumanResources.Employee TO Larry;
 |XML SCHEMA COLLECTION|VIEW DEFINITION|VW|SCHEMA|VIEW DEFINITION|  
   
 ##  <a name="summary-of-the-permission-check-algorithm"></a><a name="_algorithm"></a> 사용 권한 검사 알고리즘 요약  
- 사용 권한 검사는 복잡할 수 있습니다. 사용 권한 검사 알고리즘에는 겹치는 그룹 멤버 자격과 소유권 체인이 포함됩니다. 둘 다 명시적 및 암시적 사용 권한이며 보안 가능한 엔터티가 포함된 보안 개체 클래스에 대한 사용 권한의 영향을 받을 수 있습니다. 알고리즘의 일반적인 프로세스는 관련된 사용 권한을 모두 수집하는 것입니다. DENY 차단이 발견되지 않는 경우 알고리즘에서는 충분한 액세스 권한을 제공하는 GRANT를 검색합니다. 알고리즘에는 세 가지 필수 요소인 **보안 컨텍스트**, **사용 권한 공간**및 **필요한 사용 권한**이 포함되어 있습니다.  
+ 사용 권한 검사는 복잡할 수 있습니다. 사용 권한 검사 알고리즘에는 겹치는 그룹 멤버 자격과 소유권 체인이 포함됩니다. 둘 다 명시적 및 암시적 사용 권한이며 보안 가능한 엔터티가 포함된 보안 개체 클래스에 대한 사용 권한의 영향을 받을 수 있습니다. 알고리즘의 일반적인 프로세스는 관련된 사용 권한을 모두 수집하는 것입니다. DENY 차단이 발견되지 않는 경우 알고리즘에서는 충분한 액세스 권한을 제공하는 GRANT를 검색합니다. 알고리즘에는 세 가지 필수 요소인 **보안 컨텍스트** , **사용 권한 공간** 및 **필요한 사용 권한** 이 포함되어 있습니다.  
   
 > [!NOTE]  
 >  sa, dbo, 엔터티 소유자, information_schema, sys 또는 사용자 자신에 대한 권한을 부여, 거부 또는 취소할 수 없습니다.  
@@ -404,18 +404,18 @@ REVOKE SELECT ON OBJECT::HumanResources.Employee TO Larry;
   
 2.  소유권 체인이 적용 가능하며 체인에 있는 이전 개체에 대한 액세스 검사가 보안 검사를 통과하는 경우 액세스를 허용합니다.  
   
-3.  **보안 컨텍스트**를 만들 수 있도록 호출자와 관련된 서버 수준, 데이터베이스 수준 및 서명된 모듈 ID를 집계합니다.  
+3.  **보안 컨텍스트** 를 만들 수 있도록 호출자와 관련된 서버 수준, 데이터베이스 수준 및 서명된 모듈 ID를 집계합니다.  
   
-4.  해당 **보안 컨텍스트**의 경우 **사용 권한 공간**에 대해 부여되거나 거부된 모든 사용 권한을 수집합니다. 사용 권한은 명시적으로 GRANT, GRANT WITH GRANT 또는 DENY로 지정되거나 내포적/포괄적 사용 권한인 GRANT 또는 DENY로 지정될 수 있습니다. 예를 들어 스키마에 대한 CONTROL 권한은 테이블에 대한 CONTROL을 내포합니다. 또한 테이블에 대한 CONTROL은 SELECT를 내포합니다. 따라서 스키마에 대한 CONTROL이 부여된 경우 테이블에 대한 SELECT도 부여됩니다. 테이블에 대한 CONTROL이 거부된 경우 테이블에 대한 SELECT도 거부됩니다.  
+4.  해당 **보안 컨텍스트** 의 경우 **사용 권한 공간** 에 대해 부여되거나 거부된 모든 사용 권한을 수집합니다. 사용 권한은 명시적으로 GRANT, GRANT WITH GRANT 또는 DENY로 지정되거나 내포적/포괄적 사용 권한인 GRANT 또는 DENY로 지정될 수 있습니다. 예를 들어 스키마에 대한 CONTROL 권한은 테이블에 대한 CONTROL을 내포합니다. 또한 테이블에 대한 CONTROL은 SELECT를 내포합니다. 따라서 스키마에 대한 CONTROL이 부여된 경우 테이블에 대한 SELECT도 부여됩니다. 테이블에 대한 CONTROL이 거부된 경우 테이블에 대한 SELECT도 거부됩니다.  
   
     > [!NOTE]  
     >  열 수준 사용 권한의 GRANT는 개체 수준의 DENY보다 우선합니다.  
   
-5.  **필요한 사용 권한**을 식별합니다.  
+5.  **필요한 사용 권한** 을 식별합니다.  
   
-6.  **사용 권한 공간** 의 개체에 대한 **보안 컨텍스트** 에서 모든 ID에 대해 **필요한 사용 권한**이 직접적으로 또는 암시적으로 거부되는 경우 사용 권한 검사가 실패합니다.  
+6.  **사용 권한 공간** 의 개체에 대한 **보안 컨텍스트** 에서 모든 ID에 대해 **필요한 사용 권한** 이 직접적으로 또는 암시적으로 거부되는 경우 사용 권한 검사가 실패합니다.  
   
-7.  **필요한 권한** 이 거부되지 않고 **사용 권한 공간** 의 모든 개체에 대한 **보안 컨텍스트** 에서 모든 ID에 대한 직접적 또는 암시적인 GRANT 또는 GRANT WITH GRANT 사용 권한이 **필요한 권한**에 포함되는 경우 사용 권한 검사가 통과합니다.  
+7.  **필요한 권한** 이 거부되지 않고 **사용 권한 공간** 의 모든 개체에 대한 **보안 컨텍스트** 에서 모든 ID에 대한 직접적 또는 암시적인 GRANT 또는 GRANT WITH GRANT 사용 권한이 **필요한 권한** 에 포함되는 경우 사용 권한 검사가 통과합니다.  
 
 ## <a name="special-considerations-for-column-level-permissions"></a>열 수준 사용 권한에 대한 특별 고려 사항
 

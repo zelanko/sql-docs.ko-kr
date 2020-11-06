@@ -11,12 +11,12 @@ ms.topic: quickstart
 ms.assetid: 9e1d94ce-2c93-45d1-ae2a-2a7d1fa094c4
 author: rothja
 ms.author: jroth
-ms.openlocfilehash: a0fffe198adc37a9cabe232d5509e9df1652013b
-ms.sourcegitcommit: 04cf7905fa32e0a9a44575a6f9641d9a2e5ac0f8
+ms.openlocfilehash: c1f79050a4bbabcfc8729ccdc270d47fe9055c29
+ms.sourcegitcommit: 67befbf7435f256e766bbce6c1de57799e1db9ad
 ms.translationtype: HT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 10/07/2020
-ms.locfileid: "91809129"
+ms.lasthandoff: 10/24/2020
+ms.locfileid: "92524068"
 ---
 # <a name="quickstart-sql-backup-and-restore-to-azure-blob-storage-service"></a>빠른 시작: Azure Blob Storage 서비스로 SQL 백업 및 복원
 [!INCLUDE[tsql-appliesto-ss2008-asdbmi-xxxx-xxx-md.md](../includes/tsql-appliesto-ss2008-asdbmi-xxxx-xxx-md.md)]
@@ -38,10 +38,10 @@ ms.locfileid: "91809129"
 
 1. Azure Portal을 엽니다. 
 1. 스토리지 계정으로 이동합니다. 
-1. 스토리지 계정을 선택하고 **Blob Services**로 스크롤합니다.
-1. **Blobs**을 선택하고 **+ 컨테이너**를 선택하여 새 컨테이너를 추가합니다. 
+1. 스토리지 계정을 선택하고 **Blob Services** 로 스크롤합니다.
+1. **Blobs** 을 선택하고 **+ 컨테이너** 를 선택하여 새 컨테이너를 추가합니다. 
 1. 컨테이너의 이름을 입력하고 지정한 컨테이너 이름을 기록해 둡니다. 이 정보는 이 빠른 시작의 뒷부분에 나오는 T-SQL 문의 URL(백업 파일 경로)에 사용됩니다. 
-1. **확인**을 선택합니다. 
+1. **확인** 을 선택합니다. 
     
     ![새 컨테이너](media/tutorial-sql-server-backup-and-restore-to-azure-blob-storage-service/new-container.png)
 
@@ -53,7 +53,7 @@ ms.locfileid: "91809129"
 
 1. [SSMS(SQL Server Management Studio)](../ssms/download-sql-server-management-studio-ssms.md)를 시작하고 SQL Server 인스턴스에 연결합니다.
 1. **새 쿼리** 창을 엽니다. 
-1. 다음 T-SQL(Transact-SQL) 코드를 실행하여 테스트 데이터베이스를 만듭니다. **개체 탐색기**에서 **데이터베이스** 노드를 새로 고쳐 새 데이터베이스를 확인합니다. SQL Managed Instance에서 새로 만든 데이터베이스는 자동으로 TDE를 사용하도록 설정되므로 계속하려면 사용하지 않도록 설정해야 합니다. 
+1. 다음 T-SQL(Transact-SQL) 코드를 실행하여 테스트 데이터베이스를 만듭니다. **개체 탐색기** 에서 **데이터베이스** 노드를 새로 고쳐 새 데이터베이스를 확인합니다. SQL Managed Instance에서 새로 만든 데이터베이스는 자동으로 TDE를 사용하도록 설정되므로 계속하려면 사용하지 않도록 설정해야 합니다. 
 
 ```sql
 USE [master]
@@ -98,25 +98,25 @@ GO
 
 다음 단계를 따라 SQL Server Management Studio의 GUI를 사용하여 자격 증명을 만듭니다. 또는 [프로그래밍 방식](tutorial-use-azure-blob-storage-service-with-sql-server-2016.md#2---create-a-sql-server-credential-using-a-shared-access-signature)으로 자격 증명을 만들 수 있습니다. 
 
-1. [SSMS(SQL Server Management Studio)](../ssms/download-sql-server-management-studio-ssms.md)의 **개체 탐색기**에서 **데이터베이스** 노드를 확장합니다.
-1. 새 `SQLTestDB` 데이터베이스를 마우스 오른쪽 단추로 클릭하고 **작업**을 가리킨 다음 **백업...** 을 선택하여 **데이터베이스 백업** 마법사를 시작합니다. 
-1. **백업할 위치** 대상 드롭다운에서 **URL**을 선택하고 **추가**를 선택하여 **백업 대상 선택** 대화 상자를 시작합니다. 
+1. [SSMS(SQL Server Management Studio)](../ssms/download-sql-server-management-studio-ssms.md)의 **개체 탐색기** 에서 **데이터베이스** 노드를 확장합니다.
+1. 새 `SQLTestDB` 데이터베이스를 마우스 오른쪽 단추로 클릭하고 **작업** 을 가리킨 다음 **백업...** 을 선택하여 **데이터베이스 백업** 마법사를 시작합니다. 
+1. **백업할 위치** 대상 드롭다운에서 **URL** 을 선택하고 **추가** 를 선택하여 **백업 대상 선택** 대화 상자를 시작합니다. 
 
    ![URL로 백업](media/tutorial-sql-server-backup-and-restore-to-azure-blob-storage-service/back-up-to-url.png)
 
-1. **백업 대상 선택** 대화 상자에서 **새 컨테이너**를 선택하여 **Microsoft 구독에 연결** 창을 시작합니다. 
+1. **백업 대상 선택** 대화 상자에서 **새 컨테이너** 를 선택하여 **Microsoft 구독에 연결** 창을 시작합니다. 
 
-   ![백업 대상](media/tutorial-sql-server-backup-and-restore-to-azure-blob-storage-service/select-backup-destination.png)
+   ![새 컨테이너 옵션이 호출된 ‘백업 대상 선택’ 대화 상자 창의 스크린샷](media/tutorial-sql-server-backup-and-restore-to-azure-blob-storage-service/select-backup-destination.png)
 
 1. **로그인...** 을 선택하고 로그인 프로세스를 진행하여 Azure Portal에 로그인합니다. 
-1. 드롭다운에서 **구독**을 선택합니다. 
-1. 드롭다운 목록에서 **스토리지 계정**을 선택합니다. 
+1. 드롭다운에서 **구독** 을 선택합니다. 
+1. 드롭다운 목록에서 **스토리지 계정** 을 선택합니다. 
 1. 드롭다운에서 이전에 만든 컨테이너를 선택합니다. 
-1. **자격 증명 만들기**를 선택하여 *SAS(공유 액세스 서명)* 를 생성합니다.  **복원에 필요하므로 이 값을 저장합니다.**
+1. **자격 증명 만들기** 를 선택하여 *SAS(공유 액세스 서명)* 를 생성합니다.  **복원에 필요하므로 이 값을 저장합니다.**
 
    ![자격 증명 만들기](media/tutorial-sql-server-backup-and-restore-to-azure-blob-storage-service/create-credential.png)
 
-1. **확인**을 클릭하여 **Microsoft 구독에 연결** 창을 닫습니다. 그러면 **백업 대상 선택** 대화 상자에서 *Azure Storage 컨테이너* 값이 채워집니다. **확인**을 선택하여 선택된 스토리지 컨테이너를 선택하고 대화 상자를 닫습니다. 
+1. **확인** 을 클릭하여 **Microsoft 구독에 연결** 창을 닫습니다. 그러면 **백업 대상 선택** 대화 상자에서 *Azure Storage 컨테이너* 값이 채워집니다. **확인** 을 선택하여 선택된 스토리지 컨테이너를 선택하고 대화 상자를 닫습니다. 
 1. 이 시점에서 다음 섹션의 4단계로 건너뛰고 데이터베이스 백업을 수행하거나, Transact-SQL을 사용하여 데이터베이스를 백업하려면 **데이터베이스 백업** 마법사를 닫을 수 있습니다. 
 
 
@@ -125,9 +125,9 @@ GO
 
 # <a name="ssms"></a>[SSMS](#tab/SSMS)
 
-1. **데이터베이스 백업** 마법사가 아직 열려 있지 않은 경우 [SSMS(SQL Server Management Studio)](../ssms/download-sql-server-management-studio-ssms.md)의 **개체 탐색기**에서 **데이터베이스** 노드를 확장합니다.
-1. 새 `SQLTestDB` 데이터베이스를 마우스 오른쪽 단추로 클릭하고 **작업**을 가리킨 다음 **백업...** 을 선택하여 **데이터베이스 백업** 마법사를 시작합니다. 
-1. **백업할 위치** 드롭다운에서 **URL**을 선택하고 **추가**를 선택하여 **백업 대상 선택** 대화 상자를 시작합니다. 
+1. **데이터베이스 백업** 마법사가 아직 열려 있지 않은 경우 [SSMS(SQL Server Management Studio)](../ssms/download-sql-server-management-studio-ssms.md)의 **개체 탐색기** 에서 **데이터베이스** 노드를 확장합니다.
+1. 새 `SQLTestDB` 데이터베이스를 마우스 오른쪽 단추로 클릭하고 **작업** 을 가리킨 다음 **백업...** 을 선택하여 **데이터베이스 백업** 마법사를 시작합니다. 
+1. **백업할 위치** 드롭다운에서 **URL** 을 선택하고 **추가** 를 선택하여 **백업 대상 선택** 대화 상자를 시작합니다. 
 
    ![URL로 백업](media/tutorial-sql-server-backup-and-restore-to-azure-blob-storage-service/back-up-to-url.png)
 
@@ -135,11 +135,11 @@ GO
 
    ![Azure 스토리지 컨테이너](media/tutorial-sql-server-backup-and-restore-to-azure-blob-storage-service/azure-storage-container.png)
 
-1. **데이터베이스 백업** 마법사에서 **확인**을 선택하여 데이터베이스를 백업합니다. 
-1. 데이터베이스가 성공적으로 백업되면 **확인**을 선택하여 모든 백업 관련 창을 닫습니다. 
+1. **데이터베이스 백업** 마법사에서 **확인** 을 선택하여 데이터베이스를 백업합니다. 
+1. 데이터베이스가 성공적으로 백업되면 **확인** 을 선택하여 모든 백업 관련 창을 닫습니다. 
 
    > [!TIP]
-   > **데이터베이스 백업** 마법사의 상단에서 **스크립트**를 선택하여 이 명령의 Transact-SQL을 스크립팅할 수 있습니다. ![스크립트 명령](media/tutorial-sql-server-backup-and-restore-to-azure-blob-storage-service/script-backup-command.png)
+   > **데이터베이스 백업** 마법사의 상단에서 **스크립트** 를 선택하여 이 명령의 Transact-SQL을 스크립팅할 수 있습니다. ![스크립트 명령](media/tutorial-sql-server-backup-and-restore-to-azure-blob-storage-service/script-backup-command.png)
 
 
 # <a name="transact-sql"></a>[Transact-SQL](#tab/tsql)
@@ -163,8 +163,8 @@ GO
 
 # <a name="ssms"></a>[SSMS](#tab/SSMS)
 
-1. **개체 탐색기**에서 **데이터베이스** 노드를 확장하고 `SQLTestDB` 데이터베이스를 마우스 오른쪽 단추로 클릭한 다음 삭제를 선택하여 **개체 삭제** 마법사를 시작합니다. 
-1. 관리되는 인스턴스의 경우, **확인**을 선택하여 데이터베이스를 삭제합니다. 온-프레미스의 경우, **기존 연결 닫기** 옆의 확인란을 선택하고 **확인**을 선택하여 데이터베이스를 삭제합니다. 
+1. **개체 탐색기** 에서 **데이터베이스** 노드를 확장하고 `SQLTestDB` 데이터베이스를 마우스 오른쪽 단추로 클릭한 다음 삭제를 선택하여 **개체 삭제** 마법사를 시작합니다. 
+1. 관리되는 인스턴스의 경우, **확인** 을 선택하여 데이터베이스를 삭제합니다. 온-프레미스의 경우, **기존 연결 닫기** 옆의 확인란을 선택하고 **확인** 을 선택하여 데이터베이스를 삭제합니다. 
 
 # <a name="transact-sql"></a>[Transact-SQL](#tab/tsql)
 
@@ -195,27 +195,27 @@ GO
 
 # <a name="ssms"></a>[SSMS](#tab/SSMS)
 
-1. SQL Server Management Studio의 **개체 탐색기**에서 **데이터베이스** 노드를 마우스 오른쪽 단추로 클릭하고 **데이터베이스 복원**을 선택합니다. 
-1. **디바이스**를 선택한 다음, 줄임표(...)를 선택하여 디바이스를 선택합니다. 
+1. SQL Server Management Studio의 **개체 탐색기** 에서 **데이터베이스** 노드를 마우스 오른쪽 단추로 클릭하고 **데이터베이스 복원** 을 선택합니다. 
+1. **디바이스** 를 선택한 다음, 줄임표(...)를 선택하여 디바이스를 선택합니다. 
 
    ![디바이스 복원 선택](media/tutorial-sql-server-backup-and-restore-to-azure-blob-storage-service/select-restore-device.png)
 
-1. **백업 미디어 유형** 드롭다운에서 **URL**을 선택하고 **추가**를 선택하여 디바이스를 추가합니다. 
+1. **백업 미디어 유형** 드롭다운에서 **URL** 을 선택하고 **추가** 를 선택하여 디바이스를 추가합니다. 
 
    ![백업 디바이스 추가](media/tutorial-sql-server-backup-and-restore-to-azure-blob-storage-service/add-backup-device.png)
 
 1. 드롭다운에서 컨테이너를 선택하고 자격 증명을 만들 때 저장한 SAS(공유 액세스 서명)를 붙여넣습니다. 
 
-   ![백업 대상](media/tutorial-sql-server-backup-and-restore-to-azure-blob-storage-service/restore-from-container.png)
+   ![공유 액세스 서명 필드가 채워진 ‘백업 파일 위치 선택’ 대화 상자의 스크린샷](media/tutorial-sql-server-backup-and-restore-to-azure-blob-storage-service/restore-from-container.png)
 
-1. **확인**을 선택하여 백업 파일 위치를 선택합니다. 
-1. **컨테이너**를 확장하고 백업 파일이 있는 컨테이너를 선택합니다. 
-1. 복원할 백업 파일을 선택하고 **확인**을 선택합니다. 파일이 표시되지 않는 경우 잘못된 SAS 키를 사용한 것일 수 있습니다. 이전과 동일한 단계에 따라 SAS 키를 다시 생성하여 컨테이너에 추가할 수 있습니다. 
+1. **확인** 을 선택하여 백업 파일 위치를 선택합니다. 
+1. **컨테이너** 를 확장하고 백업 파일이 있는 컨테이너를 선택합니다. 
+1. 복원할 백업 파일을 선택하고 **확인** 을 선택합니다. 파일이 표시되지 않는 경우 잘못된 SAS 키를 사용한 것일 수 있습니다. 이전과 동일한 단계에 따라 SAS 키를 다시 생성하여 컨테이너에 추가할 수 있습니다. 
 
    ![파일 복원 선택](media/tutorial-sql-server-backup-and-restore-to-azure-blob-storage-service/select-restore-file.png)
 
-1. **확인**을 선택하여 **백업 디바이스 선택** 대화 상자를 닫습니다. 
-1. **확인**을 선택하여 데이터베이스를 복원합니다. 
+1. **확인** 을 선택하여 **백업 디바이스 선택** 대화 상자를 닫습니다. 
+1. **확인** 을 선택하여 데이터베이스를 복원합니다. 
 
 # <a name="transact-sql"></a>[Transact-SQL](#tab/tsql)
 

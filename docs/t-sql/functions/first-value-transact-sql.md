@@ -20,12 +20,12 @@ ms.assetid: 1990c3c7-dad2-48db-b2cd-3e8bd2c49d17
 author: markingmyname
 ms.author: maghan
 monikerRange: '>=aps-pdw-2016||=azuresqldb-current||=azure-sqldw-latest||>=sql-server-2016||=sqlallproducts-allversions||>=sql-server-linux-2017||=azuresqldb-mi-current'
-ms.openlocfilehash: 3b4d115487f15c8af7083b9006cf2724d6b81011
-ms.sourcegitcommit: cc23d8646041336d119b74bf239a6ac305ff3d31
+ms.openlocfilehash: cba74e40373a4b00a93d41ebc49e2a849df98572
+ms.sourcegitcommit: 442fbe1655d629ecef273b02fae1beb2455a762e
 ms.translationtype: HT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 09/23/2020
-ms.locfileid: "91114844"
+ms.lasthandoff: 11/03/2020
+ms.locfileid: "93235524"
 ---
 # <a name="first_value-transact-sql"></a>FIRST_VALUE(Transact-SQL)
 [!INCLUDE [sql-asdb-asdbmi-asa-pdw](../../includes/applies-to-version/sql-asdb-asdbmi-asa-pdw.md)]
@@ -46,21 +46,21 @@ FIRST_VALUE ( [scalar_expression ] )  [ IGNORE NULLS | RESPECT NULLS ]
 
 ## <a name="arguments"></a>인수
  *scalar_expression*  
- 반환할 값입니다. *scalar_expression*은 열, 하위 쿼리 또는 결과로 반환되는 값이 하나뿐인 임의의 다른 식일 수 있습니다. 다른 분석 함수는 사용할 수 없습니다.  
+ 반환할 값입니다. *scalar_expression* 은 열, 하위 쿼리 또는 결과로 반환되는 값이 하나뿐인 임의의 다른 식일 수 있습니다. 다른 분석 함수는 사용할 수 없습니다.  
 
  [ IGNORE NULLS | RESPECT NULLS ]     
- **적용 대상**: Azure SQL Edge
+ **적용 대상** : Azure SQL Edge
 
- IGNORE NULLS - 파티션의 마지막 값을 컴퓨팅할 때 데이터 세트의 null 값을 무시합니다.     
- RESPECT NULLS - 파티션의 마지막 값을 컴퓨팅할 때 데이터 세트의 null 값을 고려합니다.     
+ IGNORE NULLS - 파티션의 첫 번째 값을 컴퓨팅할 때 데이터 세트의 null 값을 무시합니다.     
+ RESPECT NULLS - 파티션의 첫 번째 값을 컴퓨팅할 때 데이터 세트의 null 값을 고려합니다.     
  
   자세한 내용은 [누락 값 입력](/azure/azure-sql-edge/imputing-missing-values/)을 참조하세요.
   
  OVER **(** [ *partition_by_clause* ] *order_by_clause* [ *rows_range_clause* ] **)**  
- *partition_by_clause*는 FROM 절이 생성한 결과 집합을 함수가 적용되는 파티션으로 나눕니다. 지정하지 않을 경우 쿼리 결과 집합의 모든 행이 단일 그룹으로 취급됩니다. *order_by_clause*는 작업이 수행되는 논리적 순서를 결정합니다. *order_by_clause*가 필요합니다. *rows_range_clause*는 시작점 및 끝점을 지정하여 파티션 내에서 행을 추가로 제한합니다. 자세한 내용은 [OVER 절&#40;Transact-SQL&#41;](../../t-sql/queries/select-over-clause-transact-sql.md)을 참조하세요.  
+ *partition_by_clause* 는 FROM 절이 생성한 결과 집합을 함수가 적용되는 파티션으로 나눕니다. 지정하지 않을 경우 쿼리 결과 집합의 모든 행이 단일 그룹으로 취급됩니다. *order_by_clause* 는 작업이 수행되는 논리적 순서를 결정합니다. *order_by_clause* 가 필요합니다. *rows_range_clause* 는 시작점 및 끝점을 지정하여 파티션 내에서 행을 추가로 제한합니다. 자세한 내용은 [OVER 절&#40;Transact-SQL&#41;](../../t-sql/queries/select-over-clause-transact-sql.md)을 참조하세요.  
   
 ## <a name="return-types"></a>반환 형식  
- *scalar_expression*과 같은 유형입니다.  
+ *scalar_expression* 과 같은 유형입니다.  
   
 ## <a name="general-remarks"></a>일반적인 주의 사항  
  FIRST_VALUE는 비결정적입니다. 자세한 내용은 [Deterministic and Nondeterministic Functions](../../relational-databases/user-defined-functions/deterministic-and-nondeterministic-functions.md)을 참조하세요.  

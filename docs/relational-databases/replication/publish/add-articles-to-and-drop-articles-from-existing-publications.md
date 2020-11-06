@@ -21,12 +21,12 @@ ms.assetid: b148e907-e1f2-483b-bdb2-59ea596efceb
 author: MashaMSFT
 ms.author: mathoma
 monikerRange: =azuresqldb-mi-current||>=sql-server-2016||=sqlallproducts-allversions
-ms.openlocfilehash: d04e4fe2f3adc13b02b5aafb4f2cc49ab05d09d6
-ms.sourcegitcommit: c8e1553ff3fdf295e8dc6ce30d1c454d6fde8088
+ms.openlocfilehash: 7353735a34874248e3796763c608bff24a83f649
+ms.sourcegitcommit: ea0bf89617e11afe85ad85309e0ec731ed265583
 ms.translationtype: HT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 07/22/2020
-ms.locfileid: "86923680"
+ms.lasthandoff: 10/28/2020
+ms.locfileid: "92907378"
 ---
 # <a name="add-articles-to-and-drop-articles-from-existing-publications"></a>기존 게시에 대한 아티클 추가 및 삭제
 [!INCLUDE[sql-asdbmi](../../../includes/applies-to-version/sql-asdbmi.md)]
@@ -36,7 +36,7 @@ ms.locfileid: "86923680"
  아티클을 추가하려면 아티클을 게시에 추가하고, 게시에 대한 새 스냅샷을 만들고, 구독을 동기화하여 새 아티클에 대한 스키마 및 데이터를 적용해야 합니다.  
   
 > [!NOTE]
->  병합 게시에 아티클을 추가하고 기존 아티클이 새 아티클에 종속된 경우 [sp_addmergearticle](../../../relational-databases/system-stored-procedures/sp-addmergearticle-transact-sql.md) 및 [sp_changemergearticle](../../../relational-databases/system-stored-procedures/sp-changemergearticle-transact-sql.md)의 **\@processing_order** 매개 변수를 사용하여 두 아티클의 처리 순서를 지정해야 합니다. 다음과 같은 시나리오를 고려해 보십시오. 테이블을 게시하지만 테이블이 참조하는 함수는 게시하지 않는 경우가 있습니다. 함수를 게시하지 않을 경우 구독자에서 테이블을 만들 수 없습니다. 게시에 함수를 추가할 경우에는 **sp_addmergearticle**의 **\@processing_order** 매개 변수에 값 **1**을 지정하고 **sp_changemergearticle**의 **\@processing_order** 매개 변수에 값 **2**를 지정하며 **\@article** 매개 변수에는 테이블 이름을 지정합니다. 이 처리 순서를 사용하면 함수에 종속된 테이블이 생성되기 전에 해당 함수가 구독자에서 생성됩니다. 함수 번호가 테이블 번호보다 낮은 경우 각 아티클에 다른 번호를 사용할 수 있습니다.  
+>  병합 게시에 아티클을 추가하고 기존 아티클이 새 아티클에 종속된 경우 [sp_addmergearticle](../../../relational-databases/system-stored-procedures/sp-addmergearticle-transact-sql.md) 및 [sp_changemergearticle](../../../relational-databases/system-stored-procedures/sp-changemergearticle-transact-sql.md)의 **\@processing_order** 매개 변수를 사용하여 두 아티클의 처리 순서를 지정해야 합니다. 다음과 같은 시나리오를 고려해 보십시오. 테이블을 게시하지만 테이블이 참조하는 함수는 게시하지 않는 경우가 있습니다. 함수를 게시하지 않을 경우 구독자에서 테이블을 만들 수 없습니다. 게시에 함수를 추가할 경우에는 **sp_addmergearticle** 의 **\@processing_order** 매개 변수에 값 **1** 을 지정하고 **sp_changemergearticle** 의 **\@processing_order** 매개 변수에 값 **2** 를 지정하며 **\@article** 매개 변수에는 테이블 이름을 지정합니다. 이 처리 순서를 사용하면 함수에 종속된 테이블이 생성되기 전에 해당 함수가 구독자에서 생성됩니다. 함수 번호가 테이블 번호보다 낮은 경우 각 아티클에 다른 번호를 사용할 수 있습니다.  
   
 1.  다음 방법 중 하나를 사용하여 하나 이상의 아티클을 추가합니다.  
   
@@ -84,7 +84,7 @@ ms.locfileid: "86923680"
  위에서 언급한 대로 경우에 따라서는 아티클을 삭제하면 구독을 삭제한 뒤 다시 만들고 동기화해야 합니다. 자세한 내용은 [게시 구독](../../../relational-databases/replication/subscribe-to-publications.md) 및 [데이터 동기화](../../../relational-databases/replication/synchronize-data.md)를 참조하세요.  
  
  > [!NOTE]
- > **[!INCLUDE[ssSQL15](../../../includes/sssql14-md.md)] 서비스 팩 2** 이상 및 **[!INCLUDE[ssSQL15](../../../includes/sssql15-md.md)] 서비스 팩 1** 이상에서는 트랜잭션 복제에 참여하는 아티클에 대한 **DROP TABLE** DLL 명령을 사용한 테이블 삭제를 지원합니다. 게시에서 DROP TABLE DDL이 지원되면 DROP TABLE 작업은 게시 및 데이터베이스에서 테이블을 삭제합니다. 로그 판독기 에이전트는 삭제된 테이블의 배포 데이터베이스에 대해 정리 명령을 게시하고 게시자 메타데이터를 정리합니다. 로그 판독기가 삭제된 테이블을 참조하는 일부 로그 레코드를 처리하지 않은 경우에는 삭제된 테이블과 연결된 새 명령을 무시합니다. 이미 처리된 레코드는 배포 데이터베이스로 전달됩니다. 로그 판독기가 오래된(삭제된) 아티클을 정리하기 전에 배포 에이전트가 이 레코드를 처리할 경우 이 레코드는 구독자 데이터베이스에 적용될 수 있습니다. 모든 트랜잭션 복제 게시에 대한 **기본** 설정은 DROP TABLE DLL을 지원하지 않는 것입니다. [KB 3170123](https://support.microsoft.com/help/3170123/supports-drop-table-ddl-for-articles-that-are-included-in-transactional-replication-in-sql-server-2014-or-in-sql-server-2016-sp1)에서 이 향상된 기능을 자세히 설명합니다.
+ > **[!INCLUDE[ssSQL15](../../../includes/sssql14-md.md)] 서비스 팩 2** 이상 및 **[!INCLUDE[ssSQL15](../../../includes/sssql15-md.md)] 서비스 팩 1** 이상에서는 트랜잭션 복제에 참여하는 아티클에 대한 **DROP TABLE** DDL 명령을 사용한 테이블 삭제를 지원합니다. 게시에서 DROP TABLE DDL이 지원되면 DROP TABLE 작업은 게시 및 데이터베이스에서 테이블을 삭제합니다. 로그 판독기 에이전트는 삭제된 테이블의 배포 데이터베이스에 대해 정리 명령을 게시하고 게시자 메타데이터를 정리합니다. 로그 판독기가 삭제된 테이블을 참조하는 일부 로그 레코드를 처리하지 않은 경우에는 삭제된 테이블과 연결된 새 명령을 무시합니다. 이미 처리된 레코드는 배포 데이터베이스로 전달됩니다. 로그 판독기가 오래된(삭제된) 아티클을 정리하기 전에 배포 에이전트가 이 레코드를 처리할 경우 이 레코드는 구독자 데이터베이스에 적용될 수 있습니다. 모든 트랜잭션 복제 게시에 대한 **기본** 설정은 DROP TABLE DDL을 지원하지 않는 것입니다. [KB 3170123](https://support.microsoft.com/help/3170123/supports-drop-table-ddl-for-articles-that-are-included-in-transactional-replication-in-sql-server-2014-or-in-sql-server-2016-sp1)에서 이 향상된 기능을 자세히 설명합니다.
 
   
 ## <a name="see-also"></a>참고 항목  

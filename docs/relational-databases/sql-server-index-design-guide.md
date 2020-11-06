@@ -23,12 +23,12 @@ ms.assetid: 11f8017e-5bc3-4bab-8060-c16282cfbac1
 author: rothja
 ms.author: jroth
 monikerRange: '>=aps-pdw-2016||=azuresqldb-current||=azure-sqldw-latest||>=sql-server-2016||=sqlallproducts-allversions||>=sql-server-linux-2017||=azuresqldb-mi-current'
-ms.openlocfilehash: b2dbc06494347c3c69798b5c45e779e0ebda6238
-ms.sourcegitcommit: 04cf7905fa32e0a9a44575a6f9641d9a2e5ac0f8
+ms.openlocfilehash: e982f8a8a2ee42c1ac2d84529a29842f8c4b4577
+ms.sourcegitcommit: 442fbe1655d629ecef273b02fae1beb2455a762e
 ms.translationtype: HT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 10/07/2020
-ms.locfileid: "91810446"
+ms.lasthandoff: 11/03/2020
+ms.locfileid: "93235570"
 ---
 # <a name="sql-server-index-architecture-and-design-guide"></a>SQL Server 인덱스 아키텍처 및 디자인 가이드
 [!INCLUDE[SQL Server Azure SQL Database Synapse Analytics PDW ](../includes/applies-to-version/sql-asdb-asdbmi-asa-pdw.md)]
@@ -62,7 +62,7 @@ XML 인덱스에 대한 자세한 내용은 [XML 인덱스 개요](../relational
     
  데이터베이스에 적합한 인덱스를 선택하는 것은 쿼리 속도와 업데이트 비용 간의 균형을 조정해야 하는 복잡한 작업입니다. 좁은 인덱스나 인덱스 키의 열이 적은 인덱스는 디스크 공간과 유지 관리 오버헤드를 덜 요구합니다. 반대로 넓은 인덱스는 더 많은 쿼리를 처리합니다. 가장 효율적인 인덱스를 찾기 위해 여러 디자인을 시험해 봐야 할 수 있습니다. 데이터베이스 스키마나 애플리케이션에 영향을 주지 않고 인덱스를 추가, 수정 및 삭제할 수 있습니다. 따라서 원하는 대로 여러 인덱스를 시험해 볼 수 있습니다.  
   
- [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)] 의 쿼리 최적화 프로그램은 대부분의 경우 가장 효율적인 인덱스를 제대로 찾습니다. 전체 인덱스 디자인 전략에서는 쿼리 최적화 프로그램이 가장 효율적인 인덱스를 찾을 수 있도록 다양한 인덱스를 제공하고 쿼리 최적화 프로그램의 선택을 신뢰해야 합니다. 이렇게 하면 분석 시간이 줄어들고 다양한 상황에서 좋은 성능을 얻을 수 있습니다. 특정 쿼리에 대해 쿼리 최적화 프로그램이 사용하는 인덱스를 확인하려면 [!INCLUDE[ssManStudioFull](../includes/ssmanstudiofull-md.md)]의 **쿼리** 메뉴에서 **실제 실행 계획 포함**을 선택합니다.  
+ [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)] 의 쿼리 최적화 프로그램은 대부분의 경우 가장 효율적인 인덱스를 제대로 찾습니다. 전체 인덱스 디자인 전략에서는 쿼리 최적화 프로그램이 가장 효율적인 인덱스를 찾을 수 있도록 다양한 인덱스를 제공하고 쿼리 최적화 프로그램의 선택을 신뢰해야 합니다. 이렇게 하면 분석 시간이 줄어들고 다양한 상황에서 좋은 성능을 얻을 수 있습니다. 특정 쿼리에 대해 쿼리 최적화 프로그램이 사용하는 인덱스를 확인하려면 [!INCLUDE[ssManStudioFull](../includes/ssmanstudiofull-md.md)]의 **쿼리** 메뉴에서 **실제 실행 계획 포함** 을 선택합니다.  
   
  인덱스 사용이 항상 좋은 성능을 의미하지 않으며 마찬가지로 좋은 성능이 항상 효율적인 인덱스 사용을 나타내는 것은 아닙니다. 인덱스 사용이 최상의 성능을 내는 데 항상 도움이 된다면 쿼리 최적화 프로그램의 작업은 간단할 것입니다. 실제로 인덱스를 잘못 선택하면 최상의 성능을 얻지 못할 수 있습니다. 따라서 쿼리 최적화 프로그램에서는 성능을 향상시킬 경우에만 인덱스나 인덱스 조합을 선택하고 성능을 저하시킬 경우에는 인덱싱된 검색을 피해야 합니다.  
 
@@ -107,7 +107,7 @@ XML 인덱스에 대한 자세한 내용은 [XML 인덱스 개요](../relational
   
 -   쿼리의 조건자 및 조인 조건에서 자주 사용되는 열에 대해 비클러스터형 인덱스를 만듭니다. 이는 SARGable<sup>1</sup> 열입니다. 불필요한 열은 추가하지 마십시오. 인덱스 열을 너무 많이 추가하면 디스크 공간 및 인덱스 유지 관리 성능이 떨어질 수 있습니다.  
   
--   인덱스를 포함하면 쿼리의 요구 사항을 만족시키는 데 필요한 모든 데이터가 인덱스 자체 내에 있기 때문에 쿼리 성능이 향상될 수 있습니다. 즉, 테이블이나 클러스터형 인덱스의 데이터 페이지가 아니라 인덱스 페이지만 있으면 요청된 데이터를 검색할 수 있으므로 전체적인 디스크 I/O가 줄어듭니다. 예를 들어 **a** , **b** 및 **c**열에 대해 만든 복합 인덱스가 포함된 테이블에서 **a**와 **b** 열을 쿼리하면 지정된 데이터를 인덱스 자체에서만 검색할 수 있습니다.  
+-   인덱스를 포함하면 쿼리의 요구 사항을 만족시키는 데 필요한 모든 데이터가 인덱스 자체 내에 있기 때문에 쿼리 성능이 향상될 수 있습니다. 즉, 테이블이나 클러스터형 인덱스의 데이터 페이지가 아니라 인덱스 페이지만 있으면 요청된 데이터를 검색할 수 있으므로 전체적인 디스크 I/O가 줄어듭니다. 예를 들어 **a** , **b** 및 **c** 열에 대해 만든 복합 인덱스가 포함된 테이블에서 **a** 와 **b** 열을 쿼리하면 지정된 데이터를 인덱스 자체에서만 검색할 수 있습니다.  
 
     > [!IMPORTANT]
     > 포함 인덱스는 기본 테이블에 액세스하지 않고 조회에서 발생하지 않고 직접 하나 이상의 비슷한 쿼리 결과를 확인하는 [비클러스터형 인덱스](#nonclustered-index-architecture)를 지정하는 것입니다.
@@ -118,14 +118,14 @@ XML 인덱스에 대한 자세한 내용은 [XML 인덱스 개요](../relational
   
 -   쿼리 유형 및 쿼리에서 열이 사용되는 방법을 평가합니다. 예를 들어 정확히 일치하는 쿼리 유형에서 사용되는 열은 비클러스터형 또는 클러스터형 인덱스로 만들면 좋습니다.
 
-<a name="sargable"></a><sup>1</sup> 관계형 데이터베이스에서 SARGable은 인덱스를 이용하여 쿼리 실행 속도를 높일 수 있는 **S**earch **ARG**ument-**able** 조건자를 나타냅니다.
+<a name="sargable"></a><sup>1</sup> 관계형 데이터베이스에서 SARGable은 인덱스를 이용하여 쿼리 실행 속도를 높일 수 있는 **S** earch **ARG** ument- **able** 조건자를 나타냅니다.
   
 ### <a name="column-considerations"></a>열 고려 사항  
  인덱스를 디자인할 때 다음과 같은 열 지침을 고려합니다.  
   
 -   클러스터형 인덱스의 인덱스 키 길이는 짧게 유지합니다. 또한 클러스터형 인덱스는 고유하거나 Null이 아닌 열에 만들어지는 이점이 있습니다.  
   
--   **ntext**, **text**, **image**, **varchar(max)** , **nvarchar(max)** 및 **varbinary(max)** 데이터 형식의 열은 인덱스 키 열로 지정할 수 없습니다. 그러나 **varchar(max)** , **nvarchar(max)** , **varbinary(max)** 및 **xml** 데이터 형식은 비클러스터형 인덱스에 키가 아닌 인덱스 열로 참여할 수 있습니다. 자세한 내용은 이 지침에서 ['포괄 열이 있는 인덱스](#Included_Columns)' 섹션을 참조하십시오.  
+-   **ntext** , **text** , **image** , **varchar(max)** , **nvarchar(max)** 및 **varbinary(max)** 데이터 형식의 열은 인덱스 키 열로 지정할 수 없습니다. 그러나 **varchar(max)** , **nvarchar(max)** , **varbinary(max)** 및 **xml** 데이터 형식은 비클러스터형 인덱스에 키가 아닌 인덱스 열로 참여할 수 있습니다. 자세한 내용은 이 지침에서 ['포괄 열이 있는 인덱스](#Included_Columns)' 섹션을 참조하십시오.  
   
 -   **xml** 데이터 형식은 XML 인덱스의 키 열만 될 수 있습니다. 자세한 내용은 [XML 인덱스&#40;SQL Server&#41;](../relational-databases/xml/xml-indexes-sql-server.md)를 참조하세요. SQL Server 2012 SP1에서는 선택적 XML 인덱스라고 하는 새로운 유형의 XML 인덱스를 제공합니다. 이 새 인덱스를 통해 SQL Server에서 XML로 저장된 데이터에 대해 쿼리 성능을 향상시킬 수 있어 대량의 XML 데이터 작업의 인덱싱을 훨씬 빠르게 하고 인덱스 자체의 스토리지 비용을 감소시켜 확장성을 향상할 수 있습니다. 자세한 내용은 [SXI&#40;선택적 XML 인덱스&#41;](../relational-databases/xml/selective-xml-indexes-sxi.md)를 참조하세요.  
   
@@ -192,7 +192,7 @@ ORDER BY RejectedQty DESC, ProductID ASC;
   
  이 쿼리에 대한 다음 실행 계획은 쿼리 최적화 프로그램에서 SORT 연산자를 사용하여 ORDER BY 절로 지정된 순서로 결과 집합을 반환했음을 보여 줍니다.  
   
- ![IndexSort1](../relational-databases/media/indexsort1.gif)
+ ![쿼리 최적화 프로그램에서 SORT 연산자를 사용하여 ORDER BY 절로 지정된 순서로 결과 집합을 반환했음을 보여 주는 이 쿼리에 대한 실행 계획의 다이어그램](../relational-databases/media/indexsort1.gif)
   
  쿼리의 ORDER BY 절에 있는 것과 일치하는 키 열로 인덱스가 생성되는 경우 쿼리 계획에서 SORT 연산자를 제거하여 쿼리 계획의 효율성을 향상시킬 수 있습니다.  
   
@@ -204,7 +204,7 @@ ON Purchasing.PurchaseOrderDetail
   
  쿼리가 다시 실행된 후 다음 실행 계획은 SORT 연산자가 제거되어 새로 생성된 비클러스터형 인덱스가 사용됨을 보여 줍니다.  
   
- ![InsertSort2](../relational-databases/media/insertsort2.gif)
+ ![SORT 연산자가 제거되었으며 새로 만든 비클러스터형 인덱스가 사용됨을 보여 주는 실행 계획의 다이어그램](../relational-databases/media/insertsort2.gif)
   
  [!INCLUDE[ssDE](../includes/ssde-md.md)] 은 어느 방향으로든 동일하게 효율적으로 이동할 수 있습니다. ORDER BY 절에 있는 열의 정렬 방향이 반대가 되는 쿼리에도 `(RejectedQty DESC, ProductID ASC)` 로 정의된 인덱스를 사용할 수 있습니다. 예를 들어 ORDER BY 절 `ORDER BY RejectedQty ASC, ProductID DESC` 를 포함하는 쿼리에 인덱스를 사용할 수 있습니다.  
   
@@ -322,7 +322,7 @@ ON Purchasing.PurchaseOrderDetail
   
  이 그림에서는 단일 파티션의 클러스터형 인덱스 구조를 보여 줍니다.  
  
- ![bokind2](../relational-databases/media/bokind2.gif)  
+ ![단일 파티션의 클러스터형 인덱스 구조를 보여 주는 다이어그램](../relational-databases/media/bokind2.gif)  
   
 ### <a name="query-considerations"></a>쿼리 고려 사항  
  클러스터형 인덱스를 만들기 전에 데이터가 액세스되는 방식을 이해해야 합니다. 다음을 수행하는 쿼리에는 클러스터형 인덱스를 사용하십시오.  
@@ -349,7 +349,7 @@ ON Purchasing.PurchaseOrderDetail
     > [!TIP]
     > 다르게 지정하지 않을 경우 [기본 키](../relational-databases/tables/create-primary-keys.md) 제약 조건을 만들면 [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)]은 해당 제약 조건을 지원하기 위한 [클러스터형 인덱스](#Clustered)를 만듭니다.
     > *[uniqueidentifier](../t-sql/data-types/uniqueidentifier-transact-sql.md)* 를 사용하여 기본 키로써 고유성을 적용할 수 있지만 효율적인 클러스터링 키가 아닙니다.
-    > 기본 키로 *uniqueidentifier*를 사용할 경우 비클러스터형 인덱스를 만들고 `IDENTITY` 같은 다른 열을 사용하여 클러스터형 인덱스를 만드는 것이 좋습니다.   
+    > 기본 키로 *uniqueidentifier* 를 사용할 경우 비클러스터형 인덱스를 만들고 `IDENTITY` 같은 다른 열을 사용하여 클러스터형 인덱스를 만드는 것이 좋습니다.   
   
 -   순차적인 액세스  
   
@@ -395,7 +395,7 @@ ON Purchasing.PurchaseOrderDetail
   
 다음 그림에서는 단일 파티션의 비클러스터형 인덱스 구조를 보여 줍니다.  
 
-![bokind1a](../relational-databases/media/bokind1a.gif)  
+![단일 파티션의 비클러스터형 인덱스 구조를 보여 주는 다이어그램](../relational-databases/media/bokind1a.gif)  
   
 ### <a name="database-considerations"></a>데이터베이스 고려 사항  
  비클러스터형 인덱스를 디자인할 때 데이터베이스의 특징을 고려해야 합니다.  
@@ -476,11 +476,11 @@ INCLUDE (FileName);
   
 -   키가 아닌 열은 테이블 또는 인덱싱된 뷰의 비클러스터형 인덱스에서만 정의될 수 있습니다.  
   
--   **text**, **ntext**및 **image**를 제외한 모든 데이터 형식을 사용할 수 있습니다.  
+-   **text** , **ntext** 및 **image** 를 제외한 모든 데이터 형식을 사용할 수 있습니다.  
   
 -   결정적이면서 정확하거나 정확하지 않은 계산 열은 포괄 열이 될 수 있습니다. 자세한 내용은 [Indexes on Computed Columns](../relational-databases/indexes/indexes-on-computed-columns.md)을 참조하세요.  
   
--   키 열과 마찬가지로 **image**, **ntext**및 **text** 데이터 형식에서 파생된 계산 열은 계산 열 데이터 형식이 키가 아닌 인덱스 열로 허용되는 동안 키가 아닌 포괄 열이 될 수 있습니다.  
+-   키 열과 마찬가지로 **image** , **ntext** 및 **text** 데이터 형식에서 파생된 계산 열은 계산 열 데이터 형식이 키가 아닌 인덱스 열로 허용되는 동안 키가 아닌 포괄 열이 될 수 있습니다.  
   
 -   열 이름은 INCLUDE 목록 및 키 열 목록 모두에서 지정될 수 없습니다.  
   
@@ -503,7 +503,7 @@ INCLUDE (FileName);
   
     -   열의 Null 허용 여부를 NOT NULL에서 NULL로 변경합니다.  
   
-    -   **varchar**, **nvarchar**또는 **varbinary** 열의 길이를 늘립니다.  
+    -   **varchar** , **nvarchar** 또는 **varbinary** 열의 길이를 늘립니다.  
   
         > [!NOTE]  
         >  이러한 열 수정 제한도 인덱스 키 열에 적용됩니다.  
@@ -567,7 +567,7 @@ INCLUDE (AddressLine1, AddressLine2, City, StateProvinceID);
 ##  <a name="filtered-index-design-guidelines"></a><a name="Filtered"></a> 필터링된 인덱스 디자인 지침  
  필터링된 인덱스는 특히 데이터의 잘 정의된 하위 집합에서 선택하는 쿼리를 처리하는 데 적합한 최적화된 비클러스터형 인덱스입니다. 이 인덱스에서는 필터 조건자를 사용하여 테이블의 일부 행을 인덱싱합니다. 잘 디자인된 필터링된 인덱스는 전체 테이블 인덱스에 비해 쿼리 성능을 개선하고 인덱스 유지 관리 비용과 인덱스 스토리지 비용을 줄일 수 있습니다.  
   
-**적용 대상**: [!INCLUDE[ssKatmai](../includes/sskatmai-md.md)] 부터 [!INCLUDE[ssCurrent](../includes/sscurrent-md.md)]까지  
+**적용 대상** : [!INCLUDE[ssKatmai](../includes/sskatmai-md.md)] 부터 [!INCLUDE[ssCurrent](../includes/sscurrent-md.md)]까지  
   
  필터링된 인덱스는 전체 테이블 인덱스에 비해 다음과 같은 이점이 있습니다.  
   
@@ -727,13 +727,13 @@ columnstore 인덱스에 대해 살펴볼 때 데이터 스토리지에 대한 �
 
   또한 columnstore 인덱스는 물리적으로 일부 행을 deltastore라는 rowstore 형식으로 저장합니다. 델타 행 그룹이라고도 하는 deltastore는 개수가 너무 적어서 columnstore로 압축할 수 없는 행을 보관하는 장소입니다. 각 델타 행 그룹은 클러스터형 B-트리 인덱스로 구현됩니다. 
 
-- **deltastore**는 개수가 너무 적어서 columnstore로 압축할 수 없는 행을 보관하는 장소입니다. deltastore는 rowstore 형식으로 행을 저장합니다. 
+- **deltastore** 는 개수가 너무 적어서 columnstore로 압축할 수 없는 행을 보관하는 장소입니다. deltastore는 rowstore 형식으로 행을 저장합니다. 
 
 columnstore 용어 및 개념에 대한 자세한 내용은 [columnstore 인덱스: 개요](../relational-databases/indexes/columnstore-indexes-overview.md)를 참조하세요.
   
 #### <a name="operations-are-performed-on-rowgroups-and-column-segments"></a>행 그룹 및 열 세그먼트에서 작업이 수행됨
 
-columnstore 인덱스는 행을 관리할 수 있는 단위로 그룹화합니다. 이러한 각 단위를 **행 그룹**이라고 합니다. 성능을 최적화하려면 행 그룹의 행 수가 압축률을 높일 만큼 크고, 메모리 내 작업을 활용할 만큼 작아야 합니다.
+columnstore 인덱스는 행을 관리할 수 있는 단위로 그룹화합니다. 이러한 각 단위를 **행 그룹** 이라고 합니다. 성능을 최적화하려면 행 그룹의 행 수가 압축률을 높일 만큼 크고, 메모리 내 작업을 활용할 만큼 작아야 합니다.
 
 예를 들어 columnstore 인덱스는 행 그룹에서 다음 작업을 수행합니다.
 
@@ -742,7 +742,7 @@ columnstore 인덱스는 행을 관리할 수 있는 단위로 그룹화합니�
 * `ALTER INDEX ... REBUILD` 작업 동안 새 행그룹을 만듭니다.
 * DMV(동적 관리 뷰)에서 행 그룹 상태 및 조각화를 보고합니다.
 
-deltastore는 **델타 행 그룹**이라는 하나 이상의 행 그룹으로 구성됩니다. 각 델타 행 그룹은 행 그룹에 1,048,576개의 행이 포함될 때(**튜플 이동기**라는 프로세스가 닫힌 행 그룹을 columnstore로 자동 압축함)까지 작은 대량 로드와 삽입을 저장하는 클러스터형 B-트리 인덱스입니다. 
+deltastore는 **델타 행 그룹** 이라는 하나 이상의 행 그룹으로 구성됩니다. 각 델타 행 그룹은 행 그룹에 1,048,576개의 행이 포함될 때( **튜플 이동기** 라는 프로세스가 닫힌 행 그룹을 columnstore로 자동 압축함)까지 작은 대량 로드와 삽입을 저장하는 클러스터형 B-트리 인덱스입니다. 
 
 행 그룹 상태에 대한 자세한 내용은 [sys.dm_db_column_store_row_group_physical_stats(Transact-SQL)](../relational-databases/system-dynamic-management-views/sys-dm-db-column-store-row-group-physical-stats-transact-sql.md)를 참조하세요. 
 
@@ -752,7 +752,7 @@ deltastore는 **델타 행 그룹**이라는 하나 이상의 행 그룹으로 �
 > [!NOTE]
 > [!INCLUDE[sql-server-2019](../includes/sssqlv15-md.md)]부터는 내부 임계값에 따라 특정 시간 동안 존재하던 더 작은 OPEN 델타 행 그룹을 자동으로 압축하거나 다수의 행이 삭제된 위치에서 COMPRESSED 행 그룹을 병합하는 백그라운드 병합 작업이 튜플 이동기를 지원합니다.      
 
-행 그룹마다 각 열의 일부 값이 있습니다. 이러한 값을 **열 세그먼트**라고 합니다. 각 행 그룹에는 테이블의 모든 열에 대해 각각 하나의 열 세그먼트가 포함됩니다. 행 그룹마다 각 열의 열 세그먼트 하나가 있습니다.
+행 그룹마다 각 열의 일부 값이 있습니다. 이러한 값을 **열 세그먼트** 라고 합니다. 각 행 그룹에는 테이블의 모든 열에 대해 각각 하나의 열 세그먼트가 포함됩니다. 행 그룹마다 각 열의 열 세그먼트 하나가 있습니다.
 
 ![열 세그먼트](../relational-databases/indexes/media/sql-server-pdw-columnstore-columnsegment.gif "열 세그먼트") 
  
@@ -821,7 +821,7 @@ columnstore 용어 및 개념에 대한 자세한 내용은 [columnstore 인덱�
 
 행을 함께 연결하는 인덱스이므로 모든 메모리 최적화 테이블에는 하나 이상의 인덱스가 있어야 합니다. 메모리 최적화 테이블에서는 모든 인덱스 또한 메모리 최적화되어 있습니다. 해시 인덱스는 메모리 최적화 테이블에 사용할 수 있는 인덱스 유형 중 하나입니다. 자세한 내용은 [메모리 최적화 테이블에 대한 인덱스](../relational-databases/in-memory-oltp/indexes-for-memory-optimized-tables.md)를 참조하세요.
 
-**적용 대상**: [!INCLUDE[ssSQL14](../includes/sssql14-md.md)] 부터 [!INCLUDE[ssCurrent](../includes/sscurrent-md.md)]까지  
+**적용 대상** : [!INCLUDE[ssSQL14](../includes/sssql14-md.md)] 부터 [!INCLUDE[ssCurrent](../includes/sscurrent-md.md)]까지  
 
 ### <a name="hash-index-architecture"></a>해시 인덱스 아키텍처
 해시 인덱스는 포인터 배열로 구성되며, 각 배열 요소를 해시 버킷이라고 합니다.
@@ -845,7 +845,7 @@ columnstore 용어 및 개념에 대한 자세한 내용은 [columnstore 인덱�
 - 여러 인덱스 키를 동일한 해시 버킷에 매핑할 수 있습니다.
 - 해시 함수는 균형을 이룹니다. 즉, 해시 버킷에 대한 인덱스 키 값의 분포는 일반적으로 평평한 선형 분포가 아닌 포아송 분포 또는 종형 곡선 분포를 따릅니다.
 - 포아송 분포는 균등한 분포가 아닙니다. 인덱스 키 값은 해시 버킷에 균등하게 분포되지 않습니다.
-- 두 인덱스 키가 동일한 해시 버킷에 매핑되면 *해시 충돌*이 발생합니다. 대부분의 해시 충돌은 읽기 작업의 성능에 영향을 줍니다. 현실적인 목표는 버킷의 30%에 2개의 서로 다른 키 값을 포함하는 것입니다.
+- 두 인덱스 키가 동일한 해시 버킷에 매핑되면 *해시 충돌* 이 발생합니다. 대부분의 해시 충돌은 읽기 작업의 성능에 영향을 줍니다. 현실적인 목표는 버킷의 30%에 2개의 서로 다른 키 값을 포함하는 것입니다.
   
 해시 인덱스와 버킷의 상호 작용은 다음 그림에 요약되어 있습니다.  
   
@@ -878,7 +878,7 @@ columnstore 용어 및 개념에 대한 자세한 내용은 [columnstore 인덱�
 해시 인덱스의 성능은 다음과 같습니다.  
   
 - `WHERE` 절의 조건자에서 해시 인덱스 키의 각 열에 대한 **정확한** 값을 지정할 때 뛰어난 성능을 보입니다. 해시 인덱스는 같지 않음 조건자가 주어진 경우 검색으로 되돌아갑니다. 
-- `WHERE` 절의 조건자에서 인덱스 키에 있는 값 **범위**를 찾을 때에는 성능이 저하됩니다.  
+- `WHERE` 절의 조건자에서 인덱스 키에 있는 값 **범위** 를 찾을 때에는 성능이 저하됩니다.  
 - `WHERE` 절의 조건자가 두 열로 된 해시 인덱스 키에서 **첫 번째** 열에 특정 값을 지정하지만 키의 **두 번째** 열에 값을 지정하지 않으면 성능이 저하됩니다.  
 
 > [!TIP]
@@ -913,7 +913,7 @@ HASH (Column2) WITH (BUCKET_COUNT = 64);
 
 비클러스터형 인덱스는 메모리 최적화 테이블에 사용할 수 있는 인덱스 유형 중 하나입니다. 자세한 내용은 [메모리 최적화 테이블에 대한 인덱스](../relational-databases/in-memory-oltp/indexes-for-memory-optimized-tables.md)를 참조하세요.
 
-**적용 대상**: [!INCLUDE[ssSQL14](../includes/sssql14-md.md)] 부터 [!INCLUDE[ssCurrent](../includes/sscurrent-md.md)]까지  
+**적용 대상** : [!INCLUDE[ssSQL14](../includes/sssql14-md.md)] 부터 [!INCLUDE[ssCurrent](../includes/sscurrent-md.md)]까지  
 
 ### <a name="in-memory-nonclustered-index-architecture"></a>메모리 내 비클러스터형 인덱스 아키텍처
 

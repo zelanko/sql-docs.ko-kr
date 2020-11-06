@@ -11,12 +11,12 @@ ms.topic: conceptual
 ms.assetid: 4b8fa2dd-1790-4289-8362-f11e6d63bb09
 author: markingmyname
 ms.author: maghan
-ms.openlocfilehash: 53d2ea62bebcce1df978a8b4e539c56408a9f673
-ms.sourcegitcommit: 04cf7905fa32e0a9a44575a6f9641d9a2e5ac0f8
+ms.openlocfilehash: 7e87d77eec096191c00a0ff7d68cd40dca713926
+ms.sourcegitcommit: 80701484b8f404316d934ad2a85fd773e26ca30c
 ms.translationtype: HT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 10/07/2020
-ms.locfileid: "91809199"
+ms.lasthandoff: 11/03/2020
+ms.locfileid: "93243584"
 ---
 # <a name="temporal-table-usage-scenarios"></a>Temporal 테이블 사용 시나리오
 
@@ -33,7 +33,7 @@ Temporal 시스템 버전 관리 테이블을 사용하면 개발 주기의 초�
 다음 다이어그램에서는 현재(파란색으로 표시) 및 기록 행 버전(회색으로 표시)을 포함한 데이터 샘플을 사용하여 Employee 테이블 시나리오를 보여 줍니다.
 다이어그램의 오른쪽 부분에서는 시간 축에 행 버전을 시각화하고, SYSTEM_TIME 절을 포함하거나 포함하지 않은 temporal 테이블의 여러 쿼리 형식으로 선택하는 행을 시각화합니다.
 
-![TemporalUsageScenario1](../../relational-databases/tables/media/temporalusagescenario1.png "TemporalUsageScenario1")
+![첫 번째 임시 사용 시나리오를 보여 주는 다이어그램](../../relational-databases/tables/media/temporalusagescenario1.png "TemporalUsageScenario1")
 
 ### <a name="enabling-system-versioning-on-a-new-table-for-data-audit"></a>데이터 감사를 위해 새 테이블에 시스템 버전 관리를 사용하도록 설정
 
@@ -175,7 +175,7 @@ AT TIME ZONE을 사용하는 것은 시스템 버전 관리된 테이블이 사�
 
 다음 다이어그램은 인벤토리 관리에 사용되는 간단한 데이터 모델을 보여 줍니다.
 
-![TemporalUsageInMemory](../../relational-databases/tables/media/temporalusageinmemory.png "TemporalUsageInMemory")
+![인벤토리 관리에 사용되는 간단한 데이터 모델을 보여 주는 다이어그램](../../relational-databases/tables/media/temporalusageinmemory.png "TemporalUsageInMemory")
 
 다음 코드 예제에서는 기록 테이블에서 클러스터형 columnstore 인덱스가 포함된 메모리 내 시스템 버전 관리된 temporal 테이블로 ProductInventory를 만듭니다(기본적으로 만든 행 저장소 인덱스를 실제로 바꿈).
 
@@ -261,7 +261,7 @@ END;
 
 SpUpdateInventory 저장 프로시저에서는 인벤토리에 새 제품을 삽입하거나 특정 위치에 대한 제품 수량을 업데이트합니다. 비즈니스 논리는 매우 간단하며, 테이블 업데이트를 통해 수량 필드를 증분/감소하여 항상 최신 상태를 정확하게 유지하는 데 중점을 둡니다. 반면 시스템 버전 관리 테이블은 아래 다이어그램에 표시된 대로 데이터에 기록 차원을 투명하게 추가합니다.
 
-![TemporalUsageInMemory2b](../../relational-databases/tables/media/temporalusageinmemory2b.png "TemporalUsageInMemory2b")
+![현재 메모리 내 사용 현황 및 클러스터형 columnstore의 기록 사용 현황이 포함된 temporal 사용 현황을 보여 주는 다이어그램](../../relational-databases/tables/media/temporalusageinmemory2b.png "TemporalUsageInMemory2b")
 
 이제 최신 상태에 대한 쿼리를 네이티브 컴파일 모듈에서 효율적으로 수행할 수 있습니다.
 
@@ -295,7 +295,7 @@ SELECT * FROM vw_GetProductInventoryHistory
 
 아래 다이어그램은 파워 쿼리, Power BI 또는 유사한 비즈니스 인텔리전스 도구에서 위의 보기를 가져와 쉽게 렌더링할 수 있는 제품 한 개에 대한 데이터 기록을 보여 줍니다.
 
-![ProductHistoryOverTime](../../relational-databases/tables/media/producthistoryovertime.png "ProductHistoryOverTime")
+![한 제품의 데이터 기록을 보여 주는 다이어그램](../../relational-databases/tables/media/producthistoryovertime.png "ProductHistoryOverTime")
 
 이 시나리오에서는 임시 테이블을 사용하여 과거의 지정 시간을 기준으로 인벤토리 상태를 다시 생성하거나 다른 시간에 속해 있는 스냅샷을 비교하는 작업과 같이 다른 형식의 시간 이동 분석을 수행합니다.
 
@@ -348,7 +348,7 @@ SELECT * FROM vw_ProductInventoryDetails
 
 다음 그림에서는 SELECT 쿼리에 대해 생성된 실행 계획을 보여 줍니다. 임시 관계를 처리하는 모든 복잡한 작업들이 SQL Server 엔진에서 완벽하게 처리되는 것을 확인할 수 있습니다.
 
-![ASOFExecutionPlan](../../relational-databases/tables/media/asofexecutionplan.png "ASOFExecutionPlan")
+![임시 관계를 처리하는 모든 복잡성이 SQL Server 엔진에 의해 완전히 처리됨을 설명하는 SELECT 쿼리에 대해 생성된 실행 계획을 보여 주는 다이어그램](../../relational-databases/tables/media/asofexecutionplan.png "ASOFExecutionPlan")
 
 다음 코드를 사용하여 두 지정 시간 간(하루 전 및 한 달 전) 제품 인벤토리의 상태를 비교합니다.
 
@@ -390,7 +390,7 @@ CREATE TABLE [dbo].[Product]
 
 다음 다이어그램에서는 시간의 흐름에 따라 발생한 구매를 보여 줍니다.
 
-![TemporalAnomalyDetection](../../relational-databases/tables/media/temporalanomalydetection.png "TemporalAnomalyDetection")
+![시간에 따른 구매를 보여 주는 다이어그램](../../relational-databases/tables/media/temporalanomalydetection.png "TemporalAnomalyDetection")
 
 평소에는 구매한 제품 수의 차이가 적다고 가정할 때 다음 쿼리에서는 싱글톤 이상값이 식별됩니다. 주변 샘플은 서로 차이가 크지 않은 반면에(20% 미만) 바로 인접해 있는 샘플과 비교할 때 차이가 큰(2배) 샘플이 이와 같은 이상값에 해당합니다.
 
@@ -466,7 +466,7 @@ ALTER TABLE DimLocation SET (SYSTEM_VERSIONING = ON (HISTORY_TABLE = dbo.DimLoca
 
 다음 그림에서는 SCD 2개(DimLocation과 DimProduct)와 팩트 테이블 1개가 포함된 간단한 시나리오에서 임시 테이블을 사용하는 방법에 대해 보여 줍니다.
 
-![TemporalSCD](../../relational-databases/tables/media/temporalscd.png "TemporalSCD")
+![SCD 2개(DimLocation과 DimProduct)와 팩트 테이블 1개가 포함된 간단한 시나리오에서 임시 테이블을 사용하는 방법을 보여 주는 다이어그램](../../relational-databases/tables/media/temporalscd.png "TemporalSCD")
 
 위의 SCD를 보고서에서 사용하려면 쿼리를 효과적으로 조정해야 합니다. 예를 들어 지난 6개월 동안 1인당 판매된 제품 수의 평균과 총 판매액을 계산할 수 있습니다. 분석에 중요한 특성을 변경했을 수도 있는 팩트 테이블과 차원에서의 데이터의 상관 관계가 두 메트릭에 모두 필요합니다(DimLocation.NumOfCustomers, DimProduct.UnitPrice). 다음 쿼리에서는 필요한 메트릭을 올바르게 계산합니다.
 
@@ -539,13 +539,13 @@ UPDATE Employee
 
 다음 그림은 프로시저 호출 이전 및 이후 행의 상태를 보여 줍니다. 빨간색 직사각형은 잘못된 현재 행 버전을 표시하고, 녹색 직사각형은 기록에서 올바른 버전을 표시합니다.
 
-![TemporalUsageRepair1](../../relational-databases/tables/media/temporalusagerepair1.png "TemporalUsageRepair1")
+![프로시저 호출 전후 행의 상태를 보여 주는 스크린샷](../../relational-databases/tables/media/temporalusagerepair1.png "TemporalUsageRepair1")
 
 ```sql
 EXEC sp_RepairEmployeeRecord @EmployeeID = 1, @versionNumber = 1
 ```
 
-![TemporalUsageRepair2](../../relational-databases/tables/media/temporalusagerepair2.png "TemporalUsageRepair2")
+![수정된 행을 보여 주는 스크린샷](../../relational-databases/tables/media/temporalusagerepair2.png "TemporalUsageRepair2")
 
 이 복구 저장 프로시저는 행 버전 대신 정확한 타임스탬프를 허용하도록 정의할 수 있습니다. 이렇게 하면 행이 제공된 지정 시간에 활성 상태였던 버전으로 복원됩니다(예: 지정 시간 기준).
 
@@ -567,11 +567,11 @@ UPDATE Employee
 
 동일한 데이터 샘플에 대해 다음 그림은 시간 조건이 포함된 복구 시나리오를 보여 줍니다. @asOf 매개 변수, 제공된 지정 시간에 실제로 있었던 기록에서 선택한 행, 그리고 복구 작업 후 현재 테이블의 새 행 버전이 강조 표시되어 있습니다.
 
-![TemporalUsageRepair3](../../relational-databases/tables/media/temporalusagerepair3.png "TemporalUsageRepair3")
+![시간 조건이 포함된 복구 시나리오를 보여 주는 스크린샷](../../relational-databases/tables/media/temporalusagerepair3.png "TemporalUsageRepair3")
 
 데이터 수정은 데이터 웨어하우징 및 보고 시스템에서 자동화된 데이터 로드 작업에 포함될 수 있습니다. 새로 업데이트된 값이 올바르지 않으면 여러 시나리오에서 기록에서 이전 버전을 복원하는 것이 문제를 완화시킬 수 있는 충분한 방법입니다. 다음 다이어그램은 이 프로세스를 자동화하는 방법을 보여 줍니다.
 
-![TemporalUsageRepair4](../../relational-databases/tables/media/temporalusagerepair4.png "TemporalUsageRepair4")
+![프로세스를 자동화할 수 있는 방법을 보여 주는 다이어그램](../../relational-databases/tables/media/temporalusagerepair4.png "TemporalUsageRepair4")
 
 ## <a name="next-steps"></a>다음 단계
 

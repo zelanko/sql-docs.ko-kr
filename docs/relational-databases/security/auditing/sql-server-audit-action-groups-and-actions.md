@@ -22,12 +22,12 @@ helpviewer_keywords:
 ms.assetid: b7422911-7524-4bcd-9ab9-e460d5897b3d
 author: DavidTrigano
 ms.author: datrigan
-ms.openlocfilehash: 68943b7b57794d779656ca8537a7c59d4f486db8
-ms.sourcegitcommit: e08d28530e0ee93c78a4eaaee8800fd687babfcc
+ms.openlocfilehash: 51f971caef999424e002a49ab357e33fd1f0657a
+ms.sourcegitcommit: 80701484b8f404316d934ad2a85fd773e26ca30c
 ms.translationtype: HT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 07/14/2020
-ms.locfileid: "86301902"
+ms.lasthandoff: 11/03/2020
+ms.locfileid: "93243575"
 ---
 # <a name="sql-server-audit-action-groups-and-actions"></a>SQL Server 감사 동작 그룹 및 동작
 [!INCLUDE [SQL Server](../../../includes/applies-to-version/sqlserver.md)]
@@ -82,7 +82,7 @@ ms.locfileid: "86301902"
 |BATCH_STARTED_GROUP|일괄 처리 텍스트, 저장 프로시저 또는 트랜잭션 관리 작업의 실행이 시작될 때마다 발생하는 이벤트입니다. 실행 전에 발생하고 클라이언트에서 보낸 전체 일괄 처리 또는 저장 프로시저 텍스트를 감사합니다. **SQL Server 2019에 추가되었습니다.**|  
 |BROKER_LOGIN_GROUP|Service Broker 전송 보안과 연관된 감사 메시지를 보고하기 위해 발생하는 이벤트입니다. [Audit Broker Login Event Class](../../../relational-databases/event-classes/audit-broker-login-event-class.md)와 동일합니다.|  
 |DATABASE_CHANGE_GROUP|데이터베이스가 생성, 변경 또는 삭제되면 발생하면 발생하는 이벤트입니다. 이 이벤트는 모든 데이터베이스가 생성, 변경 또는 삭제될 때마다 발생합니다. [Audit Database Management Event Class](../../../relational-databases/event-classes/audit-database-management-event-class.md)와 동일합니다.|  
-|DATABASE_LOGOUT_GROUP|포함된 데이터베이스 사용자가 데이터베이스에서 로그아웃하면 발생하는 이벤트입니다.|  
+|DATABASE_LOGOUT_GROUP|이 이벤트는 포함된 데이터베이스 사용자가 [Audit Logout Event Class](../../../relational-databases/event-classes/audit-logout-event-class.md)와 동일한 데이터베이스에서 로그 아웃할 때 발생합니다.|  
 |DATABASE_MIRRORING_LOGIN_GROUP|데이터베이스 미러링 전송 보안과 연관된 감사 메시지를 보고하기 위해 발생하는 이벤트입니다. [Audit Database Mirroring Login Event Class](../../../relational-databases/event-classes/audit-database-mirroring-login-event-class.md)와 동일합니다.|  
 |DATABASE_OBJECT_ACCESS_GROUP|메시지 유형, 어셈블리, 계약과 같은 데이터베이스 개체에 액세스할 때마다 발생하는 이벤트입니다. 이 이벤트는 모든 데이터베이스의 모든 액세스에 대해 발생합니다. 참고: 이로 인해 다량의 감사 레코드가 생성될 수 있습니다.<br /><br /> [Audit Database Object Access Event Class](../../../relational-databases/event-classes/audit-database-object-access-event-class.md)와 동일합니다.|  
 |DATABASE_OBJECT_CHANGE_GROUP|스키마와 같은 데이터베이스 개체에 대해 CREATE, ALTER 또는 DROP 문이 실행되면 발생하는 이벤트입니다. 이 이벤트는 모든 데이터베이스 개체가 생성, 변경 또는 삭제될 때마다 발생합니다. 참고: 이로 인해 다량의 감사 레코드가 생성될 수 있습니다.<br /><br /> [Audit Database Object Management Event Class](../../../relational-databases/event-classes/audit-database-object-management-event-class.md)와 동일합니다.|  
@@ -141,7 +141,7 @@ ms.locfileid: "86301902"
 |BATCH_COMPLETED_GROUP|일괄 처리 텍스트, 저장 프로시저 또는 트랜잭션 관리 작업의 실행이 완료될 때마다 발생하는 이벤트입니다. 일괄 처리가 완료된 후 발생하고 결과를 포함하여 클라이언트에서 보낸 전체 일괄 처리 또는 저장 프로시저 텍스트를 감사합니다.|  
 |BATCH_STARTED_GROUP|일괄 처리 텍스트, 저장 프로시저 또는 트랜잭션 관리 작업의 실행이 시작될 때마다 발생하는 이벤트입니다. 실행 전에 발생하고 클라이언트에서 보낸 전체 일괄 처리 또는 저장 프로시저 텍스트를 감사합니다.|  
 |DATABASE_CHANGE_GROUP|데이터베이스가 생성, 변경 또는 삭제되면 발생하면 발생하는 이벤트입니다. [Audit Database Management Event Class](../../../relational-databases/event-classes/audit-database-management-event-class.md)와 동일합니다.|  
-|DATABASE_LOGOUT_GROUP|포함된 데이터베이스 사용자가 데이터베이스에서 로그아웃하면 발생하는 이벤트입니다. [감사 백업 및 이벤트 클래스 복원](../../../relational-databases/event-classes/audit-backup-and-restore-event-class.md)과 동일합니다.|  
+|DATABASE_LOGOUT_GROUP|포함된 데이터베이스 사용자가 데이터베이스에서 로그아웃하면 발생하는 이벤트입니다.|  
 |DATABASE_OBJECT_ACCESS_GROUP|인증서 및 비대칭 키와 같은 데이터베이스 개체에 액세스할 때마다 발생하는 이벤트입니다. [Audit Database Object Access Event Class](../../../relational-databases/event-classes/audit-database-object-access-event-class.md)와 동일합니다.|  
 |DATABASE_OBJECT_CHANGE_GROUP|스키마와 같은 데이터베이스 개체에 대해 CREATE, ALTER 또는 DROP 문이 실행되면 발생하는 이벤트입니다. [Audit Database Object Management Event Class](../../../relational-databases/event-classes/audit-database-object-management-event-class.md)와 동일합니다.|  
 |DATABASE_OBJECT_OWNERSHIP_CHANGE_GROUP|데이터베이스 범위 내에서 개체에 대한 소유자가 변경되면 발생하는 이벤트입니다. [Audit Database Object Take Ownership Event Class](../../../relational-databases/event-classes/audit-database-object-take-ownership-event-class.md)와 동일합니다.|  
@@ -165,7 +165,7 @@ ms.locfileid: "86301902"
 ## <a name="database-level-audit-actions"></a>데이터베이스 수준 감사 동작  
  데이터베이스 수준 동작은 데이터베이스 스키마 및 스키마 개체(예: 테이블, 뷰, 저장 프로시저, 함수, 확장 저장 프로시저, 큐, 동의어)에 대한 특정 동작을 직접 감사할 수 있습니다. 유형, XML 스키마 컬렉션, 데이터베이스 및 스키마는 감사되지 않습니다. 스키마 개체 감사는 스키마 및 데이터베이스에 구성될 수 있습니다. 이 경우 지정된 스키마 또는 데이터베이스에 포함된 모든 스키마 개체의 이벤트가 감사됩니다. 다음 표에서는 데이터베이스 수준 감사 동작에 대해 설명합니다.  
   
-|작업|Description|  
+|작업|설명|  
 |------------|-----------------|  
 |SELECT|SELECT를 실행할 때마다 발생하는 이벤트입니다.|  
 |UPDATE|UPDATE를 실행할 때마다 발생하는 이벤트입니다.|  

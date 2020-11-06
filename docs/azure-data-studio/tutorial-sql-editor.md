@@ -9,12 +9,12 @@ ms.author: maghan
 ms.reviewer: alayu, maghan, sstein
 ms.custom: seodec18; seo-lt-2019
 ms.date: 09/24/2018
-ms.openlocfilehash: bd604ea3ad643aa7f70d0be2a1ee7727810b6705
-ms.sourcegitcommit: dc8a30a4a27e15fc6671ca2674da9b7c637ec255
+ms.openlocfilehash: e2c200bc57bc62a54a9850e85e13b9c9f15c49f0
+ms.sourcegitcommit: 80701484b8f404316d934ad2a85fd773e26ca30c
 ms.translationtype: HT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 08/21/2020
-ms.locfileid: "88745713"
+ms.lasthandoff: 11/03/2020
+ms.locfileid: "93243382"
 ---
 # <a name="tutorial-use-the-transact-sql-editor-to-create-database-objects---azure-data-studio"></a>자습서: Transact-SQL 편집기를 사용하여 데이터베이스 개체 만들기 - Azure Data Studio
 
@@ -30,7 +30,7 @@ ms.locfileid: "88745713"
 
 ## <a name="prerequisites"></a>필수 구성 요소
 
-이 자습서를 완료하려면 SQL Server 또는 Azure SQL Database *TutorialDB*가 필요합니다. *TutorialDB* 데이터베이스를 만들려면 다음 빠른 시작 중 하나를 완료합니다.
+이 자습서를 완료하려면 SQL Server 또는 Azure SQL Database *TutorialDB* 가 필요합니다. *TutorialDB* 데이터베이스를 만들려면 다음 빠른 시작 중 하나를 완료합니다.
 
 - [[!INCLUDE[name-sos-short](../includes/name-sos-short.md)]를 사용하여 SQL Server 연결 및 쿼리](quickstart-sql-server.md)
 - [[!INCLUDE[name-sos-short](../includes/name-sos-short.md)]를 사용하여 Azure SQL Database 연결 및 쿼리](quickstart-sql-database.md)
@@ -40,20 +40,20 @@ ms.locfileid: "88745713"
 
 [!INCLUDE[name-sos-short](../includes/name-sos-short.md)]는 데이터베이스 개체를 빠르게 찾을 수 있는 검색 위젯을 제공합니다. 결과 목록에는 테이블에 대한 ‘데이터 편집’과 같이 선택한 개체와 관련된 일반 작업의 상황에 맞는 메뉴가 제공됩니다.
 
-1. 서버 사이드바를 열고(**Ctrl+G**), **데이터베이스**를 확장하고, **TutorialDB**를 선택합니다. 
+1. 서버 사이드바를 열고( **Ctrl+G** ), **데이터베이스** 를 확장하고, **TutorialDB** 를 선택합니다. 
 
-1. **TutorialDB**를 마우스 오른쪽 단추로 클릭하고 상황에 맞는 메뉴에서 **관리**를 선택하여 ‘TutorialDB 대시보드’를 엽니다.
+1. **TutorialDB** 를 마우스 오른쪽 단추로 클릭하고 상황에 맞는 메뉴에서 **관리** 를 선택하여 ‘TutorialDB 대시보드’를 엽니다.
 
    ![상황에 맞는 메뉴 - 관리](./media/tutorial-sql-editor/insight-open-dashboard.png)
 
-1. 대시보드의 검색 위젯에서 **dbo.Customers**를 마우스 오른쪽 단추로 클릭하고 **데이터 편집**을 선택합니다.
+1. 대시보드의 검색 위젯에서 **dbo.Customers** 를 마우스 오른쪽 단추로 클릭하고 **데이터 편집** 을 선택합니다.
    
    > [!TIP]
    > 많은 개체가 포함된 데이터베이스의 경우 검색 위젯을 사용하여 검색할 테이블, 뷰 등을 빠르게 찾을 수 있습니다.
 
    ![빠른 검색 위젯](./media/tutorial-sql-editor/quick-search-widget.png)
 
-1. 첫 번째 행에서 **Email** 열을 편집하고 *orlando0\@adventure-works.com*을 입력한 다음 **Enter**를 눌러 변경 내용을 저장합니다.
+1. 첫 번째 행에서 **Email** 열을 편집하고 *orlando0\@adventure-works.com* 을 입력한 다음 **Enter** 를 눌러 변경 내용을 저장합니다.
 
    ![데이터 편집](./media/tutorial-sql-editor/edit-data.png)
 
@@ -62,17 +62,17 @@ ms.locfileid: "88745713"
 Azure Data Studio는 문을 빠르게 만들기 위한 다양한 기본 제공 T-SQL 코드 조각을 제공합니다.
 
 
-1. **Ctrl+N**을 눌러 새 쿼리 편집기를 엽니다.
+1. **Ctrl+N** 을 눌러 새 쿼리 편집기를 엽니다.
 
-2. 편집기에 **sql**을 입력하고, 아래쪽 화살표로 **sqlCreateStoredProcedure**를 선택하고, *Tab* 키(또는 *Enter* 키)를 눌러 저장 프로시저 만들기 코드 조각을 로드합니다.
+2. 편집기에 **sql** 을 입력하고, 아래쪽 화살표로 **sqlCreateStoredProcedure** 를 선택하고, *Tab* 키(또는 *Enter* 키)를 눌러 저장 프로시저 만들기 코드 조각을 로드합니다.
 
-   ![코드 조각 목록](./media/tutorial-sql-editor/snippet-list.png)
+   ![편집기에 sql이 입력되고 sqlCreateStoredProcedure 옵션이 호출된 쿼리 편집기를 보여 주는 스크린샷](./media/tutorial-sql-editor/snippet-list.png)
 
-3. 저장 프로시저 만들기 코드 조각에는 빠른 편집을 위해 *StoredProcedureName* 및 *SchemaName* 필드가 설정되어 있습니다. *StoredProcedureName*을 선택하고, 마우스 오른쪽 단추를 클릭하고, **모든 항목 변경**을 선택합니다. 이제 *getCustomer*를 입력하면 모든 *StoredProcedureName* 항목이 *getCustomer*로 변경됩니다.
+3. 저장 프로시저 만들기 코드 조각에는 빠른 편집을 위해 *StoredProcedureName* 및 *SchemaName* 필드가 설정되어 있습니다. *StoredProcedureName* 을 선택하고, 마우스 오른쪽 단추를 클릭하고, **모든 항목 변경** 을 선택합니다. 이제 *getCustomer* 를 입력하면 모든 *StoredProcedureName* 항목이 *getCustomer* 로 변경됩니다.
 
-   ![코드 조각](./media/tutorial-sql-editor/snippet.png)
+   ![모든 항목 변경 옵션이 호출된 쿼리 편집기를 보여 주는 스크린샷](./media/tutorial-sql-editor/snippet.png)
 
-5. 모든 *SchemaName* 항목을 *dbo*로 변경합니다. 
+5. 모든 *SchemaName* 항목을 *dbo* 로 변경합니다. 
 6. 코드 조각에는 자리 표시자 매개 변수 및 업데이트해야 하는 본문 텍스트가 포함됩니다. *EXECUTE* 문에는 프로시저에 포함할 매개 변수 수를 알 수 없으므로 자리 표시자 텍스트도 포함됩니다. 이 자습서에서는 다음 코드와 같이 표시되도록 코드 조각을 업데이트합니다.
 
     ```sql
@@ -115,10 +115,10 @@ Azure Data Studio는 문을 빠르게 만들기 위한 다양한 기본 제공 T
 
 Azure Data Studio는 정의 피킹 기능을 사용하여 개체 정의를 보는 기능을 제공합니다. 이 섹션에서는 두 번째 저장 프로시저를 만들고 정의 피킹(peeking)을 사용하여 테이블에 있는 열을 확인하고 저장 프로시저의 본문을 빠르게 만듭니다.
 
-1. **Ctrl+N**을 눌러 새 편집기를 엽니다. 
+1. **Ctrl+N** 을 눌러 새 편집기를 엽니다. 
 
-2. 편집기에 *sql*을 입력하고, 아래쪽 화살표로 *sqlCreateStoredProcedure*를 선택하고, *Tab* 키(또는 *Enter* 키)를 눌러 저장 프로시저 만들기 코드 조각을 로드합니다.
-3. *StoredProcedureName*에 대해 *setCustomer*를 입력하고 *SchemaName*에 대해 *dbo*를 입력합니다.
+2. 편집기에 *sql* 을 입력하고, 아래쪽 화살표로 *sqlCreateStoredProcedure* 를 선택하고, *Tab* 키(또는 *Enter* 키)를 눌러 저장 프로시저 만들기 코드 조각을 로드합니다.
+3. *StoredProcedureName* 에 대해 *setCustomer* 를 입력하고 *SchemaName* 에 대해 *dbo* 를 입력합니다.
 
 3. @param 자리 표시자를 다음 매개 변수 정의로 바꿉니다.
 
@@ -131,7 +131,7 @@ Azure Data Studio는 정의 피킹 기능을 사용하여 개체 정의를 보�
    INSERT INTO dbo.Customers
    ```
 
-5. 방금 추가한 *INSERT* 줄에서 **dbo.Customers**를 마우스 오른쪽 단추로 클릭하고 **정의 피킹(Peeking)** 을 선택합니다.
+5. 방금 추가한 *INSERT* 줄에서 **dbo.Customers** 를 마우스 오른쪽 단추로 클릭하고 **정의 피킹(Peeking)** 을 선택합니다.
 
    ![정의 피킹(Peeking)](./media/tutorial-sql-editor/peek-definition.png)
 
@@ -183,15 +183,15 @@ Azure Data Studio는 정의 피킹 기능을 사용하여 개체 정의를 보�
 
 이전 섹션에서 만든 *setCustomer* 저장 프로시저에서는 JSON 데이터를 *\@json_val* 매개 변수에 전달해야 합니다. 이 섹션에서는 저장 프로시저를 테스트할 수 있도록 매개 변수에 전달할 올바른 형식의 JSON을 가져오는 방법을 보여 줍니다.
 
-1. **서버** 사이드바에서 *dbo.Customers* 테이블을 마우스 오른쪽 단추로 클릭하고 **SELECT TOP 1000 Rows**를 클릭합니다.
+1. **서버** 사이드바에서 *dbo.Customers* 테이블을 마우스 오른쪽 단추로 클릭하고 **SELECT TOP 1000 Rows** 를 클릭합니다.
 
-2. 결과 뷰에서 첫 번째 행을 선택하고, 전체 행이 선택되었는지 확인하고(맨 왼쪽 열에서 숫자 1 클릭), **JSON으로 저장**을 선택합니다.  
-3. 나중에 파일을 삭제할 수 있도록 기억할 위치로 폴더를 변경하고(예: 바탕 화면) **저장**을 클릭합니다. JSON 형식 파일이 열립니다.
+2. 결과 뷰에서 첫 번째 행을 선택하고, 전체 행이 선택되었는지 확인하고(맨 왼쪽 열에서 숫자 1 클릭), **JSON으로 저장** 을 선택합니다.  
+3. 나중에 파일을 삭제할 수 있도록 기억할 위치로 폴더를 변경하고(예: 바탕 화면) **저장** 을 클릭합니다. JSON 형식 파일이 열립니다.
 
    ![JSON으로 저장](./media/tutorial-sql-editor/save-as-json.png)
 
 4. 편집기에서 JSON 데이터를 선택하고 복사합니다.
-5. **Ctrl+N**을 눌러 새 편집기를 엽니다.
+5. **Ctrl+N** 을 눌러 새 편집기를 엽니다.
 6. 이전 단계에서는 *setCustomer* 프로시저에 대한 호출을 완료하기 위해 올바른 형식의 데이터를 쉽게 가져오는 방법을 보여 줍니다. 다음 코드에서는 새 고객 세부 정보와 함께 동일한 JSON 형식을 사용하므로 *setCustomer* 프로시저를 테스트할 수 있습니다. 이 문에는 매개 변수를 선언하고 새 get 및 set 프로시저를 실행하는 구문이 포함됩니다. 이전 섹션에서 복사한 데이터를 붙여넣고 다음 예제와 동일하게 편집하거나 다음 문을 쿼리 편집기에 붙여넣을 수 있습니다.
 
    ```sql

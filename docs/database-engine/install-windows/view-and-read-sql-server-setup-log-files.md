@@ -19,32 +19,32 @@ ms.assetid: 9d77af64-9084-4375-908a-d90f99535062
 author: MashaMSFT
 ms.author: mathoma
 monikerRange: '>=sql-server-2016||=sqlallproducts-allversions'
-ms.openlocfilehash: 68efda5b93663c2980e10f49c9b8592d08ee02d6
-ms.sourcegitcommit: 2f868a77903c1f1c4cecf4ea1c181deee12d5b15
+ms.openlocfilehash: 5f3e65de977926076ec10ef1609bf712c9579faa
+ms.sourcegitcommit: 80701484b8f404316d934ad2a85fd773e26ca30c
 ms.translationtype: HT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 10/02/2020
-ms.locfileid: "91670234"
+ms.lasthandoff: 11/03/2020
+ms.locfileid: "93243822"
 ---
 # <a name="view-and-read-sql-server-setup-log-files"></a>SQL Server 설치 로그 파일 보기 및 읽기
 
 [!INCLUDE [SQL Server -Windows Only](../../includes/applies-to-version/sql-windows-only.md)]
 
-SQL Server 설치 프로그램은 기본적으로 **\%programfiles%\Microsoft SQL Server\\*nnn*\Setup Bootstrap\Log** 내의 일자 및 시간 스탬프가 포함된 폴더에서 로그 파일을 만듭니다. 여기서 *nnn*은 설치되는 SQL 버전에 해당하는 숫자입니다. 타임스탬프 로그 폴더 이름 형식은 YYYYMMDD_hhmmss입니다. 설치 프로그램을 무인 모드로 실행하면 % temp%\sqlsetup*.log 내에 로그가 생성됩니다. 로그 폴더의 모든 파일은 각각의 로그 폴더에 Log\*.cab 파일로 보관됩니다.  
+SQL Server 설치 프로그램은 기본적으로 **\%programfiles%\Microsoft SQL Server\\*nnn* \Setup Bootstrap\Log** 내의 일자 및 시간 스탬프가 포함된 폴더에서 로그 파일을 만듭니다. 여기서 *nnn* 은 설치되는 SQL 버전에 해당하는 숫자입니다. 타임스탬프 로그 폴더 이름 형식은 YYYYMMDD_hhmmss입니다. 설치 프로그램을 무인 모드로 실행하면 % temp%\sqlsetup*.log 내에 로그가 생성됩니다. 로그 폴더의 모든 파일은 각각의 로그 폴더에 Log\*.cab 파일로 보관됩니다.  
 
    | 파일           | 경로 |
    | :------        | :----------------------------- |
-   | **Summary.txt**    | \%programfiles%\Microsoft SQL Server\\*nnn*\Setup Bootstrap\Log |
-   | **Summary_\<MachineName>\_Date.txt**  | \%programfiles%\Microsoft SQL Server\\*nnn*\Setup Bootstrap\Log\YYYYMMDD_hhmmss |
-   | **Detail.txt** | \%programfiles%\Microsoft SQL Server\\*nnn*\Setup Bootstrap\Log\YYYYMMDD_hhmmss|
-   | **Datastore** | \%programfiles%\Microsoft SQL Server\\*nnn*\Setup Bootstrap\Log\YYYYMMDD_hhmmss\Datastore
-   | **MSI 로그 파일** | \%programfiles%\Microsoft SQL Server\\*nnn*\Setup Bootstrap\Log\YYYYMMDD_hhmmss\\\<Name>.log|
-   | **ConfigurationFile.ini** | \%programfiles%\Microsoft SQL Server\\*nnn*\Setup Bootstrap\Log\YYYYMMDD_hhmmss |
-   | **SystemConfigurationCheck_Report.htm** | \%programfiles%\Microsoft SQL Server\\*nnn*\Setup Bootstrap\Log\YYYYMMDD_hhmmss |
+   | **Summary.txt**    | \%programfiles%\Microsoft SQL Server\\*nnn* \Setup Bootstrap\Log |
+   | **Summary_\<MachineName>\_Date.txt**  | \%programfiles%\Microsoft SQL Server\\*nnn* \Setup Bootstrap\Log\YYYYMMDD_hhmmss |
+   | **Detail.txt** | \%programfiles%\Microsoft SQL Server\\*nnn* \Setup Bootstrap\Log\YYYYMMDD_hhmmss|
+   | **Datastore** | \%programfiles%\Microsoft SQL Server\\*nnn* \Setup Bootstrap\Log\YYYYMMDD_hhmmss\Datastore
+   | **MSI 로그 파일** | \%programfiles%\Microsoft SQL Server\\*nnn* \Setup Bootstrap\Log\YYYYMMDD_hhmmss\\\<Name>.log|
+   | **ConfigurationFile.ini** | \%programfiles%\Microsoft SQL Server\\*nnn* \Setup Bootstrap\Log\YYYYMMDD_hhmmss |
+   | **SystemConfigurationCheck_Report.htm** | \%programfiles%\Microsoft SQL Server\\*nnn* \Setup Bootstrap\Log\YYYYMMDD_hhmmss |
    | **무인 설치용** | %temp%\sqlsetup*.log |
 
 
- ![setup-bootstrap-example.png](media/view-and-read-sql-server-setup-log-files/setup-bootstrap-example.png)
+ ![설치 부트스트랩 폴더에서 ConfigurationFiles.ini 파일을 찾을 수 있는 위치를 보여 주는 스크린샷](media/view-and-read-sql-server-setup-log-files/setup-bootstrap-example.png)
 
  >[!NOTE]
  > *nnn* 경로에 있는 숫자는 설치 중인 SQL 버전에 해당합니다. 위의 그림에서는 SQL 2017이 설치되었으므로 폴더가 140입니다. SQL 2016의 폴더는 130이고, SQL 2014의 폴더는 120입니다.
@@ -86,7 +86,7 @@ SQL Server 설치 프로그램은 기본적으로 **\%programfiles%\Microsoft SQ
   > 패치 적용 시 유사한 파일 집합이 포함된 하위 폴더(패치 중인 각 인스턴스와 공유 기능당 하나씩)가 여러 개 있을 수 있습니다(예: %programfiles%\MicrosoftSQL Server\130\Setup Bootstrap\Log\<YYYYMMDD_HHMM>\MSSQLSERVER). 
   
 ### <a name="location"></a>위치  
- summary.txt는 %programfiles%\\[!INCLUDE[msCoName](../../includes/msconame-md.md)][!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]\\*nnn*\Setup Bootstrap\Log\\ 내에 있습니다.
+ summary.txt는 %programfiles%\\[!INCLUDE[msCoName](../../includes/msconame-md.md)][!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]\\*nnn* \Setup Bootstrap\Log\\ 내에 있습니다.
   
  요약 텍스트 파일에서 오류를 찾으려면 "오류" 또는 "실패" 키워드를 사용하여 파일을 검색하십시오.
   
@@ -96,7 +96,7 @@ SQL Server 설치 프로그램은 기본적으로 **\%programfiles%\Microsoft SQ
  summary_engine base 파일은 요약 파일과 비슷하며 주 워크플로 중에 생성됩니다.
   
 ### <a name="location"></a>위치  
- Summary_\<MachineName>_YYYYMMDD_HHMMss.txt 파일은 %programfiles%\\[!INCLUDE[msCoName](../../includes/msconame-md.md)][!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]\\*nnn*\Setup Bootstrap\Log\\<YYYYMMDD_HHMM>\\에 있습니다.
+ Summary_\<MachineName>_YYYYMMDD_HHMMss.txt 파일은 %programfiles%\\[!INCLUDE[msCoName](../../includes/msconame-md.md)][!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]\\*nnn* \Setup Bootstrap\Log\\<YYYYMMDD_HHMM>\\에 있습니다.
   
   
 ## <a name="detailtxt-file"></a>Detail.txt 파일
@@ -105,7 +105,7 @@ SQL Server 설치 프로그램은 기본적으로 **\%programfiles%\Microsoft SQ
  Detail.txt는 설치 또는 업그레이드와 같은 주 워크플로 중에 생성되며 실행 세부 사항을 제공합니다. 이 파일의 로그는 각 설치 동작이 호출된 경우 시간을 기준으로 생성됩니다. 이 텍스트 파일은 동작이 실행된 순서와 종속성을 보여 줍니다.  
   
 ### <a name="location"></a>위치  
- Detail.txt 파일은 %programfiles%\\[!INCLUDE[msCoName](../../includes/msconame-md.md)][!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]\\*nnn*\Setup Bootstrap\Log\\<YYYYMMDD_HHMM>\Detail.txt 내에 있습니다.  
+ Detail.txt 파일은 %programfiles%\\[!INCLUDE[msCoName](../../includes/msconame-md.md)][!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]\\*nnn* \Setup Bootstrap\Log\\<YYYYMMDD_HHMM>\Detail.txt 내에 있습니다.  
   
  설치 프로세스 중에 오류가 발생하면 이 파일 끝에 예외나 오류가 로깅됩니다. 이 파일에서 오류를 찾으려면 먼저 파일 끝을 검사한 다음, "오류" 또는 "예외" 키워드로 파일을 검색하세요.
     
@@ -121,7 +121,7 @@ SQL Server 설치 프로그램은 기본적으로 **\%programfiles%\Microsoft SQ
 -   \<Feature>_\<Architecture>\_\<Interaction>\_\<workflow>.log  
   
 ### <a name="location"></a>위치  
- MSI 로그 파일은 %programfiles%\\[!INCLUDE[msCoName](../../includes/msconame-md.md)][!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]\\*nnn*\Setup Bootstrap\Log\\<YYYYMMDD_HHMM>\\<Name\>.log에 있습니다.  
+ MSI 로그 파일은 %programfiles%\\[!INCLUDE[msCoName](../../includes/msconame-md.md)][!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]\\*nnn* \Setup Bootstrap\Log\\<YYYYMMDD_HHMM>\\<Name\>.log에 있습니다.  
   
  파일 끝에 성공/실패 상태 및 속성을 포함하는 실행 요약이 표시됩니다. MSI 파일에서 오류를 찾으려면 "값 3"을 검색하고 이전 및 이후 텍스트를 검토합니다.  
   
@@ -131,7 +131,7 @@ SQL Server 설치 프로그램은 기본적으로 **\%programfiles%\Microsoft SQ
  구성 파일은 설치 중에 제공된 입력 설정을 포함합니다. 이 파일을 사용하면 수동으로 설정을 입력하지 않고도 설치를 다시 시작할 수 있습니다. 그러나 계정의 암호, PID 및 일부 매개 변수는 구성 파일에 저장되지 않습니다. 이러한 설정은 파일에 추가하거나 명령줄 또는 설치 사용자 인터페이스를 사용하여 제공할 수 있습니다. 자세한 내용은 [구성 파일을 사용하여 SQL Server 2016 설치](./install-sql-server-using-a-configuration-file.md)를 참조하세요.  
   
 ### <a name="location"></a>위치  
- ConfigurationFile.ini는 %programfiles%\\[!INCLUDE[msCoName](../../includes/msconame-md.md)][!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]\\*nnn*\Setup Bootstrap\Log\\<YYYYMMDD_HHMM>\\에 있습니다.  
+ ConfigurationFile.ini는 %programfiles%\\[!INCLUDE[msCoName](../../includes/msconame-md.md)][!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]\\*nnn* \Setup Bootstrap\Log\\<YYYYMMDD_HHMM>\\에 있습니다.  
   
 ## <a name="systemconfigurationcheck_reporthtm-file"></a>SystemConfigurationCheck_Report.htm 파일
   
@@ -139,7 +139,7 @@ SQL Server 설치 프로그램은 기본적으로 **\%programfiles%\Microsoft SQ
  시스템 구성 검사 보고서는 각 실행 규칙에 대한 간단한 설명과 실행 상태를 포함합니다.
   
 ### <a name="location"></a>위치  
-SystemConfigurationCheck_Report.htm은 %programfiles%\\[!INCLUDE[msCoName](../../includes/msconame-md.md)][!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]\\*nnn*\Setup Bootstrap\Log\\<YYYYMMDD_HHMM>\\에 있습니다.
+SystemConfigurationCheck_Report.htm은 %programfiles%\\[!INCLUDE[msCoName](../../includes/msconame-md.md)][!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]\\*nnn* \Setup Bootstrap\Log\\<YYYYMMDD_HHMM>\\에 있습니다.
 
 [!INCLUDE[get-help-options](../../includes/paragraph-content/get-help-options.md)]
   

@@ -9,12 +9,12 @@ ms.author: maghan
 ms.reviewer: alayu; sstein
 ms.custom: seodec18; seo-lt-2019
 ms.date: 06/01/2020
-ms.openlocfilehash: 678d985daf2ca3130fbf7eb3b052718c3cc898ab
-ms.sourcegitcommit: dc8a30a4a27e15fc6671ca2674da9b7c637ec255
+ms.openlocfilehash: 8137ca8f37254bab94dfaae6d9c8072c293a81ff
+ms.sourcegitcommit: 80701484b8f404316d934ad2a85fd773e26ca30c
 ms.translationtype: HT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 08/21/2020
-ms.locfileid: "88746193"
+ms.lasthandoff: 11/03/2020
+ms.locfileid: "93243392"
 ---
 # <a name="tutorial-add-the-five-slowest-queries-sample-widget-to-the-database-dashboard"></a>자습서: 데이터베이스 대시보드에 *5개의 가장 느린 쿼리* 샘플 위젯 추가
 
@@ -30,7 +30,7 @@ Azure Data Studio에는 기본 제공되는 몇 가지 인사이트 위젯이 �
 
 ## <a name="prerequisites"></a>필수 구성 요소
 
-이 자습서를 완료하려면 SQL Server 또는 Azure SQL Database *TutorialDB*가 필요합니다. *TutorialDB* 데이터베이스를 만들려면 다음 빠른 시작 중 하나를 완료합니다.
+이 자습서를 완료하려면 SQL Server 또는 Azure SQL Database *TutorialDB* 가 필요합니다. *TutorialDB* 데이터베이스를 만들려면 다음 빠른 시작 중 하나를 완료합니다.
 
 * [[!INCLUDE[name-sos-short](../includes/name-sos-short.md)]를 사용하여 SQL Server 연결 및 쿼리](quickstart-sql-server.md)
 
@@ -40,9 +40,9 @@ Azure Data Studio에는 기본 제공되는 몇 가지 인사이트 위젯이 �
 
 이 예제의 위젯을 사용하려면 ‘쿼리 저장소’를 사용하도록 설정해야 합니다.
 
-1. **서버** 사이드바에서 **TutorialDB** 데이터베이스를 마우스 오른쪽 단추로 클릭하고 **새 쿼리**를 선택합니다.
+1. **서버** 사이드바에서 **TutorialDB** 데이터베이스를 마우스 오른쪽 단추로 클릭하고 **새 쿼리** 를 선택합니다.
 
-2. 다음 Transact-SQL(T-SQL) 문을 쿼리 편집기에 붙여넣고 **실행**을 클릭합니다.
+2. 다음 Transact-SQL(T-SQL) 문을 쿼리 편집기에 붙여넣고 **실행** 을 클릭합니다.
 
    ```sql
     ALTER DATABASE TutorialDB SET QUERY_STORE = ON
@@ -52,13 +52,13 @@ Azure Data Studio에는 기본 제공되는 몇 가지 인사이트 위젯이 �
 
 대시보드에 ‘느린 쿼리 위젯’을 추가하려면 ‘사용자 설정’ 파일에서 *dashboard.database.widgets* 설정을 편집합니다. 
 
-1. **Ctrl+Shift+P**를 눌러 ‘명령 팔레트’를 열고 ‘사용자 설정’을 엽니다. 
+1. **Ctrl+Shift+P** 를 눌러 ‘명령 팔레트’를 열고 ‘사용자 설정’을 엽니다. 
 
-2. 검색 상자에 ‘설정’을 입력하고 **기본 설정: 사용자 설정 열기**를 선택합니다.
+2. 검색 상자에 ‘설정’을 입력하고 **기본 설정: 사용자 설정 열기** 를 선택합니다.
 
    ![사용자 설정 열기 명령](./media/tutorial-qds-sql-server/open-user-settings.png)
 
-3. 설정 검색 상자에 ‘대시보드’를 입력하고 **dashboard.database.widgets**로 이동하여 ‘settings.json에서 편집’을 클릭합니다. 
+3. 설정 검색 상자에 ‘대시보드’를 입력하고 **dashboard.database.widgets** 로 이동하여 ‘settings.json에서 편집’을 클릭합니다. 
 
    ![설정 검색](./media/tutorial-qds-sql-server/search-settings.png)
 
@@ -98,9 +98,9 @@ Azure Data Studio에는 기본 제공되는 몇 가지 인사이트 위젯이 �
    ]
    ```
 
-5. **Ctrl+S**를 눌러 수정한 **사용자 설정**을 저장합니다.
+5. **Ctrl+S** 를 눌러 수정한 **사용자 설정** 을 저장합니다.
 
-6. **서버** 사이드바의 **TutorialDB**로 이동하여 ‘데이터베이스 대시보드’를 열고 마우스 오른쪽 단추를 클릭한 후 **관리**를 선택합니다.
+6. **서버** 사이드바의 **TutorialDB** 로 이동하여 ‘데이터베이스 대시보드’를 열고 마우스 오른쪽 단추를 클릭한 후 **관리** 를 선택합니다.
 
    ![대시보드 열기](./media/tutorial-qds-sql-server/insight-open-dashboard.png)
 
@@ -110,7 +110,7 @@ Azure Data Studio에는 기본 제공되는 몇 가지 인사이트 위젯이 �
 
 ## <a name="view-insight-details-for-more-information"></a>자세한 내용은 인사이트 세부 정보 보기
 
-1. 인사이트 위젯에 대한 추가 정보를 보려면 오른쪽 상단의 줄임표( **...** )를 클릭하고 **세부 정보 표시**를 선택합니다.
+1. 인사이트 위젯에 대한 추가 정보를 보려면 오른쪽 상단의 줄임표( **...** )를 클릭하고 **세부 정보 표시** 를 선택합니다.
 
 2. 항목의 세부 정보를 보려면 **차트 데이터** 목록에서 항목을 선택합니다.
 
@@ -120,9 +120,9 @@ Azure Data Studio에는 기본 제공되는 몇 가지 인사이트 위젯이 �
 
 ## <a name="view-the-query-plan"></a>쿼리 계획 보기
 
-1. **TutorialDB**를 마우스 오른쪽 단추로 클릭하고 *관리*를 선택합니다.
+1. **TutorialDB** 를 마우스 오른쪽 단추로 클릭하고 *관리* 를 선택합니다.
 
-2. **저속 쿼리 위젯**에서 인사이트 위젯에 대한 추가 정보를 보려면 오른쪽 상단의 줄임표( *...* )를 클릭하고 **쿼리 실행**를 선택합니다.
+2. **저속 쿼리 위젯** 에서 인사이트 위젯에 대한 추가 정보를 보려면 오른쪽 상단의 줄임표( *...* )를 클릭하고 **쿼리 실행** 를 선택합니다.
 
     ![쿼리 실행](media/tutorial-qds-sql-server/run-query.png)
 
@@ -130,13 +130,13 @@ Azure Data Studio에는 기본 제공되는 몇 가지 인사이트 위젯이 �
 
     ![쿼리 결과 실행](media/tutorial-qds-sql-server/run-query-results.png)
 
-4. **설명**을 클릭합니다.
+4. **설명** 을 클릭합니다.
 
    ![인사이트 QDS 설명](./media/tutorial-qds-sql-server/insight-qds-explain.png)
 
 5. 쿼리의 실행 계획 보기:
 
-   ![실행 계획(showplan)](./media/tutorial-qds-sql-server/showplan.png)
+   ![쿼리의 실행 계획을 보여 주는 스크린샷](./media/tutorial-qds-sql-server/showplan.png)
 
 ## <a name="next-steps"></a>다음 단계
 

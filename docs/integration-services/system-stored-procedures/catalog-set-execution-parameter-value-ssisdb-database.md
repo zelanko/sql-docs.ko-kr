@@ -11,12 +11,12 @@ ms.topic: language-reference
 ms.assetid: 055d86c9-befd-4e63-acb1-6dfe833549d2
 author: chugugrace
 ms.author: chugu
-ms.openlocfilehash: 7cc721f7f3568303d9fbb9f9a5f0724f8548207d
-ms.sourcegitcommit: e700497f962e4c2274df16d9e651059b42ff1a10
+ms.openlocfilehash: 5775b87b13fc126907dfc0f121e9838c2d490fd0
+ms.sourcegitcommit: 80701484b8f404316d934ad2a85fd773e26ca30c
 ms.translationtype: HT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 08/17/2020
-ms.locfileid: "88425115"
+ms.lasthandoff: 11/03/2020
+ms.locfileid: "93243665"
 ---
 # <a name="catalogset_execution_parameter_value-ssisdb-database"></a>catalog.set_execution_parameter_value(SSISDB 데이터베이스)
 
@@ -40,12 +40,12 @@ catalog.set_execution_parameter_value [ @execution_id = execution_id
   
 ## <a name="arguments"></a>인수  
  [ @execution_id = ] *execution_id*  
- 실행 인스턴스의 고유 식별자입니다. *execution_id*는 **bigint**입니다.  
+ 실행 인스턴스의 고유 식별자입니다. *execution_id* 는 **bigint** 입니다.  
   
  [ @object_type = ] *object_type*  
  매개 변수의 유형입니다.  
   
- 다음 매개 변수의 경우 *object_type*을 50으로 설정합니다.  
+ 다음 매개 변수의 경우 *object_type* 을 50으로 설정합니다.  
   
 -   LOGGING_LEVEL  
   
@@ -63,18 +63,18 @@ catalog.set_execution_parameter_value [ @execution_id = execution_id
   
  프로젝트 매개 변수를 나타내려면 값 `20`을 사용하고, 패키지 매개 변수를 나타내려면 값 `30`을 사용합니다.  
   
- *object_type*은 **smallint**입니다.  
+ *object_type* 은 **smallint** 입니다.  
   
  [ @parameter_name = ] *parameter_name*  
- 매개 변수의 이름입니다. *parameter_name*은 **nvarchar(128)** 입니다.  
+ 매개 변수의 이름입니다. *parameter_name* 은 **nvarchar(128)** 입니다.  
   
  [ @parameter_value = ] *parameter_value*  
- 매개 변수의 값입니다. *parameter_value*는 **sql_variant**입니다.  
+ 매개 변수의 값입니다. *parameter_value* 는 **sql_variant** 입니다.  
   
 ## <a name="remarks"></a>설명  
  주어진 실행에 사용된 매개 변수 값을 확인하려면 catalog.execution_parameter_values 뷰를 쿼리하십시오.  
   
- 패키지 실행 중에 기록되는 정보의 범위를 지정하려면, *parameter_name*을 LOGGING_LEVEL로 설정하고 *parameter_value*를 다음 값 중 하나로 설정합니다.  
+ 패키지 실행 중에 기록되는 정보의 범위를 지정하려면, *parameter_name* 을 LOGGING_LEVEL로 설정하고 *parameter_value* 를 다음 값 중 하나로 설정합니다.  
   
  *object_type* 매개 변수를 50으로 설정합니다.  
   
@@ -114,7 +114,10 @@ catalog.set_execution_parameter_value [ @execution_id = execution_id
 |*parameter_name*|DUMP_EVENT_CODE|  
 |*parameter_value*|하나 이상의 이벤트 코드|  
   
-## <a name="example"></a>예제  
+## <a name="examples"></a>예제  
+
+### <a name="a-generate-dump-files-for-errors"></a>A. 오류에 대한 덤프 파일 생성
+
  다음 예는 패키지 실행 도중 오류 발생 시 Integration Services 서버가 덤프 파일을 생성하도록 지정합니다.  
   
 ```sql
@@ -122,7 +125,8 @@ exec catalog.create_execution  'TR2','Recurring ETL', 'Dim_DCVendor.dtsx',NULL, 
 exec catalog.set_execution_parameter_value  @execution_id, 50, 'DUMP_ON_ERROR',1  
 ```  
   
-## <a name="example"></a>예제  
+### <a name="b-generate-dump-files-for-events"></a>B. 이벤트에 대한 덤프 파일 생성
+
  다음 예는 패키지 실행 도중 이벤트 발생 시 Integration Services 서버가 덤프 파일을 생성하도록 지정하며 서버에서 파일이 생성되도록 하는 이벤트를 지정합니다.  
   
 ```sql

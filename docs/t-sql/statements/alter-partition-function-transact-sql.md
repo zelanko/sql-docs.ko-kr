@@ -26,12 +26,12 @@ helpviewer_keywords:
 ms.assetid: 70866dac-0a8f-4235-8108-51547949ada4
 author: markingmyname
 ms.author: maghan
-ms.openlocfilehash: 28d8fbb68542055be87ed8ebafd3d95b224ccf63
-ms.sourcegitcommit: dd36d1cbe32cd5a65c6638e8f252b0bd8145e165
+ms.openlocfilehash: d405c656af3265d09340ceeef42ac0423efd6a85
+ms.sourcegitcommit: b09f069c6bef0655b47e9953a4385f1b52bada2b
 ms.translationtype: HT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 09/08/2020
-ms.locfileid: "89544350"
+ms.lasthandoff: 10/27/2020
+ms.locfileid: "92734624"
 ---
 # <a name="alter-partition-function-transact-sql"></a>ALTER PARTITION FUNCTION(Transact-SQL)
 [!INCLUDE [SQL Server SQL Database](../../includes/applies-to-version/sql-asdb.md)]
@@ -62,7 +62,7 @@ ALTER PARTITION FUNCTION partition_function_name()
 수정할 파티션 함수의 이름입니다.  
   
 SPLIT RANGE ( *boundary_value* )  
-하나의 파티션을 파티션 함수에 추가합니다. *boundary_value*는 새 파티션의 범위를 결정하며 반드시 파티션 함수의 기존 경계 범위와 달라야 합니다. *boundary_value*에 따라 [!INCLUDE[ssDE](../../includes/ssde-md.md)]은 하나의 기존 범위를 둘로 나눕니다. 이 두 범위 중에서 새 *boundary_value*가 있는 범위가 새 파티션입니다.  
+하나의 파티션을 파티션 함수에 추가합니다. *boundary_value* 는 새 파티션의 범위를 결정하며 반드시 파티션 함수의 기존 경계 범위와 달라야 합니다. *boundary_value* 에 따라 [!INCLUDE[ssDE](../../includes/ssde-md.md)]은 하나의 기존 범위를 둘로 나눕니다. 이 두 범위 중에서 새 *boundary_value* 가 있는 범위가 새 파티션입니다.  
   
 파일 그룹은 온라인 상태로 존재해야 합니다. 새 파티션을 포함할 파티션 함수를 NEXT USED로 사용하는 파티션 구성표가 파일 그룹을 표시해야 합니다. CREATE PARTITION SCHEME 문은 파티션에 파일 그룹을 할당합니다. CREATE PARTITION FUNCTION 문은 파일 그룹을 포함할 파티션을 파일 그룹보다 적게 만듭니다. CREATE PARTITION SCHEME 문이 필요한 것보다 많은 파일 그룹을 확보할 수도 있습니다. 이 경우 할당되지 않은 파일 그룹으로 끝나게 됩니다. 또한 파티션 구성표는 파일 그룹 중 하나를 NEXT USED로 표시합니다. 이 파일 그룹은 새 파티션을 포함합니다. 파티션 구성표가 NEXT USED로 표시하는 파일 그룹이 없는 경우 ALTER PARTITION SCHEME 문을 사용해야 합니다. 
 
@@ -73,8 +73,8 @@ ALTER PARTITION SCHEME 문은 새 파티션을 포함할 파일 그룹을 추가
 > [!NOTE]  
 >  columnstore 인덱스의 제한 사항: 테이블에 columnstore 인덱스가 있으면 빈 파티션만 분할할 수 있습니다. 이 작업을 수행하기 전에 columnstore 인덱스를 삭제하거나 사용하지 않도록 설정해야 합니다.  
   
-MERGE [ RANGE ( *boundary_value*) ]  
-파티션을 삭제하고 해당 파티션에 있는 모든 값을 나머지 파티션으로 병합합니다. RANGE(*boundary_value*)는 삭제된 파티션의 값을 병합하는 기존의 경계 값이어야 합니다. 원래 *boundary_value*를 포함한 파일 그룹을 나머지 파티션이 사용하거나 NEXT USED 속성으로 표시하지 않는 한 이 인수는 해당 파일 그룹을 파티션 구성표에서 제거합니다. 병합된 파티션은 처음에 *boundary_value*를 포함하지 않았던 파일 그룹에 있습니다. *boundary_value*는 변수(사용자 정의 형식 변수 포함) 또는 함수(사용자 정의 함수 포함)를 참조할 수 있는 상수 식입니다. [!INCLUDE[tsql](../../includes/tsql-md.md)] 식을 참조할 수 없습니다. *boundary_value*는 해당 분할 열의 데이터 형식과 일치하거나 이 데이터 형식으로의 암시적 변환되어야 합니다. *boundary_value*는 암시적인 변환 중에 값의 크기 및 소수 자릿수가 해당 *input_parameter_type*과 일치하지 않는 방식으로 자를 수도 없습니다.  
+MERGE [ RANGE ( *boundary_value* ) ]  
+파티션을 삭제하고 해당 파티션에 있는 모든 값을 나머지 파티션으로 병합합니다. RANGE( *boundary_value* )는 삭제할 파티션의 기존 경계 값이어야 합니다. 원래 *boundary_value* 를 포함한 파일 그룹을 나머지 파티션이 사용하거나 NEXT USED 속성으로 표시하지 않는 한 이 인수는 해당 파일 그룹을 파티션 구성표에서 제거합니다. 병합된 파티션은 처음에 *boundary_value* 를 포함하지 않았던 파일 그룹에 있습니다. *boundary_value* 는 변수(사용자 정의 형식 변수 포함) 또는 함수(사용자 정의 함수 포함)를 참조할 수 있는 상수 식입니다. [!INCLUDE[tsql](../../includes/tsql-md.md)] 식을 참조할 수 없습니다. *boundary_value* 는 해당 분할 열의 데이터 형식과 일치하거나 이 데이터 형식으로의 암시적 변환되어야 합니다. *boundary_value* 는 암시적인 변환 중에 값의 크기 및 소수 자릿수가 해당 *input_parameter_type* 과 일치하지 않는 방식으로 자를 수도 없습니다.  
   
 > [!NOTE]  
 >  columnstore 인덱스 관련 제한 사항: columnstore 인덱스가 포함된 두 개의 비어 있지 않은 파티션은 병합할 수 없습니다. 이 작업을 수행하기 전에 columnstore 인덱스를 삭제하거나 사용하지 않도록 설정해야 합니다.  

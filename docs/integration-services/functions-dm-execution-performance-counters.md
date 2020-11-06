@@ -11,12 +11,12 @@ ms.topic: language-reference
 ms.assetid: 1b38e8e3-c560-4b6e-b60e-bfd7cfcd4fdf
 author: chugugrace
 ms.author: chugu
-ms.openlocfilehash: fea0c2df2ec25493e09214289802824ffe5f93ba
-ms.sourcegitcommit: e700497f962e4c2274df16d9e651059b42ff1a10
+ms.openlocfilehash: 19111422e69b2ce77f53e13bb6d1a450b4ef7692
+ms.sourcegitcommit: 80701484b8f404316d934ad2a85fd773e26ca30c
 ms.translationtype: HT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 08/17/2020
-ms.locfileid: "88430245"
+ms.lasthandoff: 11/03/2020
+ms.locfileid: "93243689"
 ---
 # <a name="functions---dm_execution_performance_counters"></a>함수 - dm_execution_performance_counters
 
@@ -35,7 +35,7 @@ dm_execution_performance_counters [ @execution_id = ] execution_id
  [ @execution_id = ] *execution_id*  
  하나 이상의 패키지가 포함된 실행의 고유 식별자입니다. 패키지 실행 태스크로 실행되는 패키지는 부모 패키지와 같은 실행 인스턴스에서 실행됩니다.  
   
- 실행 ID를 지정하지 않으면 여러 실행에 대한 성능 통계가 반환됩니다. **ssis_admin** 데이터베이스 역할의 멤버에게는 진행 중인 모든 실행에 대한 성능 통계가 반환됩니다.  **ssis_admin** 데이터베이스 역할이 아닌 멤버에게는 읽기 권한이 있는 진행 중인 실행에 대한 성능 통계가 반환됩니다. *execution_id*는 **BigInt**입니다.  
+ 실행 ID를 지정하지 않으면 여러 실행에 대한 성능 통계가 반환됩니다. **ssis_admin** 데이터베이스 역할의 멤버에게는 진행 중인 모든 실행에 대한 성능 통계가 반환됩니다.  **ssis_admin** 데이터베이스 역할이 아닌 멤버에게는 읽기 권한이 있는 진행 중인 실행에 대한 성능 통계가 반환됩니다. *execution_id* 는 **BigInt** 입니다.  
   
 ## <a name="remarks"></a>설명  
  다음 표에서는 dm_execution_performance_counter 함수에서 반환된 카운터 이름 값을 보여 줍니다.  
@@ -60,18 +60,22 @@ dm_execution_performance_counters [ @execution_id = ] execution_id
   
 |열 이름|열 유형|Description|설명|  
 |-----------------|-----------------|-----------------|-------------|  
-|execution_id|**BigInt**<br /><br /> **NULL**은 유효한 값이 아닙니다.|패키지를 포함한 실행의 고유 식별자입니다.||  
+|execution_id|**BigInt**<br /><br /> **NULL** 은 유효한 값이 아닙니다.|패키지를 포함한 실행의 고유 식별자입니다.||  
 |counter_name|**nvarchar(128)**|카운터의 이름입니다.|값의 **설명** 섹션을 참조하세요.|  
 |counter_value|**BigInt**|카운터가 반환하는 값입니다.||  
   
-## <a name="example"></a>예제  
+## <a name="examples"></a>예제  
+
+### <a name="a-return-statistics-for-a-running-execution"></a>A. 하나의 실행 중인 실행에 대한 통계 반환
+
  다음 예에서는 이 함수가 ID가 34인 실행 인스턴스에 대한 통계를 반환합니다.  
   
 ```sql
 select * from [catalog].[dm_execution_performance_counters] (34)  
 ```  
   
-## <a name="example"></a>예제  
+### <a name="b-return-statistics-for-all-running-executions"></a>B. 모든 실행 중인 실행에 대한 통계 반환
+
  다음 예에서는 이 함수가 사용자의 사용 권한에 따라 [!INCLUDE[ssISnoversion](../includes/ssisnoversion-md.md)] 서버에서 실행 중인 모든 실행 인스턴스에 대한 통계를 반환합니다.  
   
 ```sql

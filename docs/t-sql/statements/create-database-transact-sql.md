@@ -2,7 +2,7 @@
 title: CREATE DATABASE(Transact-SQL) | Microsoft Docs
 description: SQL Server, Azure SQL Database, Azure Synapse Analytics 및 Analytics Platform System의 데이터베이스 구문 만들기
 ms.custom: references_regions
-ms.date: 09/29/2020
+ms.date: 10/30/2020
 ms.prod: sql
 ms.prod_service: sql-database
 ms.reviewer: ''
@@ -37,12 +37,12 @@ ms.assetid: 29ddac46-7a0f-4151-bd94-75c1908c89f8
 author: markingmyname
 ms.author: maghan
 monikerRange: '>=sql-server-2016||>=sql-server-linux-2017||=azuresqldb-current||=azuresqldb-mi-current||=azure-sqldw-latest||>=aps-pdw-2016||=sqlallproducts-allversions'
-ms.openlocfilehash: 211ed452674eb5cfc8d33d648fbefc66913ba4bd
-ms.sourcegitcommit: d35d0901296580bfceda6e0ab2e14cf2b7e99a0f
+ms.openlocfilehash: e66c5801b3a927b28f355e450be9d31c796e78dc
+ms.sourcegitcommit: 442fbe1655d629ecef273b02fae1beb2455a762e
 ms.translationtype: HT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 10/24/2020
-ms.locfileid: "92496915"
+ms.lasthandoff: 11/03/2020
+ms.locfileid: "93235400"
 ---
 # <a name="create-database"></a>CREATE DATABASE
 
@@ -979,7 +979,7 @@ CATALOG_COLLATION 메타데이터 카탈로그의 기본 데이터 정렬을 지
 BACKUP_STORAGE_REDUNDANCY 데이터베이스에 대한 지정 시간 복원 및 장기 보존 백업을 복제하는 방법을 지정합니다. 지역 복구 또는 지역 가동 중단에서 복구하는 기능은 'GEO' 백업 스토리지 중복성을 통해 데이터베이스를 만든 경우에만 사용할 수 있습니다. 명시적으로 지정되지 않은 한 T-SQL로 생성된 데이터베이스는 지역 중복 백업 스토리지를 사용합니다. 
 
 > [!IMPORTANT]
-> Azure SQL Database에 대한 BACKUP_STORAGE_REDUNDANCY 옵션은 동남 아시아 Azure 지역에서만 공개 미리 보기로 제공됩니다.  
+> Azure SQL Database에 대한 BACKUP_STORAGE_REDUNDANCY 옵션은 브라질 남부에서 퍼블릭 미리 보기로 이용할 수 있으며, 일반적으로 동남 아시아 Azure 지역에서만 이용할 수 있습니다.  
 
 EDITION 데이터베이스의 서비스 계층을 지정합니다.
 

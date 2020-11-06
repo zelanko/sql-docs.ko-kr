@@ -14,12 +14,12 @@ helpviewer_keywords:
 ms.assetid: f2e55040-ca69-4ccf-97d1-c362e1633f26
 author: MashaMSFT
 ms.author: mathoma
-ms.openlocfilehash: f076f67c09d28ff4725587e3470d56e81b1c9aef
-ms.sourcegitcommit: f7ac1976d4bfa224332edd9ef2f4377a4d55a2c9
+ms.openlocfilehash: 8c7e51f31643e61d5847395a92dae50c7ee5eaeb
+ms.sourcegitcommit: 67befbf7435f256e766bbce6c1de57799e1db9ad
 ms.translationtype: HT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 07/02/2020
-ms.locfileid: "85883825"
+ms.lasthandoff: 10/24/2020
+ms.locfileid: "92524008"
 ---
 # <a name="advanced-merge-replication-conflict---resolving-in-logical-record"></a>고급 병합 복제 충돌 - 논리적 레코드에서 해결
 [!INCLUDE [SQL Server](../../../includes/applies-to-version/sqlserver.md)]
@@ -28,13 +28,13 @@ ms.locfileid: "85883825"
  문서의 충돌 추적 및 해결 수준을 지정하려면 [병합 복제 옵션 수정](../../../relational-databases/replication/merge/specify-merge-replication-properties.md)을 참조하세요.  
   
 ## <a name="conflict-detection"></a>충돌 감지  
- 논리적 레코드에 대한 충돌을 감지하는 방법은 두 가지 아티클 속성인 **column_tracking** 및 **logical_record_level_conflict_detection**을 확인하는 것입니다. [!INCLUDE[ssVersion2005](../../../includes/ssversion2005-md.md)] 이상 버전에서는 논리적 레코드 수준 감지도 지원합니다.  
+ 논리적 레코드에 대한 충돌을 감지하는 방법은 두 가지 아티클 속성인 **column_tracking** 및 **logical_record_level_conflict_detection** 을 확인하는 것입니다. [!INCLUDE[ssVersion2005](../../../includes/ssversion2005-md.md)] 이상 버전에서는 논리적 레코드 수준 감지도 지원합니다.  
   
  **logical_record_level_conflict_detection** 아티클 속성은 TRUE 또는 FALSE로 설정할 수 있습니다. 이 값은 최상위 부모 아티클에 대해서만 설정해야 하며 자식 아티클에서는 무시됩니다. 이 값이 FALSE이면 병합 복제에서는 이전 버전의 [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)]에서처럼 아티클에 대한 **column_tracking** 속성 값만 기반으로 하여 충돌을 감지합니다. 이 값이 TRUE이면 병합 복제에서는 아티클의 **column_tracking** 속성을 무시하고 논리적 레코드가 변경된 경우 충돌을 감지합니다. 예를 들어 다음과 같은 시나리오를 고려할 수 있습니다.  
   
  ![값을 포함하는 3개 테이블 논리적 레코드](../../../relational-databases/replication/merge/media/logical-records-05.gif "값을 포함하는 3개 테이블 논리적 레코드")  
   
- 두 명의 사용자가 **Customers**, **Orders**또는 **OrderItems** 테이블에서 Customer2 논리적 레코드에 대한 값을 변경하는 경우 충돌이 감지됩니다. 이 예제에서는 주로 UPDATE 문을 통해 값을 변경한 경우를 다루지만 INSERT 또는 DELETE 문을 통해 변경한 경우에도 충돌이 감지될 수 있습니다.  
+ 두 명의 사용자가 **Customers** , **Orders** 또는 **OrderItems** 테이블에서 Customer2 논리적 레코드에 대한 값을 변경하는 경우 충돌이 감지됩니다. 이 예제에서는 주로 UPDATE 문을 통해 값을 변경한 경우를 다루지만 INSERT 또는 DELETE 문을 통해 변경한 경우에도 충돌이 감지될 수 있습니다.  
   
 ## <a name="conflict-resolution"></a>충돌 해결  
  기본적으로 병합 복제는 우선 순위 기반 논리를 사용하여 충돌을 해결합니다. 두 구독자 데이터베이스에서 변경 내용이 충돌하는 경우 구독 우선 순위가 높은 구독자에 대한 변경 내용이 우선 적용되고 우선 순위가 같으면 게시자에 첫 번째로 도달하는 변경 내용이 우선 적용됩니다. 행 수준 감지와 열 수준 감지에서는 전체 적용되는 행이 무시되는 행을 항상 덮어씁니다.  
@@ -76,7 +76,7 @@ ms.locfileid: "85883825"
   
  논리적 레코드 수준에서 충돌이 해결되므로 복제 처리 중 게시자에서 적용되는 변경 내용이 구독자 테이블에서의 변경 내용을 바꿉니다.  
   
- ![관련 행의 변경 내용을 보여 주는 일련의 테이블](../../../relational-databases/replication/merge/media/logical-records-06.gif "관련 행의 변경 내용을 보여 주는 일련의 테이블")  
+ ![관련 행의 변경 내용을 보여 주는 첫 번째 일련의 테이블](../../../relational-databases/replication/merge/media/logical-records-06.gif "관련 행의 변경 내용을 보여 주는 일련의 테이블")  
   
 ### <a name="row-level-detection-logical-record-resolution"></a>행 수준 감지, 논리적 레코드 해결  
  이 예에서는 다음과 같이 게시가 구성됩니다.  
@@ -91,7 +91,7 @@ ms.locfileid: "85883825"
   
  논리적 레코드 수준에서 충돌이 해결되므로 동기화 중 게시자에서 적용되는 변경 내용이 구독자 테이블에서의 변경 내용을 바꿉니다.  
   
- ![관련 행의 변경 내용을 보여 주는 일련의 테이블](../../../relational-databases/replication/merge/media/logical-records-07.gif "관련 행의 변경 내용을 보여 주는 일련의 테이블")  
+ ![관련 행의 변경 내용을 보여 주는 두 번째 일련의 테이블](../../../relational-databases/replication/merge/media/logical-records-07.gif "관련 행의 변경 내용을 보여 주는 일련의 테이블")  
   
 ### <a name="logical-record-detection-logical-record-resolution"></a>논리적 레코드 감지, 논리적 레코드 해결  
  이 예에서는 다음과 같이 게시가 구성됩니다.  
@@ -100,11 +100,11 @@ ms.locfileid: "85883825"
   
 -   **logical_record_level_conflict_resolution** 을 TRUE로 설정  
   
- 게시자 및 구독자는 동일한 데이터 집합으로 시작됩니다. 게시자는 **customers** 테이블에서 **custcol1** 열을 변경합니다. 구독자는 **orders** 테이블에서 **ordercol1** 열을 변경합니다. 동일한 행 또는 열이 변경되지 않았지만 **custid**=1에 대한 동일한 논리적 레코드가 변경되었으므로 논리적 레코드 수준에서 변경 내용이 충돌로 감지됩니다.  
+ 게시자 및 구독자는 동일한 데이터 집합으로 시작됩니다. 게시자는 **customers** 테이블에서 **custcol1** 열을 변경합니다. 구독자는 **orders** 테이블에서 **ordercol1** 열을 변경합니다. 동일한 행 또는 열이 변경되지 않았지만 **custid** =1에 대한 동일한 논리적 레코드가 변경되었으므로 논리적 레코드 수준에서 변경 내용이 충돌로 감지됩니다.  
   
  또한 논리적 레코드 수준에서 충돌이 해결되므로 동기화 중 게시자에서 적용되는 변경 내용이 구독자 테이블에서의 변경 내용을 바꿉니다.  
   
- ![관련 행의 변경 내용을 보여 주는 일련의 테이블](../../../relational-databases/replication/merge/media/logical-records-08.gif "관련 행의 변경 내용을 보여 주는 일련의 테이블")  
+ ![관련 행의 변경 내용을 보여 주는 세 번째 일련의 테이블](../../../relational-databases/replication/merge/media/logical-records-08.gif "관련 행의 변경 내용을 보여 주는 일련의 테이블")  
   
 ## <a name="see-also"></a>참고 항목  
  [논리적 레코드를 사용하여 관련된 행의 변경 내용 그룹화](../../../relational-databases/replication/merge/group-changes-to-related-rows-with-logical-records.md)  

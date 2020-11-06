@@ -10,12 +10,12 @@ ms.topic: conceptual
 ms.assetid: dfd2b639-8fd4-4cb9-b134-768a3898f9e6
 author: rothja
 ms.author: jroth
-ms.openlocfilehash: 03c89633fa5b61a8d08e78bd90a06a5f8497be75
-ms.sourcegitcommit: c7f40918dc3ecdb0ed2ef5c237a3996cb4cd268d
+ms.openlocfilehash: 15ae1302fcff002816e8e8e7a5e37b6fbe8bd503
+ms.sourcegitcommit: 442fbe1655d629ecef273b02fae1beb2455a762e
 ms.translationtype: HT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 10/05/2020
-ms.locfileid: "91727869"
+ms.lasthandoff: 11/03/2020
+ms.locfileid: "93235460"
 ---
 # <a name="monitor-performance-for-always-on-availability-groups"></a>Always On 가용성 그룹에 대한 성능 모니터링
 [!INCLUDE [SQL Server](../../../includes/applies-to-version/sqlserver.md)]
@@ -65,7 +65,7 @@ ms.locfileid: "91727869"
   
  ![가용성 그룹 다시 실행 시간 계산](media/always-on-redo.gif "가용성 그룹 다시 실행 시간 계산")  
   
- 단, *redo_queue*는 [redo_queue_size](~/relational-databases/system-dynamic-management-views/sys-dm-hadr-database-replica-states-transact-sql.md)의 값이고 *redo_rate*는 [redo_rate](~/relational-databases/system-dynamic-management-views/sys-dm-hadr-database-replica-states-transact-sql.md)의 값입니다.  
+ 단, *redo_queue* 는 [redo_queue_size](~/relational-databases/system-dynamic-management-views/sys-dm-hadr-database-replica-states-transact-sql.md)의 값이고 *redo_rate* 는 [redo_rate](~/relational-databases/system-dynamic-management-views/sys-dm-hadr-database-replica-states-transact-sql.md)의 값입니다.  
   
  장애 조치(failover) 오버헤드 시간 Toverhead는 WSFC 클러스터를 장애 조치하고 데이터베이스를 온라인 상태로 만드는 데 걸리는 시간을 포함합니다. 이 시간은 대개 짧고 일정합니다.  
   
@@ -74,7 +74,7 @@ ms.locfileid: "91727869"
   
  ![가용성 그룹 RPO 계산](media/always-on-rpo.gif "가용성 그룹 RPO 계산")  
   
- 단, *log_send_queue*는 [log_send_queue_size](~/relational-databases/system-dynamic-management-views/sys-dm-hadr-database-replica-states-transact-sql.md)의 값이며 *log generation rate*는 [SQL Server:데이터베이스 > 플러시된 로그 바이트 수/sec](~/relational-databases/performance-monitor/sql-server-databases-object.md)입니다.  
+ 단, *log_send_queue* 는 [log_send_queue_size](~/relational-databases/system-dynamic-management-views/sys-dm-hadr-database-replica-states-transact-sql.md)의 값이며 *log generation rate* 는 [SQL Server:데이터베이스 > 플러시된 로그 바이트 수/sec](~/relational-databases/performance-monitor/sql-server-databases-object.md)입니다.  
   
 > [!WARNING]  
 >  가용성 그룹이 가용성 데이터베이스를 두 개 이상 포함하는 경우 Tdata_loss가 가장 높은 가용성 데이터베이스가 RPO 준수를 위한 제한 값이 됩니다.  
@@ -87,16 +87,16 @@ ms.locfileid: "91727869"
 Always On 가용성 그룹에서는 보조 복제본에 호스팅되는 데이터베이스에 대해 RTO 및 RPO가 계산되고 표시됩니다. 주 복제본의 대시보드에서 RTO 및 RPO는 보조 복제본으로 그룹화됩니다. 
 
 대시보드 내에서 RTO 및 RPO를 보려면 다음을 수행합니다.
-1. SQL Server Management Studio에서 **Always On 고가용성** 노드를 확장하고, 가용성 그룹의 이름을 마우스 오른쪽 단추로 클릭하고, **대시보드 표시**를 선택합니다. 
-1. **그룹화** 탭 아래의 **열 추가/제거**를 선택합니다. **예상 복구 시간(초)** [RTO] 및 **예상 데이터 손실(시간)** [RPO]를 모두 확인합니다. 
+1. SQL Server Management Studio에서 **Always On 고가용성** 노드를 확장하고, 가용성 그룹의 이름을 마우스 오른쪽 단추로 클릭하고, **대시보드 표시** 를 선택합니다. 
+1. **그룹화** 탭 아래의 **열 추가/제거** 를 선택합니다. **예상 복구 시간(초)** [RTO] 및 **예상 데이터 손실(시간)** [RPO]를 모두 확인합니다. 
 
-   ![rto-rpo-dashboard.png](media/rto-rpo-dashboard.png)
+   ![RTO RPO 대시보드를 보여 주는 스크린샷](media/rto-rpo-dashboard.png)
 
 ### <a name="calculation-of-secondary-database-rto"></a>보조 데이터베이스 RTO 계산 
-복구 시간 계산은 장애 조치(failover)가 발생한 후 *보조 데이터베이스*를 복구하는 데 필요한 시간을 결정합니다.  장애 조치(failover) 시간은 대개 짧고 일정합니다. 검색 시간은 클러스터 수준 설정에 따라 달라지며 개별 가용성 복제본에 의존하지 않습니다. 
+복구 시간 계산은 장애 조치(failover)가 발생한 후 *보조 데이터베이스* 를 복구하는 데 필요한 시간을 결정합니다.  장애 조치(failover) 시간은 대개 짧고 일정합니다. 검색 시간은 클러스터 수준 설정에 따라 달라지며 개별 가용성 복제본에 의존하지 않습니다. 
 
 
-보조 데이터베이스(DB_sec)의 경우 해당 RTO의 계산 및 표시는 **redo_queue_size** 및 **redo_rate**를 기반으로 합니다.
+보조 데이터베이스(DB_sec)의 경우 해당 RTO의 계산 및 표시는 **redo_queue_size** 및 **redo_rate** 를 기반으로 합니다.
 
 ![RTO 계산](media/calculate-rto.png)
 
@@ -108,17 +108,17 @@ Always On 가용성 그룹에서는 보조 복제본에 호스팅되는 데이�
 
 ### <a name="calculation-of-secondary-database-rpo"></a>보조 데이터베이스 RPO 계산
 
-보조 데이터베이스(DB_sec)의 경우 해당 RPO의 계산과 표시는 is_failover_ready, last_commit_time 및 상관 관계가 있는 주 데이터베이스(DB_pri)의 last_commit_time을 기반으로 합니다. 보조 database.is_failover_ready = 1이면 daa가 동기화되고 장애 조치(failover) 시 데이터 손실이 발생하지 않습니다. 그러나 이 값이 0이면 주 데이터베이스의 **last_commit_time**과 보조 데이터베이스의 **last_commit_time** 사이에 간격이 있습니다. 
+보조 데이터베이스(DB_sec)의 경우 해당 RPO의 계산과 표시는 is_failover_ready, last_commit_time 및 상관 관계가 있는 주 데이터베이스(DB_pri)의 last_commit_time을 기반으로 합니다. 보조 database.is_failover_ready = 1이면 daa가 동기화되고 장애 조치(failover) 시 데이터 손실이 발생하지 않습니다. 그러나 이 값이 0이면 주 데이터베이스의 **last_commit_time** 과 보조 데이터베이스의 **last_commit_time** 사이에 간격이 있습니다. 
 
-주 데이터베이스의 경우 **last_commit_time**은 최신 트랜잭션이 커밋된 시간입니다. 보조 데이터베이스의 경우 **last_commit_time**은 보조 데이터베이스에서도 성공적으로 강화된 주 데이터베이스의 트랜잭션에 대한 최신 커밋 시간입니다. 이 번호는 주 데이터베이스와 보조 데이터베이스 모두에서 동일해야 합니다. 이 두 값 사이의 간격은 보류 중인 트랜잭션이 보조 데이터베이스에서 강화되지 않고 장애 조치(failover) 시 손실되는 기간입니다. 
+주 데이터베이스의 경우 **last_commit_time** 은 최신 트랜잭션이 커밋된 시간입니다. 보조 데이터베이스의 경우 **last_commit_time** 은 보조 데이터베이스에서도 성공적으로 강화된 주 데이터베이스의 트랜잭션에 대한 최신 커밋 시간입니다. 이 번호는 주 데이터베이스와 보조 데이터베이스 모두에서 동일해야 합니다. 이 두 값 사이의 간격은 보류 중인 트랜잭션이 보조 데이터베이스에서 강화되지 않고 장애 조치(failover) 시 손실되는 기간입니다. 
 
 ![RPO 계산](media/calculate-rpo.png)
 
 ### <a name="performance-counters-used-in-rtorpo-formulas"></a>RTO/RPO 수식에 사용된 성능 카운터
 
-- **redo_queue_size**(KB) [*RTO에서 사용됨*]: 다시 실행 큐 크기는 **last_received_lsn**과 **last_redone_lsn** 사이의 트랜잭션 로그 크기입니다. **last_received_lsn**는 이 보조 데이터베이스를 호스팅하는 보조 복제본이 모든 로그 블록을 받은 지점을 식별하는 로그 블록 ID입니다. **Last_redone_lsn**는 보조 데이터베이스에서 마지막으로 다시 실행된 로그 레코드의 실제 로그 시퀀스 번호입니다. 이 두 값에 따라 시작 로그 블록(**last_received_lsn**) 및 최종 로그 블록(**last_redone_lsn**)의 ID를 찾을 수 있습니다. 그런 다음, 이러한 두 로그 블록 사이의 공간은 트랜잭션 로그 블록이 아직 다시 실행되지 않은 방법을 나타낼 수 있습니다. 이는 킬로바이트(KB)로 측정됩니다.
--  **redo_rate**(KB/sec) [*RTO에서 사용됨*]: 경과된 시간의 기간에서 표시되는 누적 값, 보조 데이터베이스에서 트랜잭션 로그(KB)의 양을 킬로바이트(KB)/escond로 다시 실행되었습니다. 
-- **last_commit_time**(Datetime) [*RPO에서 사용됨*]: 주 데이터베이스의 경우 **last_commit_time**은 최신 트랜잭션이 커밋된 시간입니다. 보조 데이터베이스의 경우 **last_commit_time**은 보조 데이터베이스에서도 성공적으로 강화된 주 데이터베이스의 트랜잭션에 대한 최신 커밋 시간입니다. 보조의 이 값은 주의 동일한 값과 동기화되어야 하므로, 이 두 값 사이의 간격은 데이터 손실(RPO)의 추정치입니다.  
+- **redo_queue_size** (KB) [ *RTO에서 사용됨* ]: 다시 실행 큐 크기는 **last_received_lsn** 과 **last_redone_lsn** 사이의 트랜잭션 로그 크기입니다. **last_received_lsn** 는 이 보조 데이터베이스를 호스팅하는 보조 복제본이 모든 로그 블록을 받은 지점을 식별하는 로그 블록 ID입니다. **Last_redone_lsn** 는 보조 데이터베이스에서 마지막으로 다시 실행된 로그 레코드의 실제 로그 시퀀스 번호입니다. 이 두 값에 따라 시작 로그 블록( **last_received_lsn** ) 및 최종 로그 블록( **last_redone_lsn** )의 ID를 찾을 수 있습니다. 그런 다음, 이러한 두 로그 블록 사이의 공간은 트랜잭션 로그 블록이 아직 다시 실행되지 않은 방법을 나타낼 수 있습니다. 이는 킬로바이트(KB)로 측정됩니다.
+-  **redo_rate** (KB/sec) [ *RTO에서 사용됨* ]: 경과된 시간의 기간에서 표시되는 누적 값, 보조 데이터베이스에서 트랜잭션 로그(KB)의 양을 킬로바이트(KB)/escond로 다시 실행되었습니다. 
+- **last_commit_time** (Datetime) [ *RPO에서 사용됨* ]: 주 데이터베이스의 경우 **last_commit_time** 은 최신 트랜잭션이 커밋된 시간입니다. 보조 데이터베이스의 경우 **last_commit_time** 은 보조 데이터베이스에서도 성공적으로 강화된 주 데이터베이스의 트랜잭션에 대한 최신 커밋 시간입니다. 보조의 이 값은 주의 동일한 값과 동기화되어야 하므로, 이 두 값 사이의 간격은 데이터 손실(RPO)의 추정치입니다.  
  
 ## <a name="estimate-rto-and-rpo-using-dmvs"></a>DMV를 사용하여 RTO 및 RPO 추정
 
@@ -129,7 +129,7 @@ DMV [sys.dm_hadr_database_replica_states](../../../relational-databases/system-d
 
 ### <a name="create-a-stored-procedure-to-estimate-rto"></a>RTO를 추정하는 저장 프로시저 만들기 
 
-1. 대상 보조 복제본에서 저장 프로시저 **proc_calculate_RTO**를 만듭니다. 이 저장 프로시저가 이미 있는 경우 먼저 삭제한 다음, 다시 만듭니다. 
+1. 대상 보조 복제본에서 저장 프로시저 **proc_calculate_RTO** 를 만듭니다. 이 저장 프로시저가 이미 있는 경우 먼저 삭제한 다음, 다시 만듭니다. 
 
  ```sql
     if object_id(N'proc_calculate_RTO', 'p') is not null
@@ -202,11 +202,11 @@ DMV [sys.dm_hadr_database_replica_states](../../../relational-databases/system-d
     end
  ```
 
-2. 대상 보조 데이터베이스 이름으로 **proc_calculate_RTO**를 실행합니다.
+2. 대상 보조 데이터베이스 이름으로 **proc_calculate_RTO** 를 실행합니다.
   ```sql
    exec proc_calculate_RTO @secondary_database_name = N'DB_sec'
   ```
-3. 출력에는 대상 보조 복제본 데이터베이스의 RTO 값이 표시됩니다. RPO 추정 저장 프로시저와 함께 사용할 *group_id*, *replica_id* 및 *group_database_id*를 저장합니다. 
+3. 출력에는 대상 보조 복제본 데이터베이스의 RTO 값이 표시됩니다. RPO 추정 저장 프로시저와 함께 사용할 *group_id* , *replica_id* 및 *group_database_id* 를 저장합니다. 
    
    예제 출력:
 <br>데이터베이스 DB_sec의 RTO'는 0입니다.
@@ -215,7 +215,7 @@ DMV [sys.dm_hadr_database_replica_states](../../../relational-databases/system-d
 <br>데이터베이스 DB4의 group_database_id는 39F7942F-7B5E-42C5-977D-02E7FFA6C392입니다.
 
 ### <a name="create-a-stored-procedure-to-estimate-rpo"></a>RPO를 추정하는 저장 프로시저 만들기 
-1. 주 복제본에서 저장 프로시저 **proc_calculate_RPO**를 만듭니다. 이미 있는 경우 먼저 삭제한 다음, 다시 만듭니다. 
+1. 주 복제본에서 저장 프로시저 **proc_calculate_RPO** 를 만듭니다. 이미 있는 경우 먼저 삭제한 다음, 다시 만듭니다. 
 
  ```sql
     if object_id(N'proc_calculate_RPO', 'p') is not null
@@ -299,7 +299,7 @@ DMV [sys.dm_hadr_database_replica_states](../../../relational-databases/system-d
       end
  ```
 
-2. 대상 보조 데이터베이스의 *group_id*, *replica_id* 및 *group_database_id*를 사용하여 **proc_calculate_RPO**를 실행합니다. 
+2. 대상 보조 데이터베이스의 *group_id* , *replica_id* 및 *group_database_id* 를 사용하여 **proc_calculate_RPO** 를 실행합니다. 
 
  ```sql
    exec proc_calculate_RPO @group_id= 'F176DD65-C3EE-4240-BA23-EA615F965C9B',
@@ -312,7 +312,7 @@ DMV [sys.dm_hadr_database_replica_states](../../../relational-databases/system-d
 ##  <a name="monitoring-for-rto-and-rpo"></a>RTO 및 RPO 모니터링  
  이 섹션에서는 가용성 그룹의 RTO 및 RPO 메트릭을 모니터링하는 방법을 보여 줍니다. 이 데모는 [Always On 상태 모델, 2부: 상태 모델 확장](/archive/blogs/sqlalwayson/the-alwayson-health-model-part-2-extending-the-health-model)에 지정된 GUI 자습서와 유사합니다.  
   
- [예상 장애 조치(failover) 시간(RTO)](#estimating-failover-time-rto) 및 [예상 잠재적 데이터 손실(RPO)](#estimating-potential-data-loss-rpo)에서 장애 조치(failover) 시간과 잠재적 데이터 손실 계산의 요소는 편의상 정책 관리 패싯 **데이터베이스 복제본 상태**의 성능 메트릭으로 제공됩니다([SQL Server 개체에 대한 정책 기반 관리 패싯 보기](~/relational-databases/policy-based-management/view-the-policy-based-management-facets-on-a-sql-server-object.md) 참조). 이러한 두 메트릭을 일정에 따라 모니터링하고 메트릭이 각각 RTO 및 RPO를 초과하는 경우 경고할 수 있습니다.  
+ [예상 장애 조치(failover) 시간(RTO)](#estimating-failover-time-rto) 및 [예상 잠재적 데이터 손실(RPO)](#estimating-potential-data-loss-rpo)에서 장애 조치(failover) 시간과 잠재적 데이터 손실 계산의 요소는 편의상 정책 관리 패싯 **데이터베이스 복제본 상태** 의 성능 메트릭으로 제공됩니다( [SQL Server 개체에 대한 정책 기반 관리 패싯 보기](~/relational-databases/policy-based-management/view-the-policy-based-management-facets-on-a-sql-server-object.md) 참조). 이러한 두 메트릭을 일정에 따라 모니터링하고 메트릭이 각각 RTO 및 RPO를 초과하는 경우 경고할 수 있습니다.  
   
  데모에서 보여 주는 스크립트는 다음 특성과 함께 해당 일정에 따라 실행되는 두 가지 시스템 정책을 만듭니다.  
   
@@ -330,51 +330,51 @@ DMV [sys.dm_hadr_database_replica_states](../../../relational-databases/system-d
 
 1.  아직 시작되지 않은 경우 [SQL Server 에이전트 서비스를 시작](~/ssms/agent/start-stop-or-pause-the-sql-server-agent-service.md)합니다.  
   
-2.  SQL Server Management Studio의 경우 **도구** 메뉴에서 **옵션**을 클릭합니다.  
+2.  SQL Server Management Studio의 경우 **도구** 메뉴에서 **옵션** 을 클릭합니다.  
   
-3.  **SQL Server Always On** 탭에서 **사용자 정의 Always On 정책 사용**을 선택하고 **확인**을 클릭합니다.  
+3.  **SQL Server Always On** 탭에서 **사용자 정의 Always On 정책 사용** 을 선택하고 **확인** 을 클릭합니다.  
   
      이 설정을 사용하여 Always On 대시보드에서 이전에 구성된 사용자 지정 정책을 표시할 수 있습니다.  
   
 4.  다음 사양을 사용하여 [정책 기반 관리 조건](~/relational-databases/policy-based-management/create-a-new-policy-based-management-condition.md)을 만듭니다.  
   
-    -   **이름**: `RTO`  
+    -   **이름** : `RTO`  
   
-    -   **패싯**: **데이터베이스 복제본 상태**  
+    -   **패싯** : **데이터베이스 복제본 상태**  
   
-    -   **필드**: `Add(@EstimatedRecoveryTime, 60)`  
+    -   **필드** : `Add(@EstimatedRecoveryTime, 60)`  
   
-    -   **연산자**: **<=**  
+    -   **연산자** : **<=**  
   
-    -   **값**: `600`  
+    -   **값** : `600`  
   
      이 조건은 잠재적 장애 조치(failover) 시간이 오류 검색과 장애 조치에 대한 오버헤드 60초를 포함하여 10분을 초과하면 실패합니다.  
   
 5.  다음 사양을 사용하여 두 번째 [정책 기반 관리 조건](~/relational-databases/policy-based-management/create-a-new-policy-based-management-condition.md)을 만듭니다.  
   
-    -   **이름**: `RPO`  
+    -   **이름** : `RPO`  
   
-    -   **패싯**: **데이터베이스 복제본 상태**  
+    -   **패싯** : **데이터베이스 복제본 상태**  
   
-    -   **필드**: `@EstimatedDataLoss`  
+    -   **필드** : `@EstimatedDataLoss`  
   
-    -   **연산자**: **<=**  
+    -   **연산자** : **<=**  
   
-    -   **값**: `3600`  
+    -   **값** : `3600`  
   
      이 조건은 잠재적 데이터 손실이 1시간을 초과하면 실패합니다.  
   
 6.  다음 사양을 사용하여 세 번째 [정책 기반 관리 조건](~/relational-databases/policy-based-management/create-a-new-policy-based-management-condition.md)을 만듭니다.  
   
-    -   **이름**: `IsPrimaryReplica`  
+    -   **이름** : `IsPrimaryReplica`  
   
-    -   **패싯**: **가용성 그룹**  
+    -   **패싯** : **가용성 그룹**  
   
-    -   **필드**: `@LocalReplicaRole`  
+    -   **필드** : `@LocalReplicaRole`  
   
-    -   **연산자**: **=**  
+    -   **연산자** : **=**  
   
-    -   **값**: `Primary`  
+    -   **값** : `Primary`  
   
      이 조건은 지정된 가용성 그룹에 대한 로컬 가용성 복제본이 주 복제본인지 여부를 확인합니다.  
   
@@ -382,55 +382,55 @@ DMV [sys.dm_hadr_database_replica_states](../../../relational-databases/system-d
   
     -   **일반** 페이지:  
   
-        -   **이름**: `CustomSecondaryDatabaseRTO`  
+        -   **이름** : `CustomSecondaryDatabaseRTO`  
   
-        -   **조건 확인**: `RTO`  
+        -   **조건 확인** : `RTO`  
   
-        -   **적용 대상**: **IsPrimaryReplica AvailabilityGroup**의 **모든 DatabaseReplicaState**  
+        -   **적용 대상** : **IsPrimaryReplica AvailabilityGroup** 의 **모든 DatabaseReplicaState**  
   
              이 설정은 로컬 가용성 복제본이 주 복제본인 가용성 그룹에 대해서만 정책이 평가되도록 합니다.  
   
-        -   **평가 모드**: **예약 시**  
+        -   **평가 모드** : **예약 시**  
   
-        -   **일정**: **CollectorSchedule_Every_5min**  
+        -   **일정** : **CollectorSchedule_Every_5min**  
   
-        -   **활성화됨**: **선택됨**  
+        -   **활성화됨** : **선택됨**  
   
     -   **설명** 페이지:  
   
-        -   **범주**: **가용성 데이터베이스 경고**  
+        -   **범주** : **가용성 데이터베이스 경고**  
   
              이 설정을 통해 정책 평가 결과가 Always On 대시보드에 표시될 수 있습니다.  
   
-        -   **설명**: **현재 복제본은 검색 및 장애 조치(failover)에 대한 오버헤드가 1분이라고 가정할 때 10분을 초과하는 RTO를 포함합니다. 해당 서버 인스턴스에 대한 성능 문제를 즉시 조사해야 합니다.**  
+        -   **설명** : **현재 복제본은 검색 및 장애 조치(failover)에 대한 오버헤드가 1분이라고 가정할 때 10분을 초과하는 RTO를 포함합니다. 해당 서버 인스턴스에 대한 성능 문제를 즉시 조사해야 합니다.**  
   
-        -   **표시할 텍스트**: **RTO 초과!**  
+        -   **표시할 텍스트** : **RTO 초과!**  
   
 8.  다음 사양을 사용하여 두 번째 [정책 기반 관리 정책](~/relational-databases/policy-based-management/create-a-policy-based-management-policy.md)을 만듭니다.  
   
     -   **일반** 페이지:  
   
-        -   **이름**: `CustomAvailabilityDatabaseRPO`  
+        -   **이름** : `CustomAvailabilityDatabaseRPO`  
   
-        -   **조건 확인**: `RPO`  
+        -   **조건 확인** : `RPO`  
   
-        -   **적용 대상**: **IsPrimaryReplica AvailabilityGroup**의 **모든 DatabaseReplicaState**  
+        -   **적용 대상** : **IsPrimaryReplica AvailabilityGroup** 의 **모든 DatabaseReplicaState**  
   
-        -   **평가 모드**: **예약 시**  
+        -   **평가 모드** : **예약 시**  
   
-        -   **일정**: **CollectorSchedule_Every_30min**  
+        -   **일정** : **CollectorSchedule_Every_30min**  
   
-        -   **활성화됨**: **선택됨**  
+        -   **활성화됨** : **선택됨**  
   
     -   **설명** 페이지:  
   
-        -   **범주**: **가용성 데이터베이스 경고**  
+        -   **범주** : **가용성 데이터베이스 경고**  
   
-        -   **설명**: **가용성 데이터베이스가 RPO인 1시간을 초과했습니다. 가용성 복제본에 대한 성능 문제를 즉시 조사해야 합니다.**  
+        -   **설명** : **가용성 데이터베이스가 RPO인 1시간을 초과했습니다. 가용성 복제본에 대한 성능 문제를 즉시 조사해야 합니다.**  
   
-        -   **표시할 텍스트**: **RPO 초과!**  
+        -   **표시할 텍스트** : **RPO 초과!**  
   
- 완료되면 각 정책 평가 일정에 대해 한 개씩 새 SQL Server 에이전트 작업 두 개가 만들어집니다. 이러한 작업은 **syspolicy_check_schedule**로 시작하는 이름을 가져야 합니다.  
+ 완료되면 각 정책 평가 일정에 대해 한 개씩 새 SQL Server 에이전트 작업 두 개가 만들어집니다. 이러한 작업은 **syspolicy_check_schedule** 로 시작하는 이름을 가져야 합니다.  
   
  작업 기록을 보고 평가 결과를 검사할 수 있습니다. 또한 평가 오류는 이벤트 ID 34052로 Windows 애플리케이션(이벤트 뷰어)에 기록됩니다. 또한 정책이 실패할 경우 SQL Server 에이전트가 경고를 보내도록 구성할 수 있습니다. 자세한 내용은 [정책 관리자에게 정책 실패를 알리도록 경고 구성](~/relational-databases/policy-based-management/configure-alerts-to-notify-policy-administrators-of-policy-failures.md)을 참조하세요.  
   

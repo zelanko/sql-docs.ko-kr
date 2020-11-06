@@ -11,12 +11,12 @@ ms.topic: conceptual
 author: MikeRayMSFT
 ms.author: mikeray
 monikerRange: '>=aps-pdw-2016||=azuresqldb-current||=azure-sqldw-latest||>=sql-server-2016||=sqlallproducts-allversions||>=sql-server-linux-2017||=azuresqldb-mi-current'
-ms.openlocfilehash: 678d3b76d33babe7e2097eafefcd21ff78702f84
-ms.sourcegitcommit: e700497f962e4c2274df16d9e651059b42ff1a10
+ms.openlocfilehash: c93781a1eb3e18c4eb623f33d294274f02db4f9a
+ms.sourcegitcommit: 9c6130d498f1cfe11cde9f2e65c306af2fa8378d
 ms.translationtype: HT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 08/17/2020
-ms.locfileid: "88408639"
+ms.lasthandoff: 10/30/2020
+ms.locfileid: "93036116"
 ---
 # <a name="columnstore-indexes---what39s-new"></a>Columnstore 인덱스 - 새로운 기능
 [!INCLUDE[SQL Server Azure SQL Database Synapse Analytics PDW ](../../includes/applies-to-version/sql-asdb-asdbmi-asa-pdw.md)]
@@ -29,25 +29,26 @@ ms.locfileid: "88408639"
 ## <a name="feature-summary-for-product-releases"></a>제품 릴리스에 대한 기능 요약  
  이 테이블은 Columnstore 인덱스 및 이를 사용할 수 있는 제품에 대한 주요 기능을 요약합니다.  
 
-|Columnstore 인덱스 기능|[!INCLUDE[ssSQL11](../../includes/sssql11-md.md)]|[!INCLUDE[ssSQL14](../../includes/sssql14-md.md)]|[!INCLUDE[ssSQL15](../../includes/sssql15-md.md)]|[!INCLUDE[ssSQLv14_md](../../includes/sssqlv14-md.md)]|[!INCLUDE[sqldbesa](../../includes/sqldbesa-md.md)]|[!INCLUDE[ssSDW](../../includes/sssdw-md.md)]|  
-|-------------------------------|---------------------------|---------------------------|---------------------------|--------------------------------------------|-------------------------|---|  
-|다중 스레드 쿼리에 대한 일괄 처리 모드 실행|예|예|예|예|예|예| 
-|단일 스레드 쿼리에 대한 일괄 처리 모드 실행|||예|예|예|예|  
-|보관 압축 옵션||예|예|예|예|예|  
-|스냅샷 격리 및 커밋된 읽기 스냅샷 격리|||예|예|예|예| 
-|테이블을 만들 때 columnstore 인덱스 지정|||예|예|예|예|  
-|AlwaysOn은 columnstore 인덱스 지원|예|예|예|예|예|예| 
-|Always On 읽기 가능한 보조는 읽기 전용 비클러스터형 columnstore 인덱스 지원|예|예|예|예|예|예|  
-|Always On 읽기 가능한 보조는 업데이트할 수 있는 columnstore 인덱스 지원|||예|예|||  
-|힙 또는 B-tree에 대한 읽기 전용 비클러스터형 columnstore 인덱스|예|예|예 <sup>1</sup>|예 <sup>1</sup>|예 <sup>1</sup>|예 <sup>1</sup>|  
-|힙 또는 B-tree에 대해 업데이트할 수 있는 비클러스터형 columnstore 인덱스|||예|예|예|예|  
-|비클러스터형 columnstore 인덱스를 가진 힙 또는 B-tree에 사용할 수 있는 추가 B-tree 인덱스|예|예|예|예|예|예|  
-|업데이트할 수 있는 클러스터형 columnstore 인덱스||예|예|예|예|예|  
-|클러스터형 columnstore 인덱스에 대한 B-tree 인덱스|||예|예|예|예|  
-|메모리 최적화 테이블에 대한 columnstore 인덱스|||예|예|예|예|  
-|비클러스터형 columnstore 인덱스 정의는 필터링된 조건 사용을 지원|||예|예|예|예|  
-|`CREATE TABLE` 및 `ALTER TABLE`의 columnstore 인덱스에 대한 압축 지연 옵션|||예|예|예|예|
-|Columnstore 인덱스에는 비지속형 계산 열이 있을 수 있음||||예|||   
+|Columnstore 인덱스 기능|[!INCLUDE[ssSQL11](../../includes/sssql11-md.md)]|[!INCLUDE[ssSQL14](../../includes/sssql14-md.md)]|[!INCLUDE[ssSQL15](../../includes/sssql15-md.md)]|[!INCLUDE[ssSQL17](../../includes/sssql17-md.md)]|[!INCLUDE[sql-server-2019](../../includes/sssqlv15-md.md)]|[!INCLUDE[sqldbesa](../../includes/sqldbesa-md.md)]|[!INCLUDE[ssSDW](../../includes/sssdw-md.md)]|  
+|-------------------------------|---------------------------|---------------------------|---------------------------|---------------------------|--------------------------------------------|-------------------------|---|  
+|다중 스레드 쿼리에 대한 일괄 처리 모드 실행|예|예|예|예|예|예|예| 
+|단일 스레드 쿼리에 대한 일괄 처리 모드 실행|||예|예|예|예|예|  
+|보관 압축 옵션||예|예|예|예|예|예|  
+|스냅샷 격리 및 커밋된 읽기 스냅샷 격리|||예|예|예|예|예| 
+|테이블을 만들 때 columnstore 인덱스 지정|||예|예|예|예|예|  
+|AlwaysOn은 columnstore 인덱스 지원|예|예|예|예|예|예|예| 
+|Always On 읽기 가능한 보조는 읽기 전용 비클러스터형 columnstore 인덱스 지원|예|예|예|예|예|예|예|  
+|Always On 읽기 가능한 보조는 업데이트할 수 있는 columnstore 인덱스 지원|||예||예|||  
+|힙 또는 B-tree에 대한 읽기 전용 비클러스터형 columnstore 인덱스|예|예|예 <sup>1</sup>|예 <sup>1</sup>|예 <sup>1</sup>|예 <sup>1</sup>|예 <sup>1</sup>|  
+|힙 또는 B-tree에 대해 업데이트할 수 있는 비클러스터형 columnstore 인덱스|||예|예|예|예|예|  
+|비클러스터형 columnstore 인덱스를 가진 힙 또는 B-tree에 사용할 수 있는 추가 B-tree 인덱스|예|예|예|예|예|예|예|  
+|업데이트할 수 있는 클러스터형 columnstore 인덱스||예|예|예||예|예|  
+|클러스터형 columnstore 인덱스에 대한 B-tree 인덱스|||예|예||예|예|  
+|메모리 최적화 테이블에 대한 columnstore 인덱스|||예|예||예|예|  
+|비클러스터형 columnstore 인덱스 정의는 필터링된 조건 사용을 지원|||예|예|예|예|예|  
+|`CREATE TABLE` 및 `ALTER TABLE`의 columnstore 인덱스에 대한 압축 지연 옵션|||예|예|예|예|예|
+|Columnstore 인덱스에는 비지속형 계산 열이 있을 수 있음||||예|예|||   
+|튜플 이동기 백그라운드 병합 지원||||||예|예|예|
   
  <sup>1</sup> 읽기 전용 비클러스터형 columnstore 인덱스를 만들려면 읽기 전용 파일 그룹에 인덱스를 저장합니다.  
  
@@ -60,11 +61,11 @@ ms.locfileid: "88408639"
 ### <a name="functional"></a>기능
 - [!INCLUDE[sql-server-2019](../../includes/sssqlv15-md.md)]부터는 내부 임계값에 따라 특정 시간 동안 존재하던 더 작은 OPEN 델타 행 그룹을 자동으로 압축하거나 다수의 행이 삭제된 위치에서 COMPRESSED 행 그룹을 병합하는 백그라운드 병합 작업이 튜플 이동기를 지원합니다. 이전에는 부분적으로 삭제된 데이터와 행 그룹을 병합하기 위해 인덱스를 다시 구성하는 작업이 필요했습니다. 이번 변경 덕분에 지속적으로 columnstore 인덱스 품질이 향상됩니다. 
 
-## [!INCLUDE[ssSQLv14_md](../../includes/sssqlv14-md.md)] 
- [!INCLUDE[ssSQLv14_md](../../includes/sssqlv14-md.md)]에서는 이러한 새 기능을 추가합니다.
+## [!INCLUDE[ssSQL17](../../includes/sssql17-md.md)] 
+ [!INCLUDE[ssSQL17](../../includes/sssql17-md.md)]에서는 이러한 새 기능을 추가합니다.
 
 ### <a name="functional"></a>기능
-- [!INCLUDE[ssSQLv14_md](../../includes/sssqlv14-md.md)]에서는 클러스터형 columnstore 인덱스에서 비지속형 계산 열을 지원합니다. 클러스터형 columnstore 인덱스에서는 지속형 계산 열이 지원되지 않습니다. 계산된 열이 있는 columnstore 인덱스에 비클러스터형 인덱스를 만들 수 없습니다. 
+- [!INCLUDE[ssSQL17](../../includes/sssql17-md.md)]에서는 클러스터형 columnstore 인덱스에서 비지속형 계산 열을 지원합니다. 클러스터형 columnstore 인덱스에서는 지속형 계산 열이 지원되지 않습니다. 계산된 열이 있는 columnstore 인덱스에 비클러스터형 인덱스를 만들 수 없습니다. 
 
 ## [!INCLUDE[ssSQL15](../../includes/sssql15-md.md)]  
  [!INCLUDE[ssSQL15](../../includes/sssql15-md.md)] 는 columnstore 인덱스의 성능 및 유연성을 개선하기 위해 주요 향상 기능을 추가합니다. 이러한 향상된 기능을 통해 데이터 웨어하우징 시나리오가 향상되며 실시간 운영 분석이 가능합니다.  

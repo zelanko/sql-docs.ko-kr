@@ -9,12 +9,12 @@ ms.date: 06/30/2020
 ms.topic: conceptual
 ms.prod: sql
 ms.technology: linux
-ms.openlocfilehash: 32ff32e3d342d63e6de7976213bf4a48ec915778
-ms.sourcegitcommit: 610e3ebe21ac6575850a29641a32f275e71557e3
+ms.openlocfilehash: b929bd76f77f021fbc1821811beb7e86be8edd2e
+ms.sourcegitcommit: 442fbe1655d629ecef273b02fae1beb2455a762e
 ms.translationtype: HT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 10/07/2020
-ms.locfileid: "91784913"
+ms.lasthandoff: 11/03/2020
+ms.locfileid: "93235676"
 ---
 # <a name="configure-failover-cluster-instance---iscsi---sql-server-on-linux"></a>장애 조치(failover) 클러스터 인스턴스 구성 - iSCSI - SQL Server on Linux
 
@@ -47,7 +47,7 @@ Linux 기반 iSCSI 대상을 사용하는 경우 FCI 노드에서 대상을 구�
     ```bash
     sudo iscsiadm -m iface -I iSCSINIC -o new
     ```
-    ![7-setiscsinetwork][6]
+    ![iface 명령의 스크린샷 및 명령에 대한 응답.][6]
  
 2.  `/var/lib/iscsi/ifaces/iSCSIIfaceName`을 편집합니다. 다음 값이 완전히 입력되었는지 확인합니다.
 
@@ -58,7 +58,7 @@ Linux 기반 iSCSI 대상을 사용하는 경우 FCI 노드에서 대상을 구�
 
     다음 예제를 참조하십시오.
 
-    ![iSCSITargetSettings][2]
+    ![파일이 완전히 채워진 파일의 스크린샷][2]
 
 3.  iSCSI 대상을 찾습니다.
 
@@ -68,7 +68,7 @@ Linux 기반 iSCSI 대상을 사용하는 경우 FCI 노드에서 대상을 구�
 
      \<iSCSINetName>은 네트워크의 고유한 식별 이름이고, \<TargetIPAddress>는 iSCSI 대상의 IP 주소이고, \<TargetPort>는 iSCSI 대상의 포트입니다. 
 
-    ![iSCSITargetResults][3]
+    ![discovery 명령의 스크린샷 및 명령에 대한 응답.][3]
 
  
 4.  대상에 로그인
@@ -95,7 +95,7 @@ Linux 기반 iSCSI 대상을 사용하는 경우 FCI 노드에서 대상을 구�
     ```bash
     sudo grep "Attached SCSI" /var/log/messages
     ```
-    ![30-iSCSIattachedDisks][7]
+    ![grep 명령의 스크린샷 및 연결된 SCSI 디스크를 표시하는 명령에 대한 응답.][7]
 
 7.  iSCSI 디스크에서 물리적 볼륨을 만듭니다.
 
@@ -197,7 +197,7 @@ Linux 기반 iSCSI 대상을 사용하는 경우 FCI 노드에서 대상을 구�
         ls /var/opt/mssql/data
         ```
     
-        ![45-CopyMove][8]
+        ![ls 명령의 스크린샷 및 명령에 대한 응답.][8]
 
    * `exit`를 입력하여 다시 루트 사용자로 전환합니다.
 
@@ -321,7 +321,7 @@ Linux 기반 iSCSI 대상을 사용하는 경우 FCI 노드에서 대상을 구�
 
    *    테스트하려면 해당 폴더에 데이터베이스를 만듭니다. 아래 표시된 예제에서는 sqlcmd를 사용하여 데이터베이스를 만들고 컨텍스트를 해당 데이터베이스로 전환한 다음, 파일이 OS 수준에 있는지 확인하고 임시 위치를 삭제합니다. SSMS를 사용할 수 있습니다.
   
-        ![50-ExampleCreateSSMS][9]
+        ![sqlcmd 명령의 스크린샷 및 명령에 대한 응답.][9]
 
    *    공유를 분리합니다. 
 
@@ -355,7 +355,7 @@ Linux 기반 iSCSI 대상을 사용하는 경우 FCI 노드에서 대상을 구�
 
     \<ListOfVGsNotUsedByPacemaker>는 20단계의 출력 중 FCI에서 사용하지 않을 볼륨 그룹의 목록입니다. 각 항목을 따옴표로 묶고 쉼표로 구분합니다. 아래에 예제가 나와 있습니다.
 
-    ![55-ListOfVGs][11]
+    ![Volume_list 값의 예를 보여 주는 스크린샷][11]
 
 17. Linux가 시작되면 파일 시스템이 탑재됩니다. Pacemaker만 iSCSI 디스크를 탑재할 수 있도록 하려면 루트 파일 시스템 이미지를 다시 빌드합니다. 
 

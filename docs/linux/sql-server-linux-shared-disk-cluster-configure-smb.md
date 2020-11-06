@@ -8,12 +8,12 @@ ms.date: 08/28/2017
 ms.topic: conceptual
 ms.prod: sql
 ms.technology: linux
-ms.openlocfilehash: b57aec5c6abc9bbeb6928c5310a3217957d2d02b
-ms.sourcegitcommit: 610e3ebe21ac6575850a29641a32f275e71557e3
+ms.openlocfilehash: 5e78e131e9a328a49bd63182e7ae74db54c50d92
+ms.sourcegitcommit: 442fbe1655d629ecef273b02fae1beb2455a762e
 ms.translationtype: HT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 10/07/2020
-ms.locfileid: "91784899"
+ms.lasthandoff: 11/03/2020
+ms.locfileid: "93235643"
 ---
 # <a name="configure-failover-cluster-instance---smb---sql-server-on-linux"></a>장애 조치(failover) 클러스터 인스턴스 구성 - SMB - SQL Server on Linux
 
@@ -30,7 +30,7 @@ Windows 이외의 환경에서 SMB는 대체로 CIFS(Common Internet File System
 - SMB 공유는 고가용성이어야 합니다.
 - SMB 공유에 보안이 올바르게 설정되어 있어야 합니다. 다음은 /etc/samba/smb.conf의 예입니다. 여기서 SQLData1은 공유의 이름입니다.
 
-![05-smbsource][1]
+![SQLData1이 공유의 이름임을 보여 주는 스크린샷][1]
 
 ## <a name="instructions"></a>Instructions
 

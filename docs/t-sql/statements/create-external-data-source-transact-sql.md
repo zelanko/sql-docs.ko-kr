@@ -20,12 +20,12 @@ helpviewer_keywords:
 author: markingmyname
 ms.author: maghan
 monikerRange: '>=aps-pdw-2016||=azuresqldb-current||=azure-sqldw-latest||>=sql-server-2016||=sqlallproducts-allversions||>=sql-server-linux-2017||=azuresqldb-mi-current'
-ms.openlocfilehash: 562063245f2c8aaf5204385be20e6687554d5d46
-ms.sourcegitcommit: bd3a135f061e4a49183bbebc7add41ab11872bae
+ms.openlocfilehash: f54f2fdce030f477a9e203daa837287dff86f107
+ms.sourcegitcommit: 9e2c682929ee64c051dc62f8917d147861f7c635
 ms.translationtype: HT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 10/21/2020
-ms.locfileid: "92300182"
+ms.lasthandoff: 10/30/2020
+ms.locfileid: "93043849"
 ---
 # <a name="create-external-data-source-transact-sql"></a>CREATE EXTERNAL DATA SOURCE(Transact-SQL)
 
@@ -493,7 +493,7 @@ WITH
 
 자격 증명 생성 시 추가 참고 사항 및 지침:
 
-- Azure Storage에서 [!INCLUDE[ssSDSfull](../../includes/sssdsfull-md.md)]로 데이터를 로드하려면 Azure Storage 키를 사용합니다.
+- Azure Storage에서 [!INCLUDE[ssSDSfull](../../includes/sssdsfull-md.md)]로 데이터를 로드하려면 SAS 토큰(공유 액세스 서명)을 사용합니다.
 - `CREDENTIAL`은 데이터 보안이 설정된 경우에만 필요합니다. 익명 액세스를 허용하는 데이터 세트에는 `CREDENTIAL`이 필요하지 않습니다.
 - `TYPE` = `BLOB_STORAGE`가 ID로 `SHARED ACCESS SIGNATURE`를 사용하여 자격 증명을 만들어야 하는 경우 또한 SAS 토큰은 다음과 같이 구성되어야 합니다.
   - 비밀로 구성된 경우 앞에 오는 `?` 제외
