@@ -62,11 +62,11 @@ ms.locfileid: "91869303"
 ### <a name="supporting-high-availability-and-disaster-recovery-solutions"></a>고가용성 및 재해 복구 솔루션 지원
 대기 서버 솔루션, [!INCLUDE[ssHADR](../../includes/sshadr-md.md)], 데이터베이스 미러링 및 로그 전달은 트랜잭션 로그를 많이 사용합니다. 
 
-**[!INCLUDE[ssHADR](../../includes/sshadr-md.md)] 시나리오**에서는 주 복제본인 데이터베이스의 모든 업데이트가 보조 복제본인 데이터베이스의 개별 전체 복사본에서 바로 재생성됩니다. 주 복제본에서 각 로그 레코드를 보조 복제본으로 바로 보내면 들어오는 로그 레코드를 가용성 그룹 데이터베이스에 적용하여 계속 롤포워드합니다. 자세한 내용은 [Always On 장애 조치(failover) 클러스터 인스턴스](../../sql-server/failover-clusters/windows/always-on-failover-cluster-instances-sql-server.md)를 참조하세요.
+**[!INCLUDE[ssHADR](../../includes/sshadr-md.md)] 시나리오** 에서는 주 복제본인 데이터베이스의 모든 업데이트가 보조 복제본인 데이터베이스의 개별 전체 복사본에서 바로 재생성됩니다. 주 복제본에서 각 로그 레코드를 보조 복제본으로 바로 보내면 들어오는 로그 레코드를 가용성 그룹 데이터베이스에 적용하여 계속 롤포워드합니다. 자세한 내용은 [Always On 장애 조치(failover) 클러스터 인스턴스](../../sql-server/failover-clusters/windows/always-on-failover-cluster-instances-sql-server.md)를 참조하세요.
 
-**로그 전달 시나리오**에서는 주 서버가 주 데이터베이스의 활성 트랜잭션 로그를 하나 이상의 대상으로 보냅니다. 각 보조 서버는 이 로그를 로컬 보조 데이터베이스로 복원합니다. 자세한 내용은 [로그 전달 정보](../../database-engine/log-shipping/about-log-shipping-sql-server.md)를 참조하세요. 
+**로그 전달 시나리오** 에서는 주 서버가 주 데이터베이스의 활성 트랜잭션 로그를 하나 이상의 대상으로 보냅니다. 각 보조 서버는 이 로그를 로컬 보조 데이터베이스로 복원합니다. 자세한 내용은 [로그 전달 정보](../../database-engine/log-shipping/about-log-shipping-sql-server.md)를 참조하세요. 
 
-**데이터베이스 미러링 시나리오**에서는 주 데이터베이스에 대한 모든 업데이트 내용이 미러 데이터베이스인 데이터베이스의 전체 복사본에 즉시 재생성됩니다. 주 서버 인스턴스에서 로그 레코드를 미러 서버 인스턴스로 즉시 보내면 미러 서버 인스턴스에서는 들어오는 로그 레코드를 미러 데이터베이스에 적용하여 계속 롤포워드합니다. 자세한 내용은 [데이터베이스 미러링](../../database-engine/database-mirroring/database-mirroring-sql-server.md)을 참조하세요.
+**데이터베이스 미러링 시나리오** 에서는 주 데이터베이스에 대한 모든 업데이트 내용이 미러 데이터베이스인 데이터베이스의 전체 복사본에 즉시 재생성됩니다. 주 서버 인스턴스에서 로그 레코드를 미러 서버 인스턴스로 즉시 보내면 미러 서버 인스턴스에서는 들어오는 로그 레코드를 미러 데이터베이스에 적용하여 계속 롤포워드합니다. 자세한 내용은 [데이터베이스 미러링](../../database-engine/database-mirroring/database-mirroring-sql-server.md)을 참조하세요.
 
 ##  <a name="transaction-log-characteristics"></a><a name="Characteristics"></a>트랜잭션 로그 특성
 [!INCLUDE[ssDEnoversion](../../includes/ssdenoversion-md.md)] 트랜잭션 로그의 특성은 다음과 같습니다. 
@@ -96,7 +96,7 @@ ms.locfileid: "91869303"
 > 로그 잘림을 수행해도 물리적 로그 파일의 크기는 줄어들지 않습니다. 실제 로그 파일의 크기를 줄이려면 로그 파일을 축소해야 합니다. 물리적 로그 파일의 크기를 축소하는 방법은 [트랜잭션 로그 파일의 크기 관리](../../relational-databases/logs/manage-the-size-of-the-transaction-log-file.md)를 참조하십시오.  
 > 하지만 [로그 잘림을 지연시킬 수 있는 요소](#FactorsThatDelayTruncation)를 염두에 두세요. 로그 축소 후 스토리지 공간이 다시 필요하면 트랜잭션 로그가 다시 커지고 로그 확장 작업 중에 성능 오버헤드가 발생합니다.
   
-##  <a name="factors-that-can-delay-log-truncation"></a><a name="FactorsThatDelayTruncation"></a> Factors that can delay log truncation  
+##  <a name="factors-that-can-delay-log-truncation"></a><a name="FactorsThatDelayTruncation"></a> 로그 잘림을 지연시킬 수 있는 요소  
  지금까지 설명했듯이 오랜 시간 동안 로그 레코드가 활성 상태로 유지되는 경우 트랜잭션 로그 잘림이 지연되고 트랜잭션 로그가 가득 찰 수 있습니다.  
   
 > [!IMPORTANT]
@@ -144,7 +144,7 @@ ms.locfileid: "91869303"
   
 -   새 데이터를 삽입 또는 추가할 때 [UPDATE](../../t-sql/queries/update-transact-sql.md) 문의 `.WRITE` 절을 사용하여 큰 값 데이터 형식을 부분적으로 업데이트하는 작업. 기존 값이 업데이트되는 경우 최소 로깅이 사용되지 않습니다. 큰 값 데이터 형식에 대한 자세한 내용은 [데이터 형식&#40;Transact-SQL&#41;](../../t-sql/data-types/data-types-transact-sql.md)을 참조하세요.  
   
--   [WRITETEXT](../../t-sql/queries/writetext-transact-sql.md) 및 [UPDATETEXT](../../t-sql/queries/updatetext-transact-sql.md) 삽입 또는 새 데이터를 추가할 때 문은 **텍스트**, **ntext**, 및 **이미지** 데이터 형식 열입니다. 기존 값이 업데이트되는 경우 최소 로깅이 사용되지 않습니다.  
+-   [WRITETEXT](../../t-sql/queries/writetext-transact-sql.md) 및 [UPDATETEXT](../../t-sql/queries/updatetext-transact-sql.md) 삽입 또는 새 데이터를 추가할 때 문은 **텍스트** , **ntext** , 및 **이미지** 데이터 형식 열입니다. 기존 값이 업데이트되는 경우 최소 로깅이 사용되지 않습니다.  
   
     > [!WARNING]
     > `WRITETEXT` 및 `UPDATETEXT` 문은 **사용되지 않으므로** 새 애플리케이션에 사용하지 마세요.  
