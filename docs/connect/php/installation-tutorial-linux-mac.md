@@ -1,7 +1,7 @@
 ---
 title: PHP용 드라이버에 대한 Linux 및 macOS 설치
 description: 이 지침에서는 Linux 또는 macOS에서 Microsoft Drivers for PHP for SQL Server를 설치하는 방법에 대해 알아봅니다.
-ms.date: 09/22/2020
+ms.date: 10/30/2020
 ms.prod: sql
 ms.prod_service: connectivity
 ms.custom: ''
@@ -10,17 +10,17 @@ ms.topic: conceptual
 author: David-Engel
 ms.author: v-daenge
 manager: v-mabarw
-ms.openlocfilehash: 8d256e7cabf26b280988afe08d8e795466141688
-ms.sourcegitcommit: cc23d8646041336d119b74bf239a6ac305ff3d31
+ms.openlocfilehash: 66c505f588d6f250c0e18dc88a79b21ed658f2b5
+ms.sourcegitcommit: 80701484b8f404316d934ad2a85fd773e26ca30c
 ms.translationtype: HT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 09/23/2020
-ms.locfileid: "91115543"
+ms.lasthandoff: 11/03/2020
+ms.locfileid: "93243736"
 ---
 # <a name="linux-and-macos-installation-tutorial-for-the-microsoft-drivers-for-php-for-sql-server"></a>Microsoft Drivers for PHP for SQL Server의 Linux 및 macOS 설치 자습서
 다음 지침은 정리된 환경을 가정하며 Ubuntu 16.04, 18.04 및 20.04, RedHat 7 및 8, Debian 8, 9 및 10, Suse 12 및 15, Alpine 3.11 및 macOS 10.13, 10.14 및 10.15에 PHP 7.x, Microsoft ODBC 드라이버, Apache 웹 서버 및 Microsoft Drivers for PHP for SQL Server를 설치하는 방법을 보여 줍니다. 이 지침에서는 PECL을 사용하여 드라이버를 설치할 것을 권장하지만, [Microsoft Drivers for PHP for SQL Server](https://github.com/Microsoft/msphpsql/releases) GitHub 프로젝트 페이지에서 미리 작성된 이진 파일을 다운로드하고 [Microsoft Drivers for PHP for SQL Server 로드](../../connect/php/loading-the-php-sql-driver.md)의 지침에 따라 설치할 수도 있습니다. 확장 로드에 대한 설명과 php.ini에 확장을 추가하지 않는 이유는 [드라이버 로드](../../connect/php/loading-the-php-sql-driver.md#loading-the-driver-at-php-startup) 섹션을 참조하세요.
 
-이 지침에서는 `pecl install`을 사용하여 기본적으로 PHP 7.4를 설치합니다. `pecl channel-update pecl.php.net`을 먼저 실행해야 할 수 있습니다. 지원되는 일부 Linux 배포판은 기본적으로 SQL Server용 PHP 드라이버에서 지원되지 않는 PHP 7.1 또는 이전 버전을 설치합니다. PHP 7.2 또는 7.3을 설치하려면 각 섹션의 시작 부분에 있는 참고 내용을 참조하세요.
+이 지침에서는 `pecl install`을 사용하여 기본적으로 PHP 7.4를 설치합니다. `pecl channel-update pecl.php.net`을 먼저 실행해야 할 수 있습니다. 일부 지원되는 Linux 배포판은 기본적으로 PHP 7.1 이하 버전으로 설정되는데 해당 버전은 SQL Server용 PHP 드라이버의 최신 버전에서 지원되지 않습니다. 대신 PHP 7.2 또는 7.3을 설치하려면 각 섹션의 시작 부분에 있는 참고를 참조하세요.
 
 또한 Ubuntu에서 PHP-FPM(PHP FastCGI 프로세스 관리자)를 설치하는 방법에 대한 지침도 포함되어 있습니다. 이 서비스는 Apache 대신 nginx 웹 서버를 사용하는 경우에 필요합니다.
 
@@ -267,7 +267,7 @@ sudo service apache2 restart
 ## <a name="installing-the-drivers-on-suse-12-and-15"></a>Suse 12 및 15에 드라이버 설치
 
 > [!NOTE]
-> 다음 지침에서 `<SuseVersion>`을 사용 중인 Suse 버전으로 바꿉니다. Suse Enterprise Linux 15를 사용하는 경우 SLE_15 또는 SLE_15_SP1이 됩니다. Suse 12의 경우 SLE_12_SP4(해당하는 경우 그 이상)를 사용합니다. Suse Linux 버전에 따라 사용할 수 없는 PHP 버전도 있습니다. 기본 버전 PHP를 사용할 수 있는 Suse 버전을 확인하려면 `http://download.opensuse.org/repositories/devel:/languages:/php`를 참조하고, 각 Suse 버전에서 사용할 수 있는 다른 PHP 버전을 확인하려면 `http://download.opensuse.org/repositories/devel:/languages:/php:/`를 참조하세요.
+> 다음 지침에서 `<SuseVersion>`을 사용 중인 Suse 버전으로 바꿉니다. Suse Enterprise Linux 15를 사용하는 경우 SLE_15 또는 SLE_15_SP1이 됩니다. Suse 12의 경우 SLE_12_SP4(해당하는 경우 그 이상)를 사용합니다. 모든 버전의 Suse Linux에서 모든 버전의 PHP를 사용할 수 있는 것은 아닙니다. 기본 버전 PHP를 사용할 수 있는 Suse 버전을 확인하려면 `http://download.opensuse.org/repositories/devel:/languages:/php`를 참조하고, Suse 버전에 사용할 수 있는 다른 버전의 PHP를 확인하려면 `http://download.opensuse.org/repositories/devel:/languages:/php:/`를 참조하세요.
 
 > [!NOTE]
 > Suse 12용 PHP 7.4 패키지는 없습니다. PHP 7.2를 설치하려면 아래 리포지토리 URL을 다음 URL로 바꿉니다. `https://download.opensuse.org/repositories/devel:/languages:/php:/php72/<SuseVersion>/devel:languages:php:php72.repo`
@@ -316,7 +316,7 @@ sudo systemctl restart apache2
 > PHP의 기본 버전은 7.3입니다. 다른 PHP 버전은 다른 Alpine 3.11용 리포지토리에서 사용할 수 있습니다. 대신, PHP를 원본에서 컴파일할 수 있습니다.
 
 ### <a name="step-1-install-php"></a>1단계. PHP 설치
-Alpine 용 PHP 패키지는 `edge/community` 리포지토리에서 찾을 수 있습니다. WIKI 페이지에서 [커뮤니티 리포지토리를 사용하도록 설정](https://wiki.alpinelinux.org/wiki/Enable_Community_Repository)을 확인하세요. `/etc/apt/repositories`에 다음 줄을 추가하여 `<mirror>`를 Alpine 리포지토리 미러의 URL로 바꿉니다.
+Alpine 용 PHP 패키지는 `edge/community` 리포지토리에서 찾을 수 있습니다. WIKI 페이지에서 [커뮤니티 리포지토리 사용](https://wiki.alpinelinux.org/wiki/Enable_Community_Repository)을 확인합니다. `/etc/apt/repositories`에 다음 줄을 추가하여 `<mirror>`를 Alpine 리포지토리 미러의 URL로 바꿉니다.
 ```
 http://<mirror>/alpine/edge/community
 ```
@@ -367,7 +367,7 @@ brew tap
 brew tap homebrew/core
 brew install php@7.4
 ```
-현재 PHP가 경로에 있어야 합니다. `php -v`를 실행하여 올바른 버전의 PHP를 실행하고 있는지 확인합니다. PHP가 경로에 없거나 올바른 버전이 아닌 경우 다음을 실행합니다.
+이제 PHP가 경로에 있어야 합니다. `php -v`를 실행하여 올바른 버전의 PHP를 실행하고 있는지 확인합니다. PHP가 경로에 없거나 올바른 버전이 아닌 경우 다음을 실행합니다.
 ```bash
 brew link --force --overwrite php@7.4
 ```
@@ -407,7 +407,7 @@ sudo apachectl restart
 ## <a name="testing-your-installation"></a>설치 테스트
 
 이 샘플 스크립트를 테스트하려면 시스템의 문서 루트에 testsql.php라는 파일을 만듭니다. Ubuntu, Debian 및 Redhat에서는 `/var/www/html/`, SUSE에서는 `/srv/www/htdocs`, Alpine에서는 `/var/www/localhost/htdocs`, macOS에서는 `/usr/local/var/www`입니다. 다음 스크립트를 파일에 복사하고 서버, 데이터베이스, 사용자 이름 및 암호를 적절하게 바꿉니다.
-```
+```php
 <?php
 $serverName = "yourServername";
 $connectionOptions = array(
@@ -415,6 +415,15 @@ $connectionOptions = array(
     "uid" => "yourUsername",
     "pwd" => "yourPassword"
 );
+
+function exception_handler($exception) {
+    echo "<h1>Failure</h1>";
+    echo "Uncaught exception: " , $exception->getMessage();
+    echo "<h1>PHP Info for troubleshooting</h1>";
+    phpinfo();
+}
+
+set_exception_handler('exception_handler');
 
 // Establishes the connection
 $conn = sqlsrv_connect($serverName, $connectionOptions);
@@ -434,7 +443,7 @@ if ($stmt === false) {
 }
 ?>
 
-<h1> Results : </h1>
+<h1> Success Results : </h1>
 
 <?php
 while ($row = sqlsrv_fetch_array($stmt, SQLSRV_FETCH_ASSOC)) {
@@ -447,6 +456,7 @@ sqlsrv_close($conn);
 function formatErrors($errors)
 {
     // Display errors
+    echo "<h1>SQL Error:</h1>";
     echo "Error information: <br/>";
     foreach ($errors as $error) {
         echo "SQLSTATE: ". $error['SQLSTATE'] . "<br/>";
@@ -456,7 +466,7 @@ function formatErrors($errors)
 }
 ?>
 ```
-브라우저에서 https://localhost/testsql.php (macOS에서는 https://localhost:8080/testsql.php )를 가리킵니다. SQL Server/Azure SQL 데이터베이스에 연결할 수 있어야 합니다.
+브라우저에서 https://localhost/testsql.php (macOS에서는 https://localhost:8080/testsql.php )를 가리킵니다. SQL Server/Azure SQL 데이터베이스에 연결할 수 있어야 합니다. SQL 버전 정보를 보여 주는 성공 메시지가 표시되지 않으면 [지원 리소스](support-resources-for-the-php-sql-driver.md)에서 도움을 받을 수 있는 위치를 참조하세요.
 
 ## <a name="see-also"></a>참고 항목  
 [Microsoft Drivers for PHP for SQL Server 시작](../../connect/php/getting-started-with-the-php-sql-driver.md)

@@ -9,12 +9,12 @@ ms.topic: conceptual
 ms.assetid: 2d05ef4c-5f91-48b2-8795-f0a201a0b3cc
 author: maggiesMSFT
 ms.author: maggies
-ms.openlocfilehash: 7ebb428a12bc75f3c61793918dde0594da531ed2
-ms.sourcegitcommit: 216f377451e53874718ae1645a2611cdb198808a
+ms.openlocfilehash: db1efab37a24e49dcf9eac774809ec788831b037
+ms.sourcegitcommit: 9e2c682929ee64c051dc62f8917d147861f7c635
 ms.translationtype: HT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 07/28/2020
-ms.locfileid: "87248542"
+ms.lasthandoff: 10/30/2020
+ms.locfileid: "93043816"
 ---
 # <a name="tutorial-introducing-expressions"></a>자습서: 식 소개
 이 [!INCLUDE[ssRBnoversion_md](../includes/ssrbnoversion.md)] 자습서에서는 일반적인 함수 및 연산자와 함께 식을 사용하여 강력하고 유연한 페이지가 매겨진 [!INCLUDE[ssRSnoversion_md](../includes/ssrsnoversion-md.md)] 보고서를 만듭니다. 
@@ -25,7 +25,7 @@ ms.locfileid: "87248542"
   
 다음 그림은 만들려는 보고서와 비슷한 보고서를 보여 줍니다.  
   
-![보고서-작성기-식-자습서-브라우저 내](../reporting-services/media/report-builder-expression-tutorial-in-browser.png) 
+![식을 사용하는 보고서 작성기 보고서의 스크린샷](../reporting-services/media/report-builder-expression-tutorial-in-browser.png) 
   
 이 자습서에 소요되는 예상 시간: 30분.  
   
@@ -44,22 +44,22 @@ ms.locfileid: "87248542"
   
     **새 보고서 또는 데이터 세트** 대화 상자가 열립니다.  
   
-    **새 보고서 또는 데이터 세트** 대화 상자가 표시되지 않는 경우 **파일** 메뉴 &gt; **새로 만들기**를 클릭합니다.  
+    **새 보고서 또는 데이터 세트** 대화 상자가 표시되지 않는 경우 **파일** 메뉴 &gt; **새로 만들기** 를 클릭합니다.  
   
 2.  왼쪽 창에 **새 보고서** 가 선택되어 있는지 확인합니다.  
   
-3.  오른쪽 창에서 **테이블 또는 행렬 마법사**를 클릭합니다.  
+3.  오른쪽 창에서 **테이블 또는 행렬 마법사** 를 클릭합니다.  
   
-4.  **데이터 세트 선택** 페이지에서 **데이터 세트 만들기** > **다음**을 클릭합니다.  
+4.  **데이터 세트 선택** 페이지에서 **데이터 세트 만들기** > **다음** 을 클릭합니다.  
   
-6.  **데이터 원본에 대한 연결 선택** 페이지에서 **SQL Server**형식의 데이터 원본을 선택합니다. 목록에서 데이터 원본을 선택하거나 보고서 서버를 찾아 선택합니다.  
+6.  **데이터 원본에 대한 연결 선택** 페이지에서 **SQL Server** 형식의 데이터 원본을 선택합니다. 목록에서 데이터 원본을 선택하거나 보고서 서버를 찾아 선택합니다.  
 
     > [!NOTE]  
     > 적절한 권한만 있으면 선택하는 데이터 원본은 중요하지 않습니다. 데이터를 데이터 원본에서 가져오는 것은 아니기 때문입니다. 자세한 내용은 [데이터에 연결하는 다른 방법&#40;보고서 작성기&#41;](../reporting-services/alternative-ways-to-get-a-data-connection-report-builder.md)를 참조하세요.  
   
-7.  **다음**을 클릭합니다.  
+7.  **다음** 을 클릭합니다.  
   
-8.  **쿼리 디자인** 페이지에서 **텍스트로 편집**을 클릭합니다.  
+8.  **쿼리 디자인** 페이지에서 **텍스트로 편집** 을 클릭합니다.  
   
 9. 쿼리 창에 다음 쿼리를 붙여 넣습니다.  
   
@@ -92,9 +92,9 @@ ms.locfileid: "87248542"
   
 10. 쿼리 디자이너 도구 모음에서 **실행** ( **!** )을 클릭합니다. 결과 집합에는 23개 행의 데이터가 표시되고 FirstName, LastName, StateProvince, CountryRegionID, Gender, YTDPurchase 및 LastPurchase 열이 포함됩니다.  
 
-    ![보고서-작성기-식-자습서-쿼리를-텍스트로](../reporting-services/media/report-builder-expression-tutorial-query-as-text.png)
+    ![새 테이블 또는 행렬 마법사의 쿼리 디자인 단계 스크린샷](../reporting-services/media/report-builder-expression-tutorial-query-as-text.png)
   
-11. **다음**을 클릭합니다.  
+11. **다음** 을 클릭합니다.  
   
 12. **필드 정렬** 페이지에서 다음 필드를 지정된 순서에 따라 **사용 가능한 필드** 목록에서 **값** 목록으로 끌어옵니다.  
   
@@ -113,15 +113,15 @@ ms.locfileid: "87248542"
   
     Sum은 더 이상 YTDPurchase에 적용되지 않습니다.  
     
-    ![보고서-작성기-식-합계를 구하지 않음](../reporting-services/media/report-builder-expression-not-sum.png)
+    ![지울 준비가 된 합계 옵션을 보여 주는 값 목록의 스크린샷](../reporting-services/media/report-builder-expression-not-sum.png)
   
-15. **다음**을 클릭합니다.  
+15. **다음** 을 클릭합니다.  
   
-16. **레이아웃 선택** 페이지의 모든 기본 설정을 유지하고 **다음**을 클릭합니다.  
+16. **레이아웃 선택** 페이지의 모든 기본 설정을 유지하고 **다음** 을 클릭합니다.  
 
-    ![보고서-작성기-식-자습서-레이아웃-선택](../reporting-services/media/report-builder-expression-tutorial-choose-layout.png)
+    ![새 테이블 또는 행렬 마법사의 레이아웃 선택 단계 스크린샷](../reporting-services/media/report-builder-expression-tutorial-choose-layout.png)
   
-17. **Finish**를 클릭합니다.  
+17. **Finish** 를 클릭합니다.  
   
 ## <a name="2-update-default-names-of-the-data-source-and-dataset"></a><a name="UpdateNames"></a>2. 데이터 원본 및 데이터 세트의 기본 이름 업데이트  
   
@@ -129,9 +129,9 @@ ms.locfileid: "87248542"
   
 1.  보고서 데이터 창에서 **데이터 원본** 폴더를 확장합니다.  
   
-2.  **DataSource1** 을 마우스 오른쪽 단추로 클릭하고 **데이터 원본 속성**을 클릭합니다.  
+2.  **DataSource1** 을 마우스 오른쪽 단추로 클릭하고 **데이터 원본 속성** 을 클릭합니다.  
   
-3.  **이름** 상자에 **ExpressionsDataSource**를 입력합니다.  
+3.  **이름** 상자에 **ExpressionsDataSource** 를 입력합니다.  
   
 4.  [!INCLUDE[clickOK](../includes/clickok-md.md)]  
   
@@ -139,40 +139,40 @@ ms.locfileid: "87248542"
   
 1.  보고서 데이터 창에서 **데이터 세트** 폴더를 확장합니다.  
   
-2.  **DataSet1**을 마우스 오른쪽 단추로 클릭하고 **데이터 세트 속성**을 클릭합니다.  
+2.  **DataSet1** 을 마우스 오른쪽 단추로 클릭하고 **데이터 세트 속성** 을 클릭합니다.  
 
-    ![보고서-작성기-식-자습서-데이터 세트-이름 바꾸기](../reporting-services/media/report-builder-expression-tutorial-rename-dataset.png)
+    ![보고서 작성기에서 데이터 세트 속성에 액세스하는 방법을 보여 주는 스크린샷](../reporting-services/media/report-builder-expression-tutorial-rename-dataset.png)
   
-3.  **이름** 상자에 **Expressions**를 입력합니다.  
+3.  **이름** 상자에 **Expressions** 를 입력합니다.  
   
 4.  [!INCLUDE[clickOK](../includes/clickok-md.md)]  
   
 ## <a name="3-display-first-initial-and-last-name"></a><a name="Concatenate"></a>3. 이름 및 성 표시  
-이 섹션에서는 이름과 성을 포함하는 이름으로 계산되는 식에서 **Left** 함수와 **Concatenate** (**&**) 연산자를 사용합니다. 단계별로 식을 작성하거나 절차에서 단계를 건너뛰고 자습서의 식을 복사하여 **식** 대화 상자에 붙여넣을 수 있습니다.   
+이 섹션에서는 이름과 성을 포함하는 이름으로 계산되는 식에서 **Left** 함수와 **Concatenate** ( **&** ) 연산자를 사용합니다. 단계별로 식을 작성하거나 절차에서 단계를 건너뛰고 자습서의 식을 복사하여 **식** 대화 상자에 붙여넣을 수 있습니다.   
   
-1.  **StateProvince** 열을 마우스 오른쪽 단추로 클릭하고 **열 삽입**을 가리킨 다음 **왼쪽**을 클릭합니다.  
+1.  **StateProvince** 열을 마우스 오른쪽 단추로 클릭하고 **열 삽입** 을 가리킨 다음 **왼쪽** 을 클릭합니다.  
   
     새 열이 **StateProvince** 열의 왼쪽에 추가됩니다. 
     
-    ![보고서-작성기-식-자습서-열-삽입](../reporting-services/media/report-builder-expression-tutorial-insert-column.png) 
+    ![보고서에 왼쪽 열을 삽입하는 방법을 보여 주는 스크린샷](../reporting-services/media/report-builder-expression-tutorial-insert-column.png) 
   
-2.  새 열의 제목을 클릭하고 **Name**을 입력합니다.  
+2.  새 열의 제목을 클릭하고 **Name** 을 입력합니다.  
   
-3.  **Name** 열의 데이터 셀을 마우스 오른쪽 단추로 클릭하고 **식**을 클릭합니다.  
+3.  **Name** 열의 데이터 셀을 마우스 오른쪽 단추로 클릭하고 **식** 을 클릭합니다.  
 
-    ![보고서-작성기-식-자습서-식-삽입](../reporting-services/media/report-builder-expression-tutorial-insert-expression.png)
+    ![보고서에 식을 삽입하는 방법을 보여 주는 스크린샷](../reporting-services/media/report-builder-expression-tutorial-insert-expression.png)
   
-4.  **식** 대화 상자에서 **일반 함수**를 확장하고 **텍스트**를 클릭합니다.  
+4.  **식** 대화 상자에서 **일반 함수** 를 확장하고 **텍스트** 를 클릭합니다.  
   
-5.  **항목** 목록에서 **Left**를 두 번 클릭합니다.  
+5.  **항목** 목록에서 **Left** 를 두 번 클릭합니다.  
   
     **Left** 함수가 식에 추가됩니다.  
     
-    ![보고서-작성기-식-자습서-left-함수](../reporting-services/media/report-builder-expression-tutorial-left-function.png)
+    ![식에 왼쪽 함수를 추가하는 방법을 보여 주는 스크린샷](../reporting-services/media/report-builder-expression-tutorial-left-function.png)
   
 6.  **범주** 목록에서 **필드(식)** 를 클릭합니다.  
   
-7.  **값** 목록에서 **FirstName**을 두 번 클릭합니다.  
+7.  **값** 목록에서 **FirstName** 을 두 번 클릭합니다.  
   
 8.  **, 1)** 을 입력합니다.  
   
@@ -182,11 +182,11 @@ ms.locfileid: "87248542"
 
     그러면 식 뒤에 마침표와 공백이 하나씩 추가됩니다.
   
-10. **값** 목록에서 **LastName**을 두 번 클릭합니다.  
+10. **값** 목록에서 **LastName** 을 두 번 클릭합니다.  
   
     완성된 식은 다음과 같습니다. `=Left(Fields!FirstName.Value, 1) &". "& Fields!LastName.Value`  
     
-    ![보고서-작성기-식-자습서-이름-식-완성](../reporting-services/media/report-builder-expression-tutorial-complete-name-expression.png)
+    ![식에 LastName 값을 추가하는 방법을 보여 주는 스크린샷](../reporting-services/media/report-builder-expression-tutorial-complete-name-expression.png)
   
 11. [!INCLUDE[clickOK](../includes/clickok-md.md)]  
   
@@ -199,33 +199,33 @@ ms.locfileid: "87248542"
   
 1.  **디자인** 을 클릭하여 디자인 뷰로 돌아갑니다.  
   
-2.  **Last Purchase** 열에서 데이터 셀을 선택하고 **홈** 탭 > **숫자** 섹션에서 **날짜**를 선택합니다.  
+2.  **Last Purchase** 열에서 데이터 셀을 선택하고 **홈** 탭 > **숫자** 섹션에서 **날짜** 를 선택합니다.  
 
-    ![보고서-작성기-식-자습서-날짜-서식](../reporting-services/media/report-builder-expression-tutorial-date-format.png)
+    ![Last Purchase 열을 Date로 설정하는 방법을 보여 주는 스크린샷](../reporting-services/media/report-builder-expression-tutorial-date-format.png)
   
-3.  또한 **숫자** 섹션에서 **자리 표시자 스타일** 옆에 있는 화살표를 클릭하고 **보기 값**을 선택합니다. 
+3.  또한 **숫자** 섹션에서 **자리 표시자 스타일** 옆에 있는 화살표를 클릭하고 **보기 값** 을 선택합니다. 
 
-    ![보고서-작성기-식-자습서-보기-값](../reporting-services/media/report-builder-expression-tutorial-sample-values.png)
+    ![보고서 작성기의 샘플 값 옵션을 보여 주는 스크린샷](../reporting-services/media/report-builder-expression-tutorial-sample-values.png)
 
     이제 선택한 서식의 예를 확인할 수 있습니다. 
   
 ### <a name="to-format-the-currency-column"></a>통화 열의 서식을 지정하려면
 
-- **YTDPurchase** 열에서 데이터 셀을 선택하고 **숫자** 섹션에서 **통화 기호**를 선택합니다.
+- **YTDPurchase** 열에서 데이터 셀을 선택하고 **숫자** 섹션에서 **통화 기호** 를 선택합니다.
  
 ### <a name="to-format-the-column-headers"></a>열 머리글의 서식을 지정하려면
 
 1. 열 머리글의 행을 선택합니다.
 
-2. **홈** 탭 > **단락** 섹션에서 **왼쪽**을 선택합니다. 
+2. **홈** 탭 > **단락** 섹션에서 **왼쪽** 을 선택합니다. 
 
-    ![보고서-작성기-식-자습서-머리글-서식 지정](../reporting-services/media/report-builder-expression-tutorial-format-headings.png)
+    ![보고서 작성기에서 제목의 서식을 지정하는 방법을 보여 주는 스크린샷](../reporting-services/media/report-builder-expression-tutorial-format-headings.png)
 
 3. **실행** 을 클릭하여 보고서를 미리 봅니다. 
 
 다음은 지금까지 서식을 지정한 날짜, 통화 및 열 머리글이 적용된 보고서입니다.
 
-![보고서-작성기-식-자습서-서식 지정-미리 보기](../reporting-services/media/report-builder-expression-tutorial-preview-formatted.png)
+![서식이 지정된 보고서의 미리 보기를 보여 주는 스크린샷](../reporting-services/media/report-builder-expression-tutorial-preview-formatted.png)
 
   
 ## <a name="4-use-color-to-display-gender"></a><a name="Gender"></a>4. 색을 사용하여 성별 표시  
@@ -236,11 +236,11 @@ ms.locfileid: "87248542"
  
 ### <a name="to-add-an-mf-column"></a>M/F 열을 추가하려면  
   
-1.  **Name** 열을 마우스 오른쪽 단추로 클릭하고 **열 삽입**을 가리킨 다음 **왼쪽**을 클릭합니다.  
+1.  **Name** 열을 마우스 오른쪽 단추로 클릭하고 **열 삽입** 을 가리킨 다음 **왼쪽** 을 클릭합니다.  
   
     새 열이 **Name** 열의 왼쪽에 추가됩니다.  
   
-2.  새 열의 머리글을 클릭하고 **M/F**를 입력합니다.  
+2.  새 열의 머리글을 클릭하고 **M/F** 를 입력합니다.  
   
 ### <a name="to-add-a-rectangle"></a>사각형을 추가하려면  
   
@@ -248,31 +248,31 @@ ms.locfileid: "87248542"
   
      셀에 사각형이 추가됩니다.  
      
-     ![보고서-작성기-식-자습서-사각형-삽입](../reporting-services/media/report-builder-expression-tutorial-insert-rectangle.png)
+     ![사각형 삽입 방법을 보여 주는 스크린샷](../reporting-services/media/report-builder-expression-tutorial-insert-rectangle.png)
   
 2. **M/F** 와 **Name** 사이의 열 구분선을 끌어 **M/F** 열을 더 좁게 만듭니다.
 
-    ![보고서-작성기-식-자습서-열-좁히기](../reporting-services/media/report-builder-expression-tutorial-narrow-column.png)
+    ![열을 더 좁게 만드는 방법을 보여 주는 스크린샷](../reporting-services/media/report-builder-expression-tutorial-narrow-column.png)
   
 ### <a name="to-use-color-to-show-gender"></a>색을 사용하여 성별을 표시하려면  
   
-1.  **M/F** 열에서 데이터 셀의 사각형을 마우스 오른쪽 단추로 클릭하고 **사각형 속성**을 클릭합니다.  
+1.  **M/F** 열에서 데이터 셀의 사각형을 마우스 오른쪽 단추로 클릭하고 **사각형 속성** 을 클릭합니다.  
   
 2.  **사각형 속성** 대화 상자 > **채우기** 탭에서 **채우기 색** 옆에 있는 식 **fx** 단추를 클릭합니다.  
   
-3.  **식** 대화 상자에서 **일반 함수** 를 확장하고 **프로그램 흐름**을 클릭합니다.  
+3.  **식** 대화 상자에서 **일반 함수** 를 확장하고 **프로그램 흐름** 을 클릭합니다.  
   
-4.  **항목** 목록에서 **Switch**를 두 번 클릭합니다.  
+4.  **항목** 목록에서 **Switch** 를 두 번 클릭합니다.  
   
 5.  **범주** 목록에서 **필드(식)** 를 클릭합니다.  
   
-6.  **값** 목록에서 **Gender**를 두 번 클릭합니다.  
+6.  **값** 목록에서 **Gender** 를 두 번 클릭합니다.  
   
 7.  **="Male",** 를 입력합니다(쉼표 포함).
 
-8. **범주** 목록에서 **상수**를 클릭하고 **값** 상자에서 **수레국화 청색**을 클릭합니다.
+8. **범주** 목록에서 **상수** 를 클릭하고 **값** 상자에서 **수레국화 청색** 을 클릭합니다.
 
-    ![보고서-작성기-식-자습서-색-식-수레국화-청색](../reporting-services/media/report-builder-expression-tutorial-color-expression-cornflower-blue.png)
+    ![색을 사용하여 성별을 표시하는 방법을 보여 주는 스크린샷](../reporting-services/media/report-builder-expression-tutorial-color-expression-cornflower-blue.png)
 
 9. 그 뒤에 쉼표를 입력합니다. 
   
@@ -280,19 +280,19 @@ ms.locfileid: "87248542"
   
 7.  **="Female",** 를 입력합니다(쉼표 포함). 
 
-8. **범주** 목록에서 **상수**를 클릭하고 **값** 상자에서 **토마토**를 클릭합니다.
+8. **범주** 목록에서 **상수** 를 클릭하고 **값** 상자에서 **토마토** 를 클릭합니다.
 
 13. 그 뒤에 닫는 괄호 **)** 를 입력합니다. 
   
     완성된 식은 다음과 같습니다. `=Switch(Fields!Gender.Value ="Male", "CornflowerBlue",Fields!Gender.Value ="Female","Tomato")`  
     
-    ![보고서-작성기-식-자습서-색-식-완성](../reporting-services/media/report-builder-expression-tutorial-color-expression-complete.png)
+    ![식 대화 상자의 전체 식을 보여 주는 스크린샷](../reporting-services/media/report-builder-expression-tutorial-color-expression-complete.png)
   
-12. **확인**을 클릭한 다음 다시 **확인** 을 클릭하여 **사각형 속성** 대화 상자를 닫습니다.  
+12. **확인** 을 클릭한 다음 다시 **확인** 을 클릭하여 **사각형 속성** 대화 상자를 닫습니다.  
   
 14. **실행** 을 클릭하여 보고서를 미리 봅니다.  
 
-    ![보고서-작성기-식-자습서-미리 보기-m-f-열](../reporting-services/media/report-builder-expression-tutorial-preview-m-f-column.png)
+    ![M/F 열이 있는 미리 보기를 보여 주는 스크린샷](../reporting-services/media/report-builder-expression-tutorial-preview-m-f-column.png)
 
 ### <a name="to-format-the-color-rectangles"></a>색 사각형의 서식을 지정하려면
 
@@ -304,11 +304,11 @@ ms.locfileid: "87248542"
     - BorderStyle = 실선
     - BorderWidth = 5pt
     
-    ![보고서-작성기-식-자습서-서식-m-f-열](../reporting-services/media/report-builder-expression-tutorial-format-m-f-column.png)
+    ![M/F 열에서 색 사각형의 서식을 지정하는 방법을 보여 주는 스크린샷](../reporting-services/media/report-builder-expression-tutorial-format-m-f-column.png)
 
 18. **실행** 을 클릭하여 보고서를 다시 미리 봅니다. 이번에는 색 블록 주위에 공백이 있습니다.
 
-    ![보고서-작성기-식-자습서-서식 지정-m-f-열-미리 보기](../reporting-services/media/report-builder-expression-tutorial-preview-formatted-m-f-column.png)  
+    ![M/F 열에 서식이 지정된 사각형이 있는 미리 보기를 보여 주는 스크린샷](../reporting-services/media/report-builder-expression-tutorial-preview-formatted-m-f-column.png)  
   
 ## <a name="5-look-up-the-countryregion-name"></a><a name="Lookup"></a>5. CountryRegion 이름 조회  
 이 섹션에서는 CountryRegion 데이터 세트를 만들고 **Lookup** 함수를 사용하여 국가/지역의 식별자 대신 국가/지역의 이름을 표시합니다.  
@@ -317,17 +317,17 @@ ms.locfileid: "87248542"
   
 1.  **디자인** 을 클릭하여 디자인 뷰로 돌아갑니다.  
   
-2.  보고서 데이터 창에서 **새로 만들기**를 클릭한 다음, **데이터 세트**를 클릭합니다.  
+2.  보고서 데이터 창에서 **새로 만들기** 를 클릭한 다음, **데이터 세트** 를 클릭합니다.  
   
-3.  **데이터 세트 속성에서 **내 보고서에 포함된 데이터 세트 사용**을 클릭합니다.  
+3.  **데이터 세트 속성에서 **내 보고서에 포함된 데이터 세트 사용** 을 클릭합니다.  
   
 4.  **데이터 원본** 목록에서 ExpressionsDataSource를 선택합니다.  
   
-5.  **이름** 상자에 **CountryRegion**을 입력합니다.  
+5.  **이름** 상자에 **CountryRegion** 을 입력합니다.  
   
-6.  **텍스트** 쿼리 유형이 선택되어 있는지 확인한 다음 **쿼리 디자이너**를 클릭합니다.  
+6.  **텍스트** 쿼리 유형이 선택되어 있는지 확인한 다음 **쿼리 디자이너** 를 클릭합니다.  
   
-7.  **텍스트로 편집**을 클릭합니다.  
+7.  **텍스트로 편집** 을 클릭합니다.  
   
 8.  쿼리 창에 다음 쿼리를 복사하여 붙여 넣습니다.  
   
@@ -352,23 +352,23 @@ ms.locfileid: "87248542"
   
 10. [!INCLUDE[clickOK](../includes/clickok-md.md)]  
   
-11. **확인**을 다시 클릭하여 **데이터 세트 속성** 대화 상자를 닫습니다.  
+11. **확인** 을 다시 클릭하여 **데이터 세트 속성** 대화 상자를 닫습니다.  
 
      이제 **보고서 데이터** 열에 두 번째 데이터 세트가 있습니다.
   
 ### <a name="to-look-up-values-in-the-countryregion-dataset"></a>CountryRegion 데이터 세트에서 값을 조회하려면  
   
-1.  **Country Region ID** 열 머리글을 클릭하고 **Country Region**을 읽도록 텍스트 **ID**를 삭제합니다.  
+1.  **Country Region ID** 열 머리글을 클릭하고 **Country Region** 을 읽도록 텍스트 **ID** 를 삭제합니다.  
   
-2.  **Country Region** 열의 데이터 셀을 마우스 오른쪽 단추로 클릭하고 **식**을 클릭합니다.  
+2.  **Country Region** 열의 데이터 셀을 마우스 오른쪽 단추로 클릭하고 **식** 을 클릭합니다.  
   
 3.  처음 등호(=)를 제외하고 식을 삭제합니다.  
   
     나머지 식은 다음과 같습니다. `=`  
   
-4.  **식** 대화 상자에서 **일반 함수** 를 확장하고 **기타**를 클릭한 다음 **항목** 목록에서 **조회**를 두 번 클릭합니다.  
+4.  **식** 대화 상자에서 **일반 함수** 를 확장하고 **기타** 를 클릭한 다음 **항목** 목록에서 **조회** 를 두 번 클릭합니다.  
   
-6.  **범주** 목록에서 **필드(식)** 를 클릭하고 **값** 목록에서 **CountryRegionID**를 두 번 클릭합니다.  
+6.  **범주** 목록에서 **필드(식)** 를 클릭하고 **값** 목록에서 **CountryRegionID** 를 두 번 클릭합니다.  
   
 8.  `CountryRegionID.Value`바로 뒤에 커서를 놓고 **,Fields!ID.value, Fields!CountryRegion.value, "CountryRegion")** 을 입력합니다.  
   
@@ -387,25 +387,25 @@ ms.locfileid: "87248542"
   
 1.  **디자인** 을 클릭하여 디자인 뷰로 돌아갑니다.  
   
-2.  **Last Purchase** 열을 마우스 오른쪽 단추로 클릭하고 **열 삽입**을 가리킨 다음 **오른쪽**을 클릭합니다.  
+2.  **Last Purchase** 열을 마우스 오른쪽 단추로 클릭하고 **열 삽입** 을 가리킨 다음 **오른쪽** 을 클릭합니다.  
   
     새 열이 **Last Purchase** 열의 오른쪽에 추가됩니다.  
   
-3.  열 머리글에서 **Days Ago**를 입력합니다.  
+3.  열 머리글에서 **Days Ago** 를 입력합니다.  
   
-4.  **Days Ago** 열의 데이터 셀을 마우스 오른쪽 단추로 클릭하고 **식**을 클릭합니다.  
+4.  **Days Ago** 열의 데이터 셀을 마우스 오른쪽 단추로 클릭하고 **식** 을 클릭합니다.  
   
-5.  **식** 대화 상자에서 **일반 함수**를 확장하고 **날짜 및 시간**을 클릭합니다.  
+5.  **식** 대화 상자에서 **일반 함수** 를 확장하고 **날짜 및 시간** 을 클릭합니다.  
   
-6.  **항목** 목록에서 **DateDiff**를 두 번 클릭합니다.  
+6.  **항목** 목록에서 **DateDiff** 를 두 번 클릭합니다.  
   
 7.  `DateDiff(`바로 뒤에 **"d",** 를 입력합니다(따옴표 "" 및 쉼표 포함). 
   
-9. **범주** 목록에서 **필드(식)** 를 클릭하고 **값** 목록에서 **LastPurchase**를 두 번 클릭합니다.  
+9. **범주** 목록에서 **필드(식)** 를 클릭하고 **값** 목록에서 **LastPurchase** 를 두 번 클릭합니다.  
   
 11. `Fields!LastPurchase.Value`바로 뒤에 **,** (쉼표)를 입력합니다. 
   
-13. **범주** 목록에서 **날짜 및 시간**을 다시 클릭하고 **항목** 목록에서 **Now**를 두 번 클릭합니다.  
+13. **범주** 목록에서 **날짜 및 시간** 을 다시 클릭하고 **항목** 목록에서 **Now** 를 두 번 클릭합니다.  
   
     > [!WARNING]  
     > 프로덕션 보고서의 경우, 보고서의 정보 행에서와 같이 보고서가 렌더링되면서 여러 번 계산되는 식에서 **Now** 함수를 사용하면 안 됩니다. **Now** 의 값은 행마다 변경되고 서로 다른 값이 식의 계산 결과에 영향을 미치므로 조금씩 일치하지 않는 결과가 발생합니다. 대신 `ExecutionTime` 에서 제공하는 [!INCLUDE[ssRSnoversion](../includes/ssrsnoversion-md.md)] 전역 변수를 사용하세요.  
@@ -414,7 +414,7 @@ ms.locfileid: "87248542"
   
     완성된 식은 다음과 같습니다. `=DateDiff("d", Fields!LastPurchase.Value, Now)`  
     
-    ![보고서-작성기-식-자습서-마지막-구매-후-날짜](../reporting-services/media/report-builder-expression-tutorial-date-since-last-purchase.png)
+    ![마지막 구매 이후 날짜의 전체 식을 보여 주는 스크린샷](../reporting-services/media/report-builder-expression-tutorial-date-since-last-purchase.png)
   
 17. [!INCLUDE[clickOK](../includes/clickok-md.md)]  
 
@@ -427,41 +427,41 @@ ms.locfileid: "87248542"
   
 ### <a name="to-add-the--or---avg-sales-column"></a>\+ or - AVG Sales 열을 추가하려면  
   
-1.  **YTD Purchase** 열을 마우스 오른쪽 단추로 클릭하고 **열 삽입**을 가리킨 다음 **오른쪽**을 클릭합니다.  
+1.  **YTD Purchase** 열을 마우스 오른쪽 단추로 클릭하고 **열 삽입** 을 가리킨 다음 **오른쪽** 을 클릭합니다.  
   
     새 열이 **YTD Purchase** 열의 오른쪽에 추가됩니다.  
   
-2.  열 머리글을 클릭하고 **+ or - AVG Sales**를 입력합니다.  
+2.  열 머리글을 클릭하고 **+ or - AVG Sales** 를 입력합니다.  
   
 ### <a name="to-add-an-indicator"></a>표시기를 추가하려면  
   
-1.  **삽입** 탭에서 **표시기**를 클릭한 다음 **+ or - AVG Sales** 열의 데이터 셀을 클릭합니다.  
+1.  **삽입** 탭에서 **표시기** 를 클릭한 다음 **+ or - AVG Sales** 열의 데이터 셀을 클릭합니다.  
   
     **표시기 유형 선택** 대화 상자가 열립니다.  
   
 2.  아이콘 집합의 **방향** 그룹에서 회색 화살표 3개로 구성된 집합을 클릭합니다.  
 
-    ![보고서-작성기-식-자습서-표시기-선택](../reporting-services/media/report-builder-expression-tutorial-select-indicator.png)
+    ![표시기 추가 방법을 보여 주는 스크린샷](../reporting-services/media/report-builder-expression-tutorial-select-indicator.png)
   
 3.  [!INCLUDE[clickOK](../includes/clickok-md.md)]  
   
 ### <a name="to-configure-the-indicator"></a>표시기를 구성하려면  
   
-1.  표시기를 마우스 오른쪽 단추로 클릭하고 **표시기 속성**을 클릭한 다음 **값 및 상태**를 클릭합니다.  
+1.  표시기를 마우스 오른쪽 단추로 클릭하고 **표시기 속성** 을 클릭한 다음 **값 및 상태** 를 클릭합니다.  
   
 2.  **값** 입력란 옆의 식 단추( **fx** )를 클릭합니다.  
   
-3.  **식** 대화 상자에서 **일반 함수**를 확장하고 **수치 연산**을 클릭합니다.  
+3.  **식** 대화 상자에서 **일반 함수** 를 확장하고 **수치 연산** 을 클릭합니다.  
   
-4.  **항목** 목록에서 **Round**를 두 번 클릭합니다.  
+4.  **항목** 목록에서 **Round** 를 두 번 클릭합니다.  
   
-5.  **범주** 목록에서 **필드(식)** 를 클릭하고 **값** 목록에서 **YTDPurchase**를 두 번 클릭합니다.  
+5.  **범주** 목록에서 **필드(식)** 를 클릭하고 **값** 목록에서 **YTDPurchase** 를 두 번 클릭합니다.  
   
 7.  `Fields!YTDPurchase.Value`바로 뒤에  **-** (빼기 기호)를 입력합니다. 
   
-9. **일반 함수** 를 다시 확장하고 **집계**를 클릭한 다음 **항목** 목록에서 **Avg**를 두 번 클릭합니다.  
+9. **일반 함수** 를 다시 확장하고 **집계** 를 클릭한 다음 **항목** 목록에서 **Avg** 를 두 번 클릭합니다.  
   
-11. **범주** 목록에서 **필드(식)** 를 클릭하고 **값** 목록에서 **YTDPurchase**를 두 번 클릭합니다.  
+11. **범주** 목록에서 **필드(식)** 를 클릭하고 **값** 목록에서 **YTDPurchase** 를 두 번 클릭합니다.  
   
 13. `Fields!YTDPurchase.Value`바로 뒤에 **, "Expressions"))** 를 입력합니다.  
   
@@ -469,39 +469,39 @@ ms.locfileid: "87248542"
   
 15. [!INCLUDE[clickOK](../includes/clickok-md.md)]  
   
-16. **상태 단위** 상자에서 **숫자**를 선택합니다.  
+16. **상태 단위** 상자에서 **숫자** 를 선택합니다.  
   
 17. 아래쪽 화살표가 있는 행에서 **시작** 값의 입력란 오른쪽에 있는 **fx** 단추를 클릭합니다.  
 
-    ![보고서-작성기-식-자습서-표시기-시작](../reporting-services/media/report-builder-expression-tutorial-indicator-start.png)
+    ![시작 텍스트 상자 옆에 있는 fx 단추를 선택하는 방법을 보여 주는 스크린샷](../reporting-services/media/report-builder-expression-tutorial-indicator-start.png)
   
-18. **식** 대화 상자에서 **일반 함수**를 확장하고 **수치 연산**을 클릭합니다.  
+18. **식** 대화 상자에서 **일반 함수** 를 확장하고 **수치 연산** 을 클릭합니다.  
   
-19. **항목** 목록에서 **Round**를 두 번 클릭합니다.  
+19. **항목** 목록에서 **Round** 를 두 번 클릭합니다.  
   
-20. **범주** 목록에서 **필드(식)** 를 클릭하고 **값** 목록에서 **YTDPurchase**를 두 번 클릭합니다.  
+20. **범주** 목록에서 **필드(식)** 를 클릭하고 **값** 목록에서 **YTDPurchase** 를 두 번 클릭합니다.  
   
 22. `Fields!YTDPurchase.Value`바로 뒤에  **-** (빼기 기호)를 입력합니다. 
   
-24. **일반 함수** 를 다시 확장하고 **집계**를 클릭한 다음 **항목** 목록에서 **Avg**를 두 번 클릭합니다.  
+24. **일반 함수** 를 다시 확장하고 **집계** 를 클릭한 다음 **항목** 목록에서 **Avg** 를 두 번 클릭합니다.  
   
-26. **범주** 목록에서 **필드(식)** 를 클릭하고 **값** 목록에서 **YTDPurchase**를 두 번 클릭합니다.  
+26. **범주** 목록에서 **필드(식)** 를 클릭하고 **값** 목록에서 **YTDPurchase** 를 두 번 클릭합니다.  
   
-28. `Fields!YTDPurchase.Value` 바로 뒤에 **, "Expressions")) < 0**을 입력합니다.  
+28. `Fields!YTDPurchase.Value` 바로 뒤에 **, "Expressions")) < 0** 을 입력합니다.  
   
     완성된 식은 다음과 같습니다. `=Round(Fields!YTDPurchase.Value - Avg(Fields!YTDPurchase.Value, "Expressions")) < 0`  
   
 30. [!INCLUDE[clickOK](../includes/clickok-md.md)]  
   
-31. **끝** 값의 입력란에 **0**을 입력합니다.  
+31. **끝** 값의 입력란에 **0** 을 입력합니다.  
   
-32. 옆쪽 화살표가 있는 행을 클릭하고 **삭제**를 클릭합니다.  
+32. 옆쪽 화살표가 있는 행을 클릭하고 **삭제** 를 클릭합니다.  
 
-    ![보고서-작성기-식-자습서-표시기-상태-삭제](../reporting-services/media/report-builder-expression-tutorial-delete-indicator-state.png)
+    ![표시기 삭제 방법을 보여 주는 스크린샷](../reporting-services/media/report-builder-expression-tutorial-delete-indicator-state.png)
     
     이제 위쪽 또는 아래쪽 이렇게 두 개의 화살표만 있습니다.
   
-33. 위쪽 화살표가 있는 행에서 **시작** 상자에 **0**을 입력합니다.  
+33. 위쪽 화살표가 있는 행에서 **시작** 상자에 **0** 을 입력합니다.  
   
 34. **끝** 값의 입력란 오른쪽에 있는 **fx** 단추를 클릭합니다.  
   
@@ -513,7 +513,7 @@ ms.locfileid: "87248542"
   
 38. **실행** 을 클릭하여 보고서를 미리 봅니다.  
 
-    ![보고서-작성기-식-자습서-표시기-미리 보기](../reporting-services/media/report-builder-expression-tutorial-preview-indicator.png)
+    ![모든 새 표시기를 포함하여 + 또는 -AVG Sales 열이 있는 미리 보기를 보여 주는 스크린샷](../reporting-services/media/report-builder-expression-tutorial-preview-indicator.png)
   
 ## <a name="8-make-a-banded-report"></a><a name="GreenBar"></a>8. 줄무늬 보고서 만들기  
 보고서 구독자가 보고서의 번갈아 표시되는 행에 적용할 색을 지정하여 줄무늬 보고서를 만들 수 있도록 매개 변수를 만듭니다.  
@@ -522,43 +522,43 @@ ms.locfileid: "87248542"
   
 1.  **디자인** 을 클릭하여 디자인 뷰로 돌아갑니다.  
   
-2.  **보고서 데이터** 창에서 **매개 변수** 를 마우스 오른쪽 단추로 클릭하고 **매개 변수 추가**를 클릭합니다.  
+2.  **보고서 데이터** 창에서 **매개 변수** 를 마우스 오른쪽 단추로 클릭하고 **매개 변수 추가** 를 클릭합니다.  
 
-    ![보고서-작성기-식-자습서-매개 변수-추가](../reporting-services/media/report-builder-expression-tutorial-add-parameter.png)
+    ![매개 변수 추가 방법을 보여 주는 스크린샷](../reporting-services/media/report-builder-expression-tutorial-add-parameter.png)
   
     **보고서 매개 변수 속성** 대화 상자가 열립니다.  
   
-3.  **프롬프트**에 **Choose color**를 입력합니다.  
+3.  **프롬프트** 에 **Choose color** 를 입력합니다.  
   
-4.  **이름**에 **RowColor**를 입력합니다.  
+4.  **이름** 에 **RowColor** 를 입력합니다.  
   
-5.  **사용 가능한 값** 탭에서 **값 지정**을 클릭합니다.  
+5.  **사용 가능한 값** 탭에서 **값 지정** 을 클릭합니다.  
   
-7.  **추가**를 클릭합니다.  
+7.  **추가** 를 클릭합니다.  
   
-8.  **레이블** 상자에 **Yellow**를 입력합니다.  
+8.  **레이블** 상자에 **Yellow** 를 입력합니다.  
   
-9. **값** 상자에 **Yellow**를 입력합니다.  
+9. **값** 상자에 **Yellow** 를 입력합니다.  
   
-10. **추가**를 클릭합니다.  
+10. **추가** 를 클릭합니다.  
   
-11. **레이블** 상자에 **Green**을 입력합니다.  
+11. **레이블** 상자에 **Green** 을 입력합니다.  
   
-12. **값** 상자에 **PaleGreen**을 입력합니다.  
+12. **값** 상자에 **PaleGreen** 을 입력합니다.  
   
-13. **추가**를 클릭합니다.  
+13. **추가** 를 클릭합니다.  
   
-14. **레이블** 상자에 **Blue**를 입력합니다.  
+14. **레이블** 상자에 **Blue** 를 입력합니다.  
   
-15. **값** 상자에 **LightBlue**를 입력합니다.  
+15. **값** 상자에 **LightBlue** 를 입력합니다.  
   
-16. **추가**를 클릭합니다.  
+16. **추가** 를 클릭합니다.  
   
-17. **레이블** 상자에 **Pink**를 입력합니다.  
+17. **레이블** 상자에 **Pink** 를 입력합니다.  
   
-18. **값** 상자에 **Pink**를 입력합니다.  
+18. **값** 상자에 **Pink** 를 입력합니다.  
 
-    ![보고서-작성기-식-자습서-사용 가능한-매개 변수](../reporting-services/media/report-builder-expression-tutorial-parameter-available.png)
+    ![이 매개 변수에 사용할 수 있는 값 선택 단계를 보여 주는 보고서 매개 변수 속성 대화 상자의 스크린샷](../reporting-services/media/report-builder-expression-tutorial-parameter-available.png)
   
 19. [!INCLUDE[clickOK](../includes/clickok-md.md)]  
   
@@ -566,51 +566,51 @@ ms.locfileid: "87248542"
   
 1.   자체 배경색이 있는 **M/F** 열의 셀을 제외한 데이터 행의 모든 셀을 선택합니다.  
 
-     ![보고서-작성기-식-자습서-줄무늬-선택](../reporting-services/media/report-builder-expression-tutorial-select-banded.png)
+     ![데이터 행에서 선택된 셀을 보여 주는 스크린샷](../reporting-services/media/report-builder-expression-tutorial-select-banded.png)
   
-4.  속성 창에서 **BackgroundColor**를 클릭합니다. 
+4.  속성 창에서 **BackgroundColor** 를 클릭합니다. 
 
      속성 창이 표시되지 않으면 **보기** 탭에서 **속성** 상자를 선택합니다.  
   
     속성 창에서 속성이 범주별로 나열된 경우 **기타** 범주에서 **BackgroundColor** 를 찾을 수 있습니다.  
   
-5.  아래쪽 화살표를 클릭한 다음 **식**을 클릭합니다.  
+5.  아래쪽 화살표를 클릭한 다음 **식** 을 클릭합니다.  
 
-    ![보고서-작성기-식-자습서-줄무늬-색-속성](../reporting-services/media/report-builder-expression-tutorial-banded-color-property.png)
+    ![식을 BackgroundColor와 연결하는 방법을 보여 주는 속성 상자의 스크린샷](../reporting-services/media/report-builder-expression-tutorial-banded-color-property.png)
   
-6.  **식** 대화 상자에서 **일반 함수**를 확장하고 **프로그램 흐름**을 클릭합니다.  
+6.  **식** 대화 상자에서 **일반 함수** 를 확장하고 **프로그램 흐름** 을 클릭합니다.  
   
-7.  **항목** 목록에서 **IIf**를 두 번 클릭합니다.  
+7.  **항목** 목록에서 **IIf** 를 두 번 클릭합니다.  
   
-8.  **일반 함수**에서 **기타**를 클릭하고 **항목** 목록에서 **RowNumber**를 두 번 클릭합니다.  
+8.  **일반 함수** 에서 **기타** 를 클릭하고 **항목** 목록에서 **RowNumber** 를 두 번 클릭합니다.  
 
 9. **RowNumber(** 바로 뒤에 **Nothing) MOD 2,** 를 입력합니다.
   
-8. **매개 변수** 를 클릭하고 **값** 목록에서 **RowColor**를 두 번 클릭합니다.  
+8. **매개 변수** 를 클릭하고 **값** 목록에서 **RowColor** 를 두 번 클릭합니다.  
   
 22. `Parameters!RowColor.Value` 바로 뒤에 **, "White")** 를 입력합니다.  
   
     완성된 식은 다음과 같습니다. `=IIF(RowNumber(Nothing) MOD 2, Parameters!RowColor.Value, "White")`  
     
-    ![보고서-작성기-식-자습서-줄무늬-색-식](../reporting-services/media/report-builder-expression-tutorial-banded-color-expressn.png)
+    ![전체 줄무늬 색 식을 보여 주는 스크린샷](../reporting-services/media/report-builder-expression-tutorial-banded-color-expressn.png)
   
 24. [!INCLUDE[clickOK](../includes/clickok-md.md)]  
   
 ### <a name="run-the-report"></a>보고서 실행  
   
-1.  **홈** 탭에서 **실행**을 클릭합니다.  
+1.  **홈** 탭에서 **실행** 을 클릭합니다.  
 
     이제 보고서를 실행할 때 흰색이 아닌 줄무늬의 색을 선택한 후에야 보고서가 표시됩니다.
   
 3.  **색 선택** 목록에서 보고서에 사용할 흰색이 아닌 줄무늬의 색을 선택합니다.  
     
-    ![보고서-작성기-식-자습서-색-선택](../reporting-services/media/report-builder-expression-tutorial-select-color.png)
+    ![흰색이 아닌 줄무늬의 색 선택 방법을 보여 주는 스크린샷](../reporting-services/media/report-builder-expression-tutorial-select-color.png)
   
-4.  **보고서 보기**를 클릭합니다.  
+4.  **보고서 보기** 를 클릭합니다.  
   
     보고서가 렌더링되고 선택한 배경이 행에 번갈아 표시됩니다. 
     
-    ![보고서-작성기-식-자습서-줄무늬-미리 보기](../reporting-services/media/report-builder-expression-tutorial-preview-banded.png) 
+    ![색이 교대로 반복되는 행이 있는 미리 보기를 보여 주는 스크린샷](../reporting-services/media/report-builder-expression-tutorial-preview-banded.png) 
   
 ## <a name="optional-add-a-report-title"></a><a name="Title"></a>(선택 사항) 보고서 제목 추가  
 보고서에 제목을 추가합니다.  
@@ -619,7 +619,7 @@ ms.locfileid: "87248542"
   
 1.  디자인 화면에서 **제목을 추가하려면 클릭하십시오.** 를 클릭합니다.  
   
-2.  **판매 비교 요약**을 입력한 다음 텍스트를 선택합니다.  
+2.  **판매 비교 요약** 을 입력한 다음 텍스트를 선택합니다.  
   
 3.  **홈** 탭의 **글꼴** 상자에서 다음을 설정합니다.
 
@@ -627,9 +627,9 @@ ms.locfileid: "87248542"
     -  색 = 회색
     -  굵게
   
-4.  **홈** 탭에서 **실행**을 클릭합니다.  
+4.  **홈** 탭에서 **실행** 을 클릭합니다.  
   
-3.  보고서에 사용할 흰색이 아닌 줄무늬의 색을 선택한 다음 **보고서 보기**를 클릭합니다.  
+3.  보고서에 사용할 흰색이 아닌 줄무늬의 색을 선택한 다음 **보고서 보기** 를 클릭합니다.  
   
 ## <a name="optional-save-the-report"></a><a name="Save"></a>(선택 사항) 보고서 저장  
 보고서를 보고서 서버, SharePoint 라이브러리 또는 컴퓨터에 저장할 수 있습니다. 자세한 내용은 [보고서 저장&#40;보고서 작성기&#41;](../reporting-services/report-builder/saving-reports-report-builder.md)을 참조하세요.  
@@ -638,21 +638,21 @@ ms.locfileid: "87248542"
   
 ### <a name="to-save-the-report-to-a-report-server"></a>보고서를 보고서 서버에 저장하려면  
   
-1.  **파일** 메뉴에서 **다른 이름으로 저장**을 선택합니다.  
+1.  **파일** 메뉴에서 **다른 이름으로 저장** 을 선택합니다.  
   
-2.  **최근에 사용한 사이트 및 서버**를 클릭합니다.  
+2.  **최근에 사용한 사이트 및 서버** 를 클릭합니다.  
   
 3.  보고서를 저장할 수 있는 권한을 가진 보고서 서버의 이름을 선택하거나 입력합니다.  
   
     "보고서 서버에 연결하는 중"이라는 메시지가 나타납니다. 연결되면 보고서 서버 관리자가 기본 보고서 위치로 지정한 보고서 폴더의 내용이 표시됩니다.  
   
-4.  보고서 이름을 지정하고 **저장**을 클릭합니다.  
+4.  보고서 이름을 지정하고 **저장** 을 클릭합니다.  
   
 보고서가 보고서 서버에 저장됩니다. 연결된 보고서 서버의 이름이 창 아래쪽에 있는 상태 표시줄에 나타납니다.
 
 이제 보고서 구독자가 [!INCLUDE[ssRSnoversion_md](../includes/ssrsnoversion-md.md)] 웹 포털에서 보고서를 볼 수 있습니다.
 
-![보고서-작성기-식-자습서-최종-브라우저 내](../reporting-services/media/report-builder-expression-tutorial-final-in-browser.png)
+![각 식이 표시되는 새 보고서의 스크린샷](../reporting-services/media/report-builder-expression-tutorial-final-in-browser.png)
 
    
 ## <a name="see-also"></a>참고 항목  

@@ -10,12 +10,12 @@ ms.date: 09/22/2020
 ms.topic: conceptual
 ms.prod: sql
 ms.technology: big-data-cluster
-ms.openlocfilehash: 073776c042c0a0da136347c8e1658603b755208f
-ms.sourcegitcommit: 29a2be59c56f8a4b630af47760ef38d2bf56a3eb
+ms.openlocfilehash: 51286acc7f963b8d680bd81121cc22bab1c1a0a6
+ms.sourcegitcommit: b3a711a673baebb2ff10d7142b209982b46973ae
 ms.translationtype: HT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 10/22/2020
-ms.locfileid: "92378469"
+ms.lasthandoff: 11/05/2020
+ms.locfileid: "93364385"
 ---
 # <a name="troubleshooting-big-data-clusters-bdc-with-notebooks"></a>Notebook을 사용하여 BDC(빅 데이터 클러스터) 문제 해결
 
@@ -80,7 +80,7 @@ SQL Server 빅 데이터 클러스터의 알려진 상황 및 상태를 복구�
 |Name |설명 |
 |---|---|---|---|
 |TSG005 - 전달 루프가 발견됨|감지된 전달 루프를 처리하려면 이 Notebook을 사용합니다. dnsmasq 유틸리티는 로컬 루프백을 resolv.conf에 배치할 수 있으며, 이렇게 하면 초기 클러스터 배포 중에 컨트롤러 Pod가 CrashLoopBackOff로 전환될 수 있기 때문입니다. https://askubuntu.com/questions/627899/nameserver-127-0-1-1-in-resolv-conf-wont-go-away|
-|TSG011 - sparkhistory 서버 다시 시작|sparkhistory 서버를 다시 시작하려면 이 Notebook을 사용합니다. sparkhistory java 프로세스가 시작 중에 중지될 수 있기 때문입니다. sparkhistory 서버를 다시 시작하면(supervisorctl restart sparkhistory) 이 문제가 해결될 수 있습니다.|
+|TSG011 - sparkhistory 서버 다시 시작|sparkhistory java 프로세스가 시작 중에 응답을 중지할 수 있으므로 이 Notebook을 사용하여 sparkhistory 서버를 다시 시작합니다. sparkhistory 서버를 다시 시작하면(supervisorctl restart sparkhistory) 이 문제가 해결될 수 있습니다.|
 |TSG018 - 마스터 풀에서 sqlservr 프로세스 종료| T-SQL SHUTDOWN이 ./sqlservr 프로세스를 재순환하지 않는 경우 이 Notebook을 사용합니다. 이 경우 이 Notebook을 사용하여 기본 sqlservr 프로세스를 종료하면 ./sqlservr 프런트 엔드 프로세스에서 자동으로 프로세스를 다시 시작합니다.|
 |TSG024 - Namenode가 안전 모드| HDFS가 안전 모드로 전환될 때 이 Notebook을 사용합니다. 예를 들어 스토리지 풀에서 너무 많은 Pod가 너무 빨리 재순환되면 자동으로 안전 모드가 사용될 수 있습니다.|
 |TSG028 - 모든 스토리지 풀 노드에서 노드 관리자 다시 시작| 모든 스토리지 풀 노드에서 노드 관리자를 다시 시작해야 하는 경우 이 Notebook을 사용합니다.|
@@ -104,4 +104,3 @@ SQL Server 빅 데이터 클러스터의 알려진 상황 및 상태를 복구�
 ## <a name="next-steps"></a>다음 단계
 
 빅 데이터 클러스터에 대한 자세한 내용은 [[!INCLUDE[big-data-clusters-2019](../includes/ssbigdataclusters-ss-nover.md)]란?](big-data-cluster-overview.md)을 참조하세요.
-

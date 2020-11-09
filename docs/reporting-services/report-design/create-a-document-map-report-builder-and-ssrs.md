@@ -9,12 +9,12 @@ ms.topic: conceptual
 ms.assetid: c200a97b-67f2-499f-8374-3ed1ebe3f33c
 author: maggiesMSFT
 ms.author: maggies
-ms.openlocfilehash: bfb17d88af0c5901e0cb4ee0097d02c0225693d2
-ms.sourcegitcommit: 57f1d15c67113bbadd40861b886d6929aacd3467
+ms.openlocfilehash: cd6c70f92cb409ee6742590709743897bb3e77f7
+ms.sourcegitcommit: b3a711a673baebb2ff10d7142b209982b46973ae
 ms.translationtype: HT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 06/18/2020
-ms.locfileid: "85061049"
+ms.lasthandoff: 11/05/2020
+ms.locfileid: "93364445"
 ---
 # <a name="create-a-document-map-report-builder-and-ssrs"></a>문서 구조 만들기(보고서 작성기 및 SSRS)
 
@@ -40,32 +40,30 @@ ms.locfileid: "85061049"
   
  자세한 내용은 [여러 보고서 렌더링 확장 프로그램의 대화형 기능&#40;보고서 작성기 및 SSRS&#41;](../../reporting-services/report-builder/interactive-functionality-different-report-rendering-extensions.md)을 참조하세요.  
   
-##  <a name="AddRptItemToMap"></a>   
-#### <a name="to-add-a-report-item-to-a-document-map"></a>문서 구조에 보고서 항목을 추가하려면  
+##  <a name="to-add-a-report-item-to-a-document-map"></a><a name="AddRptItemToMap"></a> 문서 구조에 보고서 항목을 추가하려면  
   
 1.  디자인 뷰에서 문서 구조에 추가할 테이블, 행렬 또는 계기와 같은 보고서 항목을 선택합니다. 보고서 항목 속성이 속성 창에 나타납니다.  
   
     > [!NOTE]  
     >  테이블릭스 데이터 영역을 선택하려면 아무 셀이나 클릭하여 행 및 열 핸들을 표시한 다음 모퉁이 핸들을 클릭합니다.  
   
-2.  속성 창에서 문서 구조에 표시할 텍스트를 **DocumentMapLabel** 속성에 입력하거나 레이블로 계산되는 식을 입력합니다. 예를 들어 **Sales Chart**를 입력합니다.  
+2.  속성 창에서 문서 구조에 표시할 텍스트를 **DocumentMapLabel** 속성에 입력하거나 레이블로 계산되는 식을 입력합니다. 예를 들어 **Sales Chart** 를 입력합니다.  
   
     > [!NOTE]  
-    >  속성 창이 표시되지 않는 경우 **보기** 탭의 **표시/숨기기** 그룹에서 **속성**을 선택합니다.  
+    >  속성 창이 표시되지 않는 경우 **보기** 탭의 **표시/숨기기** 그룹에서 **속성** 을 선택합니다.  
   
 3.  문서 구조에 표시할 각 보고서 항목에 대해 1단계와 2단계를 반복합니다.  
   
-4.  **실행**을 클릭합니다. 보고서가 실행되고 문서 구조에 사용자가 만든 레이블이 표시됩니다. 해당 항목이 있는 보고서 페이지로 이동하는 링크를 클릭합니다.  
+4.  **실행** 을 클릭합니다. 보고서가 실행되고 문서 구조에 사용자가 만든 레이블이 표시됩니다. 해당 항목이 있는 보고서 페이지로 이동하는 링크를 클릭합니다.  
 
   
-##  <a name="AddUniqueValuesToMap"></a>   
-#### <a name="to-add-unique-group-values-to-a-document-map"></a>문서 구조에 고유한 그룹 값을 추가하려면  
+##  <a name="to-add-unique-group-values-to-a-document-map"></a><a name="AddUniqueValuesToMap"></a> 문서 구조에 고유한 그룹 값을 추가하려면  
   
 1.  디자인 뷰에서 문서 구조에 표시할 그룹을 포함하는 테이블, 행렬 또는 목록을 선택합니다. 그룹화 창에 행 및 열 그룹이 표시됩니다.  
   
-2.  행 그룹 창에서 그룹을 마우스 오른쪽 단추로 클릭한 다음 **그룹 편집**을 클릭합니다. **테이블릭스 그룹 속성** 대화 상자의 **일반** 페이지가 열립니다.  
+2.  행 그룹 창에서 그룹을 마우스 오른쪽 단추로 클릭한 다음 **그룹 편집** 을 클릭합니다. **테이블릭스 그룹 속성** 대화 상자의 **일반** 페이지가 열립니다.  
   
-3.  **고급**을 클릭합니다.  
+3.  **고급** 을 클릭합니다.  
   
 4.  **문서 구조** 목록 상자에서 그룹 식과 일치하는 식을 입력하거나 선택합니다.  
   
@@ -73,10 +71,9 @@ ms.locfileid: "85061049"
   
 6.  문서 구조에 표시할 각 그룹에 대해 1-4단계를 반복합니다.  
   
-7.  **실행**을 클릭합니다. 보고서가 실행되고 문서 구조에 그룹 값이 표시됩니다. 해당 항목이 있는 보고서 페이지로 이동하는 링크를 클릭합니다.  
+7.  **실행** 을 클릭합니다. 보고서가 실행되고 문서 구조에 그룹 값이 표시됩니다. 해당 항목이 있는 보고서 페이지로 이동하는 링크를 클릭합니다.  
   
-##  <a name="HideMapWhenViewRpt"></a>   
-#### <a name="to-hide-the-document-map-when-you-view-a-report"></a>보고서를 볼 때 문서 구조를 숨기려면  
+##  <a name="to-hide-the-document-map-when-you-view-a-report"></a><a name="HideMapWhenViewRpt"></a> 보고서를 볼 때 문서 구조를 숨기려면  
   
 1.  웹 포털에서 문서 구조를 포함하는 보고서를 찾습니다.  
   

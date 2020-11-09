@@ -9,12 +9,12 @@ ms.topic: conceptual
 ms.assetid: 7349e626-6ed5-4d21-b05f-cf042ad9ad70
 author: maggiesMSFT
 ms.author: maggies
-ms.openlocfilehash: 4592e5b2bc35da9c2887e0c2552dc33cd3cecd5e
-ms.sourcegitcommit: a41e1f4199785a2b8019a419a1f3dcdc15571044
+ms.openlocfilehash: 301d77a972da39f4e3e046e5e983206e9a1ba5c9
+ms.sourcegitcommit: 80701484b8f404316d934ad2a85fd773e26ca30c
 ms.translationtype: HT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 10/13/2020
-ms.locfileid: "91987393"
+ms.lasthandoff: 11/03/2020
+ms.locfileid: "93243772"
 ---
 # <a name="the-web-portal-of-a-report-server-ssrs-native-mode"></a>보고서 서버의 웹 포털(SSRS 기본 모드)
 
@@ -22,7 +22,7 @@ ms.locfileid: "91987393"
 
 Reporting Services 보고서 서버의 웹 포털은 웹 기반 환경입니다. 포털에서 보고서, 모바일 보고서, KPI를 볼 수 있으며, 보고서 서버 인스턴스의 요소로 이동할 수 있습니다. 웹 포털을 사용하여 단일 보고서 서버 인스턴스를 관리할 수도 있습니다.
 
-![ssRSPortal](../reporting-services/media/ssrsportal.png)
+![SQL Server Reporting Services 포털을 보여 주는 스크린샷](../reporting-services/media/ssrsportal.png)
 
 ## <a name="what-is-the-web-portal"></a>웹 포털이란?
 
@@ -67,9 +67,9 @@ Reporting Services 보고서 서버의 웹 포털은 웹 기반 환경입니다.
 
 2. 웹 브라우저의 주소 표시줄에 웹 포털 URL을 입력합니다.
 
-    기본적으로 이 URL은 *https://[ComputerName]/reports*입니다.
+    기본적으로 이 URL은 *https://[ComputerName]/reports* 입니다.
 
-    특정 포트를 사용하도록 보고서 서버를 구성할 수 있습니다. 예를 들어 *https://[ComputerName]:80/reports* 또는 *https://[ComputerName]:8080/reports*입니다.
+    특정 포트를 사용하도록 보고서 서버를 구성할 수 있습니다. 예를 들어 *https://[ComputerName]:80/reports* 또는 *https://[ComputerName]:8080/reports* 입니다.
 
 ## <a name="grouping-by-categories"></a>범주별 그룹화
 
@@ -86,15 +86,15 @@ Reporting Services 보고서 서버의 웹 포털은 웹 기반 환경입니다.
 
 오른쪽 상단에서 **보기** 를 선택하여 표시되는 항목을 관리할 수 있습니다. 숨김 표시를 선택할 경우 해당 항목은 흐린 색으로 표시됩니다.
 
-![ssRSWebPortal-view](../reporting-services/media/ssrswebportal-view.png)
+![숨겨진 항목 표시 옵션이 선택된 뷰 드롭다운의 스크린샷](../reporting-services/media/ssrswebportal-view.png)
 
-![ssRSWebPortal-hidden](../reporting-services/media/ssrswebportal-hidden.png)
+![사용할 수 없는 페이지를 매긴 보고서 옵션을 보여 주는 스크린샷](../reporting-services/media/ssrswebportal-hidden.png)
 
 ### <a name="power-bi-desktop-reports-and-excel-workbooks"></a>Power BI Desktop 보고서 및 Excel 통합 문서
 
 Power BI Desktop 보고서 및 Excel 통합 문서에 대한 권한을 업로드, 구성, 관리할 수 있습니다. 이러한 권한은 웹 포털 안에서 그룹화됩니다.
 
-![ssRSWebPortal-view-pbi-and-excel](../reporting-services/media/ssrswebportal-view-pbi-and-excel.png)
+![Power BI Desktop 보고서 섹션 및 Excel 통합 문서 섹션을 보여 주는 스크린샷](../reporting-services/media/ssrswebportal-view-pbi-and-excel.png)
 
 파일은 다른 리소스 파일과 마찬가지로 Reporting Services 안에 저장됩니다. 이러한 항목 중 하나를 선택하면 데스크톱에 로컬로 다운로드됩니다. 변경 내용이 있을 경우 보고서 서버에 다시 업로드하여 변경 내용을 저장할 수 있습니다.
 
@@ -102,7 +102,7 @@ Power BI Desktop 보고서 및 Excel 통합 문서에 대한 권한을 업로드
 
 검색어를 입력하고 액세스할 수 있는 모든 항목을 확인합니다. 결과는 KPI, 보고서, 데이터 세트 및 기타 항목으로 분류됩니다. 그런 다음 결과와 상호 작용하여 즐겨찾기에 추가할 수 있습니다.
 
-![ssRSWebPortal-Search](../reporting-services/media/ssrswebportal-search.png)
+![검색 텍스트 상자가 호출된 SQL Server 보고 서버 포털을 보여 주는 스크린샷](../reporting-services/media/ssrswebportal-search.png)
 
 ## <a name="web-portal-tasks"></a>웹 포털 작업
 

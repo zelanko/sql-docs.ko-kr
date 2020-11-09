@@ -11,12 +11,12 @@ ms.author: drskwier
 ms.reviewer: maghan
 ms.custom: seo-lt-2019
 ms.date: 10/27/2020
-ms.openlocfilehash: ce232d98e441d6ce217a2f97f6b8b1b5e130b7f3
-ms.sourcegitcommit: b09f069c6bef0655b47e9953a4385f1b52bada2b
+ms.openlocfilehash: fbfe0f98d5a61033bdc17e7c974e3859814ce4cc
+ms.sourcegitcommit: b3a711a673baebb2ff10d7142b209982b46973ae
 ms.translationtype: HT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 10/27/2020
-ms.locfileid: "92734643"
+ms.lasthandoff: 11/05/2020
+ms.locfileid: "93364785"
 ---
 # <a name="release-notes-for-sql-server-management-studio-ssms"></a>SSMS(SQL Server Management Studio) 릴리스 정보
 
@@ -123,7 +123,7 @@ SSMS 18.7은 SSMS의 최신 GA(일반 공급) 릴리스입니다. 이전 버전�
 | Analysis Services | msmdpump.dll을 통해 SSAS에 연결하려고 할 때 오류가 발생할 수 있는 문제를 해결했습니다. [SQL Server 사용자 피드백](https://feedback.azure.com/forums/908035-sql-server/suggestions/40144696)을 참조하세요. |
 | Backup/복원 | "연결 속성 보기"를 선택하면 SQL 2016 및 이전 버전에 대해 HostDistribution 속성이 누락되었다는 SMO 오류가 발생하는 문제를 해결했습니다. |
 | 데이터베이스 디자이너 | 10진수를 처리할 때 SSMS에서 크래시가 발생하는 문제를 해결했습니다. |
-| 데이터베이스 다이어그램 | "테이블 추가" 대화 상자가 제대로 표시되지 않은 데이터베이스 다이어그램을 사용하는 경우 SSMS에서 크래시 또는 무반응이 발생할 수 있는 문제를 해결했습니다. |
+| 데이터베이스 다이어그램 | “테이블 추가” 대화 상자가 제대로 표시되지 않은 데이터베이스 다이어그램을 사용하는 경우 SSMS가 작동이 중단되거나 응답을 중지할 수 있는 문제를 해결했습니다. |
 | 데이터베이스 미러링 | 미러 구성이 실패하는 문제를 수정했습니다. [SQL Server 사용자 피드백](https://feedback.azure.com/forums/908035-sql-server/suggestions/32897281)을 참조하세요. |
 | 일반 SSMS | Azure SQL DB에 연결하는 데 몇 초 정도 걸릴 수 있던 문제를 해결했습니다(사용자 데이터베이스에서 SQL 로그인). |
 | 일반 SSMS | SSMS가 캡처된 교착 상태(.xdl 파일)를 처리/표시하지 않는 문제를 해결했습니다. |
@@ -164,7 +164,7 @@ SSMS 18.7은 SSMS의 최신 GA(일반 공급) 릴리스입니다. 이전 버전�
 
 ### <a name="186"></a>18.6
 
-![다운로드](media/download-icon.png) [SSMS 18.6 다운로드](https://go.microsoft.com/fwlink/?linkid=2146265)
+![다운로드](media/download-icon.png) [SSMS 18.6 다운로드](https://go.microsoft.com/fwlink/?linkid=2135491)
 
 - 릴리스 번호: 18.6
 - 빌드 번호: 15.0.18338.0
@@ -637,7 +637,7 @@ SSMS 18.7은 SSMS의 최신 GA(일반 공급) 릴리스입니다. 이전 버전�
 |패키지 ID는 SSMS 확장을 개발하는 데 더 이상 필요하지 않습니다.| 과거에는 SSMS가 잘 알려진 패키지만 선택적으로 로드하여 개발자가 직접 패키지를 등록해야 했습니다. 더 이상 그렇지 않습니다.|
 |일반 SSMS|SSMS의 파일 그룹에 대한 AUTOGROW_ALL_FILES 구성 옵션을 공개합니다.|
 |일반 SSMS|문제가 발생할 수 있는 '경량 풀링' 및 '우선순위 높임' 옵션이 SSMS GUI에서 제거되었습니다. 자세한 내용은 [우선 순위 높임 세부 정보 및 권장되지 않은 이유](https://deep.data.blog/2010/01/26/priority-boost-details-and-why-its-not-recommended/)를 참조하세요.
-|일반 SSMS|파일을 생성하는 새 메뉴 및 키 바인딩: **CTRL+ALT+N** . **Ctrl+N** 을 사용하면 새 쿼리를 계속 만듭니다.|
+|일반 SSMS|파일을 생성하는 새 메뉴 및 키 바인딩: **CTRL+ALT+N**. **Ctrl+N** 을 사용하면 새 쿼리를 계속 만듭니다.|
 |일반 SSMS|이제 사용자는 규칙 이름 하나를 자동으로 생성하는 대신 **새 방화벽 규칙** 대화 상자에서 규칙 이름을 지정할 수 있습니다.|
 |일반 SSMS|특별히 v140+ T-SQL을 위해 편집기에서 Intellisense를 개선했습니다.|
 |일반 SSMS|데이터 정렬 대화 상자에서 UTF-8용 SSMS UI에 지원을 추가했습니다.|

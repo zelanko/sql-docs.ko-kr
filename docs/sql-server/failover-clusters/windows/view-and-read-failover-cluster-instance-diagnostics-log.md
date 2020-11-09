@@ -10,16 +10,16 @@ ms.topic: how-to
 ms.assetid: 68074bd5-be9d-4487-a320-5b51ef8e2b2d
 author: MashaMSFT
 ms.author: mathoma
-ms.openlocfilehash: 811b996732dac0f8c6bc0c71e9c8976dc3244085
-ms.sourcegitcommit: cc23d8646041336d119b74bf239a6ac305ff3d31
+ms.openlocfilehash: 06148ae5d10db159745a7eb55be06735efa49531
+ms.sourcegitcommit: b3a711a673baebb2ff10d7142b209982b46973ae
 ms.translationtype: HT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 09/23/2020
-ms.locfileid: "91114621"
+ms.lasthandoff: 11/05/2020
+ms.locfileid: "93364726"
 ---
 # <a name="view-and-read-failover-cluster-instance-diagnostics-log"></a>장애 조치(failover) 클러스터 인스턴스 진단 로그 보기 및 읽기
 [!INCLUDE [SQL Server](../../../includes/applies-to-version/sqlserver.md)]
-  SQL Server 리소스 DLL에 대한 모든 오류 및 경고 이벤트는 Windows 이벤트 로그에 기록됩니다. [sp_server_diagnostics&#40;Transact-SQL&#41;](../../../relational-databases/system-stored-procedures/sp-server-diagnostics-transact-sql.md) 시스템 저장 프로시저에서 캡처된 SQL Server 관련 진단 정보의 실행 로그는 SQL Server 장애 조치(failover) 클러스터 진단(*SQLDIAG* 로그라고도 함) 로그 파일에 기록됩니다.  
+  SQL Server 리소스 DLL에 대한 모든 오류 및 경고 이벤트는 Windows 이벤트 로그에 기록됩니다. [sp_server_diagnostics&#40;Transact-SQL&#41;](../../../relational-databases/system-stored-procedures/sp-server-diagnostics-transact-sql.md) 시스템 저장 프로시저에서 캡처된 SQL Server 관련 진단 정보의 실행 로그는 SQL Server 장애 조치(failover) 클러스터 진단( *SQLDIAG* 로그라고도 함) 로그 파일에 기록됩니다.  
   
 -   **시작하기 전 주의 사항:**  [권장 사항](#Recommendations), [보안](#Security)  
   
@@ -37,26 +37,26 @@ ms.locfileid: "91114621"
 ###  <a name="security"></a><a name="Security"></a> 보안  
   
 ####  <a name="permissions"></a><a name="Permissions"></a> 권한  
- **fn_xe_file_target_read_file**을 실행하려면 VIEW SERVER STATE 권한이 필요합니다.  
+ **fn_xe_file_target_read_file** 을 실행하려면 VIEW SERVER STATE 권한이 필요합니다.  
   
  SQL Server Management Studio를 관리자로 열기  
   
 ##  <a name="using-sql-server-management-studio"></a><a name="SSMSProcedure"></a> SQL Server Management Studio 사용  
  **진단 로그 파일을 보려면:**  
   
-1.  **파일** 메뉴에서 **열기**, **파일**을 선택한 다음 보려는 진단 로그 파일을 선택합니다.  
+1.  **파일** 메뉴에서 **열기** , **파일** 을 선택한 다음 보려는 진단 로그 파일을 선택합니다.  
   
-2.  이벤트가 왼쪽 창에 행으로 표시되며 기본적으로 **이름**및 **타임스탬프** 라는 두 열만 표시됩니다.  
+2.  이벤트가 왼쪽 창에 행으로 표시되며 기본적으로 **이름** 및 **타임스탬프** 라는 두 열만 표시됩니다.  
   
      또한 **ExtendedEvents** 메뉴도 활성화됩니다.  
   
-3.  추가 열을 보려면 **ExtendedEvents** 메뉴로 이동하고 **열 선택**을 선택합니다.  
+3.  추가 열을 보려면 **ExtendedEvents** 메뉴로 이동하고 **열 선택** 을 선택합니다.  
   
      표시할 열을 선택할 수 있는 사용 가능한 열이 포함된 대화 상자가 열립니다.  
   
 4.  **ExtendedEvents** 메뉴를 사용하고 **필터** 옵션을 선택하여 이벤트 데이터를 필터링하고 정렬할 수 있습니다.  
   
-##  <a name="using-transact-sql"></a><a name="TsqlProcedure"></a> Transact-SQL 사용  
+##  <a name="view-diagnostic-log-files-with-transact-sql"></a><a name="TsqlProcedure"></a> Transact-SQL을 사용하여 진단 로그 파일 보기  
  **진단 로그 파일을 보려면:**  
   
  SQLDIAG 로그 파일의 모든 로그 항목을 보려면 다음 쿼리를 사용합니다.  
@@ -88,13 +88,13 @@ ORDER BY Time;
 > [!NOTE]  
 >  WHERE 절을 사용하여 특정 구성 요소 또는 상태에 대한 결과를 필터링할 수 있습니다.  
   
-##  <a name="using-transact-sql"></a><a name="TsqlConfigure"></a> Transact-SQL 사용  
- **진단 로그 속성을 구성하려면**  
+##  <a name="configure-diagnostic-log-properties-with-transact-sql"></a><a name="TsqlConfigure"></a> Transact-SQL을 사용하여 진단 로그 속성 구성  
+ **진단 로그 속성을 구성하려면:**  
   
 > [!NOTE]  
 >  이 절차에 대한 예는 이 섹션의 뒷부분에 나오는 [예제(Transact-SQL)](#TsqlExample)을 참조하세요.  
   
- DDL(데이터 정의 언어) 문, **ALTER SERVER CONFIGURATION**을 사용하여 [sp_server_diagnostics&#40;Transact-SQL&#41;](../../../relational-databases/system-stored-procedures/sp-server-diagnostics-transact-sql.md) 프로시저에서 캡처된 진단 데이터의 로깅을 시작하거나 중지하고 로그 파일 롤오버 수, 로그 파일 크기 및 파일 위치와 같은 SQLDIAG 로그 구성 매개 변수를 설정할 수 있습니다. 구문에 대한 자세한 내용은 [Setting diagnostic log options](../../../t-sql/statements/alter-server-configuration-transact-sql.md#Diagnostic)을 참조하세요.  
+ DDL(데이터 정의 언어) 문, **ALTER SERVER CONFIGURATION** 을 사용하여 [sp_server_diagnostics&#40;Transact-SQL&#41;](../../../relational-databases/system-stored-procedures/sp-server-diagnostics-transact-sql.md) 프로시저에서 캡처된 진단 데이터의 로깅을 시작하거나 중지하고 로그 파일 롤오버 수, 로그 파일 크기 및 파일 위치와 같은 SQLDIAG 로그 구성 매개 변수를 설정할 수 있습니다. 구문에 대한 자세한 내용은 [Setting diagnostic log options](../../../t-sql/statements/alter-server-configuration-transact-sql.md#Diagnostic)을 참조하세요.  
   
 ###  <a name="examples-transact-sql"></a><a name="ConfigTsqlExample"></a> 예(Transact-SQL)  
   

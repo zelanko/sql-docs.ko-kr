@@ -2,7 +2,7 @@
 title: Windows 기반 ODBC Driver for SQL Server 릴리스 정보
 description: 이 릴리스 정보 문서에서는 Windows 기반 Microsoft ODBC driver for SQL Server의 각 릴리스의 변경 사항을 설명합니다.
 ms.custom: ''
-ms.date: 07/29/2020
+ms.date: 10/29/2020
 ms.prod: sql
 ms.prod_service: connectivity
 ms.technology: connectivity
@@ -12,12 +12,12 @@ ms.reviewer: v-chojas
 author: v-makouz
 ms.author: v-chojas
 manager: kenvh
-ms.openlocfilehash: d066353c17822781c264388d284949b7b43391de
-ms.sourcegitcommit: a4ee6957708089f7d0dda15668804e325b8a240c
+ms.openlocfilehash: 6c19be21aebb6a8480fb51f396530e6843ac2861
+ms.sourcegitcommit: 9e2c682929ee64c051dc62f8917d147861f7c635
 ms.translationtype: HT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 08/06/2020
-ms.locfileid: "87898812"
+ms.lasthandoff: 10/30/2020
+ms.locfileid: "93043805"
 ---
 # <a name="release-notes-for-microsoft-odbc-driver-for-sql-server-on-windows"></a>Windows 기반 Microsoft ODBC Driver for SQL Server 릴리스 정보
 
@@ -169,6 +169,7 @@ x86 드라이버의 경우: [중국어(간체)](https://go.microsoft.com/fwlink/
 | Azure Active Directory 관리 ID(시스템 및 사용자 할당) 인증 모드. | [ODBC 드라이버에서 Azure Active Directory 사용](../using-azure-active-directory.md)을 참조하세요. |
 | Always Encrypted 열에 대해 입력 매개 변수를 스트리밍할 수 있음. | [Always Encrypted를 사용할 때 ODBC 드라이버의 제한 사항](../using-always-encrypted-with-the-odbc-driver.md#limitations-of-the-odbc-driver-when-using-always-encrypted)을 참조하세요. |
 | XA 분산 트랜잭션. | [XA 트랜잭션 사용](../use-xa-with-dtc.md). |
+| 업데이트된 Visual C++ 재배포 가능 패키지 | 런타임 종속성을 Visual C++ 2017 재배포 가능 패키지로 업그레이드함([x64 다운로드](https://aka.ms/vs/15/release/vc_redist.x64.exe), [x86 다운로드](https://aka.ms/vs/15/release/vc_redist.x86.exe)) |
 | 버그 수정. | [버그 수정](../bug-fixes.md)을 참조하세요. |
 | &nbsp; | &nbsp; |
 

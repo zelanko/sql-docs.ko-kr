@@ -9,12 +9,12 @@ ms.topic: conceptual
 ms.assetid: fb0bc38f-dc56-4350-8457-cd135c0346e1
 author: maggiesMSFT
 ms.author: maggies
-ms.openlocfilehash: b07d50a9f885d6440f9cfd0a5bb47b3017d5f114
-ms.sourcegitcommit: fe59f8dc27fd633f5dfce54519d6f5dcea577f56
+ms.openlocfilehash: 1ebe16bd9b9474b892346ec2a8dd6f25254c6d0b
+ms.sourcegitcommit: 80701484b8f404316d934ad2a85fd773e26ca30c
 ms.translationtype: HT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 10/09/2020
-ms.locfileid: "91935413"
+ms.lasthandoff: 11/03/2020
+ms.locfileid: "93243765"
 ---
 # <a name="working-with-paginated-reports-web-portal"></a>페이지를 매긴 보고서 사용(웹 포털)
 
@@ -28,9 +28,9 @@ ms.locfileid: "91935413"
   
 1.  메뉴 모음에서 새로 만들기를 선택합니다.  
   
-2.  **페이지를 매긴 보고서**를 선택합니다.  
+2.  **페이지를 매긴 보고서** 를 선택합니다.  
   
-    ![ssRSWebPortal-new-report](../reporting-services/media/ssrswebportal-new-report.png)  
+    ![페이지를 매긴 보고서 옵션이 호출된 새로 만들기 드롭다운 목록을 보여 주는 스크린샷](../reporting-services/media/ssrswebportal-new-report.png)  
   
 3.  보고서 작성기가 시작되거나 보고서 작성기를 다운로드하라는 메시지가 표시됩니다.  
   
@@ -45,28 +45,28 @@ ms.locfileid: "91935413"
   
 1.  관리하려는 데이터 세트의 **줄임표(…)** 를 선택합니다.  
       
-    ![ssRSWebPortal-manage-report1](../reporting-services/media/ssrswebportal-manage-report1.png)  
+    ![데이터 세트의 줄임표 옵션을 선택하는 사용자를 보여 주는 스크린샷](../reporting-services/media/ssrswebportal-manage-report1.png)  
   
 2.  **관리** 를 선택하여 편집 화면으로 이동합니다.  
     
-    ![ssRSWebPortal-manage-report2](../reporting-services/media/ssrswebportal-manage-report2.png)  
+    ![선택된 줄임표 옵션 및 호출된 관리 옵션을 보여 주는 스크린샷](../reporting-services/media/ssrswebportal-manage-report2.png)  
   
 ## <a name="properties"></a>속성  
   
-속성 화면에서 페이지를 매긴 보고서의 **이름** 과 **설명** 을 변경할 수 있습니다. 또한 **삭제**, **이동**, **링크된 보고서 만들기**, **보고서 작성기에서 편집**, **다운로드** 또는 **대체**할 수 있습니다.  
+속성 화면에서 페이지를 매긴 보고서의 **이름** 과 **설명** 을 변경할 수 있습니다. 또한 **삭제** , **이동** , **링크된 보고서 만들기** , **보고서 작성기에서 편집** , **다운로드** 또는 **대체** 할 수 있습니다.  
     
-![ssRSWebPortal-report-properties](../reporting-services/media/ssrswebportal-report-properties.png)  
+![회사 매출 편집 대화 상자의 속성 화면을 보여 주는 스크린샷](../reporting-services/media/ssrswebportal-report-properties.png)  
    
 ## <a name="parameters"></a>매개 변수  
   
 페이지를 매긴 보고서의 기존 매개 변수를 수정할 수 있습니다. 새 매개 변수를 추가하려면 보고서 작성기 또는 SQL Server Data Tools에서 보고서를 편집해야 합니다.  
   
-![ssRSWebPortal-report-parameters](../reporting-services/media/ssrswebportal-report-parameters.png)  
+![회사 매출 편집 대화 상자의 매개 변수 화면을 보여 주는 스크린샷](../reporting-services/media/ssrswebportal-report-parameters.png)  
    
 ## <a name="data-source"></a>데이터 원본  
 공유 데이터 원본을 가리키거나 사용자 지정 데이터 원본에 대한 연결 정보를 입력할 수 있습니다.  
   
-![ssRSWebPortal-report-datasource](../reporting-services/media/ssrswebportal-report-datasource.png)  
+![회사 매출 편집 대화 상자의 데이터 원본 화면을 보여 주는 스크린샷](../reporting-services/media/ssrswebportal-report-datasource.png)  
   
 다음과 같은 옵션을 사용하여 사용자 지정 데이터 원본을 지정합니다.  
   
@@ -80,7 +80,7 @@ ms.locfileid: "91935413"
   
 `data source=(a SQL Server instance);initial catalog=MyData`
   
-런타임에 데이터 원본을 지정할 수 있도록 연결 문자열을 식으로 구성할 수 있습니다. 데이터 원본 식은 보고서 디자이너에서 보고서에 정의됩니다. 웹 포털에서는 데이터 원본 식을 정의, 확인 또는 수정할 수 없습니다. 그러나 **기본값 덮어쓰기** 를 클릭하여 정적 연결 문자열을 입력하면 데이터 원본 식을 바꿀 수 있습니다. 다시 식으로 전환하려면 **기본값으로 되돌리기**를 클릭합니다. 보고서 서버는 사용자가 연결 문자열을 복원해야 하는 경우에 대비하여 원래의 연결 문자열을 저장합니다. 데이터 원본 식을 사용하려면 보고서에 원래 게시된 데이터 원본 연결 정보를 사용해야 합니다. 고유 데이터 원본은 연결 문자열에서 식 사용을 지원하지 않습니다.  
+런타임에 데이터 원본을 지정할 수 있도록 연결 문자열을 식으로 구성할 수 있습니다. 데이터 원본 식은 보고서 디자이너에서 보고서에 정의됩니다. 웹 포털에서는 데이터 원본 식을 정의, 확인 또는 수정할 수 없습니다. 그러나 **기본값 덮어쓰기** 를 클릭하여 정적 연결 문자열을 입력하면 데이터 원본 식을 바꿀 수 있습니다. 다시 식으로 전환하려면 **기본값으로 되돌리기** 를 클릭합니다. 보고서 서버는 사용자가 연결 문자열을 복원해야 하는 경우에 대비하여 원래의 연결 문자열을 저장합니다. 데이터 원본 식을 사용하려면 보고서에 원래 게시된 데이터 원본 연결 정보를 사용해야 합니다. 고유 데이터 원본은 연결 문자열에서 식 사용을 지원하지 않습니다.  
   
 **자격 증명**  
   
@@ -122,7 +122,7 @@ ms.locfileid: "91935413"
 ## <a name="subscriptions"></a>구독  
 Reporting Services 구독은 특정 시간 또는 이벤트에 대한 응답으로 보고서를 지정하는 파일 형식으로 배달하는 구성입니다. 예를 들어 수요일마다 MonthlySales.rdl 보고서를 Microsoft Word 문서로 파일 공유에 저장합니다. 구독을 사용하면 특정 보고서 매개 변수 값 집합을 사용하여 일정을 예약한 다음 보고서 배달을 자동화할 수 있습니다. 자세한 내용은 [구독 사용](working-with-subscriptions-web-portal.md)을 참조하세요.
   
-![ssRSWebPortal-report-subscription1](../reporting-services/media/ssrswebportal-report-subscription1.png)
+![회사 매출 편집 대화 상자의 구독 화면을 보여 주는 스크린샷](../reporting-services/media/ssrswebportal-report-subscription1.png)
    
 ## <a name="dependent-items"></a>종속 항목  
 종속 항목 페이지를 사용하여 이 보고서를 참조하는 항목의 목록을 볼 수 있습니다. 각 항목 유형에 대한 아이콘을 통해 무엇인지 구분할 수 있습니다. 각 항목에서 **줄임표(...)** 를 선택하여 이러한 항목을 추가로 관리할 수 있습니다.  
@@ -136,11 +136,11 @@ Reporting Services 구독은 특정 시간 또는 이벤트에 대한 응답으�
   
 3.  **항상 사전 생성된 스냅샷에 대해 이 보고서 실행** 은 지정된 기간 동안 보고서 레이아웃 및 데이터를 캐시합니다. 보고서를 보고서 스냅샷으로 실행하면 임의의 시간에(예: 예약된 백업 시간 동안) 보고서가 실행되지 않도록 할 수 있습니다. 일정에 따라 스냅샷은 새로 고칠 수 있습니다. [자세히 알아보기]  
   
-![ssRSWebPortal-report-caching1](../reporting-services/media/ssrswebportal-report-caching1.png)  
+![항상 최신 데이터로 이 보고서 실행 옵션이 선택된 회사 매출 편집 대화 상자의 캐싱 화면을 보여 주는 스크린샷](../reporting-services/media/ssrswebportal-report-caching1.png)  
    
 **이 보고서의 복사본을 캐시하고 사용 가능할 때 사용** 을 선택하면 몇 가지 옵션이 더 제공됩니다.  
   
-![ssRSWebPortal-report-caching2](../reporting-services/media/ssrswebportal-report-caching2.png)  
+![이 보고서의 복사본을 캐시하고 사용 가능할 때 사용이 선택된 회사 매출 편집 대화 상자의 캐싱 화면을 보여 주는 스크린샷](../reporting-services/media/ssrswebportal-report-caching2.png)  
 
 자세한 내용은 [스냅샷 사용](working-with-snapshots-web-portal.md)을 참조하세요.
   
@@ -159,11 +159,11 @@ Reporting Services 구독은 특정 시간 또는 이벤트에 대한 응답으�
   
 위의 캐시 옵션을 적용한 후에 캐시 새로 고침 계획을 정의할 수 있습니다. 그러려면 캐시 설정을 적용한 후에 표시되는 **새로 고침 계획 관리** 링크를 선택합니다. 캐시 새로 고침 계획 페이지가 열립니다.   
   
-캐시 계획을 새로 만들려면 **새 캐시 새로 고침 계획**을 선택합니다. 그 다음 계획의 이름을 입력하고 일정을 지정할 수 있습니다. 데이터 세트에 정의된 매개 변수가 있으면 해당 목록이 표시되며, 읽기 전용으로 표시되어 있지 않다면 값을 제공할 수 있습니다.  
+캐시 계획을 새로 만들려면 **새 캐시 새로 고침 계획** 을 선택합니다. 그 다음 계획의 이름을 입력하고 일정을 지정할 수 있습니다. 데이터 세트에 정의된 매개 변수가 있으면 해당 목록이 표시되며, 읽기 전용으로 표시되어 있지 않다면 값을 제공할 수 있습니다.  
   
-완료한 후에 **캐시 새로 고침 계획 만들기**를 선택합니다.  
+완료한 후에 **캐시 새로 고침 계획 만들기** 를 선택합니다.  
   
-![ssRSWebPortal-report-caching3](../reporting-services/media/ssrswebportal-report-caching3.png)  
+![캐시 새로 고침 계획 만들기 옵션을 보여 주는 회사 매출 편집 대화 상자의 스크린샷](../reporting-services/media/ssrswebportal-report-caching3.png)  
   
 > [!NOTE]
 > 캐시 새로 고침 계획을 만들려면 SQL Server 에이전트를 실행해야 합니다.  

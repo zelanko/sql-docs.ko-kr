@@ -9,12 +9,12 @@ ms.topic: conceptual
 ms.assetid: 2641ea84-9343-4e6f-aec1-25339031b163
 author: maggiesMSFT
 ms.author: maggies
-ms.openlocfilehash: 0d37e617ef7dcb4c63b7d2239881cc6cb96c7c2f
-ms.sourcegitcommit: 216f377451e53874718ae1645a2611cdb198808a
+ms.openlocfilehash: 695b6d02494430b134ce46ac14d802443b41046b
+ms.sourcegitcommit: 80701484b8f404316d934ad2a85fd773e26ca30c
 ms.translationtype: HT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 07/28/2020
-ms.locfileid: "87243604"
+ms.lasthandoff: 11/03/2020
+ms.locfileid: "93243792"
 ---
 # <a name="work-with-shared-datasets---web-portal"></a>공유 데이터 세트 사용 - 웹 포털
 
@@ -30,15 +30,15 @@ ms.locfileid: "87243604"
   
 1.  메뉴 모음에서 새로 만들기를 선택합니다.  
   
-2.  **데이터 세트**를 선택합니다.  
+2.  **데이터 세트** 를 선택합니다.  
   
-    ![ssRSDataset-NewDataset](../reporting-services/media/ssrsdataset-newdataset.png)  
+    ![데이터 세트 옵션이 호출된 새로 만들기 드롭다운 목록을 보여 주는 스크린샷](../reporting-services/media/ssrsdataset-newdataset.png)  
   
 3.  보고서 작성기가 시작되거나 보고서 작성기를 다운로드하라는 메시지가 표시됩니다.  
   
 4.  **새 보고서 또는 데이터 세트** 대화 상자에서, 데이터 세트에 사용할 데이터 원본 연결을 선택합니다. 공유 데이터 원본의 위치를 찾아서 선택해야 하는 경우도 있습니다.  
   
-5.  **만들기**를 선택합니다.  
+5.  **만들기** 를 선택합니다.  
   
 6.  데이터 세트를 빌드한 다음, 왼쪽 위에 있는 **저장** 아이콘을 선택하여 데이터 세트를 보고서 서버에 다시 저장합니다.  
   
@@ -47,21 +47,21 @@ ms.locfileid: "87243604"
 기존 공유 데이터 세트를 관리하려면, 다음을 수행합니다.  
   
 > [!NOTE]
-> 폴더에 공유 데이터 세트가 표시되지 않으면 데이터 세트가 표시되는 것을 확인해야 합니다. 웹 포털 오른쪽 위에 있는 메뉴 모음에서 **보기** 를 선택할 수 있습니다. **데이터 세트**가 선택되어 있는지 확인합니다.  
+> 폴더에 공유 데이터 세트가 표시되지 않으면 데이터 세트가 표시되는 것을 확인해야 합니다. 웹 포털 오른쪽 위에 있는 메뉴 모음에서 **보기** 를 선택할 수 있습니다. **데이터 세트** 가 선택되어 있는지 확인합니다.  
   
 1.  관리하려는 데이터 세트의 **줄임표(…)** 를 선택합니다.  
   
-    ![ssRSDataset-Ellipse](../reporting-services/media/ssrsdataset-ellipse.png)  
+    ![데이터 세트의 줄임표 옵션을 선택하는 사용자를 보여 주는 스크린샷](../reporting-services/media/ssrsdataset-ellipse.png)  
   
 2.  **관리** 를 선택하여 편집 화면으로 이동합니다.  
   
-    ![ssRSDataset-Manage](../reporting-services/media/ssrsdataset-manage.png)  
+    ![선택된 줄임표 옵션 및 호출된 관리 옵션을 보여 주는 스크린샷](../reporting-services/media/ssrsdataset-manage.png)  
   
 ## <a name="properties"></a>속성
   
-속성 화면에서 데이터 세트의 **이름**과 **설명**을 변경할 수 있습니다. **삭제**, **이동**, **보고서 작성기에서 편집**, **다운로드** 또는 **대체**도 가능합니다.  
+속성 화면에서 데이터 세트의 **이름** 과 **설명** 을 변경할 수 있습니다. **삭제** , **이동** , **보고서 작성기에서 편집** , **다운로드** 또는 **대체** 도 가능합니다.  
   
-![ssRSdataset-Properties](../reporting-services/media/ssrsdataset-properties.png)  
+![회사 매출 편집 대화 상자의 속성 화면을 보여 주는 스크린샷](../reporting-services/media/ssrsdataset-properties.png)  
   
 ## <a name="caching"></a>캐싱
   
@@ -69,19 +69,19 @@ ms.locfileid: "87243604"
   
 1.  **항상 최신 데이터로 이 보고서 실행** 은 요청 시 데이터 원본에 대한 쿼리를 생성합니다.  
   
-2.  **이 보고서의 복사본을 캐시하고 사용 가능할 때 사용**은 데이터 임시 사본을 캐시에 보관하여 이 데이터 세트를 사용하는 항목과 사용할 수 있도록 합니다. 캐시를 사용하면 데이터 세트 쿼리를 다시 실행하지 않고 캐시에서 바로 가져오기 때문에 일반적으로 성능이 향상됩니다.  
+2.  **이 보고서의 복사본을 캐시하고 사용 가능할 때 사용** 은 데이터 임시 사본을 캐시에 보관하여 이 데이터 세트를 사용하는 항목과 사용할 수 있도록 합니다. 캐시를 사용하면 데이터 세트 쿼리를 다시 실행하지 않고 캐시에서 바로 가져오기 때문에 일반적으로 성능이 향상됩니다.  
   
-![ssRSDataset-Caching1](../reporting-services/media/ssrsdataset-caching1.png)  
+![항상 최신 데이터로 이 보고서 실행 옵션이 선택된 회사 매출 편집 대화 상자의 캐싱 화면을 보여 주는 스크린샷](../reporting-services/media/ssrsdataset-caching1.png)  
   
 **이 보고서의 복사본을 캐시하고 사용 가능할 때 사용** 을 선택하면 몇 가지 옵션이 더 제공됩니다.  
   
-![ssRSDataset-Caching2](../reporting-services/media/ssrsdataset-caching2.png)  
+![이 보고서의 복사본을 캐시하고 사용 가능할 때 사용이 선택된 회사 매출 편집 대화 상자의 캐싱 화면을 보여 주는 스크린샷](../reporting-services/media/ssrsdataset-caching2.png)  
   
 ### <a name="cache-expiration"></a>캐시 만료  
   
 일정 시간이 지난 후에 공유 데이터 세트의 캐시를 만료시킬지 또는 예약을 통해 만료시킬지를 제어할 수 있습니다. 공유 일정을 사용할 수 있습니다.  
   
-![ssRSDataset-Caching3](../reporting-services/media/ssrsdataset-caching3.png)  
+![선택된 일정에 따라 캐시 만료 옵션을 보여 주는 스크린샷](../reporting-services/media/ssrsdataset-caching3.png)  
   
 > [!NOTE]
 > 만료를 설정하더라도 캐시가 새로 고쳐지지는 않습니다. 캐시 새로 고침 계획이 없는 경우, 데이터 세트를 다음에 실행할 때 데이터가 새로 고쳐집니다.  
@@ -94,11 +94,11 @@ ms.locfileid: "87243604"
   
 위의 캐시 옵션을 적용한 후에 캐시 새로 고침 계획을 정의할 수 있습니다. 그러려면 캐시 설정을 적용한 후에 표시되는 **새로 고침 계획 관리** 링크를 선택합니다. 캐시 새로 고침 계획 페이지가 열립니다.   
   
-캐시 계획을 새로 만들려면 **새 캐시 새로 고침 계획**을 선택합니다. 그 다음 계획의 이름을 입력하고 일정을 지정할 수 있습니다. 데이터 세트에 정의된 매개 변수가 있으면 해당 목록이 표시되며, 읽기 전용으로 표시되어 있지 않다면 값을 제공할 수 있습니다.  
+캐시 계획을 새로 만들려면 **새 캐시 새로 고침 계획** 을 선택합니다. 그 다음 계획의 이름을 입력하고 일정을 지정할 수 있습니다. 데이터 세트에 정의된 매개 변수가 있으면 해당 목록이 표시되며, 읽기 전용으로 표시되어 있지 않다면 값을 제공할 수 있습니다.  
   
-완료한 후에 **캐시 새로 고침 계획 만들기**를 선택합니다.  
+완료한 후에 **캐시 새로 고침 계획 만들기** 를 선택합니다.  
   
-![ssRSDataset-Caching4](../reporting-services/media/ssrsdataset-caching4.png)  
+![캐시 새로 고침 계획 만들기 옵션을 보여 주는 회사 매출 편집 대화 상자의 스크린샷](../reporting-services/media/ssrsdataset-caching4.png)  
   
 > [!NOTE]
 > 캐시 새로 고침 계획을 만들려면 SQL Server 에이전트를 실행해야 합니다.  

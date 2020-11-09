@@ -9,12 +9,12 @@ ms.topic: conceptual
 ms.assetid: 18c90a36-48bf-4805-a960-2d1e8f00c2dc
 author: maggiesMSFT
 ms.author: maggies
-ms.openlocfilehash: fe0d52f55905721002a1590f54ada84d7732f2a0
-ms.sourcegitcommit: 216f377451e53874718ae1645a2611cdb198808a
+ms.openlocfilehash: a60dfa5cf08b11789fde744f41a2c139f922d286
+ms.sourcegitcommit: 9e2c682929ee64c051dc62f8917d147861f7c635
 ms.translationtype: HT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 07/28/2020
-ms.locfileid: "87245660"
+ms.lasthandoff: 10/30/2020
+ms.locfileid: "93043802"
 ---
 # <a name="tutorial-add-a-sparkline-to-your-report-report-builder"></a>자습서: 보고서에 스파크라인 추가(보고서 작성기)
 
@@ -22,7 +22,7 @@ ms.locfileid: "87245660"
   
 스파크라인과 데이터 막대는 작은 공간에 많은 정보가 포함되어 있는 작고 간단한 차트로, 대개 [!INCLUDE[ssRSnoversion_md](../includes/ssrsnoversion-md.md)] 보고서에서 테이블과 행렬로 표시됩니다. 다음 그림에서는 만들려는 보고서와 비슷한 보고서를 보여 줍니다.  
   
-![report-builder-sparkline-final](../reporting-services/media/report-builder-sparkline-final.png)  
+![보고서 작성기 스파크라인을 보여 주는 스크린샷](../reporting-services/media/report-builder-sparkline-final.png)  
      
 이 자습서에 소요되는 예상 시간: 30분.  
   
@@ -35,42 +35,42 @@ ms.locfileid: "87245660"
   
     **새 보고서 또는 데이터 세트** 대화 상자가 열립니다.  
   
-    **새 보고서 또는 데이터 세트** 대화 상자가 표시되지 않는 경우 **파일** 메뉴 &gt; **새로 만들기**를 클릭합니다.  
+    **새 보고서 또는 데이터 세트** 대화 상자가 표시되지 않는 경우 **파일** 메뉴 &gt; **새로 만들기** 를 클릭합니다.  
   
 2.  왼쪽 창에 **새 보고서** 가 선택되어 있는지 확인합니다.  
   
-3.  오른쪽 창에서 **테이블 또는 행렬 마법사**를 클릭합니다.  
+3.  오른쪽 창에서 **테이블 또는 행렬 마법사** 를 클릭합니다.  
   
-4.  **데이터 세트 선택** 페이지에서 **데이터 세트 만들기** > **다음**을 선택합니다. **데이터 원본에 대한 연결 선택** 페이지가 열립니다.  
+4.  **데이터 세트 선택** 페이지에서 **데이터 세트 만들기** > **다음** 을 선택합니다. **데이터 원본에 대한 연결 선택** 페이지가 열립니다.  
   
     > [!NOTE]  
-    > 이 자습서를 사용하기 위해 특정 데이터가 필요하지는 않습니다. SQL Server 데이터베이스에 연결하기만 하면 됩니다. **데이터 원본 연결**에 나열된 데이터 원본 연결이 이미 있는 경우 해당 데이터 원본 연결을 선택하고 10단계로 이동할 수 있습니다. 자세한 내용은 [데이터에 연결하는 다른 방법&#40;보고서 작성기&#41;](../reporting-services/alternative-ways-to-get-a-data-connection-report-builder.md)를 참조하세요.  
+    > 이 자습서를 사용하기 위해 특정 데이터가 필요하지는 않습니다. SQL Server 데이터베이스에 연결하기만 하면 됩니다. **데이터 원본 연결** 에 나열된 데이터 원본 연결이 이미 있는 경우 해당 데이터 원본 연결을 선택하고 10단계로 이동할 수 있습니다. 자세한 내용은 [데이터에 연결하는 다른 방법&#40;보고서 작성기&#41;](../reporting-services/alternative-ways-to-get-a-data-connection-report-builder.md)를 참조하세요.  
   
-5.  **새로 만들기**를 클릭합니다. **데이터 원본 속성** 대화 상자가 열립니다.  
+5.  **새로 만들기** 를 클릭합니다. **데이터 원본 속성** 대화 상자가 열립니다.  
   
-6.  **이름**에 데이터 원본 이름으로 **Product Sales**를 입력합니다.  
+6.  **이름** 에 데이터 원본 이름으로 **Product Sales** 를 입력합니다.  
   
-7.  **연결 유형 선택**에서 **Microsoft SQL Server** 가 선택되어 있는지 확인합니다.  
+7.  **연결 유형 선택** 에서 **Microsoft SQL Server** 가 선택되어 있는지 확인합니다.  
   
-8.  **연결 문자열**에 다음 텍스트를 입력합니다.  
+8.  **연결 문자열** 에 다음 텍스트를 입력합니다.  
   
     `Data Source\=<servername>`  
   
     `<servername>`식(예: Report001)은 SQL Server 데이터베이스 엔진의 인스턴스가 설치된 컴퓨터를 지정합니다. 보고서 데이터는 SQL Server 데이터베이스에서 추출되지 않았으므로 데이터베이스 이름을 포함하지 않아야 합니다. 지정된 서버의 기본 데이터베이스는 쿼리를 구문 분석하는 데 사용됩니다.  
   
-9. **자격 증명**을 클릭합니다. 외부 데이터 원본에 액세스하는 데 필요한 자격 증명을 입력합니다.  
+9. **자격 증명** 을 클릭합니다. 외부 데이터 원본에 액세스하는 데 필요한 자격 증명을 입력합니다.  
   
 10. [!INCLUDE[clickOK](../includes/clickok-md.md)]  
   
     **데이터 원본에 대한 연결 선택** 페이지로 돌아갑니다.  
   
-11. 데이터 원본에 연결할 수 있는지 확인하려면 **연결 테스트**를 클릭합니다.  
+11. 데이터 원본에 연결할 수 있는지 확인하려면 **연결 테스트** 를 클릭합니다.  
   
     "연결되었습니다."라는 메시지가 나타납니다.  
   
 12. [!INCLUDE[clickOK](../includes/clickok-md.md)]  
   
-13. **다음**을 클릭합니다.  
+13. **다음** 을 클릭합니다.  
   
 ## <a name="2-create-a-query-and-table-layout-in-the-table-wizard"></a><a name="Query"></a>2. 테이블 마법사에서 쿼리 및 테이블 레이아웃 만들기  
 보고서에서는 미리 정의된 쿼리가 포함된 공유 데이터 세트를 사용하거나 해당 보고서에만 사용할 포함된 데이터 세트를 만들 수 있습니다. 이 자습서에서는 포함된 데이터 세트를 만듭니다.  
@@ -82,7 +82,7 @@ ms.locfileid: "87245660"
   
 1.  **쿼리 디자인** 페이지에 관계형 쿼리 디자이너가 열립니다. 이 자습서에서는 텍스트 기반 쿼리 디자이너를 사용합니다.  
   
-2.  **텍스트로 편집**을 클릭합니다. 텍스트 기반 쿼리 디자이너에 쿼리 창과 결과 창이 표시됩니다.  
+2.  **텍스트로 편집** 을 클릭합니다. 텍스트 기반 쿼리 디자이너에 쿼리 창과 결과 창이 표시됩니다.  
   
 3.  [!INCLUDE[tsql](../includes/tsql-md.md)] 쿼리 **상자에 다음** 쿼리를 붙여 넣습니다.  
   
@@ -121,23 +121,23 @@ ms.locfileid: "87245660"
   
 4.  쿼리 디자이너 도구 모음에서 실행( **!** )을 클릭합니다.  
   
-    쿼리가 실행되고 **SalesDate**, **Subcategory**, **Product**, **Sales**및 **Quantity**필드에 대한 결과 집합이 표시됩니다.  
+    쿼리가 실행되고 **SalesDate** , **Subcategory** , **Product** , **Sales** 및 **Quantity** 필드에 대한 결과 집합이 표시됩니다.  
   
-5.  **다음**을 클릭합니다.  
+5.  **다음** 을 클릭합니다.  
   
-6.  **필드 정렬** 페이지에서 **값** 에 **Sales**를 끌어옵니다.  
+6.  **필드 정렬** 페이지에서 **값** 에 **Sales** 를 끌어옵니다.  
   
     **Sales** 는 Sum 함수로 집계됩니다. 값은 [Sum(Sales)]입니다.  
   
-7.  **행 그룹** 에 **Product**를 끌어옵니다.  
+7.  **행 그룹** 에 **Product** 를 끌어옵니다.  
   
-8.  **열 그룹** 에 **SalesDate**를 끌어옵니다.  
+8.  **열 그룹** 에 **SalesDate** 를 끌어옵니다.  
 
-    ![report-builder-sparkline-arrange-fields](../reporting-services/media/report-builder-sparkline-arrange-fields.png)
+    ![필드 정렬 방법을 보여 주는 스크린샷](../reporting-services/media/report-builder-sparkline-arrange-fields.png)
   
-9. **다음**을 클릭합니다.  
+9. **다음** 을 클릭합니다.  
   
-10. **레이아웃 선택** 페이지의 **옵션**에서 **부분합 및 총합계 표시** 가 선택되어 있는지 확인합니다.  
+10. **레이아웃 선택** 페이지의 **옵션** 에서 **부분합 및 총합계 표시** 가 선택되어 있는지 확인합니다.  
   
     마법사 미리 보기 창에 3개의 행이 있는 테이블이 표시됩니다. 보고서를 실행하면 각 행이 다음과 같은 방식으로 표시됩니다.  
   
@@ -147,17 +147,17 @@ ms.locfileid: "87245660"
   
     *  세 번째 행은 테이블에 대해 한 번씩 나타나 총합계를 표시합니다.  
     
-    ![report-builder-sparkline-choose-layout](../reporting-services/media/report-builder-sparkline-choose-layout.png)
+    ![레이아웃 선택 방법을 보여 주는 스크린샷](../reporting-services/media/report-builder-sparkline-choose-layout.png)
   
-11. **다음**을 클릭합니다.  
+11. **다음** 을 클릭합니다.  
   
-12. **Finish**를 클릭합니다.  
+12. **Finish** 를 클릭합니다.  
   
 14. 디자인 화면에 테이블이 추가됩니다. 이 테이블에는 열 3개와 행 3개가 있습니다.  
   
-    그룹화 창을 확인합니다. 그룹화 창이 표시되지 않는 경우 **보기** 메뉴에서 **그룹화**를 클릭합니다. 행 그룹 창에는 **Product**라는 하나의 행 그룹이 표시됩니다. 열 그룹 창에는 **SalesDate**라는 하나의 열 그룹이 표시됩니다. 세부 데이터는 모두 데이터 세트 쿼리로 검색된 데이터입니다.  
+    그룹화 창을 확인합니다. 그룹화 창이 표시되지 않는 경우 **보기** 메뉴에서 **그룹화** 를 클릭합니다. 행 그룹 창에는 **Product** 라는 하나의 행 그룹이 표시됩니다. 열 그룹 창에는 **SalesDate** 라는 하나의 열 그룹이 표시됩니다. 세부 데이터는 모두 데이터 세트 쿼리로 검색된 데이터입니다.  
     
-    ![report-builder-sparkline-grouping-pane](../reporting-services/media/report-builder-sparkline-grouping-pane.png)
+    ![보고서 작성기 그룹화 창을 보여 주는 스크린샷](../reporting-services/media/report-builder-sparkline-grouping-pane.png)
   
 15. **실행** 을 클릭하여 보고서를 미리 봅니다.  
 
@@ -168,22 +168,22 @@ ms.locfileid: "87245660"
   
 2.  **SalesDate** 열에서 두 번째 행(열 제목 행 아래)의 셀을 클릭합니다. Ctrl 키를 누른 상태로 `[Sum(Sales)]`이 들어 있는 셀을 모두 선택합니다. 
 
-    ![report-builder-select-sum-sales](../reporting-services/media/report-builder-select-sum-sales.png) 
+    ![매출 합계 선택 방법을 보여 주는 스크린샷](../reporting-services/media/report-builder-select-sum-sales.png) 
   
-3.  **홈** 탭 > **숫자** 그룹에서 **통화**를 클릭합니다. 셀이 변경되어 형식 지정된 통화가 표시됩니다.  
+3.  **홈** 탭 > **숫자** 그룹에서 **통화** 를 클릭합니다. 셀이 변경되어 형식 지정된 통화가 표시됩니다.  
 
-    ![report-builder-placeholder-currency](../reporting-services/media/report-builder-placeholder-currency.png)
+    ![자리 표시자 통화 값으로 대체된 sim 판매량을 보여 주는 스크린샷](../reporting-services/media/report-builder-placeholder-currency.png)
   
-    국가별 설정이 영어(미국)인 경우 기본 예제 텍스트는 [ **$12,345.00**]입니다. 예제 통화 값이 표시되지 않는 경우 **숫자** 그룹에서 **자리 표시자 스타일** > **샘플 값**을 클릭합니다.  
+    국가별 설정이 영어(미국)인 경우 기본 예제 텍스트는 [ **$12,345.00** ]입니다. 예제 통화 값이 표시되지 않는 경우 **숫자** 그룹에서 **자리 표시자 스타일** > **샘플 값** 을 클릭합니다.  
     
-    ![report-builder-placeholder-value-button](../reporting-services/media/report-builder-placeholder-value-button.png)
+    ![선택한 샘플 값 옵션을 보여 주는 스크린샷](../reporting-services/media/report-builder-placeholder-value-button.png)
    
 ### <a name="2b-optional-format-data-as-dates"></a><a name="FormatDates"></a>2b. (선택 사항) 데이터 서식을 날짜로 지정  
 기본적으로 **SalesDate** 필드에는 날짜 및 시간 정보가 표시됩니다. 날짜만 표시되도록 서식을 지정할 수 있습니다.  
   
 1.  `[SalesDate]`가 들어 있는 셀을 클릭합니다.  
   
-3.  **홈** 탭 > **숫자** 그룹 > **날짜**를 선택합니다.  
+3.  **홈** 탭 > **숫자** 그룹 > **날짜** 를 선택합니다.  
   
     셀에 예제 날짜 **[1/31/2000]** 이 표시됩니다.
      
@@ -197,25 +197,25 @@ ms.locfileid: "87245660"
   
 2.  테이블의 Total 열을 선택합니다.  
   
-3.  마우스 오른쪽 단추를 클릭하고 **열 삽입**을 가리킨 다음 **왼쪽**을 클릭합니다.  
+3.  마우스 오른쪽 단추를 클릭하고 **열 삽입** 을 가리킨 다음 **왼쪽** 을 클릭합니다.  
 
-    ![report-builder-add-column-left](../reporting-services/media/report-builder-add-column-left.png)
+    ![왼쪽 열을 삽입하는 방법을 보여 주는 스크린샷](../reporting-services/media/report-builder-add-column-left.png)
   
-4.  새 열에서 `[Product]` 행의 셀을 마우스 오른쪽 단추로 클릭 > **삽입** > **스파크라인**을 선택합니다.  
+4.  새 열에서 `[Product]` 행의 셀을 마우스 오른쪽 단추로 클릭 > **삽입** > **스파크라인** 을 선택합니다.  
 
-    ![report-builder-insert-sparkline](../reporting-services/media/report-builder-insert-sparkline.png)
+    ![스파크라인 삽입 방법을 보여 주는 스크린샷](../reporting-services/media/report-builder-insert-sparkline.png)
   
-5.  **스파크라인 유형 선택** 대화 상자에서 **열** 행의 첫 번째 스파크라인이 선택되어 있는지 확인한 다음 **확인**을 클릭합니다.  
+5.  **스파크라인 유형 선택** 대화 상자에서 **열** 행의 첫 번째 스파크라인이 선택되어 있는지 확인한 다음 **확인** 을 클릭합니다.  
   
 6.  스파크라인을 클릭하여 차트 데이터 창을 표시합니다.  
   
-7.  값 상자의 더하기 기호(+)를 클릭한 다음 **Sales**를 클릭합니다. 
+7.  값 상자의 더하기 기호(+)를 클릭한 다음 **Sales** 를 클릭합니다. 
 
-    ![report-builder-sparkline-values](../reporting-services/media/report-builder-sparkline-values.png) 
+    ![보고서 작성기 스파크라인에 값을 추가하는 방법을 보여 주는 스크린샷 ](../reporting-services/media/report-builder-sparkline-values.png) 
   
     그러면 **Sales** 필드의 값이 스파크라인의 값이 됩니다.  
   
-8.  범주 그룹 상자의 더하기 기호(+)를 클릭한 다음 **SalesDate**를 클릭합니다.  
+8.  범주 그룹 상자의 더하기 기호(+)를 클릭한 다음 **SalesDate** 를 클릭합니다.  
   
 9. **실행** 을 클릭하여 보고서를 미리 봅니다.  
   
@@ -223,34 +223,34 @@ ms.locfileid: "87245660"
   
     또한 각 행마다 가장 높은 막대는 행 높이와 같습니다. 각 행의 가장 큰 값은 같지 않으므로 이로 인해 혼동될 수 있습니다. 즉, Budget Movie-Maker의 가장 큰 값은 $10,400이지만 Slim Digital의 가장 큰 값은 이의 두 배 이상인 $26,576입니다. 그럼에도 불구하고 이 두 행의 가장 큰 막대는 서로 높이가 같습니다. 모든 스파크라인에서 동일한 배율을 사용해야 합니다.  
   
-     ![report-builder-sparkline-misaligned](../reporting-services/media/report-builder-sparkline-misaligned.png)
+     ![잘못 정렬된 보고서 작성기 스파크라인을 보여 주는 스크린샷](../reporting-services/media/report-builder-sparkline-misaligned.png)
   
 ## <a name="4-align-the-sparklines-vertically-and-horizontally"></a><a name="AlignSparklines"></a>4. 세로 및 가로로 스파크라인 맞추기  
 스파크라인은 모두 동일한 측정값을 사용하지 않는 경우 읽기가 어렵습니다. 각 스파크라인의 가로 축과 세로 축이 나머지와 일치해야 합니다.  
    
 1.  **디자인** 을 클릭하여 디자인 뷰로 돌아갑니다.  
   
-2.  스파크라인을 마우스 오른쪽 단추로 클릭하고 **세로 축 속성**을 클릭합니다.  
+2.  스파크라인을 마우스 오른쪽 단추로 클릭하고 **세로 축 속성** 을 클릭합니다.  
   
 3.  **다음 위치의 축 정렬** 확인란을 선택합니다. Tablix1이 목록의 유일한 옵션입니다.  
   
      이 옵션은 각 스파크라인의 막대 높이를 서로 상대적인 높이로 설정합니다. 
   
-4.  **확인**을 클릭합니다.  
+4.  **확인** 을 클릭합니다.  
   
-5.  스파크라인을 마우스 오른쪽 단추로 클릭한 다음 **가로 축 속성**을 클릭합니다.  
+5.  스파크라인을 마우스 오른쪽 단추로 클릭한 다음 **가로 축 속성** 을 클릭합니다.  
   
 6.  **다음 위치의 축 정렬** 확인란을 선택합니다. Tablix1이 목록의 유일한 옵션입니다. 
   
     이 옵션은 각 스파크라인의 막대 너비를 서로 상대적인 너비로 설정합니다. 다른 스파크라인보다 막대가 적은 스파크라인에서는 데이터가 없는 부분을 나타내는 빈 공간이 표시됩니다.  
   
-7.  **확인**을 클릭합니다.  
+7.  **확인** 을 클릭합니다.  
   
 8.  **실행** 을 다시 클릭하여 보고서를 미리 봅니다.  
   
 이제 각 스파크라인의 모든 막대가 다른 스파크라인의 막대와 정렬되며 높이는 상대적입니다.  
   
-![report-builder-sparkline-aligned](../reporting-services/media/report-builder-sparkline-aligned.png)
+![정렬된 보고서 작성기 스파크라인을 보여 주는 스크린샷](../reporting-services/media/report-builder-sparkline-aligned.png)
   
 ## <a name="7-optional-change-column-widths"></a><a name="Width"></a>7. (선택 사항) 열 너비 변경  
 기본적으로 테이블의 각 셀은 입력란을 포함합니다. 페이지를 렌더링하면 입력란은 텍스트를 수용하도록 세로로 확장됩니다. 렌더링된 보고서에서 각 행은 해당 행에서 가장 길게 렌더링된 입력란의 높이에 맞춰 확장됩니다. 디자인 화면에서 행의 높이는 렌더링된 보고서의 행 높이에 영향을 주지 않습니다.  
@@ -276,13 +276,13 @@ ms.locfileid: "87245660"
   
 1.  디자인 화면에서 **제목을 추가하려면 클릭하십시오.** 를 클릭합니다.  
   
-2.  **Sales by Date**를 입력한 다음 입력란 바깥쪽을 클릭합니다.  
+2.  **Sales by Date** 를 입력한 다음 입력란 바깥쪽을 클릭합니다.  
   
-3.  **Product Sales**가 포함된 입력란을 선택합니다.  
+3.  **Product Sales** 가 포함된 입력란을 선택합니다.  
   
-4.  홈 탭 > **글꼴** 그룹 > **색**에서 **청록색**을 선택합니다.  
+4.  홈 탭 > **글꼴** 그룹 > **색** 에서 **청록색** 을 선택합니다.  
   
-7.  **굵게**를 선택합니다.  
+7.  **굵게** 를 선택합니다.  
   
 8.  [!INCLUDE[clickOK](../includes/clickok-md.md)]  
   
@@ -291,29 +291,29 @@ ms.locfileid: "87245660"
   
 ### <a name="to-save-the-report-on-a-report-server"></a>보고서를 보고서 서버에 저장하려면  
   
-1.  **보고서 작성기** 단추에서 **다른 이름으로 저장**을 클릭합니다.  
+1.  **보고서 작성기** 단추에서 **다른 이름으로 저장** 을 클릭합니다.  
   
-2.  **최근에 사용한 사이트 및 서버**를 클릭합니다.  
+2.  **최근에 사용한 사이트 및 서버** 를 클릭합니다.  
   
 3.  보고서를 저장할 수 있는 권한을 가진 보고서 서버의 이름을 선택하거나 입력합니다.  
   
     "보고서 서버에 연결하는 중"이라는 메시지가 나타납니다. 연결되면 보고서 서버 관리자가 보고서의 기본 위치로 지정한 보고서 폴더의 내용이 표시됩니다.  
   
-4.  **이름**에서 기본 이름을 **Product Sales**로 바꿉니다.  
+4.  **이름** 에서 기본 이름을 **Product Sales** 로 바꿉니다.  
   
-5.  **저장**을 클릭합니다.  
+5.  **저장** 을 클릭합니다.  
   
 보고서가 보고서 서버에 저장됩니다. 연결된 보고서 서버의 이름이 창 아래쪽에 있는 상태 표시줄에 나타납니다.  
   
 ### <a name="to-save-the-report-on-your-computer"></a>컴퓨터에 보고서를 저장하려면  
   
-1.  **보고서 작성기** 단추에서 **다른 이름으로 저장**을 클릭합니다.  
+1.  **보고서 작성기** 단추에서 **다른 이름으로 저장** 을 클릭합니다.  
   
-2.  **바탕 화면**, **내 문서**또는 **내 컴퓨터**를 클릭하여 보고서를 저장할 폴더를 찾습니다.  
+2.  **바탕 화면** , **내 문서** 또는 **내 컴퓨터** 를 클릭하여 보고서를 저장할 폴더를 찾습니다.  
   
-3.  **이름**에서 기본 이름을 **Product Sales**로 바꿉니다.  
+3.  **이름** 에서 기본 이름을 **Product Sales** 로 바꿉니다.  
   
-4.  **저장**을 클릭합니다.  
+4.  **저장** 을 클릭합니다.  
   
 ## <a name="next-steps"></a>다음 단계  
 

@@ -9,18 +9,18 @@ ms.topic: conceptual
 ms.assetid: 9ae20556-e243-4a60-b076-9fd9e82c7355
 author: maggiesMSFT
 ms.author: maggies
-ms.openlocfilehash: 4ad3a09d742e18a3f9ab7ed304433fc1b59ce1fc
-ms.sourcegitcommit: 216f377451e53874718ae1645a2611cdb198808a
+ms.openlocfilehash: c17541ff08f136b3c8c26418117df63c71b9195b
+ms.sourcegitcommit: 80701484b8f404316d934ad2a85fd773e26ca30c
 ms.translationtype: HT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 07/28/2020
-ms.locfileid: "87247422"
+ms.lasthandoff: 11/03/2020
+ms.locfileid: "93243812"
 ---
 # <a name="working-with-snapshots-web-portal"></a>스냅샷 사용(웹 포털)
 
 [!INCLUDE[ssrs-appliesto](../includes/ssrs-appliesto.md)] [!INCLUDE[ssrs-appliesto-2016-and-later](../includes/ssrs-appliesto-2016-and-later.md)] [!INCLUDE[ssrs-appliesto-pbirsi](../includes/ssrs-appliesto-pbirs.md)]
 
-보고서에 대한 스냅샷을 만든 경우 보고서의 **줄임표(...)** 및 **관리**를 차례로 선택하고 **캐싱** 또는 **기록 스냅샷**을 선택하여 제어할 수 있습니다.  
+보고서에 대한 스냅샷을 만든 경우 보고서의 **줄임표(...)** 및 **관리** 를 차례로 선택하고 **캐싱** 또는 **기록 스냅샷** 을 선택하여 제어할 수 있습니다.  
   
 > [!NOTE]
 > SQL Server 에이전트 서비스를 시작해야 합니다.  
@@ -31,7 +31,7 @@ ms.locfileid: "87247422"
   
 다음을 수행하여 스냅샷을 만들 수 있습니다.  
   
-![ssRSWebPortal-report-caching4](../reporting-services/media/ssrswebportal-report-caching4.png)  
+![스크린샷 아래에 세 개의 단계를 지정하는 번호 1, 2, 3이 있는 세 개의 자홍색 원이 포함된 회사 매출 편집 대화 상자의 캐싱 화면을 보여 주는 스크린샷](../reporting-services/media/ssrswebportal-report-caching4.png)  
   
 1.  **캐싱** 페이지에서 **항상 사전 생성된 스냅샷에 대해 이 보고서 실행** 을 선택하여 스냅샷을 만들기 위한 옵션을 사용할 수 있습니다.  
   
@@ -41,7 +41,7 @@ ms.locfileid: "87247422"
   
 ## <a name="create-modify-and-delete-history-snapshots"></a>기록 스냅샷 만들기, 수정 및 삭제  
   
-기록 스냅샷으로 작업하려면 보고서를 관리하고 **기록 스냅샷**을 선택합니다.  
+기록 스냅샷으로 작업하려면 보고서를 관리하고 **기록 스냅샷** 을 선택합니다.  
   
 **기록 스냅샷** 페이지를 사용하여 시간에 따라 생성 및 저장된 보고서 스냅샷을 볼 수 있습니다. 보고서 서버에 설정된 옵션에 따라 기록에 최근 스냅샷만 포함되어 있을 수 있습니다.  
   
@@ -49,9 +49,9 @@ ms.locfileid: "87247422"
   
 기록 스냅샷을 생성하려면 보고서가 무인 모드로 실행될 수 있어야 합니다. 즉, 보고서에서 저장된 자격 증명을 사용해야 하며, 매개 변수 있는 보고서의 경우 모든 매개 변수에 대한 기본 매개 변수 값을 포함해야 합니다. 보고서 기록은 수동으로 또는 예약된 작업으로 생성할 수 있습니다. 보고서의 기록 속성에 따라 보고서 기록을 만드는 방법이 지정됩니다.  
   
-![ssRSWebPortal-historysnapshots1](../reporting-services/media/ssrswebportal-historysnapshots1.png)  
+![스크린샷 아래에 세 개의 단계를 지정하는 번호 1, 2, 3이 있는 세 개의 자홍색 원이 포함된 회사 매출 편집 대화 상자의 기록 스냅샷 화면을 보여 주는 스크린샷](../reporting-services/media/ssrswebportal-historysnapshots1.png)  
    
-1.  기록 스냅샷을 만들려면 **+ 새 기록 스냅샷**을 선택합니다. 여기서 보고서를 처리하고 목록에 항목을 추가합니다.  
+1.  기록 스냅샷을 만들려면 **+ 새 기록 스냅샷** 을 선택합니다. 여기서 보고서를 처리하고 목록에 항목을 추가합니다.  
   
 2.  일정 및 보존 정책을 정의하는 설정으로 이동할 수 있습니다.  
   
@@ -61,9 +61,9 @@ ms.locfileid: "87247422"
   
 **일정 및 설정** 을 선택하면 일정에 추가 옵션을 제공하고 생성된 스냅샷의 보존 일정을 제어합니다.  
   
-![ssRSWebPortal-historysnapshots2](../reporting-services/media/ssrswebportal-historysnapshots2.png)  
+![일정 및 고급 섹션을 보여 주는 스크린샷](../reporting-services/media/ssrswebportal-historysnapshots2.png)  
    
-필요에 따라 스냅샷 생성에 대한 일정을 만들 수 있습니다. 또한 다른 사용자가 새 스냅샷을 만드는 것을 방지할 수 있습니다. **사람들이 스냅샷을 수동으로 만들 수 있도록 허용** 을 선택 취소하면 **+ 새 스냅샷 기록 단추**를 사용할 수 없게 됩니다.  
+필요에 따라 스냅샷 생성에 대한 일정을 만들 수 있습니다. 또한 다른 사용자가 새 스냅샷을 만드는 것을 방지할 수 있습니다. **사람들이 스냅샷을 수동으로 만들 수 있도록 허용** 을 선택 취소하면 **+ 새 스냅샷 기록 단추** 를 사용할 수 없게 됩니다.  
   
 원하는 스냅샷 보존 방법을 정의할 수도 있습니다.  
   

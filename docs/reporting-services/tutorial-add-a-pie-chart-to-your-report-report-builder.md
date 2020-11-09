@@ -9,12 +9,12 @@ ms.topic: conceptual
 ms.assetid: eaadf7bf-c312-428a-b214-0a1fbf959c3f
 author: maggiesMSFT
 ms.author: maggies
-ms.openlocfilehash: 55cf0d48ebe4cec7063089c1ec025dd4b34bce1b
-ms.sourcegitcommit: 216f377451e53874718ae1645a2611cdb198808a
+ms.openlocfilehash: a924e8e6ed7a19904ddc9c8cded38683b849edeb
+ms.sourcegitcommit: 9e2c682929ee64c051dc62f8917d147861f7c635
 ms.translationtype: HT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 07/28/2020
-ms.locfileid: "87245670"
+ms.lasthandoff: 10/30/2020
+ms.locfileid: "93043738"
 ---
 # <a name="tutorial-add-a-pie-chart-to-your-report-report-builder"></a>자습서: 보고서에 원형 차트 추가(보고서 작성기)
 이 자습서에서는 페이지가 매겨진 Reporting Services 보고서에 원형 차트를 만듭니다. 백분율을 추가하고 작은 조각을 한 조각으로 결합합니다.
@@ -23,7 +23,7 @@ ms.locfileid: "87245670"
 
 다음 그림에서는 만들어질 원형 차트를 보여 줍니다. 
  
-![report-builder-pie-chart-final](../reporting-services/media/report-builder-pie-chart-final.png)
+![보고서 작성기 원형 차트의 스크린샷](../reporting-services/media/report-builder-pie-chart-final.png)
   
 원형 차트에 데이터 요소가 너무 많으면 데이터 요소 레이블이 복잡해져서 가독성이 떨어질 수 있습니다. 이 경우 여러 개의 작은 조각을 하나의 큰 조각으로 결합하는 것이 좋습니다. 데이터를 몇 개의 데이터 요소로 집계하면 원형 차트를 더 쉽게 읽을 수 있습니다.  
  
@@ -43,20 +43,20 @@ ms.locfileid: "87245670"
   
     **새 보고서 또는 데이터 세트** 대화 상자가 열립니다.  
   
-    **새 보고서 또는 데이터 세트** 대화 상자가 표시되지 않는 경우 **파일** 메뉴 &gt; **새로 만들기**를 클릭합니다.  
+    **새 보고서 또는 데이터 세트** 대화 상자가 표시되지 않는 경우 **파일** 메뉴 &gt; **새로 만들기** 를 클릭합니다.  
   
 2.  왼쪽 창에 **새 보고서** 가 선택되어 있는지 확인합니다.  
   
-3.  오른쪽 창에서 **차트 마법사**를 클릭합니다.  
+3.  오른쪽 창에서 **차트 마법사** 를 클릭합니다.  
   
-4.  **데이터 세트 선택** 페이지에서 **데이터 세트 만들기**를 클릭한 후, **다음**을 클릭합니다.  
+4.  **데이터 세트 선택** 페이지에서 **데이터 세트 만들기** 를 클릭한 후, **다음** 을 클릭합니다.  
   
-5.  **데이터 원본에 대한 연결 선택** 페이지에서 기존 데이터 원본을 선택하거나 보고서 서버를 찾아 데이터 원본을 선택하고 **다음**을 클릭합니다. 사용자 이름과 암호를 입력해야 할 수 있습니다.  
+5.  **데이터 원본에 대한 연결 선택** 페이지에서 기존 데이터 원본을 선택하거나 보고서 서버를 찾아 데이터 원본을 선택하고 **다음** 을 클릭합니다. 사용자 이름과 암호를 입력해야 할 수 있습니다.  
   
     > [!NOTE]  
     > 적절한 권한만 가지고 있으면 선택하는 데이터 원본은 중요하지 않습니다. 데이터를 데이터 원본에서 가져오는 것은 아니기 때문입니다. 자세한 내용은 [데이터에 연결하는 다른 방법&#40;보고서 작성기&#41;](../reporting-services/alternative-ways-to-get-a-data-connection-report-builder.md)를 참조하세요.  
   
-6.  **쿼리 디자인** 페이지에서 **텍스트로 편집**을 클릭합니다.  
+6.  **쿼리 디자인** 페이지에서 **텍스트로 편집** 을 클릭합니다.  
   
 7.  쿼리 창에 다음 쿼리를 붙여 넣습니다.  
 
@@ -76,13 +76,13 @@ ms.locfileid: "87245670"
   
 8.  (옵션) 실행 단추( **!** )를 클릭하여 차트의 기반으로 사용될 데이터를 확인합니다.  
   
-9. **다음**을 클릭합니다.  
+9. **다음** 을 클릭합니다.  
   
 ## <a name="2-choose-the-chart-type"></a><a name="ChartType"></a>2. 차트 종류 선택  
 미리 정의된 다양한 차트 종류 중에서 선택할 수 있습니다.  
 
   
-1.  **차트 종류 선택** 페이지에서 **원형**을 클릭하고 **다음**을 클릭합니다. **차트 필드 정렬** 페이지가 열립니다.  
+1.  **차트 종류 선택** 페이지에서 **원형** 을 클릭하고 **다음** 을 클릭합니다. **차트 필드 정렬** 페이지가 열립니다.  
   
     **차트 필드 정렬** 페이지에서 Product 필드를 **범주** 창으로 끌어옵니다. 범주는 원형 차트의 조각 수를 정의합니다. 이 예제에서는 각 제품에 대해 하나씩 총 8개의 조각이 사용됩니다.  
   
@@ -90,11 +90,11 @@ ms.locfileid: "87245670"
   
 3.  **다음** 을 클릭하여 미리 보기를 확인합니다.  
   
-5.  **Finish**를 클릭합니다.  
+5.  **Finish** 를 클릭합니다.  
   
     디자인 화면에 차트가 추가됩니다. 원형 차트의 실제 값은 표시되지 않고 차트 모양을 파악할 수 있도록 제품 1, 제품 2 등이 표시됩니다.  
     
-    ![report-builder-pie-chart-first-design](../reporting-services/media/report-builder-pie-chart-first-design.png)
+    ![디자인 뷰에서 보고서 작성기 원형 차트의 스크린샷](../reporting-services/media/report-builder-pie-chart-first-design.png)
   
 6.  차트를 클릭하여 차트 핸들을 표시합니다. 차트의 오른쪽 아래를 끌어 차트를 확장합니다. 보고서 디자인 화면도 차트 크기에 맞게 확장됩니다.  
   
@@ -102,7 +102,7 @@ ms.locfileid: "87245670"
   
 각 제품에 대해 하나씩 총 8개 조각으로 구성된 원형 차트가 보고서에 표시됩니다. 이제 실제 제품이 표시되고, 각 조각의 크기는 해당 제품의 판매량을 나타냅니다. 전체 조각 중 3개는 폭이 좁습니다.  
 
-![report-builder-pie-chart-first-preview](../reporting-services/media/report-builder-pie-chart-first-preview.png)
+![보고서 작성기 원형 차트의 미리 보기를 보여 주는 스크린샷](../reporting-services/media/report-builder-pie-chart-first-preview.png)
   
 ## <a name="3-display-percentages-in-each-slice"></a><a name="Percentages"></a>3. 각 조각에 백분율 표시  
 원형 차트의 각 조각에 원형 전체에 대한 해당 조각의 백분율을 표시할 수 있습니다.  
@@ -110,15 +110,15 @@ ms.locfileid: "87245670"
   
 1.  보고서 디자인 뷰로 전환합니다.  
   
-2.  원형 차트를 마우스 오른쪽 단추로 클릭하고 **데이터 레이블 표시**를 클릭합니다. 차트에 데이터 레이블이 나타납니다.  
+2.  원형 차트를 마우스 오른쪽 단추로 클릭하고 **데이터 레이블 표시** 를 클릭합니다. 차트에 데이터 레이블이 나타납니다.  
   
-3.  레이블을 마우스 오른쪽 단추로 클릭하고 **계열 레이블 속성**을 클릭합니다.  
+3.  레이블을 마우스 오른쪽 단추로 클릭하고 **계열 레이블 속성** 을 클릭합니다.  
   
-4.  **레이블 데이터** 상자에서 **#PERCENT**를 선택합니다.  
+4.  **레이블 데이터** 상자에서 **#PERCENT** 를 선택합니다.  
     
-5.  (옵션) 레이블을 표시할 때 사용할 소수 자릿수를 지정하려면 **#PERCENT****레이블 데이터** 상자에 **{Pn}** 을 입력합니다. 여기서 *n*은 표시할 소수 자릿수입니다. 예를 들어 소수 자릿수를 표시하지 않으려면 **#PERCENT{P0}** 을 입력합니다.  
+5.  (옵션) 레이블을 표시할 때 사용할 소수 자릿수를 지정하려면 **#PERCENT****레이블 데이터** 상자에 **{Pn}** 을 입력합니다. 여기서 *n* 은 표시할 소수 자릿수입니다. 예를 들어 소수 자릿수를 표시하지 않으려면 **#PERCENT{P0}** 을 입력합니다.  
 
-6.  값을 백분율로 표시하려면 UseValueAsLabel 속성이 false여야 합니다. **동작 확인** 대화 상자에서 이 값을 설정할지 묻는 메시지가 표시되면 **예**를 클릭합니다.  
+6.  값을 백분율로 표시하려면 UseValueAsLabel 속성이 false여야 합니다. **동작 확인** 대화 상자에서 이 값을 설정할지 묻는 메시지가 표시되면 **예** 를 클릭합니다.  
   
     > [!NOTE]  
     > **계열 레이블 속성** 대화 상자의 **숫자 형식** 은 백분율 서식을 지정하는 데 영향을 주지 않고 레이블의 서식을 백분율로 지정하기만 하며 각 조각이 원형 차트에서 나타내는 백분율을 계산하지는 않습니다.  
@@ -129,32 +129,32 @@ ms.locfileid: "87245670"
   
 각 원형 조각이 전체에서 나타내는 백분율이 보고서에 표시됩니다.  
 
-![report-builder-pie-chart-preview-percents](../reporting-services/media/report-builder-pie-chart-preview-percents.png)
+![각 조각에 백분율이 있는 보고서 작성기 원형 차트의 미리 보기를 보여 주는 스크린샷](../reporting-services/media/report-builder-pie-chart-preview-percents.png)
   
 ## <a name="4-combine-small-slices-into-one-slice"></a><a name="CombineSlices"></a>4. 작은 조각들을 하나의 조각으로 결합  
 원형 차트의 조각 중 3개는 폭이 좁습니다. 여러 개의 작은 조각을 세 조각 모두를 나타내는 하나의 큰 "기타" 조각으로 결합할 수 있습니다.  
 
 1.  보고서 디자인 뷰로 전환합니다.  
   
-2.  속성 창이 표시되지 않는 경우 **보기** 탭 > **표시/숨기기** 그룹 > **속성**을 선택합니다.  
+2.  속성 창이 표시되지 않는 경우 **보기** 탭 > **표시/숨기기** 그룹 > **속성** 을 선택합니다.  
   
 3.  디자인 화면에서 원형 차트의 조각을 아무 것이나 클릭합니다. 계열의 속성이 속성 창에 표시됩니다.  
   
 4.  **일반** 섹션에서 **CustomAttributes** 노드를 확장합니다.  
   
-5.  **CollectedStyle** 속성을 **SingleSlice**로 설정합니다.  
+5.  **CollectedStyle** 속성을 **SingleSlice** 로 설정합니다.  
 
-    ![report-builder-pie-chart-single-slice-property](../reporting-services/media/report-builder-pie-chart-single-slice-property.png)
+    ![보고서 작성기 원형 차트에서 단일 조각의 속성을 설정하는 방법을 보여 주는 스크린샷](../reporting-services/media/report-builder-pie-chart-single-slice-property.png)
  
 6.  **CollectedThreshold** 속성이 5로 설정되었는지 확인합니다.  
   
-7.  **CollectedThresholdUsePercent** 속성이 **True**로 설정되었는지 확인합니다.  
+7.  **CollectedThresholdUsePercent** 속성이 **True** 로 설정되었는지 확인합니다.  
   
 8.  **홈** 탭에서 **실행** 을 클릭하여 보고서를 미리 봅니다.  
   
 이제 범례에 "기타" 범주가 표시됩니다. 새 원형 조각은 5% 미만인 모든 조각을 전체 원형의 6%를 차지하는 조각 하나로 결합합니다.  
 
-![report-builder-pie-chart-start-at-90](../reporting-services/media/report-builder-pie-chart-start-at-90.png)
+![보고서 작성기 원형 차트가 차트 위쪽에서 90도로 시작되는 방식을 보여 주는 스크린샷](../reporting-services/media/report-builder-pie-chart-start-at-90.png)
  
 ## <a name="5-start-pie-chart-values-at-the-top"></a><a name="DrawingEffect"></a>5. 원형 차트 값을 위쪽에서 시작하기 
 
@@ -166,13 +166,13 @@ ms.locfileid: "87245670"
 
 2. 원형 자체를 선택합니다.
 
-3. 속성 창의 **사용자 지정 특성**에서 PieStartAngle을 **0** 에서 **270**으로 변경합니다.
+3. 속성 창의 **사용자 지정 특성** 에서 PieStartAngle을 **0** 에서 **270** 으로 변경합니다.
 
 4. **실행** 을 클릭하여 보고서를 미리 봅니다.
 
 이제 원형 차트 조각이 사전순으로 표시되고, 위쪽에서 시작하여 "기타" 조각으로 끝납니다.
 
-![report-builder-pie-chart-start-at-top](../reporting-services/media/report-builder-pie-chart-start-at-top.png)
+![보고서 작성기 원형 차트가 위쪽에서 시작되는 방식을 보여 주는 스크린샷](../reporting-services/media/report-builder-pie-chart-start-at-top.png)
   
 ## <a name="6-add-a-report-title"></a><a name="Title"></a>6. 보고서 제목 추가  
   
@@ -182,15 +182,15 @@ ms.locfileid: "87245670"
 
 2. 디자인 화면에서 **제목을 추가하려면 클릭하십시오.** 를 클릭합니다.  
   
-2.  **Camera and Camcorder Sales**를 입력하고 Enter 키를 누른 다음 **As a Percentage of Total Sales**를 입력합니다. 그러면 다음과 같이 표시됩니다.  
+2.  **Camera and Camcorder Sales** 를 입력하고 Enter 키를 누른 다음 **As a Percentage of Total Sales** 를 입력합니다. 그러면 다음과 같이 표시됩니다.  
   
     **Camera and Camcorder Sales**  
   
     **As a Percentage of Total Sales**  
   
-3.  **Camera and Camcorder Sales**를 선택하고 **홈** 탭 > **글꼴** 섹션에서 > **굵게**를 클릭합니다.  
+3.  **Camera and Camcorder Sales** 를 선택하고 **홈** 탭 > **글꼴** 섹션에서 > **굵게** 를 클릭합니다.  
   
-4.  **As a Percentage of Total Sales**를 선택하고 **홈** 탭 > **글꼴** 섹션에서 > 글꼴 크기를 **10**으로 설정합니다.  
+4.  **As a Percentage of Total Sales** 를 선택하고 **홈** 탭 > **글꼴** 섹션에서 > 글꼴 크기를 **10** 으로 설정합니다.  
   
 5.  (선택 사항) 제목 입력란을 두 줄 텍스트를 포함하도록 크게 만들어야 할 수 있습니다.  
   
@@ -204,11 +204,11 @@ ms.locfileid: "87245670"
   
 1.  보고서 디자인 뷰로 전환합니다.  
   
-2.  **파일** 메뉴에서 **저장**을 클릭합니다.  
+2.  **파일** 메뉴에서 **저장** 을 클릭합니다.  
   
-3.  **이름**에 **Sales Pie Chart**를 입력합니다.  
+3.  **이름** 에 **Sales Pie Chart** 를 입력합니다.  
   
-4.  **저장**을 클릭합니다.  
+4.  **저장** 을 클릭합니다.  
   
 보고서가 보고서 서버에 저장됩니다.  
   

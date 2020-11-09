@@ -9,12 +9,12 @@ ms.author: hanqin
 ms.reviewer: maghan
 ms.custom: ''
 ms.date: 10/14/2020
-ms.openlocfilehash: bfb4ea0b745fa61ea6d7c688ab90eaf369b2a5bb
-ms.sourcegitcommit: 9c6130d498f1cfe11cde9f2e65c306af2fa8378d
+ms.openlocfilehash: 4054917071578fb0b3ddcf5c22d5950075a2b0fe
+ms.sourcegitcommit: 985e2e8e494badeac6d6b652cd35765fd9c12d80
 ms.translationtype: HT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 10/30/2020
-ms.locfileid: "93036000"
+ms.lasthandoff: 11/04/2020
+ms.locfileid: "93328484"
 ---
 # <a name="preview-features-in-azure-data-studio"></a>Azure Data Studio의 미리 보기 기능
 
@@ -77,7 +77,7 @@ Azure Data Studio에서는 새로운 기능과 개선 사항이 출시(GA)되기
 ### <a name="first-party-extensions-in-preview"></a>미리 보기로 제공되는 Microsoft 확장
 
 * SQL Server 관리 팩
-* Azure SQL Data Warehouse Insights
+* Azure Synapse Analytics 인사이트
 * 중앙 관리 서버
 * Windows용 데이터베이스 관리 도구 확장
 * Kusto

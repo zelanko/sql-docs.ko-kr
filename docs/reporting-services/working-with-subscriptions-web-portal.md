@@ -9,12 +9,12 @@ ms.topic: conceptual
 ms.assetid: 09e8ece5-0200-41f2-87c1-9fab19e261be
 author: maggiesMSFT
 ms.author: maggies
-ms.openlocfilehash: d5d936933b96c8d7f5c4c2830707b4a6bb4d9fe2
-ms.sourcegitcommit: 216f377451e53874718ae1645a2611cdb198808a
+ms.openlocfilehash: 4efd72f1c2d6f9098e2af4840483d38d4749d264
+ms.sourcegitcommit: 80701484b8f404316d934ad2a85fd773e26ca30c
 ms.translationtype: HT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 07/28/2020
-ms.locfileid: "87243556"
+ms.lasthandoff: 11/03/2020
+ms.locfileid: "93243748"
 ---
 # <a name="working-with-subscriptions-web-portal"></a>구독 작업(웹 포털)
 
@@ -28,13 +28,13 @@ ms.locfileid: "87243556"
 > SQL Server 에이전트 서비스를 시작해야 합니다.   
   
 ![구독 관리](../reporting-services/media/working-with-subscriptions-web-portal/ssrs-manage-subscriptions.png)  
-보고서의 **줄임표(...)** , **관리** 및 **구독**을 차례로 선택하여 구독 페이지에 액세스합니다.  
+보고서의 **줄임표(...)** , **관리** 및 **구독** 을 차례로 선택하여 구독 페이지에 액세스합니다.  
   
-구독 페이지에서 **+ 새 구독**을 선택하면 새 구독을 만들 수 있습니다. 기존 구독을 편집하거나 선택한 구독을 삭제할 수도 있습니다.  
+구독 페이지에서 **+ 새 구독** 을 선택하면 새 구독을 만들 수 있습니다. 기존 구독을 편집하거나 선택한 구독을 삭제할 수도 있습니다.  
   
 이 페이지의 **결과** 열에는 구독 실행의 결과 상태도 제공됩니다. 구독에 대한 오류가 발생한 경우 먼저 결과 열을 검사하여 메시지 내용을 확인하는 것이 좋습니다. 
 
-구독 페이지에서 **지금 실행**을 선택하여 언제든지 구독을 실행할 수도 있습니다.
+구독 페이지에서 **지금 실행** 을 선택하여 언제든지 구독을 실행할 수도 있습니다.
   
 ## <a name="creating-or-editing-a-subscription"></a>구독 만들기 또는 편집  
 새 구독 또는 구독 편집 페이지를 사용하여 보고서에 대한 새 구독을 만들거나 기존 구독을 수정할 수 있습니다. 이 페이지의 옵션은 사용자의 역할 할당에 따라 다릅니다. 고급 권한이 있는 사용자는 추가 옵션으로 작업할 수 있습니다.  
@@ -42,9 +42,9 @@ ms.locfileid: "87243556"
 구독은 무인 모드로 실행될 수 있는 보고서에 대해 지원됩니다. 이 보고서는 저장된 자격 증명을 사용하거나 자격 증명을 사용하지 않아야 합니다. 보고서에서 매개 변수를 사용하는 경우에는 기본값을 지정해야 합니다. 보고서 실행 설정을 변경하거나 매개 변수 속성에서 사용하는 기본값을 제거하면 구독이 비활성 상태로 바뀔 수 있습니다. 자세한 내용은 [기본 모드 보고서 서버 구독 만들기 및 관리](subscriptions/create-and-manage-subscriptions-for-native-mode-report-servers.md)를 참조하세요.  
   
 ## <a name="type-of-subscription"></a>구독 유형  
-**표준 구독** 및 **데이터 기반 구독**할 수 있습니다.  
+**표준 구독** 및 **데이터 기반 구독** 할 수 있습니다.  
   
-![ssRSWebPortal-subscriptions3](../reporting-services/media/working-with-subscriptions-web-portal/ssrswebportal-subscriptions3.png)  
+![구독 유형 섹션을 보여 주는 스크린샷](../reporting-services/media/working-with-subscriptions-web-portal/ssrswebportal-subscriptions3.png)  
    
 데이터 기반 구독은 구독이 실행될 때마다 구독자 데이터베이스에 구독 정보를 쿼리하는 구독입니다. 데이터 기반 구독은 쿼리 결과를 사용하여 구독을 받는 사람, 배달 설정 및 보고서 매개 변수 값을 확인합니다. 실행할 때 보고서 서버는 쿼리를 실행하여 구독 설정에 사용된 값을 가져옵니다.   
   
@@ -57,7 +57,7 @@ ms.locfileid: "87243556"
   
 배달 확장 프로그램의 가용성은 보고서 서버에 설치 및 구성되었는지 여부에 따라 다릅니다. 보고서 서버 메일은 기본 배달 확장 프로그램이지만 먼저 구성을 해야 사용할 수 있습니다. 파일 공유 배달은 구성이 필요하지 않지만 먼저 공유 폴더를 정의해야 사용할 수 있습니다.  
   
-![ssRSWebPortal-subscriptions2](../reporting-services/media/working-with-subscriptions-web-portal/ssrswebportal-subscriptions2.png)  
+![대상 및 전송 옵션(Windows 파일 공유) 섹션을 보여 주는 스크린샷](../reporting-services/media/working-with-subscriptions-web-portal/ssrswebportal-subscriptions2.png)  
   
 선택한 배달 확장 프로그램에 따라 다음 설정이 표시됩니다.  
   
@@ -66,9 +66,9 @@ ms.locfileid: "87243556"
 -   파일 공유 구독은 대상 위치를 지정할 수 있도록 허용하는 필드를 제공합니다. 모든 보고서를 파일 공유로 배달할 수 있습니다. 그러나 대화형 기능을 지원하는 보고서(관련 행 및 열에 대한 드릴다운을 지원하는 행렬 보고서 포함)는 정적 파일로 렌더링됩니다. 드릴다운 행 및 열은 정적 파일에서 볼 수 없습니다. 파일 공유 이름은 UNC(Uniform Naming Convention) 형식(예: \mycomputer\public\myreportfiles)으로 지정해야 합니다. 경로 이름 뒤에 백슬래시를 사용하지 마십시오. 보고서 파일은 렌더링 형식을 기반으로 하는 파일 형식으로 배달됩니다. 예를 들어 Excel을 선택할 경우 보고서는 .xlsx 파일로 배달됩니다.  자세한 내용은 [파일 공유 구독 만들기](subscriptions/create-and-manage-subscriptions-for-native-mode-report-servers.md#bkmk_create_fileshare_subscription)를 참조하세요.
   
 ## <a name="data-driven-subscription-dataset"></a>데이터 기반 구독 데이터 세트  
-데이터 기반 구독의 경우 구독에 사용되는 데이터 세트를 정의해야 합니다. **데이터 세트 편집**을 선택하여 해당 정보를 제공합니다.  
+데이터 기반 구독의 경우 구독에 사용되는 데이터 세트를 정의해야 합니다. **데이터 세트 편집** 을 선택하여 해당 정보를 제공합니다.  
   
-![ssRSWebPortal-subscriptions4](../reporting-services/media/working-with-subscriptions-web-portal/ssrswebportal-subscriptions4.png)  
+![데이터 세트 섹션을 보여 주는 스크린샷](../reporting-services/media/working-with-subscriptions-web-portal/ssrswebportal-subscriptions4.png)  
   
 먼저 쿼리에 사용할 **데이터 원본** 을 지정해야 합니다. 공유 데이터 원본이거나 사용자 지정 데이터 원본을 지정할 수 있습니다.  
   
@@ -80,9 +80,9 @@ ms.locfileid: "87243556"
   
 -   결과 집합의 행은 생성되는 보고서 배달의 수를 결정합니다. 10,000개의 행이 있다면 보고서 서버는 10,000개의 알림 및 배달을 생성합니다.  
   
-![ssRSWebPortal-subscriptions5](../reporting-services/media/working-with-subscriptions-web-portal/ssrswebportal-subscriptions5.png)  
+![쿼리 섹션을 보여 주는 스크린샷](../reporting-services/media/working-with-subscriptions-web-portal/ssrswebportal-subscriptions5.png)  
   
-쿼리의 유효성을 검사할 수 있습니다. **쿼리 제한 시간**을 정의할 수도 있습니다.  
+쿼리의 유효성을 검사할 수 있습니다. **쿼리 제한 시간** 을 정의할 수도 있습니다.  
   
 쿼리가 생성된 후 필수 필드에 값을 할당할 수 있습니다. 수동 데이터를 입력하거나 만든 데이터 세트에서 필드를 선택할 수 있습니다. 
 

@@ -14,12 +14,12 @@ ms.assetid: c64077a2-bec8-4c87-9def-3dbfb1ea1fb6
 author: rothja
 ms.author: jroth
 monikerRange: = sql-server-2016 || = sqlallproducts-allversions
-ms.openlocfilehash: 19f906960bc31346f21e4afed436ff10517adebf
-ms.sourcegitcommit: a41e1f4199785a2b8019a419a1f3dcdc15571044
+ms.openlocfilehash: 318dfd44b3c931b124372ce5ea60681b8c1e7e99
+ms.sourcegitcommit: 442fbe1655d629ecef273b02fae1beb2455a762e
 ms.translationtype: HT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 10/13/2020
-ms.locfileid: "91985819"
+ms.lasthandoff: 11/03/2020
+ms.locfileid: "93235507"
 ---
 # <a name="sql-server-2016-release-notes"></a>SQL Server 2016 릴리스 정보
 [!INCLUDE [SQL Server 2016](../includes/applies-to-version/sqlserver2016.md)]  
@@ -59,7 +59,7 @@ SQL Server 2016 SP2에는 지원 가능성 및 진단 관련 개선 사항이 �
 |---|---|---|
 |가용성 그룹의 데이터베이스에 완벽한 DTC 지원   |   가용성 그룹의 일부인 데이터베이스에 대한 데이터베이스 간 트랜잭션은 현재 SQL Server 2016에서 지원되지 않습니다. SQL Server 2016 SP2에서는 가용성 그룹 데이터베이스를 사용한 분산 트랜잭션을 완벽하게 지원합니다.   |      |
 |TempDB의 암호화 상태를 정확하게 반영하도록 sys.databases is_encrypted 열 업데이트   |   sys.databases의 is_encryptedcolumn 열 값은 모든 사용자 데이터베이스의 암호화를 해제하고 SQL Server를 다시 시작한 후에도 TempDB의 경우 1입니다. 예상되는 동작은 TempDB가 이 상황에서 더 이상 암호화되지 않으므로 이 값은 0입니다. SQL Server 2016 SP2부터 sys.databases.is_encrypted는 TempDB의 암호화 상태를 정확하게 반영합니다.   |      |
-|검증된 클론 및 백업 생성을 위한 새 DBCC CLONEDATABASE 옵션   |   SQL Server 2016 SP2의 DBCC CLONEDATABASE에는 검증된 클론을 생성하거나 백업 복제본을 생성하는 두 가지 옵션이 제공됩니다. WITH VERIFY_CLONEDB 옵션을 사용하여 클론 데이터베이스를 만들면 일관된 데이터베이스 클론이 만들어지고 확인됩니다. 이 기능은 Microsoft에서 프로덕션용으로 지원됩니다. 클론이 SELECT DATABASEPROPERTYEX(‘clone_database_name’, ‘IsVerifiedClone’)에서 확인되었는지 검증하기 위한 새로운 속성이 도입되었습니다. BACKUP_CLONEDB 옵션을 사용하여 클론을 만들면 고객이 복제본을 다른 서버로 옮기거나 문제 해결을 위해 Microsoft CSS(Customer Support)에 쉽게 보낼 수 있도록 데이터 파일과 동일한 폴더에 백업이 생성됩니다.   |      |
+|검증된 클론 및 백업 생성을 위한 새 DBCC CLONEDATABASE 옵션   |   SQL Server 2016 SP2의 DBCC CLONEDATABASE에는 검증된 클론을 생생하거나 백업 복제본을 생성하는 두 가지 옵션이 제공됩니다. WITH VERIFY_CLONEDB 옵션을 사용하여 클론 데이터베이스를 만들면 일관된 데이터베이스 클론이 만들어지고 확인됩니다. 이 기능은 Microsoft에서 프로덕션용으로 지원됩니다. 클론이 SELECT DATABASEPROPERTYEX(‘clone_database_name’, ‘IsVerifiedClone’)에서 확인되었는지 검증하기 위한 새로운 속성이 도입되었습니다. BACKUP_CLONEDB 옵션을 사용하여 클론을 만들면 고객이 복제본을 다른 서버로 옮기거나 문제 해결을 위해 Microsoft CSS(Customer Support)에 쉽게 보낼 수 있도록 데이터 파일과 동일한 폴더에 백업이 생성됩니다.   |      |
 |DBCC CLONEDATABASE에 대한 SSB(Service Broker) 지원   |   DBCC CLONEDATABASE 명령이 SSB 개체의 스크립팅을 허용하도록 향상되었습니다.   |   [KB4092075](https://support.microsoft.com/help/4092075)   |
 |TempDB 버전 저장소 공간 사용량을 모니터링하는 새로운 DMV   |   SQL Server 2016 SP2에 sys.dm_tran_version_store_space_usage DMV가 새롭게 도입되어 TempDB에서 버전 저장소 사용량을 모니터링 할 수 있습니다. 이제 DBA를 프로덕션 서버에서 실행할 때 성능 오버 헤드가 발생하지 않으면서, 데이터베이스당 버전 저장소 사용 요구 사항을 기반으로 TempDB 크기를 사전에 계획할 수 있습니다.   |      |
 |복제 에이전트에 대한 완벽한 덤프 지원 | 현재 복제 에이전트에서 처리되지 않은 예외가 발생하는 경우 기본적으로 예외 증상의 미니 덤프가 만들어집니다. 이렇게 하면 처리되지 않은 예외 문제를 해결하는 것이 매우 어렵습니다. 이번 변경을 통해 복제 에이전트에 대한 전체 덤프를 생성할 수 있는 새로운 레지스트리 키가 도입되었습니다.   |      |
@@ -86,7 +86,7 @@ SQL Server 2016 SP2에는 지원 가능성 및 진단 관련 개선 사항이 �
 | |SyncPoint 리소스에 더 많은 특성이 추가되어 배치 모드 연산자와 관련된 교착 상태에 대한 XML Deadlock Graph가 향상되었습니다.| |
 |일부 복제 에이전트 프로필 매개 변수를 동적으로 다시 로드   |   현재 복제 에이전트 구현에서 에이전트 프로필 매개 변수를 변경하려면 에이전트를 중지했다가 다시 시작해야 합니다. 향상된 버전에서는 복제 에이전트를 다시 시작하지 않고 매개 변수를 동적으로 다시 로드할 수 있습니다.   |      |
 
-![horizontal-bar.png](media/horizontal-bar.png)
+![가로 막대의 스크린샷](media/horizontal-bar.png)
 
 ## <a name="sql-server-2016-service-pack-1-sp1"></a><a name="bkmk_2016sp1"></a>SQL Server 2016 서비스 팩 1(SP1)
 ![info_tip](../sql-server/media/info-tip.png) SQL Server 2016 SP1은 보안 업데이트 MS16-136을 포함하여 SQL Server 2016 RTM CU3에 대한 모든 누적 업데이트를 포함합니다. SQL Server 2016 최신 누적 업데이트에서 제공하는 솔루션의 롤업을 포함하며 최신 누적 업데이트(CU3 및 2016년 11월 8일에 릴리스된 보안 업데이트 MS16-136)를 포함합니다.
@@ -134,7 +134,7 @@ SQL Server 2016 SP1 설치는 설치 후에 다시 부팅해야 합니다. 모�
 - [SQL Server 2016 서비스 팩 1 릴리스 정보](https://support.microsoft.com/kb/3182545)
 - ![info_tip](../sql-server/media/info-tip.png) [!INCLUDE[ssNoVersion_md](../includes/ssnoversion-md.md)]의 서비스 팩을 포함하여 지원되는 모든 버전에 대한 링크 및 자세한 내용은 [SQL Server 업데이트 센터](../database-engine/install-windows/latest-updates-for-microsoft-sql-server.md)를 참조하세요.
 
-![horizontal-bar.png](media/horizontal-bar.png)
+![가로 막대의 또 다른 스크린샷](media/horizontal-bar.png)
 
 ##  <a name="sql-server-2016-release---general-availability-ga"></a><a name="bkmk_2016_ga"></a> SQL Server 2016 릴리스 - GA (일반 공급)
 -   [데이터베이스 엔진(GA)](#bkmk_ga_instalpatch)
@@ -151,15 +151,15 @@ SQL Server 2016 SP1 설치는 설치 후에 다시 부팅해야 합니다. 모�
 
     SQL Server 2016이 이미 설치되어 있는 경우 다음 단계를 순서대로 수행합니다.
 
-    1.  적절한 *vcredist_\*exe*를 다운로드합니다.
+    1.  적절한 *vcredist_\*exe* 를 다운로드합니다.
     1.  데이터베이스 엔진의 모든 인스턴스에 대한 SQL Server 서비스를 중지합니다.
-    1.  **KB 3138367**을 설치합니다.
+    1.  **KB 3138367** 을 설치합니다.
     1.  컴퓨터를 다시 부팅합니다.
 
 
  - [KB 3164398 - SQL Server 2016 MSVCRT 필수 조건에 대한 중요 업데이트](https://support.microsoft.com/kb/3164398)를 설치합니다.
 
-    **KB 3164398**을 사용하는 경우 Microsoft 업데이트를 통해 또는 Microsoft 다운로드 센터에서 SQL Server 설치 중에 설치할 수 있습니다.
+    **KB 3164398** 을 사용하는 경우 Microsoft 업데이트를 통해 또는 Microsoft 다운로드 센터에서 SQL Server 설치 중에 설치할 수 있습니다.
 
     - **SQL Server 2016 설치 중:** SQL Server 설치 프로그램을 실행하는 컴퓨터가 인터넷에 액세스하는 경우 SQL Server 설치 프로그램이 전체 SQL Server 설치의 일부로 업데이트를 검사합니다. 업데이트를 수락하면 설치 프로그램이 다운로드되고 설치하는 동안 이진 파일을 업데이트합니다.
 
@@ -207,7 +207,7 @@ SQL Server 2016 SP1 설치는 설치 후에 다시 부팅해야 합니다. 모�
 
 
 ###  <a name="product-documentation-ga"></a><a name="bkmk_ga_docs"></a> 제품 설명서(GA)
- **문제 및 고객에게 미치는 영향:** SQL Server 2016 설명서의 다운로드 가능한 버전은 아직 제공되지 않습니다. 도움말 라이브러리 관리자를 사용하여 **온라인에서 콘텐츠를 설치**하려고 하면 SQL Server 2012 및 SQL Sever 2014 설명서가 표시되지만 SQL Server 2016 설명서에 대한 옵션은 없습니다.
+ **문제 및 고객에게 미치는 영향:** SQL Server 2016 설명서의 다운로드 가능한 버전은 아직 제공되지 않습니다. 도움말 라이브러리 관리자를 사용하여 **온라인에서 콘텐츠를 설치** 하려고 하면 SQL Server 2012 및 SQL Sever 2014 설명서가 표시되지만 SQL Server 2016 설명서에 대한 옵션은 없습니다.
 
  **해결 방법:** 다음 해결 방법 중 하나를 사용하세요.
 

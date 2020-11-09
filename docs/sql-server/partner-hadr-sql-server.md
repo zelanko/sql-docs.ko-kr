@@ -8,12 +8,12 @@ ms.prod: sql
 ms.technology: release-landing
 ms.author: mikeray
 author: MikeRayMSFT
-ms.openlocfilehash: e330bb9da022c15cfffe715f85c43cdd34bd9d45
-ms.sourcegitcommit: a41e1f4199785a2b8019a419a1f3dcdc15571044
+ms.openlocfilehash: dd40556746f729d0a64b9eebf6550c774d267126
+ms.sourcegitcommit: 442fbe1655d629ecef273b02fae1beb2455a762e
 ms.translationtype: HT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 10/13/2020
-ms.locfileid: "91988765"
+ms.lasthandoff: 11/03/2020
+ms.locfileid: "93235623"
 ---
 # <a name="sql-server-high-availability-and-disaster-recovery-partners"></a>SQL Server 고가용성 및 재해 복구 파트너
 [!INCLUDE[sqlserver](../includes/applies-to-version/sqlserver.md)]
@@ -25,12 +25,12 @@ SQL Server 서비스에 대한 고가용성 및 재해 복구를 제공하려면
 | --- | --- | --- |
 |![Azure][5] |**Azure Site Recovery**<br>Site Recovery는 주 사이트를 사용할 수 없는 경우 보조 위치에서 계속 사용할 수 있도록 가상 컴퓨터 또는 실제 서버에서 실행 중인 워크로드를 복제합니다. 온-프레미스 데이터 센터에서 Azure나 다른 온-프레미스 데이터 센터로, 한 Azure 데이터 센터에서 다른 Azure 데이터 센터로 SQL Server 가상 컴퓨터를 복제하고 장애 조치(failover)할 수 있습니다.<br><br> SQL Server 2008 R2- SQL Server 2016의 Enterprise 및 Standard Edition|[웹 사이트][azure_website]<br>[Marketplace][azure_marketplace]<br>[데이터시트][azure_datasheet]<br>[Twitter][azure_twitter]<br>[비디오][azure_youtube]|
 |![DH2i][2] |**DH2i**<br>DxEnterprise는 계획 및 계획되지 않은 가동 중지 시간을 최소화하고, 막대한 비용을 절감하며, 관리를 대폭 간소화하고, 물리적 및 논리적 통합을 가능하게 하는 Windows, Linux 및 Docker용 Smart Availability 소프트웨어입니다.<br><br>SQL Server 2005+, Windows Server 2008R2+, Ubuntu 16+, RHEL 7+, CentOS 7+|[웹 사이트][dh2i_website]<br>[데이터시트][dh2i_datasheet]<br>[Twitter][dh2i_twitter]<br>[비디오][dh2i_youtube]|
-|![HPE][4] |**HPE Serviceguard**<br>SGLX(Linux용 HPE Serviceguard)를 사용하여 어떤 거리에서든, 물리적 환경 및 가상 환경 전반에 걸친 수많은 인프라 및 애플리케이션 오류를 통해 발생하는 계획 및 계획되지 않은 가동 중지 시간으로부터 Linux&reg;의 중요한 SQL Server 2017 워크로드를 보호합니다. HPE SGLX A.12.20.00 이상은 장애 조치(Failover) 클러스터 인스턴스 및 Always On 가용성 그룹 SQL Server 워크로드에 대한 상황에 맞는 모니터링 및 복구 옵션을 제공합니다. 데이터 무결성 및 성능 저하 없이 HPE SGLX의 가동 시간을 극대화합니다.<br><br>Linux의 SQL Server 2017 - RedHat 7.3, 7.4, SUSE 12 SP2, SP3|[웹 사이트][hpe_website]<br>[데이터시트][hpe]<br>[평가 다운로드][hpe_download]<br>[블로그][hpe_download]<br>[Twitter][hpe_twitter]
+|![HPE 로고][4] |**HPE Serviceguard**<br>SGLX(Linux용 HPE Serviceguard)를 사용하여 어떤 거리에서든, 물리적 환경 및 가상 환경 전반에 걸친 수많은 인프라 및 애플리케이션 오류를 통해 발생하는 계획 및 계획되지 않은 가동 중지 시간으로부터 Linux&reg;의 중요한 SQL Server 2017 워크로드를 보호합니다. HPE SGLX A.12.20.00 이상은 장애 조치(Failover) 클러스터 인스턴스 및 Always On 가용성 그룹 SQL Server 워크로드에 대한 상황에 맞는 모니터링 및 복구 옵션을 제공합니다. 데이터 무결성 및 성능 저하 없이 HPE SGLX의 가동 시간을 극대화합니다.<br><br>Linux의 SQL Server 2017 - RedHat 7.3, 7.4, SUSE 12 SP2, SP3|[웹 사이트][hpe_website]<br>[데이터시트][hpe]<br>[평가 다운로드][hpe_download]<br>[블로그][hpe_download]<br>[Twitter][hpe_twitter]
 |![IDERA][3]|**IDERA**<br>SQL 안전 백업은 데이터베이스 백업 시간 및 백업 파일 크기를 줄이고 백업 파일 내의 데이터베이스에 대한 즉시 읽기 및 쓰기 액세스를 제공함으로써 비용을 절감하는 SQL Server용 고성능 백업 및 복구 솔루션입니다.<br><br>Microsoft SQL Server: 2005 SP1 이상, 2008, 2008 R2, 2012, 2014, 2016, 모든 버전 |[웹 사이트][idera_website]|
 |![NEC][7]|**NEC**<br>ExpressCluster는 SQL Server에 대한 하드웨어, 소프트웨어, 네트워크 및 사이트 오류를 비롯한 모든 주요 오류에 대한 포괄적이고 완벽하게 자동화된 고가용성 및 재해 복구 솔루션이며, 온-프레미스 또는 클라우드 환경의 물리적 또는 가상 머신에서 실행되는 연결된 애플리케이션입니다.<br><br>Microsoft SQL Server: 2005 이상, 모든 버전 |[웹 사이트][necec_website]<br>[데이터시트][necec_datasheet]<br>[비디오][necec_youtube]<br>[다운로드][necec_download]|
-|![Portworx][6] |**Portworx**<br>Portworx는 프로덕션 환경에서 실행되는 상태 저장 컨테이너에 대한 솔루션입니다. Portworx를 통해 사용자는 Kubernetes, Mesosphere DC/OS 및 Docker Swarm과 같은 컨테이너 스케줄러를 사용하여 어떠한 인프라에서나 모든 데이터베이스 또는 상태 저장 서비스를 관리할 수 있습니다. Portworx는 지속성, 고가용성, 데이터 자동화, 다중 데이터 저장소 및 인프라 지원, 보안 등 DevOps 팀이 프로덕션 환경에서 컨테이너화된 데이터베이스 및 기타 상태 저장 서비스를 실행할 때 직면하는 5가지 가장 일반적인 문제를 해결합니다.<br><br>Docker의 SQL Server 2017 |[웹 사이트][portworx_website]<br>[설명서][portworx_docs]<br>[비디오][portworx_youtube]|
+|![Portworx][6] |**Portworx**<br>Portworx는 프로덕션 환경에서 실행되는 상태 저장 컨테이너에 대한 솔루션입니다. Portworx를 통해 사용자는 Kubernetes, Mesosphere DC/OS 및 Docker Swarm과 같은 컨테이너 스케줄러를 사용하여 어떠한 인프라에서나 모든 데이터베이스 또는 상태 저장 서비스를 관리할 수 있습니다. Portworx는 지속성, 고가용성, 데이터 자동화, 다중 데이터 저장소 및 인프라 지원, 보안 등 DevOps 팀이 프로덕션 환경에서 컨테이너화된 데이터베이스 및 기타 상태 저장 서비스를 실행할 때 직면하는 5가지 가장 일반적인 문제를 해결합니다.<br><br>Docker에서 SQL Server 2017 |[웹 사이트][portworx_website]<br>[설명서][portworx_docs]<br>[비디오][portworx_youtube]|
 |![SIOS][8] |**SIOS**<br>SIOS Technology는 Windows 또는 Linux의 SQL Server에 비용 효율적인 고가용성 및 재해 복구 솔루션을 제공합니다. SIOS SANless 클러스터링은 공유 스토리지 SAN의 필요성을 없애 단일 및 다중 사이트 환경의 물리적, 가상, 클라우드 및 하이브리드 클라우드 구성에서 가장 중요한 애플리케이션을 보호하는 완전한 유연성을 제공합니다.<br><br>Windows Server 장애 조치(Failover) 클러스터링 환경에 SIOS DataKeeper를 추가하여 기존 공유 스토리지를 대체하는 SANless 볼륨 리소스를 만들어 Azure에서 WSFC를 쉽게 실행할 수 있습니다.<br><br>SIOS Protection Suite는 SQL Server, SAP, HANA, Oracle 등과 같은 중요한 Linux 애플리케이션을 보호하는 완전히 유연한 클러스터링 솔루션입니다.|[웹 사이트][sios_website]<br>[데이터시트][sios_datasheet]<br>[Twitter][sios_twitter]<br>[Marketplace][sios_marketplace]<br>[비디오][sios_youtube]|
-|![Veeam][1] |**Veeam**<br>Veeam Backup & Replication은 강력하고 사용이 간편하며 경제적인 백업 및 가용성 솔루션입니다. VM(가상 머신) 백업 및 복제를 단일 소프트웨어 솔루션으로 통합하여 가상화된 애플리케이션 및 데이터에 대해 신속하고 유연하며 안정적인 복구를 제공합니다. Veeam 백업 및 복제에는 VMware vSphere 및 Microsoft Hyper-V 가상 환경에 대 한 뛰어난 지원을 제공합니다.<br><br>Windows에서 SQL Server 2005 SP4 - SQL Server 2016 |[웹 사이트][veeam_website]<br>[데이터시트][veeam_datasheet]<br>[Twitter][veeam_twitter]<br>[비디오][veeam_youtube]|
+|![Veeam][1] |**Veeam**<br>Veeam Backup & Replication은 강력하고 사용이 간편하며 경제적인 백업 및 가용성 솔루션입니다. VM(가상 머신) 백업 및 복제를 단일 소프트웨어 솔루션으로 통합하여 가상화된 애플리케이션 및 데이터에 대해 신속하고 유연하며 안정적인 복구를 제공합니다. Veeam 백업 및 복제에는 VMware vSphere 및 Microsoft Hyper-V 가상 환경에 대 한 뛰어난 지원을 제공합니다.<br><br>Windows에서 SQL Server 2005 SP4 - SQL Server 2016 |[웹 사이트][veeam_website]<br>[데이터시트][veeam_datasheet]<br>[Twitter][veeam_twitter]<br>[비디오][veeam_youtube]|
 
 ## <a name="next-steps"></a>다음 단계
 추가 파트너에 대해 자세히 알아보려면 [모니터링][mon_partners], [관리 파트너][management_partners] 및 [개발 파트너][dev_partners]를 참조하세요.

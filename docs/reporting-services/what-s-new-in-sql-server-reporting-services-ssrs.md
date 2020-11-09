@@ -10,12 +10,12 @@ ms.author: maggies
 ms.reviewer: ''
 ms.custom: ''
 ms.date: 12/05/2019
-ms.openlocfilehash: b44e664d75735a6283d12f218b904fbdd07ad481
-ms.sourcegitcommit: df1f0f2dfb9452f16471e740273cd1478ff3100c
+ms.openlocfilehash: 1af364896504dff41ab01095a69e8f581e792096
+ms.sourcegitcommit: 80701484b8f404316d934ad2a85fd773e26ca30c
 ms.translationtype: HT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 07/29/2020
-ms.locfileid: "87396538"
+ms.lasthandoff: 11/03/2020
+ms.locfileid: "93243716"
 ---
 # <a name="whats-new-in-sql-server-reporting-services-ssrs"></a>SSRS(SQL Server Reporting Services)의 새로운 기능
 
@@ -29,7 +29,7 @@ Power BI Report Server에 대한 정보는 [Power BI Report Server란?](https://
 
 ## <a name="sql-server-2019-reporting-services"></a>SQL Server 2019 Reporting Services
 
-**다운로드** ![다운로드](https://docs.microsoft.com/analysis-services/analysis-services/media/download.png "다운로드로 사용 가능한 제품 설명서에서 데이터 공급자 설치 섹션을 참조하세요")
+**다운로드** :::image type="icon" source="https://docs.microsoft.com/analysis-services/analysis-services/media/download.png":::
 
 [SQL Server 2019 Reporting Services](https://www.microsoft.com/download/details.aspx?id=100122)는 Microsoft 다운로드 센터에서 다운로드할 수 있습니다.
 
@@ -67,7 +67,7 @@ SQL Server 2019는 이제 Enterprise 및 Standard Edition용 SSRS 카탈로그 �
 
 ## <a name="sql-server-2017-reporting-services"></a>SQL Server 2017 Reporting Services
 
-**다운로드** ![다운로드](https://docs.microsoft.com/analysis-services/analysis-services/media/download.png "다운로드로 사용 가능한 제품 설명서에서 데이터 공급자 설치 섹션을 참조하세요")
+**다운로드** :::image type="icon" source="https://docs.microsoft.com/analysis-services/analysis-services/media/download.png":::
 
 SQL Server 2017 Reporting Services를 다운로드하려면 **[Microsoft 다운로드 센터](https://www.microsoft.com/download/details.aspx?id=55252)** 로 이동하세요.
 
@@ -117,7 +117,7 @@ SQL Server 2017 Reporting Services를 다운로드하려면 **[Microsoft 다운�
 
 [!INCLUDE[ssRSWebPortal-Non-Markdown](../includes/ssrswebportal-non-markdown-md.md)]에 대한 자세한 내용은 [웹 포털(SSRS 기본 모드)](../reporting-services/web-portal-ssrs-native-mode.md)을 참조하세요.  
 
-![ssRSPortal](../reporting-services/media/ssrsportal.png "ssRSPortal")  
+![SQL Server Reporting Services 포털을 보여 주는 스크린샷](../reporting-services/media/ssrsportal.png "ssRSPortal")  
 
 #### <a name="custom-branding-for-the-ssrswebportal-non-markdown"></a>[!INCLUDE[ssRSWebPortal-Non-Markdown](../includes/ssrswebportal-non-markdown-md.md)]에 대한 사용자 지정 브랜딩 
 
@@ -129,7 +129,7 @@ SQL Server 2017 Reporting Services를 다운로드하려면 **[Microsoft 다운�
 
 현재 폴더 상황에 맞는 [!INCLUDE[ssRSWebPortal-Non-Markdown](../includes/ssrswebportal-non-markdown-md.md)]에 KPI를 직접 만들 수 있습니다. KPI를 만들 때 데이터 세트 필드를 선택하고 해당 값을 요약할 수 있습니다. 드릴수루할 관련 콘텐츠를 선택하여 세부 정보를 공개할 수도 있습니다.
 
-![ssrs-webportal-kpi](../reporting-services/media/ssrs-webportal-kpi.png)
+![SQL Server Reporting Services 포털에서 KPI를 보여 주는 스크린샷](../reporting-services/media/ssrs-webportal-kpi.png)
 
 자세한 내용은 [웹 포털에서 KPI 사용](https://msdn.microsoft.com/a28cf500-6d47-4268-a248-04837e7a09eb)을 참조하세요.
 
@@ -194,13 +194,13 @@ Reporting Services 모바일 보고서는 다양한 폼 팩터에 최적화된 �
 
 ![참고](https://docs.microsoft.com/analysis-services/analysis-services/instances/install-windows/media/ssrs-fyi-note.png "참고") 새로 고침은 [!INCLUDE[ssRSnoversion](../includes/ssrsnoversion-md.md)] 구독에 의해 관리되며 항목이 고정된 후 구독을 편집하고 다른 새로 고침 일정을 구성할 수 있습니다.
 
-![ssRS_Pin_to_PowerBI](../reporting-services/media/ssrs-pin-to-powerbi.png) 
+![Power BI 대시보드에 고정 대화 상자를 보여 주는 스크린샷](../reporting-services/media/ssrs-pin-to-powerbi.png) 
 
 자세한 내용은 [Power BI 보고서 서버 통합&#40;Configuration Manager&#41;](../reporting-services/install-windows/power-bi-report-server-integration-configuration-manager.md) 및 [Power BI 대시보드에 Reporting Services 항목 고정](../reporting-services/pin-reporting-services-items-to-power-bi-dashboards.md)을 참조하세요.  
 
 **PowerPoint 렌더링 및 내보내기:** Microsoft PowerPoint(PPTX) 형식은 새로운 [!INCLUDE[ssRSCurrent](../includes/ssrscurrent-md.md)] 렌더링 확장입니다. 일반적인 애플리케이션(보고서 작성기, 보고서 디자이너 (SSDT), [!INCLUDE[ssRSWebPortal](../includes/ssrswebportal.md)])에서 PPTX 형식으로 보고서를 내보낼 수 있습니다. 예를 들어 다음 이미지는 [!INCLUDE[ssRSWebPortal](../includes/ssrswebportal.md)]의 내보내기 메뉴를 보여 줍니다. 
 
-![ssrs-export-powerpoint](../reporting-services/media/ssrs-export-powerpoint.png) 
+![PowerPoint 옵션이 호출된 내보내기 드롭다운 목록을 보여 주는 스크린샷](../reporting-services/media/ssrs-export-powerpoint.png) 
 
 구독 출력에 대해 PPTX 형식을 선택한 후 보고서 서버 URL 액세스를 사용하여 보고서를 렌더링하고 내보낼 수도 있습니다. 예를 들어 브라우저의 다음 URL 명령은 보고서 서버의 명명된 인스턴스에서 보고서를 내보냅니다.  
 
@@ -214,16 +214,16 @@ https://servername/ReportServer_THESQLINSTANCE/Pages/ReportViewer.aspx?%2freport
 
 자세한 내용은 [Reporting Services에 대한 클라이언트 쪽 인쇄 기능 설정 및 해제](../reporting-services/report-server/enable-and-disable-client-side-printing-for-reporting-services.md)를 참조하세요.
 
-![ssrs-pdf-printing](../reporting-services/media/ssrs-pdf-printing.png)
+![인쇄 대화 상자의 스크린샷](../reporting-services/media/ssrs-pdf-printing.png)
 
 ### <a name="subscription-improvements"></a>구독 개선 사항  
 
 |기능|지원되는 서버 모드|  
 |-------------|---------------------------|  
-|**구독 설정 및 해제**. 새로운 사용자 인터페이스 옵션을 통해 신속하게 구독을 설정하고 해제할 수 있습니다. 해제된 구독에는 일정과 같은 다른 구성 속성이 유지되며 손쉽게 설정이 가능합니다.<br /><br /> ![ssrs-enable-disable-subscriptions](../reporting-services/media/ssrs-enable-disable-subscriptions.png)<br /><br /> 자세한 내용은 [Disable or Pause Report and Subscription Processing](../reporting-services/subscriptions/disable-or-pause-report-and-subscription-processing.md)를 참조하세요.|기본 모드|  
+|**구독 설정 및 해제**. 새로운 사용자 인터페이스 옵션을 통해 신속하게 구독을 설정하고 해제할 수 있습니다. 해제된 구독에는 일정과 같은 다른 구성 속성이 유지되며 손쉽게 설정이 가능합니다.<br /><br /> ![사용, 사용 안 함 및 삭제 옵션을 보여 주는 스크린샷](../reporting-services/media/ssrs-enable-disable-subscriptions.png)<br /><br /> 자세한 내용은 [Disable or Pause Report and Subscription Processing](../reporting-services/subscriptions/disable-or-pause-report-and-subscription-processing.md)를 참조하세요.|기본 모드|  
 |**구독 설명**. 새 구독을 만들 때 이제 구독 속성의 일부로 보고서에 대한 설명을 포함할 수 있습니다. 설명은 구독 요약 페이지에 포함됩니다.|SharePoint 모드 및 기본 모드|  
 |**구독 소유자 변경**. 구독 소유자를 신속하게 변경할 수 있도록 사용자 인터페이스가 향상되었습니다. 이전 버전의 [!INCLUDE[ssRSnoversion](../includes/ssrsnoversion-md.md)] 에서는 관리자가 스크립트를 사용하여 구독 소유자를 변경할 수 있습니다. [!INCLUDE[ssSQL15](../includes/sssql15-md.md)] 릴리스부터 사용자 인터페이스 또는 스크립트를 사용하여 구독 소유자를 변경할 수 있습니다. 구독 소유자 변경은 사용자가 퇴사하거나 조직에서 역할이 변경된 경우에 수행되는 일반적인 관리 작업입니다.|SharePoint 모드 및 기본 모드|  
-|**파일 공유 구독에 대한 공유 자격 증명**. 이제 [!INCLUDE[ssRSnoversion](../includes/ssrsnoversion-md.md)] 파일 공유 구독에서 사용할 수 있는 두 가지 워크플로가 있습니다.<br /><br /> 이 릴리스의 새로운 기능으로, [!INCLUDE[ssRSnoversion](../includes/ssrsnoversion-md.md)] 관리자는 여러 구독에서 사용할 수 있는 단일 파일 공유 계정을 구성할 수 있습니다. 파일 공유 계정은 [!INCLUDE[ssRSnoversion](../includes/ssrsnoversion-md.md)] 네이티브 모드 구성 관리자 **파일 공유 계정 지정**에서 구성됩니다. 구독 구성 페이지에서 사용자는 **파일 공유 계정 사용**을 선택합니다.<br /><br /> 대상 파일 공유에 대한 특정 자격 증명으로 개별 구독을 구성합니다.<br /><br /> 또한, 두 가지 방법을 혼용하여 일부 파일 공유 구독은 중앙식 파일 공유 계정을 사용하고 다른 구독은 특정 자격 증명을 사용하도록 할 수 있습니다.|기본 모드|
+|**파일 공유 구독에 대한 공유 자격 증명**. 이제 [!INCLUDE[ssRSnoversion](../includes/ssrsnoversion-md.md)] 파일 공유 구독에서 사용할 수 있는 두 가지 워크플로가 있습니다.<br /><br /> 이 릴리스의 새로운 기능으로, [!INCLUDE[ssRSnoversion](../includes/ssrsnoversion-md.md)] 관리자는 여러 구독에서 사용할 수 있는 단일 파일 공유 계정을 구성할 수 있습니다. 파일 공유 계정은 [!INCLUDE[ssRSnoversion](../includes/ssrsnoversion-md.md)] 네이티브 모드 구성 관리자 **파일 공유 계정 지정** 에서 구성됩니다. 구독 구성 페이지에서 사용자는 **파일 공유 계정 사용** 을 선택합니다.<br /><br /> 대상 파일 공유에 대한 특정 자격 증명으로 개별 구독을 구성합니다.<br /><br /> 또한, 두 가지 방법을 혼용하여 일부 파일 공유 구독은 중앙식 파일 공유 계정을 사용하고 다른 구독은 특정 자격 증명을 사용하도록 할 수 있습니다.|기본 모드|
 
 ### <a name="sql-server-data-tools-ssdt"></a>SSDT(SQL Server Data Tools)
 

@@ -16,12 +16,12 @@ apitype: Assembly
 ms.assetid: 8f7573b2-ac5c-4721-8a02-4b6cb60c74b2
 author: David-Engel
 ms.author: v-daenge
-ms.openlocfilehash: c84283f4ff6628e56ae3bdbcd1a48ace35399de0
-ms.sourcegitcommit: e700497f962e4c2274df16d9e651059b42ff1a10
+ms.openlocfilehash: f420aff2681495a8890a1c86841e124c73a98184
+ms.sourcegitcommit: 80701484b8f404316d934ad2a85fd773e26ca30c
 ms.translationtype: HT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 08/17/2020
-ms.locfileid: "88472075"
+ms.lasthandoff: 11/03/2020
+ms.locfileid: "93243718"
 ---
 # <a name="supportsresultsetconcurrency-method-sqlserverdatabasemetadata"></a>supportsResultSetConcurrency 메서드(SQLServerDatabaseMetaData)
 [!INCLUDE[Driver_JDBC_Download](../../../includes/driver_jdbc_download.md)]
@@ -39,7 +39,7 @@ public boolean supportsResultSetConcurrency(int type,
 #### <a name="parameters"></a>매개 변수  
  *type*  
   
- 결과 집합 유형을 나타내는 **int**이며, java.sql.ResultSet 또는 SQLServerResultSet에 정의된 다음 값 중 하나일 수 있습니다.  
+ 결과 집합 유형을 나타내는 **int** 이며, java.sql.ResultSet 또는 SQLServerResultSet에 정의된 다음 값 중 하나일 수 있습니다.  
   
 ## <a name="javasqlresultset-types"></a>java.sql.ResultSet 형식  
  TYPE_FORWARD_ONLY  
@@ -61,14 +61,14 @@ public boolean supportsResultSetConcurrency(int type,
   
  *동시성*  
   
- 결과 집합 동시성 수준을 나타내는 **int**이며, java.sql.ResultSet 또는 SQLServerResultSet에 정의된 다음 값 중 하나일 수 있습니다.  
+ 결과 집합 동시성 수준을 나타내는 **int** 이며, java.sql.ResultSet 또는 SQLServerResultSet에 정의된 다음 값 중 하나일 수 있습니다.  
   
-## <a name="javasqlresultset-types"></a>java.sql.ResultSet 형식  
+## <a name="concurrency-javasqlresultset-types"></a>동시성 java.sql.ResultSet 형식  
  CONCUR_READ_ONLY  
   
  CONCUR_UPDATABLE  
   
-## <a name="sqlserverresultset-types"></a>SQLServerResultSet 형식  
+## <a name="concurrency-sqlserverresultset-types"></a>동시성 SQLServerResultSet 형식  
  CONCUR_SS_OPTIMISTIC_CC  
   
  CONCUR_SS_SCROLL_LOCKS  
@@ -76,7 +76,7 @@ public boolean supportsResultSetConcurrency(int type,
  CONCUR_SS_OPTIMISTIC_VAL  
   
 ## <a name="return-value"></a>반환 값  
- 지원되는 경우 **true**입니다. 그렇지 않으면 **false**입니다.  
+ 지원되는 경우 **true** 입니다. 그렇지 않으면 **false** 입니다.  
   
 ## <a name="exceptions"></a>예외  
  [SQLServerException](../../../connect/jdbc/reference/sqlserverexception-class.md)  

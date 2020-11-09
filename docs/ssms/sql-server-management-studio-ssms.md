@@ -16,12 +16,12 @@ helpviewer_keywords:
 - SQL Server Management Studio for Analysis Services
 ms.custom: seo-lt-2019
 ms.date: 09/11/2019
-ms.openlocfilehash: 91fc06c59f9e2be53409d67d0c00de1fe187e611
-ms.sourcegitcommit: 22dacedeb6e8721e7cdb6279a946d4002cfb5da3
+ms.openlocfilehash: 396df64c5c5be5d7ea9c5fc67d7cb1ff0a7d990f
+ms.sourcegitcommit: 80701484b8f404316d934ad2a85fd773e26ca30c
 ms.translationtype: HT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 10/14/2020
-ms.locfileid: "92035987"
+ms.lasthandoff: 11/03/2020
+ms.locfileid: "93243852"
 ---
 # <a name="what-is-sql-server-management-studio-ssms"></a>SSMS(SQL Server Management Studio)란?
 
@@ -33,14 +33,14 @@ ms.locfileid: "92035987"
 - [**SQL Server Developer 다운로드**](https://my.visualstudio.com/Downloads?q=SQL%20Server%20Developer)
 - [**Visual Studio 다운로드**](https://www.visualstudio.com/downloads/)
 
-![SSMS](media/sql-server-management-studio-ssms/ssms.png)
+![SQL Server Management Studio의 스크린샷](media/sql-server-management-studio-ssms/ssms.png)
 
 ## <a name="sql-server-management-studio-components"></a>SQL Server Management Studio 구성 요소  
   
 |Description|구성 요소|  
 |---------------|---------|  
 |**개체 탐색기** 를 사용하여 하나 이상의 [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)]인스턴스에서 모든 개체를 보고 관리합니다.|[개체 탐색기](../ssms/object/object-explorer.md)|  
-|**템플릿 탐색기**를 사용하여 쿼리 및 스크립트 개발 속도를 높이는 데 사용하는 상용구 텍스트 파일을 작성 및 관리하는 방법입니다.|[템플릿 탐색기](../ssms/template/template-explorer.md)|  
+|**템플릿 탐색기** 를 사용하여 쿼리 및 스크립트 개발 속도를 높이는 데 사용하는 상용구 텍스트 파일을 작성 및 관리하는 방법입니다.|[템플릿 탐색기](../ssms/template/template-explorer.md)|  
 |사용되지 않는 **솔루션 탐색기** 를 사용하여 쿼리 및 스크립트와 같은 관리 항목을 관리하는 데 사용되는 프로젝트를 작성하는 방법입니다.|[솔루션 탐색기](../ssms/solution/solution-explorer.md)|  
 |[!INCLUDE[ssManStudio](../includes/ssmanstudio-md.md)]에 포함된 비주얼 디자인 도구를 사용하는 방법입니다.|[Visual Database Tools](../ssms/visual-db-tools/visual-database-tools.md)|  
 |[!INCLUDE[ssManStudio](../includes/ssmanstudio-md.md)] 언어 편집기를 사용하여 쿼리와 스크립트를 대화식으로 작성 및 디버깅하는 방법입니다.|[쿼리 및 텍스트 편집기](./f1-help/database-engine-query-editor-sql-server-management-studio.md?view=sql-server-ver15)
