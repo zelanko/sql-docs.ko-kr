@@ -15,12 +15,12 @@ ms.assetid: 76e8a6ba-1381-4620-b356-4311e1331ca7
 author: stevestein
 ms.author: sstein
 monikerRange: '>=aps-pdw-2016||=azuresqldb-current||=azure-sqldw-latest||>=sql-server-2016||=sqlallproducts-allversions||>=sql-server-linux-2017||=azuresqldb-mi-current'
-ms.openlocfilehash: dde2beed868314f315bf51e9fa8174ba01b09e3e
-ms.sourcegitcommit: 75f767c7b1ead31f33a870fddab6bef52f99906b
+ms.openlocfilehash: 5da64e544211e29491ce4270c91ae527bda923de
+ms.sourcegitcommit: b3a711a673baebb2ff10d7142b209982b46973ae
 ms.translationtype: HT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 07/28/2020
-ms.locfileid: "87332662"
+ms.lasthandoff: 11/05/2020
+ms.locfileid: "93364765"
 ---
 # <a name="create-a-stored-procedure"></a>저장 프로시저 만들기
 [!INCLUDE[SQL Server Azure SQL Database Synapse Analytics PDW ](../../includes/applies-to-version/sql-asdb-asdbmi-asa-pdw.md)]
@@ -28,7 +28,6 @@ ms.locfileid: "87332662"
 
 이 항목에서는 [!INCLUDE[tsql](../../includes/tsql-md.md)] 및 [!INCLUDE[ssManStudioFull](../../includes/ssmanstudiofull-md.md)] CREATE PROCEDURE 문을 사용하여 [!INCLUDE[tsql](../../includes/tsql-md.md)] 저장 프로시저를 만드는 방법에 대해 설명합니다.  
   
-##  <a name="Top"></a>   
 -   **시작하기 전 주의 사항:**  [사용 권한](#Permissions)  
   
 -   **저장 프로시저를 만들려면 다음을 사용합니다.**  [SQL Server Management Studio](#SSMSProcedure), [Transact-SQL](#TsqlProcedure)  
@@ -46,13 +45,13 @@ ms.locfileid: "87332662"
 ###  <a name="using-sql-server-management-studio"></a><a name="SSMSProcedure"></a> SQL Server Management Studio 사용  
  **개체 탐색기에서 프로시저를 만들려면**  
   
-1.  **개체 탐색기**에서 [!INCLUDE[ssDE](../../includes/ssde-md.md)] 의 인스턴스에 연결한 다음 해당 인스턴스를 확장합니다.  
+1.  **개체 탐색기** 에서 [!INCLUDE[ssDE](../../includes/ssde-md.md)] 의 인스턴스에 연결한 다음 해당 인스턴스를 확장합니다.  
   
-2.  **데이터베이스**를 확장하고 [!INCLUDE[ssSampleDBobject](../../includes/sssampledbobject-md.md)] 데이터베이스를 확장한 다음 **프로그래밍 기능**을 확장합니다.  
+2.  **데이터베이스** 를 확장하고 [!INCLUDE[ssSampleDBobject](../../includes/sssampledbobject-md.md)] 데이터베이스를 확장한 다음 **프로그래밍 기능** 을 확장합니다.  
   
-3.  **저장 프로시저**를 마우스 오른쪽 단추로 클릭한 다음 **새 저장 프로시저**를 클릭합니다.  
+3.  **저장 프로시저** 를 마우스 오른쪽 단추로 클릭한 다음 **새 저장 프로시저** 를 클릭합니다.  
   
-4.  **쿼리** 메뉴에서 **템플릿 매개 변수 값 지정**을 클릭합니다.  
+4.  **쿼리** 메뉴에서 **템플릿 매개 변수 값 지정** 을 클릭합니다.  
   
 5.  **템플릿 매개 변수 값 지정** 대화 상자에 표시된 매개 변수에 대해 다음 값을 입력합니다.  
   
@@ -63,15 +62,15 @@ ms.locfileid: "87332662"
     |Description|Returns employee data|  
     |Procedure_name|HumanResources.uspGetEmployeesTest|  
     |@Param1|@LastName|  
-    |@Datatype_For_Param1|**nvarchar**(50)|  
+    |@Datatype_For_Param1|**nvarchar** (50)|  
     |Default_Value_For_Param1|NULL|  
     |@Param2|@FirstName|  
-    |@Datatype_For_Param2|**nvarchar**(50)|  
+    |@Datatype_For_Param2|**nvarchar** (50)|  
     |Default_Value_For_Param2|NULL|  
   
-6.  **확인**을 클릭합니다.  
+6.  **확인** 을 클릭합니다.  
   
-7.  **쿼리 편집기**에서 SELECT 문을 다음 문으로 바꿉니다.  
+7.  **쿼리 편집기** 에서 SELECT 문을 다음 문으로 바꿉니다.  
   
     ```sql  
     SELECT FirstName, LastName, Department  
@@ -80,13 +79,13 @@ ms.locfileid: "87332662"
         AND EndDate IS NULL;  
     ```  
   
-8.  구문을 테스트하려면 **쿼리** 메뉴에서 **구문 분석**을 클릭합니다. 오류 메시지가 반환되면 필요에 따라 위의 정보와 문을 비교하여 수정합니다.  
+8.  구문을 테스트하려면 **쿼리** 메뉴에서 **구문 분석** 을 클릭합니다. 오류 메시지가 반환되면 필요에 따라 위의 정보와 문을 비교하여 수정합니다.  
   
-9. 프로시저를 만들려면 **쿼리** 메뉴에서 **실행**을 클릭합니다. 프로시저가 데이터베이스 개체로 만들어집니다.  
+9. 프로시저를 만들려면 **쿼리** 메뉴에서 **실행** 을 클릭합니다. 프로시저가 데이터베이스 개체로 만들어집니다.  
   
-10. 개체 탐색기에 나열된 프로시저를 보려면 **저장 프로시저** 를 마우스 오른쪽 단추로 클릭하고 **새로 고침**을 선택합니다.  
+10. 개체 탐색기에 나열된 프로시저를 보려면 **저장 프로시저** 를 마우스 오른쪽 단추로 클릭하고 **새로 고침** 을 선택합니다.  
   
-11. 프로시저를 실행하려면 개체 탐색기에서 저장 프로시저 이름 **HumanResources.uspGetEmployeesTest** 를 마우스 오른쪽 단추로 클릭하고 **저장 프로시저 실행**을 선택합니다.  
+11. 프로시저를 실행하려면 개체 탐색기에서 저장 프로시저 이름 **HumanResources.uspGetEmployeesTest** 를 마우스 오른쪽 단추로 클릭하고 **저장 프로시저 실행** 을 선택합니다.  
   
 12. **프로시저 실행** 창에서 @LastName 매개 변수의 값으로 Margheim을 입력하고 @FirstName 매개 변수의 값으로 Diane을 입력합니다.  
   
@@ -96,11 +95,11 @@ ms.locfileid: "87332662"
 ###  <a name="using-transact-sql"></a><a name="TsqlProcedure"></a> Transact-SQL 사용  
  **쿼리 편집기에서 프로시저를 만들려면**  
   
-1.  **개체 탐색기**에서 [!INCLUDE[ssDE](../../includes/ssde-md.md)]인스턴스에 연결합니다.  
+1.  **개체 탐색기** 에서 [!INCLUDE[ssDE](../../includes/ssde-md.md)]인스턴스에 연결합니다.  
   
-2.  메뉴에서 **파일** 메뉴에서 **새 쿼리**를 클릭합니다.  
+2.  메뉴에서 **파일** 메뉴에서 **새 쿼리** 를 클릭합니다.  
   
-3.  다음 예를 복사하여 쿼리 창에 붙여 넣고 **실행**을 클릭합니다. 이 예에서는 다른 프로시저 이름을 사용하여 위와 같은 저장 프로시저를 만듭니다.  
+3.  다음 예를 복사하여 쿼리 창에 붙여 넣고 **실행** 을 클릭합니다. 이 예에서는 다른 프로시저 이름을 사용하여 위와 같은 저장 프로시저를 만듭니다.  
   
     ```  
     USE AdventureWorks2012;  
@@ -119,7 +118,7 @@ ms.locfileid: "87332662"
   
     ```  
   
-4.  프로시저를 실행하려면 다음 예제를 새 쿼리 창에 복사하여 붙여 넣고 **실행**을 클릭합니다. 매개 변수 값을 지정하는 다른 메서드가 표시됩니다.  
+4.  프로시저를 실행하려면 다음 예제를 새 쿼리 창에 복사하여 붙여 넣고 **실행** 을 클릭합니다. 매개 변수 값을 지정하는 다른 메서드가 표시됩니다.  
   
     ```  
     EXECUTE HumanResources.uspGetEmployeesTest2 N'Ackerman', N'Pilar';  
@@ -132,7 +131,6 @@ ms.locfileid: "87332662"
   
     ```  
   
-##  <a name="PowerShellProcedure"></a>   
 ## <a name="see-also"></a>참고 항목  
  [CREATE PROCEDURE&#40;Transact-SQL&#41;](../../t-sql/statements/create-procedure-transact-sql.md)  
   

@@ -85,20 +85,20 @@ ms.reviewer: ''
 ms.custom: ''
 ms.date: 07/26/2019
 monikerRange: '>=sql-server-2016||=sqlallproducts-allversions'
-ms.openlocfilehash: 380a3b3f08d0e9f974ceee5356401461a33925fb
-ms.sourcegitcommit: 544706f6725ec6cdca59da3a0ead12b99accb2cc
+ms.openlocfilehash: de4026f7fdf2dbde32998657e84a7b9b0c54b1f5
+ms.sourcegitcommit: 863420525a1f5d5b56b311b84a6fb14e79404860
 ms.translationtype: HT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 10/27/2020
-ms.locfileid: "92639016"
+ms.lasthandoff: 11/10/2020
+ms.locfileid: "94418040"
 ---
 # <a name="install-sql-server-from-the-command-prompt"></a>방법: 명령 프롬프트에서 SQL Server 2008 R2 설치
 
 [!INCLUDE [SQL Server -Windows Only](../../includes/applies-to-version/sql-windows-only.md)]
-  
-  SQL Server 설치 프로그램을 실행하기 전에 [SQL Server 설치 계획](../../sql-server/install/planning-a-sql-server-installation.md)을 검토하세요.  
-  
- 명령 프롬프트에서 새 SQL Server 인스턴스를 설치할 경우 설치할 기능과 그 기능을 어떻게 구성할지 지정할 수 있습니다. 또한 자동, 기본, 전체 상호 작용 등 설치 프로그램 사용자 인터페이스 사용 방식을 지정할 수도 있습니다.  
+
+SQL Server 설치 프로그램을 실행하기 전에 [SQL Server 설치 계획](../../sql-server/install/planning-a-sql-server-installation.md)을 검토하세요.  
+
+명령 프롬프트에서 새 SQL Server 인스턴스를 설치할 경우 설치할 기능과 그 기능을 어떻게 구성할지 지정할 수 있습니다. 또한 자동, 기본, 전체 상호 작용 등 설치 프로그램 사용자 인터페이스 사용 방식을 지정할 수도 있습니다.  
 
 명령 프롬프트에서 설치하려면 관리 명령 프롬프트를 열고 [SQL Server 설치 미디어](https://www.microsoft.com/sql-server/sql-server-downloads) 내에 있는 setup.exe 위치로 이동합니다. 수행하려는 작업을 실현하는 필수 및 선택적 매개 변수와 함께 `setup.exe` 명령을 실행합니다.
 
@@ -174,7 +174,7 @@ C:\SQLMedia\SQLServer2019> setup.exe /help
   
 |[!INCLUDE[ssDEnoversion](../../includes/ssdenoversion-md.md)] 구성 요소|매개 변수|Description|  
 |-----------------------------------------|---------------|-----------------|  
-|[!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 설치 컨트롤|/ACTION<br /><br /> **필수**|설치 워크플로를 지정하는 데 필요합니다.<br /><br /> 지원되는 값: **Install** .|  
+|[!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 설치 컨트롤|/ACTION<br /><br /> **필수**|설치 워크플로를 지정하는 데 필요합니다.<br /><br /> 지원되는 값: **Install**.|  
 |[!INCLUDE[ssDEnoversion](../../includes/ssdenoversion-md.md)] 설치 컨트롤|/SUPPRESSPRIVACYSTATEMENTNOTICE<br /><br /> **무인 설치에 /Q 또는 /QS 매개 변수가 지정된 경우에만 필수입니다.**|개인정보취급방침을 무시합니다. 이 플래그를 사용하면 [개인정보취급방침](../../sql-server/sql-server-privacy.md)에 동의하는 것입니다.  |  
 |[!INCLUDE[ssDEnoversion](../../includes/ssdenoversion-md.md)] 설치 컨트롤|/IACCEPTSQLSERVERLICENSETERMS<br /><br /> **무인 설치에 /Q 또는 /QS 매개 변수가 지정된 경우에만 필수입니다.**|사용 조건에 대한 동의를 확인하는 데 필요합니다.|  
 |[!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] Python 설치 컨트롤|/IACCEPTPYTHONLICENSETERMS <br /><br /> **Anaconda Python 패키지가 포함된 무인 설치에 /Q 또는 /QS 매개 변수가 지정된 경우에만 필수입니다.**|사용 조건에 대한 동의를 확인하는 데 필요합니다.| 
@@ -294,7 +294,7 @@ setup.exe /q /ACTION=Install /FEATURES=SQL /INSTANCENAME=MSSQLSERVER /SQLSVCACCO
 |[!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 설치 컨트롤|/INDICATEPROGRESS<br /><br /> **선택 사항**|세부 설치 로그 파일이 콘솔로 전달되도록 지정합니다.|  
 |[!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 설치 컨트롤|/INSTALLSHAREDDIR<br /><br /> **선택 사항**|64비트 공유 구성 요소에 대해 기본 디렉터리가 아닌 다른 설치 디렉터리를 지정합니다.<br /><br /> 기본값은 `%Program Files%\Microsoft SQL Server`<br /><br /> `%Program Files(x86)%\Microsoft SQL Server`로 설정할 수 없음|  
 |[!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 설치 컨트롤|/INSTANCEDIR<br /><br /> **선택 사항**|인스턴스 관련 구성 요소에 대해 기본 디렉터리가 아닌 다른 설치 디렉터리를 지정합니다.|  
-|[!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 설치 컨트롤|/INSTANCEID<br /><br /> [!INCLUDE[ssSQL11](../../includes/sssql11-md.md)] SP1 CU2(2013년 1월) 이전 버전은 **필수**<br /><br /> 인스턴스 기능은 [!INCLUDE[ssSQL11](../../includes/sssql11-md.md)] SP1 CU2부터 **필수** .|준비 중인 인스턴스의 InstanceID를 지정합니다.|  
+|[!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 설치 컨트롤|/INSTANCEID<br /><br /> [!INCLUDE[ssSQL11](../../includes/sssql11-md.md)] SP1 CU2(2013년 1월) 이전 버전은 **필수**<br /><br /> 인스턴스 기능은 [!INCLUDE[ssSQL11](../../includes/sssql11-md.md)] SP1 CU2부터 **필수**.|준비 중인 인스턴스의 InstanceID를 지정합니다.|  
 |PolyBase|/PBENGSVCACCOUNT<br /><br /> **선택 사항**|엔진 서비스의 계정을 지정합니다. 기본값은 **NT Authority\NETWORK SERVICE** 입니다.|  
 |PolyBase|/PBDMSSVCPASSWORD<br /><br /> **선택 사항**|엔진 서비스 계정의 암호를 지정합니다. 관리 서비스 계정, 가상 계정 또는 기본 제공 계정을 사용할 때는 이 매개 변수를 생략할 수 있습니다.|  
 |PolyBase|/PBENGSVCSTARTUPTYPE<br /><br /> **선택 사항**|PolyBase 엔진 서비스의 시작 모드를 지정합니다. Automatic(기본값), Disabled 및 Manual.|  
@@ -858,7 +858,7 @@ setup.exe /q /ACTION=RemoveNode /INSTANCENAME="<Insert Instance Name>" [/INDICAT
 ||IS_Worker|Integration Services 규모 확장을 위한 규모 확장 마스터가 포함됩니다.| 
 |MDS||[!INCLUDE[ssMDSshort](../../includes/ssmdsshort-md.md)]를 설치합니다.|  
 |SQL_SHARED_MPY||[SQL Server 2017 Machine Learning 서버(독립 실행형)](../../machine-learning/install/sql-machine-learning-standalone-windows-install.md)용 Python 패키지 설치 |  
-|SQL_SHARED_MR||[SQL Server 2016 R Server(독립 실행형)](../../machine-learning/install/sql-machine-learning-standalone-windows-install.md?view=sql-server-2016) 또는 [SQL Server Machine Learning 서버(독립 실행형)](../../machine-learning/install/sql-machine-learning-standalone-windows-install.md)용 R 패키지를 설치합니다. |  
+|SQL_SHARED_MR||[SQL Server 2016 R Server(독립 실행형)](../../machine-learning/install/sql-machine-learning-standalone-windows-install.md) 또는 [SQL Server Machine Learning 서버(독립 실행형)](../../machine-learning/install/sql-machine-learning-standalone-windows-install.md)용 R 패키지를 설치합니다. |  
 |Tools*||클라이언트 도구와 SQL Server 온라인 설명서 구성 요소를 설치합니다.|  
 ||BC|이전 버전과의 호환성 구성 요소를 설치합니다.|  
 ||Conn|연결 구성 요소를 설치합니다.|
@@ -870,9 +870,7 @@ setup.exe /q /ACTION=RemoveNode /INSTANCENAME="<Insert Instance Name>" [/INDICAT
 
 *SSMS([!INCLUDE[ssManStudioFull](../../includes/ssmanstudiofull-md.md)])은 이제 [!INCLUDE[ssCurrent](../../includes/sscurrent-md.md)] 설치 관리자와 별도인 독립 실행형 설치 관리자에 제공됩니다. 자세한 내용은 [SQL Server Management Studio 설치](../../ssms/download-sql-server-management-studio-ssms.md)를 참조하세요.
 
-**LocalDB는 [!INCLUDE[ssExpress](../../includes/ssexpress-md.md)]의 SKU를 설치할 때 옵션 항목입니다. 자세한 내용은 [SQL Server 2016 Express LocalDB](../configure-windows/sql-server-express-localdb.md)를 참조하세요. 
-  
-### <a name="feature-parameter-examples"></a>기능 매개 변수 예:  
+### <a name="feature-parameter-examples"></a>기능 매개 변수 예:
   
 |매개 변수 및 값|Description| 
 |---------------|-----------------|  
@@ -882,49 +880,51 @@ setup.exe /q /ACTION=RemoveNode /INSTANCENAME="<Insert Instance Name>" [/INDICAT
 |/FEATURES=BOL|도움말 내용을 보고 관리할 수 있도록 SQL Server 온라인 설명서 구성 요소를 설치합니다.|  
 |/FEATURES=SQLEngine,PolyBase|PolyBase 엔진을 설치합니다.|  
   
-##  <a name="role-parameters"></a><a name="RoleParameters"></a> 역할 매개 변수  
- 설치 역할 또는 /Role 매개 변수는 미리 구성된 기능 선택 항목을 설치하는 데 사용됩니다. SSAS 역할은 기존 SharePoint 팜이나 구성되지 않은 새 팜에 SSAS 인스턴스를 설치합니다. 각 시나리오를 지원하는 두 가지 설치 역할이 제공됩니다. 설치할 설치 역할은 한 번에 하나씩만 선택할 수 있습니다. 설치 역할을 선택하면 설치 프로그램에서 해당 역할에 속하는 기능 및 구성 요소를 설치합니다. 특정 역할에 지정된 기능과 구성 요소를 변경할 수는 없습니다. 기능 역할 매개 변수를 사용하는 방법에 대한 자세한 내용은 [명령 프롬프트에서 PowerPivot 설치](/analysis-services/instances/install-windows/install-analysis-services-in-power-pivot-mode)를 참조하세요. 
-  
- AllFeatures_WithDefaults 역할은 [!INCLUDE[ssExpress](../../includes/ssexpress-md.md)] 버전의 기본 동작으로, 사용자에게 표시되는 대화 상자 수를 줄입니다. [!INCLUDE[ssExpress](../../includes/ssexpress-md.md)]이외의 SQL Server 버전을 설치할 때는 이 역할을 명령줄에서 지정할 수 있습니다. 
-  
+##  <a name="role-parameters"></a><a name="RoleParameters"></a> 역할 매개 변수
+
+설치 역할 또는 /Role 매개 변수는 미리 구성된 기능 선택 항목을 설치하는 데 사용됩니다. SSAS 역할은 기존 SharePoint 팜이나 구성되지 않은 새 팜에 SSAS 인스턴스를 설치합니다. 각 시나리오를 지원하는 두 가지 설치 역할이 제공됩니다. 설치할 설치 역할은 한 번에 하나씩만 선택할 수 있습니다. 설치 역할을 선택하면 설치 프로그램에서 해당 역할에 속하는 기능 및 구성 요소를 설치합니다. 특정 역할에 지정된 기능과 구성 요소를 변경할 수는 없습니다. 기능 역할 매개 변수를 사용하는 방법에 대한 자세한 내용은 [명령 프롬프트에서 PowerPivot 설치](/analysis-services/instances/install-windows/install-analysis-services-in-power-pivot-mode)를 참조하세요.
+
+AllFeatures_WithDefaults 역할은 [!INCLUDE[ssExpress](../../includes/ssexpress-md.md)] 버전의 기본 동작으로, 사용자에게 표시되는 대화 상자 수를 줄입니다. [!INCLUDE[ssExpress](../../includes/ssexpress-md.md)]이외의 SQL Server 버전을 설치할 때는 이 역할을 명령줄에서 지정할 수 있습니다.
+
 |역할|Description|설치합니다...|  
 |----------|-----------------|---------------|  
 |SPI_AS_ExistingFarm|기존 [!INCLUDE[SPS2010](../../includes/sps2010-md.md)] 팜 또는 독립 실행형 서버에 명명된 [!INCLUDE[ssGemini](../../includes/ssgemini-md.md)] 인스턴스로 [!INCLUDE[ssASnoversion](../../includes/ssasnoversion-md.md)]를 설치합니다.|메모리 내 데이터 스토리지 및 처리를 위해 미리 구성된[!INCLUDE[ssASnoversion](../../includes/ssasnoversion-md.md)] 계산 엔진<br /><br /> [!INCLUDE[ssGemini](../../includes/ssgemini-md.md)] 솔루션 패키지<br /><br /> [!INCLUDE[ssGeminiClient](../../includes/ssgeminiclient-md.md)]용 설치 관리자 프로그램<br /><br /> SQL Server 온라인 설명서|  
 |SPI_AS_NewFarm|구성되지 않은 새 Office [!INCLUDE[SPS2010](../../includes/sps2010-md.md)] 팜 또는 독립 실행형 서버에 명명된 [!INCLUDE[ssGemini](../../includes/ssgemini-md.md)] 인스턴스로 [!INCLUDE[ssASnoversion](../../includes/ssasnoversion-md.md)] 및 [!INCLUDE[ssDE](../../includes/ssde-md.md)]를 설치합니다. SQL Server 설치 프로그램은 기능 역할 설치 중에 팜을 구성합니다.|메모리 내 데이터 스토리지 및 처리를 위해 미리 구성된[!INCLUDE[ssASnoversion](../../includes/ssasnoversion-md.md)] 계산 엔진<br /><br /> [!INCLUDE[ssGemini](../../includes/ssgemini-md.md)] 솔루션 패키지<br /><br /> SQL Server 온라인 설명서<br /><br /> [!INCLUDE[ssDE](../../includes/ssde-md.md)]<br /><br /> 구성 도구<br /><br /> [!INCLUDE[ssManStudioFull](../../includes/ssmanstudiofull-md.md)]|  
-|AllFeatures_WithDefaults|현재 버전에서 사용할 수 있는 모든 기능을 설치합니다.<br /><br /> 현재 사용자를 SQL Server **sysadmin** 고정 서버 역할에 추가합니다.<br /><br /> [!INCLUDE[firstref_longhorn](../../includes/firstref-longhorn-md.md)] 이상을 사용하고 운영 체제가 도메인 컨트롤러가 아닌 경우 [!INCLUDE[ssDE](../../includes/ssde-md.md)] 및 [!INCLUDE[ssRSnoversion](../../includes/ssrsnoversion-md.md)]는 기본적으로 NTAUTHORITY\NETWORK SERVICE 계정을 사용하고, [!INCLUDE[ssISnoversion](../../includes/ssisnoversion-md.md)]는 기본적으로 NTAUTHORITY\NETWORK SERVICE 계정을 사용합니다.<br /><br /> [!INCLUDE[ssExpress](../../includes/ssexpress-md.md)] 버전에서는 이러한 역할이 기본적으로 사용하도록 설정됩니다. 기타 모든 버전의 경우 이 역할은 사용하도록 설정되지 않지만 UI나 명령줄 매개 변수를 통해 지정할 수 있습니다.|[!INCLUDE[ssExpress](../../includes/ssexpress-md.md)] 버전의 경우에는 해당 버전에서 사용 가능한 기능만 설치하세요. 기타 버전의 경우에는 모든 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 기능을 설치하십시오.<br /><br /> **AllFeatures_WithDefaults** 매개 변수는 **AllFeatures_WithDefaults** 매개 변수 설정을 재정의하는 다른 매개 변수와 결합해 사용할 수 있습니다. 예를 들어 **AllFeatures_WithDefaults** 매개 변수와 **/Features=RS** 매개 변수를 함께 사용하면 모든 기능을 설치하는 명령이 무시되고 [!INCLUDE[ssRSnoversion](../../includes/ssrsnoversion-md.md)]만 설치되지만 [!INCLUDE[ssRSnoversion](../../includes/ssrsnoversion-md.md)]에 대해 기본 서비스 계정을 사용하는 **AllFeatures_WithDefaults** 매개 변수 설정은 그대로 적용됩니다.<br /><br /> **AllFeatures_WithDefaults** 매개 변수를 **/ADDCURRENTUSERASSQLADMIN=FALSE** 와 함께 사용하는 경우에는 프로비전 대화 상자에 현재 사용자가 자동으로 채워지지 않습니다. SQL Server 에이전트에 대한 서비스 계정과 암호를 지정하려면 **/AGTSVCACCOUNT** 및 **/AGTSVCPASSWORD** 를 추가하세요.|  
-  
-##  <a name="controlling-failover-behavior-using-the-failoverclusterrollownership-parameter"></a><a name="RollOwnership"></a> /FAILOVERCLUSTERROLLOWNERSHIP 매개 변수를 사용하여 장애 조치 동작 제어  
-[!INCLUDE[ssDEnoversion](../../includes/ssdenoversion-md.md)] 장애 조치(failover) 클러스터를 [!INCLUDE[ssCurrent](../../includes/sscurrent-md.md)]로 업그레이드하려면 패시브 노드부터 시작하여 한 번에 하나의 장애 조치(failover) 클러스터 노드에서 설치 프로그램을 실행해야 합니다. 설치 프로그램에서는 장애 조치(Failover) 클러스터 인스턴스의 총 노드 수 및 이미 업그레이드된 노드 수에 따라 업그레이드된 노드로 장애 조치(Failover)를 실행할 시기를 결정합니다. 절반 이상의 노드가 이미 업그레이드된 경우 기본적으로 설치 프로그램에서는 업그레이드된 노드로 장애 조치(Failover)를 실행합니다. 
- 
-업그레이드 프로세스를 진행하는 동안 클러스터 노드의 장애 조치(Failover) 동작을 제어하려면 명령 프롬프트에서 업그레이드 작업을 실행한 다음, 업그레이드 작업을 통해 노드가 오프라인으로 전환되기 전에 /FAILOVERCLUSTERROLLOWNERSHIP 매개 변수를 사용하여 장애 조치(Failover) 동작을 제어하십시오. 이 매개 변수의 사용 방법은 다음과 같습니다.  
-  
--   /FAILOVERCLUSTERROLLOWNERSHIP=0은 클러스터 소유권(그룹 이동)을 업그레이드된 노드에 넘겨 주지 않으며 업그레이드 종료 시 가능한 SQL Server 클러스터 소유자 목록에 이 노드를 추가하지 않습니다. 
-  
--   /FAILOVERCLUSTERROLLOWNERSHIP=1은 클러스터 소유권(그룹 이동)을 업그레이드된 노드에 넘겨 주며 업그레이드 종료 시 가능한 SQL Server 클러스터 소유자 목록에 이 노드를 추가합니다. 
-  
--   /FAILOVERCLUSTERROLLOWNERSHIP=2는 기본 설정입니다. 매개 변수가 지정되지 않은 경우 이 값이 사용됩니다. 이 설정은 SQL Server 설치 프로그램이 필요에 따라 클러스터 소유권(그룹 이동)을 관리함을 나타냅니다. 
-  
-##  <a name="instance-id-or-instanceid-configuration"></a><a name="InstanceID"></a> Instance ID 또는 InstanceID 구성  
- Instance ID 또는 /InstanceID 매개 변수는 인스턴스 구성 요소를 설치할 수 있는 위치와 인스턴스의 레지스트리 경로를 지정하는 데 사용됩니다. INSTANCEID의 값은 고유한 문자열이어야 합니다. 
-  
--   SQL 인스턴스 ID: `MSSQLxx.<INSTANCEID>`  
-  
--   AS 인스턴스 ID: `MSASxx.<INSTANCEID>`  
-  
--   RS 인스턴스 ID: `MSRSxx.<INSTANCEID>`  
-  
+|AllFeatures_WithDefaults|현재 버전에서 사용할 수 있는 모든 기능을 설치합니다.<br /><br /> 현재 사용자를 SQL Server **sysadmin** 고정 서버 역할에 추가합니다.<br /><br /> [!INCLUDE[firstref_longhorn](../../includes/firstref-longhorn-md.md)] 이상을 사용하고 운영 체제가 도메인 컨트롤러가 아닌 경우 [!INCLUDE[ssDE](../../includes/ssde-md.md)] 및 [!INCLUDE[ssRSnoversion](../../includes/ssrsnoversion-md.md)]는 기본적으로 NTAUTHORITY\NETWORK SERVICE 계정을 사용하고, [!INCLUDE[ssISnoversion](../../includes/ssisnoversion-md.md)]는 기본적으로 NTAUTHORITY\NETWORK SERVICE 계정을 사용합니다.<br /><br /> [!INCLUDE[ssExpress](../../includes/ssexpress-md.md)] 버전에서는 이러한 역할이 기본적으로 사용하도록 설정됩니다. 기타 모든 버전의 경우 이 역할은 사용하도록 설정되지 않지만 UI나 명령줄 매개 변수를 통해 지정할 수 있습니다.|[!INCLUDE[ssExpress](../../includes/ssexpress-md.md)] 버전의 경우에는 해당 버전에서 사용 가능한 기능만 설치하세요. 기타 버전의 경우에는 모든 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 기능을 설치하십시오.<br /><br /> **AllFeatures_WithDefaults** 매개 변수는 **AllFeatures_WithDefaults** 매개 변수 설정을 재정의하는 다른 매개 변수와 결합해 사용할 수 있습니다. 예를 들어 **AllFeatures_WithDefaults** 매개 변수와 **/Features=RS** 매개 변수를 함께 사용하면 모든 기능을 설치하는 명령이 무시되고 [!INCLUDE[ssRSnoversion](../../includes/ssrsnoversion-md.md)]만 설치되지만 [!INCLUDE[ssRSnoversion](../../includes/ssrsnoversion-md.md)]에 대해 기본 서비스 계정을 사용하는 **AllFeatures_WithDefaults** 매개 변수 설정은 그대로 적용됩니다.<br /><br /> **AllFeatures_WithDefaults** 매개 변수를 **/ADDCURRENTUSERASSQLADMIN=FALSE** 와 함께 사용하는 경우에는 프로비전 대화 상자에 현재 사용자가 자동으로 채워지지 않습니다. SQL Server 에이전트에 대한 서비스 계정과 암호를 지정하려면 **/AGTSVCACCOUNT** 및 **/AGTSVCPASSWORD** 를 추가하세요.|
+
+## <a name="controlling-failover-behavior-using-the-failoverclusterrollownership-parameter"></a><a name="RollOwnership"></a> /FAILOVERCLUSTERROLLOWNERSHIP 매개 변수를 사용하여 장애 조치 동작 제어  
+[!INCLUDE[ssDEnoversion](../../includes/ssdenoversion-md.md)] 장애 조치(failover) 클러스터를 [!INCLUDE[ssCurrent](../../includes/sscurrent-md.md)]로 업그레이드하려면 패시브 노드부터 시작하여 한 번에 하나의 장애 조치(failover) 클러스터 노드에서 설치 프로그램을 실행해야 합니다. 설치 프로그램에서는 장애 조치(Failover) 클러스터 인스턴스의 총 노드 수 및 이미 업그레이드된 노드 수에 따라 업그레이드된 노드로 장애 조치(Failover)를 실행할 시기를 결정합니다. 절반 이상의 노드가 이미 업그레이드된 경우 기본적으로 설치 프로그램에서는 업그레이드된 노드로 장애 조치(Failover)를 실행합니다.
+
+업그레이드 프로세스를 진행하는 동안 클러스터 노드의 장애 조치(Failover) 동작을 제어하려면 명령 프롬프트에서 업그레이드 작업을 실행한 다음, 업그레이드 작업을 통해 노드가 오프라인으로 전환되기 전에 /FAILOVERCLUSTERROLLOWNERSHIP 매개 변수를 사용하여 장애 조치(Failover) 동작을 제어하십시오. 이 매개 변수의 사용 방법은 다음과 같습니다.
+
+- /FAILOVERCLUSTERROLLOWNERSHIP=0은 클러스터 소유권(그룹 이동)을 업그레이드된 노드에 넘겨 주지 않으며 업그레이드 종료 시 가능한 SQL Server 클러스터 소유자 목록에 이 노드를 추가하지 않습니다. 
+
+- /FAILOVERCLUSTERROLLOWNERSHIP=1은 클러스터 소유권(그룹 이동)을 업그레이드된 노드에 넘겨 주며 업그레이드 종료 시 가능한 SQL Server 클러스터 소유자 목록에 이 노드를 추가합니다. 
+
+- /FAILOVERCLUSTERROLLOWNERSHIP=2는 기본 설정입니다. 매개 변수가 지정되지 않은 경우 이 값이 사용됩니다. 이 설정은 SQL Server 설치 프로그램이 필요에 따라 클러스터 소유권(그룹 이동)을 관리함을 나타냅니다. 
+
+##  <a name="instance-id-or-instanceid-configuration"></a><a name="InstanceID"></a> Instance ID 또는 InstanceID 구성
+
+Instance ID 또는 /InstanceID 매개 변수는 인스턴스 구성 요소를 설치할 수 있는 위치와 인스턴스의 레지스트리 경로를 지정하는 데 사용됩니다. INSTANCEID의 값은 고유한 문자열이어야 합니다. 
+
+- SQL 인스턴스 ID: `MSSQLxx.<INSTANCEID>`
+
+- AS 인스턴스 ID: `MSASxx.<INSTANCEID>`
+
+- RS 인스턴스 ID: `MSRSxx.<INSTANCEID>`
+
 인스턴스 인식형 구성 요소는 다음 위치에 설치됩니다.  
-  
-`%Program Files%\Microsoft SQL Server\<SQLInstanceID>`  
-  
-`%Program Files%\Microsoft SQL Server\<ASInstanceID>`  
-  
-`%Program Files%\Microsoft SQL Server\<RSInstanceID>`  
-  
+
+`%Program Files%\Microsoft SQL Server\<SQLInstanceID>`
+
+`%Program Files%\Microsoft SQL Server\<ASInstanceID>`
+
+`%Program Files%\Microsoft SQL Server\<RSInstanceID>`
+
 > [!NOTE]
 > INSTANCEID가 명령줄에 지정되지 않은 경우 기본적으로 설치 프로그램에서 \<INSTANCEID>를 \<INSTANCENAME>으로 대체합니다. 
-  
-## <a name="see-also"></a>참고 항목  
- [설치 마법사에서 SQL Server 2016 설치](../../database-engine/install-windows/install-sql-server-from-the-installation-wizard-setup.md)   
- [SQL Server 장애 조치(Failover) 클러스터 설치](../../sql-server/failover-clusters/install/sql-server-failover-cluster-installation.md)   
- [SQL Server 2016 비즈니스 인텔리전스 기능 설치](../../sql-server/install/install-sql-server-business-intelligence-features.md)     
+
+## <a name="see-also"></a>참고 항목
+- [설치 마법사에서 SQL Server 2016 설치](../../database-engine/install-windows/install-sql-server-from-the-installation-wizard-setup.md)
+- [SQL Server 장애 조치(Failover) 클러스터 설치](../../sql-server/failover-clusters/install/sql-server-failover-cluster-installation.md)
+- [SQL Server 2016 비즈니스 인텔리전스 기능 설치](../../sql-server/install/install-sql-server-business-intelligence-features.md)

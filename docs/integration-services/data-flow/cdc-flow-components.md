@@ -11,12 +11,12 @@ ms.topic: conceptual
 ms.assetid: 5ae69ddf-27c3-467c-9af1-c89ec383f661
 author: chugugrace
 ms.author: chugu
-ms.openlocfilehash: 0306e266f48259d0a7cc68a455116ec5a5ce847f
-ms.sourcegitcommit: cfa04a73b26312bf18d8f6296891679166e2754d
+ms.openlocfilehash: 19b4d69708405a3c70ffaacd0f9d81e995f4aba8
+ms.sourcegitcommit: 49ee3d388ddb52ed9cf78d42cff7797ad6d668f2
 ms.translationtype: HT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 10/19/2020
-ms.locfileid: "92196487"
+ms.lasthandoff: 11/09/2020
+ms.locfileid: "94384629"
 ---
 # <a name="cdc-flow-components"></a>CDC 흐름 구성 요소
 
@@ -31,11 +31,11 @@ ms.locfileid: "92196487"
   
  다음은 Attunity의 변경 데이터 캡처 구성 요소입니다.  
   
- **CDC 제어 흐름 구성 요소**:  
+ **CDC 제어 흐름 구성 요소** :  
   
  [CDC Control Task](../../integration-services/control-flow/cdc-control-task.md)  
   
- **CDC 데이터 흐름 구성 요소**:  
+ **CDC 데이터 흐름 구성 요소** :  
   
  [CDC 원본](../../integration-services/data-flow/cdc-source.md)  
   
@@ -44,7 +44,7 @@ ms.locfileid: "92196487"
 ## <a name="installation"></a>설치  
  이 섹션에서는 [!INCLUDE[ssISCurrent](../../includes/ssiscurrent-md.md)]용 CDC 구성 요소의 설치 절차에 대해 설명합니다.  
   
- SSIS용 CDC 구성 요소는 Microsoft SQL ServerÂ®용 MicrosoftÂ® Change Data Capture Designer and Service for Oracle by Attunity에 패키징됩니다. 이 다운로드는 SQL Server 기능 팩의 일부입니다. [SQL Server 2016 기능 팩 웹 페이지](https://go.microsoft.com/fwlink/?LinkId=746297)에서 기능 팩의 구성 요소를 다운로드합니다.  
+ SSIS용 CDC 구성 요소는 Microsoft SQL ServerÂ®용 MicrosoftÂ® Change Data Capture Designer and Service for Oracle by Attunity에 패키징됩니다. 이 다운로드는 SQL Server 기능 팩의 일부입니다. [SQL Server 2016 기능 팩 웹 페이지](https://www.microsoft.com/download/details.aspx?id=56833)에서 기능 팩의 구성 요소를 다운로드합니다.  
   
 ### <a name="version-support"></a>버전 지원
 
@@ -84,7 +84,7 @@ CDC 구성 요소를 설치한 후 SQL [!INCLUDE[ssBIDevStudio](../../includes/s
   
  ![Trickle Feed 처리 패키지 제어 흐름](../../integration-services/data-flow/media/tricklefeedprocessing.gif "Trickle Feed 처리 패키지 제어 흐름")  
   
- 이 [!INCLUDE[ssCurrent](../../includes/sscurrent-md.md)][!INCLUDE[ssISnoversion](../../includes/ssisnoversion-md.md)] 제어 흐름에는 CDC 제어 태스크 및 데이터 흐름 태스크라는 두 가지 태스크가 포함되어 있습니다. **CDC 처리 범위 가져오기** 라는 첫 번째 태스크는 **변경 내용 처리**라는 데이터 흐름 태스크에서 처리되는 변경 내용에 대한 LSN 범위를 설정합니다. 이 범위는 마지막 패키지 실행 중에 처리되고 영구 저장소에 저장된 작업에 따라 설정됩니다.  
+ 이 [!INCLUDE[ssCurrent](../../includes/sscurrent-md.md)][!INCLUDE[ssISnoversion](../../includes/ssisnoversion-md.md)] 제어 흐름에는 CDC 제어 태스크 및 데이터 흐름 태스크라는 두 가지 태스크가 포함되어 있습니다. **CDC 처리 범위 가져오기** 라는 첫 번째 태스크는 **변경 내용 처리** 라는 데이터 흐름 태스크에서 처리되는 변경 내용에 대한 LSN 범위를 설정합니다. 이 범위는 마지막 패키지 실행 중에 처리되고 영구 저장소에 저장된 작업에 따라 설정됩니다.  
   
  CDC 제어 태스크를 사용하는 방법은 [CDC Control Task](../../integration-services/control-flow/cdc-control-task.md) 및 [CDC Control Task Editor](../control-flow/cdc-control-task.md)를 참조하십시오.  
   
@@ -94,9 +94,9 @@ CDC 구성 요소를 설치한 후 SQL [!INCLUDE[ssBIDevStudio](../../includes/s
   
  이 그림에 표시된 단계는 다음과 같습니다.  
   
--   **테이블 X에 대한 변경 내용**은 부모 제어 흐름에서 결정된 CDC 처리 범위 내에 작성된 테이블 X에 대한 변경 내용을 읽는 CDC 원본입니다.  
+-   **테이블 X에 대한 변경 내용** 은 부모 제어 흐름에서 결정된 CDC 처리 범위 내에 작성된 테이블 X에 대한 변경 내용을 읽는 CDC 원본입니다.  
   
--   **CDC 분할자 X**는 변경 내용을 삽입, 삭제 및 업데이트로 분할하는 데 사용됩니다. 이 시나리오에서는 CDC 원본이 순 변경 내용을 생성하여 서로 다른 변경 유형이 병렬로 처리될 수 있도록 구성되어 있다고 가정합니다.  
+-   **CDC 분할자 X** 는 변경 내용을 삽입, 삭제 및 업데이트로 분할하는 데 사용됩니다. 이 시나리오에서는 CDC 원본이 순 변경 내용을 생성하여 서로 다른 변경 유형이 병렬로 처리될 수 있도록 구성되어 있다고 가정합니다.  
   
 -   그러면 특정 변경 내용이 다운스트림으로 추가로 처리됩니다. 이 그림에서는 변경 내용이 여러 ODBC 대상을 사용하여 테이블에 삽입되지만 실제 사례에서는 다르게 처리될 수 있습니다.  
   
@@ -181,7 +181,7 @@ CDC 구성 요소를 설치한 후 SQL [!INCLUDE[ssBIDevStudio](../../includes/s
 |2- ILEND(초기 로드 종료)|초기 로드 패키지가 성공적으로 종료되는 경우 존재하는 상태입니다. 이 상태는 CDC 제어 태스크에 대한 MarkInitialLoadEnd 작업 호출 이후에 발생합니다.<br /><br /> CDC 제어 태스크 작업에 대한 자세한 내용은 [CDC Control Task](../../integration-services/control-flow/cdc-control-task.md)를 참조하십시오.|  
 |3-ILUPDATE(초기 로드 업데이트)|초기 처리 범위를 처리 중인 동안 초기 로드 이후에 업데이트 패키지의 첫 번째 실행 후 존재하는 상태입니다. 이 상태는 CDC 제어 태스크에 대한 **GetProcessingRange** 작업 호출 이후에 발생합니다.<br /><br /> **_$reprocessing** 열을 사용하는 경우 이 상태는 패키지가 이미 대상에 있는 행을 다시 처리하고 있을 수 있음을 나타내는 1로 설정됩니다.<br /><br /> CDC 제어 태스크 작업에 대한 자세한 내용은 [CDC Control Task](../../integration-services/control-flow/cdc-control-task.md)를 참조하십시오.|  
 |4-TFEND(Trickle-Feed 업데이트 종료)|일반 CDC 실행에 대해 예상되는 상태입니다. 이 상태는 이전 실행이 성공적으로 완료되었으며 새 처리 범위를 사용한 새 실행을 시작할 수 있음을 나타냅니다.|  
-|5-TFSTART(Trickle-Feed 업데이트 시작)|이 상태는 CDC 제어 태스크에 대한 **GetProcessingRange** 작업 호출 이후에 업데이트 패키지의 후속 실행 시 존재하는 상태입니다.<br /><br /> 이 상태는 일반 CDC 실행이 시작되었지만 종료되지 않았거나 아직 확실하게 종료되지 않았음을 나타냅니다(**MarkProcessedRange**).<br /><br /> CDC 제어 태스크 작업에 대한 자세한 내용은 [CDC Control Task](../../integration-services/control-flow/cdc-control-task.md)를 참조하십시오.|  
+|5-TFSTART(Trickle-Feed 업데이트 시작)|이 상태는 CDC 제어 태스크에 대한 **GetProcessingRange** 작업 호출 이후에 업데이트 패키지의 후속 실행 시 존재하는 상태입니다.<br /><br /> 이 상태는 일반 CDC 실행이 시작되었지만 종료되지 않았거나 아직 확실하게 종료되지 않았음을 나타냅니다( **MarkProcessedRange** ).<br /><br /> CDC 제어 태스크 작업에 대한 자세한 내용은 [CDC Control Task](../../integration-services/control-flow/cdc-control-task.md)를 참조하십시오.|  
 |6-TFREDO(Trickle-Feed 업데이트 다시 처리)|이 상태는 TFSTART 실행 후 **GetProcessingRange** 에서 발생하는 상태입니다. 이 상태는 이전 실행이 성공적으로 완료되지 않았음을 나타냅니다.<br /><br /> __$reprocessing 열을 사용하는 경우 이 상태는 패키지가 이미 대상에 있는 행을 다시 처리하고 있을 수 있음을 나타내는 1로 설정됩니다.|  
 |7-오류|CDC 그룹이 ERROR 상태에 있습니다.|  
   

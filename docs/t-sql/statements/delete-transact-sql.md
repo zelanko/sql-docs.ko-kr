@@ -26,12 +26,12 @@ ms.assetid: ed6b2105-0f35-408f-ba51-e36ade7ad5b2
 author: markingmyname
 ms.author: maghan
 monikerRange: '>=aps-pdw-2016||=azuresqldb-current||=azure-sqldw-latest||>=sql-server-2016||=sqlallproducts-allversions||>=sql-server-linux-2017||=azuresqldb-mi-current'
-ms.openlocfilehash: 0de7a61b92599b82aabc0f0197c02098c7758384
-ms.sourcegitcommit: bd3a135f061e4a49183bbebc7add41ab11872bae
+ms.openlocfilehash: 7e074f54cb4d31616abced2e0b555c068728ec6c
+ms.sourcegitcommit: 49ee3d388ddb52ed9cf78d42cff7797ad6d668f2
 ms.translationtype: HT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 10/21/2020
-ms.locfileid: "92300515"
+ms.lasthandoff: 11/09/2020
+ms.locfileid: "94384825"
 ---
 # <a name="delete-transact-sql"></a>DELETE (Transact-SQL)
 
@@ -168,7 +168,7 @@ DELETE
   
  WHERE 절에 지정된 내용에 따라 두 가지 형식의 삭제 작업이 있습니다.  
   
--   검색 결과 삭제는 삭제할 행을 한정하는 검색 조건을 지정합니다. 예를 들어,WHERE *column_name* = *값* .  
+-   검색 결과 삭제는 삭제할 행을 한정하는 검색 조건을 지정합니다. 예를 들어,WHERE *column_name* = *값*.  
   
 -   위치 지정 삭제는 커서를 지정하는 CURRENT OF 절을 사용합니다. 이 경우 커서의 현재 위치에서 삭제 작업이 발생합니다. 이것은 WHERE *search_condition* 절을 사용하여 삭제될 행을 한정하는 검색 결과 DELETE 문보다 정확한 방법입니다. 검색 결과 DELETE 문은 검색 조건이 한 행을 고유하게 식별하지 못할 경우 여러 행을 삭제할 수 있습니다.  
   
@@ -406,7 +406,7 @@ GO
 DELETE FROM OPENDATASOURCE('SQLNCLI',  
     'Data Source= <server_name>; Integrated Security=SSPI')  
     .AdventureWorks2012.HumanResources.Department   
-WHERE DepartmentID = 17;'  
+WHERE DepartmentID = 17;
 ```  
   
 ###  <a name="capturing-the-results-of-the-delete-statement"></a><a name="CaptureResults"></a> DELETE 문의 결과 캡처  

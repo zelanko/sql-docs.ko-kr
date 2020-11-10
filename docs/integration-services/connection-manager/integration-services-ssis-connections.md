@@ -24,12 +24,12 @@ helpviewer_keywords:
 ms.assetid: 72f5afa3-d636-410b-9e81-2ffa27772a8c
 author: chugugrace
 ms.author: chugu
-ms.openlocfilehash: 3b101ac6ab904543ab3e5a558ce2d50030df5adf
-ms.sourcegitcommit: c7f40918dc3ecdb0ed2ef5c237a3996cb4cd268d
+ms.openlocfilehash: aac745594f2dcd23974cc91cb0f9c57ebff91f29
+ms.sourcegitcommit: 49ee3d388ddb52ed9cf78d42cff7797ad6d668f2
 ms.translationtype: HT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 10/05/2020
-ms.locfileid: "91720844"
+ms.lasthandoff: 11/09/2020
+ms.locfileid: "94384906"
 ---
 # <a name="integration-services-ssis-connections"></a>Integration Services(SSIS) 연결
 
@@ -74,7 +74,7 @@ ms.locfileid: "91720844"
 ### <a name="package-level-and-project-level-connection-managers"></a>패키지 수준 및 프로젝트 수준 연결 관리자
 패키지 수준 또는 프로젝트 수준에서 연결 관리자를 만들 수 있습니다. 프로젝트 수준에서 만든 연결 관리자는 프로젝트의 모든 패키지에 사용할 수 있습니다. 반면, 패키지 수준에서 만든 연결 관리자는 해당하는 특정 패키지에 사용할 수 있습니다.  
   
- 데이터 원본 대신 프로젝트 수준에서 만든 연결 관리자를 사용하여 원본에 대한 연결을 공유합니다. 프로젝트 수준에서 연결 관리자를 추가하려면 [!INCLUDE[ssISnoversion](../../includes/ssisnoversion-md.md)] 프로젝트에 프로젝트 배포 모델을 사용해야 합니다. 프로젝트가 이 모델을 사용하도록 구성된 경우 **연결 관리자** 폴더가 **솔루션 탐색기**에 표시되고 **데이터 원본** 폴더가 **솔루션 탐색기**에서 제거됩니다.  
+ 데이터 원본 대신 프로젝트 수준에서 만든 연결 관리자를 사용하여 원본에 대한 연결을 공유합니다. 프로젝트 수준에서 연결 관리자를 추가하려면 [!INCLUDE[ssISnoversion](../../includes/ssisnoversion-md.md)] 프로젝트에 프로젝트 배포 모델을 사용해야 합니다. 프로젝트가 이 모델을 사용하도록 구성된 경우 **연결 관리자** 폴더가 **솔루션 탐색기** 에 표시되고 **데이터 원본** 폴더가 **솔루션 탐색기** 에서 제거됩니다.  
   
 > [!NOTE]  
 >  패키지에 데이터 원본을 사용하려면 프로젝트를 패키지 배포 모델로 변환해야 합니다.  
@@ -115,7 +115,7 @@ ms.locfileid: "91720844"
 |Type|Description|항목|  
 |----------|-----------------|-----------|  
 |ORACLE|Oracle \<version info\> 서버에 연결합니다.|Oracle 연결 관리자는 [!INCLUDE[msCoName](../../includes/msconame-md.md)] Connector for Oracle by Attunity의 연결 관리자 구성 요소입니다. [!INCLUDE[msCoName](../../includes/msconame-md.md)] Connector for Oracle by Attunity에는 원본 및 대상도 포함되어 있습니다. 자세한 내용은 [Microsoft Connectors for Oracle by Attunity 및 Microsoft Connectors for Teradata by Attunity(Microsoft Connectors for Oracle and Teradata by Attunity)](https://www.microsoft.com/download/details.aspx?id=55179)다운로드 페이지를 참조하십시오.|  
-|SAPBI|SAP NetWeaver BI 버전 7 시스템에 연결합니다.|SAP BI 연결 관리자는 [!INCLUDE[msCoName](../../includes/msconame-md.md)] Connector for SAP BI의 연결 관리자 구성 요소입니다. [!INCLUDE[msCoName](../../includes/msconame-md.md)] Connector for SAP BI에는 원본 및 대상도 포함되어 있습니다. 자세한 내용은 [Microsoft SQL Server 2008 기능 팩](https://www.microsoft.com/download/details.aspx?id=30440)다운로드 페이지를 참조하십시오.|  
+|SAPBI|SAP NetWeaver BI 버전 7 시스템에 연결합니다.|SAP BI 연결 관리자는 [!INCLUDE[msCoName](../../includes/msconame-md.md)] Connector for SAP BI의 연결 관리자 구성 요소입니다. [!INCLUDE[msCoName](../../includes/msconame-md.md)] Connector for SAP BI에는 원본 및 대상도 포함되어 있습니다. 자세한 내용은 [Microsoft SQL Server 2008 기능 팩](https://www.microsoft.com/download/details.aspx?id=44277)다운로드 페이지를 참조하십시오.|  
 |TERADATA|Teradata \<version info\> 서버에 연결합니다.|Teradata 연결 관리자는 [!INCLUDE[msCoName](../../includes/msconame-md.md)] Connector for Teradata by Attunity의 연결 관리자 구성 요소입니다. [!INCLUDE[msCoName](../../includes/msconame-md.md)] Connector for Teradata by Attunity에는 원본 및 대상도 포함되어 있습니다. 자세한 내용은 [Microsoft Connectors for Oracle by Attunity 및 Microsoft Connectors for Teradata by Attunity(Microsoft Connectors for Oracle and Teradata by Attunity)](https://www.microsoft.com/download/details.aspx?id=55179)다운로드 페이지를 참조하십시오.|  
   
 ### <a name="custom-connection-managers"></a>사용자 지정 연결 관리자  
@@ -126,12 +126,12 @@ ms.locfileid: "91720844"
   
  새 연결 관리자를 만들 때 연결 관리자를 자동으로 만들고 구성하려면 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 가져오기 및 내보내기 마법사를 사용할 수 있습니다. 또한 마법사는 연결 관리자를 사용하는 원본과 대상을 만들고 구성할 수 있도록 도와줍니다. 자세한 내용은 [Create Packages in SQL Server Data Tools](../../integration-services/create-packages-in-sql-server-data-tools.md)을 참조하세요.  
   
- 수동으로 새 연결 관리자를 만들고 기존 패키지에 이 연결 관리자를 추가하려면 **디자이너의** 제어 흐름 **,** 데이터 흐름 **및**이벤트 처리기 **탭에 나타나는** 연결 관리자 [!INCLUDE[ssIS](../../includes/ssis-md.md)] 영역을 사용합니다. **연결 관리자** 영역에서 [!INCLUDE[ssIS](../../includes/ssis-md.md)] 디자이너가 제공하는 대화 상자를 사용하여 만들 연결 관리자 유형을 선택한 다음 해당 연결 관리자의 속성을 설정합니다. 자세한 내용은 이 항목의 뒷부분에 나오는 "연결 관리자 영역 사용" 섹션을 참조하십시오.  
+ 수동으로 새 연결 관리자를 만들고 기존 패키지에 이 연결 관리자를 추가하려면 **디자이너의** 제어 흐름 **,** 데이터 흐름 **및** 이벤트 처리기 **탭에 나타나는** 연결 관리자 [!INCLUDE[ssIS](../../includes/ssis-md.md)] 영역을 사용합니다. **연결 관리자** 영역에서 [!INCLUDE[ssIS](../../includes/ssis-md.md)] 디자이너가 제공하는 대화 상자를 사용하여 만들 연결 관리자 유형을 선택한 다음 해당 연결 관리자의 속성을 설정합니다. 자세한 내용은 이 항목의 뒷부분에 나오는 "연결 관리자 영역 사용" 섹션을 참조하십시오.  
   
  패키지에 연결 관리자를 추가한 다음에는 태스크, Foreach 루프 컨테이너, 원본, 변환 및 대상에서 연결 관리자를 사용할 수 있습니다. 자세한 내용은 [Integration Services 태스크](../../integration-services/control-flow/integration-services-tasks.md), [Foreach 루프 컨테이너](../../integration-services/control-flow/foreach-loop-container.md) 및 [데이터 흐름](../../integration-services/data-flow/data-flow.md)을 참조하세요.  
   
 ### <a name="using-the-connection-managers-area"></a>연결 관리자 영역 사용  
- **디자이너의**제어 흐름 **,** 데이터 흐름 **또는** 이벤트 처리기 [!INCLUDE[ssIS](../../includes/ssis-md.md)] 탭이 활성화된 상태에서 연결 관리자를 만들 수 있습니다.  
+ **디자이너의** 제어 흐름 **,** 데이터 흐름 **또는** 이벤트 처리기 [!INCLUDE[ssIS](../../includes/ssis-md.md)] 탭이 활성화된 상태에서 연결 관리자를 만들 수 있습니다.  
   
  다음 다이어그램은 **디자이너의** 제어 흐름 **탭에 표시된** 연결 관리자 [!INCLUDE[ssIS](../../includes/ssis-md.md)] 영역을 보여 줍니다.  
   
@@ -142,7 +142,7 @@ ms.locfileid: "91720844"
   
  런타임 시 올바른 버전이 사용되므로 디자인 타임에 32비트 버전의 공급자를 지정했어도 문제가 되지 않습니다. [!INCLUDE[ssBIDevStudioFull](../../includes/ssbidevstudiofull-md.md)]에서 패키지가 실행될 경우에도 64비트 버전의 공급자를 실행할 수 있습니다.  
   
-  두 버전의 공급자는 동일한 ID를 갖습니다. [!INCLUDE[ssISnoversion](../../includes/ssisnoversion-md.md)] 런타임에서 사용 가능한 64비트 버전의 공급자를 사용하도록 할지 여부를 지정하려면 [!INCLUDE[ssISnoversion](../../includes/ssisnoversion-md.md)] 프로젝트의 Run64BitRuntime 속성을 설정합니다. Run64BitRuntime 속성이 **true**로 설정되면 런타임에 64비트 공급자를 찾아 사용합니다. Run64BitRuntime 속성이 **false**로 설정되면 런타임에 32비트 공급자를 찾아 사용합니다. [!INCLUDE[ssISnoversion](../../includes/ssisnoversion-md.md)] 프로젝트에서 설정할 수 있는 속성에 대한 자세한 내용은 [SSIS(Integration Services) 및 Studio 환경](../integration-services-ssis-development-and-management-tools.md)을 참조하세요.   
+  두 버전의 공급자는 동일한 ID를 갖습니다. [!INCLUDE[ssISnoversion](../../includes/ssisnoversion-md.md)] 런타임에서 사용 가능한 64비트 버전의 공급자를 사용하도록 할지 여부를 지정하려면 [!INCLUDE[ssISnoversion](../../includes/ssisnoversion-md.md)] 프로젝트의 Run64BitRuntime 속성을 설정합니다. Run64BitRuntime 속성이 **true** 로 설정되면 런타임에 64비트 공급자를 찾아 사용합니다. Run64BitRuntime 속성이 **false** 로 설정되면 런타임에 32비트 공급자를 찾아 사용합니다. [!INCLUDE[ssISnoversion](../../includes/ssisnoversion-md.md)] 프로젝트에서 설정할 수 있는 속성에 대한 자세한 내용은 [SSIS(Integration Services) 및 Studio 환경](../integration-services-ssis-development-and-management-tools.md)을 참조하세요.   
 
 ## <a name="add-a-connection-manager"></a>연결 관리자 추가
 ###  <a name="add-a-connection-manager-when-you-create-a-package"></a><a name="wizard"></a> 패키지를 만들 때 연결 관리자 추가  
@@ -165,7 +165,7 @@ ms.locfileid: "91720844"
   
          또는  
   
-    -   추가할 유형이 목록에 없는 경우 **새 연결** 을 클릭하여 **SSIS 연결 관리자 추가** 대화 상자를 열고 연결 관리자 유형을 선택한 다음 **확인**을 클릭합니다.  
+    -   추가할 유형이 목록에 없는 경우 **새 연결** 을 클릭하여 **SSIS 연결 관리자 추가** 대화 상자를 열고 연결 관리자 유형을 선택한 다음 **확인** 을 클릭합니다.  
   
      선택한 연결 관리자 유형의 사용자 지정 대화 상자가 열립니다. 사용 가능한 옵션 및 연결 관리자 유형에 대한 자세한 내용은 다음 옵션 표를 참조하십시오.  
   
@@ -191,7 +191,7 @@ ms.locfileid: "91720844"
   
      **연결 관리자** 영역에 추가된 연결 관리자가 나열됩니다.  
   
-5.  필요에 따라 연결 관리자를 마우스 오른쪽 단추로 클릭하고 **이름 바꾸기**를 클릭하여 연결 관리자의 기본 이름을 수정합니다.  
+5.  필요에 따라 연결 관리자를 마우스 오른쪽 단추로 클릭하고 **이름 바꾸기** 를 클릭하여 연결 관리자의 기본 이름을 수정합니다.  
   
 6.  업데이트된 패키지를 저장하려면 **파일** 메뉴에서 **선택한 항목 저장** 을 클릭합니다.  
   
@@ -199,9 +199,9 @@ ms.locfileid: "91720844"
   
 1.  [!INCLUDE[ssBIDevStudioFull](../../includes/ssbidevstudiofull-md.md)]에서 [!INCLUDE[ssISnoversion](../../includes/ssisnoversion-md.md)] 프로젝트를 엽니다.  
   
-2.  **솔루션 탐색기**에서 **연결 관리자**를 마우스 오른쪽 단추로 클릭하고 **새 연결 관리자**를 클릭합니다.  
+2.  **솔루션 탐색기** 에서 **연결 관리자** 를 마우스 오른쪽 단추로 클릭하고 **새 연결 관리자** 를 클릭합니다.  
   
-3.  **SSIS 연결 관리자 추가** 대화 상자에서 연결 관리자 유형을 선택한 다음 **추가**를 클릭합니다.  
+3.  **SSIS 연결 관리자 추가** 대화 상자에서 연결 관리자 유형을 선택한 다음 **추가** 를 클릭합니다.  
   
      선택한 연결 관리자 유형의 사용자 지정 대화 상자가 열립니다. 사용 가능한 옵션 및 연결 관리자 유형에 대한 자세한 내용은 다음 옵션 표를 참조하십시오.  
   
@@ -225,9 +225,9 @@ ms.locfileid: "91720844"
     |[SQL Server Compact Edition 연결 관리자](../../integration-services/connection-manager/sql-server-compact-edition-connection-manager.md)|[SQL Server Compact Edition 연결 관리자 편집기&#40;연결 페이지&#41;](./sql-server-compact-edition-connection-manager.md)<br /><br /> [SQL Server Compact Edition 연결 관리자 편집기&#40;모든 페이지&#41;](./sql-server-compact-edition-connection-manager.md)|  
     |[WMI 연결 관리자](../../integration-services/connection-manager/wmi-connection-manager.md)|[WMI 연결 관리자 편집기](./wmi-connection-manager.md)|  
   
-     추가한 연결 관리자가 **솔루션 탐색기** 의 **연결 관리자**노드에 표시됩니다. 이 연결 관리자는 프로젝트의 모든 패키지에 대한 **SSIS 디자이너** 창의 **연결 관리자** 탭에도 나타납니다. 이 프로젝트 수준 연결 관리자를 패키지 수준 연결 관리자와 구별하기 위해 이 탭의 연결 관리자 이름에는 **(프로젝트)** 라는 접두사가 붙습니다.  
+     추가한 연결 관리자가 **솔루션 탐색기** 의 **연결 관리자** 노드에 표시됩니다. 이 연결 관리자는 프로젝트의 모든 패키지에 대한 **SSIS 디자이너** 창의 **연결 관리자** 탭에도 나타납니다. 이 프로젝트 수준 연결 관리자를 패키지 수준 연결 관리자와 구별하기 위해 이 탭의 연결 관리자 이름에는 **(프로젝트)** 라는 접두사가 붙습니다.  
   
-4.  선택적으로 **SSIS 디자이너** 창의 **연결 관리자** 탭 또는 **연결 관리자** 노드 아래에 있는 **솔루션 탐색기** 창에서 연결 관리자를 마우스 오른쪽 단추로 클릭하고 **이름 바꾸기**를 클릭한 다음 연결 관리자의 기본 이름을 수정합니다.  
+4.  선택적으로 **SSIS 디자이너** 창의 **연결 관리자** 탭 또는 **연결 관리자** 노드 아래에 있는 **솔루션 탐색기** 창에서 연결 관리자를 마우스 오른쪽 단추로 클릭하고 **이름 바꾸기** 를 클릭한 다음 연결 관리자의 기본 이름을 수정합니다.  
   
     > [!NOTE]  
     >  **SSIS 디자이너** 창의 **연결 관리자** 탭에서는 연결 관리자 이름의 **(프로젝트)** 접두사를 덮어쓸 수 없습니다. 이것은 의도적인 것입니다.  
@@ -239,14 +239,14 @@ ms.locfileid: "91720844"
   
 #### <a name="options"></a>옵션  
  **연결 관리자 유형**  
- 각 연결 형식에 대해 편집기를 사용하여 연결 속성을 지정하려면 연결 형식을 선택한 다음 **추가**를 클릭하거나 연결 형식을 두 번 클릭합니다.  
+ 각 연결 형식에 대해 편집기를 사용하여 연결 속성을 지정하려면 연결 형식을 선택한 다음 **추가** 를 클릭하거나 연결 형식을 두 번 클릭합니다.  
   
  **추가**  
  각 연결 형식에 대해 편집기를 사용하여 연결 속성을 지정합니다.  
    
 ##  <a name="create-a-parameter-for-a-connection-manager-property"></a><a name="parameter"></a> 연결 관리자 속성에 대한 매개 변수 만들기  
   
-1.  **연결 관리자** 영역에서 매개 변수를 만들려는 연결 관리자를 마우스 오른쪽 단추로 클릭한 후 **매개 변수화**를 클릭합니다.  
+1.  **연결 관리자** 영역에서 매개 변수를 만들려는 연결 관리자를 마우스 오른쪽 단추로 클릭한 후 **매개 변수화** 를 클릭합니다.  
   
 2.  **매개 변수화** 대화 상자에서 매개 변수 설정을 구성합니다. 자세한 내용은 [Parameterize Dialog Box](../integration-services-ssis-package-and-project-parameters.md)을 참조하세요.  
 
@@ -259,7 +259,7 @@ ms.locfileid: "91720844"
   
 3.  [!INCLUDE[ssIS](../../includes/ssis-md.md)] 디자이너에서 **제어 흐름** 탭, **데이터 흐름** 탭 또는 **이벤트 처리기** 탭을 클릭하여 **연결 관리자** 영역을 표시합니다.  
   
-4.  삭제할 연결 관리자를 마우스 오른쪽 단추로 클릭한 다음 **삭제**를 클릭합니다.  
+4.  삭제할 연결 관리자를 마우스 오른쪽 단추로 클릭한 다음 **삭제** 를 클릭합니다.  
   
      SQL 실행 태스크 또는 OLE DB 원본과 같은 패키지 요소가 사용하는 연결 관리자를 삭제하면 다음과 같은 결과가 나타납니다.  
   
@@ -273,7 +273,7 @@ ms.locfileid: "91720844"
   
 ###  <a name="delete-a-shared-connection-manager-project-level-connection-manager"></a><a name="DeleteProjectLevel"></a> 공유 연결 관리자(프로젝트 수준 연결 관리자) 삭제  
   
-1.  프로젝트 수준 연결 관리자를 삭제하려면 **솔루션 탐색기** 창의 **연결 관리자** 노드 아래에 있는 연결 관리자를 마우스 오른쪽 단추로 클릭한 다음 **삭제**를 클릭합니다. [!INCLUDE[ssBIDevStudio](../../includes/ssbidevstudio-md.md)]에 다음과 같은 경고 메시지가 표시됩니다.  
+1.  프로젝트 수준 연결 관리자를 삭제하려면 **솔루션 탐색기** 창의 **연결 관리자** 노드 아래에 있는 연결 관리자를 마우스 오른쪽 단추로 클릭한 다음 **삭제** 를 클릭합니다. [!INCLUDE[ssBIDevStudio](../../includes/ssbidevstudio-md.md)]에 다음과 같은 경고 메시지가 표시됩니다.  
   
     > [!WARNING]  
     >  프로젝트 연결 관리자를 삭제하면 연결 관리자를 사용하는 패키지가 실행되지 않을 수 있습니다. 이 동작은 실행 취소할 수 없습니다. 연결 관리자를 삭제하시겠습니까?  
@@ -281,7 +281,7 @@ ms.locfileid: "91720844"
 2.  확인을 클릭하여 연결 관리자를 삭제하거나 취소를 클릭하여 연결 관리자를 그대로 둡니다.  
   
     > [!NOTE]  
-    >  프로젝트의 특정 패키지에 대해 열려 있는 **SSIS 디자이너** 창의 **연결 관리자** 탭에서 프로젝트 수준 연결 관리자를 삭제할 수도 있습니다. 탭에서 연결 관리자를 마우스 오른쪽 단추로 클릭한 다음 **삭제**를 클릭하면 됩니다. 
+    >  프로젝트의 특정 패키지에 대해 열려 있는 **SSIS 디자이너** 창의 **연결 관리자** 탭에서 프로젝트 수준 연결 관리자를 삭제할 수도 있습니다. 탭에서 연결 관리자를 마우스 오른쪽 단추로 클릭한 다음 **삭제** 를 클릭하면 됩니다. 
     
 ## <a name="set-the-properties-of-a-connection-manager"></a>연결 관리자의 속성 설정
 **속성** 창을 사용하여 모든 연결 관리자를 구성할 수 있습니다.  
@@ -296,11 +296,11 @@ ms.locfileid: "91720844"
   
 3.  SSIS 디자이너에서 **제어 흐름** 탭, **데이터 흐름** 탭 또는 **이벤트 처리기** 탭을 클릭하여 **연결 관리자** 영역을 표시합니다.  
   
-4.  연결 관리자를 마우스 오른쪽 단추로 클릭한 다음 **속성**을 클릭합니다.  
+4.  연결 관리자를 마우스 오른쪽 단추로 클릭한 다음 **속성** 을 클릭합니다.  
   
 5.  **속성** 창에서 속성 값을 편집합니다. **속성** 창은 연결 관리자의 표준 편집기에서 구성할 수 없는 일부 속성에 대한 액세스를 제공합니다.  
   
-6.  **확인**을 클릭합니다.  
+6.  **확인** 을 클릭합니다.  
   
 7.  업데이트된 패키지를 저장하려면 **파일** 메뉴에서 **선택한 항목 저장** 을 클릭합니다.  
   

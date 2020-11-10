@@ -9,12 +9,12 @@ ms.technology: ''
 ms.topic: reference
 author: MashaMSFT
 ms.author: mathoma
-ms.openlocfilehash: 899a00273fbccb1e68e6690556e81bb3f0bde05c
-ms.sourcegitcommit: 67befbf7435f256e766bbce6c1de57799e1db9ad
+ms.openlocfilehash: ad867768d72d9e03b7d76761bd371dd369c7161b
+ms.sourcegitcommit: 49ee3d388ddb52ed9cf78d42cff7797ad6d668f2
 ms.translationtype: HT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 10/24/2020
-ms.locfileid: "92523908"
+ms.lasthandoff: 11/09/2020
+ms.locfileid: "94384734"
 ---
 # <a name="known-errors-and-resolutions-with-change-data-capture-for-oracle-by-attunity"></a>Attunity의 Oracle용 Change Data Capture의 알려진 오류 및 해결 방법
 [!INCLUDE[tsql-appliesto-ss2008-asdbmi-xxxx-xxx-md](../../includes/tsql-appliesto-ss2012-asdbmi-xxxx-xxx-md.md)]
@@ -74,9 +74,9 @@ ms.locfileid: "92523908"
 - Oracle 인스턴스용 CDC가 시작 시 중단되고 변경 내용을 캡처하지 않습니다. Oracle 서버 메모리는 메모리가 부족하거나 작동이 중단될 때까지 늘어날 수 있습니다.
 - [2672759](https://support.microsoft.com/kb/2672759): Attunity의 Oracle용 Microsoft Change Data Capture 사용 시 오류 메시지: "ORA-00600: 내부 오류 코드". SOURCE 수준 추적을 추가하고 동일한 ORA-00600 오류가 발생하는지 확인합니다. Oracle 패치 다운로드로 수정되었습니다.
 - 여러 파티션
-    - Oracle 테이블에서 10개 이상의 파티션을 사용할 경우 CDC 인스턴스가 테이블의 모든 변경 내용을 캡처할 수 없습니다. Oracle 테이블이 10개가 넘는 파티션을 사용하여 정의된 경우 변경 내용은 마지막 10개 파티션에서만 캡처됩니다. _SQL Server 2012용 Service Pack 1 릴리스_ 에서 수정되었습니다. [SP1 기능 팩 다운로드 페이지](https://www.microsoft.com/download/details.aspx?id=35580)를 참조하세요. 
+    - Oracle 테이블에서 10개 이상의 파티션을 사용할 경우 CDC 인스턴스가 테이블의 모든 변경 내용을 캡처할 수 없습니다. Oracle 테이블이 10개가 넘는 파티션을 사용하여 정의된 경우 변경 내용은 마지막 10개 파티션에서만 캡처됩니다. _SQL Server 2012용 Service Pack 1 릴리스_ 에서 수정되었습니다. [SP1 기능 팩 다운로드 페이지](https://www.microsoft.com/download/details.aspx?id=35575)를 참조하세요. 
 - 변경 내용이 손실됨
-    - 이벤트 캡처가 무한 루프로 이동하여 새 데이터 변경 캡처를 중지할 수 있습니다(Oracle 버그 5623813 관련). Oracle RAC 환경에서 CDC 인스턴스의 중지 또는 재개를 수행하는 경우 변경 내용이 건너 뛰어지거나 손실될 수 있습니다. 즉, SQL Server 변경 데이터 캡처에서 중요한 행을 누락하게 되고 그 결과 데이터 웨어하우스 또는 구독 시스템에서 데이터 손실이 발생합니다. _SQL Server 2012용 Service Pack 1 릴리스_ 에서 수정되었습니다. [SP1 기능 팩 다운로드 페이지](https://www.microsoft.com/download/details.aspx?id=35580)를 참조하세요.
+    - 이벤트 캡처가 무한 루프로 이동하여 새 데이터 변경 캡처를 중지할 수 있습니다(Oracle 버그 5623813 관련). Oracle RAC 환경에서 CDC 인스턴스의 중지 또는 재개를 수행하는 경우 변경 내용이 건너 뛰어지거나 손실될 수 있습니다. 즉, SQL Server 변경 데이터 캡처에서 중요한 행을 누락하게 되고 그 결과 데이터 웨어하우스 또는 구독 시스템에서 데이터 손실이 발생합니다. _SQL Server 2012용 Service Pack 1 릴리스_ 에서 수정되었습니다. [SP1 기능 팩 다운로드 페이지](https://www.microsoft.com/download/details.aspx?id=35575)를 참조하세요.
 - SQL 열의 두 배 너비
     - Oracle용 CDC 인스턴스를 만들 때 SQL Server에 대해 실행할 스크립트에서 가변 너비 데이터 형식 열의 길이가 스크립트에 생성된 SQL Server 테이블에서 두 배가 됩니다. 예를 들어 Oracle 테이블의 VARCHAR2(10) 열에 대한 변경 내용을 추적하려는 경우 배포 스크립트에서 SQL Server 테이블의 해당 열은 NVARCHAR(20)입니다. KB [2769673](https://support.microsoft.com/kb/2769673)에 설명된 대로 _SQL Server 2012 SP1용 누적 업데이트 2_ 또는 _SQL Server 2012용 누적 업데이트 5_ 중 하나에서 수정합니다. 
 - DDL 데이터가 잘림

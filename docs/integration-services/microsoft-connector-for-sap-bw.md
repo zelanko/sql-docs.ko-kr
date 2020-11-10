@@ -11,12 +11,12 @@ ms.topic: conceptual
 ms.assetid: 5281f080-53d5-4679-aa26-f4cd4ac7a2df
 author: chugugrace
 ms.author: chugu
-ms.openlocfilehash: 05fefa983f3b58f8ca8be95772d3fbc49f3e9afb
-ms.sourcegitcommit: cfa04a73b26312bf18d8f6296891679166e2754d
+ms.openlocfilehash: af1b8c775991581fadbb25bbf62049194cdc74be
+ms.sourcegitcommit: 49ee3d388ddb52ed9cf78d42cff7797ad6d668f2
 ms.translationtype: HT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 10/19/2020
-ms.locfileid: "92194075"
+ms.lasthandoff: 11/09/2020
+ms.locfileid: "94384892"
 ---
 # <a name="microsoft-connector-for-sap-bw"></a>Microsoft Connector for SAP BW
 
@@ -25,7 +25,7 @@ ms.locfileid: "92194075"
 
   [!INCLUDE[msCoName](../includes/msconame-md.md)] Connector for SAP BW는 SAP Netweaver BW 버전 7 시스템에서 데이터를 추출하거나 해당 시스템으로 데이터를 로드하는 데 사용할 수 있는 3가지 구성 요소 집합으로 구성됩니다.  
   
- SQL Server 2016용 [!INCLUDE[msCoName](../includes/msconame-md.md)] Connector for SAP BW는 SQL Server 2016 기능 팩의 구성 요소입니다. Connector for SAP BW 및 해당 설명서를 설치하려면 [SQL Server 2016 기능 팩 웹 페이지](https://go.microsoft.com/fwlink/?LinkId=746297)에서 설치 관리자를 다운로드하여 실행하세요.  
+ SQL Server 2016용 [!INCLUDE[msCoName](../includes/msconame-md.md)] Connector for SAP BW는 SQL Server 2016 기능 팩의 구성 요소입니다. Connector for SAP BW 및 해당 설명서를 설치하려면 [SQL Server 2016 기능 팩 웹 페이지](https://www.microsoft.com/download/details.aspx?id=56833)에서 설치 관리자를 다운로드하여 실행하세요.  
 
 > [!IMPORTANT]
 > Microsoft는 업데이트된 버전의 SAP BW용 커넥터를 제공하지 않습니다. Microsoft는 타사에서 개발된 SAP BW용 소스 코드 구성 요소를 소유하지 않으며 결과적으로 업데이트할 수 없습니다. [Theobald Software](https://theobald-software.com/en/xtract-is-productinfo.html) 등 Microsoft ISV 파트너로부터 최신 SAP 연결 구성 요소를 구매하는 것이 좋습니다. Microsoft의 ISV 파트너는 Azure에서 설치하기 위한 SSIS용 SAP 연결 구성 요소를 적용했습니다.
