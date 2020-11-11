@@ -15,12 +15,12 @@ ms.assetid: e06344a4-22a5-4c67-b6c6-a7060deb5de6
 author: julieMSFT
 ms.author: jrasnick
 monikerRange: =azuresqldb-current||>=sql-server-2016||=sqlallproducts-allversions||>=sql-server-linux-2017||=azuresqldb-mi-current||=azure-sqldw-latest
-ms.openlocfilehash: 5b3a9151d07599661445eb3dfa20c9ef432e0719
-ms.sourcegitcommit: 216f377451e53874718ae1645a2611cdb198808a
+ms.openlocfilehash: 4cccda1a792b8c006b758c3788d910e745e94989
+ms.sourcegitcommit: 863420525a1f5d5b56b311b84a6fb14e79404860
 ms.translationtype: HT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 07/28/2020
-ms.locfileid: "87243434"
+ms.lasthandoff: 11/10/2020
+ms.locfileid: "94418030"
 ---
 # <a name="monitoring-performance-by-using-the-query-store"></a>쿼리 저장소를 사용하여 성능 모니터링
 
@@ -39,14 +39,14 @@ Azure [!INCLUDE[ssSDS](../../includes/sssds-md.md)]의 쿼리 저장소 작업�
 
 ### <a name="use-the-query-store-page-in-ssmanstudiofull"></a>[!INCLUDE[ssManStudioFull](../../includes/ssmanstudiofull-md.md)]에서 쿼리 저장소 페이지를 사용합니다.
 
-1. 개체 탐색기에서 데이터베이스를 마우스 오른쪽 단추로 클릭한 다음 **속성**을 클릭합니다.
+1. 개체 탐색기에서 데이터베이스를 마우스 오른쪽 단추로 클릭한 다음 **속성** 을 클릭합니다.
 
    > [!NOTE]
    > 최소한 [!INCLUDE[ssManStudio](../../includes/ssmanstudio-md.md)]의 버전 16이 필요합니다.
 
 2. **데이터베이스 속성** 대화 상자에서 **쿼리 저장소** 페이지를 선택합니다.
 
-3. **작업 모드(요청)** 상자에서 **읽기/쓰기**를 선택합니다.
+3. **작업 모드(요청)** 상자에서 **읽기/쓰기** 를 선택합니다.
 
 ### <a name="use-transact-sql-statements"></a>Transact-SQL 문 사용
 
@@ -75,7 +75,7 @@ SET QUERY_STORE = ON (OPERATION_MODE = READ_WRITE);
 >
 > 쿼리 저장소는 기본적으로 고유하게 컴파일된 저장 프로시저에 대한 데이터를 수집하지 않습니다. [Sp_xtp_control_query_exec_stats](../../relational-databases/system-stored-procedures/sys-sp-xtp-control-query-exec-stats-transact-sql.md)를 사용하여 고유하게 컴파일된 저장 프로시저에 대한 데이터 수집을 사용하도록 설정합니다.
 
-**대기 통계**는 [!INCLUDE[ssde_md](../../includes/ssde_md.md)]의 성능 문제 해결에 도움이 되는 다른 정보 소스입니다. 오랫동안 인스턴스 수준에서만 대기 통계를 사용할 수 있었기 때문에 특정 쿼리로 역추적하기 어려웠습니다. [!INCLUDE[ssSQL17](../../includes/sssql17-md.md)] 및 [!INCLUDE[ssSDSfull](../../includes/sssdsfull-md.md)]부터 쿼리 저장소는 대기 통계를 추적하는 차원을 포함합니다. 다음 예에서는 쿼리 저장소가 대기 통계를 수집하도록 설정합니다.
+**대기 통계** 는 [!INCLUDE[ssde_md](../../includes/ssde_md.md)]의 성능 문제 해결에 도움이 되는 다른 정보 소스입니다. 오랫동안 인스턴스 수준에서만 대기 통계를 사용할 수 있었기 때문에 특정 쿼리로 역추적하기 어려웠습니다. [!INCLUDE[ssSQL17](../../includes/sssql17-md.md)] 및 [!INCLUDE[ssSDSfull](../../includes/sssdsfull-md.md)]부터 쿼리 저장소는 대기 통계를 추적하는 차원을 포함합니다. 다음 예에서는 쿼리 저장소가 대기 통계를 수집하도록 설정합니다.
 
 ```sql
 SET QUERY_STORE = ON ( WAIT_STATS_CAPTURE_MODE = ON );
@@ -122,15 +122,15 @@ INNER JOIN sys.query_store_query_text AS Txt
 
 ![SSMS 개체 탐색기의 SQL Server 2016 재발 쿼리](../../relational-databases/performance/media/objectexplorerregressedqueries.PNG "SSMS 개체 탐색기의 SQL Server 2016 재발 쿼리")
 
-계획을 강제 적용하려면 쿼리 및 계획을 선택한 다음 **계획 강제 적용**을 클릭합니다. 쿼리 계획 기능으로 저장하고 쿼리 계획 캐시에 아직 보존되어 있는 계획만 강제 적용할 수 있습니다.
+계획을 강제 적용하려면 쿼리 및 계획을 선택한 다음 **계획 강제 적용** 을 클릭합니다. 쿼리 계획 기능으로 저장하고 쿼리 계획 캐시에 아직 보존되어 있는 계획만 강제 적용할 수 있습니다.
 
 ## <a name="finding-waiting-queries"></a><a name="Waiting"></a> 대기 중인 쿼리 찾기
 
 [!INCLUDE[ssSQL17](../../includes/sssql17-md.md)] 및 [!INCLUDE[ssSDSfull](../../includes/sssdsfull-md.md)]부터 시간에 따라 쿼리당 대기 통계는 쿼리 저장소에서 제공됩니다.
 
-쿼리 저장소에서 대기 유형이 **대기 범주**에 결합됩니다. 대기 범주를 대기 형식에 매핑하는 작업은 [sys.query_store_wait_stats &#40;Transact-SQL&#41;](../../relational-databases/system-catalog-views/sys-query-store-wait-stats-transact-sql.md#wait-categories-mapping-table)에서 제공됩니다.
+쿼리 저장소에서 대기 유형이 **대기 범주** 에 결합됩니다. 대기 범주를 대기 형식에 매핑하는 작업은 [sys.query_store_wait_stats &#40;Transact-SQL&#41;](../../relational-databases/system-catalog-views/sys-query-store-wait-stats-transact-sql.md#wait-categories-mapping-table)에서 제공됩니다.
 
-**쿼리 대기 통계**를 선택하여 [!INCLUDE[ssManStudioFull](../../includes/ssmanstudiofull-md.md)] v18 이상에서 **쿼리 대기 통계** 창을 엽니다. 쿼리 대기 통계 창에는 쿼리 저장소의 상위 대기 범주가 포함된 가로 막대형 차트가 표시됩니다. 맨 위의 드롭다운 상자를 사용하여 대기 시간의 집계 기준을 평균, 최대, 최소, 표준 편차, **합계**(기본값) 중에서 선택합니다.
+**쿼리 대기 통계** 를 선택하여 [!INCLUDE[ssManStudioFull](../../includes/ssmanstudiofull-md.md)] v18 이상에서 **쿼리 대기 통계** 창을 엽니다. 쿼리 대기 통계 창에는 쿼리 저장소의 상위 대기 범주가 포함된 가로 막대형 차트가 표시됩니다. 맨 위의 드롭다운 상자를 사용하여 대기 시간의 집계 기준을 평균, 최대, 최소, 표준 편차, **합계** (기본값) 중에서 선택합니다.
 
 ![SSMS 개체 탐색기의 SQL Server 2017 쿼리 대기 통계](../../relational-databases/performance/media/query-store-waits.PNG "SSMS 개체 탐색기의 SQL Server 2017 쿼리 대기 통계")
 
@@ -138,9 +138,9 @@ INNER JOIN sys.query_store_query_text AS Txt
 
 ![SSMS 개체 탐색기의 SQL Server 2017 쿼리 대기 통계 세부 정보 보기](../../relational-databases/performance/media/query-store-waits-detail.PNG "SSMS 개체 탐색기의 SQL Server 2017 쿼리 대기 통계 세부 정보 보기")
 
-맨 위의 드롭다운 상자를 사용하여 평균, 최대, 최소, 표준 편차, **합계**(기본값)를 포함해서 선택한 대기 범주에 대한 다양한 대기 시간 기준으로 쿼리를 필터링합니다. 계획을 선택하면 그래픽 쿼리 계획이 표시됩니다. 단추를 사용하여 원본 쿼리를 보고, 쿼리 계획을 강제 적용 및 적용 취소하고 표시를 새로 고칠 수 있습니다.
+맨 위의 드롭다운 상자를 사용하여 평균, 최대, 최소, 표준 편차, **합계** (기본값)를 포함해서 선택한 대기 범주에 대한 다양한 대기 시간 기준으로 쿼리를 필터링합니다. 계획을 선택하면 그래픽 쿼리 계획이 표시됩니다. 단추를 사용하여 원본 쿼리를 보고, 쿼리 계획을 강제 적용 및 적용 취소하고 표시를 새로 고칠 수 있습니다.
 
-**대기 범주**는 다양한 대기 유형을 본질적으로 유사한 버킷으로 결합합니다. 대기 범주마다 문제 해결을 위해 다른 후속 분석이 필요하지만 동일한 범주의 대기 유형은 매우 유사한 문제 해결 경험을 생성하므로 대기를 기반으로 해서 영향을 받는 쿼리를 제공하면 대부분의 조사를 성공적으로 완료할 수 있습니다.
+**대기 범주** 는 다양한 대기 유형을 본질적으로 유사한 버킷으로 결합합니다. 대기 범주마다 문제 해결을 위해 다른 후속 분석이 필요하지만 동일한 범주의 대기 유형은 매우 유사한 문제 해결 경험을 생성하므로 대기를 기반으로 해서 영향을 받는 쿼리를 제공하면 대부분의 조사를 성공적으로 완료할 수 있습니다.
 
 쿼리 저장소에 대기 범주를 도입하기 전후에 워크로드에 추가 정보를 가져오는 방법의 몇 가지 예는 다음과 같습니다.
 
@@ -233,7 +233,7 @@ INNER JOIN sys.query_store_query_text AS Txt
 :::row-end:::
 :::row:::
     :::column:::
-        [sp_query_store_remove_plan&#40;Transct-SQL&#41;](../../relational-databases/system-stored-procedures/sp-query-store-remove-plan-transct-sql.md)
+        [sp_query_store_remove_plan &#40;Transact-SQL&#41;](../../relational-databases/system-stored-procedures/sp-query-store-remove-plan-transct-sql.md)
     :::column-end:::
     :::column:::
         [sp_query_store_remove_query&#40;Transact-SQL&#41;](../../relational-databases/system-stored-procedures/sp-query-store-remove-query-transact-sql.md)
@@ -241,11 +241,13 @@ INNER JOIN sys.query_store_query_text AS Txt
 :::row-end:::
 :::row:::
     :::column:::
-        sp_query_store_consistency_check &#40;Transct-SQL&#41;
+        sp_query_store_consistency_check &#40;Transact-SQL&#41;<sup>1</sup>
     :::column-end:::
     :::column:::
     :::column-end:::
 :::row-end:::
+
+<sup>1</sup> 극단적인 시나리오에서 쿼리 저장소는 내부 오류로 인해 ERROR 상태가 될 수 있습니다. SQL Server 2017(14.x)부터 이러한 상황이 발생할 경우 영향을 받는 데이터베이스에서 sp_query_store_consistency_check 저장 프로시저를 실행하여 쿼리 저장소를 복구할 수 있습니다. actual_state_desc 열 설명에 묘사된 자세한 내용은 [sys.database_query_store_options](../../relational-databases/system-catalog-views/sys-database-query-store-options-transact-sql.md)를 참조하세요.
 
 ## <a name="key-usage-scenarios"></a><a name="Scenarios"></a> 주요 사용 시나리오
 
@@ -383,14 +385,14 @@ EXEC sp_MSforeachdb @command
 
 위의 예제에서는 필요 없는 데이터를 제거하는 **sp_query_store_remove_query** 확장 저장 프로시저를 사용합니다. 다음을 사용할 수도 있습니다.
 
-- **sp_query_store_reset_exec_stats**는 지정된 계획에 대한 런타임 통계를 지웁니다.
-- **sp_query_store_remove_plan**은 단일 계획을 제거합니다.
+- **sp_query_store_reset_exec_stats** 는 지정된 계획에 대한 런타임 통계를 지웁니다.
+- **sp_query_store_remove_plan** 은 단일 계획을 제거합니다.
 
 ### <a name="performance-auditing-and-troubleshooting"></a><a name="Peformance"></a> 성능 감사 및 문제해결
 
 쿼리 저장소는 쿼리 실행 전반에서 컴파일 및 런타임 메트릭 기록을 유지하여 사용자가 작업에 대한 질문을 할 수 있습니다.
 
-**마지막 *n*개 쿼리가 데이터베이스에서 실행되었나요?**
+**마지막 *n* 개 쿼리가 데이터베이스에서 실행되었나요?**
 
 ```sql
 SELECT TOP 10 qt.query_sql_text, q.query_id,
