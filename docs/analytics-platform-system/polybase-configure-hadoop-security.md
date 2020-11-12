@@ -1,6 +1,6 @@
 ---
 title: PolyBase Hadoop 보안 구성
-description: 외부 Hadoop에 연결 하도록 병렬 데이터 웨어하우스에서 PolyBase를 구성 하는 방법을 설명 합니다.
+description: Hadoop에 대 한 AP PolyBase 연결에 영향을 주는 다양 한 구성 설정에 대 한 참조를 제공 합니다.
 author: mzaman1
 ms.prod: sql
 ms.technology: data-warehouse
@@ -9,12 +9,12 @@ ms.date: 10/26/2018
 ms.author: murshedz
 ms.reviewer: martinle
 ms.custom: seo-dt-2019
-ms.openlocfilehash: 4a1007529db6d861d3090fbbdcb6c85975fb882a
-ms.sourcegitcommit: 216f377451e53874718ae1645a2611cdb198808a
+ms.openlocfilehash: 3c0db3807b45d28f99ef1a3da571675bd6d8ac48
+ms.sourcegitcommit: 36fe62a3ccf34979bfde3e192cfa778505add465
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 07/28/2020
-ms.locfileid: "87243499"
+ms.lasthandoff: 11/11/2020
+ms.locfileid: "94520960"
 ---
 # <a name="configure-polybase-hadoop-security"></a>PolyBase Hadoop 보안 구성
 
@@ -42,7 +42,7 @@ Hadoop 클러스터에서 통신을 보호하는 일반적인 방법은 '개인 
    </property> 
 ```
 
-## <a name="kerberos-configuration"></a><a id="kerberossettings"></a>Kerberos 구성  
+## <a name="kerberos-configuration"></a><a id="kerberossettings"></a> Kerberos 구성  
 
 PolyBase가 Kerberos로 보호되는 클러스터에 인증하는 경우 기본적으로 hadoop.rpc.protection 설정이 인증이어야 합니다. 이렇게 하면 암호화되지 않은 Hadoop 노드 간의 데이터 통신이 유지됩니다. hadoop.rpc.protection에 대한 '개인 정보' 또는 '무결성' 설정을 사용하려면 PolyBase 서버에서 core-site.xml 파일을 업데이트합니다. 자세한 내용은 이전 섹션 [Hadoop.rpc.protection을 사용하여 Hadoop 클러스터에 연결](#rpcprotection)을 참조하세요.
 
@@ -114,7 +114,7 @@ MIT KDC를 사용 하 여 Kerberos 보안 Hadoop 클러스터에 연결 하려�
 
 4. 데이터베이스 범위 자격 증명 개체를 만들어 각 Hadoop 사용자에 대해 인증 정보를 지정합니다. [PolyBase T-SQL 개체](../relational-databases/polybase/polybase-t-sql-objects.md)를 참조하세요.
 
-## <a name="hadoop-encryption-zone-setup"></a><a id="encryptionzone"></a>Hadoop 암호화 영역 설정
+## <a name="hadoop-encryption-zone-setup"></a><a id="encryptionzone"></a> Hadoop 암호화 영역 설정
 Hadoop 암호화 영역을 사용 하는 경우 core-site.xml를 수정 하 고 다음과 같이 hdfs-site.xml 합니다. 해당 포트 번호를 사용 하 여 KMS 서비스를 실행 하는 ip 주소를 제공 합니다. CDH의 KMS에 대 한 기본 포트는 16000입니다.
 
 **core-site.xml**

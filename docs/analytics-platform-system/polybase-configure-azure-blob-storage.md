@@ -1,6 +1,6 @@
 ---
 title: PolyBase를 사용 하 여 Azure Blob storage에서 외부 데이터에 액세스
-description: 외부 Hadoop에 연결 하도록 병렬 데이터 웨어하우스에서 PolyBase를 구성 하는 방법을 설명 합니다.
+description: Azure Blob 저장소에서 외부 데이터를 쿼리 하기 위해 데이터 웨어하우스 (APS)에서 PolyBase를 사용 하는 방법을 설명 합니다.
 author: mzaman1
 ms.prod: sql
 ms.technology: data-warehouse
@@ -9,12 +9,12 @@ ms.date: 04/17/2018
 ms.author: murshedz
 ms.reviewer: martinle
 ms.custom: seo-dt-2019
-ms.openlocfilehash: 4ea61ea7e6983f9601783957eee6776f36eccfb4
-ms.sourcegitcommit: 33e774fbf48a432485c601541840905c21f613a0
+ms.openlocfilehash: 52ad8a4e8c335eea412264b69d87453a5ce84104
+ms.sourcegitcommit: 36fe62a3ccf34979bfde3e192cfa778505add465
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 08/25/2020
-ms.locfileid: "74400722"
+ms.lasthandoff: 11/11/2020
+ms.locfileid: "94520978"
 ---
 # <a name="configure-polybase-to-access-external-data-in-azure-blob-storage"></a>Azure Blob storage에서 외부 데이터에 액세스 하도록 PolyBase 구성
 
@@ -173,7 +173,7 @@ WHERE T2.YearMeasured = 2009 and T2.Speed > 40;
 
 ## <a name="view-polybase-objects-in-ssdt"></a>SSDT에서 PolyBase 개체 보기  
 
-SQL Server Data Tools에서 외부 테이블은 별도의 폴더 **외부 테이블**에 표시 됩니다. 외부 데이터 원본 및 외부 파일 형식은 **외부 리소스**의 하위 폴더에 있습니다.  
+SQL Server Data Tools에서 외부 테이블은 별도의 폴더 **외부 테이블** 에 표시 됩니다. 외부 데이터 원본 및 외부 파일 형식은 **외부 리소스** 의 하위 폴더에 있습니다.  
   
 ![SSDT의 PolyBase 개체](media/polybase/external-tables-datasource.png)  
 
