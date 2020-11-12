@@ -341,16 +341,10 @@
           href: ../machine-learning/security/create-a-login-for-sqlrusergroup.md
     - name: 성능
       items:
-        - name: R
+        - name: R 코드 성능
           items:
-            - name: R의 성능 조정 개요
-              href: ../machine-learning/r/sql-server-r-services-performance-tuning.md
-            - name: 성능 튜닝 서버 구성
-              href: ../machine-learning/r/sql-server-configuration-r-services.md
-            - name: R에서 성능 튜닝 - 데이터 최적화
+            - name: R에서 데이터 최적화
               href: ../machine-learning/r/r-and-data-optimization-r-services.md
-            - name: R에서 결과 성능 튜닝
-              href: ../machine-learning/r/performance-case-study-r-services.md
             - name: R 코드 프로파일링 함수 사용
               href: ../machine-learning/r/using-r-code-profiling-functions.md
 - name: 참조
