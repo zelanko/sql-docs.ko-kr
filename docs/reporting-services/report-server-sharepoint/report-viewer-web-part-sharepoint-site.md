@@ -8,16 +8,16 @@ ms.technology: report-server-sharepoint
 ms.topic: conceptual
 author: maggiesMSFT
 ms.author: maggies
-ms.openlocfilehash: 86e6b09b6bfefaff1d7e15205e4cc5897d3a6ad5
-ms.sourcegitcommit: 66a0672e47415dbd5cfd8d19075102c8c3973e70
+ms.openlocfilehash: 2eb1b02a7291d7d9eccd95a082fadb71f5e07010
+ms.sourcegitcommit: 4b7ecc080795c5f90322d60df5c0550884f48140
 ms.translationtype: HT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 05/21/2020
-ms.locfileid: "83765054"
+ms.lasthandoff: 11/06/2020
+ms.locfileid: "94334437"
 ---
 # <a name="report-viewer-web-part-on-a-sharepoint-site---reporting-services"></a>SharePoint 사이트의 보고서 뷰어 웹 파트 - Reporting Services
 
-[!INCLUDE[ssrs-appliesto](../../includes/ssrs-appliesto.md)] [!INCLUDE[ssrs-appliesto-2016-and-later](../../includes/ssrs-appliesto-2016-and-later.md)]  [!INCLUDE[ssrs-appliesto-pbirsi](../../includes/ssrs-appliesto-pbirs.md)] [!INCLUDE[ssrs-appliesto-sharepoint-2013-and-later](../../includes/ssrs-appliesto-sharepoint-2013-and-later.md)] [!INCLUDE[ssrs-appliesto-not-sharepoint-online](../../includes/ssrs-appliesto-not-sharepoint-online.md)]
+[!INCLUDE[ssrs-appliesto](../../includes/ssrs-appliesto.md)] [!INCLUDE[ssrs-appliesto-2016-and-later](../../includes/ssrs-appliesto-2016-and-later.md)]  [!INCLUDE[ssrs-appliesto-pbirsi](../../includes/ssrs-appliesto-pbirs.md)] [!INCLUDE[ssrs-appliesto-sharepoint-2016-and-later](../../includes/ssrs-appliesto-sharepoint-2016-and-later.md)] [!INCLUDE[ssrs-appliesto-not-sharepoint-online](../../includes/ssrs-appliesto-not-sharepoint-online.md)]
 
 보고서 뷰어 웹 파트는 사용자 지정 웹 파트입니다. 웹 파트를 사용하여 SharePoint 사이트 내의 보고서 서버에서 보고서를 보고 탐색하며 인쇄하고 내보낼 수 있습니다. 보고서 뷰어 웹 파트는 Microsoft SQL Server Reporting Services 보고서 서버에서 처리하는 보고서 정의 파일(.rdl)과 연결됩니다. 
 

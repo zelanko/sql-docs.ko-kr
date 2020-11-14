@@ -16,12 +16,12 @@ ms.assetid: d1f8f586-e5a3-4a71-9391-11198d42bfa3
 author: MashaMSFT
 ms.author: mathoma
 monikerRange: =azuresqldb-mi-current||>=sql-server-2016||=sqlallproducts-allversions
-ms.openlocfilehash: 1a119275f9508c69ab5c250e2a5a6e487d1b6502
-ms.sourcegitcommit: c8e1553ff3fdf295e8dc6ce30d1c454d6fde8088
+ms.openlocfilehash: 820837717d2651c1be08ae4be4c88cc8e2ac7c11
+ms.sourcegitcommit: b3a711a673baebb2ff10d7142b209982b46973ae
 ms.translationtype: HT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 07/22/2020
-ms.locfileid: "86920959"
+ms.lasthandoff: 11/05/2020
+ms.locfileid: "93364691"
 ---
 # <a name="replicate-data-in-encrypted-columns-sql-server-management-studio"></a>암호화된 열의 데이터 복제(SQL Server Management Studio)
 [!INCLUDE[sql-asdbmi](../../../includes/applies-to-version/sql-asdbmi.md)]
@@ -76,14 +76,16 @@ ms.locfileid: "86920959"
   
 11. [CLOSE SYMMETRIC KEY](../../../t-sql/statements/close-symmetric-key-transact-sql.md) 를 실행하여 키를 닫습니다.  
   
-## <a name="example"></a>예제  
+## <a name="examples"></a>예
+
+### <a name="a-create-keys-in-the-publication-database"></a>A. 게시 데이터베이스에 키 만들기
  이 예에서는 대칭 키, 대칭 키의 보안 설정에 사용되는 인증서 및 마스터 키를 만듭니다. 이러한 키는 게시 데이터베이스에서 생성됩니다. 그런 다음 `SalesOrderHeader` 테이블에서 암호화된 열(EncryptedCreditCardApprovalCode)을 만드는 데 사용됩니다. 이 열은 암호화되지 않은 CreditCardApprovalCode 열 대신 AdvWorksSalesOrdersMerge 게시에 게시됩니다. 가능한 경우 런타임 시 사용자에게 보안 자격 증명을 입력하라는 메시지가 표시됩니다. 자격 증명을 스크립트 파일에 저장해야 하는 경우에는 파일에 무단으로 액세스하지 못하도록 보안을 설정해야 합니다.  
   
  [!code-sql[HowTo#sp_PublishEncryptedColumn](../../../relational-databases/replication/codesnippet/tsql/replicate-data-in-encryp_1.sql)]  
   
  [!code-sql[HowTo#sp_AddMergeArticle](../../../relational-databases/replication/codesnippet/tsql/replicate-data-in-encryp_2.sql)]  
   
-## <a name="example"></a>예제  
+### <a name="b-create-keys-in-the-subscription-database"></a>B. 구독 데이터베이스에 키 만들기
  이 예에서는 첫 번째 예의 ALGORITHM, KEY_SOURCE 및 IDENTITY_VALUE에 동일한 값을 사용하여 구독 데이터베이스에서 같은 대칭 키를 다시 만듭니다. 암호화된 열을 복제하기 위해 AdvWorksSalesOrdersMerge 게시에 대한 구독을 이미 초기화했다고 가정합니다. 가능한 경우 런타임 시 사용자에게 보안 자격 증명을 입력하라는 메시지가 표시됩니다. 스크립트 파일에 자격 증명을 저장해야 하는 경우에는 스토리지 및 전송 중에 무단으로 액세스하지 못하도록 파일에 보안을 설정해야 합니다.  
   
  [!code-sql[HowTo#sp_SubscriberEncryptedColumn](../../../relational-databases/replication/codesnippet/tsql/replicate-data-in-encryp_3.sql)]  

@@ -1869,7 +1869,7 @@
           items:
             - name: 생성
               href: relational-databases/tables/create-edge-constraints.md
-            - name: DELETE
+            - name: 삭제
               href: relational-databases/tables/delete-edge-constraint.md
             - name: 수정
               href: relational-databases/tables/modify-edge-constraint.md
@@ -2731,10 +2731,10 @@
           items:
             - name: 언어 확장이란?
               href: language-extensions/language-extensions-overview.md
+            - name: Java 언어 확장이란?
+              href: language-extensions/java-overview.md
             - name: 새로운 기능
               href: language-extensions/language-extensions-whats-new.md
-            - name: Java 언어 확장 미리보기
-              href: language-extensions/java-overview.md
         - name: 설치
           items:
             - name: Windows에서 언어 확장 설치

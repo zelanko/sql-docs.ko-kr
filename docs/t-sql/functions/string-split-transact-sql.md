@@ -18,12 +18,12 @@ ms.assetid: 3273dbf3-0b4f-41e1-b97e-b4f67ad370b9
 author: julieMSFT
 ms.author: jrasnick
 monikerRange: = azuresqldb-current||=azure-sqldw-latest||>= sql-server-2016 || >= sql-server-linux-2017 || = sqlallproducts-allversions
-ms.openlocfilehash: a1251ed1fa5d3fc7a520259fdfc360ac5b5fb22c
-ms.sourcegitcommit: 197a6ffb643f93592edf9e90b04810a18be61133
+ms.openlocfilehash: a7c3220138c0f375b043f41044d5023fdb355ff5
+ms.sourcegitcommit: ef7539af262aad327270bb28752e420197e9e776
 ms.translationtype: HT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 09/26/2020
-ms.locfileid: "91379783"
+ms.lasthandoff: 11/05/2020
+ms.locfileid: "93405050"
 ---
 # <a name="string_split-transact-sql"></a>STRING_SPLIT(Transact-SQL)
 
@@ -36,6 +36,9 @@ ms.locfileid: "91379783"
 STRING_SPLIT에는 130 이상의 호환성 수준이 필요합니다. 130 미만 수준인 경우 SQL Server는 STRING_SPLIT 함수를 찾을 수 없습니다.
 
 데이터베이스의 호환성 수준을 변경하려면 [데이터베이스의 호환성 수준 보기 또는 변경](../../relational-databases/databases/view-or-change-the-compatibility-level-of-a-database.md)을 참조합니다.
+
+> [!NOTE]
+> Azure Synapse Analytics의 STRING_SPLIT에는 호환성 구성이 필요하지 않습니다.
 
 ![항목 링크 아이콘](../../database-engine/configure-windows/media/topic-link.gif "항목 링크 아이콘") [Transact-SQL 구문 표기 규칙](../../t-sql/language-elements/transact-sql-syntax-conventions-transact-sql.md)  
   
@@ -50,22 +53,22 @@ STRING_SPLIT ( string , separator )
 ## <a name="arguments"></a>인수
 
  *string*  
- 모든 문자 형식(예: **nvarchar**, **varchar**, **nchar** 또는 **char**)의 [식](../../t-sql/language-elements/expressions-transact-sql.md)입니다.  
+ 모든 문자 형식(예: **nvarchar** , **varchar** , **nchar** 또는 **char** )의 [식](../../t-sql/language-elements/expressions-transact-sql.md)입니다.  
   
  *separator*  
  연결된 부분 문자열의 구분 기호로 사용되는 모든 문자 형식(예: **nvarchar(1)** , **varchar(1)** , **nchar(1)** 또는 **char(1)** )의 단일 문자 [식](../../t-sql/language-elements/expressions-transact-sql.md)입니다.  
   
 ## <a name="return-types"></a>반환 형식  
 
-부분 문자열인 행의 단일 열 테이블을 반환합니다. 열의 이름은 **value**입니다. 입력 조각이 **nvarchar** 또는 **nchar**인 경우 **nvarchar**를 반환합니다. 그렇지 않으면 **varchar**를 반환합니다. 반환 형식의 길이는 문자열 인수의 길이와 동일합니다.  
+부분 문자열인 행의 단일 열 테이블을 반환합니다. 열의 이름은 **value** 입니다. 입력 조각이 **nvarchar** 또는 **nchar** 인 경우 **nvarchar** 를 반환합니다. 그렇지 않으면 **varchar** 를 반환합니다. 반환 형식의 길이는 문자열 인수의 길이와 동일합니다.  
   
 ## <a name="remarks"></a>설명  
 
-**STRING_SPLIT**는 부분 문자열을 구분 기호로 분리한 문자열을 입력하고 구분 기호로 사용될 문자 하나를 입력합니다. STRING_SPLIT는 부분 문자열이 포함된 행의 단일 열 테이블을 출력합니다. 출력 열의 이름은 **value**입니다.
+**STRING_SPLIT** 는 부분 문자열을 구분 기호로 분리한 문자열을 입력하고 구분 기호로 사용될 문자 하나를 입력합니다. STRING_SPLIT는 부분 문자열이 포함된 행의 단일 열 테이블을 출력합니다. 출력 열의 이름은 **value** 입니다.
 
 출력 행은 순서에 관계 없을 수 있습니다. 순서가 입력 문자열의 부분 문자열 순서와 일치하지 _않을 수_ 있습니다. SELECT 문(`ORDER BY value`)에서 ORDER BY 절을 사용하여 최종 정렬 순서를 재정의할 수 있습니다.
 
-0x0000(**char(0)** )은 Windows 데이터 정렬에서 정의되지 않은 문자이며 STRING_SPLIT에 포함할 수 없습니다.
+0x0000( **char(0)** )은 Windows 데이터 정렬에서 정의되지 않은 문자이며 STRING_SPLIT에 포함할 수 없습니다.
 
 0 길이의 빈 부분 문자열은 입력 문자열에서 구분 기호 문자 두 개 이상이 연속되는 경우 존재합니다. 빈 부분 문자열은 일반 부분 문자열과 동일한 방식으로 처리됩니다. WHERE 절(`WHERE value <> ''`)을 사용하여 빈 부분 문자열을 포함하는 모든 행을 필터링할 수 있습니다. 입력 문자열이 NULL인 경우 STRING_SPLIT 테이블 반환 함수는 빈 테이블을 반환합니다.  
 

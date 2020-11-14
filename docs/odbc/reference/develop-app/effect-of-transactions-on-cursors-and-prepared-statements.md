@@ -18,19 +18,19 @@ helpviewer_keywords:
 ms.assetid: 523e22a2-7b53-4c25-97c1-ef0284aec76e
 author: David-Engel
 ms.author: v-daenge
-ms.openlocfilehash: 248865b70115a64f73ce93dbd966dac94db61a0a
-ms.sourcegitcommit: e700497f962e4c2274df16d9e651059b42ff1a10
+ms.openlocfilehash: 495bb8455c3e13b88d2d3ae6b400c5c0f2167604
+ms.sourcegitcommit: 0f484f32709a414f05562bbaafeca9a9fc57c9ed
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 08/17/2020
-ms.locfileid: "88482976"
+ms.lasthandoff: 11/14/2020
+ms.locfileid: "94631679"
 ---
 # <a name="effect-of-transactions-on-cursors-and-prepared-statements"></a>커서 및 준비된 명령문에 트랜잭션이 미치는 영향
-트랜잭션을 커밋하거나 롤백하려면 커서 및 액세스 계획에 다음과 같은 영향을 미칠 것입니다.  
+트랜잭션을 커밋하거나 롤백하려면 커서 및 액세스 계획에 대 한 다음 영향 중 하나가 발생 합니다.  
   
--   모든 커서가 닫히고 해당 연결의 준비 된 문에 대 한 액세스 계획이 삭제 됩니다.  
+-   모든 커서가 닫히고 해당 연결의 준비 된 문에 대 한 액세스 계획이 삭제 됩니다. 또는  
   
--   모든 커서가 닫히고 해당 연결에 대 한 준비 된 문의 액세스 계획이 그대로 유지 됩니다.  
+-   모든 커서가 닫히고 해당 연결의 준비 된 문에 대 한 액세스 계획이 그대로 유지 됩니다. 또는 
   
 -   모든 커서는 열린 상태를 유지 하 고 해당 연결에 대 한 준비 된 문의 액세스 계획은 그대로 유지 됩니다.  
   

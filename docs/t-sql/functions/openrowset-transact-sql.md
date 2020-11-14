@@ -26,12 +26,12 @@ ms.assetid: f47eda43-33aa-454d-840a-bb15a031ca17
 author: julieMSFT
 ms.author: jrasnick
 monikerRange: =azuresqldb-mi-current||>=sql-server-2016||=sqlallproducts-allversions||>=sql-server-linux-2017
-ms.openlocfilehash: 895940f1a0f53c010e7088d02cf12cbfc0a0ff63
-ms.sourcegitcommit: 22dacedeb6e8721e7cdb6279a946d4002cfb5da3
+ms.openlocfilehash: 4019a1e661b14825532596091918f2f14eac1e92
+ms.sourcegitcommit: ef7539af262aad327270bb28752e420197e9e776
 ms.translationtype: HT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 10/14/2020
-ms.locfileid: "92037736"
+ms.lasthandoff: 11/05/2020
+ms.locfileid: "93405070"
 ---
 # <a name="openrowset-transact-sql"></a>OPENROWSET(Transact-SQL)
 
@@ -82,18 +82,18 @@ OPENROWSET
 
 ## <a name="arguments"></a>인수
 
-### <a name="provider_name"></a>'*provider_name*'
-레지스트리에 지정된 OLE DB 공급자의 이름(또는 PROGID)을 나타내는 문자열입니다. *provider_name*에는 기본값이 없습니다. 공급자 이름의 예는 `Microsoft.Jet.OLEDB.4.0`, `SQLNCLI`, `MSDASQL`입니다.
+### <a name="provider_name"></a>' *provider_name* '
+레지스트리에 지정된 OLE DB 공급자의 이름(또는 PROGID)을 나타내는 문자열입니다. *provider_name* 에는 기본값이 없습니다. 공급자 이름의 예는 `Microsoft.Jet.OLEDB.4.0`, `SQLNCLI`, `MSDASQL`입니다.
 
-### <a name="datasource"></a>'*datasource*'
-특정 OLE DB 데이터 원본에 해당되는 문자열 상수입니다. *datasource*는 공급자의 IDBProperties 인터페이스에 전달되어 공급자를 초기화하는 DBPROP_INIT_DATASOURCE 속성입니다. 일반적으로 이 문자열에는 데이터베이스 파일의 이름, 데이터베이스 서버의 이름 또는 공급자가 데이터베이스의 위치를 알 수 있는 이름이 포함됩니다.
+### <a name="datasource"></a>' *datasource* '
+특정 OLE DB 데이터 원본에 해당되는 문자열 상수입니다. *datasource* 는 공급자의 IDBProperties 인터페이스에 전달되어 공급자를 초기화하는 DBPROP_INIT_DATASOURCE 속성입니다. 일반적으로 이 문자열에는 데이터베이스 파일의 이름, 데이터베이스 서버의 이름 또는 공급자가 데이터베이스의 위치를 알 수 있는 이름이 포함됩니다.
 데이터 원본은 `Microsoft.Jet.OLEDB.4.0` 공급자의 경우 파일 경로 `C:\SAMPLES\Northwind.mdb'`이거나 `SQLNCLI` 공급자의 경우 연결 문자열 `Server=Seattle1;Trusted_Connection=yes;`일 수 있습니다.
 
-### <a name="user_id"></a>'*user_id*'
-지정한 OLE DB 공급자에게 전달되는 사용자 이름을 나타내는 문자열 상수입니다. *user_id*는 연결의 보안 컨텍스트를 지정하고 DBPROP_AUTH_USERID 속성으로 전달되어 공급자를 초기화합니다. *user_id*는 Microsoft Windows 로그인 이름일 수 없습니다.
+### <a name="user_id"></a>' *user_id* '
+지정한 OLE DB 공급자에게 전달되는 사용자 이름을 나타내는 문자열 상수입니다. *user_id* 는 연결의 보안 컨텍스트를 지정하고 DBPROP_AUTH_USERID 속성으로 전달되어 공급자를 초기화합니다. *user_id* 는 Microsoft Windows 로그인 이름일 수 없습니다.
 
-### <a name="password"></a>'*password*'
-OLE DB 공급자에게 전달되는 사용자 암호를 나타내는 문자열 상수입니다. *password*는 공급자를 초기화할 때 DBPROP_AUTH_PASSWORD 속성으로 전달됩니다. *password*는 Microsoft Windows 암호일 수 없습니다.
+### <a name="password"></a>' *password* '
+OLE DB 공급자에게 전달되는 사용자 암호를 나타내는 문자열 상수입니다. *password* 는 공급자를 초기화할 때 DBPROP_AUTH_PASSWORD 속성으로 전달됩니다. *password* 는 Microsoft Windows 암호일 수 없습니다.
 
 ```sql
 SELECT a.*
@@ -104,8 +104,8 @@ SELECT a.*
                    Customers) AS a;
 ```
 
-### <a name="provider_string"></a>'*provider_string*'
-DBPROP_INIT_PROVIDERSTRING 속성으로 전달되어 OLE DB 공급자를 초기화하는 공급자별 연결 문자열입니다. *provider_string*은 일반적으로 공급자를 초기화하는 데 필요한 모든 연결 정보를 캡슐화합니다. [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] Native Client OLE DB 공급자가 인식하는 키워드 목록은 [초기화 및 권한 부여 속성](../../relational-databases/native-client-ole-db-data-source-objects/initialization-and-authorization-properties.md)을 참조하세요.
+### <a name="provider_string"></a>' *provider_string* '
+DBPROP_INIT_PROVIDERSTRING 속성으로 전달되어 OLE DB 공급자를 초기화하는 공급자별 연결 문자열입니다. *provider_string* 은 일반적으로 공급자를 초기화하는 데 필요한 모든 연결 정보를 캡슐화합니다. [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] Native Client OLE DB 공급자가 인식하는 키워드 목록은 [초기화 및 권한 부여 속성](../../relational-databases/native-client-ole-db-data-source-objects/initialization-and-authorization-properties.md)을 참조하세요.
 
 ```sql
 SELECT d.*
@@ -115,8 +115,8 @@ FROM OPENROWSET('SQLNCLI', 'Server=Seattle1;Trusted_Connection=yes;',
 
 ### <a name="table_or_view"></a><table_or_view>
 `OPENROWSET`이 읽어야 하는 데이터를 포함하는 원격 테이블 또는 뷰입니다. 이름이 다음과 같은 3개의 구성 요소로 이루어진 개체일 수 있습니다.
-- *catalog*(선택 사항) - 지정한 개체가 있는 카탈로그 또는 데이터베이스의 이름입니다.
-- *schema*(선택 사항) - 지정한 개체에 대한 스키마 또는 개체 소유자의 이름입니다.
+- *catalog* (선택 사항) - 지정한 개체가 있는 카탈로그 또는 데이터베이스의 이름입니다.
+- *schema* (선택 사항) - 지정한 개체에 대한 스키마 또는 개체 소유자의 이름입니다.
 - *object* - 작업할 개체를 고유하게 식별하는 개체 이름입니다.
 
 ```sql
@@ -125,7 +125,7 @@ FROM OPENROWSET('SQLNCLI', 'Server=Seattle1;Trusted_Connection=yes;',
                  AdventureWorks2012.HumanResources.Department) AS d;
 ```
 
-### <a name="query"></a>'*query*'
+### <a name="query"></a>' *query* '
 공급자에게 전달되어 공급자에 의해 실행되는 문자열 상수입니다. [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]의 로컬 인스턴스는 이 쿼리를 처리하지 않지만 공급자에 의해 반환되는 쿼리 결과(통과 쿼리)는 처리합니다. 통과 쿼리는 테이블 형식의 데이터를 테이블 이름을 통해서는 사용할 수 없고 명령 언어를 통해서만 사용할 수 있는 공급자에 대해 사용할 경우 유용합니다. 쿼리 공급자가 OLE DB 명령 개체와 해당 필수 인터페이스를 지원하는 경우에는 원격 서버에서 통과 쿼리를 사용할 수 있습니다. 자세한 내용은 [SQL Server Native Client&#40;OLE DB&#41; 참조](../../relational-databases/native-client-ole-db-interfaces/sql-server-native-client-ole-db-interfaces.md)를 참조하세요.
 
 ```sql
@@ -141,7 +141,7 @@ OPENROWSET의 BULK 행 집합 공급자를 사용하여 파일에서 데이터�
 > [!IMPORTANT]
 > Azure SQL Database는 Azure Blob Storage에서 읽기만 지원합니다.
 
-BULK 옵션의 인수를 사용하면 데이터 읽기의 시작 및 끝 위치, 오류 처리 방법 및 데이터 해석 방법을 효과적으로 제어할 수 있습니다. 예를 들어 **varbinary**, **varchar** 또는 **nvarchar** 형식의 단일 행 및 단일 열로 된 행 집합으로 데이터 파일을 읽도록 지정할 수 있습니다. 기본 동작에 대한 설명은 그 다음에 나오는 인수 설명을 따릅니다.
+BULK 옵션의 인수를 사용하면 데이터 읽기의 시작 및 끝 위치, 오류 처리 방법 및 데이터 해석 방법을 효과적으로 제어할 수 있습니다. 예를 들어 **varbinary** , **varchar** 또는 **nvarchar** 형식의 단일 행 및 단일 열로 된 행 집합으로 데이터 파일을 읽도록 지정할 수 있습니다. 기본 동작에 대한 설명은 그 다음에 나오는 인수 설명을 따릅니다.
 
  BULK 옵션 사용법은 이 항목의 뒷부분에 나오는 "주의"를 참조하십시오. BULK 옵션에 필요한 사용 권한에 대한 자세한 내용은 이 항목의 뒷부분에 나오는 "사용 권한"을 참조하십시오.
 
@@ -150,7 +150,7 @@ BULK 옵션의 인수를 사용하면 데이터 읽기의 시작 및 끝 위치,
 
 대량 가져오기를 위한 데이터 준비 방법은 [대량 내보내기 또는 가져오기를 위한 데이터 준비&#40;SQL Server&#41;](../../relational-databases/import-export/prepare-data-for-bulk-export-or-import-sql-server.md)를 참조하세요.
 
-#### <a name="bulk-data_file"></a>BULK ‘*data_file*’
+#### <a name="bulk-data_file"></a>BULK ‘ *data_file* ’
 대상 테이블에 복사할 데이터가 있는 데이터 파일의 전체 경로입니다.
 
 ```sql
@@ -168,7 +168,7 @@ SELECT * FROM OPENROWSET(
 #### <a name="bulk-error-handling-options"></a>BULK 오류 처리 옵션
 
 ##### <a name="errorfile"></a>ERRORFILE
-`ERRORFILE` =‘*file_name*’은 서식 오류가 있어 OLE DB 행 집합으로 변환할 수 없는 행을 수집하는 데 사용되는 파일을 지정합니다. 이러한 행은 데이터 파일에서 "있는 그대로" 이 오류 파일에 복사됩니다.
+`ERRORFILE` =‘ *file_name* ’은 서식 오류가 있어 OLE DB 행 집합으로 변환할 수 없는 행을 수집하는 데 사용되는 파일을 지정합니다. 이러한 행은 데이터 파일에서 "있는 그대로" 이 오류 파일에 복사됩니다.
 
 오류 파일은 명령이 실행될 때 생성됩니다. 파일이 이미 있으면 오류가 발생합니다. 또한 확장명이 .ERROR.txt인 제어 파일이 생성됩니다. 이 파일은 오류 파일의 각 행을 참조하여 오류를 진단합니다. 오류를 해결한 후에는 데이터를 로드할 수 있습니다.
 **적용 대상:** [!INCLUDE[ssSQLv14_md](../../includes/sssqlv14-md.md)] CTP 1.1.
@@ -179,9 +179,9 @@ SELECT * FROM OPENROWSET(
 가져오는 동안 발견된 오류를 포함할 오류 파일의 Azure Blob 스토리지 위치를 가리키는 명명된 외부 데이터 원본입니다. 외부 데이터 원본은 [!INCLUDE[ssSQLv14_md](../../includes/sssqlv14-md.md)] CTP 1.1에서 추가된 `TYPE = BLOB_STORAGE` 옵션을 사용하여 만들어야 합니다. 자세한 내용은 [CREATE EXTERNAL DATA SOURCE](../../t-sql/statements/create-external-data-source-transact-sql.md)를 참조하세요.
 
 ##### <a name="maxerrors"></a>MAXERRORS
-`MAXERRORS` =*maximum_errors*는 OPENROWSET에서 예외가 발생하기 전에 나타날 수 있는 구문 오류 또는 서식 파일의 정의와 일치하지 않는 행의 최대 수를 지정합니다. MAXERRORS에 도달할 때까지 OPENROWSET은 각각의 잘못된 행을 로드하지 않고 무시하며 잘못된 행을 오류로 간주하여 계산합니다.
+`MAXERRORS` =*maximum_errors* 는 OPENROWSET에서 예외가 발생하기 전에 나타날 수 있는 구문 오류 또는 서식 파일의 정의와 일치하지 않는 행의 최대 수를 지정합니다. MAXERRORS에 도달할 때까지 OPENROWSET은 각각의 잘못된 행을 로드하지 않고 무시하며 잘못된 행을 오류로 간주하여 계산합니다.
 
-*maximum_errors*의 기본값은 10입니다.
+*maximum_errors* 의 기본값은 10입니다.
 
 > [!NOTE]
 > `MAX_ERRORS`는 CHECK 제약 조건이나 **money** 및 **bigint** 데이터 형식 변환에 적용되지 않습니다.
@@ -197,7 +197,7 @@ SELECT * FROM OPENROWSET(
 ##### <a name="rows_per_batch"></a>ROWS_PER_BATCH
 `ROWS_PER_BATCH` =*rows_per_batch* 데이터 파일에 있는 대략적인 데이터 행 수를 지정합니다. 이 값은 실제 행 수와 순서가 같아야 합니다.
 
-`OPENROWSET`은 데이터 파일을 항상 단일 일괄 처리로 가져옵니다. 그러나 0보다 큰 값으로 *rows_per_batch*를 지정하면 쿼리 프로세서가 *rows_per_batch*의 값을 힌트로 사용하여 리소스를 쿼리 계획에 할당합니다.
+`OPENROWSET`은 데이터 파일을 항상 단일 일괄 처리로 가져옵니다. 그러나 0보다 큰 값으로 *rows_per_batch* 를 지정하면 쿼리 프로세서가 *rows_per_batch* 의 값을 힌트로 사용하여 리소스를 쿼리 계획에 할당합니다.
 
 기본적으로 ROWS_PER_BATCH는 알 수 없습니다. ROWS_PER_BATCH = 0을 지정하는 것은 ROWS_PER_BATCH를 생략하는 것과 같습니다.
 
@@ -214,19 +214,19 @@ SELECT * FROM OPENROWSET(
 
 데이터 파일의 실제 행이 지정된 순서에 따라 정렬되지 않거나 UNIQUE 힌트를 지정했는데 중복된 키가 있는 경우 오류가 반환됩니다.
 
-ORDER를 사용하는 경우 열 별칭이 필요합니다. 열 별칭 목록은 BULK 절에서 액세스되는 파생 테이블을 참조해야 합니다. ORDER 절에 지정된 열 이름은 이 열 별칭 목록을 참조합니다. 큰 값 유형(**varchar(max)** , **nvarchar(max)** , **varbinary(max)** 및 **xml**) 및 LOB(Large Object) 형식(**text**, **ntext** 및 **image**) 열은 지정할 수 없습니다.
+ORDER를 사용하는 경우 열 별칭이 필요합니다. 열 별칭 목록은 BULK 절에서 액세스되는 파생 테이블을 참조해야 합니다. ORDER 절에 지정된 열 이름은 이 열 별칭 목록을 참조합니다. 큰 값 유형( **varchar(max)** , **nvarchar(max)** , **varbinary(max)** 및 **xml** ) 및 LOB(Large Object) 형식( **text** , **ntext** 및 **image** ) 열은 지정할 수 없습니다.
 
 ##### <a name="single_blob"></a>SINGLE_BLOB
-*data_file*의 내용을 **varbinary(max)** 형식의 단일 행 및 단일 열로 된 행 집합으로 반환합니다.
+*data_file* 의 내용을 **varbinary(max)** 형식의 단일 행 및 단일 열로 된 행 집합으로 반환합니다.
 
 > [!IMPORTANT]
 > SINGLE_BLOB만 모든 Windows 인코딩 변환을 지원하므로 SINGLE_CLOB 및 SINGLE_NCLOB가 아닌 SINGLE_BLOB 옵션만 사용하여 XML 데이터를 가져오는 것이 좋습니다.
 
 ##### <a name="single_clob"></a>SINGLE_CLOB
-*data_file*을 ASCII로 읽은 후 현재 데이터베이스의 데이터 정렬을 사용하여 내용을 **varchar(max)** 형식의 단일 행 및 단일 열로 된 행 집합으로 반환합니다.
+*data_file* 을 ASCII로 읽은 후 현재 데이터베이스의 데이터 정렬을 사용하여 내용을 **varchar(max)** 형식의 단일 행 및 단일 열로 된 행 집합으로 반환합니다.
 
 ##### <a name="single_nclob"></a>SINGLE_NCLOB
-*data_file*을 UNICODE로 읽은 후 현재 데이터베이스의 데이터 정렬을 사용하여 내용을 **nvarchar(max)** 형식의 단일 행 및 단일 열로 된 행 집합으로 반환합니다.
+*data_file* 을 UNICODE로 읽은 후 현재 데이터베이스의 데이터 정렬을 사용하여 내용을 **nvarchar(max)** 형식의 단일 행 및 단일 열로 된 행 집합으로 반환합니다.
 
 ```sql
 SELECT *
@@ -236,7 +236,7 @@ SELECT *
 #### <a name="bulk-input-file-format-options"></a>BULK 입력 파일 형식 옵션
 
 ##### <a name="codepage"></a>CODEPAGE
-`CODEPAGE` = { 'ACP' \| 'OEM' \| 'RAW' \| '*code_page*' } 데이터 파일에 있는 데이터의 코드 페이지를 지정합니다. CODEPAGE는 문자 값이 127보다 크거나 32보다 작은 **char**, **varchar** 또는 **text** 열이 데이터에 포함된 경우에만 적합합니다.
+`CODEPAGE` = { 'ACP' \| 'OEM' \| 'RAW' \| ' *code_page* ' } 데이터 파일에 있는 데이터의 코드 페이지를 지정합니다. CODEPAGE는 문자 값이 127보다 크거나 32보다 작은 **char** , **varchar** 또는 **text** 열이 데이터에 포함된 경우에만 적합합니다.
 
 > [!IMPORTANT]
 > `CODEPAGE`는 Linux에서 지원되는 옵션이 아닙니다.
@@ -246,8 +246,8 @@ SELECT *
 
 |CODEPAGE 값|Description|
 |--------------------|-----------------|
-|ACP|**char**, **varchar** 또는 **text** 데이터 형식의 열을 ANSI/[!INCLUDE[msCoName](../../includes/msconame-md.md)] Windows 코드 페이지(ISO 1252)에서 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 코드 페이지로 변환합니다.|
-|OEM(기본값)|**char**, **varchar** 또는 **text** 데이터 형식의 열을 시스템 OEM 코드 페이지에서 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 코드 페이지로 변환합니다.|
+|ACP|**char** , **varchar** 또는 **text** 데이터 형식의 열을 ANSI/[!INCLUDE[msCoName](../../includes/msconame-md.md)] Windows 코드 페이지(ISO 1252)에서 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 코드 페이지로 변환합니다.|
+|OEM(기본값)|**char** , **varchar** 또는 **text** 데이터 형식의 열을 시스템 OEM 코드 페이지에서 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 코드 페이지로 변환합니다.|
 |RAW|코드 페이지 간 변환이 일어나지 않습니다. 가장 빠른 옵션입니다.|
 |*code_page*|데이터 파일의 문자 데이터가 인코딩된 원본 코드 페이지(예: 850)를 나타냅니다.<br /><br /> **중요**[!INCLUDE[ssSQL15](../../includes/sssql15-md.md)] 이전 버전은 코드 페이지 65001(UTF-8 인코딩)을 지원하지 않습니다.|
 
@@ -264,7 +264,7 @@ FROM OPENROWSET(BULK N'D:\XChange\test-csv.csv',
 ```
 
 ##### <a name="formatfile"></a>FORMATFILE
-`FORMATFILE` =‘*format_file_path*’ 서식 파일의 전체 경로를 지정합니다. [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]에서는 다음과 같은 두 가지 유형의 형식 파일을 지원합니다. XML 및 비 XML.
+`FORMATFILE` =‘ *format_file_path* ’ 서식 파일의 전체 경로를 지정합니다. [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]에서는 다음과 같은 두 가지 유형의 형식 파일을 지원합니다. XML 및 비 XML.
 
 서식 파일은 결과 집합에서 열 유형을 정의하는 데 필요합니다. 단, SINGLE_CLOB, SINGLE_BLOB 또는 SINGLE_NCLOB를 지정한 경우에는 서식 파일이 필요하지 않습니다.
 
@@ -283,7 +283,7 @@ CSV 파일에 따옴표 문자로 사용될 문자를 지정합니다. 지정하
 
 원격 OLE DB 데이터 원본에 액세스할 때 트러스트된 연결의 로그인 ID는 클라이언트가 쿼리 중인 서버에 연결되어 있는 서버에서 자동으로 위임되지 않습니다. 이 경우 인증 위임을 구성해야 합니다.
 
-OLE DB 공급자가 지정된 데이터 원본에서 여러 카탈로그와 스키마를 지원하는 경우에는 카탈로그 이름과 스키마 이름이 필요합니다. OLE DB 공급자가 카탈로그와 스키마를 지원하지 않는 경우에는 _catalog_ 및 _schema_에 대한 값을 생략할 수 있습니다. 공급자가 스키마 이름만 지원하는 경우에는 _schema_ **.** _object_형식의 두 부분으로 된 이름을 반드시 지정해야 합니다. 공급자가 카탈로그 이름만 지원하는 경우에는_catalog_ **.** _schema_ **.** _object_ 형식의 세 부분으로 된 이름을 반드시 지정해야 합니다. [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] Native Client OLE DB 공급자를 사용하는 통과 쿼리의 경우 세 부분으로 된 이름을 반드시 지정해야 합니다. 자세한 내용은 [Transact-SQL 구문 표기 규칙&#40;Transact-SQL&#41;](../../t-sql/language-elements/transact-sql-syntax-conventions-transact-sql.md)을 참조하세요.
+OLE DB 공급자가 지정된 데이터 원본에서 여러 카탈로그와 스키마를 지원하는 경우에는 카탈로그 이름과 스키마 이름이 필요합니다. OLE DB 공급자가 카탈로그와 스키마를 지원하지 않는 경우에는 _catalog_ 및 _schema_ 에 대한 값을 생략할 수 있습니다. 공급자가 스키마 이름만 지원하는 경우에는 _schema_ **.** _object_ 형식의 두 부분으로 된 이름을 반드시 지정해야 합니다. 공급자가 카탈로그 이름만 지원하는 경우에는 _catalog_ **.** _schema_ **.** _object_ 형식의 세 부분으로 된 이름을 반드시 지정해야 합니다. [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] Native Client OLE DB 공급자를 사용하는 통과 쿼리의 경우 세 부분으로 된 이름을 반드시 지정해야 합니다. 자세한 내용은 [Transact-SQL 구문 표기 규칙&#40;Transact-SQL&#41;](../../t-sql/language-elements/transact-sql-syntax-conventions-transact-sql.md)을 참조하세요.
 
 `OPENROWSET`는 변수를 인수로 받아들이지 않습니다.
 
@@ -520,43 +520,18 @@ WITH ( TYPE = BLOB_STORAGE,
 );
 
 INSERT INTO achievements with (TABLOCK) (id, description)
-SELECT * FROM OPENROWSET(
-   BULK  'csv/achievements.csv',
-   DATA_SOURCE = 'MyAzureBlobStorage',
-   FORMAT ='CSV',
-   FORMATFILE='csv/achievements-c.xml',
-   FORMATFILE_DATA_SOURCE = 'MyAzureBlobStorage'
-    ) AS DataFile;
+SELECT * FROM OPENROWSET(
+   BULK  'csv/achievements.csv',
+   DATA_SOURCE = 'MyAzureBlobStorage',
+   FORMAT ='CSV',
+   FORMATFILE='csv/achievements-c.xml',
+   FORMATFILE_DATA_SOURCE = 'MyAzureBlobStorage'
+    ) AS DataFile;
 ```
 
 > [!IMPORTANT]
-> Azure SQL Database는 Azure Blob Storage에서 읽기만 지원합니다.
+> Azure SQL Database는 Azure Blob Storage에서 SAS 토큰을 사용한 읽기만 지원합니다.
 
-스토리지 계정에 액세스하는 또 다른 방법은 [관리 ID](/azure/active-directory/managed-identities-azure-resources/overview)를 사용하는 것입니다. [1~3단계](/azure/sql-database/sql-database-vnet-service-endpoint-rule-overview?bc=%252fazure%252fsql-data-warehouse%252fbreadcrumb%252ftoc.json&toc=%252fazure%252fsql-data-warehouse%252ftoc.json#steps)를 수행하여 관리 ID를 통해 스토리지에 액세스하도록 SQL Database를 구성하면 됩니다. 그런 다음, 코드 샘플을 아래와 같이 구현할 수 있습니다.
-```sql
---> Optional - a MASTER KEY is not required if a DATABASE SCOPED CREDENTIAL is not required because the blob is configured for public (anonymous) access!
-CREATE MASTER KEY ENCRYPTION BY PASSWORD = 'YourStrongPassword1';
-GO
-
---> Change to using Managed Identity instead of SAS key 
-CREATE DATABASE SCOPED CREDENTIAL msi_cred WITH IDENTITY = 'Managed Identity';
-GO
-
-CREATE EXTERNAL DATA SOURCE MyAzureBlobStorage
-WITH ( TYPE = BLOB_STORAGE,
-          LOCATION = 'https://****************.blob.core.windows.net/curriculum'
-          , CREDENTIAL= msi_cred --> CREDENTIAL is not required if a blob is configured for public (anonymous) access!
-);
-
-INSERT INTO achievements with (TABLOCK) (id, description)
-SELECT * FROM OPENROWSET(
-   BULK  'csv/achievements.csv',
-   DATA_SOURCE = 'MyAzureBlobStorage',
-   FORMAT ='CSV',
-   FORMATFILE='csv/achievements-c.xml',
-   FORMATFILE_DATA_SOURCE = 'MyAzureBlobStorage'
-    ) AS DataFile;
-```
 ### <a name="additional-examples"></a>추가 예
 
 `INSERT...SELECT * FROM OPENROWSET(BULK...)` 사용에 대한 추가 예는 다음 항목을 참조하세요.

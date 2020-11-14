@@ -11,12 +11,12 @@ ms.assetid: 67cb8b3e-3d82-47f4-840d-0f12a3bff565
 author: rothja
 ms.author: jroth
 monikerRange: = sql-server-2016 || = sqlallproducts-allversions
-ms.openlocfilehash: bdfedbb3a60a27ec53744b2b4a6919a5be9510fd
-ms.sourcegitcommit: a41e1f4199785a2b8019a419a1f3dcdc15571044
+ms.openlocfilehash: 0879c9399a21300fdbbfd735685d8a049a52b14f
+ms.sourcegitcommit: 49ee3d388ddb52ed9cf78d42cff7797ad6d668f2
 ms.translationtype: HT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 10/13/2020
-ms.locfileid: "91986173"
+ms.lasthandoff: 11/09/2020
+ms.locfileid: "94384692"
 ---
 # <a name="sql-server-2012-service-pack-release-notes"></a>SQL Server 2012 서비스 팩 릴리스 정보
 [!INCLUDE [SQL Server Azure SQL Database ](../includes/applies-to-version/sqlserver.md)]
@@ -69,7 +69,7 @@ ms.locfileid: "91986173"
 ## <a name="service-pack-2-release-notes"></a>서비스 팩 2 릴리스 정보
   
 ### <a name="download-pages"></a>다운로드 페이지 
-- [SQL Server 2012 SP2 기능 팩](https://go.microsoft.com/fwlink/?LinkID=401008)
+- [SQL Server 2012 SP2 기능 팩](https://www.microsoft.com/download/details.aspx?id=43340)
 - [SQL Server 2012 SP2 Express](https://go.microsoft.com/fwlink/?LinkID=401007)
 
 아래 표에서 현재 설치된 버전에 따라 다운로드할 파일의 위치와 이름을 확인하세요. 다운로드 페이지에 시스템 요구 사항 및 기본 설치 지침이 나와 있습니다.  
@@ -82,13 +82,13 @@ ms.locfileid: "91986173"
 |32비트 버전의 SQL  Server  2012  클라이언트 및 관리 도구(SQL  Server  2012  Management  Studio  포함)|32비트 버전의 SQL Server 2012 SP2로 클라이언트 및 관리 도구 업그레이드|**SQL Server 2012 SP2 Express 다운로드 페이지**<arch>**에 있는**<lang>**SQLEXPRWT_** _ [.msi](https://go.microsoft.com/fwlink/?LinkID=401007)|  
 |32비트 버전의 SQL  Server  2012  Management  Studio  Express|32비트 버전의 SQL Server 2012 SP2 Management Studio Express로 업그레이드|**SQL Server 2012 SP2 Express 다운로드 페이지**<arch>**에 있는**<lang>**SQLManagementStudio_** _ [.msi](https://go.microsoft.com/fwlink/?LinkID=401007)|  
 |32비트 버전의 SQL Server 2012 및 32비트 버전의 클라이언트 및 관리 도구(SQL Server 2012 RTM Management Studio 포함)|32비트 버전의 SQL Server 2012 SP2로 모든 제품 업그레이드|**SQL Server 2012 SP2 Express 다운로드 페이지**<arch>**에 있는**<lang>**SQLEXPRADV_** _ [.msi](https://go.microsoft.com/fwlink/?LinkID=401007)|  
-|[Microsoft SQL Server 2012 RTM 기능 팩](https://www.microsoft.com/download/details.aspx?id=29065) 또는 [Microsoft SQL Server 2012 SP1 기능 팩](https://go.microsoft.com/fwlink/p/?LinkID=268266)에 있는 32비트 버전 도구 하나 이상|32비트 버전의 Microsoft SQL Server 2012 SP2 Feature Pack으로 도구 업그레이드|Microsoft [SQL Server 2012 SP2 기능 팩 다운로드 페이지](https://go.microsoft.com/fwlink/?LinkID=401008)에 있는 도구 하나 이상|  
+|[Microsoft SQL Server 2012 RTM 기능 팩](https://www.microsoft.com/download/details.aspx?id=56041) 또는 [Microsoft SQL Server 2012 SP1 기능 팩](https://www.microsoft.com/download/details.aspx?id=35575)에 있는 32비트 버전 도구 하나 이상|32비트 버전의 Microsoft SQL Server 2012 SP2 Feature Pack으로 도구 업그레이드|Microsoft [SQL Server 2012 SP2 기능 팩 다운로드 페이지](https://www.microsoft.com/download/details.aspx?id=43340)에 있는 도구 하나 이상|  
 |64비트 설치:|||  
 |64비트 버전의 SQL Server 2012|64비트 버전의 SQL Server 2012 SP2로 업그레이드|<arch>-<langid>SQL Server 2012 SP2 다운로드 페이지 [에 있는 SQLServer2012SP2-KB2958429-](https://go.microsoft.com/fwlink/?LinkID=401006).exe|  
 |64비트 버전의 SQL Server 2012 RTM Express|64비트 버전의 SQL Server 2012 SP2로 업그레이드|**SQL Server 2012 SP2 Express 다운로드 페이지**<arch>**에 있는**<lang>**SQLEXPR_** _ [.msi](https://go.microsoft.com/fwlink/?LinkID=401007)|  
 |64비트 버전의 SQL Server 2012 클라이언트 및 관리 효율성 도구(SQL Server 2012 Management Studio 포함)|64비트 버전의 SQL Server 2012 SP2로 클라이언트 및 관리 효율성 도구 업그레이드|**SQL Server 2012 SP2 Express 다운로드 페이지**<arch>**에 있는**<lang>**SQLEXPRWT_** _ [.msi](https://go.microsoft.com/fwlink/?LinkID=401007)|  
 |64비트 버전의 SQL Server 2012 Management Studio Express|64비트 버전의 SQL Server 2012 SP2 Management Studio Express로 업그레이드|**SQL Server 2012 SP2 Express 다운로드 페이지**<arch>**에 있는**<lang>**SQLManagementStudio_** _ [.msi](https://go.microsoft.com/fwlink/?LinkID=401007)|  
-|[Microsoft SQL Server 2012 RTM 기능 팩](https://www.microsoft.com/download/details.aspx?id=29065) 또는 [Microsoft SQL Server 2012 SP1 기능 팩](https://go.microsoft.com/fwlink/p/?LinkID=268266)에 있는 64비트 버전 도구 하나 이상|64비트 버전의 Microsoft SQL Server 2012 SP2 Feature Pack으로 도구 업그레이드|Microsoft [SQL Server 2012 SP2 기능 팩 다운로드 페이지](https://go.microsoft.com/fwlink/?LinkID=401008)에 있는 도구 하나 이상|   
+|[Microsoft SQL Server 2012 RTM 기능 팩](https://www.microsoft.com/download/details.aspx?id=56041) 또는 [Microsoft SQL Server 2012 SP1 기능 팩](https://www.microsoft.com/download/details.aspx?id=35575)에 있는 64비트 버전 도구 하나 이상|64비트 버전의 Microsoft SQL Server 2012 SP2 Feature Pack으로 도구 업그레이드|Microsoft [SQL Server 2012 SP2 기능 팩 다운로드 페이지](https://www.microsoft.com/download/details.aspx?id=43340)에 있는 도구 하나 이상|   
 
 
 ## <a name="service-pack-1-release-notes"></a>서비스 팩 1 릴리스 정보
@@ -108,22 +108,22 @@ ms.locfileid: "91986173"
 |32비트 버전의 SQL  Server  2012  클라이언트 및 관리 도구(SQL  Server  2012  Management  Studio  포함)|32비트 버전의 SQL  Server  2012  SP1로 클라이언트 및 관리 도구 업그레이드|[여기](https://go.microsoft.com/fwlink/p/?LinkID=267905)에 있는 SQLManagementStudio_x86_ENU.exe|  
 |32비트 버전의 SQL  Server  2012  Management  Studio  Express|32비트 버전의 SQL  Server  2012  SP1  Management  Studio  Express로 업그레이드|[여기](https://go.microsoft.com/fwlink/p/?LinkID=267905)에 있는 SQLManagementStudio_x86_ENU.exe|  
 |32비트 버전의 SQL Server 2012 **및** 32비트 버전의 클라이언트 및 관리 도구(SQL Server 2012 RTM Management Studio 포함)|32비트 버전의 SQL  Server  2012  SP1로 모든 제품 업그레이드|[여기](https://go.microsoft.com/fwlink/p/?LinkID=268158)에 있는 SQLServer2012SP1-KB2674319-x86-ENU.exe|  
-|32비트 버전의 [Microsoft SQL Server 2012 RTM 기능 팩](https://www.microsoft.com/download/details.aspx?id=44272)에 있는 도구 하나 이상|32비트 버전의 Microsoft  SQL  Server  2012  SP1  기능 팩으로 도구 업그레이드|[Microsoft  SQL  Server  2012  SP1  기능 팩](https://go.microsoft.com/fwlink/p/?LinkID=268266)에 있는 파일 하나 이상|  
+|32비트 버전의 [Microsoft SQL Server 2012 RTM 기능 팩](https://www.microsoft.com/download/details.aspx?id=44272)에 있는 도구 하나 이상|32비트 버전의 Microsoft  SQL  Server  2012  SP1  기능 팩으로 도구 업그레이드|[Microsoft  SQL  Server  2012  SP1  기능 팩](https://www.microsoft.com/download/details.aspx?id=35575)에 있는 파일 하나 이상|  
 |SQL  Server  2012의 32비트 설치 없음|32비트 Server  2012(SP1  포함)  설치(SP1이 미리 설치된 새 인스턴스)|**여기** 에 있는 SQLServer2012SP1-FullSlipstream-x86-ENU.exe [및](https://go.microsoft.com/fwlink/p/?LinkID=268158)SQLServer2012SP1-FullSlipstream-x86-ENU.box|  
 |SQL  Server  2012  Management  Studio의 32비트 설치 없음|32비트 SQL  Server  2012  Management  Studio(SP1포함)  설치|[여기](https://go.microsoft.com/fwlink/p/?LinkId=267905)에 있는 SQLManagementStudio_x86_ENU.exe|  
 |32비트 버전의 SQL  Server  2012  RTM  Express  없음|32비트 SQL  Server  2012  Express(SP1포함)  설치|[여기](https://go.microsoft.com/fwlink/p/?LinkId=267905)에 있는 SQLEXPR32_x86_ENU.exe|  
-|**SQL Server 2008** 또는 **SQL Server 2008 R2**의 32비트 설치|32비트 SQL Server 2012(SP1 포함)로**전체 업그레이드**|**여기** 에 있는 SQLServer2012SP1-FullSlipstream-x86-ENU.exe [및](https://go.microsoft.com/fwlink/p/?LinkID=268158)SQLServer2012SP1-FullSlipstream-x86-ENU.box|  
+|**SQL Server 2008** 또는 **SQL Server 2008 R2** 의 32비트 설치|32비트 SQL Server 2012(SP1 포함)로 **전체 업그레이드**|**여기** 에 있는 SQLServer2012SP1-FullSlipstream-x86-ENU.exe [및](https://go.microsoft.com/fwlink/p/?LinkID=268158)SQLServer2012SP1-FullSlipstream-x86-ENU.box|  
 |**64비트 설치:**|||  
 |64비트 버전의 SQL Server 2012|64비트 버전의 SQL Server 2012 SP1로 업그레이드|[여기](https://go.microsoft.com/fwlink/p/?LinkID=268158)에 있는 SQLServer2012SP1-KB2674319-x64-ENU.exe|  
 |64비트 버전의 SQL Server 2012 RTM Express|64비트 버전의 SQL Server 2012 SP1로 업그레이드|[여기](https://go.microsoft.com/fwlink/p/?LinkID=268158)에 있는 SQLServer2012SP1-KB2674319-x64-ENU.exe|  
 |64비트 버전의 SQL Server 2012 클라이언트 및 관리 효율성 도구(SQL Server 2012 Management Studio 포함)|64비트 버전의 SQL Server 2012 SP1로 클라이언트 및 관리 효율성 도구 업그레이드|[여기](https://go.microsoft.com/fwlink/p/?LinkID=267905)에 있는 SQLManagementStudio_x64_ENU.exe|  
 |64비트 버전의 SQL Server 2012 Management Studio Express|64비트 버전의 SQL Server 2012 SP1 Management Studio Express로 업그레이드|[여기](https://go.microsoft.com/fwlink/p/?LinkID=267905)에 있는 SQLManagementStudio_x64_ENU.exe|  
 |64비트 버전의 SQL Server 2012 **및** 64비트 버전의 클라이언트 및 관리 도구(SQL Server 2012 RTM Management Studio 포함)|64비트 버전의 SQL Server 2012 SP1로 모든 제품 업그레이드|[여기](https://go.microsoft.com/fwlink/p/?LinkID=268158)에 있는 SQLServer2012SP1-KB2674319-x64-ENU.exe|  
-|64비트 버전의 [Microsoft SQL Server 2012 RTM 기능 팩](https://www.microsoft.com/download/details.aspx?id=44272)에 있는 도구 하나 이상|64비트 버전의 Microsoft SQL Server 2012 SP1 Feature Pack으로 도구 업그레이드|[Microsoft  SQL  Server  2012  SP1  기능 팩](https://go.microsoft.com/fwlink/p/?LinkID=268266)에 있는 파일 하나 이상|  
+|64비트 버전의 [Microsoft SQL Server 2012 RTM 기능 팩](https://www.microsoft.com/download/details.aspx?id=44272)에 있는 도구 하나 이상|64비트 버전의 Microsoft SQL Server 2012 SP1 Feature Pack으로 도구 업그레이드|[Microsoft  SQL  Server  2012  SP1  기능 팩](https://www.microsoft.com/download/details.aspx?id=35575)에 있는 파일 하나 이상|  
 |SQL Server 2012의 64비트 설치 없음|64비트 Server 2012(SP1 포함) 설치(SP1이 미리 설치된 새 인스턴스)|**여기** 에 있는 SQLServer2012SP1-FullSlipstream-x64-ENU.exe [및](https://go.microsoft.com/fwlink/p/?LinkID=268158)SQLServer2012SP1-FullSlipstream-x64-ENU.box|  
 |SQL Server 2012 Management Studio의 64비트 설치 없음|64비트 SQL Server 2012 Management Studio(SP1 포함) 설치|[여기](https://go.microsoft.com/fwlink/p/?LinkID=267905)에 있는 SQLManagementStudio_x64_ENU.exe|  
 |64비트 버전의 SQL Server 2012 RTM  Express 없음|64비트 SQL Server 2012 Express(SP1포함) 설치|[여기](https://go.microsoft.com/fwlink/p/?LinkID=267905)에 있는 SQLEXPR_x64_ENU.exe|  
-|**SQL Server 2008** 또는 **SQL Server 2008 R2**64비트 설치|64비트 SQL Server 2012(SP1 포함)로**전체 업그레이드**|**여기** 에 있는 SQLServer2012SP1-FullSlipstream-x64-ENU.exe [및](https://go.microsoft.com/fwlink/p/?LinkID=268158)SQLServer2012SP1-FullSlipstream-x64-ENU.box|  
+|**SQL Server 2008** 또는 **SQL Server 2008 R2** 64비트 설치|64비트 SQL Server 2012(SP1 포함)로 **전체 업그레이드**|**여기** 에 있는 SQLServer2012SP1-FullSlipstream-x64-ENU.exe [및](https://go.microsoft.com/fwlink/p/?LinkID=268158)SQLServer2012SP1-FullSlipstream-x64-ENU.box|  
 
 ### <a name="known-issues-fixed-in-this-service-pack"></a>이 서비스 팩에서 해결된 알려진 문제  
 이 서비스 팩에서 해결된 전체 버그 및 알려진 문제 목록은 [이 KB 문서](https://support.microsoft.com/kb/2674319)를 참조하세요.   
@@ -142,19 +142,19 @@ ms.locfileid: "91986173"
   
 1.  사이트 모음 기능 **사이트 모음에 대한 PowerPivot  기능 통합** 이 활성 상태인지 확인합니다.  
   
-2.  기존 사이트의 **사이트 콘텐츠** 페이지에서 **앱 추가**를 클릭합니다.  
+2.  기존 사이트의 **사이트 콘텐츠** 페이지에서 **앱 추가** 를 클릭합니다.  
   
-3.  **PowerPivot  갤러리**를 클릭합니다.  
+3.  **PowerPivot  갤러리** 를 클릭합니다.  
   
 #### <a name="to-use-powerpivot-for-excel-with-excel-2013-you-must-use-the-add-in-that-is-installed-with-excel"></a>Excel 2013에서 PowerPivot for Excel을 사용하려면 Excel과 함께 설치된 추가 기능을 사용해야 합니다.  
 **문제:** Office 2010을 사용하는 경우 PowerPivot for Excel은 독립 실행형 추가 기능으로, [https://www.microsoft.com/bi/powerpivot.aspx](https://www.microsoft.com/bi/powerpivot.aspx)에서 다운로드할 수 있습니다. 또는 [Microsoft  다운로드 센터](https://www.microsoft.com/download/details.aspx?id=29074)에서 다운로드할 수도 있습니다. 다운로드로 제공되는 두 가지 버전의 PowerPivot 추가 기능이 있습니다. 하나는 SQL Server 2008 R2와 함께 제공되는 버전이고, 다른 하나는 SQL Server 2012와 함께 제공되는 버전입니다. 그러나 Office 2013의 경우 PowerPivot for Excel은 Office와 함께 제공되며 Excel과 함께 설치됩니다. SQL Server 2008 R2 및 SQL Server 2012 버전의 PowerPivot for Excel 2010이 Excel 2013과 호환되지 않지만 Excel 2010을 Excel 2013과 함께 실행하려면 PowerPivot for Excel 2010을 클라이언트 컴퓨터에 설치할 수 있습니다. 즉, 두 버전의 Excel이 공존할 수 있으므로 해당 PowerPivot 추가 기능을 사용할 수 있습니다.  
   
-**해결 방법:** PowerPivot for Excel 2013을 사용하려면 COM 추가 기능을 사용해야 합니다. Excel 2013에서 **파일** | **옵션** | **추가 기능**을 선택합니다. **관리** 드롭다운 상자에서 **COM 추가 기능** 을 선택하고 **이동**을 클릭합니다. **COM 추가 기능**에서 **Microsoft Office PowerPivot for Excel 2013** 을 선택하고 **확인**을 클릭합니다.  
+**해결 방법:** PowerPivot for Excel 2013을 사용하려면 COM 추가 기능을 사용해야 합니다. Excel 2013에서 **파일** | **옵션** | **추가 기능** 을 선택합니다. **관리** 드롭다운 상자에서 **COM 추가 기능** 을 선택하고 **이동** 을 클릭합니다. **COM 추가 기능** 에서 **Microsoft Office PowerPivot for Excel 2013** 을 선택하고 **확인** 을 클릭합니다.  
   
 ### <a name="reporting-services"></a>Reporting Services  
   
 #### <a name="install-and-configure-sharepoint-server-2013-prior-to-installing-reporting-services"></a>Reporting Services를 설치하기 전에 SharePoint Server 2013 설치 및 구성  
-**문제:** SSRS(SQL Server Reporting Services)를 설치하기 **전**에 다음 요구 사항을 완료해야 합니다.  
+**문제:** SSRS(SQL Server Reporting Services)를 설치하기 **전** 에 다음 요구 사항을 완료해야 합니다.  
   
 1.  SharePoint  2013  제품 준비 도구를 실행합니다.  
   
@@ -165,7 +165,7 @@ ms.locfileid: "91986173"
 **해결 방법:**  SharePoint 팜을 구성하기 전에 [!INCLUDE[ssRSnoversion](../includes/ssrsnoversion-md.md)] SharePoint 모드를 설치한 경우 필요한 해결 방법은 설치된 다른 구성 요소에 따라 다릅니다.  
   
 #### <a name="power-view-in-sharepoint-server-2013-requires-microsoftanalysisservicesspclientdll"></a>SharePoint Server 2013의 Power View에 Microsoft.AnalysisServices.SPClient.dll이 필요함  
-**문제:** [!INCLUDE[ssRSnoversion](../includes/ssrsnoversion-md.md)]에서는 필수 구성 요소인 **Microsoft.AnalysisServices.SPClient.dll**을 설치하지 않습니다. SharePoint 모드에서 SharePoint Server 2013 미리 보기 및 [!INCLUDE[ssSQL11SP1](../includes/sssql11sp1-md.md)][!INCLUDE[ssRSnoversion](../includes/ssrsnoversion-md.md)] 를 설치하지만 SharePoint 2013용 PowerPivot 설치 관리자 패키지인 **spPowerPivot.msi** 를 다운로드 및 설치하지 않는 경우, 파워 뷰가 작동하지 않고 파워 뷰에서 다음 증상이 나타납니다.  
+**문제:** [!INCLUDE[ssRSnoversion](../includes/ssrsnoversion-md.md)]에서는 필수 구성 요소인 **Microsoft.AnalysisServices.SPClient.dll** 을 설치하지 않습니다. SharePoint 모드에서 SharePoint Server 2013 미리 보기 및 [!INCLUDE[ssSQL11SP1](../includes/sssql11sp1-md.md)][!INCLUDE[ssRSnoversion](../includes/ssrsnoversion-md.md)] 를 설치하지만 SharePoint 2013용 PowerPivot 설치 관리자 패키지인 **spPowerPivot.msi** 를 다운로드 및 설치하지 않는 경우, 파워 뷰가 작동하지 않고 파워 뷰에서 다음 증상이 나타납니다.  
   
 **증상:** 파워 뷰 보고서를 만들려고 하면 다음과 비슷한 오류 메시지가 표시됩니다.  
   
@@ -175,19 +175,19 @@ ms.locfileid: "91986173"
   
 -   연결 문자열 속성 '사용자 ID'에 값 'SharePoint  Principal'이 지원되지 않습니다."  
   
-**해결 방법:** SharePoint Server 2013에서 SharePoint 2013용 PowerPivot 설치 관리자 패키지(**spPowerPivot.msi**)를 설치합니다. 설치 관리자 패키지는 [!INCLUDE[ssSQL11SP1](../includes/sssql11sp1-md.md)] 기능 팩의 일부로 사용할 수 있습니다. [!INCLUDE[msCoName](../includes/msconame-md.md)] 다운로드 센터의 [SQL  Server  2012  SP1  기능 팩](https://go.microsoft.com/fwlink/p/?LinkID=268266)에서 기능 팩을 다운로드할 수 있습니다.  
+**해결 방법:** SharePoint Server 2013에서 SharePoint 2013용 PowerPivot 설치 관리자 패키지( **spPowerPivot.msi** )를 설치합니다. 설치 관리자 패키지는 [!INCLUDE[ssSQL11SP1](../includes/sssql11sp1-md.md)] 기능 팩의 일부로 사용할 수 있습니다. [!INCLUDE[msCoName](../includes/msconame-md.md)] 다운로드 센터의 [SQL  Server  2012  SP1  기능 팩](https://www.microsoft.com/download/details.aspx?id=35575)에서 기능 팩을 다운로드할 수 있습니다.  
   
 #### <a name="power-view-sheets-in-a-powerpivot-workbook-are-deleted-after-a-scheduled-data-refresh"></a>예약된 데이터 새로 고침 후 PowerPivot 통합 문서의 파워 뷰 시트가 삭제됨  
-**문제**: SharePoint용 PowerPivot 추가 기능에서 파워 뷰가 있는 통합 문서에 **예약된 데이터 새로 고침**을 사용하면 파워 뷰 시트가 모두 삭제됩니다.  
+**문제** : SharePoint용 PowerPivot 추가 기능에서 파워 뷰가 있는 통합 문서에 **예약된 데이터 새로 고침** 을 사용하면 파워 뷰 시트가 모두 삭제됩니다.  
   
-**해결 방법**: 파워 뷰 통합 문서에 **예약된 데이터 새로 고침**을 사용하려면 데이터 모델인 PowerPivot 통합 문서를 만듭니다. 데이터 모델이 있는 PowerPivot  통합 문서에 연결되는 Power  View  시트 및 Excel  시트로 별도의 통합 문서를 만듭니다. 데이터 모델이 있는 PowerPivot  통합 문서에 대해서만 데이터 새로 고침 예약을 수행해야 합니다.  
+**해결 방법** : 파워 뷰 통합 문서에 **예약된 데이터 새로 고침** 을 사용하려면 데이터 모델인 PowerPivot 통합 문서를 만듭니다. 데이터 모델이 있는 PowerPivot  통합 문서에 연결되는 Power  View  시트 및 Excel  시트로 별도의 통합 문서를 만듭니다. 데이터 모델이 있는 PowerPivot  통합 문서에 대해서만 데이터 새로 고침 예약을 수행해야 합니다.  
   
 ### <a name="data-quality-services"></a>데이터베이스 엔진 서비스  
   
 #### <a name="dqs-available-in-the-incorrect-edition-of-sql-server-2012"></a>DQS를 잘못된 버전의 SQL Server 2012에서 사용할 수 있음  
 **문제:** [!INCLUDE[ssSQL11](../includes/sssql11-md.md)] RTM 릴리스에서 DQS(Data Quality Services) 기능은 Enterprise, Business Intelligence 및 Developer 버전 이외의 SQL Server 버전에서 사용할 수 있습니다. SQL  Server  2012  SP1을 설치하면 DQS는 Enterprise,  Business  Intelligence  및 Developer  버전을 제외한 모든 버전에서 사용할 수 있습니다.  
   
-**해결 방법**: 지원되지 않는 버전에서 DQS를 사용하는 경우에는 지원되는 버전으로 업그레이드하거나 애플리케이션에서 이 기능에 대한 종속성을 제거합니다.  
+**해결 방법** : 지원되지 않는 버전에서 DQS를 사용하는 경우에는 지원되는 버전으로 업그레이드하거나 애플리케이션에서 이 기능에 대한 종속성을 제거합니다.  
   
 ### <a name="sql-server-express"></a>SQL Server Express  
   
@@ -201,7 +201,7 @@ SQL  Server  2012  Express  서비스 팩 1(SP1)  릴리스에는 SQL  Server  2
   
 **해결 방법:** CDC 구성 요소를 최신 버전으로 업그레이드하려면 다음을 수행합니다.  
   
-1.  [SQL  Server  2012  SP1  기능 팩 다운로드 페이지](https://go.microsoft.com/fwlink/p/?LinkID=268266)에서 Change  Data  Capture  Service  for  Oracle  by  Attunity의 .msi  파일을 다운로드합니다.  
+1.  [SQL  Server  2012  SP1  기능 팩 다운로드 페이지](https://www.microsoft.com/download/details.aspx?id=35575)에서 Change  Data  Capture  Service  for  Oracle  by  Attunity의 .msi  파일을 다운로드합니다.  
   
 2.  .msi  파일을 실행합니다.  
   

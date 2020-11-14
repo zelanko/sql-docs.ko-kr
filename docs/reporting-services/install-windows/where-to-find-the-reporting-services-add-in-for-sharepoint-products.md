@@ -12,12 +12,12 @@ ms.assetid: 069ac476-6336-44a9-a0e7-db1c4888948f
 author: maggiesMSFT
 ms.author: maggies
 monikerRange: '>=sql-server-2016 <=sql-server-2016||=sqlallproducts-allversions'
-ms.openlocfilehash: ba6987367e72ed544df13216b31aebe85af500e2
-ms.sourcegitcommit: ff82f3260ff79ed860a7a58f54ff7f0594851e6b
+ms.openlocfilehash: fae846be15fd8606315aa0e66efeb25c745ff98a
+ms.sourcegitcommit: 49ee3d388ddb52ed9cf78d42cff7797ad6d668f2
 ms.translationtype: HT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 03/29/2020
-ms.locfileid: "74866296"
+ms.lasthandoff: 11/09/2020
+ms.locfileid: "94384542"
 ---
 # <a name="where-to-find-the-reporting-services-add-in-for-sharepoint-products"></a>SharePoint 제품용 Reporting Services 추가 기능 검색 위치
 
@@ -33,7 +33,7 @@ SharePoint 제품 및 기술용 SSRS([!INCLUDE[msCoName](../../includes/msconame
   
  [!INCLUDE[ssSQL15](../../includes/sssql15-md.md)] 버전의 추가 기능은 [!INCLUDE[ssSQL15](../../includes/sssql15-md.md)] 설치 마법사에서도 제공됩니다.  
   
--   설치 마법사의 **기능 선택** 페이지에서 **SharePoint 제품용 Reporting Services 추가 기능**을 선택합니다.  
+-   설치 마법사의 **기능 선택** 페이지에서 **SharePoint 제품용 Reporting Services 추가 기능** 을 선택합니다.  
   
 -   명령 프롬프트 설치에서 **RS_SHPWFE** 옵션을 사용하여 추가 기능을 설치합니다. [!INCLUDE[ssRSnoversion](../../includes/ssrsnoversion-md.md)] 명령 프롬프트 설치에 대한 자세한 내용은 [명령 프롬프트에 Reporting Services 설치](../../reporting-services/install-windows/install-reporting-services-at-the-command-prompt.md)를 참조하세요.  
   
@@ -44,7 +44,7 @@ SharePoint 제품 및 기술용 SSRS([!INCLUDE[msCoName](../../includes/msconame
   
  [!INCLUDE[ssSQL14](../../includes/sssql14-md.md)] 버전의 추가 기능은 [!INCLUDE[ssSQL14](../../includes/sssql14-md.md)] 설치 마법사에서도 제공됩니다.  
   
--   설치 마법사의 **기능 선택** 페이지에서 **SharePoint 제품용 Reporting Services 추가 기능**을 선택합니다.  
+-   설치 마법사의 **기능 선택** 페이지에서 **SharePoint 제품용 Reporting Services 추가 기능** 을 선택합니다.  
   
 -   명령 프롬프트 설치에서 **RS_SHPWFE** 옵션을 사용하여 추가 기능을 설치합니다. [!INCLUDE[ssRSnoversion](../../includes/ssrsnoversion-md.md)] 명령 프롬프트 설치에 대한 자세한 내용은 [명령 프롬프트에 Reporting Services 설치](../../reporting-services/install-windows/install-reporting-services-at-the-command-prompt.md)를 참조하세요.  
   
@@ -59,7 +59,7 @@ SharePoint 제품 및 기술용 SSRS([!INCLUDE[msCoName](../../includes/msconame
 
 ##  <a name="sssql11-reporting-services-add-in-for-sharepoint-2010-products"></a><a name="bkmk_sql11"></a> [!INCLUDE[ssSQL11](../../includes/sssql11-md.md)] SharePoint 2010 제품용 Reporting Services 추가 기능
 
-SQL Server 2016 릴리스부터 SQL Server 설치 마법사 중에 기능 선택 페이지에서 이 추가 기능을 설치할 수 있습니다. 추가 기능을 개별적으로 다운로드하고 설치하려는 경우 [!INCLUDE[msCoName](../../includes/msconame-md.md)] 다운로드 센터의 [Microsoft® SharePoint® 기술 2010용 Microsoft® SQL Server® 2012 Reporting Services 추가 기능](https://go.microsoft.com/fwlink/?LinkID=207242) 페이지에서 이 파일의 최신 버전을 얻을 수 있습니다.
+SQL Server 2016 릴리스부터 SQL Server 설치 마법사 중에 기능 선택 페이지에서 이 추가 기능을 설치할 수 있습니다. 추가 기능을 개별적으로 다운로드하고 설치하려는 경우 [!INCLUDE[msCoName](../../includes/msconame-md.md)] 다운로드 센터의 [Microsoft® SharePoint® 기술 2010용 Microsoft® SQL Server® 2012 Reporting Services 추가 기능](https://www.microsoft.com/download/details.aspx?id=56052) 페이지에서 이 파일의 최신 버전을 얻을 수 있습니다.
 
 ## <a name="next-steps"></a>다음 단계
 

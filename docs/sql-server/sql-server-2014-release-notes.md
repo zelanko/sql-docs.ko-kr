@@ -11,12 +11,12 @@ ms.assetid: bf4c4922-80b3-4be3-bf71-228247f97004
 author: rothja
 ms.author: jroth
 monikerRange: = sql-server-2016 || = sqlallproducts-allversions
-ms.openlocfilehash: 623c0e6b5a1bafa033ddc9a6fd34a1911d6ecf5b
-ms.sourcegitcommit: a41e1f4199785a2b8019a419a1f3dcdc15571044
+ms.openlocfilehash: f2b94f4458e29090559e2fdf7d5819cddb30842f
+ms.sourcegitcommit: 49ee3d388ddb52ed9cf78d42cff7797ad6d668f2
 ms.translationtype: HT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 10/13/2020
-ms.locfileid: "91988539"
+ms.lasthandoff: 11/09/2020
+ms.locfileid: "94384854"
 ---
 # <a name="sql-server-2014-release-notes"></a>SQL Server 2014 Release Notes
 [!INCLUDE[tsql-appliesto-ss2014-xxxx-xxxx-xxx-md](../includes/tsql-appliesto-ss2014-xxxx-xxxx-xxx-md.md)]
@@ -84,7 +84,7 @@ SQL Server 2014 SP1은 CU 5를 포함하여 SQL Server 2014 CU 1에서 제공하
 - [Microsoft SQL Server 2014용 서비스 팩 1 다운로드](https://www.microsoft.com/download/details.aspx?id=46694)
 - [SQL Server 2014 서비스 팩 1 릴리스됨 – 업데이트됨](/archive/blogs/sqlreleaseservices/sql-server-2014-service-pack-1-has-released-updated)
 - [Microsoft SQL Server 2014 SP1 Express](https://www.microsoft.com/download/details.aspx?id=42299)
-- [Microsoft SQL Server 2014 SP1 기능 팩](https://www.microsoft.com/download/details.aspx?id=46696)
+- [Microsoft SQL Server 2014 SP1 기능 팩](https://www.microsoft.com/download/details.aspx?id=46694)
 
 
 ## <a name="before-you-install-sql-server-2014-rtm"></a>SQL Server 2014 RTM을 설치하기 전 확인 사항
@@ -114,7 +114,7 @@ SQL Server 2014 SP1은 CU 5를 포함하여 SQL Server 2014 CU 1에서 제공하
 #### <a name="incorrect-version-of-streaminsight-client-on-sql-server-2014-mediaisocab"></a>SQL Server 2014 미디어/ISO/CAB의 잘못된 버전의 StreamInsight Client  
 잘못된 버전의 StreamInsight.msi 및 StreamInsightClient.msi가 SQL Server 미디어/ISO/CAB의 다음 경로에 있습니다(StreamInsight\\\<Architecture\>\\\<Language ID\>).  
   
-**해결 방법:** [SQL Server 2014 기능 팩 다운로드 페이지](https://go.microsoft.com/fwlink/?LinkID=306709)에서 올바른 버전을 다운로드하고 설치합니다.  
+**해결 방법:** [SQL Server 2014 기능 팩 다운로드 페이지](https://www.microsoft.com/download/details.aspx?id=57474)에서 올바른 버전을 다운로드하고 설치합니다.  
   
 ### <a name="product-documentation-rtm"></a><a name="ProdDoc"></a>제품 설명서 RTM
   
@@ -270,7 +270,7 @@ DATEPART(weekday, @d)
 #### <a name="register-through-ssms-adds-dac-meta-data-with-mismatched-instance-ids"></a>SSMS를 통해 등록하면 일치하지 않는 인스턴스 ID가 있는 DAC 메타데이터가 추가됨  
 **문제:** SQL Server Management Studio를 통해 데이터 계층 애플리케이션 패키지(.dacpac)를 등록하거나 삭제할 때 sysdac * 테이블이 제대로 업데이트되지 않아 사용자가 데이터베이스에 대한 dacpac 기록을 쿼리할 수 없게 됩니다.  instance_id for sysdac_history_internal 및 sysdac_instances_internal이 일치하지 않아 조인이 허용되지 않습니다.  
   
-**해결 방법:** 이 문제는 [데이터 계층 애플리케이션 프레임워크](https://www.microsoft.com/download/details.aspx?id=42295)의 기능 팩 재배포를 통해 해결됩니다.  업데이트가 적용된 후 모든 새 기록 항목은 sysdac_instances_internal 테이블에서 instance_id에 대해 나열된 값을 사용합니다.  
+**해결 방법:** 이 문제는 [데이터 계층 애플리케이션 프레임워크](https://www.microsoft.com/download/details.aspx?id=100297)의 기능 팩 재배포를 통해 해결됩니다.  업데이트가 적용된 후 모든 새 기록 항목은 sysdac_instances_internal 테이블에서 instance_id에 대해 나열된 값을 사용합니다.  
   
 일치하지 않는 instance_id 값 문제가 이미 발생한 경우 일치하지 않는 값을 수정하는 유일한 방법은 MSDB 데이터베이스에 쓸 수 있는 권한을 가진 사용자로 서버에 연결하고 instance_id 값을 일치하도록 업데이트하는 것입니다.  동일한 데이터베이스에 대해 등록 및 등록 취소 이벤트가 여러 번 발생한 경우 시간/날짜를 확인하여 현재 instance_id 값과 일치하는 레코드가 무엇인지 파악해야 할 수 있습니다.  
   
@@ -359,7 +359,7 @@ Description:   Report Server (DENALI) cannot connect to the report server databa
   
 **해결 방법:**  
   
-1.  [!INCLUDE[ssSQL11SP1](../includes/sssql11sp1-md.md)] 기능 팩에서 MSOLAP.5 공급자를 다운로드합니다. Excel Services를 실행하는 애플리케이션 서버에서 공급자를 설치합니다. 자세한 내용은 [Microsoft SQL Server 2012 SP1 기능 팩](https://www.microsoft.com/download/details.aspx?id=35580)의 "Microsoft SQL Server 2012 SP1용 Microsoft Analysis Services OLE DB Provider" 섹션을 참조하세요.  
+1.  [!INCLUDE[ssSQL11SP1](../includes/sssql11sp1-md.md)] 기능 팩에서 MSOLAP.5 공급자를 다운로드합니다. Excel Services를 실행하는 애플리케이션 서버에서 공급자를 설치합니다. 자세한 내용은 [Microsoft SQL Server 2012 SP1 기능 팩](https://www.microsoft.com/download/details.aspx?id=35575)의 "Microsoft SQL Server 2012 SP1용 Microsoft Analysis Services OLE DB Provider" 섹션을 참조하세요.  
   
 2.  SharePoint Excel 서비스에서 신뢰할 수 있는 공급자로 MSOLAP.5를 등록합니다. 자세한 내용은 [MSOLAP.5를 Excel 서비스에서 신뢰할 수 있는 데이터 공급자로 추가](/analysis-services/power-pivot-for-sharepoint-ssas?viewFallbackFrom=sql-server-ver15)를 참조하십시오.  
   
@@ -374,7 +374,7 @@ Description:   Report Server (DENALI) cannot connect to the report server databa
   
 **해결 방법:**  
   
-1.  [!INCLUDE[ssSQL11SP1](../includes/sssql11sp1-md.md)] 기능 팩에서 MSOLAP.5 공급자를 다운로드합니다. Excel Services를 실행하는 애플리케이션 서버에서 공급자를 설치합니다. 자세한 내용은 [Microsoft SQL Server 2012 SP1 기능 팩](https://www.microsoft.com/download/details.aspx?id=35580)의 "Microsoft SQL Server 2012 SP1용 Microsoft Analysis Services OLE DB Provider" 섹션을 참조하세요.  
+1.  [!INCLUDE[ssSQL11SP1](../includes/sssql11sp1-md.md)] 기능 팩에서 MSOLAP.5 공급자를 다운로드합니다. Excel Services를 실행하는 애플리케이션 서버에서 공급자를 설치합니다. 자세한 내용은 [Microsoft SQL Server 2012 SP1 기능 팩](https://www.microsoft.com/download/details.aspx?id=35575)의 "Microsoft SQL Server 2012 SP1용 Microsoft Analysis Services OLE DB Provider" 섹션을 참조하세요.  
   
 2.  SharePoint Excel 서비스에서 신뢰할 수 있는 공급자로 MSOLAP.5를 등록합니다. 자세한 내용은 [MSOLAP.5를 Excel 서비스에서 신뢰할 수 있는 데이터 공급자로 추가](/analysis-services/power-pivot-for-sharepoint-ssas?viewFallbackFrom=sql-server-ver15)를 참조하십시오.  
   
@@ -411,7 +411,7 @@ Description:   Report Server (DENALI) cannot connect to the report server databa
 #### <a name="sql-server-2014-upgrade-advisor-reports-irrelevant-upgrade-issues-for-sql-server-reporting-services"></a>SQL Server 2014 업그레이드 관리자가 SQL Server Reporting Services에 대해 관련이 없는 업그레이드 문제를 보고함  
 **문제:** SQL Server 2014 미디어에 포함된 SSUA(SQL Server 업그레이드 관리자)가 SQL Server Reporting Services 서버를 분석할 때 여러 오류를 잘못 보고합니다.  
   
-**해결 방법:** 이 문제는 [SSUA용 SQL Server 2014 기능 팩](https://go.microsoft.com/fwlink/?LinkID=306709)에서 제공되는 SQL Server 업그레이드 관리자에서 해결되었습니다.  
+**해결 방법:** 이 문제는 [SSUA용 SQL Server 2014 기능 팩](https://www.microsoft.com/download/details.aspx?id=57474)에서 제공되는 SQL Server 업그레이드 관리자에서 해결되었습니다.  
   
 #### <a name="sql-server-2014-upgrade-advisor-reports-an-error-when-analyzing-sql-server-integration-services-server"></a>SQL Server 2014 업그레이드 관리자가 SQL Server Integration Services 서버를 분석할 때 오류를 보고함  
 **문제:** SQL Server 2014 미디어에서 제공된 SSUA(SQL Server 업그레이드 관리자)가 SQL Server Integration Services 서버를 분석할 때 오류를 보고합니다.  사용자에게 표시되는 오류는 다음과 같습니다.  
@@ -422,6 +422,6 @@ The assembly information is "Microsoft.SqlServer.ManagedDTS, Version=11.0.0.0,
 Culture=neutral, PublicKeyToken=89845dcd8080cc91  
 ```  
   
-**해결 방법:** 이 문제는 [SSUA용 SQL Server 2014 기능 팩](https://go.microsoft.com/fwlink/?LinkID=306709)에서 제공되는 SQL Server 업그레이드 관리자에서 해결되었습니다.  
+**해결 방법:** 이 문제는 [SSUA용 SQL Server 2014 기능 팩](https://www.microsoft.com/download/details.aspx?id=57474)에서 제공되는 SQL Server 업그레이드 관리자에서 해결되었습니다.  
   
 [!INCLUDE[get-help-options](../includes/paragraph-content/get-help-options.md)]
