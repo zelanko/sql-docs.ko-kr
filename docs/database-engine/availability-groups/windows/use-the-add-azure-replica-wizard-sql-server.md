@@ -10,14 +10,14 @@ ms.topic: conceptual
 f1_keywords:
 - sql13.swb.addreplicawizard.azurereplica.f1
 ms.assetid: b89cc41b-07b4-49f3-82cc-bc42b2e793ae
-author: MashaMSFT
-ms.author: mathoma
-ms.openlocfilehash: 590c559b283a91a7b6c4ecde7b455287d2f3b3bb
-ms.sourcegitcommit: a5398f107599102af7c8cda815d8e5e9a367ce7e
+author: cawrites
+ms.author: chadam
+ms.openlocfilehash: 9ff107b2f3e132015e294ef7ba8174ade5a0c575
+ms.sourcegitcommit: 54cd97a33f417432aa26b948b3fc4b71a5e9162b
 ms.translationtype: HT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 10/13/2020
-ms.locfileid: "92005794"
+ms.lasthandoff: 11/13/2020
+ms.locfileid: "94583697"
 ---
 # <a name="configure-azure-vm-as-a-secondary-replica-in-an-availability-group"></a>가용성 그룹에서 Azure VM을 보조 복제본으로 구성
 [!INCLUDE [SQL Server](../../../includes/applies-to-version/sqlserver.md)]
@@ -67,7 +67,7 @@ ms.locfileid: "92005794"
   
 2.  Microsoft 계정 또는 조직 계정으로 Microsoft Azure에 로그인합니다. Microsoft 또는 조직 계정은 "mailto:patc@contoso.com" patc@contoso.com 하이퍼링크와 같은 이메일 주소 형식입니다. Azure 자격 증명에 대한 자세한 내용은 [Microsoft 조직 계정 FAQ](/previous-versions/jj592903(v=msdn.10)) 및 [조직 계정을 사용하는 로그인의 문제 해결](https://support.microsoft.com/kb/2756852)을 참조하세요.  
   
-3.  다음에는 **연결**을 클릭하여 구독에 연결합니다. 연결되면 드롭다운 목록에 **가상 네트워크** 및 **가상 네트워크 서브넷**과 같은 Azure 매개 변수가 채워집니다.  
+3.  다음에는 **연결** 을 클릭하여 구독에 연결합니다. 연결되면 드롭다운 목록에 **가상 네트워크** 및 **가상 네트워크 서브넷** 과 같은 Azure 매개 변수가 채워집니다.  
   
 4.  새 보조 복제본을 호스트할 Azure VM에 대한 설정을 지정합니다.  
   

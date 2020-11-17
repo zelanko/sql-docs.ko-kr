@@ -12,14 +12,14 @@ f1_keywords:
 helpviewer_keywords:
 - Availability Groups [SQL Server], policies
 ms.assetid: 7ec5b337-7201-4a66-a541-7560f8b18784
-author: MashaMSFT
-ms.author: mathoma
-ms.openlocfilehash: 2c5d7047940aea0368e5fc3fe8058bab0714ffa8
-ms.sourcegitcommit: f7ac1976d4bfa224332edd9ef2f4377a4d55a2c9
+author: cawrites
+ms.author: chadam
+ms.openlocfilehash: 514de23cf905f7344f76a3597658f8a9d40d1013
+ms.sourcegitcommit: 54cd97a33f417432aa26b948b3fc4b71a5e9162b
 ms.translationtype: HT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 07/02/2020
-ms.locfileid: "85883111"
+ms.lasthandoff: 11/13/2020
+ms.locfileid: "94583903"
 ---
 # <a name="some-availability-replicas-do-not-have-a-healthy-role"></a>일부 가용성 복제본에 정상 상태의 역할이 없음
 [!INCLUDE [SQL Server](../../../includes/applies-to-version/sqlserver.md)]

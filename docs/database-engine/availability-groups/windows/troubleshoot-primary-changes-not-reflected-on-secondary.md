@@ -8,14 +8,14 @@ ms.reviewer: ''
 ms.technology: high-availability
 ms.topic: conceptual
 ms.assetid: c602fd39-db93-4717-8f3a-5a98b940f9cc
-author: MashaMSFT
-ms.author: mathoma
-ms.openlocfilehash: 74014a2fe98646a5a25d337719636c3471562ff3
-ms.sourcegitcommit: 2f868a77903c1f1c4cecf4ea1c181deee12d5b15
+author: cawrites
+ms.author: chadam
+ms.openlocfilehash: 3a3dee84b2a2e6ee68d2de4630962cf592cefd51
+ms.sourcegitcommit: 54cd97a33f417432aa26b948b3fc4b71a5e9162b
 ms.translationtype: HT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 10/02/2020
-ms.locfileid: "91670659"
+ms.lasthandoff: 11/13/2020
+ms.locfileid: "94583744"
 ---
 # <a name="determine-why-changes-from-primary-replica-are-not-reflected-on-secondary-replica-for-an-always-on-availability-group"></a>주 복제본의 변경 내용이 Always On 가용성 그룹의 보조 복제본에 반영되지 않은 이유 확인
 [!INCLUDE [SQL Server](../../../includes/applies-to-version/sqlserver.md)]
@@ -70,7 +70,7 @@ ms.locfileid: "91670659"
   
  또한 두 성능 개체 [SQL Server:가용성 복제본 > 흐름 제어 시간(ms/sec)](~/relational-databases/performance-monitor/sql-server-availability-replica.md) 및 [SQL Server:가용성 복제본 > 흐름 제어/초](~/relational-databases/performance-monitor/sql-server-availability-replica.md)를 확인하는 데 유용합니다. 이러한 두 값을 곱하면 흐름 제어가 해제될 때까지 대기하는 데 소비한 최종 시간이 나타납니다. 흐름 제어 대기 시간이 길수록 전송 속도가 더 느립니다.  
   
- 아래는 네트워크 대기 시간 및 처리량 진단에 유용한 메트릭의 목록입니다. **ping.exe**와 같은 Windows 도구를 사용하여 네트워크 사용률을 평가할 수 있습니다.  
+ 아래는 네트워크 대기 시간 및 처리량 진단에 유용한 메트릭의 목록입니다. **ping.exe** 와 같은 Windows 도구를 사용하여 네트워크 사용률을 평가할 수 있습니다.  
   
 -   DMV [log_send_queue_size](~/relational-databases/system-dynamic-management-views/sys-dm-hadr-database-replica-states-transact-sql.md)  
   

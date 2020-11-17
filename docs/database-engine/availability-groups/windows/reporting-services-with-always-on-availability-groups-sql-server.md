@@ -11,15 +11,15 @@ helpviewer_keywords:
 - Reporting Services, AlwaysOn Availability Groups
 - Availability Groups [SQL Server], interoperability
 ms.assetid: edeb5c75-fb13-467e-873a-ab3aad88ab72
-author: MashaMSFT
-ms.author: mathoma
+author: cawrites
+ms.author: chadam
 manager: erikre
-ms.openlocfilehash: 0f38c60868785a9487e848fd9617e2b2feedf481
-ms.sourcegitcommit: 2f868a77903c1f1c4cecf4ea1c181deee12d5b15
+ms.openlocfilehash: 260af6fa8615969a895425aa3d2145071b78eb72
+ms.sourcegitcommit: 54cd97a33f417432aa26b948b3fc4b71a5e9162b
 ms.translationtype: HT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 10/02/2020
-ms.locfileid: "91670090"
+ms.lasthandoff: 11/13/2020
+ms.locfileid: "94583965"
 ---
 # <a name="reporting-services-with-always-on-availability-groups-sql-server"></a>Always On 가용성 그룹이 포함된 Reporting Services(SQL Server)
 [!INCLUDE [SQL Server](../../../includes/applies-to-version/sqlserver.md)]
@@ -33,7 +33,7 @@ ms.locfileid: "91670090"
 ##  <a name="requirements-for-using-reporting-services-and-always-on-availability-groups"></a><a name="bkmk_requirements"></a> Reporting Services 및 Always On 가용성 그룹 사용을 위한 요구 사항  
  [!INCLUDE[ssCurrent](../../../includes/sscurrent-md.md)] [!INCLUDE[ssRSnoversion](../../../includes/ssrsnoversion-md.md)] 및 Power BI Report Server에서는 .NET Framework 4.0을 사용하며 데이터 원본과 함께 사용할 [!INCLUDE[ssHADR](../../../includes/sshadr-md.md)] 연결 문자열 속성을 지원합니다.  
   
- [!INCLUDE[ssHADR](../../../includes/sshadr-md.md)] 2014 이전 버전에  [!INCLUDE[ssRSnoversion](../../../includes/ssrsnoversion-md.md)] 을 사용하려면 .Net 3.5 SP1에 대한 핫픽스를 다운로드하고 설치해야 합니다. 이 핫픽스는 AG 기능을 위한 SQL 클라이언트에 대한 지원과 **ApplicationIntent** 및 **MultiSubnetFailover**연결 문자열 속성 지원을 추가합니다. 보고서 서버를 호스팅하는 각 컴퓨터에 이 핫픽스가 설치되어 있지 않으면 사용자가 보고서를 미리 보려고 시도할 때 다음과 비슷한 오류 메시지가 표시되고 오류 메시지가 보고서 서버의 추적 로그에 기록됩니다.  
+ [!INCLUDE[ssHADR](../../../includes/sshadr-md.md)] 2014 이전 버전에  [!INCLUDE[ssRSnoversion](../../../includes/ssrsnoversion-md.md)] 을 사용하려면 .Net 3.5 SP1에 대한 핫픽스를 다운로드하고 설치해야 합니다. 이 핫픽스는 AG 기능을 위한 SQL 클라이언트에 대한 지원과 **ApplicationIntent** 및 **MultiSubnetFailover** 연결 문자열 속성 지원을 추가합니다. 보고서 서버를 호스팅하는 각 컴퓨터에 이 핫픽스가 설치되어 있지 않으면 사용자가 보고서를 미리 보려고 시도할 때 다음과 비슷한 오류 메시지가 표시되고 오류 메시지가 보고서 서버의 추적 로그에 기록됩니다.  
   
 > **오류 메시지:** "키워드가 지원되는 'applicationintent'가 아닙니다."  
   
@@ -44,12 +44,12 @@ ms.locfileid: "91670090"
  기타 [!INCLUDE[ssHADR](../../../includes/sshadr-md.md)] 요구 사항에 대한 자세한 내용은 [Always On 가용성 그룹에 대한 필수 조건, 제한 사항 및 권장 사항&#40;SQL Server&#41;](../../../database-engine/availability-groups/windows/prereqs-restrictions-recommendations-always-on-availability.md)을 참조하세요.  
   
 > [!NOTE]  
->  **RSreportserver.config**와 같은 [!INCLUDE[ssRSnoversion](../../../includes/ssrsnoversion-md.md)] 구성 파일은 [!INCLUDE[ssHADR](../../../includes/sshadr-md.md)] 기능의 일부로 지원되지 않습니다. 보고서 서버 중 하나에서 구성 파일을 수동으로 변경할 경우 복제본을 수동으로 업데이트해야 합니다.  
+>  **RSreportserver.config** 와 같은 [!INCLUDE[ssRSnoversion](../../../includes/ssrsnoversion-md.md)] 구성 파일은 [!INCLUDE[ssHADR](../../../includes/sshadr-md.md)] 기능의 일부로 지원되지 않습니다. 보고서 서버 중 하나에서 구성 파일을 수동으로 변경할 경우 복제본을 수동으로 업데이트해야 합니다.  
   
 ##  <a name="report-data-sources-and-availability-groups"></a><a name="bkmk_reportdatasources"></a> 보고서 데이터 원본 및 가용성 그룹  
  [!INCLUDE[ssRSnoversion](../../../includes/ssrsnoversion-md.md)] 을 기반으로 하는 [!INCLUDE[ssHADR](../../../includes/sshadr-md.md)] 데이터 원본의 동작은 관리자가 AG 환경을 구성한 방법에 따라 다를 수 있습니다.  
   
- 보고서 데이터 원본 연결 문자열을 구성하는 데 필요한 보고서 데이터 원본에 대해 [!INCLUDE[ssHADR](../../../includes/sshadr-md.md)] 을 활용하려면 가용성 그룹 *리스너 DNS 이름*을 사용합니다. 지원되는 데이터 원본은 다음과 같습니다.  
+ 보고서 데이터 원본 연결 문자열을 구성하는 데 필요한 보고서 데이터 원본에 대해 [!INCLUDE[ssHADR](../../../includes/sshadr-md.md)] 을 활용하려면 가용성 그룹 *리스너 DNS 이름* 을 사용합니다. 지원되는 데이터 원본은 다음과 같습니다.  
   
 -   SQL 기본 클라이언트를 사용하는 ODBC 데이터 원본  
   
@@ -137,7 +137,7 @@ ms.locfileid: "91670090"
 ###  <a name="prepare-report-server-databases-for-availability-groups"></a><a name="bkmk_prepare_databases"></a> 가용성 그룹에 대한 보고서 서버 데이터베이스 준비  
  보고서 서버 데이터베이스를 준비하고 [!INCLUDE[ssHADR](../../../includes/sshadr-md.md)]에 추가하는 기본 단계는 다음과 같습니다.  
   
--   가용성 그룹을 만들고 *리스너 DNS 이름*을 구성합니다.  
+-   가용성 그룹을 만들고 *리스너 DNS 이름* 을 구성합니다.  
   
 -   **주 복제본:** 단일 가용성 그룹에 포함할 보고서 서버 데이터베이스를 구성하고 보고서 서버 데이터베이스를 모두 포함하는 주 복제본을 만듭니다.  
   

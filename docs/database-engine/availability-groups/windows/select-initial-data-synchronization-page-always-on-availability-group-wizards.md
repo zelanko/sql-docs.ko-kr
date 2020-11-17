@@ -12,21 +12,21 @@ f1_keywords:
 - sql13.swb.newagwizard.selectinitialdatasync.f1
 - sql13.swb.addreplicawizard.selectinitialdatasync.f1
 ms.assetid: 457b1140-4819-4def-8f7c-54a406e6db12
-author: MashaMSFT
-ms.author: mathoma
-ms.openlocfilehash: 995191f37a40bbc1b3cd0fb11ddf79f3952527ba
-ms.sourcegitcommit: f7ac1976d4bfa224332edd9ef2f4377a4d55a2c9
+author: cawrites
+ms.author: chadam
+ms.openlocfilehash: c0cd3c7b805451701c1fb1e412750e922a554485
+ms.sourcegitcommit: 54cd97a33f417432aa26b948b3fc4b71a5e9162b
 ms.translationtype: HT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 07/02/2020
-ms.locfileid: "85883147"
+ms.lasthandoff: 11/13/2020
+ms.locfileid: "94583925"
 ---
 # <a name="select-initial-data-synchronization-page-always-on-availability-group-wizards"></a>초기 데이터 동기화 페이지 선택(Always On 가용성 그룹 마법사)
 [!INCLUDE [SQL Server](../../../includes/applies-to-version/sqlserver.md)]
 
   Always On **초기 데이터 동기화 선택** 페이지를 사용하여 새 보조 데이터베이스의 초기 데이터 동기화에 대한 기본 설정을 표시합니다. 이 페이지는 세 가지 마법사([!INCLUDE[ssAoNewAgWiz](../../../includes/ssaonewagwiz-md.md)], [!INCLUDE[ssAoAddRepWiz](../../../includes/ssaoaddrepwiz-md.md)]및 [!INCLUDE[ssAoAddDbWiz](../../../includes/ssaoadddbwiz-md.md)])에서 공유됩니다.  
   
- 가능한 선택에는 **자동 시드**, **전체 데이터베이스 및 로그 백업**, **조인만** 또는 **초기 데이터 동기화 건너뛰기**가 있습니다. **자동 시드**, **전체** 또는 **조인만**을 선택하기 전에 환경이 필수 조건을 충족하는지 확인합니다.  
+ 가능한 선택에는 **자동 시드**, **전체 데이터베이스 및 로그 백업**, **조인만** 또는 **초기 데이터 동기화 건너뛰기** 가 있습니다. **자동 시드**, **전체** 또는 **조인만** 을 선택하기 전에 환경이 필수 조건을 충족하는지 확인합니다.  
     
 ##  <a name="recommendations"></a><a name="Recommendations"></a> 권장 사항  
   
@@ -78,7 +78,7 @@ ms.locfileid: "85883147"
 ##  <a name="join-only"></a><a name="Joinonly"></a> 조인만  
  가용성 그룹의 보조 복제본을 호스팅하는 각 서버 인스턴스에 새 보조 데이터베이스가 이미 있는 경우에만 이 옵션을 선택합니다. 보조 데이터베이스 준비에 대한 자세한 내용은 이 섹션의 뒷부분에 나오는 [수동으로 보조 데이터베이스를 준비하려면](#PrepareSecondaryDbs)을 참조하세요.  
   
- **조인만**을 선택하면 마법사는 각 기존 보조 데이터베이스를 가용성 그룹에 조인하려고 시도합니다.  
+ **조인만** 을 선택하면 마법사는 각 기존 보조 데이터베이스를 가용성 그룹에 조인하려고 시도합니다.  
   
 ## <a name="skip-initial-data-synchronization"></a><a name="Skip"></a> 초기 데이터 동기화 건너뛰기  
  모든 주 데이터베이스의 데이터베이스 및 로그 백업을 직접 수행하고 보조 복제본을 호스팅하는 모든 서버 인스턴스로 복원하려는 경우에만 이 옵션을 선택합니다. 마법사를 종료한 후 모든 보조 복제본에서 모든 보조 데이터베이스를 조인해야 합니다.  

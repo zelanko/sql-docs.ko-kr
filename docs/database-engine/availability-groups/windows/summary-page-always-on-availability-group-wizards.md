@@ -13,21 +13,21 @@ f1_keywords:
 - sql13.swb.addreplicawizard.summary.f1
 - sql13.swb.failoverwizard.summary.f1
 ms.assetid: b98e2511-297f-49fd-b0e8-74652a91bc0c
-author: MashaMSFT
-ms.author: mathoma
-ms.openlocfilehash: e3370f19992d439f13c06c5e2327cb47f93fc15a
-ms.sourcegitcommit: 2f868a77903c1f1c4cecf4ea1c181deee12d5b15
+author: cawrites
+ms.author: chadam
+ms.openlocfilehash: 748633e5b78ad0d27252147fb7455e961fc63d10
+ms.sourcegitcommit: 54cd97a33f417432aa26b948b3fc4b71a5e9162b
 ms.translationtype: HT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 10/02/2020
-ms.locfileid: "91670904"
+ms.lasthandoff: 11/13/2020
+ms.locfileid: "94583815"
 ---
 # <a name="summary-page-always-on-availability-group-wizards"></a>요약 페이지(Always On 가용성 그룹 마법사)
 [!INCLUDE [SQL Server](../../../includes/applies-to-version/sqlserver.md)]
 
 <a name="Top"></a>  
   
-  이 도움말 항목에서는 **요약** 페이지의 옵션에 대해 설명합니다. 이 항목은 [!INCLUDE[ssAoNewAgWiz](../../../includes/ssaonewagwiz-md.md)]의 [!INCLUDE[ssAoAddRepWiz](../../../includes/ssaoaddrepwiz-md.md)], [!INCLUDE[ssAoAddDbWiz](../../../includes/ssaoadddbwiz-md.md)] , [!INCLUDE[ssAoFoAgWiz](../../../includes/ssaofoagwiz-md.md)] 및 [!INCLUDE[ssCurrent](../../../includes/sscurrent-md.md)]에 적용됩니다. 이 페이지의 표를 사용하여 새 가용성 그룹에 대한 선택 사항을 확인합니다. 하나 이상의 항목을 변경하려면 **이전** 을 클릭하여 관련 페이지로 돌아갑니다. 준비가 되면 **다음** 을 클릭하여 **요약** 페이지로 돌아갑니다. 선택 사항에 만족하면 **마침**을 클릭합니다.  
+  이 도움말 항목에서는 **요약** 페이지의 옵션에 대해 설명합니다. 이 항목은 [!INCLUDE[ssAoNewAgWiz](../../../includes/ssaonewagwiz-md.md)]의 [!INCLUDE[ssAoAddRepWiz](../../../includes/ssaoaddrepwiz-md.md)], [!INCLUDE[ssAoAddDbWiz](../../../includes/ssaoadddbwiz-md.md)] , [!INCLUDE[ssAoFoAgWiz](../../../includes/ssaofoagwiz-md.md)] 및 [!INCLUDE[ssCurrent](../../../includes/sscurrent-md.md)]에 적용됩니다. 이 페이지의 표를 사용하여 새 가용성 그룹에 대한 선택 사항을 확인합니다. 하나 이상의 항목을 변경하려면 **이전** 을 클릭하여 관련 페이지로 돌아갑니다. 준비가 되면 **다음** 을 클릭하여 **요약** 페이지로 돌아갑니다. 선택 사항에 만족하면 **마침** 을 클릭합니다.  
   
 ##  <a name="summary-page-options"></a><a name="PageOptions"></a> 요약 페이지 옵션  
  **스크립트**  

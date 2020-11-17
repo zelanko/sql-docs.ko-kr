@@ -13,14 +13,14 @@ helpviewer_keywords:
 - Availability Groups [SQL Server], interoperability
 - replication [SQL Server], AlwaysOn Availability Groups
 ms.assetid: e17a9ca9-dd96-4f84-a85d-60f590da96ad
-author: MashaMSFT
-ms.author: mathoma
-ms.openlocfilehash: 702773ea93f99fc3af6dcfa3b3847ae5a35c75f1
-ms.sourcegitcommit: 757b827cf322c9f792f05915ff3450e95ba7a58a
+author: cawrites
+ms.author: chadam
+ms.openlocfilehash: a38c7d3bdb94881a3fdc7c54b4a10d0e7cce406f
+ms.sourcegitcommit: 54cd97a33f417432aa26b948b3fc4b71a5e9162b
 ms.translationtype: HT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 10/16/2020
-ms.locfileid: "92134861"
+ms.lasthandoff: 11/13/2020
+ms.locfileid: "94583998"
 ---
 # <a name="replication-change-tracking--change-data-capture---always-on-availability-groups"></a>복제, 변경 내용 추적 및 변경 데이터 캡처 - Always On 가용성 그룹
 [!INCLUDE [SQL Server](../../../includes/applies-to-version/sqlserver.md)]
@@ -42,7 +42,7 @@ ms.locfileid: "92134861"
 ###  <a name="general-changes-to-replication-agents-to-support-availability-groups"></a><a name="Changes"></a> 가용성 그룹을 지원하기 위한 복제 에이전트에 대한 일반적 변경 사항  
  [!INCLUDE[ssHADR](../../../includes/sshadr-md.md)]을 지원하도록 세 가지 복제 에이전트가 수정되었습니다. 로그 판독기, 스냅샷 및 병합 에이전트는 배포 데이터베이스에서 리디렉션된 게시자를 쿼리하고 리디렉션된 게시자가 선언된 경우 반환된 가용성 그룹 수신기 이름을 사용하여 데이터베이스 게시자에 연결합니다.  
   
- 기본적으로 원본 게시자가 리디렉션되었는지 확인하기 위해 에이전트가 배포자를 쿼리할 때는 리디렉션된 호스트를 에이전트에 반환하기 전에 현재 대상 또는 리디렉션의 적합성이 확인됩니다. 이 동작은 수행하는 것이 좋습니다. 하지만 에이전트 시작이 매우 자주 수행되는 경우 유효성 검사 저장 프로시저와 연결된 오버헤드의 비용이 너무 높은 것으로 간주될 수 있습니다. 로그 판독기, 스냅샷 및 병합 에이전트에는 새로운 명령줄 스위치인 *BypassPublisherValidation*이 추가되었습니다. 이 스위치를 사용하면 리디렉션된 게시자가 에이전트에 즉시 반환되고 유효성 검사 저장 프로시저의 실행이 무시됩니다.  
+ 기본적으로 원본 게시자가 리디렉션되었는지 확인하기 위해 에이전트가 배포자를 쿼리할 때는 리디렉션된 호스트를 에이전트에 반환하기 전에 현재 대상 또는 리디렉션의 적합성이 확인됩니다. 이 동작은 수행하는 것이 좋습니다. 하지만 에이전트 시작이 매우 자주 수행되는 경우 유효성 검사 저장 프로시저와 연결된 오버헤드의 비용이 너무 높은 것으로 간주될 수 있습니다. 로그 판독기, 스냅샷 및 병합 에이전트에는 새로운 명령줄 스위치인 *BypassPublisherValidation* 이 추가되었습니다. 이 스위치를 사용하면 리디렉션된 게시자가 에이전트에 즉시 반환되고 유효성 검사 저장 프로시저의 실행이 무시됩니다.  
   
  유효성 검사 저장 프로시저에서 반환된 오류는 에이전트 기록 로그에 기록됩니다. 심각도가 16 이상인 오류가 발생할 경우 에이전트가 종료됩니다. 에이전트에는 새로운 주 데이터베이스로 장애 조치(Failover)를 수행할 때 게시된 데이터베이스로부터의 예상된 연결 해제를 처리할 수 있도록 몇 가지 재시도 기능이 기본 제공되어 있습니다.  
   
@@ -156,7 +156,7 @@ ms.locfileid: "92134861"
   
      가용성 그룹 수신기 이름 또는 명시적인 노드 이름을 사용하여 보조 복제본을 찾을 수 있습니다. 가용성 그룹 수신기 이름을 사용하는 경우 액세스가 모든 적합한 보조 복제본으로 전송됩니다.  
   
-     보조 복제본에 액세스하기 위해 **sp_addlinkedserver**를 사용하여 연결된 서버를 만들 경우, 가용성 그룹 수신기 이름 또는 명시적인 서버 이름에 *\@datasrc* 매개 변수가 사용되고 읽기 전용 의도를 지정하기 위해 *\@provstr* 매개 변수가 사용됩니다.  
+     보조 복제본에 액세스하기 위해 **sp_addlinkedserver** 를 사용하여 연결된 서버를 만들 경우, 가용성 그룹 수신기 이름 또는 명시적인 서버 이름에 *\@datasrc* 매개 변수가 사용되고 읽기 전용 의도를 지정하기 위해 *\@provstr* 매개 변수가 사용됩니다.  
   
     ```sql  
     EXEC sp_addlinkedserver   

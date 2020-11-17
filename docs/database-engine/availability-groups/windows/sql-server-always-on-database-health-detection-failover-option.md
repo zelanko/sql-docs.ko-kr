@@ -14,14 +14,14 @@ helpviewer_keywords:
 - High Availability
 - SQL Server
 ms.assetid: d74afd28-25c3-48a1-bc3f-e353bee615c2
-author: MashaMSFT
-ms.author: mathoma
-ms.openlocfilehash: 25103e53ab29e9a19872ea1563f98607f3821b67
-ms.sourcegitcommit: 2f868a77903c1f1c4cecf4ea1c181deee12d5b15
+author: cawrites
+ms.author: chadam
+ms.openlocfilehash: 14a7b2fbb5834ae45c5262f73ffc81a684bba300
+ms.sourcegitcommit: 54cd97a33f417432aa26b948b3fc4b71a5e9162b
 ms.translationtype: HT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 10/02/2020
-ms.locfileid: "91669952"
+ms.lasthandoff: 11/13/2020
+ms.locfileid: "94583844"
 ---
 # <a name="availability-group-database-level-health-detection-failover-option"></a>가용성 그룹 데이터베이스 수준의 상태 검색 장애 조치 옵션
 [!INCLUDE [SQL Server](../../../includes/applies-to-version/sqlserver.md)]
@@ -41,16 +41,16 @@ SQL Server 2016부터는 Always On 가용성 그룹을 구성할 때 데이터�
 
 데이터베이스 수준 상태 검색 설정을 사용하도록 설정하는 몇 가지 쉬운 방법이 있습니다.
 
-1. SQL Server Management Studio에서 SQL Server 데이터베이스 엔진에 연결합니다. [개체 탐색기] 창을 사용하여 AlwaysOn 고가용성 노드를 마우스 오른쪽 단추로 클릭하고 **새 가용성 그룹 마법사**를 실행합니다. [이름 지정] 페이지에서 **데이터베이스 수준 상태 검색** 확인란을 선택합니다. 그런 다음 마법사의 나머지 페이지를 완료합니다.
+1. SQL Server Management Studio에서 SQL Server 데이터베이스 엔진에 연결합니다. [개체 탐색기] 창을 사용하여 AlwaysOn 고가용성 노드를 마우스 오른쪽 단추로 클릭하고 **새 가용성 그룹 마법사** 를 실행합니다. [이름 지정] 페이지에서 **데이터베이스 수준 상태 검색** 확인란을 선택합니다. 그런 다음 마법사의 나머지 페이지를 완료합니다.
 
    ![Always On 데이터베이스 상태 사용 확인란](../../../database-engine/availability-groups/windows/media/always-on-enable-database-health-checkbox.png)
 
-2. SQL Server Management Studio에서 기존 가용성 그룹의 **속성**을 봅니다. SQL Server에 연결합니다. [개체 탐색기] 창을 사용하여 Always On 고가용성 노드를 펼칩니다. 가용성 그룹을 펼칩니다. 가용성 그룹을 마우스 오른쪽 단추로 클릭하고 [속성]을 선택합니다. **데이터베이스 수준 상태 검색** 옵션을 선택한 다음 [확인] 또는 [스크립트 변경]을 클릭합니다.
+2. SQL Server Management Studio에서 기존 가용성 그룹의 **속성** 을 봅니다. SQL Server에 연결합니다. [개체 탐색기] 창을 사용하여 Always On 고가용성 노드를 펼칩니다. 가용성 그룹을 펼칩니다. 가용성 그룹을 마우스 오른쪽 단추로 클릭하고 [속성]을 선택합니다. **데이터베이스 수준 상태 검색** 옵션을 선택한 다음 [확인] 또는 [스크립트 변경]을 클릭합니다.
 
    ![Always On AG 속성 - 데이터베이스 수준 상태 검색](../../../database-engine/availability-groups/windows/media/always-on-ag-properties-database-level-health-detection.png)
 
 
-3. **CREATE AVAILABILITY GROUP**에 대한 Transact-SQL 구문 - DB_FAILOVER 매개 변수에는 ON 또는 OFF 값이 허용됩니다.
+3. **CREATE AVAILABILITY GROUP** 에 대한 Transact-SQL 구문 - DB_FAILOVER 매개 변수에는 ON 또는 OFF 값이 허용됩니다.
 
    ```sql
    CREATE AVAILABILITY GROUP [Contoso-ag]
@@ -63,7 +63,7 @@ SQL Server 2016부터는 Always On 가용성 그룹을 구성할 때 데이터�
         FAILOVER_MODE = AUTOMATIC, AVAILABILITY_MODE = SYNCHRONOUS_COMMIT);
     ```
 
-4. **ALTER AVAILABILITY GROUP**에 대한 Transact-SQL 구문 - DB_FAILOVER 매개 변수에는 ON 또는 OFF 값이 허용됩니다.
+4. **ALTER AVAILABILITY GROUP** 에 대한 Transact-SQL 구문 - DB_FAILOVER 매개 변수에는 ON 또는 OFF 값이 허용됩니다.
 
    ```sql
    ALTER AVAILABILITY GROUP [Contoso-ag] SET (DB_FAILOVER = ON);
@@ -128,7 +128,7 @@ select name, db_failover from sys.availability_groups
 
 ### <a name="extended-event-sqlserveravailability_replica_database_fault_reporting"></a>sqlserver.availability_replica_database_fault_reporting 확장 이벤트
 
-SQL Server 2016에서 정의되기 시작한 새로운 확장 이벤트가 있으며, 이는 데이터베이스 수준 상태 검색으로 트리거됩니다.  이벤트 이름은 **sqlserver.availability_replica_database_fault_reporting**입니다.
+SQL Server 2016에서 정의되기 시작한 새로운 확장 이벤트가 있으며, 이는 데이터베이스 수준 상태 검색으로 트리거됩니다.  이벤트 이름은 **sqlserver.availability_replica_database_fault_reporting** 입니다.
 
 이 확장 이벤트는 주 복제본에서만 트리거되며, 가용성 그룹에서 호스팅되는 데이터베이스에 대해 데이터베이스 수준 상태 문제가 검색될 때 트리거됩니다.
 

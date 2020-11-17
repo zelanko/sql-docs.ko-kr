@@ -8,14 +8,14 @@ ms.reviewer: ''
 ms.technology: high-availability
 ms.topic: conceptual
 ms.assetid: f670af56-dbcc-4309-9119-f919dcad8a65
-author: MashaMSFT
-ms.author: mathoma
-ms.openlocfilehash: aa433db303e80610fb8f109d8a0905f888348c1b
-ms.sourcegitcommit: 2f868a77903c1f1c4cecf4ea1c181deee12d5b15
+author: cawrites
+ms.author: chadam
+ms.openlocfilehash: 6633eae12aa231b4b4a97b1c663d6b2e15339ee2
+ms.sourcegitcommit: 54cd97a33f417432aa26b948b3fc4b71a5e9162b
 ms.translationtype: HT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 10/02/2020
-ms.locfileid: "91671146"
+ms.lasthandoff: 11/13/2020
+ms.locfileid: "94583717"
 ---
 # <a name="upgrading-always-on-availability-group-replica-instances"></a>Always On 가용성 그룹 복제본 인스턴스 업그레이드
 [!INCLUDE [SQL Server](../../../includes/applies-to-version/sqlserver.md)]

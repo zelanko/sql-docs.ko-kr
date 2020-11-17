@@ -12,14 +12,14 @@ f1_keywords:
 helpviewer_keywords:
 - Availability Groups [SQL Server], listeners
 ms.assetid: fd9bba9a-d29f-4c23-8ecd-aaa049ed5f1b
-author: MashaMSFT
-ms.author: mathoma
-ms.openlocfilehash: 10af5f8ce1c47fde7870b6382a8f698c26b05130
-ms.sourcegitcommit: 2f868a77903c1f1c4cecf4ea1c181deee12d5b15
+author: cawrites
+ms.author: chadam
+ms.openlocfilehash: 388de3ceb28e4ff8a1e361bf4730c5262bb79544
+ms.sourcegitcommit: 54cd97a33f417432aa26b948b3fc4b71a5e9162b
 ms.translationtype: HT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 10/02/2020
-ms.locfileid: "91670037"
+ms.lasthandoff: 11/13/2020
+ms.locfileid: "94584037"
 ---
 # <a name="remove-an-availability-group-listener-sql-server"></a>가용성 그룹 수신기 제거(SQL Server)
 [!INCLUDE [SQL Server](../../../includes/applies-to-version/sqlserver.md)]
@@ -55,7 +55,7 @@ ms.locfileid: "91670037"
  제거할 수신기의 이름입니다.  
   
  **결과**  
- **성공** 또는 **오류**링크가 표시됩니다. 링크를 클릭하여 자세한 내용을 확인할 수 있습니다.  
+ **성공** 또는 **오류** 링크가 표시됩니다. 링크를 클릭하여 자세한 내용을 확인할 수 있습니다.  
   
 ##  <a name="using-transact-sql"></a><a name="TsqlProcedure"></a> Transact-SQL 사용  
  **가용성 그룹 수신기를 제거하려면**  

@@ -13,14 +13,14 @@ helpviewer_keywords:
 - Availability Groups [SQL Server], availability replicas
 - Availability Groups [SQL Server], configuring
 ms.assetid: 35ddc8b6-3e7c-4417-9a0a-d4987a09ddf7
-author: MashaMSFT
-ms.author: mathoma
-ms.openlocfilehash: 7c699471d7fe811f18284b6e3aab5f0406c6c574
-ms.sourcegitcommit: 2f868a77903c1f1c4cecf4ea1c181deee12d5b15
+author: cawrites
+ms.author: chadam
+ms.openlocfilehash: 1095825bef135237d1341f2eb4f4c46cab9d69bc
+ms.sourcegitcommit: 54cd97a33f417432aa26b948b3fc4b71a5e9162b
 ms.translationtype: HT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 10/02/2020
-ms.locfileid: "91670070"
+ms.lasthandoff: 11/13/2020
+ms.locfileid: "94583990"
 ---
 # <a name="remove-a-secondary-replica-from-an-availability-group-sql-server"></a>가용성 그룹에서 보조 복제본 제거(SQL Server)
 [!INCLUDE [SQL Server](../../../includes/applies-to-version/sqlserver.md)]
@@ -56,7 +56,7 @@ ms.locfileid: "91670070"
   
 5.  선택한 보조 복제본을 마우스 오른쪽 단추로 클릭하고 명령 메뉴에서 **가용성 그룹에서 제거** 를 선택합니다.  
   
-6.  **가용성 그룹에서 보조 복제본 제거** 대화 상자에서 나열된 보조 복제본을 모두 제거하려면 **확인**을 클릭합니다. 나열된 모든 복제본을 제거하지 않으려면 **취소**를 클릭합니다.  
+6.  **가용성 그룹에서 보조 복제본 제거** 대화 상자에서 나열된 보조 복제본을 모두 제거하려면 **확인** 을 클릭합니다. 나열된 모든 복제본을 제거하지 않으려면 **취소** 를 클릭합니다.  
   
 ##  <a name="using-transact-sql"></a><a name="TsqlProcedure"></a> Transact-SQL 사용  
  **보조 복제본을 제거하려면**  
@@ -69,7 +69,7 @@ ms.locfileid: "91670070"
   
      여기서 *group_name* 은 가용성 그룹의 이름이고 *instance_name* 은 보조 복제본이 있는 서버 인스턴스입니다.  
   
-     다음 예에서는 *MyAG* 가용성 그룹에서 보조 복제본을 제거합니다. 대상 보조 복제본은 *COMPUTER02* 라는 컴퓨터에서 *HADR_INSTANCE*라는 서버 인스턴스에 있습니다.  
+     다음 예에서는 *MyAG* 가용성 그룹에서 보조 복제본을 제거합니다. 대상 보조 복제본은 *COMPUTER02* 라는 컴퓨터에서 *HADR_INSTANCE* 라는 서버 인스턴스에 있습니다.  
   
     ```  
     ALTER AVAILABILITY GROUP MyAG REMOVE REPLICA ON 'COMPUTER02\HADR_INSTANCE';  

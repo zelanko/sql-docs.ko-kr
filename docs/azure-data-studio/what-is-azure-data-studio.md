@@ -9,16 +9,16 @@ ms.author: maghan
 ms.reviewer: alayu, sstein
 ms.custom: seodec18, sqlfreshmay19
 ms.date: 10/20/2020
-ms.openlocfilehash: 6ea5bc72ee2f4b5bf421f73a27a85d80a421e00f
-ms.sourcegitcommit: 9c6130d498f1cfe11cde9f2e65c306af2fa8378d
+ms.openlocfilehash: 669379b4db1bd2c975875c443fe6a80e38926a5c
+ms.sourcegitcommit: 2144a22ad4380182133e87664a907fe6f06b5f95
 ms.translationtype: HT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 10/30/2020
-ms.locfileid: "93036687"
+ms.lasthandoff: 11/12/2020
+ms.locfileid: "94570880"
 ---
 # <a name="what-is-azure-data-studio"></a>Azure Data Studio란?
 
-Azure Data Studio는 Windows, macOS, Linux에서 Microsoft 온-프레미스 및 클라우드 데이터 플랫폼 제품군을 사용하는 데이터 전문가를 위한 플랫폼 간 데이터베이스 도구입니다.
+Azure Data Studio는 Windows, macOS, Linux에서 온-프레미스 및 클라우드 데이터 플랫폼을 사용하는 데이터 전문가를 위한 플랫폼 간 데이터베이스 도구입니다.
 
 Azure Data Studio는 IntelliSense, 코드 조각, 원본 제어 통합 및 통합 터미널을 포함하는 최신 편집기 환경을 제공합니다. 데이터 플랫폼 사용자를 대상으로 설계되었으며 쿼리 결과 세트의 기본 제공 차트 기능과 사용자 지정이 가능한 대시보드를 포함합니다.
 

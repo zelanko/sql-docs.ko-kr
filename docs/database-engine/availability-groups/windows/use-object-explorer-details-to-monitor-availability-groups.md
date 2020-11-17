@@ -14,14 +14,14 @@ helpviewer_keywords:
 - Availability Groups [SQL Server], databases
 - Availability Groups [SQL Server]
 ms.assetid: 84affc47-40e0-43d9-855e-468967068c35
-author: MashaMSFT
-ms.author: mathoma
-ms.openlocfilehash: e7ee1430cd764c02c05f2bf3f8f935d397a6155a
-ms.sourcegitcommit: f7ac1976d4bfa224332edd9ef2f4377a4d55a2c9
+author: cawrites
+ms.author: chadam
+ms.openlocfilehash: cc56fad8481141cb208b8fb218c281d12c1e3027
+ms.sourcegitcommit: 54cd97a33f417432aa26b948b3fc4b71a5e9162b
 ms.translationtype: HT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 07/02/2020
-ms.locfileid: "85894165"
+ms.lasthandoff: 11/13/2020
+ms.locfileid: "94583747"
 ---
 # <a name="use-object-explorer-details-to-monitor-availability-groups"></a>개체 탐색기 정보를 사용하여 가용성 그룹 모니터링
 [!INCLUDE [SQL Server](../../../includes/applies-to-version/sqlserver.md)]
@@ -37,7 +37,7 @@ ms.locfileid: "85894165"
 ##  <a name="using-sql-server-management-studio"></a><a name="SSMSProcedure"></a> SQL Server Management Studio 사용  
  **가용성 그룹, 가용성 복제본 및 가용성 데이터베이스를 모니터링하려면**  
   
-1.  보기 메뉴에서 **개체 탐색기 정보**를 클릭하거나 **F7** 키를 누릅니다.  
+1.  보기 메뉴에서 **개체 탐색기 정보** 를 클릭하거나 **F7** 키를 누릅니다.  
   
 2.  개체 탐색기에서 가용성 그룹을 모니터링할 [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] 의 인스턴스에 연결하고 서버 이름을 클릭하여 서버 트리를 확장합니다.  
   
@@ -59,7 +59,7 @@ ms.locfileid: "85894165"
  **가용성 그룹** 정보 화면에 다음 열이 표시됩니다.  
   
  **이름**  
- 선택한 가용성 그룹의 **가용성 복제본**, **가용성 데이터베이스**및 **가용성 그룹** 수신기 폴더를 나열합니다.  
+ 선택한 가용성 그룹의 **가용성 복제본**, **가용성 데이터베이스** 및 **가용성 그룹** 수신기 폴더를 나열합니다.  
   
 ##  <a name="availability-replica-details"></a><a name="AvReplicaDetails"></a> 가용성 복제본 정보  
  **가용성 복제본** 정보 화면에 다음 열이 표시됩니다.  
@@ -115,7 +115,7 @@ ms.locfileid: "85894165"
   
 |값|Description|  
 |-----------|-----------------|  
-|동기화 중|보조 데이터베이스가 디스크에 아직 기록(확정)되지 않은 주 데이터베이스에 대한 트랜잭션 로그 기록을 수신했습니다.<br /><br /> 참고: 비동기 커밋 모드에서 동기화 상태는 항상 **동기화 중**입니다.|  
+|동기화 중|보조 데이터베이스가 디스크에 아직 기록(확정)되지 않은 주 데이터베이스에 대한 트랜잭션 로그 기록을 수신했습니다.<br /><br /> 참고: 비동기 커밋 모드에서 동기화 상태는 항상 **동기화 중** 입니다.|  
 |||  
   
  **일시 중지됨**  

@@ -10,18 +10,18 @@ ms.topic: conceptual
 helpviewer_keywords:
 - Availability Groups [SQL Server], creating
 ms.assetid: 1b0a6421-fbd4-4bb4-87ca-657f4782c433
-author: MashaMSFT
-ms.author: mathoma
-ms.openlocfilehash: a9fbbb9a3827533e2572e5c22e66f2205bfacb32
-ms.sourcegitcommit: 2f868a77903c1f1c4cecf4ea1c181deee12d5b15
+author: cawrites
+ms.author: chadam
+ms.openlocfilehash: 46729830074fbd8540511d802f4a1829a0216795
+ms.sourcegitcommit: 54cd97a33f417432aa26b948b3fc4b71a5e9162b
 ms.translationtype: HT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 10/02/2020
-ms.locfileid: "91669523"
+ms.lasthandoff: 11/13/2020
+ms.locfileid: "94583656"
 ---
 # <a name="use-the-new-availability-group-dialog-box-sql-server-management-studio"></a>새 가용성 그룹 대화 상자 사용(SQL Server Management Studio)
 [!INCLUDE [SQL Server](../../../includes/applies-to-version/sqlserver.md)]
-  이 항목에서는 **의** 새 가용성 그룹 [!INCLUDE[ssManStudioFull](../../../includes/ssmanstudiofull-md.md)] 대화 상자를 사용하여 [!INCLUDE[ssCurrent](../../../includes/sscurrent-md.md)] 을 사용하도록 설정된 [!INCLUDE[ssHADR](../../../includes/sshadr-md.md)]인스턴스에 AlwaysOn 가용성 그룹을 만드는 방법을 설명합니다. *가용성 그룹* 은 단일 단위로 장애 조치(Failover)될 사용자 데이터베이스 집합과 장애 조치(Failover)를 지원하는 장애 조치(Failover) 파트너 집합( *가용성 복제본*이라고 함)을 정의합니다.  
+  이 항목에서는 **의** 새 가용성 그룹 [!INCLUDE[ssManStudioFull](../../../includes/ssmanstudiofull-md.md)] 대화 상자를 사용하여 [!INCLUDE[ssCurrent](../../../includes/sscurrent-md.md)] 을 사용하도록 설정된 [!INCLUDE[ssHADR](../../../includes/sshadr-md.md)]인스턴스에 AlwaysOn 가용성 그룹을 만드는 방법을 설명합니다. *가용성 그룹* 은 단일 단위로 장애 조치(Failover)될 사용자 데이터베이스 집합과 장애 조치(Failover)를 지원하는 장애 조치(Failover) 파트너 집합( *가용성 복제본* 이라고 함)을 정의합니다.  
   
 > [!NOTE]  
 >  가용성 그룹에 대한 개요를 보려면 [Always On 가용성 그룹 개요&#40;SQL Server&#41;](../../../database-engine/availability-groups/windows/overview-of-always-on-availability-groups-sql-server.md)인스턴스에 AlwaysOn 가용성 그룹을 만드는 방법을 설명합니다.  
@@ -63,18 +63,18 @@ ms.locfileid: "91669523"
   
 5.  **일반** 페이지의 **가용성 그룹 이름** 필드에 새 가용성 그룹의 이름을 입력합니다. 이 이름은 WSFC 클러스터의 모든 가용성 그룹에서 고유한 올바른 SQL Server 식별자여야 합니다. 가용성 그룹 이름의 최대 길이는 128자입니다.  
   
-6.  **가용성 데이터베이스** 표에서 **추가** 를 클릭하고 이 가용성 그룹에 포함할 로컬 데이터베이스 이름을 입력합니다. 추가할 모든 데이터베이스에 대해 이 동작을 반복합니다. **확인**을 클릭하면 지정된 데이터베이스가 가용성 그룹에 속하기 위한 사전 요구 사항을 충족하는지 여부가 확인됩니다. 이러한 필수 조건에 대한 자세한 내용은 [Always On 가용성 그룹에 대한 필수 조건, 제한 사항 및 권장 사항&#40;SQL Server&#41;](../../../database-engine/availability-groups/windows/prereqs-restrictions-recommendations-always-on-availability.md)인스턴스에 AlwaysOn 가용성 그룹을 만드는 방법을 설명합니다.  
+6.  **가용성 데이터베이스** 표에서 **추가** 를 클릭하고 이 가용성 그룹에 포함할 로컬 데이터베이스 이름을 입력합니다. 추가할 모든 데이터베이스에 대해 이 동작을 반복합니다. **확인** 을 클릭하면 지정된 데이터베이스가 가용성 그룹에 속하기 위한 사전 요구 사항을 충족하는지 여부가 확인됩니다. 이러한 필수 조건에 대한 자세한 내용은 [Always On 가용성 그룹에 대한 필수 조건, 제한 사항 및 권장 사항&#40;SQL Server&#41;](../../../database-engine/availability-groups/windows/prereqs-restrictions-recommendations-always-on-availability.md)인스턴스에 AlwaysOn 가용성 그룹을 만드는 방법을 설명합니다.  
   
 7.  **가용성 데이터베이스** 표에서 **추가** 를 클릭하여 보조 복제본을 호스팅할 서버 인스턴스 이름을 입력합니다. 이 대화 상자에서는 해당 인스턴스에 연결하려고 시도하지 않습니다. 잘못된 서버 이름을 지정하면 보조 복제본이 추가되지만 이 복제본에는 연결할 수 없습니다.  
   
     > [!TIP]  
     >  복제본을 추가했지만 호스트 서버 인스턴스에 연결할 수 없는 경우 해당 복제본을 제거하고 새 복제본을 추가합니다. 자세한 내용은 [가용성 그룹에서 보조 복제본 제거&#40;SQL Server&#41;](../../../database-engine/availability-groups/windows/remove-a-secondary-replica-from-an-availability-group-sql-server.md) 및 [가용성 그룹에 보조 복제본 추가&#40;SQL Server&#41;](../../../database-engine/availability-groups/windows/add-a-secondary-replica-to-an-availability-group-sql-server.md)를 참조하세요.  
   
-8.  대화 상자의 **페이지 선택** 창에서 **백업 기본 설정**을 클릭합니다. 그런 다음 **백업 기본 설정** 페이지에서 복제본 역할에 따라 백업을 실행할 위치를 지정하고 이 가용성 그룹에 대한 가용성 복제본을 호스팅할 각 서버 인스턴스에 백업 속성을 할당합니다. 자세한 내용은 [가용성 그룹 속성: 새 가용성 그룹 &#40;백업 기본 설정 페이지&#41;](../../../database-engine/availability-groups/windows/availability-group-properties-new-availability-group-backup-preferences-page.md)를 참조하세요.  
+8.  대화 상자의 **페이지 선택** 창에서 **백업 기본 설정** 을 클릭합니다. 그런 다음 **백업 기본 설정** 페이지에서 복제본 역할에 따라 백업을 실행할 위치를 지정하고 이 가용성 그룹에 대한 가용성 복제본을 호스팅할 각 서버 인스턴스에 백업 속성을 할당합니다. 자세한 내용은 [가용성 그룹 속성: 새 가용성 그룹 &#40;백업 기본 설정 페이지&#41;](../../../database-engine/availability-groups/windows/availability-group-properties-new-availability-group-backup-preferences-page.md)를 참조하세요.  
   
-9. 가용성 그룹을 만들려면 **확인**을 클릭합니다. 이렇게 하면 지정된 데이터베이스가 사전 요구 사항을 충족하는지 여부가 확인됩니다.  
+9. 가용성 그룹을 만들려면 **확인** 을 클릭합니다. 이렇게 하면 지정된 데이터베이스가 사전 요구 사항을 충족하는지 여부가 확인됩니다.  
   
-     가용성 그룹을 만들지 않고 대화 상자를 종료하려면 **취소**를 클릭합니다.  
+     가용성 그룹을 만들지 않고 대화 상자를 종료하려면 **취소** 를 클릭합니다.  
   
 ##  <a name="follow-up-after-using-the-new-availability-group-dialog-box-to-create-an-availability-group"></a><a name="FollowUp"></a> 후속 작업: 새 가용성 그룹 대화 상자를 사용하여 가용성 그룹을 만든 후  
   

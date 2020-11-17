@@ -15,14 +15,14 @@ helpviewer_keywords:
 - Availability Groups [SQL Server], configuring
 - Availability Groups [SQL Server], databases
 ms.assetid: 6d4ca31e-ddf0-44bf-be5e-a5da060bf096
-author: MashaMSFT
-ms.author: mathoma
-ms.openlocfilehash: 4098fd48f44200dd7b878f417d7009d324b2e1aa
-ms.sourcegitcommit: 2f868a77903c1f1c4cecf4ea1c181deee12d5b15
+author: cawrites
+ms.author: chadam
+ms.openlocfilehash: c42edc276052e7558dd8224d38a56a4ab7c6f269
+ms.sourcegitcommit: 54cd97a33f417432aa26b948b3fc4b71a5e9162b
 ms.translationtype: HT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 10/02/2020
-ms.locfileid: "91670095"
+ms.lasthandoff: 11/13/2020
+ms.locfileid: "94584048"
 ---
 # <a name="remove-a-primary-database-from-an-always-on-availability-group"></a>Always On 가용성 그룹에서 주 데이터베이스 제거
 [!INCLUDE [SQL Server](../../../includes/applies-to-version/sqlserver.md)]
@@ -53,7 +53,7 @@ ms.locfileid: "91670095"
   
 5.  선택한 데이터베이스를 마우스 오른쪽 단추로 클릭하고 명령 메뉴에서 **가용성 그룹에서 데이터베이스 제거** 를 선택합니다.  
   
-6.  **가용성 그룹에서 데이터베이스 제거** 대화 상자에서 나열된 데이터베이스를 모두 제거하려면 **확인**을 클릭합니다. 모든 데이터베이스를 제거하지 않으려면 **취소**를 클릭합니다.  
+6.  **가용성 그룹에서 데이터베이스 제거** 대화 상자에서 나열된 데이터베이스를 모두 제거하려면 **확인** 을 클릭합니다. 모든 데이터베이스를 제거하지 않으려면 **취소** 를 클릭합니다.  
   
 ##  <a name="using-transact-sql"></a><a name="TsqlProcedure"></a> Transact-SQL 사용  
  **가용성 데이터베이스를 제거하려면**  

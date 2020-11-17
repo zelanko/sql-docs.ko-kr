@@ -11,14 +11,14 @@ helpviewer_keywords:
 - Availability Groups [SQL Server], about
 - Availability Groups [SQL Server], Transact-SQL statements
 ms.assetid: 184d0a81-2259-4db9-9d0d-01aac0b502c8
-author: MashaMSFT
-ms.author: mathoma
-ms.openlocfilehash: b61b7a4bd994283bbed79d3e41a3b1c94052d015
-ms.sourcegitcommit: f7ac1976d4bfa224332edd9ef2f4377a4d55a2c9
+author: cawrites
+ms.author: chadam
+ms.openlocfilehash: 8d984fd28fe1682b7cbcdc43db90b5c686f03c90
+ms.sourcegitcommit: 54cd97a33f417432aa26b948b3fc4b71a5e9162b
 ms.translationtype: HT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 07/02/2020
-ms.locfileid: "85900725"
+ms.lasthandoff: 11/13/2020
+ms.locfileid: "94583773"
 ---
 # <a name="transact-sql-statements-for-always-on-availability-groups"></a>Always On 가용성 그룹에 대한 Transact-SQL 문
 [!INCLUDE [SQL Server](../../../includes/applies-to-version/sqlserver.md)]

@@ -51,7 +51,7 @@ ms.locfileid: "88427395"
 > [!NOTE]  
 >  트리거 동작이 데이터 수정의 영향을 받는 행의 수에 따라 달라지는 경우 여러 행 데이터 수정(SELECT 문을 기반으로 하는 INSERT, DELETE 또는 UPDATE)에 @@ROWCOUNT 검사 같은 테스트를 사용하고 적합한 작업을 수행합니다. 자세한 내용은 [Create DML Triggers to Handle Multiple Rows of Data](../../relational-databases/triggers/create-dml-triggers-to-handle-multiple-rows-of-data.md)를 참조하세요.
   
- [!INCLUDE[ssCurrent](../../includes/sscurrent-md.md)] 에서는 inserted 및 deleted 테이블에서 AFTER 트리거에 대한 **text** , **ntext** 또는 **image** 열 참조를 허용하지 않습니다. 하지만 이러한 데이터 형식은 단지 이전 버전과의 호환성을 위해 포함된 것입니다. 큰 데이터를 스토리지하는 경우 **varchar(max)** , **nvarchar(max)** 및 **varbinary(max)** 데이터 형식을 사용하는 것이 좋습니다. AFTER 및 INSTEAD OF 트리거는 모두 inserted 및 deleted 테이블에서 **varchar(max)** , **nvarchar(max)** 및 **varbinary(max)** 데이터를 지원합니다. 자세한 내용은 [CREATE TRIGGER&#40;Transact-SQL&#41;](../../t-sql/statements/create-trigger-transact-sql.md)를 참조하세요.  
+ [!INCLUDE[ssCurrent](../../includes/sscurrent-md.md)] 에서는 inserted 및 deleted 테이블에서 AFTER 트리거에 대한 **text**, **ntext** 또는 **image** 열 참조를 허용하지 않습니다. 하지만 이러한 데이터 형식은 단지 이전 버전과의 호환성을 위해 포함된 것입니다. 큰 데이터를 스토리지하는 경우 **varchar(max)** , **nvarchar(max)** 및 **varbinary(max)** 데이터 형식을 사용하는 것이 좋습니다. AFTER 및 INSTEAD OF 트리거는 모두 inserted 및 deleted 테이블에서 **varchar(max)** , **nvarchar(max)** 및 **varbinary(max)** 데이터를 지원합니다. 자세한 내용은 [CREATE TRIGGER&#40;Transact-SQL&#41;](../../t-sql/statements/create-trigger-transact-sql.md)를 참조하세요.  
   
  **비즈니스 규칙을 적용하기 위해 트리거의 inserted 테이블을 사용하는 예**  
   

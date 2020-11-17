@@ -15,14 +15,14 @@ helpviewer_keywords:
 - Availability Groups [SQL Server], suspending a database
 - Availability Groups [SQL Server], databases
 ms.assetid: 86858982-6af1-4e80-9a93-87451f0d7ee9
-author: MashaMSFT
-ms.author: mathoma
-ms.openlocfilehash: 6e6dc21e1fb7e61b6d2b68524ea16c5b072003cc
-ms.sourcegitcommit: 2f868a77903c1f1c4cecf4ea1c181deee12d5b15
+author: cawrites
+ms.author: chadam
+ms.openlocfilehash: 6550c409ee45e3287c6edf691fe9d5993e531a5a
+ms.sourcegitcommit: 54cd97a33f417432aa26b948b3fc4b71a5e9162b
 ms.translationtype: HT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 10/02/2020
-ms.locfileid: "91670876"
+ms.lasthandoff: 11/13/2020
+ms.locfileid: "94583804"
 ---
 # <a name="suspend-an-availability-database-sql-server"></a>가용성 데이터베이스 일시 중지(SQL Server)
 [!INCLUDE [SQL Server](../../../includes/applies-to-version/sqlserver.md)]
@@ -87,9 +87,9 @@ ms.locfileid: "91670876"
   
 3.  가용성 그룹을 확장합니다.  
   
-4.  **가용성 데이터베이스** 노드를 확장하고 데이터베이스를 마우스 오른쪽 단추로 누른 다음 **데이터 이동 일시 중지**를 클릭합니다.  
+4.  **가용성 데이터베이스** 노드를 확장하고 데이터베이스를 마우스 오른쪽 단추로 누른 다음 **데이터 이동 일시 중지** 를 클릭합니다.  
   
-5.  **데이터 이동 일시 중지** 대화 상자에서 **확인**을 클릭합니다.  
+5.  **데이터 이동 일시 중지** 대화 상자에서 **확인** 을 클릭합니다.  
   
      개체 탐색기에서 데이터베이스 아이콘이 일시 중지 표시기로 변경되어 데이터베이스가 일시 중지되었음을 나타냅니다.  
   

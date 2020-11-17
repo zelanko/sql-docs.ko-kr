@@ -6,15 +6,15 @@ ms.technology: azure-data-studio
 ms.topic: quickstart
 author: yualan
 ms.author: alayu
-ms.reviewer: alayu, jrasnick
+ms.reviewer: maghan, jrasnick
 ms.custom: seodec18; seo-lt-2019
 ms.date: 10/15/2020
-ms.openlocfilehash: 526349f9e6ca186b8555d52f76f3663c0862503c
-ms.sourcegitcommit: ef20f39a17fd4395dd2dd37b8dd91b57328a751c
+ms.openlocfilehash: 1b0fe9ee55f9e0e1243ea72e8160b39a95876a55
+ms.sourcegitcommit: 2144a22ad4380182133e87664a907fe6f06b5f95
 ms.translationtype: HT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 10/28/2020
-ms.locfileid: "92793700"
+ms.lasthandoff: 11/12/2020
+ms.locfileid: "94570929"
 ---
 # <a name="quickstart-use-azure-data-studio-to-connect-and-query-data-using-a-dedicated-sql-pool-in-azure-synapse-analytics"></a>빠른 시작: Azure Data Studio를 통해 Azure Synapse Analytics의 전용 SQL 풀을 사용하여 데이터 연결 및 쿼리
 
@@ -118,7 +118,7 @@ Azure Data Studio를 통해 Azure Synapse Analytics 서버에 연결합니다.
       SELECT 4, N'Janet', N'United States', N'janet1@adventure-works.com'
    ```
 
-    :::image type="content" source="media/quickstart-sql-dw/create-rows.png" alt-text="TutorialDB 데이터베이스에 테이블 만들기":::
+    :::image type="content" source="media/quickstart-sql-dw/create-rows.png" alt-text="테이블에 행 만들기":::
 
 ## <a name="view-the-result"></a>결과 보기
 
@@ -131,7 +131,7 @@ Azure Data Studio를 통해 Azure Synapse Analytics 서버에 연결합니다.
 
 2. 쿼리 결과가 다음과 같이 표시됩니다.
 
-    :::image type="content" source="media/quickstart-sql-dw/view-results.png" alt-text="TutorialDB 데이터베이스에 테이블 만들기":::
+    :::image type="content" source="media/quickstart-sql-dw/view-results.png" alt-text="결과 보기":::
 
 
 ## <a name="clean-up-resources"></a>리소스 정리

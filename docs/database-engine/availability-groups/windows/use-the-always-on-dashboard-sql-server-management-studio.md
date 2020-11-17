@@ -13,14 +13,14 @@ helpviewer_keywords:
 - Availability Groups [SQL Server], policies
 - Availability Groups [SQL Server], dashboard
 ms.assetid: c9ba2589-139e-42bc-99e1-94546717c64d
-author: MashaMSFT
-ms.author: mathoma
-ms.openlocfilehash: 6b63ae0e77cc521d6d882eab340cbfa3b761e41d
-ms.sourcegitcommit: 2f868a77903c1f1c4cecf4ea1c181deee12d5b15
+author: cawrites
+ms.author: chadam
+ms.openlocfilehash: 80b7f3e83af181676f09a6dc38b3652ae6142c89
+ms.sourcegitcommit: 54cd97a33f417432aa26b948b3fc4b71a5e9162b
 ms.translationtype: HT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 10/02/2020
-ms.locfileid: "91670387"
+ms.lasthandoff: 11/13/2020
+ms.locfileid: "94583665"
 ---
 # <a name="use-the-always-on-availability-group-dashboard-sql-server-management-studio"></a>Always On 가용성 그룹 대시보드 사용(SQL Server Management Studio)
 [!INCLUDE [SQL Server](../../../includes/applies-to-version/sqlserver.md)]
@@ -52,16 +52,16 @@ ms.locfileid: "91670387"
   
 1.  개체 탐색기에서 Always On 대시보드를 실행할 [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] 인스턴스에 연결합니다.  
   
-2.  **Always On 고가용성** 노드를 확장하고 **가용성 그룹** 노드를 마우스 오른쪽 단추로 클릭한 다음 **대시보드 표시**를 클릭합니다.  
+2.  **Always On 고가용성** 노드를 확장하고 **가용성 그룹** 노드를 마우스 오른쪽 단추로 클릭한 다음 **대시보드 표시** 를 클릭합니다.  
   
 ##  <a name="change-always-on-dashboard-options"></a>Always On 대시보드 옵션 변경  
  [!INCLUDE[ssManStudioFull](../../../includes/ssmanstudiofull-md.md)]**옵션** 대화 상자를 사용하여 자동 정의된 Always On 정책 자동 새로 고침 및 사용을 위한 [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] Always On 대시보드 동작을 구성할 수 있습니다.  
   
-1.  **도구** 메뉴에서 **옵션**을 클릭합니다.  
+1.  **도구** 메뉴에서 **옵션** 을 클릭합니다.  
   
-2.  대시보드를 자동으로 새로 고치려면 **옵션** 대화 상자에서 **자동 새로 고침 설정**을 선택하고 새로 고침 간격(초)을 입력한 다음 연결을 다시 시도할 횟수를 입력합니다.  
+2.  대시보드를 자동으로 새로 고치려면 **옵션** 대화 상자에서 **자동 새로 고침 설정** 을 선택하고 새로 고침 간격(초)을 입력한 다음 연결을 다시 시도할 횟수를 입력합니다.  
   
-3.  사용자 정의 정책을 사용하도록 설정하려면 **사용자 정의 Always On 정책 사용**을 선택합니다.  
+3.  사용자 정의 정책을 사용하도록 설정하려면 **사용자 정의 Always On 정책 사용** 을 선택합니다.  
   
 ##  <a name="availability-group-summary"></a>가용성 그룹 요약  
  가용성 그룹 화면에 연결된 서버 인스턴스가 복제본을 호스팅하는 각 가용성 그룹에 대한 요약 행을 표시합니다. 이 창에는 다음과 같은 열이 표시됩니다.  
@@ -106,7 +106,7 @@ ms.locfileid: "91670387"
   
 ##  <a name="availability-replica-details"></a><a name="AvReplicaDetails"></a> 가용성 복제본 정보  
 
-주 복제본에 연결하는 경우 **가용성 복제본 정보**는 가용성 그룹에 있는 모든 복제본의 정보를 보여 줍니다. 보조 복제본에 연결되면 화면에는 연결된 복제본의 정보만 표시됩니다.  
+주 복제본에 연결하는 경우 **가용성 복제본 정보** 는 가용성 그룹에 있는 모든 복제본의 정보를 보여 줍니다. 보조 복제본에 연결되면 화면에는 연결된 복제본의 정보만 표시됩니다.  
 
 **가용성 복제본** 창에 다음 열이 표시됩니다.  
   
@@ -189,7 +189,7 @@ ms.locfileid: "91670387"
 >  가용성 복제본의 성능 카운터에 대한 자세한 내용은 [SQL Server, 가용성 복제본](../../../relational-databases/performance-monitor/sql-server-availability-replica.md)을 참조하세요.  
   
 ##  <a name="group-by-availability-group-information"></a>가용성 그룹 정보에 따른 그룹화  
- 정보를 그룹화하려면 **그룹화 방법**을 클릭하고 다음 중 하나를 선택합니다.  
+ 정보를 그룹화하려면 **그룹화 방법** 을 클릭하고 다음 중 하나를 선택합니다.  
   
 -   **가용성 복제본**    
 -   **가용성 데이터베이스** 
@@ -253,7 +253,7 @@ ms.locfileid: "91670387"
  모든 Always On 정책 문제 목록은 [Always On 가용성 그룹의 운영 문제에 대한 Always On 정책&#40;SQL Server&#41;](../../../database-engine/availability-groups/windows/always-on-policies-for-operational-issues-always-on-availability.md)을 참조하세요.  
   
  **일시 중지됨**  
- 데이터베이스가 **일시 중지됨** 상태인지 아니면 **재개됨**상태인지 나타냅니다. 이 값은 기본적으로 숨겨집니다.  
+ 데이터베이스가 **일시 중지됨** 상태인지 아니면 **재개됨** 상태인지 나타냅니다. 이 값은 기본적으로 숨겨집니다.  
   
  **일시 중지 원인**  
  일시 중지됨 상태에 대한 이유를 나타냅니다. 이 값은 기본적으로 숨겨집니다.  
@@ -329,7 +329,7 @@ ms.locfileid: "91670387"
 ## <a name="always-on-availability-group-latency-reports"></a>Always On 가용성 그룹 대기 시간 보고서
 가용성 그룹 대기 시간 보고서는 가용성 그룹 대시보드에 기본 제공되는 보고 도구이며 [SQL Server Management Studio 17.4](../../../ssms/download-sql-server-management-studio-ssms.md) 릴리스에서 사용할 수 있습니다. 이 기능은 로그 전송 프로세스의 다양한 단계에서 소요된 시간을 자세히 설명하는 이해하기 쉬운 보고서를 제공합니다. 이를 통해 동기화 프로세스 중 대기 시간의 잠재적 원인을 줄이는 방법을 제공합니다. 
 
-SQL 에이전트는 데이터 수집을 실행하고 주 복제본과 보조 복제본 중 하나 이상에서 사용할 수 있어야 합니다. SQL Server Management Studio의 **개체 탐색기**에서 가용성 그룹 > 보고서 > 표준 보고서를 마우스 오른쪽 단추로 클릭하여 보고서를 봅니다.  
+SQL 에이전트는 데이터 수집을 실행하고 주 복제본과 보조 복제본 중 하나 이상에서 사용할 수 있어야 합니다. SQL Server Management Studio의 **개체 탐색기** 에서 가용성 그룹 > 보고서 > 표준 보고서를 마우스 오른쪽 단추로 클릭하여 보고서를 봅니다.  
 
 자세한 내용은 [Always On 가용성 그룹 대기 시간 보고서](/archive/blogs/sql_server_team/new-in-ssms-always-on-availability-group-latency-reports)를 참조하세요.
 

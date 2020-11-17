@@ -15,14 +15,14 @@ helpviewer_keywords:
 - primary databases [SQL Server], in availability group
 - Availability Groups [SQL Server], databases
 ms.assetid: 20e9147b-e985-4caa-910e-fc4b38dbf9a1
-author: MashaMSFT
-ms.author: mathoma
-ms.openlocfilehash: d61c530983b68186f49f93e0f0983fc060b07bca
-ms.sourcegitcommit: 2f868a77903c1f1c4cecf4ea1c181deee12d5b15
+author: cawrites
+ms.author: chadam
+ms.openlocfilehash: 7e2ea65c58dbc3c22dcda8a5766913079f0baaf1
+ms.sourcegitcommit: 54cd97a33f417432aa26b948b3fc4b71a5e9162b
 ms.translationtype: HT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 10/02/2020
-ms.locfileid: "91670074"
+ms.lasthandoff: 11/13/2020
+ms.locfileid: "94583973"
 ---
 # <a name="resume-an-availability-database-sql-server"></a>가용성 데이터베이스 재개(SQL Server)
 [!INCLUDE [SQL Server](../../../includes/applies-to-version/sqlserver.md)]
@@ -57,9 +57,9 @@ ms.locfileid: "91670074"
   
 3.  가용성 그룹을 확장합니다.  
   
-4.  **가용성 데이터베이스** 노드를 확장하고 데이터베이스를 마우스 오른쪽 단추로 누른 다음 **데이터 이동 재개**를 클릭합니다.  
+4.  **가용성 데이터베이스** 노드를 확장하고 데이터베이스를 마우스 오른쪽 단추로 누른 다음 **데이터 이동 재개** 를 클릭합니다.  
   
-5.  **데이터 이동 재개** 대화 상자에서 **확인**을 클릭합니다.  
+5.  **데이터 이동 재개** 대화 상자에서 **확인** 을 클릭합니다.  
   
 > [!NOTE]  
 >  이 복제본 위치에서 추가 데이터베이스를 재개하려면 각 데이터베이스에 대해 4-5단계를 반복합니다.  
