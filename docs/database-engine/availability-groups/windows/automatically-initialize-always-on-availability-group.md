@@ -8,14 +8,14 @@ ms.reviewer: ''
 ms.technology: high-availability
 ms.topic: how-to
 ms.assetid: 67c6a601-677a-402b-b3d1-8c65494e9e96
-author: MashaMSFT
-ms.author: mathoma
-ms.openlocfilehash: a8dea3150b7dbdbb1b69e82f80723e5651681ef8
-ms.sourcegitcommit: c7f40918dc3ecdb0ed2ef5c237a3996cb4cd268d
+author: cawrites
+ms.author: chadam
+ms.openlocfilehash: 81724be8012eea9aa1c6fcefbb7becc4a96092bf
+ms.sourcegitcommit: 54cd97a33f417432aa26b948b3fc4b71a5e9162b
 ms.translationtype: HT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 10/05/2020
-ms.locfileid: "91726532"
+ms.lasthandoff: 11/13/2020
+ms.locfileid: "94584748"
 ---
 # <a name="use-automatic-seeding-to-initialize-an-always-on-availability-group"></a>자동 시드를 사용하여 Always On 가용성 그룹 초기화
 [!INCLUDE [SQL Server](../../../includes/applies-to-version/sqlserver.md)]
@@ -165,11 +165,11 @@ FROM sys.dm_hadr_automatic_seeding
 SELECT * FROM sys.dm_hadr_physical_seeding_stats;
 ```
 
-두 열 *total_disk_io_wait_time_ms* 및 *total_network_wait_time_ms*는 자동 시드 프로세스에서 성능 병목 상태를 확인하는 데 사용할 수 있습니다. 또한 두 열은 확장된 이벤트 *hadr_physical_seeding_progress*에 존재합니다.
+두 열 *total_disk_io_wait_time_ms* 및 *total_network_wait_time_ms* 는 자동 시드 프로세스에서 성능 병목 상태를 확인하는 데 사용할 수 있습니다. 또한 두 열은 확장된 이벤트 *hadr_physical_seeding_progress* 에 존재합니다.
 
-**total_disk_io_wait_time_ms**는 디스크에서 대기하는 동안 백업/복원 스레드에서 소요된 시간을 나타냅니다. 이 값은 시드 작업이 시작된 이후 누적됩니다. 디스크가 백업 스트림을 읽거나 쓰는 데 준비되지 않은 경우 백업/복원 스레드가 절전 상태로 전환되고 디스크가 준비되었는지 확인하기 위해 1초 간격으로 다시 시작합니다.
+**total_disk_io_wait_time_ms** 는 디스크에서 대기하는 동안 백업/복원 스레드에서 소요된 시간을 나타냅니다. 이 값은 시드 작업이 시작된 이후 누적됩니다. 디스크가 백업 스트림을 읽거나 쓰는 데 준비되지 않은 경우 백업/복원 스레드가 절전 상태로 전환되고 디스크가 준비되었는지 확인하기 위해 1초 간격으로 다시 시작합니다.
         
-**total_network_wait_time_ms**는 주 복제본과 보조 복제본에 대해 다르게 해석됩니다. 주 복제본에서 이 카운터는 네트워크 흐름 제어 시간을 나타냅니다. 보조 복제본에서는 메시지가 디스크를 쓸 수 있을 때까지 복원 스레드가 대기하는 시간을 나타냅니다.
+**total_network_wait_time_ms** 는 주 복제본과 보조 복제본에 대해 다르게 해석됩니다. 주 복제본에서 이 카운터는 네트워크 흐름 제어 시간을 나타냅니다. 보조 복제본에서는 메시지가 디스크를 쓸 수 있을 때까지 복원 스레드가 대기하는 시간을 나타냅니다.
 
 ### <a name="diagnose-database-initialization-using-automatic-seeding-in-the-error-log"></a>오류 로그에서 자동 시드를 사용 중인 데이터베이스 초기화 진단
 

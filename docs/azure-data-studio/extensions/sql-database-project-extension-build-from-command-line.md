@@ -9,12 +9,12 @@ ms.author: drskwier
 ms.reviewer: maghan, sstein
 ms.custom: ''
 ms.date: 08/07/2020
-ms.openlocfilehash: a6849f13f8182285749c7a95801ee111e7ba0130
-ms.sourcegitcommit: c4d6804bde7eaf72d9233d6d43f77d77d1b17c4e
+ms.openlocfilehash: 060039496d5877951e5255fce5e6cac2321731c6
+ms.sourcegitcommit: 31f3405be08441471f441395f1d0f0017ebc0ad5
 ms.translationtype: HT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 10/01/2020
-ms.locfileid: "91624680"
+ms.lasthandoff: 11/13/2020
+ms.locfileid: "94617931"
 ---
 # <a name="build-a-database-project-from-command-line"></a>명령줄에서 데이터베이스 프로젝트 빌드
 
@@ -24,7 +24,7 @@ Azure Data Studio용 SQL Database 프로젝트 확장에서 [데이터베이스 
 
 1. [Azure Data Studio용 SQL 데이터베이스 프로젝트 확장을 설치 및 구성](sql-database-project-extension.md)합니다.
 
-2. 다음 .NET Core dll 및 대상 파일 `Microsoft.Data.Tools.Schema.SqlTasts.targets`는 SQL Database Projects용 Azure Data Studio 확장에서 지원하는 모든 플랫폼의 명령줄에서 SQL 데이터베이스 프로젝트를 빌드하는 데 필요합니다. 이러한 파일은 Azure Data Studio 인터페이스에서 완료되는 첫 번째 빌드 중에 확장에서 만들어지며 `BuildDirectory`의 확장 폴더에 배치됩니다.  예를 들어 Linux에서는 이러한 파일이 `~\.azuredatastudio\extensions\microsoft.sql-database-projects-x.x.x\BuildDirectory\`에 배치됩니다.  다음 10개 파일을 액세스할 수 있는 새 폴더에 복사하거나 해당 위치를 적어 둡니다.  이 문서에서는 해당 위치가 `DotNet Core build folder`입니다.
+2. 다음 .NET Core dll 및 대상 파일 `Microsoft.Data.Tools.Schema.SqlTasks.targets`는 SQL Database Projects용 Azure Data Studio 확장에서 지원하는 모든 플랫폼의 명령줄에서 SQL 데이터베이스 프로젝트를 빌드하는 데 필요합니다. 이러한 파일은 Azure Data Studio 인터페이스에서 완료되는 첫 번째 빌드 중에 확장에서 만들어지며 `BuildDirectory`의 확장 폴더에 배치됩니다.  예를 들어 Linux에서는 이러한 파일이 `~\.azuredatastudio\extensions\microsoft.sql-database-projects-x.x.x\BuildDirectory\`에 배치됩니다.  다음 10개 파일을 액세스할 수 있는 새 폴더에 복사하거나 해당 위치를 적어 둡니다.  이 문서에서는 해당 위치가 `DotNet Core build folder`입니다.
 
     - Microsoft.Data.Tools.Schema.Sql.dll
     - Microsoft.Data.Tools.Schema.Tasks.Sql.dll

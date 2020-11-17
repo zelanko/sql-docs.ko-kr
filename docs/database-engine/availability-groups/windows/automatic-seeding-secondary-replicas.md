@@ -10,14 +10,14 @@ ms.topic: how-to
 helpviewer_keywords:
 - Automatic seeding [SQL Server], secondary replica
 ms.assetid: ''
-author: MashaMSFT
-ms.author: mathoma
-ms.openlocfilehash: 36568ea6c9358954e390767e8f49e49d5e7f7b40
-ms.sourcegitcommit: c7f40918dc3ecdb0ed2ef5c237a3996cb4cd268d
+author: cawrites
+ms.author: chadam
+ms.openlocfilehash: b4c593a1486c7cf7d7030c7ddcbbf971533bc707
+ms.sourcegitcommit: 54cd97a33f417432aa26b948b3fc4b71a5e9162b
 ms.translationtype: HT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 10/05/2020
-ms.locfileid: "91726555"
+ms.lasthandoff: 11/13/2020
+ms.locfileid: "94584787"
 ---
 # <a name="use-automatic-seeding-to-initialize-a-secondary-replica-for-an-always-on-availability-group"></a>자동 시드를 사용하여 Always On 가용성 그룹의 보조 복제본을 초기화합니다.
 [!INCLUDE [SQL Server](../../../includes/applies-to-version/sqlserver.md)]

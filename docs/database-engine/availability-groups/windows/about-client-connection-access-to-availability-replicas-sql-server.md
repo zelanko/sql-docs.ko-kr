@@ -15,14 +15,14 @@ helpviewer_keywords:
 - Availability Groups [SQL Server], client connectivity
 - Availability Groups [SQL Server], active secondary replicas
 ms.assetid: 29027e46-43e4-4b45-b650-c4cdeacdf552
-author: MashaMSFT
-ms.author: mathoma
-ms.openlocfilehash: fc0568a32bae1f9c31fe4d20ff6ae2139d325acd
-ms.sourcegitcommit: c7f40918dc3ecdb0ed2ef5c237a3996cb4cd268d
+author: cawrites
+ms.author: chadam
+ms.openlocfilehash: 12d7db7b49c15954240843b13d750ea1d64503f3
+ms.sourcegitcommit: 54cd97a33f417432aa26b948b3fc4b71a5e9162b
 ms.translationtype: HT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 10/05/2020
-ms.locfileid: "91724623"
+ms.lasthandoff: 11/13/2020
+ms.locfileid: "94584920"
 ---
 # <a name="types-of-client-connections-to-replicas-within-an-always-on-availability-group"></a>Always On 가용성 그룹 내의 복제본에 대한 클라이언트 연결 유형
 [!INCLUDE [SQL Server](../../../includes/applies-to-version/sqlserver.md)]
@@ -80,7 +80,7 @@ ms.locfileid: "91724623"
  해당 복제본에 대한 클라이언트 연결을 허용하도록 가용성 그룹을 구성하는 방법은 [가용성 그룹 수신기, 클라이언트 연결 및 애플리케이션 장애 조치(failover)&#40;SQL Server&#41;](../../../database-engine/availability-groups/windows/listeners-client-connectivity-application-failover.md)을 참조하세요.  
   
 ### <a name="example-connection-access-configuration"></a>연결 액세스 구성의 예  
- 구성 액세스에 대해 가용성 복제본을 구성하는 방법에 따라 가용성 그룹이 장애 조치된 후 클라이언트 연결에 대한 지원이 변경될 수 있습니다. 예를 들어 원격 비동기 커밋 보조 복제본에서 보고가 수행되는 가용성 그룹의 경우, 모든 읽기 전용 연결이 읽기 전용 연결이 되도록 이 가용성 그룹의 데이터베이스에 대한 모든 읽기 전용 애플리케이션은 **애플리케이션 의도** 연결 속성을 **ReadOnly**로 설정합니다.  
+ 구성 액세스에 대해 가용성 복제본을 구성하는 방법에 따라 가용성 그룹이 장애 조치된 후 클라이언트 연결에 대한 지원이 변경될 수 있습니다. 예를 들어 원격 비동기 커밋 보조 복제본에서 보고가 수행되는 가용성 그룹의 경우, 모든 읽기 전용 연결이 읽기 전용 연결이 되도록 이 가용성 그룹의 데이터베이스에 대한 모든 읽기 전용 애플리케이션은 **애플리케이션 의도** 연결 속성을 **ReadOnly** 로 설정합니다.  
   
  이 예에서 가용성 그룹은 메인 컴퓨팅 센터에 두 개의 동기-커밋 복제본이 있고 위성 사이트에 두 개의 비동기-커밋 복제본이 있습니다. 주 역할에 대해 모든 복제본은 읽기/쓰기 액세스용으로 구성되므로 모든 상황에서 주 복제본에 대한 읽기 전용 연결은 수행할 수 없습니다. 동기 커밋 보조 역할은 기본 연결 액세스 구성("없음")을 사용하므로 보조 역할로는 모든 클라이언트 연결을 수행할 수 없습니다.  반대로 비동기 커밋 복제본은 보조 역할에서 읽기 전용 연결을 허용하도록 구성됩니다. 다음 표에는 이러한 구성 예가 요약되어 있습니다.  
   

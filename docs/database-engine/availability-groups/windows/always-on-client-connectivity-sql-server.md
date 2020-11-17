@@ -12,14 +12,14 @@ helpviewer_keywords:
 - Availability Groups [SQL Server], prerequisites and restrictions
 - Availability Groups [SQL Server], client connectivity
 ms.assetid: b456448d-1757-48c8-8bbb-2d1c2d6d61e9
-author: MashaMSFT
-ms.author: mathoma
-ms.openlocfilehash: 10517361b14711595b08a2c4761a368666b764b1
-ms.sourcegitcommit: c7f40918dc3ecdb0ed2ef5c237a3996cb4cd268d
+author: cawrites
+ms.author: chadam
+ms.openlocfilehash: 87ea8429e74ff491f4d0a9ec3a6113738e4365ac
+ms.sourcegitcommit: 54cd97a33f417432aa26b948b3fc4b71a5e9162b
 ms.translationtype: HT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 10/05/2020
-ms.locfileid: "91726574"
+ms.lasthandoff: 11/13/2020
+ms.locfileid: "94584791"
 ---
 # <a name="driver-and-client-connectivity-support-for-availability-groups"></a>가용성 그룹에 대한 드라이버 및 클라이언트 연결 지원
 [!INCLUDE [SQL Server](../../../includes/applies-to-version/sqlserver.md)]

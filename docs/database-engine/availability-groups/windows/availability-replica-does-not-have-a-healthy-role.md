@@ -12,14 +12,14 @@ f1_keywords:
 helpviewer_keywords:
 - Availability Groups [SQL Server], policies
 ms.assetid: ebb2c9f4-2097-4688-b4fb-8f0571047317
-author: MashaMSFT
-ms.author: mathoma
-ms.openlocfilehash: cd1f2bbeaa29a21baac996544692754353564592
-ms.sourcegitcommit: cc23d8646041336d119b74bf239a6ac305ff3d31
+author: cawrites
+ms.author: chadam
+ms.openlocfilehash: 9d5257ddbdb4e5506339fa2047fe42bf7c92a668
+ms.sourcegitcommit: 54cd97a33f417432aa26b948b3fc4b71a5e9162b
 ms.translationtype: HT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 09/23/2020
-ms.locfileid: "91114297"
+ms.lasthandoff: 11/13/2020
+ms.locfileid: "94584653"
 ---
 # <a name="availability-replica-does-not-have-a-healthy-role-for-an-always-on-availability-group"></a>가용성 복제본은 Always On 가용성 그룹에 대해 정상적인 역할을 수행하지 않습니다.
 [!INCLUDE [SQL Server](../../../includes/applies-to-version/sqlserver.md)]

@@ -12,14 +12,14 @@ f1_keywords:
 helpviewer_keywords:
 - Availability Groups [SQL Server], policies
 ms.assetid: 6baee70f-848c-4e86-b20d-78875c0f82cb
-author: MashaMSFT
-ms.author: mathoma
-ms.openlocfilehash: 8f5b246accb66b13cf13466d17b5d8318d5d8ec0
-ms.sourcegitcommit: cc23d8646041336d119b74bf239a6ac305ff3d31
+author: cawrites
+ms.author: chadam
+ms.openlocfilehash: 5eb1863ae65e41f1f496333e5daa78a66b311bae
+ms.sourcegitcommit: 54cd97a33f417432aa26b948b3fc4b71a5e9162b
 ms.translationtype: HT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 09/23/2020
-ms.locfileid: "91114648"
+ms.lasthandoff: 11/13/2020
+ms.locfileid: "94584728"
 ---
 # <a name="availability-database-is-suspended-for-an-availability-group"></a>가용성 그룹에 대해 가용성 데이터베이스가 일시 중단됩니다.
 [!INCLUDE [SQL Server](../../../includes/applies-to-version/sqlserver.md)]

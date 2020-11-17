@@ -14,14 +14,14 @@ helpviewer_keywords:
 - Availability Groups [SQL Server], interoperability
 - troubleshooting [SQL Server], cross-database transactions
 ms.assetid: ''
-author: MashaMSFT
-ms.author: mathoma
-ms.openlocfilehash: 797885368b0aa8abfd2d367d4dbaf9b1b6942b41
-ms.sourcegitcommit: c7f40918dc3ecdb0ed2ef5c237a3996cb4cd268d
+author: cawrites
+ms.author: chadam
+ms.openlocfilehash: ee529e56acb911912177520bc46703657f1b70bb
+ms.sourcegitcommit: 54cd97a33f417432aa26b948b3fc4b71a5e9162b
 ms.translationtype: HT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 10/05/2020
-ms.locfileid: "91726474"
+ms.lasthandoff: 11/13/2020
+ms.locfileid: "94584523"
 ---
 # <a name="configure-distributed-transactions-for-an-always-on-availability-group"></a>Always On 가용성 그룹에 대한 분산 트랜잭션 구성
 [!INCLUDE [SQL Server](../../../includes/applies-to-version/sqlserver.md)]
@@ -35,7 +35,7 @@ ms.locfileid: "91726474"
 >
 >[!INCLUDE[SQL2016](../../../includes/sssql15-md.md)]에서 구성하는 단계는 [!INCLUDE[SQL2017](../../../includes/sssqlv14-md.md)]과 동일합니다.
 
-분산 트랜잭션에서 클라이언트 애플리케이션은 Microsoft Distributed Transaction Coordinator(MS DTC 또는 DTC)를 통해 여러 데이터 원본 간에 트랜잭션 일관성을 보장합니다. DTC는 지원되는 Windows Server 기반 운영 체제에서 사용할 수 있는 서비스입니다. 분산 트랜잭션의 경우 DTC는 *트랜잭션 코디네이터*입니다. 일반적으로 SQL Server 인스턴스는 *리소스 관리자*입니다. 데이터베이스가 가용성 그룹에 있는 경우 각 데이터베이스는 고유한 리소스 관리자여야 합니다. 
+분산 트랜잭션에서 클라이언트 애플리케이션은 Microsoft Distributed Transaction Coordinator(MS DTC 또는 DTC)를 통해 여러 데이터 원본 간에 트랜잭션 일관성을 보장합니다. DTC는 지원되는 Windows Server 기반 운영 체제에서 사용할 수 있는 서비스입니다. 분산 트랜잭션의 경우 DTC는 *트랜잭션 코디네이터* 입니다. 일반적으로 SQL Server 인스턴스는 *리소스 관리자* 입니다. 데이터베이스가 가용성 그룹에 있는 경우 각 데이터베이스는 고유한 리소스 관리자여야 합니다. 
 
 가용성 그룹이 분산 트랜잭션에 대해 구성되지 않은 경우에도 [!INCLUDE[SQLServer](../../../includes/ssnoversion-md.md)]는 가용성 그룹의 데이터베이스에 대한 분산 트랜잭션을 방지하지 않습니다. 그러나 가용성 그룹이 분산 트랜잭션에 대해 구성되지 않으면 일부 상황에서 장애 조치가 실패할 수 있습니다. 특히 새 주 복제본 [!INCLUDE[SQLServer](../../../includes/ssnoversion-md.md)] 인스턴스는 DTC에서 트랜잭션 결과를 가져올 수 없습니다. 장애 조치 후 [!INCLUDE[SQLServer](../../../includes/ssnoversion-md.md)] 인스턴스가 DTC에서 미결 트랜잭션의 결과를 얻도록 하려면 분산 트랜잭션에 대한 가용성 그룹을 구성합니다. 
 
@@ -160,10 +160,10 @@ RMID 변경 중에 존재하는 활성 트랜잭션의 결과는 장애 조치 �
 Microsoft Distributed Transaction Coordinator (MS DTC) 
 failed to reenlist citing that the database RMID does 
 not match the RMID [xxxxxxxx-xxxx-xxxx-xxxx-xxxxxxxxxxxx] 
-associated with the transaction.  Please manually resolve
+associated with the transaction.  Please manually resolve
 the transaction.
     
-SQL Server detected a DTC/KTM in-doubt transaction with UOW 
+SQL Server detected a DTC/KTM in-doubt transaction with UOW 
 {yyyyyyyy-yyyy-yyyy-yyyy-yyyyyyyyyyyy}.Please resolve it 
 following the guideline for Troubleshooting DTC Transactions.
 ```

@@ -8,14 +8,14 @@ ms.reviewer: ''
 ms.technology: high-availability
 ms.topic: how-to
 ms.assetid: ''
-author: MashaMSFT
-ms.author: mathoma
-ms.openlocfilehash: 074a66a094b08f843eed67cfb0276f8c9e635a63
-ms.sourcegitcommit: 968969b62bc158b9843aba5034c9d913519bc4a7
+author: cawrites
+ms.author: chadam
+ms.openlocfilehash: fb236820958875458d391495028f04181c8ba47b
+ms.sourcegitcommit: 54cd97a33f417432aa26b948b3fc4b71a5e9162b
 ms.translationtype: HT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 10/06/2020
-ms.locfileid: "91753752"
+ms.lasthandoff: 11/13/2020
+ms.locfileid: "94584647"
 ---
 # <a name="mechanics-and-guidelines-of-lease-cluster-and-health-check-timeouts-for-always-on-availability-groups"></a>Always On 가용성 그룹의 임대, 클러스터 및 상태 확인 제한 시간의 메커니즘 및 지침 
 
@@ -29,7 +29,7 @@ ms.locfileid: "91753752"
 
 SQL Server의 경우 AG 리소스 DLL은 AG 임대 메커니즘 및 Always On 상태 검색에 따른 AG의 상태를 결정합니다. AG 리소스 DLL은 `IsAlive` 작업을 통해 리소스 상태를 노출합니다. 리소스 모니터는 `CrossSubnetDelay` 및 `SameSubnetDelay` 클러스터 범위 값에서 설정한 클러스터 하트비트 간격으로 `IsAlive`를 폴링합니다. 리소스 DLL에 대한 `IsAlive` 호출이 AG의 상태가 정상이 아니라고 반환할 때마다 주 노드에서 클러스터 서비스는 장애 조치를 시작합니다. 
 
-클러스터 서비스가 클러스터의 다른 노드로 하트비트를 보내고 여기서 수신한 하트비트를 승인합니다. 노드가 일련의 승인되지 않은 하트비트에서 통신 오류를 검색하면 연결할 수 있는 모든 노드에서 클러스터 노드 상태의 해당 보기를 조정하도록 메시지를 브로드캐스트합니다. *regroup event*라는 이 이벤트는 노드에서 클러스터 상태의 일관성을 유지합니다. regroup event를 따라 쿼럼이 손실된 경우 이 파티션의 AG를 비롯한 클러스터 리소스가 오프라인 상태로 전환됩니다. 이 파티션의 모든 노드는 확인 상태로 전환됩니다. 쿼럼을 보유한 파티션이 있는 경우 AG는 파티션에서 하나의 노드에 할당되고 주 복제본이 되는 반면 다른 모든 노드는 보조 복제본입니다. 
+클러스터 서비스가 클러스터의 다른 노드로 하트비트를 보내고 여기서 수신한 하트비트를 승인합니다. 노드가 일련의 승인되지 않은 하트비트에서 통신 오류를 검색하면 연결할 수 있는 모든 노드에서 클러스터 노드 상태의 해당 보기를 조정하도록 메시지를 브로드캐스트합니다. *regroup event* 라는 이 이벤트는 노드에서 클러스터 상태의 일관성을 유지합니다. regroup event를 따라 쿼럼이 손실된 경우 이 파티션의 AG를 비롯한 클러스터 리소스가 오프라인 상태로 전환됩니다. 이 파티션의 모든 노드는 확인 상태로 전환됩니다. 쿼럼을 보유한 파티션이 있는 경우 AG는 파티션에서 하나의 노드에 할당되고 주 복제본이 되는 반면 다른 모든 노드는 보조 복제본입니다. 
 
 ## <a name="always-on-health-detection"></a>Always On 상태 검색 
 
@@ -114,7 +114,7 @@ AG의 실패 조건 수준은 상태 검사에 대한 오류 조건을 변경합
 임대 메커니즘은 WSFC 클러스터의 각 AG에 특정된 단일 값에서 제어합니다. 장애 조치(Failover) 클러스터 관리자에서 이 값을 탐색하려면:
 
 1. 역할 탭에서 대상 AG 역할을 찾습니다. 대상 AG 역할을 클릭합니다. 
-2. 창의 맨 아래에 AG 리소스를 마우스 오른쪽 단추로 클릭하고, **속성**을 선택합니다. 
+2. 창의 맨 아래에 AG 리소스를 마우스 오른쪽 단추로 클릭하고, **속성** 을 선택합니다. 
 
    ![장애 조치(Failover) 클러스터 관리자](media/availability-group-lease-healthcheck-timeout/image2.png) 
 

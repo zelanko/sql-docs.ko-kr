@@ -11,14 +11,14 @@ helpviewer_keywords:
 - Availability Groups [SQL Server], troubleshooting
 - Availability Groups [SQL Server], policies
 ms.assetid: afa5289c-641a-4c03-8749-44862384ec5f
-author: MashaMSFT
-ms.author: mathoma
-ms.openlocfilehash: de57f7518136cecca09041e0ce93971aeebe9fd9
-ms.sourcegitcommit: c7f40918dc3ecdb0ed2ef5c237a3996cb4cd268d
+author: cawrites
+ms.author: chadam
+ms.openlocfilehash: 080cd11de04984114fd5eda5f1d8b2e78dfdaca3
+ms.sourcegitcommit: 54cd97a33f417432aa26b948b3fc4b71a5e9162b
 ms.translationtype: HT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 10/05/2020
-ms.locfileid: "91724574"
+ms.lasthandoff: 11/13/2020
+ms.locfileid: "94584783"
 ---
 # <a name="policy-based-management-for-operational-issues-with-always-on-availability-groups"></a>Always On 가용성 그룹의 운영 문제에 대한 정책 기반 관리
 [!INCLUDE [SQL Server](../../../includes/applies-to-version/sqlserver.md)]
@@ -40,7 +40,7 @@ ms.locfileid: "91724574"
  [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] 의 특정 인스턴스에 의해 호스팅되고 가용성 그룹에 속하는 각 가용성 데이터베이스의 로컬 복사본을 유지 관리하는 가용성 그룹 인스턴스화입니다. 가용성 복제본에는 *주 복제본* 과 1-4개의 *보조 복제본* 이라는 두 가지 유형이 있습니다. 지정된 가용성 그룹에 대한 가용성 복제본을 호스팅하는 서버 인스턴스는 단일 WSFC(Windows Server 장애 조치(Failover) 클러스터링) 클러스터의 다른 노드에 있어야 합니다.  
   
  가용성 데이터베이스  
- 가용성 그룹에 속하는 데이터베이스입니다. 가용성 그룹은 각 가용성 데이터베이스에 대해 하나의 읽기/쓰기 복사본( *주 데이터베이스* )과 1~4개의 읽기 전용 복사본( *보조 데이터베이스* )을 유지 관리합니다.  
+ 가용성 그룹에 속하는 데이터베이스입니다. 가용성 그룹은 각 가용성 데이터베이스에 대해 하나의 읽기/쓰기 복사본( *주 데이터베이스*)과 1~4개의 읽기 전용 복사본(*보조 데이터베이스*)을 유지 관리합니다.  
   
  Always On 대시보드  
  가용성 그룹의 상태를 한 눈에 보이도록 표시하는 [!INCLUDE[ssManStudioFull](../../../includes/ssmanstudiofull-md.md)] 대시보드입니다. 자세한 내용은 이 항목의 뒷부분에 나오는 [Always On 대시보드](#Dashboard)를 참조하세요.  
@@ -86,7 +86,7 @@ ms.locfileid: "91724574"
 ##  <a name="extending-the-always-on-health-model"></a><a name="ExtendHealthModel"></a> Always On 상태 모델 확장  
  [!INCLUDE[ssHADR](../../../includes/sshadr-md.md)] 상태 모델 확장은 단순히 사용자의 고유한 사용자 정의 정책을 만들고 사용자가 모니터링하는 개체 유형에 따라 이를 특정 범주에 넣는 작업입니다.  일부 설정을 변경한 후에는 Always On 대시보드가 Always On 미리 정의된 정책뿐만 아니라 사용자의 고유한 사용자 정의 정책을 자동으로 평가합니다.  
   
- 사용자 정의된 정책은 Always On 미리 정의된 정책에서 사용되는 패싯을 포함하여 사용 가능한 모든 PBM 패싯을 사용할 수 있습니다(이 항목의 앞 부분에 나오는 [미리 정의된 정책 및 문제](#Always OnPBM)참조). 서버 패싯은 [!INCLUDE[ssHADR](../../../includes/sshadr-md.md)] 상태 모니터링을 위해 ( **IsHadrEnabled** 및 **HadrManagerStatus** ) 속성을 제공합니다. 서버 패싯은 또한 WSFC 클러스터 구성을 모니터링하기 위해 **ClusterQuorumType** 및 **ClusterQuorumState** 정책을 속성에 제공합니다.  
+ 사용자 정의된 정책은 Always On 미리 정의된 정책에서 사용되는 패싯을 포함하여 사용 가능한 모든 PBM 패싯을 사용할 수 있습니다(이 항목의 앞 부분에 나오는 [미리 정의된 정책 및 문제](#Always OnPBM)참조). 서버 패싯은 [!INCLUDE[ssHADR](../../../includes/sshadr-md.md)] 상태 모니터링을 위해 (**IsHadrEnabled** 및 **HadrManagerStatus**) 속성을 제공합니다. 서버 패싯은 또한 WSFC 클러스터 구성을 모니터링하기 위해 **ClusterQuorumType** 및 **ClusterQuorumState** 정책을 속성에 제공합니다.  
   
  자세한 내용은 [Always On 상태 모델 파트 2 -- 상태 모델 확장](/archive/blogs/sqlalwayson/the-alwayson-health-model-part-2-extending-the-health-model) (SQL Server Always On 팀 블로그)을 참조하세요.  
   

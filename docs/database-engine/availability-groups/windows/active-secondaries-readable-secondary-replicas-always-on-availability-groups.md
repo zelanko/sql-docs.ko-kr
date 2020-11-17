@@ -15,14 +15,14 @@ helpviewer_keywords:
 - readable secondary replicas
 - Availability Groups [SQL Server], active secondary replicas
 ms.assetid: 78f3f81a-066a-4fff-b023-7725ff874fdf
-author: MashaMSFT
-ms.author: mathoma
-ms.openlocfilehash: 3208f04a990bc7cc07cfc8b1672e7534074bec70
-ms.sourcegitcommit: c7f40918dc3ecdb0ed2ef5c237a3996cb4cd268d
+author: cawrites
+ms.author: chadam
+ms.openlocfilehash: 82a8d9f4e787fd419e31e637775e33a4cf71f36d
+ms.sourcegitcommit: 54cd97a33f417432aa26b948b3fc4b71a5e9162b
 ms.translationtype: HT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 10/05/2020
-ms.locfileid: "91724604"
+ms.lasthandoff: 11/13/2020
+ms.locfileid: "94584865"
 ---
 # <a name="offload-read-only-workload-to-secondary-replica-of-an-always-on-availability-group"></a>Always On 가용성 그룹의 보조 복제본으로 읽기 전용 워크로드 오프로드
 [!INCLUDE [SQL Server](../../../includes/applies-to-version/sqlserver.md)]
@@ -32,7 +32,7 @@ ms.locfileid: "91724604"
  주 데이터베이스에서 적용되는 보안 설정은 보조 데이터베이스에서도 유지됩니다. 여기에는 사용자, 데이터베이스 역할 및 애플리케이션 역할과 함께 각각의 사용 권한이 포함되며 주 데이터베이스에 TDE(투명한 데이터 암호화)가 설정되어 있는 경우 TDE도 포함됩니다.  
   
 > [!NOTE]  
->  보조 데이터베이스에 데이터를 쓸 수는 없지만 **tempdb**와 같은 시스템 데이터베이스, 사용자 데이터베이스를 비롯하여 보조 복제본을 호스트하는 서버 인스턴스의 읽기/쓰기 데이터베이스에는 데이터를 쓸 수 있습니다.  
+>  보조 데이터베이스에 데이터를 쓸 수는 없지만 **tempdb** 와 같은 시스템 데이터베이스, 사용자 데이터베이스를 비롯하여 보조 복제본을 호스트하는 서버 인스턴스의 읽기/쓰기 데이터베이스에는 데이터를 쓸 수 있습니다.  
   
  [!INCLUDE[ssHADR](../../../includes/sshadr-md.md)] 은 읽기 전용 연결 요청을 읽기 가능한 보조 복제본으로 다시 라우팅하는 기능(*읽기 전용 라우팅*)도 지원합니다. 읽기 전용 라우팅에 대한 자세한 내용은 [수신기를 사용하여 읽기 전용 보조 복제본(읽기 전용 라우팅)에 연결](../../../database-engine/availability-groups/windows/listeners-client-connectivity-application-failover.md#ConnectToSecondary)을 참조하세요.  
   
@@ -70,7 +70,7 @@ ms.locfileid: "91724604"
   
 -   **가용성 그룹 수신기**  
   
-     읽기 전용 라우팅을 지원하려면 가용성 그룹에 [가용성 그룹 수신기](../../../database-engine/availability-groups/windows/listeners-client-connectivity-application-failover.md)가 있어야 합니다. 읽기 전용 클라이언트는 해당 연결 요청을 이 수신기에 전달해야 하며, 클라이언트의 연결 문자열에서는 애플리케이션 의도를 "읽기 전용"으로 지정해야 합니다. 즉, 해당 연결 요청은 *읽기 전용 연결 요청*이어야 합니다.  
+     읽기 전용 라우팅을 지원하려면 가용성 그룹에 [가용성 그룹 수신기](../../../database-engine/availability-groups/windows/listeners-client-connectivity-application-failover.md)가 있어야 합니다. 읽기 전용 클라이언트는 해당 연결 요청을 이 수신기에 전달해야 하며, 클라이언트의 연결 문자열에서는 애플리케이션 의도를 "읽기 전용"으로 지정해야 합니다. 즉, 해당 연결 요청은 *읽기 전용 연결 요청* 이어야 합니다.  
   
 -   **읽기 전용 라우팅**  
   
@@ -153,18 +153,18 @@ ms.locfileid: "91724604"
 ###  <a name="indexing"></a><a name="bkmk_Indexing"></a> 인덱싱  
  읽기 가능한 보조 복제본에서 읽기 전용 작업을 최적화하기 위해 보조 데이터베이스의 테이블에 인덱스를 만들 수 있습니다. 보조 데이터베이스의 스키마나 데이터는 변경할 수 없으므로 주 데이터베이스에 인덱스를 만들고 다시 실행 프로세스를 통해 변경 내용이 보조 데이터베이스에 전송될 수 있도록 합니다.  
   
- 보조 복제본의 인덱스 사용 동작을 모니터링하려면 **sys.dm_db_index_usage_stats**동적 관리 뷰의 **user_seeks**, **user_scans** 및 [user_lookups](../../../relational-databases/system-dynamic-management-views/sys-dm-db-index-usage-stats-transact-sql.md) 열을 쿼리합니다.  
+ 보조 복제본의 인덱스 사용 동작을 모니터링하려면 **sys.dm_db_index_usage_stats** 동적 관리 뷰의 **user_seeks**, **user_scans** 및 [user_lookups](../../../relational-databases/system-dynamic-management-views/sys-dm-db-index-usage-stats-transact-sql.md) 열을 쿼리합니다.  
   
 ###  <a name="statistics-for-read-only-access-databases"></a><a name="Read-OnlyStats"></a> 읽기 전용 액세스 데이터베이스에 대한 통계  
  테이블 및 인덱싱된 뷰의 열에 대한 통계는 쿼리 계획을 최적화하는 데 사용됩니다. 가용성 그룹의 경우 주 데이터베이스에 만들어져 유지 관리되는 통계는 트랜잭션 로그 레코드가 적용되는 도중 보조 데이터베이스에 자동 보존됩니다. 그러나 보조 데이터베이스에 대한 읽기 전용 작업에는 주 데이터베이스에 만들어지는 통계와 다른 통계가 필요할 수 있습니다. 하지만 보조 데이터베이스는 읽기 전용 액세스로 제한되므로 보조 데이터베이스에는 통계를 만들 수 없습니다.  
   
- 이 문제를 해결하기 위해 보조 복제본은 **tempdb**에 보조 데이터베이스에 대한 임시 통계를 만들어 유지 관리합니다. 주 데이터베이스에 보존되는 영구적 통계와 구별하기 위해 임시 통계의 이름에는 _readonly_database_statistic라는 접미사가 추가됩니다.  
+ 이 문제를 해결하기 위해 보조 복제본은 **tempdb** 에 보조 데이터베이스에 대한 임시 통계를 만들어 유지 관리합니다. 주 데이터베이스에 보존되는 영구적 통계와 구별하기 위해 임시 통계의 이름에는 _readonly_database_statistic라는 접미사가 추가됩니다.  
   
  [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] 에서만 임시 통계를 만들고 업데이트할 수 있습니다. 하지만 영구적 통계에 사용하는 것과 동일한 도구를 사용하여 임시 통계를 삭제하고 해당 속성을 모니터링할 수 있습니다.  
   
 -   [DROP STATISTICS](../../../t-sql/statements/drop-statistics-transact-sql.md)[!INCLUDE[tsql](../../../includes/tsql-md.md)] 문을 사용하여 임시 통계를 삭제합니다.  
   
--   **sys.stats** 및 **sys.stats_columns** 카탈로그 뷰를 사용하여 통계를 모니터링합니다. **sys_stats** 에는 영구적 통계와 임시 통계를 나타내는 **is_temporary**열이 포함되어 있습니다.  
+-   **sys.stats** 및 **sys.stats_columns** 카탈로그 뷰를 사용하여 통계를 모니터링합니다. **sys_stats** 에는 영구적 통계와 임시 통계를 나타내는 **is_temporary** 열이 포함되어 있습니다.  
   
  주 복제본이나 보조 복제본에는 메모리 액세스에 최적화된 테이블의 자동 통계 업데이트에 대한 지원이 없습니다. 보조 복제본에서 쿼리 성능과 계획을 모니터링하고 필요한 경우 주 복제본에서 통계를 수동으로 업데이트해야 합니다. 하지만 주 복제본 및 보조 복제본 모두에서 누락 통계는 자동으로 생성됩니다.  
   
@@ -185,7 +185,7 @@ ms.locfileid: "91724604"
   
 ####  <a name="limitations-and-restrictions"></a><a name="StatsLimitationsRestrictions"></a> 제한 사항  
   
--   임시 통계는 **tempdb**에 저장되므로 [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] 서비스를 다시 시작하면 모든 임시 통계가 사라집니다.  
+-   임시 통계는 **tempdb** 에 저장되므로 [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] 서비스를 다시 시작하면 모든 임시 통계가 사라집니다.  
   
 -   접미사 _readonly_database_statistic은 [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)]에서 생성하는 통계용으로 예약되어 있습니다. 따라서 주 데이터베이스에서 통계를 만들 때 이 접미사를 사용할 수 없습니다. 자세한 내용은 [통계](../../../relational-databases/statistics/statistics.md)를 참조하세요.  
   
@@ -207,9 +207,9 @@ GO
   
 -   디스크 기반 테이블의 경우 다음 두 가지 이유로 읽기 가능한 보조 복제본에는 **tempdb** 에 공간이 필요할 수 있습니다.  
   
-    -   스냅샷 격리 수준은 행 버전을 **tempdb**로 복사합니다.  
+    -   스냅샷 격리 수준은 행 버전을 **tempdb** 로 복사합니다.  
   
-    -   보조 데이터베이스의 임시 통계는 **tempdb**에 생성되고 유지 관리됩니다. 임시 통계로 인해 **tempdb**의 크기가 약간 증가할 수 있습니다. 자세한 내용은 이 섹션 뒷부분에 있는 [읽기 전용 액세스 데이터베이스에 대한 통계](#Read-OnlyStats)를 참조하세요.  
+    -   보조 데이터베이스의 임시 통계는 **tempdb** 에 생성되고 유지 관리됩니다. 임시 통계로 인해 **tempdb** 의 크기가 약간 증가할 수 있습니다. 자세한 내용은 이 섹션 뒷부분에 있는 [읽기 전용 액세스 데이터베이스에 대한 통계](#Read-OnlyStats)를 참조하세요.  
   
 -   디스크 기반 테이블의 경우 하나 이상의 보조 복제본에 대해 읽기 액세스를 구성하면 주 데이터베이스에서는 삭제, 수정 또는 삽입된 데이터 행에 14바이트의 오버헤드를 추가하여 보조 데이터베이스의 행 버전에 대한 포인터를 저장합니다. 이 14바이트 오버헤드는 보조 데이터베이스에 전달됩니다. 14바이트의 오버헤드가 데이터 행에 추가되므로 페이지 분할이 발생할 수 있습니다.  
   

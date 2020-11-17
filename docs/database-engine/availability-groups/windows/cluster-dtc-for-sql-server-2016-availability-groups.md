@@ -8,15 +8,15 @@ ms.reviewer: ''
 ms.technology: high-availability
 ms.topic: how-to
 ms.assetid: a47c5005-20e3-4880-945c-9f78d311af7a
-author: MashaMSFT
-ms.author: mathoma
+author: cawrites
+ms.author: chadam
 monikerRange: '>=sql-server-2016||=sqlallproducts-allversions'
-ms.openlocfilehash: 1b5232854920083c685e426e0ca55eeb9a065c70
-ms.sourcegitcommit: c7f40918dc3ecdb0ed2ef5c237a3996cb4cd268d
+ms.openlocfilehash: 4078d42ddb680c46f763065a47406f855093801c
+ms.sourcegitcommit: 54cd97a33f417432aa26b948b3fc4b71a5e9162b
 ms.translationtype: HT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 10/05/2020
-ms.locfileid: "91726504"
+ms.lasthandoff: 11/13/2020
+ms.locfileid: "94584543"
 ---
 # <a name="how-to-cluster-the-dtc-service-for-an-always-on-availability-group"></a>Always On 가용성 그룹에 대한 DTC 서비스를 클러스터링하는 방법
 
@@ -35,7 +35,7 @@ ms.locfileid: "91726504"
 
 |Task|참조|  
 |-----------------|----------|  
-|공유 스토리지 드라이브입니다.|[공유 스토리지 드라이브 구성](https://msdn.microsoft.com/library/cc982358(v=bts.10).aspx). 드라이브 문자 **M**을 사용하는 것이 좋습니다.|
+|공유 스토리지 드라이브입니다.|[공유 스토리지 드라이브 구성](https://msdn.microsoft.com/library/cc982358(v=bts.10).aspx). 드라이브 문자 **M** 을 사용하는 것이 좋습니다.|
 |고유한 DTC 네트워크 이름 리소스입니다.  이름은 Active Directory에서 클러스터 컴퓨터 개체로 등록됩니다.<br /><br />다음 중 하나라도 해당되는지 확인합니다.<br /><br />• DTC 네트워크 이름 리소스를 만드는 사용자에게는 DTC 네트워크 이름 리소스가 상주할 OU 또는 컨테이너에 대한 컴퓨터 만들기 개체 권한이 있습니다.<br /><br />•  사용자에게 컴퓨터 만들기 개체 권한이 없는 경우 도메인 관리자에게 DTC 네트워크 이름 리소스에 대한 클러스터 컴퓨터 개체를 미리 준비하라고 요청합니다.|[Active Directory Domain Services에서 클러스터 컴퓨터 개체 사전 준비](/previous-versions/windows/it-pro/windows-server-2012-R2-and-2012/dn466519(v=ws.11))|
 |사용 가능한 올바른 고정 IP 주소와, 해당 IP 주소에 대해 적절한 서브넷 마스크입니다.||
 

@@ -13,14 +13,14 @@ helpviewer_keywords:
 - Availability Groups [SQL Server], failover modes
 - Availability Groups [SQL Server], configuring
 ms.assetid: 619a826f-8e65-48eb-8c34-39497d238279
-author: MashaMSFT
-ms.author: mathoma
-ms.openlocfilehash: 07b77c85c882d8755e1717a5cfe8ce49df9ae275
-ms.sourcegitcommit: c7f40918dc3ecdb0ed2ef5c237a3996cb4cd268d
+author: cawrites
+ms.author: chadam
+ms.openlocfilehash: ffd564df011932a0b40c0eff2426049fc3f6c315
+ms.sourcegitcommit: 54cd97a33f417432aa26b948b3fc4b71a5e9162b
 ms.translationtype: HT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 10/05/2020
-ms.locfileid: "91727994"
+ms.lasthandoff: 11/13/2020
+ms.locfileid: "94584570"
 ---
 # <a name="change-the-failover-mode-for-a-replica-within-an-always-on-availability-group"></a>Always On 가용성 그룹 내의 복제본에 대한 장애 조치(failover) 모드 변경
 [!INCLUDE [SQL Server](../../../includes/applies-to-version/sqlserver.md)]
@@ -45,7 +45,7 @@ ms.locfileid: "91727994"
   
 3.  복제본을 변경할 가용성 그룹을 클릭합니다.  
   
-4.  복제본을 마우스 오른쪽 단추로 클릭하고 **속성**을 클릭합니다.  
+4.  복제본을 마우스 오른쪽 단추로 클릭하고 **속성** 을 클릭합니다.  
   
 5.  **가용성 복제본 속성** 대화 상자에서 **장애 조치(failover) 모드** 드롭 목록을 사용하여 이 복제본의 장애 조치(failover) 모드를 변경합니다.  
   
@@ -68,11 +68,11 @@ ms.locfileid: "91727994"
 
     - *group_name* 은 가용성 그룹의 이름입니다.  
   
-    - *server_name*은 컴퓨터 이름 또는 장애 조치 클러스터 네트워크 이름입니다. 명명된 인스턴스의 경우 `\instance_name'을 추가합니다. 수정할 복제본을 호스팅하는 이름을 사용합니다.
+    - *server_name* 은 컴퓨터 이름 또는 장애 조치 클러스터 네트워크 이름입니다. 명명된 인스턴스의 경우 `\instance_name'을 추가합니다. 수정할 복제본을 호스팅하는 이름을 사용합니다.
   
 이러한 매개 변수에 대한 자세한 내용은 [ALTER AVAILABILITY GROUP&#40;Transact-SQL&#41;](../../../t-sql/statements/alter-availability-group-transact-sql.md)을 참조하세요.  
   
-*MyAG* 가용성 그룹의 주 복제본에 입력된 다음 예는 *COMPUTER01*컴퓨터의 기본 서버 인스턴스에 있는 가용성 복제본에서 장애 조치(failover) 모드를 자동 장애 조치(failover)로 변경합니다.  
+*MyAG* 가용성 그룹의 주 복제본에 입력된 다음 예는 *COMPUTER01* 컴퓨터의 기본 서버 인스턴스에 있는 가용성 복제본에서 장애 조치(failover) 모드를 자동 장애 조치(failover)로 변경합니다.  
   
 ```sql
 ALTER AVAILABILITY GROUP MyAG MODIFY REPLICA ON 'COMPUTER01' WITH  

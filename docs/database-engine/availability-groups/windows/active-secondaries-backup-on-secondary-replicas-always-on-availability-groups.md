@@ -16,14 +16,14 @@ helpviewer_keywords:
 - automated backup preference
 - Availability Groups [SQL Server], active secondary replicas
 ms.assetid: 82afe51b-71d1-4d5b-b20a-b57afc002405
-author: MashaMSFT
-ms.author: mathoma
-ms.openlocfilehash: 4a9f6aea0fe042752c5443d1de9b200494f57828
-ms.sourcegitcommit: f7ac1976d4bfa224332edd9ef2f4377a4d55a2c9
+author: cawrites
+ms.author: chadam
+ms.openlocfilehash: 69311c69270a45880d6802c8b3b3a9f350eab37a
+ms.sourcegitcommit: 54cd97a33f417432aa26b948b3fc4b71a5e9162b
 ms.translationtype: HT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 07/02/2020
-ms.locfileid: "85895424"
+ms.lasthandoff: 11/13/2020
+ms.locfileid: "94584919"
 ---
 # <a name="offload-supported-backups-to-secondary-replicas-of-an-availability-group"></a>가용성 그룹의 보조 복제본으로 지원되는 백업 오프로드
 [!INCLUDE [SQL Server](../../../includes/applies-to-version/sqlserver.md)]
@@ -36,7 +36,7 @@ ms.locfileid: "85895424"
  
 ##  <a name="backup-types-supported-on-secondary-replicas"></a><a name="SupportedBuTypes"></a> 보조 복제본에서 지원되는 백업 유형  
   
--   **BACKUP DATABASE**는 보조 복제본에서 실행될 때 데이터베이스, 파일 또는 파일 그룹의 복사 전용 전체 백업만 지원합니다. 복사 전용 백업은 로그 체인에 영향을 미치거나 차등 비트맵을 지우지 않습니다.  
+-   **BACKUP DATABASE** 는 보조 복제본에서 실행될 때 데이터베이스, 파일 또는 파일 그룹의 복사 전용 전체 백업만 지원합니다. 복사 전용 백업은 로그 체인에 영향을 미치거나 차등 비트맵을 지우지 않습니다.  
   
 -   차등 백업은 보조 복제본에서 지원되지 않습니다.
 
@@ -46,7 +46,7 @@ ms.locfileid: "85895424"
   
      가용성 모드(동기 커밋 또는 비동기 커밋)에 관계없이 모든 복제본(주 또는 보조)에서 수행되는 로그 백업에 대해 일관된 로그 체인이 보장됩니다.  
   
--   보조 데이터베이스를 백업하려면 보조 복제본이 주 복제본과 통신할 수 있어야 하고 **SYNCHRONIZED** 또는 **SYNCHRONIZING**상태여야 합니다.  
+-   보조 데이터베이스를 백업하려면 보조 복제본이 주 복제본과 통신할 수 있어야 하고 **SYNCHRONIZED** 또는 **SYNCHRONIZING** 상태여야 합니다.  
 
 분산 가용성 그룹에서 백업은 활성 주 복제본과 동일한 가용성 그룹 또는 보조 가용성 그룹의 주 복제본에 있는 보조 복제본에서 수행할 수 있습니다. 보조 복제본은 자체 가용성 그룹의 주 복제본과만 통신하기 때문에 보조 가용성 그룹의 보조 복제본에서 백업을 수행 할 수 없습니다. 전역 주 복제본과 직접 통신하는 복제본만 백업 작업을 수행할 수 있습니다.
 

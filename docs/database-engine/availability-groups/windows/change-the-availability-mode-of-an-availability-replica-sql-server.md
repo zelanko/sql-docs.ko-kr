@@ -12,14 +12,14 @@ helpviewer_keywords:
 - Availability Groups [SQL Server], configuring
 - Availability Groups [SQL Server], availability modes
 ms.assetid: c4da8f25-fb1b-45a4-8bf2-195df6df634c
-author: MashaMSFT
-ms.author: mathoma
-ms.openlocfilehash: ae19a0e0446a6b0bb7c1d21456d92171e633f441
-ms.sourcegitcommit: c7f40918dc3ecdb0ed2ef5c237a3996cb4cd268d
+author: cawrites
+ms.author: chadam
+ms.openlocfilehash: dcafb8cdd2bdd2d03b3a302ffcb29e3cd5bbf469
+ms.sourcegitcommit: 54cd97a33f417432aa26b948b3fc4b71a5e9162b
 ms.translationtype: HT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 10/05/2020
-ms.locfileid: "91728014"
+ms.lasthandoff: 11/13/2020
+ms.locfileid: "94584601"
 ---
 # <a name="change-availability-mode-of-a-replica-within-an-always-on-availability-group"></a>Always On 가용성 그룹 내 복제본의 가용성 모드 변경
 [!INCLUDE [SQL Server](../../../includes/applies-to-version/sqlserver.md)]
@@ -42,7 +42,7 @@ ms.locfileid: "91728014"
   
 3.  복제본을 변경할 가용성 그룹을 클릭합니다.  
   
-4.  복제본을 마우스 오른쪽 단추로 클릭하고 **속성**을 클릭합니다.  
+4.  복제본을 마우스 오른쪽 단추로 클릭하고 **속성** 을 클릭합니다.  
   
 5.  **가용성 복제본 속성** 대화 상자에서 **가용성 모드** 드롭 목록을 사용하여 이 복제본의 가용성 모드를 변경합니다.  
   
@@ -58,7 +58,7 @@ ms.locfileid: "91728014"
      WITH ( AVAILABILITY_MODE = ASYNCHRONOUS_COMMIT , FAILOVER_MODE = MANUAL );  
      ```
      
-     여기서 *group_name*은 가용성 그룹의 이름이고 *server_name* 은 수정할 복제본을 호스트하는 서버 인스턴스의 이름입니다.  
+     여기서 *group_name* 은 가용성 그룹의 이름이고 *server_name* 은 수정할 복제본을 호스트하는 서버 인스턴스의 이름입니다.  
   
     > [!NOTE]  
     > `FAILOVER_MODE = AUTOMATIC`은 `AVAILABILITY_MODE = SYNCHRONOUS_COMMIT`도 지정한 경우에만 지원됩니다.  
