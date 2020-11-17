@@ -14,14 +14,14 @@ helpviewer_keywords:
 - Availability Groups [SQL Server], joining
 - Availability Groups [SQL Server], configuring
 ms.assetid: e5bd2489-097a-490e-8ea1-34fe48378ad1
-author: MashaMSFT
-ms.author: mathoma
-ms.openlocfilehash: 2b0c5baa06daf325034e349419b41bf9d6bb1ad6
-ms.sourcegitcommit: c7f40918dc3ecdb0ed2ef5c237a3996cb4cd268d
+author: cawrites
+ms.author: chadam
+ms.openlocfilehash: aa4ef43cd9c33fbbea2bc2bd3333ca85927d8ed5
+ms.sourcegitcommit: 54cd97a33f417432aa26b948b3fc4b71a5e9162b
 ms.translationtype: HT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 10/05/2020
-ms.locfileid: "91726391"
+ms.lasthandoff: 11/13/2020
+ms.locfileid: "94584213"
 ---
 # <a name="join-a-secondary-replica-to-an-always-on-availability-group"></a>Always On 가용성 그룹에 보조 복제본 조인
 [!INCLUDE [SQL Server](../../../includes/applies-to-version/sqlserver.md)]
@@ -49,11 +49,11 @@ ms.locfileid: "91726391"
   
 3.  연결된 보조 복제본의 가용성 그룹을 선택합니다.  
   
-4.  보조 복제본을 마우스 오른쪽 단추로 클릭하고 **가용성 그룹에 조인**을 클릭합니다.  
+4.  보조 복제본을 마우스 오른쪽 단추로 클릭하고 **가용성 그룹에 조인** 을 클릭합니다.  
   
 5.  **가용성 그룹에 복제본 조인** 대화 상자가 열립니다.  
   
-6.  가용성 그룹에 보조 복제본을 조인하려면 **확인**을 클릭합니다.  
+6.  가용성 그룹에 보조 복제본을 조인하려면 **확인** 을 클릭합니다.  
   
 ##  <a name="using-transact-sql"></a><a name="TsqlProcedure"></a> Transact-SQL 사용  
  **가용성 그룹에 가용성 복제본을 조인하려면**  

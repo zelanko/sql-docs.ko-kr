@@ -10,21 +10,21 @@ ms.topic: conceptual
 helpviewer_keywords:
 - Availability Groups [SQL Server], distributed
 ms.assetid: ''
-author: MashaMSFT
-ms.author: mathoma
-ms.openlocfilehash: dac452cc825cef7099cd2f0f27c7d2045f6811ff
-ms.sourcegitcommit: c7f40918dc3ecdb0ed2ef5c237a3996cb4cd268d
+author: cawrites
+ms.author: chadam
+ms.openlocfilehash: 7c0ce9d5364865e2bd487cf6866f97e1d1e08a89
+ms.sourcegitcommit: 54cd97a33f417432aa26b948b3fc4b71a5e9162b
 ms.translationtype: HT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 10/05/2020
-ms.locfileid: "91727941"
+ms.lasthandoff: 11/13/2020
+ms.locfileid: "94584366"
 ---
 # <a name="distributed-availability-groups"></a>분산 가용성 그룹
 [!INCLUDE [SQL Server](../../../includes/applies-to-version/sqlserver.md)]
 분산 가용성 그룹은 기존의 Always On 가용성 그룹 기능의 변형으로서 SQL Server 2016에서 도입된 새로운 기능입니다. 이 문서에서는 분산 가용성 그룹의 몇 가지 측면을 명확히 하고 기존 [SQL Server 설명서](../../../sql-server/index.yml)를 보완합니다.
 
 > [!NOTE]
-> "DAG"는 Exchange 데이터베이스 가용성 그룹 기능에 대한 약어로 이미 사용되고 있으므로 *분산 가용성 그룹*에 대한 공식적인 약어가 아닙니다. 이 Exchange 기능은 SQL Server 가용성 그룹 또는 분산 가용성 그룹과는 관련이 없습니다.
+> "DAG"는 Exchange 데이터베이스 가용성 그룹 기능에 대한 약어로 이미 사용되고 있으므로 *분산 가용성 그룹* 에 대한 공식적인 약어가 아닙니다. 이 Exchange 기능은 SQL Server 가용성 그룹 또는 분산 가용성 그룹과는 관련이 없습니다.
 
 분산 가용성 그룹을 구성하려면 [분산 가용성 그룹 구성](configure-distributed-availability-groups.md)을 참조하세요.
 
@@ -41,7 +41,7 @@ ms.locfileid: "91727941"
 
 ![분산 가용성 그룹에 대한 상위 수준 보기](./media/distributed-availability-group/dag-01-high-level-view-distributed-ag.png)
 
-분산 가용성 그룹에서 데이터 이동을 동기 또는 비동기로 구성할 수 있습니다. 그러나 데이터 이동은 기존 가용성 그룹에 비해 분산 가용성 그룹 내에서 약간 다릅니다. 각 가용성 그룹에는 하나의 주 복제본이 있지만 삽입, 업데이트 및 삭제를 허용할 수 있는 분산 가용성 그룹에 참여하는 데이터베이스 복사본은 하나만 있습니다. 다음 그림에서 보여 주듯이 AG 1은 주 가용성 그룹입니다. 주 복제본은 AG 1의 보조 복제본과 AG 2의 주 복제본 모두로 트랜잭션을 보냅니다. AG 2의 주 복제본은 *전달자*라고도 합니다. 전달자는 분산된 가용성 그룹의 보조 가용성 그룹에서 주 복제본입니다. 전달자는 주 가용성 그룹의 주 복제본에서 트랜잭션을 받고 자체 가용성 그룹의 보조 복제본에 전달합니다.  그런 다음 전달자는 AG 2의 주 복제본을 계속 업데이트합니다. 
+분산 가용성 그룹에서 데이터 이동을 동기 또는 비동기로 구성할 수 있습니다. 그러나 데이터 이동은 기존 가용성 그룹에 비해 분산 가용성 그룹 내에서 약간 다릅니다. 각 가용성 그룹에는 하나의 주 복제본이 있지만 삽입, 업데이트 및 삭제를 허용할 수 있는 분산 가용성 그룹에 참여하는 데이터베이스 복사본은 하나만 있습니다. 다음 그림에서 보여 주듯이 AG 1은 주 가용성 그룹입니다. 주 복제본은 AG 1의 보조 복제본과 AG 2의 주 복제본 모두로 트랜잭션을 보냅니다. AG 2의 주 복제본은 *전달자* 라고도 합니다. 전달자는 분산된 가용성 그룹의 보조 가용성 그룹에서 주 복제본입니다. 전달자는 주 가용성 그룹의 주 복제본에서 트랜잭션을 받고 자체 가용성 그룹의 보조 복제본에 전달합니다.  그런 다음 전달자는 AG 2의 주 복제본을 계속 업데이트합니다. 
 
 ![분산 가용성 그룹 및 데이터 이동](./media/distributed-availability-group/dag-02-distributed-ag-data-movement.png)
 

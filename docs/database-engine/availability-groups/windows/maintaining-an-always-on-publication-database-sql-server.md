@@ -11,14 +11,14 @@ helpviewer_keywords:
 - Availability Groups [SQL Server], interoperability
 - replication [SQL Server], AlwaysOn Availability Groups
 ms.assetid: 55b345fe-2eb9-4b04-a900-63d858eec360
-author: MashaMSFT
-ms.author: mathoma
-ms.openlocfilehash: b5a4204b3963bdb3082353f27404476f81c5efb8
-ms.sourcegitcommit: cc23d8646041336d119b74bf239a6ac305ff3d31
+author: cawrites
+ms.author: chadam
+ms.openlocfilehash: 864fca7c1d2983bec6296f1e82304cff31f658cb
+ms.sourcegitcommit: 54cd97a33f417432aa26b948b3fc4b71a5e9162b
 ms.translationtype: HT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 09/23/2020
-ms.locfileid: "91116913"
+ms.lasthandoff: 11/13/2020
+ms.locfileid: "94584220"
 ---
 # <a name="manage-a-replicated-publisher-database-as-part-of-an-always-on-availability-group"></a>Always On 가용성 그룹의 일부로 복제된 게시자 데이터베이스 관리
 [!INCLUDE [SQL Server](../../../includes/applies-to-version/sqlserver.md)]
@@ -32,7 +32,7 @@ ms.locfileid: "91116913"
   
 -   복제 모니터는 항상 원래 게시자에서 게시 정보를 표시합니다. 그러나 원래 게시자를 서버로 추가하면 어떤 복제본에서든지 복제 모니터에서 이 정보를 볼 수 있습니다.  
   
--   게시자 이름 지정 등을 위해 저장 프로시저나 RMO(복제 관리 개체)를 사용하여 현재 주 복제본에서 복제를 관리할 때는 복제용으로 설정된 데이터베이스(원래 게시자)에서 인스턴스 이름을 지정해야 합니다. 올바른 이름을 확인하려면 **PUBLISHINGSERVERNAME** 함수를 사용하십시오. 게시 데이터베이스를 가용성 그룹에 조인하면 보조 데이터베이스 복제본에 저장된 복제 메타데이터가 주 데이터베이스 복제본의 복제 메타데이터와 동일해집니다. 따라서 주 서버에서 복제용으로 설정된 게시 데이터베이스의 경우 보조 서버에서 시스템 테이블에 저장된 게시자 인스턴스 이름은 보조 서버가 아닌 주 서버의 이름입니다. 이러한 방식은 게시 데이터베이스가 보조로 장애 조치되는 경우 복제 구성 및 유지 관리에 영향을 줍니다. 예를 들어 장애 조치(failover) 후에 보조 서버에서 저장 프로시저를 사용하여 복제를 구성하는 경우, 다른 복제본에서 사용하도록 설정된 게시 데이터베이스에 대한 끌어오기 구독을 설정하려면 현재 게시자가 아닌 원래 게시자의 이름을 **sp_addpullsubscription** 또는 **sp_addmergepullsubscription**의 *\@publisher* 매개 변수로 지정해야 합니다. 그러나 장애 조치 후 게시 데이터베이스를 활성화하면 시스템 테이블에 저장된 게시자 인스턴스 이름이 현재 주 호스트의 이름이 됩니다. 이 경우 *\@publisher* 매개 변수에 대해 현재 주 복제본의 호스트 이름을 사용합니다.  
+-   게시자 이름 지정 등을 위해 저장 프로시저나 RMO(복제 관리 개체)를 사용하여 현재 주 복제본에서 복제를 관리할 때는 복제용으로 설정된 데이터베이스(원래 게시자)에서 인스턴스 이름을 지정해야 합니다. 올바른 이름을 확인하려면 **PUBLISHINGSERVERNAME** 함수를 사용하십시오. 게시 데이터베이스를 가용성 그룹에 조인하면 보조 데이터베이스 복제본에 저장된 복제 메타데이터가 주 데이터베이스 복제본의 복제 메타데이터와 동일해집니다. 따라서 주 서버에서 복제용으로 설정된 게시 데이터베이스의 경우 보조 서버에서 시스템 테이블에 저장된 게시자 인스턴스 이름은 보조 서버가 아닌 주 서버의 이름입니다. 이러한 방식은 게시 데이터베이스가 보조로 장애 조치되는 경우 복제 구성 및 유지 관리에 영향을 줍니다. 예를 들어 장애 조치(failover) 후에 보조 서버에서 저장 프로시저를 사용하여 복제를 구성하는 경우, 다른 복제본에서 사용하도록 설정된 게시 데이터베이스에 대한 끌어오기 구독을 설정하려면 현재 게시자가 아닌 원래 게시자의 이름을 **sp_addpullsubscription** 또는 **sp_addmergepullsubscription** 의 *\@publisher* 매개 변수로 지정해야 합니다. 그러나 장애 조치 후 게시 데이터베이스를 활성화하면 시스템 테이블에 저장된 게시자 인스턴스 이름이 현재 주 호스트의 이름이 됩니다. 이 경우 *\@publisher* 매개 변수에 대해 현재 주 복제본의 호스트 이름을 사용합니다.  
   
     > [!NOTE]  
     >  **sp_addpublication** 같은 일부 프로시저의 경우 *\@publisher* 매개 변수는 [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] 인스턴스 이외 게시자에 대해서만 지원되며, 이 경우 [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] Always On과는 관련이 없습니다.  
@@ -42,7 +42,7 @@ ms.locfileid: "91116913"
 ##  <a name="removing-a-published-database-from-an-availability-group"></a><a name="RemovePublDb"></a> 가용성 그룹에서 게시된 데이터베이스 제거  
  게시된 데이터베이스를 가용성 그룹에서 제거하거나 게시된 멤버 데이터베이스가 있는 가용성 그룹을 삭제할 경우 다음 문제를 고려하세요.  
   
--   원래 게시자의 게시 데이터베이스를 가용성 그룹 주 복제본에서 제거할 경우 *\@redirected_publisher* 매개 변수 값을 지정하지 않고 **sp_redirect_publisher**를 실행하여 게시자/데이터베이스 쌍에 대한 리디렉션을 제거해야 합니다.  
+-   원래 게시자의 게시 데이터베이스를 가용성 그룹 주 복제본에서 제거할 경우 *\@redirected_publisher* 매개 변수 값을 지정하지 않고 **sp_redirect_publisher** 를 실행하여 게시자/데이터베이스 쌍에 대한 리디렉션을 제거해야 합니다.  
   
     ```  
     EXEC sys.sp_redirect_publisher   

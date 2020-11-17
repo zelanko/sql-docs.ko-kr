@@ -10,14 +10,14 @@ ms.topic: conceptual
 f1_keywords:
 - VS.ToolsOptionsPages.Alwayson.Dashboard
 ms.assetid: 4369b588-e982-4b57-80a1-beb2e879ce0b
-author: MashaMSFT
-ms.author: mathoma
-ms.openlocfilehash: 3ddc300aeff51382b962767b857c8b2fdee8270a
-ms.sourcegitcommit: b80364e31739d7b08cc388c1f83bb01de5dd45c1
+author: cawrites
+ms.author: chadam
+ms.openlocfilehash: 1b34fcb55625bf2283389abe129fe33e0aa5c6ef
+ms.sourcegitcommit: 54cd97a33f417432aa26b948b3fc4b71a5e9162b
 ms.translationtype: HT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 08/04/2020
-ms.locfileid: "87564941"
+ms.lasthandoff: 11/13/2020
+ms.locfileid: "94584113"
 ---
 # <a name="options-sql-server-always-on-dashboard-page"></a>옵션(SQL Server Always On, 대시보드 페이지)
 [!INCLUDE [SQL Server](../../../includes/applies-to-version/sqlserver.md)]
@@ -26,7 +26,7 @@ ms.locfileid: "87564941"
   
  **이 페이지에 액세스하려면**  
   
- **도구** 메뉴에서 **옵션**을 클릭하고 **SQL Server Always On** 폴더를 확장한 다음 **대시보드**를 클릭합니다.  
+ **도구** 메뉴에서 **옵션** 을 클릭하고 **SQL Server Always On** 폴더를 확장한 다음 **대시보드** 를 클릭합니다.  
   
 ## <a name="on-this-page"></a>이 페이지에서  
  **자동 새로 고침 설정**  

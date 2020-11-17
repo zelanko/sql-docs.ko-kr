@@ -14,14 +14,14 @@ helpviewer_keywords:
 - Availability Groups [SQL Server], read-only routing
 - Availability Groups [SQL Server], client connectivity
 ms.assetid: 22387419-22c4-43fa-851c-5fecec4b049b
-author: MashaMSFT
-ms.author: mathoma
-ms.openlocfilehash: 54d9036e6ce4165f4480339926624f1480c154aa
-ms.sourcegitcommit: c7f40918dc3ecdb0ed2ef5c237a3996cb4cd268d
+author: cawrites
+ms.author: chadam
+ms.openlocfilehash: 1604aa22c53a24fa565061325b3c68a1640c490c
+ms.sourcegitcommit: 54cd97a33f417432aa26b948b3fc4b71a5e9162b
 ms.translationtype: HT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 10/05/2020
-ms.locfileid: "91727974"
+ms.lasthandoff: 11/13/2020
+ms.locfileid: "94584464"
 ---
 # <a name="configure-read-only-access-to-a-secondary-replica-of-an-always-on-availability-group"></a>Always On 가용성 그룹의 보조 복제본에 대한 읽기 전용 액세스 구성
 [!INCLUDE [SQL Server](../../../includes/applies-to-version/sqlserver.md)]
@@ -50,7 +50,7 @@ ms.locfileid: "91727974"
   
 3.  복제본을 변경할 가용성 그룹을 클릭합니다.  
   
-4.  가용성 복제본을 마우스 오른쪽 단추로 클릭하고 **속성**을 클릭합니다.  
+4.  가용성 복제본을 마우스 오른쪽 단추로 클릭하고 **속성** 을 클릭합니다.  
   
 5.  **가용성 복제본 속성** 대화 상자에서 다음과 같이 주 역할 및 보조 역할에 대한 연결 액세스를 변경할 수 있습니다.  
   
@@ -111,7 +111,7 @@ ms.locfileid: "91727974"
      주 복제본의 데이터베이스에 대한 모든 연결이 허용됩니다. 이 값은 기본 설정입니다.  
   
 ###  <a name="example-transact-sql"></a><a name="TsqlExample"></a> 예(Transact-SQL)  
- 다음 예제에서는 *AG2*라는 가용성 그룹에 보조 복제본을 추가합니다. 독립 실행형 서버 인스턴스인 *COMPUTER03\HADR_INSTANCE*가 새 가용성 복제본을 호스트하도록 지정됩니다. 이 복제본은 주 역할에 대해 읽기/쓰기 연결만 허용하고 보조 역할에 대해 읽기 전용 연결만 허용하도록 구성되어 있습니다.  
+ 다음 예제에서는 *AG2* 라는 가용성 그룹에 보조 복제본을 추가합니다. 독립 실행형 서버 인스턴스인 *COMPUTER03\HADR_INSTANCE* 가 새 가용성 복제본을 호스트하도록 지정됩니다. 이 복제본은 주 역할에 대해 읽기/쓰기 연결만 허용하고 보조 역할에 대해 읽기 전용 연결만 허용하도록 구성되어 있습니다.  
   
 ```  
 ALTER AVAILABILITY GROUP AG2   
@@ -141,12 +141,12 @@ GO
          보조 복제본의 데이터베이스에 대한 직접 연결이 허용되지 않으며 읽기 액세스를 위해 데이터베이스에 연결할 수 없습니다. 이 값은 기본 설정입니다.  
   
          **AllowReadIntentConnectionsOnly**  
-         애플리케이션 의도 속성이 **ReadOnly**로 설정된 경우에만 보조 복제본의 데이터베이스에 연결할 수 있습니다. 이 속성에 대한 자세한 내용은 [Using Connection String Keywords with SQL Server Native Client](../../../relational-databases/native-client/applications/using-connection-string-keywords-with-sql-server-native-client.md)을 참조하십시오.  
+         애플리케이션 의도 속성이 **ReadOnly** 로 설정된 경우에만 보조 복제본의 데이터베이스에 연결할 수 있습니다. 이 속성에 대한 자세한 내용은 [Using Connection String Keywords with SQL Server Native Client](../../../relational-databases/native-client/applications/using-connection-string-keywords-with-sql-server-native-client.md)을 참조하십시오.  
   
          **AllowAllConnections**  
          보조 복제본의 데이터베이스에 대해 읽기 전용 액세스를 위한 모든 연결이 허용됩니다.  
   
-    -   주 역할에 대한 연결 액세스를 구성하려면 **ConnectionModeInPrimaryRole**_primary_role_keyword_를 지정합니다. 여기서 *primary_role_keyword* 에는 다음 값 중 하나를 사용합니다.  
+    -   주 역할에 대한 연결 액세스를 구성하려면 **ConnectionModeInPrimaryRole**_primary_role_keyword_ 를 지정합니다. 여기서 *primary_role_keyword* 에는 다음 값 중 하나를 사용합니다.  
   
          **AllowReadWriteConnections**  
          애플리케이션 의도 연결 속성이 ReadOnly로 설정된 연결은 허용되지 않습니다. 애플리케이션 의도 속성이 ReadWrite로 설정되었거나 애플리케이션 의도 연결 속성이 설정되지 않은 경우에는 연결이 허용됩니다. 애플리케이션 의도 연결 속성에 대한 자세한 내용은 [Using Connection String Keywords with SQL Server Native Client](../../../relational-databases/native-client/applications/using-connection-string-keywords-with-sql-server-native-client.md)을 참조하십시오.  
@@ -162,7 +162,7 @@ GO
 -   [SQL Server PowerShell 공급자](../../../powershell/sql-server-powershell-provider.md)  
   
 ###  <a name="example-powershell"></a><a name="PSExample"></a> 예제(PowerShell)  
- 다음 예에서는 **ConnectionModeInSecondaryRole** 및 **ConnectionModeInPrimaryRole** 매개 변수를 모두 **AllowAllConnections**으로 설정합니다.  
+ 다음 예에서는 **ConnectionModeInSecondaryRole** 및 **ConnectionModeInPrimaryRole** 매개 변수를 모두 **AllowAllConnections** 으로 설정합니다.  
   
 ```  
 Set-Location SQLSERVER:\SQL\PrimaryServer\default\AvailabilityGroups\MyAg  

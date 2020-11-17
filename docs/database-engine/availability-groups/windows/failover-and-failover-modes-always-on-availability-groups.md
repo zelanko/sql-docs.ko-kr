@@ -13,14 +13,14 @@ helpviewer_keywords:
 - Availability Groups [SQL Server], failover modes
 - failover [SQL Server], AlwaysOn Availability Groups
 ms.assetid: 378d2d63-50b9-420b-bafb-d375543fda17
-author: MashaMSFT
-ms.author: mathoma
-ms.openlocfilehash: 99155a11cfa3b8837dfec41a9163db6b9c56a925
-ms.sourcegitcommit: c7f40918dc3ecdb0ed2ef5c237a3996cb4cd268d
+author: cawrites
+ms.author: chadam
+ms.openlocfilehash: 7cd148979886048bad16bc706d19b020d114377f
+ms.sourcegitcommit: 54cd97a33f417432aa26b948b3fc4b71a5e9162b
 ms.translationtype: HT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 10/05/2020
-ms.locfileid: "91727906"
+ms.lasthandoff: 11/13/2020
+ms.locfileid: "94584255"
 ---
 # <a name="failover-and-failover-modes-always-on-availability-groups"></a>장애 조치(Failover) 및 장애 조치(Failover) 모드(Always On 가용성 그룹)
 [!INCLUDE [SQL Server](../../../includes/applies-to-version/sqlserver.md)]
@@ -34,7 +34,7 @@ ms.locfileid: "91727906"
   
  지정된 가용성 복제본에서 지원하는 장애 조치(Failover)의 형태는 *장애 조치(Failover) 모드* 속성으로 지정됩니다. 지정된 가용성 복제본의 경우 가능한 장애 조치(Failover) 모드는 다음과 같이 복제본의 [가용성 모드](../../../database-engine/availability-groups/windows/availability-modes-always-on-availability-groups.md) 에 따라 다릅니다.  
   
--   **동기-커밋 복제본**은 두 개의 설정(자동 또는 수동)을 지원합니다. "자동" 설정은 자동 장애 조치(Failover)와 수동 장애 조치(Failover)를 모두 지원합니다. 데이터 손실을 방지하기 위해 자동 장애 조치(Failover) 및 계획된 장애 조치(Failover)에서는 장애 조치(Failover) 대상이 동기화 상태가 정상(장애 조치(Failover) 대상의 모든 보조 데이터베이스가 해당 주 데이터베이스와 동기화된 상태)인 동기-커밋 보조 복제본이어야 합니다. 보조 복제본이 이러한 조건을 모두 충족하지 않을 때는 항상 강제 장애 조치(Failover)만 지원됩니다. 강제 장애 조치(Failover)는 또한 역할이 RESOLVING 상태인 복제본을 지원합니다.  
+-   **동기-커밋 복제본** 은 두 개의 설정(자동 또는 수동)을 지원합니다. "자동" 설정은 자동 장애 조치(Failover)와 수동 장애 조치(Failover)를 모두 지원합니다. 데이터 손실을 방지하기 위해 자동 장애 조치(Failover) 및 계획된 장애 조치(Failover)에서는 장애 조치(Failover) 대상이 동기화 상태가 정상(장애 조치(Failover) 대상의 모든 보조 데이터베이스가 해당 주 데이터베이스와 동기화된 상태)인 동기-커밋 보조 복제본이어야 합니다. 보조 복제본이 이러한 조건을 모두 충족하지 않을 때는 항상 강제 장애 조치(Failover)만 지원됩니다. 강제 장애 조치(Failover)는 또한 역할이 RESOLVING 상태인 복제본을 지원합니다.  
   
 -   **비동기-커밋 복제본** 은 수동 장애 조치(Failover) 모드만 지원합니다. 또한, 절대 동기화되지 않기 때문에 강제 장애 조치(Failover)만 지원합니다.  
   

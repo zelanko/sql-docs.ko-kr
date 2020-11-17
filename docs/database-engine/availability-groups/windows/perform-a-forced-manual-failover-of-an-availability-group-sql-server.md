@@ -13,14 +13,14 @@ helpviewer_keywords:
 - Availability Groups [SQL Server], failover
 - failover [SQL Server], AlwaysOn Availability Groups
 ms.assetid: 222288fe-ffc0-4567-b624-5d91485d70f0
-author: MashaMSFT
-ms.author: mathoma
-ms.openlocfilehash: abffb23eda73db16481e9b91402b843a4088a33a
-ms.sourcegitcommit: 2f868a77903c1f1c4cecf4ea1c181deee12d5b15
+author: cawrites
+ms.author: chadam
+ms.openlocfilehash: 35a0f41a9ad2d0e4ae8128e7cb98838c1a83747d
+ms.sourcegitcommit: 54cd97a33f417432aa26b948b3fc4b71a5e9162b
 ms.translationtype: HT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 10/02/2020
-ms.locfileid: "91670936"
+ms.lasthandoff: 11/13/2020
+ms.locfileid: "94584175"
 ---
 # <a name="perform-a-forced-manual-failover-of-an-always-on-availability-group-sql-server"></a>Always On 가용성 그룹의 강제 수동 장애 조치(failover) 수행(SQL Server)
 [!INCLUDE [SQL Server](../../../includes/applies-to-version/sqlserver.md)]
@@ -33,7 +33,7 @@ ms.locfileid: "91670936"
   
  강제 장애 조치(failover)는 다음과 같은 응급 상황에 수행해야 합니다.  
   
--   WSFC 클러스터에서*강제 쿼럼*을 수행한 후에는 각 가용성 그룹에 대해 강제 장애 조치(failover)(데이터 손실 가능)를 수행해야 합니다. 강제 장애 조치(failover)가 필요한 이유는 WSFC 클러스터 값의 실제 상태가 손실되었을 수 있기 때문입니다. 그러나 강제 쿼럼을 수행하기 전에 주 복제본이었던 복제본을 호스팅하는 시스템 인스턴스에서 강제 장애 조치(failover)를 수행할 수 있거나 강제 쿼럼을 수행하기 전에 동기화된 보조 복제본으로 강제 장애 조치(failover)를 수행할 수 있으면 데이터 손실을 방지할 수 있습니다. 자세한 내용은 이 항목의 뒷부분에 나오는 [강제 쿼럼 후 데이터 손실을 방지할 수 있는 잠재적인 방법](#WaysToAvoidDataLoss)을 참조하세요.  
+-   WSFC 클러스터에서 *강제 쿼럼* 을 수행한 후에는 각 가용성 그룹에 대해 강제 장애 조치(failover)(데이터 손실 가능)를 수행해야 합니다. 강제 장애 조치(failover)가 필요한 이유는 WSFC 클러스터 값의 실제 상태가 손실되었을 수 있기 때문입니다. 그러나 강제 쿼럼을 수행하기 전에 주 복제본이었던 복제본을 호스팅하는 시스템 인스턴스에서 강제 장애 조치(failover)를 수행할 수 있거나 강제 쿼럼을 수행하기 전에 동기화된 보조 복제본으로 강제 장애 조치(failover)를 수행할 수 있으면 데이터 손실을 방지할 수 있습니다. 자세한 내용은 이 항목의 뒷부분에 나오는 [강제 쿼럼 후 데이터 손실을 방지할 수 있는 잠재적인 방법](#WaysToAvoidDataLoss)을 참조하세요.  
   
     > [!IMPORTANT]  
     >  강제적인 방법이 아니라 자연스러운 방법으로 쿼럼을 다시 얻으면 가용성 복제본이 일반적인 방법으로 복구됩니다. 쿼럼을 다시 얻은 후에도 여전히 주 복제본을 사용할 수 없는 경우 동기화된 보조 복제본으로 예정된 수동 장애 조치(failover)를 수행할 수 있습니다.  
@@ -155,7 +155,7 @@ ms.locfileid: "91670936"
   
     -   **-AllowDataLoss**  
   
-         기본적으로 **-AllowDataLoss** 매개 변수를 사용하면 **Switch-SqlAvailabilityGroup** 에서 강제 장애 조치(failover)를 수행하면 커밋되지 않은 트랜잭션이 손실될 수 있음을 알리고 확인을 요청하는 메시지가 나타납니다. 계속하려면 **Y**를 입력하고, 작업을 취소하려면 **N**을 입력합니다.  
+         기본적으로 **-AllowDataLoss** 매개 변수를 사용하면 **Switch-SqlAvailabilityGroup** 에서 강제 장애 조치(failover)를 수행하면 커밋되지 않은 트랜잭션이 손실될 수 있음을 알리고 확인을 요청하는 메시지가 나타납니다. 계속하려면 **Y** 를 입력하고, 작업을 취소하려면 **N** 을 입력합니다.  
   
          다음 예제에서는 `MyAg` 이라는 서버 인스턴스의 보조 복제본으로 가용성 그룹 `SecondaryServer\InstanceName`의 강제 장애 조치(failover)(데이터가 손실될 수 있음)를 수행합니다. 이 작업을 확인하라는 메시지가 나타납니다.  
   
@@ -247,7 +247,7 @@ ms.locfileid: "91670936"
 ##  <a name="example-scenario-using-a-forced-failover-to-recover-from-a-catastrophic-failure"></a><a name="ExampleRecoveryFromCatastrophy"></a> 시나리오 예: 강제 장애 조치(Failover)를 사용하여 치명적인 오류 복구  
  주 복제본이 실패하고 사용할 수 있는 동기화된 보조 복제본이 없는 경우 가용성 그룹을 강제 장애 조치(failover)하는 것이 적절한 대처 방법이 될 수 있습니다. 강제 장애 조치(failover)의 적합성은 다음 사항에 따라 결정됩니다. (1) SLA(서비스 수준 계약)에서 허용하는 기간보다 오랫동안 주 복제본이 오프라인 상태가 될 것으로 예상되는지 여부 (2) 주 데이터베이스를 빨리 사용 가능하게 하기 위해 잠재적인 데이터 손실 위험을 감수할지 여부. 가용성 그룹을 강제 장애 조치(failover)해야 한다고 판단되는 경우 실제 강제 장애 조치(failover)는 여러 단계 프로세스 중 한 단계일 뿐입니다.  
   
- 이 항목에서는 강제 장애 조치(failover)를 사용하여 치명적인 오류를 복구하는 데 필요한 단계를 보여 주기 위해 가능한 재해 복구 시나리오를 제공합니다. 예제 시나리오에서는 원래 토폴로지가 주 복제본을 비롯한 세 개의 동기 커밋 가용성 복제본을 호스팅하는 기본 데이터 센터와 두 개의 동기 커밋 보조 복제본을 호스팅하는 원격 데이터 센터로 구성된 가용성 그룹을 고려합니다. 다음 그림에서는 이 예제 가용성 그룹의 원래 토폴로지를 보여 줍니다. 가용성 그룹은 기본 데이터 센터에 세 개의 노드(**노드 01**, **노드 02**및 **노드 03**)가 있고 원격 데이터 센터에 두 개의 노드(**노드 04** 및 **노드 05**)가 있는 다중 서브넷 WSFC 클러스터에 의해 호스트됩니다.  
+ 이 항목에서는 강제 장애 조치(failover)를 사용하여 치명적인 오류를 복구하는 데 필요한 단계를 보여 주기 위해 가능한 재해 복구 시나리오를 제공합니다. 예제 시나리오에서는 원래 토폴로지가 주 복제본을 비롯한 세 개의 동기 커밋 가용성 복제본을 호스팅하는 기본 데이터 센터와 두 개의 동기 커밋 보조 복제본을 호스팅하는 원격 데이터 센터로 구성된 가용성 그룹을 고려합니다. 다음 그림에서는 이 예제 가용성 그룹의 원래 토폴로지를 보여 줍니다. 가용성 그룹은 기본 데이터 센터에 세 개의 노드(**노드 01**, **노드 02** 및 **노드 03**)가 있고 원격 데이터 센터에 두 개의 노드(**노드 04** 및 **노드 05**)가 있는 다중 서브넷 WSFC 클러스터에 의해 호스트됩니다.  
   
  ![가용성 그룹의 원래 토폴로지](../../../database-engine/availability-groups/windows/media/aoag-failurerecovery-origtopology.gif "가용성 그룹의 원래 토폴로지")  
   
@@ -273,7 +273,7 @@ ms.locfileid: "91670936"
 |단계|작업|링크|  
 |----------|------------|-----------|  
 |**1.**|DBA 또는 네트워크 관리자는 WSFC 클러스터가 정상 쿼럼인지 확인합니다. 이 예제에서는 쿼럼을 강제 실행해야 합니다.|[WSFC 쿼럼 모드 및 투표 구성&#40;SQL Server&#41;](../../../sql-server/failover-clusters/windows/wsfc-quorum-modes-and-voting-configuration-sql-server.md)<br /><br /> [강제 쿼럼을 통해 WSFC 재해 복구&#40;SQL Server&#41;](../../../sql-server/failover-clusters/windows/wsfc-disaster-recovery-through-forced-quorum-sql-server.md)|  
-|**2.**|DBA는 **노드 04**에서 최소 대기 시간을 사용하여 서버 인스턴스에 연결하고 강제 수동 장애 조치(failover)를 수행합니다. 강제 장애 조치(failover)는 이 보조 복제본을 주 역할로 전환하고 나머지 보조 복제본( **노드 05**)에서 보조 데이터베이스를 일시 중지합니다.|[sys.dm_hadr_database_replica_states&#40;Transact-SQL&#41;](../../../relational-databases/system-dynamic-management-views/sys-dm-hadr-database-replica-states-transact-sql.md) ( **sys.dm_hadr_database_replica_states** 열을 쿼리합니다. 자세한 내용은 이 항목의 앞부분에 나오는 [권장 사항](#Recommendations)을 참조하세요.)|  
+|**2.**|DBA는 **노드 04** 에서 최소 대기 시간을 사용하여 서버 인스턴스에 연결하고 강제 수동 장애 조치(failover)를 수행합니다. 강제 장애 조치(failover)는 이 보조 복제본을 주 역할로 전환하고 나머지 보조 복제본( **노드 05**)에서 보조 데이터베이스를 일시 중지합니다.|[sys.dm_hadr_database_replica_states&#40;Transact-SQL&#41;](../../../relational-databases/system-dynamic-management-views/sys-dm-hadr-database-replica-states-transact-sql.md) ( **sys.dm_hadr_database_replica_states** 열을 쿼리합니다. 자세한 내용은 이 항목의 앞부분에 나오는 [권장 사항](#Recommendations)을 참조하세요.)|  
 |**3.**|DBA는 수동으로 나머지 보조 복제본에서 보조 데이터베이스를 재개합니다.|[가용성 데이터베이스 재개&#40;SQL Server&#41;](../../../database-engine/availability-groups/windows/resume-an-availability-database-sql-server.md)|  
   
 ###  <a name="returning-the-availability-group-to-its-original-topology"></a><a name="ReturnToOrigTopology"></a> 가용성 그룹을 원래 토폴로지로 복귀  

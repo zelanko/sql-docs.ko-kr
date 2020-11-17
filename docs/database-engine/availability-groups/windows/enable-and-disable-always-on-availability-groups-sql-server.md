@@ -13,14 +13,14 @@ helpviewer_keywords:
 - Availability Groups [SQL Server], disabling
 - Availability Groups [SQL Server], enabling
 ms.assetid: 7c326958-5ae9-4761-9c57-905972276a8f
-author: MashaMSFT
-ms.author: mathoma
-ms.openlocfilehash: 08a051a5b0fa450680566b8bcfb408e481016325
-ms.sourcegitcommit: c7f40918dc3ecdb0ed2ef5c237a3996cb4cd268d
+author: cawrites
+ms.author: chadam
+ms.openlocfilehash: 33172488fd20ed4ef2fc555026931ae8b9a10f9c
+ms.sourcegitcommit: 54cd97a33f417432aa26b948b3fc4b71a5e9162b
 ms.translationtype: HT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 10/05/2020
-ms.locfileid: "91727925"
+ms.lasthandoff: 11/13/2020
+ms.locfileid: "94584325"
 ---
 # <a name="enable-or-disable-always-on-availability-group-feature"></a>Always On 가용성 그룹 기능을 사용하거나 사용하지 않도록 설정
 [!INCLUDE [SQL Server](../../../includes/applies-to-version/sqlserver.md)]
@@ -59,7 +59,7 @@ ms.locfileid: "91727925"
 ###  <a name="using-sql-server-management-studio"></a><a name="SSMS1Procedure"></a> SQL Server Management Studio 사용  
  **Always On 가용성 그룹을 사용할 수 있는지 여부를 확인하려면**  
   
-1.  개체 탐색기에서 서버 인스턴스를 마우스 오른쪽 단추로 클릭한 다음 **속성**을 클릭합니다.  
+1.  개체 탐색기에서 서버 인스턴스를 마우스 오른쪽 단추로 클릭한 다음 **속성** 을 클릭합니다.  
   
 2.  **서버 속성** 대화 상자에서 **일반** 페이지를 클릭합니다. **HADR 사용** 속성이 다음 값 중 하나로 표시됩니다.  
   
@@ -115,15 +115,15 @@ ms.locfileid: "91727925"
   
 1.  Always On 가용성 그룹을 사용하도록 설정할 [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] 인스턴스를 호스트하는 WSFC(Windows Server 장애 조치(failover) 클러스터) 노드에 연결합니다.  
   
-2.  **시작** 메뉴에서 **모든 프로그램**, [!INCLUDE[ssCurrentUI](../../../includes/sscurrentui-md.md)], **구성 도구**를 차례로 가리킨 다음 **SQL Server 구성 관리자**를 클릭합니다.  
+2.  **시작** 메뉴에서 **모든 프로그램**, [!INCLUDE[ssCurrentUI](../../../includes/sscurrentui-md.md)], **구성 도구** 를 차례로 가리킨 다음 **SQL Server 구성 관리자** 를 클릭합니다.  
   
-3.  **SQL Server 구성 관리자**에서 **SQL Server 서비스**를 클릭하고 ( **\<**_instance name_**>)** 를 마우스 오른쪽 단추로 클릭한 다음 **속성**을 클릭합니다. 여기서 **\<**_instance name_**>** 은 AlwaysOn 가용성 그룹을 사용하도록 설정할 로컬 서버 인스턴스의 이름입니다.  
+3.  **SQL Server 구성 관리자** 에서 **SQL Server 서비스** 를 클릭하고 ( **\<**_instance name_**>)** 를 마우스 오른쪽 단추로 클릭한 다음 **속성** 을 클릭합니다. 여기서 **\<**_instance name_**>** 은 AlwaysOn 가용성 그룹을 사용하도록 설정할 로컬 서버 인스턴스의 이름입니다.  
   
 4.  **Always On 고가용성** 탭을 선택합니다.  
   
 5.  **Windows 장애 조치(failover) 클러스터 이름** 필드에 로컬 장애 조치(failover) 클러스터의 이름이 포함되어 있는지 확인합니다. 이 필드가 비어 있으면 이 서버 인스턴스에서 현재 [!INCLUDE[ssHADR](../../../includes/sshadr-md.md)]을 지원하지 않는 것입니다. 로컬 컴퓨터가 클러스터 노드가 아니거나 WSFC 클러스터가 종료되었거나 이 버전의 [!INCLUDE[ssCurrent](../../../includes/sscurrent-md.md)] 에서 [!INCLUDE[ssHADR](../../../includes/sshadr-md.md)]을 지원하지 않습니다.  
   
-6.  **Always On 가용성 그룹 사용** 확인란을 선택하고 **확인**을 클릭합니다.  
+6.  **Always On 가용성 그룹 사용** 확인란을 선택하고 **확인** 을 클릭합니다.  
   
      [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] 구성 관리자가 변경 내용을 저장합니다. 그런 다음 [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] 서비스를 수동으로 다시 시작해야 합니다. 이렇게 하면 비즈니스 요구 사항에 가장 적합한 다시 시작 시간을 선택할 수 있습니다. [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] 서비스를 다시 시작하면 Always On을 사용할 수 있으며 **IsHadrEnabled** 서버 속성이 1로 설정됩니다.  
   
@@ -144,7 +144,7 @@ ms.locfileid: "91727925"
 -   [SQL Server PowerShell 공급자](../../../powershell/sql-server-powershell-provider.md)  
   
 ####  <a name="example-enable-sqlalwayson"></a><a name="ExmplEnable-SqlHadrServic"></a> 예제: Enable-SqlAlwaysOn  
- 다음 PowerShell 명령을 사용하면 SQL Server 인스턴스( [!INCLUDE[ssHADR](../../../includes/sshadr-md.md)] Computer*Instance*\\ *)에서*을 사용할 수 있습니다.  
+ 다음 PowerShell 명령을 사용하면 SQL Server 인스턴스( [!INCLUDE[ssHADR](../../../includes/sshadr-md.md)] Computer *Instance*\\ *)에서* 을 사용할 수 있습니다.  
   
 ```  
 Enable-SqlAlwaysOn -Path SQLSERVER:\SQL\Computer\Instance  
@@ -179,11 +179,11 @@ Enable-SqlAlwaysOn -Path SQLSERVER:\SQL\Computer\Instance
   
 1.  Always On 가용성 그룹을 사용하지 않도록 설정할 [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] 인스턴스를 호스트하는 WSFC(Windows Server 장애 조치(failover) 클러스터) 노드에 연결합니다.  
   
-2.  **시작** 메뉴에서 **모든 프로그램**, [!INCLUDE[ssCurrentUI](../../../includes/sscurrentui-md.md)], **구성 도구**를 차례로 가리킨 다음 **SQL Server 구성 관리자**를 클릭합니다.  
+2.  **시작** 메뉴에서 **모든 프로그램**, [!INCLUDE[ssCurrentUI](../../../includes/sscurrentui-md.md)], **구성 도구** 를 차례로 가리킨 다음 **SQL Server 구성 관리자** 를 클릭합니다.  
   
-3.  **SQL Server 구성 관리자**에서 **SQL Server 서비스**를 클릭하고 SQL Server( **\<**_instance name_**>)** 를 마우스 오른쪽 단추로 클릭한 다음 **속성**을 클릭합니다. 여기서 **\<**_instance name_**>** 은 AlwaysOn 가용성 그룹을 사용하지 않도록 설정할 로컬 서버 인스턴스의 이름입니다.  
+3.  **SQL Server 구성 관리자** 에서 **SQL Server 서비스** 를 클릭하고 SQL Server( **\<**_instance name_**>)** 를 마우스 오른쪽 단추로 클릭한 다음 **속성** 을 클릭합니다. 여기서 **\<**_instance name_**>** 은 AlwaysOn 가용성 그룹을 사용하지 않도록 설정할 로컬 서버 인스턴스의 이름입니다.  
   
-4.  **Always On 고가용성**탭에서 **Always On 가용성 그룹 사용** 확인란의 선택을 취소하고 **확인**을 클릭합니다.  
+4.  **Always On 고가용성** 탭에서 **Always On 가용성 그룹 사용** 확인란의 선택을 취소하고 **확인** 을 클릭합니다.  
   
      [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] 구성 관리자가 변경 내용을 저장하고 [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] 서비스를 다시 시작합니다. [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] 서비스를 시작하면 Always On을 사용할 수 없고 **IsHadrEnabled** 서버 속성이 0으로 설정되어 Always On 가용성 그룹을 사용할 수 없음을 나타냅니다.  
   
@@ -233,11 +233,11 @@ Enable-SqlAlwaysOn -Path SQLSERVER:\SQL\Computer\Instance
 4.  보조 데이터베이스가 RESTORING 상태가 됩니다. 이를 삭제하거나 RESTORE WITH RECOVERY를 사용하여 복원할 수 있습니다. 그러나 복원된 데이터베이스는 더 이상 가용성 그룹 데이터 동기화에 사용되지 않습니다.  
   
 ##  <a name="when-does-a-cmdlet-restart-the-sql-server-service"></a><a name="WhenCmdletRestartsSQL"></a> Cmdlet이 SQL Server 서비스를 다시 시작하는 경우  
- 현재 실행 중인 서버 인스턴스에서 **Enable-SqlAlwaysOn** 또는 **Disable-SqlAlwaysOn**을 사용하여 현재 AlwaysOn 설정을 변경하면 SQL Server 서비스가 다시 시작될 수 있습니다. 다시 시작 동작은 다음 조건에 따라 달라집니다.  
+ 현재 실행 중인 서버 인스턴스에서 **Enable-SqlAlwaysOn** 또는 **Disable-SqlAlwaysOn** 을 사용하여 현재 AlwaysOn 설정을 변경하면 SQL Server 서비스가 다시 시작될 수 있습니다. 다시 시작 동작은 다음 조건에 따라 달라집니다.  
   
 |-NoServiceRestart 매개 변수가 지정되었는지 여부|-Force 매개 변수가 지정되었는지 여부|[!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] 서비스가 다시 시작되었는지 여부|  
 |--------------------------------------------|---------------------------------|---------------------------------------------------------|  
-|예|예|기본적으로 선택되어 있지만 cmdlet에서 다음과 같이 묻는 메시지가 표시됩니다.<br /><br /> **이 작업을 완료하려면 '<instance_name>' 서버 인스턴스에 대한 SQL Server 서비스를 다시 시작해야 합니다. 계속하시겠습니까?**<br /><br /> **[Y] 예  [N] 아니요  [S] 일시 중단  [?] 도움말(기본값 "Y"):**<br /><br /> **N** 또는 **S**를 지정하면 서비스가 다시 시작되지 않습니다.|  
+|예|예|기본적으로 선택되어 있지만 cmdlet에서 다음과 같이 묻는 메시지가 표시됩니다.<br /><br /> **이 작업을 완료하려면 '<instance_name>' 서버 인스턴스에 대한 SQL Server 서비스를 다시 시작해야 합니다. 계속하시겠습니까?**<br /><br /> **[Y] 예  [N] 아니요  [S] 일시 중단  [?] 도움말(기본값 "Y"):**<br /><br /> **N** 또는 **S** 를 지정하면 서비스가 다시 시작되지 않습니다.|  
 |예|예|서비스가 다시 시작됩니다.|  
 |예|예|서비스가 다시 시작되지 않습니다.|  
 |예|예|서비스가 다시 시작되지 않습니다.|  

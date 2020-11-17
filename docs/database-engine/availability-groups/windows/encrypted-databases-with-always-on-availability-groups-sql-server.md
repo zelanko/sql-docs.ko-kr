@@ -12,14 +12,14 @@ helpviewer_keywords:
 - TDE, AlwaysOn Availability Groups
 - Availability Groups [SQL Server], interoperability
 ms.assetid: 09eb6ebc-3051-4fff-86a5-93524507b1fc
-author: MashaMSFT
-ms.author: mathoma
-ms.openlocfilehash: 6ba9bc691bb3af223ea7ee16b64a808b5ef48834
-ms.sourcegitcommit: cc23d8646041336d119b74bf239a6ac305ff3d31
+author: cawrites
+ms.author: chadam
+ms.openlocfilehash: 2569f44e4642df714c8108b6540b81d013d30b82
+ms.sourcegitcommit: 54cd97a33f417432aa26b948b3fc4b71a5e9162b
 ms.translationtype: HT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 09/23/2020
-ms.locfileid: "91110984"
+ms.lasthandoff: 11/13/2020
+ms.locfileid: "94584308"
 ---
 # <a name="add-an-encrypted-database-to-an-always-on-availability-group"></a>Always On 가용성 그룹에 암호화된 데이터베이스 추가
 [!INCLUDE [SQL Server](../../../includes/applies-to-version/sqlserver.md)]

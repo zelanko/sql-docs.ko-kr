@@ -8,15 +8,15 @@ ms.reviewer: ''
 ms.technology: high-availability
 ms.topic: how-to
 ms.assetid: 0e332aa4-2c48-4bc4-a404-b65735a02cea
-author: MashaMSFT
-ms.author: mathoma
+author: cawrites
+ms.author: chadam
 monikerRange: '>=sql-server-2016||=sqlallproducts-allversions'
-ms.openlocfilehash: 0915b57e7bd73ab4991ae14c222669fd309f7d6a
-ms.sourcegitcommit: c7f40918dc3ecdb0ed2ef5c237a3996cb4cd268d
+ms.openlocfilehash: 306d77b9bf980179ff69514e0e609fc109c78632
+ms.sourcegitcommit: 54cd97a33f417432aa26b948b3fc4b71a5e9162b
 ms.translationtype: HT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 10/05/2020
-ms.locfileid: "91726404"
+ms.lasthandoff: 11/13/2020
+ms.locfileid: "94584386"
 ---
 # <a name="create-clustered-dtc-resource-for-an-always-on-availability-group"></a>Always On 가용성 그룹에 대한 클러스터형 DTC 리소스 만들기
 
@@ -26,7 +26,7 @@ ms.locfileid: "91726404"
 
 이 연습에서는 클러스터된 DTC 리소스와 SQL Server 가용성 그룹을 만들어 [SQL Server 가용성 그룹에 대한 DTC 클러스터링](../../../database-engine/availability-groups/windows/cluster-dtc-for-sql-server-2016-availability-groups.md)의 요구 사항에 맞춥니다.
 
-여기에서는 PowerShell과 T-SQL(TRANSACT-SQL) 스크립트를 사용합니다.  대부분의 T-SQL 스크립트에서는 **SQLCMD 모드** 를 사용하도록 설정해야 합니다.  **SQLCMD 모드**대한 자세한 내용은 [쿼리 편집기에서 SQLCMD 스크립팅을 설정](../../../ssms/scripting/edit-sqlcmd-scripts-with-query-editor.md)을 참조하세요.  PowerShell 모듈 **FailoverClusters** 를 가져와야 합니다.  PowerShell 모듈을 가져오는 방법에 대한 자세한 내용은 [PowerShell 모듈 가져오기](/powershell/scripting/developer/module/importing-a-powershell-module)를 참조하세요.  이 연습은 다음 사항을 기반으로 합니다.
+여기에서는 PowerShell과 T-SQL(TRANSACT-SQL) 스크립트를 사용합니다.  대부분의 T-SQL 스크립트에서는 **SQLCMD 모드** 를 사용하도록 설정해야 합니다.  **SQLCMD 모드** 대한 자세한 내용은 [쿼리 편집기에서 SQLCMD 스크립팅을 설정](../../../ssms/scripting/edit-sqlcmd-scripts-with-query-editor.md)을 참조하세요.  PowerShell 모듈 **FailoverClusters** 를 가져와야 합니다.  PowerShell 모듈을 가져오는 방법에 대한 자세한 내용은 [PowerShell 모듈 가져오기](/powershell/scripting/developer/module/importing-a-powershell-module)를 참조하세요.  이 연습은 다음 사항을 기반으로 합니다.
 - [Always On 가용성 그룹에 대한 필수 조건, 제한 사항 및 권장 사항(SQL Server)](../../../database-engine/availability-groups/windows/prereqs-restrictions-recommendations-always-on-availability.md)의 모든 요구 사항을 충족합니다.  
 - 도메인은 `contoso.lab`입니다.
 - 사용자에게 DTC 네트워크 이름 리소스가 만들어지는 OU에 컴퓨터 만들기 개체 권한이 있습니다.
@@ -116,7 +116,7 @@ foreach ($node in $nodes) {
     };
 ```  
 ## <a name="3--configure-in-doubt-xact-resolution"></a>3.  **in-doubt xact resolution** 구성 
-이 스크립트에서는 미결 트랜잭션에 대한 "커밋 가정"을 위해 **in-doubt xact resolution** 서버 구성 옵션을 구성합니다.  `SQLNODE1`에 대해 **SQLCMD 모드**로 SSMS(SQL Server Management Studio)에서 다음 T-SQL 스크립트를 실행합니다.
+이 스크립트에서는 미결 트랜잭션에 대한 "커밋 가정"을 위해 **in-doubt xact resolution** 서버 구성 옵션을 구성합니다.  `SQLNODE1`에 대해 **SQLCMD 모드** 로 SSMS(SQL Server Management Studio)에서 다음 T-SQL 스크립트를 실행합니다.
 
 ```sql  
 /*******************************************************************
@@ -157,7 +157,7 @@ GO
 ```
 
 ## <a name="4-create-test-databases"></a>4. 테스트 데이터베이스 만들기
-스크립트에서 `AG1`에 `SQLNODE1`라는 데이터베이스와, `dtcDemoAG1`에 `SQLNODE2`라는 데이터베이스를 만듭니다.  `SQLNODE1`에 대해 **SQLCMD 모드**로 SSMS에서 다음 T-SQL 스크립트를 실행합니다.
+스크립트에서 `AG1`에 `SQLNODE1`라는 데이터베이스와, `dtcDemoAG1`에 `SQLNODE2`라는 데이터베이스를 만듭니다.  `SQLNODE1`에 대해 **SQLCMD 모드** 로 SSMS에서 다음 T-SQL 스크립트를 실행합니다.
 
 ```sql  
 /*******************************************************************
@@ -215,7 +215,7 @@ GO
 ----------------------------------------------------------------
 ```
 ## <a name="5---create-endpoints"></a>5.   엔드포인트 만들기
-이 스크립트에서는 TCP 포트 `AG1_endpoint` 에서 수신하는 `5022`라는 엔드포인트를 만듭니다.  `SQLNODE1`에 대해 **SQLCMD 모드**로 SSMS에서 다음 T-SQL 스크립트를 실행합니다.
+이 스크립트에서는 TCP 포트 `AG1_endpoint` 에서 수신하는 `5022`라는 엔드포인트를 만듭니다.  `SQLNODE1`에 대해 **SQLCMD 모드** 로 SSMS에서 다음 T-SQL 스크립트를 실행합니다.
 
 ```sql  
 /**********************************************
@@ -248,7 +248,7 @@ GO
 ```
 
 ## <a name="6---prepare-databases-for-availability-group"></a>6.   가용성 그룹에 대한 데이터베이스 준비
-스크립트에서는 `SQLNODE1`에서 `AG1`을 백업하고 `SQLNODE2`로 복원합니다.  `SQLNODE1`에 대해 **SQLCMD 모드**로 SSMS에서 다음 T-SQL 스크립트를 실행합니다.
+스크립트에서는 `SQLNODE1`에서 `AG1`을 백업하고 `SQLNODE2`로 복원합니다.  `SQLNODE1`에 대해 **SQLCMD 모드** 로 SSMS에서 다음 T-SQL 스크립트를 실행합니다.
 
 ```sql  
 /*******************************************************************
@@ -281,7 +281,7 @@ GO
 ```
 
 ## <a name="7---create-availability-group"></a>7.   가용성 그룹 만들기
-**CREATE AVAILABILITY GROUP** 명령 및 **WITH DTC_SUPPORT = PER_DB** 절을 사용하여 [!INCLUDE[ssHADR](../../../includes/sshadr-md.md)]을 만들어야 합니다.  현재는 기존 가용성 그룹을 변경할 수 없습니다.  새 가용성 그룹 마법사에서는 새 가용성 그룹에 대한 DTC를 지원할 수 없습니다.  다음 스크립트에서는 새 가용성 그룹을 만들고 보조를 조인합니다.  `SQLNODE1`에 대해 **SQLCMD 모드**로 SSMS에서 다음 T-SQL 스크립트를 실행합니다.
+**CREATE AVAILABILITY GROUP** 명령 및 **WITH DTC_SUPPORT = PER_DB** 절을 사용하여 [!INCLUDE[ssHADR](../../../includes/sshadr-md.md)]을 만들어야 합니다.  현재는 기존 가용성 그룹을 변경할 수 없습니다.  새 가용성 그룹 마법사에서는 새 가용성 그룹에 대한 DTC를 지원할 수 없습니다.  다음 스크립트에서는 새 가용성 그룹을 만들고 보조를 조인합니다.  `SQLNODE1`에 대해 **SQLCMD 모드** 로 SSMS에서 다음 T-SQL 스크립트를 실행합니다.
 
 ```sql  
 /*******************************************************************
@@ -561,7 +561,7 @@ END
  ```
 
 ### <a name="execute-a-distributed-transaction"></a>분산 트랜잭션 실행
-이 스크립트는 먼저 현재 DTC 트랜잭션 통계를 반환합니다.  그런 다음 스크립트에서 `SQLNODE1` 및 `SQLNODE2`의 데이터베이스를 활용하여 분산 트랜잭션을 실행합니다.  그런 다음 스크립트에서 이제 숫자가 늘어난 DTC 트랜잭션 정적 변수를 다시 반환합니다.  `SQLNODE1` 물리적으로 연결하고 `SQLNODE1` 에 대해 **SQLCMD 모드**SSSMS에서 다음 T-SQL 스크립트를 실행합니다.
+이 스크립트는 먼저 현재 DTC 트랜잭션 통계를 반환합니다.  그런 다음 스크립트에서 `SQLNODE1` 및 `SQLNODE2`의 데이터베이스를 활용하여 분산 트랜잭션을 실행합니다.  그런 다음 스크립트에서 이제 숫자가 늘어난 DTC 트랜잭션 정적 변수를 다시 반환합니다.  `SQLNODE1` 물리적으로 연결하고 `SQLNODE1` 에 대해 **SQLCMD 모드** SSSMS에서 다음 T-SQL 스크립트를 실행합니다.
 
 ```sql  
 /*******************************************************************

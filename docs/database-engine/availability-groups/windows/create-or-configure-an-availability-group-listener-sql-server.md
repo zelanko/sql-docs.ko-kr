@@ -13,15 +13,15 @@ helpviewer_keywords:
 - Availability Groups [SQL Server], listeners
 - Availability Groups [SQL Server], client connectivity
 ms.assetid: 2bc294f6-2312-4b6b-9478-2fb8a656e645
-author: MashaMSFT
-ms.author: mathoma
+author: cawrites
+ms.author: chadam
 manager: erikre
-ms.openlocfilehash: 7bbd02e21b369732da72d7dbd7563d32f81c2a46
-ms.sourcegitcommit: c7f40918dc3ecdb0ed2ef5c237a3996cb4cd268d
+ms.openlocfilehash: 855ed087fb8276e83db72c7ca6a12a22f0225eef
+ms.sourcegitcommit: 54cd97a33f417432aa26b948b3fc4b71a5e9162b
 ms.translationtype: HT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 10/05/2020
-ms.locfileid: "91727949"
+ms.lasthandoff: 11/13/2020
+ms.locfileid: "94584392"
 ---
 # <a name="configure-a-listener-for-an-always-on-availability-group"></a>Always On 가용성 그룹에 대한 수신기 구성
 [!INCLUDE [SQL Server](../../../includes/applies-to-version/sqlserver.md)]
@@ -96,7 +96,7 @@ ms.locfileid: "91727949"
   
     -   수신기를 만들려면 **가용성 그룹 수신기** 노드를 마우스 오른쪽 단추로 클릭하고 **새 수신기** 명령을 선택합니다. 그러면 **새 가용성 그룹 수신기** 대화 상자가 열립니다. 자세한 내용은 이 항목의 뒷부분에 나와 있는 [가용성 그룹 수신기 추가(대화 상자)](#AddAgListenerDialog)를 참조하세요.  
   
-    -   기존 수신기의 포트 수를 변경하려면 **가용성 그룹 수신기** 노드를 확장하고 수신기를 마우스 오른쪽 단추로 클릭한 다음 **속성** 명령을 선택합니다. **포트** 필드에 새 포트 번호를 입력하고 **확인**을 클릭합니다.  
+    -   기존 수신기의 포트 수를 변경하려면 **가용성 그룹 수신기** 노드를 확장하고 수신기를 마우스 오른쪽 단추로 클릭한 다음 **속성** 명령을 선택합니다. **포트** 필드에 새 포트 번호를 입력하고 **확인** 을 클릭합니다.  
   
 ###  <a name="new-availability-group-listener-dialog-box"></a><a name="AddAgListenerDialog"></a> 새 가용성 그룹 수신기(대화 상자)  
  **수신기 DNS 이름**  
@@ -119,7 +119,7 @@ ms.locfileid: "91727949"
  **고정 IP**  
  수신기는 하나 이상의 고정 IP 주소를 사용합니다. 추가 IP 주소는 선택적입니다. 여러 서브넷 간에 가용성 그룹 수신기를 만들려면 각 서브넷에 대해 수신기 구성에서 고정 IP 주소를 지정해야 합니다. 이러한 고정 IP 주소를 얻으려면 네트워크 관리자에게 문의하세요.  
   
- **고정 IP** 를 선택하면 **네트워크 모드** 필드 아래 서브넷 표가 나타납니다. 이 표에는 이 가용성 그룹 수신기가 액세스할 수 있는 각 서브넷에 대한 정보가 표시됩니다. **추가**를 클릭하여 고정 IP 주소를 추가할 때까지 이 표는 비어 있습니다.  
+ **고정 IP** 를 선택하면 **네트워크 모드** 필드 아래 서브넷 표가 나타납니다. 이 표에는 이 가용성 그룹 수신기가 액세스할 수 있는 각 서브넷에 대한 정보가 표시됩니다. **추가** 를 클릭하여 고정 IP 주소를 추가할 때까지 이 표는 비어 있습니다.  
   
  열은 다음과 같습니다.  
   
@@ -262,13 +262,13 @@ ms.locfileid: "91727949"
   
 -   **MultiSubnetFailover** 를 true로 설정하지 않는 연결 문자열  
   
-     `RegisterAllProvidersIP = 1`일 때는 연결 문자열이 `MultiSubnetFailover = True`를 사용하지 않는 클라이언트에서 연결 대기 시간이 길어집니다. 이는 이러한 클라이언트가 모든 IP에 순차적으로 연결을 시도하기 때문에 발생합니다. 반면에 **RegisterAllProvidersIP** 를 0으로 변경하면 활성 IP 주소가 WSFC 클러스터의 클라이언트 액세스 지점에 등록되기 때문에 레거시 클라이언트에 대한 대기 시간이 줄어듭니다. 따라서 가용성 그룹 수신기에 연결해야 하고 **MultiSubnetFailover** 속성을 사용할 수 없는 레거시 클라이언트가 있을 경우 **RegisterAllProvidersIP**를 0으로 변경하는 것이 좋습니다.  
+     `RegisterAllProvidersIP = 1`일 때는 연결 문자열이 `MultiSubnetFailover = True`를 사용하지 않는 클라이언트에서 연결 대기 시간이 길어집니다. 이는 이러한 클라이언트가 모든 IP에 순차적으로 연결을 시도하기 때문에 발생합니다. 반면에 **RegisterAllProvidersIP** 를 0으로 변경하면 활성 IP 주소가 WSFC 클러스터의 클라이언트 액세스 지점에 등록되기 때문에 레거시 클라이언트에 대한 대기 시간이 줄어듭니다. 따라서 가용성 그룹 수신기에 연결해야 하고 **MultiSubnetFailover** 속성을 사용할 수 없는 레거시 클라이언트가 있을 경우 **RegisterAllProvidersIP** 를 0으로 변경하는 것이 좋습니다.  
   
     > [!IMPORTANT]  
     >  WSFC 클러스터(장애 조치(Failover) 클러스터 관리자 GUI)를 통해 가용성 그룹 수신기를 만들면 기본적으로 **RegisterAllProvidersIP** 는 0(false)으로 설정됩니다.  
   
 ###  <a name="hostrecordttl-setting"></a><a name="HostRecordTTL"></a> HostRecordTTL 설정  
- 기본적으로 클라이언트는 클러스터 DNS 레코드를 20분 동안 캐시합니다.  캐시된 레코드에 대한 TTL(Time to Live)인 **HostRecordTTL**을 줄여 레거시 클라이언트가 더 빨리 다시 연결할 수 있습니다.  하지만 **HostRecordTTL** 설정을 줄이면 DNS 서버의 트래픽이 증가할 수 있습니다.  
+ 기본적으로 클라이언트는 클러스터 DNS 레코드를 20분 동안 캐시합니다.  캐시된 레코드에 대한 TTL(Time to Live)인 **HostRecordTTL** 을 줄여 레거시 클라이언트가 더 빨리 다시 연결할 수 있습니다.  하지만 **HostRecordTTL** 설정을 줄이면 DNS 서버의 트래픽이 증가할 수 있습니다.  
   
 ###  <a name="sample-powershell-script-to-disable-registerallprovidersip-and-reduce-ttl"></a><a name="SampleScript"></a> RegisterAllProvidersIP를 비활성화하고 TTL을 줄이는 샘플 PowerShell 스크립트  
  다음 PowerShell 예에서는 수신기 리소스에 대한 **RegisterAllProvidersIP** 및 **HostRecordTTL** 클러스터 매개 변수를 구성하는 방법을 보여 줍니다.  DNS 레코드는 기본 20분이 아닌 5분 동안 캐시됩니다.  두 클러스터 매개 변수를 모두 수정하면 **MultiSubnetFailover** 매개 변수를 사용할 수 없는 레거시 클라이언트에 대한 장애 조치(Failover) 후 올바른 IP 주소에 연결하는 시간이 줄어들 수 있습니다.  `yourListenerName` 을 변경할 수신기의 이름으로 바꿉니다.  

@@ -10,14 +10,14 @@ ms.topic: end-user-help
 f1_keywords:
 - sql13.swb.addreplicawizard.enterpasswords.f1
 ms.assetid: e69207a0-c5c4-44e4-ae9a-4afbb67251d1
-author: MashaMSFT
-ms.author: mathoma
-ms.openlocfilehash: 334b5783bf85683403cfc12e736e6c8f2bd1761f
-ms.sourcegitcommit: cc23d8646041336d119b74bf239a6ac305ff3d31
+author: cawrites
+ms.author: chadam
+ms.openlocfilehash: 4ab6d424bfa1ff70ada91956e4552032843ff28b
+ms.sourcegitcommit: 54cd97a33f417432aa26b948b3fc4b71a5e9162b
 ms.translationtype: HT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 09/23/2020
-ms.locfileid: "91116175"
+ms.lasthandoff: 11/13/2020
+ms.locfileid: "94584277"
 ---
 # <a name="enter-passwords-page-add-replica-wizard-for-always-on-availability-groups"></a>Always On 가용성 그룹에 대한 암호 입력 페이지(복제본 추가 마법사)
 [!INCLUDE [SQL Server](../../../includes/applies-to-version/sqlserver.md)]
@@ -35,12 +35,12 @@ ms.locfileid: "91116175"
  마법사에서 사용할 수 있는 데이터베이스 크기를 표시합니다.  
   
  **상태**  
- 데이터베이스 마스터 키가 있는 데이터베이스에 대한 **암호 필요** 상태를 나타냅니다. **암호** 열에서 데이터베이스 마스터 키의 암호를 입력한 후 **새로 고침**을 클릭합니다. 암호를 올바르게 입력하면 **상태** 열에 **암호 입력됨**이 표시됩니다.  
+ 데이터베이스 마스터 키가 있는 데이터베이스에 대한 **암호 필요** 상태를 나타냅니다. **암호** 열에서 데이터베이스 마스터 키의 암호를 입력한 후 **새로 고침** 을 클릭합니다. 암호를 올바르게 입력하면 **상태** 열에 **암호 입력됨** 이 표시됩니다.  
   
- 데이터베이스에 데이터베이스 마스터 키가 없는 경우 **상태** 열에는 **암호가 필요하지 않음**이 표시됩니다.  
+ 데이터베이스에 데이터베이스 마스터 키가 없는 경우 **상태** 열에는 **암호가 필요하지 않음** 이 표시됩니다.  
   
  **암호**  
- **상태** 열에 **암호 필요**가 표시되면 데이터베이스 마스터 키의 암호를 입력합니다.  
+ **상태** 열에 **암호 필요** 가 표시되면 데이터베이스 마스터 키의 암호를 입력합니다.  
   
  **새로 고침**  
  표를 새로 고치려면 클릭합니다. 필요한 암호를 입력한 후에 이 기능을 사용하면 유용합니다.  

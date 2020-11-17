@@ -8,14 +8,14 @@ ms.reviewer: ''
 ms.technology: high-availability
 ms.topic: how-to
 ms.assetid: f7c7acc5-a350-4a17-95e1-e689c78a0900
-author: MashaMSFT
-ms.author: mathoma
-ms.openlocfilehash: 537dbc1d60fc707f3d00aacd85e1ec5e335519c0
-ms.sourcegitcommit: c7f40918dc3ecdb0ed2ef5c237a3996cb4cd268d
+author: cawrites
+ms.author: chadam
+ms.openlocfilehash: df4daf119464ccf90c751f97daeea0379d8e8a21
+ms.sourcegitcommit: 54cd97a33f417432aa26b948b3fc4b71a5e9162b
 ms.translationtype: HT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 10/05/2020
-ms.locfileid: "91727984"
+ms.lasthandoff: 11/13/2020
+ms.locfileid: "94584496"
 ---
 # <a name="configure-an-always-on-distributed-availability-group"></a>Always On 분산 가용성 그룹 구성  
 [!INCLUDE [SQL Server](../../../includes/applies-to-version/sqlserver.md)]
@@ -59,7 +59,7 @@ GO
 ## <a name="create-first-availability-group"></a>첫 번째 가용성 그룹 만들기
 
 ### <a name="create-the-primary-availability-group-on-the-first-cluster"></a>첫 번째 클러스터에 주 가용성 그룹 만들기  
-첫 번째 WSFC(Windows Server Failover Cluster)에서 가용성 그룹을 만듭니다.   이 예제에서 `ag1` 데이터베이스에 대한 가용성 그룹 이름은 `db1`입니다. 기본 가용성 그룹의 주 복제본을 분산 가용성 그룹에서 **전역 기본**이라고 합니다. Server1은 이 예제의 전역 기본입니다.        
+첫 번째 WSFC(Windows Server Failover Cluster)에서 가용성 그룹을 만듭니다.   이 예제에서 `ag1` 데이터베이스에 대한 가용성 그룹 이름은 `db1`입니다. 기본 가용성 그룹의 주 복제본을 분산 가용성 그룹에서 **전역 기본** 이라고 합니다. Server1은 이 예제의 전역 기본입니다.        
   
 ```sql  
 CREATE AVAILABILITY GROUP [ag1]   
@@ -81,10 +81,10 @@ GO
 ```  
   
 >[!NOTE]
->이전 예제에서는 자동 시드를 사용하며, 복제본 및 분산 가용성 그룹에서 모두 **SEEDING_MODE**가 **AUTOMATIC**으로 설정됩니다. 이 구성은 수동으로 백업하고 주 데이터베이스를 복원할 필요 없이 보조 복제본과 보조 가용성 그룹이 자동으로 채워지도록 설정합니다.  
+>이전 예제에서는 자동 시드를 사용하며, 복제본 및 분산 가용성 그룹에서 모두 **SEEDING_MODE** 가 **AUTOMATIC** 으로 설정됩니다. 이 구성은 수동으로 백업하고 주 데이터베이스를 복원할 필요 없이 보조 복제본과 보조 가용성 그룹이 자동으로 채워지도록 설정합니다.  
   
 ### <a name="join-the-secondary-replicas-to-the-primary-availability-group"></a>보조 복제본을 주 가용성 그룹에 조인  
-모든 보조 복제본은 **JOIN** 옵션으로 **ALTER AVAILABILITY GROUP** 이(가) 있는 가용성 그룹에 조인되어야 합니다. 이 예제에서는 자동 시드를 사용하기 때문에 **GRANT CREATE ANY DATABASE** 옵션으로 **ALTER AVAILABILITY GROUP**도 호출해야 합니다. 이 설정을 통해 가용성 그룹이 데이터베이스를 만들고 주 복제본에서 자동으로 시딩을 시작할 수 있습니다.  
+모든 보조 복제본은 **JOIN** 옵션으로 **ALTER AVAILABILITY GROUP** 이(가) 있는 가용성 그룹에 조인되어야 합니다. 이 예제에서는 자동 시드를 사용하기 때문에 **GRANT CREATE ANY DATABASE** 옵션으로 **ALTER AVAILABILITY GROUP** 도 호출해야 합니다. 이 설정을 통해 가용성 그룹이 데이터베이스를 만들고 주 복제본에서 자동으로 시딩을 시작할 수 있습니다.  
   
 이 예제에서는 보조 복제본 `server2`에서 다음 명령이 실행되어 가용성 그룹 `ag1` 에 조인됩니다. 그런 다음 가용성 그룹이 보조 가용성 그룹에 데이터베이스를 만들 수 있습니다.  
   
@@ -111,7 +111,7 @@ GO
   
 
 ## <a name="create-second-availability-group"></a>두 번째 가용성 그룹 만들기  
- 그런 다음 두 번째 WSFC에서 두 번째 가용성 그룹인 `ag2`을(를) 만듭니다. 이 경우 주 가용성 그룹에서 자동으로 시딩되므로 데이터베이스를 지정하지 않습니다.  보조 가용성 그룹의 주 복제본을 분산 가용성 그룹에서 **전달자**라고 합니다. 이 예에서 server3은 전달자입니다. 
+ 그런 다음 두 번째 WSFC에서 두 번째 가용성 그룹인 `ag2`을(를) 만듭니다. 이 경우 주 가용성 그룹에서 자동으로 시딩되므로 데이터베이스를 지정하지 않습니다.  보조 가용성 그룹의 주 복제본을 분산 가용성 그룹에서 **전달자** 라고 합니다. 이 예에서 server3은 전달자입니다. 
   
 ```sql  
 CREATE AVAILABILITY GROUP [ag2]   
@@ -284,7 +284,7 @@ ALTER DATABASE [db1] SET HADR AVAILABILITY GROUP = [ag2];
       INNER JOIN sys.availability_groups ag on drs.group_id = ag.group_id;
       ```  
 
-    가용성 그룹 **synchronization_state_desc**가 `SYNCHRONIZED`가 되고 last_hardened_lsn이 전역 기본 및 전달자에서 둘 다 데이터베이스당 동일해진 후 계속 진행합니다.  **synchronization_state_desc**가 `SYNCHRONIZED`가 아니거나 last_hardened_lsn이 동일하지 않으면 변경될 때까지 5초마다 명령을 실행합니다. **synchronization_state_desc** = `SYNCHRONIZED`가 되고 last_hardened_lsn이 데이터베이스당 동일해질 때까지 진행하지 마세요. 
+    가용성 그룹 **synchronization_state_desc** 가 `SYNCHRONIZED`가 되고 last_hardened_lsn이 전역 기본 및 전달자에서 둘 다 데이터베이스당 동일해진 후 계속 진행합니다.  **synchronization_state_desc** 가 `SYNCHRONIZED`가 아니거나 last_hardened_lsn이 동일하지 않으면 변경될 때까지 5초마다 명령을 실행합니다. **synchronization_state_desc** = `SYNCHRONIZED`가 되고 last_hardened_lsn이 데이터베이스당 동일해질 때까지 진행하지 마세요. 
 
 1. 전역 기본에서 분산 가용성 그룹 역할을 `SECONDARY`로 설정합니다. 
 
@@ -311,7 +311,7 @@ ALTER DATABASE [db1] SET HADR AVAILABILITY GROUP = [ag2];
      INNER JOIN sys.availability_groups ag ON drs.group_id = ag.group_id;
     ```  
 
-    **last_hardened_lsn**이 데이터베이스당 두 가용성 그룹에 대해 모두 동일한 경우 가용성 그룹을 장애 조치(failover)할 준비가 된 것입니다. 일정 시간 후에 last_hardened_lsn이 동일하지 않으면 데이터 손실을 방지하기 위해 전역 기본에서 이 명령을 실행하여 전역 기본으로 장애 복구(failback)한 다음, 두 번째 단계에서 다시 시작합니다. 
+    **last_hardened_lsn** 이 데이터베이스당 두 가용성 그룹에 대해 모두 동일한 경우 가용성 그룹을 장애 조치(failover)할 준비가 된 것입니다. 일정 시간 후에 last_hardened_lsn이 동일하지 않으면 데이터 손실을 방지하기 위해 전역 기본에서 이 명령을 실행하여 전역 기본으로 장애 복구(failback)한 다음, 두 번째 단계에서 다시 시작합니다. 
 
     ```sql
     -- If the last_hardened_lsn is not the same after a period of time, to avoid data loss, 

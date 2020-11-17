@@ -15,14 +15,14 @@ helpviewer_keywords:
 - Availability Groups [SQL Server], read-only routing
 - Availability Groups [SQL Server], client connectivity
 ms.assetid: 76fb3eca-6b08-4610-8d79-64019dd56c44
-author: MashaMSFT
-ms.author: mathoma
-ms.openlocfilehash: 36828d66fb91f60bf920c18324c7e7ace479452b
-ms.sourcegitcommit: c7f40918dc3ecdb0ed2ef5c237a3996cb4cd268d
+author: cawrites
+ms.author: chadam
+ms.openlocfilehash: b26671e24cb0419f6737d1f41a5eb2a168dcfe7b
+ms.sourcegitcommit: 54cd97a33f417432aa26b948b3fc4b71a5e9162b
 ms.translationtype: HT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 10/05/2020
-ms.locfileid: "91727872"
+ms.lasthandoff: 11/13/2020
+ms.locfileid: "94584240"
 ---
 # <a name="connect-to-an-always-on-availability-group-listener"></a>Always On 가용성 그룹 수신기에 연결 
 [!INCLUDE [SQL Server](../../../includes/applies-to-version/sqlserver.md)]
@@ -62,7 +62,7 @@ SELECT @@SERVERNAME
 
 ##  <a name="connect-to-a-read-only-replica"></a><a name="ConnectToSecondary"></a> 읽기 전용 복제본에 연결 
 
-_읽기 전용 라우팅_은 읽기 전용 워크로드를 허용하도록 구성된 읽기 가능한 보조 복제본으로 들어오는 수신기 연결을 자동 라우팅하는 기능을 말합니다. 
+_읽기 전용 라우팅_ 은 읽기 전용 워크로드를 허용하도록 구성된 읽기 가능한 보조 복제본으로 들어오는 수신기 연결을 자동 라우팅하는 기능을 말합니다. 
 
 다음 조건이 충족되면 연결이 읽기 전용 복제본으로 자동 라우팅됩니다. 
  
@@ -74,7 +74,7 @@ _읽기 전용 라우팅_은 읽기 전용 워크로드를 허용하도록 구�
 
 애플리케이션 의도 특성은 로그인 중에 클라이언트의 세션에 저장됩니다. 그러면 SQL Server의 인스턴스에서 이 의도를 처리하고 보조 복제본에 있는 대상 데이터베이스의 현재 읽기/쓰기 상태와 가용성 그룹의 구성에 따라 수행할 작업을 결정합니다.  
 
-예를 들어 SQL Server Management Studio를 사용하여 읽기 전용 복제본에 연결하려면 **서버에 연결** 대화 상자에서 **옵션**을 선택하고 **추가 연결 매개 변수** 탭을 선택한 다음, 텍스트 상자에 `ApplicationIntent=ReadOnly`를 지정합니다.
+예를 들어 SQL Server Management Studio를 사용하여 읽기 전용 복제본에 연결하려면 **서버에 연결** 대화 상자에서 **옵션** 을 선택하고 **추가 연결 매개 변수** 탭을 선택한 다음, 텍스트 상자에 `ApplicationIntent=ReadOnly`를 지정합니다.
 
 ![SSMS의 읽기 전용 연결](media/listeners-client-connectivity-application-failover/read-only-intent-in-ssms.png)
   
@@ -109,7 +109,7 @@ SQL Server의 인스턴스에서 가용성 그룹 수신기를 사용하거나 �
 ##  <a name="database-mirroring-connection-strings"></a><a name="DbmConnectionString"></a> 데이터베이스 미러링 연결 문자열 
  가용성 그룹에 보조 복제본이 하나만 있고 보조 복제본에 대해 ALLOW_CONNECTIONS = READ_ONLY 또는 ALLOW_CONNECTIONS = NONE으로 구성되어 있으면, 클라이언트에서 데이터베이스 미러링 연결 문자열을 사용하여 주 복제본에 연결할 수 있습니다. 가용성 그룹에 두 개의 가용성 복제본(주 복제본과 보조 복제본)만 포함되도록 제한한 경우 이 방법은 데이터베이스 미러링의 기존 애플리케이션을 가용성 그룹으로 마이그레이션하는 데 유용합니다. 보조 복제본을 더 추가하려면 가용성 그룹의 가용성 그룹 수신기를 만들고 가용성 그룹 수신기 DNS 이름을 사용하도록 애플리케이션을 업데이트해야 합니다.  
   
- 데이터베이스 미러링 연결 문자열을 사용할 경우 클라이언트에서는 [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] Native Client나 .NET Framework Data Provider for [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)]를 사용할 수 있습니다. 연결하려는 가용성 복제본을 처음에 호스팅할 서버 인스턴스를 식별하려면 클라이언트가 제공하는 연결 문자열에 최소한 하나의 서버 인스턴스 이름, 즉 *초기 파트너 이름*이 있어야 합니다. 필요한 경우 연결 문자열에 다른 서버 인스턴스의 이름, 즉 *장애 조치(failover) 파트너 이름*을 제공하여 초기에 보조 복제본을 호스팅할 서버 인스턴스를 장애 조치(failover) 파트너 이름으로 식별할 수도 있습니다.  
+ 데이터베이스 미러링 연결 문자열을 사용할 경우 클라이언트에서는 [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] Native Client나 .NET Framework Data Provider for [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)]를 사용할 수 있습니다. 연결하려는 가용성 복제본을 처음에 호스팅할 서버 인스턴스를 식별하려면 클라이언트가 제공하는 연결 문자열에 최소한 하나의 서버 인스턴스 이름, 즉 *초기 파트너 이름* 이 있어야 합니다. 필요한 경우 연결 문자열에 다른 서버 인스턴스의 이름, 즉 *장애 조치(failover) 파트너 이름* 을 제공하여 초기에 보조 복제본을 호스팅할 서버 인스턴스를 장애 조치(failover) 파트너 이름으로 식별할 수도 있습니다.  
   
  데이터베이스 미러링 연결 문자열에 대한 자세한 내용은 [데이터베이스 미러링 세션에 클라이언트 연결&#40;SQL Server&#41;](../../../database-engine/database-mirroring/connect-clients-to-a-database-mirroring-session-sql-server.md)을 참조하세요.  
   

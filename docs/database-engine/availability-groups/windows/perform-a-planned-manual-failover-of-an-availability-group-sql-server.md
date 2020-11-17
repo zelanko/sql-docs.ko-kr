@@ -13,14 +13,14 @@ helpviewer_keywords:
 - Availability Groups [SQL Server], failover
 - failover [SQL Server], AlwaysOn Availability Groups
 ms.assetid: 419f655d-3f9a-4e7d-90b9-f0bab47b3178
-author: MashaMSFT
-ms.author: mathoma
-ms.openlocfilehash: 43b80003afbb83090aa7575aa038f6bebe7958a4
-ms.sourcegitcommit: 2f868a77903c1f1c4cecf4ea1c181deee12d5b15
+author: cawrites
+ms.author: chadam
+ms.openlocfilehash: f34a3a3ce7ddf6c80127fbdfb5cdd0298466633b
+ms.sourcegitcommit: 54cd97a33f417432aa26b948b3fc4b71a5e9162b
 ms.translationtype: HT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 10/02/2020
-ms.locfileid: "91670903"
+ms.lasthandoff: 11/13/2020
+ms.locfileid: "94584160"
 ---
 # <a name="perform-a-planned-manual-failover-of-an-always-on-availability-group-sql-server"></a>Always On 가용성 그룹의 계획된 수동 장애 조치(failover) 수행(SQL Server)
 [!INCLUDE [SQL Server](../../../includes/applies-to-version/sqlserver.md)]
@@ -78,7 +78,7 @@ ms.locfileid: "91670903"
   
      ALTER AVAILABILITY GROUP *group_name* FAILOVER 
   
-     명령문에서 *group_name*은 가용성 그룹의 이름입니다. 
+     명령문에서 *group_name* 은 가용성 그룹의 이름입니다. 
   
      다음 예에서는 *MyAg* 가용성 그룹을 연결된 보조 복제본으로 수동으로 장애 조치합니다. 
   

@@ -10,18 +10,18 @@ ms.topic: how-to
 helpviewer_keywords:
 - Availability Groups [SQL Server], creating
 ms.assetid: 8b0a6301-8b79-4415-b608-b40876f30066
-author: MashaMSFT
-ms.author: mathoma
-ms.openlocfilehash: e79175a6194b282fa57514146a63d9102dd33833
-ms.sourcegitcommit: c7f40918dc3ecdb0ed2ef5c237a3996cb4cd268d
+author: cawrites
+ms.author: chadam
+ms.openlocfilehash: e6235f980627ad56d18330031c3bae6995eb45d2
+ms.sourcegitcommit: 54cd97a33f417432aa26b948b3fc4b71a5e9162b
 ms.translationtype: HT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 10/05/2020
-ms.locfileid: "91727966"
+ms.lasthandoff: 11/13/2020
+ms.locfileid: "94584420"
 ---
 # <a name="create-an-always-on-availability-group-using-transact-sql-t-sql"></a>T-SQL(Transact-SQL)을 사용하여 Always On 가용성 그룹 만들기
 [!INCLUDE [SQL Server](../../../includes/applies-to-version/sqlserver.md)]
-  이 항목에서는 [!INCLUDE[tsql](../../../includes/tsql-md.md)] 기능이 설정된 [!INCLUDE[ssCurrent](../../../includes/sscurrent-md.md)] 인스턴스에서 [!INCLUDE[ssHADR](../../../includes/sshadr-md.md)] 을 사용하여 가용성 그룹을 만들고 구성하는 방법을 설명합니다. *가용성 그룹* 은 단일 단위로 장애 조치(Failover)될 사용자 데이터베이스 집합과 장애 조치(Failover)를 지원하는 장애 조치(Failover) 파트너 집합( *가용성 복제본*이라고 함)을 정의합니다.  
+  이 항목에서는 [!INCLUDE[tsql](../../../includes/tsql-md.md)] 기능이 설정된 [!INCLUDE[ssCurrent](../../../includes/sscurrent-md.md)] 인스턴스에서 [!INCLUDE[ssHADR](../../../includes/sshadr-md.md)] 을 사용하여 가용성 그룹을 만들고 구성하는 방법을 설명합니다. *가용성 그룹* 은 단일 단위로 장애 조치(Failover)될 사용자 데이터베이스 집합과 장애 조치(Failover)를 지원하는 장애 조치(Failover) 파트너 집합( *가용성 복제본* 이라고 함)을 정의합니다.  
   
 > [!NOTE]  
 >  가용성 그룹에 대한 개요를 보려면 [Always On 가용성 그룹 개요&#40;SQL Server&#41;](../../../database-engine/availability-groups/windows/overview-of-always-on-availability-groups-sql-server.md)인스턴스에 AlwaysOn 가용성 그룹을 만드는 방법을 설명합니다.  
@@ -83,7 +83,7 @@ ms.locfileid: "91727966"
   
 -   서버 인스턴스에서는 [!INCLUDE[ssHADR](../../../includes/sshadr-md.md)]을 지원해야 합니다. 자세한 내용은 [Always On 가용성 그룹에 대한 필수 조건, 제한 사항 및 권장 사항&#40;SQL Server&#41;](../../../database-engine/availability-groups/windows/prereqs-restrictions-recommendations-always-on-availability.md)를 참조하세요.  
   
--   두 예제 데이터베이스 *MyDb1* 및 *MyDb2*는 주 복제본을 호스팅할 서버 인스턴스에 있어야 합니다. 다음 코드 예에서는 이러한 두 데이터베이스를 만들고 구성하며 각 데이터베이스의 전체 백업을 만듭니다. 예제 가용성 그룹을 만들려는 서버 인스턴스에서 이러한 코드 예를 실행합니다. 이 서버 인스턴스는 예제 가용성 그룹의 초기 주 복제본을 호스팅합니다.  
+-   두 예제 데이터베이스 *MyDb1* 및 *MyDb2* 는 주 복제본을 호스팅할 서버 인스턴스에 있어야 합니다. 다음 코드 예에서는 이러한 두 데이터베이스를 만들고 구성하며 각 데이터베이스의 전체 백업을 만듭니다. 예제 가용성 그룹을 만들려는 서버 인스턴스에서 이러한 코드 예를 실행합니다. 이 서버 인스턴스는 예제 가용성 그룹의 초기 주 복제본을 호스팅합니다.  
   
     1.  다음 [!INCLUDE[tsql](../../../includes/tsql-md.md)] 예에서는 이러한 데이터베이스를 만든 다음 전체 복구 모델을 사용하도록 데이터베이스를 변경합니다.  
   
@@ -100,7 +100,7 @@ ms.locfileid: "91727966"
         GO  
         ```  
   
-    2.  다음 코드 예제에서는 *MyDb1* 및 *MyDb2*의 전체 데이터베이스 백업을 만듭니다. 이 코드 샘플에서는 가상의 백업 공유 \\\\*FILESERVER*\\*SQLbackups*를 사용합니다.  
+    2.  다음 코드 예제에서는 *MyDb1* 및 *MyDb2* 의 전체 데이터베이스 백업을 만듭니다. 이 코드 샘플에서는 가상의 백업 공유 \\\\*FILESERVER*\\*SQLbackups* 를 사용합니다.  
   
         ```sql  
         -- Backup sample databases:  
@@ -154,7 +154,7 @@ ms.locfileid: "91727966"
   
      서버 인스턴스의 서비스 계정이 다른 도메인 사용자로 실행되는 경우에는 각 서버 인스턴스에서 다른 서버 인스턴스에 대한 로그인을 만들고 로컬 데이터베이스 미러링 엔드포인트에 액세스할 수 있는 권한을 이 로그인에 부여합니다.  
   
-     다음 코드 예에서는 로그인을 만들고 이 로그인에 엔드포인트에 대한 사용 권한을 부여하기 위한 [!INCLUDE[tsql](../../../includes/tsql-md.md)] 문을 보여 줍니다. 여기에서 원격 서버 인스턴스의 도메인 계정은 *domain_name*\\*user_name*으로 표시됩니다.  
+     다음 코드 예에서는 로그인을 만들고 이 로그인에 엔드포인트에 대한 사용 권한을 부여하기 위한 [!INCLUDE[tsql](../../../includes/tsql-md.md)] 문을 보여 줍니다. 여기에서 원격 서버 인스턴스의 도메인 계정은 *domain_name*\\*user_name* 으로 표시됩니다.  
   
     ```sql  
     -- If necessary, create a login for the service account, domain_name\user_name  
@@ -171,7 +171,7 @@ ms.locfileid: "91727966"
   
 4.  사용자 데이터베이스가 있는 서버 인스턴스에서 가용성 그룹을 만듭니다.  
   
-     다음 코드 예제에서는 *MyDb1* 및 *MyDb2* 라는 샘플 데이터베이스가 만들어진 서버 인스턴스에 *MyAG*라는 가용성 그룹을 만듭니다. `AgHostInstance`COMPUTER01 *에 있는 로컬 서버 인스턴스* 가 먼저 지정됩니다. 이 인스턴스는 초기 주 복제본을 호스팅합니다. *COMPUTER02*에 기본 서버 인스턴스인 원격 서버 인스턴스가 보조 복제본을 호스트하도록 지정됩니다. 두 가용성 복제본 모두 수동 장애 조치와 함께 비동기 커밋 모드를 사용하도록 구성됩니다. 비동기 커밋 복제본에 대한 수동 장애 조치는 데이터 손실이 가능한 강제 장애 조치를 의미합니다.  
+     다음 코드 예제에서는 *MyDb1* 및 *MyDb2* 라는 샘플 데이터베이스가 만들어진 서버 인스턴스에 *MyAG* 라는 가용성 그룹을 만듭니다. `AgHostInstance`COMPUTER01 *에 있는 로컬 서버 인스턴스* 가 먼저 지정됩니다. 이 인스턴스는 초기 주 복제본을 호스팅합니다. *COMPUTER02* 에 기본 서버 인스턴스인 원격 서버 인스턴스가 보조 복제본을 호스트하도록 지정됩니다. 두 가용성 복제본 모두 수동 장애 조치와 함께 비동기 커밋 모드를 사용하도록 구성됩니다. 비동기 커밋 복제본에 대한 수동 장애 조치는 데이터 손실이 가능한 강제 장애 조치를 의미합니다.  
   
     ```sql
     -- Create the availability group, MyAG:   

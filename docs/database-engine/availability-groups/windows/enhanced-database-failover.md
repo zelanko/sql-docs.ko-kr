@@ -10,22 +10,22 @@ helpviewer_keywords:
 - Availability Groups [SQL Server], enhanced database failover
 - Availability Groups [SQL Server], failover
 ms.assetid: ''
-author: MashaMSFT
+author: cawrites
 ms.reviewer: mikeray
-ms.author: mathoma
-ms.openlocfilehash: d994548398bd47414f8564aeee48e2c3105aca5f
-ms.sourcegitcommit: f7ac1976d4bfa224332edd9ef2f4377a4d55a2c9
+ms.author: chadam
+ms.openlocfilehash: 8a0e98398868676c6b7e5c3cdcaae1172a7a785a
+ms.sourcegitcommit: 54cd97a33f417432aa26b948b3fc4b71a5e9162b
 ms.translationtype: HT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 07/02/2020
-ms.locfileid: "85894437"
+ms.lasthandoff: 11/13/2020
+ms.locfileid: "94584286"
 ---
 # <a name="enable-enhanced-database-failover-to-a-database-in-an-always-on-availability-group"></a>Always On 가용성 그룹의 데이터베이스에 대해 향상된 데이터베이스 장애 조치(failover) 사용
 [!INCLUDE [SQL Server](../../../includes/applies-to-version/sqlserver.md)]
 
 SQL Server 2012 및 2014에서 주 복제본의 가용성 그룹에 참여하는 데이터베이스에서 트랜잭션을 쓸 수 있는 기능이 손실되면, 복제본이 동기화되고 자동 장애 조치를 수행하도록 구성되어 있어도 장애 조치가 트리거되지 않습니다.
 
-SQL Server 2016에서는 마법사 또는 Transact-SQL을 사용하여 설정할 수 있는 *확장된 데이터베이스 장애 조치*라는 새로운 선택적 동작을 도입했습니다. 이 옵션을 사용하도록 설정하고 자동 장애 조치를 구성하면 가용성 그룹에 참여하는 하나의 데이터베이스에서 더 이상 트랜잭션을 쓸 수 없게 되면 동기화된 보조 복제본으로 장애 조치가 트리거됩니다.
+SQL Server 2016에서는 마법사 또는 Transact-SQL을 사용하여 설정할 수 있는 *확장된 데이터베이스 장애 조치* 라는 새로운 선택적 동작을 도입했습니다. 이 옵션을 사용하도록 설정하고 자동 장애 조치를 구성하면 가용성 그룹에 참여하는 하나의 데이터베이스에서 더 이상 트랜잭션을 쓸 수 없게 되면 동기화된 보조 복제본으로 장애 조치가 트리거됩니다.
 
 **시나리오 1**
 

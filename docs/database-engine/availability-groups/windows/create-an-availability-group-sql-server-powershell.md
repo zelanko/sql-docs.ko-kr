@@ -10,18 +10,18 @@ ms.topic: how-to
 helpviewer_keywords:
 - Availability Groups [SQL Server], creating
 ms.assetid: bc69a7df-20fa-41e1-9301-11317c5270d2
-author: MashaMSFT
-ms.author: mathoma
-ms.openlocfilehash: 833a39b5f3bb76e94524362e471ef3f5d9eff718
-ms.sourcegitcommit: c7f40918dc3ecdb0ed2ef5c237a3996cb4cd268d
+author: cawrites
+ms.author: chadam
+ms.openlocfilehash: a408ff7289b117a1cdab5abb36be164535feb15c
+ms.sourcegitcommit: 54cd97a33f417432aa26b948b3fc4b71a5e9162b
 ms.translationtype: HT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 10/05/2020
-ms.locfileid: "91726436"
+ms.lasthandoff: 11/13/2020
+ms.locfileid: "94584421"
 ---
 # <a name="create-an-always-on-availability-group-using-powershell"></a>PowerShell을 사용하여 Always On 가용성 그룹 만들기
 [!INCLUDE [SQL Server](../../../includes/applies-to-version/sqlserver.md)]
-  이 항목에서는 [!INCLUDE[ssCurrent](../../../includes/sscurrent-md.md)]에서 PowerShell cmdlet을 사용하여 Always On 가용성 그룹을 만들고 구성하는 방법에 대해 설명합니다. *가용성 그룹* 은 단일 단위로 장애 조치(Failover)될 사용자 데이터베이스 집합과 장애 조치(Failover)를 지원하는 장애 조치(Failover) 파트너 집합( *가용성 복제본*이라고 함)을 정의합니다.  
+  이 항목에서는 [!INCLUDE[ssCurrent](../../../includes/sscurrent-md.md)]에서 PowerShell cmdlet을 사용하여 Always On 가용성 그룹을 만들고 구성하는 방법에 대해 설명합니다. *가용성 그룹* 은 단일 단위로 장애 조치(Failover)될 사용자 데이터베이스 집합과 장애 조치(Failover)를 지원하는 장애 조치(Failover) 파트너 집합( *가용성 복제본* 이라고 함)을 정의합니다.  
   
 > [!NOTE]  
 > 가용성 그룹에 대한 개요를 보려면 [Always On 가용성 그룹 개요&#40;SQL Server&#41;](~/database-engine/availability-groups/windows/overview-of-always-on-availability-groups-sql-server.md)인스턴스에 AlwaysOn 가용성 그룹을 만드는 방법을 설명합니다.  
@@ -43,7 +43,7 @@ ms.locfileid: "91726436"
   
 |Task|PowerShell cmdlet(사용 가능한 경우) 또는 Transact-SQL 문|태스크를 수행할 위치|  
 |----------|--------------------------------------------------------------------|---------------------------------|  
-|[!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] 인스턴스당 하나의 데이터베이스 미러링 엔드포인트 만들기|**New-SqlHadrEndPoint**|데이터베이스 미러링 엔드포인트가 없는 각 서버 인스턴스에서 실행합니다.<br /><br />기존 데이터베이스 미러링 엔드포인트를 변경하려면 **Set-SqlHadrEndpoint**를 사용합니다.|  
+|[!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] 인스턴스당 하나의 데이터베이스 미러링 엔드포인트 만들기|**New-SqlHadrEndPoint**|데이터베이스 미러링 엔드포인트가 없는 각 서버 인스턴스에서 실행합니다.<br /><br />기존 데이터베이스 미러링 엔드포인트를 변경하려면 **Set-SqlHadrEndpoint** 를 사용합니다.|  
 |가용성 그룹 만들기|먼저 **New-SqlAvailabilityReplica** cmdlet과 **-AsTemplate** 매개 변수를 사용하여 가용성 그룹에 포함할 두 개의 각 가용성 복제본에 대한 메모리 내 가용성 복제본 개체를 만듭니다.<br /><br /> 그런 다음 **New-SqlAvailabilityGroup** cmdlet을 사용하고 가용성 복제본 개체를 참조하여 가용성 그룹을 만듭니다.|초기 주 복제본을 호스트할 서버 인스턴스에서 실행합니다.|  
 |가용성 그룹에 보조 복제본 조인|**Join-SqlAvailabilityGroup**|보조 복제본을 호스트할 각 서버 인스턴스에서 실행합니다.|  
 |보조 데이터베이스 준비|**Backup-SqlDatabase** 및 **Restore-SqlDatabase**|주 복제본을 호스트하는 서버 인스턴스에 백업을 만듭니다.<br /><br /> **NoRecovery** 복원 매개 변수를 사용하여 보조 복제본을 호스팅하는 각 서버 인스턴스에 백업을 복원합니다. 또한 주 복제본을 호스팅하는 컴퓨터와 대상 보조 복제본을 호스팅하는 컴퓨터의 파일 경로가 다른 경우 **RelocateFile** 복원 매개 변수를 사용합니다.|  

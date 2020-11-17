@@ -11,14 +11,14 @@ helpviewer_keywords:
 - Availability Groups [SQL Server], interoperability
 - contained database, AlwaysOnAvailabilityGroups
 ms.assetid: cacce3ae-e940-4566-8298-6607c4268e74
-author: MashaMSFT
-ms.author: mathoma
-ms.openlocfilehash: 19905877e4651a2f2372c521cc09839abe938d68
-ms.sourcegitcommit: cc23d8646041336d119b74bf239a6ac305ff3d31
+author: cawrites
+ms.author: chadam
+ms.openlocfilehash: 4e0b08eac29037c5dcde26a955c01764e6f6f6dd
+ms.sourcegitcommit: 54cd97a33f417432aa26b948b3fc4b71a5e9162b
 ms.translationtype: HT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 09/23/2020
-ms.locfileid: "91116994"
+ms.lasthandoff: 11/13/2020
+ms.locfileid: "94584479"
 ---
 # <a name="use-contained-databases-with-always-on-availability-groups"></a>Always On 가용성 그룹에 포함된 데이터베이스 사용 
 [!INCLUDE [SQL Server](../../../includes/applies-to-version/sqlserver.md)]

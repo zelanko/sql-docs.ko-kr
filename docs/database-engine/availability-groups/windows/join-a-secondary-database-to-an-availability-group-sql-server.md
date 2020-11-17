@@ -16,14 +16,14 @@ helpviewer_keywords:
 - Availability Groups [SQL Server], configuring
 - Availability Groups [SQL Server], databases
 ms.assetid: fd7efe79-c1f9-497d-bfe7-b2a2b2321cf5
-author: MashaMSFT
-ms.author: mathoma
-ms.openlocfilehash: 803b4a0e4aba5455d196685e0f713081ce75ebf7
-ms.sourcegitcommit: c7f40918dc3ecdb0ed2ef5c237a3996cb4cd268d
+author: cawrites
+ms.author: chadam
+ms.openlocfilehash: 8f08d2a9f7b599b114a3c47305c5abfa3505c0a3
+ms.sourcegitcommit: 54cd97a33f417432aa26b948b3fc4b71a5e9162b
 ms.translationtype: HT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 10/05/2020
-ms.locfileid: "91726393"
+ms.lasthandoff: 11/13/2020
+ms.locfileid: "94584248"
 ---
 # <a name="join-a-secondary-database-to-an-always-on-availability-group"></a>Always On 가용성 그룹에 보조 데이터베이스 조인
 [!INCLUDE [SQL Server](../../../includes/applies-to-version/sqlserver.md)]
@@ -52,9 +52,9 @@ ms.locfileid: "91726393"
   
 3.  변경할 가용성 그룹을 확장하고 **가용성 데이터베이스** 노드를 확장합니다.  
   
-4.  마우스 오른쪽 단추로 데이터베이스를 클릭하고 **가용성 그룹에 조인**을 클릭합니다.  
+4.  마우스 오른쪽 단추로 데이터베이스를 클릭하고 **가용성 그룹에 조인** 을 클릭합니다.  
   
-5.  **가용성 그룹에 데이터베이스 조인** 대화 상자가 열립니다. 제목 표시줄에 표시된 가용성 그룹 이름과 표에 표시된 데이터베이스 이름을 확인하고 **확인**이나 **취소**를 클릭합니다.  
+5.  **가용성 그룹에 데이터베이스 조인** 대화 상자가 열립니다. 제목 표시줄에 표시된 가용성 그룹 이름과 표에 표시된 데이터베이스 이름을 확인하고 **확인** 이나 **취소** 를 클릭합니다.  
   
 ##  <a name="using-transact-sql"></a><a name="TsqlProcedure"></a> Transact-SQL 사용  
  **가용성 그룹에 보조 데이터베이스를 조인하려면**  
