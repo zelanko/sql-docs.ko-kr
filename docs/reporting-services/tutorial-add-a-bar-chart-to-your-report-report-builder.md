@@ -1,6 +1,6 @@
 ---
 title: '자습서: 보고서에 막대 차트 추가(보고서 작성기) | Microsoft Docs'
-description: 계열을 범주별로 그룹화된 일련의 세로 막대로 표시하는 세로 막대형 차트가 있는 Reporting Services 페이지가 매겨진 보고서를 만드는 방법을 알아봅니다.
+description: 보고서 작성기의 마법사를 사용하여 Reporting Services 페이지를 매긴 보고서에서 막대형 차트를 만드는 방법을 알아봅니다.
 ms.date: 06/15/2016
 ms.prod: reporting-services
 ms.prod_service: reporting-services-native
@@ -9,12 +9,12 @@ ms.topic: conceptual
 ms.assetid: 6956ebd6-0217-4087-a4fa-5cc1c3804691
 author: maggiesMSFT
 ms.author: maggies
-ms.openlocfilehash: 57dd6f4472c64ee37190d5149ef354d5829e1266
-ms.sourcegitcommit: 9e2c682929ee64c051dc62f8917d147861f7c635
+ms.openlocfilehash: 9b18950488cb0fed336feb3df61e5a4e66b56603
+ms.sourcegitcommit: 36fe62a3ccf34979bfde3e192cfa778505add465
 ms.translationtype: HT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 10/30/2020
-ms.locfileid: "93043732"
+ms.lasthandoff: 11/11/2020
+ms.locfileid: "94521123"
 ---
 # <a name="tutorial-add-a-bar-chart-to-your-report-report-builder"></a>자습서: 보고서에 가로 막대형 차트 추가(보고서 작성기)
 이 자습서에서는 [!INCLUDE[ssRBnoversion_md](../includes/ssrbnoversion.md)]의 마법사를 사용하여 페이지가 매겨진 [!INCLUDE[ssRSnoversion_md](../includes/ssrsnoversion-md.md)] 보고서에 가로 막대형 차트를 만듭니다. 그런 다음 필터를 추가하고 차트를 향상시킵니다. 

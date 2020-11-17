@@ -1,7 +1,7 @@
 ---
 title: PHP용 드라이버에 대한 Linux 및 macOS 설치
 description: 이 지침에서는 Linux 또는 macOS에서 Microsoft Drivers for PHP for SQL Server를 설치하는 방법에 대해 알아봅니다.
-ms.date: 10/30/2020
+ms.date: 11/06/2020
 ms.prod: sql
 ms.prod_service: connectivity
 ms.custom: ''
@@ -10,12 +10,12 @@ ms.topic: conceptual
 author: David-Engel
 ms.author: v-daenge
 manager: v-mabarw
-ms.openlocfilehash: 66c505f588d6f250c0e18dc88a79b21ed658f2b5
-ms.sourcegitcommit: 80701484b8f404316d934ad2a85fd773e26ca30c
+ms.openlocfilehash: 41b5eaec44c61e03db609bcd81b3e732a2119e7f
+ms.sourcegitcommit: 49ee3d388ddb52ed9cf78d42cff7797ad6d668f2
 ms.translationtype: HT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 11/03/2020
-ms.locfileid: "93243736"
+ms.lasthandoff: 11/09/2020
+ms.locfileid: "94384222"
 ---
 # <a name="linux-and-macos-installation-tutorial-for-the-microsoft-drivers-for-php-for-sql-server"></a>Microsoft Drivers for PHP for SQL Server의 Linux 및 macOS 설치 자습서
 다음 지침은 정리된 환경을 가정하며 Ubuntu 16.04, 18.04 및 20.04, RedHat 7 및 8, Debian 8, 9 및 10, Suse 12 및 15, Alpine 3.11 및 macOS 10.13, 10.14 및 10.15에 PHP 7.x, Microsoft ODBC 드라이버, Apache 웹 서버 및 Microsoft Drivers for PHP for SQL Server를 설치하는 방법을 보여 줍니다. 이 지침에서는 PECL을 사용하여 드라이버를 설치할 것을 권장하지만, [Microsoft Drivers for PHP for SQL Server](https://github.com/Microsoft/msphpsql/releases) GitHub 프로젝트 페이지에서 미리 작성된 이진 파일을 다운로드하고 [Microsoft Drivers for PHP for SQL Server 로드](../../connect/php/loading-the-php-sql-driver.md)의 지침에 따라 설치할 수도 있습니다. 확장 로드에 대한 설명과 php.ini에 확장을 추가하지 않는 이유는 [드라이버 로드](../../connect/php/loading-the-php-sql-driver.md#loading-the-driver-at-php-startup) 섹션을 참조하세요.
@@ -407,6 +407,7 @@ sudo apachectl restart
 ## <a name="testing-your-installation"></a>설치 테스트
 
 이 샘플 스크립트를 테스트하려면 시스템의 문서 루트에 testsql.php라는 파일을 만듭니다. Ubuntu, Debian 및 Redhat에서는 `/var/www/html/`, SUSE에서는 `/srv/www/htdocs`, Alpine에서는 `/var/www/localhost/htdocs`, macOS에서는 `/usr/local/var/www`입니다. 다음 스크립트를 파일에 복사하고 서버, 데이터베이스, 사용자 이름 및 암호를 적절하게 바꿉니다.
+
 ```php
 <?php
 $serverName = "yourServername";
@@ -466,7 +467,14 @@ function formatErrors($errors)
 }
 ?>
 ```
-브라우저에서 https://localhost/testsql.php (macOS에서는 https://localhost:8080/testsql.php )를 가리킵니다. SQL Server/Azure SQL 데이터베이스에 연결할 수 있어야 합니다. SQL 버전 정보를 보여 주는 성공 메시지가 표시되지 않으면 [지원 리소스](support-resources-for-the-php-sql-driver.md)에서 도움을 받을 수 있는 위치를 참조하세요.
+
+브라우저에서 https://localhost/testsql.php (macOS에서는 https://localhost:8080/testsql.php )를 가리킵니다. SQL Server/Azure SQL 데이터베이스에 연결할 수 있어야 합니다. SQL 버전 정보를 보여 주는 성공 메시지가 표시되지 않으면 명령줄에서 스크립트를 실행하여 몇 가지 기본적인 문제 해결을 수행할 수 있습니다.
+
+```bash
+php testsql.php
+```
+
+명령줄에서 실행에 성공했지만 브라우저에 아무것도 표시되지 않으면 [Apache 로그 파일](https://linuxize.com/post/apache-log-files/#location-of-the-log-files)을 확인합니다. [지원 리소스](support-resources-for-the-php-sql-driver.md)에서 도움을 받을 수 있는 위치를 참조하세요.
 
 ## <a name="see-also"></a>참고 항목  
 [Microsoft Drivers for PHP for SQL Server 시작](../../connect/php/getting-started-with-the-php-sql-driver.md)

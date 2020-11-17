@@ -1,6 +1,6 @@
 ---
 title: SQL Server 파트너 모니터링 | Microsoft Docs
-description: 서버를 모니터링할 솔루션이 있는 타사 파트너 목록입니다.
+description: SQL Server 서비스를 모니터링할 솔루션이 있는 타사 파트너 목록입니다.
 ms.topic: conceptual
 ms.custom: ''
 ms.date: 11/02/2017
@@ -8,12 +8,12 @@ ms.prod: sql
 ms.technology: release-landing
 ms.author: mikeray
 author: MikeRayMSFT
-ms.openlocfilehash: 82f02f877ea271a5c663a8d9139c940cdbcc1faa
-ms.sourcegitcommit: 442fbe1655d629ecef273b02fae1beb2455a762e
+ms.openlocfilehash: 77795d78f755d8eec0093dcc418583d8a5086318
+ms.sourcegitcommit: 36fe62a3ccf34979bfde3e192cfa778505add465
 ms.translationtype: HT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 11/03/2020
-ms.locfileid: "93235491"
+ms.lasthandoff: 11/11/2020
+ms.locfileid: "94521200"
 ---
 # <a name="sql-server-monitoring-partners"></a>SQL Server 모니터링 파트너
 [!INCLUDE[sqlserver](../includes/applies-to-version/sqlserver.md)]

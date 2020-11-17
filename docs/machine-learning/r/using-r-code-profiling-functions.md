@@ -3,22 +3,22 @@ title: R 코드 프로파일링 함수를 사용하여 성능 향상
 description: R 프로파일링 기능을 사용하여 SQL Server에서 R 계산에 대한 성능을 향상하고 더 빠른 결과를 얻을 수 있는 유용한 정보를 수집합니다. *rprof* 함수는 내부 함수 호출에 대한 정보를 수집하고 반환합니다.
 ms.prod: sql
 ms.technology: machine-learning-services
-ms.date: 12/12/2018
+ms.date: 10/30/2020
 ms.topic: how-to
 author: dphansen
 ms.author: davidph
 monikerRange: '>=sql-server-2016||>=sql-server-linux-ver15||=sqlallproducts-allversions'
-ms.openlocfilehash: e65171fa0222c0c581f692bede727dc4366c9c53
-ms.sourcegitcommit: 9b41725d6db9957dd7928a3620fe4db41eb51c6e
+ms.openlocfilehash: d15f31dc2c289df910b06de8cb1f48647dbde33c
+ms.sourcegitcommit: 49ee3d388ddb52ed9cf78d42cff7797ad6d668f2
 ms.translationtype: HT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 08/13/2020
-ms.locfileid: "88180444"
+ms.lasthandoff: 11/09/2020
+ms.locfileid: "94384752"
 ---
 # <a name="use-r-code-profiling-functions-to-improve-performance"></a>R 코드 프로파일링 함수를 사용하여 성능 향상
 [!INCLUDE [SQL Server 2016 and later](../../includes/applies-to-version/sqlserver2016.md)]
 
-SQL Server 리소스 및 도구를 사용하여 R 스크립트 실행을 모니터링할 뿐 아니라 다른 R 패키지에서 제공된 성능 도구를 사용하여 내부 함수 호출에 대한 추가 정보를 가져올 수 있습니다. 
+이 문서에서는 내부 함수 호출에 대한 정보를 가져오기 위해 R 패키지가 제공하는 성능 도구를 설명합니다. 이 정보를 사용하여 코드의 성능을 향상시킬 수 있습니다.
 
 > [!TIP]
 > 이 문서에서는 시작하는 데 도움이 되는 기본 리소스를 제공합니다. 전문가인 경우에는 [Hadley Wickham의 서적 ""Advanced R""](http://adv-r.had.co.nz)에서 *Performance* 섹션을 참조하는 것이 좋습니다.
@@ -27,7 +27,7 @@ SQL Server 리소스 및 도구를 사용하여 R 스크립트 실행을 모니�
 
 [*rprof*](https://www.rdocumentation.org/packages/utils/versions/3.5.1/topics/Rprof)는 기본적으로 로드되는 기본 패키지 [**utils**](https://www.rdocumentation.org/packages/utils/versions/3.5.1)에 포함된 함수입니다. 
 
-일반적으로 *rprof* 함수는 지정된 간격으로 호출 스택을 파일에 쓰는 방식으로 실행됩니다. [*summaryRprof*](https://www.rdocumentation.org/packages/utils/versions/3.5.1/topics/summaryRprof) 함수를 사용하여 출력 파일을 처리할 수 있습니다. *rprof*의 한 가지 장점은 샘플링을 수행하므로 모니터링에 대한 성능 부하가 감소한다는 것입니다.
+일반적으로 *rprof* 함수는 지정된 간격으로 호출 스택을 파일에 쓰는 방식으로 실행됩니다. [*summaryRprof*](https://www.rdocumentation.org/packages/utils/versions/3.5.1/topics/summaryRprof) 함수를 사용하여 출력 파일을 처리할 수 있습니다. *rprof* 의 한 가지 장점은 샘플링을 수행하므로 모니터링에 대한 성능 부하가 감소한다는 것입니다.
 
 코드에서 R 프로파일링을 사용하려면 이 함수를 호출하고 해당 매개 변수(예: 기록될 로그 파일의 위치 이름)를 지정합니다. 코드에서 프로파일링 기능을 켜고 끌 수 있습니다. 다음 구문에서는 기본 사용법을 보여 줍니다. 
 
@@ -59,9 +59,11 @@ help("Sys.time")
 
 ## <a name="debugging-and-profiling-in-r"></a>R에서 디버그 및 프로파일링
 
-기본적으로 설치되는 Microsoft R Open에 대한 설명서에는 [프로파일링 및 디버깅](https://cran.r-project.org/doc/manuals/r-release/R-exts.html#Debugging)을 자세히 설명하는 R 언어에 대한 확장 개발 매뉴얼이 포함됩니다. 컴퓨터의 C:\Program Files\Microsoft SQL Server\MSSQL13.MSSQLSERVER\R_SERVICES\doc\manual에서 같은 설명서를 찾을 수 있습니다.
+기본적으로 설치되는 Microsoft R Open에 대한 설명서에는 [프로파일링 및 디버깅](https://cran.r-project.org/doc/manuals/r-release/R-exts.html#Debugging)을 자세히 설명하는 R 언어에 대한 확장 개발 매뉴얼이 포함됩니다.
 
-## <a name="see-also"></a>참고 항목
+## <a name="next-steps"></a>다음 단계
 
-+ [utils R 패키지](https://www.rdocumentation.org/packages/utils/versions/3.5.1)
-+ [Hadley Wickham의 "Advanced R"](http://adv-r.had.co.nz)
++ SQL Server에서의 R 스크립트 최적화에 대한 자세한 내용은 [R 성능 조정 및 데이터 최적화](r-and-data-optimization-r-services.md)를 참조하세요.
++ SQL Server에서의 성능 조정에 대한 자세한 내용은 [SQL Server 데이터베이스 엔진 및 Azure SQL Database에 대한 성능 센터](/sql/relational-databases/performance/performance-center-for-sql-server-database-engine-and-azure-sql-database)를 참조하세요.
++ utils 패키지에 대한 자세한 내용은 [R Utils Package](https://www.rdocumentation.org/packages/utils/versions/3.5.1)를 참조하세요.
++ R 프로그래밍에 대한 자세한 설명은 [Hadley Wickham의 서적 "Advanced R"](http://adv-r.had.co.nz)을 참조하세요.

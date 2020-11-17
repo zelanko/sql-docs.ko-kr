@@ -4,19 +4,19 @@ titleSuffix: ''
 description: Machine Learning Services는 관계형 데이터를 사용하여 Python 및 R 스크립트를 실행할 수 있는 기능을 제공하는 SQL Server의 기능입니다. 예측 분석 및 기계 학습에 오픈 소스 패키지와 프레임워크, Microsoft Python과 R 패키지를 사용할 수 있습니다. 스크립트는 SQL Server 외부에서 또는 네트워크를 통해 데이터를 이동하지 않고 데이터베이스 내에서 실행됩니다. 이 문서에서는 SQL Server Machine Learning Services의 기본 사항 및 시작하는 방법에 대해 설명합니다.
 ms.prod: sql
 ms.technology: machine-learning-services
-ms.date: 06/19/2020
+ms.date: 11/10/2020
 ms.topic: overview
 author: dphansen
 ms.author: davidph
 monikerRange: '>=sql-server-2017||>=sql-server-linux-ver15||=azuresqldb-mi-current||=sqlallproducts-allversions'
-ms.openlocfilehash: 8113b373c328bac5a6ba95b7f4f40e5ab583503d
-ms.sourcegitcommit: 9774e2cb8c07d4f6027fa3a5bb2852e4396b3f68
+ms.openlocfilehash: 96e72d5046e095e25cf890c60059b3120d1bed80
+ms.sourcegitcommit: 3bde506b2fa3bc82813dbe658d567b1b9eb4278b
 ms.translationtype: HT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 10/15/2020
-ms.locfileid: "92098822"
+ms.lasthandoff: 11/11/2020
+ms.locfileid: "94498496"
 ---
-# <a name="what-is-sql-server-machine-learning-services-python-and-r"></a>SQL Server Machine Learning Services(Python 및 R)이란?
+# <a name="what-is-sql-server-machine-learning-services-with-python-and-r"></a>Python 및 R을 사용하는 SQL Server Machine Learning Services란?
 [!INCLUDE [SQL Server 2017 SQL MI](../includes/applies-to-version/sqlserver2017-asdbmi.md)]
 
 Machine Learning Services는 관계형 데이터를 사용하여 Python 및 R 스크립트를 실행할 수 있는 기능을 제공하는 SQL Server의 기능입니다. 예측 분석 및 기계 학습에 오픈 소스 패키지와 프레임워크, [Microsoft Python과 R 패키지](#packages)를 사용할 수 있습니다. 스크립트는 SQL Server 외부에서 또는 네트워크를 통해 데이터를 이동하지 않고 데이터베이스 내에서 실행됩니다. 이 문서에서는 SQL Server Machine Learning Services의 기본 사항 및 시작하는 방법에 대해 설명합니다.
@@ -25,7 +25,7 @@ Machine Learning Services는 관계형 데이터를 사용하여 Python 및 R �
 
 ::: moniker range=">=sql-server-ver15||>=sql-server-linux-ver15||=sqlallproducts-allversions"
 > [!NOTE]
-> SQL Server에서 Java를 실행하는 방법에 대해서는 [언어 확장 설명서](../language-extensions/language-extensions-overview.md)를 참조하세요.
+> SQL Server에서 Java를 실행하는 방법은 [Java 언어 확장 설명서](../language-extensions/java-overview.md)를 참조하세요.
 ::: moniker-end
 
 ## <a name="execute-python-and-r-scripts-in-sql-server"></a>SQL Server에서 Python 및 R 스크립트 실행

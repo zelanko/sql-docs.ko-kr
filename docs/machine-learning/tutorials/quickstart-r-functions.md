@@ -11,12 +11,12 @@ ms.author: garye
 ms.reviewer: davidph
 ms.custom: seo-lt-2019
 monikerRange: '>=sql-server-2016||>=sql-server-linux-ver15||=azuresqldb-mi-current||=sqlallproducts-allversions'
-ms.openlocfilehash: e5700e5b0bab7df8506725c2522c28479155fdab
-ms.sourcegitcommit: 9b41725d6db9957dd7928a3620fe4db41eb51c6e
+ms.openlocfilehash: d0c494602aca3cdcd40e27116f2a2b65e3ce5971
+ms.sourcegitcommit: 49ee3d388ddb52ed9cf78d42cff7797ad6d668f2
 ms.translationtype: HT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 08/13/2020
-ms.locfileid: "88178476"
+ms.lasthandoff: 11/09/2020
+ms.locfileid: "94384866"
 ---
 # <a name="quickstart-r-functions-with-sql-machine-learning"></a>빠른 시작: SQL 기계 학습에서 R 함수 사용
 [!INCLUDE [SQL Server 2016 SQL MI](../../includes/applies-to-version/sqlserver2016-asdbmi.md)]
@@ -125,6 +125,8 @@ EXECUTE sp_execute_external_script
         
         elapsed_time <- proc.time() - start.time;'
 ```
+
+다른 유용한 기능은 [R 코드 프로파일링 함수를 사용하여 성능 향상](../r/using-r-code-profiling-functions.md)을 참조하세요.
 
 ## <a name="next-steps"></a>다음 단계
 

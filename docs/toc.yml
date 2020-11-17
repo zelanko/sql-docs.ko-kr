@@ -135,7 +135,13 @@
             - name: 필수 구성 요소
               href: big-data-cluster/active-directory-prerequisites.md
             - name: 배포
-              href: big-data-cluster/active-directory-deploy.md
+              items:
+                - name: 간단한 AD 배포
+                  href: big-data-cluster/active-directory-deploy.md
+                - name: AKS의 AD 계획
+                  href: big-data-cluster/active-directory-deployment-aks.md
+                - name: 자습서 - AKS의 AD
+                  href: big-data-cluster/active-directory-deployment-aks-tutorial.md
             - name: 연결
               href: big-data-cluster/active-directory-connect.md
             - name: 같은 AD 도메인의 여러 BDC
@@ -1830,7 +1836,7 @@
       items:
         - name: 관리
           items:
-            - name: 만들기
+            - name: 생성
               href: relational-databases/tables/create-tables-database-engine.md
             - name: DELETE
               href: relational-databases/tables/delete-tables-database-engine.md
@@ -1869,7 +1875,7 @@
           items:
             - name: 생성
               href: relational-databases/tables/create-edge-constraints.md
-            - name: 삭제
+            - name: DELETE
               href: relational-databases/tables/delete-edge-constraint.md
             - name: 수정
               href: relational-databases/tables/modify-edge-constraint.md
@@ -9992,11 +9998,11 @@
               href: linux/sql-server-linux-setup-full-text-search.md
             - name: SQL Server Integration Services 설치
               href: linux/sql-server-linux-setup-ssis.md
-            - name: SQL Server Machine Learning Services 설치
+            - name: SQL Server Machine Learning Services(Python 및 R) 설치
               href: linux/sql-server-linux-setup-machine-learning.md
-            - name: Docker에 SQL Server Machine Learning Services 설치
+            - name: Docker에 SQL Server Machine Learning Services(Python 및 R) 설치
               href: linux/sql-server-linux-setup-machine-learning-docker.md
-            - name: SQL Server 언어 확장 설치
+            - name: SQL Server Java 언어 확장 설치
               href: linux/sql-server-linux-setup-language-extensions-java.md
             - name: 리포지토리 구성
               href: linux/sql-server-linux-change-repo.md

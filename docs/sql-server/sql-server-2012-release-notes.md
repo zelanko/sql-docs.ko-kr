@@ -13,12 +13,12 @@ ms.assetid: 9ccb390a-67a9-4593-85ea-2b4c41c4620f
 author: rothja
 ms.author: jroth
 monikerRange: = sql-server-2016 || = sqlallproducts-allversions
-ms.openlocfilehash: f07d5ea10fbb762b46dcf47fb15e9acdfe8404a9
-ms.sourcegitcommit: 768f046107642f72693514f51bf2cbd00f58f58a
+ms.openlocfilehash: caca5016c6d461af5cd665ae0ada144cd5fd1c2e
+ms.sourcegitcommit: 49ee3d388ddb52ed9cf78d42cff7797ad6d668f2
 ms.translationtype: HT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 07/23/2020
-ms.locfileid: "87111145"
+ms.lasthandoff: 11/09/2020
+ms.locfileid: "94384681"
 ---
 # <a name="sql-server-2012-release-notes"></a>SQL Server 2012 릴리스 정보
 [!INCLUDE [SQL Server Azure SQL Database ](../includes/applies-to-version/sqlserver.md)]
@@ -43,15 +43,15 @@ SQL Server 2012를 시작하고 설치하는 방법은 SQL Server 2012 추가 �
   
 2.  Controller 서비스가 설치된 컨트롤러 컴퓨터에서 명령 프롬프트에 dcomcnfg를 입력합니다.  
   
-3.  구성 요소 서비스 창에서 **콘솔 루트** -> **구성 요소 서비스** -> **컴퓨터** -> **내 컴퓨터** -> **Dconfig** ->**DReplayController**로 이동합니다.  
+3.  구성 요소 서비스 창에서 **콘솔 루트** -> **구성 요소 서비스** -> **컴퓨터** -> **내 컴퓨터** -> **Dconfig** ->**DReplayController** 로 이동합니다.  
   
-4.  **DReplayController**를 마우스 오른쪽 단추로 클릭한 다음 **속성**을 클릭합니다.  
+4.  **DReplayController** 를 마우스 오른쪽 단추로 클릭한 다음 **속성** 을 클릭합니다.  
   
 5.  **DReplayController 속성** 창의 **보안** 탭에 있는 **시작 및 활성화 권한** 섹션에서 **편집** 을 클릭합니다.  
   
-6.  로컬 사용자 계정에 **로컬 및 원격 활성화** 권한을 부여한 다음 **확인**을 클릭합니다.  
+6.  로컬 사용자 계정에 **로컬 및 원격 활성화** 권한을 부여한 다음 **확인** 을 클릭합니다.  
   
-7.  액세스 권한 섹션에서 **편집** 을 클릭하고 로컬 사용자 계정에 **로컬 및 원격 액세스** 권한을 부여한 다음 **확인**을 클릭합니다.  
+7.  액세스 권한 섹션에서 **편집** 을 클릭하고 로컬 사용자 계정에 **로컬 및 원격 액세스** 권한을 부여한 다음 **확인** 을 클릭합니다.  
   
 8.  **확인** 을 클릭하여 **DReplayController 속성** 창을 닫습니다.  
   
@@ -133,17 +133,17 @@ A semantic language statistics database is not registered. Full-text indexes usi
   
         2.  **기능 선택** 인터페이스에서 **.NET Framework 3.5.1 기능** 항목을 확장합니다.  
   
-        3.  **.NET Framework 3.5.1 기능**을 확장한 후 확인란이 두 개 표시됩니다. 한 확인란은 .NET Framework 3.5.1용이고 다른 확인란은 WCF 활성화용입니다. **.NET Framework 3.5.1**을 선택하고 **다음**을 클릭합니다. 필요한 역할 서비스와 기능을 설치하지 않은 경우에는 .NET Framework 3.5.1 기능을 설치할 수 없습니다.  
+        3.  **.NET Framework 3.5.1 기능** 을 확장한 후 확인란이 두 개 표시됩니다. 한 확인란은 .NET Framework 3.5.1용이고 다른 확인란은 WCF 활성화용입니다. **.NET Framework 3.5.1** 을 선택하고 **다음** 을 클릭합니다. 필요한 역할 서비스와 기능을 설치하지 않은 경우에는 .NET Framework 3.5.1 기능을 설치할 수 없습니다.  
   
-        4.  **설치 선택 확인**에서 선택 내용을 검토한 다음 설치를 클릭합니다.  
+        4.  **설치 선택 확인** 에서 선택 내용을 검토한 다음 설치를 클릭합니다.  
   
-        5.  설치 과정이 완료되면 **닫기**를 클릭합니다.  
+        5.  설치 과정이 완료되면 **닫기** 를 클릭합니다.  
   
         방법 2 Windows PowerShell 사용  
   
-        1.  **시작** | **모든 프로그램** | **보조프로그램**을 클릭합니다.  
+        1.  **시작** | **모든 프로그램** | **보조프로그램** 을 클릭합니다.  
   
-        2.  **Windows PowerShell**을 확장하고 **Windows PowerShell**을 마우스 오른쪽 단추로 클릭한 다음 **관리자 권한으로 실행**을 클릭합니다. **사용자 계정 컨트롤** 상자에서 **예** 를 클릭합니다.  
+        2.  **Windows PowerShell** 을 확장하고 **Windows PowerShell** 을 마우스 오른쪽 단추로 클릭한 다음 **관리자 권한으로 실행** 을 클릭합니다. **사용자 계정 컨트롤** 상자에서 **예** 를 클릭합니다.  
   
         3.  PowerShell 명령 프롬프트에서 다음 명령을 입력하고 각 명령 다음에 Enter 키를 누릅니다.  
   
@@ -154,11 +154,11 @@ A semantic language statistics database is not registered. Full-text indexes usi
   
         **다음 방법을 사용하여 Windows 7 SP1에서 .NET Framework 3.5 SP1을 활성화할 수 있습니다.**  
   
-        1.  **시작** | **제어판** | **프로그램**을 차례로 클릭한 다음 **Windows 기능 사용/사용 안 함**을 클릭합니다. 관리자 암호를 묻거나 암호를 확인하는 메시지가 표시되면 암호를 입력하거나 확인합니다.  
+        1.  **시작** | **제어판** | **프로그램** 을 차례로 클릭한 다음 **Windows 기능 사용/사용 안 함** 을 클릭합니다. 관리자 암호를 묻거나 암호를 확인하는 메시지가 표시되면 암호를 입력하거나 확인합니다.  
   
-        2.  **Microsoft .NET Framework 3.5.1**을 사용하도록 설정하려면 기능 옆의 확인란을 선택합니다. Windows 기능을 끄려면 해당 확인란의 선택을 취소합니다.  
+        2.  **Microsoft .NET Framework 3.5.1** 을 사용하도록 설정하려면 기능 옆의 확인란을 선택합니다. Windows 기능을 끄려면 해당 확인란의 선택을 취소합니다.  
   
-        3.  **확인**을 클릭합니다.  
+        3.  **확인** 을 클릭합니다.  
   
         **배포 이미지 서비스 및 관리(DISM.exe)를 사용하여 .NET Framework 3.5 SP1을 활성화할 수 있습니다.**  
   
@@ -223,9 +223,9 @@ SQL Server 2012는 Windows Vista SP2, Windows Server 2008 SP2, Windows 2008 R2 S
   
 5.  **인스턴스 선택** 페이지에서 복구할 인스턴스를 선택한 후 **다음** 을 클릭하여 계속합니다.  
   
-6.  작업이 유효한지 검사하는 복구 규칙이 실행됩니다. 계속하려면 **다음**을 클릭합니다.  
+6.  작업이 유효한지 검사하는 복구 규칙이 실행됩니다. 계속하려면 **다음** 을 클릭합니다.  
   
-7.  **복구 준비** 페이지에서 작업을 진행할 준비가 되었음을 알려 줍니다. 계속하려면 **복구**를 클릭합니다.  
+7.  **복구 준비** 페이지에서 작업을 진행할 준비가 되었음을 알려 줍니다. 계속하려면 **복구** 를 클릭합니다.  
   
 8.  **복구 진행률** 페이지에 복구 작업 상태가 표시됩니다. **완료** 페이지에서 작업이 완료되었음을 알려 줍니다.  
   
@@ -342,7 +342,7 @@ AS(Analysis Services)의 SSIS(SQL Server Integration Services) 구성 요소가 
 **해결 방법:** None  
   
 ### <a name="44-a-cancel-operation-discards-work-from-multiple-activities"></a>4.4 취소 작업으로 여러 동작의 작업이 삭제됨  
-**문제:** 실행 중인 기술 자료 검색 또는 도메인 관리 동작에 대해 **취소**를 클릭하는 경우 동작이 실행되는 중에 수행되는 게시 작업 없이 기타 동작들도 이전에 완료되었으면 현재 동작뿐만 아니라 마지막 게시 이후로 수행된 모든 동작의 작업이 삭제됩니다.  
+**문제:** 실행 중인 기술 자료 검색 또는 도메인 관리 동작에 대해 **취소** 를 클릭하는 경우 동작이 실행되는 중에 수행되는 게시 작업 없이 기타 동작들도 이전에 완료되었으면 현재 동작뿐만 아니라 마지막 게시 이후로 수행된 모든 동작의 작업이 삭제됩니다.  
   
 **해결 방법:** 이 문제를 방지하려면, 새로운 동작을 시작하기 전에 기술 자료로 유지하고자 하는 작업을 게시합니다.  
   
@@ -365,7 +365,7 @@ AS(Analysis Services)의 SSIS(SQL Server Integration Services) 구성 요소가 
 **해결 방법:** DQS 정리 구성 요소를 사용하여 이러한 데이터 열을 처리하기 전에 데이터 변환을 사용하여 **DT_STR** 또는 **DT_WSTR** 데이터 형식으로 변환해야 합니다.  
   
 ### <a name="49-the-item-to-run-dqsinstallerexe-on-the-start-menu-is-overwritten-on-new-sql-server-instance-installation"></a>4.9 시작 메뉴에서 DQSInstaller.exe를 실행하는 항목이 새 SQL Server 인스턴스 설치에서 덮어쓰임  
-**문제:** SQL Server 인스턴스에 Data Quality Services를 설치하도록 선택하는 경우 SQL Server 설치를 완료한 후 **시작 메뉴**에서 **Data Quality Services** 프로그램 그룹 아래에 **Data Quality Server Installer**라는 항목이 만들어집니다. 그러나 한 컴퓨터에 여러 SQL Server 인스턴스를 설치하는 경우에도 **시작** 메뉴에 **Data Quality Server Installer** 항목이 하나만 있습니다. 이 항목을 클릭하면 가장 최근에 설치한 SQL Server 인스턴스에서 DQSInstaller.exe 파일이 실행됩니다.  
+**문제:** SQL Server 인스턴스에 Data Quality Services를 설치하도록 선택하는 경우 SQL Server 설치를 완료한 후 **시작 메뉴** 에서 **Data Quality Services** 프로그램 그룹 아래에 **Data Quality Server Installer** 라는 항목이 만들어집니다. 그러나 한 컴퓨터에 여러 SQL Server 인스턴스를 설치하는 경우에도 **시작** 메뉴에 **Data Quality Server Installer** 항목이 하나만 있습니다. 이 항목을 클릭하면 가장 최근에 설치한 SQL Server 인스턴스에서 DQSInstaller.exe 파일이 실행됩니다.  
   
 ### <a name="410-activity-monitoring-displays-incorrect-status-for-failed-integration-services-cleansing-activities"></a>4.10 작업 모니터링이 실패한 Integration Services 정리 작업에 대해 잘못된 상태를 표시함  
 실패한 Integration Services 정리 작업에 대해서도 작업 모니터링 화면의 **현재 상태** 열에 **성공** 이라고 잘못 표시됩니다.  
@@ -377,7 +377,7 @@ Data Quality 클라이언트에서 매핑 단계 중에 DQS 작업에서 SQL Ser
 데이터 품질 프로젝트 정리에서 원본 데이터의 필드를 date 데이터 형식의 자식 도메인이 있는 복합 도메인으로 매핑한 경우 정리 결과에 있는 자식 도메인 출력의 날짜 형식이 잘못되고 데이터베이스로 내보내기 작업이 실패합니다.  
   
 ### <a name="413-error-when-mapping-to-an-excel-sheet-that-contains-a--semicolon-in-its-name"></a>4.13 이름에 ;(세미콜론)이 포함된 Excel 시트에 매핑하는 경우의 오류  
-**문제:** Data Quality 클라이언트의 DQS 작업에 대한 **Map** 페이지에서 이름에 ;(세미콜론)이 포함된 원본 Excel 시트에 매핑하는 경우 **Map** 페이지에서 **다음**을 클릭하면 처리되지 않은 예외 메시지가 표시됩니다.  
+**문제:** Data Quality 클라이언트의 DQS 작업에 대한 **Map** 페이지에서 이름에 ;(세미콜론)이 포함된 원본 Excel 시트에 매핑하는 경우 **Map** 페이지에서 **다음** 을 클릭하면 처리되지 않은 예외 메시지가 표시됩니다.  
   
 **해결 방법:** 매핑할 원본 데이터가 포함된 Excel 파일의 시트 이름에서 ;(세미콜론)을 제거하고 다시 시도합니다.  
   
@@ -468,7 +468,7 @@ Data Quality 클라이언트에서 매핑 단계 중에 DQS 작업에서 SQL Ser
 -   또는 32비트 Windows PowerShell 2.0 프롬프트에서 SQLPS 모듈을 가져옵니다.  
   
 ### <a name="54-an-error-might-occur-when-navigating-in-the-generate-script-wizard"></a>5.4 스크립트 생성 마법사에서 탐색하는 중에 오류가 발생할 수 있음  
-**문제:** **스크립트 저장 또는 게시**를 클릭하여 스크립트 생성 마법사에서 스크립트를 생성한 다음, **옵션 선택** 또는 **스크립팅 옵션 설정**을 클릭하고 다시 **스크립트 저장 및 게시**를 클릭하여 탐색하면 다음 오류가 발생할 수 있습니다.  
+**문제:** **스크립트 저장 또는 게시** 를 클릭하여 스크립트 생성 마법사에서 스크립트를 생성한 다음, **옵션 선택** 또는 **스크립팅 옵션 설정** 을 클릭하고 다시 **스크립트 저장 및 게시** 를 클릭하여 탐색하면 다음 오류가 발생할 수 있습니다.  
   
 ```
 An exception occurred while executing a Transact-SQL statement or batch. (Microsoft.SqlServer.ConnectionInfo)  
@@ -630,7 +630,7 @@ SQL Server 2012 Reporting Services에서 Microsoft SQL Server PDW Appliance Upda
 ![horizontal_bar](media/horizontal-bar.png "horizontal_bar")  
   
 ## <a name="90-streaminsight"></a><a name="SI"></a>9.0 StreamInsight  
-SQL Server 2012에는 StreamInsight 2.0이 포함되어 있습니다. StreamInsight 2.0을 사용하려면 Microsoft SQL Server 2012 라이선스와 .NET Framework 4.0이 필요합니다. StreamInsight 2.0 에서는 여러 가지 버그를 수정하고 성능을 높였습니다. 자세한 내용은 [Microsoft StreamInsight 2.0 릴리스 정보](https://social.technet.microsoft.com/wiki/contents/articles/6539.aspx)를 참조하세요. StreamInsight 2.0을 별도로 다운로드하려면 Microsoft 다운로드 센터의 [Microsoft StreamInsight 2.0 다운로드 페이지](https://go.microsoft.com/fwlink/?LinkId=241593) 를 방문하세요.  
+SQL Server 2012에는 StreamInsight 2.1이 포함되어 있습니다. StreamInsight 2.1을 사용하려면 Microsoft SQL Server 2012 라이선스와 .NET Framework 4.0이 필요합니다. StreamInsight 2.0 에서는 여러 가지 버그를 수정하고 성능을 높였습니다. 자세한 내용은 [Microsoft StreamInsight 2.1 릴리스 정보](https://social.technet.microsoft.com/wiki/contents/articles/6539.aspx)를 참조하세요. StreamInsight 2.1을 별도로 다운로드하려면 Microsoft 다운로드 센터의 [Microsoft StreamInsight 2.1 다운로드 페이지](https://www.microsoft.com/download/details.aspx?id=30149)를 방문하세요.  
   
 ![horizontal_bar](media/horizontal-bar.png "horizontal_bar")  
   

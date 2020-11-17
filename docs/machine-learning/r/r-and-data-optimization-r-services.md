@@ -3,43 +3,43 @@ title: 데이터 성능 조정
 description: 이 문서에서는 SQL Server에서 실행할 R 또는 Python 스크립트의 성능 최적화에 관해 설명합니다. 또한 성능을 개선하고 알려진 문제를 방지하기 위해 R 코드를 업데이트하는 데 사용할 수 있는 방법을 설명합니다.
 ms.prod: sql
 ms.technology: machine-learning-services
-ms.date: 04/15/2018
+ms.date: 10/20/2020
 ms.topic: how-to
 author: dphansen
 ms.author: davidph
 ms.custom: seo-lt-2019
 monikerRange: '>=sql-server-2016||>=sql-server-linux-ver15||=sqlallproducts-allversions'
-ms.openlocfilehash: eaabfce536283644a0ccedcc315d91e11f33eade
-ms.sourcegitcommit: afb02c275b7c79fbd90fac4bfcfd92b00a399019
+ms.openlocfilehash: d7ba1afc4fd63309fedca141dd4d71800fd54c6b
+ms.sourcegitcommit: 49ee3d388ddb52ed9cf78d42cff7797ad6d668f2
 ms.translationtype: HT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 10/12/2020
-ms.locfileid: "91956584"
+ms.lasthandoff: 11/09/2020
+ms.locfileid: "94384840"
 ---
-# <a name="performance-for-r-services---data-optimization"></a>R Services 성능 - 데이터 최적화
+# <a name="performance-tuning-and-data-optimization-for-r"></a>R 성능 조정 및 데이터 최적화
 [!INCLUDE [SQL Server 2016 and later](../../includes/applies-to-version/sqlserver2016.md)]
 
-이 문서는 두 가지 사례 연구를 기준으로 R Services를 위한 성능 최적화를 설명하는 시리즈의 세 번째 문서입니다. 이 문서에서는 SQL Server에서 실행할 R 또는 Python 스크립트의 성능 최적화에 관해 설명합니다. 또한 성능을 개선하고 알려진 문제를 방지하기 위해 R 코드를 업데이트하는 데 사용할 수 있는 방법을 설명합니다.
+이 문서에서는 SQL Server에서 실행할 R 또는 Python 스크립트의 성능 최적화에 관해 설명합니다. 이러한 방법을 사용하여 R 코드를 업데이트하면 성능을 개선하고 알려진 문제를 방지할 수 있습니다.
 
 ## <a name="choosing-a-compute-context"></a>컴퓨팅 컨텍스트 선택
 
-SQL Server 2016 및 2017에서 R 또는 Python 스크립트를 실행할 때 **로컬** 또는 **SQL** 컴퓨팅 컨텍스트를 사용할 수 있습니다.
+SQL Server에서 R 또는 Python 스크립트를 실행할 때 **로컬** 또는 **SQL** 컴퓨팅 컨텍스트를 사용할 수 있습니다.
 
 **로컬** 컴퓨팅 컨텍스트를 사용하는 경우 분석은 서버가 아닌 컴퓨터에서 수행됩니다. 따라서 코드에서 사용할 SQL Server 데이터를 가져오는 경우 네트워크를 통해 데이터를 가져와야 합니다. 이 네트워크 전송으로 인해 발생하는 성능 저하는 전송된 데이터 크기, 네트워크 속도 및 동시에 발생하는 다른 네트워크 전송에 따라 달라집니다.
 
-**SQL Server 컴퓨팅 컨텍스트**를 사용하는 경우 코드는 서버에서 실행됩니다. SQL Server에서 데이터를 가져오는 경우 데이터는 분석을 실행하는 서버에 있어야 하므로 네트워크 오버헤드가 발생하지 않습니다. 다른 원본에서 데이터를 가져와야 하는 경우 ETL을 미리 처리하는 것이 좋습니다.
+**SQL Server 컴퓨팅 컨텍스트** 를 사용하는 경우 코드는 서버에서 실행됩니다. SQL Server에서 데이터를 가져오는 경우 데이터는 분석을 실행하는 서버에 있어야 하므로 네트워크 오버헤드가 발생하지 않습니다. 다른 원본에서 데이터를 가져와야 하는 경우 ETL을 미리 처리하는 것이 좋습니다.
 
 큰 데이터 집합을 사용할 경우 항상 SQL 컴퓨팅 컨텍스트를 사용하세요.
 
 ## <a name="factors"></a>요소
 
-R 언어에는 범주 데이터의 특수 변수인 ‘요소’ 개념이 있습니다.  데이터 과학자는 수식에서 요소 변수를 사용하는 경우가 많은데, 이는 범주 변수를 요소로 처리하면 기계 학습 함수에서 데이터가 제대로 처리되기 때문입니다. 자세한 내용은 [R for Dummies: Factor Variables](https://www.dummies.com/programming/r/how-to-look-at-the-structure-of-a-factor-in-r/)(더미에 대한 R: 요소 변수)를 참조하세요.
+R 언어에는 범주 데이터의 특수 변수인 ‘요소’ 개념이 있습니다. 데이터 과학자는 수식에서 요소 변수를 사용하는 경우가 많은데, 이는 범주 변수를 요소로 처리하면 기계 학습 함수에서 데이터가 제대로 처리되기 때문입니다.
 
-저장이나 처리를 위해 의도적으로 요소 변수를 문자열에서 정수로 변환하거나 다시 그 반대로 변환할 수 있습니다. *stringsAsFactors* 인수가 **False**로 설정된 경우가 아니면 R `data.frame` 함수는 모든 문자열을 요소 변수로 처리합니다. 즉, 문자열은 처리를 위해 자동으로 정수로 변환된 후 다시 원래 문자열에 매핑됩니다.
+저장이나 처리를 위해 의도적으로 요소 변수를 문자열에서 정수로 변환하거나 다시 그 반대로 변환할 수 있습니다. *stringsAsFactors* 인수가 **False** 로 설정된 경우가 아니면 R `data.frame` 함수는 모든 문자열을 요소 변수로 처리합니다. 즉, 문자열은 처리를 위해 자동으로 정수로 변환된 후 다시 원래 문자열에 매핑됩니다.
 
 R은 런타임에 요소 정수를 문자열로 변환한 후 자체 내부 문자열에서 정수로 변환을 수행하기 때문에 요소의 원본 데이터가 정수로 저장되면 성능이 저하될 수 있습니다.
 
-이 런타임 변환을 방지하려면 값을 SQL Server 테이블에 정수로 저장하고 _colInfo_ 인수를 사용하여 요소로 사용되는 열의 수준을 지정하는 것이 좋습니다. RevoScaleR의 대부분 데이터 원본 개체는 매개 변수 _colInfo_를 사용합니다. 이 매개 변수를 사용하여 데이터 원본에서 사용하는 변수의 이름을 지정하고, 해당 형식을 지정하고, 열 값에 대한 변수 수준 또는 변환을 정의합니다.
+이 런타임 변환을 방지하려면 값을 SQL Server 테이블에 정수로 저장하고 _colInfo_ 인수를 사용하여 요소로 사용되는 열의 수준을 지정하는 것이 좋습니다. RevoScaleR의 대부분 데이터 원본 개체는 매개 변수 _colInfo_ 를 사용합니다. 이 매개 변수를 사용하여 데이터 원본에서 사용하는 변수의 이름을 지정하고, 해당 형식을 지정하고, 열 값에 대한 변수 수준 또는 변환을 정의합니다.
 
 예를 들어 다음 R 함수 호출은 테이블에서 정수 1, 2 및 3을 가져오지만 “apple”, “orange” 및 “banana” 수준을 사용하여 값을 요소에 매핑합니다.
 
@@ -79,15 +79,15 @@ c("fruit" = c(type = "factor", levels= c("apple", "orange", "banana")))
 
 SQL Server에서 R을 통해 병렬 처리를 수행하려면 다음 두 가지 방법을 사용합니다.
 
--   **\@parallel을 사용합니다.** `sp_execute_external_script` 저장 프로시저를 사용하여 R 스크립트를 실행할 경우 `@parallel` 매개 변수를 `1`로 설정합니다. 이 방법은 R 스크립트에서 다른 처리 메커니즘을 포함하는 RevoScaleR 함수를 사용하지 **않는** 경우 가장 적합합니다. 스크립트가 RevoScaleR 함수(일반적으로 “rx”가 접두사로 추가됨)를 사용하는 경우 병렬 처리는 자동으로 수행되며 `@parallel`을 `1`로 명시적으로 설정할 필요가 없습니다.
++ **\@parallel을 사용합니다.** `sp_execute_external_script` 저장 프로시저를 사용하여 R 스크립트를 실행할 경우 `@parallel` 매개 변수를 `1`로 설정합니다. 이 방법은 R 스크립트에서 다른 처리 메커니즘을 포함하는 RevoScaleR 함수를 사용하지 **않는** 경우 가장 적합합니다. 스크립트가 RevoScaleR 함수(일반적으로 “rx”가 접두사로 추가됨)를 사용하는 경우 병렬 처리는 자동으로 수행되며 `@parallel`을 `1`로 명시적으로 설정할 필요가 없습니다.
 
-    R 스크립트를 병렬 처리할 수 있으며 SQL 쿼리를 병렬 처리할 수 있는 경우 데이터베이스 엔진은 여러 병렬 프로세스를 만듭니다. 만들 수 있는 최대 프로세스 수는 인스턴스의 MAXDOP(**최대 병렬 처리 수준**) 설정과 같습니다. 모든 프로세스는 동일한 스크립트를 실행하지만 데이터의 일부만 수신합니다.
-    
-    따라서 모델을 학습하는 경우와 같이 모든 데이터를 확인해야 하는 스크립트에서는 이 방법이 유용하지 않습니다. 하지만 병렬로 일괄 처리 예측과 같은 태스크를 수행할 경우 이 방법이 유용합니다. `sp_execute_external_script`를 통해 병렬 처리를 사용하는 방법에 대한 자세한 내용은 [Transact-SQL에서 R 코드 사용](../tutorials/quickstart-r-create-script.md)의 **고급 팁: 병렬 처리** 섹션을 참조하세요.
+  R 스크립트를 병렬 처리할 수 있으며 SQL 쿼리를 병렬 처리할 수 있는 경우 데이터베이스 엔진은 여러 병렬 프로세스를 만듭니다. 만들 수 있는 최대 프로세스 수는 인스턴스의 MAXDOP(**최대 병렬 처리 수준**) 설정과 같습니다. 모든 프로세스는 동일한 스크립트를 실행하지만 데이터의 일부만 수신합니다.
+  
+  따라서 모델을 학습하는 경우와 같이 모든 데이터를 확인해야 하는 스크립트에서는 이 방법이 유용하지 않습니다. 하지만 병렬로 일괄 처리 예측과 같은 태스크를 수행할 경우 이 방법이 유용합니다. `sp_execute_external_script`를 통해 병렬 처리를 사용하는 방법에 대한 자세한 내용은 [Transact-SQL에서 R 코드 사용](../tutorials/quickstart-r-create-script.md)의 **고급 팁: 병렬 처리** 섹션을 참조하세요.
 
--   **numTasks =1을 사용합니다.** SQL Server 컴퓨팅 컨텍스트에서 **rx** 함수를 사용하는 경우 _numTasks_ 매개 변수의 값을 만들려는 프로세스 수로 설정합니다. 생성되는 프로세스 수는 **MAXDOP**보다 클 수 없지만, 생성되는 실제 프로세스 수는 데이터베이스 엔진에서 결정되며 요청한 것보다 적을 수 있습니다.
++ **numTasks =1을 사용합니다.** SQL Server 컴퓨팅 컨텍스트에서 **rx** 함수를 사용하는 경우 _numTasks_ 매개 변수의 값을 만들려는 프로세스 수로 설정합니다. 생성되는 프로세스 수는 **MAXDOP** 보다 클 수 없지만, 생성되는 실제 프로세스 수는 데이터베이스 엔진에서 결정되며 요청한 것보다 적을 수 있습니다.
 
-    R 스크립트를 병렬 처리할 수 있고 SQL 쿼리를 병렬 처리할 수 있는 경우 SQL Server에서는 rx 함수를 실행할 때 여러 병렬 프로세스를 만듭니다. 생성되는 실제 프로세스 수는 리소스 관리, 현재 리소스 사용량, 기타 세션, R 스크립트에서 사용되는 쿼리의 쿼리 실행 계획과 같은 다양한 요소에 따라 달라집니다.
+  R 스크립트를 병렬 처리할 수 있고 SQL 쿼리를 병렬 처리할 수 있는 경우 SQL Server에서는 rx 함수를 실행할 때 여러 병렬 프로세스를 만듭니다. 생성되는 실제 프로세스 수는 다양한 요소에 따라 달라집니다. 여기에는 리소스 관리, 현재 리소스 사용량, 기타 세션 및 R 스크립트에 사용되는 쿼리의 쿼리 실행 계획이 포함됩니다.
 
 ## <a name="query-parallelization"></a>쿼리 병렬 처리
 
@@ -114,11 +114,11 @@ RxSqlServerData(sqlQuery= "SELECT [ArrDelay],[CRSDepTime],[DayOfWeek] FROM  airl
 
 성능에 영향을 줄 수 있는 또 다른 일반적인 실수는 쿼리가 필요한 것보다 많은 열을 검색하는 것입니다. 예를 들어 수식에 3개 열만 사용되지만, 원본 테이블에 30개 열이 있는 경우에는 데이터를 불필요하게 이동하는 것입니다.
 
- + `SELECT *`를 사용하지 마세요.
- + 시간을 내어 데이터 세트의 열을 검토하고 분석에 필요한 열만 식별
- + GUID 및 rowguid와 같이 R 코드와 호환되지 않는 데이터 형식이 포함된 열을 쿼리에서 제거
- + 지원되지 않는 날짜 및 시간 형식 확인
- + 테이블을 로드하는 대신 특정 값을 선택하거나 열을 캐스팅하여 변환 오류를 방지하는 뷰 만들기
++ `SELECT *`를 사용하지 마세요.
++ 시간을 내어 데이터 세트의 열을 검토하고 분석에 필요한 열만 식별
++ GUID 및 rowguid와 같이 R 코드와 호환되지 않는 데이터 형식이 포함된 열을 쿼리에서 제거
++ 지원되지 않는 날짜 및 시간 형식 확인
++ 테이블을 로드하는 대신 특정 값을 선택하거나 열을 캐스팅하여 변환 오류를 방지하는 뷰 만들기
 
 ## <a name="optimizing-the-machine-learning-algorithm"></a>기계 학습 알고리즘 최적화
 
@@ -133,23 +133,23 @@ RxSqlServerData(sqlQuery= "SELECT [ArrDelay],[CRSDepTime],[DayOfWeek] FROM  airl
 
 + [rxDTree](/r-server/r-reference/revoscaler/rxdtree)
 
-    `rxDTree`는 의사 결정 트리 수준을 제어하는 `maxDepth` 매개 변수를 지원합니다. `maxDepth`가 증가하면 성능이 저하될 수 있으므로 수준 증가 및 성능 저하 시 이점을 분석해야 합니다.
+  `rxDTree`는 의사 결정 트리 수준을 제어하는 `maxDepth` 매개 변수를 지원합니다. `maxDepth`가 증가하면 성능이 저하될 수 있으므로 수준 증가 및 성능 저하 시 이점을 분석해야 합니다.
 
-    `maxNumBins`, `maxDepth`, `maxComplete` 및 `maxSurrogate`와 같은 매개 변수를 조정하여 시간 복잡성과 예측 정확도 간에 균형을 제어할 수도 있습니다. 깊이를 10 또는 15 이상으로 늘리면 계산에 비용이 매우 많이 들 수 있습니다.
+  `maxNumBins`, `maxDepth`, `maxComplete` 및 `maxSurrogate`와 같은 매개 변수를 조정하여 시간 복잡성과 예측 정확도 간에 균형을 제어할 수도 있습니다. 깊이를 10 또는 15 이상으로 늘리면 계산에 비용이 매우 많이 들 수 있습니다.
 
 + [rxLinMod](/r-server/r-reference/revoscaler/rxlinmod)
 
-    수식의 첫 번째 종속 변수가 요소 변수인 경우 `cube` 인수를 사용하세요.
-    
-    `cube`가 `TRUE`로 설정되면 분할된 역함수를 사용하여 회귀가 수행되고 표준 회귀 계산보다 더 빠르고 더 적은 메모리를 사용할 수 있습니다. 수식에 많은 변수가 있으면 성능이 상당히 향상될 수 있습니다.
+  수식의 첫 번째 종속 변수가 요소 변수인 경우 `cube` 인수를 사용하세요.
+  
+  `cube`가 `TRUE`로 설정되면 분할된 역함수를 사용하여 회귀가 수행되고 표준 회귀 계산보다 더 빠르고 더 적은 메모리를 사용할 수 있습니다. 수식에 많은 변수가 있으면 성능이 상당히 향상될 수 있습니다.
 
 + [rxLogit](/r-server/r-reference/revoscaler/rxlogit)
 
-    첫 번째 종속 변수가 요소 변수인 경우 `cube` 인수를 사용합니다.
-    
-    `cube`가 `TRUE`로 설정되면 알고리즘은 분할된 역함수를 사용하며 더 빠르고 더 적은 메모리를 사용할 수 있습니다. 수식에 많은 변수가 있으면 성능이 상당히 향상될 수 있습니다.
+  첫 번째 종속 변수가 요소 변수인 경우 `cube` 인수를 사용합니다.
+  
+  `cube`가 `TRUE`로 설정되면 알고리즘은 분할된 역함수를 사용하며 더 빠르고 더 적은 메모리를 사용할 수 있습니다. 수식에 많은 변수가 있으면 성능이 상당히 향상될 수 있습니다.
 
-RevoScaleR 최적화에 대한 추가 지침은 다음 문서를 참조하세요.
+RevoScaleR 최적화에 대한 자세한 내용은 다음 문서를 참조하세요.
 
 + 지원 문서: [Performance Tuning Options for rxDForest and rxDTree](https://support.microsoft.com/kb/3104235)(rxDForest 및 rxDTree에 대한 성능 조정 옵션)
 
@@ -171,20 +171,8 @@ RevoScaleR에서 제공하는 컴퓨팅 컨텍스트 및 변환을 사용할 수
 
 + [How to choose a MicrosoftML algorithm](/r-server/r/how-to-choose-microsoftml-algorithms-cheatsheet)(MicrosoftML 알고리즘을 선택하는 방법)
 
-### <a name="operationalize-a-solution-using-microsoft-r-server"></a>Microsoft R Server를 사용하여 솔루션 운영화
+## <a name="next-steps"></a>다음 단계
 
-시나리오에서 저장된 모델을 사용하거나 기계 학습을 애플리케이션에 통합하여 빠른 예측을 수행하는 경우 Microsoft R Server (이전 DeployR)에서 [운영화](/r-server/what-is-operationalization) 기능을 사용할 수 있습니다.
++ R 코드 성능을 향상시키는 데 사용할 수 있는 R 함수는 [R 코드 프로파일링 함수를 사용하여 성능 향상](using-r-code-profiling-functions.md)을 참조하세요.
 
-+ **데이터 과학자**로 [mrsdeploy](/r-server/r-reference/mrsdeploy/mrsdeploy-package) 패키지를 사용하여 R 코드를 다른 컴퓨터와 공유하고 R 분석을 웹, 데스크톱, 모바일 및 대시보드 애플리케이션 내부에 통합할 수 있습니다. [How to publish and manage R web services in R Server](/r-server/operationalize/how-to-deploy-web-service-publish-manage-in-r)(R Server에서 R 웹 서비스를 게시 및 관리하는 방법)
-
-+ **관리자**로 패키지를 관리하고, 웹 노드 및 컴퓨팅 노드를 모니터링하고, R 작업의 보안을 제어하는 방법을 알아봅니다. [How to interact with and consume web services in R](/r-server/operationalize/how-to-consume-web-service-interact-in-r)(R에서 웹 서비스와 상호 작용하고 웹 서비스를 사용하는 방법)
-
-## <a name="articles-in-this-series"></a>이 시리즈의 문서
-
-[R의 성능 튜닝 - 소개](sql-server-r-services-performance-tuning.md)
-
-[R의 성능 조정 - SQL Server 구성](sql-server-configuration-r-services.md)
-
-[R의 성능 조정 - R 코드 및 데이터 최적화](r-and-data-optimization-r-services.md)
-
-[성능 조정 - 사례 연구 결과](performance-case-study-r-services.md)
++ SQL Server에서의 성능 조정에 대한 자세한 내용은 [SQL Server 데이터베이스 엔진 및 Azure SQL Database에 대한 성능 센터](/sql/relational-databases/performance/performance-center-for-sql-server-database-engine-and-azure-sql-database)를 참조하세요.

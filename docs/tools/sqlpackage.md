@@ -6,21 +6,23 @@ ms.prod_service: sql-tools
 ms.technology: tools-other
 ms.topic: conceptual
 ms.assetid: 198198e2-7cf4-4a21-bda4-51b36cb4284b
-author: pensivebrian
-ms.author: broneill
-ms.reviewer: drswkier; sstein
-ms.date: 09/29/2020
-ms.openlocfilehash: c4a7fb02521a20dffa95c45cc8a345c243c4ae0e
-ms.sourcegitcommit: a5398f107599102af7c8cda815d8e5e9a367ce7e
+author: dzsquared
+ms.author: drskwier
+ms.reviewer: maghan; sstein
+ms.date: 11/4/2020
+ms.openlocfilehash: ee78b145965c17ff0a496611c6506d23df1a31a3
+ms.sourcegitcommit: 49ee3d388ddb52ed9cf78d42cff7797ad6d668f2
 ms.translationtype: HT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 10/13/2020
-ms.locfileid: "92005535"
+ms.lasthandoff: 11/09/2020
+ms.locfileid: "94384502"
 ---
 # <a name="sqlpackageexe"></a>SqlPackage.exe
 
-**SqlPackage.exe**는 다음 데이터베이스 개발 작업을 자동화하는 명령줄 유틸리티입니다.  
+**SqlPackage.exe** 는 다음 데이터베이스 개발 작업을 자동화하는 명령줄 유틸리티입니다.  
   
+- [버전](#version): SqlPackage 애플리케이션의 빌드 번호를 반환합니다.  버전 18.6에 추가되었습니다.
+
 - [추출](#extract-parameters-and-properties): 라이브 SQL Server 또는 Azure SQL Database에서 데이터베이스 스냅샷(.dacpac) 파일을 만듭니다.  
   
 - [게시](#publish-parameters-properties-and-sqlcmd-variables): 원본 .dacpac 파일의 스키마와 일치하도록 데이터베이스 스키마를 증분식으로 업데이트합니다. 데이터베이스가 서버에 존재하지 않을 경우 게시 작업을 통해 생성됩니다. 존재하는 경우 기존 데이터베이스가 업데이트됩니다.  
@@ -41,7 +43,7 @@ ms.locfileid: "92005535"
   
 ## <a name="command-line-syntax"></a>명령줄 구문
 
-**SqlPackage.exe**는 명령줄에 지정된 매개 변수, 속성 및 SQLCMD 변수를 사용하여 지정된 작업을 시작합니다.  
+**SqlPackage.exe** 는 명령줄에 지정된 매개 변수, 속성 및 SQLCMD 변수를 사용하여 지정된 작업을 시작합니다.  
   
 ```
 SqlPackage {parameters}{properties}{SQLCMD Variables}  
@@ -69,7 +71,10 @@ sqlpackage.exe /TargetFile:"C:\sqlpackageoutput\output_current_version.dacpac" /
 sqlpackage.exe /Action:Script /SourceFile:"C:\sqlpackageoutput\output_current_version.dacpac" /TargetFile:"C:\sqlpackageoutput\output_target.dacpac" /TargetDatabaseName:"Contoso.Database" /OutputPath:"C:\sqlpackageoutput\output.sql"
  ```
 
-sqlpackage 버전을 표시합니다.
+
+## <a name="version"></a>버전
+
+sqlpackage 버전을 빌드 번호로 표시합니다.  [자동화된 파이프라인](sqlpackage-pipelines.md)뿐만 아니라 대화형 프롬프트에서도 사용할 수 있습니다.
 
 ```
 sqlpackage.exe /Version
@@ -81,7 +86,7 @@ SqlPackage.exe 추출 작업은 SQL Server 또는 Azure SQL Database에서 DACPA
 
 ### <a name="help-for-the-extract-action"></a>Extract 동작에 대한 도움말
 
-|매개 변수|약식|값|설명|
+|매개 변수|약식|값|Description|
 |---|---|---|---|
 |**/Action:**|**/a**|Extract|수행할 작업을 지정합니다. |
 |**/AccessToken:**|**/at**|{string}| 대상 데이터베이스에 연결할 때 사용할 액세스 토큰 기반 인증 액세스 토큰을 지정합니다. |
@@ -132,7 +137,7 @@ SqlPackage.exe 게시 작업은 원본 데이터베이스의 구조와 일치하
 
 ### <a name="help-for-publish-action"></a>Publish 동작에 대한 도움말
 
-|매개 변수|약식|값|설명|
+|매개 변수|약식|값|Description|
 |---|---|---|---|
 |**/Action:**|**/a**|게시|수행할 작업을 지정합니다. |
 |**/AccessToken:**|**/at**|{string}| 대상 데이터베이스에 연결할 때 사용할 액세스 토큰 기반 인증 액세스 토큰을 지정합니다. |
@@ -280,7 +285,7 @@ SqlPackage.exe Export 작업은 SQL Server 또는 Azure SQL Database의 라이�
   
 ### <a name="help-for-export-action"></a>Export 동작에 대한 도움말
 
-|매개 변수|약식|값|설명|
+|매개 변수|약식|값|Description|
 |---|---|---|---|
 |**/Action:**|**/a**|내보내기|수행할 작업을 지정합니다. |
 |**/AccessToken:**|**/at**|{string}| 대상 데이터베이스에 연결할 때 사용할 액세스 토큰 기반 인증 액세스 토큰을 지정합니다. |
@@ -321,7 +326,7 @@ SqlPackage.exe Import 작업은 BACPAC 패키지(.bacpac 파일)의 스키마 �
   
 ### <a name="help-for-command-actions"></a>명령 동작에 대한 도움말
 
-|매개 변수|약식|값|설명|
+|매개 변수|약식|값|Description|
 |---|---|---|---|
 |**/Action:**|**/a**|가져오기|수행할 작업을 지정합니다. |
 |**/AccessToken:**|**/at**|{string}| 대상 데이터베이스에 연결할 때 사용할 액세스 토큰 기반 인증 액세스 토큰을 지정합니다. |
@@ -363,7 +368,7 @@ Import 동작과 관련된 속성:
   
 ### <a name="help-for-deployreport-action"></a>DeployReport 동작에 대한 도움말
 
-|매개 변수|약식|값|설명|
+|매개 변수|약식|값|Description|
 |---|---|---|---|
 |**/Action:**|**/a**|DeployReport|수행할 작업을 지정합니다. |
 |**/AccessToken:**|**/at**|{string}| 대상 데이터베이스에 연결할 때 사용할 액세스 토큰 기반 인증 액세스 토큰을 지정합니다. |
@@ -499,7 +504,7 @@ Import 동작과 관련된 속성:
   
 ### <a name="help-for-driftreport-action"></a>DriftReport 동작에 대한 도움말
 
-|매개 변수|약식|값|설명|
+|매개 변수|약식|값|Description|
 |---|---|---|---|
 |**/Action:**|**/a**|DriftReport|수행할 작업을 지정합니다. |
 |**/AccessToken:**|**/at**|{string}| 대상 데이터베이스에 연결할 때 사용할 액세스 토큰 기반 인증 액세스 토큰을 지정합니다. |
@@ -526,7 +531,7 @@ Import 동작과 관련된 속성:
   
 ### <a name="help-for-the-script-action"></a>Script 동작에 대한 도움말
 
-|매개 변수|약식|값|설명|
+|매개 변수|약식|값|Description|
 |---|---|---|---|
 |**/Action:**|**/a**|스크립트|수행할 작업을 지정합니다. |
 |**/AccessToken:**|**/at**|{string}| 대상 데이터베이스에 연결할 때 사용할 액세스 토큰 기반 인증 액세스 토큰을 지정합니다. |

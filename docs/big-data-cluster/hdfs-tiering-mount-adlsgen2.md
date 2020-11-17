@@ -1,7 +1,7 @@
 ---
 title: HDFS 계층화를 위한 ADLS Gen2 탑재
 titleSuffix: How to mount ADLS Gen2
-description: 이 문서에서는 SQL Server 2019 빅 데이터 클러스터의 HDFS에 외부 Azure Data Lake Storage 파일 시스템을 탑재하도록 HDFS 계층화를 구성하는 방법을 설명합니다.
+description: 이 문서에서는 Azure Data Lake Storage Gen2 데이터 원본을 사용하여 HDFS 계층화를 구성하는 방법의 예제가 나와 있습니다.
 author: nelgson
 ms.author: negust
 ms.reviewer: mikeray
@@ -9,12 +9,12 @@ ms.date: 06/29/2020
 ms.topic: conceptual
 ms.prod: sql
 ms.technology: big-data-cluster
-ms.openlocfilehash: b0206ca193e6c03624c0d40d0c66e7474b00a7a0
-ms.sourcegitcommit: da88320c474c1c9124574f90d549c50ee3387b4c
+ms.openlocfilehash: a4bfb894112f071cc7a628146265ede17b3f0a14
+ms.sourcegitcommit: 36fe62a3ccf34979bfde3e192cfa778505add465
 ms.translationtype: HT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 07/01/2020
-ms.locfileid: "85730649"
+ms.lasthandoff: 11/11/2020
+ms.locfileid: "94521040"
 ---
 # <a name="how-to-mount-adls-gen2-for-hdfs-tiering-in-a-big-data-cluster"></a>빅 데이터 클러스터에 HDFS 계층화를 위한 ADLS Gen2를 탑재하는 방법
 
@@ -43,11 +43,11 @@ ms.locfileid: "85730649"
 
 OAuth 자격 증명을 사용하여 탑재하려면 아래 단계를 수행해야 합니다.
 
-1. [Azure Portal](https://portal.azure.com)로 이동합니다.
+1. [Azure Portal](https://portal.azure.com)로 이동
 1. “Azure Active Directory”로 이동합니다. 이 서비스는 왼쪽 탐색 모음에서 볼 수 있습니다.
 1. 오른쪽 탐색 모음에서 “앱 등록”을 선택하고 새 등록을 만듭니다.
 1. “웹 애플리케이션”을 만들고 마법사를 따릅니다. **여기서 만든 앱의 이름을 기억해 두세요**. 이 이름을 권한 있는 사용자로 ADLS 계정에 추가해야 합니다. 앱을 선택할 때 개요에 표시되는 애플리케이션 클라이언트 ID도 기억해 두세요.
-1. 웹 애플리케이션이 생성되면 “인증서 및 암호”로 이동해서 **새 클라이언트 암호**를 만들고 키 지속 기간을 선택합니다. 암호를 **추가**합니다.
+1. 웹 애플리케이션이 생성되면 “인증서 및 암호”로 이동해서 **새 클라이언트 암호** 를 만들고 키 지속 기간을 선택합니다. 암호를 **추가** 합니다.
 1. 앱 등록 페이지로 돌아가서 맨 위의 “엔드포인트”를 클릭합니다. **“OAuth 토큰 엔드포인트(v2)”** URL을 기록해 둡니다.
 1. 이제 OAuth에 대해 적어 둔 다음 정보를 보유하고 있습니다.
 
@@ -103,20 +103,20 @@ fs.azure.account.key.<your-storage-account-name>.dfs.core.windows.net=<storage-a
 
 이제 액세스 키 또는 OAuth를 사용하여 MOUNT_CREDENTIALS 환경 변수를 설정했으므로 탑재를 시작할 수 있습니다. 다음 단계에서는 빅 데이터 클러스터의 로컬 HDFS 스토리지에 Azure Data Lake의 원격 HDFS 스토리지를 탑재합니다.
 
-1. **kubectl**을 사용하여 빅 데이터 클러스터에서 엔드포인트 **controller-svc-external** 서비스의 IP 주소를 찾습니다. **External-IP**를 찾습니다.
+1. **kubectl** 을 사용하여 빅 데이터 클러스터에서 엔드포인트 **controller-svc-external** 서비스의 IP 주소를 찾습니다. **External-IP** 를 찾습니다.
 
    ```bash
    kubectl get svc controller-svc-external -n <your-big-data-cluster-name>
    ```
 
-1. 클러스터 사용자 이름 및 암호와 함께 컨트롤러 엔드포인트의 외부 IP 주소를 사용하여 **azdata**로 로그인합니다.
+1. 클러스터 사용자 이름 및 암호와 함께 컨트롤러 엔드포인트의 외부 IP 주소를 사용하여 **azdata** 로 로그인합니다.
 
    ```bash
    azdata login -e https://<IP-of-controller-svc-external>:30080
    ```
 1. 환경 변수 MOUNT_CREDENTIALS를 설정합니다(지침을 보려면 위로 스크롤).
 
-1. **azdata bdc hdfs mount create**를 사용하여 Azure에 원격 HDFS 스토리지를 탑재합니다. 다음 명령을 실행하기 전에 자리 표시자 값을 바꿉니다.
+1. **azdata bdc hdfs mount create** 를 사용하여 Azure에 원격 HDFS 스토리지를 탑재합니다. 다음 명령을 실행하기 전에 자리 표시자 값을 바꿉니다.
 
    ```bash
    azdata bdc hdfs mount create --remote-uri abfs://<blob-container-name>@<storage-account-name>.dfs.core.windows.net/ --mount-path /mounts/<mount-name>

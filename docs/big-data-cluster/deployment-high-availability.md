@@ -9,12 +9,12 @@ ms.date: 09/18/2020
 ms.topic: conceptual
 ms.prod: sql
 ms.technology: big-data-cluster
-ms.openlocfilehash: 17aaed99c8adb73b88a2d81482fcdefc7d8f68fd
-ms.sourcegitcommit: c74bb5944994e34b102615b592fdaabe54713047
+ms.openlocfilehash: 08645672c1aa8b7b980b4ffe86b4029a691fa1cf
+ms.sourcegitcommit: 275fd02d60d26f4e66f6fc45a1638c2e7cedede7
 ms.translationtype: HT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 09/22/2020
-ms.locfileid: "90990024"
+ms.lasthandoff: 11/10/2020
+ms.locfileid: "94447109"
 ---
 # <a name="deploy-sql-server-big-data-cluster-with-high-availability"></a>고가용성을 사용하여 SQL Server 빅 데이터 클러스터 배포
 
@@ -211,6 +211,8 @@ SQL Server Master Readable Secondary Replicas  11.11.111.11,11111  sql-server-ma
 - 다른 서버에 생성된 백업에서 TDE 사용 데이터베이스를 복원하려면 SQL Server 인스턴스 마스터와 포함된 AG 마스터에서 모두 [필수 인증서](../relational-databases/security/encryption/move-a-tde-protected-database-to-another-sql-server.md)를 복원해야 합니다. 인증서를 백업하고 복원하는 방법에 대한 예제는 [여기](https://www.sqlshack.com/restoring-transparent-data-encryption-tde-enabled-databases-on-a-different-server/)를 참조하세요.
 - `sp_configure`를 사용하여 서버 구성 설정을 실행하는 것과 같은 특정 작업을 수행하려면 `master` 가용성 그룹이 아니라 SQL Server 인스턴스 `master` 데이터베이스에 연결해야 합니다. 해당 기본 엔드포인트는 사용할 수 없습니다. [지침](#instance-connect)에 따라 엔드포인트를 공개하고, SQL Server 인스턴스에 연결하고, `sp_configure`를 실행합니다. 엔드포인트를 수동으로 공개하여 SQL Server 인스턴스 `master` 데이터베이스에 연결하는 경우에만 SQL 인증을 사용할 수 있습니다.
 - 포함된 msdb 데이터베이스는 가용성 그룹에 포함되어 있고 SQL 에이전트 작업은 두루 복제되지만 일정에 따라서만 주 복제본에서 실행됩니다.
+- 포함된 가용성 그룹에는 복제 기능이 지원되지 않습니다. 포함된 AG의 SQL Server 인스턴스 부분은 인스턴스 수준이나 포함된 AG 수준에서 배포자 또는 게시자로 작동할 수 없습니다.
+- 데이터베이스를 만들 때 파일 그룹 추가는 지원되지 않습니다. 해결 방법으로 먼저 데이터베이스를 만든 다음 ALTER DATABASE 문을 실행하여 파일 그룹을 추가할 수 있습니다.
 - SQL Server 2019 CU2 이전에는 `CREATE DATABASE` 및 `RESTORE DATABASE`(예: `CREATE DATABASE FROM SNAPSHOT`) 이외의 워크플로 결과로 생성된 데이터베이스가 가용성 그룹에 자동으로 추가되지 않았습니다. [인스턴스에 연결](#instance-connect)하고, 데이터베이스를 가용성 그룹에 수동으로 추가합니다.
 
 ## <a name="next-steps"></a>다음 단계
