@@ -2,7 +2,7 @@
 description: 동적 SQL
 title: 동적 SQL | Microsoft Docs
 ms.custom: ''
-ms.date: 06/03/2020
+ms.date: 11/16/2020
 ms.prod: sql
 ms.prod_service: connectivity
 ms.reviewer: ''
@@ -18,12 +18,12 @@ helpviewer_keywords:
 ms.assetid: 0bfb9ab7-9c15-4433-93bc-bad8b6c9d287
 author: David-Engel
 ms.author: v-daenge
-ms.openlocfilehash: de711543748a91015a9aa0d4cb8aadb011744306
-ms.sourcegitcommit: e700497f962e4c2274df16d9e651059b42ff1a10
+ms.openlocfilehash: 86164b1bc5d98475d4e2f0980ce433d33e5d858f
+ms.sourcegitcommit: a2182276ba00c48dc1475b9c7dfa45179d4416dc
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 08/17/2020
-ms.locfileid: "88494584"
+ms.lasthandoff: 11/17/2020
+ms.locfileid: "94704178"
 ---
 # <a name="dynamic-sql"></a>동적 SQL
 정적 SQL은 많은 상황에서 잘 작동 하지만 데이터 액세스를 미리 확인할 수 없는 응용 프로그램 클래스가 있습니다. 예를 들어 스프레드시트를 사용 하 여 스프레드시트에서 데이터를 검색 하기 위해 DBMS로 보내는 쿼리를 입력할 수 있습니다. 스프레드시트 프로그램을 작성할 때 프로그래머에 게이 쿼리의 내용을 명확히 알 수 없습니다.  
@@ -32,7 +32,7 @@ ms.locfileid: "88494584"
   
  동적 SQL 문을 실행 하는 가장 간단한 방법은 EXECUTE 즉각적인 문을 사용 하는 것입니다. 이 문은 컴파일 및 실행을 위해 SQL 문을 DBMS에 전달 합니다.  
   
- EXECUTE 즉각적인 문의 한 가지 단점은 DBMS가 문을 실행할 때마다 SQL 문을 처리 하는 5 단계를 각각 수행 해야 한다는 것입니다. 많은 문이 동적으로 실행 되는 경우이 프로세스와 관련 된 오버 헤드는 매우 중요할 수 있으며, 해당 문이 비슷한 경우에는 불필요 합니다. 이러한 상황을 해결 하기 위해 동적 SQL은 다음 단계를 사용 하 여 준비 된 실행 이라는 최적화 된 형태의 실행을 제공 합니다.  
+ EXECUTE 즉각적인 문의 한 가지 단점은 DBMS가 문을 실행할 때마다 [SQL 문을 처리 하는 5 단계](processing-a-sql-statement.md) 를 각각 수행 해야 한다는 것입니다. 많은 문이 동적으로 실행 되는 경우이 프로세스와 관련 된 오버 헤드는 매우 중요할 수 있으며, 해당 문이 비슷한 경우에는 불필요 합니다. 이러한 상황을 해결 하기 위해 동적 SQL은 다음 단계를 사용 하 여 준비 된 실행 이라는 최적화 된 형태의 실행을 제공 합니다.  
   
 1.  프로그램은 EXECUTE 즉각적인 문과 마찬가지로 SQL 문을 버퍼에 생성 합니다. 호스트 변수 대신 물음표 (?)를 문 텍스트의 임의 위치에 대체 하 여 상수 값이 나중에 제공 된다는 것을 나타낼 수 있습니다. 물음표는 매개 변수 표식으로 호출 됩니다.  
   
