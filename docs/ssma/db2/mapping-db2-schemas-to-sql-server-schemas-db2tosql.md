@@ -10,12 +10,12 @@ ms.topic: conceptual
 ms.assetid: 05ff7bd4-e60b-4f48-a893-bc2346aa9a8a
 author: nahk-ivanov
 ms.author: alexiva
-ms.openlocfilehash: 7b609bfa0b29e289a8b2225d969d131112a8f532
-ms.sourcegitcommit: a41e1f4199785a2b8019a419a1f3dcdc15571044
+ms.openlocfilehash: 9942d2ee78932c3bb8bed2baac0885b68e40049d
+ms.sourcegitcommit: 82b92f73ca32fc28e1948aab70f37f0efdb54e39
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 10/13/2020
-ms.locfileid: "91987449"
+ms.lasthandoff: 11/18/2020
+ms.locfileid: "94869569"
 ---
 # <a name="mapping-db2-schemas-to-sql-server-schemas-db2tosql"></a>SQL Server 스키마에 DB2 스키마 매핑 (DB2ToSQL)
 DB2에서 각 데이터베이스에는 하나 이상의 스키마가 있습니다. 기본적으로 SSMA는 DB2 스키마의 모든 개체를 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 스키마에 대해 라는 데이터베이스로 마이그레이션합니다. 그러나 DB2 스키마와 데이터베이스 간의 매핑을 사용자 지정할 수 있습니다 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] .  
@@ -23,7 +23,7 @@ DB2에서 각 데이터베이스에는 하나 이상의 스키마가 있습니�
 ## <a name="db2-and-sql-server-schemas"></a>DB2 및 SQL Server 스키마  
 DB2 데이터베이스에는 스키마가 포함 되어 있습니다. 인스턴스는 여러 개의 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 데이터베이스를 포함 하며 각 데이터베이스에는 여러 스키마가 있을 수 있습니다.  
   
-스키마의 DB2 개념은 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 데이터베이스의 개념과 스키마 중 하나에 매핑됩니다. 예를 들어 DB2에는 **HR**이라는 이름의 스키마가 있을 수 있습니다. 인스턴스에는 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] **HR**이라는 데이터베이스가 있고 해당 데이터베이스 내에는 스키마가 있을 수 있습니다. 한 스키마는 **dbo** (또는 데이터베이스 소유자) 스키마입니다. 기본적으로 DB2 스키마 **hr** 은 데이터베이스 및 스키마에 매핑됩니다. [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] **dbo**. SSMA는 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 데이터베이스와 스키마의 조합을 스키마로 나타냅니다.  
+스키마의 DB2 개념은 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 데이터베이스의 개념과 스키마 중 하나에 매핑됩니다. 예를 들어 DB2에는 **HR** 이라는 이름의 스키마가 있을 수 있습니다. 인스턴스에는 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] **HR** 이라는 데이터베이스가 있고 해당 데이터베이스 내에는 스키마가 있을 수 있습니다. 한 스키마는 **dbo** (또는 데이터베이스 소유자) 스키마입니다. 기본적으로 DB2 스키마 **hr** 은 데이터베이스 및 스키마에 매핑됩니다. [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] **dbo**. SSMA는 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 데이터베이스와 스키마의 조합을 스키마로 나타냅니다.  
   
 DB2와 스키마 간의 매핑을 수정할 수 있습니다 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] .  
   
@@ -32,7 +32,7 @@ SSMA에서 DB2 스키마를 사용 가능한 스키마에 매핑할 수 있습�
   
 **데이터베이스 및 스키마를 수정 하려면**  
   
-1.  DB2 메타 데이터 탐색기에서 **스키마**를 선택 합니다.  
+1.  DB2 메타 데이터 탐색기에서 **스키마** 를 선택 합니다.  
   
     **스키마 매핑** 탭은 개별 데이터베이스, **스키마** 폴더 또는 개별 스키마를 선택 하는 경우에도 사용할 수 있습니다. **스키마 매핑** 탭의 목록은 선택한 개체에 대해 사용자 지정 됩니다.  
   
@@ -40,9 +40,9 @@ SSMA에서 DB2 스키마를 사용 가능한 스키마에 매핑할 수 있습�
   
     모든 DB2 스키마 목록에 대상 값이 표시 됩니다. 이 대상은 개체와 데이터가 마이그레이션되는 두 부분으로 구성 된 표기법 (*데이터베이스 스키마*)에서 표시 됩니다 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] .  
   
-3.  변경 하려는 매핑이 포함 된 행을 선택 하 고 **수정**을 클릭 합니다.  
+3.  변경 하려는 매핑이 포함 된 행을 선택 하 고 **수정** 을 클릭 합니다.  
   
-    **대상 스키마 선택** 대화 상자에서 사용 가능한 대상 데이터베이스와 스키마를 찾아보거나 두 부분으로 구성 된 표기법 (데이터베이스 스키마)의 텍스트 상자에 데이터베이스 및 스키마 이름을 입력 한 다음 **확인을**클릭 합니다.  
+    **대상 스키마 선택** 대화 상자에서 사용 가능한 대상 데이터베이스와 스키마를 찾아보거나 두 부분으로 구성 된 표기법 (데이터베이스 스키마)의 텍스트 상자에 데이터베이스 및 스키마 이름을 입력 한 다음 **확인을** 클릭 합니다.  
   
 4.  대상은 **스키마 매핑** 탭에서 변경 됩니다.  
   
@@ -63,5 +63,5 @@ DB2 스키마와 스키마 간의 매핑을 사용자 지정 하는 경우 [!INC
 DB2 개체를 개체로 변환 하는 과정을 분석 하려면 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] [ssma (데이터 마이그레이션 보고서)](../sybase/data-migration-report-sybasetosql.md)를 사용할 수 있습니다.  
   
 ## <a name="see-also"></a>참고 항목  
-[SQL Server &#40;DB2eToSQL&#41;에 연결 하는 중 ](../../ssma/db2/connecting-to-sql-server-db2etosql.md)  
+[SQL Server &#40;DB2ToSQL&#41;에 연결 하는 중 ](../../ssma/db2/connecting-to-sql-server-db2tosql.md)  
 [DB2 데이터베이스를 SQL Server &#40;DB2ToSQL&#41;로 마이그레이션 ](../../ssma/db2/migrating-db2-databases-to-sql-server-db2tosql.md)  

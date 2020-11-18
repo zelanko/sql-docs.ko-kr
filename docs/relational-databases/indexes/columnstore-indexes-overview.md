@@ -37,7 +37,7 @@ Columnstore 인덱스는 대규모 데이터 웨어하우징 팩트 테이블을
 -   [실시간 운영 분석을 위한 columnstore 시작](../../relational-databases/indexes/get-started-with-columnstore-for-real-time-operational-analytics.md)  
   
 ## <a name="what-is-a-columnstore-index"></a>columnstore 인덱스란?  
-Columnstore 인덱스는 *columnstore*라는 칼럼 데이터 서식을 사용하여 데이터를 저장, 검색, 관리하는 기술입니다.  
+Columnstore 인덱스는 *columnstore* 라는 칼럼 데이터 서식을 사용하여 데이터를 저장, 검색, 관리하는 기술입니다.  
   
 ### <a name="key-terms-and-concepts"></a>주요 용어 및 개념  
 다음은 columnstore 인덱스와 관련된 주요 용어와 개념입니다.  
@@ -79,7 +79,7 @@ Columnstore 인덱스는 성능과 압축률을 높이기 위해 테이블을 �
   
 ![클러스터형 columnstore 인덱스](../../relational-databases/indexes/media/sql-server-pdw-columnstore-physicalstorage.gif "클러스터형 columnstore 인덱스")  
   
-Columnstore 인덱스는 열 세그먼트의 조각화를 줄이고 성능을 향상하기 위해 삭제된 행에 대한 ID의 btree 목록과 함께 *deltastore*라는 클러스터형 인덱스에 일부 데이터를 임시로 저장할 수 있습니다. deltastore 작업은 백그라운드에서 처리됩니다. 정확한 쿼리 결과를 반환하기 위해 클러스터형 columnstore 인덱스는 columnstore와 deltastore의 쿼리 결과를 모두 결합합니다.  
+Columnstore 인덱스는 열 세그먼트의 조각화를 줄이고 성능을 향상하기 위해 삭제된 행에 대한 ID의 btree 목록과 함께 *deltastore* 라는 클러스터형 인덱스에 일부 데이터를 임시로 저장할 수 있습니다. deltastore 작업은 백그라운드에서 처리됩니다. 정확한 쿼리 결과를 반환하기 위해 클러스터형 columnstore 인덱스는 columnstore와 deltastore의 쿼리 결과를 모두 결합합니다.  
   
 #### <a name="delta-rowgroup"></a>델타 행 그룹
 델타 행 그룹은 columnstore 인덱스에만 사용되는 클러스터형 B-트리 인덱스입니다. 델타 행 그룹은 행 수가 임계값(1,048,576개 행)에 도달한 후에 columnstore로 이동할 때까지 행을 저장하여 columnstore 압축 및 성능을 개선합니다.  

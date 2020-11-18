@@ -10,12 +10,12 @@ ms.topic: conceptual
 ms.assetid: 14d2e655-af7e-4aa5-ba28-0e3d0d025518
 author: nahk-ivanov
 ms.author: alexiva
-ms.openlocfilehash: fbfb89d7b8e78ee43b74eb420eed7a23738932d5
-ms.sourcegitcommit: a41e1f4199785a2b8019a419a1f3dcdc15571044
+ms.openlocfilehash: e31d4b1d31cb186276d8424f8c49450cb4ce9406
+ms.sourcegitcommit: 82b92f73ca32fc28e1948aab70f37f0efdb54e39
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 10/13/2020
-ms.locfileid: "91987604"
+ms.lasthandoff: 11/18/2020
+ms.locfileid: "94869531"
 ---
 # <a name="migrating-db2-databases-to-sql-server-db2tosql"></a>DB2 데이터베이스를 SQL Server로 마이그레이션 (DB2ToSQL)
 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] D b 2 용 SSMA (Migration Assistant)는 DB2 데이터베이스를 또는 Azure SQL Database로 신속 하 게 마이그레이션하는 데 도움이 되는 포괄적인 환경입니다 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] . D b 2 용 SSMA를 사용 하 여 데이터베이스 개체 및 데이터를 검토 하 고, 마이그레이션을 위해 데이터베이스를 평가 하 고, 데이터베이스 개체를 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 또는 Azure SQL Database 마이그레이션하고, 데이터를 또는 Azure SQL Database로 마이그레이션할 수 있습니다 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] . SYS 및 SYSTEM DB2 스키마는 마이그레이션할 수 없습니다.  
@@ -29,7 +29,7 @@ DB2 데이터베이스에서 또는 Azure SQL Database 개체 및 데이터를 �
   
 2.  [DB2 데이터베이스에 연결](./connecting-to-db2-database-db2tosql.md)합니다.  
   
-3.  [SQL Server에 연결 하는 중](./connecting-to-sql-server-db2etosql.md)입니다.  
+3.  [SQL Server에 연결 하는 중](./connecting-to-sql-server-db2tosql.md)입니다.  
   
 4.  [DB2 스키마를 SQL Server 스키마에 매핑합니다](./mapping-db2-schemas-to-sql-server-schemas-db2tosql.md).  
   

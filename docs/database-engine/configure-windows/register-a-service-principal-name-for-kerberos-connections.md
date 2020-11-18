@@ -44,7 +44,7 @@ SELECT auth_scheme FROM sys.dm_exec_connections WHERE session_id = @@spid ;
 ```
 
 > [!TIP]
->  **[!INCLUDE[msCoName](../../includes/msconame-md.md)] SQL Server용 Kerberos 구성 관리자**는 SQL Server에서 Kerberos 관련 연결 문제를 해결하는 데 도움이 되는 진단 도구입니다. 자세한 내용은 [SQL Server용 Microsoft Kerberos 구성 관리자](https://www.microsoft.com/download/details.aspx?id=39046)를 참조하십시오.  
+>  **[!INCLUDE[msCoName](../../includes/msconame-md.md)] SQL Server용 Kerberos 구성 관리자** 는 SQL Server에서 Kerberos 관련 연결 문제를 해결하는 데 도움이 되는 진단 도구입니다. 자세한 내용은 [SQL Server용 Microsoft Kerberos 구성 관리자](https://www.microsoft.com/download/details.aspx?id=39046)를 참조하십시오.  
 
 ##  <a name="the-role-of-the-spn-in-authentication"></a><a name="Role"></a> 인증에서 SPN의 역할  
 
@@ -110,7 +110,7 @@ Windows 인증은 사용자를 SQL Server에 인증하는 데 사용하는 기�
 
 ##  <a name="automatic-spn-registration"></a><a name="Auto"></a> SPN 자동 등록  
 
-[!INCLUDE[ssDEnoversion](../../includes/ssdenoversion-md.md)] 인스턴스가 시작되면 SQL Server에서 SQL Server 서비스 SPN을 등록하려고 합니다. 인스턴스가 중지되면 SQL Server에서 SPN 등록을 취소하려고 합니다. TCP/IP 연결의 경우 SPN은 *MSSQLSvc/\<FQDN>* : *\<tcpport>* 형식으로 등록됩니다. 명명된 인스턴스와 기본 인스턴스는 둘 다 *MSSQLSvc*로 등록됩니다. 인스턴스는 *\<tcpport>* 값에 따라 차별화됩니다.  
+[!INCLUDE[ssDEnoversion](../../includes/ssdenoversion-md.md)] 인스턴스가 시작되면 SQL Server에서 SQL Server 서비스 SPN을 등록하려고 합니다. 인스턴스가 중지되면 SQL Server에서 SPN 등록을 취소하려고 합니다. TCP/IP 연결의 경우 SPN은 *MSSQLSvc/\<FQDN>* : *\<tcpport>* 형식으로 등록됩니다. 명명된 인스턴스와 기본 인스턴스는 둘 다 *MSSQLSvc* 로 등록됩니다. 인스턴스는 *\<tcpport>* 값에 따라 차별화됩니다.  
   
 Kerberos를 지원하는 다른 연결에서 SPN은 명명된 인스턴스의 경우 *MSSQLSvc/\<FQDN>* / *\<instancename>* 형식으로 등록됩니다. 기본 인스턴스는 *MSSQLSvc/\<FQDN>* 형식으로 등록됩니다.  
 
