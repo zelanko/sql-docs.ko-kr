@@ -7,15 +7,14 @@ ms.date: 07/14/2020
 ms.topic: conceptual
 author: garyericson
 ms.author: garye
-ms.reviewer: davidph
 ms.custom: contperfq1, seo-lt-2019
 monikerRange: '>=sql-server-2016||>=sql-server-linux-ver15||=sqlallproducts-allversions'
-ms.openlocfilehash: f51998b722748bdfe51b773e251de88c8cac07a2
-ms.sourcegitcommit: afb02c275b7c79fbd90fac4bfcfd92b00a399019
+ms.openlocfilehash: eb5ab3d1f6408bb63d194b964626bf303ba9e249
+ms.sourcegitcommit: 82b92f73ca32fc28e1948aab70f37f0efdb54e39
 ms.translationtype: HT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 10/12/2020
-ms.locfileid: "91956532"
+ms.lasthandoff: 11/18/2020
+ms.locfileid: "94870016"
 ---
 # <a name="security-architecture-for-the-extensibility-framework-in-sql-server-machine-learning-services"></a>SQL Server Machine Learning Services 확장성 프레임워크의 보안 아키텍처
 
@@ -39,7 +38,7 @@ SQL Server 확장성의 주요 개념 및 구성 요소에 대한 자세한 내�
 
 데이터베이스 로그인 및 역할의 SQL Server 데이터 보안 모델이 외부 스크립트로 확장됩니다. SQL Server 데이터를 사용하거나 SQL Server에서 컴퓨팅 컨텍스트로 실행되는 외부 스크립트를 실행하려면 SQL Server 로그인 또는 Windows 사용자 계정이 필요합니다. 쿼리를 실행할 수 있는 권한이 있는 데이터베이스 사용자는 외부 스크립트에서 동일한 데이터에 액세스할 수 있습니다.
 
-다음과 같은 외부 스크립트 요구 사항에 따라 로그인 또는 사용자 계정에서 여러 수준의 액세스가 필요할 수 있는 *보안 주체*를 식별합니다.
+다음과 같은 외부 스크립트 요구 사항에 따라 로그인 또는 사용자 계정에서 여러 수준의 액세스가 필요할 수 있는 *보안 주체* 를 식별합니다.
 
 + 외부 스크립트가 사용되는 데이터베이스에 액세스할 수 있는 권한
 + 테이블과 같은 보안 개체의 데이터를 읽을 수 있는 권한
@@ -77,7 +76,7 @@ SQL Server를 실행 컨텍스트로 사용하여 외부 스크립트를 실행�
 
 ## <a name="services-used-in-external-processing-launchpad"></a>외부 처리에 사용되는 서비스(실행 패드)
 
-확장성 프레임워크는 SQL Server 설치의 [서비스 목록](../../database-engine/configure-windows/configure-windows-service-accounts-and-permissions.md#Service_Details)에 하나의 새 NT 서비스를 추가합니다. [**SQL Server 실행 패드(MSSSQLSERVER)** ](extensibility-framework.md#launchpad).
+확장성 프레임워크는 SQL Server 설치의 [서비스 목록](../../database-engine/configure-windows/configure-windows-service-accounts-and-permissions.md#Service_Details)에 하나의 새 NT 서비스를 추가합니다. [**SQL Server 실행 패드(MSSSQLSERVER)**](extensibility-framework.md#launchpad).
 
 데이터베이스 엔진은 SQL Server **실행 패드** 서비스를 사용하여 외부 스크립트 세션을 별도의 프로세스로 인스턴스화합니다. 
 해당 프로세스는 낮은 권한 계정으로 실행됩니다. 이 계정은 저장 프로시저 또는 호스트 쿼리 실행에 사용된 사용자 ID, SQL Server, 실행 패드 자체와는 별개입니다. SQL Server의 외부 스크립트 보안 및 격리 모델은 별도의 프로세스에서 낮은 권한 계정으로 스크립트를 실행하는 것을 기반으로 합니다.
@@ -85,7 +84,7 @@ SQL Server를 실행 컨텍스트로 사용하여 외부 스크립트를 실행�
 SQL Server는 위성 프로세스를 시작하는 데 사용되는 권한이 낮은 작업자 계정과 호출 사용자 ID 간의 매핑도 유지 관리합니다. 데이터와 작업을 위해 스크립트나 코드에서 SQL Server를 콜백하는 일부 시나리오에서는 SQL Server가 ID 전송을 원활하게 관리할 수 있습니다. 호출하는 사용자에게 충분한 사용 권한이 있는 경우 SELECT 문 또는 호출 함수와 기타 프로그래밍 개체가 포함된 스크립트는 대개 성공합니다.
 
 > [!NOTE]
-> 기본적으로 [!INCLUDE[rsql_launchpad_md](../../includes/rsql-launchpad-md.md)]는 외부 스크립트를 실행하는 데 필요한 모든 권한으로 프로비저닝된 **NT Service\MSSQLLaunchpad**에서 실행되도록 구성됩니다. 구성 가능한 옵션에 대한 자세한 내용은 [SQL Server 실행 패드 서비스 구성](../security/sql-server-launchpad-service-account.md)을 참조하세요.
+> 기본적으로 [!INCLUDE[rsql_launchpad_md](../../includes/rsql-launchpad-md.md)]는 외부 스크립트를 실행하는 데 필요한 모든 권한으로 프로비저닝된 **NT Service\MSSQLLaunchpad** 에서 실행되도록 구성됩니다. 구성 가능한 옵션에 대한 자세한 내용은 [SQL Server 실행 패드 서비스 구성](../security/sql-server-launchpad-service-account.md)을 참조하세요.
 
 ::: moniker-end
 
@@ -93,7 +92,7 @@ SQL Server는 위성 프로세스를 시작하는 데 사용되는 권한이 낮
 
 ## <a name="services-used-in-external-processing-launchpad"></a>외부 처리에 사용되는 서비스(실행 패드)
 
-확장성 프레임워크는 SQL Server 설치의 [서비스 목록](../../database-engine/configure-windows/configure-windows-service-accounts-and-permissions.md#Service_Details)에 하나의 새 NT 서비스를 추가합니다. [**SQL Server 실행 패드(MSSSQLSERVER)** ](extensibility-framework.md#launchpad).
+확장성 프레임워크는 SQL Server 설치의 [서비스 목록](../../database-engine/configure-windows/configure-windows-service-accounts-and-permissions.md#Service_Details)에 하나의 새 NT 서비스를 추가합니다. [**SQL Server 실행 패드(MSSSQLSERVER)**](extensibility-framework.md#launchpad).
 
 데이터베이스 엔진은 SQL Server **실행 패드** 서비스를 사용하여 외부 스크립트 세션을 별도의 프로세스로 인스턴스화합니다. 
 실행 패드 사용자 ID로 프로세스가 실행되지만, AppContainer 안에 포함되어야 하는 추가 제한 사항이 적용됩니다. SQL Server의 외부 스크립트에 대한 보안 및 격리 모델에서는 기본적으로 별도의 프로세스에서 AppContainer를 통해 스크립트를 실행합니다.
@@ -101,7 +100,7 @@ SQL Server는 위성 프로세스를 시작하는 데 사용되는 권한이 낮
 SQL Server는 위성 프로세스를 시작하는 데 사용되는 권한이 낮은 작업자 계정과 호출 사용자 ID 간의 매핑도 유지 관리합니다. 데이터와 작업을 위해 스크립트나 코드에서 SQL Server를 콜백하는 일부 시나리오에서는 SQL Server가 ID 전송을 원활하게 관리할 수 있습니다. 호출하는 사용자에게 충분한 사용 권한이 있는 경우 SELECT 문 또는 호출 함수와 기타 프로그래밍 개체가 포함된 스크립트는 대개 성공합니다.
 
 > [!NOTE]
-> 기본적으로 [!INCLUDE[rsql_launchpad_md](../../includes/rsql-launchpad-md.md)]는 외부 스크립트를 실행하는 데 필요한 모든 권한으로 프로비저닝된 **NT Service\MSSQLLaunchpad**에서 실행되도록 구성됩니다. 구성 가능한 옵션에 대한 자세한 내용은 [SQL Server 실행 패드 서비스 구성](../security/sql-server-launchpad-service-account.md)을 참조하세요.
+> 기본적으로 [!INCLUDE[rsql_launchpad_md](../../includes/rsql-launchpad-md.md)]는 외부 스크립트를 실행하는 데 필요한 모든 권한으로 프로비저닝된 **NT Service\MSSQLLaunchpad** 에서 실행되도록 구성됩니다. 구성 가능한 옵션에 대한 자세한 내용은 [SQL Server 실행 패드 서비스 구성](../security/sql-server-launchpad-service-account.md)을 참조하세요.
 
 ::: moniker-end
 
@@ -125,21 +124,21 @@ SQL Server는 위성 프로세스를 시작하는 데 사용되는 권한이 낮
 
 **SQLRUserGroup**(SQL Restricted User Group)은 SQL Server 설치 프로그램에 의해 만들어지며 권한이 낮은 로컬 Windows 사용자 계정의 풀을 포함합니다. 외부 프로세스가 필요한 경우 실행 패드는 사용 가능한 작업자 계정을 가져와 프로세스를 실행하는 데 사용합니다. 좀 더 구체적으로, 실행 패드는 사용 가능한 작업자 계정을 활성화하고 호출 사용자 ID에 매핑한 다음, 해당 작업자 계정으로 스크립트를 실행합니다.
 
-+ **SQLRUserGroup**은 특정 인스턴스에 연결됩니다. 기계 학습이 사용되는 각 인스턴스에 대해 별도의 작업자 계정 풀이 필요합니다. 인스턴스 간에 계정을 공유할 수 없습니다.
++ **SQLRUserGroup** 은 특정 인스턴스에 연결됩니다. 기계 학습이 사용되는 각 인스턴스에 대해 별도의 작업자 계정 풀이 필요합니다. 인스턴스 간에 계정을 공유할 수 없습니다.
 
 + 사용자 계정 풀의 크기는 정적이고 기본값은 20으로, 20개의 동시 세션을 지원합니다. 동시에 시작될 수 있는 외부 런타임 세션 수는 이 사용자 계정 풀의 크기에 따라 제한됩니다. 
 
-+ 풀의 작업자 계정 이름은 SQLInstanceName*nn* 형식입니다. 예를 들어 기본 인스턴스에서 **SQLRUserGroup**은 이름이 MSSQLSERVER01에서 MSSQLSERVER20까지인 계정을 포함합니다.
++ 풀의 작업자 계정 이름은 SQLInstanceName *nn* 형식입니다. 예를 들어 기본 인스턴스에서 **SQLRUserGroup** 은 이름이 MSSQLSERVER01에서 MSSQLSERVER20까지인 계정을 포함합니다.
 
 병렬화된 작업은 추가 계정을 사용하지 않습니다. 예를 들어, 사용자가 병렬 처리를 사용하는 채점 작업을 실행하는 경우 모든 스레드에 동일한 작업자 계정이 다시 사용됩니다. 기계 학습을 많이 사용하려는 경우 외부 스크립트를 실행하는 데 사용되는 계정 수를 늘릴 수 있습니다. 자세한 내용은 [SQL Server Machine Learning Services에서 외부 스크립트의 동시 실행 확장](../../machine-learning/administration/scale-concurrent-execution-external-scripts.md)을 참조하세요.
 
 ### <a name="permissions-granted-to-sqlrusergroup"></a>SQLRUserGroup에 부여된 사용 권한
 
-기본적으로 **SQLRUserGroup**의 멤버는 SQL Server **Binn**, **R_SERVICES**, **PYTHON_SERVICES** 디렉터리의 파일에 대한 읽기 및 실행 권한을 갖습니다. 여기에는 SQL Server와 함께 설치된 R 및 Python 배포의 실행 파일, 라이브러리, 기본 제공 데이터 세트에 대한 액세스 권한이 포함됩니다. 
+기본적으로 **SQLRUserGroup** 의 멤버는 SQL Server **Binn**, **R_SERVICES**, **PYTHON_SERVICES** 디렉터리의 파일에 대한 읽기 및 실행 권한을 갖습니다. 여기에는 SQL Server와 함께 설치된 R 및 Python 배포의 실행 파일, 라이브러리, 기본 제공 데이터 세트에 대한 액세스 권한이 포함됩니다. 
 
-SQL Server의 중요한 리소스를 보호하기 위해 필요에 따라 **SQLRUserGroup**에 대한 액세스를 거부하는 ACL(액세스 제어 목록)을 정의할 수 있습니다. 반대로, SQL Server 자체와 별도로 호스트 컴퓨터에 있는 로컬 데이터 리소스에 대한 사용 권한을 부여할 수도 있습니다. 
+SQL Server의 중요한 리소스를 보호하기 위해 필요에 따라 **SQLRUserGroup** 에 대한 액세스를 거부하는 ACL(액세스 제어 목록)을 정의할 수 있습니다. 반대로, SQL Server 자체와 별도로 호스트 컴퓨터에 있는 로컬 데이터 리소스에 대한 사용 권한을 부여할 수도 있습니다. 
 
-설계상 **SQLRUserGroup**에는 데이터베이스 로그인이나 데이터에 대한 사용 권한이 없습니다. 특정 상황에서는, 특히 호출 사용자가 신뢰할 수 있는 Windows ID인 경우 루프백 연결을 허용하는 로그인을 만드는 것이 좋습니다. 이 기능을 [*묵시적 인증*](#implied-authentication)이라고 합니다. 자세한 내용은 [데이터베이스 사용자로 SQLRUserGroup 추가](../../machine-learning/security/create-a-login-for-sqlrusergroup.md)를 참조하세요.
+설계상 **SQLRUserGroup** 에는 데이터베이스 로그인이나 데이터에 대한 사용 권한이 없습니다. 특정 상황에서는, 특히 호출 사용자가 신뢰할 수 있는 Windows ID인 경우 루프백 연결을 허용하는 로그인을 만드는 것이 좋습니다. 이 기능을 [*묵시적 인증*](#implied-authentication)이라고 합니다. 자세한 내용은 [데이터베이스 사용자로 SQLRUserGroup 추가](../../machine-learning/security/create-a-login-for-sqlrusergroup.md)를 참조하세요.
 
 ## <a name="identity-mapping"></a>ID 매핑
 
@@ -159,10 +158,10 @@ SQL Server에서 구현되므로 AppContainer는 내부 메커니즘입니다. �
 
 ## <a name="identity-mapping"></a>ID 매핑
 
-세션이 시작되면 실행 패드는 호출 사용자 ID를 **AppContainer**에 매핑합니다.
+세션이 시작되면 실행 패드는 호출 사용자 ID를 **AppContainer** 에 매핑합니다.
 
 > [!Note]
-> SQL Server 2019 이상에서 **SQLRUserGroup**의 멤버는 여러 작업자 계정이 아닌 단일 SQL Server 실행 패드 서비스 계정 하나뿐입니다.
+> SQL Server 2019 이상에서 **SQLRUserGroup** 의 멤버는 여러 작업자 계정이 아닌 단일 SQL Server 실행 패드 서비스 계정 하나뿐입니다.
 
 ::: moniker-end
 
@@ -196,9 +195,9 @@ print(system("ls -al /var/opt/mssql-extensibility/data/*/*"))
 
 ‘암시적 인증’은 데이터 또는 작업에 대한 루프백 요청에서 권한이 낮은 작업자 계정으로 실행되는 외부 프로세스가 SQL Server에 신뢰할 수 있는 사용자 ID로 제공되는 연결 요청 동작을 설명합니다.  개념적으로 묵시적 인증은 R 또는 Python 스크립트와 같은 외부 프로세스에서 요청이 시작되는 경우 신뢰할 수 있는 연결을 지정하는 SQL Server 연결 문자열의 Windows 인증에 고유합니다. ‘루프백’이라고도 합니다. 
 
-신뢰할 수 있는 연결은 외부 스크립트에서 작업할 수 있지만 추가 구성이 필요합니다. 확장성 아키텍처에서 외부 프로세스는 작업자 계정으로 실행되며, 부모 **SQLRUserGroup**에서 사용 권한을 상속합니다. 연결 문자열에서 `Trusted_Connection=True`를 지정하면 연결 요청에서 작업자 계정의 ID가 제공되지만 SQL Sever에서는 기본적으로 이를 알 수 없습니다.
+신뢰할 수 있는 연결은 외부 스크립트에서 작업할 수 있지만 추가 구성이 필요합니다. 확장성 아키텍처에서 외부 프로세스는 작업자 계정으로 실행되며, 부모 **SQLRUserGroup** 에서 사용 권한을 상속합니다. 연결 문자열에서 `Trusted_Connection=True`를 지정하면 연결 요청에서 작업자 계정의 ID가 제공되지만 SQL Sever에서는 기본적으로 이를 알 수 없습니다.
 
-신뢰할 수 있는 연결이 성공하려면 **SQLRUserGroup**에 대한 로그인을 만들어야 합니다. 그러면 **SQLRUserGroup** 구성원의 신뢰할 수 있는 연결에 SQL Server에 대한 로그인 권한이 부여됩니다. 단계별 지침은 [데이터베이스 로그인에 SQLRUserGroup 추가](../../machine-learning/security/create-a-login-for-sqlrusergroup.md)를 참조하세요.
+신뢰할 수 있는 연결이 성공하려면 **SQLRUserGroup** 에 대한 로그인을 만들어야 합니다. 그러면 **SQLRUserGroup** 구성원의 신뢰할 수 있는 연결에 SQL Server에 대한 로그인 권한이 부여됩니다. 단계별 지침은 [데이터베이스 로그인에 SQLRUserGroup 추가](../../machine-learning/security/create-a-login-for-sqlrusergroup.md)를 참조하세요.
 
 신뢰할 수 있는 연결이 가장 널리 사용되는 연결 요청 구성은 아닙니다. 외부 스크립트에서 연결을 지정할 때는 SQL 로그인 또는 ODBC 데이터 원본에 연결해야 하는 경우 정규화된 사용자 이름과 암호를 사용하는 것이 더 일반적입니다.
 

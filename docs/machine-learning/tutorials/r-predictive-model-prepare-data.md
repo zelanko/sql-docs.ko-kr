@@ -5,18 +5,18 @@ description: 4부로 구성된 이 자습서 시리즈의 2부에서는 R에서 
 ms.prod: sql
 ms.technology: machine-learning
 ms.topic: tutorial
-author: cawrites
-ms.author: chadam
+author: dphansen
+ms.author: davidph
 ms.reviewer: garye, davidph
 ms.date: 05/21/2020
 ms.custom: seo-lt-2019
 monikerRange: '>=sql-server-2016||>=sql-server-linux-ver15||=azuresqldb-mi-current||=sqlallproducts-allversions'
-ms.openlocfilehash: 0be451ea14a6eec98872b3c21b16c5065d02f85f
-ms.sourcegitcommit: 9b41725d6db9957dd7928a3620fe4db41eb51c6e
+ms.openlocfilehash: a4a12d71818ad4b900a7959904c47cb0baad4357
+ms.sourcegitcommit: 82b92f73ca32fc28e1948aab70f37f0efdb54e39
 ms.translationtype: HT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 08/13/2020
-ms.locfileid: "88178736"
+ms.lasthandoff: 11/18/2020
+ms.locfileid: "94870319"
 ---
 # <a name="tutorial-prepare-data-to-train-a-predictive-model-in-r-with-sql-machine-learning"></a>자습서: R에서 SQL 기계 학습을 사용하여 예측 모델을 학습시키기 위한 데이터 준비
 [!INCLUDE [SQL Server 2016 SQL MI](../../includes/applies-to-version/sqlserver2016-asdbmi.md)]
@@ -55,7 +55,7 @@ ms.locfileid: "88178736"
 
 R에서 데이터를 사용하려면 데이터베이스의 데이터를 데이터 프레임(`rentaldata`)에 로드합니다.
 
-RStudio에서 새 RScript 파일을 만든 후 다음 스크립트를 실행합니다. **ServerName**을 해당하는 연결 정보로 바꿉니다.
+RStudio에서 새 RScript 파일을 만든 후 다음 스크립트를 실행합니다. **ServerName** 을 해당하는 연결 정보로 바꿉니다.
 
 ```r
 #Define the connection string to connect to the TutorialDB database
@@ -98,7 +98,7 @@ $ Snow       : num  0 0 0 0 0 0 0 0 0 0 ...
 ## <a name="prepare-the-data"></a>데이터 준비
 
 이 샘플 데이터베이스에서는 대부분의 준비가 이미 수행되었지만 여기서 준비 작업을 하나 더 수행합니다.
-다음 R 스크립트를 사용하고 데이터 형식을 *비율*로 변경하여 세 개의 열을 *범주*로 식별합니다.
+다음 R 스크립트를 사용하고 데이터 형식을 *비율* 로 변경하여 세 개의 열을 *범주* 로 식별합니다.
 
 
 

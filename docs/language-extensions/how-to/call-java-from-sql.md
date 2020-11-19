@@ -5,16 +5,16 @@ description: SQL Server 언어 확장을 사용하여 SQL Server 저장 프로�
 author: dphansen
 ms.author: davidph
 ms.date: 06/25/2020
-ms.topic: conceptual
+ms.topic: how-to
 ms.prod: sql
 ms.technology: language-extensions
 monikerRange: '>=sql-server-ver15||>=sql-server-linux-ver15||=sqlallproducts-allversions'
-ms.openlocfilehash: 901410fb36080d39436a3a908a0ffd9260c5b513
-ms.sourcegitcommit: 346a37242f889d76cd783f55aeed98023c693610
+ms.openlocfilehash: c4d12382cf1e498b33f202bb1b775ba63458a5a5
+ms.sourcegitcommit: 82b92f73ca32fc28e1948aab70f37f0efdb54e39
 ms.translationtype: HT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 10/06/2020
-ms.locfileid: "91765797"
+ms.lasthandoff: 11/18/2020
+ms.locfileid: "94870193"
 ---
 # <a name="how-to-call-the-java-runtime-in-sql-server-language-extensions"></a>SQL Server 언어 확장에서 Java 런타임을 호출하는 방법
 [!INCLUDE [SQL Server 2019 and later](../../includes/applies-to-version/sqlserver2019.md)]
@@ -46,9 +46,9 @@ SQL Server에서 Java 클래스를 호출하는 방법에는 두 가지가 있�
 
 * 호출하는 Java 메서드는 저장 프로시저의 **script** 매개 변수에 제공해야 합니다.
 
-* 클래스가 패키지에 속하면 **packageName**를 제공해야 합니다.
+* 클래스가 패키지에 속하면 **packageName** 를 제공해야 합니다.
 
-* **params**는 Java 클래스에 매개 변수를 전달하는 데 사용합니다. 인수가 필요한 메서드 호출은 지원되지 않습니다. 따라서 매개 변수는 인수 값을 메서드에 전달하는 유일한 방법입니다. 
+* **params** 는 Java 클래스에 매개 변수를 전달하는 데 사용합니다. 인수가 필요한 메서드 호출은 지원되지 않습니다. 따라서 매개 변수는 인수 값을 메서드에 전달하는 유일한 방법입니다. 
 
 > [!NOTE]
 > 이 릴리스 정보에서는 SQL Server 2019 릴리스 후보 1에서 Java와 관련하여 지원되는 작업과 지원되지 않는 작업을 설명합니다.
@@ -59,7 +59,7 @@ SQL Server에서 Java 클래스를 호출하는 방법에는 두 가지가 있�
 [sp_execute_external_script](../../relational-databases/system-stored-procedures/sp-execute-external-script-transact-sql.md) 시스템 저장 프로시저는 Java 런타임을 호출하는 데 사용되는 인터페이스입니다. 다음 예제에서는 Java 확장을 사용하는 `sp_execute_external_script`, 그리고 경로, 스크립트 및 사용자 지정 코드를 지정하는 매개 변수를 보여 줍니다.
 
 > [!NOTE]
-> 호출할 메서드는 정의할 필요가 없습니다. 기본적으로 **execute**라는 메서드가 호출됩니다. 즉, [SQL Server Java용 확장성 SDK](extensibility-sdk-java-sql-server.md)를 따르고 Java 클래스에서 execute 메서드를 구현해야 합니다.
+> 호출할 메서드는 정의할 필요가 없습니다. 기본적으로 **execute** 라는 메서드가 호출됩니다. 즉, [SQL Server Java용 확장성 SDK](extensibility-sdk-java-sql-server.md)를 따르고 Java 클래스에서 execute 메서드를 구현해야 합니다.
 
 ```sql
 DECLARE @param1 int
@@ -84,7 +84,7 @@ Java 클래스 또는 클래스를 컴파일하고 Java Classpath에서 jar 파�
 
 2. 시스템 환경 변수 등록
 
-    시스템 환경 변수를 만들고 클래스를 포함하는 jar 파일의 경로를 제공할 수 있습니다. **CLASSPATH**라는 시스템 환경 변수를 만듭니다.
+    시스템 환경 변수를 만들고 클래스를 포함하는 jar 파일의 경로를 제공할 수 있습니다. **CLASSPATH** 라는 시스템 환경 변수를 만듭니다.
 
 <a name="external-library"></a>
 

@@ -5,16 +5,16 @@ ms.prod: sql
 ms.technology: machine-learning-services
 ms.date: 09/20/2020
 ms.topic: how-to
-author: cawrites
-ms.author: chadam
+author: dphansen
+ms.author: davidph
 ms.custom: seo-lt-2019
 monikerRange: '>=sql-server-ver15||>=sql-server-linux-ver15||=sqlallproducts-allversions'
-ms.openlocfilehash: 8f3ee552c2e58fa295d4a0094430bfca4ef3dcac
-ms.sourcegitcommit: 43b92518c5848489d03c68505bd9905f8686cbc0
+ms.openlocfilehash: 2b058fe7aa723eddcdcf97158d19a053bf2b062b
+ms.sourcegitcommit: 82b92f73ca32fc28e1948aab70f37f0efdb54e39
 ms.translationtype: HT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 10/17/2020
-ms.locfileid: "92155083"
+ms.lasthandoff: 11/18/2020
+ms.locfileid: "94870055"
 ---
 # <a name="install-an-r-custom-runtime-for-sql-server"></a>SQL Server용 R 사용자 지정 런타임 설치
 
@@ -50,7 +50,7 @@ R 사용자 지정 런타임을 설치하기 전에 다음을 설치합니다.
 
 1. SQL Server 2019용 설치 마법사를 시작합니다.
 
-1. **설치** 탭에서 **새 SQL Server 독립 실행형 설치 또는 기존 설치에 기능 추가**를 선택합니다.
+1. **설치** 탭에서 **새 SQL Server 독립 실행형 설치 또는 기존 설치에 기능 추가** 를 선택합니다.
 
     ![SQL Server 2019 CU3 이상 설치](../install/media/2019setup-installation-page-mlsvcs.png)
 
@@ -62,11 +62,11 @@ R 사용자 지정 런타임을 설치하기 전에 다음을 설치합니다.
 
     - **Machine Learning Services 및 언어 확장**
 
-       **Machine Learning Services 및 언어 확장**을 선택합니다. R을 선택할 필요가 없습니다.
+       **Machine Learning Services 및 언어 확장** 을 선택합니다. R을 선택할 필요가 없습니다.
 
     ![SQL Server 2019 CU3 이상 설치 기능](../install/media/sql-feature-selection.png)
 
-1. **설치 준비 완료** 페이지에서 이러한 선택 사항이 포함되어 있는지 확인하고 **설치**를 선택합니다.
+1. **설치 준비 완료** 페이지에서 이러한 선택 사항이 포함되어 있는지 확인하고 **설치** 를 선택합니다.
 
     + 데이터베이스 엔진 서비스
     + Machine Learning Services 및 언어 확장
@@ -78,7 +78,7 @@ R 사용자 지정 런타임을 설치하기 전에 다음을 설치합니다.
 > [!NOTE]
 >SQL Machine Learning Services의 경우 SQL Server 인스턴스의 **R_SERVICES** 폴더에 R이 이미 설치되어 있습니다. 예: "C:\Program Files\Microsoft SQL Server\MSSQL15.MSSQLSERVER\R_SERVICES". 이 경로를 R_HOME으로 계속 사용하려면 Rcpp 설치의 다음 단계로 건너뜁니다. 그렇지 않고 R의 다른 런타임을 사용하려면 여기에서 설치를 계속 진행합니다.
 
-[R(3.3 이상)](https://cran.r-project.org/bin/windows/base/)을 설치하고 설치된 경로를 기록해 둡니다. 이 경로가 **R_HOME**입니다. 예를 들어 여기서는 R_HOME이 "C:\Program Files\R\R-4.0.2"입니다.
+[R(3.3 이상)](https://cran.r-project.org/bin/windows/base/)을 설치하고 설치된 경로를 기록해 둡니다. 이 경로가 **R_HOME** 입니다. 예를 들어 여기서는 R_HOME이 "C:\Program Files\R\R-4.0.2"입니다.
 
 ![사용자 지정 R 설치](../install/media/custom-r-installation.png)
 
@@ -103,21 +103,21 @@ install.packages("Rcpp", lib="%R_HOME%/library");
 
 ## <a name="update-the-system-environment-variables"></a>시스템 환경 변수 업데이트
 
-1. **R_HOME**을 시스템 환경 변수로 추가하거나 수정합니다.
-    + Windows 검색 상자에 "환경"을 입력하고 **시스템 환경 변수 편집**을 선택합니다.
-    + **고급** 탭에서 **환경 변수**를 선택합니다.
+1. **R_HOME** 을 시스템 환경 변수로 추가하거나 수정합니다.
+    + Windows 검색 상자에 "환경"을 입력하고 **시스템 환경 변수 편집** 을 선택합니다.
+    + **고급** 탭에서 **환경 변수** 를 선택합니다.
 
-    + **시스템 변수**에서 **새로 만들기**를 선택하여 R_HOME을 만듭니다.
-    환경 변수를 수정하려면 **편집**을 선택하여 환경 변수를 변경합니다. 사용자 지정 R 설치 경로를 가리키도록 값을 수정합니다.
+    + **시스템 변수** 에서 **새로 만들기** 를 선택하여 R_HOME을 만듭니다.
+    환경 변수를 수정하려면 **편집** 을 선택하여 환경 변수를 변경합니다. 사용자 지정 R 설치 경로를 가리키도록 값을 수정합니다.
 
     ![R_HOME 시스템 환경 변수를 만듭니다.](../install/media/sys-env-r-home.png)
 
 2. **PATH** 환경 변수를 업데이트합니다.
-    **R.dll** 경로를 시스템 **PATH** 환경 변수에 추가합니다. **PATH**를 선택한 다음, **편집**을 선택하고 `%R_HOME%\bin\x64`을 경로 목록에 추가합니다.
+    **R.dll** 경로를 시스템 **PATH** 환경 변수에 추가합니다. **PATH** 를 선택한 다음, **편집** 을 선택하고 `%R_HOME%\bin\x64`을 경로 목록에 추가합니다.
 
     ![PATH 시스템 환경 변수에 추가합니다.](../install/media/sys-env-path-r.png)
 
-3. **확인**을 선택하여 나머지 창을 닫습니다.
+3. **확인** 을 선택하여 나머지 창을 닫습니다.
 
     또는 *관리자 권한* 명령 프롬프트에서 이러한 환경 변수를 설정하려면 다음 명령을 실행합니다. 사용자 지정 R 설치 경로를 사용해야 합니다.
 
@@ -129,7 +129,7 @@ setx /m PATH "path\to\installation\of\R\bin\x64;%PATH%"
 ## <a name="grant-access-to-the-custom-r-installation-folder"></a>사용자 지정 R 설치 폴더에 대한 액세스 권한 부여
 
 > [!NOTE]
->기본 위치 **C:\Program Files\R\R-version**에 R을 설치한 경우 이 단계를 건너뛰어도 됩니다.
+>기본 위치 **C:\Program Files\R\R-version** 에 R을 설치한 경우 이 단계를 건너뛰어도 됩니다.
 
 새 *관리자 권한* 명령 프롬프트에서 **icacls** 명령을 실행하여 **SQL Server 실행 패드 서비스 사용자 이름** 및 SID **S-1-15-2-1**(**ALL APPLICATION PACKAGES**)에 대한 READ 및 EXECUTE 액세스 권한을 부여합니다. 실행 패드 서비스 사용자 이름은 `NT Service\MSSQLLAUNCHPAD$INSTANCENAME` 형식이며, 여기서 `INSTANCENAME`은 SQL Server의 인스턴스 이름입니다.
 
@@ -137,12 +137,12 @@ setx /m PATH "path\to\installation\of\R\bin\x64;%PATH%"
 
 `MSSQLLAUNCHPAD`(`MSSQLLAUNCHPAD$INSTANCENAME`)에 인스턴스 이름을 추가합니다. 이 예에서 `INSTANCENAME`은 기본 인스턴스 `MSSQLSERVER`입니다.
 
-1. **SQL Server 실행 패드 서비스 사용자 이름**에 대한 권한 부여
+1. **SQL Server 실행 패드 서비스 사용자 이름** 에 대한 권한 부여
 
     ```cmd
     icacls "%R_HOME%" /grant "NT Service\MSSQLLAUNCHPAD$MSSQLSERVER":(OI)(CI)RX /T
     ```
-2. **SID S-1-15-2-1**에 대한 권한 부여
+2. **SID S-1-15-2-1** 에 대한 권한 부여
 
     ```cmd
     icacls "%R_HOME%" /grant *S-1-15-2-1:(OI)(CI)RX /T
@@ -172,7 +172,7 @@ net start MSSQLLAUNCHPAD$MSSQLSERVER
 다운로드한 언어 확장 Zip 파일(R-lang-extension.zip)의 위치를 반영하도록 이 명령문의 경로를 수정합니다.
 
 > [!NOTE]
->**R**은 예약어입니다. 외부 언어에는 다른 이름을 사용하세요(예: "myR").
+>**R** 은 예약어입니다. 외부 언어에는 다른 이름을 사용하세요(예: "myR").
 
 ```sql
 CREATE EXTERNAL LANGUAGE [myR]
@@ -233,7 +233,7 @@ sudo zypper install mssql-server-extensibility
 ## <a name="install-r"></a>R 설치
 
 >[!NOTE]
->SQL Machine Learning Services의 경우 이미 `/opt/microsoft/ropen/3.5.2/lib64/R`에 R이 설치되어 있습니다. 이 경로를 R_HOME으로 계속 사용하려면 **Rcpp 설치**의 다음 단계로 건너뜁니다. 
+>SQL Machine Learning Services의 경우 이미 `/opt/microsoft/ropen/3.5.2/lib64/R`에 R이 설치되어 있습니다. 이 경로를 R_HOME으로 계속 사용하려면 **Rcpp 설치** 의 다음 단계로 건너뜁니다. 
 
 R의 다른 런타임을 사용하려면 먼저 새 버전을 설치하기 전에 `microsoft-r-open-mro`를 제거해야 합니다. Ubuntu 예제:
 
@@ -241,7 +241,7 @@ R의 다른 런타임을 사용하려면 먼저 새 버전을 설치하기 전�
 sudo apt remove microsoft-r-open-mro-3.5.2
 ```
 
-[지침](https://cran.r-project.org/bin/linux/)에 따라 해당하는 linux 플랫폼용 R(3.3 이상) 설치를 완료합니다. 기본적으로 R은 **/usr/lib/R**에 설치됩니다. 이 경로가 **R_HOME**입니다. 다른 위치에 R을 설치하는 경우 해당 경로를 R_HOME으로 기록해 둡니다.
+[지침](https://cran.r-project.org/bin/linux/)에 따라 해당하는 linux 플랫폼용 R(3.3 이상) 설치를 완료합니다. 기본적으로 R은 **/usr/lib/R** 에 설치됩니다. 이 경로가 **R_HOME** 입니다. 다른 위치에 R을 설치하는 경우 해당 경로를 R_HOME으로 기록해 둡니다.
 
 Ubuntu에 대한 지침 예제입니다. 아래의 리포지토리 URL을 사용하는 R 버전에 맞게 변경합니다.
 
@@ -265,7 +265,7 @@ sudo apt-get -y install r-base-core
 
 다음 지침에서 ${R_HOME}은 R 설치 경로입니다. 
 
-+ ${R_HOME}/bin에서 R 이진을 찾습니다. 기본적으로 **/usr/lib/R/bin**에 있습니다.
++ ${R_HOME}/bin에서 R 이진을 찾습니다. 기본적으로 **/usr/lib/R/bin** 에 있습니다.
 
 + R 시작
 
@@ -282,7 +282,7 @@ sudo apt-get -y install r-base-core
 ## <a name="using-a-custom-installation-of-r"></a>R의 사용자 지정 설치 사용
 
 > [!NOTE]
->기본 위치 **/usr/lib/R**에 R을 설치한 경우 이 섹션을 건너뛰어도 됩니다.
+>기본 위치 **/usr/lib/R** 에 R을 설치한 경우 이 섹션을 건너뛰어도 됩니다.
 
 ### <a name="update-the-environment-variables"></a>환경 변수 업데이트
 
@@ -301,9 +301,9 @@ sudo apt-get -y install r-base-core
 
     + 저장하고 닫습니다.
 
-2. **libR.so**를 로드할 수 있는지 확인합니다.
+2. **libR.so** 를 로드할 수 있는지 확인합니다.
 
-    + **/etc/ld.so.conf.d**에 custom-r.conf 파일을 만듭니다.
+    + **/etc/ld.so.conf.d** 에 custom-r.conf 파일을 만듭니다.
 
     ```bash
     sudo vi /etc/ld.so.conf.d/custom-r.conf
@@ -317,7 +317,7 @@ sudo apt-get -y install r-base-core
 
     + 새 파일을 저장하고 닫습니다.
 
-    + 다음 명령을 실행하고 모든 종속 라이브러리를 찾을 수 있는지 확인하여 `ldconfig`를 실행하고 **libR.so**를 로드할 수 있는지 확인합니다.
+    + 다음 명령을 실행하고 모든 종속 라이브러리를 찾을 수 있는지 확인하여 `ldconfig`를 실행하고 **libR.so** 를 로드할 수 있는지 확인합니다.
 
     ```bash
     sudo ldconfig
@@ -335,7 +335,7 @@ sudo /opt/mssql/bin/mssql-conf set extensibility.datadirectories /path/to/instal
 ### <a name="restart-mssql-launchpadd-service"></a>mssql-launchpadd 서비스 다시 시작
 
 > [!NOTE]
->기본 위치 **/usr/lib/R**에 R을 설치한 경우 이 단계를 건너뛰어도 됩니다.
+>기본 위치 **/usr/lib/R** 에 R을 설치한 경우 이 단계를 건너뛰어도 됩니다.
 
 ```bash
 sudo systemctl restart mssql-launchpadd
@@ -352,7 +352,7 @@ sudo systemctl restart mssql-launchpadd
 
 
 > [!NOTE]
->**R**은 예약어입니다. 외부 언어에는 다른 이름을 사용하세요(예: "myR").
+>**R** 은 예약어입니다. 외부 언어에는 다른 이름을 사용하세요(예: "myR").
 
 ```sql
 CREATE EXTERNAL LANGUAGE [myR]

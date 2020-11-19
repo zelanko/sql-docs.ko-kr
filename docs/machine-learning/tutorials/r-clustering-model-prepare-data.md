@@ -5,18 +5,18 @@ description: 4부로 구성된 이 자습서 시리즈의 2부에서는 SQL 기�
 ms.prod: sql
 ms.technology: machine-learning
 ms.topic: tutorial
-author: cawrites
-ms.author: chadam
+author: dphansen
+ms.author: davidph
 ms.reviewer: garye, davidph
 ms.date: 05/21/2020
 ms.custom: seo-lt-2019
 monikerRange: '>=sql-server-2016||>=sql-server-linux-ver15||=azuresqldb-mi-current||=sqlallproducts-allversions'
-ms.openlocfilehash: 794ef80656a23f36d7dc5bd99ddfd8f2662478bd
-ms.sourcegitcommit: 9b41725d6db9957dd7928a3620fe4db41eb51c6e
+ms.openlocfilehash: 1c6bf16d51d0180b56007f237001d01cedfecf8d
+ms.sourcegitcommit: 82b92f73ca32fc28e1948aab70f37f0efdb54e39
 ms.translationtype: HT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 08/13/2020
-ms.locfileid: "88178750"
+ms.lasthandoff: 11/18/2020
+ms.locfileid: "94870285"
 ---
 # <a name="tutorial-prepare-data-to-perform-clustering-in-r-with-sql-machine-learning"></a>자습서: R에서 SQL 기계 학습을 사용하여 클러스터링을 수행하기 위한 데이터 준비
 [!INCLUDE [SQL Server 2016 SQL MI](../../includes/applies-to-version/sqlserver2016-asdbmi.md)]
@@ -60,7 +60,7 @@ SQL 쿼리에서 다음 기준에 따라 고객을 분류합니다.
 * **monetaryRatio** = 반품 금액 비율(구입한 금액 대비 반품된 항목의 총 금액)
 * **frequency** = 반품 빈도
 
-**connStr** 함수에서 **ServerName**을 해당하는 연결 정보로 바꿉니다.
+**connStr** 함수에서 **ServerName** 을 해당하는 연결 정보로 바꿉니다.
 
 ```r
 # Define the connection string to connect to the tpcxbb_1gb database

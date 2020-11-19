@@ -7,14 +7,13 @@ ms.date: 06/13/2019
 ms.topic: how-to
 author: garyericson
 ms.author: garye
-ms.reviewer: davidph
 monikerRange: =sql-server-2016||=sql-server-2017||=sqlallproducts-allversions
-ms.openlocfilehash: 19fe9aaaa29f4b9d3e4454aa131e0ed6c261b557
-ms.sourcegitcommit: 9b41725d6db9957dd7928a3620fe4db41eb51c6e
+ms.openlocfilehash: 1b3c857d5ba86fa1cb10097cf91ee5d591b67f94
+ms.sourcegitcommit: 82b92f73ca32fc28e1948aab70f37f0efdb54e39
 ms.translationtype: HT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 08/13/2020
-ms.locfileid: "88178930"
+ms.lasthandoff: 11/18/2020
+ms.locfileid: "94869931"
 ---
 # <a name="enable-or-disable-remote-package-management-for-sql-server"></a>SQL Server용 원격 패키지 관리 사용 또는 사용 안 함
 [!INCLUDE [SQL Server 2016 and 2017 only](../../includes/applies-to-version/sqlserver2016-2017-only.md)]
@@ -25,7 +24,7 @@ ms.locfileid: "88178930"
 
 ## <a name="overview-of-process-and-tools"></a>프로세스 및 도구 개요
 
-SQL Server에서 패키지 관리를 사용하거나 사용하지 않도록 설정하려면 **RevoScaleR** 패키지에 포함되어 있는 명령줄 유틸리티 **RegisterRExt.exe**를 사용합니다.
+SQL Server에서 패키지 관리를 사용하거나 사용하지 않도록 설정하려면 **RevoScaleR** 패키지에 포함되어 있는 명령줄 유틸리티 **RegisterRExt.exe** 를 사용합니다.
 
 이 기능을 [사용하도록 설정](#bkmk_enable)하는 프로세스는 두 단계이며 데이터베이스 관리자가 필요합니다. 즉, SQL Server 인스턴스에서 패키지 관리를 사용하도록 설정하고(SQL Server 인스턴스당 한 번) SQL 데이터베이스에서 패키지 관리를 사용하도록 설정합니다(SQL Server 데이터베이스당 한 번).
 
@@ -57,7 +56,7 @@ SQL Server에서 패키지 관리를 사용하거나 사용하지 않도록 설�
 
 4. 패키지를 설치해야 하는 각 데이터베이스에 대해이 명령을 반복합니다.
 
-5. 새 역할이 성공적으로 만들어졌는지 확인하려면 SQL Server Management Studio에서 데이터베이스를 클릭하고 **보안**을 확장한 다음 **데이터베이스 역할**을 확장합니다.
+5. 새 역할이 성공적으로 만들어졌는지 확인하려면 SQL Server Management Studio에서 데이터베이스를 클릭하고 **보안** 을 확장한 다음 **데이터베이스 역할** 을 확장합니다.
 
     다음과 같이 sys.database_principals에 대한 쿼리를 실행할 수도 있습니다.
 

@@ -7,14 +7,13 @@ ms.date: 01/21/2020
 ms.topic: how-to
 author: garyericson
 ms.author: garye
-ms.reviewer: davidph
 monikerRange: =sql-server-2017||=sqlallproducts-allversions
-ms.openlocfilehash: 8b2e61640c03af160985d9e65262eb3da600c3c2
-ms.sourcegitcommit: afb02c275b7c79fbd90fac4bfcfd92b00a399019
+ms.openlocfilehash: 67d5a323cfdbdb7eb765430ba264ff0bde2074f5
+ms.sourcegitcommit: 82b92f73ca32fc28e1948aab70f37f0efdb54e39
 ms.translationtype: HT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 10/12/2020
-ms.locfileid: "91956694"
+ms.lasthandoff: 11/18/2020
+ms.locfileid: "94870481"
 ---
 # <a name="install-packages-with-python-tools-on-sql-server"></a>SQL Server에서 Python 도구를 사용하여 패키지 설치
 [!INCLUDE [SQL Server 2017 only](../../includes/applies-to-version/sqlserver2017-only.md)]
@@ -83,7 +82,7 @@ cd "C:\Program Files\Microsoft SQL Server\MSSQL14.MSSQLSERVER\PYTHON_SERVICES"
 **pip** 설치 프로그램을 사용하여 새 패키지를 설치합니다. `pip.exe` 폴더의 `Scripts` 하위 폴더에서 `PYTHON_SERVICES`를 찾을 수 있습니다. SQL Server 설치에서는 `Scripts` 하위 폴더를 시스템 경로에 추가하지 않으므로 전체 경로를 지정하거나 Windows의 PATH 변수에 Scripts 폴더를 추가할 수 있습니다.
 
 > [!NOTE]
-> Visual Studio 2017 또는 Python 확장이 포함된 Visual Studio 2015를 사용하는 경우 `pip install`Python 환경**창에서**을 실행할 수 있습니다. **패키지**를 클릭하고 텍스트 상자에 설치할 패키지의 이름 또는 위치를 입력합니다. `pip install`은 입력할 필요가 없습니다. 자동으로 채워집니다.
+> Visual Studio 2017 또는 Python 확장이 포함된 Visual Studio 2015를 사용하는 경우 `pip install`Python 환경 **창에서** 을 실행할 수 있습니다. **패키지** 를 클릭하고 텍스트 상자에 설치할 패키지의 이름 또는 위치를 입력합니다. `pip install`은 입력할 필요가 없습니다. 자동으로 채워집니다.
 
 + 컴퓨터가 인터넷에 연결되어 있는 경우 패키지 이름을 입력합니다.
 

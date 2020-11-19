@@ -5,18 +5,18 @@ description: 4부로 구성된 이 자습서 시리즈의 3부에서는 R에서 
 ms.prod: sql
 ms.technology: machine-learning
 ms.topic: tutorial
-author: cawrites
-ms.author: chadam
+author: dphansen
+ms.author: davidph
 ms.reviewer: garye, davidph
 ms.date: 05/21/2020
 ms.custom: seo-lt-2019
 monikerRange: '>=sql-server-2016||>=sql-server-linux-ver15||=azuresqldb-mi-current||=sqlallproducts-allversions'
-ms.openlocfilehash: 5d56b3cb50c268a2af74ec4bfacebf8049a4518d
-ms.sourcegitcommit: 9b41725d6db9957dd7928a3620fe4db41eb51c6e
+ms.openlocfilehash: 62c7a271a7caf3afa588a48c0ac54ef86a38f785
+ms.sourcegitcommit: 82b92f73ca32fc28e1948aab70f37f0efdb54e39
 ms.translationtype: HT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 08/13/2020
-ms.locfileid: "88178460"
+ms.lasthandoff: 11/18/2020
+ms.locfileid: "94870343"
 ---
 # <a name="tutorial-build-a-clustering-model-in-r-with-sql-machine-learning"></a>자습서: R에서 SQL 기계 학습을 사용하여 클러스터링 모델 빌드
 [!INCLUDE [SQL Server 2016 SQL MI](../../includes/applies-to-version/sqlserver2016-asdbmi.md)]
@@ -72,7 +72,7 @@ plot(1:20, wss, type = "b", xlab = "Number of Clusters", ylab = "Within groups s
 
 ![Elbow 그래프](./media/elbow-graph.png)
 
-그래프에 따르면 *k = 4*가 적합한 값으로 보입니다. 이 *k* 값은 고객을 4개 클러스터로 그룹화합니다.
+그래프에 따르면 *k = 4* 가 적합한 값으로 보입니다. 이 *k* 값은 고객을 4개 클러스터로 그룹화합니다.
 
 ## <a name="perform-clustering"></a>클러스터링 수행
 

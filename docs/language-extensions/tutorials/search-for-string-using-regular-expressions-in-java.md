@@ -4,16 +4,16 @@ description: 이 자습서에서는 SQL Server 언어 확장을 사용하고 정
 author: dphansen
 ms.author: davidph
 ms.date: 11/05/2019
-ms.topic: conceptual
+ms.topic: tutorial
 ms.prod: sql
 ms.technology: language-extensions
 monikerRange: '>=sql-server-ver15||>=sql-server-linux-ver15||=sqlallproducts-allversions'
-ms.openlocfilehash: bc69f01a3cc05f1f1b128ac7ed9fd99d84c7e757
-ms.sourcegitcommit: 43b92518c5848489d03c68505bd9905f8686cbc0
+ms.openlocfilehash: 21d981c75881d0d971b0f27757015792237f12e3
+ms.sourcegitcommit: 82b92f73ca32fc28e1948aab70f37f0efdb54e39
 ms.translationtype: HT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 10/17/2020
-ms.locfileid: "92155045"
+ms.lasthandoff: 11/18/2020
+ms.locfileid: "94870147"
 ---
 # <a name="tutorial-search-for-a-string-using-regular-expressions-regex-in-java"></a>자습서: Java에서 regex(정규식)를 사용하여 문자열 검색
 [!INCLUDE [SQL Server 2019 and later](../../includes/applies-to-version/sqlserver2019.md)]
@@ -34,7 +34,7 @@ ms.locfileid: "92155045"
 
 + [Microsoft SQL Server용 Microsoft Java 확장성 SDK](../how-to/extensibility-sdk-java-sql-server.md)의 **mssql-java-lang-extension.jar** 파일.
 
-이 자습서에서는 **javac**를 사용하는 명령줄 컴파일이면 충분합니다.
+이 자습서에서는 **javac** 를 사용하는 명령줄 컴파일이면 충분합니다.
 
 ## <a name="create-sample-data"></a>샘플 데이터 만들기
 
@@ -62,7 +62,7 @@ GO
 
 ## <a name="create-the-main-class"></a>기본 클래스 만들기
 
-이 단계에서는 **RegexSample.java**라는 클래스 파일을 만들고 다음 Java 코드를 해당 파일에 복사합니다.
+이 단계에서는 **RegexSample.java** 라는 클래스 파일을 만들고 다음 Java 코드를 해당 파일에 복사합니다.
 
 이 기본 클래스가 SDK를 가져옵니다. 즉, 이 클래스는 1단계에서 다운로드한 jar 파일을 검색할 수 있어야 합니다.
 
@@ -170,12 +170,12 @@ public class RegexSample extends AbstractSqlServerExtensionExecutor {
 
 ## <a name="compile-and-create-a-jar-file"></a>.jar 파일 컴파일 및 만들기
 
-클래스 및 종속성을 `.jar` 파일에 패키지합니다. 대부분의 Java IDE(예: Eclipse 또는 IntelliJ)는 프로젝트를 빌드하거나 컴파일할 때 `.jar` 파일 생성을 지원합니다. `.jar` 파일의 이름을 **regex.jar**로 지정합니다.
+클래스 및 종속성을 `.jar` 파일에 패키지합니다. 대부분의 Java IDE(예: Eclipse 또는 IntelliJ)는 프로젝트를 빌드하거나 컴파일할 때 `.jar` 파일 생성을 지원합니다. `.jar` 파일의 이름을 **regex.jar** 로 지정합니다.
 
 Java IDE를 사용하지 않는 경우 `.jar` 파일을 수동으로 만들 수 있습니다. 자세한 내용은 [클래스 파일에서 Java jar 파일을 만드는 방법](../how-to/create-a-java-jar-file-from-class-files.md)을 참조하세요.
 
 > [!NOTE]
-> 이 자습서에서는 패키지를 사용합니다. 클래스 맨 위의 `package pkg;` 라인은 컴파일된 코드가 **pkg**라는 하위 폴더에 저장되도록 합니다. IDE를 사용하는 경우 컴파일된 코드가 자동으로 이 폴더에 저장됩니다. **javac**를 사용하여 수동으로 클래스를 컴파일하는 경우 컴파일된 코드를 **pkg** 폴더에 넣어야 합니다.
+> 이 자습서에서는 패키지를 사용합니다. 클래스 맨 위의 `package pkg;` 라인은 컴파일된 코드가 **pkg** 라는 하위 폴더에 저장되도록 합니다. IDE를 사용하는 경우 컴파일된 코드가 자동으로 이 폴더에 저장됩니다. **javac** 를 사용하여 수동으로 클래스를 컴파일하는 경우 컴파일된 코드를 **pkg** 폴더에 넣어야 합니다.
 
 ## <a name="create-external-language"></a>외부 언어 만들기
 
@@ -187,7 +187,7 @@ Windows를 사용하는 경우 다음 단계를 수행하여 Java용 외부 언�
 
 1. 확장을 포함하는 .zip 파일을 만듭니다.
 
-    Windows에서 SQL Server 설정의 일부로 Java 확장 **.zip** 파일이 다음 위치에 설치됩니다. `[SQL Server install path]\MSSQL\Binn\java-lang-extension.zip`. 이 zip 파일에는 **javaextension.dll**이 포함되어 있습니다.
+    Windows에서 SQL Server 설정의 일부로 Java 확장 **.zip** 파일이 다음 위치에 설치됩니다. `[SQL Server install path]\MSSQL\Binn\java-lang-extension.zip`. 이 zip 파일에는 **javaextension.dll** 이 포함되어 있습니다.
 
 2. .zip 파일에서 외부 언어 Java를 만듭니다.
 
@@ -220,11 +220,11 @@ Java 코드를 실행하려면 사용자에게 해당 언어에서 외부 스크
 
 ## <a name="create-external-libraries"></a>외부 라이브러리 만들기
 
-[외부 라이브러리 만들기](../../t-sql/statements/create-external-library-transact-sql.md)를 사용하여 `.jar` 파일용 외부 라이브러리를 만듭니다. SQL Server는 `.jar` 파일에 액세스할 수 있으며, **Classpath**에 대한 특별한 권한을 설정할 필요가 없습니다.
+[외부 라이브러리 만들기](../../t-sql/statements/create-external-library-transact-sql.md)를 사용하여 `.jar` 파일용 외부 라이브러리를 만듭니다. SQL Server는 `.jar` 파일에 액세스할 수 있으며, **Classpath** 에 대한 특별한 권한을 설정할 필요가 없습니다.
 
 이 샘플에서는 두 개의 외부 라이브러리를 만듭니다. 하나는 SDK용이고 다른 하나는 RegEx Java 코드용입니다.
 
-1. SDK jar 파일 **mssql-java-lang-extension.jar**는 Windows 및 Linux 모두에서 SQL Server 2019의 일부로 설치됩니다.
+1. SDK jar 파일 **mssql-java-lang-extension.jar** 는 Windows 및 Linux 모두에서 SQL Server 2019의 일부로 설치됩니다.
 
     + Windows 기본 설치 경로: **[인스턴스 설치 홈 디렉터리]\MSSQL\Binn\mssql-java-lang-extension.jar**
 
@@ -267,14 +267,14 @@ Java 코드를 실행하려면 사용자에게 해당 언어에서 외부 스크
 
 전체 트리에는 루트 부모에서 마지막 하위 폴더까지 권한이 있어야 합니다.
 
-1. 폴더(`C:\myJavaCode`)를 마우스 오른쪽 단추로 클릭하고 **속성** > **보안**을 선택합니다.
-2. **편집**을 클릭합니다.
-3. **추가**를 클릭합니다.
-4. **사용자, 컴퓨터, 서비스 계정 또는 그룹 선택**에서
-   1. **개체 형식**을 클릭하고 *기본 제공 보안 원칙* 및 *그룹*이 선택되어 있는지 확인합니다.
-   2. **위치**를 클릭하여 목록의 맨 위에 있는 로컬 컴퓨터 이름을 선택합니다.
-5. **SQLRUserGroup**을 입력하고 이름을 확인한 다음 확인을 클릭하여 그룹을 추가합니다.
-6. **ALL APPLICATION PACKAGES**를 입력하고 이름을 확인한 다음 확인을 클릭하여 추가합니다. 
+1. 폴더(`C:\myJavaCode`)를 마우스 오른쪽 단추로 클릭하고 **속성** > **보안** 을 선택합니다.
+2. **편집** 을 클릭합니다.
+3. **추가** 를 클릭합니다.
+4. **사용자, 컴퓨터, 서비스 계정 또는 그룹 선택** 에서
+   1. **개체 형식** 을 클릭하고 *기본 제공 보안 원칙* 및 *그룹* 이 선택되어 있는지 확인합니다.
+   2. **위치** 를 클릭하여 목록의 맨 위에 있는 로컬 컴퓨터 이름을 선택합니다.
+5. **SQLRUserGroup** 을 입력하고 이름을 확인한 다음 확인을 클릭하여 그룹을 추가합니다.
+6. **ALL APPLICATION PACKAGES** 를 입력하고 이름을 확인한 다음 확인을 클릭하여 추가합니다. 
     이름이 확인되지 않으면 위치 단계부터 다시 시작합니다. SID는 컴퓨터에 대해 로컬입니다.
 
 두 보안 ID가 폴더 및 **pkg** 하위 폴더에 대한 **읽기 및 실행** 권한이 있어야 합니다.
@@ -283,12 +283,12 @@ Java 코드를 실행하려면 사용자에게 해당 언어에서 외부 스크
 
 ## <a name="call-the-java-class"></a>Java 클래스 호출
 
-`sp_execute_external_script`를 호출하여 SQL Server에서 Java 코드를 호출하는 저장 프로시저를 만듭니다. **script** 매개 변수에서 호출할 `package.class`를 정의합니다. 아래 코드에서 클래스는 **pkg**라는 패키지와 **RegexSample.java**라는 클래스 파일에 속합니다.
+`sp_execute_external_script`를 호출하여 SQL Server에서 Java 코드를 호출하는 저장 프로시저를 만듭니다. **script** 매개 변수에서 호출할 `package.class`를 정의합니다. 아래 코드에서 클래스는 **pkg** 라는 패키지와 **RegexSample.java** 라는 클래스 파일에 속합니다.
 
 > [!NOTE]
 > 코드는 호출할 메서드를 정의하지 않습니다. 기본적으로 **execute** 메서드가 호출됩니다. 즉, SQL Server에서 클래스를 호출할 수 있으려면 SDK 인터페이스를 따르고 Java 클래스에서 execute 메서드를 구현해야 합니다.
 
-저장 프로시저는 입력 쿼리(입력 데이터 세트) 및 정규식을 사용하고 지정된 정규식을 충족하는 행을 반환합니다. 텍스트에 **Java** 또는 **java**라는 단어가 포함되어 있는지 확인하는 정규식 `[Jj]ava`가 사용됩니다.
+저장 프로시저는 입력 쿼리(입력 데이터 세트) 및 정규식을 사용하고 지정된 정규식을 충족하는 행을 반환합니다. 텍스트에 **Java** 또는 **java** 라는 단어가 포함되어 있는지 확인하는 정규식 `[Jj]ava`가 사용됩니다.
 
 ```sql
 CREATE OR ALTER PROCEDURE [dbo].[java_regex] @expr nvarchar(200), @query nvarchar(400)
@@ -321,7 +321,7 @@ GO
 
 + 클래스를 컴파일할 때 **pkg** 하위 폴더는 세 클래스 모두에 대해 컴파일된 코드를 포함해야 합니다.
 
-+ 외부 라이브러리를 사용하지 않는 경우에는 **root**에서 **pkg** 하위 폴더까지 *각* 폴더에 대한 권한을 확인하여 외부 프로세스를 실행하는 보안 ID에 코드 읽기 및 실행 권한이 있는지 확인합니다.
++ 외부 라이브러리를 사용하지 않는 경우에는 **root** 에서 **pkg** 하위 폴더까지 *각* 폴더에 대한 권한을 확인하여 외부 프로세스를 실행하는 보안 ID에 코드 읽기 및 실행 권한이 있는지 확인합니다.
 
 ## <a name="next-steps"></a>다음 단계
 

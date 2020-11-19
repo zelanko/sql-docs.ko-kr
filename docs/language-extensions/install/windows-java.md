@@ -5,16 +5,16 @@ description: Windows에 SQL Server Java 언어 확장을 설치하는 방법을 
 author: dphansen
 ms.author: davidph
 ms.date: 11/11/2020
-ms.topic: conceptual
+ms.topic: how-to
 ms.prod: sql
 ms.technology: language-extensions
 monikerRange: '>=sql-server-ver15||=sqlallproducts-allversions'
-ms.openlocfilehash: 82c2f522b4de59322919d103902824874a33f9f5
-ms.sourcegitcommit: 4545b502e3cae7136411fd9a7c15450315665f38
+ms.openlocfilehash: 70c6110f74a08d29f96fafee10f4eca8f9556cba
+ms.sourcegitcommit: 82b92f73ca32fc28e1948aab70f37f0efdb54e39
 ms.translationtype: HT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 11/12/2020
-ms.locfileid: "94550015"
+ms.lasthandoff: 11/18/2020
+ms.locfileid: "94870207"
 ---
 # <a name="install-sql-server-java-language-extension-on-windows"></a>Windows에 SQL Server Java 언어 확장 설치
 

@@ -7,14 +7,13 @@ ms.date: 11/20/2019
 ms.topic: how-to
 author: garyericson
 ms.author: garye
-ms.reviewer: davidph
 monikerRange: =sql-server-2017||=sqlallproducts-allversions
-ms.openlocfilehash: 00ead49bdc0aa14304b3c95f0bee51329f6ad163
-ms.sourcegitcommit: afb02c275b7c79fbd90fac4bfcfd92b00a399019
+ms.openlocfilehash: b525a2cd2a5450aec3df9a7d3157bc4aff05735f
+ms.sourcegitcommit: 82b92f73ca32fc28e1948aab70f37f0efdb54e39
 ms.translationtype: HT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 10/12/2020
-ms.locfileid: "91956664"
+ms.lasthandoff: 11/18/2020
+ms.locfileid: "94870121"
 ---
 # <a name="use-t-sql-create-external-library-to-install-r-packages-on-sql-server"></a>T-SQL(CREATE EXTERNAL LIBRARY)을 사용하여 SQL Server에 R 패키지 설치
 [!INCLUDE [SQL Server 2017 only](../../includes/applies-to-version/sqlserver2017-only.md)]
@@ -27,7 +26,7 @@ ms.locfileid: "91956664"
 
 + 모든 종속성은 이름 및 버전으로 식별되고 zip 파일에 포함되어야 합니다. 다운스트림 패키지 종속성을 포함하여 필요한 패키지를 사용할 수 없는 경우 문이 실패합니다. 
 
-+ **db_owner**이거나 데이터베이스 역할에서 CREATE EXTERNAL LIBRARY 권한이 있어야 합니다. 자세한 내용은 [CREATE EXTERNAL LIBRARY](../../t-sql/statements/create-external-library-transact-sql.md)를 참조하세요.
++ **db_owner** 이거나 데이터베이스 역할에서 CREATE EXTERNAL LIBRARY 권한이 있어야 합니다. 자세한 내용은 [CREATE EXTERNAL LIBRARY](../../t-sql/statements/create-external-library-transact-sql.md)를 참조하세요.
 
 ## <a name="download-packages-in-archive-format"></a>보관 형식으로 패키지 다운로드
 

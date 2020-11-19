@@ -8,26 +8,25 @@ ms.date: 11/20/2019
 ms.topic: how-to
 author: garyericson
 ms.author: garye
-ms.reviewer: davidph
 ms.custom: seo-lt-2019
 monikerRange: '>=sql-server-2016||>=sql-server-linux-ver15||=azuresqldb-mi-current||=sqlallproducts-allversions'
-ms.openlocfilehash: f792898232017b0573813b7fb73e6f783e6e3936
-ms.sourcegitcommit: afb02c275b7c79fbd90fac4bfcfd92b00a399019
+ms.openlocfilehash: 8a23b12f1cd42a1c6f67a09708481134d8d893d4
+ms.sourcegitcommit: 82b92f73ca32fc28e1948aab70f37f0efdb54e39
 ms.translationtype: HT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 10/12/2020
-ms.locfileid: "91956732"
+ms.lasthandoff: 11/18/2020
+ms.locfileid: "94870471"
 ---
 # <a name="create-a-local-r-package-repository-using-minicran"></a>miniCRAN을 사용하여 로컬 R 패키지 리포지토리 만들기
 [!INCLUDE [SQL Server 2016 SQL MI](../../includes/applies-to-version/sqlserver2016-asdbmi.md)]
 
-이 문서에서는 [miniCRAN](https://cran.r-project.org/web/packages/miniCRAN/index.html)을 사용하여 오프라인으로 R 패키지를 설치하고 패키지 및 종속성의 로컬 리포지토리를 만드는 방법을 설명합니다. **miniCRAN**은 패키지 및 종속성을 식별하여 단일 폴더에 다운로드합니다. 이것을 다른 컴퓨터에 복사하여 오프라인으로 R 패키지를 설치할 수 있습니다.
+이 문서에서는 [miniCRAN](https://cran.r-project.org/web/packages/miniCRAN/index.html)을 사용하여 오프라인으로 R 패키지를 설치하고 패키지 및 종속성의 로컬 리포지토리를 만드는 방법을 설명합니다. **miniCRAN** 은 패키지 및 종속성을 식별하여 단일 폴더에 다운로드합니다. 이것을 다른 컴퓨터에 복사하여 오프라인으로 R 패키지를 설치할 수 있습니다.
 
-하나 이상의 패키지를 지정할 수 있으며, **miniCRAN**은 이러한 패키지에 대한 종속성 트리를 재귀적으로 읽습니다. 그런 다음, 나열된 패키지와 CRAN 또는 유사한 리포지토리의 해당 종속성만 다운로드합니다.
+하나 이상의 패키지를 지정할 수 있으며, **miniCRAN** 은 이러한 패키지에 대한 종속성 트리를 재귀적으로 읽습니다. 그런 다음, 나열된 패키지와 CRAN 또는 유사한 리포지토리의 해당 종속성만 다운로드합니다.
 
-여기까지 완료되면 **miniCRAN**은 선택한 패키지와 모든 필수 종속성으로 구성된 내부적으로 일관적인 리포지토리를 만듭니다. 이 로컬 리포지토리를 서버로 이동하고, 인터넷에 연결하지 않고 패키지를 계속 설치할 수 있습니다.
+여기까지 완료되면 **miniCRAN** 은 선택한 패키지와 모든 필수 종속성으로 구성된 내부적으로 일관적인 리포지토리를 만듭니다. 이 로컬 리포지토리를 서버로 이동하고, 인터넷에 연결하지 않고 패키지를 계속 설치할 수 있습니다.
 
-숙련된 R 사용자는 다운로드한 패키지의 DESCRIPTION 파일에서 종속 패키지 목록을 검색하는 경우가 자주 있습니다. 그러나 **가져오기**에 나열된 패키지에 두 번째 수준의 종속성이 있을 가능성도 있습니다. 이러한 이유로 필수 패키지의 전체 컬렉션을 어셈블하는 데 **miniCRAN**을 사용할 것을 권장합니다.
+숙련된 R 사용자는 다운로드한 패키지의 DESCRIPTION 파일에서 종속 패키지 목록을 검색하는 경우가 자주 있습니다. 그러나 **가져오기** 에 나열된 패키지에 두 번째 수준의 종속성이 있을 가능성도 있습니다. 이러한 이유로 필수 패키지의 전체 컬렉션을 어셈블하는 데 **miniCRAN** 을 사용할 것을 권장합니다.
 
 ## <a name="why-create-a-local-repository"></a>로컬 리포지토리를 만드는 이유
 
@@ -43,7 +42,7 @@ ms.locfileid: "91956732"
 
 ## <a name="install-minicran"></a>miniCRAN 설치
 
-**miniCRAN** 패키지 자체는 18개의 다른 CRAN 패키지에 종속되어 있으며, 그 중 하나인 **RCurl**은 **curl-devel** 패키지에 시스템이 종속되어 있습니다. 마찬가지로, **XML** 패키지는 **libxml2-devel**에 종속되어 있습니다. 종속성을 해결하려면 처음에는 인터넷에 완전히 액세스할 수 있는 머신에서 로컬 리포지토리를 빌드하는 것이 좋습니다.
+**miniCRAN** 패키지 자체는 18개의 다른 CRAN 패키지에 종속되어 있으며, 그 중 하나인 **RCurl** 은 **curl-devel** 패키지에 시스템이 종속되어 있습니다. 마찬가지로, **XML** 패키지는 **libxml2-devel** 에 종속되어 있습니다. 종속성을 해결하려면 처음에는 인터넷에 완전히 액세스할 수 있는 머신에서 로컬 리포지토리를 빌드하는 것이 좋습니다.
 
 기본 R, R 도구 및 인터넷 연결을 사용하는 컴퓨터에서 다음 명령을 실행합니다. 이 컴퓨터는 SQL Server 컴퓨터가 아닌 것으로 가정합니다. 다음 명령은 **miniCRAN** 패키지와 **igraph** 패키지를 설치합니다. 이 예제에서는 패키지가 이미 설치되어 있는지 여부를 확인하지만, `if` 문을 무시하고 패키지를 직접 설치할 수 있습니다.
 
@@ -73,9 +72,9 @@ local_repo <- "C:/miniCRANZooPackages"
 
 ## <a name="add-packages-to-the-local-repo"></a>로컬 리포지토리에 패키지 추가
 
-**miniCRAN**을 설치하고 로드한 후에는 다운로드할 추가 패키지를 지정하는 목록을 만듭니다.
+**miniCRAN** 을 설치하고 로드한 후에는 다운로드할 추가 패키지를 지정하는 목록을 만듭니다.
 
-이 초기 목록에는 종속성을 추가하지 **마세요**. **miniCRAN**에서 사용하는 **igraph** 패키지는 종속성 목록을 자동으로 생성합니다. 생성된 종속성 그래프를 사용하는 방법에 대한 자세한 내용은 [miniCRAN을 사용하여 패키지 종속성을 식별하는 방법](https://cran.r-project.org/web/packages/miniCRAN/vignettes/miniCRAN-dependency-graph.html)을 참조하세요.
+이 초기 목록에는 종속성을 추가하지 **마세요**. **miniCRAN** 에서 사용하는 **igraph** 패키지는 종속성 목록을 자동으로 생성합니다. 생성된 종속성 그래프를 사용하는 방법에 대한 자세한 내용은 [miniCRAN을 사용하여 패키지 종속성을 식별하는 방법](https://cran.r-project.org/web/packages/miniCRAN/vignettes/miniCRAN-dependency-graph.html)을 참조하세요.
 
 1. 대상 패키지 "zoo" 및 "forecast"를 변수에 추가합니다.
 
@@ -115,7 +114,7 @@ pdb[, c("Package", "Version", "License")]
 
 ::: moniker range=">sql-server-2017||>=sql-server-linux-ver15||=azuresqldb-mi-current||=sqlallproducts-allversions"
 > [!NOTE]
-> 패키지는 **sqlmlutils**를 사용하여 설치하는 것이 좋습니다. [sqlmlutils를 사용하여 새 R 패키지 설치](install-additional-r-packages-on-sql-server.md)를 참조하세요.
+> 패키지는 **sqlmlutils** 를 사용하여 설치하는 것이 좋습니다. [sqlmlutils를 사용하여 새 R 패키지 설치](install-additional-r-packages-on-sql-server.md)를 참조하세요.
 ::: moniker-end
 
 1. miniCRAN 리포지토리가 포함된 폴더 전체를, 패키지를 설치할 서버에 복사합니다. 일반적으로 이 폴더의 구조는 다음과 같습니다. 
@@ -124,7 +123,7 @@ pdb[, c("Package", "Version", "License")]
 
    이 절차에서는 루트 드라이브의 폴더인 것으로 가정합니다.
 
-2. 인스턴스와 연결된 R 도구를 엽니다(예를 들어 Rgui.exe를 사용할 수 있음). 마우스 오른쪽 단추를 클릭하고 **관리자 권한으로 실행**을 선택하여 도구에서 시스템을 업데이트할 수 있도록 허용합니다.
+2. 인스턴스와 연결된 R 도구를 엽니다(예를 들어 Rgui.exe를 사용할 수 있음). 마우스 오른쪽 단추를 클릭하고 **관리자 권한으로 실행** 을 선택하여 도구에서 시스템을 업데이트할 수 있도록 허용합니다.
 
    ::: moniker range="=sql-server-2016||=sqlallproducts-allversions"
    - 예를 들어 RGUI의 기본 파일 위치는 `C:\Program Files\Microsoft SQL Server\MSSQL13.MSSQLSERVER\R_SERVICES\bin\x64`입니다.

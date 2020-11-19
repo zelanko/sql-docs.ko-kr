@@ -37,7 +37,7 @@
 - name: SQL Server에 연결
   href: connect-to-sql-server-db2tosql.md
 - name: SQL Server에 연결
-  href: connecting-to-sql-server-db2etosql.md
+  href: connecting-to-sql-server-db2tosql.md
 - name: 평가 보고서
   href: assessment-report-db2tosql.md
 - name: DB2에 연결

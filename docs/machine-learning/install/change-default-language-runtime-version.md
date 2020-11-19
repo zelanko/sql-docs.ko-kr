@@ -8,14 +8,13 @@ ms.date: 08/14/2020
 ms.topic: how-to
 author: garyericson
 ms.author: garye
-ms.reviewer: davidph
 monikerRange: =sql-server-2016||=sql-server-2017||=sqlallproducts-allversions
-ms.openlocfilehash: d730ead0a11c240284ecb9a902a90eaedc5b1bb6
-ms.sourcegitcommit: 5f658b286f56001b055a8898d97e74906516dc99
+ms.openlocfilehash: 457d728bd0e4abb5c2cf70063c0330924104c482
+ms.sourcegitcommit: 82b92f73ca32fc28e1948aab70f37f0efdb54e39
 ms.translationtype: HT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 09/11/2020
-ms.locfileid: "90009367"
+ms.lasthandoff: 11/18/2020
+ms.locfileid: "94869985"
 ---
 # <a name="change-the-default-r-or-python-language-runtime-version"></a>기본 R 또는 Python 언어 런타임 버전 변경
 
@@ -58,9 +57,9 @@ R 3.5를 포함하는 CU를 설치하는 경우 새 `R_SERVICES` 폴더는 다�
 *&lt;SQL instance path&gt;* \R_SERVICES.n.n\library\RevoScaleR\rxLibs\x64\RegisterRext.exe
 
 > [!Note]
-> 이 문서에서 설명하는 기능은 SQL CU에 포함된 **RegisterRext.exe**의 복사본으로만 수행할 수 있습니다. 원래 SQL 설치와 함께 제공된 복사본은 사용하지 마세요.
+> 이 문서에서 설명하는 기능은 SQL CU에 포함된 **RegisterRext.exe** 의 복사본으로만 수행할 수 있습니다. 원래 SQL 설치와 함께 제공된 복사본은 사용하지 마세요.
 
-R 런타임 버전을 변경하려면 다음 명령줄 인수를 **RegisterRext.exe**에 전달합니다.
+R 런타임 버전을 변경하려면 다음 명령줄 인수를 **RegisterRext.exe** 에 전달합니다.
 
 - `/configure` - 필수. 기본 R 버전을 구성하는 것임을 지정합니다.
 
@@ -68,7 +67,7 @@ R 런타임 버전을 변경하려면 다음 명령줄 인수를 **RegisterRext.
 
 - `/rhome:`*&lt;path to the R_SERVICES[n.n] folder&gt;* - 선택 사항. 기본 R 버전으로 설정하려는 런타임 버전 폴더의 경로입니다.
 
-  /rhome을 지정하지 않으면 구성된 경로는 **RegisterRext.exe**가 있는 경로입니다.
+  /rhome을 지정하지 않으면 구성된 경로는 **RegisterRext.exe** 가 있는 경로입니다.
 
 ### <a name="examples"></a>예
 
@@ -76,7 +75,7 @@ SQL Server 2016 및 2017에서 R 런타임 버전을 변경하는 방법에 대�
 
 #### <a name="change-r-runtime-version-in-sql-server-2016"></a>SQL Server 2016에서 R 런타임 버전 변경
 
-예를 들어 SQL Server 2016에서 **R 3.5**를 인스턴스 MSSQLSERVER01에 대한 기본 버전 R로 구성하려면 다음을 수행합니다.
+예를 들어 SQL Server 2016에서 **R 3.5** 를 인스턴스 MSSQLSERVER01에 대한 기본 버전 R로 구성하려면 다음을 수행합니다.
 
 ```cmd
 cd "C:\Program Files\Microsoft SQL Server\MSSQL13.MSSQLSERVER01\R_SERVICES.3.5\library\RevoScaleR\rxLibs\x64"
@@ -86,7 +85,7 @@ cd "C:\Program Files\Microsoft SQL Server\MSSQL13.MSSQLSERVER01\R_SERVICES.3.5\l
 
 #### <a name="change-r-runtime-version-in-sql-server-2017"></a>SQL Server 2017에서 R 런타임 버전 변경
 
-예를 들어 SQL Server 2017에서 **R 3.5**를 인스턴스 MSSQLSERVER01에 대한 기본 버전 R로 구성하려면 다음을 수행합니다.
+예를 들어 SQL Server 2017에서 **R 3.5** 를 인스턴스 MSSQLSERVER01에 대한 기본 버전 R로 구성하려면 다음을 수행합니다.
 
 ```cmd
 cd "C:\Program Files\Microsoft SQL Server\MSSQL14.MSSQLSERVER01\R_SERVICES.3.5\library\RevoScaleR\rxLibs\x64"
@@ -94,7 +93,7 @@ cd "C:\Program Files\Microsoft SQL Server\MSSQL14.MSSQLSERVER01\R_SERVICES.3.5\l
 .\RegisterRext.exe /configure /rhome:"C:\Program Files\Microsoft SQL Server\MSSQL14.MSSQLSERVER01\R_SERVICES.3.5" /instance:MSSQLSERVER01
 ```
 
-이 예제에서는 **RegisterRext.exe**가 있는 폴더와 동일한 폴더를 지정하기 때문에 `/rhome` 인수를 포함할 필요가 없습니다.
+이 예제에서는 **RegisterRext.exe** 가 있는 폴더와 동일한 폴더를 지정하기 때문에 `/rhome` 인수를 포함할 필요가 없습니다.
 
 ## <a name="change-python-runtime-version"></a>Python 런타임 버전 변경
 
@@ -109,9 +108,9 @@ SQL Server 2017에 CU22 이상을 설치한 경우 SQL 인스턴스에 여러 �
 *&lt;SQL instance path&gt;* `\PYTHON_SERVICES.n.n\Lib\site-packages\revoscalepy\rxLibs\RegisterRExt.exe`
 
 > [!Note]
-> 이 문서에서 설명하는 기능은 SQL CU에 포함된 **RegisterRExt.exe**의 복사본으로만 수행할 수 있습니다. 원래 SQL 설치와 함께 제공된 복사본은 사용하지 마세요.
+> 이 문서에서 설명하는 기능은 SQL CU에 포함된 **RegisterRExt.exe** 의 복사본으로만 수행할 수 있습니다. 원래 SQL 설치와 함께 제공된 복사본은 사용하지 마세요.
 
-Python 런타임 버전을 변경하려면 다음 명령줄 인수를 **RegisterRext.exe**에 전달합니다.
+Python 런타임 버전을 변경하려면 다음 명령줄 인수를 **RegisterRext.exe** 에 전달합니다.
 
 - `/configure` - 필수. 기본 Python 버전을 구성하는 것임을 지정합니다.
 
@@ -121,11 +120,11 @@ Python 런타임 버전을 변경하려면 다음 명령줄 인수를 **Register
 
 - `/pythonhome:`*&lt;path to the PYTHON_SERVICES[n.n] folder&gt;* - 선택 사항. 기본 Python 버전으로 설정하려는 런타임 버전 폴더의 경로입니다.
 
-  /pythonhome을 지정하지 않으면 구성된 경로는 **RegisterRExt.exe**가 있는 경로입니다.
+  /pythonhome을 지정하지 않으면 구성된 경로는 **RegisterRExt.exe** 가 있는 경로입니다.
 
 ### <a name="example"></a>예제
 
-예를 들어 SQL Server 2017에서 **Python 3.7**을 인스턴스 MSSQLSERVER01에 대한 기본 버전 Python으로 구성하려면 다음을 수행합니다.
+예를 들어 SQL Server 2017에서 **Python 3.7** 을 인스턴스 MSSQLSERVER01에 대한 기본 버전 Python으로 구성하려면 다음을 수행합니다.
 
 ```cmd
 cd "C:\Program Files\Microsoft SQL Server\MSSQL14.MSSQLSERVER01\PYTHON_SERVICES.3.7\Lib\site-packages\revoscalepy\rxLibs"
@@ -133,11 +132,11 @@ cd "C:\Program Files\Microsoft SQL Server\MSSQL14.MSSQLSERVER01\PYTHON_SERVICES.
 .\RegisterRext.exe /configure /pythonhome:"C:\Program Files\Microsoft SQL Server\MSSQL14.MSSQLSERVER\PYTHON_SERVICES.3.7" /instance:MSSQLSERVER01
 ```
 
-이 예제에서는 **RegisterRext.exe**가 있는 폴더와 동일한 폴더를 지정하기 때문에 `/pythonhome` 인수를 포함할 필요가 없습니다.
+이 예제에서는 **RegisterRext.exe** 가 있는 폴더와 동일한 폴더를 지정하기 때문에 `/pythonhome` 인수를 포함할 필요가 없습니다.
 
 ## <a name="remove-a-runtime-version"></a>런타임 버전 제거
 
-R 또는 Python의 특정 버전을 제거하려면 **RegisterRExt.exe**에서 앞서 설명한 `/rhome`, `/pythonhome` 및 `/instance` 인수를 `/cleanup` 명령줄 인수와 함께 사용합니다.
+R 또는 Python의 특정 버전을 제거하려면 **RegisterRExt.exe** 에서 앞서 설명한 `/rhome`, `/pythonhome` 및 `/instance` 인수를 `/cleanup` 명령줄 인수와 함께 사용합니다.
 
 예를 들어 MSSQLSERVER01에서 **R 3.2** 폴더를 제거하려면 다음을 수행합니다.
 
@@ -151,14 +150,14 @@ R 또는 Python의 특정 버전을 제거하려면 **RegisterRExt.exe**에서 �
 .\RegisterRExt.exe /cleanup /python /pythonhome:"C:\Program Files\Microsoft SQL Server\MSSQL14.MSSQLSERVER01\PYTHON_SERVICES.3.7" /instance:MSSQLSERVER01
 ```
 
-**RegisterRext.exe**는 지정된 R 런타임의 정리를 확인하는 메시지를 표시합니다.
+**RegisterRext.exe** 는 지정된 R 런타임의 정리를 확인하는 메시지를 표시합니다.
 
 > *지정된 런타임을 설치된 모든 패키지와 함께 영구적으로 삭제하시겠습니까? \[예(Y)/아니요(N)/기본값(예)\]:*
 
 확인하려면 `Y`로 응답하거나 Enter 키를 누릅니다. 또는 `/cleanup` 옵션과 함께 `/y` 또는 `/Yes`를 전달하여 이 프롬프트를 건너뛸 수 있습니다.
 
 > [!NOTE]
-> 기본값으로 구성되지 않고 현재 **RegisterRext.exe**를 실행하는 데 사용되지 않는 버전만 제거할 수 있습니다.
+> 기본값으로 구성되지 않고 현재 **RegisterRext.exe** 를 실행하는 데 사용되지 않는 버전만 제거할 수 있습니다.
 
 ## <a name="next-steps"></a>다음 단계
 

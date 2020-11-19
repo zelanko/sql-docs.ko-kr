@@ -9,12 +9,12 @@ ms.author: drskwier
 ms.reviewer: maghan
 ms.custom: ''
 ms.date: 10/22/2020
-ms.openlocfilehash: bd361913ac7f094e217b6b75163a0dd96d97d7e2
-ms.sourcegitcommit: d35d0901296580bfceda6e0ab2e14cf2b7e99a0f
+ms.openlocfilehash: e4030cac39eca0d57af3bf2bcefad293e83971c2
+ms.sourcegitcommit: a2182276ba00c48dc1475b9c7dfa45179d4416dc
 ms.translationtype: HT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 10/24/2020
-ms.locfileid: "92496741"
+ms.lasthandoff: 11/17/2020
+ms.locfileid: "94704168"
 ---
 # <a name="sql-database-projects-extension-preview"></a>SQL Database Projects 확장(미리 보기)
 
@@ -56,14 +56,11 @@ Azure Data Studio의 SQL Database Projects 확장을 소개하는 10분 분량�
 
 ## <a name="known-limitations"></a>알려진 제한 사항
 
-1. Azure Data Studio 뷰렛에서 프로젝트 참조를 추가하고 기존 프로젝트 참조를 로드하는 기능이 현재 지원되지 않습니다.
-2. Azure Data Studio 뷰렛에서 파일을 링크로 로드하는 기능이 현재 지원되지 않지만 파일은 트리의 최상위 수준에서 로드되고 빌드는 이러한 파일을 문제 없이 통합합니다.
-3. 뷰렛에서 사전/사후 배포 스크립트를 추가하고 로드하는 기능이 현재 지원되지 않지만 이러한 파일이 프로젝트에서 수동으로 추가되면 빌드 시에 적용됩니다.
-4. 프로젝트의 SQLCLR 개체는 DacFx의 .NET Core 버전에서 지원되지 않습니다.
-5. 작업(빌드/게시)이 사용자 정의되지 않습니다.
-6. DacFx에 의해 정의된 대상을 게시합니다.
-7. 원본 제어 통합 및 새 프로젝트 만들기에서 .gitignore 파일을 자동으로 만들지 않습니다.
-8. WSL 환경 지원이 제한됩니다.
+- Azure Data Studio 뷰렛에서 파일을 링크로 로드하는 기능이 현재 지원되지 않지만 파일은 트리의 최상위 수준에서 로드되고 빌드는 이러한 파일을 문제 없이 통합합니다.
+- 프로젝트의 SQLCLR 개체는 DacFx의 .NET Core 버전에서 지원되지 않습니다.
+- 작업(빌드/게시)이 사용자 정의되지 않습니다.
+- DacFx에 의해 정의된 대상을 게시합니다.
+- WSL 환경 지원이 제한됩니다.
 
 ## <a name="next-steps"></a>다음 단계
 

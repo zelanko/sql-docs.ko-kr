@@ -7,14 +7,13 @@ ms.date: 06/13/2019
 ms.topic: how-to
 author: garyericson
 ms.author: garye
-ms.reviewer: davidph
 monikerRange: =sql-server-2017||=sqlallproducts-allversions
-ms.openlocfilehash: c09f79fafca4c16048817f3ee2524f214cb13d49
-ms.sourcegitcommit: afb02c275b7c79fbd90fac4bfcfd92b00a399019
+ms.openlocfilehash: 87ac1a75940de892e9796139a4ba0f08263da417
+ms.sourcegitcommit: 82b92f73ca32fc28e1948aab70f37f0efdb54e39
 ms.translationtype: HT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 10/12/2020
-ms.locfileid: "91956627"
+ms.lasthandoff: 11/18/2020
+ms.locfileid: "94870079"
 ---
 # <a name="r-package-synchronization-for-sql-server"></a>SQL Server의 R 패키지 동기화
 [!INCLUDE [SQL Server 2017 only](../../includes/applies-to-version/sqlserver2017-only.md)]
@@ -66,9 +65,9 @@ SQL Server 2017에 포함된 RevoScaleR 버전에는 패키지가 사용되는 �
 
 + 함수의 호출자는 패키지 관리 역할인 **rpkgs-shared** 또는 **rpkgs-private** 중 하나의 멤버여야 합니다.
 
-+ **공유**라고 표시된 패키지를 동기화하려면 함수를 실행하는 사용자에게 **rpkgs-shared** 역할의 멤버 자격이 있어야 하며, 이동 중인 패키지는 공유 범위 라이브러리에 설치되어 있어야 합니다.
++ **공유** 라고 표시된 패키지를 동기화하려면 함수를 실행하는 사용자에게 **rpkgs-shared** 역할의 멤버 자격이 있어야 하며, 이동 중인 패키지는 공유 범위 라이브러리에 설치되어 있어야 합니다.
 
-+ **프라이빗**이라고 표시된 패키지를 동기화하려면 패키지의 소유자나 관리자 중 하나가 함수를 실행해야 하며, 패키지는 프라이빗이어야 합니다.
++ **프라이빗** 이라고 표시된 패키지를 동기화하려면 패키지의 소유자나 관리자 중 하나가 함수를 실행해야 하며, 패키지는 프라이빗이어야 합니다.
 
 + 다른 사용자를 대신하여 패키지를 동기화하려면 소유자는 **db_owner** 데이터베이스 역할의 멤버여야 합니다.
 
@@ -118,7 +117,7 @@ rxSyncPackages(computeContext=computeContext, scope="private", verbose=TRUE)
 
 ### <a name="example-3-restrict-synchronized-packages-by-owner"></a>예제 3. 소유자별로 동기화된 패키지 제한
 
-다음 예제에서는 특정 사용자에 대해 설치된 패키지만 동기화하는 방법을 보여 줍니다. 이 예제에서 사용자는 *user1*이라는 SQL 로그인 이름으로 식별됩니다.
+다음 예제에서는 특정 사용자에 대해 설치된 패키지만 동기화하는 방법을 보여 줍니다. 이 예제에서 사용자는 *user1* 이라는 SQL 로그인 이름으로 식별됩니다.
 
 ```R
 rxSyncPackages(computeContext=computeContext, scope="private", owner = "user1", verbose=TRUE))

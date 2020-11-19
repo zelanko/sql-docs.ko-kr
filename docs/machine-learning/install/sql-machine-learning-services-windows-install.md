@@ -5,16 +5,16 @@ ms.prod: sql
 ms.technology: machine-learning-services
 ms.date: 02/29/2020
 ms.topic: how-to
-author: cawrites
-ms.author: chadam
+author: dphansen
+ms.author: davidph
 ms.custom: seo-lt-2019
 monikerRange: '>=sql-server-2017||=sqlallproducts-allversions'
-ms.openlocfilehash: abe3a4d1315ab8192a35e9e8a5a2c64f2a99158a
-ms.sourcegitcommit: 43b92518c5848489d03c68505bd9905f8686cbc0
+ms.openlocfilehash: 11e051a87e0b5d051cf62c702c13f1189a21ca05
+ms.sourcegitcommit: 82b92f73ca32fc28e1948aab70f37f0efdb54e39
 ms.translationtype: HT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 10/17/2020
-ms.locfileid: "92155058"
+ms.lasthandoff: 11/18/2020
+ms.locfileid: "94870501"
 ---
 # <a name="install-sql-server-machine-learning-services-python-and-r-on-windows"></a>Windows에 SQL Server Machine Learning Services(Python 및 R) 설치
 
@@ -41,7 +41,7 @@ Windows에서 SQL Server Machine Learning Services를 설치하는 방법을 알
 
 ::: moniker range=">=sql-server-ver15||=sqlallproducts-allversions"
 > [!NOTE]
-> Machine Learning Services는 기본적으로 **SQL Server 빅 데이터 클러스터**에 설치됩니다. **빅 데이터 클러스터**를 사용하는 경우에는 이 문서의 단계를 수행하지 않아도 됩니다. 자세한 내용은 [빅 데이터 클러스터에서 Machine Learning Services(Python 및 R) 사용](../../big-data-cluster/machine-learning-services.md)을 참조하세요.
+> Machine Learning Services는 기본적으로 **SQL Server 빅 데이터 클러스터** 에 설치됩니다. **빅 데이터 클러스터** 를 사용하는 경우에는 이 문서의 단계를 수행하지 않아도 됩니다. 자세한 내용은 [빅 데이터 클러스터에서 Machine Learning Services(Python 및 R) 사용](../../big-data-cluster/machine-learning-services.md)을 참조하세요.
 ::: moniker-end
 
 > [!IMPORTANT]
@@ -65,7 +65,7 @@ Machine Learning Services와 Python 및 R 통합을 지원하는 SQL Server 버�
 
 1. SQL Server에 대한 설치 마법사를 시작합니다.
   
-1. **설치** 탭에서 **새 SQL Server 독립 실행형 설치 또는 기존 설치에 기능 추가**를 선택합니다.
+1. **설치** 탭에서 **새 SQL Server 독립 실행형 설치 또는 기존 설치에 기능 추가** 를 선택합니다.
 
    ::: moniker range="=sql-server-2017||=sqlallproducts-allversions"
    ![새 SQL Server 독립 실행형 설치](media/2017setup-installation-page-mlsvcs.png)
@@ -123,23 +123,23 @@ Machine Learning Services와 Python 및 R 통합을 지원하는 SQL Server 버�
    
    > [!NOTE]
    > 
-   > **Machine Learning Server(독립 실행형)** 에 대한 옵션을 선택하지 마세요. **공유 기능**에서 Machine Learning Server를 설치하는 옵션은 별도의 컴퓨터에서 사용하기 위한 것입니다.
+   > **Machine Learning Server(독립 실행형)** 에 대한 옵션을 선택하지 마세요. **공유 기능** 에서 Machine Learning Server를 설치하는 옵션은 별도의 컴퓨터에서 사용하기 위한 것입니다.
 
 ::: moniker range="=sql-server-2017||=sqlallproducts-allversions"
 
-4. **Microsoft R Open 설치에 동의** 페이지에서 **동의**를 선택한 다음 **다음**을 선택합니다. 
+4. **Microsoft R Open 설치에 동의** 페이지에서 **동의** 를 선택한 다음 **다음** 을 선택합니다. 
 
 사용권 계약은 다음에 적용됩니다.
 + Microsoft R Open
 + 오픈 소스 R 기본 패키지 및 도구
 + Microsoft 개발 팀의 고급 R 패키지 및 연결 공급자입니다.
 
-1. **Python 설치에 동의** 페이지에서 **동의**를 선택한 다음 **다음**을 선택합니다. Python 오픈 소스 사용권 계약은 Anaconda 및 관련 도구뿐만 아니라 Microsoft 개발 팀의 몇 가지 새로운 Python 라이브러리에 대해서도 적용됩니다.
+1. **Python 설치에 동의** 페이지에서 **동의** 를 선택한 다음 **다음** 을 선택합니다. Python 오픈 소스 사용권 계약은 Anaconda 및 관련 도구뿐만 아니라 Microsoft 개발 팀의 몇 가지 새로운 Python 라이브러리에 대해서도 적용됩니다.
 
    > [!NOTE]
    >  사용 중인 컴퓨터가 인터넷에 연결되어 있지 않으면 이 지점에서 설치를 잠시 중단하고 설치 관리자를 별도로 다운로드할 수 있습니다. 자세한 내용은 [인터넷 액세스 없이 기계 학습 구성 요소 설치](../install/sql-ml-component-install-without-internet-access.md)를 참조하세요.
 
-1. **설치 준비 완료** 페이지에서 이러한 선택 사항이 포함되어 있는지 확인하고 **설치**를 선택합니다.
+1. **설치 준비 완료** 페이지에서 이러한 선택 사항이 포함되어 있는지 확인하고 **설치** 를 선택합니다.
   
    + 데이터베이스 엔진 서비스
    + Machine Learning Services(데이터베이스 내)
@@ -153,11 +153,11 @@ Machine Learning Services와 Python 및 R 통합을 지원하는 SQL Server 버�
 
 ::: moniker range="=sql-server-ver15||=sqlallproducts-allversions"
 
-1. **Microsoft R Open 설치에 동의** 페이지에서 **동의**를 선택한 다음 **다음**을 선택합니다. 이 사용권 계약은 Microsoft 개발 팀의 연결 공급자 및 고급 R 패키지와 함께 오픈 소스 R 기본 패키지 및 도구 배포가 포함된 Microsoft R Open에 적용됩니다.
+1. **Microsoft R Open 설치에 동의** 페이지에서 **동의** 를 선택한 다음 **다음** 을 선택합니다. 이 사용권 계약은 Microsoft 개발 팀의 연결 공급자 및 고급 R 패키지와 함께 오픈 소스 R 기본 패키지 및 도구 배포가 포함된 Microsoft R Open에 적용됩니다.
 
-2. **Python 설치에 동의** 페이지에서 **동의**를 선택한 다음 **다음**을 선택합니다. Python 오픈 소스 사용권 계약은 Anaconda 및 관련 도구뿐만 아니라 Microsoft 개발 팀의 몇 가지 새로운 Python 라이브러리에 대해서도 적용됩니다.
+2. **Python 설치에 동의** 페이지에서 **동의** 를 선택한 다음 **다음** 을 선택합니다. Python 오픈 소스 사용권 계약은 Anaconda 및 관련 도구뿐만 아니라 Microsoft 개발 팀의 몇 가지 새로운 Python 라이브러리에 대해서도 적용됩니다.
 
-3. **설치 준비 완료** 페이지에서 이러한 선택 사항이 포함되어 있는지 확인하고 **설치**를 선택합니다.
+3. **설치 준비 완료** 페이지에서 이러한 선택 사항이 포함되어 있는지 확인하고 **설치** 를 선택합니다.
   
    + 데이터베이스 엔진 서비스
    + Machine Learning Services(데이터베이스 내)
@@ -173,7 +173,7 @@ Machine Learning Services와 Python 및 R 통합을 지원하는 SQL Server 버�
 
 R 기능 통합의 경우에만 **MKL_CBWR** 환경 변수를 설정하여 Intel MKL(Math Kernel Library) 계산에서 [일관성 있는 출력을 보장](https://software.intel.com/articles/introduction-to-the-conditional-numerical-reproducibility-cnr)해야 합니다.
 
-1. 제어판에서 **시스템 및 보안** > **시스템** > **고급 시스템 설정** > **환경 변수**를 클릭합니다.
+1. 제어판에서 **시스템 및 보안** > **시스템** > **고급 시스템 설정** > **환경 변수** 를 클릭합니다.
 
 2. 새 사용자 또는 시스템 변수를 만듭니다. 
 
@@ -193,13 +193,13 @@ R 기능 통합의 경우에만 **MKL_CBWR** 환경 변수를 설정하여 Intel
     > 
     > SQL Server에 대한 관리 작업 및 쿼리를 지원하는 [Azure Data Studio](../../azure-data-studio/what-is.md)를 사용할 수도 있습니다.
   
-2. Machine Learning Services를 설치한 인스턴스에 연결하고 **새 쿼리**를 클릭하여 쿼리 창을 열고 다음 명령을 실행합니다.
+2. Machine Learning Services를 설치한 인스턴스에 연결하고 **새 쿼리** 를 클릭하여 쿼리 창을 열고 다음 명령을 실행합니다.
 
     ```sql
     sp_configure
     ```
 
-    이때 속성 값 `external scripts enabled`는 **0**이어야 합니다. 이 기능은 기본적으로 꺼져 있습니다. R 또는 Python 스크립트를 실행하려면 먼저 관리자가 이 기능을 명시적으로 사용하도록 설정해야 합니다.
+    이때 속성 값 `external scripts enabled`는 **0** 이어야 합니다. 이 기능은 기본적으로 꺼져 있습니다. R 또는 Python 스크립트를 실행하려면 먼저 관리자가 이 기능을 명시적으로 사용하도록 설정해야 합니다.
     
 3.  외부 스크립팅 기능을 사용하도록 설정하려면 다음 문을 실행합니다.
     
@@ -228,9 +228,9 @@ SSMS의 인스턴스에 대해 **Restart** 명령을 마우스 오른쪽 단추�
    EXECUTE sp_configure  'external scripts enabled'
    ```
 
-   **run_value**가 1로 설정됩니다.
+   **run_value** 가 1로 설정됩니다.
     
-2. **서비스** 패널 또는 SQL Server 구성 관리자를 열고 **SQL Server 실행 패드 서비스**가 실행 중인지 확인합니다. R 또는 Python이 설치된 모든 데이터베이스 엔진 인스턴스에 대한 서비스가 하나는 있어야 합니다. 서비스에 대한 자세한 내용은 [확장성 프레임워크](../concepts/extensibility-framework.md)를 참조하세요. 
+2. **서비스** 패널 또는 SQL Server 구성 관리자를 열고 **SQL Server 실행 패드 서비스** 가 실행 중인지 확인합니다. R 또는 Python이 설치된 모든 데이터베이스 엔진 인스턴스에 대한 서비스가 하나는 있어야 합니다. 서비스에 대한 자세한 내용은 [확장성 프레임워크](../concepts/extensibility-framework.md)를 참조하세요. 
    
 3. 실행 패드가 실행 중인 경우에는 간단한 R 및 Python 스크립트를 실행하여 외부 스크립팅 런타임이 SQL Server와 통신할 수 있을지 확인할 수 있습니다.
 

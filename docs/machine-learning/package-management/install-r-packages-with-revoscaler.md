@@ -7,14 +7,13 @@ ms.date: 11/20/2019
 ms.topic: how-to
 author: garyericson
 ms.author: garye
-ms.reviewer: davidph
 monikerRange: =sql-server-2016||=sql-server-2017||=sqlallproducts-allversions
-ms.openlocfilehash: e68c51930cae4762723f098089d0913792748c61
-ms.sourcegitcommit: afb02c275b7c79fbd90fac4bfcfd92b00a399019
+ms.openlocfilehash: 1526f1c9eaaf4924ec248b523bd44148398e031b
+ms.sourcegitcommit: 82b92f73ca32fc28e1948aab70f37f0efdb54e39
 ms.translationtype: HT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 10/12/2020
-ms.locfileid: "91956681"
+ms.lasthandoff: 11/18/2020
+ms.locfileid: "94870118"
 ---
 # <a name="use-revoscaler-to-install-r-packages"></a>RevoScaleR을 사용하여 R 패키지 설치
 
@@ -48,9 +47,9 @@ ms.locfileid: "91956681"
 
 + 서버와 데이터베이스에 연결하고 R 명령을 실행할 수 있는 권한이 있습니다. 지정된 인스턴스 및 데이터베이스에 패키지를 설치할 수 있도록 하는 데이터베이스 역할의 멤버여야 합니다.
 
-  + 지정된 데이터베이스에서 **역할에 속하는 사용자가**공유 범위`rpkgs-shared`의 패키지를 설치할 수 있습니다. 이 역할의 모든 사용자는 공유 패키지를 제거할 수 있습니다.
+  + 지정된 데이터베이스에서 **역할에 속하는 사용자가** 공유 범위`rpkgs-shared`의 패키지를 설치할 수 있습니다. 이 역할의 모든 사용자는 공유 패키지를 제거할 수 있습니다.
 
-  + 데이터베이스에서 **역할에 속하는 사용자가**프라이빗 범위`rpkgs-private`의 패키지를 설치할 수 있습니다. 그러나 사용자는 자신의 패키지만 확인하고 제거할 수 있습니다.
+  + 데이터베이스에서 **역할에 속하는 사용자가** 프라이빗 범위`rpkgs-private`의 패키지를 설치할 수 있습니다. 그러나 사용자는 자신의 패키지만 확인하고 제거할 수 있습니다.
 
   + 데이터베이스 소유자는 공유 또는 프라이빗 패키지를 사용할 수 있습니다.
 
@@ -127,7 +126,7 @@ print(sqlPackagePaths)
 
 ### <a name="get-locations-for-multiple-packages"></a>여러 패키지의 위치 가져오기
 
-다음 예제에서는 컴퓨팅 컨텍스트 **에서** RevoScaleR**및**lattice`sqlcc`패키지의 경로를 가져옵니다. 여러 패키지에 대한 정보를 가져오려면 패키지 이름을 포함하는 문자열 벡터를 전달합니다.
+다음 예제에서는 컴퓨팅 컨텍스트 **에서** RevoScaleR **및** lattice`sqlcc`패키지의 경로를 가져옵니다. 여러 패키지에 대한 정보를 가져오려면 패키지 이름을 포함하는 문자열 벡터를 전달합니다.
 
 ```R
 packagePaths <- rxFindPackage(package = c("RevoScaleR", "lattice"), computeContext = sqlcc)
@@ -136,7 +135,7 @@ print(packagePaths)
 
 ### <a name="get-package-versions-on-a-remote-compute-context"></a>원격 컴퓨팅 컨텍스트에 대한 패키지 버전 가져오기
 
-R 콘솔의 이 명령을 실행하여 컴퓨팅 컨텍스트 *sqlServer*에 설치된 패키지의 빌드 번호 및 버전 번호를 가져옵니다.
+R 콘솔의 이 명령을 실행하여 컴퓨팅 컨텍스트 *sqlServer* 에 설치된 패키지의 빌드 번호 및 버전 번호를 가져옵니다.
 
 ```R
 sqlPackages <- rxInstalledPackages(fields = c("Package", "Version", "Built"), computeContext = sqlServer)

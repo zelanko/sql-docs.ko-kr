@@ -5,16 +5,15 @@ ms.prod: sql
 ms.technology: language-extensions
 ms.date: 11/05/2019
 ms.topic: conceptual
-author: nelgson
-ms.author: negust
-ms.reviewer: dphansen
+author: dphansen
+ms.author: davidph
 monikerRange: '>=sql-server-ver15||>=sql-server-linux-ver15||=sqlallproducts-allversions'
-ms.openlocfilehash: 175c96e19c0a15cd2e995c527f869a6f8a2ca7ab
-ms.sourcegitcommit: 9b41725d6db9957dd7928a3620fe4db41eb51c6e
+ms.openlocfilehash: 011d8ba2e9c92d0df6fe2956c190f61934948f54
+ms.sourcegitcommit: 82b92f73ca32fc28e1948aab70f37f0efdb54e39
 ms.translationtype: HT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 08/13/2020
-ms.locfileid: "88173577"
+ms.lasthandoff: 11/18/2020
+ms.locfileid: "94870139"
 ---
 # <a name="microsoft-extensibility-sdk-for-java-for-sql-server"></a>SQL Server에 대한 Java용 Microsoft 확장성 SDK
 [!INCLUDE [SQL Server 2019 and later](../../includes/applies-to-version/sqlserver2019.md)]
@@ -88,9 +87,9 @@ public void init(String sessionId, int taskId, int numtask) {}
 
 ### <a name="class-primitivedataset"></a>클래스: PrimitiveDataset
 
-**PrimitiveDataset** 클래스는 단순 형식을 기본 배열로 저장하는 **AbstractSqlServerExtensionDataset**의 구현입니다.
+**PrimitiveDataset** 클래스는 단순 형식을 기본 배열로 저장하는 **AbstractSqlServerExtensionDataset** 의 구현입니다.
 
-SDK에서 선택적 도우미 클래스로만 제공됩니다. 이 클래스를 사용하지 않는 경우 **AbstractSqlServerExtensionDataset**에서 상속하는 자체 클래스를 구현해야 합니다.  
+SDK에서 선택적 도우미 클래스로만 제공됩니다. 이 클래스를 사용하지 않는 경우 **AbstractSqlServerExtensionDataset** 에서 상속하는 자체 클래스를 구현해야 합니다.  
 
 ## <a name="next-steps"></a>다음 단계
 

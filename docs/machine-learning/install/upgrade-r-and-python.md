@@ -5,23 +5,23 @@ ms.prod: sql
 ms.technology: machine-learning-services
 ms.date: 09/30/2020
 ms.topic: how-to
-author: cawrites
-ms.author: chadam
+author: dphansen
+ms.author: davidph
 monikerRange: =sql-server-2016||=sql-server-2017||=sqlallproducts-allversions
-ms.openlocfilehash: 2036fda1d483bdfb04a205f5a2e3bf6d86119b1b
-ms.sourcegitcommit: afb02c275b7c79fbd90fac4bfcfd92b00a399019
+ms.openlocfilehash: 3263723e04834e5b0a6bad86455f281fe643e083
+ms.sourcegitcommit: 82b92f73ca32fc28e1948aab70f37f0efdb54e39
 ms.translationtype: HT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 10/12/2020
-ms.locfileid: "91956731"
+ms.lasthandoff: 11/18/2020
+ms.locfileid: "94870462"
 ---
 # <a name="upgrade-python-and-r-runtime-with-binding-in-sql-server-machine-learning-services"></a>SQL Server Machine Learning Services에서 바인딩을 사용하여 Python 및 R 런타임 업그레이드
 [!INCLUDE [SQL Server 2016 and 2017](../../includes/applies-to-version/sqlserver2016-2017-only.md)]
 
-이 문서에서는 **바인딩**이라는 설치 프로세스를 사용하여 [SQL Server 2016 R Services](../r/sql-server-r-services.md) 또는 [SQL Server 2017 Machine Learning Services](../sql-server-machine-learning-services.md)에서 R 또는 Python 런타임을 업그레이드하는 방법을 설명합니다. [Microsoft Machine Learning Server](/machine-learning-server)에 *바인딩*하여 [최신 버전의 Python 및 R](#version-map)을 가져올 수 있습니다.
+이 문서에서는 **바인딩** 이라는 설치 프로세스를 사용하여 [SQL Server 2016 R Services](../r/sql-server-r-services.md) 또는 [SQL Server 2017 Machine Learning Services](../sql-server-machine-learning-services.md)에서 R 또는 Python 런타임을 업그레이드하는 방법을 설명합니다. [Microsoft Machine Learning Server](/machine-learning-server)에 *바인딩* 하여 [최신 버전의 Python 및 R](#version-map)을 가져올 수 있습니다.
 
 > [!IMPORTANT]
-> 이 문서에서는 바인딩이라고 하는 R 및 Python 런타임을 업그레이드하는 이전 방법을 설명합니다. **SQL Server 2016 SP(서비스 팩) 2에 대한 CU(누적 업데이트) 14 이상** 또는 **SQL Server 2017에 대한 CU(누적 업데이트) 22 이상**을 설치한 경우에는 대신 [기본 R 또는 Python 언어 런타임을 이후 버전으로 변경](change-default-language-runtime-version.md)하는 방법을 참조하세요.
+> 이 문서에서는 바인딩이라고 하는 R 및 Python 런타임을 업그레이드하는 이전 방법을 설명합니다. **SQL Server 2016 SP(서비스 팩) 2에 대한 CU(누적 업데이트) 14 이상** 또는 **SQL Server 2017에 대한 CU(누적 업데이트) 22 이상** 을 설치한 경우에는 대신 [기본 R 또는 Python 언어 런타임을 이후 버전으로 변경](change-default-language-runtime-version.md)하는 방법을 참조하세요.
 
 ## <a name="what-is-binding"></a>바인딩이란?
 
@@ -138,15 +138,15 @@ Python 3.5 기반 Anaconda 4.2  | 4.2/3.5.2 | 4.2/3.5.2 |
 
 1. 폴더 압축을 풀고 MLSWIN93에 있는 ServerSetup.exe를 시작합니다.
 
-1. **설치 구성**에서 업그레이드할 구성 요소를 확인하고 호환되는 인스턴스 목록을 검토합니다.
+1. **설치 구성** 에서 업그레이드할 구성 요소를 확인하고 호환되는 인스턴스 목록을 검토합니다.
 
-1. **라이선스 계약** 페이지에서 **사용 조건에 동의함**을 선택하여 Machine Learning Server의 라이선스 조건을 수락합니다. 
+1. **라이선스 계약** 페이지에서 **사용 조건에 동의함** 을 선택하여 Machine Learning Server의 라이선스 조건을 수락합니다. 
 
 1. 이후 페이지에서도 Microsoft R Open 또는 Python Anaconda 배포와 같은 선택한 모든 오픈 소스 구성 요소에 대한 추가 라이선스 조건에 동의합니다.
 
 1. **거의 완료** 페이지에서 설치 폴더 위치를 확인합니다. 기본 폴더는 \Program Files\Microsoft\ML Server입니다.
 
-    설치 폴더를 변경하려면 **고급**을 선택하여 마법사의 첫 번째 페이지로 돌아갑니다. 하지만 이전의 모든 선택 항목을 다시 반복해야 합니다.
+    설치 폴더를 변경하려면 **고급** 을 선택하여 마법사의 첫 번째 페이지로 돌아갑니다. 하지만 이전의 모든 선택 항목을 다시 반복해야 합니다.
 
 업그레이드가 실패하면 [SqlBindR 오류 코드](#sqlbindr-error-codes)로 자세한 내용을 확인하세요.
 
@@ -218,11 +218,11 @@ Python 3.5 기반 Anaconda 4.2  | 4.2/3.5.2 | 4.2/3.5.2 |
 2. 설치 프로그램이 언바인딩 후보인 로컬 인스턴스를 식별합니다.
 3. 원래 구성으로 되돌리려는 인스턴스 옆에 있는 확인란을 선택 취소합니다.
 4. 모든 라이선스 계약에 동의합니다.
-5. **마침**을 선택합니다. 이 프로세스는 시간이 오래 걸립니다.
+5. **마침** 을 선택합니다. 이 프로세스는 시간이 오래 걸립니다.
 
 #### <a name="unbind-using-the-command-line"></a><a name="bkmk_cmdunbind"></a> 명령줄을 사용하여 언바인딩
 
-1. 이전 섹션에 설명된 대로 명령 프롬프트를 열고 **sqlbindr.exe**가 포함된 폴더로 이동합니다.
+1. 이전 섹션에 설명된 대로 명령 프롬프트를 열고 **sqlbindr.exe** 가 포함된 폴더로 이동합니다.
 
 2. */unbind* 인수와 함께 **SqlBindR.exe** 명령을 실행하고 인스턴스를 지정합니다.
 
@@ -295,7 +295,7 @@ R 명령을 사용하여 설치된 패키지를 데이터베이스의 레코드�
 
 이 문제를 해결하려면 비어 있지 않은 PYTHON_SERVICES 디렉터리에 `sqlbindr.ini` 파일을 만듭니다. 내용은 파일의 작동 방식에 영향을 주지 않습니다.
 
-**9.4.7.82**를 포함하는 `sqlbindr.ini` 파일을 만들고 다음 위치에 저장합니다.  
+**9.4.7.82** 를 포함하는 `sqlbindr.ini` 파일을 만들고 다음 위치에 저장합니다.  
 
 `C:\Program Files\Microsoft SQL Server\MSSQL14.MSSQLSERVER\PYTHON_SERVICES`
 
@@ -305,8 +305,8 @@ R 명령을 사용하여 설치된 패키지를 데이터베이스의 레코드�
 기본적으로 설치 프로그램은 이전에 바인딩된 인스턴스를 선택합니다. 작업을 계속하면 이전에 바인딩된 인스턴스가 언바인딩됩니다. 그 결과, 이전 9.0.1 설치 및 모든 관련 패키지는 제거되지만 새 버전의 Microsoft R Server(9.1.0)가 설치되지 않습니다.
 
 이를 해결하기 위해서는 다음과 같이 기존 R Server 설치를 수정할 수 있습니다.
-1. 제어판에서 **프로그램 추가 또는 제거**를 엽니다.
-2. Microsoft R Server를 찾고 **변경/수정**을 선택합니다.
+1. 제어판에서 **프로그램 추가 또는 제거** 를 엽니다.
+2. Microsoft R Server를 찾고 **변경/수정** 을 선택합니다.
 3. 설치 프로그램이 시작되고 9.1.0에 바인딩하려는 인스턴스를 선택합니다.
 
 Microsoft Machine Learning Server 9.2.1 및 9.3에는 이 문제가 없습니다.
