@@ -53,7 +53,7 @@ ms.locfileid: "92194593"
 [!INCLUDE[msCoName](../includes/msconame-md.md)] [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)] [!INCLUDE[ssISnoversion](../includes/ssisnoversion-md.md)] 에서 사용할 수 있는 새 도구, 컨트롤 및 기능에 익숙해지는 가장 좋은 방법은 실제로 사용해 보는 것입니다. 이 자습서에서는 [!INCLUDE[ssISnoversion](../includes/ssisnoversion-md.md)] 프로젝트를 만든 다음 패키지 및 기타 필요한 파일을 프로젝트에 추가하는 단계를 진행합니다. 프로젝트가 완료된 후에 배포 번들을 만들고 번들을 대상 컴퓨터에 복사한 다음 패키지를 대상 컴퓨터에 설치합니다.    
     
 ## <a name="prerequisites"></a>전제 조건    
-이 자습서는 기본적인 파일 시스템 작업에는 이미 익숙하지만, [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)] [!INCLUDE[ssISnoversion](../includes/ssisnoversion-md.md)]의 새 기능은 많이 접해 보지 못한 사용자를 위한 것입니다. 이 자습서에서 사용되는 기본 [!INCLUDE[ssISnoversion](../includes/ssisnoversion-md.md)] 개념을 더 쉽게 이해할 수 있도록 [!INCLUDE[ssISnoversion](../includes/ssisnoversion-md.md)] 자습서인 [SSIS ETL 패키지를 만드는 방법](../integration-services/ssis-how-to-create-an-etl-package.md)을 먼저 완료하는 것이 좋습니다.    
+이 자습서는 기본적인 파일 시스템 작업에는 이미 익숙하지만, [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)] [!INCLUDE[ssISnoversion](../includes/ssisnoversion-md.md)]의 새 기능은 많이 접하지 못한 사용자를 위한 것입니다. 이 자습서에서 사용되는 기본 [!INCLUDE[ssISnoversion](../includes/ssisnoversion-md.md)] 개념을 더 쉽게 이해할 수 있도록 [!INCLUDE[ssISnoversion](../includes/ssisnoversion-md.md)] 자습서인 [SSIS ETL 패키지를 만드는 방법](../integration-services/ssis-how-to-create-an-etl-package.md)을 먼저 완료하는 것이 좋습니다.    
     
 ### <a name="on-the-source-computer"></a>원본 컴퓨터의 경우
 
