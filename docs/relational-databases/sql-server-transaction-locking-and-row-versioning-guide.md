@@ -20,12 +20,12 @@ ms.assetid: 44fadbee-b5fe-40c0-af8a-11a1eecf6cb7
 author: rothja
 ms.author: jroth
 monikerRange: '>=aps-pdw-2016||=azuresqldb-current||=azure-sqldw-latest||>=sql-server-2016||=sqlallproducts-allversions||>=sql-server-linux-2017||=azuresqldb-mi-current'
-ms.openlocfilehash: 70358a9ba4fc5cb9d9b326119b488efe6af3a9f5
-ms.sourcegitcommit: 4d370399f6f142e25075b3714e5c2ce056b1bfd0
+ms.openlocfilehash: 07c59ceb0ec51d4d9fd357fcc154892091c3caaf
+ms.sourcegitcommit: 0f484f32709a414f05562bbaafeca9a9fc57c9ed
 ms.translationtype: HT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 10/09/2020
-ms.locfileid: "91868195"
+ms.lasthandoff: 11/14/2020
+ms.locfileid: "94631769"
 ---
 # <a name="transaction-locking-and-row-versioning-guide"></a>트랜잭션 잠금 및 행 버전 관리 지침
 [!INCLUDE[SQL Server Azure SQL Database Synapse Analytics PDW ](../includes/applies-to-version/sql-asdb-asdbmi-asa-pdw.md)]
@@ -406,12 +406,12 @@ GO
  `System.Data.SqlClient` 관리 네임스페이스를 사용하는 ADO.NET 애플리케이션은 `SqlConnection.BeginTransaction` 메서드를 호출하고 *IsolationLevel* 옵션을 Unspecified, Chaos, ReadUncommitted, ReadCommitted, RepeatableRead, Serializable 및 Snapshot으로 설정할 수 있습니다.  
   
  **OLE DB**  
- OLE DB를 사용하는 애플리케이션은 트랜잭션을 시작할 때 *isoLevel*을 ISOLATIONLEVEL_READUNCOMMITTED, ISOLATIONLEVEL_READCOMMITTED, ISOLATIONLEVEL_REPEATABLEREAD, ISOLATIONLEVEL_SNAPSHOT 또는 ISOLATIONLEVEL_SERIALIZABLE로 설정하고 `ITransactionLocal::StartTransaction`을 호출합니다.  
+ OLE DB를 사용하는 애플리케이션은 트랜잭션을 시작할 때 *isoLevel* 을 ISOLATIONLEVEL_READUNCOMMITTED, ISOLATIONLEVEL_READCOMMITTED, ISOLATIONLEVEL_REPEATABLEREAD, ISOLATIONLEVEL_SNAPSHOT 또는 ISOLATIONLEVEL_SERIALIZABLE로 설정하고 `ITransactionLocal::StartTransaction`을 호출합니다.  
   
  OLE DB 애플리케이션은 자동 커밋 모드로 트랜잭션 격리 수준을 지정할 때 DBPROPSET_SESSION 속성인 DBPROP_SESS_AUTOCOMMITISOLEVELS를 DBPROPVAL_TI_CHAOS, DBPROPVAL_TI_READUNCOMMITTED, DBPROPVAL_TI_BROWSE, DBPROPVAL_TI_CURSORSTABILITY, DBPROPVAL_TI_READCOMMITTED, DBPROPVAL_TI_REPEATABLEREAD, DBPROPVAL_TI_SERIALIZABLE, DBPROPVAL_TI_ISOLATED 또는 DBPROPVAL_TI_SNAPSHOT으로 설정할 수 있습니다.  
   
  **ODBC**  
- ODBC 애플리케이션은 *Attribute*를 SQL_ATTR_TXN_ISOLATION으로 설정하고 *ValuePtr*을 SQL_TXN_READ_UNCOMMITTED, SQL_TXN_READ_COMMITTED, SQL_TXN_REPEATABLE_READ 또는 SQL_TXN_SERIALIZABLE로 설정하고 `SQLSetConnectAttr`을 호출합니다.  
+ ODBC 애플리케이션은 *Attribute* 를 SQL_ATTR_TXN_ISOLATION으로 설정하고 *ValuePtr* 을 SQL_TXN_READ_UNCOMMITTED, SQL_TXN_READ_COMMITTED, SQL_TXN_REPEATABLE_READ 또는 SQL_TXN_SERIALIZABLE로 설정하고 `SQLSetConnectAttr`을 호출합니다.  
   
  스냅샷 트랜잭션의 경우 애플리케이션은 Attribute를 SQL_COPT_SS_TXN_ISOLATION으로, ValuePtr을 SQL_TXN_SS_SNAPSHOT으로 설정하고 `SQLSetConnectAttr`을 호출합니다. SQL_COPT_SS_TXN_ISOLATION이나 SQL_ATTR_TXN_ISOLATION을 사용하여 스냅샷 트랜잭션을 검색할 수 있습니다.  
   
@@ -508,7 +508,7 @@ GO
  대량 업데이트(BU) 잠금을 사용하면 여러 스레드가 데이터를 동시에 같은 테이블로 대량 로드하는 것은 허용하고, 데이터를 대량 로드하지 않는 다른 프로세스가 테이블에 액세스하는 것은 방지할 수 있습니다. [!INCLUDE[ssDEnoversion](../includes/ssdenoversion-md.md)]에서는 다음 조건이 모두 충족되면 대량 업데이트(BU) 잠금을 사용합니다.  
   
 -   [!INCLUDE[tsql](../includes/tsql-md.md)] BULK INSERT 문 또는 OPENROWSET(BULK) 함수를 사용하거나 .NET SqlBulkCopy, OLEDB 빠른 로드 API 또는 ODBC 대량 복사 API와 같은 BULK INSERT 명령 중 하나를 사용하여 데이터를 테이블에 대량 복사합니다.  
--   **TABLOCK** 힌트를 지정하거나 **sp_tableoption**을 사용하여 **table lock on bulk load** 테이블 옵션을 설정합니다.  
+-   **TABLOCK** 힌트를 지정하거나 **sp_tableoption** 을 사용하여 **table lock on bulk load** 테이블 옵션을 설정합니다.  
   
 > [!TIP]  
 > 덜 제한적인 대량 업데이트 잠금을 보유하는 BULK INSERT 문과 달리 TABLOCK 힌트를 사용하는 INSERT INTO...SELECT 문은 테이블에 대해 배타적(X) 잠금을 보유합니다. 즉, 병렬 삽입 작업을 사용하여 행을 삽입할 수 없습니다.  
@@ -550,7 +550,7 @@ GO
   
 -   범위는 두 개의 연속되는 인덱스 항목 간의 범위를 보호하는 잠금 모드를 나타냅니다.  
 -   행은 인덱스 항목을 보호하는 잠금 모드를 나타냅니다.  
--   모드는 사용된 혼합 잠금 모드를 나타냅니다. 키 범위 잠금 모드는 두 부분으로 구성됩니다. 첫 번째는 인덱스 범위(Range*T*)를 잠그는 데 사용하는 잠금 유형을 나타내고 두 번째는 특정 키(*K*)를 잠그는 데 사용하는 잠금 유형을 나타냅니다. 두 부분은 *T*-*K*와 같이 하이픈(-)으로 연결됩니다.  
+-   모드는 사용된 혼합 잠금 모드를 나타냅니다. 키 범위 잠금 모드는 두 부분으로 구성됩니다. 첫 번째는 인덱스 범위(Range *T*)를 잠그는 데 사용하는 잠금 유형을 나타내고 두 번째는 특정 키(*K*)를 잠그는 데 사용하는 잠금 유형을 나타냅니다. 두 부분은 *T*-*K* 와 같이 하이픈(-)으로 연결됩니다.  
   
     |범위|행|Mode|Description|  
     |-----------|---------|----------|-----------------|  
@@ -599,7 +599,7 @@ GO
  키 범위 잠금이 발생하려면 다음 조건을 만족해야 합니다.  
   
 -   트랜잭션 격리 수준을 SERIALIZABLE로 설정해야 합니다.  
--   쿼리 프로세서가 인덱스를 사용하여 범위 필터 조건자를 구현해야 합니다. 예를 들어 SELECT 문의 WHERE 절은 다음 조건자를 사용하여 범위 조건을 설정할 수 있습니다. ColumnX BETWEEN N **'** AAA **'** AND N **'** CZZ **'** . 키 범위 잠금은 **ColumnX**가 인덱스 키 내에 있는 경우에만 얻을 수 있습니다.  
+-   쿼리 프로세서가 인덱스를 사용하여 범위 필터 조건자를 구현해야 합니다. 예를 들어 SELECT 문의 WHERE 절은 다음 조건자를 사용하여 범위 조건을 설정할 수 있습니다. ColumnX BETWEEN N **'** AAA **'** AND N **'** CZZ **'** . 키 범위 잠금은 **ColumnX** 가 인덱스 키 내에 있는 경우에만 얻을 수 있습니다.  
   
 ### <a name="examples"></a>예제  
  다음 테이블 및 인덱스는 이어지는 키 범위 잠금 예의 기준으로 사용됩니다.  
@@ -618,7 +618,7 @@ WHERE name BETWEEN 'A' AND 'C';
  키 범위 잠금은 이름이 `Adam`과 `Dale` 값 사이에 있는 데이터 행 범위에 해당하는 인덱스 항목에 설정되어 앞의 쿼리에서 한정하는 새 행의 추가 또는 삭제를 방지합니다. 이 범위의 첫 번째 이름은 `Adam`이지만 이 인덱스 항목에 RangeS-S 모드 키 범위 잠금을 사용하면 `Abigail`과 같이 A로 시작하는 새 이름을 `Adam` 앞에 추가할 수 없습니다. 마찬가지로 `Dale`의 인덱스 항목에 RangeS-S 키 범위 잠금을 사용하면 `Clive`와 같이 C로 시작하는 새 이름을 `Carlos` 뒤에 추가할 수 없습니다.  
   
 > [!NOTE]  
-> 보유한 RangeS-S 잠금 수는 *n*+1입니다. 여기서 *n*은 쿼리를 만족하는 행 수입니다.  
+> 보유한 RangeS-S 잠금 수는 *n*+1입니다. 여기서 *n* 은 쿼리를 만족하는 행 수입니다.  
   
 #### <a name="singleton-fetch-of-nonexistent-data"></a>존재하지 않는 데이터의 단일 인출  
  트랜잭션 내의 쿼리가 존재하지 않는 행을 선택하려고 하면 같은 트랜잭션 내에서 나중에 쿼리를 실행해도 같은 결과를 반환해야 합니다. 다른 트랜잭션도 존재하지 않는 행을 삽입할 수 없습니다. 다음과 같은 쿼리를 예로 들 수 있습니다.  
@@ -912,7 +912,7 @@ GO
 #### <a name="deadlock-extended-event"></a><a name="deadlock_xevent"></a> 교착 상태 확장 이벤트
 [!INCLUDE[ssSQL11](../includes/sssql11-md.md)]부터 SQL 추적 또는 SQL Profiler의 교착 상태 그래프 이벤트 클래스 대신 `xml_deadlock_report` 확장 이벤트(xEvent)를 사용해야 합니다.
 
-또한 [!INCLUDE[ssSQL11](../includes/sssql11-md.md)] 이상에서는 교착 상태가 발생할 때 ***system\_health*** 세션이 이미 교착 상태 그래프가 포함된 `xml_deadlock_report` xEvent를 모두 캡처합니다. *system\_health* 세션은 기본적으로 사용하도록 설정되므로 교착 상태 정보를 캡처하기 위해 별도의 xEvent 세션을 구성하지 않아도 됩니다. 
+또한 [!INCLUDE[ssSQL11](../includes/sssql11-md.md)] 이상에서는 교착 상태가 발생할 때 **_system\_health_* _ 세션이 이미 교착 상태 그래프가 포함된 `xml_deadlock_report` xEvent를 모두 캡처합니다. _system\_health* 세션은 기본적으로 사용되므로, 교착 상태 정보를 캡처하기 위해 별도의 xEvent 세션을 구성하지 않아도 됩니다. 
 
 교착 상태 그래프에는 일반적으로 세 개의 서로 다른 노드가 있습니다.
 -   **victim-list**. 교착 상태 희생자 프로세스 식별자.
@@ -1861,7 +1861,7 @@ GO
 -   [SET TRANSACTION ISOLATION LEVEL](../t-sql/statements/set-transaction-isolation-level-transact-sql.md) 문을 실행합니다.  
 -   System.Data.SqlClient 관리 네임스페이스를 사용하는 ADO.NET 애플리케이션에서는 SqlConnection.BeginTransaction 메서드를 사용하여 *IsolationLevel* 옵션을 지정할 수 있습니다.  
 -   ADO를 사용하는 애플리케이션에서는 `Autocommit Isolation Levels` 속성을 설정할 수 있습니다.  
--   OLE DB를 사용하는 애플리케이션에서는 트랜잭션을 시작할 때 *isoLevel*을 원하는 트랜잭션 격리 수준으로 설정하고 ITransactionLocal::StartTransaction을 호출할 수 있습니다. 자동 커밋 모드에서 격리 수준을 지정할 때 OLE DB를 사용하는 애플리케이션에서는 DBPROPSET_SESSION 속성인 DBPROP_SESS_AUTOCOMMITISOLEVELS를 원하는 트랜잭션 격리 수준으로 설정할 수 있습니다.  
+-   OLE DB를 사용하는 애플리케이션에서는 트랜잭션을 시작할 때 *isoLevel* 을 원하는 트랜잭션 격리 수준으로 설정하고 ITransactionLocal::StartTransaction을 호출할 수 있습니다. 자동 커밋 모드에서 격리 수준을 지정할 때 OLE DB를 사용하는 애플리케이션에서는 DBPROPSET_SESSION 속성인 DBPROP_SESS_AUTOCOMMITISOLEVELS를 원하는 트랜잭션 격리 수준으로 설정할 수 있습니다.  
 -   ODBC를 사용하는 애플리케이션에서는 SQLSetConnectAttr를 사용하여 SQL_COPT_SS_TXN_ISOLATION 특성을 설정할 수 있습니다.  
   
 격리 수준을 지정하면 [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)] 세션에서 모든 쿼리와 DML(데이터 조작 언어) 문의 잠금 동작이 해당 격리 수준에서 작동합니다. 세션이 종료되거나 격리 수준을 다른 수준으로 설정할 때까지 해당 격리 수준이 적용됩니다.  
@@ -1974,7 +1974,7 @@ GO
 ### <a name="nesting-transactions"></a>중첩 트랜잭션  
  명시적 트랜잭션은 중첩할 수 있습니다. 중첩 트랜잭션은 주로 트랜잭션의 기존 프로세스나 활성 트랜잭션이 없는 프로세스에서 호출할 수 있는 저장 프로시저의 트랜잭션을 지원하기 위한 것입니다.  
   
- 다음 예에서는 중첩된 트랜잭션의 용도를 보여 줍니다. *TransProc* 프로시저는 프로시저를 실행하는 프로세스의 트랜잭션 모드에 관계없이 트랜잭션을 강제 실행합니다. 트랜잭션이 활성 중일 때 *TransProc*을 호출하면 *TransProc*에서 중첩된 트랜잭션이 대부분 무시되고 바깥쪽 트랜잭션에서 수행된 최종 동작을 기준으로 `INSERT` 문이 커밋 또는 롤백됩니다. 처리 중인 트랜잭션이 없는 프로세스에서 `TransProc`를 실행하면 실제로 프로시저 마지막에서 `COMMIT TRANSACTION`가 `INSERT` 문이 커밋됩니다.  
+ 다음 예에서는 중첩된 트랜잭션의 용도를 보여 줍니다. *TransProc* 프로시저는 프로시저를 실행하는 프로세스의 트랜잭션 모드에 관계없이 트랜잭션을 강제 실행합니다. 트랜잭션이 활성 중일 때 *TransProc* 을 호출하면 *TransProc* 에서 중첩된 트랜잭션이 대부분 무시되고 바깥쪽 트랜잭션에서 수행된 최종 동작을 기준으로 `INSERT` 문이 커밋 또는 롤백됩니다. 처리 중인 트랜잭션이 없는 프로세스에서 `TransProc`를 실행하면 실제로 프로시저 마지막에서 `COMMIT TRANSACTION`가 `INSERT` 문이 커밋됩니다.  
   
 ```sql  
 SET QUOTED_IDENTIFIER OFF;  
@@ -2013,14 +2013,14 @@ GO
   
  `COMMIT TRANSACTION` 또는 `COMMIT WORK`에 대한 각 호출은 마지막으로 실행된 `BEGIN TRANSACTION`에 적용됩니다. `BEGIN TRANSACTION` 문을 중첩하면 `COMMIT` 문이 마지막으로 중첩된 트랜잭션, 즉 가장 안쪽의 트랜잭션에만 적용됩니다. 중첩된 트랜잭션 내의 `COMMIT TRANSACTION` *transaction_name* 문이 바깥쪽 트랜잭션의 트랜잭션 이름을 참조해도 커밋은 가장 안쪽의 트랜잭션에만 적용됩니다.  
   
- `ROLLBACK TRANSACTION` 문의 *transaction_name* 매개 변수는 명명된 중첩 트랜잭션 집합의 안쪽 트랜잭션을 참조할 수 없습니다. *transaction_name*은 가장 바깥쪽 트랜잭션의 트랜잭션 이름만 참조할 수 있습니다. 바깥쪽 트랜잭션의 이름을 사용하는 ROLLBACK TRANSACTION *transaction_name* 문이 중첩 트랜잭션 집합의 특정 수준에서 실행되면 중첩된 트랜잭션이 모두 롤백됩니다. `ROLLBACK WORK` 또는 `ROLLBACK TRANSACTION` 문이 *transaction_name* 매개 변수 없이 중첩 트랜잭션 집합의 특정 수준에서 실행되면 가장 바깥쪽 트랜잭션을 포함하여 모든 중첩 트랜잭션이 롤백됩니다.  
+ `ROLLBACK TRANSACTION` 문의 *transaction_name* 매개 변수는 명명된 중첩 트랜잭션 집합의 안쪽 트랜잭션을 참조할 수 없습니다. *transaction_name* 은 가장 바깥쪽 트랜잭션의 트랜잭션 이름만 참조할 수 있습니다. 바깥쪽 트랜잭션의 이름을 사용하는 ROLLBACK TRANSACTION *transaction_name* 문이 중첩 트랜잭션 집합의 특정 수준에서 실행되면 중첩된 트랜잭션이 모두 롤백됩니다. `ROLLBACK WORK` 또는 `ROLLBACK TRANSACTION` 문이 *transaction_name* 매개 변수 없이 중첩 트랜잭션 집합의 특정 수준에서 실행되면 가장 바깥쪽 트랜잭션을 포함하여 모든 중첩 트랜잭션이 롤백됩니다.  
   
  `@@TRANCOUNT` 함수는 현재 트랜잭션 중첩 수준을 기록합니다. 각 `BEGIN TRANSACTION` 문은 `@@TRANCOUNT`를 1씩 증가시킵니다. `COMMIT TRANSACTION` 또는 `COMMIT WORK` 문은 각기 `@@TRANCOUNT`을 1씩 감소시킵니다. 트랜잭션 이름이 없는 `ROLLBACK WORK` 또는 `ROLLBACK TRANSACTION` 문은 모든 중첩 트랜잭션을 롤백하고 `@@TRANCOUNT`을 0으로 되돌립니다. 중첩 트랜잭션 집합에서 가장 바깥쪽 트랜잭션의 트랜잭션 이름을 사용하는 `ROLLBACK TRANSACTION`은 모든 중첩 트랜잭션을 롤백하고 `@@TRANCOUNT`를 0으로 되돌립니다. 트랜잭션 안에 있는지 확실하지 않을 때는 `SELECT @@TRANCOUNT`을 조회하여 1 이상인지 확인합니다. `@@TRANCOUNT`이 0이면 트랜잭션 밖에 있는 것입니다.  
   
 ### <a name="using-bound-sessions"></a>바운드 세션 사용  
  바운드 세션을 통해 같은 서버의 여러 세션 간에 동작을 편리하게 조정할 수 있습니다. 바운드 세션을 사용하면 두 개 이상의 세션에서 같은 트랜잭션과 잠금을 공유할 수 있으며 여러 바운드 세션이 잠금 충돌 없이 같은 데이터 작업을 수행할 수 있습니다. 바운드 세션은 같은 애플리케이션 내의 여러 세션에서 생성되거나 개별 세션의 여러 애플리케이션에서 생성될 수 있습니다.  
   
- 바운드 세션에 참여하려면 세션에서 개방형 Data Services를 통한 `sp_getbindtoken` 또는 `srv_getbindtoken`를 호출하여 바인드 토큰을 가져와야 합니다. 바인드 토큰은 각 바운드 트랜잭션을 고유하게 식별하는 문자열입니다. 가져온 바인드 토큰은 현재 세션과 바인딩할 다른 세션으로 전송됩니다. 다른 세션은 첫 번째 세션으로부터 받은 바인드 토큰으로 **sp_bindsession**을 호출하여 트랜잭션에 바인딩합니다.  
+ 바운드 세션에 참여하려면 세션에서 개방형 Data Services를 통한 `sp_getbindtoken` 또는 `srv_getbindtoken`를 호출하여 바인드 토큰을 가져와야 합니다. 바인드 토큰은 각 바운드 트랜잭션을 고유하게 식별하는 문자열입니다. 가져온 바인드 토큰은 현재 세션과 바인딩할 다른 세션으로 전송됩니다. 다른 세션은 첫 번째 세션으로부터 받은 바인드 토큰으로 **sp_bindsession** 을 호출하여 트랜잭션에 바인딩합니다.  
   
 > [!NOTE]  
 > `sp_getbindtoken` 또는 `srv_getbindtoken`가 성공하려면 세션에 활성 사용자 트랜잭션이 있어야 합니다.  
@@ -2094,7 +2094,7 @@ GO
  또한 스냅샷 격리 수준을 사용하면 새 트랜잭션이 잠금을 확보하지 않더라도 장기 실행 트랜잭션이 `tempdb`에서 이전 버전이 제거되지 않도록 방지합니다.  
   
 ### <a name="managing-long-running-transactions"></a>장기 실행 트랜잭션 관리  
- *장기 실행 트랜잭션*은 제때에 커밋되거나 롤백되지 않은 활성 트랜잭션입니다. 예를 들어 트랜잭션의 시작과 끝을 사용자가 제어하는 경우에는 대개 사용자가 트랜잭션을 시작한 후 트랜잭션에서 사용자의 응답을 기다리는 동안 자리를 비울 때 장기 실행 트랜잭션이 발생합니다.  
+ *장기 실행 트랜잭션* 은 제때에 커밋되거나 롤백되지 않은 활성 트랜잭션입니다. 예를 들어 트랜잭션의 시작과 끝을 사용자가 제어하는 경우에는 대개 사용자가 트랜잭션을 시작한 후 트랜잭션에서 사용자의 응답을 기다리는 동안 자리를 비울 때 장기 실행 트랜잭션이 발생합니다.  
   
  장기 실행 트랜잭션으로 인해 데이터베이스에 대해 다음과 같은 심각한 문제가 발생할 수 있습니다.  
   

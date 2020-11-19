@@ -11,12 +11,12 @@ ms.author: drskwier
 ms.reviewer: maghan
 ms.custom: seo-lt-2019
 ms.date: 10/27/2020
-ms.openlocfilehash: fbfe0f98d5a61033bdc17e7c974e3859814ce4cc
-ms.sourcegitcommit: b3a711a673baebb2ff10d7142b209982b46973ae
+ms.openlocfilehash: c2139f53771ed50a5ce01cc9fb4c3c64bfd14692
+ms.sourcegitcommit: 2144a22ad4380182133e87664a907fe6f06b5f95
 ms.translationtype: HT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 11/05/2020
-ms.locfileid: "93364785"
+ms.lasthandoff: 11/12/2020
+ms.locfileid: "94570970"
 ---
 # <a name="release-notes-for-sql-server-management-studio-ssms"></a>SSMS(SQL Server Management Studio) 릴리스 정보
 
@@ -60,7 +60,7 @@ SSMS 18.7은 SSMS의 최신 GA(일반 공급) 릴리스입니다. 이전 버전�
 | 일반 SSMS | SMO를 사용하는 SSMS 확장을 새로운 SSMS용 v161 패키지를 대상으로 지정하여 다시 컴파일해야 합니다. https://www.nuget.org/packages/Microsoft.SqlServer.SqlManagementObjects.SSMS/ 에서 미리 보기 버전을 사용할 수 있습니다. </br></br> Microsoft.SqlServer.SqlManagementObjects 패키지의 이전 160개 버전에 대해 컴파일된 확장도 계속해서 작동합니다. | 해당 없음 |
 | Integration Services | Azure-SSIS Integration Runtime에서 패키지를 가져오거나 내보낼 때 Integration Services 스크립트 태스크/구성 요소가 포함된 패키지에 대한 스크립트가 손실됩니다. 해결 방법: “C:\Program Files (x86)\Microsoft SQL Server Management Studio 18\Common7\IDE\CommonExtensions\MSBuild” 폴더를 제거합니다. | 해당 없음 |
 | Integration Services | 최신 운영 체제에서 Integration Services에 대한 원격 연결이 "지정된 서비스가 설치된 서비스로 존재하지 않습니다." 오류와 함께 실패할 수 있습니다. 해결 방법: Computer\HKEY_CLASSES_ROOT\AppID & Computer\HKEY_CLASSES_ROOT\ WOW6432Node\AppID에서 Integration Services 관련 레지스트리 위치를 확인하고, 이러한 하이브 내에서 연결하려는 특정 버전의 Integration Services에 대해 'LocalService'라는 레지스트리 키 이름을 'LocalService_A'로 바꿉니다. | 해당 없음 |
-| 개체 탐색기 | 18.7 이전의 SSMS 릴리스는 [Azure Synapse Analytics SQL 주문형](https://docs.microsoft.com/azure/synapse-analytics/sql/on-demand-workspace-overview)과 관련된 엔진 변경 사항으로 인해 개체 탐색기에서 호환성이 손상되는 변경이 적용되었습니다. | Azure Synapse Analytics SQL 주문형 SSMS에서 개체 탐색기를 계속 활용하려면 SSMS 18.7 이상이 필요합니다. |
+| 개체 탐색기 | 18.7 이전의 SSMS 릴리스는 [Azure Synapse Analytics SQL 주문형](https://docs.microsoft.com/azure/synapse-analytics/sql/on-demand-workspace-overview)과 관련된 엔진 변경 사항으로 인해 개체 탐색기에서 호환성이 손상되는 변경이 적용되었습니다. | Azure Synapse Analytics SQL 주문형 SSMS에서 개체 탐색기를 계속 활용하려면 SSMS 18.7을 사용해야 합니다. |
 
 다른 알려진 문제를 확인하고 제품 팀에 피드백을 제공하려면 [SQL Server 사용자 피드백](https://feedback.azure.com/forums/908035-sql-server)을 참조하세요.
 
@@ -142,7 +142,7 @@ SSMS 18.7은 SSMS의 최신 GA(일반 공급) 릴리스입니다. 이전 버전�
 | 개체 탐색기 | 일부 개체 탐색기 노드(예: "정책 관리", "확장 이벤트")에서 **PowerShell 시작** 메뉴를 선택할 때 PowerShell이 제대로 시작되지 않는 문제를 해결했습니다. |
 | 등록된 서버 | 중앙 관리 서버를 등록하려고 할 때 SSMS에서 크래시가 발생하는 문제를 해결했습니다. |
 | 등록된 서버 | 등록된 서버에서 Azure Data Studio를 시작하는 메뉴 항목이 없는 문제를 해결했습니다. |
-| 보고서 | 성능 대시보드에서 하위 링크(예: **비용이 높은 쿼리** )로 이동하려고 할 때 작동하지 않는 문제를 해결했습니다. 이 문제는 비 영어 버전의 SSMS에서 자주 발생했습니다. [SQL Server 사용자 피드백](https://feedback.azure.com/forums/908035/suggestions/41454499)을 참조하세요. |
+| 보고서 | 성능 대시보드에서 하위 링크(예: **비용이 높은 쿼리**)로 이동하려고 할 때 작동하지 않는 문제를 해결했습니다. 이 문제는 비 영어 버전의 SSMS에서 자주 발생했습니다. [SQL Server 사용자 피드백](https://feedback.azure.com/forums/908035/suggestions/41454499)을 참조하세요. |
 | 실행 계획 | 검색 노드를 사용하여 텍스트를 검색할 때 SSMS에서 크래시가 발생하는 문제를 해결했습니다. [SQL Server 사용자 피드백](https://feedback.azure.com/forums/908035/suggestions/40421650)을 참조하세요. |
 | 실행 계획 | 메모리 부여 도구 설명 행에 KB 접미사 추가 |
 | 취약성 평가 | 취약성 평가에서 기준선을 설정하려고 할 때 SSMS가 오류를 throw하는 문제를 해결했습니다. [SQL Server 사용자 피드백](https://feedback.azure.com/forums/908035/suggestions/40578565)을 참조하세요. |
@@ -277,7 +277,7 @@ SSMS 18.7은 SSMS의 최신 GA(일반 공급) 릴리스입니다. 이전 버전�
 | SMO/스크립팅 | *기능 제한* 에 대한 지원이 제거되었습니다(이 미리 보기 기능은 SQL Azure 및 SQL 온-프레미스에서 제거됨). |
 | SMO/스크립팅 | 스크립트 생성 마법사에 대한 대상으로 *Notebook* 을 추가했습니다. |
 | SMO/스크립팅 | *SQL On Demand* 에 대한 지원을 추가했습니다. |
-| SMO/스크립팅 | [SQL 평가 API](../tools/sql-assessment-api/sql-assessment-api-overview.md) - Platform, Name 및 engineEdition 필드에는 이제 일반적인 쉼표로 구분된 목록( *platform* : \[*Windows* , *Linux*\])뿐 아니라 정규식( *platform* : *\/Windows\|Linux\/* )도 포함될 수 있습니다.
+| SMO/스크립팅 | [SQL 평가 API](../tools/sql-assessment-api/sql-assessment-api-overview.md) - Platform, Name 및 engineEdition 필드에는 이제 일반적인 쉼표로 구분된 목록(*platform*: \[*Windows*, *Linux*\])뿐 아니라 정규식(*platform*: *\/Windows\|Linux\/* )도 포함될 수 있습니다.
 | SMO/스크립팅 | [SQL 평가 API](../tools/sql-assessment-api/sql-assessment-api-overview.md) - 13개의 평가 규칙이 추가되었습니다. 자세한 내용은 [GitHub](https://github.com/microsoft/sql-server-samples/tree/master/samples/manage/sql-assessment-api))를 참조하세요. |
 
 #### <a name="bug-fixes-in-185"></a>18.5의 버그 수정
@@ -320,11 +320,11 @@ SSMS 18.7은 SSMS의 최신 GA(일반 공급) 릴리스입니다. 이전 버전�
 |플랫 파일 가져오기 | Null 허용 열에서 모두 선택을 허용하도록 플랫 파일 가져오기 마법사를 업데이트했습니다. [SQL Server 사용자 피드백](https://feedback.azure.com/forums/908035/suggestions/38027137)을 참조하세요. |
 | 개체 탐색기 | 연결 대화 상자에서 연결 문자열을 사용하여 연결하는 경우 개체 탐색기가 잘못된 정보를 표시할 수 있는 문제를 해결했습니다. |
 | 개체 탐색기 | 수천 개 테이블(20k+)이 있는 데이터베이스에서 테이블을 확장하는 동안 OE가 느려지는 문제를 해결했습니다. |
-| 쿼리 저장소 UI | 각 개별 대기 범주에 대한 실행 수를 합하는(정확하지 않음) TRC 보고서 계산 실행 횟수( *대기 시간* 메트릭)를 수정했습니다. 쿼리는 단일 실행을 제외하고 대기한 각 대기 범주에 대해 등록됩니다. 따라서 TRC가 대기 범주에서만 합계를 계산하는 경우 실행 횟수가 과장됩니다. 실제로는 wait_category의 최대값이어야 합니다. |
+| 쿼리 저장소 UI | 각 개별 대기 범주에 대한 실행 수를 합하는(정확하지 않음) TRC 보고서 계산 실행 횟수(*대기 시간* 메트릭)를 수정했습니다. 쿼리는 단일 실행을 제외하고 대기한 각 대기 범주에 대해 등록됩니다. 따라서 TRC가 대기 범주에서만 합계를 계산하는 경우 실행 횟수가 과장됩니다. 실제로는 wait_category의 최대값이어야 합니다. |
 | 쿼리 저장소 UI | 결과 집합이 상위 x에서 필터링되면 수정된 TRC 자세히 보기가 잘못된 데이터를 반환합니다. 이는 쿼리가 여러 공통 테이블 식을 사용하고 이를 조인하여 최종 결과 집합을 만들기 때문에 발생합니다. 상위 x가 CTE에 푸시되는 경우에는 때때로 필수 행을 필터링할 수 있습니다. 이 경우 결과 집합을 비결정적으로 만들 수 있습니다. 해결 방법은 상위 x 절을 CTE에 푸시하지 않는 것입니다. |
 | 쿼리 저장소 UI | 수정된 플랜 요약은 표 또는 차트 보기 모두에서 마지막 쿼리 실행 대기 시간이 필요합니다. 이 열이 없으면 쿼리가 중단됩니다. 이 변경 집합은 대기 통계 CTE에 이 열을 추가합니다. |
 | 실행 계획 | SSMS가 여러 번 실행되는 연산자에 대해 예상 행 개수를 표시하는 방법을 개선했습니다. (1) SSMS에서 *예상 행 수* 를 "실행당 예상 행 수"로 수정했습니다. (2) 새 속성 *모든 실행에 대한 예상 행 수* 를 추가했습니다. (3) 속성 *실제 행 수* 를 *모든 실행에 대한 실제 행 수* 로 수정했습니다. |
-| SQL 에이전트 | SQL 에이전트 작업 단계를 편집하려고 할 때 SSMS UI가 고정되는 문제를 해결했습니다. 이제 SSMS에서 (적어도 런타임 시 결정되지 않은 SQL 에이전트에서 지원하는 간단한 매크로/토큰에 대해) 이름이 토큰화된 output_file을 볼 수 있습니다( *보기* 단추). 또한 사용자가 (SQL 권한 때문에) 파일에 액세스할 수 없는 경우 SSMS는 "보기" 단추를 비활성화하지 않습니다. [SQL Server 사용자 피드백](https://feedback.azure.com/forums/908035/suggestions/39063124)을 참조하세요. |
+| SQL 에이전트 | SQL 에이전트 작업 단계를 편집하려고 할 때 SSMS UI가 고정되는 문제를 해결했습니다. 이제 SSMS에서 (적어도 런타임 시 결정되지 않은 SQL 에이전트에서 지원하는 간단한 매크로/토큰에 대해) 이름이 토큰화된 output_file을 볼 수 있습니다(*보기* 단추). 또한 사용자가 (SQL 권한 때문에) 파일에 액세스할 수 없는 경우 SSMS는 "보기" 단추를 비활성화하지 않습니다. [SQL Server 사용자 피드백](https://feedback.azure.com/forums/908035/suggestions/39063124)을 참조하세요. |
 | SQL 에이전트 | 작업 단계 페이지에서 탭 순서를 수정했습니다. |
 | SQL 에이전트 | 작업 단계 페이지에서 "다음" 및 "이전" 단추의 위치를 반대로 하여 논리적 순서로 배치했습니다. |
 | SQL 에이전트 | UI가 잘리지 않도록 작업 일정 창을 조정했습니다. |
@@ -420,8 +420,8 @@ SSMS 18.7은 SSMS의 최신 GA(일반 공급) 릴리스입니다. 이전 버전�
 
 | 새 항목 | 세부 정보 |
 |----------|---------|
-| 데이터 분류 | 데이터 분류 정보를 열 속성 UI에 추가했습니다( *정보 유형* , *정보 유형 ID* , *민감도 레이블* 및 *민감도 레이블 ID* 는 SSMS UI에 노출되지 않음). |
-| Intellisense/편집기 | 최근 SQL Server 2019에 추가된 기능에 대한 지원이 업데이트되었습니다(예: *ALTER SERVER CONFIGURATION* ). |
+| 데이터 분류 | 데이터 분류 정보를 열 속성 UI에 추가했습니다(*정보 유형*, *정보 유형 ID*, *민감도 레이블* 및 *민감도 레이블 ID* 는 SSMS UI에 노출되지 않음). |
+| Intellisense/편집기 | 최근 SQL Server 2019에 추가된 기능에 대한 지원이 업데이트되었습니다(예: *ALTER SERVER CONFIGURATION*). |
 | Integration Services | ADF 파이프라인에서 SSIS 패키지 실행 작업으로 Azure-SSIS Integration Runtime에서 SSIS 패키지 실행을 호출하는 새 선택 메뉴 항목 `Tools > Migrate to Azure > Configure Azure-enabled DTExec`가 추가되었습니다. |
 | SMO/스크립팅 | Azure SQL DW UNIQUE 제약 조건의 스크립팅 지원에 대한 지원이 추가되었습니다. |
 | SMO/스크립팅 | 데이터 분류 </br> - SQL 버전 10(SQL 2008) 이상에 대한 지원이 추가되었습니다. </br> - SQL 버전 15(SQL 2019) 이상 및 Azure SQL Database에 대한 새 민감도 특성 '순위'를 추가했습니다. |
@@ -501,7 +501,7 @@ SSMS 18.7은 SSMS의 최신 GA(일반 공급) 릴리스입니다. 이전 버전�
 | 일반 SSMS | 서버가 [SQL Linux 컨테이너](../linux/quickstart-install-connect-docker.md)인 경우 [서버 등록](register-servers/register-servers.md)의 노드에서 *PowerShell을 시작* 할 수 없는 문제를 해결했습니다. |
 | 플랫 파일 가져오기 | SSMS 18.0에서 18.1로 업그레이드 한 후 *플랫 파일 가져오기* 가 작동하지 않는 문제를 해결했습니다. [SQL Server 사용자 피드백](https://feedback.azure.com/forums/908035/suggestions/37912636)을 참조하세요. |
 | 플랫 파일 가져오기 | *플랫 파일 가져오기 마법사가 헤더에 유니코드 문자가 포함된 .csv 파일에서 중복되거나 잘못된 열* 을 보고하는 문제가 해결되었습니다. |
-| 개체 탐색기 | Sql Express에 연결된 경우 일부 메뉴 항목(예: SQL Server *가져오기 및 내보내기 마법사* )이 없거나 사용하지 않도록 설정되는 문제를 해결했습니다. 자세한 내용은 [SQL Server 사용자 피드백](https://feedback.azure.com/forums/908035/suggestions/37500016)을 참조하세요. |
+| 개체 탐색기 | Sql Express에 연결된 경우 일부 메뉴 항목(예: SQL Server *가져오기 및 내보내기 마법사*)이 없거나 사용하지 않도록 설정되는 문제를 해결했습니다. 자세한 내용은 [SQL Server 사용자 피드백](https://feedback.azure.com/forums/908035/suggestions/37500016)을 참조하세요. |
 | 개체 탐색기 | 개체 탐색기에서 편집기로 개체를 끌어올 때 SSMS가 충돌하는 문제를 해결했습니다. 자세한 내용은 [SQL Server 사용자 피드백](https://feedback.azure.com/forums/908035/suggestions/37887988)을 참조하세요. |
 | 개체 탐색기 | 데이터베이스 이름을 바꾸면 잘못된 데이터베이스 이름이 개체 탐색기에 표시되는 문제를 해결했습니다. 자세한 내용은 [SQL Server 사용자 피드백](https://feedback.azure.com/forums/908035/suggestions/37638472)을 참조하세요. |
 | 개체 탐색기 | Windows에서 지원하지 않는 데이터 정렬을 사용하도록 설정된 데이터베이스에 대해 개체 탐색기에서 *테이블* 노드를 확장하려고 할 때 오류를 트리거하는(사용자가 자신의 테이블을 확장할 수 없음) 장기 미해결 문제가 해결되었습니다. 이러한 데이터 정렬의 예는 Korean_Wansung_Unicode_CI_AS입니다. |
@@ -581,7 +581,7 @@ SSMS 18.7은 SSMS의 최신 GA(일반 공급) 릴리스입니다. 이전 버전�
 | 보고서 | 보고서(SQL 성능 대시보드 보고서)를 수정하여 GrantedQueryMemory를 KB 단위로 표시합니다. 자세한 내용은 [SQL Server 사용자 피드백](https://feedback.azure.com/forums/908035/suggestions/37167289)을 참조하세요. |
 | 보고서 | Always-On 시나리오에서 로그 블록의 추적을 개선했습니다. |
 | 실행 계획 | 실행 계획 스키마에 새 실행 계획 요소 *SpillOccurred* 가 추가되었습니다. |
-| 실행 계획 | 실행 계획 스키마에 원격 읽기( *ActualPageServerReads* , *ActualPageServerReadAheads* *ActualLobPageServerReads* , *ActualLobPageServerReadAheads* )를 추가했습니다. |
+| 실행 계획 | 실행 계획 스키마에 원격 읽기(*ActualPageServerReads*, *ActualPageServerReadAheads* *ActualLobPageServerReads*, *ActualLobPageServerReadAheads*)를 추가했습니다. |
 | SMO/스크립팅 | 비그래프 테이블에 대한 스크립팅 중에 에지 제약 조건을 쿼리하지 마세요. |
 | SMO/스크립팅 | *데이터 분류* 로 열을 스크립팅할 때 민감도 분류에 대한 제약 조건이 제거되었습니다. |
 | SMO/스크립팅 | 데이터 생성 시 그래프 테이블의 "스크립트 생성"이 실패하는 문제가 해결되었습니다. 자세한 내용은 [SQL Server 사용자 피드백](https://feedback.azure.com/forums/908035-sql-server/suggestions/32898466)을 참조하세요. |
@@ -813,7 +813,7 @@ SSMS 18.7은 SSMS의 최신 GA(일반 공급) 릴리스입니다. 이전 버전�
 |결과 표|그리드를 클릭할 때 "범위를 벗어난 인덱스" 예외가 발생하는 문제가 해결되었습니다.|
 |결과 표|그리드 결과 배경색이 무시되는 문제가 해결되었습니다. 자세한 내용은 [https://feedback.azure.com/forums/908035/suggestions/32895916](https://feedback.azure.com/forums/908035/suggestions/32895916)를 참조하세요. |
 |실행 계획|둘 이상의 스레드가 있는 경우 새 메모리 부여 연산자 속성이 잘못 표시됩니다.|
-|실행 계획|실제 실행 xml 계획의 RunTimeCountersPerThread에 다음과 같은 4개의 특성을 추가합니다. HpcRowCount( *hpc* 디바이스에서 처리된 행 수), HpcKernelElapsedUs(사용 중인 커널 실행에 대해 경과된 시간 대기), HpcHostToDeviceBytes (호스트에서 디바이스로 전송된 바이트) 및 HpcDeviceToHostBytes (디바이스에서 호스트로 전송된 바이트).|
+|실행 계획|실제 실행 xml 계획의 RunTimeCountersPerThread에 다음과 같은 4개의 특성을 추가합니다. HpcRowCount(*hpc* 디바이스에서 처리된 행 수), HpcKernelElapsedUs(사용 중인 커널 실행에 대해 경과된 시간 대기), HpcHostToDeviceBytes (호스트에서 디바이스로 전송된 바이트) 및 HpcDeviceToHostBytes (디바이스에서 호스트로 전송된 바이트).|
 |실행 계획|유사한 계획 노드가 잘못된 위치에서 강조 표시되는 문제가 해결되었습니다.|
 |SMO|SMO/ServerConnection이 SqlCredential 기반 연결을 올바르게 설정하지 않는 문제가 해결되었습니다. 자세한 내용은 [https://feedback.azure.com/forums/908035-sql-server/suggestions/33698941](https://feedback.azure.com/forums/908035-sql-server/suggestions/33698941)를 참조하세요. |
 |SMO|SMO를 사용하여 작성된 애플리케이션이 각 스레드에서 별도의 SqlConnection 인스턴스를 사용하더라도 여러 스레드에서 동일한 서버의 데이터베이스를 열거하려고 할 때 오류가 발생하는 문제를 해결했습니다.|
@@ -897,7 +897,7 @@ SSMS 버전 18.0에서 사용되지 않으며 제거된 기능은 다음과 같�
 
 SSMS 설치에 문제가 있고, 표준 제거 및 다시 설치로 해결되지 않는 경우 먼저 Visual Studio 2015 IsoShell을 [복구](https://support.microsoft.com/help/4028054/windows-10-repair-or-remove-programs)해 볼 수 있습니다. Visual Studio 2015 IsoShell을 복구해도 문제가 해결되지 않으면 아래 방법을 통해 여러 가지 임의의 문제를 해결합니다.
 
-1. 애플리케이션을 제거한 것과 동일한 방식으로 SSMS를 제거합니다(사용자의 Windows 버전에 따라 *앱 및 기능* , *프로그램 및 기능* 사용).
+1. 애플리케이션을 제거한 것과 동일한 방식으로 SSMS를 제거합니다(사용자의 Windows 버전에 따라 *앱 및 기능*, *프로그램 및 기능* 사용).
 
 2. **관리자 권한 cmd 프롬프트에서** Visual Studio 2015 IsoShell을 제거합니다.
 

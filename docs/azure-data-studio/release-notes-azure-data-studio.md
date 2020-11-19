@@ -8,17 +8,40 @@ author: yualan
 ms.author: alayu
 ms.reviewer: maghan
 ms.custom: seodec18
-ms.date: 10/14/2020
-ms.openlocfilehash: c75105ddf77c62dd6c871b679dce32ec08c5364c
-ms.sourcegitcommit: 76ab3b57718341c6057613c9bd38cf82fb17786e
+ms.date: 11/12/2020
+ms.openlocfilehash: a45b17b98ae8c8d398eee18c7678a119cb32a4f7
+ms.sourcegitcommit: 54cd97a33f417432aa26b948b3fc4b71a5e9162b
 ms.translationtype: HT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 10/14/2020
-ms.locfileid: "92059191"
+ms.lasthandoff: 11/13/2020
+ms.locfileid: "94584806"
 ---
 # <a name="release-notes-for-azure-data-studio"></a>Azure Data Studio의 릴리스 정보
 
 **[최신 릴리스 다운로드 및 설치](./download-azure-data-studio.md)**
+
+## <a name="november-2020"></a>2020년 11월
+
+2020년 11월 12일 &nbsp; / &nbsp; 버전: 1.24.0
+
+&nbsp;
+
+| 변경 | 세부 정보 |
+| ------ | ------- |
+| 버그 수정 | 전체 수정 목록은 [GitHub의 버그 및 이슈](https://github.com/microsoft/azuredatastudio/issues?q=is%3Aissue+milestone%3A%22November+2020+Release%22+is%3Aclosed)를 참조하세요. |
+| 연결 대화 상자 | 연결 대화 상자에 새 찾아보기 탭이 추가되었습니다. |
+| 확장 업데이트 | Postgres 확장 업데이트를 릴리스했습니다. |
+| 새로운 Notebook 기능 | Notebook 지원에 SQL의 새로운 기능이 추가되었습니다. <br/> Notebook 매개 변수화 지원에 새로운 기능이 추가되었습니다. <br/>  SQL Notebooks의 결과 스트리밍에 새로운 기능이 추가되었습니다. |
+| Python 설치 | 기본 Python 설치에서 PROSE 패키지가 제거되었습니다. |
+
+### <a name="known-issues-1240"></a>알려진 문제(1.24.0)
+
+| 새 항목 | 세부 정보 | 해결 방법 |
+|----------|---------|------------|
+| Azure Arc 확장 | [알려진 문제:](https://github.com/microsoft/azuredatastudio/issues/13319) Arc MIAA 및 PG 배포를 위한 "Notebook으로 스크립트" 단추는 Notebook으로 스크립팅 전에 필드 유효성 검사를 수행하지 않습니다. 즉, 사용자가 암호 확인 입력에 잘못된 암호를 입력할 경우 잘못된 암호 값을 가진 Notebook이 생깁니다.| 사용자가 대신 사용해야 하는 "배포" 단추는 예상대로 작동합니다. |
+| 개체 탐색기 | 1\.24.0 이전의 ADS 릴리스는 [Azure Synapse Analytics SQL 주문형](https://docs.microsoft.com/azure/synapse-analytics/sql/on-demand-workspace-overview)과 관련된 엔진 변경 사항으로 인해 개체 탐색기에서 호환성이 손상되는 변경이 적용되었습니다. | Azure Synapse Analytics SQL 주문형 Azure Data Studio에서 개체 탐색기를 계속 활용하려면 Azure Data Studio 1.24.0 이상을 사용해야 합니다. |
+
+다른 알려진 문제를 확인하고 제품 팀에 피드백을 제공하려면 [Azure Data Studio 피드백](https://github.com/microsoft/azuredatastudio)을 참조할 수 있습니다.
 
 ## <a name="october-2020"></a>2020년 10월
 
@@ -430,7 +453,7 @@ ms.locfileid: "92059191"
 
 | 변경 | 세부 정보 |
 | :----- | :------ |
-| **서버** 탭의 이름이 **연결**로 바뀜 | |
+| **서버** 탭의 이름이 **연결** 로 바뀜 | |
 | Azure Resource Explorer가 연결 아래의 Azure 뷰렛으로 이동됨 | 이제 사용자가 연결 뷰에서 Azure 뷰렛을 통해 Azure SQL 인스턴스를 보고, 펼쳐서 각 서버 또는 데이터베이스 아래의 개체를 볼 수 있습니다.|
 | SQL Notebook 기능 개선 | &bull; &nbsp; 모든 셀의 출력을 지우는 단추가 도구 모음에 추가됨 <br/>&bull; &nbsp; 모든 셀을 실행하는 단추가 도구 모음에 추가됨 <br/>&bull; &nbsp; 연결 대상 드롭다운에 서버 이름(설정된 경우) 대신 연결 이름이 표시되도록 수정됨 <br/>&bull; &nbsp; 상대 이미지 경로를 사용할 때 Markdown의 이미지가 렌더링되지 않는 문제가 해결됨 <br/>&bull; &nbsp; 두 번 클릭하여 열 크기를 자동으로 조정하는 기능을 추가하여 Notebook 그리드 기능 개선 및 마우스 휠 지원 개선 <br/>&bull; &nbsp; Notebook을 통해 python을 설치할 때 오류 처리 및 python 설치 복원력 개선 <br/>&bull; &nbsp; Notebook 셀을 선택할 때 “모두 선택” 기능 개선 <br/>&bull; &nbsp; Notebook을 닫을 때 개체 탐색기 연결에 영향을 주지 않도록 Notebook 연결 개선 <br/>&bull; &nbsp; Notebook 연결이 끊겼으며 셀 실행을 위해 연결해야 하는 경우 사용자에게 메시지를 표시하도록 Notebook 환경 개선<br/>&bull; &nbsp; ADS를 다시 시작할 때 저장하지 않은 Notebook이 ADS에서 리하이드레이션되도록 지원 개선 |
 | 버그 및 이슈 해결 | [GitHub의 버그 및 이슈](https://github.com/Microsoft/azuredatastudio/milestone/26?closed=1)를 참조하세요. |
@@ -617,7 +640,7 @@ Azure Data Studio(이전 SQL Operations Studio)의 일반 공급 릴리스
 
 ‘8월 공개 미리 보기’에서는 기존 시나리오에서 버그 수정, 제품 안정화 및 간극 완화에 중점을 둡니다.
 
-_0.32.8에는 0.32.7의 몇 가지 기능 저하_에 대한 수정([#1971](https://github.com/Microsoft/azuredatastudio/issues/1971), [#2372](https://github.com/Microsoft/azuredatastudio/issues/2372))이 포함되어 있습니다.
+_0.32.8에는 0.32.7의 몇 가지 기능 저하_ 에 대한 수정([#1971](https://github.com/Microsoft/azuredatastudio/issues/1971), [#2372](https://github.com/Microsoft/azuredatastudio/issues/2372))이 포함되어 있습니다.
 
 &nbsp;
 
@@ -670,7 +693,7 @@ _0.32.8에는 0.32.7의 몇 가지 기능 저하_에 대한 수정([#1971](https
 
 2018년 7월 19일 &nbsp; / &nbsp; 버전: 0.31.4 &nbsp; / &nbsp; 공개 미리 보기
 
-*7월 공개 미리 보기*에서는 다음 항목에 중점을 둡니다.
+*7월 공개 미리 보기* 에서는 다음 항목에 중점을 둡니다.
 
 - SQL Server 에이전트 구성 시나리오의 최초 릴리스
 - SQL Server Profiler 세션 및 보기 템플릿 기능 개선
@@ -735,7 +758,7 @@ _0.32.8에는 0.32.7의 몇 가지 기능 저하_에 대한 수정([#1971](https
 
 2018년 5월 7일 &nbsp; / &nbsp; 버전: 0.29.3 &nbsp; / &nbsp; 공개 미리 보기
 
-*5월 공개 미리 보기*에서는 안정화 및 버그 수정에 중점을 둡니다.
+*5월 공개 미리 보기* 에서는 안정화 및 버그 수정에 중점을 둡니다.
 
 &nbsp;
 
@@ -763,7 +786,7 @@ _0.32.8에는 0.32.7의 몇 가지 기능 저하_에 대한 수정([#1971](https
 
 2018년 4월 25일 &nbsp; / &nbsp; 버전: 0.28.6 &nbsp; / &nbsp; 공개 미리 보기
 
-*4월 공개 미리 보기*에는 버그 수정 및 개선 사항이 포함되었습니다.
+*4월 공개 미리 보기* 에는 버그 수정 및 개선 사항이 포함되었습니다.
 
 &nbsp;
 
@@ -825,7 +848,7 @@ _0.32.8에는 0.32.7의 몇 가지 기능 저하_에 대한 수정([#1971](https
 
 2018년 3월 28일 &nbsp; / &nbsp; 버전: 0.27.3 &nbsp; / &nbsp; 공개 미리 보기
 
-*3월 공개 미리 보기*에서는 자주 발생하는 GitHub 이슈를 해결하고 확장성을 개선하는 데 중점을 둡니다. 특히 확장 관리자를 사용하도록 설정하고, 대시보드 관리를 개선하며, SQL 에이전트 및 인사이트 확장을 제공합니다. 이 릴리스에는 다음과 같은 개선 사항이 포함되어 있습니다.
+*3월 공개 미리 보기* 에서는 자주 발생하는 GitHub 이슈를 해결하고 확장성을 개선하는 데 중점을 둡니다. 특히 확장 관리자를 사용하도록 설정하고, 대시보드 관리를 개선하며, SQL 에이전트 및 인사이트 확장을 제공합니다. 이 릴리스에는 다음과 같은 개선 사항이 포함되어 있습니다.
 
 &nbsp;
 
@@ -840,7 +863,7 @@ _0.32.8에는 0.32.7의 몇 가지 기능 저하_에 대한 수정([#1971](https
 
 2018년 2월 15일 &nbsp; / &nbsp; 버전: 0.26.7 &nbsp; / &nbsp; 공개 미리 보기
 
-*2월 공개 미리 보기*에는 몇 가지 기능 제안과 높은 우선 순위의 버그 수정이 포함되었습니다. 이 릴리스에는 다음과 같은 개선 사항이 포함되어 있습니다.
+*2월 공개 미리 보기* 에는 몇 가지 기능 제안과 높은 우선 순위의 버그 수정이 포함되었습니다. 이 릴리스에는 다음과 같은 개선 사항이 포함되어 있습니다.
 
 &nbsp;
 
@@ -870,7 +893,7 @@ _0.32.8에는 0.32.7의 몇 가지 기능 저하_에 대한 수정([#1971](https
 
 2018년 1월 17일 &nbsp; / &nbsp; 버전: 0.25.4 &nbsp; / &nbsp; 공개 미리 보기
 
-*1월 공개 미리 보기*에는 몇 가지 기능 제안과 높은 우선 순위의 버그 수정이 포함되었습니다. 이 릴리스에는 다음과 같은 개선 사항이 포함되어 있습니다.
+*1월 공개 미리 보기* 에는 몇 가지 기능 제안과 높은 우선 순위의 버그 수정이 포함되었습니다. 이 릴리스에는 다음과 같은 개선 사항이 포함되어 있습니다.
 
 &nbsp;
 
@@ -890,7 +913,7 @@ _0.32.8에는 0.32.7의 몇 가지 기능 저하_에 대한 수정([#1971](https
 
 2017년 12월 19일 &nbsp; / &nbsp; 버전: 0.24.1 &nbsp; / &nbsp; 공개 미리 보기
 
-*12월 공개 미리 보기*에는 다음과 같은 개선 사항뿐만 아니라 모든 기능 영역의 여러 버그 수정이 포함되었습니다.
+*12월 공개 미리 보기* 에는 다음과 같은 개선 사항뿐만 아니라 모든 기능 영역의 여러 버그 수정이 포함되었습니다.
 
 &nbsp;
 

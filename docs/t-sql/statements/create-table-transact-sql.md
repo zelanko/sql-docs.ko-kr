@@ -48,12 +48,12 @@ helpviewer_keywords:
 ms.assetid: 1e068443-b9ea-486a-804f-ce7b6e048e8b
 author: markingmyname
 ms.author: maghan
-ms.openlocfilehash: 8b37413dd6450999e6671858073805dea5a5424e
-ms.sourcegitcommit: ead0b8c334d487a07e41256ce5d6acafa2d23c9d
+ms.openlocfilehash: a6b0e958439025019e51bac7edb103febfe6409a
+ms.sourcegitcommit: 36fe62a3ccf34979bfde3e192cfa778505add465
 ms.translationtype: HT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 10/22/2020
-ms.locfileid: "92412581"
+ms.lasthandoff: 11/11/2020
+ms.locfileid: "94521172"
 ---
 # <a name="create-table-transact-sql"></a>CREATE TABLE(Transact-SQL)
 
@@ -362,7 +362,7 @@ column_name <data_type>
 
 *table_name* 새 테이블의 이름입니다. 테이블 이름은 [식별자](../../relational-databases/databases/database-identifiers.md)에 적용되는 규칙을 따라야 합니다. 로컬 임시 테이블 이름(단일 숫자 기호(#)가 접두사로 붙은 이름이며 최대 116자)을 제외하면 *table_name* 은 최대 128자가 될 수 있습니다.
 
-AS FileTable **적용 대상** : [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]([!INCLUDE[ssSQL11](../../includes/sssql11-md.md)] 이상).
+AS FileTable **적용 대상**: [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]([!INCLUDE[ssSQL11](../../includes/sssql11-md.md)] 이상).
 
 새 테이블을 FileTable로 만듭니다. FileTable에는 고정 스키마가 있으므로 열을 지정하지 않아도 됩니다. 자세한 내용은 [FileTables](../../relational-databases/blob/filetables-sql-server.md)를 참조하세요.
 
@@ -387,14 +387,14 @@ PERSISTED [!INCLUDE[ssDEnoversion](../../includes/ssdenoversion-md.md)]이 계�
 
 ON { *partition_scheme* | *filegroup* |  **“default”** } 테이블이 저장된 파티션 구성표 또는 파일 그룹을 지정합니다. *partition_scheme* 을 지정하면 해당 테이블은 *partition_scheme* 에 지정된 하나 이상의 파일 그룹 집합에 파티션이 저장되는 분할된 테이블이 됩니다. *filegroup* 을 지정한 경우에는 테이블이 명명된 파일 그룹에 저장됩니다. 파일 그룹은 데이터베이스 내에 있어야 합니다. **"default"** 를 지정하거나 ON을 전혀 지정하지 않으면 기본 파일 그룹에 테이블이 저장됩니다. CREATE TABLE에 지정된 테이블의 스토리지 메커니즘은 곧이어 변경할 수 없습니다.
 
-ON { *partition_scheme* | *filegroup* |  **"default"** }은 PRIMARY KEY나 UNIQUE 제약 조건에도 지정할 수 있습니다. 이러한 제약 조건은 인덱스를 만듭니다. *filegroup* 을 지정한 경우에는 인덱스가 명명된 파일 그룹에 저장됩니다. **"default"** 를 지정하거나 ON을 전혀 지정하지 않으면 테이블과 동일한 파일 그룹에 인덱스가 저장됩니다. `PRIMARY KEY` 또는 `UNIQUE` 제약 조건이 클러스터형 인덱스를 만드는 경우에는 테이블에 대한 데이터 페이지가 인덱스와 동일한 파일 그룹에 저장됩니다. `CLUSTERED`를 지정하거나 아니면 제약 조건이 클러스터형 인덱스를 만들고 테이블 정의의 *partition_scheme* 또는 *filegroup* 과는 다르게 *partition_scheme* 을 지정하거나 그 반대인 경우에는 제약 조건 정의만 유지하고 나머지는 무시합니다.
+ON {*partition_scheme* | *filegroup* |  **"default"** }은 PRIMARY KEY나 UNIQUE 제약 조건에도 지정할 수 있습니다. 이러한 제약 조건은 인덱스를 만듭니다. *filegroup* 을 지정한 경우에는 인덱스가 명명된 파일 그룹에 저장됩니다. **"default"** 를 지정하거나 ON을 전혀 지정하지 않으면 테이블과 동일한 파일 그룹에 인덱스가 저장됩니다. `PRIMARY KEY` 또는 `UNIQUE` 제약 조건이 클러스터형 인덱스를 만드는 경우에는 테이블에 대한 데이터 페이지가 인덱스와 동일한 파일 그룹에 저장됩니다. `CLUSTERED`를 지정하거나 아니면 제약 조건이 클러스터형 인덱스를 만들고 테이블 정의의 *partition_scheme* 또는 *filegroup* 과는 다르게 *partition_scheme* 을 지정하거나 그 반대인 경우에는 제약 조건 정의만 유지하고 나머지는 무시합니다.
 
 > [!NOTE]
 > 이 컨텍스트에서 *default* 는 키워드가 아닙니다. 기본 파일 그룹에 대한 식별자이며 ON **"default"** 또는 ON **[** default **]** 와 같이 구분되어야 합니다. **"default"** 를 지정하면 현재 세션의 `QUOTED_IDENTIFIER` 옵션이 ON이어야 합니다. 이 값은 기본 설정입니다. 자세한 내용은 [SET QUOTED_IDENTIFIER](../../t-sql/statements/set-quoted-identifier-transact-sql.md)를 참조하세요.
 >
 > 분할된 테이블을 만든 후에는 테이블의 `LOCK_ESCALATION` 옵션을 `AUTO`로 설정하는 것이 좋습니다. 이렇게 하면 테이블 수준이 아닌 파티션(HoBT) 수준으로 잠금이 에스컬레이션되도록 하여 동시성을 향상시킬 수 있습니다. 자세한 내용은 [ALTER TABLE](../../t-sql/statements/alter-table-transact-sql.md)을 참조하세요.
 
-TEXTIMAGE_ON { *filegroup*|  **“default”** } 지정된 파일 그룹에 **text** , **ntext** , **image** , **xml** , **varchar(max)** , **nvarchar(max)** , **varbinary(max)** 및 CLR 사용자 정의 형식 열(기하 도형 및 지리 포함)이 저장되어 있음을 나타냅니다.
+TEXTIMAGE_ON { *filegroup*|  **“default”** } 지정된 파일 그룹에 **text**, **ntext**, **image**, **xml**, **varchar(max)** , **nvarchar(max)** , **varbinary(max)** 및 CLR 사용자 정의 형식 열(기하 도형 및 지리 포함)이 저장되어 있음을 나타냅니다.
 
 테이블에 큰 값 열이 없는 경우에는 `TEXTIMAGE_ON`이 허용되지 않습니다. *partition_scheme* 을 지정하면 `TEXTIMAGE_ON`을 지정할 수 없습니다. **"default"** 를 지정하거나 `TEXTIMAGE_ON`을 전혀 지정하지 않으면 큰 값 열이 기본 파일 그룹에 저장됩니다. `CREATE TABLE`에 지정된 큰 값 열 데이터의 스토리지는 나중에 변경할 수 없습니다.
 
@@ -405,7 +405,7 @@ TEXTIMAGE_ON { *filegroup*|  **“default”** } 지정된 파일 그룹에 **te
 >
 > 이 컨텍스트에서 default는 키워드가 아니라 기본 파일 그룹에 대한 식별자이며 `TEXTIMAGE_ON "default"` 또는 `TEXTIMAGE_ON [default]`와 같이 구분되어야 합니다. **"default"** 를 지정하면 현재 세션의 `QUOTED_IDENTIFIER` 옵션이 ON이어야 합니다. 이 값은 기본 설정입니다. 자세한 내용은 [SET QUOTED_IDENTIFIER](../../t-sql/statements/set-quoted-identifier-transact-sql.md)를 참조하세요.
 
-FILESTREAM_ON { *partition_scheme_name* | filegroup | **"** default **"** } **적용 대상** : [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]([!INCLUDE[ssKilimanjaro](../../includes/ssKilimanjaro-md.md)] 이상). [!INCLUDE[ssSDSfull](../../includes/sssdsfull-md.md)]는 `FILESTREAM`을 지원하지 않습니다.
+FILESTREAM_ON { *partition_scheme_name* | filegroup | **"** default **"** } **적용 대상**: [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]([!INCLUDE[ssKilimanjaro](../../includes/ssKilimanjaro-md.md)] 이상). [!INCLUDE[ssSDSfull](../../includes/sssdsfull-md.md)]는 `FILESTREAM`을 지원하지 않습니다.
 
 FILESTREAM 데이터의 파일 그룹을 지정합니다.
 
@@ -442,7 +442,7 @@ ON 및 `TEXTIMAGE_ON`과 마찬가지로 `FILESTREAM_ON`에 대해 `CREATE TABLE
 
 *scale* 지정된 데이터 형식의 소수 자릿수입니다. 유효한 소수 자릿수 값에 대한 자세한 내용은 [전체 자릿수, 소수 자릿수 및 길이](../../t-sql/data-types/precision-scale-and-length-transact-sql.md)를 참조하세요.
 
-**max** 2^31바이트의 문자와 이진 데이터 및 2^30바이트의 유니코드 데이터를 저장하기 위한 **varchar** , **nvarchar** 및 **varbinary** 데이터 형식에만 적용됩니다.
+**max** 2^31바이트의 문자와 이진 데이터 및 2^30바이트의 유니코드 데이터를 저장하기 위한 **varchar**, **nvarchar** 및 **varbinary** 데이터 형식에만 적용됩니다.
 
 CONTENT *column_name* 에 있는 **xml** 데이터 형식의 각 인스턴스가 여러 개의 최상위 요소를 포함할 수 있도록 지정합니다. CONTENT는 **xml** 데이터 형식에만 적용되며 *xml_schema_collection* 도 지정한 경우에만 지정할 수 있습니다. 지정하지 않은 경우에는 CONTENT가 기본 동작입니다.
 
@@ -456,7 +456,7 @@ DEFAULT 삽입 중에 값이 명시적으로 지정되지 않은 경우에 열�
 
 *memory_optimized_constant_expression* 열의 기본값으로 사용되는 상수, NULL 또는 시스템 함수입니다. 고유하게 컴파일된 저장 프로시저에서 지원되어야 합니다. 고유하게 컴파일된 저장 프로시저의 기본 제공 함수에 대한 자세한 내용은 [고유하게 컴파일된 T-SQL 모듈에 대해 지원되는 기능](../../relational-databases/in-memory-oltp/supported-features-for-natively-compiled-t-sql-modules.md)을 참조하세요.
 
-IDENTITY 새 열이 ID 열임을 나타냅니다. 테이블에 새 행이 추가되면 [!INCLUDE[ssDE](../../includes/ssde-md.md)]은 열에 대해 고유한 증가값을 제공합니다. ID 열은 일반적으로 PRIMARY KEY 제약 조건과 함께 사용되어 테이블에 대한 고유한 행 식별자 역할을 합니다. `IDENTITY` 속성은 **tinyint** , **smallint** , **int** , **bigint** , **decimal(p,0)** 또는 **numeric(p,0)** 열에 할당할 수 있습니다. ID 열은 테이블당 하나만 만들 수 있습니다. ID 열에는 바인딩된 기본값 및 DEFAULT 제약 조건을 사용할 수 없습니다. 초기값과 증가값은 둘 다 지정하거나 또는 둘 다 지정하지 않아야 합니다. 둘 다 지정하지 않은 경우에는 기본값 (1,1)이 사용됩니다.
+IDENTITY 새 열이 ID 열임을 나타냅니다. 테이블에 새 행이 추가되면 [!INCLUDE[ssDE](../../includes/ssde-md.md)]은 열에 대해 고유한 증가값을 제공합니다. ID 열은 일반적으로 PRIMARY KEY 제약 조건과 함께 사용되어 테이블에 대한 고유한 행 식별자 역할을 합니다. `IDENTITY` 속성은 **tinyint**, **smallint**, **int**, **bigint**, **decimal(p,0)** 또는 **numeric(p,0)** 열에 할당할 수 있습니다. ID 열은 테이블당 하나만 만들 수 있습니다. ID 열에는 바인딩된 기본값 및 DEFAULT 제약 조건을 사용할 수 없습니다. 초기값과 증가값은 둘 다 지정하거나 또는 둘 다 지정하지 않아야 합니다. 둘 다 지정하지 않은 경우에는 기본값 (1,1)이 사용됩니다.
 
 *seed* 테이블에 로드되는 첫 번째 행에 사용하는 값입니다.
 
@@ -464,21 +464,21 @@ IDENTITY 새 열이 ID 열임을 나타냅니다. 테이블에 새 행이 추가
 
 NOT FOR REPLICATION `CREATE TABLE` 문에서 IDENTITY 속성, FOREIGN KEY 제약 조건 및 CHECK 제한 조건에 대해 `NOT FOR REPLICATION` 절을 지정할 수 있습니다. `IDENTITY` 속성에 대해 이 절을 지정하면 복제 에이전트가 삽입 작업을 수행할 때 ID 열의 값이 증가하지 않습니다. 제약 조건에 대해 이 절을 지정하면 복제 에이전트가 삽입, 업데이트 또는 삭제 작업을 수행할 때 해당 제약 조건이 강제로 적용되지 않습니다.
 
-GENERATED ALWAYS AS ROW { START | END } [ HIDDEN ] [ NOT NULL ] **적용 대상** : [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]([!INCLUDE[ssSQL15](../../includes/sssql15-md.md)] 이상) 및 [!INCLUDE[ssSDSfull](../../includes/sssdsfull-md.md)].
+GENERATED ALWAYS AS ROW { START | END } [ HIDDEN ] [ NOT NULL ] **적용 대상**: [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]([!INCLUDE[ssSQL15](../../includes/sssql15-md.md)] 이상) 및 [!INCLUDE[ssSDSfull](../../includes/sssdsfull-md.md)].
 
 시스템이 지정된 `datetime2` 열을 사용하여 레코드가 유효한 시작 시간 또는 레코드가 유효한 종료 시간을 기록하도록 지정합니다. 열은 `NOT NULL`로 정의되어야 합니다. 이들을 `NULL`로 지정하려고 하면 시스템에서 오류가 throw됩니다. 기간 열에 NOT NULL을 명시적으로 지정하지 않으면 시스템은 기본적으로 해당 열을 `NOT NULL`로 정의합니다. `PERIOD FOR SYSTEM_TIME` 및 `WITH SYSTEM_VERSIONING = ON` 인수를 이 인수와 함께 사용하여 테이블에서 시스템 버전 관리를 활성화합니다. 자세한 내용은 [Temporal Tables](../../relational-databases/tables/temporal-tables.md)을 참조하세요.
 
 기간 열 한 개 또는 두 개를 모두 **HIDDEN** 플래그로 표시하여 **SELECT \* FROM** _`<table>`_ 이 이러한 열에 대해 값을 반환하지 않도록 해당 열을 암시적으로 숨길 수 있습니다. 기본적으로 기간 열은 숨겨지지 않습니다. 숨겨진 열을 사용하려면 temporal 테이블을 직접 참조하는 모든 쿼리에 이러한 열을 명시적으로 포함해야 합니다. 기존 기간 열의 **HIDDEN** 특성을 변경하려면 **PERIOD** 를 삭제하고 다른 숨겨진 플래그를 사용하여 다시 만들어야 합니다.
 
-INDEX *index_name* [ CLUSTERED | NONCLUSTERED ] ( *column_name* [ ASC | DESC ] [ ,... *n* ] ) **적용 대상** : [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]([!INCLUDE[ssSQL14](../../includes/sssql14-md.md)] 이상) 및 [!INCLUDE[ssSDSfull](../../includes/sssdsfull-md.md)].
+INDEX *index_name* [ CLUSTERED | NONCLUSTERED ] (*column_name* [ ASC | DESC ] [ ,... *n* ] ) **적용 대상**: [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]([!INCLUDE[ssSQL14](../../includes/sssql14-md.md)] 이상) 및 [!INCLUDE[ssSDSfull](../../includes/sssdsfull-md.md)].
 
 테이블에 인덱스를 만들도록 지정합니다. 이는 클러스터형 인덱스 또는 비클러스터형 인덱스일 수 있습니다. 인덱스는 나열된 열을 포함하며 데이터를 오름차순 또는 내림차순으로 정렬합니다.
 
-INDEX *index_name* CLUSTERED COLUMNSTORE **적용 대상** : [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]([!INCLUDE[ssSQL14](../../includes/sssql14-md.md)] 이상) 및 [!INCLUDE[ssSDSfull](../../includes/sssdsfull-md.md)].
+INDEX *index_name* CLUSTERED COLUMNSTORE **적용 대상**: [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]([!INCLUDE[ssSQL14](../../includes/sssql14-md.md)] 이상) 및 [!INCLUDE[ssSDSfull](../../includes/sssdsfull-md.md)].
 
 전체 테이블을 클러스터형 columnstore 인덱스를 포함한 열 형식으로 저장하도록 지정합니다. 이는 언제나 테이블의 모든 열을 포함합니다. 데이터는 행이 columnstore의 압축 이점을 얻도록 구성되므로 알파벳순 또는 숫자 순서로 정렬되지 않습니다.
 
-INDEX *index_name* [ NONCLUSTERED ] COLUMNSTORE ( *column_name* [ ,... *n* ] ) **적용 대상** : [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]([!INCLUDE[ssSQL14](../../includes/sssql14-md.md)] 이상) 및 [!INCLUDE[ssSDSfull](../../includes/sssdsfull-md.md)].
+INDEX *index_name* [ NONCLUSTERED ] COLUMNSTORE (*column_name* [ ,... *n* ] ) **적용 대상**: [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]([!INCLUDE[ssSQL14](../../includes/sssql14-md.md)] 이상) 및 [!INCLUDE[ssSDSfull](../../includes/sssdsfull-md.md)].
 
 테이블에 비클러스터형 columnstore 인덱스를 만들도록 지정합니다. 기본 테이블은 rowstore 힙 또는 클러스터형 인덱스이거나 클러스터형 columnstore 인덱스일 수 있습니다. 모든 경우 테이블에 비클러스터형 columnstore 인덱스를 만들면 인덱스 열에 대한 데이터의 두 번째 복사본이 저장됩니다.
 
@@ -502,7 +502,7 @@ ON **"default"** 기본 파일 그룹에 지정된 인덱스를 만듭니다.
 
 이 컨텍스트에서 default는 키워드가 아닙니다. 기본 파일 그룹에 대한 식별자이며 ON **"default"** 또는 ON **[default]** 와 같이 구분되어야 합니다. "default"를 지정하면 현재 세션의 `QUOTED_IDENTIFIER` 옵션이 ON이어야 합니다. 이 값은 기본 설정입니다. 자세한 내용은 [SET QUOTED_IDENTIFIER](../../t-sql/statements/set-quoted-identifier-transact-sql.md)를 참조하세요.
 
-[ FILESTREAM_ON { *filestream_filegroup_name* | *partition_scheme_name* | "NULL" } ] **적용 대상** : [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]([!INCLUDE[ssKilimanjaro](../../includes/ssKilimanjaro-md.md)] 이상).
+[ FILESTREAM_ON { *filestream_filegroup_name* | *partition_scheme_name* | "NULL" } ] **적용 대상**: [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]([!INCLUDE[ssKilimanjaro](../../includes/ssKilimanjaro-md.md)] 이상).
 
 클러스터형 인덱스를 만들 때 테이블에 대한 FILESTREAM 데이터의 위치를 지정합니다. FILESTREAM_ON 절에서 FILESTREAM 데이터를 다른 FILESTREAM 파일 그룹 또는 파티션 구성표로 이동할 수 있습니다.
 
@@ -534,7 +534,7 @@ Always Encrypted(보안 Enclave를 사용하지 않음)를 사용할 경우 매�
 
 열은 한정 데이터 형식이어야 합니다.
 
-ALGORITHM **적용 대상** : [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]([!INCLUDE[ssSQL15](../../includes/sssql15-md.md)] 이상).
+ALGORITHM **적용 대상**: [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]([!INCLUDE[ssSQL15](../../includes/sssql15-md.md)] 이상).
 
 **'AEAD_AES_256_CBC_HMAC_SHA_256'** 이어야 합니다.
 
@@ -542,7 +542,7 @@ ALGORITHM **적용 대상** : [!INCLUDE[ssNoVersion](../../includes/ssnoversion-
 
 SPARSE 열이 스파스 열임을 나타냅니다. 스파스 열의 스토리지는 Null 값에 대해 최적화됩니다. 스파스 열은 NOT NULL로 지정할 수 없습니다. 추가 제한 사항 및 스파스 열에 대한 자세한 내용은 [스파스 열 사용](../../relational-databases/tables/use-sparse-columns.md)을 참조하세요.
 
-MASKED WITH ( FUNCTION = ' *mask_function* ') **적용 대상** : [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]([!INCLUDE[ssSQL15](../../includes/sssql15-md.md)] 이상).
+MASKED WITH ( FUNCTION = ' *mask_function* ') **적용 대상**: [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]([!INCLUDE[ssSQL15](../../includes/sssql15-md.md)] 이상).
 
 동적 데이터 마스크를 지정합니다. *mask_function* 은 적절한 매개 변수를 포함한 마스킹 함수의 이름 입니다. 네 개의 함수를 사용할 수 있습니다.
 
@@ -553,7 +553,7 @@ MASKED WITH ( FUNCTION = ' *mask_function* ') **적용 대상** : [!INCLUDE[ssNo
 
 함수 매개 변수에 대해서는 [동적 데이터 마스킹](../../relational-databases/security/dynamic-data-masking.md)을 참조하세요.
 
-FILESTREAM **적용 대상** : [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]([!INCLUDE[ssKilimanjaro](../../includes/ssKilimanjaro-md.md)] 이상)
+FILESTREAM **적용 대상**: [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]([!INCLUDE[ssKilimanjaro](../../includes/ssKilimanjaro-md.md)] 이상)
 
 **varbinary(max)** 열에 대해서만 유효합니다. **varbinary(max)** BLOB 데이터에 대한 FILESTREAM 스토리지를 지정합니다.
 
@@ -563,7 +563,7 @@ FILESTREAM **적용 대상** : [!INCLUDE[ssNoVersion](../../includes/ssnoversion
 
 열에 대해 FILESTREAM 스토리지 특성이 지정된 경우 해당 열의 모든 값이 파일 시스템에 있는 FILESTREAM 데이터 컨테이너에 저장됩니다.
 
-COLLATE *collation_name* 열에 대한 데이터 정렬을 지정합니다. 데이터 정렬 이름으로는 Windows 데이터 정렬 이름 또는 SQL 데이터 정렬 이름을 사용할 수 있습니다. *collation_name* 은 **char** , **varchar** , **text** , **nchar** , **nvarchar** 및 **ntext** 데이터 형식의 열에만 적용할 수 있습니다. 지정하지 않은 경우 열이 사용자 정의 데이터 형식이면 사용자 정의 데이터 형식의 데이터 정렬에 열이 할당되고 그렇지 않은 경우에는 데이터베이스의 기본 데이터 정렬에 할당됩니다.
+COLLATE *collation_name* 열에 대한 데이터 정렬을 지정합니다. 데이터 정렬 이름으로는 Windows 데이터 정렬 이름 또는 SQL 데이터 정렬 이름을 사용할 수 있습니다. *collation_name* 은 **char**, **varchar**, **text**, **nchar**, **nvarchar** 및 **ntext** 데이터 형식의 열에만 적용할 수 있습니다. 지정하지 않은 경우 열이 사용자 정의 데이터 형식이면 사용자 정의 데이터 형식의 데이터 정렬에 열이 할당되고 그렇지 않은 경우에는 데이터베이스의 기본 데이터 정렬에 할당됩니다.
 
 Windows 및 SQL 데이터 정렬 이름에 대한 자세한 내용은 [Windows 데이터 정렬 이름](../../t-sql/statements/windows-collation-name-transact-sql.md)과 [SQL 데이터 정렬 이름](../../t-sql/statements/sql-server-collation-name-transact-sql.md)을 참조하세요.
 
@@ -585,7 +585,7 @@ CLUSTERED | NONCLUSTERED PRIMARY KEY 또는 UNIQUE 제약 조건에 대해 클�
 
 FOREIGN KEY REFERENCES 열에 있는 데이터에 대한 참조 무결성을 제공하는 제약 조건입니다. FOREIGN KEY 제약 조건을 지정하려면 열의 각 값이 참조된 테이블의 참조된 해당 열에 있어야 합니다. FOREIGN KEY 제약 조건은 참조되는 테이블의 PRIMARY KEY 또는 UNIQUE 제약 조건 열이나 참조되는 테이블의 UNIQUE INDEX에서 참조되는 열만 참조할 수 있습니다. 계산 열의 외래 키 또한 PERSISTED로 표시되어야 합니다.
 
-[ _schema\_name_ **.** ] *referenced_table_name* ] FOREIGN KEY 제약 조건이 참조하는 테이블과 그 테이블이 속한 스키마의 이름입니다.
+[ _schema\_name_ **.** ] *referenced_table_name*] FOREIGN KEY 제약 조건이 참조하는 테이블과 그 테이블이 속한 스키마의 이름입니다.
 
 **(** *ref_column* [ **,** ... *n* ] **)** FOREIGN KEY 제약 조건이 참조하는 테이블의 열 또는 열 목록입니다.
 
@@ -651,11 +651,11 @@ WITH FILLFACTOR **=** _fillfactor_[!INCLUDE[ssDE](../../includes/ssde-md.md)]이
 
 *column_set_name* XML COLUMN_SET FOR ALL_SPARSE_COLUMNS 열 집합의 이름입니다. 열 집합은 구조화된 출력으로 테이블의 모든 스파스 열을 결합하는 형식화되지 않은 XML 표현입니다. 열 집합에 대한 자세한 내용은 [열 집합 사용](../../relational-databases/tables/use-column-sets.md)을 참조하세요.
 
-PERIOD FOR SYSTEM_TIME ( *system_start_time_column_name* , *system_end_time_column_name* ) **적용 대상** : [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]([!INCLUDE[ssSQL15](../../includes/sssql15-md.md)] 이상) 및 [!INCLUDE[ssSDSfull](../../includes/sssdsfull-md.md)].
+PERIOD FOR SYSTEM_TIME (*system_start_time_column_name* , *system_end_time_column_name* ) **적용 대상**: [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]([!INCLUDE[ssSQL15](../../includes/sssql15-md.md)] 이상) 및 [!INCLUDE[ssSDSfull](../../includes/sssdsfull-md.md)].
 
 시스템에서 레코드가 유효한 기간을 기록하기 위해 사용할 열의 이름을 지정합니다. GENERATED ALWAYS AS ROW { START | END } 및 WITH SYSTEM_VERSIONING = ON 인수와 함께 이 인수를 사용하여 테이블에 대한 시스템 버전 관리를 활성화합니다. 자세한 내용은 [Temporal Tables](../../relational-databases/tables/temporal-tables.md)을 참조하세요.
 
-COMPRESSION_DELAY **적용 대상** : [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]([!INCLUDE[ssSQL15](../../includes/sssql15-md.md)] 이상) 및 [!INCLUDE[ssSDSfull](../../includes/sssdsfull-md.md)].
+COMPRESSION_DELAY **적용 대상**: [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]([!INCLUDE[ssSQL15](../../includes/sssql15-md.md)] 이상) 및 [!INCLUDE[ssSDSfull](../../includes/sssdsfull-md.md)].
 
 메모리 최적화를 위해 행이 columnstore 인덱스로 압축에 적합하게 될 때까지 변경되지 않고 테이블에 남아 있어야 하는 최소 분 수를 지정합니다. [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]는 마지막 업데이트 시간에 따라 압축할 특정 행을 선택합니다. 예를 들어 행이 두 시간 동안 자주 변경되는 경우 `COMPRESSION_DELAY = 120 Minutes`를 설정하여 SQL Server가 행을 압축하기 전에 업데이트가 완료되도록 할 수 있습니다.
 
@@ -677,17 +677,17 @@ PAGE 테이블 또는 지정된 파티션이 페이지 압축을 사용하여 �
 
 COLUMNSTORE
 
-**적용 대상** : [!INCLUDE[ssSQL15](../../includes/sssql15-md.md)] 이상 및 [!INCLUDE[ssSDSfull](../../includes/sssdsfull-md.md)]
+**적용 대상**: [!INCLUDE[ssSQL15](../../includes/sssql15-md.md)] 이상 및 [!INCLUDE[ssSDSfull](../../includes/sssdsfull-md.md)]
 
 클러스터형 columnstore 인덱스 및 비클러스터형 columnstore 인덱스를 모두 포함하는 columnstore 인덱스에만 적용됩니다. COLUMNSTORE는 성능이 가장 우수한 columnstore 압축으로 압축하도록 지정합니다. 이는 일반적인 선택입니다.
 
-COLUMNSTORE_ARCHIVE **적용 대상** : [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]([!INCLUDE[ssSQL15](../../includes/sssql15-md.md)] 이상) 및 [!INCLUDE[ssSDSfull](../../includes/sssdsfull-md.md)].
+COLUMNSTORE_ARCHIVE **적용 대상**: [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]([!INCLUDE[ssSQL15](../../includes/sssql15-md.md)] 이상) 및 [!INCLUDE[ssSDSfull](../../includes/sssdsfull-md.md)].
 
 클러스터형 columnstore 인덱스 및 비클러스터형 columnstore 인덱스를 모두 포함하는 columnstore 인덱스에만 적용됩니다. COLUMNSTORE_ARCHIVE는 테이블 또는 파티션을 보다 작은 크기로 더욱 압축합니다. 보다 적은 스토리지 크기가 필요한 기타 상황에서 보관하는 데 사용할 수 있으며 저장 및 검색에 더 많은 시간을 이용할 수 있습니다.
 
 자세한 내용은 [Data Compression](../../relational-databases/data-compression/data-compression.md)을 참조하세요.
 
-ON PARTITIONS **(** { `<partition_number_expression>` | [ **,** ... *n* ] **)** DATA_COMPRESSION 설정을 적용할 파티션을 지정합니다. 테이블이 분할되지 않은 경우 `ON PARTITIONS` 인수를 사용하면 오류가 발생합니다. `ON PARTITIONS` 절이 제공되지 않으면 `DATA_COMPRESSION` 옵션이 분할된 테이블의 모든 파티션에 적용됩니다.
+ON PARTITIONS **(** { `<partition_number_expression>` | [ **,** ...*n* ] **)** DATA_COMPRESSION 설정을 적용할 파티션을 지정합니다. 테이블이 분할되지 않은 경우 `ON PARTITIONS` 인수를 사용하면 오류가 발생합니다. `ON PARTITIONS` 절이 제공되지 않으면 `DATA_COMPRESSION` 옵션이 분할된 테이블의 모든 파티션에 적용됩니다.
 
 *partition_number_expression* 은 다음과 같은 방법으로 지정할 수 있습니다.
 
@@ -732,18 +732,18 @@ ALLOW_ROW_LOCKS **=** { **ON** | OFF } ON이면 인덱스에 액세스할 때 �
 
 ALLOW_PAGE_LOCKS **=** { **ON** | OFF } ON이면 인덱스에 액세스할 때 페이지 잠금이 허용됩니다. 페이지 잠금을 사용하는 시점은 [!INCLUDE[ssDE](../../includes/ssde-md.md)]이 결정합니다. OFF이면 페이지 잠금을 사용하지 않습니다. 기본값은 ON입니다.
 
-OPTIMIZE_FOR_SEQUENTIAL_KEY = { ON | **OFF** } **적용 대상** : [!INCLUDE[sql-server-2019](../../includes/sssqlv15-md.md)] 이상. <BR>
+OPTIMIZE_FOR_SEQUENTIAL_KEY = { ON | **OFF** } **적용 대상**: [!INCLUDE[sql-server-2019](../../includes/sssqlv15-md.md)] 이상. <BR>
 마지막 페이지 삽입 경합에 최적화할지 여부를 지정합니다. 기본값은 OFF입니다. 자세한 내용은 CREATE INDEX 페이지의 [순차 키](./create-index-transact-sql.md#sequential-keys) 섹션을 참조하세요.
 
 FILETABLE_DIRECTORY = *directory_name*
 
-**적용 대상** : [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]([!INCLUDE[ssSQL11](../../includes/sssql11-md.md)] 이상).
+**적용 대상**: [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]([!INCLUDE[ssSQL11](../../includes/sssql11-md.md)] 이상).
 
 Windows 호환 FileTable 디렉터리 이름을 지정합니다. 이 이름은 데이터베이스의 모든 FileTable 디렉터리 이름 중에서 고유해야 합니다. 고유성을 비교할 때는 데이터 정렬 설정과 관계없이 대/소문자가 구분되지 않습니다. 이 값을 지정하지 않으면 Filetable의 이름이 사용됩니다.
 
 FILETABLE_COLLATE_FILENAME = { *collation_name* | database_default }
 
-**적용 대상** : [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]([!INCLUDE[ssSQL11](../../includes/sssql11-md.md)] 이상). [!INCLUDE[ssSDSfull](../../includes/sssdsfull-md.md)]는 `FILETABLE`을 지원하지 않습니다.
+**적용 대상**: [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]([!INCLUDE[ssSQL11](../../includes/sssql11-md.md)] 이상). [!INCLUDE[ssSDSfull](../../includes/sssdsfull-md.md)]는 `FILETABLE`을 지원하지 않습니다.
 
 FileTable의 **Name** 열에 적용할 데이터 정렬의 이름을 지정합니다. 데이터 정렬은 Windows 운영 체제 파일 명명 의미 체계를 따르도록 대/소문자를 구분하지 않아야 합니다. 이 값을 지정하지 않으면 데이터베이스 기본 데이터 정렬이 사용됩니다. 데이터베이스 기본 데이터 정렬이 대/소문자를 구분하면 오류가 발생하고 CREATE TABLE 작업이 실패합니다.
 
@@ -752,26 +752,26 @@ FileTable의 **Name** 열에 적용할 데이터 정렬의 이름을 지정합�
 database_default 데이터베이스의 기본 데이터 정렬을 사용하도록 지정합니다. 이 데이터 정렬은 대/소문자를 구분하지 않아야 합니다.
 
 FILETABLE_PRIMARY_KEY_CONSTRAINT_NAME = *constraint_name*
-**적용 대상** : [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]([!INCLUDE[ssSQL11](../../includes/sssql11-md.md)] 이상).
+**적용 대상**: [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]([!INCLUDE[ssSQL11](../../includes/sssql11-md.md)] 이상).
 
 FileTable에 자동으로 만들어지는 기본 키 제약 조건에 사용할 이름을 지정합니다. 이 값을 지정하지 않으면 시스템에서 제약 조건 이름을 생성합니다.
 
 FILETABLE_STREAMID_UNIQUE_CONSTRAINT_NAME = *constraint_name*
-**적용 대상** : [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]([!INCLUDE[ssSQL11](../../includes/sssql11-md.md)] 이상).
+**적용 대상**: [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]([!INCLUDE[ssSQL11](../../includes/sssql11-md.md)] 이상).
 
 FileTable에서 **stream_id** 열에 자동으로 만들어지는 고유한 제약 조건에 사용할 이름을 지정합니다. 이 값을 지정하지 않으면 시스템에서 제약 조건 이름을 생성합니다.
 
 FILETABLE_FULLPATH_UNIQUE_CONSTRAINT_NAME = *constraint_name*
-**적용 대상** : [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]([!INCLUDE[ssSQL11](../../includes/sssql11-md.md)] 이상).
+**적용 대상**: [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]([!INCLUDE[ssSQL11](../../includes/sssql11-md.md)] 이상).
 
 FileTable에서 **parent_path_locator** 및 **name** 열에 자동으로 만들어지는 고유한 제약 조건에 사용할 이름을 지정합니다. 이 값을 지정하지 않으면 시스템에서 제약 조건 이름을 생성합니다.
 
-SYSTEM_VERSIONING **=** ON [ ( HISTORY_TABLE **=** *schema_name* . *history_table_name* [, DATA_CONSISTENCY_CHECK **=** { **ON** | OFF } ] ) ] **적용 대상** : [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]([!INCLUDE[ssSQL15](../../includes/sssql15-md.md)] 이상 및 [!INCLUDE[ssSDSfull](../../includes/sssdsfull-md.md)]).
+SYSTEM_VERSIONING **=** ON [ ( HISTORY_TABLE **=** *schema_name* .*history_table_name* [, DATA_CONSISTENCY_CHECK **=** { **ON** | OFF } ] ) ] **적용 대상**: [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]([!INCLUDE[ssSQL15](../../includes/sssql15-md.md)] 이상 및 [!INCLUDE[ssSDSfull](../../includes/sssdsfull-md.md)]).
 
 데이터 형식, NULL 허용 여부 제약 조건 및 기본 키 제약 조건 요구 사항이 충족된 경우 테이블의 시스템 버전 관리를 활성화합니다. `HISTORY_TABLE` 인수를 사용하지 않는 경우 시스템에서 현재 테이블의 동일한 파일 그룹에 있는 현재 테이블의 스키마와 일치하는 새 기록 테이블을 생성하여 두 테이블 간에 링크를 만들고 시스템이 기록 테이블의 현재 테이블에서 각 레코드의 기록을 기록할 수 있도록 합니다. 이 기록 테이블의 이름은 `MSSQL_TemporalHistoryFor<primary_table_object_id>`가 됩니다. 기본적으로 기록 테이블은 **PAGE** (으)로 압축됩니다. `HISTORY_TABLE` 인수를 사용하여 기존 기록 테이블에 대한 링크를 만들고 해당 테이블을 사용하면 현재 테이블과 지정된 테이블 간에 링크가 생성됩니다. 구성 분할은 현재 테이블에서 기록 테이블로 자동 복제를 수행하지 않기 때문에 현재 테이블이 분할된 경우 기록 테이블은 기본 파일 그룹에 생성됩니다. 기록 테이블 생성 도중 기록 테이블의 이름을 지정하는 경우 스키마와 테이블 이름을 지정해야 합니다. 기존 기록 테이블에 대한 링크를 만드는 경우 데이터 일관성 검사를 수행하도록 선택할 수 있습니다. 이 데이터 일관성 확인을 통해 기존 레코드가 겹치지 않도록 합니다. 기본값은 데이터 일관성 검사를 수행하는 것입니다. `PERIOD FOR SYSTEM_TIME` 및 `GENERATED ALWAYS AS ROW { START | END }` 인수를 이 인수와 함께 사용하여 테이블에서 시스템 버전 관리를 활성화합니다. 자세한 내용은 [Temporal Tables](../../relational-databases/tables/temporal-tables.md)을 참조하세요.
 
 REMOTE_DATA_ARCHIVE = { ON [ ( *table_stretch_options* [,...n] ) ] | OFF ( MIGRATION_STATE = PAUSED ) }   
-**적용 대상** : [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]([!INCLUDE[ssSQL15](../../includes/sssql15-md.md)] 이상).
+**적용 대상**: [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]([!INCLUDE[ssSQL15](../../includes/sssql15-md.md)] 이상).
 
 Stretch Database가 활성화 또는 비활성화된 상태에서 새 테이블을 만듭니다. 자세한 내용은 [Stretch Database](../../sql-server/stretch-database/stretch-database.md)를 참조하십시오.
 
@@ -779,11 +779,11 @@ Stretch Database가 활성화 또는 비활성화된 상태에서 새 테이블�
 
 테이블에 대해 `ON`을 지정하여 Stretch를 사용하도록 설정한 경우 선택적으로 `MIGRATION_STATE = OUTBOUND`를 지정하여 데이터 마이그레이션을 즉시 시작하거나 `MIGRATION_STATE = PAUSED`를 지정하여 데이터 마이그레이션을 연기할 수 있습니다. 기본값은 `MIGRATION_STATE = OUTBOUND`입니다. 테이블의 Stretch 활성화에 대한 자세한 내용은 [테이블에 대한 Stretch Database 활성화](../../sql-server/stretch-database/enable-stretch-database-for-a-table.md)를 참조하세요.
 
-**필수 구성 요소** . 테이블에 대해 Stretch를 활성화하기 전에 서버 및 데이터베이스에서 Stretch를 활성화해야 합니다. 자세한 내용은 [Enable Stretch Database for a database](../../sql-server/stretch-database/enable-stretch-database-for-a-database.md)를 참조하십시오.
+**필수 구성 요소**. 테이블에 대해 Stretch를 활성화하기 전에 서버 및 데이터베이스에서 Stretch를 활성화해야 합니다. 자세한 내용은 [Enable Stretch Database for a database](../../sql-server/stretch-database/enable-stretch-database-for-a-database.md)를 참조하십시오.
 
-**사용 권한** . 데이터베이스 또는 테이블에 대해 Stretch를 활성화하려면 db_owner 권한이 필요합니다. 또한 테이블에 대해 Stretch를 활성화하면 테이블에 대한 ALTER 권한이 필요합니다.
+**사용 권한**. 데이터베이스 또는 테이블에 대해 Stretch를 활성화하려면 db_owner 권한이 필요합니다. 또한 테이블에 대해 Stretch를 활성화하면 테이블에 대한 ALTER 권한이 필요합니다.
 
-[ FILTER_PREDICATE = { null | *predicate* } ] **적용 대상** : [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]([!INCLUDE[ssSQL15](../../includes/sssql15-md.md)] 이상).
+[ FILTER_PREDICATE = { null | *predicate* } ] **적용 대상**: [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]([!INCLUDE[ssSQL15](../../includes/sssql15-md.md)] 이상).
 
 선택적으로 필터 조건자를 지정하여 기록 및 현재 데이터를 모두 포함하는 테이블에서 마이그레이션할 행을 선택합니다. 조건자는 결정적 인라인 테이블 반환 함수를 호출해야 합니다. 자세한 내용은 [테이블에 대해 Stretch Database 활성화](../../sql-server/stretch-database/enable-stretch-database-for-a-table.md) 및 [필터 함수를 사용하여 마이그레이션할 행 선택](../../sql-server/stretch-database/select-rows-to-migrate-by-using-a-filter-function-stretch-database.md)을 참조하세요.
 
@@ -794,7 +794,7 @@ Stretch Database가 활성화 또는 비활성화된 상태에서 새 테이블�
 
 필터 조건자를 지정할 경우 *MIGRATION_STATE* 도 지정해야 합니다.
 
-MIGRATION_STATE = { OUTBOUND | INBOUND | PAUSED } **적용 대상** : [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]([!INCLUDE[ssSQL15](../../includes/sssql15-md.md)] 이상) 및 [!INCLUDE[ssSDSfull](../../includes/sssdsfull-md.md)].
+MIGRATION_STATE = { OUTBOUND | INBOUND | PAUSED } **적용 대상**: [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]([!INCLUDE[ssSQL15](../../includes/sssql15-md.md)] 이상) 및 [!INCLUDE[ssSDSfull](../../includes/sssdsfull-md.md)].
 
 - `OUTBOUND`를 지정하여 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]에서 [!INCLUDE[ssSDSfull](../../includes/sssdsfull-md.md)]로 데이터를 마이그레이션합니다.
 - `INBOUND`를 지정하여 테이블의 원격 데이터를 [!INCLUDE[ssSDSfull](../../includes/sssdsfull-md.md)]에서 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]로 다시 복사하고 테이블에 대한 Stretch를 비활성화합니다. 자세한 내용은 [Stretch Database 비활성화 및 원격 데이터 다시 가져오기](../../sql-server/stretch-database/disable-stretch-database-and-bring-back-remote-data.md)를 사용하세요.
@@ -817,16 +817,16 @@ MIGRATION_STATE = { OUTBOUND | INBOUND | PAUSED } **적용 대상** : [!INCLUDE[
   - SmallDateTime
   - DateTimeOffset
 
-- RETENTION_PERIOD = { INFINITE | number {DAY | DAYS | WEEK | WEEKS | MONTH | MONTHS | YEAR | YEARS }}       
+- RETENTION_PERIOD = { INFINITE \| number {DAY \| DAYS \| WEEK \| WEEKS \| MONTH \| MONTHS \| YEAR \| YEARS }}       
   테이블에 대한 보존 기간 정책을 지정합니다. 보존 기간은 양의 정수 값과 날짜 부분 단위의 조합으로 지정됩니다.   
 
-MEMORY_OPTIMIZED **적용 대상** : [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]([!INCLUDE[ssSQL14](../../includes/sssql14-md.md)] 이상 및 [!INCLUDE[ssSDSfull](../../includes/sssdsfull-md.md)]). Azure SQL Managed Instance는 메모리 최적화 테이블을 지원하지 않습니다.
+MEMORY_OPTIMIZED **적용 대상**: [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]([!INCLUDE[ssSQL14](../../includes/sssql14-md.md)] 이상 및 [!INCLUDE[ssSDSfull](../../includes/sssdsfull-md.md)]). Azure SQL Managed Instance는 메모리 최적화 테이블을 지원하지 않습니다.
 
 값 ON은 테이블이 메모리 최적화된 형식임을 나타냅니다. 메모리 최적화된 테이블은 트랜잭션 처리의 성능을 최적화하기 위해 사용되는 메모리 내 OLTP 기능의 일부입니다. 메모리 내 OLTP를 시작하려면 [빠른 시작 1: 더 빠른 Transact-SQL 성능을 위한 메모리 내 OLTP 기술](../../relational-databases/in-memory-oltp/survey-of-initial-areas-in-in-memory-oltp.md)을 참조하세요. 메모리 최적화 테이블에 대한 더 심층적인 내용은 [메모리 최적화 테이블](../../relational-databases/in-memory-oltp/sample-database-for-in-memory-oltp.md)을 참조하세요.
 
 기본값 OFF는 테이블이 디스크 기반임을 나타냅니다.
 
-DURABILITY **적용 대상** : [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]([!INCLUDE[ssSQL14](../../includes/sssql14-md.md)] 이상) 및 [!INCLUDE[ssSDSfull](../../includes/sssdsfull-md.md)].
+DURABILITY **적용 대상**: [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]([!INCLUDE[ssSQL14](../../includes/sssql14-md.md)] 이상) 및 [!INCLUDE[ssSDSfull](../../includes/sssdsfull-md.md)].
 
 `SCHEMA_AND_DATA`의 값은 테이블이 내구성이 있음을 나타냅니다. 이는 변경 내용이 디스크에 유지되고 다시 시작 또는 장애 조치(failover) 시에 존속된다는 것을 의미합니다. SCHEMA_AND_DATA는 기본값입니다.
 
@@ -835,17 +835,17 @@ DURABILITY **적용 대상** : [!INCLUDE[ssNoVersion](../../includes/ssnoversion
 > [!WARNING]
 > **DURABILITY = SCHEMA_ONLY** 를 사용하여 테이블이 만들어지고 그 후에 **READ_COMMITTED_SNAPSHOT** 이 **ALTER DATABASE** 를 사용하여 변경되면 테이블의 데이터는 손실됩니다.
 
-BUCKET_COUNT **적용 대상** : [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]([!INCLUDE[ssSQL14](../../includes/sssql14-md.md)] 이상 및 [!INCLUDE[ssSDSfull](../../includes/sssdsfull-md.md)].
+BUCKET_COUNT **적용 대상**: [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]([!INCLUDE[ssSQL14](../../includes/sssql14-md.md)] 이상 및 [!INCLUDE[ssSDSfull](../../includes/sssdsfull-md.md)].
 
 해시 인덱스에서 만들어야 하는 버킷 수를 나타냅니다. 해시 인덱스에서 BUCKET_COUNT의 최대값은 1,073,741,824입니다. 메모리 최적화 테이블의 인덱스에 대한 자세한 내용은 [Memory-Optimized Tables에 대한 인덱스](../../relational-databases/in-memory-oltp/indexes-for-memory-optimized-tables.md)를 참조하세요.
 
 Bucket_count는 필수 인수입니다.
 
-INDEX **적용 대상** : [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]([!INCLUDE[ssSQL14](../../includes/sssql14-md.md)] 이상) 및 [!INCLUDE[ssSDSfull](../../includes/sssdsfull-md.md)]).
+INDEX **적용 대상**: [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]([!INCLUDE[ssSQL14](../../includes/sssql14-md.md)] 이상) 및 [!INCLUDE[ssSDSfull](../../includes/sssdsfull-md.md)]).
 
 CREATE TABLE 문의 일부로 열 및 테이블 인덱스를 지정할 수 있습니다. 메모리 최적화 테이블에서 인덱스 추가 및 제거에 대한 자세한 내용은 다음을 참조하세요. [메모리 액세스에 최적화된 테이블 변경](../../relational-databases/in-memory-oltp/altering-memory-optimized-tables.md)
 
-HASH **적용 대상** : [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]([!INCLUDE[ssSQL14](../../includes/sssql14-md.md)] 이상) 및 [!INCLUDE[ssSDSfull](../../includes/sssdsfull-md.md)].
+HASH **적용 대상**: [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]([!INCLUDE[ssSQL14](../../includes/sssql14-md.md)] 이상) 및 [!INCLUDE[ssSDSfull](../../includes/sssdsfull-md.md)].
 
 HASH 인덱스가 만들어졌음을 나타냅니다.
 
@@ -865,7 +865,7 @@ QUOTED IDENTIFIER 옵션은 테이블을 만들 때 OFF로 설정되어 있더�
 
 로컬 및 전역 임시 테이블을 만들 수 있습니다. 로컬 임시 테이블은 현재 세션에서만 볼 수 있으며 전역 임시 테이블은 모든 세션에서 볼 수 있습니다. 임시 테이블은 분할할 수 없습니다.
 
-로컬 임시 테이블 이름 앞에는 숫자 기호가 하나 추가되고(예: # *table_name* ) 전역 임시 테이블 이름 앞에는 숫자 기호가 두 개 추가됩니다(예: ## *table_name* ).
+로컬 임시 테이블 이름 앞에는 숫자 기호가 하나 추가되고(예: #*table_name*) 전역 임시 테이블 이름 앞에는 숫자 기호가 두 개 추가됩니다(예: ##*table_name*).
 
 [!INCLUDE[tsql](../../includes/tsql-md.md)] 문은 `CREATE TABLE` 문의 *table_name* 에 대해 지정된 값을 사용하여 임시 테이블을 참조합니다. 예를 들면 다음과 같습니다.
 
@@ -1022,7 +1022,7 @@ CREATE TABLE을 사용하여 분할된 테이블을 만들기 전에 테이블�
   CHECK CONSTRAINTS 및 규칙은 INSERT 및 UPDATE 문 동안 데이터의 유효성을 검사하는 동일한 역할을 합니다.
 
 - 열에 규칙 및 하나 이상의 CHECK 제약 조건이 있는 경우에는 모든 제한을 평가합니다.
-- **text** , **ntext** 또는 **image** 열에는 CHECK 제약 조건을 정의할 수 없습니다.
+- **text**, **ntext** 또는 **image** 열에는 CHECK 제약 조건을 정의할 수 없습니다.
 
 ## <a name="additional-constraint-information"></a>추가 제약 조건 정보
 
@@ -1340,7 +1340,7 @@ CREATE TABLE T1
 
 ### <a name="p-creating-a-system-versioned-disk-based-temporal-table"></a>16. 시스템 버전 디스크 기반 임시 테이블 만들기
 
-**적용 대상** : [!INCLUDE[ssSQL15](../../includes/sssql15-md.md)] 이상 및 [!INCLUDE[ssSDSfull](../../includes/sssdsfull-md.md)]
+**적용 대상**: [!INCLUDE[ssSQL15](../../includes/sssql15-md.md)] 이상 및 [!INCLUDE[ssSDSfull](../../includes/sssdsfull-md.md)]
 
 다음 예제는 새 기록 테이블에 연결된 임시 테이블을 만드는 방법 및 기존 기록 테이블에 연결된 임시 테이블을 만드는 방법을 보여 줍니다. 참고로 임시 테이블은 시스템 버전 관리를 활성화하려면 테이블에 대해 정의된 기본 키를 활성화해야 합니다. 예를 들어 기존 테이블에 대한 시스템 버전 관리를 추가 또는 제거하는 방법을 보여 주는 예제는 [예제](../../t-sql/statements/alter-table-transact-sql.md#Example_Top)의 시스템 버전 관리를 참조하세요. 사용 사례는 [임시 테이블](../../relational-databases/tables/temporal-tables.md)을 참조하세요.
 
@@ -1390,7 +1390,7 @@ WITH (SYSTEM_VERSIONING = ON (HISTORY_TABLE = dbo.Department_History, DATA_CONSI
 
 ### <a name="q-creating-a-system-versioned-memory-optimized-temporal-table"></a>17. 시스템 버전 관리 메모리 최적화 임시 테이블 만들기
 
-**적용 대상** : [!INCLUDE[ssSQL15](../../includes/sssql15-md.md)] 이상 및 [!INCLUDE[ssSDSfull](../../includes/sssdsfull-md.md)]
+**적용 대상**: [!INCLUDE[ssSQL15](../../includes/sssql15-md.md)] 이상 및 [!INCLUDE[ssSDSfull](../../includes/sssdsfull-md.md)]
 
 다음 예제는 새 디스크 기반 기록 테이블에 연결된 시스템 버전 관리 메모리 최적화 임시 테이블을 만드는 방법을 보여 줍니다.
 
