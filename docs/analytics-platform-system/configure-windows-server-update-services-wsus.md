@@ -9,12 +9,12 @@ ms.date: 04/17/2018
 ms.author: murshedz
 ms.reviewer: martinle
 ms.custom: seo-dt-2019
-ms.openlocfilehash: 6882700208e165464261f236cadd00b30503b81f
-ms.sourcegitcommit: 197a6ffb643f93592edf9e90b04810a18be61133
+ms.openlocfilehash: e6242699ac8a4079ddd2811c016ba8a1969e448e
+ms.sourcegitcommit: ce15cbbcb0d5f820f328262ff5451818e508b480
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 09/26/2020
-ms.locfileid: "91379581"
+ms.lasthandoff: 11/20/2020
+ms.locfileid: "94947955"
 ---
 # <a name="configure-windows-server-update-services-wsus-in-analytics-platform-system"></a>분석 플랫폼 시스템에서 Windows Server Update Services (WSUS) 구성
 이 지침에서는 WSUS (Windows Server Update Services) 구성 마법사를 사용 하 여 분석 플랫폼 시스템용 WSUS를 구성 하는 단계를 안내 합니다. 어플라이언스에 소프트웨어 업데이트를 적용 하려면 먼저 WSUS를 구성 해야 합니다. WSUS가 이미 어플라이언스의 VMM 가상 컴퓨터에 설치 되어 있습니다.  
@@ -39,7 +39,7 @@ WSUS를 구성 하려면 다음을 수행 해야 합니다.
   
 ## <a name="to-configure-windows-server-update-services-wsus"></a>WSUS (Windows Server Update Services를 구성 하려면  
   
-1.  **관리 콘솔**에 로그인 합니다. **어플라이언스 상태** 탭에서 **클러스터** 및 **네트워크** 열이 모든 노드에 녹색 또는 **NA**를 표시 하는지 확인 합니다. **어플라이언스 상태의**모든 노드에 대 한 상태 표시기를 확인 합니다.  
+1.  **관리 콘솔** 에 로그인 합니다. **어플라이언스 상태** 탭에서 **클러스터** 및 **네트워크** 열이 모든 노드에 녹색 또는 **NA** 를 표시 하는지 확인 합니다. **어플라이언스 상태의** 모든 노드에 대 한 상태 표시기를 확인 합니다.  
   
     -   녹색 또는 NA 표시기를 계속 사용 해도 됩니다.  
   
@@ -53,9 +53,9 @@ WSUS를 구성 하려면 다음을 수행 해야 합니다.
   
     #### <a name="to-launch-the-configuration-wizard"></a>구성 마법사를 시작 하려면  
   
-    1.  **서버 관리자 대시보드의** **도구** 메뉴에서 **Windows Server Update Services**를 클릭 합니다.  
+    1.  **서버 관리자 대시보드의** **도구** 메뉴에서 **Windows Server Update Services** 를 클릭 합니다.  
   
-    2.  **업데이트 서비스** 창의 왼쪽 창에서 가상 컴퓨터 관리 노드 서버 (**_appliance_domain_VMM**)를 클릭 하 여 확장 한 다음 **옵션**을 클릭 합니다.  
+    2.  **업데이트 서비스** 창의 왼쪽 창에서 가상 컴퓨터 관리 노드 서버 (**_appliance_domain_ VMM**)를 클릭 하 여 확장 한 다음 **옵션** 을 클릭 합니다.  
   
     3.  **옵션** 창에서 **WSUS 서버 구성 마법사** 를 클릭 하 여 구성 마법사를 시작 합니다.  
   
@@ -69,7 +69,7 @@ WSUS를 구성 하려면 다음을 수행 해야 합니다.
   
         ![WSUS 시작하기 전 주의 사항](./media/configure-windows-server-update-services-wsus/WSUS_Wiz2.png "WSUS_Wiz2")  
   
-    6.  **Microsoft 업데이트 개선 프로그램에 참여** 페이지에서 **예, Microsoft 업데이트 개선 프로그램에 참여**합니다 .를 선택 하 고 **다음**을 클릭 합니다.  
+    6.  **Microsoft 업데이트 개선 프로그램에 참여** 페이지에서 **예, Microsoft 업데이트 개선 프로그램에 참여** 합니다 .를 선택 하 고 **다음** 을 클릭 합니다.  
   
         ![WSUS 개선 프로그램](./media/configure-windows-server-update-services-wsus/WSUS_Wiz3.png "WSUS_Wiz3")  
   
@@ -83,7 +83,7 @@ WSUS를 구성 하려면 다음을 수행 해야 합니다.
   
     #### <a name="to-update-by-using-microsoft-update"></a>Microsoft 업데이트를 사용 하 여 업데이트 하려면  
   
-    1.  Microsoft 업데이트와 동기화 하도록 선택 하면 **업스트림 서버 선택** 페이지를 변경할 필요가 없습니다. **다음**을 클릭합니다.  
+    1.  Microsoft 업데이트와 동기화 하도록 선택 하면 **업스트림 서버 선택** 페이지를 변경할 필요가 없습니다. **다음** 을 클릭합니다.  
   
         ![WSUS 업스트림 서버 동기화](./media/configure-windows-server-update-services-wsus/WSUS_Wiz4a.png "WSUS_Wiz4a")  
   
@@ -97,15 +97,15 @@ WSUS를 구성 하려면 다음을 수행 해야 합니다.
   
         ![WSUS SSL에서 WSUS 업스트림 서버 동기화](./media/configure-windows-server-update-services-wsus/WSUS_Wiz4c.png "WSUS_Wiz4c")  
   
-    3.  이 서버가 복제 서버인 경우에는 **업스트림 서버의 복제 서버** 확인란을 선택합니다. **업데이트 정보를 동기화 할 때 SSL 사용** 과 **업스트림 서버의 복제본**을 모두 선택할 수 있습니다.  
+    3.  이 서버가 복제 서버인 경우에는 **업스트림 서버의 복제 서버** 확인란을 선택합니다. **업데이트 정보를 동기화 할 때 SSL 사용** 과 **업스트림 서버의 복제본** 을 모두 선택할 수 있습니다.  
   
         ![WSUS 업스트림 서버 복제본](./media/configure-windows-server-update-services-wsus/WSUS_Wiz4d.png "WSUS_Wiz4d")  
   
-    4.  이 시점에서 업스트림 서버 구성을 완료 했습니다. **다음**을 클릭 하거나 왼쪽 탐색 창에서 **프록시 서버 지정** 을 선택 합니다.  
+    4.  이 시점에서 업스트림 서버 구성을 완료 했습니다. **다음** 을 클릭 하거나 왼쪽 탐색 창에서 **프록시 서버 지정** 을 선택 합니다.  
   
 5.  프록시 서버를 지정 합니다.  
   
-    이 서버에 Microsoft 업데이트 또는 다른 업스트림 서버에 액세스 하기 위해 프록시 서버가 필요한 경우 여기에서 프록시 서버 설정을 구성할 수 있습니다. 그렇지 않으면 **다음**을 클릭 합니다.  
+    이 서버에 Microsoft 업데이트 또는 다른 업스트림 서버에 액세스 하기 위해 프록시 서버가 필요한 경우 여기에서 프록시 서버 설정을 구성할 수 있습니다. 그렇지 않으면 **다음** 을 클릭 합니다.  
   
     ![WSUS 프록시](./media/configure-windows-server-update-services-wsus/WSUS_Wiz5a.png "WSUS_Wiz5a")  
   
@@ -117,21 +117,21 @@ WSUS를 구성 하려면 다음을 수행 해야 합니다.
   
         ![WSUS 프록시 자격 증명](./media/configure-windows-server-update-services-wsus/WSUS_Wiz5b.png "WSUS_Wiz5b")  
   
-    3.  이 시점에서 프록시 서버 구성을 완료 했습니다. **다음**을 클릭해 동기화 프로세스의 설정을 시작할 수 있는 그 다음 페이지로 이동합니다.  
+    3.  이 시점에서 프록시 서버 구성을 완료 했습니다. **다음** 을 클릭해 동기화 프로세스의 설정을 시작할 수 있는 그 다음 페이지로 이동합니다.  
   
 6.  연결을 시작 합니다.  
   
     ![WSUS 프록시 연결 시작](./media/configure-windows-server-update-services-wsus/WSUS_Wiz6.png "WSUS_Wiz6")  
   
-    **연결 시작**을 클릭 합니다.  
+    **연결 시작** 을 클릭 합니다.  
   
     연결에 성공한 후 **다음** 을 클릭 하 여 언어를 선택할 수 있는 다음 페이지로 이동 합니다.  
   
 7.  언어를 선택 합니다.  
   
-    **이러한 언어의 업데이트만 다운로드를**선택 합니다.  
+    **이러한 언어의 업데이트만 다운로드를** 선택 합니다.  
   
-    **영어**를 선택 하 고 **다음**을 클릭 합니다.  
+    **영어** 를 선택 하 고 **다음** 을 클릭 합니다.  
   
     ![언어 선택](./media/configure-windows-server-update-services-wsus/SQL_Server_PDW_WSUSChooseLanguages.png "SQL_Server_PDW_WSUSChooseLanguages")  
   
@@ -145,7 +145,7 @@ WSUS를 구성 하려면 다음을 수행 해야 합니다.
   
     선택한 모든 업데이트를 선택 취소 합니다.  
   
-    **SQL Server 2012**, **SQL Server 2014**, **Windows Server 2012 R2**및 **System Center 2012 R2-Virtual Machine Manager**을 선택 하 고 **다음**을 클릭 합니다.  
+    **SQL Server 2012**, **SQL Server 2014**, **windows Server 2012 R2**, **system Center 2012 R2-Virtual Machine Manager**, **windows server 2016** 및 **system center 2016-Virtual Machine Manager** 을 선택 하 고 **다음** 을 클릭 합니다.  
   
 9. 분류를 선택 합니다.  
   
@@ -154,23 +154,23 @@ WSUS를 구성 하려면 다음을 수행 해야 합니다.
   
     이전에 선택한 모든 업데이트를 선택 취소 합니다.  
   
-    분석 플랫폼 시스템 어플라이언스에 대해 동기화 할 업데이트에 대 한 **중요 업데이트** 및 **보안 업데이트** 를 선택 하 **고 다음을 클릭 합니다**.  
+    분석 플랫폼 시스템 어플라이언스에 대해 동기화 할 업데이트에 대 한 **중요 업데이트**, **보안 업데이트** 및 **업데이트 롤업을** 선택 하 고 **다음** 을 클릭 합니다.  
   
     ![분류 선택](./media/configure-windows-server-update-services-wsus/SQL_Server_PDW_WSUSChooseClassifications.png "SQL_Server_PDW_WSUSChooseClassifications")  
   
 10. 동기화 일정을 구성 합니다.  
   
-    **수동으로 동기화**를 선택 하 고 **다음**을 클릭 합니다.  
+    **수동으로 동기화** 를 선택 하 고 **다음** 을 클릭 합니다.  
   
     ![일정 동기화 설정](./media/configure-windows-server-update-services-wsus/SQL_Server_PDW_WSUSSyncSchedule.png "SQL_Server_PDW_WSUSSyncSchedule")  
   
 11. 초기 동기화를 시작 합니다.  
   
-    **초기 동기화 시작**을 선택 하 고 **다음**을 클릭 합니다.  
+    **초기 동기화 시작** 을 선택 하 고 **다음** 을 클릭 합니다.  
   
 12. 마치고.  
   
-    **Finish**를 클릭합니다.  
+    **Finish** 를 클릭합니다.  
   
 ## <a name="group-the-appliance-servers-in-wsus"></a><a name="bkmk_WSUSGroup"></a>WSUS에서 어플라이언스 서버 그룹화  
 분석 플랫폼 시스템에 대해 WSUS를 구성한 후 다음 단계는 어플라이언스 서버를 그룹화 하는 것입니다. 모든 어플라이언스 서버를 그룹에 추가 하면 WSUS는 기기의 모든 서버에 소프트웨어 업데이트를 적용할 수 있습니다.  
@@ -180,26 +180,26 @@ WSUS를 구성 하려면 다음을 수행 해야 합니다.
   
 #### <a name="to-group-the-appliance-servers"></a>어플라이언스 서버를 그룹화 하려면  
   
-1.  WSUS 콘솔을 열고 **모든 컴퓨터** 를 마우스 오른쪽 단추로 클릭 한 다음 **컴퓨터 그룹 추가**를 클릭 합니다.  
+1.  WSUS 콘솔을 열고 **모든 컴퓨터** 를 마우스 오른쪽 단추로 클릭 한 다음 **컴퓨터 그룹 추가** 를 클릭 합니다.  
   
     ![컴퓨터 그룹을 추가합니다.](./media/configure-windows-server-update-services-wsus/SQL_Server_PDW_WSUSAddComputerGroup.png "SQL_Server_PDW_WSUSAddComputerGroup")  
   
-2.  컴퓨터 그룹에 "APS" 이름을 입력 한 다음 **추가**를 클릭 합니다.  
+2.  컴퓨터 그룹에 "APS" 이름을 입력 한 다음 **추가** 를 클릭 합니다.  
   
     ![새 컴퓨터 그룹의 이름을 입력합니다.](./media/configure-windows-server-update-services-wsus/SQL_Server_PDW_WSUSSpecifyGroupName.png "SQL_Server_PDW_WSUSSpecifyGroupName")  
   
-3.  **모든 컴퓨터** 를 다시 클릭 하 고 **상태** 드롭다운 메뉴의 상태를 **모두**로 변경한 다음 **새로 고침**을 클릭 합니다. 방금 추가한 새 그룹을 보려면 왼쪽의 트리 컨트롤에서 **모든 컴퓨터** 를 클릭 하 여 확장 해야 할 수도 있습니다.  
+3.  **모든 컴퓨터** 를 다시 클릭 하 고 **상태** 드롭다운 메뉴의 상태를 **모두** 로 변경한 다음 **새로 고침** 을 클릭 합니다. 방금 추가한 새 그룹을 보려면 왼쪽의 트리 컨트롤에서 **모든 컴퓨터** 를 클릭 하 여 확장 해야 할 수도 있습니다.  
   
     ![상태를 Any로 변경 하 고 새로 고침을 클릭 합니다.](./media/configure-windows-server-update-services-wsus/SQL_Server_PDW_WSUSChangeStatusToAny.png "SQL_Server_PDW_WSUSChangeStatusToAny")  
   
-4.  어플라이언스의 일부인 모든 컴퓨터를 선택 하 고 마우스 오른쪽 단추를 클릭 한 다음 **구성원 변경**을 클릭 합니다.  
+4.  어플라이언스의 일부인 모든 컴퓨터를 선택 하 고 마우스 오른쪽 단추를 클릭 한 다음 **구성원 변경** 을 클릭 합니다.  
   
     ![모든 PDW 컴퓨터의 구성원십을 변경합니다.](./media/configure-windows-server-update-services-wsus/SQL_Server_PDW_WSUSChangeMembership.png "SQL_Server_PDW_WSUSChangeMembership")  
   
-5.  확인란을 클릭 한 다음 **확인을**클릭 하 여 만든 새 컴퓨터 그룹을 선택 합니다.  
+5.  확인란을 클릭 한 다음 **확인을** 클릭 하 여 만든 새 컴퓨터 그룹을 선택 합니다.  
   
     ![컴퓨터 그룹 구성원십 선택](./media/configure-windows-server-update-services-wsus/SQL_Server_PDW_WSUSSetComputerGroupMembership.png "SQL_Server_PDW_WSUSSetComputerGroupMembership")  
   
-6.  새 컴퓨터 그룹을 선택 하 고, **상태** 를 **Any**로 변경한 다음, **새로 고침**을 클릭 합니다. 이제 모든 컴퓨터가이 그룹에 할당 되 고 오른쪽 창에 나열 됩니다. 일반적으로 노드에 **이 노드가 아직 상태를 보고 하지**않은 등의 경고가 표시 되는 경우 계속 안전 합니다.  
+6.  새 컴퓨터 그룹을 선택 하 고, **상태** 를 **Any** 로 변경한 다음, **새로 고침** 을 클릭 합니다. 이제 모든 컴퓨터가이 그룹에 할당 되 고 오른쪽 창에 나열 됩니다. 일반적으로 노드에 **이 노드가 아직 상태를 보고 하지** 않은 등의 경고가 표시 되는 경우 계속 안전 합니다.  
   
     ![상태를 임의로 변경하고 새로 고침을 클릭합니다.](./media/configure-windows-server-update-services-wsus/SQL_Server_PDW_WSUSChangeStatusAnyRefresh.png "SQL_Server_PDW_WSUSChangeStatusAnyRefresh")  

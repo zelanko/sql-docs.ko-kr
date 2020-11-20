@@ -9,24 +9,24 @@ ms.date: 04/17/2018
 ms.author: murshedz
 ms.reviewer: martinle
 ms.custom: seo-dt-2019
-ms.openlocfilehash: 2b24d55720d6db5997bfa85c2621f0e8d58c5f95
-ms.sourcegitcommit: e042272a38fb646df05152c676e5cbeae3f9cd13
+ms.openlocfilehash: e5f336c3c2c475523d2081bcf01189e67b77fe19
+ms.sourcegitcommit: ce15cbbcb0d5f820f328262ff5451818e508b480
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 04/27/2020
-ms.locfileid: "74401189"
+ms.lasthandoff: 11/20/2020
+ms.locfileid: "94947918"
 ---
 # <a name="download-and-apply-microsoft-updates-for-analytics-platform-system"></a>분석 플랫폼 시스템용 Microsoft 업데이트 다운로드 및 적용
 이 항목에서는 Microsoft 업데이트 카탈로그에서 Windows Server Update Services (WSUS)로 업데이트를 다운로드 하 고 해당 업데이트를 분석 플랫폼 시스템 어플라이언스 서버에 적용 하는 방법을 설명 합니다. Microsoft 업데이트은 Windows 및 SQL Server에 대해 적용 가능한 모든 업데이트를 설치 합니다. WSUS는 기기의 VMM 가상 컴퓨터에 설치 됩니다.  
   
-## <a name="before-you-begin"></a><a name="TOP"></a>시작 하기 전에  
+## <a name="before-you-begin"></a><a name="TOP"></a>시작하기 전 주의 사항  
   
 > [!WARNING]  
 > 어플라이언스 또는 어플라이언스 구성 요소가 다운 되거나 장애 조치 (failover) 된 경우 업데이트를 적용 하지 마십시오. 이 경우 지원 담당자에 게 문의 하세요.  
 >   
 > 어플라이언스를 사용 하는 동안에는 Microsoft 업데이트를 적용 하지 마십시오. 업데이트를 적용 하면 어플라이언스 노드가 재부팅 될 수 있습니다. 어플라이언스를 사용 하지 않는 경우 유지 관리 기간 동안 업데이트를 적용 해야 합니다.  
   
-### <a name="prerequisites"></a>전제 조건  
+### <a name="prerequisites"></a>사전 요구 사항  
 이러한 단계를 수행 하기 전에 다음을 수행 해야 합니다.  
   
 -   [구성 Windows Server Update Services &#40;wsus&#41; &#40;분석 플랫폼 시스템&#41;](configure-windows-server-update-services-wsus.md)의 지침에 따라 어플라이언스에서 wsus를 구성 합니다.  
@@ -57,15 +57,17 @@ ms.locfileid: "74401189"
   
 2.  **서버 관리자 대시보드의** **도구** 메뉴에서 **Windows Server Update Services** (**wsus**)를 클릭 합니다.  
   
-3.  WSUS 관리 콘솔에서 **동기화**를 클릭 합니다.  
+3.  WSUS 관리 콘솔에서 **동기화** 를 클릭 합니다.  
   
 4.  동기화가 실행 되 고 있지 않은 경우 오른쪽 창에서 **지금 동기화** 를 클릭 합니다. 아래쪽 창에 동기화 상태가 나타납니다. 동기화가 완료 될 때까지 기다립니다.  
   
 #### <a name="approve-microsoft-updates-in-wsus"></a>WSUS에서 Microsoft 업데이트 승인  
   
-1.  WSUS 콘솔의 왼쪽 창에서 **모든 업데이트**를 클릭 합니다.  
+1. **System Center** 가 아닌 모든 업데이트 롤업을 거부 합니다.
+
+2. WSUS 콘솔의 왼쪽 창에서 **모든 업데이트** 를 클릭 합니다.  
   
-2.  **모든 업데이트** 창에서 **승인** 드롭다운 메뉴를 클릭 하 고 **승인** 거부 됨을 **제외**로 설정 합니다. **상태** 드롭다운 메뉴를 클릭 하 고 **상태** 를 **Any**로 설정 합니다. **새로 고침**을 클릭 합니다.  
+3.  **모든 업데이트** 창에서 **승인** 드롭다운 메뉴를 클릭 하 고 **승인** 거부 됨을 **제외** 로 설정 합니다. **상태** 드롭다운 메뉴를 클릭 하 고 **상태** 를 **Any** 로 설정 합니다. **새로 고침** 을 클릭합니다.  
   
     **제목** 열을 마우스 오른쪽 단추로 클릭 하 고 **파일 상태** 를 선택 하 여 다운로드 완료 후 파일 상태를 확인 합니다.  
   
@@ -73,19 +75,19 @@ ms.locfileid: "74401189"
   
     ![모든 업데이트를 선택하고 상태를 임의로 변경합니다.](./media/download-and-apply-microsoft-updates/SQL_Server_PDW_WSUSSelectAllUpdates.png "SQL_Server_PDW_WSUSSelectAllUpdates")  
   
-3.  모든 업데이트를 선택 하 고 오른쪽 창에서 **승인** 링크를 클릭 합니다.  
+4.  모든 업데이트를 선택 하 고 오른쪽 창에서 **승인** 링크를 클릭 합니다.  
   
-    선택한 업데이트를 마우스 오른쪽 단추로 클릭 하 고 **승인**을 클릭할 수도 있습니다. "Microsoft 소프트웨어 사용 조건"에 동의 하 라는 메시지가 표시 될 수 있습니다. 이 경우 창에서 **동의** 함을 클릭 하 여 계속 합니다.  
+    선택한 업데이트를 마우스 오른쪽 단추로 클릭 하 고 **승인** 을 클릭할 수도 있습니다. "Microsoft 소프트웨어 사용 조건"에 동의 하 라는 메시지가 표시 될 수 있습니다. 이 경우 창에서 **동의** 함을 클릭 하 여 계속 합니다.  
   
     ![적용하는 업데이트를 모두 선택하고 승인을 클릭합니다.](./media/download-and-apply-microsoft-updates/SQL_Server_PDW_WSUSSelectApprove.png "SQL_Server_PDW_WSUSSelectApprove")  
   
-4.  [Windows Server Update Services 구성 &#40;WSUS&#41; &#40;Analytics Platform System&#41;](configure-windows-server-update-services-wsus.md)에서 만든 어플라이언스 서버 그룹을 선택 합니다.  
+5.  [Windows Server Update Services 구성 &#40;WSUS&#41; &#40;Analytics Platform System&#41;](configure-windows-server-update-services-wsus.md)에서 만든 어플라이언스 서버 그룹을 선택 합니다.  
   
-5.  **설치 승인**을 클릭한 다음 **확인**을 클릭합니다.  
+6.  **설치 승인** 을 클릭한 다음 **확인** 을 클릭합니다.  
   
     ![컴퓨터 그룹에 대한 업데이트를 승인합니다.](./media/download-and-apply-microsoft-updates/SQL_Server_PDW_WSUSSelectApprovalType.png "SQL_Server_PDW_WSUSSelectApprovalType")  
   
-6.  **승인 진행률** 대화 상자에서 승인 프로세스가 완료 되 면 **닫기**를 클릭 합니다.  
+7.  **승인 진행률** 대화 상자에서 승인 프로세스가 완료 되 면 **닫기** 를 클릭 합니다.  
   
     ![업데이트가 승인되면 창을 닫습니다.](./media/download-and-apply-microsoft-updates/SQL_Server_PDW_WSUSCloseApprovalProgressWindow.png "SQL_Server_PDW_WSUSCloseApprovalProgressWindow")  
   
@@ -105,7 +107,7 @@ ms.locfileid: "74401189"
   
 #### <a name="apply-microsoft-updates"></a>Microsoft 업데이트 적용  
   
-1.  시작 하기 전에 [관리 콘솔 &#40;분석 플랫폼 시스템&#41;사용 하 여 어플라이언스 모니터 ](monitor-the-appliance-by-using-the-admin-console.md)를 열고 **어플라이언스 상태** 탭을 클릭 한 다음 **클러스터** 및 **네트워크** 열이 모든 노드에 녹색 (또는 NA)을 표시 하는지 확인 합니다. 이러한 열 중 하나에 경고가 있는 경우 어플라이언스는 업데이트를 제대로 설치 하지 못할 수 있습니다. 계속 하기 전에 **클러스터** 및 **네트워크** 열의 기존 경고를 모두 처리 합니다.  
+1.  시작 하기 전에 [관리 콘솔 &#40;분석 플랫폼 시스템&#41;사용 하 여 어플라이언스 모니터](monitor-the-appliance-by-using-the-admin-console.md)를 열고 **어플라이언스 상태** 탭을 클릭 한 다음 **클러스터** 및 **네트워크** 열이 모든 노드에 녹색 (또는 NA)을 표시 하는지 확인 합니다. 이러한 열 중 하나에 경고가 있는 경우 어플라이언스는 업데이트를 제대로 설치 하지 못할 수 있습니다. 계속 하기 전에 **클러스터** 및 **네트워크** 열의 기존 경고를 모두 처리 합니다.  
   
 2.  패브릭 도메인 관리자로 _<domain_name>_ **HST01** 노드에 로그온 합니다.  
   
@@ -113,23 +115,23 @@ ms.locfileid: "74401189"
   
 #### <a name="verify-the-updates-on-all-nodes"></a>모든 노드에서 업데이트 확인  
   
-1.  VMM 노드에서 WSUS 관리 콘솔을 시작 합니다. 이 응용 프로그램은 **시작**, **관리 도구**, **Windows Server Update Services**에서 찾을 수 있습니다.  
+1.  VMM 노드에서 WSUS 관리 콘솔을 시작 합니다. 이 응용 프로그램은 **시작**, **관리 도구**, **Windows Server Update Services** 에서 찾을 수 있습니다.  
   
-2.  **컴퓨터**를 확장 합니다.  
+2.  **컴퓨터** 를 확장 합니다.  
   
-3.  **모든 컴퓨터**를 확장 합니다.  
+3.  **모든 컴퓨터** 를 확장 합니다.  
   
 4.  [Windows Server Update Services 구성 &#40;WSUS&#41; &#40;Analytics Platform System&#41;](configure-windows-server-update-services-wsus.md)에서 만든 어플라이언스 서버 그룹을 선택 합니다.  
   
-5.  **상태** 드롭다운 메뉴에서 **모두** 를 선택 하 고 **새로 고침**을 클릭 합니다.  
+5.  **상태** 드롭다운 메뉴에서 **모두** 를 선택 하 고 **새로 고침** 을 클릭 합니다.  
   
-6.  **업데이트 서비스**, *<appliance name>*-VMM, **업데이트**, **모든 업데이트**를 확장 합니다 *<appliance name>* . 여기서은 어플라이언스 이름입니다.  
+6.  **업데이트 서비스**, *<appliance name>* -VMM, **업데이트**, **모든 업데이트** 를 확장 *<appliance name>* 합니다. 여기서은 어플라이언스 이름입니다.  
   
 7.  **모든 업데이트** 창에서 승인 거부 됨을 **제외한 모든** **승인** 으로 설정 합니다.  
   
-8.  **모든 업데이트** 창에서 **상태** 를 Failed로 설정 **하거나 필요 함**으로 설정 합니다.  
+8.  **모든 업데이트** 창에서 **상태** 를 Failed로 설정 **하거나 필요 함** 으로 설정 합니다.  
   
-9. **새로 고침**을 클릭 합니다.  
+9. **새로 고침** 을 클릭합니다.  
   
 10. **필요한 업데이트가** 0 보다 큰 경우 지원 담당자에 게 문의 하세요.  
   
@@ -147,7 +149,7 @@ ms.locfileid: "74401189"
   
 1.  HST01 노드에 패브릭 도메인 관리자로 로그인 되어 있는지 확인 합니다.  
   
-2.  명령 프롬프트 창을 열고 다음 명령을 입력 합니다. 지정 *<parameter>* 된 정보로 대체 합니다.  
+2.  명령 프롬프트 창을 열고 다음 명령을 입력 합니다. *<parameter>* 지정 된 정보로 대체 합니다.  
   
 **Microsoft 업데이트를 실행 하려면 다음을 수행 합니다.**  
   
@@ -163,7 +165,7 @@ C:\pdwinst\media\setup.exe /action="ReportMicrosoftUpdateClientStatus" /DomainAd
   
 ## <a name="see-also"></a>참고 항목  
 [Microsoft 업데이트 &#40;분석 플랫폼 시스템을 제거&#41;](uninstall-microsoft-updates.md)  
-[Analytics platform System 핫픽스 &#40;Analytics platform system&#41;적용](apply-analytics-platform-system-hotfixes.md)  
+[Analytics platform System 핫픽스 &#40;Analytics platform system&#41;적용 ](apply-analytics-platform-system-hotfixes.md)  
 [분석 플랫폼 시스템 핫픽스 &#40;분석 플랫폼 시스템을 제거&#41;](uninstall-analytics-platform-system-hotfixes.md)  
 [소프트웨어 서비스 &#40;분석 플랫폼 시스템&#41;](software-servicing.md)  
   

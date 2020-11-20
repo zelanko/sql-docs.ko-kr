@@ -14,12 +14,12 @@ helpviewer_keywords:
 ms.assetid: ''
 author: rajeshsetlem
 ms.author: rajpo
-ms.openlocfilehash: a5ebfaaf303a354124f3668b65716cd65bdb8043
-ms.sourcegitcommit: c7f40918dc3ecdb0ed2ef5c237a3996cb4cd268d
+ms.openlocfilehash: 035273939e2141b8497b5b0c38762fd7b7d47564
+ms.sourcegitcommit: ce15cbbcb0d5f820f328262ff5451818e508b480
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 10/05/2020
-ms.locfileid: "91727774"
+ms.lasthandoff: 11/20/2020
+ms.locfileid: "94947933"
 ---
 # <a name="identify-the-right-azure-sql-databasemanaged-instance-sku-for-your-on-premises-database"></a>온-프레미스 데이터베이스에 적합 한 Azure SQL Database/Managed Instance SKU 식별
 
@@ -42,8 +42,10 @@ SKU 권장 사항 기능을 사용 하면 데이터베이스를 호스트 하는
 
 - 최신 버전의 [DMA](https://aka.ms/get-dma)를 다운로드 하 여 설치 합니다. 이전 버전의 도구가 이미 있는 경우이를 열면 DMA를 업그레이드할지 묻는 메시지가 표시 됩니다.
 - 모든 스크립트를 실행 하는 데 필요한 [PowerShell 버전 5.1](https://www.microsoft.com/download/details.aspx?id=54616) 이상이 컴퓨터에 있는지 확인 합니다. 컴퓨터에 설치 된 PowerShell 버전을 확인 하는 방법에 대 한 자세한 내용은 [Windows powershell 5.1 다운로드 및 설치](/skypeforbusiness/set-up-your-computer-for-windows-powershell/download-and-install-windows-powershell-5-1)문서를 참조 하세요.
+  > [!NOTE]
+  > 데이터 수집 스크립트는 컴퓨터 정보를 수집 하기 위해 PowerShell 6에서 더 이상 사용 되지 않는 Get-WmiObject cmdlet을 사용 합니다. PowerShell 6 또는 7에서이 스크립트를 실행 하려면 WMI cmdlet을 최신 CIM cmdlet으로 바꾸어야 합니다.
 - 컴퓨터에 Azure Powershell 모듈이 설치 되어 있는지 확인 합니다. 자세한 내용은 [Azure PowerShell 모듈 설치](/powershell/azure/install-az-ps?view=azps-1.8.0)문서를 참조 하세요.
-- 성능 카운터를 수집 하는 데 필요한 PowerShell 파일 **SkuRecommendationDataCollectionScript.ps1**이 DMA 폴더에 설치 되어 있는지 확인 합니다.
+- 성능 카운터를 수집 하는 데 필요한 PowerShell 파일 **SkuRecommendationDataCollectionScript.ps1** 이 DMA 폴더에 설치 되어 있는지 확인 합니다.
 - 이 프로세스를 수행할 컴퓨터에 데이터베이스를 호스트 하는 컴퓨터에 대 한 관리자 권한이 있는지 확인 합니다.
 
 ## <a name="collect-performance-counters"></a>성능 카운터를 수집 합니다.
@@ -69,7 +71,7 @@ SKU 권장 사항 기능을 사용 하면 데이터베이스를 호스트 하는
      -ComputerName Foobar1
      -OutputFilePath D:\counters2.csv
      -CollectionTimeInSeconds 2400
-     -DbConnectionString "Server=localhost;Initial Catalog=master;Integrated Security=SSPI;"
+     -DbConnectionString Server=localhost;Initial Catalog=master;Integrated Security=SSPI;
     ```
 
     명령이 실행 되 면 프로세스에서 성능 카운터를 포함 하는 파일을 지정한 위치에 출력 합니다. 이 파일을 프로세스의 다음 부분에 대 한 입력으로 사용할 수 있으며,이는 단일 데이터베이스 및 관리 되는 인스턴스 옵션에 대 한 SKU 권장 사항을 제공 합니다.
@@ -111,7 +113,7 @@ DMA CLI를 사용 하 여 SKU 권장 사항을 가져오려면 명령 프롬프�
         - **Azureauthenticationtoken**: 인증서 토큰으로 설정 합니다.
 
 > [!NOTE]
-> 대화형 인증용 ClientId 및 TenantId를 가져오려면 새 AAD 응용 프로그램을 구성 해야 합니다. 인증 및 이러한 자격 증명 가져오기에 대 한 자세한 내용은 [Microsoft Azure 청구 Api 코드 샘플: RATECARD api](https://github.com/Azure-Samples/billing-dotnet-ratecard-api)문서에서 **1 단계: AAD 테 넌 트의 네이티브 클라이언트 응용 프로그램 구성**에 있는 지침을 따르세요.
+> 대화형 인증용 ClientId 및 TenantId를 가져오려면 새 AAD 응용 프로그램을 구성 해야 합니다. 인증 및 이러한 자격 증명 가져오기에 대 한 자세한 내용은 [Microsoft Azure 청구 Api 코드 샘플: RATECARD api](https://github.com/Azure-Samples/billing-dotnet-ratecard-api)문서에서 **1 단계: AAD 테 넌 트의 네이티브 클라이언트 응용 프로그램 구성** 에 있는 지침을 따르세요.
 
 마지막으로, 권장 사항을 원하는 데이터베이스를 지정 하는 데 사용할 수 있는 선택적 인수가 있습니다. 
 
@@ -210,7 +212,7 @@ HTML 파일에는이 정보가 그래픽 형식으로 포함 되어 있습니다
 
 2. 각 데이터베이스에 대 한 권장 사항을 검토 하 고 필요에 따라 가격 책정 계층, 계산 수준 및 최대 데이터 크기를 수정 합니다. 현재 프로 비전을 원하지 않는 데이터베이스는 선택 취소 해야 합니다.
 
-3. **프로 비전 스크립트 생성**을 선택 하 고 스크립트를 저장 한 다음 PowerShell에서 실행 합니다.
+3. **프로 비전 스크립트 생성** 을 선택 하 고 스크립트를 저장 한 다음 PowerShell에서 실행 합니다.
 
     이 프로세스에서는 HTML 페이지에서 선택한 모든 데이터베이스를 만들어야 합니다.
 
