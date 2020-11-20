@@ -105,11 +105,11 @@ GO
 
 이 자습서에서는 R 스크립트를 저장 프로시저에 래핑합니다. 이 단계에서는 R을 사용하여 입력 데이터 세트를 만들고, 팁 결과를 예측하기 위한 분류 모델을 빌드하고, 데이터베이스에 모델을 저장하는 저장 프로시저를 만듭니다.
 
-이 스크립트에 사용되는 매개 변수 입력 중에서 **input_data_1_partition_by_columns** 및 **input_data_1_order_by_columns**가 보일 것입니다. 이러한 매개 변수는 분할된 모델링이 발생하는 메커니즘입니다. 이러한 매개 변수는 [sp_execute_external_script](../../relational-databases/system-stored-procedures/sp-execute-external-script-transact-sql.md)에 입력으로 전달되어 파티션마다 한 번씩 실행되는 외부 스크립트를 사용하여 파티션을 처리합니다. 
+이 스크립트에 사용되는 매개 변수 입력 중에서 **input_data_1_partition_by_columns** 및 **input_data_1_order_by_columns** 가 보일 것입니다. 이러한 매개 변수는 분할된 모델링이 발생하는 메커니즘입니다. 이러한 매개 변수는 [sp_execute_external_script](../../relational-databases/system-stored-procedures/sp-execute-external-script-transact-sql.md)에 입력으로 전달되어 파티션마다 한 번씩 실행되는 외부 스크립트를 사용하여 파티션을 처리합니다. 
 
 이 저장 프로시저의 경우 완료 시간을 단축할 수 있도록 [병렬 처리를 사용](#parallel)하세요.
 
-이 스크립트를 실행하면 개체 탐색기의 **NYCTaxi_Sample** 데이터베이스 아래에 있는 \Programmability\Stored Procedures 프로시저에 **train_rxLogIt_per_partition**이 보입니다. 모델을 저장하는 데 사용되는 새 테이블 **dbo.nyctaxi_models**도 보입니다.
+이 스크립트를 실행하면 개체 탐색기의 **NYCTaxi_Sample** 데이터베이스 아래에 있는 \Programmability\Stored Procedures 프로시저에 **train_rxLogIt_per_partition** 이 보입니다. 모델을 저장하는 데 사용되는 새 테이블 **dbo.nyctaxi_models** 도 보입니다.
 
 ```sql
 USE NYCTaxi_Sample
@@ -174,7 +174,7 @@ GO
 기본적으로 쿼리 최적화 프로그램은 행이 256개를 초과하는 테이블의 `@parallel=1`에서 작동하는 경향이 있지만, 가능하다면 이 스크립트에서 보여드리는 것처럼 `@parallel=1`을 설정하여 명시적으로 처리할 수 있습니다.
 
 > [!Tip]
-> 학습 워크로드의 경우 비-Microsoft-rx 알고리즘을 사용 중이어도 임의의 학습 스크립트에 `@parallel`을 사용할 수 있습니다. 일반적으로 RevoScaleR 알고리즘(rx 접두사 포함)만이 SQL Server의 학습 시나리오에서 병렬 처리를 제공합니다. 그러나 새 매개 변수를 사용하면 오픈 소스 R 함수를 포함하여 해당 기능을 사용하여 특별히 엔지니어링되지 않은 함수를 호출하는 스크립트를 병렬화할 수 있습니다. 이는 파티션이 특정 스레드에 대한 선호도를 갖고 있기 때문이며, 따라서 스크립트에서 호출되는 모든 작업은 특정`thread.`<a name="training-step">에서 파티션별로 실행됩니다</a>
+> 학습 워크로드의 경우 비-Microsoft-rx 알고리즘을 사용 중이어도 임의의 학습 스크립트에 `@parallel`을 사용할 수 있습니다. 일반적으로 RevoScaleR 알고리즘(rx 접두사 포함)만이 SQL Server의 학습 시나리오에서 병렬 처리를 제공합니다. 그러나 새 매개 변수를 사용하면 오픈 소스 R 함수를 포함하여 해당 기능을 사용하여 특별히 엔지니어링되지 않은 함수를 호출하는 스크립트를 병렬화할 수 있습니다. 이는 파티션이 특정 스레드에 대한 선호도를 갖고 있기 때문이며, 따라서 스크립트에서 호출되는 모든 작업은 특정 에서 파티션별로 실행됩니다`thread.`<a name="training-step"></a>
 
 ## <a name="run-the-procedure-and-train-the-model"></a>프로시저를 실행하고 모델 학습
 
