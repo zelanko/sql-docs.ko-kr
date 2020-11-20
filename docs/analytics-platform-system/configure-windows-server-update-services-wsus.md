@@ -9,12 +9,12 @@ ms.date: 04/17/2018
 ms.author: murshedz
 ms.reviewer: martinle
 ms.custom: seo-dt-2019
-ms.openlocfilehash: e6242699ac8a4079ddd2811c016ba8a1969e448e
-ms.sourcegitcommit: ce15cbbcb0d5f820f328262ff5451818e508b480
+ms.openlocfilehash: 06ac0126bb12668654c04e6a82b20ca551dd925e
+ms.sourcegitcommit: a49a66dbda0cb16049e092b49c8318ac3865af3c
 ms.translationtype: MT
 ms.contentlocale: ko-KR
 ms.lasthandoff: 11/20/2020
-ms.locfileid: "94947955"
+ms.locfileid: "94983064"
 ---
 # <a name="configure-windows-server-update-services-wsus-in-analytics-platform-system"></a>분석 플랫폼 시스템에서 Windows Server Update Services (WSUS) 구성
 이 지침에서는 WSUS (Windows Server Update Services) 구성 마법사를 사용 하 여 분석 플랫폼 시스템용 WSUS를 구성 하는 단계를 안내 합니다. 어플라이언스에 소프트웨어 업데이트를 적용 하려면 먼저 WSUS를 구성 해야 합니다. WSUS가 이미 어플라이언스의 VMM 가상 컴퓨터에 설치 되어 있습니다.  
@@ -156,7 +156,7 @@ WSUS를 구성 하려면 다음을 수행 해야 합니다.
   
     분석 플랫폼 시스템 어플라이언스에 대해 동기화 할 업데이트에 대 한 **중요 업데이트**, **보안 업데이트** 및 **업데이트 롤업을** 선택 하 고 **다음** 을 클릭 합니다.  
   
-    ![분류 선택](./media/configure-windows-server-update-services-wsus/SQL_Server_PDW_WSUSChooseClassifications.png "SQL_Server_PDW_WSUSChooseClassifications")  
+    ![분류 선택](./media/configure-windows-server-update-services-wsus/sql-server-pdw-wsus-choose-classifications.png "sql server-pdw-wsus-선택-분류")  
   
 10. 동기화 일정을 구성 합니다.  
   
