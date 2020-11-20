@@ -15,12 +15,12 @@ ms.reviewer: ''
 ms.custom: ''
 ms.date: 09/07/2019
 monikerRange: '>=sql-server-2016||=sqlallproducts-allversions'
-ms.openlocfilehash: 599f0edf2a62413aaa44ccaff191bfac034aa3d9
-ms.sourcegitcommit: 863420525a1f5d5b56b311b84a6fb14e79404860
+ms.openlocfilehash: eb38c37dcb5a570364675fece213c8c6868173ec
+ms.sourcegitcommit: 2144a22ad4380182133e87664a907fe6f06b5f95
 ms.translationtype: HT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 11/10/2020
-ms.locfileid: "94418025"
+ms.lasthandoff: 11/12/2020
+ms.locfileid: "94570950"
 ---
 # <a name="add-features-to-an-instance-of-sql-server-setup"></a>SQL Server 인스턴스에 기능 추가(설치 프로그램)
 
@@ -62,7 +62,7 @@ ms.locfileid: "94418025"
 
     선택한 기능의 필수 구성 요소가 오른쪽 창에 표시됩니다. 설치되어 있지 않은 필수 구성 요소가 있는 경우 SQL Server 설치 프로그램은 이 절차의 뒷부분에 설명된 설치 단계에서 이를 설치합니다.
 
-    시스템 구성 검사기는 설치를 계속하기 전에 컴퓨터의 시스템 상태를 확인합니다. **다음** 을 선택하여 계속합니다.
+    시스템 구성 검사기는 설치를 계속하기 전에 컴퓨터의 시스템 상태를 확인합니다. 계속하려면 **다음** 을 선택합니다.
 
 9. 디스크 공간 요구 사항 페이지에서는 사용자가 지정한 기능에 필요한 디스크 공간을 계산하여 설치 프로그램을 실행하는 동안 컴퓨터에서 사용 가능한 디스크 공간과 이러한 요구 사항을 비교하여 보여 줍니다.
 

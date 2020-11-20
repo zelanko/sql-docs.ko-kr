@@ -25,12 +25,12 @@ ms.assetid: 782798d3-9552-4514-9f58-e87be4b264e4
 author: VanMSFT
 ms.author: vanto
 monikerRange: '>=aps-pdw-2016||=azuresqldb-current||=azure-sqldw-latest||>=sql-server-2016||=sqlallproducts-allversions||>=sql-server-linux-2017||=azuresqldb-mi-current'
-ms.openlocfilehash: f74a4cb83db387bf0251a3dc6be7c07c06d8dce2
-ms.sourcegitcommit: f3321ed29d6d8725ba6378d207277a57cb5fe8c2
+ms.openlocfilehash: c18c98192c2806f0b946e5025127151c68009682
+ms.sourcegitcommit: 36fe62a3ccf34979bfde3e192cfa778505add465
 ms.translationtype: HT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 07/06/2020
-ms.locfileid: "86005694"
+ms.lasthandoff: 11/11/2020
+ms.locfileid: "94521180"
 ---
 # <a name="create-a-database-user"></a>데이터베이스 사용자 만들기
 [!INCLUDE [SQL Server](../../../includes/applies-to-version/sql-asdb-asdbmi-asa-pdw.md)]
@@ -42,18 +42,18 @@ ms.locfileid: "86005694"
 ##  <a name="understanding-the-types-of-users"></a><a name="Understanding"></a> 사용자 유형 이해  
  [!INCLUDE[ssManStudio](../../../includes/ssmanstudio-md.md)] 에서는 데이터베이스 사용자를 만들 때 6가지 옵션을 표시합니다. 다음 그래픽은 녹색 상자에 6가지 옵션을 보여 주고 나타내는 정보를 표시합니다.  
   
- ![TypesOfUsers](../../../relational-databases/security/authentication-access/media/typesofusers.png "TypesOfUsers")  
+ ![여러 유형의 사용자를 설명하는 다이어그램](../../../relational-databases/security/authentication-access/media/typesofusers.png "TypesOfUsers")  
   
 ### <a name="selecting-the-type-of-user"></a>사용자 유형 선택  
  **로그인 또는 로그인에 매핑되지 않은 사용자**  
   
- [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)]을 처음 사용하는 경우 만들 사용자 유형을 결정하기 어려울 수 있습니다. 먼저 데이터베이스에 액세스해야 하는 개인 또는 그룹이 로그인을 가지고 있는지 자문해 봅니다. master 데이터베이스의 로그인은 [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] 을 관리하는 사용자와 [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)]인스턴스에서 여러 또는 모든 데이터베이스에 액세스해야 하는 사용자에게 일반적입니다. 이런 상황에서는 **로그인을 사용하는 SQL 사용자**를 만듭니다. 데이터베이스 사용자는 데이터베이스 연결 시의 로그인 ID입니다. 데이터베이스 사용자는 원하는 경우 로그인과 같은 이름을 사용할 수 있습니다. 이 항목에서는 [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)]에 로그인이 이미 있다고 가정합니다. 로그인을 만드는 방법은 [로그인 만들기](../../../relational-databases/security/authentication-access/create-a-login.md)를 참조하세요.  
+ [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)]을 처음 사용하는 경우 만들 사용자 유형을 결정하기 어려울 수 있습니다. 먼저 데이터베이스에 액세스해야 하는 개인 또는 그룹이 로그인을 가지고 있는지 자문해 봅니다. master 데이터베이스의 로그인은 [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] 을 관리하는 사용자와 [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)]인스턴스에서 여러 또는 모든 데이터베이스에 액세스해야 하는 사용자에게 일반적입니다. 이런 상황에서는 **로그인을 사용하는 SQL 사용자** 를 만듭니다. 데이터베이스 사용자는 데이터베이스 연결 시의 로그인 ID입니다. 데이터베이스 사용자는 원하는 경우 로그인과 같은 이름을 사용할 수 있습니다. 이 항목에서는 [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)]에 로그인이 이미 있다고 가정합니다. 로그인을 만드는 방법은 [로그인 만들기](../../../relational-databases/security/authentication-access/create-a-login.md)를 참조하세요.  
   
- 데이터베이스에 액세스해야 하는 개인 또는 그룹에 로그인이 없고 하나 또는 일부 데이터베이스에만 액세스해야 하는 경우 **Windows 사용자** 또는 **암호를 사용하는 SQL 사용자**를 만듭니다. 포함된 데이터베이스 사용자라고도 하며 master 데이터베이스의 로그인과 연결되지 않습니다. [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)]인스턴스 간에 데이터베이스를 쉽게 이동할 수 있기를 원하는 경우 매우 적합합니다. [!INCLUDE[ssSQL15](../../../includes/sssql15-md.md)]에서 이 옵션을 사용하려면 먼저 관리자가 [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)]에 대해 포함된 데이터베이스를 사용하도록 설정하고 포함할 데이터베이스가 설정되어야 합니다. 자세한 내용은 [포함된 데이터베이스 사용자 - 이식 가능한 데이터베이스 만들기](../../../relational-databases/security/contained-database-users-making-your-database-portable.md)를 참조하세요.  
+ 데이터베이스에 액세스해야 하는 개인 또는 그룹에 로그인이 없고 하나 또는 일부 데이터베이스에만 액세스해야 하는 경우 **Windows 사용자** 또는 **암호를 사용하는 SQL 사용자** 를 만듭니다. 포함된 데이터베이스 사용자라고도 하며 master 데이터베이스의 로그인과 연결되지 않습니다. [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)]인스턴스 간에 데이터베이스를 쉽게 이동할 수 있기를 원하는 경우 매우 적합합니다. [!INCLUDE[ssSQL15](../../../includes/sssql15-md.md)]에서 이 옵션을 사용하려면 먼저 관리자가 [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)]에 대해 포함된 데이터베이스를 사용하도록 설정하고 포함할 데이터베이스가 설정되어야 합니다. 자세한 내용은 [포함된 데이터베이스 사용자 - 이식 가능한 데이터베이스 만들기](../../../relational-databases/security/contained-database-users-making-your-database-portable.md)를 참조하세요.  
   
-> **중요!** 포함된 데이터베이스 사용자로 연결할 때 연결 문자열의 일부로 데이터베이스 이름을 제공해야 합니다. [!INCLUDE[ssManStudio](../../../includes/ssmanstudio-md.md)]에서 데이터베이스를 지정하려면 **연결 대상** 대화 상자에서 **옵션**을 클릭하고 **연결 속성** 탭을 클릭합니다.  
+> **중요!** 포함된 데이터베이스 사용자로 연결할 때 연결 문자열의 일부로 데이터베이스 이름을 제공해야 합니다. [!INCLUDE[ssManStudio](../../../includes/ssmanstudio-md.md)]에서 데이터베이스를 지정하려면 **연결 대상** 대화 상자에서 **옵션** 을 클릭하고 **연결 속성** 탭을 클릭합니다.  
   
- 연결 중인 개인이 Windows에서 인증할 수 없는 경우 **SQL Server 인증 로그인** 에 따라 **암호를 사용하는 SQL 사용자** 또는 **로그인을 사용하는 SQL 사용자**를 선택합니다. 조직에 속하지 않은 개인(예: 고객)이 [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)]에 연결하는 경우 일반적입니다.  
+ 연결 중인 개인이 Windows에서 인증할 수 없는 경우 **SQL Server 인증 로그인** 에 따라 **암호를 사용하는 SQL 사용자** 또는 **로그인을 사용하는 SQL 사용자** 를 선택합니다. 조직에 속하지 않은 개인(예: 고객)이 [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)]에 연결하는 경우 일반적입니다.  
   
 > **팁** 조직에 속한 개인의 경우 추가 암호를 기억하지 않아도 되며 Windows 인증에서 Kerberos와 같은 추가 보안 기능을 제공하므로 Windows 인증이 보다 적합합니다.  
   
@@ -74,7 +74,7 @@ ms.locfileid: "86005694"
   
 2.  새 데이터베이스 사용자를 만들 데이터베이스를 확장합니다.  
   
-3.  **보안** 폴더를 마우스 오른쪽 단추로 클릭하고 **새로 만들기**를 가리킨 후 **사용자...** 를 선택합니다.  
+3.  **보안** 폴더를 마우스 오른쪽 단추로 클릭하고 **새로 만들기** 를 가리킨 후 **사용자...** 를 선택합니다.  
   
 4.  **데이터베이스 사용자 – 신규** 대화 상자의 **일반** 페이지에 있는 **사용자 유형** 목록에서 다음 사용자 유형 중 하나를 선택합니다.  
   
@@ -93,7 +93,7 @@ ms.locfileid: "86005694"
 5.  옵션을 선택하면 대화 상자의 나머지 옵션이 변경될 수 있습니다. 일부 옵션은 특정 유형의 데이터베이스 사용자에게만 적용됩니다. 일부 옵션 비워둘 수 있으며 기본값을 사용합니다.  
   
      **사용자 이름**  
-     새 사용자의 이름을 입력합니다. **사용자 유형** 목록에서 **Windows 사용자**를 선택한 경우 줄임표 **(…)** 를 클릭하여 **사용자 또는 그룹 선택** 대화 상자를 열 수도 있습니다.  
+     새 사용자의 이름을 입력합니다. **사용자 유형** 목록에서 **Windows 사용자** 를 선택한 경우 줄임표 **(…)** 를 클릭하여 **사용자 또는 그룹 선택** 대화 상자를 열 수도 있습니다.  
   
      **로그인 이름**  
      사용자에 대한 로그인을 입력합니다. 또는 줄임표 **(...)** 를 클릭하여 **로그인 선택** 대화 상자를 엽니다. **로그인 이름** 은 **사용자 유형** 목록에서 **로그인을 사용하는 SQL 사용자** 또는 **Windows 사용자** 를 선택한 경우 사용할 수 있습니다.  
@@ -105,7 +105,7 @@ ms.locfileid: "86005694"
      사용자의 기본 언어를 입력합니다.  
   
      **기본 스키마**  
-     이 사용자가 만든 개체를 소유할 스키마를 입력합니다. 또는 줄임표 **(...)** 를 클릭하여 **스키마 선택** 대화 상자를 엽니다. **기본 스키마** 는 **사용자 유형**목록에서 **로그인을 사용하는 SQL 사용자**, **로그인을 사용하지 않는 SQL 사용자** 또는 **Windows 사용자** 를 선택한 경우 사용할 수 있습니다.  
+     이 사용자가 만든 개체를 소유할 스키마를 입력합니다. 또는 줄임표 **(...)** 를 클릭하여 **스키마 선택** 대화 상자를 엽니다. **기본 스키마** 는 **사용자 유형** 목록에서 **로그인을 사용하는 SQL 사용자**, **로그인을 사용하지 않는 SQL 사용자** 또는 **Windows 사용자** 를 선택한 경우 사용할 수 있습니다.  
   
      **인증서 이름**  
      데이터베이스 사용자에 대해 사용할 인증서를 입력합니다. 또는 줄임표 **(...)** 를 클릭하여 **인증서 선택** 대화 상자를 엽니다. **인증서 이름** 은 **사용자 유형** 목록에서 **인증서에 매핑된 사용자** 를 선택한 경우 사용할 수 있습니다.  
@@ -116,11 +116,11 @@ ms.locfileid: "86005694"
 6.  [!INCLUDE[clickOK](../../../includes/clickok-md.md)]  
   
 ### <a name="additional-options"></a>추가 옵션  
- **데이터베이스 사용자 - 신규** 대화 상자에서는 다음 네 가지 추가 페이지에 대한 옵션도 제공합니다. **소유한 스키마**, **멤버 자격**, **보안 개체** 및 **확장 속성**의 네 가지 추가 페이지에 대한 옵션이 제공됩니다.  
+ **데이터베이스 사용자 - 신규** 대화 상자에서는 다음 네 가지 추가 페이지에 대한 옵션도 제공합니다. **소유한 스키마**, **멤버 자격**, **보안 개체** 및 **확장 속성** 의 네 가지 추가 페이지에 대한 옵션이 제공됩니다.  
   
--   **소유한 스키마** 페이지에는 새 데이터베이스 사용자가 소유할 수 있는 모든 가능한 스키마가 나열됩니다. 데이터베이스 사용자로부터 스키마를 추가하거나 제거하려면 **이 사용자가 소유한 스키마**아래에서 스키마 옆에 있는 확인란을 선택하거나 선택을 취소합니다.  
+-   **소유한 스키마** 페이지에는 새 데이터베이스 사용자가 소유할 수 있는 모든 가능한 스키마가 나열됩니다. 데이터베이스 사용자로부터 스키마를 추가하거나 제거하려면 **이 사용자가 소유한 스키마** 아래에서 스키마 옆에 있는 확인란을 선택하거나 선택을 취소합니다.  
   
--   **멤버 자격** 페이지에는 새 데이터베이스 사용자가 소유할 수 있는 모든 가능한 데이터베이스 멤버 자격 역할이 나열됩니다. 데이터베이스 사용자로부터 역할을 추가하거나 제거하려면 **데이터베이스 역할 멤버 자격**아래에서 역할 옆에 있는 확인란을 선택하거나 선택을 취소합니다.  
+-   **멤버 자격** 페이지에는 새 데이터베이스 사용자가 소유할 수 있는 모든 가능한 데이터베이스 멤버 자격 역할이 나열됩니다. 데이터베이스 사용자로부터 역할을 추가하거나 제거하려면 **데이터베이스 역할 멤버 자격** 아래에서 역할 옆에 있는 확인란을 선택하거나 선택을 취소합니다.  
   
 -   **보안 개체** 페이지에는 사용 가능한 모든 보안 개체와 이러한 보안 개체에서 로그인에 부여할 수 있는 권한이 나열됩니다.  
   
@@ -143,11 +143,11 @@ ms.locfileid: "86005694"
   
 ##  <a name="create-a-user-using-t-sql"></a><a name="TsqlProcedure"></a> T-SQL을 사용하여 사용자 만들기  
     
-1.  **개체 탐색기**에서 [!INCLUDE[ssDE](../../../includes/ssde-md.md)]인스턴스에 연결합니다.  
+1.  **개체 탐색기** 에서 [!INCLUDE[ssDE](../../../includes/ssde-md.md)]인스턴스에 연결합니다.  
   
-2.  **표준** 도구 모음에서 **새 쿼리**를 클릭합니다.  
+2.  **표준** 도구 모음에서 **새 쿼리** 를 클릭합니다.  
   
-3.  다음 예를 복사하여 쿼리 창에 붙여 넣고 **실행**을 클릭합니다.  
+3.  다음 예를 복사하여 쿼리 창에 붙여 넣고 **실행** 을 클릭합니다.  
   
     ```  
     -- Creates the login AbolrousHazem with password '340$Uuxwp7Mcxo7Khy'.  

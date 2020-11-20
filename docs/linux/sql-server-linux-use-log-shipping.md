@@ -7,12 +7,12 @@ ms.date: 07/01/2020
 ms.topic: conceptual
 ms.prod: sql
 ms.technology: linux
-ms.openlocfilehash: 80f1dedefc2808da0c32eaee2d559496defca051
-ms.sourcegitcommit: 22102f25db5ccca39aebf96bc861c92f2367c77a
+ms.openlocfilehash: fdabd19b81a880c0969cc6359c703cd156a03fab
+ms.sourcegitcommit: 36fe62a3ccf34979bfde3e192cfa778505add465
 ms.translationtype: HT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 10/16/2020
-ms.locfileid: "92115804"
+ms.lasthandoff: 11/11/2020
+ms.locfileid: "94521112"
 ---
 # <a name="get-started-with-log-shipping-on-linux"></a>Linux에서 로그 전달 시작
 
@@ -20,8 +20,7 @@ ms.locfileid: "92115804"
 
 SQL Server 로그 전달은 주 서버의 데이터베이스가 하나 이상의 보조 서버에 복제되는 HA 구성입니다. 간단히 말해서 원본 데이터베이스의 백업이 보조 서버로 복원됩니다. 그런 다음, 주 서버가 트랜잭션 로그 백업을 주기적으로 만들고, 보조 서버에서 데이터베이스의 보조 복사본을 업데이트하여 복원합니다. 
 
-  ![로그 전달](https://preview.ibb.co/hr5Ri5/logshipping.png)
-
+  ![로그 전달 워크플로를 보여 주는 다이어그램](https://preview.ibb.co/hr5Ri5/logshipping.png)
 
 이 그림에 설명된 대로, 로그 전달 세션에는 다음 단계가 포함됩니다.
 

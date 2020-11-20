@@ -1,86 +1,46 @@
 ---
-title: Linux에 SQL Server Java 언어 확장 설치
-titleSuffix: ''
+title: Linux에 Java 언어 확장 설치
+titleSuffix: SQL Server Language Extensions
 description: Red Hat, Ubuntu, SUSE Linux에 SQL Server Java 언어 확장을 설치하는 방법을 알아봅니다.
-author: cawrites
-ms.author: chadam
+author: dphansen
+ms.author: davidph
 ms.reviewer: vanto
 manager: cgronlun
-ms.date: 02/03/2020
+ms.date: 11/12/2020
 ms.topic: conceptual
 ms.prod: sql
 ms.technology: language-extensions
 monikerRange: '>=sql-server-ver15||>=sql-server-linux-ver15||=sqlallproducts-allversions'
-ms.openlocfilehash: 100ef62ce2c87fa642a8c1ef9ef6307a6d9b9103
-ms.sourcegitcommit: 43b92518c5848489d03c68505bd9905f8686cbc0
+ms.openlocfilehash: e859a445bf4283f7f3d56e04997525ac2823193a
+ms.sourcegitcommit: 54cd97a33f417432aa26b948b3fc4b71a5e9162b
 ms.translationtype: HT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 10/17/2020
-ms.locfileid: "92155594"
+ms.lasthandoff: 11/13/2020
+ms.locfileid: "94585091"
 ---
-# <a name="install-sql-server-java-language-extensions-on-linux"></a>Linux에 SQL Server Java 언어 확장 설치 
+# <a name="install-sql-server-java-language-extension-on-linux"></a>Linux에 SQL Server Java 언어 확장 설치
 
 [!INCLUDE [SQL Server 2019 - Linux](../includes/applies-to-version/sqlserver2019-linux.md)]
 
-언어 확장은 데이터베이스 엔진의 추가 기능입니다. [데이터베이스 엔진과 언어 확장을 동시에 설치](#install-all)할 수 있지만, 더 많은 구성 요소를 추가하기 전에 문제를 해결할 수 있도록 먼저 SQL Server 데이터베이스 엔진을 설치하고 구성하는 것이 모범 사례입니다. 
+SQL Server on Linux용 [Java 언어 확장](../language-extensions/java-overview.md) 구성 요소를 설치하는 방법을 알아봅니다. Java 언어 확장은 [SQL Server 언어 확장](../language-extensions/language-extensions-overview.md)의 일부이며 데이터베이스 엔진의 추가 기능입니다. 
 
-Java 언어 확장을 설치하려면 이 문서의 단계를 따르세요.
-
-Java 확장의 패키지 위치는 SQL Server Linux 원본 리포지토리에 있습니다. 데이터베이스 엔진 설치에 대한 원본 리포지토리를 이미 구성한 경우 동일한 리포지토리 등록을 사용하여 **mssql-server-extensibility-java** 패키지 설치 명령을 실행할 수 있습니다.
-
-언어 확장은 Linux 컨테이너에서도 지원됩니다. 언어 확장을 사용하는 미리 빌드된 컨테이너는 제공하지 않지만 [GitHub에서 이용 가능한 예제 템플릿](https://github.com/Microsoft/mssql-docker/tree/master/linux/preview/examples/mssql-mlservices)을 사용하여 SQL Server 컨테이너에서 만들 수 있습니다.
-
-언어 확장 및 [Machine Learning Services](../machine-learning/index.yml)는 SQL Server 빅 데이터 클러스터에 기본적으로 설치됩니다. 빅 데이터 클러스터를 사용하는 경우에는 이 문서의 단계를 수행하지 않아도 됩니다. 자세한 내용은 [빅 데이터 클러스터에서 Machine Learning Services(Python 및 R) 사용](../big-data-cluster/machine-learning-services.md)을 참조하세요.
-
-## <a name="uninstall-preview-version"></a>미리 보기 버전 제거
-
-미리 보기 릴리스(CTP(Community Technical Preview) 또는 RC(릴리스 후보))를 설치한 경우 SQL Server 2019를 설치하기 전에 이 버전을 제거하여 이전 패키지를 모두 제거하는 것이 좋습니다. 여러 버전의 병렬 설치는 지원되지 않으며 패키지 목록은 마지막 몇 가지 미리 보기(CTP/RC) 릴리스에서 변경되었습니다.
-
-### <a name="1-confirm-package-installation"></a>1. 패키지 설치 확인
-
-첫 번째 단계로 이전 설치의 존재 여부를 확인하는 것이 좋습니다. 다음 파일은 기존 설치를 표시합니다. checkinstallextensibility.sh, exthost, launchpad.
-
-```bash
-ls /opt/microsoft/mssql/bin
-```
-
-### <a name="2-uninstall-previous-ctprc-packages"></a>2. 이전 CTP/RC 패키지 제거
-
-가장 낮은 패키지 수준에서 제거합니다. 하위 수준 패키지에 종속된 모든 업스트림 패키지는 자동으로 제거됩니다.
-
-  + Java 통합의 경우 **mssql-server-extensibility-Java**를 제거합니다.
-
-패키지를 제거하는 명령은 다음 표에 나와 있습니다.
-
-| 플랫폼  | 패키지 제거 명령 | 
-|-----------|----------------------------|
-| RHEL  | `sudo yum remove mssql-server-extensibility-java` |
-| SLES  | `sudo zypper remove mssql-server-extensibility-java` |
-| Ubuntu    | `sudo apt-get remove mssql-server-extensibility-java`|
-
-### <a name="3-install-sql-server-2019"></a>3. SQL Server 2019 설치
-
-운영 체제에 맞는 문서의 지침을 사용하여 가장 높은 패키지 수준에서 설치합니다.
-
-각 OS별 설치 지침의 경우, *가장 높은 패키지 수준*은 **예 1 - 전체 설치**(전체 패키지 세트용) 또는 **예 2 - 최소 설치**(실행 가능한 설치에 필요한 최소 개수의 패키지용) 중 하나입니다.
-
-1. Linux 배포에 대한 패키지 관리자 및 구문을 사용하여 설치 명령을 실행합니다. 
-
-   + [RedHat](#RHEL)
-   + [Ubuntu](#ubuntu)
-   + [SUSE](#suse)
+[데이터베이스 엔진과 언어 확장을 동시에 설치](#install-all)할 수 있지만, 더 많은 구성 요소를 추가하기 전에 문제를 해결할 수 있도록 먼저 SQL Server 데이터베이스 엔진을 설치하고 구성하는 것이 모범 사례입니다.
 
 ## <a name="prerequisites"></a>사전 요구 사항
 
 + Linux 버전은 [SQL Server에서 지원](sql-server-linux-release-notes-2019.md#supported-platforms)되어야 하지만 Docker 엔진은 포함하지 않습니다. 지원되는 버전은 다음과 같습니다.
 
    + [Red Hat Enterprise Linux(RHEL)](quickstart-install-connect-red-hat.md)
-
    + [SUSE Enterprise Linux 서버](quickstart-install-connect-suse.md)
-
    + [Ubuntu](quickstart-install-connect-ubuntu.md)
 
 + T-SQL 명령을 실행하기 위한 도구가 있어야 합니다. 설치 후 구성 및 유효성 검사에는 쿼리 편집기가 필요합니다. Linux에서 실행되는 체험용 다운로드인 [Azure Data Studio](../azure-data-studio/download-azure-data-studio.md?view=sql-server-2017&preserve-view=true#get-azure-data-studio-for-linux)를 권장합니다.
+
++ Java 확장의 패키지 위치는 SQL Server Linux 원본 리포지토리에 있습니다. 데이터베이스 엔진 설치에 대한 원본 리포지토리를 이미 구성한 경우 동일한 리포지토리 등록을 사용하여 **mssql-server-extensibility-java** 패키지 설치 명령을 실행할 수 있습니다.
+
++ 언어 확장은 Linux 컨테이너에서도 지원됩니다. 언어 확장을 사용하는 미리 빌드된 컨테이너는 제공하지 않지만 [GitHub에서 이용 가능한 예제 템플릿](https://github.com/Microsoft/mssql-docker/tree/master/linux/preview/examples/mssql-mlservices)을 사용하여 SQL Server 컨테이너에서 만들 수 있습니다.
+
++ 언어 확장 및 [Machine Learning Services](../machine-learning/index.yml)는 SQL Server 빅 데이터 클러스터에 기본적으로 설치됩니다. 빅 데이터 클러스터를 사용하는 경우에는 이 문서의 단계를 수행하지 않아도 됩니다. 자세한 내용은 [빅 데이터 클러스터에서 Machine Learning Services(Python 및 R) 사용](../big-data-cluster/machine-learning-services.md)을 참조하세요.
 
 ## <a name="package-list"></a>패키지 목록
 
@@ -93,9 +53,9 @@ ls /opt/microsoft/mssql/bin
 
 <a name="RHEL"></a>
 
-## <a name="install-language-extensions"></a>언어 확장 설치
+## <a name="install-java-language-extension"></a>Java 언어 확장 설치
 
-**mssql-server-extensibility-java**를 설치하여 Linux에 언어 확장 및 Java를 설치할 수 있습니다. **mssql-server-extensibility-java**를 설치할 때 JRE 11이 아직 설치되지 않은 경우 패키지가 자동으로 설치합니다. 또한 JRE_HOME이라는 환경 변수에 JVM 경로를 추가합니다.
+**mssql-server-extensibility-java** 를 설치하여 Linux에 언어 확장 및 Java를 설치할 수 있습니다. **mssql-server-extensibility-java** 를 설치할 때 JRE 11이 아직 설치되지 않은 경우 패키지가 자동으로 설치합니다. 또한 JRE_HOME이라는 환경 변수에 JVM 경로를 추가합니다.
 
 > [!Note]
 > 인터넷에 연결된 서버에서 패키지 종속성이 다운로드되고 주 패키지 설치의 일부로 설치됩니다. 서버가 인터넷에 연결되어 있지 않은 경우 [오프라인 설정](#offline-install)에서 자세한 정보를 참조하세요.
@@ -218,38 +178,37 @@ Java 기능 통합에는 라이브러리가 포함되지 않지만 `grep -r JRE_
 
 <a name="install-all"></a>
 
-## <a name="full-install-of-sql-server-and-language-extensions"></a>SQL Server 및 언어 확장의 전체 설치
+## <a name="full-install-of-sql-server-and-java-language-extension"></a>SQL Server 및 Java 언어 확장의 전체 설치
 
-데이터베이스 엔진을 설치하는 명령에 Java 패키지와 매개 변수를 추가하여 한 가지 프로시저에서 데이터베이스 엔진 및 언어 확장을 설치하고 구성할 수 있습니다.
+데이터베이스 엔진을 설치하는 명령에 Java 패키지와 매개 변수를 추가하여 한 가지 프로시저에서 데이터베이스 엔진과 Java 언어 확장을 설치하고 구성할 수 있습니다.
 
 1. 데이터베이스 엔진 및 언어 확장 기능을 포함하는 명령줄을 제공합니다.
 
-  데이터베이스 엔진 설치에 Java 확장성을 추가할 수 있습니다.
+    데이터베이스 엔진 설치에 Java 확장성을 추가할 수 있습니다.
 
-  ```bash
-  sudo yum install -y mssql-server mssql-server-extensibility-java 
-  ```
+    ```bash
+    sudo yum install -y mssql-server mssql-server-extensibility-java 
+    ```
 
-3. 사용권 계약에 동의하고 설치 후 구성을 완료합니다. 이 작업을 위해 **mssql-conf** 도구를 사용합니다.
+1. 사용권 계약에 동의하고 설치 후 구성을 완료합니다. 이 작업을 위해 **mssql-conf** 도구를 사용합니다.
 
-  ```bash
-  sudo /opt/mssql/bin/mssql-conf setup
-  ```
+    ```bash
+    sudo /opt/mssql/bin/mssql-conf setup
+    ```
 
-  데이터베이스 엔진에 대한 사용권 계약에 동의하고, 버전을 선택하고, 관리자 암호를 설정하라는 메시지가 표시됩니다. 
+    데이터베이스 엔진에 대한 사용권 계약에 동의하고, 버전을 선택하고, 관리자 암호를 설정하라는 메시지가 표시됩니다. 
 
-4. 서비스를 다시 시작하라는 메시지가 표시되면 서비스를 다시 시작합니다.
+1. 서비스를 다시 시작하라는 메시지가 표시되면 서비스를 다시 시작합니다.
 
-  ```bash
-  sudo systemctl restart mssql-server.service
-  ```
+    ```bash
+    sudo systemctl restart mssql-server.service
+    ```
 
 ## <a name="unattended-installation"></a>무인 설치
 
-데이터베이스 엔진에 대한 [무인 설치](./sql-server-linux-setup.md#unattended)를 사용하여 mssql-server-extensibility-java용 패키지를 추가합니다.
+데이터베이스 엔진에 대한 [무인 설치](./sql-server-linux-setup.md#unattended)를 사용하고 **mssql-server-extensibility-java** 용 패키지를 추가합니다.
 
 <a name="offline-install"></a>
-
 
 ## <a name="offline-installation"></a>오프라인 설치
 
@@ -260,7 +219,7 @@ Java 기능 통합에는 라이브러리가 포함되지 않지만 `grep -r JRE_
 
 #### <a name="download-site"></a>다운로드 사이트
 
-[https://packages.microsoft.com/](https://packages.microsoft.com/)에서 패키지를 다운로드할 수 있습니다. Java용 모든 패키지는 데이터베이스 엔진 패키지와 함께 배치됩니다. 
+[https://packages.microsoft.com/](https://packages.microsoft.com/)에서 패키지를 다운로드할 수 있습니다. Java용 패키지는 모두 데이터베이스 엔진 패키지와 함께 배치됩니다.
 
 #### <a name="redhat7-paths"></a>RedHat/7 경로
 
@@ -276,17 +235,15 @@ Java 기능 통합에는 라이브러리가 포함되지 않지만 `grep -r JRE_
 
 #### <a name="suse12-paths"></a>SUSE/12 경로
 
-
 |패키지|다운로드 위치|
 |--|----|
 | mssql/extensibility-java 패키지 | [https://packages.microsoft.com/sles/12/mssql-server-2019/](https://packages.microsoft.com/sles/12/mssql-server-2019/) |
 
 #### <a name="package-list"></a>패키지 목록
-
 사용하려는 확장에 따라 특정 언어에 필요한 패키지를 다운로드합니다. 정확한 파일 이름에는 접미사에 플랫폼 정보가 포함되지만, 다음의 파일 이름은 어떤 파일을 가져올지 결정할 수 있을 만큼 충분히 가까워야 합니다.
 
 ```
-# Core packages 
+# Core packages
 mssql-server-15.0.1000
 mssql-server-extensibility-15.0.1000
 
@@ -296,20 +253,20 @@ mssql-server-extensibility-java-15.0.1000
 
 ## <a name="limitations"></a>제한 사항
 
-+ 현재로서는 Linux에서 암시적 인증을 사용할 수 없습니다. 즉, 진행 중인 Java에서 데이터 또는 기타 리소스에 액세스하기 위해 서버에 다시 연결할 수 없습니다.
+현재로서는 Linux에서 암시적 인증을 사용할 수 없습니다. 즉, 진행 중인 Java에서 데이터 또는 기타 리소스에 액세스하기 위해 서버에 다시 연결할 수 없습니다.
 
 ### <a name="resource-governance"></a>리소스 거버넌스
 
-외부 리소스 풀에 대한 [리소스 거버넌스](../t-sql/statements/create-external-resource-pool-transact-sql.md)에서 Linux와 Windows 사이에 패리티가 있지만, [sys.dm_resource_governor_external_resource_pools](../relational-databases/system-dynamic-management-views/sys-dm-resource-governor-external-resource-pools.md)에 대한 통계는 현재 Linux에서 다른 단위를 사용합니다 
- 
-| 열 이름   | Description | Linux의 값 | 
+외부 리소스 풀에 대한 [리소스 거버넌스](../t-sql/statements/create-external-resource-pool-transact-sql.md)에서 Linux와 Windows 사이에 패리티가 있지만, [sys.dm_resource_governor_external_resource_pools](../relational-databases/system-dynamic-management-views/sys-dm-resource-governor-external-resource-pools.md)에 대한 통계는 현재 Linux에서 다른 단위를 사용합니다
+
+| 열 이름   | Description | Linux의 값 |
 |---------------|--------------|---------------|
 |peak_memory_kb | 리소스 풀에 사용되는 최대 메모리 양입니다. | Linux에서 이 통계의 출처는 CGroups 메모리 하위 시스템이며, 여기서 값은 memory.max_usage_in_bytes입니다. |
-|write_io_count | Resource Governor 통계를 다시 설정한 후 발생한 총 쓰기 IO입니다. | Linux에서 이 통계의 출처는 CGroups blkio 하위 시스템이며, 쓰기 행의 값은 blkio.throttle.io_serviced입니다. | 
-|read_io_count | Resource Governor 통계를 다시 설정한 후 발생한 총 읽기 IO입니다. | Linux에서 이 통계의 출처는 CGroups blkio 하위 시스템이며, 읽기 행의 값은 blkio.throttle.io_serviced입니다. | 
+|write_io_count | Resource Governor 통계를 다시 설정한 후 발생한 총 쓰기 IO입니다. | Linux에서 이 통계의 출처는 CGroups blkio 하위 시스템이며, 쓰기 행의 값은 blkio.throttle.io_serviced입니다. |
+|read_io_count | Resource Governor 통계를 다시 설정한 후 발생한 총 읽기 IO입니다. | Linux에서 이 통계의 출처는 CGroups blkio 하위 시스템이며, 읽기 행의 값은 blkio.throttle.io_serviced입니다. |
 |total_cpu_kernel_ms | Resource Governor 통계를 다시 설정한 후 누적된 CPU 사용자 커널 시간(밀리초)입니다. | Linux에서 이 통계의 출처는 CGroups cpuacct 하위 시스템이며, 사용자 행의 값은 cpuacct.stat입니다. |  
-|total_cpu_user_ms | Resource Governor 통계를 다시 설정한 후 누적된 CPU 사용자 시간(밀리초)입니다.| Linux에서 이 통계의 출처는 CGroups cpuacct 하위 시스템이며, 시스템 행 값은 cpuacct.stat입니다. | 
-|active_processes_count | 요청 순간에 실행되는 외부 프로세스의 수입니다.| Linux에서 이 통계의 출처는 GGroups pids 하위 시스템이며, 여기서 값은 pids.current입니다. | 
+|total_cpu_user_ms | Resource Governor 통계를 다시 설정한 후 누적된 CPU 사용자 시간(밀리초)입니다.| Linux에서 이 통계의 출처는 CGroups cpuacct 하위 시스템이며, 시스템 행 값은 cpuacct.stat입니다. |
+|active_processes_count | 요청 순간에 실행되는 외부 프로세스의 수입니다.| Linux에서 이 통계의 출처는 값이 pids.current인 CGroups pids 하위 시스템입니다. |
 
 ## <a name="next-steps"></a>다음 단계
 

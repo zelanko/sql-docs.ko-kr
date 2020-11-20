@@ -21,16 +21,16 @@ helpviewer_keywords:
 ms.assetid: ef2a7b3b-614b-405d-a04a-2464a019df40
 author: VanMSFT
 ms.author: vanto
-ms.openlocfilehash: bca6797111b59257e96e447fc3d9e4ba9ba8bb80
-ms.sourcegitcommit: 783b35f6478006d654491cb52f6edf108acf2482
+ms.openlocfilehash: e60a5d8bdb987e3be2016b8b0395f05e83f9f7a9
+ms.sourcegitcommit: 0f484f32709a414f05562bbaafeca9a9fc57c9ed
 ms.translationtype: HT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 10/09/2020
-ms.locfileid: "91890883"
+ms.lasthandoff: 11/14/2020
+ms.locfileid: "94631759"
 ---
 # <a name="administer-servers-by-using-policy-based-management"></a>정책 기반 관리를 사용하여 서버 관리
  [!INCLUDE [SQL Server](../../includes/applies-to-version/sqlserver.md)]
-   정책 기반 관리는 하나 이상의 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]인스턴스를 관리하는 정책 기반 시스템입니다. 조건 식을 포함하는 조건을 만들 때 사용합니다. 그런 다음 조건을 데이터베이스 대상 개체에 적용하는 정책을 만듭니다.  
+   정책 기반 관리는 하나 이상의 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]인스턴스를 관리하는 정책 기반 시스템입니다. 조건 식을 포함하는 조건을 만드는 데 사용합니다. 그런 다음 조건을 데이터베이스 대상 개체에 적용하는 정책을 만듭니다.  
 
 예를 들어 데이터베이스 관리자 권한으로 특정 서버에서 데이터베이스 메일을 사용하도록 설정되지 않도록 서버 옵션을 설정하는 조건과 정책을 만들 수 있습니다. 
    

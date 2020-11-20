@@ -17,20 +17,20 @@ ms.assetid: 86b65bf1-a6a1-4670-afc0-cdfad1558032
 author: markingmyname
 ms.author: maghan
 ms.custom: contperfq4
-ms.openlocfilehash: 375d0b39fe0f898961d1386445b3b8e3f2945ee4
-ms.sourcegitcommit: 99f61724de5edf6640efd99916d464172eb23f92
+ms.openlocfilehash: a294cbfbb165e6cc37f931cdd5d3a40406713f86
+ms.sourcegitcommit: 275fd02d60d26f4e66f6fc45a1638c2e7cedede7
 ms.translationtype: HT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 07/28/2020
-ms.locfileid: "87363310"
+ms.lasthandoff: 11/10/2020
+ms.locfileid: "94447124"
 ---
 # <a name="configure-the-max-degree-of-parallelism-server-configuration-option"></a>max degree of parallelism 서버 구성 옵션 구성
  [!INCLUDE [SQL Server](../../includes/applies-to-version/sqlserver.md)]
 
-  이 문서에서는 [!INCLUDE[ssManStudioFull](../../includes/ssmanstudiofull-md.md)] 또는 [!INCLUDE[tsql](../../includes/tsql-md.md)]을 사용하여 SQL Server에서 **MAXDOP(최대 병렬 처리 수준)** 서버 구성 옵션을 구성하는 방법에 대해 설명합니다. [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 인스턴스는 마이크로프로세서나 CPU가 둘 이상인 컴퓨터에서 실행될 경우 병렬 처리 수준, 즉 각 병렬 계획 실행에 대해 단일 문을 실행하는 데 사용된 프로세서 수를 검색합니다. **max degree of parallelism** 옵션을 사용하여 병렬 계획 실행에 사용할 프로세서 수를 제한할 수 있습니다. [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]에서는 쿼리에 대한 병렬 실행 계획, 인덱스 DDL(데이터 정의 언어) 작업, 병렬 삽입, 온라인 열 변경, 병렬 통계 수집 및 정적 커서와 키 집합 커서 채우기를 고려합니다.
+  이 문서에서는 [!INCLUDE[ssManStudioFull](../../includes/ssmanstudiofull-md.md)] 또는 [!INCLUDE[tsql](../../includes/tsql-md.md)]을 사용하여 SQL Server에서 **MAXDOP(최대 병렬 처리 수준)** 서버 구성 옵션을 구성하는 방법에 대해 설명합니다. 마이크로프로세서 또는 CPU가 둘 이상인 컴퓨터에서 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]의 인스턴스가 실행되는 경우 [!INCLUDE[ssde_md](../../includes/ssde_md.md)]은 병렬 처리를 사용할 수 있는지 여부를 검색합니다. 병렬 처리 수준은 각 병렬 계획 실행에 대해 단일 문 실행에 사용되는 프로세서 수를 설정합니다. **max degree of parallelism** 옵션을 사용하여 병렬 계획 실행에 사용할 프로세서 수를 제한할 수 있습니다. **MAXDOP(최대 병렬 처리 수준)** 로 설정되는 제한에 대한 자세한 내용은 이 페이지의 [제한 사항](#Restrictions) 섹션을 참조하세요. [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]에서는 쿼리에 대한 병렬 실행 계획, 인덱스 DDL(데이터 정의 언어) 작업, 병렬 삽입, 온라인 열 변경, 병렬 통계 수집 및 정적 커서와 키 집합 커서 채우기를 고려합니다.
 
 > [!NOTE]
-> [!INCLUDE [sssqlv15-md](../../includes/sssqlv15-md.md)]에서는 설치하는 동안 MAXDOP 서버 구성 옵션을 설정하기 위한 자동 권장 사항이 도입되었습니다. 설정 사용자 인터페이스를 사용하여 권장 설정을 적용하거나 사용자 고유 값을 입력할 수 있습니다. 자세한 내용은 [데이터베이스 엔진 구성 - MaxDOP 페이지](../../sql-server/install/instance-configuration.md#maxdop)를 참조하세요.
+> [!INCLUDE [sssqlv15-md](../../includes/sssqlv15-md.md)]에서는 사용할 수 있는 프로세서 수를 기준으로 설치 중 MAXDOP 서버 구성 옵션을 설정하는 것에 대한 자동 권장 사항이 도입되었습니다. 설정 사용자 인터페이스를 사용하여 권장 설정을 적용하거나 사용자 고유 값을 입력할 수 있습니다. 자세한 내용은 [데이터베이스 엔진 구성 - MaxDOP 페이지](../../sql-server/install/instance-configuration.md#maxdop)를 참조하세요.
 
 ##  <a name="before-you-begin"></a><a name="BeforeYouBegin"></a> 시작하기 전에  
   
@@ -91,7 +91,7 @@ ms.locfileid: "87363310"
   
 #### <a name="to-configure-the-max-degree-of-parallelism-option"></a>최대 병렬 처리 수준 옵션을 구성하려면  
   
-1.  **개체 탐색기**에서 서버를 마우스 오른쪽 단추로 클릭하고 **속성**을 선택합니다.  
+1.  **개체 탐색기** 에서 서버를 마우스 오른쪽 단추로 클릭하고 **속성** 을 선택합니다.  
   
 2.  **고급** 노드를 클릭합니다.  
   
@@ -103,9 +103,9 @@ ms.locfileid: "87363310"
   
 1.  [!INCLUDE[ssDE](../../includes/ssde-md.md)]에 연결합니다.  
   
-2.  표준 도구 모음에서 **새 쿼리**를 클릭합니다.  
+2.  표준 도구 모음에서 **새 쿼리** 를 클릭합니다.  
   
-3.  다음 예를 복사하여 쿼리 창에 붙여 넣고 **실행**을 클릭합니다. 이 예제에서는 [sp_configure](../../relational-databases/system-stored-procedures/sp-configure-transact-sql.md) 를 사용하여 `max degree of parallelism` 옵션을 `16`으로 구성하는 방법을 보여 줍니다.  
+3.  다음 예를 복사하여 쿼리 창에 붙여 넣고 **실행** 을 클릭합니다. 이 예제에서는 [sp_configure](../../relational-databases/system-stored-procedures/sp-configure-transact-sql.md) 를 사용하여 `max degree of parallelism` 옵션을 `16`으로 구성하는 방법을 보여 줍니다.  
   
 ```sql  
 USE AdventureWorks2012 ;  

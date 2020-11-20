@@ -25,12 +25,12 @@ helpviewer_keywords:
 author: VanMSFT
 ms.author: vanto
 ms.reviewer: vanto
-ms.openlocfilehash: 6d3a6d83b14c401ca6fc7ff6c773ef9565662a0f
-ms.sourcegitcommit: 22102f25db5ccca39aebf96bc861c92f2367c77a
+ms.openlocfilehash: 11ac66182122cba239634cdf07f4b6683d2479cb
+ms.sourcegitcommit: 2bf83972036bdbe6a039fb2d1fc7b5f9ca9589d3
 ms.translationtype: HT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 10/16/2020
-ms.locfileid: "92115470"
+ms.lasthandoff: 11/17/2020
+ms.locfileid: "94674178"
 ---
 # <a name="editions-and-supported-features-of-sql-server-2017-on-linux"></a>Linux의 SQL Server 2017 버전 및 지원되는 기능
 
@@ -210,6 +210,7 @@ Developer, Enterprise Core 및 Evaluation Edition에서 지원하는 기능의 �
 |평면 및 측지 데이터 형식|예|예|예|예| 
 |고급 공간 라이브러리|예|예|예|예|   
 |산업 표준 공간 데이터 형식 가져오기/내보내기|예|예|예|예|   
+
 ## <a name="unsupported-features--services"></a><a name="Unsupported"></a> 지원되지 않는 기능 및 서비스
 
 다음 기능 및 서비스는 SQL Server 2017 on Linux에서 사용할 수 없습니다. 이 기능에 대한 지원은 시간이 지나면서 점점 더 활성화됩니다.
@@ -225,6 +226,7 @@ Developer, Enterprise Core 및 Evaluation Edition에서 지원하는 기능의 �
 | &nbsp; | Filetable, FILESTREAM |
 | &nbsp; | EXTERNAL_ACCESS 또는 UNSAFE 권한 세트가 있는 CLR 어셈블리 |
 | &nbsp; | Buffer Pool Extension |
+| &nbsp; | URL에 대한 백업 - 페이지 Blob <sup>1</sup>|
 | **SQL Server 에이전트** |  하위 시스템: CmdExec, PowerShell, Queue Reader, SSIS, SSAS, SSRS |
 | &nbsp; | 경고 |
 | &nbsp; | 로그 판독기 에이전트 |
@@ -241,6 +243,8 @@ Developer, Enterprise Core 및 Evaluation Edition에서 지원하는 기능의 �
 | &nbsp; | 데이터베이스 엔진 서비스 |
 | &nbsp; | Master  Data  Services |
   
+<sup>1</sup> URL에 대한 백업은 [공유 액세스 서명](../relational-databases/backup-restore/sql-server-backup-to-url.md#SAS)을 사용하여 블록 Blob에 대해 지원됩니다.
+
 ## <a name="next-steps"></a>다음 단계
  [SQL Server 2019 버전 및 지원되는 기능 - Windows](../sql-server/editions-and-components-of-sql-server-version-15.md)  
  [SQL Server 2017 버전 및 지원되는 기능 - Windows](../sql-server/editions-and-components-of-sql-server-2017.md)  

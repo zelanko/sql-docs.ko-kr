@@ -1,6 +1,6 @@
 ---
 title: MSSQLSERVER_10060 | Microsoft 문서
-description: SQL Server 클라이언트가 서버에 연결할 수 없습니다. 오류에 대한 설명과 가능한 해결 방법을 확인합니다.
+description: SQL Server 클라이언트가 서버에 연결할 수 없습니다. 오류 10060에 대한 설명과 가능한 해결 방법을 확인합니다.
 ms.custom: ''
 ms.date: 04/04/2017
 ms.prod: sql
@@ -14,12 +14,12 @@ helpviewer_keywords:
 ms.assetid: 28c21277-cad8-406c-a955-07933a56982a
 author: MashaMSFT
 ms.author: mathoma
-ms.openlocfilehash: b952019acc3643baf10d5a69310ab4b9c2629d3b
-ms.sourcegitcommit: da88320c474c1c9124574f90d549c50ee3387b4c
+ms.openlocfilehash: cb6a706a664adc8dbc86760b6d5e7b519b8a192a
+ms.sourcegitcommit: 36fe62a3ccf34979bfde3e192cfa778505add465
 ms.translationtype: HT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 07/01/2020
-ms.locfileid: "85781552"
+ms.lasthandoff: 11/11/2020
+ms.locfileid: "94521210"
 ---
 # <a name="mssqlserver_10060"></a>MSSQLSERVER_10060
  [!INCLUDE [SQL Server](../../includes/applies-to-version/sqlserver.md)]

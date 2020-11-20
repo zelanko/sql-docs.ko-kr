@@ -25,12 +25,12 @@ helpviewer_keywords:
 author: VanMSFT
 ms.author: vanto
 ms.reviewer: vanto
-ms.openlocfilehash: 1c196ea3219f4bdbad2e4001240f754b106e3917
-ms.sourcegitcommit: 22102f25db5ccca39aebf96bc861c92f2367c77a
+ms.openlocfilehash: f208b424272644f3d66146014401a1343f00e576
+ms.sourcegitcommit: 2bf83972036bdbe6a039fb2d1fc7b5f9ca9589d3
 ms.translationtype: HT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 10/16/2020
-ms.locfileid: "92115426"
+ms.lasthandoff: 11/17/2020
+ms.locfileid: "94674207"
 ---
 # <a name="editions-and-supported-features-of-sql-server-2019-on-linux"></a>SQL Server 2019 on Linux 버전 및 지원되는 기능
 
@@ -225,6 +225,7 @@ Developer, Enterprise Core 및 Evaluation Edition에서 지원하는 기능의 �
 | &nbsp; | Filetable, FILESTREAM |
 | &nbsp; | EXTERNAL_ACCESS 또는 UNSAFE 권한 세트가 있는 CLR 어셈블리 |
 | &nbsp; | Buffer Pool Extension |
+| &nbsp; | URL에 대한 백업 - 페이지 Blob<sup>2</sup> |
 | **SQL Server 에이전트** |  하위 시스템: CmdExec, PowerShell, Queue Reader, SSIS, SSAS, SSRS |
 | &nbsp; | 경고 |
 | &nbsp; | 관리되는 백업 |
@@ -241,7 +242,9 @@ Developer, Enterprise Core 및 Evaluation Edition에서 지원하는 기능의 �
 | &nbsp; | Master  Data  Services |
 
 <sup>1</sup> SQL Server R은 SQL Server 내에서 지원되지만 별도 패키지로서의 SQL Server R Services는 지원되지 않습니다.
-  
+
+<sup>2</sup> URL에 대한 백업은 [공유 액세스 서명](../relational-databases/backup-restore/sql-server-backup-to-url.md#SAS)을 사용하여 블록 Blob에 대해 지원됩니다.
+
 ## <a name="next-steps"></a>다음 단계
  [SQL Server 2017 버전 및 지원되는 기능 - Linux](sql-server-linux-editions-and-components-2017.md)  
  [SQL Server 2019 버전 및 지원되는 기능 - Windows](../sql-server/editions-and-components-of-sql-server-version-15.md)  

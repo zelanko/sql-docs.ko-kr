@@ -14,12 +14,12 @@ ms.assetid: f5309285-ce93-472c-944b-9014dc8f001d
 author: julieMSFT
 ms.author: jrasnick
 monikerRange: =azuresqldb-current||>=sql-server-2016||=sqlallproducts-allversions||= azure-sqldw-latest||>=sql-server-linux-2017||=azuresqldb-mi-current
-ms.openlocfilehash: 3ededb226b10f99c1c064f08bfd2d75cfafcbad0
-ms.sourcegitcommit: 783b35f6478006d654491cb52f6edf108acf2482
+ms.openlocfilehash: a5c182e7425e51a06b170178ee2716c42c58e115
+ms.sourcegitcommit: 36fe62a3ccf34979bfde3e192cfa778505add465
 ms.translationtype: HT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 10/09/2020
-ms.locfileid: "91890761"
+ms.lasthandoff: 11/11/2020
+ms.locfileid: "94521220"
 ---
 # <a name="query-store-usage-scenarios"></a>쿼리 저장소 사용 시나리오
 [!INCLUDE [SQL Server ASDB, ASDBMI, ASDW ](../../includes/applies-to-version/sql-asdb-asdbmi-asa.md)]
@@ -41,9 +41,9 @@ ms.locfileid: "91890761"
   
 -   재발된 쿼리 중에서 여러 계획이 있고 잘못된 계획 선택으로 인해 저하된 쿼리를 쉽게 찾을 수 있습니다. **재발된 쿼리** 에서 **계획 요약** 창을 사용하여 재발된 쿼리에 대한 모든 계획과 시간에 따른 쿼리 성능을 시각화할 수 있습니다.  
   
--   기록에서 이전 계획이 더 나은 것으로 증명된 경우 이를 적용합니다. **회귀된 쿼리**의 **계획 강제 적용** 단추를 사용하여 쿼리에 대해 선택한 계획을 강제 적용합니다.  
+-   기록에서 이전 계획이 더 나은 것으로 증명된 경우 이를 적용합니다. **회귀된 쿼리** 의 **계획 강제 적용** 단추를 사용하여 쿼리에 대해 선택한 계획을 강제 적용합니다.  
   
- ![query-store-usage-1](../../relational-databases/performance/media/query-store-usage-1.png "query-store-usage-1")  
+ ![계획 요약을 보여 주는 쿼리 저장소 스크린샷](../../relational-databases/performance/media/query-store-usage-1.png "query-store-usage-1")  
   
  시나리오에 대한 자세한 설명은 [쿼리 저장소: 데이터베이스용 항공 데이터 레코더](https://azure.microsoft.com/blog/query-store-a-flight-data-recorder-for-your-database/) 블로그를 참조하세요.  
   
@@ -52,7 +52,7 @@ ms.locfileid: "91890761"
   
  탐색을 시작하는 가장 쉬운 방법은 **에서** 상위 리소스 소비 쿼리 [!INCLUDE[ssManStudio](../../includes/ssmanstudio-md.md)]를 여는 것입니다. 사용자 인터페이스는 상위 리소스 소비 쿼리를 나타내는 막대 그래프(왼쪽), 선택한 쿼리에 대한 계획 요약(오른쪽) 및 선택한 계획에 대한 시각적 쿼리 계획(아래쪽), 이렇게 세 개의 창으로 구분되어 있습니다. **구성** 을 클릭하여 분석할 쿼리 수 및 관심 있는 시간 간격을 제어할 수 있습니다. 또한 다양한 리소스 소비 차원(기간, CPU, 메모리, IO, 실행 횟수)과 기준선(평균, 최소값, 최대값, 합계, 표준 편차) 간에 선택할 수 있습니다.  
   
- ![query-store-usage-2](../../relational-databases/performance/media/query-store-usage-2.png "query-store-usage-2")  
+ ![리소스를 가장 많이 사용하는 쿼리를 파악하고 튜닝할 수 있음을 보여 주는 쿼리 저장소 스크린샷](../../relational-databases/performance/media/query-store-usage-2.png "query-store-usage-2")  
   
  오른쪽의 계획 요약을 보고 실행 기록을 분석한 후 다른 계획과 해당 런타임 통계에 대해 자세히 알아볼 수 있습니다. 아래쪽 창을 사용하여 다른 계획을 검사하거나 나란히 렌더링하여 시각적으로 비교(비교 단추 사용)할 수 있습니다.  
   
@@ -91,7 +91,7 @@ ms.locfileid: "91890761"
   
 4.  1과 3의 결과를 비교합니다.  
   
-    1.  **전체 데이터베이스 사용량**을 열어 전체 데이터베이스에 대한 영향을 확인합니다.  
+    1.  **전체 데이터베이스 사용량** 을 열어 전체 데이터베이스에 대한 영향을 확인합니다.  
   
     2.  **상위 리소스 소비 쿼리** 를 열거나 [!INCLUDE[tsql](../../includes/tsql-md.md)]을 사용한 사용자 고유 분석을 실행하여 가장 중요한 쿼리에 미치는 변경의 영향을 분석합니다.  
   
@@ -99,11 +99,11 @@ ms.locfileid: "91890761"
   
 다음 그림에서는 누락된 인덱스를 만드는 경우 쿼리 저장소 분석(4단계)을 보여 줍니다. **상위 리소스 소비 쿼리** /계획 요약 창을 열어 인덱스 만들기의 영향을 받는 쿼리에 대해 이 뷰를 가져옵니다.  
   
-![query-store-usage-3](../../relational-databases/performance/media/query-store-usage-3.png "query-store-usage-3")  
+![누락된 인덱스를 만드는 경우 쿼리 저장소 분석(4단계)을 보여 주는 스크린샷](../../relational-databases/performance/media/query-store-usage-3.png "query-store-usage-3")  
   
 또한 나란히 렌더링하여 인덱스 만들기 이전과 이후의 계획을 비교할 수 있습니다. 도구 모음에 빨간색 사각형으로 표시된 "별도 창에서 선택한 쿼리에 대한 계획 비교" 도구 모음 옵션을 사용합니다.  
   
-![query-store-usage-4](../../relational-databases/performance/media/query-store-usage-4.png "query-store-usage-4")  
+![쿼리 저장소와 별도 창에서 선택한 쿼리에 대한 계획 비교 도구 모음 옵션을 보여 주는 스크린샷](../../relational-databases/performance/media/query-store-usage-4.png "query-store-usage-4")  
   
 인덱스 만들기 이전 계획(plan_id  = 1, 위)에 누락된 인덱스 힌트가 있으며, Clustered Index Scan이 쿼리에서 가장 부담이 큰 연산자였음을 검사할 수 있습니다(빨간색 사각형).  
   
@@ -116,7 +116,7 @@ ms.locfileid: "91890761"
   
 [!INCLUDE[ssSQL14](../../includes/sssql14-md.md)]부터는 쿼리 최적화 프로그램의 모든 변경 내용이 최신 [데이터베이스 호환성 수준](../../relational-databases/databases/view-or-change-the-compatibility-level-of-a-database.md)에 연결되므로 계획이 업그레이드 시점에 즉시 변경되지 않고 사용자가 `COMPATIBILITY_LEVEL`을 최신 상태로 변경할 때 변경됩니다. 이 기능은 쿼리 저장소와 함께 업그레이드 프로세스에서 쿼리 성능에 대한 뛰어난 제어 수준을 제공합니다. 아래 그림에 권장 업그레이드 워크플로가 표시되어 있습니다.  
   
-![query-store-usage-5](../../relational-databases/performance/media/query-store-usage-5.png "query-store-usage-5")  
+![권장 업그레이드 워크플로를 보여 주는 다이어그램](../../relational-databases/performance/media/query-store-usage-5.png "query-store-usage-5")  
   
 1.  데이터베이스 호환성 수준을 변경하지 않고 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]를 업그레이드합니다. 최신 쿼리 최적화 프로그램 변경 내용을 노출하지 않고 쿼리 저장소를 포함하는 최신 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 기능을 제공합니다.  
   
@@ -136,13 +136,13 @@ ms.locfileid: "91890761"
 > [!INCLUDE[ssManStudioFull](../../includes/ssmanstudiofull-md.md)] ‘데이터베이스 업그레이드’ 태스크를 사용하여 [데이터베이스 호환성 수준](../../t-sql/statements/alter-database-transact-sql-compatibility-level.md#compatibility-levels-and-database-engine-upgrades)을 업그레이드합니다. 자세한 내용은 [쿼리 튜닝 길잡이를 사용하여 데이터베이스 업그레이드](../../relational-databases/performance/upgrade-dbcompat-using-qta.md)를 참조하세요.
   
 ## <a name="identify-and-improve-ad-hoc-workloads"></a>임시 워크로드 식별 및 개선  
-일부 워크로드에는 전체 애플리케이션 성능을 개선하기 위해 조정할 수 있는 주요 쿼리가 없습니다. 이러한 워크로드는 일반적으로 각각 시스템 리소스의 일부를 사용하는 비교적 다수의 쿼리가 있는 것이 특징입니다. 이러한 쿼리는 거의 실행되지 않으므로(일반적으로 한 번만 실행되므로 임시 쿼리라고 함) 해당 런타임 소비는 중요하지 않습니다. 반면, 애플리케이션이 항상 완전히 새로운 쿼리를 생성하는 경우에는 시스템 리소스의 상당 부분이 최적화되지 않은 쿼리 컴파일에 소비됩니다. 이는 많은 수의 쿼리와 계획이 예약된 공간을 차지하는 경우 쿼리 저장소에 이상적인 상황이 아닙니다. 즉, 쿼리 저장소가 매우 빠르게 읽기 전용 모드로 전환될 수 있습니다. **크기 기반 정리 정책** (쿼리 저장소를 항상 실행되도록 유지하는 데[매우 권장됨](best-practice-with-the-query-store.md) )을 활성화한 경우 백그라운드 프로세스에서 쿼리 저장소 구조를 정리하므로 대부분의 시간 동안 상당한 시스템 리소스가 소비됩니다.  
+일부 워크로드에는 전체 애플리케이션 성능을 개선하기 위해 조정할 수 있는 주요 쿼리가 없습니다. 이러한 워크로드는 일반적으로 각각 시스템 리소스의 일부를 사용하는 비교적 다수의 쿼리가 있는 것이 특징입니다. 이러한 쿼리는 거의 실행되지 않으므로(일반적으로 한 번만 실행되므로 임시 쿼리라고 함) 해당 런타임 소비는 중요하지 않습니다. 반면, 애플리케이션이 항상 완전히 새로운 쿼리를 생성하는 경우에는 시스템 리소스의 상당 부분이 최적화되지 않은 쿼리 컴파일에 소비됩니다. 이는 많은 수의 쿼리와 계획이 예약된 공간을 차지하는 경우 쿼리 저장소에 이상적인 상황이 아닙니다. 즉, 쿼리 저장소가 매우 빠르게 읽기 전용 모드로 전환될 수 있습니다. **크기 기반 정리 정책** (쿼리 저장소를 항상 실행되도록 유지하는 데 [매우 권장됨](best-practice-with-the-query-store.md) )을 활성화한 경우 백그라운드 프로세스에서 쿼리 저장소 구조를 정리하므로 대부분의 시간 동안 상당한 시스템 리소스가 소비됩니다.  
   
  **상위 리소스 소비 쿼리** 뷰는 워크로드의 임시 특성에 대한 첫 번째 표시를 제공합니다.  
   
-![query-store-usage-6](../../relational-databases/performance/media/query-store-usage-6.png "query-store-usage-6")  
+![리소스를 가장 많이 사용하는 쿼리의 대부분이 한 번만 실행됨을 보여 주는 리소스를 가장 많이 사용하는 쿼리 보기 스크린샷](../../relational-databases/performance/media/query-store-usage-6.png "query-store-usage-6")  
   
-**실행 수** 메트릭을 사용하여 상위 쿼리가 임시 쿼리인지 분석합니다( `QUERY_CAPTURE_MODE = ALL`을 사용하여 쿼리 저장소를 실행해야 함). 위 다이어그램에서는 **상위 리소스 소비 쿼리**의 90%가 한 번만 실행되는 것을 볼 수 있습니다.  
+**실행 수** 메트릭을 사용하여 상위 쿼리가 임시 쿼리인지 분석합니다( `QUERY_CAPTURE_MODE = ALL`을 사용하여 쿼리 저장소를 실행해야 함). 위 다이어그램에서는 **상위 리소스 소비 쿼리** 의 90%가 한 번만 실행되는 것을 볼 수 있습니다.  
   
 또는 [!INCLUDE[tsql](../../includes/tsql-md.md)] 스크립트를 실행하여 시스템의 총 쿼리 텍스트 수, 쿼리 수 및 계획 수를 파악하고 query_hash와 plan_hash를 비교하여 차이점을 확인할 수 있습니다.  
   
@@ -157,7 +157,7 @@ SELECT COUNT(DISTINCT query_plan_hash) AS  CountDifferentPlanRows FROM  sys.quer
   
 이것은 임시 쿼리가 있는 워크로드에서 얻을 수 있는 하나의 잠재적 결과입니다.  
   
-![query-store-usage-7](../../relational-databases/performance/media/query-store-usage-7.png "query-store-usage-7")  
+![임시 쿼리가 있는 워크로드에서 얻을 수 있는 잠재적 결과 스크린샷](../../relational-databases/performance/media/query-store-usage-7.png "query-store-usage-7")  
   
 쿼리 결과는 쿼리 저장소에 많은 수의 쿼리와 계획이 있음에도 불구하고 해당 query_hash와 query_plan_hash가 실제로 다르지 않음을 보여 줍니다. 고유한 쿼리 텍스트와 고유한 쿼리 해시 간의 비율(1보다 훨씬 큼)은 워크로드가 매개 변수화하기 적절한 후보임을 나타냅니다. 쿼리 간에 쿼리 텍스트의 일부로 제공된 문자열 상수(매개 변수)만 다를 뿐이기 때문입니다.  
   
@@ -199,7 +199,7 @@ ALTER DATABASE <database name> SET PARAMETERIZATION FORCED;
 
 이 단계 중 하나를 적용하면 **상위 리소스 소비 쿼리** 에 워크로드의 다른 그림이 표시됩니다.  
   
-![query-store-usage-8](../../relational-databases/performance/media/query-store-usage-8.png "query-store-usage-8")  
+![여러 가지 워크로드 그림을 보여 주는 리소스를 가장 많이 사용하는 쿼리 보기 스크린샷](../../relational-databases/performance/media/query-store-usage-8.png "query-store-usage-8")  
   
 경우에 따라 애플리케이션이 자동 매개 변수화에 적합하지 않은 많은 쿼리를 생성할 수 있습니다. 이 경우 시스템에 많은 쿼리가 표시되지만 고유한 쿼리와 고유한 `query_hash` 간의 비율은 1에 가까울 수 있습니다.  
   

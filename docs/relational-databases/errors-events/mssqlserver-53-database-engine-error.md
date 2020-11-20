@@ -1,6 +1,6 @@
 ---
 title: MSSQLSERVER_53 | Microsoft 문서
-description: SQL Server 클라이언트가 서버에 연결할 수 없습니다. 오류에 대한 설명과 가능한 해결 방법을 확인합니다.
+description: SQL Server 클라이언트가 서버에 연결할 수 없습니다. 오류 53에 대한 설명과 가능한 해결 방법을 확인합니다.
 ms.custom: ''
 ms.date: 04/04/2017
 ms.prod: sql
@@ -14,12 +14,12 @@ helpviewer_keywords:
 ms.assetid: 1234f5a2-b3d1-425a-b29f-480fa792305f
 author: MashaMSFT
 ms.author: mathoma
-ms.openlocfilehash: eb84c9bc2f1aaa213d09137141298dc9e81adc48
-ms.sourcegitcommit: da88320c474c1c9124574f90d549c50ee3387b4c
+ms.openlocfilehash: e38abeb865418637336b88f8e1a72380c826a8e8
+ms.sourcegitcommit: 36fe62a3ccf34979bfde3e192cfa778505add465
 ms.translationtype: HT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 07/01/2020
-ms.locfileid: "85716967"
+ms.lasthandoff: 11/11/2020
+ms.locfileid: "94521080"
 ---
 # <a name="mssqlserver_53"></a>MSSQLSERVER_53
  [!INCLUDE [SQL Server](../../includes/applies-to-version/sqlserver.md)]

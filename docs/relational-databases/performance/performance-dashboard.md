@@ -2,7 +2,7 @@
 title: 성능 대시보드 | Microsoft Docs
 description: SQL Server 및 Azure SQL Managed Instance에 대한 신속한 인사이트를 제공하는 SQL Server Management Studio Performance 대시보드에 대해 알아봅니다.
 ms.custom: ''
-ms.date: 12/14/2019
+ms.date: 11/13/2020
 ms.prod: sql
 ms.reviewer: ''
 ms.technology: performance
@@ -15,12 +15,12 @@ ms.assetid: 07f8f594-75b4-4591-8c29-d63811d7753e
 author: pelopes
 ms.author: pelopes
 manager: amitban
-ms.openlocfilehash: 61abc33a31948bca020f4a6cf7c9539ae0546af5
-ms.sourcegitcommit: 21bedbae28840e2f96f5e8b08bcfc794f305c8bc
+ms.openlocfilehash: 45b657be3cef9267431892eeced327e966b97b7d
+ms.sourcegitcommit: 2bf83972036bdbe6a039fb2d1fc7b5f9ca9589d3
 ms.translationtype: HT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 08/06/2020
-ms.locfileid: "87863394"
+ms.lasthandoff: 11/17/2020
+ms.locfileid: "94674196"
 ---
 # <a name="performance-dashboard"></a>성능 대시보드
 [!INCLUDE [SQL Server SQL MI](../../includes/applies-to-version/sql-asdbmi.md)]
@@ -59,7 +59,7 @@ ms.locfileid: "87863394"
 
 ## <a name="to-view-the-performance-dashboard"></a>성능 대시보드를 보려면 
   
-성능 대시보드를 보려면 개체 탐색기에서 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 인스턴스 이름을 마우스 오른쪽 단추로 클릭하고, **보고서**, **표준 보고서**를 선택하고, **성능 대시보드**를 클릭합니다.  
+성능 대시보드를 보려면 개체 탐색기에서 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 인스턴스 이름을 마우스 오른쪽 단추로 클릭하고, **보고서**, **표준 보고서** 를 선택하고, **성능 대시보드** 를 클릭합니다.  
   
 ![메뉴의 성능 대시보드](../../relational-databases/performance/media/perf_dashboard_ssms.png "메뉴의 성능 대시보드")  
   
@@ -76,10 +76,11 @@ ms.locfileid: "87863394"
 
 **대기** 보고서는 모든 유휴 상태 및 일시 중지 대기 상태를 필터링합니다. 대기에 대한 자세한 내용은 [sys.dm_os_wait_stats &#40;Transact-SQL&#41;](../../relational-databases/system-dynamic-management-views/sys-dm-os-wait-stats-transact-sql.md) 및 [대기 및 큐를 사용하는 SQL Server 2005 성능 튜닝](https://download.microsoft.com/download/4/7/a/47a548b9-249e-484c-abd7-29f31282b04d/performance_tuning_waits_queues.doc)을 참조하세요.
 
-기본 DMV의 데이터가 선택 취소되어 있으므로 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]가 다시 시작될 때 **고비용 쿼리**가 다시 설정됩니다. [!INCLUDE[ssSQL15](../../includes/sssql15-md.md)]부터 고비용 쿼리에 대한 자세한 내용은 쿼리 저장소에서 확인할 수 있습니다. 
+기본 DMV의 데이터가 선택 취소되어 있으므로 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]가 다시 시작될 때 **고비용 쿼리** 가 다시 설정됩니다. [!INCLUDE[ssSQL15](../../includes/sssql15-md.md)]부터 고비용 쿼리에 대한 자세한 내용은 쿼리 저장소에서 확인할 수 있습니다. 
+
 
 > [!NOTE]
-> 성능 대시보드는 [SQL Server 2005](https://techcommunity.microsoft.com/t5/SQL-Server-Support/SQL-Server-2005-Performance-Dashboard-Reports/ba-p/315415)에 대한 독립형 다운로드로 처음 릴리스되었으며, 이후 [SQL Server 2012](https://www.microsoft.com/download/details.aspx?id=29063)용으로 업데이트되었습니다.
+> 성능 대시보드는 [SQL Server 2005](https://techcommunity.microsoft.com/t5/SQL-Server-Support/SQL-Server-2005-Performance-Dashboard-Reports/ba-p/315415)에 대한 독립형 다운로드로 처음 릴리스되었으며, 이후 [SQL Server 2012](https://www.microsoft.com/download/details.aspx?id=29063)용으로 업데이트되었습니다. SQL Server Management Studio 보고서 렌더러는 보고서에 포함된 텍스트에 대한 클립보드 액세스를 지원하지 않지만, 독립 실행형 보고서를 통해 텍스트에 액세스할 수 있습니다.  보고서에서 쿼리 텍스트를 복사해야 하는 경우 독립 실행형 보고서를 다운로드합니다.
 
 ## <a name="permissions"></a>사용 권한  
 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]에서 `VIEW SERVER STATE` 및 `ALTER TRACE` 권한이 필요합니다. [!INCLUDE[ssazure_md](../../includes/ssazure_md.md)]에서 데이터베이스에 대한 `VIEW DATABASE STATE` 권한이 필요합니다.

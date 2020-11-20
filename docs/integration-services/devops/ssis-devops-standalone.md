@@ -9,16 +9,16 @@ ms.custom: ''
 ms.technology: integration-services
 author: chugugrace
 ms.author: chugu
-ms.openlocfilehash: 1d0e6b5fe9303269f5941ba11d231e1ca18def11
-ms.sourcegitcommit: 9774e2cb8c07d4f6027fa3a5bb2852e4396b3f68
+ms.openlocfilehash: 52578422cc9f68c728c901cf39bf05425576133b
+ms.sourcegitcommit: 36fe62a3ccf34979bfde3e192cfa778505add465
 ms.translationtype: HT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 10/15/2020
-ms.locfileid: "92098810"
+ms.lasthandoff: 11/11/2020
+ms.locfileid: "94521097"
 ---
 # <a name="standalone-sql-server-integration-service-ssis-devops-tools-preview"></a>독립 실행형 SSIS(SQL Server Integration Services) DevOps 도구(미리 보기)
 
-독립 실행형 **SSIS DevOps 도구**는 SSIS CICD 태스크를 수행할 수 있는 일련의 실행 파일을 제공합니다. Visual Studio 또는 SSIS 런타임 설치에 대한 종속성 없이 이러한 실행 파일을 CICD 플랫폼과 쉽게 통합할 수 있습니다. 제공되는 실행 파일은 다음과 같습니다.
+독립 실행형 **SSIS DevOps 도구** 는 SSIS CICD 태스크를 수행할 수 있는 일련의 실행 파일을 제공합니다. Visual Studio 또는 SSIS 런타임 설치에 대한 종속성 없이 이러한 실행 파일을 CICD 플랫폼과 쉽게 통합할 수 있습니다. 제공되는 실행 파일은 다음과 같습니다.
 
 - SSISBuild.exe: 프로젝트 배포 모델 또는 패키지 배포 모델에서 SSIS 프로젝트를 빌드합니다.
 - SSISDeploy.exe: ISPAC 파일을 SSIS 카탈로그에 배포하거나 DTSX 파일 및 해당 종속성을 파일 시스템에 배포합니다.
@@ -128,6 +128,12 @@ SSISDeploy.exe -source|-s:<source path> -destination|-d:<type>;<path>[;server] [
     ```
 
 ## <a name="release-notes"></a>릴리스 정보
+
+### <a name="version-011-preview"></a>버전 0.1.1 미리 보기
+
+릴리스 날짜: 2020년 11월 11일
+
+- SSIS 카탈로그에 ispac를 배포할 때 SSISDeploy.exe가 어셈블리를 로드하지 못하는 문제를 해결했습니다.
 
 ### <a name="version-010-preview"></a>버전 0.1.0 미리 보기
 

@@ -23,12 +23,12 @@ ms.assetid: 5aec22ce-ae6f-4048-8a45-59ed05f04dc5
 author: rothja
 ms.author: jroth
 monikerRange: =azuresqldb-current||>=sql-server-2016||=sqlallproducts-allversions||>=sql-server-linux-2017||=azuresqldb-mi-current
-ms.openlocfilehash: 69e648dddc84de1c136fbf1830e7eeb639bcb5e7
-ms.sourcegitcommit: 291ae8f6b72fd355f8f24ce5300339306293ea7e
+ms.openlocfilehash: 28719dc4bc770e2fbb58bc7f6e70b68a84895127
+ms.sourcegitcommit: 275fd02d60d26f4e66f6fc45a1638c2e7cedede7
 ms.translationtype: HT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 08/18/2020
-ms.locfileid: "88512311"
+ms.lasthandoff: 11/10/2020
+ms.locfileid: "94447129"
 ---
 # <a name="work-with-change-tracking-sql-server"></a>변경 내용 추적 사용(SQL Server)
 [!INCLUDE [SQL Server SQL Database](../../includes/applies-to-version/sql-asdb.md)]
@@ -137,7 +137,7 @@ ON
 ### <a name="validating-the-last-synchronized-version"></a>마지막으로 동기화된 버전의 유효성 검사  
  변경 내용에 대한 정보는 제한된 시간 동안 유지 관리됩니다. 시간은 ALTER DATABASE의 일부로 지정할 수 있는 CHANGE_RETENTION 매개 변수로 제어됩니다.  
   
- CHANGE_RETENTION에 대해 지정하는 시간에 따라 모든 애플리케이션이 데이터베이스에서 변경 내용을 요청해야 하는 빈도가 결정됩니다. 애플리케이션의 *last_synchronization_version* 값이 테이블에 대해 올바른 최소 동기화 버전보다 작으면 해당 애플리케이션은 올바른 변경 내용 열거를 수행할 수 없습니다. 이는 일부 변경 내용 정보가 정리되었을 수 있기 때문입니다. 애플리케이션이 CHANGETABLE(CHANGES ...)을 사용하여 변경 내용을 가져오려면 먼저 애플리케이션이 CHANGETABLE(CHANGES ...)에 전달하려고 하는 *last_synchronization_version*에 대한 값의 유효성을 검사해야 합니다. *last_synchronization_version* 의 값이 잘못된 경우 해당 애플리케이션은 모든 데이터를 다시 초기화해야 합니다.  
+ CHANGE_RETENTION에 대해 지정하는 시간에 따라 모든 애플리케이션이 데이터베이스에서 변경 내용을 요청해야 하는 빈도가 결정됩니다. 애플리케이션의 *last_synchronization_version* 값이 테이블에 대해 올바른 최소 동기화 버전보다 작으면 해당 애플리케이션은 올바른 변경 내용 열거를 수행할 수 없습니다. 이는 일부 변경 내용 정보가 정리되었을 수 있기 때문입니다. 애플리케이션이 CHANGETABLE(CHANGES ...)을 사용하여 변경 내용을 가져오려면 먼저 애플리케이션이 CHANGETABLE(CHANGES ...)에 전달하려고 하는 *last_synchronization_version* 에 대한 값의 유효성을 검사해야 합니다. *last_synchronization_version* 의 값이 잘못된 경우 해당 애플리케이션은 모든 데이터를 다시 초기화해야 합니다.  
   
  다음 예에서는 각 테이블에 대한 `last_synchronization_version` 값의 유효성을 확인하는 방법을 보여 줍니다.  
   
