@@ -9,17 +9,27 @@ ms.date: 06/27/2018
 ms.author: murshedz
 ms.reviewer: martinle
 ms.custom: seo-dt-2019
-ms.openlocfilehash: 5e0193fb7e749b7127d59743557e58cb049e734c
-ms.sourcegitcommit: 7345e4f05d6c06e1bcd73747a4a47873b3f3251f
+ms.openlocfilehash: 25bc830bcf2582d7630829ccb3c369fdd434c094
+ms.sourcegitcommit: 4c3949f620d09529658a2172d00bfe37aeb1a387
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 08/24/2020
-ms.locfileid: "88778472"
+ms.lasthandoff: 11/21/2020
+ms.locfileid: "95011816"
 ---
 # <a name="whats-new-in-analytics-platform-system-a-scale-out-mpp-data-warehouse"></a>확장 MPP 데이터 웨어하우스의 분석 플랫폼 시스템의 새로운 기능
 최신 어플라이언스 업데이트 Microsoft Analytics Platform System (APS)의 새로운 기능을 참조 하세요. APS는 MPP SQL Server 병렬 데이터 웨어하우스를 호스팅하는 스케일 아웃 온-프레미스 어플라이언스입니다. 
 
 ::: moniker range=">= aps-pdw-2016-au7 || = sqlallproducts-allversions"
+<a name="h2-aps-cu7.7"></a>
+## <a name="aps-cu77"></a>APS CU 7.7
+릴리스 날짜-11 월 2020
+
+### <a name="scvmm2016"></a>SCVMM2016
+APS CU 7.7 소프트웨어는 VMM VM을 Windows Server 2016로 업그레이드 하 고 SCVMM2016를 설치 합니다. 현재 사용 중인 SCVMM 2012 R2의 종료 날짜는 7 월 2022입니다. 최신 SCVMM을 지원 하려면 CU 7.7를 필수 업그레이드로 설정 해야 합니다. 고객은 가능한 한 빨리 CU 7.7로 업그레이드 하는 것이 결과.
+
+### <a name="ssis-destination-adapter-for-sql-server-2019-as-target"></a>대상으로 SQL Server 2019 용 SSIS 대상 어댑터
+배포 대상으로 SQL Server 2019를 지 원하는 새 APS SSIS 대상 어댑터는 [다운로드 사이트](https://www.microsoft.com/download/details.aspx?id=57472)에서 다운로드할 수 있습니다.
+
 <a name="h2-aps-cu7.6"></a>
 ## <a name="aps-cu76"></a>APS CU7.6
 릴리스 날짜-4 월 2020
@@ -87,7 +97,7 @@ APS CU 7.2는 TLS 1.2를 지원 합니다. 클라이언트 컴퓨터와 APS 간 
 ### <a name="hadoop-encryption-zone-support-for-polybase"></a>PolyBase에 대 한 Hadoop 암호화 영역 지원
 이제 PolyBase에서 Hadoop 암호화 영역과 통신할 수 있습니다. [Hadoop 보안 구성](polybase-configure-hadoop-security.md#encryptionzone)에 필요한 APS 구성 변경을 참조 하세요.
 
-### <a name="insert-select-maxdop-options"></a>Maxdop 옵션 삽입-선택
+### <a name="insert-select-maxdop-options"></a>Insert-Select maxdop 옵션
 삽입 선택 작업에 대해 1 보다 큰 maxdop 설정을 선택할 수 있는 [기능 스위치](appliance-feature-switch.md) 를 추가 했습니다. 이제 maxdop 설정을 0, 1, 2 또는 4로 설정할 수 있습니다. 기본값은 1입니다.
 
 > [!IMPORTANT]  
@@ -140,7 +150,7 @@ SMO를 사용 하는 대신 메타 데이터 호출에 대해 카탈로그 개�
 ### <a name="bug-fixes"></a>버그 수정
 Microsoft는 APS CU 7.1을 사용 하 여 SQL Server 2016 SP2 CU2로 업그레이드 했습니다. 업그레이드는 아래에 설명 된 몇 가지 문제를 해결 합니다.
 
-| 제목 | 설명 |
+| 제목 | Description |
 |:---|:---|
 | **잠재적 튜플 이동 교착 상태** |업그레이드는 분산 트랜잭션과 튜플 이동 기 백그라운드 스레드에서 교착 상태의 긴 가능성을 수정 합니다. CU 7.1을 설치한 후 TF634를 사용 하 여 시작 매개 변수 또는 전역 추적 플래그로 SQL Server 튜플 이동 기를 중지 하는 고객은이를 안전 하 게 제거할 수 있습니다. | 
 | **특정 지연/리드 쿼리 실패** |오류가 발생 하는 중첩 된 지연/리드 함수를 사용 하는 CCI 테이블의 특정 쿼리는 이제이 업그레이드로 수정 되었습니다. | 
@@ -164,7 +174,7 @@ APS AU7는 기본적으로 통계를 자동으로 만들고 업데이트 합니�
 APS AU7 [Configuration Manager](launch-the-configuration-manager.md)의 기능 스위치를 소개 합니다. AutoStatsEnabled 및 DmsProcessStopMessageTimeoutInSeconds는 이제 관리자가 변경할 수 있는 구성 가능한 옵션입니다.
 
 ### <a name="known-issues"></a>알려진 문제
-APS AU7 소프트웨어를 사용 하면 잘못 된 *실행 측 채널 공격*으로 설명 된 문제를 해결 하는 Intel BIOS 업데이트가 제공 됩니다. 이 공격은 *스펙터 및 멜트다운 취약성*을 악용 하는 것을 목표로 합니다. AP와 함께 패키지 되기는 하지만, AP AU7 소프트웨어 설치의 일부가 아니라 수동으로 BIOS 업데이트가 설치 됩니다.
+APS AU7 소프트웨어를 사용 하면 잘못 된 *실행 측 채널 공격* 으로 설명 된 문제를 해결 하는 Intel BIOS 업데이트가 제공 됩니다. 이 공격은 *스펙터 및 멜트다운 취약성* 을 악용 하는 것을 목표로 합니다. AP와 함께 패키지 되기는 하지만, AP AU7 소프트웨어 설치의 일부가 아니라 수동으로 BIOS 업데이트가 설치 됩니다.
 
 Microsoft는 모든 고객에 게 BIOS 업데이트를 설치 하도록 조언 합니다. Microsoft는 다양 한 환경에서 다양 한 SQL 작업에 대 한 커널 KVAS (가상 주소 숨김), KPTI (커널 페이지 테이블 간접 참조) 및 IBP (간접 분기 예측 완화)의 효과를 측정 했습니다. 측정값이 일부 워크 로드에서 상당한 저하를 발견 했습니다. 결과에 따라 프로덕션 환경에 배포 하기 전에 BIOS 업데이트를 사용 하도록 설정 하는 성능 효과를 테스트 하는 것이 좋습니다. SQL Server 지침은 [여기](https://support.microsoft.com/help/4073225/guidance-protect-sql-server-against-spectre-meltdown)를 참조 하세요.
 
