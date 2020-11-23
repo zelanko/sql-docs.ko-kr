@@ -61,7 +61,7 @@ ms.locfileid: "92038286"
 |마스터 서버를 만드는 방법에 대해 설명합니다.|[마스터 서버 만들기](../../ssms/agent/make-a-master-server.md)|  
 |대상 서버를 만드는 방법에 대해 설명합니다.|[대상 서버 만들기](../../ssms/agent/make-a-target-server.md)|  
 |마스터 서버에 대상 서버를 등록하는 방법에 대해 설명합니다.|[마스터 서버에 대상 서버 등록](../../ssms/agent/enlist-a-target-server-to-a-master-server.md)|  
-|마스터 서버에서 대상 서버를 제거하는 방법에 대해 설명합니다.|[Defect a Target Server from a Master Server](../../ssms/agent/defect-a-target-server-from-a-master-server.md)|  
+|마스터 서버에서 대상 서버를 제거하는 방법에 대해 설명합니다.|[마스터 서버에서 대상 서버 제거](../../ssms/agent/defect-a-target-server-from-a-master-server.md)|  
 |마스터 서버에서 여러 대상 서버를 제거하는 방법에 대해 설명합니다.|[마스터 서버에서 여러 대상 서버 제거](../../ssms/agent/defect-multiple-target-servers-from-a-master-server.md)|  
 |대상 서버의 상태를 확인하는 방법에 대해 설명합니다.|[sp_help_targetserver(Transact-SQL)](../../relational-databases/system-stored-procedures/sp-help-targetserver-transact-sql.md)<br /><br />[sp_help_targetservergroup(Transact-SQL)](../../relational-databases/system-stored-procedures/sp-help-targetservergroup-transact-sql.md)|  
   
