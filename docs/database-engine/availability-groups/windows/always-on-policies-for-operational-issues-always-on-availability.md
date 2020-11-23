@@ -60,10 +60,10 @@ ms.locfileid: "94584783"
 |가용성 복제본 역할 상태|[가용성 복제본에 정상 상태의 역할이 없음](../../../database-engine/availability-groups/windows/availability-replica-does-not-have-a-healthy-role.md).|위험|가용성 복제본|  
 |가용성 복제본 연결 상태|[Availability replica is disconnected](../../../database-engine/availability-groups/windows/availability-replica-is-disconnected.md)입니다.|위험|가용성 복제본|  
 |가용성 복제본 조인 상태|[가용성 복제본이 조인되어 있지 않습니다](../../../database-engine/availability-groups/windows/availability-replica-is-not-joined.md).|Warning|가용성 복제본|  
-|가용성 복제본 데이터 동기화 상태|[Data synchronization state of some availability database is not healthy](../../../database-engine/availability-groups/windows/data-synchronization-state-of-some-availability-database-is-not-healthy.md)입니다.|Warning|가용성 복제본|  
+|가용성 복제본 데이터 동기화 상태|[일부 가용성 데이터베이스의 데이터 동기화 상태가 정상이 아님](../../../database-engine/availability-groups/windows/data-synchronization-state-of-some-availability-database-is-not-healthy.md)|Warning|가용성 복제본|  
 |가용성 데이터베이스 일시 중지 상태|[Availability database is suspended](../../../database-engine/availability-groups/windows/availability-database-is-suspended.md)입니다.|Warning|가용성 데이터베이스|  
 |가용성 데이터베이스 조인 상태|[Secondary database is not joined](../../../database-engine/availability-groups/windows/secondary-database-is-not-joined.md)입니다.|Warning|가용성 데이터베이스|  
-|가용성 데이터베이스 데이터 동기화 상태|[Data synchronization state of availability database is not healthy](../../../database-engine/availability-groups/windows/data-synchronization-state-of-availability-database-is-not-healthy.md)입니다.|Warning|가용성 데이터베이스|  
+|가용성 데이터베이스 데이터 동기화 상태|[가용성 데이터베이스의 데이터 동기화 상태가 정상이 아님](../../../database-engine/availability-groups/windows/data-synchronization-state-of-availability-database-is-not-healthy.md)|Warning|가용성 데이터베이스|  
   
 > [!IMPORTANT]
 >  **&#42;** Always On 정책의 경우 범주 이름이 ID로 사용됩니다. Always On 범주의 이름을 변경하면 상태 평가 기능이 작동하지 않으므로 이름을 수정하지 마세요.  
