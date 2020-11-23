@@ -46,12 +46,14 @@
         - name: SQL Server 보안
           href: ../connect/ado-net/sql/sql-server-security.md
           items:
-            - name: SQL Server에서 인증
+            - name: 인증
               href: ../connect/ado-net/sql/authentication-sql-server.md
-            - name: SQL Server의 애플리케이션 보안 시나리오
+            - name: Azure Active Directory 인증
+              href: ../connect/ado-net/sql/azure-active-directory-authentication.md
+            - name: 애플리케이션 보안 시나리오
               href: ../connect/ado-net/sql/application-security-scenarios-sql-server.md
               items:
-                - name: SQL Server에서 보안 동적 SQL 작성
+                - name: 보안 동적 SQL 작성
                   href: ../connect/ado-net/sql/writing-secure-dynamic-sql.md
             - name: SQL Server Express 보안
               href: ../connect/ado-net/sql/sql-server-express-security.md

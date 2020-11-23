@@ -1836,7 +1836,7 @@
       items:
         - name: 관리
           items:
-            - name: 생성
+            - name: 만들기
               href: relational-databases/tables/create-tables-database-engine.md
             - name: DELETE
               href: relational-databases/tables/delete-tables-database-engine.md
@@ -1875,7 +1875,7 @@
           items:
             - name: 생성
               href: relational-databases/tables/create-edge-constraints.md
-            - name: DELETE
+            - name: 삭제
               href: relational-databases/tables/delete-edge-constraint.md
             - name: 수정
               href: relational-databases/tables/modify-edge-constraint.md
@@ -13603,10 +13603,14 @@
               href: relational-databases/system-stored-procedures/sp-oastop-transact-sql.md
         - name: PolyBase
           items:
-            - name: polybase_join_group
+            - name: sp_polybase_join_group
               href: relational-databases/system-stored-procedures/polybase-stored-procedures-sp-polybase-join-group.md
             - name: sp_polybase_leave_group
               href: relational-databases/system-stored-procedures/polybase-stored-procedures-sp-polybase-leave-group.md
+            - name: sp_data_source_table_columns
+              href: relational-databases/system-stored-procedures/sp-data-source-table-columns.md
+            - name: sp_data_source_objects
+              href: relational-databases/system-stored-procedures/sp-data-source-objects.md
         - name: 정책 기반 관리
           href: relational-databases/system-stored-procedures/policy-based-management-stored-procedures-transact-sql.md
           items:
