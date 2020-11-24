@@ -2,19 +2,19 @@
 title: SQL 테이블 데이터를 Python pandas 데이터 프레임에 삽입
 titleSuffix: SQL machine learning
 description: Python을 사용하여 SQL 테이블에서 데이터를 읽고 pandas 데이터 프레임에 삽입하는 방법을 알아봅니다.
-author: cawrites
-ms.author: chadam
+author: dphansen
+ms.author: davidph
 ms.date: 07/23/2020
 ms.topic: how-to
 ms.prod: sql
 ms.technology: machine-learning
 monikerRange: '>=sql-server-2017||>=sql-server-linux-ver15||=azuresqldb-mi-current||=azuresqldb-current||=sqlallproducts-allversions'
-ms.openlocfilehash: 549507edaeec804776e830864bc93526e22eaea0
-ms.sourcegitcommit: afb02c275b7c79fbd90fac4bfcfd92b00a399019
+ms.openlocfilehash: 041291804f6fbefe4832398b7c56b2ab97940008
+ms.sourcegitcommit: 82b92f73ca32fc28e1948aab70f37f0efdb54e39
 ms.translationtype: HT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 10/12/2020
-ms.locfileid: "91956854"
+ms.lasthandoff: 11/18/2020
+ms.locfileid: "94870248"
 ---
 # <a name="insert-data-from-a-sql-table-into-a-python-pandas-dataframe"></a>SQL 테이블 데이터를 Python pandas 데이터 프레임에 삽입
 [!INCLUDE[SQL Server SQL DB SQL MI](../../includes/applies-to-version/sql-asdb-asdbmi.md)]
@@ -24,20 +24,20 @@ ms.locfileid: "91956854"
 ## <a name="prerequisites"></a>필수 구성 요소
 
 ::: moniker range=">=sql-server-2017||>=sql-server-linux-ver15||=sqlallproducts-allversions"
-* SQL Server. 설치 방법은 [Windows용 SQL Server](../../database-engine/install-windows/install-sql-server.md) 또는 [Linux용 SQL Server](../../linux/sql-server-linux-overview.md)를 참조하세요.
+* [Windows용 SQL Server](../../database-engine/install-windows/install-sql-server.md) 또는 [Linux용 SQL Server](../../linux/sql-server-linux-overview.md)
 ::: moniker-end
 
 ::: moniker range="=azuresqldb-current||=sqlallproducts-allversions"
-* Azure SQL Database. 등록 방법은 [Azure SQL Database](/azure/sql-database/sql-database-get-started-portal)를 참조하세요.
+* [Azure SQL Database](/azure/sql-database/sql-database-get-started-portal)
 ::: moniker-end
 
 ::: moniker range="=azuresqldb-mi-current||=sqlallproducts-allversions"
-* Azure SQL Managed Instance. 등록 방법은 [Azure SQL Managed Instance](/azure/azure-sql/managed-instance/instance-create-quickstart)를 참조하세요.
+* [Azure SQL Managed Instance](/azure/azure-sql/managed-instance/instance-create-quickstart)
 
 * 샘플 데이터베이스를 Azure SQL Managed Instance로 복원하기 위한 [SQL Server Management Studio](../../ssms/download-sql-server-management-studio-ssms.md).
 ::: moniker-end
 
-* Azure Data Studio. 설치 방법은 [Azure Data Studio](../../azure-data-studio/what-is.md)를 참조하세요.
+* Azure Data Studio. 설치하려면 [Azure Data Studio](../../azure-data-studio/what-is.md)를 참조하세요.
 
 * [샘플 데이터베이스를 복원](../../samples/adventureworks-install-configure.md)하여 이 문서에서 사용되는 샘플 데이터를 가져옵니다.
 
@@ -60,9 +60,9 @@ SELECT * FROM Person.CountryRegion;
 
   이러한 패키지를 설치하려면
 
-  1. Azure Data Studio Notebook에서 **패키지 관리**를 선택합니다.
+  1. Azure Data Studio Notebook에서 **패키지 관리** 를 선택합니다.
   2. **패키지 관리** 창에서 **새로 추가** 탭을 선택합니다.
-  3. 다음 패키지 각각에 대해 패키지 이름을 입력하고 **검색**을 클릭한 다음 **설치**를 클릭합니다.
+  3. 다음 패키지 각각에 대해 패키지 이름을 입력하고 **검색** 을 클릭한 다음 **설치** 를 클릭합니다.
 
 ## <a name="insert-data"></a>데이터 삽입
 
@@ -70,9 +70,9 @@ SELECT * FROM Person.CountryRegion;
 
 새 Notebook을 만들려면:
 
-1. Azure Data Studio에서 **파일**을 선택하고 **새 Notebook**을 선택합니다.
-2. Notebook에서 커널 **Python3**를 선택하고 **+code**를 선택합니다.
-3. Notebook에 코드를 붙여넣고 **모두 실행**을 선택합니다.
+1. Azure Data Studio에서 **파일** 을 선택하고 **새 Notebook** 을 선택합니다.
+2. Notebook에서 커널 **Python3** 를 선택하고 **+code** 를 선택합니다.
+3. Notebook에 코드를 붙여넣고 **모두 실행** 을 선택합니다.
 
 ```python
 import pyodbc

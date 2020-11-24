@@ -10,12 +10,12 @@ author: dphansen
 ms.author: davidph
 ms.custom: seo-lt-2019
 monikerRange: '>=sql-server-2016||>=sql-server-linux-ver15||>=azuresqldb-mi-current||=sqlallproducts-allversions'
-ms.openlocfilehash: 9b3f8d66d7197e2e55a07f7a5b6de5da1b4ee24a
-ms.sourcegitcommit: ead0b8c334d487a07e41256ce5d6acafa2d23c9d
+ms.openlocfilehash: db8a0c073821df46e6d9d5bda43e74aae19a2501
+ms.sourcegitcommit: 54cd97a33f417432aa26b948b3fc4b71a5e9162b
 ms.translationtype: HT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 10/22/2020
-ms.locfileid: "92412561"
+ms.lasthandoff: 11/13/2020
+ms.locfileid: "94585062"
 ---
 # <a name="r-tutorial-predict-nyc-taxi-fares-with-binary-classification"></a>R 자습서: 이진 분류를 사용하여 뉴욕시 택시 요금 예측
 [!INCLUDE [SQL Server 2016 SQL MI](../../includes/applies-to-version/sqlserver2016-asdbmi.md)]
@@ -33,7 +33,7 @@ SQL 프로그래머를 위한 이 5부 자습서 시리즈에서는 [SQL Server 
 ::: moniker-end
 
 ::: moniker range=">=azuresqldb-mi-current||=sqlallproducts-allversions"
-SQL 프로그래머를 위한 이 5부 자습서 시리즈에서는 [Azure SQL Managed Instance의 Machine Learning Services(미리 보기)](/azure/azure-sql/managed-instance/machine-learning-services-overview)의 R 통합에 대해 알아봅니다.
+SQL 프로그래머를 위한 이 5부 자습서 시리즈에서는 [Azure SQL Managed Instance의 Machine Learning Services](/azure/azure-sql/managed-instance/machine-learning-services-overview)의 R 통합에 대해 알아봅니다.
 ::: moniker-end
 
 샘플 SQL Server 데이터베이스를 사용하여 R 기반 기계 학습 솔루션을 빌드 및 배포합니다. T-SQL, Azure Data Studio 또는 SQL Server Management Studio와 SQL Machine Learning 및 R 언어를 지원하는 데이터베이스 엔진 인스턴스를 사용합니다.

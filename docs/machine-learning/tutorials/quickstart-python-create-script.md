@@ -6,17 +6,16 @@ ms.prod: sql
 ms.technology: machine-learning
 ms.date: 09/28/2020
 ms.topic: quickstart
-author: cawrites
-ms.author: chadam
-ms.reviewer: davidph
+author: dphansen
+ms.author: davidph
 ms.custom: contperfq1
 monikerRange: '>=sql-server-2017||>=sql-server-linux-ver15||=azuresqldb-mi-current||=sqlallproducts-allversions'
-ms.openlocfilehash: 93237f9d23bf0972d8c4ba6fb08752b41aa6e7a5
-ms.sourcegitcommit: 32135463a8494d9ed1600a58f51819359e3c09dc
+ms.openlocfilehash: 9f2b729273362afd7a14cb60434416996b186557
+ms.sourcegitcommit: 82b92f73ca32fc28e1948aab70f37f0efdb54e39
 ms.translationtype: HT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 10/08/2020
-ms.locfileid: "91834178"
+ms.lasthandoff: 11/18/2020
+ms.locfileid: "94870174"
 ---
 # <a name="quickstart-run-simple-python-scripts-with-sql-machine-learning"></a>빠른 시작: SQL 기계 학습에서 간단한 Python 스크립트 실행
 [!INCLUDE [SQL Server 2017 SQL MI](../../includes/applies-to-version/sqlserver2017-asdbmi.md)]
@@ -28,9 +27,9 @@ ms.locfileid: "91834178"
 이 빠른 시작을 실행하려면 다음과 같은 필수 구성 요소가 필요합니다.
 
 - 다음 플랫폼 중 하나에 있는 SQL 데이터베이스:
-  - [SQL Server Machine Learning Services](../sql-server-machine-learning-services.md). 설치 방법은 [Windows 설치 가이드](../install/sql-machine-learning-services-windows-install.md) 또는 [Linux 설치 가이드](../../linux/sql-server-linux-setup-machine-learning.md?toc=%2Fsql%2Fmachine-learning%2Ftoc.json)를 참조하세요.
+  - [SQL Server Machine Learning Services](../sql-server-machine-learning-services.md). 설치하려면 [Windows 설치 가이드](../install/sql-machine-learning-services-windows-install.md) 또는 [Linux 설치 가이드](../../linux/sql-server-linux-setup-machine-learning.md?toc=%2Fsql%2Fmachine-learning%2Ftoc.json)를 참조하세요.
   - SQL Server 빅 데이터 클러스터. [SQL Server 빅 데이터 클러스터에서 Machine Learning Services 사용](../../big-data-cluster/machine-learning-services.md)을 참조하세요.
-  - Azure SQL Managed Instance Machine Learning Services. 등록 방법은 [Azure SQL Managed Instance Machine Learning Services 개요](/azure/azure-sql/managed-instance/machine-learning-services-overview)를 참조하세요.
+  - Azure SQL Managed Instance Machine Learning Services. 자세한 내용은 [Azure SQL Managed Instance Machine Learning Services 개요](/azure/azure-sql/managed-instance/machine-learning-services-overview)를 참조하세요.
 
 - Python 스크립트가 포함된 SQL 쿼리를 실행하기 위한 도구. 이 빠른 시작에서는 [Azure Data Studio](../../azure-data-studio/what-is.md)를 사용합니다.
 
@@ -48,7 +47,7 @@ d = a*b
 print(c, d)
 ```
 
-1. SQL 인스턴스에 연결된 **Azure Data Studio**에서 새 쿼리 창을 엽니다.
+1. SQL 인스턴스에 연결된 **Azure Data Studio** 에서 새 쿼리 창을 엽니다.
 
 1. 전체 Python 스크립트를 `sp_execute_external_script` 저장 프로시저에 전달합니다.
 
@@ -95,7 +94,7 @@ GO
 | @language | 호출할 언어 확장을 정의합니다(이 경우에는 Python). |
 | @script | Python 런타임으로 전달되는 명령을 정의합니다. 이 인수에서 전체 Python 스크립트는 유니코드 텍스트로 묶어야 합니다. **nvarchar** 형식의 변수에 텍스트를 추가한 다음, 변수를 호출할 수도 있습니다. |
 | @input_data_1 | 쿼리에서 반환된 데이터는 Python 런타임에 전달되고, R 런타임은 데이터를 데이터 프레임으로 전달합니다. |
-| WITH RESULT SETS | 절은 SQL 기계 학습에 대해 반환된 데이터 테이블의 스키마를 정의하여 "Hello World"를 열 이름으로 추가하고 데이터 형식으로 **int**를 추가합니다. |
+| WITH RESULT SETS | 절은 SQL 기계 학습에 대해 반환된 데이터 테이블의 스키마를 정의하여 "Hello World"를 열 이름으로 추가하고 데이터 형식으로 **int** 를 추가합니다. |
 
 이 명령은 다음 텍스트를 출력합니다.
 
@@ -136,7 +135,7 @@ GO
 
     ![PythonTestData 테이블의 콘텐츠](./media/select-pythontestdata.png)
 
-1. 다음 Python 스크립트를 실행합니다. `SELECT` 문을 사용하여 테이블에서 데이터를 검색하고 Python 런타임을 통해 이를 전달하고 데이터를 데이터 프레임으로 반환합니다. `WITH RESULT SETS` 절은 SQL에 대한 반환된 데이터 테이블의 스키마를 정의하고, 열 이름 *NewColName*을 추가합니다.
+1. 다음 Python 스크립트를 실행합니다. `SELECT` 문을 사용하여 테이블에서 데이터를 검색하고 Python 런타임을 통해 이를 전달하고 데이터를 데이터 프레임으로 반환합니다. `WITH RESULT SETS` 절은 SQL에 대한 반환된 데이터 테이블의 스키마를 정의하고, 열 이름 *NewColName* 을 추가합니다.
 
     ```sql
     EXECUTE sp_execute_external_script @language = N'Python'
@@ -149,7 +148,7 @@ GO
 
     ![테이블에서 데이터를 반환하는 Python 스크립트의 출력](./media/python-output-pythontestdata.png)
 
-1. 이제 입력 및 출력 변수의 이름을 변경합니다. 기본 입력 및 출력 변수 이름은 **InputDataSet** 및 **OutputDataSet**입니다. 다음 스크립트는 이름을 **SQL_in** 및 **SQL_out**으로 변경합니다.
+1. 이제 입력 및 출력 변수의 이름을 변경합니다. 기본 입력 및 출력 변수 이름은 **InputDataSet** 및 **OutputDataSet** 입니다. 다음 스크립트는 이름을 **SQL_in** 및 **SQL_out** 으로 변경합니다.
 
     ```sql
     EXECUTE sp_execute_external_script @language = N'Python'

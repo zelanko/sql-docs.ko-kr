@@ -9,12 +9,12 @@ ms.date: 10/19/2020
 ms.topic: conceptual
 ms.prod: sql
 ms.technology: big-data-cluster
-ms.openlocfilehash: db774314d8d10774cbc2bd2b483b17d149695979
-ms.sourcegitcommit: ae474d21db4f724523e419622ce79f611e956a22
+ms.openlocfilehash: 02fbb46968d51bc4dbe730fcc7d575793063bcff
+ms.sourcegitcommit: 0f484f32709a414f05562bbaafeca9a9fc57c9ed
 ms.translationtype: HT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 10/20/2020
-ms.locfileid: "92257143"
+ms.lasthandoff: 11/14/2020
+ms.locfileid: "94631689"
 ---
 # <a name="sql-server-2019-big-data-clusters-release-notes"></a>SQL Server 2019 빅 데이터 클러스터 릴리스 정보
 
@@ -112,8 +112,9 @@ SQL Server 2019의 CU6(누적 업데이트 6) 릴리스입니다.
 
 - [Active Directory 모드에서 빅 데이터 클러스터 액세스 관리](manage-user-access.md)
 - [Active Directory 모드에서 [!INCLUDE[big-data-clusters-2019](../includes/ssbigdataclusters-ss-nover.md)] 배포](active-directory-deploy.md)
-- [고가용성을 사용하여 SQL Server 빅 데이터 클러스터 배포](deployment-high-availability.md)
-- [SQL Server 빅 데이터 클러스터 구성](configure-cluster.md)
+- [Active Directory 모드에서 AKS에 [!INCLUDE[big-data-clusters-2019](../includes/ssbigdataclusters-ss-nover.md)] 배포](active-directory-deployment-aks.md)
+- [고가용성으로 [!INCLUDE[big-data-clusters-2019](../includes/ssbigdataclusters-ss-nover.md)] 배포](deployment-high-availability.md)
+- [[!INCLUDE[big-data-clusters-2019](../includes/ssbigdataclusters-ss-nover.md)] 구성](configure-cluster.md)
 - [빅 데이터 클러스터에서 Apache Spark 및 Apache Hadoop 구성](configure-spark-hdfs.md)
 - [SQL Server 마스터 인스턴스 구성 속성](reference-config-master-instance.md)
 - [Apache Spark 및 Apache Hadoop(HDFS) 구성 속성](reference-config-spark-hadoop.md)
@@ -191,9 +192,9 @@ SQL Server 2019 GDR1(일반 배포 릴리스 1) - [!INCLUDE[big-data-clusters-20
 
 ### <a name="ha-sql-server-database-encryption-key-encryptor-rotation"></a>HA SQL Server 데이터베이스 암호화 키 암호기 회전
 
-- **영향을 받는 릴리스** : 릴리스에 관계없이 모든 빅 데이터 클러스터 HA 배포.
+- **영향을 받는 릴리스**: 릴리스에 관계없이 모든 빅 데이터 클러스터 HA 배포.
 
-- **문제 및 고객에게 미치는 영향** : HA를 사용하여 배포된 SQL Server에서는 암호화된 데이터베이스에 대한 인증서 회전이 실패합니다. 마스터 풀에서 다음 명령을 실행하면 오류 메시지가 표시됩니다.
+- **문제 및 고객에게 미치는 영향**: HA를 사용하여 배포된 SQL Server에서는 암호화된 데이터베이스에 대한 인증서 회전이 실패합니다. 마스터 풀에서 다음 명령을 실행하면 오류 메시지가 표시됩니다.
     ```
     ALTER DATABASE ENCRYPTION KEY
     ENCRYPTION BY SERVER
@@ -203,11 +204,11 @@ SQL Server 2019 GDR1(일반 배포 릴리스 1) - [!INCLUDE[big-data-clusters-20
     
 ### <a name="empty-livy-jobs-before-you-apply-cumulative-updates"></a>누적 업데이트를 적용하기 전의 빈 Livy 작업
 
-- **영향을 받는 릴리스** : CU6까지의 모든 버전. CU8에서 문제가 해결되었습니다.
+- **영향을 받는 릴리스**: CU6까지의 모든 버전. CU8에서 문제가 해결되었습니다.
 
-- **문제 및 고객에게 미치는 영향** : 업그레이드하는 동안 `sparkhead`에서 404 오류를 반환합니다.
+- **문제 및 고객에게 미치는 영향**: 업그레이드하는 동안 `sparkhead`에서 404 오류를 반환합니다.
 
-- **해결 방법** : BDC를 업그레이드하기 전에 활성 Livy 세션 또는 일괄 처리 작업이 없는지 확인합니다. 이 문제를 방지하려면 [지원되는 릴리스에서 업그레이드](deployment-upgrade.md#upgrade-from-supported-release)의 지침을 따르세요. 
+- **해결 방법**: BDC를 업그레이드하기 전에 활성 Livy 세션 또는 일괄 처리 작업이 없는지 확인합니다. 이 문제를 방지하려면 [지원되는 릴리스에서 업그레이드](deployment-upgrade.md#upgrade-from-supported-release)의 지침을 따르세요. 
 
    업그레이드 프로세스 중에 Livy에서 404 오류를 반환하는 경우 두 `sparkhead` 노드에서 모두 Livy 서버를 다시 시작합니다. 예를 들어:
 
@@ -217,52 +218,52 @@ SQL Server 2019 GDR1(일반 배포 릴리스 1) - [!INCLUDE[big-data-clusters-20
 
 ### <a name="big-data-cluster-generated-service-accounts-passwords-expiration"></a>빅 데이터 클러스터 생성 서비스 계정 암호 만료
 
-- **영향을 받는 릴리스** : 릴리스에 관계없이 Active Directory 통합을 사용한 모든 빅 데이터 클러스터 배포
+- **영향을 받는 릴리스**: 릴리스에 관계없이 Active Directory 통합을 사용한 모든 빅 데이터 클러스터 배포
 
-- **문제 및 고객에게 미치는 영향** : 빅 데이터 클러스터를 배포하는 동안 워크플로는 [서비스 계정](active-directory-objects.md) 집합을 생성합니다. 도메인 컨트롤러에 설정된 암호 만료 정책에 따라 이러한 계정의 암호는 만료될 수 있습니다(기본값은 42일). 지금은 BDC의 모든 계정에 대한 자격 증명을 회전하는 메커니즘이 없으므로 만료 기간이 경과하면 클러스터가 작동하지 않게 됩니다.
+- **문제 및 고객에게 미치는 영향**: 빅 데이터 클러스터를 배포하는 동안 워크플로는 [서비스 계정](active-directory-objects.md) 집합을 생성합니다. 도메인 컨트롤러에 설정된 암호 만료 정책에 따라 이러한 계정의 암호는 만료될 수 있습니다(기본값은 42일). 지금은 BDC의 모든 계정에 대한 자격 증명을 회전하는 메커니즘이 없으므로 만료 기간이 경과하면 클러스터가 작동하지 않게 됩니다.
 
-- **해결 방법** : 도메인 컨트롤러에서 BDC 서비스 계정의 만료 정책을 "암호 사용 기간 제한 없음"으로 업데이트합니다. 이러한 계정의 전체 목록은 [자동 생성 Active Directory 개체](active-directory-objects.md)를 참조하세요. 이 작업은 만료 이전 또는 이후에 수행할 수 있습니다. 후자의 경우 만료된 암호를 Active Directory가 다시 활성화합니다.
+- **해결 방법**: 도메인 컨트롤러에서 BDC 서비스 계정의 만료 정책을 "암호 사용 기간 제한 없음"으로 업데이트합니다. 이러한 계정의 전체 목록은 [자동 생성 Active Directory 개체](active-directory-objects.md)를 참조하세요. 이 작업은 만료 이전 또는 이후에 수행할 수 있습니다. 후자의 경우 만료된 암호를 Active Directory가 다시 활성화합니다.
 
 ### <a name="credentials-for-accessing-services-through-gateway-endpoint"></a>게이트웨이 엔드포인트를 통해 서비스에 액세스하기 위한 자격 증명
 
-- **영향을 받는 릴리스** : CU5부터 새 클러스터가 배포됩니다.
+- **영향을 받는 릴리스**: CU5부터 새 클러스터가 배포됩니다.
 
-- **문제 및 고객에게 미치는 영향** : SQL Server 2019 CU5를 사용하여 배포된 새로운 빅 데이터 클러스터의 경우 게이트웨이 사용자 이름은 **루트** 가 아닙니다. 게이트웨이 엔드포인트에 연결하는 데 사용된 애플리케이션에서 잘못된 자격 증명을 사용하는 경우 인증 오류가 표시됩니다. 이런 변경은 루트가 아닌 사용자로 빅 데이터 클러스터 내에서 애플리케이션을 실행한 결과입니다(SQL Server 2019 CU5 릴리스부터 새로운 기본 동작: CU5를 사용하여 새 빅 데이터 클러스터를 배포할 때 게이트웨이 엔드포인트의 사용자 이름은 **AZDATA_USERNAME** 환경 변수를 통해 전달된 값을 기반으로 함). 이때 사용자 이름은 컨트롤러 및 SQL Server 엔드포인트에 사용되는 것과 동일합니다. 이런 현상은 새 배포에만 영향을 미치며, 이전 릴리스를 사용하여 배포된 기존 빅 데이터 클러스터는 계속 **루트** 를 사용합니다. Active Directory 인증을 사용하도록 클러스터를 배포하는 경우 자격 증명에는 영향이 없습니다. 
+- **문제 및 고객에게 미치는 영향**: SQL Server 2019 CU5를 사용하여 배포된 새로운 빅 데이터 클러스터의 경우 게이트웨이 사용자 이름은 **루트** 가 아닙니다. 게이트웨이 엔드포인트에 연결하는 데 사용된 애플리케이션에서 잘못된 자격 증명을 사용하는 경우 인증 오류가 표시됩니다. 이런 변경은 루트가 아닌 사용자로 빅 데이터 클러스터 내에서 애플리케이션을 실행한 결과입니다(SQL Server 2019 CU5 릴리스부터 새로운 기본 동작: CU5를 사용하여 새 빅 데이터 클러스터를 배포할 때 게이트웨이 엔드포인트의 사용자 이름은 **AZDATA_USERNAME** 환경 변수를 통해 전달된 값을 기반으로 함). 이때 사용자 이름은 컨트롤러 및 SQL Server 엔드포인트에 사용되는 것과 동일합니다. 이런 현상은 새 배포에만 영향을 미치며, 이전 릴리스를 사용하여 배포된 기존 빅 데이터 클러스터는 계속 **루트** 를 사용합니다. Active Directory 인증을 사용하도록 클러스터를 배포하는 경우 자격 증명에는 영향이 없습니다. 
 
-- **해결 방법** : Azure Data Studio는 게이트웨이 연결에 대해 자격 증명 변경을 투명하게 처리하여 ObjectExplorer에서 HDFS 검색 환경을 사용하도록 설정합니다. 이 사용 사례를 처리하는 데 필요한 변경 내용이 포함된 [최신 Azure Data Studio 릴리스](../azure-data-studio/download-azure-data-studio.md)를 설치해야 합니다.
+- **해결 방법**: Azure Data Studio는 게이트웨이 연결에 대해 자격 증명 변경을 투명하게 처리하여 ObjectExplorer에서 HDFS 검색 환경을 사용하도록 설정합니다. 이 사용 사례를 처리하는 데 필요한 변경 내용이 포함된 [최신 Azure Data Studio 릴리스](../azure-data-studio/download-azure-data-studio.md)를 설치해야 합니다.
 게이트웨이를 통해 서비스에 액세스하기 위해 자격 증명을 제공해야 하는 다른 시나리오(예: [!INCLUDE [azure-data-cli-azdata](../includes/azure-data-cli-azdata.md)]를 사용하여 로그인, Spark의 웹 대시보드에 액세스)의 경우 올바른 자격 증명이 사용되는지 확인해야 합니다. CU5 이전에 배포된 기존 클러스터를 대상으로 하는 경우 클러스터를 CU5로 업그레이드한 후에도 계속 **루트** 사용자 이름을 사용하여 게이트웨이에 연결합니다. CU5 빌드를 사용하여 새 클러스터를 배포하는 경우 **AZDATA_USERNAME** 환경 변수에 해당하는 사용자 이름을 제공하여 로그인합니다.
 
 ### <a name="pods-and-nodes-metrics-not-being-collected"></a>Pod 및 노드 메트릭이 수집되지 않음
 
-- **영향을 받는 릴리스** : CU5 이미지를 사용하는 새 클러스터 및 기존 클러스터
+- **영향을 받는 릴리스**: CU5 이미지를 사용하는 새 클러스터 및 기존 클러스터
 
-- **문제 및 고객에게 미치는 영향** : `telegraf`에서 메트릭 Pod 및 호스트 노드 메트릭을 수집하는 데 사용한 API와 관련된 보안 수정의 결과, 고객은 메트릭이 수집되지 않는 것을 경험했을 수도 있습니다. 이런 현상은 (CU5로 업그레이드한 후) BDC의 새 배포와 기존 배포 모두에서 일어날 수 있습니다. 수정한 결과, 이제 Telegraf는 클러스터 전체 역할 권한을 가진 서비스 계정을 요구합니다. 배포에서 필요한 서비스 계정 및 클러스터 역할을 만들려고 시도하지만 클러스터를 배포하거나 업그레이드를 수행하는 사용자에게 충분한 권한이 없는 경우에는 배포/업그레이드가 진행되고 경고가 나타나며 성공하지만 Pod 및 노드 메트릭은 수집되지 않습니다.
+- **문제 및 고객에게 미치는 영향**: `telegraf`에서 메트릭 Pod 및 호스트 노드 메트릭을 수집하는 데 사용한 API와 관련된 보안 수정의 결과, 고객은 메트릭이 수집되지 않는 것을 경험했을 수도 있습니다. 이런 현상은 (CU5로 업그레이드한 후) BDC의 새 배포와 기존 배포 모두에서 일어날 수 있습니다. 수정한 결과, 이제 Telegraf는 클러스터 전체 역할 권한을 가진 서비스 계정을 요구합니다. 배포에서 필요한 서비스 계정 및 클러스터 역할을 만들려고 시도하지만 클러스터를 배포하거나 업그레이드를 수행하는 사용자에게 충분한 권한이 없는 경우에는 배포/업그레이드가 진행되고 경고가 나타나며 성공하지만 Pod 및 노드 메트릭은 수집되지 않습니다.
 
-- **해결 방법** : 배포/업그레이드 전이나 후에 관리자에게 해당 역할 및 서비스 계정을 만들도록 요청하면 됩니다. 그러면 BDC가 이 역할 및 서비스 계정을 사용합니다. [이 문서](kubernetes-rbac.md#cluster-role-required-for-pods-and-nodes-metrics-collection)에서는 필요한 아티팩트를 만드는 방법을 설명합니다.
+- **해결 방법**: 배포/업그레이드 전이나 후에 관리자에게 해당 역할 및 서비스 계정을 만들도록 요청하면 됩니다. 그러면 BDC가 이 역할 및 서비스 계정을 사용합니다. [이 문서](kubernetes-rbac.md#cluster-role-required-for-pods-and-nodes-metrics-collection)에서는 필요한 아티팩트를 만드는 방법을 설명합니다.
 
 ### <a name="azdata-bdc-copy-logs-command-failure"></a>`azdata bdc copy-logs` 명령 실패
 
-- **영향을 받는 릴리스** : [!INCLUDE [azure-data-cli-azdata](../includes/azure-data-cli-azdata.md)] 버전 *20.0.0*
+- **영향을 받는 릴리스**: [!INCLUDE [azure-data-cli-azdata](../includes/azure-data-cli-azdata.md)] 버전 *20.0.0*
 
-- **문제 및 고객에게 미치는 영향** : *copy-logs* 명령의 구현은 명령이 실행되는 클라이언트 머신에 `kubectl` 클라이언트 도구가 설치되어 있다고 가정합니다. `oc` 도구만 설치된 클라이언트에서 OpenShift에 설치된 BDC 클러스터에 대해 명령을 실행하는 경우 ‘로그를 수집하는 동안 오류가 발생했습니다. [WinError 2] 시스템에서 지정한 파일을 찾을 수 없습니다.’라는 오류가 발생합니다.
+- **문제 및 고객에게 미치는 영향**: *copy-logs* 명령의 구현은 명령이 실행되는 클라이언트 머신에 `kubectl` 클라이언트 도구가 설치되어 있다고 가정합니다. `oc` 도구만 설치된 클라이언트에서 OpenShift에 설치된 BDC 클러스터에 대해 명령을 실행하는 경우 ‘로그를 수집하는 동안 오류가 발생했습니다. [WinError 2] 시스템에서 지정한 파일을 찾을 수 없습니다.’라는 오류가 발생합니다.
 
-- **해결 방법** : 동일한 클라이언트 머신에 `kubectl` 도구를 설치하고 `azdata bdc copy-logs` 명령을 다시 실행합니다. `kubectl`을 설치하는 방법에 대한 지침은 [여기](deploy-big-data-tools.md)를 참조하세요.
+- **해결 방법**: 동일한 클라이언트 머신에 `kubectl` 도구를 설치하고 `azdata bdc copy-logs` 명령을 다시 실행합니다. `kubectl`을 설치하는 방법에 대한 지침은 [여기](deploy-big-data-tools.md)를 참조하세요.
 
 ### <a name="deployment-with-private-repository"></a>프라이빗 리포지토리를 사용하여 배포
 
-- **영향을 받는 릴리스** : GDR1, CU1, CU2. CU3에서 문제가 해결되었습니다.
+- **영향을 받는 릴리스**: GDR1, CU1, CU2. CU3에서 문제가 해결되었습니다.
 
-- **문제 및 고객에게 미치는 영향** : 프라이빗 리포지토리에서 업그레이드하는 경우 특정 요구 사항이 있습니다.
+- **문제 및 고객에게 미치는 영향**: 프라이빗 리포지토리에서 업그레이드하는 경우 특정 요구 사항이 있습니다.
 
-- **해결 방법** : 프라이빗 리포지토리를 사용하여 BDC를 배포하거나 업그레이드하기 위해 이미지를 미리 가져오는 경우 현재 빌드 이미지와 대상 빌드 이미지가 프라이빗 리포지토리에 있는지 확인합니다. 이렇게 하면 필요한 경우 성공적으로 롤백할 수 있습니다. 또한 원래 배포 이후 프라이빗 리포지토리의 자격 증명을 변경한 경우 업그레이드하기 전에 Kubernetes에서 해당 암호를 업데이트합니다. [!INCLUDE [azure-data-cli-azdata](../includes/azure-data-cli-azdata.md)]는 `AZDATA_PASSWORD` 및 `AZDATA_USERNAME` 환경 변수를 통한 자격 증명 업데이트를 지원하지 않습니다. [`kubectl edit secrets`](https://kubernetes.io/docs/concepts/configuration/secret/#editing-a-secret)를 사용하여 암호를 업데이트합니다. 
+- **해결 방법**: 프라이빗 리포지토리를 사용하여 BDC를 배포하거나 업그레이드하기 위해 이미지를 미리 가져오는 경우 현재 빌드 이미지와 대상 빌드 이미지가 프라이빗 리포지토리에 있는지 확인합니다. 이렇게 하면 필요한 경우 성공적으로 롤백할 수 있습니다. 또한 원래 배포 이후 프라이빗 리포지토리의 자격 증명을 변경한 경우 업그레이드하기 전에 Kubernetes에서 해당 암호를 업데이트합니다. [!INCLUDE [azure-data-cli-azdata](../includes/azure-data-cli-azdata.md)]는 `AZDATA_PASSWORD` 및 `AZDATA_USERNAME` 환경 변수를 통한 자격 증명 업데이트를 지원하지 않습니다. [`kubectl edit secrets`](https://kubernetes.io/docs/concepts/configuration/secret/#editing-a-secret)를 사용하여 암호를 업데이트합니다. 
 
 현재 및 대상 빌드에 다른 리포지토리를 사용하여 업그레이드할 수 없습니다.
 
 ### <a name="upgrade-may-fail-due-to-timeout"></a>시간 초과로 인해 업그레이드가 실패할 수 있음
 
-- **영향을 받는 릴리스** : GDR1, CU1, CU2. CU3에서 문제가 해결되었습니다.
+- **영향을 받는 릴리스**: GDR1, CU1, CU2. CU3에서 문제가 해결되었습니다.
 
-- **문제 및 고객에게 미치는 영향** : 시간 초과로 인해 업그레이드가 실패할 수 있습니다.
+- **문제 및 고객에게 미치는 영향**: 시간 초과로 인해 업그레이드가 실패할 수 있습니다.
 
    다음 코드는 오류가 어떻게 표시되는지 보여 줍니다.
 
@@ -279,7 +280,7 @@ SQL Server 2019 GDR1(일반 배포 릴리스 1) - [!INCLUDE[big-data-clusters-20
 
    이 오류는 Azure Kubernetes Service(AKS)에서 BDC를 업그레이드할 때 발생할 가능성이 높습니다.
 
-- **해결 방법** : 업그레이드 시간 제한을 늘립니다. 
+- **해결 방법**: 업그레이드 시간 제한을 늘립니다. 
 
    업그레이드에 대한 시간 제한을 늘리려면 업그레이드 구성 맵을 편집합니다. 업그레이드 구성 맵을 편집하려면 다음을 수행합니다.
 
@@ -338,14 +339,14 @@ SQL Server 2019 GDR1(일반 배포 릴리스 1) - [!INCLUDE[big-data-clusters-20
 
 ### <a name="livy-job-submission-from-azure-data-studio-ads-or-curl-fail-with-500-error"></a>ADS(Azure Data Studio) 또는 curl에서 Livy 작업 제출 시 500 오류가 발생하고 제출이 실패함
 
-- **문제 및 고객에게 미치는 영향** : HA 구성에서는 Spark 공유 리소스 `sparkhead`가 여러 복제본으로 구성되어 있습니다. 이 경우 ADS(Azure Data Studio) 또는 `curl`에서 Livy 작업을 제출할 때 제출에 실패할 수 있습니다. 확인하려면 거부된 연결의 `sparkhead` pod 결과로 `curl`해 보세요. 예를 들어, `curl https://sparkhead-0:8998/`이나 `curl https://sparkhead-1:8998`은 500 오류를 반환합니다.
+- **문제 및 고객에게 미치는 영향**: HA 구성에서는 Spark 공유 리소스 `sparkhead`가 여러 복제본으로 구성되어 있습니다. 이 경우 ADS(Azure Data Studio) 또는 `curl`에서 Livy 작업을 제출할 때 제출에 실패할 수 있습니다. 확인하려면 거부된 연결의 `sparkhead` pod 결과로 `curl`해 보세요. 예를 들어, `curl https://sparkhead-0:8998/`이나 `curl https://sparkhead-1:8998`은 500 오류를 반환합니다.
 
    이 문제는 다음과 같은 경우에 발생합니다.
 
    - Zookeeper pod 또는 각 Zookeeper 인스턴스의 프로세스가 몇 차례 다시 시작된 경우
    - `sparkhead` pod과 Zookeeper pod 사이의 네트워크 연결이 불안정한 경우
 
-- **해결 방법** : 두 Livy 서버를 모두 다시 시작합니다.
+- **해결 방법**: 두 Livy 서버를 모두 다시 시작합니다.
 
    ```bash
    kubectl -n <clustername> exec sparkhead-0 -c hadoop-livy-sparkhistory supervisorctl restart livy
@@ -357,26 +358,26 @@ SQL Server 2019 GDR1(일반 배포 릴리스 1) - [!INCLUDE[big-data-clusters-20
 
 ### <a name="create-memory-optimized-table-when-master-instance-in-an-availability-group"></a>마스터 인스턴스가 가용성 그룹에 있을 때 메모리 최적화된 테이블 만들기
 
-- **문제 및 고객에게 미치는 영향** : 가용성 그룹 데이터베이스(수신기) 연결을 위해 노출된 기본 엔드포인트를 사용하여 메모리 최적화된 테이블을 만들 수 없습니다.
+- **문제 및 고객에게 미치는 영향**: 가용성 그룹 데이터베이스(수신기) 연결을 위해 노출된 기본 엔드포인트를 사용하여 메모리 최적화된 테이블을 만들 수 없습니다.
 
-- **해결 방법** : SQL Server 마스터 인스턴스가 가용성 그룹 구성 안에 있을 때 메모리 최적화된 테이블을 만들려면 [SQL Server 인스턴스에 연결](deployment-high-availability.md#instance-connect)하고, 엔드포인트를 노출시키고, SQL Server 데이터베이스에 연결하고, 새 연결로 만든 세션에서 메모리 최적화된 테이블을 만듭니다.
+- **해결 방법**: SQL Server 마스터 인스턴스가 가용성 그룹 구성 안에 있을 때 메모리 최적화된 테이블을 만들려면 [SQL Server 인스턴스에 연결](deployment-high-availability.md#instance-connect)하고, 엔드포인트를 노출시키고, SQL Server 데이터베이스에 연결하고, 새 연결로 만든 세션에서 메모리 최적화된 테이블을 만듭니다.
 
 ### <a name="insert-to-external-tables-active-directory-authentication-mode"></a>Active Directory 인증 모드에서 외부 테이블에 삽입
 
-- **문제 및 고객에게 미치는 영향** : SQL Server 마스터 인스턴스가 Active Directory 인증 모드에 있을 때, 외부 테이블 중 적어도 하나 이상이 스토리지 풀에 있는 외부 테이블에서만 선택하여 다른 외부 테이블에 삽입하는 쿼리는 다음을 반환합니다.
+- **문제 및 고객에게 미치는 영향**: SQL Server 마스터 인스턴스가 Active Directory 인증 모드에 있을 때, 외부 테이블 중 적어도 하나 이상이 스토리지 풀에 있는 외부 테이블에서만 선택하여 다른 외부 테이블에 삽입하는 쿼리는 다음을 반환합니다.
 
    ```
    Msg 7320, Level 16, State 102, Line 1
    Cannot execute the query "Remote Query" against OLE DB provider "SQLNCLI11" for linked server "SQLNCLI11". Only domain logins can be used to query Kerberized storage pool.
    ```
 
-- **해결 방법** : 다음 방법을 사용하여 쿼리를 수정합니다. 스토리지 풀 테이블을 로컬 테이블에 조인하거나 먼저 로컬 테이블에 삽입한 다음 이 로컬 테이블에서 읽어서 데이터 풀에 삽입합니다.
+- **해결 방법**: 다음 방법을 사용하여 쿼리를 수정합니다. 스토리지 풀 테이블을 로컬 테이블에 조인하거나 먼저 로컬 테이블에 삽입한 다음 이 로컬 테이블에서 읽어서 데이터 풀에 삽입합니다.
 
 ### <a name="transparent-data-encryption-capabilities-can-not-be-used-with-databases-that-are-part-of-the-availability-group-in-the-sql-server-master-instance"></a>SQL Server 마스터 인스턴스에서 가용성 그룹의 일부인 데이터베이스에는 투명한 데이터 암호화 기능을 사용할 수 없음
 
-- **문제 및 고객에게 미치는 영향** : HA 구성에서는 암호화에 사용되는 마스터 키가 각 복제본마다 다르기 때문에 암호화가 사용된 데이터베이스는 장애 조치(failover) 후에 사용할 수 없습니다. 
+- **문제 및 고객에게 미치는 영향**: HA 구성에서는 암호화에 사용되는 마스터 키가 각 복제본마다 다르기 때문에 암호화가 사용된 데이터베이스는 장애 조치(failover) 후에 사용할 수 없습니다. 
 
-- **해결 방법** : 이 문제에 대한 해결 방법이 없습니다. 수정될 때까지 이 구성에서 암호화를 사용하지 않는 것이 좋습니다.
+- **해결 방법**: 이 문제에 대한 해결 방법이 없습니다. 수정될 때까지 이 구성에서 암호화를 사용하지 않는 것이 좋습니다.
 
 ## <a name="next-steps"></a>다음 단계
 

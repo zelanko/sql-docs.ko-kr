@@ -8,15 +8,14 @@ ms.date: 05/21/2020
 ms.topic: quickstart
 author: garyericson
 ms.author: garye
-ms.reviewer: davidph
 ms.custom: seo-lt-2019
 monikerRange: '>=sql-server-2016||>=sql-server-linux-ver15||=azuresqldb-mi-current||=sqlallproducts-allversions'
-ms.openlocfilehash: 331e7b56087d75222d29c3bdabccbd8717b40171
-ms.sourcegitcommit: 9b41725d6db9957dd7928a3620fe4db41eb51c6e
+ms.openlocfilehash: a924bca8acf50846f8b14053cc01a6a1a35f1617
+ms.sourcegitcommit: 82b92f73ca32fc28e1948aab70f37f0efdb54e39
 ms.translationtype: HT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 08/13/2020
-ms.locfileid: "88178514"
+ms.lasthandoff: 11/18/2020
+ms.locfileid: "94870381"
 ---
 # <a name="quickstart-run-simple-r-scripts-with-sql-machine-learning"></a>빠른 시작: SQL 기계 학습에서 간단한 R 스크립트를 실행합니다.
 [!INCLUDE [SQL Server 2016 SQL MI](../../includes/applies-to-version/sqlserver2016-asdbmi.md)]
@@ -39,16 +38,16 @@ ms.locfileid: "88178514"
 이 빠른 시작을 실행하려면 다음과 같은 필수 구성 요소가 필요합니다.
 
 ::: moniker range=">=sql-server-ver15||>=sql-server-linux-ver15||=sqlallproducts-allversions"
-- SQL Server Machine Learning Services. Machine Learning Services를 설치하는 방법은 [Windows 설치 가이드](../install/sql-machine-learning-services-windows-install.md) 또는 [Linux 설치 가이드](../../linux/sql-server-linux-setup-machine-learning.md?toc=%2Fsql%2Fmachine-learning%2Ftoc.json)를 참조하세요. [SQL Server 빅 데이터 클러스터에서 Machine Learning Services를 사용하도록 설정](../../big-data-cluster/machine-learning-services.md)할 수도 있습니다.
+- SQL Server Machine Learning Services. Machine Learning Services를 설치하려면 [Windows 설치 가이드](../install/sql-machine-learning-services-windows-install.md) 또는 [Linux 설치 가이드](../../linux/sql-server-linux-setup-machine-learning.md?toc=%2Fsql%2Fmachine-learning%2Ftoc.json)를 참조하세요. [SQL Server 빅 데이터 클러스터에서 Machine Learning Services를 사용하도록 설정](../../big-data-cluster/machine-learning-services.md)할 수도 있습니다.
 ::: moniker-end
 ::: moniker range="=sql-server-2017||=sqlallproducts-allversions"
-- SQL Server Machine Learning Services. Machine Learning Services를 설치하는 방법은 [Windows 설치 가이드](../install/sql-machine-learning-services-windows-install.md)를 참조하세요. 
+- SQL Server Machine Learning Services. Machine Learning Services를 설치하려면 [Windows 설치 가이드](../install/sql-machine-learning-services-windows-install.md)를 참조하세요. 
 ::: moniker-end
 ::: moniker range="=sql-server-2016||=sqlallproducts-allversions"
-- SQL Server 2016 R Services. R Services를 설치하는 방법은 [Windows 설치 가이드](../install/sql-r-services-windows-install.md)를 참조하세요. 
+- SQL Server 2016 R Services. R Services를 설치하려면 [Windows 설치 가이드](../install/sql-r-services-windows-install.md)를 참조하세요. 
 ::: moniker-end
 ::: moniker range="=azuresqldb-mi-current||=sqlallproducts-allversions"
-- Azure SQL Managed Instance Machine Learning Services. 등록 방법은 [Azure SQL Managed Instance Machine Learning Services 개요](/azure/azure-sql/managed-instance/machine-learning-services-overview)를 참조하세요.
+- Azure SQL Managed Instance Machine Learning Services. 자세한 내용은 [Azure SQL Managed Instance Machine Learning Services 개요](/azure/azure-sql/managed-instance/machine-learning-services-overview)를 참조하세요.
 ::: moniker-end
 
 - R 스크립트가 포함된 SQL 쿼리를 실행하기 위한 도구. 이 빠른 시작에서는 [Azure Data Studio](../../azure-data-studio/what-is.md)를 사용합니다.
@@ -67,7 +66,7 @@ d <- a*b
 print(c(c, d))
 ```
 
-1. **Azure Data Studio**를 열고 서버에 연결합니다.
+1. **Azure Data Studio** 를 열고 서버에 연결합니다.
 
 1. R Python 스크립트를 `sp_execute_external_script` 저장 프로시저에 전달합니다.
 
@@ -114,7 +113,7 @@ GO
 | @language | 호출할 언어 확장을 정의합니다(이 경우에는 R). |
 | @script | R 런타임으로 전달되는 명령을 정의합니다. 전체 R 스크립트는 이 인수에 유니코드 텍스트로 묶어야 합니다. **nvarchar** 형식의 변수에 텍스트를 추가한 다음, 변수를 호출할 수도 있습니다. |
 | @input_data_1 | 쿼리에서 반환된 데이터는 R 런타임에 전달되고, R 런타임은 데이터를 데이터 프레임으로 전달합니다. |
-|WITH RESULT SETS | 이 절은 반환된 데이터 테이블의 스키마를 정의하고, "Hello World"를 열 이름으로 추가하고 데이터 형식으로 **int**를 추가합니다. |
+|WITH RESULT SETS | 이 절은 반환된 데이터 테이블의 스키마를 정의하고, "Hello World"를 열 이름으로 추가하고 데이터 형식으로 **int** 를 추가합니다. |
 
 이 명령은 다음 텍스트를 출력합니다.
 
@@ -155,7 +154,7 @@ GO
 
     ![RTestData 테이블의 콘텐츠](./media/select-rtestdata.png)
 
-1. 다음 R 스크립트를 실행합니다. `SELECT` 문을 사용하여 테이블에서 데이터를 검색하고 R 런타임을 통해 이를 전달하고 데이터를 데이터 프레임으로 반환합니다. `WITH RESULT SETS` 절은 SQL에 대한 반환된 데이터 테이블의 스키마를 정의하고, 열 이름 *NewColName*을 추가합니다.
+1. 다음 R 스크립트를 실행합니다. `SELECT` 문을 사용하여 테이블에서 데이터를 검색하고 R 런타임을 통해 이를 전달하고 데이터를 데이터 프레임으로 반환합니다. `WITH RESULT SETS` 절은 SQL에 대한 반환된 데이터 테이블의 스키마를 정의하고, 열 이름 *NewColName* 을 추가합니다.
 
     ```sql
     EXECUTE sp_execute_external_script @language = N'R'
@@ -168,7 +167,7 @@ GO
 
     ![테이블에서 데이터를 반환하는 R 스크립트의 출력](./media/r-output-rtestdata.png)
 
-1. 이제 입력 및 출력 변수의 이름을 변경하겠습니다. 기본 입력 및 출력 변수 이름은 **InputDataSet** 및 **OutputDataSet**입니다. 이 스크립트는 이름을 **SQL_in** 및 **SQL_out**으로 변경합니다.
+1. 이제 입력 및 출력 변수의 이름을 변경하겠습니다. 기본 입력 및 출력 변수 이름은 **InputDataSet** 및 **OutputDataSet** 입니다. 이 스크립트는 이름을 **SQL_in** 및 **SQL_out** 으로 변경합니다.
 
     ```sql
     EXECUTE sp_execute_external_script @language = N'R'

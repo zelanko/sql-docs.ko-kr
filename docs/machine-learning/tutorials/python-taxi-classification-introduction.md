@@ -10,12 +10,12 @@ author: dphansen
 ms.author: davidph
 ms.custom: seo-lt-2019
 monikerRange: '>=sql-server-2017||>=sql-server-linux-ver15||>=azuresqldb-mi-current||=sqlallproducts-allversions'
-ms.openlocfilehash: 1fc4ea656830eb779b80b22a15a74dfd799781aa
-ms.sourcegitcommit: 9b41725d6db9957dd7928a3620fe4db41eb51c6e
+ms.openlocfilehash: 7b8e0e8df7bd2a5453299751df682e0c33502c25
+ms.sourcegitcommit: 54cd97a33f417432aa26b948b3fc4b71a5e9162b
 ms.translationtype: HT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 08/13/2020
-ms.locfileid: "88178580"
+ms.lasthandoff: 11/13/2020
+ms.locfileid: "94585075"
 ---
 # <a name="python-tutorial-predict-nyc-taxi-fares-with-binary-classification"></a>Python 자습서: 이진 분류를 사용하여 뉴욕시 택시 요금 예측
 [!INCLUDE [SQL Server 2017 SQL MI](../../includes/applies-to-version/sqlserver2017-asdbmi.md)]
@@ -29,7 +29,7 @@ SQL 프로그래머를 위한 이 5부 자습서 시리즈에서는 [SQL Server 
 ::: moniker-end
 
 ::: moniker range=">=azuresqldb-mi-current||=sqlallproducts-allversions"
-SQL 프로그래머를 위한 이 5부 자습서 시리즈에서는 [Azure SQL Managed Instance의 Machine Learning Services(미리 보기)](/azure/azure-sql/managed-instance/machine-learning-services-overview)의 Python 통합에 대해 알아봅니다.
+SQL 프로그래머를 위한 이 5부 자습서 시리즈에서는 [Azure SQL Managed Instance의 Machine Learning Services](/azure/azure-sql/managed-instance/machine-learning-services-overview)의 Python 통합에 대해 알아봅니다.
 ::: moniker-end
 
 샘플 SQL Server 데이터베이스를 사용하여 Python 기반 기계 학습 솔루션을 빌드 및 배포합니다. T-SQL, Azure Data Studio 또는 SQL Server Management Studio와 Machine Learning Services 및 Python 언어를 지원하는 데이터베이스 인스턴스를 사용합니다.

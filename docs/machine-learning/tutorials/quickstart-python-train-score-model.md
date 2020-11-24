@@ -6,17 +6,16 @@ ms.prod: sql
 ms.technology: machine-learning
 ms.date: 09/28/2020
 ms.topic: quickstart
-author: cawrites
-ms.author: chadam
-ms.reviewer: davidph
+author: dphansen
+ms.author: davidph
 ms.custom: seo-lt-2019
 monikerRange: '>=sql-server-2017||>=sql-server-linux-ver15||=azuresqldb-mi-current||=sqlallproducts-allversions'
-ms.openlocfilehash: e5a64e3de5dae2e879c4537783d33aab81dd9662
-ms.sourcegitcommit: cfa04a73b26312bf18d8f6296891679166e2754d
+ms.openlocfilehash: 6913f80cb96942d7063e4c61caf2c2109ee79a48
+ms.sourcegitcommit: 82b92f73ca32fc28e1948aab70f37f0efdb54e39
 ms.translationtype: HT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 10/19/2020
-ms.locfileid: "92194472"
+ms.lasthandoff: 11/18/2020
+ms.locfileid: "94869995"
 ---
 # <a name="quickstart-create-and-score-a-predictive-model-in-python-with-sql-machine-learning"></a>빠른 시작: Python에서 SQL 기계 학습을 사용하여 예측 모델 만들기 및 점수 매기기
 [!INCLUDE [SQL Server 2017 SQL MI](../../includes/applies-to-version/sqlserver2017-asdbmi.md)]
@@ -37,13 +36,13 @@ SQL에서 실행되는 두 개의 저장 프로시저를 만들고 실행합니�
 이 빠른 시작을 실행하려면 다음과 같은 필수 구성 요소가 필요합니다.
 
 - 다음 플랫폼 중 하나에 있는 SQL 데이터베이스:
-  - [SQL Server Machine Learning Services](../sql-server-machine-learning-services.md). 설치 방법은 [Windows 설치 가이드](../install/sql-machine-learning-services-windows-install.md) 또는 [Linux 설치 가이드](../../linux/sql-server-linux-setup-machine-learning.md?toc=%2Fsql%2Fmachine-learning%2Ftoc.json)를 참조하세요.
+  - [SQL Server Machine Learning Services](../sql-server-machine-learning-services.md). 설치하려면 [Windows 설치 가이드](../install/sql-machine-learning-services-windows-install.md) 또는 [Linux 설치 가이드](../../linux/sql-server-linux-setup-machine-learning.md?toc=%2Fsql%2Fmachine-learning%2Ftoc.json)를 참조하세요.
   - SQL Server 빅 데이터 클러스터. [SQL Server 빅 데이터 클러스터에서 Machine Learning Services 사용](../../big-data-cluster/machine-learning-services.md)을 참조하세요.
-  - Azure SQL Managed Instance Machine Learning Services. 등록 방법은 [Azure SQL Managed Instance Machine Learning Services 개요](/azure/azure-sql/managed-instance/machine-learning-services-overview)를 참조하세요.
+  - Azure SQL Managed Instance Machine Learning Services. 자세한 내용은 [Azure SQL Managed Instance Machine Learning Services 개요](/azure/azure-sql/managed-instance/machine-learning-services-overview)를 참조하세요.
 
 - Python 스크립트가 포함된 SQL 쿼리를 실행하기 위한 도구. 이 빠른 시작에서는 [Azure Data Studio](../../azure-data-studio/what-is.md)를 사용합니다.
 
-- 이 연습에 사용되는 샘플 데이터는 아이리스 샘플 데이터입니다. [아이리스 데모 데이터](demo-data-iris-in-sql.md)의 지침에 따라 샘플 데이터베이스 **irissql**을 만듭니다.
+- 이 연습에 사용되는 샘플 데이터는 아이리스 샘플 데이터입니다. [아이리스 데모 데이터](demo-data-iris-in-sql.md)의 지침에 따라 샘플 데이터베이스 **irissql** 을 만듭니다.
 
 ## <a name="create-a-stored-procedure-that-generates-models"></a>모델을 생성하는 저장 프로시저 만들기
 
@@ -89,7 +88,7 @@ SQL에서 실행되는 두 개의 저장 프로시저를 만들고 실행합니�
 
 1. 저장 프로시저가 있는지 확인합니다. 
 
-   이전 단계의 T-SQL 스크립트가 오류 없이 실행된 경우 **generate_iris_model**이라는 새 저장 프로시저가 생성되어 **irissql** 데이터베이스에 추가됩니다. Azure Data Studio **개체 탐색기**의 **프로그래밍 기능**에서 저장 프로시저를 찾을 수 있습니다.
+   이전 단계의 T-SQL 스크립트가 오류 없이 실행된 경우 **generate_iris_model** 이라는 새 저장 프로시저가 생성되어 **irissql** 데이터베이스에 추가됩니다. Azure Data Studio **개체 탐색기** 의 **프로그래밍 기능** 에서 저장 프로시저를 찾을 수 있습니다.
 
 ## <a name="execute-the-procedure-to-create-and-train-models"></a>프로시저를 실행하여 모델을 만들고 학습
 
@@ -99,7 +98,7 @@ SQL에서 실행되는 두 개의 저장 프로시저를 만들고 실행합니�
 
 1. 다음 스크립트를 실행하여 프로시저를 실행합니다. 저장 프로시저를 실행하는 특정 문은 네 번째 줄의 `EXECUTE`입니다.
 
-   이 특정 스크립트는 동일한 프로시저를 다시 실행하여 생성되는 모델의 공간을 마련하기 위해 이름이 같은("Naive Bayes") 기존 모델을 삭제합니다. 모델을 삭제하지 않으면 개체가 이미 있다는 내용의 오류가 발생합니다. 모델은 **irissql** 데이터베이스를 만들 때 프로비저닝된 **iris_models**라는 테이블에 저장됩니다.
+   이 특정 스크립트는 동일한 프로시저를 다시 실행하여 생성되는 모델의 공간을 마련하기 위해 이름이 같은("Naive Bayes") 기존 모델을 삭제합니다. 모델을 삭제하지 않으면 개체가 이미 있다는 내용의 오류가 발생합니다. 모델은 **irissql** 데이터베이스를 만들 때 프로비저닝된 **iris_models** 라는 테이블에 저장됩니다.
 
     ```sql
     DECLARE @model varbinary(max);

@@ -2,7 +2,7 @@
 title: SQL Server Machine Learning Services의 새로운 기능
 titleSuffix: ''
 description: SQL Server Machine Learning Services 및 SQL Server 2016 R Services의 각 릴리스에 대한 새로운 기능 알림입니다.
-ms.date: 11/04/2019
+ms.date: 11/17/2020
 ms.topic: overview
 author: dphansen
 ms.author: davidph
@@ -10,17 +10,17 @@ ms.custom: sqlseattle
 ms.prod: sql
 ms.technology: machine-learning-services
 monikerRange: '>=sql-server-2016||>=sql-server-linux-ver15||=sqlallproducts-allversions'
-ms.openlocfilehash: 287b0fd536e5d3a6c76e8ef3760702da061a90ec
-ms.sourcegitcommit: cfa04a73b26312bf18d8f6296891679166e2754d
+ms.openlocfilehash: 8d0da76c639048e9479afd575b584275a9bb51c6
+ms.sourcegitcommit: d2dba862814c60f00b16d4e412bf673b2c0dee5f
 ms.translationtype: HT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 10/19/2020
-ms.locfileid: "92195065"
+ms.lasthandoff: 11/18/2020
+ms.locfileid: "94810513"
 ---
 # <a name="whats-new-in-sql-server-machine-learning-services"></a>SQL Server Machine Learning Services의 새로운 기능
 [!INCLUDE [SQL Server 2016 and later](../includes/applies-to-version/sqlserver2016.md)]
 
-Microsoft는 데이터 플랫폼, 고급 분석 및 데이터 과학 간의 통합을 계속 확장하고 발전시키고 있으며, 릴리스마다 SQL Server에 기계 학습 기능을 추가하고 있습니다. 
+이 문서에서는 [SQL Server Machine Learning Services](sql-server-machine-learning-services.md)의 각 버전에 포함되는 새로운 기능 및 특징에 대해 설명합니다. Microsoft는 데이터 플랫폼, 고급 분석 및 데이터 과학 간의 통합을 계속 확장하고 발전시키고 있으며, 릴리스마다 SQL Server에 기계 학습 기능을 추가하고 있습니다. 
 
 ::: moniker range=">=sql-server-ver15||>=sql-server-linux-ver15||=sqlallproducts-allversions"
 ## <a name="new-in-sql-server-2019"></a>SQL Server 2019의 새로운 기능
@@ -93,7 +93,7 @@ T-SQL [PREDICT](../t-sql/queries/predict-transact-sql.md) 함수를 사용하여
 ::: moniker range=">=sql-server-2016||=sqlallproducts-allversions"
 ## <a name="new-in-sql-server-2016"></a>SQL Server 2016의 새로운 기능
 
-이 릴리스에서는 데이터베이스 엔진 인스턴스 내의 상주 데이터에서 R 스크립트를 처리하기 위한 데이터베이스 내 분석 엔진인 **SQL Server 2016 R Services**를 통해 기계 학습 기능이 SQL Server에 도입되었습니다.
+이 릴리스에서는 데이터베이스 엔진 인스턴스 내의 상주 데이터에서 R 스크립트를 처리하기 위한 데이터베이스 내 분석 엔진인 **SQL Server 2016 R Services** 를 통해 기계 학습 기능이 SQL Server에 도입되었습니다.
 
 또한 Windows 서버에 R Server를 설치하는 방법으로 **SQL Server 2016 R Server(독립 실행형)** 가 출시되었습니다. 처음에는 Windows용 R Server를 설치하는 유일한 방법으로 SQL Server 설치 프로그램이 제공되었습니다. 이후 릴리스에서는 Windows에서 R Server를 원하는 개발자 및 데이터 과학자가 다른 독립 실행형 설치 관리자를 사용하여 동일한 목표를 달성할 수 있습니다. SQL Server의 독립 실행형 서버는 독립 실행형 서버 제품 [Windows용 Microsoft R Server](/machine-learning-server/install/r-server-install-windows)와 기능적으로 동일합니다.
 

@@ -7,15 +7,14 @@ ms.date: 07/14/2020
 ms.topic: conceptual
 author: garyericson
 ms.author: garye
-ms.reviewer: davidph
 ms.custom: seo-lt-2019
 monikerRange: '>=sql-server-2016||>=sql-server-linux-ver15||=sqlallproducts-allversions'
-ms.openlocfilehash: 053639f8ff25d50e7cad9c05d82cfcac6a0ee071
-ms.sourcegitcommit: afb02c275b7c79fbd90fac4bfcfd92b00a399019
+ms.openlocfilehash: b7be2d8a11a63c1330e721f893e0ec3e945d8b5d
+ms.sourcegitcommit: 82b92f73ca32fc28e1948aab70f37f0efdb54e39
 ms.translationtype: HT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 10/12/2020
-ms.locfileid: "91956542"
+ms.lasthandoff: 11/18/2020
+ms.locfileid: "94870031"
 ---
 # <a name="extensibility-architecture-in-sql-server-machine-learning-services"></a>SQL Server Machine Learning Services의 확장성 아키텍처 
 [!INCLUDE [SQL Server 2016 and later](../../includes/applies-to-version/sqlserver2016.md)]
@@ -46,15 +45,15 @@ ms.locfileid: "91956542"
 
 이 아키텍처는 외부 스크립트가 SQL Server와는 별도의 프로세스에서 실행되도록 설계되었지만, SQL Server에서 데이터와 작업에 대한 요청 체인을 내부적으로 관리하는 구성 요소를 사용합니다. SQL Server 버전에 따라 지원되는 언어 확장에는 [R](extension-r.md), [Python](extension-python.md) 및 Java 및 .NET과 같은 타사 언어가 포함됩니다.
 
-  ***Windows의 구성 요소 아키텍처:***
+  **Windows의 구성 요소 아키텍처:** *_
   
   ![Windows 구성 요소 아키텍처](../media/generic-architecture-windows.png "구성 요소 아키텍처")
   
-  ***Linux의 구성 요소 아키텍처:***
+  _*_Linux의 구성 요소 아키텍처:_*_
 
   ![Linux 구성 요소 아키텍처](../media/generic-architecture-linux.png "구성 요소 아키텍처")
   
-구성 요소에는 외부 런타임과 라이브러리 관련 논리를 호출하여 인터프리터와 라이브러리를 로드하는 데 사용되는 **실행 패드** 서비스가 포함됩니다. 시작 관리자는 언어 런타임과 모든 독점 모듈을 로드합니다. 예를 들어 코드에 RevoScaleR 함수가 포함된 경우 RevoScaleR 인터프리터가 로드됩니다. **BxlServer** 및 **SQL Satellite**는 SQL Server와의 통신 및 데이터 전송을 관리합니다. 
+구성 요소에는 외부 런타임과 라이브러리 관련 논리를 호출하여 인터프리터와 라이브러리를 로드하는 데 사용되는 ‘실행 패드’_* 서비스가 포함됩니다. 시작 관리자는 언어 런타임과 모든 독점 모듈을 로드합니다. 예를 들어 코드에 RevoScaleR 함수가 포함된 경우 RevoScaleR 인터프리터가 로드됩니다. **BxlServer** 및 **SQL Satellite** 는 SQL Server와의 통신 및 데이터 전송을 관리합니다. 
 
 Linux에서 SQL은 **실행 패드** 서비스를 사용하여 각 사용자에 대한 별도의 실행 패드 프로세스와 통신합니다.
 
@@ -81,11 +80,11 @@ Linux에서는 하나의 데이터베이스 엔진 인스턴스만 지원되며,
 
 ## <a name="bxlserver-and-sql-satellite"></a>BxlServer 및 SQL Satellite
 
-**BxlServer**는 Microsoft에서 제공하고 SQL Server와 언어 런타임 간의 통신을 관리하는 실행 파일입니다. 외부 스크립트 세션을 포함하는 데 사용되는 Windows용 Windows 작업 개체 또는 Linux용 네임스페이스를 만듭니다. 또한 각 외부 스크립트 작업에 대한 보안 작업 폴더를 프로비저닝하고, SQL Satellite를 사용하여 외부 런타임과 SQL Server 간의 데이터 전송을 관리합니다. 작업이 실행되는 동안 [프로세스 탐색기](/sysinternals/downloads/process-explorer)를 실행하는 경우 하나 이상의 BxlServer 인스턴스가 표시될 수 있습니다.
+**BxlServer** 는 Microsoft에서 제공하고 SQL Server와 언어 런타임 간의 통신을 관리하는 실행 파일입니다. 외부 스크립트 세션을 포함하는 데 사용되는 Windows용 Windows 작업 개체 또는 Linux용 네임스페이스를 만듭니다. 또한 각 외부 스크립트 작업에 대한 보안 작업 폴더를 프로비저닝하고, SQL Satellite를 사용하여 외부 런타임과 SQL Server 간의 데이터 전송을 관리합니다. 작업이 실행되는 동안 [프로세스 탐색기](/sysinternals/downloads/process-explorer)를 실행하는 경우 하나 이상의 BxlServer 인스턴스가 표시될 수 있습니다.
 
 실제로 BxlServer는 SQL Server에서 작동하여 데이터를 전송하고 작업을 관리하는 언어 런타임 환경의 도우미입니다. BXL은 이진 교환 언어의 약자이며, SQL Server와 외부 프로세스 간에 데이터를 효율적으로 이동하는 데 사용되는 데이터 형식을 나타냅니다. BxlServer는 Microsoft R Client 및 Microsoft R Server와 같은 관련 제품의 중요한 부분이기도 합니다.
 
-**SQL Satellite**는 데이터베이스 엔진에 포함된 확장성 API이며, C 또는 C++를 사용하여 구현된 외부 코드 또는 외부 런타임을 지원합니다.
+**SQL Satellite** 는 데이터베이스 엔진에 포함된 확장성 API이며, C 또는 C++를 사용하여 구현된 외부 코드 또는 외부 런타임을 지원합니다.
 
 BxlServer는 SQL Satellite를 사용하여 다음 작업을 수행합니다.
 
@@ -126,7 +125,7 @@ SQL Satellite는 Windows 확장 이벤트(xEvents)를 사용하여 모니터링�
 
 + **RODBC(R 전용)** 
 
-  **RODBC**를 사용하여 스크립트 내에서 추가 ODBC 호출을 수행할 수 있습니다. RODBC는 관계형 데이터베이스의 데이터에 액세스하는 데 사용되는 인기 있는 R 패키지입니다. 그러나 성능은 일반적으로 SQL Server에서 사용하는 비슷한 공급자보다 느립니다. 많은 R 스크립트는 RODBC에 대해 포함된 호출을 사용하여 분석에 사용할 "보조" 데이터 세트를 검색합니다. 예를 들어 모델을 학습시키는 저장 프로시저는 SQL 쿼리를 정의하여 모델 교육을 위한 데이터를 얻지만, 포함된 RODBC 호출을 사용하여 추가 요소를 얻거나 조회를 수행하거나 텍스트 파일 또는 Excel과 같은 외부 소스에서 새 데이터를 가져올 수 있습니다.
+  **RODBC** 를 사용하여 스크립트 내에서 추가 ODBC 호출을 수행할 수 있습니다. RODBC는 관계형 데이터베이스의 데이터에 액세스하는 데 사용되는 인기 있는 R 패키지입니다. 그러나 성능은 일반적으로 SQL Server에서 사용하는 비슷한 공급자보다 느립니다. 많은 R 스크립트는 RODBC에 대해 포함된 호출을 사용하여 분석에 사용할 "보조" 데이터 세트를 검색합니다. 예를 들어 모델을 학습시키는 저장 프로시저는 SQL 쿼리를 정의하여 모델 교육을 위한 데이터를 얻지만, 포함된 RODBC 호출을 사용하여 추가 요소를 얻거나 조회를 수행하거나 텍스트 파일 또는 Excel과 같은 외부 소스에서 새 데이터를 가져올 수 있습니다.
 
   다음 코드는 R 스크립트에 포함된 RODBC 호출을 보여 줍니다.
 

@@ -9,19 +9,19 @@ author: dphansen
 ms.author: davidph
 ms.custom: seo-lt-2019
 monikerRange: '>=sql-server-2016||>=sql-server-linux-ver15||>=azuresqldb-mi-current||=sqlallproducts-allversions'
-ms.openlocfilehash: 1e5e4a4856b91cd717e9498fb96567ecd6c70ca6
-ms.sourcegitcommit: cfa04a73b26312bf18d8f6296891679166e2754d
+ms.openlocfilehash: 2dab1d48ca2aa98e4a70a08bac492366f2632b79
+ms.sourcegitcommit: 54cd97a33f417432aa26b948b3fc4b71a5e9162b
 ms.translationtype: HT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 10/19/2020
-ms.locfileid: "92192646"
+ms.lasthandoff: 11/13/2020
+ms.locfileid: "94584964"
 ---
 # <a name="nyc-taxi-demo-data-for-sql-server-python-and-r-tutorials"></a>SQL Server Python 및 R 자습서용 뉴욕시 택시 데모 데이터
 [!INCLUDE [SQL Server 2016 SQL MI](../../includes/applies-to-version/sqlserver2016-asdbmi.md)]
 
 이 문서에서는 [뉴욕시 택시 및 리무진 위원회](http://www.nyc.gov/html/tlc/html/about/trip_record_data.shtml)의 공용 데이터로 구성된 샘플 데이터베이스를 설정하는 방법을 설명합니다. 이 데이터는 SQL Server의 데이터베이스 내 분석에 대한 여러 R 및 Python 자습서에서 사용됩니다. 샘플 코드가 더 빨리 실행되도록 데이터의 대표 1% 샘플링을 만들었습니다. 시스템에서 데이터베이스 백업 파일은 90MB를 약간 초과하고 기본 데이터 테이블에 170만 개 행을 제공합니다.
 
-이 연습을 완료하려면 [SQL Server Management Studio](../../ssms/download-sql-server-management-studio-ssms.md?view=sql-server-2017) 또는 데이터베이스 백업 파일을 복원하고 T-SQL 쿼리를 실행할 수 있는 다른 도구가 있어야 합니다.
+이 연습을 완료하려면 [SQL Server Management Studio](../../ssms/download-sql-server-management-studio-ssms.md?view=sql-server-2017&preserve-view=true) 또는 데이터베이스 백업 파일을 복원하고 T-SQL 쿼리를 실행할 수 있는 다른 도구가 있어야 합니다.
 
 이 데이터 세트를 사용하는 자습서 및 빠른 시작에는 다음이 포함됩니다.
 
@@ -41,20 +41,20 @@ ms.locfileid: "92192646"
 
 ::: moniker range=">=azuresqldb-mi-current||=sqlallproducts-allversions"
 >[!NOTE]
->[Azure SQL Managed Instance의 Machine Learning Services(미리 보기)](/azure/azure-sql/managed-instance/machine-learning-services-overview)에서 샘플 데이터베이스를 복원하려면 [빠른 시작: 데이터베이스를 Azure SQL Managed Instance로 복원](/azure/azure-sql/managed-instance/restore-sample-database-quickstart)(뉴욕시 택시 데모 데이터베이스 .bak 파일: [https://sqlmldoccontent.blob.core.windows.net/sqlml/NYCTaxi_Sample.bak](https://sqlmldoccontent.blob.core.windows.net/sqlml/NYCTaxi_Sample.bak) 사용)의 지침을 따릅니다.
+>[Azure SQL Managed Instance의 Machine Learning Services](/azure/azure-sql/managed-instance/machine-learning-services-overview)에서 샘플 데이터베이스를 복원하려면 [빠른 시작: 데이터베이스를 Azure SQL Managed Instance로 복원](/azure/azure-sql/managed-instance/restore-sample-database-quickstart)(뉴욕시 택시 데모 데이터베이스 .bak 파일: [https://sqlmldoccontent.blob.core.windows.net/sqlml/NYCTaxi_Sample.bak](https://sqlmldoccontent.blob.core.windows.net/sqlml/NYCTaxi_Sample.bak) 사용)의 지침을 따릅니다.
 ::: moniker-end
 
 1. [NYCTaxi_Sample.bak](https://sqlmldoccontent.blob.core.windows.net/sqlml/NYCTaxi_Sample.bak)를 클릭하여 데이터베이스 백업 파일을 다운로드합니다.
 
 2. C:\Program files\Microsoft SQL Server\MSSQL-instance-name\MSSQL\Backup 폴더에 파일을 복사합니다.
 
-3. Management Studio에서 **데이터베이스**를 마우스 오른쪽 단추로 클릭하고 **파일 및 파일 그룹 복원**을 선택합니다.
+3. Management Studio에서 **데이터베이스** 를 마우스 오른쪽 단추로 클릭하고 **파일 및 파일 그룹 복원** 을 선택합니다.
 
-4. 데이터베이스 이름으로 *NYCTaxi_Sample*을 입력합니다.
+4. 데이터베이스 이름으로 *NYCTaxi_Sample* 을 입력합니다.
 
-5. **디바이스에서**를 클릭한 다음, 파일 선택 페이지를 열어 백업 파일을 선택합니다. **추가**를 클릭하여 NYCTaxi_Sample.bak를 선택합니다.
+5. **디바이스에서** 를 클릭한 다음, 파일 선택 페이지를 열어 백업 파일을 선택합니다. **추가** 를 클릭하여 NYCTaxi_Sample.bak를 선택합니다.
 
-6. **복원** 확인란을 선택하고 **확인**을 클릭하여 데이터베이스를 복원합니다.
+6. **복원** 확인란을 선택하고 **확인** 을 클릭하여 데이터베이스를 복원합니다.
 
 ## <a name="review-database-objects"></a>데이터베이스 개체 검토
    

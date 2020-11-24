@@ -5,16 +5,16 @@ ms.prod: sql
 ms.technology: machine-learning-services
 ms.date: 09/20/2020
 ms.topic: how-to
-author: cawrites
-ms.author: chadam
+author: dphansen
+ms.author: davidph
 ms.custom: seo-lt-2019
 monikerRange: '>=sql-server-ver15||>=sql-server-linux-ver15||=sqlallproducts-allversions'
-ms.openlocfilehash: 4a625684b3196fc246b2753fc7b7e38b3e603f6e
-ms.sourcegitcommit: 43b92518c5848489d03c68505bd9905f8686cbc0
+ms.openlocfilehash: 2a37b086804a8fabe3719db0744b49345d69e6b8
+ms.sourcegitcommit: 2bf83972036bdbe6a039fb2d1fc7b5f9ca9589d3
 ms.translationtype: HT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 10/17/2020
-ms.locfileid: "92155068"
+ms.lasthandoff: 11/17/2020
+ms.locfileid: "94674141"
 ---
 # <a name="install-a-python-custom-runtime-for-sql-server"></a>SQL Server용 Python 사용자 지정 런타임 설치
 [!INCLUDE [SQL Server 2019 and later](../../includes/applies-to-version/sqlserver2019.md)]
@@ -30,16 +30,11 @@ ms.locfileid: "92155068"
 > [!NOTE]
 > 이 문서에서는 Windows에 Python용 사용자 지정 런타임을 설치하는 방법을 설명합니다. Linux에 설치하려면 [Linux에 SQL Server용 Python 사용자 지정 런타임 설치](custom-runtime-python.md?view=sql-server-linux-ver15&preserve-view=true)를 참조하세요.
 
-
-
 ## <a name="pre-install-checklist"></a>설치 전 검사 목록
 
 Python 사용자 지정 런타임을 설치하기 전에 다음을 설치합니다.
 
-+ [Windows용 SQL Server 2019 CU3 이상](../../database-engine/install-windows/install-sql-server.md).
-
-  > [!NOTE]
-  > Python 사용자 지정 런타임은 SQL Server 2019용 CU(누적 업데이트) 3 이상이 필요합니다.
++ [Windows용 SQL Server 2019 CU(누적 업데이트) 3](../../database-engine/install-windows/install-sql-server.md)
 
 + [확장성 프레임워크가 포함된 Windows의 SQL Server 언어 확장](../../language-extensions/install/windows-java.md)
 
@@ -54,7 +49,7 @@ Python 사용자 지정 런타임을 설치하기 전에 다음을 설치합니�
 
 1. SQL Server 2019용 설치 마법사를 시작합니다.
   
-1. **설치** 탭에서 **새 SQL Server 독립 실행형 설치 또는 기존 설치에 기능 추가**를 선택합니다.
+1. **설치** 탭에서 **새 SQL Server 독립 실행형 설치 또는 기존 설치에 기능 추가** 를 선택합니다.
     
     ![SQL Server 2019 CU3 이상 설치](../install/media/2019setup-installation-page-mlsvcs.png) 
 
@@ -66,11 +61,11 @@ Python 사용자 지정 런타임을 설치하기 전에 다음을 설치합니�
   
     - **Machine Learning Services 및 언어 확장**
    
-       **Machine Learning Services 및 언어 확장**을 선택합니다. Python을 선택할 필요가 없습니다.
+       **Machine Learning Services 및 언어 확장** 을 선택합니다. Python을 선택할 필요가 없습니다.
 
     ![SQL Server 2019 CU3 이상 설치 기능](../install/media/sql-feature-selection.png) 
 
-1. **설치 준비 완료** 페이지에서 이러한 선택 사항이 포함되어 있는지 확인하고 **설치**를 선택합니다.
+1. **설치 준비 완료** 페이지에서 이러한 선택 사항이 포함되어 있는지 확인하고 **설치** 를 선택합니다.
   
     + 데이터베이스 엔진 서비스
     + Machine Learning Services 및 언어 확장
@@ -97,11 +92,11 @@ python.exe -m pip install pandas
 
 PYTHONHOME을 시스템 환경 변수로 추가하거나 수정합니다.
 
-+ Windows 검색 상자에 "환경"을 입력하고 **시스템 환경 변수 편집**을 선택합니다.
-+ **고급** 탭에서 **환경 변수**를 선택합니다.
-+ **시스템 변수**에서 **새로 만들기**를 선택하고 Python 3.7 설치 위치를 가리키는 PYTHONHOME을 만듭니다.
-PYTHONHOME이 이미 있는 경우 **편집**을 선택하여 Python 3.7 설치 위치를 가리키도록 편집합니다.
-+ **확인**을 선택하여 나머지 창을 닫습니다.
++ Windows 검색 상자에 "환경"을 입력하고 **시스템 환경 변수 편집** 을 선택합니다.
++ **고급** 탭에서 **환경 변수** 를 선택합니다.
++ **시스템 변수** 에서 **새로 만들기** 를 선택하고 Python 3.7 설치 위치를 가리키는 PYTHONHOME을 만듭니다.
+PYTHONHOME이 이미 있는 경우 **편집** 을 선택하여 Python 3.7 설치 위치를 가리키도록 편집합니다.
++ **확인** 을 선택하여 나머지 창을 닫습니다.
 
 ![PYTHONHOME 시스템 변수를 만듭니다.](../install/media/sys-pythonhome.png)
 
@@ -111,7 +106,7 @@ PYTHONHOME이 이미 있는 경우 **편집**을 선택하여 Python 3.7 설치 
 
 `MSSQLLAUNCHPAD`(`MSSQLLAUNCHPAD$INSTANCENAME`)에 인스턴스 이름을 추가합니다. 이 예에서 INSTANCENAME은 기본 인스턴스 `MSSQLSERVER`입니다.
 
-1. **SQL Server 실행 패드 서비스 사용자 이름**에 대한 권한을 부여합니다.
+1. **SQL Server 실행 패드 서비스 사용자 이름** 에 대한 권한을 부여합니다.
 
     ```cmd
     icacls "%PYTHONHOME%" /grant "NT Service\MSSQLLAUNCHPAD$MSSQLSERVER":(OI)(CI)RX /T
@@ -302,7 +297,7 @@ GO
 
 ## <a name="enable-external-script-execution-in-sql-server"></a>SQL Server에서 외부 스크립트를 실행할 수 있도록 설정
 
-SQL Server에 대해 실행되는 저장 프로시저 [sp_execute_external script](../../relational-databases/system-stored-procedures/sp-execute-external-script-transact-sql.md)를 통해 Python의 외부 스크립트를 실행할 수 있습니다. 
+SQL Server에 대해 실행되는 저장 프로시저 [sp_execute_external script](../../relational-databases/system-stored-procedures/sp-execute-external-script-transact-sql.md)를 통해 Python의 외부 스크립트를 실행할 수 있습니다. 
 
 외부 스크립트를 사용하도록 설정하려면 SQL Server에 연결된 [Azure Data Studio](../../azure-data-studio/download-azure-data-studio.md)를 사용하여 다음 SQL 명령을 실행합니다.
 

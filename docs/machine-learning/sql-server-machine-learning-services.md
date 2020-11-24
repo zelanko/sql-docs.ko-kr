@@ -9,12 +9,12 @@ ms.topic: overview
 author: dphansen
 ms.author: davidph
 monikerRange: '>=sql-server-2017||>=sql-server-linux-ver15||=azuresqldb-mi-current||=sqlallproducts-allversions'
-ms.openlocfilehash: 96e72d5046e095e25cf890c60059b3120d1bed80
-ms.sourcegitcommit: 3bde506b2fa3bc82813dbe658d567b1b9eb4278b
+ms.openlocfilehash: 7f25b832feeb54e622b364ccd715886ed90aae88
+ms.sourcegitcommit: 54cd97a33f417432aa26b948b3fc4b71a5e9162b
 ms.translationtype: HT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 11/11/2020
-ms.locfileid: "94498496"
+ms.lasthandoff: 11/13/2020
+ms.locfileid: "94582635"
 ---
 # <a name="what-is-sql-server-machine-learning-services-with-python-and-r"></a>Python 및 R을 사용하는 SQL Server Machine Learning Services란?
 [!INCLUDE [SQL Server 2017 SQL MI](../includes/applies-to-version/sqlserver2017-asdbmi.md)]
@@ -45,7 +45,7 @@ Machine Learning Services는 확장성 프레임워크를 사용하여 SQL Serve
 ## <a name="get-started-with-machine-learning-services"></a>Machine Learning Services 시작
 
 ::: moniker range=">=sql-server-ver15||>=sql-server-linux-ver15||=sqlallproducts-allversions"
-1. [Linux](../linux/sql-server-linux-setup-machine-learning.md?toc=/sql/machine-learning/toc.json) 또는 [Windows에 SQL Server Machine Learning Services를 설치합니다](install/sql-machine-learning-services-windows-install.md). [빅 데이터 클러스터의 Machine Learning Services](../big-data-cluster/machine-learning-services.md) 및 [Azure SQL Managed Instance의 Machine Learning Services\(미리 보기\)](/azure/azure-sql/managed-instance/machine-learning-services-overview)를 사용할 수도 있습니다.
+1. [Linux](../linux/sql-server-linux-setup-machine-learning.md?toc=/sql/machine-learning/toc.json) 또는 [Windows에 SQL Server Machine Learning Services를 설치합니다](install/sql-machine-learning-services-windows-install.md). [빅 데이터 클러스터의 Machine Learning Services](../big-data-cluster/machine-learning-services.md) 및 [Azure SQL Managed Instance의 Machine Learning Services](/azure/azure-sql/managed-instance/machine-learning-services-overview)를 사용할 수도 있습니다.
 
 1. 개발 도구 구성. [Azure Data Studio Notebook에서 Python 및 R 스크립트를 실행](install/sql-machine-learning-azure-data-studio.md)할 수 있습니다. 또한 [Azure Data Studio](../azure-data-studio/what-is.md)에서 T-SQL을 실행할 수 있습니다.
 
