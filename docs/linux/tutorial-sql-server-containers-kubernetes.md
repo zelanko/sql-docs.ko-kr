@@ -9,12 +9,12 @@ ms.date: 09/01/2020
 ms.topic: tutorial
 ms.prod: sql
 ms.technology: linux
-ms.openlocfilehash: c8563738c8d1465c6573ca2a92f0839f54c8e29c
-ms.sourcegitcommit: 43b92518c5848489d03c68505bd9905f8686cbc0
+ms.openlocfilehash: db9b5c98bd073fcf92f7fd93a24c551f5bca0804
+ms.sourcegitcommit: d2dba862814c60f00b16d4e412bf673b2c0dee5f
 ms.translationtype: HT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 10/17/2020
-ms.locfileid: "92155101"
+ms.lasthandoff: 11/18/2020
+ms.locfileid: "94810523"
 ---
 # <a name="deploy-a-sql-server-container-in-kubernetes-with-azure-kubernetes-services-aks"></a>AKS(Azure Kubernetes Services)를 사용하여 Kubernetes에 SQL Server 컨테이너 배포
 
@@ -66,7 +66,7 @@ Kubernetes 클러스터에서 SA 암호를 만듭니다. Kubernetes는 [비밀](
 
 다음 명령은 SA 계정의 암호를 만듭니다.
 
-   ```azurecli
+   ```console
    kubectl create secret generic mssql --from-literal=SA_PASSWORD="MyC0m9l&xP@ssw0rd"
    ```  
 
@@ -111,7 +111,7 @@ Kubernetes 클러스터에서 [영구적 볼륨](https://kubernetes.io/docs/conc
 
 1. Kubernetes에서 영구적 볼륨 클레임을 만듭니다.
 
-   ```azurecli
+   ```console
    kubectl apply -f <Path to pvc.yaml file>
    ```
 
@@ -123,7 +123,7 @@ Kubernetes 클러스터에서 [영구적 볼륨](https://kubernetes.io/docs/conc
 
 1. 영구적 볼륨 클레임을 확인합니다.
 
-   ```azurecli
+   ```console
    kubectl describe pvc <PersistentVolumeClaim>
    ```
 
@@ -131,7 +131,7 @@ Kubernetes 클러스터에서 [영구적 볼륨](https://kubernetes.io/docs/conc
 
    이전 단계에서 영구적 볼륨 클레임의 이름은 `mssql-data`입니다. 영구적 볼륨 클레임에 대한 메타데이터를 확인하려면 다음 명령을 실행합니다.
 
-   ```azurecli
+   ```console
    kubectl describe pvc mssql-data
    ```
 
@@ -145,7 +145,7 @@ Kubernetes 클러스터에서 [영구적 볼륨](https://kubernetes.io/docs/conc
 
 1. 영구적 볼륨을 확인합니다.
 
-   ```azurecli
+   ```console
    kubectl describe pv
    ```
 
@@ -244,7 +244,7 @@ Kubernetes 클러스터에서 [영구적 볼륨](https://kubernetes.io/docs/conc
 
 1. 배포를 만듭니다.
 
-   ```azurecli
+   ```console
    kubectl apply -f <Path to sqldeployment.yaml file>
    ```
 
@@ -265,7 +265,7 @@ Kubernetes 클러스터에서 [영구적 볼륨](https://kubernetes.io/docs/conc
 
 1. 서비스가 실행되고 있는지 확인합니다. 다음 명령 실행:
 
-   ```azurecli
+   ```console
    kubectl get services 
    ```
 
@@ -281,13 +281,13 @@ Kubernetes 클러스터에서 [영구적 볼륨](https://kubernetes.io/docs/conc
 
 1. 다음 명령을 실행하여 컨테이너가 루트가 아닌 것으로 실행되는지 확인할 수도 있습니다.
 
-    ```azurecli
+    ```console
     kubectl.exe exec <name of SQL POD> -it -- /bin/bash 
     ```
 
     ‘whoami’를 실행하면 사용자 이름이 mssql로 표시될 것입니다. 루트가 아닌 사용자입니다.
 
-    ```azurecli
+    ```console
     whoami
     ```
 
@@ -320,7 +320,7 @@ Kubernetes 클러스터에서 [영구적 볼륨](https://kubernetes.io/docs/conc
 
 1. SQL Server를 실행하는 Pod를 나열합니다.
 
-   ```azurecli
+   ```console
    kubectl get pods
    ```
 
@@ -328,7 +328,7 @@ Kubernetes 클러스터에서 [영구적 볼륨](https://kubernetes.io/docs/conc
 
 1. Pod를 삭제합니다.
 
-   ```azurecli
+   ```console
    kubectl delete pod mssql-deployment-0
    ```
 

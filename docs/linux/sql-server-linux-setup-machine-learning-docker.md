@@ -2,21 +2,20 @@
 title: Docker에 설치
 titleSuffix: SQL Server Machine Learning Services
 description: Docker에 SQL Server Machine Learning Services(Python 및 R)를 설치하는 방법을 알아봅니다.
-author: cawrites
-ms.author: chadam
-ms.reviewer: davidph
+author: dphansen
+ms.author: davidph
 manager: cgronlun
 ms.date: 05/11/2020
-ms.topic: conceptual
+ms.topic: how-to
 ms.prod: sql
 ms.technology: machine-learning-services
 monikerRange: '>=sql-server-ver15||>=sql-server-linux-ver15||=sqlallproducts-allversions'
-ms.openlocfilehash: 128510b920e171b39bddacebca89624289d67213
-ms.sourcegitcommit: 22102f25db5ccca39aebf96bc861c92f2367c77a
+ms.openlocfilehash: e53acfa9e0fdfb7f7ee9b1ab6b7de5cd43ba8a9d
+ms.sourcegitcommit: 82b92f73ca32fc28e1948aab70f37f0efdb54e39
 ms.translationtype: HT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 10/16/2020
-ms.locfileid: "92115751"
+ms.lasthandoff: 11/18/2020
+ms.locfileid: "94870043"
 ---
 # <a name="install-sql-server-machine-learning-services-python-and-r-on-docker"></a>Docker에 SQL Server Machine Learning Services(Python 및 R) 설치
 
@@ -101,7 +100,7 @@ ms.locfileid: "92115751"
    sudo docker ps -a
    ```
 
-3. **STATUS** 열이 **Up**의 상태를 표시하는 경우, SQL Server는 컨테이너에서 실행되며 **PORTS** 열에 지정된 포트에서 수신을 대기합니다. SQL Server 컨테이너의 **상태** 열이 **Exited**를 표시하는 경우, [구성 가이드의 문제 해결 섹션](./sql-server-linux-docker-container-troubleshooting.md)을 참조하세요.
+3. **STATUS** 열이 **Up** 의 상태를 표시하는 경우, SQL Server는 컨테이너에서 실행되며 **PORTS** 열에 지정된 포트에서 수신을 대기합니다. SQL Server 컨테이너의 **상태** 열이 **Exited** 를 표시하는 경우, [구성 가이드의 문제 해결 섹션](./sql-server-linux-docker-container-troubleshooting.md)을 참조하세요.
 
  
     출력:

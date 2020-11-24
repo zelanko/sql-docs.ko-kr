@@ -16,12 +16,12 @@ ms.assetid: 6210e1d5-075f-47e4-ac8d-f84bcf26fbc0
 author: markingmyname
 ms.author: maghan
 monikerRange: =azuresqldb-current||>=sql-server-2016||=sqlallproducts-allversions||>=sql-server-linux-2017||=azuresqldb-mi-current
-ms.openlocfilehash: 3cc5d297364c5f2967536f94fde15441e4e21524
-ms.sourcegitcommit: dd36d1cbe32cd5a65c6638e8f252b0bd8145e165
+ms.openlocfilehash: 74f5c5dcf2f2e1891daca22d70ebb9d9f1d9119f
+ms.sourcegitcommit: a49a66dbda0cb16049e092b49c8318ac3865af3c
 ms.translationtype: HT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 09/08/2020
-ms.locfileid: "89551531"
+ms.lasthandoff: 11/20/2020
+ms.locfileid: "94983117"
 ---
 # <a name="synonyms-database-engine"></a>동의어(데이터베이스 엔진)
 [!INCLUDE[appliesto-ss-asdb-xxxx-xxx-md](../../includes/appliesto-ss-asdb-xxxx-xxx-md.md)]
@@ -31,9 +31,9 @@ ms.locfileid: "89551531"
   
 -   기본 개체의 이름이나 위치의 변경으로부터 클라이언트 애플리케이션을 보호하는 추상적 계층을 제공합니다.  
   
-예를 들어 **Server1** 이라는 서버에 있는 [!INCLUDE[ssSampleDBCoShort](../../includes/sssampledbcoshort-md.md)]의 **Employee**테이블을 검토해 보십시오. 다른 서버 **Server2**에서 이 테이블을 참조하려면 클라이언트 애플리케이션이 네 부분으로 된 이름 **Server1.AdventureWorks.Person.Employee**를 사용해야 합니다. 또한 테이블 위치를 다른 서버 등으로 변경하는 경우 이 변경 내용을 반영하기 위해 클라이언트 애플리케이션을 수정해야 합니다.  
+예를 들어 **Server1** 이라는 서버에 있는 [!INCLUDE[ssSampleDBCoShort](../../includes/sssampledbcoshort-md.md)]의 **Employee** 테이블을 검토해 보십시오. 다른 서버 **Server2** 에서 이 테이블을 참조하려면 클라이언트 애플리케이션이 네 부분으로 된 이름 **Server1.AdventureWorks.Person.Employee** 를 사용해야 합니다. 또한 테이블 위치를 다른 서버 등으로 변경하는 경우 이 변경 내용을 반영하기 위해 클라이언트 애플리케이션을 수정해야 합니다.  
   
-**Server1**의 **Employee** 테이블에 대한 동의어, **EmpTable** 을 **Server2**에 만들어 이러한 문제를 해결할 수 있습니다. 이제 클라이언트 애플리케이션은 단일 부분으로 된 이름인 **EmpTable**만 사용하여 **Employee** 테이블을 참조해야 합니다. 또한 **Employee** 테이블 위치가 변경되면 동의어 **EmpTable**를 수정하여 **Employee** 테이블의 새 위치를 가리키게 해야 합니다. ALTER SYNONYM 문이 없으므로 먼저 동의어 **EmpTable**을 삭제한 다음 같은 이름으로 동의어를 다시 만들지만 **Employee**의 새 위치를 가리키게 해야 합니다.  
+**Server1** 의 **Employee** 테이블에 대한 동의어, **EmpTable** 을 **Server2** 에 만들어 이러한 문제를 해결할 수 있습니다. 이제 클라이언트 애플리케이션은 단일 부분으로 된 이름인 **EmpTable** 만 사용하여 **Employee** 테이블을 참조해야 합니다. 또한 **Employee** 테이블 위치가 변경되면 동의어 **EmpTable** 를 수정하여 **Employee** 테이블의 새 위치를 가리키게 해야 합니다. ALTER SYNONYM 문이 없으므로 먼저 동의어 **EmpTable** 을 삭제한 다음 같은 이름으로 동의어를 다시 만들지만 **Employee** 의 새 위치를 가리키게 해야 합니다.  
   
 동의어는 스키마에 속하고 스키마의 다른 개체처럼 동의어 이름은 고유해야 합니다. 다음 데이터베이스 개체의 동의어를 만들 수 있습니다.  
 
@@ -56,8 +56,6 @@ ms.locfileid: "89551531"
 
         어셈블리(CLR) 집계 함수
 
-        어셈블리(CLR) 집계 함수
-
         SQL 테이블 반환 함수
 
         SQL 저장 프로시저
@@ -73,15 +71,15 @@ ms.locfileid: "89551531"
   
 동의어는 다른 동의어의 기본 개체가 될 수 없고 사용자 정의 집계 함수를 참조할 수 없습니다.  
   
-동의어와 해당 기본 개체는 이름별로만 바인딩됩니다. 기본 개체에 대한 모든 존재, 유형 및 권한 검사는 런타임까지 지연됩니다. 따라서 기본 개체를 수정, 삭제 또는 삭제 후 원래 기본 개체와 같은 이름을 가진 다른 개체로 바꿀 수 있습니다. 예를 들어 **의**Person.Contact **테이블을 참조하는 동의어** MyContacts [!INCLUDE[ssSampleDBCoShort](../../includes/sssampledbcoshort-md.md)]를 고려해 보십시오. **Contact** 테이블을 삭제한 후 **Person.Contact**라는 뷰로 바꾸면 **MyContacts** 는 **Person.Contact** 뷰를 참조합니다.  
+동의어와 해당 기본 개체는 이름별로만 바인딩됩니다. 기본 개체에 대한 모든 존재, 유형 및 권한 검사는 런타임까지 지연됩니다. 따라서 기본 개체를 수정, 삭제 또는 삭제 후 원래 기본 개체와 같은 이름을 가진 다른 개체로 바꿀 수 있습니다. 예를 들어 **의** Person.Contact **테이블을 참조하는 동의어** MyContacts [!INCLUDE[ssSampleDBCoShort](../../includes/sssampledbcoshort-md.md)]를 고려해 보십시오. **Contact** 테이블을 삭제한 후 **Person.Contact** 라는 뷰로 바꾸면 **MyContacts** 는 **Person.Contact** 뷰를 참조합니다.  
   
 동의어에 대한 참조는 스키마에 바인딩되지 않습니다. 따라서 동의어는 언제라도 삭제할 수 있습니다. 그러나 동의어를 삭제하면 삭제된 동의어에 대한 참조가 현수 참조로 남게 될 위험이 있습니다. 이러한 참조는 런타임에만 발견됩니다.  
   
 ## <a name="synonyms-and-schemas"></a>동의어 및 스키마  
-소유하지 않은 기본 스키마가 있는데 동의어를 만들려면 소유한 스키마 이름을 사용하여 동의어 이름을 적합하게 지정해야 합니다. 예를 들어 **x**스키마를 소유하지만 **y** 스키마가 기본 스키마이고 CREATE SYNONYM 문을 사용할 경우에는 단일 부분으로 된 이름을 사용하여 동의어 이름을 지정하는 대신 **x**스키마를 동의어 이름 접두사로 지정해야 합니다. 동의어를 만드는 방법은 [CREATE SYNONYM&#40;Transact-SQL&#41;](../../t-sql/statements/create-synonym-transact-sql.md)테이블을 검토해 보십시오.  
+소유하지 않은 기본 스키마가 있는데 동의어를 만들려면 소유한 스키마 이름을 사용하여 동의어 이름을 적합하게 지정해야 합니다. 예를 들어 **x** 스키마를 소유하지만 **y** 스키마가 기본 스키마이고 CREATE SYNONYM 문을 사용할 경우에는 단일 부분으로 된 이름을 사용하여 동의어 이름을 지정하는 대신 **x** 스키마를 동의어 이름 접두사로 지정해야 합니다. 동의어를 만드는 방법은 [CREATE SYNONYM&#40;Transact-SQL&#41;](../../t-sql/statements/create-synonym-transact-sql.md)테이블을 검토해 보십시오.  
   
 ## <a name="granting-permissions-on-a-synonym"></a>동의어에 대한 권한 부여  
-**db_owner**의 멤버나 **db_ddladmin** 의 멤버인 동의어 소유자만 동의어에 대한 권한을 부여 받을 수 있습니다.  
+**db_owner** 의 멤버나 **db_ddladmin** 의 멤버인 동의어 소유자만 동의어에 대한 권한을 부여 받을 수 있습니다.  
   
 동의어에 대한 다음과 같은 모든 권한에 대해 `GRANT`, `DENY` 및 `REVOKE`를 수행할 수 있습니다.  
 
