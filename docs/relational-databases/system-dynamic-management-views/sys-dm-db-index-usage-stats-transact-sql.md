@@ -1,6 +1,6 @@
 ---
 description: sys.dm_db_index_usage_stats(Transact-SQL)
-title: sys. dm_db_index_usage_stats (Transact-sql) | Microsoft Docs
+title: sys.dm_db_index_usage_stats (Transact-sql) | Microsoft Docs
 ms.custom: ''
 ms.date: 03/20/2017
 ms.prod: sql
@@ -21,12 +21,12 @@ ms.assetid: d06a001f-0f72-4679-bc2f-66fff7958b86
 author: markingmyname
 ms.author: maghan
 monikerRange: '>=aps-pdw-2016||=azuresqldb-current||=azure-sqldw-latest||>=sql-server-2016||=sqlallproducts-allversions||>=sql-server-linux-2017||=azuresqldb-mi-current'
-ms.openlocfilehash: b61a4f897aeebdc50d4ae173488b1fbbc6e8a72c
-ms.sourcegitcommit: dd36d1cbe32cd5a65c6638e8f252b0bd8145e165
+ms.openlocfilehash: 772d4ec17e2dd2a5789f324f4ce26cbb219a1aa7
+ms.sourcegitcommit: 4b98c54859a657023495dddb7595826662dcd9ab
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 09/08/2020
-ms.locfileid: "89548933"
+ms.lasthandoff: 11/24/2020
+ms.locfileid: "96128778"
 ---
 # <a name="sysdm_db_index_usage_stats-transact-sql"></a>sys.dm_db_index_usage_stats(Transact-SQL)
 [!INCLUDE [sql-asdb-asdbmi-asa-pdw](../../includes/applies-to-version/sql-asdb-asdbmi-asa-pdw.md)]
@@ -36,10 +36,10 @@ ms.locfileid: "89548933"
  [!INCLUDE[ssSDSfull](../../includes/sssdsfull-md.md)]에서 동적 관리 뷰는 데이터베이스 포함에 영향을 줄 수 있는 정보 또는 사용자가 액세스할 수 있는 다른 데이터베이스 정보를 노출할 수 없습니다. 이 정보를 노출 하지 않도록 하기 위해 연결 된 테 넌 트에 속하지 않는 데이터를 포함 하는 모든 행이 필터링 됩니다.  
   
 > [!NOTE]  
->  **dm_db_index_usage_stats** 는 메모리 최적화 인덱스에 대 한 정보를 반환 하지 않습니다. 메모리 최적화 인덱스 사용에 대 한 자세한 내용은 [dm_db_xtp_index_stats &#40;transact-sql&#41;](../../relational-databases/system-dynamic-management-views/sys-dm-db-xtp-index-stats-transact-sql.md)을 참조 하십시오.  
+>  **sys.dm_db_index_usage_stats** 는 메모리 최적화 인덱스 또는 공간 인덱스에 대 한 정보를 반환 하지 않습니다. 메모리 최적화 인덱스 사용에 대 한 자세한 내용은 [sys.dm_db_xtp_index_stats &#40;transact-sql&#41;](../../relational-databases/system-dynamic-management-views/sys-dm-db-xtp-index-stats-transact-sql.md)를 참조 하세요.  
   
 > [!NOTE]  
->  또는에서이 뷰를 호출 하려면 [!INCLUDE[ssSDWfull](../../includes/sssdwfull-md.md)] [!INCLUDE[ssPDW](../../includes/sspdw-md.md)] **dm_pdw_nodes_db_index_usage_stats**을 사용 합니다.  
+>  또는에서이 뷰를 호출 하려면 [!INCLUDE[ssSDWfull](../../includes/sssdwfull-md.md)] [!INCLUDE[ssPDW](../../includes/sspdw-md.md)] **sys.dm_pdw_nodes_db_index_usage_stats** 을 사용 합니다.  
   
 |열 이름|데이터 형식|Description|  
 |-----------------|---------------|-----------------|  
@@ -71,9 +71,9 @@ ms.locfileid: "89548933"
   
  [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)](MSSQLSERVER) 서비스를 시작할 때마다 카운터는 빈 상태로 초기화됩니다. 또한 데이터베이스가 분리되거나 종료될 때마다(예: AUTO_CLOSE가 ON으로 설정된 경우) 데이터베이스와 관련된 모든 행이 제거됩니다.  
   
- 인덱스를 사용하면 해당 인덱스에 대해 아직 존재하지 않는 행도 **sys.dm_db_index_usage_stats**에 추가됩니다. 행이 추가되면 초기에 해당 카운터가 0으로 설정됩니다.  
+ 인덱스를 사용하면 해당 인덱스에 대해 아직 존재하지 않는 행도 **sys.dm_db_index_usage_stats** 에 추가됩니다. 행이 추가되면 초기에 해당 카운터가 0으로 설정됩니다.  
   
- , 또는로 업그레이드 하는 동안에는 [!INCLUDE[ssKilimanjaro](../../includes/sskilimanjaro-md.md)] [!INCLUDE[ssSQL11](../../includes/sssql11-md.md)] [!INCLUDE[ssSQL14](../../includes/sssql14-md.md)] dm_db_index_usage_stats의 항목이 제거 됩니다. 부터 [!INCLUDE[ssSQL15](../../includes/sssql15-md.md)] 항목은 이전과 동일 하 게 유지 됩니다 [!INCLUDE[ssKilimanjaro](../../includes/sskilimanjaro-md.md)] .  
+ , 또는로 업그레이드 하는 동안 [!INCLUDE[ssKilimanjaro](../../includes/sskilimanjaro-md.md)] [!INCLUDE[ssSQL11](../../includes/sssql11-md.md)] [!INCLUDE[ssSQL14](../../includes/sssql14-md.md)] sys.dm_db_index_usage_stats의 항목이 제거 됩니다. 부터 [!INCLUDE[ssSQL15](../../includes/sssql15-md.md)] 항목은 이전과 동일 하 게 유지 됩니다 [!INCLUDE[ssKilimanjaro](../../includes/sskilimanjaro-md.md)] .  
   
 ## <a name="permissions"></a>사용 권한  
 에 [!INCLUDE[ssNoVersion_md](../../includes/ssnoversion-md.md)] 는 `VIEW SERVER STATE` 권한이 필요 합니다.   

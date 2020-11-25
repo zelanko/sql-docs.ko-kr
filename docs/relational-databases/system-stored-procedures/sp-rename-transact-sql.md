@@ -2,7 +2,7 @@
 description: sp_rename(Transact-SQL)
 title: sp_rename (Transact-sql) | Microsoft Docs
 ms.custom: ''
-ms.date: 01/09/2018
+ms.date: 10/14/2020
 ms.prod: sql
 ms.prod_service: database-engine, sql-database
 ms.reviewer: ''
@@ -21,19 +21,22 @@ helpviewer_keywords:
 ms.assetid: bc3548f0-143f-404e-a2e9-0a15960fc8ed
 author: markingmyname
 ms.author: maghan
-monikerRange: =azuresqldb-current||>=sql-server-2016||=sqlallproducts-allversions||>=sql-server-linux-2017||=azuresqldb-mi-current
-ms.openlocfilehash: edfe9a3a3d69c95b2a8778ca44583e005c6495c6
-ms.sourcegitcommit: dd36d1cbe32cd5a65c6638e8f252b0bd8145e165
+monikerRange: =azuresqldb-current||>=sql-server-2016||=sqlallproducts-allversions||>=sql-server-linux-2017||=azuresqldb-mi-current||=azure-sqldw-latest
+ms.openlocfilehash: d9bcc769abf138658c4994a42b9ee1898e964509
+ms.sourcegitcommit: 5a1ed81749800c33059dac91b0e18bd8bb3081b1
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 09/08/2020
-ms.locfileid: "89538655"
+ms.lasthandoff: 11/23/2020
+ms.locfileid: "96130893"
 ---
 # <a name="sp_rename-transact-sql"></a>sp_rename(Transact-SQL)
-[!INCLUDE [SQL Server SQL Database](../../includes/applies-to-version/sql-asdb.md)]
+[!INCLUDE [sql-asdb-asa](../../includes/applies-to-version/sql-asdb-asa.md)]
 
   현재 데이터베이스에 있는 사용자가 만든 개체의 이름을 변경합니다. 이 개체는 테이블, 인덱스, 열, 별칭 데이터 형식 또는 [!INCLUDE[msCoName](../../includes/msconame-md.md)] [!INCLUDE[dnprdnshort](../../includes/dnprdnshort-md.md)] CLR (공용 언어 런타임) 사용자 정의 형식일 수 있습니다.  
   
+> [!NOTE]
+> 에서 [!INCLUDE[ssazuresynapse](../../includes/ssazuresynapse_md.md)] Sp_rename **미리 보기** 상태 이며 사용자 개체의 열 이름을 바꾸는 데만 사용할 수 있습니다.
+
 > [!CAUTION]  
 >  개체 이름의 일부를 변경하면 스크립트나 저장 프로시저가 작동되지 않을 수 있습니다. 이 문을 사용하여 저장 프로시저, 트리거, 사용자 정의 함수 또는 뷰의 이름을 변경하지 않는 것이 좋습니다. 대신 개체를 삭제하고 새로운 이름으로 다시 만듭니다.  
   
@@ -41,20 +44,26 @@ ms.locfileid: "89538655"
   
 ## <a name="syntax"></a>구문  
   
-```  
-  
+```sql  
+-- Transact-SQL Syntax for sp_rename in SQL Server and Azure SQL Database
 sp_rename [ @objname = ] 'object_name' , [ @newname = ] 'new_name'   
     [ , [ @objtype = ] 'object_type' ]   
 ```  
+
+```sql  
+-- Transact-SQL Syntax for sp_rename (preview) in Azure Synapse Analytics
+sp_rename [ @objname = ] 'object_name' , [ @newname = ] 'new_name'   
+    , [ @objtype = ] 'COLUMN'   
+``` 
   
 ## <a name="arguments"></a>인수  
  [ @objname =] '*object_name*'  
- 현재 사용자 개체나 데이터 형식의 정규화된 이름 또는 정규화되지 않은 이름입니다. 이름을 바꿀 개체가 테이블의 열인 경우에는 *테이블. column* 또는 *schema. table 열*에 *object_name* 있어야 합니다. 이름을 바꿀 개체가 인덱스 이면 *object_name* *테이블. index* 또는 *schema. table. index*형식 이어야 합니다. 이름을 바꿀 개체가 제약 조건이 면 *object_name* 은 *schema. 제약 조건*형식 이어야 합니다.  
+ 현재 사용자 개체나 데이터 형식의 정규화된 이름 또는 정규화되지 않은 이름입니다. 이름을 바꿀 개체가 테이블의 열인 경우에는 *테이블. column* 또는 *schema. table 열* 에 *object_name* 있어야 합니다. 이름을 바꿀 개체가 인덱스 이면 *object_name* *테이블. index* 또는 *schema. table. index* 형식 이어야 합니다. 이름을 바꿀 개체가 제약 조건이 면 *object_name* 은 *schema. 제약 조건* 형식 이어야 합니다.  
   
  정규화된 개체가 지정된 경우에는 따옴표만 필요합니다. 데이터베이스 이름을 포함한 정규화된 이름인 경우 반드시 현재 데이터베이스의 이름을 사용해야 합니다. *object_name* 은 **nvarchar (776)** 이며 기본값은 없습니다.  
   
  [ @newname =] '*new_name*'  
- 지정한 개체의 새 이름입니다. *new_name* 은 한 부분으로 구성 된 이름 이어야 하며 식별자 규칙을 따라야 합니다. *newname* 은 **sysname**이며 기본값은 없습니다.  
+ 지정한 개체의 새 이름입니다. *new_name* 은 한 부분으로 구성 된 이름 이어야 하며 식별자 규칙을 따라야 합니다. *newname* 은 **sysname** 이며 기본값은 없습니다.  
   
 > [!NOTE]  
 >  트리거 이름은 # 또는 ##로 시작될 수 없습니다.  
@@ -71,29 +80,37 @@ sp_rename [ @objname = ] 'object_name' , [ @newname = ] 'new_name'
 |STATISTICS|**적용 대상**: [!INCLUDE[ssSQL11](../../includes/sssql11-md.md)] 이상 및 [!INCLUDE[ssSDSfull](../../includes/sssdsfull-md.md)]<br /><br /> 사용자가 명시적으로 만들었거나 인덱스를 통해 암시적으로 만들어진 통계입니다. 인덱스의 통계 이름을 바꾸면 인덱스 자체도 자동으로 이름이 바뀝니다.|  
 |USERDATATYPE|[CREATE TYPE](../../t-sql/statements/create-type-transact-sql.md) 또는 [sp_addtype](../../relational-databases/system-stored-procedures/sp-addtype-transact-sql.md)를 실행 하 여 추가 된 [CLR 사용자 정의 형식](../../relational-databases/clr-integration-database-objects-user-defined-types/clr-user-defined-types.md) 입니다.|  
   
+[ @objtype =] '*COLUMN*' **적용** 대상: Azure Synapse Analytics  
+의 sp_rename (미리 보기) [!INCLUDE[ssazuresynapse](../../includes/ssazuresynapse_md.md)] 에서 *열* 은 이름을 바꿀 개체 형식이 열 임을 지정 하는 필수 매개 변수입니다. 기본값은 없고 항상 sp_rename (preview) 문에 포함 되어야 하는 **varchar (13)** 입니다. 열은 배포 되지 않은 열인 경우에만 이름을 바꿀 수 있습니다.
+
 ## <a name="return-code-values"></a>반환 코드 값  
  0(성공) 또는 0이 아닌 수(실패)  
   
 ## <a name="remarks"></a>설명  
- 현재 데이터베이스에서만 개체 또는 데이터 형식의 이름을 변경할 수 있습니다. 대부분의 시스템 데이터 형식 및 시스템 개체의 이름은 변경할 수 없습니다.  
-  
+**적용 대상** SQL Server (지원 되는 모든 버전) 및 Azure SQL Database  
  sp_rename은 PRIMARY KEY 또는 UNIQUE 제약 조건의 이름을 바꿀 때마다 연결된 인덱스의 이름을 자동으로 바꿉니다. 이름을 바꾼 인덱스가 PRIMARY KEY 제약 조건과 연결된 경우 PRIMARY KEY 제약 조건의 이름도 sp_rename에 의해 자동으로 바뀝니다.  
-  
+
+**적용 대상** SQL Server (지원 되는 모든 버전) 및 Azure SQL Database  
  sp_rename을 사용하여 기본 XML 인덱스 및 보조 XML 인덱스의 이름을 변경할 수 있습니다.  
   
- 저장 프로시저, 함수, 뷰 또는 트리거의 이름을 바꾸면 [sql_modules](../../relational-databases/system-catalog-views/sys-sql-modules-transact-sql.md) 카탈로그 뷰의 정의 열 또는 [OBJECT_DEFINITION](../../t-sql/functions/object-definition-transact-sql.md) 기본 제공 함수를 사용 하 여 가져온 해당 개체의 이름이 변경 되지 않습니다. 따라서 이러한 개체 유형의 이름을 변경할 때 sp_rename을 사용하지 않는 것이 좋습니다. 대신 해당 개체를 삭제하고 새로운 이름으로 다시 만듭니다.  
-  
+**적용 대상** SQL Server (지원 되는 모든 버전) 및 Azure SQL Database  
+ 저장 프로시저, 함수, 뷰 또는 트리거의 이름을 변경 해도 [sys.sql_modules](../../relational-databases/system-catalog-views/sys-sql-modules-transact-sql.md) 카탈로그 뷰의 정의 열 또는 [OBJECT_DEFINITION](../../t-sql/functions/object-definition-transact-sql.md) 기본 제공 함수를 사용 하 여 가져온 해당 개체의 이름은 변경 되지 않습니다. 따라서 이러한 개체 유형의 이름을 변경할 때 sp_rename을 사용하지 않는 것이 좋습니다. 대신 해당 개체를 삭제하고 새로운 이름으로 다시 만듭니다.  
+
+**적용 대상** SQL Server (지원 되는 모든 버전), Azure SQL Database 및 Azure Synapse Analytics  
  테이블이나 열과 같은 개체의 이름을 변경해도 이 개체를 참조하는 개체의 이름은 자동으로 변경되지 않습니다. 이름을 변경한 개체를 참조하는 개체는 수동으로 수정해야 합니다. 예를 들어 테이블 열의 이름을 변경하고 이 열이 트리거에서 참조되는 경우 트리거를 수정하여 새로운 열 이름을 적용해야 합니다. [sys.sql_expression_dependencies](../../relational-databases/system-catalog-views/sys-sql-expression-dependencies-transact-sql.md) 를 사용하여 이 개체에 종속된 개체를 나열한 다음 개체의 이름을 변경할 수 있습니다.  
+
+**적용 대상** SQL Server (지원 되는 모든 버전), Azure SQL Database 및 Azure Synapse Analytics  
+ 현재 데이터베이스에서만 개체 또는 데이터 형식의 이름을 변경할 수 있습니다. 대부분의 시스템 데이터 형식 및 시스템 개체의 이름은 변경할 수 없습니다.  
   
 ## <a name="permissions"></a>사용 권한  
  개체, 열 및 인덱스의 이름을 변경하려면 개체에 대한 ALTER 권한이 필요합니다. 사용자 유형의 이름을 변경하려면 유형에 대한 CONTROL 권한이 필요합니다. 데이터베이스의 이름을 변경하려면 sysadmin 또는 dbcreator 고정 서버 역할의 멤버여야 합니다.  
   
-## <a name="examples"></a>예제  
+## <a name="examples"></a>예  
   
 ### <a name="a-renaming-a-table"></a>A. 테이블 이름 바꾸기  
  다음 예에서는 `SalesTerritory` 스키마에 있는 `SalesTerr` 테이블의 이름을 `Sales` 로 바꿉니다.  
   
-```  
+```sql  
 USE AdventureWorks2012;  
 GO  
 EXEC sp_rename 'Sales.SalesTerritory', 'SalesTerr';  
@@ -103,7 +120,7 @@ GO
 ### <a name="b-renaming-a-column"></a>B. 열 이름 바꾸기  
  다음 예에서는 `TerritoryID` 테이블의 열 이름을 `SalesTerritory` 로 변경 합니다 `TerrID` .  
   
-```  
+```sql  
 USE AdventureWorks2012;  
 GO  
 EXEC sp_rename 'Sales.SalesTerritory.TerritoryID', 'TerrID', 'COLUMN';  
@@ -113,7 +130,7 @@ GO
 ### <a name="c-renaming-an-index"></a>C. 인덱스 이름 바꾸기  
  다음 예에서는 `IX_ProductVendor_VendorID` 인덱스의 이름을 `IX_VendorID`로 변경합니다.  
   
-```  
+```sql  
 USE AdventureWorks2012;  
 GO  
 EXEC sp_rename N'Purchasing.ProductVendor.IX_ProductVendor_VendorID', N'IX_VendorID', N'INDEX';  
@@ -123,7 +140,7 @@ GO
 ### <a name="d-renaming-an-alias-data-type"></a>D. 별칭 데이터 형식 이름 바꾸기  
  다음 예에서는 `Phone` 별칭 데이터 형식의 이름을 `Telephone`으로 변경합니다.  
   
-```  
+```sql  
 USE AdventureWorks2012;  
 GO  
 EXEC sp_rename N'Phone', N'Telephone', N'USERDATATYPE';  
@@ -133,7 +150,7 @@ GO
 ### <a name="e-renaming-constraints"></a>E. 제약 조건 이름 바꾸기  
  다음 예에서는 PRIMARY KEY 제약 조건, CHECK 제약 조건 및 FOREIGN KEY 제약 조건의 이름을 바꿉니다. 제약 조건 이름을 바꿀 때는 제약 조건이 속한 스키마를 지정해야 합니다.  
   
-```  
+```sql  
 USE AdventureWorks2012;   
 GO  
 -- Return the current Primary Key, Foreign Key and Check constraints for the Employee table.  
@@ -195,13 +212,23 @@ CK_Employee_SickLeaveHours            HumanResources     CHECK_CONSTRAINT
 ### <a name="f-renaming-statistics"></a>F. 통계 이름 바꾸기  
  다음 예에서는 contactMail1 라는 통계 개체를 만든 후 sp_rename를 사용 하 여 통계의 이름을 NewContact로 바꿉니다. 통계 이름을 바꾸면 개체를 schema.table.statistics_name 형식으로 지정해야 합니다.  
   
-```  
+```sql  
 CREATE STATISTICS ContactMail1  
     ON Person.Person (BusinessEntityID, EmailPromotion)  
     WITH SAMPLE 5 PERCENT;  
   
 sp_rename 'Person.Person.ContactMail1', 'NewContact','Statistics';  
   
+```  
+
+## <a name="examples-sssdwfull"></a>예제: [!INCLUDE[ssSDWfull](../../includes/sssdwfull-md.md)]
+### <a name="g-renaming-a-column"></a>G. 열 이름 바꾸기  
+ 다음 예에서는 `c1` 테이블의 열 이름을 `table1` 로 변경 합니다 `col1` .  
+  
+```sql  
+CREATE TABLE table1 (c1 INT, c2 INT);
+EXEC sp_rename 'table1.c1', 'col1', 'COLUMN';
+GO  
 ```  
   
 ## <a name="see-also"></a>참고 항목  

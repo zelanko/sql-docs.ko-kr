@@ -11,12 +11,12 @@ ms.topic: quickstart
 ms.assetid: f6cd850f-b01b-491f-972c-f966b9fe4190
 author: lrtoyou1223
 ms.author: lle
-ms.openlocfilehash: 4df36b6012cd6cbe0f2570bb678ebff02fa21dd5
-ms.sourcegitcommit: cfa04a73b26312bf18d8f6296891679166e2754d
+ms.openlocfilehash: 92511a835a8a9a6f899f7597900fec6707f6dada
+ms.sourcegitcommit: 5a1ed81749800c33059dac91b0e18bd8bb3081b1
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 10/19/2020
-ms.locfileid: "92195817"
+ms.lasthandoff: 11/23/2020
+ms.locfileid: "96129427"
 ---
 # <a name="master-data-services-installation-and-configuration"></a>Master Data Services 설치 및 구성
 
@@ -60,7 +60,7 @@ ms.locfileid: "92195817"
   
 1.  Setup.exe를 두 번 클릭하고 설치 마법사의 단계를 따릅니다.  
   
-2.  [!INCLUDE[ssMDSshort](../includes/ssmdsshort-md.md)] 기능 선택 **페이지의** 공유 기능 **에서**를 선택합니다.  
+2.  [!INCLUDE[ssMDSshort](../includes/ssmdsshort-md.md)] 기능 선택 **페이지의** 공유 기능 **에서** 를 선택합니다.  
   
      [!INCLUDE[ssMDScfgmgr](../includes/ssmdscfgmgr-md.md)], 어셈블리, Windows PowerShell 스냅인, 웹 애플리케이션과 서비스의 폴더 및 파일이 설치됩니다.  
   
@@ -70,32 +70,32 @@ ms.locfileid: "92195817"
 
 ## <a name="installing-and-configuring-iis"></a><a name="InstallIIS"></a> IIS 설치 및 구성
   
-1.  [!INCLUDE[winblue_server_2](../includes/winblue-server-2-md.md)]에서 **데스크톱** 의 작업 표시줄에 있는 **서버 관리자**아이콘을 클릭합니다.  
+1.  [!INCLUDE[winblue_server_2](../includes/winblue-server-2-md.md)]에서 **데스크톱** 의 작업 표시줄에 있는 **서버 관리자** 아이콘을 클릭합니다.  
   
      ![Windows Server 2012 작업 표시줄의 서버 관리자 아이콘](../master-data-services/media/mds-windowsservertaskbar-servermanagericon.png "Windows Server 2012 작업 표시줄의 서버 관리자 아이콘")  
   
-5.  **서버 관리자**에서 **관리** 메뉴에 있는 **역할 및 기능 추가** 를 클릭합니다.  
+5.  **서버 관리자** 에서 **관리** 메뉴에 있는 **역할 및 기능 추가** 를 클릭합니다.  
    
      ![서버 관리의 역할 및 기능 추가 메뉴 명령](../master-data-services/media/mds-servermanagerdashboard-addrolesfeaturesmenu.png "서버 관리의 역할 및 기능 추가 메뉴 명령")  
   
-6.  **역할 및 기능 추가 마법사** 의 **설치 유형**페이지에서 기본값(**역할 기반 또는 기능 기반 설치**)을 적용하고 **다음**을 클릭합니다.  
+6.  **역할 및 기능 추가 마법사** 의 **설치 유형** 페이지에서 기본값(**역할 기반 또는 기능 기반 설치**)을 적용하고 **다음** 을 클릭합니다.  
   
-7.  **서버 풀에서 서버 선택**을 클릭한 다음 [!INCLUDE[ssMDSshort](../includes/ssmdsshort-md.md)]를 설치한 서버를 클릭합니다.  
+7.  **서버 풀에서 서버 선택** 을 클릭한 다음 [!INCLUDE[ssMDSshort](../includes/ssmdsshort-md.md)]를 설치한 서버를 클릭합니다.  
   
      ![mds_AddRolesFeaturesWizard_ServerSelectionPage](../master-data-services/media/mds-addrolesfeatureswizard-serverselectionpage.png) 
   
-8. **서버 역할** 페이지에서 **웹 서버**를 클릭한 후 **다음**을 클릭합니다. 
+8. **서버 역할** 페이지에서 **웹 서버** 를 클릭한 후 **다음** 을 클릭합니다. 
 
    ![mds_AddRolesFeaturesWizard_ServerRolesPage](../master-data-services/media/mds-addrolesfeatureswizard-serverrolespage.png)
    
-9. **기능** 페이지에서 다음 기능이 선택되었는지 확인한 후 **다음**을 클릭합니다. 이러한 기능은 [!INCLUDE[winblue_server_2_md](../includes/winblue-server-2-md.md)]의 [!INCLUDE[ssMDSshort_md](../includes/ssmdsshort-md.md)]에 필요합니다.
+9. **기능** 페이지에서 다음 기능이 선택되었는지 확인한 후 **다음** 을 클릭합니다. 이러한 기능은 [!INCLUDE[winblue_server_2_md](../includes/winblue-server-2-md.md)]의 [!INCLUDE[ssMDSshort_md](../includes/ssmdsshort-md.md)]에 필요합니다.
   
     |기능|기능|  
     |--------------|--------------|  
     |![mds_AddRolesFeaturesWizard_FeaturesPage](../master-data-services/media/mds-addrolesfeatureswizard-featurespage.png)|![mds_AddRolesFeaturesWizard_FeaturesPage_WindowsProcActive](../master-data-services/media/mds-addrolesfeatureswizard-featurespage-windowsprocactive.png)|  
 
-10. 왼쪽 창에서 **웹 서버 역할(IIS)** 을 클릭한 후 **역할 서비스**를 클릭합니다.
-11. **역할 서비스** 페이지에서 다음 서비스가 선택되었는지 확인한 후 **다음**을 클릭합니다. 이러한 서비스는 [!INCLUDE[winblue_server_2](../includes/winblue-server-2-md.md)]의 [!INCLUDE[ssMDSshort](../includes/ssmdsshort-md.md)]에 필요합니다.
+10. 왼쪽 창에서 **웹 서버 역할(IIS)** 을 클릭한 후 **역할 서비스** 를 클릭합니다.
+11. **역할 서비스** 페이지에서 다음 서비스가 선택되었는지 확인한 후 **다음** 을 클릭합니다. 이러한 서비스는 [!INCLUDE[winblue_server_2](../includes/winblue-server-2-md.md)]의 [!INCLUDE[ssMDSshort](../includes/ssmdsshort-md.md)]에 필요합니다.
 
     > [!WARNING]  
     >  WebDAV 게시 역할 서비스를 설치하지 마세요. WebDAV 게시는 [!INCLUDE[ssMDSshort](../includes/ssmdsshort-md.md)]와 호환되지 않습니다.  
@@ -126,13 +126,13 @@ ms.locfileid: "92195817"
   
 1.  [!INCLUDE[ssMDScfgmgr](../includes/ssmdscfgmgr-md.md)]를 시작하고 왼쪽 창에서 **데이터베이스 구성** 을 클릭합니다.  
   
-2.  **데이터베이스 만들기**를 클릭한 다음 **데이터베이스 만들기 마법사** 에서 **다음**을 클릭합니다.  
+2.  **데이터베이스 만들기** 를 클릭한 다음 **데이터베이스 만들기 마법사** 에서 **다음** 을 클릭합니다.  
   
 3.  **데이터베이스 서버** 페이지에서 SQL Server 인스턴스를 지정 합니다. 
 
-    >  [!INCLUDE[sqlv15](../includes/sssqlv15-md.md)] Managed Instance SQL Server에 대 한 지원을 추가 합니다. **SQL Server 인스턴스** 값을 관리 되는 인스턴스의 호스트로 설정 합니다. 정의합니다(예: `xxxxxx.xxxxxx.database.windows.net`).
+    >  [!INCLUDE[sqlv15](../includes/sssqlv15-md.md)] Managed Instance SQL Server에 대 한 지원을 추가 합니다. **SQL Server 인스턴스** 값을 관리 되는 인스턴스의 호스트로 설정 합니다. 예들 들어 `xxxxxx.xxxxxx.database.windows.net`입니다.
 
-4. **인증 유형을** 선택한 다음 **연결 테스트** 를 클릭 하 여 선택한 인증 유형에 대 한 자격 증명을 사용 하 여 데이터베이스에 연결할 수 있는지 확인 합니다. **다음**을 클릭합니다.
+4. **인증 유형을** 선택한 다음 **연결 테스트** 를 클릭 하 여 선택한 인증 유형에 대 한 자격 증명을 사용 하 여 데이터베이스에 연결할 수 있는지 확인 합니다. **다음** 을 클릭합니다.
 
     >의 경우 [!INCLUDE[sqlv15](../includes/sssqlv15-md.md)] 관리 되는 인스턴스에 연결 하려면 다음 인증 유형 중 하나를 사용 합니다.
     >
@@ -146,7 +146,7 @@ ms.locfileid: "92195817"
 
     ![mds_2016ConfigManager_CreateDatabaseWizard_ServerPage](../master-data-services/media/mds-2016configmanager-createdatabasewizard-serverpage.png)  
   
-4.  **데이터베이스 이름** 필드에 이름을 입력합니다. 필요에 따라 Windows 데이터 정렬을 선택하려면 **SQL Server 기본 데이터 정렬** 확인란의 선택을 취소하고 **대/소문자 구분**과 같은 사용 가능한 옵션 중 하나 이상을 클릭합니다. **다음**을 클릭합니다.
+4.  **데이터베이스 이름** 필드에 이름을 입력합니다. 필요에 따라 Windows 데이터 정렬을 선택하려면 **SQL Server 기본 데이터 정렬** 확인란의 선택을 취소하고 **대/소문자 구분** 과 같은 사용 가능한 옵션 중 하나 이상을 클릭합니다. **다음** 을 클릭합니다.
 
     ![mds_2016ConfigManager_CreateDatabaseWizard_DatabasePage](../master-data-services/media/mds-2016configmanager-createdatabasewizard-databasepage.png)  
   
@@ -158,13 +158,13 @@ ms.locfileid: "92195817"
   
 6.  **다음** 을 클릭하여 [!INCLUDE[ssMDSshort](../includes/ssmdsshort-md.md)] 데이터베이스에 대한 설정 요약을 본 후에 다시 **다음** 을 클릭하여 데이터베이스를 만듭니다. **진행 후 마침** 페이지가 표시됩니다.
 
-7. 데이터베이스가 생성되고 구성되면 **마침**을 클릭합니다.  
+7. 데이터베이스가 생성되고 구성되면 **마침** 을 클릭합니다.  
   
-     **데이터베이스 만들기 마법사**의 설정에 대한 자세한 내용은 [데이터베이스 만들기 마법사&#40;Master Data Services 구성 관리자&#41;](../master-data-services/create-database-wizard-master-data-services-configuration-manager.md)를 참조하세요.  
+     **데이터베이스 만들기 마법사** 의 설정에 대한 자세한 내용은 [데이터베이스 만들기 마법사&#40;Master Data Services 구성 관리자&#41;](../master-data-services/create-database-wizard-master-data-services-configuration-manager.md)를 참조하세요.  
   
-7.  [!INCLUDE[ssMDScfgmgr](../includes/ssmdscfgmgr-md.md)]의 **데이터베이스 구성** 페이지에서 **데이터베이스 선택**을 클릭합니다.  
+7.  [!INCLUDE[ssMDScfgmgr](../includes/ssmdscfgmgr-md.md)]의 **데이터베이스 구성** 페이지에서 **데이터베이스 선택** 을 클릭합니다.  
   
-8.  **연결**을 클릭하고 7단계에서 만든 [!INCLUDE[ssMDSshort](../includes/ssmdsshort-md.md)] 데이터베이스를 선택한 후 **확인**을 클릭합니다. 
+8.  **연결** 을 클릭하고 7단계에서 만든 [!INCLUDE[ssMDSshort](../includes/ssmdsshort-md.md)] 데이터베이스를 선택한 후 **확인** 을 클릭합니다. 
 
     ![mds_2016ConfigManager_SelectDatabaseButton_ConnectToDatabaseDialog](../master-data-services/media/mds-2016configmanager-selectdatabasebutton-connecttodatabasedialog.png)  
   
@@ -174,16 +174,16 @@ ms.locfileid: "92195817"
   
 9. [!INCLUDE[ssMDScfgmgr](../includes/ssmdscfgmgr-md.md)]의 왼쪽 창에서 **웹 구성** 을 클릭합니다.  
   
-10. **웹 사이트** 목록 상자에서 **기본 웹 사이트**를 클릭한 다음 **만들기** 를 클릭하여 웹 애플리케이션을 만듭니다.  
+10. **웹 사이트** 목록 상자에서 **기본 웹 사이트** 를 클릭한 다음 **만들기** 를 클릭하여 웹 애플리케이션을 만듭니다.  
   
     > [!NOTE]  
-    >  **기본 웹 사이트**를 선택할 경우 웹 애플리케이션을 만들어야 합니다. 목록 상자에서 **새 웹 사이트 만들기** 를 선택하면 애플리케이션이 자동으로 만들어집니다.  
+    >  **기본 웹 사이트** 를 선택할 경우 웹 애플리케이션을 만들어야 합니다. 목록 상자에서 **새 웹 사이트 만들기** 를 선택하면 애플리케이션이 자동으로 만들어집니다.  
 
      ![mds_2016ConfigManager_WebConfig](../master-data-services/media/mds-2016configmanager-webconfig.png)  
   
 11. **애플리케이션 풀** 섹션에서 다음 중 하나를 수행합니다.  
   
-    -   데이터베이스 **관리자 계정**에 대해 5단계에서 입력한 것과 동일한 사용자 이름을 입력하고 암호를 입력한 다음 **확인**을 클릭합니다.  
+    -   데이터베이스 **관리자 계정** 에 대해 5단계에서 입력한 것과 동일한 사용자 이름을 입력하고 암호를 입력한 다음 **확인** 을 클릭합니다.  
   
          **디스크나**  
   
@@ -194,17 +194,20 @@ ms.locfileid: "92195817"
         ![mds_2016ConfigManager_WebConfig_CreateWebApplication](../master-data-services/media/mds-2016configmanager-webconfig-createwebapplication.png)   
   
      **웹 애플리케이션 만들기** 대화 상자에 대한 자세한 내용은 [웹 애플리케이션 만들기 대화 상자&#40;Master Data Services 구성 관리자&#41;](../master-data-services/create-web-application-dialog-box-master-data-services-configuration-manager.md)를 참조하세요.  
+
+    > [!NOTE] 
+    >  도메인에서 [2020 ldap 채널 바인딩 및 Windows에 대 한 ldap 서명 요구 사항을](https://support.microsoft.com/en-us/help/4520412/2020-ldap-channel-binding-and-ldap-signing-requirements-for-windows)구현 하는 경우. "Active Directory에서 자격 증명을 확인할 수 없습니다." 라는 문제가 표시 됩니다. 도메인 계정을 사용 하 여 응용 프로그램 풀을 만드는 경우 해결 방법으로 도메인 사용자 대신 **로컬 컴퓨터 사용자** 를 사용 합니다. Active Directory에서 자격 증명 확인을 무시할 수 있습니다. 웹 응용 프로그램을 만든 후 **인터넷 정보 서비스 (IIS) 관리자** 에서 id를 도메인 사용자로 변경할 수 있습니다.
   
-12. **웹 구성** 페이지의 **웹 애플리케이션** 상자에서 만든 애플리케이션을 클릭한 다음 **데이터베이스에 애플리케이션 연결** 섹션에서 **선택**을 클릭합니다.  
+12. **웹 구성** 페이지의 **웹 애플리케이션** 상자에서 만든 애플리케이션을 클릭한 다음 **데이터베이스에 애플리케이션 연결** 섹션에서 **선택** 을 클릭합니다.  
   
-13. **연결**을 클릭하고 웹 애플리케이션에 연결할 [!INCLUDE[ssMDSshort](../includes/ssmdsshort-md.md)] 데이터베이스를 선택한 다음 **확인**을 클릭합니다.  
+13. **연결** 을 클릭하고 웹 애플리케이션에 연결할 [!INCLUDE[ssMDSshort](../includes/ssmdsshort-md.md)] 데이터베이스를 선택한 다음 **확인** 을 클릭합니다.  
   
      웹 사이트 설정을 마쳤습니다. 이제 **웹 구성** 페이지에 선택한 웹 사이트, 만든 웹 애플리케이션, 애플리케이션과 연결된 [!INCLUDE[ssMDSshort](../includes/ssmdsshort-md.md)] 데이터베이스가 표시됩니다.  
 
      ![mds_2016ConfigManager_WebConfig_Completed](../master-data-services/media/mds-2016configmanager-webconfig-completed.png)  
  
      
-15. **적용**을 클릭합니다. **구성 완료** 메시지 상자가 표시됩니다. 메시지 상자에서 **확인**을 클릭하고 웹 애플리케이션을 시작합니다. 웹 사이트 주소는 https://*server name* / *웹 응용 프로그램*/입니다. 
+15. **적용** 을 클릭합니다. **구성 완료** 메시지 상자가 표시됩니다. 메시지 상자에서 **확인** 을 클릭하고 웹 애플리케이션을 시작합니다. 웹 사이트 주소는 https://*server name* / *웹 응용 프로그램*/입니다. 
 
 
 ![mds_2016ConfigurationComplete_MessageBox](../master-data-services/media/mds-2016configurationcomplete-messagebox.png) 
@@ -280,7 +283,7 @@ ms.locfileid: "92195817"
   
          웹 사이트 주소는 https://*server name* / *웹 응용 프로그램*/입니다.  
   
-    2.  **모델** 목록 상자에서 모델을 선택하고 **탐색기**를 클릭합니다.  
+    2.  **모델** 목록 상자에서 모델을 선택하고 **탐색기** 를 클릭합니다.  
   
          ![MDS 웹 사이트, 홈 페이지.](../master-data-services/media/mds-mdswebsite-homepage-selectsamplemodel.png "MDS 웹 사이트, 홈 페이지.")  
   

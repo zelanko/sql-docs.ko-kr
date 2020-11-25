@@ -1,5 +1,5 @@
 ---
-title: CLR 테이블 반환 함수 | Microsoft Docs
+title: CLR Table-Valued 함수 | Microsoft Docs
 description: 테이블 반환 함수는 테이블을 반환 합니다. SQL Server CLR 통합에서는 관리 코드에서 테이블 반환 함수를 작성할 수 있습니다.
 ms.custom: ''
 ms.date: 03/14/2017
@@ -18,12 +18,12 @@ helpviewer_keywords:
 ms.assetid: 9a6133ea-36e9-45bf-b572-1c0df3d6c194
 author: rothja
 ms.author: jroth
-ms.openlocfilehash: ca80594050e73bf20ecfd589f18a5eca43e4dbde
-ms.sourcegitcommit: da88320c474c1c9124574f90d549c50ee3387b4c
+ms.openlocfilehash: 4295ca970e503ad1785846d63e5ed479923f4303
+ms.sourcegitcommit: 5a1ed81749800c33059dac91b0e18bd8bb3081b1
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 07/01/2020
-ms.locfileid: "85727903"
+ms.lasthandoff: 11/23/2020
+ms.locfileid: "96125284"
 ---
 # <a name="clr-table-valued-functions"></a>CLR 테이블 반환 함수
  [!INCLUDE [SQL Server](../../includes/applies-to-version/sqlserver.md)]
@@ -32,9 +32,9 @@ ms.locfileid: "85727903"
  [!INCLUDE[ssVersion2005](../../includes/ssversion2005-md.md)]부터 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]는 모든 관리 언어에서 테이블 반환 함수를 정의할 수 있도록 하여 테이블 반환 함수의 기능을 확장하고 있습니다. 데이터는 테이블 반환 함수에서 **IEnumerable** 또는 **IEnumerator** 개체를 통해 반환 됩니다.  
   
 > [!NOTE]  
->  테이블 반환 함수의 경우 반환 테이블 형식의 열은 timestamp 열 또는 비유니코드 문자열 데이터 형식 열 (예: **char**, **varchar**및 **text**)을 포함할 수 없습니다. NOT NULL 제약 조건은 지원되지 않습니다.  
+>  테이블 반환 함수의 경우 반환 테이블 형식의 열은 timestamp 열 또는 비유니코드 문자열 데이터 형식 열 (예: **char**, **varchar** 및 **text**)을 포함할 수 없습니다. NOT NULL 제약 조건은 지원되지 않습니다.  
   
- CLR 테이블 반환 함수에 대 한 자세한 내용은 MSSQLTips의 [clr 테이블 반환 함수 SQL Server에](https://www.mssqltips.com/sqlservertip/2582/introduction-to-sql-server-clr-table-valued-functions/) 대 한 소개를 참조 하세요.  
+ CLR Table-Valued 함수에 대 한 자세한 내용은 [clr 테이블 반환 함수에 대 한 SQL Server 소개 MSSQLTips를](https://www.mssqltips.com/sqlservertip/2582/introduction-to-sql-server-clr-table-valued-functions/) 참조 하세요.  
   
 ## <a name="differences-between-transact-sql-and-clr-table-valued-functions"></a>Transact-SQL과 CLR 테이블 반환 함수의 차이  
  [!INCLUDE[tsql](../../includes/tsql-md.md)] 테이블 반환 함수는 함수 호출의 결과를 중간 테이블로 구체화합니다. TVF는 중간 테이블을 사용하므로 결과에 대해 제약 조건 및 고유 인덱스를 지원할 수 있습니다. 이러한 기능은 대규모의 결과가 반환할 때 매우 유용합니다.  
@@ -57,7 +57,7 @@ Public Shared Sub FillRow ( <Out()> ByRef value As SqlInt32)
 ```  
   
 ### <a name="defining-a-table-valued-function-in-transact-sql"></a>Transact-SQL에서 테이블 반환 함수 정의  
- CLR 테이블 반환 함수를 정의 하는 구문은 [!INCLUDE[tsql](../../includes/tsql-md.md)] 테이블 반환 함수의 구문과 유사 하며 **EXTERNAL NAME** 절이 추가 됩니다. 예를 들면 다음과 같습니다.  
+ CLR 테이블 반환 함수를 정의 하는 구문은 [!INCLUDE[tsql](../../includes/tsql-md.md)] 테이블 반환 함수의 구문과 유사 하며 **EXTERNAL NAME** 절이 추가 됩니다. 다음은 그 예입니다.  
   
 ```  
 CREATE FUNCTION GetEmpFirstLastNames()  
@@ -99,7 +99,8 @@ public class TabularEventLog
     [SqlFunction(FillRowMethodName = "FillRow")]  
     public static IEnumerable InitMethod(String logname)  
     {  
-        return new EventLog(logname).Entries;    }  
+        return new EventLog(logname).Entries;
+    }  
   
     public static void FillRow(Object obj, out SqlDateTime timeWritten, out SqlChars message, out SqlChars category, out long instanceId)  
     {  
