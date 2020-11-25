@@ -154,6 +154,8 @@
   items:
     - name: FAQ
       href: faq.md
+    - name: 문제 해결
+      href: troubleshooting.md
     - name: Azure Data Studio GitHub 리포지토리 >
       href: 'https://www.github.com/Microsoft/azuredatastudio'
     - name: 문제 보고 및 제안 >
