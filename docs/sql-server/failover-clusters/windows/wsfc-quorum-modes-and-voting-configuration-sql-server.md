@@ -12,14 +12,14 @@ helpviewer_keywords:
 - quorum [SQL Server], AlwaysOn and WSFC quorum
 - failover clustering [SQL Server], AlwaysOn Availability Groups
 ms.assetid: ca0d59ef-25f0-4047-9130-e2282d058283
-author: MashaMSFT
-ms.author: mathoma
-ms.openlocfilehash: 3144f53bed98c5f5ec92d26a1e72254b6adda25e
-ms.sourcegitcommit: f7ac1976d4bfa224332edd9ef2f4377a4d55a2c9
+author: cawrites
+ms.author: chadam
+ms.openlocfilehash: d900bbc6b8183e4a903886878cf61ce68ac39573
+ms.sourcegitcommit: 5a1ed81749800c33059dac91b0e18bd8bb3081b1
 ms.translationtype: HT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 07/02/2020
-ms.locfileid: "85895145"
+ms.lasthandoff: 11/23/2020
+ms.locfileid: "96127518"
 ---
 # <a name="wsfc-quorum-modes-and-voting-configuration-sql-server"></a>WSFC 쿼럼 모드 및 투표 구성(SQL Server)
 [!INCLUDE [SQL Server](../../../includes/applies-to-version/sqlserver.md)]
@@ -29,7 +29,7 @@ ms.locfileid: "85895145"
 ##  <a name="cluster-health-detection-by-quorum"></a><a name="ClusterHealthDetectionbyQuorum"></a> 쿼럼을 기준으로 클러스터 상태 검색  
  WSFC 클러스터의 각 노드는 주기적 하트비트 통신에 참여하여 노드의 상태를 다른 노드와 공유합니다. 응답하지 않는 노드는 오류 상태에 있는 것으로 간주됩니다.  
   
- WSFC 클러스터에서 *쿼럼* 노드 집합은 대부분의 투표 노드 및 미러링 모니터입니다. WSFC 클러스터의 전반적인 상태는 주기적 *쿼럼 득표*에 의해 결정됩니다.  쿼럼이 있으면 클러스터가 양호한 상태이고 노드 수준의 내결함성을 제공할 수 있음을 의미합니다.  
+ WSFC 클러스터에서 *쿼럼* 노드 집합은 대부분의 투표 노드 및 미러링 모니터입니다. WSFC 클러스터의 전반적인 상태는 주기적 *쿼럼 득표* 에 의해 결정됩니다.  쿼럼이 있으면 클러스터가 양호한 상태이고 노드 수준의 내결함성을 제공할 수 있음을 의미합니다.  
   
  쿼럼이 없으면 클러스터 상태가 정상이 아님을 의미합니다.  장애 조치(failover)를 수행하는 주 노드에 대해 정상 상태의 보조 노드를 사용할 수 있는지 확인하려면 전반적인 WSFC 클러스터 상태가 유지 관리되어야 합니다.  쿼럼 득표에 실패하면 WSFC 클러스터가 예방 조치로 오프라인으로 설정됩니다.  이 경우 클러스터에 등록된 모든 [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] 인스턴스가 중지될 수도 있습니다.  
   
@@ -57,7 +57,7 @@ ms.locfileid: "85895145"
 >  [!INCLUDE[ssHADR](../../../includes/sshadr-md.md)]에 대해 비대칭 스토리지 구성을 사용할 때는 일반적으로 투표 노드의 수가 홀수인 경우 노드 과반수 쿼럼 모드를 사용하고 투표 노드의 수가 짝수인 경우 노드 및 파일 공유 과반수 쿼럼 모드를 사용해야 합니다.  
   
 ##  <a name="voting-and-non-voting-nodes"></a><a name="VotingandNonVotingNodes"></a> 투표 및 비투표 노드  
- 기본적으로 WSFC 클러스터의 각 노드는 클러스터 쿼럼의 멤버로 포함됩니다. 각 노드는 전반적인 클러스터 상태를 결정하는 데 하나의 투표권이 있으며 지속적으로 쿼럼을 설정하려고 합니다.  이 시점까지 쿼럼 토론은 클러스터 상태에 대해 투표하는 WSFC 클러스터 노드 집합을 *투표 노드*로 간주합니다.  
+ 기본적으로 WSFC 클러스터의 각 노드는 클러스터 쿼럼의 멤버로 포함됩니다. 각 노드는 전반적인 클러스터 상태를 결정하는 데 하나의 투표권이 있으며 지속적으로 쿼럼을 설정하려고 합니다.  이 시점까지 쿼럼 토론은 클러스터 상태에 대해 투표하는 WSFC 클러스터 노드 집합을 *투표 노드* 로 간주합니다.  
   
  WSFC 클러스터에는 전체 클러스터가 정상 상태인지 아닌지를 명확하게 결정할 수 있는 개별 노드가 없습니다.  모든 지정된 시점에서 다른 일부 노드는 각 노드의 큐브 뷰에서 오프라인으로 표시되거나, 장애 조치(failover)가 진행 중인 것으로 표시되거나, 네트워크 통신 오류로 인해 응답하지 않는 것으로 표시될 수 있습니다.  쿼럼 투표의 주요 기능은 WSFC 클러스터의 각 노드 표시 상태가 해당 노드의 실제 상태인지 여부를 결정하는 것입니다.  
   
@@ -65,7 +65,7 @@ ms.locfileid: "85895145"
   
  그러나 다른 서브넷에 있는 노드가 쿼럼 투표에 응답하지 않는 것으로 표시되지만 실제로 온라인 상태이고 정상 상태이면 이는 서브넷 사이에 네트워크 통신 오류가 발생했기 때문일 확률이 높습니다.  클러스터 토폴로지, 쿼럼 모드 및 장애 조치(Failover) 정책 구성에 따라 해당 네트워크 통신 오류는 사실상 두 개 이상의 투표 노드 집합(또는 하위 집합)을 만들 수 있습니다.  
   
- 두 개 이상의 투표 노드 하위 집합이 자체적으로 쿼럼을 설정할 수 있는 경우 이를 *분리 장애(split-brain) 시나리오*라고 합니다.  이러한 시나리오에서는 별도의 쿼럼에 있는 노드가 다른 노드와 다르게 동작하고 충돌할 수 있습니다.  
+ 두 개 이상의 투표 노드 하위 집합이 자체적으로 쿼럼을 설정할 수 있는 경우 이를 *분리 장애(split-brain) 시나리오* 라고 합니다.  이러한 시나리오에서는 별도의 쿼럼에 있는 노드가 다른 노드와 다르게 동작하고 충돌할 수 있습니다.  
   
 > [!NOTE]  
 >  분리 장애(split-brain) 시나리오는 시스템 관리자가 수동으로 쿼럼 작업이나 흔치 않게 장애 조치(Failover)를 강제로 수행하여 쿼럼 노드 집합을 명시적으로 분할하는 경우에만 가능합니다.  

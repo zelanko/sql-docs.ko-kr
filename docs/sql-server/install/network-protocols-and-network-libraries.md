@@ -19,14 +19,14 @@ helpviewer_keywords:
 - network protocols [SQL Server], about network protocols
 - configuration options [SQL Server], libraries
 ms.assetid: 8cd437f6-9af1-44ce-9cb0-4d10c83da9ce
-author: markingmyname
-ms.author: maghan
-ms.openlocfilehash: bc3f56fe60fdab32a41e61c878b1a3988e265a28
-ms.sourcegitcommit: f7ac1976d4bfa224332edd9ef2f4377a4d55a2c9
+author: cawrites
+ms.author: chadam
+ms.openlocfilehash: 5fafee4f77a665f9409f5b7b6d1a4359765ed3ba
+ms.sourcegitcommit: 5a1ed81749800c33059dac91b0e18bd8bb3081b1
 ms.translationtype: HT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 07/02/2020
-ms.locfileid: "85880453"
+ms.lasthandoff: 11/23/2020
+ms.locfileid: "96127515"
 ---
 # <a name="network-protocols-and-network-libraries"></a>네트워크 프로토콜 및 네트워크 라이브러리
 [!INCLUDE [SQL Server Windows Only - ASDBMI ](../../includes/applies-to-version/sql-windows-only-asdbmi.md)]
@@ -52,24 +52,24 @@ ms.locfileid: "85880453"
   
 #### <a name="to-disable-smb"></a>SMB를 비활성화하려면  
   
-1.  **시작** 메뉴에서 **설정**을 가리킨 다음 **네트워크 및 전화 접속 연결**을 클릭합니다.  
+1.  **시작** 메뉴에서 **설정** 을 가리킨 다음 **네트워크 및 전화 접속 연결** 을 클릭합니다.  
   
-     인터넷 연결을 마우스 오른쪽 단추로 클릭한 후 **속성**을 클릭합니다.  
+     인터넷 연결을 마우스 오른쪽 단추로 클릭한 후 **속성** 을 클릭합니다.  
   
-2.  **Microsoft 네트워크용 클라이언트** 확인란을 선택한 다음 **제거**를 클릭합니다.  
+2.  **Microsoft 네트워크용 클라이언트** 확인란을 선택한 다음 **제거** 를 클릭합니다.  
   
 3.  제거 단계를 따릅니다.  
   
-4.  **Microsoft 네트워크용 파일 및 프린터 공유**를 선택한 다음 **제거**를 클릭합니다.  
+4.  **Microsoft 네트워크용 파일 및 프린터 공유** 를 선택한 다음 **제거** 를 클릭합니다.  
   
 5.  제거 단계를 따릅니다.  
   
 #### <a name="to-disable-smb-on-servers-accessible-from-the-internet"></a>인터넷에서 액세스 가능한 서버의 SMB를 비활성화하려면  
   
--   로컬 영역 연결 속성에서 **인터넷 프로토콜(TCP/IP) 속성** 대화 상자를 사용하여 **Microsoft 네트워크용 파일 및 프린터 공유** 및 **Microsoft 네트워크용 클라이언트**를 제거합니다.  
+-   로컬 영역 연결 속성에서 **인터넷 프로토콜(TCP/IP) 속성** 대화 상자를 사용하여 **Microsoft 네트워크용 파일 및 프린터 공유** 및 **Microsoft 네트워크용 클라이언트** 를 제거합니다.  
   
 ## <a name="endpoints"></a>엔드포인트  
- [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 에는 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 연결에 대한 새로운 개념이 도입되었습니다. 즉, 연결이 서버 끝에서 [!INCLUDE[tsql](../../includes/tsql-md.md)]*엔드포인트*로 표시됩니다. [!INCLUDE[tsql](../../includes/tsql-md.md)] 엔드포인트에 대해 사용 권한을 부여, 취소 및 거부할 수 있습니다. 기본적으로 모든 사용자는 sysadmin 그룹의 멤버나 엔드포인트 소유자에 의해 사용 권한이 거부 또는 취소되지 않은 한 엔드포인트에 액세스할 권한이 있습니다. GRANT, REVOKE 및 DENY ENDPOINT 구문에는 관리자가 엔드포인트의 카탈로그 뷰에서 가져와야 하는 엔드포인트 ID가 사용됩니다.  
+ [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 에는 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 연결에 대한 새로운 개념이 도입되었습니다. 즉, 연결이 서버 끝에서 [!INCLUDE[tsql](../../includes/tsql-md.md)]*엔드포인트* 로 표시됩니다. [!INCLUDE[tsql](../../includes/tsql-md.md)] 엔드포인트에 대해 사용 권한을 부여, 취소 및 거부할 수 있습니다. 기본적으로 모든 사용자는 sysadmin 그룹의 멤버나 엔드포인트 소유자에 의해 사용 권한이 거부 또는 취소되지 않은 한 엔드포인트에 액세스할 권한이 있습니다. GRANT, REVOKE 및 DENY ENDPOINT 구문에는 관리자가 엔드포인트의 카탈로그 뷰에서 가져와야 하는 엔드포인트 ID가 사용됩니다.  
   
  [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 설치 프로그램에서는 지원되는 모든 네트워크 프로토콜뿐만 아니라 관리자 전용 연결에 대해서도 [!INCLUDE[tsql](../../includes/tsql-md.md)] 엔드포인트를 만듭니다.  
   

@@ -14,14 +14,14 @@ helpviewer_keywords:
 - instances of SQL Server, uninstalling
 - uninstalling SQL Server
 ms.assetid: 3c64b29d-61d7-4b86-961c-0de62261c6a1
-author: markingmyname
-ms.author: maghan
-ms.openlocfilehash: c8100d6f18803f891ac9ba5607185fdbac782660
-ms.sourcegitcommit: 75f767c7b1ead31f33a870fddab6bef52f99906b
+author: cawrites
+ms.author: chadam
+ms.openlocfilehash: 16522114fb7e02517ec7385b6b7c73aa90b4b6b0
+ms.sourcegitcommit: 5a1ed81749800c33059dac91b0e18bd8bb3081b1
 ms.translationtype: HT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 07/28/2020
-ms.locfileid: "87332522"
+ms.lasthandoff: 11/23/2020
+ms.locfileid: "96127489"
 ---
 # <a name="uninstall-an-existing-instance-of-sql-server-setup"></a>SQL Server의 기존 인스턴스 제거(설치)
 [!INCLUDE [SQL Server Windows Only - ASDBMI ](../../includes/applies-to-version/sql-windows-only-asdbmi.md)]
@@ -35,7 +35,7 @@ ms.locfileid: "87332522"
 
 - SQL Server를 제거하려면 서비스로 로그온할 수 있는 권한을 가진 로컬 관리자여야 합니다. 
 - 컴퓨터에 *최소* 요구 실제 메모리 양이 있는 경우 페이지 파일의 크기를 실제 메모리 용량의 2배까지 늘립니다. 가상 메모리가 부족하면 SQL Server가 완전히 제거되지 않을 수도 있습니다. 
-- SQL Server 인스턴스가 여러 개 있는 시스템에서는 SQL Server의 마지막 인스턴스가 제거된 후에만 SQL Server 브라우저 서비스가 제거됩니다. SQL Server Browser 서비스는 **제어판**의 **프로그램 및 기능**에서 수동으로 제거할 수 있습니다. 
+- SQL Server 인스턴스가 여러 개 있는 시스템에서는 SQL Server의 마지막 인스턴스가 제거된 후에만 SQL Server 브라우저 서비스가 제거됩니다. SQL Server Browser 서비스는 **제어판** 의 **프로그램 및 기능** 에서 수동으로 제거할 수 있습니다. 
 - [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 을(를) 제거하면 설치 프로세스 중 추가된 tempdb 데이터 파일이 삭제됩니다. tempdb_mssql_*.ndf 이름 패턴의 파일이 시스템 데이터베이스 디렉터리에 있는 경우 삭제됩니다. 
   
 
@@ -73,18 +73,18 @@ ms.locfileid: "87332522"
 
 Windows 10, Windows Server 2016, Windows Server 2019 이상에서 SQL Server를 제거하려면 다음 단계를 수행합니다. 
 
-1. 제거 프로세스를 시작하려면 시작 메뉴에서 **설정**으로 이동한 다음 **앱**을 선택합니다. 
+1. 제거 프로세스를 시작하려면 시작 메뉴에서 **설정** 으로 이동한 다음 **앱** 을 선택합니다. 
 1. 검색 상자에서 `sql`을 검색합니다. 
 1. **Microsoft SQL Server (버전) (비트)** 를 선택합니다. 예들 들어 `Microsoft SQL Server 2017 (64-bit)`입니다.
-1. **제거**를 선택합니다.
+1. **제거** 를 선택합니다.
  
     ![SQL Server 제거](media/uninstall-an-existing-instance-of-sql-server-setup/uninstall-sql-server-windows-10.png)
 
-1. SQL Server 대화 상자에서 **제거**를 선택하여 Microsoft SQL Server 설치 마법사를 시작합니다. 
+1. SQL Server 대화 상자에서 **제거** 를 선택하여 Microsoft SQL Server 설치 마법사를 시작합니다. 
 
     ![SQL Server 제거](media/uninstall-an-existing-instance-of-sql-server-setup/remove-sql-2017.png)
   
-1.  인스턴스 **선택** 페이지에서 드롭다운 상자를 사용하여 제거할 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 인스턴스를 지정하거나 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 공유 기능 및 관리 도구만 제거하는 옵션을 지정합니다. 계속하려면 **다음**을 선택합니다.  
+1.  인스턴스 **선택** 페이지에서 드롭다운 상자를 사용하여 제거할 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 인스턴스를 지정하거나 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 공유 기능 및 관리 도구만 제거하는 옵션을 지정합니다. 계속하려면 **다음** 을 선택합니다.  
   
 1.  **기능 선택** 페이지에서 지정한 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 인스턴스에서 제거할 기능을 지정합니다.  
   
@@ -96,16 +96,16 @@ Windows 10, Windows Server 2016, Windows Server 2019 이상에서 SQL Server를 
 
 Windows Server 2008, Windows Server 2012 및 Windows 2012 R2에서 SQL Server를 제거하려면 다음 단계를 수행합니다. 
 
-1. 제거 프로세스를 시작하려면 **제어판**으로 이동한 다음 **프로그램 및 기능**을 선택합니다.
-1. **Microsoft SQL Server (버전) (비트)** 를 마우스 오른쪽 단추로 클릭하고 **제거**를 선택합니다. 예들 들어 `Microsoft SQL Server 2012 (64-bit)`입니다.  
+1. 제거 프로세스를 시작하려면 **제어판** 으로 이동한 다음 **프로그램 및 기능** 을 선택합니다.
+1. **Microsoft SQL Server (버전) (비트)** 를 마우스 오른쪽 단추로 클릭하고 **제거** 를 선택합니다. 예들 들어 `Microsoft SQL Server 2012 (64-bit)`입니다.  
   
     ![SQL Server 제거](media/uninstall-an-existing-instance-of-sql-server-setup/uninstall-sql-server-windows-2012.png)
 
-1. SQL Server 대화 상자에서 **제거**를 선택하여 Microsoft SQL Server 설치 마법사를 시작합니다. 
+1. SQL Server 대화 상자에서 **제거** 를 선택하여 Microsoft SQL Server 설치 마법사를 시작합니다. 
 
     ![SQL Server 제거](media/uninstall-an-existing-instance-of-sql-server-setup/remove-sql-2012.png)
   
-1.  인스턴스 **선택** 페이지에서 드롭다운 상자를 사용하여 제거할 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 인스턴스를 지정하거나 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 공유 기능 및 관리 도구만 제거하는 옵션을 지정합니다. 계속하려면 **다음**을 선택합니다.  
+1.  인스턴스 **선택** 페이지에서 드롭다운 상자를 사용하여 제거할 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 인스턴스를 지정하거나 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 공유 기능 및 관리 도구만 제거하는 옵션을 지정합니다. 계속하려면 **다음** 을 선택합니다.  
   
 1.  **기능 선택** 페이지에서 지정한 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 인스턴스에서 제거할 기능을 지정합니다.  
   

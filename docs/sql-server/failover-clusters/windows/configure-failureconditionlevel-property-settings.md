@@ -8,14 +8,14 @@ ms.reviewer: ''
 ms.technology: high-availability
 ms.topic: how-to
 ms.assetid: 513dd179-9a46-46da-9fdd-7632cf6d0816
-author: MashaMSFT
-ms.author: mathoma
-ms.openlocfilehash: 8492b1fb7b7270fb273afdd74ad12ad44b352f95
-ms.sourcegitcommit: a41e1f4199785a2b8019a419a1f3dcdc15571044
+author: cawrites
+ms.author: chadam
+ms.openlocfilehash: 678775f19cee303b4c1bb34320ca9f7fd7030e97
+ms.sourcegitcommit: 5a1ed81749800c33059dac91b0e18bd8bb3081b1
 ms.translationtype: HT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 10/13/2020
-ms.locfileid: "91988329"
+ms.lasthandoff: 11/23/2020
+ms.locfileid: "96127629"
 ---
 # <a name="configure-failureconditionlevel-property-settings"></a>FailureConditionLevel 속성 설정 구성
 [!INCLUDE [SQL Server](../../../includes/applies-to-version/sqlserver.md)]
@@ -39,7 +39,7 @@ ms.locfileid: "91988329"
   
 ##### <a name="to-configure-failureconditionlevel-settings"></a>FailureConditionLevel 설정을 구성하려면  
   
-1.  **관리자 권한으로 실행**을 통해 승격된 Windows PowerShell을 시작합니다.  
+1.  **관리자 권한으로 실행** 을 통해 승격된 Windows PowerShell을 시작합니다.  
   
 2.  클러스터 Cmdlet을 사용할 수 있도록 **FailoverClusters** 모듈을 가져옵니다.  
   
@@ -74,7 +74,7 @@ Get-ClusterResource $fci | Set-ClusterParameter FailureConditionLevel 3
   
 2.  **서비스 및 애플리케이션** 을 확장하고 FCI를 선택합니다.  
   
-3.  **기타 리소스** 에서 **SQL Server 리소스**를 마우스 오른쪽 단추로 클릭한 다음 메뉴에서 **속성** 을 선택합니다. SQL Server 리소스 **속성** 대화 상자가 열립니다.  
+3.  **기타 리소스** 에서 **SQL Server 리소스** 를 마우스 오른쪽 단추로 클릭한 다음 메뉴에서 **속성** 을 선택합니다. SQL Server 리소스 **속성** 대화 상자가 열립니다.  
   
 4.  **속성** 탭을 선택하고 **FaliureConditionLevel** 속성에 대해 원하는 값을 입력한 다음 **확인** 을 클릭하여 변경 내용을 적용합니다.  
   

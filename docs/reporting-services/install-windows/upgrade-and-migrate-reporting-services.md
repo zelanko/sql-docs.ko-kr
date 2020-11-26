@@ -13,10 +13,10 @@ ms.author: maggies
 ms.topic: conceptual
 ms.date: 05/01/2020
 ms.openlocfilehash: f473590243956cd2fcba1961d3580fa052d6f4c1
-ms.sourcegitcommit: fe59f8dc27fd633f5dfce54519d6f5dcea577f56
+ms.sourcegitcommit: c5078791a07330a87a92abb19b791e950672e198
 ms.translationtype: HT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 10/09/2020
+ms.lasthandoff: 11/26/2020
 ms.locfileid: "91934628"
 ---
 # <a name="upgrade-and-migrate-reporting-services"></a>Upgrade and Migrate Reporting Services
@@ -25,13 +25,13 @@ ms.locfileid: "91934628"
 
   이 항목은 SQL Server Reporting Services의 업그레이드 및 마이그레이션 옵션에 대한 개요입니다. 다음은 SQL Server Reporting Services 배포를 업그레이드하는 일반적인 방법입니다.  
  
-- **Reporting Services 2016 및 이전 버전에서 Reporting Services 2016 및 이전 버전으로 업그레이드:  ** 현재 설치된 서버 및 인스턴스의 [!INCLUDE[ssRSnoversion](../../includes/ssrsnoversion-md.md)] 구성 요소를 업그레이드합니다. 이를 일반적으로 "현재 위치" 업그레이드라고 합니다. [!INCLUDE[ssRSnoversion](../../includes/ssrsnoversion-md.md)] 서버의 한 모드에서 다른 모드로의 전체 업그레이드는 지원되지 않습니다. 예를 들어 기본 모드 보고서 서버를 SharePoint 모드 보고서 서버로 업그레이드할 수 없습니다. 보고서 항목을 한 모드에서 다른 모드로 마이그레이션할 수 있습니다. 자세한 내용은 이 문서의 뒷부분에 나오는 [SharePoint 모드 업그레이드 및 마이그레이션 시나리오](#bkmk_sharePoint_scenarios) 섹션을 참조하세요.  
+- **Reporting Services 2016 및 이전 버전에서 Reporting Services 2016 및 이전 버전으로 업그레이드:** 현재 설치된 서버 및 인스턴스의 [!INCLUDE[ssRSnoversion](../../includes/ssrsnoversion-md.md)] 구성 요소를 업그레이드합니다. 이를 일반적으로 "현재 위치" 업그레이드라고 합니다. [!INCLUDE[ssRSnoversion](../../includes/ssrsnoversion-md.md)] 서버의 한 모드에서 다른 모드로의 전체 업그레이드는 지원되지 않습니다. 예를 들어 기본 모드 보고서 서버를 SharePoint 모드 보고서 서버로 업그레이드할 수 없습니다. 보고서 항목을 한 모드에서 다른 모드로 마이그레이션할 수 있습니다. 자세한 내용은 이 문서의 뒷부분에 나오는 [SharePoint 모드 업그레이드 및 마이그레이션 시나리오](#bkmk_sharePoint_scenarios) 섹션을 참조하세요.  
 
-- **Reporting Services 2016 및 이전 버전에서 Reporting Services 2017 및 이후 버전으로 업그레이드**는 이전 버전과 동일한 업그레이드 시나리오가 아닙니다.   Reporting Services 2016 및 이전 버전으로 업그레이드할 때는 SQL Server 설치 미디어를 사용하여 현재 위치 업그레이드를 수행할 수 있습니다.  Reporting Services 2016 및 이전 버전에서 Reporting Services 2017 및 이후 버전으로 업그레이드할 때는 새로운 Reporting Services 설치가 독립 실행형 제품이므로 동일한 단계를 따를 수 없습니다.   이는 더 이상 SQL Server 설치 미디어의 일부가 아닙니다. 
+- **Reporting Services 2016 및 이전 버전에서 Reporting Services 2017 및 이후 버전으로 업그레이드** 는 이전 버전과 동일한 업그레이드 시나리오가 아닙니다.   Reporting Services 2016 및 이전 버전으로 업그레이드할 때는 SQL Server 설치 미디어를 사용하여 현재 위치 업그레이드를 수행할 수 있습니다.  Reporting Services 2016 및 이전 버전에서 Reporting Services 2017 및 이후 버전으로 업그레이드할 때는 새로운 Reporting Services 설치가 독립 실행형 제품이므로 동일한 단계를 따를 수 없습니다.   이는 더 이상 SQL Server 설치 미디어의 일부가 아닙니다. 
 
     Reporting Services 2016 및 이전 버전에서 Reporting Services 2017 및 이후 버전으로 업그레이드하려면 [Reporting Services 설치 마이그레이션(기본 모드)](migrate-a-reporting-services-installation-native-mode.md) 문서를 따르고, Reporting Services 2017 및 이상을 대상 인스턴스로 설정하세요. 
 
-- **Reporting Services 2017에서 이후 버전으로 업그레이드**는 제품 설치 GUID가 동일하므로 현재 위치 업그레이드 시나리오입니다.  SQLServerReportingServices.exe 설치 파일을 실행하여 현재 Reporting Services가 설치된 서버에서 현재 위치 업그레이드를 시작하세요.
+- **Reporting Services 2017에서 이후 버전으로 업그레이드** 는 제품 설치 GUID가 동일하므로 현재 위치 업그레이드 시나리오입니다.  SQLServerReportingServices.exe 설치 파일을 실행하여 현재 Reporting Services가 설치된 서버에서 현재 위치 업그레이드를 시작하세요.
   
 - **마이그레이션**: 새 SharePoint 환경을 설치 및 구성하고 보고서 항목 및 리소스를 새 환경에 복사하고 기존 내용을 사용하도록 새 환경을 구성합니다. 낮은 수준 형식의 마이그레이션은 [!INCLUDE[ssRSnoversion](../../includes/ssrsnoversion-md.md)] 데이터베이스, 구성 파일 및 SharePoint 콘텐츠 데이터베이스(SharePoint 모드를 사용하는 경우)를 복사하는 것입니다.  
 

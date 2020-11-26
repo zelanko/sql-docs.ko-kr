@@ -11,14 +11,14 @@ helpviewer_keywords:
 - Availability Groups [SQL Server], WSFC clusters
 - quorum [SQL Server], AlwaysOn and WSFC quorum
 ms.assetid: b845e73a-bb01-4de2-aac2-8ac12abebc95
-author: MashaMSFT
-ms.author: mathoma
-ms.openlocfilehash: d876a1e03ba83a97c1d37b315d03ad09f3280e30
-ms.sourcegitcommit: cc23d8646041336d119b74bf239a6ac305ff3d31
+author: cawrites
+ms.author: chadam
+ms.openlocfilehash: 1ea31dcacef4a58527adc09388cbf73eac2ddd00
+ms.sourcegitcommit: 5a1ed81749800c33059dac91b0e18bd8bb3081b1
 ms.translationtype: HT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 09/23/2020
-ms.locfileid: "91114600"
+ms.lasthandoff: 11/23/2020
+ms.locfileid: "96121022"
 ---
 # <a name="view-cluster-quorum-nodeweight-settings"></a>클러스터 쿼럼 NodeWeight 설정 보기
 [!INCLUDE [SQL Server](../../../includes/applies-to-version/sqlserver.md)]
@@ -64,7 +64,7 @@ SELECT  member_name, member_state_desc, number_of_quorum_votes
   
 ##### <a name="to-view-nodeweight-settings"></a>NodeWeight 설정을 보려면  
   
-1.  **관리자 권한으로 실행**을 통해 승격된 Windows PowerShell을 시작합니다.  
+1.  **관리자 권한으로 실행** 을 통해 승격된 Windows PowerShell을 시작합니다.  
   
 2.  클러스터 commandlet을 사용할 수 있도록 `FailoverClusters` 모듈을 가져옵니다.  
   
@@ -91,7 +91,7 @@ $nodes | Format-Table -property NodeName, State, NodeWeight
   
 ##### <a name="to-view-nodeweight-settings"></a>NodeWeight 설정을 보려면  
   
-1.  **관리자 권한으로 실행**을 통해 승격된 명령 프롬프트를 시작합니다.  
+1.  **관리자 권한으로 실행** 을 통해 승격된 명령 프롬프트를 시작합니다.  
   
 2.  **cluster.exe** 를 사용하여 노드 상태 및 NodeWeight 값을 반환합니다.  
   

@@ -12,14 +12,14 @@ helpviewer_keywords:
 - clusters [SQL Server], upgrading
 - failover clustering [SQL Server], upgrading
 ms.assetid: daac41fe-7d0b-4f14-84c2-62952ad8cbfa
-author: MashaMSFT
-ms.author: mathoma
-ms.openlocfilehash: c06446f14fd2f316f297b675cc1b96efc7801ba1
-ms.sourcegitcommit: a41e1f4199785a2b8019a419a1f3dcdc15571044
+author: cawrites
+ms.author: chadam
+ms.openlocfilehash: cad44bde76e3915aeb5f99d8eeb415d89b02359e
+ms.sourcegitcommit: 5a1ed81749800c33059dac91b0e18bd8bb3081b1
 ms.translationtype: HT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 10/13/2020
-ms.locfileid: "91988317"
+ms.lasthandoff: 11/23/2020
+ms.locfileid: "96127580"
 ---
 # <a name="upgrade-a-failover-cluster-instance"></a>장애 조치(failover) 클러스터 인스턴스 업그레이드 
 [!INCLUDE [SQL Server](../../../includes/applies-to-version/sqlserver.md)]
@@ -77,11 +77,11 @@ ms.locfileid: "91988317"
   
 4.  시스템 구성 검사기가 컴퓨터에서 검색 작업을 실행합니다. 계속하려면 [!INCLUDE[clickOK](../../../includes/clickok-md.md)].  
   
-5.  제품 키 페이지에서 기존 제품 버전에 맞는 새 버전의 PID 키를 입력합니다. 예를 들어 Enterprise 장애 조치(Failover) 클러스터를 업그레이드하려면 [!INCLUDE[ssEnterprise](../../../includes/ssenterprise-md.md)]용 PID 키를 입력해야 합니다. **다음**을 클릭하여 계속합니다. 장애 조치(Failover) 클러스터 업그레이드에 사용하는 PID 키는 동일 [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] 인스턴스 내의 모든 장애 조치(Failover) 클러스터 노드에서 동일해야 합니다.  
+5.  제품 키 페이지에서 기존 제품 버전에 맞는 새 버전의 PID 키를 입력합니다. 예를 들어 Enterprise 장애 조치(Failover) 클러스터를 업그레이드하려면 [!INCLUDE[ssEnterprise](../../../includes/ssenterprise-md.md)]용 PID 키를 입력해야 합니다. **다음** 을 클릭하여 계속합니다. 장애 조치(Failover) 클러스터 업그레이드에 사용하는 PID 키는 동일 [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] 인스턴스 내의 모든 장애 조치(Failover) 클러스터 노드에서 동일해야 합니다.  
   
-6.  사용 조건 페이지에서 사용권 계약을 읽은 다음 사용 조건과 계약 조건에 동의하면 해당 확인란을 선택합니다. [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)]의 개선을 돕기 위해 기능 사용 옵션을 사용하도록 설정하여 [!INCLUDE[msCoName](../../../includes/msconame-md.md)]로 보고서를 보낼 수도 있습니다. 계속하려면**다음**을 클릭합니다. 설치를 끝내려면 **취소**를 클릭합니다.  
+6.  사용 조건 페이지에서 사용권 계약을 읽은 다음 사용 조건과 계약 조건에 동의하면 해당 확인란을 선택합니다. [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)]의 개선을 돕기 위해 기능 사용 옵션을 사용하도록 설정하여 [!INCLUDE[msCoName](../../../includes/msconame-md.md)]로 보고서를 보낼 수도 있습니다. 계속하려면 **다음** 을 클릭합니다. 설치를 끝내려면 **취소** 를 클릭합니다.  
   
-7.  인스턴스 선택 페이지에서 [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] 로 업그레이드할 [!INCLUDE[ssCurrent](../../../includes/sscurrent-md.md)]인스턴스를 지정합니다. 계속하려면**다음**을 클릭합니다.  
+7.  인스턴스 선택 페이지에서 [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] 로 업그레이드할 [!INCLUDE[ssCurrent](../../../includes/sscurrent-md.md)]인스턴스를 지정합니다. 계속하려면 **다음** 을 클릭합니다.  
   
 8.  기능 선택 페이지에는 업그레이드할 기능이 미리 선택되어 있습니다. 기능 이름을 선택하면 오른쪽 창에 각 구성 요소 그룹에 대한 설명이 나타납니다. 업그레이드할 기능은 변경할 수 없으며, 업그레이드 작업 중에 기능을 추가할 수도 없습니다. 업그레이드 작업이 완료된 후 [!INCLUDE[ssSQL14](../../../includes/sssql14-md.md)] 의 업그레이드된 인스턴스에 기능을 추가하려면 [SQL Server 2016 인스턴스에 기능 추가&#40;설치&#41;](../../../database-engine/install-windows/add-features-to-an-instance-of-sql-server-setup.md)를 참조하세요.  
   
@@ -91,7 +91,7 @@ ms.locfileid: "91988317"
   
      **인스턴스 ID** - 기본적으로 인스턴스 이름이 인스턴스 ID로 사용됩니다. 인스턴스 ID는 [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)]인스턴스의 설치 디렉터리 및 레지스트리 키를 식별하는 데 사용됩니다. 이는 기본 인스턴스와 명명된 인스턴스에 모두 해당됩니다. 기본 인스턴스의 경우 인스턴스 이름 및 인스턴스 ID는 MSSQLSERVER입니다. 기본이 아닌 인스턴스 ID를 사용하려면 **인스턴스 ID** 확인란을 선택하고 값을 입력합니다. 기본값을 재정의하는 경우, 모든 장애 조치 클러스터 노드에서 업그레이드할 인스턴스에 대해 동일한 인스턴스 ID를 지정해야 합니다. 업그레이드된 인스턴스에 대한 인스턴스 ID는 다수의 노드에서 일치해야 합니다.  
   
-     **감지된 인스턴스 및 기능** - 설치 프로그램을 실행 중인 컴퓨터에 있는 [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] 인스턴스가 표 형식으로 표시됩니다. 계속하려면**다음**을 클릭합니다.  
+     **감지된 인스턴스 및 기능** - 설치 프로그램을 실행 중인 컴퓨터에 있는 [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] 인스턴스가 표 형식으로 표시됩니다. 계속하려면 **다음** 을 클릭합니다.  
   
 10. 디스크 공간 요구 사항 페이지에서는 사용자가 지정한 기능에 필요한 디스크 공간을 계산한 후 설치 프로그램을 실행 중인 컴퓨터에서 사용 가능한 디스크 공간과 실제로 필요한 디스크 공간의 크기를 비교하여 보여 줍니다.  
   
@@ -101,15 +101,15 @@ ms.locfileid: "91988317"
   
 13. 시스템 구성 검사기는 업그레이드 작업이 시작되기 전에 사용자가 지정한 [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] 기능에 따라 사용자 컴퓨터 구성이 유효한지 검사하기 위한 하나 이상의 규칙 집합을 실행합니다.  
   
-14. 클러스터 업그레이드 보고서 페이지에 장애 조치 클러스터 인스턴스의 노드 목록 및 각 노드에 있는 [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] 구성 요소 관련 인스턴스 버전 정보가 표시됩니다. 여기에는 데이터베이스 스크립트 상태 및 복제 스크립트 상태가 나타나며, **다음**을 클릭하면 어떤 동작이 발생하는지에 대한 정보 메시지도 표시됩니다. 이미 업그레이드된 장애 조치 클러스터 노드 수 및 총 노드 수에 따라 **다음**을 클릭하면 나타나는 장애 조치 동작이 설치 프로그램에서 표시됩니다. 또한, 필수 구성 요소를 설치하지 않은 경우에는 불필요한 작동 중단 발생 가능성에 대해서도 경고합니다.   
+14. 클러스터 업그레이드 보고서 페이지에 장애 조치 클러스터 인스턴스의 노드 목록 및 각 노드에 있는 [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] 구성 요소 관련 인스턴스 버전 정보가 표시됩니다. 여기에는 데이터베이스 스크립트 상태 및 복제 스크립트 상태가 나타나며, **다음** 을 클릭하면 어떤 동작이 발생하는지에 대한 정보 메시지도 표시됩니다. 이미 업그레이드된 장애 조치 클러스터 노드 수 및 총 노드 수에 따라 **다음** 을 클릭하면 나타나는 장애 조치 동작이 설치 프로그램에서 표시됩니다. 또한, 필수 구성 요소를 설치하지 않은 경우에는 불필요한 작동 중단 발생 가능성에 대해서도 경고합니다.   
   
-15. 업그레이드 준비 페이지에는 설치 중에 지정된 설치 옵션이 트리 뷰로 표시됩니다. 계속하려면 **업그레이드**를 클릭합니다. [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] 설치 프로그램은 선택한 기능에 대한 필수 구성 요소를 먼저 설치하고 그 다음에 기능을 설치합니다.  
+15. 업그레이드 준비 페이지에는 설치 중에 지정된 설치 옵션이 트리 뷰로 표시됩니다. 계속하려면 **업그레이드** 를 클릭합니다. [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] 설치 프로그램은 선택한 기능에 대한 필수 구성 요소를 먼저 설치하고 그 다음에 기능을 설치합니다.  
   
 16. 업그레이드 중에 진행률 페이지에서 제공하는 상태 정보를 통해 현재 노드에서의 업그레이드 진행률을 모니터링할 수 있습니다.  
   
 17. 현재 노드의 업그레이드가 완료되면 클러스터 업그레이드 보고서 페이지에 모든 장애 조치 클러스터 노드, 각 장애 조치 클러스터 노드상의 기능, 해당 버전 정보 등이 표시됩니다. 표시된 버전 정보를 확인하고 계속해서 나머지 노드의 업그레이드를 진행합니다. 업그레이드된 노드로 장애 조치가 수행된 경우 이 정보도 상태 페이지에 나타납니다. Windows 클러스터 관리 도구에서 검토하여 확인할 수도 있습니다.  
   
-18. 업그레이드가 끝나면 설치 및 기타 중요한 참고 사항에 대한 요약 로그 파일을 볼 수 있는 링크가 완료 페이지에 제공됩니다. [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] 설치 과정을 완료하려면 **닫기**를 클릭합니다.  
+18. 업그레이드가 끝나면 설치 및 기타 중요한 참고 사항에 대한 요약 로그 파일을 볼 수 있는 링크가 완료 페이지에 제공됩니다. [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] 설치 과정을 완료하려면 **닫기** 를 클릭합니다.  
   
 19. 컴퓨터를 다시 시작합니다. 설치가 끝나면 설치 마법사에 표시되는 메시지를 읽어야 합니다. 설치 로그 파일에 대한 자세한 내용은 [SQL Server 설치 로그 파일 보기 및 읽기](../../../database-engine/install-windows/view-and-read-sql-server-setup-log-files.md)를 참조하세요.  
   

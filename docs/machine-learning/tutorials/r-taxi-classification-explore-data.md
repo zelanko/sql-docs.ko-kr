@@ -11,10 +11,10 @@ ms.author: davidph
 ms.custom: seo-lt-2019
 monikerRange: '>=sql-server-2016||>=sql-server-linux-ver15||>=azuresqldb-mi-current||=sqlallproducts-allversions'
 ms.openlocfilehash: cba06a816e57189cb69f9680542452d2788b233e
-ms.sourcegitcommit: ead0b8c334d487a07e41256ce5d6acafa2d23c9d
+ms.sourcegitcommit: c5078791a07330a87a92abb19b791e950672e198
 ms.translationtype: HT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 10/22/2020
+ms.lasthandoff: 11/26/2020
 ms.locfileid: "92412530"
 ---
 # <a name="r-tutorial-explore-and-visualize-data"></a>R 자습서: 데이터 탐색 및 시각화
@@ -51,7 +51,7 @@ ms.locfileid: "92412530"
 
 일반적으로 데이터 과학 솔루션 개발에는 데이터 탐색 및 데이터 시각화가 많이 포함됩니다. 따라서 샘플 데이터를 검토하지 않은 경우 먼저 검토합니다.
 
-원래 공용 데이터 세트에서는 택시 식별자 및 여정 레코드가 별도 파일로 제공되었습니다. 그러나 샘플 데이터를 쉽게 사용할 수 있도록 두 개의 원래 데이터 세트가 _medallion_ , _hack\_license_ 및 _pickup\_datetime_ 열에 조인되었습니다.  레코드도 원래 레코드 수의 1%만 가져오도록 샘플링되었습니다. 다운 샘플링된 결과 데이터 세트에는 1,703,957개의 행과 23개 열이 있습니다.
+원래 공용 데이터 세트에서는 택시 식별자 및 여정 레코드가 별도 파일로 제공되었습니다. 그러나 샘플 데이터를 쉽게 사용할 수 있도록 두 개의 원래 데이터 세트가 _medallion_, _hack\_license_ 및 _pickup\_datetime_ 열에 조인되었습니다.  레코드도 원래 레코드 수의 1%만 가져오도록 샘플링되었습니다. 다운 샘플링된 결과 데이터 세트에는 1,703,957개의 행과 23개 열이 있습니다.
 
 **택시 식별자**
   

@@ -15,14 +15,14 @@ helpviewer_keywords:
 - clusters [SQL Server], creating
 - removing nodes
 ms.assetid: 30e06a7d-75e9-44e2-bca3-b3b0c4a33f61
-author: MashaMSFT
-ms.author: mathoma
-ms.openlocfilehash: f505d4559529661738efc8504931c7f96ad8933f
-ms.sourcegitcommit: cc23d8646041336d119b74bf239a6ac305ff3d31
+author: cawrites
+ms.author: chadam
+ms.openlocfilehash: 0f99d649dfda393c5371039976321c4bf54be684
+ms.sourcegitcommit: 5a1ed81749800c33059dac91b0e18bd8bb3081b1
 ms.translationtype: HT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 09/23/2020
-ms.locfileid: "91114673"
+ms.lasthandoff: 11/23/2020
+ms.locfileid: "96121228"
 ---
 # <a name="create-a-new-always-on-failover-cluster-instance-setup"></a>새 Always On 장애 조치(Failover) 클러스터 인스턴스 만들기(설치 프로그램)
 
@@ -89,19 +89,19 @@ ms.locfileid: "91114673"
   
 1.  [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] 설치 미디어를 넣고 루트 폴더에서 Setup.exe를 두 번 클릭합니다. 네트워크 공유 위치에서 설치하려면 공유 위치의 루트 폴더로 이동한 다음 Setup.exe를 두 번 클릭합니다. 필수 구성 요소를 설치하는 방법에 대한 자세한 내용은 [Before Installing Failover Clustering](../../../sql-server/failover-clusters/install/before-installing-failover-clustering.md)를 참조하십시오.  
   
-2.  설치 마법사가 [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] 설치 센터를 시작합니다. [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)]의 클러스터를 새로 설치하려면 설치 페이지에서 **[!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] 장애 조치(Failover) 클러스터 새로 설치**를 클릭합니다.  
+2.  설치 마법사가 [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] 설치 센터를 시작합니다. [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)]의 클러스터를 새로 설치하려면 설치 페이지에서 **[!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] 장애 조치(Failover) 클러스터 새로 설치** 를 클릭합니다.  
   
-3.  시스템 구성 검사기가 컴퓨터에서 검색 작업을 실행합니다. 계속하려면 [!INCLUDE[clickOK](../../../includes/clickok-md.md)]. **자세한 정보 표시**를 클릭하여 화면에 세부 정보를 표시하거나 **자세한 보고서 보기**를 클릭하여 HTML 보고서 형식으로 볼 수 있습니다.  
+3.  시스템 구성 검사기가 컴퓨터에서 검색 작업을 실행합니다. 계속하려면 [!INCLUDE[clickOK](../../../includes/clickok-md.md)]. **자세한 정보 표시** 를 클릭하여 화면에 세부 정보를 표시하거나 **자세한 보고서 보기** 를 클릭하여 HTML 보고서 형식으로 볼 수 있습니다.  
   
-4.  계속하려면 **다음**을 클릭합니다.  
+4.  계속하려면 **다음** 을 클릭합니다.  
   
 5.  설치 지원 파일 페이지에서 **설치** 를 클릭하여 설치 지원 파일을 설치합니다.  
   
-6.  시스템 구성 검사기가 설치를 계속하기 전에 컴퓨터의 시스템 상태를 확인합니다. 검사가 완료되면 **다음** 을 클릭하여 작업을 계속 진행합니다. **자세한 정보 표시**를 클릭하여 화면에 세부 정보를 표시하거나 **자세한 보고서 보기**를 클릭하여 HTML 보고서 형식으로 볼 수 있습니다.  
+6.  시스템 구성 검사기가 설치를 계속하기 전에 컴퓨터의 시스템 상태를 확인합니다. 검사가 완료되면 **다음** 을 클릭하여 작업을 계속 진행합니다. **자세한 정보 표시** 를 클릭하여 화면에 세부 정보를 표시하거나 **자세한 보고서 보기** 를 클릭하여 HTML 보고서 형식으로 볼 수 있습니다.  
   
 7.  제품 키 페이지에서 [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)]무료 버전을 설치할지, 아니면 제품의 프로덕션 버전에 대한 PID 키가 있는지 표시합니다. 자세한 내용은 [SQL Server 2016 버전 및 구성 요소](../../../sql-server/editions-and-components-of-sql-server-2016.md)를 참조하세요.  
   
-8.  사용 조건 페이지에서 사용권 계약을 읽은 다음 사용 조건과 계약 조건에 동의하면 해당 확인란을 선택합니다. [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)]의 개선을 돕기 위해 기능 사용 옵션을 사용하도록 설정하여 [!INCLUDE[msCoName](../../../includes/msconame-md.md)]로 보고서를 보낼 수도 있습니다. **다음**을 클릭하여 계속합니다. 설치를 끝내려면 **취소**를 클릭합니다.  
+8.  사용 조건 페이지에서 사용권 계약을 읽은 다음 사용 조건과 계약 조건에 동의하면 해당 확인란을 선택합니다. [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)]의 개선을 돕기 위해 기능 사용 옵션을 사용하도록 설정하여 [!INCLUDE[msCoName](../../../includes/msconame-md.md)]로 보고서를 보낼 수도 있습니다. **다음** 을 클릭하여 계속합니다. 설치를 끝내려면 **취소** 를 클릭합니다.  
   
 9. 기능 선택 페이지에서 설치할 구성 요소를 선택합니다. 기능 이름을 선택하면 오른쪽 창에 각 구성 요소 그룹에 대한 설명이 나타납니다. 확인란을 원하는 대로 선택할 수 있지만 장애 조치(Failover) 클러스터링을 지원하는 것은 테이블 형식 모드의 [!INCLUDE[ssDE](../../../includes/ssde-md.md)], [!INCLUDE[ssASnoversion](../../../includes/ssasnoversion-md.md)] 및 다차원 모드의 [!INCLUDE[ssASnoversion](../../../includes/ssasnoversion-md.md)] 뿐입니다. 선택한 다른 구성 요소는 설치를 실행하고 있는 현재 노드에서 장애 조치(Failover) 기능 없이 독립 실행형 기능으로 실행됩니다. [!INCLUDE[ssASnoversion](../../../includes/ssasnoversion-md.md)] 모드에 대한 자세한 내용은 [Analysis Services 인스턴스의 서버 모드 확인](https://docs.microsoft.com/analysis-services/instances/determine-the-server-mode-of-an-analysis-services-instance)을 참조하세요.  
   
@@ -138,7 +138,7 @@ ms.locfileid: "91114673"
   
      **인스턴스 루트 디렉터리** - 기본적으로 인스턴스 루트 디렉터리는 C:\Program Files\\[!INCLUDE[msCoName](../../../includes/msconame-md.md)][!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)]\\입니다. 기본이 아닌 루트 디렉터리를 지정하려면 제공된 필드를 사용하거나 줄임표 단추를 클릭하고 설치 폴더를 찾습니다.  
   
-     **이 컴퓨터에서 발견된 [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] 인스턴스 및 기능** - 설치 프로그램을 실행 중인 컴퓨터에 있는 [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] 인스턴스가 표 형식으로 표시됩니다. 컴퓨터에 기본 인스턴스가 이미 설치된 경우 명명된 [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)]인스턴스를 설치해야 합니다. **다음**을 클릭하여 계속합니다.  
+     **이 컴퓨터에서 발견된 [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] 인스턴스 및 기능** - 설치 프로그램을 실행 중인 컴퓨터에 있는 [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] 인스턴스가 표 형식으로 표시됩니다. 컴퓨터에 기본 인스턴스가 이미 설치된 경우 명명된 [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)]인스턴스를 설치해야 합니다. **다음** 을 클릭하여 계속합니다.  
   
 12. 클러스터 리소스 그룹 페이지를 사용하여 [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] 가상 서버 리소스를 배치할 클러스터 리소스 그룹 또는 역할 이름을 지정합니다. [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] 클러스터 리소스 그룹 이름을 지정하는 데는 두 가지 방법이 있습니다.  
   
@@ -146,7 +146,7 @@ ms.locfileid: "91114673"
   
     -   새로 만들 그룹의 이름을 입력합니다. "Available storage"는 유효한 그룹 이름이 아닙니다.  
   
-13. 클러스터 디스크 선택 페이지에서 [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] 장애 조치(failover) 클러스터 인스턴스에 대한 공유 클러스터 디스크 리소스를 선택합니다. 클러스터 디스크에는 [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] 데이터가 저장됩니다. 디스크를 여러 개 지정할 수 있습니다. 사용 가능한 공유 디스크 표에는 사용 가능한 디스크 목록, 각 디스크가 공유 디스크로 정규화되었는지 여부 및 각 디스크 리소스에 대한 설명이 표시됩니다. **다음**을 클릭하여 계속합니다.  
+13. 클러스터 디스크 선택 페이지에서 [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] 장애 조치(failover) 클러스터 인스턴스에 대한 공유 클러스터 디스크 리소스를 선택합니다. 클러스터 디스크에는 [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] 데이터가 저장됩니다. 디스크를 여러 개 지정할 수 있습니다. 사용 가능한 공유 디스크 표에는 사용 가능한 디스크 목록, 각 디스크가 공유 디스크로 정규화되었는지 여부 및 각 디스크 리소스에 대한 설명이 표시됩니다. **다음** 을 클릭하여 계속합니다.  
   
     > [!NOTE]  
     >  모든 데이터베이스에 대해 첫 번째 드라이브가 기본 드라이브로 사용되지만 [!INCLUDE[ssDE](../../../includes/ssde-md.md)] 또는 [!INCLUDE[ssASnoversion](../../../includes/ssasnoversion-md.md)] 구성 페이지에서 이를 변경할 수 있습니다.  
@@ -157,7 +157,7 @@ ms.locfileid: "91114673"
   
     -   **네트워크 설정** – 장애 조치(Failover) 클러스터 인스턴스의 IP 유형과 IP 주소를 지정합니다.  
   
-     **다음**을 클릭하여 계속합니다.  
+     **다음** 을 클릭하여 계속합니다.  
   
 15. 이 페이지를 사용하여 클러스터 보안 정책을 지정할 수 있습니다.  
   
@@ -165,7 +165,7 @@ ms.locfileid: "91114673"
   
     -   [!INCLUDE[winxpsvr](../../../includes/winxpsvr-md.md)]에서 [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] 서비스에 대한 도메인 그룹을 지정합니다. 모든 리소스 사용 권한은 [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] 서비스 계정을 그룹 멤버로 포함하는 도메인 수준 그룹을 통해 제어됩니다.  
   
-     **다음**을 클릭하여 계속합니다.  
+     **다음** 을 클릭하여 계속합니다.  
   
 16. 이 항목의 나머지 부분에 대한 워크플로는 설치에 대해 지정한 기능에 따라 달라집니다. 선택 항목에 따라 일부 페이지가 표시되지 않을 수도 있습니다([!INCLUDE[ssDE](../../../includes/ssde-md.md)], [!INCLUDE[ssASnoversion](../../../includes/ssasnoversion-md.md)]및 [!INCLUDE[ssRSnoversion](../../../includes/ssrsnoversion-md.md)]).  
   
@@ -177,7 +177,7 @@ ms.locfileid: "91114673"
   
      **보안 정보** [!INCLUDE[ssNoteStrongPass](../../../includes/ssnotestrongpass-md.md)]  
   
-     [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] 서비스에 대한 로그인 정보 지정을 완료하면 **다음**을 클릭합니다.  
+     [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] 서비스에 대한 로그인 정보 지정을 완료하면 **다음** 을 클릭합니다.  
   
 18. **서버 구성 - 데이터 정렬** 탭을 사용하여 [!INCLUDE[ssDE](../../../includes/ssde-md.md)] 및 [!INCLUDE[ssASnoversion](../../../includes/ssasnoversion-md.md)]에 대해 기본이 아닌 데이터 정렬을 지정할 수 있습니다.  
   
@@ -187,11 +187,11 @@ ms.locfileid: "91114673"
   
          디바이스가 [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)]에 성공적으로 연결되면 Windows 인증 및 혼합 모드에 모두 동일한 보안 메커니즘이 적용됩니다.  
   
-    -   [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] 관리자 - [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)]인스턴스에 대한 시스템 관리자를 한 명 이상 지정해야 합니다. [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] 설치 프로그램을 실행하는 계정을 추가하려면 **현재 사용자 추가**를 클릭합니다. 시스템 관리자 목록에 계정을 추가하거나 목록의 계정을 제거하려면 **추가** 또는 **제거**를 클릭한 다음 [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)]인스턴스에 대한 관리자 권한을 가질 사용자, 그룹 또는 컴퓨터 목록을 편집합니다.  
+    -   [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] 관리자 - [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)]인스턴스에 대한 시스템 관리자를 한 명 이상 지정해야 합니다. [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] 설치 프로그램을 실행하는 계정을 추가하려면 **현재 사용자 추가** 를 클릭합니다. 시스템 관리자 목록에 계정을 추가하거나 목록의 계정을 제거하려면 **추가** 또는 **제거** 를 클릭한 다음 [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)]인스턴스에 대한 관리자 권한을 가질 사용자, 그룹 또는 컴퓨터 목록을 편집합니다.  
   
-     목록 편집을 마쳤으면 [!INCLUDE[clickOK](../../../includes/clickok-md.md)]. 구성 대화 상자에서 관리자 목록을 확인합니다. 목록 구성을 완료했으면 **다음**을 클릭합니다.  
+     목록 편집을 마쳤으면 [!INCLUDE[clickOK](../../../includes/clickok-md.md)]. 구성 대화 상자에서 관리자 목록을 확인합니다. 목록 구성을 완료했으면 **다음** 을 클릭합니다.  
   
-20. [!INCLUDE[ssDE](../../../includes/ssde-md.md)] 구성 - 데이터 디렉터리 페이지를 사용하여 기본이 아닌 설치 디렉터리를 지정합니다. 기본 디렉터리에 설치하려면 **다음**을 클릭합니다.  
+20. [!INCLUDE[ssDE](../../../includes/ssde-md.md)] 구성 - 데이터 디렉터리 페이지를 사용하여 기본이 아닌 설치 디렉터리를 지정합니다. 기본 디렉터리에 설치하려면 **다음** 을 클릭합니다.  
   
     > [!IMPORTANT]  
     >  기본이 아닌 설치 디렉터리를 지정하는 경우 해당 설치 폴더가 이 [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)]인스턴스에만 사용되도록 해야 합니다. 이 대화 상자의 어떠한 디렉터리도 다른 [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)]인스턴스의 디렉터리와 공유되지 않아야 합니다. 데이터 디렉터리는 장애 조치(failover) 클러스터 인스턴스의 공유 클러스터 디스크에 배치해야 합니다.  
@@ -199,13 +199,13 @@ ms.locfileid: "91114673"
     > [!NOTE]  
     >  SMB(서버 메시지 블록) 파일 서버를 데이터 디렉터리로 지정하려면 **기본 데이터 루트 디렉터리** 를 \\\Servername\ShareName\\... 형식의 파일 공유로 설정합니다.  
    
-21. [!INCLUDE[ssDE](../../../includes/ssde-md.md)] 구성 - FILESTREAM 페이지를 사용하여 [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)]인스턴스에 FILESTREAM을 설정합니다. **다음**을 클릭하여 계속합니다.  
+21. [!INCLUDE[ssDE](../../../includes/ssde-md.md)] 구성 - FILESTREAM 페이지를 사용하여 [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)]인스턴스에 FILESTREAM을 설정합니다. **다음** 을 클릭하여 계속합니다.  
   
-22. [!INCLUDE[ssASnoversion](../../../includes/ssasnoversion-md.md)] 구성 - 계정 프로비전 페이지를 사용하여 [!INCLUDE[ssASnoversion](../../../includes/ssasnoversion-md.md)]에 대해 관리자 권한을 갖는 사용자 또는 계정을 지정합니다. [!INCLUDE[ssASnoversion](../../../includes/ssasnoversion-md.md)]에 대한 시스템 관리자를 한 명 이상 지정해야 합니다. [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] 설치 프로그램을 실행하는 계정을 추가하려면 **현재 사용자 추가**를 클릭합니다. 시스템 관리자 목록에 계정을 추가하거나 목록의 계정을 제거하려면 **추가** 또는 **제거**를 클릭한 다음 [!INCLUDE[ssASnoversion](../../../includes/ssasnoversion-md.md)]에 대한 관리자 권한을 가질 사용자, 그룹 또는 컴퓨터 목록을 편집합니다.
+22. [!INCLUDE[ssASnoversion](../../../includes/ssasnoversion-md.md)] 구성 - 계정 프로비전 페이지를 사용하여 [!INCLUDE[ssASnoversion](../../../includes/ssasnoversion-md.md)]에 대해 관리자 권한을 갖는 사용자 또는 계정을 지정합니다. [!INCLUDE[ssASnoversion](../../../includes/ssasnoversion-md.md)]에 대한 시스템 관리자를 한 명 이상 지정해야 합니다. [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] 설치 프로그램을 실행하는 계정을 추가하려면 **현재 사용자 추가** 를 클릭합니다. 시스템 관리자 목록에 계정을 추가하거나 목록의 계정을 제거하려면 **추가** 또는 **제거** 를 클릭한 다음 [!INCLUDE[ssASnoversion](../../../includes/ssasnoversion-md.md)]에 대한 관리자 권한을 가질 사용자, 그룹 또는 컴퓨터 목록을 편집합니다.
   
-     목록 편집을 마쳤으면 [!INCLUDE[clickOK](../../../includes/clickok-md.md)]. 구성 대화 상자에서 관리자 목록을 확인합니다. 목록 구성을 완료했으면 **다음**을 클릭합니다.  
+     목록 편집을 마쳤으면 [!INCLUDE[clickOK](../../../includes/clickok-md.md)]. 구성 대화 상자에서 관리자 목록을 확인합니다. 목록 구성을 완료했으면 **다음** 을 클릭합니다.  
   
-23. [!INCLUDE[ssASnoversion](../../../includes/ssasnoversion-md.md)] 구성 - 데이터 디렉터리 페이지를 사용하여 기본이 아닌 설치 디렉터리를 지정합니다. 기본 디렉터리에 설치하려면 **다음**을 클릭합니다.  
+23. [!INCLUDE[ssASnoversion](../../../includes/ssasnoversion-md.md)] 구성 - 데이터 디렉터리 페이지를 사용하여 기본이 아닌 설치 디렉터리를 지정합니다. 기본 디렉터리에 설치하려면 **다음** 을 클릭합니다.  
   
     > [!IMPORTANT]  
     >  기본이 아닌 설치 디렉터리를 지정하는 경우 해당 설치 폴더가 이 [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)]인스턴스에만 사용되도록 해야 합니다. 이 대화 상자의 어떠한 디렉터리도 다른 [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)]인스턴스의 디렉터리와 공유되지 않아야 합니다. 데이터 디렉터리는 장애 조치(failover) 클러스터 인스턴스의 공유 클러스터 디스크에 배치해야 합니다.  
@@ -215,11 +215,11 @@ ms.locfileid: "91114673"
  
 25. 시스템 구성 검사기는 사용자가 지정한 [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] 기능에 따라 구성의 유효성을 검사하기 위해 하나 이상의 규칙 집합을 실행합니다.  
   
-26. 설치 준비 완료 페이지에는 설치 중에 지정된 설치 옵션이 트리 뷰로 표시됩니다. 계속하려면 **설치**를 클릭합니다. 설치 프로그램은 선택한 기능에 대한 필수 구성 요소를 먼저 설치하고 그 다음에 기능을 설치합니다.  
+26. 설치 준비 완료 페이지에는 설치 중에 지정된 설치 옵션이 트리 뷰로 표시됩니다. 계속하려면 **설치** 를 클릭합니다. 설치 프로그램은 선택한 기능에 대한 필수 구성 요소를 먼저 설치하고 그 다음에 기능을 설치합니다.  
   
 27. 설치 중에 설치 진행률 페이지에서 제공하는 상태 정보를 통해 설치 진행률을 모니터링할 수 있습니다.  
   
-28. 설치가 끝나면 설치 및 기타 중요한 참고 사항에 대한 요약 로그 파일을 볼 수 있는 링크가 **완료** 페이지에 제공됩니다. [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] 설치 과정을 완료하려면 **닫기**를 클릭합니다.  
+28. 설치가 끝나면 설치 및 기타 중요한 참고 사항에 대한 요약 로그 파일을 볼 수 있는 링크가 **완료** 페이지에 제공됩니다. [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] 설치 과정을 완료하려면 **닫기** 를 클릭합니다.  
   
 29. 컴퓨터를 다시 시작합니다. 설치가 끝나면 설치 마법사에 표시되는 메시지를 읽어야 합니다. 설치 로그 파일에 대한 자세한 내용은 [SQL Server 설치 로그 파일 보기 및 읽기](../../../database-engine/install-windows/view-and-read-sql-server-setup-log-files.md)를 참조하세요.  
   
@@ -238,24 +238,24 @@ ms.locfileid: "91114673"
   
 2.  Windows Installer 4.5가 필요하며 이는 설치 마법사에 의해 설치될 수 있습니다. 컴퓨터를 다시 시작하라는 메시지가 표시되면 컴퓨터를 다시 시작한 다음 [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] 설치 프로그램을 다시 시작합니다.  
   
-3.  필수 구성 요소를 설치하고 나면 설치 마법사를 통해 [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] 설치 센터가 시작됩니다. 클러스터링할 노드를 준비하려면 **고급** 페이지로 이동하여 **고급 클러스터 준비**를 클릭합니다.  
+3.  필수 구성 요소를 설치하고 나면 설치 마법사를 통해 [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] 설치 센터가 시작됩니다. 클러스터링할 노드를 준비하려면 **고급** 페이지로 이동하여 **고급 클러스터 준비** 를 클릭합니다.  
   
-4.  시스템 구성 검사기가 컴퓨터에서 검색 작업을 실행합니다. 계속하려면 [!INCLUDE[clickOK](../../../includes/clickok-md.md)]. **자세한 정보 표시**를 클릭하여 화면에 세부 정보를 표시하거나 **자세한 보고서 보기**를 클릭하여 HTML 보고서 형식으로 볼 수 있습니다.  
+4.  시스템 구성 검사기가 컴퓨터에서 검색 작업을 실행합니다. 계속하려면 [!INCLUDE[clickOK](../../../includes/clickok-md.md)]. **자세한 정보 표시** 를 클릭하여 화면에 세부 정보를 표시하거나 **자세한 보고서 보기** 를 클릭하여 HTML 보고서 형식으로 볼 수 있습니다.  
   
 5.  설치 지원 파일 페이지에서 **설치** 를 클릭하여 설치 지원 파일을 설치합니다.  
   
-6.  시스템 구성 검사기가 설치를 계속하기 전에 컴퓨터의 시스템 상태를 확인합니다. 검사가 완료되면 **다음** 을 클릭하여 작업을 계속 진행합니다. **자세한 정보 표시**를 클릭하여 화면에 세부 정보를 표시하거나 **자세한 보고서 보기**를 클릭하여 HTML 보고서 형식으로 볼 수 있습니다.  
+6.  시스템 구성 검사기가 설치를 계속하기 전에 컴퓨터의 시스템 상태를 확인합니다. 검사가 완료되면 **다음** 을 클릭하여 작업을 계속 진행합니다. **자세한 정보 표시** 를 클릭하여 화면에 세부 정보를 표시하거나 **자세한 보고서 보기** 를 클릭하여 HTML 보고서 형식으로 볼 수 있습니다.  
   
 7.  지역화된 운영 체제에서 설치하고 있고 설치 미디어에 영어와 해당 운영 체제 언어에 대한 언어 팩이 둘 다 있는 경우 언어 선택 페이지에서 [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] 인스턴스의 언어를 지정할 수 있습니다. 언어 간 호환성 지원 및 설치 고려 사항에 대한 자세한 내용은 [SQL Server의 로컬 언어 버전](../../../sql-server/install/local-language-versions-in-sql-server.md)을 참조하세요.  
   
-     계속하려면 **다음**을 클릭합니다.  
+     계속하려면 **다음** 을 클릭합니다.  
   
 8.  제품 키 페이지에서 [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)]무료 버전을 설치할지 아니면 제품의 프로덕션 버전에 대한 PID 키가 있는지 표시합니다. 자세한 내용은 [SQL Server 2016 버전 및 구성 요소](../../../sql-server/editions-and-components-of-sql-server-2016.md)를 참조하세요.  
   
     > [!NOTE]  
     >  동일한 장애 조치(failover) 클러스터 인스턴스를 위해 준비하고 있는 모든 노드에서 동일한 제품 키를 지정해야 합니다.  
   
-9. 사용 조건 페이지에서 사용권 계약을 읽은 다음 사용 조건과 계약 조건에 동의하면 해당 확인란을 선택합니다. [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)]의 개선을 돕기 위해 기능 사용 옵션을 사용하도록 설정하여 [!INCLUDE[msCoName](../../../includes/msconame-md.md)]로 보고서를 보낼 수도 있습니다. **다음**을 클릭하여 계속합니다. 설치를 끝내려면 **취소**를 클릭합니다.  
+9. 사용 조건 페이지에서 사용권 계약을 읽은 다음 사용 조건과 계약 조건에 동의하면 해당 확인란을 선택합니다. [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)]의 개선을 돕기 위해 기능 사용 옵션을 사용하도록 설정하여 [!INCLUDE[msCoName](../../../includes/msconame-md.md)]로 보고서를 보낼 수도 있습니다. **다음** 을 클릭하여 계속합니다. 설치를 끝내려면 **취소** 를 클릭합니다.  
   
 10. 기능 선택 페이지에서 설치할 구성 요소를 선택합니다. 기능 이름을 선택하면 오른쪽 창에 각 구성 요소 그룹에 대한 설명이 나타납니다. 확인란을 원하는 대로 선택할 수 있지만 장애 조치(Failover) 클러스터링을 지원하는 것은 테이블 형식 모드의 [!INCLUDE[ssDE](../../../includes/ssde-md.md)], [!INCLUDE[ssASnoversion](../../../includes/ssasnoversion-md.md)] 및 다차원 모드의 [!INCLUDE[ssASnoversion](../../../includes/ssasnoversion-md.md)] 뿐입니다. 선택한 다른 구성 요소는 설치를 실행하고 있는 현재 노드에서 장애 조치(Failover) 기능 없이 독립 실행형 기능으로 실행됩니다. [!INCLUDE[ssASnoversion](../../../includes/ssasnoversion-md.md)] 모드에 대한 자세한 내용은 [Analysis Services 인스턴스의 서버 모드 확인](https://docs.microsoft.com/analysis-services/instances/determine-the-server-mode-of-an-analysis-services-instance)을 참조하세요.  
   
@@ -278,7 +278,7 @@ ms.locfileid: "91114673"
   
      **인스턴스 루트 디렉터리** - 기본적으로 인스턴스 루트 디렉터리는 C:\Program Files\\[!INCLUDE[msCoName](../../../includes/msconame-md.md)][!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)]\\입니다. 기본이 아닌 루트 디렉터리를 지정하려면 제공된 필드를 사용하거나 줄임표 단추를 클릭하고 설치 폴더를 찾습니다.  
   
-     **설치된 인스턴스** - 설치 프로그램을 실행 중인 컴퓨터에 있는 [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] 인스턴스가 표 형식으로 표시됩니다. 컴퓨터에 기본 인스턴스가 이미 설치된 경우 명명된 [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)]인스턴스를 설치해야 합니다. **다음**을 클릭하여 계속합니다.  
+     **설치된 인스턴스** - 설치 프로그램을 실행 중인 컴퓨터에 있는 [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] 인스턴스가 표 형식으로 표시됩니다. 컴퓨터에 기본 인스턴스가 이미 설치된 경우 명명된 [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)]인스턴스를 설치해야 합니다. **다음** 을 클릭하여 계속합니다.  
   
 12. 디스크 공간 요구 사항 페이지에서는 사용자가 지정한 기능에 필요한 디스크 공간을 계산한 후 설치 프로그램을 실행 중인 컴퓨터에서 사용 가능한 디스크 공간과 실제로 필요한 디스크 공간의 크기를 비교하여 보여 줍니다.  
   
@@ -288,7 +288,7 @@ ms.locfileid: "91114673"
   
     -   [!INCLUDE[winxpsvr](../../../includes/winxpsvr-md.md)]에서 [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] 서비스에 대한 도메인 그룹을 지정합니다. 모든 리소스 사용 권한은 [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] 서비스 계정을 그룹 멤버로 포함하는 도메인 수준 그룹을 통해 제어됩니다.  
   
-     **다음**을 클릭하여 계속합니다.  
+     **다음** 을 클릭하여 계속합니다.  
   
 14. 이 항목의 나머지 부분에 대한 워크플로는 설치에 대해 지정한 기능에 따라 달라집니다. 선택 항목에 따라 일부 페이지가 표시되지 않을 수도 있습니다.  
   
@@ -300,11 +300,11 @@ ms.locfileid: "91114673"
   
      **보안 정보** [!INCLUDE[ssNoteStrongPass](../../../includes/ssnotestrongpass-md.md)]  
   
-     [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] 서비스에 대한 로그인 정보 지정을 완료하면 **다음**을 클릭합니다.  
+     [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] 서비스에 대한 로그인 정보 지정을 완료하면 **다음** 을 클릭합니다.  
   
 16. **서버 구성 - 데이터 정렬** 탭을 사용하여 [!INCLUDE[ssDE](../../../includes/ssde-md.md)] 및 [!INCLUDE[ssASnoversion](../../../includes/ssasnoversion-md.md)]에 대해 기본이 아닌 데이터 정렬을 지정할 수 있습니다.  
   
-17. **서버 구성 - Filestream** 을 사용하여 [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)]인스턴스에 FILESTREAM을 설정합니다.  **다음**을 클릭하여 계속합니다.  
+17. **서버 구성 - Filestream** 을 사용하여 [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)]인스턴스에 FILESTREAM을 설정합니다.  **다음** 을 클릭하여 계속합니다.  
   
 18. [!INCLUDE[ssRSnoversion](../../../includes/ssrsnoversion-md.md)] 구성 페이지를 사용하여 만들 [!INCLUDE[ssRSnoversion](../../../includes/ssrsnoversion-md.md)] 설치 유형을 지정할 수 있습니다. 장애 조치(failover) 클러스터 인스턴스 설치의 경우 이 옵션은 구성되지 않은 [!INCLUDE[ssRSnoversion](../../../includes/ssrsnoversion-md.md)] 설치로 설정됩니다. 설치를 완료한 후에 [!INCLUDE[ssRSnoversion](../../../includes/ssrsnoversion-md.md)] 서비스를 구성해야 합니다.  
    
@@ -312,11 +312,11 @@ ms.locfileid: "91114673"
   
 20. 시스템 구성 검사기는 사용자가 지정한 [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] 기능에 따라 구성의 유효성을 검사하기 위해 하나 이상의 규칙 집합을 실행합니다.  
   
-21. 설치 준비 완료 페이지에는 설치 중에 지정된 설치 옵션이 트리 뷰로 표시됩니다. 계속하려면 **설치**를 클릭합니다. 설치 프로그램은 선택한 기능에 대한 필수 구성 요소를 먼저 설치하고 그 다음에 기능을 설치합니다.  
+21. 설치 준비 완료 페이지에는 설치 중에 지정된 설치 옵션이 트리 뷰로 표시됩니다. 계속하려면 **설치** 를 클릭합니다. 설치 프로그램은 선택한 기능에 대한 필수 구성 요소를 먼저 설치하고 그 다음에 기능을 설치합니다.  
   
      설치 중에 설치 진행률 페이지에서 제공하는 상태 정보를 통해 설치 진행률을 모니터링할 수 있습니다. 설치가 끝나면 설치 및 기타 중요한 참고 사항에 대한 요약 로그 파일을 볼 수 있는 링크가 **완료** 페이지에 제공됩니다.  
   
-22. [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] 설치 과정을 완료하려면 **닫기**를 클릭합니다.  
+22. [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] 설치 과정을 완료하려면 **닫기** 를 클릭합니다.  
   
 23. 컴퓨터를 다시 시작합니다. 설치가 끝나면 설치 마법사에 표시되는 메시지를 읽어야 합니다. 설치 로그 파일에 대한 자세한 내용은 [SQL Server 설치 로그 파일 보기 및 읽기](../../../database-engine/install-windows/view-and-read-sql-server-setup-log-files.md)를 참조하세요.  
   
@@ -326,17 +326,17 @@ ms.locfileid: "91114673"
   
 #### <a name="advancedenterprise-failover-cluster-instance-install-step-2-complete"></a>고급/엔터프라이즈 장애 조치(failover) 클러스터 인스턴스 설치 2단계: 완료  
   
-1.  [준비 단계](#prepare)에서 설명하는 대로 모든 노드를 준비했으면 준비된 노드 중 하나에서 설치를 실행합니다. 대부분의 경우 공유 디스크를 소유한 노드에서 설치를 실행합니다. **설치 센터의** 고급 [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] 페이지에서 **고급 클러스터 완료**를 클릭합니다.  
+1.  [준비 단계](#prepare)에서 설명하는 대로 모든 노드를 준비했으면 준비된 노드 중 하나에서 설치를 실행합니다. 대부분의 경우 공유 디스크를 소유한 노드에서 설치를 실행합니다. **설치 센터의** 고급 [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] 페이지에서 **고급 클러스터 완료** 를 클릭합니다.  
   
-2.  시스템 구성 검사기가 컴퓨터에서 검색 작업을 실행합니다. 계속하려면 [!INCLUDE[clickOK](../../../includes/clickok-md.md)]. **자세한 정보 표시**를 클릭하여 화면에 세부 정보를 표시하거나 **자세한 보고서 보기**를 클릭하여 HTML 보고서 형식으로 볼 수 있습니다.  
+2.  시스템 구성 검사기가 컴퓨터에서 검색 작업을 실행합니다. 계속하려면 [!INCLUDE[clickOK](../../../includes/clickok-md.md)]. **자세한 정보 표시** 를 클릭하여 화면에 세부 정보를 표시하거나 **자세한 보고서 보기** 를 클릭하여 HTML 보고서 형식으로 볼 수 있습니다.  
   
 3.  설치 지원 파일 페이지에서 **설치** 를 클릭하여 설치 지원 파일을 설치합니다.  
   
-4.  시스템 구성 검사기가 설치를 계속하기 전에 컴퓨터의 시스템 상태를 확인합니다. 검사가 완료되면 **다음** 을 클릭하여 작업을 계속 진행합니다. **자세한 정보 표시**를 클릭하여 화면에 세부 정보를 표시하거나 **자세한 보고서 보기**를 클릭하여 HTML 보고서 형식으로 볼 수 있습니다.  
+4.  시스템 구성 검사기가 설치를 계속하기 전에 컴퓨터의 시스템 상태를 확인합니다. 검사가 완료되면 **다음** 을 클릭하여 작업을 계속 진행합니다. **자세한 정보 표시** 를 클릭하여 화면에 세부 정보를 표시하거나 **자세한 보고서 보기** 를 클릭하여 HTML 보고서 형식으로 볼 수 있습니다.  
   
 5.  지역화된 운영 체제에서 설치하고 있고 설치 미디어에 영어와 해당 운영 체제 언어에 대한 언어 팩이 둘 다 있는 경우 언어 선택 페이지에서 [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] 인스턴스의 언어를 지정할 수 있습니다. 언어 간 호환성 지원 및 설치 고려 사항에 대한 자세한 내용은 [SQL Server의 로컬 언어 버전](../../../sql-server/install/local-language-versions-in-sql-server.md)을 참조하세요.  
   
-     계속하려면 **다음**을 클릭합니다.  
+     계속하려면 **다음** 을 클릭합니다.  
   
 6.  클러스터 노드 구성 페이지를 사용하여 클러스터링을 위해 준비한 인스턴스 이름을 선택하고 새 [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] 장애 조치(failover) 클러스터 인스턴스의 네트워크 이름을 지정합니다. 이 이름은 네트워크에서 장애 조치(failover) 클러스터 인스턴스를 식별하는 데 사용되는 이름입니다.  
   
@@ -351,7 +351,7 @@ ms.locfileid: "91114673"
   
     -   새로 만들 그룹의 이름을 입력합니다. "Available storage"는 유효한 그룹 이름이 아닙니다.  
   
-9. 클러스터 디스크 선택 페이지에서 [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] 장애 조치(failover) 클러스터 인스턴스에 대한 공유 클러스터 디스크 리소스를 선택합니다. 클러스터 디스크에는 [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] 데이터가 저장됩니다. 디스크를 여러 개 지정할 수 있습니다. 사용 가능한 공유 디스크 표에는 사용 가능한 디스크 목록, 각 디스크가 공유 디스크로 정규화되었는지 여부 및 각 디스크 리소스에 대한 설명이 표시됩니다. **다음**을 클릭하여 계속합니다.  
+9. 클러스터 디스크 선택 페이지에서 [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] 장애 조치(failover) 클러스터 인스턴스에 대한 공유 클러스터 디스크 리소스를 선택합니다. 클러스터 디스크에는 [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] 데이터가 저장됩니다. 디스크를 여러 개 지정할 수 있습니다. 사용 가능한 공유 디스크 표에는 사용 가능한 디스크 목록, 각 디스크가 공유 디스크로 정규화되었는지 여부 및 각 디스크 리소스에 대한 설명이 표시됩니다. **다음** 을 클릭하여 계속합니다.  
   
     > [!NOTE]  
     >  모든 데이터베이스에 대해 첫 번째 드라이브가 기본 드라이브로 사용되지만 [!INCLUDE[ssDE](../../../includes/ssde-md.md)] 또는 [!INCLUDE[ssASnoversion](../../../includes/ssasnoversion-md.md)] 구성 페이지에서 이를 변경할 수 있습니다.  
@@ -360,7 +360,7 @@ ms.locfileid: "91114673"
   
     -   **네트워크 설정** – 장애 조치(Failover) 클러스터 인스턴스의 모든 노드 및 서브넷에 대한 IP 유형과 IP 주소를 지정합니다. 다중 서브넷 장애 조치(failover) 클러스터 인스턴스에 대해 여러 IP 주소를 지정할 수 있지만 IP 주소는 서브넷별로 하나씩만 지원됩니다. 모든 준비된 노드는 하나 이상의 IP 주소에 대한 소유자여야 합니다. [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] 장애 조치(failover) 클러스터 인스턴스에 여러 서브넷이 있는 경우 IP 주소 리소스 종속성을 OR로 설정하라는 메시지가 나타납니다.  
   
-     **다음**을 클릭하여 계속합니다.  
+     **다음** 을 클릭하여 계속합니다.  
   
 11. 이 항목의 나머지 부분에 대한 워크플로는 설치에 대해 지정한 기능에 따라 달라집니다. 선택 항목에 따라 일부 페이지가 표시되지 않을 수도 있습니다.  
   
@@ -370,21 +370,21 @@ ms.locfileid: "91114673"
   
          디바이스가 [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)]에 성공적으로 연결되면 Windows 인증 및 혼합 모드에 모두 동일한 보안 메커니즘이 적용됩니다.  
   
-    -   [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] 관리자 - [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)]인스턴스에 대한 시스템 관리자를 한 명 이상 지정해야 합니다. [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] 설치 프로그램을 실행하는 계정을 추가하려면 **현재 사용자 추가**를 클릭합니다. 시스템 관리자 목록에 계정을 추가하거나 목록의 계정을 제거하려면 **추가** 또는 **제거**를 클릭한 다음 [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)]인스턴스에 대한 관리자 권한을 가질 사용자, 그룹 또는 컴퓨터 목록을 편집합니다.  
+    -   [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] 관리자 - [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)]인스턴스에 대한 시스템 관리자를 한 명 이상 지정해야 합니다. [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] 설치 프로그램을 실행하는 계정을 추가하려면 **현재 사용자 추가** 를 클릭합니다. 시스템 관리자 목록에 계정을 추가하거나 목록의 계정을 제거하려면 **추가** 또는 **제거** 를 클릭한 다음 [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)]인스턴스에 대한 관리자 권한을 가질 사용자, 그룹 또는 컴퓨터 목록을 편집합니다.  
   
-     목록 편집을 마쳤으면 [!INCLUDE[clickOK](../../../includes/clickok-md.md)]. 구성 대화 상자에서 관리자 목록을 확인합니다. 목록 구성을 완료했으면 **다음**을 클릭합니다.  
+     목록 편집을 마쳤으면 [!INCLUDE[clickOK](../../../includes/clickok-md.md)]. 구성 대화 상자에서 관리자 목록을 확인합니다. 목록 구성을 완료했으면 **다음** 을 클릭합니다.  
   
-13. [!INCLUDE[ssDE](../../../includes/ssde-md.md)] 구성 - 데이터 디렉터리 페이지를 사용하여 기본이 아닌 설치 디렉터리를 지정합니다. 기본 디렉터리에 설치하려면 **다음**을 클릭합니다.  
+13. [!INCLUDE[ssDE](../../../includes/ssde-md.md)] 구성 - 데이터 디렉터리 페이지를 사용하여 기본이 아닌 설치 디렉터리를 지정합니다. 기본 디렉터리에 설치하려면 **다음** 을 클릭합니다.  
   
     > [!IMPORTANT]  
     >  기본이 아닌 설치 디렉터리를 지정하는 경우 해당 설치 폴더가 이 [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)]인스턴스에만 사용되도록 해야 합니다. 이 대화 상자의 어떠한 디렉터리도 다른 [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)]인스턴스의 디렉터리와 공유되지 않아야 합니다. 데이터 디렉터리는 장애 조치(failover) 클러스터 인스턴스의 공유 클러스터 디스크에 배치해야 합니다.  
   
   
-14. [!INCLUDE[ssASnoversion](../../../includes/ssasnoversion-md.md)] 구성 - 계정 프로비전 페이지를 사용하여 [!INCLUDE[ssASnoversion](../../../includes/ssasnoversion-md.md)]에 대해 관리자 권한을 갖는 사용자 또는 계정을 지정합니다. [!INCLUDE[ssASnoversion](../../../includes/ssasnoversion-md.md)]에 대한 시스템 관리자를 한 명 이상 지정해야 합니다. [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] 설치 프로그램을 실행하는 계정을 추가하려면 **현재 사용자 추가**를 클릭합니다. 시스템 관리자 목록에 계정을 추가하거나 목록의 계정을 제거하려면 **추가** 또는 **제거**를 클릭한 다음 [!INCLUDE[ssASnoversion](../../../includes/ssasnoversion-md.md)]에 대한 관리자 권한을 가질 사용자, 그룹 또는 컴퓨터 목록을 편집합니다.  
+14. [!INCLUDE[ssASnoversion](../../../includes/ssasnoversion-md.md)] 구성 - 계정 프로비전 페이지를 사용하여 [!INCLUDE[ssASnoversion](../../../includes/ssasnoversion-md.md)]에 대해 관리자 권한을 갖는 사용자 또는 계정을 지정합니다. [!INCLUDE[ssASnoversion](../../../includes/ssasnoversion-md.md)]에 대한 시스템 관리자를 한 명 이상 지정해야 합니다. [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] 설치 프로그램을 실행하는 계정을 추가하려면 **현재 사용자 추가** 를 클릭합니다. 시스템 관리자 목록에 계정을 추가하거나 목록의 계정을 제거하려면 **추가** 또는 **제거** 를 클릭한 다음 [!INCLUDE[ssASnoversion](../../../includes/ssasnoversion-md.md)]에 대한 관리자 권한을 가질 사용자, 그룹 또는 컴퓨터 목록을 편집합니다.  
   
-     목록 편집을 마쳤으면 [!INCLUDE[clickOK](../../../includes/clickok-md.md)]. 구성 대화 상자에서 관리자 목록을 확인합니다. 목록 구성을 완료했으면 **다음**을 클릭합니다.  
+     목록 편집을 마쳤으면 [!INCLUDE[clickOK](../../../includes/clickok-md.md)]. 구성 대화 상자에서 관리자 목록을 확인합니다. 목록 구성을 완료했으면 **다음** 을 클릭합니다.  
   
-15. [!INCLUDE[ssASnoversion](../../../includes/ssasnoversion-md.md)] 구성 - 데이터 디렉터리 페이지를 사용하여 기본이 아닌 설치 디렉터리를 지정합니다. 기본 디렉터리에 설치하려면 **다음**을 클릭합니다.  
+15. [!INCLUDE[ssASnoversion](../../../includes/ssasnoversion-md.md)] 구성 - 데이터 디렉터리 페이지를 사용하여 기본이 아닌 설치 디렉터리를 지정합니다. 기본 디렉터리에 설치하려면 **다음** 을 클릭합니다.  
   
     > [!IMPORTANT]  
     >  기본이 아닌 설치 디렉터리를 지정하는 경우 해당 설치 폴더가 이 [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)]인스턴스에만 사용되도록 해야 합니다. 이 대화 상자의 어떠한 디렉터리도 다른 [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)]인스턴스의 디렉터리와 공유되지 않아야 합니다. 데이터 디렉터리는 장애 조치(Failover) 클러스터의 공유 클러스터 디스크에 배치해야 합니다.  
@@ -392,11 +392,11 @@ ms.locfileid: "91114673"
   
 16. 시스템 구성 검사기는 사용자가 지정한 [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] 기능에 따라 구성의 유효성을 검사하기 위해 하나 이상의 규칙 집합을 실행합니다.  
   
-17. 설치 준비 완료 페이지에는 설치 중에 지정된 설치 옵션이 트리 뷰로 표시됩니다. 계속하려면 **설치**를 클릭합니다. 설치 프로그램은 선택한 기능에 대한 필수 구성 요소를 먼저 설치하고 그 다음에 기능을 설치합니다.  
+17. 설치 준비 완료 페이지에는 설치 중에 지정된 설치 옵션이 트리 뷰로 표시됩니다. 계속하려면 **설치** 를 클릭합니다. 설치 프로그램은 선택한 기능에 대한 필수 구성 요소를 먼저 설치하고 그 다음에 기능을 설치합니다.  
   
 18. 설치 중에 설치 진행률 페이지에서 제공하는 상태 정보를 통해 설치 진행률을 모니터링할 수 있습니다.  
   
-19. 설치가 끝나면 설치 및 기타 중요한 참고 사항에 대한 요약 로그 파일을 볼 수 있는 링크가 **완료** 페이지에 제공됩니다. [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] 설치 과정을 완료하려면 **닫기**를 클릭합니다. 동일한 장애 조치(failover) 클러스터 인스턴스를 위해 준비한 모든 노드가 이제 이 단계를 통해 최종 완료된 [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] 장애 조치(failover) 클러스터 인스턴스의 일부가 됩니다.  
+19. 설치가 끝나면 설치 및 기타 중요한 참고 사항에 대한 요약 로그 파일을 볼 수 있는 링크가 **완료** 페이지에 제공됩니다. [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] 설치 과정을 완료하려면 **닫기** 를 클릭합니다. 동일한 장애 조치(failover) 클러스터 인스턴스를 위해 준비한 모든 노드가 이제 이 단계를 통해 최종 완료된 [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] 장애 조치(failover) 클러스터 인스턴스의 일부가 됩니다.  
   
 ## <a name="next-steps"></a>다음 단계  
  **새 [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] 설치 구성** - 공격받을 수 있는 시스템의 노출 영역을 줄이려면 [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)]는 핵심 서비스와 기능을 선별적으로 설치하고 활성화합니다. 자세한 내용은 [Surface Area Configuration](../../../relational-databases/security/surface-area-configuration.md)을 참조하세요.  

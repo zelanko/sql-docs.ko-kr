@@ -12,14 +12,14 @@ helpviewer_keywords:
 - installing failover clusters
 - failover clustering [SQL Server], preinstallation checklist
 ms.assetid: a655225d-8c54-4b30-95fd-31f588167899
-author: MashaMSFT
-ms.author: mathoma
-ms.openlocfilehash: 8f131897a8f45f510237732d528e402f4dc2457a
-ms.sourcegitcommit: cc23d8646041336d119b74bf239a6ac305ff3d31
+author: cawrites
+ms.author: chadam
+ms.openlocfilehash: b26571c01db073aa2567ebbee19ff2183c47a552
+ms.sourcegitcommit: 5a1ed81749800c33059dac91b0e18bd8bb3081b1
 ms.translationtype: HT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 09/23/2020
-ms.locfileid: "91115627"
+ms.lasthandoff: 11/23/2020
+ms.locfileid: "96127671"
 ---
 # <a name="before-installing-failover-clustering"></a>장애 조치(Failover) 클러스터링을 설치하기 전에
 [!INCLUDE [SQL Server](../../../includes/applies-to-version/sqlserver.md)]

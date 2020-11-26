@@ -8,14 +8,14 @@ ms.reviewer: ''
 ms.technology: high-availability
 ms.topic: how-to
 ms.assetid: 3bbeb979-e6fc-4184-ad6e-cca62108de74
-author: MashaMSFT
-ms.author: mathoma
-ms.openlocfilehash: e4ae7a1c74c7d91596550015df78a89fb8a0c857
-ms.sourcegitcommit: a41e1f4199785a2b8019a419a1f3dcdc15571044
+author: cawrites
+ms.author: chadam
+ms.openlocfilehash: 045240334fd40420064f5e44179ec93373f92de3
+ms.sourcegitcommit: 5a1ed81749800c33059dac91b0e18bd8bb3081b1
 ms.translationtype: HT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 10/13/2020
-ms.locfileid: "91988318"
+ms.lasthandoff: 11/23/2020
+ms.locfileid: "96121075"
 ---
 # <a name="configure-healthchecktimeout-property-settings"></a>HealthCheckTimeout 속성 설정 구성
 [!INCLUDE [SQL Server](../../../includes/applies-to-version/sqlserver.md)]
@@ -39,7 +39,7 @@ ms.locfileid: "91988318"
   
 ##### <a name="to-configure-healthchecktimeout-settings"></a>HealthCheckTimeout 설정을 구성하려면  
   
-1.  **관리자 권한으로 실행**을 통해 승격된 Windows PowerShell을 시작합니다.  
+1.  **관리자 권한으로 실행** 을 통해 승격된 Windows PowerShell을 시작합니다.  
   
 2.  클러스터 Cmdlet을 사용할 수 있도록 **FailoverClusters** 모듈을 가져옵니다.  
   

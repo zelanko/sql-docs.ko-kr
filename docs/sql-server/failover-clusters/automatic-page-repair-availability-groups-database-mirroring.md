@@ -14,14 +14,14 @@ helpviewer_keywords:
 - database mirroring [SQL Server], automatic page repair
 - suspect pages [SQL Server]
 ms.assetid: cf2e3650-5fac-4f34-b50e-d17765578a8e
-author: MikeRayMSFT
-ms.author: mikeray
-ms.openlocfilehash: 195b796514be6ac86de1b997d88de1b6eee44394
-ms.sourcegitcommit: cc23d8646041336d119b74bf239a6ac305ff3d31
+author: cawrites
+ms.author: chadam
+ms.openlocfilehash: 3f829ca9f0acb82089251c772f80f47395fa32e3
+ms.sourcegitcommit: 5a1ed81749800c33059dac91b0e18bd8bb3081b1
 ms.translationtype: HT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 09/23/2020
-ms.locfileid: "91117033"
+ms.lasthandoff: 11/23/2020
+ms.locfileid: "96127679"
 ---
 # <a name="automatic-page-repair-availability-groups-database-mirroring"></a>자동 페이지 복구(가용성 그룹: 데이터베이스 미러링)
  [!INCLUDE [SQL Server](../../includes/applies-to-version/sqlserver.md)]
@@ -69,7 +69,7 @@ ms.locfileid: "91117033"
 ##  <a name="handling-io-errors-on-the-principalprimary-database"></a><a name="PrimaryIOErrors"></a> 주/기본 데이터베이스에서 I/O 오류 처리  
  주/기본 데이터베이스에서는 데이터베이스가 SYNCHRONIZED 상태이고 주/기본 데이터베이스가 미러/보조 데이터베이스에 대한 로그 레코드를 계속 보내는 경우에만 자동 페이지 복구가 시도됩니다. 자동 페이지 복구 시도에서 기본적인 동작 시퀀스는 다음과 같습니다.  
   
-1.  주/기본 데이터베이스의 데이터 페이지에서 읽기 오류가 발생하면 주/기본 데이터베이스는 해당 오류 상태와 함께 [suspect_pages](../../relational-databases/system-tables/suspect-pages-transact-sql.md) 테이블에 행을 삽입합니다. 그런 다음 데이터베이스 미러링의 경우에는 주 데이터베이스가 미러 데이터베이스에 해당 페이지의 복사본을 요청합니다. [!INCLUDE[ssHADR](../../includes/sshadr-md.md)]의 경우에는 주 데이터베이스가 해당 요청을 모든 보조 데이터베이스에 브로드캐스팅하고 응답할 첫 번째 데이터베이스에서 페이지를 가져옵니다. 이 요청에는 페이지 ID와 현재 플러시된 로그 끝에 있는 LSN이 지정됩니다. 페이지가 *복원 보류*로 표시되므로 자동 페이지 복구 시도 중에는 액세스할 수 없습니다. 복구 시도 중에 이 페이지에 액세스하려고 하면 오류 829(복원 보류)가 발생하며 실패합니다.  
+1.  주/기본 데이터베이스의 데이터 페이지에서 읽기 오류가 발생하면 주/기본 데이터베이스는 해당 오류 상태와 함께 [suspect_pages](../../relational-databases/system-tables/suspect-pages-transact-sql.md) 테이블에 행을 삽입합니다. 그런 다음 데이터베이스 미러링의 경우에는 주 데이터베이스가 미러 데이터베이스에 해당 페이지의 복사본을 요청합니다. [!INCLUDE[ssHADR](../../includes/sshadr-md.md)]의 경우에는 주 데이터베이스가 해당 요청을 모든 보조 데이터베이스에 브로드캐스팅하고 응답할 첫 번째 데이터베이스에서 페이지를 가져옵니다. 이 요청에는 페이지 ID와 현재 플러시된 로그 끝에 있는 LSN이 지정됩니다. 페이지가 *복원 보류* 로 표시되므로 자동 페이지 복구 시도 중에는 액세스할 수 없습니다. 복구 시도 중에 이 페이지에 액세스하려고 하면 오류 829(복원 보류)가 발생하며 실패합니다.  
   
 2.  페이지 요청을 받으면 미러/보조 데이터베이스는 요청에 지정된 LSN까지 로그를 다시 수행할 때까지 대기합니다. 그런 다음 미러/보조 데이터베이스는 데이터베이스의 해당 복사본에 있는 페이지에 액세스하려고 시도합니다. 페이지에 액세스할 수 있는 경우 미러/보조 데이터베이스는 해당 페이지의 복사본을 주/기본 데이터베이스로 보냅니다. 액세스할 수 없는 경우 미러/보조 데이터베이스는 주/기본 데이터베이스로 오류를 반환하고 자동 페이지 복구 시도가 실패합니다.  
   

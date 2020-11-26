@@ -13,14 +13,14 @@ helpviewer_keywords:
 - virtual servers [SQL Server], failover clustering
 - failover clustering [SQL Server], virtual servers
 ms.assetid: 2a49d417-25fb-4760-8ae5-5871bfb1e6f3
-author: MashaMSFT
-ms.author: mathoma
-ms.openlocfilehash: bbea3e2cf7d8a8eaf3ab62b20e0dd0472053def4
-ms.sourcegitcommit: a41e1f4199785a2b8019a419a1f3dcdc15571044
+author: cawrites
+ms.author: chadam
+ms.openlocfilehash: 9e49231237c7a62bb67adcbc72f0bee19d5fb26c
+ms.sourcegitcommit: 5a1ed81749800c33059dac91b0e18bd8bb3081b1
 ms.translationtype: HT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 10/13/2020
-ms.locfileid: "91988369"
+ms.lasthandoff: 11/23/2020
+ms.locfileid: "96127648"
 ---
 # <a name="rename-a-sql-server-failover-cluster-instance"></a>SQL Server 장애 조치(Failover) 클러스터 인스턴스 이름 변경
 [!INCLUDE [SQL Server](../../../includes/applies-to-version/sqlserver.md)]
@@ -45,7 +45,7 @@ ms.locfileid: "91988369"
 ## <a name="verify-the-renaming-operation"></a>이름 바꾸기 작업 확인  
  가상 서버 이름을 바꾼 후 이전 이름을 사용하던 연결은 새 이름을 사용하여 연결해야 합니다.  
   
- 이러한 남은 작업이 완료되었는지 확인하기 위해 **@@servername** 또는 **sys.servers**에서 정보를 선택합니다. **@@servername** 함수는 새로운 가상 서버 이름을 반환하며 **sys.servers** 테이블은 새로운 가상 서버 이름을 표시합니다. 또한 장애 조치 프로세스가 새 이름으로 제대로 작동하는지 확인하기 위해 다른 노드에 대해 [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] 리소스에 오류를 발생시켜 봐야 합니다.  
+ 이러한 남은 작업이 완료되었는지 확인하기 위해 **@@servername** 또는 **sys.servers** 에서 정보를 선택합니다. **@@servername** 함수는 새로운 가상 서버 이름을 반환하며 **sys.servers** 테이블은 새로운 가상 서버 이름을 표시합니다. 또한 장애 조치 프로세스가 새 이름으로 제대로 작동하는지 확인하기 위해 다른 노드에 대해 [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] 리소스에 오류를 발생시켜 봐야 합니다.  
   
  클러스터 노드로부터의 연결에서는 새 이름을 거의 즉시 사용할 수 있습니다. 하지만 클라이언트 컴퓨터의 새 이름을 사용하는 연결에서는 새 이름이 클라이언트 컴퓨터에 표시되기 전까지 새 이름을 사용하여 서버에 연결할 수 없습니다. 새 이름이 네트워크를 통해 전파되는 데 필요한 시간은 몇 초 정도 걸릴 수 있으며 네트워크 구성에 따라 3-5분까지 걸릴 수도 있습니다. 이전 가상 서버 이름이 네트워크에서 사라지는 데에도 추가 시간이 걸릴 수 있습니다.  
   

@@ -13,14 +13,14 @@ helpviewer_keywords:
 - hardware failures [SQL Server]
 - recovering failover cluster failures [SQL Server]
 ms.assetid: 3d151d0c-e841-4325-8606-c094de37d7d1
-author: MashaMSFT
-ms.author: mathoma
-ms.openlocfilehash: 2f9f6dc96c4cc8cf218416b81a429159ad82b558
-ms.sourcegitcommit: cc23d8646041336d119b74bf239a6ac305ff3d31
+author: cawrites
+ms.author: chadam
+ms.openlocfilehash: 7d747370e5daf2b26d9508e0ca681eae77523e6e
+ms.sourcegitcommit: 5a1ed81749800c33059dac91b0e18bd8bb3081b1
 ms.translationtype: HT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 09/23/2020
-ms.locfileid: "91115758"
+ms.lasthandoff: 11/23/2020
+ms.locfileid: "96127591"
 ---
 # <a name="recover-from-failover-cluster-instance-failure"></a>장애 조치(failover) 클러스터 인스턴스 오류 복구
 [!INCLUDE [SQL Server](../../../includes/applies-to-version/sqlserver.md)]
@@ -35,7 +35,7 @@ ms.locfileid: "91115758"
   
 1.  노드 1에 오류가 발생한 후 [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] FCI에서 노드 2로 장애 조치됩니다.  
   
-2.  FCI에서 노드 1을 제거합니다. 이렇게 하려면 노드 2에서 장애 조치(failover) 클러스터 관리자 스냅인을 열고 노드 1을 마우스 오른쪽 단추로 클릭하여 **이동 동작**을 클릭한 다음 **노드 제거**를 클릭합니다.  
+2.  FCI에서 노드 1을 제거합니다. 이렇게 하려면 노드 2에서 장애 조치(failover) 클러스터 관리자 스냅인을 열고 노드 1을 마우스 오른쪽 단추로 클릭하여 **이동 동작** 을 클릭한 다음 **노드 제거** 를 클릭합니다.  
   
 3.  노드 1이 클러스터 정의에서 제거되었는지 확인합니다.  
   

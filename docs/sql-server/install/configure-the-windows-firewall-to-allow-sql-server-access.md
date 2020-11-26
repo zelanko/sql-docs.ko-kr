@@ -21,14 +21,14 @@ helpviewer_keywords:
 - ports [SQL Server], TCP
 - netsh to open firewall ports
 ms.assetid: f55c6a0e-b6bd-4803-b51a-f3a419803024
-author: markingmyname
-ms.author: maghan
-ms.openlocfilehash: d6a8f6d48800dfd47454d92a7dca0a5a0b58b80f
-ms.sourcegitcommit: b93beb4f03aee2c1971909cb1d15f79cd479a35c
+author: cawrites
+ms.author: chadam
+ms.openlocfilehash: 1459c50d87f2f7ccc58e20bd7e21d27ace700f66
+ms.sourcegitcommit: 5a1ed81749800c33059dac91b0e18bd8bb3081b1
 ms.translationtype: HT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 09/29/2020
-ms.locfileid: "91497733"
+ms.lasthandoff: 11/23/2020
+ms.locfileid: "96120856"
 ---
 # <a name="configure-the-windows-firewall-to-allow-sql-server-access"></a>Configure the Windows Firewall to Allow SQL Server Access
 [!INCLUDE [SQL Server Windows Only - ASDBMI ](../../includes/applies-to-version/sql-windows-only-asdbmi.md)]
@@ -68,7 +68,7 @@ ms.locfileid: "91497733"
 >  방화벽을 켜면 파일 및 인쇄 공유와 같이 이 컴퓨터에 액세스하는 다른 프로그램과 원격 데스크톱 연결이 영향을 받습니다. 관리자는 방화벽 설정을 조정하기 전에 컴퓨터에서 실행 중인 모든 애플리케이션을 고려해야 합니다.  
   
 ##  <a name="programs-to-configure-the-firewall"></a><a name="BKMK_programs"></a> 방화벽 구성 프로그램  
-**Microsoft Management Console** 또는 **netsh**를 사용하여 Windows 방화벽 설정을 구성합니다.  
+**Microsoft Management Console** 또는 **netsh** 를 사용하여 Windows 방화벽 설정을 구성합니다.  
 
 -  **MMC(Microsoft Management Console)**  
   
@@ -76,7 +76,7 @@ ms.locfileid: "91497733"
   
 -   **netsh**  
   
-     관리자는 **netsh.exe** 도구를 사용하여 명령 프롬프트 또는 배치 파일을 통해 Windows 기반 컴퓨터를 구성하고 모니터링할 수 있습니다 **.** **netsh** 도구를 사용하면 상황에 맞는 명령을 입력하여 적절한 도우미에 전달할 수 있습니다. 그러면 도우미가 명령을 수행합니다. 도우미는 하나 이상의 서비스, 유틸리티 또는 프로토콜에 대한 구성, 모니터링 및 지원을 제공하여 **netsh** 도구의 기능을 확장하는 동적 연결 라이브러리 파일(.dll)입니다. [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 를 지원하는 모든 운영 체제에는 방화벽 도우미가 포함되어 있습니다. [!INCLUDE[firstref_longhorn](../../includes/firstref-longhorn-md.md)] 에는 **advfirewall**이라는 고급 방화벽 도우미도 있습니다. **netsh** 사용에 대한 자세한 내용은 이 문서에서 다루지 않습니다. 그러나 여기서 설명하는 대부분의 구성 옵션은 **netsh**를 사용하여 구성할 수 있습니다. 예를 들어 명령 프롬프트에서 다음 스크립트를 실행하여 TCP 포트 1433을 엽니다.  
+     관리자는 **netsh.exe** 도구를 사용하여 명령 프롬프트 또는 배치 파일을 통해 Windows 기반 컴퓨터를 구성하고 모니터링할 수 있습니다 **.** **netsh** 도구를 사용하면 상황에 맞는 명령을 입력하여 적절한 도우미에 전달할 수 있습니다. 그러면 도우미가 명령을 수행합니다. 도우미는 하나 이상의 서비스, 유틸리티 또는 프로토콜에 대한 구성, 모니터링 및 지원을 제공하여 **netsh** 도구의 기능을 확장하는 동적 연결 라이브러리 파일(.dll)입니다. [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 를 지원하는 모든 운영 체제에는 방화벽 도우미가 포함되어 있습니다. [!INCLUDE[firstref_longhorn](../../includes/firstref-longhorn-md.md)] 에는 **advfirewall** 이라는 고급 방화벽 도우미도 있습니다. **netsh** 사용에 대한 자세한 내용은 이 문서에서 다루지 않습니다. 그러나 여기서 설명하는 대부분의 구성 옵션은 **netsh** 를 사용하여 구성할 수 있습니다. 예를 들어 명령 프롬프트에서 다음 스크립트를 실행하여 TCP 포트 1433을 엽니다.  
   
     ```  
     netsh firewall set portopening protocol = TCP port = 1433 name = SQLPort mode = ENABLE scope = SUBNET profile = CURRENT  
@@ -88,7 +88,7 @@ ms.locfileid: "91497733"
     netsh advfirewall firewall add rule name = SQLPort dir = in protocol = tcp action = allow localport = 1433 remoteip = localsubnet profile = DOMAIN  
     ```  
   
-     **netsh**에 대한 자세한 내용은 다음 링크를 참조하세요.  
+     **netsh** 에 대한 자세한 내용은 다음 링크를 참조하세요.  
   
     -   [Netsh 명령 구문, 컨텍스트 및 서식 지정](/windows-server/networking/technologies/netsh/netsh-contexts)    
     -   ["netsh firewall" 컨텍스트 대신 "netsh advfirewall firewall" 컨텍스트를 사용하여 Windows Server 2008 및 Windows Vista의 Windows 방화벽 동작을 제어하는 방법](https://support.microsoft.com/kb/947709)    
@@ -129,19 +129,19 @@ ms.locfileid: "91497733"
   
 ##### <a name="to-add-a-program-exception-to-the-firewall-using-windows-defender-firewall-with-advanced-security"></a>고급 보안이 포함된 Windows Defender 방화벽을 사용하여 방화벽에 프로그램 예외를 추가하려는 경우
   
-1. 시작 메뉴에서 *wf.msc*를 입력합니다. Enter 키를 누르거나 검색 결과 wf.msc를 선택하여 **고급 보안이 포함된 Windows Defender 방화벽**을 엽니다.
-1. 왼쪽 창에서 **인바운드 규칙**을 선택합니다.
-1. 오른쪽 창의 **작업**에서 **새 규칙...** 을 선택합니다. **새 인바운드 규칙 마법사**가 열립니다.
-1. **규칙 유형**에서 **프로그램**을 선택합니다. **다음**을 선택합니다.
-1. **프로그램**에서 **다음 프로그램 경로**를 선택합니다. **찾아보기**를 선택하고 SQL Server의 인스턴스를 찾습니다. 이 프로그램을 sqlservr.exe라고 합니다. 파일은 일반적으로 다음 위치에 있습니다.
+1. 시작 메뉴에서 *wf.msc* 를 입력합니다. Enter 키를 누르거나 검색 결과 wf.msc를 선택하여 **고급 보안이 포함된 Windows Defender 방화벽** 을 엽니다.
+1. 왼쪽 창에서 **인바운드 규칙** 을 선택합니다.
+1. 오른쪽 창의 **작업** 에서 **새 규칙...** 을 선택합니다. **새 인바운드 규칙 마법사** 가 열립니다.
+1. **규칙 유형** 에서 **프로그램** 을 선택합니다. **다음** 을 선택합니다.
+1. **프로그램** 에서 **다음 프로그램 경로** 를 선택합니다. **찾아보기** 를 선택하고 SQL Server의 인스턴스를 찾습니다. 이 프로그램을 sqlservr.exe라고 합니다. 파일은 일반적으로 다음 위치에 있습니다.
 
    `C:\Program Files\Microsoft SQL Server\MSSQL15.<InstanceName>\MSSQL\Binn\sqlservr.exe`
 
-   **다음**을 선택합니다.
+   **다음** 을 선택합니다.
 
-1. **작업**에서 **연결 허용**을 선택합니다. **다음**을 선택합니다.
-1. **프로필**에서 세 개의 프로필을 모두 포함합니다. **다음**을 선택합니다.
-1. **이름**에 규칙의 이름을 입력합니다. **마침**을 선택합니다.
+1. **작업** 에서 **연결 허용** 을 선택합니다. **다음** 을 선택합니다.
+1. **프로필** 에서 세 개의 프로필을 모두 포함합니다. **다음** 을 선택합니다.
+1. **이름** 에 규칙의 이름을 입력합니다. **마침** 을 선택합니다.
 
 엔드포인트에 대한 자세한 내용은 [여러 TCP 포트에서 수신하도록 데이터베이스 엔진 구성](../../database-engine/configure-windows/configure-the-database-engine-to-listen-on-multiple-tcp-ports.md) 및 [엔드포인트 카탈로그 뷰&#40;Transact-SQL&#41;](../../relational-databases/system-catalog-views/endpoints-catalog-views-transact-sql.md)를 참조하세요. 
   
@@ -238,17 +238,17 @@ ms.locfileid: "91497733"
   
 ### <a name="to-change-the-scope-of-a-firewall-exception-using-the-windows-firewall-item-in-control-panel"></a>제어판의 Windows 방화벽 항목을 사용하여 방화벽 예외 범위를 변경하려면  
   
-1.  제어판의 **Windows 방화벽** 항목에 있는 **예외** 탭에서 프로그램 또는 포트를 선택한 다음 **속성** 또는 **편집**을 클릭합니다.  
+1.  제어판의 **Windows 방화벽** 항목에 있는 **예외** 탭에서 프로그램 또는 포트를 선택한 다음 **속성** 또는 **편집** 을 클릭합니다.  
   
-2.  **프로그램 편집** 또는 **포트 편집** 대화 상자에서 **범위 변경**을 클릭합니다.  
+2.  **프로그램 편집** 또는 **포트 편집** 대화 상자에서 **범위 변경** 을 클릭합니다.  
   
 3.  다음 옵션 중 하나를 선택합니다.  
   
     -   **모든 컴퓨터(인터넷의 컴퓨터를 포함)** : 이 옵션은 사용하지 않는 것이 좋습니다. 이 옵션을 사용하면 사용자의 컴퓨터를 식별할 수 있는 모든 컴퓨터가 지정된 프로그램 또는 포트에 연결할 수 있습니다. 인터넷의 익명 사용자에게 정보를 제공할 때는 이 설정이 필요할 수 있지만 악의적인 사용자에 대한 노출 위험도 높아집니다. 이 옵션을 설정하고 에지 통과 허용 옵션과 같은 NAT(네트워크 주소 변환) 통과를 허용할 경우 노출 위험이 더 높아질 수 있습니다.  
   
-    -   **내 네트워크(서브넷)만**: **모든 컴퓨터**보다 안전한 설정입니다. 사용자 네트워크의 로컬 서브넷에 있는 컴퓨터만 프로그램 또는 포트에 연결할 수 있습니다.  
+    -   **내 네트워크(서브넷)만**: **모든 컴퓨터** 보다 안전한 설정입니다. 사용자 네트워크의 로컬 서브넷에 있는 컴퓨터만 프로그램 또는 포트에 연결할 수 있습니다.  
   
-    -   **사용자 지정 목록**: 목록에 있는 IP 주소의 컴퓨터만 연결할 수 있습니다. 이 옵션은 **내 네트워크(서브넷)만**보다 안전할 수 있지만 DHCP를 사용하는 클라이언트 컴퓨터의 IP 주소는 가끔 변경될 수 있습니다. 이 경우 연결이 허용된 컴퓨터가 연결하지 못하게 됩니다. 또한 권한을 부여하지 않은 다른 컴퓨터가 목록에 있는 IP 주소를 획득하여 연결할 수 있습니다. **사용자 지정 목록** 옵션은 고정 IP 주소를 사용하도록 구성된 다른 서버를 나열하는 데는 적합하지만 IP 주소는 침입자의 스푸핑 공격을 받을 수 있습니다. 방화벽 제한 규칙은 네트워크 인프라 자체의 보안 수준 내에서 보호 기능을 제공할 뿐입니다.  
+    -   **사용자 지정 목록**: 목록에 있는 IP 주소의 컴퓨터만 연결할 수 있습니다. 이 옵션은 **내 네트워크(서브넷)만** 보다 안전할 수 있지만 DHCP를 사용하는 클라이언트 컴퓨터의 IP 주소는 가끔 변경될 수 있습니다. 이 경우 연결이 허용된 컴퓨터가 연결하지 못하게 됩니다. 또한 권한을 부여하지 않은 다른 컴퓨터가 목록에 있는 IP 주소를 획득하여 연결할 수 있습니다. **사용자 지정 목록** 옵션은 고정 IP 주소를 사용하도록 구성된 다른 서버를 나열하는 데는 적합하지만 IP 주소는 침입자의 스푸핑 공격을 받을 수 있습니다. 방화벽 제한 규칙은 네트워크 인프라 자체의 보안 수준 내에서 보호 기능을 제공할 뿐입니다.  
   
 ##  <a name="using-the-windows-firewall-with-advanced-security-snap-in"></a><a name="BKMK_WF_msc"></a> 고급 보안이 설정된 Windows 방화벽 스냅인 사용  
  고급 보안이 포함된 Windows 방화벽 MMC 스냅인을 사용하여 추가 고급 방화벽 설정을 구성할 수 있습니다. 이 스냅인은 규칙 마법사를 포함하며 제어판의 **Windows 방화벽** 항목에는 제공되지 않는 추가 설정을 제공합니다. 이 설정은 다음을 포함합니다.  
@@ -264,8 +264,8 @@ ms.locfileid: "91497733"
   
 ### <a name="to-create-a-new-firewall-rule-using-the-new-rule-wizard"></a>새 규칙 마법사를 사용하여 새 방화벽 규칙을 만들려면  
   
-1.  시작 메뉴에서 **실행**을 클릭한 다음, **WF.msc**를 입력하고 **확인**을 클릭합니다.    
-2.  **고급 보안이 포함된 Windows 방화벽**의 왼쪽 창에서 **인바운드 규칙**을 마우스 오른쪽 단추로 클릭한 다음, **새 규칙**을 선택합니다.   
+1.  시작 메뉴에서 **실행** 을 클릭한 다음, **WF.msc** 를 입력하고 **확인** 을 클릭합니다.    
+2.  **고급 보안이 포함된 Windows 방화벽** 의 왼쪽 창에서 **인바운드 규칙** 을 마우스 오른쪽 단추로 클릭한 다음, **새 규칙** 을 선택합니다.   
 3.  원하는 설정을 사용하여 **새 인바운드 규칙 마법사** 를 완료합니다.  
   
 ##  <a name="troubleshooting-firewall-settings"></a><a name="BKMK_troubleshooting"></a> 방화벽 설정 문제 해결  
@@ -281,7 +281,7 @@ ms.locfileid: "91497733"
   
     1.  명령 프롬프트 창을 엽니다.  
   
-    2.  명령 프롬프트에서 **netstat -n -a**를 입력합니다.  
+    2.  명령 프롬프트에서 **netstat -n -a** 를 입력합니다.  
   
          **-n** 스위치를 지정하면 **netstat** 에서 활성 TCP 연결의 주소와 포트 번호를 숫자로 표시합니다. **-a** 스위치를 지정하면 **netstat** 에서 컴퓨터가 수신 대기 중인 TCP 및 UDP 포트를 표시합니다.  
   

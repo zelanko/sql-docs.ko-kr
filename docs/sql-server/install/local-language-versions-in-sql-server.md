@@ -8,14 +8,14 @@ ms.reviewer: ''
 ms.technology: install
 ms.topic: conceptual
 ms.assetid: 20b99363-0490-4aa3-9a3d-262f827d81e8
-author: markingmyname
-ms.author: maghan
-ms.openlocfilehash: cfeaf90e3765b108c66cd86fc184b9fcdef8a029
-ms.sourcegitcommit: f7ac1976d4bfa224332edd9ef2f4377a4d55a2c9
+author: cawrites
+ms.author: chadam
+ms.openlocfilehash: 4731dbd80cfefbb3f151c8f749127e37e869e8a3
+ms.sourcegitcommit: 5a1ed81749800c33059dac91b0e18bd8bb3081b1
 ms.translationtype: HT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 07/02/2020
-ms.locfileid: "85894324"
+ms.lasthandoff: 11/23/2020
+ms.locfileid: "96120911"
 ---
 # <a name="local-language-versions-in-sql-server"></a>SQL Server의 로컬 언어 버전
 [!INCLUDE [SQL Server Windows Only - ASDBMI ](../../includes/applies-to-version/sql-windows-only-asdbmi.md)]
@@ -52,9 +52,9 @@ ms.locfileid: "85894324"
   
 1.  [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]의 해당 언어 버전과 일치하는 운영 체제 MUI를 아직 설치하지 않았으면 설치합니다.  
   
-2.  제어판에서 **국가 및 언어 옵션**을 엽니다.  
+2.  제어판에서 **국가 및 언어 옵션** 을 엽니다.  
   
-3.  **언어** 탭의 **메뉴 및 대화 상자에 사용된 언어**에서 목록의 값을 선택합니다.  
+3.  **언어** 탭의 **메뉴 및 대화 상자에 사용된 언어** 에서 목록의 값을 선택합니다.  
   
      이 설정은 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]의 사용자 인터페이스 언어에 영향을 주므로 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]의 해당 언어 버전과 일치해야 합니다.  
   
@@ -64,9 +64,9 @@ ms.locfileid: "85894324"
   
 1.  [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]의 해당 언어 버전과 일치하는 운영 체제 MUI를 아직 설치하지 않았으면 설치합니다.  
   
-2.  제어판에서 **국가 및 언어 옵션**을 엽니다.  
+2.  제어판에서 **국가 및 언어 옵션** 을 엽니다.  
   
-3.  **국가별 옵션** 탭의 **아래에서 원하는 항목을 선택하거나 [사용자 지정]을 클릭하여 필요한 형식을 만드십시오**에서 목록의 값을 선택합니다.  
+3.  **국가별 옵션** 탭의 **아래에서 원하는 항목을 선택하거나 [사용자 지정]을 클릭하여 필요한 형식을 만드십시오** 에서 목록의 값을 선택합니다.  
   
      이 설정은 culture별 데이터 서식에 영향을 줍니다.  
   
@@ -76,9 +76,9 @@ ms.locfileid: "85894324"
   
 1.  [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]의 해당 언어 버전과 일치하는 운영 체제 MUI를 아직 설치하지 않았으면 설치합니다.  
   
-2.  제어판에서 **국가 및 언어 옵션**을 엽니다.  
+2.  제어판에서 **국가 및 언어 옵션** 을 엽니다.  
   
-3.  **고급** 탭의 **유니코드를 지원하지 않는 프로그램의 언어 버전과 일치하는 언어를 선택하십시오**에서 목록의 값을 선택합니다.  
+3.  **고급** 탭의 **유니코드를 지원하지 않는 프로그램의 언어 버전과 일치하는 언어를 선택하십시오** 에서 목록의 값을 선택합니다.  
   
      이 설정을 사용하면 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 설치 중에 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 설치에 대한 최상의 기본 데이터 정렬을 선택할 수 있습니다.  
   

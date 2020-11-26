@@ -8,14 +8,14 @@ ms.reviewer: ''
 ms.technology: high-availability
 ms.topic: how-to
 ms.assetid: c0e75a7c-85c5-423c-a218-77247bf071aa
-author: MashaMSFT
-ms.author: mathoma
-ms.openlocfilehash: 8cdecc3ac5f8b23e947b92a43e469c568c68d740
-ms.sourcegitcommit: a41e1f4199785a2b8019a419a1f3dcdc15571044
+author: cawrites
+ms.author: chadam
+ms.openlocfilehash: 5fc6afb68622514c5ff8f2c244ff0942ae1f0e1d
+ms.sourcegitcommit: 5a1ed81749800c33059dac91b0e18bd8bb3081b1
 ms.translationtype: HT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 10/13/2020
-ms.locfileid: "91988355"
+ms.lasthandoff: 11/23/2020
+ms.locfileid: "96121143"
 ---
 # <a name="sql-server-failover-cluster-installation"></a>SQL Server 장애 조치(Failover) 클러스터 설치
 [!INCLUDE [SQL Server](../../../includes/applies-to-version/sqlserver.md)]

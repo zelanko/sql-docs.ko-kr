@@ -14,14 +14,14 @@ helpviewer_keywords:
 - quorum [SQL Server]
 - failover clustering [SQL Server], Always On Availability Groups
 ms.assetid: 79d2ea5a-edd8-4b3b-9502-96202057b01a
-author: MashaMSFT
-ms.author: mathoma
-ms.openlocfilehash: 3340ba57a0b316c9a58fbf1b0c65d7ca01f3e1ee
-ms.sourcegitcommit: a41e1f4199785a2b8019a419a1f3dcdc15571044
+author: cawrites
+ms.author: chadam
+ms.openlocfilehash: ac7272b1a8548f6265c9271a4f6bdb0799f02862
+ms.sourcegitcommit: 5a1ed81749800c33059dac91b0e18bd8bb3081b1
 ms.translationtype: HT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 10/13/2020
-ms.locfileid: "91988129"
+ms.lasthandoff: 11/23/2020
+ms.locfileid: "96127559"
 ---
 # <a name="windows-server-failover-clustering-with-sql-server"></a>SQL Server의 Windows Server 장애 조치(Failover) 클러스터링
 [!INCLUDE [SQL Server](../../../includes/applies-to-version/sqlserver.md)]
@@ -76,9 +76,9 @@ ms.locfileid: "91988129"
  자세한 내용은 [장애 조치(Failover) 클러스터링 개요 - Windows Server](/previous-versions/windows/it-pro/windows-server-2012-R2-and-2012/hh831579(v=ws.11))를 참조하세요.  
   
 ##  <a name="sql-server-always-on-technologies-and-wsfc"></a><a name="AlwaysOnWsfcTech"></a> SQL Server Always On 기술 및 WSFC  
- [!INCLUDE[ssCurrent](../../../includes/sscurrent-md.md)] *Always On*은 WSFC를 활용하는 고가용성 및 재해 복구 솔루션입니다. Always On 기능은 애플리케이션 가용성을 높이고 하드웨어에 대한 ROI(투자 수익률)를 향상시키고 고가용성 배포 및 관리를 간소화하는 유연한 통합 솔루션입니다.  
+ [!INCLUDE[ssCurrent](../../../includes/sscurrent-md.md)] *Always On* 은 WSFC를 활용하는 고가용성 및 재해 복구 솔루션입니다. Always On 기능은 애플리케이션 가용성을 높이고 하드웨어에 대한 ROI(투자 수익률)를 향상시키고 고가용성 배포 및 관리를 간소화하는 유연한 통합 솔루션입니다.  
   
- [!INCLUDE[ssHADR](../../../includes/sshadr-md.md)] 및 Always On 장애 조치(Failover) 클러스터 인스턴스는 WSFC를 플랫폼 기술로 사용하고 구성 요소를 WSFC 클러스터 리소스로 등록합니다.  관련 리소스는 *역할*에 결합되므로 다른 WSFC 클러스터 리소스에 종속될 수 있습니다. WSFC에서는 [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] 인스턴스를 다시 시작해야 하는지 감지하여 신호를 보내거나 WSFC의 다른 서버 노드에 자동으로 장애 조치합니다.  
+ [!INCLUDE[ssHADR](../../../includes/sshadr-md.md)] 및 Always On 장애 조치(Failover) 클러스터 인스턴스는 WSFC를 플랫폼 기술로 사용하고 구성 요소를 WSFC 클러스터 리소스로 등록합니다.  관련 리소스는 *역할* 에 결합되므로 다른 WSFC 클러스터 리소스에 종속될 수 있습니다. WSFC에서는 [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] 인스턴스를 다시 시작해야 하는지 감지하여 신호를 보내거나 WSFC의 다른 서버 노드에 자동으로 장애 조치합니다.  
   
 > **중요!!** [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] Always On 기술을 최대한 활용하려면 여러 WSFC 관련 사전 요구 사항을 적용해야 합니다.  
 >   
@@ -126,9 +126,9 @@ ms.locfileid: "91988129"
 ### <a name="wsfc-inter-node-health-detection-and-quorum-voting"></a>WSFC 노드 간 상태 검색 및 쿼럼 투표  
  WSFC의 각 노드는 주기적 하트비트 통신에 참여하여 노드의 상태를 다른 노드와 공유합니다. 응답하지 않는 노드는 오류 상태에 있는 것으로 간주됩니다.  
   
- *쿼럼*은 WSFC에서 충분한 리소스가 온라인 상태인지 확인하여 WSFC가 가동 중인지 확인하는 데 도움이 되는 메커니즘입니다. WSFC에 충분한 투표가 있을 경우 정상적인 상태이며 노드 수준의 내결함성을 제공할 수 있습니다.  
+ *쿼럼* 은 WSFC에서 충분한 리소스가 온라인 상태인지 확인하여 WSFC가 가동 중인지 확인하는 데 도움이 되는 메커니즘입니다. WSFC에 충분한 투표가 있을 경우 정상적인 상태이며 노드 수준의 내결함성을 제공할 수 있습니다.  
   
- *쿼럼 모드*는 쿼럼 투표에 사용되는 방법과 자동 장애 조치(Failover)를 수행하거나 클러스터를 오프라인으로 전환할 시기를 나타내는 WSFC에서 구성됩니다. 
+ *쿼럼 모드* 는 쿼럼 투표에 사용되는 방법과 자동 장애 조치(Failover)를 수행하거나 클러스터를 오프라인으로 전환할 시기를 나타내는 WSFC에서 구성됩니다. 
   
 > **팁** WSFC 내에서 쿼럼 투표 수를 항상 홀수로 유지하는 것이 좋습니다.  쿼럼 투표를 위해 [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] 를 클러스터의 모든 노드에 설치할 필요는 없습니다. 추가 서버가 쿼럼 멤버 역할을 하거나 원격 파일 공유를 결정 기준으로 사용하도록 WSFC 쿼럼 모델을 구성할 수 있습니다.  
 >   
@@ -137,7 +137,7 @@ ms.locfileid: "91988129"
 ### <a name="disaster-recovery-through-forcing-quorum"></a>쿼럼 강제를 통해 재해 복구  
  운영 방법과 WSFC 구성에 따라 자동 장애 조치(Failover)와 수동 장애 조치(Failover)를 모두 수행할 수 있으며 내결함성이 있는 강력한 [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] Always On 솔루션을 유지 관리할 수 있습니다. 그러나 WSFC의 적격한 투표 노드 쿼럼에서 노드 간에 통신할 수 없거나 WSFC에서 상태 검증에 실패할 경우 WSFC 클러스터가 오프라인으로 전환될 수 있습니다.  
   
- 계획되지 않은 재해나 영구적인 하드웨어 또는 통신 장애로 인해 WSFC가 오프라인으로 전환된 경우 수동 관리 작업을 통해 *쿼럼 강제*를 수행하고 내결함성이 없는 구성에서 활성 클러스터 노드를 다시 온라인으로 전환해야 합니다.  
+ 계획되지 않은 재해나 영구적인 하드웨어 또는 통신 장애로 인해 WSFC가 오프라인으로 전환된 경우 수동 관리 작업을 통해 *쿼럼 강제* 를 수행하고 내결함성이 없는 구성에서 활성 클러스터 노드를 다시 온라인으로 전환해야 합니다.  
   
  그런 다음 일련의 단계를 수행하여 WSFC를 다시 구성하고, 영향을 받는 데이터베이스 복제본을 복구하고, 새 쿼럼을 다시 설정해야 합니다.  
   

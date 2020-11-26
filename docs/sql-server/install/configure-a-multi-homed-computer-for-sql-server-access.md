@@ -12,14 +12,14 @@ helpviewer_keywords:
 - multi-homed computer [SQL Server] configuring ports
 - firewall systems [Database Engine], multi-homed computer
 ms.assetid: ba369e5b-7d1f-4544-b7f1-9b098a1e75bc
-author: markingmyname
-ms.author: maghan
-ms.openlocfilehash: 74f365ec21285609055d8ecc04690787f5870802
-ms.sourcegitcommit: f7ac1976d4bfa224332edd9ef2f4377a4d55a2c9
+author: cawrites
+ms.author: chadam
+ms.openlocfilehash: 336822b6ad2ff420c987e42c033e2efae20c2536
+ms.sourcegitcommit: 5a1ed81749800c33059dac91b0e18bd8bb3081b1
 ms.translationtype: HT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 07/02/2020
-ms.locfileid: "85894900"
+ms.lasthandoff: 11/23/2020
+ms.locfileid: "96127543"
 ---
 # <a name="configure-a-multi-homed-computer-for-sql-server-access"></a>SQL Server 액세스를 허용하도록 다중 홈 컴퓨터 구성
 [!INCLUDE [SQL Server Windows Only - ASDBMI ](../../includes/applies-to-version/sql-windows-only-asdbmi.md)]
@@ -57,7 +57,7 @@ ms.locfileid: "85894900"
   
 #### <a name="to-determine-the-ip-addresses-available-on-the-computer"></a>컴퓨터에서 사용할 수 있는 IP 주소를 확인하려면  
   
-1.  [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 가 설치된 컴퓨터에서 **시작**, **실행**을 차례로 클릭한 후 **cmd** 및 [!INCLUDE[clickOK](../../includes/clickok-md.md)]를 입력합니다.  
+1.  [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 가 설치된 컴퓨터에서 **시작**, **실행** 을 차례로 클릭한 후 **cmd** 및 [!INCLUDE[clickOK](../../includes/clickok-md.md)]를 입력합니다.  
   
 2.  명령 프롬프트 창에 **ipconfig,** 을 입력한 다음 Enter 키를 누르면 해당 컴퓨터에서 사용할 수 있는 IP 주소가 나열됩니다.  
   
@@ -68,17 +68,17 @@ ms.locfileid: "85894900"
   
 #### <a name="to-determine-the-ip-addresses-and-ports-used-by-ssnoversion"></a>사용하는 IP 주소와 포트를 확인하려면 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]  
   
-1.  **시작**을 클릭하고 **모든 프로그램**, [!INCLUDE[ssCurrentUI](../../includes/sscurrentui-md.md)], **구성 도구**를 차례로 선택한 다음 **[!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 구성 관리자**를 클릭합니다.  
+1.  **시작** 을 클릭하고 **모든 프로그램**, [!INCLUDE[ssCurrentUI](../../includes/sscurrentui-md.md)], **구성 도구** 를 차례로 선택한 다음 **[!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 구성 관리자** 를 클릭합니다.  
   
-2.  **[!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 구성 관리자**의 콘솔 창에서 **[!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 네트워크 구성**, **\<instance name>에 대한 프로토콜**을 차례로 확장한 다음 **TCP/IP**를 두 번 클릭합니다.  
+2.  **[!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 구성 관리자** 의 콘솔 창에서 **[!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 네트워크 구성**, **\<instance name>에 대한 프로토콜** 을 차례로 확장한 다음 **TCP/IP** 를 두 번 클릭합니다.  
   
-3.  **TCP/IP 속성** 대화 상자의 **IP 주소** 탭에 여러 개의 IP 주소가 **IP1**, **IP2**의 형식으로 **IPAll**까지 표시됩니다. 이러한 주소에는 루프백 어댑터의 IP 주소인 127.0.0.1이 포함됩니다. 컴퓨터에 구성된 각 IP 주소에 대한 추가 IP 주소가 나타납니다.  
+3.  **TCP/IP 속성** 대화 상자의 **IP 주소** 탭에 여러 개의 IP 주소가 **IP1**, **IP2** 의 형식으로 **IPAll** 까지 표시됩니다. 이러한 주소에는 루프백 어댑터의 IP 주소인 127.0.0.1이 포함됩니다. 컴퓨터에 구성된 각 IP 주소에 대한 추가 IP 주소가 나타납니다.  
   
-4.  IP 주소의 경우 **TCP 동적 포트** 대화 상자에 **0**이 있으면 [!INCLUDE[ssDE](../../includes/ssde-md.md)] 이 동적 포트에서 수신하고 있음을 나타냅니다. 이 예에서는 컴퓨터를 다시 시작할 때 변경될 수 있는 동적 포트 대신 고정 포트를 사용합니다. 따라서 **TCP 동적 포트** 대화 상자에 **0**이 있으면 0을 삭제합니다.  
+4.  IP 주소의 경우 **TCP 동적 포트** 대화 상자에 **0** 이 있으면 [!INCLUDE[ssDE](../../includes/ssde-md.md)] 이 동적 포트에서 수신하고 있음을 나타냅니다. 이 예에서는 컴퓨터를 다시 시작할 때 변경될 수 있는 동적 포트 대신 고정 포트를 사용합니다. 따라서 **TCP 동적 포트** 대화 상자에 **0** 이 있으면 0을 삭제합니다.  
   
 5.  구성할 각 IP 주소에 대해 나열된 TCP 포트를 기록해 둡니다. 이 예에서는 두 IP 주소 모두 기본 포트 1433에서 수신한다고 가정합니다.  
   
-6.  [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 에서 특정 포트를 사용하지 못하게 하려면 **프로토콜** 탭에서 **모두 수신** 값을 **아니요**로 변경한 후 **IP 주소** 탭에서 사용하지 않으려는 IP 주소에 대해 **활성** 값을 **아니요** 로 변경합니다.  
+6.  [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 에서 특정 포트를 사용하지 못하게 하려면 **프로토콜** 탭에서 **모두 수신** 값을 **아니요** 로 변경한 후 **IP 주소** 탭에서 사용하지 않으려는 IP 주소에 대해 **활성** 값을 **아니요** 로 변경합니다.  
   
 ## <a name="configuring-windows-firewall-with-advanced-security"></a>고급 보안이 포함된 Windows 방화벽 구성  
  컴퓨터에서 사용하는 IP 주소와 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 에서 사용하는 포트를 확인했으면 방화벽 규칙을 만들어 특정 IP 주소에 이 규칙을 적용하도록 구성할 수 있습니다.  
@@ -87,34 +87,34 @@ ms.locfileid: "85894900"
   
 1.  [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 가 설치된 컴퓨터에서 관리자로 로그온합니다.  
   
-2.  **시작**, **실행**을 차례로 클릭하고 **wf.msc**을 입력한 다음 **확인**을 클릭합니다.  
+2.  **시작**, **실행** 을 차례로 클릭하고 **wf.msc** 을 입력한 다음 **확인** 을 클릭합니다.  
   
 3.  **사용자 계정 컨트롤** 대화 상자에서 **계속** 을 클릭하여 고급 보안이 포함된 Windows 방화벽 스냅인을 관리자 자격 증명으로 엽니다.  
   
 4.  **개요** 페이지에서 Windows 방화벽이 사용되고 있는지 확인합니다.  
   
-5.  왼쪽 창에서 **인바운드 규칙**을 클릭합니다.  
+5.  왼쪽 창에서 **인바운드 규칙** 을 클릭합니다.  
   
-6.  **인바운드 규칙**을 마우스 오른쪽 단추로 클릭한 후 **새 규칙** 을 클릭하여 **새 인바운드 규칙 마법사**를 엽니다.  
+6.  **인바운드 규칙** 을 마우스 오른쪽 단추로 클릭한 후 **새 규칙** 을 클릭하여 **새 인바운드 규칙 마법사** 를 엽니다.  
   
-7.  [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 프로그램에 대한 규칙을 만들 수 있습니다. 그러나 이 예에서는 고정 포트를 사용하므로 **포트**를 선택하고 **다음**을 클릭합니다.  
+7.  [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 프로그램에 대한 규칙을 만들 수 있습니다. 그러나 이 예에서는 고정 포트를 사용하므로 **포트** 를 선택하고 **다음** 을 클릭합니다.  
   
-8.  **프로토콜 및 포트** 페이지에서 **TCP**를 선택합니다.  
+8.  **프로토콜 및 포트** 페이지에서 **TCP** 를 선택합니다.  
   
-9. **지정된 로컬 포트**를 선택합니다. 포트 번호를 쉼표로 구분하여 입력한 후 **다음**을 클릭합니다. 이 예에서는 기본 포트를 구성하므로 **1433**을 입력합니다.  
+9. **지정된 로컬 포트** 를 선택합니다. 포트 번호를 쉼표로 구분하여 입력한 후 **다음** 을 클릭합니다. 이 예에서는 기본 포트를 구성하므로 **1433** 을 입력합니다.  
   
-10. **동작** 페이지에서 옵션을 검토합니다. 이 예에서는 방화벽을 사용하여 보안 연결을 적용하지 않습니다. 따라서 **연결 허용**을 클릭한 후 **다음**을 클릭합니다.  
+10. **동작** 페이지에서 옵션을 검토합니다. 이 예에서는 방화벽을 사용하여 보안 연결을 적용하지 않습니다. 따라서 **연결 허용** 을 클릭한 후 **다음** 을 클릭합니다.  
   
     > [!NOTE]  
     >  환경에 따라 보안 연결이 필요할 수 있습니다. 보안 연결 옵션 중 하나를 선택할 경우 인증서와 **암호화 적용** 옵션을.구성해야 합니다. 보안 연결에 대한 자세한 내용은 [데이터베이스 엔진에 암호화 연결 사용&#40;SQL Server 구성 관리자&#41;](../../database-engine/configure-windows/enable-encrypted-connections-to-the-database-engine.md) 및 [데이터베이스 엔진에 암호화 연결 사용&#40;SQL Server 구성 관리자&#41;](../../database-engine/configure-windows/enable-encrypted-connections-to-the-database-engine.md)을 참조하세요.  
   
 11. **프로필** 페이지에서 규칙에 대해 하나 이상의 프로필을 선택합니다. 방화벽 프로필에 대해 잘 모를 경우 방화벽 프로그램에서 **프로필에 대해 자세히 알아봅니다** 링크를 클릭합니다.  
   
-    -   컴퓨터가 서버이고 도메인에 연결되었을 때만 사용할 수 있을 경우 **도메인**을 선택하고 **다음**을 클릭합니다.  
+    -   컴퓨터가 서버이고 도메인에 연결되었을 때만 사용할 수 있을 경우 **도메인** 을 선택하고 **다음** 을 클릭합니다.  
   
     -   컴퓨터가 모바일 컴퓨터(랩톱)일 경우 여러 네트워크에 연결할 때 여러 개의 프로필을 사용할 것입니다. 모바일 컴퓨터의 경우 서로 다른 프로필을 위한 여러 개의 액세스 기능을 구성해야 합니다. 예를 들어, 컴퓨터에서 도메인 프로필을 사용할 경우 액세스를 허용하고, 공개 프로필을 사용할 경우에는 액세스를 금지할 수 있습니다.  
   
-12. **이름** 페이지에 규칙의 이름과 설명을 입력한 후 **마침**을 클릭합니다.  
+12. **이름** 페이지에 규칙의 이름과 설명을 입력한 후 **마침** 을 클릭합니다.  
   
 13. 이 절차를 반복하여 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 에서 사용할 각 IP 주소에 대한 규칙을 만듭니다.  
   
@@ -122,21 +122,21 @@ ms.locfileid: "85894900"
   
 #### <a name="to-configure-the-firewall-rule-for-a-specific-ip-addresses"></a>특성 IP 주소에 대한 방화벽 규칙을 구성하려면  
   
-1.  **고급 보안이 포함된 Windows 방화벽** 의 **인바운드 규칙**페이지에서 방금 만든 규칙을 마우스 오른쪽 단추로 클릭한 다음 **속성**을 클릭합니다.  
+1.  **고급 보안이 포함된 Windows 방화벽** 의 **인바운드 규칙** 페이지에서 방금 만든 규칙을 마우스 오른쪽 단추로 클릭한 다음 **속성** 을 클릭합니다.  
   
 2.  **규칙 속성** 대화 상자에서 **범위** 탭을 선택합니다.  
   
-3.  **로컬 IP 주소** 영역에서 **다음 IP 주소**를 선택한 다음 **추가**를 클릭합니다.  
+3.  **로컬 IP 주소** 영역에서 **다음 IP 주소** 를 선택한 다음 **추가** 를 클릭합니다.  
   
-4.  **IP 주소** 대화 상자에서 **다음 IP 주소 또는 서브넷**을 선택한 다음 구성하려는 IP 주소 중 하나를 입력합니다.  
+4.  **IP 주소** 대화 상자에서 **다음 IP 주소 또는 서브넷** 을 선택한 다음 구성하려는 IP 주소 중 하나를 입력합니다.  
   
 5.  [!INCLUDE[clickOK](../../includes/clickok-md.md)]  
   
-6.  **원격 IP 주소** 영역에서 **다음 IP 주소**를 선택한 다음 **추가**를 클릭합니다.  
+6.  **원격 IP 주소** 영역에서 **다음 IP 주소** 를 선택한 다음 **추가** 를 클릭합니다.  
   
 7.  **IP 주소** 대화 상자를 사용하여 컴퓨터의 선택된 IP 주소에 대한 연결을 구성합니다. 지정한 IP 주소, IP 주소 범위, 전체 서브넷 또는 특정 컴퓨터의 연결을 활성화할 수 있습니다. 이 옵션을 올바르게 구성하려면 네트워크에 대해 잘 알고 있어야 합니다. 네트워크에 대한 자세한 내용은 네트워크 관리자를 참조하십시오.  
   
-8.  **IP 주소** 대화 상자를 닫으려면 **확인**을 클릭합니다. 그런 다음 **확인** 을 클릭하여 **규칙 속성** 대화 상자를 닫습니다.  
+8.  **IP 주소** 대화 상자를 닫으려면 **확인** 을 클릭합니다. 그런 다음 **확인** 을 클릭하여 **규칙 속성** 대화 상자를 닫습니다.  
   
 9. 다중 홈 컴퓨터의 IP 주소를 구성하려면 다른 IP 주소와 다른 규칙을 사용하여 이 절차를 반복합니다.  
   

@@ -11,14 +11,14 @@ helpviewer_keywords:
 - Availability Groups [SQL Server], WSFC clusters
 - quorum [SQL Server], AlwaysOn and WSFC quorum
 ms.assetid: 4a121375-7424-4444-b876-baefa8fe9015
-author: MashaMSFT
-ms.author: mathoma
-ms.openlocfilehash: bb5f71421506c381e576a429cceff4597d258448
-ms.sourcegitcommit: a41e1f4199785a2b8019a419a1f3dcdc15571044
+author: cawrites
+ms.author: chadam
+ms.openlocfilehash: c1de5f07aa692b0d268d3e41a1b8dda554ea0280
+ms.sourcegitcommit: 5a1ed81749800c33059dac91b0e18bd8bb3081b1
 ms.translationtype: HT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 10/13/2020
-ms.locfileid: "91986063"
+ms.lasthandoff: 11/23/2020
+ms.locfileid: "96121068"
 ---
 # <a name="force-a-wsfc-cluster-to-start-without-a-quorum"></a>쿼럼 없이 WSFC 클러스터 강제 시작
 [!INCLUDE [SQL Server](../../../includes/applies-to-version/sqlserver.md)]
@@ -44,7 +44,7 @@ ms.locfileid: "91986063"
   
 1.  장애 조치(Failover) 클러스터 관리자를 열고 온라인으로 강제 전환할 클러스터 노드에 연결합니다.  
   
-2.  **동작** 창에서 **클러스터 강제 시작**을 클릭하고 **예. 클러스터를 강제로 시작**을 클릭합니다.  
+2.  **동작** 창에서 **클러스터 강제 시작** 을 클릭하고 **예. 클러스터를 강제로 시작** 을 클릭합니다.  
   
 3.  왼쪽 창의 **장애 조치(Failover) 클러스터 관리자** 트리에서 클러스터 이름을 클릭합니다.  
   
@@ -54,7 +54,7 @@ ms.locfileid: "91986063"
   
 ##### <a name="to-force-a-cluster-to-start-without-a-quorum"></a>쿼럼 없이 클러스터를 강제로 시작하려면  
   
-1.  **관리자 권한으로 실행**을 통해 승격된 Windows PowerShell을 시작합니다.  
+1.  **관리자 권한으로 실행** 을 통해 승격된 Windows PowerShell을 시작합니다.  
   
 2.  클러스터 commandlet을 사용할 수 있도록 `FailoverClusters` 모듈을 가져옵니다.  
   
@@ -89,7 +89,7 @@ $nodes | Format-Table -property NodeName, State, NodeWeight
   
 1.  원격 데스크톱을 사용하여 온라인으로 강제 전환할 클러스터 노드에 연결합니다.  
   
-2.  **관리자 권한으로 실행**을 통해 승격된 명령 프롬프트를 시작합니다.  
+2.  **관리자 권한으로 실행** 을 통해 승격된 명령 프롬프트를 시작합니다.  
   
 3.  **net.exe** 를 사용하여 로컬 클러스터 서비스가 중지되었는지 확인합니다.  
   

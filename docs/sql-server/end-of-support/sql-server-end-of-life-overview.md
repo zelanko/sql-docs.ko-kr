@@ -5,16 +5,16 @@ ms.date: 08/12/2020
 ms.prod: sql
 ms.technology: install
 ms.topic: conceptual
-author: markingmyname
-ms.author: maghan
+author: cawrites
+ms.author: chadam
 ms.reviewer: pmasl
 monikerRange: '>=sql-server-2016||=sqlallproducts-allversions'
-ms.openlocfilehash: 49cb6fddf2906583d64aa732d222a1d1a100e6c8
-ms.sourcegitcommit: a41e1f4199785a2b8019a419a1f3dcdc15571044
+ms.openlocfilehash: e465f1e4e8c6cc9e5effb27c1cc97ee7633309eb
+ms.sourcegitcommit: ece151df14dc2610d96cd0d40b370a4653796d74
 ms.translationtype: HT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 10/13/2020
-ms.locfileid: "91988614"
+ms.lasthandoff: 11/26/2020
+ms.locfileid: "96297970"
 ---
 # <a name="sql-server-end-of-support-options"></a>SQL Server 지원 종료 옵션 
 [!INCLUDE [SQL Server Windows Only - ASDBMI ](../../includes/applies-to-version/sql-windows-only-asdbmi.md)]
@@ -24,8 +24,8 @@ ms.locfileid: "91988614"
 ## <a name="understanding-the-sql-server-lifecycle"></a>SQL Server 수명 주기 이해
 
 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]의 각 버전은 최소 10년간 지원이 제공됩니다. 이 지원에는 5년간 일반 지원과 5년간 연장 지원이 포함됩니다.
--  **기본 지원**은 기능, 성능, 확장성 및 보안 업데이트를 포함합니다. 
--  **연장 지원**은 보안 업데이트만 포함합니다. 
+-  **기본 지원** 은 기능, 성능, 확장성 및 보안 업데이트를 포함합니다. 
+-  **연장 지원** 은 보안 업데이트만 포함합니다. 
 
 **지원 종료**(종종 수명 종료라고도 함)는 제품이 수명 주기 끝에 도달하여 제품에 대한 서비스 및 지원을 더 이상 사용할 수 없음을 나타냅니다. Microsoft 수명 주기에 대한 자세한 내용은 [Microsoft 수명 주기 정책](https://support.microsoft.com/hub/4095338/microsoft-lifecycle-policy)을 참조하세요.
 

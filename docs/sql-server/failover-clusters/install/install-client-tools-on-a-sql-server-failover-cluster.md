@@ -8,14 +8,14 @@ ms.prod: sql
 ms.technology: high-availability
 ms.topic: how-to
 ms.assetid: 3c82d510-9798-46be-bebb-cac9bef56936
-author: MashaMSFT
-ms.author: mathoma
-ms.openlocfilehash: fd0050d606d27f27285e7ba1376dd32f13e40cae
-ms.sourcegitcommit: a41e1f4199785a2b8019a419a1f3dcdc15571044
+author: cawrites
+ms.author: chadam
+ms.openlocfilehash: 467014114a17d6cafacdaf44f1f7a2c60042721a
+ms.sourcegitcommit: 5a1ed81749800c33059dac91b0e18bd8bb3081b1
 ms.translationtype: HT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 10/13/2020
-ms.locfileid: "91988449"
+ms.lasthandoff: 11/23/2020
+ms.locfileid: "96127662"
 ---
 # <a name="install-client-tools-on-a-sql-server-failover-cluster"></a>SQL Server 장애 조치 클러스터에 클라이언트 도구 설치
 [!INCLUDE [SQL Server](../../../includes/applies-to-version/sqlserver.md)]
@@ -34,11 +34,11 @@ ms.locfileid: "91988449"
   
 1.  [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] 설치 미디어를 넣고 루트 설치 폴더에서 Setup.exe를 두 번 클릭합니다. 네트워크 공유에서 설치하려면 공유에서 루트 폴더를 찾은 다음 Setup.exe를 두 번 클릭합니다.  
   
-2.  **설치** 페이지에서 **새 [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] 독립 실행형 설치 또는 기존 설치에 기능 추가**를 클릭합니다. **[!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] 장애 조치(failover) 클러스터 새로 설치**를 클릭하지 마세요.  
+2.  **설치** 페이지에서 **새 [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] 독립 실행형 설치 또는 기존 설치에 기능 추가** 를 클릭합니다. **[!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] 장애 조치(failover) 클러스터 새로 설치** 를 클릭하지 마세요.  
   
 3.  시스템 구성 검사기가 설치를 계속하기 전에 컴퓨터의 시스템 상태를 확인합니다.  
   
-4.  **설치 유형** 페이지에서 **[!INCLUDE[ssCurrent](../../../includes/sscurrent-md.md)] 새로 설치**를 클릭합니다.  
+4.  **설치 유형** 페이지에서 **[!INCLUDE[ssCurrent](../../../includes/sscurrent-md.md)] 새로 설치** 를 클릭합니다.  
   
 5.  **기능 선택** 페이지에서 설치할 도구를 선택하고 설치 프로세스의 나머지 단계를 진행합니다.  
   

@@ -8,14 +8,14 @@ ms.reviewer: ''
 ms.technology: install
 ms.topic: conceptual
 ms.assetid: 463c570e-9f75-4653-b3b8-4d61753b0013
-author: markingmyname
-ms.author: maghan
-ms.openlocfilehash: 69458d99f5c7a594915c2539b57e01102df1042e
-ms.sourcegitcommit: a41e1f4199785a2b8019a419a1f3dcdc15571044
+author: cawrites
+ms.author: chadam
+ms.openlocfilehash: 2165dccef242e1c813f83a64a598262be7f260c2
+ms.sourcegitcommit: 5a1ed81749800c33059dac91b0e18bd8bb3081b1
 ms.translationtype: HT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 10/13/2020
-ms.locfileid: "91988112"
+ms.lasthandoff: 11/23/2020
+ms.locfileid: "96127548"
 ---
 # <a name="file-locations-for-default-and-named-instances-of-sql-server"></a>SQL Server 기본 인스턴스 및 명명된 인스턴스의 파일 위치
 [!INCLUDE [SQL Server Windows Only - ASDBMI ](../../includes/applies-to-version/sql-windows-only-asdbmi.md)]
@@ -36,7 +36,7 @@ ms.locfileid: "91988112"
 >  Binn, Data, Ftdata, HTML 또는 1033 디렉터리나 포함된 내용을 삭제하지 마세요. 필요한 경우 다른 디렉터리는 삭제할 수 있지만 삭제된 기능이나 데이터를 검색하려면 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]를 제거했다가 다시 설치해야 합니다. HTML 디렉터리의 .htm 파일을 삭제하거나 수정하지 마십시오. 이 파일은 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 도구가 올바르게 동작하는 데 필요합니다.  
   
 ## <a name="shared-files-for-all-instances-of-ssnoversion"></a>모든 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]  
- 단일 컴퓨터의 모든 인스턴스에서 사용하는 공용 파일은 [!INCLUDE[ssInstallPathVar](../../includes/ssinstallpathvar-md.md)] 폴더에 설치됩니다. \<*drive*>는 구성 요소가 설치되는 드라이브 문자입니다. 기본값은 일반적으로 C 드라이브입니다. _nnn_은 버전을 나타냅니다. 다음 표에는 경로에 대한 버전이 나와 있습니다. \{nn}은 인스턴스 ID 및 레지스트리 경로에 사용되는 버전 값입니다. 
+ 단일 컴퓨터의 모든 인스턴스에서 사용하는 공용 파일은 [!INCLUDE[ssInstallPathVar](../../includes/ssinstallpathvar-md.md)] 폴더에 설치됩니다. \<*drive*>는 구성 요소가 설치되는 드라이브 문자입니다. 기본값은 일반적으로 C 드라이브입니다. _nnn_ 은 버전을 나타냅니다. 다음 표에는 경로에 대한 버전이 나와 있습니다. \{nn}은 인스턴스 ID 및 레지스트리 경로에 사용되는 버전 값입니다. 
 
 |버전|\*nnn*|{nn}|
 |-----|-----|--------|
@@ -123,7 +123,7 @@ ms.locfileid: "91988112"
 > [!WARNING]
 > \Program Files\\[!INCLUDE[msCoName](../../includes/msconame-md.md)][!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]\ 폴더가 제한된 권한으로 보호되는지 확인하세요.  
   
-파일 위치의 기본 드라이브는 *systemdrive*이며 일반적으로 C 드라이브입니다. 자식 기능의 설치 경로는 부모 기능의 설치 경로에 따라 결정됩니다.  
+파일 위치의 기본 드라이브는 *systemdrive* 이며 일반적으로 C 드라이브입니다. 자식 기능의 설치 경로는 부모 기능의 설치 경로에 따라 결정됩니다.  
   
 <sup>1</sup>[!INCLUDE[ssISnoversion](../../includes/ssisnoversion-md.md)] 및 클라이언트 구성 요소 간에 단일 설치 경로가 공유됩니다. 한 구성 요소의 설치 경로를 변경하면 다른 구성 요소에 대한 설치 경로도 변경됩니다. 후속 설치 시 원래 설치와 동일한 위치에 구성 요소를 설치합니다.  
   

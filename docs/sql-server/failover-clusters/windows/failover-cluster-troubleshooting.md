@@ -12,14 +12,14 @@ helpviewer_keywords:
 - failover clustering, troubleshooting
 - cluster troubleshooting
 ms.assetid: 84012320-5a7b-45b0-8feb-325bf0e21324
-author: MashaMSFT
-ms.author: mathoma
-ms.openlocfilehash: f9c54984eb8d1c94176929579043f979aa518672
-ms.sourcegitcommit: a41e1f4199785a2b8019a419a1f3dcdc15571044
+author: cawrites
+ms.author: chadam
+ms.openlocfilehash: 75090ce180ff6e71796c9363e39768f09ec3f91b
+ms.sourcegitcommit: 5a1ed81749800c33059dac91b0e18bd8bb3081b1
 ms.translationtype: HT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 10/13/2020
-ms.locfileid: "91988310"
+ms.lasthandoff: 11/23/2020
+ms.locfileid: "96121098"
 ---
 # <a name="failover-cluster-troubleshooting"></a>장애 조치(Failover) 클러스터 문제 해결
 [!INCLUDE [SQL Server](../../../includes/applies-to-version/sqlserver.md)]
@@ -39,7 +39,7 @@ ms.locfileid: "91988310"
   
 #### <a name="how-to-revalidate-your-cluster"></a>클러스터의 유효성을 다시 검사하는 방법  
   
-1.  장애 조치(failover) 클러스터 스냅인의 콘솔 트리에서 **장애 조치(failover) 클러스터 관리** 가 선택되어 있는지 확인하고 **관리**아래에서 **구성 유효성 검사**를 클릭합니다.  
+1.  장애 조치(failover) 클러스터 스냅인의 콘솔 트리에서 **장애 조치(failover) 클러스터 관리** 가 선택되어 있는지 확인하고 **관리** 아래에서 **구성 유효성 검사** 를 클릭합니다.  
   
 2.  마법사의 지침에 따라 서버 및 테스트를 지정하고 테스트를 실행합니다. 테스트가 실행된 후 **요약** 페이지가 나타납니다.  
   
@@ -47,9 +47,9 @@ ms.locfileid: "91988310"
   
      마법사를 닫은 후 테스트 결과를 보려면 **%SystemRoot%\Cluster\Reports\Validation Report date and time.html** 을 확인합니다. 여기서 **%SystemRoot%** 는 운영 체제가 설치된 폴더입니다(예: **C:\Windows**).  
   
-4.  결과를 해석하는 데 도움이 되는 도움말 항목을 보려면 **클러스터 유효성 검사 테스트에 대한 추가 정보**를 클릭합니다.  
+4.  결과를 해석하는 데 도움이 되는 도움말 항목을 보려면 **클러스터 유효성 검사 테스트에 대한 추가 정보** 를 클릭합니다.  
   
- 마법사를 닫은 후 클러스터 유효성 검사에 대한 도움말 항목을 보려면 장애 조치(failover) 클러스터 스냅인에서 **도움말**, **도움말 항목**, **목차** 탭을 차례로 클릭하고 장애 조치(failover) 클러스터 도움말에 대한 내용을 확장한 후 **장애 조치(failover) 클러스터 구성 유효성 검사**를 클릭합니다.  유효성 검사 마법사를 완료하면 **요약 보고서** 에 결과가 표시됩니다. 녹색 확인 표시 또는 경우에 따라 노란색 삼각형(경고)와 함께 모든 테스트를 통과해야 합니다. 테스트 결과를 요약하는 보고서의 일부에서 문제 영역(빨간색 X 또는 노란색 물음표)을 찾을 때는 개별 테스트를 클릭하여 세부 정보를 검토합니다. 모든 빨간색 X 문제는 [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] 문제를 해결하기 전에 해결해야 합니다.  
+ 마법사를 닫은 후 클러스터 유효성 검사에 대한 도움말 항목을 보려면 장애 조치(failover) 클러스터 스냅인에서 **도움말**, **도움말 항목**, **목차** 탭을 차례로 클릭하고 장애 조치(failover) 클러스터 도움말에 대한 내용을 확장한 후 **장애 조치(failover) 클러스터 구성 유효성 검사** 를 클릭합니다.  유효성 검사 마법사를 완료하면 **요약 보고서** 에 결과가 표시됩니다. 녹색 확인 표시 또는 경우에 따라 노란색 삼각형(경고)와 함께 모든 테스트를 통과해야 합니다. 테스트 결과를 요약하는 보고서의 일부에서 문제 영역(빨간색 X 또는 노란색 물음표)을 찾을 때는 개별 테스트를 클릭하여 세부 정보를 검토합니다. 모든 빨간색 X 문제는 [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] 문제를 해결하기 전에 해결해야 합니다.  
   
  **업데이트 설치**  
   
@@ -127,11 +127,11 @@ ms.locfileid: "91988310"
   
  **해결 방법 3:** 명명된 파이프를 사용하여 연결하려면 SQL Server 구성 관리자를 사용하여 별칭을 만들고 적절한 컴퓨터에 연결합니다. 예를 들어 노드가 두 개(**노드 A** 및 **노드 B**)인 클러스터와 기본 인스턴스를 가진 장애 조치(failover) 클러스터 인스턴스(**Virtsql**)가 있으면 다음 단계를 수행하여 네트워크 이름 리소스가 오프라인 상태인 서버에 연결할 수 있습니다.  
   
-1.  클러스터 관리자를 사용하여 [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] 의 인스턴스가 있는 그룹이 실행 중인 노드를 확인합니다. 이 예에서는 **노드 A**입니다.  
+1.  클러스터 관리자를 사용하여 [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] 의 인스턴스가 있는 그룹이 실행 중인 노드를 확인합니다. 이 예에서는 **노드 A** 입니다.  
   
-2.  [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] net start **를 사용하여 해당 컴퓨터에서**서비스를 시작합니다. **net start**를 사용하는 방법은 [SQL Server 수동 시작](https://msdn.microsoft.com/library/ms191193\(v=sql.105\).aspx)을 참조하세요.  
+2.  [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] net start **를 사용하여 해당 컴퓨터에서** 서비스를 시작합니다. **net start** 를 사용하는 방법은 [SQL Server 수동 시작](https://msdn.microsoft.com/library/ms191193\(v=sql.105\).aspx)을 참조하세요.  
   
-3.  **노드 A**에서 [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] SQL Server 구성 관리자를 시작합니다. 서버가 수신하는 파이프 이름을 확인합니다. 파이프 이름은 \\\\.\\$$\VIRTSQL\pipe\sql\query와 비슷해야 합니다.  
+3.  **노드 A** 에서 [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] SQL Server 구성 관리자를 시작합니다. 서버가 수신하는 파이프 이름을 확인합니다. 파이프 이름은 \\\\.\\$$\VIRTSQL\pipe\sql\query와 비슷해야 합니다.  
   
 4.  클라이언트 컴퓨터에서 SQL Server 구성 관리자를 시작합니다.  
   
@@ -168,11 +168,11 @@ ms.locfileid: "91988310"
   
  MS DTC를 완전히 활성화하려면 다음 단계를 따르십시오.  
   
-1.  제어판에서 **관리 도구**를 열고 **컴퓨터 관리**를 엽니다.  
+1.  제어판에서 **관리 도구** 를 열고 **컴퓨터 관리** 를 엽니다.  
   
-2.  컴퓨터 관리 왼쪽 창에서 **서비스 및 애플리케이션**을 확장한 다음 **서비스**를 클릭합니다.  
+2.  컴퓨터 관리 왼쪽 창에서 **서비스 및 애플리케이션** 을 확장한 다음 **서비스** 를 클릭합니다.  
   
-3.  컴퓨터 관리 오른쪽 창에서 **Distributed Transaction Coordinator**를 마우스 오른쪽 단추로 클릭하고 **속성**을 선택합니다.  
+3.  컴퓨터 관리 오른쪽 창에서 **Distributed Transaction Coordinator** 를 마우스 오른쪽 단추로 클릭하고 **속성** 을 선택합니다.  
   
 4.  **Distributed Transaction Coordinator** 창에서 **일반** 탭을 클릭한 다음 **중지** 를 클릭하여 서비스를 중지합니다.  
   

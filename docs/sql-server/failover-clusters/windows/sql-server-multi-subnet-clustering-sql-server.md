@@ -14,14 +14,14 @@ helpviewer_keywords:
 - multi-site failover cluster
 - failover clustering [SQL Server]
 ms.assetid: cd909612-99cc-4962-a8fb-e9a5b918e221
-author: MashaMSFT
-ms.author: mathoma
-ms.openlocfilehash: ef365002594de1c5d038f19f06b47911c5dfb722
-ms.sourcegitcommit: a41e1f4199785a2b8019a419a1f3dcdc15571044
+author: cawrites
+ms.author: chadam
+ms.openlocfilehash: 5a96de77d3a1bad6f4faec4aab089d466cc2710d
+ms.sourcegitcommit: 5a1ed81749800c33059dac91b0e18bd8bb3081b1
 ms.translationtype: HT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 10/13/2020
-ms.locfileid: "91987825"
+ms.lasthandoff: 11/23/2020
+ms.locfileid: "96121058"
 ---
 # <a name="sql-server-multi-subnet-clustering-sql-server"></a>SQL Server 다중 서브넷 클러스터링(SQL Server)
 [!INCLUDE [SQL Server](../../../includes/applies-to-version/sqlserver.md)]
@@ -37,25 +37,25 @@ ms.locfileid: "91987825"
 ##  <a name="multi-subnet-failover-cluster-instance-configurations"></a><a name="Configurations"></a> 다중 서브넷 장애 조치(Failover) 클러스터 인스턴스 구성  
  다음은 여러 서브넷을 사용하는 [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] FCI의 몇 가지 예입니다.  
   
--   [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] FCI SQLCLUST1에는 Node1과 Node2가 포함됩니다. Node1은 Subnet1에 연결되고, Node2는 Subnet2에 연결됩니다. [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] 설치 프로그램에서는 이 구성을 다중 서브넷 클러스터로 인식하여 IP 주소 리소스 종속성을 **OR**로 설정합니다.  
+-   [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] FCI SQLCLUST1에는 Node1과 Node2가 포함됩니다. Node1은 Subnet1에 연결되고, Node2는 Subnet2에 연결됩니다. [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] 설치 프로그램에서는 이 구성을 다중 서브넷 클러스터로 인식하여 IP 주소 리소스 종속성을 **OR** 로 설정합니다.  
   
--   [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] FCI SQLCLUST1에는 Node1, Node2 및 Node3이 포함됩니다. Node1과 Node2는 Subnet1에 연결되고, Node3은 Subnet2에 연결됩니다. [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] 설치 프로그램에서는 이 구성을 다중 서브넷 클러스터로 인식하여 IP 주소 리소스 종속성을 **OR**로 설정합니다. Node1과 Node2는 같은 서브넷에 있기 때문에 이 구성은 추가적인 로컬 고가용성을 제공합니다.  
+-   [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] FCI SQLCLUST1에는 Node1, Node2 및 Node3이 포함됩니다. Node1과 Node2는 Subnet1에 연결되고, Node3은 Subnet2에 연결됩니다. [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] 설치 프로그램에서는 이 구성을 다중 서브넷 클러스터로 인식하여 IP 주소 리소스 종속성을 **OR** 로 설정합니다. Node1과 Node2는 같은 서브넷에 있기 때문에 이 구성은 추가적인 로컬 고가용성을 제공합니다.  
   
--   [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] FCI SQLCLUST1에는 Node1과 Node2가 포함됩니다. Node1은 Subnet1에 있고, Node2는 Subnet1과 Subnet2에 있습니다. [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] 설치 프로그램에서는 이 구성을 다중 서브넷 클러스터로 인식하여 IP 주소 리소스 종속성을 **OR**로 설정합니다.  
+-   [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] FCI SQLCLUST1에는 Node1과 Node2가 포함됩니다. Node1은 Subnet1에 있고, Node2는 Subnet1과 Subnet2에 있습니다. [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] 설치 프로그램에서는 이 구성을 다중 서브넷 클러스터로 인식하여 IP 주소 리소스 종속성을 **OR** 로 설정합니다.  
   
 -   [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] FCI SQLCLUST1에는 Node1과 Node2가 포함됩니다. Node1은 Subnet1과 Subnet2에 연결되고, Node2도 Subnet1과 Subnet2에 연결됩니다. IP 주소 리소스 종속성은 **설치 프로그램에서** AND [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] 로 설정됩니다.  
   
     > **참고:** 이 구성은 클러스터형 노드가 동일한 서브넷 집합에 있기 때문에 다중 서브넷 장애 조치(Failover) 클러스터 구성으로 간주되지 않습니다.  
   
 ##  <a name="ip-address-resource-considerations"></a><a name="ComponentsAndConcepts"></a> IP 주소 리소스 고려 사항  
- 다중 서브넷 장애 조치(Failover) 클러스터 구성에서는 장애 조치(Failover) 클러스터의 일부 노드에서 IP 주소를 소유하지 않으므로 [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] 시작 중에 일부 IP 주소가 온라인 상태가 되지 않을 수도 있습니다. [!INCLUDE[ssSQL11](../../../includes/sssql11-md.md)]부터 IP 주소 리소스 종속성을 **OR**로 설정할 수 있습니다. 이를 통해 바인딩할 수 있는 유효한 IP 주소가 하나 이상 있는 경우 [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] 를 온라인 상태로 만들 수 있습니다.  
+ 다중 서브넷 장애 조치(Failover) 클러스터 구성에서는 장애 조치(Failover) 클러스터의 일부 노드에서 IP 주소를 소유하지 않으므로 [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] 시작 중에 일부 IP 주소가 온라인 상태가 되지 않을 수도 있습니다. [!INCLUDE[ssSQL11](../../../includes/sssql11-md.md)]부터 IP 주소 리소스 종속성을 **OR** 로 설정할 수 있습니다. 이를 통해 바인딩할 수 있는 유효한 IP 주소가 하나 이상 있는 경우 [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] 를 온라인 상태로 만들 수 있습니다.  
   
   > [!NOTE] 
   > - [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] 이전의 [!INCLUDE[ssSQL11](../../../includes/sssql11-md.md)]버전에서는 다중 사이트 클러스터 구성에 V-LAN 늘이기 기술을 사용하여 사이트 간 장애 조치(Failover)에 단일 IP 주소를 제공했습니다. 이제 여러 서브넷의 노드를 클러스터링하는 [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] 의 새 기능을 사용하면 V-LAN 늘이기 기술을 구현하지 않고도 다중 사이트에서 [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] 장애 조치(Failover) 클러스터를 구성할 수 있습니다.  
 
   
 ### <a name="ip-address-resource-or-dependency-considerations"></a>IP 주소 리소스 OR 종속성 고려 사항  
- IP 주소 리소스 종속성을 **OR**로 설정한 경우 다음 장애 조치(Failover) 동작을 고려할 수 있습니다.  
+ IP 주소 리소스 종속성을 **OR** 로 설정한 경우 다음 장애 조치(Failover) 동작을 고려할 수 있습니다.  
   
 -   현재 [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] 클러스터 리소스 그룹을 소유한 노드에서 IP 주소 중 하나에 오류가 발생한 경우 이 노드의 유효한 모든 IP 주소가 실패할 때까지 장애 조치(Failover)가 자동으로 트리거되지 않습니다.  
   

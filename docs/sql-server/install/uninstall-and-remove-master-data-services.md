@@ -8,14 +8,14 @@ ms.reviewer: ''
 ms.technology: install
 ms.topic: conceptual
 ms.assetid: efc2431c-588b-42e7-b23b-c875145a33f6
-author: markingmyname
-ms.author: maghan
-ms.openlocfilehash: ec6345d4470c95669b13a08bde103057409bde67
-ms.sourcegitcommit: f7ac1976d4bfa224332edd9ef2f4377a4d55a2c9
+author: cawrites
+ms.author: chadam
+ms.openlocfilehash: df0e0df9198e1d8abfeb0605a5a13cf0b22059c7
+ms.sourcegitcommit: 5a1ed81749800c33059dac91b0e18bd8bb3081b1
 ms.translationtype: HT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 07/02/2020
-ms.locfileid: "85883722"
+ms.lasthandoff: 11/23/2020
+ms.locfileid: "96120913"
 ---
 # <a name="uninstall-and-remove-master-data-services"></a>Master Data Services 제거
 [!INCLUDE [SQL Server Windows Only - ASDBMI ](../../includes/applies-to-version/sql-windows-only-asdbmi.md)]
