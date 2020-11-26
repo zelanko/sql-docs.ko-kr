@@ -13,12 +13,12 @@ helpviewer_keywords:
 ms.assetid: a58e8733-6a8d-4b47-b5cb-042e813d808a
 author: julieMSFT
 ms.author: jrasnick
-ms.openlocfilehash: b28b0d8af863c21f4764f5c7126fca20b18c1ab1
-ms.sourcegitcommit: 9470c4d1fc8d2d9d08525c4f811282999d765e6e
+ms.openlocfilehash: 155ff6d21fdb0a40e042463b809c1ed14bbe70df
+ms.sourcegitcommit: a49a66dbda0cb16049e092b49c8318ac3865af3c
 ms.translationtype: HT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 07/17/2020
-ms.locfileid: "86458155"
+ms.lasthandoff: 11/20/2020
+ms.locfileid: "94983167"
 ---
 # <a name="sql-server-batch-resp-statistics-object"></a>SQL Server, 일괄 처리 응답 통계 개체
  [!INCLUDE [SQL Server](../../includes/applies-to-version/sqlserver.md)]
@@ -51,9 +51,9 @@ ms.locfileid: "86458155"
   
 |항목|Description|  
 |----------|-----------------|  
-|**CPU Time:Requests**|요청에 소요되는 CPU 시간입니다.|  
+|**CPU Time:Requests**|CPU 시간을 기준으로 한 요청 수입니다.|  
 |**CPU Time:Total(ms)**|일괄 처리에 소요되는 CPU 총 시간입니다.|  
-|**Elapsed Time:Requests**|요청의 경과 시간입니다.|  
+|**Elapsed Time:Requests**|경과된 시간을 기준으로 한 요청 수입니다.|  
 |**Elapsed Time:Total(ms)**|일괄 처리의 경과 시간입니다.|  
 
 ## <a name="see-also"></a>참고 항목

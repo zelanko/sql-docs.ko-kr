@@ -31,12 +31,12 @@ ms.assetid: f76fbd84-df59-4404-806b-8ecb4497c9cc
 author: markingmyname
 ms.author: maghan
 monikerRange: =azuresqldb-current||=azuresqldb-current||>=sql-server-2016||=sqlallproducts-allversions||>=sql-server-linux-2017||=azure-sqldw-latest||=azuresqldb-mi-current
-ms.openlocfilehash: da44ed2decbaeb2dbaf23c03381a8f58e61f90f6
-ms.sourcegitcommit: d35d0901296580bfceda6e0ab2e14cf2b7e99a0f
+ms.openlocfilehash: 8050d90cfac0081629f4b7c1d18e2ff0aeb2b770
+ms.sourcegitcommit: a49a66dbda0cb16049e092b49c8318ac3865af3c
 ms.translationtype: HT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 10/24/2020
-ms.locfileid: "92496901"
+ms.lasthandoff: 11/20/2020
+ms.locfileid: "94983127"
 ---
 # <a name="alter-database-set-options-transact-sql"></a>ALTER DATABASE SET 옵션(Transact-SQL)
 
@@ -45,6 +45,9 @@ Microsoft [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)], [!INCLUDE[s
 작업 중인 특정 SQL 버전에 대한 구문, 인수, 설명, 사용 권한 및 예제를 보려면 다음 탭 중 하나를 선택합니다.
 
 구문 표기 규칙에 대한 자세한 내용은 [Transact-SQL 구문 표기 규칙](../../t-sql/language-elements/transact-sql-syntax-conventions-transact-sql.md)을 참조하세요.
+
+> [!NOTE]
+> ALTER DATABASE를 사용하여 일부 옵션을 설정하려면 배타적 데이터베이스 액세스가 필요할 수 있습니다. ALTER DATABASE 문이 적시에 완료되지 않으면 데이터베이스의 다른 세션에서 ALTER DATABASE 세션을 차단하고 있는지 확인합니다.
 
 ## <a name="select-a-product"></a>제품 선택
 
@@ -319,12 +322,12 @@ SET
 수정할 데이터베이스의 이름입니다.
 
 CURRENT     
-**적용 대상** : [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] ([!INCLUDE[ssSQL11](../../includes/sssql11-md.md)]부터 시작)
+**적용 대상**: [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] ([!INCLUDE[ssSQL11](../../includes/sssql11-md.md)]부터 시작)
 
 현재 데이터베이스에서 작업을 실행합니다. 모든 컨텍스트의 모든 옵션에서 `CURRENT`가 지원되는 것은 아닙니다. `CURRENT`가 실패할 경우 데이터베이스 이름을 지정해야 합니다.
 
 **\<accelerated_database_recovery> ::=**      
-**적용 대상** : [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] ([!INCLUDE[sql-server-2019](../../includes/sssqlv15-md.md)]부터 시작)
+**적용 대상**: [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] ([!INCLUDE[sql-server-2019](../../includes/sssqlv15-md.md)]부터 시작)
 
 데이터베이스별로 ADR[(가속 데이터베이스 복구)](../../relational-databases/accelerated-database-recovery-management.md)를 사용하도록 설정합니다. ADR은 [!INCLUDE[sql-server-2019](../../includes/sssqlv15-md.md)]에서 기본적으로 OFF로 설정되어 있습니다. 이 구문을 사용하여 PVS(영구 버전 저장소) 데이터에 대해 특정 파일 그룹을 선택적으로 지정할 수 있습니다. 파일 그룹을 지정하지 않으면 PVS가 기본 파일 그룹에 저장됩니다. 예제와 자세한 내용은[데이터베이스 복구 가속화](../../relational-databases/accelerated-database-recovery-management.md)을 참조하세요.
 
@@ -366,7 +369,7 @@ OFF
 자세한 내용은 [통계](../../relational-databases/statistics/statistics.md)에서 “데이터베이스 차원의 통계 옵션 사용” 섹션을 참조하세요.
 
 INCREMENTAL = ON | **OFF**     
-**적용 대상** : [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] ([!INCLUDE[ssSQL14](../../includes/sssql14-md.md)]부터 시작) 및 [!INCLUDE[ssSDSfull](../../includes/sssdsfull-md.md)]
+**적용 대상**: [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] ([!INCLUDE[ssSQL14](../../includes/sssql14-md.md)]부터 시작) 및 [!INCLUDE[ssSDSfull](../../includes/sssdsfull-md.md)]
 
 AUTO_CREATE_STATISTICS를 ON으로 설정하고 INCREMENTAL을 ON으로 설정합니다. 그러면 증분 통계가 지원될 때마다 자동으로 생성된 통계가 증분으로 설정됩니다. 기본값은 OFF입니다. 자세한 내용은 [CREATE STATISTICS](../../t-sql/statements/create-statistics-transact-sql.md)를 참조하세요.
 
@@ -429,7 +432,7 @@ AUTO_UPDATE_STATISTICS 옵션에 대한 통계 업데이트를 동기로 지정�
 동기 통계 업데이트 또는 비동기 통계 업데이트를 사용하는 경우에 대한 자세한 설명은 [통계](../../relational-databases/statistics/statistics.md#statistics-options)에서 “통계 옵션” 섹션을 참조하세요.
 
 <a name="auto_tuning"></a> **\<automatic_tuning_option> ::=**      
-**적용 대상** : [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] ([!INCLUDE[sssqlv14-md](../../includes/sssqlv14-md.md)]부터 시작)
+**적용 대상**: [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] ([!INCLUDE[sssqlv14-md](../../includes/sssqlv14-md.md)]부터 시작)
 
 `FORCE_LAST_GOOD_PLAN` [자동 튜닝](../../relational-databases/automatic-tuning/automatic-tuning.md) 옵션을 사용하거나 사용하지 않도록 설정합니다.
 
@@ -468,7 +471,7 @@ OFF
 데이터베이스에서 변경 내용 추적을 해제합니다. 데이터베이스에서 변경 내용 추적을 사용 중지하려면 모든 테이블에서 변경 내용 추적을 사용하지 않도록 설정해야 합니다.
 
 **\<containment_option> ::=**      
-**적용 대상** : [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] ([!INCLUDE[ssSQL11](../../includes/sssql11-md.md)]부터 시작)
+**적용 대상**: [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] ([!INCLUDE[ssSQL11](../../includes/sssql11-md.md)]부터 시작)
 
 데이터베이스 포함 옵션을 제어합니다.
 
@@ -495,7 +498,7 @@ SET 문을 사용하여 설정한 연결 수준 설정은 CURSOR_CLOSE_ON_COMMIT
 이 옵션의 상태는 [sys.databases](../../relational-databases/system-catalog-views/sys-databases-transact-sql.md) 카탈로그 뷰의 `is_cursor_close_on_commit_on` 열 또는 [DATABASEPROPERTYEX](../../t-sql/functions/databasepropertyex-transact-sql.md) 함수의 `IsCloseCursorsOnCommitEnabled` 속성을 검사하여 확인할 수 있습니다.
 
 CURSOR_DEFAULT { LOCAL | GLOBAL }     
-**적용 대상** : [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]
+**적용 대상**: [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]
 
 커서 범위가 LOCAL인지 GLOBAL인지 여부를 제어합니다.
 
@@ -513,7 +516,7 @@ GLOBAL을 지정하고 커서를 만들 때 LOCAL로 정의하지 않으면 커�
 
 **\<data_retention_policy> ::=**
 
-**적용 대상** : Azure SQL Edge‘만’
+**적용 대상**: Azure SQL Edge‘만’
 
 DATA_RETENTION { ON | OFF }   
 켜기    
@@ -523,12 +526,12 @@ OFF
 데이터베이스에서 데이터 보존 정책 기반 정리를 사용하지 않도록 설정합니다.
 
 **\<database_mirroring>**     
-**적용 대상** : [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]
+**적용 대상**: [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]
 
 인수에 대한 설명은 [ALTER DATABASE 데이터베이스 미러링](../../t-sql/statements/alter-database-transact-sql-database-mirroring.md)을 참조하세요.
 
 **\<date_correlation_optimization_option> ::=**      
-**적용 대상** : [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]
+**적용 대상**: [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]
 
 date_correlation_optimization 옵션을 제어합니다.
 
@@ -554,12 +557,12 @@ OFF
 데이터베이스를 암호화하지 않도록 설정합니다.
 
 SUSPEND     
-**적용 대상** : [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] ([!INCLUDE[sql-server-2019](../../includes/sssqlv15-md.md)]부터 시작)     
+**적용 대상**: [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] ([!INCLUDE[sql-server-2019](../../includes/sssqlv15-md.md)]부터 시작)     
 
 투명한 데이터 암호화를 설정하거나 해제한 후 또는 암호화 키를 변경한 후 암호화 검사를 일시 중지할 수 있습니다.
 
 RESUME     
-**적용 대상** : [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] ([!INCLUDE[sql-server-2019](../../includes/sssqlv15-md.md)]부터 시작)
+**적용 대상**: [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] ([!INCLUDE[sql-server-2019](../../includes/sssqlv15-md.md)]부터 시작)
 
 이전에 일시 중지한 암호화 검사를 다시 시작할 수 있습니다.
 
@@ -570,7 +573,7 @@ RESUME
 [sys.dm_database_encryption_keys](../../relational-databases/system-dynamic-management-views/sys-dm-database-encryption-keys-transact-sql.md) 동적 관리 뷰를 사용하여 데이터베이스의 암호화 상태와 암호화 검사 상태를 확인할 수 있습니다.
 
 **\<db_state_option> ::=**      
-**적용 대상** : [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]
+**적용 대상**: [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]
 
 데이터베이스의 상태를 제어합니다.
 
@@ -611,7 +614,7 @@ READ_WRITE
 데이터베이스에 대한 사용자 액세스를 제어합니다.
 
 SINGLE_USER     
-**적용 대상** : [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]
+**적용 대상**: [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]
 
 한 번에 한 사용자만 데이터베이스에 액세스할 수 있도록 지정합니다. SINGLE_USER를 지정하고 다른 사용자가 데이터베이스에 연결하면 모든 사용자가 지정된 데이터베이스에서 연결을 끊을 때까지 ALTER DATABASE 문이 차단됩니다. 이 동작을 재정의하려면 WITH \<termination> 절을 참조하세요.
 
@@ -634,7 +637,7 @@ MULTI_USER
 [sys.databases](../../relational-databases/system-catalog-views/sys-databases-transact-sql.md) 카탈로그 뷰의 `user_access` 열을 검사하여 이 옵션의 상태를 확인할 수 있습니다. [DATABASEPROPERTYEX](../../t-sql/functions/databasepropertyex-transact-sql.md) 함수의 `UserAccess` 속성을 검사하여 상태를 확인할 수도 있습니다.
 
 **\<delayed_durability_option> ::=**      
-**적용 대상** : [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] ([!INCLUDE[ssSQL14](../../includes/sssql14-md.md)]부터 시작)
+**적용 대상**: [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] ([!INCLUDE[ssSQL14](../../includes/sssql14-md.md)]부터 시작)
 
 트랜잭션이 완전한 내구성이 있게 커밋될지 아니면 지연된 내구성이 있게 커밋될지 제어합니다.
 
@@ -648,7 +651,7 @@ FORCED
 `SET FORCED` 다음의 모든 트랜잭션은 지연된 내구성이 있습니다. ATOMIC 블록이나 COMMIT 문에 설정된 내구성 옵션은 무시됩니다.
 
 **\<external_access_option> ::=**      
-**적용 대상** : [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]
+**적용 대상**: [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]
 
 다른 데이터베이스의 개체와 같은 외부 리소스에서 데이터베이스에 액세스할 수 있는지 여부를 제어합니다.
 
@@ -684,7 +687,7 @@ TRUSTWORTHY는 데이터베이스가 연결될 때마다 OFF로 설정됩니다.
 [sys.databases](../../relational-databases/system-catalog-views/sys-databases-transact-sql.md) 카탈로그 뷰의 `is_trustworthy_on` 열을 검사하여 이 옵션의 상태를 확인할 수 있습니다.
 
 DEFAULT_FULLTEXT_LANGUAGE     
-**적용 대상** : [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] ([!INCLUDE[ssSQL11](../../includes/sssql11-md.md)]부터 시작)
+**적용 대상**: [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] ([!INCLUDE[ssSQL11](../../includes/sssql11-md.md)]부터 시작)
 
 전체 텍스트 인덱싱된 열에 대한 기본 언어 값을 지정합니다.
 
@@ -692,27 +695,27 @@ DEFAULT_FULLTEXT_LANGUAGE
 > 이 옵션은 CONTAINMENT가 PARTIAL로 설정된 경우에만 사용할 수 있습니다. CONTAINMENT가 NONE으로 설정되어 있으면 오류가 발생합니다.
 
 DEFAULT_LANGUAGE     
-**적용 대상** : [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] ([!INCLUDE[ssSQL11](../../includes/sssql11-md.md)]부터 시작)
+**적용 대상**: [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] ([!INCLUDE[ssSQL11](../../includes/sssql11-md.md)]부터 시작)
 
 새로 생성된 모든 로그인에 대한 기본 언어를 지정합니다. LCID(로컬 ID), 언어 이름 또는 언어 별칭을 제공하여 언어를 지정할 수 있습니다. 사용 가능한 언어 이름 및 별칭 목록은 [sys.syslanguages](../../relational-databases/system-compatibility-views/sys-syslanguages-transact-sql.md)를 참조하세요. 이 옵션은 CONTAINMENT가 PARTIAL로 설정된 경우에만 사용할 수 있습니다. CONTAINMENT가 NONE으로 설정되어 있으면 오류가 발생합니다.
 
 NESTED_TRIGGERS     
-**적용 대상** : [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] ([!INCLUDE[ssSQL11](../../includes/sssql11-md.md)]부터 시작)
+**적용 대상**: [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] ([!INCLUDE[ssSQL11](../../includes/sssql11-md.md)]부터 시작)
 
 AFTER 트리거의 중첩(한 트리거가 다른 트리거를 시작하는 과정이 반복되는 동작) 여부를 지정합니다. 이 옵션은 CONTAINMENT가 PARTIAL로 설정된 경우에만 사용할 수 있습니다. CONTAINMENT가 NONE으로 설정되어 있으면 오류가 발생합니다.
 
 TRANSFORM_NOISE_WORDS     
-**적용 대상** : [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] ([!INCLUDE[ssSQL11](../../includes/sssql11-md.md)]부터 시작)
+**적용 대상**: [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] ([!INCLUDE[ssSQL11](../../includes/sssql11-md.md)]부터 시작)
 
 의미 없는 단어 또는 중지 단어로 인해 전체 텍스트 쿼리에 대한 부울 연산이 실패할 경우 오류 메시지를 표시하지 않는 데 사용됩니다. 이 옵션은 CONTAINMENT가 PARTIAL로 설정된 경우에만 사용할 수 있습니다. CONTAINMENT가 NONE으로 설정되어 있으면 오류가 발생합니다.
 
 TWO_DIGIT_YEAR_CUTOFF     
-**적용 대상** : [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] ([!INCLUDE[ssSQL11](../../includes/sssql11-md.md)]부터 시작)
+**적용 대상**: [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] ([!INCLUDE[ssSQL11](../../includes/sssql11-md.md)]부터 시작)
 
 두 자리 연도를 네 자리 연도로 해석하기 위한 구분 연도를 나타내는 1753에서 9999까지의 정수를 지정합니다. 이 옵션은 CONTAINMENT가 PARTIAL로 설정된 경우에만 사용할 수 있습니다. CONTAINMENT가 NONE으로 설정되어 있으면 오류가 발생합니다.
 
 **\<FILESTREAM_option> ::=**      
-**적용 대상** : [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] ([!INCLUDE[ssSQL11](../../includes/sssql11-md.md)]부터 시작)
+**적용 대상**: [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] ([!INCLUDE[ssSQL11](../../includes/sssql11-md.md)]부터 시작)
 
 FileTable에 대한 설정을 제어합니다.
 
@@ -730,12 +733,12 @@ DIRECTORY_NAME = *\<directory_name>*
 Windows 호환 디렉터리 이름입니다. 이 이름은 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 인스턴스의 모든 데이터베이스 수준 디렉터리 이름 중에서 고유해야 합니다. 고유성을 비교할 때는 데이터 정렬 설정과 관계없이 대/소문자가 구분되지 않습니다. 데이터베이스에 FileTable을 만들기 전에 이 옵션을 설정해야 합니다.
 
 **\<HADR_options> ::=**      
-**적용 대상** : [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]
+**적용 대상**: [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]
 
 [ALTER DATABASE SET HADR](../../t-sql/statements/alter-database-transact-sql-set-hadr.md)을 참조하세요.
 
 **\<mixed_page_allocation_option> ::=**      
-**적용 대상** : [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] ([!INCLUDE[ssSQL15](../../includes/sssql15-md.md)]부터 시작)
+**적용 대상**: [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] ([!INCLUDE[ssSQL15](../../includes/sssql15-md.md)]부터 시작)
 
 데이터베이스가 테이블이나 인덱스의 첫 8페이지에 대해 혼합 익스텐트를 사용하여 초기 페이지를 만들 수 있는지 여부를 제어합니다.
 
@@ -761,7 +764,7 @@ FORCED
 이 옵션의 현재 설정은 [sys.databases](../../relational-databases/system-catalog-views/sys-databases-transact-sql.md) 카탈로그 뷰의 `is_parameterization_forced column` 열을 검사하여 확인할 수 있습니다.
 
 <a name="query-store"></a> **\<query_store_options> ::=**      
-**적용 대상** : [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] ([!INCLUDE[ssSQL15](../../includes/sssql15-md.md)]부터 시작)
+**적용 대상**: [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] ([!INCLUDE[ssSQL15](../../includes/sssql15-md.md)]부터 시작)
 
 ON | **OFF** [ ( FORCED )  ] | CLEAR [ ALL ]     
 이 데이터베이스에서 쿼리 저장소를 사용할 수 있는지 여부를 제어하고, 쿼리 저장소의 내용 제거도 제어합니다. 자세한 내용은 [쿼리 스토리지 사용 시나리오](../../relational-databases/performance/query-store-usage-scenarios.md)를 참조하세요.
@@ -791,7 +794,7 @@ CLEANUP_POLICY
 쿼리 저장소의 데이터 보존 정책을 설명합니다. STALE_QUERY_THRESHOLD_DAYS는 쿼리에 대한 정보가 쿼리 저장소에 보존되는 일 수를 결정합니다. STALE_QUERY_THRESHOLD_DAYS는 **bigint** 형식입니다. 기본값은 30입니다.
 
 DATA_FLUSH_INTERVAL_SECONDS     
-쿼리 저장소에 기록된 데이터가 디스크에 유지되는 빈도를 결정합니다. 성능 최적화를 위해 쿼리 저장소에서 수집한 데이터는 디스크에 비동기적으로 기록됩니다. 비동기 전송이 발생하는 빈도는 DATA_FLUSH_INTERVAL_SECONDS 인수를 사용하여 구성됩니다. DATA_FLUSH_INTERVAL_SECONDS는 **bigint** 형식입니다. 기본값은 **900** (15분)입니다.
+쿼리 저장소에 기록된 데이터가 디스크에 유지되는 빈도를 결정합니다. 성능 최적화를 위해 쿼리 저장소에서 수집한 데이터는 디스크에 비동기적으로 기록됩니다. 비동기 전송이 발생하는 빈도는 DATA_FLUSH_INTERVAL_SECONDS 인수를 사용하여 구성됩니다. DATA_FLUSH_INTERVAL_SECONDS는 **bigint** 형식입니다. 기본값은 **900**(15분)입니다.
 
 MAX_STORAGE_SIZE_MB     
 쿼리 저장소에 발급되는 공간을 결정합니다. MAX_STORAGE_SIZE_MB는 **bigint** 형식입니다. 기본값은 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]의 경우 **100MB** 입니다([!INCLUDE[ssSQL15](../../includes/sssql15-md.md)]부터 [!INCLUDE[ssSQL17](../../includes/sssql17-md.md)]까지). [!INCLUDE[sql-server-2019](../../includes/sssqlv15-md.md)]부터 기본값은 **1GB** 입니다.
@@ -835,7 +838,7 @@ AUTO
 새 쿼리 캡처를 중지합니다. 쿼리 저장소는 이미 캡처된 쿼리에 대한 컴파일 및 런타임 통계를 계속 수집합니다. 중요한 쿼리 캡처를 놓칠 수 있으므로 이 구성은 주의해서 사용해야 합니다.
 
 CUSTOM     
-**적용 대상** : [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] ([!INCLUDE[sql-server-2019](../../includes/sssqlv15-md.md)]부터 시작)
+**적용 대상**: [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] ([!INCLUDE[sql-server-2019](../../includes/sssqlv15-md.md)]부터 시작)
 
 QUERY_CAPTURE_POLICY 옵션에 대해 제어할 수 있습니다.
 
@@ -845,7 +848,7 @@ max_plans_per_query
 각 쿼리에 대해 유지 관리되는 최대 계획 수를 정의합니다. MAX_PLANS_PER_QUERY는 **int** 형식입니다. 기본값은 **200** 입니다.
 
 WAIT_STATS_CAPTURE_MODE { **ON** | OFF }     
-**적용 대상** : [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] ([!INCLUDE[ssSQL17](../../includes/sssql17-md.md)]부터 시작))
+**적용 대상**: [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] ([!INCLUDE[ssSQL17](../../includes/sssql17-md.md)]부터 시작))
 
 쿼리별 대기 통계를 캡처할지 여부를 제어합니다.
 
@@ -856,7 +859,7 @@ OFF
 쿼리별 대기 통계 정보를 캡처하지 않습니다.
 
 **\<query_capture_policy_option_list> :: =**      
-**적용 대상** : [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] ([!INCLUDE[sql-server-2019](../../includes/sssqlv15-md.md)]부터 시작)
+**적용 대상**: [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] ([!INCLUDE[sql-server-2019](../../includes/sssqlv15-md.md)]부터 시작)
 
 쿼리 저장소 캡처 정책 옵션을 제어합니다. STALE_CAPTURE_POLICY_THRESHOLD를 제외하고 이 옵션은 정의된 부실 캡처 정책 임계값에 캡처해야 할 쿼리에 대해 수행해야 할 OR 조건을 정의합니다.
 
@@ -873,7 +876,7 @@ TOTAL_EXECUTION_CPU_TIME_MS
 평가 기간 동안 쿼리에 사용하는 총 경과 실행 CPU 시간을 정의합니다. 기본값은 100으로, 기본 부실 캡처 정책 임계값의 경우 쿼리가 쿼리 저장소에 유지되려면 하루에 실행에 사용된 총 CPU 시간이 100ms 이상이어야 합니다. TOTAL_EXECUTION_CPU_TIME_MS는 **int** 형식입니다.
 
 **\<recovery_option> ::=**      
-**적용 대상** : [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]
+**적용 대상**: [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]
 
 데이터베이스 복구 옵션과 디스크 I/O 오류 검사를 제어합니다.
 
@@ -942,7 +945,7 @@ PAGE_VERIFY 옵션을 사용하는 경우 다음 중요 사항을 고려하십�
 이 옵션의 현재 설정은 [sys.databases](../../relational-databases/system-catalog-views/sys-databases-transact-sql.md) 카탈로그 뷰의 `page_verify_option` 열이나 [DATABASEPROPERTYEX](../../t-sql/functions/databasepropertyex-transact-sql.md) 함수의 `IsTornPageDetectionEnabled` 속성을 검사하여 확인할 수 있습니다.
 
 **\<remote_data_archive_option> ::=**      
-**적용 대상** : [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] ([!INCLUDE[ssSQL15](../../includes/sssql15-md.md)]부터 시작)
+**적용 대상**: [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] ([!INCLUDE[ssSQL15](../../includes/sssql15-md.md)]부터 시작)
 
 데이터베이스에 Stretch Database를 사용하거나 사용하지 않도록 설정합니다. 자세한 내용은 [Stretch Database](../../sql-server/stretch-database/stretch-database.md)를 참조하십시오.
 
@@ -976,7 +979,7 @@ Stretch Database를 사용하도록 설정된 테이블이 데이터베이스에
 Stretch를 사용하지 않도록 설정해도 원격 데이터베이스는 제거되지 않습니다. 원격 데이터베이스를 삭제하려면 Azure Portal을 사용하여 삭제해야 합니다.
 
 **\<service_broker_option> ::=**      
-**적용 대상** : [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]
+**적용 대상**: [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]
 
 메시지 배달을 사용 또는 사용하지 않도록 설정하거나, 새 [!INCLUDE[ssSB](../../includes/sssb-md.md)] 식별자를 설정하거나, 대화 우선 순위를 ON 또는 OFF로 설정하는 [!INCLUDE[ssSB](../../includes/sssb-md.md)] 옵션을 제어합니다.
 
@@ -1047,7 +1050,7 @@ master, tempdb 또는 msdb 시스템 데이터베이스에 대해서는 READ_COM
 > **DURABILITY = SCHEMA_ONLY** 를 사용하여 테이블이 만들어지고 그 후에 **READ_COMMITTED_SNAPSHOT** 이 **ALTER DATABASE** 를 사용하여 변경되면 테이블의 데이터는 손실됩니다.
 
 MEMORY_OPTIMIZED_ELEVATE_TO_SNAPSHOT { ON | **OFF** }     
-**적용 대상** : [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] ([!INCLUDE[ssSQL14](../../includes/sssql14-md.md)]부터 시작)
+**적용 대상**: [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] ([!INCLUDE[ssSQL14](../../includes/sssql14-md.md)]부터 시작)
 
 켜기     
 트랜잭션 격리 수준이 SNAPSHOT보다 낮은 격리 수준으로 설정된 경우 메모리 최적화 테이블에 대한 해석된 모든 [!INCLUDE[tsql](../../includes/tsql-md.md)] 작업이 SNAPSHOT 격리로 실행됩니다. 스냅샷보다 낮은 격리 수준의 예는 READ COMMITTED 또는 READ UNCOMMITTED입니다. 이 작업은 세션 수준에서 트랜잭션 격리 수준이 명시적으로 설정되었거나 기본값이 암시적으로 사용되는지에 관계없이 실행됩니다.
@@ -1108,7 +1111,7 @@ OFF로 지정하면 이 설정은 새 열의 정의에만 영향을 줍니다.
 > [!IMPORTANT]
 > [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]의 이후 버전에서는 ANSI_PADDING이 항상 ON으로 설정되므로 명시적으로 이 옵션을 OFF로 설정한 애플리케이션에서는 오류가 발생합니다. 새 개발 작업에서는 이 기능을 사용하지 않도록 하고, 현재 이 기능을 사용하는 애플리케이션은 수정하세요. ANSI_PADDING은 항상 ON으로 설정하는 것이 좋습니다. 계산 열이나 인덱싱된 뷰에서 인덱스를 만들거나 조작할 때는 ANSI_PADDING을 ON으로 설정해야 합니다.
 
-ANSI_PADDING을 ON으로 설정하면 Null을 허용하는 **char( _n_ )** 및 **binary( _n_ )** 열이 열 길이만큼 채워집니다. ANSI_PADDING이 OFF이면 후행 공백과 0이 잘립니다. Null을 허용하지 않는 **char( _n_ )** 및 **binary( _n_ )** 열은 항상 열 길이만큼 채워집니다.
+ANSI_PADDING을 ON으로 설정하면 Null을 허용하는 **char(_n_)** 및 **binary(_n_)** 열이 열 길이만큼 채워집니다. ANSI_PADDING이 OFF이면 후행 공백과 0이 잘립니다. Null을 허용하지 않는 **char(_n_)** 및 **binary(_n_)** 열은 항상 열 길이만큼 채워집니다.
 
 SET 문을 사용하여 설정한 연결 수준의 설정은 ANSI_PADDING에 대한 기본 데이터베이스 수준 설정보다 우선적으로 적용됩니다. 기본적으로 ODBC 및 OLE DB 클라이언트는 세션의 ANSI_PADDING을 ON으로 설정하여 연결 수준의 SET 문을 실행합니다. [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]에 연결하면 클라이언트에서 문을 실행합니다. 자세한 내용은 [SET ANSI_PADDING](../../t-sql/statements/set-ansi-padding-transact-sql.md)을 참조하세요.
 
@@ -1201,7 +1204,7 @@ OFF
 이 옵션의 상태는 [sys.databases](../../relational-databases/system-catalog-views/sys-databases-transact-sql.md) 카탈로그 뷰의 `is_recursive_triggers_on` 열 또는 [DATABASEPROPERTYEX](../../t-sql/functions/databasepropertyex-transact-sql.md) 함수의 `IsRecursiveTriggersEnabled` 속성을 검사하여 확인할 수 있습니다.
 
 **\<target_recovery_time_option> ::=**      
-**적용 대상** : [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] ([!INCLUDE[ssSQL11](../../includes/sssql11-md.md)]부터 시작)
+**적용 대상**: [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] ([!INCLUDE[ssSQL11](../../includes/sssql11-md.md)]부터 시작)
 
 데이터베이스 단위로 간접 검사점의 빈도를 지정합니다. [!INCLUDE[ssSQL15](../../includes/sssql15-md.md)]부터 새 데이터베이스의 기본값은 **1분** 이며, 이 값은 데이터베이스에서 간접 검사점을 사용한다는 것을 나타냅니다. 이전 버전의 기본값 0은 데이터베이스가 자동 검사점을 사용함을 나타내며, 빈도는 서버 인스턴스의 복구 간격 설정에 따라 달라집니다. [!INCLUDE[msCoName](../../includes/msconame-md.md)]에서는 대부분의 시스템에 1분을 권장합니다.
 
@@ -1244,13 +1247,13 @@ NO_WAIT
 |\<db_user_access_option>|예|예|
 |\<db_update_option>|예|예|
 |\<delayed_durability_option>|예|예|
-|\<external_access_option>|예|아니요|
+|\<external_access_option>|예|예|
 |\<cursor_option>|예|예|
-|\<auto_option>|예|예|
-|\<sql_option>|예|아니요|
+|\<auto_option>|예|아니요|
+|\<sql_option>|예|예|
 |\<recovery_option>|예|예|
 |\<target_recovery_time_option>|아니요|예|
-|\<database_mirroring_option>|아니요|예|
+|\<database_mirroring_option>|예|예|
 |ALLOW_SNAPSHOT_ISOLATION|예|예|
 |READ_COMMITTED_SNAPSHOT|예|예|
 |MEMORY_OPTIMIZED_ELEVATE_TO_SNAPSHOT|예|예|
@@ -1397,7 +1400,7 @@ SET CHANGE_TRACKING = OFF;
 
 ### <a name="e-enabling-the-query-store"></a>E. 쿼리 저장소를 사용하도록 설정
 
-**적용 대상** : [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] ([!INCLUDE[ssSQL15](../../includes/sssql15-md.md)]부터 시작)
+**적용 대상**: [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] ([!INCLUDE[ssSQL15](../../includes/sssql15-md.md)]부터 시작)
 
 다음 예제에서는 쿼리 저장소를 사용하도록 설정하고 쿼리 저장소와 매개 변수를 구성합니다.
 
@@ -1416,7 +1419,7 @@ SET QUERY_STORE = ON
 
 ### <a name="f-enabling-the-query-store-with-wait-statistics"></a>F. 대기 통계가 포함된 쿼리 저장소를 사용하도록 설정
 
-**적용 대상** : [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] ([!INCLUDE[ssSQL17](../../includes/sssql17-md.md)]부터 시작)
+**적용 대상**: [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] ([!INCLUDE[ssSQL17](../../includes/sssql17-md.md)]부터 시작)
 
 다음 예제에서는 쿼리 저장소를 사용하도록 설정하고 쿼리 저장소와 매개 변수를 구성합니다.
 
@@ -1437,7 +1440,7 @@ SET QUERY_STORE = ON
 
 ### <a name="g-enabling-the-query-store-with-custom-capture-policy-options"></a>G. 사용자 지정 캡처 정책 옵션이 포함된 쿼리 저장소를 사용하도록 설정
 
-**적용 대상** : [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] ([!INCLUDE[sql-server-2019](../../includes/sssqlv15-md.md)]부터 시작)
+**적용 대상**: [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] ([!INCLUDE[sql-server-2019](../../includes/sssqlv15-md.md)]부터 시작)
 
 다음 예제에서는 쿼리 저장소를 사용하도록 설정하고 쿼리 저장소와 매개 변수를 구성합니다.
 
@@ -1735,7 +1738,7 @@ AUTO_UPDATE_STATISTICS 옵션에 대한 통계 업데이트를 동기로 지정�
 동기 통계 업데이트 또는 비동기 통계 업데이트를 사용하는 경우에 대한 자세한 설명은 [통계](../../relational-databases/statistics/statistics.md#statistics-options)에서 “통계 옵션” 섹션을 참조하세요.
 
 <a name="auto_tuning"></a> **\<automatic_tuning_option> ::=**      
-**적용 대상** : [!INCLUDE[sssqlv14-md](../../includes/sssqlv14-md.md)]
+**적용 대상**: [!INCLUDE[sssqlv14-md](../../includes/sssqlv14-md.md)]
 
 [자동 튜닝](../../relational-databases/automatic-tuning/automatic-tuning.md)에 대한 자동 옵션을 제어합니다.
 
@@ -1908,7 +1911,7 @@ CLEANUP_POLICY
 쿼리 저장소의 데이터 보존 정책을 설명합니다. STALE_QUERY_THRESHOLD_DAYS는 쿼리에 대한 정보가 쿼리 저장소에 보존되는 일 수를 결정합니다. STALE_QUERY_THRESHOLD_DAYS는 **bigint** 형식입니다. 기본값은 30입니다. [!INCLUDE[sqldbesa](../../includes/sqldbesa-md.md)] Basic 버전의 경우 기본값은 **7** 일입니다.
 
 DATA_FLUSH_INTERVAL_SECONDS     
-쿼리 저장소에 기록된 데이터가 디스크에 유지되는 빈도를 결정합니다. 성능 최적화를 위해 쿼리 저장소에서 수집한 데이터는 디스크에 비동기적으로 기록됩니다. 비동기 전송이 발생하는 빈도는 DATA_FLUSH_INTERVAL_SECONDS 인수를 사용하여 구성됩니다. DATA_FLUSH_INTERVAL_SECONDS는 **bigint** 형식입니다. 기본값은 **900** (15분)입니다.
+쿼리 저장소에 기록된 데이터가 디스크에 유지되는 빈도를 결정합니다. 성능 최적화를 위해 쿼리 저장소에서 수집한 데이터는 디스크에 비동기적으로 기록됩니다. 비동기 전송이 발생하는 빈도는 DATA_FLUSH_INTERVAL_SECONDS 인수를 사용하여 구성됩니다. DATA_FLUSH_INTERVAL_SECONDS는 **bigint** 형식입니다. 기본값은 **900**(15분)입니다.
 
 MAX_STORAGE_SIZE_MB     
 쿼리 저장소에 할당되는 공간을 결정합니다. MAX_STORAGE_SIZE_MB는 **bigint** 형식입니다. [!INCLUDE[sqldbesa](../../includes/sqldbesa-md.md)] Premium Edition의 경우 기본값은 **1GB** 이고, [!INCLUDE[sqldbesa](../../includes/sqldbesa-md.md)] Basic Edition의 경우 기본값은 **10MB** 입니다.
@@ -2086,7 +2089,7 @@ OFF로 지정하면 이 설정은 새 열의 정의에만 영향을 줍니다.
 > [!IMPORTANT]
 > [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]의 이후 버전에서는 ANSI_PADDING이 항상 ON으로 설정되므로 명시적으로 이 옵션을 OFF로 설정한 애플리케이션에서는 오류가 발생합니다. 새 개발 작업에서는 이 기능을 사용하지 않도록 하고, 현재 이 기능을 사용하는 애플리케이션은 수정하세요. ANSI_PADDING은 항상 ON으로 설정하는 것이 좋습니다. 계산 열이나 인덱싱된 뷰에서 인덱스를 만들거나 조작할 때는 ANSI_PADDING을 ON으로 설정해야 합니다.
 
-ANSI_PADDING을 ON으로 설정하면 Null을 허용하는 **char( _n_ )** 및 **binary( _n_ )** 열이 열 길이만큼 채워집니다. ANSI_PADDING이 OFF이면 후행 공백과 0이 잘립니다. Null을 허용하지 않는 **char( _n_ )** 및 **binary( _n_ )** 열은 항상 열 길이만큼 채워집니다.
+ANSI_PADDING을 ON으로 설정하면 Null을 허용하는 **char(_n_)** 및 **binary(_n_)** 열이 열 길이만큼 채워집니다. ANSI_PADDING이 OFF이면 후행 공백과 0이 잘립니다. Null을 허용하지 않는 **char(_n_)** 및 **binary(_n_)** 열은 항상 열 길이만큼 채워집니다.
 
 SET 문을 사용하여 설정한 연결 수준의 설정은 ANSI_PADDING에 대한 기본 데이터베이스 수준 설정보다 우선적으로 적용됩니다. 기본적으로 ODBC 및 OLE DB 클라이언트는 세션의 ANSI_PADDING을 ON으로 설정하여 연결 수준의 SET 문을 실행합니다. [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]에 연결하면 클라이언트에서 문을 실행합니다. 자세한 내용은 [SET ANSI_PADDING](../../t-sql/statements/set-ansi-padding-transact-sql.md)을 참조하세요.
 
@@ -2217,10 +2220,10 @@ NO_WAIT
 
 |옵션 범주|다른 옵션과 함께 지정할 수 있음|WITH \<termination> 절을 사용할 수 있음|
 |----------------------|-----------------------------------------|---------------------------------------------|
-|\<auto_option>|예|아니요|
+|\<auto_option>|예|예|
 |\<change_tracking_option>|예|예|
 |\<cursor_option>|예|아니요|
-|\<db_encryption_option>|예|아니요|
+|\<db_encryption_option>|예|예|
 |\<db_update_option>|예|예|
 |\<db_user_access_option>|예|예|
 |\<delayed_durability_option>|예|예|
@@ -2229,8 +2232,8 @@ NO_WAIT
 |READ_COMMITTED_SNAPSHOT|예|예|
 |MEMORY_OPTIMIZED_ELEVATE_TO_SNAPSHOT|예|예|
 |DATE_CORRELATION_OPTIMIZATION|예|예|
-|\<sql_option>|예|아니요|
-|\<target_recovery_time_option>|아니요|예|
+|\<sql_option>|예|예|
+|\<target_recovery_time_option>|예|예|
 
 ## <a name="examples"></a>예제
 
@@ -2610,7 +2613,7 @@ AUTO_UPDATE_STATISTICS 옵션에 대한 통계 업데이트를 동기로 지정�
 동기 통계 업데이트 또는 비동기 통계 업데이트를 사용하는 경우에 대한 자세한 설명은 [통계](../../relational-databases/statistics/statistics.md)에서 “데이터베이스 차원의 통계 옵션 사용” 섹션을 참조하세요.
 
 <a name="auto_tuning"></a> **\<automatic_tuning_option> ::=**      
-**적용 대상** : [!INCLUDE[sssqlv14-md](../../includes/sssqlv14-md.md)]
+**적용 대상**: [!INCLUDE[sssqlv14-md](../../includes/sssqlv14-md.md)]
 
 `FORCE_LAST_GOOD_PLAN` [자동 튜닝](../../relational-databases/automatic-tuning/automatic-tuning.md) 옵션을 사용하거나 사용하지 않도록 설정합니다.
 
@@ -2737,7 +2740,7 @@ CLEANUP_POLICY
 쿼리 저장소의 데이터 보존 정책을 설명합니다. STALE_QUERY_THRESHOLD_DAYS는 쿼리에 대한 정보가 쿼리 저장소에 보존되는 일 수를 결정합니다. STALE_QUERY_THRESHOLD_DAYS는 **bigint** 형식입니다. 기본값은 30입니다. [!INCLUDE[sqldbesa](../../includes/sqldbesa-md.md)] Basic 버전의 경우 기본값은 **7** 일입니다.
 
 DATA_FLUSH_INTERVAL_SECONDS     
-쿼리 저장소에 기록된 데이터가 디스크에 유지되는 빈도를 결정합니다. 성능 최적화를 위해 쿼리 저장소에서 수집한 데이터는 디스크에 비동기적으로 기록됩니다. 비동기 전송이 발생하는 빈도는 DATA_FLUSH_INTERVAL_SECONDS 인수를 사용하여 구성됩니다. DATA_FLUSH_INTERVAL_SECONDS는 **bigint** 형식입니다. 기본값은 **900** (15분)입니다.
+쿼리 저장소에 기록된 데이터가 디스크에 유지되는 빈도를 결정합니다. 성능 최적화를 위해 쿼리 저장소에서 수집한 데이터는 디스크에 비동기적으로 기록됩니다. 비동기 전송이 발생하는 빈도는 DATA_FLUSH_INTERVAL_SECONDS 인수를 사용하여 구성됩니다. DATA_FLUSH_INTERVAL_SECONDS는 **bigint** 형식입니다. 기본값은 **900**(15분)입니다.
 
 MAX_STORAGE_SIZE_MB     
 쿼리 저장소에 할당되는 공간을 결정합니다. MAX_STORAGE_SIZE_MB는 **bigint** 형식입니다. 기본값은 **100MB** 입니다.
@@ -2907,7 +2910,7 @@ OFF로 지정하면 이 설정은 새 열의 정의에만 영향을 줍니다.
 > [!IMPORTANT]
 > [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]의 이후 버전에서는 ANSI_PADDING이 항상 ON으로 설정되므로 명시적으로 이 옵션을 OFF로 설정한 애플리케이션에서는 오류가 발생합니다. 새 개발 작업에서는 이 기능을 사용하지 않도록 하고, 현재 이 기능을 사용하는 애플리케이션은 수정하세요. ANSI_PADDING은 항상 ON으로 설정하는 것이 좋습니다. 계산 열이나 인덱싱된 뷰에서 인덱스를 만들거나 조작할 때는 ANSI_PADDING을 ON으로 설정해야 합니다.
 
-ANSI_PADDING을 ON으로 설정하면 Null을 허용하는 **char( _n_ )** 및 **binary( _n_ )** 열이 열 길이만큼 채워집니다. ANSI_PADDING이 OFF이면 후행 공백과 0이 잘립니다. Null을 허용하지 않는 **char( _n_ )** 및 **binary( _n_ )** 열은 항상 열 길이만큼 채워집니다.
+ANSI_PADDING을 ON으로 설정하면 Null을 허용하는 **char(_n_)** 및 **binary(_n_)** 열이 열 길이만큼 채워집니다. ANSI_PADDING이 OFF이면 후행 공백과 0이 잘립니다. Null을 허용하지 않는 **char(_n_)** 및 **binary(_n_)** 열은 항상 열 길이만큼 채워집니다.
 
   SET 문을 사용하여 설정한 연결 수준의 설정은 ANSI_PADDING에 대한 기본 데이터베이스 수준 설정보다 우선적으로 적용됩니다. 기본적으로 ODBC 및 OLE DB 클라이언트는 세션의 ANSI_PADDING을 ON으로 설정하여 연결 수준의 SET 문을 실행합니다. [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]에 연결하면 클라이언트에서 문을 실행합니다. 자세한 내용은 [SET ANSI_PADDING](../../t-sql/statements/set-ansi-padding-transact-sql.md)을 참조하세요.
 
@@ -3294,7 +3297,7 @@ OFF
 > [!INCLUDE[ssSDW](../../includes/sssdw-md.md)]의 경우 사용자 데이터베이스에서 `ALTER DATABASE SET QUERY_STORE`를 실행해야 합니다. 다른 데이터 웨어하우스 인스턴스에서는 문을 실행할 수 없습니다.
 
 **<result_set_caching_option> ::=**      
-**적용 대상** : Azure Synapse Analytics  
+**적용 대상**: Azure Synapse Analytics  
 
 쿼리 결과를 데이터베이스에 캐시할지 여부를 제어합니다.
 
@@ -3334,7 +3337,7 @@ WHERE request_id = <'Your_Query_Request_ID'>
 RESULT_SET_CACHING 옵션을 설정하려면 사용자는 서버 수준 보안 주체 로그인(프로비저닝 프로세스에서 만든 로그인)가 있거나 `dbmanager` 데이터베이스 역할의 멤버여야 합니다.  
 
 **<snapshot_option> ::=**      
-**적용 대상** : Azure Synapse Analytics
+**적용 대상**: Azure Synapse Analytics
 
 데이터베이스의 트랜잭션 격리 수준을 제어합니다.
 
