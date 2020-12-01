@@ -16,11 +16,11 @@ helpviewer_keywords:
 author: David-Engel
 ms.author: v-daenge
 ms.openlocfilehash: c86f62f98e81ce3c4fdd86e1e79e8f73e1422851
-ms.sourcegitcommit: c95f3ef5734dec753de09e07752a5d15884125e2
+ms.sourcegitcommit: 192f6a99e19e66f0f817fdb1977f564b2aaa133b
 ms.translationtype: HT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 08/25/2020
-ms.locfileid: "88861814"
+ms.lasthandoff: 11/25/2020
+ms.locfileid: "96127971"
 ---
 # <a name="system-requirements-for-ole-db-driver-for-sql-server"></a>SQL Server용 OLE DB 드라이버의 시스템 요구 사항
 
@@ -42,7 +42,7 @@ OLE DB Driver for SQL Server를 지원하는 운영 체제 목록은 [OLE DB Dri
 
 ## <a name="azure-active-directory-authentication-requirements"></a>Azure Active Directory 인증 요구 사항  
 
-18.3 이전 버전의 OLE DB Driver for SQL Server 버전에서 Azure Active Directory 인증 방법을 사용하는 경우 [SQL Server용 Active Directory 인증 라이브러리](https://go.microsoft.com/fwlink/?LinkID=513072)가 설치되었는지 확인합니다.****** (버전 18.3에는 설치 프로그램 패키지의 일부로 종속성이 포함되어 있습니다.) ADAL은 다른 인증 방법 또는 OLE DB 작업에 필요하지 않습니다. 자세한 내용은 다음을 참조하세요. [Azure Active Directory 사용](features/using-azure-active-directory.md).
+18.3 ***이전** _ 버전의 OLE DB Driver for SQL Server 버전에서 Azure Active Directory 인증 방법을 사용하는 경우 [SQL Server용 Active Directory 인증 라이브러리](https://go.microsoft.com/fwlink/?LinkID=513072)가 설치되었는지 확인합니다. (버전 18.3에는 설치 프로그램 패키지의 일부로 종속성이 포함되어 있습니다.) ADAL은 다른 인증 방법 또는 OLE DB 작업에 필요하지 않습니다. 자세한 내용은 다음을 참조하세요. [Azure Active Directory 사용](features/using-azure-active-directory.md).
 
 ## <a name="sql-server-requirements"></a>SQL Server 요구 사항  
 
@@ -56,7 +56,7 @@ OLE DB Driver for SQL Server를 사용하여 [!INCLUDE[ssNoVersion](../../includ
 
 업그레이드의 경우  
 
-* 영어 버전의 OLE DB Driver for SQL Server는 모든 지역화 버전의 OLE DB Driver for SQL Server로 업그레이드할 수 있습니다.  
+_ 영어 버전의 OLE DB Driver for SQL Server는 모든 지역화 버전의 OLE DB Driver for SQL Server로 업그레이드할 수 있습니다.  
 * 지역화 버전의 OLE DB Driver for SQL Server는 동일한 언어로 지역화된 OLE DB Driver for SQL Server로 업그레이드할 수 있습니다.  
 * 지역화 버전의 OLE DB Driver for SQL Server는 영어 버전의 OLE DB Driver for SQL Server로 업그레이드할 수 있습니다.  
 * 지역화 버전의 OLE DB Driver for SQL Server는 언어가 다른 지역화 버전의 OLE DB Driver for SQL Server로 업그레이드할 수 없습니다.  
@@ -65,9 +65,9 @@ OLE DB Driver for SQL Server를 사용하여 [!INCLUDE[ssNoVersion](../../includ
 
 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 및 SQL Server용 OLE DB 드라이버는 아래 표에서와 같이 새 데이터 형식을 하위 클라이언트와 호환되는 이전 데이터 형식으로 매핑합니다.  
 
-OLE DB 및 ADO 애플리케이션은 OLE DB Driver for SQL Server에 **DataTypeCompatibility** 연결 문자열 키워드를 사용하여 이전 데이터 형식으로 작동할 수 있습니다. **DataTypeCompatibility=80**이면 OLE DB 클라이언트는 TDS 버전이 아닌, [!INCLUDE[ssVersion2005](../../includes/ssversion2005-md.md)] TDS(Tabular Data Stream) 버전을 사용하여 연결합니다. 이는 [!INCLUDE[ssKatmai](../../includes/sskatmai-md.md)] 이상 데이터 형식의 경우 SQL Server용 OLE DB 드라이버가 아닌 서버에 의해 하위 변환이 수행된다는 의미입니다. 또한 연결에서 사용할 수 있는 기능이 [!INCLUDE[ssVersion2005](../../includes/ssversion2005-md.md)] 기능 집합으로 제한됩니다. 새 데이터 형식이나 기능을 사용하려고 시도하면, 잘못된 요청을 서버에 전달하는 것이 아니라 API 호출에서 최대한 일찍 시도를 감지하여 호출 애플리케이션으로 오류를 반환합니다.  
+OLE DB 및 ADO 애플리케이션은 OLE DB Driver for SQL Server에 **DataTypeCompatibility** 연결 문자열 키워드를 사용하여 이전 데이터 형식으로 작동할 수 있습니다. **DataTypeCompatibility=80** 이면 OLE DB 클라이언트는 TDS 버전이 아닌, [!INCLUDE[ssVersion2005](../../includes/ssversion2005-md.md)] TDS(Tabular Data Stream) 버전을 사용하여 연결합니다. 이는 [!INCLUDE[ssKatmai](../../includes/sskatmai-md.md)] 이상 데이터 형식의 경우 SQL Server용 OLE DB 드라이버가 아닌 서버에 의해 하위 변환이 수행된다는 의미입니다. 또한 연결에서 사용할 수 있는 기능이 [!INCLUDE[ssVersion2005](../../includes/ssversion2005-md.md)] 기능 집합으로 제한됩니다. 새 데이터 형식이나 기능을 사용하려고 시도하면, 잘못된 요청을 서버에 전달하는 것이 아니라 API 호출에서 최대한 일찍 시도를 감지하여 호출 애플리케이션으로 오류를 반환합니다.  
 
-IDBInfo::GetKeywords는 항상 연결의 서버 버전에 해당하는 키워드 목록을 반환하고 **DataTypeCompatibility**의 영향을 받지 않습니다.  
+IDBInfo::GetKeywords는 항상 연결의 서버 버전에 해당하는 키워드 목록을 반환하고 **DataTypeCompatibility** 의 영향을 받지 않습니다.  
 
 |데이터 형식|SQL Server Native Client<br /><br />SQL Server 2005|SQL Server Native Client 11.0<br /><br /> [!INCLUDE[ssSQL14](../../includes/sssql14-md.md)]|SQL Server용 OLE DB 드라이버|Windows Data Access Components, MDAC 및<br /><br /> OLE DB Driver for SQL Server OLE DB 애플리케이션(DataTypeCompatibility=80)|  
 |---------------|--------------------------------------------------|-------------------------------------------------------------|-------------------------------------------------------------|-------------------------------------------------------------------------------------------------------------------------------|  

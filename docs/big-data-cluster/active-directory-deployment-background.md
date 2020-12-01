@@ -9,12 +9,12 @@ ms.date: 09/30/2020
 ms.topic: conceptual
 ms.prod: sql
 ms.technology: big-data-cluster
-ms.openlocfilehash: a2b95ef0934c1eb01944df562c4c34cd73d8e0d0
-ms.sourcegitcommit: ae474d21db4f724523e419622ce79f611e956a22
+ms.openlocfilehash: 144b769ce42b192099678cda4cfe6fb2935c1c2f
+ms.sourcegitcommit: af663bdca0df8a1f34a14667390662f6f0e17766
 ms.translationtype: HT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 10/20/2020
-ms.locfileid: "92257343"
+ms.lasthandoff: 11/19/2020
+ms.locfileid: "94924170"
 ---
 # <a name="deploy-multiple-big-data-clusters-2019-in-the-same-active-directory-domain"></a>동일한 Active Directory 도메인에 여러 [!INCLUDE[big-data-clusters-2019](../includes/ssbigdataclusters-ss-nover.md)] 배포
 
@@ -22,7 +22,7 @@ ms.locfileid: "92257343"
 
 이 문서에서는 동일한 Active Directory 도메인에서 여러 SQL Server 2019 빅 데이터 클러스터를 배포하고 통합하는 기능을 사용할 수 있는 SQL Server 2019 CU 5로 업데이트하는 방법을 설명합니다.
 
-CU5 이전에는 하나의 AD 도메인에 여러 BDC를 배포하는 것을 방해하는 두 가지 문제가 있었습니다.
+SQL 2019 CU5 이전에는 하나의 AD 도메인에 여러 BDC를 배포하는 것을 방해하는 두 가지 문제가 있었습니다.
 
 - 서비스 사용자 이름과 DNS 도메인 이름의 충돌
 - 도메인 계정 보안 주체 이름
@@ -35,11 +35,11 @@ CU5 이전에는 하나의 AD 도메인에 여러 BDC를 배포하는 것을 방
 
 ### <a name="domain-account-principal-names"></a>도메인 계정 보안 주체 이름
 
-Active Directory 도메인을 사용하여 BDC를 배포하는 동안 BDC 내부에서 실행되는 서비스에 대해 여러 계정 보안 주체가 생성됩니다. 이 계정은 기본적으로 AD 사용자 계정입니다. CU5 이전에는 이러한 계정의 이름이 클러스터 간에 고유하지 않았습니다. 이런 현상은 두 개의 서로 다른 클러스터에서 BDC의 특정 서비스에 대해 동일한 사용자 계정 이름을 만들려고 할 때 확인됩니다. 두 번째로 배포되는 클러스터는 AD에서 충돌이 발생하고 계정을 만들 수 없습니다.
+Active Directory 도메인을 사용하여 BDC를 배포하는 동안 BDC 내부에서 실행되는 서비스에 대해 여러 계정 보안 주체가 생성됩니다. 이 계정은 기본적으로 AD 사용자 계정입니다. SQL 2019 CU5 이전에는 이러한 계정의 이름이 클러스터 간에 고유하지 않았습니다. 이런 현상은 두 개의 서로 다른 클러스터에서 BDC의 특정 서비스에 대해 동일한 사용자 계정 이름을 만들려고 할 때 확인됩니다. 두 번째로 배포되는 클러스터는 AD에서 충돌이 발생하고 계정을 만들 수 없습니다.
 
 ## <a name="resolution-for-collisions"></a>충돌 해결
 
-### <a name="solution-to-solve-the-problem-with-spns-and-dns-domain---cu5"></a>SPN 및 DNS 도메인의 문제를 해결하는 방법 - CU5
+### <a name="solution-to-solve-the-problem-with-spns-and-dns-domain---sql-2019-cu5"></a>SPN 및 DNS 도메인의 문제를 해결하는 방법 - SQL 2019 CU5
 
 SPN은 두 클러스터에서 서로 달라야 하므로, 배포 시 전달되는 DNS 도메인 이름도 서로 달라야 합니다. 배포 구성 파일 `subdomain`에서 새로 도입된 설정을 사용하여 다른 DNS 이름을 지정할 수 있습니다. 두 클러스터 간에 하위 도메인이 서로 다르고 이 하위 도메인을 통해 내부 통신이 발생할 수 있는 경우 SPN에는 필요한 고유성을 달성하는 하위 도메인이 포함됩니다.
 
@@ -63,7 +63,7 @@ Active Directory 구성 사양에서 새로 도입된 하위 도메인 매개 �
 
 ## <a name="semantics"></a>의미 체계
 
-요약하면, CU5에서 도메인의 여러 클러스터에 대해 추가된 매개 변수의 의미 체계는 다음과 같습니다.
+요약하면, SQL 2019 CU5에서 도메인의 여러 클러스터에 대해 추가된 매개 변수의 의미 체계는 다음과 같습니다.
 
 ### `subdomain`
 
@@ -138,7 +138,7 @@ Active Directory 구성 사양에서 새로 도입된 하위 도메인 매개 �
 
 필수 사항은 아니지만 권장 사항입니다. 별개의 클러스터에 대해 별도의 OU를 제공하면 생성된 사용자 계정을 관리할 수 있습니다.
 
-### <a name="how-to-revert-back-to-the-pre-cu5-behavior"></a>CU5 이전 동작으로 되돌리려면 어떻게 해야 하나요?
+### <a name="how-to-revert-back-to-the-pre-cu5-behavior-in-sql-2019"></a>SQL 2019에서 CU5 이전 동작으로 되돌리려면 어떻게 해야 하나요?
 
 새로 도입된 `subdomain` 매개 변수를 수용할 수 없는 시나리오가 있을 수도 있습니다. 이미 [!INCLUDE [azure-data-cli-azdata](../includes/azure-data-cli-azdata.md)]로 업그레이드했으며 CU5 이전 릴리스를 배포해야 하는 경우를 예로 들어 보겠습니다. 이런 경우는 매우 드물지만, CU5 이전 동작으로 되돌려야 하는 경우 `control.json`의 Active Directory 섹션에서 `false` 매개 변수를 `useSubdomain`로 설정하면 됩니다.
 

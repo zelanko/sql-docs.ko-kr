@@ -3,18 +3,18 @@ title: 명령 프롬프트에서 설치
 description: SQL Server 명령줄 설치 프로그램을 실행하여 Python 및 R이 포함된 Machine Learning Services를 SQL Server 데이터베이스 엔진 인스턴스에 추가합니다.
 ms.prod: sql
 ms.technology: machine-learning-services
-ms.date: 10/12/2020
+ms.date: 11/25/2020
 ms.topic: how-to
 author: dphansen
 ms.author: davidph
 ms.custom: seo-lt-2019
 monikerRange: '>=sql-server-2016||>=sql-server-linux-ver15||=sqlallproducts-allversions'
-ms.openlocfilehash: cd9e1e261790c301ceac8198a76fbe2906c8ccf6
-ms.sourcegitcommit: afb02c275b7c79fbd90fac4bfcfd92b00a399019
+ms.openlocfilehash: 8e32b14682c7813dd911b52e80249cf6af7ebaac
+ms.sourcegitcommit: 192f6a99e19e66f0f817fdb1977f564b2aaa133b
 ms.translationtype: HT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 10/12/2020
-ms.locfileid: "91956770"
+ms.lasthandoff: 11/25/2020
+ms.locfileid: "96122757"
 ---
 # <a name="install-sql-server-machine-learning-services-with-r-and-python-from-the-command-line"></a>명령줄에서 R 및 Python을 사용하여 SQL Server Machine Learning Services 설치
 [!INCLUDE [SQL Server 2016 and later](../../includes/applies-to-version/sqlserver2016.md)]
@@ -37,9 +37,9 @@ ms.locfileid: "91956770"
 
 ## <a name="command-line-arguments"></a>명령줄 인수
 
-FEATURES 인수는 사용 약관과 마찬가지로 필수입니다. 
+**/FEATURES** 인수는 사용 약관과 마찬가지로 필수입니다. 
 
-명령 프롬프트에서 설치할 때 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]는 /Q 매개 변수를 사용하는 완전 자동 모드 또는 /QS 매개 변수를 사용하는 단순 자동 모드를 지원합니다. /QS 스위치를 사용하면 진행률만 표시되고 입력이 허용되지 않으므로 오류가 발생해도 오류 메시지가 표시되지 않습니다. /QS 매개 변수는 /Action=install이 지정된 경우에만 지원됩니다.
+명령 프롬프트에서 설치할 때 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]는 **/Q** 매개 변수를 사용하는 완전 자동 모드 또는 **/QS** 매개 변수를 사용하는 단순 자동 모드를 지원합니다. **/QS** 스위치를 사용하면 진행률만 표시되고 입력이 허용되지 않으므로 오류가 발생해도 오류 메시지가 표시되지 않습니다. **/QS** 매개 변수는 **/Action=install** 이 지정된 경우에만 지원됩니다.
 
 ::: moniker range="=sql-server-2016||=sqlallproducts-allversions"
 | 인수 | Description |
@@ -196,9 +196,9 @@ Setup.exe /q /ACTION=Install /FEATURES=SQL_SHARED_MR
 
 설치가 완료되면 서버, Microsoft 패키지, R 및 Python의 오픈 소스 배포, 도구, 샘플 및 스크립트를 배포의 일부로 사용할 수 있습니다. 
 
-R 콘솔 창을 열려면 `\Program files\Microsoft SQL Server\150 (or 140/130)\R_SERVER\bin\x64`로 이동하고 **RGui.exe**를 두 번 클릭합니다. R을 처음 사용하세요? 다음 자습서를 사용해 보세요. [기본 R 명령 및 RevoScaleR 함수: 25개 공통 예제](/machine-learning-server/r/tutorial-r-to-revoscaler).
+R 콘솔 창을 열려면 `\Program files\Microsoft SQL Server\150 (or 140/130)\R_SERVER\bin\x64`로 이동하고 **RGui.exe** 를 두 번 클릭합니다. R을 처음 사용하세요? 다음 자습서를 사용해 보세요. [기본 R 명령 및 RevoScaleR 함수: 25개 공통 예제](/machine-learning-server/r/tutorial-r-to-revoscaler).
 
-Python 명령을 열려면 `\Program files\Microsoft SQL Server\150 (or 140)\PYTHON_SERVER\bin\x64`로 이동하고 **python.exe**를 두 번 클릭합니다.
+Python 명령을 열려면 `\Program files\Microsoft SQL Server\150 (or 140)\PYTHON_SERVER\bin\x64`로 이동하고 **python.exe** 를 두 번 클릭합니다.
 
 ## <a name="next-steps"></a>다음 단계
 

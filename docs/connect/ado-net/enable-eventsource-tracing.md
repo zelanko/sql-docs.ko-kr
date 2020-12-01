@@ -1,7 +1,7 @@
 ---
 title: SqlClient에서 이벤트 추적 사용
 description: 이벤트 수신기를 구현하여 SqlClient에서 이벤트 추적을 사용하도록 설정하는 방법과 이벤트 데이터에 액세스하는 방법을 설명합니다.
-ms.date: 06/15/2020
+ms.date: 11/23/2020
 dev_langs:
 - csharp
 ms.prod: sql
@@ -11,14 +11,14 @@ ms.topic: conceptual
 author: johnnypham
 ms.author: v-jopha
 ms.reviewer: ''
-ms.openlocfilehash: 4eac1ab519549ccace092cfc175c735dd4537269
-ms.sourcegitcommit: c7f40918dc3ecdb0ed2ef5c237a3996cb4cd268d
+ms.openlocfilehash: b45f6146f8b5e2f367281720b0fa1c3395d94256
+ms.sourcegitcommit: 192f6a99e19e66f0f817fdb1977f564b2aaa133b
 ms.translationtype: HT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 10/05/2020
-ms.locfileid: "91725744"
+ms.lasthandoff: 11/25/2020
+ms.locfileid: "96123955"
 ---
-# <a name="enabling-event-tracing-in-sqlclient"></a>SqlClient에서 이벤트 추적 사용
+# <a name="enable-event-tracing-in-sqlclient"></a>SqlClient에서 이벤트 추적 사용
 
 [!INCLUDE [appliesto-netfx-netcore-netst-md](../../includes/appliesto-netfx-netcore-netst-md.md)]
 
@@ -53,6 +53,95 @@ Microsoft.Data.SqlClient.EventSource
 다음 예에서는 **AdventureWorks** 샘플 데이터베이스에서 데이터 작업에 대해 이벤트 추적을 사용하도록 설정하고 콘솔 창에 이벤트를 표시합니다.
 
 [!code-csharp [SqlClientEventSource#1](~/../sqlclient/doc/samples/SqlClientEventSource.cs#1)]
+
+## <a name="event-tracing-support-in-native-sni"></a>네이티브 SNI에서 이벤트 추적 지원
+
+**Microsoft.Data.SqlClient** v2.1.0은 **Microsoft.Data.SqlClient.SNI** 및 **Microsoft.Data.SqlClient.SNI.runtime** 에서 이벤트 추적 지원을 확장합니다. EventCommand를 `SqlClientEventSource`에 보내면 [Xperf](https://docs.microsoft.com/windows-hardware/test/wpt/) 및 [PerfView](https://github.com/microsoft/perfview) 도구를 사용하여 네이티브 SNI.dll의 이벤트를 수집할 수 있습니다. 유효한 EventCommand 값은 다음과 같습니다.
+
+```cs
+// Enables trace events:
+EventSource.SendCommand(eventSource, (EventCommand)8192, null);
+
+// Enables flow events:
+EventSource.SendCommand(eventSource, (EventCommand)16384, null);
+
+// Enables both trace and flow events:
+EventSource.SendCommand(eventSource, (EventCommand)(8192 | 16384), null);
+```
+
+다음 예제에서는 애플리케이션이 .NET Framework를 대상으로 할 때 네이티브 SNI.dll에서 이벤트 추적을 활성화합니다. 
+
+```cs
+// Native SNI tracing example
+// .NET Framework application
+using System;
+using System.Diagnostics.Tracing;
+using Microsoft.Data.SqlClient;
+
+public class SqlClientListener : EventListener
+{
+    protected override void OnEventSourceCreated(EventSource eventSource)
+    {
+        if (eventSource.Name.Equals("Microsoft.Data.SqlClient.EventSource"))
+        {
+            // Enables both trace and flow events
+            EventSource.SendCommand(eventSource, (EventCommand)(8192 | 16384), null);
+        }
+    }
+}
+
+class Program
+{
+    static string connectionString = @"Data Source = localhost; Initial Catalog = AdventureWorks;Integrated Security=true;";
+
+    static void Main(string[] args)
+    {
+        using (SqlClientListener listener = new SqlClientListener())
+        using (SqlConnection connection = new SqlConnection(connectionString))
+        {
+            connection.Open();
+        }        
+    }
+}
+```
+
+### <a name="use-xperf-to-collect-trace-log"></a>Xperf를 사용하여 추적 로그 수집
+
+1. 다음 명령줄을 사용하여 추적을 시작합니다.
+
+   ```
+   xperf -start trace -f myTrace.etl -on *Microsoft.Data.SqlClient.EventSource
+   ```
+   
+2. 네이티브 SNI 추적 예제를 실행하여 SQL Server에 연결합니다.
+
+3. 다음 명령줄을 사용하여 추적을 중지합니다.
+
+   ```
+   xperf -stop trace
+   ```
+   
+4. PerfView를 사용하여 1단계에서 지정한 myTrace.etl 파일을 엽니다. SNI 추적 로그는 `Microsoft.Data.SqlClient.EventSource/SNIScope` 및 `Microsoft.Data.SqlClient.EventSource/SNITrace` 이벤트 이름으로 찾을 수 있습니다. 
+
+   ![PerfView를 사용하여 SNI 추적 파일보기](media/view-event-trace-native-sni.png)
+
+
+### <a name="use-perfview-to-collect-trace-log"></a>PerfView를 사용하여 추적 로그 수집
+
+1. PerfView를 시작하고 메뉴 표시 줄에서 `Collect > Collect`를 실행하세요.
+
+2. 추적 파일 이름, 출력 경로 및 공급자 이름을 구성합니다.
+
+   ![수집 전 Prefview 구성](media/collect-event-trace-native-sni.png)
+   
+3. 수집을 시작합니다.
+
+4. 네이티브 SNI 추적 예제를 실행하여 SQL Server에 연결합니다.
+
+5. PerfView에서 수집을 중지합니다. 2단계의 구성에 따라 PerfViewData.etl 파일을 생성하는 데 시간이 걸립니다.
+
+6. PerfView에서 etl 파일을 엽니다. SNI 추적 로그는 `Microsoft.Data.SqlClient.EventSource/SNIScope` 및 `Microsoft.Data.SqlClient.EventSource/SNITrace` 이벤트 이름으로 찾을 수 있습니다. 
+
 
 ## <a name="external-resources"></a>외부 리소스  
 자세한 내용은 다음 리소스를 참조하세요.  

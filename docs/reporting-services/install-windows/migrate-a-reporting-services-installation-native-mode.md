@@ -7,12 +7,12 @@ ms.topic: conceptual
 author: maggiesMSFT
 ms.author: maggies
 ms.date: 05/01/2020
-ms.openlocfilehash: d45e00b7d99f87ec3edc9bdd123d5392412dcf73
-ms.sourcegitcommit: fe59f8dc27fd633f5dfce54519d6f5dcea577f56
+ms.openlocfilehash: ae3932611181f99b71d72bc2365967a19c968b9c
+ms.sourcegitcommit: f2bdebed3efa55a2b7e64de9d6d9d9b1c85f479e
 ms.translationtype: HT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 10/09/2020
-ms.locfileid: "91934845"
+ms.lasthandoff: 11/24/2020
+ms.locfileid: "96125021"
 ---
 # <a name="migrate-a-reporting-services-installation-native-mode"></a>Reporting Services 설치 마이그레이션(기본 모드)
 
@@ -132,7 +132,7 @@ SQL Server Reporting Services의 변경 내용에 대한 자세한 내용은 업
   
     2. Rswebapplication.config  
   
-    3. Rssvrpolicy.config  
+    3. Rssrvpolicy.config  
   
     4. Rsmgrpolicy.config  
   
@@ -144,7 +144,7 @@ SQL Server Reporting Services의 변경 내용에 대한 자세한 내용은 업
 
 ## <a name="install-sql-server-reporting-services"></a><a name="bkmk_install_ssrs"></a> SQL Server Reporting Services 설치
 
- 새 보고서 서버 인스턴스를 기본값 이외의 값을 사용하여 구성할 수 있도록 파일만 모드로 설치합니다. 명령줄 설치의 경우에는 **FilesOnly** 인수를 사용합니다. 설치 마법사에서 **구성 없이 설치**옵션을 선택합니다.  
+ 새 보고서 서버 인스턴스를 기본값 이외의 값을 사용하여 구성할 수 있도록 파일만 모드로 설치합니다. 명령줄 설치의 경우에는 **FilesOnly** 인수를 사용합니다. 설치 마법사에서 **구성 없이 설치** 옵션을 선택합니다.  
   
  새 [!INCLUDE[ssRSnoversion](../../includes/ssrsnoversion-md.md)]인스턴스를 설치하는 방법에 대한 지침을 보려면 다음 링크 중 하나를 클릭하십시오.  
   

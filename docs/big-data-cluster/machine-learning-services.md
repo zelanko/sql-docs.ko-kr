@@ -4,16 +4,16 @@ titleSuffix: SQL Server Big Data Clusters
 description: SQL Server 빅 데이터 클러스터의 마스터 인스턴스에서 Machine Learning Services를 사용하여 Python 및 R 스크립트를 실행하는 방법을 알아봅니다.
 author: dphansen
 ms.author: davidph
-ms.date: 04/30/2020
+ms.date: 11/19/2020
 ms.topic: conceptual
 ms.prod: sql
 ms.technology: machine-learning-bdc
-ms.openlocfilehash: a14258c15ac1af1445b201f7b999dbec1682555d
-ms.sourcegitcommit: 01297f2487fe017760adcc6db5d1df2c1234abb4
+ms.openlocfilehash: aa71450a1c16c9239a0dc74403a1989b5a9a1986
+ms.sourcegitcommit: ce15cbbcb0d5f820f328262ff5451818e508b480
 ms.translationtype: HT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 07/09/2020
-ms.locfileid: "86196931"
+ms.lasthandoff: 11/20/2020
+ms.locfileid: "94947968"
 ---
 # <a name="run-python-and-r-scripts-with-machine-learning-services-on-sql-server-big-data-clusters"></a>SQL Server 빅 데이터 클러스터에서 Machine Learning Services를 사용하여 Python 및 R 스크립트 실행
 
@@ -22,7 +22,7 @@ ms.locfileid: "86196931"
 [SQL Server 빅 데이터 클러스터](big-data-cluster-overview.md)에서 [Machine Learning Services](../machine-learning/index.yml)를 사용하여 Python 및 R 스크립트를 실행할 수 있습니다.
 
 > [!NOTE]
-> [SQL Server 언어 확장](../language-extensions/language-extensions-overview.md)을 사용하면 마스터 인스턴스에서 Java 코드를 실행할 수도 있습니다. 다음 단계를 수행하면 언어 확장도 사용하도록 설정됩니다.
+> [Java 언어 확장](../language-extensions/java-overview.md)을 사용하여 SQL Server 빅 데이터 클러스터의 마스터 인스턴스에서 Java 코드를 실행할 수도 있습니다. 아래 단계를 따르면 [SQL Server 언어 확장](../language-extensions/language-extensions-overview.md)도 활성화됩니다.
 
 ## <a name="enable-machine-learning-services"></a>Machine Learning Services 사용 설정
 

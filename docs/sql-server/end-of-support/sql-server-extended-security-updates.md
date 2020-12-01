@@ -2,20 +2,20 @@
 title: 연장 보안 업데이트 정의
 description: 'SQL Server 레지스트리를 사용하여 지원 종료 및 수명 종료 SQL Server 제품(예: SQL Server 2008 및 SQL Server 2008 R2)에 대한 연장 보안 업데이트를 얻는 방법을 알아봅니다.'
 ms.custom: ''
-ms.date: 12/09/2019
+ms.date: 11/24/2020
 ms.prod: sql
 ms.technology: install
 ms.topic: conceptual
-author: markingmyname
-ms.author: maghan
+author: cawrites
+ms.author: chadam
 ms.reviewer: pmasl
 monikerRange: '>=sql-server-2016||=sqlallproducts-allversions'
-ms.openlocfilehash: f0eabc247645000d95f9b9c83c17ababc47c6cc2
-ms.sourcegitcommit: ef20f39a17fd4395dd2dd37b8dd91b57328a751c
+ms.openlocfilehash: f3a337395be09743be335dd01ac80caf9dc98be0
+ms.sourcegitcommit: 192f6a99e19e66f0f817fdb1977f564b2aaa133b
 ms.translationtype: HT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 10/28/2020
-ms.locfileid: "92793820"
+ms.lasthandoff: 11/25/2020
+ms.locfileid: "96121298"
 ---
 # <a name="what-are-extended-security-updates-for-sql-server"></a>SQL Server의 연장 보안 업데이트란 무엇입니까?
 [!INCLUDE [SQL Server Windows Only - ASDBMI ](../../includes/applies-to-version/sql-windows-only-asdbmi.md)]
@@ -206,6 +206,39 @@ ESU를 다운로드하려면 다음 단계를 수행합니다.
    ![사용 가능한 업데이트에 대한 보안 업데이트 창 확인](media/sql-server-extended-security-updates/security-updates-sql-registry.png)
 
 1. 사용할 수 있게 되면 여기에서 보안 업데이트를 다운로드합니다. 
+
+## <a name="supported-regions-and-data-residency"></a>지원되는 지역 및 데이터 보존
+
+**SQL Server 레지스트리** 서비스(미리보기)는 Azure 지역의 하위 집합에서 사용할 수 있습니다. 다음 표는 지원되는 지역과 각 지역의 데이터 보존 유형을 보여줍니다.
+
+| **지역** | **데이터 상주** |
+|:--|:--|
+|오스트레일리아 동부|지역|
+|오스트레일리아 남동부|지역|
+|캐나다 중부|지역|
+|프랑스 중부|지역|
+|일본 동부|지역|
+|일본 서부|지역|
+|한국 중부|지역|
+|한국 남부|지역|
+|미국 중북부|지역|
+|북유럽|지역|
+|미국 중남부|지역|
+|동남 아시아|단일 지역|
+|인도 남부|지역|
+|남아프리카 북부|지역|
+|영국 남부|지역|
+|영국 서부|지역|
+|미국 서부|지역|
+|미국 동부|지역|
+|미국 중부|지역|
+|동아시아|지역|
+|서유럽|지역|
+|미국 중서부|지역|
+|미국 서부 2|지역|
+|미국 동부 2|지역|
+
+지리적 거주 지역이 있는 지역에서 SQL 레지스트리 서비스는 GRS(지역 중복 스토리지 계정)에 데이터 백업을 유지합니다.  단일 지역 상주가 있는 지역에서 SQL 레지스트리 서비스는 ZRS(영역 중복 스토리지 계정)에 데이터 백업을 유지합니다. 자세한 내용은 [보안 센터](https://azuredatacentermap.azurewebsites.net/)를 참조하세요.
 
 ## <a name="configure-regional-redundancy"></a>지역 중복 구성 
 

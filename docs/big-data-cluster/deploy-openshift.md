@@ -9,12 +9,12 @@ ms.date: 06/22/2020
 ms.topic: conceptual
 ms.prod: sql
 ms.technology: big-data-cluster
-ms.openlocfilehash: aa838fc8920469921063ebdface6680e3bc5a3bf
-ms.sourcegitcommit: 783b35f6478006d654491cb52f6edf108acf2482
+ms.openlocfilehash: 91c491facec15ea50ee93641ff9482b20e5bbf1a
+ms.sourcegitcommit: f2bdebed3efa55a2b7e64de9d6d9d9b1c85f479e
 ms.translationtype: HT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 10/09/2020
-ms.locfileid: "91892493"
+ms.lasthandoff: 11/24/2020
+ms.locfileid: "96123984"
 ---
 # <a name="deploy-big-data-clusters-2019-on-openshift-on-premises-and-azure-red-hat-openshift"></a>OpenShift 온-프레미스 및 Azure Red Hat OpenShift에 [!INCLUDE[big-data-clusters-2019](../includes/ssbigdataclusters-ss-nover.md)] 배포
 
@@ -37,7 +37,7 @@ OpenShift 클러스터를 온-프레미스에 배포하는 방법은 [Red Hat Op
 > [!IMPORTANT]
 > 아래의 필수 구성 요소는 클러스터 수준 개체를 만들기 위한 충분한 권한이 있는 OpenShift 클러스터 관리자(cluster-admin 클러스터 역할)가 수행해야 합니다. OpenShift의 클러스터 역할에 대한 자세한 내용은 [RBAC를 사용하여 권한 정의 및 적용](https://docs.openshift.com/container-platform/4.4/authentication/using-rbac.html)을 참조하세요.
 
-1. OpenShift의 `pidsLimit` 설정이 SQL Server 워크로드를 수용할 수 있도록 업데이트되었는지 확인합니다. OpenShift의 기본값은 워크로드와 같은 프로덕션용으로는 너무 낮습니다. 최소 `4096`의 값을 사용하는 것이 권장되나, 최적의 값은 SQL Server의 `max worker threads` 설정과 OpenShift 호스트 노드의 CPU 프로세서 수에 따라 달라집니다. 
+1. OpenShift의 `pidsLimit` 설정이 SQL Server 워크로드를 수용할 수 있도록 업데이트되었는지 확인합니다. OpenShift의 기본값은 워크로드와 같은 프로덕션용으로는 너무 낮습니다. 최소 `4096`으로 시작하지만 최적 값은 SQL Server의 `max worker threads` 설정과 OpenShift 호스트 노드의 CPU 프로세서 수에 따라 다릅니다. 
     - OpenShift 클러스터의 `pidsLimit`를 업데이트하는 방법을 확인하려면 [해당 지침]( https://github.com/openshift/machine-config-operator/blob/master/docs/ContainerRuntimeConfigDesign.md)을 참조하세요. `4.3.5` 전의 OpenShift 버전에는 업데이트된 값의 효력이 발생되지 않는 결함이 있었습니다. 반드시 OpenShift를 최신 버전으로 업그레이드하세요. 
     - 환경 및 계획된 SQL Server 워크로드에 따라 최적의 값을 계산하는 데 도움이 되도록, 아래의 추산 및 예를 참고하세요.
 
@@ -49,7 +49,13 @@ OpenShift 클러스터를 온-프레미스에 배포하는 방법은 [Red Hat Op
     > [!NOTE]
     > 다른 프로세스(예: 백업, CLR, Fulltext, SQLAgent) 또한 얼마간의 오버헤드를 더하므로 추산된 값에 버퍼를 더하세요.
 
-2. 첨부된 [`bdc-scc.yaml`](#bdc-sccyaml-file)을 사용하여 사용자 지정 SCC(보안 컨텍스트 제약 조건)를 만듭니다.
+1. 사용자 지정 SCC(보안 컨텍스트 제약) [`bdc-scc.yaml`](#bdc-sccyaml-file) 다운로드:
+
+    ```console
+    curl https://raw.githubusercontent.com/microsoft/sql-server-samples/master/samples/features/sql-big-data-cluster/deployment/openshift/bdc-scc.yaml -o bdc-scc.yaml
+    ```
+
+1. 클러스터에 SCC를 적용합니다.
 
     ```console
     oc apply -f bdc-scc.yaml
@@ -104,7 +110,7 @@ OpenShift 클러스터를 온-프레미스에 배포하는 방법은 [Red Hat Op
    azdata bdc config init --source openshift-dev-test --target custom-openshift
    ```
 
-   ARO에 배포하는 경우 이 환경에 적합한 `serviceType` 및 `storageClass`의 기본값을 포함하는 `aro-` 프로필 중 하나로 시작하는 것이 좋습니다. 예를 들면 다음과 같습니다.
+   ARO에 배치하려면 이 환경에 적합한 `serviceType` 및 `storageClass`에 대한 기본값을 포함하는 `aro-` 프로파일 중 하나로 시작하세요. 예를 들면 다음과 같습니다.
 
    ```console
    azdata bdc config init --source aro-dev-test --target custom-openshift
@@ -129,19 +135,19 @@ OpenShift 클러스터를 온-프레미스에 배포하는 방법은 [Red Hat Op
 
 1. 성공적으로 배포되면 로그인하여 외부 클러스터 엔드포인트를 나열할 수 있습니다.
 
-```console
-   azdata login -n mssql-cluster
-   azdata bdc endpoint list
-```
+   ```console
+      azdata login -n mssql-cluster
+      azdata bdc endpoint list
+   ```
 
 ## <a name="openshift-specific-settings-in-the-deployment-configuration-files"></a>배포 구성 파일에서 OpenShift에 해당하는 설정
 
 SQL Server 2019 CU5부터 Pod 및 노드 메트릭의 수집을 제어하는 두 가지 기능 스위치가 도입되었습니다. 이러한 매개 변수는 OpenShift에 대한 기본 제공 프로필에서 기본적으로 `false`로 설정됩니다. 모니터링 컨테이너에 [권한 있는 보안 컨텍스트](https://www.openshift.com/blog/managing-sccs-in-openshift)가 필요하기 때문입니다. 이로 인해 BDC가 배포된 네임스페이스의 보안 제약 조건이 일부 완화됩니다.
 
 ```json
-    "security": {
-      "allowNodeMetricsCollection": false,
-      "allowPodMetricsCollection": false
+    "security": {
+      "allowNodeMetricsCollection": false,
+      "allowPodMetricsCollection": false
 }
 ```
 
@@ -164,47 +170,9 @@ ARO의 기본 스토리지 클래스 이름은 (기본 스토리지 클래스가
 
 ## <a name="bdc-sccyaml-file"></a>`bdc-scc.yaml` 파일:
 
-```yaml
-apiVersion: security.openshift.io/v1
-kind: SecurityContextConstraints
-metadata:
-  annotations:
-    kubernetes.io/description: SQL Server BDC custom scc is based on 'nonroot' scc plus additional capabilities.
-  generation: 2
-  name: bdc-scc
-allowHostDirVolumePlugin: false
-allowHostIPC: false
-allowHostNetwork: false
-allowHostPID: false
-allowHostPorts: false
-allowPrivilegeEscalation: true
-allowPrivilegedContainer: false
-allowedCapabilities:
-  - SETUID
-  - SETGID
-  - CHOWN
-  - SYS_PTRACE
-defaultAddCapabilities: null
-fsGroup:
-  type: RunAsAny
-readOnlyRootFilesystem: false
-requiredDropCapabilities:
-  - KILL
-  - MKNOD
-runAsUser:
-  type: MustRunAsNonRoot
-seLinuxContext:
-  type: MustRunAs
-supplementalGroups:
-  type: RunAsAny
-volumes:
-  - configMap
-  - downwardAPI
-  - emptyDir
-  - persistentVolumeClaim
-  - projected
-  - secret
-```
+이 배포에 대한 SCC 파일은 다음과 같습니다.
+
+:::code language="yaml" source="../../sql-server-samples/samples/features/sql-big-data-cluster/deployment/openshift/bdc-scc.yaml":::
 
 ## <a name="next-steps"></a>다음 단계
 
