@@ -13,12 +13,12 @@ ms.assetid: 17a4c925-d4b5-46ee-9cd6-044f714e6f0e
 author: ronortloff
 ms.author: rortloff
 monikerRange: '>= aps-pdw-2016 || = azure-sqldw-latest || = sqlallproducts-allversions'
-ms.openlocfilehash: c08303bd13b96089ac2b9e0f82c83a992ec83e63
-ms.sourcegitcommit: 22dacedeb6e8721e7cdb6279a946d4002cfb5da3
+ms.openlocfilehash: 1038b37cf97fed506d8503ceafb94a7bdabb0b2d
+ms.sourcegitcommit: debaff72dbfae91b303f0acd42dd6d99e03135a2
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 10/14/2020
-ms.locfileid: "92038303"
+ms.lasthandoff: 12/01/2020
+ms.locfileid: "96419834"
 ---
 # <a name="syspdw_nodes_column_store_row_groups-transact-sql"></a>sys.pdw_nodes_column_store_row_groups (Transact-sql)
 [!INCLUDE[applies-to-version/asa-pdw](../../includes/applies-to-version/asa-pdw.md)]
@@ -29,7 +29,7 @@ ms.locfileid: "92038303"
 |-----------------|---------------|-----------------|  
 |**object_id**|**int**|기본 테이블의 ID입니다. 이는 계산 노드의 물리적 테이블 이며, 컨트롤 노드의 논리 테이블에 대 한 object_id이 아닙니다. 예를 들어 object_id은 sys. tables의 object_id와 일치 하지 않습니다.<br /><br /> Sys. tables에 조인 하려면 sys.pdw_index_mappings를 사용 합니다.|  
 |**index_id**|**int**|*Object_id* 테이블에 대 한 클러스터형 columnstore 인덱스의 ID입니다.|  
-|**partition_number**|**int**|행 그룹 *row_group_id*를 보유 하는 테이블 파티션의 ID입니다. *Partition_number* 를 사용 하 여이 DMV를 sys 파티션에 조인할 수 있습니다.|  
+|**partition_number**|**int**|행 그룹 *row_group_id* 를 보유 하는 테이블 파티션의 ID입니다. *Partition_number* 를 사용 하 여이 DMV를 sys 파티션에 조인할 수 있습니다.|  
 |**row_group_id**|**int**|이 행 그룹의 ID입니다. 이 번호는 파티션 내에서 고유합니다.|  
 |**dellta_store_hobt_id**|**bigint**|델타 행 그룹은 hobt_id, 행 그룹 유형이 델타가 아니면 NULL입니다. 델타 행 그룹이란 새 레코드를 수락하는 읽기/쓰기 행 그룹입니다. 델타 행 그룹은 **열림** 상태를 가집니다. 델타 행 그룹은 columnstore 형식으로 압축되지 않았고 여전히 rowstore 형식입니다.|  
 |**state**|**tinyint**|state_description과 연결된 ID 번호입니다.<br /><br /> 1 = OPEN<br /><br /> 2 = CLOSED<br /><br /> 3 = COMPRESSED|  
@@ -47,7 +47,7 @@ ms.locfileid: "92038303"
   
  행 그룹에서 삭제된 행 수가 총 행 수 대비 큰 비율로 증가하면 테이블의 효율성이 저하됩니다. columnstore 인덱스를 다시 작성하여 테이블 크기를 줄이면 테이블을 읽는 데 필요한 디스크 I/O가 줄어듭니다. Columnstore 인덱스를 다시 작성 하려면 **ALTER index** 문의 **rebuild** 옵션을 사용 합니다.  
   
- 업데이트 가능한 columnstore는 먼저 rowstore 형식으로 된 **OPEN** 행 그룹에 새 데이터를 삽입 하며,이를 델타 테이블이 라고도 합니다.  열린 행 그룹 가득 차면 상태가 **CLOSED**로 변경 됩니다. 폐쇄형 행 그룹은 튜플 이동 기에 의해 columnstore 형식으로 압축 되 고 상태는 **압축**됨으로 변경 됩니다.  Tuple mover는 정기적으로 켜지는 백그라운드 프로세스로, 닫힌 열 그룹 중 columnstore 행 그룹으로 압축할 수 있는 그룹이 있는지 확인합니다.  또한 Tuple mover는 모든 행이 삭제된 행 그룹에 대한 할당을 취소합니다. 할당 취소 된 행 그룹은 사용 **중지**됨으로 표시 됩니다. 튜플 이동 기를 즉시 실행 하려면 **ALTER INDEX** 문의 다시 **구성 옵션을 사용 합니다.**  
+ 업데이트 가능한 columnstore는 먼저 rowstore 형식으로 된 **OPEN** 행 그룹에 새 데이터를 삽입 하며,이를 델타 테이블이 라고도 합니다.  열린 행 그룹 가득 차면 상태가 **CLOSED** 로 변경 됩니다. 폐쇄형 행 그룹은 튜플 이동 기에 의해 columnstore 형식으로 압축 되 고 상태는 **압축** 됨으로 변경 됩니다.  Tuple mover는 정기적으로 켜지는 백그라운드 프로세스로, 닫힌 열 그룹 중 columnstore 행 그룹으로 압축할 수 있는 그룹이 있는지 확인합니다.  또한 Tuple mover는 모든 행이 삭제된 행 그룹에 대한 할당을 취소합니다. 할당 취소 된 행 그룹은 사용 **중지** 됨으로 표시 됩니다. 튜플 이동 기를 즉시 실행 하려면 **ALTER INDEX** 문의 다시 **구성 옵션을 사용 합니다.**  
   
  다 채워진 columnstore 행 그룹은 압축되며, 새 행을 수락하지 않습니다. 압축된 그룹에서 행을 삭제하면 삭제된 것으로 표시되고 행 자체는 그대로 유지됩니다. 압축된 그룹을 업데이트할 때는 압축된 그룹의 삭제 또는 열린 그룹에 대한 삽입을 이용합니다.  
   
@@ -76,6 +76,7 @@ JOIN sys.pdw_nodes_indexes AS NI
 JOIN sys.pdw_nodes_column_store_row_groups AS CSRowGroups  
     ON CSRowGroups.object_id = NI.object_id   
     AND CSRowGroups.pdw_node_id = NI.pdw_node_id  
+    AND CSRowGroups.distribution_id = NI.distribution_id
     AND CSRowGroups.index_id = NI.index_id      
 WHERE total_rows > 0
 --WHERE t.name = '<table_name>'   
