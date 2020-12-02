@@ -14,11 +14,11 @@ ms.assetid: 279cf6de-d06f-40e7-b8ca-569310449f36
 author: chugugrace
 ms.author: chugu
 ms.openlocfilehash: 046b40b0dd7502e57614691066d8c87bcfe5d9fa
-ms.sourcegitcommit: e700497f962e4c2274df16d9e651059b42ff1a10
+ms.sourcegitcommit: 192f6a99e19e66f0f817fdb1977f564b2aaa133b
 ms.translationtype: HT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 08/17/2020
-ms.locfileid: "88430555"
+ms.lasthandoff: 11/25/2020
+ms.locfileid: "96123128"
 ---
 # <a name="coding-a-custom-foreach-enumerator"></a>사용자 지정 Foreach 열거자 코딩
 
@@ -33,7 +33,7 @@ ms.locfileid: "88430555"
  <xref:Microsoft.SqlServer.Dts.Runtime.ForEachEnumerator.InitializeForEachEnumerator%2A> 메서드를 재정의하여 패키지에 정의된 연결 관리자에 대한 참조를 캐시하고 오류, 경고 및 정보 메시지를 발생시키는 데 사용할 수 있는 이벤트 인터페이스에 대한 참조를 캐시할 수 있습니다.  
   
 ## <a name="validating-the-enumerator"></a>열거자 유효성 검사  
- <xref:Microsoft.SqlServer.Dts.Runtime.ForEachEnumerator.Validate%2A> 메서드를 재정의하여 열거자가 올바르게 구성되어 있는지 확인할 수 있습니다. 이 메서드가 **Failure**를 반환하는 경우 열거자와 해당 열거자를 포함하는 패키지는 실행되지 않습니다. 이 메서드의 구현은 각 열거자에 고유하지만 열거자가 <xref:Microsoft.SqlServer.Dts.Runtime.Variable> 또는 <xref:Microsoft.SqlServer.Dts.Runtime.ConnectionManager> 개체에 의존하는 경우 코드를 추가하여 메서드에 제공된 컬렉션에 이러한 개체가 있는지 확인해야 합니다.  
+ <xref:Microsoft.SqlServer.Dts.Runtime.ForEachEnumerator.Validate%2A> 메서드를 재정의하여 열거자가 올바르게 구성되어 있는지 확인할 수 있습니다. 이 메서드가 **Failure** 를 반환하는 경우 열거자와 해당 열거자를 포함하는 패키지는 실행되지 않습니다. 이 메서드의 구현은 각 열거자에 고유하지만 열거자가 <xref:Microsoft.SqlServer.Dts.Runtime.Variable> 또는 <xref:Microsoft.SqlServer.Dts.Runtime.ConnectionManager> 개체에 의존하는 경우 코드를 추가하여 메서드에 제공된 컬렉션에 이러한 개체가 있는지 확인해야 합니다.  
   
  다음 코드 예에서는 열거자의 속성에 지정된 변수를 확인하는 <xref:Microsoft.SqlServer.Dts.Runtime.ForEachEnumerator.Validate%2A>의 구현을 보여 줍니다.  
   

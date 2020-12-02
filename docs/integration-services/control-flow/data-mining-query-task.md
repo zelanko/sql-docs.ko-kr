@@ -20,11 +20,11 @@ ms.assetid: f489348c-2008-4f66-8c2c-c07c3029439a
 author: chugugrace
 ms.author: chugu
 ms.openlocfilehash: 1af5f497be96f5c8b9808878aea9e5275c77ddf7
-ms.sourcegitcommit: c7f40918dc3ecdb0ed2ef5c237a3996cb4cd268d
+ms.sourcegitcommit: 192f6a99e19e66f0f817fdb1977f564b2aaa133b
 ms.translationtype: HT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 10/05/2020
-ms.locfileid: "91727605"
+ms.lasthandoff: 11/25/2020
+ms.locfileid: "96123545"
 ---
 # <a name="data-mining-query-task"></a>Data Mining Query Task
 
@@ -138,13 +138,13 @@ ms.locfileid: "91727605"
  목록에 매개 변수를 추가합니다.  
   
  **제거**  
- 매개 변수를 선택한 다음 **제거**를 클릭합니다.  
+ 매개 변수를 선택한 다음 **제거** 를 클릭합니다.  
   
 ### <a name="result-set-tab-options"></a>결과 집합 탭 옵션  
  **결과 이름**  
  필요에 따라 결과 집합 이름을 업데이트합니다. **변수 이름** 목록에서 변수를 선택하여 결과를 변수에 매핑합니다.  
   
- **추가**를 클릭하여 결과를 추가한 다음 결과에 사용할 고유 이름을 제공합니다.  
+ **추가** 를 클릭하여 결과를 추가한 다음 결과에 사용할 고유 이름을 제공합니다.  
   
  **변수 이름**  
  목록에서 결과 집합에 매핑할 변수를 선택합니다.  
@@ -156,7 +156,7 @@ ms.locfileid: "91727605"
  목록에 결과 집합을 추가합니다.  
   
  **제거**  
- 결과를 선택한 다음 **제거**를 클릭합니다.  
+ 결과를 선택한 다음 **제거** 를 클릭합니다.  
 ## <a name="data-mining-query-task-editor-output-tab"></a>데이터 마이닝 쿼리 태스크 편집기(출력 탭)
   **데이터 마이닝 쿼리 태스크 편집기** 대화 상자의 **출력** 탭을 사용하여 예측 쿼리의 대상을 지정할 수 있습니다.  
   

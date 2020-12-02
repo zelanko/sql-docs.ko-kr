@@ -19,11 +19,11 @@ ms.assetid: 7960133b-a3e1-48af-ba43-55ed78c38e71
 author: chugugrace
 ms.author: chugu
 ms.openlocfilehash: 8791836a066b658fb6775ce1cbf30f30c7d7d4a1
-ms.sourcegitcommit: cfa04a73b26312bf18d8f6296891679166e2754d
+ms.sourcegitcommit: 192f6a99e19e66f0f817fdb1977f564b2aaa133b
 ms.translationtype: HT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 10/19/2020
-ms.locfileid: "92192653"
+ms.lasthandoff: 11/25/2020
+ms.locfileid: "96123393"
 ---
 # <a name="data-mining-query-transformation"></a>데이터 마이닝 쿼리 변환
 

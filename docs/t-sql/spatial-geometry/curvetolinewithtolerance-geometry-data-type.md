@@ -16,11 +16,11 @@ ms.assetid: 96871075-1998-4cd9-86b1-3fc55577aee4
 author: MladjoA
 ms.author: mlandzic
 ms.openlocfilehash: 4a717b5b83be8d381a91ff1ab1055d24ae8c59ed
-ms.sourcegitcommit: e700497f962e4c2274df16d9e651059b42ff1a10
+ms.sourcegitcommit: 192f6a99e19e66f0f817fdb1977f564b2aaa133b
 ms.translationtype: HT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 08/17/2020
-ms.locfileid: "88488223"
+ms.lasthandoff: 11/25/2020
+ms.locfileid: "96115966"
 ---
 # <a name="curvetolinewithtolerance-geometry-data-type"></a>CurveToLineWithTolerance(geometry 데이터 형식)
 [!INCLUDE [SQL Server Azure SQL Database ](../../includes/applies-to-version/sql-asdb.md)]
@@ -52,7 +52,7 @@ ms.locfileid: "88488223"
  허용 오차를 <= 0으로 설정하면 `ArgumentOutOfRange` 예외가 발생합니다.  
   
 ## <a name="remarks"></a>설명  
- 이 메서드는 결과 **LineString**의 허용 오차 크기를 지정할 수 있습니다.  
+ 이 메서드는 결과 **LineString** 의 허용 오차 크기를 지정할 수 있습니다.  
   
  다음 표에서는 여러 유형에 대해 `CurveToLineWithTolerance()`에서 반환하는 인스턴스 유형을 보여 줍니다.  
   
@@ -65,7 +65,7 @@ ms.locfileid: "88488223"
 |**MultiLineString**|**LineString** 또는 **MultiLineString** 인스턴스|  
 |**CurvePolygon** 및 **다각형**|**다각형** 인스턴스|  
 |**MultiPolygon**|**다각형** 또는 **MultiPolygon** 인스턴스|  
-|원호 세그먼트가 포함되지 않은 단일 인스턴스가 있는 **GeometryCollection**|**GeometryCollection**에 포함된 인스턴스가 반환된 인스턴스의 유형을 결정합니다.|  
+|원호 세그먼트가 포함되지 않은 단일 인스턴스가 있는 **GeometryCollection**|**GeometryCollection** 에 포함된 인스턴스가 반환된 인스턴스의 유형을 결정합니다.|  
 |단일 1차원 원호 세그먼트 인스턴스가 있는 **GeometryCollection**(**CircularString**, **CompoundCurve**)|**LineString** 인스턴스|  
 |단일 2차원 원호 세그먼트 인스턴스가 있는 **GeometryCollection**(**CurvePolygon**)|**다각형** 인스턴스|  
 |여러 1차원 인스턴스가 있는 **GeometryCollection**|**MultiLineString** 인스턴스|  
@@ -102,7 +102,7 @@ ms.locfileid: "88488223"
  ```  
   
 ### <a name="d-setting-relative-to-true-for-an-invoking-curvepolygon-instance"></a>D. 호출하는 CurvePolygon 인스턴스에 대해 극대값을 true로 설정  
- 다음 예에서는 *relative*를 true로 설정하여 `CurvePolygon` 인스턴스를 사용해 `CurveToLineWithTolerance()`를 호출합니다.  
+ 다음 예에서는 *relative* 를 true로 설정하여 `CurvePolygon` 인스턴스를 사용해 `CurveToLineWithTolerance()`를 호출합니다.  
   
 ```
  DECLARE @g geometry = 'CURVEPOLYGON(COMPOUNDCURVE(CIRCULARSTRING(0 4, 4 0, 8 4), (8 4, 0 4)))'; 

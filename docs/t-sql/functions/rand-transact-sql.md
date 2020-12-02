@@ -22,10 +22,10 @@ author: julieMSFT
 ms.author: jrasnick
 monikerRange: =azuresqldb-current||=azure-sqldw-latest||>=sql-server-2016||=sqlallproducts-allversions||>=sql-server-linux-2017||=azuresqldb-mi-current
 ms.openlocfilehash: 569bc6057e719db436ddbefd04157e8b6a73a252
-ms.sourcegitcommit: cfa04a73b26312bf18d8f6296891679166e2754d
+ms.sourcegitcommit: c5078791a07330a87a92abb19b791e950672e198
 ms.translationtype: HT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 10/19/2020
+ms.lasthandoff: 11/26/2020
 ms.locfileid: "92190113"
 ---
 # <a name="rand-transact-sql"></a>RAND(Transact-SQL)
@@ -48,7 +48,7 @@ RAND ( [ seed ] )
 
 ## <a name="arguments"></a>인수
  *seed*  
- 초기값을 제공하는 정수 [식](../../t-sql/language-elements/expressions-transact-sql.md)(**tinyint**, **smallint** 또는 **int**)입니다. *초기값*을 지정하지 않으면 [!INCLUDE[ssDEnoversion](../../includes/ssdenoversion-md.md)]은 임의로 초기값을 할당합니다. 지정된 초기값에 대해 반환된 결과는 항상 동일합니다.  
+ 초기값을 제공하는 정수 [식](../../t-sql/language-elements/expressions-transact-sql.md)(**tinyint**, **smallint** 또는 **int**)입니다. *초기값* 을 지정하지 않으면 [!INCLUDE[ssDEnoversion](../../includes/ssdenoversion-md.md)]은 임의로 초기값을 할당합니다. 지정된 초기값에 대해 반환된 결과는 항상 동일합니다.  
   
 ## <a name="return-types"></a>반환 형식  
  **float**  

@@ -22,11 +22,11 @@ ms.assetid: 442c54bf-a0a6-4108-ad20-db910ffa6e3c
 author: markingmyname
 ms.author: maghan
 ms.openlocfilehash: 0f798856f7074aef0318f98d5d9c7415fe3e2846
-ms.sourcegitcommit: ac9feb0b10847b369b77f3c03f8200c86ee4f4e0
+ms.sourcegitcommit: 192f6a99e19e66f0f817fdb1977f564b2aaa133b
 ms.translationtype: HT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 09/16/2020
-ms.locfileid: "90688241"
+ms.lasthandoff: 11/25/2020
+ms.locfileid: "96124244"
 ---
 # <a name="alter-resource-governor-transact-sql"></a>ALTER RESOURCE GOVERNOR(Transact-SQL)
 [!INCLUDE [SQL Server](../../includes/applies-to-version/sqlserver.md)]
@@ -92,7 +92,7 @@ ALTER RESOURCE GOVERNOR
 >  구성 변경 내용을 적용하려면 ALTER RESOURCE GOVERNOR RECONFIGURE를 실행해야 합니다.  
   
  CLASSIFIER_FUNCTION = { _schema_name_ **.** _function_name_ | NULL }  
- *schema_name.function_name*으로 지정한 분류 함수를 등록합니다. 이 함수는 모든 새 세션을 분류하고 세션 요청 및 쿼리를 작업 그룹에 할당합니다. NULL이 사용되면 새 세션이 기본 작업 그룹에 자동으로 할당됩니다.  
+ *schema_name.function_name* 으로 지정한 분류 함수를 등록합니다. 이 함수는 모든 새 세션을 분류하고 세션 요청 및 쿼리를 작업 그룹에 할당합니다. NULL이 사용되면 새 세션이 기본 작업 그룹에 자동으로 할당됩니다.  
   
  RESET STATISTICS  
  모든 작업 그룹 및 리소스 풀에 대한 통계를 다시 설정합니다. 자세한 내용은 [sys.dm_resource_governor_workload_groups&#40;Transact-SQL&#41;](../../relational-databases/system-dynamic-management-views/sys-dm-resource-governor-workload-groups-transact-sql.md) 및 [sys.dm_resource_governor_resource_pools&#40;Transact-SQL&#41;](../../relational-databases/system-dynamic-management-views/sys-dm-resource-governor-resource-pools-transact-sql.md)를 참조하세요.  

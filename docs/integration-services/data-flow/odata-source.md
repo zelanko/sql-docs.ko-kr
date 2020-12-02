@@ -17,10 +17,10 @@ ms.assetid: cc9003c9-638e-432b-867e-e949d50cec90
 author: chugugrace
 ms.author: chugu
 ms.openlocfilehash: 8f872916b7b93a1aab3447bad6579dd672c915e1
-ms.sourcegitcommit: cfa04a73b26312bf18d8f6296891679166e2754d
+ms.sourcegitcommit: c5078791a07330a87a92abb19b791e950672e198
 ms.translationtype: HT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 10/19/2020
+ms.lasthandoff: 11/26/2020
 ms.locfileid: "92194803"
 ---
 # <a name="odata-source"></a>OData 원본
@@ -83,7 +83,7 @@ OData 원본은 단순 데이터 형식 int, byte[], bool, byte, DateTime, DateT
   
 ### <a name="static-options"></a>정적 옵션  
  **OData 연결 관리자**  
- 목록에서 기존 연결 관리자를 선택하거나 **새로 만들기**를 클릭하여 새 연결을 만듭니다.  
+ 목록에서 기존 연결 관리자를 선택하거나 **새로 만들기** 를 클릭하여 새 연결을 만듭니다.  
   
  연결 관리자를 선택하거나 만든 후 대화 상자는 연결 관리자가 사용하는 OData 프로토콜 버전을 표시합니다.  
   

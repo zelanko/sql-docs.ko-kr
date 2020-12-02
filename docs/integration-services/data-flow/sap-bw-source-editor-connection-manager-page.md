@@ -14,10 +14,10 @@ ms.assetid: 2a6dc531-85ca-43c5-a65f-3ad3f7d537c4
 author: chugugrace
 ms.author: chugu
 ms.openlocfilehash: b745e73cb7f25ff8936ddc385979c69ad675f8ea
-ms.sourcegitcommit: cfa04a73b26312bf18d8f6296891679166e2754d
+ms.sourcegitcommit: c5078791a07330a87a92abb19b791e950672e198
 ms.translationtype: HT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 10/19/2020
+ms.lasthandoff: 11/26/2020
 ms.locfileid: "92194758"
 ---
 # <a name="sap-bw-source-editor-connection-manager-page"></a>SAP BW 원본 편집기(연결 관리자 페이지)
@@ -41,7 +41,7 @@ ms.locfileid: "92194758"
   
 2.  **데이터 흐름** 탭에서 SAP BW 원본을 두 번 클릭합니다.  
   
-3.  **SAP BW 원본 편집기**에서 **연결 관리자** 를 클릭하여 편집기의 **연결 관리자** 페이지를 엽니다.  
+3.  **SAP BW 원본 편집기** 에서 **연결 관리자** 를 클릭하여 편집기의 **연결 관리자** 페이지를 엽니다.  
   
 ## <a name="static-options"></a>정적 옵션  
   
@@ -49,7 +49,7 @@ ms.locfileid: "92194758"
 >  원본을 구성하는 데 필요한 값 중 모르는 것이 있으면 SAP 관리자에게 문의하십시오.  
   
  **SAP BW 연결 관리자**  
- 목록에서 기존 연결 관리자를 선택하거나 **새로 만들기**를 클릭하여 새 연결을 만듭니다.  
+ 목록에서 기존 연결 관리자를 선택하거나 **새로 만들기** 를 클릭하여 새 연결을 만듭니다.  
   
  **새로 만들기**  
  **SAP BW 연결 관리자** 대화 상자를 사용하여 새 연결 관리자를 만듭니다.  
@@ -74,7 +74,7 @@ ms.locfileid: "92194758"
 > [!IMPORTANT]  
 >  SAP BW 원본 편집기의 **연결 관리자** 페이지에서 사용할 수 있는 **미리 보기** 옵션은 데이터를 실제로 추출합니다. 이전 추출 이후에 변경된 데이터만 추출하도록 SAP Netweaver BW를 구성한 경우 **미리 보기** 를 선택하면 미리 본 데이터가 다음 추출에서 제외됩니다.  
   
- **미리 보기**를 클릭하면 **요청 로그** 대화 상자도 열립니다. 이 대화 상자를 사용하여 샘플 데이터에 대해 SAP Netweaver BW 시스템에 요청하는 동안 기록된 이벤트를 확인할 수 있습니다. 자세한 내용은 [Request Log](../../integration-services/data-flow/request-log.md)을(를) 참조하세요.  
+ **미리 보기** 를 클릭하면 **요청 로그** 대화 상자도 열립니다. 이 대화 상자를 사용하여 샘플 데이터에 대해 SAP Netweaver BW 시스템에 요청하는 동안 기록된 이벤트를 확인할 수 있습니다. 자세한 내용은 [Request Log](../../integration-services/data-flow/request-log.md)을(를) 참조하세요.  
   
 ## <a name="execution-mode-dynamic-options"></a>실행 모드 동적 옵션  
   
@@ -90,7 +90,7 @@ ms.locfileid: "92194758"
  게이트웨이 호스트의 서버 이름 또는 IP 주소를 입력합니다. 일반적으로 이름 또는 IP 주소는 SAP 애플리케이션 서버와 동일합니다.  
   
  **게이트웨이 서비스**  
- 게이트웨이 서비스 이름을 **sapgwNN**형식으로 입력합니다. 여기서 **NN** 은 시스템 번호입니다.  
+ 게이트웨이 서비스 이름을 **sapgwNN** 형식으로 입력합니다. 여기서 **NN** 은 시스템 번호입니다.  
   
  **프로그램 ID**  
  RFC 대상과 연결된 프로그램 ID를 입력합니다.  
@@ -116,7 +116,7 @@ ms.locfileid: "92194758"
  게이트웨이 호스트의 서버 이름 또는 IP 주소를 입력합니다. 일반적으로 이름 또는 IP 주소는 SAP 애플리케이션 서버와 동일합니다.  
   
  **게이트웨이 서비스**  
- 게이트웨이 서비스 이름을 **sapgwNN**형식으로 입력합니다. 여기서 **NN** 은 시스템 번호입니다.  
+ 게이트웨이 서비스 이름을 **sapgwNN** 형식으로 입력합니다. 여기서 **NN** 은 시스템 번호입니다.  
   
  **프로그램 ID**  
  RFC 대상과 연결된 프로그램 ID를 입력합니다.  

@@ -23,11 +23,11 @@ ms.assetid: 50a55014-e2c3-4ecd-84e1-3e877c55a260
 author: chugugrace
 ms.author: chugu
 ms.openlocfilehash: 9311883463a4c7ca1b065ab31dcdd84c1cac0ce6
-ms.sourcegitcommit: e700497f962e4c2274df16d9e651059b42ff1a10
+ms.sourcegitcommit: 192f6a99e19e66f0f817fdb1977f564b2aaa133b
 ms.translationtype: HT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 08/17/2020
-ms.locfileid: "88430425"
+ms.lasthandoff: 11/25/2020
+ms.locfileid: "96122978"
 ---
 # <a name="finding-installed-printers-with-the-script-task"></a>스크립트 태스크를 사용하여 설치된 프린터 찾기
 
@@ -46,7 +46,7 @@ ms.locfileid: "88430425"
   
 1.  **Object** 유형의 `PrinterList`라는 변수를 만듭니다.  
   
-2.  **스크립트 태스크 편집기**의 **스크립트** 페이지에서 ReadWriteVariables 속성에 이 변수를 추가합니다.  
+2.  **스크립트 태스크 편집기** 의 **스크립트** 페이지에서 ReadWriteVariables 속성에 이 변수를 추가합니다.  
   
 3.  스크립트 프로젝트에서 **System.Drawing** 네임스페이스에 대한 참조를 추가합니다.  
   

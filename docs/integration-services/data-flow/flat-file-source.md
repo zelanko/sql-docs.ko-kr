@@ -22,11 +22,11 @@ ms.assetid: 4a64f7f3-f25d-4db0-93b3-a29496030e58
 author: chugugrace
 ms.author: chugu
 ms.openlocfilehash: 1a0646c394be5d00bea32f69b137e32c03d1663e
-ms.sourcegitcommit: cfa04a73b26312bf18d8f6296891679166e2754d
+ms.sourcegitcommit: 192f6a99e19e66f0f817fdb1977f564b2aaa133b
 ms.translationtype: HT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 10/19/2020
-ms.locfileid: "92197101"
+ms.lasthandoff: 11/25/2020
+ms.locfileid: "96123466"
 ---
 # <a name="flat-file-source"></a>플랫 파일 원본
 
@@ -52,7 +52,7 @@ ms.locfileid: "92197101"
   
  플랫 파일 원본 출력의 출력 열에는 FastParse 속성이 포함됩니다. FastParse는 [!INCLUDE[ssISnoversion](../../includes/ssisnoversion-md.md)] 에서 제공하는 더 빠르지만 로캘을 구분하지 않는 빠른 구문 분석 루틴을 사용할지 또는 로캘을 구분하는 표준 구문 분석 루틴을 사용할지를 나타냅니다. 자세한 내용은 [Fast Parse](./parsing-data.md) 및 [Standard Parse](./parsing-data.md)를 참조하세요.  
   
- 또한 출력 열에는 UseBinaryFormat 속성이 포함되어 있습니다. 이 속성을 사용하여 압축된 10진수 형식이 있는 데이터와 같은 이진 데이터에 대한 지원을 파일에서 구현할 수 있습니다. 기본적으로 UseBinaryFormat은 **false**로 설정됩니다. 이진 형식을 사용하려면 UseBinaryFormat을 **true** 로 설정하고 출력 열의 데이터 형식을 **DT_BYTES**로 설정합니다. 이렇게 설정할 경우 플랫 파일 원본은 데이터 변환을 건너뛰고 데이터를 있는 그대로 출력 열에 전달합니다. 그런 다음 파생 열 또는 데이터 변환과 같은 변환을 사용하여 **DT_BYTES** 데이터를 다른 데이터 형식으로 캐스팅하거나 스크립트 변환에서 사용자 지정 스크립트를 작성하여 데이터를 해석할 수 있습니다. 또한 사용자 지정 데이터 흐름 구성 요소를 작성하여 데이터를 해석할 수 있습니다. **DT_BYTES**를 캐스팅할 수 있는 데이터 형식에 대한 자세한 내용은 [캐스트&#40;SSIS 식&#41;](../../integration-services/expressions/cast-ssis-expression.md)를 참조하세요.  
+ 또한 출력 열에는 UseBinaryFormat 속성이 포함되어 있습니다. 이 속성을 사용하여 압축된 10진수 형식이 있는 데이터와 같은 이진 데이터에 대한 지원을 파일에서 구현할 수 있습니다. 기본적으로 UseBinaryFormat은 **false** 로 설정됩니다. 이진 형식을 사용하려면 UseBinaryFormat을 **true** 로 설정하고 출력 열의 데이터 형식을 **DT_BYTES** 로 설정합니다. 이렇게 설정할 경우 플랫 파일 원본은 데이터 변환을 건너뛰고 데이터를 있는 그대로 출력 열에 전달합니다. 그런 다음 파생 열 또는 데이터 변환과 같은 변환을 사용하여 **DT_BYTES** 데이터를 다른 데이터 형식으로 캐스팅하거나 스크립트 변환에서 사용자 지정 스크립트를 작성하여 데이터를 해석할 수 있습니다. 또한 사용자 지정 데이터 흐름 구성 요소를 작성하여 데이터를 해석할 수 있습니다. **DT_BYTES** 를 캐스팅할 수 있는 데이터 형식에 대한 자세한 내용은 [캐스트&#40;SSIS 식&#41;](../../integration-services/expressions/cast-ssis-expression.md)를 참조하세요.  
   
  이 원본은 플랫 파일 연결 관리자를 사용하여 텍스트 파일에 액세스합니다. 플랫 파일 연결 관리자의 속성을 설정하여 파일과 해당 파일의 각 열에 대한 정보를 제공하고 플랫 파일에서 텍스트 파일의 데이터를 처리하는 방법을 지정할 수 있습니다. 예를 들어 파일의 열과 행을 구분하는 문자와 각 열의 데이터 형식 및 길이를 지정할 수 있습니다. 자세한 내용은 [Flat File Connection Manager](../../integration-services/connection-manager/flat-file-connection-manager.md)을 참조하세요.  
   
@@ -81,13 +81,13 @@ ms.locfileid: "92197101"
   
 ### <a name="options"></a>옵션  
  **Flat file connection manager**  
- 목록에서 기존 연결 관리자를 선택하거나 **새로 만들기**를 클릭하여 새 연결 관리자를 만듭니다.  
+ 목록에서 기존 연결 관리자를 선택하거나 **새로 만들기** 를 클릭하여 새 연결 관리자를 만듭니다.  
   
  **새로 만들기**  
  **플랫 파일 연결 관리자 편집기** 대화 상자를 사용하여 새 연결 관리자를 만듭니다.  
   
  **원본의 Null 값을 데이터 흐름의 Null 값으로 유지**  
- 데이터를 추출할 때 Null 값을 유지할지 여부를 지정합니다. 이 속성의 기본값은 **false**입니다. 이 값이 f**alse**이면 플랫 파일 원본이 원본 데이터의 Null 값을 각 열에 적합한 기본값으로 바꿉니다. 예를 들어 문자열 열의 경우 빈 문자열로 바꾸고 숫자 열의 경우 0으로 바꿉니다.  
+ 데이터를 추출할 때 Null 값을 유지할지 여부를 지정합니다. 이 속성의 기본값은 **false** 입니다. 이 값이 f **alse** 이면 플랫 파일 원본이 원본 데이터의 Null 값을 각 열에 적합한 기본값으로 바꿉니다. 예를 들어 문자열 열의 경우 빈 문자열로 바꾸고 숫자 열의 경우 0으로 바꿉니다.  
   
  **미리 보기**  
  **데이터 보기** 대화 상자를 사용하여 결과를 미리 봅니다. 미리 보기에는 최대 200개의 행이 표시될 수 있습니다.  
@@ -96,7 +96,7 @@ ms.locfileid: "92197101"
   **플랫 파일 원본 편집기** 대화 상자의 **열** 노드를 사용하여 출력 열을 외부(원본) 열에 매핑할 수 있습니다.  
   
 > [!NOTE]  
->  플랫 파일 원본의 **FileNameColumnName** 속성과 해당 출력 열의 **FastParse** 속성은 **플랫 파일 원본 편집기**에서 사용할 수 없지만 **고급 편집기**를 사용하여 설정할 수 있습니다. 이러한 속성에 대한 자세한 내용은 [Flat File Custom Properties](../../integration-services/data-flow/flat-file-custom-properties.md)의 플랫 파일 원본 섹션을 참조하십시오.  
+>  플랫 파일 원본의 **FileNameColumnName** 속성과 해당 출력 열의 **FastParse** 속성은 **플랫 파일 원본 편집기** 에서 사용할 수 없지만 **고급 편집기** 를 사용하여 설정할 수 있습니다. 이러한 속성에 대한 자세한 내용은 [Flat File Custom Properties](../../integration-services/data-flow/flat-file-custom-properties.md)의 플랫 파일 원본 섹션을 참조하십시오.  
   
 ### <a name="options"></a>옵션  
  **사용 가능한 외부 열**  
@@ -116,7 +116,7 @@ ms.locfileid: "92197101"
  데이터 원본의 이름을 표시합니다.  
   
  **열**  
- **플랫 파일 원본 편집기** 대화 상자의 **연결 관리자**페이지에서 선택한 외부(원본) 열을 표시합니다.  
+ **플랫 파일 원본 편집기** 대화 상자의 **연결 관리자** 페이지에서 선택한 외부(원본) 열을 표시합니다.  
   
  **오류**  
  오류가 발생할 경우 수행할 동작을 지정합니다. 오류 무시, 행 리디렉션 또는 구성 요소 실패를 지정할 수 있습니다.  

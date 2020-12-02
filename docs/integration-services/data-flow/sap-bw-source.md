@@ -12,10 +12,10 @@ ms.assetid: 749afb64-3567-4dc9-8431-783d650c25db
 author: chugugrace
 ms.author: chugu
 ms.openlocfilehash: 8d62e20117bf23511a1d261142a3618dcbd5095a
-ms.sourcegitcommit: cfa04a73b26312bf18d8f6296891679166e2754d
+ms.sourcegitcommit: c5078791a07330a87a92abb19b791e950672e198
 ms.translationtype: HT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 10/19/2020
+ms.lasthandoff: 11/26/2020
 ms.locfileid: "92195335"
 ---
 # <a name="sap-bw-source"></a>SAP BW 원본
@@ -49,9 +49,9 @@ ms.locfileid: "92195335"
   
 1.  SAP GUI를 통해 SAP Netweaver BW에 로그온하고 트랜잭션 코드 SM59를 입력한 다음 RFC 대상을 만듭니다.  
   
-    1.  **Connection Type**에서 **TCP/IP**를 선택합니다.  
+    1.  **Connection Type** 에서 **TCP/IP** 를 선택합니다.  
   
-    2.  **Activation Type**에서 **Registered Server Program**을 선택합니다.  
+    2.  **Activation Type** 에서 **Registered Server Program** 을 선택합니다.  
   
     3.  **Communication Type with Target System**(대상 시스템과 통신 유형)에서 **Non-Unicode (Inactive MDMP Settings)**(비유니코드(비활성 MDMP 설정))를 선택합니다.  
   
@@ -59,11 +59,11 @@ ms.locfileid: "92195335"
   
 2.  오픈 허브 대상을 만듭니다.  
   
-    1.  Administrator Workbench(트랜잭션 코드 RSA1)로 이동하고 왼쪽 창에서 **Open Hub Destination**을 선택합니다.  
+    1.  Administrator Workbench(트랜잭션 코드 RSA1)로 이동하고 왼쪽 창에서 **Open Hub Destination** 을 선택합니다.  
   
     2.  가운데 창에서 InfoArea를 마우스 오른쪽 단추로 클릭한 다음 **"Create Open Hub Destination"** 을 선택합니다.  
   
-    3.  **Destination Type**에서 **"Third Party Tool"** 을 선택한 다음 이전에 만든 RFC 대상을 입력합니다.  
+    3.  **Destination Type** 에서 **"Third Party Tool"** 을 선택한 다음 이전에 만든 RFC 대상을 입력합니다.  
   
     4.  새 오픈 허브 대상을 저장하고 활성화합니다.  
   
@@ -73,13 +73,13 @@ ms.locfileid: "92195335"
   
     2.  DTP를 구성하고 저장하고 활성화합니다.  
   
-    3.  메뉴에서 **Goto**를 클릭한 다음 **Settings for Batch Manager**를 클릭합니다.  
+    3.  메뉴에서 **Goto** 를 클릭한 다음 **Settings for Batch Manager** 를 클릭합니다.  
   
     4.  순차 처리의 경우 **Number of processes** 를 1로 업데이트합니다.  
   
 4.  프로세스 체인을 만듭니다.  
   
-    1.  프로세스 체인을 구성할 때 **Start Using Metadata Chain or API** 를 **Start Process** 의 **Scheduling Options**로 선택한 다음 이전에 만든 DTP를 후속 노드로 추가합니다.  
+    1.  프로세스 체인을 구성할 때 **Start Using Metadata Chain or API** 를 **Start Process** 의 **Scheduling Options** 로 선택한 다음 이전에 만든 DTP를 후속 노드로 추가합니다.  
   
     2.  프로세스 체인을 저장하고 활성화합니다.  
   
@@ -111,7 +111,7 @@ ms.locfileid: "92195335"
   
     -   **E - 추출만** 옵션의 경우 요청 ID를 제공합니다.  
   
--   문자열 변환의 규칙을 지정합니다. 예를 들어 SAP Netweaver BW 시스템이 유니코드인지 여부에 따라 모든 문자열을 변환하거나 모든 문자열을 **varchar** 또는 **nvarchar**로 변환합니다.  
+-   문자열 변환의 규칙을 지정합니다. 예를 들어 SAP Netweaver BW 시스템이 유니코드인지 여부에 따라 모든 문자열을 변환하거나 모든 문자열을 **varchar** 또는 **nvarchar** 로 변환합니다.  
   
 -   선택한 옵션을 사용하여 추출할 데이터를 미리 봅니다.  
   

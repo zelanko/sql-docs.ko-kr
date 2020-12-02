@@ -14,11 +14,11 @@ f1_keywords:
 author: chugugrace
 ms.author: chugu
 ms.openlocfilehash: 230ada5b116e5789b008a1562ba5e2ba9325a9e0
-ms.sourcegitcommit: cfa04a73b26312bf18d8f6296891679166e2754d
+ms.sourcegitcommit: 192f6a99e19e66f0f817fdb1977f564b2aaa133b
 ms.translationtype: HT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 10/19/2020
-ms.locfileid: "92197087"
+ms.lasthandoff: 11/25/2020
+ms.locfileid: "96123460"
 ---
 # <a name="flexible-file-source"></a>유연한 파일 원본
 
@@ -30,36 +30,36 @@ ms.locfileid: "92197087"
 - [Azure Blob Storage](https://azure.microsoft.com/services/storage/blobs/)
 - [Azure Data Lake Storage Gen2](/azure/storage/blobs/data-lake-storage-introduction)
   
-Flexible File Source용 편집기를 표시하려면 데이터 흐름 디자이너에서 **Flexible File Source**를 끌어서 놓고 두 번 클릭하여 편집기를 엽니다.
+Flexible File Source용 편집기를 표시하려면 데이터 흐름 디자이너에서 **Flexible File Source** 를 끌어서 놓고 두 번 클릭하여 편집기를 엽니다.
   
-**Flexible File Source**는 [Azure용 SSIS(SQL Server Integration Services) 기능 팩](../../integration-services/azure-feature-pack-for-integration-services-ssis.md)의 구성 요소입니다.  
+**Flexible File Source** 는 [Azure용 SSIS(SQL Server Integration Services) 기능 팩](../../integration-services/azure-feature-pack-for-integration-services-ssis.md)의 구성 요소입니다.  
   
-**유연한 파일 원본 편집기**에서 다음 속성을 사용할 수 있습니다.
+**유연한 파일 원본 편집기** 에서 다음 속성을 사용할 수 있습니다.
 
 - **파일 연결 관리자 유형:** 원본 연결 관리자 유형을 지정합니다. 그런 다음, 지정된 형식의 기존 항목을 선택하거나 새로 만듭니다.
 - **폴더 경로:** 원본 폴더 경로를 지정합니다.
 - **파일 이름:** 원본 파일 이름을 지정합니다.
-- **파일 형식:** 원본 파일 형식을 지정합니다. 지원 되는 형식은 **텍스트**, **Avro**, **ORC**, **Parquet**입니다. ORC/Parquet에는 Java가 필요합니다. 자세한 내용은 [여기](../../integration-services/azure-feature-pack-for-integration-services-ssis.md#dependency-on-java)를 참조하세요.
+- **파일 형식:** 원본 파일 형식을 지정합니다. 지원 되는 형식은 **텍스트**, **Avro**, **ORC**, **Parquet** 입니다. ORC/Parquet에는 Java가 필요합니다. 자세한 내용은 [여기](../../integration-services/azure-feature-pack-for-integration-services-ssis.md#dependency-on-java)를 참조하세요.
 - **열 구분 기호 문자:** 열 구분 기호로 사용할 문자를 지정합니다(다중 문자 구분 기호 지원 안 함).
 - **첫 행은 열 이름으로:** 첫 번째 행을 열 이름으로 간주할 것인지 여부를 지정합니다.
 - **파일 압축 풀기:** 원본 파일의 압축을 풀지 여부를 지정합니다.
-- **압축 유형:** 원본 파일 압축 형식을 지정합니다. 지원되는 형식은 **GZIP**, **DEFLATE**, **BZIP2**입니다.
+- **압축 유형:** 원본 파일 압축 형식을 지정합니다. 지원되는 형식은 **GZIP**, **DEFLATE**, **BZIP2** 입니다.
   
-**고급 편집기**에서 다음 속성을 사용할 수 있습니다.
+**고급 편집기** 에서 다음 속성을 사용할 수 있습니다.
 
-- **rowDelimiter:** 파일의 행을 구분하는 데 사용되는 문자입니다. 하나의 문자만 허용됩니다. **기본**값은 \r\n입니다.
+- **rowDelimiter:** 파일의 행을 구분하는 데 사용되는 문자입니다. 하나의 문자만 허용됩니다. **기본** 값은 \r\n입니다.
 - **escapeChar:** 입력 파일의 내용에서 열 구분 기호를 이스케이프하는 데 사용되는 특수 문자입니다. 테이블에 escapeChar와 quoteChar를 둘 다 지정할 수 없습니다. 하나의 문자만 허용됩니다. 기본값은 없습니다.
 - **quoteChar:** 문자열 값을 인용하는 데 사용되는 문자입니다. 인용 문자 안의 열과 행 구분 기호는 문자열 값의 일부로 처리됩니다. 이 속성은 입력 및 출력 데이터 세트 모두에 적용할 수 있습니다. 테이블에 escapeChar와 quoteChar를 둘 다 지정할 수 없습니다. 하나의 문자만 허용됩니다. 기본값은 없습니다.
-- **nullValue:** null 값을 나타내는 데 사용되는 하나 이상의 문자입니다. **기본**값은 \N입니다.
+- **nullValue:** null 값을 나타내는 데 사용되는 하나 이상의 문자입니다. **기본** 값은 \N입니다.
 - **encodingName:** 인코딩 이름을 지정합니다. [Encoding.EncodingName](/dotnet/api/system.text.encoding?view=netframework-4.8) 속성을 참조하세요.
 - **skipLineCount:**  입력 파일에서 데이터를 읽을 때 건너뛸 비어 있지 않은 행의 수를 나타냅니다. skipLineCount와 firstRowAsHeader가 모두 지정되면 먼저 줄을 건너뛴 다음, 입력 파일에서 헤더 정보를 읽습니다.
-- **treatEmptyAsNull:** 입력 파일에서 데이터를 읽을 때 null 또는 빈 문자열을 null 값으로 처리할지 여부를 지정합니다. **기본**값은 True입니다.
+- **treatEmptyAsNull:** 입력 파일에서 데이터를 읽을 때 null 또는 빈 문자열을 null 값으로 처리할지 여부를 지정합니다. **기본** 값은 True입니다.
 
 연결 정보를 지정한 후 **열** 페이지로 전환하여 SSIS 데이터 흐름의 원본 열을 대상 열에 매핑합니다.
 
 **서비스 사용자 권한 구성에 대한 참고 사항**
 
-**테스트 연결**이 이뤄지려면(Blob Storage 또는 Data Lake Storage Gen2) 서비스 사용자에게 스토리지 계정에 대한 **Storage Blob 데이터 읽기 권한자** 역할을 하나 이상 할당해야 합니다.
+**테스트 연결** 이 이뤄지려면(Blob Storage 또는 Data Lake Storage Gen2) 서비스 사용자에게 스토리지 계정에 대한 **Storage Blob 데이터 읽기 권한자** 역할을 하나 이상 할당해야 합니다.
 이 작업은 [RBAC](/azure/storage/common/storage-auth-aad-rbac-portal#assign-rbac-roles-using-the-azure-portal)를 사용하여 수행됩니다.
 
 Blob Storage의 경우 최소한 **Storage Blob 데이터 읽기 권한자** 역할을 할당하여 읽기 권한을 부여합니다.

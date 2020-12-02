@@ -13,11 +13,11 @@ author: Lingxi-Li
 ms.author: lingxl
 ms.reviewer: maghan
 ms.openlocfilehash: 27ee71393bfbad6c824de25bd95c9ca465cf2a51
-ms.sourcegitcommit: e700497f962e4c2274df16d9e651059b42ff1a10
+ms.sourcegitcommit: 192f6a99e19e66f0f817fdb1977f564b2aaa133b
 ms.translationtype: HT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 08/17/2020
-ms.locfileid: "88496083"
+ms.lasthandoff: 11/25/2020
+ms.locfileid: "96123650"
 ---
 # <a name="azure-data-lake-store-file-system-task"></a>Azure Data Lake Store 파일 시스템 태스크
 
@@ -31,7 +31,7 @@ Azure Data Lake Store 파일 시스템 태스크는 [Azure용 SSIS(SQL Server In
 
 ## <a name="configure-the-azure-data-lake-store-file-system-task"></a>Azure Data Lake Store 파일 시스템 태스크 구성
 
-패키지에 Azure Data Lake Store 파일 시스템 태스크를 추가하려면 SSIS 도구 상자에서 디자이너 캔버스로 끕니다. 그런 다음 태스크를 두 번 클릭하거나 태스크를 마우스 오른쪽 단추로 클릭하고 **편집**을 선택하여 **Azure Data Lake Store 파일 시스템 태스크 편집기** 대화 상자를 엽니다.
+패키지에 Azure Data Lake Store 파일 시스템 태스크를 추가하려면 SSIS 도구 상자에서 디자이너 캔버스로 끕니다. 그런 다음 태스크를 두 번 클릭하거나 태스크를 마우스 오른쪽 단추로 클릭하고 **편집** 을 선택하여 **Azure Data Lake Store 파일 시스템 태스크 편집기** 대화 상자를 엽니다.
 
 **작업** 속성은 수행할 파일 시스템 작업을 지정합니다. 다음 작업 중 하나를 선택합니다.
 

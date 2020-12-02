@@ -15,10 +15,10 @@ author: rothja
 ms.author: jroth
 monikerRange: '>=aps-pdw-2016||=azuresqldb-current||=azure-sqldw-latest||>=sql-server-2016||=sqlallproducts-allversions||>=sql-server-linux-2017||=azuresqldb-mi-current'
 ms.openlocfilehash: 264a277c45ebd1f067318625f7b0f1fb986389d4
-ms.sourcegitcommit: cfa04a73b26312bf18d8f6296891679166e2754d
+ms.sourcegitcommit: c5078791a07330a87a92abb19b791e950672e198
 ms.translationtype: HT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 10/19/2020
+ms.lasthandoff: 11/26/2020
 ms.locfileid: "92196153"
 ---
 # <a name="variables-transact-sql"></a>변수(Transact-SQL)
@@ -88,13 +88,13 @@ DECLARE 문은 다음을 통해 Transact-SQL 변수를 초기화합니다.
 * 시스템 제공 또는 사용자 정의 데이터 형식 및 길이 할당. 숫자 변수에 대해 전체 자릿수 및 소수 자릿수도 할당됩니다. XML 형식의 변수에 대해서는 선택적 스키마 컬렉션이 할당될 수 있습니다.
 * 값을 NULL로 설정
 
-예를 들어 다음 **DECLARE** 문은 int 데이터 형식의 **\@mycounter**라는 지역 변수를 만듭니다.  
+예를 들어 다음 **DECLARE** 문은 int 데이터 형식의 **\@mycounter** 라는 지역 변수를 만듭니다.  
 ```sql
 DECLARE @MyCounter INT;
 ```
 둘 이상의 지역 변수를 선언하려면 정의된 첫 지역 변수 다음에 쉼표를 사용한 후 다음 지역 변수의 이름 및 데이터 형식을 지정합니다.
 
-예를 들어 다음 **DECLARE** 문은 **\@LastName**, **\@FirstName** 및 **\@StateProvince**의 세 지역 변수를 만들고 각각 NULL로 초기화합니다.  
+예를 들어 다음 **DECLARE** 문은 **\@LastName**, **\@FirstName** 및 **\@StateProvince** 의 세 지역 변수를 만들고 각각 NULL로 초기화합니다.  
 ```sql
 DECLARE @LastName NVARCHAR(30), @FirstName NVARCHAR(20), @StateProvince NCHAR(2);
 ```
@@ -164,7 +164,7 @@ GO
 > [!WARNING]
 > SELECT 문 하나에 할당 절이 여러 개 있을 경우 SQL Server에서는 식의 계산 순서를 보장하지 않습니다. 할당 간에 참조가 있을 경우에만 그 결과가 표시됩니다.
 
-SELECT 문에서 행을 두 개 이상 반환하고 변수가 스칼라가 아닌 식을 참조하면 변수는 결과 집합의 마지막 행에 있는 식에 대해 반환된 값으로 설정됩니다. 예를 들어 다음 일괄 처리에서 **\@EmpIDVariable**은 반환된 마지막 행의 **BusinessEntityID** 값인 1로 설정됩니다.  
+SELECT 문에서 행을 두 개 이상 반환하고 변수가 스칼라가 아닌 식을 참조하면 변수는 결과 집합의 마지막 행에 있는 식에 대해 반환된 값으로 설정됩니다. 예를 들어 다음 일괄 처리에서 **\@EmpIDVariable** 은 반환된 마지막 행의 **BusinessEntityID** 값인 1로 설정됩니다.  
 
 ```sql
 USE AdventureWorks2014;

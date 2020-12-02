@@ -18,11 +18,11 @@ ms.assetid: 248ce233-4342-42c5-bf26-f4387ea152cf
 author: chugugrace
 ms.author: chugu
 ms.openlocfilehash: 60e136951deb8701893ea3d611597e8388909816
-ms.sourcegitcommit: e700497f962e4c2274df16d9e651059b42ff1a10
+ms.sourcegitcommit: 192f6a99e19e66f0f817fdb1977f564b2aaa133b
 ms.translationtype: HT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 08/17/2020
-ms.locfileid: "88430995"
+ms.lasthandoff: 11/25/2020
+ms.locfileid: "96123537"
 ---
 # <a name="data-profiling-task"></a>데이터 프로파일링 태스크
 
@@ -87,15 +87,15 @@ ms.locfileid: "88430995"
 |FunctionalDependencyProfile|**integer** 형식, **char** 형식 및 **datetime** 형식의 열|  
 |InclusionProfile|**integer** 형식, **char** 형식 및 **datetime** 형식의 열|  
   
- \* 위의 유효한 데이터 형식 표에서 **integer**, **char**, **datetime**및 **numeric** 형식에는 다음과 같은 특정 데이터 형식이 포함됩니다.  
+ \* 위의 유효한 데이터 형식 표에서 **integer**, **char**, **datetime** 및 **numeric** 형식에는 다음과 같은 특정 데이터 형식이 포함됩니다.  
   
- 정수 형식에는 **bit**, **tinyint**, **smallint**, **int**및 **bigint**가 포함됩니다.  
+ 정수 형식에는 **bit**, **tinyint**, **smallint**, **int** 및 **bigint** 가 포함됩니다.  
   
- 문자 형식에는 **char**, **nchar**, **varchar**및 **nvarchar** 가 포함되지만 **varchar(max)** 및 **nvarchar(max)** 는 포함되지 않습니다.  
+ 문자 형식에는 **char**, **nchar**, **varchar** 및 **nvarchar** 가 포함되지만 **varchar(max)** 및 **nvarchar(max)** 는 포함되지 않습니다.  
   
- 날짜 및 시간 형식에는 **datetime**, **smalldatetime**및 **timestamp**가 포함됩니다.  
+ 날짜 및 시간 형식에는 **datetime**, **smalldatetime** 및 **timestamp** 가 포함됩니다.  
   
- 숫자 형식에는 **integer** 형식( **bit**제외), **money**, **smallmoney**, **decimal**, **float**, **real**및 **numeric**이 포함됩니다.  
+ 숫자 형식에는 **integer** 형식( **bit** 제외), **money**, **smallmoney**, **decimal**, **float**, **real** 및 **numeric** 이 포함됩니다.  
   
  \*\* **image**, **text**, **XML**, **udt** 및 **variant** 형식은 열 Null 비율 프로필 이외의 프로필에 대해서는 지원되지 않습니다.  
   
@@ -135,10 +135,10 @@ ms.locfileid: "88430995"
  데이터 프로파일링 구성 요소에는 데이터 프로파일링 태스크의 출력을 기반으로 [!INCLUDE[ssISnoversion](../../includes/ssisnoversion-md.md)] 패키지의 워크플로에 조건부 논리를 구현하기 위한 기본 제공 기능이 없습니다. 그러나 이 논리는 스크립트 태스크를 사용하여 최소한의 프로그래밍 작업으로 손쉽게 추가할 수 있습니다. 이 코드는 XML 출력을 대상으로 XPath 쿼리를 수행한 다음 그 결과를 패키지 변수로 저장합니다. 스크립트 태스크를 후속 태스크에 연결하는 선행 제약 조건은 식을 사용하여 워크플로를 확인할 수 있습니다. 예를 들어 스크립트 태스크는 열에서 특정 임계값을 초과하는 null 값의 비율을 탐지합니다. 이 경우 패키지를 중단하면 문제가 계속되기 전에 해결할 수 있습니다.  
   
 ## <a name="configuration-of-the-data-profiling-task"></a>데이터 프로파일링 태스크 구성  
- 데이터 프로파일링 태스크는 **데이터 프로파일링 태스크 편집기**를 사용하여 구성합니다. 이 편집기에는 다음과 같은 두 개의 페이지가 있습니다.  
+ 데이터 프로파일링 태스크는 **데이터 프로파일링 태스크 편집기** 를 사용하여 구성합니다. 이 편집기에는 다음과 같은 두 개의 페이지가 있습니다.  
   
  [일반 페이지](../../integration-services/control-flow/data-profiling-task-editor-general-page.md)  
- **일반** 페이지에서는 출력 파일 또는 변수를 지정합니다. 또한 **빠른 프로필**을 선택하여 기본 설정으로 신속히 태스크를 구성, 프로필을 컴퓨팅할 수 있습니다. 자세한 내용은 [단일 테이블 빠른 프로필 형식&#40;데이터 프로파일링 태스크&#41;](../../integration-services/control-flow/single-table-quick-profile-form-data-profiling-task.md)을 참조하세요.  
+ **일반** 페이지에서는 출력 파일 또는 변수를 지정합니다. 또한 **빠른 프로필** 을 선택하여 기본 설정으로 신속히 태스크를 구성, 프로필을 컴퓨팅할 수 있습니다. 자세한 내용은 [단일 테이블 빠른 프로필 형식&#40;데이터 프로파일링 태스크&#41;](../../integration-services/control-flow/single-table-quick-profile-form-data-profiling-task.md)을 참조하세요.  
   
  [프로필 요청 페이지](../../integration-services/control-flow/data-profiling-task-editor-profile-requests-page.md)  
  **프로필 요청** 페이지에서는 데이터 원본을 지정하고 컴퓨팅할 데이터 프로필을 선택 및 구성할 수 있습니다. 구성 가능한 여러 프로필에 대한 자세한 내용은 다음 항목을 참조하십시오.  

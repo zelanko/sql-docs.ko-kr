@@ -16,11 +16,11 @@ ms.assetid: bdc92038-3720-4795-8a5c-79b963f2c952
 author: chugugrace
 ms.author: chugu
 ms.openlocfilehash: 074aa791a20eed06241aef1087f5ac355f8ea493
-ms.sourcegitcommit: c7f40918dc3ecdb0ed2ef5c237a3996cb4cd268d
+ms.sourcegitcommit: 192f6a99e19e66f0f817fdb1977f564b2aaa133b
 ms.translationtype: HT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 10/05/2020
-ms.locfileid: "91725377"
+ms.lasthandoff: 11/25/2020
+ms.locfileid: "96123708"
 ---
 # <a name="cache-connection-manager"></a>캐시 연결 관리자
 
@@ -120,16 +120,16 @@ ms.locfileid: "91725377"
  열의 데이터 형식을 지정합니다.  
   
  **길이**  
- 열 데이터 형식을 지정합니다. 데이터 형식에 적용 가능한 경우 **Length**를 업데이트할 수 있습니다.  
+ 열 데이터 형식을 지정합니다. 데이터 형식에 적용 가능한 경우 **Length** 를 업데이트할 수 있습니다.  
   
  **정밀도**  
- 특정 열 데이터 형식에 대한 전체 자릿수를 지정합니다. 전체 자릿수는 숫자의 모든 자릿수이고 데이터 형식에 적용 가능한 경우 **Precision**를 업데이트할 수 있습니다.  
+ 특정 열 데이터 형식에 대한 전체 자릿수를 지정합니다. 전체 자릿수는 숫자의 모든 자릿수이고 데이터 형식에 적용 가능한 경우 **Precision** 를 업데이트할 수 있습니다.  
   
  **크기 조정**  
- 특정 열 데이터 형식에 대한 소수 자릿수를 지정합니다. 소수 자릿수는 숫자에서 소수점 오른쪽에 있는 자릿수입니다. 데이터 형식에 적용 가능한 경우 **Scale**를 업데이트할 수 있습니다.  
+ 특정 열 데이터 형식에 대한 소수 자릿수를 지정합니다. 소수 자릿수는 숫자에서 소수점 오른쪽에 있는 자릿수입니다. 데이터 형식에 적용 가능한 경우 **Scale** 를 업데이트할 수 있습니다.  
   
  **코드 페이지**  
- 열 형식에 대한 코드 페이지를 지정합니다. 데이터 형식에 적용 가능한 경우 **Code Page**를 업데이트할 수 있습니다.  
+ 열 형식에 대한 코드 페이지를 지정합니다. 데이터 형식에 적용 가능한 경우 **Code Page** 를 업데이트할 수 있습니다.  
   
 ## <a name="related-tasks"></a>관련 작업  
  [캐시 연결 관리자 변환을 사용하여 전체 캐시 모드에서 조회 변환 구현](lookup-transformation-full-cache-mode-cache-connection-manager.md)  

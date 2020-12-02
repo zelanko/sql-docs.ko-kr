@@ -24,10 +24,10 @@ ms.assetid: 2e6e4eeb-b70b-4f45-a253-28ac4e595d75
 author: rothja
 ms.author: jroth
 ms.openlocfilehash: 26c8d6f53ef87fa2d9e6ab5dcfee6b39be01834f
-ms.sourcegitcommit: cfa04a73b26312bf18d8f6296891679166e2754d
+ms.sourcegitcommit: c5078791a07330a87a92abb19b791e950672e198
 ms.translationtype: HT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 10/19/2020
+ms.lasthandoff: 11/26/2020
 ms.locfileid: "92196806"
 ---
 # <a name="reconfigure-transact-sql"></a>RECONFIGURE(Transact-SQL)
@@ -47,7 +47,7 @@ RECONFIGURE [ WITH OVERRIDE ]
 
 ## <a name="arguments"></a>인수
  RECONFIGURE    
- 구성 설정에서 서버를 중지하고 다시 시작하지 않아도 될 경우 현재 실행 중인 값이 업데이트되도록 지정합니다. 또한 RECONFIGURE는 새 구성 값에서 유효하지 않은 값(예: **syscharsets**에 없는 정렬 순서 값)이나 권장되지 않는 값을 확인합니다. 서버를 중지하고 다시 시작할 필요가 없는 이런 구성 옵션을 사용하는 경우에는 RECONFIGURE를 지정한 후 구성 옵션의 현재 실행 중인 값과 현재 구성된 값이 같아야 합니다.    
+ 구성 설정에서 서버를 중지하고 다시 시작하지 않아도 될 경우 현재 실행 중인 값이 업데이트되도록 지정합니다. 또한 RECONFIGURE는 새 구성 값에서 유효하지 않은 값(예: **syscharsets** 에 없는 정렬 순서 값)이나 권장되지 않는 값을 확인합니다. 서버를 중지하고 다시 시작할 필요가 없는 이런 구성 옵션을 사용하는 경우에는 RECONFIGURE를 지정한 후 구성 옵션의 현재 실행 중인 값과 현재 구성된 값이 같아야 합니다.    
     
  WITH OVERRIDE    
  **recovery interval** 고급 구성 옵션에 대해 유효하지 않은 값 또는 권장되지 않는 값의 구성 값 확인을 해제합니다.    
@@ -55,7 +55,7 @@ RECONFIGURE [ WITH OVERRIDE ]
  거의 모든 구성 옵션은 WITH OVERRIDE 옵션을 사용하여 재구성할 수 있지만 일부 치명적인 오류는 여전히 방지됩니다. 예를 들어 **min server memory** 구성 옵션은 **max server memory** 구성 옵션에서 지정한 값보다 큰 값으로 구성할 수 있습니다.
       
 ## <a name="remarks"></a>설명    
- **sp_configure**에서는 각 구성 옵션에 대해 설명한 유효한 범위를 벗어난 새 구성 옵션 값을 허용하지 않습니다.    
+ **sp_configure** 에서는 각 구성 옵션에 대해 설명한 유효한 범위를 벗어난 새 구성 옵션 값을 허용하지 않습니다.    
     
  명시적 또는 암시적 트랜잭션에서는 RECONFIGURE가 허용되지 않습니다. 여러 개의 옵션을 동시에 다시 구성하는 경우 다시 구성 작업 중 하나가 실패하면 다시 구성 작업이 하나도 적용되지 않습니다.    
     

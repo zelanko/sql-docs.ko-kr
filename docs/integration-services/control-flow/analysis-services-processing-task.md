@@ -17,11 +17,11 @@ ms.assetid: e5748836-b4ce-4e17-ab6b-617a336f02f4
 author: chugugrace
 ms.author: chugu
 ms.openlocfilehash: 2db38d2ad6c102b47b2a9f3349a3877a9d55a4c4
-ms.sourcegitcommit: c7f40918dc3ecdb0ed2ef5c237a3996cb4cd268d
+ms.sourcegitcommit: 192f6a99e19e66f0f817fdb1977f564b2aaa133b
 ms.translationtype: HT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 10/05/2020
-ms.locfileid: "91727600"
+ms.lasthandoff: 11/25/2020
+ms.locfileid: "96123676"
 ---
 # <a name="analysis-services-processing-task"></a>Analysis Services 처리 태스크
 
@@ -130,7 +130,7 @@ ms.locfileid: "91727600"
  [!INCLUDE[ssASnoversion](../../includes/ssasnoversion-md.md)] 개체를 목록에 추가합니다.  
   
  **제거**  
- 개체를 선택한 다음 **삭제**를 클릭합니다.  
+ 개체를 선택한 다음 **삭제** 를 클릭합니다.  
   
  **영향 분석**  
  선택한 개체에 대한 영향 분석을 수행합니다.  

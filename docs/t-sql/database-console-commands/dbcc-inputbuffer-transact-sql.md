@@ -25,11 +25,11 @@ ms.assetid: a44d702b-b3fb-4950-8c8f-1adcf3f514ba
 author: pmasl
 ms.author: umajay
 ms.openlocfilehash: a76fab0c7e0b7e15beb0eb094de4aa66e1644b2e
-ms.sourcegitcommit: cc23d8646041336d119b74bf239a6ac305ff3d31
+ms.sourcegitcommit: 192f6a99e19e66f0f817fdb1977f564b2aaa133b
 ms.translationtype: HT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 09/23/2020
-ms.locfileid: "91115004"
+ms.lasthandoff: 11/25/2020
+ms.locfileid: "96119606"
 ---
 # <a name="dbcc-inputbuffer-transact-sql"></a>DBCC INPUTBUFFER(Transact-SQL)
 [!INCLUDE [SQL Server SQL Database](../../includes/applies-to-version/sql-asdb.md)]
@@ -54,7 +54,7 @@ DBCC INPUTBUFFER ( session_id [ , request_id ])
 *request_id*  
 현재 세션 내에서 검색할 정확한 요청(일괄 처리)입니다.  
 
-다음 쿼리에서는 *request_id*를 반환합니다.  
+다음 쿼리에서는 *request_id* 를 반환합니다.  
 ```sql
 SELECT request_id   
 FROM sys.dm_exec_requests   
@@ -71,9 +71,9 @@ DBCC INPUTBUFFER는 다음과 같은 열이 있는 행 집합을 반환합니다
   
 |열 이름|데이터 형식|Description|  
 |-----------------|---------------|-----------------|  
-|**EventType**|**nvarchar(30)**|이벤트 유형입니다. **RPC Event** 또는 **Language Event**를 사용할 수 있습니다. 마지막 이벤트가 감지되지 않으면 **No Event**가 출력됩니다.|  
+|**EventType**|**nvarchar(30)**|이벤트 유형입니다. **RPC Event** 또는 **Language Event** 를 사용할 수 있습니다. 마지막 이벤트가 감지되지 않으면 **No Event** 가 출력됩니다.|  
 |**매개 변수**|**smallint**|0 = 텍스트<br /><br /> 1- *n* = 매개 변수|  
-|**EventInfo**|**nvarchar(4000)**|RPC의 **EventType**에서는 **EventInfo**에 프로시저 이름만 포함됩니다. Language의 **EventType**에서는 이벤트의 첫 4000자만 표시됩니다.|  
+|**EventInfo**|**nvarchar(4000)**|RPC의 **EventType** 에서는 **EventInfo** 에 프로시저 이름만 포함됩니다. Language의 **EventType** 에서는 이벤트의 첫 4000자만 표시됩니다.|  
   
 예를 들어 DBCC INPUTBUFFER는 버퍼의 마지막 이벤트가 DBCC INPUTBUFFER(11)인 경우에 다음과 같은 결과 집합을 반환합니다.
   
@@ -94,7 +94,7 @@ DBCC execution completed. If DBCC printed error messages, contact your system ad
 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]에서 다음 중 하나가 필요합니다.
 -   사용자는 **sysadmin** 고정 서버 역할의 멤버여야 합니다.  
 -   사용자에게 VIEW SERVER STATE 권한이 있어야 합니다.  
--   *session_id*는 명령이 실행되는 세션 ID과 같아야 합니다. 세션 ID를 확인하려면 다음 쿼리를 실행합니다.  
+-   *session_id* 는 명령이 실행되는 세션 ID과 같아야 합니다. 세션 ID를 확인하려면 다음 쿼리를 실행합니다.  
   
 ```sql
 SELECT @@spid;  

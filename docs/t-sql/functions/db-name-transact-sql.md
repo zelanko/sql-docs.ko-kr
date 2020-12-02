@@ -24,11 +24,11 @@ author: VanMSFT
 ms.author: vanto
 monikerRange: '>=aps-pdw-2016||=azuresqldb-current||=azure-sqldw-latest||>=sql-server-2016||=sqlallproducts-allversions||>=sql-server-linux-2017||=azuresqldb-mi-current'
 ms.openlocfilehash: 67cec38e835bd12cb951bba6ee790d0815c9cd29
-ms.sourcegitcommit: 76d31f456982dabb226239b424eaa7139d8cc6c1
+ms.sourcegitcommit: 192f6a99e19e66f0f817fdb1977f564b2aaa133b
 ms.translationtype: HT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 09/15/2020
-ms.locfileid: "90570680"
+ms.lasthandoff: 11/25/2020
+ms.locfileid: "96116852"
 ---
 # <a name="db_name-transact-sql"></a>DB_NAME(Transact-SQL)
 [!INCLUDE [sql-asdb-asdbmi-asa-pdw](../../includes/applies-to-version/sql-asdb-asdbmi-asa-pdw.md)]
@@ -48,14 +48,14 @@ DB_NAME ( [ database_id ] )
 ## <a name="arguments"></a>인수
 *database_id*  
 
-반환될 이름 `DB_NAME`의 데이터베이스 ID입니다. `DB_NAME`에 대한 호출이 *database_id*를 생략하는 경우 `DB_NAME`는 현재 데이터베이스의 이름을 반환합니다.
+반환될 이름 `DB_NAME`의 데이터베이스 ID입니다. `DB_NAME`에 대한 호출이 *database_id* 를 생략하는 경우 `DB_NAME`는 현재 데이터베이스의 이름을 반환합니다.
   
 ## <a name="return-types"></a>반환 형식
 **nvarchar(128)**
   
 ## <a name="permissions"></a>사용 권한  
 
-`DB_NAME`의 호출자가 특정 비**마스터** 또는 비**tempdb** 데이터베이스를 소유하지 않는 경우 최소한 `ALTER ANY DATABASE` 또는 `VIEW ANY DATABASE` 서버 수준 사용 권한이 해당 `DB_ID` 행을 확인하는 데 필요합니다. **마스터** 데이터베이스의 경우 `DB_ID`는 최소한 `CREATE DATABASE` 사용 권한이 필요합니다. 호출자가 연결하는 데이터베이스는 항상 **sys.databases**에 나타납니다.
+`DB_NAME`의 호출자가 특정 비 **마스터** 또는 비 **tempdb** 데이터베이스를 소유하지 않는 경우 최소한 `ALTER ANY DATABASE` 또는 `VIEW ANY DATABASE` 서버 수준 사용 권한이 해당 `DB_ID` 행을 확인하는 데 필요합니다. **마스터** 데이터베이스의 경우 `DB_ID`는 최소한 `CREATE DATABASE` 사용 권한이 필요합니다. 호출자가 연결하는 데이터베이스는 항상 **sys.databases** 에 나타납니다.
   
 > [!IMPORTANT]  
 >  기본적으로 public 역할에는 모든 로그인이 데이터베이스 정보를 보도록 허용하는 `VIEW ANY DATABASE` 권한이 있습니다. 로그인이 데이터베이스를 검색하지 않게 하려면 public에서 `VIEW ANY DATABASE` 권한을 `REVOKE`하거나 로그인에 대한 `DENY` 권한을 `VIEW ANY DATABASE`합니다.

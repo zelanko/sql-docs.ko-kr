@@ -20,16 +20,16 @@ author: rothja
 ms.author: jroth
 monikerRange: '>=aps-pdw-2016||=azuresqldb-current||=azure-sqldw-latest||>=sql-server-2016||=sqlallproducts-allversions||>=sql-server-linux-2017||=azuresqldb-mi-current'
 ms.openlocfilehash: 49ddfeda6b720d774e2b1d7c089fb295d185e40a
-ms.sourcegitcommit: 894c1a23e922dc29b82c1d2c34c7b0ff28b38654
+ms.sourcegitcommit: c5078791a07330a87a92abb19b791e950672e198
 ms.translationtype: HT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 10/30/2020
+ms.lasthandoff: 11/26/2020
 ms.locfileid: "93067395"
 ---
 # <a name="set-local_variable-transact-sql"></a>SET @local_variable(Transact-SQL)
 [!INCLUDE [sql-asdb-asdbmi-asa-pdw](../../includes/applies-to-version/sql-asdb-asdbmi-asa-pdw.md)]
 
-DECLARE @ *local_variable* 문을 사용하여 이전에 만든 지정된 지역 변수를 지정된 값으로 설정합니다.  
+DECLARE @*local_variable* 문을 사용하여 이전에 만든 지정된 지역 변수를 지정된 값으로 설정합니다.  
   
 ![항목 링크 아이콘](../../database-engine/configure-windows/media/topic-link.gif "항목 링크 아이콘") [Transact-SQL 구문 표기 규칙](../../t-sql/language-elements/transact-sql-syntax-conventions-transact-sql.md)  
   
@@ -70,7 +70,7 @@ SET @local_variable { = | += | -= | *= | /= | %= | &= | ^= | |= } expression
 
 ## <a name="arguments"></a>인수
 **@** _local_variable_  
-**cursor** , **text** , **ntext** , **image** 또는 **table** 을 제외한 모든 형식의 변수 이름입니다. 변수 이름은 기호( **@** )로 시작해야 합니다. 변수 이름은 [식별자](../../relational-databases/databases/database-identifiers.md)에 적용되는 규칙을 따라야 합니다.  
+**cursor**, **text**, **ntext**, **image** 또는 **table** 을 제외한 모든 형식의 변수 이름입니다. 변수 이름은 기호( **@** )로 시작해야 합니다. 변수 이름은 [식별자](../../relational-databases/databases/database-identifiers.md)에 적용되는 규칙을 따라야 합니다.  
   
 *property_name*  
 사용자 정의 형식의 속성입니다.  
@@ -82,7 +82,7 @@ SET @local_variable { = | += | -= | *= | /= | %= | &= | ^= | |= } expression
 CLR(공용 언어 런타임) 사용자 정의 형식의 이름입니다.  
   
 `{ . | :: }`  
-CLR 사용자 정의 형식의 메서드를 지정합니다. 비정적 인스턴스 메서드의 경우 마침표( **.** )를 사용합니다. 정적 메서드의 경우 두 개의 콜론( **::** )을 사용합니다. CLR 사용자 정의 형식의 메서드, 속성 또는 필드를 호출하려면 해당 형식에 대해 EXECUTE 권한이 있어야 합니다.  
+CLR 사용자 정의 형식의 메서드를 지정합니다. 비정적 인스턴스 메서드의 경우 마침표(**.**)를 사용합니다. 정적 메서드의 경우 두 개의 콜론(**::**)을 사용합니다. CLR 사용자 정의 형식의 메서드, 속성 또는 필드를 호출하려면 해당 형식에 대해 EXECUTE 권한이 있어야 합니다.  
   
 _method_name_ **(** _argument_ [ **,** ... *n* ] **)**  
 하나 이상의 인수를 사용하여 한 형식의 인스턴스 상태를 수정하는 사용자 정의 형식 메서드입니다. 정적 메서드는 공용이어야 합니다.  
@@ -169,7 +169,7 @@ READ ONLY
 이 커서를 통해 업데이트할 수 없습니다. UPDATE 또는 DELETE 문의 WHERE CURRENT OF 절에서는 이 커서를 참조할 수 없습니다. 이 옵션은 업데이트할 커서의 기본 기능을 무시합니다. 이 키워드는 READ와 ONLY 사이에 밑줄 대신 공백이 있어 앞의 READ_ONLY와는 다른 키워드입니다.  
   
 `UPDATE [OF column_name[ ,... n ] ]`  
-커서 내에서 업데이트할 수 있는 열을 정의합니다. OF *column_name* [ **,**... *n* ]이 제공되면 나열된 열만 수정할 수 있습니다. 커서가 READ_ONLY로 정의되어 있지 않은 경우 목록을 제공하지 않으면 모든 열을 업데이트할 수 있습니다.  
+커서 내에서 업데이트할 수 있는 열을 정의합니다. OF *column_name* [**,**...*n*]이 제공되면 나열된 열만 수정할 수 있습니다. 커서가 READ_ONLY로 정의되어 있지 않은 경우 목록을 제공하지 않으면 모든 열을 업데이트할 수 있습니다.  
   
 ## <a name="remarks"></a>설명  
 변수를 선언하면 이 변수는 NULL로 초기화됩니다. SET 문을 사용하여 NULL이 아닌 값을 선언된 변수에 할당할 수 있습니다. 변수에 값을 할당한 SET 문은 단일 값을 반환합니다. 여러 변수를 초기화할 때는 지역 변수마다 별도의 SET 문을 사용합니다.  

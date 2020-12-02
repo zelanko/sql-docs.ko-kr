@@ -12,10 +12,10 @@ ms.assetid: e04a5321-63d5-4ec5-85b9-cb4eaf6c87f6
 author: chugugrace
 ms.author: chugu
 ms.openlocfilehash: a1e2b55f3c61308d4f3dba30ac1c9b079031e01d
-ms.sourcegitcommit: cfa04a73b26312bf18d8f6296891679166e2754d
+ms.sourcegitcommit: c5078791a07330a87a92abb19b791e950672e198
 ms.translationtype: HT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 10/19/2020
+ms.lasthandoff: 11/26/2020
 ms.locfileid: "92193815"
 ---
 # <a name="lesson-1-4---adding-package-configurations"></a>1-4단원 - 패키지 구성 추가
@@ -37,28 +37,28 @@ ms.locfileid: "92193815"
   
 ### <a name="to-create-indirect-configuration-for-the-datatransfer-package"></a>DataTransfer 패키지에 대한 간접 구성을 만들려면  
 
-프로젝트의 현재 배포 모델을 확인하고, 필요한 경우 **패키지 배포 모델**로 설정합니다. **프로젝트 메뉴**에서 **패키지 배포 모델로 변환**을 클릭합니다.
+프로젝트의 현재 배포 모델을 확인하고, 필요한 경우 **패키지 배포 모델** 로 설정합니다. **프로젝트 메뉴** 에서 **패키지 배포 모델로 변환** 을 클릭합니다.
   
 1.  솔루션 탐색기에서 DataTransfer.dtsx를 두 번 클릭합니다.  
   
 2.  [!INCLUDE[ssIS](../includes/ssis-md.md)] 디자이너에서 제어 흐름 디자인 화면의 배경을 아무 곳이나 클릭합니다.  
   
-3.  **SSIS** 메뉴에서 **패키지 구성**을 클릭합니다.  
+3.  **SSIS** 메뉴에서 **패키지 구성** 을 클릭합니다.  
   
-4.  **패키지 구성 도우미**대화 상자에서 아직 선택하지 않은 경우 **패키지 구성 설정** 을 선택하고 **추가**를 클릭합니다.  
+4.  **패키지 구성 도우미** 대화 상자에서 아직 선택하지 않은 경우 **패키지 구성 설정** 을 선택하고 **추가** 를 클릭합니다.  
   
-5.  패키지 구성 마법사 시작 페이지에서 **다음**을 클릭합니다.  
+5.  패키지 구성 마법사 시작 페이지에서 **다음** 을 클릭합니다.  
   
 6.  구성 유형 선택 페이지의 **구성 유형** 목록에서 **XML 구성 파일** 을 선택하고 **구성 위치가 환경 변수에 저장됨** 옵션을 선택한 다음 **DataTransfer** 를 입력하거나 목록에서 **DataTransfer** 환경 변수를 선택합니다.  
   
     > [!NOTE]  
     > 이 환경 변수를 목록에서 사용할 수 있게 하려면 변수를 추가한 후에 컴퓨터를 다시 시작해야 할 수도 있습니다. 컴퓨터를 다시 시작하지 않으려면 환경 변수의 이름을 입력합니다.  
   
-7.  **다음**을 클릭합니다.  
+7.  **다음** 을 클릭합니다.  
   
-8.  마법사 완료 페이지에서 **구성 이름** 상자에 **DataTransfer EV Configuration** 을 입력하고 **미리 보기** 창에서 구성 내용을 검토한 다음 **마침**을 클릭합니다.  
+8.  마법사 완료 페이지에서 **구성 이름** 상자에 **DataTransfer EV Configuration** 을 입력하고 **미리 보기** 창에서 구성 내용을 검토한 다음 **마침** 을 클릭합니다.  
   
-9. **패키지 구성 도우미**대화 상자를 닫습니다.  
+9. **패키지 구성 도우미** 대화 상자를 닫습니다.  
   
 ### <a name="to-create-the-xml-configuration-for-the-datatransfer-package"></a>DataTransfer 패키지에 대한 XML 구성을 만들려면  
   
@@ -66,27 +66,27 @@ ms.locfileid: "92193815"
   
 2.  [!INCLUDE[ssIS](../includes/ssis-md.md)] 디자이너에서 제어 흐름 디자인 화면의 배경을 아무 곳이나 클릭합니다.  
   
-3.  **SSIS** 메뉴에서 **패키지 구성**을 클릭합니다.  
+3.  **SSIS** 메뉴에서 **패키지 구성** 을 클릭합니다.  
   
-4.  패키지 구성 도우미 대화 상자에서 **패키지 구성 설정** 확인란을 선택하고 **추가**를 클릭합니다.  
+4.  패키지 구성 도우미 대화 상자에서 **패키지 구성 설정** 확인란을 선택하고 **추가** 를 클릭합니다.  
   
-5.  패키지 구성 마법사 시작 페이지에서 **다음**을 클릭합니다.  
+5.  패키지 구성 마법사 시작 페이지에서 **다음** 을 클릭합니다.  
   
-6.  구성 유형 선택 페이지의 **구성 유형** 목록에서 **XML 구성 파일** 을 선택한 다음 **찾아보기**를 클릭합니다.  
+6.  구성 유형 선택 페이지의 **구성 유형** 목록에서 **XML 구성 파일** 을 선택한 다음 **찾아보기** 를 클릭합니다.  
   
-7.  **구성 파일 위치 선택** 대화 상자에서 C:\DeploymentTutorial로 이동한 다음 **파일 이름** 상자에 **DataTransferConfig** 를 입력하고 **저장**을 클릭합니다.  
+7.  **구성 파일 위치 선택** 대화 상자에서 C:\DeploymentTutorial로 이동한 다음 **파일 이름** 상자에 **DataTransferConfig** 를 입력하고 **저장** 을 클릭합니다.  
   
-8.  구성 유형 선택 페이지에서 **다음**을 클릭합니다.  
+8.  구성 유형 선택 페이지에서 **다음** 을 클릭합니다.  
   
 9. 내보낼 속성 선택 페이지에서 DataTransfer, 연결 관리자, Deployment Tutorial Log 및 Properties를 확장한 다음 **연결 문자열** 확인란을 선택합니다.  
   
 10. 연결 관리자 내에서 NewCustomers를 확장한 다음 **연결 문자열** 확인란을 선택합니다.  
   
-11. **다음**을 클릭합니다.  
+11. **다음** 을 클릭합니다.  
   
-12. 마법사 완료 페이지에서 **구성 이름** 상자에 **DataTransfer Configuration** 을 입력하고 구성 내용을 검토한 다음 **마침**을 클릭합니다.  
+12. 마법사 완료 페이지에서 **구성 이름** 상자에 **DataTransfer Configuration** 을 입력하고 구성 내용을 검토한 다음 **마침** 을 클릭합니다.  
   
-13. **패키지 구성 도우미** 대화 상자에서 DataTransfer EV Configuration이 먼저 나열된 다음 DataTransfer Configuration이 나열되는지 확인하고 **닫기**를 클릭합니다.  
+13. **패키지 구성 도우미** 대화 상자에서 DataTransfer EV Configuration이 먼저 나열된 다음 DataTransfer Configuration이 나열되는지 확인하고 **닫기** 를 클릭합니다.  
   
 ### <a name="to-create-indirect-configuration-for-the-loadxmldata-package"></a>LoadXMLData 패키지에 대한 간접 구성을 만들려면  
   
@@ -94,20 +94,20 @@ ms.locfileid: "92193815"
   
 2.  [!INCLUDE[ssIS](../includes/ssis-md.md)] 디자이너에서 제어 흐름 디자인 화면의 배경을 아무 곳이나 클릭합니다.  
   
-3.  **SSIS** 메뉴에서 **패키지 구성**을 클릭합니다.  
+3.  **SSIS** 메뉴에서 **패키지 구성** 을 클릭합니다.  
   
-4.  **패키지 구성 도우미**대화 상자에서 **추가**를 클릭합니다.  
+4.  **패키지 구성 도우미** 대화 상자에서 **추가** 를 클릭합니다.  
   
-5.  패키지 구성 마법사 시작 페이지에서 **다음**을 클릭합니다.  
+5.  패키지 구성 마법사 시작 페이지에서 **다음** 을 클릭합니다.  
   
 6.  구성 유형 선택 페이지의 **구성 유형** 목록에서 **XML 구성 파일** 을 선택하고 **구성 위치가 환경 변수에 저장됨** 옵션을 선택한 다음 **LoadXMLData** 를 입력하거나 목록에서 **LoadXMLData** 환경 변수를 선택합니다.  
   
     > [!NOTE]  
     > 이 환경 변수를 목록에서 사용할 수 있게 하려면 변수를 추가한 후에 컴퓨터를 다시 시작해야 할 수도 있습니다.  
   
-7.  **다음**을 클릭합니다.  
+7.  **다음** 을 클릭합니다.  
   
-8.  마법사 완료 페이지에서 **구성 이름** 상자에 **LoadXMLData EV Configuration** 을 입력하고 구성 내용을 검토한 다음 **마침**을 클릭합니다.  
+8.  마법사 완료 페이지에서 **구성 이름** 상자에 **LoadXMLData EV Configuration** 을 입력하고 구성 내용을 검토한 다음 **마침** 을 클릭합니다.  
   
 ### <a name="to-create-the-xml-configuration-for-the-loadxmldata-package"></a>LoadXMLData 패키지에 대한 XML 구성을 만들려면  
   
@@ -115,25 +115,25 @@ ms.locfileid: "92193815"
   
 2.  [!INCLUDE[ssIS](../includes/ssis-md.md)] 디자이너에서 제어 흐름 디자인 화면의 배경을 아무 곳이나 클릭합니다.  
   
-3.  **SSIS** 메뉴에서 **패키지 구성**을 클릭합니다.  
+3.  **SSIS** 메뉴에서 **패키지 구성** 을 클릭합니다.  
   
-4.  패키지 구성 도우미 대화 상자에서 **패키지 구성 설정** 확인란을 선택하고 **추가**를 클릭합니다.  
+4.  패키지 구성 도우미 대화 상자에서 **패키지 구성 설정** 확인란을 선택하고 **추가** 를 클릭합니다.  
   
-5.  패키지 구성 마법사 시작 페이지에서 **다음**을 클릭합니다.  
+5.  패키지 구성 마법사 시작 페이지에서 **다음** 을 클릭합니다.  
   
-6.  구성 유형 선택 페이지의 **구성 유형** 목록에서 **XML 구성 파일** 을 선택한 다음 **찾아보기**를 클릭합니다.  
+6.  구성 유형 선택 페이지의 **구성 유형** 목록에서 **XML 구성 파일** 을 선택한 다음 **찾아보기** 를 클릭합니다.  
   
-7.  **구성 파일 위치 선택** 대화 상자에서 C:\DeploymentTutorial로 이동한 다음 **파일 이름** 상자에 **LoadXMLDataConfig** 를 입력하고 **저장**을 클릭합니다.  
+7.  **구성 파일 위치 선택** 대화 상자에서 C:\DeploymentTutorial로 이동한 다음 **파일 이름** 상자에 **LoadXMLDataConfig** 를 입력하고 **저장** 을 클릭합니다.  
   
-8.  구성 유형 선택 페이지에서 **다음**을 클릭합니다.  
+8.  구성 유형 선택 페이지에서 **다음** 을 클릭합니다.  
   
 9. 내보낼 속성 선택 페이지에서 LoadXMLData, 실행 파일, Load XML Data 및 Properties를 확장한 다음 **[XMLSource].[XMLData]** 및 **[XMLSource].[XMLSchemaDefinition]** 확인란을 선택합니다.  
   
-10. **다음**을 클릭합니다.  
+10. **다음** 을 클릭합니다.  
   
-11. 마법사 완료 페이지에서 **구성 이름** 상자에 **LoadXMLData Configuration** 을 입력하고 구성 내용을 검토한 다음 **마침**을 클릭합니다.  
+11. 마법사 완료 페이지에서 **구성 이름** 상자에 **LoadXMLData Configuration** 을 입력하고 구성 내용을 검토한 다음 **마침** 을 클릭합니다.  
   
-12. **패키지 구성 도우미** 대화 상자에서 LoadXMLData EV Configuration이 먼저 나열된 다음 LoadXMLData Configuration이 나열되는지 확인하고 **닫기**를 클릭합니다.  
+12. **패키지 구성 도우미** 대화 상자에서 LoadXMLData EV Configuration이 먼저 나열된 다음 LoadXMLData Configuration이 나열되는지 확인하고 **닫기** 를 클릭합니다.  
   
 ## <a name="next-task-in-lesson"></a>단원의 다음 태스크  
 [5단계: 업데이트된 패키지 테스트](../integration-services/lesson-1-5-testing-the-updated-packages.md)  

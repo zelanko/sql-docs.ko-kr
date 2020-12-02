@@ -18,11 +18,11 @@ ms.assetid: a5683fc8-9c32-4634-819e-e9815627e4f1
 author: chugugrace
 ms.author: chugu
 ms.openlocfilehash: 21f4d8059ee7e0e2f9d466289f4b40f9f51ff950
-ms.sourcegitcommit: cfa04a73b26312bf18d8f6296891679166e2754d
+ms.sourcegitcommit: 192f6a99e19e66f0f817fdb1977f564b2aaa133b
 ms.translationtype: HT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 10/19/2020
-ms.locfileid: "92194683"
+ms.lasthandoff: 11/25/2020
+ms.locfileid: "96123434"
 ---
 # <a name="cache-transform"></a>캐시 변환
 

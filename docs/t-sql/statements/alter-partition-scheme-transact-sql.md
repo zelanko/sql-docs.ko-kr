@@ -23,11 +23,11 @@ ms.assetid: f01d6880-9800-4cfb-8d11-d4be21efc8ca
 author: markingmyname
 ms.author: maghan
 ms.openlocfilehash: 8ca48f836b6d14b85d3f8d0286fd31e60c403afe
-ms.sourcegitcommit: ac9feb0b10847b369b77f3c03f8200c86ee4f4e0
+ms.sourcegitcommit: 192f6a99e19e66f0f817fdb1977f564b2aaa133b
 ms.translationtype: HT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 09/16/2020
-ms.locfileid: "90688264"
+ms.lasthandoff: 11/25/2020
+ms.locfileid: "96124252"
 ---
 # <a name="alter-partition-scheme-transact-sql"></a>ALTER PARTITION SCHEME(Transact-SQL)
 
@@ -57,11 +57,11 @@ NEXT USED [ filegroup_name ] [ ; ]
  *filegroup_name*  
  파티션 구성표에서 NEXT USED로 표시할 파일 그룹을 지정합니다. 즉, [ALTER PARTITION FUNCTION](../../t-sql/statements/alter-partition-function-transact-sql.md) 문을 사용하여 만들어지는 새 파티션에 해당 파일 그룹이 적용됩니다.  
   
- 파티션 구성표에서 파일 그룹 하나만 NEXT USED로 지정할 수 있습니다. 비어 있지 않은 파일 그룹을 지정할 수 있습니다. *filegroup_name*이 지정되고 현재 NEXT USED로 표시된 파일 그룹이 없는 경우 *filegroup_name*이 NEXT USED로 표시됩니다. *filegroup_name*이 지정되고 NEXT USED 속성이 있는 파일 그룹이 이미 있다면 기존 파일 그룹에서 *filegroup_name*으로 NEXT USED 속성이 전달됩니다.  
+ 파티션 구성표에서 파일 그룹 하나만 NEXT USED로 지정할 수 있습니다. 비어 있지 않은 파일 그룹을 지정할 수 있습니다. *filegroup_name* 이 지정되고 현재 NEXT USED로 표시된 파일 그룹이 없는 경우 *filegroup_name* 이 NEXT USED로 표시됩니다. *filegroup_name* 이 지정되고 NEXT USED 속성이 있는 파일 그룹이 이미 있다면 기존 파일 그룹에서 *filegroup_name* 으로 NEXT USED 속성이 전달됩니다.  
   
- *filegroup_name*이 지정되지 않았고 NEXT USED 속성이 있는 파일 그룹이 이미 있다면 해당 파일 그룹의 NEXT USED 상태가 상실되어 *partition_scheme_name*에는 NEXT USED 파일 그룹이 없는 상태가 됩니다.  
+ *filegroup_name* 이 지정되지 않았고 NEXT USED 속성이 있는 파일 그룹이 이미 있다면 해당 파일 그룹의 NEXT USED 상태가 상실되어 *partition_scheme_name* 에는 NEXT USED 파일 그룹이 없는 상태가 됩니다.  
   
- *filegroup_name*이 지정되지 않았고 NEXT USED로 표시된 파일 그룹이 없다면 ALTER PARTITION SCHEME에서 경고를 반환합니다.  
+ *filegroup_name* 이 지정되지 않았고 NEXT USED로 표시된 파일 그룹이 없다면 ALTER PARTITION SCHEME에서 경고를 반환합니다.  
   
 ## <a name="remarks"></a>설명  
  ALTER PARTITION SCHEME가 적용되는 모든 파일 그룹은 온라인 상태여야 합니다.  

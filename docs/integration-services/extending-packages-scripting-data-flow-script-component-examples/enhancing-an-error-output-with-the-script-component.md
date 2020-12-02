@@ -17,11 +17,11 @@ ms.assetid: f7c02709-f1fa-4ebd-b255-dc8b81feeaa5
 author: chugugrace
 ms.author: chugu
 ms.openlocfilehash: e6150c8b80b29575cbb08c4cd88ebe342a55da79
-ms.sourcegitcommit: e700497f962e4c2274df16d9e651059b42ff1a10
+ms.sourcegitcommit: 192f6a99e19e66f0f817fdb1977f564b2aaa133b
 ms.translationtype: HT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 08/17/2020
-ms.locfileid: "88477309"
+ms.lasthandoff: 11/25/2020
+ms.locfileid: "96123035"
 ---
 # <a name="enhancing-an-error-output-with-the-script-component"></a>스크립트 구성 요소를 사용하여 오류 출력 향상
 
@@ -48,9 +48,9 @@ ms.locfileid: "88477309"
   
 3.  업스트림 구성 요소의 오류 출력을 새 스크립트 구성 요소에 연결합니다.  
   
-4.  **스크립트 변환 편집기**를 열고 **스크립트** 페이지의 **ScriptLanguage** 속성에서 스크립트 언어를 선택합니다.  
+4.  **스크립트 변환 편집기** 를 열고 **스크립트** 페이지의 **ScriptLanguage** 속성에서 스크립트 언어를 선택합니다.  
   
-5.  **스크립트 편집**을 클릭하여  VSTA([!INCLUDE[msCoName](../../includes/msconame-md.md)] [!INCLUDE[vsprvs](../../includes/vsprvs-md.md)] Tools for Applications) IDE를 열고 아래에 표시된 샘플 코드를 추가합니다.  
+5.  **스크립트 편집** 을 클릭하여  VSTA([!INCLUDE[msCoName](../../includes/msconame-md.md)] [!INCLUDE[vsprvs](../../includes/vsprvs-md.md)] Tools for Applications) IDE를 열고 아래에 표시된 샘플 코드를 추가합니다.  
   
 6.  VSTA를 닫습니다.  
   
@@ -58,11 +58,11 @@ ms.locfileid: "88477309"
   
 8.  **입/출력** 페이지에서 열 두 개를 새로 추가합니다.  
   
-    -   **ErrorDescription**이라는 **문자열** 형식의 새 출력 열을 추가합니다. 긴 메시지를 지원할 수 있도록 새 열의 기본 길이를 255로 늘립니다.  
+    -   **ErrorDescription** 이라는 **문자열** 형식의 새 출력 열을 추가합니다. 긴 메시지를 지원할 수 있도록 새 열의 기본 길이를 255로 늘립니다.  
   
-    -   **ColumnName**이라는 **문자열** 형식의 또 다른 새 출력 열을 추가합니다. 긴 값을 지원할 수 있도록 새 열의 기본 길이를 255로 늘립니다.  
+    -   **ColumnName** 이라는 **문자열** 형식의 또 다른 새 출력 열을 추가합니다. 긴 값을 지원할 수 있도록 새 열의 기본 길이를 255로 늘립니다.  
   
-9. **스크립트 변환 편집기**를 닫습니다.  
+9. **스크립트 변환 편집기** 를 닫습니다.  
   
 10. 스크립트 구성 요소의 출력을 적절한 대상에 연결합니다. 임시 테스트용으로 구성하는 데는 플랫 파일 대상이 가장 쉽습니다.  
   

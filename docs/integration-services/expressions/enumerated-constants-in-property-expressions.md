@@ -19,11 +19,11 @@ ms.assetid: a4418315-38e2-4ad3-8784-576163b25d6f
 author: chugugrace
 ms.author: chugu
 ms.openlocfilehash: 692e2e19b86b5d47d207c32c3024365675603c07
-ms.sourcegitcommit: e700497f962e4c2274df16d9e651059b42ff1a10
+ms.sourcegitcommit: 192f6a99e19e66f0f817fdb1977f564b2aaa133b
 ms.translationtype: HT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 08/17/2020
-ms.locfileid: "88477588"
+ms.lasthandoff: 11/25/2020
+ms.locfileid: "96123253"
 ---
 # <a name="enumerated-constants-in-property-expressions"></a>속성 식의 열거 상수
 
@@ -34,7 +34,7 @@ ms.locfileid: "88477588"
   
  이 항목에서는 해당 멤버가 속성 식에서 일반적으로 사용되는 열거자의 이름에 해당하는 숫자 값만 나열합니다. [!INCLUDE[ssISnoversion](../../includes/ssisnoversion-md.md)] 개체 모델에는 프로그래밍 방식으로 패키지를 작성하거나 태스크 및 데이터 흐름 구성 요소와 같은 사용자 지정 패키지 요소를 코딩하기 위해 개체 모델을 프로그래밍할 때 사용하는 여러 개의 추가 열거자가 포함되어 있습니다.  
   
- [!INCLUDE[ssBIDevStudioFull](../../includes/ssbidevstudiofull-md.md)] 의 속성 창에는 패키지 및 패키지 개체의 사용자 지정 속성 외에 패키지, 태스크 및 Foreach 루프, For 루프, 시퀀스 컨테이너에 사용할 수 있는 속성 집합이 포함되어 있습니다. 열거자의 값으로 설정된 공용 속성인 **ForceExecutionResult**, **LoggingMode**, **IsolationLevel** 및 **Transaction Option**은 공용 속성 섹션에 나열됩니다.  
+ [!INCLUDE[ssBIDevStudioFull](../../includes/ssbidevstudiofull-md.md)] 의 속성 창에는 패키지 및 패키지 개체의 사용자 지정 속성 외에 패키지, 태스크 및 Foreach 루프, For 루프, 시퀀스 컨테이너에 사용할 수 있는 속성 집합이 포함되어 있습니다. 열거자의 값으로 설정된 공용 속성인 **ForceExecutionResult**, **LoggingMode**, **IsolationLevel** 및 **Transaction Option** 은 공용 속성 섹션에 나열됩니다.  
   
  다음 섹션에서는 열거 상수에 대한 정보를 제공합니다.  
   

@@ -14,11 +14,11 @@ ms.assetid: b03685bc-5398-4c3f-901a-1219c1098fbe
 author: chugugrace
 ms.author: chugu
 ms.openlocfilehash: 2a33786e4ffb5029cc2bf56baa9c77d6bd73b3e4
-ms.sourcegitcommit: e700497f962e4c2274df16d9e651059b42ff1a10
+ms.sourcegitcommit: 192f6a99e19e66f0f817fdb1977f564b2aaa133b
 ms.translationtype: HT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 08/17/2020
-ms.locfileid: "88484334"
+ms.lasthandoff: 11/25/2020
+ms.locfileid: "96123190"
 ---
 # <a name="building-deploying-and-debugging-custom-objects"></a>사용자 지정 개체 빌드, 배포 및 디버깅
 
@@ -66,7 +66,7 @@ ms.locfileid: "88484334"
 ##  <a name="building-the-assembly"></a><a name="building"></a> 어셈블리 빌드  
  프로젝트를 서명한 후에는 [!INCLUDE[ssBIDevStudio](../../includes/ssbidevstudio-md.md)]의 **빌드** 메뉴에서 사용할 수 있는 명령을 사용하여 프로젝트 또는 솔루션을 빌드하거나 다시 빌드해야 합니다. 솔루션에 사용자 지정 사용자 인터페이스를 위한 별도의 프로젝트가 포함된 경우 이 프로젝트도 강력한 이름으로 서명해야 하며 이 프로젝트를 솔루션과 동시에 빌드할 수 있습니다.  
   
- 어셈블리를 배포하고 글로벌 어셈블리 캐시에 설치하는 다음 두 단계를 수행하는 데 가장 편리한 방법은 [!INCLUDE[vsprvs](../../includes/vsprvs-md.md)]에서 이러한 단계를 빌드 후 이벤트로 스크립팅하는 것입니다. 빌드 이벤트는 [프로젝트 속성]의 **컴파일** 페이지([!INCLUDE[vbprvb](../../includes/vbprvb-md.md)] 프로젝트의 경우) 또는 **빌드 이벤트** 페이지(C# 프로젝트의 경우)에서 사용할 수 있습니다. **gacutil.exe**와 같은 명령 프롬프트 유틸리티에는 전체 경로가 필요합니다. 공백이 포함된 경로와 공백이 포함된 경로로 확장되는 $(TargetPath) 등의 매크로는 모두 따옴표로 묶어야 합니다.  
+ 어셈블리를 배포하고 글로벌 어셈블리 캐시에 설치하는 다음 두 단계를 수행하는 데 가장 편리한 방법은 [!INCLUDE[vsprvs](../../includes/vsprvs-md.md)]에서 이러한 단계를 빌드 후 이벤트로 스크립팅하는 것입니다. 빌드 이벤트는 [프로젝트 속성]의 **컴파일** 페이지([!INCLUDE[vbprvb](../../includes/vbprvb-md.md)] 프로젝트의 경우) 또는 **빌드 이벤트** 페이지(C# 프로젝트의 경우)에서 사용할 수 있습니다. **gacutil.exe** 와 같은 명령 프롬프트 유틸리티에는 전체 경로가 필요합니다. 공백이 포함된 경로와 공백이 포함된 경로로 확장되는 $(TargetPath) 등의 매크로는 모두 따옴표로 묶어야 합니다.  
   
  다음은 사용자 지정 로그 공급자에 대한 빌드 후 이벤트 명령줄의 예입니다.  
   
@@ -88,7 +88,7 @@ copy $(TargetFileName) "C:\Program Files\Microsoft SQL Server\130\DTS\LogProvide
   
 -   어셈블리를 적절한 폴더에 직접 빌드합니다.  
   
- **C:\Program Files\Microsoft SQL Server\130\DTS**에 있는 다음 배포 폴더는 다양한 유형의 사용자 지정 개체에 사용됩니다.  
+ **C:\Program Files\Microsoft SQL Server\130\DTS** 에 있는 다음 배포 폴더는 다양한 유형의 사용자 지정 개체에 사용됩니다.  
   
 |사용자 지정 개체|배포 폴더|  
 |-------------------|-----------------------|  
@@ -101,13 +101,13 @@ copy $(TargetFileName) "C:\Program Files\Microsoft SQL Server\130\DTS\LogProvide
 >  이러한 폴더에 복사된 어셈블리는 사용 가능한 태스크, 연결 관리자 등의 열거형을 지원합니다. 따라서 사용자 지정 개체의 사용자 지정 사용자 인터페이스만 포함된 어셈블리는 이러한 폴더에 배포하지 않아도 됩니다.  
   
 ##  <a name="installing-the-assembly-in-the-global-assembly-cache"></a><a name="installing"></a> 전역 어셈블리 캐시에 어셈블리 설치  
- GAC(전역 어셈블리 캐시)에 태스크 어셈블리를 설치하려면 **gacutil.exe** 명령줄 도구를 사용하거나 어셈블리를 `%system%\assembly` 디렉터리에 끌어 놓습니다. 편의상 **gacutil.exe**에 대한 호출을 빌드 후 이벤트에 포함할 수도 있습니다.  
+ GAC(전역 어셈블리 캐시)에 태스크 어셈블리를 설치하려면 **gacutil.exe** 명령줄 도구를 사용하거나 어셈블리를 `%system%\assembly` 디렉터리에 끌어 놓습니다. 편의상 **gacutil.exe** 에 대한 호출을 빌드 후 이벤트에 포함할 수도 있습니다.  
   
- 다음 명령은 **gacutil.exe**를 사용하여 *MyTask.dll*이라는 구성 요소를 GAC에 설치합니다.  
+ 다음 명령은 **gacutil.exe** 를 사용하여 *MyTask.dll* 이라는 구성 요소를 GAC에 설치합니다.  
   
  `gacutil /iF MyTask.dll`  
   
- 새 버전의 사용자 지정 개체를 설치한 후에는 [!INCLUDE[ssIS](../../includes/ssis-md.md)] 디자이너를 닫았다가 다시 열어야 합니다. 전역 어셈블리 캐시에 이전 버전의 사용자 지정 개체를 설치한 경우 새 버전을 설치하려면 먼저 이전 버전을 제거해야 합니다. 어셈블리를 제거하려면 **gacutil.exe**를 실행하고 `/u` 옵션을 사용하여 어셈블리 이름을 지정합니다.  
+ 새 버전의 사용자 지정 개체를 설치한 후에는 [!INCLUDE[ssIS](../../includes/ssis-md.md)] 디자이너를 닫았다가 다시 열어야 합니다. 전역 어셈블리 캐시에 이전 버전의 사용자 지정 개체를 설치한 경우 새 버전을 설치하려면 먼저 이전 버전을 제거해야 합니다. 어셈블리를 제거하려면 **gacutil.exe** 를 실행하고 `/u` 옵션을 사용하여 어셈블리 이름을 지정합니다.  
   
  전역 어셈블리 캐시에 대한 자세한 내용은 "[!INCLUDE[dnprdnshort](../../includes/dnprdnshort-md.md)] 도구"의 "전역 어셈블리 캐시 도구(Gactutil.exe)"를 참조하십시오.  
   
@@ -120,10 +120,10 @@ copy $(TargetFileName) "C:\Program Files\Microsoft SQL Server\130\DTS\LogProvide
   
 3.  도구 상자를 새로 고칩니다.  
   
-4.  [!INCLUDE[vsprvs](../../includes/vsprvs-md.md)]를 **devenv.exe**에 연결하고 초기화 코드를 단계별로 실행하도록 중단점을 설정하여 예외가 발생하지 않도록 합니다.  
+4.  [!INCLUDE[vsprvs](../../includes/vsprvs-md.md)]를 **devenv.exe** 에 연결하고 초기화 코드를 단계별로 실행하도록 중단점을 설정하여 예외가 발생하지 않도록 합니다.  
   
 ##  <a name="testing-and-debugging-your-code"></a><a name="testing"></a> 코드 테스트 및 디버깅  
- 사용자 지정 개체의 런타임 메서드를 가장 간단하게 디버그하려면 사용자 지정 개체를 빌드하고 해당 구성 요소를 사용하는 패키지를 실행한 후에 [!INCLUDE[vsprvs](../../includes/vsprvs-md.md)]에서 **dtexec.exe**를 시작합니다.  
+ 사용자 지정 개체의 런타임 메서드를 가장 간단하게 디버그하려면 사용자 지정 개체를 빌드하고 해당 구성 요소를 사용하는 패키지를 실행한 후에 [!INCLUDE[vsprvs](../../includes/vsprvs-md.md)]에서 **dtexec.exe** 를 시작합니다.  
   
  **Validate** 메서드와 같은 구성 요소의 디자인 타임 메서드를 디버그하려면 [!INCLUDE[vsprvs](../../includes/vsprvs-md.md)]의 두 번째 인스턴스에서 해당 구성 요소를 사용하는 패키지를 열고 **devenv.exe** 프로세스에 연결합니다.  
   
@@ -133,7 +133,7 @@ copy $(TargetFileName) "C:\Program Files\Microsoft SQL Server\130\DTS\LogProvide
   
 1.  이 항목에 설명된 대로 디버그 구성 요소에서 프로젝트를 서명 및 빌드하고 배포한 다음 전역 어셈블리 캐시에 설치합니다.  
   
-2.  **프로젝트 속성**의 **디버그** 탭에서 **시작 외부 프로그램**을 **시작 동작**으로 선택하고, C:\Program Files\Microsoft SQL Server\130\DTS\Binn에 기본적으로 설치되는 **dtexec.exe**를 찾습니다.  
+2.  **프로젝트 속성** 의 **디버그** 탭에서 **시작 외부 프로그램** 을 **시작 동작** 으로 선택하고, C:\Program Files\Microsoft SQL Server\130\DTS\Binn에 기본적으로 설치되는 **dtexec.exe** 를 찾습니다.  
   
 3.  **명령줄 옵션** 입력란의 **시작 옵션** 아래에서 구성 요소를 사용하는 패키지를 실행하는 데 필요한 명령줄 인수를 입력합니다. 명령줄 인수는 /F[ILE] 스위치와 그 다음에 나오는 .dtsx 파일의 경로 및 파일 이름으로 구성되는 경우가 많습니다. 자세한 내용은 [dtexec Utility](../../integration-services/packages/dtexec-utility.md)를 참조하세요.  
   
@@ -149,17 +149,17 @@ copy $(TargetFileName) "C:\Program Files\Microsoft SQL Server\130\DTS\LogProvide
   
 3.  [!INCLUDE[vsprvs](../../includes/vsprvs-md.md)]의 두 번째 인스턴스를 열고 해당 사용자 지정 개체를 사용하는 패키지가 포함된 [!INCLUDE[ssISnoversion](../../includes/ssisnoversion-md.md)] 프로젝트를 로드합니다.  
   
-4.  [!INCLUDE[vsprvs](../../includes/vsprvs-md.md)]의 첫 번째 인스턴스에서 **디버그** 메뉴의 **프로세스에 연결**을 선택하여 패키지가 로드되는 **devenv.exe**의 두 번째 인스턴스에 연결합니다.  
+4.  [!INCLUDE[vsprvs](../../includes/vsprvs-md.md)]의 첫 번째 인스턴스에서 **디버그** 메뉴의 **프로세스에 연결** 을 선택하여 패키지가 로드되는 **devenv.exe** 의 두 번째 인스턴스에 연결합니다.  
   
 5.  [!INCLUDE[vsprvs](../../includes/vsprvs-md.md)]의 두 번째 인스턴스에서 패키지를 실행합니다.  
   
 #### <a name="to-debug-a-custom-objects-run-time-methods-by-attaching-to-sql-server-data-tools"></a>SQL Server Data Tools에 연결하여 사용자 지정 개체의 런타임 메서드를 디버깅하려면  
   
-1.  이전 절차에 나열된 단계를 완료한 후 **DtsDebugHost.exe**에 연결할 수 있도록 패키지 실행을 강제로 일시 중지합니다. **OnPreExecute** 이벤트에 중단점을 추가하거나, 프로젝트에 스크립트 태스크를 추가하고 모달 메시지 상자를 표시하는 스크립트를 입력하여 강제로 일시 중지할 수 있습니다.  
+1.  이전 절차에 나열된 단계를 완료한 후 **DtsDebugHost.exe** 에 연결할 수 있도록 패키지 실행을 강제로 일시 중지합니다. **OnPreExecute** 이벤트에 중단점을 추가하거나, 프로젝트에 스크립트 태스크를 추가하고 모달 메시지 상자를 표시하는 스크립트를 입력하여 강제로 일시 중지할 수 있습니다.  
   
-2.  패키지를 실행합니다. 일시 중지가 발생하면 코드 프로젝트가 열려 있는 [!INCLUDE[vsprvs](../../includes/vsprvs-md.md)] 인스턴스로 전환하고 **디버그** 메뉴에서 **프로세스에 연결**을 선택합니다. **형식** 열에 **x86** 전용으로 나열된 인스턴스가 아니라 **Managed, x86**으로 나열된 **DtsDebugHost.exe** 인스턴스에 연결해야 합니다.  
+2.  패키지를 실행합니다. 일시 중지가 발생하면 코드 프로젝트가 열려 있는 [!INCLUDE[vsprvs](../../includes/vsprvs-md.md)] 인스턴스로 전환하고 **디버그** 메뉴에서 **프로세스에 연결** 을 선택합니다. **형식** 열에 **x86** 전용으로 나열된 인스턴스가 아니라 **Managed, x86** 으로 나열된 **DtsDebugHost.exe** 인스턴스에 연결해야 합니다.  
   
-3.  일시 중지된 패키지로 돌아가서 중단점을 지나 계속하거나 **확인**을 클릭하여 스크립트 태스크에서 발생한 메시지 상자를 닫고 패키지 실행 및 디버깅을 계속합니다.  
+3.  일시 중지된 패키지로 돌아가서 중단점을 지나 계속하거나 **확인** 을 클릭하여 스크립트 태스크에서 발생한 메시지 상자를 닫고 패키지 실행 및 디버깅을 계속합니다.  
   
 ## <a name="see-also"></a>참고 항목  
  [Integration Services 사용자 지정 개체 개발](../../integration-services/extending-packages-custom-objects/developing-custom-objects-for-integration-services.md)   

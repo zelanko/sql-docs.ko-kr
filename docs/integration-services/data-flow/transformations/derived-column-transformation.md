@@ -21,11 +21,11 @@ ms.assetid: 8eba755e-8e48-4233-bd1e-09a46bf2692f
 author: chugugrace
 ms.author: chugu
 ms.openlocfilehash: df48a338c2fe6cbc938284ed85b3b08fdc06f1cc
-ms.sourcegitcommit: cfa04a73b26312bf18d8f6296891679166e2754d
+ms.sourcegitcommit: 192f6a99e19e66f0f817fdb1977f564b2aaa133b
 ms.translationtype: HT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 10/19/2020
-ms.locfileid: "92193221"
+ms.lasthandoff: 11/25/2020
+ms.locfileid: "96123377"
 ---
 # <a name="derived-column-transformation"></a>파생 열 변환
 
@@ -36,13 +36,13 @@ ms.locfileid: "92193221"
   
  이 변환을 사용하여 다음 태스크를 수행할 수 있습니다.  
   
--   여러 열의 데이터를 하나의 파생 열로 연결합니다. 예를 들어 식 **을 사용하여** FirstName **열과** LastName **열의 값을**FullName `FirstName + " " + LastName`이라는 단일 파생 열로 결합할 수 있습니다.  
+-   여러 열의 데이터를 하나의 파생 열로 연결합니다. 예를 들어 식 **을 사용하여** FirstName **열과** LastName **열의 값을** FullName `FirstName + " " + LastName`이라는 단일 파생 열로 결합할 수 있습니다.  
   
 -   SUBSTRING과 같은 함수를 사용하여 문자열 데이터에서 문자를 추출한 다음 결과를 파생 열에 저장합니다. 예를 들어 식 **을 사용하여** FirstName `SUBSTRING(FirstName,1,1)`열에서 특정인의 이니셜을 추출할 수 있습니다.  
   
--   숫자 데이터에 수치 연산 함수를 적용하고 계산 결과를 파생 열에 저장합니다. 예를 들어 식 **를 사용하여 숫자 열**SalesTax `ROUND(SalesTax, 2)`의 길이와 전체 자릿수를 소수 두 자리 수로 변경할 수 있습니다.  
+-   숫자 데이터에 수치 연산 함수를 적용하고 계산 결과를 파생 열에 저장합니다. 예를 들어 식 **를 사용하여 숫자 열** SalesTax `ROUND(SalesTax, 2)`의 길이와 전체 자릿수를 소수 두 자리 수로 변경할 수 있습니다.  
   
--   입력 열과 변수를 비교하는 식을 만듭니다. 예를 들어 식 **을 사용하여 변수** Version **을**ProductVersion **열의 데이터와 비교하고 비교 결과에 따라** Version **또는**ProductVersion `ProductVersion == @Version? ProductVersion : @Version`중 하나의 값을 사용할 수 있습니다.  
+-   입력 열과 변수를 비교하는 식을 만듭니다. 예를 들어 식 **을 사용하여 변수** Version **을** ProductVersion **열의 데이터와 비교하고 비교 결과에 따라** Version **또는** ProductVersion `ProductVersion == @Version? ProductVersion : @Version`중 하나의 값을 사용할 수 있습니다.  
   
 -   datetime 값의 일부를 추출합니다. 예를 들어 식 `DATEPART("year",GETDATE())`를 사용하여 GETDATE 및 DATEPART 함수로 현재 연도를 추출할 수 있습니다.  
   
@@ -56,7 +56,7 @@ ms.locfileid: "92193221"
     > [!NOTE]  
     >  파생 열 변환에서 덮어쓰는 입력 열을 참조하는 식은 파생 값이 아닌 원래 열 값을 사용합니다.  
   
--   새 열에 결과를 추가하고 데이터 형식이 **string**인 경우 코드 페이지를 지정합니다. 자세한 내용은 [Comparing String Data](../../../integration-services/data-flow/comparing-string-data.md)을 참조하세요.  
+-   새 열에 결과를 추가하고 데이터 형식이 **string** 인 경우 코드 페이지를 지정합니다. 자세한 내용은 [Comparing String Data](../../../integration-services/data-flow/comparing-string-data.md)을 참조하세요.  
   
  파생 열 변환에는 FriendlyExpression 사용자 지정 속성이 포함됩니다. 이 속성은 패키지가 로드되면 속성 식을 사용하여 업데이트할 수 있습니다. 자세한 내용은 [패키지에서 속성 식 사용](../../../integration-services/expressions/use-property-expressions-in-packages.md)및 [변환 사용자 지정 속성](../../../integration-services/data-flow/transformations/transformation-custom-properties.md)을 참조하세요.  
   
@@ -114,7 +114,7 @@ ms.locfileid: "92193221"
  새 열에 데이터를 추가하는 경우 **파생 열 변환 편집기** 대화 상자가 데이터 형식을 기반으로 숫자 데이터의 소수 자릿수를 자동으로 설정합니다. 이 열의 값은 읽기 전용입니다.  
   
  **코드 페이지**  
- 새 열에 데이터를 추가하는 경우 **파생 열 변환 편집기** 대화 상자가 DT_STR 데이터 형식에 대한 코드 페이지를 자동으로 설정합니다. **코드 페이지**를 업데이트할 수 있습니다.  
+ 새 열에 데이터를 추가하는 경우 **파생 열 변환 편집기** 대화 상자가 DT_STR 데이터 형식에 대한 코드 페이지를 자동으로 설정합니다. **코드 페이지** 를 업데이트할 수 있습니다.  
   
  **오류 출력 구성**  
  [오류 출력 구성](../error-handling-in-data.md) 대화 상자를 사용하여 오류 처리 방법을 지정합니다.  

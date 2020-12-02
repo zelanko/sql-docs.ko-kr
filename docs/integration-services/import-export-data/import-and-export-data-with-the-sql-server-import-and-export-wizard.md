@@ -24,10 +24,10 @@ ms.assetid: c0e4d867-b2a9-4b2a-844b-2fe45be88f81
 author: chugugrace
 ms.author: chugu
 ms.openlocfilehash: e8146e56063f73ddc054595c588e396ff4fcb8c0
-ms.sourcegitcommit: 49ee3d388ddb52ed9cf78d42cff7797ad6d668f2
+ms.sourcegitcommit: c5078791a07330a87a92abb19b791e950672e198
 ms.translationtype: HT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 11/09/2020
+ms.lasthandoff: 11/26/2020
 ms.locfileid: "94384733"
 ---
 # <a name="import-and-export-data-with-the-sql-server-import-and-export-wizard"></a>SQL Server 가져오기 및 내보내기 마법사를 사용하여 데이터 가져오기 및 내보내기
@@ -52,7 +52,7 @@ ms.locfileid: "94384733"
 | 데이터 원본 | 추가 파일을 다운로드해야 하나요? |
 |-------------|-----------------------------------------|
 |**엔터프라이즈 데이터베이스**<br/>[!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)], Oracle, DB2 및 기타|SQL Server 또는 SSDT(SQL Server Data Tools)는 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]에 연결하는 데 필요한 파일을 설치합니다. 그러나 SSDT는 Oracle 또는 IBM DB2와 같은 다른 엔터프라이즈 데이터베이스에 연결하는 데 필요한 모든 파일을 설치하지 않습니다.<br/><br/>엔터프라이즈 데이터베이스에 연결하려면 일반적으로 다음 두 가지 항목이 있어야 합니다.<br/><br/>1. **클라이언트 소프트웨어** - 엔터프라이즈 데이터베이스 시스템용으로 클라이언트 소프트웨어가 이미 설치된 경우 일반적으로 연결해야 합니다. 클라이언트 소프트웨어를 설치하지 않은 경우 데이터베이스 관리자에게 사용이 허가된 복사본 설치 방법을 문의하세요.<br/><br/>2. **드라이버 또는 공급자** - Microsoft는 Oracle에 연결할 드라이버와 공급자를 설치합니다. IBM DB2에 연결하려면 [Microsoft SQL Server 2016 Feature Pack](https://www.microsoft.com/download/details.aspx?id=56833)에서 Microsoft SQL Server용 MicrosoftÂ® OLEDB Provider for DB2 v5.0을 가져옵니다.<br/><br/>자세한 내용은 [SQL Server 데이터 원본에 연결](connect-to-a-sql-server-data-source-sql-server-import-and-export-wizard.md) 또는 [Oracle 데이터 원본에 연결](connect-to-an-oracle-data-source-sql-server-import-and-export-wizard.md)을 참조하세요.|
-|**텍스트 파일** (플랫 파일)|추가 파일이 필요 없습니다.<br/><br/>자세한 내용은 [플랫 파일 데이터 원본에 연결](connect-to-a-flat-file-data-source-sql-server-import-and-export-wizard.md)을 참조하세요.|
+|**텍스트 파일**(플랫 파일)|추가 파일이 필요 없습니다.<br/><br/>자세한 내용은 [플랫 파일 데이터 원본에 연결](connect-to-a-flat-file-data-source-sql-server-import-and-export-wizard.md)을 참조하세요.|
 |**Microsoft Excel 및 Microsoft Access 파일**|Microsoft Office는 데이터 원본으로 Excel 및 Access 파일에 연결해야 하는 모든 파일을 설치하지 않습니다. [Microsoft Access 데이터베이스 엔진 2016 재배포 가능 패키지](https://www.microsoft.com/download/details.aspx?id=54920) 다운로드를 가져옵니다.<br/><br/>자세한 내용은 [Excel 데이터 원본에 연결](../../integration-services/import-export-data/connect-to-an-excel-data-source-sql-server-import-and-export-wizard.md) 또는 [Access 데이터 원본에 연결](../../integration-services/import-export-data/connect-to-an-access-data-source-sql-server-import-and-export-wizard.md)을 참조하세요.|
 |**Azure 데이터 원본**<br/>현재 Azure Blob Storage만 해당합니다.|SQL Server Data Tools는 Azure Blob Storage에 연결하는 데 필요한 파일을 데이터 원본으로 설치하지 않습니다. 다운로드 [Azure용 Microsoft SQL Server 2016 Integration Services Feature Pack](https://www.microsoft.com/download/details.aspx?id=49492)을 가져옵니다.<br/><br/>자세한 내용은 [Azure Blob Storage에 연결](../../integration-services/import-export-data/connect-to-azure-blob-storage-sql-server-import-and-export-wizard.md)을 참조하세요.|
 |**오픈 소스 데이터베이스**<br/>PostgreSQL, MySQL 및 기타|이러한 데이터 원본에 연결하려면 추가 파일을 다운로드해야 합니다.<br/><br/>- **PostgreSQL** 의 경우 [PostgreSQL 데이터 원본에 연결](../../integration-services/import-export-data/connect-to-a-postgresql-data-source-sql-server-import-and-export-wizard.md)을 참조하세요.<br/>- **MySQL** 의 경우 [MySQL 데이터 원본에 연결](../../integration-services/import-export-data/connect-to-a-mysql-data-source-sql-server-import-and-export-wizard.md)을 참조하세요.|

@@ -16,11 +16,11 @@ ms.assetid: d9a2bfae-fcc8-46be-b588-4a9db03f7e45
 author: chugugrace
 ms.author: chugu
 ms.openlocfilehash: 29fb988b6c326f9c6bb6ef39d5d1fc031d12f908
-ms.sourcegitcommit: e700497f962e4c2274df16d9e651059b42ff1a10
+ms.sourcegitcommit: 192f6a99e19e66f0f817fdb1977f564b2aaa133b
 ms.translationtype: HT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 08/17/2020
-ms.locfileid: "88351909"
+ms.lasthandoff: 11/25/2020
+ms.locfileid: "96123773"
 ---
 # <a name="folder-properties-dialog-box"></a>폴더 속성 대화 상자
 
@@ -31,13 +31,13 @@ ms.locfileid: "88351909"
   
 ## <a name="to-set-folder-description-and-permissions"></a>폴더 설명 및 사용 권한을 설정 하려면  
   
-1.  해당 폴더를 마우스 오른쪽 단추로 클릭한 다음 **속성**을 선택합니다.  
+1.  해당 폴더를 마우스 오른쪽 단추로 클릭한 다음 **속성** 을 선택합니다.  
   
 2.  **일반** 페이지의 **일반** 아래에서 **설명** 을 선택하고 선택적인 설명을 입력합니다.  
   
-3.  **사용 권한** 페이지에서 **찾아보기...** 를 클릭하고 하나 이상의 데이터베이스 보안 주체를 선택하고 **확인**을 클릭합니다.  
+3.  **사용 권한** 페이지에서 **찾아보기...** 를 클릭하고 하나 이상의 데이터베이스 보안 주체를 선택하고 **확인** 을 클릭합니다.  
   
-4.  **로그인 또는 역할** 아래에서 이름을 선택하고 **사용 권한**아래에서 적합한 권한을 지정합니다.  
+4.  **로그인 또는 역할** 아래에서 이름을 선택하고 **사용 권한** 아래에서 적합한 권한을 지정합니다.  
   
 5.  **확인** 을 클릭하여 변경 사항을 수락하고 **폴더 속성** 대화 상자를 닫습니다.  
   

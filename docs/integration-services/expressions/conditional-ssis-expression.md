@@ -15,11 +15,11 @@ ms.assetid: d38e6890-7338-4ce0-a837-2dbb41823a37
 author: chugugrace
 ms.author: chugu
 ms.openlocfilehash: f63ea95489b639672ddb50b44fa882eecc463025
-ms.sourcegitcommit: e700497f962e4c2274df16d9e651059b42ff1a10
+ms.sourcegitcommit: 192f6a99e19e66f0f817fdb1977f564b2aaa133b
 ms.translationtype: HT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 08/17/2020
-ms.locfileid: "88425565"
+ms.lasthandoff: 11/25/2020
+ms.locfileid: "96123276"
 ---
 # <a name="--conditional-ssis-expression"></a>? : (조건부)(SSIS 식)
 
@@ -47,7 +47,7 @@ boolean_expression?expression1:expression2
  유효한 식입니다.  
   
 ## <a name="result-types"></a>결과 형식  
- *expression1* 또는 *expression2*의 데이터 형식입니다.  
+ *expression1* 또는 *expression2* 의 데이터 형식입니다.  
   
 ## <a name="remarks"></a>설명  
  *boolean_expression* 이 NULL이면 식 결과도 NULL입니다. *expression1* 또는 *expression2* 중에서 선택한 식이 NULL이면 결과도 NULL입니다. 선택한 식은 NULL이 아니지만 선택하지 않은 식이 NULL이면 결과는 선택한 식의 값입니다.  
@@ -58,7 +58,7 @@ boolean_expression?expression1:expression2
   
 -   DT_BYTES 데이터 형식의 결과 길이는 둘 중에서 긴 인수의 길이입니다.  
   
- 식 집합 *expression1* 및 *expression2*는 유효한 데이터 형식으로 계산되고 다음 규칙 중 하나를 따라야 합니다.  
+ 식 집합 *expression1* 및 *expression2* 는 유효한 데이터 형식으로 계산되고 다음 규칙 중 하나를 따라야 합니다.  
   
 -   **Numeric***expression1* 및 *expression2* 모두 숫자 데이터 형식이어야 합니다. 데이터 형식의 교집합은 식 계산기가 수행하는 암시적 숫자 변환에 대한 규칙에 지정된 대로 숫자 데이터 형식이어야 합니다. 두 숫자 데이터 형식의 교집합은 Null일 수 없습니다. 자세한 내용은 [Integration Services Data Types in Expressions](../../integration-services/expressions/integration-services-data-types-in-expressions.md)을 참조하세요.  
   

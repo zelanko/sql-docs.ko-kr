@@ -26,10 +26,10 @@ ms.assetid: 1d9c8247-fd89-4544-be9c-01c95b745db0
 author: rothja
 ms.author: jroth
 ms.openlocfilehash: 837c84bbeda46bf78d670124cc2d33f820fe9891
-ms.sourcegitcommit: cfa04a73b26312bf18d8f6296891679166e2754d
+ms.sourcegitcommit: c5078791a07330a87a92abb19b791e950672e198
 ms.translationtype: HT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 10/19/2020
+ms.lasthandoff: 11/26/2020
 ms.locfileid: "92195525"
 ---
 # <a name="return-transact-sql"></a>RETURN(Transact-SQL)
@@ -52,7 +52,7 @@ RETURN [ integer_expression ]
 [!INCLUDE[sql-server-tsql-previous-offline-documentation](../../includes/sql-server-tsql-previous-offline-documentation.md)]
 
 ## <a name="return-types"></a>반환 형식
- **int**를 선택적으로 반환합니다.  
+ **int** 를 선택적으로 반환합니다.  
   
 > [!NOTE]  
 >  달리 설명하지 않는 한 모든 시스템 저장 프로시저는 0 값을 반환합니다. 이 값은 성공을 나타내며 0 이외의 값은 실패를 나타냅니다.  

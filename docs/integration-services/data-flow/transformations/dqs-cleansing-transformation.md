@@ -18,11 +18,11 @@ ms.assetid: d2ec1b1a-c745-4741-b57c-6fdb524a154c
 author: chugugrace
 ms.author: chugu
 ms.openlocfilehash: ce6e3f36d8216f08493933798cdab558274e0cb5
-ms.sourcegitcommit: e700497f962e4c2274df16d9e651059b42ff1a10
+ms.sourcegitcommit: 192f6a99e19e66f0f817fdb1977f564b2aaa133b
 ms.translationtype: HT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 08/17/2020
-ms.locfileid: "88495709"
+ms.lasthandoff: 11/25/2020
+ms.locfileid: "96123391"
 ---
 # <a name="dqs-cleansing-transformation"></a>DQS 정리 변환
 
@@ -39,7 +39,7 @@ ms.locfileid: "88495709"
   
 -   열은 호환 가능한 데이터 형식의 도메인에 매핑됩니다.  
   
- 변환에는 행 수준 오류를 처리하기 위해 구성할 수 있는 오류 출력이 포함됩니다. 오류 출력을 구성하려면 **DQS 정리 변환 편집기**를 사용합니다.  
+ 변환에는 행 수준 오류를 처리하기 위해 구성할 수 있는 오류 출력이 포함됩니다. 오류 출력을 구성하려면 **DQS 정리 변환 편집기** 를 사용합니다.  
   
  데이터 흐름에 [Fuzzy Grouping Transformation](../../../integration-services/data-flow/transformations/fuzzy-grouping-transformation.md) 을 포함하여 중복된 것으로 간주되는 데이터 행을 식별할 수 있습니다.  
   
@@ -79,11 +79,11 @@ ms.locfileid: "88495709"
   
 1.  [!INCLUDE[ssISnoversion](../../../includes/ssisnoversion-md.md)] 에서 [!INCLUDE[ssBIDevStudioFull](../../../includes/ssbidevstudiofull-md.md)]패키지에 DQS 정리 변환을 추가합니다.  
   
-2.  구성 요소를 마우스 오른쪽 단추로 클릭한 다음 **편집**을 클릭합니다.  
+2.  구성 요소를 마우스 오른쪽 단추로 클릭한 다음 **편집** 을 클릭합니다.  
   
 ###  <a name="set-options-on-the-connection-manager-tab"></a><a name="connection"></a> 연결 관리자 탭에서 옵션 설정  
  **데이터 품질 연결 관리자**  
- 목록에서 기존 DQS 연결 관리자를 선택하거나 **새로 만들기**를 클릭하여 새 연결을 만듭니다.  
+ 목록에서 기존 DQS 연결 관리자를 선택하거나 **새로 만들기** 를 클릭하여 새 연결을 만듭니다.  
   
  **새로 만들기**  
  **DQS 정리 연결 관리자** 대화 상자를 사용하여 새 연결 관리자를 만듭니다. [DQS 정리 연결 관리자 대화 상자에서 옵션 설정](#manager)을 참조하세요.  
@@ -128,7 +128,7 @@ ms.locfileid: "88495709"
  열 이름을 수정할 필드를 클릭합니다.  
   
  **출력 별칭**  
- **DQS 정리 변환**을 통해 출력될 열을 나열합니다. 원래 열 값 또는 수정된 값이 들어 있는 열입니다.  
+ **DQS 정리 변환** 을 통해 출력될 열을 나열합니다. 원래 열 값 또는 수정된 값이 들어 있는 열입니다.  
   
  열 이름을 수정할 필드를 클릭합니다.  
   
@@ -162,7 +162,7 @@ ms.locfileid: "88495709"
   
 1.  [!INCLUDE[ssBIDevStudioFull](../../../includes/ssbidevstudiofull-md.md)]에서 기존 [!INCLUDE[ssISnoversion](../../../includes/ssisnoversion-md.md)] 프로젝트를 열거나 새 프로젝트를 만듭니다.  
   
-2.  연결 영역을 마우스 오른쪽 단추로 클릭하고 **새 연결**을 클릭한 다음 **DQS**를 클릭합니다.  
+2.  연결 영역을 마우스 오른쪽 단추로 클릭하고 **새 연결** 을 클릭한 다음 **DQS** 를 클릭합니다.  
   
-3.  **추가**를 클릭합니다.  
+3.  **추가** 를 클릭합니다.  
   

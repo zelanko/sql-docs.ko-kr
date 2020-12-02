@@ -12,10 +12,10 @@ ms.assetid: e26d7884-e772-46fa-bfdc-38567fe976a1
 author: chugugrace
 ms.author: chugu
 ms.openlocfilehash: 3275ee19e271c6d9d98e7ad432ad3a772283b583
-ms.sourcegitcommit: cfa04a73b26312bf18d8f6296891679166e2754d
+ms.sourcegitcommit: c5078791a07330a87a92abb19b791e950672e198
 ms.translationtype: HT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 10/19/2020
+ms.lasthandoff: 11/26/2020
 ms.locfileid: "92193728"
 ---
 # <a name="what39s-new-in-integration-services-in-sql-server-2017"></a>SQL Server 2017 Integration Services의 새로운 기능
@@ -62,9 +62,9 @@ Azure용 Integration Services 기능 팩에는 SQL Server의 향상된 연결성
 
 -   Scale Out Master에서 이제 고가용성을 지원합니다. SSISDB용 Always On을 사용하도록 설정하고, Scale Out 마스터 서비스를 호스팅하는 서버에 대한 Windows Server 장애 조치 클러스터링을 설정할 수 있습니다. 이 변경된 기능을 Scale Out 마스터에 적용하면 단일 장애 지점을 방지하고 전체 Scale Out 배포에 고가용성을 제공할 수 있습니다.
 -   Scale Out Worker에서 실행 로그의 장애 조치(failover) 처리가 향상되었습니다. Scale Out 작업자가 예기치 않게 중지되는 경우 실행 로그가 로컬 디스크에 유지됩니다. 나중에 작업자가 다시 시작되면 지속형 로그를 다시 로드하고 SSISDB에 계속 저장합니다.
--   일관성과 가독성을 향상하기 위해 저장 프로시저 **[catalog].[create_execution]** 의 *runincluster* 매개 변수 이름이 *runinscaleout*으로 변경되었습니다. 이러한 매개 변수 이름의 변경으로 인해 미치는 영향은 다음과 같습니다.
-    -   Scale Out에서 패키지를 실행하는 기존 스크립트가 있는 경우 매개 변수 이름을 *runincluster*에서 *runinscaleout*으로 변경해야만 RC1에서 스크립트가 작동합니다.
-    -   SSMS(SQL Server Management Studio) 17.1 및 이전 버전은 RC1의 Scale Out에서 패키지 실행을 트리거할 수 없습니다. 오류 메시지: “ *@runincluster* 은(는) 프로시저 **create_execution**의 매개 변수가 아닙니다.” 이 문제는 다음 릴리스인 SSMS 버전 17.2에서 해결됩니다. SSMS 17.2 이상 버전은 Scale Out에서 새 매개 변수 이름 및 패키지 실행을 지원합니다. 해결 방법으로, SSMS 버전 17.2를 제공할 때까지 기존 버전의 SSMS를 사용하여 패키지 실행 스크립트를 생성한 다음 스크립트에서 *runincluster* 매개 변수의 이름을 *runinscaleout*으로 변경하여 해당 스크립트를 실행하면 됩니다.
+-   일관성과 가독성을 향상하기 위해 저장 프로시저 **[catalog].[create_execution]** 의 *runincluster* 매개 변수 이름이 *runinscaleout* 으로 변경되었습니다. 이러한 매개 변수 이름의 변경으로 인해 미치는 영향은 다음과 같습니다.
+    -   Scale Out에서 패키지를 실행하는 기존 스크립트가 있는 경우 매개 변수 이름을 *runincluster* 에서 *runinscaleout* 으로 변경해야만 RC1에서 스크립트가 작동합니다.
+    -   SSMS(SQL Server Management Studio) 17.1 및 이전 버전은 RC1의 Scale Out에서 패키지 실행을 트리거할 수 없습니다. 오류 메시지: “ *@runincluster* 은(는) 프로시저 **create_execution** 의 매개 변수가 아닙니다.” 이 문제는 다음 릴리스인 SSMS 버전 17.2에서 해결됩니다. SSMS 17.2 이상 버전은 Scale Out에서 새 매개 변수 이름 및 패키지 실행을 지원합니다. 해결 방법으로, SSMS 버전 17.2를 제공할 때까지 기존 버전의 SSMS를 사용하여 패키지 실행 스크립트를 생성한 다음 스크립트에서 *runincluster* 매개 변수의 이름을 *runinscaleout* 으로 변경하여 해당 스크립트를 실행하면 됩니다.
 -   SSIS 카탈로그에 SSIS 패키지를 실행하기 위한 기본 모드를 지정하는 새 전역 속성이 있습니다. 이 새 속성은 null로 설정된 *runinscaleout* 매개 변수를 사용하여 **[catalog].[create_execution]** 저장 프로시저를 호출할 때 적용됩니다. 이 모드는 SSIS SQL 에이전트 작업에도 적용됩니다. SSMS의 SSISDB 노드에 대한 [속성] 대화 상자에서 또는 다음 명령을 사용하여 새 전역 속성을 설정할 수 있습니다.
     ```sql
     EXEC [catalog].[configure_catalog] @property_name=N'DEFAULT_EXECUTION_MODE', @property_value=1
@@ -77,7 +77,7 @@ Azure용 Integration Services 기능 팩에는 SQL Server의 향상된 연결성
 -   이제 Scale Out에서 실행을 트리거할 때 **Use32BitRuntime** 매개 변수를 사용할 수 있습니다.
 -   Scale Out의 패키지 실행에 대해 SSISDB에 로깅하는 성능이 향상되었습니다. 이제 이벤트 메시지 및 메시지 컨텍스트 로그가 하나씩 기록되는 대신 일괄 처리 모드로 SSISDB에 기록됩니다. 이 향상된 기능에 대한 몇 가지 추가 참고 사항은 다음과 같습니다.        
     - SSMS(SQL Server Management Studio) 현재 버전의 일부 보고서에는 현재 Scale Out의 실행에 대한 이러한 로그가 표시되지 않습니다. SSMS의 다음 릴리스에서 지원될 예정됩니다. 영향을 받는 보고서로 Integration Services 대시보드의 *모든 연결* 보고서, *오류 컨텍스트* 보고서 및 *연결 정보* 섹션이 있습니다.
-    - 새로운 **event_message_guid** 열이 추가되었습니다. Scale Out에서 이러한 실행 로그를 쿼리할 때 **event_message_id**를 사용하는 대신 [catalog]. [event_message_context] 뷰 및 [catalog]. [event_messages] 뷰에 이 열을 조인합니다.
+    - 새로운 **event_message_guid** 열이 추가되었습니다. Scale Out에서 이러한 실행 로그를 쿼리할 때 **event_message_id** 를 사용하는 대신 [catalog]. [event_message_context] 뷰 및 [catalog]. [event_messages] 뷰에 이 열을 조인합니다.
 -   SSIS Scale Out에 대한 관리 애플리케이션을 가져오려면 [SSMS(SQL Server Management Studio)](../ssms/download-sql-server-management-studio-ssms.md) 17.1 이상을 다운로드합니다.
 
 ## <a name="new-in-ssis-in-sql-server-2017-ctp-20"></a>SQL Server 2017 CTP 2.0 SSIS의 새로운 기능

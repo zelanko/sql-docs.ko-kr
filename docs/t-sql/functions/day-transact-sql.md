@@ -25,16 +25,16 @@ author: markingmyname
 ms.author: maghan
 monikerRange: '>=aps-pdw-2016||=azuresqldb-current||=azure-sqldw-latest||>=sql-server-2016||=sqlallproducts-allversions||>=sql-server-linux-2017||=azuresqldb-mi-current'
 ms.openlocfilehash: f6e967b66ff4de244d1027583877c3250d4d11a7
-ms.sourcegitcommit: cc23d8646041336d119b74bf239a6ac305ff3d31
+ms.sourcegitcommit: 192f6a99e19e66f0f817fdb1977f564b2aaa133b
 ms.translationtype: HT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 09/23/2020
-ms.locfileid: "91116796"
+ms.lasthandoff: 11/25/2020
+ms.locfileid: "96117005"
 ---
 # <a name="day-transact-sql"></a>DAY(Transact-SQL)
 [!INCLUDE [sql-asdb-asdbmi-asa-pdw](../../includes/applies-to-version/sql-asdb-asdbmi-asa-pdw.md)]
 
-이 함수는 지정된 *date*의 일(월의 일)을 나타내는 정수를 반환합니다.
+이 함수는 지정된 *date* 의 일(월의 일)을 나타내는 정수를 반환합니다.
   
 모든 [!INCLUDE[tsql](../../includes/tsql-md.md)]의 날짜 및 시간 데이터 형식 및 함수에 대한 개요는 [날짜 및 시간 데이터 형식 및 함수&#40;Transact-SQL&#41;](../../t-sql/functions/date-and-time-data-types-and-functions-transact-sql.md)을 참조하세요.
   
@@ -59,7 +59,7 @@ DAY ( date )
 + **smalldatetime**
 + **time**
 
-*date*의 경우 `DAY`은 열 식, 식, 문자열 리터럴 또는 사용자 정의 변수를 허용합니다.
+*date* 의 경우 `DAY`은 열 식, 식, 문자열 리터럴 또는 사용자 정의 변수를 허용합니다.
   
 ## <a name="return-type"></a>반환 형식  
 **int**
@@ -67,7 +67,7 @@ DAY ( date )
 ## <a name="return-value"></a>Return Value  
 DAY는 [DATEPART](../../t-sql/functions/datepart-transact-sql.md)(**day**, *date*)와 같은 값을 반환합니다.
   
-*date*에 시간 부분만 포함된 경우 `DAY`는 기본 일인 1을 반환합니다.
+*date* 에 시간 부분만 포함된 경우 `DAY`는 기본 일인 1을 반환합니다.
   
 ## <a name="examples"></a>예제  
 이 명령문은 일 수인 `30`을 반환합니다.

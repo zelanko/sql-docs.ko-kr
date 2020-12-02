@@ -19,11 +19,11 @@ ms.assetid: b74bd9d4-758e-4b94-89a0-76dcda6d8c42
 author: VanMSFT
 ms.author: vanto
 ms.openlocfilehash: d0cdca25e14d58270185d4605287d22d1af5e0d2
-ms.sourcegitcommit: e700497f962e4c2274df16d9e651059b42ff1a10
+ms.sourcegitcommit: 192f6a99e19e66f0f817fdb1977f564b2aaa133b
 ms.translationtype: HT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 08/17/2020
-ms.locfileid: "88468178"
+ms.lasthandoff: 11/25/2020
+ms.locfileid: "96118618"
 ---
 # <a name="crypt_gen_random-transact-sql"></a>CRYPT_GEN_RANDOM(Transact-SQL)
 [!INCLUDE [SQL Server SQL Database](../../includes/applies-to-version/sql-asdb.md)]
@@ -45,7 +45,7 @@ CRYPT_GEN_RANDOM ( length [ , seed ] )
 `CRYPT_GEN_RANDOM`에서 만들 숫자의 길이(바이트)입니다. *length* 인수에는 **int** 데이터 형식 및 1~8000 사이의 값 범위가 있습니다. `CRYPT_GEN_RANDOM`은 이 범위 이외의 **int** 값에 NULL을 반환합니다. 
   
 *seed*  
-임의 초기값으로 사용할 선택적인 16진수입니다. *seed*의 길이는 *length* 인수의 값과 일치해야 합니다. *seed* 인수에는 **varbinary(8000)** 데이터 형식이 포함됩니다.
+임의 초기값으로 사용할 선택적인 16진수입니다. *seed* 의 길이는 *length* 인수의 값과 일치해야 합니다. *seed* 인수에는 **varbinary(8000)** 데이터 형식이 포함됩니다.
   
 ## <a name="returned-types"></a>반환 형식  
 **varbinary(8000)**

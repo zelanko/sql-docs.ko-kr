@@ -17,11 +17,11 @@ ms.assetid: c7794ba3-0de5-466b-ae8a-9ddd27360049
 author: chugugrace
 ms.author: chugu
 ms.openlocfilehash: b5a0e9c219a1649385b337ea378dec751f7851d4
-ms.sourcegitcommit: cfa04a73b26312bf18d8f6296891679166e2754d
+ms.sourcegitcommit: 192f6a99e19e66f0f817fdb1977f564b2aaa133b
 ms.translationtype: HT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 10/19/2020
-ms.locfileid: "92194562"
+ms.lasthandoff: 11/25/2020
+ms.locfileid: "96123305"
 ---
 # <a name="examples-of-advanced-integration-services-expressions"></a>고급 Integration Services 식의 예
 
@@ -53,7 +53,7 @@ ms.locfileid: "92194562"
     MakeFlag ==  TRUE && FinishedGoodsFlag == TRUE  && Size != (DT_WSTR,10)@BikeSize  
     ```  
   
--   이 예에서는 **CurrencyRate** 테이블을 사용합니다. 이 식은 테이블과 변수의 값을 비교합니다. **FromCurrencyCode** 또는 **ToCurrencyCode** 열의 항목이 변수 값과 같고 **AverageRate** 값이 **EndOfDayRate**값보다 크면 TRUE가 반환됩니다.  
+-   이 예에서는 **CurrencyRate** 테이블을 사용합니다. 이 식은 테이블과 변수의 값을 비교합니다. **FromCurrencyCode** 또는 **ToCurrencyCode** 열의 항목이 변수 값과 같고 **AverageRate** 값이 **EndOfDayRate** 값보다 크면 TRUE가 반환됩니다.  
   
     ```  
     (FromCurrencyCode == @FromCur || ToCurrencyCode == @ToCur) && AverageRate > EndOfDayRate  
@@ -74,7 +74,7 @@ ms.locfileid: "92194562"
 ## <a name="non-boolean-expressions"></a>부울이 아닌 식  
  부울이 아닌 식은 파생 열 변환, 속성 식 및 For 루프 컨테이너에 사용됩니다.  
   
--   이 예에서는 **Contact** 테이블을 사용합니다. 이 식은 **FirstName**, **MiddleName**및 **LastName** 열에서 선행 및 후행 공백을 제거합니다. **MiddleName** 열이 Null이 아니면 첫 문자를 추출하여 중간 이니셜과 **FirstName** 및 **LastName**열의 값을 연결하고 값 사이에 공백을 삽입합니다.  
+-   이 예에서는 **Contact** 테이블을 사용합니다. 이 식은 **FirstName**, **MiddleName** 및 **LastName** 열에서 선행 및 후행 공백을 제거합니다. **MiddleName** 열이 Null이 아니면 첫 문자를 추출하여 중간 이니셜과 **FirstName** 및 **LastName** 열의 값을 연결하고 값 사이에 공백을 삽입합니다.  
   
     ```  
     TRIM(FirstName) + " " + (!ISNULL(MiddleName) ? SUBSTRING(MiddleName,1,1) + " " : "") + TRIM(LastName)  

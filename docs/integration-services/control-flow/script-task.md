@@ -20,10 +20,10 @@ ms.assetid: f6cce7df-4bd6-4b75-9f89-6c37b4bb5558
 author: chugugrace
 ms.author: chugu
 ms.openlocfilehash: 4f5f18f3306256906d6c419957aa3d97d3506e7d
-ms.sourcegitcommit: cfa04a73b26312bf18d8f6296891679166e2754d
+ms.sourcegitcommit: c5078791a07330a87a92abb19b791e950672e198
 ms.translationtype: HT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 10/19/2020
+ms.lasthandoff: 11/26/2020
 ms.locfileid: "92197144"
 ---
 # <a name="script-task"></a>스크립트 태스크
@@ -50,7 +50,7 @@ ms.locfileid: "92197144"
 ## <a name="writing-and-running-the-script-that-the-task-uses"></a>태스크에서 사용하는 스크립트 작성 및 실행  
  스크립트 작업은 [!INCLUDE[msCoName](../../includes/msconame-md.md)] VSTA([!INCLUDE[vsprvs](../../includes/vsprvs-md.md)] Tools for Applications)를 스크립트 작성 환경과 스크립트 실행 엔진으로 사용합니다.  
   
- VSTA는 색 구분 기능이 포함된 [!INCLUDE[vsprvs](../../includes/vsprvs-md.md)] 편집기, IntelliSense, [!INCLUDE[vsprvs](../../includes/vsprvs-md.md)] 개체 탐색기 **등**환경의 모든 표준 기능을 제공합니다. 또한 다른 [!INCLUDE[msCoName](../../includes/msconame-md.md)] 개발 도구에서 사용하는 것과 동일한 디버거를 사용합니다. 스크립트 작업의 중단점이 [!INCLUDE[ssISnoversion](../../includes/ssisnoversion-md.md)] 태스크 및 컨테이너의 중단점과 문제 없이 작동합니다. VSTA는 [!INCLUDE[msCoName](../../includes/msconame-md.md)] Visual Basic 및 [!INCLUDE[msCoName](../../includes/msconame-md.md)] Visual C# 프로그래밍 언어를 지원합니다.  
+ VSTA는 색 구분 기능이 포함된 [!INCLUDE[vsprvs](../../includes/vsprvs-md.md)] 편집기, IntelliSense, [!INCLUDE[vsprvs](../../includes/vsprvs-md.md)] 개체 탐색기 **등** 환경의 모든 표준 기능을 제공합니다. 또한 다른 [!INCLUDE[msCoName](../../includes/msconame-md.md)] 개발 도구에서 사용하는 것과 동일한 디버거를 사용합니다. 스크립트 작업의 중단점이 [!INCLUDE[ssISnoversion](../../includes/ssisnoversion-md.md)] 태스크 및 컨테이너의 중단점과 문제 없이 작동합니다. VSTA는 [!INCLUDE[msCoName](../../includes/msconame-md.md)] Visual Basic 및 [!INCLUDE[msCoName](../../includes/msconame-md.md)] Visual C# 프로그래밍 언어를 지원합니다.  
   
  스크립트를 실행하려면 패키지가 실행되는 컴퓨터에 VSTA가 설치되어 있어야 합니다. 패키지를 실행하면 스크립트 태스크가 스크립트 엔진을 로드하고 스크립트를 실행합니다. 어셈블리에 대한 참조를 프로젝트에 추가하면 스크립트에서 외부 .NET 어셈블리에 액세스할 수 있습니다. 현재 .NET Core 및 .NET Standard 어셈블리 참조를 지원하지 않습니다.  
   

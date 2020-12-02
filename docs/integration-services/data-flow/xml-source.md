@@ -21,10 +21,10 @@ ms.assetid: 68c27ea5-e93d-4e26-bfb2-d967ca0a5282
 author: chugugrace
 ms.author: chugu
 ms.openlocfilehash: c066add73dbc8049f389c828363f1157bb39edae
-ms.sourcegitcommit: cfa04a73b26312bf18d8f6296891679166e2754d
+ms.sourcegitcommit: c5078791a07330a87a92abb19b791e950672e198
 ms.translationtype: HT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 10/19/2020
+ms.lasthandoff: 11/26/2020
 ms.locfileid: "92194565"
 ---
 # <a name="xml-source"></a>XML 원본
@@ -108,7 +108,7 @@ ms.locfileid: "92194565"
  XML 원본 데이터에 구조 및 데이터를 정의하고 유효성을 검사하는 XSD 스키마를 포함할지 여부를 지정합니다.  
   
  **XSD 위치**  
- XSD 스키마 파일의 경로 및 파일 이름을 입력하거나 **찾아보기**를 클릭하여 파일을 찾습니다.  
+ XSD 스키마 파일의 경로 및 파일 이름을 입력하거나 **찾아보기** 를 클릭하여 파일을 찾습니다.  
   
  **찾아보기**  
  **열기** 대화 상자를 사용하여 XSD 스키마 파일을 찾을 수 있습니다.  
@@ -120,7 +120,7 @@ ms.locfileid: "92194565"
   
 #### <a name="data-access-mode--xml-file-location"></a>데이터 액세스 모드 = XML 파일 위치  
  **XML 위치**  
- XML 데이터 파일의 경로 및 파일 이름을 입력하거나 **찾아보기**를 클릭하여 파일을 찾습니다.  
+ XML 데이터 파일의 경로 및 파일 이름을 입력하거나 **찾아보기** 를 클릭하여 파일을 찾습니다.  
   
  **찾아보기**  
  **열기** 대화 상자를 사용하여 XML 데이터 파일을 찾을 수 있습니다.  
@@ -154,7 +154,7 @@ ms.locfileid: "92194565"
  데이터 원본의 이름을 표시합니다.  
   
  **열**  
- **XML 원본 편집기** 대화 상자의 **연결 관리자**페이지에서 선택한 외부(원본) 열을 표시합니다.  
+ **XML 원본 편집기** 대화 상자의 **연결 관리자** 페이지에서 선택한 외부(원본) 열을 표시합니다.  
   
  **오류**  
  오류가 발생할 경우 수행할 동작을 지정합니다. 오류 무시, 행 리디렉션 또는 구성 요소 실패를 지정할 수 있습니다.  

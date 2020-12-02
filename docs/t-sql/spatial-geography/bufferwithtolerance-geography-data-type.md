@@ -19,11 +19,11 @@ ms.assetid: f1783e6b-0f17-464f-b1c7-1c3f7d8aa042
 author: MladjoA
 ms.author: mlandzic
 ms.openlocfilehash: e278c50b6a467660c827e3e59181945fdb9985e7
-ms.sourcegitcommit: 22dacedeb6e8721e7cdb6279a946d4002cfb5da3
+ms.sourcegitcommit: 192f6a99e19e66f0f817fdb1977f564b2aaa133b
 ms.translationtype: HT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 10/14/2020
-ms.locfileid: "92035806"
+ms.lasthandoff: 11/25/2020
+ms.locfileid: "96115009"
 ---
 # <a name="bufferwithtolerance-geography-data-type"></a>BufferWithTolerance(geography 데이터 형식)
 [!INCLUDE [SQL Server SQL Database](../../includes/applies-to-version/sql-asdb.md)]
@@ -57,7 +57,7 @@ _tolerance_
 최소 제한은 거리의 0.1%이며, 이보다 작은 허용 오차는 최소 제한으로 올림됩니다.  
   
 _relative_  
-_tolerance_ 값이 상대적인지, 아니면 절대적인지를 지정하는 **비트**입니다. 값이 'TRUE' 또는 1이면 허용 오차는 상대적입니다. _tolerance_ 매개 변수와 각 범위 \* 타원면의 종반지름으로 계산됩니다. 값이 'FALSE' 또는 0이면 허용 오차는 절대적입니다. 이 _tolerance_ 값은 반환된 선형 근삿값에 대한 이상적인 버퍼 거리의 절대적 최대 편차입니다.  
+_tolerance_ 값이 상대적인지, 아니면 절대적인지를 지정하는 **비트** 입니다. 값이 'TRUE' 또는 1이면 허용 오차는 상대적입니다. _tolerance_ 매개 변수와 각 범위 \* 타원면의 종반지름으로 계산됩니다. 값이 'FALSE' 또는 0이면 허용 오차는 절대적입니다. 이 _tolerance_ 값은 반환된 선형 근삿값에 대한 이상적인 버퍼 거리의 절대적 최대 편차입니다.  
   
 ## <a name="return-types"></a>반환 형식  
 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 반환 형식: **geography**  
@@ -65,11 +65,11 @@ _tolerance_ 값이 상대적인지, 아니면 절대적인지를 지정하는 **
 CLR 반환 형식: **SqlGeography**  
   
 ## <a name="remarks"></a>설명  
-이 메서드는 _distance_가 숫자가 아니거나(NAN), _distance_가 양 또는 음의 무한대인 경우 **ArgumentException**을 생성합니다.  이 메서드는 _tolerance_가 0이 아니거나, 숫자가 아니거나(NaN), 양 또는 음의 무한대인 경우 **ArgumentException**을 생성합니다.  
+이 메서드는 _distance_ 가 숫자가 아니거나(NAN), _distance_ 가 양 또는 음의 무한대인 경우 **ArgumentException** 을 생성합니다.  이 메서드는 _tolerance_ 가 0이 아니거나, 숫자가 아니거나(NaN), 양 또는 음의 무한대인 경우 **ArgumentException** 을 생성합니다.  
   
 `STBuffer()`는 경우에 따라 **FullGlobe** 인스턴스를 반환합니다. 예를 들어 `STBuffer()`는 버퍼 거리가 적도에서 극지방까지의 거리보다 큰 경우 두 극지방에서 **FullGlobe** 인스턴스를 반환합니다.  
   
-이 메서드는 버퍼 거리가 다음 제한을 초과하는 경우 **FullGlobe** 인스턴스에서 **ArgumentException**을 생성합니다.  
+이 메서드는 버퍼 거리가 다음 제한을 초과하는 경우 **FullGlobe** 인스턴스에서 **ArgumentException** 을 생성합니다.  
   
 0.999 \* _π_ * minorAxis \* minorAxis / majorAxis (~0.999 \* 지구 둘레의 1/2)  
   

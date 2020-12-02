@@ -28,17 +28,17 @@ author: markingmyname
 ms.author: maghan
 monikerRange: '>=aps-pdw-2016||=azuresqldb-current||=azure-sqldw-latest||>=sql-server-2016||=sqlallproducts-allversions||>=sql-server-linux-2017||=azuresqldb-mi-current'
 ms.openlocfilehash: bbd0ad445399fe45ddf704d0037bb7ee31a53b2c
-ms.sourcegitcommit: cc23d8646041336d119b74bf239a6ac305ff3d31
+ms.sourcegitcommit: 192f6a99e19e66f0f817fdb1977f564b2aaa133b
 ms.translationtype: HT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 09/23/2020
-ms.locfileid: "91117164"
+ms.lasthandoff: 11/25/2020
+ms.locfileid: "96118203"
 ---
 # <a name="datepart-transact-sql"></a>DATEPART(Transact-SQL)
 [!INCLUDE [sql-asdb-asdbmi-asa-pdw](../../includes/applies-to-version/sql-asdb-asdbmi-asa-pdw.md)]
 
 
-이 함수는 지정한 *date*의 지정한 *datepart*를 나타내는 정수를 반환합니다.
+이 함수는 지정한 *date* 의 지정한 *datepart* 를 나타내는 정수를 반환합니다.
   
 모든 [!INCLUDE[tsql](../../includes/tsql-md.md)]의 날짜 및 시간 데이터 형식 및 함수에 대한 개요는 [날짜 및 시간 데이터 형식 및 함수&#40;Transact-SQL&#41;](../../t-sql/functions/date-and-time-data-types-and-functions-transact-sql.md)을 참조하세요.
   
@@ -54,7 +54,7 @@ DATEPART ( datepart , date )
 
 ## <a name="arguments"></a>인수
 *datepart*  
-`DATEPART`가 **정수**를 반환할 *date* 인수의 특정 부분입니다. 이 표에서는 올바른 *datepart* 인수가 모두 나열되어 있습니다.
+`DATEPART`가 **정수** 를 반환할 *date* 인수의 특정 부분입니다. 이 표에서는 올바른 *datepart* 인수가 모두 나열되어 있습니다.
 
 > [!NOTE]
 > `DATEPART`은 *datepart* 인수에 해당하는 사용자 정의 변수 항목을 허용하지 않습니다.
@@ -87,15 +87,15 @@ DATEPART ( datepart , date )
 + **smalldatetime**
 + **time**
 
-*date*의 경우 `DATEPART`은 열 식, 식, 문자열 리터럴 또는 사용자 정의 변수를 허용합니다. 모호성 문제를 피하려면 4자리 연도를 사용하세요. 두 자리 연도에 대한 정보는 [두 자리 연도 구분 서버 구성 옵션 구성](../../database-engine/configure-windows/configure-the-two-digit-year-cutoff-server-configuration-option.md)을 참조하세요.
+*date* 의 경우 `DATEPART`은 열 식, 식, 문자열 리터럴 또는 사용자 정의 변수를 허용합니다. 모호성 문제를 피하려면 4자리 연도를 사용하세요. 두 자리 연도에 대한 정보는 [두 자리 연도 구분 서버 구성 옵션 구성](../../database-engine/configure-windows/configure-the-two-digit-year-cutoff-server-configuration-option.md)을 참조하세요.
   
 ## <a name="return-type"></a>반환 형식  
  **int**  
   
 ## <a name="return-value"></a>Return Value  
-각 *datepart*와 해당 약어는 동일한 값을 반환합니다.
+각 *datepart* 와 해당 약어는 동일한 값을 반환합니다.
   
-반환 값은 [SET LANGUAGE](../../t-sql/statements/set-language-transact-sql.md) 및 로그인의 [기본 언어 구성 서버 구성 옵션](../../database-engine/configure-windows/configure-the-default-language-server-configuration-option.md)을 사용하여 설정한 언어 환경에 따라 다릅니다. *date*가 특정 형식의 문자열 리터럴인 경우 반환 값은 [SET DATEFORMAT](../../t-sql/statements/set-dateformat-transact-sql.md)에 따라 다릅니다. date가 날짜 또는 시간 데이터 형식의 열 식이면 SET DATEFORMAT은 반환 값을 변경하지 않습니다.
+반환 값은 [SET LANGUAGE](../../t-sql/statements/set-language-transact-sql.md) 및 로그인의 [기본 언어 구성 서버 구성 옵션](../../database-engine/configure-windows/configure-the-default-language-server-configuration-option.md)을 사용하여 설정한 언어 환경에 따라 다릅니다. *date* 가 특정 형식의 문자열 리터럴인 경우 반환 값은 [SET DATEFORMAT](../../t-sql/statements/set-dateformat-transact-sql.md)에 따라 다릅니다. date가 날짜 또는 시간 데이터 형식의 열 식이면 SET DATEFORMAT은 반환 값을 변경하지 않습니다.
   
 이 표에서는 `SELECT DATEPART(datepart,'2007-10-30 12:15:32.1234567 +05:10')` 문에 대한 모든 *datepart* 인수 및 해당 반환 값을 보여 줍니다. *date* 인수에는 **datetimeoffset(7)** 데이터 형식이 있습니다. **nanosecond** *datepart* 반환 값의 마지막 두 자리는 항상 `00`이며, 이 값의 소수 자릿수는 9입니다.
 
@@ -120,13 +120,13 @@ DATEPART ( datepart , date )
 |**iso_week, isowk, isoww**|44|  
   
 ## <a name="week-and-weekday-datepart-arguments"></a>week 및 weekday datepart 인수
-**week**(**wk**, **ww**) 또는 **weekday**(**dw**) *datepart*의 경우 `DATEPART` 반환 값은 [SET DATEFIRST](../../t-sql/statements/set-datefirst-transact-sql.md)로 설정된 값에 따라 달라집니다.
+**week**(**wk**, **ww**) 또는 **weekday**(**dw**) *datepart* 의 경우 `DATEPART` 반환 값은 [SET DATEFIRST](../../t-sql/statements/set-datefirst-transact-sql.md)로 설정된 값에 따라 달라집니다.
   
-모든 연도의 1월 1일은 **week** _datepart_의 시작 값을 정의합니다. 다음은 그 예입니다.
+모든 연도의 1월 1일은 **week** _datepart_ 의 시작 값을 정의합니다. 다음은 그 예입니다.
 
-DATEPART(**wk**, '1월 1일, *xxx*x') = 1
+DATEPART(**wk**, '1월 1일, *xxx* x') = 1
 
-여기서 *xxxx*는 연도입니다.
+여기서 *xxxx* 는 연도입니다.
   
 이 테이블은 각 SET DATEFIRST 인수에 대한 ‘2007-04-21’의 **week** 및 **weekday** *datepart* 반환 값을 보여 줍니다. 2007년 1월 1일은 월요일에 해당합니다. 2007년 4월 21일은 토요일에 해당합니다. 미국 영어
 
@@ -173,7 +173,7 @@ SELECT DATEPART (tzoffset, '2007-05-10  00:00:01.1234567 +05:10');
 ```  
 `DATEPART`는 tzoffset 값을 다음과 같이 렌더링합니다.
 - datetimeoffset 및 datetime2에 대해 tzoffset은 시간 오프셋을 분 단위로 반환하며, datetime2의 오프셋은 항상 0분입니다.
-- 암시적으로 **datetimeoffset** 또는 **datetime2**로 변환할 수 있는 데이터 형식의 경우 `DATEPART`는 분으로 시간 오프셋을 반환합니다. 예외: 다른 날짜/시간 데이터 형식입니다.
+- 암시적으로 **datetimeoffset** 또는 **datetime2** 로 변환할 수 있는 데이터 형식의 경우 `DATEPART`는 분으로 시간 오프셋을 반환합니다. 예외: 다른 날짜/시간 데이터 형식입니다.
 - 다른 모든 형식의 매개 변수는 오류가 있습니다.
   
   
@@ -181,9 +181,9 @@ SELECT DATEPART (tzoffset, '2007-05-10  00:00:01.1234567 +05:10');
 [smalldatetime](../../t-sql/data-types/smalldatetime-transact-sql.md) *date* 값에 대해 `DATEPART`는 초를 00으로 반환합니다.
   
 ## <a name="default-returned-for-a-datepart-that-is-not-in-a-date-argument"></a>date 인수에 없는 datepart에 대해서는 기본값이 반환됨  
-*date* 인수 데이터 형식에 지정된 *datepart*가 없으면 `DATEPART`는 *date*에 대해 리터럴이 지정된 경우에만 해당 *datepart*의 기본값을 반환합니다.
+*date* 인수 데이터 형식에 지정된 *datepart* 가 없으면 `DATEPART`는 *date* 에 대해 리터럴이 지정된 경우에만 해당 *datepart* 의 기본값을 반환합니다.
   
-예를 들어 모든 **date** 데이터 형식의 년-월-일 기본값은 1900-01-01입니다. 다음 명령문은 *datepart*에 대한 날짜 부분 인수, *date*에 대한 시간 인수를 가지며 `1900, 1, 1, 1, 2`를 반환합니다.
+예를 들어 모든 **date** 데이터 형식의 년-월-일 기본값은 1900-01-01입니다. 다음 명령문은 *datepart* 에 대한 날짜 부분 인수, *date* 에 대한 시간 인수를 가지며 `1900, 1, 1, 1, 2`를 반환합니다.
   
 ```sql
 SELECT DATEPART(year, '12:10:30.123')  
@@ -193,7 +193,7 @@ SELECT DATEPART(year, '12:10:30.123')
     ,DATEPART(weekday, '12:10:30.123');  
 ```  
   
-*date*가 변수 또는 테이블 열로 지정되고 해당 변수 또는 열의 데이터 형식에 지정된 *datepart*가 없으면 `DATEPART`은 오류 9810을 반환합니다. 이 예제에서 변수 *\@t*는 **time** 데이터 형식입니다. 날짜 부분 연도가 **time** 데이터 형식에 적합하지 않으므로 이 예제는 실패입니다.
+*date* 가 변수 또는 테이블 열로 지정되고 해당 변수 또는 열의 데이터 형식에 지정된 *datepart* 가 없으면 `DATEPART`은 오류 9810을 반환합니다. 이 예제에서 변수 *\@t* 는 **time** 데이터 형식입니다. 날짜 부분 연도가 **time** 데이터 형식에 적합하지 않으므로 이 예제는 실패입니다.
   
 ```sql
 DECLARE @t time = '12:10:30.123';   

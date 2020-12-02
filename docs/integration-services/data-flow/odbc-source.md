@@ -17,10 +17,10 @@ ms.assetid: abcf34eb-9140-4100-82e6-b85bccd22abe
 author: chugugrace
 ms.author: chugu
 ms.openlocfilehash: 12d70dc722250d33de52bf8d1f13d1ab06083108
-ms.sourcegitcommit: cfa04a73b26312bf18d8f6296891679166e2754d
+ms.sourcegitcommit: c5078791a07330a87a92abb19b791e950672e198
 ms.translationtype: HT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 10/19/2020
+ms.lasthandoff: 11/26/2020
 ms.locfileid: "92194779"
 ---
 # <a name="odbc-source"></a>ODBC 원본
@@ -71,7 +71,7 @@ ms.locfileid: "92194779"
  그러나 이용 중인 ODBC 공급자의 제한으로 인해 공급자를 통한 동시 연결 수가 제한될 수 있습니다. 이러한 제한으로 인해 ODBC 원본에 대해 지원 가능한 병렬 인스턴스 수가 제한됩니다. SSIS 개발자는 이용 중인 모든 ODBC 공급자의 제한을 이해하고 SSIS 패키지를 작성할 때 해당 제한을 고려해야 합니다.  
   
 ## <a name="troubleshooting-the-odbc-source"></a>ODBC 원본 문제 해결  
- ODBC 원본이 외부 데이터 공급자에 대해 수행하는 호출을 기록할 수 있습니다. 이 로깅 기능을 사용하면 ODBC 원본이 외부 데이터 원본에서 데이터를 로드할 때 발생하는 문제를 해결할 수 있습니다. ODBC 원본이 외부 데이터 공급자에 대해 수행하는 호출을 기록하려면 ODBC 드라이버 관리자 추적을 사용해야 합니다. 자세한 내용은 *ODBC 데이터 원본 관리자를 사용하여 ODBC 추적을 생성하는 방법*에 대한 Microsoft 설명서를 참조하십시오.  
+ ODBC 원본이 외부 데이터 공급자에 대해 수행하는 호출을 기록할 수 있습니다. 이 로깅 기능을 사용하면 ODBC 원본이 외부 데이터 원본에서 데이터를 로드할 때 발생하는 문제를 해결할 수 있습니다. ODBC 원본이 외부 데이터 공급자에 대해 수행하는 호출을 기록하려면 ODBC 드라이버 관리자 추적을 사용해야 합니다. 자세한 내용은 *ODBC 데이터 원본 관리자를 사용하여 ODBC 추적을 생성하는 방법* 에 대한 Microsoft 설명서를 참조하십시오.  
   
 ## <a name="configuring-the-odbc-source"></a>ODBC 원본 구성  
  SSIS 디자이너를 사용하거나 프로그래밍 방식으로 ODBC 원본을 구성할 수 있습니다.  
@@ -80,7 +80,7 @@ ms.locfileid: "92194779"
   
  **고급 편집기** 대화 상자를 열려면  
   
--   **프로젝트의** 데이터 흐름 [!INCLUDE[ssISCurrent](../../includes/ssiscurrent-md.md)] 화면에서 ODBC 원본을 마우스 오른쪽 단추로 클릭하고 **고급 편집기 표시**를 선택합니다.  
+-   **프로젝트의** 데이터 흐름 [!INCLUDE[ssISCurrent](../../includes/ssiscurrent-md.md)] 화면에서 ODBC 원본을 마우스 오른쪽 단추로 클릭하고 **고급 편집기 표시** 를 선택합니다.  
   
  고급 편집기 대화 상자에서 설정할 수 있는 속성에 대한 자세한 내용은 [ODBC Source Custom Properties](../../integration-services/data-flow/odbc-source-custom-properties.md)을 참조하십시오.  
   
@@ -106,7 +106,7 @@ ms.locfileid: "92194779"
  목록에서 기존 ODBC 연결 관리자를 선택하거나 **새로 만들기** 를 클릭하여 새 연결을 만듭니다. 어느 ODBC 지원 데이터베이스에나 연결할 수 있습니다.  
   
 #### <a name="new"></a>새로 만들기  
- **새로 만들기**를 클릭합니다. 새 ODBC 연결 관리자를 만들 수 있는 **ODBC 연결 관리자 편집기 구성** 대화 상자가 열립니다.  
+ **새로 만들기** 를 클릭합니다. 새 ODBC 연결 관리자를 만들 수 있는 **ODBC 연결 관리자 편집기 구성** 대화 상자가 열립니다.  
   
 #### <a name="data-access-mode"></a>데이터 액세스 모드  
  원본에서 데이터를 선택하는 방법을 선택합니다. 옵션은 다음 표에 표시되어 있습니다.  
@@ -134,7 +134,7 @@ ms.locfileid: "92194779"
   
 2.  **데이터 흐름** 탭에서 ODBC 원본을 두 번 클릭합니다.  
   
-3.  **ODBC 원본 편집기**에서 **열**을 클릭합니다.  
+3.  **ODBC 원본 편집기** 에서 **열** 을 클릭합니다.  
   
 ### <a name="options"></a>옵션  
   
@@ -159,7 +159,7 @@ ms.locfileid: "92194779"
   
 -   **데이터 흐름** 탭에서 ODBC 원본을 두 번 클릭합니다.  
   
--   **ODBC 원본 편집기**에서 **오류 출력**을 클릭합니다.  
+-   **ODBC 원본 편집기** 에서 **오류 출력** 을 클릭합니다.  
   
 ### <a name="options"></a>옵션  
   

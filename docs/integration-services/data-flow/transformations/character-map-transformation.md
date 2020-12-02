@@ -20,11 +20,11 @@ ms.assetid: e0f50eb6-b893-400f-bb8c-fb3072cc2620
 author: chugugrace
 ms.author: chugu
 ms.openlocfilehash: b825ff5cee4ceba526d59cc30dc0bb1205896171
-ms.sourcegitcommit: cfa04a73b26312bf18d8f6296891679166e2754d
+ms.sourcegitcommit: 192f6a99e19e66f0f817fdb1977f564b2aaa133b
 ms.translationtype: HT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 10/19/2020
-ms.locfileid: "92194654"
+ms.lasthandoff: 11/25/2020
+ms.locfileid: "96123428"
 ---
 # <a name="character-map-transformation"></a>문자표 변환
 
@@ -103,7 +103,7 @@ ms.locfileid: "92194654"
   
 |값|Description|  
 |-----------|-----------------|  
-|새 열|새 열에 데이터를 저장합니다. **출력 별칭**의 열 이름을 할당합니다.|  
+|새 열|새 열에 데이터를 저장합니다. **출력 별칭** 의 열 이름을 할당합니다.|  
 |내부 변경|수정된 데이터를 기존 열에 저장합니다.|  
   
  **연산**  

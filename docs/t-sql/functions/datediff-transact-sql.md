@@ -32,19 +32,19 @@ author: markingmyname
 ms.author: maghan
 monikerRange: '>=aps-pdw-2016||=azuresqldb-current||=azure-sqldw-latest||>=sql-server-2016||=sqlallproducts-allversions||>=sql-server-linux-2017||=azuresqldb-mi-current'
 ms.openlocfilehash: df865c15c13c78f01a8c3da30be2f39656dc7156
-ms.sourcegitcommit: cc23d8646041336d119b74bf239a6ac305ff3d31
+ms.sourcegitcommit: 192f6a99e19e66f0f817fdb1977f564b2aaa133b
 ms.translationtype: HT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 09/23/2020
-ms.locfileid: "91116137"
+ms.lasthandoff: 11/25/2020
+ms.locfileid: "96117766"
 ---
 # <a name="datediff-transact-sql"></a>DATEDIFF(Transact-SQL)
 
 [!INCLUDE [sql-asdb-asdbmi-asa-pdw](../../includes/applies-to-version/sql-asdb-asdbmi-asa-pdw.md)]
 
-이 기능은 지정된 *startdate*와 *enddate* 사이에 지정된 datepart 경계의 수(부호 있는 정수 값으로)를 반환합니다.
+이 기능은 지정된 *startdate* 와 *enddate* 사이에 지정된 datepart 경계의 수(부호 있는 정수 값으로)를 반환합니다.
   
-*startdate*와 *enddate* 값 간의 더 큰 차이를 처리하는 함수는 [DATEDIFF_BIG &#40;Transact-SQL&#41;](../../t-sql/functions/datediff-big-transact-sql.md)를 참조하세요. 모든 [!INCLUDE[tsql](../../includes/tsql-md.md)]의 날짜 및 시간 데이터 형식 및 함수에 대한 개요는 [날짜 및 시간 데이터 형식 및 함수&#40;Transact-SQL&#41;](../../t-sql/functions/date-and-time-data-types-and-functions-transact-sql.md)을 참조하세요.
+*startdate* 와 *enddate* 값 간의 더 큰 차이를 처리하는 함수는 [DATEDIFF_BIG &#40;Transact-SQL&#41;](../../t-sql/functions/datediff-big-transact-sql.md)를 참조하세요. 모든 [!INCLUDE[tsql](../../includes/tsql-md.md)]의 날짜 및 시간 데이터 형식 및 함수에 대한 개요는 [날짜 및 시간 데이터 형식 및 함수&#40;Transact-SQL&#41;](../../t-sql/functions/date-and-time-data-types-and-functions-transact-sql.md)을 참조하세요.
   
 ![항목 링크 아이콘](../../database-engine/configure-windows/media/topic-link.gif "항목 링크 아이콘") [Transact-SQL 구문 표기 규칙](../../t-sql/language-elements/transact-sql-syntax-conventions-transact-sql.md)
   
@@ -59,11 +59,11 @@ DATEDIFF ( datepart , startdate , enddate )
 ## <a name="arguments"></a>인수
 
 *datepart*  
-**DATEDIFF**가 _startdate_와 _enddate_의 차이를 보고하는 단위입니다. 일반적으로 사용되는 _datepart_ 단위에는 `month` 또는 `second`가 포함됩니다.
+**DATEDIFF** 가 _startdate_ 와 _enddate_ 의 차이를 보고하는 단위입니다. 일반적으로 사용되는 _datepart_ 단위에는 `month` 또는 `second`가 포함됩니다.
 
 _datepart_ 값은 변수나 `'month'` 같은 따옴표 문자열처럼 지정할 수 없습니다.
 
-다음 표에는 올바른 _datepart_ 값이 모두 나열되어 있습니다. **DATEDIFF**는 _datepart_의 전체 이름 또는 전체 이름의 나열된 약어를 허용합니다.
+다음 표에는 올바른 _datepart_ 값이 모두 나열되어 있습니다. **DATEDIFF** 는 _datepart_ 의 전체 이름 또는 전체 이름의 나열된 약어를 허용합니다.
 
 |*datepart* 이름|*datepart* 약어|  
 |-----------|------------|
@@ -97,32 +97,32 @@ _datepart_ 값은 변수나 `'month'` 같은 따옴표 문자열처럼 지정할
 모호성을 피하려면 4자리 연도를 사용하세요. 두 자리 연도 값에 대한 정보는 [두 자리 연도 구분 서버 구성 옵션 구성](../../database-engine/configure-windows/configure-the-two-digit-year-cutoff-server-configuration-option.md)을 참조하세요.
   
 *enddate*  
-*startdate*를 참조하세요.
+*startdate* 를 참조하세요.
   
 ## <a name="return-type"></a>반환 형식  
  **int**  
   
 ## <a name="return-value"></a>Return Value  
 
-*startdate*와 *enddate* 사이의 **int** 차이로, *datepart*에 설정된 범위로 표시됩니다.
+*startdate* 와 *enddate* 사이의 **int** 차이로, *datepart* 에 설정된 범위로 표시됩니다.
   
-예를 들어 `SELECT DATEDIFF(day, '2036-03-01', '2036-02-28');`는 2036이 윤년이어야 한다는 것을 암시하는 -2를 반환합니다. 이 경우 _startdate_ '2036-03-01'에서 시작한 다음 -2일을 계산하면 '2036-02-28'의 _enddate_에 도달합니다.
+예를 들어 `SELECT DATEDIFF(day, '2036-03-01', '2036-02-28');`는 2036이 윤년이어야 한다는 것을 암시하는 -2를 반환합니다. 이 경우 _startdate_ '2036-03-01'에서 시작한 다음 -2일을 계산하면 '2036-02-28'의 _enddate_ 에 도달합니다.
   
-**int**에 대한 범위를 벗어난 반환 값의 경우(-2,147,483,648 to +2,147,483,647) `DATEDIFF`에서 오류를 반환합니다.  **밀리초**의 경우 *startdate*와 *enddate*의 최대 차이는 24일, 20시간, 31분 및 23.647초입니다. **second**의 경우 최대 차이는 68년, 19일, 3시, 14분 7초입니다.
+**int** 에 대한 범위를 벗어난 반환 값의 경우(-2,147,483,648 to +2,147,483,647) `DATEDIFF`에서 오류를 반환합니다.  **밀리초** 의 경우 *startdate* 와 *enddate* 의 최대 차이는 24일, 20시간, 31분 및 23.647초입니다. **second** 의 경우 최대 차이는 68년, 19일, 3시, 14분 7초입니다.
   
-*startdate* 및 *enddate* 모두에 시간 값만 할당되고 *datepart*가 시간 *datepart*가 아니면 `DATEDIFF`는 0을 반환합니다.
+*startdate* 및 *enddate* 모두에 시간 값만 할당되고 *datepart* 가 시간 *datepart* 가 아니면 `DATEDIFF`는 0을 반환합니다.
   
-`DATEDIFF`는 반환 값을 계산하기 위해 *startdate* 또는 *enddate*의 표준 시간대 오프셋 구성 요소를 사용합니다.
+`DATEDIFF`는 반환 값을 계산하기 위해 *startdate* 또는 *enddate* 의 표준 시간대 오프셋 구성 요소를 사용합니다.
   
-[smalldatetime](../../t-sql/data-types/smalldatetime-transact-sql.md)은 분 단위까지만 정확하므로 *startdate* 또는 *enddate*에 **smalldatetime** 값이 있는 경우 반환 값에서 초와 밀리초는 항상 0으로 설정됩니다.
+[smalldatetime](../../t-sql/data-types/smalldatetime-transact-sql.md)은 분 단위까지만 정확하므로 *startdate* 또는 *enddate* 에 **smalldatetime** 값이 있는 경우 반환 값에서 초와 밀리초는 항상 0으로 설정됩니다.
   
 날짜 데이터 형식의 변수에 시간 값만 할당된 경우 `DATEDIFF`은 누락된 날짜 부분 값을 기본값인 `1900-01-01`로 설정합니다. 시간 또는 날짜 데이터 형식의 변수에 날짜 값만 할당될 경우 `DATEDIFF`는 누락된 시간 부분 값을 기본값인 `00:00:00`으로 설정합니다. *startdate* 또는 *enddate* 중 하나는 시간 부분만 있고 다른 하나는 날짜 부분만 있는 경우 `DATEDIFF`는 누락된 시간 및 날짜 부분을 기본값으로 설정합니다.
   
-*startdate*와 *enddate*가 날짜 데이터 형식이 다르고 한 쪽의 시간 부분 또는 소수 자릿수 초의 전체 자릿수가 다른 쪽보다 많을 경우 `DATEDIFF`는 다른 쪽의 누락된 부분을 0으로 설정합니다.
+*startdate* 와 *enddate* 가 날짜 데이터 형식이 다르고 한 쪽의 시간 부분 또는 소수 자릿수 초의 전체 자릿수가 다른 쪽보다 많을 경우 `DATEDIFF`는 다른 쪽의 누락된 부분을 0으로 설정합니다.
   
 ## <a name="_datepart_-boundaries"></a>_datepart_ 범위
 
-다음 명령문은 동일한 *startdate*와 동일한 *endate* 값을 가집니다. 이 날짜는 서로 인접하며 100나노초(.0000001초)만큼 시간이 다릅니다. 각 문에서 *startdate*와 *endate* 사이의 차이는 해당 *datepart*에서 하나의 달력 또는 시간 범위를 넘어섭니다. 각 문은 1을 반환합니다.
+다음 명령문은 동일한 *startdate* 와 동일한 *endate* 값을 가집니다. 이 날짜는 서로 인접하며 100나노초(.0000001초)만큼 시간이 다릅니다. 각 문에서 *startdate* 와 *endate* 사이의 차이는 해당 *datepart* 에서 하나의 달력 또는 시간 범위를 넘어섭니다. 각 문은 1을 반환합니다.
   
 ```sql
 SELECT DATEDIFF(year,        '2005-12-31 23:59:59.9999999', '2006-01-01 00:00:00.0000000');
@@ -138,7 +138,7 @@ SELECT DATEDIFF(millisecond, '2005-12-31 23:59:59.9999999', '2006-01-01 00:00:00
 SELECT DATEDIFF(microsecond, '2005-12-31 23:59:59.9999999', '2006-01-01 00:00:00.0000000');
 ```
 
-*startdate* 및 *enddate*의 연도 값이 다르지만 달력 주 값이 동일한 경우 `DATEDIFF`는 *datepart* **week**에 대해 0을 반환합니다.
+*startdate* 및 *enddate* 의 연도 값이 다르지만 달력 주 값이 동일한 경우 `DATEDIFF`는 *datepart* **week** 에 대해 0을 반환합니다.
 
 ## <a name="remarks"></a>설명  
 `SELECT <list>`, `WHERE`, `HAVING`, `GROUP BY` 및 `ORDER BY` 절에서 `DATEDIFF`를 사용합니다.
@@ -147,7 +147,7 @@ SELECT DATEDIFF(microsecond, '2005-12-31 23:59:59.9999999', '2006-01-01 00:00:00
   
 `SET DATEFIRST` 지정은 `DATEDIFF`에 영향을 주지 않습니다. `DATEDIFF`은 항상 일요일을 한 주의 첫 날로 사용하여 함수가 결정적으로 작동하게 합니다.
 
-*enddate*와 *startdate* 간의 차이가 **int**의 범위를 벗어난 값을 반환하는 경우 `DATEDIFF`는 **분** 이상의 정밀도로 오버플로할 수 있습니다.
+*enddate* 와 *startdate* 간의 차이가 **int** 의 범위를 벗어난 값을 반환하는 경우 `DATEDIFF`는 **분** 이상의 정밀도로 오버플로할 수 있습니다.
   
 ## <a name="examples"></a>예  
 이러한 예에서는 여러 유형의 식을 *startdate* 및 *enddate* 매개 변수에 대한 인수로 사용합니다.

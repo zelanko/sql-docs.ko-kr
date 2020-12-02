@@ -16,10 +16,10 @@ ms.assetid: 9f6ef376-3408-46bf-b5fa-fc7b18c689c9
 author: chugugrace
 ms.author: chugu
 ms.openlocfilehash: 3b5f944c2fb6b0a2029ed7b8481a8b7f71485a41
-ms.sourcegitcommit: cfa04a73b26312bf18d8f6296891679166e2754d
+ms.sourcegitcommit: c5078791a07330a87a92abb19b791e950672e198
 ms.translationtype: HT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 10/19/2020
+ms.lasthandoff: 11/26/2020
 ms.locfileid: "92192483"
 ---
 # <a name="loading-and-running-a-remote-package-programmatically"></a>프로그래밍 방식으로 원격 패키지 로드 및 실행
@@ -41,7 +41,7 @@ ms.locfileid: "92192483"
   
 -   [웹 서비스 또는 원격 구성 요소를 사용하여 프로그래밍 방식으로 원격 패키지 실행](#service)  
   
- 이 항목에서 패키지를 로드하고 저장하는 데 사용되는 거의 모든 메서드에는 **Microsoft.SqlServer.ManagedDTS** 어셈블리에 대한 참조가 필요합니다. **System.Data**에 대한 참조만 필요한 **sp_start_job** 저장 프로시저를 실행하기 위해 이 항목에서 설명하는 ADO.NET 방법은 예외입니다. 새 프로젝트의 **Microsoft.SqlServer.ManagedDTS** 어셈블리에 대한 참조를 추가한 후 **using** 또는 **Imports** 문을 사용하여 <xref:Microsoft.SqlServer.Dts.Runtime> 네임스페이스를 가져옵니다.  
+ 이 항목에서 패키지를 로드하고 저장하는 데 사용되는 거의 모든 메서드에는 **Microsoft.SqlServer.ManagedDTS** 어셈블리에 대한 참조가 필요합니다. **System.Data** 에 대한 참조만 필요한 **sp_start_job** 저장 프로시저를 실행하기 위해 이 항목에서 설명하는 ADO.NET 방법은 예외입니다. 새 프로젝트의 **Microsoft.SqlServer.ManagedDTS** 어셈블리에 대한 참조를 추가한 후 **using** 또는 **Imports** 문을 사용하여 <xref:Microsoft.SqlServer.Dts.Runtime> 네임스페이스를 가져옵니다.  
   
 ###  <a name="using-sql-server-agent-to-run-a-remote-package-programmatically-on-the-server"></a><a name="agent"></a> SQL Server 에이전트를 사용하여 서버에서 프로그래밍 방식으로 원격 패키지 실행  
  다음 코드 예제에서는 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 에이전트를 프로그래밍 방식으로 사용하여 서버에서 원격 패키지를 실행하는 방법을 보여 줍니다. 이 코드 샘플에서는 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 에이전트 작업을 시작하는 **sp_start_job** 시스템 저장 프로시저를 호출합니다. 이 프로시저가 시작하는 작업의 이름은 `RunSSISPackage`이며 이 작업은 원격 컴퓨터에 있습니다. 그런 다음 `RunSSISPackage` 작업은 원격 컴퓨터에서 패키지를 실행합니다.  
@@ -167,7 +167,7 @@ namespace LaunchSSISPackageAgent_CS
   
 1.  Visual Studio를 열고 원하는 프로그래밍 언어로 웹 서비스 프로젝트를 만듭니다. 예제 코드에서는 프로젝트 이름으로 LaunchSSISPackageService를 사용합니다.  
   
-2.  **Microsoft.SqlServer.ManagedDTS**에 대한 참조를 추가하고, **Microsoft.SqlServer.Dts.Runtime** 네임스페이스에 대한 코드 파일에 **Imports** 또는 **using** 문을 추가합니다.  
+2.  **Microsoft.SqlServer.ManagedDTS** 에 대한 참조를 추가하고, **Microsoft.SqlServer.Dts.Runtime** 네임스페이스에 대한 코드 파일에 **Imports** 또는 **using** 문을 추가합니다.  
   
 3.  LaunchPackage 웹 서비스 메서드의 예제 코드를 클래스에 붙여 넣습니다. 이 예제에서는 코드 창의 전체 내용을 보여 줍니다.  
   

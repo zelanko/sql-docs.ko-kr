@@ -21,11 +21,11 @@ ms.assetid: e9dc27f6-e945-4457-8498-7644db34008e
 author: MladjoA
 ms.author: mlandzic
 ms.openlocfilehash: 49857a94c95240386893854408d2b26cba533815
-ms.sourcegitcommit: e700497f962e4c2274df16d9e651059b42ff1a10
+ms.sourcegitcommit: 192f6a99e19e66f0f817fdb1977f564b2aaa133b
 ms.translationtype: HT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 08/17/2020
-ms.locfileid: "88479425"
+ms.lasthandoff: 11/25/2020
+ms.locfileid: "96115166"
 ---
 # <a name="astextzm-geography-data-type"></a>AsTextZM(geography 데이터 형식)
 [!INCLUDE [SQL Server SQL Database](../../includes/applies-to-version/sql-asdb.md)]
@@ -49,7 +49,7 @@ ms.locfileid: "88479425"
 ## <a name="remarks"></a>설명  
   
 ## <a name="examples"></a>예제  
- 다음 예에서는 **Z**(높이) 값 및 **M**(측정값) 값을 포함하는 `Point` 인스턴스를 만듭니다. `STAsText()`는 WKT 값인 (-122.34900 47.65100)을 선택하며 `AsTextZM()`도 동일한 WKT 값을 선택하여 **Z** 및 **M**의 값을 반환하여 (-122.34900 47.65100 10.3 12)를 반환합니다.  
+ 다음 예에서는 **Z**(높이) 값 및 **M**(측정값) 값을 포함하는 `Point` 인스턴스를 만듭니다. `STAsText()`는 WKT 값인 (-122.34900 47.65100)을 선택하며 `AsTextZM()`도 동일한 WKT 값을 선택하여 **Z** 및 **M** 의 값을 반환하여 (-122.34900 47.65100 10.3 12)를 반환합니다.  
   
 ```  
 DECLARE @g geography;  

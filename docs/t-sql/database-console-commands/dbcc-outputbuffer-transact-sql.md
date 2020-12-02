@@ -23,16 +23,16 @@ ms.assetid: e912a06d-9fde-4e26-b057-801255d79504
 author: pmasl
 ms.author: umajay
 ms.openlocfilehash: dfc426af5cc72e072cab1908930d265dc1cf91c6
-ms.sourcegitcommit: cc23d8646041336d119b74bf239a6ac305ff3d31
+ms.sourcegitcommit: 192f6a99e19e66f0f817fdb1977f564b2aaa133b
 ms.translationtype: HT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 09/23/2020
-ms.locfileid: "91111156"
+ms.lasthandoff: 11/25/2020
+ms.locfileid: "96119617"
 ---
 # <a name="dbcc-outputbuffer-transact-sql"></a>DBCC OUTPUTBUFFER(Transact-SQL)
 [!INCLUDE [SQL Server](../../includes/applies-to-version/sqlserver.md)]
 
-지정된 *session_id*의 현재 출력 버퍼를 16진수와 ASCII 형식으로 반환합니다.
+지정된 *session_id* 의 현재 출력 버퍼를 16진수와 ASCII 형식으로 반환합니다.
   
 ![항목 링크 아이콘](../../database-engine/configure-windows/media/topic-link.gif "항목 링크 아이콘") [Transact-SQL 구문 표기 규칙](../../t-sql/language-elements/transact-sql-syntax-conventions-transact-sql.md)
   
@@ -50,7 +50,7 @@ DBCC OUTPUTBUFFER ( session_id [ , request_id ])
   
  *request_id*  
  현재 세션 내에서 검색할 정확한 요청(일괄 처리)입니다.  
- 다음 쿼리에서는 *request_id*를 반환합니다.  
+ 다음 쿼리에서는 *request_id* 를 반환합니다.  
   
 ```sql
 SELECT request_id   

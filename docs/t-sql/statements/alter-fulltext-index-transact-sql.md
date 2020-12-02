@@ -23,11 +23,11 @@ ms.assetid: b6fbe9e6-3033-4d1b-b6bf-1437baeefec3
 author: markingmyname
 ms.author: maghan
 ms.openlocfilehash: 584fcb85f71d253fd2ecc471d64c58579cf2c233
-ms.sourcegitcommit: ac9feb0b10847b369b77f3c03f8200c86ee4f4e0
+ms.sourcegitcommit: 192f6a99e19e66f0f817fdb1977f564b2aaa133b
 ms.translationtype: HT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 09/16/2020
-ms.locfileid: "90688377"
+ms.lasthandoff: 11/25/2020
+ms.locfileid: "96124262"
 ---
 # <a name="alter-fulltext-index-transact-sql"></a>ALTER FULLTEXT INDEX(Transact-SQL)
 [!INCLUDE [SQL Server SQL Database](../../includes/applies-to-version/sql-asdb.md)]
@@ -72,7 +72,7 @@ ALTER FULLTEXT INDEX ON table_name
  전체 텍스트 인덱스에 있는 열을 포함하는 테이블 또는 인덱싱된 뷰의 이름입니다. 선택적으로 데이터베이스 및 테이블 소유자 이름을 지정할 수 있습니다.  
   
  ENABLE | DISABLE  
- *table_name*에 대한 전체 텍스트 인덱스 데이터를 수집할지 여부를 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]에 알립니다. ENABLE은 전체 텍스트 인덱스를 활성화하고, DISABLE은 전체 텍스트 인덱스를 비활성화합니다. 인덱스가 비활성화되어 있으면 테이블에서 전체 텍스트 쿼리가 지원되지 않습니다.  
+ *table_name* 에 대한 전체 텍스트 인덱스 데이터를 수집할지 여부를 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]에 알립니다. ENABLE은 전체 텍스트 인덱스를 활성화하고, DISABLE은 전체 텍스트 인덱스를 비활성화합니다. 인덱스가 비활성화되어 있으면 테이블에서 전체 텍스트 쿼리가 지원되지 않습니다.  
   
  전체 텍스트 인덱스를 비활성화하면 변경 내용 추적 기능을 해제할 수 있지만 전체 텍스트 인덱스는 유지할 수 있으므로 ENABLE을 사용하여 언제든지 다시 활성화할 수 있습니다. 전체 텍스트 인덱스를 비활성화해도 전체 텍스트 인덱스 메타데이터는 시스템 테이블에 유지됩니다. 전체 텍스트 인덱스가 비활성화되어 있는 경우 CHANGE_TRACKING이 활성화된 상태(자동 또는 수동 업데이트)이면 인덱스 상태가 고정되고 진행 중인 탐색이 중지되며 테이블 데이터 변경 내용이 추적 또는 인덱스에 전파되지 않습니다.  
   
@@ -96,33 +96,33 @@ ALTER FULLTEXT INDEX ON table_name
   
  이전에 전체 텍스트 인덱싱을 위해 활성화된 열에서만 DROP 절을 사용하십시오.  
   
- ADD 절에서 TYPE COLUMN 및 LANGUAGE를 사용하여 *column_name*에서 이러한 속성을 설정할 수 있습니다. 열이 추가되면 이 열에 대해 전체 텍스트 쿼리가 실행되도록 테이블의 전체 텍스트 인덱스를 다시 채워야 합니다.  
+ ADD 절에서 TYPE COLUMN 및 LANGUAGE를 사용하여 *column_name* 에서 이러한 속성을 설정할 수 있습니다. 열이 추가되면 이 열에 대해 전체 텍스트 쿼리가 실행되도록 테이블의 전체 텍스트 인덱스를 다시 채워야 합니다.  
   
 > [!NOTE]  
 >  전체 텍스트 인덱스에서 열을 추가하거나 삭제한 후 전체 텍스트 인덱스가 채워지는지 여부는 변경 내용 추적이 설정되어 있는지 여부와 WITH NO POPULATION이 지정되어 있는지 여부에 따라 달라집니다. 자세한 내용은 [변경 내용 추적과 NO POPULATION 매개 변수 간의 상호 작용](#change-tracking-no-population)을 참조하세요.
   
  TYPE COLUMN *type_column_name*  
- **varbinary**, **varbinary(max)** 또는 **image** 문서에 대한 문서 종류를 보유하는 데 사용하는 테이블 열 *type_column_name*의 이름을 지정합니다. 유형 열이라고 하는 이 열에는 사용자 제공 파일 확장명(.doc, .pdf, .xls 등)이 포함됩니다. 형식 열은 **char**, **nchar**, **varchar**또는 **nvarchar**형식이어야 합니다.  
+ **varbinary**, **varbinary(max)** 또는 **image** 문서에 대한 문서 종류를 보유하는 데 사용하는 테이블 열 *type_column_name* 의 이름을 지정합니다. 유형 열이라고 하는 이 열에는 사용자 제공 파일 확장명(.doc, .pdf, .xls 등)이 포함됩니다. 형식 열은 **char**, **nchar**, **varchar** 또는 **nvarchar** 형식이어야 합니다.  
   
- 형식 열 *type_column_name*은 *column_name*이 **varbinary**, **varbinary(max)** 또는 **image** 열을 지정하여 데이터가 이진 데이터로 저장되는 경우에만 지정합니다. 그렇지 않으면 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]에서 오류가 반환됩니다.  
+ 형식 열 *type_column_name* 은 *column_name* 이 **varbinary**, **varbinary(max)** 또는 **image** 열을 지정하여 데이터가 이진 데이터로 저장되는 경우에만 지정합니다. 그렇지 않으면 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]에서 오류가 반환됩니다.  
   
 > [!NOTE]  
->  인덱싱할 때 전체 텍스트 엔진은 각 테이블 행의 유형 열에 있는 약어를 사용하여 *column_name*의 문서에 사용할 전체 텍스트 검색 필터를 식별합니다. 이 필터는 문서를 이진 스트림으로 로드하고 서식 정보를 제거하며 문서의 텍스트를 단어 분리기 구성 요소로 보냅니다. 자세한 내용은 [고급 분석 확장 구성 및 관리](../../relational-databases/search/configure-and-manage-filters-for-search.md)를 참조하세요.  
+>  인덱싱할 때 전체 텍스트 엔진은 각 테이블 행의 유형 열에 있는 약어를 사용하여 *column_name* 의 문서에 사용할 전체 텍스트 검색 필터를 식별합니다. 이 필터는 문서를 이진 스트림으로 로드하고 서식 정보를 제거하며 문서의 텍스트를 단어 분리기 구성 요소로 보냅니다. 자세한 내용은 [고급 분석 확장 구성 및 관리](../../relational-databases/search/configure-and-manage-filters-for-search.md)를 참조하세요.  
   
  LANGUAGE *language_term*  
- **column_name**에 저장된 데이터의 언어입니다.  
+ **column_name** 에 저장된 데이터의 언어입니다.  
   
- *language_term*은 선택적이며 언어의 LCID(로캘 ID)에 해당하는 문자열, 정수 또는 16진수 값으로 지정할 수 있습니다. *language_term*을 지정할 경우 해당 언어는 검색 조건의 모든 요소에 적용됩니다. 값이 지정되지 않으면 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 인스턴스의 기본 전체 텍스트 언어가 사용됩니다.  
+ *language_term* 은 선택적이며 언어의 LCID(로캘 ID)에 해당하는 문자열, 정수 또는 16진수 값으로 지정할 수 있습니다. *language_term* 을 지정할 경우 해당 언어는 검색 조건의 모든 요소에 적용됩니다. 값이 지정되지 않으면 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 인스턴스의 기본 전체 텍스트 언어가 사용됩니다.  
   
  **sp_configure** 저장 프로시저를 사용하여 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 인스턴스의 기본 전체 텍스트 언어에 대한 정보에 액세스할 수 있습니다.  
   
- 문자열로 지정하는 경우 *language_term*은 **syslanguages** 시스템 테이블의 **alias** 열 값에 해당합니다. 문자열은 '*language_term*'과 같이 작은따옴표로 묶어야 합니다. 정수로 지정하는 경우 *language_term*은 언어를 식별하는 실제 LCID입니다. 16진수 값으로 지정하는 경우 *language_term*은 0x로 시작하는 16진수 LCID 값입니다. 16진수 값은 선행 0을 포함하여 8자리 수를 초과할 수 없습니다.  
+ 문자열로 지정하는 경우 *language_term* 은 **syslanguages** 시스템 테이블의 **alias** 열 값에 해당합니다. 문자열은 '*language_term*'과 같이 작은따옴표로 묶어야 합니다. 정수로 지정하는 경우 *language_term* 은 언어를 식별하는 실제 LCID입니다. 16진수 값으로 지정하는 경우 *language_term* 은 0x로 시작하는 16진수 LCID 값입니다. 16진수 값은 선행 0을 포함하여 8자리 수를 초과할 수 없습니다.  
   
  값이 DBCS(더블바이트 문자 집합) 형식인 경우 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]는 값을 유니코드로 변환합니다.  
   
- 단어 분리기 및 형태소 분석기와 같은 리소스는 *language_term*으로 지정된 언어에 사용해야 합니다. 이러한 리소스가 지정된 언어를 지원하지 않는 경우 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 에서 오류를 반환합니다.  
+ 단어 분리기 및 형태소 분석기와 같은 리소스는 *language_term* 으로 지정된 언어에 사용해야 합니다. 이러한 리소스가 지정된 언어를 지원하지 않는 경우 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 에서 오류를 반환합니다.  
   
- 비 BLOB 및 비 XML 열이 여러 언어로 된 텍스트 데이터를 포함하거나 열에 저장된 텍스트의 언어를 알 수 없는 경우 중립(0x0) 언어 리소스를 사용합니다. XML 유형 또는 BLOB 유형의 열로 저장된 문서의 경우 인덱싱 시에 문서 내의 언어 인코딩이 사용됩니다. 예를 들어 XML 열에서는 XML 문서의 xml:lang 특성으로 언어를 식별합니다. 쿼리할 때 *language_term*이 전체 텍스트 쿼리의 일부로 지정되지 않은 경우에는 *language_term*에 지정된 이전 값이 전체 텍스트 쿼리의 기본 언어로 사용됩니다.  
+ 비 BLOB 및 비 XML 열이 여러 언어로 된 텍스트 데이터를 포함하거나 열에 저장된 텍스트의 언어를 알 수 없는 경우 중립(0x0) 언어 리소스를 사용합니다. XML 유형 또는 BLOB 유형의 열로 저장된 문서의 경우 인덱싱 시에 문서 내의 언어 인코딩이 사용됩니다. 예를 들어 XML 열에서는 XML 문서의 xml:lang 특성으로 언어를 식별합니다. 쿼리할 때 *language_term* 이 전체 텍스트 쿼리의 일부로 지정되지 않은 경우에는 *language_term* 에 지정된 이전 값이 전체 텍스트 쿼리의 기본 언어로 사용됩니다.  
   
  STATISTICAL_SEMANTICS  
  **적용 대상**: [!INCLUDE[ssSQL11](../../includes/sssql11-md.md)] 이상  
@@ -148,13 +148,13 @@ ALTER FULLTEXT INDEX ON table_name
  지정된 열에 대해 통계 의미 체계 인덱싱을 사용하거나 사용하지 않도록 설정합니다. 자세한 내용은 [의미 체계 검색&#40;SQL Server&#41;](../../relational-databases/search/semantic-search-sql-server.md)을 참조하세요.  
   
  START {FULL|INCREMENTAL|UPDATE} POPULATION  
- *table_name*의 전체 텍스트 인덱스 채우기를 시작하도록 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]에 알립니다. 전체 텍스트 인덱스 채우기가 이미 진행 중이면 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]에서 경고를 반환하고 채우기를 새로 시작하지 않습니다.  
+ *table_name* 의 전체 텍스트 인덱스 채우기를 시작하도록 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]에 알립니다. 전체 텍스트 인덱스 채우기가 이미 진행 중이면 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]에서 경고를 반환하고 채우기를 새로 시작하지 않습니다.  
   
  FULL  
  행이 이미 인덱싱된 경우에도 전체 텍스트 인덱싱을 위해 테이블의 모든 행을 검색하도록 지정합니다.  
   
  INCREMENTAL  
- 전체 텍스트 인덱싱을 위해 마지막 채우기 이후 수정된 행만 검색하도록 지정합니다. INCREMENTAL은 테이블에 **timestamp**형식의 열이 있는 경우에만 적용할 수 있습니다. 전체 텍스트 카탈로그의 테이블에 **timestamp** 형식의 열이 없을 경우 테이블에 전체 채우기가 수행됩니다.  
+ 전체 텍스트 인덱싱을 위해 마지막 채우기 이후 수정된 행만 검색하도록 지정합니다. INCREMENTAL은 테이블에 **timestamp** 형식의 열이 있는 경우에만 적용할 수 있습니다. 전체 텍스트 카탈로그의 테이블에 **timestamp** 형식의 열이 없을 경우 테이블에 전체 채우기가 수행됩니다.  
   
  UPDATE  
  변경 내용 추적 인덱스가 마지막으로 업데이트된 후에 모든 삽입, 업데이트 또는 삭제를 처리하도록 지정합니다. 변경 내용 추적 채우기는 테이블에서 활성화해야 하지만 백그라운드 인덱스 업데이트 또는 자동 변경 내용 추적을 설정해서는 안 됩니다.  

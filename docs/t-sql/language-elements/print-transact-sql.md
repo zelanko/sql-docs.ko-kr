@@ -25,10 +25,10 @@ author: rothja
 ms.author: jroth
 monikerRange: '>=aps-pdw-2016||=azuresqldb-current||=azure-sqldw-latest||>=sql-server-2016||=sqlallproducts-allversions||>=sql-server-linux-2017||=azuresqldb-mi-current'
 ms.openlocfilehash: 9cde37d6a90b82bb43095e1138116cd98ae198f9
-ms.sourcegitcommit: cfa04a73b26312bf18d8f6296891679166e2754d
+ms.sourcegitcommit: c5078791a07330a87a92abb19b791e950672e198
 ms.translationtype: HT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 10/19/2020
+ms.lasthandoff: 11/26/2020
 ms.locfileid: "92191457"
 ---
 # <a name="print-transact-sql"></a>PRINT(Transact-SQL)
@@ -51,7 +51,7 @@ PRINT msg_str | @local_variable | string_expr
  문자열 또는 유니코드 문자열 상수입니다. 자세한 내용은 [상수&#40;Transact-SQL&#41;](../../t-sql/data-types/constants-transact-sql.md)을 참조하세요.  
   
  **@** *local_variable*  
- 유효한 문자 데이터 형식의 변수입니다. **@** _local\_variable_은 **char**, **nchar**, **varchar** 또는 **nvarchar**이거나 이러한 데이터 형식으로 암시적으로 변환될 수 있어야 합니다.  
+ 유효한 문자 데이터 형식의 변수입니다. **@** _local\_variable_ 은 **char**, **nchar**, **varchar** 또는 **nvarchar** 이거나 이러한 데이터 형식으로 암시적으로 변환될 수 있어야 합니다.  
   
  *string_expr*  
  문자열을 반환하는 식입니다. 연결된 리터럴 값, 함수 및 변수를 포함할 수 있습니다. 자세한 내용은 [식&#40;Transact-SQL&#41;](../../t-sql/language-elements/expressions-transact-sql.md)을 참조하세요.  

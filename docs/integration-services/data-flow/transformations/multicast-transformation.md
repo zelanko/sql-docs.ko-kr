@@ -20,10 +20,10 @@ ms.assetid: 32194784-1684-40cd-9f91-1aba4d8360d3
 author: chugugrace
 ms.author: chugu
 ms.openlocfilehash: 92dd1a4351c9cfdc1bedb0958e370e382b08ecc0
-ms.sourcegitcommit: cfa04a73b26312bf18d8f6296891679166e2754d
+ms.sourcegitcommit: c5078791a07330a87a92abb19b791e950672e198
 ms.translationtype: HT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 10/19/2020
+ms.lasthandoff: 11/26/2020
 ms.locfileid: "92197074"
 ---
 # <a name="multicast-transformation"></a>멀티캐스트 변환
@@ -55,7 +55,7 @@ ms.locfileid: "92197074"
  왼쪽에서 출력을 선택하여 오른쪽에 있는 테이블에서 해당 속성을 확인합니다.  
   
  **속성**  
- 나열된 모든 출력 속성은 **Name** 과 **Description**을 제외하고 읽기 전용입니다.  
+ 나열된 모든 출력 속성은 **Name** 과 **Description** 을 제외하고 읽기 전용입니다.  
   
 ## <a name="see-also"></a>참고 항목  
  [데이터 흐름](../../../integration-services/data-flow/data-flow.md)   

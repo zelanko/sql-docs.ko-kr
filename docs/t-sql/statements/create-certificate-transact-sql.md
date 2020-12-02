@@ -29,11 +29,11 @@ author: VanMSFT
 ms.author: vanto
 monikerRange: '>=aps-pdw-2016||=azuresqldb-current||=azure-sqldw-latest||>=sql-server-2016||=sqlallproducts-allversions||>=sql-server-linux-2017||=azuresqldb-mi-current'
 ms.openlocfilehash: 3d4799b962fd1c8b6084443f5d83fa171fe4b0a1
-ms.sourcegitcommit: 894c1a23e922dc29b82c1d2c34c7b0ff28b38654
+ms.sourcegitcommit: 192f6a99e19e66f0f817fdb1977f564b2aaa133b
 ms.translationtype: HT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 10/30/2020
-ms.locfileid: "93067430"
+ms.lasthandoff: 11/25/2020
+ms.locfileid: "96124132"
 ---
 # <a name="create-certificate-transact-sql"></a>CREATE CERTIFICATE(Transact-SQL)
 [!INCLUDE [sql-asdb-asa-pdw](../../includes/applies-to-version/sql-asdb-asa-pdw.md)]
@@ -126,7 +126,7 @@ CREATE CERTIFICATE certificate_name
  ASSEMBLY *assembly_name*  
  데이터베이스에 이미 로드된 서명된 어셈블리를 지정합니다.  
   
- [ EXECUTABLE ] FILE = ' *path_to_file* '  
+ [ EXECUTABLE ] FILE = '*path_to_file*'  
  인증서를 포함하는 DER 인코딩 파일에 대해 파일 이름을 포함한 전체 경로를 지정합니다. EXECUTABLE 옵션을 사용한 경우 파일은 인증서로 서명된 DLL입니다. *path_to_file* 은 로컬 경로 또는 네트워크 위치에 대한 UNC 경로일 수 있습니다. 파일은 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 서비스 계정의 보안 컨텍스트에서 액세스됩니다. 이 계정에는 필요한 파일 시스템 사용 권한이 있어야 합니다.  
 
 > [!IMPORTANT]
@@ -134,35 +134,35 @@ CREATE CERTIFICATE certificate_name
   
  BINARY = *asn_encoded_certificate*  
  이진 상수로 지정된 ASN 인코딩 인증서 바이트.  
- **적용 대상** : [!INCLUDE[ssSQL11](../../includes/sssql11-md.md)] 이상  
+ **적용 대상**: [!INCLUDE[ssSQL11](../../includes/sssql11-md.md)] 이상  
   
  WITH PRIVATE KEY  
  인증서의 프라이빗 키가 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]에 로드되도록 지정합니다. 이 절은 어셈블리에서 인증서를 만들 때 유효하지 않습니다. 어셈블리에서 생성된 인증서의 프라이빗 키를 로드하려면 [ALTER CERTIFICATE](../../t-sql/statements/alter-certificate-transact-sql.md)를 사용합니다.  
   
- FILE =' *path_to_private_key* '  
+ FILE ='*path_to_private_key*'  
  프라이빗 키에 대해 파일 이름을 포함하여 전체 경로를 지정합니다. *path_to_private_key* 는 로컬 경로 또는 네트워크 위치에 대한 UNC 경로일 수 있습니다. 파일은 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 서비스 계정의 보안 컨텍스트에서 액세스됩니다. 이 계정에는 필요한 파일 시스템 사용 권한이 있어야 합니다.  
   
 > [!IMPORTANT]  
 > 포함된 데이터베이스 또는 [!INCLUDE[ssSDSfull](../../includes/sssdsfull-md.md)]에서는 이 옵션을 사용할 수 없습니다.  
   
  BINARY = *private_key_bits*  
- **적용 대상** : [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] ([!INCLUDE[ssSQL11](../../includes/sssql11-md.md)]부터 시작) 및 [!INCLUDE[ssSDSfull](../../includes/sssdsfull-md.md)].  
+ **적용 대상**: [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] ([!INCLUDE[ssSQL11](../../includes/sssql11-md.md)]부터 시작) 및 [!INCLUDE[ssSDSfull](../../includes/sssdsfull-md.md)].  
   
  이진 상수로 지정되는 프라이빗 키 비트입니다. 이러한 비트는 암호화된 형식일 수 있습니다. 암호화된 경우 사용자는 해독 암호를 입력해야 합니다. 이 암호에 대해서는 암호 정책 확인이 수행되지 않습니다. 프라이빗 키 비트는 PVK 파일 형식이어야 합니다.  
   
- DECRYPTION BY PASSWORD = ' *key_password* '  
+ DECRYPTION BY PASSWORD = '*key_password*'  
  파일에서 검색한 프라이빗 키의 암호를 해독하는 데 필요한 암호를 지정합니다. 프라이빗 키가 Null 암호로 보호되는 경우 이 절은 선택 사항입니다. 암호 보호 없이 프라이빗 키를 파일에 저장하는 것은 권장되지 않습니다. 암호가 필요하지만 지정된 암호가 없으면 문이 실패합니다.  
   
- ENCRYPTION BY PASSWORD = ' *password* '  
+ ENCRYPTION BY PASSWORD = '*password*'  
  프라이빗 키를 암호화하는 데 사용할 암호를 지정합니다. 암호로 인증서를 암호화하려는 경우에만 이 옵션을 사용합니다. 이 절을 생략하면 프라이빗 키가 데이터베이스 마스터 키로 암호화됩니다. *password* 는 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 인스턴스를 실행하는 컴퓨터의 Windows 암호 정책 요구 사항을 충족해야 합니다. 자세한 내용은 [Password Policy](../../relational-databases/security/password-policy.md)을 참조하세요.  
   
- SUBJECT = ' *certificate_subject_name* '  
+ SUBJECT = '*certificate_subject_name*'  
  *제목* 이란 단어는 X.509 표준에 정의된 것과 같이 인증서의 메타데이터에 있는 필드를 나타냅니다. 제목은 64자를 초과할 수 없으며 이 제한은 Linux에서 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]에 적용됩니다. Windows에서 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]의 경우 제목은 최대 128자까지 지정할 수 있습니다. 128자를 초과하는 제목은 카탈로그에 저장될 때 잘리지만 인증서가 포함된 BLOB(Binary Large Object)에는 전체 제목 이름이 포함됩니다.  
   
- START_DATE = ' *datetime* '  
+ START_DATE = '*datetime*'  
  인증서가 유효하게 되는 날짜입니다. 지정하지 않으면 START_DATE가 현재 날짜와 같게 설정됩니다. START_DATE는 UTC 시간이며 날짜 및 시간으로 변환이 가능한 모든 형식으로 지정할 수 있습니다.  
   
- EXPIRY_DATE = ' *datetime* '  
+ EXPIRY_DATE = '*datetime*'  
  인증서가 만료되는 날짜입니다. 지정하지 않으면 EXPIRY_DATE가 START_DATE의 일년 후 날짜로 설정됩니다. EXPIRY_DATE는 UTC 시간이며 날짜 및 시간으로 변환이 가능한 모든 형식으로 지정할 수 있습니다. [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] Service Broker는 만료 날짜를 확인하지만 인증서를 사용하는 암호화를 통한 백업도 만료 날짜를 확인하며 만료된 인증서로 새로운 백업 생성을 허용하지 않지만 만료된 인증서로 복원은 허용합니다. 인증서가 데이터베이스 암호화 또는 Always Encrypted에 사용되는 경우에는 만료되지 않습니다.  
   
  ACTIVE FOR BEGIN_DIALOG = { **ON** | OFF }  

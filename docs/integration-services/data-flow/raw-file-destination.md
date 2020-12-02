@@ -22,10 +22,10 @@ ms.assetid: d311b458-aefc-4b4d-b1a1-4c0ebbb34214
 author: chugugrace
 ms.author: chugu
 ms.openlocfilehash: 27b28672540d25fe84573c37004161992d3d3827
-ms.sourcegitcommit: cfa04a73b26312bf18d8f6296891679166e2754d
+ms.sourcegitcommit: c5078791a07330a87a92abb19b791e950672e198
 ms.translationtype: HT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 10/19/2020
+ms.lasthandoff: 11/26/2020
 ms.locfileid: "92194207"
 ---
 # <a name="raw-file-destination"></a>Raw File Destination
@@ -118,9 +118,9 @@ ms.locfileid: "92194207"
   
  루프의 첫 번째 반복에서 파일을 만든 다음 루프의 후속 반복에서 행을 추가하려면 디자인 타임에 다음을 수행해야 합니다.  
   
-1.  WriteOption 속성을 **CreateOnce** 또는 **CreateAlways**로 설정하고 루프의 반복 하나를 실행합니다. 파일이 생성됩니다. 이렇게 하면 추가된 데이터와 파일의 메타데이터가 일치하게 됩니다.  
+1.  WriteOption 속성을 **CreateOnce** 또는 **CreateAlways** 로 설정하고 루프의 반복 하나를 실행합니다. 파일이 생성됩니다. 이렇게 하면 추가된 데이터와 파일의 메타데이터가 일치하게 됩니다.  
   
-2.  WriteOption 속성을 **Append** 로 다시 설정하고 ValidateExternalMetadata 속성을 **False**로 설정합니다.  
+2.  WriteOption 속성을 **Append** 로 다시 설정하고 ValidateExternalMetadata 속성을 **False** 로 설정합니다.  
   
  **Append** 옵션 대신에 **TruncateAppend** 옵션을 사용할 경우 이전 반복에서 추가된 행이 잘리고 새 행이 추가됩니다. **TruncateAppend** 옵션을 사용할 경우에도 데이터가 파일 형식과 일치해야 합니다.  
   
@@ -154,7 +154,7 @@ ms.locfileid: "92194207"
   
 1.  [!INCLUDE[ssISnoversion](../../includes/ssisnoversion-md.md)] 에서 원시 파일 대상을 [!INCLUDE[ssBIDevStudioFull](../../includes/ssbidevstudiofull-md.md)]패키지에 추가합니다.  
   
-2.  구성 요소를 마우스 오른쪽 단추로 클릭한 다음 **편집**을 클릭합니다.  
+2.  구성 요소를 마우스 오른쪽 단추로 클릭한 다음 **편집** 을 클릭합니다.  
   
 ###  <a name="set-options-on-the-connection-manager-tab"></a><a name="connection"></a> 연결 관리자 탭에서 옵션 설정  
  **액세스 모드**  
@@ -167,16 +167,16 @@ ms.locfileid: "92194207"
  파일을 만들고 파일에 쓰는 데 사용할 메서드를 선택합니다.  
   
  **초기 원시 파일 생성**  
- 패키지를 실행할 필요 없이 열만 포함된 빈 원시 파일(메타데이터 전용 파일)을 생성하려면 단추를 클릭합니다. 파일에는 **원시 파일 대상 편집기** 의 **열**페이지에서 선택한 열이 포함됩니다. 원시 파일 원본이 이 메타데이터 전용 파일을 가리키도록 설정할 수 있습니다.  
+ 패키지를 실행할 필요 없이 열만 포함된 빈 원시 파일(메타데이터 전용 파일)을 생성하려면 단추를 클릭합니다. 파일에는 **원시 파일 대상 편집기** 의 **열** 페이지에서 선택한 열이 포함됩니다. 원시 파일 원본이 이 메타데이터 전용 파일을 가리키도록 설정할 수 있습니다.  
   
- **초기 원시 파일 생성**을 누르면 메시지 상자가 표시됩니다. **확인** 을 클릭하여 파일 만들기를 계속합니다. **열** 페이지의 서로 다른 열 목록을 선택하려면 **취소** 를 클릭합니다.  
+ **초기 원시 파일 생성** 을 누르면 메시지 상자가 표시됩니다. **확인** 을 클릭하여 파일 만들기를 계속합니다. **열** 페이지의 서로 다른 열 목록을 선택하려면 **취소** 를 클릭합니다.  
   
 ###  <a name="set-options-on-the-columns-tab"></a><a name="mapping"></a> 열 탭에서 옵션 설정  
  **사용 가능한 입력 열**  
  원시 파일에 쓸 하나 이상의 입력 열을 선택합니다.  
   
  **입력 열**  
- 입력 열은 **사용 가능한 입력 열**에서 선택할 경우 이 테이블에 자동으로 추가되거나 이 테이블에서 입력 열을 직접 선택할 수 있습니다.  
+ 입력 열은 **사용 가능한 입력 열** 에서 선택할 경우 이 테이블에 자동으로 추가되거나 이 테이블에서 입력 열을 직접 선택할 수 있습니다.  
   
  **출력 별칭**  
  출력 열에 사용할 대체 이름을 지정합니다.  
@@ -196,7 +196,7 @@ ms.locfileid: "92194207"
   
 1.  [!INCLUDE[ssISnoversion](../../includes/ssisnoversion-md.md)] 에서 원시 파일 대상을 [!INCLUDE[ssBIDevStudioFull](../../includes/ssbidevstudiofull-md.md)]패키지에 추가합니다.  
   
-2.  구성 요소를 마우스 오른쪽 단추로 클릭한 다음 **편집**을 클릭합니다.  
+2.  구성 요소를 마우스 오른쪽 단추로 클릭한 다음 **편집** 을 클릭합니다.  
   
 ###  <a name="set-options-on-the-connection-manager-tab"></a><a name="connection"></a> 연결 관리자 탭에서 옵션 설정  
  **액세스 모드**  
@@ -218,7 +218,7 @@ ms.locfileid: "92194207"
  원시 파일에 쓸 하나 이상의 입력 열을 선택합니다.  
   
  **입력 열**  
- 입력 열은 **사용 가능한 입력 열**에서 선택할 경우 이 테이블에 자동으로 추가되거나 이 테이블에서 입력 열을 직접 선택할 수 있습니다.  
+ 입력 열은 **사용 가능한 입력 열** 에서 선택할 경우 이 테이블에 자동으로 추가되거나 이 테이블에서 입력 열을 직접 선택할 수 있습니다.  
   
  **출력 별칭**  
  출력 열에 사용할 대체 이름을 지정합니다.  

@@ -25,10 +25,10 @@ author: rothja
 ms.author: jroth
 monikerRange: '>=aps-pdw-2016||=azuresqldb-current||=azure-sqldw-latest||>=sql-server-2016||=sqlallproducts-allversions||>=sql-server-linux-2017||=azuresqldb-mi-current'
 ms.openlocfilehash: 0751b396deef4a8617b18e9555aae50fdb835010
-ms.sourcegitcommit: cfa04a73b26312bf18d8f6296891679166e2754d
+ms.sourcegitcommit: c5078791a07330a87a92abb19b791e950672e198
 ms.translationtype: HT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 10/19/2020
+ms.lasthandoff: 11/26/2020
 ms.locfileid: "92193383"
 ---
 # <a name="in-transact-sql"></a>IN(Transact-SQL)
@@ -53,21 +53,21 @@ test_expression [ NOT ] IN
  유효한 [식](../../t-sql/language-elements/expressions-transact-sql.md)입니다.  
   
  *subquery*  
- 하나의 열로 구성된 결과 집합을 갖는 하위 쿼리입니다. 이 열은 *test_expression*과 데이터 형식이 같아야 합니다.  
+ 하나의 열로 구성된 결과 집합을 갖는 하위 쿼리입니다. 이 열은 *test_expression* 과 데이터 형식이 같아야 합니다.  
   
  *expression*[ **,**... *n* ]  
- 일치 여부를 검사할 식의 목록입니다. 모든 식은 *test_expression*과 형식이 같아야 합니다.  
+ 일치 여부를 검사할 식의 목록입니다. 모든 식은 *test_expression* 과 형식이 같아야 합니다.  
   
 ## <a name="result-types"></a>결과 형식  
  **Boolean**  
   
 ## <a name="result-value"></a>결과 값  
- *test_expression*의 값이 *subquery*에서 반환된 값과 일치하거나 쉼표로 구분된 목록의 *식*과 일치하는 경우 결과 값은 TRUE입니다. 그렇지 않으면 결과 값은 FALSE입니다.  
+ *test_expression* 의 값이 *subquery* 에서 반환된 값과 일치하거나 쉼표로 구분된 목록의 *식* 과 일치하는 경우 결과 값은 TRUE입니다. 그렇지 않으면 결과 값은 FALSE입니다.  
   
- NOT IN을 사용하면 *하위 쿼리* 값 또는 *식*을 부정합니다.  
+ NOT IN을 사용하면 *하위 쿼리* 값 또는 *식* 을 부정합니다.  
   
 > [!CAUTION]  
->  IN 또는 NOT IN을 사용한 *test_expression*과 비교하여 *subquery* 또는 *expression*에서 반환되는 Null 값은 UNKNOWN을 반환합니다. IN 또는 NOT IN과 함께 Null 값을 사용하면 예기치 않은 결과가 발생할 수 있습니다.  
+>  IN 또는 NOT IN을 사용한 *test_expression* 과 비교하여 *subquery* 또는 *expression* 에서 반환되는 Null 값은 UNKNOWN을 반환합니다. IN 또는 NOT IN과 함께 Null 값을 사용하면 예기치 않은 결과가 발생할 수 있습니다.  
   
 ## <a name="remarks"></a>설명  
  IN 절에서 괄호 안에 너무 많은 값(콤마로 구분된 수천 개의 값)을 명시적으로 포함하면 리소스가 소비되고 오류 8623 또는 8632가 반환됩니다. 이 문제를 해결하려면 IN 목록의 항목을 테이블에 저장하고, IN 절 내에서 SELECT 하위 쿼리를 사용합니다.  

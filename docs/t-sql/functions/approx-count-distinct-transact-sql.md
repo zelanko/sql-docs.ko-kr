@@ -16,11 +16,11 @@ author: joesackmsft
 ms.author: josack
 monikerRange: '>=aps-pdw-2016||=azuresqldb-current||=azure-sqldw-latest||>=sql-server-2016||=sqlallproducts-allversions||>=sql-server-linux-2017||=azuresqldb-mi-current'
 ms.openlocfilehash: 4e980e97adc29cda45dbedb0640f46d0a444c4b2
-ms.sourcegitcommit: 1126792200d3b26ad4c29be1f561cf36f2e82e13
+ms.sourcegitcommit: 192f6a99e19e66f0f817fdb1977f564b2aaa133b
 ms.translationtype: HT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 09/14/2020
-ms.locfileid: "90076738"
+ms.lasthandoff: 11/25/2020
+ms.locfileid: "96119491"
 ---
 # <a name="approx_count_distinct-transact-sql"></a>APPROX_COUNT_DISTINCT(Transact-SQL)
 
@@ -40,7 +40,7 @@ APPROX_COUNT_DISTINCT ( expression )
 
 ## <a name="arguments"></a>인수
 *expression*  
-**image**, **sql_variant**, **ntext** 또는 **text**를 제외한 모든 형식의 [식](../../t-sql/language-elements/expressions-transact-sql.md)입니다. 
+**image**, **sql_variant**, **ntext** 또는 **text** 를 제외한 모든 형식의 [식](../../t-sql/language-elements/expressions-transact-sql.md)입니다. 
 
 ## <a name="return-types"></a>반환 형식
  **bigint**  
@@ -49,7 +49,7 @@ APPROX_COUNT_DISTINCT ( expression )
 `APPROX_COUNT_DISTINCT( expression )`는 그룹의 각 행에 대한 식을 계산하고 그룹에 있는 고유한 null이 아닌 값의 대략적인 개수를 반환합니다. 이 함수는 절대적인 정밀도보다 응답성이 더 중요한 큰 데이터 집합을 기반으로 집계를 제공하도록 디자인되었습니다.  
 
 `APPROX_COUNT_DISTINCT`는 빅 데이터 시나리오에서 사용하도록 디자인되고 다음 조건에 최적화됩니다.
-- 수백만 개 이상의 행을 나타내는 데이터 집합의 액세스 *및 *
+- 수백만 개 이상의 행을 나타내는 데이터 집합의 액세스 *및*
 - 많은 고유 값이 포함된 열의 집계
 
 함수 구현은 최대 97% 확률 중에 최대 2% 오류 비율을 보장합니다. 

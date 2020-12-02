@@ -30,11 +30,11 @@ ms.assetid: 98fe0fff-1a2e-4ca2-b37f-83a06fdf098e
 author: markingmyname
 ms.author: maghan
 ms.openlocfilehash: 3ad277a8538eee95404be124068635bc4d9ea5fa
-ms.sourcegitcommit: ac9feb0b10847b369b77f3c03f8200c86ee4f4e0
+ms.sourcegitcommit: 192f6a99e19e66f0f817fdb1977f564b2aaa133b
 ms.translationtype: HT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 09/16/2020
-ms.locfileid: "90688453"
+ms.lasthandoff: 11/25/2020
+ms.locfileid: "96124042"
 ---
 # <a name="create-message-type-transact-sql"></a>CREATE MESSAGE TYPE(Transact-SQL)
 [!INCLUDE [SQL Server - ASDBMI](../../includes/applies-to-version/sql-asdbmi.md)]
@@ -60,10 +60,10 @@ CREATE MESSAGE TYPE message_type_name
 
 ## <a name="arguments"></a>인수
  *message_type_name*  
- 생성할 메시지 유형의 이름입니다. 새 메시지 유형은 현재 데이터베이스에 생성되고 AUTHORIZATION 절에서 지정한 보안 주체가 소유합니다. 서버, 데이터베이스 및 스키마 이름은 지정될 수 없습니다. *message_type_name*은 최대 128 자까지 사용할 수 있습니다.  
+ 생성할 메시지 유형의 이름입니다. 새 메시지 유형은 현재 데이터베이스에 생성되고 AUTHORIZATION 절에서 지정한 보안 주체가 소유합니다. 서버, 데이터베이스 및 스키마 이름은 지정될 수 없습니다. *message_type_name* 은 최대 128 자까지 사용할 수 있습니다.  
   
  AUTHORIZATION *owner_name*  
- 메시지 유형의 소유자를 지정한 데이터베이스 사용자 또는 역할로 설정합니다. 현재 사용자가 **dbo** 또는 **sa**일 경우 *owner_name*은 유효한 사용자 또는 역할의 이름일 수 있습니다. 그렇지 않으면 *owner_name*은 현재 사용자 이름, 현재 사용자에 IMPERSONATE 권한이 있는 사용자 이름 또는 현재 사용자가 속해 있는 역할 이름 중 하나여야 합니다. 이 절을 생략하면 메시지 유형이 현재 사용자에 속합니다.  
+ 메시지 유형의 소유자를 지정한 데이터베이스 사용자 또는 역할로 설정합니다. 현재 사용자가 **dbo** 또는 **sa** 일 경우 *owner_name* 은 유효한 사용자 또는 역할의 이름일 수 있습니다. 그렇지 않으면 *owner_name* 은 현재 사용자 이름, 현재 사용자에 IMPERSONATE 권한이 있는 사용자 이름 또는 현재 사용자가 속해 있는 역할 이름 중 하나여야 합니다. 이 절을 생략하면 메시지 유형이 현재 사용자에 속합니다.  
   
  VALIDATION  
  [!INCLUDE[ssSB](../../includes/sssb-md.md)]에서 이 유형의 메시지 본문 유효성을 검사하는 방법을 지정합니다. 이 절을 지정하지 않으면 유효성 검사는 기본적으로 NONE으로 설정됩니다.  
@@ -78,7 +78,7 @@ CREATE MESSAGE TYPE message_type_name
  메시지 본문에 올바른 형식의 XML이 포함되도록 지정합니다.  
   
  VALID_XML WITH SCHEMA COLLECTION *schema_collection_name*  
- 메시지 본문에 지정된 스키마 컬렉션의 스키마를 준수하는 XML이 포함되도록 지정합니다. *schema_collection_name*은 기존 XML 스키마 컬렉션의 이름이어야 합니다.  
+ 메시지 본문에 지정된 스키마 컬렉션의 스키마를 준수하는 XML이 포함되도록 지정합니다. *schema_collection_name* 은 기존 XML 스키마 컬렉션의 이름이어야 합니다.  
   
 ## <a name="remarks"></a>설명  
  [!INCLUDE[ssSB](../../includes/sssb-md.md)]는 들어오는 메시지의 유효성을 검사합니다. 메시지에 지정된 유효성 검사 유형을 준수하지 않는 메시지 본문이 있으면 [!INCLUDE[ssSB](../../includes/sssb-md.md)]는 잘못된 메시지를 삭제하고 메시지를 보낸 서비스로 오류 메시지를 반환합니다.  

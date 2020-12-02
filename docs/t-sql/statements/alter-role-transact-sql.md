@@ -24,11 +24,11 @@ author: VanMSFT
 ms.author: vanto
 monikerRange: '>=aps-pdw-2016||=azuresqldb-current||=azure-sqldw-latest||>=sql-server-2016||=sqlallproducts-allversions||>=sql-server-linux-2017||=azuresqldb-mi-current'
 ms.openlocfilehash: 4bf7faa22088fd00c646a5760923e7e6a64a9eac
-ms.sourcegitcommit: 3efd8bbf91f4f78dce3a4ac03348037d8c720e6a
+ms.sourcegitcommit: 192f6a99e19e66f0f817fdb1977f564b2aaa133b
 ms.translationtype: HT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 09/23/2020
-ms.locfileid: "91024455"
+ms.lasthandoff: 11/25/2020
+ms.locfileid: "96124235"
 ---
 # <a name="alter-role-transact-sql"></a>ALTER ROLE(Transact-SQL)
 [!INCLUDE [sql-asdb-asdbmi-asa-pdw](../../includes/applies-to-version/sql-asdb-asdbmi-asa-pdw.md)]
@@ -77,18 +77,18 @@ ALTER ROLE role_name
   
  데이터베이스 보안 주체를 데이터베이스 역할의 멤버 자격에 추가하도록 지정합니다.  
   
--   *database_principal*은 데이터베이스 사용자 또는 사용자 정의 데이터베이스 역할입니다.  
+-   *database_principal* 은 데이터베이스 사용자 또는 사용자 정의 데이터베이스 역할입니다.  
   
--   *database_principal*은 고정 데이터베이스 역할 또는 서버 보안 주체일 수 없습니다.  
+-   *database_principal* 은 고정 데이터베이스 역할 또는 서버 보안 주체일 수 없습니다.  
   
 DROP MEMBER *database_principal*  
  **적용 대상:**  [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)](2012부터), [!INCLUDE[ssSDSfull](../../includes/sssdsfull-md.md)]  
   
  데이터베이스 역할의 멤버 자격에서 데이터베이스 보안 주체를 제거하도록 지정합니다.  
   
--   *database_principal*은 데이터베이스 사용자 또는 사용자 정의 데이터베이스 역할입니다.  
+-   *database_principal* 은 데이터베이스 사용자 또는 사용자 정의 데이터베이스 역할입니다.  
   
--   *database_principal*은 고정 데이터베이스 역할 또는 서버 보안 주체일 수 없습니다.  
+-   *database_principal* 은 고정 데이터베이스 역할 또는 서버 보안 주체일 수 없습니다.  
   
 WITH NAME = *new_name*  
  **적용 대상:**  [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)](2008부터), [!INCLUDE[ssSDSfull](../../includes/sssdsfull-md.md)]  

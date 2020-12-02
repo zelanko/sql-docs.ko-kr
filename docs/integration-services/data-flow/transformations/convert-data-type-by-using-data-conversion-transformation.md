@@ -16,11 +16,11 @@ ms.assetid: 4aabbe4f-7666-4672-865a-9627bd25fbfd
 author: chugugrace
 ms.author: chugu
 ms.openlocfilehash: 55585698aaeddc5147455bda61b14eac695071fe
-ms.sourcegitcommit: e700497f962e4c2274df16d9e651059b42ff1a10
+ms.sourcegitcommit: 192f6a99e19e66f0f817fdb1977f564b2aaa133b
 ms.translationtype: HT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 08/17/2020
-ms.locfileid: "88477766"
+ms.lasthandoff: 11/25/2020
+ms.locfileid: "96123416"
 ---
 # <a name="convert-data-type-with-data-conversion-transformation"></a>데이터 변환을 사용하여 데이터 형식 변환
 
@@ -35,7 +35,7 @@ ms.locfileid: "88477766"
   
 2.  솔루션 탐색기에서 패키지를 두 번 클릭하여 엽니다.  
   
-3.  **데이터 흐름** 탭을 클릭한 다음 **도구 상자**에서 데이터 변환을 디자인 화면으로 끌어 옵니다.  
+3.  **데이터 흐름** 탭을 클릭한 다음 **도구 상자** 에서 데이터 변환을 디자인 화면으로 끌어 옵니다.  
   
 4.  원본이나 이전 변환에서 연결선을 데이터 변환으로 끌어서 데이터 변환을 데이터 흐름에 연결합니다.  
   
@@ -50,11 +50,11 @@ ms.locfileid: "88477766"
   
 8.  **데이터 형식** 목록에서 열에 사용할 새 데이터 형식을 선택합니다. 기본 데이터 형식은 입력 열의 데이터 형식입니다.  
   
-9. 선택한 데이터 형식에 따라 선택적으로 **길이**, **전체 자릿수**, **소수 자릿수**및 **코드 페이지** 열에서 값을 업데이트합니다.  
+9. 선택한 데이터 형식에 따라 선택적으로 **길이**, **전체 자릿수**, **소수 자릿수** 및 **코드 페이지** 열에서 값을 업데이트합니다.  
   
-10. 오류 출력을 구성하려면 **오류 출력 구성**을 클릭합니다. 자세한 내용은 [Debugging Data Flow](../../../integration-services/troubleshooting/debugging-data-flow.md)을 참조하세요.  
+10. 오류 출력을 구성하려면 **오류 출력 구성** 을 클릭합니다. 자세한 내용은 [Debugging Data Flow](../../../integration-services/troubleshooting/debugging-data-flow.md)을 참조하세요.  
   
-11. **확인**을 클릭합니다.  
+11. **확인** 을 클릭합니다.  
   
 12. 업데이트된 패키지를 저장하려면 **파일** 메뉴에서 **선택한 항목 저장** 을 클릭합니다.  
   

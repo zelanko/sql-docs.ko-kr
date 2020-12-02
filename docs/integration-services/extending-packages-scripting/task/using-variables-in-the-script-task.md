@@ -22,10 +22,10 @@ ms.assetid: 593b5961-4bfa-4ce1-9531-a251c34e89d3
 author: chugugrace
 ms.author: chugu
 ms.openlocfilehash: b68f0dc3ac5b5591dc556c81bc083a62aa8d4606
-ms.sourcegitcommit: cfa04a73b26312bf18d8f6296891679166e2754d
+ms.sourcegitcommit: c5078791a07330a87a92abb19b791e950672e198
 ms.translationtype: HT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 10/19/2020
+ms.lasthandoff: 11/26/2020
 ms.locfileid: "92195240"
 ---
 # <a name="using-variables-in-the-script-task"></a>스크립트 태스크에서 변수 사용
@@ -38,9 +38,9 @@ ms.locfileid: "92195240"
  스크립트 태스크에서는 **Dts** 개체의 <xref:Microsoft.SqlServer.Dts.Tasks.ScriptTask.ScriptObjectModel.Variables%2A> 속성을 사용하여 패키지의 <xref:Microsoft.SqlServer.Dts.Runtime.Variable> 개체를 읽고 씁니다.  
   
 > [!NOTE]  
->  <xref:Microsoft.SqlServer.Dts.Runtime.Variable.Value%2A> 클래스의 <xref:Microsoft.SqlServer.Dts.Runtime.Variable> 속성은 **개체** 형식을 사용합니다. 스크립트 태스크에는 **Option Strict**가 설정되어 있으므로 스크립트 태스크를 사용하려면 먼저 <xref:Microsoft.SqlServer.Dts.Runtime.Variable.Value%2A> 속성을 적절한 형식으로 캐스팅해야 합니다.  
+>  <xref:Microsoft.SqlServer.Dts.Runtime.Variable.Value%2A> 클래스의 <xref:Microsoft.SqlServer.Dts.Runtime.Variable> 속성은 **개체** 형식을 사용합니다. 스크립트 태스크에는 **Option Strict** 가 설정되어 있으므로 스크립트 태스크를 사용하려면 먼저 <xref:Microsoft.SqlServer.Dts.Runtime.Variable.Value%2A> 속성을 적절한 형식으로 캐스팅해야 합니다.  
   
- **스크립트 태스크 편집기**의 <xref:Microsoft.SqlServer.Dts.Tasks.ScriptTask.ScriptTask.ReadOnlyVariables%2A> 및 <xref:Microsoft.SqlServer.Dts.Tasks.ScriptTask.ScriptTask.ReadWriteVariables%2A> 목록에 기존 변수를 추가하여 사용자 지정 스크립트에서 해당 변수를 사용할 수 있게 할 수 있습니다. 변수 이름은 대/소문자를 구분합니다. 스크립트 내에서는 **Dts** 개체의 <xref:Microsoft.SqlServer.Dts.Tasks.ScriptTask.ScriptObjectModel.Variables%2A> 속성을 통해 두 유형의 변수에 액세스합니다. 개별 변수를 읽고 쓰는 데는 **Value** 속성을 사용합니다. 스크립트 태스크에서는 스크립트가 변수 값을 읽고 수정할 때 잠금을 투명하게 관리합니다.  
+ **스크립트 태스크 편집기** 의 <xref:Microsoft.SqlServer.Dts.Tasks.ScriptTask.ScriptTask.ReadOnlyVariables%2A> 및 <xref:Microsoft.SqlServer.Dts.Tasks.ScriptTask.ScriptTask.ReadWriteVariables%2A> 목록에 기존 변수를 추가하여 사용자 지정 스크립트에서 해당 변수를 사용할 수 있게 할 수 있습니다. 변수 이름은 대/소문자를 구분합니다. 스크립트 내에서는 **Dts** 개체의 <xref:Microsoft.SqlServer.Dts.Tasks.ScriptTask.ScriptObjectModel.Variables%2A> 속성을 통해 두 유형의 변수에 액세스합니다. 개별 변수를 읽고 쓰는 데는 **Value** 속성을 사용합니다. 스크립트 태스크에서는 스크립트가 변수 값을 읽고 수정할 때 잠금을 투명하게 관리합니다.  
   
  <xref:Microsoft.SqlServer.Dts.Runtime.Variables.Contains%2A> 속성에서 반환된 <xref:Microsoft.SqlServer.Dts.Runtime.Variables> 컬렉션의 <xref:Microsoft.SqlServer.Dts.Tasks.ScriptTask.ScriptObjectModel.Variables%2A> 메서드를 사용하여 코드에서 변수를 사용하기 전에 해당 변수가 있는지 여부를 확인할 수 있습니다.  
   
@@ -49,12 +49,12 @@ ms.locfileid: "92195240"
 ## <a name="using-the-script-task-within-a-foreach-loop-container"></a>Foreach 루프 컨테이너 내에서 스크립트 태스크 사용  
  스크립트 태스크가 Foreach 루프 컨테이너 내에서 반복적으로 실행되는 경우 스크립트는 일반적으로 열거자에서 현재 항목의 내용을 사용해야 합니다. 예를 들어 Foreach File 열거자를 사용하는 경우에는 스크립트에서 현재 파일 이름을 알고 있어야 하며, Foreach ADO 열거자를 사용하는 경우에는 스크립트에서 현재 데이터 행의 열 내용을 알고 있어야 합니다.  
   
- 변수는 Foreach 루프 컨테이너와 스크립트 태스크 간의 이 통신을 가능하게 해 줍니다. **Foreach 루프 편집기**의 **변수 매핑** 페이지에서는 열거된 단일 항목에서 반환된 각 데이터 항목에 변수를 할당합니다. 예를 들어 Foreach File 열거자는 인덱스 0 위치의 파일 이름만 반환하므로 변수 매핑이 하나만 필요한 반면, 각 행의 여러 데이터 열을 반환하는 열거자의 경우에는 스크립트 태스크에서 사용할 각 열에 서로 다른 변수를 매핑해야 합니다.  
+ 변수는 Foreach 루프 컨테이너와 스크립트 태스크 간의 이 통신을 가능하게 해 줍니다. **Foreach 루프 편집기** 의 **변수 매핑** 페이지에서는 열거된 단일 항목에서 반환된 각 데이터 항목에 변수를 할당합니다. 예를 들어 Foreach File 열거자는 인덱스 0 위치의 파일 이름만 반환하므로 변수 매핑이 하나만 필요한 반면, 각 행의 여러 데이터 열을 반환하는 열거자의 경우에는 스크립트 태스크에서 사용할 각 열에 서로 다른 변수를 매핑해야 합니다.  
   
- 열거된 항목을 변수에 매핑한 후에는 **스크립트 태스크 편집기**의 **스크립트** 페이지에서 매핑된 변수를 **ReadOnlyVariables** 속성에 추가하여 스크립트에서 사용할 수 있게 해야 합니다. 폴더의 이미지 파일을 처리하는 Foreach 루프 컨테이너 내에서의 스크립트 태스크에 대한 예제는 [스크립트 태스크를 사용한 이미지 작업](../../../integration-services/extending-packages-scripting-task-examples/working-with-images-with-the-script-task.md)을 참조하세요.  
+ 열거된 항목을 변수에 매핑한 후에는 **스크립트 태스크 편집기** 의 **스크립트** 페이지에서 매핑된 변수를 **ReadOnlyVariables** 속성에 추가하여 스크립트에서 사용할 수 있게 해야 합니다. 폴더의 이미지 파일을 처리하는 Foreach 루프 컨테이너 내에서의 스크립트 태스크에 대한 예제는 [스크립트 태스크를 사용한 이미지 작업](../../../integration-services/extending-packages-scripting-task-examples/working-with-images-with-the-script-task.md)을 참조하세요.  
   
 ## <a name="variables-example"></a>변수 예  
- 다음 예에서는 스크립트 태스크에서 변수에 액세스하고 이를 사용하여 패키지 워크플로의 경로를 확인하는 방법을 보여 줍니다. 이 예제에서는 `CustomerCount`와 `MaxRecordCount`라는 정수 변수를 만들고 **스크립트 태스크 편집기**에서 해당 변수를 **ReadOnlyVariables** 컬렉션에 추가했다고 가정합니다. `CustomerCount` 변수에는 가져올 고객 레코드 수가 들어 있습니다. 이 값이 `MaxRecordCount` 값보다 크면 스크립트 태스크에서 실패가 보고됩니다. `MaxRecordCount` 임계값 초과로 인해 실패할 경우 워크플로의 오류 경로에서 필요한 정리 작업을 구현할 수 있습니다.  
+ 다음 예에서는 스크립트 태스크에서 변수에 액세스하고 이를 사용하여 패키지 워크플로의 경로를 확인하는 방법을 보여 줍니다. 이 예제에서는 `CustomerCount`와 `MaxRecordCount`라는 정수 변수를 만들고 **스크립트 태스크 편집기** 에서 해당 변수를 **ReadOnlyVariables** 컬렉션에 추가했다고 가정합니다. `CustomerCount` 변수에는 가져올 고객 레코드 수가 들어 있습니다. 이 값이 `MaxRecordCount` 값보다 크면 스크립트 태스크에서 실패가 보고됩니다. `MaxRecordCount` 임계값 초과로 인해 실패할 경우 워크플로의 오류 경로에서 필요한 정리 작업을 구현할 수 있습니다.  
   
  이 예제를 컴파일하려면 Microsoft.SqlServer.ScriptTask 어셈블리에 대한 참조를 추가해야 합니다.  
   

@@ -20,10 +20,10 @@ ms.assetid: c1e81ad6-628b-46d4-9b09-d2866517b6ca
 author: chugugrace
 ms.author: chugu
 ms.openlocfilehash: 1dfeeecf62ad33ab5d2d66e0fdf454f89036d047
-ms.sourcegitcommit: cfa04a73b26312bf18d8f6296891679166e2754d
+ms.sourcegitcommit: c5078791a07330a87a92abb19b791e950672e198
 ms.translationtype: HT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 10/19/2020
+ms.lasthandoff: 11/26/2020
 ms.locfileid: "92193831"
 ---
 # <a name="integration-services-ssis-variables"></a>Integration Services(SSIS) 변수
@@ -91,7 +91,7 @@ ms.locfileid: "92193831"
  변수에 대한 설명을 지정합니다.  
   
  **EvaluateAsExpression**    
- 이 속성을 **True**로 설정하면 제공된 식이 변수 값을 설정하는 데 사용됩니다.  
+ 이 속성을 **True** 로 설정하면 제공된 식이 변수 값을 설정하는 데 사용됩니다.  
   
  **식**    
  변수에 할당되는 식을 지정합니다.  
@@ -100,13 +100,13 @@ ms.locfileid: "92193831"
  변수 이름을 지정합니다.  
   
  **Namespace**  
- [!INCLUDE[ssISnoversion](../includes/ssisnoversion-md.md)]은 **User** 및 **System**의 두 가지 네임스페이스를 제공합니다. 기본적으로 사용자 지정 변수는 **사용자** 네임스페이스에 속하고 시스템 변수는 **시스템** 네임스페이스에 속합니다. 사용자 정의 변수에 대한 추가 네임스페이스를 만들고 **User** 네임스페이스의 이름을 변경할 수 있지만 **System** 네임스페이스의 이름을 변경하거나, **System** 네임스페이스에 변수를 추가하거나, 시스템 변수를 다른 네임스페이스에 할당할 수 없습니다.  
+ [!INCLUDE[ssISnoversion](../includes/ssisnoversion-md.md)]은 **User** 및 **System** 의 두 가지 네임스페이스를 제공합니다. 기본적으로 사용자 지정 변수는 **사용자** 네임스페이스에 속하고 시스템 변수는 **시스템** 네임스페이스에 속합니다. 사용자 정의 변수에 대한 추가 네임스페이스를 만들고 **User** 네임스페이스의 이름을 변경할 수 있지만 **System** 네임스페이스의 이름을 변경하거나, **System** 네임스페이스에 변수를 추가하거나, 시스템 변수를 다른 네임스페이스에 할당할 수 없습니다.  
   
 **RaiseChangedEvent**  
- 이 속성을 **True**로 설정하면 변수에서 값을 변경할 때 **OnVariableValueChanged** 이벤트가 발생합니다.  
+ 이 속성을 **True** 로 설정하면 변수에서 값을 변경할 때 **OnVariableValueChanged** 이벤트가 발생합니다.  
   
  **읽기 전용**  
- 이 속성을 **False**로 설정하면 변수는 읽기/쓰기 변수입니다.  
+ 이 속성을 **False** 로 설정하면 변수는 읽기/쓰기 변수입니다.  
   
 **범위**    
  > [!NOTE]  
@@ -119,17 +119,17 @@ ms.locfileid: "92193831"
 **IncludeInDebugDump**  
  디버그 덤프 파일에 변수 값이 포함되는지 여부를 나타냅니다.  
   
- 사용자 정의 변수 및 시스템 변수의 경우 **InclueInDebugDump** 옵션의 기본값은 **true**입니다.  
+ 사용자 정의 변수 및 시스템 변수의 경우 **InclueInDebugDump** 옵션의 기본값은 **true** 입니다.  
   
  그러나 사용자 정의 변수의 경우 다음과 같은 조건이 충족될 때 시스템에서 **IncludeInDebugDump** 옵션을 **false** 로 다시 설정합니다.  
   
--   **EvaluateAsExpression** 변수 속성이 **true**로 설정되면 시스템에서 **IncludeInDebugDump** 옵션을 **false**로 다시 설정합니다.  
+-   **EvaluateAsExpression** 변수 속성이 **true** 로 설정되면 시스템에서 **IncludeInDebugDump** 옵션을 **false** 로 다시 설정합니다.  
   
-     디버그 덤프 파일에 식의 텍스트를 변수 값으로 포함하려면 **IncludeInDebugDump** 옵션을 **true**로 설정합니다.  
+     디버그 덤프 파일에 식의 텍스트를 변수 값으로 포함하려면 **IncludeInDebugDump** 옵션을 **true** 로 설정합니다.  
   
--   변수 데이터 형식이 문자열로 변경되면 시스템에서 **IncludeInDebugDump** 옵션을 **false**로 다시 설정합니다.  
+-   변수 데이터 형식이 문자열로 변경되면 시스템에서 **IncludeInDebugDump** 옵션을 **false** 로 다시 설정합니다.  
   
- 시스템에서 **IncludeInDebugDump** 옵션을 **false**로 다시 설정하면 사용자가 선택한 값이 재정의될 수 있습니다.  
+ 시스템에서 **IncludeInDebugDump** 옵션을 **false** 로 다시 설정하면 사용자가 선택한 값이 재정의될 수 있습니다.  
   
 **Value**    
 사용자 정의 변수의 값은 문자 또는 식일 수 있습니다. 변수 값은 null일 수 없습니다. 변수에는 다음 기본값이 있습니다.
@@ -159,7 +159,7 @@ ms.locfileid: "92193831"
   
  **데이터 흐름 식** 변수를 사용하여 파생 열 및 조건부 분할 변환에서 열을 채우기 위해 사용하는 식에 값을 제공하거나 데이터 행을 다른 변환 출력에 전송할 수 있습니다. 예를 들어 `@varSalutation + LastName`식은 `VarSalutation` 변수와 `LastName` 열의 값을 연결합니다. `Income < @HighIncome`식은 `Income` 열의 값이 `HighIncome` 변수의 값보다 작은 데이터 행을 출력에 전송합니다. 자세한 내용은 [파생 열 변환](../integration-services/data-flow/transformations/derived-column-transformation.md), [조건부 분할 변환](../integration-services/data-flow/transformations/conditional-split-transformation.md) 및 [Integration Services&#40;SSIS&#41; 식](../integration-services/expressions/integration-services-ssis-expressions.md)을 참조하세요.  
   
- **선행 제약 조건 식** 제약 조건이 지정된 실행 개체가 실행되는지 여부를 결정하기 위해 선행 제약 조건에서 사용할 값을 제공합니다. 식을 실행 결과(성공, 실패, 완료)와 함께 사용하거나 실행 결과 대신에 사용할 수 있습니다. 예를 들어 `@varMax > @varMin`식이 **true**로 계산될 경우 실행 개체가 실행됩니다. 자세한 내용은 [선행 제약 조건에 식 추가](./control-flow/precedence-constraints.md)를 참조하세요.  
+ **선행 제약 조건 식** 제약 조건이 지정된 실행 개체가 실행되는지 여부를 결정하기 위해 선행 제약 조건에서 사용할 값을 제공합니다. 식을 실행 결과(성공, 실패, 완료)와 함께 사용하거나 실행 결과 대신에 사용할 수 있습니다. 예를 들어 `@varMax > @varMin`식이 **true** 로 계산될 경우 실행 개체가 실행됩니다. 자세한 내용은 [선행 제약 조건에 식 추가](./control-flow/precedence-constraints.md)를 참조하세요.  
   
  **매개 변수 및 반환 코드** 입력 매개 변수에 대한 값을 제공하거나 출력 매개 변수 및 반환 코드의 값을 저장합니다. 변수를 매개 변수 및 반환 값에 매핑하여 이 작업을 수행합니다. 예를 들어 `varProductId` 변수를 23으로 설정하고 SQL 문 `SELECT * from Production.Product WHERE ProductID = ?`를 실행할 경우 쿼리는 `ProductID` 가 23인 제품을 검색합니다. 자세한 내용은 [SQL 실행 태스크](../integration-services/control-flow/execute-sql-task.md) 및 [SQL 실행 태스크의 매개 변수 및 반환 코드](./control-flow/execute-sql-task.md)를 참조하세요.  
   
@@ -183,11 +183,11 @@ ms.locfileid: "92193831"
   
     -   태스크 또는 컨테이너의 범위를 설정하려면 **제어 흐름** 탭 또는 **이벤트 처리기** 탭의 디자인 화면에서 태스크 또는 컨테이너를 클릭합니다.  
   
-4.  **SSIS** 메뉴에서 **변수**를 클릭합니다. **옵션** 대화 상자의 **키보드** 페이지에서 필요에 따라 선택한 키 조합에 View.Variables 명령을 매핑하여 **변수** 창을 표시할 수 있습니다.  
+4.  **SSIS** 메뉴에서 **변수** 를 클릭합니다. **옵션** 대화 상자의 **키보드** 페이지에서 필요에 따라 선택한 키 조합에 View.Variables 명령을 매핑하여 **변수** 창을 표시할 수 있습니다.  
   
 5.  **변수** 창에서 **변수 추가** 아이콘을 클릭합니다. 새 변수가 목록에 추가됩니다.  
   
-6.  필요에 따라 **표 옵션** 아이콘을 클릭하고 **가변 눈금 옵션** 대화 상자에 표시할 추가 열을 선택한 다음 **확인**을 클릭합니다.  
+6.  필요에 따라 **표 옵션** 아이콘을 클릭하고 **가변 눈금 옵션** 대화 상자에 표시할 추가 열을 선택한 다음 **확인** 을 클릭합니다.  
   
 7.  필요에 따라 변수 속성을 설정합니다. 자세한 내용은 [사용자 정의 변수의 속성 설정]()에 의해 정의됩니다.  
   
@@ -221,11 +221,11 @@ ms.locfileid: "92193831"
   
 2.  솔루션 탐색기에서 패키지를 마우스 오른쪽 단추로 클릭하여 엽니다.  
   
-3.  **SSIS** 메뉴에서 **변수**를 클릭합니다. **옵션** 대화 상자의 **키보드** 페이지에서 필요에 따라 선택한 키 조합에 View.Variables 명령을 매핑하여 **변수** 창을 표시할 수 있습니다.  
+3.  **SSIS** 메뉴에서 **변수** 를 클릭합니다. **옵션** 대화 상자의 **키보드** 페이지에서 필요에 따라 선택한 키 조합에 View.Variables 명령을 매핑하여 **변수** 창을 표시할 수 있습니다.  
   
-4.  삭제할 변수를 선택한 다음 **변수 삭제**를 클릭합니다.  
+4.  삭제할 변수를 선택한 다음 **변수 삭제** 를 클릭합니다.  
   
-     변수 창에 변수가 표시되지 않는 경우 **표 옵션**을 클릭한 다음, **모든 범위의 변수 표시**를 선택합니다.  
+     변수 창에 변수가 표시되지 않는 경우 **표 옵션** 을 클릭한 다음, **모든 범위의 변수 표시** 를 선택합니다.  
   
 5.  **변수 삭제 확인** 대화 상자에서 **예** 를 클릭하여 삭제를 확인합니다.  
   
@@ -237,11 +237,11 @@ ms.locfileid: "92193831"
   
 2.  솔루션 탐색기에서 패키지를 마우스 오른쪽 단추로 클릭하여 엽니다.  
   
-3.  **SSIS** 메뉴에서 **변수**를 클릭합니다. **옵션** 대화 상자의 **키보드** 페이지에서 필요에 따라 선택한 키 조합에 View.Variables 명령을 매핑하여 **변수** 창을 표시할 수 있습니다.  
+3.  **SSIS** 메뉴에서 **변수** 를 클릭합니다. **옵션** 대화 상자의 **키보드** 페이지에서 필요에 따라 선택한 키 조합에 View.Variables 명령을 매핑하여 **변수** 창을 표시할 수 있습니다.  
   
-4.  변수를 선택한 다음 **변수 이동**을 클릭합니다.  
+4.  변수를 선택한 다음 **변수 이동** 을 클릭합니다.  
   
-     변수 창에 변수가 표시되지 않는 경우 **표 옵션**을 클릭한 다음, **모든 범위의 변수 표시**를 선택합니다.  
+     변수 창에 변수가 표시되지 않는 경우 **표 옵션** 을 클릭한 다음, **모든 범위의 변수 표시** 를 선택합니다.  
   
 5.  **새 범위 선택** 대화 상자에서 변수 범위를 변경할 패키지나 패키지에 들어 있는 컨테이너, 태스크 또는 이벤트 처리기를 선택합니다.  
   
@@ -261,21 +261,21 @@ ms.locfileid: "92193831"
   
  **속성** 창을 사용하여 사용자 정의 변수의 식을 설정하는 경우 다음을 참조하세요.  
   
--   변수 값은 Value 또는 Expression 속성에서 설정할 수 있습니다. 기본적으로 EvaluateAsExpression 속성은 **False** 로 설정되고 변수 값은 Value 속성에서 설정합니다. 식을 사용하여 값을 설정하려면 먼저 EvaluateAsExpression을 **True**로 설정한 다음 Expression 속성에서 식을 제공합니다. Value 속성은 이 식의 계산 결과로 자동으로 설정됩니다.  
+-   변수 값은 Value 또는 Expression 속성에서 설정할 수 있습니다. 기본적으로 EvaluateAsExpression 속성은 **False** 로 설정되고 변수 값은 Value 속성에서 설정합니다. 식을 사용하여 값을 설정하려면 먼저 EvaluateAsExpression을 **True** 로 설정한 다음 Expression 속성에서 식을 제공합니다. Value 속성은 이 식의 계산 결과로 자동으로 설정됩니다.  
   
--   ValueType 속성에는 Value 속성에 있는 값의 데이터 형식이 포함됩니다. Value가 식에서 설정된 경우 ValueType은 해당 식의 계산 결과와 호환되는 데이터 형식으로 자동으로 업데이트됩니다. 예를 들어 Value에 0이 포함되어 있고 ValueType 속성에 **Int32** 가 포함되어 있으며 Expression을 GETDATE()로 설정할 경우 Value에는 현재 날짜와 시간이 포함되며 ValueType은 **DateTime**으로 설정됩니다.  
+-   ValueType 속성에는 Value 속성에 있는 값의 데이터 형식이 포함됩니다. Value가 식에서 설정된 경우 ValueType은 해당 식의 계산 결과와 호환되는 데이터 형식으로 자동으로 업데이트됩니다. 예를 들어 Value에 0이 포함되어 있고 ValueType 속성에 **Int32** 가 포함되어 있으며 Expression을 GETDATE()로 설정할 경우 Value에는 현재 날짜와 시간이 포함되며 ValueType은 **DateTime** 으로 설정됩니다.  
   
 -   변수에 대한 **속성** 창에서 **식 작성기** 대화 상자에 액세스할 수 있습니다. 이 도구를 사용하여 식 작성, 유효성 검사 및 계산을 수행할 수 있습니다. 자세한 내용은 [식 작성기](../integration-services/expressions/expression-builder.md) 및 [Integration Services&#40;SSIS&#41; 식](../integration-services/expressions/integration-services-ssis-expressions.md)을 참조하세요.  
   
  **변수** 창을 사용하여 사용자 정의 변수의 식을 설정하는 경우 다음을 참조하세요.  
   
--   식을 사용하여 변수 값을 설정하려면 먼저 변수 데이터 형식이 식의 계산 결과와 호환되는지 확인한 다음 **변수** 창의 **식** 열에 식을 제공합니다. **속성** 창의 EvaluateAsExpression 속성이 자동으로 **True**로 설정됩니다.  
+-   식을 사용하여 변수 값을 설정하려면 먼저 변수 데이터 형식이 식의 계산 결과와 호환되는지 확인한 다음 **변수** 창의 **식** 열에 식을 제공합니다. **속성** 창의 EvaluateAsExpression 속성이 자동으로 **True** 로 설정됩니다.  
   
 -   변수에 식을 할당할 경우 해당 변수 옆에 특수 아이콘 표식이 표시됩니다. 이 특수 아이콘 표식은 식이 설정되어 있는 연결 관리자 및 태스크 옆에도 표시됩니다.  
   
 -   변수에 대한 **변수** 창에서 **식 작성기** 대화 상자에 액세스할 수 있습니다. 이 도구를 사용하여 식 작성, 유효성 검사 및 계산을 수행할 수 있습니다. 자세한 내용은 [식 작성기](../integration-services/expressions/expression-builder.md) 및 [Integration Services&#40;SSIS&#41; 식](../integration-services/expressions/integration-services-ssis-expressions.md)을 참조하세요.  
   
- 변수에 식을 할당하고 **EvaluateAsExpression** 이 **True** 로 설정된 경우 **변수** 창과 **속성**창 모두에서 변수 데이터 형식을 변경할 수 없습니다.  
+ 변수에 식을 할당하고 **EvaluateAsExpression** 이 **True** 로 설정된 경우 **변수** 창과 **속성** 창 모두에서 변수 데이터 형식을 변경할 수 없습니다.  
   
 ### <a name="set-the-namespace-and-name-properties"></a>네임스페이스 및 이름 속성 설정
   
@@ -287,17 +287,17 @@ ms.locfileid: "92193831"
   
 2.  솔루션 탐색기에서 패키지를 마우스 오른쪽 단추로 클릭하여 엽니다.  
   
-3.  **SSIS** 메뉴에서 **변수**를 클릭합니다.  
+3.  **SSIS** 메뉴에서 **변수** 를 클릭합니다.  
   
      **옵션** 대화 상자의 **키보드** 페이지에서 필요에 따라 선택한 키 조합에 View.Variables 명령을 매핑하여 **변수** 창을 표시할 수 있습니다.  
   
-4.  필요에 따라 **변수** 창에서 **표 옵션**을 클릭하고 **변수** 창에 표시할 열을 선택한 다음 변수 목록에 적용할 필터를 선택합니다.  
+4.  필요에 따라 **변수** 창에서 **표 옵션** 을 클릭하고 **변수** 창에 표시할 열을 선택한 다음 변수 목록에 적용할 필터를 선택합니다.  
   
 5.  목록에서 변수를 선택한 다음 **이름**, **데이터 형식**, **값**, **네임스페이스**, **변경 이벤트 발생**, **설명** 및 **식** 열의 값을 업데이트합니다.  
   
 6.  목록에서 변수를 선택하고 **변수 이동** 을 클릭하여 범위를 변경합니다.  
   
-7.  업데이트된 패키지를 저장하려면 **파일** 메뉴에서 **선택한 항목 저장**을 클릭합니다.  
+7.  업데이트된 패키지를 저장하려면 **파일** 메뉴에서 **선택한 항목 저장** 을 클릭합니다.  
   
 ### <a name="set-variable-properties-in-the-properties-window"></a>속성 창에서 변수 속성 설정  
 
@@ -305,7 +305,7 @@ ms.locfileid: "92193831"
   
 2.  솔루션 탐색기에서 패키지를 마우스 오른쪽 단추로 클릭하여 엽니다.  
   
-3.  **보기** 메뉴에서 **속성 창**을 클릭합니다.  
+3.  **보기** 메뉴에서 **속성 창** 을 클릭합니다.  
   
 4.  [!INCLUDE[ssIS](../includes/ssis-md.md)] 디자이너에서 **패키지 탐색기** 탭을 클릭하고 패키지 노드를 확장합니다.  
   
@@ -317,7 +317,7 @@ ms.locfileid: "92193831"
   
      속성에 대한 자세한 내용은 [Integration Services&#40;SSIS&#41; 변수](../integration-services/integration-services-ssis-variables.md)를 참조하세요.  
   
-8.  업데이트된 패키지를 저장하려면 **파일** 메뉴에서 **선택한 항목 저장**을 클릭합니다.  
+8.  업데이트된 패키지를 저장하려면 **파일** 메뉴에서 **선택한 항목 저장** 을 클릭합니다.  
 
 ## <a name="update-a-variable-dynamically-with-configurations"></a>구성에서 변수를 동적으로 업데이트  
  변수를 동적으로 업데이트하려면 변수에 대한 구성을 만들고 패키지와 함께 구성을 배포한 다음 패키지를 배포할 때 구성 파일 내의 변수 값을 업데이트하십시오. 패키지는 런타임에 업데이트된 변수 값을 사용합니다. 자세한 내용은 [패키지 구성 만들기](./packages/legacy-package-deployment-ssis.md)를 참조하세요.  

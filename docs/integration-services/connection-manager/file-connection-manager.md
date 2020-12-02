@@ -21,11 +21,11 @@ ms.assetid: 019078bc-44ee-4975-9169-0f9a89e3f3be
 author: chugugrace
 ms.author: chugu
 ms.openlocfilehash: ebe86146e2ce4f25f05c9948071d3fc7a4d4edb8
-ms.sourcegitcommit: c7f40918dc3ecdb0ed2ef5c237a3996cb4cd268d
+ms.sourcegitcommit: 192f6a99e19e66f0f817fdb1977f564b2aaa133b
 ms.translationtype: HT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 10/05/2020
-ms.locfileid: "91728057"
+ms.lasthandoff: 11/25/2020
+ms.locfileid: "96123695"
 ---
 # <a name="file-connection-manager"></a>파일 연결 관리자
 
@@ -37,7 +37,7 @@ ms.locfileid: "91728057"
 ## <a name="usage-types-of-the-file-connection-manager"></a>파일 연결 관리자의 사용 유형  
  파일 연결 관리자의 **FileUsageType** 속성은 파일 연결 사용 방법을 지정합니다. 파일 연결 관리자에서는 파일이나 폴더를 만들고 기존 파일 또는 기존 폴더를 사용할 수 있습니다.  
   
- 다음 표에서는 **FileUsageType**값을 나열합니다.  
+ 다음 표에서는 **FileUsageType** 값을 나열합니다.  
   
 |값|Description|  
 |-----------|-----------------|  
@@ -52,7 +52,7 @@ ms.locfileid: "91728057"
 ## <a name="configuration-of-the-file-connection-manager"></a>파일 연결 관리자 구성  
  패키지에 파일 연결 관리자를 추가하면 [!INCLUDE[ssISnoversion](../../includes/ssisnoversion-md.md)] 에서 런타임에 파일 연결로 확인되는 연결 관리자를 만들고, 파일 연결 속성을 설정하고, 파일 연결을 패키지의 **Connections** 컬렉션에 추가합니다.  
   
- 연결 관리자의 **ConnectionManagerType** 속성이 **FILE**로 설정됩니다.  
+ 연결 관리자의 **ConnectionManagerType** 속성이 **FILE** 로 설정됩니다.  
   
  다음과 같은 방법으로 파일 연결 관리자를 구성할 수 있습니다.  
   
@@ -60,7 +60,7 @@ ms.locfileid: "91728057"
   
 -   파일 또는 폴더를 지정합니다.  
   
- [!INCLUDE[ssBIDevStudioFull](../../includes/ssbidevstudiofull-md.md)]의 속성 창에 식을 지정하여 파일 연결 관리자에 대한 ConnectionString 속성을 설정할 수 있습니다. 그러나 식을 사용하여 파일 또는 폴더를 지정할 때 유효성 검사 오류가 발생하지 않도록 하려면 **파일 연결 관리자 편집기**에서 **파일/폴더**에 대해 파일 또는 폴더 경로를 추가합니다.  
+ [!INCLUDE[ssBIDevStudioFull](../../includes/ssbidevstudiofull-md.md)]의 속성 창에 식을 지정하여 파일 연결 관리자에 대한 ConnectionString 속성을 설정할 수 있습니다. 그러나 식을 사용하여 파일 또는 폴더를 지정할 때 유효성 검사 오류가 발생하지 않도록 하려면 **파일 연결 관리자 편집기** 에서 **파일/폴더** 에 대해 파일 또는 폴더 경로를 추가합니다.  
   
  [!INCLUDE[ssIS](../../includes/ssis-md.md)] 디자이너를 사용하거나 프로그래밍 방식으로 속성을 설정할 수 있습니다.  
   
@@ -72,7 +72,7 @@ ms.locfileid: "91728057"
   **파일 연결 관리자 편집기** 대화 상자를 사용하여 파일이나 폴더에 연결할 때 사용할 속성을 지정할 수 있습니다.  
   
 > [!NOTE]  
->  [!INCLUDE[ssBIDevStudioFull](../../includes/ssbidevstudiofull-md.md)]의 속성 창에 식을 지정하여 파일 연결 관리자에 대한 ConnectionString 속성을 설정할 수 있습니다. 그러나 식을 사용하여 파일 또는 폴더를 지정할 때 유효성 검사 오류가 발생하지 않도록 하려면 **파일 연결 관리자 편집기**에서 **파일/폴더**에 대해 파일 또는 폴더 경로를 추가합니다.  
+>  [!INCLUDE[ssBIDevStudioFull](../../includes/ssbidevstudiofull-md.md)]의 속성 창에 식을 지정하여 파일 연결 관리자에 대한 ConnectionString 속성을 설정할 수 있습니다. 그러나 식을 사용하여 파일 또는 폴더를 지정할 때 유효성 검사 오류가 발생하지 않도록 하려면 **파일 연결 관리자 편집기** 에서 **파일/폴더** 에 대해 파일 또는 폴더 경로를 추가합니다.  
   
  파일 연결 관리자에 대한 자세한 내용은 [File Connection Manager](../../integration-services/connection-manager/file-connection-manager.md)를 참조하십시오.  
   
@@ -88,9 +88,9 @@ ms.locfileid: "91728057"
 |기존 폴더|기존 폴더를 사용합니다.|  
   
  **파일/폴더**  
- **파일**을 선택한 경우 사용할 파일을 지정합니다.  
+ **파일** 을 선택한 경우 사용할 파일을 지정합니다.  
   
- **폴더**를 선택한 경우 사용할 폴더를 지정합니다.  
+ **폴더** 를 선택한 경우 사용할 폴더를 지정합니다.  
   
  **찾아보기**  
  **파일 선택** 이나 **폴더 찾아보기** 대화 상자를 사용하여 파일이나 폴더를 선택합니다.  

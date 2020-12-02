@@ -24,11 +24,11 @@ ms.assetid: 10b829a1-609b-42e3-9070-cfe5a2bb698c
 author: chugugrace
 ms.author: chugu
 ms.openlocfilehash: 047cbf40a98c2d513c23865dc2b45e00b1fa17b1
-ms.sourcegitcommit: e700497f962e4c2274df16d9e651059b42ff1a10
+ms.sourcegitcommit: 192f6a99e19e66f0f817fdb1977f564b2aaa133b
 ms.translationtype: HT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 08/17/2020
-ms.locfileid: "88484221"
+ms.lasthandoff: 11/25/2020
+ms.locfileid: "96123146"
 ---
 # <a name="developing-a-user-interface-for-a-data-flow-component"></a>데이터 흐름 구성 요소의 사용자 인터페이스 개발
 
@@ -89,7 +89,7 @@ End Class
   
  <xref:Microsoft.SqlServer.Dts.Pipeline.Wrapper.IDTSComponentMetaData100> 인터페이스를 통해 직접 구성 요소를 수정할 수도 있지만 <xref:Microsoft.SqlServer.Dts.Pipeline.Wrapper.CManagedComponentWrapper> 메서드를 사용하여 <xref:Microsoft.SqlServer.Dts.Pipeline.Wrapper.IDTSComponentMetaData100.Instantiate%2A>의 인스턴스를 만드는 것이 더 좋습니다. 이 인터페이스를 사용하여 직접 구성 요소를 편집하면 구성 요소 보호를 위한 유효성 검사가 무시됩니다. 그러나 <xref:Microsoft.SqlServer.Dts.Pipeline.Wrapper.CManagedComponentWrapper>를 통해 구성 요소의 디자인 타임 인스턴스를 사용하면 구성 요소에서 해당 구성 요소에 대한 변경을 제어할 수 있다는 장점이 있습니다.  
   
- <xref:Microsoft.SqlServer.Dts.Pipeline.Design.IDtsComponentUI.Edit%2A> 메서드의 반환 값은 구성 요소의 변경 내용이 지속되는지 삭제되는지를 결정합니다. 이 메서드가 **false**를 반환하면 모든 변경 내용이 삭제되고, **true**를 반환하면 구성 요소의 변경 내용이 유지되고 패키지가 저장되어야 하는 것으로 표시됩니다.  
+ <xref:Microsoft.SqlServer.Dts.Pipeline.Design.IDtsComponentUI.Edit%2A> 메서드의 반환 값은 구성 요소의 변경 내용이 지속되는지 삭제되는지를 결정합니다. 이 메서드가 **false** 를 반환하면 모든 변경 내용이 삭제되고, **true** 를 반환하면 구성 요소의 변경 내용이 유지되고 패키지가 저장되어야 하는 것으로 표시됩니다.  
   
 ### <a name="using-the-services-of-the-ssis-designer"></a>SSIS 디자이너의 서비스 사용  
  <xref:Microsoft.SqlServer.Dts.Pipeline.Design.IDtsComponentUI.Initialize%2A> 메서드의 **IServiceProvider** 매개 변수는 [!INCLUDE[ssIS](../../../includes/ssis-md.md)] 디자이너의 다음 서비스에 액세스할 수 있도록 합니다.  

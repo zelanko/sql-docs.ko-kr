@@ -18,10 +18,10 @@ ms.assetid: 73ad3cd6-9a6d-44cf-905f-c56aa658bf42
 author: chugugrace
 ms.author: chugu
 ms.openlocfilehash: 0994268d1e6ba95e7f4f3bc1bbe3875ec4f57358
-ms.sourcegitcommit: cfa04a73b26312bf18d8f6296891679166e2754d
+ms.sourcegitcommit: c5078791a07330a87a92abb19b791e950672e198
 ms.translationtype: HT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 10/19/2020
+ms.lasthandoff: 11/26/2020
 ms.locfileid: "92197187"
 ---
 # <a name="maintenance-cleanup-task"></a>유지 관리 정리 태스크

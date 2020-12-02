@@ -20,11 +20,11 @@ author: markingmyname
 ms.author: maghan
 monikerRange: '>=aps-pdw-2016||=azuresqldb-current||=azure-sqldw-latest||>=sql-server-2016||=sqlallproducts-allversions||>=sql-server-linux-2017||=azuresqldb-mi-current'
 ms.openlocfilehash: 43b05f32ecaf1cb1554180fce9b1591dc02c7358
-ms.sourcegitcommit: cc23d8646041336d119b74bf239a6ac305ff3d31
+ms.sourcegitcommit: 192f6a99e19e66f0f817fdb1977f564b2aaa133b
 ms.translationtype: HT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 09/23/2020
-ms.locfileid: "91115549"
+ms.lasthandoff: 11/25/2020
+ms.locfileid: "96118949"
 ---
 # <a name="concat-transact-sql"></a>CONCAT(Transact-SQL)
 [!INCLUDE [sql-asdb-asdbmi-asa-pdw](../../includes/applies-to-version/sql-asdb-asdbmi-asa-pdw.md)]
@@ -43,7 +43,7 @@ CONCAT ( string_value1, string_value2 [, string_valueN ] )
 
 ## <a name="arguments"></a>인수
 *string_value*  
-다른 값에 연결할 문자열 값입니다. `CONCAT` 함수에는 둘 이상의 *string_value* 인수와 254개 이하의 *string_value * 인수가 필요합니다.
+다른 값에 연결할 문자열 값입니다. `CONCAT` 함수에는 둘 이상의 *string_value* 인수와 254개 이하의 *string_value* 인수가 필요합니다.
   
 ## <a name="return-types"></a>반환 형식  
 *string_value*  
@@ -57,11 +57,11 @@ CONCAT ( string_value1, string_value2 [, string_valueN ] )
 |입력 형식|출력 형식 및 길이|  
 |---|---|
 |1. 인수가<br><br />SQL-CLR 시스템 종류,<br><br />SQL-CLR UDT인 경우<br><br />또는<br><br />`nvarchar(max)`|**nvarchar(max)**|  
-|2. 그렇지 않고 인수가<br><br />**varbinary(max)**<br><br />또는<br><br />**varchar(max)**|**varchar(max)** - 매개 변수 중 하나가 임의 길이의 **nvarchar**가 아닌 경우. 이 경우 `CONCAT`는 **nvarchar(max)** 형식의 결과를 반환합니다.|  
+|2. 그렇지 않고 인수가<br><br />**varbinary(max)**<br><br />또는<br><br />**varchar(max)**|**varchar(max)** - 매개 변수 중 하나가 임의 길이의 **nvarchar** 가 아닌 경우. 이 경우 `CONCAT`는 **nvarchar(max)** 형식의 결과를 반환합니다.|  
 |3. 그렇지 않고 인수가 최대 4,000자의 **nvarchar** 형식인 경우<br><br />( **nvarchar**(<= 4000) )|**nvarchar**(<= 4000)|  
 |4. 다른 모든 경우|매개 변수 중 하나가 임의 길이의 nvarcha가 아닌 경우 **varchar**(<= 8000)(최대 8,000자의 **varchar**) 이 경우 `CONCAT`는 **nvarchar(max)** 형식의 결과를 반환합니다.|  
   
-`CONCAT`에서 길이가 4,000자 이하인 **nvarchar** 또는 길이가 8,000자 이하인 **varchar** 입력 인수를 받으면, 암시적 변환이 결과의 길이에 영향을 줄 수 있습니다. 다른 데이터 형식은 문자열로 암시적으로 변환되는 경우 길이가 달라집니다. 예를 들어 **int** (14)의 문자열 길이는 12자이고, **float**의 길이는 32자입니다. 따라서 두 개의 정수를 연결하면 길이가 24 이상인 결과가 반환됩니다.
+`CONCAT`에서 길이가 4,000자 이하인 **nvarchar** 또는 길이가 8,000자 이하인 **varchar** 입력 인수를 받으면, 암시적 변환이 결과의 길이에 영향을 줄 수 있습니다. 다른 데이터 형식은 문자열로 암시적으로 변환되는 경우 길이가 달라집니다. 예를 들어 **int** (14)의 문자열 길이는 12자이고, **float** 의 길이는 32자입니다. 따라서 두 개의 정수를 연결하면 길이가 24 이상인 결과가 반환됩니다.
   
 지원되는 LOB(Large Object) 형식의 입력 인수가 없는 경우 반환 형식에 관계없이 모든 반환 형식이 8,000자 길이로 잘립니다. 이 잘림은 공간을 유지하고 계획 생성 효율성을 지원합니다.
   

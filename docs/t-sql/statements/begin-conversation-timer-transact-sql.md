@@ -34,11 +34,11 @@ ms.assetid: 98e49b3f-a38f-4180-8171-fa9cb30db4cb
 author: markingmyname
 ms.author: maghan
 ms.openlocfilehash: dc2b02a96911dc0ff6e7be86c5cbd36708ddf348
-ms.sourcegitcommit: ac9feb0b10847b369b77f3c03f8200c86ee4f4e0
+ms.sourcegitcommit: 192f6a99e19e66f0f817fdb1977f564b2aaa133b
 ms.translationtype: HT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 09/16/2020
-ms.locfileid: "90688118"
+ms.lasthandoff: 11/25/2020
+ms.locfileid: "96124163"
 ---
 # <a name="begin-conversation-timer-transact-sql"></a>BEGIN CONVERSATION TIMER(Transact-SQL)
 [!INCLUDE [SQL Server - ASDBMI](../../includes/applies-to-version/sql-asdbmi.md)]
@@ -59,7 +59,7 @@ BEGIN CONVERSATION TIMER ( conversation_handle )
 
 ## <a name="arguments"></a>인수
  BEGIN CONVERSATION TIMER **(** _conversation\_handle_ **)**  
- 대화에 시간을 지정합니다. *conversation_handle*은 **uniqueidentifier** 형식이어야 합니다.  
+ 대화에 시간을 지정합니다. *conversation_handle* 은 **uniqueidentifier** 형식이어야 합니다.  
   
  TIMEOUT  
  큐에 메시지를 넣을 때까지 대기하는 시간(초)을 지정합니다.  

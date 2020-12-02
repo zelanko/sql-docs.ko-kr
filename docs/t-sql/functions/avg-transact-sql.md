@@ -24,11 +24,11 @@ author: markingmyname
 ms.author: maghan
 monikerRange: '>=aps-pdw-2016||=azuresqldb-current||=azure-sqldw-latest||>=sql-server-2016||=sqlallproducts-allversions||>=sql-server-linux-2017||=azuresqldb-mi-current'
 ms.openlocfilehash: 5e3fbe43f03e202e87ce951042091190f48a4b8c
-ms.sourcegitcommit: cc23d8646041336d119b74bf239a6ac305ff3d31
+ms.sourcegitcommit: 192f6a99e19e66f0f817fdb1977f564b2aaa133b
 ms.translationtype: HT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 09/23/2020
-ms.locfileid: "91115308"
+ms.lasthandoff: 11/25/2020
+ms.locfileid: "96119298"
 ---
 # <a name="avg-transact-sql"></a>AVG(Transact-SQL)
 [!INCLUDE [sql-asdb-asdbmi-asa-pdw](../../includes/applies-to-version/sql-asdb-asdbmi-asa-pdw.md)]
@@ -57,10 +57,10 @@ DISTINCT
 **bit** 데이터 형식을 제외한 정확한 수치 또는 근사치 데이터 형식 범주의 [expression](../../t-sql/language-elements/expressions-transact-sql.md)입니다. 집계 함수와 하위 쿼리는 허용되지 않습니다.
   
 OVER **(** [ *partition_by_clause* ] _order\_by\_clause_ **)**  
-*partition_by_clause*는 FROM 절이 생성한 결과 집합을 함수가 적용되는 파티션으로 나눕니다. 지정하지 않을 경우 쿼리 결과 집합의 모든 행이 단일 그룹으로 취급됩니다. *order_by_clause*는 작업이 수행되는 논리적 순서를 결정합니다. *order_by_clause*가 필요합니다. 자세한 내용은 [OVER 절&#40;Transact-SQL&#41;](../../t-sql/queries/select-over-clause-transact-sql.md)을 참조하세요.
+*partition_by_clause* 는 FROM 절이 생성한 결과 집합을 함수가 적용되는 파티션으로 나눕니다. 지정하지 않을 경우 쿼리 결과 집합의 모든 행이 단일 그룹으로 취급됩니다. *order_by_clause* 는 작업이 수행되는 논리적 순서를 결정합니다. *order_by_clause* 가 필요합니다. 자세한 내용은 [OVER 절&#40;Transact-SQL&#41;](../../t-sql/queries/select-over-clause-transact-sql.md)을 참조하세요.
   
 ## <a name="return-types"></a>반환 형식
-*expression*의 계산된 결과는 반환 형식을 결정합니다.
+*expression* 의 계산된 결과는 반환 형식을 결정합니다.
   
 |식 결과|반환 형식|  
 |---|---|
@@ -73,7 +73,7 @@ OVER **(** [ *partition_by_clause* ] _order\_by\_clause_ **)**
 |**float** 및 **real** 범주|**float**|  
   
 ## <a name="remarks"></a>설명  
-*expression*이 별칭 데이터 형식이면 반환 형식도 별칭 데이터 형식입니다. 하지만 별칭 데이터 형식의 기본 데이터 형식이 승격되면(예: **tinyint**에서 **int**로) 반환 값은 별칭 데이터 형식이 아닌 승격된 데이터 형식입니다.
+*expression* 이 별칭 데이터 형식이면 반환 형식도 별칭 데이터 형식입니다. 하지만 별칭 데이터 형식의 기본 데이터 형식이 승격되면(예: **tinyint** 에서 **int** 로) 반환 값은 별칭 데이터 형식이 아닌 승격된 데이터 형식입니다.
   
 AVG ()는 값 집합의 합계를 Null이 아닌 값의 개수로 나눠 이러한 값에 대한 평균을 계산합니다. 합계가 반환 값의 데이터 형식에 대한 최대값을 초과할 경우 AVG는 오류를 반환합니다.
   

@@ -18,11 +18,11 @@ ms.assetid: 3f8b5825-226f-413c-ba8f-0bb931ca3770
 author: chugugrace
 ms.author: chugu
 ms.openlocfilehash: 2f70d8f963a6f26131099e6cd7d09d5019f9c6bc
-ms.sourcegitcommit: cfa04a73b26312bf18d8f6296891679166e2754d
+ms.sourcegitcommit: 192f6a99e19e66f0f817fdb1977f564b2aaa133b
 ms.translationtype: HT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 10/19/2020
-ms.locfileid: "92194676"
+ms.lasthandoff: 11/25/2020
+ms.locfileid: "96123411"
 ---
 # <a name="conditional-split-transformation"></a>조건부 분할 변환
 

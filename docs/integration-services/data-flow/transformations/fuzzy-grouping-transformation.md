@@ -30,10 +30,10 @@ ms.assetid: e43f17bd-9d13-4a8f-9f29-cce44cac1025
 author: chugugrace
 ms.author: chugu
 ms.openlocfilehash: 6ce27ef50da9b1c72bc3b620dda61e6c1c925d14
-ms.sourcegitcommit: cfa04a73b26312bf18d8f6296891679166e2754d
+ms.sourcegitcommit: c5078791a07330a87a92abb19b791e950672e198
 ms.translationtype: HT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 10/19/2020
+ms.lasthandoff: 11/26/2020
 ms.locfileid: "92195961"
 ---
 # <a name="fuzzy-grouping-transformation"></a>유사 항목 그룹화 변환
@@ -54,9 +54,9 @@ ms.locfileid: "92195961"
   
  변환에서는 각 입력 열당 다음 추가 열을 포함하여 한 개의 출력 행을 생성합니다.  
   
--   **_key_in**열, 각 행을 고유하게 식별합니다.  
+-   **_key_in** 열, 각 행을 고유하게 식별합니다.  
   
--   **_key_out**열, 중복 행의 그룹을 식별합니다. **_key_out** 열은 정식 데이터 행에 **_key_in** 열 값을 가집니다. **_key_out** 에 동일한 값을 가진 행은 동일한 그룹의 일부입니다. 그룹의 **_key_out**값은 정식 데이터 행의 **_key_in** 값에 해당합니다.  
+-   **_key_out** 열, 중복 행의 그룹을 식별합니다. **_key_out** 열은 정식 데이터 행에 **_key_in** 열 값을 가집니다. **_key_out** 에 동일한 값을 가진 행은 동일한 그룹의 일부입니다. 그룹의 **_key_out** 값은 정식 데이터 행의 **_key_in** 값에 해당합니다.  
   
 -   **_score**, 입력 행 및 정식 행 간의 유사성을 나타내는 0과 1 사이의 값입니다.  
   
@@ -77,7 +77,7 @@ ms.locfileid: "92195961"
  이 변환은 하나의 입력과 하나의 출력을 가지며 오류 출력은 지원하지 않습니다.  
   
 ## <a name="row-comparison"></a>행 비교  
- 유사 항목 그룹화 변환을 구성하는 경우 변환에서 변환 입력 내의 행을 비교하는 데 사용할 비교 알고리즘을 지정할 수 있습니다. Exhaustive 속성을 **true**로 설정하면 변환에서는 입력의 모든 각 행을 입력의 다른 행과 비교합니다. 이 비교 알고리즘을 사용하면 더 정확한 결과를 얻을 수 있지만 입력 행의 수가 많으면 변환 성능이 느려집니다. 성능 문제를 방지하려면 패키지 개발 시에만 Exhaustive 속성을 **true** 로 설정하는 것이 좋습니다.  
+ 유사 항목 그룹화 변환을 구성하는 경우 변환에서 변환 입력 내의 행을 비교하는 데 사용할 비교 알고리즘을 지정할 수 있습니다. Exhaustive 속성을 **true** 로 설정하면 변환에서는 입력의 모든 각 행을 입력의 다른 행과 비교합니다. 이 비교 알고리즘을 사용하면 더 정확한 결과를 얻을 수 있지만 입력 행의 수가 많으면 변환 성능이 느려집니다. 성능 문제를 방지하려면 패키지 개발 시에만 Exhaustive 속성을 **true** 로 설정하는 것이 좋습니다.  
   
 ## <a name="temporary-tables-and-indexes"></a>임시 테이블 및 인덱스  
  유사 항목 그룹화 변환에서는 런타임에 변환에서 연결하는 [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] 데이터베이스에 테이블 및 인덱스와 같은 크기가 큰 임시 개체를 만듭니다. 테이블 및 인덱스의 크기는 변환 입력 내 행의 수 및 유사 항목 그룹화 변환에서 만든 토큰의 수에 비례합니다.  
@@ -163,7 +163,7 @@ ms.locfileid: "92195961"
   **유사 항목 그룹화 변환 편집기** 대화 상자의 **고급** 탭을 사용하여 입/출력 열을 지정하고, 유사성 임계값을 설정하고, 구분 기호를 정의할 수 있습니다.  
   
 > [!NOTE]  
->  유사 항목 그룹화 변환의 **Exhaustive** 및 **MaxMemoryUsage** 속성은 **유사 항목 그룹화 변환 편집기**에서 사용할 수 없지만 **고급 편집기**를 사용하여 설정할 수 있습니다. 이러한 속성에 대한 자세한 내용은 [Transformation Custom Properties](../../../integration-services/data-flow/transformations/transformation-custom-properties.md)의 유사 항목 그룹화 변환 섹션을 참조하십시오.  
+>  유사 항목 그룹화 변환의 **Exhaustive** 및 **MaxMemoryUsage** 속성은 **유사 항목 그룹화 변환 편집기** 에서 사용할 수 없지만 **고급 편집기** 를 사용하여 설정할 수 있습니다. 이러한 속성에 대한 자세한 내용은 [Transformation Custom Properties](../../../integration-services/data-flow/transformations/transformation-custom-properties.md)의 유사 항목 그룹화 변환 섹션을 참조하십시오.  
   
 ### <a name="options"></a>옵션  
  **입력 키 열 이름**  

@@ -21,10 +21,10 @@ ms.assetid: a4bfc925-3ef6-431e-b1dd-7e0023d3a92d
 author: chugugrace
 ms.author: chugu
 ms.openlocfilehash: d8775714da1c59e86a6ba62661610a0f5abbd11e
-ms.sourcegitcommit: cfa04a73b26312bf18d8f6296891679166e2754d
+ms.sourcegitcommit: c5078791a07330a87a92abb19b791e950672e198
 ms.translationtype: HT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 10/19/2020
+ms.lasthandoff: 11/26/2020
 ms.locfileid: "92193186"
 ---
 # <a name="use-property-expressions-in-packages"></a>패키지에서 속성 식 사용
@@ -57,7 +57,7 @@ ms.locfileid: "92193186"
   
  속성은 하나의 속성 식만 사용할 수 있고 속성 식은 하나의 속성에만 적용할 수 있습니다. 그러나 여러 동일한 속성 식을 작성하고 다른 속성에 할당할 수 있습니다.  
   
- 일부 속성은 열거자의 값을 사용하여 설정됩니다. 속성 식의 열거자 멤버를 참조할 경우 열거자 멤버의 이름에 해당하는 숫자 값을 사용해야 합니다. 예를 들어 속성 식에 **LoggingMode** 열거 값을 사용하는 **DTSLoggingMode** 속성이 설정된 경우에는 속성 식에 **Enabled**, **Disabled**또는 **UseParentSetting**이름 대신 0, 1 또는 2를 사용해야 합니다. 자세한 내용은 [속성 식의 열거 상수](../../integration-services/expressions/enumerated-constants-in-property-expressions.md)를 참조하세요.  
+ 일부 속성은 열거자의 값을 사용하여 설정됩니다. 속성 식의 열거자 멤버를 참조할 경우 열거자 멤버의 이름에 해당하는 숫자 값을 사용해야 합니다. 예를 들어 속성 식에 **LoggingMode** 열거 값을 사용하는 **DTSLoggingMode** 속성이 설정된 경우에는 속성 식에 **Enabled**, **Disabled** 또는 **UseParentSetting** 이름 대신 0, 1 또는 2를 사용해야 합니다. 자세한 내용은 [속성 식의 열거 상수](../../integration-services/expressions/enumerated-constants-in-property-expressions.md)를 참조하세요.  
   
 ## <a name="property-expression-user-interface"></a>속성 식 사용자 인터페이스  
  [!INCLUDE[ssISnoversion](../../includes/ssisnoversion-md.md)] 는 속성 식을 작성하고 관리하기 위한 도구 집합을 제공합니다.  
@@ -83,7 +83,7 @@ ms.locfileid: "92193186"
 -   [속성 식 추가 또는 변경](../../integration-services/expressions/add-or-change-a-property-expression.md)  
   
 ### <a name="setting-property-expressions-of-data-flow-components"></a>데이터 흐름 구성 요소의 속성 식 설정  
- [!INCLUDE[ssBIDevStudioFull](../../includes/ssbidevstudiofull-md.md)]에서 패키지를 생성하면 속성 식을 지원하는 데이터 흐름 구성 요소의 속성이 해당 속성이 속한 데이터 흐름 태스크에 표시됩니다. 데이터 흐름 구성 요소의 속성 식을 추가, 변경 및 제거하려면 데이터 흐름 구성 요소가 속한 데이터 흐름의 데이터 흐름 태스크를 마우스 오른쪽 단추로 클릭하고 **속성**을 클릭합니다. 속성 창에 속성 식을 사용할 수 있는 데이터 흐름 구성 요소의 속성이 나열됩니다. 예를 들어 SampleCustomer라는 데이터 흐름에서 행 샘플링 변환의 SamplingValue 속성에 대한 속성 식을 만들거나 수정하려면 행 샘플링 변환이 속한 데이터 흐름의 데이터 흐름 태스크를 마우스 오른쪽 단추로 클릭하고 **속성**을 클릭합니다. [SampleCustomer].[SamplingValue] 형식의 SamplingValue 속성이 속성 창에 나열됩니다.  
+ [!INCLUDE[ssBIDevStudioFull](../../includes/ssbidevstudiofull-md.md)]에서 패키지를 생성하면 속성 식을 지원하는 데이터 흐름 구성 요소의 속성이 해당 속성이 속한 데이터 흐름 태스크에 표시됩니다. 데이터 흐름 구성 요소의 속성 식을 추가, 변경 및 제거하려면 데이터 흐름 구성 요소가 속한 데이터 흐름의 데이터 흐름 태스크를 마우스 오른쪽 단추로 클릭하고 **속성** 을 클릭합니다. 속성 창에 속성 식을 사용할 수 있는 데이터 흐름 구성 요소의 속성이 나열됩니다. 예를 들어 SampleCustomer라는 데이터 흐름에서 행 샘플링 변환의 SamplingValue 속성에 대한 속성 식을 만들거나 수정하려면 행 샘플링 변환이 속한 데이터 흐름의 데이터 흐름 태스크를 마우스 오른쪽 단추로 클릭하고 **속성** 을 클릭합니다. [SampleCustomer].[SamplingValue] 형식의 SamplingValue 속성이 속성 창에 나열됩니다.  
   
  속성 창에서 데이터 흐름 구성 요소에 대한 속성 식을 다른 [!INCLUDE[ssISnoversion](../../includes/ssisnoversion-md.md)] 개체 유형에 대한 속성 식과 같은 방식으로 추가, 변경 및 제거합니다. 또한 속성 창에서 데이터 흐름 구성 요소에 대한 속성 식을 추가, 변경 또는 제거할 때 사용하는 다양한 대화 상자 및 작성기에 액세스할 수 있습니다. 속성 식으로 업데이트할 수 있는 데이터 흐름 구성 요소의 속성에 대한 자세한 내용은 [Transformation Custom Properties](../../integration-services/data-flow/transformations/transformation-custom-properties.md)을 참조하십시오.  
   
@@ -119,7 +119,7 @@ ms.locfileid: "92193186"
  다음 예제 식에서는 속성 식에서 시스템 변수, 연산자, 함수 및 문자열 리터럴을 사용하는 방법을 보여 줍니다.  
   
 ### <a name="property-expression-for-the-loggingmode-property-of-a-package"></a>패키지의 LoggingMode 속성에 대한 속성 식  
- 다음 속성 식을 사용하여 패키지의 LoggingMode 속성을 설정할 수 있습니다. 이 식은 DAY 및 GETDATE 함수를 사용하여 날짜의 일 부분을 나타내는 정수를 가져옵니다. 일이 1이거나 15이면 로깅이 설정되고 그렇지 않으면 로깅 설정이 해제됩니다. 값 1은 정수 LoggingMode 열거자 멤버 **Enabled**에 해당하는 정수이고, 값 2는 **Disabled**멤버에 해당하는 정수입니다. 식에는 열거자 멤버 이름 대신 숫자 값을 사용해야 합니다.  
+ 다음 속성 식을 사용하여 패키지의 LoggingMode 속성을 설정할 수 있습니다. 이 식은 DAY 및 GETDATE 함수를 사용하여 날짜의 일 부분을 나타내는 정수를 가져옵니다. 일이 1이거나 15이면 로깅이 설정되고 그렇지 않으면 로깅 설정이 해제됩니다. 값 1은 정수 LoggingMode 열거자 멤버 **Enabled** 에 해당하는 정수이고, 값 2는 **Disabled** 멤버에 해당하는 정수입니다. 식에는 열거자 멤버 이름 대신 숫자 값을 사용해야 합니다.  
   
  `DAY((DT_DBTIMESTAMP)GETDATE())==1||DAY((DT_DBTIMESTAMP)GETDATE())==15?1:2`  
   
@@ -160,7 +160,7 @@ ms.locfileid: "92193186"
  `@[User::myfilenamefull]`  
   
 > [!NOTE]  
->  연결 관리자용 속성 식은 속성 창을 통해서만 액세스할 수 있습니다. 연결 관리자의 속성을 보려면 속성 창이 열려 있을 때 **디자이너의** 연결 관리자 [!INCLUDE[ssIS](../../includes/ssis-md.md)] 영역에서 연결 관리자를 선택하거나 연결 관리자를 마우스 오른쪽 단추로 클릭하고 **속성**을 선택해야 합니다.  
+>  연결 관리자용 속성 식은 속성 창을 통해서만 액세스할 수 있습니다. 연결 관리자의 속성을 보려면 속성 창이 열려 있을 때 **디자이너의** 연결 관리자 [!INCLUDE[ssIS](../../includes/ssis-md.md)] 영역에서 연결 관리자를 선택하거나 연결 관리자를 마우스 오른쪽 단추로 클릭하고 **속성** 을 선택해야 합니다.  
   
 ### <a name="property-expression-for-the-configstring-property-of-a-text-file-log-provider"></a>텍스트 파일 로그 공급자의 ConfigString 속성에 대한 속성 식  
  다음 속성 식을 사용하여 텍스트 파일 로그 공급자의 ConfigString 속성을 설정할 수 있습니다. 이 식에서는 사용할 파일 연결 관리자의 이름이 포함된 단일 사용자 정의 변수 `varConfigString`을 사용합니다. 파일 연결 관리자는 로그 항목이 작성된 텍스트 파일의 경로를 지정합니다.  
@@ -168,7 +168,7 @@ ms.locfileid: "92193186"
  `@[User::varConfigString]`  
   
 > [!NOTE]  
->  로그 공급자용 속성 식은 속성 창을 통해서만 액세스할 수 있습니다. 로그 공급자의 속성을 보려면 속성 창이 열려 있을 때 **디자이너의** 패키지 탐색기 [!INCLUDE[ssIS](../../includes/ssis-md.md)] 탭에서 로그 공급자를 선택하거나 패키지 탐색기에서 로그 공급자를 마우스 오른쪽 단추로 클릭하고 **속성**을 클릭해야 합니다.  
+>  로그 공급자용 속성 식은 속성 창을 통해서만 액세스할 수 있습니다. 로그 공급자의 속성을 보려면 속성 창이 열려 있을 때 **디자이너의** 패키지 탐색기 [!INCLUDE[ssIS](../../includes/ssis-md.md)] 탭에서 로그 공급자를 선택하거나 패키지 탐색기에서 로그 공급자를 마우스 오른쪽 단추로 클릭하고 **속성** 을 클릭해야 합니다.  
   
 ## <a name="external-resources"></a>외부 리소스  
   

@@ -12,11 +12,11 @@ ms.assetid: 4edfab68-7e68-45e8-a3f3-a0049ff7eb9e
 author: chugugrace
 ms.author: chugu
 ms.openlocfilehash: fd7ed8863356ff3e6b67d456628bd3dbc1ab6a5b
-ms.sourcegitcommit: e700497f962e4c2274df16d9e651059b42ff1a10
+ms.sourcegitcommit: 192f6a99e19e66f0f817fdb1977f564b2aaa133b
 ms.translationtype: HT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 08/17/2020
-ms.locfileid: "88484764"
+ms.lasthandoff: 11/25/2020
+ms.locfileid: "96123747"
 ---
 # <a name="advanced-connection-properties"></a>고급 연결 속성
 

@@ -25,11 +25,11 @@ ms.assetid: 8076eb4e-f049-44bf-9a35-45cdd6ef0105
 author: pmasl
 ms.author: umajay
 ms.openlocfilehash: fe40df4a8593b3ae00bb6733d30a4091a6179ef5
-ms.sourcegitcommit: cc23d8646041336d119b74bf239a6ac305ff3d31
+ms.sourcegitcommit: 192f6a99e19e66f0f817fdb1977f564b2aaa133b
 ms.translationtype: HT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 09/23/2020
-ms.locfileid: "91116508"
+ms.lasthandoff: 11/25/2020
+ms.locfileid: "96119659"
 ---
 # <a name="dbcc-checkcatalog-transact-sql"></a>DBCC CHECKCATALOG(Transact-SQL)
 [!INCLUDE [SQL Server SQL Database](../../includes/applies-to-version/sql-asdb.md)]
@@ -75,7 +75,7 @@ DBCC CHECKCATALOG는 시스템 메타데이터 테이블 간에 다양한 일관
 스냅샷을 만들 수 없는 경우 DBCC CHECKCATALOG는 필요한 일관성을 얻기 위해 배타적 데이터베이스 잠금을 획득합니다. 불일치가 감지되는 경우 복구가 불가능하며 데이터베이스를 백업에서 복원해야 합니다.
   
 > [!NOTE]  
-> **tempdb**에 대해 DBCC CHECKCATALOG를 실행하면 검사가 수행되지 않습니다. 이것은 성능상의 이유로 **tempdb**에 대해 데이터베이스 스냅샷을 사용할 수 없기 때문입니다. 즉, 필요한 트랜잭션 일관성을 얻을 수 없음을 의미합니다. 서버를 재활용하여 **tempdb** 메타데이터 문제를 해결하십시오.  
+> **tempdb** 에 대해 DBCC CHECKCATALOG를 실행하면 검사가 수행되지 않습니다. 이것은 성능상의 이유로 **tempdb** 에 대해 데이터베이스 스냅샷을 사용할 수 없기 때문입니다. 즉, 필요한 트랜잭션 일관성을 얻을 수 없음을 의미합니다. 서버를 재활용하여 **tempdb** 메타데이터 문제를 해결하십시오.  
   
 > [!NOTE]  
 > DBCC CHECKCATALOG는 FILESTREAM 데이터를 검사하지 않습니다. FILESTREAM은 파일 시스템에 BLOB(Binary Large Object)을 저장합니다.  

@@ -23,11 +23,11 @@ ms.assetid: 494cbfa6-8e93-4161-a64d-90d681915211
 author: markingmyname
 ms.author: maghan
 ms.openlocfilehash: 63c809cdc5b676e87b50e13b7ba67a9577e66e6a
-ms.sourcegitcommit: dd36d1cbe32cd5a65c6638e8f252b0bd8145e165
+ms.sourcegitcommit: 192f6a99e19e66f0f817fdb1977f564b2aaa133b
 ms.translationtype: HT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 09/08/2020
-ms.locfileid: "89549397"
+ms.lasthandoff: 11/25/2020
+ms.locfileid: "96124102"
 ---
 # <a name="create-contract-transact-sql"></a>CREATE CONTRACT(Transact-SQL)
 [!INCLUDE [SQL Server](../../includes/applies-to-version/sqlserver.md)]
@@ -52,13 +52,13 @@ CREATE CONTRACT contract_name
 
 ## <a name="arguments"></a>인수
  *contract_name*  
- 만들 계약의 이름입니다. 새 계약은 현재 데이터베이스에 생성되고 AUTHORIZATION 절에서 지정한 보안 주체가 소유합니다. 서버, 데이터베이스 및 스키마 이름은 지정될 수 없습니다. *contract_name*은 최대 128자까지 사용할 수 있습니다.  
+ 만들 계약의 이름입니다. 새 계약은 현재 데이터베이스에 생성되고 AUTHORIZATION 절에서 지정한 보안 주체가 소유합니다. 서버, 데이터베이스 및 스키마 이름은 지정될 수 없습니다. *contract_name* 은 최대 128자까지 사용할 수 있습니다.  
   
 > [!NOTE]  
->  *contract_name*에 ANY 키워드를 사용하는 계약을 만들지 마십시오. CREATE BROKER PRIORITY에서 계약 이름에 ANY를 지정하면 모든 계약에 대해 우선 순위가 고려됩니다. 이러한 규칙은 이름이 ANY인 계약으로 제한되지 않습니다.  
+>  *contract_name* 에 ANY 키워드를 사용하는 계약을 만들지 마십시오. CREATE BROKER PRIORITY에서 계약 이름에 ANY를 지정하면 모든 계약에 대해 우선 순위가 고려됩니다. 이러한 규칙은 이름이 ANY인 계약으로 제한되지 않습니다.  
   
  AUTHORIZATION *owner_name*  
- 지정한 데이터베이스 사용자 또는 역할로 계약의 소유자를 설정합니다. 현재 사용자가 **dbo** 또는 **sa**일 경우 *owner_name*은 유효한 사용자 또는 역할의 이름일 수 있습니다. 그렇지 않으면 *owner_name*은 현재 사용자 이름, 현재 사용자가 권한을 가장한 사용자의 이름 또는 현재 사용자가 속한 역할의 이름이어야 합니다. 이 절을 생략하면 계약이 현재 사용자에 속합니다.  
+ 지정한 데이터베이스 사용자 또는 역할로 계약의 소유자를 설정합니다. 현재 사용자가 **dbo** 또는 **sa** 일 경우 *owner_name* 은 유효한 사용자 또는 역할의 이름일 수 있습니다. 그렇지 않으면 *owner_name* 은 현재 사용자 이름, 현재 사용자가 권한을 가장한 사용자의 이름 또는 현재 사용자가 속한 역할의 이름이어야 합니다. 이 절을 생략하면 계약이 현재 사용자에 속합니다.  
   
  *message_type_name*  
  계약의 일부로 포함될 메시지 유형의 이름입니다.  
@@ -67,10 +67,10 @@ CREATE CONTRACT contract_name
  지정된 메시지 유형의 메시지를 보낼 수 있는 엔드포인트를 지정합니다. 계약은 서비스에서 특정 대화를 소유하기 위해 사용할 수 있는 메시지를 문서화합니다. 대화마다 두 개의 엔드포인트가 있는데 *시작자* 엔드포인트는 대화를 시작한 서비스이고 *대상* 엔드포인트는 시작자가 연결하고 있는 서비스입니다.  
   
  INITIATOR  
- 대화의 시작자만 지정된 메시지 유형의 메시지를 보낼 수 있음을 나타냅니다. 대화를 시작하는 서비스를 대화의 *시작자*라고 합니다.  
+ 대화의 시작자만 지정된 메시지 유형의 메시지를 보낼 수 있음을 나타냅니다. 대화를 시작하는 서비스를 대화의 *시작자* 라고 합니다.  
   
  TARGET  
- 대화의 대상만 지정된 메시지 유형의 메시지를 보낼 수 있음을 나타냅니다. 다른 서비스에서 시작된 대화를 받아들이는 서비스를 대화의 *대상*이라고 합니다.  
+ 대화의 대상만 지정된 메시지 유형의 메시지를 보낼 수 있음을 나타냅니다. 다른 서비스에서 시작된 대화를 받아들이는 서비스를 대화의 *대상* 이라고 합니다.  
   
  ANY  
  시작자와 대상 모두 이 유형의 메시지를 보낼 수 있음을 나타냅니다.  

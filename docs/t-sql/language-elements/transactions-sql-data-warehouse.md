@@ -14,10 +14,10 @@ author: ronortloff
 ms.author: rortloff
 monikerRange: '>= aps-pdw-2016 || = azure-sqldw-latest || = sqlallproducts-allversions'
 ms.openlocfilehash: 5a8b1aa27a301d67df200967b6cba36f042a7f75
-ms.sourcegitcommit: 22dacedeb6e8721e7cdb6279a946d4002cfb5da3
+ms.sourcegitcommit: c5078791a07330a87a92abb19b791e950672e198
 ms.translationtype: HT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 10/14/2020
+ms.lasthandoff: 11/26/2020
 ms.locfileid: "92038897"
 ---
 # <a name="transactions-azure-synapse-analytics"></a>트랜잭션(Azure Synapse Analytics)
@@ -28,9 +28,9 @@ ms.locfileid: "92038897"
   
  트랜잭션의 시작과 끝은 AUTOCOMMIT 설정 및 BEGIN TRANSACTION, COMMIT 및 ROLLBACK 문에 따라 결정됩니다. [!INCLUDE[ssSDW](../../includes/sssdw-md.md)]에서는 다음과 같은 유형의 트랜잭션을 지원합니다.  
   
--   *명시적 트랜잭션*은 BEGIN TRANSACTION 문으로 시작되어 COMMIT 또는 ROLLBACK 문으로 끝납니다.  
+-   *명시적 트랜잭션* 은 BEGIN TRANSACTION 문으로 시작되어 COMMIT 또는 ROLLBACK 문으로 끝납니다.  
   
--   *자동 커밋 트랜잭션*은 세션 안에서 자동으로 시작되며 BEGIN TRANSACTION 문으로 시작되지 않습니다. AUTOCOMMIT 설정이 ON이면 각 문은 트랜잭션 안에서 실행되며 명시적 COMMIT 또는 ROLLBACK이 필요하지 않습니다. AUTOCOMMIT 설정이 OFF이면 트랜잭션 결과를 판단하기 위해 COMMIT 또는 ROLLBACK 문이 필요합니다. [!INCLUDE[ssSDW](../../includes/sssdw-md.md)]에서 자동 커밋 트랜잭션은 COMMIT 또는 ROLLBACK 문 직후 또는 SET AUTOCOMMIT OFF 문 다음에서 시작됩니다.  
+-   *자동 커밋 트랜잭션* 은 세션 안에서 자동으로 시작되며 BEGIN TRANSACTION 문으로 시작되지 않습니다. AUTOCOMMIT 설정이 ON이면 각 문은 트랜잭션 안에서 실행되며 명시적 COMMIT 또는 ROLLBACK이 필요하지 않습니다. AUTOCOMMIT 설정이 OFF이면 트랜잭션 결과를 판단하기 위해 COMMIT 또는 ROLLBACK 문이 필요합니다. [!INCLUDE[ssSDW](../../includes/sssdw-md.md)]에서 자동 커밋 트랜잭션은 COMMIT 또는 ROLLBACK 문 직후 또는 SET AUTOCOMMIT OFF 문 다음에서 시작됩니다.  
   
  ![항목 링크 아이콘](../../database-engine/configure-windows/media/topic-link.gif "항목 링크 아이콘") [Transact-SQL 구문 표기 규칙&#40;Transact-SQL&#41;](../../t-sql/language-elements/transact-sql-syntax-conventions-transact-sql.md)  
   
@@ -80,7 +80,7 @@ SET IMPLICIT_TRANSACTIONS { ON | OFF } [;]
   
  런타임 문 오류 이외의 오류로 인해 명시적 트랜잭션이 제대로 완료되지 않은 경우 [!INCLUDE[ssSDW](../../includes/sssdw-md.md)]에서는 자동으로 트랜잭션을 롤백하고 해당 트랜잭션에 보유 중인 모든 리소스를 해제합니다. 예를 들어, 클라이언트와 [!INCLUDE[ssSDW](../../includes/sssdw-md.md)] 인스턴스 간의 네트워크 연결이 끊어진 경우 네트워크에서 이 인스턴스에게 연결이 끊어진 것을 알릴 때 이 연결에 대한 커밋되지 않은 모든 트랜잭션은 롤백됩니다.  
   
- 일괄 처리에서 런타임 문 오류가 발생할 경우 [!INCLUDE[ssSDW](../../includes/sssdw-md.md)]는 **ON**으로 설정된[!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]**XACT_ABORT**와 일관되게 작동하며 전체 트랜잭션이 롤백됩니다. **XACT_ABORT** 설정에 대한 자세한 내용은 [SET XACT_ABORT (Transact-SQL)](../statements/set-xact-abort-transact-sql.md)를 참조하세요.  
+ 일괄 처리에서 런타임 문 오류가 발생할 경우 [!INCLUDE[ssSDW](../../includes/sssdw-md.md)]는 **ON** 으로 설정된[!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]**XACT_ABORT** 와 일관되게 작동하며 전체 트랜잭션이 롤백됩니다. **XACT_ABORT** 설정에 대한 자세한 내용은 [SET XACT_ABORT (Transact-SQL)](../statements/set-xact-abort-transact-sql.md)를 참조하세요.  
   
 ## <a name="general-remarks"></a>일반적인 주의 사항  
  한 세션은 특정 시점에 한 트랜잭션만 실행할 수 있고 저장 지점과 중첩 트랜잭션은 지원되지 않습니다.  

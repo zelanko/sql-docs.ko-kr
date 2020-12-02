@@ -17,11 +17,11 @@ ms.assetid: 9e512c3c-f89b-45f3-8281-cdb8f35a2b1f
 author: chugugrace
 ms.author: chugu
 ms.openlocfilehash: 7000b1593f20305c4d09f1f8ee11eb4b874ee3aa
-ms.sourcegitcommit: e700497f962e4c2274df16d9e651059b42ff1a10
+ms.sourcegitcommit: 192f6a99e19e66f0f817fdb1977f564b2aaa133b
 ms.translationtype: HT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 08/17/2020
-ms.locfileid: "88495690"
+ms.lasthandoff: 11/25/2020
+ms.locfileid: "96123360"
 ---
 # <a name="extend-a-dataset-by-using-the-merge-join-transformation"></a>병합 조인 변환을 사용하여 데이터 세트 확장
 
@@ -38,7 +38,7 @@ ms.locfileid: "88495690"
   
 2.  솔루션 탐색기에서 패키지를 두 번 클릭하여 엽니다.  
   
-3.  **데이터 흐름** 탭을 클릭한 다음 **도구 상자**에서 병합 조인 변환을 디자인 화면으로 끌어 옵니다.  
+3.  **데이터 흐름** 탭을 클릭한 다음 **도구 상자** 에서 병합 조인 변환을 디자인 화면으로 끌어 옵니다.  
   
 4.  데이터 원본이나 이전 변환에서 연결선을 병합 조인 변환으로 끌어서 병합 조인 변환을 데이터 흐름에 연결합니다.  
   
@@ -61,7 +61,7 @@ ms.locfileid: "88495690"
   
 9. 필요에 따라 **출력 별칭** 열에서 출력 열의 이름을 업데이트합니다.  
   
-10. **확인**을 클릭합니다.  
+10. **확인** 을 클릭합니다.  
   
 11. 업데이트된 패키지를 저장하려면 **파일** 메뉴에서 **선택한 항목 저장** 을 클릭합니다.  
   

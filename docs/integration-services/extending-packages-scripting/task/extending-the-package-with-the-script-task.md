@@ -21,11 +21,11 @@ ms.assetid: 911e6d26-a6fd-4fc3-a111-bf5f048e9bff
 author: chugugrace
 ms.author: chugu
 ms.openlocfilehash: c70136ad09aaa3cb24c04c2828e8335f96aef467
-ms.sourcegitcommit: e700497f962e4c2274df16d9e651059b42ff1a10
+ms.sourcegitcommit: 192f6a99e19e66f0f817fdb1977f564b2aaa133b
 ms.translationtype: HT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 08/17/2020
-ms.locfileid: "88425315"
+ms.lasthandoff: 11/25/2020
+ms.locfileid: "96122842"
 ---
 # <a name="extending-the-package-with-the-script-task"></a>스크립트 태스크를 사용하여 패키지 확장
 
@@ -44,7 +44,7 @@ ms.locfileid: "88425315"
  다음 항목에서는 스크립트 태스크에 대해 자세히 설명합니다.  
   
  [스크립트 태스크 편집기에서 스크립트 태스크 구성](../../../integration-services/extending-packages-scripting/task/configuring-the-script-task-in-the-script-task-editor.md)  
- **스크립트 태스크 편집기**에서 구성하는 속성이 스크립트 태스크 코드의 기능과 성능에 미치는 영향에 대해 설명합니다.  
+ **스크립트 태스크 편집기** 에서 구성하는 속성이 스크립트 태스크 코드의 기능과 성능에 미치는 영향에 대해 설명합니다.  
   
  [스크립트 태스크 코딩 및 디버깅](../../../integration-services/extending-packages-scripting/task/coding-and-debugging-the-script-task.md)  
  [!INCLUDE[msCoName](../../../includes/msconame-md.md)] VSTA([!INCLUDE[vsprvs](../../../includes/vsprvs-md.md)] Tools for Applications)를 사용하여 스크립트 태스크에 포함되는 스크립트를 개발하는 방법을 설명합니다.  

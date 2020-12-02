@@ -25,10 +25,10 @@ author: markingmyname
 ms.author: maghan
 monikerRange: '>=aps-pdw-2016||=azuresqldb-current||=azure-sqldw-latest||>=sql-server-2016||=sqlallproducts-allversions||>=sql-server-linux-2017||=azuresqldb-mi-current'
 ms.openlocfilehash: 77209f40363ee4f5566604d301c8ade1d9116217
-ms.sourcegitcommit: cfa04a73b26312bf18d8f6296891679166e2754d
+ms.sourcegitcommit: c5078791a07330a87a92abb19b791e950672e198
 ms.translationtype: HT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 10/19/2020
+ms.lasthandoff: 11/26/2020
 ms.locfileid: "92196753"
 ---
 # <a name="ltrim-transact-sql"></a>LTRIM(Transact-SQL)
@@ -48,7 +48,7 @@ LTRIM ( character_expression )
 
 ## <a name="arguments"></a>인수
  *character_expression*  
- 문자 또는 이진 데이터의 [식](../../t-sql/language-elements/expressions-transact-sql.md)입니다. *character_expression*은 상수, 변수 또는 열일 수 있습니다. *string_expression*은 **varchar**로 암시적으로 변환될 수 있는 데이터 형식이어야 하며 **text**, **ntext**, **image**는 제외됩니다. 그렇지 않은 경우 [CAST](../../t-sql/functions/cast-and-convert-transact-sql.md)를 사용하여 *character_expression*을 명시적으로 변환하세요.  
+ 문자 또는 이진 데이터의 [식](../../t-sql/language-elements/expressions-transact-sql.md)입니다. *character_expression* 은 상수, 변수 또는 열일 수 있습니다. *string_expression* 은 **varchar** 로 암시적으로 변환될 수 있는 데이터 형식이어야 하며 **text**, **ntext**, **image** 는 제외됩니다. 그렇지 않은 경우 [CAST](../../t-sql/functions/cast-and-convert-transact-sql.md)를 사용하여 *character_expression* 을 명시적으로 변환하세요.  
   
 ## <a name="return-type"></a>반환 형식  
  **varchar** 또는 **nvarchar**  

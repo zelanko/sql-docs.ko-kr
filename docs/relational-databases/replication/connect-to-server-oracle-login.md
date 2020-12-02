@@ -16,11 +16,11 @@ ms.assetid: 86ed91a1-a07c-46f2-a913-67317ef2255e
 author: MashaMSFT
 ms.author: mathoma
 ms.openlocfilehash: b585e2a17e577aab7ade2c5906bdcd184a12e8dd
-ms.sourcegitcommit: e700497f962e4c2274df16d9e651059b42ff1a10
+ms.sourcegitcommit: 192f6a99e19e66f0f817fdb1977f564b2aaa133b
 ms.translationtype: HT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 08/17/2020
-ms.locfileid: "88455597"
+ms.lasthandoff: 11/25/2020
+ms.locfileid: "96121354"
 ---
 # <a name="connect-to-server-oracle-login"></a>서버에 연결(Oracle), 로그인
  [!INCLUDE [SQL Server](../../includes/applies-to-version/sqlserver.md)]
@@ -31,7 +31,7 @@ ms.locfileid: "88455597"
  배포자에 설치된 Oracle 클라이언트 소프트웨어를 구성하는 중에 지정한 Oracle 게시자의 TNS(Transparent Network Substrate) 이름입니다.  
   
  **인증**  
- **Oracle 표준 인증** (권장) 또는 **Windows 인증**을 선택합니다. **Windows 인증**을 선택하는 경우 다음 사항을 고려해야 합니다.  
+ **Oracle 표준 인증** (권장) 또는 **Windows 인증** 을 선택합니다. **Windows 인증** 을 선택하는 경우 다음 사항을 고려해야 합니다.  
   
 -   Windows 자격 증명을 사용하는 연결을 허용하도록 Oracle 서버를 구성해야 합니다. 자세한 내용은 Oracle 설명서를 참조하십시오.  
   

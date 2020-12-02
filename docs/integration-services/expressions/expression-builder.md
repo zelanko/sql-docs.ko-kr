@@ -16,11 +16,11 @@ ms.assetid: 4717ce33-bd4e-44bc-81e0-002de075b4d1
 author: chugugrace
 ms.author: chugu
 ms.openlocfilehash: 6f8eb6c6771e2684d03380a721c7ef96dcb08488
-ms.sourcegitcommit: e700497f962e4c2274df16d9e651059b42ff1a10
+ms.sourcegitcommit: 192f6a99e19e66f0f817fdb1977f564b2aaa133b
 ms.translationtype: HT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 08/17/2020
-ms.locfileid: "88425525"
+ms.lasthandoff: 11/25/2020
+ms.locfileid: "96123292"
 ---
 # <a name="expression-builder"></a>식 작성기
 

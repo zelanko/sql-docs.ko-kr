@@ -22,11 +22,11 @@ ms.assetid: 24619363-9535-4c0e-8b62-1d22c6630e40
 author: chugugrace
 ms.author: chugu
 ms.openlocfilehash: f681c33f7921f57d42f9078a768f8f8eafec1f7c
-ms.sourcegitcommit: e700497f962e4c2274df16d9e651059b42ff1a10
+ms.sourcegitcommit: 192f6a99e19e66f0f817fdb1977f564b2aaa133b
 ms.translationtype: HT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 08/17/2020
-ms.locfileid: "88391249"
+ms.lasthandoff: 11/25/2020
+ms.locfileid: "96123226"
 ---
 # <a name="developing-a-custom-destination-component"></a>사용자 지정 대상 구성 요소 개발
 
@@ -43,7 +43,7 @@ ms.locfileid: "88391249"
  대상 구성 요소의 디자인 타임 기능을 구현하려면 외부 데이터 원본에 대한 연결을 지정하고 구성 요소가 올바르게 구성되었는지 확인해야 합니다. 정의에 따라 대상 구성 요소에는 하나의 입력이 있으며 하나의 오류 출력이 있을 수 있습니다.  
   
 ### <a name="creating-the-component"></a>구성 요소 만들기  
- 대상 구성 요소는 패키지에 정의된 <xref:Microsoft.SqlServer.Dts.Runtime.ConnectionManager> 개체를 사용하여 외부 데이터 원본에 연결합니다. 대상 구성 요소는 <xref:Microsoft.SqlServer.Dts.Pipeline.PipelineComponent.ComponentMetaData%2A>의 <xref:Microsoft.SqlServer.Dts.Pipeline.Wrapper.IDTSComponentMetaData100.RuntimeConnectionCollection%2A> 컬렉션에 요소를 추가하여 [!INCLUDE[ssIS](../../includes/ssis-md.md)] 디자이너와 구성 요소 사용자에게 연결 관리자가 필요함을 나타냅니다. 이 컬렉션은 두 가지 용도로 사용됩니다. 첫 번째는 [!INCLUDE[ssIS](../../includes/ssis-md.md)] 디자이너에 연결 관리자가 필요함을 알리는 것이고, 다른 하나는 사용자가 연결 관리자를 선택하거나 만든 후 구성 요소에서 사용하는 패키지에 해당 연결 관리자에 대한 참조를 저장하는 것입니다. 컬렉션에 <xref:Microsoft.SqlServer.Dts.Pipeline.Wrapper.IDTSRuntimeConnection100>을 추가하면 **고급 편집기**에 **연결 속성** 탭이 표시되어 사용자가 구성 요소에서 사용할 패키지에서 연결을 선택하거나 만들도록 요구합니다.  
+ 대상 구성 요소는 패키지에 정의된 <xref:Microsoft.SqlServer.Dts.Runtime.ConnectionManager> 개체를 사용하여 외부 데이터 원본에 연결합니다. 대상 구성 요소는 <xref:Microsoft.SqlServer.Dts.Pipeline.PipelineComponent.ComponentMetaData%2A>의 <xref:Microsoft.SqlServer.Dts.Pipeline.Wrapper.IDTSComponentMetaData100.RuntimeConnectionCollection%2A> 컬렉션에 요소를 추가하여 [!INCLUDE[ssIS](../../includes/ssis-md.md)] 디자이너와 구성 요소 사용자에게 연결 관리자가 필요함을 나타냅니다. 이 컬렉션은 두 가지 용도로 사용됩니다. 첫 번째는 [!INCLUDE[ssIS](../../includes/ssis-md.md)] 디자이너에 연결 관리자가 필요함을 알리는 것이고, 다른 하나는 사용자가 연결 관리자를 선택하거나 만든 후 구성 요소에서 사용하는 패키지에 해당 연결 관리자에 대한 참조를 저장하는 것입니다. 컬렉션에 <xref:Microsoft.SqlServer.Dts.Pipeline.Wrapper.IDTSRuntimeConnection100>을 추가하면 **고급 편집기** 에 **연결 속성** 탭이 표시되어 사용자가 구성 요소에서 사용할 패키지에서 연결을 선택하거나 만들도록 요구합니다.  
   
  다음 코드 예제에서는 입력을 추가한 다음 <xref:Microsoft.SqlServer.Dts.Pipeline.PipelineComponent.ProvideComponentProperties%2A>에 <xref:Microsoft.SqlServer.Dts.Pipeline.Wrapper.IDTSRuntimeConnection100> 개체를 추가하는 <xref:Microsoft.SqlServer.Dts.Pipeline.Wrapper.IDTSComponentMetaData100.RuntimeConnectionCollection%2A>의 구현을 보여 줍니다.  
   
@@ -171,7 +171,7 @@ End Sub
 ### <a name="validating-the-component"></a>구성 요소 유효성 검사  
  대상 구성 요소 개발자는 [구성 요소 유효성 검사](../../integration-services/extending-packages-custom-objects/data-flow/validating-a-data-flow-component.md)에서 설명한 대로 유효성 검사를 수행해야 합니다. 또한 구성 요소의 입력 열 컬렉션에 정의된 열과 외부 데이터 원본에 있는 열의 데이터 형식 속성이 일치하는지 확인해야 합니다. 때로는 구성 요소 또는 [!INCLUDE[ssIS](../../includes/ssis-md.md)] 디자이너의 연결이 끊어진 상태이거나 서버 왕복이 허용되지 않을 때와 같이 외부 데이터 원본을 기준으로 입력 열의 유효성을 검사하는 것이 불가능하거나 바람직하지 않은 경우가 있습니다. 이러한 경우에도 입력 개체의 <xref:Microsoft.SqlServer.Dts.Pipeline.Wrapper.IDTSInput100.ExternalMetadataColumnCollection%2A>을 사용하여 입력 열 컬렉션의 열에 대한 유효성을 검사할 수 있습니다.  
   
- 이 컬렉션은 입력 개체와 출력 개체 모두에 있으며 구성 요소 개발자는 외부 데이터 원본의 열로 이 컬렉션을 채워야 합니다. 이 컬렉션은 [!INCLUDE[ssIS](../../includes/ssis-md.md)] 디자이너가 오프라인 상태이거나, 구성 요소의 연결이 끊어졌거나, <xref:Microsoft.SqlServer.Dts.Pipeline.Wrapper.IDTSComponentMetaData100.ValidateExternalMetadata%2A> 속성이 **false**일 때 입력 열의 유효성을 검사하는 데 사용할 수 있습니다.  
+ 이 컬렉션은 입력 개체와 출력 개체 모두에 있으며 구성 요소 개발자는 외부 데이터 원본의 열로 이 컬렉션을 채워야 합니다. 이 컬렉션은 [!INCLUDE[ssIS](../../includes/ssis-md.md)] 디자이너가 오프라인 상태이거나, 구성 요소의 연결이 끊어졌거나, <xref:Microsoft.SqlServer.Dts.Pipeline.Wrapper.IDTSComponentMetaData100.ValidateExternalMetadata%2A> 속성이 **false** 일 때 입력 열의 유효성을 검사하는 데 사용할 수 있습니다.  
   
  다음 예제 코드에서는 기존 입력 열을 기반으로 외부 메타데이터 열을 추가합니다.  
   
@@ -209,7 +209,7 @@ End Sub
 ```  
   
 ## <a name="run-time"></a>런타임  
- 실행 중 대상 구성 요소는 업스트림 구성 요소에서 전체 <xref:Microsoft.SqlServer.Dts.Pipeline.PipelineComponent.ProcessInput%2A>를 사용할 수 있을 때마다 <xref:Microsoft.SqlServer.Dts.Pipeline.PipelineBuffer> 메서드에 대한 호출을 받습니다. 이 메서드는 더 이상 사용할 수 있는 버퍼가 없고 <xref:Microsoft.SqlServer.Dts.Pipeline.PipelineBuffer.EndOfRowset%2A> 속성이 **true**가 될 때까지 반복적으로 호출됩니다. 이 메서드가 실행되는 동안 대상 구성 요소에서는 버퍼의 열과 행을 읽고 이를 외부 데이터 원본에 추가합니다.  
+ 실행 중 대상 구성 요소는 업스트림 구성 요소에서 전체 <xref:Microsoft.SqlServer.Dts.Pipeline.PipelineComponent.ProcessInput%2A>를 사용할 수 있을 때마다 <xref:Microsoft.SqlServer.Dts.Pipeline.PipelineBuffer> 메서드에 대한 호출을 받습니다. 이 메서드는 더 이상 사용할 수 있는 버퍼가 없고 <xref:Microsoft.SqlServer.Dts.Pipeline.PipelineBuffer.EndOfRowset%2A> 속성이 **true** 가 될 때까지 반복적으로 호출됩니다. 이 메서드가 실행되는 동안 대상 구성 요소에서는 버퍼의 열과 행을 읽고 이를 외부 데이터 원본에 추가합니다.  
   
 ### <a name="locating-columns-in-the-buffer"></a>버퍼에서 열 찾기  
  구성 요소의 입력 버퍼에는 데이터 흐름에서 해당 구성 요소에 대한 업스트림 구성 요소의 출력 열 컬렉션에 정의된 모든 열이 들어 있습니다. 예를 들어 원본 구성 요소에서 출력에 세 개의 열을 제공하고 다음 구성 요소에서 추가 출력 열을 하나 추가할 경우, 대상 구성 요소에서 두 개의 열만 작성하더라도 대상 구성 요소에 제공된 버퍼에는 네 개의 열이 포함됩니다.  

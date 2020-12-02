@@ -26,11 +26,11 @@ ms.assetid: 072bc4b8-363a-4131-87c3-240338e2fa5c
 author: chugugrace
 ms.author: chugu
 ms.openlocfilehash: 82f34ab83935bee2972a4dbb2b007eb2632b9fba
-ms.sourcegitcommit: e700497f962e4c2274df16d9e651059b42ff1a10
+ms.sourcegitcommit: 192f6a99e19e66f0f817fdb1977f564b2aaa133b
 ms.translationtype: HT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 08/17/2020
-ms.locfileid: "88425395"
+ms.lasthandoff: 11/25/2020
+ms.locfileid: "96122941"
 ---
 # <a name="extending-the-data-flow-with-the-script-component"></a>스크립트 구성 요소를 사용하여 데이터 흐름 확장
 
@@ -49,7 +49,7 @@ ms.locfileid: "88425395"
  다음 항목에서는 스크립트 구성 요소에 대해 자세히 설명합니다.  
   
  [스크립트 구성 요소 편집기에서 스크립트 구성 요소 구성](../../../integration-services/extending-packages-scripting/data-flow-script-component/configuring-the-script-component-in-the-script-component-editor.md)  
- **스크립트 변환 편집기**에서 구성하는 속성은 스크립트 구성 요소 코드의 기능과 성능에 영향을 줍니다.  
+ **스크립트 변환 편집기** 에서 구성하는 속성은 스크립트 구성 요소 코드의 기능과 성능에 영향을 줍니다.  
   
  [스크립트 구성 요소 코딩 및 디버깅](../../../integration-services/extending-packages-scripting/data-flow-script-component/coding-and-debugging-the-script-component.md)  
  스크립트 구성 요소에 포함되는 스크립트를 개발하려면 [!INCLUDE[msCoName](../../../includes/msconame-md.md)] VSTA([!INCLUDE[vsprvs](../../../includes/vsprvs-md.md)] Tools for Applications) 개발 환경을 사용합니다.  

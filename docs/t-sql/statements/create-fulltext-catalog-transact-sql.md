@@ -28,11 +28,11 @@ ms.assetid: d7a8bd93-e2d7-4a40-82ef-39069e65523b
 author: markingmyname
 ms.author: maghan
 ms.openlocfilehash: cf2427b873fdaea461681689057ff11c98fc20e7
-ms.sourcegitcommit: dd36d1cbe32cd5a65c6638e8f252b0bd8145e165
+ms.sourcegitcommit: 192f6a99e19e66f0f817fdb1977f564b2aaa133b
 ms.translationtype: HT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 09/08/2020
-ms.locfileid: "89541408"
+ms.lasthandoff: 11/25/2020
+ms.locfileid: "96124083"
 ---
 # <a name="create-fulltext-catalog-transact-sql"></a>CREATE FULLTEXT CATALOG(Transact-SQL)
 [!INCLUDE [SQL Server SQL Database](../../includes/applies-to-version/sql-asdb.md)]
@@ -82,15 +82,15 @@ CREATE FULLTEXT CATALOG catalog_name
  ACCENT_SENSITIVITY = {ON|OFF}  
  전체 텍스트 인덱싱에 대해 카탈로그의 악센트 구분 여부를 지정합니다. 이 속성이 변경되면 인덱스를 다시 만들어야 합니다. 기본값은 데이터베이스 데이터 정렬에 지정된 악센트 구분을 사용하는 것입니다. 데이터베이스 데이터 정렬을 표시하려면 **sys.databases** 카탈로그 뷰를 사용합니다.  
   
- 전체 텍스트 카탈로그의 현재 악센트 구분 속성 설정을 확인하려면 *catalog_name*에 대해 **accentsensitivity** 속성 값을 가진 FULLTEXTCATALOGPROPERTY 함수를 사용합니다. 반환된 값이 '1'인 경우 전체 텍스트 카탈로그는 악센트를 구분하며 반환된 값이 '0'인 경우 카탈로그는 악센트를 구분하지 않습니다.  
+ 전체 텍스트 카탈로그의 현재 악센트 구분 속성 설정을 확인하려면 *catalog_name* 에 대해 **accentsensitivity** 속성 값을 가진 FULLTEXTCATALOGPROPERTY 함수를 사용합니다. 반환된 값이 '1'인 경우 전체 텍스트 카탈로그는 악센트를 구분하며 반환된 값이 '0'인 경우 카탈로그는 악센트를 구분하지 않습니다.  
   
  AS DEFAULT  
  카탈로그를 기본 카탈로그로 지정합니다. 전체 텍스트 카탈로그를 명시적으로 지정하지 않고 전체 텍스트 인덱스를 만든 경우 기본 카탈로그가 사용됩니다. 이미 AS DEFAULT로 표시된 기존의 전체 텍스트 카탈로그가 있을 경우 새 카탈로그를 AS DEFAULT로 설정하면 이 카탈로그가 기본 전체 텍스트 카탈로그가 됩니다.  
   
  AUTHORIZATION *owner_name*  
- 전체 텍스트 카탈로그의 소유자를 데이터베이스 사용자 또는 역할의 이름으로 설정합니다. *owner_name*이 역할인 경우 이 역할은 현재 사용자가 속해 있는 역할의 이름이어야 합니다. 그렇지 않으면 문을 실행하는 사용자가 데이터베이스 소유자 또는 시스템 관리자여야 합니다.  
+ 전체 텍스트 카탈로그의 소유자를 데이터베이스 사용자 또는 역할의 이름으로 설정합니다. *owner_name* 이 역할인 경우 이 역할은 현재 사용자가 속해 있는 역할의 이름이어야 합니다. 그렇지 않으면 문을 실행하는 사용자가 데이터베이스 소유자 또는 시스템 관리자여야 합니다.  
   
- *owner_name*이 사용자 이름인 경우 사용자 이름은 다음 중 하나여야 합니다.  
+ *owner_name* 이 사용자 이름인 경우 사용자 이름은 다음 중 하나여야 합니다.  
   
 -   문을 실행하는 사용자의 이름이어야 합니다.  
   
@@ -98,7 +98,7 @@ CREATE FULLTEXT CATALOG catalog_name
   
 -   그렇지 않으면 명령을 실행하는 사용자가 데이터베이스 소유자 또는 시스템 관리자여야 합니다.  
   
- 또한 *owner_name*에는 지정한 전체 텍스트 카탈로그에 대한 TAKE OWNERSHIP 권한이 있어야 합니다.  
+ 또한 *owner_name* 에는 지정한 전체 텍스트 카탈로그에 대한 TAKE OWNERSHIP 권한이 있어야 합니다.  
   
 ## <a name="remarks"></a>설명  
  전체 텍스트 카탈로그 ID는 00005부터 시작하고 카탈로그를 새로 만들 때마다 1씩 증가합니다.  

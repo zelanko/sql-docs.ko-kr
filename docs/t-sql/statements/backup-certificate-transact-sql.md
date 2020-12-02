@@ -30,11 +30,11 @@ author: VanMSFT
 ms.author: vanto
 monikerRange: '>=aps-pdw-2016||>=sql-server-2016||=sqlallproducts-allversions||>=sql-server-linux-2017||=azure-sqldw-latest'
 ms.openlocfilehash: 06776d309042483f879dd3d31d9f6bae62119037
-ms.sourcegitcommit: 894c1a23e922dc29b82c1d2c34c7b0ff28b38654
+ms.sourcegitcommit: 192f6a99e19e66f0f817fdb1977f564b2aaa133b
 ms.translationtype: HT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 10/30/2020
-ms.locfileid: "93067497"
+ms.lasthandoff: 11/25/2020
+ms.locfileid: "96124190"
 ---
 # <a name="backup-certificate-transact-sql"></a>BACKUP CERTIFICATE(Transact-SQL)
 [!INCLUDE [sql-asa-pdw](../../includes/applies-to-version/sql-asa-pdw.md)]
@@ -79,18 +79,18 @@ BACKUP CERTIFICATE certname TO FILE ='path_to_file'
  *certname*  
  백업할 인증서의 이름입니다.
 
- TO FILE = ' *path_to_file* '  
+ TO FILE = '*path_to_file*'  
  인증서를 저장할 파일에 대해 파일 이름을 포함한 전체 경로를 지정합니다. 이 경로는 로컬 경로 또는 네트워크 위치에 대한 UNC 경로일 수 있습니다. 파일 이름만 지정한 경우 파일은 인스턴스의 기본 사용자 데이터 폴더([!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] DATA 폴더일 수도 있고 아닐수도 있음)에 저장됩니다. SQL Server Express LocalDB의 경우 인스턴스의 기본 사용자 데이터 폴더는 인스턴스를 만든 계정의 `%USERPROFILE%` 환경 변수에 의해 지정된 경로입니다.  
 
  WITH PRIVATE KEY 인증서의 프라이빗 키를 파일에 저장되도록 지정합니다. 이 절은 옵션입니다.
 
- FILE = ' *path_to_private_key_file* '  
+ FILE = '*path_to_private_key_file*'  
  프라이빗 키를 저장할 파일에 대해 파일 이름을 포함한 전체 경로를 지정합니다. 이 경로는 로컬 경로 또는 네트워크 위치에 대한 UNC 경로일 수 있습니다. 파일 이름만 지정한 경우 파일은 인스턴스의 기본 사용자 데이터 폴더([!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] DATA 폴더일 수도 있고 아닐수도 있음)에 저장됩니다. SQL Server Express LocalDB의 경우 인스턴스의 기본 사용자 데이터 폴더는 인스턴스를 만든 계정의 `%USERPROFILE%` 환경 변수에 의해 지정된 경로입니다.  
 
- ENCRYPTION BY PASSWORD = ' *encryption_password* '  
+ ENCRYPTION BY PASSWORD = '*encryption_password*'  
  키를 백업 파일에 작성하기 전에 프라이빗 키를 암호화하는 데 사용되는 암호입니다. 이 암호의 복잡성을 확인해야 합니다.  
   
- DECRYPTION BY PASSWORD = ' *decryption_password* '  
+ DECRYPTION BY PASSWORD = '*decryption_password*'  
  키를 백업하기 전에 프라이빗 키의 암호를 해독하는 데 사용되는 암호입니다. 이 인수는 인증서가 마스터 키로 암호화된 경우에는 필요하지 않습니다. 
   
 ## <a name="remarks"></a>설명  

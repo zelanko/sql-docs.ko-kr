@@ -23,10 +23,10 @@ ms.assetid: c8b03ff9-688c-4fe8-86e8-bd6bd401c9a4
 author: rothja
 ms.author: jroth
 ms.openlocfilehash: 0b2d327df39cb0c3a891fc5f4bc624619e7964e8
-ms.sourcegitcommit: cfa04a73b26312bf18d8f6296891679166e2754d
+ms.sourcegitcommit: c5078791a07330a87a92abb19b791e950672e198
 ms.translationtype: HT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 10/19/2020
+ms.lasthandoff: 11/26/2020
 ms.locfileid: "92195455"
 ---
 # <a name="shutdown-transact-sql"></a>SHUTDOWN(Transact-SQL)
@@ -54,9 +54,9 @@ SHUTDOWN [ WITH NOWAIT ]
 1.  **sysadmin** 및 **serveradmin** 고정 서버 역할의 멤버를 제외하고 로그인을 비활성화합니다.  
   
     > [!NOTE]  
-    >  현재의 모든 사용자에 대한 목록을 표시하려면 **sp_who**를 실행합니다.  
+    >  현재의 모든 사용자에 대한 목록을 표시하려면 **sp_who** 를 실행합니다.  
   
-2.  현재 실행하는 Transact-SQL 문이나 저장 프로시저가 완료되기를 기다립니다. 모든 활성 프로세스 및 잠금의 목록을 표시하려면 **sp_who** 및 **sp_lock**을 각각 실행합니다.  
+2.  현재 실행하는 Transact-SQL 문이나 저장 프로시저가 완료되기를 기다립니다. 모든 활성 프로세스 및 잠금의 목록을 표시하려면 **sp_who** 및 **sp_lock** 을 각각 실행합니다.  
   
 3.  모든 데이터베이스에 검사점을 삽입합니다.  
   
@@ -66,11 +66,11 @@ SHUTDOWN [ WITH NOWAIT ]
   
 -   [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 구성 관리자를 사용합니다.  
   
--   기본 인스턴스의 명령 프롬프트에서 **net stop mssqlserver**를 실행하거나 명명된 인스턴스에 대한 명령 프롬프트에서 **net stop mssql$** _instancename_을 실행합니다.  
+-   기본 인스턴스의 명령 프롬프트에서 **net stop mssqlserver** 를 실행하거나 명명된 인스턴스에 대한 명령 프롬프트에서 **net stop mssql$** _instancename_ 을 실행합니다.  
   
 -   제어판에서 서비스를 사용합니다.  
   
- 명령 프롬프트에서 **sqlservr.exe**를 시작한 경우 Ctrl+C를 누르면 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]가 종료됩니다. 그러나 Ctrl+C를 눌러도 검사점이 삽입되지는 않습니다.  
+ 명령 프롬프트에서 **sqlservr.exe** 를 시작한 경우 Ctrl+C를 누르면 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]가 종료됩니다. 그러나 Ctrl+C를 눌러도 검사점이 삽입되지는 않습니다.  
   
 > [!NOTE]  
 >  이 방법 중 하나를 사용하여 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]를 중지하면 `SERVICE_CONTROL_STOP` 메시지가 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]로 전송됩니다.  

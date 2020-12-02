@@ -19,16 +19,16 @@ ms.assetid: b37e28b6-6e2e-470a-945b-ce5252da743a
 author: MikeRayMSFT
 ms.author: mikeray
 ms.openlocfilehash: 8ebfca7738f8310108aab9ba988e658e7a5c1e17
-ms.sourcegitcommit: 22dacedeb6e8721e7cdb6279a946d4002cfb5da3
+ms.sourcegitcommit: c5078791a07330a87a92abb19b791e950672e198
 ms.translationtype: HT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 10/14/2020
+ms.lasthandoff: 11/26/2020
 ms.locfileid: "92038366"
 ---
 # <a name="parse-database-engine"></a>Parse(데이터베이스 엔진)
 [!INCLUDE [SQL Server Azure SQL Database ](../../includes/applies-to-version/sql-asdb.md)]
 
-Parse는 **hierarchyid**의 정식 문자열 표현을 **hierarchyid** 값으로 변환합니다. Parse는 문자열 형식에서 **hierarchyid**로 변환될 때 암시적으로 호출됩니다. [ToString](../../t-sql/data-types/tostring-database-engine.md)과 반대로 작동합니다. Parse()는 정적 메서드입니다.
+Parse는 **hierarchyid** 의 정식 문자열 표현을 **hierarchyid** 값으로 변환합니다. Parse는 문자열 형식에서 **hierarchyid** 로 변환될 때 암시적으로 호출됩니다. [ToString](../../t-sql/data-types/tostring-database-engine.md)과 반대로 작동합니다. Parse()는 정적 메서드입니다.
   
 ## <a name="syntax"></a>구문  
   
@@ -59,12 +59,12 @@ CLR: 평가되는 문자열 값입니다.
 **CLR 반환 형식: SqlHierarchyId**
   
 ## <a name="remarks"></a>설명  
-Parse가 **hierarchyid**의 유효한 문자열 표현이 아닌 값을 수신하면 예외가 발생합니다. 예를 들어 **char** 데이터 형식에 후행 공백이 포함되어 있으면 예외가 발생합니다.
+Parse가 **hierarchyid** 의 유효한 문자열 표현이 아닌 값을 수신하면 예외가 발생합니다. 예를 들어 **char** 데이터 형식에 후행 공백이 포함되어 있으면 예외가 발생합니다.
   
 ## <a name="examples"></a>예제  
   
 ### <a name="a-converting-transact-sql-values-without-a-table"></a>A. 테이블이 없는 Transact-SQL 값 변환  
-다음 코드 예에서는 `ToString`을 사용하여 **hierarchyid** 값을 문자열로 변환하고 `Parse`를 사용하여 문자열 값을 **hierarchyid**로 변환합니다.
+다음 코드 예에서는 `ToString`을 사용하여 **hierarchyid** 값을 문자열로 변환하고 `Parse`를 사용하여 문자열 값을 **hierarchyid** 로 변환합니다.
   
 ```sql
 DECLARE @StringValue AS NVARCHAR(4000), @hierarchyidValue AS hierarchyid  

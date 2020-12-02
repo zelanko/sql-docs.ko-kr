@@ -23,11 +23,11 @@ ms.assetid: 7f06e49b-0b60-4e81-97da-d32dc248264a
 author: chugugrace
 ms.author: chugu
 ms.openlocfilehash: 23abaf34f5bec9ecab8e506a123e9e9a1ec4f81f
-ms.sourcegitcommit: e700497f962e4c2274df16d9e651059b42ff1a10
+ms.sourcegitcommit: 192f6a99e19e66f0f817fdb1977f564b2aaa133b
 ms.translationtype: HT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 08/17/2020
-ms.locfileid: "88430455"
+ms.lasthandoff: 11/25/2020
+ms.locfileid: "96123073"
 ---
 # <a name="adding-support-for-debugging-in-a-custom-task"></a>사용자 지정 태스크에 디버깅 지원 추가
 
@@ -45,7 +45,7 @@ ms.locfileid: "88430455"
  중단점을 사용하지 않는 태스크도 <xref:Microsoft.SqlServer.Dts.Runtime.IDTSBreakpointSite> 및 <xref:Microsoft.SqlServer.Dts.Runtime.IDTSSuspend> 인터페이스를 구현해야 합니다. 이러한 인터페이스를 구현하면 패키지의 다른 개체가 <xref:Microsoft.SqlServer.Dts.Runtime.IDTSEvents.OnBreakpointHit%2A> 이벤트를 발생시킬 때 태스크가 올바르게 일시 중지됩니다.  
   
 ## <a name="idtsbreakpointsite-interface-and-breakpointmanager"></a>IDTSBreakpointSite 인터페이스 및 BreakpointManager  
- 태스크에서는 정수 ID와 문자열 설명을 매개 변수로 제공하는 <xref:Microsoft.SqlServer.Dts.Runtime.BreakpointManager.CreateBreakpointTarget%2A>의 <xref:Microsoft.SqlServer.Dts.Runtime.BreakpointManager> 메서드를 호출하여 중단점 대상을 만듭니다. 태스크는 코드에서 중단점 대상이 들어 있는 지점에 도달하면 <xref:Microsoft.SqlServer.Dts.Runtime.BreakpointManager.IsBreakpointTargetEnabled%2A> 메서드로 중단점 대상을 평가하여 해당 중단점이 설정되어 있는지 확인합니다. **true**인 경우 태스크에서는 <xref:Microsoft.SqlServer.Dts.Runtime.IDTSEvents.OnBreakpointHit%2A> 이벤트를 발생시켜 런타임 엔진에 이를 알립니다.  
+ 태스크에서는 정수 ID와 문자열 설명을 매개 변수로 제공하는 <xref:Microsoft.SqlServer.Dts.Runtime.BreakpointManager.CreateBreakpointTarget%2A>의 <xref:Microsoft.SqlServer.Dts.Runtime.BreakpointManager> 메서드를 호출하여 중단점 대상을 만듭니다. 태스크는 코드에서 중단점 대상이 들어 있는 지점에 도달하면 <xref:Microsoft.SqlServer.Dts.Runtime.BreakpointManager.IsBreakpointTargetEnabled%2A> 메서드로 중단점 대상을 평가하여 해당 중단점이 설정되어 있는지 확인합니다. **true** 인 경우 태스크에서는 <xref:Microsoft.SqlServer.Dts.Runtime.IDTSEvents.OnBreakpointHit%2A> 이벤트를 발생시켜 런타임 엔진에 이를 알립니다.  
   
  <xref:Microsoft.SqlServer.Dts.Runtime.IDTSBreakpointSite> 인터페이스는 태스크를 만들 때 런타임 엔진에서 호출하는 단일 메서드 <xref:Microsoft.SqlServer.Dts.Runtime.IDTSBreakpointSite.AcceptBreakpointManager%2A>를 정의합니다. 이 메서드는 매개 변수로 <xref:Microsoft.SqlServer.Dts.Runtime.BreakpointManager> 개체를 제공하며, 이 개체는 태스크에서 중단점을 만들고 관리하는 데 사용됩니다. 태스크에서는 <xref:Microsoft.SqlServer.Dts.Runtime.BreakpointManager>를 **Validate** 및 **Execute** 메서드 실행 중에 사용할 수 있도록 로컬로 저장해야 합니다.  
   

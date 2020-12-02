@@ -11,11 +11,11 @@ ms.assetid: fd726506-54b7-433b-bf70-3642235b7b31
 author: chugugrace
 ms.author: chugu
 ms.openlocfilehash: 7d8738fb22682ad4a6f432187998663c4c8282cd
-ms.sourcegitcommit: cfa04a73b26312bf18d8f6296891679166e2754d
+ms.sourcegitcommit: 192f6a99e19e66f0f817fdb1977f564b2aaa133b
 ms.translationtype: HT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 10/19/2020
-ms.locfileid: "92195907"
+ms.lasthandoff: 11/25/2020
+ms.locfileid: "96122825"
 ---
 # <a name="connect-to-data-sources-with-the-sql-server-import-and-export-wizard"></a>SQL Server 가져오기 및 내보내기 마법사를 사용하여 데이터 원본에 연결
 
@@ -24,7 +24,7 @@ ms.locfileid: "92195907"
 
 이 단원의 항목에서는 SQL Server 가져오기 및 내보내기 마법사를 실행할 때 자주 사용되는 데이터 원본에 연결하는 방법을 보여 줍니다. 마법사의 **데이터 원본 선택** 및 **대상 선택** 페이지에서 데이터 원본에 대한 연결 정보를 제공해야 합니다.
 
-이 섹션의 항목에서는 마법사의 **데이터 원본 선택** 및 **대상 선택** 페이지에서 **데이터 원본에 연결**하는 방법만 설명합니다. 다른 내용을 찾으려면 [관련 태스크 및 콘텐츠](#related)를 참조하세요.
+이 섹션의 항목에서는 마법사의 **데이터 원본 선택** 및 **대상 선택** 페이지에서 **데이터 원본에 연결** 하는 방법만 설명합니다. 다른 내용을 찾으려면 [관련 태스크 및 콘텐츠](#related)를 참조하세요.
 
 ## <a name="connect-to-a-commonly-used-data-source"></a>자주 사용되는 데이터 원본에 연결
 자주 사용되는 다음 데이터 원본 중 하나에 연결하는 방법을 자세히 알아보려면 링크를 클릭합니다.

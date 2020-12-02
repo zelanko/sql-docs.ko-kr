@@ -18,10 +18,10 @@ ms.assetid: efecd0d4-1489-4eba-a8fe-275d647058b8
 author: chugugrace
 ms.author: chugu
 ms.openlocfilehash: cf44509a479e66175d89c38c42595e418dc6c750
-ms.sourcegitcommit: cfa04a73b26312bf18d8f6296891679166e2754d
+ms.sourcegitcommit: c5078791a07330a87a92abb19b791e950672e198
 ms.translationtype: HT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 10/19/2020
+ms.lasthandoff: 11/26/2020
 ms.locfileid: "92192409"
 ---
 # <a name="system-variables"></a>시스템 변수
@@ -46,7 +46,7 @@ ms.locfileid: "92192409"
 |**ExecutionInstanceGUID**|String|실행 중인 패키지의 고유 식별자입니다.|  
 |**FailedConfigurations**|String|실패한 패키지 구성 이름입니다.|  
 |**IgnoreConfigurationsOnLoad**|부울|패키지를 로드할 때 패키지 구성을 무시할지 여부를 지정합니다.|  
-|**InteractiveMode**|부울|패키지가 대화형 모드에서 실행 중인지 여부를 나타냅니다. [!INCLUDE[ssIS](../includes/ssis-md.md)] 디자이너에서 패키지를 실행 중인 경우 이 속성은 **True**로 설정됩니다. **DTExec** 명령 프롬프트 유틸리티를 사용하여 패키지를 실행 중인 경우 이 속성은 **False**로 설정됩니다.|  
+|**InteractiveMode**|부울|패키지가 대화형 모드에서 실행 중인지 여부를 나타냅니다. [!INCLUDE[ssIS](../includes/ssis-md.md)] 디자이너에서 패키지를 실행 중인 경우 이 속성은 **True** 로 설정됩니다. **DTExec** 명령 프롬프트 유틸리티를 사용하여 패키지를 실행 중인 경우 이 속성은 **False** 로 설정됩니다.|  
 |**LocaleId**|Int32|패키지에서 사용되는 로캘입니다.|  
 |**MachineName**|String|패키지가 실행 중인 컴퓨터 이름입니다.|  
 |**OfflineMode**|부울|패키지가 오프라인 모드인지 여부를 나타냅니다. 오프라인 모드에서는 데이터 원본에 연결하지 않습니다.|  

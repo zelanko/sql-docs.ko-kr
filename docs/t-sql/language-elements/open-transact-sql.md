@@ -23,10 +23,10 @@ ms.assetid: fd1c5e3b-6045-4a42-b646-3fca76e874c1
 author: rothja
 ms.author: jroth
 ms.openlocfilehash: 525e0b30fd68aa45425849b9f2e144621b92286f
-ms.sourcegitcommit: cfa04a73b26312bf18d8f6296891679166e2754d
+ms.sourcegitcommit: c5078791a07330a87a92abb19b791e950672e198
 ms.translationtype: HT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 10/19/2020
+ms.lasthandoff: 11/26/2020
 ms.locfileid: "92187732"
 ---
 # <a name="open-transact-sql"></a>OPEN(Transact-SQL)
@@ -46,10 +46,10 @@ OPEN { { [ GLOBAL ] cursor_name } | cursor_variable_name }
 
 ## <a name="arguments"></a>인수
  GLOBAL  
- *cursor_name*이 전역 커서를 참조하도록 지정합니다.  
+ *cursor_name* 이 전역 커서를 참조하도록 지정합니다.  
   
  *cursor_name*  
- 선언된 커서의 이름입니다. 동일한 *cursor_name*을 가진 전역 커서와 지역 커서가 있을 경우 GLOBAL이 지정되면 *cursor_name*은 전역 커서를 참조하고 GLOBAL이 지정되지 않으면 *cursor_name*은 지역 커서를 참조합니다.  
+ 선언된 커서의 이름입니다. 동일한 *cursor_name* 을 가진 전역 커서와 지역 커서가 있을 경우 GLOBAL이 지정되면 *cursor_name* 은 전역 커서를 참조하고 GLOBAL이 지정되지 않으면 *cursor_name* 은 지역 커서를 참조합니다.  
   
  *cursor_variable_name*  
  커서를 나타내는 커서 변수의 이름입니다.  

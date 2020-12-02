@@ -23,11 +23,11 @@ ms.assetid: 1e940cd1-c5f8-4527-b678-e89ba5dc398a
 author: chugugrace
 ms.author: chugu
 ms.openlocfilehash: 2819e52dfe651cb7fde80560c3edd28745376179
-ms.sourcegitcommit: e700497f962e4c2274df16d9e651059b42ff1a10
+ms.sourcegitcommit: 192f6a99e19e66f0f817fdb1977f564b2aaa133b
 ms.translationtype: HT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 08/17/2020
-ms.locfileid: "88477402"
+ms.lasthandoff: 11/25/2020
+ms.locfileid: "96123057"
 ---
 # <a name="developing-a-user-interface-for-a-custom-task"></a>사용자 지정 태스크의 사용자 인터페이스 개발
 
@@ -45,7 +45,7 @@ ms.locfileid: "88477402"
   
  이 섹션에서는 사용자 지정 태스크의 사용자 인터페이스를 개발할 때 <xref:Microsoft.SqlServer.Dts.Runtime.DtsTaskAttribute> 특성 및 <xref:Microsoft.SqlServer.Dts.Runtime.Design.IDtsTaskUI> 인터페이스가 하는 역할을 설명하고, [!INCLUDE[ssIS](../../../includes/ssis-md.md)] 디자이너 내에서 태스크를 만들고, 통합, 배포 및 디버깅하는 방법에 대한 세부 정보를 제공합니다.  
   
- [!INCLUDE[ssIS](../../../includes/ssis-md.md)] 디자이너에서는 태스크의 사용자 인터페이스에 대한 여러 진입점을 제공합니다. 즉, 사용자는 바로 가기 메뉴에서 **편집**을 선택하거나, 태스크를 두 번 클릭하거나, 속성 시트의 아래쪽에 있는 **편집기 표시** 링크를 클릭할 수 있습니다. 사용자가 이러한 진입점 중 하나에 액세스하면 [!INCLUDE[ssIS](../../../includes/ssis-md.md)] 디자이너에서는 태스크의 사용자 인터페이스가 들어 있는 어셈블리를 찾아서 로드합니다. 태스크의 사용자 인터페이스는 [!INCLUDE[ssBIDevStudioFull](../../../includes/ssbidevstudiofull-md.md)]에서 사용자에게 표시되는 속성 대화 상자를 만듭니다.  
+ [!INCLUDE[ssIS](../../../includes/ssis-md.md)] 디자이너에서는 태스크의 사용자 인터페이스에 대한 여러 진입점을 제공합니다. 즉, 사용자는 바로 가기 메뉴에서 **편집** 을 선택하거나, 태스크를 두 번 클릭하거나, 속성 시트의 아래쪽에 있는 **편집기 표시** 링크를 클릭할 수 있습니다. 사용자가 이러한 진입점 중 하나에 액세스하면 [!INCLUDE[ssIS](../../../includes/ssis-md.md)] 디자이너에서는 태스크의 사용자 인터페이스가 들어 있는 어셈블리를 찾아서 로드합니다. 태스크의 사용자 인터페이스는 [!INCLUDE[ssBIDevStudioFull](../../../includes/ssbidevstudiofull-md.md)]에서 사용자에게 표시되는 속성 대화 상자를 만듭니다.  
   
  태스크와 태스크의 해당 사용자 인터페이스는 별개의 엔터티입니다. 따라서 지역화, 배포 및 유지 관리 작업을 줄이려면 태스크와 태스크의 사용자 인터페이스를 별개의 어셈블리에 구현해야 합니다. 태스크 DLL은 태스크에 코딩된 <xref:Microsoft.SqlServer.Dts.Runtime.DtsTaskAttribute> 특성 값에 들어 있는 정보를 제외하고는 사용자 인터페이스에 대한 어떤 정보도 로드하거나 호출하지 않으며 일반적으로 이러한 정보를 포함하지도 않습니다. 태스크와 사용자 인터페이스는 이러한 방식으로만 연결됩니다.  
   
@@ -122,7 +122,7 @@ End Class 'MyTask
   
  디자이너에서는 <xref:Microsoft.SqlServer.Dts.Runtime.Design.IDtsTaskUI.GetView%2A> 메서드를 호출하여 [!INCLUDE[ssIS](../../../includes/ssis-md.md)] 디자이너에 표시되는 창을 요청합니다. 태스크에서는 해당 태스크의 사용자 인터페이스가 들어 있는 창의 인스턴스를 만들고 표시를 위해 해당 사용자 인터페이스를 디자이너에 반환합니다. 일반적으로 <xref:Microsoft.SqlServer.Dts.Runtime.TaskHost> 및 <xref:Microsoft.SqlServer.Dts.Runtime.Connections> 개체는 오버로드된 생성자를 통해 창에 제공되므로 이들 개체를 사용하여 태스크를 구성할 수 있습니다.  
   
- [!INCLUDE[ssIS](../../../includes/ssis-md.md)] 디자이너에서는 태스크 UI의 <xref:Microsoft.SqlServer.Dts.Runtime.Design.IDtsTaskUI.GetView%2A> 메서드를 호출하여 태스크의 사용자 인터페이스를 표시합니다. 태스크 사용자 인터페이스는 이 메서드에서 Windows Form을 반환하고 [!INCLUDE[ssIS](../../../includes/ssis-md.md)] 디자이너에서는 이 폼을 모달 대화 상자로 표시합니다. 폼이 닫히면 [!INCLUDE[ssIS](../../../includes/ssis-md.md)] 디자이너에서는 폼의 **DialogResult** 속성 값을 검사하여 태스크가 수정되었는지와 수정 내용을 저장해야 하는지를 결정합니다. **DialogResult** 속성 값이 **OK**인 경우 [!INCLUDE[ssIS](../../../includes/ssis-md.md)] 디자이너에서는 태스크의 지속성 메서드를 호출하여 변경 내용을 저장하고, 그렇지 않은 경우 변경 내용은 무시됩니다.  
+ [!INCLUDE[ssIS](../../../includes/ssis-md.md)] 디자이너에서는 태스크 UI의 <xref:Microsoft.SqlServer.Dts.Runtime.Design.IDtsTaskUI.GetView%2A> 메서드를 호출하여 태스크의 사용자 인터페이스를 표시합니다. 태스크 사용자 인터페이스는 이 메서드에서 Windows Form을 반환하고 [!INCLUDE[ssIS](../../../includes/ssis-md.md)] 디자이너에서는 이 폼을 모달 대화 상자로 표시합니다. 폼이 닫히면 [!INCLUDE[ssIS](../../../includes/ssis-md.md)] 디자이너에서는 폼의 **DialogResult** 속성 값을 검사하여 태스크가 수정되었는지와 수정 내용을 저장해야 하는지를 결정합니다. **DialogResult** 속성 값이 **OK** 인 경우 [!INCLUDE[ssIS](../../../includes/ssis-md.md)] 디자이너에서는 태스크의 지속성 메서드를 호출하여 변경 내용을 저장하고, 그렇지 않은 경우 변경 내용은 무시됩니다.  
   
  다음 코드 예제에서는 <xref:Microsoft.SqlServer.Dts.Runtime.Design.IDtsTaskUI> 인터페이스를 구현하며 SampleTaskForm이라는 Windows Form 클래스가 있다고 가정합니다.  
   

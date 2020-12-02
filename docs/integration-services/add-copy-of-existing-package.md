@@ -16,11 +16,11 @@ ms.assetid: ed530b0d-438d-4c93-8e91-13f2b2b6a8b2
 author: chugugrace
 ms.author: chugu
 ms.openlocfilehash: e24122bddbbc2c00d3437481d07194621b94b5bf
-ms.sourcegitcommit: c7f40918dc3ecdb0ed2ef5c237a3996cb4cd268d
+ms.sourcegitcommit: 192f6a99e19e66f0f817fdb1977f564b2aaa133b
 ms.translationtype: HT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 10/05/2020
-ms.locfileid: "91724444"
+ms.lasthandoff: 11/25/2020
+ms.locfileid: "96123814"
 ---
 # <a name="add-copy-of-existing-package"></a>기존 패키지의 복사본 추가
 

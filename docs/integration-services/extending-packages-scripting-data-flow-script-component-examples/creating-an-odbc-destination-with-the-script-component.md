@@ -17,11 +17,11 @@ ms.assetid: d198c866-78f4-4a50-ae15-333160645815
 author: chugugrace
 ms.author: chugu
 ms.openlocfilehash: dd25e6cf4816b0ff39ed1129a1d98f9de5603d2c
-ms.sourcegitcommit: e700497f962e4c2274df16d9e651059b42ff1a10
+ms.sourcegitcommit: 192f6a99e19e66f0f817fdb1977f564b2aaa133b
 ms.translationtype: HT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 08/17/2020
-ms.locfileid: "88477322"
+ms.lasthandoff: 11/25/2020
+ms.locfileid: "96123050"
 ---
 # <a name="creating-an-odbc-destination-with-the-script-component"></a>스크립트 구성 요소를 사용하여 ODBC 대상 만들기
 
@@ -40,7 +40,7 @@ ms.locfileid: "88477322"
   
 -   ODBC 연결 관리자의 **AcquireConnection** 메서드는 네이티브 개체를 반환하므로 관리 코드에서 이 메서드를 호출할 수 없습니다. 따라서 이 예제에서는 연결 관리자의 연결 문자열을 사용하여 관리되는 ODBC [!INCLUDE[dnprdnshort](../../includes/dnprdnshort-md.md)] 데이터 공급자를 통해 데이터 원본에 직접 연결합니다.  
   
--   **OdbcCommand**에는 위치 매개 변수가 필요합니다. 매개 변수의 위치는 명령 텍스트에서 물음표(?)로 표시됩니다. (반면 **SqlCommand**에는 명명된 매개 변수가 필요합니다.)  
+-   **OdbcCommand** 에는 위치 매개 변수가 필요합니다. 매개 변수의 위치는 명령 텍스트에서 물음표(?)로 표시됩니다. (반면 **SqlCommand** 에는 명명된 매개 변수가 필요합니다.)  
   
  이 예에서는 **AdventureWorks** 예제 데이터베이스의 **Person.Address** 테이블을 사용하고, 이 테이블의 첫 번째 열인 **int _AddressID_** 와 네 번째 열인 **nvarchar(30) _City_** 열을 데이터 흐름을 통해 전달합니다. 동일한 데이터가 [특정 유형의 스크립트 구성 요소 개발](../../integration-services/extending-packages-scripting-data-flow-script-component-types/developing-specific-types-of-script-components.md) 항목의 원본, 변환 및 대상 예제에도 사용됩니다.  
   
@@ -59,15 +59,15 @@ ms.locfileid: "88477322"
   
 4.  업스트림 원본 또는 변환의 출력을 [!INCLUDE[ssIS](../../includes/ssis-md.md)] 디자이너의 대상 구성 요소에 연결합니다. 변환하지 않고 원본을 대상에 직접 연결할 수 있습니다. 이 예제가 작동하려면 업스트림 구성 요소의 출력에는 **AdventureWorks** 예제 데이터베이스의 **Person.Address** 테이블에서 적어도 **AddressID** 및 **City** 열이 포함되어야 합니다.  
   
-5.  **스크립트 변환 편집기**를 엽니다. **입력 열** 페이지에서 **AddressID** 및 **City** 열을 선택합니다.  
+5.  **스크립트 변환 편집기** 를 엽니다. **입력 열** 페이지에서 **AddressID** 및 **City** 열을 선택합니다.  
   
-6.  **입/출력** 페이지에서 입력의 이름을 **MyAddressInput**과 같이 더 알기 쉬운 이름으로 바꿉니다.  
+6.  **입/출력** 페이지에서 입력의 이름을 **MyAddressInput** 과 같이 더 알기 쉬운 이름으로 바꿉니다.  
   
-7.  **연결 관리자** 페이지에서 **MyODBCConnectionManager**와 같이 알기 쉬운 이름으로 ODBC 연결 관리자를 추가하거나 만듭니다.  
+7.  **연결 관리자** 페이지에서 **MyODBCConnectionManager** 와 같이 알기 쉬운 이름으로 ODBC 연결 관리자를 추가하거나 만듭니다.  
   
-8.  **스크립트** 페이지에서 **스크립트 편집**을 클릭한 다음 아래의 **ScriptMain** 클래스에 표시된 스크립트를 입력합니다.  
+8.  **스크립트** 페이지에서 **스크립트 편집** 을 클릭한 다음 아래의 **ScriptMain** 클래스에 표시된 스크립트를 입력합니다.  
   
-9. 스크립트 개발 환경을 닫고 **스크립트 변환 편집기**를 닫은 다음 예제를 실행합니다.  
+9. 스크립트 개발 환경을 닫고 **스크립트 변환 편집기** 를 닫은 다음 예제를 실행합니다.  
   
     ```vb  
     Imports System.Data.Odbc  

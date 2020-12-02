@@ -14,11 +14,11 @@ ms.assetid: c83cb1b1-3c52-4496-b518-4c9253b9336d
 author: chugugrace
 ms.author: chugu
 ms.openlocfilehash: 3c4da6f54ead49d01d9d691cc081ac9b9955c693
-ms.sourcegitcommit: e700497f962e4c2274df16d9e651059b42ff1a10
+ms.sourcegitcommit: 192f6a99e19e66f0f817fdb1977f564b2aaa133b
 ms.translationtype: HT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 08/17/2020
-ms.locfileid: "88425475"
+ms.lasthandoff: 11/25/2020
+ms.locfileid: "96123245"
 ---
 # <a name="findstring-ssis-expression"></a>FINDSTRING(SSIS 식)
 
@@ -48,7 +48,7 @@ FINDSTRING(character_expression, searchstring, occurrence)
  DT_I4  
   
 ## <a name="remarks"></a>설명  
- FINDSTRING은 DT_WSTR 데이터 형식에서만 실행됩니다.  문자열 리터럴인*character_expression* 및 *searchstring* 인수나 DT_STR 데이터 형식의 데이터 열은 FINDSTRING 연산이 수행되기 전에 DT_WSTR 데이터 형식으로 암시적으로 캐스팅됩니다. 다른 데이터 형식은 DT_WSTR 데이터 형식으로 명시적으로 캐스팅되어야 합니다. 자세한 내용은 [Integration Services 데이터 형식](../../integration-services/data-flow/integration-services-data-types.md) 및 [캐스트&#40;SSIS 식&#41;](../../integration-services/expressions/cast-ssis-expression.md)를 참조하세요.  
+ FINDSTRING은 DT_WSTR 데이터 형식에서만 실행됩니다.  문자열 리터럴인 *character_expression* 및 *searchstring* 인수나 DT_STR 데이터 형식의 데이터 열은 FINDSTRING 연산이 수행되기 전에 DT_WSTR 데이터 형식으로 암시적으로 캐스팅됩니다. 다른 데이터 형식은 DT_WSTR 데이터 형식으로 명시적으로 캐스팅되어야 합니다. 자세한 내용은 [Integration Services 데이터 형식](../../integration-services/data-flow/integration-services-data-types.md) 및 [캐스트&#40;SSIS 식&#41;](../../integration-services/expressions/cast-ssis-expression.md)를 참조하세요.  
   
  *character_expression* 또는 *searchstring* 이 Null이면 FINDSTRING은 Null을 반환합니다.  
   
@@ -69,7 +69,7 @@ FINDSTRING("New York, NY, NY", "NY", 1)
 FINDSTRING("New York, NY, NY", "NY", 3)   
 ```  
   
- 이 예에서는 **Name** 열을 사용합니다. **Name** 열에서 두 번째 “n”의 위치가 반환됩니다. 반환 결과는 **Name**열의 값에 따라 달라집니다. **Name** 열에 Anderson이 포함된 경우 함수는 8을 반환합니다.  
+ 이 예에서는 **Name** 열을 사용합니다. **Name** 열에서 두 번째 “n”의 위치가 반환됩니다. 반환 결과는 **Name** 열의 값에 따라 달라집니다. **Name** 열에 Anderson이 포함된 경우 함수는 8을 반환합니다.  
   
 ```  
 FINDSTRING(Name, "n", 2)   

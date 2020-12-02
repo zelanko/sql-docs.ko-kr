@@ -23,10 +23,10 @@ author: rothja
 ms.author: jroth
 monikerRange: '>=aps-pdw-2016||=azuresqldb-current||=azure-sqldw-latest||>=sql-server-2016||=sqlallproducts-allversions||>=sql-server-linux-2017||=azuresqldb-mi-current'
 ms.openlocfilehash: 8bf1b3c571806aaaca17894c52c4673709074261
-ms.sourcegitcommit: cfa04a73b26312bf18d8f6296891679166e2754d
+ms.sourcegitcommit: c5078791a07330a87a92abb19b791e950672e198
 ms.translationtype: HT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 10/19/2020
+ms.lasthandoff: 11/26/2020
 ms.locfileid: "92188067"
 ---
 # <a name="nullif-transact-sql"></a>NULLIF(Transact-SQL)
@@ -49,9 +49,9 @@ NULLIF ( expression , expression )
 [!INCLUDE[sql-server-tsql-previous-offline-documentation](../../includes/sql-server-tsql-previous-offline-documentation.md)]
 
 ## <a name="return-types"></a>반환 형식
- 첫 번째 *식*과 동일한 형식을 반환합니다.  
+ 첫 번째 *식* 과 동일한 형식을 반환합니다.  
   
- NULLIF는 두 식이 같지 않으면 첫 번째 *식*을 반환합니다. 식이 같으면 NULLIF는 첫 번째 *식* 형식의 Null 값을 반환합니다.  
+ NULLIF는 두 식이 같지 않으면 첫 번째 *식* 을 반환합니다. 식이 같으면 NULLIF는 첫 번째 *식* 형식의 Null 값을 반환합니다.  
   
 ## <a name="remarks"></a>설명  
  NULLIF는 두 식이 동일하며 결과 식이 NULL인 검색된 CASE 식과 동일합니다.  

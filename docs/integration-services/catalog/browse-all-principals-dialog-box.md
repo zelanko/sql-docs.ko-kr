@@ -14,11 +14,11 @@ ms.assetid: f11d2c5e-ee05-45f3-8dc2-0feb99b2f76f
 author: chugugrace
 ms.author: chugu
 ms.openlocfilehash: f5ec280020b966a1d23b5ebb9dfb2c740692a6d1
-ms.sourcegitcommit: e700497f962e4c2274df16d9e651059b42ff1a10
+ms.sourcegitcommit: 192f6a99e19e66f0f817fdb1977f564b2aaa133b
 ms.translationtype: HT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 08/17/2020
-ms.locfileid: "88394969"
+ms.lasthandoff: 11/25/2020
+ms.locfileid: "96123792"
 ---
 # <a name="browse-all-principals-dialog-box"></a>모든 보안 주체 찾아보기 대화 상자
 
@@ -43,11 +43,11 @@ ms.locfileid: "88394969"
   
 3.  **SSISDB** 노드를 확장합니다.  
   
-4.  선택한 폴더에 포함된 모든 프로젝트에 대해 보안 주체가 가지는 권한을 변경하려면 폴더를 마우스 오른쪽 단추로 클릭한 다음, **속성**을 클릭합니다.  
+4.  선택한 폴더에 포함된 모든 프로젝트에 대해 보안 주체가 가지는 권한을 변경하려면 폴더를 마우스 오른쪽 단추로 클릭한 다음, **속성** 을 클릭합니다.  
   
-     선택한 프로젝트에 대해 보안 주체가 가지는 권한을 변경하려면 프로젝트가 포함된 폴더를 확장하고 프로젝트를 마우스 오른쪽 단추로 클릭한 다음, **속성**을 클릭합니다.  
+     선택한 프로젝트에 대해 보안 주체가 가지는 권한을 변경하려면 프로젝트가 포함된 폴더를 확장하고 프로젝트를 마우스 오른쪽 단추로 클릭한 다음, **속성** 을 클릭합니다.  
   
-5.  **사용 권한** 페이지를 선택한 다음 **찾아보기**를 클릭합니다.  
+5.  **사용 권한** 페이지를 선택한 다음 **찾아보기** 를 클릭합니다.  
   
 ##  <a name="configure-the-options"></a><a name="options"></a> 옵션 구성  
  이 페이지에는 SSISDB 데이터베이스의 sys.database_principals 카탈로그 뷰에 있는 보안 주체가 표시됩니다.  

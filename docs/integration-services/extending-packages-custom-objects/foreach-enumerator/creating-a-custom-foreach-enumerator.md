@@ -17,11 +17,11 @@ ms.assetid: 050e8455-2ed0-4b6d-b3ea-4e80e6c28487
 author: chugugrace
 ms.author: chugu
 ms.openlocfilehash: d98191945b17cb1471d6e255b8f41680a03cc459
-ms.sourcegitcommit: e700497f962e4c2274df16d9e651059b42ff1a10
+ms.sourcegitcommit: 192f6a99e19e66f0f817fdb1977f564b2aaa133b
 ms.translationtype: HT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 08/17/2020
-ms.locfileid: "88430545"
+ms.lasthandoff: 11/25/2020
+ms.locfileid: "96123115"
 ---
 # <a name="creating-a-custom-foreach-enumerator"></a>사용자 지정 Foreach 열거자 만들기
 
@@ -38,7 +38,7 @@ ms.locfileid: "88430545"
   
 -   필요한 경우 사용자 지정 사용자 인터페이스를 개발합니다. foreach 열거자의 경우 사용자 지정 사용자 인터페이스를 개발하려면 <xref:Microsoft.SqlServer.Dts.Runtime.IDTSForEachEnumeratorUI> 인터페이스를 구현하는 클래스가 필요합니다.  
   
- 사용자 지정 열거자는 <xref:Microsoft.SqlServer.Dts.Runtime.ForEachLoop> 컨테이너에 의해 호스팅됩니다. 런타임에 <xref:Microsoft.SqlServer.Dts.Runtime.ForEachLoop> 컨테이너는 사용자 지정 열거자의 <xref:Microsoft.SqlServer.Dts.Runtime.ForEachEnumerator.GetEnumerator%2A> 메서드를 호출합니다. 사용자 지정 열거자는 **ArrayList**와 같이 **IEnumerable** 인터페이스를 구현하는 개체를 반환합니다. 그런 다음 <xref:Microsoft.SqlServer.Dts.Runtime.ForEachLoop>는 컬렉션의 각 요소를 반복하고, 사용자 정의 변수를 통해 현재 요소의 값을 제어 흐름에 제공하고, 컨테이너에서 제어 흐름을 실행합니다.  
+ 사용자 지정 열거자는 <xref:Microsoft.SqlServer.Dts.Runtime.ForEachLoop> 컨테이너에 의해 호스팅됩니다. 런타임에 <xref:Microsoft.SqlServer.Dts.Runtime.ForEachLoop> 컨테이너는 사용자 지정 열거자의 <xref:Microsoft.SqlServer.Dts.Runtime.ForEachEnumerator.GetEnumerator%2A> 메서드를 호출합니다. 사용자 지정 열거자는 **ArrayList** 와 같이 **IEnumerable** 인터페이스를 구현하는 개체를 반환합니다. 그런 다음 <xref:Microsoft.SqlServer.Dts.Runtime.ForEachLoop>는 컬렉션의 각 요소를 반복하고, 사용자 정의 변수를 통해 현재 요소의 값을 제어 흐름에 제공하고, 컨테이너에서 제어 흐름을 실행합니다.  
   
 ## <a name="getting-started-with-a-custom-foreach-enumerator"></a>사용자 지정 ForEach 열거자 시작  
   
@@ -52,7 +52,7 @@ ms.locfileid: "88430545"
 ### <a name="applying-the-dtsforeachenumerator-attribute"></a>DtsForEachEnumerator 특성 적용  
  앞에서 만든 클래스에 <xref:Microsoft.SqlServer.Dts.Runtime.DtsForEachEnumeratorAttribute> 특성을 적용하여 해당 클래스를 foreach 열거자로 식별합니다. 이 특성은 foreach 열거자의 이름 및 설명 같은 디자인 타임 정보를 제공합니다. **Name** 속성은 **Foreach 루프 편집기** 대화 상자의 **컬렉션** 탭에서 사용 가능한 열거자의 드롭다운 목록에 나타납니다.  
   
- <xref:Microsoft.SqlServer.Dts.Runtime.DtsForEachEnumeratorAttribute.UITypeName%2A> 속성을 사용하여 foreach 열거자를 사용자 지정 사용자 인터페이스에 연결합니다. 이 속성에 필요한 공개 키 토큰을 가져오려면 **sn.exe -t**를 사용하여 사용자 인터페이스 어셈블리 서명에 사용할 키 쌍(.snk) 파일의 공개 키 토큰을 표시할 수 있습니다.  
+ <xref:Microsoft.SqlServer.Dts.Runtime.DtsForEachEnumeratorAttribute.UITypeName%2A> 속성을 사용하여 foreach 열거자를 사용자 지정 사용자 인터페이스에 연결합니다. 이 속성에 필요한 공개 키 토큰을 가져오려면 **sn.exe -t** 를 사용하여 사용자 인터페이스 어셈블리 서명에 사용할 키 쌍(.snk) 파일의 공개 키 토큰을 표시할 수 있습니다.  
   
 ```vb  
 Imports System  

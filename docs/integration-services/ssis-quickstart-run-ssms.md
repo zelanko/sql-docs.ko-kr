@@ -10,10 +10,10 @@ ms.technology: integration-services
 author: chugugrace
 ms.author: chugu
 ms.openlocfilehash: beb9a1e1dcb25f42e2d9a49c1e0e5c1a77a3f0ea
-ms.sourcegitcommit: cfa04a73b26312bf18d8f6296891679166e2754d
+ms.sourcegitcommit: c5078791a07330a87a92abb19b791e950672e198
 ms.translationtype: HT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 10/19/2020
+ms.lasthandoff: 11/26/2020
 ms.locfileid: "92193063"
 ---
 # <a name="run-an-ssis-package-with-sql-server-management-studio-ssms"></a>SSMS(SQL Server Management Studio)를 사용하여 SSIS 패키지 실행
@@ -46,7 +46,7 @@ Azure SQL Database 서버는 포트 1433에서 수신 대기합니다. 회사 �
 Azure SQL Database에서 패키지를 실행하려면 SSISDB(SSIS 카탈로그 데이터베이스)에 연결해야 하는 연결 정보를 가져옵니다. 다음 절차에는 정규화된 서버 이름과 로그인 정보가 필요합니다.
 
 1. [Azure Portal](https://portal.azure.com/)에 로그인합니다.
-2. 왼쪽 메뉴에서 **SQL Databases**를 선택한 다음, **SQL 데이터베이스** 페이지에서 SSISDB 데이터베이스를 선택합니다. 
+2. 왼쪽 메뉴에서 **SQL Databases** 를 선택한 다음, **SQL 데이터베이스** 페이지에서 SSISDB 데이터베이스를 선택합니다. 
 3. 데이터베이스의 **개요** 페이지에서 정규화된 서버 이름을 검토합니다. **복사하려면 클릭** 옵션을 표시하려면 마우스로 서버 이름 위를 가리킵니다. 
 4. Azure SQL Database 서버 로그인 정보를 잊은 경우, SQL Database 서버 페이지로 이동하여 서버 관리자 이름을 확인합니다. 필요한 경우 암호를 다시 설정할 수 있습니다.
 
@@ -66,17 +66,17 @@ SQL Server Management Studio를 사용하여 SSIS 카탈로그에 대한 연결�
    | **로그인** | 서버 관리자 계정 | 이 계정은 서버를 만들 때 지정한 계정입니다. |
    | **암호** | 서버 관리자 계정의 암호 | 이 암호는 서버를 만들 때 지정한 암호입니다. |
 
-3. **연결**을 클릭합니다. SSMS에서 개체 탐색기 창이 열립니다. 
+3. **연결** 을 클릭합니다. SSMS에서 개체 탐색기 창이 열립니다. 
 
-4. 개체 탐색기에서 **Integration Services 카탈로그**, **SSISDB**를 차례로 펼쳐 SSIS 카탈로그 데이터베이스의 개체를 봅니다.
+4. 개체 탐색기에서 **Integration Services 카탈로그**, **SSISDB** 를 차례로 펼쳐 SSIS 카탈로그 데이터베이스의 개체를 봅니다.
 
 ## <a name="run-a-package"></a>패키지 실행
 
 1. 개체 탐색기에서 실행하려는 패키지를 선택합니다.
 
-2. 마우스 오른쪽 단추로 클릭하고 **실행**을 선택합니다. **패키지 실행** 대화 상자를 엽니다.
+2. 마우스 오른쪽 단추로 클릭하고 **실행** 을 선택합니다. **패키지 실행** 대화 상자를 엽니다.
 
-3.  **패키지 실행**대화 상자의 **매개 변수**, **연결 관리자** 및 고급 탭의 설정을 사용하여 패키지 실행을 구성합니다.
+3.  **패키지 실행** 대화 상자의 **매개 변수**, **연결 관리자** 및 고급 탭의 설정을 사용하여 패키지 실행을 구성합니다.
 
 4.  확인을 클릭하여 패키지를 실행합니다.
 

@@ -14,11 +14,11 @@ ms.assetid: 338a56db-cb14-4784-a692-468eabd30f41
 author: chugugrace
 ms.author: chugu
 ms.openlocfilehash: 0176dcc68e8c7f72c4bd9b78b1f3d926e52ad215
-ms.sourcegitcommit: e700497f962e4c2274df16d9e651059b42ff1a10
+ms.sourcegitcommit: 192f6a99e19e66f0f817fdb1977f564b2aaa133b
 ms.translationtype: HT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 08/17/2020
-ms.locfileid: "88484763"
+ms.lasthandoff: 11/25/2020
+ms.locfileid: "96123733"
 ---
 # <a name="apply-the-changes-to-the-destination"></a>대상에 변경 내용 적용
 
@@ -39,7 +39,7 @@ ms.locfileid: "88484763"
   
 2.  삽입을 포함하는 출력을 조건부 분할 변환에서 OLE DB 대상에 연결합니다.  
   
-3.  **OLE DB 대상 편집기**의 **연결 관리자** 페이지에서 다음 옵션을 선택합니다.  
+3.  **OLE DB 대상 편집기** 의 **연결 관리자** 페이지에서 다음 옵션을 선택합니다.  
   
     1.  대상 데이터베이스에 대한 OLE DB 연결 관리자를 선택하거나 만듭니다.  
   
@@ -59,9 +59,9 @@ ms.locfileid: "88484763"
   
 2.  업데이트를 포함하는 출력을 조건부 분할 변환에서 OLE DB 명령 변환에 연결합니다.  
   
-3.  **고급 OLE DB 명령 편집기**의 **연결 관리자** 탭에서 대상 데이터베이스에 대한 OLE DB 연결 관리자를 선택하거나 만듭니다.  
+3.  **고급 OLE DB 명령 편집기** 의 **연결 관리자** 탭에서 대상 데이터베이스에 대한 OLE DB 연결 관리자를 선택하거나 만듭니다.  
   
-4.  **고급 OLE DB 명령 편집기**의 **구성 요소 속성** 탭에 있는 **SqlCommand**에 매개 변수가 있는 UPDATE 문을 입력합니다.  
+4.  **고급 OLE DB 명령 편집기** 의 **구성 요소 속성** 탭에 있는 **SqlCommand** 에 매개 변수가 있는 UPDATE 문을 입력합니다.  
   
      예를 들어 Customer 테이블에 대한 UPDATE 문에는 다음 구문이 있을 수 있습니다.  
   
@@ -91,9 +91,9 @@ ms.locfileid: "88484763"
   
 3.  고급 편집기를 열어 변환을 구성합니다.  
   
-4.  **고급 OLE DB 명령 편집기**의 **연결 관리자** 탭에서 대상 데이터베이스에 대한 OLE DB 연결 관리자를 선택하거나 만듭니다.  
+4.  **고급 OLE DB 명령 편집기** 의 **연결 관리자** 탭에서 대상 데이터베이스에 대한 OLE DB 연결 관리자를 선택하거나 만듭니다.  
   
-5.  **고급 OLE DB 명령 편집기**에 있는 편집기의 **구성 요소 속성** 탭에서 **SqlCommand**에 매개 변수가 있는 DELETE 문을 입력합니다.  
+5.  **고급 OLE DB 명령 편집기** 에 있는 편집기의 **구성 요소 속성** 탭에서 **SqlCommand** 에 매개 변수가 있는 DELETE 문을 입력합니다.  
   
      예를 들어 Customer 테이블에 대한 DELETE 문에는 다음 구문이 있을 수 있습니다.  
   
@@ -107,6 +107,6 @@ ms.locfileid: "88484763"
 ## <a name="optimizing-inserts-and-updates-by-using-merge-functionality"></a>MERGE 기능을 사용하여 삽입 및 업데이트 최적화  
  Transact-SQL MERGE 키워드와 특정 변경 데이터 캡처 옵션을 함께 사용하여 삽입 및 업데이트 처리를 최적화할 수 있습니다. MERGE 키워드에 대한 자세한 내용은 [MERGE&#40;Transact-SQL&#41;](../../t-sql/statements/merge-transact-sql.md)를 참조하세요.  
   
- 변경 데이터를 검색하는 Transact-SQL 문에서 **cdc.fn_cdc_get_net_changes_<capture_instance>** 함수를 호출할 때 *all with merge*를 *row_filter_option* 매개 변수의 값으로 지정할 수 있습니다. 이 변경 데이터 캡처 함수는 삽입과 업데이트를 구분하는 데 필요한 추가 처리를 수행할 필요가 없을 때 보다 효율적으로 작동합니다. *all with merge* 매개 변수 값을 지정할 때 변경 데이터의 **__$operation** 값은 삭제의 경우 1이고 삽입 또는 업데이트로 인한 변경의 경우 5입니다. 변경 데이터를 검색하는 데 사용되는 Transact-SQL 함수에 대한 자세한 내용은 [변경 데이터 검색 및 이해](../../integration-services/change-data-capture/retrieve-and-understand-the-change-data.md)를 참조하세요. *all with merge* 매개 변수 값을 사용하여 변경 내용을 검색한 후 삭제를 적용하고 나머지 행을 임시 테이블 또는 준비 테이블에 출력할 수 있습니다. 그런 다음 다운스트림 SQL 실행 태스크에서 단일 MERGE 문을 사용하여 준비 테이블의 모든 삽입 또는 업데이트를 대상에 적용할 수 있습니다.  
+ 변경 데이터를 검색하는 Transact-SQL 문에서 **cdc.fn_cdc_get_net_changes_<capture_instance>** 함수를 호출할 때 *all with merge* 를 *row_filter_option* 매개 변수의 값으로 지정할 수 있습니다. 이 변경 데이터 캡처 함수는 삽입과 업데이트를 구분하는 데 필요한 추가 처리를 수행할 필요가 없을 때 보다 효율적으로 작동합니다. *all with merge* 매개 변수 값을 지정할 때 변경 데이터의 **__$operation** 값은 삭제의 경우 1이고 삽입 또는 업데이트로 인한 변경의 경우 5입니다. 변경 데이터를 검색하는 데 사용되는 Transact-SQL 함수에 대한 자세한 내용은 [변경 데이터 검색 및 이해](../../integration-services/change-data-capture/retrieve-and-understand-the-change-data.md)를 참조하세요. *all with merge* 매개 변수 값을 사용하여 변경 내용을 검색한 후 삭제를 적용하고 나머지 행을 임시 테이블 또는 준비 테이블에 출력할 수 있습니다. 그런 다음 다운스트림 SQL 실행 태스크에서 단일 MERGE 문을 사용하여 준비 테이블의 모든 삽입 또는 업데이트를 대상에 적용할 수 있습니다.  
   
   

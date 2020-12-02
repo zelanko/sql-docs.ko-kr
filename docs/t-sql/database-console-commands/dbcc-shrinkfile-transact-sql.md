@@ -31,11 +31,11 @@ ms.assetid: e02b2318-bee9-4d84-a61f-2fddcf268c9f
 author: pmasl
 ms.author: umajay
 ms.openlocfilehash: 7d7d3c9e8fa3e67a4ee6ba5c2eb2590ee65c18b2
-ms.sourcegitcommit: cc23d8646041336d119b74bf239a6ac305ff3d31
+ms.sourcegitcommit: 192f6a99e19e66f0f817fdb1977f564b2aaa133b
 ms.translationtype: HT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 09/23/2020
-ms.locfileid: "91115580"
+ms.lasthandoff: 11/25/2020
+ms.locfileid: "96119559"
 ---
 # <a name="dbcc-shrinkfile-transact-sql"></a>DBCC SHRINKFILE(Transact-SQL)
 [!INCLUDE [SQL Server SQL Database](../../includes/applies-to-version/sql-asdb.md)]
@@ -70,13 +70,13 @@ DBCC SHRINKFILE
 정수 - 파일의 새 메가바이트 크기입니다. 이 값을 지정하지 않으면 DBCC SHRINKFILE은 파일 생성 크기를 줄입니다.
   
 > [!NOTE]  
->  DBCC SHRINKFILE *target_size*를 사용하여 빈 파일의 기본 크기를 줄일 수 있습니다. 예를 들어 5MB 파일을 만든 다음 파일이 아직 비어 있을 때 파일을 3MB로 줄이면 기본 파일 크기가 3MB로 설정됩니다. 이 내용은 데이터가 포함된 적이 없는 빈 파일에만 적용됩니다.  
+>  DBCC SHRINKFILE *target_size* 를 사용하여 빈 파일의 기본 크기를 줄일 수 있습니다. 예를 들어 5MB 파일을 만든 다음 파일이 아직 비어 있을 때 파일을 3MB로 줄이면 기본 파일 크기가 3MB로 설정됩니다. 이 내용은 데이터가 포함된 적이 없는 빈 파일에만 적용됩니다.  
   
 이 옵션은 FILESTREAM 파일 그룹 컨테이너에서 지원되지 않습니다.  
-이 값을 지정하면 DBCC SHRINKFILE은 *target_size*로 파일을 축소합니다. 해제할 파일 영역에서 사용된 페이지는 파일 보유 영역의 사용 가능한 공간으로 이동됩니다. 예를 들어 10MB의 데이터 파일을 사용하면 *target_size*가 8인 DBCC SHRINKFILE 작업이 파일의 마지막 2MB에서 사용된 모든 페이지를 파일의 처음 8MB에서 할당되지 않은 페이지로 이동합니다. DBCC SHRINKFILE은 필요한 저장 데이터 크기 이하로 파일을 축소하지 않습니다. 예를 들어 10MB 데이터 파일에서 7MB가 사용되는 경우 *target_size*가 6인 DBCC SHRINKFILE 문은 파일을 6MB가 아니라 7MB로만 축소합니다.
+이 값을 지정하면 DBCC SHRINKFILE은 *target_size* 로 파일을 축소합니다. 해제할 파일 영역에서 사용된 페이지는 파일 보유 영역의 사용 가능한 공간으로 이동됩니다. 예를 들어 10MB의 데이터 파일을 사용하면 *target_size* 가 8인 DBCC SHRINKFILE 작업이 파일의 마지막 2MB에서 사용된 모든 페이지를 파일의 처음 8MB에서 할당되지 않은 페이지로 이동합니다. DBCC SHRINKFILE은 필요한 저장 데이터 크기 이하로 파일을 축소하지 않습니다. 예를 들어 10MB 데이터 파일에서 7MB가 사용되는 경우 *target_size* 가 6인 DBCC SHRINKFILE 문은 파일을 6MB가 아니라 7MB로만 축소합니다.
   
 EMPTYFILE  
-지정한 파일의 모든 데이터를 **동일한 파일 그룹**의 다른 파일로 마이그레이션합니다. 즉, EMPTYFILE은 지정된 파일의 데이터를 동일한 파일 그룹의 다른 파일로 마이그레이션합니다. EMPTYFILE은 이 파일이 읽기 전용이 아니더라도 파일에 새 데이터가 추가되지 않는다고 가정합니다. [ALTER DATABASE](../../t-sql/statements/alter-database-transact-sql.md) 문을 사용하여 파일을 제거할 수 있습니다. [ALTER DATABASE](../../t-sql/statements/alter-database-transact-sql.md) 문을 사용하여 파일 크기를 변경하면 읽기 전용 플래그가 재설정되고 데이터를 추가할 수 있습니다.
+지정한 파일의 모든 데이터를 **동일한 파일 그룹** 의 다른 파일로 마이그레이션합니다. 즉, EMPTYFILE은 지정된 파일의 데이터를 동일한 파일 그룹의 다른 파일로 마이그레이션합니다. EMPTYFILE은 이 파일이 읽기 전용이 아니더라도 파일에 새 데이터가 추가되지 않는다고 가정합니다. [ALTER DATABASE](../../t-sql/statements/alter-database-transact-sql.md) 문을 사용하여 파일을 제거할 수 있습니다. [ALTER DATABASE](../../t-sql/statements/alter-database-transact-sql.md) 문을 사용하여 파일 크기를 변경하면 읽기 전용 플래그가 재설정되고 데이터를 추가할 수 있습니다.
 
 FILESTREAM 파일 그룹 컨테이너의 경우 FILESTREAM 가비지 수집기가 실행되어 EMPTYFILE이 다른 컨테이너에 복사한 불필요한 파일 그룹 컨테이너 파일을 모두 삭제할 때까지 파일을 제거하는 데 ALTER DATABASE를 사용할 수 없습니다. 자세한 내용은 [sp_filestream_force_garbage_collection&#40;Transact-SQL&#41;](../../relational-databases/system-stored-procedures/filestream-and-filetable-sp-filestream-force-garbage-collection.md)을 참조하세요.
   
@@ -84,12 +84,12 @@ FILESTREAM 파일 그룹 컨테이너의 경우 FILESTREAM 가비지 수집기�
 >  FILESTREAM 컨테이너를 제거하는 방법에 대한 내용은 [ALTER DATABASE 파일 및 파일 그룹 옵션&#40;Transact-SQL&#41;](../../t-sql/statements/alter-database-transact-sql-file-and-filegroup-options.md)에서 해당 섹션을 참조하세요.  
   
 NOTRUNCATE  
-*target_percent*의 지정 여부와 관계없이 데이터 파일의 끝에서 할당된 페이지를 파일 앞의 할당되지 않은 페이지로 이동합니다. 파일 끝의 사용 가능한 공간이 운영 체제에 반환되지 않고, 파일의 물리적 크기가 변경되지 않습니다. 그러므로 NOTRUNCATE를 지정하면 파일이 축소되지 않는 것처럼 보입니다.
+*target_percent* 의 지정 여부와 관계없이 데이터 파일의 끝에서 할당된 페이지를 파일 앞의 할당되지 않은 페이지로 이동합니다. 파일 끝의 사용 가능한 공간이 운영 체제에 반환되지 않고, 파일의 물리적 크기가 변경되지 않습니다. 그러므로 NOTRUNCATE를 지정하면 파일이 축소되지 않는 것처럼 보입니다.
 NOTRUNCATE는 데이터 파일에만 적용되며 로그 파일에는 영향을 주지 않습니다.   이 옵션은 FILESTREAM 파일 그룹 컨테이너에서 지원되지 않습니다.
   
 TRUNCATEONLY  
 파일 끝의 모든 사용 가능한 공간을 운영 체제로 해제하지만 파일 내에서 페이지 이동을 수행하지 않습니다. 데이터 파일은 마지막으로 할당된 익스텐트까지만 축소됩니다.
-TRUNCATEONLY로 지정되면 *target_size*가 무시됩니다.  
+TRUNCATEONLY로 지정되면 *target_size* 가 무시됩니다.  
 TRUNCATEONLY 옵션은 로그에 있는 정보를 이동시키지 않습니다. 하지만 로그 파일의 끝에서 비활성 상태의 VLF를 제거합니다. 이 옵션은 FILESTREAM 파일 그룹 컨테이너에서 지원되지 않습니다.
   
 WITH NO_INFOMSGS  
@@ -118,7 +118,7 @@ DBCC SHRINKFILE 작업이 실패하면 오류가 발생합니다.
   
 ## <a name="shrinking-a-log-file"></a>로그 파일 축소  
 
-로그 파일의 경우 [!INCLUDE[ssDE](../../includes/ssde-md.md)]에서는 *target_size*를 사용하여 전체 로그의 대상 크기를 계산합니다. 따라서 *target_size*는 축소 작업 후 로그에서 사용 가능한 공간의 크기입니다. 그런 다음, 전체 로그의 대상 크기가 각 로그 파일의 대상 크기로 변환됩니다. DBCC SHRINKFILE은 즉시 각 물리적 로그 파일을 대상 크기로 축소하려고 시도합니다. 그러나 가상 로그에 대상 크기보다 큰 논리 로그 부분이 있는 경우 [!INCLUDE[ssDE](../../includes/ssde-md.md)]은 가능한 한 많은 공간을 해제하고 정보용 메시지를 표시합니다. 이 메시지는 파일 끝의 가상 로그에서 논리 로그를 이동하기 위해 수행해야 하는 동작을 설명합니다. 동작이 수행되고 나면 DBCC SHRINKFILE을 사용하여 나머지 공간을 확보할 수 있습니다.
+로그 파일의 경우 [!INCLUDE[ssDE](../../includes/ssde-md.md)]에서는 *target_size* 를 사용하여 전체 로그의 대상 크기를 계산합니다. 따라서 *target_size* 는 축소 작업 후 로그에서 사용 가능한 공간의 크기입니다. 그런 다음, 전체 로그의 대상 크기가 각 로그 파일의 대상 크기로 변환됩니다. DBCC SHRINKFILE은 즉시 각 물리적 로그 파일을 대상 크기로 축소하려고 시도합니다. 그러나 가상 로그에 대상 크기보다 큰 논리 로그 부분이 있는 경우 [!INCLUDE[ssDE](../../includes/ssde-md.md)]은 가능한 한 많은 공간을 해제하고 정보용 메시지를 표시합니다. 이 메시지는 파일 끝의 가상 로그에서 논리 로그를 이동하기 위해 수행해야 하는 동작을 설명합니다. 동작이 수행되고 나면 DBCC SHRINKFILE을 사용하여 나머지 공간을 확보할 수 있습니다.
   
 로그 파일은 가상 로그 파일 크기만큼만 축소할 수 있으므로 사용 중이 아닌 로그 파일이라도 가상 로그 파일의 크기보다 작게 축소할 수는 없습니다. 로그 파일이 생성되거나 확장될 때 [!INCLUDE[ssDE](../../includes/ssde-md.md)]에서는 동적으로 가상 파일 로그 크기를 선택합니다.
   

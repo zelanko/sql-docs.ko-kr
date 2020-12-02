@@ -15,11 +15,11 @@ ms.assetid: 6404dc7f-550c-47cc-b901-c072742f430a
 author: chugugrace
 ms.author: chugu
 ms.openlocfilehash: 685ac46fd80e92d115dcf8aed3c49abb1ac9d144
-ms.sourcegitcommit: e700497f962e4c2274df16d9e651059b42ff1a10
+ms.sourcegitcommit: 192f6a99e19e66f0f817fdb1977f564b2aaa133b
 ms.translationtype: HT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 08/17/2020
-ms.locfileid: "88496057"
+ms.lasthandoff: 11/25/2020
+ms.locfileid: "96123576"
 ---
 # <a name="cdc-control-task"></a>CDC 제어 태스크
 
@@ -108,17 +108,17 @@ ms.locfileid: "88496057"
   
 -   **초기 로드 시작 표시**: 이 작업은 스냅샷 없이 활성 데이터베이스에서 초기 로드를 실행할 때 사용됩니다. 이 작업은 초기 로드 패키지의 시작 부분에서 초기 로드 패키지가 원본 테이블을 읽기 시작하기 전에 현재 LSN을 원본 데이터베이스에 기록하기 위해 호출됩니다. 이 작업을 수행하려면 원본 데이터베이스에 대한 연결이 필요합니다.  
   
-     **CDC(즉, Oracle이 아님)에서 작업할 때** 초기 로드 시작 표시 [!INCLUDE[ssCurrent](../../includes/sscurrent-md.md)] 를 선택하는 경우 연결 관리자에 지정된 사용자는  **db_owner** 또는 **sysadmin**이어야 합니다.  
+     **CDC(즉, Oracle이 아님)에서 작업할 때** 초기 로드 시작 표시 [!INCLUDE[ssCurrent](../../includes/sscurrent-md.md)] 를 선택하는 경우 연결 관리자에 지정된 사용자는  **db_owner** 또는 **sysadmin** 이어야 합니다.  
   
 -   **초기 로드 끝 표시**: 이 작업은 스냅샷 없이 활성 데이터베이스에서 초기 로드를 실행할 때 사용됩니다. 이 작업은 초기 로드 패키지의 끝 부분에서 초기 로드 패키지가 원본 테이블 읽기를 완료한 후 현재 LSN을 원본 데이터베이스에 기록하기 위해 호출됩니다. 이 LSN은 이 작업이 발생한 현재 시간을 기록한 후 CDC 데이터베이스에서 해당 시간 이후에 발생한 변경 내용을 조회하는 `cdc.lsn_time_`매핑 테이블을 쿼리하여 결정됩니다.  
   
-     **CDC(즉, Oracle이 아님)에서 작업할 때** 초기 로드 끝 표시 [!INCLUDE[ssCurrent](../../includes/sscurrent-md.md)] 를 선택하는 경우 연결 관리자에 지정된 사용자는  **db_owner** 또는 **sysadmin**이어야 합니다.  
+     **CDC(즉, Oracle이 아님)에서 작업할 때** 초기 로드 끝 표시 [!INCLUDE[ssCurrent](../../includes/sscurrent-md.md)] 를 선택하는 경우 연결 관리자에 지정된 사용자는  **db_owner** 또는 **sysadmin** 이어야 합니다.  
   
 -   **CDC 시작 표시**: 이 작업은 스냅샷 데이터베이스 또는 정지 데이터베이스에서 초기 로드를 수행할 때 사용됩니다. 이 작업은 초기 로드 패키지 내의 어느 지점에서나 호출됩니다. 이 작업에는 스냅샷 LSN이거나 스냅샷 LSN이 자동으로 파생될 스냅샷 데이터베이스의 이름이거나 비워 둘 수 있는 매개 변수가 허용됩니다. 매개 변수를 비워둘 경우 현재 데이터베이스 LSN이 변경 내용 처리 패키지의 시작 LSN으로 사용됩니다.  
   
      이 작업은 초기 로드 시작/끝 표시 작업 대신 사용됩니다.  
   
-     **CDC(즉, Oracle이 아님)에서 작업할 때** CDC 시작 표시 [!INCLUDE[ssCurrent](../../includes/sscurrent-md.md)] 를 선택하는 경우 연결 관리자에 지정된 사용자는  **db_owner** 또는 **sysadmin**이어야 합니다.  
+     **CDC(즉, Oracle이 아님)에서 작업할 때** CDC 시작 표시 [!INCLUDE[ssCurrent](../../includes/sscurrent-md.md)] 를 선택하는 경우 연결 관리자에 지정된 사용자는  **db_owner** 또는 **sysadmin** 이어야 합니다.  
   
 -   **처리 범위 가져오기**: 이 작업은 CDC 원본 데이터 흐름을 사용하는 데이터 흐름을 호출하기 전에 변경 내용 처리 패키지 내에서 사용됩니다. 이 작업은 호출될 때 CDC 원본 데이터 흐름에서 읽는 LSN의 범위를 설정합니다. 범위는 데이터 흐름을 처리하는 동안 CDC 원본에서 사용되는 SSIS 패키지 변수에 저장됩니다.  
   
@@ -131,12 +131,12 @@ ms.locfileid: "88496057"
      이 작업을 사용하는 예로는 새로 만든 변경 레코드만 처리하고 이전 변경 레코드는 모두 무시하려는 경우가 있습니다.  
   
  **CDC 상태를 포함하는 변수**  
- 태스크 작업에 대한 상태 정보를 저장하는 SSIS 패키지 변수를 선택합니다. 시작하기 전에 변수를 정의해야 합니다. **자동 상태 지속**을 선택하는 경우 상태 변수가 로드되고 자동으로 저장됩니다.  
+ 태스크 작업에 대한 상태 정보를 저장하는 SSIS 패키지 변수를 선택합니다. 시작하기 전에 변수를 정의해야 합니다. **자동 상태 지속** 을 선택하는 경우 상태 변수가 로드되고 자동으로 저장됩니다.  
   
  상태 변수를 정의하는 방법에 대한 자세한 내용은 [상태 변수 정의](../../integration-services/data-flow/define-a-state-variable.md)를 참조하세요.  
   
  **CDC/스냅샷 이름을 시작하는 SQL Server LSN:**  
- CDC가 시작되는 위치를 결정하기 위해 초기 로드가 수행되는 스냅샷 데이터베이스의 이름 또는 현재 원본 데이터베이스 LSN을 입력합니다. 이 작업은 **CDC 제어 작업** 이 **CDC 시작 표시**로 설정되어 있는 경우에만 사용할 수 있습니다.  
+ CDC가 시작되는 위치를 결정하기 위해 초기 로드가 수행되는 스냅샷 데이터베이스의 이름 또는 현재 원본 데이터베이스 LSN을 입력합니다. 이 작업은 **CDC 제어 작업** 이 **CDC 시작 표시** 로 설정되어 있는 경우에만 사용할 수 있습니다.  
   
  이러한 작업에 대한 자세한 내용은 [CDC Control Task](../../integration-services/control-flow/cdc-control-task.md)를 참조하세요.  
   

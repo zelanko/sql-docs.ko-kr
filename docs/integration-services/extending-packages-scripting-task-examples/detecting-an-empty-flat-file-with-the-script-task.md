@@ -17,11 +17,11 @@ ms.assetid: 1b4defb8-886a-483d-8056-d1b91d37bc90
 author: chugugrace
 ms.author: chugu
 ms.openlocfilehash: d5c1c5473eb307480b772d2cecd31b3ebb2a9bed
-ms.sourcegitcommit: e700497f962e4c2274df16d9e651059b42ff1a10
+ms.sourcegitcommit: 192f6a99e19e66f0f817fdb1977f564b2aaa133b
 ms.translationtype: HT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 08/17/2020
-ms.locfileid: "88430435"
+ms.lasthandoff: 11/25/2020
+ms.locfileid: "96122986"
 ---
 # <a name="detecting-an-empty-flat-file-with-the-script-task"></a>스크립트 태스크를 사용하여 빈 플랫 파일 검색
 
@@ -38,7 +38,7 @@ ms.locfileid: "88430435"
   
 #### <a name="to-configure-this-script-task-example"></a>이 스크립트 태스크 예를 구성하려면  
   
-1.  **EmptyFlatFileTest**라는 플랫 파일 연결 관리자를 만들고 구성합니다.  
+1.  **EmptyFlatFileTest** 라는 플랫 파일 연결 관리자를 만들고 구성합니다.  
   
 2.  `FFNonDataRows`라는 정수 변수를 만들고 해당 값을 플랫 파일에 필요한 비데이터 행의 개수로 설정합니다.  
   

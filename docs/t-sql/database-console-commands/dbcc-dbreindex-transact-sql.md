@@ -24,11 +24,11 @@ ms.assetid: 6e929d09-ccb5-4855-a6af-b616022bc8f6
 author: pmasl
 ms.author: umajay
 ms.openlocfilehash: fc18c47d87ada5b60cb57aba79e1063ce1f38c3a
-ms.sourcegitcommit: e700497f962e4c2274df16d9e651059b42ff1a10
+ms.sourcegitcommit: 192f6a99e19e66f0f817fdb1977f564b2aaa133b
 ms.translationtype: HT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 08/17/2020
-ms.locfileid: "88417649"
+ms.lasthandoff: 11/25/2020
+ms.locfileid: "96119632"
 ---
 # <a name="dbcc-dbreindex-transact-sql"></a>DBCC DBREINDEX(Transact-SQL)
 [!INCLUDE [SQL Server](../../includes/applies-to-version/sqlserver.md)]
@@ -59,12 +59,12 @@ DBCC DBREINDEX
  다시 작성할 지정 인덱스를 포함하는 테이블의 이름입니다. 테이블 이름은 [식별자](../../relational-databases/databases/database-identifiers.md)*에 적용되는 규칙을 따라야 합니다.*  
   
  *index_name*  
- 다시 작성할 인덱스의 이름입니다. 인덱스 이름은 식별자에 대한 규칙을 따라야 합니다. *index_name*을 지정한 경우 *table_name*을 지정해야 합니다. *index_name*을 지정하지 않거나 해당 이름이 " "이면 테이블의 모든 인덱스가 다시 작성됩니다.  
+ 다시 작성할 인덱스의 이름입니다. 인덱스 이름은 식별자에 대한 규칙을 따라야 합니다. *index_name* 을 지정한 경우 *table_name* 을 지정해야 합니다. *index_name* 을 지정하지 않거나 해당 이름이 " "이면 테이블의 모든 인덱스가 다시 작성됩니다.  
   
  *fillfactor*  
- 인덱스를 만들거나 다시 작성할 때 데이터를 저장하는 데 사용할 각 인덱스 페이지의 공간에 대한 백분율입니다. *fillfactor*는 인덱스 생성 시 채우기 비율을 대체하여 클러스터형 인덱스를 다시 작성하기 때문에 다시 작성되는 인덱스 및 다른 모든 비클러스터형 인덱스의 새 기본값이 됩니다.  
- *fillfactor*가 0인 경우 DBCC DBREINDEX는 인덱스에 최근 지정한 채우기 비율 값을 사용합니다. 이 값은 **sys.indexes** 카탈로그 뷰에 저장됩니다.   
- *fillfactor*를 지정한 경우 *table_name* 및 *index_name*을 지정해야 합니다. *fillfactor*를 지정하지 않으면 기본 채우기 비율인 100이 사용됩니다. 자세한 내용은 [인덱스의 채우기 비율 지정](../../relational-databases/indexes/specify-fill-factor-for-an-index.md)을 참조하세요.  
+ 인덱스를 만들거나 다시 작성할 때 데이터를 저장하는 데 사용할 각 인덱스 페이지의 공간에 대한 백분율입니다. *fillfactor* 는 인덱스 생성 시 채우기 비율을 대체하여 클러스터형 인덱스를 다시 작성하기 때문에 다시 작성되는 인덱스 및 다른 모든 비클러스터형 인덱스의 새 기본값이 됩니다.  
+ *fillfactor* 가 0인 경우 DBCC DBREINDEX는 인덱스에 최근 지정한 채우기 비율 값을 사용합니다. 이 값은 **sys.indexes** 카탈로그 뷰에 저장됩니다.   
+ *fillfactor* 를 지정한 경우 *table_name* 및 *index_name* 을 지정해야 합니다. *fillfactor* 를 지정하지 않으면 기본 채우기 비율인 100이 사용됩니다. 자세한 내용은 [인덱스의 채우기 비율 지정](../../relational-databases/indexes/specify-fill-factor-for-an-index.md)을 참조하세요.  
   
  WITH NO_INFOMSGS  
  심각도가 0에서 10 사이인 모든 정보 메시지를 표시하지 않습니다.  

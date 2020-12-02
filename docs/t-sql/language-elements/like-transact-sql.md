@@ -33,10 +33,10 @@ author: juliemsft
 ms.author: jrasnick
 monikerRange: '>=aps-pdw-2016||=azuresqldb-current||=azure-sqldw-latest||>=sql-server-2016||=sqlallproducts-allversions||>=sql-server-linux-2017||=azuresqldb-mi-current'
 ms.openlocfilehash: 1c7c0a80475989e4fde3e77090239577f9d57c68
-ms.sourcegitcommit: cfa04a73b26312bf18d8f6296891679166e2754d
+ms.sourcegitcommit: c5078791a07330a87a92abb19b791e950672e198
 ms.translationtype: HT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 10/19/2020
+ms.lasthandoff: 11/26/2020
 ms.locfileid: "92187770"
 ---
 # <a name="like-transact-sql"></a>LIKE(Transact-SQL)
@@ -69,7 +69,7 @@ match_expression [ NOT ] LIKE pattern
  문자 데이터 형식의 유효한 [식](../../t-sql/language-elements/expressions-transact-sql.md)입니다.  
   
  *pattern*  
- *match_expression*에서 검색할 특정 문자열이며 다음과 같은 유효한 와일드카드 문자를 포함할 수 있습니다. *pattern*은 최대 8,000바이트까지 지정할 수 있습니다.  
+ *match_expression* 에서 검색할 특정 문자열이며 다음과 같은 유효한 와일드카드 문자를 포함할 수 있습니다. *pattern* 은 최대 8,000바이트까지 지정할 수 있습니다.  
   
 |와일드카드 문자|Description|예제|  
 |------------------------|-----------------|-------------|  
@@ -79,13 +79,13 @@ match_expression [ NOT ] LIKE pattern
 |[^]|지정된 범위([^a-f]) 또는 집합([^abcdef])에 없는 단일 문자|WHERE au_lname LIKE 'de[^l]%'은 de로 시작하고 이어지는 문자가 l이 아닌 저자의 성을 모두 찾습니다.|  
   
  *escape_character*  
- 와일드카드 문자 앞에 입력하여 와일드카드가 일반 문자로 해석됨을 나타내는 문자입니다. *escape_character*는 기본값이 없는 문자 식이며 하나의 문자만을 반환해야 합니다.  
+ 와일드카드 문자 앞에 입력하여 와일드카드가 일반 문자로 해석됨을 나타내는 문자입니다. *escape_character* 는 기본값이 없는 문자 식이며 하나의 문자만을 반환해야 합니다.  
   
 ## <a name="result-types"></a>결과 형식  
  **Boolean**  
   
 ## <a name="result-value"></a>결과 값  
- LIKE는 *match_expression*이 지정된 *pattern*과 일치하면 TRUE를 반환합니다.  
+ LIKE는 *match_expression* 이 지정된 *pattern* 과 일치하면 TRUE를 반환합니다.  
   
 ## <a name="remarks"></a>설명  
  LIKE를 사용하여 문자열 비교를 수행할 때는 패턴 문자열의 모든 문자가 의미를 가지며 중요한 문자에는 모든 선행 및 후행 공백이 포함됩니다. 쿼리에서 비교의 결과로 'abc '(abc 다음에 단일 공백이 옴) 문자열이 있는 행을 모두 반환해야 하면 그 열의 값이 abc인 행(공백 없는 abc)은 반환되지 않습니다. 그러나 패턴과 일치되는 식에 있는 후행 공백은 무시됩니다. 쿼리에서 비교의 결과로 'abc'(공백 없는 abc) 문자열이 있는 행을 모두 반환해야 하면 abc로 시작하고 후행 공백이 0개 이상인 행이 모두 반환됩니다.  
@@ -106,7 +106,7 @@ EXEC FindEmployee @EmpLName = 'Barb';
 GO  
 ```  
   
- `FindEmployee` 프로시저는 이름의 문자가 20개 미만일 때 **char** 변수(`@EmpLName`)에 후행 공백을 포함하므로 일치하는 행을 반환하지 못합니다. 반면에 `LastName` 열은 **varchar**이므로 후행 공백을 포함하지 않습니다. 이 프로시저에서는 후행 공백이 의미를 가지므로 실패합니다.  
+ `FindEmployee` 프로시저는 이름의 문자가 20개 미만일 때 **char** 변수(`@EmpLName`)에 후행 공백을 포함하므로 일치하는 행을 반환하지 못합니다. 반면에 `LastName` 열은 **varchar** 이므로 후행 공백을 포함하지 않습니다. 이 프로시저에서는 후행 공백이 의미를 가지므로 실패합니다.  
   
  그러나 다음 예에서는 **varchar** 변수에 후행 공백을 추가하지 않으므로 성공합니다.  
   
@@ -126,7 +126,7 @@ EXEC FindEmployee @EmpLName = 'Barb';
 [!INCLUDE[ssResult](../../includes/ssresult-md.md)]  
 
 ```
-FirstName      LastName            City
+FirstName      LastName            City
 ----------     -------------------- --------------- 
 Angela         Barbariol            Snohomish
 David          Barber               Snohomish
@@ -223,7 +223,7 @@ GO
  [!INCLUDE[ssResult](../../includes/ssresult-md.md)]  
 
 ```
- FirstName             LastName             Phone
+ FirstName             LastName             Phone
  -----------------     -------------------  ------------
  Ruben                 Alonso               415-555-124  
  Shelby                Cook                 415-555-0121  
@@ -257,7 +257,7 @@ GO
  [!INCLUDE[ssResult](../../includes/ssresult-md.md)]  
 
 ```
-FirstName              LastName            Phone
+FirstName              LastName            Phone
 ---------------------- -------------------- -------------------
 Gail                  Alexander            1 (11) 500 555-0120  
 Gail                  Butler               1 (11) 500 555-0191  
@@ -267,7 +267,7 @@ Gail                  Griffin              450-555-0171
 Gail                  Moore                155-555-0169  
 Gail                  Russell              334-555-0170  
 Gail                  Westover             305-555-0100  
-(8 row(s) affected)  
+(8 row(s) affected)  
 ```
 
 ### <a name="c-using-the-escape-clause"></a>C. ESCAPE 절 사용  
