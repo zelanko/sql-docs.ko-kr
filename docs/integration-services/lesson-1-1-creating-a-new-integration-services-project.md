@@ -12,10 +12,10 @@ ms.assetid: f14521b5-941e-443b-8f5e-385f98e37fbf
 author: chugugrace
 ms.author: chugu
 ms.openlocfilehash: 575353cd2cf770ed42d439fd31647ccaef3e01bd
-ms.sourcegitcommit: e700497f962e4c2274df16d9e651059b42ff1a10
+ms.sourcegitcommit: c5078791a07330a87a92abb19b791e950672e198
 ms.translationtype: HT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 08/17/2020
+ms.lasthandoff: 11/26/2020
 ms.locfileid: "88449756"
 ---
 # <a name="lesson-1-1-create-a-new-integration-services-project"></a>1-1단원: 새 Integration Services 프로젝트 만들기
@@ -37,19 +37,19 @@ ms.locfileid: "88449756"
   
 1.  Windows의 **시작** 메뉴에서 **Visual Studio(SSDT)** 를 검색하여 선택합니다.  
   
-2.  Visual Studio에서 **파일** > **새로 만들기** > **프로젝트**를 선택하여 새 [!INCLUDE[ssISnoversion](../includes/ssisnoversion-md.md)] 프로젝트를 만듭니다.  
+2.  Visual Studio에서 **파일** > **새로 만들기** > **프로젝트** 를 선택하여 새 [!INCLUDE[ssISnoversion](../includes/ssisnoversion-md.md)] 프로젝트를 만듭니다.  
   
-3.  **새 프로젝트** 대화 상자의 **설치됨**에서 **비즈니스 인텔리전스**를 확장하고 **템플릿** 창에서 **통합 서비스 프로젝트** 를 선택합니다.  
+3.  **새 프로젝트** 대화 상자의 **설치됨** 에서 **비즈니스 인텔리전스** 를 확장하고 **템플릿** 창에서 **통합 서비스 프로젝트** 를 선택합니다.  
   
-4.  **이름** 상자에서 기본 이름을 **SSIS Tutorial**로 변경합니다. 이미 존재하는 폴더를 사용하려면 **솔루션용 디렉터리 만들기** 확인란의 선택을 취소합니다.  
+4.  **이름** 상자에서 기본 이름을 **SSIS Tutorial** 로 변경합니다. 이미 존재하는 폴더를 사용하려면 **솔루션용 디렉터리 만들기** 확인란의 선택을 취소합니다.  
   
-5.  기본 위치를 적용하거나 **찾아보기**를 선택하여 사용할 폴더를 찾아 이동합니다. **프로젝트 위치** 대화 상자에서 해당 폴더를 선택한 다음 **폴더 선택**을 선택합니다.  
+5.  기본 위치를 적용하거나 **찾아보기** 를 선택하여 사용할 폴더를 찾아 이동합니다. **프로젝트 위치** 대화 상자에서 해당 폴더를 선택한 다음 **폴더 선택** 을 선택합니다.  
   
-6.  **확인**을 선택합니다.  
+6.  **확인** 을 선택합니다.  
   
-    기본적으로 **Package.dtsx**라는 빈 패키지가 만들어지고 **SSIS 패키지**의 프로젝트에 추가됩니다.  
+    기본적으로 **Package.dtsx** 라는 빈 패키지가 만들어지고 **SSIS 패키지** 의 프로젝트에 추가됩니다.  
   
-7.  **솔루션 탐색기**에서 **Package.dtsx**를 마우스 오른쪽 단추로 클릭하고 **이름 바꾸기**를 선택한 다음 기본 패키지의 이름을 **Lesson 1.dtsx**로 바꿉니다.  
+7.  **솔루션 탐색기** 에서 **Package.dtsx** 를 마우스 오른쪽 단추로 클릭하고 **이름 바꾸기** 를 선택한 다음 기본 패키지의 이름을 **Lesson 1.dtsx** 로 바꿉니다.  
   
 ## <a name="go-to-next-task"></a>다음 작업으로 이동
 [2단계: 플랫 파일 연결 관리자 추가 및 구성](../integration-services/lesson-1-2-adding-and-configuring-a-flat-file-connection-manager.md)  

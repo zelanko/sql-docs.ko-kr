@@ -22,10 +22,10 @@ ms.assetid: 6d09fc8d-843a-4a7a-9812-f093d99d8192
 author: MashaMSFT
 ms.author: mathoma
 ms.openlocfilehash: 41d77ae1b9c0763fedf2e53610bb3a0be5cd185c
-ms.sourcegitcommit: 777704aefa7e574f4b7d62ad2a4c1b10ca1731ff
+ms.sourcegitcommit: c5078791a07330a87a92abb19b791e950672e198
 ms.translationtype: HT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 08/06/2020
+ms.lasthandoff: 11/26/2020
 ms.locfileid: "87823938"
 ---
 # <a name="replication-agent-security-model"></a>복제 에이전트 보안 모델
@@ -59,7 +59,7 @@ ms.locfileid: "87823938"
 |에이전트|사용 권한|  
 |-----------|-----------------|  
 |스냅샷 에이전트|에이전트를 실행하는 Windows 계정을 사용하여 배포자에 연결합니다. 이 계정은 다음과 같아야 합니다.<br /><br /> -적어도 배포 데이터베이스에 포함된 **db_owner** 고정 데이터베이스 역할의 멤버여야 합니다.<br /><br /> -스냅샷 공유에 대해 쓰기, 읽기 및 수정 권한이 있어야 합니다.<br /><br /> <br /><br /> 게시자 *연결* 에 사용되는 계정은 적어도 게시 데이터베이스에 포함된 **db_owner** 고정 데이터베이스 역할의 멤버여야 합니다.|  
-|로그 판독기 에이전트|에이전트를 실행하는 Windows 계정을 사용하여 배포자에 연결합니다. 이 계정은 적어도 배포 데이터베이스에 포함된 **db_owner** 고정 데이터베이스 역할의 멤버여야 합니다.<br /><br /> 게시자 연결에 사용되는 계정은 적어도 게시 데이터베이스에 포함된 **db_owner** 고정 데이터베이스 역할의 멤버여야 합니다.<br /><br /> **sync_type** 옵션 *replication support only*, *initialize with backup*또는 *initialize from lsn*을 선택할 때는 설치 스크립트가 배포 데이터베이스에 기록되도록 **sp_addsubscription**을 실행한 후 로그 판독기 에이전트를 실행해야 합니다. 로그 판독기 에이전트는 **sysadmin** 고정 서버 역할의 멤버인 계정으로 실행되어야 합니다. **sync_type** 옵션이 *Automatic*으로 설정된 경우 특별한 로그 판독기 에이전트 동작이 필요하지 않습니다.|  
+|로그 판독기 에이전트|에이전트를 실행하는 Windows 계정을 사용하여 배포자에 연결합니다. 이 계정은 적어도 배포 데이터베이스에 포함된 **db_owner** 고정 데이터베이스 역할의 멤버여야 합니다.<br /><br /> 게시자 연결에 사용되는 계정은 적어도 게시 데이터베이스에 포함된 **db_owner** 고정 데이터베이스 역할의 멤버여야 합니다.<br /><br /> **sync_type** 옵션 *replication support only*, *initialize with backup* 또는 *initialize from lsn* 을 선택할 때는 설치 스크립트가 배포 데이터베이스에 기록되도록 **sp_addsubscription** 을 실행한 후 로그 판독기 에이전트를 실행해야 합니다. 로그 판독기 에이전트는 **sysadmin** 고정 서버 역할의 멤버인 계정으로 실행되어야 합니다. **sync_type** 옵션이 *Automatic* 으로 설정된 경우 특별한 로그 판독기 에이전트 동작이 필요하지 않습니다.|  
 |밀어넣기 구독에 대한 배포 에이전트|에이전트를 실행하는 Windows 계정을 사용하여 배포자에 연결합니다. 이 계정은 다음과 같아야 합니다.<br /><br /> -적어도 배포 데이터베이스에 포함된 **db_owner** 고정 데이터베이스 역할의 멤버여야 합니다.<br /><br /> -PAL의 멤버여야 합니다.<br /><br /> -스냅샷 공유에 대해 읽기 권한이 있어야 합니다.<br /><br /> -SQL Server 이외 구독자에 대한 구독인 경우에는 구독자용 OLE DB 공급자의 설치 디렉터리에 대해 읽기 권한이 있어야 합니다.<br /><br /> -LOB 데이터를 복제할 때 배포 에이전트에는 복제 **C:\Program Files\Microsoft SQL Server\XX\COMfolder** 에 대한 쓰기 권한이 있어야 합니다. 여기서 XX는 인스턴스 ID를 나타냅니다.<br /><br /> <br /><br /> 구독자 *연결* 에 사용되는 계정은 적어도 구독 데이터베이스에 포함된 **db_owner** 고정 데이터베이스 역할의 멤버이거나 SQL Server 이외 구독자에 대한 구독인 경우 이 멤버와 동등한 권한이 있어야 합니다.<br /><br /> 또한 배포 에이전트에서 `-subscriptionstreams >= 2` 를 사용할 경우 교착 상태를 검색할 수 있도록 구독자에 대한 **View Server State** 권한도 부여해야 합니다.|  
 |끌어오기 구독에 대한 배포 에이전트|에이전트를 실행하는 Windows 계정을 사용하여 구독자에 연결합니다. 이 계정은 적어도 구독 데이터베이스에 포함된 **db_owner** 고정 데이터베이스 역할의 멤버여야 합니다. 배포자 연결에 사용되는 계정은 다음과 같아야 합니다.<br /><br /> -PAL의 멤버여야 합니다.<br /><br /> -스냅샷 공유에 대해 읽기 권한이 있어야 합니다.<br /><br /> -LOB 데이터를 복제할 때 배포 에이전트에는 복제 **C:\Program Files\Microsoft SQL Server\XX\COMfolder** 에 대한 쓰기 권한이 있어야 합니다. 여기서 XX는 인스턴스 ID를 나타냅니다.<br /><br /> <br /><br /> 배포 에이전트에서 `-subscriptionstreams >= 2` 를 사용할 경우 교착 상태를 검색할 수 있도록 구독자에 대한 **View Server State** 권한도 부여해야 합니다.|  
 |밀어넣기 구독에 대한 병합 에이전트|에이전트를 실행하는 Windows 계정을 사용하여 게시자 및 배포자에 연결합니다. 이 계정은 다음과 같아야 합니다.<br /><br /> -적어도 배포 데이터베이스에 포함된 **db_owner** 고정 데이터베이스 역할의 멤버여야 합니다.<br /><br /> -PAL의 멤버여야 합니다.<br /><br /> -게시 데이터베이스에서 읽기/쓰기 권한이 있는 사용자와 연결된 로그인이어야 합니다.<br /><br /> -스냅샷 공유에 대해 읽기 권한이 있어야 합니다.<br /><br /> <br /><br /> 구독자 *연결* 에 사용되는 계정은 적어도 구독 데이터베이스에 포함된 **db_owner** 고정 데이터베이스 역할의 멤버여야 합니다.|  
@@ -85,7 +85,7 @@ ms.locfileid: "87823938"
   
  \*\*Oracle 게시에 대한 끌어오기 구독의 경우 작업 이름은 **\<Publisher>-\<PublicationDatabase>** 가 아닌 **\<Publisher>-\<DistributionDatabase**>입니다.  
   
- 복제를 구성할 때는 에이전트를 실행해야 하는 계정을 지정합니다. 그러나 모든 작업 단계는 *프록시*의 보안 컨텍스트에서 실행되므로 복제는 사용자가 지정하는 에이전트 계정에 대해 다음 매핑을 내부적으로 수행합니다.  
+ 복제를 구성할 때는 에이전트를 실행해야 하는 계정을 지정합니다. 그러나 모든 작업 단계는 *프록시* 의 보안 컨텍스트에서 실행되므로 복제는 사용자가 지정하는 에이전트 계정에 대해 다음 매핑을 내부적으로 수행합니다.  
   
 -   [!INCLUDE[tsql](../../../includes/tsql-md.md)] [CREATE CREDENTIAL](../../../t-sql/statements/create-credential-transact-sql.md) 문을 사용하여 계정이 자격 증명에 먼저 매핑됩니다. [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] 에이전트 프록시는 자격 증명을 사용하여 Windows 사용자 계정에 대한 정보를 저장합니다.  
   

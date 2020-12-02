@@ -15,10 +15,10 @@ author: MikeRayMSFT
 ms.author: mikeray
 monikerRange: =azuresqldb-current||>=sql-server-2016||=sqlallproducts-allversions||>=sql-server-linux-2017||=azuresqldb-mi-current
 ms.openlocfilehash: b8487f821b698974744fdc18453a2a5c8285d889
-ms.sourcegitcommit: e700497f962e4c2274df16d9e651059b42ff1a10
+ms.sourcegitcommit: c5078791a07330a87a92abb19b791e950672e198
 ms.translationtype: HT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 08/17/2020
+ms.lasthandoff: 11/26/2020
 ms.locfileid: "88408009"
 ---
 # <a name="indexes"></a>인덱스
@@ -38,7 +38,7 @@ ms.locfileid: "88408009"
 |포괄 열이 있는 인덱스|키 열과 함께 키가 아닌 열을 포함하도록 확장된 비클러스터형 인덱스입니다.|[포괄 열을 사용하여 인덱스 만들기](../../relational-databases/indexes/create-indexes-with-included-columns.md)|  
 |계산 열의 인덱스|하나 이상의 다른 열 또는 특정 결정적 열의 값에서 파생되는 열의 인덱스입니다.|[계산 열의 인덱스](../../relational-databases/indexes/indexes-on-computed-columns.md)|  
 |Filtered|특히 데이터의 잘 정의된 하위 집합에서 선택하는 쿼리를 처리하는 데 적합한 최적화된 비클러스터형 인덱스입니다. 이 인덱스에서는 필터 조건자를 사용하여 테이블의 일부 행을 인덱싱합니다. 잘 디자인된 필터링된 인덱스는 전체 테이블 인덱스에 비해 쿼리 성능을 개선하고 인덱스 유지 관리 비용과 인덱스 스토리지 비용을 줄일 수 있습니다.|[필터링된 인덱스 만들기](../../relational-databases/indexes/create-filtered-indexes.md)<br /><br /> [필터링된 인덱스 디자인 지침](../../relational-databases/sql-server-index-design-guide.md#Filtered)|  
-|공간|공간 인덱스는*geometry*데이터 형식 열의 공간 개체( **공간 데이터** )에서 특정 작업을 보다 효율적으로 수행할 수 있는 기능을 제공합니다. 공간 인덱스는 상대적으로 비용이 많이 드는 공간 작업에서 적용해야 하는 개체 수를 줄여 줍니다.|[공간 인덱스 개요](../../relational-databases/spatial/spatial-indexes-overview.md)|  
+|공간|공간 인덱스는 *geometry* 데이터 형식 열의 공간 개체( **공간 데이터** )에서 특정 작업을 보다 효율적으로 수행할 수 있는 기능을 제공합니다. 공간 인덱스는 상대적으로 비용이 많이 드는 공간 작업에서 적용해야 하는 개체 수를 줄여 줍니다.|[공간 인덱스 개요](../../relational-databases/spatial/spatial-indexes-overview.md)|  
 |XML|**xml** 데이터 형식 열의 XML BLOB(Binary Large Object)를 영구적인 단편 형태로 표현한 것입니다.|[XML 인덱스&#40;SQL Server&#41;](../../relational-databases/xml/xml-indexes-sql-server.md)|  
 |전체 텍스트|[!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]용 Microsoft 전체 텍스트 검색 엔진에서 작성 및 유지 관리하는 특수한 유형의 토큰 기반 인덱스입니다. 문자열 데이터에서의 복잡한 단어 검색을 효율적으로 지원합니다.|[전체 텍스트 인덱스 채우기](../../relational-databases/search/populate-full-text-indexes.md)|  
   

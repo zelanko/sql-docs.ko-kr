@@ -19,10 +19,10 @@ ms.assetid: e2a1a4f1-211b-4e82-abed-03fc7140a83c
 author: MladjoA
 ms.author: mlandzic
 ms.openlocfilehash: 9d4f8bf9f9b8409f9ab46af0b1fd0a728e80e505
-ms.sourcegitcommit: e700497f962e4c2274df16d9e651059b42ff1a10
+ms.sourcegitcommit: c5078791a07330a87a92abb19b791e950672e198
 ms.translationtype: HT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 08/17/2020
+ms.lasthandoff: 11/26/2020
 ms.locfileid: "88417029"
 ---
 # <a name="reorientobject-geography-data-type"></a>ReorientObject(geography 데이터 형식)
@@ -50,9 +50,9 @@ _geography_
 CLR 반환 형식: **SqlGeography**  
   
 ## <a name="remarks"></a>설명  
-이 메서드는 **GeometryCollection**에 있는 모든 **Polygons**의 링 방향을 변경하지만 지정된 컬렉션에서 **Points** 또는 **LineStrings**를 제거하거나 변경하지는 않습니다.  
+이 메서드는 **GeometryCollection** 에 있는 모든 **Polygons** 의 링 방향을 변경하지만 지정된 컬렉션에서 **Points** 또는 **LineStrings** 를 제거하거나 변경하지는 않습니다.  
   
-**GeometryCollection**을 이 메서드에 전달하면 그 결과로 컬렉션에 포함된 각 인스턴스의 방향이 다시 지정되지만 전체 컬렉션의 방향은 다시 지정되지 않습니다.  
+**GeometryCollection** 을 이 메서드에 전달하면 그 결과로 컬렉션에 포함된 각 인스턴스의 방향이 다시 지정되지만 전체 컬렉션의 방향은 다시 지정되지 않습니다.  
   
 ## <a name="examples"></a>예제  
   

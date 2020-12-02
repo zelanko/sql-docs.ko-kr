@@ -23,15 +23,15 @@ author: MashaMSFT
 ms.author: mathoma
 monikerRange: =azuresqldb-mi-current||>=sql-server-2016||=sqlallproducts-allversions
 ms.openlocfilehash: 64fb9d21457558d2d0f3373b926f426808b9105d
-ms.sourcegitcommit: e700497f962e4c2274df16d9e651059b42ff1a10
+ms.sourcegitcommit: c5078791a07330a87a92abb19b791e950672e198
 ms.translationtype: HT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 08/17/2020
+ms.lasthandoff: 11/26/2020
 ms.locfileid: "88423407"
 ---
 # <a name="subscription-expiration-and-deactivation"></a>구독 만료 및 비활성화
 [!INCLUDE [SQL Server SQL MI](../../includes/applies-to-version/sql-asdbmi.md)]
-  지정된 *보존 기간*내에 동기화되지 않는 구독을 비활성화하거나 만료할 수 있습니다. 동작은 복제 유형 및 초과한 보존 기간에 따라 달라집니다.  
+  지정된 *보존 기간* 내에 동기화되지 않는 구독을 비활성화하거나 만료할 수 있습니다. 동작은 복제 유형 및 초과한 보존 기간에 따라 달라집니다.  
   
  보존 기간을 설정하려면 [구독에 대한 만료 기간 설정](../../relational-databases/replication/publish/set-the-expiration-period-for-subscriptions.md), [Set the Distribution Retention Period for Transactional Publications &#40;SQL Server Management Studio&#41;](../../relational-databases/replication/set-distribution-retention-period-for-transactional-publications.md)(트랜잭션 게시에 대한 배포 보존 기간 설정&#40;SQL Server Management Studio&#41;) 및 [게시 및 배포 구성](../../relational-databases/replication/configure-publishing-and-distribution.md)을 참조하세요.  
   

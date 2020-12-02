@@ -18,10 +18,10 @@ ms.assetid: 591c0313-82ce-4689-9fc1-73752ff122cf
 author: MashaMSFT
 ms.author: mathoma
 ms.openlocfilehash: 3e7b6abc6b235950fef107a870e53d827dee6f5e
-ms.sourcegitcommit: e700497f962e4c2274df16d9e651059b42ff1a10
+ms.sourcegitcommit: c5078791a07330a87a92abb19b791e950672e198
 ms.translationtype: HT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 08/17/2020
+ms.lasthandoff: 11/26/2020
 ms.locfileid: "88455605"
 ---
 # <a name="oracle-subscribers"></a>Oracle 구독자
@@ -60,9 +60,9 @@ ms.locfileid: "88455605"
   
  Oracle 구독자에 성공적으로 연결되면 구독에 대한 배포 에이전트를 구성할 때와 동일한 계정 및 암호를 사용하여 데이터베이스에 로그인합니다.  
   
-1.  **시작**을 클릭한 다음 **실행**을 클릭합니다.  
+1.  **시작** 을 클릭한 다음 **실행** 을 클릭합니다.  
   
-2.  `cmd` 를 입력한 다음 **확인**을 클릭합니다.  
+2.  `cmd` 를 입력한 다음 **확인** 을 클릭합니다.  
   
 3.  명령 프롬프트에 다음을 입력합니다.  
   

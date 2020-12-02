@@ -15,10 +15,10 @@ ms.assetid: d5cf52f5-1fe2-438a-98a3-fe117360acf8
 author: chugugrace
 ms.author: chugu
 ms.openlocfilehash: 25b6f01f5966f7d157fd76bd5082567a95854fbc
-ms.sourcegitcommit: e700497f962e4c2274df16d9e651059b42ff1a10
+ms.sourcegitcommit: c5078791a07330a87a92abb19b791e950672e198
 ms.translationtype: HT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 08/17/2020
+ms.lasthandoff: 11/26/2020
 ms.locfileid: "88351609"
 ---
 # <a name="project-properties-dialog-box"></a>프로젝트 속성 대화 상자
@@ -50,7 +50,7 @@ ms.locfileid: "88351609"
   
 4.  속성을 설정할 프로젝트가 포함된 폴더를 확장합니다.  
   
-5.  프로젝트를 마우스 오른쪽 단추로 클릭한 다음 **속성**을 클릭합니다.  
+5.  프로젝트를 마우스 오른쪽 단추로 클릭한 다음 **속성** 을 클릭합니다.  
   
 ##  <a name="set-the-options-on-the-general-page"></a><a name="general"></a> 일반 페이지의 옵션 설정  
  일반 페이지를 사용하여 프로젝트 속성을 봅니다.  

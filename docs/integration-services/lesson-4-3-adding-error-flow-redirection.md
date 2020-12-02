@@ -12,10 +12,10 @@ ms.assetid: 5683a45d-9e73-4cd5-83ca-fae8b26b488c
 author: chugugrace
 ms.author: chugu
 ms.openlocfilehash: daade3348f7384ed83365923bf94af7b211d6422
-ms.sourcegitcommit: e700497f962e4c2274df16d9e651059b42ff1a10
+ms.sourcegitcommit: c5078791a07330a87a92abb19b791e950672e198
 ms.translationtype: HT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 08/17/2020
+ms.lasthandoff: 11/26/2020
 ms.locfileid: "88457137"
 ---
 # <a name="lesson-4-3-add-error-flow-redirection"></a>4-3단원: 오류 흐름 리디렉션 추가
@@ -34,29 +34,29 @@ ms.locfileid: "88457137"
   
 ## <a name="configure-an-error-output"></a>오류 출력 구성  
   
-1.  **SSIS 도구 상자**에서 **일반**을 확장한 다음 **스크립트 구성 요소** 를 **데이터 흐름** 탭의 디자인 화면으로 끕니다. 이때 **스크립트** 를 **Lookup Currency Key** 변환의 오른쪽에 배치합니다.  
+1.  **SSIS 도구 상자** 에서 **일반** 을 확장한 다음 **스크립트 구성 요소** 를 **데이터 흐름** 탭의 디자인 화면으로 끕니다. 이때 **스크립트** 를 **Lookup Currency Key** 변환의 오른쪽에 배치합니다.  
   
-2.  **스크립트 구성 요소 유형 선택** 대화 상자에서 **변환**을 선택한 다음, **확인**을 선택합니다.  
+2.  **스크립트 구성 요소 유형 선택** 대화 상자에서 **변환** 을 선택한 다음, **확인** 을 선택합니다.  
   
 3.  두 구성 요소를 연결하려면 **Lookup Currency Key** 변환을 선택한 다음, 빨간색 화살표를 새 **Script** 변환으로 끌어다 놓습니다.  
   
     빨간색 화살표는 **Lookup Currency Key** 변환의 오류 출력을 나타냅니다. 빨간색 화살표를 통해 변환을 스크립트 구성 요소에 연결하여 모든 처리 오류를 스크립트 구성 요소에 리디렉션하고, 이 구성 요소에서 오류를 처리하고, 대상으로 보냅니다.  
   
-4.  **오류 출력 구성** 대화 상자의 **오류** 열에서 **행 리디렉션**을 선택한 다음, **확인**을 선택합니다.  
+4.  **오류 출력 구성** 대화 상자의 **오류** 열에서 **행 리디렉션** 을 선택한 다음, **확인** 을 선택합니다.  
   
-5.  **데이터 흐름** 디자인 화면에서 새 **스크립트 구성 요소**의 **스크립트 구성 요소** 이름을 선택하고 해당 이름을 **Get Error Description**으로 변경합니다.  
+5.  **데이터 흐름** 디자인 화면에서 새 **스크립트 구성 요소** 의 **스크립트 구성 요소** 이름을 선택하고 해당 이름을 **Get Error Description** 으로 변경합니다.  
   
 6.  **Get Error Description** 변환을 두 번 클릭합니다.  
   
 7.  **스크립트 변환 편집기** 대화 상자의 **입력 열** 페이지에서 **ErrorCode** 열을 선택합니다.  
   
-8.  **입/출력** 페이지에서 **출력 0**을 확장하고 **출력 열**을 선택한 다음, **열 추가**를 선택합니다.  
+8.  **입/출력** 페이지에서 **출력 0** 을 확장하고 **출력 열** 을 선택한 다음, **열 추가** 를 선택합니다.  
   
-9. **Name** 속성에 *ErrorDescription*을 입력하고 **DataType** 속성을 **Unicode string [DT_WSTR]** 으로 설정합니다.  
+9. **Name** 속성에 *ErrorDescription* 을 입력하고 **DataType** 속성을 **Unicode string [DT_WSTR]** 으로 설정합니다.  
   
 10. **스크립트** 페이지에서 **LocaleID** 속성이 **영어(미국)** 로 설정되었는지 확인합니다.
   
-11. **스크립트 편집**을 선택하여 [!INCLUDE[msCoName](../includes/msconame-md.md)] [!INCLUDE[vsprvs](../includes/vsprvs-md.md)] VSTA(Tools for Applications)를 엽니다. **Input0_ProcessInputRow** 메서드에 다음 코드를 입력하거나 붙여넣습니다.  
+11. **스크립트 편집** 을 선택하여 [!INCLUDE[msCoName](../includes/msconame-md.md)] [!INCLUDE[vsprvs](../includes/vsprvs-md.md)] VSTA(Tools for Applications)를 엽니다. **Input0_ProcessInputRow** 메서드에 다음 코드를 입력하거나 붙여넣습니다.  
   
     [Visual Basic]  
   
@@ -95,9 +95,9 @@ ms.locfileid: "88457137"
         }  
     ```  
   
-12. **빌드** 메뉴에서 **솔루션 빌드**를 선택하여 스크립트를 빌드하고 변경 내용을 저장한 다음, VSTA를 닫습니다.  
+12. **빌드** 메뉴에서 **솔루션 빌드** 를 선택하여 스크립트를 빌드하고 변경 내용을 저장한 다음, VSTA를 닫습니다.  
   
-13. **확인**을 선택하여 **스크립트 변환 편집기** 대화 상자를 닫습니다.  
+13. **확인** 을 선택하여 **스크립트 변환 편집기** 대화 상자를 닫습니다.  
   
 ## <a name="go-to-next-task"></a>다음 작업으로 이동
 [4단계: 플랫 파일 대상 추가](../integration-services/lesson-4-4-adding-a-flat-file-destination.md)  

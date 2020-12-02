@@ -14,10 +14,10 @@ ms.assetid: 97c19716-6447-4c1c-b277-cc2e6c1e6a6c
 author: chugugrace
 ms.author: chugu
 ms.openlocfilehash: a8e86b0cee816bae92656da9de24648c24de1abc
-ms.sourcegitcommit: e700497f962e4c2274df16d9e651059b42ff1a10
+ms.sourcegitcommit: c5078791a07330a87a92abb19b791e950672e198
 ms.translationtype: HT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 08/17/2020
+ms.lasthandoff: 11/26/2020
 ms.locfileid: "88430475"
 ---
 # <a name="persisting-custom-objects"></a>사용자 지정 개체 지속
@@ -25,7 +25,7 @@ ms.locfileid: "88430475"
 [!INCLUDE[sqlserver-ssis](../../includes/applies-to-version/sqlserver-ssis.md)]
 
 
-  만든 사용자 지정 개체의 속성이 **integer** 및 **string**과 같은 단순한 데이터 형식만 사용하는 경우 사용자 지정 개체의 사용자 지정 지속성을 구현할 필요가 없습니다. 기본 지속성 구현에서는 모든 속성 값과 함께 개체의 메타데이터가 저장됩니다.  
+  만든 사용자 지정 개체의 속성이 **integer** 및 **string** 과 같은 단순한 데이터 형식만 사용하는 경우 사용자 지정 개체의 사용자 지정 지속성을 구현할 필요가 없습니다. 기본 지속성 구현에서는 모든 속성 값과 함께 개체의 메타데이터가 저장됩니다.  
   
  그러나 개체의 속성이 복합 데이터 형식을 사용하는 경우나 속성 값이 로드 및 저장될 때 속성 값에 대한 사용자 지정 처리를 수행하려는 경우에는 <xref:Microsoft.SqlServer.Dts.Runtime.IDTSComponentPersist> 인터페이스와 이 인터페이스의 <xref:Microsoft.SqlServer.Dts.Runtime.IDTSComponentPersist.LoadFromXML%2A> 및 <xref:Microsoft.SqlServer.Dts.Runtime.IDTSComponentPersist.SaveToXML%2A> 메서드를 구현할 수 있습니다. 이러한 메서드에서는 개체의 속성과 해당 속성의 현재 값이 들어 있는 XML 조각을 패키지의 XML 정의에서 로드하거나 여기에 저장합니다. 이 XML 조각의 형식은 정의되어 있지 않으며 올바른 형식의 XML이기만 하면 됩니다.  
   

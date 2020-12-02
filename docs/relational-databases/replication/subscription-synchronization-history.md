@@ -16,10 +16,10 @@ author: MashaMSFT
 ms.author: mathoma
 monikerRange: =azuresqldb-mi-current||>=sql-server-2016||=sqlallproducts-allversions
 ms.openlocfilehash: db40c8e3848ee5dac3d770e77629555ea87814b3
-ms.sourcegitcommit: e700497f962e4c2274df16d9e651059b42ff1a10
+ms.sourcegitcommit: c5078791a07330a87a92abb19b791e950672e198
 ms.translationtype: HT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 08/17/2020
+ms.lasthandoff: 11/26/2020
 ms.locfileid: "88326016"
 ---
 # <a name="subscription-synchronization-history"></a>구독, 동기화 기록
@@ -27,7 +27,7 @@ ms.locfileid: "88326016"
   **동기화 기록** 탭은 상태, 아티클 통계, 기록, 정보 메시지, 모든 오류 메시지 등 병합 에이전트에 대한 자세한 정보를 표시합니다.  
   
 ## <a name="options"></a>옵션  
- **보기** 메뉴에서 보려는 병합 에이전트 세션을 선택한 다음 **병합 에이전트의 세션**표에서 특정 세션을 선택합니다. **선택한 세션에서 처리한 아티클**표에 이 세션에 대한 자세한 정보가 표시됩니다.  
+ **보기** 메뉴에서 보려는 병합 에이전트 세션을 선택한 다음 **병합 에이전트의 세션** 표에서 특정 세션을 선택합니다. **선택한 세션에서 처리한 아티클** 표에 이 세션에 대한 자세한 정보가 표시됩니다.  
   
  **보기**  
  확인할 병합 에이전트 세션을 선택합니다.  

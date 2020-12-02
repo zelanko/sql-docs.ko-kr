@@ -16,10 +16,10 @@ ms.assetid: b10e8f0a-2926-449a-82ea-be42543420ca
 author: MladjoA
 ms.author: mlandzic
 ms.openlocfilehash: d3e9b03eac0107792b9b0cdb59359f5ad70b5474
-ms.sourcegitcommit: e700497f962e4c2274df16d9e651059b42ff1a10
+ms.sourcegitcommit: c5078791a07330a87a92abb19b791e950672e198
 ms.translationtype: HT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 08/17/2020
+ms.lasthandoff: 11/26/2020
 ms.locfileid: "88459091"
 ---
 # <a name="stcontains--geography-data-type"></a>STContains(geography 데이터 형식)
@@ -46,7 +46,7 @@ ms.locfileid: "88459091"
  CLR 반환 형식: **SqlBoolean**  
   
 ## <a name="remarks"></a>설명  
- 공간적으로 **geography** 인스턴스 호출이 인스턴스가 메서드에 전달된 **geography** 인스턴스를 포함할 경우 1을 반환하고, 그렇지 않으면 0을 반환합니다. 두 **geography** 인스턴스의 SRID가 같지 않을 경우 **null**을 반환합니다.  
+ 공간적으로 **geography** 인스턴스 호출이 인스턴스가 메서드에 전달된 **geography** 인스턴스를 포함할 경우 1을 반환하고, 그렇지 않으면 0을 반환합니다. 두 **geography** 인스턴스의 SRID가 같지 않을 경우 **null** 을 반환합니다.  
   
 ## <a name="examples"></a>예제  
  다음 예에서는 `STContains()`를 사용하여 두 `geography` 인스턴스를 테스트하여 첫 번째 인스턴스가 두 번째 인스턴스를 포함하는지 확인합니다.  

@@ -19,10 +19,10 @@ ms.assetid: 1cde5054-b91a-41bb-812a-08c9308738af
 author: MladjoA
 ms.author: mlandzic
 ms.openlocfilehash: 067d49755229cad03fe77ae981cf7673d68f536a
-ms.sourcegitcommit: e700497f962e4c2274df16d9e651059b42ff1a10
+ms.sourcegitcommit: c5078791a07330a87a92abb19b791e950672e198
 ms.translationtype: HT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 08/17/2020
+ms.lasthandoff: 11/26/2020
 ms.locfileid: "88417039"
 ---
 # <a name="stdifference-geography-data-type"></a>STDifference(geography 데이터 형식)
@@ -49,7 +49,7 @@ ms.locfileid: "88417039"
  CLR 반환 형식: **SqlGeography**  
   
 ## <a name="exceptions"></a>예외  
- 인스턴스에 대척점 끝이 있을 경우 메서드는 **ArgumentException**을 throw합니다.  
+ 인스턴스에 대척점 끝이 있을 경우 메서드는 **ArgumentException** 을 throw합니다.  
   
 ## <a name="remarks"></a>설명  
  이 메서드는 **geography** 인스턴스의 SRID(satial reference identifier)가 일치하지 않으면 항상 Null을 반환합니다.  

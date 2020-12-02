@@ -14,10 +14,10 @@ ms.assetid: 6eb853aa-8016-490c-be4f-06ab8d7f5021
 author: chugugrace
 ms.author: chugu
 ms.openlocfilehash: 1fa83e2b75860730f4e3d9b419a2ca8ca374ba31
-ms.sourcegitcommit: e700497f962e4c2274df16d9e651059b42ff1a10
+ms.sourcegitcommit: c5078791a07330a87a92abb19b791e950672e198
 ms.translationtype: HT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 08/17/2020
+ms.lasthandoff: 11/26/2020
 ms.locfileid: "88393429"
 ---
 # <a name="functional-dependency-profile-request-options-data-profiling-task"></a>함수 종속성 프로필 요청 옵션(데이터 프로파일링 태스크)
@@ -28,7 +28,7 @@ ms.locfileid: "88393429"
   **프로필 요청** 페이지의 **요청 속성** 창을 사용하여 요청 창에서 선택한 **함수 종속성 프로필 요청** 의 옵션을 설정할 수 있습니다. 함수 종속성 프로필은 한 열(종속 열)의 값이 다른 열 또는 열 집합(결정 열)의 값에 종속되는 범위를 보고합니다. 또한 이 프로필을 사용하면 잘못된 값과 같은 데이터 문제를 식별할 수 있습니다. 예를 들어 Zip Code/Postal Code 열과 US State 열 간 종속성을 프로파일링하는 중 같은 우편 번호는 항상 같은 주여야 하는데 이 프로필이 종속성 위반을 검색할 수 있습니다.  
   
 > [!NOTE]  
->  이 항목에서 설명하는 옵션은 **데이터 프로파일링 태스크 편집기** 의 **프로필 요청 페이지**에 나타납니다. 편집기의 이 페이지에 대한 자세한 내용은 [데이터 프로파일링 태스크 편집기&#40;프로필 요청 페이지&#41;](../../integration-services/control-flow/data-profiling-task-editor-profile-requests-page.md)를 참조하세요.  
+>  이 항목에서 설명하는 옵션은 **데이터 프로파일링 태스크 편집기** 의 **프로필 요청 페이지** 에 나타납니다. 편집기의 이 페이지에 대한 자세한 내용은 [데이터 프로파일링 태스크 편집기&#40;프로필 요청 페이지&#41;](../../integration-services/control-flow/data-profiling-task-editor-profile-requests-page.md)를 참조하세요.  
   
  데이터 프로파일링 태스크를 사용하는 방법에 대한 자세한 내용은 [데이터 프로파일링 태스크 설정](../../integration-services/control-flow/setup-of-the-data-profiling-task.md)을 참조하세요. 데이터 프로필 뷰어를 사용하여 데이터 프로파일링 태스크의 출력을 분석하는 방법에 대한 자세한 내용은 [데이터 프로필 뷰어](../../integration-services/control-flow/data-profile-viewer.md)를 참조하세요.  
   
@@ -47,7 +47,7 @@ ms.locfileid: "88393429"
 >  **(\*)** 를 선택하는 경우 이 옵션으로 인해 계산이 많이 발생하여 태스크의 성능이 저하될 수 있습니다. 그러나 태스크에서 함수 종속성에 대한 임계값을 만족하는 하위 집합을 찾으면 추가 조합을 분석하지 않습니다. 예를 들어 위에서 설명한 예제 테이블의 경우 태스크에서 열 C가 결정 열임을 확인하면 복합 후보를 계속 분석하지 않습니다.  
   
 ## <a name="request-properties-options"></a>요청 속성 옵션  
- **함수 종속성 프로필 요청**에 대해 **요청 속성** 창에는 다음 옵션 그룹이 표시됩니다.  
+ **함수 종속성 프로필 요청** 에 대해 **요청 속성** 창에는 다음 옵션 그룹이 표시됩니다.  
   
 -   **데이터**- **DeterminantColumns** 및 **DependentColumn** 옵션이 포함되어 있습니다.  
   
@@ -73,21 +73,21 @@ ms.locfileid: "88393429"
  자세한 내용은 이 항목의 "결정 열 및 종속 열 선택 이해" 및 "DeterminantColumns 및 DependentColumn 옵션" 섹션을 참조하십시오.  
   
 #### <a name="determinantcolumns-and-dependentcolumn-options"></a>DeterminantColumns 및 DependentColumn 옵션  
- **DeterminantColumns** 및 **DependentColumn**에서 프로파일링 대상으로 선택한 각 열에 대해 다음 옵션이 제공됩니다.  
+ **DeterminantColumns** 및 **DependentColumn** 에서 프로파일링 대상으로 선택한 각 열에 대해 다음 옵션이 제공됩니다.  
   
  자세한 내용은 이 항목의 앞부분에 나오는 "결정 열 및 종속 열 선택 이해" 섹션을 참조하십시오.  
   
  **IsWildCard**  
- **(\*)** 와일드카드가 선택되었는지 여부를 지정합니다. 이 옵션은 모든 열을 프로파일링하도록 **(\*)** 를 선택한 경우 **True**로 설정됩니다. 프로파일링할 개별 열을 선택한 경우에는 **False** 로 설정됩니다. 이 옵션은 읽기 전용입니다.  
+ **(\*)** 와일드카드가 선택되었는지 여부를 지정합니다. 이 옵션은 모든 열을 프로파일링하도록 **(\*)** 를 선택한 경우 **True** 로 설정됩니다. 프로파일링할 개별 열을 선택한 경우에는 **False** 로 설정됩니다. 이 옵션은 읽기 전용입니다.  
   
  **ColumnName**  
  선택한 열의 이름을 표시합니다. 이 옵션은 모든 열을 프로파일링하도록 **(\*)** 를 선택한 경우 비어 있습니다. 이 옵션은 읽기 전용입니다.  
   
  **StringCompareOptions**  
- 문자열 값을 비교할 수 있는 옵션을 선택합니다. 이 속성의 옵션은 다음 표에 나열되어 있습니다. 이 옵션의 기본값은 **Default**입니다.  
+ 문자열 값을 비교할 수 있는 옵션을 선택합니다. 이 속성의 옵션은 다음 표에 나열되어 있습니다. 이 옵션의 기본값은 **Default** 입니다.  
   
 > [!NOTE]  
->  **ColumnName**에 대해 **(\*)** 와일드카드를 사용하는 경우 **CompareOptions**가 읽기 전용이 되며 **Default** 설정으로 설정됩니다.  
+>  **ColumnName** 에 대해 **(\*)** 와일드카드를 사용하는 경우 **CompareOptions** 가 읽기 전용이 되며 **Default** 설정으로 설정됩니다.  
   
 |값|Description|  
 |-----------|-----------------|  
@@ -95,7 +95,7 @@ ms.locfileid: "88393429"
 |**BinarySort**|각 문자에 대해 정의된 비트 패턴을 기준으로 데이터를 정렬 및 비교합니다. 이진 정렬 순서는 대/소문자와 악센트를 구분합니다. 이진은 가장 빠른 정렬 순서입니다.|  
 |**DictionarySort**|관련된 언어 또는 알파벳에 대해 사전에 정의된 정렬 및 비교 규칙에 따라 데이터를 정렬 및 비교합니다.|  
   
- **DictionarySort**를 선택하는 경우 다음 테이블에 나열된 옵션 조합을 선택할 수도 있습니다. 이러한 추가 옵션은 기본적으로 선택되어 있지 않습니다.  
+ **DictionarySort** 를 선택하는 경우 다음 테이블에 나열된 옵션 조합을 선택할 수도 있습니다. 이러한 추가 옵션은 기본적으로 선택되어 있지 않습니다.  
   
 |값|Description|  
 |-----------|-----------------|  
@@ -110,19 +110,19 @@ ms.locfileid: "88393429"
   
 ### <a name="options"></a>옵션  
  **ThresholdSetting**  
- 임계값 설정을 지정합니다. 이 속성의 기본값은 **Specified**입니다.  
+ 임계값 설정을 지정합니다. 이 속성의 기본값은 **Specified** 입니다.  
   
 |값|Description|  
 |-----------|-----------------|  
 |**없음**|임계값을 지정하지 않습니다. 함수 종속성 수준은 해당 값에 관계없이 보고됩니다.|  
-|**Specified**|**FDStrengthThreshold**에 지정된 임계값을 사용합니다. 함수 종속성 수준은 이 값이 임계값보다 큰 경우에만 보고됩니다.|  
+|**Specified**|**FDStrengthThreshold** 에 지정된 임계값을 사용합니다. 함수 종속성 수준은 이 값이 임계값보다 큰 경우에만 보고됩니다.|  
 |**Exact**|임계값을 지정하지 않습니다. 함수 종속성 수준은 선택한 열 간 함수 종속성이 정확한 경우에만 보고됩니다.|  
   
  **FDStrengthThreshold**  
- 0-1의 값을 사용하여 임계값을 지정합니다. 이 임계값을 초과하는 함수 종속성 수준은 보고됩니다. 이 속성의 기본값은 0.95입니다. **Specified** 가 **ThresholdSetting**으로 선택된 경우에만 이 옵션을 사용할 수 있습니다.  
+ 0-1의 값을 사용하여 임계값을 지정합니다. 이 임계값을 초과하는 함수 종속성 수준은 보고됩니다. 이 속성의 기본값은 0.95입니다. **Specified** 가 **ThresholdSetting** 으로 선택된 경우에만 이 옵션을 사용할 수 있습니다.  
   
  **MaxNumberOfViolations**  
- 출력에 보고할 최대 함수 종속성 위반 수를 지정합니다. 이 속성의 기본값은 100입니다. **Exact** 가 **ThresholdSetting**으로 선택된 경우 이 옵션을 사용할 수 없습니다.  
+ 출력에 보고할 최대 함수 종속성 위반 수를 지정합니다. 이 속성의 기본값은 100입니다. **Exact** 가 **ThresholdSetting** 으로 선택된 경우 이 옵션을 사용할 수 없습니다.  
   
 ## <a name="see-also"></a>관련 항목  
  [데이터 프로파일링 태스크 편집기&#40;일반 페이지&#41;](../../integration-services/control-flow/data-profiling-task-editor-general-page.md)   

@@ -19,10 +19,10 @@ ms.assetid: c4d0e649-0abb-4343-a3f0-3a702c8bbbdb
 author: MladjoA
 ms.author: mlandzic
 ms.openlocfilehash: 76adf5bfff925c74f728d19b6781f346646354fa
-ms.sourcegitcommit: e700497f962e4c2274df16d9e651059b42ff1a10
+ms.sourcegitcommit: c5078791a07330a87a92abb19b791e950672e198
 ms.translationtype: HT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 08/17/2020
+ms.lasthandoff: 11/26/2020
 ms.locfileid: "88306189"
 ---
 # <a name="stmpolyfromwkb-geography-data-type"></a>STMPolyFromWKB(geography 데이터 형식)
@@ -41,7 +41,7 @@ STMPolyFromWKB ( 'WKB_multipolygon' , SRID )
 
 ## <a name="arguments"></a>인수
  *WKB_multipolygon*  
- 반환하려는 **geographyMultiPolygon** 인스턴스의 WKB 표현입니다. *WKB_multipolygon*은 **varbinary(max)** 식입니다.  
+ 반환하려는 **geographyMultiPolygon** 인스턴스의 WKB 표현입니다. *WKB_multipolygon* 은 **varbinary(max)** 식입니다.  
   
  *SRID*  
  반환하려는 **geographyMultiPolygon** 인스턴스의 SRID(Spatial Reference ID)를 나타내는 **int** 식입니다.  

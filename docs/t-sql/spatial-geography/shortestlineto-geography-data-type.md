@@ -19,10 +19,10 @@ ms.assetid: 9d7c9885-5d1b-49ae-af31-5ef9fb8acaba
 author: MladjoA
 ms.author: mlandzic
 ms.openlocfilehash: a68db46f790d16f8472fdb5850c10eb7a6de9399
-ms.sourcegitcommit: e700497f962e4c2274df16d9e651059b42ff1a10
+ms.sourcegitcommit: c5078791a07330a87a92abb19b791e950672e198
 ms.translationtype: HT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 08/17/2020
+ms.lasthandoff: 11/26/2020
 ms.locfileid: "88417009"
 ---
 # <a name="shortestlineto-geography-data-type"></a>ShortestLineTo(geography 데이터 형식)
@@ -49,7 +49,7 @@ ms.locfileid: "88417009"
  CLR 반환 형식: **SqlGeography**  
   
 ## <a name="remarks"></a>설명  
- 이 메서드는 비교할 두 **geography** 인스턴스가 교차하지 않을 때 해당 테두리에 있는 엔드포인트와 함계 **LineString** 인스턴스를 반환합니다. 반환된 **LineString**의 길이는 두 **geography** 인스턴스 사이의 최단 거리와 같습니다. 두 **geography** 인스턴스가 서로 교차할 경우 빈 **LineString** 인스턴스가 반환됩니다.  
+ 이 메서드는 비교할 두 **geography** 인스턴스가 교차하지 않을 때 해당 테두리에 있는 엔드포인트와 함계 **LineString** 인스턴스를 반환합니다. 반환된 **LineString** 의 길이는 두 **geography** 인스턴스 사이의 최단 거리와 같습니다. 두 **geography** 인스턴스가 서로 교차할 경우 빈 **LineString** 인스턴스가 반환됩니다.  
   
 ## <a name="examples"></a>예제  
   

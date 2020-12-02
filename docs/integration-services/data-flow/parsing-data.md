@@ -15,10 +15,10 @@ ms.assetid: 8893ea9d-634c-4309-b52c-6337222dcb39
 author: chugugrace
 ms.author: chugu
 ms.openlocfilehash: eba3e72558433acab3ba1a0edc3cd921b15281bd
-ms.sourcegitcommit: e700497f962e4c2274df16d9e651059b42ff1a10
+ms.sourcegitcommit: c5078791a07330a87a92abb19b791e950672e198
 ms.translationtype: HT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 08/17/2020
+ms.lasthandoff: 11/26/2020
 ms.locfileid: "88457355"
 ---
 # <a name="parsing-data"></a>데이터 구문 분석
@@ -192,15 +192,15 @@ ms.locfileid: "88457355"
 ## <a name="enable-fast-parse"></a>빠른 구문 분석 활성화
 빠른 구문 분석을 사용하는 원본 또는 변환의 각 열에는 빠른 구문 분석 속성을 설정해야 합니다. 이 속성을 설정하려면 플랫 파일 원본 및 데이터 변환의 고급 편집기를 사용합니다.  
   
-1.  플랫 파일 원본이나 데이터 변환을 마우스 오른쪽 단추로 클릭하고 **고급 편집기 표시**를 클릭합니다.  
+1.  플랫 파일 원본이나 데이터 변환을 마우스 오른쪽 단추로 클릭하고 **고급 편집기 표시** 를 클릭합니다.  
   
 2.  **고급 편집기** 대화 상자에서 **입/출력 속성** 탭을 클릭합니다.  
   
 3.  **입/출력** 창에서 빠른 구문 분석을 설정할 열을 클릭합니다.  
   
-4.  속성 창에서 **사용자 지정 속성** 노드를 확장하고 **FastParse** 속성을 **True**로 설정합니다.  
+4.  속성 창에서 **사용자 지정 속성** 노드를 확장하고 **FastParse** 속성을 **True** 로 설정합니다.  
   
-5.  **확인**을 클릭합니다.  
+5.  **확인** 을 클릭합니다.  
 
 ## <a name="standard-parse"></a>Standard Parse
 표준 구문 분석은 로캘 기반의 구문 분석 루틴이며 Oleaut32.dll 및 Ole2dsip.dll에서 사용할 수 있는 Automation 데이터 형식 변환 API에 제공되는 모든 데이터 형식 변환을 지원합니다. 표준 구문 분석은 API를 구문 분석하는 OLE DB와 동일합니다.  

@@ -24,10 +24,10 @@ author: julieMSFT
 ms.author: jrasnick
 monikerRange: '>=aps-pdw-2016||=azuresqldb-current||=azure-sqldw-latest||>=sql-server-2016||=sqlallproducts-allversions||>=sql-server-linux-2017||=azuresqldb-mi-current'
 ms.openlocfilehash: 2a3150d58bf9785bf865bbaa7ed8bd030900b23f
-ms.sourcegitcommit: e700497f962e4c2274df16d9e651059b42ff1a10
+ms.sourcegitcommit: c5078791a07330a87a92abb19b791e950672e198
 ms.translationtype: HT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 08/17/2020
+ms.lasthandoff: 11/26/2020
 ms.locfileid: "88445582"
 ---
 # <a name="soundex-transact-sql"></a>SOUNDEX(Transact-SQL)
@@ -47,13 +47,13 @@ SOUNDEX ( character_expression )
 
 ## <a name="arguments"></a>인수
  *character_expression*  
- 문자 데이터의 영숫자 [expression](../../t-sql/language-elements/expressions-transact-sql.md)입니다. *character_expression*은 상수, 변수 또는 열일 수 있습니다.  
+ 문자 데이터의 영숫자 [expression](../../t-sql/language-elements/expressions-transact-sql.md)입니다. *character_expression* 은 상수, 변수 또는 열일 수 있습니다.  
   
 ## <a name="return-types"></a>반환 형식  
  **varchar**  
   
 ## <a name="remarks"></a>설명  
- SOUNDEX는 문자열을 말할 때 어떻게 들리는지에 따라 영숫자 문자열을 4자의 코드로 변환합니다. 코드의 첫 번째 문자는 *character_expression*의 첫 번째 문자이며 대문자로 변환됩니다. 코드의 두 번째부터 네 번째 문자까지의 문자는 식의 문자를 나타내는 숫자입니다. 문자 A, E, I, O, U, H, W 및 Y는 문자열의 첫 문자가 아닌 경우 무시됩니다. 4자로 된 코드를 생성하기 위해 필요한 경우 끝에 0이 추가됩니다. SOUNDEX 코드에 대한 자세한 내용은 [Soundex 인덱싱 시스템](https://www.archives.gov/research/census/soundex.html)을 참조하세요.  
+ SOUNDEX는 문자열을 말할 때 어떻게 들리는지에 따라 영숫자 문자열을 4자의 코드로 변환합니다. 코드의 첫 번째 문자는 *character_expression* 의 첫 번째 문자이며 대문자로 변환됩니다. 코드의 두 번째부터 네 번째 문자까지의 문자는 식의 문자를 나타내는 숫자입니다. 문자 A, E, I, O, U, H, W 및 Y는 문자열의 첫 문자가 아닌 경우 무시됩니다. 4자로 된 코드를 생성하기 위해 필요한 경우 끝에 0이 추가됩니다. SOUNDEX 코드에 대한 자세한 내용은 [Soundex 인덱싱 시스템](https://www.archives.gov/research/census/soundex.html)을 참조하세요.  
   
  다른 문자열의 SOUNDEX 코드는 문자열을 말할 때 얼마나 비슷한지 확인하기 위해 비교할 수 있습니다. DIFFERENCE 함수는 두 개의 문자열에서 SOUNDEX를 수행하고 이러한 문자열에 대해 SOUNDEX 코드가 얼마나 유사한지 나타내는 정수를 반환합니다.  
   

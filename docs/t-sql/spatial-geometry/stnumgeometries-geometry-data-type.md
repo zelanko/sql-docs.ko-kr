@@ -19,10 +19,10 @@ ms.assetid: 9402b03d-3039-42ca-ac59-f96b7f1a48de
 author: MladjoA
 ms.author: mlandzic
 ms.openlocfilehash: 8ef4aa6a47bdb974803d111a023b473c0c49cf0b
-ms.sourcegitcommit: e700497f962e4c2274df16d9e651059b42ff1a10
+ms.sourcegitcommit: c5078791a07330a87a92abb19b791e950672e198
 ms.translationtype: HT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 08/17/2020
+ms.lasthandoff: 11/26/2020
 ms.locfileid: "88444953"
 ---
 # <a name="stnumgeometries-geometry-data-type"></a>STNumGeometries(geometry 데이터 형식)
@@ -48,7 +48,7 @@ ms.locfileid: "88444953"
  이 메서드는 **geometry** 인스턴스가 **MultiPoint**, **MultiLineString**, **MultiPolygon** 또는 **GeometryCollection** 인스턴스가 아닌 경우 1을 반환하고, **geometry** 인스턴스가 비어 있으면 0을 반환합니다.  
   
 > [!NOTE]  
->  **GeometryCollection**에 중첩된 빈 요소가 있으면 `STNumGeometries()`은 0을 반환하지 않습니다. **GeometryCollection** 인스턴스에 빈 요소가 있어도 인스턴스 자체가 빈 집합은 아닙니다.  
+>  **GeometryCollection** 에 중첩된 빈 요소가 있으면 `STNumGeometries()`은 0을 반환하지 않습니다. **GeometryCollection** 인스턴스에 빈 요소가 있어도 인스턴스 자체가 빈 집합은 아닙니다.  
   
   
 

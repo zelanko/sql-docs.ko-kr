@@ -15,15 +15,15 @@ ms.assetid: 366f0ff8-722a-40a9-934f-854147e4933d
 author: VanMSFT
 ms.author: vanto
 ms.openlocfilehash: 38102297ee7ac0a29bbe37e83d1bfe834d9faaa4
-ms.sourcegitcommit: e700497f962e4c2274df16d9e651059b42ff1a10
+ms.sourcegitcommit: c5078791a07330a87a92abb19b791e950672e198
 ms.translationtype: HT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 08/17/2020
+ms.lasthandoff: 11/26/2020
 ms.locfileid: "88380739"
 ---
 # <a name="results-detailed-view-dialog-box"></a>결과 자세히 보기 대화 상자
  [!INCLUDE [SQL Server](../../includes/applies-to-version/sqlserver.md)]
-  **정책 평가** 대화 상자를 사용하여 정책을 실행하고 **평가**를 클릭하면 정책 평가 결과가 이 대화 상자에 표시됩니다. 이 대화 상자는 읽기 전용이며 속성 식에서 실패할 수 있는 부분을 이해하는 데 도움이 됩니다.  
+  **정책 평가** 대화 상자를 사용하여 정책을 실행하고 **평가** 를 클릭하면 정책 평가 결과가 이 대화 상자에 표시됩니다. 이 대화 상자는 읽기 전용이며 속성 식에서 실패할 수 있는 부분을 이해하는 데 도움이 됩니다.  
   
 ## <a name="options"></a>옵션  
  **AndOr**  

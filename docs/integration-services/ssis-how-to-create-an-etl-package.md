@@ -19,10 +19,10 @@ ms.assetid: d6d5bb1f-4cb1-4605-9cd6-f60b858382c4
 author: chugugrace
 ms.author: chugu
 ms.openlocfilehash: f83cb45dc060bc2877cf316e4d19baa073a9e6e0
-ms.sourcegitcommit: e700497f962e4c2274df16d9e651059b42ff1a10
+ms.sourcegitcommit: c5078791a07330a87a92abb19b791e950672e198
 ms.translationtype: HT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 08/17/2020
+ms.lasthandoff: 11/26/2020
 ms.locfileid: "88457057"
 ---
 # <a name="ssis-how-to-create-an-etl-package"></a>SSIS ETL 패키지를 만드는 방법

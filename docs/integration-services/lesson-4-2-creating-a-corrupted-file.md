@@ -12,10 +12,10 @@ ms.assetid: cd0b18dc-66c3-4d88-86ef-8e40cb660fae
 author: chugugrace
 ms.author: chugu
 ms.openlocfilehash: 81bee95c84aabe02f2964f41849051a7c8c7052a
-ms.sourcegitcommit: e700497f962e4c2274df16d9e651059b42ff1a10
+ms.sourcegitcommit: c5078791a07330a87a92abb19b791e950672e198
 ms.translationtype: HT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 08/17/2020
+ms.lasthandoff: 11/26/2020
 ms.locfileid: "88449645"
 ---
 # <a name="lesson-4-2-create-a-corrupted-file"></a>4-2단원: 손상된 파일 만들기
@@ -32,22 +32,22 @@ ms.locfileid: "88449645"
   
 1.  메모장이나 기타 텍스트 편집기에서 **Currency_VEB.txt** 파일을 엽니다.  
   
-2.  텍스트 편집기의 찾기 및 바꾸기 기능을 사용하여 모든 **VEB** 인스턴스를 찾은 다음 모두 **BAD**로 바꿉니다.  
+2.  텍스트 편집기의 찾기 및 바꾸기 기능을 사용하여 모든 **VEB** 인스턴스를 찾은 다음 모두 **BAD** 로 바꿉니다.  
   
-3.  다른 샘플 데이터 파일과 동일한 폴더에서 수정된 파일을 **Currency_BAD.txt**로 저장합니다.  
+3.  다른 샘플 데이터 파일과 동일한 폴더에서 수정된 파일을 **Currency_BAD.txt** 로 저장합니다.  
   
     > [!NOTE]  
-    > **Currency_BAD.txt**를 다른 샘플 데이터 파일과 동일한 폴더에 저장했는지 확인합니다.  
+    > **Currency_BAD.txt** 를 다른 샘플 데이터 파일과 동일한 폴더에 저장했는지 확인합니다.  
   
 4.  텍스트 편집기를 닫습니다.  
   
 ## <a name="verify-that-an-error-occurs-during-run-time"></a>런타임 중에 오류가 발생하는지 확인  
   
-1.  **디버그** 메뉴에서 **디버깅 시작**을 선택합니다.  
+1.  **디버그** 메뉴에서 **디버깅 시작** 을 선택합니다.  
   
     세 번째 데이터 흐름 반복에서 Lookup Currency Key 변환은 **Currency_BAD.txt** 파일을 처리하려고 하며 여기서 변환이 실패합니다. 변환 실패로 인해 전체 패키지가 실패하게 됩니다.  
   
-2.  **디버그** 메뉴에서 **디버깅 중지**를 선택합니다.  
+2.  **디버그** 메뉴에서 **디버깅 중지** 를 선택합니다.  
   
 3.  디자인 화면에서 **실행 결과** 탭을 선택합니다.  
   

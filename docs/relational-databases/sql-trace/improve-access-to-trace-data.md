@@ -16,10 +16,10 @@ ms.assetid: c260c000-fd53-4831-993f-df6894f3228b
 author: MashaMSFT
 ms.author: mathoma
 ms.openlocfilehash: f2c85d7c440f32aee7b6b6fb76019fdb2eef2c2b
-ms.sourcegitcommit: e700497f962e4c2274df16d9e651059b42ff1a10
+ms.sourcegitcommit: c5078791a07330a87a92abb19b791e950672e198
 ms.translationtype: HT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 08/17/2020
+ms.lasthandoff: 11/26/2020
 ms.locfileid: "88324873"
 ---
 # <a name="improve-access-to-trace-data"></a>추적 데이터에 대한 액세스 향상
@@ -32,11 +32,11 @@ ms.locfileid: "88324873"
   
 ### <a name="to-change-the-temp-environment-variable-in-windows-operating-systems"></a>Windows 운영 체제에서 TEMP 환경 변수를 변경하려면  
   
-1.  **시작** 메뉴에서 **제어판**을 선택하고 **시스템**을 클릭합니다.  
+1.  **시작** 메뉴에서 **제어판** 을 선택하고 **시스템** 을 클릭합니다.  
   
-2.  **시스템 속성** 대화 상자에서 **고급** 탭을 클릭한 다음 **환경 변수**를 클릭합니다.  
+2.  **시스템 속성** 대화 상자에서 **고급** 탭을 클릭한 다음 **환경 변수** 를 클릭합니다.  
   
-3.  **시스템 변수**목록을 아래로 스크롤하여 **TEMP** 변수에 해당하는 행을 선택하고 **편집**을 클릭합니다.  
+3.  **시스템 변수** 목록을 아래로 스크롤하여 **TEMP** 변수에 해당하는 행을 선택하고 **편집** 을 클릭합니다.  
   
 4.  **시스템 변수 편집** 대화 상자에서 **temp** 디렉터리를 두려는 드라이브와 디렉터리의 경로 및 이름을 입력합니다.  
   

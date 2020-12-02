@@ -25,10 +25,10 @@ ms.assetid: 74aeb7ab-51b2-4b9f-84ee-0b46a7908ab9
 author: chugugrace
 ms.author: chugu
 ms.openlocfilehash: 4f10b64a81d835a09216a7c8d232c91b13cd024c
-ms.sourcegitcommit: e700497f962e4c2274df16d9e651059b42ff1a10
+ms.sourcegitcommit: c5078791a07330a87a92abb19b791e950672e198
 ms.translationtype: HT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 08/17/2020
+ms.lasthandoff: 11/26/2020
 ms.locfileid: "88430365"
 ---
 # <a name="working-with-images-with-the-script-task"></a>스크립트 태스크를 사용한 이미지 작업
@@ -52,7 +52,7 @@ ms.locfileid: "88430365"
   
 1.  `CurrentImageFile`이라는 문자열 변수를 만들고 해당 값을 기존 이미지 파일의 경로 및 파일 이름으로 설정합니다.  
   
-2.  **스크립트 태스크 편집기**의 **스크립트** 페이지에서 **ReadOnlyVariables** 속성에 `CurrentImageFile` 변수를 추가합니다.  
+2.  **스크립트 태스크 편집기** 의 **스크립트** 페이지에서 **ReadOnlyVariables** 속성에 `CurrentImageFile` 변수를 추가합니다.  
   
 3.  스크립트 프로젝트에서 **System.Drawing** 네임스페이스에 대한 참조를 설정합니다.  
   
@@ -62,7 +62,7 @@ ms.locfileid: "88430365"
   
 1.  Foreach 루프 컨테이너 내에 스크립트 태스크를 추가합니다.  
   
-2.  **Foreach 루프 편집기**의 **컬렉션** 페이지에서 열거자로 **Foreach File 열거자**를 선택하고 원본 파일의 경로 및 파일 마스크(예: "*.bmp")를 지정합니다.  
+2.  **Foreach 루프 편집기** 의 **컬렉션** 페이지에서 열거자로 **Foreach File 열거자** 를 선택하고 원본 파일의 경로 및 파일 마스크(예: "*.bmp")를 지정합니다.  
   
 3.  **변수 매핑** 페이지에서 `CurrentImageFile` 변수를 인덱스 0으로 매핑합니다. 이 변수는 현재 파일 이름을 열거자의 각 반복에 있는 스크립트 태스크에 전달합니다.  
   
@@ -163,7 +163,7 @@ End Function
   
 2.  또한 `MaxThumbSize`라는 정수 변수를 만들고 100과 같이 값을 픽셀 단위로 할당합니다.  
   
-3.  **스크립트 태스크 편집기**의 **스크립트** 페이지에서 **ReadOnlyVariables** 속성에 두 변수를 추가합니다.  
+3.  **스크립트 태스크 편집기** 의 **스크립트** 페이지에서 **ReadOnlyVariables** 속성에 두 변수를 추가합니다.  
   
 4.  스크립트 프로젝트에서 **System.Drawing** 네임스페이스에 대한 참조를 설정합니다.  
   
@@ -173,7 +173,7 @@ End Function
   
 1.  Foreach 루프 컨테이너 내에 스크립트 태스크를 추가합니다.  
   
-2.  **Foreach 루프 편집기**의 **컬렉션** 페이지에서 **열거자**로 **Foreach File 열거자**를 선택하고 원본 파일의 경로 및 파일 마스크(예: "*.jpg")를 지정합니다.  
+2.  **Foreach 루프 편집기** 의 **컬렉션** 페이지에서 **열거자** 로 **Foreach File 열거자** 를 선택하고 원본 파일의 경로 및 파일 마스크(예: "*.jpg")를 지정합니다.  
   
 3.  **변수 매핑** 페이지에서 `CurrentImageFile` 변수를 인덱스 0으로 매핑합니다. 이 변수는 현재 파일 이름을 열거자의 각 반복에 있는 스크립트 태스크에 전달합니다.  
   

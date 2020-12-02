@@ -15,10 +15,10 @@ ms.assetid: 8792b43f-2510-44e3-9239-e73ad8227b89
 author: MashaMSFT
 ms.author: mathoma
 ms.openlocfilehash: d6f706093032867835830d0cf98afb86c07e93f7
-ms.sourcegitcommit: e700497f962e4c2274df16d9e651059b42ff1a10
+ms.sourcegitcommit: c5078791a07330a87a92abb19b791e950672e198
 ms.translationtype: HT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 08/17/2020
+ms.lasthandoff: 11/26/2020
 ms.locfileid: "88455372"
 ---
 # <a name="modify-an-existing-trace-transact-sql"></a>기존 추적 수정(Transact-SQL)
@@ -27,7 +27,7 @@ ms.locfileid: "88455372"
   
 ### <a name="to-modify-an-existing-trace"></a>기존 추적을 수정하려면  
   
-1.  추적이 이미 실행 중이면 **@status = 0**을 지정하고 **sp_trace_setstatus**를 실행하여 추적을 중지합니다.  
+1.  추적이 이미 실행 중이면 **@status = 0** 을 지정하고 **sp_trace_setstatus** 를 실행하여 추적을 중지합니다.  
   
 2.  추적 이벤트를 수정하려면 매개 변수를 통해 변경 내용을 지정하는 **sp_trace_setevent** 를 실행합니다. 순서대로 나열된 매개 변수는 다음과 같습니다.  
 
@@ -49,7 +49,7 @@ ms.locfileid: "88455372"
     ||NOT NULL|지정된 이벤트에 대해 열이 해제됩니다.|  
   
 > [!IMPORTANT]
->  일반적인 저장 프로시저와 달리 모든 [!INCLUDE[ssSqlProfiler](../../includes/sssqlprofiler-md.md)] 저장 프로시저의 매개 변수(<strong>sp_trace_*xx*</strong>)는 정확하게 입력해야 하며 데이터 형식 자동 변환을 지원하지 않습니다. 이러한 매개 변수를 인수 설명에 지정된 올바른 입력 매개 변수 데이터 형식으로 호출하지 않으면 저장 프로시저가 오류를 반환합니다.  
+>  일반적인 저장 프로시저와 달리 모든 [!INCLUDE[ssSqlProfiler](../../includes/sssqlprofiler-md.md)] 저장 프로시저의 매개 변수(<strong>sp_trace_ *xx*</strong>)는 정확하게 입력해야 하며 데이터 형식 자동 변환을 지원하지 않습니다. 이러한 매개 변수를 인수 설명에 지정된 올바른 입력 매개 변수 데이터 형식으로 호출하지 않으면 저장 프로시저가 오류를 반환합니다.  
   
 ## <a name="see-also"></a>참고 항목  
  [sp_trace_setevent&#40;Transact-SQL&#41;](../../relational-databases/system-stored-procedures/sp-trace-setevent-transact-sql.md)   

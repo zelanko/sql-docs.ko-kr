@@ -27,16 +27,16 @@ author: markingmyname
 ms.author: maghan
 monikerRange: '>=aps-pdw-2016||=azuresqldb-current||=azure-sqldw-latest||>=sql-server-2016||=sqlallproducts-allversions||>=sql-server-linux-2017||=azuresqldb-mi-current'
 ms.openlocfilehash: ffe1565499230f86bbf2bde44afb8d2b6bdb9e1f
-ms.sourcegitcommit: e700497f962e4c2274df16d9e651059b42ff1a10
+ms.sourcegitcommit: c5078791a07330a87a92abb19b791e950672e198
 ms.translationtype: HT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 08/17/2020
+ms.lasthandoff: 11/26/2020
 ms.locfileid: "88310279"
 ---
 # <a name="month-transact-sql"></a>MONTH(Transact-SQL)
 [!INCLUDE [sql-asdb-asdbmi-asa-pdw](../../includes/applies-to-version/sql-asdb-asdbmi-asa-pdw.md)]
 
-  지정된 *date*의 월을 나타내는 정수를 반환합니다.  
+  지정된 *date* 의 월을 나타내는 정수를 반환합니다.  
   
  모든 [!INCLUDE[tsql](../../includes/tsql-md.md)]의 날짜 및 시간 데이터 형식과 함수에 대한 개요는 [날짜 및 시간 데이터 형식과 함수&#40;Transact-SQL&#41;](../../t-sql/functions/date-and-time-data-types-and-functions-transact-sql.md)를 참조하세요.  
   
@@ -60,7 +60,7 @@ MONTH ( date )
 ## <a name="return-value"></a>Return Value  
  MONTH는 [DATEPART](../../t-sql/functions/datepart-transact-sql.md)(**month**,*date*)와 같은 값을 반환합니다.  
   
- *date*에 시간 부분만 포함된 경우 반환 값은 기본 월인 1입니다.  
+ *date* 에 시간 부분만 포함된 경우 반환 값은 기본 월인 1입니다.  
   
 ## <a name="examples"></a>예제  
  다음 문은 `4`을 반환합니다. 이는 월 수입니다.  
@@ -69,7 +69,7 @@ MONTH ( date )
 SELECT MONTH('2007-04-30T01:01:01.1234567 -07:00');  
 ```  
   
- 다음 문은 `1900, 1, 1`을 반환합니다. *date*의 인수는 숫자 `0`입니다. [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]는 `0`을 1900년 1월 1일로 해석합니다.  
+ 다음 문은 `1900, 1, 1`을 반환합니다. *date* 의 인수는 숫자 `0`입니다. [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]는 `0`을 1900년 1월 1일로 해석합니다.  
   
 ```sql  
 SELECT YEAR(0), MONTH(0), DAY(0);  
@@ -85,7 +85,7 @@ SELECT TOP 1 MONTH('2007-04-30T01:01:01.1234')
 FROM dbo.DimCustomer;  
 ```  
   
- 다음 예에서는 `1900, 1, 1`를 반환합니다. *date*의 인수는 숫자 `0`입니다. [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]는 `0`을 1900년 1월 1일로 해석합니다.  
+ 다음 예에서는 `1900, 1, 1`를 반환합니다. *date* 의 인수는 숫자 `0`입니다. [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]는 `0`을 1900년 1월 1일로 해석합니다.  
   
 ```sql  
 -- Uses AdventureWorks  

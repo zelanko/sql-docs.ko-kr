@@ -14,10 +14,10 @@ ms.assetid: be28515c-5d6d-467b-b933-d7c8d97a45b4
 author: MashaMSFT
 ms.author: mathoma
 ms.openlocfilehash: 5c124642da9b895522e35c80e5edf68f50335dc0
-ms.sourcegitcommit: e700497f962e4c2274df16d9e651059b42ff1a10
+ms.sourcegitcommit: c5078791a07330a87a92abb19b791e950672e198
 ms.translationtype: HT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 08/17/2020
+ms.lasthandoff: 11/26/2020
 ms.locfileid: "88428035"
 ---
 # <a name="generate-filters"></a>필터 생성
@@ -25,7 +25,7 @@ ms.locfileid: "88428035"
   **필터 생성** 대화 상자를 사용하여 병합 게시의 테이블에 행 필터를 정의할 수 있습니다. 그러면 복제에서 외래 키 관계를 통해 관련된 다른 테이블로 해당 필터를 확장합니다. 예를 들어 프랑스 고객에 대한 데이터만 포함되도록 고객 테이블에 필터를 정의하면 복제에서는 관련된 주문 및 주문 세부 정보 테이블에 프랑스 고객과 관련된 정보만 포함되도록 해당 필터를 확장합니다.  
   
 ## <a name="options"></a>옵션  
- 이 대화 상자에서는 3단계로 이루어진 프로세스를 통해 테이블에 행 필터를 만듭니다. 그러면 기본 키와 외래 키 간의 관계를 통해 필터링된 테이블과 관련된 테이블로 필터가 확장됩니다. 예를 들어 **Customer**, **SalesOrderHeader**및 **SalesOrderDetail**테이블이 있는데 **Customer** 와 **SalesOrderHeader**간에 관계가 있고 **SalesOrderHeader** 와 **SalesOrderDetail**간에 관계가 있을 때 **Customer**에 행 필터를 적용하면 복제에서는 해당 필터를 **SalesOrderHeader** 및 **SalesOrderDetail**로 확장합니다.  
+ 이 대화 상자에서는 3단계로 이루어진 프로세스를 통해 테이블에 행 필터를 만듭니다. 그러면 기본 키와 외래 키 간의 관계를 통해 필터링된 테이블과 관련된 테이블로 필터가 확장됩니다. 예를 들어 **Customer**, **SalesOrderHeader** 및 **SalesOrderDetail** 테이블이 있는데 **Customer** 와 **SalesOrderHeader** 간에 관계가 있고 **SalesOrderHeader** 와 **SalesOrderDetail** 간에 관계가 있을 때 **Customer** 에 행 필터를 적용하면 복제에서는 해당 필터를 **SalesOrderHeader** 및 **SalesOrderDetail** 로 확장합니다.  
   
 1.  **필터링할 테이블을 선택하십시오.**  
   
@@ -33,7 +33,7 @@ ms.locfileid: "88428035"
   
 2.  **구독자가 받을 테이블 행을 식별하는 필터 문을 작성하십시오.**  
   
-     새 필터 문을 정의합니다. **열** 목록 상자는 **필터링할 테이블을 선택하십시오**에서 선택한 테이블에서 게시 중인 열을 모두 나열합니다. **필터 문** 텍스트 영역에는 다음 형식의 기본 텍스트가 포함됩니다.  
+     새 필터 문을 정의합니다. **열** 목록 상자는 **필터링할 테이블을 선택하십시오** 에서 선택한 테이블에서 게시 중인 열을 모두 나열합니다. **필터 문** 텍스트 영역에는 다음 형식의 기본 텍스트가 포함됩니다.  
   
      `SELECT <published_columns> FROM [tableowner].[tablename] WHERE`  
   
@@ -44,7 +44,7 @@ ms.locfileid: "88428035"
   
 3.  **이 테이블의 데이터를 받을 구독 수를 지정하십시오.**  
 
-     [!INCLUDE[msCoName](../../includes/msconame-md.md)] [!INCLUDE[ssVersion2005](../../includes/ssversion2005-md.md)] 이상 버전에만 해당됩니다. 병합 복제를 사용하면 데이터 및 애플리케이션에 가장 적합한 파티션 유형을 지정할 수 있습니다. **이 테이블의 행을 단일 구독으로 이동**을 선택하면 병합 복제에서 겹치지 않는 파티션 옵션을 설정합니다. 겹치지 않는 파티션을 사전 계산 파티션과 함께 사용하면 겹치지 않는 파티션이 사전 계산 파티션과 연관된 업로드 비용을 최소화하므로 성능을 향상시킬 수 있습니다. 사용하는 매개 변수가 있는 필터와 조인 필터가 복잡할수록 겹치지 않는 파티션의 성능상 이점이 더욱 분명하게 드러납니다. 이 옵션을 선택하면 행을 둘 이상의 구독자에 복제할 수 없는 방식으로 데이터를 분할해야 합니다. 자세한 내용은 [매개 변수가 있는 행 필터](../../relational-databases/replication/merge/parameterized-filters-parameterized-row-filters.md)항목의 "'partition options' 설정" 섹션을 참조하십시오.  
+     [!INCLUDE[msCoName](../../includes/msconame-md.md)] [!INCLUDE[ssVersion2005](../../includes/ssversion2005-md.md)] 이상 버전에만 해당됩니다. 병합 복제를 사용하면 데이터 및 애플리케이션에 가장 적합한 파티션 유형을 지정할 수 있습니다. **이 테이블의 행을 단일 구독으로 이동** 을 선택하면 병합 복제에서 겹치지 않는 파티션 옵션을 설정합니다. 겹치지 않는 파티션을 사전 계산 파티션과 함께 사용하면 겹치지 않는 파티션이 사전 계산 파티션과 연관된 업로드 비용을 최소화하므로 성능을 향상시킬 수 있습니다. 사용하는 매개 변수가 있는 필터와 조인 필터가 복잡할수록 겹치지 않는 파티션의 성능상 이점이 더욱 분명하게 드러납니다. 이 옵션을 선택하면 행을 둘 이상의 구독자에 복제할 수 없는 방식으로 데이터를 분할해야 합니다. 자세한 내용은 [매개 변수가 있는 행 필터](../../relational-databases/replication/merge/parameterized-filters-parameterized-row-filters.md)항목의 "'partition options' 설정" 섹션을 참조하십시오.  
   
  필터를 추가한 후에는 **확인** 을 클릭하여 대화 상자를 닫습니다. 지정한 필터가 구문 분석되고 SELECT 절의 테이블에 대해 실행됩니다. 필터 문에 구문 오류나 기타 문제가 있으면 알림 메시지가 표시되며 이를 보고 필터 문을 편집할 수 있습니다.  
   

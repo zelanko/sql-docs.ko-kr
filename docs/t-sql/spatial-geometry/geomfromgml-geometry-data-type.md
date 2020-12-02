@@ -19,10 +19,10 @@ ms.assetid: a3f2c84b-a49f-4ce3-ba25-b903fb0c99b4
 author: MladjoA
 ms.author: mlandzic
 ms.openlocfilehash: 5526d9e8fb788e06b1ed61b3e20236963319b844
-ms.sourcegitcommit: e700497f962e4c2274df16d9e651059b42ff1a10
+ms.sourcegitcommit: c5078791a07330a87a92abb19b791e950672e198
 ms.translationtype: HT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 08/17/2020
+ms.lasthandoff: 11/26/2020
 ms.locfileid: "88458966"
 ---
 # <a name="geomfromgml-geometry-data-type"></a>GeomFromGml(geometry 데이터 형식)
@@ -56,7 +56,7 @@ GeomFromGml ( GML_input, SRID )
  CLR 반환 형식: **SqlGeometry**  
   
 ## <a name="remarks"></a>설명  
- 이 메서드는 입력이 잘못된 경우 **FormatException**을 throw합니다.  
+ 이 메서드는 입력이 잘못된 경우 **FormatException** 을 throw합니다.  
   
 ## <a name="examples"></a>예  
  다음 예에서는 `GeomFromGml()`를 사용하여 `geometry` 인스턴스를 만듭니다.  

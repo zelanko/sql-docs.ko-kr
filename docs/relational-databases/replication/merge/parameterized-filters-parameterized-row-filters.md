@@ -22,10 +22,10 @@ ms.assetid: b48a6825-068f-47c8-afdc-c83540da4639
 author: MashaMSFT
 ms.author: mathoma
 ms.openlocfilehash: 656f36cce2c1b458f2eb85c734709691b59a82bf
-ms.sourcegitcommit: e700497f962e4c2274df16d9e651059b42ff1a10
+ms.sourcegitcommit: c5078791a07330a87a92abb19b791e950672e198
 ms.translationtype: HT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 08/17/2020
+ms.lasthandoff: 11/26/2020
 ms.locfileid: "88423547"
 ---
 # <a name="parameterized-filters---parameterized-row-filters"></a>매개 변수가 있는 필터 - 매개 변수가 있는 행 필터
@@ -55,7 +55,7 @@ ms.locfileid: "88423547"
 >  매개 변수가 있는 필터에 대해 비교가 수행될 경우 항상 데이터베이스 데이터 정렬을 사용합니다. 예를 들어 데이터베이스 데이터 정렬에서는 대/소문자를 구분하지 않지만 테이블 또는 열 데이터 정렬에서는 대/소문자를 구분할 경우 비교 시 대/소문자를 구분하지 않습니다.  
   
 ### <a name="filtering-with-suser_sname"></a>SUSER_SNAME()으로 필터링  
- **예제 데이터베이스의** Employee 테이블 [!INCLUDE[ssSampleDBCoShort](../../../includes/sssampledbcoshort-md.md)] 을 고려해 봅니다. 이 테이블의 **LoginID**열에는 각 직원에 대한 로그인이 '*domain\login*' 형식으로 포함되어 있습니다. 직원이 자신에게 관련된 데이터만 받을 수 있도록 이 테이블을 필터링하려면 다음과 같은 필터 절을 지정합니다.  
+ **예제 데이터베이스의** Employee 테이블 [!INCLUDE[ssSampleDBCoShort](../../../includes/sssampledbcoshort-md.md)] 을 고려해 봅니다. 이 테이블의 **LoginID** 열에는 각 직원에 대한 로그인이 '*domain\login*' 형식으로 포함되어 있습니다. 직원이 자신에게 관련된 데이터만 받을 수 있도록 이 테이블을 필터링하려면 다음과 같은 필터 절을 지정합니다.  
   
 ```  
 LoginID = SUSER_SNAME()  
@@ -89,14 +89,14 @@ LoginID = SUSER_SNAME() AND ComputerName = HOST_NAME()
 > [!NOTE]  
 >  HOST_NAME()을 재정의할 경우 HOST_NAME() 함수에 대한 모든 호출은 사용자가 지정한 값을 반환합니다. 다른 애플리케이션이 컴퓨터 이름을 반환하는 HOST_NAME()에 종속되지 않아야 합니다.  
   
- **HumanResources.Employee** 테이블을 고려해 봅니다. 이 테이블에는 **EmployeeID**열이 포함되어 있습니다. 각 직원이 자신에게 관련된 데이터만 받을 수 있도록 이 테이블을 필터링하려면 다음과 같은 필터 절을 지정합니다.  
+ **HumanResources.Employee** 테이블을 고려해 봅니다. 이 테이블에는 **EmployeeID** 열이 포함되어 있습니다. 각 직원이 자신에게 관련된 데이터만 받을 수 있도록 이 테이블을 필터링하려면 다음과 같은 필터 절을 지정합니다.  
   
  `EmployeeID = CONVERT(int,HOST_NAME())`  
   
  예를 들어 직원 Pamela Ansman-Wolfe에게 직원 ID로 280을 할당합니다. 이 직원에 대한 구독을 만들 때 HOST_NAME() 값에 직원 ID 값(이 경우 280)을 지정합니다. 병합 에이전트가 게시자로 연결하면 HOST_NAME()에서 반환된 값을 해당 테이블의 값과 비교한 다음 **EmployeeID** 열에 280이라는 값이 포함된 행만 다운로드합니다.  
   
 > [!IMPORTANT]
->  HOST_NAME() 함수는 **nchar** 값을 반환하므로 위의 예처럼 필터 절의 열이 숫자 데이터 형식인 경우 CONVERT를 사용해야 합니다. 성능상의 이유로 `CONVERT(nchar,EmployeeID) = HOST_NAME()`과 같은 매개 변수가 있는 행 필터 절의 열 이름에는 함수를 적용하지 않는 것이 좋습니다. 대신 `EmployeeID = CONVERT(int,HOST_NAME())`예제에서 보여준 방식을 사용하는 것이 좋습니다. 이 절을 `@subset_filterclause` @allow_partition_realignment [@subset_filterclause](../../../relational-databases/system-stored-procedures/sp-addmergearticle-transact-sql.md)매개 변수에 사용할 수 있지만 일반적으로 새 게시 마법사에서는 사용할 수 없습니다. 마법사는 필터 절을 실행하여 유효성을 검사하는데 컴퓨터 이름을 **int**에서는 매개 변수가 있는 행 필터를 동적 필터라고 불렀습니다. 새 게시 마법사를 사용할 경우 게시에 대한 스냅샷을 만들기 전에 마법사에서 `CONVERT(nchar,EmployeeID) = HOST_NAME()` 을 지정한 다음 [sp_changemergearticle](../../../relational-databases/system-stored-procedures/sp-changemergearticle-transact-sql.md) 을 사용하여 해당 절을 `EmployeeID = CONVERT(int,HOST_NAME())` 로 변경하는 것이 좋습니다.  
+>  HOST_NAME() 함수는 **nchar** 값을 반환하므로 위의 예처럼 필터 절의 열이 숫자 데이터 형식인 경우 CONVERT를 사용해야 합니다. 성능상의 이유로 `CONVERT(nchar,EmployeeID) = HOST_NAME()`과 같은 매개 변수가 있는 행 필터 절의 열 이름에는 함수를 적용하지 않는 것이 좋습니다. 대신 `EmployeeID = CONVERT(int,HOST_NAME())`예제에서 보여준 방식을 사용하는 것이 좋습니다. 이 절을 `@subset_filterclause` @allow_partition_realignment [@subset_filterclause](../../../relational-databases/system-stored-procedures/sp-addmergearticle-transact-sql.md)매개 변수에 사용할 수 있지만 일반적으로 새 게시 마법사에서는 사용할 수 없습니다. 마법사는 필터 절을 실행하여 유효성을 검사하는데 컴퓨터 이름을 **int** 에서는 매개 변수가 있는 행 필터를 동적 필터라고 불렀습니다. 새 게시 마법사를 사용할 경우 게시에 대한 스냅샷을 만들기 전에 마법사에서 `CONVERT(nchar,EmployeeID) = HOST_NAME()` 을 지정한 다음 [sp_changemergearticle](../../../relational-databases/system-stored-procedures/sp-changemergearticle-transact-sql.md) 을 사용하여 해당 절을 `EmployeeID = CONVERT(int,HOST_NAME())` 로 변경하는 것이 좋습니다.  
   
  **HOST_NAME() 값을 재정의하려면**  
   
@@ -114,14 +114,14 @@ LoginID = SUSER_SNAME() AND ComputerName = HOST_NAME()
 ## <a name="using-the-appropriate-filtering-options"></a>적절한 필터링 옵션 사용  
  매개 변수가 있는 필터를 사용할 경우 사용자가 제어하는 두 가지 중요한 영역이 있습니다.  
   
--   병합 복제에서 필터를 처리하는 방법은 **use partition groups** 및 **keep partition changes**게시 설정 중 하나를 통해 제어할 수 있습니다.  
+-   병합 복제에서 필터를 처리하는 방법은 **use partition groups** 및 **keep partition changes** 게시 설정 중 하나를 통해 제어할 수 있습니다.  
   
--   구독자 간에 데이터를 공유하는 방법은 아티클 설정 **partition options**에 반영해야 합니다.  
+-   구독자 간에 데이터를 공유하는 방법은 아티클 설정 **partition options** 에 반영해야 합니다.  
   
  필터링 옵션을 설정하려면 [Optimize Parameterized Row Filters](../../../relational-databases/replication/publish/optimize-parameterized-row-filters.md)를 참조하십시오.  
   
 ### <a name="setting-use-partition-groups-and-keep-partition-changes"></a>'use partition groups' 및 'keep partition changes' 설정  
- **use partition groups** 및 **keep partition changes** 옵션은 모두 게시 데이터베이스에 추가 메타데이터를 저장하여 필터링된 아티클이 있는 게시에 대한 동기화 성능을 향상시킵니다. **use partition groups** 옵션은 사전 계산 파티션 기능을 사용하여 더욱 향상된 성능을 제공합니다. 게시의 아티클이 일련의 요구 사항을 충족하는 경우 이 옵션은 기본적으로 **true** 로 설정됩니다. 이러한 요구 사항에 대한 자세한 내용은 [사전 계산 파티션으로 매개 변수가 있는 필터 성능 최적화](../../../relational-databases/replication/merge/parameterized-filters-optimize-for-precomputed-partitions.md)를 참조하세요. 아티클이 사전 계산 파티션을 사용하기 위한 요구 사항을 만족시키지 못할 경우 **keep partition changes** 옵션이 **true**로 설정됩니다.  
+ **use partition groups** 및 **keep partition changes** 옵션은 모두 게시 데이터베이스에 추가 메타데이터를 저장하여 필터링된 아티클이 있는 게시에 대한 동기화 성능을 향상시킵니다. **use partition groups** 옵션은 사전 계산 파티션 기능을 사용하여 더욱 향상된 성능을 제공합니다. 게시의 아티클이 일련의 요구 사항을 충족하는 경우 이 옵션은 기본적으로 **true** 로 설정됩니다. 이러한 요구 사항에 대한 자세한 내용은 [사전 계산 파티션으로 매개 변수가 있는 필터 성능 최적화](../../../relational-databases/replication/merge/parameterized-filters-optimize-for-precomputed-partitions.md)를 참조하세요. 아티클이 사전 계산 파티션을 사용하기 위한 요구 사항을 만족시키지 못할 경우 **keep partition changes** 옵션이 **true** 로 설정됩니다.  
   
 ### <a name="setting-partition-options"></a>'partition options' 설정  
  아티클을 만들 때 필터링된 테이블의 데이터를 구독자에서 공유하는 방식에 따라 **partition options** 속성의 값을 지정합니다. 속성은 [sp_addmergearticle](../../../relational-databases/system-stored-procedures/sp-addmergearticle-transact-sql.md), [sp_changemergearticle](../../../relational-databases/system-stored-procedures/sp-changemergearticle-transact-sql.md)및 **Article Properties** 대화 상자를 사용하여 네 값 중 하나로 설정할 수 있습니다. 새 게시 마법사와 **게시 속성** 대화 상자의 **필터 추가** 또는 **필터 편집** 대화 상자를 사용하여 이 속성을 두 개의 값 중 하나로 설정할 수 있습니다. 다음 표에서는 사용할 수 있는 값을 요약합니다.  
@@ -133,7 +133,7 @@ LoginID = SUSER_SNAME() AND ComputerName = HOST_NAME()
 |파티션에 있는 데이터가 겹치지 않으며 데이터는 구독자 간에 공유됩니다. 구독자는 매개 변수가 있는 필터에서 참조된 열은 업데이트할 수 없습니다.|N/A*|**겹치지 않음, 구독 간 공유**|**2**|  
 |파티션에 있는 데이터는 겹치지 않으며 파티션당 하나의 구독이 있습니다. 구독자는 매개 변수가 있는 필터에서 참조된 열은 업데이트할 수 없습니다.**|**이 테이블의 행을 단일 구독으로 이동**|**겹치지 않음, 단일 구독**|**3**|  
   
- \*기본 필터링 옵션이 **0**, **1** 또는 **2**로 설정될 경우 **필터 추가** 및 **필터 편집** 대화 상자에 **이 테이블의 행을 여러 구독으로 이동**이 표시됩니다.  
+ \*기본 필터링 옵션이 **0**, **1** 또는 **2** 로 설정될 경우 **필터 추가** 및 **필터 편집** 대화 상자에 **이 테이블의 행을 여러 구독으로 이동** 이 표시됩니다.  
   
  **이 옵션을 지정하면 해당 아티클의 각 데이터 파티션에 대해 하나의 구독만 허용합니다. 새 구독의 필터링 조건이 기존 구독과 동일한 파티션을 사용하도록 하여 두 번째 구독이 생성될 경우 기존 구독이 삭제됩니다.  
   
@@ -184,7 +184,7 @@ LoginID = SUSER_SNAME() AND ComputerName = HOST_NAME()
   
 -   아티클에는 매개 변수가 있는 필터 또는 조인 필터가 하나만 있어야 합니다. 매개 변수가 있는 필터가 있으면서 조인 필터에서 부모일 수 있습니다. 매개 변수가 있는 필터가 있으면서 조인 필터에서 자식일 수는 없습니다. 조인 필터가 두 개 이상일 수도 없습니다.  
   
--   게시자의 두 테이블에 조인 필터 관계가 있고 자식 테이블에는 부모 테이블에 없는 행이 있을 경우 부모 테이블에 없는 행을 삽입해도 관련된 행이 구독자로 다운로드되지 않습니다(겹치는 파티션의 경우 다운로드됨). 예를 들어 **SalesOrderHeader** 테이블에는 없는 행이 **SalesOrderDetail** 테이블에 있고 이 행을 **SalesOrderHeader**에 삽입하면 해당 행은 구독자로 다운로드되지만 **SalesOrderDetail** 의 행은 다운로드되지 않습니다.  
+-   게시자의 두 테이블에 조인 필터 관계가 있고 자식 테이블에는 부모 테이블에 없는 행이 있을 경우 부모 테이블에 없는 행을 삽입해도 관련된 행이 구독자로 다운로드되지 않습니다(겹치는 파티션의 경우 다운로드됨). 예를 들어 **SalesOrderHeader** 테이블에는 없는 행이 **SalesOrderDetail** 테이블에 있고 이 행을 **SalesOrderHeader** 에 삽입하면 해당 행은 구독자로 다운로드되지만 **SalesOrderDetail** 의 행은 다운로드되지 않습니다.  
   
 ## <a name="see-also"></a>참고 항목  
  [시간 기반 행 필터에 대한 최상의 구현 방법](../../../relational-databases/replication/merge/best-practices-for-time-based-row-filters.md)   

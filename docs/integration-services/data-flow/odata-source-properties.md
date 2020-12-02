@@ -12,10 +12,10 @@ ms.assetid: 4fde5bb0-6d78-4ec4-8f0b-67f91c53fe99
 author: chugugrace
 ms.author: chugu
 ms.openlocfilehash: e6af5b248d0d6822b81c070bffc09e1f270abb54
-ms.sourcegitcommit: e700497f962e4c2274df16d9e651059b42ff1a10
+ms.sourcegitcommit: c5078791a07330a87a92abb19b791e950672e198
 ms.translationtype: HT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 08/17/2020
+ms.lasthandoff: 11/26/2020
 ms.locfileid: "88425845"
 ---
 # <a name="odata-source-properties"></a>OData 원본 속성
@@ -23,7 +23,7 @@ ms.locfileid: "88425845"
 [!INCLUDE[sqlserver-ssis](../../includes/applies-to-version/sqlserver-ssis.md)]
 
 
-데이터 흐름에서 **OData 원본**을 마우스 오른쪽 단추로 클릭하고 **속성**을 클릭하면 **속성** 창에 **OData 원본** 구성 요소의 속성이 표시됩니다.  
+데이터 흐름에서 **OData 원본** 을 마우스 오른쪽 단추로 클릭하고 **속성** 을 클릭하면 **속성** 창에 **OData 원본** 구성 요소의 속성이 표시됩니다.  
 
 ## <a name="properties"></a>속성 
 

@@ -22,18 +22,18 @@ ms.author: pelopes
 ms.reviewer: mikeray
 monikerRange: =azuresqldb-current||>=sql-server-2016||=sqlallproducts-allversions||>=sql-server-linux-2017||=azuresqldb-mi-current
 ms.openlocfilehash: 6fb4746b2dda07cfcc4872f3bc987df3276f8859
-ms.sourcegitcommit: e700497f962e4c2274df16d9e651059b42ff1a10
+ms.sourcegitcommit: c5078791a07330a87a92abb19b791e950672e198
 ms.translationtype: HT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 08/17/2020
+ms.lasthandoff: 11/26/2020
 ms.locfileid: "88465012"
 ---
 # <a name="search-for-words-close-to-another-word-with-near"></a>NEAR를 사용하여 근접 단어 검색
 [!INCLUDE [SQL Server Azure SQL Database](../../includes/applies-to-version/sql-asdb.md)]
-  [CONTAINS](../../t-sql/queries/contains-transact-sql.md) 조건자 또는 [CONTAINSTABLE](../../relational-databases/system-functions/containstable-transact-sql.md) 함수에서 ‘근접 단어’ **NEAR**를 사용하여 단어나 구를 검색할 수 있습니다. 
+  [CONTAINS](../../t-sql/queries/contains-transact-sql.md) 조건자 또는 [CONTAINSTABLE](../../relational-databases/system-functions/containstable-transact-sql.md) 함수에서 ‘근접 단어’ **NEAR** 를 사용하여 단어나 구를 검색할 수 있습니다. 
   
 ##  <a name="overview-of-near"></a><a name="Custom_NEAR"></a> NEAR 개요  
-**NEAR**에는 다음과 같은 기능이 포함되어 있습니다.  
+**NEAR** 에는 다음과 같은 기능이 포함되어 있습니다.  
 -   첫 번째 검색 단어와 마지막 검색 단어를 분리하는 검색 대상이 아닌 단어의 최대 수를 지정할 수 있습니다.
 
 -   임의의 순서 또는 특정 순서로 단어 또는 구를 검색할 수 있습니다.
@@ -52,7 +52,7 @@ ms.locfileid: "88465012"
 -   중지 단어를 포함하여 첫 번째 검색 단어와 마지막 검색 단어 사이에 있는 검색 대상이 아닌 단어의 수는 최대 거리가 지정된 경우 최대 거리보다 작거나 같아야 합니다.  
   
 ## <a name="syntax-of-near"></a>NEAR 구문
-**NEAR**의 기본 구문은 다음과 같습니다.  
+**NEAR** 의 기본 구문은 다음과 같습니다.  
 
 ``` 
  NEAR (  

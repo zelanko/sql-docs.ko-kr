@@ -19,10 +19,10 @@ ms.assetid: e0c05bde-077d-4ce2-b4ec-8861db9b996d
 author: MladjoA
 ms.author: mlandzic
 ms.openlocfilehash: e4eaf35bb927fc876725a134f50b74bf73e5c48f
-ms.sourcegitcommit: e700497f962e4c2274df16d9e651059b42ff1a10
+ms.sourcegitcommit: c5078791a07330a87a92abb19b791e950672e198
 ms.translationtype: HT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 08/17/2020
+ms.lasthandoff: 11/26/2020
 ms.locfileid: "88445181"
 ---
 # <a name="stlinefromtext-geography-data-type"></a>STLineFromText(geography 데이터 형식)
@@ -41,7 +41,7 @@ STLineFromText ( 'linestring_tagged_text' , SRID )
 
 ## <a name="arguments"></a>인수
  *linestring_tagged_text*  
- 반환할 **geographyLineString** 인스턴스의 WKT 표현입니다. *linestring_tagged_text*는 **nvarchar(max)** 식입니다.  
+ 반환할 **geographyLineString** 인스턴스의 WKT 표현입니다. *linestring_tagged_text* 는 **nvarchar(max)** 식입니다.  
   
  *SRID*  
  반환할 **geographyLineString** 인스턴스의 SRID(spatial reference ID)를 나타내는 **int** 식입니다.  
@@ -54,7 +54,7 @@ STLineFromText ( 'linestring_tagged_text' , SRID )
  OGC 형식: **LineString**  
   
 ## <a name="remarks"></a>설명  
- 이 메서드는 입력이 잘못된 경우 **FormatException**을 throw합니다.  
+ 이 메서드는 입력이 잘못된 경우 **FormatException** 을 throw합니다.  
   
 ## <a name="examples"></a>예  
  다음 예에서는 `STLineFromText()`를 사용하여 `geography` 인스턴스를 만듭니다.  

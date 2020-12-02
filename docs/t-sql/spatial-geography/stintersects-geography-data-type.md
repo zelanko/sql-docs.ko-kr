@@ -20,10 +20,10 @@ author: MladjoA
 ms.author: mlandzic
 monikerRange: =azuresqldb-current||=azure-sqldw-latest||>=sql-server-2016||=sqlallproducts-allversions||>=sql-server-linux-2017||=azuresqldb-mi-current
 ms.openlocfilehash: ce978df17e7f0fd904e630fb3e8eaf84db375765
-ms.sourcegitcommit: e700497f962e4c2274df16d9e651059b42ff1a10
+ms.sourcegitcommit: c5078791a07330a87a92abb19b791e950672e198
 ms.translationtype: HT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 08/17/2020
+ms.lasthandoff: 11/26/2020
 ms.locfileid: "88445235"
 ---
 # <a name="stintersects-geography-data-type"></a>STIntersects(geography 데이터 형식)
@@ -51,7 +51,7 @@ ms.locfileid: "88445235"
  CLR 반환 형식: **SqlBoolean**  
   
 ## <a name="remarks"></a>설명  
- 이 메서드는 **geography** 인스턴스의 SRID(spatial Reference IDs)가 일치하지 않으면 항상 **NULL**을 반환합니다.  
+ 이 메서드는 **geography** 인스턴스의 SRID(spatial Reference IDs)가 일치하지 않으면 항상 **NULL** 을 반환합니다.  
   
 ## <a name="examples"></a>예제  
  다음 예에서는 `STIntersects()`를 사용하여 두 `geography` 인스턴스가 서로 교차하는지 확인합니다.  

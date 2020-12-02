@@ -35,10 +35,10 @@ helpviewer_keywords:
 - credentials [SQL Server], metadata
 - copying databases
 ms.openlocfilehash: 3dc93671874de47f45bd26ae12fa9ded44c9a4fd
-ms.sourcegitcommit: e700497f962e4c2274df16d9e651059b42ff1a10
+ms.sourcegitcommit: c5078791a07330a87a92abb19b791e950672e198
 ms.translationtype: HT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 08/17/2020
+ms.lasthandoff: 11/26/2020
 ms.locfileid: "88412849"
 ---
 # <a name="manage-metadata-when-making-a-database-available-on-another-server"></a>다른 서버에서 데이터베이스를 사용할 수 있도록 할 때 메타데이터 관리
@@ -55,9 +55,9 @@ ms.locfileid: "88412849"
   
 -   다른 서버 인스턴스에서 데이터베이스 복사본을 연결하는 경우  
   
- 일부 애플리케이션은 단일 사용자 데이터베이스 범위 밖에 있는 정보, 엔터티 및/또는 개체에 따라 달라집니다. 일반적으로 애플리케이션은 **master** 및 **msdb** 데이터베이스뿐만 아니라 사용자 데이터베이스에 따라 달라집니다. 사용자 데이터베이스의 올바른 작동을 위해 해당 데이터베이스 외부에 저장되어 있는 모든 요소는 대상 서버 인스턴스에서 사용할 수 있어야 합니다. 예를 들어 애플리케이션에 대한 로그인은 **master** 데이터베이스에서 메타데이터로 저장되어 있으며 대상 서버에서 다시 생성되어야 합니다. 메타데이터가 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] msdb **데이터베이스에 저장되어 있는** 에이전트 작업에 따라 애플리케이션이나 데이터베이스 유지 관리 계획이 달라지는 경우 대상 서버 인스턴스에서 이러한 작업을 다시 만들어야 합니다. 마찬가지로 서버 수준 트리거에 대한 메타데이터는 **master**에 저장되어 있습니다.  
+ 일부 애플리케이션은 단일 사용자 데이터베이스 범위 밖에 있는 정보, 엔터티 및/또는 개체에 따라 달라집니다. 일반적으로 애플리케이션은 **master** 및 **msdb** 데이터베이스뿐만 아니라 사용자 데이터베이스에 따라 달라집니다. 사용자 데이터베이스의 올바른 작동을 위해 해당 데이터베이스 외부에 저장되어 있는 모든 요소는 대상 서버 인스턴스에서 사용할 수 있어야 합니다. 예를 들어 애플리케이션에 대한 로그인은 **master** 데이터베이스에서 메타데이터로 저장되어 있으며 대상 서버에서 다시 생성되어야 합니다. 메타데이터가 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] msdb **데이터베이스에 저장되어 있는** 에이전트 작업에 따라 애플리케이션이나 데이터베이스 유지 관리 계획이 달라지는 경우 대상 서버 인스턴스에서 이러한 작업을 다시 만들어야 합니다. 마찬가지로 서버 수준 트리거에 대한 메타데이터는 **master** 에 저장되어 있습니다.  
   
- 애플리케이션의 데이터베이스를 다른 서버 인스턴스로 이동할 경우 대상 서버 인스턴스의 **master** 및 **msdb**에서 종속 개체와 엔터티의 모든 메타데이터를 다시 만들어야 합니다. 예를 들어 데이터베이스 애플리케이션이 서비스 수준 트리거를 사용하는 경우 단순히 새 시스템에서 데이터베이스를 연결하거나 복원하는 것만으로 충분하지 않습니다. **master** 데이터베이스에서 이러한 트리거에 대한 모든 메타데이터를 수동으로 다시 만들지 않으면 데이터베이스가 예상대로 작동하지 않습니다.  
+ 애플리케이션의 데이터베이스를 다른 서버 인스턴스로 이동할 경우 대상 서버 인스턴스의 **master** 및 **msdb** 에서 종속 개체와 엔터티의 모든 메타데이터를 다시 만들어야 합니다. 예를 들어 데이터베이스 애플리케이션이 서비스 수준 트리거를 사용하는 경우 단순히 새 시스템에서 데이터베이스를 연결하거나 복원하는 것만으로 충분하지 않습니다. **master** 데이터베이스에서 이러한 트리거에 대한 모든 메타데이터를 수동으로 다시 만들지 않으면 데이터베이스가 예상대로 작동하지 않습니다.  
   
 ##  <a name="information-entities-and-objects-that-are-stored-outside-of-user-databases"></a><a name="information_entities_and_objects"></a> 사용자 데이터베이스의 외부에 저장된 정보, 엔터티 및 개체  
  이 아티클의 나머지에서는 다른 서버 인스턴스에서 사용되는 데이터베이스에 영향을 줄 수 있는 발생 가능한 문제에 대해 요약합니다. 다음 목록에 나열된 하나 또는 그 이상의 정보, 엔터티 또는 개체 유형을 다시 만들어야 할 수 있습니다. 요약을 보려면 항목의 링크를 클릭합니다.  
@@ -128,7 +128,7 @@ ms.locfileid: "88412849"
 ##  <a name="encrypted-data"></a><a name="encrypted_data"></a> Encrypted Data  
  다른 서버 인스턴스에서 사용할 수 있도록 할 데이터베이스에 암호화된 데이터가 있으며 데이터베이스 마스터 키가 원래 서버의 서비스 마스터 키로 보호되는 경우 서비스 마스터 키 암호화를 다시 만들어야 할 수도 있습니다. *데이터베이스 마스터 키* 는 암호화된 데이터베이스에 있는 인증서의 프라이빗 키와 비대칭 키를 보호하는 데 사용되는 대칭 키입니다. 데이터베이스 마스터 키는 생성 시에 Triple DES 알고리즘 및 사용자 제공 암호를 사용하여 암호화됩니다.  
   
- 서버 인스턴스에서 데이터베이스 마스터 키의 자동 암호 해독을 설정하기 위해 서비스 마스터 키를 사용하여 이 키의 복사본을 암호화합니다. 이 암호화된 복사본은 해당 데이터베이스와 **master**에 모두 저장됩니다. 일반적으로 **master** 에 저장된 복사본은 마스터 키가 변경될 때마다 자동으로 업데이트됩니다. [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 는 먼저 인스턴스의 서비스 마스터 키로 데이터베이스 마스터 키의 암호를 해독하려고 시도합니다. 암호 해독에 실패하면 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 는 마스터 키가 필요한 데이터베이스와 패밀리 GUID가 동일한 마스터 키 자격 증명을 자격 증명 저장소에서 검색합니다. [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 는 암호 해독이 성공하거나 남은 자격 증명이 없을 때까지 일치하는 각 자격 증명을 사용하여 데이터베이스 마스터 키의 암호화를 해독하려고 시도합니다. 서비스 마스터 키를 사용하여 암호화되지 않은 마스터 키는 OPEN MASTER KEY 문과 암호를 사용하여 열어야 합니다.  
+ 서버 인스턴스에서 데이터베이스 마스터 키의 자동 암호 해독을 설정하기 위해 서비스 마스터 키를 사용하여 이 키의 복사본을 암호화합니다. 이 암호화된 복사본은 해당 데이터베이스와 **master** 에 모두 저장됩니다. 일반적으로 **master** 에 저장된 복사본은 마스터 키가 변경될 때마다 자동으로 업데이트됩니다. [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 는 먼저 인스턴스의 서비스 마스터 키로 데이터베이스 마스터 키의 암호를 해독하려고 시도합니다. 암호 해독에 실패하면 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 는 마스터 키가 필요한 데이터베이스와 패밀리 GUID가 동일한 마스터 키 자격 증명을 자격 증명 저장소에서 검색합니다. [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 는 암호 해독이 성공하거나 남은 자격 증명이 없을 때까지 일치하는 각 자격 증명을 사용하여 데이터베이스 마스터 키의 암호화를 해독하려고 시도합니다. 서비스 마스터 키를 사용하여 암호화되지 않은 마스터 키는 OPEN MASTER KEY 문과 암호를 사용하여 열어야 합니다.  
   
  암호화된 데이터베이스를 복사 또는 복원하거나 새로운 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]인스턴스에 연결할 때는 서비스 마스터 키로 암호화된 데이터베이스 마스터 키의 복사본이 대상 서버 인스턴스의 **master** 에 저장되지 않습니다. 대상 서버 인스턴스에서 해당 데이터베이스의 마스터 키를 열어야 합니다. 마스터 키를 열려면 OPEN MASTER KEY DECRYPTION BY PASSWORD **='** _password_ **'** 문을 실행합니다. 그런 다음 ALTER MASTER KEY ADD ENCRYPTION BY SERVICE MASTER KEY 문을 실행하여 데이터베이스 마스터 키의 자동 암호 해독을 설정하는 것이 좋습니다. 이 ALTER MASTER KEY 문은 서비스 마스터 키로 암호화된 데이터베이스 마스터 키의 복사본을 서버 인스턴스에 제공합니다. 자세한 내용은 [OPEN MASTER KEY&#40;Transact-SQL&#41;](../../t-sql/statements/open-master-key-transact-sql.md) 및 [ALTER MASTER KEY&#40;Transact-SQL&#41;](../../t-sql/statements/alter-master-key-transact-sql.md)를 참조하세요.  
   
@@ -144,18 +144,18 @@ ms.locfileid: "88412849"
   
   
 ##  <a name="user-defined-error-messages"></a><a name="user_defined_error_messages"></a> User-defined Error Messages  
- 사용자 정의 오류 메시지는 [sys.messages](../../relational-databases/system-catalog-views/messages-for-errors-catalog-views-sys-messages.md) 카탈로그 뷰에 있습니다. 이 카탈로그 뷰는 **master**에 저장됩니다. 데이터베이스 애플리케이션이 사용자 정의 오류 메시지를 사용하며 다른 서버 인스턴스에서 데이터베이스를 사용할 수 있는 경우 [sp_addmessage](../../relational-databases/system-stored-procedures/sp-addmessage-transact-sql.md) 를 사용하여 대상 서버 인스턴스에서 이러한 사용자 정의 메시지를 추가합니다.  
+ 사용자 정의 오류 메시지는 [sys.messages](../../relational-databases/system-catalog-views/messages-for-errors-catalog-views-sys-messages.md) 카탈로그 뷰에 있습니다. 이 카탈로그 뷰는 **master** 에 저장됩니다. 데이터베이스 애플리케이션이 사용자 정의 오류 메시지를 사용하며 다른 서버 인스턴스에서 데이터베이스를 사용할 수 있는 경우 [sp_addmessage](../../relational-databases/system-stored-procedures/sp-addmessage-transact-sql.md) 를 사용하여 대상 서버 인스턴스에서 이러한 사용자 정의 메시지를 추가합니다.  
 
   
 ##  <a name="event-notifications-and-windows-management-instrumentation-wmi-events-at-server-level"></a><a name="event_notif_and_wmi_events"></a> 이벤트 알림 및 Windows Management Instrumentation (WMI) 이벤트 (서버 수준)  
   
 ### <a name="server-level-event-notifications"></a>서버 수준 이벤트 알림  
- 서버 수준 이벤트 알림은 **msdb**에 저장됩니다. 그러므로 데이터베이스 애플리케이션이 서버 수준 이벤트 알림을 사용하는 경우 대상 서버 인스턴스에서 해당 이벤트 알림을 다시 만들어야 합니다. 서버 인스턴스의 이벤트 알림을 보려면 [sys.server_event_notifications](../../relational-databases/system-catalog-views/sys-server-event-notifications-transact-sql.md) 카탈로그 뷰를 사용합니다. 자세한 내용은 [Event Notifications](../../relational-databases/service-broker/event-notifications.md)을 참조하세요.  
+ 서버 수준 이벤트 알림은 **msdb** 에 저장됩니다. 그러므로 데이터베이스 애플리케이션이 서버 수준 이벤트 알림을 사용하는 경우 대상 서버 인스턴스에서 해당 이벤트 알림을 다시 만들어야 합니다. 서버 인스턴스의 이벤트 알림을 보려면 [sys.server_event_notifications](../../relational-databases/system-catalog-views/sys-server-event-notifications-transact-sql.md) 카탈로그 뷰를 사용합니다. 자세한 내용은 [Event Notifications](../../relational-databases/service-broker/event-notifications.md)을 참조하세요.  
   
- 또한 이벤트 알림은 [!INCLUDE[ssSB](../../includes/sssb-md.md)]를 사용하여 배달됩니다. 들어오는 메시지에 대한 경로는 서비스가 포함된 데이터베이스에 포함되지 않습니다. 대신 명시적인 경로는 **msdb**에 저장됩니다. 서비스가 **msdb** 데이터베이스에서 명시적인 경로를 사용하여 들어오는 메시지를 서비스에 라우팅하는 경우 다른 인스턴스에서 데이터베이스를 연결할 때 이 경로를 다시 만들어야 합니다.  
+ 또한 이벤트 알림은 [!INCLUDE[ssSB](../../includes/sssb-md.md)]를 사용하여 배달됩니다. 들어오는 메시지에 대한 경로는 서비스가 포함된 데이터베이스에 포함되지 않습니다. 대신 명시적인 경로는 **msdb** 에 저장됩니다. 서비스가 **msdb** 데이터베이스에서 명시적인 경로를 사용하여 들어오는 메시지를 서비스에 라우팅하는 경우 다른 인스턴스에서 데이터베이스를 연결할 때 이 경로를 다시 만들어야 합니다.  
   
 ### <a name="windows-management-instrumentation-wmi-events"></a>WMI(Windows Management Instrumentation) 이벤트  
- 서버 이벤트용 WMI 공급자는 WMI(Windows Management Instrumentation)를 사용하여 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]의 이벤트를 모니터링할 수 있도록 합니다. 데이터베이스가 사용하는 WMI 공급자를 통해 표시된 서버 수준 이벤트를 사용하는 애플리케이션은 대상 서버 인스턴스의 컴퓨터에서 정의해야 합니다. WMI 이벤트 공급자는 **msdb**에서 정의한 대상 서비스로 이벤트 알림을 만듭니다.  
+ 서버 이벤트용 WMI 공급자는 WMI(Windows Management Instrumentation)를 사용하여 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]의 이벤트를 모니터링할 수 있도록 합니다. 데이터베이스가 사용하는 WMI 공급자를 통해 표시된 서버 수준 이벤트를 사용하는 애플리케이션은 대상 서버 인스턴스의 컴퓨터에서 정의해야 합니다. WMI 이벤트 공급자는 **msdb** 에서 정의한 대상 서비스로 이벤트 알림을 만듭니다.  
   
 > **참고:** 자세한 내용은 [서버 이벤트용 WMI 공급자 개념](../../relational-databases/wmi-provider-server-events/wmi-provider-for-server-events-concepts.md)을 참조하세요.  
   
@@ -164,7 +164,7 @@ ms.locfileid: "88412849"
 -   [WMI 이벤트 경고 만들기](../../ssms/agent/create-a-wmi-event-alert.md)  
   
 ### <a name="how-event-notifications-work-for-a-mirrored-database"></a>미러된 데이터베이스에 대한 이벤트 알림의 작동 방식  
- 미러된 데이터베이스를 포함하는 이벤트 알림의 데이터베이스 간 배달은 미러된 데이터베이스가 장애 조치(Failover)될 수 있으므로 정의상 원격일 수밖에 없습니다. [!INCLUDE[ssSB](../../includes/sssb-md.md)] 는 *미러된 경로*의 형태로 미러된 데이터베이스에 대해 특별한 지원을 제공합니다. 미러된 경로에는 두 개의 주소가 있습니다. 하나는 주 서버 인스턴스에 대한 주소이며 다른 하나는 미러 서버 인스턴스에 대한 주소입니다.  
+ 미러된 데이터베이스를 포함하는 이벤트 알림의 데이터베이스 간 배달은 미러된 데이터베이스가 장애 조치(Failover)될 수 있으므로 정의상 원격일 수밖에 없습니다. [!INCLUDE[ssSB](../../includes/sssb-md.md)] 는 *미러된 경로* 의 형태로 미러된 데이터베이스에 대해 특별한 지원을 제공합니다. 미러된 경로에는 두 개의 주소가 있습니다. 하나는 주 서버 인스턴스에 대한 주소이며 다른 하나는 미러 서버 인스턴스에 대한 주소입니다.  
   
  미러된 경로를 설정하여 [!INCLUDE[ssSB](../../includes/sssb-md.md)] 라우팅에서 데이터베이스 미러링을 인식하도록 지정할 수 있습니다. 미러된 경로를 사용하여 [!INCLUDE[ssSB](../../includes/sssb-md.md)] 에서 현재 주 서버 인스턴스에 대화를 투명하게 리디렉션할 수 있습니다. 예를 들어 미러된 데이터베이스인 Database_A가 Service_A라는 서비스를 호스팅하는데 이 Service_A와 대화를 하기 위해 Database_B가 호스팅하는 Service_B라는 다른 서비스가 필요한 경우 이 대화를 가능하게 하려면 Database_B에 Service_A에 대해 미러된 경로가 포함되어야 합니다. 또한 Database_A에 로컬 경로와는 달리 장애 조치 후에 유효한 상태로 남아 있는 Service_B에 대한 미러되지 않은 TCP 전송 경로가 포함되어야 합니다. 이러한 경로로 인해 ACK가 장애 조치 후에 원래 상태로 돌아옵니다. 보낸 사람의 서비스는 항상 동일한 방식으로 명명되므로 경로는 Broker 인스턴스를 지정해야 합니다.  
   
@@ -258,7 +258,7 @@ ms.locfileid: "88412849"
 ##  <a name="logins"></a><a name="logins"></a> 로그인  
  [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 인스턴스에 로그인하려면 올바른 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 로그인이 필요합니다. 이 로그인은 보안 주체가 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]인스턴스에 연결할 수 있는지 여부를 확인하는 인증 프로세스에서 사용됩니다. 해당 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 로그인이 서버 인스턴스에서 정의되지 않았거나 잘못 정의되어 있는 데이터베이스 사용자는 이 인스턴스에 로그인할 수 없습니다. 이러한 사용자는 해당 서버 인스턴스에 있는 데이터베이스의 *분리된 사용자* 라고 합니다. 데이터베이스가 다른 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]인스턴스에 복원, 연결 또는 복사된 후에도 데이터베이스 사용자가 분리될 수 있습니다.  
   
- 데이터베이스의 원래 복사본에 있는 일부 또는 모든 개체에 대해 스크립트를 생성하려면 스크립트 생성 마법사를 사용하고 **스크립트 옵션 선택** 대화 상자에서 **로그인 스크립팅** 옵션을 **True**로 설정합니다.  
+ 데이터베이스의 원래 복사본에 있는 일부 또는 모든 개체에 대해 스크립트를 생성하려면 스크립트 생성 마법사를 사용하고 **스크립트 옵션 선택** 대화 상자에서 **로그인 스크립팅** 옵션을 **True** 로 설정합니다.  
   
 > **참고:** 미러된 데이터베이스에 대한 로그인을 설정하는 방법은 [데이터베이스 미러링 또는 Always On 가용성 그룹에 대한 로그인 계정 설정(SQL Server)](../../database-engine/database-mirroring/set-up-login-accounts-database-mirroring-always-on-availability.md) 및 [역할 전환 후 로그인 및 작업 관리&#40;SQL Server&#41;](../../sql-server/failover-clusters/management-of-logins-and-jobs-after-role-switching-sql-server.md)를 참조하세요.  
   
@@ -273,7 +273,7 @@ ms.locfileid: "88412849"
 ### <a name="grant-revoke-and-deny-permissions-on-system-objects"></a>시스템 개체에 대한 GRANT, REVOKE 또는 DENY 권한  
  저장 프로시저, 확장 저장 프로시저, 함수 및 뷰와 같은 시스템 개체에 대한 사용 권한은 **master** 데이터베이스에 저장되며 대상 서버 인스턴스에서 구성해야 합니다.  
   
- 데이터베이스의 원래 복사본에 있는 일부 또는 모든 개체에 대해 스크립트를 생성하려면 스크립트 생성 마법사를 사용하고 **스크립트 옵션 선택** 대화 상자에서 **개체 수준 사용 권한 스크립팅** 옵션을 **True**로 설정합니다.  
+ 데이터베이스의 원래 복사본에 있는 일부 또는 모든 개체에 대해 스크립트를 생성하려면 스크립트 생성 마법사를 사용하고 **스크립트 옵션 선택** 대화 상자에서 **개체 수준 사용 권한 스크립팅** 옵션을 **True** 로 설정합니다.  
   
    > [!IMPORTANT]
    > 로그인을 스크립팅하는 경우 암호는 스크립팅되지 않습니다. [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 인증을 사용하는 로그인이 있으면 대상에서 스크립트를 수정해야 합니다.  
@@ -286,11 +286,11 @@ ms.locfileid: "88412849"
  자세한 내용은 [GRANT 서버 사용 권한&#40;Transact-SQL&#41;](../../t-sql/statements/grant-server-permissions-transact-sql.md), [REVOKE 서버 사용 권한&#40;Transact-SQL&#41;](../../t-sql/statements/revoke-server-permissions-transact-sql.md) 및 [DENY 서버 사용 권한&#40;Transact-SQL&#41;](../../t-sql/statements/deny-server-permissions-transact-sql.md)을 참조하세요.  
   
 #### <a name="server-level-permissions-for-a-certificate-or-asymmetric-key"></a>인증서 또는 비대칭 키에 대한 서버 수준 사용 권한  
- 인증서 또는 비대칭 키에 직접 서버 수준 사용 권한을 부여할 수는 없습니다. 대신 서버 수준 사용 권한은 특정 인증서나 비대칭 키 전용으로 만든 매핑된 로그인에 부여됩니다. 그러므로 서버 수준 사용 권한이 필요한 각 인증서 또는 비대칭 키에 해당 *인증서 매핑 로그인* 이나 *비대칭 키 매핑 로그인*이 필요합니다. 인증서나 비대칭 키에 서버 수준 사용 권한을 부여하려면 해당 매핑된 로그인에 사용 권한을 부여합니다.  
+ 인증서 또는 비대칭 키에 직접 서버 수준 사용 권한을 부여할 수는 없습니다. 대신 서버 수준 사용 권한은 특정 인증서나 비대칭 키 전용으로 만든 매핑된 로그인에 부여됩니다. 그러므로 서버 수준 사용 권한이 필요한 각 인증서 또는 비대칭 키에 해당 *인증서 매핑 로그인* 이나 *비대칭 키 매핑 로그인* 이 필요합니다. 인증서나 비대칭 키에 서버 수준 사용 권한을 부여하려면 해당 매핑된 로그인에 사용 권한을 부여합니다.  
   
 > **참고:** 매핑된 로그인은 해당 인증서나 비대칭 키로 서명된 코드의 권한 부여를 위해서만 사용됩니다. 매핑된 로그인은 인증에 사용할 수 없습니다.  
   
- 매핑된 로그인과 해당 사용 권한은 모두 **master**에 있습니다. 인증서나 비대칭 키가 **master**이외의 데이터베이스에 있을 경우 **master** 에서 다시 만들어 로그인에 매핑해야 합니다. 데이터베이스를 다른 서버 인스턴스로 이동, 복사 또는 복원하는 경우 대상 서버 인스턴스의 **master** 데이터베이스에서 해당 인증서나 비대칭 키를 다시 만들어 로그인에 매핑한 다음 필요한 서버 수준 사용 권한을 로그인에 부여해야 합니다.  
+ 매핑된 로그인과 해당 사용 권한은 모두 **master** 에 있습니다. 인증서나 비대칭 키가 **master** 이외의 데이터베이스에 있을 경우 **master** 에서 다시 만들어 로그인에 매핑해야 합니다. 데이터베이스를 다른 서버 인스턴스로 이동, 복사 또는 복원하는 경우 대상 서버 인스턴스의 **master** 데이터베이스에서 해당 인증서나 비대칭 키를 다시 만들어 로그인에 매핑한 다음 필요한 서버 수준 사용 권한을 로그인에 부여해야 합니다.  
   
  **인증서나 비대칭 키를 만들려면**  
   

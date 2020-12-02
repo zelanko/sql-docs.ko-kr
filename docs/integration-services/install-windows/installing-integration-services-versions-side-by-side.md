@@ -15,10 +15,10 @@ ms.assetid: edfbcd56-012f-462e-a542-95491394fda9
 author: chugugrace
 ms.author: chugu
 ms.openlocfilehash: d57148134c727b03a30d75af415d1e2476dca32d
-ms.sourcegitcommit: e700497f962e4c2274df16d9e651059b42ff1a10
+ms.sourcegitcommit: c5078791a07330a87a92abb19b791e950672e198
 ms.translationtype: HT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 08/17/2020
+ms.lasthandoff: 11/26/2020
 ms.locfileid: "88345999"
 ---
 # <a name="installing-integration-services-versions-side-by-side"></a>여러 Integration Services 버전을 병렬로 설치
@@ -32,7 +32,7 @@ ms.locfileid: "88345999"
 ## <a name="designing-and-maintaining-packages"></a>패키지 디자인 및 유지 관리  
  SQL Server 2016, SQL Server 2014 또는 SQL Server 2012를 대상으로 하는 패키지를 디자인하고 유지 관리하려면 Visual Studio 2015dyd SSDT(SQL Server Data Tools)를 사용합니다. SSDT를 다운로드하려면 [최신 SQL Server Data Tools 다운로드](../../ssdt/download-sql-server-data-tools-ssdt.md)를 참조하세요.  
   
- Integration Services 프로젝트의 속성 페이지에 있는 **구성 속성** 의 **일반**탭에서 **TargetServerVersion** 속성을 선택하고 SQL Server 2016, SQL Server 2014 또는 SQL Server 2012를 선택합니다.  
+ Integration Services 프로젝트의 속성 페이지에 있는 **구성 속성** 의 **일반** 탭에서 **TargetServerVersion** 속성을 선택하고 SQL Server 2016, SQL Server 2014 또는 SQL Server 2012를 선택합니다.  
   
 |SQL Server의 대상 버전|SSIS 패키지용 개발 환경|  
 |----------------------------------|-----------------------------------------------|  

@@ -22,10 +22,10 @@ author: markingmyname
 ms.author: maghan
 monikerRange: '>=aps-pdw-2016||=azuresqldb-current||=azure-sqldw-latest||>=sql-server-2016||=sqlallproducts-allversions||>=sql-server-linux-2017||=azuresqldb-mi-current'
 ms.openlocfilehash: 1a6cf4546193b02050c0559765fe3fa4ad368e02
-ms.sourcegitcommit: e700497f962e4c2274df16d9e651059b42ff1a10
+ms.sourcegitcommit: c5078791a07330a87a92abb19b791e950672e198
 ms.translationtype: HT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 08/17/2020
+ms.lasthandoff: 11/26/2020
 ms.locfileid: "88445899"
 ---
 # <a name="collation-functions---tertiary_weights-transact-sql"></a>데이터 정렬 함수 - TERTIARY_WEIGHTS(Transact-SQL)
@@ -48,10 +48,10 @@ TERTIARY_WEIGHTS( non_Unicode_character_string_expression )
 3차 SQL 데이터 정렬에 정의된 **char**, **varchar** 또는 **varchar(max)** 형식의 문자열 [식](../../t-sql/language-elements/expressions-transact-sql.md)입니다. 이러한 데이터 정렬의 목록은 주의를 참조하세요.
   
 ## <a name="return-types"></a>반환 형식
-`TERTIARY_WEIGHTS`는 *non_Unicode_character_string_expression*이 **char** 또는 **varchar**인 경우 **varbinary**를 반환하고, *non_Unicode_character_string_expression*이 **varchar(max)** 데이터 형식을 가진 경우 **varbinary(max)** 를 반환합니다.
+`TERTIARY_WEIGHTS`는 *non_Unicode_character_string_expression* 이 **char** 또는 **varchar** 인 경우 **varbinary** 를 반환하고, *non_Unicode_character_string_expression* 이 **varchar(max)** 데이터 형식을 가진 경우 **varbinary(max)** 를 반환합니다.
   
 ## <a name="remarks"></a>설명  
-`TERTIARY_WEIGHTS`는 SQL 3차 컬렉션이 *non_Unicode_character_string_expression*을 정의하지 않는 경우 NULL을 반환합니다. 이 표에서는 SQL 3차 데이터 정렬을 보여 줍니다.
+`TERTIARY_WEIGHTS`는 SQL 3차 컬렉션이 *non_Unicode_character_string_expression* 을 정의하지 않는 경우 NULL을 반환합니다. 이 표에서는 SQL 3차 데이터 정렬을 보여 줍니다.
   
 |정렬 순서 ID|SQL 데이터 정렬|  
 |---|---|

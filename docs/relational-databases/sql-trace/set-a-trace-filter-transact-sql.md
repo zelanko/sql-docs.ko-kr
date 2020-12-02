@@ -15,10 +15,10 @@ ms.assetid: 7b976a84-7381-43a6-a828-ba83ada71cbe
 author: MashaMSFT
 ms.author: mathoma
 ms.openlocfilehash: 59c44a69bbe994ee7df7337213d26b4a789f5a11
-ms.sourcegitcommit: e700497f962e4c2274df16d9e651059b42ff1a10
+ms.sourcegitcommit: c5078791a07330a87a92abb19b791e950672e198
 ms.translationtype: HT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 08/17/2020
+ms.lasthandoff: 11/26/2020
 ms.locfileid: "88455332"
 ---
 # <a name="set-a-trace-filter-transact-sql"></a>추적 필터 설정(Transact-SQL)
@@ -27,7 +27,7 @@ ms.locfileid: "88455332"
   
 ### <a name="to-set-a-trace-filter"></a>추적 필터를 설정하려면  
   
-1.  추적이 이미 실행 중이면 `@status = 0`을 지정하고 **sp_trace_setstatus**를 실행하여 추적을 중지합니다.  
+1.  추적이 이미 실행 중이면 `@status = 0`을 지정하고 **sp_trace_setstatus** 를 실행하여 추적을 중지합니다.  
   
 2.  **sp_trace_setfilter** 를 실행하여 추적할 이벤트에서 검색할 정보 유형을 구성합니다.  
 

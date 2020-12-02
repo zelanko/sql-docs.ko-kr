@@ -19,10 +19,10 @@ ms.assetid: cdba04f0-4e17-48f6-bafb-b1f918c5a501
 author: MladjoA
 ms.author: mlandzic
 ms.openlocfilehash: 77a79972671854e7e8538de7b943545955f61e89
-ms.sourcegitcommit: e700497f962e4c2274df16d9e651059b42ff1a10
+ms.sourcegitcommit: c5078791a07330a87a92abb19b791e950672e198
 ms.translationtype: HT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 08/17/2020
+ms.lasthandoff: 11/26/2020
 ms.locfileid: "88422427"
 ---
 # <a name="m-geography-data-type"></a>M(geography 데이터 형식)
@@ -45,7 +45,7 @@ ms.locfileid: "88422427"
  CLR 유형: **SqlDouble**  
   
 ## <a name="remarks"></a>설명  
- **geography** 인스턴스가 **지점**이 아닌 경우 및 해당 값이 설정되지 않은 모든 **Point** 인스턴스의 경우 이 속성의 값은 Null입니다.  
+ **geography** 인스턴스가 **지점** 이 아닌 경우 및 해당 값이 설정되지 않은 모든 **Point** 인스턴스의 경우 이 속성의 값은 Null입니다.  
   
  이 속성은 읽기 전용입니다.  
   

@@ -12,10 +12,10 @@ author: julieMSFT
 ms.author: jrasnick
 monikerRange: =azuresqldb-current||>=sql-server-2016||=sqlallproducts-allversions||>=sql-server-linux-2017||=azuresqldb-mi-current
 ms.openlocfilehash: 2717bf5791cd5f057a57da6693e05700c9045e3c
-ms.sourcegitcommit: e700497f962e4c2274df16d9e651059b42ff1a10
+ms.sourcegitcommit: c5078791a07330a87a92abb19b791e950672e198
 ms.translationtype: HT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 08/17/2020
+ms.lasthandoff: 11/26/2020
 ms.locfileid: "88326909"
 ---
 # <a name="modify-a-partition-function"></a>파티션 함수 수정
@@ -82,19 +82,19 @@ ms.locfileid: "88326909"
   
 2.  **파티션 함수** 폴더를 확장합니다.  
   
-3.  삭제할 파티션 함수를 마우스 오른쪽 단추로 클릭하고 **삭제**를 선택합니다.  
+3.  삭제할 파티션 함수를 마우스 오른쪽 단추로 클릭하고 **삭제** 를 선택합니다.  
   
-4.  **개체 삭제** 대화 상자에서 올바른 파티선 함수를 선택했는지 확인한 다음 **확인**을 클릭합니다.  
+4.  **개체 삭제** 대화 상자에서 올바른 파티선 함수를 선택했는지 확인한 다음 **확인** 을 클릭합니다.  
 
 ##  <a name="using-transact-sql"></a><a name="TsqlProcedure"></a> Transact-SQL 사용  
   
 #### <a name="to-split-a-single-partition-into-two-partitions"></a>단일 파티션을 두 개의 파티션으로 분할하려면  
   
-1.  **개체 탐색기**에서 [!INCLUDE[ssDE](../../includes/ssde-md.md)]인스턴스에 연결합니다.  
+1.  **개체 탐색기** 에서 [!INCLUDE[ssDE](../../includes/ssde-md.md)]인스턴스에 연결합니다.  
   
-2.  표준 도구 모음에서 **새 쿼리**를 클릭합니다.  
+2.  표준 도구 모음에서 **새 쿼리** 를 클릭합니다.  
   
-3.  다음 예를 복사하여 쿼리 창에 붙여 넣고 **실행**을 클릭합니다.  
+3.  다음 예를 복사하여 쿼리 창에 붙여 넣고 **실행** 을 클릭합니다.  
   
     ```  
     -- Look for a previous version of the partition function "myRangePF1" and deletes it if it is found.  
@@ -115,11 +115,11 @@ ms.locfileid: "88326909"
   
 #### <a name="to-merge-two-partitions-into-one-partition"></a>두 개의 파티션을 하나의 파티션으로 병합하려면  
   
-1.  **개체 탐색기**에서 [!INCLUDE[ssDE](../../includes/ssde-md.md)]인스턴스에 연결합니다.  
+1.  **개체 탐색기** 에서 [!INCLUDE[ssDE](../../includes/ssde-md.md)]인스턴스에 연결합니다.  
   
-2.  표준 도구 모음에서 **새 쿼리**를 클릭합니다.  
+2.  표준 도구 모음에서 **새 쿼리** 를 클릭합니다.  
   
-3.  다음 예를 복사하여 쿼리 창에 붙여 넣고 **실행**을 클릭합니다.  
+3.  다음 예를 복사하여 쿼리 창에 붙여 넣고 **실행** 을 클릭합니다.  
   
     ```  
     -- Look for a previous version of the partition function "myRangePF1" and deletes it if it is found.  

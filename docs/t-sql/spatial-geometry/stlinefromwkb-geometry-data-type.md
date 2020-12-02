@@ -20,10 +20,10 @@ author: MladjoA
 ms.author: mlandzic
 monikerRange: '>=aps-pdw-2016||=azuresqldb-current||>=sql-server-2016||=sqlallproducts-allversions||>=sql-server-linux-2017||=azuresqldb-mi-current'
 ms.openlocfilehash: 19f43ada9987079725ab80528d823003cb1636ce
-ms.sourcegitcommit: e700497f962e4c2274df16d9e651059b42ff1a10
+ms.sourcegitcommit: c5078791a07330a87a92abb19b791e950672e198
 ms.translationtype: HT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 08/17/2020
+ms.lasthandoff: 11/26/2020
 ms.locfileid: "88305429"
 ---
 # <a name="stlinefromwkb-geometry-data-type"></a>STLineFromWKB(geometry 데이터 형식)
@@ -40,7 +40,7 @@ STLineFromWKB ( 'WKB_linestring' , SRID )
   
 ## <a name="arguments"></a>인수  
  *WKB_linestring*  
- 반환하려는 **geometryLineString** 인스턴스의 WKB 표현입니다. *WKB_linestring*은 **varbinary(max)** 식입니다.  
+ 반환하려는 **geometryLineString** 인스턴스의 WKB 표현입니다. *WKB_linestring* 은 **varbinary(max)** 식입니다.  
   
  *SRID*  
  반환하려는 **geometryLineString** 인스턴스의 SRID(spatial reference ID)를 나타내는 **int** 식입니다.  
@@ -53,7 +53,7 @@ STLineFromWKB ( 'WKB_linestring' , SRID )
  OGC 형식: **LineString**  
   
 ## <a name="remarks"></a>설명  
- 이 메서드는 입력이 잘못된 경우 **FormatException**을 throw합니다.  
+ 이 메서드는 입력이 잘못된 경우 **FormatException** 을 throw합니다.  
   
 ## <a name="examples"></a>예  
  다음 예에서는 `STLineFromWKB()`를 사용하여 `geometry` 인스턴스를 만듭니다.  

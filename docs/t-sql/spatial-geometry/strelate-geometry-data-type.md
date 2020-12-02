@@ -19,10 +19,10 @@ ms.assetid: 9dcb5f58-35ab-4bb3-86ee-2d29eefba6d3
 author: MladjoA
 ms.author: mlandzic
 ms.openlocfilehash: e427ca859bf6e1e861ed58bb7fdc4ab2dc869fc1
-ms.sourcegitcommit: e700497f962e4c2274df16d9e651059b42ff1a10
+ms.sourcegitcommit: c5078791a07330a87a92abb19b791e950672e198
 ms.translationtype: HT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 08/17/2020
+ms.lasthandoff: 11/26/2020
 ms.locfileid: "88444989"
 ---
 # <a name="strelate-geometry-data-type"></a>STRelate(geometry 데이터 형식)
@@ -47,7 +47,7 @@ ms.locfileid: "88444989"
  두 **geometry** 인스턴스 간에서 DE-9IM 패턴 행렬 디바이스에 대해 인코딩을 사용할 수 있는 값 **nchar(9)** 형식의 문자열입니다.  
   
 ## <a name="remarks"></a>설명  
- 이 메서드는 **geometry** 인스턴스의 SRID(spatial Reference ID)가 일치하지 않으면 항상 Null을 반환합니다. 이 메서드는 행렬의 형식이 잘못된 경우 **ArgumentException**을 throw합니다.  
+ 이 메서드는 **geometry** 인스턴스의 SRID(spatial Reference ID)가 일치하지 않으면 항상 Null을 반환합니다. 이 메서드는 행렬의 형식이 잘못된 경우 **ArgumentException** 을 throw합니다.  
   
 ## <a name="return-types"></a>반환 형식  
  [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 반환 형식: **bit**  

@@ -19,10 +19,10 @@ ms.assetid: a88fefbb-9ea2-4a86-b836-e71315bac68e
 author: chugugrace
 ms.author: chugu
 ms.openlocfilehash: 98f71295a8df150b7430806c35aae47cca0bc613
-ms.sourcegitcommit: e700497f962e4c2274df16d9e651059b42ff1a10
+ms.sourcegitcommit: c5078791a07330a87a92abb19b791e950672e198
 ms.translationtype: HT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 08/17/2020
+ms.lasthandoff: 11/26/2020
 ms.locfileid: "88430395"
 ---
 # <a name="querying-the-active-directory-with-the-script-task"></a>스크립트 태스크를 사용하여 Active Directory 쿼리
@@ -42,7 +42,7 @@ ms.locfileid: "88430395"
   
 1.  `email`, `name` 및 `title`이라는 세 개의 문자열 변수를 만듭니다. `email` 변수 값으로 올바른 회사 전자 메일 주소를 입력합니다.  
   
-2.  **스크립트 태스크 편집기**의 **스크립트** 페이지에서 **ReadOnlyVariables** 속성에 `email` 변수를 추가합니다.  
+2.  **스크립트 태스크 편집기** 의 **스크립트** 페이지에서 **ReadOnlyVariables** 속성에 `email` 변수를 추가합니다.  
   
 3.  **ReadWriteVariables** 속성에 `name` 및 `title` 변수를 추가합니다.  
   

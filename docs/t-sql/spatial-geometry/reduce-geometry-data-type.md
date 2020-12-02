@@ -19,10 +19,10 @@ ms.assetid: 132184bf-c4d2-4a27-900d-8373445dce2a
 author: MladjoA
 ms.author: mlandzic
 ms.openlocfilehash: 704df574cc67a4321faea90795b248adb2859123
-ms.sourcegitcommit: e700497f962e4c2274df16d9e651059b42ff1a10
+ms.sourcegitcommit: c5078791a07330a87a92abb19b791e950672e198
 ms.translationtype: HT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 08/17/2020
+ms.lasthandoff: 11/26/2020
 ms.locfileid: "88445098"
 ---
 # <a name="reduce-geometry-data-type"></a>Reduce(geometry 데이터 형식)
@@ -41,7 +41,7 @@ ms.locfileid: "88445098"
 
 ## <a name="arguments"></a>인수
  *tolerance*  
- **float** 형식의 값입니다. *tolerance*는 근사값 알고리즘에 입력할 허용 오차입니다.  
+ **float** 형식의 값입니다. *tolerance* 는 근사값 알고리즘에 입력할 허용 오차입니다.  
   
 ## <a name="return-types"></a>반환 형식  
  [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 반환 형식: **geometry**  
@@ -49,7 +49,7 @@ ms.locfileid: "88445098"
  CLR 반환 형식: **SqlGeometry**  
   
 ## <a name="remarks"></a>설명  
- 컬렉션 형식의 경우 이 알고리즘은 인스턴스에 포함된 각 **geometry**에 대해 독립적으로 작동합니다.  
+ 컬렉션 형식의 경우 이 알고리즘은 인스턴스에 포함된 각 **geometry** 에 대해 독립적으로 작동합니다.  
   
  이 알고리즘은 **Point** 인스턴스를 수정하지 않습니다.  
   
@@ -57,7 +57,7 @@ ms.locfileid: "88445098"
   
  `Reduce()`은 **CircularString** 인스턴스에 대해 **LineString**, **CircularString** 또는 **CompoundCurve** 인스턴스를 반환합니다.  `Reduce()`은 **CompoundCurve** 인스턴스에 대해 **CompoundCurve** 또는 **LineString** 인스턴스를 반환합니다.  
   
- **Polygon** 인스턴스에서 근사값 알고리즘은 각 링에 독립적으로 적용됩니다. 이 메서드는 반환된 **Polygon** 인스턴스가 잘못된 경우 `FormatException`을 생성합니다. 예를 들어 `Reduce()`를 적용하여 인스턴스의 각 링을 단순화한 결과로 생성된 링이 겹치는 경우 잘못된 **MultiPolygon** 인스턴스가 생성됩니다.  내부 링이 없고 외부 링이 있는 **CurvePolygon** 인스턴스에서 `Reduce()`는 **CurvePolygon**, **LineString** 또는 **Point** 인스턴스를 반환합니다.  **CurvePolygon**에 내부 링이 있으면, **CurvePolygon** 또는 **MultiPoint** 인스턴스가 반환됩니다.  
+ **Polygon** 인스턴스에서 근사값 알고리즘은 각 링에 독립적으로 적용됩니다. 이 메서드는 반환된 **Polygon** 인스턴스가 잘못된 경우 `FormatException`을 생성합니다. 예를 들어 `Reduce()`를 적용하여 인스턴스의 각 링을 단순화한 결과로 생성된 링이 겹치는 경우 잘못된 **MultiPolygon** 인스턴스가 생성됩니다.  내부 링이 없고 외부 링이 있는 **CurvePolygon** 인스턴스에서 `Reduce()`는 **CurvePolygon**, **LineString** 또는 **Point** 인스턴스를 반환합니다.  **CurvePolygon** 에 내부 링이 있으면, **CurvePolygon** 또는 **MultiPoint** 인스턴스가 반환됩니다.  
   
  원호 세그먼트가 발견되면 근사값 알고리즘이 지정된 허용 오차 절반 이내에서 해당 현으로 어림할 수 있는지 여부를 확인합니다. 이 조건을 충족하는 현은 계산에서 원호가 현으로 바뀝니다. 현이 이 조건을 충족하지 못하면 원호가 유지되고 근사값 알고리즘이 나머지 세그먼트에 적용됩니다.  
   

@@ -13,10 +13,10 @@ author: MashaMSFT
 ms.author: mathoma
 monikerRange: =azuresqldb-mi-current||>=sql-server-2016||=sqlallproducts-allversions
 ms.openlocfilehash: 7345d2ed17d8eca7bac386f4abe58893827ff00e
-ms.sourcegitcommit: e700497f962e4c2274df16d9e651059b42ff1a10
+ms.sourcegitcommit: c5078791a07330a87a92abb19b791e950672e198
 ms.translationtype: HT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 08/17/2020
+ms.lasthandoff: 11/26/2020
 ms.locfileid: "88404969"
 ---
 # <a name="replication-to-memory-optimized-table-subscribers"></a>메모리 액세스에 최적화된 테이블 구독자로 복제
@@ -28,7 +28,7 @@ ms.locfileid: "88404969"
   
 -   **메모리 최적화 테이블로의 복제를 지원하도록 구독자 데이터베이스 구성**  
   
-     [sp_addsubscription &#40;Transact-SQL&#41;](../../relational-databases/system-stored-procedures/sp-addsubscription-transact-sql.md) 또는 [sp_changesubscription &#40;Transact-SQL&#41;](../../relational-databases/system-stored-procedures/sp-changesubscription-transact-sql.md)을 사용하여 **\@memory_optimized** 속성을 **true**로 설정합니다.  
+     [sp_addsubscription &#40;Transact-SQL&#41;](../../relational-databases/system-stored-procedures/sp-addsubscription-transact-sql.md) 또는 [sp_changesubscription &#40;Transact-SQL&#41;](../../relational-databases/system-stored-procedures/sp-changesubscription-transact-sql.md)을 사용하여 **\@memory_optimized** 속성을 **true** 로 설정합니다.  
   
 -   **메모리 최적화 테이블로의 복제를 지원하도록 아티클 구성**  
   
@@ -41,30 +41,30 @@ ms.locfileid: "88404969"
 2.  아티클을 게시에 추가합니다. 자세한 내용은 [아티클을 정의](../../relational-databases/replication/publish/define-an-article.md)을 참조하세요.  
   
      [!INCLUDE[tsql](../../includes/tsql-md.md)]을(를) 사용하여 구성하는 경우 **sp_addarticle** 저장 프로시저의 **\@schema_option** 매개 변수를 다음으로 설정합니다.   
-    **0x40000000000**부터 사용할 수 있습니다.  
+    **0x40000000000** 부터 사용할 수 있습니다.  
   
-3.  아티클 속성 창에서 **메모리 최적화 사용** 을 **true**로 설정합니다.  
+3.  아티클 속성 창에서 **메모리 최적화 사용** 을 **true** 로 설정합니다.  
   
 4.  스냅샷 에이전트 작업을 시작하여 이 게시에 대한 초기 스냅샷을 생성합니다. 자세한 내용은 [Create and Apply the Initial Snapshot](../../relational-databases/replication/create-and-apply-the-initial-snapshot.md)을 참조하세요.  
   
-5.  이제 새 구독을 만듭니다. **새 구독 마법사** 에서 **메모리 액세스에 최적화된 구독** 을 **true**로 설정합니다.  
+5.  이제 새 구독을 만듭니다. **새 구독 마법사** 에서 **메모리 액세스에 최적화된 구독** 을 **true** 로 설정합니다.  
 
  메모리 액세스에 최적화된 테이블이 이제 게시자로부터 업데이트 수신을 시작합니다.  
   
 #### <a name="reconfigure-an-existing-transaction-replication"></a>기존 트랜잭션 복제 다시 구성  
   
-1.  [!INCLUDE[ssManStudio](../../includes/ssmanstudio-md.md)] 에서 구독 속성으로 이동한 다음 **메모리 액세스에 최적화된 구독** 을 **true**로 설정합니다. 구독을 다시 초기화해야 변경 내용이 적용됩니다.  
+1.  [!INCLUDE[ssManStudio](../../includes/ssmanstudio-md.md)] 에서 구독 속성으로 이동한 다음 **메모리 액세스에 최적화된 구독** 을 **true** 로 설정합니다. 구독을 다시 초기화해야 변경 내용이 적용됩니다.  
   
      [!INCLUDE[tsql](../../includes/tsql-md.md)]을(를) 사용하여 구성하는 경우 **sp_addsubscription** 저장 프로시저의 새 **\@memory_optimized** 매개 변수를 true로 설정합니다.  
   
 2.  [!INCLUDE[ssManStudio](../../includes/ssmanstudio-md.md)] 에서 아티클 속성으로 이동한 다음 **메모리 최적화 사용** 을 true로 설정합니다.  
   
      [!INCLUDE[tsql](../../includes/tsql-md.md)]을(를) 사용하여 구성하는 경우 **sp_addarticle** 저장 프로시저의 **\@schema_option** 매개 변수를 다음으로 설정합니다.   
-    **0x40000000000**부터 사용할 수 있습니다.  
+    **0x40000000000** 부터 사용할 수 있습니다.  
   
 3.  메모리 액세스에 최적화된 테이블은 클러스터형 인덱스를 지원하지 않습니다. 클러스터형 인덱스를 대상에서 비클러스터형 인덱스로 변환하여 복제에서 해당 인덱스를 처리하도록 하려면 **메모리 액세스에 최적화된 아티클에 대해 클러스터형 인덱스를 비클러스터형 인덱스로 변환** 을 true로 설정합니다.  
   
-     [!INCLUDE[tsql](../../includes/tsql-md.md)]을(를) 사용하여 구성하는 경우 **sp_addarticle** 저장 프로시저의 **\@schema_option** 매개 변수를 **0x0000080000000000**으로 설정합니다.  
+     [!INCLUDE[tsql](../../includes/tsql-md.md)]을(를) 사용하여 구성하는 경우 **sp_addarticle** 저장 프로시저의 **\@schema_option** 매개 변수를 **0x0000080000000000** 으로 설정합니다.  
   
 4.  스냅샷을 다시 생성합니다.  
   

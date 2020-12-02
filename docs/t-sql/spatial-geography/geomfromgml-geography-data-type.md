@@ -20,10 +20,10 @@ ms.assetid: 470d0997-3cb0-4d34-9a45-b332fe432b14
 author: MladjoA
 ms.author: mlandzic
 ms.openlocfilehash: 44009b18bbe96c4d6aa8e402e584551e3c5ea521
-ms.sourcegitcommit: e700497f962e4c2274df16d9e651059b42ff1a10
+ms.sourcegitcommit: c5078791a07330a87a92abb19b791e950672e198
 ms.translationtype: HT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 08/17/2020
+ms.lasthandoff: 11/26/2020
 ms.locfileid: "88306470"
 ---
 # <a name="geomfromgml-geography-data-type"></a>GeomFromGML(geography 데이터 형식)
@@ -57,9 +57,9 @@ GeomFromGml ( GML_input, SRID )
  CLR 반환 형식: **SqlGeography**  
   
 ## <a name="remarks"></a>설명  
- 이 메서드는 입력이 잘못된 경우 **FormatException**을 throw합니다.  
+ 이 메서드는 입력이 잘못된 경우 **FormatException** 을 throw합니다.  
   
- 이 메서드는 입력에 대척점 끝이 있을 경우 **ArgumentException**을 throw합니다.  
+ 이 메서드는 입력에 대척점 끝이 있을 경우 **ArgumentException** 을 throw합니다.  
   
 ## <a name="examples"></a>예  
  다음 예에서는 `GeomFromGml()`를 사용하여 `geography` 인스턴스를 만듭니다.  

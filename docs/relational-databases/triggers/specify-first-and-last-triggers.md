@@ -18,10 +18,10 @@ author: rothja
 ms.author: jroth
 monikerRange: =azuresqldb-current||>=sql-server-2016||=sqlallproducts-allversions||>=sql-server-linux-2017||=azuresqldb-mi-current
 ms.openlocfilehash: 98269d555a7cd639589544dbf8c645eb08ed5cb7
-ms.sourcegitcommit: e700497f962e4c2274df16d9e651059b42ff1a10
+ms.sourcegitcommit: c5078791a07330a87a92abb19b791e950672e198
 ms.translationtype: HT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 08/17/2020
+ms.lasthandoff: 11/26/2020
 ms.locfileid: "88427355"
 ---
 # <a name="specify-first-and-last-triggers"></a>첫 번째 및 마지막 트리거 지정
@@ -36,7 +36,7 @@ ms.locfileid: "88427355"
 |**마지막**|DML 트리거를 트리거 동작에 대해 실행할 마지막 AFTER 트리거로 지정합니다.|  
 |**없음**|DML 트리거가 실행되는 특정 순서가 없음을 지정합니다. 주로 첫 번째 트리거나 마지막 트리거를 다시 설정하는 데 사용됩니다.|  
   
- 다음 예에서는 **sp_settriggerorder**를 사용하는 방법을 보여 줍니다.  
+ 다음 예에서는 **sp_settriggerorder** 를 사용하는 방법을 보여 줍니다.  
   
 ```  
 sp_settriggerorder @triggername = 'MyTrigger', @order = 'first', @stmttype = 'UPDATE'  
@@ -51,7 +51,7 @@ sp_settriggerorder @triggername = 'MyTrigger', @order = 'first', @stmttype = 'UP
   
  첫 번째 트리거나 마지막 트리거로 INSTEAD OF 트리거를 지정할 수 없습니다. INSTEAD OF 트리거는 기본 테이블이 업데이트되기 전에 시작됩니다. 기본 테이블이 INSTEAD OF 트리거에 의해 업데이트될 경우 테이블에 정의된 AFTER 트리거가 실행되기 전에 업데이트가 수행됩니다. 예를 들어 뷰의 INSTEAD OF INSERT 트리거가 기본 테이블에 데이터를 삽입하고 기본 테이블 자체에 한 개의 INSTEAD OF INSERT 트리거와 세 개의 AFTER INSERT 트리거가 있는 경우 삽입 동작 대신 기본 테이블의 INSTEAD OF INSERT 트리거가 실행되고 기본 테이블의 AFTER 트리거는 기본 테이블의 삽입 작업 후에 실행됩니다. 자세한 내용은 [DML Triggers](../../relational-databases/triggers/dml-triggers.md)을 참조하세요.  
   
- ALTER TRIGGER 문에 의해 첫 번째 트리거나 마지막 트리거가 변경되는 경우 **첫 번째** 나 **마지막** 특성이 삭제되고 순서 값은 **없음**으로 설정됩니다. 순서는 **sp_settriggerorder**를 사용하여 다시 설정해야 합니다.  
+ ALTER TRIGGER 문에 의해 첫 번째 트리거나 마지막 트리거가 변경되는 경우 **첫 번째** 나 **마지막** 특성이 삭제되고 순서 값은 **없음** 으로 설정됩니다. 순서는 **sp_settriggerorder** 를 사용하여 다시 설정해야 합니다.  
   
  OBJECTPROPERTY 함수는 **ExecIsFirstInsertTrigger**, **ExecIsFirstUpdateTrigger**, **ExecIsFirstDeleteTrigger**, **ExecIsLastInsertTrigger**, **ExecIsLastUpdateTrigger** 및 **ExecIsLastDeleteTrigger** 등의 속성을 사용하여 트리거가 최초 또는 마지막 트리거인지 보고합니다.  
   

@@ -12,10 +12,10 @@ ms.assetid: 7a6c719a-3735-43b7-b3ab-dfadd325eca2
 author: chugugrace
 ms.author: chugu
 ms.openlocfilehash: ee2861b40dbe132e7c95b52802bd10ccd46c20c1
-ms.sourcegitcommit: e700497f962e4c2274df16d9e651059b42ff1a10
+ms.sourcegitcommit: c5078791a07330a87a92abb19b791e950672e198
 ms.translationtype: HT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 08/17/2020
+ms.lasthandoff: 11/26/2020
 ms.locfileid: "88426095"
 ---
 # <a name="how-to-edit-the-cdc-instance-properties"></a>CDC 인스턴스 속성을 편집하는 방법
@@ -27,15 +27,15 @@ ms.locfileid: "88426095"
   
 ### <a name="to-edit-the-cdc-instance-configuration-properties"></a>CDC 인스턴스 구성 속성을 편집하려면  
   
-1.  **시작** 메뉴에서 **CDC Designer 콘솔**을 선택합니다.  
+1.  **시작** 메뉴에서 **CDC Designer 콘솔** 을 선택합니다.  
   
 2.  왼쪽 창에서 **변경 데이터 캡처** 를 확장한 다음 편집할 속성을 가진 인스턴스를 포함하는 서비스를 확장합니다.  
   
 3.  속성을 편집할 인스턴스의 이름을 선택합니다.  
   
-4.  CDC Designer 콘솔의 오른쪽에 있는 동작 창에서 **속성**을 클릭합니다.  
+4.  CDC Designer 콘솔의 오른쪽에 있는 동작 창에서 **속성** 을 클릭합니다.  
   
-     속성을 편집할 인스턴스를 마우스 오른쪽 단추로 클릭하고 **속성**을 클릭할 수도 있습니다.  
+     속성을 편집할 인스턴스를 마우스 오른쪽 단추로 클릭하고 **속성** 을 클릭할 수도 있습니다.  
   
 5.  속성 편집기의 다음 탭에서 속성을 편집합니다.  
   

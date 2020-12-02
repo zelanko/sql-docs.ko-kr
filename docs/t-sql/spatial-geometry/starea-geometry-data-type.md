@@ -19,10 +19,10 @@ ms.assetid: a7dd6083-c649-4ac3-885d-1234e0db62f1
 author: MladjoA
 ms.author: mlandzic
 ms.openlocfilehash: 2dec51b1ce17ed52ed7c6bb6d601b5977eaf2172
-ms.sourcegitcommit: e700497f962e4c2274df16d9e651059b42ff1a10
+ms.sourcegitcommit: c5078791a07330a87a92abb19b791e950672e198
 ms.translationtype: HT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 08/17/2020
+ms.lasthandoff: 11/26/2020
 ms.locfileid: "88422287"
 ---
 # <a name="starea-geometry-data-type"></a>STArea(geometry 데이터 형식)
@@ -45,7 +45,7 @@ ms.locfileid: "88422287"
  CLR 반환 형식: **SqlDouble**  
   
 ## <a name="remarks"></a>설명  
- `STArea()`는 **geometry** 인스턴스가 0 및 1차원 도형만 포함하거나 비어 있으면 0을 반환합니다. **geometry** 인스턴스가 초기화되지 않은 경우 `STArea()`는 **NULL**을 반환합니다.  
+ `STArea()`는 **geometry** 인스턴스가 0 및 1차원 도형만 포함하거나 비어 있으면 0을 반환합니다. **geometry** 인스턴스가 초기화되지 않은 경우 `STArea()`는 **NULL** 을 반환합니다.  
   
 ## <a name="examples"></a>예  
   

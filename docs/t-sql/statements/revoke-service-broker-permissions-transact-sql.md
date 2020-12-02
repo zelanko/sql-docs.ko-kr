@@ -23,10 +23,10 @@ ms.assetid: 70f1d938-97e2-48a4-9bc0-8be9f2f2c36d
 author: VanMSFT
 ms.author: vanto
 ms.openlocfilehash: 2d018e710bb272d9daa9eda7099d201b80ea3c1d
-ms.sourcegitcommit: e700497f962e4c2274df16d9e651059b42ff1a10
+ms.sourcegitcommit: c5078791a07330a87a92abb19b791e950672e198
 ms.translationtype: HT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 08/17/2020
+ms.lasthandoff: 11/26/2020
 ms.locfileid: "88357119"
 ---
 # <a name="revoke-service-broker-permissions-transact-sql"></a>REVOKE Service Broker 권한(Transact-SQL)
@@ -81,7 +81,7 @@ REVOKE [ GRANT OPTION FOR ] permission [ ,...n ] ON
  사용 권한을 취소할 서비스를 지정합니다. 범위 한정자 **::** 가 필요합니다.  
   
  *database_principal*  
- 사용 권한을 취소할 보안 주체를 지정합니다. *database_principal*은 다음 중 하나일 수 있습니다.  
+ 사용 권한을 취소할 보안 주체를 지정합니다. *database_principal* 은 다음 중 하나일 수 있습니다.  
   
 -   데이터베이스 사용자  
   
@@ -106,7 +106,7 @@ REVOKE [ GRANT OPTION FOR ] permission [ ,...n ] ON
 >  WITH GRANT OPTION을 부여 받은 사용 권한이 연계되어 취소되면 해당 사용 권한의 GRANT 및 DENY가 모두 취소됩니다.  
   
  AS *revoking_principal*  
- 이 쿼리를 실행하는 보안 주체가 사용 권한을 취소하는 권한을 부여할 수 있는 다른 보안 주체를 지정합니다. *revoking_principal*은 다음 중 하나일 수 있습니다.  
+ 이 쿼리를 실행하는 보안 주체가 사용 권한을 취소하는 권한을 부여할 수 있는 다른 보안 주체를 지정합니다. *revoking_principal* 은 다음 중 하나일 수 있습니다.  
   
 -   데이터베이스 사용자  
   

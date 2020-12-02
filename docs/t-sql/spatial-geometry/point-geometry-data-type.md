@@ -19,10 +19,10 @@ ms.assetid: 7a2e593a-4d4c-4214-b0c5-02d1ac46bc66
 author: MladjoA
 ms.author: mlandzic
 ms.openlocfilehash: f62f8ae1528ca26fa3a2f78ec5132aaa8ed7cf55
-ms.sourcegitcommit: e700497f962e4c2274df16d9e651059b42ff1a10
+ms.sourcegitcommit: c5078791a07330a87a92abb19b791e950672e198
 ms.translationtype: HT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 08/17/2020
+ms.lasthandoff: 11/26/2020
 ms.locfileid: "88416929"
 ---
 # <a name="point-geometry-data-type"></a>Point(geometry 데이터 형식)
@@ -41,10 +41,10 @@ Point ( X, Y, SRID )
 
 ## <a name="arguments"></a>인수
  *X*  
- 생성할 **Point**의 X 좌표를 나타내는 **float** 식입니다.  
+ 생성할 **Point** 의 X 좌표를 나타내는 **float** 식입니다.  
   
  *예*  
- 생성할 **Point**의 Y 좌표를 나타내는 **float** 식입니다.  
+ 생성할 **Point** 의 Y 좌표를 나타내는 **float** 식입니다.  
   
  *SRID*  
  반환하려는 **geometry** 인스턴스의 SRID(Spatial Reference ID)를 나타내는 **int** 식입니다.  

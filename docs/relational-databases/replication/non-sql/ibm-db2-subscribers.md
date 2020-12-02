@@ -18,10 +18,10 @@ ms.assetid: a1a27b1e-45dd-4d7d-b6c0-2b608ed175f6
 author: MashaMSFT
 ms.author: mathoma
 ms.openlocfilehash: e044fa0e368893f0aaa1fe8175b306c2fc04c24b
-ms.sourcegitcommit: e700497f962e4c2274df16d9e651059b42ff1a10
+ms.sourcegitcommit: c5078791a07330a87a92abb19b791e950672e198
 ms.translationtype: HT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 08/17/2020
+ms.lasthandoff: 11/26/2020
 ms.locfileid: "88327069"
 ---
 # <a name="ibm-db2-subscribers"></a>IBM DB2 Subscribers
@@ -34,7 +34,7 @@ ms.locfileid: "88327069"
   
 1.  배포자에 최신 버전의 [!INCLUDE[msCoName](../../../includes/msconame-md.md)] OLE DB Provider for DB2를 설치합니다.  
   
-    -   [!INCLUDE[ssNoVersion_md](../../../includes/ssnoversion-md.md)] Enterprise Edition을 사용하는 경우 [SQL Server 다운로드](https://go.microsoft.com/fwlink/?LinkId=149256) 웹 페이지의 **관련 다운로드** 섹션에서 Microsoft SQL Server Feature Pack의 최신 버전에 대한 링크를 클릭합니다. **Microsoft SQL Server Feature Pack** 웹 페이지에서 **Microsoft OLE DB Provider for DB2**를 검색합니다.  
+    -   [!INCLUDE[ssNoVersion_md](../../../includes/ssnoversion-md.md)] Enterprise Edition을 사용하는 경우 [SQL Server 다운로드](https://go.microsoft.com/fwlink/?LinkId=149256) 웹 페이지의 **관련 다운로드** 섹션에서 Microsoft SQL Server Feature Pack의 최신 버전에 대한 링크를 클릭합니다. **Microsoft SQL Server Feature Pack** 웹 페이지에서 **Microsoft OLE DB Provider for DB2** 를 검색합니다.  
   
     -   [!INCLUDE[ssNoVersion_md](../../../includes/ssnoversion-md.md)] Standard Edition을 사용하는 경우 해당 공급자가 포함된 [!INCLUDE[msCoName](../../../includes/msconame-md.md)] HIS(Host [!INCLUDE[ssISnoversion](../../../includes/ssisnoversion-md.md)]) 서버의 최신 버전을 설치합니다.  
   
@@ -42,11 +42,11 @@ ms.locfileid: "88327069"
   
 2.  구독자에 대한 연결 문자열을 만듭니다. 연결 문자열은 일반적인 텍스트 편집기로 만들 수 있지만 데이터 액세스 도구를 사용하는 것이 좋습니다. 데이터 액세스 도구에서 문자열을 만들려면 다음 작업을 수행하십시오.  
   
-    1.  **시작**, **프로그램**, **Microsoft OLE DB Provider for DB2**를 클릭한 다음 **데이터 액세스 도구**를 클릭합니다.  
+    1.  **시작**, **프로그램**, **Microsoft OLE DB Provider for DB2** 를 클릭한 다음 **데이터 액세스 도구** 를 클릭합니다.  
   
-    2.  **데이터 액세스 도구**의 단계에 따라 DB2 서버에 대한 정보를 제공합니다. 도구의 단계를 모두 완료하면 관련 연결 문자열을 사용하여 유니버설 데이터 링크(UDL)가 생성됩니다. 실제로 복제에서는 UDL이 아닌 연결 문자열을 사용합니다.  
+    2.  **데이터 액세스 도구** 의 단계에 따라 DB2 서버에 대한 정보를 제공합니다. 도구의 단계를 모두 완료하면 관련 연결 문자열을 사용하여 유니버설 데이터 링크(UDL)가 생성됩니다. 실제로 복제에서는 UDL이 아닌 연결 문자열을 사용합니다.  
   
-    3.  연결 문자열에 액세스합니다. 데이터 액세스 도구에서 UDL을 마우스 오른쪽 단추로 클릭하고 **연결 문자열 표시**를 선택합니다.  
+    3.  연결 문자열에 액세스합니다. 데이터 액세스 도구에서 UDL을 마우스 오른쪽 단추로 클릭하고 **연결 문자열 표시** 를 선택합니다.  
   
      다음은 연결 문자열의 예입니다. 이 예에서는 읽기 쉽도록 줄 바꿈을 넣었습니다.  
   
@@ -79,7 +79,7 @@ ms.locfileid: "88327069"
   
      **아티클 스크립트를 만들어서 사용자 지정 생성 스크립트로 제공하려면**  
   
-    1.  DB2 SQL 언어를 사용하여 아티클 스크립트를 만듭니다. 파일의 첫 줄에는 **bypass_translation**만 있어야 합니다.  
+    1.  DB2 SQL 언어를 사용하여 아티클 스크립트를 만듭니다. 파일의 첫 줄에는 **bypass_translation** 만 있어야 합니다.  
   
     2.  *creation_script* 속성에 파일 경로 및 이름을 지정하여 sp_changearticle을 실행합니다.  
   
@@ -151,7 +151,7 @@ ms.locfileid: "88327069"
 ### <a name="data-type-mapping-considerations"></a>데이터 형식 매핑 고려 사항  
  DB2 구독자로 복제 시 데이터 형식 매핑과 관련된 다음 사항을 고려해야 합니다.  
   
--   [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] **char**, **varchar**, **binary** 및 **varbinary**를 각각 DB2의 CHAR, VARCHAR, CHAR FOR BIT DATA 및 VARCHAR FOR BIT DATA에 매핑하면 복제에서 DB2 데이터 형식의 길이를 해당 [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] 형식의 길이와 같게 설정합니다.  
+-   [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] **char**, **varchar**, **binary** 및 **varbinary** 를 각각 DB2의 CHAR, VARCHAR, CHAR FOR BIT DATA 및 VARCHAR FOR BIT DATA에 매핑하면 복제에서 DB2 데이터 형식의 길이를 해당 [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] 형식의 길이와 같게 설정합니다.  
   
      이렇게 하면 DB2의 페이지 크기를 최대 행 크기를 수용할 수 있을 정도로 늘릴 수 있는 한 생성된 테이블을 구독자에서 성공적으로 만들 수 있습니다. DB2 데이터베이스에 액세스하는 데 사용되는 로그인은 테이블을 DB2로 복제할 수 있는 충분한 크기의 테이블 공간에 액세스할 수 있어야 합니다.  
   
@@ -164,7 +164,7 @@ ms.locfileid: "88327069"
   
      큰 개체 열에 대한 적절한 매핑이 없으면 열이 복제되지 않도록 아티클에 대해 열 필터링을 사용해 보십시오. 자세한 내용은 [게시된 데이터 필터링](../../../relational-databases/replication/publish/filter-published-data.md)을 참조하세요.  
   
--   [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] **nchar** 및 **nvarchar**를 DB2의 CHAR 및 VARCHAR로 복제하는 경우 [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] 형식과 DB2 형식에 같은 길이 지정자가 사용됩니다. 그러나 데이터 형식의 길이가 생성된 DB2 테이블에 비해 너무 작을 수도 있습니다.  
+-   [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] **nchar** 및 **nvarchar** 를 DB2의 CHAR 및 VARCHAR로 복제하는 경우 [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] 형식과 DB2 형식에 같은 길이 지정자가 사용됩니다. 그러나 데이터 형식의 길이가 생성된 DB2 테이블에 비해 너무 작을 수도 있습니다.  
   
      일부 DB2 환경에서는 [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] **char** 데이터 항목의 문자가 싱글 바이트로 제한되지는 않으므로 CHAR 또는 VARCHAR 항목의 길이를 정할 때 이를 고려해야 합니다. 또한 필요한 경우 *시프트 인* 및 *시프트 아웃* 문자를 사용해 볼 수 있습니다. **nchar** 열과 **nvarchar** 열이 있는 테이블을 복제하는 경우 사용자 지정 생성 스크립트로 해당 데이터 형식에 보다 큰 최대 길이를 지정할 수도 있습니다. 사용자 지정 생성 스크립트 지정 방법은 이 항목의 "IBM DB2 구독자 구성" 섹션에서 5단계를 참조하십시오.  
   

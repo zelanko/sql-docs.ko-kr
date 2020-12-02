@@ -18,10 +18,10 @@ author: MashaMSFT
 ms.author: mathoma
 monikerRange: =azuresqldb-mi-current||>=sql-server-2016||=sqlallproducts-allversions
 ms.openlocfilehash: 92a2570f2d591f3eb2fb3c2c460c60809bc0f5fb
-ms.sourcegitcommit: e700497f962e4c2274df16d9e651059b42ff1a10
+ms.sourcegitcommit: c5078791a07330a87a92abb19b791e950672e198
 ms.translationtype: HT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 08/17/2020
+ms.lasthandoff: 11/26/2020
 ms.locfileid: "88427925"
 ---
 # <a name="sql-server-replication-publisher-settings-dialog-box"></a>SQL Server 복제 '게시자 설정' 대화 상자
@@ -36,7 +36,7 @@ ms.locfileid: "88427925"
  게시자가 원격 배포자를 사용하는 경우에만 표시됩니다. 복제 모니터에서 원격 배포자에 연결하기 위해 사용하는 연결 속성 및 자격 증명을 보고 변경할 수 있는 **서버에 연결** 대화 상자를 시작하려면 클릭합니다.  
   
  **복제 모니터가 시작될 때 자동으로 연결**  
- 복제 모니터가 자동으로 배포자에 연결하여 대화 상자 상단의 표에 선택된 게시자의 상태 정보를 검색하도록 하려면 선택합니다. 이 확인란의 선택을 취소하면 복제 모니터를 시작한 후 복제 모니터의 왼쪽 창에서 게시자를 마우스 오른쪽 단추로 클릭한 다음 **연결**을 클릭하여 수동으로 연결해야 합니다.  
+ 복제 모니터가 자동으로 배포자에 연결하여 대화 상자 상단의 표에 선택된 게시자의 상태 정보를 검색하도록 하려면 선택합니다. 이 확인란의 선택을 취소하면 복제 모니터를 시작한 후 복제 모니터의 왼쪽 창에서 게시자를 마우스 오른쪽 단추로 클릭한 다음 **연결** 을 클릭하여 수동으로 연결해야 합니다.  
   
  **이 게시자 및 해당 게시의 상태를 자동으로 새로 고침**  
  복제 모니터가 대화 상자 상단의 표에 선택된 게시자의 상태를 자동으로 새로 고치도록 하려면 선택합니다. 이 옵션을 선택하면 복제 모니터가 배포자를 폴링하여 게시자 및 해당 게시에 대한 상태 정보를 얻습니다. 폴링 간격은 **새로 고침 빈도** 옵션으로 설정됩니다. 복제 모니터에서의 새로 고침에 대한 자세한 내용은 [캐싱, 새로 고침 및 복제 모니터 성능](../../relational-databases/replication/monitor/caching-refresh-and-replication-monitor-performance.md)을 참조하세요.  

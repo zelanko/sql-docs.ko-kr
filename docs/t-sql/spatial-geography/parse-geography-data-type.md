@@ -17,10 +17,10 @@ ms.assetid: 21c402fa-fd0f-4d09-a097-49cee0316d4e
 author: MladjoA
 ms.author: mlandzic
 ms.openlocfilehash: 9ba373a279750e7399881edcc072dc3a086ec5e2
-ms.sourcegitcommit: e700497f962e4c2274df16d9e651059b42ff1a10
+ms.sourcegitcommit: c5078791a07330a87a92abb19b791e950672e198
 ms.translationtype: HT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 08/17/2020
+ms.lasthandoff: 11/26/2020
 ms.locfileid: "88360009"
 ---
 # <a name="parse-geography-data-type"></a>Parse(geography 데이터 형식)
@@ -41,7 +41,7 @@ Parse ( 'geography_tagged_text' )
 
 ## <a name="arguments"></a>인수
  *geography_tagged_text*  
- 반환할 **geography** 인스턴스의 WKT 표현입니다. *geography_tagged_text*는 **nvarchar** 식입니다.  
+ 반환할 **geography** 인스턴스의 WKT 표현입니다. *geography_tagged_text* 는 **nvarchar** 식입니다.  
   
 ## <a name="return-types"></a>반환 형식  
  [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 반환 형식: **geography**  
@@ -53,7 +53,7 @@ Parse ( 'geography_tagged_text' )
   
  문자열 'Null'은 Null **geography** 인스턴스로 해석됩니다.  
   
- 이 메서드는 입력에 대척점 끝이 있을 경우 **ArgumentException**을 throw합니다.  
+ 이 메서드는 입력에 대척점 끝이 있을 경우 **ArgumentException** 을 throw합니다.  
   
 ## <a name="examples"></a>예  
  다음 예에서는 `Parse()`를 사용하여 `geography` 인스턴스를 만듭니다.  

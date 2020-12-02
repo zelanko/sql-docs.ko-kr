@@ -22,10 +22,10 @@ author: pmasl
 ms.author: pelopes
 monikerRange: '>=aps-pdw-2016||=azuresqldb-current||=azure-sqldw-latest||>=sql-server-2016||=sqlallproducts-allversions||>=sql-server-linux-2017||=azuresqldb-mi-current'
 ms.openlocfilehash: bdcfe164aa08677887c1c494309bcf1d9af4c6d9
-ms.sourcegitcommit: e700497f962e4c2274df16d9e651059b42ff1a10
+ms.sourcegitcommit: c5078791a07330a87a92abb19b791e950672e198
 ms.translationtype: HT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 08/17/2020
+ms.lasthandoff: 11/26/2020
 ms.locfileid: "88459708"
 ---
 # <a name="len-transact-sql"></a>LEN(Transact-SQL)
@@ -48,10 +48,10 @@ LEN ( string_expression )
 
 ## <a name="arguments"></a>인수
  *string_expression*  
- 계산할 문자열 [식](../../t-sql/language-elements/expressions-transact-sql.md)입니다. *string_expression*은 문자나 이진 데이터의 상수, 변수 또는 열일 수 있습니다.  
+ 계산할 문자열 [식](../../t-sql/language-elements/expressions-transact-sql.md)입니다. *string_expression* 은 문자나 이진 데이터의 상수, 변수 또는 열일 수 있습니다.  
   
 ## <a name="return-types"></a>반환 형식  
- *식*의 데이터 형식이 **varchar(max)** , **nvarchar(max)** 또는 **varbinary(max)** 이면 **bigint**, 그렇지 않으면 **int**입니다.  
+ *식* 의 데이터 형식이 **varchar(max)** , **nvarchar(max)** 또는 **varbinary(max)** 이면 **bigint**, 그렇지 않으면 **int** 입니다.  
   
  SC 데이터 정렬을 사용하는 경우 반환되는 정수 값에서는 UTF-16 서로게이트 쌍이 단일 문자로 계산됩니다. 자세한 내용은 [Collation and Unicode Support](../../relational-databases/collations/collation-and-unicode-support.md)을 참조하세요.  
   

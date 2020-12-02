@@ -12,10 +12,10 @@ ms.assetid: 45091ba2-ea3d-4399-9814-489d812b42cc
 author: chugugrace
 ms.author: chugu
 ms.openlocfilehash: c91be2fffde29a362dd73da41159b4a4658bce3e
-ms.sourcegitcommit: e700497f962e4c2274df16d9e651059b42ff1a10
+ms.sourcegitcommit: c5078791a07330a87a92abb19b791e950672e198
 ms.translationtype: HT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 08/17/2020
+ms.lasthandoff: 11/26/2020
 ms.locfileid: "88449750"
 ---
 # <a name="lesson-1-1---creating-working-folders-and-environment-variables"></a>1-1단원 - 작업 폴더 및 환경 변수 만들기
@@ -39,23 +39,23 @@ ms.locfileid: "88449750"
   
 2.  **로컬 디스크(C:)** 를 클릭합니다.  
   
-3.  **파일** 메뉴에서 **새로 만들기**를 가리키고 **폴더**를 클릭합니다.  
+3.  **파일** 메뉴에서 **새로 만들기** 를 가리키고 **폴더** 를 클릭합니다.  
   
-4.  새 폴더의 이름을 **DeploymentTutorial**로 바꿉니다.  
+4.  새 폴더의 이름을 **DeploymentTutorial** 로 바꿉니다.  
   
 ### <a name="to-create-local-environment-variables"></a>로컬 환경 변수를 만들려면  
   
-1.  **시작** 메뉴에서 **제어판**을 클릭합니다.  
+1.  **시작** 메뉴에서 **제어판** 을 클릭합니다.  
   
-2.  제어판에서 **시스템**을 두 번 클릭합니다.  
+2.  제어판에서 **시스템** 을 두 번 클릭합니다.  
   
-3.  **시스템 속성** 대화 상자에서 **고급** 탭을 클릭한 다음 **환경 변수**를 클릭합니다.  
+3.  **시스템 속성** 대화 상자에서 **고급** 탭을 클릭한 다음 **환경 변수** 를 클릭합니다.  
   
-4.  **환경 변수** 대화 상자의 **시스템 변수** 프레임에서 **새로 만들기**를 클릭합니다.  
+4.  **환경 변수** 대화 상자의 **시스템 변수** 프레임에서 **새로 만들기** 를 클릭합니다.  
   
 5.  **새 시스템 변수** 대화 상자의 **변수 이름** 상자에 **DataTransfer** 를 입력하고 **변수 값** 상자에 **C:\DeploymentTutorial\datatransferconfig.dtsconfig** 를 입력합니다.  
   
-6.  **확인**을 클릭합니다.  
+6.  **확인** 을 클릭합니다.  
   
 7.  **새로 만들기** 를 다시 클릭하고 **변수 이름** 상자에 **LoadXMLData** 를 입력하고 **변수 값** 상자에 **C:\DeploymentTutorial\loadxmldataconfig.dtsconfig** 를 입력합니다.  
   
@@ -67,17 +67,17 @@ ms.locfileid: "88449750"
   
 ### <a name="to-create-destination-environment-variables"></a>대상 환경 변수를 만들려면  
   
-1.  **시작** 메뉴에서 **제어판**을 클릭합니다.  
+1.  **시작** 메뉴에서 **제어판** 을 클릭합니다.  
   
-2.  제어판에서 **시스템**을 두 번 클릭합니다.  
+2.  제어판에서 **시스템** 을 두 번 클릭합니다.  
   
-3.  **시스템 속성** 대화 상자에서 **고급** 탭을 클릭한 다음 **환경 변수**를 클릭합니다.  
+3.  **시스템 속성** 대화 상자에서 **고급** 탭을 클릭한 다음 **환경 변수** 를 클릭합니다.  
   
-4.  **환경 변수** 대화 상자의 **시스템 변수** 프레임에서 **새로 만들기**를 클릭합니다.  
+4.  **환경 변수** 대화 상자의 **시스템 변수** 프레임에서 **새로 만들기** 를 클릭합니다.  
   
 5.  **새 시스템 변수** 대화 상자의 **변수 이름** 상자에 **DataTransfer** 를 입력하고 **변수 값** 상자에 **C:\DeploymentTutorialInstall\datatransferconfig.dtsconfig** 를 입력합니다.  
   
-6.  **확인**을 클릭합니다.  
+6.  **확인** 을 클릭합니다.  
   
 7.  **새로 만들기** 를 다시 클릭하고 **변수 이름** 상자에 **LoadXMLData** 를 입력하고 **변수 값** 상자에 **C:\DeploymentTutorialInstall\loadxmldataconfig.dtsconfig** 를 입력합니다.  
   

@@ -19,10 +19,10 @@ ms.assetid: bbed028c-9cd6-4236-b5e5-8e914a21f2e4
 author: MladjoA
 ms.author: mlandzic
 ms.openlocfilehash: 9baf6072500531d5500aca1cc00e771d1650c9dc
-ms.sourcegitcommit: e700497f962e4c2274df16d9e651059b42ff1a10
+ms.sourcegitcommit: c5078791a07330a87a92abb19b791e950672e198
 ms.translationtype: HT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 08/17/2020
+ms.lasthandoff: 11/26/2020
 ms.locfileid: "88445294"
 ---
 # <a name="stgeomcollfromwkb-geography-data-type"></a>STGeomCollFromWKB(geography 데이터 형식)
@@ -41,7 +41,7 @@ STGeomCollFromWKB ( 'WKB_geometrycollection' , SRID )
 
 ## <a name="arguments"></a>인수
  *WKB_geometrycollection*  
- 반환할 **GeometryCollection** 인스턴스의 WKB 표현입니다. *WKB_geometrycollection*은 **varbinary(max)** 식입니다.  
+ 반환할 **GeometryCollection** 인스턴스의 WKB 표현입니다. *WKB_geometrycollection* 은 **varbinary(max)** 식입니다.  
   
  *SRID*  
  반환할 **GeometryCollection** 인스턴스의 SRID(spatial reference ID)를 나타내는 **int** 식입니다.  
@@ -52,7 +52,7 @@ STGeomCollFromWKB ( 'WKB_geometrycollection' , SRID )
  CLR 반환 형식: **SqlGeography**  
   
 ## <a name="remarks"></a>설명  
- STGeomCollFromWKB()가 반환한 **geography** 인스턴스의 OGC 형식은 해당 WKB 입력에 따라 **GeometryCollection**, **MultiPolygon**, **MultiLineString** 또는 **MultiPoint**로 설정됩니다.  
+ STGeomCollFromWKB()가 반환한 **geography** 인스턴스의 OGC 형식은 해당 WKB 입력에 따라 **GeometryCollection**, **MultiPolygon**, **MultiLineString** 또는 **MultiPoint** 로 설정됩니다.  
   
  이 메서드는 입력이 잘못된 경우 **FormatException** 예외를 throw합니다.  
   

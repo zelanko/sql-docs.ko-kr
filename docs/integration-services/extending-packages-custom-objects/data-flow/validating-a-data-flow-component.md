@@ -23,10 +23,10 @@ ms.assetid: 1a7d5925-b387-4e31-af7f-c7f3c5151040
 author: chugugrace
 ms.author: chugu
 ms.openlocfilehash: 9e50a3f642bc4ecc9782aea699f49e6403d98c23
-ms.sourcegitcommit: e700497f962e4c2274df16d9e651059b42ff1a10
+ms.sourcegitcommit: c5078791a07330a87a92abb19b791e950672e198
 ms.translationtype: HT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 08/17/2020
+ms.lasthandoff: 11/26/2020
 ms.locfileid: "88457184"
 ---
 # <a name="validating-a-data-flow-component"></a>데이터 흐름 구성 요소의 유효성 검사

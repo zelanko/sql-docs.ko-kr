@@ -17,10 +17,10 @@ author: stevestein
 ms.author: sstein
 monikerRange: '>=aps-pdw-2016||=azuresqldb-current||=azure-sqldw-latest||>=sql-server-2016||=sqlallproducts-allversions||>=sql-server-linux-2017||=azuresqldb-mi-current'
 ms.openlocfilehash: 0f306dd339ed7e91a1d54195dc32346c9139c809
-ms.sourcegitcommit: e700497f962e4c2274df16d9e651059b42ff1a10
+ms.sourcegitcommit: c5078791a07330a87a92abb19b791e950672e198
 ms.translationtype: HT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 08/17/2020
+ms.lasthandoff: 11/26/2020
 ms.locfileid: "88460215"
 ---
 # <a name="modify-columns-database-engine"></a>열 수정(데이터베이스 엔진)
@@ -54,13 +54,13 @@ ms.locfileid: "88460215"
   
 #### <a name="to-modify-the-data-type-of-a-column"></a>열의 데이터 형식을 수정하려면  
   
-1.  **개체 탐색기**에서 소수 자릿수를 변경할 열이 포함된 테이블을 마우스 오른쪽 단추로 클릭하고 **디자인**을 클릭합니다.  
+1.  **개체 탐색기** 에서 소수 자릿수를 변경할 열이 포함된 테이블을 마우스 오른쪽 단추로 클릭하고 **디자인** 을 클릭합니다.  
   
 2.  데이터 형식을 수정하려는 열을 선택합니다.  
   
 3.  **열 속성** 탭에서 **데이터 형식** 속성의 표 형태 셀을 클릭하고 드롭다운 목록에서 새 데이터 형식을 선택합니다.  
   
-4.  **파일** 메뉴에서 ‘테이블 이름’ **저장**을 클릭합니다.__  
+4.  **파일** 메뉴에서 ‘테이블 이름’ **저장** 을 클릭합니다.  
   
 > [!NOTE]  
 >  열의 데이터 형식을 수정하면 선택한 데이터 형식에 대해 이미 다른 길이를 지정했더라도 테이블 디자이너에서 해당 형식의 기본 길이가 적용됩니다. 데이터 형식을 지정한 후에 항상 데이터 형식 길이를 원하는 값으로 설정해야 합니다.  
@@ -72,11 +72,11 @@ ms.locfileid: "88460215"
   
 #### <a name="to-modify-the-data-type-of-a-column"></a>열의 데이터 형식을 수정하려면  
   
-1.  **개체 탐색기**에서 [!INCLUDE[ssDE](../../includes/ssde-md.md)]인스턴스에 연결합니다.  
+1.  **개체 탐색기** 에서 [!INCLUDE[ssDE](../../includes/ssde-md.md)]인스턴스에 연결합니다.  
   
-2.  표준 도구 모음에서 **새 쿼리**를 클릭합니다.  
+2.  표준 도구 모음에서 **새 쿼리** 를 클릭합니다.  
   
-3.  다음 예를 복사하여 쿼리 창에 붙여 넣고 **실행**을 클릭합니다.  
+3.  다음 예를 복사하여 쿼리 창에 붙여 넣고 **실행** 을 클릭합니다.  
   
     ```sql  
     CREATE TABLE dbo.doc_exy (column_a INT ) ;  

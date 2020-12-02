@@ -19,16 +19,16 @@ ms.assetid: 6b04f5a7-2e69-4d34-901e-b61ba6ca9c14
 author: MladjoA
 ms.author: mlandzic
 ms.openlocfilehash: bc6f88b25a67e3d8904ea7823324111e60576ab7
-ms.sourcegitcommit: e700497f962e4c2274df16d9e651059b42ff1a10
+ms.sourcegitcommit: c5078791a07330a87a92abb19b791e950672e198
 ms.translationtype: HT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 08/17/2020
+ms.lasthandoff: 11/26/2020
 ms.locfileid: "88306139"
 ---
 # <a name="stsrid-geography-data-type"></a>STSrid(geography 데이터 형식)
 [!INCLUDE [SQL Server SQL Database](../../includes/applies-to-version/sql-asdb.md)]
 
-  **STSrid**는 인스턴스의 SRID(Spatial Reference Identifier)를 나타내는 정수입니다.  
+  **STSrid** 는 인스턴스의 SRID(Spatial Reference Identifier)를 나타내는 정수입니다.  
   
 ## <a name="syntax"></a>구문  
   

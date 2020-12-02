@@ -25,10 +25,10 @@ author: julieMSFT
 ms.author: jrasnick
 monikerRange: =azuresqldb-mi-current||>=sql-server-2016||=sqlallproducts-allversions||>=sql-server-linux-2017
 ms.openlocfilehash: a10994ac46bc1070304823dd5ae698a5b94c017d
-ms.sourcegitcommit: e700497f962e4c2274df16d9e651059b42ff1a10
+ms.sourcegitcommit: c5078791a07330a87a92abb19b791e950672e198
 ms.translationtype: HT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 08/17/2020
+ms.lasthandoff: 11/26/2020
 ms.locfileid: "88445653"
 ---
 # <a name="opendatasource-transact-sql"></a>OPENDATASOURCE(Transact-SQL)
@@ -48,7 +48,7 @@ OPENDATASOURCE ( 'provider_name', 'init_string' )
 
 ## <a name="arguments"></a>인수
  '*provider_name*'  
- 데이터 원본에 액세스하는 데 사용하는 OLE DB 공급자의 PROGID로 등록된 이름입니다. *provider_name*은 기본값이 없는 **char** 데이터 형식입니다.  
+ 데이터 원본에 액세스하는 데 사용하는 OLE DB 공급자의 PROGID로 등록된 이름입니다. *provider_name* 은 기본값이 없는 **char** 데이터 형식입니다.  
 
  > [!IMPORTANT]
  > 이전의 Microsoft OLE DB Provider for SQL Server(SQLOLEDB) 및 SQL Server Native Client OLE DB 공급자(SQLNCLI)는 계속 사용되지 않으며, 새로운 개발 작업에 사용하지 않는 것이 좋습니다. 대신 최신 서버 기능으로 업데이트되는 새로운 [Microsoft OLE DB Driver for SQL Server](../../connect/oledb/oledb-driver-for-sql-server.md)(MSOLEDBSQL)를 사용하세요.

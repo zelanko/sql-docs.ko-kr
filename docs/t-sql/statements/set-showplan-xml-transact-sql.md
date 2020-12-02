@@ -26,10 +26,10 @@ author: MightyPen
 ms.author: genemi
 monikerRange: =azuresqldb-current||=azure-sqldw-latest||>=sql-server-2016||=sqlallproducts-allversions||>=sql-server-linux-2017||=azuresqldb-mi-current
 ms.openlocfilehash: c9ba02ca79db2e79f14483e632eaa6fa77c3d4a0
-ms.sourcegitcommit: e700497f962e4c2274df16d9e651059b42ff1a10
+ms.sourcegitcommit: c5078791a07330a87a92abb19b791e950672e198
 ms.translationtype: HT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 08/17/2020
+ms.lasthandoff: 11/26/2020
 ms.locfileid: "88304954"
 ---
 # <a name="set-showplan_xml-transact-sql"></a>SET SHOWPLAN_XML(Transact-SQL)
@@ -57,14 +57,14 @@ SET SHOWPLAN_XML이 ON이면 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-m
 SET SHOWPLAN_XML은 **sqlcmd** 유틸리티 같은 애플리케이션에 대한 출력을 **nvarchar(max)** 형식으로 반환합니다. 여기서 XML 출력은 이후에 다른 도구가 쿼리 계획 정보를 표시하고 처리하는 데 사용합니다.
 
 > [!NOTE]
-> **sys.dm_exec_query_plan** 동적 관리 뷰는 SET SHOWPLAN XML과 같은 정보를 **xml** 데이터 형식으로 반환합니다. 이 정보는 **sys.dm_exec_query_plan**의 **query_plan** 열에서 반환됩니다. 자세한 내용은 [sys.dm_exec_query_plan&#40;Transact-SQL&#41;](../../relational-databases/system-dynamic-management-views/sys-dm-exec-query-plan-transact-sql.md)을 참조하세요.
+> **sys.dm_exec_query_plan** 동적 관리 뷰는 SET SHOWPLAN XML과 같은 정보를 **xml** 데이터 형식으로 반환합니다. 이 정보는 **sys.dm_exec_query_plan** 의 **query_plan** 열에서 반환됩니다. 자세한 내용은 [sys.dm_exec_query_plan&#40;Transact-SQL&#41;](../../relational-databases/system-dynamic-management-views/sys-dm-exec-query-plan-transact-sql.md)을 참조하세요.
 
 SET SHOWPLAN_XML은 저장 프로시저 내부에서 지정할 수 없으며 일괄 처리에서 유일한 문이어야 합니다.
 
 SET SHOWPLAN_XML은 XML 문서 집합으로 정보를 반환합니다. SET SHOWPLAN_XML ON 문 뒤에 오는 각 일괄 처리는 단일 문서로 출력에 반영됩니다. 각 문서에는 일괄 처리에 있는 문의 텍스트가 먼저 오고 그 뒤에 실행 단계에 대한 세부 정보가 옵니다. 문서는 예상 비용, 행 수, 액세스한 인덱스, 수행한 연산자 유형, 조인 순서 및 실행 계획에 대한 자세한 정보를 보여 줍니다.
 
 > [!NOTE]
-> [!INCLUDE[ssManStudioFull](../../includes/ssmanstudiofull-md.md)]에서 **실제 실행 계획 포함**을 선택하면 이 SET 옵션에서 XML 실행 계획 출력을 생성하지 않습니다. 이 SET 옵션을 사용하기 전에 **실제 실행 계획 포함** 단추의 선택을 취소하세요.
+> [!INCLUDE[ssManStudioFull](../../includes/ssmanstudiofull-md.md)]에서 **실제 실행 계획 포함** 을 선택하면 이 SET 옵션에서 XML 실행 계획 출력을 생성하지 않습니다. 이 SET 옵션을 사용하기 전에 **실제 실행 계획 포함** 단추의 선택을 취소하세요.
 
 ### <a name="location-of-showplan-output"></a>실행 계획 출력 위치
 

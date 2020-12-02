@@ -14,17 +14,17 @@ ms.assetid: 89cb0055-5262-447f-8464-7203d4caba78
 author: MikeRayMSFT
 ms.author: mikeray
 ms.openlocfilehash: f7533366a28517fcc2fdb8ca5c2e4ad0c0dd01c5
-ms.sourcegitcommit: e700497f962e4c2274df16d9e651059b42ff1a10
+ms.sourcegitcommit: c5078791a07330a87a92abb19b791e950672e198
 ms.translationtype: HT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 08/17/2020
+ms.lasthandoff: 11/26/2020
 ms.locfileid: "88424055"
 ---
 # <a name="job-activity-monitor-filter-settings"></a>작업 활동 모니터(필터 설정)
  [!INCLUDE [SQL Server](../../includes/applies-to-version/sqlserver.md)]
   이 페이지를 사용하여 작업 활동 모니터에 표시되는 행 수를 줄일 수 있습니다. 하나 또는 여러 개의 사용 가능한 상자에 조건을 입력하여 지정한 값을 만족하는 행만 표시합니다. **상태** 또는 **차단 유형** 과 같은 일부 상자에서는 드롭다운 목록으로 한정된 수의 가능한 값을 제공합니다. **애플리케이션** 과 같은 기타 상자에서는 어떤 값이든 원하는 만큼 쉼표로 구분된 목록으로 입력할 수 있습니다. 도구 모음 아이콘을 사용하면 범주별 또는 사전순으로 사용 가능한 상자를 정렬할 수 있습니다. 각각에 대해 간단한 설명을 표시할 조건을 클릭합니다.  
   
- 작업 활동 모니터를 필터링하려면 원하는 개수만큼 필터 조건을 제공하고 **필터 적용**을 클릭한 다음 **확인**을 클릭합니다.  
+ 작업 활동 모니터를 필터링하려면 원하는 개수만큼 필터 조건을 제공하고 **필터 적용** 을 클릭한 다음 **확인** 을 클릭합니다.  
   
 ## <a name="all-jobs"></a>모든 작업  
  이 필터 조건 그룹은 작업 활동 모니터를 필터링할 때 사용할 수 있습니다.  
@@ -61,7 +61,7 @@ ms.locfileid: "88424055"
  이름이 지정되지 않은 이 상자에서는 선택된 조건에 대한 간단한 설명을 제공합니다.  
   
  **필터 적용**  
- 필터를 적용하려면 **Applyfilter**를 클릭한 다음, **확인**을 클릭합니다. **FilterSettings** 대화 상자의 필터 설정을 유지하되 적용하지 않으려면 **Applyfilter**의 선택을 취소한 다음, **확인**을 클릭하여 모든 행을 표시합니다.  
+ 필터를 적용하려면 **Applyfilter** 를 클릭한 다음, **확인** 을 클릭합니다. **FilterSettings** 대화 상자의 필터 설정을 유지하되 적용하지 않으려면 **Applyfilter** 의 선택을 취소한 다음, **확인** 을 클릭하여 모든 행을 표시합니다.  
   
  **지우기**  
  필터 설정을 기본 설정으로 되돌립니다.  

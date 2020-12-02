@@ -19,10 +19,10 @@ ms.assetid: ba627d4d-41f4-49fc-a921-f534cde67770
 author: chugugrace
 ms.author: chugu
 ms.openlocfilehash: ae61fcfcec740ee26a7fc2a57c0e03b0141e6e10
-ms.sourcegitcommit: e700497f962e4c2274df16d9e651059b42ff1a10
+ms.sourcegitcommit: c5078791a07330a87a92abb19b791e950672e198
 ms.translationtype: HT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 08/17/2020
+ms.lasthandoff: 11/26/2020
 ms.locfileid: "88425945"
 ---
 # <a name="sql-server-compact-edition-connection-manager"></a>SQL Server Compact Edition 연결 관리자
@@ -38,7 +38,7 @@ ms.locfileid: "88425945"
 ## <a name="configuration-the-sql-server-compact-edition-connection-manager"></a>SQL Server Compact Edition 연결 관리자 구성  
  패키지에 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] Compact 연결 관리자를 추가하면 [!INCLUDE[ssISnoversion](../../includes/ssisnoversion-md.md)] 에서 런타임에 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] Compact 연결로 확인되는 연결 관리자를 만들고 연결 관리자 속성을 설정하며 패키지의 **Connections** 컬렉션에 연결 관리자를 추가합니다.  
   
- 연결 관리자의 **ConnectionManagerType** 속성이 **SQLMOBILE**로 설정됩니다.  
+ 연결 관리자의 **ConnectionManagerType** 속성이 **SQLMOBILE** 로 설정됩니다.  
   
  다음과 같은 방법으로 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] Compact 연결 관리자를 구성할 수 있습니다.  
   
@@ -97,7 +97,7 @@ ms.locfileid: "88425945"
  [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] Compact 데이터베이스의 최대 크기(MB)를 지정합니다.  
   
  **모드**  
- [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] Compact 데이터베이스를 열 파일 모드를 지정합니다. 이 속성의 기본값은 **읽기/쓰기**입니다.  
+ [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] Compact 데이터베이스를 열 파일 모드를 지정합니다. 이 속성의 기본값은 **읽기/쓰기** 입니다.  
   
  다음 표에서는 모드 옵션의 4가지 값에 대해 설명합니다.  
   
@@ -109,7 +109,7 @@ ms.locfileid: "88425945"
 |**공유 읽기**|다른 사용자가 데이터베이스를 동시에 읽을 수 있도록 지정합니다.|  
   
  **Persist Security Info**  
- 보안 정보를 연결 문자열의 일부로 반환할지 여부를 지정합니다. 이 옵션의 기본값은 **False**입니다.  
+ 보안 정보를 연결 문자열의 일부로 반환할지 여부를 지정합니다. 이 옵션의 기본값은 **False** 입니다.  
   
  **임시 파일 디렉터리**  
  [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] Compact 임시 데이터베이스 파일의 위치를 지정합니다.  

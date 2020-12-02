@@ -24,10 +24,10 @@ author: julieMSFT
 ms.author: jrasnick
 monikerRange: '>=aps-pdw-2016||=azuresqldb-current||=azure-sqldw-latest||>=sql-server-2016||=sqlallproducts-allversions||>=sql-server-linux-2017||=azuresqldb-mi-current'
 ms.openlocfilehash: c4d2ee21a4b2c2975fcead1e883cb28459c608dd
-ms.sourcegitcommit: e700497f962e4c2274df16d9e651059b42ff1a10
+ms.sourcegitcommit: c5078791a07330a87a92abb19b791e950672e198
 ms.translationtype: HT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 08/17/2020
+ms.lasthandoff: 11/26/2020
 ms.locfileid: "88363379"
 ---
 # <a name="patindex-transact-sql"></a>PATINDEX(Transact-SQL)
@@ -47,19 +47,19 @@ PATINDEX ( '%pattern%' , expression )
 
 ## <a name="arguments"></a>인수
  *pattern*  
- 찾을 시퀀스가 포함된 문자 식 입니다. 와일드카드 문자를 사용할 수 있습니다. 그러나 % 문자가 앞에 오고 그 다음에 *패턴*이 와야 합니다. 단, 첫 문자 또는 마지막 문자를 검색하는 경우는 예외입니다. *패턴*은 문자열 데이터 형식 범주의 식입니다. *패턴*은 8,000자로 제한됩니다.
+ 찾을 시퀀스가 포함된 문자 식 입니다. 와일드카드 문자를 사용할 수 있습니다. 그러나 % 문자가 앞에 오고 그 다음에 *패턴* 이 와야 합니다. 단, 첫 문자 또는 마지막 문자를 검색하는 경우는 예외입니다. *패턴* 은 문자열 데이터 형식 범주의 식입니다. *패턴* 은 8,000자로 제한됩니다.
 
  > [!NOTE]
  > 기존 정규식은 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]에서 기본적으로 지원되지 않지만 다양한 와일드카드 식을 사용하여 비슷한 복합 패턴 일치를 실행할 수 있습니다. 와일드카드 구문에 대한 자세한 내용은 [문자열 연산자](../../t-sql/language-elements/string-operators-transact-sql.md) 문서를 참조하세요.
   
  *expression*  
- 일반적으로 지정된 패턴이 검색되는 열을 나타내는 [식](../../t-sql/language-elements/expressions-transact-sql.md)입니다. *식*은 문자열 데이터 형식 범주입니다.  
+ 일반적으로 지정된 패턴이 검색되는 열을 나타내는 [식](../../t-sql/language-elements/expressions-transact-sql.md)입니다. *식* 은 문자열 데이터 형식 범주입니다.  
   
 ## <a name="return-types"></a>반환 형식  
-*식*의 데이터 형식이 **varchar(max)** 또는 **nvarchar(max)** 이면 **bigint**, 그렇지 않으면 **int**입니다.  
+*식* 의 데이터 형식이 **varchar(max)** 또는 **nvarchar(max)** 이면 **bigint**, 그렇지 않으면 **int** 입니다.  
   
 ## <a name="remarks"></a>설명  
-*패턴* 또는 *식*이 NULL인 경우 PATINDEX에서 NULL을 반환합니다.  
+*패턴* 또는 *식* 이 NULL인 경우 PATINDEX에서 NULL을 반환합니다.  
  
 PATINDEX의 시작 위치는 1입니다.
  

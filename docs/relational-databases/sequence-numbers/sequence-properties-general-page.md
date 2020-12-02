@@ -15,10 +15,10 @@ author: MashaMSFT
 ms.author: mathoma
 monikerRange: =azuresqldb-current||>=sql-server-2016||=sqlallproducts-allversions||>=sql-server-linux-2017||=azuresqldb-mi-current
 ms.openlocfilehash: c85265a8461fae5060ac7c8cdbffaf38ce8e9ee3
-ms.sourcegitcommit: e700497f962e4c2274df16d9e651059b42ff1a10
+ms.sourcegitcommit: c5078791a07330a87a92abb19b791e950672e198
 ms.translationtype: HT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 08/17/2020
+ms.lasthandoff: 11/26/2020
 ms.locfileid: "88325848"
 ---
 # <a name="sequence-properties-general-page"></a>시퀀스 속성(일반 페이지)
@@ -29,7 +29,7 @@ ms.locfileid: "88325848"
   
  **CREATE SEQUENCE** 및 **NEXT VALUE FOR** 함수를 함께 사용하는 시나리오에 대한 자세한 내용은 [시퀀스 번호](../../relational-databases/sequence-numbers/sequence-numbers.md)를 참조하세요.  
   
- 이 페이지는 개체 탐색기에서 **시퀀스** 를 마우스 오른쪽 단추로 클릭한 다음 **새 시퀀스**를 클릭하거나 기존 시퀀스를 마우스 오른쪽 단추로 클릭한 다음 **속성**을 클릭하는 두 가지 방법으로 액세스할 수 있습니다. 기존 시퀀스를 마우스 오른쪽 단추로 클릭하고 **속성**을 클릭한 경우에는 옵션을 편집할 수 없습니다. 시퀀스 옵션을 변경하려면 [ALTER SEQUENCE&#40;Transact-SQL&#41;](../../t-sql/statements/alter-sequence-transact-sql.md) 문을 사용하거나 시퀀스 개체를 삭제한 후 다시 만듭니다.  
+ 이 페이지는 개체 탐색기에서 **시퀀스** 를 마우스 오른쪽 단추로 클릭한 다음 **새 시퀀스** 를 클릭하거나 기존 시퀀스를 마우스 오른쪽 단추로 클릭한 다음 **속성** 을 클릭하는 두 가지 방법으로 액세스할 수 있습니다. 기존 시퀀스를 마우스 오른쪽 단추로 클릭하고 **속성** 을 클릭한 경우에는 옵션을 편집할 수 없습니다. 시퀀스 옵션을 변경하려면 [ALTER SEQUENCE&#40;Transact-SQL&#41;](../../t-sql/statements/alter-sequence-transact-sql.md) 문을 사용하거나 시퀀스 개체를 삭제한 후 다시 만듭니다.  
   
 ## <a name="options"></a>옵션  
  **시퀀스 이름**  
@@ -87,7 +87,7 @@ ms.locfileid: "88325848"
  CREATE SEQUENCE 옵션에 대한 자세한 내용은 [CREATE SEQUENCE&#40;Transact-SQL&#41;](../../t-sql/statements/create-sequence-transact-sql.md)를 참조하세요.  
   
 ## <a name="permissions"></a>사용 권한  
- SCHEMA에 대한 **CREATE SEQUENCE**, **ALTER**또는 **CONTROL** 권한이 필요합니다.  
+ SCHEMA에 대한 **CREATE SEQUENCE**, **ALTER** 또는 **CONTROL** 권한이 필요합니다.  
   
 ## <a name="see-also"></a>관련 항목  
  [sys.sequences&#40;Transact-SQL&#41;](../../relational-databases/system-catalog-views/sys-sequences-transact-sql.md)  

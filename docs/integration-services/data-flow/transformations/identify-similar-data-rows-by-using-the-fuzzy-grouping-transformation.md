@@ -17,10 +17,10 @@ ms.assetid: ffcb41a6-e23d-49ea-8c32-ac980e3dc495
 author: chugugrace
 ms.author: chugu
 ms.openlocfilehash: 09ef796494f084fda4cbe27d5fc0ac33b2cfb402
-ms.sourcegitcommit: e700497f962e4c2274df16d9e651059b42ff1a10
+ms.sourcegitcommit: c5078791a07330a87a92abb19b791e950672e198
 ms.translationtype: HT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 08/17/2020
+ms.lasthandoff: 11/26/2020
 ms.locfileid: "88430665"
 ---
 # <a name="identify-similar-data-rows-with-the-fuzzy-grouping-transformation"></a>유사 항목 그룹화 변환을 사용하여 유사한 데이터 행 식별
@@ -36,7 +36,7 @@ ms.locfileid: "88430665"
   
 2.  솔루션 탐색기에서 패키지를 두 번 클릭하여 엽니다.  
   
-3.  **데이터 흐름** 탭을 클릭한 다음 **도구 상자**에서 유사 항목 그룹화 변환을 디자인 화면으로 끌어 옵니다.  
+3.  **데이터 흐름** 탭을 클릭한 다음 **도구 상자** 에서 유사 항목 그룹화 변환을 디자인 화면으로 끌어 옵니다.  
   
 4.  데이터 원본이나 이전 변환에서 연결선을 유사 항목 그룹화 변환으로 끌어서 유사 항목 그룹화 변환을 데이터 흐름에 연결합니다.  
   
@@ -80,7 +80,7 @@ ms.locfileid: "88430665"
   
 18. 선택적으로 데이터의 구분 기호를 무시하려면 토큰 구분 기호 확인란의 선택을 취소합니다.  
   
-19. **확인**을 클릭합니다.  
+19. **확인** 을 클릭합니다.  
   
 20. 업데이트된 패키지를 저장하려면 **파일** 메뉴에서 **선택한 항목 저장** 을 클릭합니다.  
   

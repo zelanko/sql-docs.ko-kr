@@ -23,10 +23,10 @@ ms.assetid: b0d8769c-7598-4f97-8162-ace5f182b5bc
 author: MikeRayMSFT
 ms.author: mikeray
 ms.openlocfilehash: b7b067831ca56d3dc5797aa68e4810a7e9969946
-ms.sourcegitcommit: e700497f962e4c2274df16d9e651059b42ff1a10
+ms.sourcegitcommit: c5078791a07330a87a92abb19b791e950672e198
 ms.translationtype: HT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 08/17/2020
+ms.lasthandoff: 11/26/2020
 ms.locfileid: "88459966"
 ---
 # <a name="ntext-text-and-image-transact-sql"></a>ntext, text 및 image(Transact-SQL)
@@ -38,7 +38,7 @@ ms.locfileid: "88459966"
   
 ## <a name="arguments"></a>인수
 **ntext**  
-최대 문자열 길이가 2^30 - 1(1,073,741,823)바이트인 가변 길이 유니코드 데이터입니다. 바이트 단위의 스토리지 크기는 입력된 문자열 길이의 두 배입니다. **ntext**의 ISO 동의어는 **national text**입니다.
+최대 문자열 길이가 2^30 - 1(1,073,741,823)바이트인 가변 길이 유니코드 데이터입니다. 바이트 단위의 스토리지 크기는 입력된 문자열 길이의 두 배입니다. **ntext** 의 ISO 동의어는 **national text** 입니다.
   
 **text**  
 서버의 코드 페이지에 있는 최대 문자열 길이가 2^31 - 1(2,147,483,647)인 비유니코드 가변 길이 데이터입니다. 서버 코드 페이지에서 더블바이트 문자를 사용하더라도 스토리지 크기는 그대로 2,147,483,647바이트입니다. 문자열에 따라 스토리지 크기가 2,147,483,647바이트보다 작을 수도 있습니다.

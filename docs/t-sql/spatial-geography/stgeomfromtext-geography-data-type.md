@@ -20,10 +20,10 @@ ms.assetid: 3717987b-77d8-4ccf-a1db-5a8016ac1083
 author: MladjoA
 ms.author: mlandzic
 ms.openlocfilehash: 584b34c02bde76293654b0a0bef8c006ad3c38b1
-ms.sourcegitcommit: e700497f962e4c2274df16d9e651059b42ff1a10
+ms.sourcegitcommit: c5078791a07330a87a92abb19b791e950672e198
 ms.translationtype: HT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 08/17/2020
+ms.lasthandoff: 11/26/2020
 ms.locfileid: "88445305"
 ---
 # <a name="stgeomfromtext-geography-data-type"></a>STGeomFromText(geography 데이터 형식)
@@ -44,7 +44,7 @@ STGeomFromText ( 'geography_tagged_text' , SRID )
 
 ## <a name="arguments"></a>인수
  *geography_tagged_text*  
- 반환할 **geography** 인스턴스의 WKT 표현입니다. *geography_tagged_text*는 **nvarchar(max)** 식입니다.  
+ 반환할 **geography** 인스턴스의 WKT 표현입니다. *geography_tagged_text* 는 **nvarchar(max)** 식입니다.  
   
  *SRID*  
  반환할 **geography** 인스턴스의 SRID(Spatial Reference ID)를 나타내는 **int** 식입니다.  
@@ -57,7 +57,7 @@ STGeomFromText ( 'geography_tagged_text' , SRID )
 ## <a name="remarks"></a>설명  
  STGeomFromText()에 의해 반환되는 **geography** 인스턴스의 OGC 형식은 해당 WKT 입력으로 설정됩니다.  
   
- 이 메서드는 입력에 대척점 끝이 있을 경우 **ArgumentException**을 throw합니다.  
+ 이 메서드는 입력에 대척점 끝이 있을 경우 **ArgumentException** 을 throw합니다.  
   
 ## <a name="examples"></a>예  
  다음 예에서는 `STGeomFromText()`를 사용하여 `geography` 인스턴스를 만듭니다.  

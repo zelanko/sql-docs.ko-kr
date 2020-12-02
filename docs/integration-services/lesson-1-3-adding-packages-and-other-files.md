@@ -12,10 +12,10 @@ ms.assetid: a7e6ec9c-d31d-4613-9525-8947a7b358f7
 author: chugugrace
 ms.author: chugu
 ms.openlocfilehash: 38d062e21ec2bd7eb0e9314f5e108ea785e5428a
-ms.sourcegitcommit: e700497f962e4c2274df16d9e651059b42ff1a10
+ms.sourcegitcommit: c5078791a07330a87a92abb19b791e950672e198
 ms.translationtype: HT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 08/17/2020
+ms.lasthandoff: 11/26/2020
 ms.locfileid: "88449723"
 ---
 # <a name="lesson-1-3---adding-packages-and-other-files"></a>1-3단원 - 패키지 및 기타 파일 추가
@@ -48,29 +48,29 @@ ms.locfileid: "88449723"
   
 ### <a name="to-add-packages-to-the-deployment-tutorial-project"></a>Deployment Tutorial 프로젝트에 패키지를 추가하려면  
   
-1.  [!INCLUDE[ssBIDevStudioFull](../includes/ssbidevstudiofull-md.md)] 를 아직 열지 않은 경우 **시작**을 클릭하고 **모든 프로그램**, **Microsoft SQL Server**를 차례로 가리킨 다음 **SQL Server Data Tools**를 클릭합니다.  
+1.  [!INCLUDE[ssBIDevStudioFull](../includes/ssbidevstudiofull-md.md)] 를 아직 열지 않은 경우 **시작** 을 클릭하고 **모든 프로그램**, **Microsoft SQL Server** 를 차례로 가리킨 다음 **SQL Server Data Tools** 를 클릭합니다.  
   
-2.  **파일** 메뉴에서 **열기**, **프로젝트/솔루션**, **Deployment Tutorial** 폴더, **열기**를 차례로 클릭한 다음 **Deployment Tutorial.sln**을 두 번 클릭합니다.  
+2.  **파일** 메뉴에서 **열기**, **프로젝트/솔루션**, **Deployment Tutorial** 폴더, **열기** 를 차례로 클릭한 다음 **Deployment Tutorial.sln** 을 두 번 클릭합니다.  
   
-3.  솔루션 탐색기에서 Deployment Tutorial을 마우스 오른쪽 단추로 클릭하고 **추가**를 클릭한 다음 **기존 패키지**를 클릭합니다.  
+3.  솔루션 탐색기에서 Deployment Tutorial을 마우스 오른쪽 단추로 클릭하고 **추가** 를 클릭한 다음 **기존 패키지** 를 클릭합니다.  
   
-4.  **기존 패키지의 복사본 추가** 대화 상자의 **패키지 위치**에서 **파일 시스템**을 선택합니다.  
+4.  **기존 패키지의 복사본 추가** 대화 상자의 **패키지 위치** 에서 **파일 시스템** 을 선택합니다.  
   
-5.  찾아보기 단추 **(...)** 를 클릭하고 C:\Program Files\Microsoft SQL Server\100\Samples\Integration ServicesTutorial\Deploying Packages\Completed Packages로 이동하여 **DataTransfer.dtsx**를 선택한 다음, **열기**를 클릭합니다.  
+5.  찾아보기 단추 **(...)** 를 클릭하고 C:\Program Files\Microsoft SQL Server\100\Samples\Integration ServicesTutorial\Deploying Packages\Completed Packages로 이동하여 **DataTransfer.dtsx** 를 선택한 다음, **열기** 를 클릭합니다.  
   
-6.  **확인**을 클릭합니다.  
+6.  **확인** 을 클릭합니다.  
   
 7.  3-6단계를 반복하되 이번에는 C:\Program Files\Microsoft SQL Server\100\Samples\Integration Services\Tutorial\Deploying Packages\Completed Packages에 있는 LoadXMLData.dtsx를 추가합니다.  
   
 ### <a name="to-add-ancillary-files-to-the-deployment-tutorial-project"></a>Deployment Tutorial 프로젝트에 보조 파일을 추가하려면  
   
-1.  솔루션 탐색기에서 Deployment Tutorial을 마우스 오른쪽 단추로 클릭하고 **추가**를 클릭한 다음 **기존 항목**을 클릭합니다.  
+1.  솔루션 탐색기에서 Deployment Tutorial을 마우스 오른쪽 단추로 클릭하고 **추가** 를 클릭한 다음 **기존 항목** 을 클릭합니다.  
   
-2.  **기존 항목 추가 - Deployment Tutorial** 대화 상자에서 C:\Program Files\Microsoft SQL Server\100\Samples\Integration Services\Tutorial\Deployment Packages\Sample Data로 이동하여 orders.xml, orders.xsd 및 NewCustomers.txt를 선택한 다음 **추가**를 클릭합니다.  
+2.  **기존 항목 추가 - Deployment Tutorial** 대화 상자에서 C:\Program Files\Microsoft SQL Server\100\Samples\Integration Services\Tutorial\Deployment Packages\Sample Data로 이동하여 orders.xml, orders.xsd 및 NewCustomers.txt를 선택한 다음 **추가** 를 클릭합니다.  
   
-3.  **기존 항목 추가 - Deployment Tutorial** 대화 상자에서 C:\Program Files\Microsoft SQL Server\100\Samples\Integration Services\Tutorial\Deployment Packages\\로 이동하여 Readme.txt를 선택한 다음 **추가**를 클릭합니다.  
+3.  **기존 항목 추가 - Deployment Tutorial** 대화 상자에서 C:\Program Files\Microsoft SQL Server\100\Samples\Integration Services\Tutorial\Deployment Packages\\로 이동하여 Readme.txt를 선택한 다음 **추가** 를 클릭합니다.  
   
-4.  파일 메뉴에서 **모두 저장**을 클릭합니다.  
+4.  파일 메뉴에서 **모두 저장** 을 클릭합니다.  
   
 ## <a name="next-task-in-lesson"></a>단원의 다음 태스크  
 [4단계: 패키지 구성 추가](../integration-services/lesson-1-4-adding-package-configurations.md)  

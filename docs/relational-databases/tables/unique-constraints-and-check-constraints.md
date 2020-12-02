@@ -16,10 +16,10 @@ author: stevestein
 ms.author: sstein
 monikerRange: =azuresqldb-current||>=sql-server-2016||=sqlallproducts-allversions||>=sql-server-linux-2017||=azuresqldb-mi-current
 ms.openlocfilehash: efd7fb070a81715b88d6949fac47c972bdd0643d
-ms.sourcegitcommit: e700497f962e4c2274df16d9e651059b42ff1a10
+ms.sourcegitcommit: c5078791a07330a87a92abb19b791e950672e198
 ms.translationtype: HT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 08/17/2020
+ms.lasthandoff: 11/26/2020
 ms.locfileid: "88418967"
 ---
 # <a name="unique-constraints-and-check-constraints"></a>UNIQUE 제약 조건 및 CHECK 제약 조건
@@ -55,7 +55,7 @@ ms.locfileid: "88418967"
 >  제약 조건에 암시적 또는 명시적 데이터 형식 변환이 포함된 경우 특정 작업이 실패할 수 있습니다. 예를 들어 파티션 전환의 원본인 테이블에 정의된 이러한 제약 조건으로 인해 ALTER TABLE...SWITCH 작업이 실패할 수 있습니다. 제약 조건 정의에서 데이터 형식을 변환하지 마세요.  
   
 ### <a name="limitations-of-check-constraints"></a>CHECK 제약 조건의 제한 사항  
- CHECK 제약 조건은 FALSE로 평가되는 값을 거부합니다. Null 값은 UNKNOWN으로 평가되므로 식에 Null 값이 있으면 제약 조건이 무시됩니다. 예를 들어 **MyColumn=10** 과 같이 **MyColumn** 에 값 10만 포함할 수 있도록 **int** 열**MyColumn**에 대한 제약 조건을 지정한다고 가정합니다. **MyColumn**에 NULL 값을 삽입할 경우 [!INCLUDE[ssDE](../../includes/ssde-md.md)] 에서는 NULL을 삽입하고 오류를 반환하지 않습니다.  
+ CHECK 제약 조건은 FALSE로 평가되는 값을 거부합니다. Null 값은 UNKNOWN으로 평가되므로 식에 Null 값이 있으면 제약 조건이 무시됩니다. 예를 들어 **MyColumn=10** 과 같이 **MyColumn** 에 값 10만 포함할 수 있도록 **int** 열 **MyColumn** 에 대한 제약 조건을 지정한다고 가정합니다. **MyColumn** 에 NULL 값을 삽입할 경우 [!INCLUDE[ssDE](../../includes/ssde-md.md)] 에서는 NULL을 삽입하고 오류를 반환하지 않습니다.  
   
  CHECK 제약 조건은 확인 중인 조건이 테이블의 모든 행에 대해 FALSE가 아니면 TRUE를 반환합니다. CHECK 제약 조건은 행 수준에서 작동합니다. 방금 만든 테이블에 행이 없어도 이 테이블의 CHECK 제약 조건은 유효한 것으로 간주됩니다. 다음 예와 같이 이러한 상황은 예기치 않은 결과를 생성할 수 있습니다.  
   

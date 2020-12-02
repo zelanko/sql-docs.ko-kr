@@ -12,10 +12,10 @@ ms.assetid: b6ef1e56-d278-4a24-afd3-68d8e0595cbb
 author: chugugrace
 ms.author: chugu
 ms.openlocfilehash: c8f3f026833037c66581ffa95e2e1a736b07091c
-ms.sourcegitcommit: e700497f962e4c2274df16d9e651059b42ff1a10
+ms.sourcegitcommit: c5078791a07330a87a92abb19b791e950672e198
 ms.translationtype: HT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 08/17/2020
+ms.lasthandoff: 11/26/2020
 ms.locfileid: "88390319"
 ---
 # <a name="lesson-3-1---copying-the-deployment-bundle"></a>3-1단원 - 배포 번들 복사
@@ -33,9 +33,9 @@ ms.locfileid: "88390319"
   
     기본 위치를 사용한 경우 배포 번들은 Deployment Tutorial 폴더 내의 Bin\Deployment 폴더입니다.  
   
-2.  Deployment 폴더를 마우스 오른쪽 단추로 클릭하고 **복사**를 클릭합니다.  
+2.  Deployment 폴더를 마우스 오른쪽 단추로 클릭하고 **복사** 를 클릭합니다.  
   
-3.  대상 컴퓨터에서 폴더를 복사할 공유 위치를 찾은 다음 **붙여넣기**를 클릭합니다.  
+3.  대상 컴퓨터에서 폴더를 복사할 공유 위치를 찾은 다음 **붙여넣기** 를 클릭합니다.  
   
 ## <a name="next-task-in-lesson"></a>단원의 다음 태스크  
 [2단계: 패키지 설치 마법사 실행](../integration-services/lesson-3-2-running-the-package-installation-wizard.md)  

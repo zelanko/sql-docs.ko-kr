@@ -19,10 +19,10 @@ ms.assetid: 47670feb-b9e0-4b4b-af83-b9bba7da66ac
 author: MladjoA
 ms.author: mlandzic
 ms.openlocfilehash: 00604f3066c746057e1ffaaefc0cffb00244d57b
-ms.sourcegitcommit: e700497f962e4c2274df16d9e651059b42ff1a10
+ms.sourcegitcommit: c5078791a07330a87a92abb19b791e950672e198
 ms.translationtype: HT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 08/17/2020
+ms.lasthandoff: 11/26/2020
 ms.locfileid: "88459005"
 ---
 # <a name="stpointn-geography-data-type"></a>STPointN(geography 데이터 형식)
@@ -51,11 +51,11 @@ ms.locfileid: "88459005"
  OGC(Open Geospatial Consortium) 형식: **Point**  
   
 ## <a name="remarks"></a>설명  
- 사용자가 **geography** 인스턴스를 만든 경우 STPointN()는 *expression*을 통해 지정된 점을 원래 입력된 순서대로 정렬하여 반환합니다.  
+ 사용자가 **geography** 인스턴스를 만든 경우 STPointN()는 *expression* 을 통해 지정된 점을 원래 입력된 순서대로 정렬하여 반환합니다.  
   
- 시스템에서 **geography** 인스턴스를 생성한 경우 STPointN()은 *식*을 통해 지정한 점을 모두 출력 순서와 동일하게 **geography** 인스턴스, 이 인스턴스 내의 링(해당되는 경우), 이 링 내의 점 순서로 정렬하여 반환합니다. 이 순서는 결정적입니다.  
+ 시스템에서 **geography** 인스턴스를 생성한 경우 STPointN()은 *식* 을 통해 지정한 점을 모두 출력 순서와 동일하게 **geography** 인스턴스, 이 인스턴스 내의 링(해당되는 경우), 이 링 내의 점 순서로 정렬하여 반환합니다. 이 순서는 결정적입니다.  
   
- 1보다 작은 값을 사용하여 이 메서드를 호출하면 이 메서드는 **ArgumentOutOfRangeException**을 throw합니다.  
+ 1보다 작은 값을 사용하여 이 메서드를 호출하면 이 메서드는 **ArgumentOutOfRangeException** 을 throw합니다.  
   
  인스턴스에 있는 점 개수보다 큰 값을 사용하여 이 메서드를 호출하면 이 메서드는 Null을 반환합니다.  
   

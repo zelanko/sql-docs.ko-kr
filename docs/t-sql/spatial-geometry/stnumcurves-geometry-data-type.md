@@ -16,16 +16,16 @@ ms.assetid: 20c2fa0b-656b-4519-b34c-cc8f094290d4
 author: MladjoA
 ms.author: mlandzic
 ms.openlocfilehash: fe3418284131577051e48f8300bd89df2abc0ec1
-ms.sourcegitcommit: e700497f962e4c2274df16d9e651059b42ff1a10
+ms.sourcegitcommit: c5078791a07330a87a92abb19b791e950672e198
 ms.translationtype: HT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 08/17/2020
+ms.lasthandoff: 11/26/2020
 ms.locfileid: "88444968"
 ---
 # <a name="stnumcurves-geometry-data-type"></a>STNumCurves(geometry 데이터 형식)
 [!INCLUDE [SQL Server SQL Database](../../includes/applies-to-version/sql-asdb.md)]
 
-이 메서드는 인스턴스가 1차원 공간 데이터 형식일 때 **geometry** 인스턴스의 곡선 수를 반환합니다. 1차원 공간 데이터 형식에는 **LineString**, **CircularString** 및 **CompoundCurve**가 포함됩니다. `STNumCurves`()는 단순 형식에서만 작동하며 **MultiLineString**과 같은 **geometry** 컬렉션에서는 작동하지 않습니다.
+이 메서드는 인스턴스가 1차원 공간 데이터 형식일 때 **geometry** 인스턴스의 곡선 수를 반환합니다. 1차원 공간 데이터 형식에는 **LineString**, **CircularString** 및 **CompoundCurve** 가 포함됩니다. `STNumCurves`()는 단순 형식에서만 작동하며 **MultiLineString** 과 같은 **geometry** 컬렉션에서는 작동하지 않습니다.
   
 ## <a name="syntax"></a>구문  
   
@@ -42,7 +42,7 @@ ms.locfileid: "88444968"
  CLR 반환 형식: **SqlGeometry**  
   
 ## <a name="remarks"></a>설명  
- 빈 1차원 **geometry** 인스턴스는 0을 반환합니다. **geometry** 인스턴스가 1차원 인스턴스가 아니거나 초기화되지 않은 인스턴스일 경우 **NULL**이 반환됩니다.  
+ 빈 1차원 **geometry** 인스턴스는 0을 반환합니다. **geometry** 인스턴스가 1차원 인스턴스가 아니거나 초기화되지 않은 인스턴스일 경우 **NULL** 이 반환됩니다.  
   
 ## <a name="examples"></a>예제  
   

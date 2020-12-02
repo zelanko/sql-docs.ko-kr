@@ -12,10 +12,10 @@ ms.assetid: ce9c2201-4e9a-4495-948f-b68deeaa7955
 author: chugugrace
 ms.author: chugu
 ms.openlocfilehash: f75e25778f7a38f0f096a0929286be2a3fd8ba26
-ms.sourcegitcommit: e700497f962e4c2274df16d9e651059b42ff1a10
+ms.sourcegitcommit: c5078791a07330a87a92abb19b791e950672e198
 ms.translationtype: HT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 08/17/2020
+ms.lasthandoff: 11/26/2020
 ms.locfileid: "88457763"
 ---
 # <a name="set-parameter-value-dialog-box"></a>매개 변수 값 설정 대화 상자
@@ -41,7 +41,7 @@ ms.locfileid: "88457763"
   
 3.  **SSISDB** 노드를 확장합니다.  
   
-4.  패키지 또는 프로젝트를 마우스 오른쪽 단추로 클릭하고 **구성**을 클릭한 다음 **매개 변수** 탭 또는 **연결 관리자** 탭에서 줄임표 단추를 클릭합니다.  
+4.  패키지 또는 프로젝트를 마우스 오른쪽 단추로 클릭하고 **구성** 을 클릭한 다음 **매개 변수** 탭 또는 **연결 관리자** 탭에서 줄임표 단추를 클릭합니다.  
   
 ##  <a name="configure-the-options"></a><a name="option"></a> 옵션 구성  
  **매개 변수**  

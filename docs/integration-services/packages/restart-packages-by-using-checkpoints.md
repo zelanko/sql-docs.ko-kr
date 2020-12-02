@@ -16,10 +16,10 @@ ms.assetid: 48f2fbb7-8964-484a-8311-5126cf594bfb
 author: chugugrace
 ms.author: chugu
 ms.openlocfilehash: 090e89467a7916295abdc31305cbe993872ade60
-ms.sourcegitcommit: e700497f962e4c2274df16d9e651059b42ff1a10
+ms.sourcegitcommit: c5078791a07330a87a92abb19b791e950672e198
 ms.translationtype: HT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 08/17/2020
+ms.lasthandoff: 11/26/2020
 ms.locfileid: "88425245"
 ---
 # <a name="restart-packages-by-using-checkpoints"></a>검사점을 사용하여 패키지 다시 시작
@@ -78,7 +78,7 @@ ms.locfileid: "88425245"
 |**IfExists**|검사점 파일이 있는 경우 이를 사용하도록 지정합니다. 검사점 파일이 있으면 패키지는 이전 실행 오류 지점부터 다시 시작하고, 그렇지 않으면 패키지 워크플로의 처음부터 실행됩니다.|  
   
 > [!NOTE]  
->  dtexec의 **/CheckPointing on** 옵션은 패키지의 **SaveCheckpoints** 속성을 **True**로 설정하고 **CheckpointUsage** 속성을 Always로 설정하는 것과 같습니다. 자세한 내용은 [dtexec Utility](../../integration-services/packages/dtexec-utility.md)를 참조하세요.  
+>  dtexec의 **/CheckPointing on** 옵션은 패키지의 **SaveCheckpoints** 속성을 **True** 로 설정하고 **CheckpointUsage** 속성을 Always로 설정하는 것과 같습니다. 자세한 내용은 [dtexec Utility](../../integration-services/packages/dtexec-utility.md)를 참조하세요.  
   
 ## <a name="securing-checkpoint-files"></a>검사점 파일 보안 설정  
  패키지 수준 보호에는 검사점 파일 보호가 포함되지 않으므로 이러한 파일에 대해 보안을 별도로 설정해야 합니다. 검사점 데이터는 파일 시스템에만 저장할 수 있으므로 운영 체제의 ACL(액세스 제어 목록)을 사용하여 파일 저장 위치 또는 폴더를 보호해야 합니다. 검사점 파일에는 현재 변수 값을 비롯하여 패키지 상태에 대한 정보가 들어 있으므로 검사점 파일에 대해 보안을 설정하는 것은 중요합니다. 예를 들어 변수에 전화 번호와 같은 프라이빗 데이터 행이 여러 개 있는 레코드 집합이 포함될 수 있습니다. 자세한 내용은 [패키지에서 사용되는 파일 액세스](../../integration-services/security/security-overview-integration-services.md#files)를 참조하세요.  
@@ -90,13 +90,13 @@ ms.locfileid: "88425245"
   
 1.  [!INCLUDE[ssBIDevStudioFull](../../includes/ssbidevstudiofull-md.md)]에서 구성할 패키지가 들어 있는 [!INCLUDE[ssISnoversion](../../includes/ssisnoversion-md.md)] 프로젝트를 엽니다.  
   
-2.  **솔루션 탐색기**에서 패키지를 두 번 클릭하여 엽니다.  
+2.  **솔루션 탐색기** 에서 패키지를 두 번 클릭하여 엽니다.  
   
 3.  **제어 흐름** 탭을 클릭합니다.  
   
-4.  제어 흐름 디자인 화면 배경의 아무 위치나 마우스 오른쪽 단추로 클릭한 후 **속성**을 클릭합니다.  
+4.  제어 흐름 디자인 화면 배경의 아무 위치나 마우스 오른쪽 단추로 클릭한 후 **속성** 을 클릭합니다.  
   
-5.  SaveCheckpoints 속성을 **True**로 설정합니다.  
+5.  SaveCheckpoints 속성을 **True** 로 설정합니다.  
   
 6.  CheckpointFileName 속성에 검사점 파일의 이름을 입력합니다.  
   
@@ -111,7 +111,7 @@ ms.locfileid: "88425245"
   
 8.  패키지가 다시 시작될 수 있는 태스크 및 컨테이너를 구성합니다.  
   
-    -   태스크 또는 컨테이너를 마우스 오른쪽 단추로 클릭하고 **속성**을 클릭합니다.  
+    -   태스크 또는 컨테이너를 마우스 오른쪽 단추로 클릭하고 **속성** 을 클릭합니다.  
   
     -   선택한 각 태스크 및 컨테이너에 대해 FailPackageOnFailure 속성을 **True** 로 설정합니다.  
     

@@ -19,10 +19,10 @@ author: MashaMSFT
 ms.author: mathoma
 monikerRange: =azuresqldb-mi-current||>=sql-server-2016||=sqlallproducts-allversions
 ms.openlocfilehash: c8d6d59dc29060a10fc0ad15f1b2fbbfbba5fb34
-ms.sourcegitcommit: e700497f962e4c2274df16d9e651059b42ff1a10
+ms.sourcegitcommit: c5078791a07330a87a92abb19b791e950672e198
 ms.translationtype: HT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 08/17/2020
+ms.lasthandoff: 11/26/2020
 ms.locfileid: "88448191"
 ---
 # <a name="replicate-partitioned-tables-and-indexes"></a>분할 테이블 및 인덱스 복제
@@ -40,7 +40,7 @@ ms.locfileid: "88448191"
   
  분할과 관련된 첫 번째 속성 집합은 파티션 개체를 구독자에 복사해야 하는지 여부를 결정하는 아티클 스키마 옵션입니다. 이러한 스키마 옵션은 다음과 같은 방법으로 설정할 수 있습니다.  
   
--   새 게시 마법사의 **아티클 속성** 페이지 또는 게시 속성 대화 상자를 사용합니다. 위의 표에 나온 개체를 복사하려면 **테이블 파티션 구성표 복사** 및 **인덱스 파티션 구성표 복사** 속성에 **true**값을 지정합니다. **아티클 속성** 페이지에 액세스하는 방법은 [게시 속성 보기 및 수정](../../../relational-databases/replication/publish/view-and-modify-publication-properties.md)을 참조하세요.  
+-   새 게시 마법사의 **아티클 속성** 페이지 또는 게시 속성 대화 상자를 사용합니다. 위의 표에 나온 개체를 복사하려면 **테이블 파티션 구성표 복사** 및 **인덱스 파티션 구성표 복사** 속성에 **true** 값을 지정합니다. **아티클 속성** 페이지에 액세스하는 방법은 [게시 속성 보기 및 수정](../../../relational-databases/replication/publish/view-and-modify-publication-properties.md)을 참조하세요.  
   
 -   다음 저장 프로시저 중 하나의 *schema_option* 매개 변수를 사용합니다.  
   

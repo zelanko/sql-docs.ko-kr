@@ -18,10 +18,10 @@ author: julieMSFT
 ms.author: jrasnick
 monikerRange: '>=sql-server-2017||=sqlallproducts-allversions||>=sql-server-linux-2017||=azuresqldb-mi-current'
 ms.openlocfilehash: 49a16c2b5f18eeda3a6abd1396650131543ead4f
-ms.sourcegitcommit: e700497f962e4c2274df16d9e651059b42ff1a10
+ms.sourcegitcommit: c5078791a07330a87a92abb19b791e950672e198
 ms.translationtype: HT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 08/17/2020
+ms.lasthandoff: 11/26/2020
 ms.locfileid: "88417139"
 ---
 # <a name="translate-transact-sql"></a>TRANSLATE(Transact-SQL)
@@ -40,11 +40,11 @@ TRANSLATE ( inputString, characters, translations)
 
 ## <a name="arguments"></a>인수
 
- *inputString*은 검색할 문자열 [식](../../t-sql/language-elements/expressions-transact-sql.md)입니다. 모든 문자 데이터 형식(nvarchar, varchar, nchar, char)은 *inputString*이 될 수 있습니다.
+ *inputString* 은 검색할 문자열 [식](../../t-sql/language-elements/expressions-transact-sql.md)입니다. 모든 문자 데이터 형식(nvarchar, varchar, nchar, char)은 *inputString* 이 될 수 있습니다.
 
- *characters*는 바꿔야 하는 문자가 포함된 문자열 [식](../../t-sql/language-elements/expressions-transact-sql.md)입니다. 모든 문자 데이터 형식은 *characters*가 될 수 있습니다.
+ *characters* 는 바꿔야 하는 문자가 포함된 문자열 [식](../../t-sql/language-elements/expressions-transact-sql.md)입니다. 모든 문자 데이터 형식은 *characters* 가 될 수 있습니다.
 
-*translations*는 교체 문자가 포함된 문자열 [식](../../t-sql/language-elements/expressions-transact-sql.md)입니다. *translations*는 *characters*와 데이터 종류 및 길이가 같아야 합니다.
+*translations* 는 교체 문자가 포함된 문자열 [식](../../t-sql/language-elements/expressions-transact-sql.md)입니다. *translations* 는 *characters* 와 데이터 종류 및 길이가 같아야 합니다.
 
 ## <a name="return-types"></a>반환 형식
 
@@ -52,7 +52,7 @@ TRANSLATE ( inputString, characters, translations)
 
 ## <a name="remarks"></a>설명
 
-*characters*와 *translations* 식이 다른 경우 `TRANSLATE`는 오류를 반환합니다. 인수 중에 NULL이 있는 경우 `TRANSLATE`는 NULL을 반환합니다.  
+*characters* 와 *translations* 식이 다른 경우 `TRANSLATE`는 오류를 반환합니다. 인수 중에 NULL이 있는 경우 `TRANSLATE`는 NULL을 반환합니다.  
 
 `TRANSLATE` 함수의 동작은 [REPLACE](../../t-sql/functions/replace-transact-sql.md) 함수를 여러 개 사용할 때와 유사합니다. 그러나 `TRANSLATE`는 `inputString`의 개별 문자를 두 번 이상 바꾸지는 않습니다. `characters` 매개 변수의 단일 값은 `inputString`의 여러 문자를 바꿀 수 있습니다. 
 

@@ -14,10 +14,10 @@ ms.assetid: 90faac38-f79e-496d-b589-e8b2fe01c562
 author: stevestein
 ms.author: sstein
 ms.openlocfilehash: 2a942af36a551498e81b3dbaeaa02686dec9c28b
-ms.sourcegitcommit: e700497f962e4c2274df16d9e651059b42ff1a10
+ms.sourcegitcommit: c5078791a07330a87a92abb19b791e950672e198
 ms.translationtype: HT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 08/17/2020
+ms.lasthandoff: 11/26/2020
 ms.locfileid: "88410999"
 ---
 # <a name="migrate-to-a-partially-contained-database"></a>Migrate to a Partially Contained Database
@@ -65,9 +65,9 @@ GO
 #### <a name="enabling-contained-databases-using-management-studio"></a>SQL Server Management Studio를 사용하여 포함된 데이터베이스 설정  
  다음 예에서는 [!INCLUDE[ssDEnoversion](../../includes/ssdenoversion-md.md)]인스턴스에서 포함된 데이터베이스를 사용 가능하도록 설정합니다.  
   
-1.  개체 탐색기에서 서버 이름을 마우스 오른쪽 단추로 클릭한 다음 **속성**을 클릭합니다.  
+1.  개체 탐색기에서 서버 이름을 마우스 오른쪽 단추로 클릭한 다음 **속성** 을 클릭합니다.  
   
-2.  **고급** 페이지의 **포함** 섹션에서 **포함된 데이터베이스 사용** 옵션을 **True**로 설정합니다.  
+2.  **고급** 페이지의 **포함** 섹션에서 **포함된 데이터베이스 사용** 옵션을 **True** 로 설정합니다.  
   
 3.  [!INCLUDE[clickOK](../../includes/clickok-md.md)]  
 
@@ -87,9 +87,9 @@ GO
 ### <a name="converting-a-database-to-partially-contained-using-management-studio"></a>Management Studio를 사용하여 데이터베이스를 부분적으로 포함된 데이터베이스로 변환  
  다음 예에서는 데이터베이스를 부분적으로 포함된 데이터베이스로 변환합니다.  
   
-1.  개체 탐색기에서 **데이터베이스**를 확장하고, 변환할 데이터베이스를 마우스 오른쪽 단추로 클릭한 다음 **속성**을 클릭합니다.  
+1.  개체 탐색기에서 **데이터베이스** 를 확장하고, 변환할 데이터베이스를 마우스 오른쪽 단추로 클릭한 다음 **속성** 을 클릭합니다.  
   
-2.  **옵션** 페이지에서 **포함 유형** 옵션을 **부분**으로 변경합니다.  
+2.  **옵션** 페이지에서 **포함 유형** 옵션을 **부분** 으로 변경합니다.  
   
 3.  [!INCLUDE[clickOK](../../includes/clickok-md.md)]  
   

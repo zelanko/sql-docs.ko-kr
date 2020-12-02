@@ -19,10 +19,10 @@ ms.assetid: 19e757b3-cb2e-4852-87b9-40a815ab707e
 author: MladjoA
 ms.author: mlandzic
 ms.openlocfilehash: 8e9333f71bb601629b13b025fb0fdb9f81af58d6
-ms.sourcegitcommit: e700497f962e4c2274df16d9e651059b42ff1a10
+ms.sourcegitcommit: c5078791a07330a87a92abb19b791e950672e198
 ms.translationtype: HT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 08/17/2020
+ms.lasthandoff: 11/26/2020
 ms.locfileid: "88458977"
 ---
 # <a name="stgeomcollfromtext-geometry-data-type"></a>STGeomCollFromText(geometry 데이터 형식)
@@ -41,7 +41,7 @@ STGeomCollFromText ( 'geometrycollection_tagged_text' , SRID )
 
 ## <a name="arguments"></a>인수
  *geometrycollection_tagged_text*  
- 반환할 **geometry** 인스턴스의 WKT 표현입니다. *geometry_tagged_text*는 **nvarchar(max)** 식입니다.  
+ 반환할 **geometry** 인스턴스의 WKT 표현입니다. *geometry_tagged_text* 는 **nvarchar(max)** 식입니다.  
   
  *SRID*  
  반환하려는 **geometry** 인스턴스의 SRID(Spatial Reference ID)를 나타내는 **int** 식입니다.  

@@ -12,10 +12,10 @@ ms.assetid: 9a77dd32-d8c2-4961-ad37-2a971f9d6043
 author: chugugrace
 ms.author: chugu
 ms.openlocfilehash: d83b2c6a19b7a73be4293dcb66edc6cbc22909d9
-ms.sourcegitcommit: e700497f962e4c2274df16d9e651059b42ff1a10
+ms.sourcegitcommit: c5078791a07330a87a92abb19b791e950672e198
 ms.translationtype: HT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 08/17/2020
+ms.lasthandoff: 11/26/2020
 ms.locfileid: "88449737"
 ---
 # <a name="lesson-1-2-add-and-configure-a-flat-file-connection-manager"></a>1-2단원: 플랫 파일 연결 관리자 추가 및 구성
@@ -39,12 +39,12 @@ ms.locfileid: "88449737"
   
 ## <a name="add-a-flat-file-connection-manager-to-the-ssis-package"></a>SSIS 패키지에 플랫 파일 연결 관리자 추가  
   
-1.  **솔루션 탐색기** 창에서 **연결 관리자**를 마우스 오른쪽 단추로 클릭하고 **새 연결 관리자**를 선택합니다.
-1. **SSIS 연결 관리자 추가** 대화 상자에서 **FLATFILE**을 선택한 다음, **추가**를 선택합니다.
+1.  **솔루션 탐색기** 창에서 **연결 관리자** 를 마우스 오른쪽 단추로 클릭하고 **새 연결 관리자** 를 선택합니다.
+1. **SSIS 연결 관리자 추가** 대화 상자에서 **FLATFILE** 을 선택한 다음, **추가** 를 선택합니다.
   
-2.  **플랫 파일 연결 관리자 편집기** 대화 상자에서 **연결 관리자 이름**에 **Sample Flat File Source Data**를 입력합니다.  
+2.  **플랫 파일 연결 관리자 편집기** 대화 상자에서 **연결 관리자 이름** 에 **Sample Flat File Source Data** 를 입력합니다.  
   
-3.  **찾아보기**를 선택합니다.  
+3.  **찾아보기** 를 선택합니다.  
   
 4.  **열기** 대화 상자에서 컴퓨터에 있는 **SampleCurrencyData.txt** 파일을 찾습니다.  
   
@@ -52,33 +52,33 @@ ms.locfileid: "88449737"
   
 ### <a name="set-locale-sensitive-properties"></a>로캘 구분 속성 설정  
   
-1.  **플랫 파일 연결 관리자 편집기** 대화 상자에서 **일반**을 선택합니다.  
+1.  **플랫 파일 연결 관리자 편집기** 대화 상자에서 **일반** 을 선택합니다.  
   
-2.  **로캘**을 **영어(미국)** 로 설정하고 **코드 페이지**를 **1252**로 설정합니다.  
+2.  **로캘** 을 **영어(미국)** 로 설정하고 **코드 페이지** 를 **1252** 로 설정합니다.  
   
 ### <a name="rename-columns-in-the-flat-file-connection-manager"></a>플랫 파일 연결 관리자에서 열 이름 바꾸기  
   
-1.  **플랫 파일 연결 관리자 편집기** 대화 상자에서 **고급**을 선택합니다.  
+1.  **플랫 파일 연결 관리자 편집기** 대화 상자에서 **고급** 을 선택합니다.  
   
 2.  속성 창에서 다음 내용을 변경합니다.  
   
-    -   **Column 0** 이름 속성을 **AverageRate**로 변경합니다.  
+    -   **Column 0** 이름 속성을 **AverageRate** 로 변경합니다.  
   
-    -   **Column 1** 이름 속성을 **CurrencyID**로 변경합니다.  
+    -   **Column 1** 이름 속성을 **CurrencyID** 로 변경합니다.  
   
-    -   **Column 2** 이름 속성을 **CurrencyDate**로 변경합니다.  
+    -   **Column 2** 이름 속성을 **CurrencyDate** 로 변경합니다.  
   
-    -   **Column 3** 이름 속성을 **EndOfDayRate**로 변경합니다.  
+    -   **Column 3** 이름 속성을 **EndOfDayRate** 로 변경합니다.  
   
 ### <a name="remap-column-data-types"></a>열 데이터 형식 다시 매핑  
   
 기본적으로 4개의 열이 모두 초기에 **OutputColumnWidth** 가 50인 문자열 데이터 형식 [DT_STR]로 설정되어 있습니다.  
 
-1.  **플랫 파일 연결 관리자 편집기** 대화 상자에서 **유형 제안**을 선택합니다.  
+1.  **플랫 파일 연결 관리자 편집기** 대화 상자에서 **유형 제안** 을 선택합니다.  
   
     [!INCLUDE[ssISnoversion](../includes/ssisnoversion-md.md)]는 처음 200개의 데이터 행을 기반으로 적합한 데이터 형식을 자동으로 제안합니다. 또한 이러한 제안 옵션을 변경하여 더 많거나 적은 데이터를 샘플링하거나 정수 또는 부울 데이터의 기본 데이터 형식을 지정하거나 공백을 안쪽 여백으로 문자열 열에 추가할 수 있습니다.  
   
-    지금은 **열 유형 제안** 대화 상자의 옵션을 변경하지 않고 **확인**을 선택하여 [!INCLUDE[ssISnoversion](../includes/ssisnoversion-md.md)]에서 열의 데이터 형식을 제안하게 합니다. 이 작업을 통해 [!INCLUDE[ssISnoversion](../includes/ssisnoversion-md.md)]에서 제안하는 열 데이터 형식을 볼 수 있는 ** 플랫 파일 연결 관리자 편집기** 대화 상자의 **고급** 창으로 돌아갑니다. 또는 **취소**를 선택하면 열 메타데이터에 대한 제안이 생성되지 않고 기본 문자열(DT_STR) 데이터 형식이 사용됩니다.  
+    지금은 **열 유형 제안** 대화 상자의 옵션을 변경하지 않고 **확인** 을 선택하여 [!INCLUDE[ssISnoversion](../includes/ssisnoversion-md.md)]에서 열의 데이터 형식을 제안하게 합니다. 이 작업을 통해 [!INCLUDE[ssISnoversion](../includes/ssisnoversion-md.md)]에서 제안하는 열 데이터 형식을 볼 수 있는 **플랫 파일 연결 관리자 편집기** 대화 상자의 **고급** 창으로 돌아갑니다. 또는 **취소** 를 선택하면 열 메타데이터에 대한 제안이 생성되지 않고 기본 문자열(DT_STR) 데이터 형식이 사용됩니다.  
   
     이 자습서에서 [!INCLUDE[ssISnoversion](../includes/ssisnoversion-md.md)] 는 SampleCurrencyData.txt 파일 데이터에 대해 다음 테이블의 두 번째 열에 표시된 데이터 형식을 제안합니다. 네 번째 열은 후속 단계에서 정의된 대상의 열에 필요한 데이터 형식을 제공합니다.  
   
@@ -89,13 +89,13 @@ ms.locfileid: "88449737"
     |CurrencyDate|date [DT_DATE]|DimDate.FullDateAlternateKey|date|  
     |EndOfDayRate|float [DT_R4]|FactCurrencyRate.EndOfDayRate|float|  
   
-    **CurrencyID** 열에 제안된 데이터 형식은 대상 테이블의 필드 데이터 형식과 호환되지 않습니다. `DimCurrency.CurrencyAlternateKey`의 데이터 형식은 nchar(3)이므로 **CurrencyID**를 문자열 [DT_STR]에서 유니코드 문자열 [DT_WSTR]로 변경해야 합니다. 또한 `DimDate.FullDateAlternateKey` 필드는 Date 데이터 형식으로 정의되므로 **CurrencyDate**의 형식을 날짜 [DT_Date]에서 데이터베이스 날짜 [DT_DBDATE]로 변경해야 합니다.  
+    **CurrencyID** 열에 제안된 데이터 형식은 대상 테이블의 필드 데이터 형식과 호환되지 않습니다. `DimCurrency.CurrencyAlternateKey`의 데이터 형식은 nchar(3)이므로 **CurrencyID** 를 문자열 [DT_STR]에서 유니코드 문자열 [DT_WSTR]로 변경해야 합니다. 또한 `DimDate.FullDateAlternateKey` 필드는 Date 데이터 형식으로 정의되므로 **CurrencyDate** 의 형식을 날짜 [DT_Date]에서 데이터베이스 날짜 [DT_DBDATE]로 변경해야 합니다.  
   
 2.  목록에서 **CurrencyID** 열을 선택하고 속성 창에서 **CurrencyID** 열의 데이터 형식을 문자열 [DT_STR]에서 유니코드 문자열 [DT_WSTR]로 변경합니다.  
   
 3.  속성 창에서 **CurrencyDate** 열의 데이터 형식을 날짜 [DT_DATE]에서 데이터베이스 날짜 [DT_DBDATE]로 변경합니다.  
   
-4.  **확인**을 선택합니다.  
+4.  **확인** 을 선택합니다.  
   
 ## <a name="go-to-next-task"></a>다음 작업으로 이동
 [3단계: OLE DB 연결 관리자 추가 및 구성](../integration-services/lesson-1-3-adding-and-configuring-an-ole-db-connection-manager.md)  

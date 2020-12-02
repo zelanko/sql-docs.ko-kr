@@ -14,10 +14,10 @@ ms.assetid: bf73f80e-a954-4c5f-874e-17fdd4082715
 author: chugugrace
 ms.author: chugu
 ms.openlocfilehash: d418e3d9f8b323c5f0c7905dad8c2ec636f1a3e0
-ms.sourcegitcommit: e700497f962e4c2274df16d9e651059b42ff1a10
+ms.sourcegitcommit: c5078791a07330a87a92abb19b791e950672e198
 ms.translationtype: HT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 08/17/2020
+ms.lasthandoff: 11/26/2020
 ms.locfileid: "88457653"
 ---
 # <a name="select-oracle-tables-and-columns"></a>Oracle 테이블 및 열 선택
@@ -37,11 +37,11 @@ ms.locfileid: "88457653"
   
      지정하지 않으면 이름은 원본 스키마 이름에 원본 테이블 이름을 붙인 `<schema-name>_<table-name>`형식으로 파생됩니다. 캡처 인스턴스 이름은 100자를 초과할 수 없으며 데이터베이스 내에서 고유해야 합니다.  
   
-     이 열에서 셀을 클릭하여 **capture_instance**를 수동으로 편집할 수 있습니다.  
+     이 열에서 셀을 클릭하여 **capture_instance** 를 수동으로 편집할 수 있습니다.  
   
 -   **보안 역할**: 변경 데이터에 대한 액세스를 제어하는 데 사용되는 데이터베이스 제어 역할의 이름입니다.  
   
-     이 열에서 셀을 클릭하여 **security_role**을 수동으로 편집할 수 있습니다.  
+     이 열에서 셀을 클릭하여 **security_role** 을 수동으로 편집할 수 있습니다.  
   
  **테이블 추가**  
  **테이블 추가** 를 클릭하면 테이블 선택 대화 상자가 열립니다. 이 대화 상자에서 [변경 내용을 캡처할 Oracle 테이블을 선택](../../integration-services/change-data-capture/select-oracle-tables-for-capturing-changes.md)할 수 있습니다.  

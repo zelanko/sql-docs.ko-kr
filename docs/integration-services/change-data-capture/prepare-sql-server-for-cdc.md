@@ -14,10 +14,10 @@ ms.assetid: 20b51dbf-a545-4234-87ae-4228268a0fb2
 author: chugugrace
 ms.author: chugu
 ms.openlocfilehash: 9a98ff226c4e2e861b60d04cb50e8b201035c16a
-ms.sourcegitcommit: e700497f962e4c2274df16d9e651059b42ff1a10
+ms.sourcegitcommit: c5078791a07330a87a92abb19b791e950672e198
 ms.translationtype: HT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 08/17/2020
+ms.lasthandoff: 11/26/2020
 ms.locfileid: "88431085"
 ---
 # <a name="prepare-sql-server-for-cdc"></a>CDC를 위한 SQL Server 준비
@@ -29,7 +29,7 @@ ms.locfileid: "88431085"
   
  MSXDBCDC 데이터베이스에 대한 자세한 내용은 MSXDBCDC 데이터베이스를 참조하십시오.  
   
- CDC Service 구성 콘솔에서 **SQL Server 준비**를 클릭합니다. 이 옵션을 사용할 수 없는 경우 콘솔의 왼쪽 창에서 **로컬 CDC Service** 가 선택되어 있는지 확인합니다.  
+ CDC Service 구성 콘솔에서 **SQL Server 준비** 를 클릭합니다. 이 옵션을 사용할 수 없는 경우 콘솔의 왼쪽 창에서 **로컬 CDC Service** 가 선택되어 있는지 확인합니다.  
   
 ## <a name="options"></a>옵션  
   
@@ -48,9 +48,9 @@ ms.locfileid: "88431085"
 ### <a name="options"></a>옵션  
  화살표를 클릭하면 구성할 수 있는 옵션을 볼 수 있습니다. 이러한 옵션을 기본값으로 그대로 둘 수 있습니다. 사용 가능한 옵션은 다음과 같습니다.  
   
--   **연결 제한 시간**: 제한 시간이 초과되기 전에 Oracle용 CDC Service가 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 에 연결될 때까지 기다리는 시간(초)을 입력합니다. 기본값은 **15**입니다.  
+-   **연결 제한 시간**: 제한 시간이 초과되기 전에 Oracle용 CDC Service가 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 에 연결될 때까지 기다리는 시간(초)을 입력합니다. 기본값은 **15** 입니다.  
   
--   **실행 제한 시간**: 제한 시간이 초과되기 전에 Oracle CDC Windows 서비스에서 명령이 실행될 때까지 기다리는 시간(초)을 입력합니다. 기본값은 **30**입니다.  
+-   **실행 제한 시간**: 제한 시간이 초과되기 전에 Oracle CDC Windows 서비스에서 명령이 실행될 때까지 기다리는 시간(초)을 입력합니다. 기본값은 **30** 입니다.  
   
 -   **연결 암호화**: 암호화된 연결을 사용하는 대상 **인스턴스와 Oracle CDC Service 사이의 통신을 위해** 연결 암호화 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 를 선택합니다.  
   

@@ -14,10 +14,10 @@ ms.assetid: 5972cee3-b1a9-4c56-aed6-bdddf84af283
 author: chugugrace
 ms.author: chugu
 ms.openlocfilehash: aea4d1beb0a77e6bc7a0456c3f3437c919698bcd
-ms.sourcegitcommit: e700497f962e4c2274df16d9e651059b42ff1a10
+ms.sourcegitcommit: c5078791a07330a87a92abb19b791e950672e198
 ms.translationtype: HT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 08/17/2020
+ms.lasthandoff: 11/26/2020
 ms.locfileid: "88426075"
 ---
 # <a name="manage-an-oracle-cdc-service"></a>Manage an Oracle CDC Service
@@ -29,7 +29,7 @@ ms.locfileid: "88426075"
   
  **작업할 CDC Service를 선택하려면**  
   
-1.  CDC Service 구성 콘솔의 왼쪽 창에서 **로컬 CDC Service**를 확장합니다.  
+1.  CDC Service 구성 콘솔의 왼쪽 창에서 **로컬 CDC Service** 를 확장합니다.  
   
 2.  작업할 CDC Service를 선택합니다.  
   
@@ -49,7 +49,7 @@ ms.locfileid: "88426075"
 ### <a name="delete-the-service"></a>서비스 삭제  
  CDC Service 구성 콘솔 오른쪽의 **동작** 창에서 **삭제** 를 클릭하여 서비스를 삭제합니다.  
   
- 삭제할 CDC Service를 마우스 오른쪽 단추로 클릭하고 **삭제**를 선택할 수도 있습니다.  
+ 삭제할 CDC Service를 마우스 오른쪽 단추로 클릭하고 **삭제** 를 선택할 수도 있습니다.  
   
  **참고**: 서비스를 삭제할 때 서비스가 실행 중인 경우 서비스가 중지된 후에 삭제됩니다.  
   
@@ -58,9 +58,9 @@ ms.locfileid: "88426075"
  SQL Server에 연결 대화 상자에 입력해야 하는 데이터에 대한 자세한 내용은 [Connection to SQL Server for Delete](../../integration-services/change-data-capture/connection-to-sql-server-for-delete.md)을 참조하십시오.  
   
 ### <a name="edit-the-cdc-service-properties"></a>CDC Service 속성 편집  
- CDC Service 구성 콘솔 오른쪽의 **동작** 창에서 **속성**을 클릭합니다.  
+ CDC Service 구성 콘솔 오른쪽의 **동작** 창에서 **속성** 을 클릭합니다.  
   
- 속성을 편집할 CDC Service를 마우스 오른쪽 단추로 클릭하고 **속성**을 선택할 수도 있습니다.  
+ 속성을 편집할 CDC Service를 마우스 오른쪽 단추로 클릭하고 **속성** 을 선택할 수도 있습니다.  
   
 ## <a name="see-also"></a>관련 항목  
  [로컬 CDC Service를 관리하는 방법](../../integration-services/change-data-capture/how-to-manage-a-local-cdc-service.md)  

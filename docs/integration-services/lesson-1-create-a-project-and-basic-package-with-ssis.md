@@ -12,10 +12,10 @@ ms.assetid: 84d0b877-603f-4f8e-bb6b-671558ade5c2
 author: chugugrace
 ms.author: chugu
 ms.openlocfilehash: 428295430a2abb50738742db088b9573a7bf35a6
-ms.sourcegitcommit: e700497f962e4c2274df16d9e651059b42ff1a10
+ms.sourcegitcommit: c5078791a07330a87a92abb19b791e950672e198
 ms.translationtype: HT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 08/17/2020
+ms.lasthandoff: 11/26/2020
 ms.locfileid: "88461995"
 ---
 # <a name="lesson-1-create-a-project-and-basic-package-with-ssis"></a>1단원: SSIS를 사용하여 프로젝트 및 기본 패키지 만들기
@@ -40,14 +40,14 @@ ms.locfileid: "88461995"
 
     2.  **다운로드** 단추를 선택합니다.
 
-    3.  **간단한 ETL Package.zip 만들기** 파일을 선택한 후, **다음**을 선택합니다.
+    3.  **간단한 ETL Package.zip 만들기** 파일을 선택한 후, **다음** 을 선택합니다.
 
     4.  파일을 다운로드한 후 로컬 디렉터리에 해당 콘텐츠 압축을 풉니다.  
 
 * **AdventureWorksDW2012** 샘플 데이터베이스를 설치 및 배포하려면 [AdventureWorks 샘플 데이터베이스 - SQL 설치 및 구성](../samples/adventureworks-install-configure.md)을 참조하세요.
   
 ## <a name="look-at-the-source-data"></a>원본 데이터 확인
-이 자습서에서 원본 데이터는 **SampleCurrencyData.txt**라는 플랫 파일의 기록 통화 데이터 세트입니다. 원본 데이터에는 평균 통화 비율, 통화 키, 날짜 키, 날짜별 마지막 비율이라는 4개의 열이 있습니다  
+이 자습서에서 원본 데이터는 **SampleCurrencyData.txt** 라는 플랫 파일의 기록 통화 데이터 세트입니다. 원본 데이터에는 평균 통화 비율, 통화 키, 날짜 키, 날짜별 마지막 비율이라는 4개의 열이 있습니다  
   
 다음은 SampleCurrencyData.txt 파일의 원본 데이터 예제입니다.  
   
@@ -67,7 +67,7 @@ ms.locfileid: "88461995"
 플랫 파일 원본 데이터를 사용하여 작업할 때는 플랫 파일 연결 관리자가 플랫 파일 데이터를 해석하는 방법을 이해해야 합니다. 플랫 파일 원본이 유니코드일 경우 플랫 파일 연결 관리자가 모든 열을 기본 열 너비 50인 [DT_WSTR]로 정의하고 플랫 파일 원본이 ANSI로 인코딩된 경우 열은 기본 열 너비가 50인 [DT_STR]로 정의합니다. 이러한 기본값을 변경하여 문자열을 데이터에 더 적합한 열 유형으로 만들어야 하는 경우도 있습니다. 대상의 데이터 형식을 확인한 다음, 플랫 파일 연결 관리자 내에서 해당 형식을 선택해야 합니다.  
   
 ## <a name="look-at-the-destination-data"></a>대상 데이터 확인
-원본 데이터의 대상은 **AdventureWorksDW**의 **FactCurrencyRate** 팩트 테이블 복사본입니다. 다음 표와 같이 **FactCurrencyRate** 팩트 테이블에는 4개의 열이 있으며 두 차원 테이블에 대한 관계가 있습니다.  
+원본 데이터의 대상은 **AdventureWorksDW** 의 **FactCurrencyRate** 팩트 테이블 복사본입니다. 다음 표와 같이 **FactCurrencyRate** 팩트 테이블에는 4개의 열이 있으며 두 차원 테이블에 대한 관계가 있습니다.  
   
 |열 이름|데이터 형식|조회 테이블|조회 열|  
 |---------------|-------------|----------------|-----------------|  

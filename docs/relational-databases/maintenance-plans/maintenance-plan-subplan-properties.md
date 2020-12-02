@@ -15,10 +15,10 @@ ms.assetid: 8bdd84ef-fd15-4162-93af-dc945ff2dbcc
 author: MikeRayMSFT
 ms.author: mikeray
 ms.openlocfilehash: d047b18ea2e749ff0a1bb624ba9b4ad197aec7b4
-ms.sourcegitcommit: e700497f962e4c2274df16d9e651059b42ff1a10
+ms.sourcegitcommit: c5078791a07330a87a92abb19b791e950672e198
 ms.translationtype: HT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 08/17/2020
+ms.lasthandoff: 11/26/2020
 ms.locfileid: "88420787"
 ---
 # <a name="maintenance-plan-subplan-properties"></a>유지 관리 계획(하위 계획 속성)

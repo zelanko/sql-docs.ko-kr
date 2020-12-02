@@ -12,10 +12,10 @@ ms.assetid: 5d9e677f-b872-497d-9cde-472184a214ab
 author: chugugrace
 ms.author: chugu
 ms.openlocfilehash: c4c09c590d92d97ea56c795db6fe8676d5771277
-ms.sourcegitcommit: e700497f962e4c2274df16d9e651059b42ff1a10
+ms.sourcegitcommit: c5078791a07330a87a92abb19b791e950672e198
 ms.translationtype: HT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 08/17/2020
+ms.lasthandoff: 11/26/2020
 ms.locfileid: "88426055"
 ---
 # <a name="how-to-manage-a-cdc-instance"></a>How to Manage a CDC Instance
@@ -27,7 +27,7 @@ ms.locfileid: "88426055"
   
 ### <a name="to-manage-cdc-instance-operations"></a>CDC 인스턴스 작업을 관리하려면  
   
-1.  **시작** 메뉴에서 **CDC Designer 콘솔**을 선택합니다.  
+1.  **시작** 메뉴에서 **CDC Designer 콘솔** 을 선택합니다.  
   
 2.  왼쪽 창에서 **변경 데이터 캡처** 를 확장한 다음 보려는 인스턴스를 포함하는 서비스를 확장합니다.  
   

@@ -12,10 +12,10 @@ ms.assetid: 6c13f5c9-c75e-4e52-94dc-2d2db2c578fe
 author: chugugrace
 ms.author: chugu
 ms.openlocfilehash: 4704aea54f73a0fa25db60ab9145a0ad3bc9359d
-ms.sourcegitcommit: e700497f962e4c2274df16d9e651059b42ff1a10
+ms.sourcegitcommit: c5078791a07330a87a92abb19b791e950672e198
 ms.translationtype: HT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 08/17/2020
+ms.lasthandoff: 11/26/2020
 ms.locfileid: "88449695"
 ---
 # <a name="lesson-2-2---verifying-the-deployment-bundle"></a>2-2단원 - 배포 번들 확인
@@ -51,7 +51,7 @@ ms.locfileid: "88449695"
   
     -   Readme.txt  
   
-3.  Deployment Tutorial.SSISDeploymentManifest를 마우스 오른쪽 단추로 클릭하고 **연결 프로그램**을 가리킨 다음 **Internet Explorer**를 클릭합니다. 또한 메모장과 같은 텍스트 편집기에서 파일을 열 수도 있습니다. 파일의 XML 코드는 다음과 같아야 합니다.  
+3.  Deployment Tutorial.SSISDeploymentManifest를 마우스 오른쪽 단추로 클릭하고 **연결 프로그램** 을 가리킨 다음 **Internet Explorer** 를 클릭합니다. 또한 메모장과 같은 텍스트 편집기에서 파일을 열 수도 있습니다. 파일의 XML 코드는 다음과 같아야 합니다.  
   
     `<?xml version="1.0"?><DTSDeploymentManifest GeneratedBy="Domain\UserName" GeneratedFromProjectName="Deployment Tutorial" GeneratedDate="2006-02-24T13:29:02.6537669-08:00" AllowConfigurationChanges="true"><Package>DataTransfer.dtsx</Package><Package>LoadXMLData.dtsx</Package><ConfigurationFile>datatransferconfig.dtsconfig</ConfigurationFile><ConfigurationFile>loadxmldataconfig.dtsconfig</ConfigurationFile><MiscellaneousFile>Readme.txt</MiscellaneousFile><MiscellaneousFile>orders.xml</MiscellaneousFile><MiscellaneousFile>NewCustomers.txt</MiscellaneousFile><MiscellaneousFile>orders.xsd</MiscellaneousFile></DTSDeploymentManifest>`  
   

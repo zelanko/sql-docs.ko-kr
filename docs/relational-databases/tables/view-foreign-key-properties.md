@@ -17,10 +17,10 @@ author: stevestein
 ms.author: sstein
 monikerRange: '>=aps-pdw-2016||=azuresqldb-current||=azure-sqldw-latest||>=sql-server-2016||=sqlallproducts-allversions||>=sql-server-linux-2017||=azuresqldb-mi-current'
 ms.openlocfilehash: 926b00ad124185433c9e1a2d3116bc4a6f5f3f12
-ms.sourcegitcommit: e700497f962e4c2274df16d9e651059b42ff1a10
+ms.sourcegitcommit: c5078791a07330a87a92abb19b791e950672e198
 ms.translationtype: HT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 08/17/2020
+ms.lasthandoff: 11/26/2020
 ms.locfileid: "88427475"
 ---
 # <a name="view-foreign-key-properties"></a>외래 키 속성 보기
@@ -61,11 +61,11 @@ ms.locfileid: "88427475"
   
 #### <a name="to-view-the-foreign-key-attributes-of-a-relationship-in-a-specific-table"></a>특정 테이블의 관계에 대한 외래 키 특성을 보려면  
   
-1.  **개체 탐색기**에서 [!INCLUDE[ssDE](../../includes/ssde-md.md)]인스턴스에 연결합니다.  
+1.  **개체 탐색기** 에서 [!INCLUDE[ssDE](../../includes/ssde-md.md)]인스턴스에 연결합니다.  
   
-2.  표준 도구 모음에서 **새 쿼리**를 클릭합니다.  
+2.  표준 도구 모음에서 **새 쿼리** 를 클릭합니다.  
   
-3.  다음 예를 복사하여 쿼리 창에 붙여 넣고 **실행**을 클릭합니다. 이 예에서는 예제 데이터베이스에 있는 `HumanResources.Employee` 테이블의 모든 외래 키와 해당 속성을 반환합니다.  
+3.  다음 예를 복사하여 쿼리 창에 붙여 넣고 **실행** 을 클릭합니다. 이 예에서는 예제 데이터베이스에 있는 `HumanResources.Employee` 테이블의 모든 외래 키와 해당 속성을 반환합니다.  
   
     ```  
     USE AdventureWorks2012;  

@@ -15,10 +15,10 @@ author: MashaMSFT
 ms.author: mathoma
 monikerRange: =azuresqldb-mi-current||>=sql-server-2016||=sqlallproducts-allversions
 ms.openlocfilehash: 08a1426de0d150684d867135947087e40207f246
-ms.sourcegitcommit: e700497f962e4c2274df16d9e651059b42ff1a10
+ms.sourcegitcommit: c5078791a07330a87a92abb19b791e950672e198
 ms.translationtype: HT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 08/17/2020
+ms.lasthandoff: 11/26/2020
 ms.locfileid: "88326509"
 ---
 # <a name="sort-columns"></a>열 정렬
@@ -34,7 +34,7 @@ ms.locfileid: "88326509"
  정렬 기준으로 사용할 열의 이름입니다. 하나 이상의 열을 기준으로 정렬할 수 있습니다. **게시** 탭의 **현재 평균 성능** 또는 **현재 가장 낮은 성능** 열은 해당 값이 계산되는 방식 때문에 정렬 기준으로 사용할 수 없습니다.  
   
  **정렬 순서**  
- **오름차순** 또는 **내림차순**값을 지정합니다.  
+ **오름차순** 또는 **내림차순** 값을 지정합니다.  
   
  **모두 지우기**  
  정렬 표에서 모든 행을 제거합니다. 단일 행을 제거하려면 행을 선택하고 Delete 키를 누릅니다.  

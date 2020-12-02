@@ -18,10 +18,10 @@ ms.assetid: b8fa110a-2c9c-4f5a-8fe1-305555640e44
 author: chugugrace
 ms.author: chugu
 ms.openlocfilehash: 1016c9746ba1cfe266ef944eeb66f7c0327d69dd
-ms.sourcegitcommit: e700497f962e4c2274df16d9e651059b42ff1a10
+ms.sourcegitcommit: c5078791a07330a87a92abb19b791e950672e198
 ms.translationtype: HT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 08/17/2020
+ms.lasthandoff: 11/26/2020
 ms.locfileid: "88430355"
 ---
 # <a name="working-with-excel-files-with-the-script-task"></a>스크립트 태스크를 사용한 Excel 파일 작업
@@ -75,25 +75,25 @@ ms.locfileid: "88430355"
   
 ### <a name="to-configure-this-script-task-example"></a>이 스크립트 태스크 예를 구성하려면  
   
-1.  패키지에 새 스크립트 태스크를 추가하고 해당 이름을 **ExcelFileExists**로 바꿉니다.  
+1.  패키지에 새 스크립트 태스크를 추가하고 해당 이름을 **ExcelFileExists** 로 바꿉니다.  
   
-2.  **스크립트 태스크 편집기**의 **스크립트** 탭에서 **ReadOnlyVariables**를 클릭하고 다음 방법 중 하나를 사용하여 속성 값을 입력합니다.  
+2.  **스크립트 태스크 편집기** 의 **스크립트** 탭에서 **ReadOnlyVariables** 를 클릭하고 다음 방법 중 하나를 사용하여 속성 값을 입력합니다.  
   
-    -   **ExcelFile**을 입력합니다.  
+    -   **ExcelFile** 을 입력합니다.  
   
          또는  
   
     -   속성 필드 옆의 줄임표( **...** ) 단추를 클릭하고 **변수 선택** 대화 상자에서 **ExcelFile** 변수를 선택합니다.  
   
-3.  **ReadWriteVariables**를 클릭하고 다음 방법 중 하나를 사용하여 속성 값을 입력합니다.  
+3.  **ReadWriteVariables** 를 클릭하고 다음 방법 중 하나를 사용하여 속성 값을 입력합니다.  
   
-    -   **ExcelFileExists**를 입력합니다.  
+    -   **ExcelFileExists** 를 입력합니다.  
   
          또는  
   
     -   속성 필드 옆의 줄임표( **…** ) 단추를 클릭하고 **변수 선택** 대화 상자에서 **ExcelFileExists** 변수를 선택합니다.  
   
-4.  **스크립트 편집**을 클릭하여 스크립트 편집기를 엽니다.  
+4.  **스크립트 편집** 을 클릭하여 스크립트 편집기를 엽니다.  
   
 5.  **System.IO** 네임스페이스에 대한 **Imports** 문을 스크립트 파일의 맨 위에 추가합니다.  
   
@@ -145,25 +145,25 @@ public class ScriptMain
   
 ### <a name="to-configure-this-script-task-example"></a>이 스크립트 태스크 예를 구성하려면  
   
-1.  패키지에 새 스크립트 태스크를 추가하고 해당 이름을 **ExcelTableExists**로 바꿉니다.  
+1.  패키지에 새 스크립트 태스크를 추가하고 해당 이름을 **ExcelTableExists** 로 바꿉니다.  
   
-2.  **스크립트 태스크 편집기**의 **스크립트** 탭에서 **ReadOnlyVariables**를 클릭하고 다음 방법 중 하나를 사용하여 속성 값을 입력합니다.  
+2.  **스크립트 태스크 편집기** 의 **스크립트** 탭에서 **ReadOnlyVariables** 를 클릭하고 다음 방법 중 하나를 사용하여 속성 값을 입력합니다.  
   
-    -   **ExcelTable** 및 **ExcelFile**을 쉼표로 구분하여 입력합니다 **.**  
+    -   **ExcelTable** 및 **ExcelFile** 을 쉼표로 구분하여 입력합니다 **.**  
   
          또는  
   
     -   속성 필드 옆의 줄임표( **...** ) 단추를 클릭하고 **변수 선택** 대화 상자에서 **ExcelTable** 및 **ExcelFile** 변수를 선택합니다.  
   
-3.  **ReadWriteVariables**를 클릭하고 다음 방법 중 하나를 사용하여 속성 값을 입력합니다.  
+3.  **ReadWriteVariables** 를 클릭하고 다음 방법 중 하나를 사용하여 속성 값을 입력합니다.  
   
-    -   **ExcelTableExists**를 입력합니다.  
+    -   **ExcelTableExists** 를 입력합니다.  
   
          또는  
   
     -   속성 필드 옆의 줄임표( **...** ) 단추를 클릭하고 **변수 선택** 대화 상자에서 **ExcelTableExists** 변수를 선택합니다.  
   
-4.  **스크립트 편집**을 클릭하여 스크립트 편집기를 엽니다.  
+4.  **스크립트 편집** 을 클릭하여 스크립트 편집기를 엽니다.  
   
 5.  스크립트 프로젝트에 **System.Xml** 어셈블리에 대한 참조를 추가합니다.  
   
@@ -252,25 +252,25 @@ public class ScriptMain
   
 ### <a name="to-configure-this-script-task-example"></a>이 스크립트 태스크 예를 구성하려면  
   
-1.  패키지에 새 스크립트 태스크를 추가하고 해당 이름을 **GetExcelFiles**로 바꿉니다.  
+1.  패키지에 새 스크립트 태스크를 추가하고 해당 이름을 **GetExcelFiles** 로 바꿉니다.  
   
-2.  **스크립트 태스크 편집기**를 열고 **스크립트** 탭에서 **ReadOnlyVariables**를 클릭한 후 다음 방법 중 하나를 사용하여 속성 값을 입력합니다.  
+2.  **스크립트 태스크 편집기** 를 열고 **스크립트** 탭에서 **ReadOnlyVariables** 를 클릭한 후 다음 방법 중 하나를 사용하여 속성 값을 입력합니다.  
   
-    -   **ExcelFolder**를 입력합니다.  
+    -   **ExcelFolder** 를 입력합니다.  
   
          또는  
   
     -   속성 필드 옆의 줄임표( **...** ) 단추를 클릭하고 **변수 선택** 대화 상자에서 ExcelFolder 변수를 선택합니다.  
   
-3.  **ReadWriteVariables**를 클릭하고 다음 방법 중 하나를 사용하여 속성 값을 입력합니다.  
+3.  **ReadWriteVariables** 를 클릭하고 다음 방법 중 하나를 사용하여 속성 값을 입력합니다.  
   
-    -   **ExcelFiles**를 입력합니다.  
+    -   **ExcelFiles** 를 입력합니다.  
   
          또는  
   
     -   속성 필드 옆의 줄임표( **...** ) 단추를 클릭하고 **변수 선택** 대화 상자에서 ExcelFiles 변수를 선택합니다.  
   
-4.  **스크립트 편집**을 클릭하여 스크립트 편집기를 엽니다.  
+4.  **스크립트 편집** 을 클릭하여 스크립트 편집기를 엽니다.  
   
 5.  **System.IO** 네임스페이스에 대한 **Imports** 문을 스크립트 파일의 맨 위에 추가합니다.  
   
@@ -327,25 +327,25 @@ public class ScriptMain
   
 ### <a name="to-configure-this-script-task-example"></a>이 스크립트 태스크 예를 구성하려면  
   
-1.  패키지에 새 스크립트 태스크를 추가하고 해당 이름을 **GetExcelTables**로 바꿉니다.  
+1.  패키지에 새 스크립트 태스크를 추가하고 해당 이름을 **GetExcelTables** 로 바꿉니다.  
   
-2.  **스크립트 태스크 편집기**를 열고 **스크립트** 탭에서 **ReadOnlyVariables**를 클릭한 후 다음 방법 중 하나를 사용하여 속성 값을 입력합니다.  
+2.  **스크립트 태스크 편집기** 를 열고 **스크립트** 탭에서 **ReadOnlyVariables** 를 클릭한 후 다음 방법 중 하나를 사용하여 속성 값을 입력합니다.  
   
-    -   **ExcelFile**을 입력합니다.  
+    -   **ExcelFile** 을 입력합니다.  
   
          또는  
   
     -   속성 필드 옆의 줄임표( **...** ) 단추를 클릭하고 **변수 선택** 대화 상자에서 ExcelFile 변수를 선택합니다.  
   
-3.  **ReadWriteVariables**를 클릭하고 다음 방법 중 하나를 사용하여 속성 값을 입력합니다.  
+3.  **ReadWriteVariables** 를 클릭하고 다음 방법 중 하나를 사용하여 속성 값을 입력합니다.  
   
-    -   **ExcelTables**를 입력합니다.  
+    -   **ExcelTables** 를 입력합니다.  
   
          또는  
   
     -   속성 필드 옆의 줄임표( **...** ) 단추를 클릭하고 **변수 선택** 대화 상자에서 ExcelTablesvariable 변수를 선택합니다.  
   
-4.  **스크립트 편집**을 클릭하여 스크립트 편집기를 엽니다.  
+4.  **스크립트 편집** 을 클릭하여 스크립트 편집기를 엽니다.  
   
 5.  스크립트 프로젝트에 **System.Xml** 네임스페이스에 대한 참조를 추가합니다.  
   
@@ -436,13 +436,13 @@ public class ScriptMain
   
 ### <a name="to-configure-a-script-task-to-display-the-output-of-the-examples-in-this-topic"></a>이 항목의 예 출력을 표시하도록 스크립트 태스크를 구성하려면  
   
-1.  패키지에 새 스크립트 태스크를 추가하고 해당 이름을 **DisplayResults**로 바꿉니다.  
+1.  패키지에 새 스크립트 태스크를 추가하고 해당 이름을 **DisplayResults** 로 바꿉니다.  
   
 2.  각 태스크가 이전 태스크가 성공적으로 완료된 후 실행되도록 네 개의 예 스크립트 태스크를 서로 연결하고, 네 번째 예 태스크를 **DisplayResults** 태스크에 연결합니다.  
   
-3.  **스크립트 태스크 편집기**에서 **DisplayResults** 태스크를 엽니다.  
+3.  **스크립트 태스크 편집기** 에서 **DisplayResults** 태스크를 엽니다.  
   
-4.  **스크립트** 탭에서 **ReadOnlyVariables**를 클릭하고 다음 방법 중 하나를 사용하여 [예제를 테스트하기 위한 패키지 구성](#configuring)에 나열된 7개의 변수를 모두 추가합니다.  
+4.  **스크립트** 탭에서 **ReadOnlyVariables** 를 클릭하고 다음 방법 중 하나를 사용하여 [예제를 테스트하기 위한 패키지 구성](#configuring)에 나열된 7개의 변수를 모두 추가합니다.  
   
     -   각 변수의 이름을 쉼표로 구분하여 입력합니다.  
   
@@ -450,7 +450,7 @@ public class ScriptMain
   
     -   속성 필드 옆의 줄임표( **...** ) 단추를 클릭하고 **변수 선택** 대화 상자에서 해당 변수를 선택합니다.  
   
-5.  **스크립트 편집**을 클릭하여 스크립트 편집기를 엽니다.  
+5.  **스크립트 편집** 을 클릭하여 스크립트 편집기를 엽니다.  
   
 6.  **Microsoft.VisualBasic** 및 **System.Windows.Forms** 네임스페이스에 대한 **Imports** 문을 스크립트 파일 맨 위에 추가합니다.  
   

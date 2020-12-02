@@ -22,10 +22,10 @@ ms.assetid: 2f9fc1a8-a001-4c54-8c64-63b443725422
 author: chugugrace
 ms.author: chugu
 ms.openlocfilehash: 7b8138be9f9f643bae9f66611492e4ed7f703382
-ms.sourcegitcommit: e700497f962e4c2274df16d9e651059b42ff1a10
+ms.sourcegitcommit: c5078791a07330a87a92abb19b791e950672e198
 ms.translationtype: HT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 08/17/2020
+ms.lasthandoff: 11/26/2020
 ms.locfileid: "88457068"
 ---
 # <a name="loading-and-running-a-local-package-programmatically"></a>프로그래밍 방식으로 로컬 패키지 로드 및 실행
@@ -62,7 +62,7 @@ ms.locfileid: "88457068"
   
 1.  Visual Studio 개발 환경을 시작하고 원하는 개발 언어로 새 애플리케이션을 만듭니다. 이 예에서는 콘솔 애플리케이션을 사용하지만 Windows Forms 애플리케이션, ASP.NET Web Form 또는 Web 서비스, Windows 서비스 등에서 패키지를 실행할 수도 있습니다.  
   
-2.  **프로젝트** 메뉴에서 **참조 추가**를 클릭하고 **Microsoft.SqlServer.ManagedDTS.dll**에 대한 참조를 추가합니다. **확인**을 클릭합니다.  
+2.  **프로젝트** 메뉴에서 **참조 추가** 를 클릭하고 **Microsoft.SqlServer.ManagedDTS.dll** 에 대한 참조를 추가합니다. **확인** 을 클릭합니다.  
   
 3.  Visual Basic **Imports** 문 또는 C# **using** 문을 사용하여 **Microsoft.SqlServer.Dts.Runtime** 네임스페이스를 가져옵니다.  
   

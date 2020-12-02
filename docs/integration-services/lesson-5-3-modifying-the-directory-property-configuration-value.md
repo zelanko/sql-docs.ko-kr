@@ -12,10 +12,10 @@ ms.assetid: ba2a091f-361c-4331-afe2-53b465164c36
 author: chugugrace
 ms.author: chugu
 ms.openlocfilehash: 2a727a5c8d709e982582c26cff8d6cf09eb44ccc
-ms.sourcegitcommit: e700497f962e4c2274df16d9e651059b42ff1a10
+ms.sourcegitcommit: c5078791a07330a87a92abb19b791e950672e198
 ms.translationtype: HT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 08/17/2020
+ms.lasthandoff: 11/26/2020
 ms.locfileid: "88345699"
 ---
 # <a name="lesson-5-3-modify-the-directory-property-configuration-value"></a>5-3단원: Directory 속성 구성 값 수정
@@ -45,7 +45,7 @@ ms.locfileid: "88345699"
     </DTSConfiguration>  
     ```
 
-    제목 정보인 **GeneratedBy**, **GeneratedFromPackageID** 및 **GeneratedDate**는 파일과 다릅니다. 주의해야 할 요소는 **Configuration** 입니다. 이제 `User::varFolderName` 변수의 **Value** 속성에는 **C:\New Sample Data**가 포함됩니다.  
+    제목 정보인 **GeneratedBy**, **GeneratedFromPackageID** 및 **GeneratedDate** 는 파일과 다릅니다. 주의해야 할 요소는 **Configuration** 입니다. 이제 `User::varFolderName` 변수의 **Value** 속성에는 **C:\New Sample Data** 가 포함됩니다.  
   
 3.  변경 내용을 저장하고 텍스트 편집기를 닫습니다.  
   

@@ -14,10 +14,10 @@ ms.assetid: 17c19787-379e-43fe-9107-e36e17ecda53
 author: chugugrace
 ms.author: chugu
 ms.openlocfilehash: 9d761fd4bd949f066a7dc0c59a69efa4a46edfff
-ms.sourcegitcommit: e700497f962e4c2274df16d9e651059b42ff1a10
+ms.sourcegitcommit: c5078791a07330a87a92abb19b791e950672e198
 ms.translationtype: HT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 08/17/2020
+ms.lasthandoff: 11/26/2020
 ms.locfileid: "88430295"
 ---
 # <a name="logging-in-the-script-component"></a>스크립트 구성 요소의 로깅

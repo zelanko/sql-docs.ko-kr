@@ -24,10 +24,10 @@ author: MikeRayMSFT
 ms.author: mikeray
 monikerRange: '>=aps-pdw-2016||=azuresqldb-current||=azure-sqldw-latest||>=sql-server-2016||=sqlallproducts-allversions||>=sql-server-linux-2017||=azuresqldb-mi-current'
 ms.openlocfilehash: fe87d9a583c60ba6d627168ade3eef07a47467b5
-ms.sourcegitcommit: e700497f962e4c2274df16d9e651059b42ff1a10
+ms.sourcegitcommit: c5078791a07330a87a92abb19b791e950672e198
 ms.translationtype: HT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 08/17/2020
+ms.lasthandoff: 11/26/2020
 ms.locfileid: "88368259"
 ---
 # <a name="time-transact-sql"></a>time(Transact-SQL)
@@ -53,7 +53,7 @@ ms.locfileid: "88368259"
 |전체 자릿수, 소수 자릿수<br /><br /> (사용자는 소수 자릿수만 지정)|아래 표를 참조하세요.|  
 |스토리지 크기|초 소수 부분 자릿수 기본값 100ns를 기준으로 5바이트(고정)가 기본값입니다. Informatica의 경우 기본값은 초 소수 부분 자릿수 기본값 1ms를 기준으로 4바이트(고정)입니다.|  
 |정확도|100나노초(Informatica의 경우 1밀리초)|  
-|기본값|00:00:00<br /><br /> 이 값은 **date**에서 **datetime2** 또는 **datetimeoffset**으로의 암시적 변환을 위해 추가되는 날짜 부분에 사용됩니다.|  
+|기본값|00:00:00<br /><br /> 이 값은 **date** 에서 **datetime2** 또는 **datetimeoffset** 으로의 암시적 변환을 위해 추가되는 날짜 부분에 사용됩니다.|  
 |사용자 정의 초 소수 부분 자릿수|예|  
 |표준 시간대 오프셋 인식 및 유지|예|  
 |일광 절약 시간제 인식|예|  
@@ -122,9 +122,9 @@ SELECT @timeTo AS 'time(3)', @timeFrom AS 'time(4)';
 --(1 row(s) affected)  
 ```  
   
- 변환이 **date**에서 일어나는 경우 변환이 실패하고, "피연산자 유형 충돌: date는 time과 호환되지 않습니다"라는 오류 메시지 206이 발생합니다.  
+ 변환이 **date** 에서 일어나는 경우 변환이 실패하고, "피연산자 유형 충돌: date는 time과 호환되지 않습니다"라는 오류 메시지 206이 발생합니다.  
   
- **datetime**으로 변환되는 경우 시, 분, 초 값이 복사되고 날짜 구성 요소가 '1900-01-01'로 설정됩니다. **time(n)** 값에 대한 초 소수 부분 자릿수의 전체 자릿수가 세 자리보다 크면 **datetime** 결과가 잘립니다. 다음 코드에서는 `time(4)` 값을 `datetime` 값으로 변환한 결과를 보여 줍니다.  
+ **datetime** 으로 변환되는 경우 시, 분, 초 값이 복사되고 날짜 구성 요소가 '1900-01-01'로 설정됩니다. **time(n)** 값에 대한 초 소수 부분 자릿수의 전체 자릿수가 세 자리보다 크면 **datetime** 결과가 잘립니다. 다음 코드에서는 `time(4)` 값을 `datetime` 값으로 변환한 결과를 보여 줍니다.  
   
 ```  
 DECLARE @time time(4) = '12:15:04.1237';  
@@ -140,7 +140,7 @@ SELECT @time AS '@time', @datetime AS '@datetime';
   
 ```  
   
- **smalldatetime**으로 변환되는 경우 날짜는 '1900-01-01'로 설정되고 시간 및 분 값은 반올림됩니다. 초 및 소수 자릿수 초는 0으로 설정됩니다. 다음 코드에서는 `time(4)` 값을 `smalldatetime` 값으로 변환한 결과를 보여 줍니다.  
+ **smalldatetime** 으로 변환되는 경우 날짜는 '1900-01-01'로 설정되고 시간 및 분 값은 반올림됩니다. 초 및 소수 자릿수 초는 0으로 설정됩니다. 다음 코드에서는 `time(4)` 값을 `smalldatetime` 값으로 변환한 결과를 보여 줍니다.  
   
 ```  
 -- Shows rounding up of the minute value.  
@@ -205,7 +205,7 @@ SELECT @datetime2 AS '@datetime2', @time AS '@time';
   
 |입력 문자열 리터럴|변환 규칙|  
 |--------------------------|---------------------|  
-|ODBC DATE|ODBC 문자열 리터럴은 **datetime** 데이터 형식으로 매핑됩니다. ODBC DATETIME 리터럴에서 **time** 형식으로 할당하면 변환 규칙으로 정의된 대로 **datetime**과 이러한 형식 간에 암시적 변환이 발생합니다.|  
+|ODBC DATE|ODBC 문자열 리터럴은 **datetime** 데이터 형식으로 매핑됩니다. ODBC DATETIME 리터럴에서 **time** 형식으로 할당하면 변환 규칙으로 정의된 대로 **datetime** 과 이러한 형식 간에 암시적 변환이 발생합니다.|  
 |ODBC TIME|위의 ODBC DATE 규칙을 참조하세요.|  
 |ODBC DATETIME|위의 ODBC DATE 규칙을 참조하세요.|  
 |DATE만|기본값이 제공됩니다.|  

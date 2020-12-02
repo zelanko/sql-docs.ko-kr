@@ -19,10 +19,10 @@ ms.assetid: 30f47275-2727-4d22-bbec-c0c54bcb3ac2
 author: MladjoA
 ms.author: mlandzic
 ms.openlocfilehash: 58325135db25b79d7c38fb3447f6b7e5bfd8c89a
-ms.sourcegitcommit: e700497f962e4c2274df16d9e651059b42ff1a10
+ms.sourcegitcommit: c5078791a07330a87a92abb19b791e950672e198
 ms.translationtype: HT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 08/17/2020
+ms.lasthandoff: 11/26/2020
 ms.locfileid: "88417019"
 ---
 # <a name="ringn-geography-data-type"></a>RingN(geography 데이터 형식)
@@ -48,7 +48,7 @@ ms.locfileid: "88417019"
  CLR 반환 형식: **SqlGeography**  
   
 ## <a name="remarks"></a>설명  
- 링 인덱스 **n** 값이 1보다 작으면 이 메서드는 **ArgumentOutOfRangeException**을 throw합니다. 링 인덱스 값은 1보다 크거나 같아야 하고 `NumRings()`로 반환된 숫자보다 작거나 같아야 합니다.  
+ 링 인덱스 **n** 값이 1보다 작으면 이 메서드는 **ArgumentOutOfRangeException** 을 throw합니다. 링 인덱스 값은 1보다 크거나 같아야 하고 `NumRings()`로 반환된 숫자보다 작거나 같아야 합니다.  
   
 ## <a name="examples"></a>예제  
  다음 예에서는 두 개의 링이 있는 `Polygon` 인스턴스를 만들고 두 번째 링을 반환합니다.  

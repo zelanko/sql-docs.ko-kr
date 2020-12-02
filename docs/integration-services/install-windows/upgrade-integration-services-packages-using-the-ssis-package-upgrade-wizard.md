@@ -15,10 +15,10 @@ ms.assetid: 9359275a-48f5-4d1e-8ae7-e797759e3ccf
 author: chugugrace
 ms.author: chugu
 ms.openlocfilehash: 0a9e27d3d7379ad4e0c16d47bcdb97abab38741e
-ms.sourcegitcommit: e700497f962e4c2274df16d9e651059b42ff1a10
+ms.sourcegitcommit: c5078791a07330a87a92abb19b791e950672e198
 ms.translationtype: HT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 08/17/2020
+ms.lasthandoff: 11/26/2020
 ms.locfileid: "88346399"
 ---
 # <a name="upgrade-integration-services-packages-using-the-ssis-package-upgrade-wizard"></a>SSIS 패키지 업그레이드 마법사를 사용하여 Integration Services 패키지 업그레이드
@@ -51,7 +51,7 @@ ms.locfileid: "88346399"
   
 #### <a name="to-run-the-wizard-from-sql-server-management-studio"></a>SQL Server Management Studio에서 마법사를 실행하려면  
   
--   [!INCLUDE[ssManStudioFull](../../includes/ssmanstudiofull-md.md)]에서 [!INCLUDE[ssISnoversion](../../includes/ssisnoversion-md.md)]에 연결하고 **저장된 패키지** 노드를 확장하고 **파일 시스템** 또는 **MSDB** 노드를 마우스 오른쪽 단추로 클릭한 다음 **패키지 업그레이드**를 클릭합니다.  
+-   [!INCLUDE[ssManStudioFull](../../includes/ssmanstudiofull-md.md)]에서 [!INCLUDE[ssISnoversion](../../includes/ssisnoversion-md.md)]에 연결하고 **저장된 패키지** 노드를 확장하고 **파일 시스템** 또는 **MSDB** 노드를 마우스 오른쪽 단추로 클릭한 다음 **패키지 업그레이드** 를 클릭합니다.  
   
 #### <a name="to-run-the-wizard-at-the-command-prompt"></a>명령 프롬프트에서 마법사를 실행하려면  
   
@@ -75,7 +75,7 @@ ms.locfileid: "88346399"
   
 2.  [!INCLUDE[ssManStudioFull](../../includes/ssmanstudiofull-md.md)] 또는 명령 프롬프트에서 [!INCLUDE[ssIS](../../includes/ssis-md.md)] 패키지 업그레이드 마법사를 실행합니다.  
   
-3.  마법사의 **원본 위치 선택** 페이지에서 **패키지 원본** 속성을 **파일 시스템**으로 설정합니다.  
+3.  마법사의 **원본 위치 선택** 페이지에서 **패키지 원본** 속성을 **파일 시스템** 으로 설정합니다.  
   
 4.  마법사의 **대상 위치 선택** 페이지에서 **원본 위치에 저장** 을 선택하여 업그레이드된 패키지를 원래 패키지 같은 위치에 저장합니다.  
   

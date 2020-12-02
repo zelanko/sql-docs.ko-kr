@@ -26,10 +26,10 @@ ms.assetid: 9b655bcd-19f6-43d8-9f89-1b4d299c6380
 author: chugugrace
 ms.author: chugu
 ms.openlocfilehash: d476bd87096a68be5154cb57563f08ad982e7d3c
-ms.sourcegitcommit: e700497f962e4c2274df16d9e651059b42ff1a10
+ms.sourcegitcommit: c5078791a07330a87a92abb19b791e950672e198
 ms.translationtype: HT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 08/17/2020
+ms.lasthandoff: 11/26/2020
 ms.locfileid: "88425325"
 ---
 # <a name="referencing-other-assemblies-in-scripting-solutions"></a>스크립팅 솔루션에서 다른 어셈블리 참조
@@ -67,23 +67,23 @@ ms.locfileid: "88425325"
   
  다음 목록에서는 자주 사용되는 몇 가지 [!INCLUDE[dnprdnshort](../../includes/dnprdnshort-md.md)] 클래스에 대해 설명합니다.  
   
--   **System.Data**는 ADO.NET 아키텍처를 포함합니다.  
+-   **System.Data** 는 ADO.NET 아키텍처를 포함합니다.  
   
--   **System.IO**는 파일 시스템 및 스트림에 대한 인터페이스를 제공합니다.  
+-   **System.IO** 는 파일 시스템 및 스트림에 대한 인터페이스를 제공합니다.  
   
--   **System.Windows.Forms**는 폼 만들기 기능을 제공합니다.  
+-   **System.Windows.Forms** 는 폼 만들기 기능을 제공합니다.  
   
--   **System.Text.RegularExpressions**는 정규식 작업을 위한 클래스를 제공합니다.  
+-   **System.Text.RegularExpressions** 는 정규식 작업을 위한 클래스를 제공합니다.  
   
--   **System.Environment**는 로컬 컴퓨터, 현재 사용자, 컴퓨터 및 사용자 설정에 대한 정보를 반환합니다.  
+-   **System.Environment** 는 로컬 컴퓨터, 현재 사용자, 컴퓨터 및 사용자 설정에 대한 정보를 반환합니다.  
   
--   **System.Net**은 네트워크 통신을 제공합니다.  
+-   **System.Net** 은 네트워크 통신을 제공합니다.  
   
--   **System.DirectoryServices**는 Active Directory를 공개합니다.  
+-   **System.DirectoryServices** 는 Active Directory를 공개합니다.  
   
--   **System.Drawing**은 광범위한 이미지 조작 라이브러리를 제공합니다.  
+-   **System.Drawing** 은 광범위한 이미지 조작 라이브러리를 제공합니다.  
   
--   **System.Threading**은 다중 스레드 프로그래밍을 사용할 수 있도록 합니다.  
+-   **System.Threading** 은 다중 스레드 프로그래밍을 사용할 수 있도록 합니다.  
   
  [!INCLUDE[dnprdnshort](../../includes/dnprdnshort-md.md)]에 대한 자세한 내용은 MSDN Library를 참조하십시오.  
   

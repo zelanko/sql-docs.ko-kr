@@ -12,10 +12,10 @@ author: julieMSFT
 ms.author: jrasnick
 monikerRange: =azuresqldb-current||>=sql-server-2016||=sqlallproducts-allversions||>=sql-server-linux-2017||=azuresqldb-mi-current
 ms.openlocfilehash: bc39ec02fe5059bb8b1ae561be732244cbb07791
-ms.sourcegitcommit: e700497f962e4c2274df16d9e651059b42ff1a10
+ms.sourcegitcommit: c5078791a07330a87a92abb19b791e950672e198
 ms.translationtype: HT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 08/17/2020
+ms.lasthandoff: 11/26/2020
 ms.locfileid: "88327179"
 ---
 # <a name="modify-a-partition-scheme"></a>파티션 구성표 수정
@@ -55,7 +55,7 @@ ms.locfileid: "88327179"
 ##  <a name="using-sql-server-management-studio"></a><a name="SSMSProcedure"></a> SQL Server Management Studio 사용  
  **파티션 구성표를 수정하려면**  
   
- 이 특정 동작은 [!INCLUDE[ssManStudioFull](../../includes/ssmanstudiofull-md.md)]를 사용하여 수행할 수 없습니다. 파티션 구성표를 수정하려면 먼저 구성표를 삭제한 다음 파티션 작성 마법사를 사용하여 원하는 속성이 포함된 새 구성표를 만들어야 합니다. 자세한 내용은 [분할된 테이블 및 인덱스 만들기](../../relational-databases/partitions/create-partitioned-tables-and-indexes.md)[아래에서](../../relational-databases/partitions/create-partitioned-tables-and-indexes.md#SSMSProcedure) Create Partitioned Tables and Indexes **Using SQL Server Management Studio**을 참조하세요.  
+ 이 특정 동작은 [!INCLUDE[ssManStudioFull](../../includes/ssmanstudiofull-md.md)]를 사용하여 수행할 수 없습니다. 파티션 구성표를 수정하려면 먼저 구성표를 삭제한 다음 파티션 작성 마법사를 사용하여 원하는 속성이 포함된 새 구성표를 만들어야 합니다. 자세한 내용은 [분할된 테이블 및 인덱스 만들기](../../relational-databases/partitions/create-partitioned-tables-and-indexes.md)[아래에서](../../relational-databases/partitions/create-partitioned-tables-and-indexes.md#SSMSProcedure) Create Partitioned Tables and Indexes **Using SQL Server Management Studio** 을 참조하세요.  
   
 #### <a name="to-delete-a-partition-scheme"></a>파티션 구성표를 삭제하려면  
   
@@ -65,19 +65,19 @@ ms.locfileid: "88327179"
   
 3.  더하기 기호를 클릭하여 **파티션 구성표** 폴더를 확장합니다.  
   
-4.  삭제할 파티션 구성표를 마우스 오른쪽 단추로 클릭하고 **삭제**를 선택합니다.  
+4.  삭제할 파티션 구성표를 마우스 오른쪽 단추로 클릭하고 **삭제** 를 선택합니다.  
   
-5.  **개체 삭제** 대화 상자에서 올바른 파티션 구성표를 선택했는지 확인한 다음 **확인**을 클릭합니다.  
+5.  **개체 삭제** 대화 상자에서 올바른 파티션 구성표를 선택했는지 확인한 다음 **확인** 을 클릭합니다.  
   
 ##  <a name="using-transact-sql"></a><a name="TsqlProcedure"></a> Transact-SQL 사용  
   
 #### <a name="to-modify-a-partition-scheme"></a>파티션 구성표를 수정하려면  
   
-1.  **개체 탐색기**에서 [!INCLUDE[ssDE](../../includes/ssde-md.md)]인스턴스에 연결합니다.  
+1.  **개체 탐색기** 에서 [!INCLUDE[ssDE](../../includes/ssde-md.md)]인스턴스에 연결합니다.  
   
-2.  표준 도구 모음에서 **새 쿼리**를 클릭합니다.  
+2.  표준 도구 모음에서 **새 쿼리** 를 클릭합니다.  
   
-3.  다음 예를 복사하여 쿼리 창에 붙여 넣고 **실행**을 클릭합니다.  
+3.  다음 예를 복사하여 쿼리 창에 붙여 넣고 **실행** 을 클릭합니다.  
   
     ```  
     USE AdventureWorks2012;  

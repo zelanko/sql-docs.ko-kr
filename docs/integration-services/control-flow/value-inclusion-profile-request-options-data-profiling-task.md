@@ -14,10 +14,10 @@ ms.assetid: ca94da82-a4c9-4e87-9cba-c2d85bd31f01
 author: chugugrace
 ms.author: chugu
 ms.openlocfilehash: 2c30a5e35a3c3e5b8e127a317e6d44880dee2e7f
-ms.sourcegitcommit: e700497f962e4c2274df16d9e651059b42ff1a10
+ms.sourcegitcommit: c5078791a07330a87a92abb19b791e950672e198
 ms.translationtype: HT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 08/17/2020
+ms.lasthandoff: 11/26/2020
 ms.locfileid: "88430935"
 ---
 # <a name="value-inclusion-profile-request-options-data-profiling-task"></a>값 포함 프로필 요청 옵션(데이터 프로파일링 태스크)
@@ -28,7 +28,7 @@ ms.locfileid: "88430935"
   **프로필 요청** 페이지의 **요청 속성** 창을 사용하여 요청 창에서 선택한 **값 포함 프로필 요청** 의 옵션을 설정할 수 있습니다. 값 포함 프로필은 두 개의 열 또는 열 집합 간에 겹치는 값을 계산합니다. 따라서 이 프로필은 열 또는 열 집합이 선택한 테이블 간의 외래 키 역할을 수행하기에 적합한지 여부도 확인할 수 있습니다. 또한 이 프로필을 사용하면 잘못된 값과 같은 데이터 문제를 식별할 수 있습니다. 예를 들어 값 포함 프로필을 사용하여 Sales 테이블의 ProductID 열을 프로파일링하는 중 프로필이 Products 테이블의 ProductID 열에 없는 값이 열에 포함되어 있음을 검색할 수 있습니다.  
   
 > [!NOTE]  
->  이 항목에서 설명하는 옵션은 **데이터 프로파일링 태스크 편집기** 의 **프로필 요청 페이지**에 나타납니다. 편집기의 이 페이지에 대한 자세한 내용은 [데이터 프로파일링 태스크 편집기&#40;프로필 요청 페이지&#41;](../../integration-services/control-flow/data-profiling-task-editor-profile-requests-page.md)를 참조하세요.  
+>  이 항목에서 설명하는 옵션은 **데이터 프로파일링 태스크 편집기** 의 **프로필 요청 페이지** 에 나타납니다. 편집기의 이 페이지에 대한 자세한 내용은 [데이터 프로파일링 태스크 편집기&#40;프로필 요청 페이지&#41;](../../integration-services/control-flow/data-profiling-task-editor-profile-requests-page.md)를 참조하세요.  
   
  데이터 프로파일링 태스크를 사용하는 방법에 대한 자세한 내용은 [데이터 프로파일링 태스크 설정](../../integration-services/control-flow/setup-of-the-data-profiling-task.md)을 참조하세요. 데이터 프로필 뷰어를 사용하여 데이터 프로파일링 태스크의 출력을 분석하는 방법에 대한 자세한 내용은 [데이터 프로필 뷰어](../../integration-services/control-flow/data-profile-viewer.md)를 참조하세요.  
   
@@ -43,22 +43,22 @@ ms.locfileid: "88430935"
 ## <a name="understanding-the-threshold-settings"></a>임계값 설정 이해  
  두 개의 다른 임계값 설정을 사용하여 값 포함 프로필 요청의 출력을 구체화할 수 있습니다.  
   
- **InclusionThresholdSetting** 에 대해 **None**이외의 값을 지정하면 다음 상황 중 하나에서만 프로필이 상위 집합에 있는 하위 집합의 포함 수준을 보고합니다.  
+ **InclusionThresholdSetting** 에 대해 **None** 이외의 값을 지정하면 다음 상황 중 하나에서만 프로필이 상위 집합에 있는 하위 집합의 포함 수준을 보고합니다.  
   
--   포함 수준이 **InclusionStrengthThreshold**에 지정된 임계값을 초과하는 경우  
+-   포함 수준이 **InclusionStrengthThreshold** 에 지정된 임계값을 초과하는 경우  
   
--   포함 수준의 값이 1.0이고 **InclusionStrengthThreshold** 가 **Exact**로 설정된 경우  
+-   포함 수준의 값이 1.0이고 **InclusionStrengthThreshold** 가 **Exact** 로 설정된 경우  
   
- 고유하지 않은 값으로 인해 상위 집합 열이 상위 집합 테이블에 적절한 키가 아닌 조합을 필터링하여 출력을 보다 구체화할 수 있습니다. **SupersetColumnsKeyThresholdSetting** 에 대해 **None**이외의 값을 지정하면 다음 상황 중 하나에서만 프로필이 상위 집합에 있는 하위 집합의 포함 수준을 보고합니다.  
+ 고유하지 않은 값으로 인해 상위 집합 열이 상위 집합 테이블에 적절한 키가 아닌 조합을 필터링하여 출력을 보다 구체화할 수 있습니다. **SupersetColumnsKeyThresholdSetting** 에 대해 **None** 이외의 값을 지정하면 다음 상황 중 하나에서만 프로필이 상위 집합에 있는 하위 집합의 포함 수준을 보고합니다.  
   
--   상위 집합 테이블에서 상위 집합 열이 키로 적합한 정도를 나타내는 값이 **SupersetColumnsKeyThreshold**에 지정된 임계값을 초과하는 경우  
+-   상위 집합 테이블에서 상위 집합 열이 키로 적합한 정도를 나타내는 값이 **SupersetColumnsKeyThreshold** 에 지정된 임계값을 초과하는 경우  
   
--   포함 수준의 값이 1.0이고 **SupersetColumnsKeyThreshold** 가 **Exact**로 설정된 경우  
+-   포함 수준의 값이 1.0이고 **SupersetColumnsKeyThreshold** 가 **Exact** 로 설정된 경우  
   
 ## <a name="request-properties-options"></a>요청 속성 옵션  
- **값 포함 프로필 요청**에 대해 **요청 속성** 창에는 다음 옵션 그룹이 표시됩니다.  
+ **값 포함 프로필 요청** 에 대해 **요청 속성** 창에는 다음 옵션 그룹이 표시됩니다.  
   
--   **데이터**- **SubsetTableOrView**, **SupersetTableOrView**및 **InclusionColumns** 옵션이 포함되어 있습니다.  
+-   **데이터**- **SubsetTableOrView**, **SupersetTableOrView** 및 **InclusionColumns** 옵션이 포함되어 있습니다.  
   
 -   **일반**  
   
@@ -91,21 +91,21 @@ ms.locfileid: "88430935"
  선택한 테이블의 이름을 표시합니다. 이 옵션은 읽기 전용입니다.  
   
 #### <a name="inclusioncolumns-options"></a>InclusionColumns 옵션  
- **InclusionColumns**에서 프로파일링 대상으로 선택한 각 열 집합에 대해 다음 옵션이 제공됩니다.  
+ **InclusionColumns** 에서 프로파일링 대상으로 선택한 각 열 집합에 대해 다음 옵션이 제공됩니다.  
   
  자세한 내용은 이 항목의 앞부분에 나오는 "InclusionColumns 속성에 대한 열 선택 이해" 섹션을 참조하십시오.  
   
  **IsWildcard**  
- **(\*)** 와일드카드가 선택되었는지 여부를 지정합니다. 이 옵션은 모든 열을 프로파일링하도록 **(\*)** 를 선택한 경우 **True**로 설정됩니다. 프로파일링할 개별 열을 선택한 경우에는 **False** 로 설정됩니다. 이 옵션은 읽기 전용입니다.  
+ **(\*)** 와일드카드가 선택되었는지 여부를 지정합니다. 이 옵션은 모든 열을 프로파일링하도록 **(\*)** 를 선택한 경우 **True** 로 설정됩니다. 프로파일링할 개별 열을 선택한 경우에는 **False** 로 설정됩니다. 이 옵션은 읽기 전용입니다.  
   
  **ColumnName**  
  선택한 열의 이름을 표시합니다. 이 옵션은 모든 열을 프로파일링하도록 **(\*)** 를 선택한 경우 비어 있습니다. 이 옵션은 읽기 전용입니다.  
   
  **StringCompareOptions**  
- 문자열 값을 비교할 수 있는 옵션을 선택합니다. 이 속성의 옵션은 다음 표에 나열되어 있습니다. 이 옵션의 기본값은 **Default**입니다.  
+ 문자열 값을 비교할 수 있는 옵션을 선택합니다. 이 속성의 옵션은 다음 표에 나열되어 있습니다. 이 옵션의 기본값은 **Default** 입니다.  
   
 > [!NOTE]  
->  **ColumnName**에 대해 **(\*)** 와일드카드를 사용하는 경우 **CompareOptions**가 읽기 전용이 되며 **Default** 설정으로 설정됩니다.  
+>  **ColumnName** 에 대해 **(\*)** 와일드카드를 사용하는 경우 **CompareOptions** 가 읽기 전용이 되며 **Default** 설정으로 설정됩니다.  
   
 |값|Description|  
 |-----------|-----------------|  
@@ -113,7 +113,7 @@ ms.locfileid: "88430935"
 |**BinarySort**|각 문자에 대해 정의된 비트 패턴을 기준으로 데이터를 정렬 및 비교합니다. 이진 정렬 순서는 대/소문자와 악센트를 구분합니다. 이진은 가장 빠른 정렬 순서입니다.|  
 |**DictionarySort**|관련된 언어 또는 알파벳에 대해 사전에 정의된 정렬 및 비교 규칙에 따라 데이터를 정렬 및 비교합니다.|  
   
- **DictionarySort**를 선택하는 경우 다음 테이블에 나열된 옵션 조합을 선택할 수도 있습니다. 이러한 추가 옵션은 기본적으로 선택되어 있지 않습니다.  
+ **DictionarySort** 를 선택하는 경우 다음 테이블에 나열된 옵션 조합을 선택할 수도 있습니다. 이러한 추가 옵션은 기본적으로 선택되어 있지 않습니다.  
   
 |값|Description|  
 |-----------|-----------------|  
@@ -128,35 +128,35 @@ ms.locfileid: "88430935"
   
 ### <a name="options"></a>옵션  
  **None**  
- 프로필의 출력을 구체화하기 위한 임계값 설정을 선택합니다. 이 속성의 기본값은 **Specified**입니다. 자세한 내용은 이 항목의 앞부분에 나오는 "임계값 설정 이해" 섹션을 참조하십시오.  
+ 프로필의 출력을 구체화하기 위한 임계값 설정을 선택합니다. 이 속성의 기본값은 **Specified** 입니다. 자세한 내용은 이 항목의 앞부분에 나오는 "임계값 설정 이해" 섹션을 참조하십시오.  
   
 |값|Description|  
 |-----------|-----------------|  
 |**없음**|임계값을 지정하지 않습니다. 키 수준은 해당 값에 관계없이 보고됩니다.|  
-|**Specified**|**InclusionStrengthThreshold**에 지정된 임계값을 사용합니다. 포함 수준은 이 값이 임계값보다 큰 경우에만 보고됩니다.|  
+|**Specified**|**InclusionStrengthThreshold** 에 지정된 임계값을 사용합니다. 포함 수준은 이 값이 임계값보다 큰 경우에만 보고됩니다.|  
 |**Exact**|임계값을 지정하지 않습니다. 포함 수준은 하위 집합 값이 상위 집합 값에 완전히 포함된 경우에만 보고됩니다.|  
   
  **InclusionStrengthThreshold**  
- 0-1의 값을 사용하여 임계값을 지정합니다. 이 임계값을 초과하는 포함 수준은 보고됩니다. 이 속성의 기본값은 0.95입니다. **Specified** 가 **InclusionThresholdSetting**으로 선택된 경우에만 이 옵션을 사용할 수 있습니다.  
+ 0-1의 값을 사용하여 임계값을 지정합니다. 이 임계값을 초과하는 포함 수준은 보고됩니다. 이 속성의 기본값은 0.95입니다. **Specified** 가 **InclusionThresholdSetting** 으로 선택된 경우에만 이 옵션을 사용할 수 있습니다.  
   
  자세한 내용은 이 항목의 앞부분에 나오는 "임계값 설정 이해" 섹션을 참조하십시오.  
   
  **None**  
- 상위 집합 임계값을 지정합니다. 이 속성의 기본값은 **Specified**입니다. 자세한 내용은 이 항목의 앞부분에 나오는 "임계값 설정 이해" 섹션을 참조하십시오.  
+ 상위 집합 임계값을 지정합니다. 이 속성의 기본값은 **Specified** 입니다. 자세한 내용은 이 항목의 앞부분에 나오는 "임계값 설정 이해" 섹션을 참조하십시오.  
   
 |값|Description|  
 |-----------|-----------------|  
 |**없음**|임계값을 지정하지 않습니다. 포함 수준은 상위 집합 열의 키 수준에 관계없이 보고됩니다.|  
-|**Specified**|**SupersetColumnsKeyThreshold**에 지정된 임계값을 사용합니다. 포함 수준은 상위 집합 열의 키 수준이 임계값보다 큰 경우에만 보고됩니다.|  
+|**Specified**|**SupersetColumnsKeyThreshold** 에 지정된 임계값을 사용합니다. 포함 수준은 상위 집합 열의 키 수준이 임계값보다 큰 경우에만 보고됩니다.|  
 |**Exact**|임계값을 지정하지 않습니다. 포함 수준은 상위 집합 열이 상위 집합 테이블의 정확한 키인 경우에만 보고됩니다.|  
   
  **SupersetColumnsKeyThreshold**  
- 0-1의 값을 사용하여 임계값을 지정합니다. 이 임계값을 초과하는 포함 수준은 보고됩니다. 이 속성의 기본값은 0.95입니다. **Specified** 가 **SupersetColumnsKeyThresholdSetting**으로 선택된 경우에만 이 옵션을 사용할 수 있습니다.  
+ 0-1의 값을 사용하여 임계값을 지정합니다. 이 임계값을 초과하는 포함 수준은 보고됩니다. 이 속성의 기본값은 0.95입니다. **Specified** 가 **SupersetColumnsKeyThresholdSetting** 으로 선택된 경우에만 이 옵션을 사용할 수 있습니다.  
   
  자세한 내용은 이 항목의 앞부분에 나오는 "임계값 설정 이해" 섹션을 참조하십시오.  
   
  **MaxNumberOfViolations**  
- 출력에 보고할 최대 포함 위반 수를 지정합니다. 이 속성의 기본값은 100입니다. **Exact** 가 **InclusionThresholdSetting**으로 선택된 경우 이 옵션을 사용할 수 없습니다.  
+ 출력에 보고할 최대 포함 위반 수를 지정합니다. 이 속성의 기본값은 100입니다. **Exact** 가 **InclusionThresholdSetting** 으로 선택된 경우 이 옵션을 사용할 수 없습니다.  
   
 ## <a name="see-also"></a>참고 항목  
  [데이터 프로파일링 태스크 편집기&#40;일반 페이지&#41;](../../integration-services/control-flow/data-profiling-task-editor-general-page.md)   

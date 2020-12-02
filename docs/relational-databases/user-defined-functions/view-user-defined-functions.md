@@ -21,10 +21,10 @@ author: rothja
 ms.author: jroth
 monikerRange: =azuresqldb-current||>=sql-server-2016||=sqlallproducts-allversions||>=sql-server-linux-2017||=azuresqldb-mi-current
 ms.openlocfilehash: 70cb57fd62b62e10aeb1d68d708a7504265e4e97
-ms.sourcegitcommit: e700497f962e4c2274df16d9e651059b42ff1a10
+ms.sourcegitcommit: c5078791a07330a87a92abb19b791e950672e198
 ms.translationtype: HT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 08/17/2020
+ms.lasthandoff: 11/26/2020
 ms.locfileid: "88460195"
 ---
 # <a name="view-user-defined-functions"></a>사용자 정의 함수 보기
@@ -57,7 +57,7 @@ ms.locfileid: "88460195"
   
 #### <a name="to-show-a-user-defined-functions-properties"></a>사용자 정의 함수의 속성을 표시하려면  
   
-1.  **개체 탐색기**에서 속성을 볼 함수가 포함된 데이터베이스 옆의 더하기 기호를 클릭한 다음 더하기 기호를 클릭하여 **프로그래밍 기능** 폴더를 확장합니다.  
+1.  **개체 탐색기** 에서 속성을 볼 함수가 포함된 데이터베이스 옆의 더하기 기호를 클릭한 다음 더하기 기호를 클릭하여 **프로그래밍 기능** 폴더를 확장합니다.  
   
 2.  더하기 기호를 클릭하여 **함수** 폴더를 확장합니다.  
   
@@ -69,7 +69,7 @@ ms.locfileid: "88460195"
   
     -   Aggregate 함수  
   
-4.  속성을 볼 함수를 마우스 오른쪽 단추로 클릭하고 **속성**을 선택합니다.  
+4.  속성을 볼 함수를 마우스 오른쪽 단추로 클릭하고 **속성** 을 선택합니다.  
 
      다음 속성이 **함수 속성 –** _function_name_ 대화 상자에 표시됩니다.  
   
@@ -116,11 +116,11 @@ ms.locfileid: "88460195"
   
 #### <a name="to-get-the-definition-and-properties-of-a-function"></a>함수의 정의 및 속성을 가져오려면  
   
-1.  **개체 탐색기**에서 [!INCLUDE[ssDE](../../includes/ssde-md.md)]인스턴스에 연결합니다.  
+1.  **개체 탐색기** 에서 [!INCLUDE[ssDE](../../includes/ssde-md.md)]인스턴스에 연결합니다.  
   
-2.  표준 도구 모음에서 **새 쿼리**를 클릭합니다.  
+2.  표준 도구 모음에서 **새 쿼리** 를 클릭합니다.  
   
-3.  다음 예 중 하나를 복사하여 쿼리 창에 붙여 넣고 **실행**을 클릭합니다.  
+3.  다음 예 중 하나를 복사하여 쿼리 창에 붙여 넣고 **실행** 을 클릭합니다.  
   
     ```  
     USE AdventureWorks2012;  
@@ -157,11 +157,11 @@ ms.locfileid: "88460195"
   
 #### <a name="to-get-the-dependencies-of-a-function"></a>함수의 종속성을 가져오려면  
   
-1.  **개체 탐색기**에서 [!INCLUDE[ssDE](../../includes/ssde-md.md)]인스턴스에 연결합니다.  
+1.  **개체 탐색기** 에서 [!INCLUDE[ssDE](../../includes/ssde-md.md)]인스턴스에 연결합니다.  
   
-2.  표준 도구 모음에서 **새 쿼리**를 클릭합니다.  
+2.  표준 도구 모음에서 **새 쿼리** 를 클릭합니다.  
   
-3.  다음 예를 복사하여 쿼리 창에 붙여 넣고 **실행**을 클릭합니다.  
+3.  다음 예를 복사하여 쿼리 창에 붙여 넣고 **실행** 을 클릭합니다.  
   
     ```  
     USE AdventureWorks2012;  

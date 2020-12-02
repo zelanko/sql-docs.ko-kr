@@ -19,10 +19,10 @@ ms.assetid: d236e0ea-dabe-4341-a6eb-ecc210d1f056
 author: MladjoA
 ms.author: mlandzic
 ms.openlocfilehash: caa7913e9971a11413933ad2998f0d6042c9f4ca
-ms.sourcegitcommit: e700497f962e4c2274df16d9e651059b42ff1a10
+ms.sourcegitcommit: c5078791a07330a87a92abb19b791e950672e198
 ms.translationtype: HT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 08/17/2020
+ms.lasthandoff: 11/26/2020
 ms.locfileid: "88422337"
 ---
 # <a name="stpolyfromwkb-geography-data-type"></a>STPolyFromWKB(geography 데이터 형식)
@@ -41,7 +41,7 @@ STPolyFromWKB ( 'WKB_polygon' , SRID )
 
 ## <a name="arguments"></a>인수
  *WKB_polygon*  
- 반환하려는 **geographyPolygon** 인스턴스의 WKB 표현입니다. *WKB_polygon*은 **varbinary(max)** 식입니다.  
+ 반환하려는 **geographyPolygon** 인스턴스의 WKB 표현입니다. *WKB_polygon* 은 **varbinary(max)** 식입니다.  
   
  *SRID*  
  반환하려는 **geographyPolygon** 인스턴스의 SRID(spatial reference ID)를 나타내는 **int** 식입니다.  
@@ -54,7 +54,7 @@ STPolyFromWKB ( 'WKB_polygon' , SRID )
  OGC 형식: **Polygon**  
   
 ## <a name="remarks"></a>설명  
- 이 메서드는 입력이 잘못된 경우 **FormatException**을 throw합니다.  
+ 이 메서드는 입력이 잘못된 경우 **FormatException** 을 throw합니다.  
   
 ## <a name="examples"></a>예  
  다음 예에서는 `STPolyFromWKB()`를 사용하여 `geography` 인스턴스를 만듭니다.  
