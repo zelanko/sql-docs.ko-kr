@@ -12,11 +12,11 @@ ms.assetid: 6f51407e-0e4e-4b44-af33-db14c9d40ded
 author: chugugrace
 ms.author: chugu
 ms.openlocfilehash: 24452ceffc1660e57b087395ded3923e47802314
-ms.sourcegitcommit: e700497f962e4c2274df16d9e651059b42ff1a10
+ms.sourcegitcommit: 192f6a99e19e66f0f817fdb1977f564b2aaa133b
 ms.translationtype: HT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 08/17/2020
-ms.locfileid: "88495226"
+ms.lasthandoff: 11/25/2020
+ms.locfileid: "96129485"
 ---
 # <a name="catalogexecution_data_statistics"></a>catalog.execution_data_statistics 
 
@@ -47,7 +47,7 @@ ms.locfileid: "88495226"
   
 -   기본적으로 실행이 시작되면 전송되는 행의 수에 대한 정보는 기록되지 않습니다.  
   
--   지정된 패키지 실행에 대해 이 데이터를 보려면 로깅 수준을 **Verbose**로 설정합니다. 자세한 내용은 [SSIS 서버에서 패키지 실행에 대한 로깅 설정](../../integration-services/performance/integration-services-ssis-logging.md#server_logging)을 참조하세요.  
+-   지정된 패키지 실행에 대해 이 데이터를 보려면 로깅 수준을 **Verbose** 로 설정합니다. 자세한 내용은 [SSIS 서버에서 패키지 실행에 대한 로깅 설정](../../integration-services/performance/integration-services-ssis-logging.md#server_logging)을 참조하세요.  
   
 ## <a name="permissions"></a>사용 권한  
  이 뷰를 보려면 다음 권한 중 하나가 필요합니다.  

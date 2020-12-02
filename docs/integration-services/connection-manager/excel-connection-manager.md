@@ -19,11 +19,11 @@ ms.assetid: 667419f2-74fb-4b50-b963-9197d1368cda
 author: chugugrace
 ms.author: chugu
 ms.openlocfilehash: aa3a520812d2b28e67b5b863d4480d7d01afaa57
-ms.sourcegitcommit: c7f40918dc3ecdb0ed2ef5c237a3996cb4cd268d
+ms.sourcegitcommit: 192f6a99e19e66f0f817fdb1977f564b2aaa133b
 ms.translationtype: HT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 10/05/2020
-ms.locfileid: "91728084"
+ms.lasthandoff: 11/25/2020
+ms.locfileid: "96130090"
 ---
 # <a name="excel-connection-manager"></a>Excel 연결 관리자
 
@@ -37,7 +37,7 @@ ms.locfileid: "91728084"
 
  패키지에 Excel 연결 관리자를 추가하면 [!INCLUDE[ssISnoversion](../../includes/ssisnoversion-md.md)] 에서 런타임에 Excel 연결로 확인되는 연결 관리자를 만들고, 연결 관리자 속성을 설정하고, 연결 관리자를 패키지의 **Connections** 컬렉션에 추가합니다.  
   
- 연결 관리자의 **ConnectionManagerType** 속성이 **EXCEL**로 설정됩니다.  
+ 연결 관리자의 **ConnectionManagerType** 속성이 **EXCEL** 로 설정됩니다.  
   
 ## <a name="configure-the-excel-connection-manager"></a>Excel 연결 관리자 구성  
  다음과 같은 방법으로 Excel 연결 관리자를 구성할 수 있습니다.  
@@ -68,7 +68,7 @@ ms.locfileid: "91728084"
  파일을 만드는 데 사용된 Microsoft Excel 버전을 지정합니다.  
   
  **첫 행은 열 이름으로**  
- 선택한 워크시트의 첫 데이터 행에 열 이름이 포함되는지 여부를 지정합니다. 이 옵션의 기본값은 **True**입니다.  
+ 선택한 워크시트의 첫 데이터 행에 열 이름이 포함되는지 여부를 지정합니다. 이 옵션의 기본값은 **True** 입니다.  
 
 ## <a name="solution-to-import-data-with-mixed-data-types-from-excel"></a>Excel에서 혼합 데이터 형식의 데이터를 가져오는 솔루션
 
@@ -76,7 +76,7 @@ ms.locfileid: "91728084"
 
 이 문제를 해결하려면 다음 해결 방법 중 하나를 시도해 볼 수 있습니다.
 
-* Excel 파일에서 Excel 열 형식을 **텍스트**로 변경합니다.
+* Excel 파일에서 Excel 열 형식을 **텍스트** 로 변경합니다.
 * 연결 문자열에 IMEX 확장 속성을 추가하여 드라이버의 기본 동작을 재정의합니다. 연결 문자열의 끝에 ";IMEX=1" 확장 속성을 추가하면 Excel에서 모든 데이터를 텍스트로 처리합니다. 다음 예제를 참조하십시오.
     
   ```ACE OLEDB connection string:

@@ -13,14 +13,14 @@ helpviewer_keywords:
 - offline restores [SQL Server]
 - restore sequences [SQL Server], offline
 ms.assetid: 7d6c50eb-dc84-4d66-855a-0b5f1bd89737
-author: MikeRayMSFT
-ms.author: mikeray
-ms.openlocfilehash: c708d0f8743b993e8df58d9eff607e615ee7b7fa
-ms.sourcegitcommit: da88320c474c1c9124574f90d549c50ee3387b4c
+author: cawrites
+ms.author: chadam
+ms.openlocfilehash: 3a09b3fc709cff218548b35318505372acca3479
+ms.sourcegitcommit: 5a1ed81749800c33059dac91b0e18bd8bb3081b1
 ms.translationtype: HT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 07/01/2020
-ms.locfileid: "85718092"
+ms.lasthandoff: 11/23/2020
+ms.locfileid: "96130428"
 ---
 # <a name="example-offline-restore-of-primary-and-1-other-filegroup-full-recovery-model"></a>예제: 주 파일 그룹 및 기타 1개 파일 그룹의 오프라인 복원(전체 복구 모델)
  [!INCLUDE [SQL Server](../../includes/applies-to-version/sqlserver.md)]

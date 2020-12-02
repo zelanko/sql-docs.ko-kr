@@ -12,11 +12,11 @@ ms.assetid: c6e5266b-c32d-49ff-aa69-f09664009fb4
 author: chugugrace
 ms.author: chugu
 ms.openlocfilehash: ddacc7a5599344f330779fad11f647b8e153ccfb
-ms.sourcegitcommit: e700497f962e4c2274df16d9e651059b42ff1a10
+ms.sourcegitcommit: 192f6a99e19e66f0f817fdb1977f564b2aaa133b
 ms.translationtype: HT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 08/17/2020
-ms.locfileid: "88430055"
+ms.lasthandoff: 11/25/2020
+ms.locfileid: "96129792"
 ---
 # <a name="catalogenable_worker_agent-ssisdb-database"></a>catalog.enable_worker_agent(SSISDB 데이터베이스)
 
@@ -30,7 +30,7 @@ ms.locfileid: "88430055"
 catalog.enable_worker_agent [ @WorkerAgentId = ] WorkerAgentId
 ```
 ## <a name="arguments"></a>인수
-[@WorkerAgentId =] *WorkerAgentId* Scale Out Worker의 작업자 에이전트 ID입니다. *WorkerAgentId*는 **uniqueidentifier**입니다.
+[@WorkerAgentId =] *WorkerAgentId* Scale Out Worker의 작업자 에이전트 ID입니다. *WorkerAgentId* 는 **uniqueidentifier** 입니다.
 
 ## <a name="example"></a>예제
 이 예제에서는 MachineA에서 규모 확장 작업자를 사용하도록 설정합니다.

@@ -25,11 +25,11 @@ ms.assetid: 3d71df39-126b-4c8e-bd77-128bbd5b0887
 author: chugugrace
 ms.author: chugu
 ms.openlocfilehash: 630fea974e83507984cae8a4ec2b7938fc551d25
-ms.sourcegitcommit: e700497f962e4c2274df16d9e651059b42ff1a10
+ms.sourcegitcommit: 192f6a99e19e66f0f817fdb1977f564b2aaa133b
 ms.translationtype: HT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 08/17/2020
-ms.locfileid: "88425285"
+ms.lasthandoff: 11/25/2020
+ms.locfileid: "96130038"
 ---
 # <a name="execute-package-utility-dtexecui"></a>패키지 실행 유틸리티(dtexecui)
 
@@ -46,17 +46,17 @@ ms.locfileid: "88425285"
   
 ### <a name="to-open-execute-package-utility-in-sql-server-management-studio"></a>SQL Server Management Studio에서 패키지 실행 유틸리티를 열려면  
   
-1.  [!INCLUDE[ssManStudioFull](../../includes/ssmanstudiofull-md.md)]의 **보기** 메뉴에서 **개체 탐색기**를 클릭합니다.  
+1.  [!INCLUDE[ssManStudioFull](../../includes/ssmanstudiofull-md.md)]의 **보기** 메뉴에서 **개체 탐색기** 를 클릭합니다.  
   
-2.  개체 탐색기에서 **연결**을 클릭한 후 **Integration Services**를 클릭합니다.  
+2.  개체 탐색기에서 **연결** 을 클릭한 후 **Integration Services** 를 클릭합니다.  
   
-3.  **서버에 연결** 대화 상자의 **서버 이름** 목록에 서버 이름을 입력하고 **연결**을 클릭합니다.  
+3.  **서버에 연결** 대화 상자의 **서버 이름** 목록에 서버 이름을 입력하고 **연결** 을 클릭합니다.  
   
-4.  **저장된 패키지**폴더 및 하위 폴더를 확장하고 실행할 패키지를 마우스 오른쪽 단추로 클릭한 다음 **패키지 실행**을 클릭합니다.  
+4.  **저장된 패키지** 폴더 및 하위 폴더를 확장하고 실행할 패키지를 마우스 오른쪽 단추로 클릭한 다음 **패키지 실행** 을 클릭합니다.  
   
 ### <a name="to-open-the-execute-package-utility-at-the-command-prompt"></a>명령 프롬프트에서 패키지 실행 유틸리티를 열려면  
   
--   명령 프롬프트 창에서 **dtexecui**를 실행합니다.  
+-   명령 프롬프트 창에서 **dtexecui** 를 실행합니다.  
   
  다음 섹션에서는 **패키지 실행 유틸리티** 대화 상자의 페이지에 대해 설명합니다.  
   
@@ -119,7 +119,7 @@ ms.locfileid: "88425285"
  Windows 인증을 사용하고 Microsoft Windows 사용자 계정으로 로그온하려면 이 옵션을 선택합니다.  
   
  **SQL Server 인증 사용**  
- **SSIS 패키지 저장소**에 저장된 패키지를 실행하는 경우 이 옵션을 사용할 수 없습니다.  
+ **SSIS 패키지 저장소** 에 저장된 패키지를 실행하는 경우 이 옵션을 사용할 수 없습니다.  
   
  **패키지**  
  패키지 이름을 입력하거나 줄임표 단추 **(...)** 를 클릭하여 **SSIS 패키지 선택** 대화 상자를 사용하여 패키지를 찾습니다.  
@@ -141,7 +141,7 @@ ms.locfileid: "88425285"
  **열기** 대화 상자를 사용하여 구성을 추가하려면 클릭합니다. 기본적으로 이 대화 상자에서는 확장명이 .dtsconfig인 파일만 나열합니다.  
   
  **제거**  
- 목록에서 구성 파일을 선택한 다음 **제거**를 클릭합니다.  
+ 목록에서 구성 파일을 선택한 다음 **제거** 를 클릭합니다.  
   
  **실행**  
  패키지를 실행하려면 클릭합니다.  

@@ -22,11 +22,11 @@ ms.assetid: 7c7ce52a-6b77-4a1c-9abf-d5feb664bea8
 author: markingmyname
 ms.author: maghan
 ms.openlocfilehash: de8f55242f3727eb1491b9a89e9bf7d349cef860
-ms.sourcegitcommit: 197a6ffb643f93592edf9e90b04810a18be61133
+ms.sourcegitcommit: 192f6a99e19e66f0f817fdb1977f564b2aaa133b
 ms.translationtype: HT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 09/26/2020
-ms.locfileid: "91380029"
+ms.lasthandoff: 11/25/2020
+ms.locfileid: "96131116"
 ---
 # <a name="drop-search-property-list-transact-sql"></a>DROP SEARCH PROPERTY LIST(Transact-SQL)
 [!INCLUDE [SQL Server](../../includes/applies-to-version/sqlserver.md)]
@@ -44,7 +44,7 @@ DROP SEARCH PROPERTY LIST property_list_name
 
 ## <a name="arguments"></a>인수
  *property_list_name*  
- 삭제할 검색 속성 목록의 이름입니다. *property_list_name*은 식별자입니다.  
+ 삭제할 검색 속성 목록의 이름입니다. *property_list_name* 은 식별자입니다.  
   
  기존 속성 목록의 이름을 보려면 다음과 같이 [sys.registered_search_property_lists](../../relational-databases/system-catalog-views/sys-registered-search-property-lists-transact-sql.md) 카탈로그 뷰를 사용하십시오.  
   

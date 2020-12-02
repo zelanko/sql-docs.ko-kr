@@ -14,14 +14,14 @@ helpviewer_keywords:
 - database restores [SQL Server], device restores
 - devices [SQL Server]
 ms.assetid: 6e139de7-7de2-4d18-9df0-beac31ba7ff1
-author: MikeRayMSFT
-ms.author: mikeray
-ms.openlocfilehash: ca37f8761ad2559cf5381e0d80cd6e30d003d13d
-ms.sourcegitcommit: da88320c474c1c9124574f90d549c50ee3387b4c
+author: cawrites
+ms.author: chadam
+ms.openlocfilehash: 1c2125a470390f1b7343e4e0f978eb957bd3695e
+ms.sourcegitcommit: 5a1ed81749800c33059dac91b0e18bd8bb3081b1
 ms.translationtype: HT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 07/01/2020
-ms.locfileid: "85669524"
+ms.lasthandoff: 11/23/2020
+ms.locfileid: "96130299"
 ---
 # <a name="restore-a-backup-from-a-device-sql-server"></a>디바이스에서 백업 복원(SQL Server)
  [!INCLUDE [SQL Server](../../includes/applies-to-version/sqlserver.md)]
@@ -57,17 +57,17 @@ ms.locfileid: "85669524"
   
 1.  [!INCLUDE[msCoName](../../includes/msconame-md.md)] [!INCLUDE[ssDEnoversion](../../includes/ssdenoversion-md.md)]의 해당 인스턴스에 연결한 후 개체 탐색기에서 서버 이름을 클릭하여 서버 트리를 확장합니다.  
   
-2.  **데이터베이스**를 확장하고 해당 데이터베이스에 따라 사용자 데이터베이스를 선택하거나 **시스템 데이터베이스** 를 확장한 다음 시스템 데이터베이스를 선택합니다.  
+2.  **데이터베이스** 를 확장하고 해당 데이터베이스에 따라 사용자 데이터베이스를 선택하거나 **시스템 데이터베이스** 를 확장한 다음 시스템 데이터베이스를 선택합니다.  
   
-3.  데이터베이스를 마우스 오른쪽 단추로 클릭하고 **태스크**를 가리킨 다음 **복원**을 클릭합니다.  
+3.  데이터베이스를 마우스 오른쪽 단추로 클릭하고 **태스크** 를 가리킨 다음 **복원** 을 클릭합니다.  
   
-4.  원하는 복원 작업의 유형(**데이터베이스**, **파일 및 파일 그룹**또는 **트랜잭션 로그**)을 클릭합니다. 이렇게 하면 해당되는 복원 대화 상자가 열립니다.  
+4.  원하는 복원 작업의 유형(**데이터베이스**, **파일 및 파일 그룹** 또는 **트랜잭션 로그**)을 클릭합니다. 이렇게 하면 해당되는 복원 대화 상자가 열립니다.  
   
-5.  **일반** 페이지의 **복원 원본** 섹션에서 **디바이스**를 클릭합니다.  
+5.  **일반** 페이지의 **복원 원본** 섹션에서 **디바이스** 를 클릭합니다.  
   
 6.  **디바이스** 입력란에 대한 찾아보기 단추를 클릭합니다. **백업 지정** 대화 상자가 열립니다.  
   
-7.  **백업 미디어** 입력란에서 **백업 디바이스**를 선택하고 **추가** 단추를 클릭하여 **백업 디바이스 선택** 대화 상자를 엽니다.  
+7.  **백업 미디어** 입력란에서 **백업 디바이스** 를 선택하고 **추가** 단추를 클릭하여 **백업 디바이스 선택** 대화 상자를 엽니다.  
   
 8.  **백업 디바이스** 입력란에서 복원 작업에 사용하려는 디바이스를 선택합니다.  
 
@@ -77,7 +77,7 @@ ms.locfileid: "85669524"
   
 1.  [!INCLUDE[ssDE](../../includes/ssde-md.md)]에 연결합니다.  
   
-2.  표준 도구 모음에서 **새 쿼리**를 클릭합니다.  
+2.  표준 도구 모음에서 **새 쿼리** 를 클릭합니다.  
   
 3.  [RESTORE](../../t-sql/statements/restore-statements-transact-sql.md) 문에서 백업 작업에 사용할 논리적 백업 디바이스나 물리적 백업 디바이스를 지정합니다. 이 예에서는 실제 이름이 `Z:\SQLServerBackups\AdventureWorks2012.bak`인 디스크 파일로부터 복원을 수행합니다.  
   

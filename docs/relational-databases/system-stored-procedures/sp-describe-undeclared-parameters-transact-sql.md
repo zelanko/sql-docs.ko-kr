@@ -19,17 +19,17 @@ ms.assetid: 6f016da6-dfee-4228-8b0d-7cd8e7d5a354
 author: markingmyname
 ms.author: maghan
 monikerRange: = azuresqldb-current||= azure-sqldw-latest||>= sql-server-2016||>= sql-server-linux-2017||= sqlallproducts-allversions
-ms.openlocfilehash: 5ca659670cb68bafa10f758bc2a7997243f5c1a8
-ms.sourcegitcommit: c74bb5944994e34b102615b592fdaabe54713047
+ms.openlocfilehash: 232ad1cfe65fca719260a9ed8ab87a7f2d7ed3dd
+ms.sourcegitcommit: 0c0e4ab90655dde3e34ebc08487493e621f25dda
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 09/22/2020
-ms.locfileid: "90990130"
+ms.lasthandoff: 12/01/2020
+ms.locfileid: "96443159"
 ---
 # <a name="sp_describe_undeclared_parameters-transact-sql"></a>sp_describe_undeclared_parameters(Transact-SQL)
 [!INCLUDE [sql-asdb-asdbmi-asa](../../includes/applies-to-version/sql-asdb-asdbmi-asa.md)] 
 
-  일괄 처리의 선언 되지 않은 매개 변수에 대 한 메타 데이터를 포함 하는 결과 집합을 반환 합니다 [!INCLUDE[tsql](../../includes/tsql-md.md)] . ** \@ Tsql** 일괄 처리에 사용 되지만 ** \@ params**에 선언 되지 않은 각 매개 변수를 고려 합니다. 이러한 각 매개 변수에 대한 추론된 형식의 정보와 함께 해당 매개 변수에 대한 하나의 행이 포함된 결과 집합이 반환됩니다. ** \@ Tsql** 입력 일괄 처리에 ** \@ params**에 선언 된 매개 변수가 없는 경우이 프로시저는 빈 결과 집합을 반환 합니다.  
+  일괄 처리의 선언 되지 않은 매개 변수에 대 한 메타 데이터를 포함 하는 결과 집합을 반환 합니다 [!INCLUDE[tsql](../../includes/tsql-md.md)] . **\@ Tsql** 일괄 처리에 사용 되지만 **\@ params** 에 선언 되지 않은 각 매개 변수를 고려 합니다. 이러한 각 매개 변수에 대한 추론된 형식의 정보와 함께 해당 매개 변수에 대한 하나의 행이 포함된 결과 집합이 반환됩니다. **\@ Tsql** 입력 일괄 처리에 **\@ params** 에 선언 된 매개 변수가 없는 경우이 프로시저는 빈 결과 집합을 반환 합니다.  
   
  ![항목 링크 아이콘](../../database-engine/configure-windows/media/topic-link.gif "항목 링크 아이콘") [Transact-SQL 구문 표기 규칙](../../t-sql/language-elements/transact-sql-syntax-conventions-transact-sql.md)  
   
@@ -43,20 +43,20 @@ sp_describe_undeclared_parameters
 ```  
 
 > [!Note] 
-> Azure Synapse Analytics (이전의 SQL DW)에서이 저장 프로시저를 사용 하려면 데이터베이스 호환성 수준을 20 이상으로 설정 합니다.   옵트아웃 하려면 데이터베이스 호환성 수준을 10으로 변경 합니다.
+> 전용 SQL 풀의 Azure Synapse Analytics에서이 저장 프로시저를 사용 하려면 데이터베이스 호환성 수준을 20 이상으로 설정 합니다.   옵트아웃 하려면 데이터베이스 호환성 수준을 10으로 변경 합니다.
 
 ## <a name="arguments"></a>인수  
 `[ \@tsql = ] 'Transact-SQL\_batch'` 하나 이상의 [!INCLUDE[tsql](../../includes/tsql-md.md)] 문입니다. *SQL_batch* 는 **nvarchar (**_n_**)** 또는 **nvarchar (max)** 일 수 있습니다.  
   
 `[ \@params = ] N'parameters'`\@params는 [!INCLUDE[tsql](../../includes/tsql-md.md)] sp_executesql 작동 방식과 비슷하게 일괄 처리에 대 한 매개 변수에 대 한 선언 문자열을 제공 합니다. *매개 변수* 는 **nvarchar (**_n_**)** 또는 **nvarchar (max)** 일 수 있습니다.  
   
- 는 *SQL_batch transact-sql*에 포함 된 모든 매개 변수의 정의를 포함 하는 하나의 문자열입니다. 문자열은 유니코드 상수 또는 유니코드 변수여야 합니다. 각 매개 변수의 정의는 매개 변수 이름과 데이터 형식으로 구성됩니다. n은 추가 매개 변수 정의를 나타내는 자리 표시자입니다. 문의 Transact-sql 문 또는 일괄 처리에 매개 변수가 없는 경우 \@ params가 필요 하지 않습니다. 이 매개 변수의 기본값은 NULL입니다.  
+ 는 *SQL_batch transact-sql* 에 포함 된 모든 매개 변수의 정의를 포함 하는 하나의 문자열입니다. 문자열은 유니코드 상수 또는 유니코드 변수여야 합니다. 각 매개 변수의 정의는 매개 변수 이름과 데이터 형식으로 구성됩니다. n은 추가 매개 변수 정의를 나타내는 자리 표시자입니다. 문의 Transact-sql 문 또는 일괄 처리에 매개 변수가 없는 경우 \@ params가 필요 하지 않습니다. 이 매개 변수의 기본값은 NULL입니다.  
   
- 데이터 형식  
+ Datatype  
  매개 변수의 데이터 형식입니다.  
   
 ## <a name="return-code-values"></a>반환 코드 값  
- 성공 시 **sp_describe_undeclared_parameters** 항상 반환 상태 0을 반환 합니다. 프로시저에서 오류가 발생 하 고 프로시저가 RPC로 호출 된 경우에는 dm_exec_describe_first_result_set의 error_type 열에 설명 된 대로 오류 유형에 의해 반환 상태가 채워집니다. [!INCLUDE[tsql](../../includes/tsql-md.md)]에서 프로시저를 호출한 경우 반환 값은 오류가 발생한 경우에도 항상 0입니다.  
+ 성공 시 **sp_describe_undeclared_parameters** 항상 반환 상태 0을 반환 합니다. 프로시저에서 오류가 발생 하 고 프로시저가 RPC로 호출 된 경우에는 sys.dm_exec_describe_first_result_set의 error_type 열에 설명 된 대로 오류 유형에 의해 반환 상태가 채워집니다. [!INCLUDE[tsql](../../includes/tsql-md.md)]에서 프로시저를 호출한 경우 반환 값은 오류가 발생한 경우에도 항상 0입니다.  
   
 ## <a name="result-sets"></a>결과 집합  
  **sp_describe_undeclared_parameters** 는 다음 결과 집합을 반환 합니다.  
@@ -148,7 +148,7 @@ SELECT * FROM t1 WHERE @p1 = dbo.tbl(c1, @p2, @p3)
   
 -   **INSERT** 문의 **VALUES** 절에 대 한 인수입니다.  
   
--   **CAST** 또는 **CONVERT**의 인수입니다.  
+-   **CAST** 또는 **CONVERT** 의 인수입니다.  
   
  형식 추론 알고리즘은 \@ E (p)의 대상 데이터 형식 TT (p)를 찾습니다 \@ . 위 예에 대한 대상 데이터 형식은 다음과 같습니다.  
   
@@ -224,17 +224,17 @@ SELECT * FROM t1 WHERE @p1 = dbo.tbl(c1, @p2, @p3)
     SELECT * FROM t WHERE Col_Int = Col_Int + @p  
     ```  
   
-     이 경우 E ( \@ p)는 Col_Int + p이 \@ 고 TT ( \@ p)는 **Int**입니다. **int** 는 \@ 암시적 변환을 생성 하지 않으므로 p에 대해 선택 됩니다. 다른 데이터 형식은 하나 이상의 암시적 변환을 생성합니다.  
+     이 경우 E ( \@ p)는 Col_Int + p이 \@ 고 TT ( \@ p)는 **Int** 입니다. **int** 는 \@ 암시적 변환을 생성 하지 않으므로 p에 대해 선택 됩니다. 다른 데이터 형식은 하나 이상의 암시적 변환을 생성합니다.  
   
-2.  변환 수가 가장 적은 데이터 형식에 여러 데이터 형식이 연결된 경우 우선 순위가 가장 높은 데이터 형식이 사용됩니다. 예  
+2.  변환 수가 가장 적은 데이터 형식에 여러 데이터 형식이 연결된 경우 우선 순위가 가장 높은 데이터 형식이 사용됩니다. 예를 들면 다음과 같습니다.  
   
     ```sql
     SELECT * FROM t WHERE Col_Int = Col_smallint + @p  
     ```  
   
-     이 경우 **int** 와 **smallint** 는 하나의 변환을 생성 합니다. 다른 모든 데이터 형식은 두 번 이상 변환을 생성합니다. **Int** 는 **smallint**보다 우선적으로 적용 되므로 p에 **int** 가 사용 됩니다 \@ . 데이터 형식 우선 순위에 대 한 자세한 내용은 [transact-sql&#41;&#40;데이터 형식 우선 순위 ](../../t-sql/data-types/data-type-precedence-transact-sql.md)를 참조 하세요.  
+     이 경우 **int** 와 **smallint** 는 하나의 변환을 생성 합니다. 다른 모든 데이터 형식은 두 번 이상 변환을 생성합니다. **Int** 는 **smallint** 보다 우선적으로 적용 되므로 p에 **int** 가 사용 됩니다 \@ . 데이터 형식 우선 순위에 대 한 자세한 내용은 [transact-sql&#41;&#40;데이터 형식 우선 순위 ](../../t-sql/data-types/data-type-precedence-transact-sql.md)를 참조 하세요.  
   
-     이 규칙은 규칙 1에 따라 연결된 모든 데이터 형식과 우선 순위가 가장 높은 데이터 형식 간에 암시적 변환이 있는 경우에만 적용됩니다. 암시적 변환이 없으면 데이터 형식 추론이 오류와 함께 실패합니다. 예를 들어 쿼리에서 데이터 형식이 `SELECT @p FROM t` 동일 하기 때문에 데이터 형식 추론에 실패 \@ 합니다. 예를 들어 **int** 에서 **xml**로의 암시적 변환은 없습니다.  
+     이 규칙은 규칙 1에 따라 연결된 모든 데이터 형식과 우선 순위가 가장 높은 데이터 형식 간에 암시적 변환이 있는 경우에만 적용됩니다. 암시적 변환이 없으면 데이터 형식 추론이 오류와 함께 실패합니다. 예를 들어 쿼리에서 데이터 형식이 `SELECT @p FROM t` 동일 하기 때문에 데이터 형식 추론에 실패 \@ 합니다. 예를 들어 **int** 에서 **xml** 로의 암시적 변환은 없습니다.  
   
 3.  **Varchar (8000)** 및 **varchar (max)** 와 같이 유사한 두 데이터 형식이 규칙 1에 연결 된 경우 더 작은 데이터 형식 (**varchar (8000)**)이 선택 됩니다. **Nvarchar** 및 **varbinary** 데이터 형식에도 동일한 원칙이 적용 됩니다.  
   
@@ -244,7 +244,7 @@ SELECT * FROM t1 WHERE @p1 = dbo.tbl(c1, @p2, @p3)
   
     2.  동일한 데이터 형식 (예: **char** - **varchar**)의 고정 길이 및 가변 길이 버전 간의 변환입니다.  
   
-    3.  **NULL** 과 **int**간의 변환입니다.  
+    3.  **NULL** 과 **int** 간의 변환입니다.  
   
     4.  기타 변환  
   
@@ -255,7 +255,7 @@ SELECT * FROM t1 WHERE @p1 = dbo.tbl(c1, @p2, @p3)
 ## <a name="permissions"></a>사용 권한  
  Tsql 인수를 실행할 수 있는 권한이 필요 \@ 합니다.  
   
-## <a name="examples"></a>예  
+## <a name="examples"></a>예제  
  다음 예에서는 선언되지 않은 `@id` 및 `@name` 매개 변수에 필요한 데이터 형식과 같은 정보를 반환합니다.  
   
 ```sql
@@ -279,5 +279,5 @@ WHERE object_id = @id OR NAME = @name',
   
 ## <a name="see-also"></a>참고 항목  
  [Transact-sql&#41;sp_describe_first_result_set &#40;](../../relational-databases/system-stored-procedures/sp-describe-first-result-set-transact-sql.md)   
- [dm_exec_describe_first_result_set &#40;Transact-sql&#41;](../../relational-databases/system-dynamic-management-views/sys-dm-exec-describe-first-result-set-transact-sql.md)   
- [dm_exec_describe_first_result_set_for_object &#40;Transact-sql&#41;](../../relational-databases/system-dynamic-management-views/sys-dm-exec-describe-first-result-set-for-object-transact-sql.md)
+ [Transact-sql&#41;sys.dm_exec_describe_first_result_set &#40;](../../relational-databases/system-dynamic-management-views/sys-dm-exec-describe-first-result-set-transact-sql.md)   
+ [Transact-sql&#41;sys.dm_exec_describe_first_result_set_for_object &#40;](../../relational-databases/system-dynamic-management-views/sys-dm-exec-describe-first-result-set-for-object-transact-sql.md)

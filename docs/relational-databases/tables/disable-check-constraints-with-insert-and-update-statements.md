@@ -18,11 +18,11 @@ author: stevestein
 ms.author: sstein
 monikerRange: '>=aps-pdw-2016||=azuresqldb-current||=azure-sqldw-latest||>=sql-server-2016||=sqlallproducts-allversions||>=sql-server-linux-2017||=azuresqldb-mi-current'
 ms.openlocfilehash: d5511ebc4161cb9793039f46a69dfb44413019c2
-ms.sourcegitcommit: e700497f962e4c2274df16d9e651059b42ff1a10
+ms.sourcegitcommit: 192f6a99e19e66f0f817fdb1977f564b2aaa133b
 ms.translationtype: HT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 08/17/2020
-ms.locfileid: "88446416"
+ms.lasthandoff: 11/25/2020
+ms.locfileid: "96130872"
 ---
 # <a name="disable-check-constraints-with-insert-and-update-statements"></a>INSERT 및 UPDATE 문에서 CHECK 제약 조건 해제
 [!INCLUDE [sqlserver2016-asdb-asdbmi-asa-pdw](../../includes/applies-to-version/sqlserver2016-asdb-asdbmi-asa-pdw.md)]
@@ -52,23 +52,23 @@ ms.locfileid: "88446416"
   
 #### <a name="to-disable-a-check-constraint-for-insert-and-update-statements"></a>INSERT 및 UPDATE 문에 대해 CHECK 제약 조건을 해제하려면  
   
-1.  **개체 탐색기**에서 제약 조건을 포함하는 테이블을 확장하고 **제약 조건** 폴더를 확장합니다.  
+1.  **개체 탐색기** 에서 제약 조건을 포함하는 테이블을 확장하고 **제약 조건** 폴더를 확장합니다.  
   
-2.  제약 조건을 마우스 오른쪽 단추로 클릭하고 **수정**을 선택합니다.  
+2.  제약 조건을 마우스 오른쪽 단추로 클릭하고 **수정** 을 선택합니다.  
   
-3.  **테이블 디자이너**아래의 표에서 **INSERT 및 UPDATE에 적용** 을 클릭하고 드롭다운 메뉴에서 **아니요** 를 선택합니다.  
+3.  **테이블 디자이너** 아래의 표에서 **INSERT 및 UPDATE에 적용** 을 클릭하고 드롭다운 메뉴에서 **아니요** 를 선택합니다.  
   
-4.  **닫기**를 클릭합니다.  
+4.  **닫기** 를 클릭합니다.  
   
 ##  <a name="using-transact-sql"></a><a name="TsqlProcedure"></a> Transact-SQL 사용  
   
 #### <a name="to-disable-a-check-constraint-for-insert-and-update-statements"></a>INSERT 및 UPDATE 문에 대해 CHECK 제약 조건을 해제하려면  
   
-1.  **개체 탐색기**에서 [!INCLUDE[ssDE](../../includes/ssde-md.md)]인스턴스에 연결합니다.  
+1.  **개체 탐색기** 에서 [!INCLUDE[ssDE](../../includes/ssde-md.md)]인스턴스에 연결합니다.  
   
-2.  표준 도구 모음에서 **새 쿼리**를 클릭합니다.  
+2.  표준 도구 모음에서 **새 쿼리** 를 클릭합니다.  
   
-3.  다음 예를 복사하여 쿼리 창에 붙여 넣고 **실행**을 클릭합니다.  
+3.  다음 예를 복사하여 쿼리 창에 붙여 넣고 **실행** 을 클릭합니다.  
   
     ```  
     USE AdventureWorks2012;  

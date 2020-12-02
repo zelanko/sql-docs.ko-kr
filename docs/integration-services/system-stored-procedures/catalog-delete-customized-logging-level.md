@@ -12,11 +12,11 @@ ms.assetid: 0aec1e34-f30b-4e5f-bba1-c26665cf2da6
 author: chugugrace
 ms.author: chugu
 ms.openlocfilehash: 302201f4d3932867265b507c78290e511913bed7
-ms.sourcegitcommit: e700497f962e4c2274df16d9e651059b42ff1a10
+ms.sourcegitcommit: 192f6a99e19e66f0f817fdb1977f564b2aaa133b
 ms.translationtype: HT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 08/17/2020
-ms.locfileid: "88456918"
+ms.lasthandoff: 11/25/2020
+ms.locfileid: "96129851"
 ---
 # <a name="catalogdelete_customized_logging_level"></a>catalog.delete_customized_logging_level 
 
@@ -34,7 +34,7 @@ catalog.delete_customized_logging_level [ @level_name = ] level_name
  [ @level_name = ] *level_name*  
  삭제할 기존 사용자 지정 로깅 수준의 이름입니다.  
   
- *level_name*은 **nvarchar(128)** 입니다.  
+ *level_name* 은 **nvarchar(128)** 입니다.  
   
 ## <a name="remarks"></a>설명  
   

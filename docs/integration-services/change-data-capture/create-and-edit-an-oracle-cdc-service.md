@@ -14,11 +14,11 @@ ms.assetid: 10cd612e-d8f1-4af2-97d3-a0c22e1e2326
 author: chugugrace
 ms.author: chugu
 ms.openlocfilehash: bcccb89d1af55f990388b389087c16c003d12c39
-ms.sourcegitcommit: e700497f962e4c2274df16d9e651059b42ff1a10
+ms.sourcegitcommit: 192f6a99e19e66f0f817fdb1977f564b2aaa133b
 ms.translationtype: HT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 08/17/2020
-ms.locfileid: "88496276"
+ms.lasthandoff: 11/25/2020
+ms.locfileid: "96130651"
 ---
 # <a name="create-and-edit-an-oracle-cdc-service"></a>Oracle CDC Service 만들기 및 편집
 
@@ -27,11 +27,11 @@ ms.locfileid: "88496276"
 
   CDC Service 구성 콘솔에서 새 Oracle CDC Windows 서비스를 만들고 편집합니다.  
   
- 새 Oracle CDC Windows 서비스를 만들려면 왼쪽 창에서 **로컬 CDC Service** 를 선택한 다음 **동작** 창에서 **새 서비스** 를 클릭합니다. **로컬 CDC Service** 를 마우스 오른쪽 단추로 클릭하고 **새 서비스**를 선택할 수도 있습니다. 새 Oracle CDC Windows 서비스 대화 상자가 열립니다.  
+ 새 Oracle CDC Windows 서비스를 만들려면 왼쪽 창에서 **로컬 CDC Service** 를 선택한 다음 **동작** 창에서 **새 서비스** 를 클릭합니다. **로컬 CDC Service** 를 마우스 오른쪽 단추로 클릭하고 **새 서비스** 를 선택할 수도 있습니다. 새 Oracle CDC Windows 서비스 대화 상자가 열립니다.  
   
  **OR**  
   
- CDC Service 속성을 편집하려면 속성을 편집할 서비스를 선택하고 **동작** 창에서 **속성** 을 클릭합니다. 작업할 서비스를 마우스 오른쪽 단추로 클릭하고 **속성**을 선택할 수도 있습니다. CDC Service 속성 대화 상자가 열립니다.  
+ CDC Service 속성을 편집하려면 속성을 편집할 서비스를 선택하고 **동작** 창에서 **속성** 을 클릭합니다. 작업할 서비스를 마우스 오른쪽 단추로 클릭하고 **속성** 을 선택할 수도 있습니다. CDC Service 속성 대화 상자가 열립니다.  
   
  새 Oracle CDC Windows 서비스 대화 상자 또는 CDC Service 속성 대화 상자에 다음 정보를 입력합니다.  
   
@@ -72,16 +72,16 @@ ms.locfileid: "88496276"
   
  Oracle CDC Service에서 사용되는 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 로그인은 공용 고정 서버 역할의 구성원이면 가능하며 다른 권한은 필요 없습니다. 새 Oracle CDC 인스턴스를 추가하면 해당 로그인은 연결된 **CDC 데이터베이스에 대한** db_owner [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 액세스 권한을 얻게 됩니다.  
   
- Oracle CDC Windows 서비스 정의를 만들려면 프로그램은 연결된 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 인스턴스에서 MSXDBCDC 데이터베이스에 대한 액세스 권한을 업데이트해야 합니다. **확인**을 클릭하면 사용자가 MSXDBCDC 데이터베이스의 업데이트 권한이 있는 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 로그인을 입력할 수 있는 대화 상자가 나타납니다.  
+ Oracle CDC Windows 서비스 정의를 만들려면 프로그램은 연결된 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 인스턴스에서 MSXDBCDC 데이터베이스에 대한 액세스 권한을 업데이트해야 합니다. **확인** 을 클릭하면 사용자가 MSXDBCDC 데이터베이스의 업데이트 권한이 있는 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 로그인을 입력할 수 있는 대화 상자가 나타납니다.  
   
  SQL Server에 연결 대화 상자에 입력해야 하는 데이터에 대한 자세한 내용은 [Connection to SQL Server](../../integration-services/change-data-capture/connection-to-sql-server.md)을 참조하십시오.  
   
  **옵션**  
  화살표를 클릭하면 구성할 수 있는 옵션을 볼 수 있습니다. 이러한 옵션을 기본값으로 그대로 둘 수 있습니다. 사용 가능한 옵션은 다음과 같습니다.  
   
--   **연결 제한 시간**: 제한 시간이 초과되기 전에 Oracle용 CDC Service가 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 에 연결될 때까지 기다리는 시간(초)을 입력합니다. 기본값은 **15**입니다.  
+-   **연결 제한 시간**: 제한 시간이 초과되기 전에 Oracle용 CDC Service가 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 에 연결될 때까지 기다리는 시간(초)을 입력합니다. 기본값은 **15** 입니다.  
   
--   **실행 제한 시간**: 제한 시간이 초과되기 전에 Oracle CDC Windows 서비스에서 명령이 실행될 때까지 기다리는 시간(초)을 입력합니다. 기본값은 **30**입니다.  
+-   **실행 제한 시간**: 제한 시간이 초과되기 전에 Oracle CDC Windows 서비스에서 명령이 실행될 때까지 기다리는 시간(초)을 입력합니다. 기본값은 **30** 입니다.  
   
 -   **연결 암호화**: 암호화된 연결을 사용하는 대상 **인스턴스와 Oracle CDC Service 사이의 통신을 위해** 연결 암호화 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 를 선택합니다.  
   

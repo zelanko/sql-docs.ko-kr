@@ -15,11 +15,11 @@ ms.assetid: 79dd4254-e3c6-467a-bb6f-f99e51757e99
 author: MashaMSFT
 ms.author: mathoma
 ms.openlocfilehash: ff2970bf4d450c425f169be7b2bb72c24db7d2d0
-ms.sourcegitcommit: b3a711a673baebb2ff10d7142b209982b46973ae
+ms.sourcegitcommit: 192f6a99e19e66f0f817fdb1977f564b2aaa133b
 ms.translationtype: HT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 11/05/2020
-ms.locfileid: "93364797"
+ms.lasthandoff: 11/25/2020
+ms.locfileid: "96130188"
 ---
 # <a name="create-a-trace-transact-sql"></a>추적 만들기(Transact-SQL)
  [!INCLUDE [SQL Server](../../includes/applies-to-version/sqlserver.md)]
@@ -27,7 +27,7 @@ ms.locfileid: "93364797"
   
 ### <a name="to-create-a-trace"></a>추적 만들기  
   
-1.  새 추적을 만드는 데 필요한 매개 변수를 사용하여 **sp_trace_create** 를 실행합니다. 새 추적은 중지된 상태( *status* = **0** )입니다.  
+1.  새 추적을 만드는 데 필요한 매개 변수를 사용하여 **sp_trace_create** 를 실행합니다. 새 추적은 중지된 상태(*status* = **0**)입니다.  
   
 2.  추적할 이벤트 및 열을 선택하는 데 필요한 매개 변수를 실행하여 **sp_trace_setevent** 를 실행합니다.  
   
@@ -36,7 +36,7 @@ ms.locfileid: "93364797"
      **sp_trace_setevent** 및 **sp_trace_setfilter** 는 중지된 기존 추적에서만 실행할 수 있습니다.  
   
     > [!IMPORTANT]  
-    >  일반적인 저장 프로시저와 달리 모든 SQL Server Profiler 저장 프로시저의 매개 변수( <strong>sp_trace_ *xx*</strong>)는 정확하게 입력해야 하며 데이터 형식 자동 변환을 지원하지 않습니다. 이러한 매개 변수를 인수 설명에 지정된 올바른 입력 매개 변수 데이터 형식으로 호출하지 않으면 저장 프로시저가 오류를 반환합니다.  
+    >  일반적인 저장 프로시저와 달리 모든 SQL Server Profiler 저장 프로시저의 매개 변수(<strong>sp_trace_ *xx*</strong>)는 정확하게 입력해야 하며 데이터 형식 자동 변환을 지원하지 않습니다. 이러한 매개 변수를 인수 설명에 지정된 올바른 입력 매개 변수 데이터 형식으로 호출하지 않으면 저장 프로시저가 오류를 반환합니다.  
   
 ## <a name="examples"></a>예
 

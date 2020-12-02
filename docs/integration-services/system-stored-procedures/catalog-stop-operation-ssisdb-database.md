@@ -12,11 +12,11 @@ ms.assetid: 97fd9d22-03dd-4eda-8f6c-ba8b67acec68
 author: chugugrace
 ms.author: chugu
 ms.openlocfilehash: c77113417a108632aab150e75011399f9ad3a752
-ms.sourcegitcommit: e700497f962e4c2274df16d9e651059b42ff1a10
+ms.sourcegitcommit: 192f6a99e19e66f0f817fdb1977f564b2aaa133b
 ms.translationtype: HT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 08/17/2020
-ms.locfileid: "88477110"
+ms.lasthandoff: 11/25/2020
+ms.locfileid: "96129578"
 ---
 # <a name="catalogstop_operation-ssisdb-database"></a>catalog.stop_operation(SSISDB 데이터베이스)
 
@@ -35,7 +35,7 @@ catalog.stop_operation [ @operation_id = ] operation_id
   
 ## <a name="arguments"></a>인수  
  [ @operation_id = ] *operation_id*  
- 실행 인스턴스 또는 유효성 검사의 고유 식별자입니다. *operation_id*는 **bigint**입니다.  
+ 실행 인스턴스 또는 유효성 검사의 고유 식별자입니다. *operation_id* 는 **bigint** 입니다.  
   
 ## <a name="return-code-value"></a>반환 코드 값  
  0(성공)  

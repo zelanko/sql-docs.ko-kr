@@ -13,14 +13,14 @@ helpviewer_keywords:
 - log shipping [SQL Server], monitoring
 - log shipping [SQL Server], viewing reports
 ms.assetid: 3b549f2f-3683-45e5-b8e8-8095276c41ab
-author: MashaMSFT
-ms.author: mathoma
-ms.openlocfilehash: ba4a8e1d48587046ecceb9007ca57f580b0338c2
-ms.sourcegitcommit: da88320c474c1c9124574f90d549c50ee3387b4c
+author: cawrites
+ms.author: chadam
+ms.openlocfilehash: 4ee1de4f9d231c2fa3be91cab2010eb1aad358f8
+ms.sourcegitcommit: 5a1ed81749800c33059dac91b0e18bd8bb3081b1
 ms.translationtype: HT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 07/01/2020
-ms.locfileid: "85748547"
+ms.lasthandoff: 11/23/2020
+ms.locfileid: "96130730"
 ---
 # <a name="view-the-log-shipping-report-sql-server-management-studio"></a>로그 전달 보고서 보기(SQL Server Management Studio)
  [!INCLUDE [SQL Server](../../includes/applies-to-version/sqlserver.md)]
@@ -38,15 +38,15 @@ ms.locfileid: "85748547"
   
  표시되는 정보는 서버 인스턴스가 모니터 서버인지, 주 서버인지 또는 보조 서버인지에 따라 다릅니다. 정보를 사용할 수 없으면 해당 셀이 회색으로 나타납니다.  
   
- 보고서는 **sp_help_log_shipping_monitor**를 호출하여 데이터를 가져옵니다. 필요한 권한에 대한 자세한 내용은 [sp_help_log_shipping_monitor&#40;Transact-SQL&#41;](../../relational-databases/system-stored-procedures/sp-help-log-shipping-monitor-transact-sql.md)를 참조하세요.  
+ 보고서는 **sp_help_log_shipping_monitor** 를 호출하여 데이터를 가져옵니다. 필요한 권한에 대한 자세한 내용은 [sp_help_log_shipping_monitor&#40;Transact-SQL&#41;](../../relational-databases/system-stored-procedures/sp-help-log-shipping-monitor-transact-sql.md)를 참조하세요.  
   
 ### <a name="to-display-the-transaction-log-shipping-status-report-on-a-server-instance"></a>서버 인스턴스의 트랜잭션 로그 전달 상태 보고서를 표시하려면  
   
 1.  모니터 서버, 주 서버 또는 보조 서버에 연결합니다.  
   
-2.  개체 탐색기에서 서버 인스턴스를 마우스 오른쪽 단추로 클릭하고 **보고서**를 가리킨 후 **표준 보고서**를 선택합니다.  
+2.  개체 탐색기에서 서버 인스턴스를 마우스 오른쪽 단추로 클릭하고 **보고서** 를 가리킨 후 **표준 보고서** 를 선택합니다.  
   
-3.  **트랜잭션 로그 전달 상태**를 클릭합니다.  
+3.  **트랜잭션 로그 전달 상태** 를 클릭합니다.  
   
 ## <a name="see-also"></a>참고 항목  
  [로그 전달 모니터링&#40;Transact-SQL&#41;](../../database-engine/log-shipping/monitor-log-shipping-transact-sql.md)  

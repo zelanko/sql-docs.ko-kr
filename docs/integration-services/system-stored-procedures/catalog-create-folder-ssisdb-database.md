@@ -12,11 +12,11 @@ ms.assetid: 06fb3549-e970-4ca2-a61f-59affb9c6dcc
 author: chugugrace
 ms.author: chugu
 ms.openlocfilehash: 9c0c28c81f607f5ab7ddc71d84ae52ea848d9334
-ms.sourcegitcommit: e700497f962e4c2274df16d9e651059b42ff1a10
+ms.sourcegitcommit: 192f6a99e19e66f0f817fdb1977f564b2aaa133b
 ms.translationtype: HT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 08/17/2020
-ms.locfileid: "88456966"
+ms.lasthandoff: 11/25/2020
+ms.locfileid: "96129859"
 ---
 # <a name="catalogcreate_folder-ssisdb-database"></a>catalog.create_folder(SSISDB 데이터베이스)
 
@@ -35,10 +35,10 @@ catalog.create_folder [ @folder_name = ] folder_name, [ @folder_id = ] folder_id
   
 ## <a name="arguments"></a>인수  
  [@folder_name =] *folder_name*  
- 새 폴더의 이름입니다. *folder_name*은 **nvarchar(128)** 입니다.  
+ 새 폴더의 이름입니다. *folder_name* 은 **nvarchar(128)** 입니다.  
   
  [@folder_name =] *folder_id*  
- 폴더의 고유 식별자(ID)입니다. *folder_id*는 **bigint**입니다.  
+ 폴더의 고유 식별자(ID)입니다. *folder_id* 는 **bigint** 입니다.  
   
 ## <a name="return-code-value"></a>반환 코드 값  
  폴더 식별자가 반환됩니다.  

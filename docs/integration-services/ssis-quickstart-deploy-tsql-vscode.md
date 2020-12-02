@@ -10,11 +10,11 @@ ms.technology: integration-services
 author: chugugrace
 ms.author: chugu
 ms.openlocfilehash: e5ea310eb9054beb5fdab77e589ad9fbc2901cc7
-ms.sourcegitcommit: a5398f107599102af7c8cda815d8e5e9a367ce7e
+ms.sourcegitcommit: 192f6a99e19e66f0f817fdb1977f564b2aaa133b
 ms.translationtype: HT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 10/13/2020
-ms.locfileid: "92005734"
+ms.lasthandoff: 11/25/2020
+ms.locfileid: "96130017"
 ---
 # <a name="deploy-an-ssis-project-from-visual-studio-code-with-transact-sql"></a>Transact-SQL을 사용하여 Visual Studio Code에서 SSIS 프로젝트 배포
 
@@ -43,13 +43,13 @@ Visual Studio Code는 Microsoft SQL Server, Azure SQL Database 또는 Azure Syna
 
 ## <a name="set-language-mode-to-sql-in-vs-code"></a>VS Code에서 언어 모드를 SQL로 설정
 
-`mssql` 명령과 T-SQL IntelliSense를 사용하도록 설정하려면 Visual Studio Code에서 언어 모드를 **SQL**로 설정합니다.
+`mssql` 명령과 T-SQL IntelliSense를 사용하도록 설정하려면 Visual Studio Code에서 언어 모드를 **SQL** 로 설정합니다.
 
 1. Visual Studio Code를 연 다음 새 창을 엽니다. 
 
-2. 상태 표시줄의 오른쪽 아래 모서리에 있는 **일반 텍스트**를 클릭합니다.
+2. 상태 표시줄의 오른쪽 아래 모서리에 있는 **일반 텍스트** 를 클릭합니다.
  
-3. 열리는 **언어 모드 선택** 드롭다운 메뉴에서 **SQL**을 선택하거나 입력한 다음 **Enter** 키를 눌러 언어 모드를 SQL로 설정합니다. 
+3. 열리는 **언어 모드 선택** 드롭다운 메뉴에서 **SQL** 을 선택하거나 입력한 다음 **Enter** 키를 눌러 언어 모드를 SQL로 설정합니다. 
 
 ## <a name="supported-authentication-method"></a>지원되는 인증 방법
 
@@ -61,9 +61,9 @@ Visual Studio Code를 사용하여 SSIS 카탈로그에 대한 연결을 설정�
 
 1. VS Code에서 **Ctrl+Shift+P**(또는 **F1** 키)를 눌러 명령 팔레트를 엽니다.
 
-2. **sqlcon**을 입력하고 **Enter** 키를 누릅니다.
+2. **sqlcon** 을 입력하고 **Enter** 키를 누릅니다.
 
-3. **Enter** 키를 눌러 **연결 프로필 만들기**를 선택합니다. 이 단계는 SQL Server 인스턴스에 대한 연결 프로필을 만듭니다.
+3. **Enter** 키를 눌러 **연결 프로필 만들기** 를 선택합니다. 이 단계는 SQL Server 인스턴스에 대한 연결 프로필을 만듭니다.
 
 4. 프롬프트에 따라 새 연결 프로필에 대한 연결 속성을 지정합니다. 각 값을 지정한 후 **Enter** 키를 눌러 계속합니다. 
 
@@ -88,7 +88,7 @@ Visual Studio Code를 사용하여 SSIS 카탈로그에 대한 연결을 설정�
 
 2. 시스템에 대한 `catalog.deploy_project` 저장 프로시저의 매개 변수 값을 업데이트합니다.
 
-3. **Ctrl+Shift+E**를 눌러 코드를 실행하고 프로젝트를 배포합니다.
+3. **Ctrl+Shift+E** 를 눌러 코드를 실행하고 프로젝트를 배포합니다.
 
 ```sql
 DECLARE @ProjectBinary AS varbinary(max)

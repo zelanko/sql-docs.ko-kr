@@ -13,11 +13,11 @@ author: MashaMSFT
 ms.author: mathoma
 ms.custom: seo-lt-2019
 ms.openlocfilehash: 25e6685166177b6adc436a1fc024d899be5f0233
-ms.sourcegitcommit: e700497f962e4c2274df16d9e651059b42ff1a10
+ms.sourcegitcommit: 192f6a99e19e66f0f817fdb1977f564b2aaa133b
 ms.translationtype: HT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 08/17/2020
-ms.locfileid: "88386429"
+ms.lasthandoff: 11/25/2020
+ms.locfileid: "96128830"
 ---
 # <a name="use-sql-server-profiler-to-create-a-sql-trace-collection-set"></a>SQL Server Profiler를 사용하여 SQL 추적 컬렉션 집합 만들기
  [!INCLUDE [SQL Server](../../includes/applies-to-version/sqlserver.md)]
@@ -35,33 +35,33 @@ ms.locfileid: "88386429"
   
 ### <a name="create-and-export-a-sql-server-profiler-trace"></a>SQL Server Profiler 추적 만들기 및 내보내기  
   
-1.  [!INCLUDE[ssManStudioFull](../../includes/ssmanstudiofull-md.md)]에서 [!INCLUDE[ssSqlProfiler](../../includes/sssqlprofiler-md.md)]를 엽니다. **도구** 메뉴에서 **SQL Server Profiler**를 클릭하면 됩니다.  
+1.  [!INCLUDE[ssManStudioFull](../../includes/ssmanstudiofull-md.md)]에서 [!INCLUDE[ssSqlProfiler](../../includes/sssqlprofiler-md.md)]를 엽니다. **도구** 메뉴에서 **SQL Server Profiler** 를 클릭하면 됩니다.  
   
-2.  **서버에 연결** 대화 상자에서 **취소**를 클릭합니다.  
+2.  **서버에 연결** 대화 상자에서 **취소** 를 클릭합니다.  
   
 3.  이 시나리오에서는 기간 값을 밀리초로 표시(기본 설정)하도록 구성되어 있는지 확인합니다. 이를 수행하려면 다음 단계를 따르십시오.  
   
-    1.  **도구** 메뉴에서 **옵션**을 클릭합니다.  
+    1.  **도구** 메뉴에서 **옵션** 을 클릭합니다.  
   
     2.  **표시 옵션** 영역에서 기간 열에 값 표시(마이크로초) 확인란이 선택 취소되어 있는지 확인합니다.  
   
     3.  **확인** 을 클릭하여 **일반 옵션** 대화 상자를 닫습니다.  
   
-4.  **파일** 메뉴에서 **새 추적**을 클릭합니다.  
+4.  **파일** 메뉴에서 **새 추적** 을 클릭합니다.  
   
-5.  **서버에 연결** 대화 상자에서 연결할 서버를 선택한 다음 **연결**을 클릭합니다.  
+5.  **서버에 연결** 대화 상자에서 연결할 서버를 선택한 다음 **연결** 을 클릭합니다.  
   
      **추적 속성** 대화 상자가 나타납니다.  
   
 6.  **일반** 탭에서 다음을 수행합니다.  
   
-    1.  **추적 이름** 상자에서 추적에 사용할 이름을 입력합니다. 이 예에서 추적 이름은 **SPgt80**입니다.  
+    1.  **추적 이름** 상자에서 추적에 사용할 이름을 입력합니다. 이 예에서 추적 이름은 **SPgt80** 입니다.  
   
-    2.  **템플릿 사용**목록에서 추적에 사용할 템플릿을 선택합니다. 이 예에서는 **TSQL_SPs**를 클릭합니다.  
+    2.  **템플릿 사용** 목록에서 추적에 사용할 템플릿을 선택합니다. 이 예에서는 **TSQL_SPs** 를 클릭합니다.  
   
 7.  **이벤트 선택** 탭에서 다음을 수행합니다.  
   
-    1.  추적에 사용할 이벤트를 지정합니다. 이 예에서는 **이벤트** 열에서 **ExistingConnection** 및 **SP:Completed**를 제외한 모든 확인란을 선택 취소합니다.  
+    1.  추적에 사용할 이벤트를 지정합니다. 이 예에서는 **이벤트** 열에서 **ExistingConnection** 및 **SP:Completed** 를 제외한 모든 확인란을 선택 취소합니다.  
   
     2.  오른쪽 아래 모서리에 있는 **모든 열 표시** 확인란을 선택합니다.  
   
@@ -71,15 +71,15 @@ ms.locfileid: "88386429"
   
 8.  오른쪽 아래 모서리에 있는 **열 필터** 를 클릭하여 **필터 편집** 대화 상자를 엽니다. **필터 편집** 대화 상자에서 다음을 수행합니다.  
   
-    1.  필터 목록에서 **기간**을 클릭합니다.  
+    1.  필터 목록에서 **기간** 을 클릭합니다.  
   
-    2.  부울 연산자 창에서 **크거나 같음** 노드를 확장하고 **80** 을 값으로 입력한 다음 **확인**을 클릭합니다.  
+    2.  부울 연산자 창에서 **크거나 같음** 노드를 확장하고 **80** 을 값으로 입력한 다음 **확인** 을 클릭합니다.  
   
 9. **실행** 을 클릭하여 추적을 시작합니다.  
   
-10. 도구 모음에서 **선택한 추적 중지** 또는 **선택한 추적 일시 중지**를 클릭합니다.  
+10. 도구 모음에서 **선택한 추적 중지** 또는 **선택한 추적 일시 중지** 를 클릭합니다.  
   
-11. **파일** 메뉴에서 **내보내기**, **추적 정의 스크립트**를 차례로 가리킨 다음 **SQL 추적 컬렉션 집합**을 클릭합니다.  
+11. **파일** 메뉴에서 **내보내기**, **추적 정의 스크립트** 를 차례로 가리킨 다음 **SQL 추적 컬렉션 집합** 을 클릭합니다.  
   
 12. **다른 이름으로 저장** 대화 상자의 **파일 이름** 상자에 추적 정의에 사용할 이름을 입력한 다음 원하는 위치에 파일을 저장합니다. 이 예에서는 파일 이름이 추적 이름(SPgt80)과 동일합니다.  
   
@@ -87,7 +87,7 @@ ms.locfileid: "88386429"
   
 ### <a name="script-a-new-collection-set-from-a-sql-server-profiler-trace"></a>SQL Server Profiler 추적에서 새 컬렉션 집합 스크립팅  
   
-1.  [!INCLUDE[ssManStudioFull](../../includes/ssmanstudiofull-md.md)]의 **파일** 메뉴에서 **열기** 를 가리킨 다음 **파일**을 클릭합니다.  
+1.  [!INCLUDE[ssManStudioFull](../../includes/ssmanstudiofull-md.md)]의 **파일** 메뉴에서 **열기** 를 가리킨 다음 **파일** 을 클릭합니다.  
   
 2.  **파일 열기** 대화 상자에서 이전 절차에서 만든 파일(SPgt80)을 찾아 엽니다.  
   
@@ -95,17 +95,17 @@ ms.locfileid: "88386429"
   
 3.  스크립트를 스크롤한 다음 스크립트 주석 텍스트에서 설명하는 다음과 같은 대체 작업을 수행합니다.  
   
-    -   **SQLTrace Collection Set Name Here** 를 컬렉션 집합에 사용할 이름으로 바꿉니다. 이 예에서는 컬렉션 집합 이름을 **SPROC_CollectionSet**으로 정합니다.  
+    -   **SQLTrace Collection Set Name Here** 를 컬렉션 집합에 사용할 이름으로 바꿉니다. 이 예에서는 컬렉션 집합 이름을 **SPROC_CollectionSet** 으로 정합니다.  
   
-    -   **SQLTrace Collection Item Name Here** 를 컬렉션 항목에 사용할 이름으로 바꿉니다. 이 예에서는 컬렉션 항목 이름을 **SPROC_Collection_Item**으로 정합니다.  
+    -   **SQLTrace Collection Item Name Here** 를 컬렉션 항목에 사용할 이름으로 바꿉니다. 이 예에서는 컬렉션 항목 이름을 **SPROC_Collection_Item** 으로 정합니다.  
   
 4.  **실행** 을 클릭하여 쿼리를 실행하고 컬렉션 집합을 만듭니다.  
   
 5.  개체 탐색기에서 컬렉션 집합이 만들어졌는지 확인합니다. 이를 수행하려면 다음 단계를 따르십시오.  
   
-    1.  **관리**를 마우스 오른쪽 단추로 클릭한 다음 **새로 고침**을 클릭합니다.  
+    1.  **관리** 를 마우스 오른쪽 단추로 클릭한 다음 **새로 고침** 을 클릭합니다.  
   
-    2.  **관리**와 **데이터 컬렉션**을 차례로 확장합니다.  
+    2.  **관리** 와 **데이터 컬렉션** 을 차례로 확장합니다.  
   
      **시스템 데이터 컬렉션 집합** 노드와 동일한 수준에서 **SPROC_CollectionSet** 컬렉션 집합이 표시됩니다. 이 컬렉션 집합은 기본적으로 해제되어 있습니다.  
   
@@ -127,11 +127,11 @@ BEGIN TRANSACTION
 BEGIN TRY  
   
 -- Define collection set  
--- ***  
--- *** Replace 'SqlTrace Collection Set Name Here' in the   
--- *** following script with the name you want  
--- *** to use for the collection set.  
--- ***  
+-- **_  
+-- _*_ Replace 'SqlTrace Collection Set Name Here' in the   
+-- _*_ following script with the name you want  
+-- _*_ to use for the collection set.  
+-- _*_  
 DECLARE @collection_set_id int;  
 EXEC [dbo].[sp_syscollector_create_collection_set]  
     @name = N'SPROC_CollectionSet',  
@@ -171,11 +171,11 @@ SELECT @collector_type_GUID = collector_type_uid
   WHERE name = N'Generic SQL Trace Collector Type';  
   
 -- Create the trace collection item.  
--- ***  
--- *** Replace 'SqlTrace Collection Item Name Here' in   
--- *** the following script with the name you want to  
--- *** use for the collection item.  
--- ***  
+-- _*_  
+-- _*_ Replace 'SqlTrace Collection Item Name Here' in   
+-- _*_ the following script with the name you want to  
+-- _*_ use for the collection item.  
+-- _**  
 EXEC [dbo].[sp_syscollector_create_collection_item]  
    @collection_set_id = @collection_set_id,  
    @collector_type_uid = @collector_type_GUID,  

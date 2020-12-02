@@ -15,11 +15,11 @@ ms.assetid: c07abbc6-fc6a-470b-8fa3-532f2e06b16a
 author: stevestein
 ms.author: sstein
 ms.openlocfilehash: e80df479a6fbd13e51e69ebddff5634ce7a0c3b1
-ms.sourcegitcommit: e700497f962e4c2274df16d9e651059b42ff1a10
+ms.sourcegitcommit: 192f6a99e19e66f0f817fdb1977f564b2aaa133b
 ms.translationtype: HT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 08/17/2020
-ms.locfileid: "88385739"
+ms.lasthandoff: 11/25/2020
+ms.locfileid: "96128812"
 ---
 # <a name="create-a-database-mail-account"></a>데이터베이스 메일 계정 만들기
 [!INCLUDE [SQL Server SQL MI](../../includes/applies-to-version/sql-asdbmi.md)]
@@ -48,11 +48,11 @@ ms.locfileid: "88385739"
   
 -   데이터베이스 메일을 두 번 클릭하여 데이터베이스 메일 구성 마법사를 엽니다.  
   
--   **구성 태스크 선택** 페이지에서 **데이터베이스 메일 계정 및 프로필 관리**를 선택하고 **다음**을 클릭합니다.  
+-   **구성 태스크 선택** 페이지에서 **데이터베이스 메일 계정 및 프로필 관리** 를 선택하고 **다음** 을 클릭합니다.  
   
--   **프로필 및 계정 관리** 페이지에서 **새 계정 만들기** 를 선택하고 **다음**을 클릭합니다.  
+-   **프로필 및 계정 관리** 페이지에서 **새 계정 만들기** 를 선택하고 **다음** 을 클릭합니다.  
   
--   **새 계정** 페이지에서 계정 이름, 설명, 메일 서버 정보 및 인증 유형을 지정합니다. **다음**을 클릭합니다.  
+-   **새 계정** 페이지에서 계정 이름, 설명, 메일 서버 정보 및 인증 유형을 지정합니다. **다음** 을 클릭합니다.  
   
 -   **마법사 완료** 페이지에서 수행할 동작을 검토하고 **마침** 을 클릭하여 새 계정 만들기를 완료합니다.  
   

@@ -18,11 +18,11 @@ ms.assetid: 5ad0ac71-fa8b-4c26-bd42-e6ef00c87571
 author: chugugrace
 ms.author: chugu
 ms.openlocfilehash: ca689a290e266c3e8476034ba0c8e7ec4737cef4
-ms.sourcegitcommit: c7f40918dc3ecdb0ed2ef5c237a3996cb4cd268d
+ms.sourcegitcommit: 192f6a99e19e66f0f817fdb1977f564b2aaa133b
 ms.translationtype: HT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 10/05/2020
-ms.locfileid: "91724314"
+ms.lasthandoff: 11/25/2020
+ms.locfileid: "96130721"
 ---
 # <a name="advanced-editor"></a>고급 편집기
 
@@ -45,7 +45,7 @@ ms.locfileid: "91724314"
   
 -   **입/출력 속성** - 이 탭을 사용하여 입력 및 출력 속성을 설정하고, 출력을 추가 및 제거하고, 입력 및 출력 열을 선택하거나 제거하고, 입력 및 출력에 대한 속성을 설정할 수 있습니다.  
   
- 구성 요소에 따라 다른 속성이 표시됩니다. **고급 편집기**에 표시될 수 있는 속성에 대한 자세한 내용은 다음 항목을 참조하세요.  
+ 구성 요소에 따라 다른 속성이 표시됩니다. **고급 편집기** 에 표시될 수 있는 속성에 대한 자세한 내용은 다음 항목을 참조하세요.  
   
 -   [Common Properties](./data-flow/set-the-properties-of-a-data-flow-component.md)  
   

@@ -16,15 +16,15 @@ author: MladjoA
 ms.author: mlandzic
 monikerRange: =azuresqldb-current||>=sql-server-2016||=sqlallproducts-allversions||>=sql-server-linux-2017||=azuresqldb-mi-current
 ms.openlocfilehash: 8dd26e26f4b567918f56187b5be4442b286ffabb
-ms.sourcegitcommit: a5398f107599102af7c8cda815d8e5e9a367ce7e
+ms.sourcegitcommit: 192f6a99e19e66f0f817fdb1977f564b2aaa133b
 ms.translationtype: HT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 10/13/2020
-ms.locfileid: "92006338"
+ms.lasthandoff: 11/25/2020
+ms.locfileid: "96130192"
 ---
 # <a name="create-construct-and-query-geography-instances"></a>geography 인스턴스 만들기, 구성 및 쿼리
 [!INCLUDE [SQL Server Azure SQL Database Azure SQL Managed Instance](../../includes/applies-to-version/sql-asdb-asdbmi.md)]
-  지리 공간 데이터 형식인 **geography**는 둥근 표면 좌표계로 데이터를 나타냅니다. 이 형식은 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]에서 .NET CLR(공용 언어 런타임) 데이터 형식으로 구현됩니다. [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] **geography** 데이터 형식은 GPS 위도 및 경도 좌표 등의 타원(둥근 표면) 데이터를 저장합니다.  
+  지리 공간 데이터 형식인 **geography** 는 둥근 표면 좌표계로 데이터를 나타냅니다. 이 형식은 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]에서 .NET CLR(공용 언어 런타임) 데이터 형식으로 구현됩니다. [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] **geography** 데이터 형식은 GPS 위도 및 경도 좌표 등의 타원(둥근 표면) 데이터를 저장합니다.  
   
  **geography** 형식은 각 데이터베이스에서 미리 정의되고 사용할 수 있습니다. 다른 시스템 제공 형식을 사용할 때와 동일한 방식으로 **geography** 형식의 테이블 열을 만들고 **geography** 데이터에 대한 작업을 수행할 수 있습니다.  
   
@@ -148,7 +148,7 @@ ms.locfileid: "92006338"
  [STGeometryN&#40;geography 데이터 형식&#41;](../../t-sql/spatial-geography/stgeometryn-geography-data-type.md)STGeometryN(geography 데이터 형식)  
   
 ###  <a name="number-of-points"></a><a name="number"></a> 점 수  
- 모든 비어 있지 않은 **geography** 인스턴스는 *점*으로 구성됩니다. 이러한 점은 **geography** 인스턴스가 그려지는 지구의 위도 및 경도 좌표를 나타냅니다. **geography** 데이터 형식은 인스턴스의 점을 쿼리하는 데 필요한 수많은 기본 메서드를 제공합니다.  
+ 모든 비어 있지 않은 **geography** 인스턴스는 *점* 으로 구성됩니다. 이러한 점은 **geography** 인스턴스가 그려지는 지구의 위도 및 경도 좌표를 나타냅니다. **geography** 데이터 형식은 인스턴스의 점을 쿼리하는 데 필요한 수많은 기본 메서드를 제공합니다.  
   
  **인스턴스를 구성하는 점 개수를 반환하려면**  
  [STNumPoints &#40;geography 데이터 형식&#41;](../../t-sql/spatial-geography/stnumpoints-geography-data-type.md)  
@@ -163,7 +163,7 @@ ms.locfileid: "92006338"
  [STEndpoint&#40;geography 데이터 형식&#41;](../../t-sql/spatial-geography/stendpoint-geography-data-type.md)  
   
 ###  <a name="dimension"></a><a name="dimension"></a> 차원  
- 비어 있지 않은 **geography** 인스턴스는 0, 1 또는 2차원이 될 수 있습니다. **Point** 및 **MultiPoint** 와 같은 0차원 **geography**인스턴스에는 길이 또는 영역이 없습니다. **LineString, CircularString**, **CompoundCurve**및 **MultiLineString**과 같은 1차원 개체에는 길이가 있습니다. **Polygon, CurvePolygon**및 **MultiPolygon**과 같은 2차원 인스턴스에는 영역과 길이가 있습니다. 비어 있는 인스턴스에서는 -1차원을 보고하고 **GeometryCollection** 에서는 해당 내용의 최대 차원을 보고합니다.  
+ 비어 있지 않은 **geography** 인스턴스는 0, 1 또는 2차원이 될 수 있습니다. **Point** 및 **MultiPoint** 와 같은 0차원 **geography** 인스턴스에는 길이 또는 영역이 없습니다. **LineString, CircularString**, **CompoundCurve** 및 **MultiLineString** 과 같은 1차원 개체에는 길이가 있습니다. **Polygon, CurvePolygon** 및 **MultiPolygon** 과 같은 2차원 인스턴스에는 영역과 길이가 있습니다. 비어 있는 인스턴스에서는 -1차원을 보고하고 **GeometryCollection** 에서는 해당 내용의 최대 차원을 보고합니다.  
   
  **인스턴스의 차원을 반환하려면**  
  [STDimension&#40;geography 데이터 형식&#41;](../../t-sql/spatial-geography/stdimension-geography-data-type.md)  
@@ -175,7 +175,7 @@ ms.locfileid: "92006338"
  [STArea&#40;geography 데이터 형식&#41;](../../t-sql/spatial-geography/starea-geography-data-type.md)  
   
 ###  <a name="empty"></a><a name="empty"></a> 비어 있음  
- _비어 있는_**geography** 인스턴스에는 점이 하나도 없습니다. 비어 있는 **LineString, CircularString**, **CompoundCurve**및 **MultiLineString** 인스턴스의 길이는 0입니다. 비어 있는 **Polygon, CurvePolygon** 및 **MultiPolygon** 인스턴스의 영역은 0입니다.  
+ _비어 있는_**geography** 인스턴스에는 점이 하나도 없습니다. 비어 있는 **LineString, CircularString**, **CompoundCurve** 및 **MultiLineString** 인스턴스의 길이는 0입니다. 비어 있는 **Polygon, CurvePolygon** 및 **MultiPolygon** 인스턴스의 영역은 0입니다.  
   
  **인스턴스가 비어 있는지 확인하려면**  
  [STIsEmpty&#40;geography 데이터 형식&#41;](../../t-sql/spatial-geography/stisempty-geography-data-type.md)  

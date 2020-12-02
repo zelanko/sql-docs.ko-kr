@@ -14,11 +14,11 @@ ms.assetid: 58dc99f1-ee6b-4508-bb66-2bc589611ff7
 author: chugugrace
 ms.author: chugu
 ms.openlocfilehash: b1d5eb987c5dfd62a67bbe6b536b4c2258463741
-ms.sourcegitcommit: e700497f962e4c2274df16d9e651059b42ff1a10
+ms.sourcegitcommit: 192f6a99e19e66f0f817fdb1977f564b2aaa133b
 ms.translationtype: HT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 08/17/2020
-ms.locfileid: "88457730"
+ms.lasthandoff: 11/25/2020
+ms.locfileid: "96130660"
 ---
 # <a name="edit-the-oracle-database-properties"></a>Oracle 데이터베이스 속성 편집
 
@@ -39,7 +39,7 @@ ms.locfileid: "88457730"
  사용 중인 Oracle 데이터베이스가 있는 컴퓨터에 대한 Oracle 연결 문자열입니다. 이 필드는 읽기 전용이므로 이 정보를 편집할 수 없습니다. 연결 문자열을 변경하면 **cdc.xdbcdc_config** 테이블에 저장된 CDC 인스턴스 상태가 손상되어 Oracle CDC 인스턴스가 완전히 다른 Oracle 데이터베이스를 가리킬 수 있습니다. 약간의 변경이 필요한 경우 SQL Server Management Studio를 사용하여 구성 테이블에서 연결 문자열을 직접 변경할 수 있습니다.  
   
  **Oracle 로그 마이닝 인증**  
- 로그 마이너를 포함하는 Oracle 데이터베이스에 대한 인증 자격 증명을 입력하려면 **인증**에서 다음 중 하나를 선택합니다.  
+ 로그 마이너를 포함하는 Oracle 데이터베이스에 대한 인증 자격 증명을 입력하려면 **인증** 에서 다음 중 하나를 선택합니다.  
   
 -   **Windows 인증**: 현재 Windows 도메인 자격 증명을 사용하려면 선택합니다. Windows 인증을 사용하도록 Oracle 데이터베이스를 구성한 경우에만 이 옵션을 사용할 수 있습니다.  
   

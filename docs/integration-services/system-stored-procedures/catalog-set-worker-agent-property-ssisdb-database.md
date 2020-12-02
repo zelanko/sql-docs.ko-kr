@@ -12,11 +12,11 @@ ms.assetid: ddd2a534-6925-4d66-90e7-541c14f41de7
 author: chugugrace
 ms.author: chugu
 ms.openlocfilehash: b5981431210ba98c950b56b7621f3f9cc50586c5
-ms.sourcegitcommit: e700497f962e4c2274df16d9e651059b42ff1a10
+ms.sourcegitcommit: 192f6a99e19e66f0f817fdb1977f564b2aaa133b
 ms.translationtype: HT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 08/17/2020
-ms.locfileid: "88422117"
+ms.lasthandoff: 11/25/2020
+ms.locfileid: "96129588"
 ---
 # <a name="catalogset_worker_agent_property-ssisdb-database"></a>catalog.set_worker_agent_property(SSISDB 데이터베이스)
 
@@ -37,16 +37,16 @@ catalog.set_worker_agent_property [ @WorkerAgentId = ] WorkerAgentId
 
 ## <a name="arguments"></a>인수
 [@WorkerAgentId =] *WorkerAgentId*  
-Scale Out Worker의 작업자 에이전트 ID입니다. *WorkerAgentId*는 **uniqueidentifier**입니다.
+Scale Out Worker의 작업자 에이전트 ID입니다. *WorkerAgentId* 는 **uniqueidentifier** 입니다.
 
 [@PropertyName =] *PropertyName*  
-속성의 이름입니다. *PropertyName*은 **nvarchar(256)** 입니다.
+속성의 이름입니다. *PropertyName* 은 **nvarchar(256)** 입니다.
 
 [@PropertyValue =] *PropertyValue*  
-속성 값입니다. *PropertyValue*는 **nvarchar(max)** 입니다.
+속성 값입니다. *PropertyValue* 는 **nvarchar(max)** 입니다.
 
 ## <a name="remarks"></a>설명
-유효한 속성 이름은 **DisplayName**, **Description**, **Tags**입니다.
+유효한 속성 이름은 **DisplayName**, **Description**, **Tags** 입니다.
 
 ## <a name="return-code-value"></a>반환 코드 값  
  0(성공)  

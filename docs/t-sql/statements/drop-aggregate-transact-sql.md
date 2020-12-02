@@ -24,11 +24,11 @@ ms.assetid: 84ffc4e7-c451-4f1f-9a67-7fc3a120e53f
 author: markingmyname
 ms.author: maghan
 ms.openlocfilehash: b0ff8af0373d733cd24c507a544694849b849027
-ms.sourcegitcommit: 197a6ffb643f93592edf9e90b04810a18be61133
+ms.sourcegitcommit: 192f6a99e19e66f0f817fdb1977f564b2aaa133b
 ms.translationtype: HT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 09/26/2020
-ms.locfileid: "91380234"
+ms.lasthandoff: 11/25/2020
+ms.locfileid: "96131326"
 ---
 # <a name="drop-aggregate-transact-sql"></a>DROP AGGREGATE(Transact-SQL)
 [!INCLUDE [SQL Server](../../includes/applies-to-version/sqlserver.md)]

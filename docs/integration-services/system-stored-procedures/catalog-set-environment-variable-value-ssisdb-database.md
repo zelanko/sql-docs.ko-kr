@@ -12,11 +12,11 @@ ms.assetid: 1d493dad-9d9c-4f0a-87e2-20a2d4a35f99
 author: chugugrace
 ms.author: chugu
 ms.openlocfilehash: 35d7408a5ad925673f68ce9c66c90768f7fe2f06
-ms.sourcegitcommit: e700497f962e4c2274df16d9e651059b42ff1a10
+ms.sourcegitcommit: 192f6a99e19e66f0f817fdb1977f564b2aaa133b
 ms.translationtype: HT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 08/17/2020
-ms.locfileid: "88422147"
+ms.lasthandoff: 11/25/2020
+ms.locfileid: "96129669"
 ---
 # <a name="catalogset_environment_variable_value-ssisdb-database"></a>catalog.set_environment_variable_value(SSISDB 데이터베이스)
 
@@ -38,16 +38,16 @@ catalog.set_environment_variable_value [ @folder_name = ] folder_name
   
 ## <a name="arguments"></a>인수  
  [ @folder_name = ] *folder_name*  
- 환경이 있는 폴더의 이름입니다. *folder_name*은 **nvarchar(128)** 입니다.  
+ 환경이 있는 폴더의 이름입니다. *folder_name* 은 **nvarchar(128)** 입니다.  
   
  [ @environment_name = ] *environment_name*  
- 환경의 이름입니다. *environment_name*은 **nvarchar(128)** 입니다.  
+ 환경의 이름입니다. *environment_name* 은 **nvarchar(128)** 입니다.  
   
  [ @variable _name = ] *variable _name*  
- 환경 변수의 이름입니다. *variable_name*은 **nvarchar(128)** 입니다.  
+ 환경 변수의 이름입니다. *variable_name* 은 **nvarchar(128)** 입니다.  
   
  [ @value = ] *value*  
- 환경 변수의 값입니다. *value*는 **sql_variant**입니다.  
+ 환경 변수의 값입니다. *value* 는 **sql_variant** 입니다.  
   
 ## <a name="return-code-value"></a>반환 코드 값  
  0(성공)  

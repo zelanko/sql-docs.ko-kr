@@ -39,11 +39,11 @@ author: markingmyname
 ms.author: maghan
 monikerRange: '>=aps-pdw-2016||=azuresqldb-current||=azure-sqldw-latest||>=sql-server-2016||=sqlallproducts-allversions||>=sql-server-linux-2017||=azuresqldb-mi-current'
 ms.openlocfilehash: ab3e6728560c563b5b3ecf4de03fd9359070f19e
-ms.sourcegitcommit: c74bb5944994e34b102615b592fdaabe54713047
+ms.sourcegitcommit: 192f6a99e19e66f0f817fdb1977f564b2aaa133b
 ms.translationtype: HT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 09/22/2020
-ms.locfileid: "90989887"
+ms.lasthandoff: 11/25/2020
+ms.locfileid: "96131088"
 ---
 # <a name="drop-table-transact-sql"></a>DROP TABLE(Transact-SQL)
 [!INCLUDE [sql-asdb-asdbmi-asa-pdw](../../includes/applies-to-version/sql-asdb-asdbmi-asa-pdw.md)]
@@ -94,7 +94,7 @@ DROP TABLE { database_name.schema_name.table_name | schema_name.table_name | tab
   
  테이블을 삭제하면 해당 테이블에 있는 규칙이나 기본값의 바인딩이 해제되고 해당 테이블과 연결된 제약 조건이나 트리거가 자동으로 삭제됩니다. 테이블을 다시 만들려면 해당 규칙과 기본값을 다시 바인딩하고 트리거를 다시 만들어야 하며 필요한 제약 조건을 모두 추가해야 합니다.  
   
- DELETE *tablename*이나 TRUNCATE TABLE 문을 사용하여 테이블의 모든 행을 삭제하는 경우에는 테이블이 삭제될 때까지 테이블은 남아 있습니다.  
+ DELETE *tablename* 이나 TRUNCATE TABLE 문을 사용하여 테이블의 모든 행을 삭제하는 경우에는 테이블이 삭제될 때까지 테이블은 남아 있습니다.  
   
  129개 이상의 익스텐트를 사용하는 큰 테이블 및 인덱스는 논리적 단계와 물리적 단계를 통해 삭제됩니다. 논리적 단계에서는 테이블에 사용되는 기존 할당 단위가 할당 취소로 표시되고 트랜잭션이 커밋될 때까지 잠깁니다. 물리적 단계에서는 할당 취소로 표시된 IAM 페이지가 물리적으로 일괄 삭제됩니다.  
   

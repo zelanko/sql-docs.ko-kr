@@ -16,11 +16,11 @@ ms.assetid: 10183c8d-b1be-420f-972a-96ea97d4f4d8
 author: chugugrace
 ms.author: chugu
 ms.openlocfilehash: cdbcc9b0a03b0afefe56152dc6b29c7ae59ea4cc
-ms.sourcegitcommit: e700497f962e4c2274df16d9e651059b42ff1a10
+ms.sourcegitcommit: 192f6a99e19e66f0f817fdb1977f564b2aaa133b
 ms.translationtype: HT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 08/17/2020
-ms.locfileid: "88395009"
+ms.lasthandoff: 11/25/2020
+ms.locfileid: "96130682"
 ---
 # <a name="configure-dialog-box"></a>구성 대화 상자
 
@@ -49,7 +49,7 @@ ms.locfileid: "88395009"
   
 4.  구성할 패키지 또는 프로젝트가 포함된 폴더를 확장합니다.  
   
-5.  패키지 또는 프로젝트를 다시 마우스 오른쪽 단추로 클릭한 다음 **구성**을 클릭합니다.  
+5.  패키지 또는 프로젝트를 다시 마우스 오른쪽 단추로 클릭한 다음 **구성** 을 클릭합니다.  
   
 ##  <a name="set-the-options-on-the-parameters-page"></a><a name="parameter"></a> 매개 변수 페이지에서 옵션 설정  
  **매개 변수** 페이지를 사용하여 매개 변수 이름 및 값을 확인한 후 값을 수정합니다.  
@@ -96,11 +96,11 @@ ms.locfileid: "88395009"
  **환경 속성** 대화 상자를 열려면 클릭합니다.  
   
  **추가**  
- 환경에 대한 참조를 추가하려면 클릭합니다. **환경 찾아보기** 대화 상자에서 환경을 클릭한 다음 **확인**을 클릭합니다.  
+ 환경에 대한 참조를 추가하려면 클릭합니다. **환경 찾아보기** 대화 상자에서 환경을 클릭한 다음 **확인** 을 클릭합니다.  
   
  **SSISDB** 노드 아래의 모든 프로젝트 폴더에 포함된 환경을 선택할 수 있습니다.  
   
  **제거**  
- **참조** 영역에 나열된 환경을 클릭한 다음 **제거**를 클릭합니다.  
+ **참조** 영역에 나열된 환경을 클릭한 다음 **제거** 를 클릭합니다.  
   
   

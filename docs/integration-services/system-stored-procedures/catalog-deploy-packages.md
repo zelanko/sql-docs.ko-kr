@@ -12,11 +12,11 @@ ms.assetid: 8e861df6-d103-4d84-8438-e822533f6849
 author: chugugrace
 ms.author: chugu
 ms.openlocfilehash: 383fe8ab64e0488ded13726d83e80a8bf7244455
-ms.sourcegitcommit: e700497f962e4c2274df16d9e651059b42ff1a10
+ms.sourcegitcommit: 192f6a99e19e66f0f817fdb1977f564b2aaa133b
 ms.translationtype: HT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 08/17/2020
-ms.locfileid: "88422167"
+ms.lasthandoff: 11/25/2020
+ms.locfileid: "96129828"
 ---
 # <a name="catalogdeploy_packages"></a>catalog.deploy_packages 
 
@@ -38,16 +38,16 @@ catalog.deploy_packages [ @folder_name = ] folder_name
   
 ## <a name="arguments"></a>인수  
  [ @folder_name = ] *folder_name*  
- 폴더 이름입니다. *folder_name*은 **nvarchar(128)** 입니다.  
+ 폴더 이름입니다. *folder_name* 은 **nvarchar(128)** 입니다.  
   
  [ @project_name = ] *project_name*  
- 폴더에 있는 프로젝트의 이름입니다. *project_name*은 **nvarchar(128)** 입니다.  
+ 폴더에 있는 프로젝트의 이름입니다. *project_name* 은 **nvarchar(128)** 입니다.  
   
  [ @packages_table = ] *packages_table*  
- [!INCLUDE[ssISnoversion](../../includes/ssisnoversion-md.md)] 패키지(.dtsx) 파일의 이진 콘텐츠입니다. *packages_table*은 **[catalog].[Package_Table_Type]** 입니다.  
+ [!INCLUDE[ssISnoversion](../../includes/ssisnoversion-md.md)] 패키지(.dtsx) 파일의 이진 콘텐츠입니다. *packages_table* 은 **[catalog].[Package_Table_Type]** 입니다.  
   
  [ @operation_id = ] *operation_id*  
- 배포 작업에 대한 고유 식별자를 반환합니다. *operation_id*는 **bigint**입니다.  
+ 배포 작업에 대한 고유 식별자를 반환합니다. *operation_id* 는 **bigint** 입니다.  
   
 ## <a name="return-code-value"></a>반환 코드 값  
  0(성공)  

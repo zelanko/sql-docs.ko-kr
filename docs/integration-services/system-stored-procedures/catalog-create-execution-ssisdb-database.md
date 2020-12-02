@@ -12,11 +12,11 @@ ms.assetid: 45d0c2f6-1f38-445f-ac06-e2a01f6ac600
 author: chugugrace
 ms.author: chugu
 ms.openlocfilehash: d0170a6b6a3733b54c24be1f06e91a6a60135faf
-ms.sourcegitcommit: e700497f962e4c2274df16d9e651059b42ff1a10
+ms.sourcegitcommit: 192f6a99e19e66f0f817fdb1977f564b2aaa133b
 ms.translationtype: HT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 08/17/2020
-ms.locfileid: "88456942"
+ms.lasthandoff: 11/25/2020
+ms.locfileid: "96129872"
 ---
 # <a name="catalogcreate_execution-ssisdb-database"></a>catalog.create_execution(SSISDB 데이터베이스)
 
@@ -44,22 +44,22 @@ catalog.create_execution [ @folder_name = ] folder_name
   
 ## <a name="arguments"></a>인수  
  [@folder_name =] *folder_name*  
- 실행할 패키지가 있는 폴더의 이름입니다. *folder_name*은 **nvarchar(128)** 입니다.  
+ 실행할 패키지가 있는 폴더의 이름입니다. *folder_name* 은 **nvarchar(128)** 입니다.  
   
  [@project_name =] *project_name*  
- 실행할 패키지가 포함된 프로젝트의 이름입니다. *project_name*은 **nvarchar(128)** 입니다.  
+ 실행할 패키지가 포함된 프로젝트의 이름입니다. *project_name* 은 **nvarchar(128)** 입니다.  
   
  [@package_name =] *package_name*  
- 실행할 패키지의 이름입니다. *package_name*은 **nvarchar(260)** 입니다.  
+ 실행할 패키지의 이름입니다. *package_name* 은 **nvarchar(260)** 입니다.  
   
  [@reference_id =] *reference_id*  
- 환경 참조의 고유 식별자입니다. 이 매개 변수는 선택 사항입니다. *reference_id*는 **bigint**입니다.  
+ 환경 참조의 고유 식별자입니다. 이 매개 변수는 선택 사항입니다. *reference_id* 는 **bigint** 입니다.  
   
  [@use32bitruntime =] *use32bitruntime*  
- 64비트 운영 체제에서 32비트 런타임을 사용하여 패키지를 실행해야 하는지 여부를 나타냅니다. 64비트 운영 체제에서 실행할 때 1 값을 사용하여 32비트 런타임으로 패키지를 실행합니다. 64비트 운영 체제에서 실행할 때 64비트 런타임으로 패키지를 실행하려면 값 0을 사용합니다. 이 매개 변수는 선택 사항입니다. *Use32bitruntime*은 **bit**입니다.  
+ 64비트 운영 체제에서 32비트 런타임을 사용하여 패키지를 실행해야 하는지 여부를 나타냅니다. 64비트 운영 체제에서 실행할 때 1 값을 사용하여 32비트 런타임으로 패키지를 실행합니다. 64비트 운영 체제에서 실행할 때 64비트 런타임으로 패키지를 실행하려면 값 0을 사용합니다. 이 매개 변수는 선택 사항입니다. *Use32bitruntime* 은 **bit** 입니다.  
  
  [@runinscaleout =] *runinscaleout*  
- 실행이 Scale Out에 있는지 여부를 나타냅니다. Scale Out에서 패키지를 실행하려면 1 값을 사용합니다. Scale Out을 사용하지 않고 패키지를 실행하려면 0 값을 사용합니다. 이 매개 변수는 선택 사항입니다. 지정하지 않으면 해당 값이 [SSISDB].[catalog].[catalog_properties]에서 DEFAULT_EXECUTION_MODE로 설정됩니다. *runinscaleout*은 **bit**입니다. 
+ 실행이 Scale Out에 있는지 여부를 나타냅니다. Scale Out에서 패키지를 실행하려면 1 값을 사용합니다. Scale Out을 사용하지 않고 패키지를 실행하려면 0 값을 사용합니다. 이 매개 변수는 선택 사항입니다. 지정하지 않으면 해당 값이 [SSISDB].[catalog].[catalog_properties]에서 DEFAULT_EXECUTION_MODE로 설정됩니다. *runinscaleout* 은 **bit** 입니다. 
  
 [@useanyworker =] *useanyworker*  
 Scale Out 작업자에서 실행을 수행할 수 있는지 여부를 나타냅니다.
@@ -68,10 +68,10 @@ Scale Out 작업자에서 실행을 수행할 수 있는지 여부를 나타냅�
 
 -   일부 Scale Out 작업자에서 패키지를 실행할 수 있음을 나타내려면 0 값을 사용합니다. `@useanyworker`를 false로 설정하면 Scale Out 관리자를 사용하거나 저장 프로시저 `[catalog].[add_execution_worker]`를 호출하여 패키지를 실행할 수 있는 작업자를 지정해야 합니다. 이미 다른 패키지를 실행 중인 작업자를 지정하면, 작업자가 다른 패키지 실행을 요청하기 전에 현재 패키지 실행을 완료합니다.
 
-이 매개 변수는 선택 사항입니다. 지정하지 않으면 해당 값이 1로 설정됩니다. *useanyworker*는 **bit**입니다. 
+이 매개 변수는 선택 사항입니다. 지정하지 않으면 해당 값이 1로 설정됩니다. *useanyworker* 는 **bit** 입니다. 
   
  [@execution_id =] *execution_id*  
- 실행 인스턴스의 고유 식별자를 반환합니다. *execution_id*는 **bigint**입니다.  
+ 실행 인스턴스의 고유 식별자를 반환합니다. *execution_id* 는 **bigint** 입니다.  
 
   
 ## <a name="remarks"></a>설명  

@@ -12,11 +12,11 @@ ms.reviewer: jroth
 ms.custom: seo-dt-2019
 monikerRange: =azuresqldb-current||>=sql-server-2016||=sqlallproducts-allversions||>=sql-server-linux-2017||=azuresqldb-mi-current
 ms.openlocfilehash: 8c091618be5e414faa15e200fc8b30230f793eaf
-ms.sourcegitcommit: 346a37242f889d76cd783f55aeed98023c693610
+ms.sourcegitcommit: c5078791a07330a87a92abb19b791e950672e198
 ms.translationtype: HT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 10/06/2020
-ms.locfileid: "91765722"
+ms.lasthandoff: 11/26/2020
+ms.locfileid: "96130239"
 ---
 # <a name="format-nested-json-output-with-path-mode-sql-server"></a>PATH 모드로 중첩 JSON 출력 서식 지정(SQL Server)
 [!INCLUDE [SQL Server Azure SQL Database](../../includes/applies-to-version/sql-asdb.md)]
@@ -85,7 +85,7 @@ SELECT TOP 5
 ```  
    
 ## <a name="example---multiple-tables"></a>예제 - 여러 테이블  
-쿼리에서 둘 이상의 테이블을 참조하는 경우 **FOR JSON PATH**는 해당 별칭을 사용하여 각 열을 중첩합니다. 다음 쿼리는 쿼리에서 조인된 (OrderHeader, OrderDetails) 쌍당 하나의 JSON 개체를 만듭니다. 
+쿼리에서 둘 이상의 테이블을 참조하는 경우 **FOR JSON PATH** 는 해당 별칭을 사용하여 각 열을 중첩합니다. 다음 쿼리는 쿼리에서 조인된 (OrderHeader, OrderDetails) 쌍당 하나의 JSON 개체를 만듭니다. 
   
  **쿼리**  
   

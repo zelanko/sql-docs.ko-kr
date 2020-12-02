@@ -23,11 +23,11 @@ ms.assetid: fb804fa2-48eb-4878-a12f-4e0d5f4bc9e3
 author: markingmyname
 ms.author: maghan
 ms.openlocfilehash: cf0a57dd61d3679f5d1d2888299b3759c1feca54
-ms.sourcegitcommit: dd36d1cbe32cd5a65c6638e8f252b0bd8145e165
+ms.sourcegitcommit: 192f6a99e19e66f0f817fdb1977f564b2aaa133b
 ms.translationtype: HT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 09/08/2020
-ms.locfileid: "89544216"
+ms.lasthandoff: 11/25/2020
+ms.locfileid: "96131259"
 ---
 # <a name="create-service-transact-sql"></a>CREATE SERVICE(Transact-SQL)
 [!INCLUDE [SQL Server - ASDBMI](../../includes/applies-to-version/sql-asdbmi.md)]
@@ -50,16 +50,16 @@ CREATE SERVICE service_name
 
 ## <a name="arguments"></a>인수
  *service_name*  
- 생성할 서비스의 이름입니다. 새 서비스는 현재 데이터베이스에 생성되며 AUTHORIZATION 절에서 지정한 주체가 소유합니다. 서버, 데이터베이스 및 스키마 이름은 지정될 수 없습니다. *service_name*은 유효한 **sysname**이어야 합니다.  
+ 생성할 서비스의 이름입니다. 새 서비스는 현재 데이터베이스에 생성되며 AUTHORIZATION 절에서 지정한 주체가 소유합니다. 서버, 데이터베이스 및 스키마 이름은 지정될 수 없습니다. *service_name* 은 유효한 **sysname** 이어야 합니다.  
   
 > [!NOTE]  
-> *service_name*에 ANY 키워드를 사용하는 서비스를 만들지 마십시오. `CREATE BROKER PRIORITY`에서 서비스 이름에 `ANY`를 지정하면 모든 서비스에 대해 우선순위가 고려됩니다. 이러한 규칙은 이름이 ANY인 서비스로 제한되지 않습니다.  
+> *service_name* 에 ANY 키워드를 사용하는 서비스를 만들지 마십시오. `CREATE BROKER PRIORITY`에서 서비스 이름에 `ANY`를 지정하면 모든 서비스에 대해 우선순위가 고려됩니다. 이러한 규칙은 이름이 ANY인 서비스로 제한되지 않습니다.  
   
  AUTHORIZATION *owner_name*  
- 서비스 소유자를 지정된 데이터베이스 사용자 또는 역할로 설정합니다. 현재 사용자가 **dbo** 또는 **sa**일 경우 *owner_name*은 유효한 사용자 또는 역할의 이름일 수 있습니다. 그렇지 않으면 *owner_name*은 현재 사용자 이름, 현재 사용자가 IMPERSONATE 권한을 갖는 사용자의 이름, 현재 사용자가 속해 있는 역할 이름 중 하나여야 합니다.  
+ 서비스 소유자를 지정된 데이터베이스 사용자 또는 역할로 설정합니다. 현재 사용자가 **dbo** 또는 **sa** 일 경우 *owner_name* 은 유효한 사용자 또는 역할의 이름일 수 있습니다. 그렇지 않으면 *owner_name* 은 현재 사용자 이름, 현재 사용자가 IMPERSONATE 권한을 갖는 사용자의 이름, 현재 사용자가 속해 있는 역할 이름 중 하나여야 합니다.  
   
  ON QUEUE [ _schema_name_**.** ] *queue_name*  
- 서비스에 대한 메시지를 받는 큐를 지정합니다. 이 큐는 서비스와 같은 데이터베이스에 있어야 합니다. *schema_name*을 지정하지 않으면 스키마는 문을 실행하는 사용자의 기본 스키마가 됩니다.  
+ 서비스에 대한 메시지를 받는 큐를 지정합니다. 이 큐는 서비스와 같은 데이터베이스에 있어야 합니다. *schema_name* 을 지정하지 않으면 스키마는 문을 실행하는 사용자의 기본 스키마가 됩니다.  
   
  *contract_name*  
  이 서비스를 대상으로 하는 계약을 지정합니다. 서비스 프로그램은 지정된 계약을 사용하여 이 서비스에 대한 대화를 시작합니다. 계약을 지정하지 않으면 이 서비스에서만 대화를 시작할 수 있습니다.  

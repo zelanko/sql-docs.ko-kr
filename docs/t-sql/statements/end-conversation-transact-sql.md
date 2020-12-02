@@ -26,11 +26,11 @@ ms.assetid: 4415a126-cd22-4a5e-b84a-d8c68515c83b
 author: markingmyname
 ms.author: maghan
 ms.openlocfilehash: 94fcbdfe06b99e0fb66cb6d462512c7d2a283914
-ms.sourcegitcommit: b93beb4f03aee2c1971909cb1d15f79cd479a35c
+ms.sourcegitcommit: 192f6a99e19e66f0f817fdb1977f564b2aaa133b
 ms.translationtype: HT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 09/29/2020
-ms.locfileid: "91497933"
+ms.lasthandoff: 11/25/2020
+ms.locfileid: "96131039"
 ---
 # <a name="end-conversation-transact-sql"></a>END CONVERSATION(Transact-SQL)
 [!INCLUDE [SQL Server - ASDBMI](../../includes/applies-to-version/sql-asdbmi.md)]
@@ -56,16 +56,16 @@ END CONVERSATION conversation_handle
  종료할 대화의 대화 핸들입니다.  
   
  WITH ERROR =*failure_code*  
- 오류 코드입니다. *failure_code*는 **int** 형식입니다. 오류 코드는 대화의 다른 쪽으로 보낸 오류 메시지에 포함되는 사용자 정의 코드입니다. 오류 코드는 0보다 커야 합니다.  
+ 오류 코드입니다. *failure_code* 는 **int** 형식입니다. 오류 코드는 대화의 다른 쪽으로 보낸 오류 메시지에 포함되는 사용자 정의 코드입니다. 오류 코드는 0보다 커야 합니다.  
   
  DESCRIPTION =*failure_text*  
- 오류 메시지입니다. *failure_text*는 **nvarchar(3000)** 형식입니다. 오류 텍스트는 다른 쪽의 대화로 보낸 오류 메시지에 포함되는 사용자 정의 텍스트입니다.  
+ 오류 메시지입니다. *failure_text* 는 **nvarchar(3000)** 형식입니다. 오류 텍스트는 다른 쪽의 대화로 보낸 오류 메시지에 포함되는 사용자 정의 텍스트입니다.  
   
  WITH CLEANUP  
  대화에 참가하는 양자 중 정상적으로 완료할 수 없는 한쪽의 모든 메시지와 카탈로그 뷰 항목을 제거합니다. 다른 쪽은 정리에 대한 알림을 받지 못합니다. [!INCLUDE[msCoName](../../includes/msconame-md.md)] [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]는 대화 엔드포인트, 전송 큐의 모든 대화 메시지 및 서비스 큐의 모든 대화 메시지를 삭제합니다. 관리자는 이 옵션을 사용하여 정상적으로 완료할 수 없는 대화를 제거할 수 있습니다. 예를 들어 원격 서비스가 영구적으로 제거된 경우 관리자는 WITH CLEANUP을 사용하여 해당 서비스에 대한 대화를 제거할 수 있습니다. [!INCLUDE[ssSB](../../includes/sssb-md.md)] 애플리케이션의 코드에서는 WITH CLEANUP을 사용하지 마십시오. 수신 엔드포인트에서 메시지 수신 사실을 알리기 전에 END CONVERSATION WITH CLEANUP이 실행되면 전송 엔드포인트가 해당 메시지를 다시 전송합니다. 이 경우 대화가 다시 실행될 수 있습니다.  
   
 ## <a name="remarks"></a>설명  
- 대화를 종료하면 제공된 *conversation_handle*이 속하는 대화 그룹이 잠깁니다. 대화가 종료되면 [!INCLUDE[ssSB](../../includes/sssb-md.md)]가 서비스 큐에서 모든 대화 메시지를 제거합니다.  
+ 대화를 종료하면 제공된 *conversation_handle* 이 속하는 대화 그룹이 잠깁니다. 대화가 종료되면 [!INCLUDE[ssSB](../../includes/sssb-md.md)]가 서비스 큐에서 모든 대화 메시지를 제거합니다.  
   
  대화가 종료되면 애플리케이션은 해당 대화의 메시지를 더 이상 보내거나 받을 수 없습니다. 대화 참가자 모두 END CONVERSATION을 호출하여 대화를 완료해야 합니다. [!INCLUDE[ssSB](../../includes/sssb-md.md)]이 대화의 다른 참가자로부터 대화 종료 메시지나 오류 메시지를 받지 못한 경우에는 [!INCLUDE[ssSB](../../includes/sssb-md.md)]가 대화의 다른 참가자에게 대화가 종료되었음을 알립니다. 이런 경우 대화 핸들이 더 이상 유효하지 않아도 대화의 엔드포인트는 원격 서비스를 호스팅하는 인스턴스가 메시지를 승인할 때까지 활성 상태로 유지됩니다.  
   

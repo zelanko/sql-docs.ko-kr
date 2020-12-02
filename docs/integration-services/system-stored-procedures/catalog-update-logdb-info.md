@@ -12,11 +12,11 @@ author: haoqian
 ms.author: haoqian
 monikerRange: '>= sql-server-2017 || = sqlallproducts-allversions'
 ms.openlocfilehash: 78a720f0ac29337dd7752fc72fe93ea3a3f91018
-ms.sourcegitcommit: e700497f962e4c2274df16d9e651059b42ff1a10
+ms.sourcegitcommit: 192f6a99e19e66f0f817fdb1977f564b2aaa133b
 ms.translationtype: HT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 08/17/2020
-ms.locfileid: "88495378"
+ms.lasthandoff: 11/25/2020
+ms.locfileid: "96129655"
 ---
 # <a name="catalogupdate_logdb_info-ssisdb-database"></a>catalog.update_logdb_info(SSISDB 데이터베이스)
 
@@ -35,10 +35,10 @@ catalog.update_logdb_info [ @server_name = ] server_name, [ @connection_string =
 
 ## <a name="arguments"></a>인수
 [ @server_name = ] *server_name*  
- 스케일 아웃 로깅에 사용되는 Sql Server입니다. *server_name*은 **nvarchar**입니다.  
+ 스케일 아웃 로깅에 사용되는 Sql Server입니다. *server_name* 은 **nvarchar** 입니다.  
 
  [ @connection_string = ] *connection_string*  
- 스케일 아웃 로깅에 사용되는 연결 문자열입니다. *connection_string*은 **nvarchar**입니다.
+ 스케일 아웃 로깅에 사용되는 연결 문자열입니다. *connection_string* 은 **nvarchar** 입니다.
 
  ## <a name="return-code-value"></a>반환 코드 값  
  0(성공)  

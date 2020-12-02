@@ -15,11 +15,11 @@ author: markingmyname
 ms.author: maghan
 monikerRange: '>=aps-pdw-2016||=azure-sqldw-latest||>=sql-server-2016||=sqlallproducts-allversions||>=sql-server-linux-2017||=azuresqldb-mi-current'
 ms.openlocfilehash: d3397248b39b3fa099cf0df90e4396454189941b
-ms.sourcegitcommit: dd36d1cbe32cd5a65c6638e8f252b0bd8145e165
+ms.sourcegitcommit: 192f6a99e19e66f0f817fdb1977f564b2aaa133b
 ms.translationtype: HT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 09/08/2020
-ms.locfileid: "89544168"
+ms.lasthandoff: 11/25/2020
+ms.locfileid: "96131198"
 ---
 # <a name="drop-external-table-transact-sql"></a>DROP EXTERNAL TABLE(Transact-SQL)
 [!INCLUDE [sqlserver2016-asdbmi-asa-pdw](../../includes/applies-to-version/sqlserver2016-asdbmi-asa-pdw.md)]
@@ -40,7 +40,7 @@ DROP EXTERNAL TABLE { database_name.schema_name.table_name | schema_name.table_n
  `[ database_name . [schema_name] . | schema_name . ] table_name`  
  제거할 외부 테이블의 한 부분에서 세 부분으로 이루어진 이름입니다. 테이블 이름은 선택적으로 스키마 또는 데이터베이스와 스키마를 포함할 수 있습니다.  
   
-## <a name="permissions"></a>사용 권한  
+## <a name="permissions"></a>권한  
   
 -   테이블이 속한 스키마에 대한 **ALTER** 권한이 필요합니다.  
   

@@ -15,11 +15,11 @@ author: stevestein
 ms.author: sstein
 monikerRange: '>=aps-pdw-2016||=azuresqldb-current||=azure-sqldw-latest||>=sql-server-2016||=sqlallproducts-allversions||>=sql-server-linux-2017||=azuresqldb-mi-current'
 ms.openlocfilehash: 654dbae04bbc69fa257b288f6b130c6b17f75ace
-ms.sourcegitcommit: 04cf7905fa32e0a9a44575a6f9641d9a2e5ac0f8
+ms.sourcegitcommit: 192f6a99e19e66f0f817fdb1977f564b2aaa133b
 ms.translationtype: HT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 10/07/2020
-ms.locfileid: "91809224"
+ms.lasthandoff: 11/25/2020
+ms.locfileid: "96130846"
 ---
 # <a name="create-views"></a>뷰 만들기
 [!INCLUDE [sql-asdb-asdbmi-asa-pdw](../../includes/applies-to-version/sql-asdb-asdbmi-asa-pdw.md)]
@@ -61,21 +61,21 @@ ms.locfileid: "91809224"
   
 #### <a name="to-create-a-view-by-using-the-query-and-view-designer"></a>쿼리 및 뷰 디자이너를 사용하여 뷰를 만들려면  
   
-1.  **개체 탐색기**에서 새 뷰를 만들 데이터베이스를 확장합니다.  
+1.  **개체 탐색기** 에서 새 뷰를 만들 데이터베이스를 확장합니다.  
   
 2.  **뷰** 폴더를 마우스 오른쪽 단추로 클릭한 다음, **새 뷰...** 를 클릭합니다.  
   
 3.  **테이블 추가** 대화 상자의 테이블, 뷰, 함수 및 동의어 탭 중 하나에서 새 뷰에 포함할 요소를 선택합니다.  
   
-4.  **추가**를 클릭한 다음 **닫기**를 클릭합니다.  
+4.  **추가** 를 클릭한 다음 **닫기** 를 클릭합니다.  
   
-5.  **다이어그램 창**에서 새 뷰에 포함할 열 또는 다른 요소를 선택합니다.  
+5.  **다이어그램 창** 에서 새 뷰에 포함할 열 또는 다른 요소를 선택합니다.  
   
-6.  **조건 창**에서 열에 대한 추가 정렬 또는 필터 조건을 선택합니다.  
+6.  **조건 창** 에서 열에 대한 추가 정렬 또는 필터 조건을 선택합니다.  
   
-7.  **파일** 메뉴에서 **저장**_view name_을 클릭합니다.  
+7.  **파일** 메뉴에서 **저장**_view name_ 을 클릭합니다.  
   
-8.  **이름 선택** 대화 상자에서 새 뷰의 이름을 입력하고 **확인**을 클릭합니다.  
+8.  **이름 선택** 대화 상자에서 새 뷰의 이름을 입력하고 **확인** 을 클릭합니다.  
 
      쿼리 및 뷰 디자이너에 대한 자세한 내용은 [쿼리 및 뷰 디자이너 도구&#40;Visual Database Tools&#41;](../../ssms/visual-db-tools/query-and-view-designer-tools-visual-database-tools.md)를 참조하세요.  
   
@@ -83,11 +83,11 @@ ms.locfileid: "91809224"
   
 #### <a name="to-create-a-view"></a>뷰를 만들려면  
   
-1.  **개체 탐색기**에서 [!INCLUDE[ssDE](../../includes/ssde-md.md)]인스턴스에 연결합니다.  
+1.  **개체 탐색기** 에서 [!INCLUDE[ssDE](../../includes/ssde-md.md)]인스턴스에 연결합니다.  
   
-2.  표준 도구 모음에서 **새 쿼리**를 클릭합니다.  
+2.  표준 도구 모음에서 **새 쿼리** 를 클릭합니다.  
   
-3.  다음 예를 복사하여 쿼리 창에 붙여 넣고 **실행**을 클릭합니다.  
+3.  다음 예를 복사하여 쿼리 창에 붙여 넣고 **실행** 을 클릭합니다.  
   
     ```  
     USE AdventureWorks2012 ;   

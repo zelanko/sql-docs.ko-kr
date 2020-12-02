@@ -15,11 +15,11 @@ ms.assetid: 55a0951a-46f3-4f0f-9972-74cec9cc26b7
 author: chugugrace
 ms.author: chugu
 ms.openlocfilehash: 44f3efa30bc33bd7a8b9bc5057d2877be62f8f8a
-ms.sourcegitcommit: e700497f962e4c2274df16d9e651059b42ff1a10
+ms.sourcegitcommit: 192f6a99e19e66f0f817fdb1977f564b2aaa133b
 ms.translationtype: HT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 08/17/2020
-ms.locfileid: "88425185"
+ms.lasthandoff: 11/25/2020
+ms.locfileid: "96130030"
 ---
 # <a name="events-logged-by-an-integration-services-package"></a>통합 서비스 패키지에 의해 기록된 이벤트
 
@@ -89,19 +89,19 @@ ms.locfileid: "88425185"
   
 1.  [!INCLUDE[ssBIDevStudio](../../includes/ssbidevstudio-md.md)]에서 원하는 패키지가 들어 있는 [!INCLUDE[ssISnoversion](../../includes/ssisnoversion-md.md)] 프로젝트를 엽니다.  
   
-2.  **SSIS** 메뉴에서 **이벤트 로그**를 클릭합니다. 필요한 경우 View.LogEvents 명령을 **옵션** 대화 상자의 **키보드** 페이지에서 선택한 키 조합에 매핑하여 **이벤트 로그** 창을 표시할 수도 있습니다.  
+2.  **SSIS** 메뉴에서 **이벤트 로그** 를 클릭합니다. 필요한 경우 View.LogEvents 명령을 **옵션** 대화 상자의 **키보드** 페이지에서 선택한 키 조합에 매핑하여 **이벤트 로그** 창을 표시할 수도 있습니다.  
   
-3.  **디버그** 메뉴에서 **디버깅 시작**을 클릭합니다.  
+3.  **디버그** 메뉴에서 **디버깅 시작** 을 클릭합니다.  
   
      로깅하도록 설정한 이벤트 및 사용자 지정 메시지가 런타임에 발생하면 각 이벤트나 메시지의 로그 항목이 **이벤트 로그** 창에 작성됩니다.  
   
-4.  **디버그** 메뉴에서 **디버깅 중지**를 클릭합니다.  
+4.  **디버그** 메뉴에서 **디버깅 중지** 를 클릭합니다.  
   
      패키지를 반환하거나, 다른 패키지를 실행하거나, **를 닫을 때까지 로그 항목은** 이벤트 로그 [!INCLUDE[ssBIDevStudio](../../includes/ssbidevstudio-md.md)]창에서 사용할 수 있는 상태로 유지됩니다.  
   
 5.  **이벤트 로그** 창에서 로그 항목을 확인합니다.  
   
-6.  필요에 따라 복사할 로그 항목을 클릭하고 마우스 오른쪽 단추를 클릭한 다음 **복사**를 클릭합니다.  
+6.  필요에 따라 복사할 로그 항목을 클릭하고 마우스 오른쪽 단추를 클릭한 다음 **복사** 를 클릭합니다.  
   
 7.  필요에 따라 로그 항목을 두 번 클릭하고 **로그 항목** 대화 상자에서 단일 로그 항목에 대한 세부 사항을 확인합니다.  
   

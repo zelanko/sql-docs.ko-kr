@@ -17,14 +17,14 @@ helpviewer_keywords:
 - Availability Groups [SQL Server], databases
 - Availability Groups [SQL Server]
 ms.assetid: edbab896-42bb-4d17-8d75-e92ca11f7abb
-author: cawrites
-ms.author: chadam
-ms.openlocfilehash: 56a36ef2372e1b8171bf957f2d2c2d7dc2eaa356
-ms.sourcegitcommit: 54cd97a33f417432aa26b948b3fc4b71a5e9162b
+author: MashaMSFT
+ms.author: mathoma
+ms.openlocfilehash: 3ff589af87c2fbf6bb5bca7670a2a38d6c8abc16
+ms.sourcegitcommit: 5a1ed81749800c33059dac91b0e18bd8bb3081b1
 ms.translationtype: HT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 11/13/2020
-ms.locfileid: "94584088"
+ms.lasthandoff: 11/23/2020
+ms.locfileid: "96130152"
 ---
 # <a name="prerequisites-restrictions-and-recommendations-for-always-on-availability-groups"></a>Always On 가용성 그룹에 대한 필수 조건, 제한 사항 및 권장 사항
 [!INCLUDE [SQL Server](../../../includes/applies-to-version/sqlserver.md)]

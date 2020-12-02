@@ -31,11 +31,11 @@ author: VanMSFT
 ms.author: vanto
 monikerRange: '>=aps-pdw-2016||=azuresqldb-current||=azure-sqldw-latest||>=sql-server-2016||=sqlallproducts-allversions||>=sql-server-linux-2017||=azuresqldb-mi-current'
 ms.openlocfilehash: 43214b8f1e0b81b75c34c33b8b8b7df53bdd8d03
-ms.sourcegitcommit: bd3a135f061e4a49183bbebc7add41ab11872bae
+ms.sourcegitcommit: 192f6a99e19e66f0f817fdb1977f564b2aaa133b
 ms.translationtype: HT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 10/21/2020
-ms.locfileid: "92300522"
+ms.lasthandoff: 11/25/2020
+ms.locfileid: "96131390"
 ---
 # <a name="create-user-transact-sql"></a>CREATE USER(Transact-SQL)
 
@@ -187,11 +187,11 @@ CREATE USER user_name
  WITH DEFAULT_SCHEMA = *schema_name*  
  서버에서 이 데이터베이스 사용자에 대한 개체 이름을 확인할 때 첫 번째로 검색하는 스키마를 지정합니다.  
   
- ' *windows_principal* '  
+ '*windows_principal*'  
  데이터베이스 사용자를 만들 Windows 보안 주체를 지정합니다. *windows_principal* 은 Windows 사용자 또는 Windows 그룹일 수 있습니다. *windows_principal* 에 로그인이 없어도 사용자가 만들어집니다. [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]에 연결할 때 *windows_principal* 에 로그인이 없는 경우 Windows 보안 주체가 로그인이 있는 Windows 그룹의 멤버 자격을 통해 [!INCLUDE[ssDE](../../includes/ssde-md.md)]에서 인증하거나, 연결 문자열에서 포함된 데이터베이스를 초기 카탈로그로 지정해야 합니다. Windows 보안 주체에서 사용자를 만들 때는 **[** _\<domainName\>_ **\\** _\<loginName\>_ **]** 형식을 사용하세요. 예제는 [구문 요약](#SyntaxSummary)을 참조하세요. Active Directory 사용자에 기반한 사용자는 21자 미만의 이름으로 제한됩니다.
   
- ' *Azure_Active_Directory_principal* '  
- **적용 대상** : [!INCLUDE[sqldbesa](../../includes/sqldbesa-md.md)], [!INCLUDE[ssSDW_md](../../includes/sssdw-md.md)]  
+ '*Azure_Active_Directory_principal*'  
+ **적용 대상**: [!INCLUDE[sqldbesa](../../includes/sqldbesa-md.md)], [!INCLUDE[ssSDW_md](../../includes/sssdw-md.md)]  
   
  데이터베이스 사용자를 만들 Azure Active Directory 보안 주체를 지정합니다. *Azure_Active_Directory_principal* 은 Azure Active Directory 사용자, Azure Active Directory 그룹 또는 Azure Active Directory 애플리케이션이 될 수 있습니다. (Azure Active Directory 사용자는 [!INCLUDE[ssSDS](../../includes/sssds-md.md)]에 Windows 인증 로그인을 가질 수 없으며 데이터베이스 사용자만 가능합니다.) 연결 문자열은 포함된 데이터베이스를 초기 카탈로그로 지정해야 합니다.
 
@@ -208,8 +208,8 @@ CREATE USER user_name
   
  자세한 내용은 [Azure Active Directory 인증을 사용하여 SQL Database에 연결](/azure/azure-sql/database/authentication-aad-overview)을 참조하세요.  
   
-WITH PASSWORD = ' *password* '  
- **적용 대상** : [!INCLUDE[ssSQL11](../../includes/sssql11-md.md)] 이상, [!INCLUDE[sqldbesa](../../includes/sqldbesa-md.md)].  
+WITH PASSWORD = '*password*'  
+ **적용 대상**: [!INCLUDE[ssSQL11](../../includes/sssql11-md.md)] 이상, [!INCLUDE[sqldbesa](../../includes/sqldbesa-md.md)].  
   
  포함된 데이터베이스에서만 사용할 수 있습니다. 만들 사용자의 암호를 지정합니다. [!INCLUDE[ssSQL11](../../includes/sssql11-md.md)]부터 저장된 암호 정보는 솔트 암호의 SHA-512를 사용하여 계산됩니다.  
   
@@ -217,17 +217,17 @@ WITHOUT LOGIN
  사용자가 기존 로그인에 매핑되지 않도록 지정합니다.  
   
 CERTIFICATE *cert_name*  
- **적용 대상** : [!INCLUDE[ssKatmai](../../includes/sskatmai-md.md)] 이상, [!INCLUDE[sqldbesa](../../includes/sqldbesa-md.md)].  
+ **적용 대상**: [!INCLUDE[ssKatmai](../../includes/sskatmai-md.md)] 이상, [!INCLUDE[sqldbesa](../../includes/sqldbesa-md.md)].  
   
  데이터베이스 사용자를 만들 인증서를 지정합니다.  
   
 ASYMMETRIC KEY *asym_key_name*  
- **적용 대상** : [!INCLUDE[ssKatmai](../../includes/sskatmai-md.md)] 이상, [!INCLUDE[sqldbesa](../../includes/sqldbesa-md.md)].  
+ **적용 대상**: [!INCLUDE[ssKatmai](../../includes/sskatmai-md.md)] 이상, [!INCLUDE[sqldbesa](../../includes/sqldbesa-md.md)].  
   
  데이터베이스 사용자를 만들 비대칭 키를 지정합니다.  
   
 DEFAULT_LANGUAGE = *{ NONE \| \<lcid> \| \<language name> \| \<language salias> }*  
- **적용 대상** : [!INCLUDE[ssSQL11](../../includes/sssql11-md.md)] 이상, [!INCLUDE[sqldbesa](../../includes/sqldbesa-md.md)].  
+ **적용 대상**: [!INCLUDE[ssSQL11](../../includes/sssql11-md.md)] 이상, [!INCLUDE[sqldbesa](../../includes/sqldbesa-md.md)].  
   
  새 사용자의 기본 언어를 지정합니다. 사용자의 기본 언어가 지정된 경우 데이터베이스의 기본 언어가 나중에 변경되더라도 사용자의 기본 언어는 지정된 대로 유지됩니다. 기본 언어를 지정하지 않으면 사용자의 기본 언어는 데이터베이스의 기본 언어가 됩니다. 사용자의 기본 언어가 지정되지 않은 경우 데이터베이스의 기본 언어가 나중에 변경되면 사용자의 기본 언어는 데이터베이스의 새 기본 언어로 변경됩니다.  
   
@@ -235,12 +235,12 @@ DEFAULT_LANGUAGE = *{ NONE \| \<lcid> \| \<language name> \| \<language salias> 
 >  *DEFAULT_LANGUAGE* 는 포함된 데이터베이스 사용자에 대해서만 사용됩니다.  
   
 SID = *sid*  
- **적용 대상** : [!INCLUDE[ssSQL11](../../includes/sssql11-md.md)] 이상  
+ **적용 대상**: [!INCLUDE[ssSQL11](../../includes/sssql11-md.md)] 이상  
   
  포함된 데이터베이스의 암호가 있는 사용자([!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 인증)에만 적용됩니다. 새 데이터베이스 사용자의 SID를 지정합니다. 이 옵션을 선택하지 않으면 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]에서 자동으로 SID를 할당합니다. SID 매개 변수를 사용하여 여러 데이터베이스에 ID(SID)가 동일한 사용자를 만듭니다. 이 옵션은 여러 데이터베이스에 사용자를 만들어 Always On 장애 조치(failover)를 준비하려는 경우에 유용합니다. 사용자의 SID를 확인하려면 sys.database_principals를 쿼리합니다.  
   
 ALLOW_ENCRYPTED_VALUE_MODIFICATIONS = [ ON | **OFF** ]  
- **적용 대상** : [!INCLUDE[ssSQL15](../../includes/sssql15-md.md)] 이상, [!INCLUDE[ssSDS](../../includes/sssds-md.md)].  
+ **적용 대상**: [!INCLUDE[ssSQL15](../../includes/sssql15-md.md)] 이상, [!INCLUDE[ssSDS](../../includes/sssds-md.md)].  
   
  대량 복사 작업에서 서버에 대한 암호화 메타데이터 검사를 표시하지 않습니다. 이를 통해 사용자는 데이터를 암호 해독하지 않고도 테이블이나 데이터베이스 사이에 암호화된 데이터를 대량 복사할 수 있습니다. 기본값은 OFF입니다.  
   
@@ -380,7 +380,7 @@ GO
 ### <a name="c-creating-a-database-user-from-a-certificate"></a>C. 인증서에서 데이터베이스 사용자 만들기  
  다음 예에서는 `JinghaoLiu` 인증서에서 데이터베이스 사용자 `CarnationProduction50`를 만듭니다.  
   
-**적용 대상** : [!INCLUDE[ssKatmai](../../includes/sskatmai-md.md)] 이상  
+**적용 대상**: [!INCLUDE[ssKatmai](../../includes/sskatmai-md.md)] 이상  
   
 ```sql  
 USE AdventureWorks2012;  
@@ -419,7 +419,7 @@ GO
 ### <a name="e-creating-a-contained-database-user-with-password"></a>E. 암호가 있는 포함된 데이터베이스 사용자 만들기  
  다음 예에서는 암호가 있는 포함된 데이터베이스 사용자를 만듭니다. 이 예는 포함된 데이터베이스에서만 실행할 수 있습니다.  
   
-**적용 대상** : [!INCLUDE[ssSQL11](../../includes/sssql11-md.md)] 이상 DEFAULT_LANGUAGE가 삭제된 경우 이 예제가 [!INCLUDE[sqldbesa](../../includes/sqldbesa-md.md)]에서 동작합니다.  
+**적용 대상**: [!INCLUDE[ssSQL11](../../includes/sssql11-md.md)] 이상 DEFAULT_LANGUAGE가 삭제된 경우 이 예제가 [!INCLUDE[sqldbesa](../../includes/sqldbesa-md.md)]에서 동작합니다.  
   
 ```sql  
 USE AdventureWorks2012 ;  
@@ -434,7 +434,7 @@ GO
 ### <a name="f-creating-a-contained-database-user-for-a-domain-login"></a>F. 도메인 로그인에 대한 포함된 데이터베이스 사용자 만들기  
  다음 예에서는 Contoso라는 도메인의 Fritz라는 로그인에 대한 포함된 데이터베이스 사용자를 만듭니다. 이 예는 포함된 데이터베이스에서만 실행할 수 있습니다.  
   
-**적용 대상** : [!INCLUDE[ssSQL11](../../includes/sssql11-md.md)] 이상  
+**적용 대상**: [!INCLUDE[ssSQL11](../../includes/sssql11-md.md)] 이상  
   
 ```sql  
 USE AdventureWorks2012 ;  
@@ -446,7 +446,7 @@ GO
 ### <a name="g-creating-a-contained-database-user-with-a-specific-sid"></a>G. 특정 SID가 있는 포함된 데이터베이스 사용자 만들기  
  다음 예에서는 CarmenW라는 SQL Server 인증 포함된 데이터베이스 사용자를 만듭니다. 이 예는 포함된 데이터베이스에서만 실행할 수 있습니다.  
   
-**적용 대상** : [!INCLUDE[ssSQL11](../../includes/sssql11-md.md)] 이상  
+**적용 대상**: [!INCLUDE[ssSQL11](../../includes/sssql11-md.md)] 이상  
   
 ```sql  
 USE AdventureWorks2012 ;  
@@ -458,7 +458,7 @@ CREATE USER CarmenW WITH PASSWORD = 'a8ea v*(Rd##+'
 ### <a name="h-creating-a-user-to-copy-encrypted-data"></a>H. 암호화된 데이터를 복사할 사용자 만들기  
  다음 예에서는 Always Encrypted 기능으로 보호되는 데이터를 암호화된 열이 있는 테이블 집합에서 암호화된 열이 있는 또 다른 테이블 집합으로(동일하거나 다른 데이터베이스에 있음) 복사할 수 있는 사용자를 만듭니다.  자세한 내용은 [상시 암호화로 보호되는 중요한 데이터 마이그레이션](../../relational-databases/security/encryption/migrate-sensitive-data-protected-by-always-encrypted.md)을 참조하세요.  
   
-**적용 대상** : [!INCLUDE[ssSQL15](../../includes/sssql15-md.md)] 이상, [!INCLUDE[ssSDS](../../includes/sssds-md.md)].  
+**적용 대상**: [!INCLUDE[ssSQL15](../../includes/sssql15-md.md)] 이상, [!INCLUDE[ssSDS](../../includes/sssds-md.md)].  
   
 ```sql  
 CREATE USER [Chin]   

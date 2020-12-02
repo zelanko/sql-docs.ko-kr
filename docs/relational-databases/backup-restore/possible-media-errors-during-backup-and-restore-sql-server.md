@@ -22,14 +22,14 @@ helpviewer_keywords:
 - NO_CHECKSUM option
 - checksums [SQL Server]
 ms.assetid: 83a27b29-1191-4f8d-9648-6e6be73a9b7c
-author: MikeRayMSFT
-ms.author: mikeray
-ms.openlocfilehash: c364c7dca1e8ea7a74a526bdb69dc8a7b3cf296d
-ms.sourcegitcommit: da88320c474c1c9124574f90d549c50ee3387b4c
+author: cawrites
+ms.author: chadam
+ms.openlocfilehash: f0405ddad68df7c4e34d0af17d2e9da81adfe535
+ms.sourcegitcommit: 5a1ed81749800c33059dac91b0e18bd8bb3081b1
 ms.translationtype: HT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 07/01/2020
-ms.locfileid: "85670110"
+ms.lasthandoff: 11/23/2020
+ms.locfileid: "96130338"
 ---
 # <a name="possible-media-errors-during-backup-and-restore-sql-server"></a>백업 및 복원 중 발생 가능한 미디어 오류(SQL Server)
  [!INCLUDE [SQL Server](../../includes/applies-to-version/sqlserver.md)]
@@ -59,7 +59,7 @@ ms.locfileid: "85670110"
   
 2.  페이지 체크섬이 있는지 여부에 관계없이 BACKUP은 백업 스트림에 대해 별도의 백업 체크섬을 생성합니다. 복원 작업은 경우에 따라 백업 체크섬을 사용하여 백업이 손상되지 않았는지 확인할 수 있습니다. 백업 체크섬은 데이터베이스 페이지가 아니라 백업 미디어에 저장됩니다. 백업 체크섬은 복원할 때 사용되기도 합니다.  
   
-3.  백업 세트의 플래그는 **msdb..backupset** 의 **has_backup_checksums**열에서 포함 백업 체크섬으로 지정됩니다. 자세한 내용은 [backupset&#40;Transact-SQL&#41;](../../relational-databases/system-tables/backupset-transact-sql.md)를 참조하세요.  
+3.  백업 세트의 플래그는 **msdb..backupset** 의 **has_backup_checksums** 열에서 포함 백업 체크섬으로 지정됩니다. 자세한 내용은 [backupset&#40;Transact-SQL&#41;](../../relational-databases/system-tables/backupset-transact-sql.md)를 참조하세요.  
 
  복원 작업 중 백업 미디어에 백업 체크섬이 있을 경우 기본적으로 RESTORE 문과 RESTORE VERIFYONLY 문은 백업 체크섬과 페이지 체크섬을 모두 확인합니다. 백업 체크섬이 없을 경우 복원 작업은 확인 없이 진행됩니다. 백업 체크섬이 없으면 복원이 페이지 체크섬을 안정적으로 확인할 수 없기 때문입니다.  
   
@@ -72,7 +72,7 @@ ms.locfileid: "85670110"
   
 2.  SQL Server 오류 로그에 오류를 기록합니다.  
   
-3.  **msdb.backupset** 의 **is_damaged**열에 이런 종류의 오류가 들어 있는 것으로 백업 세트를 표시합니다. 자세한 내용은 [backupset&#40;Transact-SQL&#41;](../../relational-databases/system-tables/backupset-transact-sql.md)를 참조하세요.  
+3.  **msdb.backupset** 의 **is_damaged** 열에 이런 종류의 오류가 들어 있는 것으로 백업 세트를 표시합니다. 자세한 내용은 [backupset&#40;Transact-SQL&#41;](../../relational-databases/system-tables/backupset-transact-sql.md)를 참조하세요.  
   
 4.  백업이 생성되었지만 페이지 오류가 있다는 메시지를 표시합니다.  
   

@@ -19,11 +19,11 @@ ms.assetid: c06065cf-43e5-4b6b-9824-7309d7f5e35e
 author: chugugrace
 ms.author: chugu
 ms.openlocfilehash: 3ef015c1cdaef9794546c8284e968b53a20ca197
-ms.sourcegitcommit: 827ad02375793090fa8fee63cc372d130f11393f
+ms.sourcegitcommit: 192f6a99e19e66f0f817fdb1977f564b2aaa133b
 ms.translationtype: HT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 09/04/2020
-ms.locfileid: "89480726"
+ms.lasthandoff: 11/25/2020
+ms.locfileid: "96130713"
 ---
 # <a name="adding-data-flow-components-programmatically"></a>프로그래밍 방식으로 데이터 흐름 구성 요소 추가
 
@@ -155,7 +155,7 @@ End Module
 ## <a name="next-step"></a>다음 단계  
  구성 요소를 추가하고 구성한 다음에는 구성 요소 간의 경로를 만들어야 합니다. 이 단계에 대한 자세한 내용은 [프로그래밍 방식으로 데이터 흐름 구성 요소 연결](../../integration-services/building-packages-programmatically/connecting-data-flow-components-programmatically.md) 항목에서 설명합니다.  
   
-## <a name="sample"></a>예제  
+## <a name="sample"></a>샘플  
  다음 코드 예제에서는 데이터 흐름 태스크에 OLE DB 원본 구성 요소를 추가하고 해당 구성 요소의 디자인 타임 인스턴스를 만든 다음 구성 요소의 속성을 구성합니다. 이 예에는 Microsoft.SqlServer.DTSRuntimeWrap 어셈블리에 대한 참조가 필요합니다.  
   
 ```csharp  

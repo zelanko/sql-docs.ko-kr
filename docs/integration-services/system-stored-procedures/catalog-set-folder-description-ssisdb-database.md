@@ -12,11 +12,11 @@ ms.assetid: 802416f6-5177-4db5-bca5-976dec5faf53
 author: chugugrace
 ms.author: chugu
 ms.openlocfilehash: 18e7cb22f94e33328ed08968052d03b0261c73df
-ms.sourcegitcommit: e700497f962e4c2274df16d9e651059b42ff1a10
+ms.sourcegitcommit: 192f6a99e19e66f0f817fdb1977f564b2aaa133b
 ms.translationtype: HT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 08/17/2020
-ms.locfileid: "88425065"
+ms.lasthandoff: 11/25/2020
+ms.locfileid: "96129646"
 ---
 # <a name="catalogset_folder_description-ssisdb-database"></a>catalog.set_folder_description(SSISDB 데이터베이스)
 
@@ -36,10 +36,10 @@ catalog.set_folder_description [ @folder_name = ] folder_name
   
 ## <a name="arguments"></a>인수  
  [ @folder_name = ] *folder_name*  
- 폴더 이름입니다. *folder_name*은 **nvarchar(128)** 입니다.  
+ 폴더 이름입니다. *folder_name* 은 **nvarchar(128)** 입니다.  
   
  [ @folder_description = ] *folder_description*  
- 폴더에 대한 설명입니다. *folder_description*은 **nvarchar(MAX)** 입니다.  
+ 폴더에 대한 설명입니다. *folder_description* 은 **nvarchar(MAX)** 입니다.  
   
 ## <a name="return-code-value"></a>반환 코드 값  
  None  

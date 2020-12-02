@@ -24,11 +24,11 @@ ms.assetid: 452d181a-a8e6-44a3-975d-29966d01b18d
 author: markingmyname
 ms.author: maghan
 ms.openlocfilehash: 601d7bdff19c6e6d8f4daec58c28c048891bcc82
-ms.sourcegitcommit: 197a6ffb643f93592edf9e90b04810a18be61133
+ms.sourcegitcommit: 192f6a99e19e66f0f817fdb1977f564b2aaa133b
 ms.translationtype: HT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 09/26/2020
-ms.locfileid: "91380189"
+ms.lasthandoff: 11/25/2020
+ms.locfileid: "96131330"
 ---
 # <a name="drop-assembly-transact-sql"></a>DROP ASSEMBLY(Transact-SQL)
 [!INCLUDE [SQL Server](../../includes/applies-to-version/sqlserver.md)]
@@ -57,12 +57,12 @@ DROP ASSEMBLY [ IF EXISTS ] assembly_name [ ,...n ]
  삭제할 어셈블리의 이름입니다.  
   
  WITH NO DEPENDENTS  
- 지정하면 *assembly_name*만 삭제되고 어셈블리에서 참조하는 종속 어셈블리는 삭제되지 않습니다. 지정하지 않으면 DROP ASSEMBLY가 *assembly_name*과 모든 종속 어셈블리를 삭제합니다.  
+ 지정하면 *assembly_name* 만 삭제되고 어셈블리에서 참조하는 종속 어셈블리는 삭제되지 않습니다. 지정하지 않으면 DROP ASSEMBLY가 *assembly_name* 과 모든 종속 어셈블리를 삭제합니다.  
   
 ## <a name="remarks"></a>설명  
  어셈블리를 삭제하면 데이터베이스에서 어셈블리와 원본 코드 및 디버그 파일 등의 모든 관련 파일이 제거됩니다.  
   
- WITH NO DEPENDENTS를 지정하지 않으면 DROP ASSEMBLY가 *assembly_name*과 모든 종속 어셈블리를 삭제합니다. 종속 어셈블리를 삭제하려는 시도가 실패하면 DROP ASSEMBLY가 오류를 반환합니다.  
+ WITH NO DEPENDENTS를 지정하지 않으면 DROP ASSEMBLY가 *assembly_name* 과 모든 종속 어셈블리를 삭제합니다. 종속 어셈블리를 삭제하려는 시도가 실패하면 DROP ASSEMBLY가 오류를 반환합니다.  
   
  어셈블리가 데이터베이스에 있는 다른 어셈블리에서 참조되거나 현재 데이터베이스의 CLR(공용 언어 런타임) 함수, 프로시저, 트리거, 사용자 정의 형식 또는 집계에서 사용되면 DROP ASSEMBLY가 오류를 반환합니다.  
   

@@ -19,11 +19,11 @@ ms.assetid: 300a67c4-d226-4653-9e9f-7ae4d53fcf33
 author: VanMSFT
 ms.author: vanto
 ms.openlocfilehash: fa23524c5aa024daa4b9a99a6bbeaca747c9226e
-ms.sourcegitcommit: e700497f962e4c2274df16d9e651059b42ff1a10
+ms.sourcegitcommit: 192f6a99e19e66f0f817fdb1977f564b2aaa133b
 ms.translationtype: HT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 08/17/2020
-ms.locfileid: "88496889"
+ms.lasthandoff: 11/25/2020
+ms.locfileid: "96131212"
 ---
 # <a name="deny-schema-permissions-transact-sql"></a>DENY 스키마 권한(Transact-SQL)
 [!INCLUDE [SQL Server SQL Database](../../includes/applies-to-version/sql-asdb.md)]
@@ -52,7 +52,7 @@ ON SCHEMA **::** schema *_name*
 사용 권한이 거부된 스키마를 지정합니다. 범위 한정자 **::** 가 필요합니다.  
   
 *database_principal*  
-사용 권한이 거부된 보안 주체를 지정합니다. *database_principal*은 다음 보안 주체 중 하나일 수 있습니다.  
+사용 권한이 거부된 보안 주체를 지정합니다. *database_principal* 은 다음 보안 주체 중 하나일 수 있습니다.  
   
 -   데이터베이스 사용자  
 -   데이터베이스 역할  
@@ -64,10 +64,10 @@ ON SCHEMA **::** schema *_name*
 -   서버 보안 주체로 매핑되지 않은 데이터베이스 사용자  
   
 CASCADE  
-지정된 *database_principal*이 권한을 부여한 다른 모든 보안 주체에 대한 권한을 거부합니다.
+지정된 *database_principal* 이 권한을 부여한 다른 모든 보안 주체에 대한 권한을 거부합니다.
   
 *denying_principal*  
-이 쿼리를 실행하는 보안 주체가 사용 권한을 거부하는 권한을 부여할 수 있는 다른 보안 주체를 지정합니다. *denying_principal*은 다음 보안 주체 중 하나일 수 있습니다.  
+이 쿼리를 실행하는 보안 주체가 사용 권한을 거부하는 권한을 부여할 수 있는 다른 보안 주체를 지정합니다. *denying_principal* 은 다음 보안 주체 중 하나일 수 있습니다.  
   
 -   데이터베이스 사용자  
 -   데이터베이스 역할  

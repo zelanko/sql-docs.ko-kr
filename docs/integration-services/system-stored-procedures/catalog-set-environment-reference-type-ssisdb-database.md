@@ -12,11 +12,11 @@ ms.assetid: b79e3a06-22c0-40e5-8933-1b3414db3329
 author: chugugrace
 ms.author: chugu
 ms.openlocfilehash: 6af8fdff22031cd5f806cb3d6f640223414f3ac1
-ms.sourcegitcommit: e700497f962e4c2274df16d9e651059b42ff1a10
+ms.sourcegitcommit: 192f6a99e19e66f0f817fdb1977f564b2aaa133b
 ms.translationtype: HT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 08/17/2020
-ms.locfileid: "88425075"
+ms.lasthandoff: 11/25/2020
+ms.locfileid: "96129712"
 ---
 # <a name="catalogset_environment_reference_type-ssisdb-database"></a>catalog.set_environment_reference_type(SSISDB 데이터베이스)
 
@@ -37,13 +37,13 @@ catalog.set_environment_reference_location [ @reference_id = reference_id
   
 ## <a name="arguments"></a>인수  
  [ @reference_id = ] *reference_id*  
- 업데이트할 환경 참조의 고유 식별자입니다. *reference_id*는 **bigint**입니다.  
+ 업데이트할 환경 참조의 고유 식별자입니다. *reference_id* 는 **bigint** 입니다.  
   
  [ @reference_type = ] *reference_type*  
- 환경을 프로젝트와 같은 폴더(상대 참조)에서 찾을 수 있는지, 아니면 다른 폴더(절대 참조)에서 찾을 수 있는지를 나타냅니다. 상대 참조를 나타내려면 값 `R`을 사용하고, 절대 참조를 나타내려면 값 `A`를 사용합니다. *reference_type*은 **char(1)** 입니다.  
+ 환경을 프로젝트와 같은 폴더(상대 참조)에서 찾을 수 있는지, 아니면 다른 폴더(절대 참조)에서 찾을 수 있는지를 나타냅니다. 상대 참조를 나타내려면 값 `R`을 사용하고, 절대 참조를 나타내려면 값 `A`를 사용합니다. *reference_type* 은 **char(1)** 입니다.  
   
  [ @environment_folder_name = ] *environment_folder_name*  
- 환경이 있는 폴더입니다. 이 값은 절대 참조에 필요합니다. *environment_folder_name*은 **nvarchar(128)** 입니다.  
+ 환경이 있는 폴더입니다. 이 값은 절대 참조에 필요합니다. *environment_folder_name* 은 **nvarchar(128)** 입니다.  
   
 ## <a name="return-code-value"></a>반환 코드 값  
  0(성공)  
@@ -73,6 +73,6 @@ catalog.set_environment_reference_location [ @reference_id = reference_id
  프로젝트에는 상대 환경 참조 또는 절대 환경 참조가 있을 수 있습니다. 상대 참조는 환경을 이름으로 참조하며 환경이 프로젝트와 같은 폴더에 있어야 합니다. 절대 참조는 환경을 이름과 폴더로 참조하며 프로젝트와 다른 폴더에 있는 환경을 참조할 수도 있습니다. 하나의 프로젝트에서 여러 환경을 참조할 수 있습니다.  
   
 > [!IMPORTANT]  
->  상대 참조를 지정하면 *environment_folder_name* 매개 변수 값이 사용되지 않고 환경 폴더 이름이 자동으로 **NULL**로 설정됩니다. 절대 참조를 지정한 경우에는 *environment_folder_name* 매개 변수에 환경 폴더 이름을 제공해야 합니다.  
+>  상대 참조를 지정하면 *environment_folder_name* 매개 변수 값이 사용되지 않고 환경 폴더 이름이 자동으로 **NULL** 로 설정됩니다. 절대 참조를 지정한 경우에는 *environment_folder_name* 매개 변수에 환경 폴더 이름을 제공해야 합니다.  
   
   

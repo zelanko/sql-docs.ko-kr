@@ -23,11 +23,11 @@ ms.assetid: fd866520-ca00-477d-b2e9-0110e9610ed4
 author: markingmyname
 ms.author: maghan
 ms.openlocfilehash: 4bf41bb420ddaaccd0f1899c641a30a17bbb8fcd
-ms.sourcegitcommit: 197a6ffb643f93592edf9e90b04810a18be61133
+ms.sourcegitcommit: 192f6a99e19e66f0f817fdb1977f564b2aaa133b
 ms.translationtype: HT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 09/26/2020
-ms.locfileid: "91380348"
+ms.lasthandoff: 11/25/2020
+ms.locfileid: "96131166"
 ---
 # <a name="drop-queue-transact-sql"></a>DROP QUEUE(Transact-SQL)
 [!INCLUDE [SQL Server - ASDBMI](../../includes/applies-to-version/sql-asdbmi.md)]
@@ -50,10 +50,10 @@ DROP QUEUE <object>
 
 ## <a name="arguments"></a>인수
  *database_name*  
- 삭제할 큐가 있는 데이터베이스의 이름입니다. *database_name*을 제공하지 않으면 기본값은 현재 데이터베이스입니다.  
+ 삭제할 큐가 있는 데이터베이스의 이름입니다. *database_name* 을 제공하지 않으면 기본값은 현재 데이터베이스입니다.  
   
  *schema_name (object)*  
- 삭제할 큐를 소유하는 스키마의 이름입니다. *schema_name*을 제공하지 않으면 기본값은 현재 사용자의 기본 스키마입니다.  
+ 삭제할 큐를 소유하는 스키마의 이름입니다. *schema_name* 을 제공하지 않으면 기본값은 현재 사용자의 기본 스키마입니다.  
   
  *queue_name*  
  삭제할 큐의 이름입니다.  

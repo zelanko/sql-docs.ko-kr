@@ -27,11 +27,11 @@ ms.assetid: bd517aa3-f06e-4356-87d8-70de5df4494a
 author: VanMSFT
 ms.author: vanto
 ms.openlocfilehash: e41272ce78e5bfb0dd1a0f746a11d6700ac11c59
-ms.sourcegitcommit: b93beb4f03aee2c1971909cb1d15f79cd479a35c
+ms.sourcegitcommit: 192f6a99e19e66f0f817fdb1977f564b2aaa133b
 ms.translationtype: HT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 09/29/2020
-ms.locfileid: "91498158"
+ms.lasthandoff: 11/25/2020
+ms.locfileid: "96131053"
 ---
 # <a name="execute-as-clause-transact-sql"></a>EXECUTE AS 절(Transact-SQL)
 [!INCLUDE [SQL Server SQL Database](../../includes/applies-to-version/sql-asdb.md)]
@@ -82,12 +82,12 @@ DDL Triggers with Database Scope
  CREATE QUEUE 또는 ALTER QUEUE 문에서는 CALLER를 지정할 수 없습니다.  
   
  **SELF**  
- EXECUTE AS SELF는 EXECUTE AS *user_name*과 동일합니다. 여기에서 지정된 사용자는 모듈을 만들거나 변경하는 사용자입니다. 모듈을 만들거나 수정하는 사용자의 실제 ID는 **sys.sql_modules** 또는 **sys.service_queues** 카탈로그 뷰의 **execute_as_principal_id** 열에 저장됩니다.  
+ EXECUTE AS SELF는 EXECUTE AS *user_name* 과 동일합니다. 여기에서 지정된 사용자는 모듈을 만들거나 변경하는 사용자입니다. 모듈을 만들거나 수정하는 사용자의 실제 ID는 **sys.sql_modules** 또는 **sys.service_queues** 카탈로그 뷰의 **execute_as_principal_id** 열에 저장됩니다.  
   
  SELF는 큐의 기본값입니다.  
   
 > [!NOTE]  
->  **sys.service_queues** 카탈로그 뷰에서 **execute_as_principal_id**의 사용자 ID를 변경하려면 ALTER QUEUE 문에서 명시적으로 EXECUTE AS를 설정해야 합니다.  
+>  **sys.service_queues** 카탈로그 뷰에서 **execute_as_principal_id** 의 사용자 ID를 변경하려면 ALTER QUEUE 문에서 명시적으로 EXECUTE AS를 설정해야 합니다.  
   
  OWNER  
  모듈 내부의 문이 현재 모듈 소유자의 컨텍스트에서 실행되도록 지정합니다. 모듈에 지정된 소유자가 없으면 이 모듈의 스키마 소유자를 사용합니다. DDL 또는 로그온 트리거에 대해서는 OWNER를 지정할 수 없습니다.  
@@ -96,16 +96,16 @@ DDL Triggers with Database Scope
 >  OWNER는 단일 계정으로 매핑되어야 하며 역할이나 그룹이 될 수 없습니다.  
   
  **'** *user_name* **'**  
- 모듈 내부의 문이 *user_name*에 지정된 사용자의 컨텍스트에서 실행되도록 지정합니다. 모듈 내의 모든 개체에 대한 사용 권한은 *user_name*과 비교 검증됩니다. 서버 범위의 DDL 트리거 또는 로그온 트리거에는 *user_name*을 지정할 수 없습니다. 대신 *login_name*을 사용합니다.  
+ 모듈 내부의 문이 *user_name* 에 지정된 사용자의 컨텍스트에서 실행되도록 지정합니다. 모듈 내의 모든 개체에 대한 사용 권한은 *user_name* 과 비교 검증됩니다. 서버 범위의 DDL 트리거 또는 로그온 트리거에는 *user_name* 을 지정할 수 없습니다. 대신 *login_name* 을 사용합니다.  
   
- *user_name*은 현재 데이터베이스에 있어야 하며 단일 계정이어야 합니다. *user_name*은 그룹, 역할, 인증서 또는 키이거나 NT AUTHORITY\LocalService, NT AUTHORITY\NetworkService 또는 NT AUTHORITY\LocalSystem과 같은 기본 제공 계정이 될 수 없습니다.  
+ *user_name* 은 현재 데이터베이스에 있어야 하며 단일 계정이어야 합니다. *user_name* 은 그룹, 역할, 인증서 또는 키이거나 NT AUTHORITY\LocalService, NT AUTHORITY\NetworkService 또는 NT AUTHORITY\LocalSystem과 같은 기본 제공 계정이 될 수 없습니다.  
   
  실행 컨텍스트의 사용자 ID는 메타데이터에 저장되고 **sys.sql_modules** 또는 **sys.assembly_modules** 카탈로그 뷰의 **execute_as_principal_id** 열에 표시될 수 있습니다.  
   
  **'** *login_name* **'**  
- 모듈 내부의 문이 *login_name*에 지정된 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 로그인의 컨텍스트에서 실행되도록 지정합니다. 모듈 내의 모든 개체에 대한 사용 권한은 *login_name*과 비교 검증됩니다. *login_name*은 서버 범위의 DDL 트리거 또는 로그온 트리거에만 지정할 수 있습니다.  
+ 모듈 내부의 문이 *login_name* 에 지정된 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 로그인의 컨텍스트에서 실행되도록 지정합니다. 모듈 내의 모든 개체에 대한 사용 권한은 *login_name* 과 비교 검증됩니다. *login_name* 은 서버 범위의 DDL 트리거 또는 로그온 트리거에만 지정할 수 있습니다.  
   
- *login_name*은 그룹, 역할, 인증서 또는 키이거나 NT AUTHORITY\LocalService, NT AUTHORITY\NetworkService 또는 NT AUTHORITY\LocalSystem과 같은 기본 제공 계정이 될 수 없습니다.  
+ *login_name* 은 그룹, 역할, 인증서 또는 키이거나 NT AUTHORITY\LocalService, NT AUTHORITY\NetworkService 또는 NT AUTHORITY\LocalSystem과 같은 기본 제공 계정이 될 수 없습니다.  
   
 ## <a name="remarks"></a>설명  
  [!INCLUDE[ssDE](../../includes/ssde-md.md)]에서 모듈이 참조하는 개체에 대한 사용 권한을 평가하는 방법은 호출 개체와 참조된 개체 간에 존재하는 소유권 체인에 따라 다릅니다. 이전 버전의 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]에서 호출 사용자에게 참조된 모든 개체에 대한 액세스 권한을 부여하지 않도록 하는 유일한 방법은 소유권 체인이었습니다.  
@@ -131,7 +131,7 @@ DDL Triggers with Database Scope
 ## <a name="specifying-a-user-or-login-name"></a>사용자 또는 로그인 이름 지정  
  모듈이 다른 컨텍스트에서 실행되도록 수정하기 전에는 모듈의 EXECUTE AS 절에 지정된 데이터베이스 사용자나 서버 로그인을 삭제할 수 없습니다.  
   
- EXECUTE AS 절에 지정된 사용자 또는 로그인 이름은 각각 **sys.database_principals** 또는 **sys.server_principals**에서 보안 주체로 존재해야 합니다. 그렇지 않으면 모듈을 만들거나 변경할 수 없습니다. 또한 모듈을 만들거나 변경하는 사용자에게는 보안 주체에 대한 IMPERSONATE 권한이 있어야 합니다.  
+ EXECUTE AS 절에 지정된 사용자 또는 로그인 이름은 각각 **sys.database_principals** 또는 **sys.server_principals** 에서 보안 주체로 존재해야 합니다. 그렇지 않으면 모듈을 만들거나 변경할 수 없습니다. 또한 모듈을 만들거나 변경하는 사용자에게는 보안 주체에 대한 IMPERSONATE 권한이 있어야 합니다.  
   
  사용자가 Windows 그룹 멤버 자격을 통해 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 데이터베이스나 인스턴스에 대한 암시적 액세스 권한을 갖고 있는 경우 다음 요구 사항 중 하나가 충족된다면 모듈이 생성될 때 EXECUTE AS 절에 지정된 사용자가 암시적으로 생성됩니다.  
   
@@ -148,7 +148,7 @@ DDL Triggers with Database Scope
   
 -   **CompanyDomain\SQLUsers** 그룹에 **Sales** 데이터베이스에 대한 액세스 권한이 있습니다.  
   
--   **CompanyDomain\SqlUser1**은 **SQLUsers**의 멤버이므로 **Sales** 데이터베이스에 대한 액세스 권한이 있습니다.  
+-   **CompanyDomain\SqlUser1** 은 **SQLUsers** 의 멤버이므로 **Sales** 데이터베이스에 대한 액세스 권한이 있습니다.  
   
 -   모듈을 만들거나 변경하는 사용자에게 보안 주체를 만들 사용 권한이 있습니다.  
   
@@ -196,7 +196,7 @@ GO
   
  모듈을 만들거나 수정할 때 EXECUTE AS 절을 지정하려면 지정된 보안 주체에 대한 IMPERSONATE 권한과 모듈을 만들 수 있는 권한이 있어야 합니다. 사용자는 항상 자신을 가장할 수 있습니다. 실행 컨텍스트를 지정하지 않거나 EXECUTE AS CALLER를 지정한 경우에는 IMPERSONATE 권한이 필요하지 않습니다.  
   
- Windows 그룹 멤버 자격을 통해 데이터베이스에 대한 암시적 액세스 권한이 있는 *login_name* 또는 *user_name*을 지정하려면 해당 데이터베이스에 대한 CONTROL 권한이 있어야 합니다.  
+ Windows 그룹 멤버 자격을 통해 데이터베이스에 대한 암시적 액세스 권한이 있는 *login_name* 또는 *user_name* 을 지정하려면 해당 데이터베이스에 대한 CONTROL 권한이 있어야 합니다.  
   
 ## <a name="examples"></a>예제  
  다음 예에서는 [!INCLUDE[ssSampleDBnormal](../../includes/sssampledbnormal-md.md)] 데이터베이스에 저장 프로시저를 만들고 실행 컨텍스트를 `OWNER`로 할당합니다.  

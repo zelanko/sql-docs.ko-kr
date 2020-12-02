@@ -12,11 +12,11 @@ ms.reviewer: ''
 ms.custom: ''
 ms.date: 05/21/2018
 ms.openlocfilehash: fc86054be556dbb34d212b24172e50fbf52f8980
-ms.sourcegitcommit: 5f3e0eca9840db20038f0362e5d88a84ff3424af
+ms.sourcegitcommit: 192f6a99e19e66f0f817fdb1977f564b2aaa133b
 ms.translationtype: HT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 10/21/2020
-ms.locfileid: "92344554"
+ms.lasthandoff: 11/25/2020
+ms.locfileid: "96129972"
 ---
 # <a name="deploy-an-ssis-project-with-sql-server-management-studio-ssms"></a>SSMS(SQL Server Management Studio)를 사용하여 SSIS 프로젝트 배포
 
@@ -78,7 +78,7 @@ SQL Server Management Studio를 사용하여 SSIS 카탈로그에 대한 연결�
 
 3. **연결** 을 클릭합니다. SSMS에서 개체 탐색기 창이 열립니다. 
 
-4. 개체 탐색기에서 **Integration Services 카탈로그** , **SSISDB** 를 차례로 펼쳐 SSIS 카탈로그 데이터베이스의 개체를 봅니다.
+4. 개체 탐색기에서 **Integration Services 카탈로그**, **SSISDB** 를 차례로 펼쳐 SSIS 카탈로그 데이터베이스의 개체를 봅니다.
 
 ## <a name="start-the-integration-services-deployment-wizard"></a>Integration Services 배포 마법사 시작
 1. **Integration Services 카탈로그** 노드와 **SSISDB** 노드가 펼쳐진 개체 탐색기에서 폴더를 펼칩니다.
@@ -99,7 +99,7 @@ SQL Server Management Studio를 사용하여 SSIS 카탈로그에 대한 연결�
     -   정규화된 서버 이름을 입력합니다. 대상 서버가 Azure SQL Database 서버인 경우 이름은 `<server_name>.database.windows.net` 형식입니다.
     -   인증 정보를 입력한 다음, **연결** 을 선택합니다. 이 문서에서 [배포 시 인증 방법](#authentication-methods-for-deployment)을 참조하세요.
     -   그런 다음 **찾아보기** 를 선택하여 SSISDB에서 대상 폴더를 선택합니다.
-    -   그런 다음, **다음** 을 선택하여 **검토** 페이지를 엽니다. ( **연결** 을 선택하면 **다음** 단추가 활성화됩니다.)
+    -   그런 다음, **다음** 을 선택하여 **검토** 페이지를 엽니다. (**연결** 을 선택하면 **다음** 단추가 활성화됩니다.)
   
 4.  **검토** 페이지에서 선택한 설정을 검토합니다.
     -   **이전** 을 클릭하거나 왼쪽 창의 단계 중 하나를 클릭하여 선택 항목을 변경할 수 있습니다.

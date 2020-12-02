@@ -12,11 +12,11 @@ ms.assetid: 894b3bdb-aa34-463e-aba4-1b68ad96a0ef
 author: chugugrace
 ms.author: chugu
 ms.openlocfilehash: daa94bf3d9a5147fff447ba6f88e7fd284514d5f
-ms.sourcegitcommit: e700497f962e4c2274df16d9e651059b42ff1a10
+ms.sourcegitcommit: 192f6a99e19e66f0f817fdb1977f564b2aaa133b
 ms.translationtype: HT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 08/17/2020
-ms.locfileid: "88456955"
+ms.lasthandoff: 11/25/2020
+ms.locfileid: "96129846"
 ---
 # <a name="catalogdelete_environment_variable-ssisdb-database"></a>catalog.delete_environment_variable(SSISDB 데이터베이스)
 
@@ -37,13 +37,13 @@ catalog.delete_environment_variable [ @folder_name = ] folder_name
   
 ## <a name="arguments"></a>인수  
  [ @folder_name = ] *folder_name*  
- 환경이 있는 폴더의 이름입니다. *folder_name*은 **nvarchar(128)** 입니다.  
+ 환경이 있는 폴더의 이름입니다. *folder_name* 은 **nvarchar(128)** 입니다.  
   
  [ @environment_name = ] *environment_name*  
- 변수가 있는 환경의 이름입니다. *environment_name*은 **nvarchar(128)** 입니다.  
+ 변수가 있는 환경의 이름입니다. *environment_name* 은 **nvarchar(128)** 입니다.  
   
  [ @variable_name = ] *variable_name*  
- 삭제할 변수의 이름입니다. *variable_name*은 **nvarchar(128)** 입니다.  
+ 삭제할 변수의 이름입니다. *variable_name* 은 **nvarchar(128)** 입니다.  
   
 ## <a name="return-code-value"></a>반환 코드 값  
  0(성공)  

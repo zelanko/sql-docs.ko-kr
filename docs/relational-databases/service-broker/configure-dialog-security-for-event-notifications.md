@@ -14,11 +14,11 @@ ms.assetid: 12afbc84-2d2a-4452-935e-e1c70e8c53c1
 author: VanMSFT
 ms.author: vanto
 ms.openlocfilehash: 85fbbe596954083015a0533995784f31609d1b90
-ms.sourcegitcommit: e700497f962e4c2274df16d9e651059b42ff1a10
+ms.sourcegitcommit: 192f6a99e19e66f0f817fdb1977f564b2aaa133b
 ms.translationtype: HT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 08/17/2020
-ms.locfileid: "88448020"
+ms.lasthandoff: 11/25/2020
+ms.locfileid: "96130200"
 ---
 # <a name="configure-dialog-security-for-event-notifications"></a>이벤트 알림에 대한 대화 보안 구성
  [!INCLUDE [SQL Server](../../includes/applies-to-version/sqlserver.md)]
@@ -59,7 +59,7 @@ ms.locfileid: "88448020"
 ||대상 데이터베이스 사용자로 데이터베이스에 연결되어 있지 않으면 지금 연결합니다.|  
 ||이벤트 알림 메시지를 받을[큐를 만들고](../../t-sql/statements/create-queue-transact-sql.md) 메시지를 배달할 [서비스를 만듭니다](../../t-sql/statements/create-service-transact-sql.md) .|  
 ||원본 데이터베이스 사용자에게 대상 서비스에 대한[SEND 권한을 부여합니다](../../t-sql/statements/grant-transact-sql.md) .|  
-|대상 서버에 원본 데이터베이스의 Service Broker 식별자를 제공합니다. 이 식별자는 **sys.databases** 카탈로그 뷰의 [service_broker_guid](../../relational-databases/system-catalog-views/sys-databases-transact-sql.md) 열을 쿼리하면 얻을 수 있습니다. 서버 수준 이벤트 알림의 경우 **msdb**의 Service Broker 식별자를 사용합니다.|원본 서버에 대상 데이터베이스의 Service Broker 식별자를 제공합니다.|  
+|대상 서버에 원본 데이터베이스의 Service Broker 식별자를 제공합니다. 이 식별자는 **sys.databases** 카탈로그 뷰의 [service_broker_guid](../../relational-databases/system-catalog-views/sys-databases-transact-sql.md) 열을 쿼리하면 얻을 수 있습니다. 서버 수준 이벤트 알림의 경우 **msdb** 의 Service Broker 식별자를 사용합니다.|원본 서버에 대상 데이터베이스의 Service Broker 식별자를 제공합니다.|  
   
  **4단계: 경로를 만들고 서버 수준의 인증을 설정합니다.**  
   

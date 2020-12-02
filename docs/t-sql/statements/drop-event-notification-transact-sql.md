@@ -23,11 +23,11 @@ ms.assetid: 0ffd8f47-4ea3-4238-9e73-c318df710cf7
 author: MightyPen
 ms.author: genemi
 ms.openlocfilehash: 9c3faeeac400e02f9cb01fcfc4af66c2ee5fe09d
-ms.sourcegitcommit: e700497f962e4c2274df16d9e651059b42ff1a10
+ms.sourcegitcommit: 192f6a99e19e66f0f817fdb1977f564b2aaa133b
 ms.translationtype: HT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 08/17/2020
-ms.locfileid: "88444677"
+ms.lasthandoff: 11/25/2020
+ms.locfileid: "96131290"
 ---
 # <a name="drop-event-notification-transact-sql"></a>DROP EVENT NOTIFICATION(Transact-SQL)
 [!INCLUDE [SQL Server](../../includes/applies-to-version/sqlserver.md)]
@@ -58,7 +58,7 @@ ON { SERVER | DATABASE | QUEUE queue_name }
  이벤트 알림의 범위가 현재 데이터베이스로 적용됨을 나타냅니다. 이벤트 알림이 생성될 때 DATABASE를 지정한 경우 반드시 DATABASE를 지정해야 합니다.  
   
  QUEUE *queue_name*  
- 이벤트 알림의 범위가 *queue_name*에 지정된 큐로 적용됨을 나타냅니다. 이벤트 알림이 생성될 때 QUEUE를 지정한 경우 반드시 QUEUE를 지정해야 합니다. *queue_name*은 큐의 이름이며 반드시 함께 지정해야 합니다.  
+ 이벤트 알림의 범위가 *queue_name* 에 지정된 큐로 적용됨을 나타냅니다. 이벤트 알림이 생성될 때 QUEUE를 지정한 경우 반드시 QUEUE를 지정해야 합니다. *queue_name* 은 큐의 이름이며 반드시 함께 지정해야 합니다.  
   
 ## <a name="remarks"></a>설명  
  트랜잭션 내에서 이벤트 알림이 발생하고 같은 트랜잭션 내에서 삭제되는 경우 이벤트 알림 인스턴스가 전달된 다음 이벤트 알림이 삭제됩니다.  

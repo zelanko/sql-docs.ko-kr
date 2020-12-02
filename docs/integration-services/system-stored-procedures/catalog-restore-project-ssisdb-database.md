@@ -12,11 +12,11 @@ ms.assetid: 8adee525-579b-4d2f-b807-e2ecc07fb2e9
 author: chugugrace
 ms.author: chugu
 ms.openlocfilehash: 6ad50f86bc3c4f6f52262df591c1504139590cab
-ms.sourcegitcommit: e700497f962e4c2274df16d9e651059b42ff1a10
+ms.sourcegitcommit: 192f6a99e19e66f0f817fdb1977f564b2aaa133b
 ms.translationtype: HT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 08/17/2020
-ms.locfileid: "88422107"
+ms.lasthandoff: 11/25/2020
+ms.locfileid: "96129739"
 ---
 # <a name="catalogrestore_project-ssisdb-database"></a>catalog.restore_project(SSISDB 데이터베이스)
 
@@ -38,21 +38,21 @@ catalog.restore_project [ @folder_name = ] folder_name
   
 ## <a name="arguments"></a>인수  
  [ @folder_name = ] *folder_name*  
- 프로젝트가 있는 폴더의 이름입니다. *folder_name*은 **nvarchar(128)** 입니다.  
+ 프로젝트가 있는 폴더의 이름입니다. *folder_name* 은 **nvarchar(128)** 입니다.  
   
  [ @project _name = ] *project_name*  
- 프로젝트의 이름입니다. *project_name*은 **nvarchar(128)** 입니다.  
+ 프로젝트의 이름입니다. *project_name* 은 **nvarchar(128)** 입니다.  
   
  [ @object_version_lsn = ] *object_version_lsn*  
- 프로젝트의 버전입니다. *object_version_lsn*은 **bigint**입니다.  
+ 프로젝트의 버전입니다. *object_version_lsn* 은 **bigint** 입니다.  
   
 ## <a name="return-code-value"></a>반환 코드 값  
  0(성공)  
   
 ## <a name="result-sets"></a>결과 집합  
- *project_name*이 있는 경우 프로젝트 상세 정보가 **varbinary(MAX)** 로 결과 집합에 포함됩니다.  
+ *project_name* 이 있는 경우 프로젝트 상세 정보가 **varbinary(MAX)** 로 결과 집합에 포함됩니다.  
   
- 프로젝트를 지정된 폴더로 복원할 수 없는 경우 **NO RESULT SET**이 반환됩니다.  
+ 프로젝트를 지정된 폴더로 복원할 수 없는 경우 **NO RESULT SET** 이 반환됩니다.  
   
 ## <a name="permissions"></a>사용 권한  
  이 저장 프로시저를 실행하려면 다음 권한 중 하나가 필요합니다.  

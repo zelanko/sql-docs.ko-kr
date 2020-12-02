@@ -9,14 +9,14 @@ ms.reviewer: ''
 ms.technology: backup-restore
 ms.topic: conceptual
 ms.assetid: e29061d3-c2ab-4d98-b9be-8e90a11d17fe
-author: MikeRayMSFT
-ms.author: mikeray
-ms.openlocfilehash: fbf54c1e384357a423ee9c2c1f086edbc5c947f9
-ms.sourcegitcommit: 04cf7905fa32e0a9a44575a6f9641d9a2e5ac0f8
+author: cawrites
+ms.author: chadam
+ms.openlocfilehash: b02f55100110952bce5785130ba330b5c96bce81
+ms.sourcegitcommit: 5a1ed81749800c33059dac91b0e18bd8bb3081b1
 ms.translationtype: HT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 10/07/2020
-ms.locfileid: "91809259"
+ms.lasthandoff: 11/23/2020
+ms.locfileid: "96130443"
 ---
 # <a name="create-an-encrypted-backup"></a>암호화된 백업 만들기
  [!INCLUDE [SQL Server](../../includes/applies-to-version/sqlserver.md)]
@@ -31,7 +31,7 @@ ms.locfileid: "91809259"
   
  다음 단계를 사용하여 로컬 디스크에 데이터베이스의 암호화된 백업을 만들 수 있습니다. 이 예에서는 MyTestDB라는 사용자 데이터베이스를 사용합니다.  
   
-1.  **master 데이터베이스의 데이터베이스 마스터 키 만들기:** 데이터베이스에 저장되는 마스터 키의 복사본을 암호화하기 위한 암호를 선택합니다. 데이터베이스 엔진에 연결하고 새 쿼리 창을 시작한 다음 아래의 예를 복사하여 붙여 넣고 **실행**을 클릭합니다.  
+1.  **master 데이터베이스의 데이터베이스 마스터 키 만들기:** 데이터베이스에 저장되는 마스터 키의 복사본을 암호화하기 위한 암호를 선택합니다. 데이터베이스 엔진에 연결하고 새 쿼리 창을 시작한 다음 아래의 예를 복사하여 붙여 넣고 **실행** 을 클릭합니다.  
   
     ```  
     -- Creates a database master key.   
@@ -43,7 +43,7 @@ ms.locfileid: "91809259"
   
     ```  
   
-2.  **백업 인증서 만들기:** master 데이터베이스에 백업 인증서를 만듭니다. 다음 예를 복사하여 쿼리 창에 붙여 넣고 **실행**을 클릭합니다.  
+2.  **백업 인증서 만들기:** master 데이터베이스에 백업 인증서를 만듭니다. 다음 예를 복사하여 쿼리 창에 붙여 넣고 **실행** 을 클릭합니다.  
   
     ```  
     Use Master  
@@ -54,7 +54,7 @@ ms.locfileid: "91809259"
   
     ```  
   
-3.  **데이터베이스 백업:** 사용할 암호화 알고리즘과 인증서를 지정합니다. 다음 예를 복사하여 쿼리 창에 붙여 넣고 **실행**을 클릭합니다.  
+3.  **데이터베이스 백업:** 사용할 암호화 알고리즘과 인증서를 지정합니다. 다음 예를 복사하여 쿼리 창에 붙여 넣고 **실행** 을 클릭합니다.  
 
     ```
     BACKUP DATABASE [MyTestDB]  
@@ -81,7 +81,7 @@ ms.locfileid: "91809259"
   
 -   master 데이터베이스의 데이터베이스 마스터 키 및 SQL Server 인스턴스에 대한 인증서 또는 비대칭 키. 암호화 요구 사항과 사용 권한에 대한 자세한 내용은 [Backup Encryption](../../relational-databases/backup-restore/backup-encryption.md)를 참조하십시오.  
   
-1.  **SQL Server 자격 증명 만들기:** SQL Server 자격 증명을 만들려면 데이터베이스 엔진에 연결하고 새 쿼리 창을 연 다음 아래의 예를 복사하여 붙여 넣고 **실행**을 클릭합니다.  
+1.  **SQL Server 자격 증명 만들기:** SQL Server 자격 증명을 만들려면 데이터베이스 엔진에 연결하고 새 쿼리 창을 연 다음 아래의 예를 복사하여 붙여 넣고 **실행** 을 클릭합니다.  
   
     ```  
     CREATE CREDENTIAL mycredential   
@@ -89,7 +89,7 @@ ms.locfileid: "91809259"
     , SECRET = '<storage account access key>' - this should be either the Primary or Secondary Access Key for the storage account  
     ```  
   
-2.  **데이터베이스 마스터 키 만들기:** 데이터베이스에 저장되는 마스터 키의 복사본을 암호화하기 위한 암호를 선택합니다. 데이터베이스 엔진에 연결하고 새 쿼리 창을 시작한 다음 아래의 예를 복사하여 붙여 넣고 **실행**을 클릭합니다.  
+2.  **데이터베이스 마스터 키 만들기:** 데이터베이스에 저장되는 마스터 키의 복사본을 암호화하기 위한 암호를 선택합니다. 데이터베이스 엔진에 연결하고 새 쿼리 창을 시작한 다음 아래의 예를 복사하여 붙여 넣고 **실행** 을 클릭합니다.  
   
     ```  
     -- Creates a database master key.  
@@ -101,7 +101,7 @@ ms.locfileid: "91809259"
   
     ```  
   
-3.  **백업 인증서 만들기:** master 데이터베이스에 백업 인증서를 만듭니다. 다음 예를 복사하여 쿼리 창에 붙여 넣고 **실행**을 클릭합니다.  
+3.  **백업 인증서 만들기:** master 데이터베이스에 백업 인증서를 만듭니다. 다음 예를 복사하여 쿼리 창에 붙여 넣고 **실행** 을 클릭합니다.  
   
     ```  
     USE Master;  
@@ -112,7 +112,7 @@ ms.locfileid: "91809259"
   
     ```  
   
-4.  **데이터베이스 백업:** 사용할 암호화 알고리즘과 인증서를 지정합니다. 다음 예를 복사하여 쿼리 창에 붙여 넣고 **실행**을 클릭합니다.  
+4.  **데이터베이스 백업:** 사용할 암호화 알고리즘과 인증서를 지정합니다. 다음 예를 복사하여 쿼리 창에 붙여 넣고 **실행** 을 클릭합니다.  
   
     ```  
     BACKUP DATABASE [MyTestDB]  

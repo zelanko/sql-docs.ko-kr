@@ -12,14 +12,14 @@ helpviewer_keywords:
 - removing log shipping
 - deleting log shipping
 ms.assetid: 859373db-c744-4a4b-8479-45163f61e8cb
-author: MashaMSFT
-ms.author: mathoma
-ms.openlocfilehash: a62ae437349e5a00ae119b4cc9130d1b8882752f
-ms.sourcegitcommit: da88320c474c1c9124574f90d549c50ee3387b4c
+author: cawrites
+ms.author: chadam
+ms.openlocfilehash: 0deafc65d31fe6be3bd211321fef18a4123f0e52
+ms.sourcegitcommit: 5a1ed81749800c33059dac91b0e18bd8bb3081b1
 ms.translationtype: HT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 07/01/2020
-ms.locfileid: "85695811"
+ms.lasthandoff: 11/23/2020
+ms.locfileid: "96130744"
 ---
 # <a name="remove-log-shipping-sql-server"></a>로그 전달 제거(SQL Server)
  [!INCLUDE [SQL Server](../../includes/applies-to-version/sqlserver.md)]
@@ -52,9 +52,9 @@ ms.locfileid: "85695811"
   
 1.  현재 로그 전달 주 서버인 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 의 인스턴스에 연결하고 해당 인스턴스를 확장합니다.  
   
-2.  **데이터베이스**를 확장하고 로그 전달 주 데이터베이스를 마우스 오른쪽 단추로 클릭한 다음 **속성**을 클릭합니다.  
+2.  **데이터베이스** 를 확장하고 로그 전달 주 데이터베이스를 마우스 오른쪽 단추로 클릭한 다음 **속성** 을 클릭합니다.  
   
-3.  **페이지 선택**에서 **트랜잭션 로그 전달**을 클릭합니다.  
+3.  **페이지 선택** 에서 **트랜잭션 로그 전달** 을 클릭합니다.  
   
 4.  **이 데이터베이스를 로그 전달 구성의 주 데이터베이스로 사용** 확인란의 선택을 취소합니다.  
   

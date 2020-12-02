@@ -20,11 +20,11 @@ ms.assetid: d2d3af25-8877-46ba-95d9-1844961d97ee
 author: markingmyname
 ms.author: maghan
 ms.openlocfilehash: 2bb618bfc53e481e2ea7d86749aaf093d3ec2542
-ms.sourcegitcommit: 197a6ffb643f93592edf9e90b04810a18be61133
+ms.sourcegitcommit: 192f6a99e19e66f0f817fdb1977f564b2aaa133b
 ms.translationtype: HT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 09/26/2020
-ms.locfileid: "91380048"
+ms.lasthandoff: 11/25/2020
+ms.locfileid: "96131302"
 ---
 # <a name="drop-default-transact-sql"></a>DROP DEFAULT(Transact-SQL)
 [!INCLUDE [SQL Server](../../includes/applies-to-version/sqlserver.md)]
@@ -54,10 +54,10 @@ DROP DEFAULT [ IF EXISTS ] { [ schema_name . ] default_name } [ ,...n ] [ ; ]
  기본값이 속한 스키마의 이름입니다.  
   
  *default_name*  
- 기존 기본값의 이름입니다. 존재하는 기본값의 목록을 보려면 **sp_help**를 실행합니다. 기본값은 [식별자](../../relational-databases/databases/database-identifiers.md)에 대한 규칙을 따라야 합니다. 기본 스키마 이름을 지정하는 것은 선택 사항입니다.  
+ 기존 기본값의 이름입니다. 존재하는 기본값의 목록을 보려면 **sp_help** 를 실행합니다. 기본값은 [식별자](../../relational-databases/databases/database-identifiers.md)에 대한 규칙을 따라야 합니다. 기본 스키마 이름을 지정하는 것은 선택 사항입니다.  
   
 ## <a name="remarks"></a>설명  
- 열 또는 별칭 데이터 형식에 기본값이 바인딩된 경우 기본값을 삭제하기 전에 **sp_unbindefault**를 실행하여 기본값의 바인딩을 해제합니다.  
+ 열 또는 별칭 데이터 형식에 기본값이 바인딩된 경우 기본값을 삭제하기 전에 **sp_unbindefault** 를 실행하여 기본값의 바인딩을 해제합니다.  
   
  Null 값이 허용되는 열에서 기본값을 삭제한 후 행을 추가하고 값을 명시적으로 제공하지 않으면 해당 위치에 NULL이 삽입됩니다. NOT NULL 열에서 기본값을 삭제한 후 행을 추가하고 값을 명시적으로 제공하지 않으면 오류 메시지가 반환됩니다. 이러한 행은 나중에 일반적인 INSERT 문을 실행하여 추가할 수 있습니다.  
   

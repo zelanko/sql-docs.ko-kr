@@ -11,14 +11,14 @@ ms.topic: conceptual
 f1_keywords:
 - sql13.swb.backupdatabase.general.f1
 ms.assetid: 5c344dfd-1ad3-41cc-98cd-732973b4a162
-author: MikeRayMSFT
-ms.author: mikeray
-ms.openlocfilehash: d47d3f31533dc7cabd4195ad585068474fe446eb
-ms.sourcegitcommit: da88320c474c1c9124574f90d549c50ee3387b4c
+author: cawrites
+ms.author: chadam
+ms.openlocfilehash: dd1dd775aff0865b2ce0f2f833ef78b7c5eb4b5e
+ms.sourcegitcommit: 5a1ed81749800c33059dac91b0e18bd8bb3081b1
 ms.translationtype: HT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 07/01/2020
-ms.locfileid: "85719977"
+ms.lasthandoff: 11/23/2020
+ms.locfileid: "96130573"
 ---
 # <a name="back-up-database-general-page"></a>데이터베이스 백업(일반 페이지)
  [!INCLUDE [SQL Server](../../includes/applies-to-version/sqlserver.md)]
@@ -63,7 +63,7 @@ ms.locfileid: "85719977"
 |트랜잭션 로그|트랜잭션 로그|단순 복구 모델에는 트랜잭션 로그 백업을 사용할 수 없습니다.|  
   
  **복사 전용 백업**  
- 복사 전용 백업을 만들려면 선택합니다. *복사 전용 백업*은 기존 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 백업 시퀀스와 독립적인 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 백업입니다. 자세한 내용은 [복사 전용 백업&#40;SQL Server&#41;](../../relational-databases/backup-restore/copy-only-backups-sql-server.md)를 참조하세요.  
+ 복사 전용 백업을 만들려면 선택합니다. *복사 전용 백업* 은 기존 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 백업 시퀀스와 독립적인 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 백업입니다. 자세한 내용은 [복사 전용 백업&#40;SQL Server&#41;](../../relational-databases/backup-restore/copy-only-backups-sql-server.md)를 참조하세요.  
   
 > [!NOTE]  
 >  **차등** 옵션을 선택하는 경우 복사 전용 백업을 만들 수 없습니다.  
@@ -76,7 +76,7 @@ ms.locfileid: "85719977"
 |||  
 |-|-|  
 |**Database**|전체 데이터베이스를 백업할지를 지정합니다.|  
-|**파일 및 파일 그룹**|선택한 파일 및/또는 파일 그룹을 백업할지를 지정합니다.<br /><br /> 이 옵션을 선택하면 **파일 및 파일 그룹 선택** 대화 상자가 열립니다. 백업하려는 파일 그룹이나 파일을 선택하고 **확인**을 클릭하면 **파일 그룹 및 파일** 상자에 선택한 내용이 나타납니다.|  
+|**파일 및 파일 그룹**|선택한 파일 및/또는 파일 그룹을 백업할지를 지정합니다.<br /><br /> 이 옵션을 선택하면 **파일 및 파일 그룹 선택** 대화 상자가 열립니다. 백업하려는 파일 그룹이나 파일을 선택하고 **확인** 을 클릭하면 **파일 그룹 및 파일** 상자에 선택한 내용이 나타납니다.|  
   
 ### <a name="destination"></a>대상  
  **대상** 패널의 옵션을 사용하면 백업 작업에 대한 백업 디바이스 유형을 지정하고 기존 논리적 또는 물리적 백업 디바이스를 찾을 수 있습니다.  
@@ -106,7 +106,7 @@ ms.locfileid: "85719977"
  **콘텐츠**  
 선택한 디바이스가 있으면 미디어 내용을 표시합니다.  단추는 **URL** 이 지정된 경우 함수를 수행하지 않습니다. 
    
-**백업 대상 선택** 대화 상자: **추가** 를 선택하면 **백업 대상 선택**대화 상자가 나타납니다.   아래 표시된 옵션 집합은 선택한 대상 유형에 따라 달라집니다. 
+**백업 대상 선택** 대화 상자: **추가** 를 선택하면 **백업 대상 선택** 대화 상자가 나타납니다.   아래 표시된 옵션 집합은 선택한 대상 유형에 따라 달라집니다. 
 
 **디스크** 또는 **테이프** 를 백업 대상으로 선택하면 다음 옵션이 표시됩니다.  
 

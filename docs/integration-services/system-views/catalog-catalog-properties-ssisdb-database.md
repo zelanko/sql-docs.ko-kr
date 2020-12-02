@@ -12,11 +12,11 @@ ms.assetid: e604a382-95c8-4764-b268-742eb5c6d4cf
 author: chugugrace
 ms.author: chugu
 ms.openlocfilehash: 7aa744bd7dd3d0330dc3e996b2af90d500be9d55
-ms.sourcegitcommit: e700497f962e4c2274df16d9e651059b42ff1a10
+ms.sourcegitcommit: 192f6a99e19e66f0f817fdb1977f564b2aaa133b
 ms.translationtype: HT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 08/17/2020
-ms.locfileid: "88495320"
+ms.lasthandoff: 11/25/2020
+ms.locfileid: "96129501"
 ---
 # <a name="catalogcatalog_properties-ssisdb-database"></a>catalog.catalog_properties(SSISDB 데이터베이스)
 
@@ -42,14 +42,14 @@ ms.locfileid: "88495320"
 |**IS_SCALEOUT_ENABLED**|값이 `True`이면 SSIS Scale Out 기능을 사용하도록 설정됩니다. Scale Out을 사용하도록 설정하지 않은 경우 이 속성은 보기에 나타나지 않을 수 있습니다.|
 |**MAX_PROJECT_VERSIONS**|단일 프로젝트에 대해 유지되는 새 프로젝트 버전 수입니다. 버전 정리가 설정된 경우 이 개수를 초과하는 이전 버전은 모두 삭제됩니다.|  
 |**OPERATION_CLEANUP_ENABLED**|값이 `TRUE`이면 **RETENTION_WINDOW**(일)보다 오래된 작업 정보 및 작업 메시지가 카탈로그에서 삭제되고, 값이 `FALSE`이면 모든 작업 정보 및 작업 메시지가 카탈로그에 저장됩니다. 참고: [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 작업은 작업 정리를 수행합니다.|  
-|**RETENTION_WINDOW**|작업 정보 및 작업 메시지가 카탈로그에 저장되는 일 수 입니다. 값이 `-1`이면 보관 기간이 무한합니다. 참고: 정리를 실행하지 않으려면 **OPERATION_CLEANUP_ENABLED**를 **FALSE**로 설정합니다.|
+|**RETENTION_WINDOW**|작업 정보 및 작업 메시지가 카탈로그에 저장되는 일 수 입니다. 값이 `-1`이면 보관 기간이 무한합니다. 참고: 정리를 실행하지 않으려면 **OPERATION_CLEANUP_ENABLED** 를 **FALSE** 로 설정합니다.|
 |**SCHEMA_BUILD**|SSISDB 카탈로그 데이터베이스 스키마의 빌드 번호입니다. 이 숫자는 SSISDB 카탈로그를 만들거나 업그레이드할 때마다 변경됩니다.|
 |**SCHEMA_VERSION**|SSISDB 카탈로그 데이터베이스 스키마의 주 버전 번호입니다. 이 숫자는 SSISDB 카탈로그를 만들거나 주 버전을 업그레이드 할 때마다 변경됩니다.|
 |**VALIDATION_TIMEOUT**|이 속성에 지정된 시간(초) 내에 완료되지 않은 유효성 검사는 중지됩니다.|  
 |**SERVER_CUSTOMIZED_LOGGING_LEVEL**|[!INCLUDE[ssISnoversion](../../includes/ssisnoversion-md.md)] 서버에 대한 기본 사용자 지정된 로깅 수준입니다. 사용자 지정된 로깅 수준을 만들지 않은 경우 이 속성은 보기에 나타나지 않을 수 있습니다.|
 |**SERVER_LOGGING_LEVEL**|[!INCLUDE[ssISnoversion](../../includes/ssisnoversion-md.md)] 서버에 대한 기본 로깅 수준입니다.|
-|**SERVER_OPERATION_ENCRYPTION_LEVEL**|값이 1(`PER_EXECUTION`)인 경우, 중요한 실행 매개 변수 및 실행 로그를 보호하는 데 사용되는 인증서 및 대칭 키가 각 *실행*에 대해 만들어집니다. 값이 2(`PER_PROJECT`)이 경우, 각 *프로젝트*에 대해 인증서 및 대칭 키가 한 번 만들어집니다. 이 속성에 대한 자세한 내용은 SSIS 저장 프로시저 [catalog.cleanup_server_log](../system-stored-procedures/catalog-cleanup-server-log.md#remarks)에 대한 주의를 참조하세요.|
-|**VERSION_CLEANUP_ENABLED**|값이 `TRUE`이면 **MAX_PROJECT_VERSIONS**에 해당하는 개수의 프로젝트 버전만 카탈로그에 저장되고 다른 모든 프로젝트 버전은 삭제됩니다. 값이 **FALSE**이면 모든 프로젝트 버전이 카탈로그에 저장됩니다. 참고: [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 작업은 작업 정리를 수행합니다.|
+|**SERVER_OPERATION_ENCRYPTION_LEVEL**|값이 1(`PER_EXECUTION`)인 경우, 중요한 실행 매개 변수 및 실행 로그를 보호하는 데 사용되는 인증서 및 대칭 키가 각 *실행* 에 대해 만들어집니다. 값이 2(`PER_PROJECT`)이 경우, 각 *프로젝트* 에 대해 인증서 및 대칭 키가 한 번 만들어집니다. 이 속성에 대한 자세한 내용은 SSIS 저장 프로시저 [catalog.cleanup_server_log](../system-stored-procedures/catalog-cleanup-server-log.md#remarks)에 대한 주의를 참조하세요.|
+|**VERSION_CLEANUP_ENABLED**|값이 `TRUE`이면 **MAX_PROJECT_VERSIONS** 에 해당하는 개수의 프로젝트 버전만 카탈로그에 저장되고 다른 모든 프로젝트 버전은 삭제됩니다. 값이 **FALSE** 이면 모든 프로젝트 버전이 카탈로그에 저장됩니다. 참고: [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 작업은 작업 정리를 수행합니다.|
 |||
   
 ## <a name="permissions"></a>사용 권한  

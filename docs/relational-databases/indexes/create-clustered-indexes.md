@@ -19,11 +19,11 @@ author: MikeRayMSFT
 ms.author: mikeray
 monikerRange: =azuresqldb-current||>=sql-server-2016||=sqlallproducts-allversions||>=sql-server-linux-2017||=azuresqldb-mi-current
 ms.openlocfilehash: 5a343bbd9686856d6b8bdb27808673178336ee84
-ms.sourcegitcommit: e700497f962e4c2274df16d9e651059b42ff1a10
+ms.sourcegitcommit: 192f6a99e19e66f0f817fdb1977f564b2aaa133b
 ms.translationtype: HT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 08/17/2020
-ms.locfileid: "88408499"
+ms.lasthandoff: 11/25/2020
+ms.locfileid: "96130262"
 ---
 # <a name="create-clustered-indexes"></a>클러스터형 인덱스 만들기
 [!INCLUDE [SQL Server Azure SQL Database](../../includes/applies-to-version/sql-asdb.md)]
@@ -84,7 +84,7 @@ ms.locfileid: "88408499"
   
 1.  개체 탐색기에서 클러스터형 인덱스를 만들 테이블을 확장합니다.  
   
-2.  **인덱스** 폴더를 마우스 오른쪽 단추로 클릭하고 **새 인덱스**를 가리킨 다음, **클러스터형 인덱스...** 를 선택합니다.  
+2.  **인덱스** 폴더를 마우스 오른쪽 단추로 클릭하고 **새 인덱스** 를 가리킨 다음, **클러스터형 인덱스...** 를 선택합니다.  
   
 3.  **새 인덱스** 대화 상자의 **일반** 페이지에서 **인덱스 이름** 상자에 새 인덱스의 이름을 입력합니다.  
   
@@ -92,9 +92,9 @@ ms.locfileid: "88408499"
   
 5.  _table\_name_**에서 열 선택** 대화 상자에서 클러스터형 인덱스에 추가할 테이블 열의 확인란을 선택합니다.  
   
-6.  **확인**을 클릭합니다.  
+6.  **확인** 을 클릭합니다.  
   
-7.  **새 인덱스** 대화 상자에서 **확인**을 클릭합니다.  
+7.  **새 인덱스** 대화 상자에서 **확인** 을 클릭합니다.  
   
 #### <a name="to-create-a-clustered-index-by-using-the-table-designer"></a>테이블 디자이너를 사용하여 클러스터형 인덱스를 만들려면  
   
@@ -104,29 +104,29 @@ ms.locfileid: "88408499"
   
 3.  늘 하던 방식대로 새 테이블을 만듭니다. 자세한 내용은 [테이블 만들기&#40;데이터베이스 엔진&#41;](../../relational-databases/tables/create-tables-database-engine.md)를 참조하세요.  
   
-4.  위에서 만든 새 테이블을 마우스 오른쪽 단추로 클릭하고 **디자인**을 클릭합니다.  
+4.  위에서 만든 새 테이블을 마우스 오른쪽 단추로 클릭하고 **디자인** 을 클릭합니다.  
   
-5.  **테이블 디자이너** 메뉴에서 **인덱스/키**를 클릭합니다.  
+5.  **테이블 디자이너** 메뉴에서 **인덱스/키** 를 클릭합니다.  
   
-6.  **인덱스/키** 대화 상자에서 **추가**를 클릭합니다.  
+6.  **인덱스/키** 대화 상자에서 **추가** 를 클릭합니다.  
   
 7.  **선택한 기본/고유 키 또는 인덱스** 입력란에서 새 인덱스를 선택합니다.  
   
-8.  표에서 **CLUSTERED로 만들기**를 선택하고 속성 오른쪽에 있는 드롭다운 목록에서 **예** 를 선택합니다.  
+8.  표에서 **CLUSTERED로 만들기** 를 선택하고 속성 오른쪽에 있는 드롭다운 목록에서 **예** 를 선택합니다.  
   
-9. **닫기**를 클릭합니다.  
+9. **닫기** 를 클릭합니다.  
   
-10. **파일** 메뉴에서 _table\_name_**저장**을 클릭합니다.  
+10. **파일** 메뉴에서 _table\_name_**저장** 을 클릭합니다.  
   
 ##  <a name="using-transact-sql"></a><a name="TsqlProcedure"></a> Transact-SQL 사용  
   
 #### <a name="to-create-a-clustered-index"></a>클러스터형 인덱스를 만들려면  
   
-1.  **개체 탐색기**에서 [!INCLUDE[ssDE](../../includes/ssde-md.md)]인스턴스에 연결합니다.  
+1.  **개체 탐색기** 에서 [!INCLUDE[ssDE](../../includes/ssde-md.md)]인스턴스에 연결합니다.  
   
-2.  표준 도구 모음에서 **새 쿼리**를 클릭합니다.  
+2.  표준 도구 모음에서 **새 쿼리** 를 클릭합니다.  
   
-3.  다음 예를 복사하여 쿼리 창에 붙여 넣고 **실행**을 클릭합니다.  
+3.  다음 예를 복사하여 쿼리 창에 붙여 넣고 **실행** 을 클릭합니다.  
   
     ```  
     USE AdventureWorks2012;  

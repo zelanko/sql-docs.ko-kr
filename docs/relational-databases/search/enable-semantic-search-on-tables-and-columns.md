@@ -14,11 +14,11 @@ author: pmasl
 ms.author: pelopes
 ms.reviewer: mikeray
 ms.openlocfilehash: d02424e5e33823956977c8b32d1ab4e996df5526
-ms.sourcegitcommit: 4d370399f6f142e25075b3714e5c2ce056b1bfd0
+ms.sourcegitcommit: 192f6a99e19e66f0f817fdb1977f564b2aaa133b
 ms.translationtype: HT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 10/09/2020
-ms.locfileid: "91867464"
+ms.lasthandoff: 11/25/2020
+ms.locfileid: "96130933"
 ---
 # <a name="enable-semantic-search-on-tables-and-columns"></a>테이블 및 열에 대한 의미 체계 검색 사용
  [!INCLUDE [SQL Server](../../includes/applies-to-version/sqlserver.md)]
@@ -57,11 +57,11 @@ ms.locfileid: "91867464"
   
  ### <a name="create-a-new-semantic-index-by-using-transact-sql"></a>Transact-SQL을 사용하여 새 의미 체계 인덱스 만들기  
  
- **CREATE FULLTEXT INDEX** 문을 호출하고 의미 체계 인덱스를 만들 각 열에 대해 **STATISTICAL_SEMANTICS**를 지정합니다. 이 문의 모든 옵션에 대한 자세한 내용은 [CREATE FULLTEXT INDEX&#40;Transact-SQL&#41;](../../t-sql/statements/create-fulltext-index-transact-sql.md)를 참조하세요.  
+ **CREATE FULLTEXT INDEX** 문을 호출하고 의미 체계 인덱스를 만들 각 열에 대해 **STATISTICAL_SEMANTICS** 를 지정합니다. 이 문의 모든 옵션에 대한 자세한 내용은 [CREATE FULLTEXT INDEX&#40;Transact-SQL&#41;](../../t-sql/statements/create-fulltext-index-transact-sql.md)를 참조하세요.  
   
  **예제 1: 고유 인덱스, 전체 텍스트 인덱스 및 의미 체계 인덱스 만들기**  
   
- 다음 예에서는 기본 전체 텍스트 카탈로그 **ft**를 만들고, AdventureWorks2012 예제 데이터베이스의 **HumanResources.JobCandidate** 테이블에 있는 **JobCandidateID** 열에 대해 고유 인덱스를 만듭니다. 이 고유 인덱스는 전체 텍스트 인덱스에 대한 키 열로 필요합니다. 그런 다음 **Resume** 열에 대한 전체 텍스트 인덱스와 의미 체계 인덱스를 만듭니다.  
+ 다음 예에서는 기본 전체 텍스트 카탈로그 **ft** 를 만들고, AdventureWorks2012 예제 데이터베이스의 **HumanResources.JobCandidate** 테이블에 있는 **JobCandidateID** 열에 대해 고유 인덱스를 만듭니다. 이 고유 인덱스는 전체 텍스트 인덱스에 대한 키 열로 필요합니다. 그런 다음 **Resume** 열에 대한 전체 텍스트 인덱스와 의미 체계 인덱스를 만듭니다.  
   
 ```sql  
 CREATE FULLTEXT CATALOG ft AS DEFAULT  
@@ -83,7 +83,7 @@ GO
   
  **예제 2: 여러 열에 대한 전체 텍스트 및 의미 체계 인덱스 만들고 나중에 인덱스 채우기 수행**  
   
- 다음 예에서는 AdventureWorks2012 예제 데이터베이스에 전체 텍스트 카탈로그인 **documents_catalog**를 만듭니다. 그런 다음 이 새 카탈로그를 사용하는 전체 텍스트 인덱스를 만듭니다. 전체 텍스트 인덱스는 **Production.Document**테이블의 **Title**, **DocumentSummary** 및 **Document** 열에 만들어지는 반면 의미 체계 인덱스는 **Document** 열에만 만들어집니다. 이 전체 텍스트 인덱스는 새로 만든 전체 텍스트 카탈로그와 기존 고유 키 인덱스 **PK_Document_DocumentID**를 사용합니다. 권장한 대로 이 인덱스 키는 정수 열 **DocumentID**에 만들어집니다. 이 예에서는 열의 데이터 언어인 영어의 LCID 1033을 지정합니다.  
+ 다음 예에서는 AdventureWorks2012 예제 데이터베이스에 전체 텍스트 카탈로그인 **documents_catalog** 를 만듭니다. 그런 다음 이 새 카탈로그를 사용하는 전체 텍스트 인덱스를 만듭니다. 전체 텍스트 인덱스는 **Production.Document** 테이블의 **Title**, **DocumentSummary** 및 **Document** 열에 만들어지는 반면 의미 체계 인덱스는 **Document** 열에만 만들어집니다. 이 전체 텍스트 인덱스는 새로 만든 전체 텍스트 카탈로그와 기존 고유 키 인덱스 **PK_Document_DocumentID** 를 사용합니다. 권장한 대로 이 인덱스 키는 정수 열 **DocumentID** 에 만들어집니다. 이 예에서는 열의 데이터 언어인 영어의 LCID 1033을 지정합니다.  
   
  또한 이 예에서는 채우기 작업을 수행하지 않고 변경 내용 추적이 해제되도록 지정합니다. 나중에 사용률이 낮은 시간에 **ALTER FULLTEXT INDEX** 문을 사용하여 새 인덱스에 대해 전체 채우기를 시작하고 변경 내용 자동 추적을 사용하도록 설정합니다.  
   
@@ -124,7 +124,7 @@ GO
 ### <a name="add-a-semantic-index-by-using-transact-sql"></a>Transact-SQL을 사용하여 의미 체계 인덱스 추가  
  의미 체계 인덱스를 추가할 각 열에 대해 아래에서 설명하는 옵션을 사용하여 **ALTER FULLTEXT INDEX** 문을 호출합니다. 이 문의 모든 옵션에 대한 자세한 내용은 [ALTER FULLTEXT INDEX&#40;Transact-SQL&#41;](../../t-sql/statements/alter-fulltext-index-transact-sql.md)를 참조하세요.  
   
- 별도로 지정하지 않는 한 **ALTER**를 호출하면 전체 텍스트 인덱스와 의미 체계 인덱스가 모두 다시 채워집니다.  
+ 별도로 지정하지 않는 한 **ALTER** 를 호출하면 전체 텍스트 인덱스와 의미 체계 인덱스가 모두 다시 채워집니다.  
   
 -   열에 전체 텍스트 인덱싱만 추가하려면 **ADD** 구문을 사용합니다.  
   
@@ -237,7 +237,7 @@ GO
     GO  
     ```  
   
--   [!INCLUDE[ssManStudio](../../includes/ssmanstudio-md.md)]의 개체 탐색기에서 열을 마우스 오른쪽 단추로 클릭하고 **속성**을 선택합니다. **열 속성** 대화 상자의 **일반** 페이지에서 **통계 의미 체계** 속성 값을 확인합니다.  
+-   [!INCLUDE[ssManStudio](../../includes/ssmanstudio-md.md)]의 개체 탐색기에서 열을 마우스 오른쪽 단추로 클릭하고 **속성** 을 선택합니다. **열 속성** 대화 상자의 **일반** 페이지에서 **통계 의미 체계** 속성 값을 확인합니다.  
   
      값이 True이면 지정된 열에 전체 텍스트 인덱싱과 의미 체계 인덱싱이 사용하도록 설정되어 있음을 나타냅니다.  
   

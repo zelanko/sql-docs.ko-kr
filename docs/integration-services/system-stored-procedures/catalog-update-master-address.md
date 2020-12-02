@@ -12,11 +12,11 @@ author: haoqian
 ms.author: haoqian
 monikerRange: '>= sql-server-2017 || = sqlallproducts-allversions'
 ms.openlocfilehash: 80b5e28a0d552955154849d2f593fc32be79f656
-ms.sourcegitcommit: e700497f962e4c2274df16d9e651059b42ff1a10
+ms.sourcegitcommit: 192f6a99e19e66f0f817fdb1977f564b2aaa133b
 ms.translationtype: HT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 08/17/2020
-ms.locfileid: "88495373"
+ms.lasthandoff: 11/25/2020
+ms.locfileid: "96129520"
 ---
 # <a name="catalogupdate_master_address-ssisdb-database"></a>catalog.update_master_address(SSISDB 데이터베이스)
 
@@ -35,7 +35,7 @@ catalog.update_master_address [ @MasterAddress = ] masterAddress
 
 ## <a name="arguments"></a>인수
 [ @MasterAddress = ] *masterAddress*  
-스케일 아웃 마스터 엔드포인트입니다. *masterAddress*는 **nvarchar**입니다.  
+스케일 아웃 마스터 엔드포인트입니다. *masterAddress* 는 **nvarchar** 입니다.  
 
  ## <a name="return-code-value"></a>반환 코드 값  
  0(성공)  

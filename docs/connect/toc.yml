@@ -73,6 +73,24 @@
           items:
             - name: SQL Server 연결 풀링(ADO.NET)
               href: ../connect/ado-net/sql-server-connection-pooling.md
+        - name: 명령 및 매개 변수
+          href: ../connect/ado-net/commands-parameters.md
+          items:
+            - name: 명령 실행
+              href: ../connect/ado-net/execute-command.md
+            - name: 매개 변수 구성
+              href: ../connect/ado-net/configure-parameters.md
+            - name: CommandBuilder를 사용하여 명령 생성
+              href: ../connect/ado-net/generate-commands-with-commandbuilders.md
+            - name: 데이터베이스에서 단일 값 가져오기
+              href: ../connect/ado-net/obtain-single-value-from-database.md
+            - name: 명령을 사용하여 데이터 수정
+              href: ../connect/ado-net/use-commands-to-modify-data.md
+              items:
+                - name: 데이터 원본에서 데이터 업데이트
+                  href: ../connect/ado-net/update-data-inside-data-source.md
+                - name: 카탈로그 작업 수행
+                  href: ../connect/ado-net/perform-catalog-operations.md
     - name: SQL Server 및 ADO.NET
       href: ../connect/ado-net/sql/index.md
       items:

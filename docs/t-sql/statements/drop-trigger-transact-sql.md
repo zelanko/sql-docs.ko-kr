@@ -26,11 +26,11 @@ ms.assetid: 092d0d71-9f1e-4e38-a1c4-2487adfa5b4e
 author: markingmyname
 ms.author: maghan
 ms.openlocfilehash: d800de4adea71523c3ae05bed53c97697c718d70
-ms.sourcegitcommit: 197a6ffb643f93592edf9e90b04810a18be61133
+ms.sourcegitcommit: 192f6a99e19e66f0f817fdb1977f564b2aaa133b
 ms.translationtype: HT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 09/26/2020
-ms.locfileid: "91379649"
+ms.lasthandoff: 11/25/2020
+ms.locfileid: "96131077"
 ---
 # <a name="drop-trigger-transact-sql"></a>DROP TRIGGER(Transact-SQL)
 [!INCLUDE [SQL Server SQL Database](../../includes/applies-to-version/sql-asdb.md)]
@@ -68,7 +68,7 @@ ON ALL SERVER
  이미 있는 경우에만 트리거를 조건부로 삭제합니다.  
   
  *schema_name*  
- DML 트리거가 속한 스키마의 이름입니다. DML 트리거는 트리거가 생성된 테이블 또는 뷰의 스키마로 한정됩니다. *schema_name*은 DDL 또는 LOGON 트리거에 대해 지정될 수 없습니다.  
+ DML 트리거가 속한 스키마의 이름입니다. DML 트리거는 트리거가 생성된 테이블 또는 뷰의 스키마로 한정됩니다. *schema_name* 은 DDL 또는 LOGON 트리거에 대해 지정될 수 없습니다.  
   
  *trigger_name*  
  제거할 트리거의 이름입니다. 현재 생성된 트리거 목록을 보려면 [sys.server_assembly_modules](../../relational-databases/system-catalog-views/sys-triggers-transact-sql.md) 또는 [sys.server_triggers](../../relational-databases/system-catalog-views/sys-server-triggers-transact-sql.md)를 사용하세요.  
@@ -118,7 +118,7 @@ IF OBJECT_ID ('employee_insupd', 'TR') IS NOT NULL
  다음 예에서는 `safety` DDL 트리거를 삭제합니다.  
   
 > [!IMPORTANT]  
->  DDL 트리거는 스키마 범위가 아니고 따라서 **sys.objects** 카탈로그 뷰에 표시되지 않기 때문에 OBJECT_ID 함수를 사용하여 데이터베이스에 DDL 트리거가 있는지 여부를 쿼리할 수 없습니다. 스키마 범위가 아닌 개체는 해당 카탈로그 뷰를 사용하여 쿼리해야 합니다. DDL 트리거의 경우 **sys.triggers**를 사용합니다.  
+>  DDL 트리거는 스키마 범위가 아니고 따라서 **sys.objects** 카탈로그 뷰에 표시되지 않기 때문에 OBJECT_ID 함수를 사용하여 데이터베이스에 DDL 트리거가 있는지 여부를 쿼리할 수 없습니다. 스키마 범위가 아닌 개체는 해당 카탈로그 뷰를 사용하여 쿼리해야 합니다. DDL 트리거의 경우 **sys.triggers** 를 사용합니다.  
   
 ```sql  
 DROP TRIGGER safety  

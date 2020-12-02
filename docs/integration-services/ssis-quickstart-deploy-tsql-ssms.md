@@ -10,11 +10,11 @@ ms.technology: integration-services
 author: chugugrace
 ms.author: chugu
 ms.openlocfilehash: a741612f0afd305edaf4cc289f1841eb9b353d8a
-ms.sourcegitcommit: cfa04a73b26312bf18d8f6296891679166e2754d
+ms.sourcegitcommit: 192f6a99e19e66f0f817fdb1977f564b2aaa133b
 ms.translationtype: HT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 10/19/2020
-ms.locfileid: "92195215"
+ms.lasthandoff: 11/25/2020
+ms.locfileid: "96129959"
 ---
 # <a name="deploy-an-ssis-project-from-ssms-with-transact-sql"></a>Transact-SQL을 사용하여 SSMS에서 SSIS 프로젝트 배포
 
@@ -60,9 +60,9 @@ SQL Server Management Studio를 사용하여 SSIS 카탈로그에 대한 연결�
    | **로그인** | 서버 관리자 계정 | 이 계정은 서버를 만들 때 지정한 계정입니다. |
    | **암호** | 서버 관리자 계정의 암호 | 이 암호는 서버를 만들 때 지정한 암호입니다. |
 
-3. **연결**을 클릭합니다. SSMS에서 개체 탐색기 창이 열립니다. 
+3. **연결** 을 클릭합니다. SSMS에서 개체 탐색기 창이 열립니다. 
 
-4. 개체 탐색기에서 **Integration Services 카탈로그**, **SSISDB**를 차례로 펼쳐 SSIS 카탈로그 데이터베이스의 개체를 봅니다.
+4. 개체 탐색기에서 **Integration Services 카탈로그**, **SSISDB** 를 차례로 펼쳐 SSIS 카탈로그 데이터베이스의 개체를 봅니다.
 
 
 ## <a name="run-the-t-sql-code"></a>T-SQL 코드 실행
@@ -72,11 +72,11 @@ SQL Server Management Studio를 사용하여 SSIS 카탈로그에 대한 연결�
 
 2.  시스템에 대한 `catalog.deploy_project` 저장 프로시저의 매개 변수 값을 업데이트합니다.
 
-3.  **SSISDB**가 현재 데이터베이스인지 확인합니다.
+3.  **SSISDB** 가 현재 데이터베이스인지 확인합니다.
 
 4.  스크립트를 실행합니다.
 
-5. [개체 탐색기]에서 필요한 경우 **SSISDB**의 내용을 새로 고치고 배포한 프로젝트를 확인합니다.
+5. [개체 탐색기]에서 필요한 경우 **SSISDB** 의 내용을 새로 고치고 배포한 프로젝트를 확인합니다.
 
 ```sql
 DECLARE @ProjectBinary AS varbinary(max)

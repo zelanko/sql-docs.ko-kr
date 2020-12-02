@@ -25,11 +25,11 @@ author: VanMSFT
 ms.author: vanto
 monikerRange: '>=aps-pdw-2016||=azure-sqldw-latest||>=sql-server-2016||=sqlallproducts-allversions||>=sql-server-linux-2017||=azuresqldb-mi-current'
 ms.openlocfilehash: 1487d56bd1f93e0410f6c9b6001f4f379b466fb5
-ms.sourcegitcommit: 197a6ffb643f93592edf9e90b04810a18be61133
+ms.sourcegitcommit: 192f6a99e19e66f0f817fdb1977f564b2aaa133b
 ms.translationtype: HT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 09/26/2020
-ms.locfileid: "91380341"
+ms.lasthandoff: 11/25/2020
+ms.locfileid: "96131155"
 ---
 # <a name="drop-role-transact-sql"></a>DROP ROLE(Transact-SQL)
 [!INCLUDE [sql-asdbmi-asa-pdw](../../includes/applies-to-version/sql-asdbmi-asa-pdw.md)]
@@ -79,7 +79,7 @@ DROP ROLE role_name
  서버 역할을 제거하려면 [DROP SERVER ROLE &#40;Transact-SQL&#41;](../../t-sql/statements/drop-server-role-transact-sql.md)를 사용합니다.  
   
 ## <a name="permissions"></a>사용 권한  
- 데이터베이스에 대한 **ALTER ANY ROLE** 권한 또는 역할에 대한 **CONTROL** 권한 또는 **db_securityadmin**의 멤버 자격이 필요합니다.  
+ 데이터베이스에 대한 **ALTER ANY ROLE** 권한 또는 역할에 대한 **CONTROL** 권한 또는 **db_securityadmin** 의 멤버 자격이 필요합니다.  
   
 ## <a name="examples"></a>예제  
  다음 예에서는 `AdventureWorks2012` 데이터베이스에서 `purchasing` 데이터베이스 역할을 삭제합니다.  

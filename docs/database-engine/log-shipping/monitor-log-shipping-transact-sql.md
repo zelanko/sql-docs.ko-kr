@@ -16,14 +16,14 @@ helpviewer_keywords:
 - status information [SQL Server], log shipping
 - monitoring log shipping [SQL Server]
 ms.assetid: acf3cd99-55f7-4287-8414-0892f830f423
-author: MashaMSFT
-ms.author: mathoma
-ms.openlocfilehash: 87d17a3f6051e497b64dd88c1dd2e005a4411e27
-ms.sourcegitcommit: da88320c474c1c9124574f90d549c50ee3387b4c
+author: cawrites
+ms.author: chadam
+ms.openlocfilehash: c328ae66b2ec85080b6da14ff054c824405b8be2
+ms.sourcegitcommit: 5a1ed81749800c33059dac91b0e18bd8bb3081b1
 ms.translationtype: HT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 07/01/2020
-ms.locfileid: "85695871"
+ms.lasthandoff: 11/23/2020
+ms.locfileid: "96130763"
 ---
 # <a name="monitor-log-shipping-transact-sql"></a>로그 전달 모니터링(Transact-SQL)
  [!INCLUDE [SQL Server](../../includes/applies-to-version/sqlserver.md)]
@@ -48,7 +48,7 @@ ms.locfileid: "85695871"
 |[log_shipping_monitor_secondary](../../relational-databases/system-tables/log-shipping-monitor-secondary-transact-sql.md)|모니터링에 유용한 마지막 복원 파일과 마지막 백업 파일에 대한 정보를 포함하여 각 보조 데이터베이스에 대한 하나의 모니터 레코드를 저장합니다.|  
   
 ## <a name="stored-procedures-for-monitoring-log-shipping"></a>로그 전달 모니터링을 위한 저장 프로시저  
- 로그 전달 저장 프로시저를 사용하여 액세스할 수 있는 **msdb**의 테이블에 모니터링 및 기록 정보가 저장됩니다. 다음 표에 표시된 서버에서 이러한 저장 프로시저를 실행합니다.  
+ 로그 전달 저장 프로시저를 사용하여 액세스할 수 있는 **msdb** 의 테이블에 모니터링 및 기록 정보가 저장됩니다. 다음 표에 표시된 서버에서 이러한 저장 프로시저를 실행합니다.  
   
 |저장 프로시저|Description|프로시저 실행 위치|  
 |----------------------|-----------------|---------------------------|  

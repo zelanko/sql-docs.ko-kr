@@ -22,11 +22,11 @@ ms.assetid: 11bf83f9-0718-4238-a835-83d2eb14ae7b
 author: markingmyname
 ms.author: maghan
 ms.openlocfilehash: 26fb837dc28b0ac7b2845a64eab800512e508b7b
-ms.sourcegitcommit: b93beb4f03aee2c1971909cb1d15f79cd479a35c
+ms.sourcegitcommit: 192f6a99e19e66f0f817fdb1977f564b2aaa133b
 ms.translationtype: HT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 09/29/2020
-ms.locfileid: "91497716"
+ms.lasthandoff: 11/25/2020
+ms.locfileid: "96131065"
 ---
 # <a name="drop-type-transact-sql"></a>DROP TYPE(Transact-SQL)
 [!INCLUDE [SQL Server SQL Database](../../includes/applies-to-version/sql-asdb.md)]
@@ -65,7 +65,7 @@ DROP TYPE [ IF EXISTS ] [ schema_name. ] type_name [ ; ]
 -   데이터베이스에 함수, 저장 프로시저 또는 생성된 트리거가 있고 이러한 루틴에서 별칭 또는 사용자 정의 형식의 변수 및 매개 변수를 사용하는 경우. 별칭 또는 사용자 정의 형식 매개 변수에 관한 정보는 [sys.parameters](../../relational-databases/system-catalog-views/sys-parameters-transact-sql.md) 또는 [sys.parameter_type_usages](../../relational-databases/system-catalog-views/sys-parameter-type-usages-transact-sql.md) 카탈로그 뷰를 쿼리하여 얻을 수 있습니다.  
   
 ## <a name="permissions"></a>사용 권한  
- *type_name*에 관한 CONTROL 권한 또는 *schema_name*에 대한 ALTER 권한이 필요합니다.  
+ *type_name* 에 관한 CONTROL 권한 또는 *schema_name* 에 대한 ALTER 권한이 필요합니다.  
   
 ## <a name="examples"></a>예제  
  다음 예에서는 `ssn` 형식이 이미 현재 데이터베이스에서 생성된 것으로 가정합니다.  

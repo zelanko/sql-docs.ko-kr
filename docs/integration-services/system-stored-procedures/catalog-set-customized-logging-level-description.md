@@ -12,11 +12,11 @@ ms.assetid: 6ceaa39f-2439-457b-b99f-f12d88a1be32
 author: chugugrace
 ms.author: chugu
 ms.openlocfilehash: 99d413f8447a79331f92229a295192b6c0c5ea72
-ms.sourcegitcommit: e700497f962e4c2274df16d9e651059b42ff1a10
+ms.sourcegitcommit: 192f6a99e19e66f0f817fdb1977f564b2aaa133b
 ms.translationtype: HT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 08/17/2020
-ms.locfileid: "88422137"
+ms.lasthandoff: 11/25/2020
+ms.locfileid: "96129736"
 ---
 # <a name="catalogset_customized_logging_level_description"></a>catalog.set_customized_logging_level_description 
 
@@ -35,12 +35,12 @@ catalog.set_customized_logging_level_description [ @level_name = ] level_name
  [ @level_name = ] *level_name*  
  기존 사용자 지정 로깅 수준의 이름입니다.  
   
- *level_name*은 **nvarchar(128)** 입니다.  
+ *level_name* 은 **nvarchar(128)** 입니다.  
   
  [ @level_description = ] *level_description*  
  지정된 사용자 지정 로깅 수준의 새 설명입니다.  
   
- *level_description*은 **nvarchar(1024)** 입니다.  
+ *level_description* 은 **nvarchar(1024)** 입니다.  
   
 ## <a name="remarks"></a>설명  
   

@@ -24,18 +24,18 @@ helpviewer_keywords:
 - backing up databases [SQL Server], backup devices
 - devices [SQL Server]
 ms.assetid: 35a8e100-3ff2-4844-a5da-dd088c43cba4
-author: MikeRayMSFT
-ms.author: mikeray
-ms.openlocfilehash: 79fb6976eb128e31965290df302a222bcf55177e
-ms.sourcegitcommit: da88320c474c1c9124574f90d549c50ee3387b4c
+author: cawrites
+ms.author: chadam
+ms.openlocfilehash: b0e264f1111ffc924466fdbb658b3f1e278d3f3a
+ms.sourcegitcommit: 5a1ed81749800c33059dac91b0e18bd8bb3081b1
 ms.translationtype: HT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 07/01/2020
-ms.locfileid: "85728533"
+ms.lasthandoff: 11/23/2020
+ms.locfileid: "96130513"
 ---
 # <a name="backup-devices-sql-server"></a>백업 디바이스(SQL Server)
  [!INCLUDE [SQL Server](../../includes/applies-to-version/sqlserver.md)]
-  [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 데이터베이스에서 백업 작업 중에 백업되는 데이터인 *백업*은 물리적 백업 디바이스에 기록됩니다. 이 물리적 백업 디바이스는 미디어 세트의 첫 번째 백업을 디바이스에 기록할 때 초기화됩니다. 하나 이상의 백업 디바이스 세트에서의 백업이 미디어 세트 하나를 구성합니다.  
+  [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 데이터베이스에서 백업 작업 중에 백업되는 데이터인 *백업* 은 물리적 백업 디바이스에 기록됩니다. 이 물리적 백업 디바이스는 미디어 세트의 첫 번째 백업을 디바이스에 기록할 때 초기화됩니다. 하나 이상의 백업 디바이스 세트에서의 백업이 미디어 세트 하나를 구성합니다.  
    
 ##  <a name="terms-and-definitions"></a><a name="TermsAndDefinitions"></a> 용어 및 정의  
  백업 디스크  
@@ -102,7 +102,7 @@ BACKUP DATABASE AdventureWorks2012
 GO  
 ```  
   
-> **참고:** 기본 위치는 **HKEY_LOCAL_MACHINE\SOFTWARE\Microsoft\Microsoft SQL Server\MSSQL.n\MSSQLServer** 아래의 **BackupDirectory**레지스트리 키에 저장됩니다.  
+> **참고:** 기본 위치는 **HKEY_LOCAL_MACHINE\SOFTWARE\Microsoft\Microsoft SQL Server\MSSQL.n\MSSQLServer** 아래의 **BackupDirectory** 레지스트리 키에 저장됩니다.  
   
    
 ###  <a name="back-up-to-a-network-share-file"></a><a name="NetworkShare"></a> 네트워크 공유 파일에 백업  
@@ -134,7 +134,7 @@ GO
    
  [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 데이터를 테이프에 백업하려면 [!INCLUDE[msCoName](../../includes/msconame-md.md)] Windows 운영 체제에서 지원하는 테이프 드라이브 또는 드라이브를 사용해야 합니다. 또한 지정된 테이프 드라이브에는 드라이브 제조업체가 권장하는 테이프만 사용하는 것이 좋습니다. 테이프 드라이브 설치 방법은 Windows 운영 체제 설명서를 참조하십시오.  
   
- 테이프 드라이브를 사용하여 백업할 경우 한 개의 테이프가 가득 차면 계속해서 다른 테이프에 백업합니다. 각 테이프에는 미디어 헤더가 있습니다. 첫 번째로 사용된 미디어를 *초기 테이프*라고 합니다. 각각의 연속되는 테이프는 *연속 테이프* 라고 하며 이전 테이프의 일련 번호보다 높은 미디어 일련 번호가 부여됩니다. 예를 들어 4개의 테이프 디바이스가 연결된 미디어 세트에는 적어도 4개의 초기 테이프가 있으며 데이터베이스가 맞지 않은 경우 4개의 연속적인 테이프가 있습니다. 백업 세트를 추가할 때 마지막 테이프를 연속하여 탑재해야 합니다. 마지막 테이프를 탑재하지 않으면 [!INCLUDE[ssDE](../../includes/ssde-md.md)] 이 탑재된 테이프의 끝으로 빨리 감아 검색한 다음 테이프를 교체하도록 요청합니다. 이때 마지막 테이프를 탑재합니다.  
+ 테이프 드라이브를 사용하여 백업할 경우 한 개의 테이프가 가득 차면 계속해서 다른 테이프에 백업합니다. 각 테이프에는 미디어 헤더가 있습니다. 첫 번째로 사용된 미디어를 *초기 테이프* 라고 합니다. 각각의 연속되는 테이프는 *연속 테이프* 라고 하며 이전 테이프의 일련 번호보다 높은 미디어 일련 번호가 부여됩니다. 예를 들어 4개의 테이프 디바이스가 연결된 미디어 세트에는 적어도 4개의 초기 테이프가 있으며 데이터베이스가 맞지 않은 경우 4개의 연속적인 테이프가 있습니다. 백업 세트를 추가할 때 마지막 테이프를 연속하여 탑재해야 합니다. 마지막 테이프를 탑재하지 않으면 [!INCLUDE[ssDE](../../includes/ssde-md.md)] 이 탑재된 테이프의 끝으로 빨리 감아 검색한 다음 테이프를 교체하도록 요청합니다. 이때 마지막 테이프를 탑재합니다.  
   
  테이프 백업 디바이스는 다음 사항을 제외하고 디스크 디바이스와 같이 사용됩니다.  
   
@@ -186,7 +186,7 @@ GO
  Azure Blob Storage 서비스에 SQL Server 백업을 작성할 수 있습니다.  Azure Blob Storage 서비스를 백업에 사용하는 방법에 대한 자세한 내용은 [Azure Blob Storage 서비스로 SQL Server 백업 및 복원](../../relational-databases/backup-restore/sql-server-backup-and-restore-with-microsoft-azure-blob-storage-service.md)을 참조하세요.  
   
 ##  <a name="use-a-logical-backup-device"></a><a name="LogicalBackupDevice"></a> 논리적 백업 디바이스 사용  
- *논리적 백업 디바이스*는 특정 물리적 백업 디바이스(디스크 파일 또는 테이프 드라이브)를 가리키는 선택적인 사용자 정의 이름입니다. 논리적 백업 디바이스를 사용하면 해당 물리적 백업 디바이스를 참조할 때 간접 참조를 사용할 수 있습니다.  
+ *논리적 백업 디바이스* 는 특정 물리적 백업 디바이스(디스크 파일 또는 테이프 드라이브)를 가리키는 선택적인 사용자 정의 이름입니다. 논리적 백업 디바이스를 사용하면 해당 물리적 백업 디바이스를 참조할 때 간접 참조를 사용할 수 있습니다.  
   
  논리적 백업 디바이스를 정의하려면 물리적 디바이스에 논리적 이름을 할당합니다. 예를 들어 논리적 디바이스인 AdventureWorksBackups가 Z:\SQLServerBackups\AdventureWorks2012.bak 파일이나 \\\\.\tape0 테이프 드라이브를 가리키도록 정의할 수 있습니다. 그런 다음 백업 및 복원 명령에서 DISK = 'Z:\SQLServerBackups\AdventureWorks2012.bak' 또는 TAPE = '\\\\.\tape0' 대신 AdventureWorksBackups를 백업 디바이스로 지정할 수 있습니다.  
   

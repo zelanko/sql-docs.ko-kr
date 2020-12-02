@@ -12,11 +12,11 @@ ms.assetid: 5b1aeaf7-c938-4aef-bafc-e4d7a82eb578
 author: chugugrace
 ms.author: chugu
 ms.openlocfilehash: 349a68fa94cfb479c6c3823b2b295a3a65498692
-ms.sourcegitcommit: e700497f962e4c2274df16d9e651059b42ff1a10
+ms.sourcegitcommit: 192f6a99e19e66f0f817fdb1977f564b2aaa133b
 ms.translationtype: HT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 08/17/2020
-ms.locfileid: "88495431"
+ms.lasthandoff: 11/25/2020
+ms.locfileid: "96129781"
 ---
 # <a name="catalogget_parameter_values-ssisdb-database"></a>catalog.get_parameter_values(SSISDB 데이터베이스)
 
@@ -39,16 +39,16 @@ catalog.get_parameter_values [ @folder_name = ] folder_name
   
 ## <a name="arguments"></a>인수  
  [ @folder_name = ] *folder_name*  
- 프로젝트가 있는 폴더의 이름입니다. *folder_name*은 **nvarchar(128)** 입니다.  
+ 프로젝트가 있는 폴더의 이름입니다. *folder_name* 은 **nvarchar(128)** 입니다.  
   
  [ @project_name = ] *project_name*  
- 매개 변수가 있는 프로젝트의 이름입니다. *project_name*은 **nvarchar(128)** 입니다.  
+ 매개 변수가 있는 프로젝트의 이름입니다. *project_name* 은 **nvarchar(128)** 입니다.  
   
  [ @package_name = ] *package_name*  
- 패키지의 이름입니다. 패키지 이름을 지정하면 모든 프로젝트 매개 변수와 특정 패키지의 매개 변수를 검색할 수 있습니다. *package_name*은 **nvarchar(260)** 입니다.  
+ 패키지의 이름입니다. 패키지 이름을 지정하면 모든 프로젝트 매개 변수와 특정 패키지의 매개 변수를 검색할 수 있습니다. *package_name* 은 **nvarchar(260)** 입니다.  
   
  [ @reference_id = ] *reference_id*  
- 환경 참조의 고유 식별자입니다. 이 매개 변수는 선택 사항입니다. *reference_id*는 **bigint**입니다.  
+ 환경 참조의 고유 식별자입니다. 이 매개 변수는 선택 사항입니다. *reference_id* 는 **bigint** 입니다.  
   
 ## <a name="return-code-value"></a>반환 코드 값  
  0(성공)  
@@ -67,7 +67,7 @@ catalog.get_parameter_values [ @folder_name = ] folder_name
 |value_set|**bit**|값이 `1`이면 매개 변수 값이 할당되었고, 값이 `0`이면 매개 변수 값이 할당되지 않았습니다.|  
   
 > [!NOTE]  
->  리터럴 값은 일반 텍스트로 표시됩니다. **NULL**은 중요한 값 대신 표시됩니다.  
+>  리터럴 값은 일반 텍스트로 표시됩니다. **NULL** 은 중요한 값 대신 표시됩니다.  
   
 ## <a name="permissions"></a>사용 권한  
  이 저장 프로시저를 실행하려면 다음 권한 중 하나가 필요합니다.  

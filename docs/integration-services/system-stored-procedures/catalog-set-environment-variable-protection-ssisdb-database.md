@@ -12,11 +12,11 @@ ms.assetid: 005b6b2f-a5d9-4ea4-8d4e-beed6ab33c0d
 author: chugugrace
 ms.author: chugu
 ms.openlocfilehash: 5e5e93263d37acf72782f2b9a2fe3ef3f7c5d29d
-ms.sourcegitcommit: e700497f962e4c2274df16d9e651059b42ff1a10
+ms.sourcegitcommit: 192f6a99e19e66f0f817fdb1977f564b2aaa133b
 ms.translationtype: HT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 08/17/2020
-ms.locfileid: "88422157"
+ms.lasthandoff: 11/25/2020
+ms.locfileid: "96129689"
 ---
 # <a name="catalogset_environment_variable_protection-ssisdb-database"></a>catalog.set_environment_variable_protection(SSISDB 데이터베이스)
 
@@ -38,16 +38,16 @@ catalog.set_environment_variable_protection [ @folder_name = ] folder_name
   
 ## <a name="arguments"></a>인수  
  [ @folder_name = ] *folder_name*  
- 환경이 있는 폴더의 이름입니다. *folder_name*은 **nvarchar(128)** 입니다.  
+ 환경이 있는 폴더의 이름입니다. *folder_name* 은 **nvarchar(128)** 입니다.  
   
  [ @environment_name = ] *environment_name*  
- 환경의 이름입니다. *environment_name*은 **nvarchar(128)** 입니다.  
+ 환경의 이름입니다. *environment_name* 은 **nvarchar(128)** 입니다.  
   
  [ @variable_name = ] *variable_name*  
- 환경 변수의 이름입니다. *variable_name*은 **nvarchar(128)** 입니다.  
+ 환경 변수의 이름입니다. *variable_name* 은 **nvarchar(128)** 입니다.  
   
  [ @sensitive = ] *sensitive*  
- 변수에 중요한 값이 포함되었는지 여부를 나타냅니다. 환경 변수 값이 중요함을 나타내려면 값 `1`을 사용하고, 그렇지 않음을 나타내려면 값 `0`을 사용합니다. 중요한 값은 저장될 때 암호화되고, 중요하지 않은 값은 일반 텍스트로 저장됩니다. *중요한* 매개 변수는 **비트**입니다.  
+ 변수에 중요한 값이 포함되었는지 여부를 나타냅니다. 환경 변수 값이 중요함을 나타내려면 값 `1`을 사용하고, 그렇지 않음을 나타내려면 값 `0`을 사용합니다. 중요한 값은 저장될 때 암호화되고, 중요하지 않은 값은 일반 텍스트로 저장됩니다. *중요한* 매개 변수는 **비트** 입니다.  
   
 ## <a name="return-code-value"></a>반환 코드 값  
  0(성공)  

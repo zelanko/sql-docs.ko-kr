@@ -15,11 +15,11 @@ ms.author: pelopes
 ms.reviewer: mikeray
 monikerRange: =azuresqldb-current||>=sql-server-2016||=sqlallproducts-allversions||>=sql-server-linux-2017||=azuresqldb-mi-current
 ms.openlocfilehash: ebeaebbc4a082bcb7051dc3d6c784b6ce1ec11fc
-ms.sourcegitcommit: e700497f962e4c2274df16d9e651059b42ff1a10
+ms.sourcegitcommit: 192f6a99e19e66f0f817fdb1977f564b2aaa133b
 ms.translationtype: HT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 08/17/2020
-ms.locfileid: "88420357"
+ms.lasthandoff: 11/25/2020
+ms.locfileid: "96130967"
 ---
 # <a name="configure-and-manage-filters-for-search"></a>검색 필터 구성 및 관리
 [!INCLUDE [SQL Server Azure SQL Database](../../includes/applies-to-version/sql-asdb.md)]
@@ -28,7 +28,7 @@ ms.locfileid: "88420357"
 ## <a name="filters-and-document-types"></a>필터 및 문서 유형
 지정된 필터는 지정된 문서 유형(.doc, .pdf, .xls, .xml 등)에만 해당됩니다. 이러한 필터는 IFilter 인터페이스를 구현합니다. 이러한 문서 유형에 대한 자세한 내용을 보려면 [sys.fulltext_document_types](../../relational-databases/system-catalog-views/sys-fulltext-document-types-transact-sql.md) 카탈로그 뷰를 쿼리하세요.  
   
-이진 문서는 단일 **varbinary(max)** 또는 **image** 열에 저장할 수 있습니다. [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 는 각 문서에 대해 파일 확장명을 기준으로 사용할 필터를 정확히 선택합니다. **varbinary(max)** 또는 **image** 열에 파일을 저장할 때는 파일 확장명을 볼 수 없으므로 별도의 테이블 열, 즉 유형 열에 따로 파일 확장명(.doc, .xls, .pdf 등)을 저장해야 합니다. 이 형식 열은 모든 문자 기반 데이터 형식이 될 수 있고 [!INCLUDE[msCoName](../../includes/msconame-md.md)] Word 문서를 나타내는 .doc와 같은 문서 파일 확장명을 포함합니다. **의** Document [!INCLUDE[ssSampleDBCoShort](../../includes/sssampledbcoshort-md.md)]테이블에서 **Document** 열은 **varbinary(max)** 형식이고 **FileExtension**유형 열은 **nvarchar(8)** 형식입니다.  
+이진 문서는 단일 **varbinary(max)** 또는 **image** 열에 저장할 수 있습니다. [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 는 각 문서에 대해 파일 확장명을 기준으로 사용할 필터를 정확히 선택합니다. **varbinary(max)** 또는 **image** 열에 파일을 저장할 때는 파일 확장명을 볼 수 없으므로 별도의 테이블 열, 즉 유형 열에 따로 파일 확장명(.doc, .xls, .pdf 등)을 저장해야 합니다. 이 형식 열은 모든 문자 기반 데이터 형식이 될 수 있고 [!INCLUDE[msCoName](../../includes/msconame-md.md)] Word 문서를 나타내는 .doc와 같은 문서 파일 확장명을 포함합니다. **의** Document [!INCLUDE[ssSampleDBCoShort](../../includes/sssampledbcoshort-md.md)]테이블에서 **Document** 열은 **varbinary(max)** 형식이고 **FileExtension** 유형 열은 **nvarchar(8)** 형식입니다.  
 
 **기존 전체 텍스트 인덱스의 유형 열을 보려면**  
   

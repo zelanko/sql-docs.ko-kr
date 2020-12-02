@@ -12,11 +12,11 @@ ms.assetid: f8663ff3-aa98-4dd8-b850-b21efada0b87
 author: chugugrace
 ms.author: chugu
 ms.openlocfilehash: f1a69ba2746d688f1d134546370514f826f9cee3
-ms.sourcegitcommit: e700497f962e4c2274df16d9e651059b42ff1a10
+ms.sourcegitcommit: 192f6a99e19e66f0f817fdb1977f564b2aaa133b
 ms.translationtype: HT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 08/17/2020
-ms.locfileid: "88477140"
+ms.lasthandoff: 11/25/2020
+ms.locfileid: "96129625"
 ---
 # <a name="catalogstart_execution-ssisdb-database"></a>catalog.start_execution(SSISDB 데이터베이스)
 
@@ -35,10 +35,10 @@ catalog.start_execution [ @execution_id = ] execution_id [, [ @retry_count = ] r
   
 ## <a name="arguments"></a>인수  
  [@execution_id =] *execution_id*  
- 실행 인스턴스의 고유 식별자입니다. *execution_id*는 **bigint**입니다.
+ 실행 인스턴스의 고유 식별자입니다. *execution_id* 는 **bigint** 입니다.
  
  [@retry_count =] *retry_count*  
- 실행이 실패할 경우 다시 시도 횟수입니다. Scale Out에서 실행인 경우에만 적용됩니다. 이 매개 변수는 선택 사항입니다. 지정하지 않으면 해당 값이 0으로 설정됩니다. *retry_count*는 **int**입니다.
+ 실행이 실패할 경우 다시 시도 횟수입니다. Scale Out에서 실행인 경우에만 적용됩니다. 이 매개 변수는 선택 사항입니다. 지정하지 않으면 해당 값이 0으로 설정됩니다. *retry_count* 는 **int** 입니다.
   
 ## <a name="remarks"></a>설명  
  실행은 단일 인스턴스의 패키지 실행 중에 패키지에서 사용할 매개 변수 값을 지정하는 데 사용됩니다. 실행 인스턴스가 생성된 후부터 시작되기 전까지 해당 프로젝트가 다시 배포될 수도 있습니다. 이 경우 실행 인스턴스는 오래된 프로젝트를 참조합니다. 이 잘못된 참조로 인해 저장 프로시저가 실패합니다.  
