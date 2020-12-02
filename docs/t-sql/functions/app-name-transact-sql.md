@@ -23,11 +23,11 @@ ms.assetid: e491e192-9b30-4243-bc19-33c133fe08a8
 author: markingmyname
 ms.author: maghan
 ms.openlocfilehash: e8b24e74faa029f72bedf464ddbd06d79a8750ef
-ms.sourcegitcommit: cc23d8646041336d119b74bf239a6ac305ff3d31
+ms.sourcegitcommit: 192f6a99e19e66f0f817fdb1977f564b2aaa133b
 ms.translationtype: HT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 09/23/2020
-ms.locfileid: "91111132"
+ms.lasthandoff: 11/25/2020
+ms.locfileid: "96126260"
 ---
 # <a name="app_name-transact-sql"></a>APP_NAME(Transact-SQL)
 [!INCLUDE [SQL Server SQL Database](../../includes/applies-to-version/sql-asdb.md)]
@@ -53,7 +53,7 @@ APP_NAME  ( )
 ## <a name="remarks"></a>설명  
 `APP_NAME`을 사용하여 해당 애플리케이션에 대한 다른 작업을 수행하는 방법으로 서로 다른 애플리케이션을 구별합니다. 예를 들어 `APP_NAME`은 각 애플리케이션에 대한 다른 날짜 형식을 허용하도록 서로 다른 애플리케이션을 구별할 수 있습니다. 특정 애플리케이션에 정보 메시지를 반환할 수도 있습니다.
   
-[!INCLUDE[ssManStudio](../../includes/ssmanstudio-md.md)]에서 애플리케이션 이름을 설정하려면 **데이터베이스 엔진에 연결** 대화 상자에서 **옵션**을 클릭합니다. **추가 연결 매개 변수** 탭에서 `;app='application_name'` 형식에 **앱** 특성을 제공합니다.
+[!INCLUDE[ssManStudio](../../includes/ssmanstudio-md.md)]에서 애플리케이션 이름을 설정하려면 **데이터베이스 엔진에 연결** 대화 상자에서 **옵션** 을 클릭합니다. **추가 연결 매개 변수** 탭에서 `;app='application_name'` 형식에 **앱** 특성을 제공합니다.
   
 ## <a name="example"></a>예제  
 이 예에서는 이 프로세스를 시작한 클라이언트 애플리케이션이 `SQL Server Management Studio` 세션인지 여부를 확인합니다. 그런 다음, US 또는 ANSI 형식으로 날짜 값을 제공합니다.

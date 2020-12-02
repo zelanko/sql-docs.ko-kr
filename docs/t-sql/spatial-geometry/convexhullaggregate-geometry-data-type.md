@@ -16,11 +16,11 @@ ms.assetid: ca3d3b55-e02d-4599-8817-a54f5e047db8
 author: MladjoA
 ms.author: mlandzic
 ms.openlocfilehash: f5f27e06872c72244361fe2973b005924a2b85d5
-ms.sourcegitcommit: e700497f962e4c2274df16d9e651059b42ff1a10
+ms.sourcegitcommit: 192f6a99e19e66f0f817fdb1977f564b2aaa133b
 ms.translationtype: HT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 08/17/2020
-ms.locfileid: "88472541"
+ms.lasthandoff: 11/25/2020
+ms.locfileid: "96128172"
 ---
 # <a name="convexhullaggregate-geometry-data-type"></a>ConvexHullAggregate(geometry 데이터 형식)
 [!INCLUDE [SQL Server Azure SQL Database ](../../includes/applies-to-version/sql-asdb.md)]
@@ -47,12 +47,12 @@ ConvexHullAggregate ( geometry_operand )
  유효하지 않은 입력 값이 있는 경우 `FormatException`을 발생시킵니다. [STIsValid &#40;geometry 데이터 형식&#41;](../../t-sql/spatial-geometry/stisvalid-geometry-data-type.md) 참조  
   
 ## <a name="remarks"></a>설명  
- 이 메서드는 입력이 비어 있거나 입력에 다른 SRID가 있는 경우 **null**을 반환합니다. [Spatial Reference Identifier&#40;SRIDs&#41;](../../relational-databases/spatial/spatial-reference-identifiers-srids.md) 참조  
+ 이 메서드는 입력이 비어 있거나 입력에 다른 SRID가 있는 경우 **null** 을 반환합니다. [Spatial Reference Identifier&#40;SRIDs&#41;](../../relational-databases/spatial/spatial-reference-identifiers-srids.md) 참조  
   
  이 메서드는 **null** 입력을 무시합니다.  
   
 > [!NOTE]  
->  이 메서드는 모든 입력 값이 **null**인 경우 **null**을 반환합니다.  
+>  이 메서드는 모든 입력 값이 **null** 인 경우 **null** 을 반환합니다.  
   
 ## <a name="examples"></a>예제  
  다음 예에서는 테이블 변수 열에 있는 geometry 개체 집합에 대한 볼록 집합(convex hull)을 반환합니다.  

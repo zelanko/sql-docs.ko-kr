@@ -13,20 +13,20 @@ helpviewer_keywords:
 - COPY_ONLY option [BACKUP statement]
 - backups [SQL Server], copy-only backups
 ms.assetid: f82d6918-a5a7-4af8-868e-4247f5b00c52
-author: MikeRayMSFT
-ms.author: mikeray
+author: cawrites
+ms.author: chadam
 monikerRange: =azuresqldb-mi-current||>=sql-server-2016||=sqlallproducts-allversions||>=sql-server-linux-2017
-ms.openlocfilehash: 85f30b310f6878e9090dcf55e63be41c16f1490e
-ms.sourcegitcommit: 04cf7905fa32e0a9a44575a6f9641d9a2e5ac0f8
+ms.openlocfilehash: 76c712143d97d602270c9faeacae4c3550f6964d
+ms.sourcegitcommit: 5a1ed81749800c33059dac91b0e18bd8bb3081b1
 ms.translationtype: HT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 10/07/2020
-ms.locfileid: "91809864"
+ms.lasthandoff: 11/23/2020
+ms.locfileid: "96129288"
 ---
 # <a name="copy-only-backups"></a>복사 전용 백업
 [!INCLUDE [SQL Server SQL MI](../../includes/applies-to-version/sql-asdbmi.md)]
 
-*복사 전용 백업*은 기존 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 백업 시퀀스와 독립적인 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 백업입니다. 일반적으로 백업을 수행하면 데이터베이스가 변경되므로 이후 백업이 복원되는 방식에 영향을 주게 됩니다. 그러나 백업 전체에 영향을 주지 않고 특별한 용도로 백업을 수행한 다음 데이터베이스에 대한 프로시저를 복원하는 것이 유용할 수도 있습니다. 이러한 용도로 복사 전용 백업이 제공됩니다.
+*복사 전용 백업* 은 기존 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 백업 시퀀스와 독립적인 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 백업입니다. 일반적으로 백업을 수행하면 데이터베이스가 변경되므로 이후 백업이 복원되는 방식에 영향을 주게 됩니다. 그러나 백업 전체에 영향을 주지 않고 특별한 용도로 백업을 수행한 다음 데이터베이스에 대한 프로시저를 복원하는 것이 유용할 수도 있습니다. 이러한 용도로 복사 전용 백업이 제공됩니다.
   
  복사 전용 백업의 종류는 다음과 같습니다.  
   
@@ -54,13 +54,13 @@ ms.locfileid: "91809864"
 ###  <a name="a-using-sql-server-management-studio"></a><a name="SSMSProcedure"></a> 1. SQL Server Management Studio 사용  
 이 예제에서는 `Sales` 데이터베이스의 복사 전용 백업이 기본 백업 위치에서 디스크에 백업됩니다.
 
-1. **개체 탐색기**에서 SQL Server 데이터베이스 엔진의 인스턴스에 연결한 다음 해당 인스턴스를 확장합니다.
+1. **개체 탐색기** 에서 SQL Server 데이터베이스 엔진의 인스턴스에 연결한 다음 해당 인스턴스를 확장합니다.
 
-1. **데이터베이스**를 확장하고 `Sales`를 마우스 오른쪽 단추로 클릭한 다음 **태스크**를 가리키고 **백업...** 을 클릭합니다.
+1. **데이터베이스** 를 확장하고 `Sales`를 마우스 오른쪽 단추로 클릭한 다음 **태스크** 를 가리키고 **백업...** 을 클릭합니다.
 
 1. **일반** 페이지의 **소스** 확인 섹션에서 **복사 전용 백업** 확인란을 선택합니다.
 
-1. **확인**을 클릭합니다.
+1. **확인** 을 클릭합니다.
 
 ###  <a name="b-using-transact-sql"></a><a name="TsqlProcedure"></a>2. Transact-SQL 사용  
 이 예에서는 COPY_ONLY 매개 변수를 활용하여 `Sales` 데이터베이스에 대한 복사 전용 백업을 만듭니다.  트랜잭션 로그의 복사 전용 백업도 만듭니다.

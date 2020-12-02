@@ -19,11 +19,11 @@ author: stevestein
 ms.author: sstein
 monikerRange: =azuresqldb-current||>=sql-server-2016||=sqlallproducts-allversions||>=sql-server-linux-2017||=azuresqldb-mi-current
 ms.openlocfilehash: 177caf959cd9f957525dd50a0b63a0dc2b304115
-ms.sourcegitcommit: e700497f962e4c2274df16d9e651059b42ff1a10
+ms.sourcegitcommit: 192f6a99e19e66f0f817fdb1977f564b2aaa133b
 ms.translationtype: HT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 08/17/2020
-ms.locfileid: "88419047"
+ms.lasthandoff: 11/25/2020
+ms.locfileid: "96128762"
 ---
 # <a name="create-check-constraints"></a>CHECK 제약 조건 만들기
 [!INCLUDE [SQL Server SQL Database](../../includes/applies-to-version/sql-asdb.md)]
@@ -53,7 +53,7 @@ ms.locfileid: "88419047"
   
 #### <a name="to-create-a-new-check-constraint"></a>새 CHECK 제약 조건을 만들려면  
   
-1.  **개체 탐색기**에서 CHECK 제약 조건을 추가하려는 테이블을 확장하고, **제약 조건** 을 마우스 오른쪽 단추로 클릭한 후 **새 제약 조건**을 클릭합니다.  
+1.  **개체 탐색기** 에서 CHECK 제약 조건을 추가하려는 테이블을 확장하고, **제약 조건** 을 마우스 오른쪽 단추로 클릭한 후 **새 제약 조건** 을 클릭합니다.  
   
 2.  **CHECK 제약 조건** 대화 상자에서 **식** 필드를 클릭한 후, 줄임표 **(...)** 를 클릭합니다.  
   
@@ -72,7 +72,7 @@ ms.locfileid: "88419047"
     > [!NOTE]  
     >  숫자가 아닌 제약 조건 값은 모두 작은따옴표(')로 묶어야 합니다.  
   
-4.  **확인**을 클릭합니다.  
+4.  **확인** 을 클릭합니다.  
   
 5.  **ID** 범주에서는 CHECK 제약 조건의 이름을 변경하고 해당 제약 조건에 대한 설명(확장 속성)을 추가할 수 있습니다.  
   
@@ -84,17 +84,17 @@ ms.locfileid: "88419047"
     |이 테이블에서 복제 작업이 수행될 때마다 제약 조건 적용|**복제에 적용**|  
     |이 테이블의 행을 삽입하거나 업데이트할 때마다 제약 조건 적용|**INSERT 및 UPDATE에 적용**|  
   
-7.  **닫기**를 클릭합니다.  
+7.  **닫기** 를 클릭합니다.  
   
 ##  <a name="using-transact-sql"></a><a name="TsqlProcedure"></a> Transact-SQL 사용  
   
 #### <a name="to-create-a-new-check-constraint"></a>새 CHECK 제약 조건을 만들려면  
   
-1.  **개체 탐색기**에서 [!INCLUDE[ssDE](../../includes/ssde-md.md)]인스턴스에 연결합니다.  
+1.  **개체 탐색기** 에서 [!INCLUDE[ssDE](../../includes/ssde-md.md)]인스턴스에 연결합니다.  
   
-2.  표준 도구 모음에서 **새 쿼리**를 클릭합니다.  
+2.  표준 도구 모음에서 **새 쿼리** 를 클릭합니다.  
   
-3.  다음 예를 복사하여 쿼리 창에 붙여 넣고 **실행**을 클릭합니다.  
+3.  다음 예를 복사하여 쿼리 창에 붙여 넣고 **실행** 을 클릭합니다.  
   
     ```  
     ALTER TABLE dbo.DocExc   

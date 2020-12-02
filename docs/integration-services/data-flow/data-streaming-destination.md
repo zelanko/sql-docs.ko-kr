@@ -14,18 +14,18 @@ ms.assetid: 640e6a19-49ae-4ee8-ac07-008370158f0e
 author: chugugrace
 ms.author: chugu
 ms.openlocfilehash: 34f4ba8e001f43d4c29379dac0de36b595163679
-ms.sourcegitcommit: e700497f962e4c2274df16d9e651059b42ff1a10
+ms.sourcegitcommit: 192f6a99e19e66f0f817fdb1977f564b2aaa133b
 ms.translationtype: HT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 08/17/2020
-ms.locfileid: "88430905"
+ms.lasthandoff: 11/25/2020
+ms.locfileid: "96127218"
 ---
 # <a name="data-streaming-destination"></a>데이터 스트리밍 대상
 
 [!INCLUDE[sqlserver-ssis](../../includes/applies-to-version/sqlserver-ssis.md)]
 
 
-  **데이터 스트리밍 대상**은 **SSIS용 OLE DB 공급자**가 SSIS 패키지의 출력을 탭 형식의 결과 집합으로 사용할 수 있는 SSIS([!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] [!INCLUDE[ssISnoversion](../../includes/ssisnoversion-md.md)]) 대상 구성 요소입니다. SSIS용 OLE DB 공급자를 사용하는 연결 서버를 만든 다음 연결 서버에 SQL 쿼리를 실행하여 SSIS 패키지에서 반환한 데이터를 표시할 수 있습니다.  
+  **데이터 스트리밍 대상** 은 **SSIS용 OLE DB 공급자** 가 SSIS 패키지의 출력을 탭 형식의 결과 집합으로 사용할 수 있는 SSIS([!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] [!INCLUDE[ssISnoversion](../../includes/ssisnoversion-md.md)]) 대상 구성 요소입니다. SSIS용 OLE DB 공급자를 사용하는 연결 서버를 만든 다음 연결 서버에 SQL 쿼리를 실행하여 SSIS 패키지에서 반환한 데이터를 표시할 수 있습니다.  
   
  다음 예제의 쿼리는 SSIS 카탈로그 Power BI 폴더에 있는 SSISPackagePublishing 프로젝트의 Package.dtsx 패키지에서 출력을 반환합니다. 이 쿼리는 연결된 서버 이름[Integration Services의 기본 연결 서버]을 사용하며, 이 이름은 새로운 SSIS용 OLE DB 공급자를 사용합니다. 쿼리에는 SSIS 카탈로그의 폴더 이름, 프로젝트 이름, 패키지 이름이 포함됩니다. SSIS용 OLE DB 공급자는 쿼리에 지정된 패키지를 실행하고 탭 형식의 결과 집합을 반환합니다.  
   
@@ -37,7 +37,7 @@ SELECT * FROM OPENQUERY([Default Linked Server for Integration Services], N'Fold
 ## <a name="data-feed-publishing-components"></a>데이터 피드 게시 구성 요소  
  데이터 피드 게시 구성 요소는 SSIS용 OLE DB 공급자, 데이터 스트리밍 대상, SSIS 패키지 게시 마법사가 있습니다. 이 마법사를 사용하면 SSIS 패키지를 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 데이터베이스 인스턴스의 SQL 뷰로 게시할 수 있습니다. 이 마법사는 연결된 서버의 쿼리를 나타내는 SQL 뷰와 SSIS용 OLE DB 공급자를 사용하는 연결 서버를 만드는 과정을 도와줍니다. SSIS 패키지의 쿼리 결과를 탭 형식의 데이터 집합으로 표시하는 뷰를 실행합니다.  
   
- SSISOLEDB 공급자가 설치되어 있는지 확인하려면 SQL Server Management Studio에서 **서버 개체**, **연결된 서버**, **공급자**를 확장한 다음 **SSISOLEDB** 공급자가 표시되는지 확인합니다. **SSISOLEDB**를 두 번 클릭하고 **Inprocess 허용** 을 사용하도록 설정한 다음(설정되지 않은 경우) **확인**을 클릭합니다.  
+ SSISOLEDB 공급자가 설치되어 있는지 확인하려면 SQL Server Management Studio에서 **서버 개체**, **연결된 서버**, **공급자** 를 확장한 다음 **SSISOLEDB** 공급자가 표시되는지 확인합니다. **SSISOLEDB** 를 두 번 클릭하고 **Inprocess 허용** 을 사용하도록 설정한 다음(설정되지 않은 경우) **확인** 을 클릭합니다.  
   
 ## <a name="publish-an-ssis-package-as-a-sql-view"></a>SSIS 패키지를 SQL 뷰로 게시  
  다음 절차는 SSIS 패키지를 SQL 뷰로 게시하는 단계에 대해 설명합니다.  
@@ -54,9 +54,9 @@ SELECT * FROM OPENQUERY([Default Linked Server for Integration Services], N'Fold
 >  자세한 단계는 [연습: SSIS 패키지를 SQL 뷰로 게시](../../integration-services/data-flow/walkthrough-publish-an-ssis-package-as-a-sql-view.md)를 참조하세요.  
 
 ## <a name="configure-data-streaming-destination"></a>데이터 스트리밍 대상 구성
-  **고급 데이터 스트리밍 대상 편집기** 대화 상자를 사용하여 데이터 스트리밍 대상을 구성합니다. 구성 요소를 두 번 클릭하거나 데이터 흐름 디자이너에서 구성 요소를 마우스 오른쪽 단추로 클릭하고 **편집**을 클릭하여 이 대화 상자를 엽니다.  
+  **고급 데이터 스트리밍 대상 편집기** 대화 상자를 사용하여 데이터 스트리밍 대상을 구성합니다. 구성 요소를 두 번 클릭하거나 데이터 흐름 디자이너에서 구성 요소를 마우스 오른쪽 단추로 클릭하고 **편집** 을 클릭하여 이 대화 상자를 엽니다.  
   
- 이 대화 상자에는 **구성 요소 속성**, **입력 열**, **입력 및 출력 속성**의 3개 탭이 있습니다.  
+ 이 대화 상자에는 **구성 요소 속성**, **입력 열**, **입력 및 출력 속성** 의 3개 탭이 있습니다.  
   
 ## <a name="component-properties-tab"></a>구성 요소 속성 탭  
  이 탭에는 다음과 같은 편집 가능 필드가 있습니다.  
@@ -71,4 +71,4 @@ SELECT * FROM OPENQUERY([Default Linked Server for Integration Services], N'Fold
  이 탭의 위쪽 창에는 사용 가능한 모든 입력 열이 표시됩니다. 입력 열 중에서 이 구성 요소의 출력에 포함할 열을 선택합니다. 선택한 열은 아래쪽 창의 목록에 표시됩니다. 목록에서 **출력 별칭** 필드에 대한 새 이름을 입력해 출력 열의 이름을 변경할 수 있습니다.  
   
 ## <a name="input-output-properties-tab"></a>입력 및 출력 속성 탭  
- 이 탭에서는 입력 열 탭에서와 비슷한 방식으로 출력 열의 이름을 변경할 수 있습니다. 왼쪽 트리 뷰에서 **데이터 스트리밍 대상 입력** 과 **입력 열**을 차례로 확장합니다. 입력 열 이름을 클릭하고 오른쪽 창에서 출력 열 이름을 변경합니다.
+ 이 탭에서는 입력 열 탭에서와 비슷한 방식으로 출력 열의 이름을 변경할 수 있습니다. 왼쪽 트리 뷰에서 **데이터 스트리밍 대상 입력** 과 **입력 열** 을 차례로 확장합니다. 입력 열 이름을 클릭하고 오른쪽 창에서 출력 열 이름을 변경합니다.

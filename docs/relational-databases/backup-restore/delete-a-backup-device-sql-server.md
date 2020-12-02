@@ -15,14 +15,14 @@ helpviewer_keywords:
 - removing backup devices
 - backing up databases [SQL Server], backup devices
 ms.assetid: 7be62480-ed6a-4262-a071-1feba73b1c02
-author: MikeRayMSFT
-ms.author: mikeray
-ms.openlocfilehash: 50f92b7fcc6e15e8866ba50ad3ecc85ec617826d
-ms.sourcegitcommit: da88320c474c1c9124574f90d549c50ee3387b4c
+author: cawrites
+ms.author: chadam
+ms.openlocfilehash: 5e1272f4f55b049ad36e3f811adddc14fc665bf1
+ms.sourcegitcommit: 5a1ed81749800c33059dac91b0e18bd8bb3081b1
 ms.translationtype: HT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 07/01/2020
-ms.locfileid: "85748113"
+ms.lasthandoff: 11/23/2020
+ms.locfileid: "96129228"
 ---
 # <a name="delete-a-backup-device-sql-server"></a>백업 디바이스 삭제(SQL Server)
  [!INCLUDE [SQL Server](../../includes/applies-to-version/sqlserver.md)]
@@ -53,13 +53,13 @@ ms.locfileid: "85748113"
   
 1.  [!INCLUDE[ssDEnoversion](../../includes/ssdenoversion-md.md)]의 해당 인스턴스에 연결한 다음 개체 탐색기에서 서버 이름을 클릭하여 서버 트리를 확장합니다.  
   
-2.  **서버 개체**를 확장한 다음 **백업 디바이스**를 확장합니다.  
+2.  **서버 개체** 를 확장한 다음 **백업 디바이스** 를 확장합니다.  
   
-3.  원하는 디바이스를 마우스 오른쪽 단추로 클릭한 다음 **삭제**를 클릭합니다.  
+3.  원하는 디바이스를 마우스 오른쪽 단추로 클릭한 다음 **삭제** 를 클릭합니다.  
   
 4.  **개체 삭제** 대화 상자에서 올바른 디바이스 이름이 **개체 이름** 열에 표시되는지 확인합니다.  
   
-5.  **확인**을 클릭합니다.  
+5.  **확인** 을 클릭합니다.  
   
 ##  <a name="using-transact-sql"></a><a name="TsqlProcedure"></a> Transact-SQL 사용  
   
@@ -67,7 +67,7 @@ ms.locfileid: "85748113"
   
 1.  [!INCLUDE[ssDE](../../includes/ssde-md.md)]에 연결합니다.  
   
-2.  표준 도구 모음에서 **새 쿼리**를 클릭합니다.  
+2.  표준 도구 모음에서 **새 쿼리** 를 클릭합니다.  
   
 3.  다음 예를 복사하여 쿼리에 붙여 넣습니다. 이 예에서는 [sp_dropdevice](../../relational-databases/system-stored-procedures/sp-dropdevice-transact-sql.md) 를 사용하여 백업 디바이스를 삭제하는 방법에 대해 설명합니다. `mybackupdisk` 백업 디바이스와 실제 이름 `c:\backup\backup1.bak`를 만들려면 첫 번째 예를 실행합니다. **백업 디바이스를 삭제하려면** sp_dropdevice `mybackupdisk` 를 실행합니다. `delfile` 매개 변수는 물리적 이름을 삭제합니다.  
   

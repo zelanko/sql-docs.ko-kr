@@ -21,11 +21,11 @@ author: VanMSFT
 ms.author: vanto
 monikerRange: '>=aps-pdw-2016||>=sql-server-2016||=sqlallproducts-allversions||>=sql-server-linux-2017||=azuresqldb-mi-current'
 ms.openlocfilehash: c79b8ad73bc939354d3b9078c9486531ec8b01ec
-ms.sourcegitcommit: e700497f962e4c2274df16d9e651059b42ff1a10
+ms.sourcegitcommit: 192f6a99e19e66f0f817fdb1977f564b2aaa133b
 ms.translationtype: HT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 08/17/2020
-ms.locfileid: "88426815"
+ms.lasthandoff: 11/25/2020
+ms.locfileid: "96126241"
 ---
 # <a name="alter-server-role-transact-sql"></a>ALTER SERVER ROLE(Transact-SQL)
 [!INCLUDE[tsql-appliesto-ss2012-xxxx-xxxx-pdw-md](../../includes/tsql-appliesto-ss2012-xxxx-xxxx-pdw-md.md)]
@@ -60,10 +60,10 @@ ALTER SERVER ROLE  server_role_name  DROP MEMBER login;
 변경할 서버 역할의 이름입니다.  
   
 ADD MEMBER *server_principal*  
-서버 역할에 지정한 서버 보안 주체를 추가합니다. *server_principal*은 로그인 또는 사용자 정의 서버 역할일 수 있습니다. *server_principal*은 고정 서버 역할, 데이터베이스 역할 또는 sa가 될 수 없습니다.  
+서버 역할에 지정한 서버 보안 주체를 추가합니다. *server_principal* 은 로그인 또는 사용자 정의 서버 역할일 수 있습니다. *server_principal* 은 고정 서버 역할, 데이터베이스 역할 또는 sa가 될 수 없습니다.  
   
 DROP MEMBER *server_principal*  
-서버 역할에서 지정한 서버 보안 주체를 제거합니다. *server_principal*은 로그인 또는 사용자 정의 서버 역할일 수 있습니다. *server_principal*은 고정 서버 역할, 데이터베이스 역할 또는 sa가 될 수 없습니다.  
+서버 역할에서 지정한 서버 보안 주체를 제거합니다. *server_principal* 은 로그인 또는 사용자 정의 서버 역할일 수 있습니다. *server_principal* 은 고정 서버 역할, 데이터베이스 역할 또는 sa가 될 수 없습니다.  
   
 WITH NAME **=** _new_server_role_name_  
 사용자 정의 서버 역할의 새로운 이름을 지정합니다. 이 이름은 아직 서버에 없는 이름이어야 합니다.  

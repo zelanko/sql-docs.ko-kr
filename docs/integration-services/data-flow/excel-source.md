@@ -20,11 +20,11 @@ ms.assetid: e66349f3-b1b8-4763-89b7-7803541a4d62
 author: chugugrace
 ms.author: chugu
 ms.openlocfilehash: e00a786dfb9d9ffe55274822b276a2d2497efd82
-ms.sourcegitcommit: cfa04a73b26312bf18d8f6296891679166e2754d
+ms.sourcegitcommit: 192f6a99e19e66f0f817fdb1977f564b2aaa133b
 ms.translationtype: HT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 10/19/2020
-ms.locfileid: "92192767"
+ms.lasthandoff: 11/25/2020
+ms.locfileid: "96127193"
 ---
 # <a name="excel-source"></a>Excel 원본
 
@@ -66,11 +66,11 @@ ms.locfileid: "92192767"
   **Excel 원본 편집기** 대화 상자의 **연결 관리자** 노드를 사용하여 원본으로 사용할 [!INCLUDE[ofprexcel](../../includes/ofprexcel-md.md)] 통합 문서를 선택할 수 있습니다. Excel 원본에서는 워크시트 또는 기존 통합 문서의 명명된 범위에서 데이터를 읽습니다.  
   
 > [!NOTE]  
->  Excel 원본의 **CommandTimeout** 속성은 **Excel 원본 편집기**에서 사용할 수 없지만 **고급 편집기**를 사용하여 설정할 수 있습니다. 이 속성에 대한 자세한 내용은 [Excel Custom Properties](../../integration-services/data-flow/excel-custom-properties.md)의 Excel 원본 섹션을 참조하십시오.  
+>  Excel 원본의 **CommandTimeout** 속성은 **Excel 원본 편집기** 에서 사용할 수 없지만 **고급 편집기** 를 사용하여 설정할 수 있습니다. 이 속성에 대한 자세한 내용은 [Excel Custom Properties](../../integration-services/data-flow/excel-custom-properties.md)의 Excel 원본 섹션을 참조하십시오.  
   
 ### <a name="static-options"></a>정적 옵션  
  **캐시 없음**  
- 목록에서 기존 Excel 연결 관리자를 선택하거나 **새로 만들기**를 클릭하여 새 연결을 만듭니다.  
+ 목록에서 기존 Excel 연결 관리자를 선택하거나 **새로 만들기** 를 클릭하여 새 연결을 만듭니다.  
   
  **새로 만들기**  
  **Excel 연결 관리자** 대화 상자를 사용하여 새 연결 관리자를 만듭니다.  
@@ -100,7 +100,7 @@ ms.locfileid: "92192767"
   
 #### <a name="data-access-mode--sql-command"></a>데이터 액세스 모드 = SQL 명령  
  **SQL 명령 텍스트**  
- SQL 쿼리 텍스트를 입력하고 **쿼리 작성**을 클릭하여 쿼리를 작성하거나 **찾아보기**를 클릭하여 쿼리 텍스트가 포함된 파일을 찾습니다.  
+ SQL 쿼리 텍스트를 입력하고 **쿼리 작성** 을 클릭하여 쿼리를 작성하거나 **찾아보기** 를 클릭하여 쿼리 텍스트가 포함된 파일을 찾습니다.  
   
  **매개 변수**  
  쿼리 텍스트에 ?를 매개 변수 자리 표시자로 사용하여 매개 변수가 있는 쿼리를 입력한 경우 **쿼리 매개 변수 설정** 대화 상자를 사용하여 쿼리 입력 매개 변수를 패키지 변수에 매핑합니다.  
@@ -139,7 +139,7 @@ ms.locfileid: "92192767"
  데이터 원본의 이름을 표시합니다.  
   
  **열**  
- **Excel 원본 편집기** 대화 상자의 **연결 관리자**페이지에서 선택한 외부(원본) 열을 표시합니다.  
+ **Excel 원본 편집기** 대화 상자의 **연결 관리자** 페이지에서 선택한 외부(원본) 열을 표시합니다.  
   
  **오류**  
  오류가 발생할 경우 수행할 동작을 지정합니다. 오류 무시, 행 리디렉션 또는 구성 요소 실패를 지정할 수 있습니다.  

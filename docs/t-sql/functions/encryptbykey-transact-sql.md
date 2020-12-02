@@ -22,11 +22,11 @@ ms.assetid: 0e11f8c5-f79d-46c1-ab11-b68ef05d6787
 author: VanMSFT
 ms.author: vanto
 ms.openlocfilehash: c90d864c80c3e54b8ea0cf1e1efcc51881e9eb80
-ms.sourcegitcommit: e700497f962e4c2274df16d9e651059b42ff1a10
+ms.sourcegitcommit: 192f6a99e19e66f0f817fdb1977f564b2aaa133b
 ms.translationtype: HT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 08/17/2020
-ms.locfileid: "88366469"
+ms.lasthandoff: 11/25/2020
+ms.locfileid: "96128495"
 ---
 # <a name="encryptbykey-transact-sql"></a>ENCRYPTBYKEY(Transact-SQL)
 [!INCLUDE [SQL Server SQL Database](../../includes/applies-to-version/sql-asdb.md)]
@@ -57,10 +57,10 @@ EncryptByKey ( key_GUID , { 'cleartext' | @cleartext }
  키로 암호화될 데이터가 들어 있는 **navarchar**, **char**, **varchar**, **이진**, **varbinary** 또는 **nchar** 형식의 변수입니다.  
   
  *add_authenticator*  
- 인증자가 *일반 텍스트*와 함께 암호화될지 여부를 나타냅니다. 인증자를 사용하는 경우 1이어야 합니다. **int**  
+ 인증자가 *일반 텍스트* 와 함께 암호화될지 여부를 나타냅니다. 인증자를 사용하는 경우 1이어야 합니다. **int**  
   
  @add_authenticator  
- 인증자가 *일반 텍스트*와 함께 암호화될지 여부를 나타냅니다. 인증자를 사용하는 경우 1이어야 합니다. **int**  
+ 인증자가 *일반 텍스트* 와 함께 암호화될지 여부를 나타냅니다. 인증자를 사용하는 경우 1이어야 합니다. **int**  
   
  *authenticator*  
  인증자가 파생될 데이터입니다. **sysname**.  
@@ -69,7 +69,7 @@ EncryptByKey ( key_GUID , { 'cleartext' | @cleartext }
  인증자가 파생될 데이터를 포함하는 변수입니다.  
   
 ## <a name="return-types"></a>반환 형식  
- 최대 크기가 8,000바이트인 **varbinary**입니다.  
+ 최대 크기가 8,000바이트인 **varbinary** 입니다.  
   
  키가 열리지 않거나, 존재하지 않거나, 더 이상 사용되지 않는 RC4 키이며 데이터베이스 호환성 수준이 110 이상이 아닐 경우 Null을 반환합니다.  
  

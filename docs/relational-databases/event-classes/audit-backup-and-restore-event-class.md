@@ -13,11 +13,11 @@ ms.assetid: 08b0b5fe-298a-483f-b50a-73919a2513ce
 author: stevestein
 ms.author: sstein
 ms.openlocfilehash: cd3b8ca71c9a251343d001ca269e730acf71a217
-ms.sourcegitcommit: e700497f962e4c2274df16d9e651059b42ff1a10
+ms.sourcegitcommit: 192f6a99e19e66f0f817fdb1977f564b2aaa133b
 ms.translationtype: HT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 08/17/2020
-ms.locfileid: "88384859"
+ms.lasthandoff: 11/25/2020
+ms.locfileid: "96126877"
 ---
 # <a name="audit-backup-and-restore-event-class"></a>감사 백업 및 이벤트 클래스 복원
  [!INCLUDE [SQL Server](../../includes/applies-to-version/sqlserver.md)]

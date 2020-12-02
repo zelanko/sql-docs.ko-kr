@@ -2,8 +2,8 @@
 title: '빠른 시작: 데이터베이스 백업 및 복원'
 titleSuffix: SQL Server
 description: 이 문서에서는 SQL Server에서 새 데이터베이스를 만들고, 데이터베이스의 백업을 수행하고, 백업을 복원하는 방법을 알아봅니다.
-author: MashaMSFT
-ms.author: mathoma
+author: cawrites
+ms.author: chadam
 ms.custom: seo-lt-2019
 ms.date: 12/17/2019
 ms.topic: conceptual
@@ -11,12 +11,12 @@ ms.prod: sql
 ms.technology: backup-restore
 ms.prod_service: backup-restore
 ms.assetid: ''
-ms.openlocfilehash: 6e261914baec4774d0e7ae1f343874e4a3154d42
-ms.sourcegitcommit: da88320c474c1c9124574f90d549c50ee3387b4c
+ms.openlocfilehash: d658358fa8e09b967b921d162b8f443032a16ddc
+ms.sourcegitcommit: 5a1ed81749800c33059dac91b0e18bd8bb3081b1
 ms.translationtype: HT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 07/01/2020
-ms.locfileid: "85669954"
+ms.lasthandoff: 11/23/2020
+ms.locfileid: "96129202"
 ---
 # <a name="quickstart-backup-and-restore-a-sql-server-database-on-premises"></a>빠른 시작: 온-프레미스 SQL Server 데이터베이스 백업 및 복원
  [!INCLUDE [SQL Server](../../includes/applies-to-version/sqlserver.md)]
@@ -35,7 +35,7 @@ ms.locfileid: "85669954"
 
 1. [SSMS(SQL Server Management Studio)](../../ssms/download-sql-server-management-studio-ssms.md)를 시작하고 SQL Server 인스턴스에 연결합니다.
 1. **새 쿼리** 창을 엽니다. 
-1. 다음 T-SQL(Transact-SQL) 코드를 실행하여 테스트 데이터베이스를 만듭니다. **개체 탐색기**에서 **데이터베이스** 노드를 새로 고쳐 새 데이터베이스를 확인합니다. 
+1. 다음 T-SQL(Transact-SQL) 코드를 실행하여 테스트 데이터베이스를 만듭니다. **개체 탐색기** 에서 **데이터베이스** 노드를 새로 고쳐 새 데이터베이스를 확인합니다. 
 
 ```sql
 USE [master]
@@ -72,10 +72,10 @@ GO
 데이터베이스의 백업을 만들려면 다음을 수행합니다. 
 
 1. [SSMS(SQL Server Management Studio)](../../ssms/download-sql-server-management-studio-ssms.md)를 시작하고 SQL Server 인스턴스에 연결합니다.
-1. **개체 탐색기**에서 **데이터베이스** 노드를 확장합니다.  
+1. **개체 탐색기** 에서 **데이터베이스** 노드를 확장합니다.  
 1. 데이터베이스를 마우스 오른쪽 단추로 클릭하고 **작업** 위에 마우스를 놓은 다음, **백업업...** 을 선택합니다. 
-1. **대상** 아래에서 백업 경로가 올바른지 확인합니다. 이를 변경해야 할 경우 **제거**를 선택하여 기존 경로를 제거한 다음, 새 경로를 입력하여 **추가**합니다. 줄임표를 사용하여 특정 파일로 이동할 수 있습니다. 
-1. 데이터베이스의 백업을 만들려면 **확인**을 선택합니다. 
+1. **대상** 아래에서 백업 경로가 올바른지 확인합니다. 이를 변경해야 할 경우 **제거** 를 선택하여 기존 경로를 제거한 다음, 새 경로를 입력하여 **추가** 합니다. 줄임표를 사용하여 특정 파일로 이동할 수 있습니다. 
+1. 데이터베이스의 백업을 만들려면 **확인** 을 선택합니다. 
 
 ![SQL 백업 만들기](media/quickstart-backup-restore-database/backup-db-ssms.png)
 
@@ -94,14 +94,14 @@ GO
 데이터베이스를 복원하려면 다음을 수행합니다. 
 
 1. [SSMS(SQL Server Management Studio)](../../ssms/download-sql-server-management-studio-ssms.md)를 시작하고 SQL Server 인스턴스에 연결합니다.
-1. **개체 탐색기**에서 **데이터베이스** 노드를 마우스 오른쪽 단추로 클릭한 다음, **데이터베이스 복원...** 을 선택합니다.
+1. **개체 탐색기** 에서 **데이터베이스** 노드를 마우스 오른쪽 단추로 클릭한 다음, **데이터베이스 복원...** 을 선택합니다.
 
     ![데이터베이스 복원](media/quickstart-backup-restore-database/restore-db-ssms1.png)
 
 1. **디바이스:** 를 선택한 다음, 줄임표(...)를 선택하여 백업 파일을 찾습니다. 
-1. **추가**를 선택하고 `.bak` 파일이 있는 위치로 이동합니다. `.bak` 파일을 선택한 다음, **확인**을 선택합니다. 
-1. **확인**을 선택하여 **백업 디바이스 선택** 대화 상자를 닫습니다. 
-1. 데이터베이스의 백업을 복원하려면 **확인**을 선택합니다. 
+1. **추가** 를 선택하고 `.bak` 파일이 있는 위치로 이동합니다. `.bak` 파일을 선택한 다음, **확인** 을 선택합니다. 
+1. **확인** 을 선택하여 **백업 디바이스 선택** 대화 상자를 닫습니다. 
+1. 데이터베이스의 백업을 복원하려면 **확인** 을 선택합니다. 
 
     ![데이터베이스 복원](media/quickstart-backup-restore-database/restore-db-ssms2.png)
 

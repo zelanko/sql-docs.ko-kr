@@ -19,11 +19,11 @@ ms.assetid: 7049d37a-3e72-4e93-87a1-c96a6f0e2b99
 author: MladjoA
 ms.author: mlandzic
 ms.openlocfilehash: a039118dc0abe85b065d74b96f551c2991820333
-ms.sourcegitcommit: 22dacedeb6e8721e7cdb6279a946d4002cfb5da3
+ms.sourcegitcommit: 192f6a99e19e66f0f817fdb1977f564b2aaa133b
 ms.translationtype: HT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 10/14/2020
-ms.locfileid: "92037071"
+ms.lasthandoff: 11/25/2020
+ms.locfileid: "96128179"
 ---
 # <a name="bufferwithtolerance-geometry-data-type"></a>BufferWithTolerance(geometry 데이터 형식)
 [!INCLUDE [SQL Server SQL Database](../../includes/applies-to-version/sql-asdb.md)]
@@ -46,12 +46,12 @@ ms.locfileid: "92037071"
  *tolerance*  
  버퍼 거리에 대한 허용 오차를 지정하는 **float** 식입니다.  
   
- *Tolerance*는 반환된 선형 근사값에 대한 이상적인 버퍼 거리의 최대 편차를 나타냅니다.  
+ *Tolerance* 는 반환된 선형 근사값에 대한 이상적인 버퍼 거리의 최대 편차를 나타냅니다.  
   
  예를 들어 요소의 이상적인 버퍼 거리는 원이지만 이는 다각형으로 대략 나타내야 합니다. 허용 오차가 작을수록 다각형의 점 개수가 늘어나 결과가 더 복잡해지지만 오류는 줄어듭니다.  
   
  *relative*  
- *tolerance* 값이 상대적인지, 아니면 절대적인지를 지정하는 **비트**입니다. 'TRUE' 또는 1인 경우 *tolerance*는 상대적이며 허용 오차 매개 변수와 인스턴스 경계 상자 지름의 곱으로 계산됩니다. 'FALSE' 또는 0인 경우 허용 오차는 절대적이며 *tolerance* 값은 반환된 선형 근사값에 대한 이상적인 버퍼 거리의 최대 절대 편차입니다.  
+ *tolerance* 값이 상대적인지, 아니면 절대적인지를 지정하는 **비트** 입니다. 'TRUE' 또는 1인 경우 *tolerance* 는 상대적이며 허용 오차 매개 변수와 인스턴스 경계 상자 지름의 곱으로 계산됩니다. 'FALSE' 또는 0인 경우 허용 오차는 절대적이며 *tolerance* 값은 반환된 선형 근사값에 대한 이상적인 버퍼 거리의 최대 절대 편차입니다.  
   
 ## <a name="return-types"></a>반환 형식  
  [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 반환 형식: **geometry**  
@@ -62,13 +62,13 @@ ms.locfileid: "92037071"
  *tolerance* 매개 변수는 0보다 커야 합니다. *tolerance* <= 0일 경우 `System.ArgumentOutOfRangeException`이 throw됩니다.  
   
 > [!NOTE]  
->  *tolerance*가 **float** 형식이므로 부동 소수점 형식의 반올림 문제로 인해 허용 오차로 지정된 값이 매우 작을 경우 `System.Runtime.InteropServices.COMException`이 발생할 수 있습니다.  
+>  *tolerance* 가 **float** 형식이므로 부동 소수점 형식의 반올림 문제로 인해 허용 오차로 지정된 값이 매우 작을 경우 `System.Runtime.InteropServices.COMException`이 발생할 수 있습니다.  
   
 ## <a name="remarks"></a>설명  
  *distance* > 0이면, **Polygon** 또는 **MultiPolygon** 인스턴스가 반환됩니다.  
   
 > [!NOTE]  
->  거리가 **float**이므로 계산에서 매우 작은 값은 0과 같습니다. 이 경우 호출 **geometry** 인스턴스의 복사본이 반환됩니다. [float 및 real&#40;Transact-SQL&#41;](../../t-sql/data-types/float-and-real-transact-sql.md)을 참조하세요.  
+>  거리가 **float** 이므로 계산에서 매우 작은 값은 0과 같습니다. 이 경우 호출 **geometry** 인스턴스의 복사본이 반환됩니다. [float 및 real&#40;Transact-SQL&#41;](../../t-sql/data-types/float-and-real-transact-sql.md)을 참조하세요.  
   
  *distance* = 0이면, 호출 **geometry** 인스턴스의 복사본이 반환됩니다.  
   

@@ -16,11 +16,11 @@ author: rothja
 ms.author: jroth
 monikerRange: =azuresqldb-current||>=sql-server-2016||=sqlallproducts-allversions||>=sql-server-linux-2017||=azuresqldb-mi-current
 ms.openlocfilehash: 25cdef293ced7b58ea41f71f78a1046c6b5dd0ba
-ms.sourcegitcommit: e700497f962e4c2274df16d9e651059b42ff1a10
+ms.sourcegitcommit: 192f6a99e19e66f0f817fdb1977f564b2aaa133b
 ms.translationtype: HT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 08/17/2020
-ms.locfileid: "88463805"
+ms.lasthandoff: 11/25/2020
+ms.locfileid: "96128628"
 ---
 # <a name="ddl-events"></a>DDL 이벤트
 [!INCLUDE [SQL Server SQL Database](../../includes/applies-to-version/sql-asdb.md)]
@@ -34,13 +34,13 @@ ms.locfileid: "88463805"
   
 :::row:::
     :::column:::
-        CREATE_APPLICATION_ROLE(CREATE APPLICATION ROLE 문과 **sp_addapprole**에 적용됩니다. 새 스키마가 생성되면 이 이벤트는 CREATE_SCHEMA 이벤트도 트리거합니다.)
+        CREATE_APPLICATION_ROLE(CREATE APPLICATION ROLE 문과 **sp_addapprole** 에 적용됩니다. 새 스키마가 생성되면 이 이벤트는 CREATE_SCHEMA 이벤트도 트리거합니다.)
     :::column-end:::
     :::column:::
-        ALTER_APPLICATION_ROLE(ALTER APPLICATION ROLE 문과 **sp_approlepassword**에 적용됩니다.)
+        ALTER_APPLICATION_ROLE(ALTER APPLICATION ROLE 문과 **sp_approlepassword** 에 적용됩니다.)
     :::column-end:::
     :::column:::
-        DROP_APPLICATION_ROLE(DROP APPLICATION ROLE 문과 **sp_dropapprole**에 적용됩니다.)
+        DROP_APPLICATION_ROLE(DROP APPLICATION ROLE 문과 **sp_dropapprole** 에 적용됩니다.)
     :::column-end:::
 :::row-end:::  
 :::row:::
@@ -70,7 +70,7 @@ ms.locfileid: "88463805"
         ALTER_AUTHORIZATION
     :::column-end:::
     :::column:::
-        ALTER_AUTHORIZATION_DATABASE(ON DATABASE가 지정된 경우 ALTER AUTHORIZATION 문과 **sp_changedbowner**에 적용됩니다.)
+        ALTER_AUTHORIZATION_DATABASE(ON DATABASE가 지정된 경우 ALTER AUTHORIZATION 문과 **sp_changedbowner** 에 적용됩니다.)
     :::column-end:::
     :::column:::
     :::column-end:::
@@ -163,10 +163,10 @@ ms.locfileid: "88463805"
 :::row-end:::  
 :::row:::
     :::column:::
-        BIND_DEFAULT( **sp_bindefault**에 적용됩니다.)
+        BIND_DEFAULT( **sp_bindefault** 에 적용됩니다.)
     :::column-end:::
     :::column:::
-        UNBIND_DEFAULT( **sp_unbindefault**에 적용됩니다.)
+        UNBIND_DEFAULT( **sp_unbindefault** 에 적용됩니다.)
     :::column-end:::
     :::column:::
     :::column-end:::
@@ -183,13 +183,13 @@ ms.locfileid: "88463805"
 :::row-end:::  
 :::row:::
     :::column:::
-        CREATE_EXTENDED_PROPERTY( **sp_addextendedproperty**에 적용됩니다.)
+        CREATE_EXTENDED_PROPERTY( **sp_addextendedproperty** 에 적용됩니다.)
     :::column-end:::
     :::column:::
-        ALTER_EXTENDED_PROPERTY( **sp_updateextendedproperty**에 적용됩니다.)
+        ALTER_EXTENDED_PROPERTY( **sp_updateextendedproperty** 에 적용됩니다.)
     :::column-end:::
     :::column:::
-        DROP_EXTENDED_PROPERTY( **sp_dropextendedproperty**에 적용됩니다.)
+        DROP_EXTENDED_PROPERTY( **sp_dropextendedproperty** 에 적용됩니다.)
     :::column-end:::
 :::row-end:::  
 :::row:::
@@ -197,7 +197,7 @@ ms.locfileid: "88463805"
         CREATE_FULLTEXT_CATALOG( **create** 가 지정된 경우 CREATE FULLTEXT CATALOG 문과 *sp_fulltextcatalog* 에 적용됩니다.)
     :::column-end:::
     :::column:::
-        ALTER_FULLTEXT_CATALOG( **start_incremental** , *start_full*, *Stop*또는 *Rebuild*가 지정된 경우 ALTER FULLTEXT CATALOG 문과 *sp_fulltextcatalog* 에 적용되고, **enable** 이 지정된 경우 *sp_fulltext_database* 에 적용됩니다.)
+        ALTER_FULLTEXT_CATALOG( **start_incremental** , *start_full*, *Stop* 또는 *Rebuild* 가 지정된 경우 ALTER FULLTEXT CATALOG 문과 *sp_fulltextcatalog* 에 적용되고, **enable** 이 지정된 경우 *sp_fulltext_database* 에 적용됩니다.)
     :::column-end:::
     :::column:::
         DROP_FULLTEXT_CATALOG( **drop** 이 지정된 경우 DROP FULLTEXT CATALOG 문과 *sp_fulltextcatalog* 에 적용됩니다.)
@@ -208,7 +208,7 @@ ms.locfileid: "88463805"
         CREATE_FULLTEXT_INDEX( **create** 가 지정된 경우 CREATE FULLTEXT INDEX 문과 *sp_fulltexttable* 에 적용됩니다.)
     :::column-end:::
     :::column:::
-        ALTER_FULLTEXT_INDEX( **start_full** , *start_incremental*또는 *stop*이 지정된 경우 ALTER FULLTEXT INDEX 문과 *sp_fulltextcatalog* 에 적용되고, **create**또는 **drop** 외에 다른 동작이 지정된 경우 *sp_fulltext_column* 과 *sp_fulltext_table* 에 적용됩니다.)
+        ALTER_FULLTEXT_INDEX( **start_full** , *start_incremental* 또는 *stop* 이 지정된 경우 ALTER FULLTEXT INDEX 문과 *sp_fulltextcatalog* 에 적용되고, **create** 또는 **drop** 외에 다른 동작이 지정된 경우 *sp_fulltext_column* 과 *sp_fulltext_table* 에 적용됩니다.)
     :::column-end:::
     :::column:::
         DROP_FULLTEXT_INDEX( **drop** 이 지정된 경우 DROP FULLTEXT INDEX 문과 *sp_fulltexttable* 에 적용됩니다.)
@@ -241,7 +241,7 @@ ms.locfileid: "88463805"
         CREATE_INDEX
     :::column-end:::
     :::column:::
-        ALTER_INDEX(ALTER INDEX 문과 **sp_indexoption**에 적용됩니다.)
+        ALTER_INDEX(ALTER INDEX 문과 **sp_indexoption** 에 적용됩니다.)
     :::column-end:::
     :::column:::
         DROP_INDEX
@@ -293,7 +293,7 @@ ms.locfileid: "88463805"
 :::row-end:::  
 :::row:::
     :::column:::
-        CREATE_PLAN_GUIDE( **sp_create_plan_guide**에 적용됩니다.)
+        CREATE_PLAN_GUIDE( **sp_create_plan_guide** 에 적용됩니다.)
     :::column-end:::
     :::column:::
         ALTER_PLAN_GUIDE(ENABLE, ENABLE ALL, DISABLE 또는 DISABLE ALL이 지정된 경우 **sp_control_plan_guide** 에 적용됩니다.)
@@ -307,7 +307,7 @@ ms.locfileid: "88463805"
         CREATE_PROCEDURE
     :::column-end:::
     :::column:::
-        ALTER_PROCEDURE(ALTER PROCEDURE 문과 **sp_procoption**에 적용됩니다.)
+        ALTER_PROCEDURE(ALTER PROCEDURE 문과 **sp_procoption** 에 적용됩니다.)
     :::column-end:::
     :::column:::
         DROP_PROCEDURE
@@ -346,7 +346,7 @@ ms.locfileid: "88463805"
 :::row-end:::  
 :::row:::
     :::column:::
-        RENAME( **sp_rename**에 적용됩니다.)
+        RENAME( **sp_rename** 에 적용됩니다.)
     :::column-end:::
     :::column:::
     :::column-end:::
@@ -355,13 +355,13 @@ ms.locfileid: "88463805"
 :::row-end:::  
 :::row:::
     :::column:::
-        CREATE_ROLE(CREATE ROLE 문, **sp_addrole**및 **sp_addgroup**에 적용됩니다.)
+        CREATE_ROLE(CREATE ROLE 문, **sp_addrole** 및 **sp_addgroup** 에 적용됩니다.)
     :::column-end:::
     :::column:::
         ALTER_ROLE
     :::column-end:::
     :::column:::
-        DROP_ROLE(DROP ROLE 문, **sp_droprole**및 **sp_dropgroup**에 적용됩니다.)
+        DROP_ROLE(DROP ROLE 문, **sp_droprole** 및 **sp_dropgroup** 에 적용됩니다.)
     :::column-end:::
 :::row-end:::  
 :::row:::
@@ -397,20 +397,20 @@ ms.locfileid: "88463805"
 :::row-end:::  
 :::row:::
     :::column:::
-        BIND_RULE( **sp_bindrule**에 적용됩니다.)
+        BIND_RULE( **sp_bindrule** 에 적용됩니다.)
     :::column-end:::
     :::column:::
-        UNBIND_RULE( **sp_unbindrule**에 적용됩니다.)
+        UNBIND_RULE( **sp_unbindrule** 에 적용됩니다.)
     :::column-end:::
     :::column:::
     :::column-end:::
 :::row-end:::  
 :::row:::
     :::column:::
-        CREATE_SCHEMA(CREATE SCHEMA 문, **sp_addrole**, **sp_adduser**, **sp_addgroup**및 **sp_grantdbaccess**에 적용됩니다.)
+        CREATE_SCHEMA(CREATE SCHEMA 문, **sp_addrole**, **sp_adduser**, **sp_addgroup** 및 **sp_grantdbaccess** 에 적용됩니다.)
     :::column-end:::
     :::column:::
-        ALTER_SCHEMA(ALTER SCHEMA 문과 **sp_changeobjectowner**에 적용됩니다.)
+        ALTER_SCHEMA(ALTER SCHEMA 문과 **sp_changeobjectowner** 에 적용됩니다.)
     :::column-end:::
     :::column:::
         DROP_SCHEMA
@@ -539,7 +539,7 @@ ms.locfileid: "88463805"
         CREATE_TABLE
     :::column-end:::
     :::column:::
-        ALTER_TABLE(ALTER TABLE 문과 **sp_tableoption**에 적용됩니다.)
+        ALTER_TABLE(ALTER TABLE 문과 **sp_tableoption** 에 적용됩니다.)
     :::column-end:::
     :::column:::
         DROP_TABLE
@@ -550,7 +550,7 @@ ms.locfileid: "88463805"
         CREATE_TRIGGER
     :::column-end:::
     :::column:::
-        ALTER_TRIGGER(ALTER TRIGGER 문과 **sp_settriggerorder**에 적용됩니다.)
+        ALTER_TRIGGER(ALTER TRIGGER 문과 **sp_settriggerorder** 에 적용됩니다.)
     :::column-end:::
     :::column:::
         DROP_TRIGGER
@@ -558,23 +558,23 @@ ms.locfileid: "88463805"
 :::row-end:::  
 :::row:::
     :::column:::
-        CREATE_TYPE(CREATE TYPE 문과 **sp_addtype**에 적용됩니다.)
+        CREATE_TYPE(CREATE TYPE 문과 **sp_addtype** 에 적용됩니다.)
     :::column-end:::
     :::column:::
-        DROP_TYPE(DROP TYPE 문과 **sp_droptype**에 적용됩니다.)
+        DROP_TYPE(DROP TYPE 문과 **sp_droptype** 에 적용됩니다.)
     :::column-end:::
     :::column:::
     :::column-end:::
 :::row-end:::  
 :::row:::
     :::column:::
-        CREATE_USER(CREATE USER 문, **sp_adduser**및 **sp_grantdbaccess**에 적용됩니다.)
+        CREATE_USER(CREATE USER 문, **sp_adduser** 및 **sp_grantdbaccess** 에 적용됩니다.)
     :::column-end:::
     :::column:::
-        ALTER_USER(ALTER USER 문 및 **sp_change_users_login**에 적용됩니다.)
+        ALTER_USER(ALTER USER 문 및 **sp_change_users_login** 에 적용됩니다.)
     :::column-end:::
     :::column:::
-        DROP_USER(DROP USER 문, **sp_dropuser**및 **sp_revokedbaccess**에 적용됩니다.)
+        DROP_USER(DROP USER 문, **sp_dropuser** 및 **sp_revokedbaccess** 에 적용됩니다.)
     :::column-end:::
 :::row-end:::  
 :::row:::
@@ -663,7 +663,7 @@ ms.locfileid: "88463805"
         CREATE_DATABASE
     :::column-end:::
     :::column:::
-        ALTER_DATABASE(ALTER DATABASE 문과 **sp_fulltext_database**에 적용됩니다.)
+        ALTER_DATABASE(ALTER DATABASE 문과 **sp_fulltext_database** 에 적용됩니다.)
     :::column-end:::
     :::column:::
         DROP_DATABASE
@@ -693,20 +693,20 @@ ms.locfileid: "88463805"
 :::row-end:::  
 :::row:::
     :::column:::
-        CREATE_EXTENDED_PROCEDURE( **sp_addextendedproc**에 적용됩니다.)
+        CREATE_EXTENDED_PROCEDURE( **sp_addextendedproc** 에 적용됩니다.)
     :::column-end:::
     :::column:::
-        DROP_EXTENDED_PROCEDURE( **sp_dropextendedproc**에 적용됩니다.)
+        DROP_EXTENDED_PROCEDURE( **sp_dropextendedproc** 에 적용됩니다.)
     :::column-end:::
     :::column:::
     :::column-end:::
 :::row-end:::  
 :::row:::
     :::column:::
-        CREATE_LINKED_SERVER( **sp_addlinkedserver**에 적용됩니다.)
+        CREATE_LINKED_SERVER( **sp_addlinkedserver** 에 적용됩니다.)
     :::column-end:::
     :::column:::
-        ALTER_LINKED_SERVER( **sp_serveroption**에 적용됩니다.)
+        ALTER_LINKED_SERVER( **sp_serveroption** 에 적용됩니다.)
     :::column-end:::
     :::column:::
         DROP_LINKED_SERVER(연결된 서버가 지정된 경우 **sp_dropserver** 에 적용됩니다.)
@@ -714,42 +714,42 @@ ms.locfileid: "88463805"
 :::row-end:::  
 :::row:::
     :::column:::
-        CREATE_LINKED_SERVER_LOGIN( **sp_addlinkedsrvlogin**에 적용됩니다.)
+        CREATE_LINKED_SERVER_LOGIN( **sp_addlinkedsrvlogin** 에 적용됩니다.)
     :::column-end:::
     :::column:::
-        DROP_LINKED_SERVER_LOGIN( **sp_droplinkedsrvlogin**에 적용됩니다.)
+        DROP_LINKED_SERVER_LOGIN( **sp_droplinkedsrvlogin** 에 적용됩니다.)
     :::column-end:::
     :::column:::
-    :::column-end:::
-:::row-end:::  
-:::row:::
-    :::column:::
-        CREATE_LOGIN(암시적으로 만들어야 하는 존재하지 않는 로그인이 사용된 경우 CREATE LOGIN 문, **sp_addlogin**, **sp_grantlogin**, **xp_grantlogin**및 **sp_denylogin** 에 적용됩니다.)
-    :::column-end:::
-    :::column:::
-        ALTER_LOGIN( **Auto_Fix**가 지정된 경우 ALTER LOGIN 문, **sp_defaultdb**, **sp_defaultlanguage**, **sp_password** 및 *sp_change_users_login* 에 적용됩니다.)
-    :::column-end:::
-    :::column:::
-        DROP_LOGIN(DROP LOGIN 문, **sp_droplogin**, **sp_revokelogin**및 **xp_revokelogin**에 적용됩니다.)
     :::column-end:::
 :::row-end:::  
 :::row:::
     :::column:::
-        CREATE_MESSAGE( **sp_addmessage**에 적용됩니다.)
+        CREATE_LOGIN(암시적으로 만들어야 하는 존재하지 않는 로그인이 사용된 경우 CREATE LOGIN 문, **sp_addlogin**, **sp_grantlogin**, **xp_grantlogin** 및 **sp_denylogin** 에 적용됩니다.)
     :::column-end:::
     :::column:::
-        ALTER_MESSAGE( **sp_altermessage**에 적용됩니다.)
+        ALTER_LOGIN( **Auto_Fix** 가 지정된 경우 ALTER LOGIN 문, **sp_defaultdb**, **sp_defaultlanguage**, **sp_password** 및 *sp_change_users_login* 에 적용됩니다.)
     :::column-end:::
     :::column:::
-        DROP_MESSAGE( **sp_dropmessage**에 적용됩니다.)
+        DROP_LOGIN(DROP LOGIN 문, **sp_droplogin**, **sp_revokelogin** 및 **xp_revokelogin** 에 적용됩니다.)
     :::column-end:::
 :::row-end:::  
 :::row:::
     :::column:::
-        CREATE_REMOTE_SERVER( **sp_addserver**에 적용됩니다.)
+        CREATE_MESSAGE( **sp_addmessage** 에 적용됩니다.)
     :::column-end:::
     :::column:::
-        ALTER_REMOTE_SERVER( **sp_setnetname**에 적용됩니다.)
+        ALTER_MESSAGE( **sp_altermessage** 에 적용됩니다.)
+    :::column-end:::
+    :::column:::
+        DROP_MESSAGE( **sp_dropmessage** 에 적용됩니다.)
+    :::column-end:::
+:::row-end:::  
+:::row:::
+    :::column:::
+        CREATE_REMOTE_SERVER( **sp_addserver** 에 적용됩니다.)
+    :::column-end:::
+    :::column:::
+        ALTER_REMOTE_SERVER( **sp_setnetname** 에 적용됩니다.)
     :::column-end:::
     :::column:::
         DROP_REMOTE_SERVER(원격 서버가 지정된 경우 **sp_dropserver** 에 적용됩니다.)

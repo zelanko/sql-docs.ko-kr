@@ -13,14 +13,14 @@ helpviewer_keywords:
 - expiration [SQL Server]
 - database backups [SQL Server], expiration dates
 ms.assetid: 76e814df-6487-4893-9f09-7759f1863a5c
-author: MikeRayMSFT
-ms.author: mikeray
-ms.openlocfilehash: d932e7551ade740f47b6bc3026fc086aaaf3d6e4
-ms.sourcegitcommit: da88320c474c1c9124574f90d549c50ee3387b4c
+author: cawrites
+ms.author: chadam
+ms.openlocfilehash: 2fbf2f28d4f3bb0befb5271f51ea6462ec667334
+ms.sourcegitcommit: 5a1ed81749800c33059dac91b0e18bd8bb3081b1
 ms.translationtype: HT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 07/01/2020
-ms.locfileid: "85759073"
+ms.lasthandoff: 11/23/2020
+ms.locfileid: "96129069"
 ---
 # <a name="set-the-expiration-date-on-a-backup-sql-server"></a>백업의 만료 날짜 설정(SQL Server)
  [!INCLUDE [SQL Server](../../includes/applies-to-version/sqlserver.md)]
@@ -54,17 +54,17 @@ ms.locfileid: "85759073"
   
 1.  [!INCLUDE[msCoName](../../includes/msconame-md.md)] [!INCLUDE[ssDEnoversion](../../includes/ssdenoversion-md.md)]의 해당 인스턴스에 연결한 후 개체 탐색기에서 서버 이름을 클릭하여 서버 트리를 확장합니다.  
   
-2.  **데이터베이스**를 확장하고 해당 데이터베이스에 따라 사용자 데이터베이스를 선택하거나 **시스템 데이터베이스** 를 확장한 다음 시스템 데이터베이스를 선택합니다.  
+2.  **데이터베이스** 를 확장하고 해당 데이터베이스에 따라 사용자 데이터베이스를 선택하거나 **시스템 데이터베이스** 를 확장한 다음 시스템 데이터베이스를 선택합니다.  
   
-3.  데이터베이스를 마우스 오른쪽 단추로 클릭하고 **태스크**를 가리킨 다음 **백업**을 클릭합니다. **데이터베이스 백업** 대화 상자가 나타납니다.  
+3.  데이터베이스를 마우스 오른쪽 단추로 클릭하고 **태스크** 를 가리킨 다음 **백업** 을 클릭합니다. **데이터베이스 백업** 대화 상자가 나타납니다.  
   
-4.  **일반** 페이지에서 백업 세트를 다른 백업으로 덮어쓸 수 있는 만료 날짜를 **백업 세트 만료 기한**에 지정합니다.  
+4.  **일반** 페이지에서 백업 세트를 다른 백업으로 덮어쓸 수 있는 만료 날짜를 **백업 세트 만료 기한** 에 지정합니다.  
   
     -   백업 세트가 특정 일수가 지난 후에 만료되도록 하려면 **다음 이후** (기본 옵션)를 클릭한 다음 백업 세트를 만든 후 백업 세트가 만료되기까지 경과해야 하는 일수를 입력합니다. 이 값은 0일에서 99999일 사이일 수 있습니다. 값 0일은 백업 세트 기간 제한이 없음을 의미합니다.  
   
-         기본값은 **서버 속성** 대화 상자( **데이터베이스 설정** 페이지)의**백업 미디어 기본 보존 기간(일)** 옵션에 설정되어 있습니다. 이 페이지에 액세스하려면 개체 탐색기에서 서버 이름을 마우스 오른쪽 단추로 클릭하고 속성을 선택한 다음 **데이터베이스 설정** 페이지를 선택합니다.  
+         기본값은 **서버 속성** 대화 상자( **데이터베이스 설정** 페이지)의 **백업 미디어 기본 보존 기간(일)** 옵션에 설정되어 있습니다. 이 페이지에 액세스하려면 개체 탐색기에서 서버 이름을 마우스 오른쪽 단추로 클릭하고 속성을 선택한 다음 **데이터베이스 설정** 페이지를 선택합니다.  
   
-    -   백업 세트가 특정 일자에 만료되게 하려면 **날짜**를 클릭한 다음 백업 세트가 만료될 날짜를 입력합니다.  
+    -   백업 세트가 특정 일자에 만료되게 하려면 **날짜** 를 클릭한 다음 백업 세트가 만료될 날짜를 입력합니다.  
   
 ##  <a name="using-transact-sql"></a><a name="TsqlProcedure"></a> Transact-SQL 사용  
   
@@ -72,7 +72,7 @@ ms.locfileid: "85759073"
   
 1.  [!INCLUDE[ssDE](../../includes/ssde-md.md)]에 연결합니다.  
   
-2.  표준 도구 모음에서 **새 쿼리**를 클릭합니다.  
+2.  표준 도구 모음에서 **새 쿼리** 를 클릭합니다.  
   
 3.  [BACKUP](../../t-sql/statements/backup-transact-sql.md) 문에서 EXPIREDATE 또는 RETAINDAYS 옵션을 지정하여 [!INCLUDE[ssDEnoversion](../../includes/ssdenoversion-md.md)] 이 백업을 덮어 쓸 수 있는 시간을 확인합니다. 두 옵션 모두 지정하지 않으면 [미디어 보존](../../database-engine/configure-windows/configure-the-media-retention-server-configuration-option.md) 서버 구성 설정에 따라 만료 날짜가 결정됩니다. 이 예에서는 `EXPIREDATE` 옵션을 사용하여 만료 날짜를 2015년 6월 30일(`6/30/2015`)로 지정합니다.  
   

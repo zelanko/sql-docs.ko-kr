@@ -22,11 +22,11 @@ ms.assetid: 03eba220-13e2-49e3-bd9d-ea9df84dc28c
 author: markingmyname
 ms.author: maghan
 ms.openlocfilehash: 9aa2c82f83e20017778a9e5096977dedeb38646d
-ms.sourcegitcommit: ac9feb0b10847b369b77f3c03f8200c86ee4f4e0
+ms.sourcegitcommit: 192f6a99e19e66f0f817fdb1977f564b2aaa133b
 ms.translationtype: HT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 09/16/2020
-ms.locfileid: "90688600"
+ms.lasthandoff: 11/25/2020
+ms.locfileid: "96126228"
 ---
 # <a name="alter-view-transact-sql"></a>ALTER VIEW(Transact-SQL)
 [!INCLUDE [sql-asdb-asdbmi-asa-pdw](../../includes/applies-to-version/sql-asdb-asdbmi-asa-pdw.md)]
@@ -75,7 +75,7 @@ AS <select_statement>
 >  열 사용 권한을 유지하려면 ALTER VIEW 실행 전후에 동일한 열 이름을 사용해야 합니다.  
   
 > [!NOTE]  
->  뷰에 대한 열에서 열 이름에 대한 사용 권한은 기본 데이터의 원본에 상관없이 CREATE VIEW 또는 ALTER VIEW 문에 적용할 수 있습니다. 예를 들어 CREATE VIEW 문에서 **SalesOrderID** 열에 사용 권한이 부여된 경우 ALTER VIEW 문에서 **SalesOrderID** 열의 이름을 **OrderRef**로 변경할 수 있으며 이때 **SalesOrderID**를 사용하는 뷰와 관련된 권한은 계속 유지됩니다.  
+>  뷰에 대한 열에서 열 이름에 대한 사용 권한은 기본 데이터의 원본에 상관없이 CREATE VIEW 또는 ALTER VIEW 문에 적용할 수 있습니다. 예를 들어 CREATE VIEW 문에서 **SalesOrderID** 열에 사용 권한이 부여된 경우 ALTER VIEW 문에서 **SalesOrderID** 열의 이름을 **OrderRef** 로 변경할 수 있으며 이때 **SalesOrderID** 를 사용하는 뷰와 관련된 권한은 계속 유지됩니다.  
   
  ENCRYPTION  
  **적용 대상**: [!INCLUDE[ssKatmai](../../includes/sskatmai-md.md)] 이상 및 [!INCLUDE[ssSDSfull](../../includes/sssdsfull-md.md)]  
@@ -83,7 +83,7 @@ AS <select_statement>
  ALTER VIEW 문의 텍스트가 포함된 [sys.syscomments](../../relational-databases/system-compatibility-views/sys-syscomments-transact-sql.md) 항목을 암호화합니다. WITH ENCRYPTION은 뷰가 SQL Server 복제의 일부로 게시되는 것을 방지합니다.  
   
  SCHEMABINDING  
- 기본 테이블의 스키마에 뷰를 바인딩합니다. SCHEMABINDING을 지정하면 뷰 정의에 영향을 줄 수 있는 경우에는 기본 테이블을 수정할 수 없습니다. 수정할 테이블의 종속성을 제거하려면 우선 뷰 정의 자체를 수정 또는 삭제해야 합니다. SCHEMABINDING을 사용하는 경우 _select\_statement_에 참조되는 테이블, 뷰 또는 사용자 정의 함수의 두 부분으로 구성된 이름(_schema_ **.** _object_)이 있어야 합니다. 참조된 개체는 모두 같은 데이터베이스에 있어야 합니다.  
+ 기본 테이블의 스키마에 뷰를 바인딩합니다. SCHEMABINDING을 지정하면 뷰 정의에 영향을 줄 수 있는 경우에는 기본 테이블을 수정할 수 없습니다. 수정할 테이블의 종속성을 제거하려면 우선 뷰 정의 자체를 수정 또는 삭제해야 합니다. SCHEMABINDING을 사용하는 경우 _select\_statement_ 에 참조되는 테이블, 뷰 또는 사용자 정의 함수의 두 부분으로 구성된 이름(_schema_ **.** _object_)이 있어야 합니다. 참조된 개체는 모두 같은 데이터베이스에 있어야 합니다.  
   
  SCHEMABINDING 절로 만든 뷰에서 사용하는 뷰 또는 테이블은 뷰가 삭제되거나 변경되어 스키마 바인딩이 더 이상 존재하지 않는 경우에만 삭제할 수 있습니다. 그렇지 않으면 [!INCLUDE[ssDE](../../includes/ssde-md.md)]에서 오류가 발생합니다. 또한 ALTER TABLE 문이 뷰 정의에 영향을 미치는 경우에 스키마 바인딩이 있는 뷰에서 사용하는 테이블에 ALTER TABLE 문을 실행하면 실패합니다.  
   

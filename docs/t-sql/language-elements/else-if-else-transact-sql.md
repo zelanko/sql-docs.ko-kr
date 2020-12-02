@@ -22,16 +22,16 @@ author: rothja
 ms.author: jroth
 monikerRange: '>=aps-pdw-2016||=azuresqldb-current||=azure-sqldw-latest||>=sql-server-2016||=sqlallproducts-allversions||>=sql-server-linux-2017||=azuresqldb-mi-current'
 ms.openlocfilehash: 06c47fb4561844cb92e40301b24068a35d573ccd
-ms.sourcegitcommit: cfa04a73b26312bf18d8f6296891679166e2754d
+ms.sourcegitcommit: 192f6a99e19e66f0f817fdb1977f564b2aaa133b
 ms.translationtype: HT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 10/19/2020
-ms.locfileid: "92196607"
+ms.lasthandoff: 11/25/2020
+ms.locfileid: "96128248"
 ---
 # <a name="else-ifelse-transact-sql"></a>ELSE(IF...ELSE)(Transact-SQL)
 [!INCLUDE [sql-asdb-asdbmi-asa-pdw](../../includes/applies-to-version/sql-asdb-asdbmi-asa-pdw.md)]
 
-  [!INCLUDE[tsql](../../includes/tsql-md.md)] 문을 실행하기 위한 조건을 설정합니다. *Boolean_expression*이 TRUE로 평가되면 [!INCLUDE[tsql](../../includes/tsql-md.md)] 문(*sql_statement*) 다음의 *Boolean_expression*가 실행됩니다. 선택적인 ELSE 키워드는 *Boolean_expression*이 FALSE 또는 NULL로 평가될 때 실행되는 대체 [!INCLUDE[tsql](../../includes/tsql-md.md)] 문입니다.  
+  [!INCLUDE[tsql](../../includes/tsql-md.md)] 문을 실행하기 위한 조건을 설정합니다. *Boolean_expression* 이 TRUE로 평가되면 [!INCLUDE[tsql](../../includes/tsql-md.md)] 문(*sql_statement*) 다음의 *Boolean_expression* 가 실행됩니다. 선택적인 ELSE 키워드는 *Boolean_expression* 이 FALSE 또는 NULL로 평가될 때 실행되는 대체 [!INCLUDE[tsql](../../includes/tsql-md.md)] 문입니다.  
   
  ![항목 링크 아이콘](../../database-engine/configure-windows/media/topic-link.gif "항목 링크 아이콘") [Transact-SQL 구문 표기 규칙](../../t-sql/language-elements/transact-sql-syntax-conventions-transact-sql.md)  
   
@@ -48,7 +48,7 @@ IF Boolean_expression
 
 ## <a name="arguments"></a>인수
  *Boolean_expression*  
- TRUE 또는 FALSE를 반환하는 식입니다. *Boolean_expression*이 SELECT 문을 포함하는 경우에는 SELECT 문을 괄호로 묶어야 합니다.  
+ TRUE 또는 FALSE를 반환하는 식입니다. *Boolean_expression* 이 SELECT 문을 포함하는 경우에는 SELECT 문을 괄호로 묶어야 합니다.  
   
  { *sql_statement* | *statement_block* }  
  문 블록에 정의된 유효한 [!INCLUDE[tsql](../../includes/tsql-md.md)] 문이나 문 그룹입니다. 문 블록(일괄 처리)을 정의하려면 흐름 제어 언어 키워드인 BEGIN과 END를 사용합니다. BEGIN...END 블록 내의 모든 [!INCLUDE[tsql](../../includes/tsql-md.md)] 문이 유효해도 특정 [!INCLUDE[tsql](../../includes/tsql-md.md)] 문을 동일한 일괄 처리(문 블록) 내에서 그룹화할 수 없습니다.  

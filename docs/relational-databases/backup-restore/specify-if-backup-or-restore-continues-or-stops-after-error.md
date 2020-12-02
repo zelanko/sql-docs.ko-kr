@@ -14,14 +14,14 @@ helpviewer_keywords:
 - backups [SQL Server], errors
 - database backups [SQL Server], errors
 ms.assetid: 042be17a-b9b0-4629-b6bb-b87a8bc6c316
-author: MikeRayMSFT
-ms.author: mikeray
-ms.openlocfilehash: 003fbc933de445b6540c797d57b02dbad834e0bf
-ms.sourcegitcommit: da88320c474c1c9124574f90d549c50ee3387b4c
+author: cawrites
+ms.author: chadam
+ms.openlocfilehash: cddc94d853dffef5e030ccc388c0b95bbc5f745a
+ms.sourcegitcommit: 5a1ed81749800c33059dac91b0e18bd8bb3081b1
 ms.translationtype: HT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 07/01/2020
-ms.locfileid: "85759053"
+ms.lasthandoff: 11/23/2020
+ms.locfileid: "96129054"
 ---
 # <a name="specify-backup-or-restore-to-continue-or-stop-after-error"></a>오류 발생 후 계속 또는 중지하도록 백업 또는 복원 지정
  [!INCLUDE [SQL Server](../../includes/applies-to-version/sqlserver.md)]
@@ -61,7 +61,7 @@ ms.locfileid: "85759053"
   
 1.  [데이터베이스 백업 만들기](../../relational-databases/backup-restore/create-a-full-database-backup-sql-server.md)단계를 따릅니다.  
   
-2.  **옵션** 페이지의 **안정성** 섹션에서 **미디어에 쓰기 전에 체크섬 수행** 과 **오류 발생 시 계속**을 차례로 클릭합니다.  
+2.  **옵션** 페이지의 **안정성** 섹션에서 **미디어에 쓰기 전에 체크섬 수행** 과 **오류 발생 시 계속** 을 차례로 클릭합니다.  
   
 ##  <a name="using-transact-sql"></a><a name="TsqlProcedure"></a> Transact-SQL 사용  
   
@@ -69,7 +69,7 @@ ms.locfileid: "85759053"
   
 1.  [!INCLUDE[ssDE](../../includes/ssde-md.md)]에 연결합니다.  
   
-2.  표준 도구 모음에서 **새 쿼리**를 클릭합니다.  
+2.  표준 도구 모음에서 **새 쿼리** 를 클릭합니다.  
   
 3.  [BACKUP](../../t-sql/statements/backup-transact-sql.md) 문에서 계속하려면 CONTINUE_AFTER ERROR 옵션을 지정하고 중지하려면 STOP_ON_ERROR 옵션을 지정합니다. 기본 동작은 오류가 발생한 후 중지하는 것입니다. 이 예에서는 오류가 발생하더라도 백업 작업을 계속하도록 지시합니다.  
   
@@ -84,7 +84,7 @@ GO
   
 1.  [!INCLUDE[ssDE](../../includes/ssde-md.md)]에 연결합니다.  
   
-2.  표준 도구 모음에서 **새 쿼리**를 클릭합니다.  
+2.  표준 도구 모음에서 **새 쿼리** 를 클릭합니다.  
   
 3.  [RESTORE](../../t-sql/statements/restore-statements-transact-sql.md) 문에서 계속하려면 CONTINUE_AFTER ERROR 옵션을 지정하고 중지하려면 STOP_ON_ERROR 옵션을 지정합니다. 기본 동작은 오류가 발생한 후 중지하는 것입니다. 이 예에서는 오류가 발생하더라도 복원 작업을 계속하도록 지시합니다.  
   

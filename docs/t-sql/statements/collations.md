@@ -21,11 +21,11 @@ author: markingmyname
 ms.author: maghan
 monikerRange: '>=aps-pdw-2016||=azuresqldb-current||=azure-sqldw-latest||>=sql-server-2016||=sqlallproducts-allversions||>=sql-server-linux-2017||=azuresqldb-mi-current'
 ms.openlocfilehash: c3c05cd8fbf9ae131bbb1bc61f18acab043a8228
-ms.sourcegitcommit: dd36d1cbe32cd5a65c6638e8f252b0bd8145e165
+ms.sourcegitcommit: 192f6a99e19e66f0f817fdb1977f564b2aaa133b
 ms.translationtype: HT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 09/08/2020
-ms.locfileid: "89547598"
+ms.lasthandoff: 11/25/2020
+ms.locfileid: "96126200"
 ---
 # <a name="collate-transact-sql"></a>COLLATE(Transact-SQL)
 
@@ -47,11 +47,11 @@ COLLATE { <collation_name> | database_default }
 
 ## <a name="arguments"></a>인수
 
-*collation_name* 식, 열 정의 또는 데이터베이스 정의에 적용할 데이터 정렬의 이름입니다. *collation_name*에는 지정된 *Windows_collation_name* 또는 *SQL_collation_name*만 사용할 수 있습니다. *collation_name*은 리터럴 값이어야 합니다. 변수나 식으로 *collation_name*을 나타낼 수 없습니다.
+*collation_name* 식, 열 정의 또는 데이터베이스 정의에 적용할 데이터 정렬의 이름입니다. *collation_name* 에는 지정된 *Windows_collation_name* 또는 *SQL_collation_name* 만 사용할 수 있습니다. *collation_name* 은 리터럴 값이어야 합니다. 변수나 식으로 *collation_name* 을 나타낼 수 없습니다.
 
-*Windows_collation_name*은 [Windows 데이터 정렬 이름](../../t-sql/statements/windows-collation-name-transact-sql.md)의 데이터 정렬 이름입니다.
+*Windows_collation_name* 은 [Windows 데이터 정렬 이름](../../t-sql/statements/windows-collation-name-transact-sql.md)의 데이터 정렬 이름입니다.
 
-*SQL_collation_name*은 [SQL Server 데이터 정렬 이름](../../t-sql/statements/sql-server-collation-name-transact-sql.md)의 데이터 정렬 이름입니다.
+*SQL_collation_name* 은 [SQL Server 데이터 정렬 이름](../../t-sql/statements/sql-server-collation-name-transact-sql.md)의 데이터 정렬 이름입니다.
 
 **database_default** COLLATE 절이 현재 데이터베이스의 데이터 정렬을 상속하도록 합니다.
 
@@ -82,7 +82,7 @@ COLLATE 절은 여러 수준에서 지정할 수 있습니다. 여기에는 다�
 
 COLLATE 절은 **char**, **varchar**, **text**, **nchar**, **nvarchar** 및 **ntext** 데이터 형식에만 적용할 수 있습니다.
 
-COLLATE는 *collate_name*을 사용하여 식, 열 정의 또는 데이터베이스 정의에 적용할 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 데이터 정렬 또는 Windows 데이터 정렬의 이름을 참조하세요. *collation_name*에는 지정된 *Windows_collation_name* 또는 *SQL_collation_name*만 사용할 수 있으며 매개 변수에는 리터럴 값이 포함되어야 합니다. 변수나 식으로 *collation_name*을 나타낼 수 없습니다.
+COLLATE는 *collate_name* 을 사용하여 식, 열 정의 또는 데이터베이스 정의에 적용할 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 데이터 정렬 또는 Windows 데이터 정렬의 이름을 참조하세요. *collation_name* 에는 지정된 *Windows_collation_name* 또는 *SQL_collation_name* 만 사용할 수 있으며 매개 변수에는 리터럴 값이 포함되어야 합니다. 변수나 식으로 *collation_name* 을 나타낼 수 없습니다.
 
 데이터 정렬은 설치할 때를 제외하고 일반적으로 데이터 정렬 이름으로 식별됩니다. 설치할 때는 Windows 데이터 정렬에 대해 루트 데이터 정렬 지정자(데이터 정렬 로캘)를 지정한 다음, 대소문자와 악센트를 구분하거나 구분하지 않는 정렬 옵션을 지정합니다.
 
@@ -153,7 +153,7 @@ Chiapas
 
 ### <a name="b-additional-examples"></a>B. 추가 예
 
-**COLLATE**를 사용하는 추가 예는 [CREATE DATABASE](../../t-sql/statements/create-database-transact-sql.md?view=sql-server-2017#examples) 예제 **G. 데이터베이스 만들기 및 데이터 정렬 이름과 옵션 지정** 및 [ALTER TABLE](../../t-sql/statements/alter-table-transact-sql.md#alter_column) 예제 **V. 열 데이터 정렬 변경**을 참조하세요.
+**COLLATE** 를 사용하는 추가 예는 [CREATE DATABASE](../../t-sql/statements/create-database-transact-sql.md?view=sql-server-2017#examples) 예제 **G. 데이터베이스 만들기 및 데이터 정렬 이름과 옵션 지정** 및 [ALTER TABLE](../../t-sql/statements/alter-table-transact-sql.md#alter_column) 예제 **V. 열 데이터 정렬 변경** 을 참조하세요.
 
 ## <a name="see-also"></a>참고 항목
 

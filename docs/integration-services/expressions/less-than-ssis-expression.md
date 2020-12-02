@@ -15,11 +15,11 @@ ms.assetid: 8674afdc-4276-46cb-be08-5aadfe8b9624
 author: chugugrace
 ms.author: chugu
 ms.openlocfilehash: 336c9687e0d44d90d8d251a11728ac06402f4852
-ms.sourcegitcommit: e700497f962e4c2274df16d9e651059b42ff1a10
+ms.sourcegitcommit: 192f6a99e19e66f0f817fdb1977f564b2aaa133b
 ms.translationtype: HT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 08/17/2020
-ms.locfileid: "88425425"
+ms.lasthandoff: 11/25/2020
+ms.locfileid: "96127098"
 ---
 # <a name="lt-less-than-ssis-expression"></a>&lt;(보다 작음)(SSIS 식)
 
@@ -51,7 +51,7 @@ expression1 < expression2
 ## <a name="remarks"></a>설명  
  비교하는 두 식 중 하나가 Null이면 비교 결과도 Null입니다. 두 식이 모두 Null이면 결과도 Null입니다.  
   
- 식 집합 *expression1* 및 *expression2*는 다음 규칙 중 하나를 따라야 합니다.  
+ 식 집합 *expression1* 및 *expression2* 는 다음 규칙 중 하나를 따라야 합니다.  
   
 -   **Numeric***expression1* 및 *expression2* 모두 숫자 데이터 형식이어야 합니다. 데이터 형식의 교집합은 식 계산기가 수행하는 암시적 숫자 변환에 대한 규칙에 지정된 대로 숫자 데이터 형식이어야 합니다. 두 숫자 데이터 형식의 교집합은 Null일 수 없습니다. 자세한 내용은 [Integration Services Data Types in Expressions](../../integration-services/expressions/integration-services-data-types-in-expressions.md)을 참조하세요.  
   
@@ -98,7 +98,7 @@ expression1 < expression2
 ListPrice < 500  
 ```  
   
- 이 예에서는 변수 **LPrice**를 사용합니다. **LPrice** 의 값이 500보다 작으면 이 예는 TRUE가 됩니다. 식을 구문 분석하려면 변수의 데이터 형식이 숫자여야 합니다.  
+ 이 예에서는 변수 **LPrice** 를 사용합니다. **LPrice** 의 값이 500보다 작으면 이 예는 TRUE가 됩니다. 식을 구문 분석하려면 변수의 데이터 형식이 숫자여야 합니다.  
   
 ```  
 @LPrice < 500  

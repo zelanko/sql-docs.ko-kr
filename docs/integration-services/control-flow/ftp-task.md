@@ -18,11 +18,11 @@ ms.assetid: 41c3f2c4-ee04-460a-9822-bb9ae4036c2e
 author: chugugrace
 ms.author: chugu
 ms.openlocfilehash: 013fffc66c8e40ca2124b949f555e0638df7967e
-ms.sourcegitcommit: cfa04a73b26312bf18d8f6296891679166e2754d
+ms.sourcegitcommit: 192f6a99e19e66f0f817fdb1977f564b2aaa133b
 ms.translationtype: HT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 10/19/2020
-ms.locfileid: "92194265"
+ms.lasthandoff: 11/25/2020
+ms.locfileid: "96127400"
 ---
 # <a name="ftp-task"></a>FTP 태스크
 
@@ -114,8 +114,8 @@ ms.locfileid: "92194265"
   
 |값|Description|  
 |-----------|-----------------|  
-|**True**|대상 경로가 변수에 저장됩니다. 이 값을 선택하면 동적 옵션 **RemoteVariable**이 표시됩니다.|  
-|**False**|파일 연결 관리자에서 대상 경로를 지정합니다. 이 값을 선택하면 동적 옵션 **RemotePath**가 표시됩니다.|  
+|**True**|대상 경로가 변수에 저장됩니다. 이 값을 선택하면 동적 옵션 **RemoteVariable** 이 표시됩니다.|  
+|**False**|파일 연결 관리자에서 대상 경로를 지정합니다. 이 값을 선택하면 동적 옵션 **RemotePath** 가 표시됩니다.|  
   
  **OverwriteFileAtDestination**  
  대상 파일을 덮어쓸 수 있는지 여부를 지정합니다.  
@@ -125,22 +125,22 @@ ms.locfileid: "92194265"
   
 |값|Description|  
 |-----------|-----------------|  
-|**True**|대상 경로가 변수에 저장됩니다. 이 값을 선택하면 동적 옵션 **LocalVariable**이 표시됩니다.|  
-|**False**|파일 연결 관리자에서 대상 경로를 지정합니다. 이 값을 선택하면 동적 옵션 **LocalPath**가 표시됩니다.|  
+|**True**|대상 경로가 변수에 저장됩니다. 이 값을 선택하면 동적 옵션 **LocalVariable** 이 표시됩니다.|  
+|**False**|파일 연결 관리자에서 대상 경로를 지정합니다. 이 값을 선택하면 동적 옵션 **LocalPath** 가 표시됩니다.|  
   
  **연산**  
  수행할 FTP 작업을 선택합니다. 이 속성의 옵션은 다음 표에 나열되어 있습니다.  
   
 |값|Description|  
 |-----------|-----------------|  
-|**파일 보내기**|파일을 보냅니다. 이 값을 선택하면 동적 옵션 **LocalVariable**, **LocalPathRemoteVariable** 및 **RemotePath**가 표시됩니다.|  
-|**파일 받기**|파일을 받습니다. 이 값을 선택하면 동적 옵션 **LocalVariable**, **LocalPathRemoteVariable** 및 **RemotePath**가 표시됩니다.|  
-|**로컬 디렉터리 만들기**|로컬 디렉터리를 만듭니다. 이 값을 선택하면 동적 옵션 **LocalVariable** 및 **LocalPath**가 표시됩니다.|  
-|**원격 디렉터리 만들기**|원격 디렉터리를 만듭니다. 이 값을 선택하면 동적 옵션 **RemoteVariable** 및 **RemotePath**가 표시됩니다.|  
-|**로컬 디렉터리 제거**|로컬 디렉터리를 제거합니다. 이 값을 선택하면 동적 옵션 **LocalVariable** 및 **LocalPath**가 표시됩니다.|  
-|**원격 디렉터리 제거**|원격 디렉터리를 제거합니다. 이 값을 선택하면 동적 옵션 **RemoteVariable** 및 **RemotePath**가 표시됩니다.|  
-|**로컬 파일 삭제**|로컬 파일을 삭제합니다. 이 값을 선택하면 동적 옵션 **LocalVariable** 및 **LocalPath**가 표시됩니다.|  
-|**원격 파일 삭제**|원격 파일을 삭제합니다. 이 값을 선택하면 동적 옵션 **RemoteVariable** 및 **RemotePath**가 표시됩니다.|  
+|**파일 보내기**|파일을 보냅니다. 이 값을 선택하면 동적 옵션 **LocalVariable**, **LocalPathRemoteVariable** 및 **RemotePath** 가 표시됩니다.|  
+|**파일 받기**|파일을 받습니다. 이 값을 선택하면 동적 옵션 **LocalVariable**, **LocalPathRemoteVariable** 및 **RemotePath** 가 표시됩니다.|  
+|**로컬 디렉터리 만들기**|로컬 디렉터리를 만듭니다. 이 값을 선택하면 동적 옵션 **LocalVariable** 및 **LocalPath** 가 표시됩니다.|  
+|**원격 디렉터리 만들기**|원격 디렉터리를 만듭니다. 이 값을 선택하면 동적 옵션 **RemoteVariable** 및 **RemotePath** 가 표시됩니다.|  
+|**로컬 디렉터리 제거**|로컬 디렉터리를 제거합니다. 이 값을 선택하면 동적 옵션 **LocalVariable** 및 **LocalPath** 가 표시됩니다.|  
+|**원격 디렉터리 제거**|원격 디렉터리를 제거합니다. 이 값을 선택하면 동적 옵션 **RemoteVariable** 및 **RemotePath** 가 표시됩니다.|  
+|**로컬 파일 삭제**|로컬 파일을 삭제합니다. 이 값을 선택하면 동적 옵션 **LocalVariable** 및 **LocalPath** 가 표시됩니다.|  
+|**원격 파일 삭제**|원격 파일을 삭제합니다. 이 값을 선택하면 동적 옵션 **RemoteVariable** 및 **RemotePath** 가 표시됩니다.|  
   
  **IsTransferASCII**  
  원격 FTP 서버와 파일을 주고 받을 때 ASCII 모드로 파일을 전송할지 여부를 나타냅니다.  

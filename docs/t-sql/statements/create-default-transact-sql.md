@@ -23,11 +23,11 @@ ms.assetid: 08475db4-7d90-486a-814c-01a99d783d41
 author: markingmyname
 ms.author: maghan
 ms.openlocfilehash: 15f0d4281b194a63e8441cade19a5d519bf2b4c0
-ms.sourcegitcommit: dd36d1cbe32cd5a65c6638e8f252b0bd8145e165
+ms.sourcegitcommit: 192f6a99e19e66f0f817fdb1977f564b2aaa133b
 ms.translationtype: HT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 09/08/2020
-ms.locfileid: "89539915"
+ms.lasthandoff: 11/25/2020
+ms.locfileid: "96128028"
 ---
 # <a name="create-default-transact-sql"></a>CREATE DEFAULT(Transact-SQL)
 [!INCLUDE [SQL Server SQL Database](../../includes/applies-to-version/sql-asdb.md)]
@@ -60,7 +60,7 @@ AS constant_expression [ ; ]
 상수 값만 포함하는 [식](../../t-sql/language-elements/expressions-transact-sql.md)입니다. 열 이름이나 다른 데이터베이스 개체의 이름을 포함할 수 없습니다. 별칭 데이터 형식을 포함한 식을 제외하고 모든 종류의 상수, 기본 제공 함수 및 수치 연산 식을 사용할 수 있습니다. 사용자 정의 함수는 사용할 수 없습니다. 문자와 날짜 상수는 작은따옴표(**'**)로 묶어야 하지만 통화, 정수 및 부동 소수점 상수에는 따옴표가 필요 없습니다. 이진 데이터는 0x로 시작해야 하고 통화 데이터는 달러 기호($)로 시작해야 합니다. 기본값은 열 데이터 형식과 호환이 가능해야 합니다.  
   
 ## <a name="remarks"></a>설명  
- 현재 데이터베이스에서는 기본 이름만 만들 수 있습니다. 기본값 이름은 데이터베이스에서 스키마별로 고유해야 합니다. 기본값을 만들 경우 **sp_bindefault**를 사용하여 값을 열이나 별칭 데이터 형식에 바인딩합니다.  
+ 현재 데이터베이스에서는 기본 이름만 만들 수 있습니다. 기본값 이름은 데이터베이스에서 스키마별로 고유해야 합니다. 기본값을 만들 경우 **sp_bindefault** 를 사용하여 값을 열이나 별칭 데이터 형식에 바인딩합니다.  
   
  기본값이 바인딩될 열과 호환되지 않으면 기본값을 삽입하려고 할 때 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]에 오류 메시지가 나타납니다. 예를 들어 N/A는 **numeric** 열의 기본값으로 사용할 수 없습니다.  
   
@@ -68,7 +68,7 @@ AS constant_expression [ ; ]
   
  CREATE DEFAULT 문을 한 일괄 처리에서 다른 [!INCLUDE[tsql](../../includes/tsql-md.md)] 문과 결합할 수 없습니다.  
   
- 같은 이름을 가진 기본값을 새로 만들려면 먼저 기존 기본값을 삭제해야 합니다. 도한 기본값을 삭제하려면 먼저 **sp_unbindefault**를 실행하여 기본값을 바인딩 해제해야 합니다.  
+ 같은 이름을 가진 기본값을 새로 만들려면 먼저 기존 기본값을 삭제해야 합니다. 도한 기본값을 삭제하려면 먼저 **sp_unbindefault** 를 실행하여 기본값을 바인딩 해제해야 합니다.  
   
  열에 기본값 및 연관된 규칙이 모두 있을 경우에는 해당 기본값이 규칙을 위반해서는 안 됩니다. 규칙을 위반하는 기본값은 삽입할 수 없으며 이러한 기본값을 삽입하려고 하면 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]에 오류 메시지가 나타납니다.  
   
@@ -85,7 +85,7 @@ AS constant_expression [ ; ]
 |**NULL**|NULL|default|NULL|NULL|  
 |**NOT NULL**|오류|default|error|error|  
   
- 기본값의 이름을 바꾸려면 **sp_rename**을 사용합니다. 기본값에 대한 보고서를 보려면 **sp_help**를 사용합니다.  
+ 기본값의 이름을 바꾸려면 **sp_rename** 을 사용합니다. 기본값에 대한 보고서를 보려면 **sp_help** 를 사용합니다.  
   
 ## <a name="permissions"></a>사용 권한  
  CREATE DEFAULT를 사용하려면 최소한 현재 데이터베이스에서 CREATE DEFAULT 권한과 기본값이 생성된 스키마에 대한 ALTER 권한이 필요합니다.  

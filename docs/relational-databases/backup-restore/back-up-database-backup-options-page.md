@@ -12,14 +12,14 @@ f1_keywords:
 - sql13.swb.backupdatabase.options.f1
 - swb.backupdatabase.options.f1
 ms.assetid: df0ddcdb-c94e-472b-b786-469ae8117b93
-author: MikeRayMSFT
-ms.author: mikeray
-ms.openlocfilehash: a4932a229d2d883a8d5b2be84795a96aafd5bba3
-ms.sourcegitcommit: da88320c474c1c9124574f90d549c50ee3387b4c
+author: cawrites
+ms.author: chadam
+ms.openlocfilehash: e91ecfb8375385e672c90e557910a36c71f80c8d
+ms.sourcegitcommit: 5a1ed81749800c33059dac91b0e18bd8bb3081b1
 ms.translationtype: HT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 07/01/2020
-ms.locfileid: "85719983"
+ms.lasthandoff: 11/23/2020
+ms.locfileid: "96129398"
 ---
 # <a name="back-up-database-backup-options-page"></a>데이터베이스 백업(백업 옵션 페이지)
  [!INCLUDE [SQL Server](../../includes/applies-to-version/sqlserver.md)]
@@ -55,7 +55,7 @@ ms.locfileid: "85719983"
   
 |||  
 |-|-|  
-|**이후**|만료되기 전에 이 백업 세트를 덮어쓰지 않고 보존할 일 수를 지정합니다. 이 값은 0일에서 99999일 사이일 수 있습니다. 값 0일은 백업 세트 기간 제한이 없음을 의미합니다.<br /><br /> 백업 만료 기본값은 **백업 미디어 기본 보존 기간(일)** 옵션에 설정된 값입니다. 이 페이지에 액세스하려면 개체 탐색기에서 서버 이름을 마우스 오른쪽 단추로 클릭하고 **속성**을 선택한 다음 **서버 속성** 대화 상자의 **데이터베이스 설정** 페이지를 클릭합니다.|  
+|**이후**|만료되기 전에 이 백업 세트를 덮어쓰지 않고 보존할 일 수를 지정합니다. 이 값은 0일에서 99999일 사이일 수 있습니다. 값 0일은 백업 세트 기간 제한이 없음을 의미합니다.<br /><br /> 백업 만료 기본값은 **백업 미디어 기본 보존 기간(일)** 옵션에 설정된 값입니다. 이 페이지에 액세스하려면 개체 탐색기에서 서버 이름을 마우스 오른쪽 단추로 클릭하고 **속성** 을 선택한 다음 **서버 속성** 대화 상자의 **데이터베이스 설정** 페이지를 클릭합니다.|  
 |**위치**|백업 세트가 만료되어 덮어쓸 수 있는 특정 날짜를 지정합니다.|  
   
 ### <a name="compression"></a>압축  

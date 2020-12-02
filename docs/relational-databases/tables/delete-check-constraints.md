@@ -19,11 +19,11 @@ author: stevestein
 ms.author: sstein
 monikerRange: =azuresqldb-current||>=sql-server-2016||=sqlallproducts-allversions||>=sql-server-linux-2017||=azuresqldb-mi-current
 ms.openlocfilehash: 557c791f0457ef31c1bf5aeca51787f2200a70ad
-ms.sourcegitcommit: e700497f962e4c2274df16d9e651059b42ff1a10
+ms.sourcegitcommit: 192f6a99e19e66f0f817fdb1977f564b2aaa133b
 ms.translationtype: HT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 08/17/2020
-ms.locfileid: "88446468"
+ms.lasthandoff: 11/25/2020
+ms.locfileid: "96128722"
 ---
 # <a name="delete-check-constraints"></a>CHECK 제약 조건 삭제
 [!INCLUDE [SQL Server SQL Database](../../includes/applies-to-version/sql-asdb.md)]
@@ -53,23 +53,23 @@ ms.locfileid: "88446468"
   
 #### <a name="to-delete-a-check-constraint"></a>CHECK 제약 조건을 삭제하려면  
   
-1.  **개체 탐색기**에서 CHECK 제약 조건이 있는 테이블을 확장합니다.  
+1.  **개체 탐색기** 에서 CHECK 제약 조건이 있는 테이블을 확장합니다.  
   
-2.  **제약 조건**을 확장합니다.  
+2.  **제약 조건** 을 확장합니다.  
   
-3.  제약 조건을 마우스 오른쪽 단추로 클릭하고 **삭제**를 클릭합니다.  
+3.  제약 조건을 마우스 오른쪽 단추로 클릭하고 **삭제** 를 클릭합니다.  
   
-4.  **개체 삭제** 대화 상자에서 **확인**을 클릭합니다.  
+4.  **개체 삭제** 대화 상자에서 **확인** 을 클릭합니다.  
   
 ##  <a name="using-transact-sql"></a><a name="TsqlProcedure"></a> Transact-SQL 사용  
   
 #### <a name="to-delete-a-check-constraint"></a>CHECK 제약 조건을 삭제하려면  
   
-1.  **개체 탐색기**에서 [!INCLUDE[ssDE](../../includes/ssde-md.md)]인스턴스에 연결합니다.  
+1.  **개체 탐색기** 에서 [!INCLUDE[ssDE](../../includes/ssde-md.md)]인스턴스에 연결합니다.  
   
-2.  표준 도구 모음에서 **새 쿼리**를 클릭합니다.  
+2.  표준 도구 모음에서 **새 쿼리** 를 클릭합니다.  
   
-3.  다음 예를 복사하여 쿼리 창에 붙여 넣고 **실행**을 클릭합니다.  
+3.  다음 예를 복사하여 쿼리 창에 붙여 넣고 **실행** 을 클릭합니다.  
   
     ```  
     ALTER TABLE dbo.DocExc   

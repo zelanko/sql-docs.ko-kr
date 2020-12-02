@@ -17,14 +17,14 @@ helpviewer_keywords:
 - suspect pages [SQL Server]
 - restoring [SQL Server], pages
 ms.assetid: f394d4bc-1518-4e61-97fc-bf184d972e2b
-author: MikeRayMSFT
-ms.author: mikeray
-ms.openlocfilehash: 2effd97ab34bd59d0dbebf283bff398508f21cbb
-ms.sourcegitcommit: da88320c474c1c9124574f90d549c50ee3387b4c
+author: cawrites
+ms.author: chadam
+ms.openlocfilehash: 16255027d2fa0617066fcff0d2a208e70c96a9f9
+ms.sourcegitcommit: 5a1ed81749800c33059dac91b0e18bd8bb3081b1
 ms.translationtype: HT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 07/01/2020
-ms.locfileid: "85718024"
+ms.lasthandoff: 11/23/2020
+ms.locfileid: "96126909"
 ---
 # <a name="manage-the-suspect_pages-table-sql-server"></a>suspect_pages 테이블 관리(SQL Server)
  [!INCLUDE [SQL Server](../../includes/applies-to-version/sqlserver.md)]
@@ -126,11 +126,11 @@ ms.locfileid: "85718024"
   
 #### <a name="to-manage-the-suspect_pages-table"></a>suspect_pages 테이블을 관리하려면  
   
-1.  **개체 탐색기**에서 [!INCLUDE[ssDEnoversion](../../includes/ssdenoversion-md.md)]의 인스턴스에 연결하고 해당 인스턴스를 확장한 다음 **데이터베이스**를 확장합니다.  
+1.  **개체 탐색기** 에서 [!INCLUDE[ssDEnoversion](../../includes/ssdenoversion-md.md)]의 인스턴스에 연결하고 해당 인스턴스를 확장한 다음 **데이터베이스** 를 확장합니다.  
   
-2.  **시스템 데이터베이스**, **msdb**, **테이블**및 **시스템 테이블**을 차례로 확장합니다.  
+2.  **시스템 데이터베이스**, **msdb**, **테이블** 및 **시스템 테이블** 을 차례로 확장합니다.  
   
-3.  **dbo.suspect_pages** 를 확장하고 **상위 200개 행 편집**을 마우스 오른쪽 단추로 클릭합니다.  
+3.  **dbo.suspect_pages** 를 확장하고 **상위 200개 행 편집** 을 마우스 오른쪽 단추로 클릭합니다.  
   
 4.  쿼리 창에서 원하는 행을 편집, 업데이트 또는 삭제합니다.  
 
@@ -140,9 +140,9 @@ ms.locfileid: "85718024"
   
 1.  [!INCLUDE[ssDE](../../includes/ssde-md.md)]에 연결합니다.  
   
-2.  표준 도구 모음에서 **새 쿼리**를 클릭합니다.  
+2.  표준 도구 모음에서 **새 쿼리** 를 클릭합니다.  
   
-3.  다음 예를 복사하여 쿼리 창에 붙여 넣고 **실행**을 클릭합니다. 이 예에서는 `suspect_pages` 테이블에서 일부 행을 삭제합니다.  
+3.  다음 예를 복사하여 쿼리 창에 붙여 넣고 **실행** 을 클릭합니다. 이 예에서는 `suspect_pages` 테이블에서 일부 행을 삭제합니다.  
   
 ```  
 -- Delete restored, repaired, or deallocated pages.  

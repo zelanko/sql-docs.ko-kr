@@ -15,14 +15,14 @@ helpviewer_keywords:
 - database backups [SQL Server], tapes
 - tape backup devices, creating
 ms.assetid: 66f36e1d-0287-4fac-8a51-71f9f0d7ad5b
-author: MikeRayMSFT
-ms.author: mikeray
-ms.openlocfilehash: 17fa4f717c7da238503c87dc99ab2120b65e9cdb
-ms.sourcegitcommit: da88320c474c1c9124574f90d549c50ee3387b4c
+author: cawrites
+ms.author: chadam
+ms.openlocfilehash: ddb39f0d488becdcb7711ef05030bad4aff08aa5
+ms.sourcegitcommit: 5a1ed81749800c33059dac91b0e18bd8bb3081b1
 ms.translationtype: HT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 07/01/2020
-ms.locfileid: "85748125"
+ms.lasthandoff: 11/23/2020
+ms.locfileid: "96127017"
 ---
 # <a name="define-a-logical-backup-device-for-a-tape-drive-sql-server"></a>테이프 드라이브에 대한 논리적 백업 디바이스 정의(SQL Server)
  [!INCLUDE [SQL Server](../../includes/applies-to-version/sqlserver.md)]
@@ -66,17 +66,17 @@ ms.locfileid: "85748125"
   
 1.  [!INCLUDE[msCoName](../../includes/msconame-md.md)] [!INCLUDE[ssDEnoversion](../../includes/ssdenoversion-md.md)]의 해당 인스턴스에 연결한 후 개체 탐색기에서 서버 이름을 클릭하여 서버 트리를 확장합니다.  
   
-2.  **서버 개체**를 확장한 다음 마우스 오른쪽 단추로 **백업 디바이스**를 클릭합니다.  
+2.  **서버 개체** 를 확장한 다음 마우스 오른쪽 단추로 **백업 디바이스** 를 클릭합니다.  
   
-3.  **새 백업 디바이스**를 클릭하면 **백업 디바이스** 대화 상자가 열립니다.  
+3.  **새 백업 디바이스** 를 클릭하면 **백업 디바이스** 대화 상자가 열립니다.  
   
 4.  디바이스 이름을 입력합니다.  
   
 5.  대상에 대해 **테이프** 를 클릭하고 다른 백업 디바이스에 연결되어 있지 않은 테이프 드라이브를 선택합니다. 사용 가능한 테이프 드라이브가 없으면 **테이프** 옵션은 비활성 상태로 표시됩니다.  
   
-6.  새 디바이스를 정의하려면 **확인**을 클릭합니다.  
+6.  새 디바이스를 정의하려면 **확인** 을 클릭합니다.  
 
- 이 새 디바이스로 백업하려면 **데이터베이스 백업** 대화 상자의 **일반** 페이지에 있는**백업할 위치:** 필드에 디바이스를 추가합니다. 자세한 내용은 [전체 데이터베이스 백업 만들기&#40;SQL Server&#41;](../../relational-databases/backup-restore/create-a-full-database-backup-sql-server.md)에서 차등 데이터베이스 백업을 만듭니다.  
+ 이 새 디바이스로 백업하려면 **데이터베이스 백업** 대화 상자의 **일반** 페이지에 있는 **백업할 위치:** 필드에 디바이스를 추가합니다. 자세한 내용은 [전체 데이터베이스 백업 만들기&#40;SQL Server&#41;](../../relational-databases/backup-restore/create-a-full-database-backup-sql-server.md)에서 차등 데이터베이스 백업을 만듭니다.  
   
 ##  <a name="using-transact-sql"></a><a name="TsqlProcedure"></a> Transact-SQL 사용  
   
@@ -84,9 +84,9 @@ ms.locfileid: "85748125"
   
 1.  [!INCLUDE[ssDE](../../includes/ssde-md.md)]에 연결합니다.  
   
-2.  표준 도구 모음에서 **새 쿼리**를 클릭합니다.  
+2.  표준 도구 모음에서 **새 쿼리** 를 클릭합니다.  
   
-3.  다음 예를 복사하여 쿼리 창에 붙여 넣고 **실행**을 클릭합니다. 이 예에서는 [sp_addumpdevice](../../relational-databases/system-stored-procedures/sp-addumpdevice-transact-sql.md) 를 사용하여 테이프의 논리적 백업 디바이스를 정의하는 방법을 보여 줍니다. 이 예에서는 `tapedump1`라는 물리적 이름으로 `\\.\tape0`이라는 테이프 백업 디바이스를 추가합니다.  
+3.  다음 예를 복사하여 쿼리 창에 붙여 넣고 **실행** 을 클릭합니다. 이 예에서는 [sp_addumpdevice](../../relational-databases/system-stored-procedures/sp-addumpdevice-transact-sql.md) 를 사용하여 테이프의 논리적 백업 디바이스를 정의하는 방법을 보여 줍니다. 이 예에서는 `tapedump1`라는 물리적 이름으로 `\\.\tape0`이라는 테이프 백업 디바이스를 추가합니다.  
   
 ```sql  
 USE AdventureWorks2012 ;  

@@ -15,14 +15,14 @@ helpviewer_keywords:
 - restoring databases [SQL Server], marked transactions
 - marked transactions [SQL Server], restoring
 ms.assetid: 8f0ea144-1819-4832-905f-e5d0f49b066b
-author: MikeRayMSFT
-ms.author: mikeray
-ms.openlocfilehash: 3f267e998b0bd9693c821000cd51a044326e9161
-ms.sourcegitcommit: da88320c474c1c9124574f90d549c50ee3387b4c
+author: cawrites
+ms.author: chadam
+ms.openlocfilehash: d35f1478d3d9f290557a6eeebd6ce4365e461e21
+ms.sourcegitcommit: 5a1ed81749800c33059dac91b0e18bd8bb3081b1
 ms.translationtype: HT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 07/01/2020
-ms.locfileid: "85718005"
+ms.lasthandoff: 11/23/2020
+ms.locfileid: "96129118"
 ---
 # <a name="restore-a-database-to-a-marked-transaction-sql-server-management-studio"></a>데이터베이스를 표시된 트랜잭션으로 복원(SQL Server Management Studio)
  [!INCLUDE [SQL Server](../../includes/applies-to-version/sqlserver.md)]
@@ -35,15 +35,15 @@ ms.locfileid: "85718005"
   
 1.  [!INCLUDE[msCoName](../../includes/msconame-md.md)] [!INCLUDE[ssDEnoversion](../../includes/ssdenoversion-md.md)]의 해당 인스턴스에 연결한 후 개체 탐색기에서 서버 이름을 클릭하여 서버 트리를 확장합니다.  
   
-2.  **데이터베이스**를 확장하고 해당 데이터베이스에 따라 사용자 데이터베이스를 선택하거나 **시스템 데이터베이스** 를 확장한 다음 시스템 데이터베이스를 선택합니다.  
+2.  **데이터베이스** 를 확장하고 해당 데이터베이스에 따라 사용자 데이터베이스를 선택하거나 **시스템 데이터베이스** 를 확장한 다음 시스템 데이터베이스를 선택합니다.  
   
-3.  데이터베이스를 마우스 오른쪽 단추로 클릭하고 **태스크**를 가리킨 다음 **복원**을 클릭합니다.  
+3.  데이터베이스를 마우스 오른쪽 단추로 클릭하고 **태스크** 를 가리킨 다음 **복원** 을 클릭합니다.  
   
-4.  **트랜잭션 로그**를 클릭하여 **트랜잭션 로그 복원** 대화 상자를 엽니다.  
+4.  **트랜잭션 로그** 를 클릭하여 **트랜잭션 로그 복원** 대화 상자를 엽니다.  
   
-5.  **일반** 페이지의 **복원 위치** 섹션에서 **표시된 트랜잭션**을 선택하여 **표시된 트랜잭션 선택** 대화 상자를 엽니다. 이 대화 상자는 선택된 트랜잭션 로그 백업에서 사용할 수 있는 표시된 트랜잭션을 표로 나열합니다.  
+5.  **일반** 페이지의 **복원 위치** 섹션에서 **표시된 트랜잭션** 을 선택하여 **표시된 트랜잭션 선택** 대화 상자를 엽니다. 이 대화 상자는 선택된 트랜잭션 로그 백업에서 사용할 수 있는 표시된 트랜잭션을 표로 나열합니다.  
   
-     기본적으로 표시된 트랜잭션 이전까지만 복원합니다. 표시된 트랜잭션도 복원하려면 **표시된 트랜잭션 포함**을 선택합니다.  
+     기본적으로 표시된 트랜잭션 이전까지만 복원합니다. 표시된 트랜잭션도 복원하려면 **표시된 트랜잭션 포함** 을 선택합니다.  
   
      다음 표에서는 표의 열 머리글을 나열하고 해당 값을 설명합니다.  
   

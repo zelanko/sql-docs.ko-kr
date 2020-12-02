@@ -23,11 +23,11 @@ author: markingmyname
 ms.author: maghan
 monikerRange: '>=aps-pdw-2016||=azuresqldb-current||=azure-sqldw-latest||>=sql-server-2016||=sqlallproducts-allversions||>=sql-server-linux-2017||=azuresqldb-mi-current'
 ms.openlocfilehash: bb8aca979735819200d8b03c2c2f77a30f2c8398
-ms.sourcegitcommit: cc23d8646041336d119b74bf239a6ac305ff3d31
+ms.sourcegitcommit: 192f6a99e19e66f0f817fdb1977f564b2aaa133b
 ms.translationtype: HT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 09/23/2020
-ms.locfileid: "91115610"
+ms.lasthandoff: 11/25/2020
+ms.locfileid: "96128581"
 ---
 # <a name="abs-transact-sql"></a>ABS(Transact-SQL)
 [!INCLUDE [sql-asdb-asdbmi-asa-pdw](../../includes/applies-to-version/sql-asdb-asdbmi-asa-pdw.md)]
@@ -49,7 +49,7 @@ ABS ( numeric_expression )
 정밀 숫자 또는 근사 숫자 데이터 형식 범주의 식입니다.
   
 ## <a name="return-types"></a>반환 형식  
-*numeric_expression*과 같은 유형을 반환합니다.
+*numeric_expression* 과 같은 유형을 반환합니다.
   
 ## <a name="examples"></a>예제  
 이 예에서는 3가지의 다른 숫자에 `ABS` 함수를 사용한 결과를 보여줍니다.

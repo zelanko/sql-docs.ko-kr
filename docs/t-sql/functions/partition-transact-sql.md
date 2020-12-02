@@ -20,11 +20,11 @@ ms.assetid: abc865d0-57a8-49da-8821-29457c808d2a
 author: julieMSFT
 ms.author: jrasnick
 ms.openlocfilehash: 95f101b79978c86e2b963891d495ff5a067b5fd9
-ms.sourcegitcommit: 197a6ffb643f93592edf9e90b04810a18be61133
+ms.sourcegitcommit: 192f6a99e19e66f0f817fdb1977f564b2aaa133b
 ms.translationtype: HT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 09/26/2020
-ms.locfileid: "91380781"
+ms.lasthandoff: 11/25/2020
+ms.locfileid: "96128370"
 ---
 # <a name="partition-transact-sql"></a>$PARTITION(Transact-SQL)
 [!INCLUDE [SQL Server](../../includes/applies-to-version/sqlserver.md)]
@@ -49,7 +49,7 @@ ms.locfileid: "91380781"
  분할 열 값 집합이 적용되는 기존 파티션 함수의 이름입니다.  
   
  *expression*  
- 데이터 형식이 해당 분할 열의 데이터 형식과 일치하거나 이 데이터 형식으로의 암시적 변환이 가능해야 하는 [식](../../t-sql/language-elements/expressions-transact-sql.md)입니다. *식*은 현재 *partition_function_name*에 참여하는 분할 열의 이름일 수도 있습니다.  
+ 데이터 형식이 해당 분할 열의 데이터 형식과 일치하거나 이 데이터 형식으로의 암시적 변환이 가능해야 하는 [식](../../t-sql/language-elements/expressions-transact-sql.md)입니다. *식* 은 현재 *partition_function_name* 에 참여하는 분할 열의 이름일 수도 있습니다.  
   
 ## <a name="return-types"></a>반환 형식  
  **int**  

@@ -23,11 +23,11 @@ ms.assetid: 4dc0f631-8fd6-4007-b573-ca67f58ca068
 author: chugugrace
 ms.author: chugu
 ms.openlocfilehash: ba5222b35e6e55329e746f316a0503c27092441a
-ms.sourcegitcommit: e700497f962e4c2274df16d9e651059b42ff1a10
+ms.sourcegitcommit: 192f6a99e19e66f0f817fdb1977f564b2aaa133b
 ms.translationtype: HT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 08/17/2020
-ms.locfileid: "88484354"
+ms.lasthandoff: 11/25/2020
+ms.locfileid: "96127088"
 ---
 # <a name="developing-a-custom-source-component"></a>사용자 지정 원본 구성 요소 개발
 
@@ -44,7 +44,7 @@ ms.locfileid: "88484354"
  원본 구성 요소의 디자인 타임 기능을 구현하려면 외부 데이터 원본에 대한 연결을 지정하고, 데이터 원본을 반영하는 출력 열을 추가 및 구성하고, 구성 요소를 실행할 준비가 되었는지 확인해야 합니다. 정의에 따라 원본 구성 요소에는 입력이 없으며 하나 이상의 비동기 출력이 있습니다.  
   
 ### <a name="creating-the-component"></a>구성 요소 만들기  
- 원본 구성 요소는 패키지에 정의된 <xref:Microsoft.SqlServer.Dts.Runtime.ConnectionManager> 개체를 사용하여 외부 데이터 원본에 연결합니다. 원본 구성 요소에서는 <xref:Microsoft.SqlServer.Dts.Pipeline.Wrapper.IDTSComponentMetaData100.RuntimeConnectionCollection%2A> 속성의 <xref:Microsoft.SqlServer.Dts.Pipeline.PipelineComponent.ComponentMetaData%2A> 컬렉션에 요소를 추가하여 연결 관리자가 필요함을 나타냅니다. 이 컬렉션은 두 가지 용도로 사용됩니다. 첫 번째는 구성 요소에서 사용하는 패키지에 연결 관리자에 대한 참조를 저장하는 것이고 다른 하나는 디자이너에 연결 관리자가 필요함을 알리는 것입니다. <xref:Microsoft.SqlServer.Dts.Pipeline.Wrapper.IDTSRuntimeConnection100>을 컬렉션에 추가하면 **고급 편집기**에 **연결 속성** 탭이 표시되어 사용자가 패키지에서 연결을 선택하거나 만들 수 있습니다.  
+ 원본 구성 요소는 패키지에 정의된 <xref:Microsoft.SqlServer.Dts.Runtime.ConnectionManager> 개체를 사용하여 외부 데이터 원본에 연결합니다. 원본 구성 요소에서는 <xref:Microsoft.SqlServer.Dts.Pipeline.Wrapper.IDTSComponentMetaData100.RuntimeConnectionCollection%2A> 속성의 <xref:Microsoft.SqlServer.Dts.Pipeline.PipelineComponent.ComponentMetaData%2A> 컬렉션에 요소를 추가하여 연결 관리자가 필요함을 나타냅니다. 이 컬렉션은 두 가지 용도로 사용됩니다. 첫 번째는 구성 요소에서 사용하는 패키지에 연결 관리자에 대한 참조를 저장하는 것이고 다른 하나는 디자이너에 연결 관리자가 필요함을 알리는 것입니다. <xref:Microsoft.SqlServer.Dts.Pipeline.Wrapper.IDTSRuntimeConnection100>을 컬렉션에 추가하면 **고급 편집기** 에 **연결 속성** 탭이 표시되어 사용자가 패키지에서 연결을 선택하거나 만들 수 있습니다.  
   
  다음 코드 예에서는 출력을 추가하고 <xref:Microsoft.SqlServer.Dts.Pipeline.PipelineComponent.ProvideComponentProperties%2A>에 <xref:Microsoft.SqlServer.Dts.Pipeline.Wrapper.IDTSRuntimeConnection100> 개체를 추가하는 <xref:Microsoft.SqlServer.Dts.Pipeline.Wrapper.IDTSComponentMetaData100.RuntimeConnectionCollection%2A>의 구현을 보여 줍니다.  
   
@@ -366,7 +366,7 @@ End Sub
 ### <a name="validating-the-component"></a>구성 요소 유효성 검사  
  원본 구성 요소의 유효성을 검사하고 해당 출력 열 컬렉션에 정의된 열과 외부 데이터 원본에 있는 열이 일치하는지 확인해야 합니다. 때로는 연결이 끊어진 상태이거나 오랜 서버 왕복을 피하는 것이 바람직할 때와 같이 외부 데이터 원본을 기준으로 출력 열의 유효성을 검사하는 것이 불가능한 경우가 있습니다. 이러한 경우에도 출력 개체의 <xref:Microsoft.SqlServer.Dts.Pipeline.Wrapper.IDTSOutput100.ExternalMetadataColumnCollection%2A>을 사용하여 출력의 열에 대한 유효성을 검사할 수 있습니다. 자세한 내용은 [데이터 흐름 구성 요소에 대한 유효성 검사](../../integration-services/extending-packages-custom-objects/data-flow/validating-a-data-flow-component.md)를 참조하세요.  
   
- 이 컬렉션은 입력 개체와 출력 개체 모두에 있으며 외부 데이터 원본의 열로 이 컬렉션을 채울 수 있습니다. 이 컬렉션은 [!INCLUDE[ssIS](../../includes/ssis-md.md)] 디자이너가 오프라인 상태이거나, 구성 요소의 연결이 끊어졌거나, <xref:Microsoft.SqlServer.Dts.Pipeline.Wrapper.IDTSComponentMetaData100.ValidateExternalMetadata%2A> 속성이 **false**일 때 출력 열의 유효성을 검사하는 데 사용할 수 있습니다. 먼저 출력 열이 만들어짐과 동시에 컬렉션이 채워져 있어야 합니다. 외부 메타데이터 열은 처음에는 출력 열과 일치하므로 컬렉션에 외부 메타데이터 열을 추가하는 것은 비교적 쉽습니다. 열의 데이터 형식 속성은 이미 올바르게 설정되어 있어야 하며 이 속성을 <xref:Microsoft.SqlServer.Dts.Pipeline.Wrapper.IDTSExternalMetadataColumn100> 개체에 직접 복사할 수 있습니다.  
+ 이 컬렉션은 입력 개체와 출력 개체 모두에 있으며 외부 데이터 원본의 열로 이 컬렉션을 채울 수 있습니다. 이 컬렉션은 [!INCLUDE[ssIS](../../includes/ssis-md.md)] 디자이너가 오프라인 상태이거나, 구성 요소의 연결이 끊어졌거나, <xref:Microsoft.SqlServer.Dts.Pipeline.Wrapper.IDTSComponentMetaData100.ValidateExternalMetadata%2A> 속성이 **false** 일 때 출력 열의 유효성을 검사하는 데 사용할 수 있습니다. 먼저 출력 열이 만들어짐과 동시에 컬렉션이 채워져 있어야 합니다. 외부 메타데이터 열은 처음에는 출력 열과 일치하므로 컬렉션에 외부 메타데이터 열을 추가하는 것은 비교적 쉽습니다. 열의 데이터 형식 속성은 이미 올바르게 설정되어 있어야 하며 이 속성을 <xref:Microsoft.SqlServer.Dts.Pipeline.Wrapper.IDTSExternalMetadataColumn100> 개체에 직접 복사할 수 있습니다.  
   
  다음 예제 코드에서는 새로 만들어진 출력 열을 기반으로 외부 메타데이터 열을 추가합니다. 출력 열은 이미 만들어진 것으로 가정합니다.  
   

@@ -21,11 +21,11 @@ ms.assetid: ee620b4a-9375-4eaa-a016-69916c9e1e68
 author: markingmyname
 ms.author: maghan
 ms.openlocfilehash: 47c4e18c28a5377fa487e0d4d4e8b9be4cf58acc
-ms.sourcegitcommit: ac9feb0b10847b369b77f3c03f8200c86ee4f4e0
+ms.sourcegitcommit: 192f6a99e19e66f0f817fdb1977f564b2aaa133b
 ms.translationtype: HT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 09/16/2020
-ms.locfileid: "90688246"
+ms.lasthandoff: 11/25/2020
+ms.locfileid: "96128059"
 ---
 # <a name="alter-remote-service-binding-transact-sql"></a>ALTER REMOTE SERVICE BINDING(Transact-SQL)
 [!INCLUDE [SQL Server](../../includes/applies-to-version/sqlserver.md)]
@@ -56,7 +56,7 @@ ALTER REMOTE SERVICE BINDING binding_name
  원격 서비스와 통신할 경우 익명 인증을 사용할지 여부를 지정합니다. ANONYMOUS = ON인 경우 익명 인증이 사용되며 로컬 사용자의 자격 증명이 원격 서비스로 전송되지 않습니다. ANONYMOUS = OFF인 경우 사용자 자격 증명이 전송됩니다. 이 절을 지정하지 않은 경우 기본값은 OFF입니다.  
   
 ## <a name="remarks"></a>설명  
- *user_name*과 연관된 인증서에 있는 공개 키는 원격 서비스로 전달된 메시지 인증 및 대화를 암호화하는 데 사용되는 세션 키의 암호화에 사용됩니다. *user_name*에 대한 인증서는 원격 서비스를 호스팅하는 데이터베이스 로그인에 대한 인증서와 일치해야 합니다.  
+ *user_name* 과 연관된 인증서에 있는 공개 키는 원격 서비스로 전달된 메시지 인증 및 대화를 암호화하는 데 사용되는 세션 키의 암호화에 사용됩니다. *user_name* 에 대한 인증서는 원격 서비스를 호스팅하는 데이터베이스 로그인에 대한 인증서와 일치해야 합니다.  
   
 ## <a name="permissions"></a>사용 권한  
  원격 서비스 바인딩을 변경할 수 있는 권한은 기본적으로 원격 서비스 바인딩의 소유자, **db_owner** 고정 데이터베이스 역할의 멤버 및 **sysadmin** 고정 서버 역할의 멤버로 설정됩니다.  

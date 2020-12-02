@@ -14,11 +14,11 @@ author: stevestein
 ms.author: sstein
 monikerRange: =azuresqldb-current||>=sql-server-2016||=sqlallproducts-allversions||>=sql-server-linux-2017||=azuresqldb-mi-current
 ms.openlocfilehash: 7e5e8e0bc84e26798716ba1635580b81dbfc08c8
-ms.sourcegitcommit: e700497f962e4c2274df16d9e651059b42ff1a10
+ms.sourcegitcommit: 192f6a99e19e66f0f817fdb1977f564b2aaa133b
 ms.translationtype: HT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 08/17/2020
-ms.locfileid: "88331079"
+ms.lasthandoff: 11/25/2020
+ms.locfileid: "96126680"
 ---
 # <a name="brokermessage-classify-event-class"></a>Broker:Message Classify 이벤트 클래스
 
@@ -33,7 +33,7 @@ ms.locfileid: "88331079"
 |**ApplicationName**|**nvarchar**|[!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]인스턴스에 연결한 클라이언트 애플리케이션의 이름입니다. 이 열은 프로그램의 표시 이름이 아니라 애플리케이션에서 전달한 값으로 채워집니다.|10|예|  
 |**ClientProcessID**|**int**|클라이언트 애플리케이션이 실행 중인 프로세스에 대해 호스트 컴퓨터가 할당한 ID입니다. 클라이언트가 클라이언트 프로세스 ID를 제공하면 이 데이터 열이 채워집니다.|9|예|  
 |**DatabaseID**|**int**|USE *database* 문으로 지정한 데이터베이스 ID이거나 지정한 인스턴스에 대해 실행된 USE *database* 문이 없는 경우 기본 데이터베이스 ID입니다. [!INCLUDE[ssSqlProfiler](../../includes/sssqlprofiler-md.md)] ServerName **데이터 열이 추적에서 캡처되고 서버를 사용할 수 있으면** 에 데이터베이스 이름이 표시됩니다. DB_ID 함수를 사용하여 데이터베이스의 값을 확인할 수 있습니다.|3|예|  
-|**EventClass**|**int**|캡처된 이벤트 클래스 유형입니다. **Broker:Message Classify** 의 경우 항상 **141**입니다.|27|예|  
+|**EventClass**|**int**|캡처된 이벤트 클래스 유형입니다. **Broker:Message Classify** 의 경우 항상 **141** 입니다.|27|예|  
 |**EventSequence**|**int**|이 이벤트의 시퀀스 번호입니다.|51|예|  
 |**EventSubClass**|**nvarchar**|각 이벤트 클래스에 대한 자세한 정보를 제공하는 이벤트 하위 클래스 유형입니다. 이 열에는 다음 값이 포함될 수 있습니다.<br /><br /> **Local**: 선택한 경로에 주소 LOCAL이 있습니다.<br /><br /> **Remote**:                 선택한 경로에 LOCAL 이외의 주소가 있습니다.<br /><br /> **Delayed**:                 전달이 비활성화되거나 일치하는 경로가 없기 때문에 메시지가 지연됩니다.|21|예|  
 |**FileName**|**nvarchar**|메시지가 전송되는 서비스 이름입니다.|36|예|  

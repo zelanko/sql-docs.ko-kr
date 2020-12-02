@@ -19,11 +19,11 @@ ms.assetid: 9c1c4cfb-0e3b-4f01-bf57-3fce94c7d1d4
 author: markingmyname
 ms.author: maghan
 ms.openlocfilehash: 3e1e705930e31cec8fa6b7b4913e3643cc25227e
-ms.sourcegitcommit: ac9feb0b10847b369b77f3c03f8200c86ee4f4e0
+ms.sourcegitcommit: 192f6a99e19e66f0f817fdb1977f564b2aaa133b
 ms.translationtype: HT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 09/16/2020
-ms.locfileid: "90688209"
+ms.lasthandoff: 11/25/2020
+ms.locfileid: "96128069"
 ---
 # <a name="alter-resource-pool-transact-sql"></a>ALTER RESOURCE POOL(Transact-SQL)
 [!INCLUDE [SQL Server](../../includes/applies-to-version/sqlserver.md)]
@@ -72,15 +72,15 @@ ALTER RESOURCE POOL { pool_name | "default" }
 >  미리 정의된 작업 그룹과 리소스 풀의 이름은 "default"와 같이 소문자를 사용합니다. 대/소문자 구분 데이터 정렬을 사용하는 서버의 경우 이러한 사항을 고려해야 합니다. 대/소문자 구분 데이터 정렬(예: SQL_Latin1_General_CP1_CI_AS)을 사용하는 서버는 "default"와 "Default"를 똑같이 처리합니다.  
   
  MIN_CPU_PERCENT =*value*  
- CPU 경합이 있을 때 리소스 풀의 모든 요청에 대해 보장되는 평균 CPU 대역폭을 지정합니다. *value*는 기본 설정이 0인 정수입니다. 허용되는 *value*의 범위는 0에서 100까지입니다.  
+ CPU 경합이 있을 때 리소스 풀의 모든 요청에 대해 보장되는 평균 CPU 대역폭을 지정합니다. *value* 는 기본 설정이 0인 정수입니다. 허용되는 *value* 의 범위는 0에서 100까지입니다.  
   
  MAX_CPU_PERCENT =*value*  
- CPU 경합이 있을 때 이 리소스 풀의 모든 요청이 받는 최대 평균 CPU 대역폭을 지정합니다. *value*는 기본 설정이 100인 정수입니다. 허용되는 *value*의 범위는 1에서 100까지입니다.  
+ CPU 경합이 있을 때 이 리소스 풀의 모든 요청이 받는 최대 평균 CPU 대역폭을 지정합니다. *value* 는 기본 설정이 100인 정수입니다. 허용되는 *value* 의 범위는 1에서 100까지입니다.  
   
  CAP_CPU_PERCENT =*value*  
  **적용 대상**: [!INCLUDE[ssSQL11](../../includes/sssql11-md.md)] 이상  
   
- 리소스 풀의 요청에 대한 대상 CPU의 최대 용량을 지정합니다. *value*는 기본 설정이 100인 정수입니다. 허용되는 *value*의 범위는 1에서 100까지입니다.  
+ 리소스 풀의 요청에 대한 대상 CPU의 최대 용량을 지정합니다. *value* 는 기본 설정이 100인 정수입니다. 허용되는 *value* 의 범위는 1에서 100까지입니다.  
   
 > [!NOTE]  
 >  CPU 거버넌스의 통계 특성으로 인해 CAP_CPU_PERCENT에 지정된 값을 초과하는 급격한 변동을 알릴 수 있습니다.  
@@ -103,20 +103,20 @@ INNER JOIN sys.dm_os_schedulers AS sc
 ```  
   
  MIN_MEMORY_PERCENT =*value*  
- 다른 리소스 풀과 공유할 수 없으며 이 리소스 풀에 예약된 최소 메모리 양을 지정합니다. *value*는 기본 설정이 0인 정수입니다. 허용되는 *value*의 범위는 0에서 100까지입니다.  
+ 다른 리소스 풀과 공유할 수 없으며 이 리소스 풀에 예약된 최소 메모리 양을 지정합니다. *value* 는 기본 설정이 0인 정수입니다. 허용되는 *value* 의 범위는 0에서 100까지입니다.  
   
  MAX_MEMORY_PERCENT =*value*  
- 이 리소스 풀의 요청에서 사용할 수 있는 총 서버 메모리를 지정합니다. *value*는 기본 설정이 100인 정수입니다. 허용되는 *value*의 범위는 1에서 100까지입니다.  
+ 이 리소스 풀의 요청에서 사용할 수 있는 총 서버 메모리를 지정합니다. *value* 는 기본 설정이 100인 정수입니다. 허용되는 *value* 의 범위는 1에서 100까지입니다.  
   
  MIN_IOPS_PER_VOLUME =*value*  
  **적용 대상**: [!INCLUDE[ssSQL14](../../includes/sssql14-md.md)] 이상  
   
- 리소스 풀에 예약할 디스크 볼륨당 최소 IOPS(초당 IO 작업)를 지정합니다. 허용되는 *value*의 범위는 0에서 2^31-1(2,147,483,647)까지입니다. 풀에 대한 최소 임계값이 없음을 나타내려면 0을 지정합니다.  
+ 리소스 풀에 예약할 디스크 볼륨당 최소 IOPS(초당 IO 작업)를 지정합니다. 허용되는 *value* 의 범위는 0에서 2^31-1(2,147,483,647)까지입니다. 풀에 대한 최소 임계값이 없음을 나타내려면 0을 지정합니다.  
   
  MAX_IOPS_PER_VOLUME =*value*  
  **적용 대상**: [!INCLUDE[ssSQL14](../../includes/sssql14-md.md)] 이상  
   
- 리소스 풀에 대해 허용할 디스크 볼륨당 최대 IOPS(초당 IO 작업)를 지정합니다. 허용되는 *value*의 범위는 0에서 2^31-1(2,147,483,647)까지입니다. 풀에 대한 무제한 임계값을 설정하려면 0을 지정합니다. 기본값은 0입니다.  
+ 리소스 풀에 대해 허용할 디스크 볼륨당 최대 IOPS(초당 IO 작업)를 지정합니다. 허용되는 *value* 의 범위는 0에서 2^31-1(2,147,483,647)까지입니다. 풀에 대한 무제한 임계값을 설정하려면 0을 지정합니다. 기본값은 0입니다.  
   
  풀에 대한 MAX_IOPS_PER_VOLUME이 0으로 설정된 경우 풀이 전혀 제어되지 않으며, 다른 풀에 MIN_IOPS_PER_VOLUME 집합이 설정되었더라도 시스템에서 모든 IOPS를 사용할 수 있습니다. 이 경우에는 이 풀의 IO를 제어하려는 경우 이 풀에 대한 MAX_IOPS_PER_VOLUME 값을 높은 값(예를 들어, 최대값 2^31-1)으로 설정하는 것이 좋습니다.  
   
@@ -129,14 +129,14 @@ INNER JOIN sys.dm_os_schedulers AS sc
   
  DDL 문을 실행할 경우 리소스 관리자 상태에 대해 잘 알고 있는 것이 좋습니다. 자세한 내용은 [Resource Governor](../../relational-databases/resource-governor/resource-governor.md)를 참조하세요.  
   
- 설정에 영향을 주는 계획을 변경할 경우 *pool_name*이 Resource Governor 리소스 풀의 이름인 DBCC FREEPROCCACHE(*pool_name*)를 실행 한 후 새 설정이 이전에 캐시된 계획에 적용됩니다.  
+ 설정에 영향을 주는 계획을 변경할 경우 *pool_name* 이 Resource Governor 리소스 풀의 이름인 DBCC FREEPROCCACHE(*pool_name*)를 실행 한 후 새 설정이 이전에 캐시된 계획에 적용됩니다.  
   
 -   여러 스케줄러에서 단일 스케줄러로 AFFINITY를 변경 하는 경우 DBCC FREEPROCCACHE의 실행은 병렬 계획이 직렬 모드에서 실행될 수 있기 때문에 필요하지 않습니다. 그러나 직렬 계획으로 컴파일된 계획만큼 효율적이지 않을 수 있습니다.  
   
 -   단일 스케줄러에서 여러 스케줄러로 AFFINITY를 변경 하는 경우 DBCC FREEPROCCACHE의 실행은 필요하지 않습니다. 그러나 직렬 계획이 병렬로 실행될 수 없으므로 해당 캐시의 제거로 새 계획이 잠재적으로 병렬 처리를 사용하여 컴파일될 수 있습니다.  
   
 > [!CAUTION]  
->  하나 이상의 작업 그룹에 연결된 리소스 풀에서 캐시된 계획을 삭제하면 *pool_name*에 의해 식별된 사용자 정의 리소스 풀과 함께 모든 작업 그룹에 영향을 미칩니다.  
+>  하나 이상의 작업 그룹에 연결된 리소스 풀에서 캐시된 계획을 삭제하면 *pool_name* 에 의해 식별된 사용자 정의 리소스 풀과 함께 모든 작업 그룹에 영향을 미칩니다.  
   
 ## <a name="permissions"></a>사용 권한  
  CONTROL SERVER 권한이 필요합니다.  

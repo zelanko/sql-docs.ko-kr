@@ -25,11 +25,11 @@ ms.assetid: 09e62428-ee0e-4ef5-b969-da9d255f1199
 author: julieMSFT
 ms.author: jrasnick
 ms.openlocfilehash: 851909caa64e8391275d5908f49e652bf1d993ec
-ms.sourcegitcommit: 197a6ffb643f93592edf9e90b04810a18be61133
+ms.sourcegitcommit: 192f6a99e19e66f0f817fdb1977f564b2aaa133b
 ms.translationtype: HT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 09/26/2020
-ms.locfileid: "91380258"
+ms.lasthandoff: 11/25/2020
+ms.locfileid: "96128351"
 ---
 # <a name="x40x40total_errors-transact-sql"></a>&#x40;&#x40;TOTAL_ERRORS(Transact-SQL)
 [!INCLUDE [SQL Server](../../includes/applies-to-version/sqlserver.md)]
@@ -50,7 +50,7 @@ ms.locfileid: "91380258"
  **integer**  
   
 ## <a name="remarks"></a>설명  
- [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]에서 발생한 모든 쓰기 오류가 반환되는 것은 아닙니다. 사소한 쓰기 오류는 서버 자체에서 처리되며 오류로 처리되지 않는 경우도 있습니다. 오류의 총 개수를 포함하여 여러 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 통계가 들어 있는 보고서를 표시하려면 **sp_monitor**를 사용합니다.  
+ [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]에서 발생한 모든 쓰기 오류가 반환되는 것은 아닙니다. 사소한 쓰기 오류는 서버 자체에서 처리되며 오류로 처리되지 않는 경우도 있습니다. 오류의 총 개수를 포함하여 여러 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 통계가 들어 있는 보고서를 표시하려면 **sp_monitor** 를 사용합니다.  
   
 ## <a name="examples"></a>예  
  다음 예에서는 현재 날짜 및 시간에 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]에서 발생한 오류 수를 보여 줍니다.  

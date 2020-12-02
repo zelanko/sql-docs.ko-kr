@@ -14,11 +14,11 @@ ms.assetid: bea09522-ff47-4037-ab55-a98ea7c10099
 author: VanMSFT
 ms.author: vanto
 ms.openlocfilehash: 79e16f9a39e235f7ceed5a77e55d03f4c5efed72
-ms.sourcegitcommit: e700497f962e4c2274df16d9e651059b42ff1a10
+ms.sourcegitcommit: 192f6a99e19e66f0f817fdb1977f564b2aaa133b
 ms.translationtype: HT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 08/17/2020
-ms.locfileid: "88381189"
+ms.lasthandoff: 11/25/2020
+ms.locfileid: "96127873"
 ---
 # <a name="evaluate-a-policy-based-management-policy-on-a-schedule"></a>일정에 따라 정책 기반 관리 정책 평가
  [!INCLUDE [SQL Server](../../includes/applies-to-version/sqlserver.md)]
@@ -45,20 +45,20 @@ ms.locfileid: "88381189"
   
 #### <a name="to-evaluate-a-policy-on-a-schedule"></a>일정에 따라 정책을 평가하려면  
   
-1.  **개체 탐색기**에서 더하기 기호를 클릭하여 평가하려는 정책 일정이 들어 있는 서버를 확장합니다.  
+1.  **개체 탐색기** 에서 더하기 기호를 클릭하여 평가하려는 정책 일정이 들어 있는 서버를 확장합니다.  
   
 2.  더하기 기호를 클릭하여 **관리** 폴더를 확장합니다.  
   
-3.  더하기 기호를 클릭하여 **정책 관리**를 확장합니다.  
+3.  더하기 기호를 클릭하여 **정책 관리** 를 확장합니다.  
   
 4.  더하기 기호를 클릭하여 **정책** 폴더를 확장합니다.  
   
-5.  평가하려는 일정이 지정된 정책을 마우스 오른쪽 단추로 클릭하고 **속성**을 선택합니다.  
+5.  평가하려는 일정이 지정된 정책을 마우스 오른쪽 단추로 클릭하고 **속성** 을 선택합니다.  
   
-6.  **정책 열기** _–policy_name_ 대화 상자의 **평가 모드** 목록에서 **예약 시**를 선택합니다.  
+6.  **정책 열기** _–policy_name_ 대화 상자의 **평가 모드** 목록에서 **예약 시** 를 선택합니다.  
   
-7.  **일정**에서 **선택** 을 클릭하여 기존 일정을 지정하거나 **새로 만들기** 를 클릭하여 새 일정을 만듭니다.  
+7.  **일정** 에서 **선택** 을 클릭하여 기존 일정을 지정하거나 **새로 만들기** 를 클릭하여 새 일정을 만듭니다.  
   
-8.  완료되었으면 **확인**을 클릭합니다.  
+8.  완료되었으면 **확인** 을 클릭합니다.  
   
   

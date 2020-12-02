@@ -25,11 +25,11 @@ ms.assetid: 647386da-ee80-41cf-86c9-dd590f9d66b6
 author: VanMSFT
 ms.author: vanto
 ms.openlocfilehash: da64f4dfa4c6013a8aba2928236db09004db8f1b
-ms.sourcegitcommit: e700497f962e4c2274df16d9e651059b42ff1a10
+ms.sourcegitcommit: 192f6a99e19e66f0f817fdb1977f564b2aaa133b
 ms.translationtype: HT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 08/17/2020
-ms.locfileid: "88496991"
+ms.lasthandoff: 11/25/2020
+ms.locfileid: "96128043"
 ---
 # <a name="create-application-role-transact-sql"></a>CREATE APPLICATION ROLE(Transact-SQL)
 [!INCLUDE [SQL Server SQL Database](../../includes/applies-to-version/sql-asdb.md)]
@@ -53,10 +53,10 @@ CREATE APPLICATION ROLE application_role_name
  애플리케이션 역할의 이름을 지정합니다. 이 이름은 데이터베이스의 다른 보안 주체를 참조하는 데 사용된 이름이 아니어야 합니다.  
   
  PASSWORD **='** _password_ **'**  
- 데이터베이스 사용자가 애플리케이션 역할을 활성화하는 데 사용할 암호를 지정합니다. 항상 강력한 암호를 사용해야 합니다. *password*는 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 인스턴스를 실행하는 컴퓨터의 Windows 암호 정책 요구 사항을 충족해야 합니다.  
+ 데이터베이스 사용자가 애플리케이션 역할을 활성화하는 데 사용할 암호를 지정합니다. 항상 강력한 암호를 사용해야 합니다. *password* 는 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 인스턴스를 실행하는 컴퓨터의 Windows 암호 정책 요구 사항을 충족해야 합니다.  
   
  DEFAULT_SCHEMA **=** _schema\_name_  
- 서버가 이 역할에 대한 개체의 이름을 확인할 때 검색할 첫 번째 스키마를 지정합니다. DEFAULT_SCHEMA를 정의하지 않으면 애플리케이션 역할이 기본 스키마로 DBO를 사용합니다. *schema_name*은 데이터베이스에 존재하지 않는 스키마일 수 있습니다.  
+ 서버가 이 역할에 대한 개체의 이름을 확인할 때 검색할 첫 번째 스키마를 지정합니다. DEFAULT_SCHEMA를 정의하지 않으면 애플리케이션 역할이 기본 스키마로 DBO를 사용합니다. *schema_name* 은 데이터베이스에 존재하지 않는 스키마일 수 있습니다.  
   
 ## <a name="remarks"></a>설명  
   

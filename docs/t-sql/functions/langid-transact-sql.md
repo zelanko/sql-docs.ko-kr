@@ -23,11 +23,11 @@ ms.assetid: 7a0fc089-2a48-4a81-9d78-2aaedb540d37
 author: markingmyname
 ms.author: maghan
 ms.openlocfilehash: e6cd2cb8379281733a4fadada57af60780d0f0db
-ms.sourcegitcommit: cc23d8646041336d119b74bf239a6ac305ff3d31
+ms.sourcegitcommit: 192f6a99e19e66f0f817fdb1977f564b2aaa133b
 ms.translationtype: HT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 09/23/2020
-ms.locfileid: "91115118"
+ms.lasthandoff: 11/25/2020
+ms.locfileid: "96128401"
 ---
 # <a name="x40x40langid-transact-sql"></a>&#x40;&#x40;LANGID(Transact-SQL)
 [!INCLUDE [SQL Server SQL Database](../../includes/applies-to-version/sql-asdb.md)]
@@ -48,7 +48,7 @@ ms.locfileid: "91115118"
  **smallint**  
   
 ## <a name="remarks"></a>설명  
- 언어 ID를 포함한 언어 설정에 대한 정보를 보려면 매개 변수를 지정하지 않고 **sp_helplanguage**를 실행하세요.  
+ 언어 ID를 포함한 언어 설정에 대한 정보를 보려면 매개 변수를 지정하지 않고 **sp_helplanguage** 를 실행하세요.  
   
 ## <a name="examples"></a>예  
  다음 예에서는 현재 세션의 언어를 `Italian`으로 설정한 다음 `@@LANGID`를 사용하여 이탈리아어의 ID를 반환합니다.  

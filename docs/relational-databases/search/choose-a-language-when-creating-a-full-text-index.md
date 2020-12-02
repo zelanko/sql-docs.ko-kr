@@ -21,11 +21,11 @@ ms.author: pelopes
 ms.reviewer: mikeray
 monikerRange: = azuresqldb-current || >= sql-server-2016 || = sqlallproducts-allversions
 ms.openlocfilehash: 9f8c0860bb5ef874a6095b993478fa9cbc117fc4
-ms.sourcegitcommit: e700497f962e4c2274df16d9e651059b42ff1a10
+ms.sourcegitcommit: 192f6a99e19e66f0f817fdb1977f564b2aaa133b
 ms.translationtype: HT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 08/17/2020
-ms.locfileid: "88475546"
+ms.lasthandoff: 11/25/2020
+ms.locfileid: "96127769"
 ---
 # <a name="choose-a-language-when-creating-a-full-text-index"></a>전체 텍스트 인덱스 생성 시 언어 선택
 
@@ -72,7 +72,7 @@ ms.locfileid: "88475546"
  전체 텍스트 인덱스를 만들 때는 각 열마다 유효한 언어 이름을 지정해야 합니다. 유효한 언어 이름이 [sys.fulltext_languages&#40;Transact-SQL&#41;](../../relational-databases/system-catalog-views/sys-fulltext-languages-transact-sql.md) 카탈로그 뷰에서 반환되지 않을 경우 전체 텍스트 검색은 동일 언어군에서 가장 근접한 언어 이름이 있으면 이를 대신 사용합니다. 그렇지 않으면 중립 단어 분리기를 사용합니다. 이러한 대체 동작은 재호출 정확성에 영향을 줄 수 있습니다. 따라서 전체 텍스트 인덱스를 만들 때는 각 열마다 유효하고 사용 가능한 언어 이름을 지정하는 것이 가장 좋습니다.  
   
 > [!NOTE]  
->  LCID는 **char** 또는 **nchar**등의 전체 텍스트 인덱싱에 적합한 모든 데이터 형식에 대해 사용됩니다. **char**, **varchar**또는 **text** 형식 열의 정렬 순서를 LCID로 식별된 언어와 다른 언어 설정으로 지정할 경우에도 이러한 행에 대한 전체 텍스트 인덱싱 및 쿼리를 수행하는 동안에는 LCID가 사용됩니다.  
+>  LCID는 **char** 또는 **nchar** 등의 전체 텍스트 인덱싱에 적합한 모든 데이터 형식에 대해 사용됩니다. **char**, **varchar** 또는 **text** 형식 열의 정렬 순서를 LCID로 식별된 언어와 다른 언어 설정으로 지정할 경우에도 이러한 행에 대한 전체 텍스트 인덱싱 및 쿼리를 수행하는 동안에는 LCID가 사용됩니다.  
   
   
 ##  <a name="word-breaking"></a><a name="breaking"></a> 단어 분리  
@@ -101,7 +101,7 @@ ms.locfileid: "88475546"
   
   
 ##  <a name="stemming"></a><a name="stemming"></a> 형태소 분석  
- 열 수준 언어를 선택할 때는 형태소 분석도 고려해야 합니다. 전체 텍스트 쿼리의*형태소 분석* 이란 특정 언어로 된 한 단어의 모든 형태소(굴절형)를 검색하는 프로세스를 말합니다. 일반적인 단어 분리기를 사용하여 몇 가지 언어를 처리하는 경우 형태소 분석 프로세스는 열에 대해 지정된 언어에 대해서만 작동하고, 열의 다른 언어에 대해서는 작동하지 않습니다. 예를 들어 독일어 형태소 분석기는 영어 또는 스페인어 등에는 작동하지 않습니다. 이는 쿼리 단계에서 선택한 언어에 따라 회수에 영향을 줄 수 있습니다.  
+ 열 수준 언어를 선택할 때는 형태소 분석도 고려해야 합니다. 전체 텍스트 쿼리의 *형태소 분석* 이란 특정 언어로 된 한 단어의 모든 형태소(굴절형)를 검색하는 프로세스를 말합니다. 일반적인 단어 분리기를 사용하여 몇 가지 언어를 처리하는 경우 형태소 분석 프로세스는 열에 대해 지정된 언어에 대해서만 작동하고, 열의 다른 언어에 대해서는 작동하지 않습니다. 예를 들어 독일어 형태소 분석기는 영어 또는 스페인어 등에는 작동하지 않습니다. 이는 쿼리 단계에서 선택한 언어에 따라 회수에 영향을 줄 수 있습니다.  
   
   
 ##  <a name="effect-of-column-type-on-full-text-search"></a><a name="type"></a> 전체 텍스트 검색에 대한 열 유형의 영향  

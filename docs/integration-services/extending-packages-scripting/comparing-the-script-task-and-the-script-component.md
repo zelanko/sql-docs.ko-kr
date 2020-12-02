@@ -17,11 +17,11 @@ ms.assetid: 4b73753a-4239-491b-b7a6-abc63ba83d2d
 author: chugugrace
 ms.author: chugu
 ms.openlocfilehash: 732de7f6d7c9e75d436dca721b370f63a46a4c60
-ms.sourcegitcommit: e700497f962e4c2274df16d9e651059b42ff1a10
+ms.sourcegitcommit: 192f6a99e19e66f0f817fdb1977f564b2aaa133b
 ms.translationtype: HT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 08/17/2020
-ms.locfileid: "88430325"
+ms.lasthandoff: 11/25/2020
+ms.locfileid: "96125641"
 ---
 # <a name="comparing-the-script-task-and-the-script-component"></a>스크립트 태스크와 스크립트 구성 요소 비교
 
@@ -48,7 +48,7 @@ ms.locfileid: "88430325"
 |제어 흐름/데이터 흐름|스크립트 태스크는 디자이너의 제어 흐름 탭에서 구성되며 패키지의 데이터 흐름 외부에서 실행됩니다.|스크립트 구성 요소는 디자이너의 데이터 흐름 페이지에서 구성되며 데이터 흐름 태스크의 원본, 변환 또는 대상을 나타냅니다.|  
 |용도|스크립트 태스크에서는 일반적인 용도의 거의 모든 태스크를 수행할 수 있습니다.|스크립트 구성 요소를 사용하여 원본, 변환 또는 대상 중 무엇을 만들지를 지정해야 합니다.|  
 |실행|스크립트 태스크에서는 패키지 워크플로의 일부 지점에서 사용자 지정 코드를 실행합니다. 사용자 지정 코드를 루프 컨테이너나 이벤트 처리기에 추가하지 않은 경우 해당 코드는 한 번만 실행됩니다.|스크립트 구성 요소도 한 번만 실행되지만 일반적으로 스크립트 구성 요소에서는 주 처리 루틴을 데이터 흐름의 각 데이터 행에 대해 한 번씩 실행합니다.|  
-|편집기|**스크립트 태스크 편집기**에는 **일반**, **스크립트** 및 **식**이라는 3개 페이지가 있습니다. **ReadOnlyVariables**과 **ReadWriteVariables** 및 **ScriptLanguage** 속성만 사용자가 작성하는 코드에 직접적인 영향을 미칩니다.|**스크립트 변환 편집기**에는 **입력 열**, **입/출력**, **스크립트** 및 **연결 관리자** 등 최대 4개 페이지가 있습니다. 이러한 각 페이지에서 구성하는 메타데이터 및 속성은 코딩에 사용할 수 있도록 자동으로 생성되는 기본 클래스의 멤버를 결정합니다.|  
+|편집기|**스크립트 태스크 편집기** 에는 **일반**, **스크립트** 및 **식** 이라는 3개 페이지가 있습니다. **ReadOnlyVariables** 과 **ReadWriteVariables** 및 **ScriptLanguage** 속성만 사용자가 작성하는 코드에 직접적인 영향을 미칩니다.|**스크립트 변환 편집기** 에는 **입력 열**, **입/출력**, **스크립트** 및 **연결 관리자** 등 최대 4개 페이지가 있습니다. 이러한 각 페이지에서 구성하는 메타데이터 및 속성은 코딩에 사용할 수 있도록 자동으로 생성되는 기본 클래스의 멤버를 결정합니다.|  
 |패키지와의 상호 작용|스크립트 태스크용으로 작성된 코드에서는 **Dts** 속성을 사용하여 패키지의 다른 기능에 액세스합니다. **Dts** 속성은 **ScriptMain** 클래스의 구성원입니다.|스크립트 구성 요소 코드에서는 형식화된 접근자 속성을 사용하여 변수 및 연결 관리자와 같은 일부 패키지 기능에 액세스합니다.<br /><br /> **PreExecute** 메서드는 읽기 전용 변수만 액세스할 수 있습니다. **PostExecute** 메서드는 읽기 전용 변수 및 읽기/쓰기 변수 모두에 액세스할 수 있습니다.<br /><br /> 이러한 메서드에 대한 자세한 내용은 [스크립트 구성 요소 코딩 및 디버깅](../../integration-services/extending-packages-scripting/data-flow-script-component/coding-and-debugging-the-script-component.md)을 참조하세요.|  
 |변수 사용|스크립트 태스크에서는 **Dts** 개체의 <xref:Microsoft.SqlServer.Dts.Tasks.ScriptTask.ScriptObjectModel.Variables%2A> 속성을 사용하여 태스크의 <xref:Microsoft.SqlServer.Dts.Tasks.ScriptTask.ScriptTask.ReadOnlyVariables%2A> 및 <xref:Microsoft.SqlServer.Dts.Tasks.ScriptTask.ScriptTask.ReadWriteVariables%2A> 속성을 통해 사용할 수 있는 변수에 액세스합니다. 예를 들면 다음과 같습니다.<br /><br /> [Visual Basic]<br /><br /> `Dim myVar as String` <br /> `myVar = Dts.Variables("MyStringVariable").Value.ToString`<br /><br /> [C#]<br /><br /> `string myVar;` <br /> `myVar = Dts.Variables["MyStringVariable"].Value.ToString();`|스크립트 구성 요소에서는 구성 요소의 <xref:Microsoft.SqlServer.Dts.Pipeline.ScriptComponent.ReadOnlyVariables%2A> 및 <xref:Microsoft.SqlServer.Dts.Pipeline.ScriptComponent.ReadWriteVariables%2A> 속성에서 만들어진 자동 생성 기본 클래스의 형식화된 접근자 속성을 사용합니다. 예를 들면 다음과 같습니다.<br /><br /> [Visual Basic]<br /><br /> `Dim myVar as String` <br /> `myVar = Me.Variables.MyStringVariable`<br /><br /> [C#]<br /><br /> `string myVar;` <br /> `myVar = this.Variables.MyStringVariable;`|  
 |연결 사용|스크립트 태스크에서는 **Dts** 개체의 <xref:Microsoft.SqlServer.Dts.Tasks.ScriptTask.ScriptObjectModel.Connections%2A> 속성을 사용하여 패키지에 정의된 연결 관리자에 액세스합니다. 예를 들면 다음과 같습니다.<br /><br /> [Visual Basic]<br /><br /> `Dim myFlatFileConnection As String` <br /> `myFlatFileConnection = _     DirectCast(Dts.Connections("Test Flat File Connection").AcquireConnection(Dts.Transaction), _     String)`<br /><br /> [C#]<br /><br /> `string myFlatFileConnection;` <br /> `myFlatFileConnection = (Dts.Connections["Test Flat File Connection"].AcquireConnection(Dts.Transaction) as String);`|스크립트 구성 요소에서는 사용자가 편집기의 연결 관리자 페이지에서 입력한 연결 관리자 목록에서 만들어진 자동 생성 기본 클래스의 형식화된 접근자 속성을 사용합니다. 예를 들면 다음과 같습니다.<br /><br /> [Visual Basic]<br /><br /> `Dim connMgr As IDTSConnectionManager100` <br /> `connMgr = Me.Connections.MyADONETConnection`<br /><br /> [C#]<br /><br /> `IDTSConnectionManager100 connMgr;` <br /> `connMgr = this.Connections.MyADONETConnection;`|  

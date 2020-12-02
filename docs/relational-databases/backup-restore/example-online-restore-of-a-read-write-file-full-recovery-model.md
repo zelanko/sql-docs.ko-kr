@@ -13,14 +13,14 @@ helpviewer_keywords:
 - online restores [SQL Server], full recovery model
 - restore sequences [SQL Server], online
 ms.assetid: 0dbeda81-1464-44ba-9011-914900096368
-author: MikeRayMSFT
-ms.author: mikeray
-ms.openlocfilehash: 75c16bab2ed7f8f46ee05af3dedf533530f07f08
-ms.sourcegitcommit: da88320c474c1c9124574f90d549c50ee3387b4c
+author: cawrites
+ms.author: chadam
+ms.openlocfilehash: ce68e817070765a6f84a12c518e71de221734b34
+ms.sourcegitcommit: 5a1ed81749800c33059dac91b0e18bd8bb3081b1
 ms.translationtype: HT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 07/01/2020
-ms.locfileid: "85737785"
+ms.lasthandoff: 11/23/2020
+ms.locfileid: "96126997"
 ---
 # <a name="example-online-restore-of-a-read-write-file-full-recovery-model"></a>예제: 읽기/쓰기 파일의 온라인 복원(전체 복구 모델)
  [!INCLUDE [SQL Server](../../includes/applies-to-version/sqlserver.md)]
@@ -56,7 +56,7 @@ ms.locfileid: "85737785"
   
 3.  로그 백업의 온라인 복원  
   
-     관리자는 복원된 파일 백업 이후에 수행된 로그 백업부터 시작하여 가장 최근의 로그 백업(2단계에서 수행한*log_backup3*)까지 모든 로그 백업을 복원합니다. 마지막 로그 백업이 복원되면 데이터베이스가 복구됩니다.  
+     관리자는 복원된 파일 백업 이후에 수행된 로그 백업부터 시작하여 가장 최근의 로그 백업(2단계에서 수행한 *log_backup3*)까지 모든 로그 백업을 복원합니다. 마지막 로그 백업이 복원되면 데이터베이스가 복구됩니다.  
   
     ```  
     RESTORE LOG adb FROM log_backup1 WITH NORECOVERY;  

@@ -17,11 +17,11 @@ author: stevestein
 ms.author: sstein
 monikerRange: =azuresqldb-current||>=sql-server-2016||=sqlallproducts-allversions||>=sql-server-linux-2017||=azuresqldb-mi-current
 ms.openlocfilehash: 87a05942a1061db1f074266d0b5df3b1797f5e73
-ms.sourcegitcommit: a5398f107599102af7c8cda815d8e5e9a367ce7e
+ms.sourcegitcommit: 192f6a99e19e66f0f817fdb1977f564b2aaa133b
 ms.translationtype: HT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 10/13/2020
-ms.locfileid: "92006125"
+ms.lasthandoff: 11/25/2020
+ms.locfileid: "96128666"
 ---
 # <a name="rename-tables-database-engine"></a>테이블 이름 바꾸기(데이터베이스 엔진)
 
@@ -64,23 +64,23 @@ Azure Synapse Analytics 또는 병렬 데이터 웨어하우스에서 테이블�
   
 1.  개체 탐색기에서 이름을 바꾸려는 테이블을 마우스 오른쪽 단추로 클릭하고 바로 가기 메뉴에서 **디자인** 을 선택합니다.  
   
-2.  **보기** 메뉴에서 **속성**을 선택합니다.  
+2.  **보기** 메뉴에서 **속성** 을 선택합니다.  
   
 3.  **속성** 창의 **이름** 값 필드에 테이블의 새 이름을 입력합니다.  
   
 4.  이 동작을 취소하려면 이 필드를 나가기 전에 Esc 키를 누릅니다.  
   
-5.  **파일** 메뉴에서 ‘테이블 이름’ **저장**을 선택합니다.  
+5.  **파일** 메뉴에서 ‘테이블 이름’ **저장** 을 선택합니다.  
 
 ##  <a name="using-transact-sql"></a><a name="TsqlProcedure"></a> Transact-SQL 사용  
   
 #### <a name="to-rename-a-table"></a>테이블 이름을 바꾸려면  
   
-1.  **개체 탐색기**에서 [!INCLUDE[ssDE](../../includes/ssde-md.md)]인스턴스에 연결합니다.  
+1.  **개체 탐색기** 에서 [!INCLUDE[ssDE](../../includes/ssde-md.md)]인스턴스에 연결합니다.  
   
-2.  표준 도구 모음에서 **새 쿼리**를 클릭합니다.  
+2.  표준 도구 모음에서 **새 쿼리** 를 클릭합니다.  
   
-3.  다음 예에서는 `SalesTerritory` 스키마에 있는 `SalesTerr` 테이블의 이름을 `Sales` 로 바꿉니다. 다음 예를 복사하여 쿼리 창에 붙여 넣고 **실행**을 클릭합니다.  
+3.  다음 예에서는 `SalesTerritory` 스키마에 있는 `SalesTerr` 테이블의 이름을 `Sales` 로 바꿉니다. 다음 예를 복사하여 쿼리 창에 붙여 넣고 **실행** 을 클릭합니다.  
   
     ```  
     USE AdventureWorks2012;   

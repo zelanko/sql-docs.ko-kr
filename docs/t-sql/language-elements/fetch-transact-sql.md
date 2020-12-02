@@ -25,11 +25,11 @@ ms.assetid: 5d68dac2-f91b-4342-bb4e-209ee132665f
 author: rothja
 ms.author: jroth
 ms.openlocfilehash: 5e8be7438efd35d57a81b30270ab865ca795b9d7
-ms.sourcegitcommit: cfa04a73b26312bf18d8f6296891679166e2754d
+ms.sourcegitcommit: 192f6a99e19e66f0f817fdb1977f564b2aaa133b
 ms.translationtype: HT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 10/19/2020
-ms.locfileid: "92196157"
+ms.lasthandoff: 11/25/2020
+ms.locfileid: "96128242"
 ---
 # <a name="fetch-transact-sql"></a>FETCH(Transact-SQL)
 [!INCLUDE [SQL Server SQL Database](../../includes/applies-to-version/sql-asdb.md)]
@@ -68,16 +68,16 @@ FETCH
  커서의 마지막 행을 반환하며 그 행을 현재 행으로 만듭니다.  
   
  ABSOLUTE { *n*| \@*nvar*}  
- *n* 또는 \@*nvar*가 양수인 경우 커서 맨 앞에서 *n*번째 행을 반환하며 반환되는 행을 새 현재 행으로 만듭니다. *n* 또는 \@*nvar*가 음수인 경우에는 커서 맨 뒤에서 *n*번째 행을 반환하며 반환되는 행을 새 현재 행으로 만듭니다. *n* 또는 \@*nvar*가 0이면 행이 반환되지 않습니다. *n*은 정수 상수여야 하며 \@*nvar*는 **smallint**, **tinyint** 또는 **int**이어야 합니다.  
+ *n* 또는 \@*nvar* 가 양수인 경우 커서 맨 앞에서 *n* 번째 행을 반환하며 반환되는 행을 새 현재 행으로 만듭니다. *n* 또는 \@*nvar* 가 음수인 경우에는 커서 맨 뒤에서 *n* 번째 행을 반환하며 반환되는 행을 새 현재 행으로 만듭니다. *n* 또는 \@*nvar* 가 0이면 행이 반환되지 않습니다. *n* 은 정수 상수여야 하며 \@*nvar* 는 **smallint**, **tinyint** 또는 **int** 이어야 합니다.  
   
  RELATIVE { *n*| \@*nvar*}  
- *n* 또는 \@*nvar*이 양수인 경우에는 현재 행에서 위로 *n*번째 행을 반환하며 반환되는 행을 새 현재 행으로 만듭니다. *n* 또는 \@*nvar*이 음수인 경우에는 현재 행에서 앞으로 *n*번째 행을 반환하며 반환되는 행을 새 현재 행으로 만듭니다. *n* 또는 \@*nvar*가 0인 경우에는 현재 행을 반환합니다. *n* 또는 \@*nvar*가 음수로 설정되거나 첫 번째 인출에 있는 0이 커서에 대해 수행되도록 `FETCH RELATIVE`가 지정된 경우 행은 반환되지 않습니다. *n*은 정수 상수여야 하며 \@*nvar*는 **smallint**, **tinyint** 또는 **int**이어야 합니다.  
+ *n* 또는 \@*nvar* 이 양수인 경우에는 현재 행에서 위로 *n* 번째 행을 반환하며 반환되는 행을 새 현재 행으로 만듭니다. *n* 또는 \@*nvar* 이 음수인 경우에는 현재 행에서 앞으로 *n* 번째 행을 반환하며 반환되는 행을 새 현재 행으로 만듭니다. *n* 또는 \@*nvar* 가 0인 경우에는 현재 행을 반환합니다. *n* 또는 \@*nvar* 가 음수로 설정되거나 첫 번째 인출에 있는 0이 커서에 대해 수행되도록 `FETCH RELATIVE`가 지정된 경우 행은 반환되지 않습니다. *n* 은 정수 상수여야 하며 \@*nvar* 는 **smallint**, **tinyint** 또는 **int** 이어야 합니다.  
   
  GLOBAL  
- *cursor_name*이 전역 커서를 참조하도록 지정합니다.  
+ *cursor_name* 이 전역 커서를 참조하도록 지정합니다.  
   
  *cursor_name*  
- 인출이 수행되는 열린 커서의 이름입니다. 동일한 *cursor_name*을 가진 전역 커서와 지역 커서가 있을 경우 GLOBAL이 지정되면 *cursor_name*은 전역 커서를 참조하고 GLOBAL이 지정되지 않으면 지역 커서를 참조합니다.  
+ 인출이 수행되는 열린 커서의 이름입니다. 동일한 *cursor_name* 을 가진 전역 커서와 지역 커서가 있을 경우 GLOBAL이 지정되면 *cursor_name* 은 전역 커서를 참조하고 GLOBAL이 지정되지 않으면 지역 커서를 참조합니다.  
   
  \@*cursor_variable_name*  
  수행할 인출에서 열린 커서를 참조하는 커서 변수의 이름입니다.  

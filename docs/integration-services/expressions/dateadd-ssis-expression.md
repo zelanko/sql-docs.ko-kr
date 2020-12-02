@@ -16,11 +16,11 @@ ms.assetid: fa5c37b1-2ddc-4857-8f8e-f6d5643b654f
 author: chugugrace
 ms.author: chugu
 ms.openlocfilehash: f6dd42e81d3b1d2db558962cbb9843488dd1ad16
-ms.sourcegitcommit: e700497f962e4c2274df16d9e651059b42ff1a10
+ms.sourcegitcommit: 192f6a99e19e66f0f817fdb1977f564b2aaa133b
 ms.translationtype: HT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 08/17/2020
-ms.locfileid: "88425555"
+ms.lasthandoff: 11/25/2020
+ms.locfileid: "96127145"
 ---
 # <a name="dateadd-ssis-expression"></a>DATEADD(SSIS 식)
 
@@ -41,7 +41,7 @@ DATEADD(datepart, number, date)
  숫자를 더할 날짜 부분을 지정하는 매개 변수입니다.  
   
  *number*  
- *datepart*에 더해지는 값입니다. 값은 식을 구문 분석할 때 알려진 정수 값이어야 합니다.  
+ *datepart* 에 더해지는 값입니다. 값은 식을 구문 분석할 때 알려진 정수 값이어야 합니다.  
   
  *date*  
  유효한 날짜 또는 날짜 형식의 문자열을 반환하는 식입니다.  

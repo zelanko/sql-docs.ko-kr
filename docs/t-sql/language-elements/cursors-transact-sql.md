@@ -18,11 +18,11 @@ ms.assetid: 63000023-54fc-4efc-a30f-fb4d4db73aae
 author: rothja
 ms.author: jroth
 ms.openlocfilehash: edfa870dd6f2f21f6d2bfdd122365c9913dc342a
-ms.sourcegitcommit: e700497f962e4c2274df16d9e651059b42ff1a10
+ms.sourcegitcommit: 192f6a99e19e66f0f817fdb1977f564b2aaa133b
 ms.translationtype: HT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 08/17/2020
-ms.locfileid: "88361059"
+ms.lasthandoff: 11/25/2020
+ms.locfileid: "96128271"
 ---
 # <a name="cursors-transact-sql"></a>커서(Transact-SQL)
 [!INCLUDE [SQL Server SQL Database](../../includes/applies-to-version/sql-asdb.md)]

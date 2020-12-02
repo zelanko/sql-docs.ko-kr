@@ -26,11 +26,11 @@ ms.assetid: 03a80e63-6f37-4b49-bf13-dc35cfe46c44
 author: markingmyname
 ms.author: maghan
 ms.openlocfilehash: e37bcd2decf37bffa96a726e4b964cc05bcaffa0
-ms.sourcegitcommit: cc23d8646041336d119b74bf239a6ac305ff3d31
+ms.sourcegitcommit: 192f6a99e19e66f0f817fdb1977f564b2aaa133b
 ms.translationtype: HT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 09/23/2020
-ms.locfileid: "91115534"
+ms.lasthandoff: 11/25/2020
+ms.locfileid: "96128463"
 ---
 # <a name="eventdata-transact-sql"></a>EVENTDATA(Transact-SQL)
 [!INCLUDE [SQL Server SQL Database](../../includes/applies-to-version/sql-asdb.md)]
@@ -87,7 +87,7 @@ EVENTDATA는 **xml** 데이터 형식 값을 반환합니다. 기본적으로 �
 이 예제에서는 새 데이터베이스 테이블 만들기를 차단하는 DDL 트리거를 만듭니다. `EVENTDATA`에서 생성한 XML 데이터에 XQuery를 사용하면 트리거를 실행하는 [!INCLUDE[tsql](../../includes/tsql-md.md)] 문이 캡처됩니다. 자세한 내용은 [XQuery 언어 참조&#40;SQL Server&#41;](../../xquery/xquery-language-reference-sql-server.md)를 참조하세요.  
   
 > [!NOTE]  
->  [!INCLUDE[ssManStudioFull](../../includes/ssmanstudiofull-md.md)]에서 **표 형태로 결과 표시**를 사용하여 `<TSQLCommand>` 요소를 쿼리하는 경우 명령 텍스트의 줄 바꿈이 표시되지 않습니다. 대신 **텍스트로 결과 표시**를 사용하세요.  
+>  [!INCLUDE[ssManStudioFull](../../includes/ssmanstudiofull-md.md)]에서 **표 형태로 결과 표시** 를 사용하여 `<TSQLCommand>` 요소를 쿼리하는 경우 명령 텍스트의 줄 바꿈이 표시되지 않습니다. 대신 **텍스트로 결과 표시** 를 사용하세요.  
   
 ```sql  
 USE AdventureWorks2012;  

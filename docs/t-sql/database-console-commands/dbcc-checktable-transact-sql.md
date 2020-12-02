@@ -28,11 +28,11 @@ ms.assetid: 0d6cb620-eb58-4745-8587-4133a1b16994
 author: pmasl
 ms.author: umajay
 ms.openlocfilehash: 1c4563a10433d4cbead089da026d086f9c021ccb
-ms.sourcegitcommit: e700497f962e4c2274df16d9e651059b42ff1a10
+ms.sourcegitcommit: 192f6a99e19e66f0f817fdb1977f564b2aaa133b
 ms.translationtype: HT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 08/17/2020
-ms.locfileid: "88422867"
+ms.lasthandoff: 11/25/2020
+ms.locfileid: "96126283"
 ---
 # <a name="dbcc-checktable-transact-sql"></a>DBCC CHECKTABLE(Transact-SQL)
 [!INCLUDE [SQL Server SQL Database](../../includes/applies-to-version/sql-asdb.md)]
@@ -73,7 +73,7 @@ NOINDEX
  사용자 테이블의 비클러스터형 인덱스에 대해 집중적인 검사가 수행되지 않도록 지정합니다. 이렇게 하면 전반적인 실행 시간이 줄어듭니다. 무결성 검사는 항상 모든 시스템 테이블 인덱스에서 수행되므로 NOINDEX는 시스템 테이블에 영향을 주지 않습니다.  
     
  *index_id*  
- 무결성 검사를 실행할 인덱스 ID 번호입니다. *index_id*를 지정하면 DBCC CHECKTABLE은 힙 또는 클러스터형 인덱스와 함께 해당 인덱스에 대해서만 무결성 검사를 실행합니다.  
+ 무결성 검사를 실행할 인덱스 ID 번호입니다. *index_id* 를 지정하면 DBCC CHECKTABLE은 힙 또는 클러스터형 인덱스와 함께 해당 인덱스에 대해서만 무결성 검사를 실행합니다.  
     
 REPAIR_ALLOW_DATA_LOSS | REPAIR_FAST | REPAIR_REBUILD  
  DBCC CHECKTABLE 실행 시 발견된 오류를 복구하도록 지정합니다. 복구 옵션을 사용하려면 데이터베이스가 단일 사용자 모드여야 합니다.  
@@ -97,7 +97,7 @@ ALL_ERRORMSGS
     
 EXTENDED_LOGICAL_CHECKS  
  호환성 수준이 100([!INCLUDE[ssKatmai](../../includes/sskatmai-md.md)]) 이상인 경우 인덱싱된 뷰, XML 인덱스 및 공간 인덱스에 대해 논리적 일관성 검사가 수행됩니다.  
- 자세한 내용은 이 항목의 뒤 부분에 나오는 [주의](#remarks) 섹션에서 *인덱스에 대한 논리적 일관성 검사 수행*을 참조하세요.  
+ 자세한 내용은 이 항목의 뒤 부분에 나오는 [주의](#remarks) 섹션에서 *인덱스에 대한 논리적 일관성 검사 수행* 을 참조하세요.  
     
 NO_INFOMSGS  
  모든 정보 메시지를 표시하지 않습니다.  
@@ -128,7 +128,7 @@ DATA_PURITY
 MAXDOP  
  **적용 대상**: [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]([!INCLUDE[ssSQL14](../../includes/sssql14-md.md)] SP2 이상부터).  
  
- 명령문에 대한 **sp_configure**의 **최대 병렬 처리 수준** 구성 옵션을 재정의합니다. MAXDOP은 sp_configure로 구성한 값을 초과할 수 있습니다. MAXDOP가 Resource Governor로 구성한 값을 초과하면, 데이터베이스 엔진에서 ALTER WORKLOAD GROUP(Transact-SQL)에서 설명한 Resource Governor MAXDOP 값을 사용합니다. max degree of parallelism 구성 옵션에 사용된 모든 의미 체계 규칙을 MAXDOP 쿼리 힌트 사용 시 적용할 수 있습니다. 자세한 내용은 [max degree of parallelism 서버 구성 옵션 구성](../../database-engine/configure-windows/configure-the-max-degree-of-parallelism-server-configuration-option.md)을 참조하세요.  
+ 명령문에 대한 **sp_configure** 의 **최대 병렬 처리 수준** 구성 옵션을 재정의합니다. MAXDOP은 sp_configure로 구성한 값을 초과할 수 있습니다. MAXDOP가 Resource Governor로 구성한 값을 초과하면, 데이터베이스 엔진에서 ALTER WORKLOAD GROUP(Transact-SQL)에서 설명한 Resource Governor MAXDOP 값을 사용합니다. max degree of parallelism 구성 옵션에 사용된 모든 의미 체계 규칙을 MAXDOP 쿼리 힌트 사용 시 적용할 수 있습니다. 자세한 내용은 [max degree of parallelism 서버 구성 옵션 구성](../../database-engine/configure-windows/configure-the-max-degree-of-parallelism-server-configuration-option.md)을 참조하세요.  
     
  > [!NOTE]  
  > MAXDOP가 0으로 설정되면 서버는 최대 병렬 처리 수준을 선택합니다.  

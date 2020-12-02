@@ -16,11 +16,11 @@ ms.assetid: 9977dd75-b0de-4376-9c13-86d80567d8aa
 author: MashaMSFT
 ms.author: mathoma
 ms.openlocfilehash: f95994ac6c663020074c5ef3971c1e0a895b3a10
-ms.sourcegitcommit: da88320c474c1c9124574f90d549c50ee3387b4c
+ms.sourcegitcommit: 192f6a99e19e66f0f817fdb1977f564b2aaa133b
 ms.translationtype: HT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 07/01/2020
-ms.locfileid: "85720576"
+ms.lasthandoff: 11/25/2020
+ms.locfileid: "96127780"
 ---
 # <a name="view-data-conflicts-for-transactional-publications-sql-server-management-studio"></a>트랜잭션 게시의 데이터 충돌 확인(SQL Server Management Studio)
  [!INCLUDE [SQL Server](../../includes/applies-to-version/sqlserver.md)]
@@ -46,7 +46,7 @@ ms.locfileid: "85720576"
   
 2.  **복제** 폴더를 확장한 다음 **로컬 게시** 폴더를 확장합니다.  
   
-3.  충돌을 확인할 게시를 마우스 오른쪽 단추로 클릭한 다음 **충돌 보기**를 클릭합니다.  
+3.  충돌을 확인할 게시를 마우스 오른쪽 단추로 클릭한 다음 **충돌 보기** 를 클릭합니다.  
   
 4.  **충돌 테이블 선택** 대화 상자에서 충돌을 확인하려는 데이터베이스, 게시 및 테이블을 선택합니다.  
   
@@ -56,11 +56,11 @@ ms.locfileid: "85720576"
   
     -   상단 표에서 행을 선택하여 해당 행에 대한 정보를 하단 표에 표시합니다.  
   
-    -   상단 표에서 행을 하나 이상 선택한 다음 **제거**를 클릭하여 충돌 메타데이터 테이블에서 행을 제거합니다.  
+    -   상단 표에서 행을 하나 이상 선택한 다음 **제거** 를 클릭하여 충돌 메타데이터 테이블에서 행을 제거합니다.  
   
     -   속성 단추 ( **...** )를 클릭하여 충돌과 관련된 열에 대한 자세한 정보를 확인합니다.  
   
-    -   **이 충돌 정보 기록** 을 선택하여 충돌 데이터를 파일에 기록합니다. 파일의 위치를 지정하려면 **보기** 메뉴를 가리킨 다음 **옵션**을 클릭합니다. 값을 입력하거나 찾아보기 단추 ( **...** )를 클릭한 다음 해당 파일을 검색합니다. **확인** 을 클릭하여 **옵션** 대화 상자를 닫습니다.  
+    -   **이 충돌 정보 기록** 을 선택하여 충돌 데이터를 파일에 기록합니다. 파일의 위치를 지정하려면 **보기** 메뉴를 가리킨 다음 **옵션** 을 클릭합니다. 값을 입력하거나 찾아보기 단추 ( **...** )를 클릭한 다음 해당 파일을 검색합니다. **확인** 을 클릭하여 **옵션** 대화 상자를 닫습니다.  
   
 6.  복제 충돌 뷰어를 닫습니다.  
   

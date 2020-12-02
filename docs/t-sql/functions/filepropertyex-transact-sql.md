@@ -21,11 +21,11 @@ helpviewer_keywords:
 author: stevestein
 ms.author: sstein
 ms.openlocfilehash: 802963395caa096d6a5e26a506e45d7c282ea7cc
-ms.sourcegitcommit: cc23d8646041336d119b74bf239a6ac305ff3d31
+ms.sourcegitcommit: 192f6a99e19e66f0f817fdb1977f564b2aaa133b
 ms.translationtype: HT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 09/23/2020
-ms.locfileid: "91114757"
+ms.lasthandoff: 11/25/2020
+ms.locfileid: "96128428"
 ---
 # <a name="filepropertyex-transact-sql"></a>FILEPROPERTYEX (Transact-SQL)
 [!INCLUDE[Azure SQL Database Azure SQL Managed Instance](../../includes/applies-to-version/asdb-asdbmi.md)]
@@ -42,10 +42,10 @@ FILEPROPERTYEX ( name , property )
   
 ## <a name="arguments"></a>인수  
  *name*  
- 속성 정보를 반환할 현재 데이터베이스에 관련된 파일 이름이 포함된 식입니다. *file_name*은 **nchar (128)** 입니다.  
+ 속성 정보를 반환할 현재 데이터베이스에 관련된 파일 이름이 포함된 식입니다. *file_name* 은 **nchar (128)** 입니다.  
   
  *property*  
- 반환할 파일 속성의 이름이 포함된 식입니다. *속성*은 **varchar(128)** 이며 다음 값 중 하나일 수 있습니다.  
+ 반환할 파일 속성의 이름이 포함된 식입니다. *속성* 은 **varchar(128)** 이며 다음 값 중 하나일 수 있습니다.  
 
 
   
@@ -60,7 +60,7 @@ FILEPROPERTYEX ( name , property )
  **sql_variant**  
   
 ## <a name="remarks"></a>설명  
- *file_name*은 **sys.master_files** 또는 **sys.database_files** 카탈로그 뷰의 **이름** 열에 해당됩니다.  
+ *file_name* 은 **sys.master_files** 또는 **sys.database_files** 카탈로그 뷰의 **이름** 열에 해당됩니다.  
   
 ## <a name="examples"></a>예제  
  다음 예에서는 데이터베이스 파일의 설정 상태를 반환하는 방법을 보여 줍니다.

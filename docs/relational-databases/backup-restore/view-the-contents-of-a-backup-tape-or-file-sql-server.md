@@ -16,14 +16,14 @@ helpviewer_keywords:
 - database backups [SQL Server], viewing content
 - backing up databases [SQL Server], viewing content
 ms.assetid: cd6674a2-ca55-4b5a-a971-878ba001821e
-author: MikeRayMSFT
-ms.author: mikeray
-ms.openlocfilehash: 5b424852e69f38d82e7b912629b6ec7d15c7dd12
-ms.sourcegitcommit: da88320c474c1c9124574f90d549c50ee3387b4c
+author: cawrites
+ms.author: chadam
+ms.openlocfilehash: 55a8f43eeb7a426044de7b38cd143cdbf77ea4ad
+ms.sourcegitcommit: 5a1ed81749800c33059dac91b0e18bd8bb3081b1
 ms.translationtype: HT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 07/01/2020
-ms.locfileid: "85746620"
+ms.lasthandoff: 11/23/2020
+ms.locfileid: "96128926"
 ---
 # <a name="view-the-contents-of-a-backup-tape-or-file-sql-server"></a>백업 테이프 또는 파일의 내용 보기(SQL Server)
  [!INCLUDE [SQL Server](../../includes/applies-to-version/sqlserver.md)]
@@ -59,15 +59,15 @@ ms.locfileid: "85746620"
   
 1.  [!INCLUDE[msCoName](../../includes/msconame-md.md)] [!INCLUDE[ssDEnoversion](../../includes/ssdenoversion-md.md)]의 해당 인스턴스에 연결한 후 개체 탐색기에서 서버 이름을 클릭하여 서버 트리를 확장합니다.  
   
-2.  **데이터베이스**를 확장하고 해당 데이터베이스에 따라 사용자 데이터베이스를 선택하거나 **시스템 데이터베이스** 를 확장한 다음 시스템 데이터베이스를 선택합니다.  
+2.  **데이터베이스** 를 확장하고 해당 데이터베이스에 따라 사용자 데이터베이스를 선택하거나 **시스템 데이터베이스** 를 확장한 다음 시스템 데이터베이스를 선택합니다.  
   
-3.  백업하려는 데이터베이스를 마우스 오른쪽 단추로 클릭하고 **태스크**를 가리킨 다음 **백업**을 클릭합니다. **데이터베이스 백업** 대화 상자가 나타납니다.  
+3.  백업하려는 데이터베이스를 마우스 오른쪽 단추로 클릭하고 **태스크** 를 가리킨 다음 **백업** 을 클릭합니다. **데이터베이스 백업** 대화 상자가 나타납니다.  
   
-4.  **일반** 페이지의 **대상** 섹션에서 **디스크** 또는 **테이프**를 클릭합니다. **백업할 위치** 목록 상자에서 디스크 파일 또는 테이프를 찾습니다.  
+4.  **일반** 페이지의 **대상** 섹션에서 **디스크** 또는 **테이프** 를 클릭합니다. **백업할 위치** 목록 상자에서 디스크 파일 또는 테이프를 찾습니다.  
   
-     목록 상자에 디스크 파일 또는 테이프가 표시되지 않으면 **추가**를 클릭합니다. 파일 이름 또는 테이프 드라이브를 선택합니다. **확인** 을 클릭하여 **백업할 위치**목록 상자에 추가합니다.  
+     목록 상자에 디스크 파일 또는 테이프가 표시되지 않으면 **추가** 를 클릭합니다. 파일 이름 또는 테이프 드라이브를 선택합니다. **확인** 을 클릭하여 **백업할 위치** 목록 상자에 추가합니다.  
   
-5.  **백업할 위치** 목록 상자에서 보려는 디스크 또는 테이프 드라이브의 경로를 선택한 다음 **내용**을 클릭합니다. **디바이스 내용** 대화 상자가 열립니다.  
+5.  **백업할 위치** 목록 상자에서 보려는 디스크 또는 테이프 드라이브의 경로를 선택한 다음 **내용** 을 클릭합니다. **디바이스 내용** 대화 상자가 열립니다.  
   
 6.  선택한 테이프 또는 파일의 미디어 세트 및 백업 세트에 대한 정보가 오른쪽 창에 표시됩니다.  
   
@@ -77,7 +77,7 @@ ms.locfileid: "85746620"
   
 1.  [!INCLUDE[ssDE](../../includes/ssde-md.md)]에 연결합니다.  
   
-2.  표준 도구 모음에서 **새 쿼리**를 클릭합니다.  
+2.  표준 도구 모음에서 **새 쿼리** 를 클릭합니다.  
   
 3.  [RESTORE HEADERONLY](../../t-sql/statements/restore-statements-headeronly-transact-sql.md) 문을 사용합니다. 이 예에서는 `AdventureWorks2012-FullBackup.bak`라는 파일에 대한 정보를 반환합니다.  
   

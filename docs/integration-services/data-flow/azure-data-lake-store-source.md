@@ -15,11 +15,11 @@ ms.assetid: f9c3311f-7316-48d6-bf10-d810e70b4304
 author: chugugrace
 ms.author: chugu
 ms.openlocfilehash: 38de021617ed0454048a3d8cd7f0c5732d09861f
-ms.sourcegitcommit: e700497f962e4c2274df16d9e651059b42ff1a10
+ms.sourcegitcommit: 192f6a99e19e66f0f817fdb1977f564b2aaa133b
 ms.translationtype: HT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 08/17/2020
-ms.locfileid: "88457476"
+ms.lasthandoff: 11/25/2020
+ms.locfileid: "96127331"
 ---
 # <a name="azure-data-lake-store-source"></a>Azure Data Lake Store 원본
 
@@ -28,7 +28,7 @@ ms.locfileid: "88457476"
 
   **Azure Data Lake Store 원본** 구성 요소를 사용하면 SSIS 패키지가 Azure Data Lake Store에서 데이터를 읽을 수 있습니다. 지원되는 파일 형식은 Text 및 Avro입니다.
   
- **Azure Data Lake Store 원본**은 [Azure용 SSIS(SQL Server Integration Services) 기능 팩](../../integration-services/azure-feature-pack-for-integration-services-ssis.md)의 구성 요소입니다.  
+ **Azure Data Lake Store 원본** 은 [Azure용 SSIS(SQL Server Integration Services) 기능 팩](../../integration-services/azure-feature-pack-for-integration-services-ssis.md)의 구성 요소입니다.  
   
 > [!NOTE]
 > Azure Data Lake Store 연결 관리자와 이 연결 관리자를 사용하는 구성 요소(즉, Azure Data Lake Store 원본과 Azure Data Lake Store 대상)를 서비스에 연결하려면 [여기](https://www.microsoft.com/download/details.aspx?id=49492)에서 최신 버전의 Azure 기능 팩을 다운로드하세요. 
@@ -48,4 +48,4 @@ ms.locfileid: "88457476"
 
 ## <a name="text-qualifier"></a>텍스트 한정자
 
-**Azure Data Lake Store 원본**은 텍스트 한정자를 지원하지 않습니다. 파일을 올바르게 처리하도록 텍스트 한정자를 지정해야 하는 경우 로컬 컴퓨터에 파일을 다운로드하고 **플랫 파일 원본**을 사용하여 파일을 처리하는 것이 좋습니다. 플랫 파일 원본을 통해 텍스트 한정자를 지정할 수 있습니다. 자세한 내용은 [플랫 파일 원본](flat-file-source.md)을 참조하세요.
+**Azure Data Lake Store 원본** 은 텍스트 한정자를 지원하지 않습니다. 파일을 올바르게 처리하도록 텍스트 한정자를 지정해야 하는 경우 로컬 컴퓨터에 파일을 다운로드하고 **플랫 파일 원본** 을 사용하여 파일을 처리하는 것이 좋습니다. 플랫 파일 원본을 통해 텍스트 한정자를 지정할 수 있습니다. 자세한 내용은 [플랫 파일 원본](flat-file-source.md)을 참조하세요.

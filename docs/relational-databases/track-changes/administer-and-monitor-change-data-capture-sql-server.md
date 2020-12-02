@@ -16,11 +16,11 @@ author: rothja
 ms.author: jroth
 ms.custom: seo-dt-2019
 ms.openlocfilehash: dfc040c4157cfd44a27a0b05a3bef42a1591aa2e
-ms.sourcegitcommit: e700497f962e4c2274df16d9e651059b42ff1a10
+ms.sourcegitcommit: 192f6a99e19e66f0f817fdb1977f564b2aaa133b
 ms.translationtype: HT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 08/17/2020
-ms.locfileid: "88446393"
+ms.lasthandoff: 11/25/2020
+ms.locfileid: "96128641"
 ---
 # <a name="administer-and-monitor-change-data-capture-sql-server"></a>변경 데이터 캡처 관리 및 모니터링(SQL Server)
 
@@ -173,7 +173,7 @@ SELECT command_count/duration AS [Throughput] FROM sys.dm_cdc_log_scan_sessions 
     GO  
     ```  
   
-3. [!INCLUDE[ssManStudioFull](../../includes/ssmanstudiofull-md.md)]에서 **관리**, **데이터 컬렉션**을 차례로 확장합니다. **CDC Performance Data Collector**를 마우스 오른쪽 단추로 클릭한 다음, **데이터 컬렉션 집합 시작**을 클릭합니다.  
+3. [!INCLUDE[ssManStudioFull](../../includes/ssmanstudiofull-md.md)]에서 **관리**, **데이터 컬렉션** 을 차례로 확장합니다. **CDC Performance Data Collector** 를 마우스 오른쪽 단추로 클릭한 다음, **데이터 컬렉션 집합 시작** 을 클릭합니다.  
   
 4. 1단계에서 구성한 데이터 웨어하우스에서 custom_snapshots.cdc_log_scan_data 테이블을 찾습니다. 이 테이블은 로그 검색 세션의 데이터 스냅샷 기록을 제공합니다. 이 데이터를 사용하여 시간에 따른 대기 시간, 처리량 및 기타 성능 측정값을 분석할 수 있습니다.  
 

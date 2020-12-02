@@ -16,11 +16,11 @@ ms.assetid: 5d5be54c-2b7e-4957-9193-c5ea5c5d6d15
 author: chugugrace
 ms.author: chugu
 ms.openlocfilehash: f3cd306d2cf6097fdb5e178f92e41d45de198783
-ms.sourcegitcommit: e700497f962e4c2274df16d9e651059b42ff1a10
+ms.sourcegitcommit: 192f6a99e19e66f0f817fdb1977f564b2aaa133b
 ms.translationtype: HT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 08/17/2020
-ms.locfileid: "88430835"
+ms.lasthandoff: 11/25/2020
+ms.locfileid: "96127168"
 ---
 # <a name="extract-data-by-using-the-xml-source"></a>XML 원본을 사용하여 데이터 추출
 
@@ -35,11 +35,11 @@ ms.locfileid: "88430835"
   
 2.  솔루션 탐색기에서 패키지를 두 번 클릭하여 엽니다.  
   
-3.  **데이터 흐름** 탭을 클릭한 다음 **도구 상자**에서 XML 원본을 디자인 화면으로 끌어 옵니다.  
+3.  **데이터 흐름** 탭을 클릭한 다음 **도구 상자** 에서 XML 원본을 디자인 화면으로 끌어 옵니다.  
   
 4.  XML 원본을 두 번 클릭합니다.  
   
-5.  **XML 원본 편집기**의 **연결 관리자** 페이지에서 데이터 액세스 모드를 선택합니다.  
+5.  **XML 원본 편집기** 의 **연결 관리자** 페이지에서 데이터 액세스 모드를 선택합니다.  
   
     -   **XML 파일 위치** 액세스 모드의 경우 **찾아보기** 를 클릭하여 XML 파일이 들어 있는 폴더를 찾습니다.  
   
@@ -60,9 +60,9 @@ ms.locfileid: "88430835"
   
 8.  출력 열의 이름을 업데이트하려면 **열** 을 클릭하고 **출력 열** 목록에서 값을 편집합니다.  
   
-9. 오류 출력을 구성하려면 **오류 출력**을 클릭합니다. 자세한 내용은 [Debugging Data Flow](../../integration-services/troubleshooting/debugging-data-flow.md)을 참조하세요.  
+9. 오류 출력을 구성하려면 **오류 출력** 을 클릭합니다. 자세한 내용은 [Debugging Data Flow](../../integration-services/troubleshooting/debugging-data-flow.md)을 참조하세요.  
   
-10. **확인**을 클릭합니다.  
+10. **확인** 을 클릭합니다.  
   
 11. 업데이트된 패키지를 저장하려면 **파일** 메뉴에서 **선택한 항목 저장** 을 클릭합니다.  
   

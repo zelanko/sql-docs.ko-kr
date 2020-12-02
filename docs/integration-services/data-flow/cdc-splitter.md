@@ -14,11 +14,11 @@ ms.assetid: 167bc5c6-fa36-439d-987c-b20acd1a77e2
 author: chugugrace
 ms.author: chugu
 ms.openlocfilehash: 38ecdd11aa4527fee14b558deb05dcfe578f4d84
-ms.sourcegitcommit: e700497f962e4c2274df16d9e651059b42ff1a10
+ms.sourcegitcommit: 192f6a99e19e66f0f817fdb1977f564b2aaa133b
 ms.translationtype: HT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 08/17/2020
-ms.locfileid: "88457413"
+ms.lasthandoff: 11/25/2020
+ms.locfileid: "96127308"
 ---
 # <a name="cdc-splitter"></a>CDC 분할자
 
@@ -60,7 +60,7 @@ ms.locfileid: "88457413"
   
  **고급 편집기** 대화 상자를 열려면  
   
--   **프로젝트의** 데이터 흐름 [!INCLUDE[ssISCurrent](../../includes/ssiscurrent-md.md)] 화면에서 CDC 분할자를 마우스 오른쪽 단추로 클릭하고 **고급 편집기 표시**를 선택합니다.  
+-   **프로젝트의** 데이터 흐름 [!INCLUDE[ssISCurrent](../../includes/ssiscurrent-md.md)] 화면에서 CDC 분할자를 마우스 오른쪽 단추로 클릭하고 **고급 편집기 표시** 를 선택합니다.  
   
 ## <a name="see-also"></a>참고 항목  
  [변경 유형에 따라 CDC 스트림 전송](../../integration-services/data-flow/direct-the-cdc-stream-according-to-the-type-of-change.md)  

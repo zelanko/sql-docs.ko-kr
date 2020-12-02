@@ -19,11 +19,11 @@ ms.assetid: 5521d4cf-740c-4ede-98b6-4ba90b84e32d
 author: VanMSFT
 ms.author: vanto
 ms.openlocfilehash: 4ac2905d7466b8a2aa3e8a823ab25f89d98ae96f
-ms.sourcegitcommit: cc23d8646041336d119b74bf239a6ac305ff3d31
+ms.sourcegitcommit: 192f6a99e19e66f0f817fdb1977f564b2aaa133b
 ms.translationtype: HT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 09/23/2020
-ms.locfileid: "91115203"
+ms.lasthandoff: 11/25/2020
+ms.locfileid: "96128508"
 ---
 # <a name="decryptbykeyautoasymkey-transact-sql"></a>DECRYPTBYKEYAUTOASYMKEY(Transact-SQL)
 [!INCLUDE [SQL Server](../../includes/applies-to-version/sqlserver.md)]
@@ -45,39 +45,39 @@ DecryptByKeyAutoAsymKey ( akey_ID , akey_password
 
 ## <a name="arguments"></a>인수
  *akey_ID*  
-대칭 키 암호화에 사용되는 비대칭 키의 ID입니다. *akey_ID*는 **int** 데이터 형식을 갖습니다.  
+대칭 키 암호화에 사용되는 비대칭 키의 ID입니다. *akey_ID* 는 **int** 데이터 형식을 갖습니다.  
   
  *akey_password*  
-비대칭 키를 보호하는 암호입니다. *akey_password*는 데이터베이스 마스터 키가 비대칭 프라이빗 키를 보호하는 경우 NULL 값을 가질 수 있습니다. *akey_password*는 **nvarchar** 데이터 형식을 갖습니다.  
+비대칭 키를 보호하는 암호입니다. *akey_password* 는 데이터베이스 마스터 키가 비대칭 프라이빗 키를 보호하는 경우 NULL 값을 가질 수 있습니다. *akey_password* 는 **nvarchar** 데이터 형식을 갖습니다.  
   
- *ciphertext* 키로 암호화된 데이터입니다. *ciphertext*는 **varbinary** 데이터 형식을 갖습니다.  
+ *ciphertext* 키로 암호화된 데이터입니다. *ciphertext* 는 **varbinary** 데이터 형식을 갖습니다.  
   
  @ciphertext  
 대칭 키로 암호화된 데이터를 포함하는 **varbinary** 형식의 변수입니다.  
   
  *add_authenticator*  
-원래 암호화 프로세스가 포함되고 암호화된 인증자가 일반 텍스트를 사용하는지 여부를 나타냅니다. 데이터 암호화 프로세스 동안 [ENCRYPTBYKEY(Transact-SQL)](./encryptbykey-transact-sql.md)로 전달된 값과 일치해야 합니다. *add_authenticator*는 암호화 프로세스가 인증자를 사용한 경우 1의 값을 갖습니다. *add_authenticator*는 **int** 데이터 형식을 갖습니다.  
+원래 암호화 프로세스가 포함되고 암호화된 인증자가 일반 텍스트를 사용하는지 여부를 나타냅니다. 데이터 암호화 프로세스 동안 [ENCRYPTBYKEY(Transact-SQL)](./encryptbykey-transact-sql.md)로 전달된 값과 일치해야 합니다. *add_authenticator* 는 암호화 프로세스가 인증자를 사용한 경우 1의 값을 갖습니다. *add_authenticator* 는 **int** 데이터 형식을 갖습니다.  
   
  @add_authenticator  
-원래 암호화 프로세스가 포함되고 암호화된 인증자가 일반 텍스트를 사용하는지 여부를 나타내는 변수입니다. 데이터 암호화 프로세스 동안 [ENCRYPTBYKEY(Transact-SQL)](./encryptbykey-transact-sql.md)로 전달된 값과 일치해야 합니다. *\@add_authenticator*는 **int** 데이터 형식을 갖습니다.
+원래 암호화 프로세스가 포함되고 암호화된 인증자가 일반 텍스트를 사용하는지 여부를 나타내는 변수입니다. 데이터 암호화 프로세스 동안 [ENCRYPTBYKEY(Transact-SQL)](./encryptbykey-transact-sql.md)로 전달된 값과 일치해야 합니다. *\@add_authenticator* 는 **int** 데이터 형식을 갖습니다.
   
  *authenticator*  
-인증자의 생성에 대한 기준으로 사용되는 데이터입니다. [ENCRYPTBYKEY(Transact-SQL)](./encryptbykey-transact-sql.md)에 제공된 값과 일치해야 합니다. *authenticator*는 **sysname** 데이터 형식을 갖습니다.  
+인증자의 생성에 대한 기준으로 사용되는 데이터입니다. [ENCRYPTBYKEY(Transact-SQL)](./encryptbykey-transact-sql.md)에 제공된 값과 일치해야 합니다. *authenticator* 는 **sysname** 데이터 형식을 갖습니다.  
   
  @authenticator  
-인증자가 생성하는 데이터를 포함하는 변수입니다. [ENCRYPTBYKEY(Transact-SQL)](./encryptbykey-transact-sql.md)에 제공된 값과 일치해야 합니다. *\@authenticator*는 **sysname** 데이터 형식을 갖습니다.  
+인증자가 생성하는 데이터를 포함하는 변수입니다. [ENCRYPTBYKEY(Transact-SQL)](./encryptbykey-transact-sql.md)에 제공된 값과 일치해야 합니다. *\@authenticator* 는 **sysname** 데이터 형식을 갖습니다.  
   
 @add_authenticator  
-원래 암호화 프로세스가 포함되고 암호화된 인증자가 일반 텍스트를 사용하는지 여부를 나타내는 변수입니다. 데이터 암호화 프로세스 동안 [ENCRYPTBYKEY(Transact-SQL)](./encryptbykey-transact-sql.md)로 전달된 값과 일치해야 합니다. *\@add_authenticator*는 **int** 데이터 형식을 갖습니다.  
+원래 암호화 프로세스가 포함되고 암호화된 인증자가 일반 텍스트를 사용하는지 여부를 나타내는 변수입니다. 데이터 암호화 프로세스 동안 [ENCRYPTBYKEY(Transact-SQL)](./encryptbykey-transact-sql.md)로 전달된 값과 일치해야 합니다. *\@add_authenticator* 는 **int** 데이터 형식을 갖습니다.  
 
 *authenticator*  
-인증자의 생성에 대한 기준으로 사용되는 데이터입니다. [ENCRYPTBYKEY(Transact-SQL)](./encryptbykey-transact-sql.md)에 제공된 값과 일치해야 합니다. *authenticator*는 **sysname** 데이터 형식을 갖습니다.
+인증자의 생성에 대한 기준으로 사용되는 데이터입니다. [ENCRYPTBYKEY(Transact-SQL)](./encryptbykey-transact-sql.md)에 제공된 값과 일치해야 합니다. *authenticator* 는 **sysname** 데이터 형식을 갖습니다.
 
 @authenticator  
-인증자가 생성하는 데이터를 포함하는 변수입니다. [ENCRYPTBYKEY(Transact-SQL)](./encryptbykey-transact-sql.md)에 제공된 값과 일치해야 합니다. *\@authenticator*는 **sysname** 데이터 형식을 갖습니다.  
+인증자가 생성하는 데이터를 포함하는 변수입니다. [ENCRYPTBYKEY(Transact-SQL)](./encryptbykey-transact-sql.md)에 제공된 값과 일치해야 합니다. *\@authenticator* 는 **sysname** 데이터 형식을 갖습니다.  
 
 ## <a name="return-types"></a>반환 형식  
-최대 크기가 8,000바이트인 **varbinary**입니다.  
+최대 크기가 8,000바이트인 **varbinary** 입니다.  
   
 ## <a name="remarks"></a>설명  
 `DECRYPTBYKEYAUTOASYMKEY`는 `OPEN SYMMETRIC KEY`와 `DECRYPTBYKEY` 모두의 기능을 결합합니다. 단일 작업에서 먼저 대칭 키를 해독한 다음, 해당 키를 사용하여 암호화된 텍스트를 해독합니다.  

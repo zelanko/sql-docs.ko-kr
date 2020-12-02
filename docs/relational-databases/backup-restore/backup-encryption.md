@@ -9,14 +9,14 @@ ms.reviewer: ''
 ms.technology: backup-restore
 ms.topic: conceptual
 ms.assetid: 334b95a8-6061-4fe0-9e34-b32c9f1706ce
-author: MikeRayMSFT
-ms.author: mikeray
-ms.openlocfilehash: a73fde3a0d1c254709d63a85f7a7028c8da30891
-ms.sourcegitcommit: c74bb5944994e34b102615b592fdaabe54713047
+author: cawrites
+ms.author: chadam
+ms.openlocfilehash: b06c0cc9b3b50510282c620ff86aa1a478fae419
+ms.sourcegitcommit: 5a1ed81749800c33059dac91b0e18bd8bb3081b1
 ms.translationtype: HT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 09/22/2020
-ms.locfileid: "90989836"
+ms.lasthandoff: 11/23/2020
+ms.locfileid: "96129335"
 ---
 # <a name="backup-encryption"></a>백업 암호화
  [!INCLUDE [SQL Server](../../includes/applies-to-version/sqlserver.md)]
@@ -102,9 +102,9 @@ ms.locfileid: "90989836"
 ### <a name="using-sql-server-management-studio"></a>SQL Server Management Studio 사용  
  다음 대화 상자에서 데이터베이스의 백업을 만들 때 백업을 암호화할 수 있습니다.  
   
-1. [데이터베이스 백업&#40;백업 옵션 페이지&#41;](../../relational-databases/backup-restore/back-up-database-backup-options-page.md)**백업 옵션** 페이지에서 **암호화**를 선택하고 암호화 알고리즘과 암호화에 사용할 인증서 또는 비대칭 키를 지정할 수 있습니다.  
+1. [데이터베이스 백업&#40;백업 옵션 페이지&#41;](../../relational-databases/backup-restore/back-up-database-backup-options-page.md)**백업 옵션** 페이지에서 **암호화** 를 선택하고 암호화 알고리즘과 암호화에 사용할 인증서 또는 비대칭 키를 지정할 수 있습니다.  
   
-1. [유지 관리 계획 마법사 사용](../../relational-databases/maintenance-plans/use-the-maintenance-plan-wizard.md#SSMSProcedure) 백업 태스크를 선택할 때 **백업 태스크 정의** 페이지의 **옵션** 탭에서 **백업 암호화**를 선택하고 암호화 알고리즘과 암호화에 사용할 인증서 또는 키를 지정할 수 있습니다.  
+1. [유지 관리 계획 마법사 사용](../../relational-databases/maintenance-plans/use-the-maintenance-plan-wizard.md#SSMSProcedure) 백업 태스크를 선택할 때 **백업 태스크 정의** 페이지의 **옵션** 탭에서 **백업 암호화** 를 선택하고 암호화 알고리즘과 암호화에 사용할 인증서 또는 키를 지정할 수 있습니다.  
   
 ### <a name="using-transact-sql"></a>Transact-SQL 사용  
  다음은 백업 파일을 암호화하는 샘플 TSQL 문입니다.  

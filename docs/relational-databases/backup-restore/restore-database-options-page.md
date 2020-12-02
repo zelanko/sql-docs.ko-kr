@@ -11,14 +11,14 @@ ms.topic: conceptual
 f1_keywords:
 - sql13.swb.restoredb.options.f1
 ms.assetid: 9a75d48b-c25f-40f3-8ea1-32cfa8211754
-author: MikeRayMSFT
-ms.author: mikeray
-ms.openlocfilehash: f68337ee44e052c838b29d0051631c7be495a478
-ms.sourcegitcommit: da88320c474c1c9124574f90d549c50ee3387b4c
+author: cawrites
+ms.author: chadam
+ms.openlocfilehash: 244b815a0e670cd0e697c037c62d66cc78159d81
+ms.sourcegitcommit: 5a1ed81749800c33059dac91b0e18bd8bb3081b1
 ms.translationtype: HT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 07/01/2020
-ms.locfileid: "85737716"
+ms.lasthandoff: 11/23/2020
+ms.locfileid: "96129104"
 ---
 # <a name="restore-database-options-page"></a>데이터베이스 복원(옵션 페이지)
  [!INCLUDE [SQL Server](../../includes/applies-to-version/sqlserver.md)]
@@ -39,7 +39,7 @@ ms.locfileid: "85737716"
  복원 작업의 동작 측면을 수정하려면 **복원 옵션** 패널의 옵션을 사용합니다.  
   
  **기존 데이터베이스 덮어쓰기[WITH REPLACE]**  
- **데이터베이스 복원**대화 상자에 있는 [일반](../../relational-databases/backup-restore/restore-database-general-page.md) 페이지의 **복원 위치** 필드에서 지정하는 데이터베이스 이름을 현재 사용 중인 모든 데이터베이스의 파일을 복원 작업에서 덮어씁니다. 다른 데이터베이스에서 기존 데이터베이스 이름으로 백업을 복원하는 중이더라도 기존 데이터베이스의 파일을 덮어씁니다. 이 옵션을 선택하는 것은 [RESTORE](../../t-sql/statements/restore-statements-arguments-transact-sql.md) 문에서 REPLACE 옵션을 사용하는 것과 같습니다([!INCLUDE[tsql](../../includes/tsql-md.md)]).  
+ **데이터베이스 복원** 대화 상자에 있는 [일반](../../relational-databases/backup-restore/restore-database-general-page.md) 페이지의 **복원 위치** 필드에서 지정하는 데이터베이스 이름을 현재 사용 중인 모든 데이터베이스의 파일을 복원 작업에서 덮어씁니다. 다른 데이터베이스에서 기존 데이터베이스 이름으로 백업을 복원하는 중이더라도 기존 데이터베이스의 파일을 덮어씁니다. 이 옵션을 선택하는 것은 [RESTORE](../../t-sql/statements/restore-statements-arguments-transact-sql.md) 문에서 REPLACE 옵션을 사용하는 것과 같습니다([!INCLUDE[tsql](../../includes/tsql-md.md)]).  
   
 > [!CAUTION]  
 >  이 옵션은 신중하게 고려한 후에만 사용해야 합니다. 자세한 내용은 [RESTORE 인수&#40;Transact-SQL&#41;](../../t-sql/statements/restore-statements-arguments-transact-sql.md)를 참조하세요.  
@@ -54,7 +54,7 @@ ms.locfileid: "85737716"
  자세한 내용은 [복제된 데이터베이스 백업 및 복원](../../relational-databases/replication/administration/back-up-and-restore-replicated-databases.md)을 참조하세요.  
   
  **복원된 데이터베이스에 대한 액세스 제한[WITH RESTRICTED_USER]**  
- **db_owner**, **dbcreator**또는 **sysadmin**의 멤버만 복원된 데이터베이스를 사용할 수 있도록 합니다.  
+ **db_owner**, **dbcreator** 또는 **sysadmin** 의 멤버만 복원된 데이터베이스를 사용할 수 있도록 합니다.  
   
  이 옵션을 선택하는 것은 RESTORE 문에서 RESTRICTED_USER 옵션을 사용하는 것과 같습니다.  
   
@@ -62,7 +62,7 @@ ms.locfileid: "85737716"
  저장 작업 후에 데이터베이스의 상태를 확인하려면 **복구 상태** 패널의 옵션 중 하나를 선택해야 합니다.  
   
  **RESTORE WITH RECOVERY**  
- **일반 페이지**의 [복원에 사용할 백업 세트](../../relational-databases/backup-restore/restore-database-general-page.md)표에서 선택된 최종 백업을 복원한 후에 데이터베이스를 복구합니다. 이는 기본 옵션이고 [RESTORE](../../t-sql/statements/restore-statements-arguments-transact-sql.md) 문([!INCLUDE[tsql](../../includes/tsql-md.md)])에서 WITH RECOVERY를 지정하는 것과 같습니다.  
+ **일반 페이지** 의 [복원에 사용할 백업 세트](../../relational-databases/backup-restore/restore-database-general-page.md)표에서 선택된 최종 백업을 복원한 후에 데이터베이스를 복구합니다. 이는 기본 옵션이고 [RESTORE](../../t-sql/statements/restore-statements-arguments-transact-sql.md) 문([!INCLUDE[tsql](../../includes/tsql-md.md)])에서 WITH RECOVERY를 지정하는 것과 같습니다.  
   
 > [!NOTE]  
 >  전체 복구 모델 또는 대량 로그 복구 모델에서 모든 로그 파일을 지금 복원하는 경우에만 이 옵션을 선택합니다.  
@@ -104,13 +104,13 @@ ms.locfileid: "85737716"
  **각 백업 복원 전에 확인**  
  각 백업을 복원한 후 복원 순서를 계속할지 여부를 묻는 **복원 계속** 대화 상자를 표시합니다. 이 대화 상자는 다음 미디어 세트(알려진 경우)의 이름과 다음 백업 세트의 이름 및 설명을 표시합니다.  
   
- 이 옵션을 지정하면 모든 백업을 복원한 후에 복원 순서를 일시 중지할 수 있습니다. 예를 들어 이 옵션은 서버에 테이프 디바이스가 하나만 있어 다양한 미디어 세트의 테이프를 교체해야 할 경우 특히 유용합니다. 계속할 준비가 되었으면 **확인**을 클릭합니다.  
+ 이 옵션을 지정하면 모든 백업을 복원한 후에 복원 순서를 일시 중지할 수 있습니다. 예를 들어 이 옵션은 서버에 테이프 디바이스가 하나만 있어 다양한 미디어 세트의 테이프를 교체해야 할 경우 특히 유용합니다. 계속할 준비가 되었으면 **확인** 을 클릭합니다.  
   
- **아니요**를 클릭하여 복원 순서를 중단할 수 있습니다. 이렇게 하면 데이터베이스를 복원 중인 상태로 둡니다. 사용자 편의를 위해 **복원 계속** 대화 상자에 설명된 다음 백업으로 재개하여 복원 순서를 나중에 계속할 수 있습니다. 다음 백업 복원 절차는 다음과 같이 데이터나 트랜잭션 로그를 포함하는지 여부에 따라 달라집니다.  
+ **아니요** 를 클릭하여 복원 순서를 중단할 수 있습니다. 이렇게 하면 데이터베이스를 복원 중인 상태로 둡니다. 사용자 편의를 위해 **복원 계속** 대화 상자에 설명된 다음 백업으로 재개하여 복원 순서를 나중에 계속할 수 있습니다. 다음 백업 복원 절차는 다음과 같이 데이터나 트랜잭션 로그를 포함하는지 여부에 따라 달라집니다.  
   
 -   다음 백업이 전체 백업 또는 차등 백업인 경우 **데이터베이스 복원** 태스크를 다시 사용합니다.  
   
--   다음 백업이 파일 백업인 경우 **파일 및 파일 그룹 복원**태스크를 사용합니다. 자세한 내용은 [파일 및 파일 그룹 복원&#40;SQL Server&#41;](../../relational-databases/backup-restore/restore-files-and-filegroups-sql-server.md)을 참조하세요.  
+-   다음 백업이 파일 백업인 경우 **파일 및 파일 그룹 복원** 태스크를 사용합니다. 자세한 내용은 [파일 및 파일 그룹 복원&#40;SQL Server&#41;](../../relational-databases/backup-restore/restore-files-and-filegroups-sql-server.md)을 참조하세요.  
   
 -   다음 백업이 로그 백업인 경우 **트랜잭션 로그 복원** 태스크를 사용합니다. 트랜잭션 로그를 복원하여 복원 순서를 재개하는 방법은 [트랜잭션 로그 백업 복원&#40;SQL Server&#41;](../../relational-databases/backup-restore/restore-a-transaction-log-backup-sql-server.md)를 참조하세요.  
   

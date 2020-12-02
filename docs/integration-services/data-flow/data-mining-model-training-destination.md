@@ -21,11 +21,11 @@ ms.assetid: 6bc8cbe2-46af-4f7b-93d6-86779313c9d7
 author: chugugrace
 ms.author: chugu
 ms.openlocfilehash: b70fe92da0c7efb0e59dbc89505ad623cad64432
-ms.sourcegitcommit: cfa04a73b26312bf18d8f6296891679166e2754d
+ms.sourcegitcommit: 192f6a99e19e66f0f817fdb1977f564b2aaa133b
 ms.translationtype: HT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 10/19/2020
-ms.locfileid: "92196457"
+ms.lasthandoff: 11/25/2020
+ms.locfileid: "96127241"
 ---
 # <a name="data-mining-model-training-destination"></a>데이터 마이닝 모델 학습 대상
 
@@ -65,10 +65,10 @@ ms.locfileid: "92196457"
  **Analysis Services 연결 관리자 추가** 대화 상자를 사용하면 새 연결을 만들 수 있습니다.  
   
  **마이닝 구조**  
- 사용 가능한 마이닝 구조 목록에서 선택하거나 **새로 만들기**를 클릭하여 새 구조를 만듭니다.  
+ 사용 가능한 마이닝 구조 목록에서 선택하거나 **새로 만들기** 를 클릭하여 새 구조를 만듭니다.  
   
  **새로 만들기**  
- **데이터 마이닝 마법사**를 사용하여 새 마이닝 구조와 마이닝 모델을 만듭니다.  
+ **데이터 마이닝 마법사** 를 사용하여 새 마이닝 구조와 마이닝 모델을 만듭니다.  
   
  **마이닝 모델**  
  선택한 마이닝 구조와 연관된 마이닝 모델 목록을 표시합니다.  
@@ -84,7 +84,7 @@ ms.locfileid: "92196457"
  마이닝 구조 열 목록을 볼 수 있습니다. 마이닝 구조 열을 끌어 사용 가능한 입력 열에 매핑합니다.  
   
  **입력 열**  
- 위 테이블에서 선택한 입력 열을 표시합니다. 매핑 선택 항목을 변경하거나 제거하려면 **사용 가능한 입력 열**목록을 사용합니다.  
+ 위 테이블에서 선택한 입력 열을 표시합니다. 매핑 선택 항목을 변경하거나 제거하려면 **사용 가능한 입력 열** 목록을 사용합니다.  
   
  **마이닝 구조 열**  
  매핑 여부에 관계없이 사용 가능한 각 대상 열을 볼 수 있습니다.  

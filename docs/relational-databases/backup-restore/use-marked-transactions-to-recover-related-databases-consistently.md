@@ -19,14 +19,14 @@ helpviewer_keywords:
 - BEGIN TRAN...WITH MARK statement
 - two-phase commit
 ms.assetid: 50a73574-1a69-448e-83dd-9abcc7cb7e1a
-author: MikeRayMSFT
-ms.author: mikeray
-ms.openlocfilehash: 7d456054b4edd45b15182a511235e640a03337b4
-ms.sourcegitcommit: da88320c474c1c9124574f90d549c50ee3387b4c
+author: cawrites
+ms.author: chadam
+ms.openlocfilehash: 4d07b3b4d85f6ef0e62709f66ea5c738a0dc8110
+ms.sourcegitcommit: 5a1ed81749800c33059dac91b0e18bd8bb3081b1
 ms.translationtype: HT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 07/01/2020
-ms.locfileid: "85631239"
+ms.lasthandoff: 11/23/2020
+ms.locfileid: "96129004"
 ---
 # <a name="use-marked-transactions-to-recover-related-databases-consistently"></a>표시된 트랜잭션을 사용하여 관련 데이터베이스를 일관되게 복구
 
@@ -34,7 +34,7 @@ ms.locfileid: "85631239"
 
   이 항목에서는 전체 또는 대량 로그 복구 모델을 사용하는 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 데이터베이스와 관련된 내용을 다룹니다.  
   
- 두 개 이상의 데이터베이스, 즉 *관련 데이터베이스*에 관련 업데이트를 수행할 경우 트랜잭션 표시를 사용하여 해당 데이터베이스를 논리적으로 일치하는 지점으로 복구할 수 있습니다. 그러나 이러한 방법으로 복구를 수행하면 복구 지점으로 사용된 표시 뒤에 커밋된 모든 트랜잭션이 손실됩니다. 트랜잭션 표시는 관련 데이터베이스를 테스트하거나 최근 커밋된 트랜잭션을 손실해도 상관없는 경우에만 적합합니다.  
+ 두 개 이상의 데이터베이스, 즉 *관련 데이터베이스* 에 관련 업데이트를 수행할 경우 트랜잭션 표시를 사용하여 해당 데이터베이스를 논리적으로 일치하는 지점으로 복구할 수 있습니다. 그러나 이러한 방법으로 복구를 수행하면 복구 지점으로 사용된 표시 뒤에 커밋된 모든 트랜잭션이 손실됩니다. 트랜잭션 표시는 관련 데이터베이스를 테스트하거나 최근 커밋된 트랜잭션을 손실해도 상관없는 경우에만 적합합니다.  
   
  모든 관련 데이터베이스의 관련 트랜잭션을 정기적으로 표시하면 데이터베이스에 일련의 공통 복구 지점이 설정됩니다. 트랜잭션 표시는 트랜잭션 로그에 기록되고 로그 백업에 포함됩니다. 재해가 발생할 경우 각 데이터베이스를 동일한 트랜잭션 표시로 복원하여 해당 데이터베이스를 일치하는 지점으로 복구할 수 있습니다.  
   
@@ -70,7 +70,7 @@ ms.locfileid: "85631239"
   
 -   트랜잭션 표시는 로그 공간을 소비하므로 데이터베이스 복구 전략에서 중요한 역할을 하는 트랜잭션에 대해서만 사용해야 합니다.  
   
--   표시된 트랜잭션을 커밋한 후에 [msdb](../../relational-databases/system-tables/logmarkhistory-transact-sql.md) 의 **logmarkhistory**테이블에 행이 삽입됩니다.  
+-   표시된 트랜잭션을 커밋한 후에 [msdb](../../relational-databases/system-tables/logmarkhistory-transact-sql.md) 의 **logmarkhistory** 테이블에 행이 삽입됩니다.  
   
 -   표시된 트랜잭션이 같은 데이터베이스 서버 또는 다른 서버의 다중 데이터베이스에 걸쳐 있으면 영향 받은 모든 데이터베이스의 로그에 표시가 기록됩니다.  
   

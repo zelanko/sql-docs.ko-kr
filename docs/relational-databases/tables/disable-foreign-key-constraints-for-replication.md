@@ -17,11 +17,11 @@ author: stevestein
 ms.author: sstein
 monikerRange: '>=aps-pdw-2016||=azuresqldb-current||=azure-sqldw-latest||>=sql-server-2016||=sqlallproducts-allversions||>=sql-server-linux-2017||=azuresqldb-mi-current'
 ms.openlocfilehash: 8b2aacaf067d95a57320d019b02a90dbb69d4193
-ms.sourcegitcommit: e700497f962e4c2274df16d9e651059b42ff1a10
+ms.sourcegitcommit: 192f6a99e19e66f0f817fdb1977f564b2aaa133b
 ms.translationtype: HT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 08/17/2020
-ms.locfileid: "88427515"
+ms.lasthandoff: 11/25/2020
+ms.locfileid: "96128689"
 ---
 # <a name="disable-foreign-key-constraints-for-replication"></a>복제할 때 FOREIGN KEY 제약 조건 비활성화
 [!INCLUDE [sqlserver2016-asdb-asdbmi-asa-pdw](../../includes/applies-to-version/sqlserver2016-asdb-asdbmi-asa-pdw.md)]
@@ -54,13 +54,13 @@ ms.locfileid: "88427515"
   
 #### <a name="to-disable-a-foreign-key-constraint-for-replication"></a>복제할 때 FOREIGN KEY 제약 조건을 비활성화하려면  
   
-1.  **개체 탐색기**에서 수정할 FOREIGN KEY 제약 조건을 포함하는 테이블을 확장한 다음 **키** 폴더를 확장합니다.  
+1.  **개체 탐색기** 에서 수정할 FOREIGN KEY 제약 조건을 포함하는 테이블을 확장한 다음 **키** 폴더를 확장합니다.  
   
-2.  외래 키 제약 조건을 마우스 오른쪽 단추로 클릭한 다음 **수정**을 클릭합니다.  
+2.  외래 키 제약 조건을 마우스 오른쪽 단추로 클릭한 다음 **수정** 을 클릭합니다.  
   
-3.  **외래 키 관계** 대화 상자에서 **복제에 적용** 값으로 **아니요**를 선택합니다.  
+3.  **외래 키 관계** 대화 상자에서 **복제에 적용** 값으로 **아니요** 를 선택합니다.  
   
-4.  **닫기**를 클릭합니다.  
+4.  **닫기** 를 클릭합니다.  
 
 ##  <a name="using-transact-sql"></a><a name="TsqlProcedure"></a> Transact-SQL 사용  
   

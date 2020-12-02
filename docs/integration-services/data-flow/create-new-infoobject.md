@@ -12,11 +12,11 @@ ms.assetid: 3587a633-1c0b-4d63-a22a-6b2b93923c3a
 author: chugugrace
 ms.author: chugu
 ms.openlocfilehash: 9cb9336b7999373b1f6af5bb5327a35f77fdbe7e
-ms.sourcegitcommit: e700497f962e4c2274df16d9e651059b42ff1a10
+ms.sourcegitcommit: 192f6a99e19e66f0f817fdb1977f564b2aaa133b
 ms.translationtype: HT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 08/17/2020
-ms.locfileid: "88495888"
+ms.lasthandoff: 11/25/2020
+ms.locfileid: "96127230"
 ---
 # <a name="create-new-infoobject"></a>새 InfoObject 만들기
 
@@ -25,7 +25,7 @@ ms.locfileid: "88495888"
 
   **새 InfoObject 만들기** 대화 상자를 사용하여 SAP Netweaver BW 시스템에서 새 InfoObject를 만들 수 있습니다.  
   
- **InfoObject 만들기** 대화 상자는 **SAP BW 대상 편집기** 의 **연결 관리자**페이지에서 열 수 있습니다. SAP BW 대상에 대한 자세한 내용은 [SAP BW Destination](../../integration-services/data-flow/sap-bw-destination.md)을 참조하세요.  
+ **InfoObject 만들기** 대화 상자는 **SAP BW 대상 편집기** 의 **연결 관리자** 페이지에서 열 수 있습니다. SAP BW 대상에 대한 자세한 내용은 [SAP BW Destination](../../integration-services/data-flow/sap-bw-destination.md)을 참조하세요.  
   
 > [!IMPORTANT]  
 >  SAP BW용 Microsoft Connector 1.1 설명서는 SAP Netweaver BW 환경에 익숙한 것으로 가정합니다. SAP Netweaver BW 또는 SAP Netweaver BW 개체 및 프로세스 구성 방법에 대한 자세한 내용은 SAP 설명서를 참조하십시오.  
@@ -36,23 +36,23 @@ ms.locfileid: "88495888"
   
 2.  **데이터 흐름** 탭에서 SAP BW 대상을 두 번 클릭합니다.  
   
-3.  **SAP BW 대상 편집기**에서 **연결 관리자** 를 클릭하여 편집기의 **연결 관리자** 페이지를 엽니다.  
+3.  **SAP BW 대상 편집기** 에서 **연결 관리자** 를 클릭하여 편집기의 **연결 관리자** 페이지를 엽니다.  
   
 4.  **연결 관리자** 페이지의 **SAP BW 개체 만들기** 그룹 상자에서 다음 단계 중 하나를 수행하여 InfoObject를 만듭니다.  
   
-    1.  InfoObject를 직접 만들려면 **InfoObject**를 선택한 다음 **만들기** 를 클릭하여 **새 InfoObject 만들기** 대화 상자를 엽니다.  
+    1.  InfoObject를 직접 만들려면 **InfoObject** 를 선택한 다음 **만들기** 를 클릭하여 **새 InfoObject 만들기** 대화 상자를 엽니다.  
   
-    2.  InfoCube를 만드는 동안 InfoObject를 만들려면 **InfoCube**를 선택한 다음 **만들기**를 클릭합니다. **트랜잭션 데이터용 InfoCube 만들기** 대화 상자에 있는 목록의 행 중 하나에 대한 **IObject** 열에서 **만들기** 를 선택하여 **새 InfoObject 만들기** 대화 상자를 엽니다.  
-  
-        > [!NOTE]  
-        >  테이블의 각 행은 패키지의 데이터 흐름에 있는 열을 나타냅니다.  
-  
-    3.  트랜잭션 데이터용 InfoSouce를 만드는 동안 InfoObject를 만들려면 **InfoSource**를 선택한 다음 **만들기**를 클릭합니다. **InfoSource 만들기** 대화 상자에서 **트랜잭션 데이터**를 선택한 다음 **확인**을 클릭합니다. **트랜잭션 데이터용 InfoSource 만들기** 대화 상자에 있는 목록의 행 중 하나에 대한 **IObject** 열에서 **만들기** 를 선택하여 **새 InfoObject 만들기** 대화 상자를 엽니다.  
+    2.  InfoCube를 만드는 동안 InfoObject를 만들려면 **InfoCube** 를 선택한 다음 **만들기** 를 클릭합니다. **트랜잭션 데이터용 InfoCube 만들기** 대화 상자에 있는 목록의 행 중 하나에 대한 **IObject** 열에서 **만들기** 를 선택하여 **새 InfoObject 만들기** 대화 상자를 엽니다.  
   
         > [!NOTE]  
         >  테이블의 각 행은 패키지의 데이터 흐름에 있는 열을 나타냅니다.  
   
-    4.  마스터 데이터용 InfoSource를 만드는 동안 InfoObject를 만들려면 **InfoSource**를 선택한 다음 **만들기**를 클릭합니다. **InfoSource 만들기** 대화 상자에서 **마스터 데이터**를 선택한 다음 **확인**을 클릭합니다. **마스터 데이터용 InfoSource 만들기** 대화 상자에서 **새로 만들기** 를 클릭하여 **새 InfoObject 만들기** 대화 상자를 엽니다.  
+    3.  트랜잭션 데이터용 InfoSouce를 만드는 동안 InfoObject를 만들려면 **InfoSource** 를 선택한 다음 **만들기** 를 클릭합니다. **InfoSource 만들기** 대화 상자에서 **트랜잭션 데이터** 를 선택한 다음 **확인** 을 클릭합니다. **트랜잭션 데이터용 InfoSource 만들기** 대화 상자에 있는 목록의 행 중 하나에 대한 **IObject** 열에서 **만들기** 를 선택하여 **새 InfoObject 만들기** 대화 상자를 엽니다.  
+  
+        > [!NOTE]  
+        >  테이블의 각 행은 패키지의 데이터 흐름에 있는 열을 나타냅니다.  
+  
+    4.  마스터 데이터용 InfoSource를 만드는 동안 InfoObject를 만들려면 **InfoSource** 를 선택한 다음 **만들기** 를 클릭합니다. **InfoSource 만들기** 대화 상자에서 **마스터 데이터** 를 선택한 다음 **확인** 을 클릭합니다. **마스터 데이터용 InfoSource 만들기** 대화 상자에서 **새로 만들기** 를 클릭하여 **새 InfoObject 만들기** 대화 상자를 엽니다.  
   
  **새 InfoObject 만들기** 대화 상자의 **특성** 섹션에서 **새로 만들기** 를 클릭하여 **새 InfoObject 만들기** 대화 상자를 열 수도 있습니다.  
   

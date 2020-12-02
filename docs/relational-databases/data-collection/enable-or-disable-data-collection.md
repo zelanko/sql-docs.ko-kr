@@ -14,11 +14,11 @@ ms.assetid: 0137971b-fb48-4a3e-822a-3df2b9bb09d7
 author: MashaMSFT
 ms.author: mathoma
 ms.openlocfilehash: c0ff43debf025f9c6494f9e1beeeae1cb5721037
-ms.sourcegitcommit: e700497f962e4c2274df16d9e651059b42ff1a10
+ms.sourcegitcommit: 192f6a99e19e66f0f817fdb1977f564b2aaa133b
 ms.translationtype: HT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 08/17/2020
-ms.locfileid: "88428844"
+ms.lasthandoff: 11/25/2020
+ms.locfileid: "96125276"
 ---
 # <a name="enable-or-disable-data-collection"></a>데이터 컬렉션 설정 또는 해제
  [!INCLUDE [SQL Server](../../includes/applies-to-version/sqlserver.md)]
@@ -49,13 +49,13 @@ ms.locfileid: "88428844"
   
 1.  개체 탐색기에서 **관리** 노드를 확장합니다.  
   
-2.  **데이터 컬렉션**을 마우스 오른쪽 단추로 클릭한 다음 **데이터 컬렉션 사용**을 클릭합니다.  
+2.  **데이터 컬렉션** 을 마우스 오른쪽 단추로 클릭한 다음 **데이터 컬렉션 사용** 을 클릭합니다.  
 
 #### <a name="to-disable-the-data-collector"></a>데이터 수집기를 비활성화하려면  
   
 1.  개체 탐색기에서 **관리** 노드를 확장합니다.  
   
-2.  **데이터 컬렉션**을 마우스 오른쪽 단추로 클릭한 다음 **데이터 컬렉션 사용 안 함**을 클릭합니다.  
+2.  **데이터 컬렉션** 을 마우스 오른쪽 단추로 클릭한 다음 **데이터 컬렉션 사용 안 함** 을 클릭합니다.  
   
 ##  <a name="using-transact-sql"></a><a name="TsqlProcedure"></a> Transact-SQL 사용  
   
@@ -63,9 +63,9 @@ ms.locfileid: "88428844"
   
 1.  [!INCLUDE[ssDE](../../includes/ssde-md.md)]에 연결합니다.  
   
-2.  표준 도구 모음에서 **새 쿼리**를 클릭합니다.  
+2.  표준 도구 모음에서 **새 쿼리** 를 클릭합니다.  
   
-3.  다음 예를 복사하여 쿼리 창에 붙여 넣고 **실행**을 클릭합니다. 이 예제에서는 [sp_syscollector_enable_collector](../../relational-databases/system-stored-procedures/sp-syscollector-enable-collector-transact-sql.md) 를 사용하여 데이터 수집기를 사용하도록 설정합니다.  
+3.  다음 예를 복사하여 쿼리 창에 붙여 넣고 **실행** 을 클릭합니다. 이 예제에서는 [sp_syscollector_enable_collector](../../relational-databases/system-stored-procedures/sp-syscollector-enable-collector-transact-sql.md) 를 사용하여 데이터 수집기를 사용하도록 설정합니다.  
   
 ```sql  
 USE msdb;  
@@ -77,9 +77,9 @@ EXEC dbo.sp_syscollector_enable_collector ;
   
 1.  [!INCLUDE[ssDE](../../includes/ssde-md.md)]에 연결합니다.  
   
-2.  표준 도구 모음에서 **새 쿼리**를 클릭합니다.  
+2.  표준 도구 모음에서 **새 쿼리** 를 클릭합니다.  
   
-3.  다음 예를 복사하여 쿼리 창에 붙여 넣고 **실행**을 클릭합니다. 이 예제에서는 [sp_syscollector_disable_collector](../../relational-databases/system-stored-procedures/sp-syscollector-disable-collector-transact-sql.md) 를 사용하여 데이터 수집기를 사용하지 않도록 설정합니다.  
+3.  다음 예를 복사하여 쿼리 창에 붙여 넣고 **실행** 을 클릭합니다. 이 예제에서는 [sp_syscollector_disable_collector](../../relational-databases/system-stored-procedures/sp-syscollector-disable-collector-transact-sql.md) 를 사용하여 데이터 수집기를 사용하지 않도록 설정합니다.  
   
 ```sql  
 USE msdb;  

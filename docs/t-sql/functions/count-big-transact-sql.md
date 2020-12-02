@@ -24,11 +24,11 @@ author: markingmyname
 ms.author: maghan
 monikerRange: '>=aps-pdw-2016||=azuresqldb-current||=azure-sqldw-latest||>=sql-server-2016||=sqlallproducts-allversions||>=sql-server-linux-2017||=azuresqldb-mi-current'
 ms.openlocfilehash: 47d918b40002d877c667c675c5da7c49f98f267b
-ms.sourcegitcommit: e700497f962e4c2274df16d9e651059b42ff1a10
+ms.sourcegitcommit: 192f6a99e19e66f0f817fdb1977f564b2aaa133b
 ms.translationtype: HT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 08/17/2020
-ms.locfileid: "88459820"
+ms.lasthandoff: 11/25/2020
+ms.locfileid: "96128559"
 ---
 # <a name="count_big-transact-sql"></a>COUNT_BIG(Transact-SQL)
 [!INCLUDE [sql-asdb-asdbmi-asa-pdw](../../includes/applies-to-version/sql-asdb-asdbmi-asa-pdw.md)]
@@ -64,7 +64,7 @@ DISTINCT
 `COUNT_BIG`이 반환할 총 테이블 행 개수를 결정하는 모든 행을 계산해야 한다고 지정합니다. `COUNT_BIG(*)`에는 매개 변수가 없으며 DISTINCT의 사용을 지원하지 않습니다. `COUNT_BIG(*)`은 특정 열에 대한 정보를 사용하지 않도록 정의되어 있으므로 *expression* 매개 변수가 필요하지 않습니다. `COUNT_BIG(*)`은 지정한 테이블에서 행의 수를 반환하고 중복 행을 유지합니다. Null 값을 포함하는 행을 포함하여 각 행을 개별적으로 계산합니다.
   
 OVER **(** [ *partition_by_clause* ] [ *order_by_clause* ] **)**  
-*partition_by_clause*는 `FROM` 절이 생성한 결과 집합을 `COUNT_BIG` 함수가 적용되는 파티션으로 나눕니다. 지정하지 않을 경우 쿼리 결과 집합의 모든 행이 단일 그룹으로 취급됩니다. *order_by_clause*는 작업의 논리적 순서를 결정합니다. 자세한 내용은 [OVER 절 &#40;Transact-SQL&#41;](../../t-sql/queries/select-over-clause-transact-sql.md)을 참조하세요.
+*partition_by_clause* 는 `FROM` 절이 생성한 결과 집합을 `COUNT_BIG` 함수가 적용되는 파티션으로 나눕니다. 지정하지 않을 경우 쿼리 결과 집합의 모든 행이 단일 그룹으로 취급됩니다. *order_by_clause* 는 작업의 논리적 순서를 결정합니다. 자세한 내용은 [OVER 절 &#40;Transact-SQL&#41;](../../t-sql/queries/select-over-clause-transact-sql.md)을 참조하세요.
   
 ## <a name="return-types"></a>반환 형식
 **bigint**
@@ -72,9 +72,9 @@ OVER **(** [ *partition_by_clause* ] [ *order_by_clause* ] **)**
 ## <a name="remarks"></a>설명  
 COUNT_BIG(\*)은 그룹의 항목 개수를 반환합니다. 여기에는 NULL 값과 중복 항목이 포함됩니다.
   
-COUNT_BIG(ALL *식*)은 그룹에 포함된 각 행의 *식*을 계산하여 Null이 아닌 값의 수를 반환합니다.
+COUNT_BIG(ALL *식*)은 그룹에 포함된 각 행의 *식* 을 계산하여 Null이 아닌 값의 수를 반환합니다.
   
-COUNT_BIG(DISTINCT *식*)은 그룹에 포함된 각 행의 *식*을 계산하여 Null이 아닌 고유 값의 수를 반환합니다.
+COUNT_BIG(DISTINCT *식*)은 그룹에 포함된 각 행의 *식* 을 계산하여 Null이 아닌 고유 값의 수를 반환합니다.
   
 COUNT_BIG은 OVER 및 ORDER BY 절 **_없이_** 사용되는 경우 결정적 함수입니다. COUNT_BIG은 OVER 및 ORDER BY 절과 **_함께_** 사용되는 경우 비결정적 함수입니다. 자세한 내용은 [결정적 및 비결정 함수](../../relational-databases/user-defined-functions/deterministic-and-nondeterministic-functions.md)를 참조하세요.
   

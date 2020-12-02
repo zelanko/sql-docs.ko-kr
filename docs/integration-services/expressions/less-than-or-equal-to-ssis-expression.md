@@ -15,11 +15,11 @@ ms.assetid: 946c5630-dccf-4dae-9cfd-6ea823641ab2
 author: chugugrace
 ms.author: chugu
 ms.openlocfilehash: 5241cb30244dd3a3ee9371990d5843988ba4e16d
-ms.sourcegitcommit: e700497f962e4c2274df16d9e651059b42ff1a10
+ms.sourcegitcommit: 192f6a99e19e66f0f817fdb1977f564b2aaa133b
 ms.translationtype: HT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 08/17/2020
-ms.locfileid: "88425435"
+ms.lasthandoff: 11/25/2020
+ms.locfileid: "96127108"
 ---
 # <a name="lt-less-than-or-equal-to-ssis-expression"></a>&lt;=(작거나 같음)(SSIS 식)
 
@@ -54,7 +54,7 @@ expression1 <= expression2
 ## <a name="remarks"></a>설명  
  비교하는 두 식 중 하나가 Null이면 비교 결과도 Null입니다. 두 식이 모두 Null이면 결과도 Null입니다.  
   
- 식 집합 *expression1* 및 *expression2*는 다음 규칙 중 하나를 따라야 합니다.  
+ 식 집합 *expression1* 및 *expression2* 는 다음 규칙 중 하나를 따라야 합니다.  
   
 -   **Numeric***expression1* 및 *expression2* 모두 숫자 데이터 형식이어야 합니다. 데이터 형식의 교집합은 식 계산기가 수행하는 암시적 숫자 변환에 대한 규칙에 지정된 대로 숫자 데이터 형식이어야 합니다. 두 숫자 데이터 형식의 교집합은 Null일 수 없습니다. 자세한 내용은 [Integration Services Data Types in Expressions](../../integration-services/expressions/integration-services-data-types-in-expressions.md)을 참조하세요.  
   

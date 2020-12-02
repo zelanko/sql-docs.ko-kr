@@ -21,11 +21,11 @@ ms.assetid: 21546874-97e3-4b93-970f-87c27f6b78c7
 author: rothja
 ms.author: jroth
 ms.openlocfilehash: 16377e053344c8c5e4a59b367faeac18f51c6945
-ms.sourcegitcommit: e700497f962e4c2274df16d9e651059b42ff1a10
+ms.sourcegitcommit: 192f6a99e19e66f0f817fdb1977f564b2aaa133b
 ms.translationtype: HT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 08/17/2020
-ms.locfileid: "88459395"
+ms.lasthandoff: 11/25/2020
+ms.locfileid: "96128301"
 ---
 # <a name="close-transact-sql"></a>CLOSE(Transact-SQL)
 [!INCLUDE [SQL Server SQL Database](../../includes/applies-to-version/sql-asdb.md)]
@@ -44,10 +44,10 @@ CLOSE { { [ GLOBAL ] cursor_name } | cursor_variable_name }
 
 ## <a name="arguments"></a>인수
  GLOBAL  
- *cursor_name*이 전역 커서를 참조하도록 지정합니다.  
+ *cursor_name* 이 전역 커서를 참조하도록 지정합니다.  
   
  *cursor_name*  
- 열린 커서의 이름입니다. 동일한 *cursor_name*을 가진 전역 커서와 지역 커서가 있을 경우 GLOBAL이 지정되면 *cursor_name*은 전역 커서를 참조하고 GLOBAL이 지정되지 않으면 *cursor_name*은 지역 커서를 참조합니다.  
+ 열린 커서의 이름입니다. 동일한 *cursor_name* 을 가진 전역 커서와 지역 커서가 있을 경우 GLOBAL이 지정되면 *cursor_name* 은 전역 커서를 참조하고 GLOBAL이 지정되지 않으면 *cursor_name* 은 지역 커서를 참조합니다.  
   
  *cursor_variable_name*  
  열린 커서와 연관된 커서 변수의 이름입니다.  

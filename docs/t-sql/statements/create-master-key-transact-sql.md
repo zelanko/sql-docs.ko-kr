@@ -26,11 +26,11 @@ author: VanMSFT
 ms.author: vanto
 monikerRange: '>=aps-pdw-2016||=azuresqldb-current||=azure-sqldw-latest||>=sql-server-2016||=sqlallproducts-allversions||>=sql-server-linux-2017||=azuresqldb-mi-current'
 ms.openlocfilehash: 1f9a640dff75d54a4377f512b3a1e17200f48377
-ms.sourcegitcommit: e700497f962e4c2274df16d9e651059b42ff1a10
+ms.sourcegitcommit: 192f6a99e19e66f0f817fdb1977f564b2aaa133b
 ms.translationtype: HT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 08/17/2020
-ms.locfileid: "88444910"
+ms.lasthandoff: 11/25/2020
+ms.locfileid: "96126171"
 ---
 # <a name="create-master-key-transact-sql"></a>CREATE MASTER KEY(Transact-SQL)
 
@@ -51,7 +51,7 @@ CREATE MASTER KEY [ ENCRYPTION BY PASSWORD ='password' ]
 
 ## <a name="arguments"></a>인수
 
-PASSWORD ='*password*' 데이터베이스의 마스터 키를 암호화하는 데 사용되는 암호입니다. *password*는 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 인스턴스를 실행하는 컴퓨터의 Windows 암호 정책 요구 사항을 충족해야 합니다. *암호*는 [!INCLUDE[ssSDS](../../includes/sssds-md.md)] 및 [!INCLUDE[ssSDW_md](../../includes/sssdw-md.md)]에서 선택 사항입니다.
+PASSWORD ='*password*' 데이터베이스의 마스터 키를 암호화하는 데 사용되는 암호입니다. *password* 는 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 인스턴스를 실행하는 컴퓨터의 Windows 암호 정책 요구 사항을 충족해야 합니다. *암호* 는 [!INCLUDE[ssSDS](../../includes/sssds-md.md)] 및 [!INCLUDE[ssSDW_md](../../includes/sssdw-md.md)]에서 선택 사항입니다.
 
 ## <a name="remarks"></a>설명
 

@@ -21,14 +21,14 @@ helpviewer_keywords:
 - marked transactions [SQL Server], restoring
 - database restores [SQL Server], point in time
 ms.assetid: 77a0d9c0-978a-4891-8b0d-a4256c81c3f8
-author: MashaMSFT
-ms.author: mathoma
-ms.openlocfilehash: 71241e4a76e90a7c42e4dbd6e176d43bb5281fdb
-ms.sourcegitcommit: 3ea082c778f6771b17d90fb597680ed334d3e0ec
+author: cawrites
+ms.author: chadam
+ms.openlocfilehash: e43b37dd96a931d98555f05fe6e70b9f8a4f99e3
+ms.sourcegitcommit: 5a1ed81749800c33059dac91b0e18bd8bb3081b1
 ms.translationtype: HT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 08/11/2020
-ms.locfileid: "88088171"
+ms.lasthandoff: 11/23/2020
+ms.locfileid: "96129169"
 ---
 # <a name="recovery-of-related--databases-that-contain-marked-transaction"></a>표시된 트랜잭션이 포함된 관련 데이터베이스 복구
  [!INCLUDE [SQL Server](../../includes/applies-to-version/sqlserver.md)]
@@ -42,7 +42,7 @@ ms.locfileid: "88088171"
   
 -   트랜잭션 표시는 로그 공간을 소비하므로 데이터베이스 복구 전략에서 중요한 역할을 하는 트랜잭션에 대해서만 사용해야 합니다.  
   
--   표시된 트랜잭션을 커밋한 후에 [msdb](../../relational-databases/system-tables/logmarkhistory-transact-sql.md) 의 **logmarkhistory**테이블에 행이 삽입됩니다.  
+-   표시된 트랜잭션을 커밋한 후에 [msdb](../../relational-databases/system-tables/logmarkhistory-transact-sql.md) 의 **logmarkhistory** 테이블에 행이 삽입됩니다.  
   
 -   표시된 트랜잭션이 같은 데이터베이스 서버 또는 다른 서버의 다중 데이터베이스에 걸쳐 있으면 영향 받은 모든 데이터베이스의 로그에 표시가 기록됩니다. 자세한 내용은 [표시된 트랜잭션을 사용하여 관련 데이터베이스를 일관되게 복구&#40;전체 복구 모델&#41;](../../relational-databases/backup-restore/use-marked-transactions-to-recover-related-databases-consistently.md)을 참조하세요.  
   
@@ -73,7 +73,7 @@ BEGIN TRANSACTION Tx1 WITH MARK 'not the mark name, just a description'
   
  STOPATMARK 옵션과 STOPBEFOREMARK 옵션은 선택적으로 사용되는 AFTER *datetime* 절을 지원합니다. *datetime* 을 사용할 경우 표시 이름은 고유하지 않아도 됩니다.  
   
- AFTER *datetime* 이 생략되면 지정한 이름이 있는 첫 번째 표시 지점에서 복구가 중지됩니다. AFTER *datetime* 이 지정되면 *datetime*에서 또는 이후에 지정한 이름이 있는 첫 번째 표시 지점에서 복구가 중지됩니다.  
+ AFTER *datetime* 이 생략되면 지정한 이름이 있는 첫 번째 표시 지점에서 복구가 중지됩니다. AFTER *datetime* 이 지정되면 *datetime* 에서 또는 이후에 지정한 이름이 있는 첫 번째 표시 지점에서 복구가 중지됩니다.  
   
 > [!NOTE]  
 >  모든 지정 시간 복원 작업에서처럼 데이터베이스에서 대량 로그 작업이 진행되는 동안 표시 지점으로 복구되지 않습니다.  

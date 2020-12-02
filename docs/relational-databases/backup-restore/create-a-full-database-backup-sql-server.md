@@ -13,14 +13,14 @@ helpviewer_keywords:
 - backups [SQL Server], creating
 - database backups [SQL Server], SQL Server Management Studio
 ms.assetid: 586561fc-dfbb-4842-84f8-204a9100a534
-author: MikeRayMSFT
-ms.author: mikeray
-ms.openlocfilehash: d534efe7cf6de24acad83604b7ed6e42efa9ce6f
-ms.sourcegitcommit: 04cf7905fa32e0a9a44575a6f9641d9a2e5ac0f8
+author: cawrites
+ms.author: chadam
+ms.openlocfilehash: e0c103fba0dae4f6e31d976c151b7c01c487f658
+ms.sourcegitcommit: 5a1ed81749800c33059dac91b0e18bd8bb3081b1
 ms.translationtype: HT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 10/07/2020
-ms.locfileid: "91809279"
+ms.lasthandoff: 11/23/2020
+ms.locfileid: "96129280"
 ---
 # <a name="create-a-full-database-backup"></a>전체 데이터베이스 백업 만들기
 
@@ -45,7 +45,7 @@ Azure Blob Storage 서비스로의 SQL Server 백업 방법에 대한 자세한 
 
 ## <a name="security"></a><a name="Security"></a> 보안
 
-데이터베이스 백업에서 **TRUSTWORTHY**는 OFF로 설정되어 있습니다. **TRUSTWORTHY**를 ON으로 설정하는 방법에 대한 자세한 내용은 [ALTER DATABASE SET 옵션&#40;Transact-SQL&#41;](../../t-sql/statements/alter-database-transact-sql-set-options.md)을 참조하세요.
+데이터베이스 백업에서 **TRUSTWORTHY** 는 OFF로 설정되어 있습니다. **TRUSTWORTHY** 를 ON으로 설정하는 방법에 대한 자세한 내용은 [ALTER DATABASE SET 옵션&#40;Transact-SQL&#41;](../../t-sql/statements/alter-database-transact-sql-set-options.md)을 참조하세요.
 
 [!INCLUDE[ssSQL11](../../includes/sssql11-md.md)] 부터는 **PASSWORD** 및 **MEDIAPASSWORD** 옵션은 백업을 만드는 데 더 이상 사용되지 않습니다. 암호를 사용하여 만든 백업은 계속 복원할 수 있습니다.
 
@@ -60,40 +60,40 @@ Azure Blob Storage 서비스로의 SQL Server 백업 방법에 대한 자세한 
 > [!NOTE]
 > [!INCLUDE[ssManStudioFull](../../includes/ssmanstudiofull-md.md)]를 사용하여 백업 작업을 지정할 때 **스크립트** 단추를 클릭하고 스크립트 대상을 선택하여 해당되는 [!INCLUDE[tsql](../../includes/tsql-md.md)] [BACKUP](../../t-sql/statements/backup-transact-sql.md) 스크립트를 생성할 수 있습니다.
 
-1. [!INCLUDE[msCoName](../../includes/msconame-md.md)] [!INCLUDE[ssDEnoversion](../../includes/ssdenoversion-md.md)]의 해당 인스턴스에 연결한 다음, **개체 탐색기**에서 서버 트리를 확장합니다.
+1. [!INCLUDE[msCoName](../../includes/msconame-md.md)] [!INCLUDE[ssDEnoversion](../../includes/ssdenoversion-md.md)]의 해당 인스턴스에 연결한 다음, **개체 탐색기** 에서 서버 트리를 확장합니다.
 
-1. **데이터베이스**를 확장하고 사용자 데이터베이스를 선택하거나 **시스템 데이터베이스** 를 확장한 다음 시스템 데이터베이스를 선택합니다.
+1. **데이터베이스** 를 확장하고 사용자 데이터베이스를 선택하거나 **시스템 데이터베이스** 를 확장한 다음 시스템 데이터베이스를 선택합니다.
 
-1. 백업하려는 데이터베이스를 마우스 오른쪽 단추로 클릭하고 **태스크**를 가리킨 다음 **백업...** 을 클릭합니다.
+1. 백업하려는 데이터베이스를 마우스 오른쪽 단추로 클릭하고 **태스크** 를 가리킨 다음 **백업...** 을 클릭합니다.
 
 1. **데이터베이스 백업** 대화 상자에서 선택한 데이터베이스가 드롭다운 목록에 표시됩니다(서버에 있는 다른 데이터베이스로 변경할 수 있음).
 
-1. **백업 유형** 드롭다운 목록에서 원하는 백업 유형을 선택합니다. 기본값은 **Full**입니다.
+1. **백업 유형** 드롭다운 목록에서 원하는 백업 유형을 선택합니다. 기본값은 **Full** 입니다.
 
    > [!IMPORTANT]
    > 차등 또는 트랜잭션 로그 백업을 수행하려면 1개 이상의 전체 데이터베이스 백업을 수행해야 합니다.
    
-1. **백업 구성 요소** 아래에서 **데이터베이스**를 선택합니다.
+1. **백업 구성 요소** 아래에서 **데이터베이스** 를 선택합니다.
 
 1. **대상** 섹션에서 백업 파일의 기본 위치를 검토합니다(../mssql/data 폴더).
 
-   다른 디바이스로 백업하려면 **백업 대상** 드롭다운 목록을 사용하여 선택 항목을 변경합니다. 백업 속도를 높이기 위해 백업 세트를 여러 파일에서 스트라이프하려면 **추가**를 클릭하여 백업 개체 및/또는 대상을 더 추가합니다.
+   다른 디바이스로 백업하려면 **백업 대상** 드롭다운 목록을 사용하여 선택 항목을 변경합니다. 백업 속도를 높이기 위해 백업 세트를 여러 파일에서 스트라이프하려면 **추가** 를 클릭하여 백업 개체 및/또는 대상을 더 추가합니다.
  
-   백업 대상을 제거하려면 해당 대상을 선택한 다음 **제거**를 클릭합니다. 기존 백업 대상의 내용을 보려면 선택한 다음 **내용**을 클릭합니다.
+   백업 대상을 제거하려면 해당 대상을 선택한 다음 **제거** 를 클릭합니다. 기존 백업 대상의 내용을 보려면 선택한 다음 **내용** 을 클릭합니다.
 
 1. (옵션) **미디어 옵션** 및 **백업 옵션** 페이지에서 사용 가능한 다른 설정을 검토합니다.
 
    다양한 백업 옵션에 대한 자세한 정보는 [일반 페이지](back-up-database-general-page.md), [미디어 옵션 페이지](back-up-database-media-options-page.md) 및 [백업 옵션 페이지](back-up-database-backup-options-page.md)를 참조하세요.
 
-1. **확인**을 클릭하여 백업을 시작합니다.
+1. **확인** 을 클릭하여 백업을 시작합니다.
 
-1. 백업이 성공적으로 완료되면, **확인**을 클릭하여 SQL Server Management Studio 대화 상자를 닫습니다.
+1. 백업이 성공적으로 완료되면, **확인** 을 클릭하여 SQL Server Management Studio 대화 상자를 닫습니다.
 
 ### <a name="additional-information"></a>추가 정보
 
 - 전체 데이터베이스 백업을 만든 후 [차등 데이터베이스 백업](create-a-differential-database-backup-sql-server.md) 또는 [트랜잭션 로그 백업](back-up-a-transaction-log-sql-server.md)을 만들 수 있습니다.
 
-- (옵션) **복사 전용 백업** 확인란을 선택하여 복사 전용 백업을 만들 수 있습니다. *복사 전용 백업*은 기존 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 백업 시퀀스와 독립적인 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 백업입니다. 자세한 내용은 [복사 전용 백업&#40;SQL Server&#41;](../../relational-databases/backup-restore/copy-only-backups-sql-server.md)를 참조하세요. **서로 다른** 백업 유형에서는 복사 전용 백업을 사용할 수 없습니다.
+- (옵션) **복사 전용 백업** 확인란을 선택하여 복사 전용 백업을 만들 수 있습니다. *복사 전용 백업* 은 기존 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 백업 시퀀스와 독립적인 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 백업입니다. 자세한 내용은 [복사 전용 백업&#40;SQL Server&#41;](../../relational-databases/backup-restore/copy-only-backups-sql-server.md)를 참조하세요. **서로 다른** 백업 유형에서는 복사 전용 백업을 사용할 수 없습니다.
 
 - URL에 백업할 경우 **미디어 덮어쓰기** 옵션은 **미디어 옵션** 페이지에서 사용할 수 없습니다.
 
@@ -136,13 +136,13 @@ GO
 
 이 예제에서는 `SQLTestDB` 데이터베이스가 기본 백업 위치에서 디스크로 백업됩니다.
 
-1. [!INCLUDE[msCoName](../../includes/msconame-md.md)] [!INCLUDE[ssDEnoversion](../../includes/ssdenoversion-md.md)]의 해당 인스턴스에 연결한 다음, **개체 탐색기**에서 서버 트리를 확장합니다.
+1. [!INCLUDE[msCoName](../../includes/msconame-md.md)] [!INCLUDE[ssDEnoversion](../../includes/ssdenoversion-md.md)]의 해당 인스턴스에 연결한 다음, **개체 탐색기** 에서 서버 트리를 확장합니다.
 
-1. **데이터베이스**를 확장하고 `SQLTestDB`를 마우스 오른쪽 단추로 클릭한 다음 **태스크**를 가리키고 **백업...** 을 클릭합니다.
+1. **데이터베이스** 를 확장하고 `SQLTestDB`를 마우스 오른쪽 단추로 클릭한 다음 **태스크** 를 가리키고 **백업...** 을 클릭합니다.
 
-1. **확인**을 클릭합니다.
+1. **확인** 을 클릭합니다.
 
-1. 백업이 성공적으로 완료되면, **확인**을 클릭하여 SQL Server Management Studio 대화 상자를 닫습니다.
+1. 백업이 성공적으로 완료되면, **확인** 을 클릭하여 SQL Server Management Studio 대화 상자를 닫습니다.
 
 ![SQL 백업 만들기](media/quickstart-backup-restore-database/backup-db-ssms.png)
 
@@ -150,21 +150,21 @@ GO
 
 이 예제에서는 `SQLTestDB` 데이터베이스가 선택한 위치의 디스크로 백업됩니다.
 
-1. [!INCLUDE[msCoName](../../includes/msconame-md.md)] [!INCLUDE[ssDEnoversion](../../includes/ssdenoversion-md.md)]의 해당 인스턴스에 연결한 다음, **개체 탐색기**에서 서버 트리를 확장합니다.
+1. [!INCLUDE[msCoName](../../includes/msconame-md.md)] [!INCLUDE[ssDEnoversion](../../includes/ssdenoversion-md.md)]의 해당 인스턴스에 연결한 다음, **개체 탐색기** 에서 서버 트리를 확장합니다.
 
-1. **데이터베이스**를 확장하고 `SQLTestDB`를 마우스 오른쪽 단추로 클릭한 다음 **태스크**를 가리키고 **백업...** 을 클릭합니다.
+1. **데이터베이스** 를 확장하고 `SQLTestDB`를 마우스 오른쪽 단추로 클릭한 다음 **태스크** 를 가리키고 **백업...** 을 클릭합니다.
 
 1. **대상** 섹션의 **일반** 페이지에 있는 **백업할 위치:** 드롭다운 목록에서 **디스크** 를 선택합니다.
 
 1. 모든 기존 백업 파일이 제거될 때까지 **제거** 를 선택합니다.
 
-1. **추가**를 선택하면 **백업 대상 선택** 대화 상자가 열립니다.
+1. **추가** 를 선택하면 **백업 대상 선택** 대화 상자가 열립니다.
 
-1. **파일 이름** 텍스트 상자에 올바른 경로 및 파일 이름을 입력하고 **.bak**를 확장명으로 사용하여 이 파일의 분류를 간소화합니다.
+1. **파일 이름** 텍스트 상자에 올바른 경로 및 파일 이름을 입력하고 **.bak** 를 확장명으로 사용하여 이 파일의 분류를 간소화합니다.
 
-1. **확인**을 클릭한 다음, **확인**을 다시 클릭하여 백업을 시작합니다.
+1. **확인** 을 클릭한 다음, **확인** 을 다시 클릭하여 백업을 시작합니다.
 
-1. 백업이 성공적으로 완료되면, **확인**을 클릭하여 SQL Server Management Studio 대화 상자를 닫습니다.
+1. 백업이 성공적으로 완료되면, **확인** 을 클릭하여 SQL Server Management Studio 대화 상자를 닫습니다.
 
 ![DB 위치 변경](media/create-a-full-database-backup-sql-server/change-db-location.png)
 
@@ -172,9 +172,9 @@ GO
 
 이 예제에서는 `SQLTestDB` 데이터베이스가 기본 백업 위치로 암호화를 사용하여 백업됩니다.
 
-1. [!INCLUDE[msCoName](../../includes/msconame-md.md)] [!INCLUDE[ssDEnoversion](../../includes/ssdenoversion-md.md)]의 해당 인스턴스에 연결한 다음, **개체 탐색기**에서 서버 트리를 확장합니다.
+1. [!INCLUDE[msCoName](../../includes/msconame-md.md)] [!INCLUDE[ssDEnoversion](../../includes/ssdenoversion-md.md)]의 해당 인스턴스에 연결한 다음, **개체 탐색기** 에서 서버 트리를 확장합니다.
 
-1. **데이터베이스**, **시스템 데이터베이스**를 차례로 확장하고 `master`를 마우스 오른쪽 단추로 클릭한 후 **새 쿼리**를 클릭하여 `SQLTestDB` 데이터베이스에 연결된 쿼리 창을 엽니다.
+1. **데이터베이스**, **시스템 데이터베이스** 를 차례로 확장하고 `master`를 마우스 오른쪽 단추로 클릭한 후 **새 쿼리** 를 클릭하여 `SQLTestDB` 데이터베이스에 연결된 쿼리 창을 엽니다.
 
 1. 다음 명령을 실행하여 `master` 데이터베이스 안에 [**데이터베이스 마스터 키**](../../relational-databases/security/encryption/create-a-database-master-key.md) 및 [**인증서**](../../t-sql/statements/create-certificate-transact-sql.md)를 만듭니다.  
 
@@ -190,17 +190,17 @@ GO
    WITH SUBJECT = 'Backup Cert', EXPIRY_DATE = '20201031';  
    ```
 
-1. **개체 탐색기**의 **데이터베이스** 노드에서 `SQLTestDB`를 마우스 오른쪽 단추로 클릭한 다음, **작업**을 가리키고 **백업...** 을 클릭합니다.
+1. **개체 탐색기** 의 **데이터베이스** 노드에서 `SQLTestDB`를 마우스 오른쪽 단추로 클릭한 다음, **작업** 을 가리키고 **백업...** 을 클릭합니다.
 
-1. **미디어 옵션** 페이지의 **미디어 덮어쓰기** 섹션에서 **새 미디어 세트에 백업하고 기존 백업 세트 모두 지우기**를 선택합니다.
+1. **미디어 옵션** 페이지의 **미디어 덮어쓰기** 섹션에서 **새 미디어 세트에 백업하고 기존 백업 세트 모두 지우기** 를 선택합니다.
 
 1. **백업 옵션** 페이지의 **암호화** 섹션에서 **백업 암호화** 확인란을 선택합니다.
 
-1. 알고리즘 드롭다운 목록에서 **AES 256**을 선택합니다.
+1. 알고리즘 드롭다운 목록에서 **AES 256** 을 선택합니다.
 
 1. **인증서 또는 비대칭 키** 드롭다운 목록에서 `MyCertificate`를 선택합니다.
 
-1. **확인**을 선택합니다.
+1. **확인** 을 선택합니다.
 
 ![암호화된 백업](media/create-a-full-database-backup-sql-server/encrypted-backup.png)
 
@@ -210,15 +210,15 @@ GO
 
 스토리지 계정에 Azure Blob 컨테이너가 없는 경우 계속하기 전에 만듭니다. 자세한 내용은 [범용 스토리지 계정 만들기](/azure/storage/common/storage-quickstart-create-account?tabs=azure-portal) 및 [컨테이너 만들기](/azure/storage/blobs/storage-quickstart-blobs-portal#create-a-container)를 참조하세요.
 
-1. [!INCLUDE[msCoName](../../includes/msconame-md.md)] [!INCLUDE[ssDEnoversion](../../includes/ssdenoversion-md.md)]의 해당 인스턴스에 연결한 다음, **개체 탐색기**에서 서버 트리를 확장합니다.
+1. [!INCLUDE[msCoName](../../includes/msconame-md.md)] [!INCLUDE[ssDEnoversion](../../includes/ssdenoversion-md.md)]의 해당 인스턴스에 연결한 다음, **개체 탐색기** 에서 서버 트리를 확장합니다.
 
-1. **데이터베이스**를 확장하고 `SQLTestDB`를 마우스 오른쪽 단추로 클릭한 다음 **태스크**를 가리키고 **백업...** 을 클릭합니다.
+1. **데이터베이스** 를 확장하고 `SQLTestDB`를 마우스 오른쪽 단추로 클릭한 다음 **태스크** 를 가리키고 **백업...** 을 클릭합니다.
 
 1. **대상** 섹션의 **일반** 페이지에 있는 **백업할 위치:** 드롭다운 목록에서 **URL** 을 선택합니다.
 
 1. **추가** 를 클릭하면 **백업 대상 선택** 대화 상자가 열립니다.
 
-1. SQL Server Management Studio에서 사용하려는 Azure Storage 컨테이너를 이전에 등록한 경우 해당 컨테이너를 선택합니다. 그렇지 않으면 **새 컨테이너**를 클릭하여 새 컨테이너를 등록합니다.
+1. SQL Server Management Studio에서 사용하려는 Azure Storage 컨테이너를 이전에 등록한 경우 해당 컨테이너를 선택합니다. 그렇지 않으면 **새 컨테이너** 를 클릭하여 새 컨테이너를 등록합니다.
 
 1. **Microsoft 구독에 연결** 대화 상자에서 계정에 로그인합니다.
 
@@ -228,17 +228,17 @@ GO
 
 1. **공유 액세스 정책 만료** 드롭다운 일정 상자에서 이 예제에서 만든 공유 액세스 정책의 만료 날짜를 선택합니다.
 
-1. **자격 증명 만들기**를 클릭하여 SQL Server Management Studio에서 공유 액세스 서명 및 자격 증명을 생성합니다.
+1. **자격 증명 만들기** 를 클릭하여 SQL Server Management Studio에서 공유 액세스 서명 및 자격 증명을 생성합니다.
 
-1. **확인**을 클릭하여 **Microsoft 구독에 연결** 대화 상자를 닫습니다.
+1. **확인** 을 클릭하여 **Microsoft 구독에 연결** 대화 상자를 닫습니다.
 
 1. **백업 파일** 텍스트 상자에서 백업 파일의 이름을 수정합니다(옵션).
 
-1. **확인**을 클릭하여 **백업 대상 선택** 대화 상자를 닫습니다.
+1. **확인** 을 클릭하여 **백업 대상 선택** 대화 상자를 닫습니다.
 
-1. **확인**을 클릭하여 백업을 시작합니다.
+1. **확인** 을 클릭하여 백업을 시작합니다.
 
-1. 백업이 성공적으로 완료되면, **확인**을 클릭하여 SQL Server Management Studio 대화 상자를 닫습니다.
+1. 백업이 성공적으로 완료되면, **확인** 을 클릭하여 SQL Server Management Studio 대화 상자를 닫습니다.
 
 ## <a name="using-transact-sql"></a><a name="TsqlProcedure"></a> Transact-SQL 사용
 
@@ -255,7 +255,7 @@ GO
 |------------|-----------------|
 |*database*|백업할 데이터베이스입니다.|
 |*backup_device* [ **,** ...*n* ]|백업 작업에 사용할 1-64개의 백업 디바이스 목록을 지정합니다. 물리적 백업 디바이스를 지정하거나, 이미 정의된 경우 해당 논리적 백업 디바이스를 지정할 수 있습니다. 물리적 백업 디바이스를 지정하려면 다음 DISK 또는 TAPE 옵션을 사용합니다.<br /><br /> { DISK &#124; TAPE } **=** _physical\_backup\_device\_name_<br /><br /> 자세한 내용은 [백업 디바이스&#40;SQL Server&#41;](../../relational-databases/backup-restore/backup-devices-sql-server.md)를 참조하세요.|
-|WITH *with_options* [ **,** ...*o* ]|필요에 따라 *o*등과 같은 하나 이상의 추가 옵션을 지정합니다. 몇 가지 WITH의 기본 옵션에 대한 자세한 내용은 2단계를 참조하세요.|
+|WITH *with_options* [ **,** ...*o* ]|필요에 따라 *o* 등과 같은 하나 이상의 추가 옵션을 지정합니다. 몇 가지 WITH의 기본 옵션에 대한 자세한 내용은 2단계를 참조하세요.|
 |||
 
 필요에 따라 한 개 이상의 **WITH** 옵션을 지정합니다. 몇 가지 기본적인 **WITH** 옵션은 이 페이지에 설명되어 있습니다. 모든 **WITH** 옵션에 대한 자세한 내용은 [BACKUP&#40;Transact-SQL&#41;](../../t-sql/statements/backup-transact-sql.md)을 참조하세요.
@@ -363,7 +363,7 @@ GO
 
 ## <a name="using-powershell"></a><a name="PowerShellProcedure"></a> PowerShell 사용
 
-**Backup-SqlDatabase** cmdlet을 사용합니다. 전체 데이터베이스 백업임을 명시적으로 나타내기 위해 **-BackupAction** 매개 변수에 기본값인 **Database**를 지정합니다. 전체 데이터베이스 백업의 경우 이 매개 변수는 선택 사항입니다.
+**Backup-SqlDatabase** cmdlet을 사용합니다. 전체 데이터베이스 백업임을 명시적으로 나타내기 위해 **-BackupAction** 매개 변수에 기본값인 **Database** 를 지정합니다. 전체 데이터베이스 백업의 경우 이 매개 변수는 선택 사항입니다.
 
 > [!NOTE]
 > 이러한 예제에는 SqlServer 모듈이 필요합니다. 이 모듈이 설치되어 있는지 확인하려면 `Get-Module -Name SqlServer`를 실행합니다. 이 모듈을 설치하려면 PowerShell의 관리자 세션에서 `Install-Module -Name SqlServer`를 실행합니다.
@@ -377,7 +377,7 @@ GO
 
 #### <a name="a-full-backup-local"></a>A. 전체 백업(로컬)
 
-다음 예에서는 서버 인스턴스 `<myDatabase>` 의 기본 백업 위치에 `Computer\Instance`데이터베이스의 전체 데이터베이스 백업을 만듭니다. 선택 사항으로, 이 예제에서는 **-BackupAction Database**를 지정합니다.
+다음 예에서는 서버 인스턴스 `<myDatabase>` 의 기본 백업 위치에 `Computer\Instance`데이터베이스의 전체 데이터베이스 백업을 만듭니다. 선택 사항으로, 이 예제에서는 **-BackupAction Database** 를 지정합니다.
 
 전체 구문 및 추가 예제는 [Backup-SqlDatabase](/powershell/module/sqlserver/backup-sqldatabase)를 참조하세요.
 

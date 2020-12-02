@@ -15,11 +15,11 @@ ms.assetid: e4413ddd-0d0e-40c3-9c76-b5ce323218ec
 author: chugugrace
 ms.author: chugu
 ms.openlocfilehash: ae8fa8bb0aae6700d1082e52385c7d162c193b84
-ms.sourcegitcommit: e700497f962e4c2274df16d9e651059b42ff1a10
+ms.sourcegitcommit: 192f6a99e19e66f0f817fdb1977f564b2aaa133b
 ms.translationtype: HT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 08/17/2020
-ms.locfileid: "88430615"
+ms.lasthandoff: 11/25/2020
+ms.locfileid: "96127151"
 ---
 # <a name="-bitwise-not-ssis-expression"></a>~(비트 Not)(SSIS 식)
 
@@ -38,10 +38,10 @@ ms.locfileid: "88430615"
   
 ## <a name="arguments"></a>인수  
  *integer_expression*  
- 정수 데이터 형식의 유효한 식입니다. *integer*_*expression* 은 비트 연산을 위해 이진수로 변환되는 정수입니다. 자세한 내용은 [Integration Services Data Types](../../integration-services/data-flow/integration-services-data-types.md)을 참조하세요.  
+ 정수 데이터 형식의 유효한 식입니다. *integer* _ *expression* 은 비트 연산을 위해 이진수로 변환되는 정수입니다. 자세한 내용은 [Integration Services Data Types](../../integration-services/data-flow/integration-services-data-types.md)을 참조하세요.  
   
 ## <a name="result-types"></a>결과 형식  
- *integer_expression*의 데이터 형식을 반환합니다.  
+ *integer_expression* 의 데이터 형식을 반환합니다.  
   
 ## <a name="remarks"></a>설명  
  None  

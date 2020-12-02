@@ -22,11 +22,11 @@ author: MashaMSFT
 ms.author: mathoma
 monikerRange: =azuresqldb-mi-current||>=sql-server-2016||=sqlallproducts-allversions
 ms.openlocfilehash: 2c9f2fd0d7cede5981258ccc74cecd2608ba931a
-ms.sourcegitcommit: e700497f962e4c2274df16d9e651059b42ff1a10
+ms.sourcegitcommit: 192f6a99e19e66f0f817fdb1977f564b2aaa133b
 ms.translationtype: HT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 08/17/2020
-ms.locfileid: "88490585"
+ms.lasthandoff: 11/25/2020
+ms.locfileid: "96127811"
 ---
 # <a name="delete-an-article"></a>아티클 삭제
 [!INCLUDE[sql-asdbmi](../../../includes/applies-to-version/sql-asdbmi.md)]
@@ -45,18 +45,18 @@ ms.locfileid: "88490585"
   
 #### <a name="to-delete-an-article-from-a-snapshot-or-transactional-publication"></a>스냅샷 또는 트랜잭션 게시에서 아티클을 삭제하려면  
   
-1.  [sp_droparticle &#40;Transact-SQL&#41;](../../../relational-databases/system-stored-procedures/sp-droparticle-transact-sql.md)을 실행하여 **\@publication**로 지정된 게시에서 **\@article**으로 지정된 아티클을 삭제합니다. **\@force_invalidate_snapshot** 값을 **1**로 지정합니다.  
+1.  [sp_droparticle &#40;Transact-SQL&#41;](../../../relational-databases/system-stored-procedures/sp-droparticle-transact-sql.md)을 실행하여 **\@publication** 로 지정된 게시에서 **\@article** 으로 지정된 아티클을 삭제합니다. **\@force_invalidate_snapshot** 값을 **1** 로 지정합니다.  
   
 2.  (옵션) 게시된 개체를 데이터베이스에서 완전히 제거하려면 게시 데이터베이스의 게시자에서 `DROP <objectname>` 명령을 실행합니다.  
 
 #### <a name="to-delete-an-article-from-a-merge-publication"></a>병합 게시에서 아티클을 삭제하려면  
   
-1.  [sp_dropmergearticle &#40;Transact-SQL&#41;](../../../relational-databases/system-stored-procedures/sp-dropmergearticle-transact-sql.md)을 실행하여 **\@publication**로 지정된 게시에서 **\@article**으로 지정된 아티클을 삭제합니다. 필요한 경우 **\@force_invalidate_snapshot**에 값 **1**을 지정하고 **\@force_reinit_subscription**에 값 **1**을 지정합니다.  
+1.  [sp_dropmergearticle &#40;Transact-SQL&#41;](../../../relational-databases/system-stored-procedures/sp-dropmergearticle-transact-sql.md)을 실행하여 **\@publication** 로 지정된 게시에서 **\@article** 으로 지정된 아티클을 삭제합니다. 필요한 경우 **\@force_invalidate_snapshot** 에 값 **1** 을 지정하고 **\@force_reinit_subscription** 에 값 **1** 을 지정합니다.  
   
 2.  (옵션) 게시된 개체를 데이터베이스에서 완전히 제거하려면 게시 데이터베이스의 게시자에서 `DROP <objectname>` 명령을 실행합니다.  
   
 ###  <a name="examples-transact-sql"></a><a name="TsqlExample"></a> 예(Transact-SQL)  
- 다음 예에서는 트랜잭션 게시에서 아티클을 삭제합니다. 이로 인해 기존 스냅샷이 무효화되므로 **\@force_invalidate_snapshot** 매개 변수 값이 **1**로 지정됩니다.  
+ 다음 예에서는 트랜잭션 게시에서 아티클을 삭제합니다. 이로 인해 기존 스냅샷이 무효화되므로 **\@force_invalidate_snapshot** 매개 변수 값이 **1** 로 지정됩니다.  
   
 ```  
 DECLARE @publication AS sysname;  
@@ -73,7 +73,7 @@ EXEC sp_droparticle
 GO  
 ```  
   
- 다음 예에서는 병합 게시에서 두 개의 아티클을 삭제합니다. 이로 인해 기존 스냅샷이 무효화되므로 **\@force_invalidate_snapshot** 매개 변수 값이 **1**로 지정됩니다.  
+ 다음 예에서는 병합 게시에서 두 개의 아티클을 삭제합니다. 이로 인해 기존 스냅샷이 무효화되므로 **\@force_invalidate_snapshot** 매개 변수 값이 **1** 로 지정됩니다.  
   
 ```  
 DECLARE @publication AS sysname;  
@@ -109,7 +109,7 @@ GO
   
 4.  <xref:Microsoft.SqlServer.Replication.ReplicationObject.ConnectionContext%2A> 속성에 대해 1단계에서 만든 연결을 설정합니다.  
   
-5.  <xref:Microsoft.SqlServer.Replication.ReplicationObject.IsExistingObject%2A> 속성을 확인하여 아티클이 존재하는지 확인합니다. 이 속성의 값이 **false**이면 3단계에서 아티클 속성이 올바르게 정의되지 않았거나 아티클이 없는 것입니다.  
+5.  <xref:Microsoft.SqlServer.Replication.ReplicationObject.IsExistingObject%2A> 속성을 확인하여 아티클이 존재하는지 확인합니다. 이 속성의 값이 **false** 이면 3단계에서 아티클 속성이 올바르게 정의되지 않았거나 아티클이 없는 것입니다.  
   
 6.  <xref:Microsoft.SqlServer.Replication.Article.Remove%2A> 메서드를 호출합니다.  
   
@@ -125,7 +125,7 @@ GO
   
 4.  <xref:Microsoft.SqlServer.Replication.ReplicationObject.ConnectionContext%2A> 속성에 대해 1단계에서 만든 연결을 설정합니다.  
   
-5.  <xref:Microsoft.SqlServer.Replication.ReplicationObject.IsExistingObject%2A> 속성을 확인하여 아티클이 존재하는지 확인합니다. 이 속성의 값이 **false**이면 3단계에서 아티클 속성이 올바르게 정의되지 않았거나 아티클이 없는 것입니다.  
+5.  <xref:Microsoft.SqlServer.Replication.ReplicationObject.IsExistingObject%2A> 속성을 확인하여 아티클이 존재하는지 확인합니다. 이 속성의 값이 **false** 이면 3단계에서 아티클 속성이 올바르게 정의되지 않았거나 아티클이 없는 것입니다.  
   
 6.  <xref:Microsoft.SqlServer.Replication.Article.Remove%2A> 메서드를 호출합니다.  
   

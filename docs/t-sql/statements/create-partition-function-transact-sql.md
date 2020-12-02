@@ -29,11 +29,11 @@ ms.assetid: 9dfe8b76-721e-42fd-81ae-14e22258c4f2
 author: markingmyname
 ms.author: maghan
 ms.openlocfilehash: 571da08ba525e2d6dcf143fc6e207266cd1a816d
-ms.sourcegitcommit: dd36d1cbe32cd5a65c6638e8f252b0bd8145e165
+ms.sourcegitcommit: 192f6a99e19e66f0f817fdb1977f564b2aaa133b
 ms.translationtype: HT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 09/08/2020
-ms.locfileid: "89547789"
+ms.lasthandoff: 11/25/2020
+ms.locfileid: "96127996"
 ---
 # <a name="create-partition-function-transact-sql"></a>CREATE PARTITION FUNCTION(Transact-SQL)
 [!INCLUDE [SQL Server SQL Database](../../includes/applies-to-version/sql-asdb.md)]
@@ -63,17 +63,17 @@ FOR VALUES ( [ boundary_value [ ,...n ] ] )
  분할 열이라고 하는 실제 열은 CREATE TABLE 또는 CREATE INDEX 문에 지정됩니다.  
   
  *boundary_value*  
- *partition_function_name*을 사용하는 분할된 테이블 또는 인덱스의 각 파티션에 대한 경계값을 지정합니다. *boundary_value*가 비어 있는 경우 파티션 함수는 *partition_function_name*을 사용하여 전체 테이블이나 인덱스를 단일 파티션에 매핑합니다. CREATE TABLE 또는 CREATE INDEX 문에 지정된 하나의 분할 열만 사용할 수 있습니다.  
+ *partition_function_name* 을 사용하는 분할된 테이블 또는 인덱스의 각 파티션에 대한 경계값을 지정합니다. *boundary_value* 가 비어 있는 경우 파티션 함수는 *partition_function_name* 을 사용하여 전체 테이블이나 인덱스를 단일 파티션에 매핑합니다. CREATE TABLE 또는 CREATE INDEX 문에 지정된 하나의 분할 열만 사용할 수 있습니다.  
   
- *boundary_value*는 변수를 참조할 수 있는 상수 식입니다. 여기에는 사용자 정의 형식 변수나 함수 및 사용자 정의 함수가 포함됩니다. [!INCLUDE[tsql](../../includes/tsql-md.md)] 식은 참조할 수 없습니다. *boundary_value*는 *input_parameter_type*에 제공된 데이터 형식과 일치하거나 해당 데이터 형식으로 암시적으로 변환할 수 있어야 하며 암시적인 변환 중에 값의 크기 및 소수 자릿수가 해당 *input_parameter_type*과 일치하지 않는 방식으로 잘려서는 안 됩니다.  
+ *boundary_value* 는 변수를 참조할 수 있는 상수 식입니다. 여기에는 사용자 정의 형식 변수나 함수 및 사용자 정의 함수가 포함됩니다. [!INCLUDE[tsql](../../includes/tsql-md.md)] 식은 참조할 수 없습니다. *boundary_value* 는 *input_parameter_type* 에 제공된 데이터 형식과 일치하거나 해당 데이터 형식으로 암시적으로 변환할 수 있어야 하며 암시적인 변환 중에 값의 크기 및 소수 자릿수가 해당 *input_parameter_type* 과 일치하지 않는 방식으로 잘려서는 안 됩니다.  
 
 > [!NOTE]  
->  *boundary_value*가 **datetime** 또는 **smalldatetime** 리터럴로 구성된 경우 이러한 리터럴은 us_english가 세션 언어인 것으로 가정하여 처리됩니다. 이 기능은 더 이상 지원되지 않습니다. 파티션 함수 정의가 모든 세션 언어에 대해 예상대로 작동하도록 하려면 yyyymmdd 형식과 같이 모든 언어 설정에 대해 동일한 방식으로 해석되는 상수를 사용하거나 리터럴을 특정 스타일로 명시적으로 변환하는 것이 좋습니다. 서버의 언어 세션을 결정하려면 `SELECT @@LANGUAGE`를 실행합니다.
+>  *boundary_value* 가 **datetime** 또는 **smalldatetime** 리터럴로 구성된 경우 이러한 리터럴은 us_english가 세션 언어인 것으로 가정하여 처리됩니다. 이 기능은 더 이상 지원되지 않습니다. 파티션 함수 정의가 모든 세션 언어에 대해 예상대로 작동하도록 하려면 yyyymmdd 형식과 같이 모든 언어 설정에 대해 동일한 방식으로 해석되는 상수를 사용하거나 리터럴을 특정 스타일로 명시적으로 변환하는 것이 좋습니다. 서버의 언어 세션을 결정하려면 `SELECT @@LANGUAGE`를 실행합니다.
 >
 > 자세한 내용은 [날짜 값으로 리터럴 날짜 문자열의 비결정적 변환](../data-types/nondeterministic-convert-date-literals.md)을 참조하세요.
   
  *...n*  
- *boundary_value*에 제공된 값 개수가 14,999개를 초과하지 않도록 지정합니다. 생성되는 파티션 수는 *n* + 1개입니다. 값은 순서대로 나열되지 않아도 됩니다. 값이 순서대로 나열되지 않은 경우 [!INCLUDE[ssDE](../../includes/ssde-md.md)]에서 값을 정렬하여 함수를 만들고 값이 순서대로 제공되지 않았다는 경고를 반환합니다. *n*에 중복 값이 있는 경우 데이터베이스 엔진에서 오류를 반환합니다.  
+ *boundary_value* 에 제공된 값 개수가 14,999개를 초과하지 않도록 지정합니다. 생성되는 파티션 수는 *n* + 1개입니다. 값은 순서대로 나열되지 않아도 됩니다. 값이 순서대로 나열되지 않은 경우 [!INCLUDE[ssDE](../../includes/ssde-md.md)]에서 값을 정렬하여 함수를 만들고 값이 순서대로 제공되지 않았다는 경고를 반환합니다. *n* 에 중복 값이 있는 경우 데이터베이스 엔진에서 오류를 반환합니다.  
   
  **LEFT** | RIGHT  
  [!INCLUDE[ssDE](../../includes/ssde-md.md)]에서 간격 값을 왼쪽에서 오른쪽으로 오름차순으로 정렬할 때 *boundary_value* [ **,** _...n_ ]이 각 경계 값 간격의 왼쪽과 오른쪽 중 어느 쪽에 속하는지 지정합니다. 지정하지 않은 경우 LEFT가 기본값입니다.  
@@ -102,7 +102,7 @@ CREATE PARTITION FUNCTION myRangePF1 (int)
 AS RANGE LEFT FOR VALUES (1, 100, 1000);  
 ```  
   
- 다음 표에서는 분할 열 **col1**에 대해 이 파티션 함수를 사용하는 테이블이 분할되는 방식을 보여 줍니다.  
+ 다음 표에서는 분할 열 **col1** 에 대해 이 파티션 함수를 사용하는 테이블이 분할되는 방식을 보여 줍니다.  
   
 |파티션|1|2|3|4|  
 |---------------|-------|-------|-------|-------|  
@@ -116,7 +116,7 @@ CREATE PARTITION FUNCTION myRangePF2 (int)
 AS RANGE RIGHT FOR VALUES (1, 100, 1000);  
 ```  
   
- 다음 표에서는 분할 열 **col1**에 대해 이 파티션 함수를 사용하는 테이블이 분할되는 방식을 보여 줍니다.  
+ 다음 표에서는 분할 열 **col1** 에 대해 이 파티션 함수를 사용하는 테이블이 분할되는 방식을 보여 줍니다.  
   
 |파티션|1|2|3|4|  
 |---------------|-------|-------|-------|-------|  
@@ -132,7 +132,7 @@ AS RANGE RIGHT FOR VALUES ('20030201', '20030301', '20030401',
                '20030901', '20031001', '20031101', '20031201');  
 ```  
   
- 다음 표에서는 분할 열 **datecol**에 대해 이 파티션 함수를 사용하는 테이블 또는 인덱스가 분할되는 방식을 보여줍니다.  
+ 다음 표에서는 분할 열 **datecol** 에 대해 이 파티션 함수를 사용하는 테이블 또는 인덱스가 분할되는 방식을 보여줍니다.  
   
 |파티션|1|2|...|11|12|  
 |---------------|-------|-------|---------|--------|--------|  
@@ -146,7 +146,7 @@ CREATE PARTITION FUNCTION myRangePF3 (char(20))
 AS RANGE RIGHT FOR VALUES ('EX', 'RXE', 'XR');  
 ```  
   
- 다음 표에서는 분할 열 **col1**에 대해 이 파티션 함수를 사용하는 테이블이 분할되는 방식을 보여 줍니다.  
+ 다음 표에서는 분할 열 **col1** 에 대해 이 파티션 함수를 사용하는 테이블이 분할되는 방식을 보여 줍니다.  
   
 |파티션|1|2|3|4|  
 |---------------|-------|-------|-------|-------|  

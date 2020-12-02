@@ -17,11 +17,11 @@ ms.assetid: bb3c085b-1458-49fa-8348-6a76b6e97ea6
 author: chugugrace
 ms.author: chugu
 ms.openlocfilehash: 72529ac177ddd069ca7e8412da375db45fe958e2
-ms.sourcegitcommit: cfa04a73b26312bf18d8f6296891679166e2754d
+ms.sourcegitcommit: 192f6a99e19e66f0f817fdb1977f564b2aaa133b
 ms.translationtype: HT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 10/19/2020
-ms.locfileid: "92194913"
+ms.lasthandoff: 11/25/2020
+ms.locfileid: "96127381"
 ---
 # <a name="create-packages-in-sql-server-data-tools"></a>SQL Server Data Tools에서 패키지 만들기
 
@@ -59,7 +59,7 @@ SSDT(SQL Server Data Tools)를 설치하려면 [SSDT(SQL Server Data Tools) 다�
   
 1.  [!INCLUDE[ssBIDevStudioFull](../includes/ssbidevstudiofull-md.md)]에서 패키지를 만들려는 [!INCLUDE[ssISnoversion](../includes/ssisnoversion-md.md)] 프로젝트를 엽니다.  
   
-2.  솔루션 탐색기에서 **SSIS 패키지** 폴더를 마우스 오른쪽 단추로 클릭한 후 **새 SSIS 패키지**를 클릭합니다.  
+2.  솔루션 탐색기에서 **SSIS 패키지** 폴더를 마우스 오른쪽 단추로 클릭한 후 **새 SSIS 패키지** 를 클릭합니다.  
   
 3.  선택적으로 제어 흐름, 데이터 흐름 태스크 및 이벤트 처리기를 패키지에 추가합니다. 자세한 내용은 [제어 흐름](../integration-services/control-flow/control-flow.md), [데이터 흐름](../integration-services/data-flow/data-flow.md) 및 [Integration Services&#40;SSIS&#41; 이벤트 처리기](../integration-services/integration-services-ssis-event-handlers.md)를 참조하세요.  
   
@@ -72,7 +72,7 @@ SSDT(SQL Server Data Tools)를 설치하려면 [SSDT(SQL Server Data Tools) 다�
   
 1.  솔루션 탐색기에서 Integration Services 프로젝트를 마우스 오른쪽 단추로 클릭하고 **속성** 을 선택하여 프로젝트에 대한 속성 페이지를 엽니다.  
   
-2.  **구성 속성** 의 **일반**탭에서 **TargetServerVersion** 속성을 선택하고 SQL Server 2016, SQL Server 2014 또는 SQL Server 2012를 선택합니다.  
+2.  **구성 속성** 의 **일반** 탭에서 **TargetServerVersion** 속성을 선택하고 SQL Server 2016, SQL Server 2014 또는 SQL Server 2012를 선택합니다.  
   
      ![프로젝트 속성 대화 상자의 TargetServerVersion 속성](../integration-services/media/targetserverversion2.png "프로젝트 속성 대화 상자의 TargetServerVersion 속성")  
   

@@ -24,11 +24,11 @@ author: MikeRayMSFT
 ms.author: mikeray
 monikerRange: '>=aps-pdw-2016||=azuresqldb-current||=azure-sqldw-latest||>=sql-server-2016||=sqlallproducts-allversions||>=sql-server-linux-2017||=azuresqldb-mi-current'
 ms.openlocfilehash: 689a494e12f9b31f88d3ea060fe2c1b4a5fb2a3b
-ms.sourcegitcommit: e700497f962e4c2274df16d9e651059b42ff1a10
+ms.sourcegitcommit: 192f6a99e19e66f0f817fdb1977f564b2aaa133b
 ms.translationtype: HT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 08/17/2020
-ms.locfileid: "88417719"
+ms.lasthandoff: 11/25/2020
+ms.locfileid: "96126304"
 ---
 # <a name="datetime-transact-sql"></a>datetime(Transact-SQL)
 [!INCLUDE [sql-asdb-asdbmi-asa-pdw](../../includes/applies-to-version/sql-asdb-asdbmi-asa-pdw.md)]
@@ -36,7 +36,7 @@ ms.locfileid: "88417719"
 소수 자릿수 초가 있는 24시간제 기준의 시간과 결합된 날짜를 정의합니다.
   
 > [!NOTE]  
->  새 작업에 대해 **time**, **date**, **datetime2** 및 **datetimeoffset** 데이터 형식을 사용합니다. 이러한 데이터 형식은 SQL 표준에 맞는 형식으로, 이식성이 높습니다. **time**, **datetime2** 및 **datetimeoffset**은 초의 정밀도를 높여줍니다. **datetimeoffset**은 전 세계에 배포되는 애플리케이션에 대해 표준 시간대를 지원합니다.  
+>  새 작업에 대해 **time**, **date**, **datetime2** 및 **datetimeoffset** 데이터 형식을 사용합니다. 이러한 데이터 형식은 SQL 표준에 맞는 형식으로, 이식성이 높습니다. **time**, **datetime2** 및 **datetimeoffset** 은 초의 정밀도를 높여줍니다. **datetimeoffset** 은 전 세계에 배포되는 애플리케이션에 대해 표준 시간대를 지원합니다.  
   
 ## <a name="datetime-description"></a>datetime 설명  
   
@@ -59,15 +59,15 @@ ms.locfileid: "88417719"
 |일광 절약 시간제 인식|예|  
   
 ## <a name="supported-string-literal-formats-for-datetime"></a>datetime에 대해 지원되는 문자열 리터럴 형식  
-다음 표에는 **datetime**에 대해 지원되는 문자열 리터럴 형식이 나와 있습니다. ODBC를 제외하고 **datetime** 문자열 리터럴은 작은따옴표(')로 묶입니다(예: 'string_literaL'). **us_english** 환경이 아닌 경우 문자열 리터럴은 N'string_literaL' 형식이어야 합니다.
+다음 표에는 **datetime** 에 대해 지원되는 문자열 리터럴 형식이 나와 있습니다. ODBC를 제외하고 **datetime** 문자열 리터럴은 작은따옴표(')로 묶입니다(예: 'string_literaL'). **us_english** 환경이 아닌 경우 문자열 리터럴은 N'string_literaL' 형식이어야 합니다.
   
 |숫자|Description|  
 |---|---|
-|날짜 형식:<br /><br /> [0]4/15/[19]96 -- (mdy)<br /><br /> [0]4-15-[19]96 -- (mdy)<br /><br /> [0]4.15.[19]96 -- (mdy)<br /><br /> [0]4/[19]96/15 -- (myd)<br /><br /> 15/[0]4/[19]96 -- (dmy)<br /><br /> 15/[19]96/[0]4 -- (dym)<br /><br /> [19]96/15/[0]4 -- (ydm)<br /><br /> [19]96/[0]4/15 -- (ymd)<br /><br /> 시간 형식:<br /><br /> 14:30<br /><br /> 14:30[:20:999]<br /><br /> 14:30[:20.9]<br /><br /> 4am<br /><br /> 4 PM|지정된 숫자 월을 사용하여 날짜 데이터를 지정할 수 있습니다. 예를 들어 5/20/97은 1997년 5월 20일을 나타냅니다. 숫자 날짜 형식을 사용할 경우에는 문자열에 슬래시 기호(/), 하이픈(-) 또는 마침표(.)를 구분 기호로 사용하여 년, 월, 일을 지정합니다. 이 문자열은 다음과 같은 형식이어야 합니다.<br /><br /> *number separator number separator number [time] [time]*<br /><br /> <br /><br /> 언어를 **us_english**로 설정하면 기본 날짜 순서는 mdy(월, 일, 년)입니다. [SET DATEFORMAT](../../t-sql/statements/set-dateformat-transact-sql.md) 문을 사용하여 날짜 순서를 변경할 수 있습니다.<br /><br /> SET DATEFORMAT 설정에 따라 날짜 값의 해석 방법이 결정됩니다. 순서가 설정과 다르면 값이 날짜로 해석되지 않습니다. 순서가 잘못된 날짜는 범위를 벗어나는 것으로 또는 잘못된 값을 포함하는 것으로 잘못 해설될 수 있습니다. 예를 들어 12/10/08은 DATEFORMAT 설정에 따라 6가지 날짜 중 하나로 해석될 수 있습니다. 네 부분으로 된 연도는 년으로 해석됩니다.|  
+|날짜 형식:<br /><br /> [0]4/15/[19]96 -- (mdy)<br /><br /> [0]4-15-[19]96 -- (mdy)<br /><br /> [0]4.15.[19]96 -- (mdy)<br /><br /> [0]4/[19]96/15 -- (myd)<br /><br /> 15/[0]4/[19]96 -- (dmy)<br /><br /> 15/[19]96/[0]4 -- (dym)<br /><br /> [19]96/15/[0]4 -- (ydm)<br /><br /> [19]96/[0]4/15 -- (ymd)<br /><br /> 시간 형식:<br /><br /> 14:30<br /><br /> 14:30[:20:999]<br /><br /> 14:30[:20.9]<br /><br /> 4am<br /><br /> 4 PM|지정된 숫자 월을 사용하여 날짜 데이터를 지정할 수 있습니다. 예를 들어 5/20/97은 1997년 5월 20일을 나타냅니다. 숫자 날짜 형식을 사용할 경우에는 문자열에 슬래시 기호(/), 하이픈(-) 또는 마침표(.)를 구분 기호로 사용하여 년, 월, 일을 지정합니다. 이 문자열은 다음과 같은 형식이어야 합니다.<br /><br /> *number separator number separator number [time] [time]*<br /><br /> <br /><br /> 언어를 **us_english** 로 설정하면 기본 날짜 순서는 mdy(월, 일, 년)입니다. [SET DATEFORMAT](../../t-sql/statements/set-dateformat-transact-sql.md) 문을 사용하여 날짜 순서를 변경할 수 있습니다.<br /><br /> SET DATEFORMAT 설정에 따라 날짜 값의 해석 방법이 결정됩니다. 순서가 설정과 다르면 값이 날짜로 해석되지 않습니다. 순서가 잘못된 날짜는 범위를 벗어나는 것으로 또는 잘못된 값을 포함하는 것으로 잘못 해설될 수 있습니다. 예를 들어 12/10/08은 DATEFORMAT 설정에 따라 6가지 날짜 중 하나로 해석될 수 있습니다. 네 부분으로 된 연도는 년으로 해석됩니다.|  
   
 |알파벳|Description|  
 |---|---|
-|Apr[il] [15][,] 1996<br /><br /> Apr[il] 15[,] [19]96<br /><br /> Apr[il] 1996 [15]<br /><br /> [15] Apr[il][,] 1996<br /><br /> 15 Apr[il][,][19]96<br /><br /> 15 [19]96 apr[il]<br /><br /> [15] 1996 apr[il]<br /><br /> 1996 APR[IL] [15]<br /><br /> 1996 [15] APR[IL]|전체 월 이름으로 지정된 월을 사용하여 날짜 데이터를 지정할 수 있습니다. 예를 들어 April 또는 현재 언어에서 정해진 월 약어(Apr)를 사용할 수 있습니다. 쉼표는 선택 사항이며 대문자는 무시됩니다.<br /><br /> 다음은 알파벳 날짜 형식 사용에 대한 몇 가지 지침입니다.<br /><br /> 1) 날짜 및 시간 데이터는 작은따옴표(')로 묶습니다. 영어 이외의 다른 언어에서는 N'을 사용합니다.<br /><br /> 2) 대괄호로 묶인 문자는 선택 사항입니다.<br /><br /> 3) 연도의 마지막 두 자리만 지정하는 경우 이 값이 [두 자리 연도 구분 서버 구성 옵션 구성](../../database-engine/configure-windows/configure-the-two-digit-year-cutoff-server-configuration-option.md) 구성 옵션 값의 마지막 두 자리보다 작으면 구분 연도와 같은 세기로 간주됩니다. 이 옵션 값보다 크거나 같은 값은 구분 연도 전의 세기로 간주됩니다. 예를 들어 **two digit year cutoff**가 2050(기본값)이면 25는 2025로 해석되고 50은 1950으로 해석됩니다. 모호성을 피하려면 4자리 연도를 사용하세요.<br /><br /> 4) 일이 생략된 경우 해당 월의 첫째 날이 사용됩니다.<br /><br /> <br /><br /> 월을 알파벳 형식으로 지정하면 SET DATEFORMAT 세션 설정이 적용되지 않습니다.|  
+|Apr[il] [15][,] 1996<br /><br /> Apr[il] 15[,] [19]96<br /><br /> Apr[il] 1996 [15]<br /><br /> [15] Apr[il][,] 1996<br /><br /> 15 Apr[il][,][19]96<br /><br /> 15 [19]96 apr[il]<br /><br /> [15] 1996 apr[il]<br /><br /> 1996 APR[IL] [15]<br /><br /> 1996 [15] APR[IL]|전체 월 이름으로 지정된 월을 사용하여 날짜 데이터를 지정할 수 있습니다. 예를 들어 April 또는 현재 언어에서 정해진 월 약어(Apr)를 사용할 수 있습니다. 쉼표는 선택 사항이며 대문자는 무시됩니다.<br /><br /> 다음은 알파벳 날짜 형식 사용에 대한 몇 가지 지침입니다.<br /><br /> 1) 날짜 및 시간 데이터는 작은따옴표(')로 묶습니다. 영어 이외의 다른 언어에서는 N'을 사용합니다.<br /><br /> 2) 대괄호로 묶인 문자는 선택 사항입니다.<br /><br /> 3) 연도의 마지막 두 자리만 지정하는 경우 이 값이 [두 자리 연도 구분 서버 구성 옵션 구성](../../database-engine/configure-windows/configure-the-two-digit-year-cutoff-server-configuration-option.md) 구성 옵션 값의 마지막 두 자리보다 작으면 구분 연도와 같은 세기로 간주됩니다. 이 옵션 값보다 크거나 같은 값은 구분 연도 전의 세기로 간주됩니다. 예를 들어 **two digit year cutoff** 가 2050(기본값)이면 25는 2025로 해석되고 50은 1950으로 해석됩니다. 모호성을 피하려면 4자리 연도를 사용하세요.<br /><br /> 4) 일이 생략된 경우 해당 월의 첫째 날이 사용됩니다.<br /><br /> <br /><br /> 월을 알파벳 형식으로 지정하면 SET DATEFORMAT 세션 설정이 적용되지 않습니다.|  
   
 |ISO 8601|Description|  
 |---|---|
@@ -79,7 +79,7 @@ ms.locfileid: "88417719"
   
 |ODBC|Description|  
 |---|---|
-|{ ts '1998-05-02 01:23:56.123' }<br /><br /> { d '1990-10-02' }<br /><br /> { t '13:33:41' }|ODBC API는 이스케이프 시퀀스를 정의하여 ODBC가 타임스탬프 데이터를 호출하는 날짜 및 시간 값을 나타냅니다. 이 ODBC 타임스탬프 형식은 [!INCLUDE[msCoName](../../includes/msconame-md.md)] OLE DB provider for [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]에서 지원하는 OLE DB 언어 정의(DBGUID-SQL)에서도 지원됩니다. ADO, OLE DB 및 ODBC 기반 API를 사용하는 애플리케이션에서는 이 ODBC 타임스탬프 형식을 사용하여 날짜 및 시간을 나타낼 수 있습니다.<br /><br /> ODBC 타임스탬프 이스케이프 시퀀스의 형식은 다음과 같습니다. { *literal_type* '*constant_value*' }.<br /><br /> <br /><br /> - *literal_type*은 이스케이프 시퀀스의 유형을 지정합니다. 타임스탬프에는 다음과 같은 3개의 *literal_type* 지정자가 있습니다.<br />1) d = 날짜만<br />2) t = 시간만<br />3) ts = 타임스탬프(시간+날짜)<br /><br /> <br /><br /> - '*constant_value*'는 이스케이프 시퀀스의 값입니다. *constant_value*는 각 *literal_type*에 대해 이러한 형식을 따라야 합니다.<br />d : yyyy-mm-dd<br />t : hh:mm:ss[.fff]<br />ts : yyyy-mm-dd hh:mm:ss[.fff]|  
+|{ ts '1998-05-02 01:23:56.123' }<br /><br /> { d '1990-10-02' }<br /><br /> { t '13:33:41' }|ODBC API는 이스케이프 시퀀스를 정의하여 ODBC가 타임스탬프 데이터를 호출하는 날짜 및 시간 값을 나타냅니다. 이 ODBC 타임스탬프 형식은 [!INCLUDE[msCoName](../../includes/msconame-md.md)] OLE DB provider for [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]에서 지원하는 OLE DB 언어 정의(DBGUID-SQL)에서도 지원됩니다. ADO, OLE DB 및 ODBC 기반 API를 사용하는 애플리케이션에서는 이 ODBC 타임스탬프 형식을 사용하여 날짜 및 시간을 나타낼 수 있습니다.<br /><br /> ODBC 타임스탬프 이스케이프 시퀀스의 형식은 다음과 같습니다. { *literal_type* '*constant_value*' }.<br /><br /> <br /><br /> - *literal_type* 은 이스케이프 시퀀스의 유형을 지정합니다. 타임스탬프에는 다음과 같은 3개의 *literal_type* 지정자가 있습니다.<br />1) d = 날짜만<br />2) t = 시간만<br />3) ts = 타임스탬프(시간+날짜)<br /><br /> <br /><br /> - '*constant_value*'는 이스케이프 시퀀스의 값입니다. *constant_value* 는 각 *literal_type* 에 대해 이러한 형식을 따라야 합니다.<br />d : yyyy-mm-dd<br />t : hh:mm:ss[.fff]<br />ts : yyyy-mm-dd hh:mm:ss[.fff]|  
   
 ## <a name="rounding-of-datetime-fractional-second-precision"></a>datetime 초 소수 부분 자릿수 반올림  
 다음 표에서와 같이 **datetime** 값은 .000, .003 또는 .007초 단위로 반올림됩니다.
@@ -92,7 +92,7 @@ ms.locfileid: "88417719"
 |01/01/98 23:59:59.990<br /><br /> 01/01/98 23:59:59.991|1998-01-01 23:59:59.990|  
   
 ## <a name="ansi-and-iso-8601-compliance"></a>ANSI 및 ISO 8601 호환성  
-**datetime**은 ANSI 또는 ISO 8601 규격이 아닙니다.
+**datetime** 은 ANSI 또는 ISO 8601 규격이 아닙니다.
   
 ##  <a name="converting-date-and-time-data"></a><a name="_datetime"></a> Date 및 Time 데이터 변환  
 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]에서 날짜 및 시간 데이터 형식을 변환할 때 날짜나 시간으로 인식되지 않는 값은 모두 무시됩니다. 날짜 및 시간 데이터에 CAST 및 CONVERT 함수를 사용하는 방법은 [CAST 및 CONVERT&#40;Transact-SQL&#41;](../../t-sql/functions/cast-and-convert-transact-sql.md)를 참조하세요.
@@ -100,7 +100,7 @@ ms.locfileid: "88417719"
 ### <a name="converting-other-date-and-time-types-to-the-datetime-data-type"></a>다른 날짜 및 시간 형식을 datetime 데이터 형식으로 변환 
 이 섹션에서는 다른 날짜/시간 데이터 형식이 **datetime** 데이터 형식으로 변환하면 어떤 일이 발생하는지를 설명합니다.  
   
-**date**에서 변환되는 경우 년, 월, 일이 복사됩니다. 시간 구성 요소는 00:00:00.000으로 설정됩니다. 다음 코드에서는 `date` 값을 `datetime` 값으로 변환한 결과를 보여 줍니다.  
+**date** 에서 변환되는 경우 년, 월, 일이 복사됩니다. 시간 구성 요소는 00:00:00.000으로 설정됩니다. 다음 코드에서는 `date` 값을 `datetime` 값으로 변환한 결과를 보여 줍니다.  
   
 ```sql
 DECLARE @date date = '12-21-16';  
@@ -128,7 +128,7 @@ SELECT @datetime AS '@datetime', @time AS '@time';
 --1900-01-01 12:10:05.123 12:10:05.1237  
 ```  
   
-**smalldatetime**에서 변환되는 경우 시간과 분이 복사됩니다. 초 및 소수 자릿수 초는 0으로 설정됩니다. 다음 코드에서는 `smalldatetime` 값을 `datetime` 값으로 변환한 결과를 보여 줍니다.  
+**smalldatetime** 에서 변환되는 경우 시간과 분이 복사됩니다. 초 및 소수 자릿수 초는 0으로 설정됩니다. 다음 코드에서는 `smalldatetime` 값을 `datetime` 값으로 변환한 결과를 보여 줍니다.  
   
 ```sql
 DECLARE @smalldatetime smalldatetime = '12-01-16 12:32';  

@@ -12,11 +12,11 @@ ms.assetid: 9cd4a848-409f-4681-a390-1c49a2aadbd7
 author: chugugrace
 ms.author: chugu
 ms.openlocfilehash: 38c7183853dcac7043672d5e4a622362af08c10b
-ms.sourcegitcommit: e700497f962e4c2274df16d9e651059b42ff1a10
+ms.sourcegitcommit: 192f6a99e19e66f0f817fdb1977f564b2aaa133b
 ms.translationtype: HT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 08/17/2020
-ms.locfileid: "88457375"
+ms.lasthandoff: 11/25/2020
+ms.locfileid: "96127278"
 ---
 # <a name="create-infopackage"></a>InfoPackage 만들기
 
@@ -25,7 +25,7 @@ ms.locfileid: "88457375"
 
   **InfoPackage 만들기** 대화 상자를 사용하여 SAP Netweaver BW 시스템에서 새 InfoPackage를 만들 수 있습니다.  
   
- **InfoPackage 만들기** 대화 상자는 **SAP BW 대상 편집기** 의 **연결 관리자**페이지에서 열 수 있습니다. SAP BW 대상에 대한 자세한 내용은 [SAP BW Destination](../../integration-services/data-flow/sap-bw-destination.md)을 참조하세요.  
+ **InfoPackage 만들기** 대화 상자는 **SAP BW 대상 편집기** 의 **연결 관리자** 페이지에서 열 수 있습니다. SAP BW 대상에 대한 자세한 내용은 [SAP BW Destination](../../integration-services/data-flow/sap-bw-destination.md)을 참조하세요.  
   
 > [!IMPORTANT]  
 >  SAP BW용 Microsoft Connector 1.1 설명서는 SAP Netweaver BW 환경에 익숙한 것으로 가정합니다. SAP Netweaver BW 또는 SAP Netweaver BW 개체 및 프로세스 구성 방법에 대한 자세한 내용은 SAP 설명서를 참조하십시오.  
@@ -36,9 +36,9 @@ ms.locfileid: "88457375"
   
 2.  **데이터 흐름** 탭에서 SAP BW 대상을 두 번 클릭합니다.  
   
-3.  **SAP BW 대상 편집기**에서 **연결 관리자** 를 클릭하여 편집기의 **연결 관리자** 페이지를 엽니다.  
+3.  **SAP BW 대상 편집기** 에서 **연결 관리자** 를 클릭하여 편집기의 **연결 관리자** 페이지를 엽니다.  
   
-4.  **연결 관리자** 페이지의 **SAP BW 개체 만들기** 그룹 상자에서 **InfoPackage**를 선택한 다음 **만들기**를 클릭합니다.  
+4.  **연결 관리자** 페이지의 **SAP BW 개체 만들기** 그룹 상자에서 **InfoPackage** 를 선택한 다음 **만들기** 를 클릭합니다.  
   
 ## <a name="options"></a>옵션  
  **InfoSource**  

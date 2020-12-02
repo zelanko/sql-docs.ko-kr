@@ -15,11 +15,11 @@ helpviewer_keywords:
 author: MashaMSFT
 ms.author: mathoma
 ms.openlocfilehash: 8e70b32c2cee28acf4b886f0bf738f4ed8857619
-ms.sourcegitcommit: e700497f962e4c2274df16d9e651059b42ff1a10
+ms.sourcegitcommit: 192f6a99e19e66f0f817fdb1977f564b2aaa133b
 ms.translationtype: HT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 08/17/2020
-ms.locfileid: "88448878"
+ms.lasthandoff: 11/25/2020
+ms.locfileid: "96128800"
 ---
 # <a name="database-mail-mail-queued-not-delivered"></a>데이터베이스 메일: 메일이 지연되고 배달되지 않음 
 [!INCLUDE [SQL Server SQL MI](../../includes/applies-to-version/sql-asdbmi.md)]
@@ -47,7 +47,7 @@ sysmail_help_queue_sp @queue_type = 'Mail' ;
 
 열에 대한 자세한 설명은 [sysmail_help_queue_sp(Transact-SQL)](../system-stored-procedures/sysmail-help-queue-sp-transact-sql.md#result-set)를 참조하세요.
 
-**sysmail_event_log** 뷰에서 작업을 확인합니다. 뷰에는 데이터베이스 메일 외부 프로그램이 시작되었음을 나타내는 항목이 있어야 합니다. **sysmail_event_log** 뷰에 항목이 없는 경우 **sysmail_event_log**에서 [메시지가 지연되고 항목이 없음](database-mail-common-errors.md#database-mail-queued-no-entries-in-sysmail_event_log-or-windows-application-event-log) 증상을 참조하세요. **sysmail_event_log** 뷰에 오류가 있는 경우 특정 오류의 문제를 해결하세요.
+**sysmail_event_log** 뷰에서 작업을 확인합니다. 뷰에는 데이터베이스 메일 외부 프로그램이 시작되었음을 나타내는 항목이 있어야 합니다. **sysmail_event_log** 뷰에 항목이 없는 경우 **sysmail_event_log** 에서 [메시지가 지연되고 항목이 없음](database-mail-common-errors.md#database-mail-queued-no-entries-in-sysmail_event_log-or-windows-application-event-log) 증상을 참조하세요. **sysmail_event_log** 뷰에 오류가 있는 경우 특정 오류의 문제를 해결하세요.
 
 **sysmail_event_log** 뷰에 항목이 있는 경우 **sysmail_allitems** 뷰에서 메시지의 상태를 확인합니다.
 
@@ -70,7 +70,7 @@ retrying 상태는 데이터베이스 메일이 메시지를 SMTP 서버로 배�
 
 ## <a name="message-status-failed"></a>메시지 상태 failed
 
-failed 상태는 데이터베이스 메일 외부 프로그램이 메시지를 SMTP 서버로 배달하지 못했음을 나타냅니다. 이 경우 **sysmail_event_log** 뷰에 외부 프로그램에서 받은 자세한 정보가 포함됩니다. **sysmail_faileditems**와 **sysmail_event_log**를 조인하여 자세한 오류 메시지를 검색하는 예제 쿼리는 [데이터베이스 메일을 통해 보낸 이메일 메시지의 상태 확인](check-the-status-of-e-mail-messages-sent-with-database-mail.md)을 참조하세요. 가장 일반적인 실패 원인은 잘못된 대상 주소이거나 외부 프로그램이 하나 이상의 장애 조치(Failover) 계정에 접근하지 못하게 하는 네트워크 문제입니다. SMTP 서버의 문제로 인해 서버가 메일을 거부할 수도 있습니다. 데이터베이스 메일 구성 마법사를 사용하여 **로깅 수준**을 **자세히**로 변경하고 테스트 메일을 보내 오류 지점을 조사합니다.
+failed 상태는 데이터베이스 메일 외부 프로그램이 메시지를 SMTP 서버로 배달하지 못했음을 나타냅니다. 이 경우 **sysmail_event_log** 뷰에 외부 프로그램에서 받은 자세한 정보가 포함됩니다. **sysmail_faileditems** 와 **sysmail_event_log** 를 조인하여 자세한 오류 메시지를 검색하는 예제 쿼리는 [데이터베이스 메일을 통해 보낸 이메일 메시지의 상태 확인](check-the-status-of-e-mail-messages-sent-with-database-mail.md)을 참조하세요. 가장 일반적인 실패 원인은 잘못된 대상 주소이거나 외부 프로그램이 하나 이상의 장애 조치(Failover) 계정에 접근하지 못하게 하는 네트워크 문제입니다. SMTP 서버의 문제로 인해 서버가 메일을 거부할 수도 있습니다. 데이터베이스 메일 구성 마법사를 사용하여 **로깅 수준** 을 **자세히** 로 변경하고 테스트 메일을 보내 오류 지점을 조사합니다.
 
 
 

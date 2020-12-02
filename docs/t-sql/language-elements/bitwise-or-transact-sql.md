@@ -25,11 +25,11 @@ author: rothja
 ms.author: jroth
 monikerRange: '>=aps-pdw-2016||=azuresqldb-current||=azure-sqldw-latest||>=sql-server-2016||=sqlallproducts-allversions||>=sql-server-linux-2017||=azuresqldb-mi-current'
 ms.openlocfilehash: d4fd5e667671d2042abe1220ff219a63bde380e0
-ms.sourcegitcommit: cfa04a73b26312bf18d8f6296891679166e2754d
+ms.sourcegitcommit: 192f6a99e19e66f0f817fdb1977f564b2aaa133b
 ms.translationtype: HT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 10/19/2020
-ms.locfileid: "92189232"
+ms.lasthandoff: 11/25/2020
+ms.locfileid: "96128316"
 ---
 # <a name="-bitwise-or-transact-sql"></a>|(비트 OR)(Transact-SQL)
 [!INCLUDE [sql-asdb-asdbmi-asa-pdw](../../includes/applies-to-version/sql-asdb-asdbmi-asa-pdw.md)]
@@ -48,18 +48,18 @@ expression | expression
 
 ## <a name="arguments"></a>인수
  *expression*  
- 정수 데이터 형식 범주나 **bit**, **binary** 또는 **varbinary** 데이터 형식의 유효한 [식](../../t-sql/language-elements/expressions-transact-sql.md)입니다. *expression*은 비트 연산의 이진 숫자로 처리됩니다.  
+ 정수 데이터 형식 범주나 **bit**, **binary** 또는 **varbinary** 데이터 형식의 유효한 [식](../../t-sql/language-elements/expressions-transact-sql.md)입니다. *expression* 은 비트 연산의 이진 숫자로 처리됩니다.  
   
 > [!NOTE]  
->  비트 연산에서는 하나의 *expression*만 **binary** 또는 **varbinary** 데이터 형식이 될 수 있습니다.  
+>  비트 연산에서는 하나의 *expression* 만 **binary** 또는 **varbinary** 데이터 형식이 될 수 있습니다.  
   
 ## <a name="result-types"></a>결과 형식  
- 입력 값이 **int**이면 **int**를, 입력 값이 **smallint**이면 **smallint**를, 입력 값이 **tinyint**이면 **tinyint**를 반환합니다.  
+ 입력 값이 **int** 이면 **int** 를, 입력 값이 **smallint** 이면 **smallint** 를, 입력 값이 **tinyint** 이면 **tinyint** 를 반환합니다.  
   
 ## <a name="remarks"></a>설명  
  비트 | 연산자는 양쪽 식에 해당 비트를 취하면서 두 식 간에 비트 논리 OR를 수행합니다. 결과의 비트는 입력 식의 두 비트(확인 중인 현재 비트) 중 하나 또는 둘 모두의 값이 1이면 1로 설정됩니다. 입력 식에 값이 1인 비트가 없으면 결과의 비트는 0으로 설정됩니다.  
   
- 왼쪽과 오른쪽 식의 정수 데이터 형식이 서로 다르면(예: 왼쪽 *식*은 **smallint**이고 오른쪽 *식*은 **int**임) 더 작은 데이터 형식의 인수가 더 큰 데이터 형식으로 변환됩니다. 이 예제에서는 **smallint**_식_이 **int**로 변환됩니다.  
+ 왼쪽과 오른쪽 식의 정수 데이터 형식이 서로 다르면(예: 왼쪽 *식* 은 **smallint** 이고 오른쪽 *식* 은 **int** 임) 더 작은 데이터 형식의 인수가 더 큰 데이터 형식으로 변환됩니다. 이 예제에서는 **smallint**_식_ 이 **int** 로 변환됩니다.  
   
 ## <a name="examples"></a>예제  
  다음 예에서는 원래 값을 표시하도록 **int** 데이터 형식의 테이블을 만들고 테이블을 하나의 행에 삽입합니다.  

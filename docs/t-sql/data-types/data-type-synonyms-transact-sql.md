@@ -18,11 +18,11 @@ ms.assetid: 390eef67-1a49-4185-a971-e07765be9717
 author: MikeRayMSFT
 ms.author: mikeray
 ms.openlocfilehash: f689cdae7253c43ca39c06dc09953c4db02d0def
-ms.sourcegitcommit: e700497f962e4c2274df16d9e651059b42ff1a10
+ms.sourcegitcommit: 192f6a99e19e66f0f817fdb1977f564b2aaa133b
 ms.translationtype: HT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 08/17/2020
-ms.locfileid: "88479945"
+ms.lasthandoff: 11/25/2020
+ms.locfileid: "96126299"
 ---
 # <a name="data-type-synonyms-transact-sql"></a>데이터 형식 동의어(Transact-SQL)
 [!INCLUDE [SQL Server](../../includes/applies-to-version/sqlserver.md)]
@@ -49,7 +49,7 @@ ms.locfileid: "88479945"
 |**national text**|**ntext**|  
 |**timestamp**|rowversion|  
   
-데이터 형식 동의어는 DDL(데이터 정의 언어) 문에서 해당 기본 데이터 형식 이름 대신 사용할 수 있습니다. 해당 문에는 CREATE TABLE, CREATE PROCEDURE 및 DECLARE *\@변수*가 포함됩니다. 그러나 개체가 만들어진 후에는 동의어가 표시되지 않습니다. 개체가 만들어질 때 동의어에 연결된 기본 데이터 형식이 개체에 할당되기 때문입니다. 개체를 만든 문에 동의어가 지정되었다는 기록은 남지 않습니다.
+데이터 형식 동의어는 DDL(데이터 정의 언어) 문에서 해당 기본 데이터 형식 이름 대신 사용할 수 있습니다. 해당 문에는 CREATE TABLE, CREATE PROCEDURE 및 DECLARE *\@변수* 가 포함됩니다. 그러나 개체가 만들어진 후에는 동의어가 표시되지 않습니다. 개체가 만들어질 때 동의어에 연결된 기본 데이터 형식이 개체에 할당되기 때문입니다. 개체를 만든 문에 동의어가 지정되었다는 기록은 남지 않습니다.
   
 결과 집합 열이나 식 등 원래 개체에서 파생된 개체에는 기본 데이터 형식이 할당됩니다. 원래 개체와 파생된 개체를 사용하는 모든 메타데이터 함수는 다음을 포함하여 동의어가 아니라 기본 데이터 형식을 보고하게 됩니다.
 

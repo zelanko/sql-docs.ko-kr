@@ -18,11 +18,11 @@ author: stevestein
 ms.author: sstein
 monikerRange: '>=aps-pdw-2016||=azuresqldb-current||=azure-sqldw-latest||>=sql-server-2016||=sqlallproducts-allversions||>=sql-server-linux-2017||=azuresqldb-mi-current'
 ms.openlocfilehash: 2ad600234ac931f408cdf60ba5b2a855823f8151
-ms.sourcegitcommit: e700497f962e4c2274df16d9e651059b42ff1a10
+ms.sourcegitcommit: 192f6a99e19e66f0f817fdb1977f564b2aaa133b
 ms.translationtype: HT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 08/17/2020
-ms.locfileid: "88446459"
+ms.lasthandoff: 11/25/2020
+ms.locfileid: "96128712"
 ---
 # <a name="delete-columns-from-a-table"></a>테이블에서 열 삭제
 
@@ -65,18 +65,18 @@ CHECK 제약 조건이 있는 열은 삭제할 수 없습니다. 먼저 제약 �
 
 ### <a name="to-delete-columns-by-using-object-explorer"></a>개체 탐색기를 사용하여 열을 삭제하려면
 
-1. **개체 탐색기**에서 [!INCLUDE[ssDE](../../includes/ssde-md.md)]인스턴스에 연결합니다.
-2. **개체 탐색기**에서 열을 삭제할 테이블을 찾고 확장하여 열 이름을 표시합니다.
-3. 삭제할 열을 마우스 오른쪽 단추로 클릭하고 **삭제**를 선택합니다.
-4. **개체 삭제** 대화 상자에서 **확인**을 클릭합니다.
+1. **개체 탐색기** 에서 [!INCLUDE[ssDE](../../includes/ssde-md.md)]인스턴스에 연결합니다.
+2. **개체 탐색기** 에서 열을 삭제할 테이블을 찾고 확장하여 열 이름을 표시합니다.
+3. 삭제할 열을 마우스 오른쪽 단추로 클릭하고 **삭제** 를 선택합니다.
+4. **개체 삭제** 대화 상자에서 **확인** 을 클릭합니다.
 
 열에 제약 조건 또는 기타 종속성이 포함된 경우 **개체 삭제** 대화 상자에 오류 메시지가 표시됩니다. 참조된 제약 조건을 삭제하여 오류를 해결합니다.
 
 ### <a name="to-delete-columns-by-using-table-designer"></a>테이블 디자이너를 사용하여 열을 삭제하려면
 
-1. **개체 탐색기**에서 열을 삭제하려는 테이블을 마우스 오른쪽 단추로 클릭하고 **디자인**을 선택합니다.
+1. **개체 탐색기** 에서 열을 삭제하려는 테이블을 마우스 오른쪽 단추로 클릭하고 **디자인** 을 선택합니다.
 2. 삭제하려는 열을 마우스 오른쪽 단추로 클릭한 다음 바로 가기 메뉴에서 **열 삭제** 를 선택합니다.
-3. 관계에 참여하는 열(FOREIGN KEY 또는 PRIMARY KEY)인 경우에는 선택한 열과 해당 관계의 삭제를 확인하는 메시지가 표시됩니다. **예**를 선택합니다.
+3. 관계에 참여하는 열(FOREIGN KEY 또는 PRIMARY KEY)인 경우에는 선택한 열과 해당 관계의 삭제를 확인하는 메시지가 표시됩니다. **예** 를 선택합니다.
 
 ## <a name="using-transact-sql"></a><a name="TsqlProcedure"></a> Transact-SQL 사용
 

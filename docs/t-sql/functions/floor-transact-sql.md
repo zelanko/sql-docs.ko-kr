@@ -22,11 +22,11 @@ author: markingmyname
 ms.author: maghan
 monikerRange: '>=aps-pdw-2016||=azure-sqldw-latest||>=sql-server-2016||=sqlallproducts-allversions||>=sql-server-linux-2017||=azuresqldb-mi-current'
 ms.openlocfilehash: d952142a989823a96a4edace573c8e097b357c6b
-ms.sourcegitcommit: 76d31f456982dabb226239b424eaa7139d8cc6c1
+ms.sourcegitcommit: 192f6a99e19e66f0f817fdb1977f564b2aaa133b
 ms.translationtype: HT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 09/15/2020
-ms.locfileid: "90570688"
+ms.lasthandoff: 11/25/2020
+ms.locfileid: "96128438"
 ---
 # <a name="floor-transact-sql"></a>FLOOR(Transact-SQL)
 [!INCLUDE [sql-asdb-asdbmi-asa-pdw](../../includes/applies-to-version/sql-asdb-asdbmi-asa-pdw.md)]
@@ -45,10 +45,10 @@ FLOOR ( numeric_expression )
 
 ## <a name="arguments"></a>인수
  *numeric_expression*  
- bit 데이터 형식을 제외한 정확한 수치 또는 근사치 데이터 형식 범주의 **expression**입니다.  
+ bit 데이터 형식을 제외한 정확한 수치 또는 근사치 데이터 형식 범주의 **expression** 입니다.  
   
 ## <a name="return-types"></a>반환 형식  
- *numeric_expression*과 같은 유형을 반환합니다.  
+ *numeric_expression* 과 같은 유형을 반환합니다.  
   
 ## <a name="examples"></a>예제  
  다음 예에서는 `FLOOR` 함수의 인수로 양수, 음수 및 통화 값을 넣고 계산합니다.  
@@ -57,7 +57,7 @@ FLOOR ( numeric_expression )
 SELECT FLOOR(123.45), FLOOR(-123.45), FLOOR($123.45);  
 ```  
   
- 결과는 *numeric_expression*과 동일한 데이터 형식으로 계산된 값의 정수 부분입니다.  
+ 결과는 *numeric_expression* 과 동일한 데이터 형식으로 계산된 값의 정수 부분입니다.  
   
 ```  
 ---------      ---------     -----------  
@@ -71,7 +71,7 @@ SELECT FLOOR(123.45), FLOOR(-123.45), FLOOR($123.45);
 SELECT FLOOR(123.45), FLOOR(-123.45), FLOOR($123.45);  
 ```  
   
- 결과는 *numeric_expression*과 동일한 데이터 형식으로 계산된 값의 정수 부분입니다.  
+ 결과는 *numeric_expression* 과 동일한 데이터 형식으로 계산된 값의 정수 부분입니다.  
   
  ```
  -----   ---------    -----------  

@@ -22,11 +22,11 @@ ms.assetid: b3a930e6-df05-4034-929c-f681f5f6fc6e
 author: markingmyname
 ms.author: maghan
 ms.openlocfilehash: 369a9e1b4914fe4c3de1d7fc86596067d67867ef
-ms.sourcegitcommit: cc23d8646041336d119b74bf239a6ac305ff3d31
+ms.sourcegitcommit: 192f6a99e19e66f0f817fdb1977f564b2aaa133b
 ms.translationtype: HT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 09/23/2020
-ms.locfileid: "91116378"
+ms.lasthandoff: 11/25/2020
+ms.locfileid: "96128479"
 ---
 # <a name="filegroupproperty-transact-sql"></a>FILEGROUPPROPERTY(Transact-SQL)
 [!INCLUDE [SQL Server](../../includes/applies-to-version/sqlserver.md)]
@@ -48,7 +48,7 @@ FILEGROUPPROPERTY ( filegroup_name, property )
 명명된 속성 정보를 반환하는 `FILEGROUPPROPERTY`의 파일 그룹 이름을 나타내는 **sysname** 형식의 식입니다.  
   
  *property*  
-파일 그룹 속성의 이름을 반환하는 **varchar(128)** 형식의 식입니다. *Property*는 다음 값 중 하나를 반환할 수 있습니다.  
+파일 그룹 속성의 이름을 반환하는 **varchar(128)** 형식의 식입니다. *Property* 는 다음 값 중 하나를 반환할 수 있습니다.  
   
 |값|Description|반환 값|  
 |-----------|-----------------|--------------------|  
@@ -60,7 +60,7 @@ FILEGROUPPROPERTY ( filegroup_name, property )
 **int**  
   
 ## <a name="remarks"></a>설명  
-*filegroup_name*은 **sys.filegroups** 카탈로그 뷰의 **name** 열과 일치합니다.  
+*filegroup_name* 은 **sys.filegroups** 카탈로그 뷰의 **name** 열과 일치합니다.  
   
 ## <a name="examples"></a>예제  
 다음 예에서는 `IsDefault` 데이터베이스의 주 파일 그룹에 대해 [!INCLUDE[ssSampleDBnormal](../../includes/sssampledbnormal-md.md)] 속성 설정을 반환합니다.  

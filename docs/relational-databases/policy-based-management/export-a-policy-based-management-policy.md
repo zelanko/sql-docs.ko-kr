@@ -14,11 +14,11 @@ ms.assetid: f0001b33-9078-4432-8460-496736fb325a
 author: VanMSFT
 ms.author: vanto
 ms.openlocfilehash: 62fff3bda286f50b2220dbb1ea4732547e98829f
-ms.sourcegitcommit: e700497f962e4c2274df16d9e651059b42ff1a10
+ms.sourcegitcommit: 192f6a99e19e66f0f817fdb1977f564b2aaa133b
 ms.translationtype: HT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 08/17/2020
-ms.locfileid: "88494023"
+ms.lasthandoff: 11/25/2020
+ms.locfileid: "96127860"
 ---
 # <a name="export-a-policy-based-management-policy"></a>정책 기반 관리 정책 내보내기
  [!INCLUDE [SQL Server](../../includes/applies-to-version/sqlserver.md)]
@@ -49,13 +49,13 @@ ms.locfileid: "88494023"
   
 2.  더하기 기호를 클릭하여 **관리** 폴더를 확장합니다.  
   
-3.  더하기 기호를 클릭하여 **정책 관리**를 확장합니다.  
+3.  더하기 기호를 클릭하여 **정책 관리** 를 확장합니다.  
   
 4.  더하기 기호를 클릭하여 **정책** 폴더를 확장합니다.  
   
-5.  내보내려는 정책을 마우스 오른쪽 단추로 클릭하고 **정책 내보내기**를 선택합니다.  
+5.  내보내려는 정책을 마우스 오른쪽 단추로 클릭하고 **정책 내보내기** 를 선택합니다.  
   
 6.  **정책 내보내기** 대화 상자의 주소 표시줄에 파일의 경로와 이름을 입력합니다. 또는 이 대화 상자의 탐색 창에서 파일에 적합한 위치를 찾은 다음 **파일 이름** 상자에 XML 파일의 이름을 입력합니다.  
   
-7.  완료되면 **저장**을 클릭합니다.  
+7.  완료되면 **저장** 을 클릭합니다.  
 

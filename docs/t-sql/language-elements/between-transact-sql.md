@@ -25,11 +25,11 @@ author: rothja
 ms.author: jroth
 monikerRange: '>=aps-pdw-2016||=azuresqldb-current||=azure-sqldw-latest||>=sql-server-2016||=sqlallproducts-allversions||>=sql-server-linux-2017||=azuresqldb-mi-current'
 ms.openlocfilehash: 709af562247c040508627527c299ee6f5181da49
-ms.sourcegitcommit: e700497f962e4c2274df16d9e651059b42ff1a10
+ms.sourcegitcommit: 192f6a99e19e66f0f817fdb1977f564b2aaa133b
 ms.translationtype: HT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 08/17/2020
-ms.locfileid: "88417189"
+ms.lasthandoff: 11/25/2020
+ms.locfileid: "96128338"
 ---
 # <a name="between-transact-sql"></a>BETWEEN(Transact-SQL)
 [!INCLUDE [sql-asdb-asdbmi-asa-pdw](../../includes/applies-to-version/sql-asdb-asdbmi-asa-pdw.md)]
@@ -48,27 +48,27 @@ test_expression [ NOT ] BETWEEN begin_expression AND end_expression
 
 ## <a name="arguments"></a>인수
  *test_expression*  
- *begin_expression* 및 *end_expression*에 정의된 범위에서 테스트할 [식](../../t-sql/language-elements/expressions-transact-sql.md)입니다. *test_expression*은 *begin_expression* 및 *end_expression* 모두와 동일한 데이터 형식이어야 합니다.  
+ *begin_expression* 및 *end_expression* 에 정의된 범위에서 테스트할 [식](../../t-sql/language-elements/expressions-transact-sql.md)입니다. *test_expression* 은 *begin_expression* 및 *end_expression* 모두와 동일한 데이터 형식이어야 합니다.  
   
  NOT  
  조건자의 결과를 부정합니다.  
   
  *begin_expression*  
- 유효한 식입니다. *begin_expression*은 *test_expression* 및 *end_expression* 모두와 동일한 데이터 형식이어야 합니다.  
+ 유효한 식입니다. *begin_expression* 은 *test_expression* 및 *end_expression* 모두와 동일한 데이터 형식이어야 합니다.  
   
  *end_expression*  
- 유효한 식입니다. *end_expression*은 *test_expression* 및 *begin_expression* 모두와 동일한 데이터 형식이어야 합니다.  
+ 유효한 식입니다. *end_expression* 은 *test_expression* 및 *begin_expression* 모두와 동일한 데이터 형식이어야 합니다.  
   
  AND  
- *test_expression*이 *begin_expression* 및 *end_expression*으로 표시된 범위 내에 있어야 함을 나타내는 자리 표시자 역할을 합니다.  
+ *test_expression* 이 *begin_expression* 및 *end_expression* 으로 표시된 범위 내에 있어야 함을 나타내는 자리 표시자 역할을 합니다.  
   
 ## <a name="result-types"></a>결과 형식  
  **Boolean**  
   
 ## <a name="result-value"></a>결과 값  
- *test_expression*의 값이 *begin_expression*의 값보다 크거나 같고 *end_expression*의 값보다 작거나 같으면, BETWEEN에서 **TRUE**를 반환합니다.  
+ *test_expression* 의 값이 *begin_expression* 의 값보다 크거나 같고 *end_expression* 의 값보다 작거나 같으면, BETWEEN에서 **TRUE** 를 반환합니다.  
   
- *test_expression*의 값이 *begin_expression*의 값보다 작거나 *end_expression*의 값보다 크면, NOT BETWEEN에서 **TRUE**를 반환합니다.  
+ *test_expression* 의 값이 *begin_expression* 의 값보다 작거나 *end_expression* 의 값보다 크면, NOT BETWEEN에서 **TRUE** 를 반환합니다.  
   
 ## <a name="remarks"></a>설명  
  경계값이 포함되지 않는 범위를 지정하려면 보다 큼(>) 및 보다 작음 연산자(<)를 사용합니다. BETWEEN 또는 NOT BETWEEN 조건자에 입력한 값이 NULL이면 결과는 UNKNOWN이 됩니다.  

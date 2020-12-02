@@ -23,11 +23,11 @@ ms.assetid: 62eebc19-9f15-4245-94fa-b3fcd64a9d42
 author: markingmyname
 ms.author: maghan
 ms.openlocfilehash: ff8efe5476597a85a26034cc278730c2d867ddae
-ms.sourcegitcommit: bd3a135f061e4a49183bbebc7add41ab11872bae
+ms.sourcegitcommit: 192f6a99e19e66f0f817fdb1977f564b2aaa133b
 ms.translationtype: HT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 10/21/2020
-ms.locfileid: "92300240"
+ms.lasthandoff: 11/25/2020
+ms.locfileid: "96126217"
 ---
 # <a name="create-aggregate-transact-sql"></a>CREATE AGGREGATE(Transact-SQL)
 [!INCLUDE [SQL Server](../../includes/applies-to-version/sqlserver.md)]
@@ -67,7 +67,7 @@ EXTERNAL NAME assembly_name [ .class_name ]
  사용자 정의 집계에 포함된 하나 이상의 매개 변수입니다. 매개 변수의 값은 집계 함수를 실행할 때 사용자가 제공해야 합니다. "at" 기호( **@** )를 첫 번째 문자로 사용하여 매개 변수 이름을 지정하십시오. 매개 변수 이름은 [식별자](../../relational-databases/databases/database-identifiers.md)에 대한 규칙을 따라야 합니다. 매개 변수는 함수에서 로컬로 사용됩니다.  
   
  *system_scalar_type*  
- 입력 매개 변수의 값 또는 반환 값을 보유하는 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 시스템 스칼라 데이터 형식 중 하나입니다. **text** , **ntext** 및 **image** 를 제외한 모든 스칼라 데이터 형식을 사용자 정의 집계에 대한 매개 변수로 사용할 수 있습니다. **cursor** 및 **table** 과 같은 비스칼라 형식은 지정할 수 없습니다.  
+ 입력 매개 변수의 값 또는 반환 값을 보유하는 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 시스템 스칼라 데이터 형식 중 하나입니다. **text**, **ntext** 및 **image** 를 제외한 모든 스칼라 데이터 형식을 사용자 정의 집계에 대한 매개 변수로 사용할 수 있습니다. **cursor** 및 **table** 과 같은 비스칼라 형식은 지정할 수 없습니다.  
   
  *udt_schema_name*  
  CLR 사용자 정의 형식이 속한 스키마의 이름입니다. 이 인수를 지정하지 않을 경우 [!INCLUDE[ssDE](../../includes/ssde-md.md)]에서는 다음 순서로 *udt_type_name* 을 참조합니다.  

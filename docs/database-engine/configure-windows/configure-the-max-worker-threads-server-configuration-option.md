@@ -15,16 +15,16 @@ ms.assetid: abeadfa4-a14d-469a-bacf-75812e48fac1
 author: markingmyname
 ms.author: maghan
 ms.openlocfilehash: e1f2398e59fb7a0fee48f2d4c4e4a171c6044ca7
-ms.sourcegitcommit: 6f49804b863fed44968ea5829e2c26edc5988468
+ms.sourcegitcommit: 192f6a99e19e66f0f817fdb1977f564b2aaa133b
 ms.translationtype: HT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 08/05/2020
-ms.locfileid: "87807089"
+ms.lasthandoff: 11/25/2020
+ms.locfileid: "96127422"
 ---
 # <a name="configure-the-max-worker-threads-server-configuration-option"></a>max worker threads 서버 구성 옵션 구성
  [!INCLUDE [SQL Server](../../includes/applies-to-version/sqlserver.md)]
 
-이 항목에서는 **또는**을 사용하여 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]에서 [!INCLUDE[ssManStudioFull](../../includes/ssmanstudiofull-md.md)]max worker threads[!INCLUDE[tsql](../../includes/tsql-md.md)] 서버 구성 옵션을 구성하는 방법에 대해 설명합니다. **최대 작업자 스레드** 옵션은 쿼리 요청, 로그인, 로그아웃 및 유사한 애플리케이션 요청을 처리하는 데 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 전체에 사용할 수 있는 작업자 스레드 수를 구성합니다.
+이 항목에서는 **또는** 을 사용하여 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]에서 [!INCLUDE[ssManStudioFull](../../includes/ssmanstudiofull-md.md)]max worker threads[!INCLUDE[tsql](../../includes/tsql-md.md)] 서버 구성 옵션을 구성하는 방법에 대해 설명합니다. **최대 작업자 스레드** 옵션은 쿼리 요청, 로그인, 로그아웃 및 유사한 애플리케이션 요청을 처리하는 데 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 전체에 사용할 수 있는 작업자 스레드 수를 구성합니다.
 
 
 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]은 운영 체제의 네이티브 스레드 서비스를 사용하여 다음 조건을 확인합니다.
@@ -41,7 +41,7 @@ ms.locfileid: "87807089"
   
 ###  <a name="limitations-and-restrictions"></a><a name="Restrictions"></a> 제한 사항  
   
--   실제 쿼리 요청 수는 **최대 작업자 스레드**에 설정된 값을 초과할 수 있으며, 이 경우 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]가 다음에 사용할 수 있는 작업자 스레드가 요청을 처리할 수 있도록 작업자 스레드를 풀링합니다. 작업자 스레드는 활성 요청에만 할당되며 요청이 처리되면 해제됩니다. 이는 요청이 수행된 사용자 세션/연결이 열린 상태로 유지되는 경우에도 마찬가지입니다. 
+-   실제 쿼리 요청 수는 **최대 작업자 스레드** 에 설정된 값을 초과할 수 있으며, 이 경우 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]가 다음에 사용할 수 있는 작업자 스레드가 요청을 처리할 수 있도록 작업자 스레드를 풀링합니다. 작업자 스레드는 활성 요청에만 할당되며 요청이 처리되면 해제됩니다. 이는 요청이 수행된 사용자 세션/연결이 열린 상태로 유지되는 경우에도 마찬가지입니다. 
 
 -   **최대 작업자 스레드** 서버 구성 옵션은 엔진 안에서 생성될 수 있는 모든 스레드를 제한하는 것은 아닙니다. LazyWriter, 검사점, 로그 기록기, Service Broker, 잠금 관리자 등은 이 제한에서 벗어나 생성됩니다. 가용성 그룹은 **최대 작업자 스레드 한도** 내에서 일부 작업자 스레드를 사용하지만 시스템 스레드도 사용합니다([가용성 그룹별 스레드 사용량](../availability-groups/windows/prereqs-restrictions-recommendations-always-on-availability.md#ThreadUsage) 참조). 구성된 스레드 수가 초과되면 다음 쿼리는 추가 스레드를 생성한 시스템 작업에 대한 정보를 제공합니다.  
   
@@ -67,7 +67,7 @@ ms.locfileid: "87807089"
   
 -   스레드 풀링은 서버에 연결된 클라이언트가 많은 경우 성능 최적화에 도움이 됩니다. 보통 각 쿼리 요청마다 별도의 운영 체제 스레드가 생성됩니다. 그러나 서버에 대한 연결 수가 수백 개인 경우 쿼리 요청별로 스레드를 하나씩 사용하면 시스템 리소스를 상당히 많이 소비하게 될 수 있습니다. **max worker threads** 옵션을 사용하면 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 에서 작업자 스레드 풀을 만들어 많은 쿼리 요청을 처리할 수 있으므로 성능이 향상됩니다.  
   
--   다음 표에서는 ***기본 최대 작업자* + ((* 논리 CPU* - 4) * *CPU당 작업자*)**와 같은 수식을 사용하여 CPU, 컴퓨터 아키텍처 및 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 버전의 다양한 조합에 대해 자동으로 구성된 최대 작업자 스레드 수(값이 0으로 설정된 경우)를 보여 줍니다.  
+-   다음 표에서는 **_기본 최대 작업자_ + ((* 논리 CPU* - 4) * *CPU당 작업자*)**와 같은 수식을 사용하여 CPU, 컴퓨터 아키텍처 및 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 버전의 다양한 조합에 대해 자동으로 구성된 최대 작업자 스레드 수(값이 0으로 설정된 경우)를 보여 줍니다.  
   
     |CPU 수|32비트 컴퓨터(최대 [!INCLUDE[ssSQL14](../../includes/sssql14-md.md)])|64비트 컴퓨터(최대 [!INCLUDE[ssSQL15](../../includes/sssql15-md.md)] SP1)|64비트 컴퓨터([!INCLUDE[ssSQL15](../../includes/sssql15-md.md)] SP2 및 [!INCLUDE[ssSQL17](../../includes/sssql17-md.md)]부터)|   
     |------------|------------|------------|------------|  
@@ -79,14 +79,14 @@ ms.locfileid: "87807089"
     |128|1248|2496|4480|   
     |256|2272|4544|8576|   
     
-    최대 [!INCLUDE[ssSQL15](../../includes/sssql15-md.md)] SP1에서 *CPU당 작업자*는 다음 아키텍처(32비트 또는 64비트)에 따라서만 달라집니다.
+    최대 [!INCLUDE[ssSQL15](../../includes/sssql15-md.md)] SP1에서 *CPU당 작업자* 는 다음 아키텍처(32비트 또는 64비트)에 따라서만 달라집니다.
     
     |CPU 수|32비트 컴퓨터 <sup>1</sup>|64비트 컴퓨터|   
     |------------|------------|------------|   
     |\< = 4|256|512|   
     |\> 4|256 + ((논리 CPU 수 - 4) * 8)|512 <sup>2</sup> + ((논리 CPU 수 - 4) * 16)|   
     
-    [!INCLUDE[ssSQL15](../../includes/sssql15-md.md)] SP2 및 [!INCLUDE[ssSQL17](../../includes/sssql17-md.md)]부터 *CPU당 작업자*는 다음 프로세스의 아키텍처 및 수(4와 64 간 또는 64 초과)에 따라 달라집니다.
+    [!INCLUDE[ssSQL15](../../includes/sssql15-md.md)] SP2 및 [!INCLUDE[ssSQL17](../../includes/sssql17-md.md)]부터 *CPU당 작업자* 는 다음 프로세스의 아키텍처 및 수(4와 64 간 또는 64 초과)에 따라 달라집니다.
     
     |CPU 수|32비트 컴퓨터 <sup>1</sup>|64비트 컴퓨터|   
     |------------|------------|------------|   
@@ -106,13 +106,13 @@ ms.locfileid: "87807089"
 ###  <a name="security"></a><a name="Security"></a> 보안  
   
 ####  <a name="permissions"></a><a name="Permissions"></a> 권한  
- 매개 변수 없이 또는 첫 번째 매개 변수만 사용하여 **sp_configure** 를 실행할 수 있는 권한은 기본적으로 모든 사용자에게 부여됩니다. 구성 옵션을 변경하거나 `RECONFIGURE` 문을 실행하는 두 매개 변수를 사용하여 **sp_configure**를 실행하려면 사용자에게 `ALTER SETTINGS` 서버 수준 권한이 있어야 합니다. **sysadmin** 및 **serveradmin** 고정 서버 역할은 `ALTER SETTINGS` 권한을 암시적으로 보유하고 있습니다.  
+ 매개 변수 없이 또는 첫 번째 매개 변수만 사용하여 **sp_configure** 를 실행할 수 있는 권한은 기본적으로 모든 사용자에게 부여됩니다. 구성 옵션을 변경하거나 `RECONFIGURE` 문을 실행하는 두 매개 변수를 사용하여 **sp_configure** 를 실행하려면 사용자에게 `ALTER SETTINGS` 서버 수준 권한이 있어야 합니다. **sysadmin** 및 **serveradmin** 고정 서버 역할은 `ALTER SETTINGS` 권한을 암시적으로 보유하고 있습니다.  
   
 ##  <a name="using-ssmanstudiofull"></a><a name="SSMSProcedure"></a> 사용 중 [!INCLUDE[ssManStudioFull](../../includes/ssmanstudiofull-md.md)]  
   
 #### <a name="to-configure-the-max-worker-threads-option"></a>최대 작업자 스레드 수 옵션을 구성하려면  
   
-1.  개체 탐색기에서 서버를 마우스 오른쪽 단추로 클릭하고 **속성**을 선택합니다.  
+1.  개체 탐색기에서 서버를 마우스 오른쪽 단추로 클릭하고 **속성** 을 선택합니다.  
   
 2.  **프로세서** 노드를 클릭합니다.  
   
@@ -128,9 +128,9 @@ ms.locfileid: "87807089"
   
 1.  [!INCLUDE[ssDE](../../includes/ssde-md.md)]에 연결합니다.  
   
-2.  표준 도구 모음에서 **새 쿼리**를 클릭합니다.  
+2.  표준 도구 모음에서 **새 쿼리** 를 클릭합니다.  
   
-3.  다음 예를 복사하여 쿼리 창에 붙여 넣고 **실행**을 클릭합니다. 이 예제에서는 [sp_configure](../../relational-databases/system-stored-procedures/sp-configure-transact-sql.md) 를 사용하여 `max worker threads` 옵션을 `900`으로 구성하는 방법을 보여 줍니다.  
+3.  다음 예를 복사하여 쿼리 창에 붙여 넣고 **실행** 을 클릭합니다. 이 예제에서는 [sp_configure](../../relational-databases/system-stored-procedures/sp-configure-transact-sql.md) 를 사용하여 `max worker threads` 옵션을 `900`으로 구성하는 방법을 보여 줍니다.  
   
 ```sql  
 USE AdventureWorks2012 ;  

@@ -39,11 +39,11 @@ ms.assetid: 4165c404-4d50-4063-9a6e-6e267d309376
 author: VanMSFT
 ms.author: vanto
 ms.openlocfilehash: a3339b5c4e7b54ce26f0760b22d0f0fed1a931b5
-ms.sourcegitcommit: ac9feb0b10847b369b77f3c03f8200c86ee4f4e0
+ms.sourcegitcommit: 192f6a99e19e66f0f817fdb1977f564b2aaa133b
 ms.translationtype: HT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 09/16/2020
-ms.locfileid: "90688440"
+ms.lasthandoff: 11/25/2020
+ms.locfileid: "96128015"
 ---
 # <a name="create-remote-service-binding-transact-sql"></a>CREATE REMOTE SERVICE BINDING(Transact-SQL)
 [!INCLUDE [SQL Server](../../includes/applies-to-version/sqlserver.md)]
@@ -66,10 +66,10 @@ CREATE REMOTE SERVICE BINDING binding_name
 
 ## <a name="arguments"></a>인수
  *binding_name*  
- 생성할 원격 서비스 바인딩의 이름입니다. 서버, 데이터베이스 및 스키마 이름은 지정될 수 없습니다. *binding_name*은 유효한 **sysname**이어야 합니다.  
+ 생성할 원격 서비스 바인딩의 이름입니다. 서버, 데이터베이스 및 스키마 이름은 지정될 수 없습니다. *binding_name* 은 유효한 **sysname** 이어야 합니다.  
   
  AUTHORIZATION *owner_name*  
- 지정한 데이터베이스 사용자 또는 역할로 바인딩 소유자를 설정합니다. 현재 사용자가 **dbo** 또는 **sa**일 경우 *owner_name*은 유효한 사용자 또는 역할의 이름일 수 있습니다. 그렇지 않으면 *owner_name*은 현재 사용자 이름, 현재 사용자에 IMPERSONATE 권한이 있는 사용자 이름 또는 현재 사용자가 속해 있는 역할 이름 중 하나여야 합니다.  
+ 지정한 데이터베이스 사용자 또는 역할로 바인딩 소유자를 설정합니다. 현재 사용자가 **dbo** 또는 **sa** 일 경우 *owner_name* 은 유효한 사용자 또는 역할의 이름일 수 있습니다. 그렇지 않으면 *owner_name* 은 현재 사용자 이름, 현재 사용자에 IMPERSONATE 권한이 있는 사용자 이름 또는 현재 사용자가 속해 있는 역할 이름 중 하나여야 합니다.  
   
  TO SERVICE '*service_name*'  
  WITH USER 절에서 식별된 사용자에 바인딩할 원격 서비스를 지정합니다.  
@@ -81,9 +81,9 @@ CREATE REMOTE SERVICE BINDING binding_name
  원격 서비스와 통신할 경우 익명 인증을 사용할지 여부를 지정합니다. ANONYMOUS가 ON인 경우에는 익명 인증이 사용되고 원격 데이터베이스의 작업은 **public** 고정 데이터베이스 역할의 멤버로 수행됩니다. ANONYMOUS가 OFF인 경우에는 원격 데이터베이스의 작업이 해당 데이터베이스의 특정 사용자로 수행됩니다. 이 절을 지정하지 않은 경우 기본값은 OFF입니다.  
   
 ## <a name="remarks"></a>설명  
- [!INCLUDE[ssSB](../../includes/sssb-md.md)]는 원격 서비스 바인딩을 사용하여 새 대화에 사용할 인증서를 찾습니다. *user_name*과 연관된 인증서에 있는 공개 키는 원격 서비스로 전달된 메시지 인증 및 대화를 암호화하는 데 사용되는 세션 키의 암호화에 사용됩니다. *user_name*에 대한 인증서는 원격 서비스를 호스팅하는 데이터베이스의 사용자에 대한 인증서와 일치해야 합니다.  
+ [!INCLUDE[ssSB](../../includes/sssb-md.md)]는 원격 서비스 바인딩을 사용하여 새 대화에 사용할 인증서를 찾습니다. *user_name* 과 연관된 인증서에 있는 공개 키는 원격 서비스로 전달된 메시지 인증 및 대화를 암호화하는 데 사용되는 세션 키의 암호화에 사용됩니다. *user_name* 에 대한 인증서는 원격 서비스를 호스팅하는 데이터베이스의 사용자에 대한 인증서와 일치해야 합니다.  
   
- 원격 서비스 바인딩은 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 인스턴스 외부의 대상 서비스와 대화하는 시작 서비스에만 필요합니다. 시작 서비스를 호스팅하는 데이터베이스에는 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 인스턴스 외부의 대상 서비스에 대한 원격 서비스 바인딩이 포함되어야 합니다. 대상 서비스를 호스팅하는 데이터베이스에는 대상 서비스와 대화하는 시작 서비스에 대한 원격 서비스 바인딩이 없어도 됩니다. 시작자와 대상 서비스가 동일한 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 인스턴스 내에 있는 경우에는 원격 서비스 바인딩이 필요 없습니다. 그러나 원격 서비스 바인딩이 있고 TO SERVICE에 지정된 *service_name*이 로컬 서비스 이름과 일치하면 [!INCLUDE[ssSB](../../includes/sssb-md.md)]이 해당 바인딩을 사용하게 됩니다.  
+ 원격 서비스 바인딩은 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 인스턴스 외부의 대상 서비스와 대화하는 시작 서비스에만 필요합니다. 시작 서비스를 호스팅하는 데이터베이스에는 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 인스턴스 외부의 대상 서비스에 대한 원격 서비스 바인딩이 포함되어야 합니다. 대상 서비스를 호스팅하는 데이터베이스에는 대상 서비스와 대화하는 시작 서비스에 대한 원격 서비스 바인딩이 없어도 됩니다. 시작자와 대상 서비스가 동일한 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 인스턴스 내에 있는 경우에는 원격 서비스 바인딩이 필요 없습니다. 그러나 원격 서비스 바인딩이 있고 TO SERVICE에 지정된 *service_name* 이 로컬 서비스 이름과 일치하면 [!INCLUDE[ssSB](../../includes/sssb-md.md)]이 해당 바인딩을 사용하게 됩니다.  
   
  ANONYMOUS가 ON인 경우 시작 서비스는 **public** 고정 데이터베이스 역할의 멤버로 대상 서비스에 연결합니다. 기본적으로 이 역할의 멤버는 데이터베이스에 연결할 수 있는 권한이 없습니다. 메시지를 보내려면 대상 데이터베이스가 데이터베이스에 대한 CONNECT 권한 및 대상 서비스에 대한 SEND 권한을 **public** 역할에 부여해야 합니다.  
   

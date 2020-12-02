@@ -16,14 +16,14 @@ helpviewer_keywords:
 - tail-log backups
 - backups [SQL Server], tail-log backups
 ms.assetid: 313ddaf6-ec54-4a81-a104-7ffa9533ca58
-author: mashamsft
-ms.author: mathoma
-ms.openlocfilehash: fa48e2e96c5066ee2a2bd5d2757a3ae8f669225b
-ms.sourcegitcommit: da88320c474c1c9124574f90d549c50ee3387b4c
+author: cawrites
+ms.author: chadam
+ms.openlocfilehash: 546029b8615745c64d62da49af5299893d4d7c15
+ms.sourcegitcommit: 5a1ed81749800c33059dac91b0e18bd8bb3081b1
 ms.translationtype: HT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 07/01/2020
-ms.locfileid: "85631372"
+ms.lasthandoff: 11/23/2020
+ms.locfileid: "96129023"
 ---
 # <a name="tail-log-backups-sql-server"></a>비상 로그 백업(SQL Server)
  [!INCLUDE [SQL Server](../../includes/applies-to-version/sqlserver.md)]
@@ -52,9 +52,9 @@ ms.locfileid: "85631372"
 |CONTINUE_AFTER_ERROR|손상된 데이터베이스의 비상 로그를 백업하는 경우에만 CONTINUE_AFTER_ERROR를 사용합니다.<br /><br /> 손상된 데이터베이스에서 비상 로그 백업을 사용하는 경우에는 일반적으로 로그 백업에서 캡처되는 메타데이터 일부를 사용할 수 없을 수 있습니다. 자세한 내용은 이 항목의 [완전하지 않은 백업 메타데이터가 포함된 비상 로그 백업](#IncompleteMetadata)을 참조하세요.|  
   
 ##  <a name="tail-log-backups-that-have-incomplete-backup-metadata"></a><a name="IncompleteMetadata"></a> 완전하지 않은 백업 메타데이터가 포함된 비상 로그 백업  
- 비상 로그 백업은 데이터베이스가 오프라인이거나 손상되었거나 데이터 파일이 없는 경우에도 비상 로그를 캡처합니다. 이로 인해 복원 정보 명령과 **msdb**의 메타데이터가 완전하지 않을 수 있습니다. 그러나 메타데이터가 완전하지 않은 경우에도 캡처된 로그는 완전한 상태이며 사용 가능합니다.  
+ 비상 로그 백업은 데이터베이스가 오프라인이거나 손상되었거나 데이터 파일이 없는 경우에도 비상 로그를 캡처합니다. 이로 인해 복원 정보 명령과 **msdb** 의 메타데이터가 완전하지 않을 수 있습니다. 그러나 메타데이터가 완전하지 않은 경우에도 캡처된 로그는 완전한 상태이며 사용 가능합니다.  
   
- 비상 로그 백업에 완전하지 않은 메타데이터가 있으면 [backupset](../../relational-databases/system-tables/backupset-transact-sql.md) 테이블의 **has_incomplete_metadata** 가 **1**로 설정됩니다. 또한 [RESTORE HEADERONLY](../../t-sql/statements/restore-statements-headeronly-transact-sql.md)출력에서 **HasIncompleteMetadata** 는 **1**로 설정됩니다.  
+ 비상 로그 백업에 완전하지 않은 메타데이터가 있으면 [backupset](../../relational-databases/system-tables/backupset-transact-sql.md) 테이블의 **has_incomplete_metadata** 가 **1** 로 설정됩니다. 또한 [RESTORE HEADERONLY](../../t-sql/statements/restore-statements-headeronly-transact-sql.md)출력에서 **HasIncompleteMetadata** 는 **1** 로 설정됩니다.  
   
  비상 로그 백업의 메타데이터가 완전하지 않으면 [backupfilegroup](../../relational-databases/system-tables/backupfilegroup-transact-sql.md) 테이블은 비상 로그 백업 당시 파일 그룹에 대한 대부분의 정보를 잃게 됩니다. 대부분의 **backupfilegroup** 테이블 열은 NULL이 되며 다음 열만 의미를 갖습니다.  
   

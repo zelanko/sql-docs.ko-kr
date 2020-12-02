@@ -15,14 +15,14 @@ helpviewer_keywords:
 - database backups [SQL Server], disks
 - backing up databases [SQL Server], disks
 ms.assetid: 86331d43-c738-4523-ae3d-7d6700348ed1
-author: MikeRayMSFT
-ms.author: mikeray
-ms.openlocfilehash: 4f2e54b5d8873e34eaff65fd6f9ec6a86feb32c3
-ms.sourcegitcommit: da88320c474c1c9124574f90d549c50ee3387b4c
+author: cawrites
+ms.author: chadam
+ms.openlocfilehash: 1f601cd1a2d6a69920bb818bcdccec92b46a2e43
+ms.sourcegitcommit: 5a1ed81749800c33059dac91b0e18bd8bb3081b1
 ms.translationtype: HT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 07/01/2020
-ms.locfileid: "85748249"
+ms.lasthandoff: 11/23/2020
+ms.locfileid: "96129269"
 ---
 # <a name="define-a-logical-backup-device-for-a-disk-file-sql-server"></a>Define a Logical Backup Device for a Disk File (SQL Server)
  [!INCLUDE [SQL Server](../../includes/applies-to-version/sqlserver.md)]
@@ -67,17 +67,17 @@ ms.locfileid: "85748249"
   
 1.  [!INCLUDE[msCoName](../../includes/msconame-md.md)] [!INCLUDE[ssDEnoversion](../../includes/ssdenoversion-md.md)]의 해당 인스턴스에 연결한 후 개체 탐색기에서 서버 이름을 클릭하여 서버 트리를 확장합니다.  
   
-2.  **서버 개체**를 확장한 다음 **백업 디바이스**를 마우스 오른쪽 단추로 클릭합니다.  
+2.  **서버 개체** 를 확장한 다음 **백업 디바이스** 를 마우스 오른쪽 단추로 클릭합니다.  
   
-3.  **새 백업 디바이스**를 클릭합니다. **백업 디바이스** 대화 상자가 열립니다.  
+3.  **새 백업 디바이스** 를 클릭합니다. **백업 디바이스** 대화 상자가 열립니다.  
   
 4.  디바이스 이름을 입력합니다.  
   
 5.  대상으로 **파일** 을 클릭하고 파일의 전체 경로를 지정합니다.  
   
-6.  새 디바이스를 정의하려면 **확인**을 클릭합니다.  
+6.  새 디바이스를 정의하려면 **확인** 을 클릭합니다.  
   
- 이 새 디바이스로 백업하려면 **데이터베이스 백업** 대화 상자의 **일반** 페이지에 있는**백업할 위치:** 필드에 디바이스를 추가합니다. 자세한 내용은 [전체 데이터베이스 백업 만들기&#40;SQL Server&#41;](../../relational-databases/backup-restore/create-a-full-database-backup-sql-server.md)에서 차등 데이터베이스 백업을 만듭니다.  
+ 이 새 디바이스로 백업하려면 **데이터베이스 백업** 대화 상자의 **일반** 페이지에 있는 **백업할 위치:** 필드에 디바이스를 추가합니다. 자세한 내용은 [전체 데이터베이스 백업 만들기&#40;SQL Server&#41;](../../relational-databases/backup-restore/create-a-full-database-backup-sql-server.md)에서 차등 데이터베이스 백업을 만듭니다.  
   
 ##  <a name="using-transact-sql"></a><a name="TsqlProcedure"></a> Transact-SQL 사용  
   
@@ -85,9 +85,9 @@ ms.locfileid: "85748249"
   
 1.  [!INCLUDE[ssDE](../../includes/ssde-md.md)]에 연결합니다.  
   
-2.  표준 도구 모음에서 **새 쿼리**를 클릭합니다.  
+2.  표준 도구 모음에서 **새 쿼리** 를 클릭합니다.  
   
-3.  다음 예를 복사하여 쿼리 창에 붙여 넣고 **실행**을 클릭합니다. 이 예에서는 [sp_addumpdevice](../../relational-databases/system-stored-procedures/sp-addumpdevice-transact-sql.md) 를 사용하여 디스크 파일의 논리적 백업 디바이스를 정의하는 방법을 보여 줍니다. 이 예에서는 `mydiskdump``c:\dump\dump1.bak`라는 디스크 백업 디바이스를 추가합니다.  
+3.  다음 예를 복사하여 쿼리 창에 붙여 넣고 **실행** 을 클릭합니다. 이 예에서는 [sp_addumpdevice](../../relational-databases/system-stored-procedures/sp-addumpdevice-transact-sql.md) 를 사용하여 디스크 파일의 논리적 백업 디바이스를 정의하는 방법을 보여 줍니다. 이 예에서는 `mydiskdump``c:\dump\dump1.bak`라는 디스크 백업 디바이스를 추가합니다.  
   
 ```sql  
 USE AdventureWorks2012 ;  

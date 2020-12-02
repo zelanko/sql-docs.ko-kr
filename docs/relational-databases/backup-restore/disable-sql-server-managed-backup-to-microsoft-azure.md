@@ -9,14 +9,14 @@ ms.reviewer: ''
 ms.technology: backup-restore
 ms.topic: conceptual
 ms.assetid: 3e02187f-363f-4e69-a82f-583953592544
-author: MikeRayMSFT
-ms.author: mikeray
-ms.openlocfilehash: c14d2ab4c8ab3f24272b30df0de5ca9727ffb4bd
-ms.sourcegitcommit: da88320c474c1c9124574f90d549c50ee3387b4c
+author: cawrites
+ms.author: chadam
+ms.openlocfilehash: 30450a1ea8f6304e02ef2b544be31d08f69b51fd
+ms.sourcegitcommit: 5a1ed81749800c33059dac91b0e18bd8bb3081b1
 ms.translationtype: HT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 07/01/2020
-ms.locfileid: "85737800"
+ms.lasthandoff: 11/23/2020
+ms.locfileid: "96129217"
 ---
 # <a name="disable-sql-server-managed-backup-to-microsoft-azure"></a>Microsoft Azure에 대한 SQL Server Managed Backup 해제
  [!INCLUDE [SQL Server](../../includes/applies-to-version/sqlserver.md)]
@@ -29,9 +29,9 @@ ms.locfileid: "85737800"
   
 1.  [!INCLUDE[ssDE](../../includes/ssde-md.md)]에 연결합니다.  
   
-2.  표준 도구 모음에서 **새 쿼리**를 클릭합니다.  
+2.  표준 도구 모음에서 **새 쿼리** 를 클릭합니다.  
   
-3.  다음 예를 복사하여 쿼리 창에 붙여 넣고 **실행**을 클릭합니다.  
+3.  다음 예를 복사하여 쿼리 창에 붙여 넣고 **실행** 을 클릭합니다.  
   
 ```sql
 EXEC msdb.managed_backup.sp_backup_config_basic  
@@ -50,9 +50,9 @@ GO
   
 1.  [!INCLUDE[ssDE](../../includes/ssde-md.md)]에 연결합니다.  
   
-2.  표준 도구 모음에서 **새 쿼리**를 클릭합니다.  
+2.  표준 도구 모음에서 **새 쿼리** 를 클릭합니다.  
   
-3.  다음 예를 복사하여 쿼리 창에 붙여 넣고 **실행**을 클릭합니다. 다음 예제는 [!INCLUDE[ss_smartbackup](../../includes/ss-smartbackup-md.md)] 이 인스턴스 수준 및 인스턴스에 대한 모든 [!INCLUDE[ss_smartbackup](../../includes/ss-smartbackup-md.md)] 설정 데이터베이스에서 구성된 경우를 식별하고 시스템 저장 프로시저 **sp_backup_config_basic** 을 실행하여 [!INCLUDE[ss_smartbackup](../../includes/ss-smartbackup-md.md)]을 해제합니다.  
+3.  다음 예를 복사하여 쿼리 창에 붙여 넣고 **실행** 을 클릭합니다. 다음 예제는 [!INCLUDE[ss_smartbackup](../../includes/ss-smartbackup-md.md)] 이 인스턴스 수준 및 인스턴스에 대한 모든 [!INCLUDE[ss_smartbackup](../../includes/ss-smartbackup-md.md)] 설정 데이터베이스에서 구성된 경우를 식별하고 시스템 저장 프로시저 **sp_backup_config_basic** 을 실행하여 [!INCLUDE[ss_smartbackup](../../includes/ss-smartbackup-md.md)]을 해제합니다.  
   
 ```sql
 -- Create a working table to store the database names  
@@ -117,9 +117,9 @@ GO
   
 1.  [!INCLUDE[ssDE](../../includes/ssde-md.md)]에 연결합니다.  
   
-2.  표준 도구 모음에서 **새 쿼리**를 클릭합니다.  
+2.  표준 도구 모음에서 **새 쿼리** 를 클릭합니다.  
   
-3.  다음 예를 복사하여 쿼리 창에 붙여 넣고 **실행**을 클릭합니다.  
+3.  다음 예를 복사하여 쿼리 창에 붙여 넣고 **실행** 을 클릭합니다.  
   
     ```sql
     EXEC msdb.managed_backup.sp_backup_config_basic  
@@ -134,9 +134,9 @@ GO
   
 1.  [!INCLUDE[ssDE](../../includes/ssde-md.md)]에 연결합니다.  
   
-2.  표준 도구 모음에서 **새 쿼리**를 클릭합니다.  
+2.  표준 도구 모음에서 **새 쿼리** 를 클릭합니다.  
   
-3.  다음 예를 복사하여 쿼리 창에 붙여 넣은 후 **실행**을 클릭합니다.  
+3.  다음 예를 복사하여 쿼리 창에 붙여 넣은 후 **실행** 을 클릭합니다.  
   
 ```sql
 Use msdb;  
@@ -149,9 +149,9 @@ Go
   
 1.  [!INCLUDE[ssDE](../../includes/ssde-md.md)]에 연결합니다.  
   
-2.  표준 도구 모음에서 **새 쿼리**를 클릭합니다.  
+2.  표준 도구 모음에서 **새 쿼리** 를 클릭합니다.  
   
-3.  다음 예를 복사하여 쿼리 창에 붙여 넣은 후 **실행**을 클릭합니다.  
+3.  다음 예를 복사하여 쿼리 창에 붙여 넣은 후 **실행** 을 클릭합니다.  
   
 ```sql
 Use msdb;  

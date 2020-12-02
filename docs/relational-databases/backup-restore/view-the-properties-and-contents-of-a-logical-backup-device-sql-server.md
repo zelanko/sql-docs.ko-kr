@@ -19,14 +19,14 @@ helpviewer_keywords:
 - viewing backup properties
 - database backups [SQL Server], properties
 ms.assetid: 3a309074-e816-454d-b6c3-fcfdde0cbf74
-author: MikeRayMSFT
-ms.author: mikeray
-ms.openlocfilehash: cfb4aa8790ba1d57c15b5e0c50827f4cce39005a
-ms.sourcegitcommit: da88320c474c1c9124574f90d549c50ee3387b4c
+author: cawrites
+ms.author: chadam
+ms.openlocfilehash: dc251ab77129dd05e72129998fae3470ed691b5e
+ms.sourcegitcommit: 5a1ed81749800c33059dac91b0e18bd8bb3081b1
 ms.translationtype: HT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 07/01/2020
-ms.locfileid: "85745776"
+ms.lasthandoff: 11/23/2020
+ms.locfileid: "96128913"
 ---
 # <a name="view-the-properties-and-contents-of-a-logical-backup-device-sql-server"></a>논리적 백업 디바이스의 속성 및 내용 보기(SQL Server)
  [!INCLUDE [SQL Server](../../includes/applies-to-version/sqlserver.md)]
@@ -59,13 +59,13 @@ ms.locfileid: "85745776"
   
 1.  [!INCLUDE[msCoName](../../includes/msconame-md.md)] [!INCLUDE[ssDEnoversion](../../includes/ssdenoversion-md.md)]의 해당 인스턴스에 연결한 후 개체 탐색기에서 서버 이름을 클릭하여 서버 트리를 확장합니다.  
   
-2.  **서버 개체**를 확장한 다음 **백업 디바이스**를 확장합니다.  
+2.  **서버 개체** 를 확장한 다음 **백업 디바이스** 를 확장합니다.  
   
-3.  디바이스를 클릭하고 **속성**을 마우스 오른쪽 단추로 클릭하면 **백업 디바이스** 대화 상자가 열립니다.  
+3.  디바이스를 클릭하고 **속성** 을 마우스 오른쪽 단추로 클릭하면 **백업 디바이스** 대화 상자가 열립니다.  
   
 4.  **일반** 페이지에 디바이스 이름과 대상이 표시됩니다. 대상은 테이프 디바이스이거나 파일 경로입니다.  
   
-5.  **페이지 선택** 페이지에서 **미디어 내용**을 클릭합니다.  
+5.  **페이지 선택** 페이지에서 **미디어 내용** 을 클릭합니다.  
   
 6.  다음과 같은 속성 패널에 오른쪽 창이 표시됩니다.  
   
@@ -88,7 +88,7 @@ ms.locfileid: "85745776"
   
 1.  [!INCLUDE[ssDE](../../includes/ssde-md.md)]에 연결합니다.  
   
-2.  표준 도구 모음에서 **새 쿼리**를 클릭합니다.  
+2.  표준 도구 모음에서 **새 쿼리** 를 클릭합니다.  
   
 3.  [RESTORE LABELONLY](../../t-sql/statements/restore-statements-labelonly-transact-sql.md) 문을 사용합니다. 이 예에서는 `AdvWrks2008R2Backup` 논리적 백업 디바이스에 대한 정보를 반환합니다.  
   

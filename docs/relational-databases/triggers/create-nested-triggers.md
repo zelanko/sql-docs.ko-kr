@@ -22,11 +22,11 @@ author: rothja
 ms.author: jroth
 monikerRange: =azuresqldb-current||>=sql-server-2016||=sqlallproducts-allversions||>=sql-server-linux-2017||=azuresqldb-mi-current
 ms.openlocfilehash: 2709846194c14dc08653efa761edd6660620872a
-ms.sourcegitcommit: e700497f962e4c2274df16d9e651059b42ff1a10
+ms.sourcegitcommit: 192f6a99e19e66f0f817fdb1977f564b2aaa133b
 ms.translationtype: HT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 08/17/2020
-ms.locfileid: "88485383"
+ms.lasthandoff: 11/25/2020
+ms.locfileid: "96128656"
 ---
 # <a name="create-nested-triggers"></a>중첩 트리거 만들기
 [!INCLUDE [SQL Server SQL Database](../../includes/applies-to-version/sql-asdb.md)]
@@ -60,15 +60,15 @@ AS
   
 -   직접 재귀  
   
-     이 재귀는 트리거가 같은 트리거를 다시 시작하는 동작을 시작 및 수행할 때 발생합니다. 예를 들어 애플리케이션이 **T3**테이블을 업데이트하면 **Trig3** 트리거가 시작됩니다. **Trig3** 은 다시 **T3** 테이블을 업데이트하고 이로 인해 **Trig3** 트리거가 다시 시작됩니다.  
+     이 재귀는 트리거가 같은 트리거를 다시 시작하는 동작을 시작 및 수행할 때 발생합니다. 예를 들어 애플리케이션이 **T3** 테이블을 업데이트하면 **Trig3** 트리거가 시작됩니다. **Trig3** 은 다시 **T3** 테이블을 업데이트하고 이로 인해 **Trig3** 트리거가 다시 시작됩니다.  
   
-     다른 유형(AFTER 또는 INSTEAD OF)의 트리거를 호출한 후 동일한 트리거를 다시 호출할 때도 직접 재귀가 발생할 수 있습니다. 즉, 하나 이상의 AFTER 트리거를 중간에 호출해도 동일한 INSTEAD OF 트리거를 두 번째로 호출하면 INSTEAD OF 트리거의 직접 재귀가 발생할 수 있습니다. 마찬가지로 하나 이상의 INSTEAD OF 트리거를 중간에 호출해도 동일한 AFTER 트리거를 두 번째로 호출하면 AFTER 트리거의 직접 재귀가 발생할 수 있습니다. 예를 들어 애플리케이션이 **T4**테이블을 업데이트합니다. 이 업데이트로 인해 INSTEAD OF 트리거 **Trig4** 가 발생합니다. **Trig4** 는 **T5**테이블을 업데이트합니다. 이 업데이트로 인해 AFTER 트리거 **Trig5** 가 발생합니다. **Trig5** 는 **T4**테이블을 업데이트하고 이 업데이트로 인해 INSTEAD OF 트리거 **Trig4** 가 다시 발생합니다. 이 이벤트 체인을 **Trig4**의 직접 재귀로 간주합니다.  
+     다른 유형(AFTER 또는 INSTEAD OF)의 트리거를 호출한 후 동일한 트리거를 다시 호출할 때도 직접 재귀가 발생할 수 있습니다. 즉, 하나 이상의 AFTER 트리거를 중간에 호출해도 동일한 INSTEAD OF 트리거를 두 번째로 호출하면 INSTEAD OF 트리거의 직접 재귀가 발생할 수 있습니다. 마찬가지로 하나 이상의 INSTEAD OF 트리거를 중간에 호출해도 동일한 AFTER 트리거를 두 번째로 호출하면 AFTER 트리거의 직접 재귀가 발생할 수 있습니다. 예를 들어 애플리케이션이 **T4** 테이블을 업데이트합니다. 이 업데이트로 인해 INSTEAD OF 트리거 **Trig4** 가 발생합니다. **Trig4** 는 **T5** 테이블을 업데이트합니다. 이 업데이트로 인해 AFTER 트리거 **Trig5** 가 발생합니다. **Trig5** 는 **T4** 테이블을 업데이트하고 이 업데이트로 인해 INSTEAD OF 트리거 **Trig4** 가 다시 발생합니다. 이 이벤트 체인을 **Trig4** 의 직접 재귀로 간주합니다.  
   
 -   간접 재귀  
   
-     트리거가 발생하고 같은 유형(AFTER 또는 INSTEAD OF)의 다른 트리거를 발생시키는 동작을 수행하면 이 재귀가 발생합니다. 이 두 번째 트리거는 원래 트리거를 다시 시작하는 동작을 수행합니다. 즉, 다른 INSTEAD OF 트리거를 중간에 호출한 후 INSTEAD OF 트리거를 두 번째로 호출하면 간접 재귀가 발생할 수 있습니다. 마찬가지로 다른 AFTER 트리거를 중간에 호출한 후 AFTER 트리거를 두 번째로 호출하면 간접 재귀가 발생할 수 있습니다. 예를 들어 애플리케이션이 **T1**테이블을 업데이트합니다. 이 업데이트로 인해 AFTER 트리거 **Trig1** 이 발생합니다. **Trig1** 은 **T2**테이블을 업데이트하고 이 업데이트로 인해 AFTER 트리거 **Trig2** 가 발생합니다. **Trig2** 는 다시 **T1** 테이블을 업데이트하고 이로 인해 AFTER 트리거 **Trig1** 이 다시 발생합니다.  
+     트리거가 발생하고 같은 유형(AFTER 또는 INSTEAD OF)의 다른 트리거를 발생시키는 동작을 수행하면 이 재귀가 발생합니다. 이 두 번째 트리거는 원래 트리거를 다시 시작하는 동작을 수행합니다. 즉, 다른 INSTEAD OF 트리거를 중간에 호출한 후 INSTEAD OF 트리거를 두 번째로 호출하면 간접 재귀가 발생할 수 있습니다. 마찬가지로 다른 AFTER 트리거를 중간에 호출한 후 AFTER 트리거를 두 번째로 호출하면 간접 재귀가 발생할 수 있습니다. 예를 들어 애플리케이션이 **T1** 테이블을 업데이트합니다. 이 업데이트로 인해 AFTER 트리거 **Trig1** 이 발생합니다. **Trig1** 은 **T2** 테이블을 업데이트하고 이 업데이트로 인해 AFTER 트리거 **Trig2** 가 발생합니다. **Trig2** 는 다시 **T1** 테이블을 업데이트하고 이로 인해 AFTER 트리거 **Trig1** 이 다시 발생합니다.  
   
- RECURSIVE_TRIGGERS 데이터베이스 옵션을 OFF로 설정하면 AFTER 트리거의 직접 재귀만 금지됩니다. AFTER 트리거의 간접 재귀를 해제하려면 **nested triggers** 서버 옵션도 **0**으로 설정합니다.  
+ RECURSIVE_TRIGGERS 데이터베이스 옵션을 OFF로 설정하면 AFTER 트리거의 직접 재귀만 금지됩니다. AFTER 트리거의 간접 재귀를 해제하려면 **nested triggers** 서버 옵션도 **0** 으로 설정합니다.  
   
 ## <a name="examples"></a>예제  
  다음 예에서는 재귀 트리거를 사용하여 자체 참조 관계(전이 종료라고도 함)를 해결하는 방법을 보여 줍니다. 예를 들어 `emp_mgr` 테이블은 다음을 정의합니다.  

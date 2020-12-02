@@ -17,11 +17,11 @@ ms.assetid: c00bebd0-d04b-4c64-840e-8b7a2c603436
 author: VanMSFT
 ms.author: vanto
 ms.openlocfilehash: 60997f5a657db79dc9e31c17c47f02bfc12b3cad
-ms.sourcegitcommit: 783b35f6478006d654491cb52f6edf108acf2482
+ms.sourcegitcommit: 192f6a99e19e66f0f817fdb1977f564b2aaa133b
 ms.translationtype: HT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 10/09/2020
-ms.locfileid: "91892193"
+ms.lasthandoff: 11/25/2020
+ms.locfileid: "96127902"
 ---
 # <a name="create-new-policy-or-open-policy-dialog-box-general-page"></a>새 정책 만들기 또는 정책 열기 대화 상자, 일반 페이지
  [!INCLUDE [SQL Server](../../includes/applies-to-version/sqlserver.md)]

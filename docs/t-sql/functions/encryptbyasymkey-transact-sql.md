@@ -21,11 +21,11 @@ ms.assetid: 86bb2588-ab13-4db2-8f3c-42c9f572a67b
 author: VanMSFT
 ms.author: vanto
 ms.openlocfilehash: 42ffb61535beefeee149124adf7873cce78c1535
-ms.sourcegitcommit: cc23d8646041336d119b74bf239a6ac305ff3d31
+ms.sourcegitcommit: 192f6a99e19e66f0f817fdb1977f564b2aaa133b
 ms.translationtype: HT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 09/23/2020
-ms.locfileid: "91111090"
+ms.lasthandoff: 11/25/2020
+ms.locfileid: "96128500"
 ---
 # <a name="encryptbyasymkey-transact-sql"></a>ENCRYPTBYASYMKEY(Transact-SQL)
 [!INCLUDE [SQL Server SQL Database](../../includes/applies-to-version/sql-asdb.md)]
@@ -44,10 +44,10 @@ EncryptByAsymKey ( Asym_Key_ID , { 'plaintext' | @plaintext } )
 
 ## <a name="arguments"></a>인수
 *asym_key_ID*  
-데이터베이스에 있는 비대칭 키의 ID입니다. *asym_key_ID*는 **int** 데이터 형식을 갖습니다.  
+데이터베이스에 있는 비대칭 키의 ID입니다. *asym_key_ID* 는 **int** 데이터 형식을 갖습니다.  
   
 *일반 텍스트(cleartext)*  
-`ENCRYPTBYASYMKEY`는 비대칭 키로 암호화할 데이터 문자열입니다. *cleartext*에는 다음이 있을 수 있습니다
+`ENCRYPTBYASYMKEY`는 비대칭 키로 암호화할 데이터 문자열입니다. *cleartext* 에는 다음이 있을 수 있습니다
  
 + **binary**
 + **char**
@@ -77,12 +77,12 @@ EncryptByAsymKey ( Asym_Key_ID , { 'plaintext' | @plaintext } )
 데이터 형식입니다.  
   
 ## <a name="return-types"></a>반환 형식  
-최대 크기가 8,000바이트인 **varbinary**입니다.  
+최대 크기가 8,000바이트인 **varbinary** 입니다.  
   
 ## <a name="remarks"></a>설명  
 비대칭 키를 사용하는 암호화 및 암호 해독 작업은 상당한 리소스를 소비하므로 대칭 키 암호화 및 해독 작업과 비교하여 비용이 많이 듭니다. 개발자는 큰 데이터 세트(예: 데이터베이스 테이블에 저장된 사용자 데이터 세트)에서 비대칭 키 암호화 및 암호 해독 작업을 피하는 것이 좋습니다. 대신 개발자는 먼저 강력한 대칭 키로 해당 데이터를 암호화한 다음, 비대칭 키로 해당 대칭 키를 암호화는 것이 좋습니다.  
   
-알고리즘에 따라 입력이 특정 바이트 수를 초과할 경우 `ENCRYPTBYASYMKEY`는 **NULL**을 반환합니다. 특정 제한은 다음과 같습니다.
+알고리즘에 따라 입력이 특정 바이트 수를 초과할 경우 `ENCRYPTBYASYMKEY`는 **NULL** 을 반환합니다. 특정 제한은 다음과 같습니다.
 
 + 512비트 RSA 키는 최대 53바이트를 암호화할 수 있습니다.
 + 1024비트 키는 최대 117바이트를 암호화할 수 있습니다.

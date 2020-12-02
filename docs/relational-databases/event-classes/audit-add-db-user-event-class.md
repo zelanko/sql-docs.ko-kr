@@ -14,17 +14,17 @@ author: stevestein
 ms.author: sstein
 monikerRange: =azuresqldb-current||>=sql-server-2016||=sqlallproducts-allversions||>=sql-server-linux-2017||=azuresqldb-mi-current
 ms.openlocfilehash: b953d49716cb6a99879ebc94c750fc1e765916e8
-ms.sourcegitcommit: e700497f962e4c2274df16d9e651059b42ff1a10
+ms.sourcegitcommit: 192f6a99e19e66f0f817fdb1977f564b2aaa133b
 ms.translationtype: HT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 08/17/2020
-ms.locfileid: "88385339"
+ms.lasthandoff: 11/25/2020
+ms.locfileid: "96128793"
 ---
 # <a name="audit-add-db-user-event-class"></a>Audit Add DB User 이벤트 클래스
 
 [!INCLUDE [sql-asdb.md](../../includes/applies-to-version/sql-asdb.md)]
 
-  **Audit Add DB User** 이벤트 클래스는 데이터베이스 사용자 로그인이 데이터베이스에 추가 또는 제거될 때마다 발생합니다. 이 이벤트 클래스는 **sp_grantdbaccess**, **sp_revokedbaccess**, **sp_adduser**및 **sp_dropuser** 저장 프로시저에 사용됩니다.  
+  **Audit Add DB User** 이벤트 클래스는 데이터베이스 사용자 로그인이 데이터베이스에 추가 또는 제거될 때마다 발생합니다. 이 이벤트 클래스는 **sp_grantdbaccess**, **sp_revokedbaccess**, **sp_adduser** 및 **sp_dropuser** 저장 프로시저에 사용됩니다.  
   
  이 이벤트 클래스는 나중 버전의 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]에서 제거될 수 있으므로 **Audit Database Principal Management** 이벤트 클래스를 대신 사용하는 것이 좋습니다.  
   
@@ -49,7 +49,7 @@ ms.locfileid: "88385339"
 |**NTUserName**|**nvarchar**|Windows 사용자 이름입니다.|6|예|  
 |**OwnerName**|**nvarchar**|개체 소유자의 데이터베이스 사용자 이름입니다.|37|예|  
 |**RequestID**|**int**|문을 포함하는 요청의 ID입니다.|49|예|  
-|**RoleName**|**nvarchar**|멤버 자격이 수정되는 데이터베이스 역할의 이름입니다( **sp_adduser**와 함께 사용된 경우).|38|예|  
+|**RoleName**|**nvarchar**|멤버 자격이 수정되는 데이터베이스 역할의 이름입니다( **sp_adduser** 와 함께 사용된 경우).|38|예|  
 |**데이터 열이 추적에서 캡처되고 서버를 사용할 수 있으면**|**nvarchar**|추적 중인 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 인스턴스의 이름입니다.|26||  
 |**SessionLoginName**|**Nvarchar**|세션을 시작한 사용자의 로그인 이름입니다. 예를 들어 Login1을 사용하여 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 에 연결하고 Login2로 문을 실행할 경우 **SessionLoginName** 은 Login1을 표시하고 **LoginName** 은 Login2를 표시합니다. 이 열은 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 및 Windows 로그인을 모두 표시합니다.|64|예|  
 |**SPID**|**int**|이벤트가 발생한 세션의 ID입니다.|12|예|  

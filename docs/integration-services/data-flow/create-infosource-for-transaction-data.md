@@ -12,11 +12,11 @@ ms.assetid: ab5f23e2-cd4e-4507-83d9-ac5ef721c171
 author: chugugrace
 ms.author: chugu
 ms.openlocfilehash: 5b37416ef8283f32909b216508defda671080e30
-ms.sourcegitcommit: e700497f962e4c2274df16d9e651059b42ff1a10
+ms.sourcegitcommit: 192f6a99e19e66f0f817fdb1977f564b2aaa133b
 ms.translationtype: HT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 08/17/2020
-ms.locfileid: "88495934"
+ms.lasthandoff: 11/25/2020
+ms.locfileid: "96127266"
 ---
 # <a name="create-infosource-for-transaction-data"></a>트랜잭션 데이터용 InfoSource 만들기
 
@@ -25,7 +25,7 @@ ms.locfileid: "88495934"
 
   **트랜잭션 데이터용 InfoSource 만들기** 대화 상자를 사용하여 SAP Netweaver BW 시스템에서 트랜잭션 데이터용으로 새 InfoSource를 만들 수 있습니다.  
   
- **트랜잭션 데이터용 InfoSource 만들기** 대화 상자는 **SAP BW 대상 편집기** 의 **연결 관리자**페이지에서 열 수 있습니다. SAP BW 대상에 대한 자세한 내용은 [SAP BW Destination](../../integration-services/data-flow/sap-bw-destination.md)을 참조하세요.  
+ **트랜잭션 데이터용 InfoSource 만들기** 대화 상자는 **SAP BW 대상 편집기** 의 **연결 관리자** 페이지에서 열 수 있습니다. SAP BW 대상에 대한 자세한 내용은 [SAP BW Destination](../../integration-services/data-flow/sap-bw-destination.md)을 참조하세요.  
   
 > [!IMPORTANT]  
 >  SAP BW용 Microsoft Connector 1.1 설명서는 SAP Netweaver BW 환경에 익숙한 것으로 가정합니다. SAP Netweaver BW 또는 SAP Netweaver BW 개체 및 프로세스 구성 방법에 대한 자세한 내용은 SAP 설명서를 참조하십시오.  
@@ -36,11 +36,11 @@ ms.locfileid: "88495934"
   
 2.  **데이터 흐름** 탭에서 SAP BW 대상을 두 번 클릭합니다.  
   
-3.  **SAP BW 대상 편집기**에서 **연결 관리자** 를 클릭하여 편집기의 **연결 관리자** 페이지를 엽니다.  
+3.  **SAP BW 대상 편집기** 에서 **연결 관리자** 를 클릭하여 편집기의 **연결 관리자** 페이지를 엽니다.  
   
-4.  **연결 관리자** 페이지의 **SAP BW 개체 만들기** 그룹 상자에서 **InfoSource**를 선택한 다음 **만들기**를 클릭합니다.  
+4.  **연결 관리자** 페이지의 **SAP BW 개체 만들기** 그룹 상자에서 **InfoSource** 를 선택한 다음 **만들기** 를 클릭합니다.  
   
-5.  **InfoSource 만들기** 대화 상자에서 **트랜잭션 데이터**를 선택한 다음 **확인**을 클릭합니다.  
+5.  **InfoSource 만들기** 대화 상자에서 **트랜잭션 데이터** 를 선택한 다음 **확인** 을 클릭합니다.  
   
 ## <a name="general-options"></a>일반 옵션  
  **InfoSource 이름**  
@@ -68,17 +68,17 @@ ms.locfileid: "88495934"
  데이터 흐름 열의 [!INCLUDE[ssISnoversion](../../includes/ssisnoversion-md.md)] 데이터 형식을 표시합니다.  
   
  **Iobject - 검색**  
- 기존 InfoObject를 현재 행의 데이터 흐름 열에 연결합니다. 이 연결을 만들려면 **검색**을 클릭한 다음 **InfoObject 조회** 대화 상자를 사용하여 기존 InfoObject를 선택합니다. 이 대화 상자에 대한 자세한 내용은 [Look Up InfoObject](../../integration-services/data-flow/look-up-infoobject.md)을 참조하십시오.  
+ 기존 InfoObject를 현재 행의 데이터 흐름 열에 연결합니다. 이 연결을 만들려면 **검색** 을 클릭한 다음 **InfoObject 조회** 대화 상자를 사용하여 기존 InfoObject를 선택합니다. 이 대화 상자에 대한 자세한 내용은 [Look Up InfoObject](../../integration-services/data-flow/look-up-infoobject.md)을 참조하십시오.  
   
  기존 InfoObject를 선택한 후 **InfoObject** 및 **유형** 열이 선택한 값으로 채워집니다.  
   
  **Iobject - 새로 만들기**  
- 새 InfoObject를 만들고 이 InfoObject를 현재 행의 데이터 흐름 열에 연결합니다. 새 InfoObject를 만들려면 **새로 만들기**를 클릭한 다음 **새 InfoObject 만들기** 대화 상자를 사용하여 InfoObject를 만듭니다. 이 대화 상자에 대한 자세한 내용은 [Create New InfoObject](../../integration-services/data-flow/create-new-infoobject.md)을 참조하십시오.  
+ 새 InfoObject를 만들고 이 InfoObject를 현재 행의 데이터 흐름 열에 연결합니다. 새 InfoObject를 만들려면 **새로 만들기** 를 클릭한 다음 **새 InfoObject 만들기** 대화 상자를 사용하여 InfoObject를 만듭니다. 이 대화 상자에 대한 자세한 내용은 [Create New InfoObject](../../integration-services/data-flow/create-new-infoobject.md)을 참조하십시오.  
   
  새 InfoObject를 만든 후 **InfoObject** 및 **유형** 열이 새 값으로 채워집니다.  
   
  **Iobject - 제거**  
- InfoObject와 현재 행의 데이터 흐름 열 간의 연결을 제거합니다. 이 연결을 제거하려면 **제거**를 클릭합니다.  
+ InfoObject와 현재 행의 데이터 흐름 열 간의 연결을 제거합니다. 이 연결을 제거하려면 **제거** 를 클릭합니다.  
   
  **InfoObject**  
  데이터 흐름 열과 연결된 InfoObject의 이름을 표시합니다.  

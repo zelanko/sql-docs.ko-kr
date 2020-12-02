@@ -28,20 +28,20 @@ ms.assetid: 689297f3-adb0-4d8d-bf62-cfda26210164
 author: MightyPen
 ms.author: genemi
 ms.openlocfilehash: 560e3b6ff5b9beeed4dcf93f831a51b941b9d74e
-ms.sourcegitcommit: da88320c474c1c9124574f90d549c50ee3387b4c
+ms.sourcegitcommit: 192f6a99e19e66f0f817fdb1977f564b2aaa133b
 ms.translationtype: HT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 07/01/2020
-ms.locfileid: "85729974"
+ms.lasthandoff: 11/25/2020
+ms.locfileid: "96126314"
 ---
 # <a name="examples-using-openxml"></a>예제: OPENXML 사용
 [!INCLUDE [SQL Server Azure SQL Database](../../includes/applies-to-version/sql-asdb.md)]
   이 항목의 예제에서는 XML 문서의 행 집합 뷰를 만들 때 OPENXML을 사용하는 방법을 설명합니다. OPENXML 구문에 대한 자세한 내용은 [OPENXML&#40;Transact-SQL&#41;](../../t-sql/functions/openxml-transact-sql.md)을 참조하세요. 다음 예에서는 OPENXML의 메타 속성 지정을 제외한 OPENXML의 모든 측면을 보여 줍니다. OPENXML에서 메타 속성을 지정하는 방법은 [OPENXML에 메타 속성 지정](../../relational-databases/xml/specify-metaproperties-in-openxml.md)을 참조하세요.  
   
 ## <a name="examples"></a>예제  
- 데이터를 검색할 때 XML 문서에서 행을 결정하는 노드를 식별하는 데 *rowpattern* 이 사용됩니다. 또한 MSXML XPath 구현에 사용된 XPath 패턴 언어에 *rowpattern* 이 표현됩니다. 예를 들어 패턴이 요소나 특성으로 끝나는 경우에는 *rowpattern*에 의해 지정된 각 요소 또는 특성 노드에 대해 한 개의 행이 생성됩니다.  
+ 데이터를 검색할 때 XML 문서에서 행을 결정하는 노드를 식별하는 데 *rowpattern* 이 사용됩니다. 또한 MSXML XPath 구현에 사용된 XPath 패턴 언어에 *rowpattern* 이 표현됩니다. 예를 들어 패턴이 요소나 특성으로 끝나는 경우에는 *rowpattern* 에 의해 지정된 각 요소 또는 특성 노드에 대해 한 개의 행이 생성됩니다.  
   
- *flags* 값은 기본 매핑을 제공합니다. *ColPattern* 이 *SchemaDeclaration*에 지정되지 않은 경우 *flags* 에 지정된 매핑이 간주됩니다. *ColPattern* 이 *SchemaDeclaration* 에 지정된 경우에는 *flags*값이 무시됩니다. 지정된 *ColPattern* 은 매핑(특성 중심 또는 요소 중심)은 물론, 오버플로와 소비되지 않은 데이터를 처리할 때의 동작도 결정합니다.  
+ *flags* 값은 기본 매핑을 제공합니다. *ColPattern* 이 *SchemaDeclaration* 에 지정되지 않은 경우 *flags* 에 지정된 매핑이 간주됩니다. *ColPattern* 이 *SchemaDeclaration* 에 지정된 경우에는 *flags* 값이 무시됩니다. 지정된 *ColPattern* 은 매핑(특성 중심 또는 요소 중심)은 물론, 오버플로와 소비되지 않은 데이터를 처리할 때의 동작도 결정합니다.  
   
 ### <a name="a-executing-a-simple-select-statement-with-openxml"></a>A. OPENXML에서 단순 SELECT 문 실행  
  이 예의 XML 문서는 <`Customer`>, <`Order`> 및 <`OrderDetail`> 요소로 이루어져 있습니다. OPENXML 문은 XML 문서로부터 두 열( **CustomerID** 및 **ContactName**)로 구성된 행 집합의 고객 정보를 검색합니다.  
@@ -52,9 +52,9 @@ ms.locfileid: "85729974"
   
 -   *rowpattern*(/ROOT/Customer)은 처리할 <`Customer`> 노드를 식별합니다.  
   
--   *flags* 매개 변수 값은 **1** 로 설정되어 특성 중심의 매핑을 나타냅니다. 결과적으로 XML 특성은 *SchemaDeclaration*에 정의된 행 집합의 열에 매핑됩니다.  
+-   *flags* 매개 변수 값은 **1** 로 설정되어 특성 중심의 매핑을 나타냅니다. 결과적으로 XML 특성은 *SchemaDeclaration* 에 정의된 행 집합의 열에 매핑됩니다.  
   
--   WITH 절의 *SchemaDeclaration*에서는 지정된 *ColName* 값이 해당 XML 특성 이름과 일치합니다. 따라서 *ColPattern* 매개 변수는 *SchemaDeclaration*에 지정되지 않습니다.  
+-   WITH 절의 *SchemaDeclaration* 에서는 지정된 *ColName* 값이 해당 XML 특성 이름과 일치합니다. 따라서 *ColPattern* 매개 변수는 *SchemaDeclaration* 에 지정되지 않습니다.  
   
  그런 다음 SELECT 문은 OPENXML이 제공하는 행 집합의 모든 열을 검색합니다.  
   
@@ -95,7 +95,7 @@ VINET      Paul Henriot
 LILAS      Carlos Gonzlez  
 ```  
   
- <`Customer`> 요소에는 하위 요소가 없기 때문에 *flags*가 **2**로 설정되어 요소 중심 매핑을 나타내도록 같은 SELECT 문이 실행되는 경우 두 고객에 대한 **CustomerID** 및 **ContactName**의 값은 NULL로 반환됩니다.  
+ <`Customer`> 요소에는 하위 요소가 없기 때문에 *flags* 가 **2** 로 설정되어 요소 중심 매핑을 나타내도록 같은 SELECT 문이 실행되는 경우 두 고객에 대한 **CustomerID** 및 **ContactName** 의 값은 NULL로 반환됩니다.  
   
  \@xmlDocument는 **xml** 형식 또는 **(n)varchar(max)** 형식일 수 있습니다.  
   
@@ -145,7 +145,7 @@ LILAS      Carlos Gonzlez
 ### <a name="b-specifying-colpattern-for-mapping-between-rowset-columns-and-the-xml-attributes-and-elements"></a>B. 행 집합 열과 XML 특성 및 요소 간의 매핑을 위해 ColPattern 지정  
  이 예제에서는 행 집합 열과 XML 특성 및 요소 간에 매핑을 제공하기 위해 선택 사항인 *ColPattern* 매개 변수에 XPath 패턴을 지정하는 방법을 보여 줍니다.  
   
- 이 예의 XML 문서는 <`Customer`>, <`Order`> 및 <`OrderDetail`> 요소로 이루어져 있습니다. OPENXML 문은 고객과 주문 정보를 XML 문서로부터 행 집합(**CustomerID**, **OrderDate**, **ProdID**및 **Qty**)으로 검색합니다.  
+ 이 예의 XML 문서는 <`Customer`>, <`Order`> 및 <`OrderDetail`> 요소로 이루어져 있습니다. OPENXML 문은 고객과 주문 정보를 XML 문서로부터 행 집합(**CustomerID**, **OrderDate**, **ProdID** 및 **Qty**)으로 검색합니다.  
   
  먼저 **sp_xml_preparedocument** 저장 프로시저가 문서 핸들을 얻기 위해 호출됩니다. 이 문서 핸들은 OPENXML에 전달됩니다.  
   
@@ -155,11 +155,11 @@ LILAS      Carlos Gonzlez
   
  이해를 돕기 위해 *flags* 매개 변수 값은 **2** 로 설정되어 특성 중심의 매핑을 나타냅니다. 하지만 *ColPattern* 에 지정된 매핑은 이 매핑을 덮어 씁니다. 즉, *ColPattern* 에 지정된 XPath 패턴은 행 집합의 열을 특성으로 매핑합니다. 그러면 특성 중심 매핑이 됩니다.  
   
- WITH 절에 있는 *SchemaDeclaration*에서는 *ColPattern* 도 *ColName* 및 *ColType* 매개 변수로 지정됩니다. 선택 항목인 *ColPattern* 은 지정된 XPath 패턴이며 다음을 나타냅니다.  
+ WITH 절에 있는 *SchemaDeclaration* 에서는 *ColPattern* 도 *ColName* 및 *ColType* 매개 변수로 지정됩니다. 선택 항목인 *ColPattern* 은 지정된 XPath 패턴이며 다음을 나타냅니다.  
   
--   행 집합의 **OrderID**, **CustomerID** 및 **OrderDate** 열은 *rowpattern*에 의해 식별되는 노드의 부모 노드 특성으로 매핑되고 *rowpattern*은 <`OrderDetail`> 노드를 식별합니다. 따라서 **CustomerID** 및 **OrderDate** 열은 <`Order`> 요소의 **CustomerID** 및 **OrderDate** 특성으로 매핑됩니다.  
+-   행 집합의 **OrderID**, **CustomerID** 및 **OrderDate** 열은 *rowpattern* 에 의해 식별되는 노드의 부모 노드 특성으로 매핑되고 *rowpattern* 은 <`OrderDetail`> 노드를 식별합니다. 따라서 **CustomerID** 및 **OrderDate** 열은 <`Order`> 요소의 **CustomerID** 및 **OrderDate** 특성으로 매핑됩니다.  
   
--   행 집합의 **ProdID** 및 **Qty** 열은 **rowpattern** 에서 식별된 노드의 **ProductID** 및 *Quantity*특성으로 매핑됩니다.  
+-   행 집합의 **ProdID** 및 **Qty** 열은 **rowpattern** 에서 식별된 노드의 **ProductID** 및 *Quantity* 특성으로 매핑됩니다.  
   
  그런 다음 SELECT 문은 OPENXML이 제공하는 행 집합의 모든 열을 검색합니다.  
   
@@ -283,10 +283,10 @@ VINET      Paul Henriot
 LILAS      Carlos Gonzlez  
 ```  
   
- 특성 중심의 매핑은 **CustomerID**에 대해 적용됩니다. <`Customer`> 요소에는 **ContactName** 특성이 없습니다. 따라서 요소 중심 매핑이 적용됩니다.  
+ 특성 중심의 매핑은 **CustomerID** 에 대해 적용됩니다. <`Customer`> 요소에는 **ContactName** 특성이 없습니다. 따라서 요소 중심 매핑이 적용됩니다.  
   
 ### <a name="d-specifying-the-text-xpath-function-as-colpattern"></a>D. text() XPath 함수를 ColPattern으로 지정  
- 이 예의 XML 문서는 <`Customer`> 및 <`Order`> 요소로 이루어져 있습니다. OPENXML 문은 <`Order`> 요소의 **oid** 특성, *rowpattern*으로 식별된 노드에 대한 부모 노드의 ID 및 요소 콘텐츠의 리프 값 문자열로 구성된 행 집합을 검색합니다.  
+ 이 예의 XML 문서는 <`Customer`> 및 <`Order`> 요소로 이루어져 있습니다. OPENXML 문은 <`Order`> 요소의 **oid** 특성, *rowpattern* 으로 식별된 노드에 대한 부모 노드의 ID 및 요소 콘텐츠의 리프 값 문자열로 구성된 행 집합을 검색합니다.  
   
  먼저 **sp_xml_preparedocument** 저장 프로시저가 문서 핸들을 얻기 위해 호출됩니다. 이 문서 핸들은 OPENXML에 전달됩니다.  
   
@@ -294,9 +294,9 @@ LILAS      Carlos Gonzlez
   
 -   *rowpattern*(/root/Customer/Order)은 처리할 <`Order`> 노드를 식별합니다.  
   
--   *flags* 매개 변수 값은 **1** 로 설정되어 특성 중심의 매핑을 나타냅니다. 결과적으로 XML 특성은 *SchemaDeclaration*에 정의된 행 집합 열에 매핑됩니다.  
+-   *flags* 매개 변수 값은 **1** 로 설정되어 특성 중심의 매핑을 나타냅니다. 결과적으로 XML 특성은 *SchemaDeclaration* 에 정의된 행 집합 열에 매핑됩니다.  
   
--   WITH 절에 있는 *SchemaDeclaration* 에서는 행 집합 열 이름 **oid** 와 **amount** 가 해당 XML 특성 이름과 일치합니다. 따라서 *ColPattern* 매개 변수는 지정되지 않습니다. 행 집합의 **comment** 열에 대해서는 XPath 함수 **text()** 가 *ColPattern*으로 지정됩니다. 이것은 *flags*에 지정된 특성 중심의 매핑을 덮어쓰며 열에는 요소 내용의 리프 값 문자열이 포함됩니다.  
+-   WITH 절에 있는 *SchemaDeclaration* 에서는 행 집합 열 이름 **oid** 와 **amount** 가 해당 XML 특성 이름과 일치합니다. 따라서 *ColPattern* 매개 변수는 지정되지 않습니다. 행 집합의 **comment** 열에 대해서는 XPath 함수 **text()** 가 *ColPattern* 으로 지정됩니다. 이것은 *flags* 에 지정된 특성 중심의 매핑을 덮어쓰며 열에는 요소 내용의 리프 값 문자열이 포함됩니다.  
   
  그런 다음 SELECT 문은 OPENXML이 제공하는 행 집합의 모든 열을 검색합니다.  
   
@@ -343,9 +343,9 @@ O4    10000.0       NULL
 ```  
   
 ### <a name="e-specifying-tablename-in-the-with-clause"></a>E. WITH 절에 TableName 지정  
- 이 예에서는 WITH 절에서 *SchemaDeclaration* 대신 *TableName*을 지정합니다. 이것은 원하는 구조를 가지고 있고 열 패턴 *ColPattern* 매개 변수는 필요하지 않은 테이블을 사용하는 경우에 유용합니다.  
+ 이 예에서는 WITH 절에서 *SchemaDeclaration* 대신 *TableName* 을 지정합니다. 이것은 원하는 구조를 가지고 있고 열 패턴 *ColPattern* 매개 변수는 필요하지 않은 테이블을 사용하는 경우에 유용합니다.  
   
- 이 예의 XML 문서는 <`Customer`> 및 <`Order`> 요소로 이루어져 있습니다. OPENXML 문은 XML 문서로부터 세 열로 구성된 행 집합(**oid**, **date**및 **amount**)의 주문 정보를 검색합니다.  
+ 이 예의 XML 문서는 <`Customer`> 및 <`Order`> 요소로 이루어져 있습니다. OPENXML 문은 XML 문서로부터 세 열로 구성된 행 집합(**oid**, **date** 및 **amount**)의 주문 정보를 검색합니다.  
   
  먼저 **sp_xml_preparedocument** 저장 프로시저가 문서 핸들을 얻기 위해 호출됩니다. 이 문서 핸들은 OPENXML에 전달됩니다.  
   
@@ -355,7 +355,7 @@ O4    10000.0       NULL
   
 -   WITH 절에는 *SchemaDeclaration* 이 없습니다. 그 대신 테이블 이름이 지정됩니다. 따라서 테이블 스키마가 행 집합 스키마로 사용됩니다.  
   
--   *flags* 매개 변수 값은 **1** 로 설정되어 특성 중심의 매핑을 나타냅니다. 따라서 *rowpattern*으로 식별되는 요소의 특성은 동일한 이름의 행 집합 열에 매핑됩니다.  
+-   *flags* 매개 변수 값은 **1** 로 설정되어 특성 중심의 매핑을 나타냅니다. 따라서 *rowpattern* 으로 식별되는 요소의 특성은 동일한 이름의 행 집합 열에 매핑됩니다.  
   
  그런 다음 SELECT 문은 OPENXML이 제공하는 행 집합의 모든 열을 검색합니다.  
   
@@ -464,23 +464,23 @@ EXEC sp_xml_removedocument @docHandle
     ```  
   
 ### <a name="g-specifying-rowpattern-ending-with-an-attribute"></a>G. 특성으로 끝나는 rowpattern 지정  
- 이 예의 XML 문서는 <`Customer`>, <`Order`> 및 <`OrderDetail`> 요소로 이루어져 있습니다. OPENXML 문은 XML 문서로부터 세 열로 구성된 행 집합(**ProductID**, **Quantity**및 **OrderID**)의 주문 정보를 검색합니다.  
+ 이 예의 XML 문서는 <`Customer`>, <`Order`> 및 <`OrderDetail`> 요소로 이루어져 있습니다. OPENXML 문은 XML 문서로부터 세 열로 구성된 행 집합(**ProductID**, **Quantity** 및 **OrderID**)의 주문 정보를 검색합니다.  
   
  먼저 **sp_xml_preparedocument** 가 문서 핸들을 얻기 위해 호출됩니다. 이 문서 핸들은 OPENXML에 전달됩니다.  
   
  OPENXML 문에서는 다음을 보여 줍니다.  
   
--   *rowpattern*(/ROOT/Customer/Order/OrderDetail/\@ProductID)은 XML 특성 **ProductID**로 끝납니다. 결과 행 집합에서는 XML 문서에서 선택된 각 특성 노드에 대해 행이 만들어집니다.  
+-   *rowpattern*(/ROOT/Customer/Order/OrderDetail/\@ProductID)은 XML 특성 **ProductID** 로 끝납니다. 결과 행 집합에서는 XML 문서에서 선택된 각 특성 노드에 대해 행이 만들어집니다.  
   
 -   이 예제에는 *flags* 매개 변수가 지정되지 않습니다. 그 대신 *ColPattern* 매개 변수에 의해 매핑이 지정됩니다.  
   
  WITH 절에 있는 *SchemaDeclaration* 에서는 *ColPattern* 도 *ColName* 및 *ColType* 매개 변수로 지정됩니다. 선택 사항인 *ColPattern* 은 다음을 나타내기 위해 지정된 XPath 패턴입니다.  
   
--   행 집합의**ProdID**열에 대해 *ColPattern* 으로 지정된 XPath 패턴( **.** )은 컨텍스트 노드인 현재 노드를 식별합니다. 지정된 *rowpattern*에 따른 <`OrderDetail`> 요소의 **ProductID** 특성입니다.  
+-   행 집합의 **ProdID** 열에 대해 *ColPattern* 으로 지정된 XPath 패턴( **.** )은 컨텍스트 노드인 현재 노드를 식별합니다. 지정된 *rowpattern* 에 따른 <`OrderDetail`> 요소의 **ProductID** 특성입니다.  
   
--   행 집합에 있는 **Qty** 열에 대해 지정된 *ColPattern*, **../\@Quantity**는 컨텍스트 노드 \<ProductID>의 노드인 부모 <`OrderDetail`>의 **Quantity** 특성을 식별합니다.  
+-   행 집합에 있는 **Qty** 열에 대해 지정된 *ColPattern*, **../\@Quantity** 는 컨텍스트 노드 \<ProductID>의 노드인 부모 <`OrderDetail`>의 **Quantity** 특성을 식별합니다.  
   
--   이와 비슷하게 행 집합에 있는 **OID** 열에 지정된 *ColPattern*, **../../\@OrderID**는 컨텍스트 노드에 대한 부모 노드의 부모 <`Order`>의 **OrderID** 특성을 식별합니다. 부모 노드는 <`OrderDetail`>이고 컨텍스트 노드는 <`ProductID`>입니다.  
+-   이와 비슷하게 행 집합에 있는 **OID** 열에 지정된 *ColPattern*, **../../\@OrderID** 는 컨텍스트 노드에 대한 부모 노드의 부모 <`Order`>의 **OrderID** 특성을 식별합니다. 부모 노드는 <`OrderDetail`>이고 컨텍스트 노드는 <`ProductID`>입니다.  
   
  그런 다음 SELECT 문은 OPENXML이 제공하는 행 집합의 모든 열을 검색합니다.  
   
@@ -525,7 +525,7 @@ ProdID      Qty         OID
 ```  
   
 ### <a name="h-specifying-an-xml-document-that-has-multiple-text-nodes"></a>H. 여러 개의 텍스트 노드가 있는 XML 문서 지정  
- XML 문서에 텍스트 노드가 여러 개 있는 경우 *text()* **ColPattern**을 포함한 SELECT 문은 전체가 아닌 첫 번째 텍스트 노드만 반환합니다. 예를 들면 다음과 같습니다.  
+ XML 문서에 텍스트 노드가 여러 개 있는 경우 *text()* **ColPattern** 을 포함한 SELECT 문은 전체가 아닌 첫 번째 텍스트 노드만 반환합니다. 예를 들면 다음과 같습니다.  
   
 ```  
 DECLARE @h int  
@@ -542,7 +542,7 @@ SELECT * FROM openxml(@h, '/root/b:Elem')
 EXEC sp_xml_removedocument @h  
 ```  
   
- SELECT 문은 **TaU** 가 아닌 **T**를 결과로 반환합니다.  
+ SELECT 문은 **TaU** 가 아닌 **T** 를 결과로 반환합니다.  
   
 ### <a name="i-specifying-the-xml-data-type-in-the-with-clause"></a>9\. WITH 절에서 xml 데이터 형식 지정  
  WITH 절에서 형식화된 열 및 형식화되지 않은 열을 모두 포함하여 **xml** 데이터 형식 열로 매핑된 열 패턴은 빈 시퀀스나 요소 시퀀스, 처리 명령, 텍스트 노드 및 주석을 반환해야 합니다. 데이터는 **xml** 데이터 형식으로 캐스팅됩니다.  
@@ -612,11 +612,11 @@ id  lname   xmlname                   OverFlow
   
 -   \<Student>  
   
-     **id** (학생 ID), **name**및 **attends** 특성입니다. **attends** 특성은 다중 값 특성입니다.  
+     **id** (학생 ID), **name** 및 **attends** 특성입니다. **attends** 특성은 다중 값 특성입니다.  
   
 -   \<Class>  
   
-     **id** (학생 ID), **name**및 **attendedBy** 특성입니다. **attendedBy** 특성은 다중 값 특성입니다.  
+     **id** (학생 ID), **name** 및 **attendedBy** 특성입니다. **attendedBy** 특성은 다중 값 특성입니다.  
   
  \<Student>에 있는 **attends** 특성과 \<Class>에 있는 **attendedBy** 특성은 학생과 Student 및 Class 테이블 간의 **m:n** 관계를 나타냅니다. 학생은 여러 개의 수업을 받을 수 있고 한 수업에는 여러 학생이 있을 수 있습니다.  
   

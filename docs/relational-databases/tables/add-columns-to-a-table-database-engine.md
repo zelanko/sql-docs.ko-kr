@@ -17,11 +17,11 @@ author: stevestein
 ms.author: sstein
 monikerRange: '>=aps-pdw-2016||=azuresqldb-current||=azure-sqldw-latest||>=sql-server-2016||=sqlallproducts-allversions||>=sql-server-linux-2017||=azuresqldb-mi-current'
 ms.openlocfilehash: ad7cb3cdba7b9b20a28362b8570cc6e2fc0b04d1
-ms.sourcegitcommit: e700497f962e4c2274df16d9e651059b42ff1a10
+ms.sourcegitcommit: 192f6a99e19e66f0f817fdb1977f564b2aaa133b
 ms.translationtype: HT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 08/17/2020
-ms.locfileid: "88473080"
+ms.lasthandoff: 11/25/2020
+ms.locfileid: "96128756"
 ---
 # <a name="add-columns-to-a-table-database-engine"></a>테이블에 열 추가(데이터베이스 엔진)
 
@@ -45,7 +45,7 @@ ms.locfileid: "88473080"
 
 ### <a name="to-insert-columns-into-a-table-with-table-designer"></a>테이블 디자이너에서 테이블에 열을 삽입하려면
 
-1. **개체 탐색기**에서 열을 추가할 테이블을 마우스 오른쪽 단추로 클릭하고 **디자인**을 선택합니다.
+1. **개체 탐색기** 에서 열을 추가할 테이블을 마우스 오른쪽 단추로 클릭하고 **디자인** 을 선택합니다.
 2. **열 이름** 열에서 첫 번째 빈 셀을 클릭합니다.
 3. 셀에 열 이름을 입력합니다. 열 이름은 반드시 입력해야 합니다.
 4. Tab 키를 눌러 **데이터 형식** 셀로 이동한 다음 드롭다운에서 데이터 형식을 선택합니다.
@@ -53,14 +53,14 @@ ms.locfileid: "88473080"
    필수 값이며, 사용자가 이 값을 선택하지 않으면 기본값이 할당됩니다.
 
    > [!NOTE]
-   > **데이터베이스 도구** 아래의 **옵션**대화 상자에서 기본값을 변경할 수 있습니다.
+   > **데이터베이스 도구** 아래의 **옵션** 대화 상자에서 기본값을 변경할 수 있습니다.
 
 5. **열 속성** 탭에서 다른 열 속성을 계속 정의합니다.
 
     > [!NOTE]
     >  새 열을 만들면 열 속성에 기본값이 자동으로 추가됩니다. 이러한 값은 **열 속성** 탭에서 변경할 수 있습니다.
 
-6. 열을 모두 추가했으면 **파일** 메뉴에서 ‘테이블 이름’ **저장을 선택합니다.** __
+6. 열을 모두 추가했으면 **파일** 메뉴에서 ‘테이블 이름’ **저장을 선택합니다.** 
   
 ## <a name="using-transact-sql"></a><a name="TsqlProcedure"></a> Transact-SQL 사용
   

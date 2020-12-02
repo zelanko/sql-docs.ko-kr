@@ -22,11 +22,11 @@ ms.assetid: cf891206-c49f-40eb-858e-eefd2b638a33
 author: markingmyname
 ms.author: maghan
 ms.openlocfilehash: 862e7aa70a3d26f5555c5f809d5fb24137de1a40
-ms.sourcegitcommit: cc23d8646041336d119b74bf239a6ac305ff3d31
+ms.sourcegitcommit: 192f6a99e19e66f0f817fdb1977f564b2aaa133b
 ms.translationtype: HT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 09/23/2020
-ms.locfileid: "91116102"
+ms.lasthandoff: 11/25/2020
+ms.locfileid: "96128541"
 ---
 # <a name="col_length-transact-sql"></a>COL_LENGTH(Transact-SQL)
 [!INCLUDE [SQL Server SQL Database](../../includes/applies-to-version/sql-asdb.md)]
@@ -45,10 +45,10 @@ COL_LENGTH ( 'table' , 'column' )
 
 ## <a name="arguments"></a>인수
 **'** *table* **'**  
-열 길이 정보를 확인하려는 테이블의 이름입니다. *table*은 **nvarchar** 형식의 식입니다.
+열 길이 정보를 확인하려는 테이블의 이름입니다. *table* 은 **nvarchar** 형식의 식입니다.
   
 **'** *column* **'**  
-확인하려는 길이의 열 이름입니다. *column*은 **nvarchar** 형식의 식입니다.
+확인하려는 길이의 열 이름입니다. *column* 은 **nvarchar** 형식의 식입니다.
   
 ## <a name="return-type"></a>반환 형식
 **smallint**

@@ -10,14 +10,14 @@ ms.reviewer: ''
 ms.technology: backup-restore
 ms.topic: conceptual
 ms.assetid: f7008339-e69d-4e20-9265-d649da670460
-author: MikeRayMSFT
-ms.author: mikeray
-ms.openlocfilehash: e79840f828a7891ac3e01cd52721eb5755a97c7b
-ms.sourcegitcommit: 04cf7905fa32e0a9a44575a6f9641d9a2e5ac0f8
+author: cawrites
+ms.author: chadam
+ms.openlocfilehash: ef69119a6e9b18d2bbe8008cf4113a0181ce74eb
+ms.sourcegitcommit: 5a1ed81749800c33059dac91b0e18bd8bb3081b1
 ms.translationtype: HT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 10/07/2020
-ms.locfileid: "91809249"
+ms.lasthandoff: 11/23/2020
+ms.locfileid: "96129361"
 ---
 # <a name="back-up-multiple-databases-to-azure-blob-storage---powershell"></a>Azure Blob Storage에 여러 데이터베이스 백업 - PowerShell
 
@@ -46,7 +46,7 @@ ms.locfileid: "91809249"
 
   자세한 내용은 [Navigate SQL Server PowerShell Paths](../../powershell/navigate-sql-server-powershell-paths.md)을 참조하세요.
 
-- **Get-ChildItem** cmdlet: **Get-ChildItem**이 반환하는 정보는 SQL Server PowerShell 경로에서의 위치에 따라 달라집니다. 예를 들어 위치가 컴퓨터 수준에 있는 경우 이 cmdlet은 컴퓨터에 설치된 모든 SQL Server 데이터베이스 엔진 인스턴스를 반환합니다. 또는 위치가 데이터베이스와 같은 개체 수준에 있으면 데이터베이스 개체의 목록을 반환합니다. 기본적으로 **Get-ChildItem** cmdlet은 시스템 개체를 반환하지 않습니다. `–Force` 매개 변수를 사용하여 시스템 개체를 확인합니다.
+- **Get-ChildItem** cmdlet: **Get-ChildItem** 이 반환하는 정보는 SQL Server PowerShell 경로에서의 위치에 따라 달라집니다. 예를 들어 위치가 컴퓨터 수준에 있는 경우 이 cmdlet은 컴퓨터에 설치된 모든 SQL Server 데이터베이스 엔진 인스턴스를 반환합니다. 또는 위치가 데이터베이스와 같은 개체 수준에 있으면 데이터베이스 개체의 목록을 반환합니다. 기본적으로 **Get-ChildItem** cmdlet은 시스템 개체를 반환하지 않습니다. `–Force` 매개 변수를 사용하여 시스템 개체를 확인합니다.
 
 - Azure Storage 계정 및 SQL 자격 증명은 필수 구성 요소이며 Azure Blob Storage 서비스에 대한 모든 백업 및 복원 작업에 필요합니다.
   

@@ -9,14 +9,14 @@ ms.reviewer: ''
 ms.technology: backup-restore
 ms.topic: conceptual
 ms.assetid: afa01165-39e0-4efe-ac0e-664edb8599fd
-author: MikeRayMSFT
-ms.author: mikeray
-ms.openlocfilehash: e181ce4851e2d00867c25942e8842b200525a3bf
-ms.sourcegitcommit: 04cf7905fa32e0a9a44575a6f9641d9a2e5ac0f8
+author: cawrites
+ms.author: chadam
+ms.openlocfilehash: 32a48093f40d048532ff58a1f91f450e52d6019b
+ms.sourcegitcommit: 5a1ed81749800c33059dac91b0e18bd8bb3081b1
 ms.translationtype: HT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 10/07/2020
-ms.locfileid: "91810877"
+ms.lasthandoff: 11/23/2020
+ms.locfileid: "96129015"
 ---
 # <a name="sql-server-managed-backup-to-microsoft-azure"></a>Microsoft Azure로의 SQL Server 관리형 백업
  [!INCLUDE [SQL Server](../../includes/applies-to-version/sqlserver.md)]
@@ -115,7 +115,7 @@ ms.locfileid: "91810877"
 ##  <a name="supportability"></a><a name="support_limits"></a> 지원 가능성  
  다음 지원 제한 사항 및 고려 사항은 [!INCLUDE[ssCurrent](../../includes/sscurrent-md.md)]에 특정한 것입니다.  
   
--   **마스터**, **모델**및 **msdb** 시스템 데이터베이스는 백업할 수 있습니다. **tempdb** 는 백업할 수 없습니다. 
+-   **마스터**, **모델** 및 **msdb** 시스템 데이터베이스는 백업할 수 있습니다. **tempdb** 는 백업할 수 없습니다. 
   
 -   [!INCLUDE[ssCurrent](../../includes/sscurrent-md.md)]의 경우 모든 복구 모델이 지원됩니다(전체, 대량 로그 및 단순).  
   

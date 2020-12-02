@@ -26,11 +26,11 @@ ms.assetid: 9be51199-78b4-4b87-ae6e-557246b7e29a
 author: pmasl
 ms.author: umajay
 ms.openlocfilehash: 046c8fa60fc4bc4930089d8c7e9a87a3480bff23
-ms.sourcegitcommit: e700497f962e4c2274df16d9e651059b42ff1a10
+ms.sourcegitcommit: 192f6a99e19e66f0f817fdb1977f564b2aaa133b
 ms.translationtype: HT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 08/17/2020
-ms.locfileid: "88417599"
+ms.lasthandoff: 11/25/2020
+ms.locfileid: "96126277"
 ---
 # <a name="dbcc-tracestatus-transact-sql"></a>DBCC TRACESTATUS(Transact-SQL)
 [!INCLUDE [SQL Server - ASDBMI](../../includes/applies-to-version/sql-asdbmi.md)]
@@ -71,7 +71,7 @@ WITH NO_INFOMSGS
 |**Global**|추적 플래그가 전역으로 설정되었는지 여부를 나타냅니다.<br /><br /> 1 = True<br /><br /> 0 = False|  
 |**세션**|추적 플래그가 해당 세션에 대해서만 설정되었는지 여부를 나타냅니다.<br /><br /> 1 = True<br /><br /> 0 = False|  
   
-DBCC TRACESTATUS는 추적 플래그 번호에 대한 열과 상태에 대한 열을 반환하여 추적 플래그의 ON(1) 또는 OFF(0) 여부를 표시합니다. 추적 플래그 번호의 열 머리글은 상태를 확인할 추적 플래그가 전역 추적 플래그인지 또는 세션 추적 플래그인지 여부에 따라 **Global Trace Flag** 또는 **Session Trace Flag**가 됩니다.
+DBCC TRACESTATUS는 추적 플래그 번호에 대한 열과 상태에 대한 열을 반환하여 추적 플래그의 ON(1) 또는 OFF(0) 여부를 표시합니다. 추적 플래그 번호의 열 머리글은 상태를 확인할 추적 플래그가 전역 추적 플래그인지 또는 세션 추적 플래그인지 여부에 따라 **Global Trace Flag** 또는 **Session Trace Flag** 가 됩니다.
   
 ## <a name="remarks"></a>설명  
 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]에는 세션 및 전역이라는 두 가지 유형의 추적 플래그가 있습니다. 세션 추적 플래그는 특정 연결에 대해 설정되며 해당 연결에서만 볼 수 있습니다. 전역 추적 플래그는 서버 수준에서 설정되며 서버의 모든 연결에서 볼 수 있습니다.

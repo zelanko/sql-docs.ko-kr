@@ -15,15 +15,15 @@ author: MladjoA
 ms.author: mlandzic
 monikerRange: =azuresqldb-current||>=sql-server-2016||=sqlallproducts-allversions||>=sql-server-linux-2017||=azuresqldb-mi-current
 ms.openlocfilehash: ddc0df0e6949ed429d415940fe9fda4263d3190a
-ms.sourcegitcommit: a5398f107599102af7c8cda815d8e5e9a367ce7e
+ms.sourcegitcommit: 192f6a99e19e66f0f817fdb1977f564b2aaa133b
 ms.translationtype: HT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 10/13/2020
-ms.locfileid: "92006345"
+ms.lasthandoff: 11/25/2020
+ms.locfileid: "96127717"
 ---
 # <a name="create-construct-and-query-geometry-instances"></a>geometry 인스턴스 만들기, 구성 및 쿼리
 [!INCLUDE [SQL Server Azure SQL Database Azure SQL Managed Instance](../../includes/applies-to-version/sql-asdb-asdbmi.md)]
-   평면 공간 데이터 형식 **geometry**는 유클리드(평면) 좌표계의 데이터를 나타냅니다. 이 형식은 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]에서 CLR(공용 언어 런타임) 데이터 형식으로 구현됩니다.  
+   평면 공간 데이터 형식 **geometry** 는 유클리드(평면) 좌표계의 데이터를 나타냅니다. 이 형식은 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]에서 CLR(공용 언어 런타임) 데이터 형식으로 구현됩니다.  
   
  **geometry** 형식은 각 데이터베이스에서 미리 정의되고 사용할 수 있습니다. 다른 CLR 형식을 사용할 때와 동일한 방식으로 **geometry** 형식의 테이블 열을 만들고 **geometry** 데이터에 대한 작업을 수행할 수 있습니다.  
   
@@ -178,7 +178,7 @@ ms.locfileid: "92006345"
   
   
 ###  <a name="number-of-points"></a><a name="number"></a> 점 수  
- 모든 비어 있지 않은 **geometry** 인스턴스는 *점*으로 구성됩니다. 이러한 점은 기하 도형이 그려지는 평면의 X 및 Y 좌표를 나타냅니다. **geometry** 는 인스턴스의 점을 쿼리하는 데 필요한 수많은 기본 메서드를 제공합니다.  
+ 모든 비어 있지 않은 **geometry** 인스턴스는 *점* 으로 구성됩니다. 이러한 점은 기하 도형이 그려지는 평면의 X 및 Y 좌표를 나타냅니다. **geometry** 는 인스턴스의 점을 쿼리하는 데 필요한 수많은 기본 메서드를 제공합니다.  
   
  **인스턴스를 구성하는 점 개수를 반환하려면**  
  [STNumPoints&#40;geometry 데이터 형식&#41;](../../t-sql/spatial-geometry/stnumpoints-geometry-data-type.md)  
@@ -206,7 +206,7 @@ ms.locfileid: "92006345"
   
   
 ###  <a name="dimension"></a><a name="dimension"></a> 차원  
- 비어 있지 않은 **geometry** 인스턴스는 0, 1 또는 2차원이 될 수 있습니다. **Point**및 **MultiPoint** 와 같은 0차원 **geometry**에는 길이 또는 영역이 없습니다. **LineString, CircularString, CompoundCurve**및 **MultiLineString**과 같은 1차원 개체에는 길이가 있습니다. **Polygon**, **CurvePolygon**및 **MultiPolygon**과 같은 2차원 인스턴스에는 영역과 길이가 있습니다. 비어 있는 인스턴스에서는 -1차원을 보고하고 **GeometryCollection** 에서는 해당 내용의 유형에 따라 다른 영역을 보고합니다.  
+ 비어 있지 않은 **geometry** 인스턴스는 0, 1 또는 2차원이 될 수 있습니다. **Point** 및 **MultiPoint** 와 같은 0차원 **geometry** 에는 길이 또는 영역이 없습니다. **LineString, CircularString, CompoundCurve** 및 **MultiLineString** 과 같은 1차원 개체에는 길이가 있습니다. **Polygon**, **CurvePolygon** 및 **MultiPolygon** 과 같은 2차원 인스턴스에는 영역과 길이가 있습니다. 비어 있는 인스턴스에서는 -1차원을 보고하고 **GeometryCollection** 에서는 해당 내용의 유형에 따라 다른 영역을 보고합니다.  
   
  **인스턴스의 차원을 반환하려면**  
  [STDimension](../../t-sql/spatial-geometry/stdimension-geometry-data-type.md)  
@@ -219,14 +219,14 @@ ms.locfileid: "92006345"
   
   
 ###  <a name="empty"></a><a name="empty"></a> 비어 있음  
- _비어 있는_**geometry** 인스턴스에는 점이 하나도 없습니다. 비어 있는 **LineString, CircularString**, **CompoundCurve**및 **MultiLineString** 인스턴스의 길이는 0입니다. 비어 있는 **Polygon**, **CurvePolygon**및 **MultiPolygon** 인스턴스의 영역은 0입니다.  
+ _비어 있는_**geometry** 인스턴스에는 점이 하나도 없습니다. 비어 있는 **LineString, CircularString**, **CompoundCurve** 및 **MultiLineString** 인스턴스의 길이는 0입니다. 비어 있는 **Polygon**, **CurvePolygon** 및 **MultiPolygon** 인스턴스의 영역은 0입니다.  
   
  **인스턴스가 비어 있는지 확인하려면**  
  [STIsEmpty](../../t-sql/spatial-geometry/stisempty-geometry-data-type.md).  
   
   
 ###  <a name="simple"></a><a name="simple"></a> 간단  
- **geometry** 인스턴스가 *단순*할 경우 다음 요구 사항을 모두 충족해야 합니다.  
+ **geometry** 인스턴스가 *단순* 할 경우 다음 요구 사항을 모두 충족해야 합니다.  
   
 -   인스턴스의 각 도형은 엔드포인트를 제외하고 자체 교차해서는 안 됩니다.  
   
@@ -266,7 +266,7 @@ SELECT @g.STBoundary().ToString();
  [STBoundary](../../t-sql/spatial-geometry/stboundary-geometry-data-type.md)  
    
 ###  <a name="envelope"></a><a name="envelope"></a> 봉투  
- *geometry* 인스턴스의 **봉투** 는 *경계 상자*로도 알려져 있으며 해당 인스턴스의 최대 및 최소 (X, Y) 좌표로 구성되는 축에 맞춰진 사각형입니다.  
+ *geometry* 인스턴스의 **봉투** 는 *경계 상자* 로도 알려져 있으며 해당 인스턴스의 최대 및 최소 (X, Y) 좌표로 구성되는 축에 맞춰진 사각형입니다.  
   
  **인스턴스의 봉투를 반환하려면**  
  [STEnvelope](../../t-sql/spatial-geometry/stenvelope-geometry-data-type.md)  

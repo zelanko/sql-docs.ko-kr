@@ -23,17 +23,17 @@ ms.reviewer: mikeray
 monikerRange: =azuresqldb-current||>=sql-server-2016||=sqlallproducts-allversions||>=sql-server-linux-2017||=azuresqldb-mi-current
 ms.custom: seo-lt-2019
 ms.openlocfilehash: 7a33d02cb6ca1cbc100a458d254cf962d2d0d34b
-ms.sourcegitcommit: e700497f962e4c2274df16d9e651059b42ff1a10
+ms.sourcegitcommit: 192f6a99e19e66f0f817fdb1977f564b2aaa133b
 ms.translationtype: HT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 08/17/2020
-ms.locfileid: "88482304"
+ms.lasthandoff: 11/25/2020
+ms.locfileid: "96127795"
 ---
 # <a name="configure--manage-word-breakers--stemmers-for-search-sql-server"></a>검색을 위해 단어 분리기와 형태소 분석기 구성 및 관리(SQL Server)
 [!INCLUDE [SQL Server Azure SQL Database](../../includes/applies-to-version/sql-asdb.md)]
 단어 분리기와 형태소 분석기는 모든 전체 텍스트 인덱싱된 데이터에 대해 언어 분석을 수행합니다. 언어 분석에서는 다음 두 작업을 수행합니다.
 
--   **단어 경계 찾기(단어 분리)**. *단어 분리기*는 해당 언어의 어휘 규칙을 기준으로 단어의 경계를 결정하는 개별 단어를 식별합니다. 각 단어( *토큰*이라고도 함)는 압축된 표현으로 크기를 줄여 전체 텍스트 인덱스에 삽입됩니다.
+-   **단어 경계 찾기(단어 분리)**. *단어 분리기* 는 해당 언어의 어휘 규칙을 기준으로 단어의 경계를 결정하는 개별 단어를 식별합니다. 각 단어( *토큰* 이라고도 함)는 압축된 표현으로 크기를 줄여 전체 텍스트 인덱스에 삽입됩니다.
 
 -   **켤레 동사(형태소 분석)**. *형태소 분석기* 는 해당 언어의 규칙에 따라 특정 단어의 굴절형을 생성합니다. 예를 들어 "running", "ran" 및 "runner"는 "run"이라는 단어의 여러 가지 형태입니다.
 
@@ -73,7 +73,7 @@ GO
 ##  <a name="set-the-default-full-text-language-option"></a><a name="default"></a> 기본 전체 텍스트 언어 옵션 설정  
  지역화된 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]버전의 경우 일치하는 언어가 있으면 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 설치 프로그램에서 **default full-text language** 옵션을 서버 언어로 설정합니다. 지역화되지 않은 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]버전의 경우 **default full-text language** 옵션이 영어입니다.  
   
- 전체 텍스트 인덱스를 만들거나 변경할 때는 각 전체 텍스트 인덱싱된 열마다 다른 언어를 지정할 수 있습니다. 열에 언어를 지정하지 않으면 기본적으로 구성 옵션 **default full-text language**의 값이 사용됩니다.  
+ 전체 텍스트 인덱스를 만들거나 변경할 때는 각 전체 텍스트 인덱싱된 열마다 다른 언어를 지정할 수 있습니다. 열에 언어를 지정하지 않으면 기본적으로 구성 옵션 **default full-text language** 의 값이 사용됩니다.  
   
 > [!NOTE]  
 >  쿼리에 LANGUAGE 옵션을 지정하지 않은 경우 하나의 전체 텍스트 쿼리 함수 절에 있는 모든 열은 동일한 언어를 사용해야 합니다. 쿼리 중인 전체 텍스트 인덱싱된 열의 언어에 따라 전체 텍스트 쿼리 조건자([CONTAINS](../../t-sql/queries/contains-transact-sql.md) 및 [FREETEXT](../../t-sql/queries/freetext-transact-sql.md)) 및 함수([CONTAINSTABLE](../../relational-databases/system-functions/containstable-transact-sql.md) 및 [FREETEXTTABLE](../../relational-databases/system-functions/freetexttable-transact-sql.md))의 인수에 대해 수행되는 언어 분석이 결정됩니다.  
