@@ -1736,7 +1736,7 @@
               href: relational-databases/indexes/columnstore-indexes-query-performance.md
             - name: 실시간 운영 분석
               href: relational-databases/indexes/get-started-with-columnstore-for-real-time-operational-analytics.md
-            - name: 데이터 웨어하우스
+            - name: Azure Synapse Analytics
               href: relational-databases/indexes/columnstore-indexes-data-warehouse.md
             - name: 조각 모음
               href: relational-databases/indexes/reorganize-and-rebuild-indexes.md
@@ -1836,7 +1836,7 @@
       items:
         - name: 관리
           items:
-            - name: 만들기
+            - name: 생성
               href: relational-databases/tables/create-tables-database-engine.md
             - name: DELETE
               href: relational-databases/tables/delete-tables-database-engine.md
@@ -10265,7 +10265,7 @@
                   href: samples/wide-world-importers-oltp-install-configure.md
                 - name: SQL Server 기능
                   href: samples/wide-world-importers-oltp-use-of-sql-server-features.md
-            - name: 데이터 웨어하우스
+            - name: Azure Synapse Analytics
               items:
                 - name: 데이터베이스 카탈로그
                   href: samples/wide-world-importers-dw-database-catalog.md

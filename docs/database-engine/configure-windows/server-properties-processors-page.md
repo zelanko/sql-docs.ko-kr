@@ -38,7 +38,7 @@ ms.locfileid: "85726597"
  [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 에서 I/O 선호도를 자동으로 설정하도록 합니다.  
   
  **최대 작업자 스레드 수**  
- 0으로 설정하면 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 에서 작업자 스레드 수를 동적으로 설정합니다. 이 설정은 대부분의 시스템에 적합합니다. 그러나 시스템 구성에 따라 이 옵션을 특정 값으로 설정하면 성능이 향상되기도 합니다. 자세한 내용은 [Configure the max worker threads Server Configuration Option](../../database-engine/configure-windows/configure-the-max-worker-threads-server-configuration-option.md)을 참조하세요.  
+ 0으로 설정하면 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 에서 작업자 스레드 수를 동적으로 설정합니다. 이 설정은 대부분의 시스템에 적합합니다. 그러나 시스템 구성에 따라 이 옵션을 특정 값으로 설정하면 성능이 향상되기도 합니다. 자세한 내용은 [max worker threads 서버 구성 옵션 구성](../../database-engine/configure-windows/configure-the-max-worker-threads-server-configuration-option.md)을 참조하세요.  
   
  **SQL Server 우선 순위 높임**  
  [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 의 [!INCLUDE[msCoName](../../includes/msconame-md.md)] Windows 일정 예약 우선 순위를 같은 컴퓨터의 다른 프로세스보다 높여서 실행할지 여부를 지정합니다. 자세한 내용은 [Configure the priority boost Server Configuration Option](../../database-engine/configure-windows/configure-the-priority-boost-server-configuration-option.md)을 참조하세요.  

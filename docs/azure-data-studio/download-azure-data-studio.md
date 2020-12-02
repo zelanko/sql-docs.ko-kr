@@ -9,12 +9,12 @@ ms.author: alayu
 ms.reviewer: maghan
 ms.custom: seodec18
 ms.date: 11/12/2020
-ms.openlocfilehash: 23e7ee0063ad8e5a3e8dd8653cfd5aab8a1753bc
-ms.sourcegitcommit: 2144a22ad4380182133e87664a907fe6f06b5f95
+ms.openlocfilehash: 64cd6b3a60e07344dbe33287b23b2c3c77eaaa79
+ms.sourcegitcommit: 0c0e4ab90655dde3e34ebc08487493e621f25dda
 ms.translationtype: HT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 11/12/2020
-ms.locfileid: "94570940"
+ms.lasthandoff: 12/01/2020
+ms.locfileid: "96442679"
 ---
 # <a name="download-and-install-azure-data-studio"></a>Azure Data Studio 다운로드 및 설치
 
@@ -242,7 +242,7 @@ Windows Installer를 사용하여 Azure Data Studio를 설치한 경우 Windows 
 - [Azure Data Studio 릴리스 정보](release-notes-azure-data-studio.md)
 - [SQL Server 연결 및 쿼리](quickstart-sql-server.md)
 - [Azure SQL Database 연결 및 쿼리](quickstart-sql-database.md)
-- [Azure Data Warehouse 연결 및 쿼리](quickstart-sql-dw.md)
+- [Azure Synapse Analytics 연결 및 쿼리](quickstart-sql-dw.md)
 
 [!INCLUDE[get-help-sql-tools](../includes/paragraph-content/get-help-sql-tools.md)]
 

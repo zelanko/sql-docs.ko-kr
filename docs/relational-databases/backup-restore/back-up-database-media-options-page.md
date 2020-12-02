@@ -12,14 +12,14 @@ f1_keywords:
 - swb.backupdatabase.mediaoptions.f1
 - sql13.swb.backupdatabase.mediaoptions.f1
 ms.assetid: eff36228-710c-4ed5-9af5-95859575dc0f
-author: MikeRayMSFT
-ms.author: mikeray
-ms.openlocfilehash: f0c5b5b8df782652565247c7c050b1c1edc6a8b9
-ms.sourcegitcommit: da88320c474c1c9124574f90d549c50ee3387b4c
+author: cawrites
+ms.author: chadam
+ms.openlocfilehash: 384233f6fdc7379ad72b120972b16ca5aba736cb
+ms.sourcegitcommit: 5a1ed81749800c33059dac91b0e18bd8bb3081b1
 ms.translationtype: HT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 07/01/2020
-ms.locfileid: "85719947"
+ms.lasthandoff: 11/23/2020
+ms.locfileid: "96129378"
 ---
 # <a name="back-up-database-media-options-page"></a>데이터베이스 백업(미디어 옵션 페이지)
  [!INCLUDE [SQL Server](../../includes/applies-to-version/sqlserver.md)]
@@ -42,7 +42,7 @@ ms.locfileid: "85719947"
 ### <a name="overwrite-media"></a>미디어 덮어쓰기  
  **미디어 덮어쓰기** 패널의 옵션은 백업이 미디어에 쓰여지는 방법을 제어합니다. URL(Azure Storage)을 데이터베이스 백업 대화 상자의 일반 페이지에 있는 백업 대상으로 선택한 경우 미디어 덮어쓰기 섹션의 옵션을 사용할 수 없습니다. **BACKUP TO URL. WITH FORMAT** Transact-SQL 문을 사용하여 백업을 덮어쓸 수 있습니다. 자세한 내용은 [URL에 대한 SQL Server Backup](../../relational-databases/backup-restore/sql-server-backup-to-url.md)을 참조하세요.  
 
- **일반** 페이지에서 **URL**을 백업 대상으로 선택한 경우 **미디어 덮어쓰기** 옵션을 사용할 수 없습니다.
+ **일반** 페이지에서 **URL** 을 백업 대상으로 선택한 경우 **미디어 덮어쓰기** 옵션을 사용할 수 없습니다.
   
  **새 미디어에 백업하고 기존 백업 세트 모두 지우기** 옵션만 암호화 옵션과 함께 지원됩니다. **기존 미디어에 백업** 섹션의 옵션을 선택하는 경우 **백업 옵션** 페이지의 암호화 옵션을 사용할 수 없게 됩니다.  
   
@@ -88,7 +88,7 @@ ms.locfileid: "85719947"
  트랜잭션 로그를 백업한 다음, 잘라 로그 공간을 확보합니다. 데이터베이스는 온라인 상태로 유지됩니다. 기본 옵션입니다.  
   
  **비상 로그 백업을 수행하고 복원 중인 상태로 데이터베이스 유지**  
- 비상 로그 백업을 수행하고 데이터베이스를 복원 상태로 둡니다. 이 옵션을 사용하여 일반적으로 데이터베이스 복원 준비 과정에서 백업되지 않은 로그(활성 로그)를 백업하는 *비상 로그 백업*을 만들 수 있습니다. 데이터베이스가 완전히 복원되기 전까지는 데이터베이스를 사용할 수 없습니다.  
+ 비상 로그 백업을 수행하고 데이터베이스를 복원 상태로 둡니다. 이 옵션을 사용하여 일반적으로 데이터베이스 복원 준비 과정에서 백업되지 않은 로그(활성 로그)를 백업하는 *비상 로그 백업* 을 만들 수 있습니다. 데이터베이스가 완전히 복원되기 전까지는 데이터베이스를 사용할 수 없습니다.  
   
  이 옵션을 선택하는 것은 [BACKUP](../../t-sql/statements/backup-transact-sql.md) 문([!INCLUDE[tsql](../../includes/tsql-md.md)])에서 WITH NO_TRUNCATE, NORECOVERY를 지정하는 것과 같습니다. 자세한 내용은 [비상 로그 백업&#40;SQL Server&#41;](../../relational-databases/backup-restore/tail-log-backups-sql-server.md)을 참조하세요.  
   
