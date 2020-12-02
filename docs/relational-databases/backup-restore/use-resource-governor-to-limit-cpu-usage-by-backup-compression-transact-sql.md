@@ -15,14 +15,14 @@ helpviewer_keywords:
 - backups [SQL Server], compression
 - Resource Governor, backup compression
 ms.assetid: 01796551-578d-4425-9b9e-d87210f7ba72
-author: MikeRayMSFT
-ms.author: mikeray
-ms.openlocfilehash: b018053582e6bddafe744be1d9a0411132fc3e06
-ms.sourcegitcommit: da88320c474c1c9124574f90d549c50ee3387b4c
+author: cawrites
+ms.author: chadam
+ms.openlocfilehash: 6285ec4a9f06bb44d6502af44aa964b666bb58c1
+ms.sourcegitcommit: 5a1ed81749800c33059dac91b0e18bd8bb3081b1
 ms.translationtype: HT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 07/01/2020
-ms.locfileid: "85730882"
+ms.lasthandoff: 11/23/2020
+ms.locfileid: "96125478"
 ---
 # <a name="use-resource-governor-to-limit-cpu-usage-by-backup-compression-transact-sql"></a>리소스 관리자를 사용하여 백업 압축을 통해 CPU 사용량 제한(Transact-SQL)
  [!INCLUDE [SQL Server](../../includes/applies-to-version/sqlserver.md)]
@@ -113,7 +113,7 @@ GO
   
 2.  이 풀을 사용하는 리소스 관리자 작업 그룹을 만들고 구성합니다.  
   
-3.  *분류자 함수*를 만듭니다. 분류자 함수는 UDF(사용자 정의 함수)로, Resource Governor는 세션을 적절한 작업 그룹으로 라우팅되도록 분류하기 위해 이 함수의 반환 값을 사용합니다.  
+3.  *분류자 함수* 를 만듭니다. 분류자 함수는 UDF(사용자 정의 함수)로, Resource Governor는 세션을 적절한 작업 그룹으로 라우팅되도록 분류하기 위해 이 함수의 반환 값을 사용합니다.  
   
 4.  분류자 함수를 리소스 관리자에 등록합니다.  
   

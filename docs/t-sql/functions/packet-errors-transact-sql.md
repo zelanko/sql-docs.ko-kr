@@ -23,11 +23,11 @@ ms.assetid: f7da1b80-5cbe-42fa-be71-40c6af16383a
 author: VanMSFT
 ms.author: vanto
 ms.openlocfilehash: 1470d95dd12134abf0e097e4c56f7eb908c807f0
-ms.sourcegitcommit: 197a6ffb643f93592edf9e90b04810a18be61133
+ms.sourcegitcommit: 192f6a99e19e66f0f817fdb1977f564b2aaa133b
 ms.translationtype: HT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 09/26/2020
-ms.locfileid: "91380828"
+ms.lasthandoff: 11/25/2020
+ms.locfileid: "96124615"
 ---
 # <a name="x40x40packet_errors-transact-sql"></a>&#x40;&#x40;PACKET_ERRORS (Transact-SQL)
 [!INCLUDE [SQL Server](../../includes/applies-to-version/sqlserver.md)]
@@ -48,7 +48,7 @@ ms.locfileid: "91380828"
  **integer**  
   
 ## <a name="remarks"></a>설명  
- 패킷 오류를 비롯하여 여러 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 통계가 포함된 보고서를 표시하려면 **sp_monitor**를 실행합니다.  
+ 패킷 오류를 비롯하여 여러 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 통계가 포함된 보고서를 표시하려면 **sp_monitor** 를 실행합니다.  
   
 ## <a name="examples"></a>예제  
  다음 예에서는 `@@PACKET_ERRORS`를 사용하는 방법을 보여 줍니다.  

@@ -12,15 +12,15 @@ helpviewer_keywords:
 - installing SQL Server, preparing to install
 - installation [SQL Server]
 ms.assetid: 0300e777-d56b-4d10-9c33-c9ebd2489ee5
-author: MashaMSFT
-ms.author: mathoma
+author: cawrites
+ms.author: chadam
 monikerRange: '>=sql-server-2016||=sqlallproducts-allversions'
-ms.openlocfilehash: c981154462ec6b544d8dd877d1b6a41a6fa0ac2c
-ms.sourcegitcommit: 2f868a77903c1f1c4cecf4ea1c181deee12d5b15
+ms.openlocfilehash: 46a83efe3efcab212d3569c5f2f32c232f1962c5
+ms.sourcegitcommit: 5a1ed81749800c33059dac91b0e18bd8bb3081b1
 ms.translationtype: HT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 10/02/2020
-ms.locfileid: "91670596"
+ms.lasthandoff: 11/23/2020
+ms.locfileid: "96125866"
 ---
 # <a name="sql-server-installation-guide"></a>SQL Server 설치 가이드
 

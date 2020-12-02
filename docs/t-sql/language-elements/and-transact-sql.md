@@ -24,16 +24,16 @@ author: rothja
 ms.author: jroth
 monikerRange: '>=aps-pdw-2016||=azuresqldb-current||=azure-sqldw-latest||>=sql-server-2016||=sqlallproducts-allversions||>=sql-server-linux-2017||=azuresqldb-mi-current'
 ms.openlocfilehash: c4d9a4169bac272cf57699a1436e36b53181e390
-ms.sourcegitcommit: cfa04a73b26312bf18d8f6296891679166e2754d
+ms.sourcegitcommit: 192f6a99e19e66f0f817fdb1977f564b2aaa133b
 ms.translationtype: HT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 10/19/2020
-ms.locfileid: "92196892"
+ms.lasthandoff: 11/25/2020
+ms.locfileid: "96124565"
 ---
 # <a name="and-transact-sql"></a>AND(Transact-SQL)
 [!INCLUDE [sql-asdb-asdbmi-asa-pdw](../../includes/applies-to-version/sql-asdb-asdbmi-asa-pdw.md)]
 
-  두 개의 부울 식을 결합하여 두 식이 모두 **TRUE**일 때만 **TRUE**를 반환합니다. 문에 두 개 이상의 논리 연산자가 사용될 경우 **AND** 연산자가 먼저 계산됩니다. 계산 순서를 변경하려면 괄호를 사용합니다.  
+  두 개의 부울 식을 결합하여 두 식이 모두 **TRUE** 일 때만 **TRUE** 를 반환합니다. 문에 두 개 이상의 논리 연산자가 사용될 경우 **AND** 연산자가 먼저 계산됩니다. 계산 순서를 변경하려면 괄호를 사용합니다.  
   
  ![항목 링크 아이콘](../../database-engine/configure-windows/media/topic-link.gif "항목 링크 아이콘") [Transact-SQL 구문 표기 규칙](../../t-sql/language-elements/transact-sql-syntax-conventions-transact-sql.md)  
   
@@ -47,7 +47,7 @@ boolean_expression AND boolean_expression
 
 ## <a name="arguments"></a>인수
  *boolean_expression*  
- **TRUE**, **FALSE** 또는 **UNKNOWN**의 부울 값을 반환하는 유효한 [식](../../t-sql/language-elements/expressions-transact-sql.md)입니다.  
+ **TRUE**, **FALSE** 또는 **UNKNOWN** 의 부울 값을 반환하는 유효한 [식](../../t-sql/language-elements/expressions-transact-sql.md)입니다.  
   
 ## <a name="result-types"></a>결과 형식  
  **Boolean**  

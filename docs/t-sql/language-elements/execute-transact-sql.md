@@ -33,11 +33,11 @@ author: rothja
 ms.author: jroth
 monikerRange: '>=aps-pdw-2016||=azuresqldb-current||=azure-sqldw-latest||>=sql-server-2016||=sqlallproducts-allversions||>=sql-server-linux-2017||=azuresqldb-mi-current'
 ms.openlocfilehash: ec45204c6144ce51b809c84e5339af6cff9b292f
-ms.sourcegitcommit: cfa04a73b26312bf18d8f6296891679166e2754d
+ms.sourcegitcommit: 192f6a99e19e66f0f817fdb1977f564b2aaa133b
 ms.translationtype: HT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 10/19/2020
-ms.locfileid: "92194973"
+ms.lasthandoff: 11/25/2020
+ms.locfileid: "96124462"
 ---
 # <a name="execute-transact-sql"></a>EXECUTE(Transact-SQL)
 [!INCLUDE [sql-asdb-asdbmi-asa-pdw](../../includes/applies-to-version/sql-asdb-asdbmi-asa-pdw.md)]
@@ -299,7 +299,7 @@ Execute a character string
  이것은 고유하게 컴파일된 스칼라 사용자 정의 함수의 이름을 담는 변수일 수 있습니다.  
   
  @*parameter*  
- *module_name*에 대한 매개 변수이며 모듈에서 정의됩니다. 매개 변수 이름 앞에는 반드시 at 기호(@)를 사용해야 합니다. @*parameter_name*=*value* 형식을 사용하는 경우에는 매개 변수 이름과 상수를 모듈에서 정의된 순서대로 제공하지 않아도 됩니다. 그러나 임의의 매개 변수에 @*parameter_name*=*value* 형식을 사용한 경우에는 이후에 사용할 모든 매개 변수에도 이 형식을 사용해야 합니다.  
+ *module_name* 에 대한 매개 변수이며 모듈에서 정의됩니다. 매개 변수 이름 앞에는 반드시 at 기호(@)를 사용해야 합니다. @*parameter_name*=*value* 형식을 사용하는 경우에는 매개 변수 이름과 상수를 모듈에서 정의된 순서대로 제공하지 않아도 됩니다. 그러나 임의의 매개 변수에 @*parameter_name*=*value* 형식을 사용한 경우에는 이후에 사용할 모든 매개 변수에도 이 형식을 사용해야 합니다.  
   
  기본적으로 매개 변수에 Null이 허용됩니다.  
   
@@ -322,9 +322,9 @@ Execute a character string
  OUTPUT  
  모듈이나 명령 문자열에서 매개 변수를 반환하도록 지정합니다. 모듈이나 명령 문자열에서 일치하는 매개 변수가 반드시 OUTPUT 키워드를 사용하여 생성되어 있어야 합니다. 커서 변수를 매개 변수로 사용할 때 이 키워드를 사용합니다.  
   
- *값*이 연결된 서버에 대해 실행되는 모듈의 OUTPUT으로 정의된 경우 OLE DB 공급자가 해당@*매개 변수*에 수행한 모든 변경 내용은 모듈 실행이 끝날 때 변수로 다시 복사됩니다.  
+ *값* 이 연결된 서버에 대해 실행되는 모듈의 OUTPUT으로 정의된 경우 OLE DB 공급자가 해당@*매개 변수* 에 수행한 모든 변경 내용은 모듈 실행이 끝날 때 변수로 다시 복사됩니다.  
   
- OUTPUT 매개 변수를 사용하고 있거나 호출 일괄 처리 또는 모듈 내의 다른 문에서 반환 값을 사용하려는 경우에는 매개 변수 값을 @*매개 변수* = @*값*과 같은 형식의 변수로 전달해야 합니다. 모듈에서 OUTPUT 매개 변수로 정의되지 않은 매개 변수에 대해 OUTPUT을 지정하여 모듈을 실행할 수는 없습니다. 상수는 OUTPUT을 사용하여 모듈에 전달할 수 없습니다. 반환 매개 변수에는 변수 이름이 필요합니다. 프로시저를 실행하기 전에 변수의 데이터 형식이 선언되어야 하며 값이 할당되어야 합니다.  
+ OUTPUT 매개 변수를 사용하고 있거나 호출 일괄 처리 또는 모듈 내의 다른 문에서 반환 값을 사용하려는 경우에는 매개 변수 값을 @*매개 변수* = @*값* 과 같은 형식의 변수로 전달해야 합니다. 모듈에서 OUTPUT 매개 변수로 정의되지 않은 매개 변수에 대해 OUTPUT을 지정하여 모듈을 실행할 수는 없습니다. 상수는 OUTPUT을 사용하여 모듈에 전달할 수 없습니다. 반환 매개 변수에는 변수 이름이 필요합니다. 프로시저를 실행하기 전에 변수의 데이터 형식이 선언되어야 하며 값이 할당되어야 합니다.  
   
  EXECUTE를 원격 저장 프로시저에 사용하거나 연결된 서버에 대해 통과 명령을 실행하는 데 사용하는 경우 OUTPUT 매개 변수에는 LOB(Large Object) 데이터 형식을 사용할 수 없습니다.  
   
@@ -334,10 +334,10 @@ Execute a character string
  모듈에 정의된 매개 변수의 기본값을 제공합니다. 정의된 기본값이 없는 매개 변수 값이 모듈에 필요하고 매개 변수가 손실되었거나 DEFAULT 키워드가 지정된 경우에는 오류가 발생합니다.  
   
  @*string_variable*  
- 지역 변수의 이름입니다. @*string_variable*은 **char**, **varchar**, **nchar** 또는 **nvarchar** 데이터 형식이 될 수 있습니다. 여기에는 **(max)** 데이터 형식이 포함됩니다.  
+ 지역 변수의 이름입니다. @*string_variable* 은 **char**, **varchar**, **nchar** 또는 **nvarchar** 데이터 형식이 될 수 있습니다. 여기에는 **(max)** 데이터 형식이 포함됩니다.  
   
  [N] '*tsql_string*'  
- 상수 문자열입니다. *tsql_string*은 **nvarchar** 또는 **varchar** 데이터 형식이 될 수 있습니다. N을 포함하면 문자열이 **nvarchar** 데이터 형식으로 해석됩니다.  
+ 상수 문자열입니다. *tsql_string* 은 **nvarchar** 또는 **varchar** 데이터 형식이 될 수 있습니다. N을 포함하면 문자열이 **nvarchar** 데이터 형식으로 해석됩니다.  
   
  AS \<context_specification>  
  문이 실행될 컨텍스트를 지정합니다.  
@@ -354,9 +354,9 @@ Execute a character string
 >  데이터베이스 사용자로의 컨텍스트 전환이 활성 상태인 경우 데이터베이스 외부에 있는 리소스에 액세스하려고 시도하면 문이 실행되지 않습니다. 이러한 문에는 USE *데이터베이스* 문, 분산 쿼리, 그리고 세 부분이나 네 부분으로 된 식별자를 사용하여 다른 데이터베이스를 참조하는 쿼리가 포함됩니다.  
   
  '*name*'  
- 유효한 사용자 또는 로그인 이름입니다. *name*은 sysadmin 고정 서버 역할의 멤버이거나 [sys.database_principals](../../relational-databases/system-catalog-views/sys-database-principals-transact-sql.md) 또는 [sys.server_principals](../../relational-databases/system-catalog-views/sys-server-principals-transact-sql.md)에서 각각 보안 주체여야 합니다.  
+ 유효한 사용자 또는 로그인 이름입니다. *name* 은 sysadmin 고정 서버 역할의 멤버이거나 [sys.database_principals](../../relational-databases/system-catalog-views/sys-database-principals-transact-sql.md) 또는 [sys.server_principals](../../relational-databases/system-catalog-views/sys-server-principals-transact-sql.md)에서 각각 보안 주체여야 합니다.  
   
- *name*에는 NT AUTHORITY\LocalService, NT AUTHORITY\NetworkService 또는 NT AUTHORITY\LocalSystem과 같은 기본 제공 계정을 사용할 수 없습니다.  
+ *name* 에는 NT AUTHORITY\LocalService, NT AUTHORITY\NetworkService 또는 NT AUTHORITY\LocalSystem과 같은 기본 제공 계정을 사용할 수 없습니다.  
   
  자세한 내용은 이 항목의 뒤에 나오는 [사용자 또는 로그인 이름 지정](#_user)을 참조하세요.  
   
@@ -369,14 +369,14 @@ Execute a character string
  AT *linked_server_name*  
 **적용 대상**: [!INCLUDE[ssKatmai](../../includes/sskatmai-md.md)] 이상
   
- *command_string*이 *linked_server_name*에 대해 실행되고 결과(있을 경우)가 클라이언트로 반환되도록 지정합니다. *linked_server_name*은 로컬 서버의 기존 연결된 서버 정의를 참조해야 합니다. 연결된 서버는 [sp_addlinkedserver](../../relational-databases/system-stored-procedures/sp-addlinkedserver-transact-sql.md)를 사용하여 정의합니다.  
+ *command_string* 이 *linked_server_name* 에 대해 실행되고 결과(있을 경우)가 클라이언트로 반환되도록 지정합니다. *linked_server_name* 은 로컬 서버의 기존 연결된 서버 정의를 참조해야 합니다. 연결된 서버는 [sp_addlinkedserver](../../relational-databases/system-stored-procedures/sp-addlinkedserver-transact-sql.md)를 사용하여 정의합니다.  
   
  WITH \<execute_option>  
  가능한 실행 옵션은 아래와 같습니다. INSERT...EXEC 문에서 RESULT SETS 옵션을 지정할 수 없습니다.  
  
 AT DATA_SOURCE data_source_name **적용 대상**: [!INCLUDE[sssqlv15](../../includes/sssqlv15-md.md)] 이상
   
- *command_string*이 *data_source_name*에 대해 실행되고 결과(있을 경우)가 클라이언트로 반환되도록 지정합니다. *data_source_name*은 데이터베이스의 기존 EXTERNAL DATA SOURCE 정의를 참조해야 합니다. SQL Server를 가리키는 데이터 원본만 지원됩니다. 또한 컴퓨팅 풀, 데이터 풀 또는 스토리지 풀을 가리키는 SQL Server 빅 데이터 클러스터 데이터 원본도 지원됩니다. 데이터 원본은 [CREATE EXTERNAL DATA SOURCE](../statements/create-external-data-source-transact-sql.md)를 사용하여 정의됩니다.  
+ *command_string* 이 *data_source_name* 에 대해 실행되고 결과(있을 경우)가 클라이언트로 반환되도록 지정합니다. *data_source_name* 은 데이터베이스의 기존 EXTERNAL DATA SOURCE 정의를 참조해야 합니다. SQL Server를 가리키는 데이터 원본만 지원됩니다. 또한 컴퓨팅 풀, 데이터 풀 또는 스토리지 풀을 가리키는 SQL Server 빅 데이터 클러스터 데이터 원본도 지원됩니다. 데이터 원본은 [CREATE EXTERNAL DATA SOURCE](../statements/create-external-data-source-transact-sql.md)를 사용하여 정의됩니다.  
   
  WITH \<execute_option>  
  가능한 실행 옵션은 아래와 같습니다. INSERT...EXEC 문에서 RESULT SETS 옵션을 지정할 수 없습니다.  
@@ -386,7 +386,7 @@ AT DATA_SOURCE data_source_name **적용 대상**: [!INCLUDE[sssqlv15](../../inc
 |RECOMPILE|모듈을 실행한 후 새 계획을 컴파일하고 사용한 다음 삭제하도록 합니다. 모듈에 대한 기존 쿼리 계획이 있는 경우 이 계획은 캐시에 유지됩니다.<br /><br /> 제공하는 매개 변수가 불규칙하거나 데이터가 현저하게 변경된 경우에 이 옵션을 사용합니다. 이 옵션은 확장 저장 프로시저에는 사용하지 않습니다. 이 옵션은 비용이 많이 들기 때문에 반드시 필요한 경우에만 사용하는 것이 좋습니다.<br /><br /> **참고:** OPENDATASOURCE 구문을 사용하는 저장 프로시저를 호출할 경우 WITH RECOMPILE을 사용할 수 없습니다. WITH RECOMPILE 옵션은 네 부분으로 된 개체 이름이 지정될 때 무시됩니다.<br /><br /> **참고:** RECOMPILE은 고유하게 컴파일된 사용자 정의 스칼라 함수에서 지원되지 않습니다. 다시 컴파일해야 하는 경우 [sp_recompile &#40;Transact-SQL&#41;](../../relational-databases/system-stored-procedures/sp-recompile-transact-sql.md)을 사용합니다.|  
 |**RESULT SETS UNDEFINED**|**적용 대상**: [!INCLUDE[ssSQL11](../../includes/sssql11-md.md)] 이상, [!INCLUDE[ssSDSfull](../../includes/sssdsfull-md.md)].<br /><br /> 이 옵션은 반환되는 결과(있는 경우)를 보장하지 않으며 정의를 제공하지 않습니다. 어떤 결과가 반환되거나 결과가 반환되지 않는 경우에도 이 문은 오류 없이 실행됩니다. RESULT SETS UNDEFINED는 result_sets_option을 제공하지 않는 경우의 기본 동작입니다.<br /><br /> 해석된 스칼라 사용자 정의 함수와 고유하게 컴파일된 스칼라 사용자 정의 함수의 경우, 함수가 결과 집합을 반환하지 않기 때문에 이 옵션이 작동하지 않습니다.|  
 |RESULT SETS NONE|**적용 대상**: [!INCLUDE[ssSQL11](../../includes/sssql11-md.md)] 이상, [!INCLUDE[ssSDSfull](../../includes/sssdsfull-md.md)].<br /><br /> execute 문이 어떠한 결과도 반환하지 않습니다. 결과가 반환되는 경우 일괄 처리가 중단됩니다.<br /><br /> 해석된 스칼라 사용자 정의 함수와 고유하게 컴파일된 스칼라 사용자 정의 함수의 경우, 함수가 결과 집합을 반환하지 않기 때문에 이 옵션이 작동하지 않습니다.|  
-|*\<result_sets_definition>*|**적용 대상**: [!INCLUDE[ssSQL11](../../includes/sssql11-md.md)] 이상, [!INCLUDE[ssSDSfull](../../includes/sssdsfull-md.md)].<br /><br /> 결과가 result_sets_definition에 지정된 대로 반환됩니다. 여러 결과 집합을 반환하는 문의 경우 *result_sets_definition* 섹션을 여러 개 제공합니다. 각각의 *result_sets_definition*를 괄호로 묶고 쉼표로 구분합니다. 자세한 내용은 이 항목의 뒷부분에 있는 \<result_sets_definition>을 참조하세요.<br /><br /> 이 옵션에서는 함수가 결과 집합을 반환하지 않기 때문에 고유하게 컴파일된 스칼라 사용자 정의 함수에 대해 항상 오류를 냅니다.|
+|*\<result_sets_definition>*|**적용 대상**: [!INCLUDE[ssSQL11](../../includes/sssql11-md.md)] 이상, [!INCLUDE[ssSDSfull](../../includes/sssdsfull-md.md)].<br /><br /> 결과가 result_sets_definition에 지정된 대로 반환됩니다. 여러 결과 집합을 반환하는 문의 경우 *result_sets_definition* 섹션을 여러 개 제공합니다. 각각의 *result_sets_definition* 를 괄호로 묶고 쉼표로 구분합니다. 자세한 내용은 이 항목의 뒷부분에 있는 \<result_sets_definition>을 참조하세요.<br /><br /> 이 옵션에서는 함수가 결과 집합을 반환하지 않기 때문에 고유하게 컴파일된 스칼라 사용자 정의 함수에 대해 항상 오류를 냅니다.|
   
 \<result_sets_definition>
 **적용 대상**: [!INCLUDE[ssSQL11](../../includes/sssql11-md.md)] 이상, [!INCLUDE[ssSDSfull](../../includes/sssdsfull-md.md)].
@@ -412,7 +412,7 @@ AT DATA_SOURCE data_source_name **적용 대상**: [!INCLUDE[sssqlv15](../../inc
  실행 중에 반환되는 실제 결과 집합은 WITH RESULT SETS 절을 사용하여 결과 집합 수, 열 수, 열 이름, null 허용 여부, 데이터 형식 중 한 가지 방법으로 정의된 결과와 다를 수 있습니다. 결과 집합의 수가 다른 경우 오류가 발생하고 일괄 처리가 중단됩니다.  
   
 ## <a name="remarks"></a>설명  
- *value* 또는 @*parameter_name*=*value*를 사용하여 매개 변수를 제공할 수 있습니다. 를 사용하여 제공할 수 있습니다. 매개 변수는 트랜잭션의 일부가 아니므로 나중에 롤백되는 트랜잭션에서 매개 변수가 변경된 경우 해당 매개 변수의 값은 이전 값으로 되돌아가지 않습니다. 호출자에게 반환되는 값은 항상 모듈이 반환되는 시점의 값입니다.  
+ *value* 또는 @*parameter_name*=*value* 를 사용하여 매개 변수를 제공할 수 있습니다. 를 사용하여 제공할 수 있습니다. 매개 변수는 트랜잭션의 일부가 아니므로 나중에 롤백되는 트랜잭션에서 매개 변수가 변경된 경우 해당 매개 변수의 값은 이전 값으로 되돌아가지 않습니다. 호출자에게 반환되는 값은 항상 모듈이 반환되는 시점의 값입니다.  
   
  한 모듈에서 다른 모듈을 호출하거나 CLR(공용 언어 런타임) 모듈, 사용자 정의 유형 또는 집계를 참조하여 관리 코드를 실행하면 중첩이 발생합니다. 호출된 모듈이나 관리 코드 참조가 실행될 때는 중첩 수준이 증가하고 호출된 모듈이나 관리 코드 참조가 끝날 때는 중첩 수준이 감소합니다. 최대값인 32 중첩 수준을 초과하면 전체 호출 체인이 실행되지 않습니다. 현재 중첩 수준은 @@NESTLEVEL system 함수에 저장됩니다.  
   
@@ -468,7 +468,7 @@ USE master; EXEC ('USE AdventureWorks2012; SELECT BusinessEntityID, JobTitle FRO
   
 -   모듈이 EXECUTE AS CALLER로 표시되어 있으며 사용자가 개체에 대한 해당 권한을 갖고 있습니다.  
   
--   모듈이 EXECUTE AS *user_name*으로 표시되어 있으며 *user_name*이 개체에 대한 해당 권한을 갖고 있습니다.  
+-   모듈이 EXECUTE AS *user_name* 으로 표시되어 있으며 *user_name* 이 개체에 대한 해당 권한을 갖고 있습니다.  
   
 ### <a name="context-switching-permissions"></a>컨텍스트 전환 권한  
  로그인에 EXECUTE AS를 지정하려면 호출자에게 지정한 로그인 이름에 대한 IMPERSONATE 권한이 있어야 합니다. 데이터베이스 사용자에 EXECUTE AS를 지정하려면 호출자에게 지정한 사용자 이름에 대한 IMPERSONATE 권한이 있어야 합니다. 실행 컨텍스트를 지정하지 않거나 EXECUTE AS CALLER를 지정한 경우에는 IMPERSONATE 권한이 필요하지 않습니다.  

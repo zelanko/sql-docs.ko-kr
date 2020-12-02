@@ -32,11 +32,11 @@ author: rothja
 ms.author: jroth
 monikerRange: '>=aps-pdw-2016||=azuresqldb-current||=azure-sqldw-latest||>=sql-server-2016||=sqlallproducts-allversions||>=sql-server-linux-2017||=azuresqldb-mi-current'
 ms.openlocfilehash: b40f7e725c4f0a413963e772a741b56aabb65140
-ms.sourcegitcommit: cfa04a73b26312bf18d8f6296891679166e2754d
+ms.sourcegitcommit: 192f6a99e19e66f0f817fdb1977f564b2aaa133b
 ms.translationtype: HT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 10/19/2020
-ms.locfileid: "92196837"
+ms.lasthandoff: 11/25/2020
+ms.locfileid: "96124556"
 ---
 # <a name="begin-transaction-transact-sql"></a>BEGIN TRANSACTION(Transact-SQL)
 [!INCLUDE [sql-asdb-asdbmi-asa-pdw](../../includes/applies-to-version/sql-asdb-asdbmi-asa-pdw.md)]
@@ -71,7 +71,7 @@ BEGIN { TRAN | TRANSACTION }
  *transaction_name*  
  **적용 대상:** SQL Server(2008부터), Azure SQL Database
  
- 트랜잭션에 할당된 이름입니다. *transaction_name*은 식별자 규칙을 따라야 하지만 32자보다 긴 식별자는 허용되지 않습니다. 중첩된 BEGIN...COMMIT 또는 BEGIN...ROLLBACK 문의 가장 바깥쪽 쌍에서만 트랜잭션 이름을 사용합니다. [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 인스턴스에서 대/소문자를 구분하지 않는 경우에도 *transaction_name*은 항상 대/소문자를 구분합니다.  
+ 트랜잭션에 할당된 이름입니다. *transaction_name* 은 식별자 규칙을 따라야 하지만 32자보다 긴 식별자는 허용되지 않습니다. 중첩된 BEGIN...COMMIT 또는 BEGIN...ROLLBACK 문의 가장 바깥쪽 쌍에서만 트랜잭션 이름을 사용합니다. [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 인스턴스에서 대/소문자를 구분하지 않는 경우에도 *transaction_name* 은 항상 대/소문자를 구분합니다.  
   
  @*tran_name_variable*  
  **적용 대상:** SQL Server(2008부터), Azure SQL Database
@@ -81,7 +81,7 @@ BEGIN { TRAN | TRANSACTION }
  WITH MARK [ '*description*' ]  
 **적용 대상:** SQL Server(2008부터), Azure SQL Database
 
-로그에 트랜잭션이 표시되도록 지정합니다. *description*은 표시를 설명하는 문자열입니다. 128자보다 긴 *description*은 128자로 잘린 다음에 msdb.dbo.logmarkhistory 테이블에 저장됩니다.  
+로그에 트랜잭션이 표시되도록 지정합니다. *description* 은 표시를 설명하는 문자열입니다. 128자보다 긴 *description* 은 128자로 잘린 다음에 msdb.dbo.logmarkhistory 테이블에 저장됩니다.  
   
  WITH MARK를 사용할 경우 트랜잭션 이름을 반드시 지정해야 합니다. WITH MARK를 사용하면 명명된 표시에 트랜잭션 로그를 복원할 수 있습니다.  
   
@@ -115,7 +115,7 @@ BEGIN TRANSACTION은 해당 문을 실행한 연결에 대해 로컬 트랜잭�
   
  데이터베이스가 표시된 트랜잭션에 의해 업데이트되는 경우에만 표시가 트랜잭션 로그에 저장됩니다. 데이터를 수정하지 않는 트랜잭션은 표시되지 않습니다.  
   
- BEGIN TRAN *new_name* WITH MARK는 표시되지 않은 기존 트랜잭션 내에 중첩될 수 있습니다. 그럴 경우 트랜잭션에 이름이 이미 지정되어 있더라도 *new_name*이 트랜잭션의 표시 이름이 됩니다. 다음 예에서 표시의 이름은 `M2`입니다.  
+ BEGIN TRAN *new_name* WITH MARK는 표시되지 않은 기존 트랜잭션 내에 중첩될 수 있습니다. 그럴 경우 트랜잭션에 이름이 이미 지정되어 있더라도 *new_name* 이 트랜잭션의 표시 이름이 됩니다. 다음 예에서 표시의 이름은 `M2`입니다.  
   
 ```sql  
 BEGIN TRAN T1;  

@@ -8,21 +8,21 @@ ms.reviewer: ''
 ms.technology: install
 ms.topic: conceptual
 ms.assetid: 11f4ed8a-aaa9-417b-bdd5-204f551c6bb6
-author: MashaMSFT
-ms.author: mathoma
+author: cawrites
+ms.author: chadam
 monikerRange: '>=sql-server-2016||=sqlallproducts-allversions'
-ms.openlocfilehash: b562b03068ebee035f9b298c62ca49d5c1c0f396
-ms.sourcegitcommit: 2f868a77903c1f1c4cecf4ea1c181deee12d5b15
+ms.openlocfilehash: 6c06cb6fe516625cb517fc315bac8f3bc91e4fd7
+ms.sourcegitcommit: 5a1ed81749800c33059dac91b0e18bd8bb3081b1
 ms.translationtype: HT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 10/02/2020
-ms.locfileid: "91671106"
+ms.lasthandoff: 11/23/2020
+ms.locfileid: "96125910"
 ---
 # <a name="install-sql-server-with-sysprep"></a>SysPrep을 사용하여 SQL Server 설치
 
 [!INCLUDE [SQL Server -Windows Only](../../includes/applies-to-version/sql-windows-only.md)]
 
-[!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] SysPrep 관련 설치 동작에 액세스할 수 있습니다. **설치 센터**의 **고급** 페이지에는 **독립 실행형 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 인스턴스의 이미지 준비**와 **독립 실행형 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 준비 인스턴스의 이미지 완료**라는 두 옵션이 있습니다. [준비](#prepare) 및 [완료](#complete) 섹션에서는 설치 프로세스에 대해 자세히 설명합니다. 자세한 내용은 [Considerations for Installing SQL Server Using SysPrep](../../database-engine/install-windows/considerations-for-installing-sql-server-using-sysprep.md)을 참조하세요. 
+[!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] SysPrep 관련 설치 동작에 액세스할 수 있습니다. **설치 센터** 의 **고급** 페이지에는 **독립 실행형 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 인스턴스의 이미지 준비** 와 **독립 실행형 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 준비 인스턴스의 이미지 완료** 라는 두 옵션이 있습니다. [준비](#prepare) 및 [완료](#complete) 섹션에서는 설치 프로세스에 대해 자세히 설명합니다. 자세한 내용은 [Considerations for Installing SQL Server Using SysPrep](../../database-engine/install-windows/considerations-for-installing-sql-server-using-sysprep.md)을 참조하세요. 
   
 명령 프롬프트 또는 구성 파일을 사용하여 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 인스턴스를 준비하고 완료할 수도 있습니다. 자세한 내용은 다음을 참조하세요.  
   
@@ -84,17 +84,17 @@ ms.locfileid: "91671106"
   
 1. [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 설치 미디어를 넣고 루트 폴더에서 Setup.exe를 두 번 클릭합니다. 네트워크 공유에서 설치하려면 공유에서 루트 폴더를 찾은 다음 Setup.exe를 두 번 클릭합니다. 
   
-2. 설치 마법사가 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 설치 센터를 실행합니다. [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 인스턴스를 준비하려면 **고급** 페이지에서 **독립 실행형 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 인스턴스의 이미지 준비**를 클릭합니다. 
+2. 설치 마법사가 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 설치 센터를 실행합니다. [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 인스턴스를 준비하려면 **고급** 페이지에서 **독립 실행형 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 인스턴스의 이미지 준비** 를 클릭합니다. 
   
-3. 시스템 구성 검사기가 컴퓨터에서 검색 작업을 실행합니다. 계속하려면 **확인**을 클릭합니다. **자세한 정보 표시**를 클릭하여 화면에 세부 정보를 표시하거나 **자세한 보고서 보기**를 클릭하여 HTML 보고서 형식으로 볼 수 있습니다. 
+3. 시스템 구성 검사기가 컴퓨터에서 검색 작업을 실행합니다. 계속하려면 **확인** 을 클릭합니다. **자세한 정보 표시** 를 클릭하여 화면에 세부 정보를 표시하거나 **자세한 보고서 보기** 를 클릭하여 HTML 보고서 형식으로 볼 수 있습니다. 
   
 4. 제품 업데이트 페이지에는 사용 가능한 최신 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 제품 업데이트가 표시됩니다. 업데이트를 포함하지 않으려면 **[!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 제품 업데이트 포함** 확인란의 선택을 취소합니다. 제품 업데이트가 검색되지 않으면 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 설치 프로그램에서 이 페이지가 표시되지 않으며 **설치 파일 설치** 페이지로 자동으로 진행됩니다. 
   
 5. 설치 프로그램에서 설치 파일 설치 페이지에는 설치 파일의 다운로드, 추출 및 설치 진행률이 표시됩니다. [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 설치 프로그램에 대한 업데이트가 발견되고 이러한 업데이트가 포함되도록 지정된 경우 해당 업데이트도 함께 설치됩니다. 
   
-6. 시스템 구성 검사기가 설치를 계속하기 전에 컴퓨터의 시스템 상태를 확인합니다. **자세한 정보 표시**를 클릭하여 화면에 세부 정보를 표시하거나 **자세한 보고서 보기**를 클릭하여 HTML 보고서 형식으로 볼 수 있습니다. 
+6. 시스템 구성 검사기가 설치를 계속하기 전에 컴퓨터의 시스템 상태를 확인합니다. **자세한 정보 표시** 를 클릭하여 화면에 세부 정보를 표시하거나 **자세한 보고서 보기** 를 클릭하여 HTML 보고서 형식으로 볼 수 있습니다. 
   
-7. **이미지 유형 준비** 페이지에서 **새 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 인스턴스 준비**를 선택합니다. 
+7. **이미지 유형 준비** 페이지에서 **새 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 인스턴스 준비** 를 선택합니다. 
   
      컴퓨터에 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]의 구성되지 않은 기존 준비 인스턴스가 있는 경우에만 **이미지 유형 준비** 페이지가 표시됩니다. [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 의 새 인스턴스를 준비하거나, 컴퓨터에 이미 있는 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 준비 인스턴스에 sys prep 지원 기능을 추가하도록 선택할 수 있습니다. [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 준비 인스턴스에 기능을 추가하는 방법은 [준비 인스턴스에 기능 추가](#AddFeatures)를 참조하십시오. 
   
@@ -110,9 +110,9 @@ ms.locfileid: "91671106"
   
      선택한 기능의 필수 구성 요소가 오른쪽 창에 표시됩니다. [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 설치 프로그램에서는 이미 설치되어 있지 않은 필수 구성 요소가 있는 경우 이 절차의 뒷부분에 설명된 설치 단계에서 이를 설치합니다. 
   
-10. **이미지 준비 규칙** 페이지에서 시스템 구성 검사기가 설치를 계속하기 전에 컴퓨터의 시스템 상태를 확인합니다. **자세한 정보 표시**를 클릭하여 화면에 세부 정보를 표시하거나 **자세한 보고서 보기**를 클릭하여 HTML 보고서 형식으로 볼 수 있습니다. 
+10. **이미지 준비 규칙** 페이지에서 시스템 구성 검사기가 설치를 계속하기 전에 컴퓨터의 시스템 상태를 확인합니다. **자세한 정보 표시** 를 클릭하여 화면에 세부 정보를 표시하거나 **자세한 보고서 보기** 를 클릭하여 HTML 보고서 형식으로 볼 수 있습니다. 
   
-11. 인스턴스 구성 페이지에서 해당 인스턴스의 인스턴스 ID를 지정합니다. **다음**을 클릭하여 계속합니다. 
+11. 인스턴스 구성 페이지에서 해당 인스턴스의 인스턴스 ID를 지정합니다. **다음** 을 클릭하여 계속합니다. 
   
      **인스턴스 ID** — 인스턴스 ID는 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 인스턴스의 설치 디렉터리 및 레지스트리 키를 식별하는 데 사용됩니다. 이는 기본 인스턴스와 명명된 인스턴스에 모두 해당됩니다. 준비 인스턴스가 완료 단계 중에 기본 인스턴스로 완료되면 MSSQLSERVER가 인스턴스 이름을 덮어쓰고 인스턴스 ID는 지정한 대로 유지됩니다. 
   
@@ -124,13 +124,13 @@ ms.locfileid: "91671106"
   
 12. **디스크 공간 요구 사항** 페이지에서는 지정한 기능에 필요한 디스크 공간을 계산합니다. 그런 다음 사용 가능한 디스크 공간과 필요한 디스크 공간을 비교합니다. 
   
-13. 시스템 구성 검사기는 사용자가 지정한 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 기능에 따라 컴퓨터 구성의 유효성을 검사하기 위해 이미지 준비 규칙을 실행합니다. **자세한 정보 표시**를 클릭하여 화면에 세부 정보를 표시하거나 **자세한 보고서 보기**를 클릭하여 HTML 보고서 형식으로 볼 수 있습니다. 
+13. 시스템 구성 검사기는 사용자가 지정한 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 기능에 따라 컴퓨터 구성의 유효성을 검사하기 위해 이미지 준비 규칙을 실행합니다. **자세한 정보 표시** 를 클릭하여 화면에 세부 정보를 표시하거나 **자세한 보고서 보기** 를 클릭하여 HTML 보고서 형식으로 볼 수 있습니다. 
   
-14. **이미지 준비 작업 준비** 페이지에 설치 중에 지정한 설치 옵션이 트리 뷰 형태로 표시됩니다. 설치 프로그램의 이 페이지에서는 제품 업데이트 기능이 사용하도록 설정되었는지 여부와 최종 업데이트 버전이 표시됩니다. 계속하려면 **준비**를 클릭합니다. [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 설치 프로그램은 선택한 기능에 대한 필수 구성 요소를 먼저 설치하고 그 다음에 기능을 설치합니다. 
+14. **이미지 준비 작업 준비** 페이지에 설치 중에 지정한 설치 옵션이 트리 뷰 형태로 표시됩니다. 설치 프로그램의 이 페이지에서는 제품 업데이트 기능이 사용하도록 설정되었는지 여부와 최종 업데이트 버전이 표시됩니다. 계속하려면 **준비** 를 클릭합니다. [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 설치 프로그램은 선택한 기능에 대한 필수 구성 요소를 먼저 설치하고 그 다음에 기능을 설치합니다. 
   
 15. 설치하는 동안 **이미지 준비 진행률** 페이지에 상태 정보가 제공되므로 설치 진행률을 모니터링할 수 있습니다. 
   
-16. 설치가 끝나면 설치 및 기타 중요한 참고 사항에 대한 요약 로그 파일을 볼 수 있는 링크가 **완료** 페이지에 제공됩니다. [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 설치 과정을 완료하려면 **닫기**를 클릭합니다. 
+16. 설치가 끝나면 설치 및 기타 중요한 참고 사항에 대한 요약 로그 파일을 볼 수 있는 링크가 **완료** 페이지에 제공됩니다. [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 설치 과정을 완료하려면 **닫기** 를 클릭합니다. 
   
 17. 컴퓨터를 다시 시작합니다. 설치가 끝나면 설치 마법사에 표시되는 메시지를 읽어야 합니다. 자세한 내용은 [View and Read SQL Server Setup Log Files](../../database-engine/install-windows/view-and-read-sql-server-setup-log-files.md)을 참조하세요. 
   
@@ -142,11 +142,11 @@ ms.locfileid: "91671106"
   
 1. [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 준비 인스턴스가 컴퓨터의 이미지에 포함되어 있으면 시작 메뉴에 바로 가기가 나타납니다. 설치 센터를 시작하고 **고급** 페이지에서 **독립 실행형 준비 인스턴스의 이미지 완료** 를 클릭할 수도 있습니다. 
   
-2. 시스템 구성 검사기가 컴퓨터에서 검색 작업을 실행합니다. 계속하려면 **확인**을 클릭합니다. **자세한 정보 표시**를 클릭하여 화면에 세부 정보를 표시하거나 **자세한 보고서 보기**를 클릭하여 HTML 보고서 형식으로 볼 수 있습니다. 
+2. 시스템 구성 검사기가 컴퓨터에서 검색 작업을 실행합니다. 계속하려면 **확인** 을 클릭합니다. **자세한 정보 표시** 를 클릭하여 화면에 세부 정보를 표시하거나 **자세한 보고서 보기** 를 클릭하여 HTML 보고서 형식으로 볼 수 있습니다. 
   
 3. **설치 지원 파일** 페이지에서 **설치** 를 클릭하여 설치 지원 파일을 설치합니다. 
   
-4. 시스템 구성 검사기가 설치를 계속하기 전에 컴퓨터의 시스템 상태를 확인합니다. 검사가 완료되면 **다음** 을 클릭하여 작업을 계속 진행합니다. **자세한 정보 표시**를 클릭하여 화면에 세부 정보를 표시하거나 **자세한 보고서 보기**를 클릭하여 HTML 보고서 형식으로 볼 수 있습니다. 
+4. 시스템 구성 검사기가 설치를 계속하기 전에 컴퓨터의 시스템 상태를 확인합니다. 검사가 완료되면 **다음** 을 클릭하여 작업을 계속 진행합니다. **자세한 정보 표시** 를 클릭하여 화면에 세부 정보를 표시하거나 **자세한 보고서 보기** 를 클릭하여 HTML 보고서 형식으로 볼 수 있습니다. 
   
 5. **제품 키** 페이지에서 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]무료 버전을 설치할지 아니면 PID 키가 있는 제품의 프로덕션 버전을 설치할지를 나타내는 옵션 단추를 선택합니다. 자세한 내용은 [SQL Server의 버전과 지원하는 기능](../../sql-server/editions-and-components-of-sql-server-2017.md)을 참조하세요. Evaluation Edition을 설치하는 경우 이 단계를 완료하면 180일의 무료 사용 기간이 시작됩니다. 
   
@@ -156,12 +156,12 @@ ms.locfileid: "91671106"
   
      **설치된 인스턴스:** 준비 인스턴스를 포함하여 이 머신에 설치되어 있는 모든 인스턴스가 표시됩니다. 
   
-8. 준비 단계에서 설치에 포함하도록 선택한 기능 및 구성 요소가 **기능 검토** 페이지에 표시됩니다. 준비 인스턴스에 포함되지 않은 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 인스턴스에 다른 기능을 더 추가하려면 먼저 이 단계를 완료하여 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 인스턴스를 완료한 다음, **설치 센터** 의 **기능 추가**에서 기능을 추가해야 합니다. 
+8. 준비 단계에서 설치에 포함하도록 선택한 기능 및 구성 요소가 **기능 검토** 페이지에 표시됩니다. 준비 인스턴스에 포함되지 않은 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 인스턴스에 다른 기능을 더 추가하려면 먼저 이 단계를 완료하여 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 인스턴스를 완료한 다음, **설치 센터** 의 **기능 추가** 에서 기능을 추가해야 합니다. 
   
     > [!NOTE]  
     >  설치하는 제품 버전에 사용할 수 있는 기능을 추가할 수 있습니다. 자세한 내용은 [SQL Server의 버전과 지원하는 기능](../../sql-server/editions-and-components-of-sql-server-2017.md)을 참조하세요.  
   
-9. 인스턴스 구성 페이지에서 준비 인스턴스의 인스턴스 이름을 지정합니다. 이것은 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]구성을 완료한 인스턴스의 이름입니다. **다음**을 클릭하여 계속합니다. 
+9. 인스턴스 구성 페이지에서 준비 인스턴스의 인스턴스 이름을 지정합니다. 이것은 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]구성을 완료한 인스턴스의 이름입니다. **다음** 을 클릭하여 계속합니다. 
   
      **인스턴스 ID** — 인스턴스 ID는 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 인스턴스의 설치 디렉터리 및 레지스트리 키를 식별하는 데 사용됩니다. 이는 기본 인스턴스와 명명된 인스턴스에 모두 해당됩니다. 준비 인스턴스가 완료 단계 중에 기본 인스턴스로 완료되면 MSSQLSERVER가 인스턴스 이름을 덮어쓰고 인스턴스 ID는 준비 단계에서 지정한 대로 유지됩니다. 
   
@@ -181,7 +181,7 @@ ms.locfileid: "91671106"
   
      **보안 정보** [!INCLUDE[ssNoteStrongPass](../../includes/ssnotestrongpass-md.md)]  
   
-     [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 서비스에 대한 로그인 정보 지정을 완료하면 **다음**을 클릭합니다. 
+     [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 서비스에 대한 로그인 정보 지정을 완료하면 **다음** 을 클릭합니다. 
   
 12. **서버 구성 - 데이터 정렬** 탭을 사용하여 [!INCLUDE[ssDE](../../includes/ssde-md.md)] 및 [!INCLUDE[ssASnoversion](../../includes/ssasnoversion-md.md)]에 기본이 아닌 데이터 정렬을 지정합니다. 자세한 내용은 [서버 구성 - 데이터 정렬](./install-sql-server.md)을 참조하세요. 
   
@@ -191,11 +191,11 @@ ms.locfileid: "91671106"
   
          디바이스가 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]에 성공적으로 연결되면 Windows 인증 및 혼합 모드에 모두 동일한 보안 메커니즘이 적용됩니다. 자세한 내용은 [데이터베이스 엔진 구성 - 서버 구성](./install-sql-server.md)을 참조하세요. 
   
-    - [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 관리자 - [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]인스턴스에 대한 시스템 관리자를 한 명 이상 지정해야 합니다. [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 설치 프로그램을 실행하는 계정을 추가하려면 **현재 사용자 추가**를 클릭합니다. 시스템 관리자 목록에 계정을 추가하거나 목록의 계정을 제거하려면 **추가** 또는 **제거**를 클릭한 다음 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]인스턴스에 대한 관리자 권한을 가질 사용자, 그룹 또는 컴퓨터 목록을 편집합니다. 자세한 내용은 [데이터베이스 엔진 구성 - 서버 구성](./install-sql-server.md)을 참조하세요. 
+    - [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 관리자 - [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]인스턴스에 대한 시스템 관리자를 한 명 이상 지정해야 합니다. [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 설치 프로그램을 실행하는 계정을 추가하려면 **현재 사용자 추가** 를 클릭합니다. 시스템 관리자 목록에 계정을 추가하거나 목록의 계정을 제거하려면 **추가** 또는 **제거** 를 클릭한 다음 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]인스턴스에 대한 관리자 권한을 가질 사용자, 그룹 또는 컴퓨터 목록을 편집합니다. 자세한 내용은 [데이터베이스 엔진 구성 - 서버 구성](./install-sql-server.md)을 참조하세요. 
   
-     목록 편집을 마쳤으면 **확인**을 클릭합니다. 구성 대화 상자에서 관리자 목록을 확인합니다. 목록 구성을 완료했으면 **다음**을 클릭합니다. 
+     목록 편집을 마쳤으면 **확인** 을 클릭합니다. 구성 대화 상자에서 관리자 목록을 확인합니다. 목록 구성을 완료했으면 **다음** 을 클릭합니다. 
   
-14. [!INCLUDE[ssDE](../../includes/ssde-md.md)] 구성 - 데이터 디렉터리 페이지를 사용하여 기본이 아닌 설치 디렉터리를 지정합니다. 기본 디렉터리에 설치하려면 **다음**을 클릭합니다. 
+14. [!INCLUDE[ssDE](../../includes/ssde-md.md)] 구성 - 데이터 디렉터리 페이지를 사용하여 기본이 아닌 설치 디렉터리를 지정합니다. 기본 디렉터리에 설치하려면 **다음** 을 클릭합니다. 
   
     > [!IMPORTANT]  
     >  기본이 아닌 설치 디렉터리를 지정하는 경우 설치 폴더가 이 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]인스턴스에 대해 고유한지 확인해야 합니다. 이 대화 상자의 어떠한 디렉터리도 다른 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]인스턴스의 디렉터리와 공유되지 않아야 합니다. 
@@ -208,13 +208,13 @@ ms.locfileid: "91671106"
   
 17. **오류 보고** 페이지에서 [!INCLUDE[msCoName](../../includes/msconame-md.md)] 개선에 도움이 되도록 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]에 보낼 정보를 지정할 수 있습니다. 오류 보고 옵션은 기본적으로 사용됩니다. 
   
-18. **이미지 완료 규칙** 페이지에서 시스템 구성 검사기는 사용자가 지정한 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 구성에 따라 컴퓨터 구성의 유효성을 검사하기 위해 이미지 완료 규칙을 실행합니다. **자세한 정보 표시**를 클릭하여 화면에 세부 정보를 표시하거나 **자세한 보고서 보기**를 클릭하여 HTML 보고서 형식으로 볼 수 있습니다. 
+18. **이미지 완료 규칙** 페이지에서 시스템 구성 검사기는 사용자가 지정한 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 구성에 따라 컴퓨터 구성의 유효성을 검사하기 위해 이미지 완료 규칙을 실행합니다. **자세한 정보 표시** 를 클릭하여 화면에 세부 정보를 표시하거나 **자세한 보고서 보기** 를 클릭하여 HTML 보고서 형식으로 볼 수 있습니다. 
   
-19. **이미지 완료 준비** 페이지에 설치 중에 지정한 설치 옵션이 트리 뷰 형태로 표시됩니다. 계속하려면 **설치**를 클릭합니다. 
+19. **이미지 완료 준비** 페이지에 설치 중에 지정한 설치 옵션이 트리 뷰 형태로 표시됩니다. 계속하려면 **설치** 를 클릭합니다. 
   
 20. 설치하는 동안 **이미지 완료 진행률** 페이지에 상태 정보가 제공되므로 설치 진행률을 모니터링할 수 있습니다. 
   
-21. 설치가 끝나면 설치 및 기타 중요한 참고 사항에 대한 요약 로그 파일을 볼 수 있는 링크가 **완료** 페이지에 제공됩니다. [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 설치 과정을 완료하려면 **닫기**를 클릭합니다. 
+21. 설치가 끝나면 설치 및 기타 중요한 참고 사항에 대한 요약 로그 파일을 볼 수 있는 링크가 **완료** 페이지에 제공됩니다. [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 설치 과정을 완료하려면 **닫기** 를 클릭합니다. 
   
 22. 컴퓨터를 다시 시작합니다. 설치가 끝나면 설치 마법사에 표시되는 메시지를 읽어야 합니다. 자세한 내용은 [View and Read SQL Server Setup Log Files](../../database-engine/install-windows/view-and-read-sql-server-setup-log-files.md)을 참조하세요. 
   
@@ -226,9 +226,9 @@ ms.locfileid: "91671106"
   
 1. [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 설치 미디어를 넣고 루트 폴더에서 Setup.exe를 두 번 클릭합니다. 네트워크 공유에서 설치하려면 공유에서 루트 폴더를 찾은 다음 Setup.exe를 두 번 클릭합니다. 
   
-2. 설치 마법사가 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 설치 센터를 실행합니다. [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 준비 인스턴스에 기능을 추가하려면 **고급** 페이지에서 **독립 실행형 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 인스턴스의 이미지 준비**를 클릭합니다. 
+2. 설치 마법사가 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 설치 센터를 실행합니다. [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 준비 인스턴스에 기능을 추가하려면 **고급** 페이지에서 **독립 실행형 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 인스턴스의 이미지 준비** 를 클릭합니다. 
   
-3. 시스템 구성 검사기가 컴퓨터에서 검색 작업을 실행합니다. 계속하려면 **확인**을 클릭합니다. **자세한 정보 표시**를 클릭하여 화면에 세부 정보를 표시하거나 **자세한 보고서 보기**를 클릭하여 HTML 보고서 형식으로 볼 수 있습니다. 
+3. 시스템 구성 검사기가 컴퓨터에서 검색 작업을 실행합니다. 계속하려면 **확인** 을 클릭합니다. **자세한 정보 표시** 를 클릭하여 화면에 세부 정보를 표시하거나 **자세한 보고서 보기** 를 클릭하여 HTML 보고서 형식으로 볼 수 있습니다. 
   
 4. 설치 지원 파일 페이지에서 **설치** 를 클릭하여 설치 지원 파일을 설치합니다. 
   
@@ -238,17 +238,17 @@ ms.locfileid: "91671106"
   
      선택한 기능의 필수 구성 요소가 오른쪽 창에 표시됩니다. [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 설치 프로그램에서는 이미 설치되어 있지 않은 필수 구성 요소가 있는 경우 이 절차의 뒷부분에 설명된 설치 단계에서 이를 설치합니다. 
   
-7. **이미지 준비 규칙** 페이지에서 시스템 구성 검사기가 설치를 계속하기 전에 컴퓨터의 시스템 상태를 확인합니다. **자세한 정보 표시**를 클릭하여 화면에 세부 정보를 표시하거나 **자세한 보고서 보기**를 클릭하여 HTML 보고서 형식으로 볼 수 있습니다. 
+7. **이미지 준비 규칙** 페이지에서 시스템 구성 검사기가 설치를 계속하기 전에 컴퓨터의 시스템 상태를 확인합니다. **자세한 정보 표시** 를 클릭하여 화면에 세부 정보를 표시하거나 **자세한 보고서 보기** 를 클릭하여 HTML 보고서 형식으로 볼 수 있습니다. 
   
 8. 디스크 공간 요구 사항 페이지에서는 지정한 기능에 필요한 디스크 공간을 계산합니다. 그런 다음 사용 가능한 디스크 공간과 필요한 디스크 공간을 비교합니다. 
   
-9. **이미지 준비 규칙** 페이지에서 시스템 구성 검사기는 사용자가 지정한 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 기능에 따라 컴퓨터 구성의 유효성을 검사하기 위해 이미지 준비 규칙을 실행합니다. **자세한 정보 표시**를 클릭하여 화면에 세부 정보를 표시하거나 **자세한 보고서 보기**를 클릭하여 HTML 보고서 형식으로 볼 수 있습니다. 
+9. **이미지 준비 규칙** 페이지에서 시스템 구성 검사기는 사용자가 지정한 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 기능에 따라 컴퓨터 구성의 유효성을 검사하기 위해 이미지 준비 규칙을 실행합니다. **자세한 정보 표시** 를 클릭하여 화면에 세부 정보를 표시하거나 **자세한 보고서 보기** 를 클릭하여 HTML 보고서 형식으로 볼 수 있습니다. 
   
-10. **이미지 준비 작업 준비** 페이지에 설치 중에 지정한 설치 옵션이 트리 뷰 형태로 표시됩니다. 계속하려면 **설치**를 클릭합니다. [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 설치 프로그램은 선택한 기능에 대한 필수 구성 요소를 먼저 설치하고 그 다음에 기능을 설치합니다. 
+10. **이미지 준비 작업 준비** 페이지에 설치 중에 지정한 설치 옵션이 트리 뷰 형태로 표시됩니다. 계속하려면 **설치** 를 클릭합니다. [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 설치 프로그램은 선택한 기능에 대한 필수 구성 요소를 먼저 설치하고 그 다음에 기능을 설치합니다. 
   
 11. 설치하는 동안 **이미지 준비 진행률** 페이지에 상태 정보가 제공되므로 설치 진행률을 모니터링할 수 있습니다. 
   
-12. 설치가 끝나면 설치 및 기타 중요한 참고 사항에 대한 요약 로그 파일을 볼 수 있는 링크가 **완료** 페이지에 제공됩니다. [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 설치 과정을 완료하려면 **닫기**를 클릭합니다. 
+12. 설치가 끝나면 설치 및 기타 중요한 참고 사항에 대한 요약 로그 파일을 볼 수 있는 링크가 **완료** 페이지에 제공됩니다. [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 설치 과정을 완료하려면 **닫기** 를 클릭합니다. 
   
 13. 컴퓨터를 다시 시작합니다. 설치가 끝나면 설치 마법사에 표시되는 메시지를 읽어야 합니다. 자세한 내용은 [View and Read SQL Server Setup Log Files](../../database-engine/install-windows/view-and-read-sql-server-setup-log-files.md)을 참조하세요. 
   
@@ -256,15 +256,15 @@ ms.locfileid: "91671106"
   
 ### <a name="removing-features-from-a-prepared-instance-of-ssnoversion"></a>다음 준비 인스턴스에서 기능 제거: [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]  
   
-1. 제거 프로세스를 시작하려면 **시작** 메뉴에서 **제어판** 을 클릭하고 **프로그램 및 기능**을 두 번 클릭합니다. 
+1. 제거 프로세스를 시작하려면 **시작** 메뉴에서 **제어판** 을 클릭하고 **프로그램 및 기능** 을 두 번 클릭합니다. 
   
-2. 제거할 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 구성 요소를 두 번 클릭하고 **제거**를 클릭합니다. 
+2. 제거할 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 구성 요소를 두 번 클릭하고 **제거** 를 클릭합니다. 
   
 3. 컴퓨터 구성을 확인하기 위해 설치 지원 규칙이 실행됩니다. 계속하려면 **확인** 을 클릭합니다. 
   
 4. **인스턴스 선택** 페이지에서 수정할 준비 인스턴스를 선택합니다. PreparedInstanceID 인스턴스를 선택하면 준비 인스턴스의 이름이 "구성되지 않은 PreparedInstanceID"로 표시됩니다. 
   
-5. **기능 선택** 페이지가 나타나면 지정한 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 인스턴스에서 제거할 기능을 지정합니다. **다음**을 클릭하여 계속합니다. 
+5. **기능 선택** 페이지가 나타나면 지정한 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 인스턴스에서 제거할 기능을 지정합니다. **다음** 을 클릭하여 계속합니다. 
   
 6. 작업을 성공적으로 완료할 수 있는지 확인하기 위해 제거 규칙이 실행됩니다. 
   
@@ -278,15 +278,15 @@ ms.locfileid: "91671106"
   
 ### <a name="uninstall-a-prepared-instance-of-ssnoversion"></a>다음 준비 인스턴스 제거: [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]  
   
-1. 제거 프로세스를 시작하려면 **시작** 메뉴에서 **제어판** 을 클릭하고 **프로그램 및 기능**을 두 번 클릭합니다. 
+1. 제거 프로세스를 시작하려면 **시작** 메뉴에서 **제어판** 을 클릭하고 **프로그램 및 기능** 을 두 번 클릭합니다. 
   
-2. 제거할 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 구성 요소를 두 번 클릭하고 **제거**를 클릭합니다. 
+2. 제거할 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 구성 요소를 두 번 클릭하고 **제거** 를 클릭합니다. 
   
 3. 컴퓨터 구성을 확인하기 위해 설치 지원 규칙이 실행됩니다. 계속하려면 **확인** 을 클릭합니다. 
   
 4. **인스턴스 선택** 페이지에서 수정할 준비 인스턴스를 선택합니다. PreparedInstanceID 인스턴스를 선택하면 준비 인스턴스의 이름이 "구성되지 않은 PreparedInstanceID"로 표시됩니다. 
   
-5. **기능 선택** 페이지가 나타나면 지정한 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 인스턴스에서 제거할 기능을 지정합니다. **다음**을 클릭하여 계속합니다. 
+5. **기능 선택** 페이지가 나타나면 지정한 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 인스턴스에서 제거할 기능을 지정합니다. **다음** 을 클릭하여 계속합니다. 
   
 6. **제거 규칙** 페이지에서 작업을 성공적으로 완료할 수 있는지 확인하기 위해 설치 프로그램이 규칙을 실행합니다. 
   

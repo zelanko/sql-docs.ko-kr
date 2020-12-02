@@ -27,11 +27,11 @@ author: rothja
 ms.author: jroth
 monikerRange: '>=aps-pdw-2016||=azuresqldb-current||=azure-sqldw-latest||>=sql-server-2016||=sqlallproducts-allversions||>=sql-server-linux-2017||=azuresqldb-mi-current'
 ms.openlocfilehash: 284d4110c4c0a2b8b4b7a1c26c4a4148fb5c50a6
-ms.sourcegitcommit: cfa04a73b26312bf18d8f6296891679166e2754d
+ms.sourcegitcommit: 192f6a99e19e66f0f817fdb1977f564b2aaa133b
 ms.translationtype: HT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 10/19/2020
-ms.locfileid: "92193333"
+ms.lasthandoff: 11/25/2020
+ms.locfileid: "96124406"
 ---
 # <a name="-modulus-transact-sql"></a>%(모듈러스)(Transact-SQL)
 [!INCLUDE [sql-asdb-asdbmi-asa-pdw](../../includes/applies-to-version/sql-asdb-asdbmi-asa-pdw.md)]
@@ -50,10 +50,10 @@ dividend % divisor
 
 ## <a name="arguments"></a>인수
  *dividend*  
- 나눌 숫자 식입니다. *dividend*는 정수 및 통화 데이터 형식 범주에 속하는 데이터 형식 중 하나 또는 **numeric** 데이터 형식을 사용하는 유효한 [식](../../t-sql/language-elements/expressions-transact-sql.md)이어야 합니다.  
+ 나눌 숫자 식입니다. *dividend* 는 정수 및 통화 데이터 형식 범주에 속하는 데이터 형식 중 하나 또는 **numeric** 데이터 형식을 사용하는 유효한 [식](../../t-sql/language-elements/expressions-transact-sql.md)이어야 합니다.  
   
  *divisor*  
- 피제수를 나눌 숫자 식입니다. *divisor*는 정수 및 통화 데이터 형식 범주에 속하는 데이터 형식 중 하나 또는 **numeric** 데이터 형식을 사용하는 유효한 식이어야 합니다.  
+ 피제수를 나눌 숫자 식입니다. *divisor* 는 정수 및 통화 데이터 형식 범주에 속하는 데이터 형식 중 하나 또는 **numeric** 데이터 형식을 사용하는 유효한 식이어야 합니다.  
   
 ## <a name="result-types"></a>결과 형식  
  두 인수의 데이터 형식에 따라 결정됩니다.  

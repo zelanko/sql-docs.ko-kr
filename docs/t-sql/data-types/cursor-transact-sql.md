@@ -16,11 +16,11 @@ ms.assetid: fbea16ef-f2cc-4734-9149-ec2598fd3cca
 author: MikeRayMSFT
 ms.author: mikeray
 ms.openlocfilehash: cc1f3981733712758230287c770c47dd0bf43562
-ms.sourcegitcommit: e700497f962e4c2274df16d9e651059b42ff1a10
+ms.sourcegitcommit: 192f6a99e19e66f0f817fdb1977f564b2aaa133b
 ms.translationtype: HT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 08/17/2020
-ms.locfileid: "88422907"
+ms.lasthandoff: 11/25/2020
+ms.locfileid: "96124987"
 ---
 # <a name="cursor-transact-sql"></a>SET(Transact-SQL)
 [!INCLUDE [SQL Server SQL Database](../../includes/applies-to-version/sql-asdb.md)]
@@ -35,7 +35,7 @@ ms.locfileid: "88422907"
 -   CURSOR_STATUS 함수  
 -   **sp_cursor_list**, **sp_describe_cursor**, **sp_describe_cursor_tables** 및 **sp_describe_cursor_columns** 시스템 저장 프로시저.  
   
-**sp_cursor_list** 및 **sp_describe_cursor**의 **cursor_name** 출력 열은 커서 변수의 이름을 반환합니다.
+**sp_cursor_list** 및 **sp_describe_cursor** 의 **cursor_name** 출력 열은 커서 변수의 이름을 반환합니다.
   
 **cursor** 데이터 형식으로 만들어진 모든 변수는 Null을 허용합니다.
   

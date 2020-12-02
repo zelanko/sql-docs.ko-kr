@@ -10,15 +10,15 @@ ms.topic: conceptual
 helpviewer_keywords:
 - management tools, upgrading
 ms.assetid: 1dab50b9-d16c-49a1-9ecc-af72adb6c378
-author: stevestein
-ms.author: sstein
+author: cawrites
+ms.author: chadam
 monikerRange: '>=sql-server-2016||=sqlallproducts-allversions'
-ms.openlocfilehash: a215dbb0653b9783a0cb66b1a076e30523ba7d72
-ms.sourcegitcommit: 2f868a77903c1f1c4cecf4ea1c181deee12d5b15
+ms.openlocfilehash: c26897d0783788d458745904f412ce81b20244b2
+ms.sourcegitcommit: 5a1ed81749800c33059dac91b0e18bd8bb3081b1
 ms.translationtype: HT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 10/02/2020
-ms.locfileid: "91670266"
+ms.lasthandoff: 11/23/2020
+ms.locfileid: "96125736"
 ---
 # <a name="upgrade-sql-server-management-tools"></a>SQL Server 관리 도구 업그레이드
 

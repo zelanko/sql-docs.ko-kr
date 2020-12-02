@@ -15,11 +15,11 @@ helpviewer_keywords:
 author: MashaMSFT
 ms.author: mathoma
 ms.openlocfilehash: 442e95c2e579fa67cb54b801fe6ebbdcd4098ae3
-ms.sourcegitcommit: e700497f962e4c2274df16d9e651059b42ff1a10
+ms.sourcegitcommit: 192f6a99e19e66f0f817fdb1977f564b2aaa133b
 ms.translationtype: HT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 08/17/2020
-ms.locfileid: "88461087"
+ms.lasthandoff: 11/25/2020
+ms.locfileid: "96125234"
 ---
 # <a name="common-errors-with-database-mail"></a>일반적인 데이터베이스 메일 오류 
 [!INCLUDE [SQL Server SQL MI](../../includes/applies-to-version/sql-asdbmi.md)]
@@ -27,7 +27,7 @@ ms.locfileid: "88461087"
 이 문서에서는 데이터베이스 메일에서 발생하는 몇 가지 일반적인 오류와 그 솔루션에 대해 설명합니다.
 
 ## <a name="could-not-find-stored-procedure-sp_send_dbmail"></a>'sp_send_dbmail' 저장 프로시저를 찾을 수 없음
-[sp_send_dbmail](../system-stored-procedures/sp-send-dbmail-transact-sql.md) 저장 프로시저는 msdb 데이터베이스에 설치됩니다. msdb 데이터베이스에서 **sp_send_dbmail**을 실행하거나 저장 프로시저 이름의 세 부분을 모두 지정해야 합니다.
+[sp_send_dbmail](../system-stored-procedures/sp-send-dbmail-transact-sql.md) 저장 프로시저는 msdb 데이터베이스에 설치됩니다. msdb 데이터베이스에서 **sp_send_dbmail** 을 실행하거나 저장 프로시저 이름의 세 부분을 모두 지정해야 합니다.
 
 예:
 ```sql
@@ -71,7 +71,7 @@ GO
 
 ## <a name="database-mail-queued-no-entries-in-sysmail_event_log-or-windows-application-event-log"></a>데이터베이스 메일이 큐에서 대기하고 sysmail_event_log 또는 Windows 애플리케이션 이벤트 로그에 항목이 없음 
 
-데이터베이스 메일은 Service Broker를 사용하여 이메일 메시지를 큐에 보냅니다. 데이터베이스 메일이 중지되었거나 **msdb** 데이터베이스에서 Service Broker 메시지 배달이 활성화되지 않은 경우, 데이터베이스 메일은 데이터베이스 큐에 메시지를 보내기는 하지만 배달할 수는 없습니다. 이 경우 Service Broker 메시지는 Service Broker 메일 큐에 남아 있습니다. Service Broker가 외부 프로그램을 활성화하지 않으므로 **sysmail_event_log**에 로그 항목이 없으며 **sysmail_allitems** 및 관련 뷰의 항목 상태도 업데이트되지 않습니다.
+데이터베이스 메일은 Service Broker를 사용하여 이메일 메시지를 큐에 보냅니다. 데이터베이스 메일이 중지되었거나 **msdb** 데이터베이스에서 Service Broker 메시지 배달이 활성화되지 않은 경우, 데이터베이스 메일은 데이터베이스 큐에 메시지를 보내기는 하지만 배달할 수는 없습니다. 이 경우 Service Broker 메시지는 Service Broker 메일 큐에 남아 있습니다. Service Broker가 외부 프로그램을 활성화하지 않으므로 **sysmail_event_log** 에 로그 항목이 없으며 **sysmail_allitems** 및 관련 뷰의 항목 상태도 업데이트되지 않습니다.
 
 다음 명령문을 실행하여 **msdb** 데이터베이스에서 Service Broker를 사용하는지 확인합니다.
 

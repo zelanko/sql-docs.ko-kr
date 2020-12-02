@@ -27,11 +27,11 @@ ms.assetid: 68b298aa-ce47-4af5-b59f-9a1b46d48326
 author: markingmyname
 ms.author: maghan
 ms.openlocfilehash: 5cbbaa5a395ff608f677a49e5841907ee79bb667
-ms.sourcegitcommit: cc23d8646041336d119b74bf239a6ac305ff3d31
+ms.sourcegitcommit: 192f6a99e19e66f0f817fdb1977f564b2aaa133b
 ms.translationtype: HT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 09/23/2020
-ms.locfileid: "91116441"
+ms.lasthandoff: 11/25/2020
+ms.locfileid: "96124686"
 ---
 # <a name="file_name-transact-sql"></a>FILE_NAME(Transact-SQL)
 [!INCLUDE [SQL Server](../../includes/applies-to-version/sqlserver.md)]
@@ -50,13 +50,13 @@ FILE_NAME ( file_id )
 
 ## <a name="arguments"></a>인수
 *file_id*  
-반환될 파일 이름 `FILE_NAME`이 포함된 파일 ID 번호입니다. *file_id*는 **int** 데이터 형식입니다.  
+반환될 파일 이름 `FILE_NAME`이 포함된 파일 ID 번호입니다. *file_id* 는 **int** 데이터 형식입니다.  
   
 ## <a name="return-types"></a>반환 형식  
 **nvarchar(128)**  
   
 ## <a name="remarks"></a>설명  
-*file_ID*는 sys.master_files 또는 sys.database_files 카탈로그 뷰의 file_id 열과 일치합니다.  
+*file_ID* 는 sys.master_files 또는 sys.database_files 카탈로그 뷰의 file_id 열과 일치합니다.  
   
 ## <a name="examples"></a>예  
 이 예에서는 [!INCLUDE[ssSampleDBnormal](../../includes/sssampledbnormal-md.md)] 데이터베이스에서 `file_ID 1` 및 `file_ID`에 대한 파일 이름을 반환합니다.  

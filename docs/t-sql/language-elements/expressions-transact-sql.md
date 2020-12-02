@@ -23,11 +23,11 @@ author: rothja
 ms.author: jroth
 monikerRange: '>=aps-pdw-2016||=azuresqldb-current||=azure-sqldw-latest||>=sql-server-2016||=sqlallproducts-allversions||>=sql-server-linux-2017||=azuresqldb-mi-current'
 ms.openlocfilehash: a9e762c88291deb0643acef0db3bfc7c4e79e8a1
-ms.sourcegitcommit: cfa04a73b26312bf18d8f6296891679166e2754d
+ms.sourcegitcommit: 192f6a99e19e66f0f817fdb1977f564b2aaa133b
 ms.translationtype: HT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 10/19/2020
-ms.locfileid: "92191973"
+ms.lasthandoff: 11/25/2020
+ms.locfileid: "96124420"
 ---
 # <a name="expressions-transact-sql"></a>식(Transact-SQL)
 [!INCLUDE [sql-asdb-asdbmi-asa-pdw](../../includes/applies-to-version/sql-asdb-asdbmi-asa-pdw.md)]
@@ -87,14 +87,14 @@ ms.locfileid: "92191973"
 |용어|정의|  
 |----------|----------------|  
 |*constant*|특정한 단일 데이터 값을 나타내는 기호입니다. 자세한 내용은 [상수&#40;Transact-SQL&#41;](../../t-sql/data-types/constants-transact-sql.md)을 참조하세요.|  
-|*scalar_function*|특정 서비스를 제공하고 단일 값을 반환하는 [!INCLUDE[tsql](../../includes/tsql-md.md)] 구문의 단위입니다. *scalar_function*은 SUM, GETDATE 또는 CAST 함수 또는 스칼라 사용자 정의 함수와 같은 기본 제공 스칼라 함수가 될 수 있습니다.|  
+|*scalar_function*|특정 서비스를 제공하고 단일 값을 반환하는 [!INCLUDE[tsql](../../includes/tsql-md.md)] 구문의 단위입니다. *scalar_function* 은 SUM, GETDATE 또는 CAST 함수 또는 스칼라 사용자 정의 함수와 같은 기본 제공 스칼라 함수가 될 수 있습니다.|  
 |[ _table_name_ **.** ]|테이블의 이름 또는 별칭입니다.|  
 |*column*|열의 이름입니다. 식에는 열 이름만 사용할 수 있습니다.|  
 |*variable*|변수 또는 매개 변수의 이름입니다. 자세한 내용은 [DECLARE @local_variable&#40;Transact-SQL&#41;](../../t-sql/language-elements/declare-local-variable-transact-sql.md)을 참조하세요.|  
 | **(** _expression_  **)**|이 항목에서 정의된 바와 같이 유효한 식입니다. 괄호는 안에 있는 식의 모든 연산자를 평가한 후에 그 결과를 다른 식과 결합하는 그룹 연산자입니다.|  
 |**(** _scalar_subquery_ **)**|한 개의 값을 반환하는 하위 쿼리입니다. 다음은 그 예입니다. <br /><br /> `SELECT MAX(UnitPrice)`<br /><br /> `FROM Products`|  
 |{ *unary_operator* }|단항 연산자는 숫자 데이터 형식 범주의 데이터 형식 하나로 평가되는 식에 대해서만 적용할 수 있습니다. 단 하나의 숫자 피연산자만 있는 연산자입니다.<br /><br /> +는 양수를 나타냅니다.<br /><br /> -는 음수를 나타냅니다.<br /><br /> ~는 보수 연산자를 나타냅니다.|  
-|{ *binary_operator* }|두 식을 결합하여 단일 결과를 만드는 방식을 정의하는 연산자입니다. *binary_operator*는 산술 연산자, 대입 연산자(=), 비트 연산자, 비교 연산자, 논리 연산자, 문자열 연결 연산자(+) 또는 단항 연산자일 수 있습니다. 연산자에 대한 자세한 내용은 [연산자&#40;Transact-SQL&#41;](../../t-sql/language-elements/operators-transact-sql.md)를 참조하세요.|  
+|{ *binary_operator* }|두 식을 결합하여 단일 결과를 만드는 방식을 정의하는 연산자입니다. *binary_operator* 는 산술 연산자, 대입 연산자(=), 비트 연산자, 비교 연산자, 논리 연산자, 문자열 연결 연산자(+) 또는 단항 연산자일 수 있습니다. 연산자에 대한 자세한 내용은 [연산자&#40;Transact-SQL&#41;](../../t-sql/language-elements/operators-transact-sql.md)를 참조하세요.|  
 |*ranking_windowed_function*|[!INCLUDE[tsql](../../includes/tsql-md.md)] 순위 함수입니다. 자세한 내용은 [순위 함수&#40;Transact-SQL&#41;](../../t-sql/functions/ranking-functions-transact-sql.md)를 참조하세요.|  
 |*aggregate_windowed_function*|OVER 절을 사용하는 [!INCLUDE[tsql](../../includes/tsql-md.md)] 집계 함수입니다. 자세한 내용은 [OVER 절&#40;Transact-SQL&#41;](../../t-sql/queries/select-over-clause-transact-sql.md)을 참조하세요.|  
   

@@ -79,18 +79,18 @@ helpviewer_keywords:
 - nodes [Faillover Clustering], command prompt
 - INSTALLSQLSHAREDDIR parameter
 ms.assetid: df40c888-691c-4962-a420-78a57852364d
-author: markingmyname
-ms.author: maghan
+author: cawrites
+ms.author: chadam
 ms.reviewer: ''
 ms.custom: ''
 ms.date: 07/26/2019
 monikerRange: '>=sql-server-2016||=sqlallproducts-allversions'
-ms.openlocfilehash: de4026f7fdf2dbde32998657e84a7b9b0c54b1f5
-ms.sourcegitcommit: 863420525a1f5d5b56b311b84a6fb14e79404860
+ms.openlocfilehash: 2119b3917d6adb13d29627d148a969bf4ccc92c5
+ms.sourcegitcommit: 5a1ed81749800c33059dac91b0e18bd8bb3081b1
 ms.translationtype: HT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 11/10/2020
-ms.locfileid: "94418040"
+ms.lasthandoff: 11/23/2020
+ms.locfileid: "96125996"
 ---
 # <a name="install-sql-server-from-the-command-prompt"></a>방법: 명령 프롬프트에서 SQL Server 2008 R2 설치
 
@@ -155,7 +155,7 @@ C:\SQLMedia\SQLServer2019> setup.exe /help
 -   /PARAMETER="value"(모두 단일 값 매개 변수인 경우). (예: `/PID="PID" /SQLSVCSTARTUPTYPE="Automatic"`)
     - 경로가 필요한 매개 변수의 경우: `/INSTANCEDIR=c:\Path` 또는 `/INSTANCEDIR="c:\Path"`가 지원됩니다.  
 -   /PARAMETER="value1" "value2" "value3"(모두 다중 값 매개 변수인 경우). (예: `/SQLSYSADMINACCOUNTS="Contoso\John" "Contoso\Mary"`)
-    - **예외** : `/FEATURES`는 다중 값 매개 변수이지만 해당 형식은 공백 없이 쉼표로 구분되는 `/FEATURES=AS,RS,IS`임 
+    - **예외**: `/FEATURES`는 다중 값 매개 변수이지만 해당 형식은 공백 없이 쉼표로 구분되는 `/FEATURES=AS,RS,IS`임 
 
   
 > [!IMPORTANT]  
@@ -196,7 +196,7 @@ C:\SQLMedia\SQLServer2019> setup.exe /help
 |PolyBase|/PBDMSSVCPASSWORD<br /><br /> **선택 사항**|엔진 서비스 계정의 암호를 지정합니다. 관리 서비스 계정, 가상 계정 또는 기본 제공 계정을 사용할 때는 이 매개 변수를 생략할 수 있습니다.|  
 |PolyBase|/PBENGSVCSTARTUPTYPE<br /><br /> **선택 사항**|PolyBase 엔진 서비스의 시작 모드를 지정합니다. Automatic(기본값), Disabled 및 Manual.|  
 |PolyBase|/PBPORTRANGE<br /><br /> **선택 사항**|PolyBase 서비스용 6개 이상의 포트로 포트 범위를 지정합니다. 예제:<br /><br /> `/PBPORTRANGE=16450-16460`|  
-|PolyBase|/PBSCALEOUT<br /><br /> **선택 사항**|[!INCLUDE[ssDEnoversion](../../includes/ssdenoversion-md.md)] 인스턴스가 PolyBase 규모 확장 계산 그룹의 일부로 사용될지를 지정합니다. 헤드 노드를 포함하는 PolyBase 스케일 아웃 계산 그룹을 구성할 경우 이 옵션을 사용합니다. 지원되는 값: **True** , **False**|  
+|PolyBase|/PBSCALEOUT<br /><br /> **선택 사항**|[!INCLUDE[ssDEnoversion](../../includes/ssdenoversion-md.md)] 인스턴스가 PolyBase 규모 확장 계산 그룹의 일부로 사용될지를 지정합니다. 헤드 노드를 포함하는 PolyBase 스케일 아웃 계산 그룹을 구성할 경우 이 옵션을 사용합니다. 지원되는 값: **True**, **False**|  
 |[!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 설치 컨트롤|/PID<br /><br /> **선택 사항**|SQL Server 버전의 제품 키를 지정합니다. 이 매개 변수를 지정하지 않으면 Evaluation이 사용됩니다.|  
 |[!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 설치 컨트롤|/Q 또는 /QUIET<br /><br /> **선택 사항**|설치 프로그램이 사용자 인터페이스 없이 자동 모드에서 실행되도록 지정합니다. 이 옵션은 무인 설치에 사용됩니다. /Q 매개 변수는 /QS 매개 변수의 입력을 재정의합니다.|  
 |[!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 설치 컨트롤|/QS 또는 /QUIETSIMPLE <br /><br /> **선택 사항**|설치 프로그램이 UI를 통해 실행되고 진행률을 표시하지만 입력을 받거나 오류 메시지를 표시하지 않도록 지정합니다.|  
@@ -299,7 +299,7 @@ setup.exe /q /ACTION=Install /FEATURES=SQL /INSTANCENAME=MSSQLSERVER /SQLSVCACCO
 |PolyBase|/PBDMSSVCPASSWORD<br /><br /> **선택 사항**|엔진 서비스 계정의 암호를 지정합니다. 관리 서비스 계정, 가상 계정 또는 기본 제공 계정을 사용할 때는 이 매개 변수를 생략할 수 있습니다.|  
 |PolyBase|/PBENGSVCSTARTUPTYPE<br /><br /> **선택 사항**|PolyBase 엔진 서비스의 시작 모드를 지정합니다. Automatic(기본값), Disabled 및 Manual.|  
 |PolyBase|/PBPORTRANGE<br /><br /> **선택 사항**|PolyBase 서비스용 6개 이상의 포트로 포트 범위를 지정합니다. 예제:<br /><br /> `/PBPORTRANGE=16450-16460`|  
-|PolyBase|/PBSCALEOUT<br /><br /> **선택 사항**|[!INCLUDE[ssDEnoversion](../../includes/ssdenoversion-md.md)] 인스턴스가 PolyBase 규모 확장 계산 그룹의 일부로 사용될지를 지정합니다. 지원되는 값: **True** , **False**|  
+|PolyBase|/PBSCALEOUT<br /><br /> **선택 사항**|[!INCLUDE[ssDEnoversion](../../includes/ssdenoversion-md.md)] 인스턴스가 PolyBase 규모 확장 계산 그룹의 일부로 사용될지를 지정합니다. 지원되는 값: **True**, **False**|  
 |[!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 설치 컨트롤|/Q 또는 /QUIET <br /><br /> **선택 사항**|설치 프로그램이 사용자 인터페이스 없이 자동 모드에서 실행되도록 지정합니다. 이 옵션은 무인 설치에 사용됩니다. /Q 매개 변수는 /QS 매개 변수의 입력을 재정의합니다.|  
 |[!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 설치 컨트롤|/QS 또는 /QUIETSIMPLE<br /><br /> **선택 사항**|설치 프로그램이 UI를 통해 실행되고 진행률을 표시하지만 입력을 받거나 오류 메시지를 표시하지 않도록 지정합니다.|  
   
@@ -328,7 +328,7 @@ setup.exe /q /ACTION=PrepareImage /FEATURES=SQL,RS /InstanceID =<MYINST> /IACCEP
 |PolyBase|/PBDMSSVCPASSWORD<br /><br /> **선택 사항**|엔진 서비스 계정의 암호를 지정합니다. 관리 서비스 계정, 가상 계정 또는 기본 제공 계정을 사용할 때는 이 매개 변수를 생략할 수 있습니다.|  
 |PolyBase|/PBENGSVCSTARTUPTYPE<br /><br /> **선택 사항**|PolyBase 엔진 서비스의 시작 모드를 지정합니다. Automatic(기본값), Disabled 및 Manual.|  
 |PolyBase|/PBPORTRANGE<br /><br /> **선택 사항**|PolyBase 서비스용 6개 이상의 포트로 포트 범위를 지정합니다. 예제:<br /><br /> `/PBPORTRANGE=16450-16460`|  
-|PolyBase|/PBSCALEOUT<br /><br /> **선택 사항**|[!INCLUDE[ssDEnoversion](../../includes/ssdenoversion-md.md)] 인스턴스가 PolyBase 규모 확장 계산 그룹의 일부로 사용될지를 지정합니다. 지원되는 값: **True** , **False**|  
+|PolyBase|/PBSCALEOUT<br /><br /> **선택 사항**|[!INCLUDE[ssDEnoversion](../../includes/ssdenoversion-md.md)] 인스턴스가 PolyBase 규모 확장 계산 그룹의 일부로 사용될지를 지정합니다. 지원되는 값: **True**, **False**|  
 |[!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 설치 컨트롤|/PID<br /><br /> **선택 사항**|[!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 버전의 제품 키를 지정합니다. 이 매개 변수를 지정하지 않으면 Evaluation이 사용됩니다.<br /><br /> **참고:** [!INCLUDE[ssExpress](../../includes/ssexpress-md.md)], [!INCLUDE[ssExpress](../../includes/ssexpress-md.md)] with Tools 또는 [!INCLUDE[ssExpress](../../includes/ssexpress-md.md)] with Advanced Services를 설치하는 경우에는 PID가 미리 정의됩니다.|  
 |[!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 설치 컨트롤|/Q 또는 /QUIET <br /><br /> **선택 사항**|설치 프로그램이 사용자 인터페이스 없이 자동 모드에서 실행되도록 지정합니다. 이 옵션은 무인 설치에 사용됩니다. /Q 매개 변수는 /QS 매개 변수의 입력을 재정의합니다. |  
 |[!INCLUDE[ssDEnoversion](../../includes/ssdenoversion-md.md)] 설치 컨트롤|/QS 또는 /QUIETSIMPLE<br /><br /> **선택 사항**|설치 프로그램이 UI를 통해 실행되고 진행률을 표시하지만 입력을 받거나 오류 메시지를 표시하지 않도록 지정합니다.|  
@@ -426,7 +426,7 @@ setup.exe /q /ACTION=upgrade /INSTANCEID = <INSTANCEID>/INSTANCENAME=MSSQLSERVER
 |PolyBase|/PBDMSSVCPASSWORD<br /><br /> **선택 사항**|엔진 서비스 계정의 암호를 지정합니다. 관리 서비스 계정, 가상 계정 또는 기본 제공 계정을 사용할 때는 이 매개 변수를 생략할 수 있습니다.|  
 |PolyBase|/PBENGSVCSTARTUPTYPE<br /><br /> **선택 사항**|PolyBase 엔진 서비스의 시작 모드를 지정합니다. Automatic(기본값), Disabled 및 Manual.|  
 |PolyBase|/PBPORTRANGE<br /><br /> **선택 사항**|PolyBase 서비스용 6개 이상의 포트로 포트 범위를 지정합니다. 예제:<br /><br /> `/PBPORTRANGE=16450-16460`|  
-|PolyBase|/PBSCALEOUT<br /><br /> **선택 사항**|[!INCLUDE[ssDEnoversion](../../includes/ssdenoversion-md.md)] 인스턴스가 PolyBase 규모 확장 계산 그룹의 일부로 사용될지를 지정합니다. 지원되는 값: **True** , **False**|  
+|PolyBase|/PBSCALEOUT<br /><br /> **선택 사항**|[!INCLUDE[ssDEnoversion](../../includes/ssdenoversion-md.md)] 인스턴스가 PolyBase 규모 확장 계산 그룹의 일부로 사용될지를 지정합니다. 지원되는 값: **True**, **False**|  
 |[!INCLUDE[ssDEnoversion](../../includes/ssdenoversion-md.md)] 설치 컨트롤|/Q 또는 /QUIET <br /><br /> **선택 사항**|설치 프로그램이 사용자 인터페이스 없이 자동 모드에서 실행되도록 지정합니다. 이 옵션은 무인 설치에 사용됩니다.|  
 |[!INCLUDE[ssDEnoversion](../../includes/ssdenoversion-md.md)] 설치 컨트롤|/HIDECONSOLE<br /><br /> **선택 사항**|콘솔 창을 숨기거나 닫도록 지정합니다.|  
   
@@ -513,7 +513,7 @@ setup.exe /Action=Uninstall /FEATURES=SQL,AS,RS,IS,Tools /INSTANCENAME=MSSQLSERV
 |PolyBase|/PBDMSSVCPASSWORD<br /><br /> **선택 사항**|엔진 서비스 계정의 암호를 지정합니다. 관리 서비스 계정, 가상 계정 또는 기본 제공 계정을 사용할 때는 이 매개 변수를 생략할 수 있습니다. |  
 |PolyBase|/PBENGSVCSTARTUPTYPE<br /><br /> **선택 사항**|PolyBase 엔진 서비스의 시작 모드를 지정합니다. Automatic(기본값), Disabled 및 Manual.|  
 |PolyBase|/PBPORTRANGE<br /><br /> **선택 사항**|PolyBase 서비스용 6개 이상의 포트로 포트 범위를 지정합니다. 예제:<br /><br /> `/PBPORTRANGE=16450-16460`|  
-|PolyBase|/PBSCALEOUT<br /><br /> **선택 사항**|[!INCLUDE[ssDEnoversion](../../includes/ssdenoversion-md.md)] 인스턴스가 PolyBase 규모 확장 계산 그룹의 일부로 사용될지를 지정합니다. 지원되는 값: **True** , **False**|  
+|PolyBase|/PBSCALEOUT<br /><br /> **선택 사항**|[!INCLUDE[ssDEnoversion](../../includes/ssdenoversion-md.md)] 인스턴스가 PolyBase 규모 확장 계산 그룹의 일부로 사용될지를 지정합니다. 지원되는 값: **True**, **False**|  
 |[!INCLUDE[ssDEnoversion](../../includes/ssdenoversion-md.md)] 설치 컨트롤|/*UpdateEnabled*<br /><br /> **선택 사항**|SQL Server 설치 프로그램이 제품 업데이트를 검색하고 포함하는지 여부를 지정합니다. 유효한 값은 True와 False 또는 1과 0입니다. 기본적으로 SQL Server 설치 프로그램에는 검색된 업데이트가 포함됩니다.|  
 |[!INCLUDE[ssDEnoversion](../../includes/ssdenoversion-md.md)] 설치 컨트롤|/*UpdateSource*<br /><br /> **선택 사항**|SQL Server 설치 프로그램이 제품 업데이트를 가져올 위치를 지정합니다. 유효한 값은 [!INCLUDE[msCoName](../../includes/msconame-md.md)] Update를 검색하는 경우 “MU”, 유효한 폴더 경로, 상대 경로(예: .\MyUpdates) 또는 UNC 공유입니다. 기본적으로 SQL Server 설치 프로그램은 Windows Server Update Services를 통해 [!INCLUDE[msCoName](../../includes/msconame-md.md)] 업데이트 또는 Windows Server 업데이트 서비스를 검색합니다.|  
 |[!INCLUDE[ssDEnoversion](../../includes/ssdenoversion-md.md)] 설치 컨트롤|/CONFIGURATIONFILE<br /><br /> **선택 사항**|사용할 [ConfigurationFile](./install-sql-server-using-a-configuration-file.md) 을 지정합니다.|  
@@ -610,7 +610,7 @@ setup.exe /q /ACTION=InstallFailoverCluster /InstanceName=MSSQLSERVER /INDICATEP
 |PolyBase|/PBDMSSVCPASSWORD<br /><br /> **선택 사항**|엔진 서비스 계정의 암호를 지정합니다. 관리 서비스 계정, 가상 계정 또는 기본 제공 계정을 사용할 때는 이 매개 변수를 생략할 수 있습니다.|  
 |PolyBase|/PBENGSVCSTARTUPTYPE<br /><br /> **선택 사항**|PolyBase 엔진 서비스의 시작 모드를 지정합니다. Automatic(기본값), Disabled 및 Manual.|  
 |PolyBase|/PBPORTRANGE<br /><br /> **선택 사항**|PolyBase 서비스용 6개 이상의 포트로 포트 범위를 지정합니다. 예제:<br /><br /> `/PBPORTRANGE=16450-16460`|  
-|PolyBase|/PBSCALEOUT<br /><br /> **선택 사항**|[!INCLUDE[ssDEnoversion](../../includes/ssdenoversion-md.md)] 인스턴스가 PolyBase 규모 확장 계산 그룹의 일부로 사용될지를 지정합니다. 지원되는 값: **True** , **False**|  
+|PolyBase|/PBSCALEOUT<br /><br /> **선택 사항**|[!INCLUDE[ssDEnoversion](../../includes/ssdenoversion-md.md)] 인스턴스가 PolyBase 규모 확장 계산 그룹의 일부로 사용될지를 지정합니다. 지원되는 값: **True**, **False**|  
 |[!INCLUDE[ssDEnoversion](../../includes/ssdenoversion-md.md)] 설치 컨트롤|/PID<br /><br /> **선택 사항**|SQL Server 버전의 제품 키를 지정합니다. 이 매개 변수가 지정되지 않은 경우<br /><br /> Evaluation이 사용됩니다.|  
 |[!INCLUDE[ssDEnoversion](../../includes/ssdenoversion-md.md)] 설치 컨트롤|/Q 또는 /QUIET <br /><br /> **선택 사항**|설치 프로그램이 사용자 인터페이스 없이 자동 모드에서 실행되도록 지정합니다. 이 옵션은 무인 설치에 사용됩니다. /Q 매개 변수는 /QS 매개 변수의 입력을 재정의합니다.|  
 |[!INCLUDE[ssDEnoversion](../../includes/ssdenoversion-md.md)] 설치 컨트롤|/QS 또는 /QUIETSIMPLE <br /><br /> **선택 사항**|설치 프로그램이 UI를 통해 실행되고 진행률을 표시하지만 입력을 받거나 오류 메시지를 표시하지 않도록 지정합니다.|  
@@ -762,7 +762,7 @@ setup.exe /q /ACTION=CompleteFailoverCluster /InstanceName="<Insert Instance Nam
 |PolyBase|/PBDMSSVCPASSWORD<br /><br /> **선택 사항**|엔진 서비스 계정의 암호를 지정합니다. 관리 서비스 계정, 가상 계정 또는 기본 제공 계정을 사용할 때는 이 매개 변수를 생략할 수 있습니다.|  
 |PolyBase|/PBENGSVCSTARTUPTYPE<br /><br /> **선택 사항**|PolyBase 엔진 서비스의 시작 모드를 지정합니다. Automatic(기본값), Disabled 및 Manual.|  
 |PolyBase|/PBPORTRANGE<br /><br /> **선택 사항**|PolyBase 서비스용 6개 이상의 포트로 포트 범위를 지정합니다. 예제:<br /><br /> `/PBPORTRANGE=16450-16460`|  
-|PolyBase|/PBSCALEOUT<br /><br /> **선택 사항**|[!INCLUDE[ssDEnoversion](../../includes/ssdenoversion-md.md)] 인스턴스가 PolyBase 규모 확장 계산 그룹의 일부로 사용될지를 지정합니다. 지원되는 값: **True** , **False**|  
+|PolyBase|/PBSCALEOUT<br /><br /> **선택 사항**|[!INCLUDE[ssDEnoversion](../../includes/ssdenoversion-md.md)] 인스턴스가 PolyBase 규모 확장 계산 그룹의 일부로 사용될지를 지정합니다. 지원되는 값: **True**, **False**|  
 |[!INCLUDE[ssDEnoversion](../../includes/ssdenoversion-md.md)] 설치 컨트롤|/PID<br /><br /> **선택 사항**|SQL Server 버전의 제품 키를 지정합니다. 이 매개 변수를 지정하지 않으면 Evaluation이 사용됩니다.|  
 |[!INCLUDE[ssDEnoversion](../../includes/ssdenoversion-md.md)] 설치 컨트롤|/Q 또는 /QUIET <br /><br /> **선택 사항**|설치 프로그램이 사용자 인터페이스 없이 자동 모드에서 실행되도록 지정합니다. 이 옵션은 무인 설치에 사용됩니다. /Q 매개 변수는 /QS 매개 변수의 입력을 재정의합니다.|  
 |[!INCLUDE[ssDEnoversion](../../includes/ssdenoversion-md.md)] 설치 컨트롤|/QS 또는 /QUIETSIMPLE <br /><br /> **선택 사항**|설치 프로그램이 UI를 통해 실행되고 진행률을 표시하지만 입력을 받거나 오류 메시지를 표시하지 않도록 지정합니다.|  

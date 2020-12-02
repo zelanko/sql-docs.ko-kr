@@ -8,15 +8,15 @@ ms.reviewer: ''
 ms.technology: install
 ms.topic: conceptual
 ms.assetid: 1dd294cc-5b69-4d0c-9005-3e307b75678b
-author: MashaMSFT
-ms.author: mathoma
+author: cawrites
+ms.author: chadam
 monikerRange: '>=sql-server-2016||=sqlallproducts-allversions'
-ms.openlocfilehash: 40114f51a3012f5f60564a57e63a2f3e0bc8bdab
-ms.sourcegitcommit: 2f868a77903c1f1c4cecf4ea1c181deee12d5b15
+ms.openlocfilehash: 14646a81b3bc575231382e615231894861719604
+ms.sourcegitcommit: 5a1ed81749800c33059dac91b0e18bd8bb3081b1
 ms.translationtype: HT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 10/02/2020
-ms.locfileid: "91670440"
+ms.lasthandoff: 11/23/2020
+ms.locfileid: "96125957"
 ---
 # <a name="install-sql-server-on-server-core"></a>Server Core에 SQL Server 설치
 
@@ -320,7 +320,7 @@ Setup.exe /Q /Action=Uninstall /FEATURES=SQLEngine,AS,IS /INSTANCENAME=MSSQLSERV
 실수로 명령 프롬프트를 닫은 경우 다음 단계에 따라 새 명령 프롬프트를 시작할 수 있습니다.  
  
 1.  Ctrl+Shift+Esc를 눌러 작업 관리자를 표시합니다.  
-2.  **애플리케이션** 탭에서 **새 작업**을 클릭합니다.  
+2.  **애플리케이션** 탭에서 **새 작업** 을 클릭합니다.  
 3.  **새 태스크 만들기** 대화 상자에서 **열기** 필드에 **cmd** 를 입력한 다음 [!INCLUDE[clickOK](../../includes/clickok-md.md)].  
   
 ## <a name="see-also"></a>참고 항목  

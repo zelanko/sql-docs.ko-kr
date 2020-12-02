@@ -23,11 +23,11 @@ author: julieMSFT
 ms.author: jrasnick
 monikerRange: '>=aps-pdw-2016||=azuresqldb-current||=azure-sqldw-latest||>=sql-server-2016||=sqlallproducts-allversions||>=sql-server-linux-2017||=azuresqldb-mi-current'
 ms.openlocfilehash: 7fd868824316fdd532851040730ae76e259cb3cc
-ms.sourcegitcommit: cfa04a73b26312bf18d8f6296891679166e2754d
+ms.sourcegitcommit: 192f6a99e19e66f0f817fdb1977f564b2aaa133b
 ms.translationtype: HT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 10/19/2020
-ms.locfileid: "92192085"
+ms.lasthandoff: 11/25/2020
+ms.locfileid: "96124586"
 ---
 # <a name="x40x40trancount-transact-sql"></a>&#x40;&#x40;TRANCOUNT (Transact-SQL)
 [!INCLUDE [sql-asdb-asdbmi-asa-pdw](../../includes/applies-to-version/sql-asdb-asdbmi-asa-pdw.md)]
@@ -51,7 +51,7 @@ ms.locfileid: "92192085"
  **integer**  
   
 ## <a name="remarks"></a>설명  
- BEGIN TRANSACTION 문은 @@TRANCOUNT을 1씩 늘립니다. @@TRANCOUNT에 영향을 주지 않는 ROLLBACK TRANSACTION *savepoint_name*을 제외한 ROLLBACK TRANSACTION은 @@TRANCOUNT을 0으로 줄입니다. COMMIT TRANSACTION 또는 COMMIT WORK는 @@TRANCOUNT을 1씩 줄입니다.  
+ BEGIN TRANSACTION 문은 @@TRANCOUNT을 1씩 늘립니다. @@TRANCOUNT에 영향을 주지 않는 ROLLBACK TRANSACTION *savepoint_name* 을 제외한 ROLLBACK TRANSACTION은 @@TRANCOUNT을 0으로 줄입니다. COMMIT TRANSACTION 또는 COMMIT WORK는 @@TRANCOUNT을 1씩 줄입니다.  
   
 ## <a name="examples"></a>예  
   

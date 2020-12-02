@@ -18,11 +18,11 @@ author: stevestein
 ms.author: sstein
 monikerRange: '>=aps-pdw-2016||=azuresqldb-current||=azure-sqldw-latest||>=sql-server-2016||=sqlallproducts-allversions||>=sql-server-linux-2017||=azuresqldb-mi-current'
 ms.openlocfilehash: 4616d7224ab7697eebdca78e935c96521ccedd3d
-ms.sourcegitcommit: e700497f962e4c2274df16d9e651059b42ff1a10
+ms.sourcegitcommit: 192f6a99e19e66f0f817fdb1977f564b2aaa133b
 ms.translationtype: HT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 08/17/2020
-ms.locfileid: "88446371"
+ms.lasthandoff: 11/25/2020
+ms.locfileid: "96125043"
 ---
 # <a name="delete-views"></a>뷰 삭제
 [!INCLUDE [sql-asdb-asdbmi-asa-pdw](../../includes/applies-to-version/sql-asdb-asdbmi-asa-pdw.md)]
@@ -59,11 +59,11 @@ ms.locfileid: "88446371"
   
 #### <a name="to-delete-a-view-from-a-database"></a>데이터베이스에서 뷰를 삭제하려면  
   
-1.  **개체 탐색기**에서 삭제할 뷰가 포함된 데이터베이스를 확장한 다음 **뷰** 폴더를 확장합니다.  
+1.  **개체 탐색기** 에서 삭제할 뷰가 포함된 데이터베이스를 확장한 다음 **뷰** 폴더를 확장합니다.  
   
-2.  삭제할 뷰를 마우스 오른쪽 단추로 클릭한 다음 **삭제**를 클릭합니다.  
+2.  삭제할 뷰를 마우스 오른쪽 단추로 클릭한 다음 **삭제** 를 클릭합니다.  
   
-3.  **개체 삭제** 대화 상자에서 **확인**을 클릭합니다.  
+3.  **개체 삭제** 대화 상자에서 **확인** 을 클릭합니다.  
   
     > [!IMPORTANT]  
     >  **개체 삭제** 대화 상자에서 **종속성 표시** 를 클릭하여 _view\_name_**종속성** 대화 상자를 엽니다. 이 대화 상자에는 해당 뷰에 종속된 모든 개체와 해당 뷰가 종속된 모든 개체가 표시됩니다.  
@@ -72,11 +72,11 @@ ms.locfileid: "88446371"
   
 #### <a name="to-delete-a-view-from-a-database"></a>데이터베이스에서 뷰를 삭제하려면  
   
-1.  **개체 탐색기**에서 [!INCLUDE[ssDE](../../includes/ssde-md.md)]인스턴스에 연결합니다.  
+1.  **개체 탐색기** 에서 [!INCLUDE[ssDE](../../includes/ssde-md.md)]인스턴스에 연결합니다.  
   
-2.  표준 도구 모음에서 **새 쿼리**를 클릭합니다.  
+2.  표준 도구 모음에서 **새 쿼리** 를 클릭합니다.  
   
-3.  다음 예를 복사하여 쿼리 창에 붙여 넣고 **실행**을 클릭합니다. 다음 예에서는 지정된 뷰가 이미 존재하는 경우에만 해당 뷰를 삭제합니다.  
+3.  다음 예를 복사하여 쿼리 창에 붙여 넣고 **실행** 을 클릭합니다. 다음 예에서는 지정된 뷰가 이미 존재하는 경우에만 해당 뷰를 삭제합니다.  
   
     ```  
     USE AdventureWorks2012 ;  

@@ -7,15 +7,15 @@ ms.reviewer: ''
 ms.technology: install
 ms.topic: conceptual
 ms.assetid: a832153a-6775-4bed-83f0-55790766d885
-author: MashaMSFT
-ms.author: mathoma
+author: cawrites
+ms.author: chadam
 monikerRange: '>=sql-server-2016||=sqlallproducts-allversions'
-ms.openlocfilehash: 8c2fb5fcd6c7f9902f52481a1e66350f4543a85a
-ms.sourcegitcommit: 2f868a77903c1f1c4cecf4ea1c181deee12d5b15
+ms.openlocfilehash: c67682305f0ed48c1d96cf5ca41ad0e88e421e06
+ms.sourcegitcommit: 5a1ed81749800c33059dac91b0e18bd8bb3081b1
 ms.translationtype: HT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 10/02/2020
-ms.locfileid: "91670309"
+ms.lasthandoff: 11/23/2020
+ms.locfileid: "96125893"
 ---
 # <a name="install-sql-server-using-a-configuration-file"></a>구성 파일을 사용하여 SQL Server 설치
 
@@ -23,7 +23,7 @@ ms.locfileid: "91670309"
  
 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 설치 시 시스템 기본값 및 런타임 입력을 기반으로 구성 파일을 생성할 수 있습니다. 구성 파일을 사용하면 동일한 구성으로 회사 전체에 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 를 배포할 수 있습니다. 또한 Setup.exe를 실행하는 배치 파일을 만들어 수동 설치를 전사적으로 표준화할 수도 있습니다. 
  
-이 문서는 SQL Server 버전 2016 이상에서 유지 관리됩니다. 이전 버전의 SQL Server의 경우 [구성 파일을 사용하여 SQL Server 2014 설치](/previous-versions/sql/2014/database-engine/install-windows/install-sql-server-using-a-configuration-file?view=sql-server-2014)를 참조하세요.
+이 문서는 SQL Server 버전 2016 이상에서 유지 관리됩니다. 이전 버전의 SQL Server의 경우 [구성 파일을 사용하여 SQL Server 2014 설치](/previous-versions/sql/2014/database-engine/install-windows/install-sql-server-using-a-configuration-file?view=sql-server-2014&preserve-view=true)를 참조하세요.
  
 구성 파일은 명령 프롬프트에서 설치할 경우에만 사용할 수 있습니다. 구성 파일을 사용할 때 매개 변수의 처리 순서는 다음과 같습니다.  
   
@@ -83,17 +83,17 @@ FEATURES=SQL,Tools
   
 1. 같은 시스템에 하나 이상의 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 인스턴스를 준비하고 구성하려면 
   
-    - 설치 센터의 **고급** 페이지에서 **독립 실행형 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 인스턴스의 이미지 준비**를 실행하고 이미지 준비 구성 파일을 캡처합니다. 
+    - 설치 센터의 **고급** 페이지에서 **독립 실행형 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 인스턴스의 이미지 준비** 를 실행하고 이미지 준비 구성 파일을 캡처합니다. 
   
     - 템플릿과 동일한 이미지 준비 구성 파일을 사용하여 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 인스턴스를 준비합니다. 
   
-    - 설치 센터의 **고급** 페이지에서 **독립 실행형 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 준비 인스턴스의 이미지 완료**를 실행하여 시스템에서 준비 인스턴스를 구성합니다. 
+    - 설치 센터의 **고급** 페이지에서 **독립 실행형 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 준비 인스턴스의 이미지 완료** 를 실행하여 시스템에서 준비 인스턴스를 구성합니다. 
   
 2. Windows SysPrep 도구를 사용하여 구성되지 않은 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 준비 인스턴스를 포함한 운영 체제 이미지를 준비하려면 
   
-    -   설치 센터의 고급 페이지에서 **독립 실행형 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 인스턴스의 이미지 준비**를 실행하고 이미지 준비 구성 파일을 캡처합니다. 
+    -   설치 센터의 고급 페이지에서 **독립 실행형 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 인스턴스의 이미지 준비** 를 실행하고 이미지 준비 구성 파일을 캡처합니다. 
   
-    -   설치 센터의 **고급** 페이지에서 **독립 실행형 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 준비 인스턴스의 이미지 완료**를 실행하지만 완료된 구성 파일을 캡처한 다음 **완료 준비** 페이지에서 취소합니다. 
+    -   설치 센터의 **고급** 페이지에서 **독립 실행형 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 준비 인스턴스의 이미지 완료** 를 실행하지만 완료된 구성 파일을 캡처한 다음 **완료 준비** 페이지에서 취소합니다. 
   
     -   이미지 완료 구성 파일은 Windows 이미지와 함께 저장하여 준비 인스턴스의 구성을 자동화할 수 있습니다. 
   

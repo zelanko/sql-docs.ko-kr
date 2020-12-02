@@ -19,14 +19,14 @@ helpviewer_keywords:
 - backups [SQL Server], creating
 - tape backup devices, backing up
 ms.assetid: e391f452-ed8c-4b40-b846-ac3881271b94
-author: MikeRayMSFT
-ms.author: mikeray
-ms.openlocfilehash: d1a1d1975b5e71c8ed18200d07069f673e981732
-ms.sourcegitcommit: da88320c474c1c9124574f90d549c50ee3387b4c
+author: cawrites
+ms.author: chadam
+ms.openlocfilehash: e80b1913f6ff7c40ff0c3b715e98c9df6b3e20ca
+ms.sourcegitcommit: 5a1ed81749800c33059dac91b0e18bd8bb3081b1
 ms.translationtype: HT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 07/01/2020
-ms.locfileid: "85759066"
+ms.lasthandoff: 11/23/2020
+ms.locfileid: "96125491"
 ---
 # <a name="specify-a-disk-or-tape-backup-destination-sql-server"></a>디스크 또는 테이프 백업 대상 지정(SQL Server)
  [!INCLUDE [SQL Server](../../includes/applies-to-version/sqlserver.md)]
@@ -63,13 +63,13 @@ ms.locfileid: "85759066"
   
 1.  [!INCLUDE[msCoName](../../includes/msconame-md.md)] [!INCLUDE[ssDEnoversion](../../includes/ssdenoversion-md.md)]의 해당 인스턴스에 연결한 후 개체 탐색기에서 서버 이름을 클릭하여 서버 트리를 확장합니다.  
   
-2.  **데이터베이스**를 확장하고 해당 데이터베이스에 따라 사용자 데이터베이스를 선택하거나 **시스템 데이터베이스** 를 확장한 다음 시스템 데이터베이스를 선택합니다.  
+2.  **데이터베이스** 를 확장하고 해당 데이터베이스에 따라 사용자 데이터베이스를 선택하거나 **시스템 데이터베이스** 를 확장한 다음 시스템 데이터베이스를 선택합니다.  
   
-3.  데이터베이스를 마우스 오른쪽 단추로 클릭하고 **태스크**를 가리킨 다음 **백업**을 클릭합니다. **데이터베이스 백업** 대화 상자가 나타납니다.  
+3.  데이터베이스를 마우스 오른쪽 단추로 클릭하고 **태스크** 를 가리킨 다음 **백업** 을 클릭합니다. **데이터베이스 백업** 대화 상자가 나타납니다.  
   
-4.  **일반** 페이지의 **대상** 섹션에서 **디스크** 또는 **테이프**를 선택합니다. **추가**를 클릭하면 단일 미디어 세트를 포함하는 디스크나 테이프 드라이브에 대한 경로를 64개까지 선택할 수 있습니다.  
+4.  **일반** 페이지의 **대상** 섹션에서 **디스크** 또는 **테이프** 를 선택합니다. **추가** 를 클릭하면 단일 미디어 세트를 포함하는 디스크나 테이프 드라이브에 대한 경로를 64개까지 선택할 수 있습니다.  
 
-   백업 대상을 제거하려면 해당 대상을 선택한 다음 **제거**를 클릭합니다. 백업 대상의 내용을 보려면 선택한 다음 **내용**을 클릭합니다.  
+   백업 대상을 제거하려면 해당 대상을 선택한 다음 **제거** 를 클릭합니다. 백업 대상의 내용을 보려면 선택한 다음 **내용** 을 클릭합니다.  
   
 ##  <a name="using-transact-sql"></a><a name="TsqlProcedure"></a> Transact-SQL 사용  
   
@@ -77,7 +77,7 @@ ms.locfileid: "85759066"
   
 1.  [!INCLUDE[ssDE](../../includes/ssde-md.md)]에 연결합니다.  
   
-2.  표준 도구 모음에서 **새 쿼리**를 클릭합니다.  
+2.  표준 도구 모음에서 **새 쿼리** 를 클릭합니다.  
   
 3.  [BACKUP](../../t-sql/statements/backup-transact-sql.md) 문에서 파일 또는 디바이스와 해당 물리적 이름을 지정합니다. 이 예에서는 `AdventureWorks2012` 데이터베이스를 디스크 파일 `Z:\SQLServerBackups\AdventureWorks2012.Bak`에 백업합니다.  
   

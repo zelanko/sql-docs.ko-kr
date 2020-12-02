@@ -25,11 +25,11 @@ author: MikeRayMSFT
 ms.author: mikeray
 monikerRange: '>=aps-pdw-2016||=azuresqldb-current||=azure-sqldw-latest||>=sql-server-2016||=sqlallproducts-allversions||>=sql-server-linux-2017||=azuresqldb-mi-current'
 ms.openlocfilehash: d58c0b86f5a3d46764d3be1e70444139b599172d
-ms.sourcegitcommit: e700497f962e4c2274df16d9e651059b42ff1a10
+ms.sourcegitcommit: 192f6a99e19e66f0f817fdb1977f564b2aaa133b
 ms.translationtype: HT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 08/17/2020
-ms.locfileid: "88417669"
+ms.lasthandoff: 11/25/2020
+ms.locfileid: "96124945"
 ---
 # <a name="datetimeoffset-transact-sql"></a>datetimeoffset(Transact-SQL)
 
@@ -71,11 +71,11 @@ ms.locfileid: "88417669"
 |**datetimeoffset(7)**|(34,7)|10|5-7|  
   
 ## <a name="supported-string-literal-formats-for-datetimeoffset"></a>datetimeoffset에 대해 지원되는 문자열 리터럴 형식
-다음 표에는 **datetimeoffset**에 대해 지원되는 ISO 8601 문자열 리터럴 형식이 나와 있습니다. **datetimeoffset**의 날짜 및 시간 부분에 대한 영문자, 숫자, 시간 및 구분되지 않은 시간 형식에 대한 내용은 [date&#40;Transact-SQL&#41;](../../t-sql/data-types/date-transact-sql.md) 및 [time&#40;Transact-SQL&#41;](../../t-sql/data-types/time-transact-sql.md)을 참조하세요.
+다음 표에는 **datetimeoffset** 에 대해 지원되는 ISO 8601 문자열 리터럴 형식이 나와 있습니다. **datetimeoffset** 의 날짜 및 시간 부분에 대한 영문자, 숫자, 시간 및 구분되지 않은 시간 형식에 대한 내용은 [date&#40;Transact-SQL&#41;](../../t-sql/data-types/date-transact-sql.md) 및 [time&#40;Transact-SQL&#41;](../../t-sql/data-types/time-transact-sql.md)을 참조하세요.
   
 |ISO 8601|Description|  
 |---|---|
-|YYYY-MM-DDThh:mm:ss[.nnnnnnn][{+&#124;-}hh:mm]|이 두 가지 형식은 SET LANGUAGE 및 SET DATEFORMAT 세션 로캘 설정의 영향을 받지 않습니다. **datetimeoffset**과 **datetime** 부분 사이에는 공백이 허용되지 않습니다.|  
+|YYYY-MM-DDThh:mm:ss[.nnnnnnn][{+&#124;-}hh:mm]|이 두 가지 형식은 SET LANGUAGE 및 SET DATEFORMAT 세션 로캘 설정의 영향을 받지 않습니다. **datetimeoffset** 과 **datetime** 부분 사이에는 공백이 허용되지 않습니다.|  
 |YYYY-MM-DDThh:mm:ss[.nnnnnnn]Z (UTC)|ISO 정의에 따른 이 형식은 **datetime** 부분이 UTC(Coordinated Universal Time)로 표현되어야 함을 나타냅니다. 예를 들어 1999-12-12 12:30:30.12345 -07:00는 1999-12-12 19:30:30.12345Z로 표시되어야 합니다.|  
   
 ## <a name="time-zone-offset"></a>표준 시간대 오프셋
@@ -86,18 +86,18 @@ ms.locfileid: "88417669"
   
 표준 시간대 범위는 XSD 스키마 정의에 대한 W3C XML 표준을 따르며 12:59에서 +14:00 사이인 SQL 2003 표준 정의와 약간 다릅니다.
   
-선택적 유형 매개 변수인 *초 소수 부분 자릿수*는 초의 소수 부분의 자릿수를 지정합니다. 이 값은 0에서 7 사이의 정수입니다(100나노초). 기본 *초 소수 부분 자릿수*는 100ns입니다(초의 소수 부분 자릿수가 7자리임).
+선택적 유형 매개 변수인 *초 소수 부분 자릿수* 는 초의 소수 부분의 자릿수를 지정합니다. 이 값은 0에서 7 사이의 정수입니다(100나노초). 기본 *초 소수 부분 자릿수* 는 100ns입니다(초의 소수 부분 자릿수가 7자리임).
   
 데이터는 데이터베이스에 저장되며 UTC에서와 마찬가지로 서버에서 처리, 비교, 정렬 및 인덱싱됩니다. 표준 시간대 오프셋은 검색할 수 있도록 데이터베이스에 유지됩니다.
   
-지정된 표준 시간대 오프셋은 DST(일광 절약 시간제)를 인식하고, DST 기간에 있는 모든 **datetime**에 대해 조정할 수 있는 것으로 간주됩니다.
+지정된 표준 시간대 오프셋은 DST(일광 절약 시간제)를 인식하고, DST 기간에 있는 모든 **datetime** 에 대해 조정할 수 있는 것으로 간주됩니다.
   
 **datetimeoffset** 형식의 경우 UTC 및 영구 또는 변환 표준 시간대 오프셋에 대한 현지 **datetime** 값에 대해 삽입, 업데이트, 산술, 변환 또는 할당 작업 중 유효성 검사가 수행됩니다. 잘못된 UTC나 영구 또는 변환 표준 시간대 오프셋에 대한 현지 **datetime** 값이 인식되면 잘못된 값 오류가 발생합니다. 예를 들어 9999-12-31 10:10:00는 UTC에서 유효하지만 표준 시간대 오프셋 +13:50에 대한 현지 시간에서는 오버플로됩니다.
   
 날짜를 대상 시간대의 해당 **datetimeoffset** 값으로 변환하려면 [AT TIME ZONE&#40;Transact-SQL&#41;](../../t-sql/queries/at-time-zone-transact-sql.md)을 참조하십시오.
   
 ## <a name="ansi-and-iso-8601-compliance"></a>ANSI 및 ISO 8601 호환성  
-[date](../../t-sql/data-types/date-transact-sql.md) 및 [time](../../t-sql/data-types/time-transact-sql.md) 항목의 ANSI 및 ISO 8601 호환성 섹션이 **datetimeoffset**에 적용됩니다.
+[date](../../t-sql/data-types/date-transact-sql.md) 및 [time](../../t-sql/data-types/time-transact-sql.md) 항목의 ANSI 및 ISO 8601 호환성 섹션이 **datetimeoffset** 에 적용됩니다.
   
 ## <a name="backward-compatibility-for-down-level-clients"></a>하위 클라이언트에 대한 이전 버전과의 호환성
 일부 하위 클라이언트는 **time**, **date**, **datetime2** 및 **datetimeoffset** 데이터 형식을 지원하지 않습니다. 다음 표에서는 상위 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 인스턴스와 하위 클라이언트 간 형식 매핑을 보여 줍니다.
@@ -115,7 +115,7 @@ ms.locfileid: "88417669"
 ### <a name="converting-datetimeoffset-data-type-to-other-date-and-time-types"></a>datetimeoffset 데이터 형식을 다른 날짜 및 시간 형식으로 변환
 이 섹션에서는 **datetimeoffset** 데이터 형식이 다른 날짜 및 시간 데이터 형식으로 변환될 때 어떤 상황이 발생하는지를 설명합니다.
   
-**date**으로 변환하는 경우 년, 월, 일이 복사됩니다. 다음 코드에서는 `datetimeoffset(4)` 값을 `date` 값으로 변환한 결과를 보여 줍니다.  
+**date** 으로 변환하는 경우 년, 월, 일이 복사됩니다. 다음 코드에서는 `datetimeoffset(4)` 값을 `date` 값으로 변환한 결과를 보여 줍니다.  
   
 ```sql
 DECLARE @datetimeoffset datetimeoffset(4) = '12-10-25 12:32:10 +01:00';  
@@ -150,7 +150,7 @@ SELECT @datetimeoffset AS '@datetimeoffset ', @time AS 'time';
   
 ```  
   
-**datetime**으로 변환하는 경우 날짜 및 시간 값이 복사되고 표준 시간대는 잘립니다. **datetimeoffset(n)** 값의 소수 자릿수가 세 자리보다 크면 값이 잘립니다. 다음 코드에서는 `datetimeoffset(4)` 값을 `datetime` 값으로 변환한 결과를 보여 줍니다.
+**datetime** 으로 변환하는 경우 날짜 및 시간 값이 복사되고 표준 시간대는 잘립니다. **datetimeoffset(n)** 값의 소수 자릿수가 세 자리보다 크면 값이 잘립니다. 다음 코드에서는 `datetimeoffset(4)` 값을 `datetime` 값으로 변환한 결과를 보여 줍니다.
   
 ```sql
 DECLARE @datetimeoffset datetimeoffset(4) = '12-10-25 12:32:10.1237 +01:0';  
@@ -166,7 +166,7 @@ SELECT @datetimeoffset AS '@datetimeoffset ', @datetime AS 'datetime';
 --(1 row(s) affected)  
 ```  
   
-**smalldatetime**으로 변환하는 경우 날짜와 시간이 복사됩니다. 초 값에 따라 분이 반올림되고 초가 0으로 설정됩니다. 다음 코드에서는 `datetimeoffset(3)` 값을 `smalldatetime` 값으로 변환한 결과를 보여 줍니다.  
+**smalldatetime** 으로 변환하는 경우 날짜와 시간이 복사됩니다. 초 값에 따라 분이 반올림되고 초가 0으로 설정됩니다. 다음 코드에서는 `datetimeoffset(3)` 값을 `smalldatetime` 값으로 변환한 결과를 보여 줍니다.  
   
 ```sql
 DECLARE @datetimeoffset datetimeoffset(3) = '1912-10-25 12:24:32 +10:0';  
@@ -203,7 +203,7 @@ SELECT @datetimeoffset AS '@datetimeoffset', @datetime2 AS '@datetime2';
   
 |입력 문자열 리터럴|**datetimeoffset(n)**|  
 |---|---|
-|ODBC DATE|ODBC 문자열 리터럴은 **datetime** 데이터 형식으로 매핑됩니다. ODBC DATETIME 리터럴에서 **datetimeoffset** 형식으로 할당하면 변환 규칙으로 정의된 대로 **datetime**과 이러한 형식 간에 암시적 변환이 발생합니다.|  
+|ODBC DATE|ODBC 문자열 리터럴은 **datetime** 데이터 형식으로 매핑됩니다. ODBC DATETIME 리터럴에서 **datetimeoffset** 형식으로 할당하면 변환 규칙으로 정의된 대로 **datetime** 과 이러한 형식 간에 암시적 변환이 발생합니다.|  
 |ODBC TIME|이전 ODBC DATE 규칙을 참조하세요.|  
 |ODBC DATETIME|이전 ODBC DATE 규칙을 참조하세요.|  
 |DATE만|TIME 부분의 기본값은 00:00:00입니다. TIMEZONE의 기본값은 +00:00입니다.|  

@@ -21,11 +21,11 @@ ms.assetid: d9ebcd30-f01c-4cfe-b95e-ffe6ea13788b
 author: VanMSFT
 ms.author: vanto
 ms.openlocfilehash: e68ad7dbd0e0998fdffee08abde97446352990c4
-ms.sourcegitcommit: cc23d8646041336d119b74bf239a6ac305ff3d31
+ms.sourcegitcommit: 192f6a99e19e66f0f817fdb1977f564b2aaa133b
 ms.translationtype: HT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 09/23/2020
-ms.locfileid: "91115516"
+ms.lasthandoff: 11/25/2020
+ms.locfileid: "96124756"
 ---
 # <a name="decryptbyasymkey-transact-sql"></a>DECRYPTBYASYMKEY(Transact-SQL)
 [!INCLUDE [SQL Server SQL Database](../../includes/applies-to-version/sql-asdb.md)]
@@ -45,7 +45,7 @@ DecryptByAsymKey (Asym_Key_ID , { 'ciphertext' | @ciphertext }
 
 ## <a name="arguments"></a>인수
  *Asym_Key_ID*  
-데이터베이스에 있는 비대칭 키의 ID입니다. *Asym_Key_ID*는 **int** 데이터 형식을 갖습니다.  
+데이터베이스에 있는 비대칭 키의 ID입니다. *Asym_Key_ID* 는 **int** 데이터 형식을 갖습니다.  
   
  *ciphertext*  
 비대칭 키로 암호화되는 데이터 문자열입니다.  
@@ -57,7 +57,7 @@ DecryptByAsymKey (Asym_Key_ID , { 'ciphertext' | @ciphertext }
 데이터베이스에서 비대칭 키를 암호화하는 데 사용되는 암호입니다.  
   
 ## <a name="return-types"></a>반환 형식  
-최대 크기가 8,000바이트인 **varbinary**입니다.  
+최대 크기가 8,000바이트인 **varbinary** 입니다.  
   
 ## <a name="remarks"></a>설명  
 대칭 암호화/암호 해독, 비대칭 키 암호화/암호 해독과 비교하여 비용이 많습니다. 큰 데이터 세트를 작업할 때(예: 테이블에 저장된 사용자 데이터) 개발자는 비대칭 키 암호화/암호 해독을 피하는 것이 좋습니다.  

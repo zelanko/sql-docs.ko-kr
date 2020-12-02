@@ -20,11 +20,11 @@ author: markingmyname
 ms.author: maghan
 monikerRange: '>=aps-pdw-2016||=azuresqldb-current||=azure-sqldw-latest||>=sql-server-2016||=sqlallproducts-allversions||>=sql-server-linux-2017||=azuresqldb-mi-current'
 ms.openlocfilehash: c0735bab9ee4a17e6143a49eeb2cdce26db6eea8
-ms.sourcegitcommit: cc23d8646041336d119b74bf239a6ac305ff3d31
+ms.sourcegitcommit: 192f6a99e19e66f0f817fdb1977f564b2aaa133b
 ms.translationtype: HT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 09/23/2020
-ms.locfileid: "91114884"
+ms.lasthandoff: 11/25/2020
+ms.locfileid: "96124813"
 ---
 # <a name="datetimeoffsetfromparts-transact-sql"></a>DATETIMEOFFSETFROMPARTS(Transact-SQL)
 [!INCLUDE [sql-asdb-asdbmi-asa-pdw](../../includes/applies-to-version/sql-asdb-asdbmi-asa-pdw.md)]
@@ -78,7 +78,7 @@ DATETIMEOFFSETFROMPARTS ( year, month, day, hour, minute, seconds, fractions, ho
   
 ## <a name="remarks"></a>설명  
 
-`DATETIMEOFFSETFROMPARTS`는 완전히 초기화된 **datetimeoffset** 데이터 형식을 반환합니다. 오프셋 인수는 표준 시간대 오프셋을 나타냅니다. 생략된 오프셋 인수의 경우 `DATETIMEOFFSETFROMPARTS`는 `00:00`의 표준 시간대 오프셋을 가정합니다. 즉 표준 시간대 오프셋이 없습니다. 지정된 오프셋 인수의 경우 `DATETIMEOFFSETFROMPARTS`는 두 인수의 값을 모두 예상하고 둘 다 양수 또는 음수 값으로 예상합니다. *minute_offset*에 값이 있고 *hour_offset*에 값이 없으면 `DATETIMEOFFSETFROMPARTS`에서 오류를 발생시킵니다. 다른 인수에 잘못된 값이 있으면 `DATETIMEOFFSETFROMPARTS`에서 오류를 발생시킵니다. 하나 이상의 필수 인수에 `NULL` 값이 있는 경우 `DATETIMEOFFSETFROMPARTS`는 `NULL`을 반환합니다. 그러나 *precision* 인수에 `NULL` 값이 있는 경우 `DATETIMEOFFSETFROMPARTS`에서 오류를 발생시킵니다.  
+`DATETIMEOFFSETFROMPARTS`는 완전히 초기화된 **datetimeoffset** 데이터 형식을 반환합니다. 오프셋 인수는 표준 시간대 오프셋을 나타냅니다. 생략된 오프셋 인수의 경우 `DATETIMEOFFSETFROMPARTS`는 `00:00`의 표준 시간대 오프셋을 가정합니다. 즉 표준 시간대 오프셋이 없습니다. 지정된 오프셋 인수의 경우 `DATETIMEOFFSETFROMPARTS`는 두 인수의 값을 모두 예상하고 둘 다 양수 또는 음수 값으로 예상합니다. *minute_offset* 에 값이 있고 *hour_offset* 에 값이 없으면 `DATETIMEOFFSETFROMPARTS`에서 오류를 발생시킵니다. 다른 인수에 잘못된 값이 있으면 `DATETIMEOFFSETFROMPARTS`에서 오류를 발생시킵니다. 하나 이상의 필수 인수에 `NULL` 값이 있는 경우 `DATETIMEOFFSETFROMPARTS`는 `NULL`을 반환합니다. 그러나 *precision* 인수에 `NULL` 값이 있는 경우 `DATETIMEOFFSETFROMPARTS`에서 오류를 발생시킵니다.  
   
 *fractions* 인수는 precision 인수에 의존합니다. 예를 들어 precision의 값이 7이면 각 소수 자릿수가 100나노초를 나타내고 precision이 3이면 각 소수 자릿수가 1밀리초를 나타냅니다. precision의 값이 0이면 fractions의 값도 0이어야 합니다. 그렇지 않으면 `DATETIMEOFFSETFROMPARTS`가 오류를 발생시킵니다.  
   
@@ -106,11 +106,11 @@ Result
 
 이 예에서는 *fractions* 및 *precision* 매개 변수의 사용 방법을 설명합니다.  
 
-1. *fractions*의 값이 5이고 *precision*의 값이 1이면, *fractions*의 값은 1초의 5/10를 나타냅니다.  
+1. *fractions* 의 값이 5이고 *precision* 의 값이 1이면, *fractions* 의 값은 1초의 5/10를 나타냅니다.  
 
-2. *fractions*의 값이 50이고 *precision*의 값이 2이면, *fractions*의 값은 1초의 50/100을 나타냅니다.  
+2. *fractions* 의 값이 50이고 *precision* 의 값이 2이면, *fractions* 의 값은 1초의 50/100을 나타냅니다.  
 
-3. *fractions*의 값이 500이고 *precision*의 값이 3이면, *fractions*의 값은 1초의 500/1000을 나타냅니다.  
+3. *fractions* 의 값이 500이고 *precision* 의 값이 3이면, *fractions* 의 값은 1초의 500/1000을 나타냅니다.  
   
 ```sql
 SELECT DATETIMEOFFSETFROMPARTS ( 2011, 8, 15, 14, 30, 00, 5, 12, 30, 1 );  

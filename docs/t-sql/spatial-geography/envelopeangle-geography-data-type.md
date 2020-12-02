@@ -19,11 +19,11 @@ ms.assetid: 14a7ba15-168c-4b08-ba3d-951d73092ac7
 author: MladjoA
 ms.author: mlandzic
 ms.openlocfilehash: c72459ec22208dfebbe234430ba49a4e94cb06a4
-ms.sourcegitcommit: e700497f962e4c2274df16d9e651059b42ff1a10
+ms.sourcegitcommit: 192f6a99e19e66f0f817fdb1977f564b2aaa133b
 ms.translationtype: HT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 08/17/2020
-ms.locfileid: "88479381"
+ms.lasthandoff: 11/25/2020
+ms.locfileid: "96124333"
 ---
 # <a name="envelopeangle-geography-data-type"></a>EnvelopeAngle(geography 데이터 형식)
 [!INCLUDE [SQL Server SQL Database](../../includes/applies-to-version/sql-asdb.md)]

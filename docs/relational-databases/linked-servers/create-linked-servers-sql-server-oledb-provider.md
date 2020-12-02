@@ -12,11 +12,11 @@ ms.author: pelopes
 manager: rothj
 ms.custom: seo-dt-2019
 ms.openlocfilehash: 528d1f6e1c7eea06b69fc60e2208eeb37ce3e36f
-ms.sourcegitcommit: e700497f962e4c2274df16d9e651059b42ff1a10
+ms.sourcegitcommit: 192f6a99e19e66f0f817fdb1977f564b2aaa133b
 ms.translationtype: HT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 08/17/2020
-ms.locfileid: "88420847"
+ms.lasthandoff: 11/25/2020
+ms.locfileid: "96125128"
 ---
 # <a name="microsoft-sql-server-distributed-queries-ole-db-connectivity"></a>Microsoft SQL Server 분산 쿼리: OLE DB 연결
 
@@ -434,7 +434,7 @@ SQL Server는 OLE DB에 지정된 OLE DB 오류 개체를 사용합니다. 개�
 
 이러한 매핑은 지정된 연결된 서버에 대해 사용자가 지정할 수 있으며, 시스템 저장 프로시저 `sp_addlinkedsrvlogin` 및 `sp_droplinkedsrvlogin`에서 설정하고 관리할 수 있습니다. `IDBProperties::SetProperties`를 통해 초기화 그룹 속성 DBPROP_AUTH_USERID 및 DBPROP_AUTH_PASSWORD를 설정하면 매핑에 따라 결정된 사용자 ID와 암호가 연결 시 공급자에 전달됩니다.
 
-클라이언트가 Windows 인증을 통해 SQL Server에 연결하는 경우 `sp_addlinkedsrvlogin`을 사용하여 로그인에 `self` 매핑이 설정되어 있으면 SQL Server는 클라이언트의 보안 컨텍스트를 가장하고 연결 시 공급자의 `DBPROP_AUTH_INTEGRATED` 속성을 설정합니다. 이 프로세스를 ‘위임’이라고 합니다.**
+클라이언트가 Windows 인증을 통해 SQL Server에 연결하는 경우 `sp_addlinkedsrvlogin`을 사용하여 로그인에 `self` 매핑이 설정되어 있으면 SQL Server는 클라이언트의 보안 컨텍스트를 가장하고 연결 시 공급자의 `DBPROP_AUTH_INTEGRATED` 속성을 설정합니다. 이 프로세스를 ‘위임’이라고 합니다.
 
 연결에 사용되는 보안 컨텍스트를 확인한 후에 이 보안 컨텍스트의 인증과 데이터 원본의 데이터 개체에 대한 해당 컨텍스트의 사용 권한 확인은 전적으로 OLE DB 공급자의 책임입니다.
 

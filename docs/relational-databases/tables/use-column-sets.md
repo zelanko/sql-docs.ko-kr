@@ -16,11 +16,11 @@ author: stevestein
 ms.author: sstein
 monikerRange: =azuresqldb-current||>=sql-server-2016||=sqlallproducts-allversions||>=sql-server-linux-2017||=azuresqldb-mi-current
 ms.openlocfilehash: 79625148ed44c2003c74d393502129fe15a112f5
-ms.sourcegitcommit: 19ae05bc69edce1e3b3d621d7fdd45ea5f74969d
+ms.sourcegitcommit: 192f6a99e19e66f0f817fdb1977f564b2aaa133b
 ms.translationtype: HT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 08/18/2020
-ms.locfileid: "88564643"
+ms.lasthandoff: 11/25/2020
+ms.locfileid: "96125091"
 ---
 # <a name="use-column-sets"></a>열 집합 사용
 [!INCLUDE [sqlserver2016-asdb-asdbmi](../../includes/applies-to-version/sqlserver2016-asdb-asdbmi.md)]
@@ -111,7 +111,7 @@ GO
  이 예에서는 열 `i`에 값이 지정되지 않았지만 값 `0` 이 삽입되었습니다.  
   
 ## <a name="using-the-sql_variant-data-type"></a>sql_variant 데이터 형식 사용  
- **sql_variant** 데이터 형식은 **int**, **char**및 **date**와 같은 여러 다른 데이터 형식을 저장할 수 있습니다. 열 집합은 **sql_variant** 값에 연결된 소수 자릿수, 전체 자릿수 및 로캘 정보와 같은 데이터 형식 정보를 생성된 XML 열에서 특성으로 출력합니다. 사용자 지정하여 생성된 XML 문에 있는 이러한 특성을 열 집합의 삽입 또는 업데이트 작업에 대한 입력으로 제공하려는 경우에는 이 특성 중 일부가 필요하여 이러한 일부 특성에 기본값이 할당됩니다. 다음 표에서는 데이터 형식과 값이 제공되지 않은 경우 서버에서 생성하는 기본값을 나열합니다.  
+ **sql_variant** 데이터 형식은 **int**, **char** 및 **date** 와 같은 여러 다른 데이터 형식을 저장할 수 있습니다. 열 집합은 **sql_variant** 값에 연결된 소수 자릿수, 전체 자릿수 및 로캘 정보와 같은 데이터 형식 정보를 생성된 XML 열에서 특성으로 출력합니다. 사용자 지정하여 생성된 XML 문에 있는 이러한 특성을 열 집합의 삽입 또는 업데이트 작업에 대한 입력으로 제공하려는 경우에는 이 특성 중 일부가 필요하여 이러한 일부 특성에 기본값이 할당됩니다. 다음 표에서는 데이터 형식과 값이 제공되지 않은 경우 서버에서 생성하는 기본값을 나열합니다.  
   
 |데이터 형식|localeID*|sqlCompareOptions|sqlCollationVersion|SqlSortId|최대 길이|전체 자릿수|확장|  
 |---------------|----------------|-----------------------|-------------------------|---------------|--------------------|---------------|-----------|  

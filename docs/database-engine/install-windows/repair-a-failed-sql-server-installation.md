@@ -9,15 +9,15 @@ ms.reviewer: ''
 ms.technology: install
 ms.topic: conceptual
 ms.assetid: 90c11b28-892b-44d6-978e-0eee48c75b7d
-author: MashaMSFT
-ms.author: mathoma
+author: cawrites
+ms.author: chadam
 monikerRange: '>=sql-server-2016||=sqlallproducts-allversions'
-ms.openlocfilehash: 91c7f3a0ef51b752b2c1460578319929f7ae4113
-ms.sourcegitcommit: 2f868a77903c1f1c4cecf4ea1c181deee12d5b15
+ms.openlocfilehash: 7524ea73ce04db70b75df3b8a4306c7304f475de
+ms.sourcegitcommit: 5a1ed81749800c33059dac91b0e18bd8bb3081b1
 ms.translationtype: HT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 10/02/2020
-ms.locfileid: "91671003"
+ms.lasthandoff: 11/23/2020
+ms.locfileid: "96125821"
 ---
 # <a name="repair-a-failed-sql-server-installation"></a>실패한 SQL Server 설치 복구
 
@@ -66,9 +66,9 @@ ms.locfileid: "91671003"
   
 5. 인스턴스 선택 페이지에서 복구할 인스턴스를 선택한 후 **다음** 을 클릭하여 계속합니다. 
   
-6. 작업이 유효한지 검사하는 복구 규칙이 실행됩니다. 계속하려면 **다음**을 클릭합니다. 
+6. 작업이 유효한지 검사하는 복구 규칙이 실행됩니다. 계속하려면 **다음** 을 클릭합니다. 
   
-7. 복구 준비 페이지에서 작업을 진행할 준비가 되었음을 알려 줍니다. 계속하려면 **복구**를 클릭합니다. 
+7. 복구 준비 페이지에서 작업을 진행할 준비가 되었음을 알려 줍니다. 계속하려면 **복구** 를 클릭합니다. 
   
 8. 복구 진행률 페이지에 복구 작업 상태가 표시됩니다. 완료 페이지에서 작업이 완료되었음을 알려 줍니다. 
   

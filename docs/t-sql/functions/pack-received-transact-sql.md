@@ -21,11 +21,11 @@ ms.assetid: 5c0b3d36-bfad-4f0b-abb8-e8f6391b32cd
 author: VanMSFT
 ms.author: vanto
 ms.openlocfilehash: 7b3bb37af363727d1eb41922979ee6f78a9fd008
-ms.sourcegitcommit: 197a6ffb643f93592edf9e90b04810a18be61133
+ms.sourcegitcommit: 192f6a99e19e66f0f817fdb1977f564b2aaa133b
 ms.translationtype: HT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 09/26/2020
-ms.locfileid: "91380825"
+ms.lasthandoff: 11/25/2020
+ms.locfileid: "96124630"
 ---
 # <a name="x40x40pack_received-transact-sql"></a>&#x40;&#x40;PACK_RECEIVED (Transact-SQL)
 [!INCLUDE [SQL Server](../../includes/applies-to-version/sqlserver.md)]
@@ -46,7 +46,7 @@ ms.locfileid: "91380825"
  **integer**  
   
 ## <a name="remarks"></a>설명  
- 보낸 패킷과 받은 패킷을 포함하여 여러 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 통계가 들어 있는 보고서를 표시하려면 **sp_monitor**를 실행합니다.  
+ 보낸 패킷과 받은 패킷을 포함하여 여러 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 통계가 들어 있는 보고서를 표시하려면 **sp_monitor** 를 실행합니다.  
   
 ## <a name="examples"></a>예제  
  다음 예에서는 `@@PACK_RECEIVED`의 사용법을 보여 줍니다.  

@@ -24,11 +24,11 @@ ms.assetid: 6a7382cf-a360-4d62-b9d2-5d747f56f076
 author: markingmyname
 ms.author: maghan
 ms.openlocfilehash: 9cdd99caf69ce254e1a42d345526515d2fb0472f
-ms.sourcegitcommit: cc23d8646041336d119b74bf239a6ac305ff3d31
+ms.sourcegitcommit: 192f6a99e19e66f0f817fdb1977f564b2aaa133b
 ms.translationtype: HT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 09/23/2020
-ms.locfileid: "91115489"
+ms.lasthandoff: 11/25/2020
+ms.locfileid: "96124701"
 ---
 # <a name="file_id-transact-sql"></a>FILE_ID(Transact-SQL)
 [!INCLUDE [SQL Server](../../includes/applies-to-version/sqlserver.md)]
@@ -50,15 +50,15 @@ FILE_ID ( file_name )
 
 ## <a name="arguments"></a>인수
 *file_name*  
-반환될 파일 ID 값 `FILE_ID`가 포함된 파일의 논리적 이름을 나타내는 **sysname**형식 식입니다.  
+반환될 파일 ID 값 `FILE_ID`가 포함된 파일의 논리적 이름을 나타내는 **sysname** 형식 식입니다.  
   
 ## <a name="return-types"></a>반환 형식  
 **smallint**  
   
 ## <a name="remarks"></a>설명  
-*file_name*은 sys.master_files 또는 sys.database_files 카탈로그 뷰의 name 열에 표시되는 논리적 파일 이름과 일치합니다.  
+*file_name* 은 sys.master_files 또는 sys.database_files 카탈로그 뷰의 name 열에 표시되는 논리적 파일 이름과 일치합니다.  
 
-*file_name*이 현재 데이터베이스 구성 요소 파일의 논리적 이름과 일치하지 않으면 `FILE_ID`는 `NULL`을 반환합니다.
+*file_name* 이 현재 데이터베이스 구성 요소 파일의 논리적 이름과 일치하지 않으면 `FILE_ID`는 `NULL`을 반환합니다.
   
 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]에서 전체 텍스트 카탈로그에 할당되는 파일 ID 번호는 32767보다 큽니다. `FILE_ID` 함수는 **smallint** 반환 형식이므로 `FILE_ID`는 전체 텍스트 파일을 지원하지 않습니다. 대신 [FILE_IDEX](../../t-sql/functions/file-idex-transact-sql.md)를 사용하십시오.  
   

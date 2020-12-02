@@ -22,11 +22,11 @@ ms.assetid: 6edf121f-ac62-4dae-90e6-6938f32603c9
 author: VanMSFT
 ms.author: vanto
 ms.openlocfilehash: 846a3d772c35d8d47aa0013b6d27b8c94f5cf6f3
-ms.sourcegitcommit: e700497f962e4c2274df16d9e651059b42ff1a10
+ms.sourcegitcommit: 192f6a99e19e66f0f817fdb1977f564b2aaa133b
 ms.translationtype: HT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 08/17/2020
-ms.locfileid: "88310179"
+ms.lasthandoff: 11/25/2020
+ms.locfileid: "96124769"
 ---
 # <a name="decryptbykey-transact-sql"></a>DECRYPTBYKEY(Transact-SQL)
 [!INCLUDE [SQL Server SQL Database](../../includes/applies-to-version/sql-asdb.md)]
@@ -53,16 +53,16 @@ DecryptByKey ( { 'ciphertext' | @ciphertext }
 키로 암호화된 데이터를 포함하는 **varbinary** 형식의 변수입니다.  
   
  *add_authenticator*  
-원래 암호화 프로세스가 포함되고 암호화된 인증자가 일반 텍스트를 사용하는지 여부를 나타냅니다. 데이터 암호화 프로세스 동안 [ENCRYPTBYKEY(Transact-SQL)](./encryptbykey-transact-sql.md)로 전달된 값과 일치해야 합니다. *add_authenticator*는 **int** 데이터 형식을 갖습니다.  
+원래 암호화 프로세스가 포함되고 암호화된 인증자가 일반 텍스트를 사용하는지 여부를 나타냅니다. 데이터 암호화 프로세스 동안 [ENCRYPTBYKEY(Transact-SQL)](./encryptbykey-transact-sql.md)로 전달된 값과 일치해야 합니다. *add_authenticator* 는 **int** 데이터 형식을 갖습니다.  
   
  *authenticator*  
-인증자의 생성에 대한 기준으로 사용되는 데이터입니다. [ENCRYPTBYKEY(Transact-SQL)](./encryptbykey-transact-sql.md)에 제공된 값과 일치해야 합니다. *authenticator*는 **sysname** 데이터 형식을 갖습니다.  
+인증자의 생성에 대한 기준으로 사용되는 데이터입니다. [ENCRYPTBYKEY(Transact-SQL)](./encryptbykey-transact-sql.md)에 제공된 값과 일치해야 합니다. *authenticator* 는 **sysname** 데이터 형식을 갖습니다.  
 
 **\@authenticator**  
-인증자가 생성하는 데이터를 포함하는 변수입니다. [ENCRYPTBYKEY(Transact-SQL)](./encryptbykey-transact-sql.md)에 제공된 값과 일치해야 합니다. *\@authenticator*는 **sysname** 데이터 형식을 갖습니다.  
+인증자가 생성하는 데이터를 포함하는 변수입니다. [ENCRYPTBYKEY(Transact-SQL)](./encryptbykey-transact-sql.md)에 제공된 값과 일치해야 합니다. *\@authenticator* 는 **sysname** 데이터 형식을 갖습니다.  
 
 ## <a name="return-types"></a>반환 형식  
-최대 크기가 8,000바이트인 **varbinary**입니다. `DECRYPTBYKEY`는 데이터 암호화에 사용되는 대칭 키가 열려 있지 않거나 *ciphertext*가 NULL이면 NULL을 반환합니다.  
+최대 크기가 8,000바이트인 **varbinary** 입니다. `DECRYPTBYKEY`는 데이터 암호화에 사용되는 대칭 키가 열려 있지 않거나 *ciphertext* 가 NULL이면 NULL을 반환합니다.  
   
 ## <a name="remarks"></a>설명  
 `DECRYPTBYKEY`는 대칭 키를 사용합니다. 데이터베이스는 이 대칭 키를 이미 열어 두어야 합니다. `DECRYPTBYKEY`는 동시에 여러 개의 키를 열어 둘 수 있습니다. 암호 텍스트를 해독하기 직전에 키를 열 필요는 없습니다.  

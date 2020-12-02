@@ -14,11 +14,11 @@ author: stevestein
 ms.author: sstein
 ms.custom: seo-dt-2019
 ms.openlocfilehash: 44252fa011dcdeaca457d6aa7f9819f581dbeb11
-ms.sourcegitcommit: cfa04a73b26312bf18d8f6296891679166e2754d
+ms.sourcegitcommit: 192f6a99e19e66f0f817fdb1977f564b2aaa133b
 ms.translationtype: HT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 10/19/2020
-ms.locfileid: "92192583"
+ms.lasthandoff: 11/25/2020
+ms.locfileid: "96125254"
 ---
 # <a name="configure-sql-server-agent-mail-to-use-database-mail"></a>데이터베이스 메일을 사용하도록 SQL Server 에이전트 메일 구성
  [!INCLUDE [SQL Server](../../includes/applies-to-version/sqlserver.md)]
@@ -59,15 +59,15 @@ ms.locfileid: "92192583"
   
 -   개체 탐색기에서 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 인스턴스를 확장합니다.  
   
--   **SQL Server 에이전트**를 마우스 오른쪽 단추로 클릭한 다음 **속성**을 클릭합니다.  
+-   **SQL Server 에이전트** 를 마우스 오른쪽 단추로 클릭한 다음 **속성** 을 클릭합니다.  
   
--   **경고 시스템**을 클릭합니다.  
+-   **경고 시스템** 을 클릭합니다.  
   
--   **메일 프로필 설정**을 선택합니다.  
+-   **메일 프로필 설정** 을 선택합니다.  
   
--   **메일 시스템** 목록에서 **데이터베이스 메일**을 선택합니다.  
+-   **메일 시스템** 목록에서 **데이터베이스 메일** 을 선택합니다.  
   
--   **메일 프로필**목록에서 데이터베이스 메일에 대한 메일 프로필을 선택합니다. 
+-   **메일 프로필** 목록에서 데이터베이스 메일에 대한 메일 프로필을 선택합니다. 
   
 -   SQL Server 에이전트를 다시 시작합니다.  
   

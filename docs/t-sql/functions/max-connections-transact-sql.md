@@ -23,11 +23,11 @@ ms.assetid: 57eb9f4b-548f-4212-9684-a11d831c4732
 author: markingmyname
 ms.author: maghan
 ms.openlocfilehash: 3ded3cd350efe55a80ef47c28608a25f75ddbabf
-ms.sourcegitcommit: cc23d8646041336d119b74bf239a6ac305ff3d31
+ms.sourcegitcommit: 192f6a99e19e66f0f817fdb1977f564b2aaa133b
 ms.translationtype: HT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 09/23/2020
-ms.locfileid: "91116703"
+ms.lasthandoff: 11/25/2020
+ms.locfileid: "96124633"
 ---
 # <a name="x40x40max_connections-transact-sql"></a>&#x40;&#x40;MAX_CONNECTIONS(Transact-SQL)
 [!INCLUDE [SQL Server](../../includes/applies-to-version/sqlserver.md)]
@@ -50,7 +50,7 @@ ms.locfileid: "91116703"
 ## <a name="remarks"></a>설명  
  허용되는 실제 사용자 연결 수는 설치된 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 버전과 애플리케이션 및 하드웨어의 제한에 따라 달라집니다.  
   
- 연결 수를 줄이기 위해 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]를 다시 구성하려면 **sp_configure**를 사용합니다.  
+ 연결 수를 줄이기 위해 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]를 다시 구성하려면 **sp_configure** 를 사용합니다.  
   
 ## <a name="examples"></a>예제  
  다음 예에서는 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 인스턴스의 최대 사용자 연결 수를 반환합니다. 이 예에서는 사용자 연결 수를 줄이기 위해 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]를 다시 구성하지 않은 것으로 가정합니다.  

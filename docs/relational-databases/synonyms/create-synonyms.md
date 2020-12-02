@@ -16,11 +16,11 @@ author: markingmyname
 ms.author: maghan
 monikerRange: =azuresqldb-current||>=sql-server-2016||=sqlallproducts-allversions||>=sql-server-linux-2017||=azuresqldb-mi-current
 ms.openlocfilehash: f5c4d25ed48715c9317ebe0df37ee4d2779abe10
-ms.sourcegitcommit: dd36d1cbe32cd5a65c6638e8f252b0bd8145e165
+ms.sourcegitcommit: 192f6a99e19e66f0f817fdb1977f564b2aaa133b
 ms.translationtype: HT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 09/08/2020
-ms.locfileid: "89551602"
+ms.lasthandoff: 11/25/2020
+ms.locfileid: "96125104"
 ---
 # <a name="create-synonyms"></a>동의어 만들기
 [!INCLUDE [SQL Server Azure SQL Database](../../includes/applies-to-version/sql-asdb.md)]
@@ -49,7 +49,7 @@ ms.locfileid: "89551602"
   
 #### <a name="to-create-a-synonym"></a>동의어를 만들려면  
   
-1.  **개체 탐색기**에서 새 뷰를 만들 데이터베이스를 확장합니다.  
+1.  **개체 탐색기** 에서 새 뷰를 만들 데이터베이스를 확장합니다.  
   
 2.  **동의어** 폴더를 마우스 오른쪽 단추로 클릭한 다음, **새 동의어...** 를 클릭합니다.  
   
@@ -82,9 +82,9 @@ ms.locfileid: "89551602"
   
 1.  [!INCLUDE[ssDE](../../includes/ssde-md.md)]에 연결합니다.  
   
-2.  표준 도구 모음에서 **새 쿼리**를 클릭합니다.  
+2.  표준 도구 모음에서 **새 쿼리** 를 클릭합니다.  
   
-3.  다음 예를 복사하여 쿼리 창에 붙여 넣고 **실행**을 클릭합니다.  
+3.  다음 예를 복사하여 쿼리 창에 붙여 넣고 **실행** 을 클릭합니다.  
   
 ###  <a name="example-transact-sql"></a><a name="TsqlExample"></a> 예(Transact-SQL)  
  다음 예에서는 [!INCLUDE[ssSampleDBobject](../../includes/sssampledbobject-md.md)] 데이터베이스에 있는 기존 테이블의 동의어를 만듭니다. 그런 다음 이후 예에서 이 동의어가 사용됩니다.  

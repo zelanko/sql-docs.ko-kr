@@ -8,15 +8,15 @@ ms.technology: install
 ms.reviewer: ''
 ms.topic: conceptual
 ms.assetid: 19c5b725-7400-4881-af8f-fd232ca28234
-author: MashaMSFT
-ms.author: mathoma
+author: cawrites
+ms.author: chadam
 monikerRange: '>=sql-server-2016||=sqlallproducts-allversions'
-ms.openlocfilehash: 93fa8a3fa6346a9e93f8caae43aecc0ba49bb763
-ms.sourcegitcommit: 2f868a77903c1f1c4cecf4ea1c181deee12d5b15
+ms.openlocfilehash: bd123a6f634177b455b57229bffb2375aab385dd
+ms.sourcegitcommit: 5a1ed81749800c33059dac91b0e18bd8bb3081b1
 ms.translationtype: HT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 10/02/2020
-ms.locfileid: "91671036"
+ms.lasthandoff: 11/23/2020
+ms.locfileid: "96125850"
 ---
 # <a name="plan-and-test-the-database-engine-upgrade-plan"></a>데이터베이스 엔진 업그레이드 계획 및 테스트
 

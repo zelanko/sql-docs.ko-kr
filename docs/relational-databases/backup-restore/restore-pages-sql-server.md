@@ -18,14 +18,14 @@ helpviewer_keywords:
 - pages [SQL Server], damaged
 - restoring [SQL Server], pages
 ms.assetid: 07e40950-384e-4d84-9ac5-84da6dd27a91
-author: mashamsft
-ms.author: mathoma
-ms.openlocfilehash: bde2baadb2a7cf5c6a11330443ab8e3c883455a9
-ms.sourcegitcommit: da88320c474c1c9124574f90d549c50ee3387b4c
+author: cawrites
+ms.author: chadam
+ms.openlocfilehash: 902cb988e52eecedaa8ce95aeb3d922b6daef42c
+ms.sourcegitcommit: 5a1ed81749800c33059dac91b0e18bd8bb3081b1
 ms.translationtype: HT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 07/01/2020
-ms.locfileid: "85759120"
+ms.lasthandoff: 11/23/2020
+ms.locfileid: "96125541"
 ---
 # <a name="restore-pages-sql-server"></a>페이지 복원(SQL Server)
  [!INCLUDE [SQL Server](../../includes/applies-to-version/sqlserver.md)]
@@ -96,7 +96,7 @@ ms.locfileid: "85759120"
     > [!WARNING]  
     >  손상된 페이지에 중요한 데이터베이스 메타데이터가 저장되어 있으면 온라인 페이지 복원을 시도하는 동안 메타데이터에 필요한 업데이트가 실패할 수 있습니다. 이 경우 오프라인 페이지 복원을 수행할 수 있지만 이를 위해서는 먼저 RESTORE WITH NORECOVERY로 트랜잭션 로그를 백업하여 [비상 로그 백업](../../relational-databases/backup-restore/tail-log-backups-sql-server.md) 을 만들어야 합니다.  
   
--   페이지 복원은 페이지 체크섬을 포함하여 향상된 페이지 수준 오류 보고와 추적을 사용합니다. 페이지가 체크섬이나 조각난 쓰기에 의해 손상된 것으로 확인될 경우 이러한 *손상된 페이지*는 페이지 복원 작업을 통해 복원할 수 있습니다. 이때 명시적으로 지정한 페이지만 복원됩니다. 지정한 각 페이지는 지정한 데이터 백업의 해당 페이지 복사본으로 대체됩니다.  
+-   페이지 복원은 페이지 체크섬을 포함하여 향상된 페이지 수준 오류 보고와 추적을 사용합니다. 페이지가 체크섬이나 조각난 쓰기에 의해 손상된 것으로 확인될 경우 이러한 *손상된 페이지* 는 페이지 복원 작업을 통해 복원할 수 있습니다. 이때 명시적으로 지정한 페이지만 복원됩니다. 지정한 각 페이지는 지정한 데이터 백업의 해당 페이지 복사본으로 대체됩니다.  
   
      후속 로그 백업을 복원하는 경우 복구할 페이지가 하나 이상 포함된 데이터베이스 파일에만 백업이 적용됩니다. 해당 페이지를 포함하는 파일 그룹을 현재 로그 파일로 가져오려면 손상되지 않은 로그 백업 체인을 마지막 전체 복원 또는 차등 복원에 적용해야 합니다. 파일 복원의 경우와 같이 롤포워드 세트는 단일 로그 다시 실행 과정을 사용하여 진행됩니다. 페이지 복원이 성공하기 위해서는 복원된 페이지가 데이터베이스와 동일한 상태로 복구되어야 합니다.  
   
@@ -114,15 +114,15 @@ ms.locfileid: "85759120"
   
 1.  [!INCLUDE[ssDEnoversion](../../includes/ssdenoversion-md.md)]의 해당 인스턴스에 연결하고 개체 탐색기에서 서버 이름을 클릭하여 서버 트리를 확장합니다.  
   
-2.  **데이터베이스**를 확장합니다. 데이터베이스에 따라 사용자 데이터베이스를 선택하거나 **시스템 데이터베이스**를 확장한 다음 시스템 데이터베이스를 선택합니다.  
+2.  **데이터베이스** 를 확장합니다. 데이터베이스에 따라 사용자 데이터베이스를 선택하거나 **시스템 데이터베이스** 를 확장한 다음 시스템 데이터베이스를 선택합니다.  
   
-3.  데이터베이스를 마우스 오른쪽 단추로 클릭하고 **태스크**, **복원**을 차례로 가리킨 다음 **페이지**를 클릭하여 **페이지 복원** 대화 상자를 엽니다.  
+3.  데이터베이스를 마우스 오른쪽 단추로 클릭하고 **태스크**, **복원** 을 차례로 가리킨 다음 **페이지** 를 클릭하여 **페이지 복원** 대화 상자를 엽니다.  
   
      **복원**  
      이 섹션은 **데이터베이스 복원(일반 페이지)** 의 [복원 위치](../../relational-databases/backup-restore/restore-database-general-page.md)와 동일한 기능을 수행합니다.  
   
      **Database**  
-     복원할 데이터베이스를 지정합니다. 새 데이터베이스를 입력하거나 드롭다운 목록에서 기존 데이터베이스를 선택할 수 있습니다. 이 목록에는 시스템 데이터베이스인 **master** 및 **tempdb**를 제외한 서버의 모든 데이터베이스가 포함되어 있습니다.  
+     복원할 데이터베이스를 지정합니다. 새 데이터베이스를 입력하거나 드롭다운 목록에서 기존 데이터베이스를 선택할 수 있습니다. 이 목록에는 시스템 데이터베이스인 **master** 및 **tempdb** 를 제외한 서버의 모든 데이터베이스가 포함되어 있습니다.  
   
     > [!WARNING]  
     >  암호로 보호된 백업을 복원하려면 [RESTORE](../../t-sql/statements/restore-statements-transact-sql.md) 문을 사용해야 합니다.  
@@ -137,7 +137,7 @@ ms.locfileid: "85759120"
     |------------|------------|  
     |**이름**|백업 세트의 이름입니다.|  
     |**구성 요소**|백업된 구성 요소: **데이터베이스**, **파일** 또는 **\<blank>** (트랜잭션 로그의 경우)가 될 수 있습니다.|  
-    |**형식**|수행된 백업 유형: **전체**, **차등** 또는 **트랜잭션 로그**가 될 수 있습니다.|  
+    |**형식**|수행된 백업 유형: **전체**, **차등** 또는 **트랜잭션 로그** 가 될 수 있습니다.|  
     |**Server**|백업 작업을 수행한 [!INCLUDE[ssDE](../../includes/ssde-md.md)] 인스턴스의 이름입니다.|  
     |**Database**|백업 작업과 관련된 데이터베이스의 이름입니다.|  
     |**위치**|볼륨에 있는 백업 세트의 위치입니다.|  
@@ -153,18 +153,18 @@ ms.locfileid: "85759120"
   
      페이지 복원 작업을 수행하는 데 필요한 백업 파일의 무결성을 확인하려면 **확인** 을 클릭합니다.  
   
-4.  손상된 페이지를 확인하려면 **데이터베이스** 상자에서 올바른 데이터베이스를 선택한 상태에서 **데이터베이스 페이지 확인**을 클릭합니다. 이 작업을 실행하는 데는 오랜 시간이 소요됩니다.  
+4.  손상된 페이지를 확인하려면 **데이터베이스** 상자에서 올바른 데이터베이스를 선택한 상태에서 **데이터베이스 페이지 확인** 을 클릭합니다. 이 작업을 실행하는 데는 오랜 시간이 소요됩니다.  
   
     > [!WARNING]  
     >  손상되지 않은 특정 페이지를 복원하려면 **추가** 를 클릭하고 복원할 페이지의 **파일 ID** 와 **페이지 ID** 를 입력합니다.  
   
-5.  복원할 페이지를 확인하는 데는 페이지 표가 사용됩니다. 처음에는 이 표가 [suspect_pages](../../relational-databases/system-tables/suspect-pages-transact-sql.md) 시스템 테이블의 내용으로 채워집니다. 표에서 페이지를 추가하거나 제거하려면 **추가** 또는 **제거**를 클릭합니다. 자세한 내용은 [suspect_pages 테이블 관리&#40;SQL Server&#41;](../../relational-databases/backup-restore/manage-the-suspect-pages-table-sql-server.md)에서 페이지를 복원하는 방법에 대해 설명합니다.  
+5.  복원할 페이지를 확인하는 데는 페이지 표가 사용됩니다. 처음에는 이 표가 [suspect_pages](../../relational-databases/system-tables/suspect-pages-transact-sql.md) 시스템 테이블의 내용으로 채워집니다. 표에서 페이지를 추가하거나 제거하려면 **추가** 또는 **제거** 를 클릭합니다. 자세한 내용은 [suspect_pages 테이블 관리&#40;SQL Server&#41;](../../relational-databases/backup-restore/manage-the-suspect-pages-table-sql-server.md)에서 페이지를 복원하는 방법에 대해 설명합니다.  
   
 6.  **백업 세트** 표에는 기본 복원 계획의 백업 세트가 나열됩니다. 필요할 경우 **확인** 을 클릭하여 복원은 수행하지 않고 백업을 읽을 수 있는지와 백업 세트가 완전한지만 확인할 수 있습니다. 자세한 내용은 [RESTORE VERIFYONLY&#40;Transact-SQL&#41;](../../t-sql/statements/restore-statements-verifyonly-transact-sql.md)를 참조하세요.  
   
      **페이지**  
   
-7.  페이지 표에 나열된 페이지를 복원하려면 **확인**을 클릭합니다.  
+7.  페이지 표에 나열된 페이지를 복원하려면 **확인** 을 클릭합니다.  
 
 ##  <a name="using-transact-sql"></a><a name="TsqlProcedure"></a> Transact-SQL 사용  
  RESTORE DATABASE 문에서 페이지를 지정하려면 페이지를 포함하는 파일의 파일 ID와 해당 페이지의 페이지 ID가 필요합니다. 필요한 구문은 다음과 같습니다.  
@@ -197,7 +197,7 @@ ms.locfileid: "85759120"
   
 4.  후속 로그 백업을 적용합니다.  
   
-5.  복원된 페이지의 최종 LSN, 즉 마지막으로 복원된 페이지가 오프라인 상태로 된 시점을 포함하는 데이터베이스의 새 로그 백업을 만듭니다. 시퀀스에서 첫 번째 복원의 일부로 설정되는 최종 LSN은 다시 실행 대상 LSN입니다. 이 페이지를 포함하는 파일의 온라인 롤포워드는 다시 실행 대상 LSN에서 중지할 수 있습니다. 파일의 현재 다시 실행 대상 LSN을 알아보려면 **sys.master_files**의 **redo_target_lsn** 열을 확인합니다. 자세한 내용은 [sys.master_files&#40;Transact-SQL&#41;](../../relational-databases/system-catalog-views/sys-master-files-transact-sql.md)를 참조하세요.  
+5.  복원된 페이지의 최종 LSN, 즉 마지막으로 복원된 페이지가 오프라인 상태로 된 시점을 포함하는 데이터베이스의 새 로그 백업을 만듭니다. 시퀀스에서 첫 번째 복원의 일부로 설정되는 최종 LSN은 다시 실행 대상 LSN입니다. 이 페이지를 포함하는 파일의 온라인 롤포워드는 다시 실행 대상 LSN에서 중지할 수 있습니다. 파일의 현재 다시 실행 대상 LSN을 알아보려면 **sys.master_files** 의 **redo_target_lsn** 열을 확인합니다. 자세한 내용은 [sys.master_files&#40;Transact-SQL&#41;](../../relational-databases/system-catalog-views/sys-master-files-transact-sql.md)를 참조하세요.  
   
 6.  새 로그 백업을 복원합니다. 새로운 이 로그 백업을 적용하면 페이지 복원이 완료되며 페이지를 사용할 수 있습니다.  
   

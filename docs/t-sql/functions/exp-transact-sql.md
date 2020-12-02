@@ -21,11 +21,11 @@ author: markingmyname
 ms.author: maghan
 monikerRange: '>=aps-pdw-2016||=azuresqldb-current||=azure-sqldw-latest||>=sql-server-2016||=sqlallproducts-allversions||>=sql-server-linux-2017||=azuresqldb-mi-current'
 ms.openlocfilehash: e93680972f686b2d596e9c8659d5a4bed90032a4
-ms.sourcegitcommit: cc23d8646041336d119b74bf239a6ac305ff3d31
+ms.sourcegitcommit: 192f6a99e19e66f0f817fdb1977f564b2aaa133b
 ms.translationtype: HT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 09/23/2020
-ms.locfileid: "91116456"
+ms.lasthandoff: 11/25/2020
+ms.locfileid: "96124723"
 ---
 # <a name="exp-transact-sql"></a>EXP(Transact-SQL)
 [!INCLUDE [sql-asdb-asdbmi-asa-pdw](../../includes/applies-to-version/sql-asdb-asdbmi-asa-pdw.md)]
@@ -44,15 +44,15 @@ EXP ( float_expression )
 
 ## <a name="arguments"></a>인수
  *float_expression*  
- **float** 형식 또는 **float**로 암시적으로 변환되는 형식의 [식](../../t-sql/language-elements/expressions-transact-sql.md)입니다.  
+ **float** 형식 또는 **float** 로 암시적으로 변환되는 형식의 [식](../../t-sql/language-elements/expressions-transact-sql.md)입니다.  
   
 ## <a name="return-types"></a>반환 형식  
  **float**  
   
 ## <a name="remarks"></a>설명  
- 상수 **e**는 자연 로그의 밑이며 대략적인 값은 2.718281...입니다.  
+ 상수 **e** 는 자연 로그의 밑이며 대략적인 값은 2.718281...입니다.  
   
- 숫자의 지수는 해당 숫자의 거듭제곱으로 올려진 **e**입니다. 예를 들어 EXP(1.0) = e^1.0 = 2.71828182845905이며 EXP(10) = e^10 = 22026.4657948067입니다.  
+ 숫자의 지수는 해당 숫자의 거듭제곱으로 올려진 **e** 입니다. 예를 들어 EXP(1.0) = e^1.0 = 2.71828182845905이며 EXP(10) = e^10 = 22026.4657948067입니다.  
   
  숫자의 자연 로그 값을 계산하고 다시 그 값의 지수를 계산하면 결국 원래 숫자가 됩니다. EXP (LOG (*n*)) = *n*. 마찬가지로 숫자의 지수를 계산하고 다시 그 값의 자연 로그 값을 구하면 원래 숫자가 됩니다. LOG (EXP (*n*)) = *n*.  
   

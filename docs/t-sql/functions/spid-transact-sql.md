@@ -26,11 +26,11 @@ author: julieMSFT
 ms.author: jrasnick
 monikerRange: '>=aps-pdw-2016||=azuresqldb-current||=azure-sqldw-latest||>=sql-server-2016||=sqlallproducts-allversions||>=sql-server-linux-2017||=azuresqldb-mi-current'
 ms.openlocfilehash: 88cdc4c31f94e4f09f73c37993005acb80e5942b
-ms.sourcegitcommit: 197a6ffb643f93592edf9e90b04810a18be61133
+ms.sourcegitcommit: 192f6a99e19e66f0f817fdb1977f564b2aaa133b
 ms.translationtype: HT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 09/26/2020
-ms.locfileid: "91379913"
+ms.lasthandoff: 11/25/2020
+ms.locfileid: "96124592"
 ---
 # <a name="x40x40spid-transact-sql"></a>&#x40;&#x40;SPID (Transact-SQL)
 [!INCLUDE [sql-asdb-asdbmi-asa-pdw](../../includes/applies-to-version/sql-asdb-asdbmi-asa-pdw.md)]
@@ -51,7 +51,7 @@ ms.locfileid: "91379913"
  **smallint**  
   
 ## <a name="remarks"></a>설명  
- @@SPID을 사용하여 **sp_who**의 출력에서 현재 사용자 프로세스를 식별할 수 있습니다.  
+ @@SPID을 사용하여 **sp_who** 의 출력에서 현재 사용자 프로세스를 식별할 수 있습니다.  
   
 ## <a name="examples"></a>예제  
  다음 예에서는 현재 사용자 프로세스의 세션 ID, 로그인 이름 및 사용자 이름을 반환합니다.  

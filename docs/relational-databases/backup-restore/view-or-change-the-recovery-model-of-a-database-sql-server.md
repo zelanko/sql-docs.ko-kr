@@ -17,14 +17,14 @@ helpviewer_keywords:
 - database restores [SQL Server], recovery models
 - modifying database recovery models
 ms.assetid: 94918d1d-7c10-4be7-bf9f-27e00b003a0f
-author: MikeRayMSFT
-ms.author: mikeray
-ms.openlocfilehash: 4e3aa38d92dbd829ff4259ac384475781534b4a3
-ms.sourcegitcommit: da88320c474c1c9124574f90d549c50ee3387b4c
+author: cawrites
+ms.author: chadam
+ms.openlocfilehash: 6f4b1c8c2bcdc3a755a0311d83a08f7b083d4676
+ms.sourcegitcommit: 5a1ed81749800c33059dac91b0e18bd8bb3081b1
 ms.translationtype: HT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 07/01/2020
-ms.locfileid: "85747602"
+ms.lasthandoff: 11/23/2020
+ms.locfileid: "96125320"
 ---
 # <a name="view-or-change-the-recovery-model-of-a-database-sql-server"></a>데이터베이스 복구 모델 보기 또는 변경
  [!INCLUDE [SQL Server](../../includes/applies-to-version/sqlserver.md)]
@@ -60,15 +60,15 @@ ms.locfileid: "85747602"
   
 1.  [!INCLUDE[ssDEnoversion](../../includes/ssdenoversion-md.md)]의 해당 인스턴스에 연결한 다음 개체 탐색기에서 서버 이름을 클릭하여 서버 트리를 확장합니다.  
   
-2.  **데이터베이스**를 확장하고 해당 데이터베이스에 따라 사용자 데이터베이스를 선택하거나 **시스템 데이터베이스** 를 확장한 다음 시스템 데이터베이스를 선택합니다.  
+2.  **데이터베이스** 를 확장하고 해당 데이터베이스에 따라 사용자 데이터베이스를 선택하거나 **시스템 데이터베이스** 를 확장한 다음 시스템 데이터베이스를 선택합니다.  
   
-3.  데이터베이스를 마우스 오른쪽 단추로 클릭한 다음 **속성**을 클릭하면 **데이터베이스 속성** 대화 상자가 열립니다.  
+3.  데이터베이스를 마우스 오른쪽 단추로 클릭한 다음 **속성** 을 클릭하면 **데이터베이스 속성** 대화 상자가 열립니다.  
   
-4.  **페이지 선택** 창에서 **옵션**을 클릭합니다.  
+4.  **페이지 선택** 창에서 **옵션** 을 클릭합니다.  
   
 5.  현재 복구 모델이 **복구 모델** 목록 상자에 표시됩니다.  
   
-6.  필요에 따라 복구 모델을 변경하려면 다른 모델 목록을 선택합니다. **전체**, **대량 로그**또는 **단순**을 선택할 수 있습니다.  
+6.  필요에 따라 복구 모델을 변경하려면 다른 모델 목록을 선택합니다. **전체**, **대량 로그** 또는 **단순** 을 선택할 수 있습니다.  
   
 7.  [!INCLUDE[clickOK](../../includes/clickok-md.md)]  
 
@@ -78,9 +78,9 @@ ms.locfileid: "85747602"
   
 1.  [!INCLUDE[ssDE](../../includes/ssde-md.md)]에 연결합니다.  
   
-2.  표준 도구 모음에서 **새 쿼리**를 클릭합니다.  
+2.  표준 도구 모음에서 **새 쿼리** 를 클릭합니다.  
   
-3.  다음 예를 복사하여 쿼리 창에 붙여 넣고 **실행**을 클릭합니다. 이 예에서는 [모델](../../relational-databases/system-catalog-views/sys-databases-transact-sql.md) 데이터베이스의 복구 모델을 배우기 위해 **sys.databases** 카탈로그 뷰를 쿼리하는 방법을 보여줍니다.  
+3.  다음 예를 복사하여 쿼리 창에 붙여 넣고 **실행** 을 클릭합니다. 이 예에서는 [모델](../../relational-databases/system-catalog-views/sys-databases-transact-sql.md) 데이터베이스의 복구 모델을 배우기 위해 **sys.databases** 카탈로그 뷰를 쿼리하는 방법을 보여줍니다.  
   
 ```sql  
 SELECT name, recovery_model_desc  
@@ -94,9 +94,9 @@ GO
   
 1.  [!INCLUDE[ssDE](../../includes/ssde-md.md)]에 연결합니다.  
   
-2.  표준 도구 모음에서 **새 쿼리**를 클릭합니다.  
+2.  표준 도구 모음에서 **새 쿼리** 를 클릭합니다.  
   
-3.  다음 예를 복사하여 쿼리 창에 붙여 넣고 **실행**을 클릭합니다. 이 예에서는 `model` ALTER DATABASE `FULL` 문의 `SET RECOVERY` 옵션을 사용하여 [데이터베이스의 복구 모델을](../../t-sql/statements/alter-database-transact-sql-set-options.md) 로 변경하는 방법을 보여 줍니다.  
+3.  다음 예를 복사하여 쿼리 창에 붙여 넣고 **실행** 을 클릭합니다. 이 예에서는 `model` ALTER DATABASE `FULL` 문의 `SET RECOVERY` 옵션을 사용하여 [데이터베이스의 복구 모델을](../../t-sql/statements/alter-database-transact-sql-set-options.md) 로 변경하는 방법을 보여 줍니다.  
   
 ```sql  
 USE [master] ;  

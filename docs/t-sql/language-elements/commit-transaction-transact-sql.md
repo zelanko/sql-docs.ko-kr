@@ -31,11 +31,11 @@ author: rothja
 ms.author: jroth
 monikerRange: '>=aps-pdw-2016||=azuresqldb-current||=azure-sqldw-latest||>=sql-server-2016||=sqlallproducts-allversions||>=sql-server-linux-2017||=azuresqldb-mi-current'
 ms.openlocfilehash: 252fdfd8accd33d8081b7f0770eec3264391a278
-ms.sourcegitcommit: cfa04a73b26312bf18d8f6296891679166e2754d
+ms.sourcegitcommit: 192f6a99e19e66f0f817fdb1977f564b2aaa133b
 ms.translationtype: HT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 10/19/2020
-ms.locfileid: "92196695"
+ms.lasthandoff: 11/25/2020
+ms.locfileid: "96124499"
 ---
 # <a name="commit-transaction-transact-sql"></a>COMMIT TRANSACTION(Transact-SQL)
 [!INCLUDE [sql-asdb-asdbmi-asa-pdw](../../includes/applies-to-version/sql-asdb-asdbmi-asa-pdw.md)]
@@ -67,7 +67,7 @@ COMMIT [ TRAN | TRANSACTION ]
  *transaction_name*  
  **적용 대상:** SQL Server 및 Azure SQL Database
  
- [!INCLUDE[ssDEnoversion](../../includes/ssdenoversion-md.md)]에서 무시됩니다. *transaction_name*은 이전의 BEGIN TRANSACTION에서 할당된 트랜잭션 이름을 지정합니다. *transaction_name*은 식별자 규칙을 따라야 하지만 32자를 초과할 수 없습니다. *transaction_name*은 프로그래머에게 COMMIT TRANSACTION과 연결되어 있는 중첩된 BEGIN TRANSACTION을 표시합니다.  
+ [!INCLUDE[ssDEnoversion](../../includes/ssdenoversion-md.md)]에서 무시됩니다. *transaction_name* 은 이전의 BEGIN TRANSACTION에서 할당된 트랜잭션 이름을 지정합니다. *transaction_name* 은 식별자 규칙을 따라야 하지만 32자를 초과할 수 없습니다. *transaction_name* 은 프로그래머에게 COMMIT TRANSACTION과 연결되어 있는 중첩된 BEGIN TRANSACTION을 표시합니다.  
   
  *\@tran_name_variable*  
  **적용 대상:** SQL Server 및 Azure SQL Database  
@@ -84,7 +84,7 @@ COMMIT [ TRAN | TRANSACTION ]
   
  커밋된 트랜잭션이 [!INCLUDE[tsql](../../includes/tsql-md.md)] 분산 트랜잭션일 경우 COMMIT TRANSACTION은 MS DTC가 2단계 커밋 프로토콜을 사용하여 트랜잭션에 포함된 모든 서버를 커밋하도록 트리거합니다. 로컬 트랜잭션이 [!INCLUDE[ssDE](../../includes/ssde-md.md)]의 동일한 인스턴스에서 둘 이상의 데이터베이스와 관련되어 있을 경우 인스턴스는 내부적으로 2단계 커밋을 사용하여 트랜잭션에 포함된 모든 데이터베이스를 커밋할 수 있습니다.  
   
- COMMIT TRANSACTION을 중첩된 트랜잭션에서 사용할 경우 내부 트랜잭션을 커밋해도 리소스가 해제되거나 수정 내용이 영구적으로 반영되지 않습니다. 이런 경우 외부 트랜잭션을 커밋해야만 데이터 수정 내용이 영구적으로 반영되고 리소스가 해제됩니다. @@TRANCOUNT가 1보다 큰 COMMIT TRANSACTION이 실행될 때마다 @@TRANCOUNT가 1씩 감소됩니다. 마지막으로 @@TRANCOUNT가 0까지 감소되면 전체 외부 트랜잭션이 커밋됩니다. *transaction_name*은 [!INCLUDE[ssDE](../../includes/ssde-md.md)]에서 무시되므로 미해결 내부 트랜잭션이 있을 때 외부 트랜잭션의 이름을 참조하는 COMMIT TRANSACTION을 실행할 때마다 @@TRANCOUNT가 1씩 감소됩니다.  
+ COMMIT TRANSACTION을 중첩된 트랜잭션에서 사용할 경우 내부 트랜잭션을 커밋해도 리소스가 해제되거나 수정 내용이 영구적으로 반영되지 않습니다. 이런 경우 외부 트랜잭션을 커밋해야만 데이터 수정 내용이 영구적으로 반영되고 리소스가 해제됩니다. @@TRANCOUNT가 1보다 큰 COMMIT TRANSACTION이 실행될 때마다 @@TRANCOUNT가 1씩 감소됩니다. 마지막으로 @@TRANCOUNT가 0까지 감소되면 전체 외부 트랜잭션이 커밋됩니다. *transaction_name* 은 [!INCLUDE[ssDE](../../includes/ssde-md.md)]에서 무시되므로 미해결 내부 트랜잭션이 있을 때 외부 트랜잭션의 이름을 참조하는 COMMIT TRANSACTION을 실행할 때마다 @@TRANCOUNT가 1씩 감소됩니다.  
   
  @@TRANCOUNT가 0일 때 COMMIT TRANSACTION을 실행하면 해당 BEGIN TRANSACTION이 없다는 오류가 발생합니다.  
   

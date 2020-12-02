@@ -7,14 +7,14 @@ ms.prod: sql
 ms.prod_service: backup-restore
 ms.technology: backup-restore
 ms.topic: reference
-author: mashamsft
-ms.author: mathoma
-ms.openlocfilehash: 27601b860d5f0cff6efcbd6ff800ab58e06a750a
-ms.sourcegitcommit: f7ac1976d4bfa224332edd9ef2f4377a4d55a2c9
+author: cawrites
+ms.author: chadam
+ms.openlocfilehash: 180ad0ca42904a6a9c4820db1cb5fab36157e972
+ms.sourcegitcommit: 5a1ed81749800c33059dac91b0e18bd8bb3081b1
 ms.translationtype: HT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 07/02/2020
-ms.locfileid: "85896910"
+ms.lasthandoff: 11/23/2020
+ms.locfileid: "96125428"
 ---
 # <a name="iclientvirtualdeviceset2createex-vdi"></a>IClientVirtualDeviceSet2::CreateEx (VDI)
 
@@ -56,7 +56,7 @@ CreateEx 메서드는 BACKUP 또는 RESTORE 작업당 한 번만 호출해야 �
 
 CreateEx(및 Create) 호출은 클라이언트 프로세스의 프로세스 핸들에서 보안 DACL을 수정합니다. 따라서 프로세스 핸들의 다른 수정 내용은 CreateEx를 호출하여 직렬화해야 합니다. CreateEx는 CreateEx에 대한 다른 호출로 직렬화되지만 외부 처리로는 직렬화할 수 없습니다. SQL Server 서비스를 실행하는 계정에 액세스 권한이 부여됩니다.
 
-CreateEx 메서드는 원본 IClientVirtualDeviceSet에 정의된 Create 메서드를 대체합니다. 원본 Create 메서드는 더 이상 사용되지 않으므로 향후 개발에 사용하면 안 됩니다. 원본 Create 메서드는 _VIRTUAL_SERVER_NAME_ 환경 변수를 사용하여 인스턴스 이름 지원 형식을 구현합니다. 환경에 해당 변수가 설정된 경우 Create 메서드는 _VIRTUAL_SERVER_NAME_의 값을 인스턴스 이름으로 제공하여 내부적으로 CreateEx를 호출합니다.
+CreateEx 메서드는 원본 IClientVirtualDeviceSet에 정의된 Create 메서드를 대체합니다. 원본 Create 메서드는 더 이상 사용되지 않으므로 향후 개발에 사용하면 안 됩니다. 원본 Create 메서드는 _VIRTUAL_SERVER_NAME_ 환경 변수를 사용하여 인스턴스 이름 지원 형식을 구현합니다. 환경에 해당 변수가 설정된 경우 Create 메서드는 _VIRTUAL_SERVER_NAME_ 의 값을 인스턴스 이름으로 제공하여 내부적으로 CreateEx를 호출합니다.
 
 ## <a name="next-steps"></a>다음 단계
 

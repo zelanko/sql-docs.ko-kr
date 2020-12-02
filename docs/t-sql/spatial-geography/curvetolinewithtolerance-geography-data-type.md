@@ -19,11 +19,11 @@ ms.assetid: 74369c76-2cf6-42ae-b9cc-e7a051db2767
 author: MladjoA
 ms.author: mlandzic
 ms.openlocfilehash: d4852ff1e43bb561cffa7d001df33793e5f00e81
-ms.sourcegitcommit: e700497f962e4c2274df16d9e651059b42ff1a10
+ms.sourcegitcommit: 192f6a99e19e66f0f817fdb1977f564b2aaa133b
 ms.translationtype: HT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 08/17/2020
-ms.locfileid: "88479401"
+ms.lasthandoff: 11/25/2020
+ms.locfileid: "96124342"
 ---
 # <a name="curvetolinewithtolerance-geography-data-type"></a>CurveToLineWithTolerance(geography 데이터 형식)
 [!INCLUDE [SQL Server Azure SQL Database ](../../includes/applies-to-version/sql-asdb.md)]
@@ -55,7 +55,7 @@ CLR 반환 형식: **SqlGeography**
 허용 오차 <= 0를 설정하면 **ArgumentOutOfRange** 예외가 발생합니다.  
   
 ## <a name="remarks"></a>설명  
-이 메서드를 사용하면 결과 **LineString**에 대해 허용 오차 크기가 지정됩니다.  
+이 메서드를 사용하면 결과 **LineString** 에 대해 허용 오차 크기가 지정됩니다.  
   
 **CurveToLineWithTolerance** 메서드는 **CircularString** 또는 **CompoundCurve** 인스턴스에 대한 **LineString** 인스턴스와 **CurvePolygon** 인스턴스에 대한 **Polygon** 인스턴스를 반환합니다.  
   
@@ -89,7 +89,7 @@ SELECT @g.CurveToLineWithTolerance(0.1,0).ToString();
 ```  
   
 ### <a name="d-setting-relative-to-true-for-an-invoking-curvepolygon-instance"></a>D. 호출하는 CurvePolygon 인스턴스에 대해 극대값을 true로 설정  
-다음 예에서는 *relative*를 true로 설정하여 `CurvePolygon` 인스턴스를 사용해 `CurveToLineWithTolerance()`를 호출합니다.  
+다음 예에서는 *relative* 를 true로 설정하여 `CurvePolygon` 인스턴스를 사용해 `CurveToLineWithTolerance()`를 호출합니다.  
   
 ```
 DECLARE @g geography = 'CURVEPOLYGON(COMPOUNDCURVE(CIRCULARSTRING(-122.358 47.653, -122.348 47.649, -122.348 47.658), (-122.348 47.658, -122.358 47.658, -122.358 47.653)))';  

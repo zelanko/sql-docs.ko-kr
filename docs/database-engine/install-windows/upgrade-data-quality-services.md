@@ -8,15 +8,15 @@ ms.reviewer: ''
 ms.technology: install
 ms.topic: conceptual
 ms.assetid: f396666b-7754-4efc-9507-0fd114cc32d5
-author: MashaMSFT
-ms.author: mathoma
+author: cawrites
+ms.author: chadam
 monikerRange: '>=sql-server-2016||=sqlallproducts-allversions'
-ms.openlocfilehash: 7ee0e76644b21493debd81c1b9b420e1a08a335c
-ms.sourcegitcommit: 2f868a77903c1f1c4cecf4ea1c181deee12d5b15
+ms.openlocfilehash: 4a1a020d691b1908f45b4b683f41d9720999c4c6
+ms.sourcegitcommit: 5a1ed81749800c33059dac91b0e18bd8bb3081b1
 ms.translationtype: HT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 10/02/2020
-ms.locfileid: "91670363"
+ms.lasthandoff: 11/23/2020
+ms.locfileid: "96125770"
 ---
 # <a name="upgrade-data-quality-services"></a>Data Quality Services 업그레이드
 
@@ -44,9 +44,9 @@ ms.locfileid: "91670363"
   
     1.  [!INCLUDE[ssnoversion](../../includes/ssnoversion-md.md)] 설치 마법사를 실행합니다.  
   
-    2.  왼쪽 창에서 **설치**를 클릭합니다.  
+    2.  왼쪽 창에서 **설치** 를 클릭합니다.  
   
-    3.  오른쪽 창에서 SQL Server의 이전 버전**에서 업그레이드**를 클릭합니다.  
+    3.  오른쪽 창에서 SQL Server의 이전 버전 **에서 업그레이드** 를 클릭합니다.  
   
     4.  설치 마법사를 완료합니다.  
   
@@ -74,7 +74,7 @@ ms.locfileid: "91670363"
         dqsinstaller.exe -upgrade  
         ```  
   
-    4.  설치 관리자에서 계속하기 전에 DQS 데이터베이스를 백업하라는 메시지를 표시합니다. DQS 데이터베이스를 이미 백업했으면 **Y** 또는 **Yes**를 입력한 후 ENTER 키를 눌러 업그레이드를 계속하십시오.  
+    4.  설치 관리자에서 계속하기 전에 DQS 데이터베이스를 백업하라는 메시지를 표시합니다. DQS 데이터베이스를 이미 백업했으면 **Y** 또는 **Yes** 를 입력한 후 ENTER 키를 눌러 업그레이드를 계속하십시오.  
   
     5.  DQS 데이터베이스 스키마 업그레이드에 성공하면 완료 메시지가 표시됩니다.  
   

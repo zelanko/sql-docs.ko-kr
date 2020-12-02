@@ -25,11 +25,11 @@ author: rothja
 ms.author: jroth
 monikerRange: '>=aps-pdw-2016||=azuresqldb-current||=azure-sqldw-latest||>=sql-server-2016||=sqlallproducts-allversions||>=sql-server-linux-2017||=azuresqldb-mi-current'
 ms.openlocfilehash: dd89533ee030204cfb0b57a3c51d4a03bb790462
-ms.sourcegitcommit: cfa04a73b26312bf18d8f6296891679166e2754d
+ms.sourcegitcommit: 192f6a99e19e66f0f817fdb1977f564b2aaa133b
 ms.translationtype: HT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 10/19/2020
-ms.locfileid: "92189238"
+ms.lasthandoff: 11/25/2020
+ms.locfileid: "96124514"
 ---
 # <a name="-bitwise-not-transact-sql"></a>~(비트 NOT)(Transact-SQL)
 [!INCLUDE [sql-asdb-asdbmi-asa-pdw](../../includes/applies-to-version/sql-asdb-asdbmi-asa-pdw.md)]
@@ -48,25 +48,25 @@ ms.locfileid: "92189238"
 
 ## <a name="arguments"></a>인수
  *expression*  
- 정수 데이터 형식 범주에 속하는 데이터 형식, **bit**, **binary** 또는 **varbinary** 데이터 형식 중 하나인 유효한 [식](../../t-sql/language-elements/expressions-transact-sql.md)입니다. *expression*은 비트 연산의 이진 숫자로 처리됩니다.  
+ 정수 데이터 형식 범주에 속하는 데이터 형식, **bit**, **binary** 또는 **varbinary** 데이터 형식 중 하나인 유효한 [식](../../t-sql/language-elements/expressions-transact-sql.md)입니다. *expression* 은 비트 연산의 이진 숫자로 처리됩니다.  
   
 > [!NOTE]  
->  비트 연산에서는 하나의 *expression*만 **binary** 또는 **varbinary** 데이터 형식이 될 수 있습니다.  
+>  비트 연산에서는 하나의 *expression* 만 **binary** 또는 **varbinary** 데이터 형식이 될 수 있습니다.  
   
 ## <a name="result-types"></a>결과 형식  
- 입력 값이 **int**이면 **int**입니다.  
+ 입력 값이 **int** 이면 **int** 입니다.  
   
- 입력 값이 **smallint**이면 **smallint**입니다.  
+ 입력 값이 **smallint** 이면 **smallint** 입니다.  
   
- 입력 값이 **tinyint**이면 **tinyint**입니다.  
+ 입력 값이 **tinyint** 이면 **tinyint** 입니다.  
   
- 입력 값이 **bit**이면 **bit**입니다.  
+ 입력 값이 **bit** 이면 **bit** 입니다.  
   
 ## <a name="remarks"></a>설명  
- **~** 비트 연산자는 각 비트를 차례로 가져와서 *expression*에 대한 비트 논리 NOT을 수행합니다. *expression*의 값이 0이면 결과 집합의 비트가 1로 설정되며, 그렇지 않으면 결과 비트가 0 값으로 지워집니다. 즉, 1은 0으로 변경되고 0은 1로 변경됩니다.  
+ **~** 비트 연산자는 각 비트를 차례로 가져와서 *expression* 에 대한 비트 논리 NOT을 수행합니다. *expression* 의 값이 0이면 결과 집합의 비트가 1로 설정되며, 그렇지 않으면 결과 비트가 0 값으로 지워집니다. 즉, 1은 0으로 변경되고 0은 1로 변경됩니다.  
   
 > [!IMPORTANT]  
->  비트 연산을 수행할 때는 연산에 사용되는 식의 스토리지 길이가 중요합니다. 값을 저장할 때는 동일한 바이트 수를 사용하는 것이 좋습니다. 예를 들어 5(10진수 값)를 **tinyint**, **smallint** 또는 **int**로 저장하면 다른 바이트 수로 저장되는 값을 생성합니다. 즉 **tinyint**는 1바이트, **smallint**는 2바이트, **int**는 4바이트를 사용하는 데이터를 저장합니다. 따라서 **int** 10진수 값에 대해 비트 연산을 수행하면, 특히 **~**(비트 NOT) 연산자가 사용될 때 직접 이진 또는 16진수 변환을 사용하는 것과 다른 결과를 생성할 수 있습니다. 비트 NOT 연산은 길이가 짧은 변수에서 발생할 수 있습니다. 이 경우 길이가 짧은 변수를 길이가 긴 데이터 형식 변수로 변환할 때 상위 8비트는 예상된 값으로 설정되지 않을 수 있습니다. 작은 데이터 형식 변수를 큰 데이터 형식 변수로 변환한 다음 그 결과에서 NOT 연산을 수행하는 것이 좋습니다.  
+>  비트 연산을 수행할 때는 연산에 사용되는 식의 스토리지 길이가 중요합니다. 값을 저장할 때는 동일한 바이트 수를 사용하는 것이 좋습니다. 예를 들어 5(10진수 값)를 **tinyint**, **smallint** 또는 **int** 로 저장하면 다른 바이트 수로 저장되는 값을 생성합니다. 즉 **tinyint** 는 1바이트, **smallint** 는 2바이트, **int** 는 4바이트를 사용하는 데이터를 저장합니다. 따라서 **int** 10진수 값에 대해 비트 연산을 수행하면, 특히 **~**(비트 NOT) 연산자가 사용될 때 직접 이진 또는 16진수 변환을 사용하는 것과 다른 결과를 생성할 수 있습니다. 비트 NOT 연산은 길이가 짧은 변수에서 발생할 수 있습니다. 이 경우 길이가 짧은 변수를 길이가 긴 데이터 형식 변수로 변환할 때 상위 8비트는 예상된 값으로 설정되지 않을 수 있습니다. 작은 데이터 형식 변수를 큰 데이터 형식 변수로 변환한 다음 그 결과에서 NOT 연산을 수행하는 것이 좋습니다.  
   
 ## <a name="examples"></a>예제  
  다음 예제에서는 **int** 데이터 형식을 사용하여 테이블을 만들어 값을 저장하고 한 행에 두 값을 삽입합니다.  

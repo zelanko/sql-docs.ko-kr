@@ -17,15 +17,15 @@ helpviewer_keywords:
 - deleting remote logins
 - dropping remote logins
 ms.assetid: bbaf1445-b8a2-4ebf-babe-17d8cf20b037
-author: MashaMSFT
-ms.author: mathoma
+author: cawrites
+ms.author: chadam
 monikerRange: '>=sql-server-2016||=sqlallproducts-allversions'
-ms.openlocfilehash: 0426ae38b00a939ff852af21b3a3b376b4c236f3
-ms.sourcegitcommit: 2f868a77903c1f1c4cecf4ea1c181deee12d5b15
+ms.openlocfilehash: a436ed47730ef98287eef10d5342df4334782690
+ms.sourcegitcommit: 5a1ed81749800c33059dac91b0e18bd8bb3081b1
 ms.translationtype: HT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 10/02/2020
-ms.locfileid: "91671026"
+ms.lasthandoff: 11/23/2020
+ms.locfileid: "96125824"
 ---
 # <a name="rename-a-computer-that-hosts-a-stand-alone-instance-of-sql-server"></a>SQL Server의 독립 실행형 인스턴스를 호스팅하는 컴퓨터 이름 바꾸기
 
@@ -56,9 +56,9 @@ ms.locfileid: "91671026"
 -   [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]의 기본 인스턴스를 호스팅하는 컴퓨터의 이름이 바뀐 경우 다음 절차를 실행합니다.  
   
     ```sql
-    sp_dropserver <old_name>;  
+    EXEC sp_dropserver '<old_name>';  
     GO  
-    sp_addserver <new_name>, local;  
+    EXEC sp_addserver '<new_name>', local;  
     GO  
     ```  
   
@@ -67,9 +67,9 @@ ms.locfileid: "91671026"
 -   [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]의 명명된 인스턴스를 호스팅하는 컴퓨터의 이름이 바뀐 경우 다음 절차를 실행합니다.  
   
     ```sql
-    sp_dropserver <old_name\instancename>;  
+    EXEC sp_dropserver '<old_name\instancename>';  
     GO  
-    sp_addserver <new_name\instancename>, local;  
+    EXEC sp_addserver '<new_name\instancename>', local;  
     GO  
     ```  
   
@@ -98,18 +98,18 @@ ms.locfileid: "91671026"
 -   기본 인스턴스의 경우 다음 프로시저를 실행합니다.  
   
     ```sql
-    sp_dropremotelogin old_name;  
+    EXEC sp_dropremotelogin old_name;  
     GO  
     ```  
   
 -   명명된 인스턴스의 경우 다음 프로시저를 실행합니다.  
   
     ```sql
-    sp_dropremotelogin old_name\instancename;  
+    EXEC sp_dropremotelogin old_name\instancename;  
     GO  
     ```  
   
- **연결된 서버 구성** - 연결된 서버 구성은 컴퓨터 이름 바꾸기 작업의 영향을 받습니다. **sp_addlinkedserver** 또는 **sp_setnetname**을 사용하여 컴퓨터 이름 참조를 업데이트합니다. 자세한 내용은 [sp_addlinkedserver&#40;Transact-SQL&#41;](../../relational-databases/system-stored-procedures/sp-addlinkedserver-transact-sql.md) 또는 [sp_setnetname&#40;Transact-SQL&#41;](../../relational-databases/system-stored-procedures/sp-setnetname-transact-sql.md)을 참조하세요.  
+ **연결된 서버 구성** - 연결된 서버 구성은 컴퓨터 이름 바꾸기 작업의 영향을 받습니다. **sp_addlinkedserver** 또는 **sp_setnetname** 을 사용하여 컴퓨터 이름 참조를 업데이트합니다. 자세한 내용은 [sp_addlinkedserver&#40;Transact-SQL&#41;](../../relational-databases/system-stored-procedures/sp-addlinkedserver-transact-sql.md) 또는 [sp_setnetname&#40;Transact-SQL&#41;](../../relational-databases/system-stored-procedures/sp-setnetname-transact-sql.md)을 참조하세요.  
   
  **클라이언트 별칭** - 명명된 파이프를 사용하는 클라이언트 별칭은 컴퓨터 이름 바꾸기 작업의 영향을 받습니다. 예를 들어 명명된 파이프 프로토콜을 사용하여 SRVR1을 가리키는 "PROD_SRVR"이라는 별칭을 만든 경우 파이프 이름은 `\\SRVR1\pipe\sql\query`와 같습니다. 컴퓨터의 이름을 바꾸면 명명된 파이프의 경로가 더 이상 유효하지 않습니다. 명명된 파이프에 대한 자세한 내용은 [명명된 파이프를 사용하여 유효한 연결 문자열 만들기](/previous-versions/sql/sql-server-2008/ms189307(v=sql.100))를 참조하십시오.  
   

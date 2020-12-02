@@ -21,11 +21,11 @@ author: markingmyname
 ms.author: maghan
 monikerRange: '>=aps-pdw-2016||=azuresqldb-current||=azure-sqldw-latest||>=sql-server-2016||=sqlallproducts-allversions||>=sql-server-linux-2017||=azuresqldb-mi-current'
 ms.openlocfilehash: cba74e40373a4b00a93d41ebc49e2a849df98572
-ms.sourcegitcommit: 442fbe1655d629ecef273b02fae1beb2455a762e
+ms.sourcegitcommit: 192f6a99e19e66f0f817fdb1977f564b2aaa133b
 ms.translationtype: HT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 11/03/2020
-ms.locfileid: "93235524"
+ms.lasthandoff: 11/25/2020
+ms.locfileid: "96124733"
 ---
 # <a name="first_value-transact-sql"></a>FIRST_VALUE(Transact-SQL)
 [!INCLUDE [sql-asdb-asdbmi-asa-pdw](../../includes/applies-to-version/sql-asdb-asdbmi-asa-pdw.md)]
@@ -49,7 +49,7 @@ FIRST_VALUE ( [scalar_expression ] )  [ IGNORE NULLS | RESPECT NULLS ]
  반환할 값입니다. *scalar_expression* 은 열, 하위 쿼리 또는 결과로 반환되는 값이 하나뿐인 임의의 다른 식일 수 있습니다. 다른 분석 함수는 사용할 수 없습니다.  
 
  [ IGNORE NULLS | RESPECT NULLS ]     
- **적용 대상** : Azure SQL Edge
+ **적용 대상**: Azure SQL Edge
 
  IGNORE NULLS - 파티션의 첫 번째 값을 컴퓨팅할 때 데이터 세트의 null 값을 무시합니다.     
  RESPECT NULLS - 파티션의 첫 번째 값을 컴퓨팅할 때 데이터 세트의 null 값을 고려합니다.     

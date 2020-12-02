@@ -17,11 +17,11 @@ author: julieMSFT
 ms.author: jrasnick
 monikerRange: =azuresqldb-current||>=sql-server-2016||=sqlallproducts-allversions||>=sql-server-linux-2017||=azuresqldb-mi-current
 ms.openlocfilehash: e6ae3d6eaeab58e1352c14ba5ee90b47d500b974
-ms.sourcegitcommit: 783b35f6478006d654491cb52f6edf108acf2482
+ms.sourcegitcommit: 192f6a99e19e66f0f817fdb1977f564b2aaa133b
 ms.translationtype: HT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 10/09/2020
-ms.locfileid: "91891003"
+ms.lasthandoff: 11/25/2020
+ms.locfileid: "96125113"
 ---
 # <a name="cardinality-estimation-sql-server"></a>카디널리티 추정(SQL Server)
 
@@ -64,8 +64,8 @@ ms.locfileid: "91891003"
 
 이후 업데이트는 [!INCLUDE[ssSQL14](../../includes/sssql14-md.md)]에서 시작되었으며 호환성 수준 120 이상을 의미합니다. 수준 120 이상의 CE 업데이트는 최신 데이터 웨어하우징 및 OLTP 워크로드에서 잘 작동하는 업데이트된 가정 및 알고리즘을 통합합니다. CE 70 가정에서 다음과 같은 모델 가정은 CE 120부터 변경되었습니다.
 
--  **독립성**은 **상관 관계임:** 다른 열 값의 조합이 반드시 독립적이지는 않습니다. 더 많은 실제 데이터 쿼리와 비슷할 수 있습니다.
--  **간단한 포함**은 **기본 포함임:** 사용자는 존재하지 않는 데이터를 쿼리할 수 있습니다. 예를 들어 두 테이블 간의 동등 조인의 경우 기본 테이블 히스토그램을 사용하여 조인 선택도를 예측한 다음, 조건자 선택도의 요소를 예측합니다.
+-  **독립성** 은 **상관 관계임:** 다른 열 값의 조합이 반드시 독립적이지는 않습니다. 더 많은 실제 데이터 쿼리와 비슷할 수 있습니다.
+-  **간단한 포함** 은 **기본 포함임:** 사용자는 존재하지 않는 데이터를 쿼리할 수 있습니다. 예를 들어 두 테이블 간의 동등 조인의 경우 기본 테이블 히스토그램을 사용하여 조인 선택도를 예측한 다음, 조건자 선택도의 요소를 예측합니다.
   
 **호환성 수준:** [COMPATIBILITY_LEVEL](../../t-sql/statements/alter-database-transact-sql-compatibility-level.md)에 대해 다음 [!INCLUDE[tsql](../../includes/tsql-md.md)] 코드를 사용하여 데이터베이스가 특정 수준에 있는지 확인할 수 있습니다.  
 
@@ -100,14 +100,14 @@ GO
  
 또는 [!INCLUDE[ssSQL15](../../includes/sssql15-md.md)] SP1부터 [쿼리 힌트](../../t-sql/queries/hints-transact-sql-query.md#use_hint) `USE HINT ('FORCE_LEGACY_CARDINALITY_ESTIMATION')`를 사용할 수 있습니다.
  
- ```sql  
+ ```sql  
 SELECT CustomerId, OrderAddedDate  
 FROM OrderTable  
 WHERE OrderAddedDate >= '2016-05-01'
-OPTION (USE HINT ('FORCE_LEGACY_CARDINALITY_ESTIMATION'));  
+OPTION (USE HINT ('FORCE_LEGACY_CARDINALITY_ESTIMATION'));  
 ```
  
-**쿼리 저장소:** [!INCLUDE[ssSQL15](../../includes/sssql15-md.md)]에 처음 도입된 쿼리 저장소는 쿼리의 성능을 검사하는 유용한 도구입니다. 쿼리 저장소가 사용하도록 설정된 경우 [!INCLUDE[ssManStudio](../../includes/ssManStudio-md.md)]의 데이터베이스 노드 아래에 있는 **개체 탐색기**에 **쿼리 저장소** 노드가 표시됩니다.  
+**쿼리 저장소:** [!INCLUDE[ssSQL15](../../includes/sssql15-md.md)]에 처음 도입된 쿼리 저장소는 쿼리의 성능을 검사하는 유용한 도구입니다. 쿼리 저장소가 사용하도록 설정된 경우 [!INCLUDE[ssManStudio](../../includes/ssManStudio-md.md)]의 데이터베이스 노드 아래에 있는 **개체 탐색기** 에 **쿼리 저장소** 노드가 표시됩니다.  
   
 ```sql  
 ALTER DATABASE <yourDatabase>  
@@ -130,7 +130,7 @@ SET QUERY_STORE CLEAR;
 > [!IMPORTANT] 
 > 쿼리 저장소가 데이터베이스와 워크로드에 대해 올바르게 구성되었는지 확인합니다. 자세한 내용은 [쿼리 저장소 모범 사례](../../relational-databases/performance/best-practice-with-the-query-store.md)를 참조하세요. 
   
-카디널리티 추정 프로세스를 추적하기 위한 또 다른 옵션은 확장 이벤트 **query_optimizer_estimate_cardinality**를 사용하는 것입니다. 다음 [!INCLUDE[tsql](../../includes/tsql-md.md)] 코드 샘플은 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]에서 실행됩니다. `C:\Temp\`(경로 변경 가능)에 .xel 파일을 씁니다. [!INCLUDE[ssManStudio](../../includes/ssManStudio-md.md)]에서 .xel 파일을 열면 사용자에게 친숙한 방식으로 세부 정보가 표시됩니다.  
+카디널리티 추정 프로세스를 추적하기 위한 또 다른 옵션은 확장 이벤트 **query_optimizer_estimate_cardinality** 를 사용하는 것입니다. 다음 [!INCLUDE[tsql](../../includes/tsql-md.md)] 코드 샘플은 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]에서 실행됩니다. `C:\Temp\`(경로 변경 가능)에 .xel 파일을 씁니다. [!INCLUDE[ssManStudio](../../includes/ssManStudio-md.md)]에서 .xel 파일을 열면 사용자에게 친숙한 방식으로 세부 정보가 표시됩니다.  
   
 ```sql  
 DROP EVENT SESSION Test_the_CE_qoec_1 ON SERVER;  
@@ -187,7 +187,7 @@ GO
   
 6.  결과 창의 **결과** 탭에서 XML 형식의 통계가 포함된 셀을 두 번 클릭합니다. 그래픽 쿼리 계획이 표시됩니다.  
   
-7.  그래픽 쿼리 계획의 첫 번째 상자를 마우스 오른쪽 단추로 클릭하고 **속성**을 클릭합니다.  
+7.  그래픽 쿼리 계획의 첫 번째 상자를 마우스 오른쪽 단추로 클릭하고 **속성** 을 클릭합니다.  
   
 8.  나중에 다른 구성과 비교하기 위해 다음 속성 값을 기록합니다.  
   
@@ -195,11 +195,11 @@ GO
   
     -   **예상 행 수**  
   
-    -   **예상 I/O 비용**및 행 수 예측이 아닌 실제 성능과 관련된 여러 유사 *예상* 속성  
+    -   **예상 I/O 비용** 및 행 수 예측이 아닌 실제 성능과 관련된 여러 유사 *예상* 속성  
   
     -   **논리 연산** 및 **물리적 연산**. *병렬 처리* 로 설정하는 것이 좋습니다.  
   
-    -   **실제 실행 모드**. *행* 보다 *일괄 처리*로 설정하는 것이 좋습니다.  
+    -   **실제 실행 모드**. *행* 보다 *일괄 처리* 로 설정하는 것이 좋습니다.  
   
 9. 예상 행 수와 실제 행 수를 비교합니다. CE의 부정확도 단위가 1%(높거나 낮음)인가요, 아니면 10%인가요?  
   
@@ -237,15 +237,15 @@ CE 120 이상인 경우 쿼리에 대해 더 느린 쿼리 계획이 생성된�
 
 3. `LEGACY_CARDINALITY_ESTIMATION` 쿼리 힌트를 사용하여 단일 쿼리에서 이전 CE를 사용하면서 쿼리 최적화 프로그램의 개선 사항을 유지할 수 있습니다.  
   
-최상의 제어를 위해 테스트 중 시스템에서 CE 70을 사용하여 생성된 계획을 사용하도록 *적용*할 수 있습니다. 원하는 계획을 *고정* 한 다음 전체 데이터베이스에서 최신 호환성 수준 및 CE를 사용하도록 설정할 수 있습니다. 옵션은 다음에 자세하게 설명합니다.  
+최상의 제어를 위해 테스트 중 시스템에서 CE 70을 사용하여 생성된 계획을 사용하도록 *적용* 할 수 있습니다. 원하는 계획을 *고정* 한 다음 전체 데이터베이스에서 최신 호환성 수준 및 CE를 사용하도록 설정할 수 있습니다. 옵션은 다음에 자세하게 설명합니다.  
   
 ### <a name="how-to-force-a-particular-query-plan"></a>특정 쿼리 계획을 강제로 실행하는 방법  
   
 쿼리 저장소는 시스템에서 특정 쿼리 계획을 사용하도록 설정할 수 있는 다양한 방법을 제공합니다.  
   
-- **sp_query_store_force_plan**을 실행합니다.  
+- **sp_query_store_force_plan** 을 실행합니다.  
   
-- [!INCLUDE[ssManStudio](../../includes/ssManStudio-md.md)]에서 **쿼리 저장소** 노드를 확장하고 **리소스를 가장 많이 사용하는 노드**를 마우스 오른쪽 단추로 클릭한 다음 **리소스를 가장 많이 사용하는 노드 보기**를 클릭합니다. **계획 강제 적용** 및 **계획 강제 적용 해제**라는 레이블이 있는 단추가 표시됩니다.  
+- [!INCLUDE[ssManStudio](../../includes/ssManStudio-md.md)]에서 **쿼리 저장소** 노드를 확장하고 **리소스를 가장 많이 사용하는 노드** 를 마우스 오른쪽 단추로 클릭한 다음 **리소스를 가장 많이 사용하는 노드 보기** 를 클릭합니다. **계획 강제 적용** 및 **계획 강제 적용 해제** 라는 레이블이 있는 단추가 표시됩니다.  
   
 쿼리 저장소에 대한 자세한 내용은 [쿼리 저장소를 사용하여 성능 모니터링](../../relational-databases/performance/monitoring-performance-by-using-the-query-store.md)을 참조하세요.  
   

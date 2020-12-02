@@ -23,11 +23,11 @@ ms.assetid: c75cf73d-0268-4c57-973d-b8a84ff801fa
 author: rothja
 ms.author: jroth
 ms.openlocfilehash: b29ee9539e8b6d4da64dfcc0da7c2ef9f4296a87
-ms.sourcegitcommit: e700497f962e4c2274df16d9e651059b42ff1a10
+ms.sourcegitcommit: 192f6a99e19e66f0f817fdb1977f564b2aaa133b
 ms.translationtype: HT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 08/17/2020
-ms.locfileid: "88307746"
+ms.lasthandoff: 11/25/2020
+ms.locfileid: "96124460"
 ---
 # <a name="deallocate-transact-sql"></a>DEALLOCATE(Transact-SQL)
 [!INCLUDE [SQL Server SQL Database](../../includes/applies-to-version/sql-asdb.md)]
@@ -46,10 +46,10 @@ DEALLOCATE { { [ GLOBAL ] cursor_name } | @cursor_variable_name }
 
 ## <a name="arguments"></a>인수
  *cursor_name*  
- 이미 선언된 커서의 이름입니다. 글로벌 커서와 지역 커서에 모두 해당 이름으로 *cursor_name*이 있는 경우 `GLOBAL`이 지정되면 *cursor_name*이 글로벌 커서를 참조하고, `GLOBAL`이 지정되지 않으면 지역 커서를 참조합니다.  
+ 이미 선언된 커서의 이름입니다. 글로벌 커서와 지역 커서에 모두 해당 이름으로 *cursor_name* 이 있는 경우 `GLOBAL`이 지정되면 *cursor_name* 이 글로벌 커서를 참조하고, `GLOBAL`이 지정되지 않으면 지역 커서를 참조합니다.  
   
  @*cursor_variable_name*  
- **cursor** 변수의 이름입니다. @*cursor_variable_name*은 **cursor** 형식이어야 합니다.  
+ **cursor** 변수의 이름입니다. @*cursor_variable_name* 은 **cursor** 형식이어야 합니다.  
   
 ## <a name="remarks"></a>설명  
 커서에서 실행되는 문은 커서 이름이나 커서 변수를 사용하여 커서를 참조합니다. `DEALLOCATE`는 커서와 커서 이름 또는 커서 변수 간의 연결을 제거합니다. 커서를 참조하는 마지막 이름이나 변수의 경우 커서가 할당 해제되고 해당 커서에서 사용하던 모든 리소스가 해제됩니다. `DEALLOCATE`를 실행하면 인출의 격리를 보호하는 데 사용되는 스크롤 잠금이 해제됩니다. 그러나 해당 커서를 통한 현재 위치 업데이트를 포함하여 업데이트를 보호하는 트랜잭션 잠금은 트랜잭션이 종료될 때까지 유지됩니다.  

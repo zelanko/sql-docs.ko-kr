@@ -11,14 +11,14 @@ helpviewer_keywords:
 - replication [SQL Server], log shipping and
 - log shipping [SQL Server], replication and
 ms.assetid: 132bebfd-0206-4d23-829a-b38e5ed17bc9
-author: MashaMSFT
-ms.author: mathoma
-ms.openlocfilehash: 6c72f43b6605821ad984a9ad9dc98378aea258bd
-ms.sourcegitcommit: da88320c474c1c9124574f90d549c50ee3387b4c
+author: cawrites
+ms.author: chadam
+ms.openlocfilehash: 5b3518b9ffb201985c4ebef7de13c24c4345394f
+ms.sourcegitcommit: 5a1ed81749800c33059dac91b0e18bd8bb3081b1
 ms.translationtype: HT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 07/01/2020
-ms.locfileid: "85696049"
+ms.lasthandoff: 11/23/2020
+ms.locfileid: "96125656"
 ---
 # <a name="log-shipping-and-replication-sql-server"></a>로그 전달 및 복제(SQL Server)
  [!INCLUDE [SQL Server](../../includes/applies-to-version/sqlserver.md)]
@@ -83,11 +83,11 @@ ms.locfileid: "85696049"
   
 5.  보조 서버에서 주 서버로부터 백업한 서비스 마스터 키를 복원합니다. 자세한 내용은 [RESTORE SERVICE MASTER KEY&#40;Transact-SQL&#41;](../../t-sql/statements/restore-service-master-key-transact-sql.md)를 참조하세요.  
   
-6.  **sp_replrestart**를 실행합니다. 이 저장 프로시저를 사용하면 로그 판독기 에이전트가 게시 데이터베이스 로그에서 이전에 복제된 모든 트랜잭션을 강제로 무시하도록 할 수 있습니다. 저장 프로시저가 완료된 후에 적용된 트랜잭션은 로그 판독기 에이전트에 의해 처리됩니다. 자세한 내용은 [sp_replrestart&#40;Transact-SQL&#41;](../../relational-databases/system-stored-procedures/sp-replrestart-transact-sql.md)를 참조하세요.  
+6.  **sp_replrestart** 를 실행합니다. 이 저장 프로시저를 사용하면 로그 판독기 에이전트가 게시 데이터베이스 로그에서 이전에 복제된 모든 트랜잭션을 강제로 무시하도록 할 수 있습니다. 저장 프로시저가 완료된 후에 적용된 트랜잭션은 로그 판독기 에이전트에 의해 처리됩니다. 자세한 내용은 [sp_replrestart&#40;Transact-SQL&#41;](../../relational-databases/system-stored-procedures/sp-replrestart-transact-sql.md)를 참조하세요.  
   
 7.  저장 프로시저가 성공적으로 실행된 후에 로그 판독기 에이전트를 다시 시작합니다. 자세한 내용은 [복제 에이전트 시작 및 중지&#40;SQL Server Management Studio&#41;](../../relational-databases/replication/agents/start-and-stop-a-replication-agent-sql-server-management-studio.md)를 참조하세요.  
   
-8.  구독자에 이미 배포된 트랜잭션은 게시자에 적용될 수 있습니다. 배포 에이전트에서 이러한 트랜잭션을 구독자에서 다시 적용할 때 오류가 발생하지 않도록 하려면 **데이터 일관성 오류가 발생했지만 계속됩니다**라는 에이전트 프로필을 지정합니다.  
+8.  구독자에 이미 배포된 트랜잭션은 게시자에 적용될 수 있습니다. 배포 에이전트에서 이러한 트랜잭션을 구독자에서 다시 적용할 때 오류가 발생하지 않도록 하려면 **데이터 일관성 오류가 발생했지만 계속됩니다** 라는 에이전트 프로필을 지정합니다.  
   
 ### <a name="log-shipping-with-merge-replication"></a>병합 복제의 로그 전달  
  병합 복제와 로그 전달을 구성하려면 아래 절차의 단계를 따르십시오.  

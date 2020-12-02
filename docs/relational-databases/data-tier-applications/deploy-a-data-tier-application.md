@@ -23,11 +23,11 @@ ms.assetid: c117af35-aa53-44a5-8034-fa8715dc735f
 author: stevestein
 ms.author: sstein
 ms.openlocfilehash: 80745e9ea57da0a2307c304c46aaa2ea831f84ef
-ms.sourcegitcommit: e700497f962e4c2274df16d9e651059b42ff1a10
+ms.sourcegitcommit: 192f6a99e19e66f0f817fdb1977f564b2aaa133b
 ms.translationtype: HT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 08/17/2020
-ms.locfileid: "88386709"
+ms.lasthandoff: 11/25/2020
+ms.locfileid: "96125263"
 ---
 # <a name="deploy-a-data-tier-application"></a>데이터 계층 애플리케이션 배포
 [!INCLUDE [SQL Server Azure SQL Database](../../includes/applies-to-version/sql-asdb.md)]
@@ -39,7 +39,7 @@ ms.locfileid: "88386709"
 ## <a name="deploy-the-same-dac-package-multiple-times"></a>동일한 DAC 패키지를 여러 번 배포 
  동일한 DAC 패키지를 [!INCLUDE[ssDE](../../includes/ssde-md.md)]의 단일 인스턴스에 여러 번 배포할 수 있지만 한 번에 하나씩 배포를 실행해야 합니다. 지정된 DAC 인스턴스 이름은 [!INCLUDE[ssDE](../../includes/ssde-md.md)]인스턴스 내에서 각 배포마다 고유해야 합니다.  
   
- DAC를 데이터베이스 엔진의 인스턴스로 배포하는 경우 배포된 DAC는 유틸리티 컬렉션 집합이 인스턴스에서 유틸리티 제어 지점으로 다음에 전송될 때 **SQL Server 유틸리티**에 통합됩니다. 그러면 DAC가 [!INCLUDE[ssManStudio](../../includes/ssmanstudio-md.md)] **유틸리티 탐색기**의 **배포된 데이터 계층 애플리케이션 노드**에 표시되고 **배포된 데이터 계층 애플리케이션** 세부 정보 페이지에 보고됩니다.  
+ DAC를 데이터베이스 엔진의 인스턴스로 배포하는 경우 배포된 DAC는 유틸리티 컬렉션 집합이 인스턴스에서 유틸리티 제어 지점으로 다음에 전송될 때 **SQL Server 유틸리티** 에 통합됩니다. 그러면 DAC가 [!INCLUDE[ssManStudio](../../includes/ssmanstudio-md.md)] **유틸리티 탐색기** 의 **배포된 데이터 계층 애플리케이션 노드** 에 표시되고 **배포된 데이터 계층 애플리케이션** 세부 정보 페이지에 보고됩니다.  
   
 ###  <a name="database-options-and-settings"></a>데이터베이스 옵션 및 설정  
  기본적으로 배포 중에 생성된 데이터베이스에는 다음을 제외한 CREATE DATABASE 문의 모든 기본 설정이 적용됩니다.  
@@ -62,7 +62,7 @@ ms.locfileid: "88386709"
   
 ## <a name="deploy-a-dac-using-the-wizard"></a>마법사를 사용하여 DAC 배포  
   
-1.  **개체 탐색기**에서 DAC를 배포할 인스턴스에 대한 노드를 확장합니다.  
+1.  **개체 탐색기** 에서 DAC를 배포할 인스턴스에 대한 노드를 확장합니다.  
   
 2.  **데이터베이스** 노드를 마우스 오른쪽 단추로 클릭한 다음, **데이터 계층 애플리케이션 배포…** 를 선택합니다.  
   
@@ -85,7 +85,7 @@ ms.locfileid: "88386709"
  **설명** - DAC를 만들거나 데이터베이스에서 추출할 때 작성된 설명을 표시하는 읽기 전용 입력란입니다.  
   
 ### <a name="validating-the-dac-package"></a>DAC 패키지 유효성 검사  
- 선택한 파일이 유효한 DAC 패키지인지 마법사에서 확인하는 동안 진행률 표시줄이 표시됩니다. DAC 패키지의 유효성이 확인되면 마법사는 유효성 검사 결과를 검토할 수 있는 **패키지 선택** 페이지의 최종 버전으로 진행합니다. 파일이 유효한 DAC 패키지가 아닌 경우 마법사는 **DAC 패키지 선택**상태로 유지됩니다. 이 경우 다른 유효한 DAC 패키지를 선택하거나 마법사를 취소하고 새 DAC 패키지를 생성할 수 있습니다.  
+ 선택한 파일이 유효한 DAC 패키지인지 마법사에서 확인하는 동안 진행률 표시줄이 표시됩니다. DAC 패키지의 유효성이 확인되면 마법사는 유효성 검사 결과를 검토할 수 있는 **패키지 선택** 페이지의 최종 버전으로 진행합니다. 파일이 유효한 DAC 패키지가 아닌 경우 마법사는 **DAC 패키지 선택** 상태로 유지됩니다. 이 경우 다른 유효한 DAC 패키지를 선택하거나 마법사를 취소하고 새 DAC 패키지를 생성할 수 있습니다.  
   
   ### <a name="review-policy-page"></a>정책 검토 페이지  
  DAC 서버 선택 정책을 평가한 결과를 검토합니다(사용하는 경우). DAC 서버 선택 정책은 선택적이며 Visual Studio에서 DAC를 만들면 여기에 할당됩니다. 정책에서는 서버 선택 정책 패싯을 사용하여 [!INCLUDE[ssDE](../../includes/ssde-md.md)] 인스턴스가 DAC를 호스팅하기 위해 충족해야 하는 조건을 지정합니다.  
@@ -103,7 +103,7 @@ ms.locfileid: "88386709"
   
  데이터베이스 이름을 변경하면 새 값에 맞게 데이터 파일과 로그 파일의 이름이 변경됩니다.  
   
- 데이터베이스 이름은 DAC 인스턴스 이름에도 사용됩니다. 인스턴스 이름은 **개체 탐색기** 의 **데이터 계층 애플리케이션**노드 아래에 있는 DAC에 대한 노드나 **유틸리티 탐색기** 의 **배포된 데이터 계층 애플리케이션**노드에 표시됩니다.  
+ 데이터베이스 이름은 DAC 인스턴스 이름에도 사용됩니다. 인스턴스 이름은 **개체 탐색기** 의 **데이터 계층 애플리케이션** 노드 아래에 있는 DAC에 대한 노드나 **유틸리티 탐색기** 의 **배포된 데이터 계층 애플리케이션** 노드에 표시됩니다.  
   
  다음 옵션은 [!INCLUDE[ssSDS](../../includes/sssds-md.md)]에는 적용되지 않으며 [!INCLUDE[ssSDS](../../includes/sssds-md.md)]에 배포할 때는 표시되지 않습니다.  
   
@@ -138,7 +138,7 @@ ms.locfileid: "88386709"
   
 4.  **add_DacActionStarted** 및 **add_DacActionFinished** 를 사용하여 DAC 배포 이벤트를 구독합니다.  
   
-5.  **DatabaseDeploymentProperties**를 설정합니다.  
+5.  **DatabaseDeploymentProperties** 를 설정합니다.  
   
 6.  **DacStore.Install** 메서드를 사용하여 DAC를 배포합니다.  
   

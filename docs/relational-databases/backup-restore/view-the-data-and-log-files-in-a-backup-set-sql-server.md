@@ -16,14 +16,14 @@ helpviewer_keywords:
 - transaction log backups [SQL Server], viewing backup sets
 - backing up [SQL Server], viewing backup sets
 ms.assetid: abb6420c-f809-426e-aeb4-d0a74989cf39
-author: MikeRayMSFT
-ms.author: mikeray
-ms.openlocfilehash: 9ef29203af39a465f18f1eecfc62515818959d5a
-ms.sourcegitcommit: da88320c474c1c9124574f90d549c50ee3387b4c
+author: cawrites
+ms.author: chadam
+ms.openlocfilehash: 77cbe9eebacbf1656dc018f6811805636aded45f
+ms.sourcegitcommit: 5a1ed81749800c33059dac91b0e18bd8bb3081b1
 ms.translationtype: HT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 07/01/2020
-ms.locfileid: "85746607"
+ms.lasthandoff: 11/23/2020
+ms.locfileid: "96125293"
 ---
 # <a name="view-the-data-and-log-files-in-a-backup-set-sql-server"></a>백업 세트의 데이터와 로그 파일 보기(SQL Server)
  [!INCLUDE [SQL Server](../../includes/applies-to-version/sqlserver.md)]
@@ -56,11 +56,11 @@ ms.locfileid: "85746607"
   
 1.  [!INCLUDE[msCoName](../../includes/msconame-md.md)] [!INCLUDE[ssDEnoversion](../../includes/ssdenoversion-md.md)]의 해당 인스턴스에 연결한 후 개체 탐색기에서 서버 이름을 클릭하여 서버 트리를 확장합니다.  
   
-2.  **데이터베이스**를 확장하고 해당 데이터베이스에 따라 사용자 데이터베이스를 선택하거나 **시스템 데이터베이스** 를 확장한 다음 시스템 데이터베이스를 선택합니다.  
+2.  **데이터베이스** 를 확장하고 해당 데이터베이스에 따라 사용자 데이터베이스를 선택하거나 **시스템 데이터베이스** 를 확장한 다음 시스템 데이터베이스를 선택합니다.  
   
-3.  데이터베이스를 마우스 오른쪽 단추로 클릭한 다음 **속성**을 클릭하면 **데이터베이스 속성** 대화 상자가 열립니다.  
+3.  데이터베이스를 마우스 오른쪽 단추로 클릭한 다음 **속성** 을 클릭하면 **데이터베이스 속성** 대화 상자가 열립니다.  
   
-4.  **페이지 선택** 창에서 **파일**을 클릭합니다.  
+4.  **페이지 선택** 창에서 **파일** 을 클릭합니다.  
   
 5.  **데이터베이스 파일** 표 형태에서 데이터 및 로그 파일의 목록과 그 속성을 확인합니다.  
 
@@ -70,7 +70,7 @@ ms.locfileid: "85746607"
   
 1.  [!INCLUDE[ssDE](../../includes/ssde-md.md)]에 연결합니다.  
   
-2.  표준 도구 모음에서 **새 쿼리**를 클릭합니다.  
+2.  표준 도구 모음에서 **새 쿼리** 를 클릭합니다.  
   
 3.  [RESTORE FILELISTONLY](../../t-sql/statements/restore-statements-filelistonly-transact-sql.md) 문을 사용합니다. 이 예에서는`FILE=2`백업 디바이스의 두 번째 백업 세트( `AdventureWorksBackups` )에 대한 정보를 반환합니다.  
   

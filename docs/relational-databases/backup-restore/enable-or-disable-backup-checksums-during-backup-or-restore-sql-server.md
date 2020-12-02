@@ -13,14 +13,14 @@ helpviewer_keywords:
 - disabling checksums
 - checksums [SQL Server]
 ms.assetid: 6786bd1e-ad97-430a-8dfb-d4ba952d6c4d
-author: MikeRayMSFT
-ms.author: mikeray
-ms.openlocfilehash: 3675b4557bae7a394ef5b1b3ac47d2d1da9b2af3
-ms.sourcegitcommit: da88320c474c1c9124574f90d549c50ee3387b4c
+author: cawrites
+ms.author: chadam
+ms.openlocfilehash: bac5af624874fa5f25d7c2d8a41407bba4d18590
+ms.sourcegitcommit: 5a1ed81749800c33059dac91b0e18bd8bb3081b1
 ms.translationtype: HT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 07/01/2020
-ms.locfileid: "85718148"
+ms.lasthandoff: 11/23/2020
+ms.locfileid: "96125613"
 ---
 # <a name="enable-or-disable-backup-checksums-during-backup-or-restore-sql-server"></a>백업 또는 복원 중 백업 체크섬 사용 또는 사용 안 함(SQL Server)
  [!INCLUDE [SQL Server](../../includes/applies-to-version/sqlserver.md)]
@@ -60,7 +60,7 @@ ms.locfileid: "85718148"
   
 1.  [데이터베이스 백업 만들기](../../relational-databases/backup-restore/create-a-full-database-backup-sql-server.md)단계를 따릅니다.  
   
-2.  **옵션** 페이지의 **안정성** 섹션에서 **미디어에 쓰기 전에 체크섬 수행**을 클릭합니다.  
+2.  **옵션** 페이지의 **안정성** 섹션에서 **미디어에 쓰기 전에 체크섬 수행** 을 클릭합니다.  
 
 ##  <a name="using-transact-sql"></a><a name="TsqlProcedure"></a> Transact-SQL 사용  
   
@@ -68,7 +68,7 @@ ms.locfileid: "85718148"
   
 1.  [!INCLUDE[ssDE](../../includes/ssde-md.md)]에 연결합니다.  
   
-2.  표준 도구 모음에서 **새 쿼리**를 클릭합니다.  
+2.  표준 도구 모음에서 **새 쿼리** 를 클릭합니다.  
   
 3.  [BACKUP](../../t-sql/statements/backup-transact-sql.md) 문에서 백업 체크섬을 설정하려면 WITH CHECKSUM 옵션을 지정합니다. 백업 체크섬을 해제하려면 WITH NO_CHECKSUM 옵션을 지정합니다. 이 동작은 압축된 백업을 제외한 경우의 기본 동작입니다. 다음 예제는 체크섬이 수행되도록 지정합니다.  
   
@@ -83,7 +83,7 @@ GO
   
 1.  [!INCLUDE[ssDE](../../includes/ssde-md.md)]에 연결합니다.  
   
-2.  표준 도구 모음에서 **새 쿼리**를 클릭합니다.  
+2.  표준 도구 모음에서 **새 쿼리** 를 클릭합니다.  
   
 3.  [RESTORE](../../t-sql/statements/restore-statements-transact-sql.md) 문에서 백업 체크섬을 설정하려면 WITH CHECKSUM 옵션을 지정합니다. 이 동작은 압축된 백업의 기본 동작입니다. 백업 체크섬을 해제하려면 WITH NO_CHECKSUM 옵션을 지정합니다. 이 동작은 압축된 백업을 제외한 경우의 기본 동작입니다. 다음 예제는 백업 체크섬이 수행되도록 지정합니다.  
   

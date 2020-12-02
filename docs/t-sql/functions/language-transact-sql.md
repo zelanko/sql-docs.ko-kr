@@ -23,11 +23,11 @@ author: markingmyname
 ms.author: maghan
 monikerRange: '>=aps-pdw-2016||=azuresqldb-current||=azure-sqldw-latest||>=sql-server-2016||=sqlallproducts-allversions||>=sql-server-linux-2017||=azuresqldb-mi-current'
 ms.openlocfilehash: fc24d75bbe3ca32e0e3aede50109ab467570db8e
-ms.sourcegitcommit: cc23d8646041336d119b74bf239a6ac305ff3d31
+ms.sourcegitcommit: 192f6a99e19e66f0f817fdb1977f564b2aaa133b
 ms.translationtype: HT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 09/23/2020
-ms.locfileid: "91111101"
+ms.lasthandoff: 11/25/2020
+ms.locfileid: "96124661"
 ---
 # <a name="x40x40language-transact-sql"></a>&#x40;&#x40;LANGUAGE(Transact-SQL)
 [!INCLUDE [sql-asdb-asdbmi-asa-pdw](../../includes/applies-to-version/sql-asdb-asdbmi-asa-pdw.md)]
@@ -48,7 +48,7 @@ ms.locfileid: "91111101"
  **nvarchar**  
   
 ## <a name="remarks"></a>설명  
- 유효한 공식 언어 이름을 포함하여 언어 설정에 대한 정보를 보려면 지정된 매개 변수 없이 **sp_helplanguage**를 실행하세요.  
+ 유효한 공식 언어 이름을 포함하여 언어 설정에 대한 정보를 보려면 지정된 매개 변수 없이 **sp_helplanguage** 를 실행하세요.  
   
 ## <a name="examples"></a>예  
  다음 예에서는 현재 세션의 언어를 반환합니다.  

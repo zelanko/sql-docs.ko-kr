@@ -18,14 +18,14 @@ helpviewer_keywords:
 - restoring databases [SQL Server], renaming
 - database creation [SQL Server], restoring with move
 ms.assetid: 4da76d61-5e11-4bee-84f5-b305240d9f42
-author: MikeRayMSFT
-ms.author: mikeray
-ms.openlocfilehash: 89abaf77c605574ef05a88a7cc18a09c0840a9c0
-ms.sourcegitcommit: da88320c474c1c9124574f90d549c50ee3387b4c
+author: cawrites
+ms.author: chadam
+ms.openlocfilehash: 19ff3852dad4b98b739bfc058ba7a532af932ee1
+ms.sourcegitcommit: 5a1ed81749800c33059dac91b0e18bd8bb3081b1
 ms.translationtype: HT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 07/01/2020
-ms.locfileid: "85717997"
+ms.lasthandoff: 11/23/2020
+ms.locfileid: "96125579"
 ---
 # <a name="restore-a-database-to-a-new-location-sql-server"></a>데이터베이스를 새 위치로 복원(SQL Server)
  [!INCLUDE [SQL Server](../../includes/applies-to-version/sqlserver.md)]
@@ -63,7 +63,7 @@ ms.locfileid: "85717997"
   
 1.  [!INCLUDE[ssDEnoversion](../../includes/ssdenoversion-md.md)]의 해당 인스턴스에 연결한 다음 개체 탐색기에서 서버 이름을 클릭하여 서버 트리를 확장합니다.  
   
-2.  **데이터베이스**를 마우스 오른쪽 단추로 클릭한 다음 **데이터베이스 복원**을 클릭합니다. **데이터베이스 복원** 대화 상자가 열립니다.  
+2.  **데이터베이스** 를 마우스 오른쪽 단추로 클릭한 다음 **데이터베이스 복원** 을 클릭합니다. **데이터베이스 복원** 대화 상자가 열립니다.  
   
 3.  **일반** 페이지에서 **원본** 섹션을 사용하여 복원할 백업 집합의 원본과 위치를 지정합니다. 다음 옵션 중 하나를 선택합니다.  
   
@@ -75,7 +75,7 @@ ms.locfileid: "85717997"
   
     1.  **디바이스**  
   
-         찾아보기( **...** ) 단추를 클릭하여 **백업 디바이스 선택** 대화 상자를 엽니다. **백업 미디어 유형** 상자에서 나열된 디바이스 유형 중 하나를 선택합니다. **백업 미디어** 상자에 대해 하나 이상의 디바이스를 선택하려면 **추가**를 클릭합니다.  
+         찾아보기( **...** ) 단추를 클릭하여 **백업 디바이스 선택** 대화 상자를 엽니다. **백업 미디어 유형** 상자에서 나열된 디바이스 유형 중 하나를 선택합니다. **백업 미디어** 상자에 대해 하나 이상의 디바이스를 선택하려면 **추가** 를 클릭합니다.  
   
          원하는 디바이스를 **백업 미디어** 목록 상자에 추가한 후 **확인** 을 클릭하여 **일반** 페이지로 돌아갑니다.  
   
@@ -91,7 +91,7 @@ ms.locfileid: "85717997"
   
      **복원에 사용할 백업 세트** 표의 열에 대한 자세한 내용은 [데이터베이스 복원&#40;일반 페이지&#41;](../../relational-databases/backup-restore/restore-database-general-page.md)을 참조하세요.  
   
-7.  데이터베이스 파일의 새 위치를 지정하려면 **파일** 페이지를 선택한 다음 **모든 파일을 폴더로 위치 변경**을 클릭합니다. **데이터 파일 폴더** 및 **로그 파일 폴더**에 대한 새 위치를 지정합니다. 이 표에 대한 자세한 내용은 [데이터베이스 복원&#40;파일 페이지&#41;](../../relational-databases/backup-restore/restore-database-files-page.md)을 참조하세요.  
+7.  데이터베이스 파일의 새 위치를 지정하려면 **파일** 페이지를 선택한 다음 **모든 파일을 폴더로 위치 변경** 을 클릭합니다. **데이터 파일 폴더** 및 **로그 파일 폴더** 에 대한 새 위치를 지정합니다. 이 표에 대한 자세한 내용은 [데이터베이스 복원&#40;파일 페이지&#41;](../../relational-databases/backup-restore/restore-database-files-page.md)을 참조하세요.  
   
 8.  **옵션** 페이지에서 원하는 경우 옵션을 조정합니다. 이러한 옵션에 대한 자세한 내용은 [데이터베이스 복원&#40;옵션 페이지&#41;](../../relational-databases/backup-restore/restore-database-options-page.md)을 참조하세요.  
 
@@ -102,7 +102,7 @@ ms.locfileid: "85717997"
   
      RESTORE FILELISTONLY FROM *<backup_device>* WITH FILE = *backup_set_file_number* 
   
-     여기서 *backup_set_file_number*는 미디어 세트에서의 백업 위치를 나타냅니다. 백업 세트의 위치는 [RESTORE HEADERONLY](../../t-sql/statements/restore-statements-headeronly-transact-sql.md) 문을 사용하여 가져올 수 있습니다. 자세한 내용은 [RESTORE 인수&#40;Transact-SQL&#41;](../../t-sql/statements/restore-statements-arguments-transact-sql.md)에서 "백업 세트 지정"을 참조하세요.  
+     여기서 *backup_set_file_number* 는 미디어 세트에서의 백업 위치를 나타냅니다. 백업 세트의 위치는 [RESTORE HEADERONLY](../../t-sql/statements/restore-statements-headeronly-transact-sql.md) 문을 사용하여 가져올 수 있습니다. 자세한 내용은 [RESTORE 인수&#40;Transact-SQL&#41;](../../t-sql/statements/restore-statements-arguments-transact-sql.md)에서 "백업 세트 지정"을 참조하세요.  
   
      이 문에는 WITH 옵션을 여러 개 지정할 수도 있습니다. 자세한 내용은 [RESTORE FILELISTONLY&#40;Transact-SQL&#41;](../../t-sql/statements/restore-statements-filelistonly-transact-sql.md)를 참조하세요.  
   
@@ -159,12 +159,12 @@ ms.locfileid: "85717997"
   자세한 내용은 [RESTORE 인수&#40;Transact-SQL&#41;](../../t-sql/statements/restore-statements-arguments-transact-sql.md)에서 "백업 세트 지정"을 참조하세요.  
   
   MOVE **'** _logical_file_name_in_backup_ **'** TO **'** _operating_system_file_name_ **'** [ **,** ...*n* ]  
-  *logical_file_name_in_backup* 에 지정된 데이터 또는 로그 파일을 *operating_system_file_name*에 지정된 위치로 복원하도록 지정합니다. 백업 세트에서 새 위치로 복원할 모든 논리적 파일에 대해 MOVE 문을 지정합니다.  
+  *logical_file_name_in_backup* 에 지정된 데이터 또는 로그 파일을 *operating_system_file_name* 에 지정된 위치로 복원하도록 지정합니다. 백업 세트에서 새 위치로 복원할 모든 논리적 파일에 대해 MOVE 문을 지정합니다.  
   
   |옵션|Description|  
   |------------|-----------------|  
   |*logical_file_name_in_backup*|백업 세트에 있는 데이터 또는 로그 파일의 논리적 이름을 지정합니다. 백업 세트에 있는 데이터 또는 로그 파일의 논리적 파일 이름은 백업 세트 생성 시 데이터베이스의 해당 논리적 이름과 일치합니다.<br /><br /> <br /><br /> 참고: 백업 세트에서 논리적 파일 목록을 가져오려면 [RESTORE FILELISTONLY](../../t-sql/statements/restore-statements-filelistonly-transact-sql.md)를 사용합니다.|  
-  |*operating_system_file_name*|*logical_file_name_in_backup*에 지정된 파일의 새 위치를 지정합니다. 파일이 이 위치로 복원됩니다.<br /><br /> *operating_system_file_name* 에서 복원 파일의 새 파일 이름을 지정합니다(선택 사항). 이 작업은 동일한 서버 인스턴스에 기존 데이터베이스의 복사본을 만들려는 경우에 필요합니다.|  
+  |*operating_system_file_name*|*logical_file_name_in_backup* 에 지정된 파일의 새 위치를 지정합니다. 파일이 이 위치로 복원됩니다.<br /><br /> *operating_system_file_name* 에서 복원 파일의 새 파일 이름을 지정합니다(선택 사항). 이 작업은 동일한 서버 인스턴스에 기존 데이터베이스의 복사본을 만들려는 경우에 필요합니다.|  
   |*n*|추가 MOVE 문을 지정할 수 있음을 나타내는 자리 표시자입니다.|  
   
 ###  <a name="example-transact-sql"></a><a name="TsqlExample"></a> 예(Transact-SQL)  

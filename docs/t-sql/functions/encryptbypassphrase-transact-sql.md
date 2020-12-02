@@ -21,11 +21,11 @@ ms.assetid: f8dbb9e6-94d6-40d7-8b38-6833a409d597
 author: VanMSFT
 ms.author: vanto
 ms.openlocfilehash: f8e11d7e9f36d6619c626d9387cce766fbce5b0d
-ms.sourcegitcommit: cc23d8646041336d119b74bf239a6ac305ff3d31
+ms.sourcegitcommit: 192f6a99e19e66f0f817fdb1977f564b2aaa133b
 ms.translationtype: HT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 09/23/2020
-ms.locfileid: "91116784"
+ms.lasthandoff: 11/25/2020
+ms.locfileid: "96124747"
 ---
 # <a name="encryptbypassphrase-transact-sql"></a>ENCRYPTBYPASSPHRASE(Transact-SQL)
 [!INCLUDE [SQL Server SQL Database](../../includes/applies-to-version/sql-asdb.md)]
@@ -71,7 +71,7 @@ EncryptByPassPhrase ( { 'passphrase' | @passphrase }
  인증자가 파생될 데이터를 포함하는 변수입니다.  
   
 ## <a name="return-types"></a>반환 형식  
- 최대 크기가 8,000바이트인 **varbinary**입니다.  
+ 최대 크기가 8,000바이트인 **varbinary** 입니다.  
   
 ## <a name="remarks"></a>설명  
  전달 구는 공백을 포함하는 암호입니다. 전달 구에는 상대적으로 긴 문자열보다 의미 있는 구나 문장이 사용되므로 기억하기가 쉽습니다.  

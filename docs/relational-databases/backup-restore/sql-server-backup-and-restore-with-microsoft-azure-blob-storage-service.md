@@ -10,14 +10,14 @@ ms.reviewer: ''
 ms.technology: backup-restore
 ms.topic: conceptual
 ms.assetid: 6a0c9b6a-cf71-4311-82f2-12c445f63935
-author: MikeRayMSFT
-ms.author: mikeray
-ms.openlocfilehash: 41c11b596017f9dfeab7d62cfbe517e764f733ba
-ms.sourcegitcommit: e700497f962e4c2274df16d9e651059b42ff1a10
+author: cawrites
+ms.author: chadam
+ms.openlocfilehash: d28d41c85b267d3920e62773f3694cabb252c64b
+ms.sourcegitcommit: 5a1ed81749800c33059dac91b0e18bd8bb3081b1
 ms.translationtype: HT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 08/17/2020
-ms.locfileid: "88428925"
+ms.lasthandoff: 11/23/2020
+ms.locfileid: "96125452"
 ---
 # <a name="sql-server-backup-and-restore-with-microsoft-azure-blob-storage-service"></a>Microsoft Azure Blob Storage Service로 SQL Server 백업 및 복원
 [!INCLUDE [SQL Server SQL MI](../../includes/applies-to-version/sql-asdbmi.md)]
@@ -28,7 +28,7 @@ ms.locfileid: "88428925"
   
  SQL Server에서는 다음과 같은 방식으로 Microsoft Azure Blob Storage 서비스에 백업할 수 있습니다.  
   
--   **Microsoft로 백업 관리:** 이제 디스크와 테이프에 백업할 때와 동일한 방법을 사용하여 URL을 백업 대상으로 지정하고 Microsoft Azure 스토리지로 백업할 수 있습니다. 이 기능을 사용하여 로컬 스토리지나 다른 오프사이트 옵션의 경우처럼 수동으로 백업하거나 자체 백업 전략을 구성할 수 있습니다. 이 기능을 **URL에 대한 SQL Server 백업**이라고도 합니다. 자세한 내용은 [URL에 대한 SQL Server Backup](../../relational-databases/backup-restore/sql-server-backup-to-url.md)을 참조하세요. 이 기능은 SQL Server 2012 SP1 CU2 이상에서 사용할 수 있습니다. 이 기능은 [!INCLUDE[ssSQL15](../../includes/sssql15-md.md)] 에서 블록 Blob, 공유 액세스 서명, 스트라이프를 사용하면서 성능과 기능이 더욱 향상되었습니다.  
+-   **Microsoft로 백업 관리:** 이제 디스크와 테이프에 백업할 때와 동일한 방법을 사용하여 URL을 백업 대상으로 지정하고 Microsoft Azure 스토리지로 백업할 수 있습니다. 이 기능을 사용하여 로컬 스토리지나 다른 오프사이트 옵션의 경우처럼 수동으로 백업하거나 자체 백업 전략을 구성할 수 있습니다. 이 기능을 **URL에 대한 SQL Server 백업** 이라고도 합니다. 자세한 내용은 [URL에 대한 SQL Server Backup](../../relational-databases/backup-restore/sql-server-backup-to-url.md)을 참조하세요. 이 기능은 SQL Server 2012 SP1 CU2 이상에서 사용할 수 있습니다. 이 기능은 [!INCLUDE[ssSQL15](../../includes/sssql15-md.md)] 에서 블록 Blob, 공유 액세스 서명, 스트라이프를 사용하면서 성능과 기능이 더욱 향상되었습니다.  
   
     > [!NOTE]  
     >  SQL Server 2012 SP1 CU2 이전의 SQL Server 버전의 경우 Microsoft Azure 도구의 추가 기능인 SQL Server 백업을 사용하여 Microsoft Azure Storage에 백업을 쉽고 빠르게 만들 수 있습니다. 자세한 내용은 [다운로드 센터](https://go.microsoft.com/fwlink/?LinkID=324399)를 참조하십시오.  

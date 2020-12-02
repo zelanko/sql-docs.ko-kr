@@ -34,11 +34,11 @@ author: MikeRayMSFT
 ms.author: mikeray
 monikerRange: '>=aps-pdw-2016||=azuresqldb-current||=azure-sqldw-latest||>=sql-server-2016||=sqlallproducts-allversions||>=sql-server-linux-2017||=azuresqldb-mi-current'
 ms.openlocfilehash: 0a715f64c0d6c1adf8ec3bc55b851848dfd1ae2e
-ms.sourcegitcommit: cc23d8646041336d119b74bf239a6ac305ff3d31
+ms.sourcegitcommit: 192f6a99e19e66f0f817fdb1977f564b2aaa133b
 ms.translationtype: HT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 09/23/2020
-ms.locfileid: "91115374"
+ms.lasthandoff: 11/25/2020
+ms.locfileid: "96125008"
 ---
 # <a name="constants-transact-sql"></a>상수(Transact-SQL)
 [!INCLUDE [sql-asdb-asdbmi-asa-pdw](../../includes/applies-to-version/sql-asdb-asdbmi-asa-pdw.md)]
@@ -83,7 +83,7 @@ ms.locfileid: "91115374"
 유니코드 문자열 상수는 고급 데이터 정렬을 지원합니다.
   
 > [!NOTE]  
-> 8000 바이트보다 큰 유니 코드 상수는 ** nvarchar(max) ** 데이터로 입력됩니다.  
+> 8000 바이트보다 큰 유니 코드 상수는 **nvarchar(max)** 데이터로 입력됩니다.  
   
 ## <a name="binary-constants"></a>이진 상수
 이진 상수는 `0x` 접미사를 가지며 16진수로 구성된 문자열입니다. 이진 상수는 인용 부호로 묶지 않습니다.

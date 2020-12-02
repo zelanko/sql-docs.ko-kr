@@ -8,15 +8,15 @@ ms.reviewer: ''
 ms.technology: install
 ms.topic: conceptual
 ms.assetid: 31d16820-d126-4c57-82cc-27701e4091bc
-author: MashaMSFT
-ms.author: mathoma
+author: cawrites
+ms.author: chadam
 monikerRange: '>=sql-server-2016||=sqlallproducts-allversions'
-ms.openlocfilehash: 1bec1ae2badef02e407b4562732af9cda85fc989
-ms.sourcegitcommit: 2f868a77903c1f1c4cecf4ea1c181deee12d5b15
+ms.openlocfilehash: 321c56d6e528586a44e4f94619e7c28709ab6998
+ms.sourcegitcommit: 5a1ed81749800c33059dac91b0e18bd8bb3081b1
 ms.translationtype: HT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 10/02/2020
-ms.locfileid: "91670217"
+ms.lasthandoff: 11/23/2020
+ms.locfileid: "96125731"
 ---
 # <a name="upgrade-to-a-different-edition-of-sql-server-setup"></a>다른 SQL Server 버전으로 업그레이드(설치 프로그램)
 
@@ -44,23 +44,23 @@ ms.locfileid: "91670217"
   
 1.  [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 설치 미디어를 넣고 루트 폴더에서 setup.exe를 두 번 클릭하거나, 구성 도구에서 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 설치 센터를 시작합니다. 네트워크 공유에서 설치하려면 공유에서 루트 폴더를 찾은 다음 Setup.exe를 두 번 클릭합니다.  
   
-2.  기존 [!INCLUDE[ssNoversion](../../includes/ssnoversion-md.md)] 인스턴스를 다른 버전으로 업그레이드하려면 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 설치 센터에서 **유지 관리**를 클릭한 다음 **버전 업그레이드**를 선택합니다.  
+2.  기존 [!INCLUDE[ssNoversion](../../includes/ssnoversion-md.md)] 인스턴스를 다른 버전으로 업그레이드하려면 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 설치 센터에서 **유지 관리** 를 클릭한 다음 **버전 업그레이드** 를 선택합니다.  
   
 3.  설치 지원 파일이 필요한 경우 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 설치 프로그램이 이를 설치합니다. 컴퓨터를 다시 시작하라는 메시지가 표시되면 컴퓨터를 다시 시작한 후 작업을 계속합니다.  
   
-4.  시스템 구성 검사기가 컴퓨터에서 검색 작업을 실행합니다. 계속하려면 **확인**을 클릭합니다.  
+4.  시스템 구성 검사기가 컴퓨터에서 검색 작업을 실행합니다. 계속하려면 **확인** 을 클릭합니다.  
   
 5.  제품 키 페이지에서 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]무료 버전으로 업그레이드할지, 아니면 제품의 프로덕션 버전에 대한 PID 키가 있는지를 나타내는 라디오 단추를 선택합니다. 자세한 내용은 [SQL Server 버전 및 구성 요소](../../sql-server/editions-and-components-of-sql-server-2017.md) 및 [지원되는 버전 및 에디션 업그레이드](../../database-engine/install-windows/supported-version-and-edition-upgrades.md)를 참조하세요.  
   
-6.  사용 조건 페이지에서 사용권 계약을 읽은 다음 동의함 확인란을 선택합니다. 계속하려면 **다음**을 클릭합니다. 설치를 끝내려면 **취소**를 클릭합니다.  
+6.  사용 조건 페이지에서 사용권 계약을 읽은 다음 동의함 확인란을 선택합니다. 계속하려면 **다음** 을 클릭합니다. 설치를 끝내려면 **취소** 를 클릭합니다.  
   
 7.  인스턴스 선택 페이지에서 업그레이드할 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 인스턴스를 지정합니다.  
   
 8.  버전 업그레이드 규칙 페이지는 버전 업그레이드 작업이 시작되기 전에 사용자 컴퓨터 구성의 유효성을 검사합니다.  
   
-9. 버전 업그레이드 준비 페이지에는 설치 중에 지정된 설치 옵션이 트리 뷰로 표시됩니다. 계속하려면 **업그레이드**를 클릭합니다.  
+9. 버전 업그레이드 준비 페이지에는 설치 중에 지정된 설치 옵션이 트리 뷰로 표시됩니다. 계속하려면 **업그레이드** 를 클릭합니다.  
   
-10. 버전 업그레이드 프로세스 도중 선택한 새로운 설정을 적용하려면 서비스를 다시 시작해야 합니다. 버전 업그레이드가 끝나면 버전 업그레이드에 대한 요약 로그 파일을 볼 수 있는 링크가 완료 페이지에 제공됩니다. 마법사를 닫으려면 **닫기**를 클릭합니다.  
+10. 버전 업그레이드 프로세스 도중 선택한 새로운 설정을 적용하려면 서비스를 다시 시작해야 합니다. 버전 업그레이드가 끝나면 버전 업그레이드에 대한 요약 로그 파일을 볼 수 있는 링크가 완료 페이지에 제공됩니다. 마법사를 닫으려면 **닫기** 를 클릭합니다.  
   
 11. 설치 및 기타 중요한 참고 사항에 대한 요약 로그 파일을 볼 수 있는 링크가 완료 페이지에 제공됩니다.  
   

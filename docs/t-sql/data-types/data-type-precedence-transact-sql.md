@@ -20,11 +20,11 @@ ms.assetid: f4c804ab-ed3f-43b1-a024-c9ac6944b66b
 author: MikeRayMSFT
 ms.author: mikeray
 ms.openlocfilehash: 6ed8d2a30d4bcc2cd1adaedc3cccd6642d701533
-ms.sourcegitcommit: e700497f962e4c2274df16d9e651059b42ff1a10
+ms.sourcegitcommit: 192f6a99e19e66f0f817fdb1977f564b2aaa133b
 ms.translationtype: HT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 08/17/2020
-ms.locfileid: "88459933"
+ms.lasthandoff: 11/25/2020
+ms.locfileid: "96124964"
 ---
 # <a name="data-type-precedence-transact-sql"></a>데이터 형식 우선 순위(Transact-SQL)
 [!INCLUDE[tsql-appliesto-ss2012-all-md.md](../../includes/tsql-appliesto-ss2012-all-md.md)]

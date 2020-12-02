@@ -13,11 +13,11 @@ author: markingmyname
 ms.author: maghan
 monikerRange: =azuresqldb-current||>=sql-server-2016||=sqlallproducts-allversions||>=sql-server-linux-2017||=azuresqldb-mi-current
 ms.openlocfilehash: ab153d8d28e2f8005f0b0a370ffa4def42f81c58
-ms.sourcegitcommit: 4d370399f6f142e25075b3714e5c2ce056b1bfd0
+ms.sourcegitcommit: 192f6a99e19e66f0f817fdb1977f564b2aaa133b
 ms.translationtype: HT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 10/09/2020
-ms.locfileid: "91868022"
+ms.lasthandoff: 11/25/2020
+ms.locfileid: "96125214"
 ---
 # <a name="demonstration-performance-improvement-of-in-memory-oltp"></a>데모: 메모리 내 OLTP의 성능 향상
 [!INCLUDE [SQL Server Azure SQL Database](../../includes/applies-to-version/sql-asdb.md)]
@@ -64,7 +64,7 @@ go
   
 1.  코드 예제로 사용할 기존 테스트 데이터베이스를 결정합니다.  
   
-2.  새 테스트 데이터베이스를 만들려면 [Azure 포털](https://portal.azure.com) 을 사용하여 이름이 **imoltp**인 데이터베이스를 생성합니다.  
+2.  새 테스트 데이터베이스를 만들려면 [Azure 포털](https://portal.azure.com) 을 사용하여 이름이 **imoltp** 인 데이터베이스를 생성합니다.  
   
  이를 위해 Azure 포털 사용 지침을 확인하려면 [Azure SQL 데이터베이스 시작](/azure/azure-sql/database/single-database-create-quickstart)을 참조하십시오.  
   

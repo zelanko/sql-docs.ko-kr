@@ -23,11 +23,11 @@ author: markingmyname
 ms.author: maghan
 monikerRange: '>=aps-pdw-2016||=azuresqldb-current||=azure-sqldw-latest||>=sql-server-2016||=sqlallproducts-allversions||>=sql-server-linux-2017||=azuresqldb-mi-current'
 ms.openlocfilehash: d0169bc8dd5ed25e6f1689802e9a431df34fe457
-ms.sourcegitcommit: e700497f962e4c2274df16d9e651059b42ff1a10
+ms.sourcegitcommit: 192f6a99e19e66f0f817fdb1977f564b2aaa133b
 ms.translationtype: HT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 08/17/2020
-ms.locfileid: "88417499"
+ms.lasthandoff: 11/25/2020
+ms.locfileid: "96124932"
 ---
 # <a name="ascii-transact-sql"></a>ASCII(Transact-SQL)
 [!INCLUDE [sql-asdb-asdbmi-asa-pdw](../../includes/applies-to-version/sql-asdb-asdbmi-asa-pdw.md)]
@@ -52,7 +52,7 @@ ASCII ( character_expression )
  **int**  
   
 ## <a name="remarks"></a>설명
-ASCII는 **A**merican **S**tandard **C**ode for **I**nformation **I**nterchange를 나타냅니다. 최신 컴퓨터에 대한 문자 인코딩 표준으로 사용합니다. ASCII 문자 목록은 [ASCII](https://www.wikipedia.org/wiki/ASCII)의 **인쇄 가능 문자** 섹션을 참조하세요.
+ASCII는 **A** merican **S** tandard **C** ode for **I** nformation **I** nterchange를 나타냅니다. 최신 컴퓨터에 대한 문자 인코딩 표준으로 사용합니다. ASCII 문자 목록은 [ASCII](https://www.wikipedia.org/wiki/ASCII)의 **인쇄 가능 문자** 섹션을 참조하세요.
 
 ASCII는 7비트 문자 집합입니다. 확장 ASCII 또는 상위 ASCII는 `ASCII` 함수에서 처리하지 않는 8비트 문자 집합입니다. 
 
@@ -102,7 +102,7 @@ CHARACTER CHARACTER
 P         Ã
 ```
 
-이전 결과에서 코드 포인트 195에 대한 문자는 **æ**가 아니라 **Ã**입니다. `ASCII` 함수는 첫 번째 7비트 스트림을 읽을 수 있지만 추가 비트는 읽을 수 없기 때문입니다. 문자 `æ`에 대한 올바른 코드 포인트는 `UNICODE` 함수를 사용하여 찾을 수 있습니다. 이 함수는 올바른 문자 코드 포인트를 지원하거나 반환할 수 있습니다.
+이전 결과에서 코드 포인트 195에 대한 문자는 **æ** 가 아니라 **Ã** 입니다. `ASCII` 함수는 첫 번째 7비트 스트림을 읽을 수 있지만 추가 비트는 읽을 수 없기 때문입니다. 문자 `æ`에 대한 올바른 코드 포인트는 `UNICODE` 함수를 사용하여 찾을 수 있습니다. 이 함수는 올바른 문자 코드 포인트를 지원하거나 반환할 수 있습니다.
 
 ```sql
 SELECT UNICODE('æ') AS [Extended_ASCII], NCHAR(230) AS [CHARACTER];

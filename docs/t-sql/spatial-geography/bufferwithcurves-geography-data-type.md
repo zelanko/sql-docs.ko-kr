@@ -19,11 +19,11 @@ ms.assetid: abf0a11c-c99c-4faa-bf80-3ae8e04d7bfb
 author: MladjoA
 ms.author: mlandzic
 ms.openlocfilehash: 4f4c5943dd69d651a9038e5e8e27798115911a9c
-ms.sourcegitcommit: e700497f962e4c2274df16d9e651059b42ff1a10
+ms.sourcegitcommit: 192f6a99e19e66f0f817fdb1977f564b2aaa133b
 ms.translationtype: HT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 08/17/2020
-ms.locfileid: "88360469"
+ms.lasthandoff: 11/25/2020
+ms.locfileid: "96124356"
 ---
 # <a name="bufferwithcurves-geography-data-type"></a>BufferWithCurves(geography 데이터 형식)
 [!INCLUDE [SQL Server Azure SQL Database ](../../includes/applies-to-version/sql-asdb.md)]
@@ -41,7 +41,7 @@ ms.locfileid: "88360469"
 
 ## <a name="arguments"></a>인수
  *distance*  
- 버퍼를 구성하는 점과 geography 인스턴스 사이에 허용되는 최대 거리를 나타내는 **float**입니다.  
+ 버퍼를 구성하는 점과 geography 인스턴스 사이에 허용되는 최대 거리를 나타내는 **float** 입니다.  
   
 ## <a name="return-types"></a>반환 형식  
  [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 반환 형식: **geography**  
@@ -49,13 +49,13 @@ ms.locfileid: "88360469"
  CLR 반환 형식: **SqlGeography**  
   
 ## <a name="exceptions"></a>예외  
- 다음 조건에서 **ArgumentException**이 발생합니다.  
+ 다음 조건에서 **ArgumentException** 이 발생합니다.  
   
 -   메서드에 매개 변수가 전달되지 않는 경우(예: `@g.BufferWithCurves()`)  
   
 -   숫자가 아닌 매개 변수가 메서드에 전달되는 경우(예: `@g.BufferWithCurves('a')`)  
   
--   **NULL**이 `@g.BufferWithCurves(NULL)`과 같은 메서드로 전달됩니다  
+-   **NULL** 이 `@g.BufferWithCurves(NULL)`과 같은 메서드로 전달됩니다  
   
 ## <a name="remarks"></a>설명  
  다음 표에서는 여러 거리 값에 대해 반환되는 결과를 보여 줍니다.  
@@ -68,9 +68,9 @@ ms.locfileid: "88360469"
 |distance > 0|모든 차원|**CurvePolygon** 또는 **GeometryCollection** 인스턴스|  
   
 > [!NOTE]  
->  *거리*가 **float**이므로 매우 작은 값은 0으로 계산될 수 있습니다.  이 경우 호출 **geography** 인스턴스의 복사본이 반환됩니다.  
+>  *거리* 가 **float** 이므로 매우 작은 값은 0으로 계산될 수 있습니다.  이 경우 호출 **geography** 인스턴스의 복사본이 반환됩니다.  
   
- **string** 매개 변수가 메서드에 전달되면 **float**로 변환되거나 `ArgumentException`가 발생합니다.  
+ **string** 매개 변수가 메서드에 전달되면 **float** 로 변환되거나 `ArgumentException`가 발생합니다.  
   
 ## <a name="examples"></a>예제  
   

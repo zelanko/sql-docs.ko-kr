@@ -8,15 +8,15 @@ ms.reviewer: ''
 ms.technology: install
 ms.topic: conceptual
 ms.assetid: e1792eeb-2874-4653-b20e-3063f4eb4e5d
-author: MashaMSFT
-ms.author: mathoma
+author: cawrites
+ms.author: chadam
 monikerRange: '>=sql-server-2016||=sqlallproducts-allversions'
-ms.openlocfilehash: 706f0252b5a56b1084c678d259af97c7917e696c
-ms.sourcegitcommit: 2f868a77903c1f1c4cecf4ea1c181deee12d5b15
+ms.openlocfilehash: 5e9b125be108c40ad59fe27126a7e8d917ed171c
+ms.sourcegitcommit: 5a1ed81749800c33059dac91b0e18bd8bb3081b1
 ms.translationtype: HT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 10/02/2020
-ms.locfileid: "91670476"
+ms.lasthandoff: 11/23/2020
+ms.locfileid: "96125984"
 ---
 # <a name="considerations-for-installing-sql-server-using-sysprep"></a>SysPrep을 사용하여 SQL Server 설치 시 고려 사항
 
@@ -94,7 +94,7 @@ SysPrep을 사용하여 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)
   
 - 시작 메뉴의 바로 가기를 사용합니다.  
   
-- **설치 센터** 의 **고급** 페이지에서 **독립 실행형 준비 인스턴스의 이미지 완료**단계에 액세스합니다.  
+- **설치 센터** 의 **고급** 페이지에서 **독립 실행형 준비 인스턴스의 이미지 완료** 단계에 액세스합니다.  
   
 ## <a name="see-also"></a>참고 항목  
 [SQL Server 설치 계획](../../sql-server/install/planning-a-sql-server-installation.md)

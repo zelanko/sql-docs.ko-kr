@@ -19,11 +19,11 @@ ms.assetid: a30581f2-e1b1-4996-93e6-527ff96b7c42
 author: VanMSFT
 ms.author: vanto
 ms.openlocfilehash: 88d4ae042cc6fd01988e51f78d1e5a212ed66863
-ms.sourcegitcommit: cc23d8646041336d119b74bf239a6ac305ff3d31
+ms.sourcegitcommit: 192f6a99e19e66f0f817fdb1977f564b2aaa133b
 ms.translationtype: HT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 09/23/2020
-ms.locfileid: "91116873"
+ms.lasthandoff: 11/25/2020
+ms.locfileid: "96124905"
 ---
 # <a name="asymkeyproperty-transact-sql"></a>ASYMKEYPROPERTY(Transact-SQL)
 [!INCLUDE [SQL Server SQL Database](../../includes/applies-to-version/sql-asdb.md)]
@@ -42,7 +42,7 @@ ASYMKEYPROPERTY (Key_ID , 'algorithm_desc' | 'string_sid' | 'sid')
 
 ## <a name="arguments"></a>인수
 *Key_ID*  
-데이터베이스에 있는 비대칭 키의 Key_ID입니다. 키 이름만 알고 있는 경우 Key_ID를 찾으려면 ASYMKEY_ID를 사용합니다. *Key_ID*는 **int** 데이터 형식을 갖습니다.
+데이터베이스에 있는 비대칭 키의 Key_ID입니다. 키 이름만 알고 있는 경우 Key_ID를 찾으려면 ASYMKEY_ID를 사용합니다. *Key_ID* 는 **int** 데이터 형식을 갖습니다.
   
 **'** algorithm_desc **'**  
 출력에 비대칭 키의 알고리즘 설명이 반환되도록 지정합니다. EKM 모듈에서 생성된 비대칭 키에만 사용할 수 있습니다.

@@ -11,15 +11,15 @@ helpviewer_keywords:
 - IsHadrEnabled server property
 - Server Core Installation [SQL Server]
 ms.assetid: ed6e5e94-4b8d-422a-a17e-61b05a4df903
-author: MashaMSFT
-ms.author: mathoma
+author: cawrites
+ms.author: chadam
 monikerRange: '>=sql-server-2016||=sqlallproducts-allversions'
-ms.openlocfilehash: 4be5f264e790bb84142cbed1460e937a40c41663
-ms.sourcegitcommit: 2f868a77903c1f1c4cecf4ea1c181deee12d5b15
+ms.openlocfilehash: 3e132297969c20a8c823dfcc1095d89c598c5fd5
+ms.sourcegitcommit: 5a1ed81749800c33059dac91b0e18bd8bb3081b1
 ms.translationtype: HT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 10/02/2020
-ms.locfileid: "91670486"
+ms.lasthandoff: 11/23/2020
+ms.locfileid: "96125976"
 ---
 # <a name="configure-sql-server-on-a-server-core-installation"></a>Server Core 설치 시 SQL Server 구성
 
@@ -100,17 +100,17 @@ Net 서비스를 사용하여 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-
 ### <a name="using-ssnoversion-configuration-manager-remotely"></a>원격으로 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 구성 관리자 사용  
 이러한 단계는 서버 그래픽 셸이 설치된 Windows 또는 Windows Server 클라이언트 버전을 실행하는 PC에서 수행해야 합니다.  
   
-1. **컴퓨터 관리**를 엽니다. **컴퓨터 관리**를 열려면 **시작**을 클릭하고 `compmgmt.msc`를 입력한 다음 **확인**을 클릭합니다.    
+1. **컴퓨터 관리** 를 엽니다. **컴퓨터 관리** 를 열려면 **시작** 을 클릭하고 `compmgmt.msc`를 입력한 다음 **확인** 을 클릭합니다.    
   
-2. 콘솔 트리에서 **컴퓨터 관리**를 마우스 오른쪽 단추로 클릭한 다음 **다른 컴퓨터에 연결...** 을 클릭합니다.  
+2. 콘솔 트리에서 **컴퓨터 관리** 를 마우스 오른쪽 단추로 클릭한 다음 **다른 컴퓨터에 연결...** 을 클릭합니다.  
   
-3. **컴퓨터 선택** 대화 상자에서 관리할 Server Core 컴퓨터의 이름을 입력하거나 **찾아보기**를 클릭하여 찾은 다음 **확인**을 클릭합니다.  
+3. **컴퓨터 선택** 대화 상자에서 관리할 Server Core 컴퓨터의 이름을 입력하거나 **찾아보기** 를 클릭하여 찾은 다음 **확인** 을 클릭합니다.  
   
-4. 콘솔 트리에 있는 Server Core 컴퓨터의 **컴퓨터 관리** 아래에서 **서비스 및 애플리케이션**을 클릭합니다.  
+4. 콘솔 트리에 있는 Server Core 컴퓨터의 **컴퓨터 관리** 아래에서 **서비스 및 애플리케이션** 을 클릭합니다.  
   
-5. **[!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]구성 관리자**를 두 번 클릭합니다.  
+5. **[!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]구성 관리자** 를 두 번 클릭합니다.  
   
-6. **[!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]구성 관리자**에서 **[!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 서비스**를 클릭하고 **[!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]** (\<instance name>)를 마우스 오른쪽 단추로 클릭한 다음 [속성]을 클릭합니다. 여기서 \<instance name>은 Always On 가용성 그룹을 사용하도록 설정하려는 로컬 서버 인스턴스의 이름입니다.  
+6. **[!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]구성 관리자** 에서 **[!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 서비스** 를 클릭하고 **[!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]** (\<instance name>)를 마우스 오른쪽 단추로 클릭한 다음 [속성]을 클릭합니다. 여기서 \<instance name>은 Always On 가용성 그룹을 사용하도록 설정하려는 로컬 서버 인스턴스의 이름입니다.  
   
 7. **AlwaysOn 고가용성** 탭을 선택합니다.  
   
@@ -178,11 +178,11 @@ Enable-SqlAlwaysOn -Path SQLSERVER:\SQL\Machine\Instance
 ### <a name="enable-tcpip-on-the-instance-of-ssnoversion"></a>다음 인스턴스에서 TCP/IP 사용: [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]  
  TCP/IP 프로토콜은 Server Core에서 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 인스턴스에 대해 Windows PowerShell을 통해 설정할 수 있습니다. 다음 단계를 수행하세요.  
   
-1.  Windows Server Core를 실행하는 컴퓨터에서 **작업 관리자**를 시작합니다.  
+1.  Windows Server Core를 실행하는 컴퓨터에서 **작업 관리자** 를 시작합니다.  
   
-2.  **애플리케이션** 탭에서 **새 작업**을 클릭합니다.  
+2.  **애플리케이션** 탭에서 **새 작업** 을 클릭합니다.  
   
-3.  **새 작업 만들기** 대화 상자에서 **열기** 필드에 **sqlps.exe** 를 입력하고 **확인**을 클릭합니다. 이렇게 하면 **Microsoft [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] Powershell** 창이 열립니다.  
+3.  **새 작업 만들기** 대화 상자에서 **열기** 필드에 **sqlps.exe** 를 입력하고 **확인** 을 클릭합니다. 이렇게 하면 **Microsoft [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] Powershell** 창이 열립니다.  
   
 4.  **Microsoft [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] Powershell** 창에서 다음 스크립트를 실행하여 TCP/IP 프로토콜을 사용하도록 설정합니다.  
   

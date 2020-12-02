@@ -13,11 +13,11 @@ author: rothja
 ms.author: jroth
 monikerRange: =azuresqldb-current||>=sql-server-2016||=sqlallproducts-allversions||>=sql-server-linux-2017||=azuresqldb-mi-current
 ms.openlocfilehash: bd339199cb32fc98490a5e2861591cbc2232c061
-ms.sourcegitcommit: e700497f962e4c2274df16d9e651059b42ff1a10
+ms.sourcegitcommit: 192f6a99e19e66f0f817fdb1977f564b2aaa133b
 ms.translationtype: HT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 08/17/2020
-ms.locfileid: "88485345"
+ms.lasthandoff: 11/25/2020
+ms.locfileid: "96125041"
 ---
 # <a name="delete-user-defined-functions"></a>사용자 정의 함수 삭제
 [!INCLUDE [SQL Server SQL Database](../../includes/applies-to-version/sql-asdb.md)]
@@ -66,9 +66,9 @@ ms.locfileid: "88485345"
   
     -   Aggregate 함수  
   
-4.  삭제할 함수를 마우스 오른쪽 단추로 클릭하고 **삭제**를 선택합니다.  
+4.  삭제할 함수를 마우스 오른쪽 단추로 클릭하고 **삭제** 를 선택합니다.  
   
-5.  **개체 삭제** 대화 상자에서 **확인**을 클릭합니다.  
+5.  **개체 삭제** 대화 상자에서 **확인** 을 클릭합니다.  
 
     > [!IMPORTANT]  
     >  **개체 삭제** 대화 상자에서 **종속성 표시** 를 클릭하여 _function\_name_**종속성** 대화 상자를 엽니다. 이 대화 상자에는 해당 함수에 종속된 모든 개체와 해당 함수가 종속된 모든 개체가 표시됩니다.  
@@ -77,11 +77,11 @@ ms.locfileid: "88485345"
   
 #### <a name="to-delete-a-user-defined-function"></a>사용자 정의 함수를 삭제하려면  
   
-1.  **개체 탐색기**에서 [!INCLUDE[ssDE](../../includes/ssde-md.md)]인스턴스에 연결합니다.  
+1.  **개체 탐색기** 에서 [!INCLUDE[ssDE](../../includes/ssde-md.md)]인스턴스에 연결합니다.  
   
-2.  표준 도구 모음에서 **새 쿼리**를 클릭합니다.  
+2.  표준 도구 모음에서 **새 쿼리** 를 클릭합니다.  
   
-3.  다음 예를 복사하여 쿼리 창에 붙여 넣고 **실행**을 클릭합니다.  
+3.  다음 예를 복사하여 쿼리 창에 붙여 넣고 **실행** 을 클릭합니다.  
   
     ```  
     -- creates function called "Sales.ufn_SalesByStore"  

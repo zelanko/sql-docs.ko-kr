@@ -14,11 +14,11 @@ author: ronortloff
 ms.author: rortloff
 monikerRange: '>= aps-pdw-2016 || = sqlallproducts-allversions'
 ms.openlocfilehash: 731c7b77fca5ae7c2cc4f85e3387d3daf93b4bce
-ms.sourcegitcommit: cfa04a73b26312bf18d8f6296891679166e2754d
+ms.sourcegitcommit: 192f6a99e19e66f0f817fdb1977f564b2aaa133b
 ms.translationtype: HT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 10/19/2020
-ms.locfileid: "92196647"
+ms.lasthandoff: 11/25/2020
+ms.locfileid: "96124423"
 ---
 # <a name="create-diagnostics-session-transact-sql"></a>CREATE DIAGNOSTICS SESSION(Transact-SQL)
 [!INCLUDE [pdw](../../includes/applies-to-version/pdw.md)]
@@ -60,19 +60,19 @@ DROP DIAGNOSTICS SESSION diagnostics_name ;
 
 ## <a name="arguments"></a>인수
  *diagnostics_name*  
- 진단 세션의 이름입니다. 진단 세션 이름은 문자 a-z, A-Z 및 0-9로만 이루어져야 합니다. 또한 진단 세션 이름은 문자로 시작해야 합니다. *diagnostics_name*은 127자로 제한됩니다.  
+ 진단 세션의 이름입니다. 진단 세션 이름은 문자 a-z, A-Z 및 0-9로만 이루어져야 합니다. 또한 진단 세션 이름은 문자로 시작해야 합니다. *diagnostics_name* 은 127자로 제한됩니다.  
   
  *max_item_count_num*  
- 보기에 유지할 이벤트 수입니다. 예를 들어 100을 지정하는 경우 필터 조건과 일치하는 최신 이벤트 100개가 진단 세션에 유지됩니다. 일치하는 이벤트가 100개보다 작은 경우 진단 세션은 100개 미만의 이벤트를 포함하게 됩니다. *max_item_count_num*은 100 이하이거나 100,000개여야 합니다.  
+ 보기에 유지할 이벤트 수입니다. 예를 들어 100을 지정하는 경우 필터 조건과 일치하는 최신 이벤트 100개가 진단 세션에 유지됩니다. 일치하는 이벤트가 100개보다 작은 경우 진단 세션은 100개 미만의 이벤트를 포함하게 됩니다. *max_item_count_num* 은 100 이하이거나 100,000개여야 합니다.  
   
  *event_name*  
- 진단 세션에서 수집할 실제 이벤트를 정의합니다.  *event_name*은 `sys.pdw_diag_events.is_enabled='True'`의 [sys.pdw_diag_events](../../relational-databases/system-catalog-views/sys-pdw-diag-events-transact-sql.md)에 나열된 이벤트 중 하나입니다.  
+ 진단 세션에서 수집할 실제 이벤트를 정의합니다.  *event_name* 은 `sys.pdw_diag_events.is_enabled='True'`의 [sys.pdw_diag_events](../../relational-databases/system-catalog-views/sys-pdw-diag-events-transact-sql.md)에 나열된 이벤트 중 하나입니다.  
   
  *filter_property_name*  
- 결과를 제한하는 속성의 이름입니다. 예를 들어, 세션 ID에 따라 제한하려는 경우 *filter_property_name*은 *SessionId*여야 합니다. *filter_property_name*에 대한 가능한 값의 목록은 아래 *property_name*을 참조하세요.  
+ 결과를 제한하는 속성의 이름입니다. 예를 들어, 세션 ID에 따라 제한하려는 경우 *filter_property_name* 은 *SessionId* 여야 합니다. *filter_property_name* 에 대한 가능한 값의 목록은 아래 *property_name* 을 참조하세요.  
   
  *value*  
- *filter_property_name*에 대해 평가할 값입니다. 값 형식은 속성 형식과 일치해야 합니다. 예를 들어, 속성 형식이 10진수이면 *값*의 형식도 10진수여야 합니다.  
+ *filter_property_name* 에 대해 평가할 값입니다. 값 형식은 속성 형식과 일치해야 합니다. 예를 들어, 속성 형식이 10진수이면 *값* 의 형식도 10진수여야 합니다.  
   
  *comp_type*  
  비교 유형입니다. 가능한 값은 Equals, EqualsOrGreaterThan, EqualsOrLessThan, GreaterThan, LessThan, NotEquals, Contains, RegEx입니다.  

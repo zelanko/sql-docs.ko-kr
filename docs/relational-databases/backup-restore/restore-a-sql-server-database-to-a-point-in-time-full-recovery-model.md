@@ -14,14 +14,14 @@ helpviewer_keywords:
 - point in time recovery [SQL Server]
 - restoring databases [SQL Server], point in time
 ms.assetid: 3a5daefd-08a8-4565-b54f-28ad01a47d32
-author: MikeRayMSFT
-ms.author: mikeray
-ms.openlocfilehash: 984e57d309dbed6a2aeb29dcaa260ae8f07896c8
-ms.sourcegitcommit: e700497f962e4c2274df16d9e651059b42ff1a10
+author: cawrites
+ms.author: chadam
+ms.openlocfilehash: 05f3dd9658ca51e1208476f8d11b387a79eb0234
+ms.sourcegitcommit: c5078791a07330a87a92abb19b791e950672e198
 ms.translationtype: HT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 08/17/2020
-ms.locfileid: "88429105"
+ms.lasthandoff: 11/26/2020
+ms.locfileid: "96125569"
 ---
 # <a name="restore-a-sql-server-database-to-a-point-in-time-full-recovery-model"></a>SQL Server 데이터베이스를 지정 시간으로 복원(전체 복구 모델)
  [!INCLUDE [SQL Server](../../includes/applies-to-version/sqlserver.md)]
@@ -63,9 +63,9 @@ ms.locfileid: "88429105"
   
 1.  개체 탐색기에서 [!INCLUDE[ssDEnoversion](../../includes/ssdenoversion-md.md)]의 해당 인스턴스에 연결하고 서버 트리를 확장합니다.  
   
-2.  **데이터베이스**를 확장합니다. 데이터베이스에 따라 사용자 데이터베이스를 선택하거나 **시스템 데이터베이스**를 확장한 다음 시스템 데이터베이스를 선택합니다.  
+2.  **데이터베이스** 를 확장합니다. 데이터베이스에 따라 사용자 데이터베이스를 선택하거나 **시스템 데이터베이스** 를 확장한 다음 시스템 데이터베이스를 선택합니다.  
   
-3.  데이터베이스를 마우스 오른쪽 단추로 클릭하고 **태스크**를 가리킨 다음 **복원**을 가리키고 **데이터베이스**를 클릭합니다.  
+3.  데이터베이스를 마우스 오른쪽 단추로 클릭하고 **태스크** 를 가리킨 다음 **복원** 을 가리키고 **데이터베이스** 를 클릭합니다.  
   
 4.  **일반** 페이지에서 **원본** 섹션을 사용하여 복원할 백업 집합의 원본과 위치를 지정합니다. 다음 옵션 중 하나를 선택합니다.  
   
@@ -78,7 +78,7 @@ ms.locfileid: "88429105"
   
     -   **디바이스**  
   
-         찾아보기( **...** ) 단추를 클릭하여 **백업 디바이스 선택** 대화 상자를 엽니다. **백업 미디어 유형** 상자에서 나열된 디바이스 유형 중 하나를 선택합니다. **백업 미디어** 상자에 대해 하나 이상의 디바이스를 선택하려면 **추가**를 클릭합니다.  
+         찾아보기( **...** ) 단추를 클릭하여 **백업 디바이스 선택** 대화 상자를 엽니다. **백업 미디어 유형** 상자에서 나열된 디바이스 유형 중 하나를 선택합니다. **백업 미디어** 상자에 대해 하나 이상의 디바이스를 선택하려면 **추가** 를 클릭합니다.  
   
          원하는 디바이스를 **백업 미디어** 목록 상자에 추가한 후 **확인** 을 클릭하여 **일반** 페이지로 돌아갑니다.  
   
@@ -88,9 +88,9 @@ ms.locfileid: "88429105"
   
 5.  **대상** 섹션의 **데이터베이스** 상자에는 복원할 데이터베이스의 이름이 자동으로 채워집니다. 데이터베이스의 이름을 변경하려면 **데이터베이스** 상자에 새 이름을 입력합니다.  
   
-6.  **일정**을 클릭하여 **백업 시간대** 대화 상자에 액세스합니다.  
+6.  **일정** 을 클릭하여 **백업 시간대** 대화 상자에 액세스합니다.  
   
-7.  **복원 위치** 섹션에서 **특정 날짜 및 시간**을 클릭합니다.  
+7.  **복원 위치** 섹션에서 **특정 날짜 및 시간** 을 클릭합니다.  
   
 8.  **날짜** 및 **시간** 상자 또는 슬라이더 막대를 사용하여 복원을 중지할 특정 날짜 및 시간을 지정합니다. [!INCLUDE[clickOK](../../includes/clickok-md.md)]  
   
@@ -138,9 +138,9 @@ ms.locfileid: "88429105"
   
  RESTORE LOG *database_name* FROM <backup_device> WITH STOPAT **=** _time_ **,** RECOVERY...  
   
- 복구 지점은 **time** 에 지정된 *datetime*값 또는 그전에 발생한 최근 트랜잭션 커밋입니다.  
+ 복구 지점은 **time** 에 지정된 *datetime* 값 또는 그전에 발생한 최근 트랜잭션 커밋입니다.  
   
- 특정 시점 이전에 수정한 내용만 복원하려면 복원하는 각 백업에 대해 WITH STOPAT **=** _time_을 지정합니다. 이렇게 하면 대상 시간을 지나치지 않게 됩니다.  
+ 특정 시점 이전에 수정한 내용만 복원하려면 복원하는 각 백업에 대해 WITH STOPAT **=** _time_ 을 지정합니다. 이렇게 하면 대상 시간을 지나치지 않게 됩니다.  
   
  **데이터베이스를 지정 시간으로 복원하려면**  
   
@@ -156,7 +156,7 @@ ms.locfileid: "88429105"
   
 3.  데이터베이스를 복구하지 않고 마지막 전체 데이터베이스 백업과 마지막 차등 데이터베이스 백업(있는 경우)을 복원합니다(RESTORE DATABASE *database_name* FROM *backup_device* WITH NORECOVERY).  
   
-4.  로그 복원을 중지할 시간을 지정하여 각 트랜잭션 로그 백업을 만들어진 순서대로 적용합니다(RESTORE DATABASE *database_name* FROM <backup_device> WITH STOPAT**=**_time_**,** RECOVERY).  
+4.  로그 복원을 중지할 시간을 지정하여 각 트랜잭션 로그 백업을 만들어진 순서대로 적용합니다(RESTORE DATABASE *database_name* FROM <backup_device> WITH STOPAT **=**_time_**,** RECOVERY).  
   
     > [!NOTE]  
     >  RECOVERY 및 STOPAT 옵션. 지정된 시간이 트랜잭션 로그에서 수용하는 시간을 초과하는 경우처럼 요청한 시간이 트랜잭션 로그 백업에 포함되지 않을 경우 경고가 생성되고 데이터베이스는 복구되지 않은 상태로 남습니다.  

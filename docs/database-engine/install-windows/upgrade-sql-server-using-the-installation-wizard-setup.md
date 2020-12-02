@@ -11,15 +11,15 @@ helpviewer_keywords:
 - upgrading Database Engine
 - Database Engine [SQL Server], upgrading
 ms.assetid: cef118a5-a7ce-4bfa-8b9d-c81996284cfc
-author: MashaMSFT
-ms.author: mathoma
+author: cawrites
+ms.author: chadam
 monikerRange: '>=sql-server-2016||=sqlallproducts-allversions'
-ms.openlocfilehash: 27f8f9e04bc78fb382a2f40826bc67215839460d
-ms.sourcegitcommit: 2f868a77903c1f1c4cecf4ea1c181deee12d5b15
+ms.openlocfilehash: 99e9c4af8006b621be0bc547f1c171019c6ec1c2
+ms.sourcegitcommit: 5a1ed81749800c33059dac91b0e18bd8bb3081b1
 ms.translationtype: HT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 10/02/2020
-ms.locfileid: "91670246"
+ms.lasthandoff: 11/23/2020
+ms.locfileid: "96125692"
 ---
 # <a name="upgrade-sql-server-using-the-installation-wizard-setup"></a>설치 마법사를 사용하여 SQL Server 업그레이드(설치 프로그램)
 
@@ -75,11 +75,11 @@ ms.locfileid: "91670246"
   
 1.  [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 설치 미디어를 넣고 루트 폴더에서 Setup.exe를 두 번 클릭합니다. 네트워크 공유에서 설치하려면 공유에서 루트 폴더로 이동한 다음 Setup.exe를 두 번 클릭합니다.  
   
-2.  설치 마법사가 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 설치 센터를 시작합니다. 기존 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 인스턴스를 업그레이드하려면 왼쪽 탐색 영역에서 **설치**를 클릭한 다음 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]의 이전 버전**에서 업그레이드**를 클릭합니다.  
+2.  설치 마법사가 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 설치 센터를 시작합니다. 기존 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 인스턴스를 업그레이드하려면 왼쪽 탐색 영역에서 **설치** 를 클릭한 다음 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]의 이전 버전 **에서 업그레이드** 를 클릭합니다.  
   
 3.  제품 키 페이지에서 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]무료 버전으로 업그레이드할지 아니면 제품의 프로덕션 버전에 대한 PID 키가 있는지를 나타내는 옵션을 클릭합니다. 자세한 내용은 [SQL Server 2016 버전 및 구성 요소](../../sql-server/editions-and-components-of-sql-server-2016.md) 및 [지원되는 버전 및 에디션 업그레이드](../../database-engine/install-windows/supported-version-and-edition-upgrades.md)를 참조하세요.  
   
-4.  사용 조건 페이지에서 사용권 계약을 검토하고 동의하면 **동의함** 확인란을 선택한 다음 **다음**을 클릭합니다. [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]의 개선을 돕기 위해 기능 사용 옵션을 사용하도록 설정하여 [!INCLUDE[msCoName](../../includes/msconame-md.md)]로 보고서를 보낼 수도 있습니다.  
+4.  사용 조건 페이지에서 사용권 계약을 검토하고 동의하면 **동의함** 확인란을 선택한 다음 **다음** 을 클릭합니다. [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]의 개선을 돕기 위해 기능 사용 옵션을 사용하도록 설정하여 [!INCLUDE[msCoName](../../includes/msconame-md.md)]로 보고서를 보낼 수도 있습니다.  
   
 5.  전역 규칙 창에서 규칙 오류가 없는 경우 설치 절차는 제품 업데이트 창으로 자동으로 진행됩니다.  
   
@@ -91,7 +91,7 @@ ms.locfileid: "91670246"
   
 9. 업그레이드 규칙 창에서 규칙 오류가 없는 경우 설치 절차는 인스턴스 선택 창으로 자동으로 진행됩니다.  
   
-10. 인스턴스 선택 페이지에서 업그레이드할 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 인스턴스를 지정합니다. 관리 도구 및 공유 기능을 업그레이드하려면 **공유 기능만 업그레이드**를 선택합니다.  
+10. 인스턴스 선택 페이지에서 업그레이드할 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 인스턴스를 지정합니다. 관리 도구 및 공유 기능을 업그레이드하려면 **공유 기능만 업그레이드** 를 선택합니다.  
   
 11. 기능 선택 페이지에는 업그레이드할 기능이 미리 선택되어 있습니다. 기능 이름을 선택하면 오른쪽 창에 각 구성 요소 그룹에 대한 설명이 나타납니다.  
   
@@ -118,17 +118,17 @@ ms.locfileid: "91670246"
   
      **보안 정보** [!INCLUDE[ssNoteStrongPass](../../includes/ssnotestrongpass-md.md)]  
   
-     [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 서비스에 대한 로그인 정보 지정을 완료하면 **다음**을 클릭합니다.  
+     [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 서비스에 대한 로그인 정보 지정을 완료하면 **다음** 을 클릭합니다.  
   
 15. 전체 텍스트 검색 업그레이드 옵션 페이지에서 업그레이드하려는 데이터베이스의 업그레이드 옵션을 지정합니다. 자세한 내용은 [전체 텍스트 검색 업그레이드](./install-sql-server.md)를 참조하세요.  
   
 16. 모든 규칙이 통과하면 기능 규칙 창이 자동으로 진행됩니다.  
   
-17. 업그레이드 준비 페이지에는 설치 중에 지정된 설치 옵션이 트리 뷰로 표시됩니다. 계속하려면 **설치**를 클릭합니다. [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 설치 프로그램은 선택한 기능에 대한 필수 구성 요소를 먼저 설치하고 그 다음에 기능을 설치합니다.  
+17. 업그레이드 준비 페이지에는 설치 중에 지정된 설치 옵션이 트리 뷰로 표시됩니다. 계속하려면 **설치** 를 클릭합니다. [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 설치 프로그램은 선택한 기능에 대한 필수 구성 요소를 먼저 설치하고 그 다음에 기능을 설치합니다.  
   
 18. 설치 중에 진행률 페이지에서 제공하는 상태 정보를 통해 설치 진행률을 모니터링할 수 있습니다.  
   
-19. 설치가 끝나면 설치 및 기타 중요한 참고 사항에 대한 요약 로그 파일을 볼 수 있는 링크가 완료 페이지에 제공됩니다. [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 설치 과정을 완료하려면 **닫기**를 클릭합니다.  
+19. 설치가 끝나면 설치 및 기타 중요한 참고 사항에 대한 요약 로그 파일을 볼 수 있는 링크가 완료 페이지에 제공됩니다. [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 설치 과정을 완료하려면 **닫기** 를 클릭합니다.  
   
 20. 컴퓨터를 다시 시작합니다. 설치가 끝나면 설치 마법사에 표시되는 메시지를 읽어야 합니다. 설치 로그 파일에 대한 자세한 내용은 [SQL Server 설치 로그 파일 보기 및 읽기](../../database-engine/install-windows/view-and-read-sql-server-setup-log-files.md)를 참조하세요.  
   

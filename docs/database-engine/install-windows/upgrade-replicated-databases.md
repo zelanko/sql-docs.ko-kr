@@ -14,15 +14,15 @@ helpviewer_keywords:
 - snapshot replication [SQL Server], upgrading databases
 - upgrading replicated databases
 ms.assetid: 9926a4f7-bcd8-4b9b-9dcf-5426a5857116
-author: MashaMSFT
-ms.author: mathoma
+author: cawrites
+ms.author: chadam
 monikerRange: '>=sql-server-2016||=sqlallproducts-allversions'
-ms.openlocfilehash: d7db0240ce9a94a5a7bb8431a79c9a66b468471d
-ms.sourcegitcommit: 2f868a77903c1f1c4cecf4ea1c181deee12d5b15
+ms.openlocfilehash: 55220291257cf90f7345acb63ce2369b9308f435
+ms.sourcegitcommit: 5a1ed81749800c33059dac91b0e18bd8bb3081b1
 ms.translationtype: HT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 10/02/2020
-ms.locfileid: "91670939"
+ms.lasthandoff: 11/23/2020
+ms.locfileid: "96125747"
 ---
 # <a name="upgrade-or-patch-replicated-databases"></a>복제된 데이터베이스 업그레이드 또는 패치
 
@@ -121,7 +121,7 @@ SQL Server 인스턴스를 SQL Server 2016 이상으로 업그레이드하려고
 
 
   >[!NOTE]
-  > 가동 중지 시간을 줄이려면 배포자의 *병렬 마이그레이션*을 하나의 작업으로 수행하고, *SQL Server 2016으로의 현재 위치 업그레이드*를 다른 하나의 작업으로 수행하는 것이 좋습니다. 이렇게 하면 단계별 방법을 수행하고, 위험을 줄이며, 가동 중지 시간을 최소화할 수 있습니다.
+  > 가동 중지 시간을 줄이려면 배포자의 *병렬 마이그레이션* 을 하나의 작업으로 수행하고, *SQL Server 2016으로의 현재 위치 업그레이드* 를 다른 하나의 작업으로 수행하는 것이 좋습니다. 이렇게 하면 단계별 방법을 수행하고, 위험을 줄이며, 가동 중지 시간을 최소화할 수 있습니다.
 
 ## <a name="web-synchronization-for-merge-replication"></a>병합 복제에 대한 웹 동기화  
  병합 복제에 대한 웹 동기화 옵션을 사용하려면 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 복제 수신기(replisapi.dll)를 동기화에 사용되는 인터넷 정보 서비스(IIS) 서버의 가상 디렉터리에 복사해야 합니다. 웹 동기화를 구성할 때는 웹 동기화 구성 마법사를 실행하여 가상 디렉터리에 파일을 복사합니다. IIS 서버에 설치된 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 구성 요소를 업그레이드하는 경우에는 COM 디렉터리의 replisapi.dll을 IIS 서버의 가상 디렉터리에 수동으로 복사해야 합니다. 웹 동기화를 구성하는 방법은 [웹 동기화 구성](../../relational-databases/replication/configure-web-synchronization.md)을 참조하세요.  

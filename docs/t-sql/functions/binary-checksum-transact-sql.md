@@ -21,11 +21,11 @@ author: markingmyname
 ms.author: maghan
 monikerRange: =azuresqldb-current||=azure-sqldw-latest||>=sql-server-2016||=sqlallproducts-allversions||>=sql-server-linux-2017||=azuresqldb-mi-current
 ms.openlocfilehash: 2dd65d2923d063440e292884da2bb4c6aecf0ec4
-ms.sourcegitcommit: ae474d21db4f724523e419622ce79f611e956a22
+ms.sourcegitcommit: 192f6a99e19e66f0f817fdb1977f564b2aaa133b
 ms.translationtype: HT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 10/20/2020
-ms.locfileid: "92255471"
+ms.lasthandoff: 11/25/2020
+ms.locfileid: "96124900"
 ---
 # <a name="binary_checksum--transact-sql"></a>BINARY_CHECKSUM(Transact-SQL)
 [!INCLUDE [sql-asdb-asdbmi-asa-pdw](../../includes/applies-to-version/sql-asdb-asdbmi-asa.md)]
@@ -77,7 +77,7 @@ BINARY_CHECKSUM ( * | expression [ ,...n ] )
 
 또는  
 
-* **sql_variant** ( **sql_variant** 의 기본 형식이 문자열 데이터 형식인 경우)입니다.  
+* **sql_variant**(**sql_variant** 의 기본 형식이 문자열 데이터 형식인 경우)입니다.  
   
 예를 들어 "McCavity" 및 "Mccavity" 문자열에는 서로 다른 `BINARY_CHECKSUM` 값이 있습니다. 그러나 대소문자를 구분하지 않는 서버의 경우 `CHECKSUM`은 해당 문자열에 대해 같은 체크섬 값을 반환합니다. `CHECKSUM` 값과 `BINARY_CHECKSUM` 값의 비교는 피해야 합니다.
  

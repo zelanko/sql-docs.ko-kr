@@ -22,11 +22,11 @@ author: rothja
 ms.author: jroth
 monikerRange: '>=aps-pdw-2016||=azuresqldb-current||=azure-sqldw-latest||>=sql-server-2016||=sqlallproducts-allversions||>=sql-server-linux-2017||=azuresqldb-mi-current'
 ms.openlocfilehash: 6670c42505ef245b06fb2f605ebca078167d1a6c
-ms.sourcegitcommit: cfa04a73b26312bf18d8f6296891679166e2754d
+ms.sourcegitcommit: 192f6a99e19e66f0f817fdb1977f564b2aaa133b
 ms.translationtype: HT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 10/19/2020
-ms.locfileid: "92196597"
+ms.lasthandoff: 11/25/2020
+ms.locfileid: "96124447"
 ---
 # <a name="-division-transact-sql"></a>/(나누기)(Transact-SQL)
 [!INCLUDE [sql-asdb-asdbmi-asa-pdw](../../includes/applies-to-version/sql-asdb-asdbmi-asa-pdw.md)]
@@ -45,15 +45,15 @@ dividend / divisor
 
 ## <a name="arguments"></a>인수
  *dividend*  
- 나눌 숫자 식입니다. *dividend*는 숫자 데이터 형식 범주에서 **datetime** 및 **smalldatetime** 데이터 형식을 제외한 데이터 형식 중 하나에 대한 올바른 [식](../../t-sql/language-elements/expressions-transact-sql.md)일 수 있습니다.  
+ 나눌 숫자 식입니다. *dividend* 는 숫자 데이터 형식 범주에서 **datetime** 및 **smalldatetime** 데이터 형식을 제외한 데이터 형식 중 하나에 대한 올바른 [식](../../t-sql/language-elements/expressions-transact-sql.md)일 수 있습니다.  
   
  *divisor*  
- 피제수를 나눌 숫자 식입니다. *divisor*는 숫자 데이터 형식 범주에서 **datetime** 및 **smalldatetime** 데이터 형식을 제외한 숫자 데이터 형식 범주의 데이터 형식 중 하나에 대한 올바른 식일 수 있습니다.  
+ 피제수를 나눌 숫자 식입니다. *divisor* 는 숫자 데이터 형식 범주에서 **datetime** 및 **smalldatetime** 데이터 형식을 제외한 숫자 데이터 형식 범주의 데이터 형식 중 하나에 대한 올바른 식일 수 있습니다.  
   
 ## <a name="result-types"></a>결과 형식  
  우선 순위가 높은 인수의 데이터 형식을 반환합니다. 자세한 내용은 [데이터 형식 우선 순위&#40;Transact-SQL&#41;](../../t-sql/data-types/data-type-precedence-transact-sql.md)를 참조하세요.  
   
- 정수 *dividend*를 정수 *divisor*로 나누면 결과는 소수 부분이 잘린 정수가 됩니다.  
+ 정수 *dividend* 를 정수 *divisor* 로 나누면 결과는 소수 부분이 잘린 정수가 됩니다.  
   
 ## <a name="remarks"></a>설명  
  / 연산자로 반환되는 실제 값은 첫째 식을 둘째 식으로 나누어 나온 몫입니다.  

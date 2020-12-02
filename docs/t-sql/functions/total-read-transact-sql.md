@@ -23,11 +23,11 @@ ms.assetid: b505fbe9-9569-4f3d-80b9-b64b5109ac98
 author: julieMSFT
 ms.author: jrasnick
 ms.openlocfilehash: 7f31072dc67bb72fcbf484d74d697594425c1256
-ms.sourcegitcommit: 197a6ffb643f93592edf9e90b04810a18be61133
+ms.sourcegitcommit: 192f6a99e19e66f0f817fdb1977f564b2aaa133b
 ms.translationtype: HT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 09/26/2020
-ms.locfileid: "91379551"
+ms.lasthandoff: 11/25/2020
+ms.locfileid: "96124576"
 ---
 # <a name="x40x40total_read-transact-sql"></a>&#x40;&#x40;TOTAL_READ (Transact-SQL)
 [!INCLUDE [SQL Server](../../includes/applies-to-version/sqlserver.md)]
@@ -48,7 +48,7 @@ ms.locfileid: "91379551"
  **integer**  
   
 ## <a name="remarks"></a>설명  
- 읽기와 쓰기 작업을 포함하여 여러 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 통계가 들어 있는 보고서를 표시하려면 **sp_monitor**를 실행합니다.  
+ 읽기와 쓰기 작업을 포함하여 여러 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 통계가 들어 있는 보고서를 표시하려면 **sp_monitor** 를 실행합니다.  
   
 ## <a name="examples"></a>예  
  다음 예에서는 현재 날짜 및 시간에서의 총 디스크 읽기 및 쓰기 수를 반환합니다.  

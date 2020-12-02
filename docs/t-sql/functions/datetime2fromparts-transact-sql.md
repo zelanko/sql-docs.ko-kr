@@ -20,11 +20,11 @@ author: markingmyname
 ms.author: maghan
 monikerRange: '>=aps-pdw-2016||=azuresqldb-current||=azure-sqldw-latest||>=sql-server-2016||=sqlallproducts-allversions||>=sql-server-linux-2017||=azuresqldb-mi-current'
 ms.openlocfilehash: 568c6334506b3b8cc2d186d9d6ad6ee48fa773ac
-ms.sourcegitcommit: cc23d8646041336d119b74bf239a6ac305ff3d31
+ms.sourcegitcommit: 192f6a99e19e66f0f817fdb1977f564b2aaa133b
 ms.translationtype: HT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 09/23/2020
-ms.locfileid: "91116799"
+ms.lasthandoff: 11/25/2020
+ms.locfileid: "96124786"
 ---
 # <a name="datetime2fromparts-transact-sql"></a>DATETIME2FROMPARTS(Transact-SQL)
 [!INCLUDE [sql-asdb-asdbmi-asa-pdw](../../includes/applies-to-version/sql-asdb-asdbmi-asa-pdw.md)]
@@ -72,7 +72,7 @@ DATETIME2FROMPARTS ( year, month, day, hour, minute, seconds, fractions, precisi
 ## <a name="remarks"></a>설명  
 `DATETIME2FROMPARTS`는 완전히 초기화된 **datetime2** 값을 반환합니다. `DATETIME2FROMPARTS`는 적어도 하나 이상의 필수 인수에 잘못된 값이 있는 경우 오류를 발생시킵니다. `DATETIME2FROMPARTS`는 적어도 하나 이상의 필수 인수에 null 값이 있는 경우 null을 반환합니다. 그러나 *전체 자릿수* 인수에 null 값이 있는 경우 `DATETIME2FROMPARTS`에서 오류를 발생시킵니다.
 
-*fractions* 인수는 *precision* 인수에 의존합니다. 예를 들어 *precision*의 값이 7이면 각 소수 자릿수가 100나노초를 나타내고 *precision*이 3이면 각 소수 자릿수가 1밀리초를 나타냅니다. *precision*의 값이 0이면 *fractions*의 값도 0이어야 합니다. 그렇지 않으면 `DATETIME2FROMPARTS`가 오류를 발생시킵니다.
+*fractions* 인수는 *precision* 인수에 의존합니다. 예를 들어 *precision* 의 값이 7이면 각 소수 자릿수가 100나노초를 나타내고 *precision* 이 3이면 각 소수 자릿수가 1밀리초를 나타냅니다. *precision* 의 값이 0이면 *fractions* 의 값도 0이어야 합니다. 그렇지 않으면 `DATETIME2FROMPARTS`가 오류를 발생시킵니다.
   
 이 함수는 [!INCLUDE[ssCurrent](../../includes/sscurrent-md.md)] 서버 이상에 대한 원격 처리를 지원합니다. [!INCLUDE[ssCurrent](../../includes/sscurrent-md.md)] 이전 버전이 설치되어 있는 서버에 대해서는 원격 처리를 지원하지 않습니다.
   
@@ -97,11 +97,11 @@ Result
 ### <a name="b-example-with-fractions-of-a-second"></a>B. 소수 단위 초를 사용하는 예  
 이 예에서는 *fractions* 및 *precision* 매개 변수의 사용 방법을 설명합니다.
   
-1.  *fractions*의 값이 5이고 *precision*의 값이 1이면, *fractions*의 값은 1초의 5/10를 나타냅니다.  
+1.  *fractions* 의 값이 5이고 *precision* 의 값이 1이면, *fractions* 의 값은 1초의 5/10를 나타냅니다.  
   
-2.  *fractions*의 값이 50이고 *precision*의 값이 2이면, *fractions*의 값은 1초의 50/100을 나타냅니다.  
+2.  *fractions* 의 값이 50이고 *precision* 의 값이 2이면, *fractions* 의 값은 1초의 50/100을 나타냅니다.  
   
-3.  *fractions*의 값이 500이고 *precision*의 값이 3이면, *fractions*의 값은 1초의 500/1000을 나타냅니다.  
+3.  *fractions* 의 값이 500이고 *precision* 의 값이 3이면, *fractions* 의 값은 1초의 500/1000을 나타냅니다.  
   
 ```sql
 SELECT DATETIME2FROMPARTS ( 2011, 8, 15, 14, 23, 44, 5, 1 );  

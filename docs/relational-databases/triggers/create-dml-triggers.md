@@ -21,11 +21,11 @@ author: rothja
 ms.author: jroth
 monikerRange: =azuresqldb-current||>=sql-server-2016||=sqlallproducts-allversions||>=sql-server-linux-2017||=azuresqldb-mi-current
 ms.openlocfilehash: aace4785289cd041b72c98a880ac38741bf0d641
-ms.sourcegitcommit: e700497f962e4c2274df16d9e651059b42ff1a10
+ms.sourcegitcommit: 192f6a99e19e66f0f817fdb1977f564b2aaa133b
 ms.translationtype: HT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 08/17/2020
-ms.locfileid: "88446364"
+ms.lasthandoff: 11/25/2020
+ms.locfileid: "96125055"
 ---
 # <a name="create-dml-triggers"></a>DML 트리거 만들기
 [!INCLUDE [SQL Server SQL Database](../../includes/applies-to-version/sql-asdb.md)]
@@ -48,13 +48,13 @@ ms.locfileid: "88446364"
   
 ###  <a name="using-sql-server-management-studio"></a><a name="SSMSProcedure"></a> SQL Server Management Studio 사용  
   
-1.  **개체 탐색기**에서 [!INCLUDE[ssDE](../../includes/ssde-md.md)] 의 인스턴스에 연결한 다음 해당 인스턴스를 확장합니다.  
+1.  **개체 탐색기** 에서 [!INCLUDE[ssDE](../../includes/ssde-md.md)] 의 인스턴스에 연결한 다음 해당 인스턴스를 확장합니다.  
   
-2.  **데이터베이스**, [!INCLUDE[ssSampleDBobject](../../includes/sssampledbobject-md.md)] 데이터베이스, **테이블** 및 **Purchasing.PurchaseOrderHeader**테이블을 차례로 확장합니다.  
+2.  **데이터베이스**, [!INCLUDE[ssSampleDBobject](../../includes/sssampledbobject-md.md)] 데이터베이스, **테이블** 및 **Purchasing.PurchaseOrderHeader** 테이블을 차례로 확장합니다.  
   
-3.  **트리거**를 마우스 오른쪽 단추로 클릭한 다음 **새 트리거**를 선택합니다.  
+3.  **트리거** 를 마우스 오른쪽 단추로 클릭한 다음 **새 트리거** 를 선택합니다.  
   
-4.  **쿼리** 메뉴에서 **템플릿 매개 변수 값 지정**을 클릭합니다. 또는 (Ctrl-Shift-M)을 눌러 **템플릿 매개 변수 값 지정** 대화 상자를 열 수 있습니다.  
+4.  **쿼리** 메뉴에서 **템플릿 매개 변수 값 지정** 을 클릭합니다. 또는 (Ctrl-Shift-M)을 눌러 **템플릿 매개 변수 값 지정** 대화 상자를 열 수 있습니다.  
   
 5.  **템플릿 매개 변수 값 지정** 대화 상자에 표시된 매개 변수에 대해 다음 값을 입력합니다.  
   
@@ -68,9 +68,9 @@ ms.locfileid: "88446364"
     |Table_Name|PurchaseOrderDetail|  
     |Data_Modification_Statement|목록에서 UPDATE 및 DELETE를 제거합니다.|  
   
-6.  **확인**을 클릭합니다.  
+6.  **확인** 을 클릭합니다.  
   
-7.  **쿼리 편집기**에서 `-- Insert statements for trigger here` 주석을 다음 문으로 바꿉니다.  
+7.  **쿼리 편집기** 에서 `-- Insert statements for trigger here` 주석을 다음 문으로 바꿉니다.  
   
     ```sql  
     IF @@ROWCOUNT = 1  
@@ -94,21 +94,21 @@ ms.locfileid: "88446364"
     END;  
     ```  
   
-8.  구문이 올바른지 확인하려면 **쿼리** 메뉴에서 **구문 분석**을 클릭합니다. 오류 메시지가 반환되면 필요에 따라 위의 정보와 문을 비교하여 수정하고 이 단계를 반복합니다.  
+8.  구문이 올바른지 확인하려면 **쿼리** 메뉴에서 **구문 분석** 을 클릭합니다. 오류 메시지가 반환되면 필요에 따라 위의 정보와 문을 비교하여 수정하고 이 단계를 반복합니다.  
   
-9. DML 트리거를 만들려면 **쿼리** 메뉴에서 **실행**을 클릭합니다. DML 트리거가 데이터베이스 개체로 만들어집니다.  
+9. DML 트리거를 만들려면 **쿼리** 메뉴에서 **실행** 을 클릭합니다. DML 트리거가 데이터베이스 개체로 만들어집니다.  
   
-10. 개체 탐색기에 나열된 DML 트리거를 보려면 **트리거** 를 마우스 오른쪽 단추로 클릭하고 **새로 고침**을 선택합니다.  
+10. 개체 탐색기에 나열된 DML 트리거를 보려면 **트리거** 를 마우스 오른쪽 단추로 클릭하고 **새로 고침** 을 선택합니다.  
 
  [시작하기 전에](#Top)  
   
 ###  <a name="using-transact-sql"></a><a name="TsqlProcedure"></a> Transact-SQL 사용  
   
-1.  **개체 탐색기**에서 [!INCLUDE[ssDE](../../includes/ssde-md.md)] 의 인스턴스에 연결한 다음 해당 인스턴스를 확장합니다.  
+1.  **개체 탐색기** 에서 [!INCLUDE[ssDE](../../includes/ssde-md.md)] 의 인스턴스에 연결한 다음 해당 인스턴스를 확장합니다.  
   
-2.  메뉴에서 **파일** 메뉴에서 **새 쿼리**를 클릭합니다.  
+2.  메뉴에서 **파일** 메뉴에서 **새 쿼리** 를 클릭합니다.  
   
-3.  다음 예를 복사하여 쿼리 창에 붙여 넣고 **실행**을 클릭합니다. 이 예에서는 위와 동일한 저장된 DML 트리거를 만듭니다.  
+3.  다음 예를 복사하여 쿼리 창에 붙여 넣고 **실행** 을 클릭합니다. 이 예에서는 위와 동일한 저장된 DML 트리거를 만듭니다.  
   
     ```sql  
     -- Trigger valid for multirow and single row inserts  

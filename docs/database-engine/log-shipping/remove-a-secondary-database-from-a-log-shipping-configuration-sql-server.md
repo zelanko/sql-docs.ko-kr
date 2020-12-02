@@ -14,14 +14,14 @@ helpviewer_keywords:
 - secondary data files [SQL Server], removing
 - log shipping [SQL Server], secondary databases
 ms.assetid: ebe368a4-ca1c-45d0-9a71-3ddbd5b26a8e
-author: MashaMSFT
-ms.author: mathoma
-ms.openlocfilehash: db79ab9084e1c633af66736d6974487e00182385
-ms.sourcegitcommit: da88320c474c1c9124574f90d549c50ee3387b4c
+author: cawrites
+ms.author: chadam
+ms.openlocfilehash: d06b864f4a14b15acaf978d74d8224019dc010b1
+ms.sourcegitcommit: 5a1ed81749800c33059dac91b0e18bd8bb3081b1
 ms.translationtype: HT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 07/01/2020
-ms.locfileid: "85695756"
+ms.lasthandoff: 11/23/2020
+ms.locfileid: "96125711"
 ---
 # <a name="remove-a-secondary-database-from-a-log-shipping-configuration-sql-server"></a>로그 전달 구성에서 보조 데이터베이스 제거(SQL Server)
  [!INCLUDE [SQL Server](../../includes/applies-to-version/sqlserver.md)]
@@ -54,13 +54,13 @@ ms.locfileid: "85695756"
   
 1.  현재 로그 전달 주 서버인 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 의 인스턴스에 연결하고 해당 인스턴스를 확장합니다.  
   
-2.  **데이터베이스**를 확장하고 로그 전달 주 데이터베이스를 마우스 오른쪽 단추로 클릭한 다음 **속성**을 클릭합니다.  
+2.  **데이터베이스** 를 확장하고 로그 전달 주 데이터베이스를 마우스 오른쪽 단추로 클릭한 다음 **속성** 을 클릭합니다.  
   
-3.  **페이지 선택**에서 **트랜잭션 로그 전달**을 클릭합니다.  
+3.  **페이지 선택** 에서 **트랜잭션 로그 전달** 을 클릭합니다.  
   
-4.  **보조 서버 인스턴스 및 데이터베이스**에서 제거할 데이터베이스를 클릭합니다.  
+4.  **보조 서버 인스턴스 및 데이터베이스** 에서 제거할 데이터베이스를 클릭합니다.  
   
-5.  **제거**를 클릭합니다.  
+5.  **제거** 를 클릭합니다.  
   
 6.  **확인** 을 클릭하여 구성을 업데이트합니다.  
   

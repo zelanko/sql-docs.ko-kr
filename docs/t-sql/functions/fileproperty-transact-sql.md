@@ -24,11 +24,11 @@ ms.assetid: b82244ed-d623-431f-aa06-8017349d847f
 author: markingmyname
 ms.author: maghan
 ms.openlocfilehash: 524fe8130742a58da0c806c8ad35c9287c732017
-ms.sourcegitcommit: cc23d8646041336d119b74bf239a6ac305ff3d31
+ms.sourcegitcommit: 192f6a99e19e66f0f817fdb1977f564b2aaa133b
 ms.translationtype: HT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 09/23/2020
-ms.locfileid: "91116392"
+ms.lasthandoff: 11/25/2020
+ms.locfileid: "96124720"
 ---
 # <a name="fileproperty-transact-sql"></a>FILEPROPERTY(Transact-SQL)
 [!INCLUDE [SQL Server](../../includes/applies-to-version/sqlserver.md)]
@@ -47,10 +47,10 @@ FILEPROPERTY ( file_name , property )
 
 ## <a name="arguments"></a>인수
  *file_name*  
- 속성 정보를 반환할 현재 데이터베이스에 관련된 파일 이름이 포함된 식입니다. *file_name*은 **nchar (128)** 입니다.  
+ 속성 정보를 반환할 현재 데이터베이스에 관련된 파일 이름이 포함된 식입니다. *file_name* 은 **nchar (128)** 입니다.  
   
  *property*  
- 반환할 파일 속성의 이름이 포함된 식입니다. *속성*은 **varchar(128)** 이며 다음 값 중 하나일 수 있습니다.  
+ 반환할 파일 속성의 이름이 포함된 식입니다. *속성* 은 **varchar(128)** 이며 다음 값 중 하나일 수 있습니다.  
   
 |값|Description|반환 값|  
 |-----------|-----------------|--------------------|  
@@ -63,7 +63,7 @@ FILEPROPERTY ( file_name , property )
  **int**  
   
 ## <a name="remarks"></a>설명  
- *file_name*은 **sys.master_files** 또는 **sys.database_files** 카탈로그 뷰의 **이름** 열에 해당됩니다.  
+ *file_name* 은 **sys.master_files** 또는 **sys.database_files** 카탈로그 뷰의 **이름** 열에 해당됩니다.  
   
 ## <a name="examples"></a>예제  
  다음 예에서는 `IsPrimaryFile` 데이터베이스에 있는 `AdventureWorks_Data` 파일 이름에 대한 [!INCLUDE[ssSampleDBnormal](../../includes/sssampledbnormal-md.md)] 속성의 설정을 반환합니다.  

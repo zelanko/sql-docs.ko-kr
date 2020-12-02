@@ -22,11 +22,11 @@ ms.assetid: 15fda1b2-e4dd-4f9d-935a-2e38926075b2
 author: markingmyname
 ms.author: maghan
 ms.openlocfilehash: 4f6d90dce7df2acb45c28ac7ebb74c4d03817fec
-ms.sourcegitcommit: ac9feb0b10847b369b77f3c03f8200c86ee4f4e0
+ms.sourcegitcommit: 192f6a99e19e66f0f817fdb1977f564b2aaa133b
 ms.translationtype: HT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 09/16/2020
-ms.locfileid: "90688063"
+ms.lasthandoff: 11/25/2020
+ms.locfileid: "96124305"
 ---
 # <a name="alter-broker-priority-transact-sql"></a>ALTER BROKER PRIORITY(Transact-SQL)
 [!INCLUDE [SQL Server](../../includes/applies-to-version/sqlserver.md)]
@@ -62,10 +62,10 @@ FOR CONVERSATION
  대화 우선 순위를 대화에 적용할지 여부를 결정하는 조건을 지정합니다. SET은 필수이며 CONTRACT_NAME, LOCAL_SERVICE_NAME, REMOTE_SERVICE_NAME 또는 PRIORITY_LEVEL 조건을 하나 이상 포함해야 합니다.  
   
  CONTRACT_NAME = {*ContractName* | **ANY**}  
- 대화 우선 순위를 대화에 적용할지 여부를 결정하기 위한 조건으로 사용할 계약 이름을 지정합니다. *ContractName*은 [!INCLUDE[ssDE](../../includes/ssde-md.md)] 식별자이며 현재 데이터베이스의 계약 이름을 지정해야 합니다.  
+ 대화 우선 순위를 대화에 적용할지 여부를 결정하기 위한 조건으로 사용할 계약 이름을 지정합니다. *ContractName* 은 [!INCLUDE[ssDE](../../includes/ssde-md.md)] 식별자이며 현재 데이터베이스의 계약 이름을 지정해야 합니다.  
   
  *ContractName*  
- 대화를 시작한 BEGIN DIALOG 문에 ON CONTRACT *ContractName*이 지정된 대화에만 대화 우선 순위가 적용될 수 있도록 지정합니다.  
+ 대화를 시작한 BEGIN DIALOG 문에 ON CONTRACT *ContractName* 이 지정된 대화에만 대화 우선 순위가 적용될 수 있도록 지정합니다.  
   
  ANY  
  사용하는 계약에 관계없이 모든 대화에 대화 우선 순위가 적용될 수 있도록 지정합니다.  
@@ -75,14 +75,14 @@ FOR CONVERSATION
  LOCAL_SERVICE_NAME = {*LocalServiceName* | **ANY**}  
  대화 엔드포인트에 대화 우선 순위를 적용할지 여부를 결정하는 조건으로 사용될 서비스 이름을 지정합니다.  
   
- *LocalServiceName*은 [!INCLUDE[ssDE](../../includes/ssde-md.md)] 식별자이며 현재 데이터베이스에 있는 서비스의 이름을 지정해야 합니다.  
+ *LocalServiceName* 은 [!INCLUDE[ssDE](../../includes/ssde-md.md)] 식별자이며 현재 데이터베이스에 있는 서비스의 이름을 지정해야 합니다.  
   
  *LocalServiceName*  
  대화 우선 순위가 다음 항목에 적용될 수 있도록 지정합니다.  
   
--   시작자 서비스 이름이 *LocalServiceName*과 일치하는 모든 시작자 대화 엔드포인트입니다.  
+-   시작자 서비스 이름이 *LocalServiceName* 과 일치하는 모든 시작자 대화 엔드포인트입니다.  
   
--   대상 서비스 이름이 *LocalServiceName*과 일치하는 모든 대상 대화 엔드포인트입니다.  
+-   대상 서비스 이름이 *LocalServiceName* 과 일치하는 모든 대상 대화 엔드포인트입니다.  
   
  ANY  
  -   엔드포인트에서 사용하는 로컬 서비스 이름에 관계없이 모든 대화 엔드포인트에 대화 우선 순위가 적용될 수 있도록 지정합니다.  
@@ -92,14 +92,14 @@ FOR CONVERSATION
  REMOTE_SERVICE_NAME = {'*RemoteServiceName*' | **ANY**}  
  대화 엔드포인트에 대화 우선 순위를 적용할지 여부를 결정하는 조건으로 사용될 서비스 이름을 지정합니다.  
   
- *RemoteServiceName*은 **nvarchar(256)** 형식의 리터럴입니다. [!INCLUDE[ssSB](../../includes/sssb-md.md)]에서는 바이트 단위로 비교하여 일치하는 *RemoteServiceName*를 찾습니다. 비교 시 대/소문자가 구분되고 현재 데이터 정렬은 고려되지 않습니다. 대상 서비스는 현재 [!INCLUDE[ssDE](../../includes/ssde-md.md)] 인스턴스 또는 원격 [!INCLUDE[ssDE](../../includes/ssde-md.md)] 인스턴스에 있을 수 있습니다.  
+ *RemoteServiceName* 은 **nvarchar(256)** 형식의 리터럴입니다. [!INCLUDE[ssSB](../../includes/sssb-md.md)]에서는 바이트 단위로 비교하여 일치하는 *RemoteServiceName* 를 찾습니다. 비교 시 대/소문자가 구분되고 현재 데이터 정렬은 고려되지 않습니다. 대상 서비스는 현재 [!INCLUDE[ssDE](../../includes/ssde-md.md)] 인스턴스 또는 원격 [!INCLUDE[ssDE](../../includes/ssde-md.md)] 인스턴스에 있을 수 있습니다.  
   
  '*RemoteServiceName*'  
  대화 우선 순위가 다음 항목에 적용되도록 지정합니다.  
   
--   연결된 대상 서비스 이름이 *RemoteServiceName*과 일치하는 모든 시작자 대화 엔드포인트입니다.  
+-   연결된 대상 서비스 이름이 *RemoteServiceName* 과 일치하는 모든 시작자 대화 엔드포인트입니다.  
   
--   연결된 시작 서비스 이름이 *RemoteServiceName*과 일치하는 모든 대상 대화 엔드포인트입니다.  
+-   연결된 시작 서비스 이름이 *RemoteServiceName* 과 일치하는 모든 대상 대화 엔드포인트입니다.  
   
  ANY  
  엔드포인트와 연결된 원격 서비스 이름에 관계없이 모든 대화 엔드포인트에 대화 우선 순위가 적용되도록 지정합니다.  
@@ -107,7 +107,7 @@ FOR CONVERSATION
  REMOTE_SERVICE_NAME을 지정하지 않으면 대화 우선 순위의 원격 서비스 속성이 변경되지 않습니다.  
   
  PRIORITY_LEVEL = { *PriorityValue* | **DEFAULT** }  
- 대화 우선 순위에 지정된 계약 및 서비스를 사용하는 모든 대화 엔드포인트에 할당할 우선 순위 수준을 지정합니다. *PriorityValue*는 1(가장 낮은 우선 순위)에서 10(가장 높은 우선 순위) 사이의 정수 리터럴이어야 합니다.  
+ 대화 우선 순위에 지정된 계약 및 서비스를 사용하는 모든 대화 엔드포인트에 할당할 우선 순위 수준을 지정합니다. *PriorityValue* 는 1(가장 낮은 우선 순위)에서 10(가장 높은 우선 순위) 사이의 정수 리터럴이어야 합니다.  
   
  PRIORITY_LEVEL을 지정하지 않으면 대화 우선 순위의 우선 순위 수준 속성이 변경되지 않습니다.  
   

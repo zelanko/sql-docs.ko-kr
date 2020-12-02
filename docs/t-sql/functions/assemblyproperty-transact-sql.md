@@ -20,11 +20,11 @@ ms.assetid: cf03d1b1-724c-48bf-a8df-3fe2586b150a
 author: markingmyname
 ms.author: maghan
 ms.openlocfilehash: 722d6c4b2130ad51c2249f083691233524d3834c
-ms.sourcegitcommit: 22dacedeb6e8721e7cdb6279a946d4002cfb5da3
+ms.sourcegitcommit: 192f6a99e19e66f0f817fdb1977f564b2aaa133b
 ms.translationtype: HT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 10/14/2020
-ms.locfileid: "92037086"
+ms.lasthandoff: 11/25/2020
+ms.locfileid: "96124914"
 ---
 # <a name="assemblyproperty-transact-sql"></a>ASSEMBLYPROPERTY(Transact-SQL)
 [!INCLUDE [SQL Server](../../includes/applies-to-version/sqlserver.md)]
@@ -46,7 +46,7 @@ ASSEMBLYPROPERTY('assembly_name', 'property_name')
 어셈블리의 이름입니다.
   
 *property_name*  
-정보를 검색할 속성의 이름입니다. *property_name*은 다음 값 중 하나일 수 있습니다.
+정보를 검색할 속성의 이름입니다. *property_name* 은 다음 값 중 하나일 수 있습니다.
   
 |값|Description|  
 |---|---|

@@ -19,11 +19,11 @@ author: MikeRayMSFT
 ms.author: mikeray
 monikerRange: =azuresqldb-current||>=sql-server-2016||=sqlallproducts-allversions||>=sql-server-linux-2017||=azuresqldb-mi-current
 ms.openlocfilehash: 04c45acc426cdeb187fd673756da388f971fe24e
-ms.sourcegitcommit: e700497f962e4c2274df16d9e651059b42ff1a10
+ms.sourcegitcommit: 192f6a99e19e66f0f817fdb1977f564b2aaa133b
 ms.translationtype: HT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 08/17/2020
-ms.locfileid: "88382619"
+ms.lasthandoff: 11/25/2020
+ms.locfileid: "96125176"
 ---
 # <a name="create-nonclustered-indexes"></a>비클러스터형 인덱스 만들기
 [!INCLUDE [SQL Server Azure SQL Database](../../includes/applies-to-version/sql-asdb.md)]
@@ -60,19 +60,19 @@ ms.locfileid: "88382619"
   
 2.  **테이블** 폴더를 확장합니다.  
   
-3.  비클러스터형 인덱스를 만들 테이블을 마우스 오른쪽 단추로 클릭하고 **디자인**을 선택합니다.  
+3.  비클러스터형 인덱스를 만들 테이블을 마우스 오른쪽 단추로 클릭하고 **디자인** 을 선택합니다.  
   
-4.  **테이블 디자이너** 메뉴에서 **인덱스/키**를 클릭합니다.  
+4.  **테이블 디자이너** 메뉴에서 **인덱스/키** 를 클릭합니다.  
   
-5.  **인덱스/키** 대화 상자에서 **추가**를 클릭합니다.  
+5.  **인덱스/키** 대화 상자에서 **추가** 를 클릭합니다.  
   
 6.  **선택한 기본/고유 키 또는 인덱스** 입력란에서 새 인덱스를 선택합니다.  
   
-7.  표에서 **CLUSTERED로 만들기**를 선택하고 속성 오른쪽에 있는 드롭다운 목록에서 **아니요** 를 선택합니다.  
+7.  표에서 **CLUSTERED로 만들기** 를 선택하고 속성 오른쪽에 있는 드롭다운 목록에서 **아니요** 를 선택합니다.  
   
-8.  **닫기**를 클릭합니다.  
+8.  **닫기** 를 클릭합니다.  
   
-9. **파일** 메뉴에서 _table name_**저장**을 클릭합니다.  
+9. **파일** 메뉴에서 _table name_**저장** 을 클릭합니다.  
 
 #### <a name="to-create-a-nonclustered-index-by-using-object-explorer"></a>개체 탐색기를 사용하여 비클러스터형 인덱스를 만들려면  
   
@@ -82,7 +82,7 @@ ms.locfileid: "88382619"
   
 3.  비클러스터형 인덱스를 만들 테이블을 확장합니다.  
   
-4.  **인덱스** 폴더를 마우스 오른쪽 단추로 클릭하고 **새 인덱스**를 가리킨 다음, **비클러스터형 인덱스...** 를 선택합니다.  
+4.  **인덱스** 폴더를 마우스 오른쪽 단추로 클릭하고 **새 인덱스** 를 가리킨 다음, **비클러스터형 인덱스...** 를 선택합니다.  
   
 5.  **새 인덱스** 대화 상자의 **일반** 페이지에서 **인덱스 이름** 상자에 새 인덱스의 이름을 입력합니다.  
   
@@ -90,19 +90,19 @@ ms.locfileid: "88382619"
   
 7.  **table_name**_에서 열 선택_ 대화 상자에서 비클러스터형 인덱스에 추가할 테이블 열의 확인란을 선택합니다.  
   
-8.  **확인**을 클릭합니다.  
+8.  **확인** 을 클릭합니다.  
   
-9. **새 인덱스** 대화 상자에서 **확인**을 클릭합니다.  
+9. **새 인덱스** 대화 상자에서 **확인** 을 클릭합니다.  
   
 ##  <a name="using-transact-sql"></a><a name="TsqlProcedure"></a> Transact-SQL 사용  
   
 #### <a name="to-create-a-nonclustered-index-on-a-table"></a>테이블에 비클러스터형 인덱스를 만들려면  
   
-1.  **개체 탐색기**에서 [!INCLUDE[ssDE](../../includes/ssde-md.md)]인스턴스에 연결합니다.  
+1.  **개체 탐색기** 에서 [!INCLUDE[ssDE](../../includes/ssde-md.md)]인스턴스에 연결합니다.  
   
-2.  표준 도구 모음에서 **새 쿼리**를 클릭합니다.  
+2.  표준 도구 모음에서 **새 쿼리** 를 클릭합니다.  
   
-3.  다음 예를 복사하여 쿼리 창에 붙여 넣고 **실행**을 클릭합니다.  
+3.  다음 예를 복사하여 쿼리 창에 붙여 넣고 **실행** 을 클릭합니다.  
   
     ```sql  
     USE AdventureWorks2012;  

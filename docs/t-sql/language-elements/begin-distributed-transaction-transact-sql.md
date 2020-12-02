@@ -28,11 +28,11 @@ ms.assetid: c3bc2716-39d3-4061-8c6a-8734899231ac
 author: rothja
 ms.author: jroth
 ms.openlocfilehash: 757e838efe95130f745cf8966789cab4432bc0d5
-ms.sourcegitcommit: cfa04a73b26312bf18d8f6296891679166e2754d
+ms.sourcegitcommit: 192f6a99e19e66f0f817fdb1977f564b2aaa133b
 ms.translationtype: HT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 10/19/2020
-ms.locfileid: "92196857"
+ms.lasthandoff: 11/25/2020
+ms.locfileid: "96124523"
 ---
 # <a name="begin-distributed-transaction-transact-sql"></a>BEGIN DISTRIBUTED TRANSACTION(Transact-SQL)
 [!INCLUDE [SQL Server](../../includes/applies-to-version/sqlserver.md)]
@@ -54,7 +54,7 @@ BEGIN DISTRIBUTED { TRAN | TRANSACTION }
 
 ## <a name="arguments"></a>인수
  *transaction_name*  
- MS DTC 유틸리티에서 분산 트랜잭션을 추적하는 데 사용되는 사용자 정의 트랜잭션 이름입니다. *transaction_name*은 식별자 규칙을 따라야 하며 \<=32자여야 합니다.  
+ MS DTC 유틸리티에서 분산 트랜잭션을 추적하는 데 사용되는 사용자 정의 트랜잭션 이름입니다. *transaction_name* 은 식별자 규칙을 따라야 하며 \<=32자여야 합니다.  
   
  @*tran_name_variable*  
  MS DTC 유틸리티에서 분산 트랜잭션 추적에 사용되는 트랜잭션 이름이 포함된 사용자 정의 변수의 이름입니다. 변수는 **char**, **varchar**, **nchar** 또는 **nvarchar** 데이터 형식으로 선언해야 합니다.  
@@ -74,7 +74,7 @@ BEGIN DISTRIBUTED { TRAN | TRANSACTION }
   
  분산 트랜잭션에 이미 참여한 세션은 원격 서버를 참조하는 원격 저장 프로시저 호출을 수행합니다.  
   
- **sp_configure remote proc trans** 옵션은 로컬 트랜잭션에서 원격 저장 프로시저를 호출하면 자동으로 로컬 트랜잭션이 MS DTC에서 관리되는 분산 트랜잭션으로 승격되도록 할지를 제어합니다. 연결 수준의 SET 옵션 REMOTE_PROC_TRANSACTIONS를 사용하여 **sp_configure remote proc trans**에서 설정한 인스턴스 기본값을 무시할 수 있습니다. 이 옵션을 설정하면 원격 저장 프로시저 호출에 의해 로컬 트랜잭션이 분산 트랜잭션으로 승격됩니다. MS DTC 트랜잭션을 만든 연결은 트랜잭션 주관자가 되며 COMMIT TRANSACTION은 MS DTC 통합 커밋을 시작합니다. **sp_configure remote proc trans** 옵션이 ON인 경우 BEGIN TRANSACTION 대신 BEGIN DISTRIBUTED TRANSACTION을 실행하도록 애플리케이션을 다시 작성할 필요 없이 로컬 트랜잭션의 원격 저장 프로시저 호출이 분산 트랜잭션의 일부로 자동 보호됩니다.  
+ **sp_configure remote proc trans** 옵션은 로컬 트랜잭션에서 원격 저장 프로시저를 호출하면 자동으로 로컬 트랜잭션이 MS DTC에서 관리되는 분산 트랜잭션으로 승격되도록 할지를 제어합니다. 연결 수준의 SET 옵션 REMOTE_PROC_TRANSACTIONS를 사용하여 **sp_configure remote proc trans** 에서 설정한 인스턴스 기본값을 무시할 수 있습니다. 이 옵션을 설정하면 원격 저장 프로시저 호출에 의해 로컬 트랜잭션이 분산 트랜잭션으로 승격됩니다. MS DTC 트랜잭션을 만든 연결은 트랜잭션 주관자가 되며 COMMIT TRANSACTION은 MS DTC 통합 커밋을 시작합니다. **sp_configure remote proc trans** 옵션이 ON인 경우 BEGIN TRANSACTION 대신 BEGIN DISTRIBUTED TRANSACTION을 실행하도록 애플리케이션을 다시 작성할 필요 없이 로컬 트랜잭션의 원격 저장 프로시저 호출이 분산 트랜잭션의 일부로 자동 보호됩니다.  
   
  분산 트랜잭션 환경 및 프로세스에 대한 자세한 내용은 [!INCLUDE[msCoName](../../includes/msconame-md.md)] Distributed Transaction Coordinator 설명서를 참조하십시오.  
   

@@ -18,14 +18,14 @@ helpviewer_keywords:
 - Transact-SQL restore sequence
 - file restores [SQL Server], Transact-SQL restore sequence
 ms.assetid: d2236a2a-4cf1-4c3f-b542-f73f6096e15c
-author: mashamsft
-ms.author: mathoma
-ms.openlocfilehash: 36eef2c38d708b3634d669830e34f46a8480e138
-ms.sourcegitcommit: 04cf7905fa32e0a9a44575a6f9641d9a2e5ac0f8
+author: cawrites
+ms.author: chadam
+ms.openlocfilehash: 69ad35549678772fc0da1c834ba4064beeb19ed7
+ms.sourcegitcommit: 5a1ed81749800c33059dac91b0e18bd8bb3081b1
 ms.translationtype: HT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 10/07/2020
-ms.locfileid: "91809712"
+ms.lasthandoff: 11/23/2020
+ms.locfileid: "96125603"
 ---
 # <a name="file-restores-full-recovery-model"></a>파일 복원(전체 복구 모델)
  [!INCLUDE [SQL Server](../../includes/applies-to-version/sqlserver.md)]
@@ -42,13 +42,13 @@ ms.locfileid: "91809712"
   
 -   오프라인 파일 복원  
   
-     *오프라인 파일 복원*에서 손상된 파일 또는 파일 그룹이 복원되는 동안 데이터베이스는 오프라인 상태입니다. 복원 시퀀스의 마지막에 데이터베이스는 온라인 상태가 됩니다.  
+     *오프라인 파일 복원* 에서 손상된 파일 또는 파일 그룹이 복원되는 동안 데이터베이스는 오프라인 상태입니다. 복원 시퀀스의 마지막에 데이터베이스는 온라인 상태가 됩니다.  
   
      모든 버전의 [!INCLUDE[ssCurrent](../../includes/sscurrent-md.md)] 는 오프라인 파일 복원을 지원합니다.  
   
 -   온라인 파일 복원  
   
-     *온라인 파일 복원*의 경우 데이터베이스가 복원 시점에 온라인 상태이면 파일 복원 중에 온라인 상태로 유지됩니다. 그러나 파일을 복원할 각 파일 그룹은 복원 작업 중에 오프라인 상태입니다. 오프라인 파일 그룹의 모든 파일이 복구되면 파일 그룹이 자동으로 온라인 상태가 됩니다.  
+     *온라인 파일 복원* 의 경우 데이터베이스가 복원 시점에 온라인 상태이면 파일 복원 중에 온라인 상태로 유지됩니다. 그러나 파일을 복원할 각 파일 그룹은 복원 작업 중에 오프라인 상태입니다. 오프라인 파일 그룹의 모든 파일이 복구되면 파일 그룹이 자동으로 온라인 상태가 됩니다.  
   
      온라인 페이지 및 파일 복원 지원에 대한 자세한 내용은 [SQL Server 2016의 버전과 지원하는 기능](../../sql-server/editions-and-components-of-sql-server-2016.md)을 참조하세요. 온라인 복원에 대한 자세한 내용은 [온라인 복원(SQL Server)](../../relational-databases/backup-restore/online-restore-sql-server.md)을 참조하세요.
   
