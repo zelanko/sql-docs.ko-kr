@@ -21,10 +21,10 @@ author: markingmyname
 ms.author: maghan
 monikerRange: '>=aps-pdw-2016||=azuresqldb-current||=azure-sqldw-latest||>=sql-server-2016||=sqlallproducts-allversions||>=sql-server-linux-2017||=azuresqldb-mi-current'
 ms.openlocfilehash: f2869c46d3aca815968f77829f2ce57b31de06a6
-ms.sourcegitcommit: cc23d8646041336d119b74bf239a6ac305ff3d31
+ms.sourcegitcommit: c5078791a07330a87a92abb19b791e950672e198
 ms.translationtype: HT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 09/23/2020
+ms.lasthandoff: 11/26/2020
 ms.locfileid: "91116066"
 ---
 # <a name="lead-transact-sql"></a>LEAD(Transact-SQL)
@@ -45,19 +45,19 @@ LEAD ( scalar_expression [ ,offset ] , [ default ] )
 
 ## <a name="arguments"></a>인수
  *scalar_expression*  
- 지정한 오프셋에 따라 반환할 값입니다. 단일(스칼라) 값을 반환하는 모든 유형의 식입니다. *scalar_expression*은 분석 함수일 수 없습니다.  
+ 지정한 오프셋에 따라 반환할 값입니다. 단일(스칼라) 값을 반환하는 모든 유형의 식입니다. *scalar_expression* 은 분석 함수일 수 없습니다.  
   
  *offset*  
- 현재 행 뒤에 있는 행의 수로, 그 수만큼 뒤에 있는 행에서 값을 가져옵니다. 이 인수를 지정하지 않으면 기본값은 1입니다. *offset*은 열, 하위 쿼리 또는 양의 정수로 계산되거나 암시적으로 **bigint**로 변환될 수 있는 기타 식일 수 있습니다. *offset*은 음수 또는 분석 함수일 수 없습니다.  
+ 현재 행 뒤에 있는 행의 수로, 그 수만큼 뒤에 있는 행에서 값을 가져옵니다. 이 인수를 지정하지 않으면 기본값은 1입니다. *offset* 은 열, 하위 쿼리 또는 양의 정수로 계산되거나 암시적으로 **bigint** 로 변환될 수 있는 기타 식일 수 있습니다. *offset* 은 음수 또는 분석 함수일 수 없습니다.  
   
  *default*  
- *오프셋*이 파티션의 범위를 벗어날 때 반환할 값입니다. 기본값이 지정되어 있지 않으면 NULL이 반환됩니다. *default*는 열, 하위 쿼리 또는 기타 식일 수 있지만 분석 함수일 수는 없습니다. *default*는 *scalar_expression*과 호환되는 형식이어야 합니다.
+ *오프셋* 이 파티션의 범위를 벗어날 때 반환할 값입니다. 기본값이 지정되어 있지 않으면 NULL이 반환됩니다. *default* 는 열, 하위 쿼리 또는 기타 식일 수 있지만 분석 함수일 수는 없습니다. *default* 는 *scalar_expression* 과 호환되는 형식이어야 합니다.
   
  OVER **(** [ _partition\_by\_clause_ ] _order\_by\_clause_ **)**  
- *partition_by_clause*는 FROM 절이 생성한 결과 집합을 함수가 적용되는 파티션으로 나눕니다. 지정하지 않을 경우 쿼리 결과 집합의 모든 행이 단일 그룹으로 취급됩니다. *order_by_clause*는 함수를 적용하기 전에 데이터의 순서를 결정합니다. *partition_by_clause*가 지정되면 각 파티션 내의 데이터 순서를 결정합니다. *order_by_clause*가 필요합니다. 자세한 내용은 [OVER 절&#40;Transact-SQL&#41;](../../t-sql/queries/select-over-clause-transact-sql.md)을 참조하세요.  
+ *partition_by_clause* 는 FROM 절이 생성한 결과 집합을 함수가 적용되는 파티션으로 나눕니다. 지정하지 않을 경우 쿼리 결과 집합의 모든 행이 단일 그룹으로 취급됩니다. *order_by_clause* 는 함수를 적용하기 전에 데이터의 순서를 결정합니다. *partition_by_clause* 가 지정되면 각 파티션 내의 데이터 순서를 결정합니다. *order_by_clause* 가 필요합니다. 자세한 내용은 [OVER 절&#40;Transact-SQL&#41;](../../t-sql/queries/select-over-clause-transact-sql.md)을 참조하세요.  
   
 ## <a name="return-types"></a>반환 형식  
- 지정한 *scalar_expression*의 데이터 형식입니다. *scalar_expression*이 Null 값을 허용하거나 *default*가 NULL로 설정되어 있으면 NULL이 반환됩니다.  
+ 지정한 *scalar_expression* 의 데이터 형식입니다. *scalar_expression* 이 Null 값을 허용하거나 *default* 가 NULL로 설정되어 있으면 NULL이 반환됩니다.  
   
  LEAD는 비결정적입니다. 자세한 내용은 [Deterministic and Nondeterministic Functions](../../relational-databases/user-defined-functions/deterministic-and-nondeterministic-functions.md)을 참조하세요.  
   

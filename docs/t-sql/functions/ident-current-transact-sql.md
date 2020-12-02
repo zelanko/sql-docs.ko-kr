@@ -22,10 +22,10 @@ ms.assetid: 21517ced-39f5-4cd8-8d9c-0a0b8aff554a
 author: VanMSFT
 ms.author: vanto
 ms.openlocfilehash: a4fe77504233fe2569a978c9f51c34e4e2236993
-ms.sourcegitcommit: cc23d8646041336d119b74bf239a6ac305ff3d31
+ms.sourcegitcommit: c5078791a07330a87a92abb19b791e950672e198
 ms.translationtype: HT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 09/23/2020
+ms.lasthandoff: 11/26/2020
 ms.locfileid: "91116335"
 ---
 # <a name="ident_current-transact-sql"></a>IDENT_CURRENT(Transact-SQL)
@@ -45,7 +45,7 @@ IDENT_CURRENT( 'table_or_view' )
 
 ## <a name="arguments"></a>인수
 *table_or_view*  
-ID 값을 반환할 테이블 또는 뷰의 이름입니다. *table_or_view*는 **varchar**이며 기본값은 없습니다.  
+ID 값을 반환할 테이블 또는 뷰의 이름입니다. *table_or_view* 는 **varchar** 이며 기본값은 없습니다.  
   
 ## <a name="return-types"></a>반환 형식  
 **numeric**([@@MAXPRECISION](../../t-sql/functions/max-precision-transact-sql.md),0))  
@@ -56,7 +56,7 @@ ID 값을 반환할 테이블 또는 뷰의 이름입니다. *table_or_view*는 
 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]에서 사용자는 소유하고 있거나 사용 권한을 부여받은 보안 개체의 메타데이터만 볼 수 있습니다. 즉, 사용자가 개체에 대한 사용 권한이 없으면 IDENT_CURRENT와 같은 메타데이터 내보내기 기본 제공 함수가 NULL을 반환합니다. 자세한 내용은 [Metadata Visibility Configuration](../../relational-databases/security/metadata-visibility-configuration.md)을 참조하세요.  
   
 ## <a name="remarks"></a>설명  
-IDENT_CURRENT는 [!INCLUDE[ssVersion2000](../../includes/ssversion2000-md.md)] IDENTITY 함수 SCOPE_IDENTITY 및 @@IDENTITY와 유사합니다. 이 세 함수는 모두 최근에 생성된 ID 값을 반환합니다. 그러나 각 함수에서 *last*가 정의하는 범위와 세션은 각기 다릅니다.  
+IDENT_CURRENT는 [!INCLUDE[ssVersion2000](../../includes/ssversion2000-md.md)] IDENTITY 함수 SCOPE_IDENTITY 및 @@IDENTITY와 유사합니다. 이 세 함수는 모두 최근에 생성된 ID 값을 반환합니다. 그러나 각 함수에서 *last* 가 정의하는 범위와 세션은 각기 다릅니다.  
 
 -   IDENT_CURRENT는 임의의 세션과 범위에 있는 특정 테이블에 대해 최근 생성된 ID 값을 반환합니다.  
 -   @@IDENTITY은 현재 세션의 전체 범위에 걸쳐 임의의 테이블에 대해 최근 생성된 ID 값을 반환합니다.  

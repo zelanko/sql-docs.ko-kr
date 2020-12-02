@@ -25,10 +25,10 @@ author: VanMSFT
 ms.author: vanto
 monikerRange: = azuresqldb-current || = azuresqldb-mi-current || >= sql-server-2016 || >= sql-server-linux-2017 || = sqlallproducts-allversions||=azure-sqldw-latest
 ms.openlocfilehash: e8ae0325029d458df85c3250e96002a075945f88
-ms.sourcegitcommit: b93beb4f03aee2c1971909cb1d15f79cd479a35c
+ms.sourcegitcommit: c5078791a07330a87a92abb19b791e950672e198
 ms.translationtype: HT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 09/29/2020
+ms.lasthandoff: 11/26/2020
 ms.locfileid: "91498030"
 ---
 # <a name="revert-transact-sql"></a>REVERT(Transact-SQL)
@@ -49,7 +49,7 @@ REVERT
 
 ## <a name="arguments"></a>인수
  WITH COOKIE = @*varbinary_variable*  
- 해당되는 [EXECUTE AS](../../t-sql/statements/execute-as-transact-sql.md) 독립 실행형 문에 생성된 쿠키를 지정합니다. *\@varbinary_variable*은 **varbinary(100)** 입니다.  
+ 해당되는 [EXECUTE AS](../../t-sql/statements/execute-as-transact-sql.md) 독립 실행형 문에 생성된 쿠키를 지정합니다. *\@varbinary_variable* 은 **varbinary(100)** 입니다.  
   
 ## <a name="remarks"></a>설명  
  REVERT는 저장 프로시저 또는 사용자 정의 함수 같은 모듈 내에서 지정하거나 독립 실행형 문으로 지정할 수 있습니다. 모듈 내에서 지정하면 REVERT는 모듈에 정의된 EXECUTE AS 문에만 적용할 수 있습니다. 예를 들어 다음 저장 프로시저는 `EXECUTE AS` 문과 `REVERT` 문을 차례로 실행합니다.  
@@ -80,9 +80,9 @@ EXECUTE dbo.usp_myproc;
  독립 실행형 문으로 지정하면 REVERT는 일괄 처리나 세션 내에 정의된 EXECUTE AS 문에 적용됩니다. 해당 EXECUTE AS 문에 WITH NO REVERT 절이 있으면 REVERT가 아무런 영향을 주지 않습니다. 이 경우 실행 컨텍스트는 세션이 삭제될 때까지 계속 적용됩니다.  
   
 ## <a name="using-revert-with-cookie"></a>REVERT WITH COOKIE 사용  
- 세션의 실행 컨텍스트를 설정하는 데 사용되는 EXECUTE AS 문에는 선택적 절인 WITH NO REVERT COOKIE = @*varbinary_variable*이 포함됩니다. 이 문이 실행되면 [!INCLUDE[ssDE](../../includes/ssde-md.md)]에서 쿠키를 @*varbinary_variable*에 전달합니다. 호출하는 REVERT WITH COOKIE = @*varbinary_variable* 문에 올바른 *\@varbinary_variable* 값이 포함되어 있는 경우에만 해당 명령문으로 설정된 실행 컨텍스트를 이전 컨텍스트로 되돌릴 수 있습니다.  
+ 세션의 실행 컨텍스트를 설정하는 데 사용되는 EXECUTE AS 문에는 선택적 절인 WITH NO REVERT COOKIE = @*varbinary_variable* 이 포함됩니다. 이 문이 실행되면 [!INCLUDE[ssDE](../../includes/ssde-md.md)]에서 쿠키를 @*varbinary_variable* 에 전달합니다. 호출하는 REVERT WITH COOKIE = @*varbinary_variable* 문에 올바른 *\@varbinary_variable* 값이 포함되어 있는 경우에만 해당 명령문으로 설정된 실행 컨텍스트를 이전 컨텍스트로 되돌릴 수 있습니다.  
   
- 이 메커니즘은 연결 풀링을 사용하는 환경에 유용합니다. 연결 풀링은 여러 일반 사용자가 애플리케이션에서 다시 사용할 수 있도록 데이터베이스 연결 그룹을 유지 관리하는 것입니다. *\@varbinary_variable*에 전달된 값이 EXECUTE AS 문의 호출자(이 경우 애플리케이션)에게만 알려지므로 호출자는 자신이 설정한 실행 컨텍스트를 애플리케이션을 호출하는 일반 사용자가 변경할 수 없도록 할 수 있습니다. 실행 컨텍스트가 되돌려지면 애플리케이션에서 컨텍스트를 다른 보안 주체로 전환할 수 있습니다.  
+ 이 메커니즘은 연결 풀링을 사용하는 환경에 유용합니다. 연결 풀링은 여러 일반 사용자가 애플리케이션에서 다시 사용할 수 있도록 데이터베이스 연결 그룹을 유지 관리하는 것입니다. *\@varbinary_variable* 에 전달된 값이 EXECUTE AS 문의 호출자(이 경우 애플리케이션)에게만 알려지므로 호출자는 자신이 설정한 실행 컨텍스트를 애플리케이션을 호출하는 일반 사용자가 변경할 수 없도록 할 수 있습니다. 실행 컨텍스트가 되돌려지면 애플리케이션에서 컨텍스트를 다른 보안 주체로 전환할 수 있습니다.  
   
 ## <a name="permissions"></a>사용 권한  
  사용 권한이 필요 없습니다.  

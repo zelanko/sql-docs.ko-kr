@@ -21,10 +21,10 @@ author: julieMSFT
 ms.author: jrasnick
 monikerRange: '>=aps-pdw-2016||=azuresqldb-current||=azure-sqldw-latest||>=sql-server-2016||=sqlallproducts-allversions||>=sql-server-linux-2017||=azuresqldb-mi-current'
 ms.openlocfilehash: 9916894ee3e8f5aecbdd0b8e42ef39fc91082efb
-ms.sourcegitcommit: 197a6ffb643f93592edf9e90b04810a18be61133
+ms.sourcegitcommit: c5078791a07330a87a92abb19b791e950672e198
 ms.translationtype: HT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 09/26/2020
+ms.lasthandoff: 11/26/2020
 ms.locfileid: "91380518"
 ---
 # <a name="tan-transact-sql"></a>TAN(Transact-SQL)
@@ -44,7 +44,7 @@ TAN ( float_expression )
 
 ## <a name="arguments"></a>인수
  *float_expression*  
- **float** 형식 또는 **float**로 암시적으로 변환될 수 있는 형식을 사용한 [식](../../t-sql/language-elements/expressions-transact-sql.md)이며 라디안의 수로 해석됩니다.  
+ **float** 형식 또는 **float** 로 암시적으로 변환될 수 있는 형식을 사용한 [식](../../t-sql/language-elements/expressions-transact-sql.md)이며 라디안의 수로 해석됩니다.  
   
 ## <a name="return-types"></a>반환 형식  
  **float**  

@@ -19,10 +19,10 @@ ms.assetid: 333e9a43-1099-4b9b-b941-4b0b016f47f3
 author: VanMSFT
 ms.author: vanto
 ms.openlocfilehash: 359caf584357994eab4441e345aefdc528cb363b
-ms.sourcegitcommit: 197a6ffb643f93592edf9e90b04810a18be61133
+ms.sourcegitcommit: c5078791a07330a87a92abb19b791e950672e198
 ms.translationtype: HT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 09/26/2020
+ms.lasthandoff: 11/26/2020
 ms.locfileid: "91380708"
 ---
 # <a name="pwdencrypt-transact-sql"></a>PWDENCRYPT(Transact-SQL)
@@ -44,7 +44,7 @@ PWDENCRYPT ( 'password' )
 
 ## <a name="arguments"></a>인수
  *password*  
- 암호화할 암호입니다. *암호*는 **sysname**입니다.  
+ 암호화할 암호입니다. *암호* 는 **sysname** 입니다.  
   
 ## <a name="return-types"></a>반환 형식  
  **varbinary(128)**  

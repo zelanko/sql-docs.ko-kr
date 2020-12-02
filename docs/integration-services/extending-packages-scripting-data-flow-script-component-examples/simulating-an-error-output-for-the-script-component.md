@@ -17,10 +17,10 @@ ms.assetid: f8b6ecff-ac99-4231-a0e7-7ce4ad76bad0
 author: chugugrace
 ms.author: chugu
 ms.openlocfilehash: 3e81c953fa5c4b1f98c2badd87942ca436f72105
-ms.sourcegitcommit: e700497f962e4c2274df16d9e651059b42ff1a10
+ms.sourcegitcommit: c5078791a07330a87a92abb19b791e950672e198
 ms.translationtype: HT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 08/17/2020
+ms.lasthandoff: 11/26/2020
 ms.locfileid: "88477293"
 ---
 # <a name="simulating-an-error-output-for-the-script-component"></a>스크립트 구성 요소의 오류 출력 시뮬레이션
@@ -39,11 +39,11 @@ ms.locfileid: "88477293"
   
 1.  새 스크립트 구성 요소를 만들기 전에 연결 관리자를 만들고 AdventureWorks 예제 데이터베이스에서 주소 데이터를 선택하도록 데이터 흐름 원본을 구성합니다. CountryRegionName 열만 확인하는 이 예의 경우 단순히 Person.vStateCountryProvinceRegion 뷰를 사용해도 되고, Person.Address, Person.StateProvince 및 Person.CountryRegion 테이블을 조인하여 데이터를 선택해도 됩니다.  
   
-2.  데이터 흐름 디자이너 화면에 새 스크립트 구성 요소를 추가하고 이 구성 요소를 변환으로 구성합니다. **스크립트 변환 편집기**를 엽니다.  
+2.  데이터 흐름 디자이너 화면에 새 스크립트 구성 요소를 추가하고 이 구성 요소를 변환으로 구성합니다. **스크립트 변환 편집기** 를 엽니다.  
   
 3.  **스크립트** 페이지에서 **ScriptLanguage** 속성에 스크립트를 코딩하는 데 사용할 스크립트 언어를 설정합니다.  
   
-4.  **스크립트 편집**을 클릭하여 [!INCLUDE[msCoName](../../includes/msconame-md.md)] [!INCLUDE[vsprvs](../../includes/vsprvs-md.md)] VSTA(Tools for Applications)를 엽니다.  
+4.  **스크립트 편집** 을 클릭하여 [!INCLUDE[msCoName](../../includes/msconame-md.md)] [!INCLUDE[vsprvs](../../includes/vsprvs-md.md)] VSTA(Tools for Applications)를 엽니다.  
   
 5.  **Input0_ProcessInputRow** 메서드에 아래의 샘플 코드를 입력하거나 붙여넣습니다.  
   
@@ -57,7 +57,7 @@ ms.locfileid: "88477293"
   
 10. 입력 열의 ID 값은 스크립트 구성 요소에서 오류 조건을 확인하는 데 사용합니다. 이 예에서는 이 열 식별자를 사용하여 ErrorColumn 값을 채웁니다.  
   
-11. **스크립트 변환 편집기**를 닫습니다.  
+11. **스크립트 변환 편집기** 를 닫습니다.  
   
 12. 스크립트 구성 요소의 출력을 적절한 대상에 연결합니다. 임시 테스트용으로 구성하는 데는 플랫 파일 대상이 가장 쉽습니다.  
   

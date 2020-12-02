@@ -26,10 +26,10 @@ ms.assetid: b6e66aeb-1714-4c2b-b7c2-d386d77b0d46
 author: markingmyname
 ms.author: maghan
 ms.openlocfilehash: a7e4c9c6b58b8dd6853aa545ca457e8ae1ced74c
-ms.sourcegitcommit: dd36d1cbe32cd5a65c6638e8f252b0bd8145e165
+ms.sourcegitcommit: c5078791a07330a87a92abb19b791e950672e198
 ms.translationtype: HT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 09/08/2020
+ms.lasthandoff: 11/26/2020
 ms.locfileid: "89538033"
 ---
 # <a name="send-transact-sql"></a>SEND(Transact-SQL)
@@ -54,13 +54,13 @@ SEND
 
 ## <a name="arguments"></a>인수
 ON CONVERSATION *conversation_handle [.. @conversation_handle_n]*  
-메시지가 속해 있는 대화를 지정합니다. *conversation_handle*은 유효한 대화 식별자가 있어야 합니다. 같은 대화 핸들을 두 번 이상 사용할 수 없습니다.  
+메시지가 속해 있는 대화를 지정합니다. *conversation_handle* 은 유효한 대화 식별자가 있어야 합니다. 같은 대화 핸들을 두 번 이상 사용할 수 없습니다.  
   
 MESSAGE TYPE *message_type_name*  
 보낸 메시지의 메시지 유형을 지정합니다. 이 메시지 유형은 이 대화에 사용된 서비스 계약에 포함되어야 합니다. 이 계약은 대화의 이 쪽에서 보내는 메시지 유형을 허용해야 합니다. 예를 들어 대화의 대상 서비스는 계약에 SENT BY TARGET 또는 SENT BY ANY로 지정되어 있는 메시지만 보낼 수 있습니다. 이 절이 생략된 경우 메시지 유형은 DEFAULT입니다.  
   
 *message_body_expression*  
-메시지 본문을 나타내는 식을 제공합니다. *message_body_expression*은 선택 사항입니다. 하지만 *message_body_expression*이 있으면 해당 식은 **varbinary(max)** 로 변환될 수 있는 유형이어야 합니다. 식은 NULL일 수 없습니다. 이 절이 생략된 경우에는 메시지 본문이 비어 있습니다.  
+메시지 본문을 나타내는 식을 제공합니다. *message_body_expression* 은 선택 사항입니다. 하지만 *message_body_expression* 이 있으면 해당 식은 **varbinary(max)** 로 변환될 수 있는 유형이어야 합니다. 식은 NULL일 수 없습니다. 이 절이 생략된 경우에는 메시지 본문이 비어 있습니다.  
   
 ## <a name="remarks"></a>설명  
   

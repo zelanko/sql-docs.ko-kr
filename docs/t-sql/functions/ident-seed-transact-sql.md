@@ -21,10 +21,10 @@ ms.assetid: e4cb8eb8-affb-4810-a8a9-0110af3c247a
 author: VanMSFT
 ms.author: vanto
 ms.openlocfilehash: c75867165d29be5af4073aa6c8e2281687db7f0c
-ms.sourcegitcommit: cc23d8646041336d119b74bf239a6ac305ff3d31
+ms.sourcegitcommit: c5078791a07330a87a92abb19b791e950672e198
 ms.translationtype: HT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 09/23/2020
+ms.lasthandoff: 11/26/2020
 ms.locfileid: "91114772"
 ---
 # <a name="ident_seed-transact-sql"></a>IDENT_SEED(Transact-SQL)
@@ -44,7 +44,7 @@ IDENT_SEED ( 'table_or_view' )
 
 ## <a name="arguments"></a>인수
  **'** *table_or_view* **'**  
- ID 초기값을 확인할 테이블 또는 뷰를 지정하는 [expression](../../t-sql/language-elements/expressions-transact-sql.md)입니다. *table_or_view*는 따옴표로 묶은 문자열 상수, 변수, 함수 또는 열 이름일 수 있습니다. *table_or_view*는 **char**, **nchar**, **varchar** 또는 **nvarchar**입니다.  
+ ID 초기값을 확인할 테이블 또는 뷰를 지정하는 [expression](../../t-sql/language-elements/expressions-transact-sql.md)입니다. *table_or_view* 는 따옴표로 묶은 문자열 상수, 변수, 함수 또는 열 이름일 수 있습니다. *table_or_view* 는 **char**, **nchar**, **varchar** 또는 **nvarchar** 입니다.  
   
 ## <a name="return-types"></a>반환 형식  
 **numeric**([@@MAXPRECISION](../../t-sql/functions/max-precision-transact-sql.md),0))  

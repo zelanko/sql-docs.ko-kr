@@ -27,10 +27,10 @@ ms.assetid: 8e3be25b-2e3b-4d1f-a610-dcbbd8d72084
 author: julieMSFT
 ms.author: jrasnick
 ms.openlocfilehash: 05820d6b375329e3746cfb4ea64ba05d64dc3cf3
-ms.sourcegitcommit: 197a6ffb643f93592edf9e90b04810a18be61133
+ms.sourcegitcommit: c5078791a07330a87a92abb19b791e950672e198
 ms.translationtype: HT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 09/26/2020
+ms.lasthandoff: 11/26/2020
 ms.locfileid: "91379438"
 ---
 # <a name="update---trigger-functions-transact-sql"></a>UPDATE - 트리거 함수(Transact-SQL)
@@ -63,7 +63,7 @@ UPDATE ( column )
  열에 명시적인 값 또는 암시적인(NULL) 값이 삽입되었으므로 IF UPDATE는 INSERT 동작에 대해 TRUE 값을 반환합니다.  
   
 > [!NOTE]  
->  IF UPDATE(*colum*n) 절은 IF, IF...ELSE 또는 WHILE 절과 같은 기능을 수행하며 BEGIN...END 블록을 사용할 수 있습니다. 자세한 내용은 [Control-of-Flow Language &#40;Transact-SQL&#41;](~/t-sql/language-elements/control-of-flow.md)을 참조하세요.  
+>  IF UPDATE(*colum* n) 절은 IF, IF...ELSE 또는 WHILE 절과 같은 기능을 수행하며 BEGIN...END 블록을 사용할 수 있습니다. 자세한 내용은 [Control-of-Flow Language &#40;Transact-SQL&#41;](~/t-sql/language-elements/control-of-flow.md)을 참조하세요.  
   
  UPDATE(*column*)는 [!INCLUDE[tsql](../../includes/tsql-md.md)] 트리거 본문 내의 어디서나 사용할 수 있습니다.  
  

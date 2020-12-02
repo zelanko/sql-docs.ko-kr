@@ -21,10 +21,10 @@ ms.assetid: 6a33e74a-0cf9-4ae1-a1e4-4a137a3ea39d
 author: julieMSFT
 ms.author: jrasnick
 ms.openlocfilehash: 86554070c90b2c946e79359b561da324abbf700a
-ms.sourcegitcommit: 197a6ffb643f93592edf9e90b04810a18be61133
+ms.sourcegitcommit: c5078791a07330a87a92abb19b791e950672e198
 ms.translationtype: HT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 09/26/2020
+ms.lasthandoff: 11/26/2020
 ms.locfileid: "91379538"
 ---
 # <a name="trigger_nestlevel-transact-sql"></a>TRIGGER_NESTLEVEL(Transact-SQL)
@@ -44,13 +44,13 @@ TRIGGER_NESTLEVEL ( [ object_id ] , [ 'trigger_type' ] , [ 'trigger_event_catego
 
 ## <a name="arguments"></a>인수
  *object_id*  
- 트리거의 개체 ID입니다. *object_id*가 지정된 경우 해당 문에 대해 지정한 트리거의 실행 횟수가 반환됩니다. *object_id*가 지정되지 않은 경우 문에 대한 모든 트리거의 실행 횟수가 반환됩니다.  
+ 트리거의 개체 ID입니다. *object_id* 가 지정된 경우 해당 문에 대해 지정한 트리거의 실행 횟수가 반환됩니다. *object_id* 가 지정되지 않은 경우 문에 대한 모든 트리거의 실행 횟수가 반환됩니다.  
   
  **'** *trigger_type* **'**  
- TRIGGER_NESTLEVEL을 AFTER 트리거에 적용할지 아니면 INSTEAD OF 트리거에 적용할지를 지정합니다. AFTER 트리거의 경우 **AFTER**를 지정하며 INSTEAD OF 트리거의 경우 **IOT**를 지정합니다. *trigger_type*이 지정된 경우에는 *trigger_event_category*도 지정해야 합니다.  
+ TRIGGER_NESTLEVEL을 AFTER 트리거에 적용할지 아니면 INSTEAD OF 트리거에 적용할지를 지정합니다. AFTER 트리거의 경우 **AFTER** 를 지정하며 INSTEAD OF 트리거의 경우 **IOT** 를 지정합니다. *trigger_type* 이 지정된 경우에는 *trigger_event_category* 도 지정해야 합니다.  
   
  **'** *trigger_event_category* **'**  
- TRIGGER_NESTLEVEL을 DML 또는 DDL 트리거 중 어디에 적용할지를 지정합니다. DML 트리거에 대해 **DML**을 지정하며 DDL 트리거에는 **DDL**을 지정합니다. *trigger_event_category*가 지정된 경우에는 *trigger_type*도 지정해야 합니다. DDL 트리거는 AFTER 트리거만 가능하므로 **AFTER**만 **DDL**을 함께 지정할 수 있습니다.  
+ TRIGGER_NESTLEVEL을 DML 또는 DDL 트리거 중 어디에 적용할지를 지정합니다. DML 트리거에 대해 **DML** 을 지정하며 DDL 트리거에는 **DDL** 을 지정합니다. *trigger_event_category* 가 지정된 경우에는 *trigger_type* 도 지정해야 합니다. DDL 트리거는 AFTER 트리거만 가능하므로 **AFTER** 만 **DDL** 을 함께 지정할 수 있습니다.  
   
 ## <a name="remarks"></a>설명  
  매개 변수를 지정하지 않은 경우 TRIGGER_NESTLEVEL은 호출 스택에 있는 총 트리거 수를 반환합니다. 여기에는 해당 트리거도 포함됩니다. 트리거가 다른 트리거를 발생시키면서 명령을 실행하거나 트리거를 연속적으로 발생시키는 경우 매개 변수를 생략할 수 있습니다.  

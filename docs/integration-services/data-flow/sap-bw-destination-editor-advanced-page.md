@@ -14,10 +14,10 @@ ms.assetid: 862957db-bbc6-4dda-bc0e-591457f1baa7
 author: chugugrace
 ms.author: chugu
 ms.openlocfilehash: 4d137eef410a3b406ea2b18a9893a5f4ca4a061b
-ms.sourcegitcommit: e700497f962e4c2274df16d9e651059b42ff1a10
+ms.sourcegitcommit: c5078791a07330a87a92abb19b791e950672e198
 ms.translationtype: HT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 08/17/2020
+ms.lasthandoff: 11/26/2020
 ms.locfileid: "88484543"
 ---
 # <a name="sap-bw-destination-editor-advanced-page"></a>SAP BW 대상 편집기(고급 페이지)
@@ -38,7 +38,7 @@ ms.locfileid: "88484543"
   
 2.  **데이터 흐름** 탭에서 SAP BW 대상을 두 번 클릭합니다.  
   
-3.  **SAP BW 대상 편집기**에서 **고급** 을 클릭하여 편집기의 **고급** 페이지를 엽니다.  
+3.  **SAP BW 대상 편집기** 에서 **고급** 을 클릭하여 편집기의 **고급** 페이지를 엽니다.  
   
 ## <a name="options"></a>옵션  
   

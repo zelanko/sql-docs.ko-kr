@@ -27,10 +27,10 @@ author: markingmyname
 ms.author: maghan
 monikerRange: = azure-sqldw-latest ||= azuresqldb-current || >= sql-server-2016 || >= sql-server-linux-2017 || = sqlallproducts-allversions
 ms.openlocfilehash: 7532adbc05c0df1a9d8a15de59a8700ce67fa1de
-ms.sourcegitcommit: 8f062015c2a033f5a0d805ee4adabbe15e7c8f94
+ms.sourcegitcommit: c5078791a07330a87a92abb19b791e950672e198
 ms.translationtype: HT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 09/25/2020
+ms.lasthandoff: 11/26/2020
 ms.locfileid: "91226993"
 ---
 # <a name="set-statements-transact-sql"></a>SET 문(Transact-SQL)
@@ -63,9 +63,9 @@ SET 문을 사용하여 지역 변수를 설정하는 방법은 [SET @local_vari
   
 - 저장 프로시저는 SET ANSI_NULLS와 SET QUOTED_IDENTIFIER를 제외한 실행 시간에 지정된 SET 설정으로 실행됩니다. SET ANSI_NULLS나 SET QUOTED_IDENTIFIER를 지정하는 저장 프로시저는 저장 프로시저를 만든 시간에 지정된 설정을 사용합니다. SET 설정을 저장 프로시저 내에서 사용하면 모두 무시됩니다.  
   
-- **sp_configure**의 **user options** 설정은 서버 측 설정을 허용하고 여러 데이터베이스에 걸쳐 작동합니다. 또한 이 설정은 로그인 시간에 발생할 경우를 제외하고 명시적 SET 문과 같이 작동합니다.  
+- **sp_configure** 의 **user options** 설정은 서버 측 설정을 허용하고 여러 데이터베이스에 걸쳐 작동합니다. 또한 이 설정은 로그인 시간에 발생할 경우를 제외하고 명시적 SET 문과 같이 작동합니다.  
   
-- ALTER DATABASE를 사용하여 지정한 데이터베이스 설정은 데이터베이스 수준에서만 유효하며 명시적으로 설정된 경우에만 적용됩니다. 데이터베이스 설정은 **sp_configure**를 사용하여 지정한 인스턴스 옵션 설정보다 우선 적용됩니다.  
+- ALTER DATABASE를 사용하여 지정한 데이터베이스 설정은 데이터베이스 수준에서만 유효하며 명시적으로 설정된 경우에만 적용됩니다. 데이터베이스 설정은 **sp_configure** 를 사용하여 지정한 인스턴스 옵션 설정보다 우선 적용됩니다.  
   
 - SET 문에서 ON이나 OFF를 사용하면 여러 SET 옵션을 ON 또는 OFF로 지정할 수 있습니다.
   
@@ -84,7 +84,7 @@ SET 문을 사용하여 지역 변수를 설정하는 방법은 [SET @local_vari
   
 - MARS(Multiple Active Result Set) 요청은 최신 세션 SET 옵션 설정이 포함된 전역 상태를 공유합니다. 각 요청이 실행될 때 SET 옵션을 수정할 수 있습니다. 변경 내용은 이 옵션이 설정된 요청 컨텍스트에만 적용되며 다른 동시 MARS 요청에는 영향을 주지 않습니다. 그러나 요청 실행을 완료한 후 새 SET 옵션이 전역 세션 상태로 복사됩니다. 이 변경 작업 후 같은 세션에서 실행되는 새 요청은 이러한 새 SET 옵션 설정을 사용합니다.  
   
-- 저장 프로시저가 일괄 처리 또는 다른 저장 프로시저에서 실행되면 해당 프로시저는 저장 프로시저가 포함된 데이터베이스에 설정된 옵션 값에 따라 실행됩니다. 예를 들어 저장 프로시저 **db1.dbo.sp1**이 저장 프로시저 **db2.dbo.sp2**를 호출할 경우 저장 프로시저 **sp1**은 데이터베이스 **db1**의 현재 호환성 수준 설정에서 실행되고 저장 프로시저 **sp2**는 데이터베이스 **db2**의 현재 호환성 수준 설정에서 실행됩니다.  
+- 저장 프로시저가 일괄 처리 또는 다른 저장 프로시저에서 실행되면 해당 프로시저는 저장 프로시저가 포함된 데이터베이스에 설정된 옵션 값에 따라 실행됩니다. 예를 들어 저장 프로시저 **db1.dbo.sp1** 이 저장 프로시저 **db2.dbo.sp2** 를 호출할 경우 저장 프로시저 **sp1** 은 데이터베이스 **db1** 의 현재 호환성 수준 설정에서 실행되고 저장 프로시저 **sp2** 는 데이터베이스 **db2** 의 현재 호환성 수준 설정에서 실행됩니다.  
   
 - [!INCLUDE[tsql](../../includes/tsql-md.md)] 문이 여러 데이터베이스에 있는 개체와 관련된 경우 현재 데이터베이스 컨텍스트 및 현재 연결 컨텍스트가 이 문에 적용됩니다. 이러한 경우 [!INCLUDE[tsql](../../includes/tsql-md.md)] 문이 일괄 처리에 있을 경우 현재 연결 컨텍스트는 USE 문으로 정의된 데이터베이스입니다. [!INCLUDE[tsql](../../includes/tsql-md.md)] 문이 저장 프로시저에 있을 경우 연결 컨텍스트는 이 저장 프로시저가 포함된 데이터베이스입니다.  
   

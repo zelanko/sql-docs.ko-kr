@@ -16,10 +16,10 @@ author: MikeRayMSFT
 ms.author: mikeray
 monikerRange: = azuresqldb-current || >= sql-server-2016 || = sqlallproducts-allversions
 ms.openlocfilehash: b14aaaceadcc5cabeb8fad667879cae60e2d1331
-ms.sourcegitcommit: e700497f962e4c2274df16d9e651059b42ff1a10
+ms.sourcegitcommit: c5078791a07330a87a92abb19b791e950672e198
 ms.translationtype: HT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 08/17/2020
+ms.lasthandoff: 11/26/2020
 ms.locfileid: "88499346"
 ---
 # <a name="specify-fill-factor-for-an-index"></a>인덱스의 채우기 비율 지정
@@ -73,17 +73,17 @@ ms.locfileid: "88499346"
   
 2.  더하기 기호를 클릭하여 **테이블** 폴더를 확장합니다.  
   
-3.  인덱스의 채우기 비율을 지정할 테이블을 마우스 오른쪽 단추로 클릭하고 **디자인**을 선택합니다.  
+3.  인덱스의 채우기 비율을 지정할 테이블을 마우스 오른쪽 단추로 클릭하고 **디자인** 을 선택합니다.  
   
-4.  **테이블 디자이너** 메뉴에서 **인덱스/키**를 클릭합니다.  
+4.  **테이블 디자이너** 메뉴에서 **인덱스/키** 를 클릭합니다.  
   
 5.  채우기 비율을 지정할 인덱스를 선택합니다.  
   
-6.  **채우기 사양**을 확장하고 **채우기 비율** 행을 선택한 다음 원하는 채우기 비율을 입력합니다.  
+6.  **채우기 사양** 을 확장하고 **채우기 비율** 행을 선택한 다음 원하는 채우기 비율을 입력합니다.  
   
-7.  **닫기**를 클릭합니다.  
+7.  **닫기** 를 클릭합니다.  
   
-8.  **파일** 메뉴에서 _table_name_**저장**을 선택합니다.  
+8.  **파일** 메뉴에서 _table_name_**저장** 을 선택합니다.  
   
 #### <a name="to-specify-a-fill-factor-in-an-index-by-using-object-explorer"></a>개체 탐색기를 사용하여 인덱스의 채우기 비율을 지정하려면  
   
@@ -95,23 +95,23 @@ ms.locfileid: "88499346"
   
 4.  더하기 기호를 클릭하여 **인덱스** 폴더를 확장합니다.  
   
-5.  채우기 비율을 지정할 인덱스를 마우스 오른쪽 단추로 클릭한 다음 **속성**을 선택합니다.  
+5.  채우기 비율을 지정할 인덱스를 마우스 오른쪽 단추로 클릭한 다음 **속성** 을 선택합니다.  
   
-6.  **페이지 선택**아래에서 **옵션**을 선택합니다.  
+6.  **페이지 선택** 아래에서 **옵션** 을 선택합니다.  
   
 7.  **채우기 비율** 행에 원하는 채우기 비율을 입력합니다.  
   
-8.  **확인**을 클릭합니다.  
+8.  **확인** 을 클릭합니다.  
   
 ##  <a name="using-transact-sql"></a><a name="TsqlProcedure"></a> Transact-SQL 사용  
   
 #### <a name="to-specify-a-fill-factor-in-an-existing-index"></a>기존 인덱스의 채우기 비율을 지정하려면  
   
-1.  **개체 탐색기**에서 [!INCLUDE[ssDE](../../includes/ssde-md.md)]인스턴스에 연결합니다.  
+1.  **개체 탐색기** 에서 [!INCLUDE[ssDE](../../includes/ssde-md.md)]인스턴스에 연결합니다.  
   
-2.  표준 도구 모음에서 **새 쿼리**를 클릭합니다.  
+2.  표준 도구 모음에서 **새 쿼리** 를 클릭합니다.  
   
-3.  다음 예를 복사하여 쿼리 창에 붙여 넣고 **실행**을 클릭합니다. 이 예에서는 기존 인덱스를 다시 작성하고 다시 작성하는 동안 지정한 채우기 비율을 적용합니다.  
+3.  다음 예를 복사하여 쿼리 창에 붙여 넣고 **실행** 을 클릭합니다. 이 예에서는 기존 인덱스를 다시 작성하고 다시 작성하는 동안 지정한 채우기 비율을 적용합니다.  
   
     ```  
     USE AdventureWorks2012;  
@@ -126,11 +126,11 @@ ms.locfileid: "88499346"
   
 #### <a name="another-way-to-specify-a-fill-factor-in-an-index"></a>인덱스의 채우기 비율을 지정하는 다른 방법  
   
-1.  **개체 탐색기**에서 [!INCLUDE[ssDE](../../includes/ssde-md.md)]인스턴스에 연결합니다.  
+1.  **개체 탐색기** 에서 [!INCLUDE[ssDE](../../includes/ssde-md.md)]인스턴스에 연결합니다.  
   
-2.  표준 도구 모음에서 **새 쿼리**를 클릭합니다.  
+2.  표준 도구 모음에서 **새 쿼리** 를 클릭합니다.  
   
-3.  다음 예를 복사하여 쿼리 창에 붙여 넣고 **실행**을 클릭합니다.  
+3.  다음 예를 복사하여 쿼리 창에 붙여 넣고 **실행** 을 클릭합니다.  
   
     ```  
     USE AdventureWorks2012;  

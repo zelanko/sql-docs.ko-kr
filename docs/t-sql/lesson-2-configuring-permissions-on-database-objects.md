@@ -14,10 +14,10 @@ author: MikeRayMSFT
 ms.author: mikeray
 monikerRange: '>=aps-pdw-2016||=azuresqldb-current||=azure-sqldw-latest||>=sql-server-2016||=sqlallproducts-allversions||>=sql-server-linux-2017||=azuresqldb-mi-current'
 ms.openlocfilehash: 15986ee3b8407a62fc4ed40a49c043921fe34588
-ms.sourcegitcommit: 22dacedeb6e8721e7cdb6279a946d4002cfb5da3
+ms.sourcegitcommit: c5078791a07330a87a92abb19b791e950672e198
 ms.translationtype: HT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 10/14/2020
+ms.lasthandoff: 11/26/2020
 ms.locfileid: "92035857"
 ---
 # <a name="lesson-2-configure-permissions-on-database-objects"></a>2단원: 데이터베이스 개체에 대한 사용 권한 구성
@@ -45,9 +45,9 @@ SQL Server 인스턴스에 대한 액세스 권한이 없는 경우 다음 링�
   
 ### <a name="create-a-new-windows-account"></a>새 Windows 계정 만들기  
   
-1.  **시작**, **실행**을 클릭하고 **열기** 상자에 **%SystemRoot%\system32\compmgmt.msc /s**를 입력한 다음 **확인**을 클릭하여 컴퓨터 관리 프로그램을 엽니다. 
-2.  **시스템 도구**에서 **로컬 사용자 및 그룹**을 확장하고 **사용자**를 마우스 오른쪽 단추로 클릭한 다음 **새 사용자**를 클릭합니다.    
-3.  **사용자 이름** 상자에 **Mary**를 입력합니다.    
+1.  **시작**, **실행** 을 클릭하고 **열기** 상자에 **%SystemRoot%\system32\compmgmt.msc /s** 를 입력한 다음 **확인** 을 클릭하여 컴퓨터 관리 프로그램을 엽니다. 
+2.  **시스템 도구** 에서 **로컬 사용자 및 그룹** 을 확장하고 **사용자** 를 마우스 오른쪽 단추로 클릭한 다음 **새 사용자** 를 클릭합니다.    
+3.  **사용자 이름** 상자에 **Mary** 를 입력합니다.    
 4.  **암호** 및 **암호 확인** 상자에 강력한 암호를 입력한 다음 **만들기** 를 클릭하여 새 로컬 Windows 사용자를 만듭니다.  
   
 ### <a name="create-a-sql-login"></a>SQL 로그인 만들기  

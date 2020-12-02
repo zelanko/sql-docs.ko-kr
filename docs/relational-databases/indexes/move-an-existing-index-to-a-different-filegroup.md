@@ -18,10 +18,10 @@ ms.assetid: 167ebe77-487d-4ca8-9452-4b2c7d5cb96e
 author: MikeRayMSFT
 ms.author: mikeray
 ms.openlocfilehash: abbd77be3e20cc69bc12cd69f07fa82ec99d95db
-ms.sourcegitcommit: e700497f962e4c2274df16d9e651059b42ff1a10
+ms.sourcegitcommit: c5078791a07330a87a92abb19b791e950672e198
 ms.translationtype: HT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 08/17/2020
+ms.lasthandoff: 11/26/2020
 ms.locfileid: "88470472"
 ---
 # <a name="move-an-existing-index-to-a-different-filegroup"></a>다른 파일 그룹으로 기존 인덱스 이동
@@ -64,19 +64,19 @@ ms.locfileid: "88470472"
   
 2.  더하기 기호를 클릭하여 **테이블** 폴더를 확장합니다.  
   
-3.  이동할 인덱스가 포함된 테이블을 마우스 오른쪽 단추로 클릭하고 **디자인**을 선택합니다.  
+3.  이동할 인덱스가 포함된 테이블을 마우스 오른쪽 단추로 클릭하고 **디자인** 을 선택합니다.  
   
-4.  **테이블 디자이너** 메뉴에서 **인덱스/키**를 클릭합니다.  
+4.  **테이블 디자이너** 메뉴에서 **인덱스/키** 를 클릭합니다.  
   
 5.  이동할 인덱스를 선택합니다.  
   
-6.  주 표에서 **데이터 공간 사양**을 확장합니다.  
+6.  주 표에서 **데이터 공간 사양** 을 확장합니다.  
   
 7.  **파일 그룹 또는 파티션 구성표 이름** 을 선택하고 목록에서 인덱스를 이동할 파일 그룹 또는 파티션 구성표를 선택합니다.  
   
-8.  **닫기**를 클릭합니다.  
+8.  **닫기** 를 클릭합니다.  
   
-9. **파일** 메뉴에서 _table_name_**저장**을 선택합니다.  
+9. **파일** 메뉴에서 _table_name_**저장** 을 선택합니다.  
 
 #### <a name="to-move-an-existing-index-to-a-different-filegroup-in-object-explorer"></a>개체 탐색기에서 기존 인덱스를 다른 파일 그룹으로 이동하려면  
   
@@ -88,9 +88,9 @@ ms.locfileid: "88470472"
   
 4.  더하기 기호를 클릭하여 **인덱스** 폴더를 확장합니다.  
   
-5.  이동할 인덱스를 마우스 오른쪽 단추로 클릭하고 **속성**을 선택합니다.  
+5.  이동할 인덱스를 마우스 오른쪽 단추로 클릭하고 **속성** 을 선택합니다.  
   
-6.  **페이지 선택** 아래에서 **스토리지**를 선택합니다.  
+6.  **페이지 선택** 아래에서 **스토리지** 를 선택합니다.  
   
 7.  인덱스를 이동할 파일 그룹을 선택합니다.  
   
@@ -100,7 +100,7 @@ ms.locfileid: "88470472"
   
      [!INCLUDE[ssCurrent](../../includes/sscurrent-md.md)]를 사용하는 다중 프로세서 컴퓨터에서는 최대 병렬 처리 값을 지정하여 인덱스 문 실행에 사용되는 프로세서 수를 구성할 수 있습니다. 병렬 인덱스 작업 기능은 일부 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]버전에서는 사용할 수 없습니다. [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 버전에서 지원되는 기능 목록은 SQL Server 2016 버전에서 지원하는 기능을 참조하세요. 병렬 인덱스 작업에 대한 자세한 내용은 [병렬 인덱스 작업 구성](../../relational-databases/indexes/configure-parallel-index-operations.md)을 참조하세요.  
   
-8.  **확인**을 클릭합니다.  
+8.  **확인** 을 클릭합니다.  
   
  **인덱스 속성 –** _index_name_ 대화 상자의 **스토리지** 페이지에서 다음 정보를 사용할 수 있습니다.  
   
@@ -148,11 +148,11 @@ ms.locfileid: "88470472"
   
 #### <a name="to-move-an-existing-index-to-a-different-filegroup"></a>기존 인덱스를 다른 파일 그룹으로 이동하려면  
   
-1.  **개체 탐색기**에서 [!INCLUDE[ssDE](../../includes/ssde-md.md)]인스턴스에 연결합니다.  
+1.  **개체 탐색기** 에서 [!INCLUDE[ssDE](../../includes/ssde-md.md)]인스턴스에 연결합니다.  
   
-2.  표준 도구 모음에서 **새 쿼리**를 클릭합니다.  
+2.  표준 도구 모음에서 **새 쿼리** 를 클릭합니다.  
   
-3.  다음 예를 복사하여 쿼리 창에 붙여 넣고 **실행**을 클릭합니다.  
+3.  다음 예를 복사하여 쿼리 창에 붙여 넣고 **실행** 을 클릭합니다.  
   
     ```  
     USE AdventureWorks2012;  

@@ -22,10 +22,10 @@ author: markingmyname
 ms.author: maghan
 monikerRange: '>=aps-pdw-2016||=azuresqldb-current||=azure-sqldw-latest||>=sql-server-2016||=sqlallproducts-allversions||>=sql-server-linux-2017||=azuresqldb-mi-current'
 ms.openlocfilehash: 853fbe7569d160cfa9fee7e59b4f9c323c5d4ec1
-ms.sourcegitcommit: cc23d8646041336d119b74bf239a6ac305ff3d31
+ms.sourcegitcommit: c5078791a07330a87a92abb19b791e950672e198
 ms.translationtype: HT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 09/23/2020
+ms.lasthandoff: 11/26/2020
 ms.locfileid: "91115474"
 ---
 # <a name="indexproperty-transact-sql"></a>NDEXPROPERTY(Transact-SQL)
@@ -45,16 +45,16 @@ INDEXPROPERTY ( object_ID , index_or_statistics_name , property )
 
 ## <a name="arguments"></a>인수
  *object_ID*  
- 인덱스 속성 정보를 제공할 테이블 또는 인덱싱된 뷰의 개체 ID가 포함된 식입니다. *object_ID* 는 **int**입니다.  
+ 인덱스 속성 정보를 제공할 테이블 또는 인덱싱된 뷰의 개체 ID가 포함된 식입니다. *object_ID* 는 **int** 입니다.  
   
  *index_or_statistics_name*  
- 속성 정보를 반환할 인덱스 또는 통계의 이름이 포함된 식입니다. *index_or_statistics_name*은 **nvarchar(128)** 입니다.  
+ 속성 정보를 반환할 인덱스 또는 통계의 이름이 포함된 식입니다. *index_or_statistics_name* 은 **nvarchar(128)** 입니다.  
   
  *property*  
- 반환할 데이터베이스 속성의 이름이 포함된 식입니다. *property*는 **varchar(128)** 이며 다음 값 중 하나일 수 있습니다.  
+ 반환할 데이터베이스 속성의 이름이 포함된 식입니다. *property* 는 **varchar(128)** 이며 다음 값 중 하나일 수 있습니다.  
   
 > [!NOTE]  
->  달리 언급하지 않는 한 *property*가 유효한 속성 이름이 아니거나, *object_ID*가 유효한 개체 ID가 아니거나, *object_ID*가 지정된 속성에 대해 지원되지 않는 개체 유형이거나 또는 호출자가 개체의 메타데이터를 볼 수 있는 권한이 없는 경우에는 NULL이 반환됩니다.  
+>  달리 언급하지 않는 한 *property* 가 유효한 속성 이름이 아니거나, *object_ID* 가 유효한 개체 ID가 아니거나, *object_ID* 가 지정된 속성에 대해 지원되지 않는 개체 유형이거나 또는 호출자가 개체의 메타데이터를 볼 수 있는 권한이 없는 경우에는 NULL이 반환됩니다.  
   
 |속성|Description|값|  
 |--------------|-----------------|-----------|  
@@ -69,7 +69,7 @@ INDEXPROPERTY ( object_ID , index_or_statistics_name , property )
 |**IsPadIndex**|인덱스가 각 하위 노드에 남겨 둘 빈 공간을 지정합니다.|**적용 대상**: [!INCLUDE[ssKatmai](../../includes/sskatmai-md.md)] 이상<br /><br /> 1 = True<br /><br /> 0 = False 또는 XML 인덱스|  
 |**IsPageLockDisallowed**|ALTER INDEX의 ALLOW_PAGE_LOCKS 옵션으로 설정된 페이지 잠금 값입니다.|**적용 대상**: [!INCLUDE[ssKatmai](../../includes/sskatmai-md.md)] 이상<br /><br /> 1 = 페이지 잠금이 허용되지 않습니다.<br /><br /> 0 = 페이지 잠금이 허용됩니다.<br /><br /> NULL = 입력이 잘못되었습니다.|  
 |**IsRowLockDisallowed**|ALTER INDEX의 ALLOW_ROW_LOCKS 옵션으로 설정된 행 잠금 값입니다.|**적용 대상**: [!INCLUDE[ssKatmai](../../includes/sskatmai-md.md)] 이상<br /><br /> 1 = 행 잠금이 허용되지 않습니다.<br /><br /> 0 = 행 잠금이 허용됩니다.<br /><br /> NULL = 입력이 잘못되었습니다.|  
-|**IsStatistics**|*index_or_statistics_name*은 CREATE STATISTICS 문 또는 ALTER DATABASE의 AUTO_CREATE_STATISTICS 옵션으로 생성된 통계입니다.|1 = True<br /><br /> 0 = False 또는 XML 인덱스|  
+|**IsStatistics**|*index_or_statistics_name* 은 CREATE STATISTICS 문 또는 ALTER DATABASE의 AUTO_CREATE_STATISTICS 옵션으로 생성된 통계입니다.|1 = True<br /><br /> 0 = False 또는 XML 인덱스|  
 |**IsUnique**|인덱스가 고유합니다.|1 = True<br /><br /> 0 = False 또는 XML 인덱스|  
 |**IsColumnstore**|인덱스가 xVelocity 메모리 액세스에 최적화된 columnstore 인덱스입니다.|**적용 대상**: [!INCLUDE[ssSQL11](../../includes/sssql11-md.md)] 이상<br /><br /> 1 = True<br /><br /> 0 = False| 
 |**IsOptimizedForSequentialKey**|인덱스에 대해 마지막 페이지 삽입 최적화가 사용됩니다.|**적용 대상**: [!INCLUDE[sql-server-2019](../../includes/sssqlv15-md.md)] 이상 <br><br>1 = True<br><br>0 = False| 

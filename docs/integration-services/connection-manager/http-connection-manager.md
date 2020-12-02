@@ -21,10 +21,10 @@ ms.assetid: 26b2b3e1-d02c-46ca-8d31-7aef2bbc3c53
 author: chugugrace
 ms.author: chugu
 ms.openlocfilehash: cd88a7f40787ecc33d99fe0c749c477f23b526a3
-ms.sourcegitcommit: e700497f962e4c2274df16d9e651059b42ff1a10
+ms.sourcegitcommit: c5078791a07330a87a92abb19b791e950672e198
 ms.translationtype: HT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 08/17/2020
+ms.lasthandoff: 11/26/2020
 ms.locfileid: "88496153"
 ---
 # <a name="http-connection-manager"></a>HTTP 연결 관리자
@@ -95,7 +95,7 @@ ms.locfileid: "88496153"
  데이터를 쓰기 위한 청크 크기를 제공합니다.  
   
  **연결 테스트**  
- HTTP 연결 관리자를 구성했으면 **연결 테스트**를 클릭하여 연결이 실행 가능한지 확인합니다.  
+ HTTP 연결 관리자를 구성했으면 **연결 테스트** 를 클릭하여 연결이 실행 가능한지 확인합니다.  
   
 ## <a name="http-connection-manager-editor-proxy-page"></a>HTTP 연결 관리자 편집기(프록시 페이지)
   **HTTP 연결 관리자 편집기** 대화 상자의 **프록시** 탭을 사용하여 프록시 서버를 사용하도록 HTTP 연결 관리자를 구성할 수 있습니다. HTTP 연결을 사용하면 패키지에서 HTTP를 통해 웹 서버에 액세스하고 파일을 보내거나 받을 수 있습니다.  
@@ -131,7 +131,7 @@ ms.locfileid: "88496153"
  프록시 서버를 사용하지 않도록 할 주소를 입력합니다.  
   
  **제거**  
- 주소를 선택한 다음 **제거**를 클릭하여 삭제합니다.  
+ 주소를 선택한 다음 **제거** 를 클릭하여 삭제합니다.  
   
 ## <a name="see-also"></a>관련 항목  
  [웹 서비스 태스크](../../integration-services/control-flow/web-service-task.md)   

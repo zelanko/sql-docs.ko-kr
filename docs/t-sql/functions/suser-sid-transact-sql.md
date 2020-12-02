@@ -26,10 +26,10 @@ ms.assetid: 57b42a74-94e1-4326-85f1-701b9de53c7d
 author: VanMSFT
 ms.author: vanto
 ms.openlocfilehash: c3a08123af9155789fa2d14e2deac807061bf162
-ms.sourcegitcommit: 197a6ffb643f93592edf9e90b04810a18be61133
+ms.sourcegitcommit: c5078791a07330a87a92abb19b791e950672e198
 ms.translationtype: HT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 09/26/2020
+ms.lasthandoff: 11/26/2020
 ms.locfileid: "91380058"
 ---
 # <a name="suser_sid-transact-sql"></a>SUSER_SID(Transact-SQL)
@@ -51,12 +51,12 @@ SUSER_SID ( [ 'login' ] [ , Param2 ] )
  **'** *login* **'**  
 **적용 대상**: [!INCLUDE[ssKatmai](../../includes/sskatmai-md.md)] 이상
   
- 사용자의 로그인 이름입니다. *login*은 **sysname**입니다. *login*은 선택 사항이며 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 로그인이나 [!INCLUDE[msCoName](../../includes/msconame-md.md)] Windows 사용자 또는 그룹일 수 있습니다. *login*을 지정하지 않은 경우에는 현재 보안 컨텍스트에 대한 정보가 반환됩니다. 매개 변수에 NULL이라는 단어가 포함되어 있으면 NULL이 반환됩니다.  
+ 사용자의 로그인 이름입니다. *login* 은 **sysname** 입니다. *login* 은 선택 사항이며 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 로그인이나 [!INCLUDE[msCoName](../../includes/msconame-md.md)] Windows 사용자 또는 그룹일 수 있습니다. *login* 을 지정하지 않은 경우에는 현재 보안 컨텍스트에 대한 정보가 반환됩니다. 매개 변수에 NULL이라는 단어가 포함되어 있으면 NULL이 반환됩니다.  
   
  *Param2*  
 **적용 대상**: [!INCLUDE[ssSQL11](../../includes/sssql11-md.md)] 이상
   
- 로그인 이름의 유효성을 검사할지 여부를 지정합니다. *Param2*는 **int** 형식이며 선택 사항입니다. *Param2*가 0이면 로그인 이름의 유효성을 검사하지 않습니다. *Param2*가 0으로 지정되지 않으면 Windows 로그인 이름이 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]에 저장된 로그인 이름과 정확하게 일치하는지 확인합니다.  
+ 로그인 이름의 유효성을 검사할지 여부를 지정합니다. *Param2* 는 **int** 형식이며 선택 사항입니다. *Param2* 가 0이면 로그인 이름의 유효성을 검사하지 않습니다. *Param2* 가 0으로 지정되지 않으면 Windows 로그인 이름이 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]에 저장된 로그인 이름과 정확하게 일치하는지 확인합니다.  
   
 ## <a name="return-types"></a>반환 형식  
  **varbinary(85)**  
@@ -66,7 +66,7 @@ SUSER_SID ( [ 'login' ] [ , Param2 ] )
   
  지정된 인수 없이 호출된 경우 SUSER_SID는 현재 보안 컨텍스트의 SID를 반환합니다. EXECUTE AS를 사용하여 컨텍스트를 전환하는 일괄 처리 내에서 지정된 인수 없이 호출된 경우 SUSER_SID는 가장된 컨텍스트의 SID를 반환합니다. 가장된 컨텍스트에서 호출된 경우 SUSER_SID(ORIGINAL_LOGIN())은 원래 컨텍스트의 SID를 반환합니다.  
   
- [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 데이터 정렬과 Windows 데이터 정렬이 서로 다르면 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 및 Windows에서 로그인을 서로 다른 형식으로 저장할 때 SUSER_SID가 실패할 수 있습니다. 예를 들어 Windows 컴퓨터인 TestComputer의 로그인이 User이고 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]에서 로그인을 TESTCOMPUTER\User로 저장하면 로그인 TestComputer\User 조회에서 로그인 이름을 올바르게 확인하지 못할 수 있습니다. 로그인 이름의 이 유효성 검사를 건너뛰려면 *Param2*를 사용합니다. 데이터 정렬이 서로 다르면 다음과 같은 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 오류 15401이 발생하는 경우가 많습니다.  
+ [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 데이터 정렬과 Windows 데이터 정렬이 서로 다르면 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 및 Windows에서 로그인을 서로 다른 형식으로 저장할 때 SUSER_SID가 실패할 수 있습니다. 예를 들어 Windows 컴퓨터인 TestComputer의 로그인이 User이고 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]에서 로그인을 TESTCOMPUTER\User로 저장하면 로그인 TestComputer\User 조회에서 로그인 이름을 올바르게 확인하지 못할 수 있습니다. 로그인 이름의 이 유효성 검사를 건너뛰려면 *Param2* 를 사용합니다. 데이터 정렬이 서로 다르면 다음과 같은 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 오류 15401이 발생하는 경우가 많습니다.  
   
  `Windows NT user or group '%s' not found. Check the name again.`  
   
@@ -123,7 +123,7 @@ GO
 ```  
   
 ### <a name="e-comparing-the-windows-login-name-to-the-login-name-stored-in-sql-server"></a>E. Windows 로그인 이름을 SQL Server에 저장된 로그인 이름과 비교  
- 다음 예에서는 *Param2*를 사용하여 Windows에서 SID를 가져오는 방법을 보여 주고 해당 SID를 `SUSER_SNAME` 함수에 대한 입력으로 사용합니다. 이 예에서는 Windows에 저장된 형식으로 로그인을 제공하고(`TestComputer\User`), [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]에 저장된 형식으로 로그인을 반환합니다(`TESTCOMPUTER\User`).  
+ 다음 예에서는 *Param2* 를 사용하여 Windows에서 SID를 가져오는 방법을 보여 주고 해당 SID를 `SUSER_SNAME` 함수에 대한 입력으로 사용합니다. 이 예에서는 Windows에 저장된 형식으로 로그인을 제공하고(`TestComputer\User`), [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]에 저장된 형식으로 로그인을 반환합니다(`TESTCOMPUTER\User`).  
   
 **적용 대상**: [!INCLUDE[ssSQL11](../../includes/sssql11-md.md)] 이상
   

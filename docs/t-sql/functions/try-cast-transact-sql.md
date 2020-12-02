@@ -20,10 +20,10 @@ author: julieMSFT
 ms.author: jrasnick
 monikerRange: = azuresqldb-current||>= sql-server-2016 ||>= sql-server-linux-2017||= sqlallproducts-allversions||>= aps-pdw-2016||= azure-sqldw-latest
 ms.openlocfilehash: 02ec3dd7e7047411901dcaad4b76056781a9384c
-ms.sourcegitcommit: 197a6ffb643f93592edf9e90b04810a18be61133
+ms.sourcegitcommit: c5078791a07330a87a92abb19b791e950672e198
 ms.translationtype: HT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 09/26/2020
+ms.lasthandoff: 11/26/2020
 ms.locfileid: "91379519"
 ---
 # <a name="try_cast-transact-sql"></a>TRY_CAST(Transact-SQL)
@@ -46,7 +46,7 @@ TRY_CAST ( expression AS data_type [ ( length ) ] )
  캐스팅할 값입니다. 유효한 식입니다.  
   
  *data_type*  
- *expression*을 캐스팅할 데이터 형식입니다.  
+ *expression* 을 캐스팅할 데이터 형식입니다.  
   
  *length*  
  대상 데이터 형식의 길이를 지정하는 선택적 정수입니다.  
@@ -57,9 +57,9 @@ TRY_CAST ( expression AS data_type [ ( length ) ] )
  캐스트에 성공하면 지정한 데이터 형식으로 캐스팅된 값을 반환합니다. 그렇지 않으면 Null을 반환합니다.  
   
 ## <a name="remarks"></a>설명  
- **TRY_CAST** 함수는 전달된 값을 사용하여 지정된 *data_type*으로 변환하려고 시도합니다. 캐스팅에 성공하면 **TRY_CAST**는 지정된 *data_type*으로 값을 반환합니다. 오류가 발생하면 Null이 반환됩니다. 그러나 명시적으로 허용되지 않는 변환을 요청하면 오류와 함께 **TRY_CAST**가 실패합니다.  
+ **TRY_CAST** 함수는 전달된 값을 사용하여 지정된 *data_type* 으로 변환하려고 시도합니다. 캐스팅에 성공하면 **TRY_CAST** 는 지정된 *data_type* 으로 값을 반환합니다. 오류가 발생하면 Null이 반환됩니다. 그러나 명시적으로 허용되지 않는 변환을 요청하면 오류와 함께 **TRY_CAST** 가 실패합니다.  
   
- **TRY_CAST**는 예약 키워드가 아니며 모든 호환성 수준에서 사용할 수 있습니다. **TRY_CAST**는 원격 서버에 연결할 때 **TRY_CONVERT**와 동일한 의미 체계를 갖습니다.  
+ **TRY_CAST** 는 예약 키워드가 아니며 모든 호환성 수준에서 사용할 수 있습니다. **TRY_CAST** 는 원격 서버에 연결할 때 **TRY_CONVERT** 와 동일한 의미 체계를 갖습니다.  
   
 ## <a name="examples"></a>예제  
   

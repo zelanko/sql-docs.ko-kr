@@ -17,10 +17,10 @@ ms.assetid: dd78fd8f-56e3-4582-9abd-6bc25c91e075
 author: MashaMSFT
 ms.author: mathoma
 ms.openlocfilehash: a667c6055a43886239102bd9985d06fa714a24d2
-ms.sourcegitcommit: e700497f962e4c2274df16d9e651059b42ff1a10
+ms.sourcegitcommit: c5078791a07330a87a92abb19b791e950672e198
 ms.translationtype: HT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 08/17/2020
+ms.lasthandoff: 11/26/2020
 ms.locfileid: "88470267"
 ---
 # <a name="join-filters"></a>Join Filters
@@ -39,7 +39,7 @@ ms.locfileid: "88470267"
   
  이러한 테이블을 이동이 잦은 영업 직원을 지원하는 애플리케이션에 사용할 수 있지만 **HumanResources.Employee** 테이블의 각 영업 직원이 고객 주문과 관련된 데이터만 받도록 필터링해야 합니다.  
   
- 이를 위해서는 먼저 부모 테이블에 매개 변수가 있는 필터를 정의해야 합니다. 이 예에서는 **HumanResources.Employee** 테이블이 부모 테이블입니다. 이 테이블의 **LoginID**열에는 각 직원에 대한 로그인이 *domain\login*형식으로 포함되어 있습니다. 각 직원이 자신에게 관련된 데이터만 받을 수 있도록 이 테이블을 필터링하려면 다음과 같은 매개 변수가 있는 필터 절을 지정합니다.  
+ 이를 위해서는 먼저 부모 테이블에 매개 변수가 있는 필터를 정의해야 합니다. 이 예에서는 **HumanResources.Employee** 테이블이 부모 테이블입니다. 이 테이블의 **LoginID** 열에는 각 직원에 대한 로그인이 *domain\login* 형식으로 포함되어 있습니다. 각 직원이 자신에게 관련된 데이터만 받을 수 있도록 이 테이블을 필터링하려면 다음과 같은 매개 변수가 있는 필터 절을 지정합니다.  
   
 ```  
 LoginID = SUSER_SNAME()  

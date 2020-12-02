@@ -13,10 +13,10 @@ author: rothja
 ms.author: jroth
 monikerRange: =azuresqldb-current||>=sql-server-2016||=sqlallproducts-allversions||>=sql-server-linux-2017||=azuresqldb-mi-current
 ms.openlocfilehash: 3af6036a3bc6cf2b751eed6a1df173fca2c9a117
-ms.sourcegitcommit: e700497f962e4c2274df16d9e651059b42ff1a10
+ms.sourcegitcommit: c5078791a07330a87a92abb19b791e950672e198
 ms.translationtype: HT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 08/17/2020
+ms.lasthandoff: 11/26/2020
 ms.locfileid: "88488595"
 ---
 # <a name="rename-user-defined-functions"></a>사용자 정의 함수 이름 바꾸기
@@ -56,7 +56,7 @@ ms.locfileid: "88488595"
   
 #### <a name="to-rename-user-defined-functions"></a>사용자 정의 함수의 이름을 바꾸려면  
   
-1.  **개체 탐색기**에서 이름을 바꿀 함수가 포함된 데이터베이스 옆의 더하기 기호를 클릭한 다음  
+1.  **개체 탐색기** 에서 이름을 바꿀 함수가 포함된 데이터베이스 옆의 더하기 기호를 클릭한 다음  
   
 2.  **프로그래밍 기능** 폴더 옆의 더하기 기호를 클릭합니다.  
   
@@ -68,7 +68,7 @@ ms.locfileid: "88488595"
   
     -   Aggregate 함수  
   
-4.  이름을 바꿀 함수를 마우스 오른쪽 단추로 클릭하고 **이름 바꾸기**를 선택합니다.  
+4.  이름을 바꿀 함수를 마우스 오른쪽 단추로 클릭하고 **이름 바꾸기** 를 선택합니다.  
   
 5.  함수의 새 이름을 입력합니다.  
   

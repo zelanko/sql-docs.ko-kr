@@ -15,10 +15,10 @@ helpviewer_keywords:
 author: MashaMSFT
 ms.author: mathoma
 ms.openlocfilehash: b715e65e4dfaa623f56b0caa2a78b03231819deb
-ms.sourcegitcommit: e700497f962e4c2274df16d9e651059b42ff1a10
+ms.sourcegitcommit: c5078791a07330a87a92abb19b791e950672e198
 ms.translationtype: HT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 08/17/2020
+ms.lasthandoff: 11/26/2020
 ms.locfileid: "88494543"
 ---
 # <a name="send-a-test-email-with-database-mail"></a>데이터베이스 메일로 테스트 이메일 보내기  
@@ -33,11 +33,11 @@ ms.locfileid: "88494543"
 ## <a name="procedure"></a>프로시저
 
 1. [SQL Server Management Studio](../../ssms/download-sql-server-management-studio-ssms.md)에서 개체 탐색기를 사용하여 데이터베이스 메일을 구성한 SQL Server Database Engine 인스턴스에 연결하고 관리를 확장한 다음, 데이터베이스 메일을 마우스 오른쪽 단추로 클릭하고 테스트 이메일 보내기를 클릭합니다. 데이터베이스 메일 프로필이 없으면 프로필을 만들지 묻는 메시지가 나타나고 데이터베이스 메일 구성 마법사가 열립니다.
-1. <instance name> 대화 상자의 **테스트 이메일 보내기**에 있는 데이터베이스 메일 프로필 상자에서 테스트할 프로필을 선택합니다.
+1. <instance name> 대화 상자의 **테스트 이메일 보내기** 에 있는 데이터베이스 메일 프로필 상자에서 테스트할 프로필을 선택합니다.
 1. **받는 사람** 입력란에 테스트 이메일의 수신인 이메일 이름을 입력합니다.
 1. **제목** 입력란에 테스트 이메일의 제목 줄을 입력합니다. 문제 해결을 위해 사용자의 전자 메일을 보다 잘 식별할 수 있도록 기본 제목을 변경합니다.
 1. **본문** 입력란에 테스트 이메일의 본문을 입력합니다. 문제 해결을 위해 사용자의 전자 메일을 보다 잘 식별할 수 있도록 기본 제목을 변경합니다.
-1. **테스트 이메일 보내기**를 선택하여 테스트 이메일을 데이터베이스 메일 큐로 보냅니다.
+1. **테스트 이메일 보내기** 를 선택하여 테스트 이메일을 데이터베이스 메일 큐로 보냅니다.
 1. 테스트 이메일을 보내면 데이터베이스 메일 테스트 이메일 대화 상자가 열립니다. 보낸 이메일 부분에 표시되는 숫자를 확인합니다. 이 숫자가 테스트 메시지의 mailitem_id입니다. 확인을 선택합니다.
 1. 도구 모음에서 새 쿼리를 선택하여 쿼리 편집기 창을 엽니다. 다음 T-SQL 문을 실행하여 테스트 이메일 메시지의 상태를 확인합니다.
 

@@ -26,10 +26,10 @@ author: VanMSFT
 ms.author: vanto
 monikerRange: '>=aps-pdw-2016||=azuresqldb-current||=azure-sqldw-latest||>=sql-server-2016||=sqlallproducts-allversions||>=sql-server-linux-2017||=azuresqldb-mi-current'
 ms.openlocfilehash: 5909334c6a31279760ebb8a91d3b4f7f1841accb
-ms.sourcegitcommit: cc23d8646041336d119b74bf239a6ac305ff3d31
+ms.sourcegitcommit: c5078791a07330a87a92abb19b791e950672e198
 ms.translationtype: HT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 09/23/2020
+ms.lasthandoff: 11/26/2020
 ms.locfileid: "91115173"
 ---
 # <a name="object_name-transact-sql"></a>OBJECT_NAME(Transact-SQL)
@@ -49,10 +49,10 @@ OBJECT_NAME ( object_id [, database_id ] )
 
 ## <a name="arguments"></a>인수
  *object_id*  
- 사용할 개체의 ID입니다. *object_id*는 **int**이며 지정한 데이터베이스 또는 현재 데이터베이스 컨텍스트에서 스키마 범위 개체로 간주됩니다.  
+ 사용할 개체의 ID입니다. *object_id* 는 **int** 이며 지정한 데이터베이스 또는 현재 데이터베이스 컨텍스트에서 스키마 범위 개체로 간주됩니다.  
   
  *database_id*  
- 개체를 조회하려는 데이터베이스의 ID입니다. *database_id*는 **int**입니다.  
+ 개체를 조회하려는 데이터베이스의 ID입니다. *database_id* 는 **int** 입니다.  
   
 ## <a name="return-types"></a>반환 형식  
  **sysname**  
@@ -70,7 +70,7 @@ OBJECT_NAME ( object_id [, database_id ] )
   
  이 시스템 함수에서 반환하는 값에서는 현재 데이터베이스의 데이터 정렬을 사용합니다.  
   
- 기본적으로 [!INCLUDE[ssDEnoversion](../../includes/ssdenoversion-md.md)]에서는 *object_id*가 현재 데이터베이스 컨텍스트에 있다고 간주합니다. 다른 데이터베이스의 *object_id*를 참조하는 쿼리는 NULL 또는 잘못된 결과를 반환합니다. 예를 들어 다음 쿼리에서 현재 데이터베이스 컨텍스트는 [!INCLUDE[ssSampleDBnormal](../../includes/sssampledbnormal-md.md)] 데이터베이스입니다. [!INCLUDE[ssDE](../../includes/ssde-md.md)]은 쿼리의 FROM 절에 지정된 데이터베이스 대신 이 데이터베이스에 지정된 개체 ID의 개체 이름을 반환하려고 시도합니다. 따라서 잘못된 정보가 반환됩니다.  
+ 기본적으로 [!INCLUDE[ssDEnoversion](../../includes/ssdenoversion-md.md)]에서는 *object_id* 가 현재 데이터베이스 컨텍스트에 있다고 간주합니다. 다른 데이터베이스의 *object_id* 를 참조하는 쿼리는 NULL 또는 잘못된 결과를 반환합니다. 예를 들어 다음 쿼리에서 현재 데이터베이스 컨텍스트는 [!INCLUDE[ssSampleDBnormal](../../includes/sssampledbnormal-md.md)] 데이터베이스입니다. [!INCLUDE[ssDE](../../includes/ssde-md.md)]은 쿼리의 FROM 절에 지정된 데이터베이스 대신 이 데이터베이스에 지정된 개체 ID의 개체 이름을 반환하려고 시도합니다. 따라서 잘못된 정보가 반환됩니다.  
   
 ```sql  
 USE AdventureWorks2012;  

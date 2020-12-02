@@ -14,10 +14,10 @@ ms.assetid: 17899078-8ba3-4f40-8769-e9837dc3ec60
 author: chugugrace
 ms.author: chugu
 ms.openlocfilehash: 960567c1278f1ed4e5da60a018c330591cd3627d
-ms.sourcegitcommit: c7f40918dc3ecdb0ed2ef5c237a3996cb4cd268d
+ms.sourcegitcommit: c5078791a07330a87a92abb19b791e950672e198
 ms.translationtype: HT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 10/05/2020
+ms.lasthandoff: 11/26/2020
 ms.locfileid: "91724979"
 ---
 # <a name="specify-an-interval-of-change-data"></a>변경 데이터의 간격 지정
@@ -86,15 +86,15 @@ ms.locfileid: "91724979"
   
 1.  **디자이너의** 제어 흐름 [!INCLUDE[ssIS](../../includes/ssis-md.md)] 탭에서 패키지에 SQL 실행 태스크를 추가합니다.  
   
-2.  **SQL 실행 태스크 편집기**의 **일반** 페이지에서 다음 옵션을 선택합니다.  
+2.  **SQL 실행 태스크 편집기** 의 **일반** 페이지에서 다음 옵션을 선택합니다.  
   
-    1.  **ResultSet**에 **단일 행**을 선택합니다.  
+    1.  **ResultSet** 에 **단일 행** 을 선택합니다.  
   
     2.  원본 데이터베이스에 대한 올바른 연결을 구성합니다.  
   
-    3.  **SQLSourceType**에 **직접 입력**을 선택합니다.  
+    3.  **SQLSourceType** 에 **직접 입력** 을 선택합니다.  
   
-    4.  **SQLStatement**에 다음 SQL 문을 입력합니다.  
+    4.  **SQLStatement** 에 다음 SQL 문을 입력합니다.  
   
         ```sql
         SELECT DATEADD(dd,0, DATEDIFF(dd,0,GETDATE()-1)) AS ExtractStartTime,  
@@ -102,7 +102,7 @@ ms.locfileid: "91724979"
   
         ```  
   
-3.  **SQL 실행 태스크 편집기** 의 **결과 집합**페이지에서 ExtractStartTime 결과를 ExtractStartTime 패키지 변수에 매핑하고 ExtractEndTime 결과를 ExtractEndTime 패키지 변수에 매핑합니다.  
+3.  **SQL 실행 태스크 편집기** 의 **결과 집합** 페이지에서 ExtractStartTime 결과를 ExtractStartTime 패키지 변수에 매핑하고 ExtractEndTime 결과를 ExtractEndTime 패키지 변수에 매핑합니다.  
   
     > [!NOTE]  
     >  식을 사용하여 [!INCLUDE[ssISnoversion](../../includes/ssisnoversion-md.md)] 변수의 값을 설정하면 변수의 값에 액세스할 때마다 식이 평가됩니다.  

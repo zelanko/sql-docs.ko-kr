@@ -22,10 +22,10 @@ author: julieMSFT
 ms.author: jrasnick
 monikerRange: '>=aps-pdw-2016||=azuresqldb-current||=azure-sqldw-latest||>=sql-server-2016||=sqlallproducts-allversions||>=sql-server-linux-2017||=azuresqldb-mi-current'
 ms.openlocfilehash: 2c30468f62758e0483b339baf436a788c2cdcabf
-ms.sourcegitcommit: 197a6ffb643f93592edf9e90b04810a18be61133
+ms.sourcegitcommit: c5078791a07330a87a92abb19b791e950672e198
 ms.translationtype: HT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 09/26/2020
+ms.lasthandoff: 11/26/2020
 ms.locfileid: "91380648"
 ---
 # <a name="reverse-transact-sql"></a>REVERSE(Transact-SQL)
@@ -45,13 +45,13 @@ REVERSE ( string_expression )
 
 ## <a name="arguments"></a>인수
  *string_expression*  
- *string_expression*은 문자열 또는 이진 데이터 형식의 [식](../../t-sql/language-elements/expressions-transact-sql.md)입니다. *string_expression*은 문자나 이진 데이터의 상수, 변수 또는 열일 수 있습니다.  
+ *string_expression* 은 문자열 또는 이진 데이터 형식의 [식](../../t-sql/language-elements/expressions-transact-sql.md)입니다. *string_expression* 은 문자나 이진 데이터의 상수, 변수 또는 열일 수 있습니다.  
   
 ## <a name="return-types"></a>반환 형식  
  **varchar** 또는 **nvarchar**  
   
 ## <a name="remarks"></a>설명  
- *string_expression*은 **varchar**로 암시적으로 변환될 수 있는 데이터 형식이어야 합니다. 그렇지 않은 경우 [CAST](../../t-sql/functions/cast-and-convert-transact-sql.md)를 사용하여 *string_expression*을 명시적으로 변환하세요.  
+ *string_expression* 은 **varchar** 로 암시적으로 변환될 수 있는 데이터 형식이어야 합니다. 그렇지 않은 경우 [CAST](../../t-sql/functions/cast-and-convert-transact-sql.md)를 사용하여 *string_expression* 을 명시적으로 변환하세요.  
   
 ## <a name="supplementary-characters-surrogate-pairs"></a>보조 문자(서로게이트 쌍)  
  SC 데이터 정렬을 사용할 때 REVERSE 함수는 서로게이트 쌍에 포함된 두 항목의 순서를 반대로 반환하지 않습니다.  

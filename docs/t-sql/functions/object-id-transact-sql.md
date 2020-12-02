@@ -28,10 +28,10 @@ author: VanMSFT
 ms.author: vanto
 monikerRange: '>=aps-pdw-2016||=azuresqldb-current||=azure-sqldw-latest||>=sql-server-2016||=sqlallproducts-allversions||>=sql-server-linux-2017||=azuresqldb-mi-current'
 ms.openlocfilehash: 65161cafb2ef12e2de120b0e0bd402b722447620
-ms.sourcegitcommit: 2f868a77903c1f1c4cecf4ea1c181deee12d5b15
+ms.sourcegitcommit: c5078791a07330a87a92abb19b791e950672e198
 ms.translationtype: HT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 10/02/2020
+ms.lasthandoff: 11/26/2020
 ms.locfileid: "91670916"
 ---
 # <a name="object_id-transact-sql"></a>OBJECT_ID(Transact-SQL)
@@ -55,10 +55,10 @@ OBJECT_ID ( '[ database_name . [ schema_name ] . | schema_name . ]
 
 ## <a name="arguments"></a>인수
  **'** *object_name* **'**  
- 사용할 개체입니다. *object_name*은 **varchar** 또는 **nvarchar**입니다. *object_name*이 **varchar**인 경우 암시적으로 **nvarchar**로 변환됩니다. 데이터베이스 및 스키마 이름 지정은 옵션입니다.  
+ 사용할 개체입니다. *object_name* 은 **varchar** 또는 **nvarchar** 입니다. *object_name* 이 **varchar** 인 경우 암시적으로 **nvarchar** 로 변환됩니다. 데이터베이스 및 스키마 이름 지정은 옵션입니다.  
   
  **'** *object_type* **'**  
- 스키마 범위 개체 형식입니다. *object_type*은 **varchar** 또는 **nvarchar**입니다. *object_type*이 **varchar**인 경우 암시적으로 **nvarchar**로 변환됩니다. 개체 형식의 목록은 [sys.objects &#40;Transact-SQL&#41;](../../relational-databases/system-catalog-views/sys-objects-transact-sql.md)의 **type** 열을 참조하세요.  
+ 스키마 범위 개체 형식입니다. *object_type* 은 **varchar** 또는 **nvarchar** 입니다. *object_type* 이 **varchar** 인 경우 암시적으로 **nvarchar** 로 변환됩니다. 개체 형식의 목록은 [sys.objects &#40;Transact-SQL&#41;](../../relational-databases/system-catalog-views/sys-objects-transact-sql.md)의 **type** 열을 참조하세요.  
   
 ## <a name="return-types"></a>반환 형식  
  **int**  
@@ -73,7 +73,7 @@ OBJECT_ID ( '[ database_name . [ schema_name ] . | schema_name . ]
 ## <a name="remarks"></a>설명  
  시스템 함수의 매개 변수가 선택 사항이면 현재 데이터베이스, 호스트 컴퓨터, 서버 사용자 또는 데이터베이스 사용자를 가정합니다. 기본 제공 함수 다음에는 항상 괄호가 와야 합니다.  
   
- 임시 테이블 이름이 지정된 경우 현재 데이터베이스가 **tempdb**가 아니면 데이터베이스 이름이 임시 테이블 이름 앞에 와야 합니다. 예: `SELECT OBJECT_ID('tempdb..#mytemptable')`  
+ 임시 테이블 이름이 지정된 경우 현재 데이터베이스가 **tempdb** 가 아니면 데이터베이스 이름이 임시 테이블 이름 앞에 와야 합니다. 예: `SELECT OBJECT_ID('tempdb..#mytemptable')`  
   
  시스템 함수는 선택 목록, WHERE 절 및 식이 허용되는 모든 곳에서 사용될 수 있습니다. 자세한 내용은 [식 &#40;Transact-SQL&#41;](../../t-sql/language-elements/expressions-transact-sql.md) 및 [WHERE &#40;Transact-SQL&#41;](../../t-sql/queries/where-transact-sql.md)을 참조하세요.  
   

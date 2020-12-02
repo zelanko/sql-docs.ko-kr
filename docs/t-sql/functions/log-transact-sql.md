@@ -22,10 +22,10 @@ author: markingmyname
 ms.author: maghan
 monikerRange: '>=aps-pdw-2016||=azuresqldb-current||=azure-sqldw-latest||>=sql-server-2016||=sqlallproducts-allversions||>=sql-server-linux-2017||=azuresqldb-mi-current'
 ms.openlocfilehash: 4c962baabeaccdd2c2cbf517cab5894458046bb2
-ms.sourcegitcommit: e700497f962e4c2274df16d9e651059b42ff1a10
+ms.sourcegitcommit: c5078791a07330a87a92abb19b791e950672e198
 ms.translationtype: HT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 08/17/2020
+ms.lasthandoff: 11/26/2020
 ms.locfileid: "88468029"
 ---
 # <a name="log-transact-sql"></a>LOG(Transact-SQL)
@@ -53,7 +53,7 @@ LOG ( float_expression )
 
 ## <a name="arguments"></a>인수
  *float_expression*  
- **float** 형식 또는 **float**로 암시적으로 변환되는 형식의 [식](../../t-sql/language-elements/expressions-transact-sql.md)입니다.  
+ **float** 형식 또는 **float** 로 암시적으로 변환되는 형식의 [식](../../t-sql/language-elements/expressions-transact-sql.md)입니다.  
   
  *base*  
  로그 밑을 설정하는 선택적 정수 인수입니다.  
@@ -66,7 +66,7 @@ LOG ( float_expression )
 ## <a name="remarks"></a>설명  
  기본적으로 **LOG()** 는 자연 로그를 반환합니다. [!INCLUDE[ssSQL11](../../includes/sssql11-md.md)]부터는 선택적 *베이스* 매개 변수를 사용하여 로그 밑을 다른 값으로 변경할 수 있습니다.  
   
- 자연 로그는 밑 **e**의 로그입니다. 여기서 **e**는 무리 상수(대략 2.718281828)입니다.  
+ 자연 로그는 밑 **e** 의 로그입니다. 여기서 **e** 는 무리 상수(대략 2.718281828)입니다.  
   
  한 수의 지수에 대한 자연 로그는 그 수 자체입니다. LOG( EXP( *n* ) ) = *n*. 한 수의 자연 로그에 대한 지수는 그 수 자체입니다. EXP( LOG( *n* ) ) = *n*.  
   

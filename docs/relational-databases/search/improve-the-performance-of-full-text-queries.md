@@ -12,10 +12,10 @@ ms.author: pelopes
 ms.reviewer: mikeray
 monikerRange: =azuresqldb-current||>=sql-server-2016||=sqlallproducts-allversions||>=sql-server-linux-2017||=azuresqldb-mi-current
 ms.openlocfilehash: 783d2a0e80728f323b5b9d25048c10189df695a3
-ms.sourcegitcommit: 4d370399f6f142e25075b3714e5c2ce056b1bfd0
+ms.sourcegitcommit: c5078791a07330a87a92abb19b791e950672e198
 ms.translationtype: HT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 10/09/2020
+ms.lasthandoff: 11/26/2020
 ms.locfileid: "91868044"
 ---
 # <a name="improve-the-performance-of-full-text-queries"></a>전체 텍스트 쿼리 성능 향상
@@ -36,7 +36,7 @@ ms.locfileid: "91868044"
   
 -   전체 텍스트 키 또는 순위 정보만 필요한 경우 CONTAINS 또는 FREETEXT를 사용하는 대신 [CONTAINSTABLE](../../relational-databases/system-functions/containstable-transact-sql.md) 또는 [FREETEXTTABLE](../../relational-databases/system-functions/freetexttable-transact-sql.md) 을 각각 사용합니다.  
   
--   결과를 제한하고 성능을 향상시키려면 FREETEXTTABLE 및 CONTAINSTABLE 함수의 *top_n_by_rank* 매개 변수를 사용합니다. *top_n_by_rank* 를 사용하면 관련성이 가장 높은 항목만 회수할 수 있습니다. 이 매개 변수는 비즈니스 시나리오에서 일치하는 모든 항목을 회수하지 않아도 되는 경우, 즉 *전체 회수*가 필요 없는 경우에만 사용합니다.  
+-   결과를 제한하고 성능을 향상시키려면 FREETEXTTABLE 및 CONTAINSTABLE 함수의 *top_n_by_rank* 매개 변수를 사용합니다. *top_n_by_rank* 를 사용하면 관련성이 가장 높은 항목만 회수할 수 있습니다. 이 매개 변수는 비즈니스 시나리오에서 일치하는 모든 항목을 회수하지 않아도 되는 경우, 즉 *전체 회수* 가 필요 없는 경우에만 사용합니다.  
   
     > [!NOTE]  
     >  전체 회수는 대개 법률 시나리오에 필요하지만 e-비즈니스와 같은 비즈니스 시나리오에서는 성능보다 중요하지 않을 수 있습니다.  

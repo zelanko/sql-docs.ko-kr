@@ -21,10 +21,10 @@ author: julieMSFT
 ms.author: jrasnick
 monikerRange: '>=aps-pdw-2016||=azuresqldb-current||=azure-sqldw-latest||>=sql-server-2016||=sqlallproducts-allversions||>=sql-server-linux-2017||=azuresqldb-mi-current'
 ms.openlocfilehash: 3bafff2cafe25587ae65c519bfc2e1896b34117d
-ms.sourcegitcommit: 197a6ffb643f93592edf9e90b04810a18be61133
+ms.sourcegitcommit: c5078791a07330a87a92abb19b791e950672e198
 ms.translationtype: HT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 09/26/2020
+ms.lasthandoff: 11/26/2020
 ms.locfileid: "91379996"
 ---
 # <a name="round-transact-sql"></a>ROUND(Transact-SQL)
@@ -47,10 +47,10 @@ ROUND ( numeric_expression , length [ ,function ] )
  **bit** 데이터 형식을 제외한 정확한 수치 또는 근사치 데이터 형식 범주의 [expression](../../t-sql/language-elements/expressions-transact-sql.md)입니다.  
   
  *length*  
- *numeric_expression*을 반올림할 전체 자릿수입니다. *length*는 **tinyint**, **smallint** 또는 **int** 형식의 식이어야 합니다. *length*가 양수이면 *numeric_expression*은 *length*로 지정된 10진수 자리의 숫자로 반올림됩니다. *length*가 음수이면 *numeric_expression*은 *length*로 지정된 소수점의 왼쪽에 반올림됩니다.  
+ *numeric_expression* 을 반올림할 전체 자릿수입니다. *length* 는 **tinyint**, **smallint** 또는 **int** 형식의 식이어야 합니다. *length* 가 양수이면 *numeric_expression* 은 *length* 로 지정된 10진수 자리의 숫자로 반올림됩니다. *length* 가 음수이면 *numeric_expression* 은 *length* 로 지정된 소수점의 왼쪽에 반올림됩니다.  
   
  *function*  
- 수행할 연산의 유형입니다. *function*은 **tinyint**, **smallint** 또는 **int**여야 합니다. *function*이 생략되거나 값이 0(기본값)이면 *numeric_expression*이 반올림됩니다. 0 이외의 값을 지정하면 *numeric_expression*이 잘립니다.  
+ 수행할 연산의 유형입니다. *function* 은 **tinyint**, **smallint** 또는 **int** 여야 합니다. *function* 이 생략되거나 값이 0(기본값)이면 *numeric_expression* 이 반올림됩니다. 0 이외의 값을 지정하면 *numeric_expression* 이 잘립니다.  
   
 ## <a name="return-types"></a>반환 형식  
  다음 데이터 형식을 반환합니다.  
@@ -66,13 +66,13 @@ ROUND ( numeric_expression , length [ ,function ] )
 |**float** 및 **real** 범주|**float**|  
   
 ## <a name="remarks"></a>설명  
- ROUND는 항상 하나의 값을 반환합니다. *length*가 음수이고 소수점 전의 자릿수보다 클 경우 ROUND는 0을 반환합니다.  
+ ROUND는 항상 하나의 값을 반환합니다. *length* 가 음수이고 소수점 전의 자릿수보다 클 경우 ROUND는 0을 반환합니다.  
   
 |예제|결과|  
 |-------------|------------|  
 |ROUND(748.58, -4)|0|  
   
- *length*가 음수일 경우 ROUND는 데이터 형식에 관계없이 반올림된 *numeric_expression*을 반환합니다.  
+ *length* 가 음수일 경우 ROUND는 데이터 형식에 관계없이 반올림된 *numeric_expression* 을 반환합니다.  
   
 |예제|결과|  
 |--------------|------------|  

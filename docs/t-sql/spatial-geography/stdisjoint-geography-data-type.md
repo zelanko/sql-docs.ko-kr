@@ -19,10 +19,10 @@ ms.assetid: 98328a02-e018-47d6-aa93-de162b8aef62
 author: MladjoA
 ms.author: mlandzic
 ms.openlocfilehash: 14dcdd0581f88897f10160d2be70eb01bbd2b018
-ms.sourcegitcommit: e700497f962e4c2274df16d9e651059b42ff1a10
+ms.sourcegitcommit: c5078791a07330a87a92abb19b791e950672e198
 ms.translationtype: HT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 08/17/2020
+ms.lasthandoff: 11/26/2020
 ms.locfileid: "88467473"
 ---
 # <a name="stdisjoint-geography-data-type"></a>STDisjoint(geography 데이터 형식)
@@ -41,7 +41,7 @@ ms.locfileid: "88467473"
 
 ## <a name="arguments"></a>인수
  *other_geography*  
- STDisjoint()가 호출되는 인스턴스와 비교할 다른 **geography**인스턴스입니다.  
+ STDisjoint()가 호출되는 인스턴스와 비교할 다른 **geography** 인스턴스입니다.  
   
 ## <a name="return-types"></a>반환 형식  
  [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 반환 형식: **bit**  

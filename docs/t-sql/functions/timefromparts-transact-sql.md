@@ -20,10 +20,10 @@ author: julieMSFT
 ms.author: jrasnick
 monikerRange: '>=aps-pdw-2016||=azuresqldb-current||=azure-sqldw-latest||>=sql-server-2016||=sqlallproducts-allversions||>=sql-server-linux-2017||=azuresqldb-mi-current'
 ms.openlocfilehash: b6ae1434ea9ec664481d233c4e38be7b0ada7389
-ms.sourcegitcommit: 197a6ffb643f93592edf9e90b04810a18be61133
+ms.sourcegitcommit: c5078791a07330a87a92abb19b791e950672e198
 ms.translationtype: HT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 09/26/2020
+ms.lasthandoff: 11/26/2020
 ms.locfileid: "91380470"
 ---
 # <a name="timefromparts-transact-sql"></a>TIMEFROMPARTS(Transact-SQL)
@@ -63,7 +63,7 @@ TIMEFROMPARTS ( hour, minute, seconds, fractions, precision )
 ## <a name="remarks"></a>설명  
  TIMEROMPARTS는 완전히 초기화된 시간 값을 반환합니다. 인수가 유효하지 않으면 오류가 발생합니다. 매개 변수에 Null이 포함되어 있으면 Null이 반환됩니다. 그러나 *precision* 인수가 Null일 경우에는 오류가 발생합니다.  
   
- *fractions* 인수는 *precision* 인수에 의존합니다. 예를 들어 *precision*이 7이면 각 소수 자릿수가 100나노초를 나타내고 *precision*이 3이면 각 소수 자릿수가 1밀리초를 나타냅니다. *precision*의 값이 0이면 *fractions*의 값도 0이어야 합니다. 그렇지 않으면 오류가 발생합니다.  
+ *fractions* 인수는 *precision* 인수에 의존합니다. 예를 들어 *precision* 이 7이면 각 소수 자릿수가 100나노초를 나타내고 *precision* 이 3이면 각 소수 자릿수가 1밀리초를 나타냅니다. *precision* 의 값이 0이면 *fractions* 의 값도 0이어야 합니다. 그렇지 않으면 오류가 발생합니다.  
   
  이 함수는 [!INCLUDE[ssSQL11](../../includes/sssql11-md.md)] 이상 서버에 대해서는 원격으로 실행할 수 있지만 [!INCLUDE[ssSQL11](../../includes/sssql11-md.md)] 이전 버전의 서버에 대해서는 원격으로 실행할 수 없습니다.  
   
@@ -88,11 +88,11 @@ Result
 ### <a name="b-example-with-fractions-of-a-second"></a>B. 소수 단위 초를 사용하는 예  
  다음 예에서는 *fractions* 및 *precision* 매개 변수의 사용 방법을 설명합니다.  
   
-1.  *fractions*의 값이 5이고 *precision*의 값이 1이면, *fractions*의 값은 1초의 5/10를 나타냅니다.  
+1.  *fractions* 의 값이 5이고 *precision* 의 값이 1이면, *fractions* 의 값은 1초의 5/10를 나타냅니다.  
   
-2.  *fractions*의 값이 50이고 *precision*의 값이 2이면 *fractions*의 값은 1초의 50/100을 나타냅니다.  
+2.  *fractions* 의 값이 50이고 *precision* 의 값이 2이면 *fractions* 의 값은 1초의 50/100을 나타냅니다.  
   
-3.  *fractions*의 값이 500이고 *precision*의 값이 3이면 *fractions*의 값은 1초의 500/1000을 나타냅니다.  
+3.  *fractions* 의 값이 500이고 *precision* 의 값이 3이면 *fractions* 의 값은 1초의 500/1000을 나타냅니다.  
   
 ```sql  
 SELECT TIMEFROMPARTS ( 14, 23, 44, 5, 1 );  

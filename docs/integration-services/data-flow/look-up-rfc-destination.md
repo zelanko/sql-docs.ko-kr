@@ -12,10 +12,10 @@ ms.assetid: db9404d8-4c42-45e5-a100-c7a84b056109
 author: chugugrace
 ms.author: chugu
 ms.openlocfilehash: d938b3d742dd9d4b43f0a9b3704281392d89049d
-ms.sourcegitcommit: e700497f962e4c2274df16d9e651059b42ff1a10
+ms.sourcegitcommit: c5078791a07330a87a92abb19b791e950672e198
 ms.translationtype: HT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 08/17/2020
+ms.lasthandoff: 11/26/2020
 ms.locfileid: "88495806"
 ---
 # <a name="look-up-rfc-destination"></a>RFC 대상 조회
@@ -36,11 +36,11 @@ ms.locfileid: "88495806"
   
 2.  **데이터 흐름** 탭에서 SAP BW 원본 또는 대상을 두 번 클릭합니다.  
   
-3.  **SAP BW 원본 편집기** 또는 **SAP BW 대상 편집기**에서 **연결 관리자** 를 클릭하여 편집기의 **연결 관리자** 페이지를 엽니다.  
+3.  **SAP BW 원본 편집기** 또는 **SAP BW 대상 편집기** 에서 **연결 관리자** 를 클릭하여 편집기의 **연결 관리자** 페이지를 엽니다.  
   
 4.  **연결 관리자** 페이지의 **RFC 대상** 그룹 상자에서 **조회** 를 클릭하여 **RFC 대상 조회** 대화 상자를 표시합니다.  
   
-     **SAP BW 원본 편집기**에서 **RFC 대상** 그룹 상자는 **실행 모드** 가 **P - 프로세스 체인 트리거** 또는 **W - 알릴 때까지 대기**인 경우에만 표시됩니다.  
+     **SAP BW 원본 편집기** 에서 **RFC 대상** 그룹 상자는 **실행 모드** 가 **P - 프로세스 체인 트리거** 또는 **W - 알릴 때까지 대기** 인 경우에만 표시됩니다.  
   
 ## <a name="options"></a>옵션  
  **대상**  
@@ -50,7 +50,7 @@ ms.locfileid: "88495806"
  게이트웨이 호스트의 서버 이름 또는 IP 주소를 표시합니다. 일반적으로 이름 또는 IP 주소는 SAP 애플리케이션 서버와 동일합니다.  
   
  **게이트웨이 서비스**  
- 게이트웨이 서비스 이름을 **sapgwNN**형식으로 표시합니다. 여기서 **NN** 은 시스템 번호입니다.  
+ 게이트웨이 서비스 이름을 **sapgwNN** 형식으로 표시합니다. 여기서 **NN** 은 시스템 번호입니다.  
   
  **프로그램 ID**  
  RFC 대상과 연결된 프로그램 ID를 표시합니다.  

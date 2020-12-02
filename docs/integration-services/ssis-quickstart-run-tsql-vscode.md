@@ -10,10 +10,10 @@ ms.technology: integration-services
 author: chugugrace
 ms.author: chugu
 ms.openlocfilehash: dcbd93a2e1e40c58cd92bd71449ba9a9155ba5b2
-ms.sourcegitcommit: a5398f107599102af7c8cda815d8e5e9a367ce7e
+ms.sourcegitcommit: c5078791a07330a87a92abb19b791e950672e198
 ms.translationtype: HT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 10/13/2020
+ms.lasthandoff: 11/26/2020
 ms.locfileid: "92006197"
 ---
 # <a name="run-an-ssis-package-from-visual-studio-code-with-transact-sql"></a>Transact-SQL을 사용하여 Visual Studio Code에서 SSIS 패키지 실행
@@ -43,20 +43,20 @@ Visual Studio Code는 Microsoft SQL Server, Azure SQL Database 또는 Azure Syna
 
 ## <a name="set-language-mode-to-sql-in-vs-code"></a>VS Code에서 언어 모드를 SQL로 설정
 
-`mssql` 명령과 T-SQL IntelliSense를 사용하도록 설정하려면 Visual Studio Code에서 언어 모드를 **SQL**로 설정합니다.
+`mssql` 명령과 T-SQL IntelliSense를 사용하도록 설정하려면 Visual Studio Code에서 언어 모드를 **SQL** 로 설정합니다.
 
 1. Visual Studio Code를 연 다음 새 창을 엽니다. 
 
-2. 상태 표시줄의 오른쪽 아래 모서리에 있는 **일반 텍스트**를 클릭합니다.
+2. 상태 표시줄의 오른쪽 아래 모서리에 있는 **일반 텍스트** 를 클릭합니다.
 
-3. 열리는 **언어 모드 선택** 드롭다운 메뉴에서 **SQL**을 선택하거나 입력한 다음 **Enter** 키를 눌러 언어 모드를 SQL로 설정합니다. 
+3. 열리는 **언어 모드 선택** 드롭다운 메뉴에서 **SQL** 을 선택하거나 입력한 다음 **Enter** 키를 눌러 언어 모드를 SQL로 설정합니다. 
 
 ## <a name="for-azure-sql-database-get-the-connection-info"></a>Azure SQL Database에서 연결 정보 가져오기
 
 Azure SQL Database에서 패키지를 실행하려면 SSISDB(SSIS 카탈로그 데이터베이스)에 연결해야 하는 연결 정보를 가져옵니다. 다음 절차에는 정규화된 서버 이름과 로그인 정보가 필요합니다.
 
 1. [Azure Portal](https://portal.azure.com/)에 로그인합니다.
-2. 왼쪽 메뉴에서 **SQL Databases**를 선택한 다음, **SQL 데이터베이스** 페이지에서 SSISDB 데이터베이스를 선택합니다. 
+2. 왼쪽 메뉴에서 **SQL Databases** 를 선택한 다음, **SQL 데이터베이스** 페이지에서 SSISDB 데이터베이스를 선택합니다. 
 3. 데이터베이스의 **개요** 페이지에서 정규화된 서버 이름을 검토합니다. **복사하려면 클릭** 옵션을 표시하려면 마우스로 서버 이름 위를 가리킵니다. 
 4. Azure SQL Database 서버 로그인 정보를 잊은 경우, SQL Database 서버 페이지로 이동하여 서버 관리자 이름을 확인합니다. 필요한 경우 암호를 다시 설정할 수 있습니다.
 
@@ -69,9 +69,9 @@ Visual Studio Code를 사용하여 SSIS 카탈로그에 대한 연결을 설정�
 
 1. VS Code에서 **Ctrl+Shift+P**(또는 **F1** 키)를 눌러 명령 팔레트를 엽니다.
 
-2. **sqlcon**을 입력하고 **Enter** 키를 누릅니다.
+2. **sqlcon** 을 입력하고 **Enter** 키를 누릅니다.
 
-3. **Enter** 키를 눌러 **연결 프로필 만들기**를 선택합니다. 이 단계는 SQL Server 인스턴스에 대한 연결 프로필을 만듭니다.
+3. **Enter** 키를 눌러 **연결 프로필 만들기** 를 선택합니다. 이 단계는 SQL Server 인스턴스에 대한 연결 프로필을 만듭니다.
 
 4. 프롬프트에 따라 새 연결 프로필에 대한 연결 속성을 지정합니다. 각 값을 지정한 후 **Enter** 키를 눌러 계속합니다. 
 
@@ -96,7 +96,7 @@ Visual Studio Code를 사용하여 SSIS 카탈로그에 대한 연결을 설정�
 
 2. 시스템에 대한 `catalog.create_execution` 저장 프로시저의 매개 변수 값을 업데이트합니다.
 
-3. **Ctrl+Shift+E**를 눌러 코드를 실행하고 패키지를 실행합니다.
+3. **Ctrl+Shift+E** 를 눌러 코드를 실행하고 패키지를 실행합니다.
 
 ```sql
 Declare @execution_id bigint

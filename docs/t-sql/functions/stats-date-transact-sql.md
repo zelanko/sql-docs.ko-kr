@@ -24,10 +24,10 @@ author: julieMSFT
 ms.author: jrasnick
 monikerRange: '>=aps-pdw-2016||=azuresqldb-current||=azure-sqldw-latest||>=sql-server-2016||=sqlallproducts-allversions||>=sql-server-linux-2017||=azuresqldb-mi-current'
 ms.openlocfilehash: 4657f96d1fe67435d547696361b8593d022fb559
-ms.sourcegitcommit: 197a6ffb643f93592edf9e90b04810a18be61133
+ms.sourcegitcommit: c5078791a07330a87a92abb19b791e950672e198
 ms.translationtype: HT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 09/26/2020
+ms.lasthandoff: 11/26/2020
 ms.locfileid: "91379868"
 ---
 # <a name="stats_date-transact-sql"></a>STATS_DATE(Transact-SQL)
@@ -55,7 +55,7 @@ STATS_DATE ( object_id , stats_id )
  통계 개체의 ID입니다.  
   
 ## <a name="return-types"></a>반환 형식  
- 성공하면 **datetime**을 반환합니다. 통계 BLOB이 만들어지지 않으면 **NULL**을 반환합니다.  
+ 성공하면 **datetime** 을 반환합니다. 통계 BLOB이 만들어지지 않으면 **NULL** 을 반환합니다.  
   
 ## <a name="remarks"></a>설명  
  시스템 함수는 SELECT 목록, WHERE 절 및 식이 사용되는 모든 위치에서 사용할 수 있습니다.  

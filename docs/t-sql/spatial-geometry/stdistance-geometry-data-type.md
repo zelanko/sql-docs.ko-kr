@@ -19,10 +19,10 @@ ms.assetid: ac815bc7-5342-4cc4-af40-c80a1c4c8b68
 author: MladjoA
 ms.author: mlandzic
 ms.openlocfilehash: 48ae04bdc272bcb7513fe4c2ac1d474406b4ba04
-ms.sourcegitcommit: e700497f962e4c2274df16d9e651059b42ff1a10
+ms.sourcegitcommit: c5078791a07330a87a92abb19b791e950672e198
 ms.translationtype: HT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 08/17/2020
+ms.lasthandoff: 11/26/2020
 ms.locfileid: "88467377"
 ---
 # <a name="stdistance-geometry-data-type"></a>STDistance(geometry 데이터 형식)
@@ -41,7 +41,7 @@ ms.locfileid: "88467377"
 
 ## <a name="arguments"></a>인수
  *other_geometry*  
- `STDistance()`를 호출할 인스턴스 간 거리를 측정할 다른 **geometry** 인스턴스입니다. *other_geometry*가 빈 집합이면 `STDistance()`은 Null을 반환합니다.  
+ `STDistance()`를 호출할 인스턴스 간 거리를 측정할 다른 **geometry** 인스턴스입니다. *other_geometry* 가 빈 집합이면 `STDistance()`은 Null을 반환합니다.  
   
 ## <a name="return-types"></a>반환 형식  
  [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 반환 형식: **float**  

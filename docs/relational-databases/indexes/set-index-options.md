@@ -27,10 +27,10 @@ author: MikeRayMSFT
 ms.author: mikeray
 monikerRange: =azuresqldb-current||>=sql-server-2016||=sqlallproducts-allversions||>=sql-server-linux-2017||=azuresqldb-mi-current
 ms.openlocfilehash: 1427a47837063db4fd617c8489d99a3ab7927d15
-ms.sourcegitcommit: e700497f962e4c2274df16d9e651059b42ff1a10
+ms.sourcegitcommit: c5078791a07330a87a92abb19b791e950672e198
 ms.translationtype: HT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 08/17/2020
+ms.lasthandoff: 11/26/2020
 ms.locfileid: "88499392"
 ---
 # <a name="set-index-options"></a>인덱스 옵션 설정
@@ -72,12 +72,12 @@ ms.locfileid: "88499392"
 
 1. 개체 탐색기에서 더하기 기호를 클릭하여 인덱스 속성을 수정할 테이블이 포함된 데이터베이스를 확장합니다.
 2. 더하기 기호를 클릭하여 **테이블** 폴더를 확장합니다.
-3. 인덱스 속성을 수정할 테이블을 마우스 오른쪽 단추로 클릭하고 **디자인**을 선택합니다.
-4. **테이블 디자이너** 메뉴에서 **인덱스/키**를 클릭합니다.
+3. 인덱스 속성을 수정할 테이블을 마우스 오른쪽 단추로 클릭하고 **디자인** 을 선택합니다.
+4. **테이블 디자이너** 메뉴에서 **인덱스/키** 를 클릭합니다.
 5. 수정할 인덱스를 선택합니다. 주 표에 속성이 표시됩니다.
 6. 속성의 설정을 변경하여 인덱스를 사용자 지정합니다.
-7. **닫기**를 클릭합니다.
-8. **파일** 메뉴에서 _table_name_**저장**을 선택합니다.
+7. **닫기** 를 클릭합니다.
+8. **파일** 메뉴에서 _table_name_**저장** 을 선택합니다.
 
 ### <a name="to-modify-the-properties-of-an-index-in-object-explorer"></a>개체 탐색기에서 인덱스 속성을 수정하려면
 
@@ -85,8 +85,8 @@ ms.locfileid: "88499392"
 2. 더하기 기호를 클릭하여 **테이블** 폴더를 확장합니다.
 3. 더하기 기호를 클릭하여 인덱스 속성을 수정할 테이블을 확장합니다.
 4. 더하기 기호를 클릭하여 **인덱스** 폴더를 확장합니다.
-5. 속성을 수정할 인덱스를 마우스 오른쪽 단추로 클릭하고 **속성**을 선택합니다.
-6. **페이지 선택**아래에서 **옵션**을 선택합니다.
+5. 속성을 수정할 인덱스를 마우스 오른쪽 단추로 클릭하고 **속성** 을 선택합니다.
+6. **페이지 선택** 아래에서 **옵션** 을 선택합니다.
 7. 속성의 설정을 변경하여 인덱스를 사용자 지정합니다.
 8. 인덱스 열을 추가 또는 제거하거나 그 위치를 변경하려면 **인덱스 속성 -** _index_name_ 대화 상자의 **일반** 페이지를 선택합니다. 자세한 내용은 [Index Properties F1 Help](../../relational-databases/indexes/index-properties-f1-help.md)를 참조하세요.
 

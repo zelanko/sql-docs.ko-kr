@@ -19,10 +19,10 @@ ms.assetid: 6a2dbf10-f692-471b-9458-24d246963049
 author: julieMSFT
 ms.author: jrasnick
 ms.openlocfilehash: c7d84ba6285867f9b37aa26f1fc3f721c75fefb9
-ms.sourcegitcommit: 197a6ffb643f93592edf9e90b04810a18be61133
+ms.sourcegitcommit: c5078791a07330a87a92abb19b791e950672e198
 ms.translationtype: HT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 09/26/2020
+ms.lasthandoff: 11/26/2020
 ms.locfileid: "91380798"
 ---
 # <a name="parse-transact-sql"></a>PARSE(Transact-SQL)
@@ -44,15 +44,15 @@ PARSE ( string_value AS data_type [ USING culture ] )
  *string_value*  
  지정된 데이터 형식으로 구문 분석할 형식이 지정된 값을 나타내는 **nvarchar**(4000) 값입니다.  
   
- *string_value*는 요청한 데이터 형식에 대한 유효한 표현이어야 합니다. 그렇지 않으면 PARSE는 오류를 발생시킵니다.  
+ *string_value* 는 요청한 데이터 형식에 대한 유효한 표현이어야 합니다. 그렇지 않으면 PARSE는 오류를 발생시킵니다.  
   
  *data_type*  
  결과에 대해 요청된 데이터 형식을 나타내는 리터럴 값입니다.  
   
  *culture*  
- *string_value*의 형식을 지정하는 데 사용되는 culture를 식별하는 선택적 문자열입니다.  
+ *string_value* 의 형식을 지정하는 데 사용되는 culture를 식별하는 선택적 문자열입니다.  
   
- *culture* 인수를 지정하지 않으면 현재 세션의 언어가 사용됩니다. 이 언어는 SET LANGUAGE 문을 사용하여 명시적으로 또는 암시적으로 설정됩니다. *culture*는 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]에서 명시적으로 지원하는 언어로만 국한되지 않으며 .NET Framework에서 지원하는 모든 culture를 수용합니다. *culture* 인수가 유효하지 않을 경우 PARSE는 오류를 발생시킵니다.  
+ *culture* 인수를 지정하지 않으면 현재 세션의 언어가 사용됩니다. 이 언어는 SET LANGUAGE 문을 사용하여 명시적으로 또는 암시적으로 설정됩니다. *culture* 는 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]에서 명시적으로 지원하는 언어로만 국한되지 않으며 .NET Framework에서 지원하는 모든 culture를 수용합니다. *culture* 인수가 유효하지 않을 경우 PARSE는 오류를 발생시킵니다.  
   
 ## <a name="return-types"></a>반환 형식  
  요청한 데이터 형식으로 변환된 식 결과를 반환합니다.  

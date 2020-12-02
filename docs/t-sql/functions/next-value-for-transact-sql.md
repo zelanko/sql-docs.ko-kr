@@ -24,10 +24,10 @@ ms.assetid: 92632ed5-9f32-48eb-be28-a5e477ef9076
 author: julieMSFT
 ms.author: jrasnick
 ms.openlocfilehash: 02eaf8552bdbd25788d5a436230b58e3d14d6f9e
-ms.sourcegitcommit: cc23d8646041336d119b74bf239a6ac305ff3d31
+ms.sourcegitcommit: c5078791a07330a87a92abb19b791e950672e198
 ms.translationtype: HT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 09/23/2020
+ms.lasthandoff: 11/26/2020
 ms.locfileid: "91116660"
 ---
 # <a name="next-value-for-transact-sql"></a>NEXT VALUE FOR(Transact-SQL)
@@ -98,7 +98,7 @@ NEXT VALUE FOR [ database_name . ] [ schema_name . ]  sequence_name
   
 -   **FETCH**, **OVER**, **OUTPUT**, **ON**, **PIVOT**, **UNPIVOT**, **GROUP BY**, **HAVING**, **COMPUTE**, **COMPUTE BY** 또는 **FOR XML** 절에서 사용할 경우  
   
--   **CASE**, **CHOOSE**, **COALESCE**, **IIF**, **ISNULL** 또는 ** NULLIF**를 사용하는 조건식에서 사용할 경우  
+-   **CASE**, **CHOOSE**, **COALESCE**, **IIF**, **ISNULL** 또는 **NULLIF** 를 사용하는 조건식에서 사용할 경우  
   
 -   **INSERT** 문의 일부가 아닌 **VALUES** 절에 사용할 경우  
   
@@ -108,7 +108,7 @@ NEXT VALUE FOR [ database_name . ] [ schema_name . ]  sequence_name
   
 -   사용자 정의 테이블 형식에서 기본값으로 사용할 경우  
   
--   **TOP**, **OFFSET**을 사용하는 문에서 사용할 경우 또는 **ROWCOUNT** 옵션이 설정된 경우  
+-   **TOP**, **OFFSET** 을 사용하는 문에서 사용할 경우 또는 **ROWCOUNT** 옵션이 설정된 경우  
   
 -   문의 **WHERE** 절에 사용할 경우  
   
@@ -230,7 +230,7 @@ GO
 ```  
   
 ### <a name="d-using-the-next-value-for-function-in-the-definition-of-a-default-constraint"></a>D. 기본 제약 조건 정의에 NEXT VALUE FOR 함수 사용  
- 기본 제약 조건 정의에 **NEXT VALUE FOR** 함수를 사용할 수 있습니다. **CREATE TABLE** 문에서 **NEXT VALUE FOR**를 사용하는 예는 [시퀀스 번호](../../relational-databases/sequence-numbers/sequence-numbers.md)의 예 C를 참조하세요. 다음 예에서는 `ALTER TABLE`을 사용하여 현재 테이블에 기본값으로 시퀀스를 추가합니다.  
+ 기본 제약 조건 정의에 **NEXT VALUE FOR** 함수를 사용할 수 있습니다. **CREATE TABLE** 문에서 **NEXT VALUE FOR** 를 사용하는 예는 [시퀀스 번호](../../relational-databases/sequence-numbers/sequence-numbers.md)의 예 C를 참조하세요. 다음 예에서는 `ALTER TABLE`을 사용하여 현재 테이블에 기본값으로 시퀀스를 추가합니다.  
   
 ```sql
 CREATE TABLE Test.MyTable  

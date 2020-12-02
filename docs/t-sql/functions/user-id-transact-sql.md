@@ -24,10 +24,10 @@ ms.assetid: 67fd29bc-eda9-4d4d-b148-5d3659181a43
 author: VanMSFT
 ms.author: vanto
 ms.openlocfilehash: 50ffbb7ff9afa07b022f1c119afe07f43ab8ff6d
-ms.sourcegitcommit: 197a6ffb643f93592edf9e90b04810a18be61133
+ms.sourcegitcommit: c5078791a07330a87a92abb19b791e950672e198
 ms.translationtype: HT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 09/26/2020
+ms.lasthandoff: 11/26/2020
 ms.locfileid: "91379428"
 ---
 # <a name="user_id-transact-sql"></a>USER_ID(Transact-SQL)
@@ -50,13 +50,13 @@ USER_ID ( [ 'user' ] )
 
 ## <a name="arguments"></a>인수
  *user*  
- 사용할 사용자 이름입니다. *사용자*는 **nchar**입니다. **char** 값을 지정하면 암시적으로 **nchar**로 변환됩니다. 괄호가 필요합니다.  
+ 사용할 사용자 이름입니다. *사용자* 는 **nchar** 입니다. **char** 값을 지정하면 암시적으로 **nchar** 로 변환됩니다. 괄호가 필요합니다.  
   
 ## <a name="return-types"></a>반환 형식  
  **int**  
   
 ## <a name="remarks"></a>설명  
- *사용자*를 생략하면 현재 사용자가 대신 사용됩니다. 매개 변수에 NULL이라는 단어가 포함되어 있으면 NULL이 반환됩니다. EXECUTE AS를 호출한 후 USER_ID를 호출하면 가장된 컨텍스트의 ID가 반환됩니다.  
+ *사용자* 를 생략하면 현재 사용자가 대신 사용됩니다. 매개 변수에 NULL이라는 단어가 포함되어 있으면 NULL이 반환됩니다. EXECUTE AS를 호출한 후 USER_ID를 호출하면 가장된 컨텍스트의 ID가 반환됩니다.  
   
  특정 데이터베이스 사용자에 매핑되지 않은 Windows 보안 주체가 그룹 멤버 자격으로 데이터베이스에 액세스하면 USER_ID가 0(public의 ID)을 반환합니다. 이러한 보안 주체가 스키마를 지정하지 않고 개체를 만들면 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]에서 해당 Windows 보안 주체에 매핑되는 암시적 사용자와 스키마를 생성합니다. 이렇게 생성된 사용자는 데이터베이스 연결에 사용할 수 없습니다. 암시적 사용자에 매핑되는 Windows 보안 주체로 USER_ID를 호출하면 암시적 사용자의 ID가 반환됩니다.  
   

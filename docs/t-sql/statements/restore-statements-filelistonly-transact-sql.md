@@ -24,10 +24,10 @@ author: MikeRayMSFT
 ms.author: mikeray
 monikerRange: =azuresqldb-mi-current||>=sql-server-2016||=sqlallproducts-allversions||>=sql-server-linux-2017
 ms.openlocfilehash: f69f4ac410c3a625fce65b560af4b0611c1bca4c
-ms.sourcegitcommit: b93beb4f03aee2c1971909cb1d15f79cd479a35c
+ms.sourcegitcommit: c5078791a07330a87a92abb19b791e950672e198
 ms.translationtype: HT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 09/29/2020
+ms.lasthandoff: 11/26/2020
 ms.locfileid: "91497257"
 ---
 # <a name="restore-statements---filelistonly-transact-sql"></a>RESTORE 문 - FILELISTONLY(Transact-SQL)
@@ -103,7 +103,7 @@ FROM <backup_device>
 |SourceBlockSize|**int**|백업 디바이스를 제외한 해당 파일이 포함된 물리적 디바이스의 블록 크기(바이트)입니다.|  
 |FileGroupID|**int**|파일 그룹의 ID입니다.|  
 |LogGroupGUID|**uniqueidentifier** NULL|NULL|  
-|DifferentialBaseLSN|**numeric(25,0)** NULL|차등 백업의 경우 로그 시퀀스 번호가 **DifferentialBaseLSN**보다 크거나 같은 변경 내용이 포함됩니다.<br /><br /> 다른 백업 유형의 경우 값은 NULL입니다.|  
+|DifferentialBaseLSN|**numeric(25,0)** NULL|차등 백업의 경우 로그 시퀀스 번호가 **DifferentialBaseLSN** 보다 크거나 같은 변경 내용이 포함됩니다.<br /><br /> 다른 백업 유형의 경우 값은 NULL입니다.|  
 |DifferentialBaseGUID|**uniqueidentifier** NULL|차등 백업의 경우 차등 기반의 고유 식별자입니다.<br /><br /> 다른 백업 유형의 경우 값은 NULL입니다.|  
 |IsReadOnly|**bit**|**1** = 파일이 읽기 전용입니다.|  
 |IsPresent|**bit**|**1** = 파일이 백업에 있습니다.|  

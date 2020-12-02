@@ -24,10 +24,10 @@ ms.assetid: c4b76a3d-94ca-4a8e-bb45-cb8bd0ea3ec1
 author: chugugrace
 ms.author: chugu
 ms.openlocfilehash: 2847f43835f70e2c1dd0f78cc58af551d728702f
-ms.sourcegitcommit: c7f40918dc3ecdb0ed2ef5c237a3996cb4cd268d
+ms.sourcegitcommit: c5078791a07330a87a92abb19b791e950672e198
 ms.translationtype: HT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 10/05/2020
+ms.lasthandoff: 11/26/2020
 ms.locfileid: "91725174"
 ---
 # <a name="working-with-variables-programmatically"></a>프로그래밍 방식으로 변수 사용
@@ -176,7 +176,7 @@ End Module
   
  변수의 경우에는 <xref:Microsoft.SqlServer.Dts.Runtime.Variable.DataType%2A> 값을 명시적으로 설정할 수 없습니다. <xref:Microsoft.SqlServer.Dts.Runtime.Variable.DataType%2A> 값은 변수에 할당된 초기 값에서 유추되며 이후에는 변경할 수 없습니다. 변수 데이터 형식에 대한 자세한 내용은 [Integration Services 데이터 형식](../../integration-services/data-flow/integration-services-data-types.md)을 참조하세요.  
   
- 다음 코드 예에서는 새 변수를 만들고, <xref:Microsoft.SqlServer.Dts.Runtime.Variable.EvaluateAsExpression%2A>을 **true**로 설정하고, 변수의 식 속성에 `"100 * 2"` 식을 할당한 다음, 변수 값을 출력합니다.  
+ 다음 코드 예에서는 새 변수를 만들고, <xref:Microsoft.SqlServer.Dts.Runtime.Variable.EvaluateAsExpression%2A>을 **true** 로 설정하고, 변수의 식 속성에 `"100 * 2"` 식을 할당한 다음, 변수 값을 출력합니다.  
   
 ```csharp  
 using System;  

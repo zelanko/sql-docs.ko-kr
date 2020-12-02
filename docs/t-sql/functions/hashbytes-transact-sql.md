@@ -21,10 +21,10 @@ author: VanMSFT
 ms.author: vanto
 monikerRange: '>=aps-pdw-2016||=azuresqldb-current||=azure-sqldw-latest||>=sql-server-2016||=sqlallproducts-allversions||>=sql-server-linux-2017||=azuresqldb-mi-current'
 ms.openlocfilehash: d70ad412676a06c9a72eac8379fc72673c41275f
-ms.sourcegitcommit: cc23d8646041336d119b74bf239a6ac305ff3d31
+ms.sourcegitcommit: c5078791a07330a87a92abb19b791e950672e198
 ms.translationtype: HT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 09/23/2020
+ms.lasthandoff: 11/26/2020
 ms.locfileid: "91116370"
 ---
 # <a name="hashbytes-transact-sql"></a>HASHBYTES(Transact-SQL)
@@ -51,7 +51,7 @@ HASHBYTES ( '<algorithm>', { @input | 'input' } )
 입력 해시에 사용할 해싱 알고리즘을 나타냅니다. 필수 인수이며 기본값은 없습니다. 작은따옴표가 필요합니다. [!INCLUDE[ssSQL15](../../includes/sssql15-md.md)]부터 SHA2_256 및 SHA2_512 이외의 알고리즘은 사용되지 않습니다.  
   
 `@input`  
-해시할 데이터를 포함하는 변수를 지정합니다. `@input`은 **varchar**, **nvarchar** 또는 **varbinary**입니다.  
+해시할 데이터를 포함하는 변수를 지정합니다. `@input`은 **varchar**, **nvarchar** 또는 **varbinary** 입니다.  
   
 '*input*'  
 해시할 문자 또는 이진 문자열로 계산되는 식을 지정합니다.  

@@ -19,10 +19,10 @@ ms.assetid: 443ae2ea-739b-41ef-96cc-ac5dfd65e10b
 author: MladjoA
 ms.author: mlandzic
 ms.openlocfilehash: 79a575b57bc3f41f48f9a00ed95784b09f84f5f6
-ms.sourcegitcommit: e700497f962e4c2274df16d9e651059b42ff1a10
+ms.sourcegitcommit: c5078791a07330a87a92abb19b791e950672e198
 ms.translationtype: HT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 08/17/2020
+ms.lasthandoff: 11/26/2020
 ms.locfileid: "88497069"
 ---
 # <a name="m-geometry-data-type"></a>M(geometry 데이터 형식)
@@ -47,7 +47,7 @@ ms.locfileid: "88497069"
  CLR 유형: **SqlDouble**  
   
 ## <a name="remarks"></a>설명  
- **geometry** 인스턴스가 **Point**이 아닌 경우 및 해당 값이 설정되지 않은 모든 **Point** 인스턴스의 경우 이 속성의 값은 Null입니다.  
+ **geometry** 인스턴스가 **Point** 이 아닌 경우 및 해당 값이 설정되지 않은 모든 **Point** 인스턴스의 경우 이 속성의 값은 Null입니다.  
   
  이 속성은 읽기 전용입니다.  
   

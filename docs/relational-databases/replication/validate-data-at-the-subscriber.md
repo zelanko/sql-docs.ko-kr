@@ -19,10 +19,10 @@ author: MashaMSFT
 ms.author: mathoma
 monikerRange: =azuresqldb-current||>=sql-server-2016||=sqlallproducts-allversions
 ms.openlocfilehash: c83a02c9c2b0c8c22a62f1765c839a1c15534405
-ms.sourcegitcommit: e700497f962e4c2274df16d9e651059b42ff1a10
+ms.sourcegitcommit: c5078791a07330a87a92abb19b791e950672e198
 ms.translationtype: HT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 08/17/2020
+ms.lasthandoff: 11/26/2020
 ms.locfileid: "88470195"
 ---
 # <a name="validate-replicated-data"></a>복제된 데이터의 유효성 검사
@@ -39,7 +39,7 @@ ms.locfileid: "88470195"
 [!INCLUDE[azure-sql-db-replication-supportability-note](../../includes/azure-sql-db-replication-supportability-note.md)]
    
 ## <a name="how-data-validation-works"></a>데이터 유효성 검사 작업 방식  
- [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 는 게시자에서 행 개수 또는 체크섬을 계산한 다음 그 값을 구독자에서 계산된 행 개수 또는 체크섬과 비교하여 데이터의 유효성을 검사합니다. 전체 게시 테이블과 전체 구독 테이블에 대해 각각 하나의 값이 계산되지만 **text**, **ntext**또는 **image** 열의 데이터는 계산에 포함되지 않습니다.  
+ [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 는 게시자에서 행 개수 또는 체크섬을 계산한 다음 그 값을 구독자에서 계산된 행 개수 또는 체크섬과 비교하여 데이터의 유효성을 검사합니다. 전체 게시 테이블과 전체 구독 테이블에 대해 각각 하나의 값이 계산되지만 **text**, **ntext** 또는 **image** 열의 데이터는 계산에 포함되지 않습니다.  
   
  계산이 수행되는 동안 행 개수 또는 체크섬이 실행될 테이블에 공유 잠금이 임시로 지정되지만 대부분 몇 초 내에 계산이 신속히 완료되고 공유 잠금이 제거됩니다.  
   
@@ -94,14 +94,14 @@ ms.locfileid: "88470195"
   
 1.  [!INCLUDE[ssManStudioFull](../../includes/ssmanstudiofull-md.md)]에서 게시자에 연결한 다음 해당 서버 노드를 확장합니다.    
 2.  **복제** 폴더를 확장한 다음 **로컬 게시** 폴더를 확장합니다.    
-3.  구독 유효성을 검사할 게시를 마우스 오른쪽 단추로 클릭한 다음 **구독 유효성 검사**를 클릭합니다.    
+3.  구독 유효성을 검사할 게시를 마우스 오른쪽 단추로 클릭한 다음 **구독 유효성 검사** 를 클릭합니다.    
 4.  **구독 유효성 검사** 대화 상자에서 유효성을 검사할 구독을 선택합니다.   
-    -   **모든 SQL Server 구독 유효성 검사**를 선택합니다.    
-    -   **다음 구독 유효성 검사**를 선택한 다음 하나 이상의 구독을 선택합니다.    
-5.  수행할 유효성 검사 유형(행 개수 또는 행 개수 및 체크섬)을 지정하려면 **유효성 검사 옵션**을 클릭한 다음 **구독 유효성 검사 옵션** 대화 상자에서 옵션을 지정합니다.  
+    -   **모든 SQL Server 구독 유효성 검사** 를 선택합니다.    
+    -   **다음 구독 유효성 검사** 를 선택한 다음 하나 이상의 구독을 선택합니다.    
+5.  수행할 유효성 검사 유형(행 개수 또는 행 개수 및 체크섬)을 지정하려면 **유효성 검사 옵션** 을 클릭한 다음 **구독 유효성 검사 옵션** 대화 상자에서 옵션을 지정합니다.  
 6.  [!INCLUDE[clickOK](../../includes/clickok-md.md)]   
 7.  복제 모니터 또는 **동기화 상태 보기** 대화 상자에서 유효성 검사 결과를 확인합니다. 다음과 같이 각 구독에 대한 작업을 수행하십시오.   
-    1.  게시를 확장하고 해당 구독을 마우스 오른쪽 단추로 클릭한 다음 **동기화 상태 보기**를 클릭합니다.    
+    1.  게시를 확장하고 해당 구독을 마우스 오른쪽 단추로 클릭한 다음 **동기화 상태 보기** 를 클릭합니다.    
     2.  에이전트가 실행되고 있지 않은 경우 **동기화 상태 보기** 대화 상자에서 **시작** 을 클릭합니다. 대화 상자에서는 유효성 검사와 관련된 정보 메시지를 보여 줍니다.    
      유효성 검사와 관련된 메시지가 나타나지 않는 경우 에이전트가 이미 이어서 나타나는 메시지를 로깅한 것입니다. 이 경우 복제 모니터에서 유효성 검사 결과를 확인합니다. 자세한 내용은 이 항목의 복제 모니터 사용 방법을 참조하세요.  
 
@@ -154,17 +154,17 @@ ms.locfileid: "88470195"
 ### <a name="using-replication-monitor"></a>복제 모니터 사용
   
 1.  복제 모니터에서 왼쪽 창의 게시자 그룹을 확장한 다음 게시자를 확장합니다.   
-2.  구독 유효성을 검사할 게시를 마우스 오른쪽 단추로 클릭한 다음 **구독 유효성 검사**를 클릭합니다.   
+2.  구독 유효성을 검사할 게시를 마우스 오른쪽 단추로 클릭한 다음 **구독 유효성 검사** 를 클릭합니다.   
 3.  **구독 유효성 검사** 대화 상자에서 유효성을 검사할 구독을 선택합니다.  
   
-    -   **모든 SQL Server 구독 유효성 검사**를 선택합니다.    
-    -   **다음 구독 유효성 검사**를 선택한 다음 하나 이상의 구독을 선택합니다.    
-4.  수행할 유효성 검사 유형(행 개수 또는 행 개수 및 체크섬)을 지정하려면 **유효성 검사 옵션**을 클릭한 다음 **구독 유효성 검사 옵션** 대화 상자에서 옵션을 지정합니다.    
+    -   **모든 SQL Server 구독 유효성 검사** 를 선택합니다.    
+    -   **다음 구독 유효성 검사** 를 선택한 다음 하나 이상의 구독을 선택합니다.    
+4.  수행할 유효성 검사 유형(행 개수 또는 행 개수 및 체크섬)을 지정하려면 **유효성 검사 옵션** 을 클릭한 다음 **구독 유효성 검사 옵션** 대화 상자에서 옵션을 지정합니다.    
 5.  [!INCLUDE[clickOK](../../includes/clickok-md.md)]    
 6.  **모든 구독** 탭을 클릭합니다.  
 7.  유효성 검사 결과를 확인합니다. 다음과 같이 각 밀어넣기 구독에 대한 작업을 수행하십시오.    
-    1.  에이전트가 실행되고 있지 않은 경우 해당 구독을 마우스 오른쪽 단추로 클릭한 다음 **동기화 시작**을 클릭합니다.    
-    2.  해당 구독을 마우스 오른쪽 단추로 클릭한 다음 **자세히 보기**를 클릭합니다.   
+    1.  에이전트가 실행되고 있지 않은 경우 해당 구독을 마우스 오른쪽 단추로 클릭한 다음 **동기화 시작** 을 클릭합니다.    
+    2.  해당 구독을 마우스 오른쪽 단추로 클릭한 다음 **자세히 보기** 를 클릭합니다.   
     3.  **선택한 세션의 동작** 텍스트 영역에 있는 **배포자에서 구독자로의 연결 기록** 탭의 정보를 확인합니다.  
   
 ## <a name="for-a-single-subscription-to-a-merge-publication"></a>병합 게시에 대한 단일 구독의 경우
@@ -173,13 +173,13 @@ ms.locfileid: "88470195"
   
 1.  [!INCLUDE[ssManStudioFull](../../includes/ssmanstudiofull-md.md)]에서 게시자에 연결한 다음 해당 서버 노드를 확장합니다.    
 2.  **복제** 폴더를 확장한 다음 **로컬 게시** 폴더를 확장합니다.   
-3.  구독 유효성을 검사할 게시를 확장하고 구독을 마우스 오른쪽 단추로 클릭한 다음 **구독 유효성 검사**를 클릭합니다.    
-4.  **구독 유효성 검사** 대화 상자에서 **이 구독 유효성 검사**를 선택합니다.    
-5.  수행할 유효성 검사 유형(행 개수 또는 행 개수 및 체크섬)을 지정하려면 **옵션**을 클릭한 다음 **구독 유효성 검사 옵션** 대화 상자에서 옵션을 지정합니다.    
+3.  구독 유효성을 검사할 게시를 확장하고 구독을 마우스 오른쪽 단추로 클릭한 다음 **구독 유효성 검사** 를 클릭합니다.    
+4.  **구독 유효성 검사** 대화 상자에서 **이 구독 유효성 검사** 를 선택합니다.    
+5.  수행할 유효성 검사 유형(행 개수 또는 행 개수 및 체크섬)을 지정하려면 **옵션** 을 클릭한 다음 **구독 유효성 검사 옵션** 대화 상자에서 옵션을 지정합니다.    
 6.  [!INCLUDE[clickOK](../../includes/clickok-md.md)]    
 7.  다음과 같이 복제 모니터 또는 **동기화 상태 보기** 대화 상자에서 유효성 검사 결과를 확인하세요.  
   
-    1.  게시를 확장하고 해당 구독을 마우스 오른쪽 단추로 클릭한 다음 **동기화 상태 보기**를 클릭합니다.    
+    1.  게시를 확장하고 해당 구독을 마우스 오른쪽 단추로 클릭한 다음 **동기화 상태 보기** 를 클릭합니다.    
     2.  에이전트가 실행되고 있지 않은 경우 **동기화 상태 보기** 대화 상자에서 **시작** 을 클릭합니다. 대화 상자에서는 유효성 검사와 관련된 정보 메시지를 보여 줍니다.  
   
      유효성 검사와 관련된 메시지가 나타나지 않는 경우 에이전트가 이미 이어서 나타나는 메시지를 로깅한 것입니다. 이 경우 복제 모니터에서 유효성 검사 결과를 확인합니다. 자세한 내용은 이 항목의 복제 모니터 사용 방법을 참조하세요.  
@@ -189,11 +189,11 @@ ms.locfileid: "88470195"
 ### <a name="using-sql-server-management-studio"></a>SQL Server Management Studio 사용  
 1.  [!INCLUDE[ssManStudioFull](../../includes/ssmanstudiofull-md.md)]에서 게시자에 연결한 다음 해당 서버 노드를 확장합니다.    
 2.  **복제** 폴더를 확장한 다음 **로컬 게시** 폴더를 확장합니다.   
-3.  구독 유효성을 검사할 게시를 마우스 오른쪽 단추로 클릭한 다음 **모든 구독 유효성 검사**를 클릭합니다.    
+3.  구독 유효성을 검사할 게시를 마우스 오른쪽 단추로 클릭한 다음 **모든 구독 유효성 검사** 를 클릭합니다.    
 4.  **모든 구독 유효성 검사** 대화 상자에서 수행할 유효성 검사 유형(행 개수 또는 행 개수 및 체크섬)을 지정합니다.   
 5.  [!INCLUDE[clickOK](../../includes/clickok-md.md)]    
 6.  복제 모니터 또는 **동기화 상태 보기** 대화 상자에서 유효성 검사 결과를 확인합니다. 다음과 같이 각 구독에 대한 작업을 수행하십시오.    
-    1.  게시를 확장하고 해당 구독을 마우스 오른쪽 단추로 클릭한 다음 **동기화 상태 보기**를 클릭합니다.    
+    1.  게시를 확장하고 해당 구독을 마우스 오른쪽 단추로 클릭한 다음 **동기화 상태 보기** 를 클릭합니다.    
     2.  에이전트가 실행되고 있지 않은 경우 **동기화 상태 보기** 대화 상자에서 **시작** 을 클릭합니다. 대화 상자에서는 유효성 검사와 관련된 정보 메시지를 보여 줍니다.  
   
      유효성 검사와 관련된 메시지가 나타나지 않는 경우 에이전트가 이미 이어서 나타나는 메시지를 로깅한 것입니다. 이 경우 복제 모니터에서 유효성 검사 결과를 확인합니다. 자세한 내용은 이 항목의 복제 모니터 사용 방법을 참조하세요.  
@@ -204,14 +204,14 @@ ms.locfileid: "88470195"
 ### <a name="using-replication-monitor"></a>복제 모니터 사용  
 1.  복제 모니터에서 왼쪽 창의 게시자 그룹을 확장하고 해당 게시자를 확장한 다음 해당 게시를 클릭합니다.    
 2.  **모든 구독** 탭을 클릭합니다.    
-3.  유효성을 검사할 구독을 마우스 오른쪽 단추로 클릭한 다음 **구독 유효성 검사**를 클릭합니다.    
-4.  **구독 유효성 검사** 대화 상자에서 **이 구독 유효성 검사**를 선택합니다.    
-5.  수행할 유효성 검사 유형(행 개수 또는 행 개수 및 체크섬)을 지정하려면 **옵션**을 클릭한 다음 **구독 유효성 검사 옵션** 대화 상자에서 옵션을 지정합니다.    
+3.  유효성을 검사할 구독을 마우스 오른쪽 단추로 클릭한 다음 **구독 유효성 검사** 를 클릭합니다.    
+4.  **구독 유효성 검사** 대화 상자에서 **이 구독 유효성 검사** 를 선택합니다.    
+5.  수행할 유효성 검사 유형(행 개수 또는 행 개수 및 체크섬)을 지정하려면 **옵션** 을 클릭한 다음 **구독 유효성 검사 옵션** 대화 상자에서 옵션을 지정합니다.    
 6.  [!INCLUDE[clickOK](../../includes/clickok-md.md)]    
 7.  **모든 구독** 탭을 클릭합니다.    
 8.  다음과 같이 유효성 검사 결과를 확인하세요.    
-    1.  에이전트가 실행되고 있지 않은 경우 해당 구독을 마우스 오른쪽 단추로 클릭한 다음 **동기화 시작**을 클릭합니다.    
-    2.  해당 구독을 마우스 오른쪽 단추로 클릭한 다음 **자세히 보기**를 클릭합니다.    
+    1.  에이전트가 실행되고 있지 않은 경우 해당 구독을 마우스 오른쪽 단추로 클릭한 다음 **동기화 시작** 을 클릭합니다.    
+    2.  해당 구독을 마우스 오른쪽 단추로 클릭한 다음 **자세히 보기** 를 클릭합니다.    
     3.  **선택한 세션에 대한 마지막 메시지** 텍스트 영역에 있는 **동기화 기록** 탭의 정보를 확인합니다.  
 
 ### <a name="using-transact-sql"></a>Transact-SQL 사용
@@ -232,13 +232,13 @@ ms.locfileid: "88470195"
   
 ### <a name="using-replication-monitor"></a>복제 모니터 사용    
 1.  복제 모니터에서 왼쪽 창의 게시자 그룹을 확장한 다음 게시자를 확장합니다.    
-2.  구독 유효성을 검사할 게시를 마우스 오른쪽 단추로 클릭한 다음 **모든 구독 유효성 검사**를 클릭합니다.    
+2.  구독 유효성을 검사할 게시를 마우스 오른쪽 단추로 클릭한 다음 **모든 구독 유효성 검사** 를 클릭합니다.    
 3.  **모든 구독 유효성 검사** 대화 상자에서 수행할 유효성 검사 유형(행 개수 또는 행 개수 및 체크섬)을 지정합니다.    
 4.  [!INCLUDE[clickOK](../../includes/clickok-md.md)]    
 5.  **모든 구독** 탭을 클릭합니다.    
 6.  유효성 검사 결과를 확인합니다. 다음과 같이 각 밀어넣기 구독에 대한 작업을 수행하십시오.    
-    1.  에이전트가 실행되고 있지 않은 경우 해당 구독을 마우스 오른쪽 단추로 클릭한 다음 **동기화 시작**을 클릭합니다.    
-    2.  해당 구독을 마우스 오른쪽 단추로 클릭한 다음 **자세히 보기**를 클릭합니다.    
+    1.  에이전트가 실행되고 있지 않은 경우 해당 구독을 마우스 오른쪽 단추로 클릭한 다음 **동기화 시작** 을 클릭합니다.    
+    2.  해당 구독을 마우스 오른쪽 단추로 클릭한 다음 **자세히 보기** 를 클릭합니다.    
     3.  **선택한 세션에 대한 마지막 메시지** 텍스트 영역에 있는 **동기화 기록** 탭의 정보를 확인합니다. 
   
 ### <a name="using-transact-sql"></a>Transact-SQL 사용
@@ -272,7 +272,7 @@ ms.locfileid: "88470195"
   
 2.  <xref:Microsoft.SqlServer.Replication.TransPublication> 클래스의 인스턴스를 만듭니다. 게시에 대해 <xref:Microsoft.SqlServer.Replication.Publication.Name%2A> 및 <xref:Microsoft.SqlServer.Replication.Publication.DatabaseName%2A> 속성을 설정합니다. <xref:Microsoft.SqlServer.Replication.ReplicationObject.ConnectionContext%2A> 속성을 1단계에서 만든 연결로 설정합니다.  
   
-3.  <xref:Microsoft.SqlServer.Replication.ReplicationObject.LoadProperties%2A> 메서드를 호출하여 개체의 나머지 속성을 얻습니다. 이 메서드가 **false**를 반환하는 경우 2단계에서 게시 속성이 올바르게 정의되지 않았거나 게시가 없습니다.  
+3.  <xref:Microsoft.SqlServer.Replication.ReplicationObject.LoadProperties%2A> 메서드를 호출하여 개체의 나머지 속성을 얻습니다. 이 메서드가 **false** 를 반환하는 경우 2단계에서 게시 속성이 올바르게 정의되지 않았거나 게시가 없습니다.  
   
 4.  <xref:Microsoft.SqlServer.Replication.TransPublication.ValidatePublication%2A> 메서드를 호출합니다. 다음을 전달합니다.  
   
@@ -292,7 +292,7 @@ ms.locfileid: "88470195"
   
 2.  <xref:Microsoft.SqlServer.Replication.MergePublication> 클래스의 인스턴스를 만듭니다. 게시에 대해 <xref:Microsoft.SqlServer.Replication.Publication.Name%2A> 및 <xref:Microsoft.SqlServer.Replication.Publication.DatabaseName%2A> 속성을 설정합니다. <xref:Microsoft.SqlServer.Replication.ReplicationObject.ConnectionContext%2A> 속성을 1단계에서 만든 연결로 설정합니다.  
   
-3.  <xref:Microsoft.SqlServer.Replication.ReplicationObject.LoadProperties%2A> 메서드를 호출하여 개체의 나머지 속성을 얻습니다. 이 메서드가 **false**를 반환하는 경우 2단계에서 게시 속성이 올바르게 정의되지 않았거나 게시가 없습니다.  
+3.  <xref:Microsoft.SqlServer.Replication.ReplicationObject.LoadProperties%2A> 메서드를 호출하여 개체의 나머지 속성을 얻습니다. 이 메서드가 **false** 를 반환하는 경우 2단계에서 게시 속성이 올바르게 정의되지 않았거나 게시가 없습니다.  
   
 4.  <xref:Microsoft.SqlServer.Replication.MergePublication.ValidatePublication%2A> 메서드를 호출합니다. 원하는 <xref:Microsoft.SqlServer.Replication.ValidationOption>을 전달합니다.  
   
@@ -304,7 +304,7 @@ ms.locfileid: "88470195"
   
 2.  <xref:Microsoft.SqlServer.Replication.MergePublication> 클래스의 인스턴스를 만듭니다. 게시에 대해 <xref:Microsoft.SqlServer.Replication.Publication.Name%2A> 및 <xref:Microsoft.SqlServer.Replication.Publication.DatabaseName%2A> 속성을 설정합니다. <xref:Microsoft.SqlServer.Replication.ReplicationObject.ConnectionContext%2A> 속성을 1단계에서 만든 연결로 설정합니다.  
   
-3.  <xref:Microsoft.SqlServer.Replication.ReplicationObject.LoadProperties%2A> 메서드를 호출하여 개체의 나머지 속성을 얻습니다. 이 메서드가 **false**를 반환하는 경우 2단계에서 게시 속성이 올바르게 정의되지 않았거나 게시가 없습니다.  
+3.  <xref:Microsoft.SqlServer.Replication.ReplicationObject.LoadProperties%2A> 메서드를 호출하여 개체의 나머지 속성을 얻습니다. 이 메서드가 **false** 를 반환하는 경우 2단계에서 게시 속성이 올바르게 정의되지 않았거나 게시가 없습니다.  
   
 4.  <xref:Microsoft.SqlServer.Replication.MergePublication.ValidateSubscription%2A> 메서드를 호출합니다. 구독자 이름, 유효성을 검사할 구독 데이터베이스 및 원하는 <xref:Microsoft.SqlServer.Replication.ValidationOption>을 전달합니다.  
   

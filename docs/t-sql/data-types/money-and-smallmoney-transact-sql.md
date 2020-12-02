@@ -26,10 +26,10 @@ author: MikeRayMSFT
 ms.author: mikeray
 monikerRange: '>=aps-pdw-2016||=azuresqldb-current||=azure-sqldw-latest||>=sql-server-2016||=sqlallproducts-allversions||>=sql-server-linux-2017||=azuresqldb-mi-current'
 ms.openlocfilehash: 8218bf8b98cd072dd60f8458c75819761153b634
-ms.sourcegitcommit: cc23d8646041336d119b74bf239a6ac305ff3d31
+ms.sourcegitcommit: c5078791a07330a87a92abb19b791e950672e198
 ms.translationtype: HT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 09/23/2020
+ms.lasthandoff: 11/26/2020
 ms.locfileid: "91111279"
 ---
 # <a name="money-and-smallmoney-transact-sql"></a>money 및 smallmoney(Transact-SQL)
@@ -55,7 +55,7 @@ ms.locfileid: "91111279"
 통화 데이터는 작은따옴표로 묶지 않아도 됩니다. 통화 값 앞에 통화 기호를 붙일 수 있지만 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]에서는 이 기호와 관련된 통화 정보를 저장하지 않으며 숫자 값만 저장합니다.
   
 ## <a name="converting-money-data"></a>money 데이터 변환
-정수 데이터 형식에서 **money**로 변환할 때 단위는 통화 단위로 간주됩니다. 예를 들어 정수 값 4는 4 통화 단위와 동등한 **money**로 변환됩니다.
+정수 데이터 형식에서 **money** 로 변환할 때 단위는 통화 단위로 간주됩니다. 예를 들어 정수 값 4는 4 통화 단위와 동등한 **money** 로 변환됩니다.
   
 다음 예에서는 **smallmoney** 및 **money** 값을 각각 **varchar** 및 **decimal** 데이터 형식으로 변환합니다.
   

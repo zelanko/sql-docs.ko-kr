@@ -26,10 +26,10 @@ ms.assetid: eec2e1cd-a29d-4cf3-a271-be9d61506f15
 author: markingmyname
 ms.author: maghan
 ms.openlocfilehash: abde67780d0eff93a791a2b48654ba712dea6859
-ms.sourcegitcommit: dd36d1cbe32cd5a65c6638e8f252b0bd8145e165
+ms.sourcegitcommit: c5078791a07330a87a92abb19b791e950672e198
 ms.translationtype: HT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 09/08/2020
+ms.lasthandoff: 11/26/2020
 ms.locfileid: "89539812"
 ---
 # <a name="set-statistics-time-transact-sql"></a>SET STATISTICS TIME(Transact-SQL)
@@ -55,7 +55,7 @@ SET STATISTICS TIME { ON | OFF }
   
  **lightweight pooling** 구성 옵션을 설정하면 활성화되는 파이버 모드에서는 Microsoft [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]가 정확한 통계를 제공할 수 없습니다.  
   
- SET STATISTICS TIME을 ON으로 설정해 쿼리를 실행하면 **sysprocesses** 테이블의 **cpu** 열만 업데이트됩니다. SET STATISTICS TIME이 OFF인 경우에는 **0**이 반환됩니다.  
+ SET STATISTICS TIME을 ON으로 설정해 쿼리를 실행하면 **sysprocesses** 테이블의 **cpu** 열만 업데이트됩니다. SET STATISTICS TIME이 OFF인 경우에는 **0** 이 반환됩니다.  
   
  ON과 OFF 설정은 [!INCLUDE[ssManStudioFull](../../includes/ssmanstudiofull-md.md)]의 Process Info View for Current Activity에 있는 CPU 열에도 영향을 줍니다.  
   

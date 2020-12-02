@@ -34,10 +34,10 @@ author: VanMSFT
 ms.author: vanto
 monikerRange: '>=aps-pdw-2016||=azuresqldb-current||=azure-sqldw-latest||>=sql-server-2016||=sqlallproducts-allversions||>=sql-server-linux-2017||=azuresqldb-mi-current'
 ms.openlocfilehash: 8cd51d8b728fd12bfcab2a853c6bf3a8a2b7c214
-ms.sourcegitcommit: cc23d8646041336d119b74bf239a6ac305ff3d31
+ms.sourcegitcommit: c5078791a07330a87a92abb19b791e950672e198
 ms.translationtype: HT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 09/23/2020
+ms.lasthandoff: 11/26/2020
 ms.locfileid: "91116292"
 ---
 # <a name="is-null-transact-sql"></a>IS NULL(Transact-SQL)
@@ -66,9 +66,9 @@ expression IS [ NOT ] NULL
  **Boolean**  
   
 ## <a name="return-code-values"></a>반환 코드 값  
- *expression*의 값이 NULL인 경우에는 IS NULL이 TRUE를 반환하고 그렇지 않은 경우에는 FALSE를 반환합니다.  
+ *expression* 의 값이 NULL인 경우에는 IS NULL이 TRUE를 반환하고 그렇지 않은 경우에는 FALSE를 반환합니다.  
   
- *expression*의 값이 NULL인 경우에는 IS NOT NULL이 FALSE를 반환하고 그렇지 않은 경우에는 TRUE를 반환합니다.  
+ *expression* 의 값이 NULL인 경우에는 IS NOT NULL이 FALSE를 반환하고 그렇지 않은 경우에는 TRUE를 반환합니다.  
   
 ## <a name="remarks"></a>설명  
  식이 NULL인지 확인하려면 = 또는 != 등의 비교 연산자 대신 IS NULL 또는 IS NOT NULL을 사용합니다. 비교 연산자는 두 인수 중 하나 또는 둘 다 NULL인 경우에 UNKNOWN을 반환합니다.  

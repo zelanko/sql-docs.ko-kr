@@ -23,10 +23,10 @@ author: MashaMSFT
 ms.author: mathoma
 monikerRange: =azuresqldb-mi-current||>=sql-server-2016||=sqlallproducts-allversions
 ms.openlocfilehash: 95b4db25e874d4afe51ea47d5def4b316990c056
-ms.sourcegitcommit: e700497f962e4c2274df16d9e651059b42ff1a10
+ms.sourcegitcommit: c5078791a07330a87a92abb19b791e950672e198
 ms.translationtype: HT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 08/17/2020
+ms.lasthandoff: 11/26/2020
 ms.locfileid: "88490654"
 ---
 # <a name="replication-management-objects-concepts"></a>Replication Management Objects Concepts
@@ -67,17 +67,17 @@ ms.locfileid: "88490654"
   
 1.  Visual Studio를 시작합니다.  
   
-2.  **파일** 메뉴에서 **새 프로젝트**를 클릭합니다. **새 프로젝트** 대화 상자가 나타납니다.  
+2.  **파일** 메뉴에서 **새 프로젝트** 를 클릭합니다. **새 프로젝트** 대화 상자가 나타납니다.  
   
-3.  **프로젝트 형식** 대화 상자에서 **Visual C# 프로젝트**를 선택합니다. **템플릿** 창에서 **Windows 애플리케이션**을 선택합니다.  
+3.  **프로젝트 형식** 대화 상자에서 **Visual C# 프로젝트** 를 선택합니다. **템플릿** 창에서 **Windows 애플리케이션** 을 선택합니다.  
   
-4.  (옵션) **이름**에 새 애플리케이션의 이름을 입력합니다.  
+4.  (옵션) **이름** 에 새 애플리케이션의 이름을 입력합니다.  
   
-5.  **확인**을 클릭하여 Visual C# Windows 템플릿을 로드합니다.  
+5.  **확인** 을 클릭하여 Visual C# Windows 템플릿을 로드합니다.  
   
 6.  **프로젝트** 메뉴에서 **참조 추가** 항목을 선택합니다. **참조 추가** 대화 상자가 나타납니다.  
   
-7.  **.NET** 탭의 목록에서 다음과 같은 어셈블리를 선택한 후 **확인**을 클릭합니다.  
+7.  **.NET** 탭의 목록에서 다음과 같은 어셈블리를 선택한 후 **확인** 을 클릭합니다.  
   
     -   Microsoft.SqlServer.Replication .NET Programming Interface  
   
@@ -88,9 +88,9 @@ ms.locfileid: "88490654"
     > [!NOTE]  
     >  둘 이상의 파일을 선택하려면 Ctrl 키를 사용합니다.  
   
-8.  (옵션) 6단계를 반복합니다. **찾아보기** 탭을 클릭하고 [!INCLUDE[ssInstallPath](../../../includes/ssinstallpath-md.md)]COM으로 이동한 다음 Microsoft.SqlServer.Replication.BusinessLogicSupport.dll을 선택하고 **확인**을 클릭합니다.  
+8.  (옵션) 6단계를 반복합니다. **찾아보기** 탭을 클릭하고 [!INCLUDE[ssInstallPath](../../../includes/ssinstallpath-md.md)]COM으로 이동한 다음 Microsoft.SqlServer.Replication.BusinessLogicSupport.dll을 선택하고 **확인** 을 클릭합니다.  
   
-9. **보기** 메뉴에서 **코드**를 클릭합니다.  
+9. **보기** 메뉴에서 **코드** 를 클릭합니다.  
   
 10. 코드에서 RMO 네임스페이스의 형식을 한정하기 위해 네임스페이스 문 앞에 다음 **using** 문을 입력합니다.  
 
@@ -107,17 +107,17 @@ ms.locfileid: "88490654"
   
 1.  Visual Studio를 시작합니다.  
   
-2.  **파일** 메뉴에서 **새 프로젝트**를 선택합니다. **새 프로젝트** 대화 상자가 나타납니다.  
+2.  **파일** 메뉴에서 **새 프로젝트** 를 선택합니다. **새 프로젝트** 대화 상자가 나타납니다.  
   
-3.  프로젝트 형식 창에서 **Visual Basic**을 선택합니다. 템플릿 창에서 **Windows 애플리케이션**을 선택합니다.  
+3.  프로젝트 형식 창에서 **Visual Basic** 을 선택합니다. 템플릿 창에서 **Windows 애플리케이션** 을 선택합니다.  
   
 4.  (옵션) **이름** 상자에 새 애플리케이션의 이름을 입력합니다.  
   
-5.  **확인**을 클릭하여 Visual Basic Windows 템플릿을 로드합니다.  
+5.  **확인** 을 클릭하여 Visual Basic Windows 템플릿을 로드합니다.  
   
-6.  **프로젝트** 메뉴에서 **참조 추가**를 선택합니다. **참조 추가** 대화 상자가 나타납니다.  
+6.  **프로젝트** 메뉴에서 **참조 추가** 를 선택합니다. **참조 추가** 대화 상자가 나타납니다.  
   
-7.  **.NET** 탭의 목록에서 다음과 같은 어셈블리를 선택한 후 **확인**을 클릭합니다.  
+7.  **.NET** 탭의 목록에서 다음과 같은 어셈블리를 선택한 후 **확인** 을 클릭합니다.  
   
     -   Microsoft.SqlServer.Replication .NET Programming Interface  
   
@@ -128,9 +128,9 @@ ms.locfileid: "88490654"
     > [!NOTE]  
     >  둘 이상의 파일을 선택하려면 Ctrl 키를 사용합니다.  
   
-8.  (옵션) 6단계를 반복합니다. **찾아보기** 탭을 클릭하고 [!INCLUDE[ssInstallPath](../../../includes/ssinstallpath-md.md)]COM으로 이동한 다음 Microsoft.SqlServer.Replication.BusinessLogicSupport.dll을 선택하고 **확인**을 클릭합니다.  
+8.  (옵션) 6단계를 반복합니다. **찾아보기** 탭을 클릭하고 [!INCLUDE[ssInstallPath](../../../includes/ssinstallpath-md.md)]COM으로 이동한 다음 Microsoft.SqlServer.Replication.BusinessLogicSupport.dll을 선택하고 **확인** 을 클릭합니다.  
   
-9. **보기** 메뉴에서 **코드**를 클릭합니다.  
+9. **보기** 메뉴에서 **코드** 를 클릭합니다.  
   
 10. 코드에서 다른 모든 선언 앞에 다음 **Imports** 문을 입력하여 RMO 네임스페이스의 형식을 한정합니다.  
   
@@ -158,7 +158,7 @@ ms.locfileid: "88490654"
   
 -   서버에 연결하고 성공적으로 로그인하기 위해 모든 인증 정보를 <xref:Microsoft.SqlServer.Management.Common.ServerConnection> 개체에 제공합니다.  
   
--   Windows 인증이 기본값입니다. [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] 인증을 사용하려면 <xref:Microsoft.SqlServer.Management.Common.ConnectionSettings.LoginSecure%2A>를 **false**로 설정하고 <xref:Microsoft.SqlServer.Management.Common.ConnectionSettings.Login%2A> 및 <xref:Microsoft.SqlServer.Management.Common.ConnectionSettings.Password%2A>를 유효한 [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] 로그온 및 암호로 설정해야 합니다. 보안 자격 증명은 항상 안전하게 저장 및 처리되어야 하고 가능하면 런타임에 제공해야 합니다.  
+-   Windows 인증이 기본값입니다. [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] 인증을 사용하려면 <xref:Microsoft.SqlServer.Management.Common.ConnectionSettings.LoginSecure%2A>를 **false** 로 설정하고 <xref:Microsoft.SqlServer.Management.Common.ConnectionSettings.Login%2A> 및 <xref:Microsoft.SqlServer.Management.Common.ConnectionSettings.Password%2A>를 유효한 [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] 로그온 및 암호로 설정해야 합니다. 보안 자격 증명은 항상 안전하게 저장 및 처리되어야 하고 가능하면 런타임에 제공해야 합니다.  
   
 -   다중 스레드 애플리케이션의 경우 각 스레드에서 별도의 <xref:Microsoft.SqlServer.Management.Common.ServerConnection> 개체를 사용해야 합니다.  
   
@@ -179,7 +179,7 @@ ms.locfileid: "88490654"
 >  여러 RMO 클라이언트 또는 RMO 프로그래밍 개체의 여러 인스턴스가 서버에 있는 동일한 복제 개체에 액세스할 경우 RMO 개체의 **Refresh** 메서드를 호출하면 서버에 있는 개체의 현재 상태에 따라 속성을 업데이트할 수 있습니다.  
   
 ### <a name="caching-property-changes"></a>속성 변경 내용 캐시  
- <xref:Microsoft.SqlServer.Management.Common.SqlExecutionModes> 속성을 <xref:Microsoft.SqlServer.Management.Common.SqlExecutionModes.CaptureSql>로 설정하면 RMO에서 생성한 모든 [!INCLUDE[tsql](../../../includes/tsql-md.md)] 문이 캡처됩니다. 이 경우 실행 메서드 중 하나를 사용하여 하나의 일괄 처리에서 문을 수동으로 실행할 수 있습니다. RMO를 사용하면 속성 변경 내용을 캐시한 후 개체의 `M:Microsoft.SqlServer.Replication.ReplicationObject.CommitPropertyChanges` 메서드를 사용하여 하나의 일괄 처리에서 한 번에 커밋할 수 있습니다. 속성 변경 내용을 캐시하려면 개체의 `P:Microsoft.SqlServer.Replication.ReplicationObject.CachePropertyChanges` 속성을 **true**로 설정해야 합니다. RMO의 속성 변경 내용을 캐시하는 경우에도 변경 내용이 서버에 전송되는 시점은 <xref:Microsoft.SqlServer.Management.Common.ServerConnection> 개체에 의해 제어됩니다. 복제 개체의 속성 변경 내용을 캐시하는 방법은 [배포자 및 게시자 속성 보기 및 수정](../../../relational-databases/replication/view-and-modify-distributor-and-publisher-properties.md)을 참조하세요.  
+ <xref:Microsoft.SqlServer.Management.Common.SqlExecutionModes> 속성을 <xref:Microsoft.SqlServer.Management.Common.SqlExecutionModes.CaptureSql>로 설정하면 RMO에서 생성한 모든 [!INCLUDE[tsql](../../../includes/tsql-md.md)] 문이 캡처됩니다. 이 경우 실행 메서드 중 하나를 사용하여 하나의 일괄 처리에서 문을 수동으로 실행할 수 있습니다. RMO를 사용하면 속성 변경 내용을 캐시한 후 개체의 `M:Microsoft.SqlServer.Replication.ReplicationObject.CommitPropertyChanges` 메서드를 사용하여 하나의 일괄 처리에서 한 번에 커밋할 수 있습니다. 속성 변경 내용을 캐시하려면 개체의 `P:Microsoft.SqlServer.Replication.ReplicationObject.CachePropertyChanges` 속성을 **true** 로 설정해야 합니다. RMO의 속성 변경 내용을 캐시하는 경우에도 변경 내용이 서버에 전송되는 시점은 <xref:Microsoft.SqlServer.Management.Common.ServerConnection> 개체에 의해 제어됩니다. 복제 개체의 속성 변경 내용을 캐시하는 방법은 [배포자 및 게시자 속성 보기 및 수정](../../../relational-databases/replication/view-and-modify-distributor-and-publisher-properties.md)을 참조하세요.  
   
 > [!IMPORTANT]  
 >  속성을 설정할 때 <xref:Microsoft.SqlServer.Management.Common.ServerConnection> 클래스를 사용하여 트랜잭션을 명시적으로 선언할 수 있지만 이러한 트랜잭션은 내부 복제 트랜잭션을 방해하여 예기치 않은 결과를 초래할 수 있기 때문에 RMO와 함께 사용하지 않는 것이 좋습니다.  

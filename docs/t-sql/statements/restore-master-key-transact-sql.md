@@ -27,10 +27,10 @@ ms.assetid: 70ceb951-31a2-4fc4-a0c1-e6c18eeb3ae7
 author: VanMSFT
 ms.author: vanto
 ms.openlocfilehash: f5a15c5ac7a401e4f5359cff34693a6131ce1391
-ms.sourcegitcommit: b93beb4f03aee2c1971909cb1d15f79cd479a35c
+ms.sourcegitcommit: c5078791a07330a87a92abb19b791e950672e198
 ms.translationtype: HT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 09/29/2020
+ms.lasthandoff: 11/26/2020
 ms.locfileid: "91497807"
 ---
 # <a name="restore-master-key-transact-sql"></a>RESTORE MASTER KEY(Transact-SQL)
@@ -53,7 +53,7 @@ RESTORE MASTER KEY FROM FILE = 'path_to_file'
 
 ## <a name="arguments"></a>인수
  FILE ='*path_to_file*'  
- 저장된 데이터베이스 마스터 키에 대해 파일 이름을 포함한 전체 경로를 지정합니다. *path_to_file*은 로컬 경로 또는 네트워크 위치에 대한 UNC 경로일 수 있습니다.  
+ 저장된 데이터베이스 마스터 키에 대해 파일 이름을 포함한 전체 경로를 지정합니다. *path_to_file* 은 로컬 경로 또는 네트워크 위치에 대한 UNC 경로일 수 있습니다.  
   
  DECRYPTION BY PASSWORD ='*password*'  
  파일로부터 가져올 데이터베이스 마스터 키의 암호를 해독하는 데 필요한 암호를 지정합니다.  

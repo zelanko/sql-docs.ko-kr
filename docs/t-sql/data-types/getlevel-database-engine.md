@@ -19,17 +19,17 @@ ms.assetid: 81577d7e-8ff6-4e73-b7f4-94c03d4921e7
 author: MikeRayMSFT
 ms.author: mikeray
 ms.openlocfilehash: f0aa604a88902dc8bfba522556f11b267fa1e184
-ms.sourcegitcommit: 22dacedeb6e8721e7cdb6279a946d4002cfb5da3
+ms.sourcegitcommit: c5078791a07330a87a92abb19b791e950672e198
 ms.translationtype: HT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 10/14/2020
+ms.lasthandoff: 11/26/2020
 ms.locfileid: "92037166"
 ---
 # <a name="getlevel-database-engine"></a>GetLevel(데이터베이스 엔진)
 
 [!INCLUDE [SQL Server SQL Database](../../includes/applies-to-version/sql-asdb.md)]
 
-트리에서 노드 *this*의 깊이를 나타내는 정수를 반환합니다.
+트리에서 노드 *this* 의 깊이를 나타내는 정수를 반환합니다.
   
 ## <a name="syntax"></a>구문  
   
@@ -58,7 +58,7 @@ GetLevel은 너비 우선 검색 인덱스에 유용합니다. 자세한 내용�
 ## <a name="examples"></a>예제  
   
 ### <a name="a-returning-the-hierarchy-level-as-a-column"></a>A. 계층 수준을 열로 반환  
-다음 예에서는 **hierarchyid**의 텍스트 표현을 반환한 다음, 테이블의 모든 행에 대해 **EmpLevel** 열로 계층 수준을 반환합니다.
+다음 예에서는 **hierarchyid** 의 텍스트 표현을 반환한 다음, 테이블의 모든 행에 대해 **EmpLevel** 열로 계층 수준을 반환합니다.
   
 ```sql
 SELECT OrgNode.ToString() AS Text_OrgNode,   

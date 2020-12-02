@@ -15,10 +15,10 @@ ms.assetid: 697b69b3-f157-4e22-ac4e-f65c5fc2d0ad
 author: stevestein
 ms.author: sstein
 ms.openlocfilehash: dee530c223890a51ab255d319db9a7772e0ce686
-ms.sourcegitcommit: e700497f962e4c2274df16d9e651059b42ff1a10
+ms.sourcegitcommit: c5078791a07330a87a92abb19b791e950672e198
 ms.translationtype: HT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 08/17/2020
+ms.lasthandoff: 11/26/2020
 ms.locfileid: "88499906"
 ---
 # <a name="unpack-a-dac-package"></a>DAC 패키지 압축 풀기
@@ -35,11 +35,11 @@ ms.locfileid: "88499906"
 ##  <a name="unpack-data-tier-application-dialog"></a><a name="UnpackDACDial"></a> 데이터 계층 애플리케이션 압축 풀기 대화 상자  
  **DAC 패키지 파일을 압축을 풀려면**  
   
--   **Windows 탐색기**에서 DAC 패키지(.dacpac) 파일의 위치로 이동합니다.  
+-   **Windows 탐색기** 에서 DAC 패키지(.dacpac) 파일의 위치로 이동합니다.  
   
 -   다음 두 가지 방법 중 하나를 사용하여 데이터 계층 애플리케이션 압축 풀기 대화 상자를 엽니다.  
   
-    1.  DAC 패키지(.dacpac) 파일을 마우스 오른쪽 단추로 클릭하고 **압축 풀기**를 선택합니다.  
+    1.  DAC 패키지(.dacpac) 파일을 마우스 오른쪽 단추로 클릭하고 **압축 풀기** 를 선택합니다.  
   
     2.  DAC 패키지 파일을 두 번 클릭합니다.  
   
@@ -63,7 +63,7 @@ ms.locfileid: "88499906"
 ###  <a name="browse-for-folder"></a><a name="Browse"></a> 폴더 찾아보기  
  이 페이지를 사용하여 압축 풀기 작업의 대상 폴더를 선택할 수 있습니다. 필요에 따라 새 폴더를 만들 수도 있습니다.  
   
- **폴더 목록** - 컴퓨터의 파일 계층을 표시합니다. 노드를 확장하여 DAC 패키지 압축을 풀 폴더로 이동합니다. 폴더를 클릭한 다음 **확인**을 클릭합니다.  
+ **폴더 목록** - 컴퓨터의 파일 계층을 표시합니다. 노드를 확장하여 DAC 패키지 압축을 풀 폴더로 이동합니다. 폴더를 클릭한 다음 **확인** 을 클릭합니다.  
   
  **새 폴더 만들기** - 폴더 계층에서 현재 선택된 폴더에 생성될 새 폴더의 이름을 지정할 수 있는 대화 상자를 엽니다.  
   

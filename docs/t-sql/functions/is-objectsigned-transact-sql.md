@@ -19,10 +19,10 @@ ms.assetid: afbc4f7f-8266-4ee6-9802-14a2dbe69ef6
 author: VanMSFT
 ms.author: vanto
 ms.openlocfilehash: d48004bfe0dd40545941bf23a41b91c49485233b
-ms.sourcegitcommit: cc23d8646041336d119b74bf239a6ac305ff3d31
+ms.sourcegitcommit: c5078791a07330a87a92abb19b791e950672e198
 ms.translationtype: HT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 09/23/2020
+ms.lasthandoff: 11/26/2020
 ms.locfileid: "91115186"
 ---
 # <a name="is_objectsigned-transact-sql"></a>IS_OBJECTSIGNED(Transact-SQL)
@@ -47,7 +47,7 @@ IS_OBJECTSIGNED (
  보안 개체 클래스의 유형입니다.  
   
  *\@object_id*  
- 테스트 중인 개체의 object_id입니다. *\@object_id*는 **int** 형식입니다.  
+ 테스트 중인 개체의 object_id입니다. *\@object_id* 는 **int** 형식입니다.  
   
  *\@클래스*  
  개체의 클래스입니다.  
@@ -56,10 +56,10 @@ IS_OBJECTSIGNED (
   
 -   '비대칭 키'  
   
- *\@클래스*는 **sysname**입니다.  
+ *\@클래스* 는 **sysname** 입니다.  
   
  *\@지문*  
- 개체의 SHA 지문입니다. *\@지문*은 **varbinary(32)** 형식입니다.  
+ 개체의 SHA 지문입니다. *\@지문* 은 **varbinary(32)** 형식입니다.  
   
 ## <a name="returned-types"></a>반환 형식  
  **int**  

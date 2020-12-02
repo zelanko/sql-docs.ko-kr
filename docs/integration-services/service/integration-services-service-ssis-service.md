@@ -24,10 +24,10 @@ ms.assetid: 2c785b3b-4a0c-4df7-b5cd-23756dc87842
 author: chugugrace
 ms.author: chugu
 ms.openlocfilehash: 465aef4e631602a645bbeff5b437cb2f09994d3c
-ms.sourcegitcommit: c74bb5944994e34b102615b592fdaabe54713047
+ms.sourcegitcommit: c5078791a07330a87a92abb19b791e950672e198
 ms.translationtype: HT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 09/22/2020
+ms.lasthandoff: 11/26/2020
 ms.locfileid: "90990412"
 ---
 # <a name="integration-services-service-ssis-service"></a>Integration Services 서비스(SSIS 서비스)
@@ -100,9 +100,9 @@ ms.locfileid: "90990412"
   
 ### <a name="to-set-properties-of-the-integration-services-service-by-using-sql-server-configuration-manager"></a>SQL Server 구성 관리자를 사용하여 Integration Services 서비스의 속성을 설정하려면  
   
-1.  **시작** 메뉴에서 **모든 프로그램**, **Microsoft SQL Server**, **구성 도구**를 차례로 가리킨 다음 **SQL Server 구성 관리자**를 클릭합니다.  
+1.  **시작** 메뉴에서 **모든 프로그램**, **Microsoft SQL Server**, **구성 도구** 를 차례로 가리킨 다음 **SQL Server 구성 관리자** 를 클릭합니다.  
   
-2.  **SQL Server 구성 관리자** 스냅인의 서비스 목록에서 **SQL Server Integration Services** 를 찾아 **SQL Server Integration Services**를 마우스 오른쪽 단추로 클릭한 다음 **속성**을 클릭합니다.  
+2.  **SQL Server 구성 관리자** 스냅인의 서비스 목록에서 **SQL Server Integration Services** 를 찾아 **SQL Server Integration Services** 를 마우스 오른쪽 단추로 클릭한 다음 **속성** 을 클릭합니다.  
   
 3.  **SQL Server Integration Services 속성** 대화 상자에서 다음을 수행할 수 있습니다.  
   
@@ -113,17 +113,17 @@ ms.locfileid: "90990412"
         > [!NOTE]  
         >  **고급** 탭에는 [!INCLUDE[ssISnoversion](../../includes/ssisnoversion-md.md)] 서비스에 대한 정보가 들어 있지 않습니다.  
   
-4.  **확인**을 클릭합니다.  
+4.  **확인** 을 클릭합니다.  
   
 5.  **파일** 메뉴에서 **끝내기** 를 클릭하여 **SQL Server 구성 관리자** 스냅인을 닫습니다.  
   
 ### <a name="to-set-properties-of-the-integration-services-service-by-using-services"></a>서비스를 사용하여 Integration Services 서비스의 속성을 설정하려면  
   
-1.  클래식 보기를 사용할 경우에는 **제어판**에서 **관리 도구**를 클릭하고 종류별 보기를 사용할 경우에는 제어판에서 **성능 및 유지 관리** 를 클릭한 후 **관리 도구**를 클릭합니다.  
+1.  클래식 보기를 사용할 경우에는 **제어판** 에서 **관리 도구** 를 클릭하고 종류별 보기를 사용할 경우에는 제어판에서 **성능 및 유지 관리** 를 클릭한 후 **관리 도구** 를 클릭합니다.  
   
-2.  **서비스**를 클릭합니다.  
+2.  **서비스** 를 클릭합니다.  
   
-3.  **서비스** 스냅인에서 서비스 목록의 **SQL Server Integration Services** 를 찾은 다음 **SQL Server Integration Services**를 마우스 오른쪽 단추로 클릭하고 **속성**을 클릭합니다.  
+3.  **서비스** 스냅인에서 서비스 목록의 **SQL Server Integration Services** 를 찾은 다음 **SQL Server Integration Services** 를 마우스 오른쪽 단추로 클릭하고 **속성** 을 클릭합니다.  
   
 4.  **SQL Server Integration Services 속성** 대화 상자에서 다음을 수행할 수 있습니다.  
   
@@ -137,9 +137,9 @@ ms.locfileid: "90990412"
   
     -   **종속성** 탭을 클릭하여 종속 서비스 목록을 봅니다. [!INCLUDE[ssISnoversion](../../includes/ssisnoversion-md.md)] 서비스에는 종속성이 없습니다.  
   
-5.  **확인**을 클릭합니다.  
+5.  **확인** 을 클릭합니다.  
   
-6.  시작 유형이 수동이거나 자동인 경우 필요에 따라 **SQL Server Integration Services** 를 마우스 오른쪽 단추로 클릭하고 **시작, 중지 또는 다시 시작**을 클릭합니다.  
+6.  시작 유형이 수동이거나 자동인 경우 필요에 따라 **SQL Server Integration Services** 를 마우스 오른쪽 단추로 클릭하고 **시작, 중지 또는 다시 시작** 을 클릭합니다.  
   
 7.  **파일** 메뉴에서 **끝내기** 를 클릭하여 **서비스** 스냅인을 닫습니다.  
 
@@ -152,7 +152,7 @@ ms.locfileid: "90990412"
   
 2.  **구성 요소 서비스** 대화 상자에서 구성 요소 서비스 > 컴퓨터 > 내 컴퓨터 > DCOM 구성 노드를 확장합니다.  
   
-3.  **Microsoft SQL Server Integration Services 13.0**을 마우스 오른쪽 단추로 클릭한 다음 **속성**을 클릭합니다.  
+3.  **Microsoft SQL Server Integration Services 13.0** 을 마우스 오른쪽 단추로 클릭한 다음 **속성** 을 클릭합니다.  
   
 4.  **보안** 탭의 **시작 및 활성화 권한** 영역에서 **편집** 을 클릭합니다.  
   
@@ -229,7 +229,7 @@ to the user NT SERVICE\SQLSERVERAGENT SID (S-1-5-80-344959196-2060754871-2302487
 ```  
   
 ### <a name="modify-the-configuration-file"></a>구성 파일 수정  
- 구성 파일을 수정하여 서비스가 중지되어도 패키지가 계속 실행되게 하거나 개체 탐색기에 추가 루트 폴더를 표시하거나 [!INCLUDE[ssISnoversion](../../includes/ssisnoversion-md.md)] 서비스에서 관리할 파일 시스템의 다른 폴더 또는 추가 폴더를 지정할 수 있습니다. 예를 들어 **SqlServerFolder**유형의 추가 루트 폴더를 만들어 추가 [!INCLUDE[ssDE](../../includes/ssde-md.md)]인스턴스의 msdb 데이터베이스에 저장된 패키지를 관리할 수 있습니다.  
+ 구성 파일을 수정하여 서비스가 중지되어도 패키지가 계속 실행되게 하거나 개체 탐색기에 추가 루트 폴더를 표시하거나 [!INCLUDE[ssISnoversion](../../includes/ssisnoversion-md.md)] 서비스에서 관리할 파일 시스템의 다른 폴더 또는 추가 폴더를 지정할 수 있습니다. 예를 들어 **SqlServerFolder** 유형의 추가 루트 폴더를 만들어 추가 [!INCLUDE[ssDE](../../includes/ssde-md.md)]인스턴스의 msdb 데이터베이스에 저장된 패키지를 관리할 수 있습니다.  
   
 > [!NOTE]  
 >  일부 문자는 폴더 이름에 적합하지 않습니다. 폴더 이름에 적합한 문자는 [!INCLUDE[dnprdnshort](../../includes/dnprdnshort-md.md)] 클래스 **System.IO.Path** 와 **GetInvalidFilenameChars** 필드에 의해 결정됩니다. **GetInvalidFilenameChars** 필드는 **Path** 클래스의 멤버에 전달된 경로 문자열 인수에 지정할 수 없는 플랫폼별 문자 배열을 제공합니다. 잘못된 문자 집합은 파일 시스템에 따라 달라질 수 있습니다. 일반적으로 따옴표("), 보다 작음(<) 문자 및 파이프(|) 문자가 잘못된 문자입니다.  
@@ -274,7 +274,7 @@ to the user NT SERVICE\SQLSERVERAGENT SID (S-1-5-80-344959196-2060754871-2302487
 ```  
   
 ### <a name="modify-the-configuration-file-location"></a>구성 파일 위치 수정  
- 레지스트리 키 **HKEY_LOCAL_MACHINE\SOFTWARE\Microsoft\Microsoft SQL Server\130\SSIS\ServiceConfigFile**은 [!INCLUDE[ssISnoversion](../../includes/ssisnoversion-md.md)] 서비스에서 사용하는 구성 파일의 위치와 이름을 지정합니다. 레지스트리 키의 기본값은 **C:\Program Files\Microsoft SQL Server\130\DTS\Binn\MsDtsSrvr.ini.xml**입니다. 이 레지스트리의 값을 업데이트하여 구성 파일의 이름과 위치를 변경할 수 있습니다. 경로의 버전 번호(SQL Server [!INCLUDE[ssSQL14_md](../../includes/sssql14-md.md)]의 경우 120, [!INCLUDE[ssSQL15](../../includes/sssql15-md.md)]의 경우 130 등)는 SQL Server 버전에 따라 달라집니다.
+ 레지스트리 키 **HKEY_LOCAL_MACHINE\SOFTWARE\Microsoft\Microsoft SQL Server\130\SSIS\ServiceConfigFile** 은 [!INCLUDE[ssISnoversion](../../includes/ssisnoversion-md.md)] 서비스에서 사용하는 구성 파일의 위치와 이름을 지정합니다. 레지스트리 키의 기본값은 **C:\Program Files\Microsoft SQL Server\130\DTS\Binn\MsDtsSrvr.ini.xml** 입니다. 이 레지스트리의 값을 업데이트하여 구성 파일의 이름과 위치를 변경할 수 있습니다. 경로의 버전 번호(SQL Server [!INCLUDE[ssSQL14_md](../../includes/sssql14-md.md)]의 경우 120, [!INCLUDE[ssSQL15](../../includes/sssql15-md.md)]의 경우 130 등)는 SQL Server 버전에 따라 달라집니다.
   
 > [!CAUTION]  
 >  레지스트리 키를 잘못 편집하면 운영 체제를 다시 설치해야 하는 심각한 문제가 발생할 수 있습니다. [!INCLUDE[msCoName](../../includes/msconame-md.md)] 는 레지스트리를 잘못 편집하여 발생하는 문제에 대한 해결을 보증하지 않습니다. 레지스트리를 편집하기 전에 중요한 데이터를 백업하십시오. 레지스트리를 백업, 복원 및 편집하는 방법은 [!INCLUDE[msCoName](../../includes/msconame-md.md)] 기술 자료 문서 [Microsoft Windows 레지스트리 설명](https://support.microsoft.com/kb/256986)을 참조하십시오.  
@@ -290,11 +290,11 @@ to the user NT SERVICE\SQLSERVERAGENT SID (S-1-5-80-344959196-2060754871-2302487
   
 2.  **보기** 메뉴에서 **개체 탐색기** 를 클릭합니다.  
   
-3.  개체 탐색기 도구 상자에서 **연결**을 클릭하고 **Integration Services**를 클릭합니다.  
+3.  개체 탐색기 도구 상자에서 **연결** 을 클릭하고 **Integration Services** 를 클릭합니다.  
   
 4.  **서버에 연결** 대화 상자에 서버 이름을 입력합니다. 마침표(.), (local) 또는 **localhost** 를 사용하여 로컬 서버를 지정할 수 있습니다.  
   
-5.  **연결**을 클릭합니다.  
+5.  **연결** 을 클릭합니다.  
 
 ## <a name="connect-to-a-remote-ssis-server"></a>원격 SSIS 서버에 연결
   
@@ -320,7 +320,7 @@ to the user NT SERVICE\SQLSERVERAGENT SID (S-1-5-80-344959196-2060754871-2302487
     > [!NOTE]  
     >  [!INCLUDE[ssISnoversion](../../includes/ssisnoversion-md.md)] 서비스는 인스턴스에 국한되지 않습니다. Integration Services 서버가 실행 중인 컴퓨터의 이름을 사용하여 서비스에 연결합니다.  
   
-5.  **연결**을 클릭합니다.  
+5.  **연결** 을 클릭합니다.  
   
 > [!NOTE]  
 >  **서버 찾아보기** 대화 상자에는 [!INCLUDE[ssISnoversion](../../includes/ssisnoversion-md.md)]의 원격 인스턴스가 표시되지 않습니다. 또한 **옵션** 단추를 클릭하면 표시되는 **서버에 연결** 대화 상자의 **연결 옵션** 탭에서 사용할 수 있는 옵션은 [!INCLUDE[ssISnoversion](../../includes/ssisnoversion-md.md)] 연결에는 적용되지 않습니다.  
@@ -334,21 +334,21 @@ to the user NT SERVICE\SQLSERVERAGENT SID (S-1-5-80-344959196-2060754871-2302487
   
 2.  제어판을 열고 **관리 도구** 를 두 번 클릭한 다음 **구성 요소 서비스** 를 두 번 클릭하여 구성 요소 서비스 MMC 스냅인을 시작합니다.  
   
-3.  콘솔의 왼쪽 창에서 **구성 요소 서비스** 노드를 확장합니다. **컴퓨터** 노드를 확장하고 **내 컴퓨터**를 확장한 다음 **DCOM 구성** 노드를 클릭합니다.  
+3.  콘솔의 왼쪽 창에서 **구성 요소 서비스** 노드를 확장합니다. **컴퓨터** 노드를 확장하고 **내 컴퓨터** 를 확장한 다음 **DCOM 구성** 노드를 클릭합니다.  
   
 4.  **DCOM 구성** 노드를 선택하고 구성할 수 있는 애플리케이션 목록에서 SQL Server Integration Services 11.0을 선택합니다.  
   
-5.  SQL Server Integration Services 11.0을 마우스 오른쪽 단추로 클릭하고 **속성**을 선택합니다.  
+5.  SQL Server Integration Services 11.0을 마우스 오른쪽 단추로 클릭하고 **속성** 을 선택합니다.  
   
 6.  **SQL Server Integration Services 11.0 속성** 대화 상자에서 **보안** 탭을 선택합니다.  
   
-7.  **시작 및 활성화 권한**에서 **사용자 지정**을 선택하고 **편집** 을 클릭하여 **시작 권한** 대화 상자를 엽니다.  
+7.  **시작 및 활성화 권한** 에서 **사용자 지정** 을 선택하고 **편집** 을 클릭하여 **시작 권한** 대화 상자를 엽니다.  
   
 8.  **시작 권한** 대화 상자에서 사용자를 추가하거나 삭제하고 적절한 사용자 및 그룹에 적절한 권한을 할당합니다. 로컬 시작, 원격 시작, 로컬 활성화 및 원격 활성화 권한을 할당할 수 있습니다. 시작 권한은 서비스를 시작 및 중지할 수 있는 권한을 부여하거나 거부하고, 활성화 권한은 서비스에 연결할 수 있는 권한을 부여하거나 거부합니다.  
   
 9. 확인을 클릭하여 대화 상자를 닫습니다.  
   
-10. **액세스 권한**에서 7-8단계를 반복하여 적절한 사용자 및 그룹에 적절한 권한을 할당합니다.  
+10. **액세스 권한** 에서 7-8단계를 반복하여 적절한 사용자 및 그룹에 적절한 권한을 할당합니다.  
   
 11. MMC 스냅인을 닫습니다.  
   
@@ -358,13 +358,13 @@ to the user NT SERVICE\SQLSERVERAGENT SID (S-1-5-80-344959196-2060754871-2302487
   
 1.  명령 프롬프트에서 **dcomcnfg.exe** 를 실행합니다.  
   
-2.  **DCOM 구성 속성** 대화 상자의 **애플리케이션** 페이지에서 SQL Server Integration Services 11.0을 선택하고 **속성**을 클릭합니다.  
+2.  **DCOM 구성 속성** 대화 상자의 **애플리케이션** 페이지에서 SQL Server Integration Services 11.0을 선택하고 **속성** 을 클릭합니다.  
   
 3.  **보안** 페이지를 선택합니다.  
   
-4.  두 개의 개별 대화 상자를 사용하여 **액세스 권한** 과 **시작 권한**을 구성합니다. 원격 액세스와 로컬 액세스는 구별할 수 없습니다. 액세스 권한에는 로컬 및 원격 액세스가 포함되고 시작 권한에는 로컬 및 원격 시작이 포함됩니다.  
+4.  두 개의 개별 대화 상자를 사용하여 **액세스 권한** 과 **시작 권한** 을 구성합니다. 원격 액세스와 로컬 액세스는 구별할 수 없습니다. 액세스 권한에는 로컬 및 원격 액세스가 포함되고 시작 권한에는 로컬 및 원격 시작이 포함됩니다.  
   
-5.  대화 상자 및 **dcomcnfg.exe**를 닫습니다.  
+5.  대화 상자 및 **dcomcnfg.exe** 를 닫습니다.  
   
 6.  [!INCLUDE[ssISnoversion](../../includes/ssisnoversion-md.md)] 서비스를 다시 시작합니다.  
   
@@ -419,26 +419,26 @@ SSIS는 자격 증명 위임(이중 홉이라고도 함)을 지원하지 않습�
   
 #### <a name="to-configure-a-firewall-using-the-windows-firewall-dialog-box"></a>Windows 방화벽 대화 상자를 사용하여 방화벽을 구성하려면  
   
-1.  제어판에서 **Windows 방화벽**을 두 번 클릭합니다.  
+1.  제어판에서 **Windows 방화벽** 을 두 번 클릭합니다.  
   
-2.  **Windows 방화벽** 대화 상자에서 **예외** 탭을 클릭한 다음 **프로그램 추가**를 클릭합니다.  
+2.  **Windows 방화벽** 대화 상자에서 **예외** 탭을 클릭한 다음 **프로그램 추가** 를 클릭합니다.  
   
-3.  **프로그램 추가** 대화 상자에서 **찾아보기**를 클릭하고 Program Files\Microsoft SQL Server\100\DTS\Binn 폴더로 이동한 다음 MsDtsSrvr.exe를 클릭하고 **열기**를 클릭합니다. **확인** 을 클릭하여 **프로그램 추가** 대화 상자를 닫습니다.  
+3.  **프로그램 추가** 대화 상자에서 **찾아보기** 를 클릭하고 Program Files\Microsoft SQL Server\100\DTS\Binn 폴더로 이동한 다음 MsDtsSrvr.exe를 클릭하고 **열기** 를 클릭합니다. **확인** 을 클릭하여 **프로그램 추가** 대화 상자를 닫습니다.  
   
-4.  **예외** 탭에서 **포트 추가**를 클릭합니다.  
+4.  **예외** 탭에서 **포트 추가** 를 클릭합니다.  
   
-5.  **포트 추가** 대화 상자의 **이름** 상자에 **RPC(TCP/135)** 나 다른 설명이 포함된 이름을 입력하고 **포트 번호** 상자에 **135** 를 입력한 다음 **TCP**를 선택합니다.  
+5.  **포트 추가** 대화 상자의 **이름** 상자에 **RPC(TCP/135)** 나 다른 설명이 포함된 이름을 입력하고 **포트 번호** 상자에 **135** 를 입력한 다음 **TCP** 를 선택합니다.  
   
     > [!IMPORTANT]  
     >  [!INCLUDE[ssISnoversion](../../includes/ssisnoversion-md.md)] 서비스는 항상 포트 135를 사용합니다. 다른 포트를 지정할 수 없습니다.  
   
 6.  **포트 추가** 대화 상자에서는 선택적으로 **범위 변경** 을 클릭하여 기본 범위를 수정할 수 있습니다.  
   
-7.  **범위 변경** 대화 상자에서 **내 네트워크(서브넷 전용)** 을 선택하거나 사용자 지정 목록을 입력한 다음 **확인**을 클릭합니다.  
+7.  **범위 변경** 대화 상자에서 **내 네트워크(서브넷 전용)** 을 선택하거나 사용자 지정 목록을 입력한 다음 **확인** 을 클릭합니다.  
   
-8.  **확인** 을 클릭하여 **포트 추가**대화 상자를 닫습니다.  
+8.  **확인** 을 클릭하여 **포트 추가** 대화 상자를 닫습니다.  
   
-9. **Windows 방화벽** 대화 상자를 닫으려면 **확인**을 클릭합니다.  
+9. **Windows 방화벽** 대화 상자를 닫으려면 **확인** 을 클릭합니다.  
   
     > [!NOTE]  
     >  Windows 방화벽을 구성하려면 이 절차에서 제어판의 **Windows 방화벽** 항목을 사용합니다. **Windows 방화벽** 항목은 현재 네트워크 위치 프로필에 대한 방화벽만 구성합니다. 그러나 **netsh** 명령줄 도구 또는 고급 보안이 설정된 Windows 방화벽 MMC([!INCLUDE[msCoName](../../includes/msconame-md.md)] Management Console) 스냅인을 사용하여 Windows 방화벽을 구성할 수도 있습니다. 이러한 도구에 대한 자세한 내용은 [SQL Server 액세스를 허용하도록 Windows 방화벽 구성](../../sql-server/install/configure-the-windows-firewall-to-allow-sql-server-access.md)을 참조하세요.  

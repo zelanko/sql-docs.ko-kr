@@ -12,10 +12,10 @@ ms.assetid: 7f9be649-cd93-40c1-bc48-0480106f207c
 author: chugugrace
 ms.author: chugu
 ms.openlocfilehash: 1d103c224088d2dfa22fe1d8dcb36306177aac54
-ms.sourcegitcommit: e700497f962e4c2274df16d9e651059b42ff1a10
+ms.sourcegitcommit: c5078791a07330a87a92abb19b791e950672e198
 ms.translationtype: HT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 08/17/2020
+ms.lasthandoff: 11/26/2020
 ms.locfileid: "88496188"
 ---
 # <a name="how-to-manage-a-local-cdc-service"></a>로컬 CDC Service를 관리하는 방법
@@ -27,9 +27,9 @@ ms.locfileid: "88496188"
   
 ### <a name="to-manage-a-specific-cdc-service"></a>특정 CDC Service를 관리 하려면  
   
-1.  **시작** 메뉴에서 **Oracle CDC Service 구성**을 선택합니다.  
+1.  **시작** 메뉴에서 **Oracle CDC Service 구성** 을 선택합니다.  
   
-2.  CDC Service 구성 콘솔의 왼쪽 창에서 **로컬 CDC Service**를 확장합니다.  
+2.  CDC Service 구성 콘솔의 왼쪽 창에서 **로컬 CDC Service** 를 확장합니다.  
   
 3.  작업할 CDC Service를 선택합니다.  
   
@@ -47,7 +47,7 @@ ms.locfileid: "88496188"
   
          CDC Service 구성 콘솔 오른쪽의 **동작** 창에서 **삭제** 를 클릭하여 서비스를 삭제합니다.  
   
-         삭제할 CDC Service를 마우스 오른쪽 단추로 클릭하고 **삭제**를 선택할 수도 있습니다.  
+         삭제할 CDC Service를 마우스 오른쪽 단추로 클릭하고 **삭제** 를 선택할 수도 있습니다.  
   
          **참고**: 서비스를 삭제할 때 서비스가 실행 중인 경우 서비스가 중지된 후에 삭제됩니다.  
   
@@ -57,9 +57,9 @@ ms.locfileid: "88496188"
   
     -   **CDC Service 속성 편집**  
   
-         CDC Service 구성 콘솔 오른쪽의 **동작** 창에서 **속성**을 클릭합니다.  
+         CDC Service 구성 콘솔 오른쪽의 **동작** 창에서 **속성** 을 클릭합니다.  
   
-         속성을 편집할 CDC Service를 마우스 오른쪽 단추로 클릭하고 **속성**을 선택할 수도 있습니다.  
+         속성을 편집할 CDC Service를 마우스 오른쪽 단추로 클릭하고 **속성** 을 선택할 수도 있습니다.  
   
 ## <a name="see-also"></a>관련 항목  
  [Manage an Oracle CDC Service](../../integration-services/change-data-capture/manage-an-oracle-cdc-service.md)  

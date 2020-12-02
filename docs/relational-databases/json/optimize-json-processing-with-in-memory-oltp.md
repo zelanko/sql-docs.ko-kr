@@ -12,10 +12,10 @@ ms.reviewer: jroth
 ms.custom: seo-dt-2019
 monikerRange: =azuresqldb-current||>=sql-server-2016||=sqlallproducts-allversions||>=sql-server-linux-2017||=azuresqldb-mi-current
 ms.openlocfilehash: 73106658572120b2c679c2ac37e2770fbc1151a1
-ms.sourcegitcommit: e700497f962e4c2274df16d9e651059b42ff1a10
+ms.sourcegitcommit: c5078791a07330a87a92abb19b791e950672e198
 ms.translationtype: HT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 08/17/2020
+ms.lasthandoff: 11/26/2020
 ms.locfileid: "88490937"
 ---
 # <a name="optimize-json-processing-with-in-memory-oltp"></a>메모리 내 OLTP를 통해 JSON 처리 최적화
@@ -135,7 +135,7 @@ ALTER TABLE Product
 ## <a name="native-compilation-of-json-queries"></a><a name="compile"></a> JSON 쿼리의 네이티브 컴파일
 프로시저, 함수 및 트리거에 기본 제공 JSON 함수를 사용하는 쿼리가 포함되어 있는 경우 네이티브 컴파일은 이러한 쿼리의 성능을 향상하고 쿼리를 실행하는 데 필요한 CPU 주기를 줄입니다.
 
-다음 예제에서는 **JSON_VALUE**, **OPENJSON** 및 **JSON_MODIFY**라는 여러 가지 JSON 함수를 사용하는 고유하게 컴파일된 프로시저를 보여 줍니다.
+다음 예제에서는 **JSON_VALUE**, **OPENJSON** 및 **JSON_MODIFY** 라는 여러 가지 JSON 함수를 사용하는 고유하게 컴파일된 프로시저를 보여 줍니다.
 
 ```sql
 CREATE PROCEDURE xtp.ProductList(@ProductIds nvarchar(100))

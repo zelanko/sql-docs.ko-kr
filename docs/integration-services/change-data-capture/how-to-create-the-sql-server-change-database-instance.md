@@ -12,10 +12,10 @@ ms.assetid: 3895097e-28fa-4808-a3a8-ba821b4ba4d4
 author: chugugrace
 ms.author: chugu
 ms.openlocfilehash: 0eaee23380c929ce5f9f106fb130d328bd3c7e47
-ms.sourcegitcommit: e700497f962e4c2274df16d9e651059b42ff1a10
+ms.sourcegitcommit: c5078791a07330a87a92abb19b791e950672e198
 ms.translationtype: HT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 08/17/2020
+ms.lasthandoff: 11/26/2020
 ms.locfileid: "88478072"
 ---
 # <a name="how-to-create-the-sql-server-change-database-instance"></a>SQL Server 변경 데이터베이스 인스턴스를 만드는 방법
@@ -27,15 +27,15 @@ ms.locfileid: "88478072"
   
 ### <a name="to-create-cdc-instances"></a>CDC 인스턴스를 만들려면  
   
-1.  **시작** 메뉴에서 **CDC Designer 콘솔**을 선택합니다.  
+1.  **시작** 메뉴에서 **CDC Designer 콘솔** 을 선택합니다.  
   
-2.  왼쪽 창에서 **변경 데이터 캡처**를 확장합니다.  
+2.  왼쪽 창에서 **변경 데이터 캡처** 를 확장합니다.  
   
 3.  새 CDC 인스턴스를 만들 서비스를 선택합니다.  
   
-4.  CDC Designer 콘솔의 오른쪽에 있는 **동작** 창에서 **새 Oracle CDC 인스턴스**를 선택합니다.  
+4.  CDC Designer 콘솔의 오른쪽에 있는 **동작** 창에서 **새 Oracle CDC 인스턴스** 를 선택합니다.  
   
-     새 CDC 인스턴스를 만들 서비스를 마우스 오른쪽 단추로 클릭하고 **새 Oracle CDC 인스턴스**를 선택할 수도 있습니다.  
+     새 CDC 인스턴스를 만들 서비스를 마우스 오른쪽 단추로 클릭하고 **새 Oracle CDC 인스턴스** 를 선택할 수도 있습니다.  
   
 5.  새 인스턴스 마법사에 필요한 정보를 입력하여 새 인스턴스를 만듭니다. 이 마법사에 필요한 정보에 대한 자세한 내용은 [Use the New Instance Wizard](../../integration-services/change-data-capture/use-the-new-instance-wizard.md)을 참조하십시오.  
   

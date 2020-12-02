@@ -20,10 +20,10 @@ author: markingmyname
 ms.author: maghan
 monikerRange: '>=aps-pdw-2016||=azuresqldb-current||=azure-sqldw-latest||>=sql-server-2016||=sqlallproducts-allversions||>=sql-server-linux-2017||=azuresqldb-mi-current'
 ms.openlocfilehash: 04f3a63fd156968cbe27b5d9b4e86baf1a2ad110
-ms.sourcegitcommit: dd36d1cbe32cd5a65c6638e8f252b0bd8145e165
+ms.sourcegitcommit: c5078791a07330a87a92abb19b791e950672e198
 ms.translationtype: HT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 09/08/2020
+ms.lasthandoff: 11/26/2020
 ms.locfileid: "89538031"
 ---
 # <a name="windows-collation-name-transact-sql"></a>Windows 데이터 정렬 이름(Transact-SQL)
@@ -63,21 +63,21 @@ Windows 데이터 정렬에 사용할 기본 데이터 정렬 규칙을 지정�
 - 터키어: 코드 페이지 1254를 사용합니다.
 
 *CaseSensitivity*  
-**CI**는 대/소문자를 구분하지 않도록 지정하고 **CS**는 대/소문자를 구분하도록 지정합니다.
+**CI** 는 대/소문자를 구분하지 않도록 지정하고 **CS** 는 대/소문자를 구분하도록 지정합니다.
 
 *AccentSensitivity*  
-**AI**는 악센트를 구분하지 않도록 지정하고 **AS**는 악센트를 구분하도록 지정합니다.
+**AI** 는 악센트를 구분하지 않도록 지정하고 **AS** 는 악센트를 구분하도록 지정합니다.
 
 *KanatypeSensitive*  
-이 옵션을 생략하면 일본어 가나를 구분하지 않도록 지정하며, **KS**는 일본어 가나를 구분하도록 지정합니다.
+이 옵션을 생략하면 일본어 가나를 구분하지 않도록 지정하며, **KS** 는 일본어 가나를 구분하도록 지정합니다.
 
 *WidthSensitivity*  
-이 옵션을 생략하면 전자/반자를 구분하지 않도록 지정하고 **WS**는 전자/반자를 구분하도록 지정합니다.
+이 옵션을 생략하면 전자/반자를 구분하지 않도록 지정하고 **WS** 는 전자/반자를 구분하도록 지정합니다.
 
 *VariationSelectorSensitivity*  
 - **적용 대상**: [!INCLUDE[ssSQL15](../../includes/sssqlv14-md.md)]로 시작 
 
-- 이 옵션을 생략하면 변형 선택기를 구분하지 않도록 지정하며, **VSS**는 변형 선택기를 구분하도록 지정합니다.
+- 이 옵션을 생략하면 변형 선택기를 구분하지 않도록 지정하며, **VSS** 는 변형 선택기를 구분하도록 지정합니다.
 
 **UTF8**  
 - **적용 대상**: [!INCLUDE[sql-server-2019](../../includes/sssqlv15-md.md)]로 시작   

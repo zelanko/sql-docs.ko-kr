@@ -18,10 +18,10 @@ ms.assetid: c4f43455-29ca-44ba-ac7f-ea729b1daf93
 author: chugugrace
 ms.author: chugu
 ms.openlocfilehash: 854f975c64f5622c53d04c51651929d83745864a
-ms.sourcegitcommit: c7f40918dc3ecdb0ed2ef5c237a3996cb4cd268d
+ms.sourcegitcommit: c5078791a07330a87a92abb19b791e950672e198
 ms.translationtype: HT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 10/05/2020
+ms.lasthandoff: 11/26/2020
 ms.locfileid: "91728048"
 ---
 # <a name="ftp-connection-manager"></a>FTP 연결 관리자
@@ -33,7 +33,7 @@ ms.locfileid: "91728048"
   
  패키지에 FTP 연결 관리자를 추가하면 [!INCLUDE[ssISnoversion](../../includes/ssisnoversion-md.md)] 에서 런타임에 FTP 연결로 확인되는 연결 관리자를 만들고, 연결 관리자 속성을 설정하고, 연결 관리자를 패키지의 **Connections** 컬렉션에 추가합니다.  
   
- 연결 관리자의 **ConnectionManagerType** 속성이 **FTP**로 설정됩니다.  
+ 연결 관리자의 **ConnectionManagerType** 속성이 **FTP** 로 설정됩니다.  
   
  다음과 같은 방법으로 FTP 연결 관리자를 구성할 수 있습니다.  
   
@@ -77,19 +77,19 @@ ms.locfileid: "91728048"
  FTP 서버의 이름을 제공합니다.  
   
  **서버 포트**  
- 연결에 사용할 FTP 서버의 포트 번호를 지정합니다. 이 속성의 기본값은 **21**입니다.  
+ 연결에 사용할 FTP 서버의 포트 번호를 지정합니다. 이 속성의 기본값은 **21** 입니다.  
   
  **사용자 이름**  
- FTP 서버에 액세스하기 위한 사용자 이름을 제공합니다. 이 속성의 기본값은 **anonymous**입니다.  
+ FTP 서버에 액세스하기 위한 사용자 이름을 제공합니다. 이 속성의 기본값은 **anonymous** 입니다.  
   
  **암호**  
  FTP 서버에 액세스하기 위한 암호를 제공합니다.  
   
  **제한 시간(초)**  
- 태스크가 시간 초과될 때까지 걸리는 시간(초)을 지정합니다. 값 **0** 은 시간 제한이 없음을 의미합니다. 이 속성의 기본값은 **60**입니다.  
+ 태스크가 시간 초과될 때까지 걸리는 시간(초)을 지정합니다. 값 **0** 은 시간 제한이 없음을 의미합니다. 이 속성의 기본값은 **60** 입니다.  
   
  **Passive 모드 사용**  
- 서버가 연결을 시작하는지 또는 클라이언트가 연결을 시작하는지 지정합니다. 서버는 Active 모드로 연결을 시작하고 클라이언트는 Passive 모드로 연결을 활성화합니다. 이 속성의 기본값은 **active mode**입니다.  
+ 서버가 연결을 시작하는지 또는 클라이언트가 연결을 시작하는지 지정합니다. 서버는 Active 모드로 연결을 시작하고 클라이언트는 Passive 모드로 연결을 활성화합니다. 이 속성의 기본값은 **active mode** 입니다.  
   
  **재시도**  
  태스크가 연결하려고 하는 횟수를 지정합니다. 값 **0** 은 시도 횟수에 제한이 없다는 것을 나타냅니다.  
@@ -98,7 +98,7 @@ ms.locfileid: "91728048"
  데이터를 전송하기 위한 청크 크기(KB)를 제공합니다.  
   
  **연결 테스트**  
- FTP 연결 관리자를 구성했으면 **연결 테스트**를 클릭하여 연결이 실행 가능한지 확인합니다.  
+ FTP 연결 관리자를 구성했으면 **연결 테스트** 를 클릭하여 연결이 실행 가능한지 확인합니다.  
   
 ## <a name="see-also"></a>관련 항목  
  [FTP 태스크](../../integration-services/control-flow/ftp-task.md)   

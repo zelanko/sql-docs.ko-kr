@@ -28,10 +28,10 @@ author: rothja
 ms.author: jroth
 monikerRange: '>=aps-pdw-2016||=azuresqldb-current||=azure-sqldw-latest||>=sql-server-2016||=sqlallproducts-allversions||>=sql-server-linux-2017||=azuresqldb-mi-current'
 ms.openlocfilehash: aaf9bcf9387d4414959e569301e16f348f1164c0
-ms.sourcegitcommit: 04cf7905fa32e0a9a44575a6f9641d9a2e5ac0f8
+ms.sourcegitcommit: c5078791a07330a87a92abb19b791e950672e198
 ms.translationtype: HT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 10/07/2020
+ms.lasthandoff: 11/26/2020
 ms.locfileid: "91809829"
 ---
 # <a name="memory-management-architecture-guide"></a>메모리 관리 아키텍처 가이드
@@ -94,7 +94,7 @@ AWE와 Lock Pages in Memory 권한을 사용하면 [!INCLUDE[ssNoVersion](../inc
 -  [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)] 프로세스에서 **[스레드 스택](../relational-databases/memory-management-architecture-guide.md#stacksizes)** 에 대한 메모리 할당.
 -  **직접 Windows 할당(DWA)** : Windows에 직접 요청된 메모리 할당입니다. 여기에는 Windows 힙 사용 및 [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)] 프로세스로 로드되는 모듈에 의한 직접 가상 할당이 포함됩니다. 이러한 메모리 할당 요청의 예로는 확장 저장 프로시저 DLL의 할당, 자동화 프로시저(sp_OA 호출)를 사용하여 만든 개체 및 연결된 서버 공급자의 할당이 있습니다.
 
-[!INCLUDE[ssSQL11](../includes/sssql11-md.md)]부터 단일 페이지 할당, 다중 페이지 할당 및 CLR 할당은 모두 **"모든 크기" 페이지 할당자**에 통합되며 *최대 서버 메모리(MB)* 및 *최소 서버 메모리(MB)* 구성 옵션에 의해 제어되는 메모리 제한에 포함됩니다. 이 변경으로 인해 [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)] 메모리 관리자를 통과하는 모든 메모리 요구 사항에 대해 보다 정확한 크기 조정 기능이 제공되었습니다. 
+[!INCLUDE[ssSQL11](../includes/sssql11-md.md)]부터 단일 페이지 할당, 다중 페이지 할당 및 CLR 할당은 모두 **"모든 크기" 페이지 할당자** 에 통합되며 *최대 서버 메모리(MB)* 및 *최소 서버 메모리(MB)* 구성 옵션에 의해 제어되는 메모리 제한에 포함됩니다. 이 변경으로 인해 [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)] 메모리 관리자를 통과하는 모든 메모리 요구 사항에 대해 보다 정확한 크기 조정 기능이 제공되었습니다. 
 
 > [!IMPORTANT]
 > [!INCLUDE[ssSQL11](../includes/sssql11-md.md)]에서 [!INCLUDE[ssCurrent](../includes/sscurrent-md.md)]로 업그레이드한 후 현재 *max server memory(MB)* 및 *min server memory(MB)* 구성을 주의 깊게 검토합니다. 이는 지금은 포함된 구성과 이전 버전과 비교하여 더 많은 메모리 할당을 위한 계정을 포함하는 [!INCLUDE[ssSQL11](../includes/sssql11-md.md)]에서 시작하기 때문입니다. 이러한 변경 사항은 32비트 및 64비트 버전의 [!INCLUDE[ssSQL11](../includes/sssql11-md.md)] 및 [!INCLUDE[ssSQL14](../includes/sssql14-md.md)] 그리고 64비트 버전의 [!INCLUDE[ssSQL15](../includes/sssql15-md.md)]에서 [!INCLUDE[ssCurrent](../includes/sscurrent-md.md)]에 모두 적용됩니다.
@@ -121,7 +121,7 @@ AWE와 Lock Pages in Memory 권한을 사용하면 [!INCLUDE[ssNoVersion](../inc
 
 <a name="#changes-to-memory-management-starting-with-includesssql11includessssql11-mdmd"></a>
 ## <a name="changes-to-memory_to_reserve-starting-with-sssql11"></a>[!INCLUDE[ssSQL11](../includes/sssql11-md.md)]부터 "memory_to_reserve"로 변경
-이전 버전의 SQL Server([!INCLUDE[ssVersion2005](../includes/ssversion2005-md.md)], [!INCLUDE[ssKatmai](../includes/ssKatmai-md.md)] 및 [!INCLUDE[ssKilimanjaro](../includes/ssKilimanjaro-md.md)])에서 [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)] 메모리 관리자는 **MPA(Multi-Page Allocator)** , **CLR 할당자**, SQL Server 프로세스에서 **스레드 스택**에 대한 메모리 할당, **DWA(Direct Windows 할당)** 로 사용하기 위해 프로세스 VAS(가상 주소 공간)의 일부로 따로 지정했습니다. 가상 주소 공간의 이 부분은 "Mem-To-Leave" 또는 "non-Buffer Pool" 영역으로도 알려져 있습니다.
+이전 버전의 SQL Server([!INCLUDE[ssVersion2005](../includes/ssversion2005-md.md)], [!INCLUDE[ssKatmai](../includes/ssKatmai-md.md)] 및 [!INCLUDE[ssKilimanjaro](../includes/ssKilimanjaro-md.md)])에서 [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)] 메모리 관리자는 **MPA(Multi-Page Allocator)** , **CLR 할당자**, SQL Server 프로세스에서 **스레드 스택** 에 대한 메모리 할당, **DWA(Direct Windows 할당)** 로 사용하기 위해 프로세스 VAS(가상 주소 공간)의 일부로 따로 지정했습니다. 가상 주소 공간의 이 부분은 "Mem-To-Leave" 또는 "non-Buffer Pool" 영역으로도 알려져 있습니다.
 
 이러한 할당을 위해 예약된 가상 주소 공간은 _**memory\_to\_reserve**_ 구성 옵션에 의해 결정됩니다. [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)]가 사용하는 기본값은 256MB입니다. 기본값을 재정의하려면 [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)] *-g* 시작 매개 변수를 사용합니다. *-g* 시작 매개 변수에 대한 자세한 내용은 [데이터베이스 엔진 서비스 시작 옵션](../database-engine/configure-windows/database-engine-service-startup-options.md)의 설명서 페이지를 참조하세요.
 
@@ -142,7 +142,7 @@ AWE와 Lock Pages in Memory 권한을 사용하면 [!INCLUDE[ssNoVersion](../inc
 
 [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)] 가 동적으로 메모리를 사용하면 주기적으로 시스템을 쿼리하여 사용할 수 있는 메모리 양을 확인합니다. 사용 가능한 메모리를 이 수준으로 유지 관리하면 OS(운영 체제)에서 페이징을 방지합니다. 사용 가능한 메모리가 이보다 적은 경우 [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)] 는 메모리를 OS로 해제합니다. 사용 가능한 메모리가 이보다 많은 경우 [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)] 에서 더 많은 메모리를 할당할 수 있습니다. [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)] 는 작업에 메모리가 더 필요한 경우에만 메모리를 추가합니다. 서버가 유휴 상태이면 가상 주소 공간 크기가 증가하지 않습니다.  
   
-**[max server memory](../database-engine/configure-windows/server-memory-server-configuration-options.md)** 는 [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)] 메모리 할당, 컴파일 메모리, 모든 캐시(버퍼 풀 포함), [쿼리 실행 메모리 부여](#effects-of-min-memory-per-query), [잠금 관리자 메모리](#memory-used-by-sql-server-objects-specifications) 및 CLR<sup>1</sup> 메모리를 제어합니다(기본적으로 **[sys.dm_os_memory_clerks](../relational-databases/system-dynamic-management-views/sys-dm-os-memory-clerks-transact-sql.md)** 에 있는 모든 메모리 클럭). 
+**[max server memory](../database-engine/configure-windows/server-memory-server-configuration-options.md)** 는 [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)] 메모리 할당, 컴파일 메모리, 모든 캐시(버퍼 풀 포함), [쿼리 실행 메모리 부여](#effects-of-min-memory-per-query), [잠금 관리자 메모리](#memory-used-by-sql-server-objects-specifications) 및 CLR <sup>1</sup> 메모리를 제어합니다(기본적으로 **[sys.dm_os_memory_clerks](../relational-databases/system-dynamic-management-views/sys-dm-os-memory-clerks-transact-sql.md)** 에 있는 모든 메모리 클럭). 
 
 <sup>1</sup>[!INCLUDE[ssSQL11](../includes/sssql11-md.md)]부터 CLR 메모리는 max_server_memory 할당에서 관리됩니다.
 
@@ -163,7 +163,7 @@ SELECT
 FROM sys.dm_os_process_memory;  
 ```  
  
-<a name="stacksizes"></a> 스레드 스택용 메모리<sup>1</sup>, CLR<sup>2</sup>, 확장 프로시저 .dll 파일, 분산 쿼리에 의해 참조되는 OLE DB 공급자, [!INCLUDE[tsql](../includes/tsql-md.md)] 문에서 참조되는 자동화 개체, 그리고 비 [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)] DLL에 의해 할당된 메모리는 최대 서버 메모리에 의해 제어되지 **않습니다**.
+<a name="stacksizes"></a> 스레드 스택용 메모리 <sup>1</sup>, CLR <sup>2</sup>, 확장 프로시저 .dll 파일, 분산 쿼리에 의해 참조되는 OLE DB 공급자, [!INCLUDE[tsql](../includes/tsql-md.md)] 문에서 참조되는 자동화 개체, 그리고 비 [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)] DLL에 의해 할당된 메모리는 최대 서버 메모리에 의해 제어되지 **않습니다**.
 
 <sup>1</sup> 현재 호스트에서 선호도가 높은 CPU의 지정된 수에 대해 계산된 기본 작업자 스레드에 대한 내용은 [max worker threads 서버 구성 옵션 구성](../database-engine/configure-windows/configure-the-max-worker-threads-server-configuration-option.md) 방법에 대한 설명서 페이지를 참조하세요. [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)] 스택 크기는 다음과 같습니다.
 
@@ -176,7 +176,7 @@ FROM sys.dm_os_process_memory;
 
 <sup>2</sup>[!INCLUDE[ssSQL11](../includes/sssql11-md.md)]부터 CLR 메모리는 max_server_memory 할당에서 관리됩니다.
 
-[!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)]는 메모리 알림 API **QueryMemoryResourceNotification**을 사용하여 [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)] Memory Manager가 메모리를 할당하고 해제하는 시기를 결정합니다.  
+[!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)]는 메모리 알림 API **QueryMemoryResourceNotification** 을 사용하여 [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)] Memory Manager가 메모리를 할당하고 해제하는 시기를 결정합니다.  
 
 [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)] 가 시작되면 시스템에 있는 실제 메모리 양 등의 여러 매개 변수, 서버 스레드 수 및 다양한 시작 매개 변수를 기준으로 버퍼 풀의 가상 주소 공간 크기를 계산합니다. [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)] 는 버퍼 풀에 사용할 해당 프로세스 가상 주소 공간 크기를 계산하여 예약하지만 현재 로드에 필요한 실제 메모리 양만 확보합니다(커밋).
 
@@ -202,7 +202,7 @@ min server memory 및 max server memory 둘 모두에 같은 값이 지정된 �
 * 잠금(잠금 관리자에 의해 유지 관리됨): 64바이트+32바이트(소유자당)   
 * 사용자 연결: 약(3 \*network_packet_size+94kb)    
 
-**네트워크 패킷 크기**는 애플리케이션과 [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)] 데이터베이스 엔진 간의 통신에 사용하는 TDS(Tabular Data Stream) 패킷의 크기입니다. 기본 패킷 크기는 4KB이며 네트워크 패킷 크기 구성 옵션으로 제어됩니다.
+**네트워크 패킷 크기** 는 애플리케이션과 [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)] 데이터베이스 엔진 간의 통신에 사용하는 TDS(Tabular Data Stream) 패킷의 크기입니다. 기본 패킷 크기는 4KB이며 네트워크 패킷 크기 구성 옵션으로 제어됩니다.
 
 다중 활성 결과 집합(MARS)을 사용할 수 있으면 사용자 연결은 약 (3 + 3 \*num_logical_connections)\* network_packet_size + 94KB입니다.
 
@@ -217,7 +217,7 @@ min server memory 및 max server memory 둘 모두에 같은 값이 지정된 �
 > 이 구성 사용에 대한 권장 사항은 [min memory per query 서버 구성 옵션 구성](../database-engine/configure-windows/configure-the-min-memory-per-query-server-configuration-option.md#Recommendations)을 참조합니다.
 
 ### <a name="memory-grant-considerations"></a><a name="memory-grant-considerations"></a>메모리 부여 고려 사항
-**행 모드 실행**의 경우 모든 조건에서 초기 메모리 부여를 초과할 수 없습니다. **해시** 또는 **정렬** 작업을 실행하는 데 초기 부여 보다 더 많은 메모리가 필요한 경우는 디스크에 분산되게 됩니다. 분산되는 해시 작업은 TempDB의 작업 파일에서 지원하지만 분산되는 정렬 작업은 [Worktable](../relational-databases/query-processing-architecture-guide.md#worktables)에서 지원합니다.   
+**행 모드 실행** 의 경우 모든 조건에서 초기 메모리 부여를 초과할 수 없습니다. **해시** 또는 **정렬** 작업을 실행하는 데 초기 부여 보다 더 많은 메모리가 필요한 경우는 디스크에 분산되게 됩니다. 분산되는 해시 작업은 TempDB의 작업 파일에서 지원하지만 분산되는 정렬 작업은 [Worktable](../relational-databases/query-processing-architecture-guide.md#worktables)에서 지원합니다.   
 
 정렬 작업 중에 발생하는 분산은 [정렬 경고](../relational-databases/event-classes/sort-warnings-event-class.md)라고 합니다. 정렬 경고는 정렬 작업이 메모리에 적합하지 않음을 나타냅니다. 여기에는 인덱스 만들기와 관련된 정렬 작업이 포함되지 않으며 `SELECT` 문에 사용된 `ORDER BY` 절과 같은 쿼리 내의 정렬 작업만 포함됩니다.
 
@@ -225,12 +225,12 @@ min server memory 및 max server memory 둘 모두에 같은 값이 지정된 �
 -  해시 재귀는 빌드 입력이 사용할 수 있는 메모리를 초과하여 여러 개의 파티션으로 분할되어 개별적으로 처리되는 경우 발생합니다. 분할된 파티션 중 여전히 사용할 수 있는 메모리를 초과하는 파티션이 있으면 이는 다시 하위 파티션으로 분할되어 개별적으로 처리됩니다. 이러한 분할 프로세스는 각 파티션이 사용할 수 있는 메모리에 모두 맞거나 최대 재귀 수준에 도달할 때까지 계속됩니다.
 -  해시 연산이 최대 재귀 수준에 도달하면 해시 재귀 한도 초과가 발생하며 대체 계획으로 변경하여 남은 파티션 데이터를 처리합니다. 이러한 이벤트는 서버에서 성능 저하를 일으킬 수 있습니다.
 
-**일괄 처리 모드 실행**의 경우 초기 메모리 부여는 기본적으로 특정 내부 임계값까지 동적으로 증가할 수 있습니다. 이 동적 메모리 부여 메커니즘은 일괄 처리 모드에서 실행 중인 **해시** 또는 **정렬** 작업의 메모리 상주 실행을 허용하도록 설계되었습니다. 이러한 작업이 아직 메모리에 맞지 않은 경우 디스크로 분산됩니다.
+**일괄 처리 모드 실행** 의 경우 초기 메모리 부여는 기본적으로 특정 내부 임계값까지 동적으로 증가할 수 있습니다. 이 동적 메모리 부여 메커니즘은 일괄 처리 모드에서 실행 중인 **해시** 또는 **정렬** 작업의 메모리 상주 실행을 허용하도록 설계되었습니다. 이러한 작업이 아직 메모리에 맞지 않은 경우 디스크로 분산됩니다.
 
 실행 모드에 대한 자세한 내용은 [쿼리 처리 아키텍처 가이드](../relational-databases/query-processing-architecture-guide.md#execution-modes)를 참조하세요.
 
 ## <a name="buffer-management"></a>버퍼 관리
-[!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)] 데이터베이스의 주 목적은 데이터 저장 및 검색이므로 데이터베이스 엔진의 핵심 특성은 집중형 디스크 I/O입니다. 디스크 I/O 작업은 많은 리소스를 소비하며 완료하는 데 비교적 오랜 시간이 걸리므로 [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)] 에서는 I/O의 효율성을 높이는 데 주안점을 둡니다. 버퍼 관리는 이러한 효율성을 얻기 위한 핵심 구성 요소입니다. 버퍼 관리 구성 요소는 데이터베이스 페이지에 액세스하고 업데이트하기 위한 **버퍼 관리자**와 데이터베이스 파일 I/O를 줄이기 위한 **버퍼 캐시**(**버퍼 풀**이라고도 함)의 두 가지 메커니즘으로 구성되어 있습니다. 
+[!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)] 데이터베이스의 주 목적은 데이터 저장 및 검색이므로 데이터베이스 엔진의 핵심 특성은 집중형 디스크 I/O입니다. 디스크 I/O 작업은 많은 리소스를 소비하며 완료하는 데 비교적 오랜 시간이 걸리므로 [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)] 에서는 I/O의 효율성을 높이는 데 주안점을 둡니다. 버퍼 관리는 이러한 효율성을 얻기 위한 핵심 구성 요소입니다. 버퍼 관리 구성 요소는 데이터베이스 페이지에 액세스하고 업데이트하기 위한 **버퍼 관리자** 와 데이터베이스 파일 I/O를 줄이기 위한 **버퍼 캐시**(**버퍼 풀** 이라고도 함)의 두 가지 메커니즘으로 구성되어 있습니다. 
 
 ### <a name="how-buffer-management-works"></a>버퍼 관리 작업 방법
 버퍼는 데이터 또는 인덱스 페이지와 같은 크기인 8KB 메모리 페이지입니다. 따라서 버퍼 캐시는 8KB 페이지로 나누어집니다. 버퍼 관리자는 데이터 또는 인덱스 페이지를 데이터베이스 디스크 파일에서 버퍼 캐시로 읽어 오고 수정한 페이지를 디스크에 다시 쓰는 기능을 관리합니다. 페이지는 버퍼 관리자에 더 많은 데이터를 읽어 올 버퍼 영역이 필요할 때까지 버퍼 캐시에 남아 있습니다. 데이터는 수정되는 경우에만 다시 디스크에 쓰여집니다. 버퍼 캐시의 데이터는 여러 번 수정한 후 디스크에 다시 쓸 수 있습니다. 자세한 내용은 [페이지 읽기](../relational-databases/reading-pages.md) 및 [페이지 쓰기](../relational-databases/writing-pages.md)를 참조하세요.
@@ -249,8 +249,8 @@ min server memory 및 max server memory 둘 모두에 같은 값이 지정된 �
 버퍼 관리자는 다음과 같은 기능을 지원합니다.
 
 * 버퍼 관리자는 **NUMA(Non-Uniform Memory Access)** 를 인식합니다. 버퍼 캐시 페이지는 하드웨어 NUMA 노드에 분산되므로 스레드가 외부 메모리 대신 로컬 NUMA 노드에 할당된 버퍼 페이지에 액세스할 수 있습니다. 
-* 버퍼 관리자는 **Hot Add 메모리**를 지원하므로 사용자가 서버를 다시 시작하지 않고도 실제 메모리를 추가할 수 있습니다. 
-* 버퍼 관리자는 64비트 플랫폼에서 **큰 페이지**를 지원합니다. 페이지 크기는 Windows 버전에 따라 달라집니다.
+* 버퍼 관리자는 **Hot Add 메모리** 를 지원하므로 사용자가 서버를 다시 시작하지 않고도 실제 메모리를 추가할 수 있습니다. 
+* 버퍼 관리자는 64비트 플랫폼에서 **큰 페이지** 를 지원합니다. 페이지 크기는 Windows 버전에 따라 달라집니다.
 
   > [!NOTE]
   > [!INCLUDE[ssSQL11](../includes/sssql11-md.md)] 이전에는 [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)]에서 큰 페이지를 활성화하려면 [추적 플래그 834](../t-sql/database-console-commands/dbcc-traceon-trace-flags-transact-sql.md)가 필요합니다.  
@@ -300,10 +300,10 @@ min server memory 및 max server memory 둘 모두에 같은 값이 지정된 �
 - 메모리 설정은 *max server memory* 구성을 줄여 수동으로 낮추었습니다. 
 - 여러 캐시 간의 내부 구성 요소의 메모리 배포 변경입니다.
 
-[!INCLUDE[ssDEnoversion](../includes/ssdenoversion-md.md)]은 동적 메모리 관리의 일부로 메모리 가중 검색 및 처리 전용 프레임워크를 구현합니다. 이 프레임워크에는 **리소스 모니터**라는 배경 작업이 포함되어 있습니다. 리소스 모니터 작업은 외부 및 내부 메모리 표시기 상태를 모니터링합니다. 이러한 표시기 중 하나가 상태를 변경하면 해당 알림을 계산하고 이를 브로드캐스트합니다. 이러한 알림은 각 엔진 구성 요소의 내부 메시지이며 링 버퍼에 저장됩니다. 
+[!INCLUDE[ssDEnoversion](../includes/ssdenoversion-md.md)]은 동적 메모리 관리의 일부로 메모리 가중 검색 및 처리 전용 프레임워크를 구현합니다. 이 프레임워크에는 **리소스 모니터** 라는 배경 작업이 포함되어 있습니다. 리소스 모니터 작업은 외부 및 내부 메모리 표시기 상태를 모니터링합니다. 이러한 표시기 중 하나가 상태를 변경하면 해당 알림을 계산하고 이를 브로드캐스트합니다. 이러한 알림은 각 엔진 구성 요소의 내부 메시지이며 링 버퍼에 저장됩니다. 
 
 두 개의 링 버퍼는 동적 메모리 관리와 관련된 정보를 보유합니다. 
-- 리소스 모니터 활동을 추적하는 리소스 모니터 링 버퍼는 메모리 가 중 신호 여부를 나타냅니다. 이 링 버퍼에는 *RESOURCE_MEMPHYSICAL_HIGH*, *RESOURCE_MEMPHYSICAL_LOW*, *RESOURCE_MEMPHYSICAL_STEADY* 또는 *RESOURCE_MEMVIRTUAL_LOW*의 현재 조건에 따른 상태 정보가 있습니다.
+- 리소스 모니터 활동을 추적하는 리소스 모니터 링 버퍼는 메모리 가 중 신호 여부를 나타냅니다. 이 링 버퍼에는 *RESOURCE_MEMPHYSICAL_HIGH*, *RESOURCE_MEMPHYSICAL_LOW*, *RESOURCE_MEMPHYSICAL_STEADY* 또는 *RESOURCE_MEMVIRTUAL_LOW* 의 현재 조건에 따른 상태 정보가 있습니다.
 - 각 Resource Governor 리소스 풀에 대한 메모리 알림의 레코드가 포함된 메모리 브로커 링 버퍼입니다. 내부 메모리 가중이 검색되면 메모리를 할당하는 구성 요소에 대해 메모리 부족 알림이 켜져 캐시 간의 메모리 균형을 유지하는 동작을 트리거합니다. 
 
 메모리 브로커는 각 구성 요소의 메모리 사용 수요를 모니터링한 다음, 수집된 정보에 따라 이러한 각 구성 요소에 대한 메모리의 최적 값을 계산합니다. 각 Resource Governor 리소스 풀에 대한 브로커 집합이 있습니다. 이 정보는 각 구성 요소에 브로드캐스트되어 필요에 따라 사용량을 확대하거나 축소합니다.
@@ -343,7 +343,7 @@ min server memory 및 max server memory 둘 모두에 같은 값이 지정된 �
 > [!NOTE]
 > [!INCLUDE[ssSQL15](../includes/sssql15-md.md)] 전에는 추적 플래그 8048을 사용하여 노드 기반 PMO가 CPU 기반 PMO가 되도록 강제할 수 있었습니다. [!INCLUDE[ssSQL14](../includes/sssql14-md.md)] SP2 및 [!INCLUDE[ssSQL15](../includes/sssql15-md.md)]부터 이 동작은 동적이며 엔진을 통해 제어됩니다.
 
-[!INCLUDE[ssSQL14](../includes/sssql14-md.md)] SP2 및 [!INCLUDE[ssSQL15](../includes/sssql15-md.md)]부터 [!INCLUDE[ssde_md](../includes/ssde_md.md)]는 특정 CMemThread 개체의 경합을 동적으로 검색하고 개체를 노드당 또는 CPU당 기반 구현으로 승격할 수 있습니다. 승격된 PMO는 [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)] 프로세스가 다시 시작될 때까지 승격된 상태로 유지됩니다. CMemThread 경합은 [sys.dm_os_wait_stats](../relational-databases/system-dynamic-management-views/sys-dm-os-wait-stats-transact-sql.md) DMV에서 대기 중인 여러 CMEMTHREAD의 존재 여부와 [sys.dm_os_memory_objects](../relational-databases/system-dynamic-management-views/sys-dm-os-memory-objects-transact-sql.md) DMV 열 *contention_factor*, *partition_type*, *exclusive_allocations_count* 및 *waiting_tasks_count*를 관찰하여 검색할 수 있습니다.
+[!INCLUDE[ssSQL14](../includes/sssql14-md.md)] SP2 및 [!INCLUDE[ssSQL15](../includes/sssql15-md.md)]부터 [!INCLUDE[ssde_md](../includes/ssde_md.md)]는 특정 CMemThread 개체의 경합을 동적으로 검색하고 개체를 노드당 또는 CPU당 기반 구현으로 승격할 수 있습니다.  승격된 PMO는 [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)] 프로세스가 다시 시작될 때까지 승격된 상태로 유지됩니다. CMemThread 경합은 [sys.dm_os_wait_stats](../relational-databases/system-dynamic-management-views/sys-dm-os-wait-stats-transact-sql.md) DMV에서 대기 중인 여러 CMEMTHREAD의 존재 여부와 [sys.dm_os_memory_objects](../relational-databases/system-dynamic-management-views/sys-dm-os-memory-objects-transact-sql.md) DMV 열 *contention_factor*, *partition_type*, *exclusive_allocations_count* 및 *waiting_tasks_count* 를 관찰하여 검색할 수 있습니다.
 
 ## <a name="see-also"></a>참고 항목
 [서버 메모리 서버 구성 옵션](../database-engine/configure-windows/server-memory-server-configuration-options.md)   

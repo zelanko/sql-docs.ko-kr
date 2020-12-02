@@ -26,10 +26,10 @@ author: VanMSFT
 ms.author: vanto
 monikerRange: '>=aps-pdw-2016||=azuresqldb-current||=azure-sqldw-latest||>=sql-server-2016||=sqlallproducts-allversions||>=sql-server-linux-2017||=azuresqldb-mi-current'
 ms.openlocfilehash: 13c27b4f23e6361592a72082c94fb033a96ce0d7
-ms.sourcegitcommit: 76d31f456982dabb226239b424eaa7139d8cc6c1
+ms.sourcegitcommit: c5078791a07330a87a92abb19b791e950672e198
 ms.translationtype: HT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 09/15/2020
+ms.lasthandoff: 11/26/2020
 ms.locfileid: "90570674"
 ---
 # <a name="user_name-transact-sql"></a>USER_NAME(Transact-SQL)
@@ -49,16 +49,16 @@ USER_NAME ( [ id ] )
 
 ## <a name="arguments"></a>인수
  *id*  
- 데이터베이스 사용자와 연결된 ID 번호입니다. *id*는 **int**입니다. 괄호가 필요합니다.  
+ 데이터베이스 사용자와 연결된 ID 번호입니다. *id* 는 **int** 입니다. 괄호가 필요합니다.  
   
 ## <a name="return-types"></a>반환 형식  
  **nvarchar(128)**  
   
 ## <a name="remarks"></a>설명  
- *id*를 생략하면 현재 컨텍스트의 현재 사용자로 가정하여 지정됩니다. 매개 변수에 NULL이라는 단어가 포함되어 있으면 NULL이 반환됩니다. EXECUTE AS 문 다음에 *id*를 지정하지 않고 USER_NAME을 호출하면 USER_NAME은 가장된 사용자의 이름을 반환합니다. Windows 보안 주체가 그룹 멤버 자격으로 데이터베이스에 액세스하는 경우 USER_NAME은 그룹 이름 대신 Windows 보안 주체의 이름을 반환합니다.  
+ *id* 를 생략하면 현재 컨텍스트의 현재 사용자로 가정하여 지정됩니다. 매개 변수에 NULL이라는 단어가 포함되어 있으면 NULL이 반환됩니다. EXECUTE AS 문 다음에 *id* 를 지정하지 않고 USER_NAME을 호출하면 USER_NAME은 가장된 사용자의 이름을 반환합니다. Windows 보안 주체가 그룹 멤버 자격으로 데이터베이스에 액세스하는 경우 USER_NAME은 그룹 이름 대신 Windows 보안 주체의 이름을 반환합니다.  
  
 > [!NOTE]
-> USER_NAME 함수는 Azure SQL Database에서 지원되지만, Azure SQL Database에서 USER_NAME과 함께 *Execute as*를 사용할 수는 없습니다. 
+> USER_NAME 함수는 Azure SQL Database에서 지원되지만, Azure SQL Database에서 USER_NAME과 함께 *Execute as* 를 사용할 수는 없습니다. 
   
 ## <a name="examples"></a>예제  
   

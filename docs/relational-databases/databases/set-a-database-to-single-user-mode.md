@@ -14,10 +14,10 @@ ms.assetid: fb5254eb-b635-4b39-8361-136fd36f2b1f
 author: stevestein
 ms.author: sstein
 ms.openlocfilehash: 591a2d22a603c51f44bdfa16d4072e6b9ad36c73
-ms.sourcegitcommit: e700497f962e4c2274df16d9e651059b42ff1a10
+ms.sourcegitcommit: c5078791a07330a87a92abb19b791e950672e198
 ms.translationtype: HT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 08/17/2020
+ms.lasthandoff: 11/26/2020
 ms.locfileid: "88471157"
 ---
 # <a name="set-a-database-to-single-user-mode"></a>단일 사용자 모드로 데이터베이스 설정
@@ -61,15 +61,15 @@ ms.locfileid: "88471157"
   
 #### <a name="to-set-a-database-to-single-user-mode"></a>데이터베이스를 단일 사용자 모드로 설정하려면  
   
-1.  **개체 탐색기**에서 [!INCLUDE[ssDEnoversion](../../includes/ssdenoversion-md.md)]의 인스턴스에 연결한 다음 해당 인스턴스를 확장합니다.  
+1.  **개체 탐색기** 에서 [!INCLUDE[ssDEnoversion](../../includes/ssdenoversion-md.md)]의 인스턴스에 연결한 다음 해당 인스턴스를 확장합니다.  
   
-2.  변경할 데이터베이스를 마우스 오른쪽 단추로 클릭한 다음 **속성**을 클릭합니다.  
+2.  변경할 데이터베이스를 마우스 오른쪽 단추로 클릭한 다음 **속성** 을 클릭합니다.  
   
 3.  **데이터베이스 속성** 대화 상자에서 **옵션** 페이지를 클릭합니다.  
   
-4.  **액세스 제한** 옵션에서 **단일**을 선택합니다.  
+4.  **액세스 제한** 옵션에서 **단일** 을 선택합니다.  
   
-5.  다른 사용자가 데이터베이스에 연결되어 있으면 **열린 연결** 메시지가 나타납니다. 다른 모든 연결을 닫고 속성을 변경하려면 **예**를 클릭합니다.  
+5.  다른 사용자가 데이터베이스에 연결되어 있으면 **열린 연결** 메시지가 나타납니다. 다른 모든 연결을 닫고 속성을 변경하려면 **예** 를 클릭합니다.  
   
  이 절차에 따라 데이터베이스를 다중 또는 제한됨 액세스로 설정할 수도 있습니다. 액세스 제한 옵션에 대한 자세한 내용은 [데이터베이스 속성&#40;옵션 페이지&#41;](../../relational-databases/databases/database-properties-options-page.md)을 참조하세요.  
   
@@ -79,9 +79,9 @@ ms.locfileid: "88471157"
   
 1.  [!INCLUDE[ssDE](../../includes/ssde-md.md)]에 연결합니다.  
   
-2.  표준 도구 모음에서 **새 쿼리**를 클릭합니다.  
+2.  표준 도구 모음에서 **새 쿼리** 를 클릭합니다.  
   
-3.  다음 예를 복사하여 쿼리 창에 붙여 넣고 **실행**을 클릭합니다. 이 예에서는 데이터베이스를 `SINGLE_USER` 모드로 설정하여 배타적 액세스 권한을 확보한 다음 [!INCLUDE[ssSampleDBobject](../../includes/sssampledbobject-md.md)] 데이터베이스의 상태를 `READ_ONLY` 로 설정한 후 데이터베이스 액세스를 모든 사용자에게 반환합니다. 종료 옵션 `WITH ROLLBACK IMMEDIATE` 는 첫 번째 `ALTER DATABASE` 문에 지정됩니다. 완료되지 않은 트랜잭션은 모두 롤백되며 [!INCLUDE[ssSampleDBobject](../../includes/sssampledbobject-md.md)] 데이터베이스로의 다른 모든 연결은 즉시 끊어집니다.  
+3.  다음 예를 복사하여 쿼리 창에 붙여 넣고 **실행** 을 클릭합니다. 이 예에서는 데이터베이스를 `SINGLE_USER` 모드로 설정하여 배타적 액세스 권한을 확보한 다음 [!INCLUDE[ssSampleDBobject](../../includes/sssampledbobject-md.md)] 데이터베이스의 상태를 `READ_ONLY` 로 설정한 후 데이터베이스 액세스를 모든 사용자에게 반환합니다. 종료 옵션 `WITH ROLLBACK IMMEDIATE` 는 첫 번째 `ALTER DATABASE` 문에 지정됩니다. 완료되지 않은 트랜잭션은 모두 롤백되며 [!INCLUDE[ssSampleDBobject](../../includes/sssampledbobject-md.md)] 데이터베이스로의 다른 모든 연결은 즉시 끊어집니다.  
   
  [!code-sql[DatabaseDDL#AlterDatabase8](../../relational-databases/databases/codesnippet/tsql/set-a-database-to-single_1.sql)]  
   

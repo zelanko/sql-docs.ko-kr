@@ -27,10 +27,10 @@ author: VanMSFT
 ms.author: vanto
 monikerRange: '>=aps-pdw-2016||=azure-sqldw-latest||>=sql-server-2016||=sqlallproducts-allversions||>=sql-server-linux-2017||=azuresqldb-mi-current'
 ms.openlocfilehash: d2ba9047673e7f43202ec74f577e039d3b769abe
-ms.sourcegitcommit: 76d31f456982dabb226239b424eaa7139d8cc6c1
+ms.sourcegitcommit: c5078791a07330a87a92abb19b791e950672e198
 ms.translationtype: HT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 09/15/2020
+ms.lasthandoff: 11/26/2020
 ms.locfileid: "90570624"
 ---
 # <a name="has_dbaccess-transact-sql"></a>HAS_DBACCESS(Transact-SQL)
@@ -50,7 +50,7 @@ HAS_DBACCESS ( 'database_name' )
 
 ## <a name="arguments"></a>인수
  '*database_name*'  
- 사용자가 액세스 정보를 얻으려고 하는 데이터베이스의 이름입니다. *database_name*은 **sysname**입니다.  
+ 사용자가 액세스 정보를 얻으려고 하는 데이터베이스의 이름입니다. *database_name* 은 **sysname** 입니다.  
   
 ## <a name="return-types"></a>반환 형식  
  **int**  

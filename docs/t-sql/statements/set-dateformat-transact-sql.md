@@ -29,10 +29,10 @@ author: markingmyname
 ms.author: maghan
 monikerRange: '>=aps-pdw-2016||=azuresqldb-current||=azure-sqldw-latest||>=sql-server-2016||=sqlallproducts-allversions||>=sql-server-linux-2017||=azuresqldb-mi-current'
 ms.openlocfilehash: 13000e068c82ff3224eda50b7012bf06c7b83204
-ms.sourcegitcommit: dd36d1cbe32cd5a65c6638e8f252b0bd8145e165
+ms.sourcegitcommit: c5078791a07330a87a92abb19b791e950672e198
 ms.translationtype: HT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 09/08/2020
+ms.lasthandoff: 11/26/2020
 ms.locfileid: "89541253"
 ---
 # <a name="set-dateformat-transact-sql"></a>SET DATEFORMAT(Transact-SQL)
@@ -54,12 +54,12 @@ SET DATEFORMAT { format | @format_var }
 
 ## <a name="arguments"></a>인수
  *format* |  **@** _format_var_  
- 날짜 부분의 순서입니다. 유효한 매개 변수는 **mdy**, **dmy**, **ymd**, **ydm**, **myd** 및 **dym**입니다. 유니코드나 유니코드로 변환된 DBCS(더블바이트 문자 집합) 중 하나가 될 수 있습니다. 미국 영어 기본값은 **mdy**입니다. 모든 지원 언어의 기본 DATEFORMAT에 대한 내용은 [sp_helplanguage &#40;Transact-SQL&#41;](../../relational-databases/system-stored-procedures/sp-helplanguage-transact-sql.md)를 참조하세요.  
+ 날짜 부분의 순서입니다. 유효한 매개 변수는 **mdy**, **dmy**, **ymd**, **ydm**, **myd** 및 **dym** 입니다. 유니코드나 유니코드로 변환된 DBCS(더블바이트 문자 집합) 중 하나가 될 수 있습니다. 미국 영어 기본값은 **mdy** 입니다. 모든 지원 언어의 기본 DATEFORMAT에 대한 내용은 [sp_helplanguage &#40;Transact-SQL&#41;](../../relational-databases/system-stored-procedures/sp-helplanguage-transact-sql.md)를 참조하세요.  
   
 ## <a name="remarks"></a>설명  
- DATEFORMAT **ydm**은 **date**, **datetime2** 및 **datetimeoffset** 데이터 형식에 대해 지원되지 않습니다.  
+ DATEFORMAT **ydm** 은 **date**, **datetime2** 및 **datetimeoffset** 데이터 형식에 대해 지원되지 않습니다.  
   
- DATEFORMAT 설정은 문자열 형식에 따라 날짜 데이터 형식에 대해 문자열을 다르게 해석할 수 있습니다. 예를 들어 **datetime** 및 **smalldatetime** 해석은 **date**, **datetime2** 또는 ** datetimeoffset**과 일치하지 않을 수 있습니다. DATEFORMAT은 문자열이 데이터베이스의 날짜 값으로 변환될 때 문자열의 해석에 영향을 줍니다. 날짜 데이터 형식 값의 표시나 데이터베이스 스토리지 형식에 영향을 주지 않습니다.  
+ DATEFORMAT 설정은 문자열 형식에 따라 날짜 데이터 형식에 대해 문자열을 다르게 해석할 수 있습니다. 예를 들어 **datetime** 및 **smalldatetime** 해석은 **date**, **datetime2** 또는 **datetimeoffset** 과 일치하지 않을 수 있습니다. DATEFORMAT은 문자열이 데이터베이스의 날짜 값으로 변환될 때 문자열의 해석에 영향을 줍니다. 날짜 데이터 형식 값의 표시나 데이터베이스 스토리지 형식에 영향을 주지 않습니다.  
   
  예를 들어 ISO 8601과 같은 일부 문자열 형식의 경우 DATEFORMAT 설정과 관계없이 해석됩니다.  
   

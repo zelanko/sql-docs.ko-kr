@@ -22,10 +22,10 @@ ms.assetid: 189399e4-428d-4902-b3a8-94f07fdefc6a
 author: markingmyname
 ms.author: maghan
 ms.openlocfilehash: 31cf25c3800d4fe35e0ef914db85eb82f58fe85c
-ms.sourcegitcommit: cc23d8646041336d119b74bf239a6ac305ff3d31
+ms.sourcegitcommit: c5078791a07330a87a92abb19b791e950672e198
 ms.translationtype: HT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 09/23/2020
+ms.lasthandoff: 11/26/2020
 ms.locfileid: "91116715"
 ---
 # <a name="getansinull-transact-sql"></a>GETANSINULL(Transact-SQL)
@@ -45,7 +45,7 @@ GETANSINULL ( [ 'database' ] )
 
 ## <a name="arguments"></a>인수
  '*database*'  
- Null 허용 여부 정보를 반환할 데이터베이스의 이름입니다. *database는 **char** 또는 **nchar**입니다. **char**인 경우, *데이터베이스*는 암시적으로 **nchar**으로 변환됩니다.  
+ Null 허용 여부 정보를 반환할 데이터베이스의 이름입니다. *database는 **char** 또는 **nchar** 입니다. **char** 인 경우, *데이터베이스* 는 암시적으로 **nchar** 으로 변환됩니다.  
   
 ## <a name="return-types"></a>반환 형식  
  **int**  

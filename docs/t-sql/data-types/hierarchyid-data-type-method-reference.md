@@ -20,23 +20,23 @@ ms.assetid: 69b756e0-a1df-45b3-8a24-6ded8658aefe
 author: MikeRayMSFT
 ms.author: mikeray
 ms.openlocfilehash: e9968e1537901de729406c5b0ddc21857e74b886
-ms.sourcegitcommit: 22dacedeb6e8721e7cdb6279a946d4002cfb5da3
+ms.sourcegitcommit: c5078791a07330a87a92abb19b791e950672e198
 ms.translationtype: HT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 10/14/2020
+ms.lasthandoff: 11/26/2020
 ms.locfileid: "92037500"
 ---
 # <a name="hierarchyid-data-type-method-reference"></a>hierarchyid 데이터 형식 메서드 참조
 [!INCLUDE [SQL Server SQL Database](../../includes/applies-to-version/sql-asdb.md)]
 
-**hierarchyid** 데이터 형식은 가변 길이의 시스템 데이터 형식입니다. **hierarchyid**는 계층에서의 위치를 나타내는 데 사용됩니다. **hierarchyid** 형식의 열은 자동으로 트리를 나타내지 않습니다. 애플리케이션에 따라 원하는 행 간 관계가 값에 반영되도록 **hierarchyid** 값이 생성되어 할당됩니다.
+**hierarchyid** 데이터 형식은 가변 길이의 시스템 데이터 형식입니다. **hierarchyid** 는 계층에서의 위치를 나타내는 데 사용됩니다. **hierarchyid** 형식의 열은 자동으로 트리를 나타내지 않습니다. 애플리케이션에 따라 원하는 행 간 관계가 값에 반영되도록 **hierarchyid** 값이 생성되어 할당됩니다.
   
 **hierarchyid** 데이터 형식의 값은 트리 계층에서의 위치를 나타냅니다. **hierarchyid** 값의 속성은 다음과 같습니다.
   
 -   높은 압축성  
-     *n* 개 노드가 포함된 트리에서 노드를 나타내는 데 필요한 평균 비트 수는 평균 fanout(노드의 평균 자식 수)에 따라 달라집니다. 작은 fanout(0-7)의 경우 크기는 약 6\*logA*n* 비트입니다. 여기서 A는 평균 fanout입니다. 평균 fanout 수준이 6인 100,000명으로 구성된 조직 계층의 노드는 약 38비트를 사용합니다. 이는 스토리지를 위해 40비트나 5바이트로 반올림됩니다.  
+     *n* 개 노드가 포함된 트리에서 노드를 나타내는 데 필요한 평균 비트 수는 평균 fanout(노드의 평균 자식 수)에 따라 달라집니다. 작은 fanout(0-7)의 경우 크기는 약 6\*logA *n* 비트입니다. 여기서 A는 평균 fanout입니다. 평균 fanout 수준이 6인 100,000명으로 구성된 조직 계층의 노드는 약 38비트를 사용합니다. 이는 스토리지를 위해 40비트나 5바이트로 반올림됩니다.  
 -   깊이 우선 순서로 비교  
-     두 개의 **hierarchyid** 값이 **a**와 **b**인 경우 **a<b**는 깊이 우선 트리 탐색에서 a가 b 앞에 온다는 의미입니다. **hierarchyid** 데이터 형식의 인덱스에는 깊이 우선 순서가 사용되며 깊이 우선 탐색에서 서로 가까이 있는 노드는 서로 가깝게 저장됩니다. 예를 들어 레코드의 자식은 해당 레코드에 인접하게 저장됩니다. 자세한 내용은 [계층적 데이터&#40;SQL Server&#41;](../../relational-databases/hierarchical-data-sql-server.md)를 참조하세요.  
+     두 개의 **hierarchyid** 값이 **a** 와 **b** 인 경우 **a<b** 는 깊이 우선 트리 탐색에서 a가 b 앞에 온다는 의미입니다. **hierarchyid** 데이터 형식의 인덱스에는 깊이 우선 순서가 사용되며 깊이 우선 탐색에서 서로 가까이 있는 노드는 서로 가깝게 저장됩니다. 예를 들어 레코드의 자식은 해당 레코드에 인접하게 저장됩니다. 자세한 내용은 [계층적 데이터&#40;SQL Server&#41;](../../relational-databases/hierarchical-data-sql-server.md)를 참조하세요.  
 -   임의 삽입 및 삭제 지원  
      [GetDescendant](../../t-sql/data-types/getdescendant-database-engine.md) 메서드를 사용하면 지정한 노드의 오른쪽, 지정한 노드의 왼쪽 또는 두 형제 사이에 형제를 생성할 수 있습니다. 임의 개수의 노드를 계층에서 삽입하거나 삭제할 때 비교 속성이 유지됩니다. 대부분의 삽입 및 삭제 시 압축성 속성이 유지됩니다. 그러나 두 노드 간 삽입 시에는 약간 덜 압축된 표현으로 hierarchyid 값이 생성됩니다.  
 -   **hierarchyid** 형식에 사용되는 인코딩은 892바이트로 제한됩니다. 따라서 표현에 수준이 너무 많아 892바이트에 들어가지 못하는 노드는 **hierarchyid** 형식으로 나타낼 수 없습니다.  
@@ -61,7 +61,7 @@ ms.locfileid: "92037500"
 ## <a name="data-type-conversion"></a>데이터 형식 변환
 **hierarchyid** 데이터 형식은 다음과 같이 다른 데이터 형식으로 변환할 수 있습니다.
 -   [ToString()](../../t-sql/data-types/tostring-database-engine.md) 메서드를 사용하여 **hierarchyid** 값을 **nvarchar(4000)** 데이터 형식의 논리 표현으로 변환할 수 있습니다.  
--   **hierarchyid**를 **varbinary**로 변환하려면 [Read ()](../../t-sql/data-types/read-database-engine.md) 및 [Write ()](../../t-sql/data-types/write-database-engine.md)를 사용합니다.  
+-   **hierarchyid** 를 **varbinary** 로 변환하려면 [Read ()](../../t-sql/data-types/read-database-engine.md) 및 [Write ()](../../t-sql/data-types/write-database-engine.md)를 사용합니다.  
 -   SOAP를 통해 **hierarchyid** 매개 변수를 전송하려면 먼저 문자열로 캐스팅해야 합니다.  
   
 ## <a name="upgrading-databases"></a>데이터베이스 업그레이드

@@ -24,10 +24,10 @@ ms.assetid: eaf8cc82-1047-4144-9e77-0e1095df6143
 author: VanMSFT
 ms.author: vanto
 ms.openlocfilehash: c2240ad1cbc9bb8c9fd252eefd6633e81e4ab2f8
-ms.sourcegitcommit: cc23d8646041336d119b74bf239a6ac305ff3d31
+ms.sourcegitcommit: c5078791a07330a87a92abb19b791e950672e198
 ms.translationtype: HT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 09/23/2020
+ms.lasthandoff: 11/26/2020
 ms.locfileid: "91115230"
 ---
 # <a name="has_perms_by_name-transact-sql"></a>HAS_PERMS_BY_NAME(Transact-SQL)
@@ -48,10 +48,10 @@ HAS_PERMS_BY_NAME ( securable , securable_class , permission
 
 ## <a name="arguments"></a>인수
  *securable*  
- 보안 개체의 이름입니다. 보안 개체가 서버 자체인 경우 이 값을 NULL로 설정해야 합니다. *securable*은 **sysname** 형식의 스칼라 식입니다. 기본값은 없습니다.  
+ 보안 개체의 이름입니다. 보안 개체가 서버 자체인 경우 이 값을 NULL로 설정해야 합니다. *securable* 은 **sysname** 형식의 스칼라 식입니다. 기본값은 없습니다.  
   
  *securable_class*  
- 사용 권한을 테스트한 보안 개체 클래스의 이름입니다. *securable_class*는 **nvarchar(60)** 형식의 스칼라 식입니다.  
+ 사용 권한을 테스트한 보안 개체 클래스의 이름입니다. *securable_class* 는 **nvarchar(60)** 형식의 스칼라 식입니다.  
   
  [!INCLUDE[ssSDSfull](../../includes/sssdsfull-md.md)]에서 securable_class 인수는 **DATABASE**, **OBJECT**, **ROLE**, **SCHEMA**, **USER** 중 하나로 설정해야 합니다.  
   
@@ -67,7 +67,7 @@ HAS_PERMS_BY_NAME ( securable , securable_class , permission
  *sub-securable_class*  
  사용 권한이 테스트되는 대상 보안 개체 하위 엔터티의 클래스를 나타내는 **nvarchar(60)** 형식의 선택적 스칼라 식입니다. 기본값은 NULL입니다.  
   
- [!INCLUDE[ssSDSfull](../../includes/sssdsfull-md.md)]에서 sub-securable_class 인수는 securable_class 인수가 **OBJECT**로 설정된 경우에만 유효합니다. securable_class 인수가 **OBJECT**로 설정된 경우 sub-securable_class 인수는 **COLUMN**으로 설정해야 합니다.  
+ [!INCLUDE[ssSDSfull](../../includes/sssdsfull-md.md)]에서 sub-securable_class 인수는 securable_class 인수가 **OBJECT** 로 설정된 경우에만 유효합니다. securable_class 인수가 **OBJECT** 로 설정된 경우 sub-securable_class 인수는 **COLUMN** 으로 설정해야 합니다.  
   
 ## <a name="return-types"></a>반환 형식  
  **int**  

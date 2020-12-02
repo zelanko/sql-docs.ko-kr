@@ -16,10 +16,10 @@ author: stevestein
 ms.author: sstein
 monikerRange: '>=aps-pdw-2016||=azuresqldb-current||=azure-sqldw-latest||>=sql-server-2016||=sqlallproducts-allversions||>=sql-server-linux-2017||=azuresqldb-mi-current'
 ms.openlocfilehash: 361e98e19788f4d2c6aa921caf71e58552ee53a0
-ms.sourcegitcommit: e700497f962e4c2274df16d9e651059b42ff1a10
+ms.sourcegitcommit: c5078791a07330a87a92abb19b791e950672e198
 ms.translationtype: HT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 08/17/2020
+ms.lasthandoff: 11/26/2020
 ms.locfileid: "88488569"
 ---
 # <a name="specify-default-values-for-columns"></a>열의 기본값 지정
@@ -56,7 +56,7 @@ ms.locfileid: "88488569"
 
 ### <a name="object-explorer"></a>개체 탐색기
 
-1. **개체 탐색기**에서 소수 자릿수를 변경할 열이 포함된 테이블을 마우스 오른쪽 단추로 클릭하고 **디자인**을 클릭합니다.
+1. **개체 탐색기** 에서 소수 자릿수를 변경할 열이 포함된 테이블을 마우스 오른쪽 단추로 클릭하고 **디자인** 을 클릭합니다.
 
 2. 기본값을 지정하려는 열을 선택합니다.
 
@@ -65,7 +65,7 @@ ms.locfileid: "88488569"
    > [!NOTE]
    > 숫자 기본값을 입력하려면 숫자를 입력합니다. 개체나 함수의 경우 해당 이름을 입력합니다. 영숫자 기본값의 경우 원하는 값을 작은따옴표로 묶어 입력합니다.
 
-4. **파일** 메뉴에서 ‘테이블 이름’ **저장을 클릭합니다.** __
+4. **파일** 메뉴에서 ‘테이블 이름’ **저장을 클릭합니다.** 
 
 ## <a name="use-transact-sql-to-specify-a-default"></a><a name="TsqlProcedure"></a> Transact-SQL을 사용하여 기본값 지정
 
@@ -73,11 +73,11 @@ SSMS를 사용하여 T-SQL을 제출하면 다양한 방법으로 열의 기본�
 
 ### <a name="alter-table-t-sql"></a>ALTER TABLE(T-SQL)
 
-1. **개체 탐색기**에서 [!INCLUDE[ssDE](../../includes/ssde-md.md)]인스턴스에 연결합니다.
+1. **개체 탐색기** 에서 [!INCLUDE[ssDE](../../includes/ssde-md.md)]인스턴스에 연결합니다.
 
-2. 표준 도구 모음에서 **새 쿼리**를 클릭합니다.
+2. 표준 도구 모음에서 **새 쿼리** 를 클릭합니다.
 
-3. 다음 예를 복사하여 쿼리 창에 붙여 넣고 **실행**을 클릭합니다.
+3. 다음 예를 복사하여 쿼리 창에 붙여 넣고 **실행** 을 클릭합니다.
 
    ```sql
    CREATE TABLE dbo.doc_exz (column_a INT, column_b INT); -- Allows nulls.

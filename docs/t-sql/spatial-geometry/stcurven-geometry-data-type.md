@@ -16,16 +16,16 @@ ms.assetid: 64adf1a1-3a41-41fb-b7d1-44390c3e4ea9
 author: MladjoA
 ms.author: mlandzic
 ms.openlocfilehash: e182b7c5670bd86e0d684d1d8caaea563a2ff456
-ms.sourcegitcommit: e700497f962e4c2274df16d9e651059b42ff1a10
+ms.sourcegitcommit: c5078791a07330a87a92abb19b791e950672e198
 ms.translationtype: HT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 08/17/2020
+ms.lasthandoff: 11/26/2020
 ms.locfileid: "88467395"
 ---
 # <a name="stcurven-geometry-data-type"></a>STCurveN(geometry 데이터 형식)
 [!INCLUDE [SQL Server Azure SQL Database ](../../includes/applies-to-version/sql-asdb.md)]
 
-**LineString**, **CircularString**, **CompoundCurve** 또는 **MultiLineString**인 **geography** 인스턴스에서 지정된 곡선을 반환합니다.
+**LineString**, **CircularString**, **CompoundCurve** 또는 **MultiLineString** 인 **geography** 인스턴스에서 지정된 곡선을 반환합니다.
   
 ## <a name="syntax"></a>구문  
   
@@ -49,15 +49,15 @@ ms.locfileid: "88467395"
  *curve_index* < 1인 경우는 `ArgumentOutOfRangeException`을 throw합니다.  
   
 ## <a name="remarks"></a>설명  
- 다음 상황에서는 **NULL**이 반환됩니다.  
+ 다음 상황에서는 **NULL** 이 반환됩니다.  
   
 -   **geometry** 인스턴스가 선언되지만 인스턴스화되지 않는 경우  
   
 -   **geometry** 인스턴스가 비어있는 경우  
   
--   *curve_index*가 **geometry** 인스턴스에 있는 곡선 개수를 초과하는 경우  
+-   *curve_index* 가 **geometry** 인스턴스에 있는 곡선 개수를 초과하는 경우  
   
--   **geometry** 인스턴스가 **Point**, **MultiPoint**, **Polygon**, **CurvePolygon** 또는 **MultiPolygon**인 경우  
+-   **geometry** 인스턴스가 **Point**, **MultiPoint**, **Polygon**, **CurvePolygon** 또는 **MultiPolygon** 인 경우  
   
 ## <a name="examples"></a>예제  
   

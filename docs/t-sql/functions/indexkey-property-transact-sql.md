@@ -23,10 +23,10 @@ ms.assetid: 87c0c385-6b2d-4716-ac8c-a3ce6e8d89e9
 author: markingmyname
 ms.author: maghan
 ms.openlocfilehash: 60247a9c2dcdc038f17edc9637805c62e02fe0d0
-ms.sourcegitcommit: cc23d8646041336d119b74bf239a6ac305ff3d31
+ms.sourcegitcommit: c5078791a07330a87a92abb19b791e950672e198
 ms.translationtype: HT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 09/23/2020
+ms.lasthandoff: 11/26/2020
 ms.locfileid: "91115443"
 ---
 # <a name="indexkey_property-transact-sql"></a>INDEXKEY_PROPERTY(Transact-SQL)
@@ -49,20 +49,20 @@ INDEXKEY_PROPERTY ( object_ID ,index_ID ,key_ID ,property )
 
 ## <a name="arguments"></a>인수
  *object_ID*  
- 테이블 또는 인덱싱된 뷰의 개체 ID입니다. *object_ID* 는 **int**입니다.  
+ 테이블 또는 인덱싱된 뷰의 개체 ID입니다. *object_ID* 는 **int** 입니다.  
   
  *index_ID*  
- 인덱스 ID입니다. *index_ID*는 **int**입니다.  
+ 인덱스 ID입니다. *index_ID* 는 **int** 입니다.  
   
  *key_ID*  
- 인덱스 키 열 위치입니다. *key_ID*는 **int**입니다.  
+ 인덱스 키 열 위치입니다. *key_ID* 는 **int** 입니다.  
   
  *property*  
- 정보를 반환할 속성의 이름입니다. *property*는 문자열이며 다음 값 중 하나일 수 있습니다.  
+ 정보를 반환할 속성의 이름입니다. *property* 는 문자열이며 다음 값 중 하나일 수 있습니다.  
   
 |값|Description|  
 |-----------|-----------------|  
-|**ColumnId**|인덱스의 *key_ID*위치에 있는 열 ID입니다.|  
+|**ColumnId**|인덱스의 *key_ID* 위치에 있는 열 ID입니다.|  
 |**IsDescending**|인덱스 열이 저장되는 순서<br /><br /> 1 = 내림차순 0 = 오름차순|  
   
 ## <a name="return-types"></a>반환 형식  

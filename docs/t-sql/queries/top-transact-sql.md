@@ -23,16 +23,16 @@ author: VanMSFT
 ms.author: vanto
 monikerRange: '>=aps-pdw-2016||=azuresqldb-current||=azure-sqldw-latest||>=sql-server-2016||=sqlallproducts-allversions||>=sql-server-linux-2017||=azuresqldb-mi-current'
 ms.openlocfilehash: 5795e27e7ff97de361161d4f703d8691b3c8405e
-ms.sourcegitcommit: 8f062015c2a033f5a0d805ee4adabbe15e7c8f94
+ms.sourcegitcommit: c5078791a07330a87a92abb19b791e950672e198
 ms.translationtype: HT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 09/25/2020
+ms.lasthandoff: 11/26/2020
 ms.locfileid: "91227197"
 ---
 # <a name="top-transact-sql"></a>TOP(Transact-SQL)
 [!INCLUDE [sql-asdb-asdbmi-asa-pdw](../../includes/applies-to-version/sql-asdb-asdbmi-asa-pdw.md)]
 
-쿼리 결과 집합에 반환되는 행을 [!INCLUDE[ssCurrent](../../includes/sscurrent-md.md)]에서 지정한 행 수 또는 행의 백분율로 제한합니다. ORDER BY 절과 함께 TOP을 사용하는 경우 결과 집합은 정렬된 처음 *N*개 행으로 제한됩니다. 그렇지 않으면 TOP은 임의 순서로 처음 *N*개 행을 반환합니다. 이 절을 사용하여 SELECT 문에서 반환되는 행 수를 지정합니다. 또한 TOP을 사용하여 INSERT, UPDATE, MERGE 또는 DELETE 문의 영향을 받는 행을 지정합니다.  
+쿼리 결과 집합에 반환되는 행을 [!INCLUDE[ssCurrent](../../includes/sscurrent-md.md)]에서 지정한 행 수 또는 행의 백분율로 제한합니다. ORDER BY 절과 함께 TOP을 사용하는 경우 결과 집합은 정렬된 처음 *N* 개 행으로 제한됩니다. 그렇지 않으면 TOP은 임의 순서로 처음 *N* 개 행을 반환합니다. 이 절을 사용하여 SELECT 문에서 반환되는 행 수를 지정합니다. 또한 TOP을 사용하여 INSERT, UPDATE, MERGE 또는 DELETE 문의 영향을 받는 행을 지정합니다.  
   
 ![항목 링크 아이콘](../../database-engine/configure-windows/media/topic-link.gif "항목 링크 아이콘") [Transact-SQL 구문 표기 규칙](../../t-sql/language-elements/transact-sql-syntax-conventions-transact-sql.md)  
   
@@ -60,13 +60,13 @@ ms.locfileid: "91227197"
 
 ## <a name="arguments"></a>인수
 *expression*  
-반환할 행 개수를 지정하는 숫자 식입니다. PERCENT를 지정하면 *expression*은 암시적으로 **float** 값으로 변환됩니다. 그렇지 않으면 *expression*이 **bigint**로 변환됩니다.  
+반환할 행 개수를 지정하는 숫자 식입니다. PERCENT를 지정하면 *expression* 은 암시적으로 **float** 값으로 변환됩니다. 그렇지 않으면 *expression* 이 **bigint** 로 변환됩니다.  
   
 PERCENT  
 쿼리 결과 집합에서 처음 *expression*%의 행만 반환됨을 나타냅니다. 소수 값은 다음 정수 값으로 올림됩니다.  
   
 WITH  TIES  
-제한된 결과 집합의 마지막 위치에 대해 일치하는 둘 이상의 행을 반환합니다. 이 인수는 **ORDER BY** 절과 함께 사용해야 합니다. **WITH TIES**는 *expression*에 지정된 값보다 많은 행이 반환될 수 있습니다. 예를 들어 *expression*이 5로 설정되었지만 2개의 추가 행이 행 5에 있는 **ORDER BY** 열의 값과 일치하는 경우 결과 집합에는 7개 행이 포함됩니다.  
+제한된 결과 집합의 마지막 위치에 대해 일치하는 둘 이상의 행을 반환합니다. 이 인수는 **ORDER BY** 절과 함께 사용해야 합니다. **WITH TIES** 는 *expression* 에 지정된 값보다 많은 행이 반환될 수 있습니다. 예를 들어 *expression* 이 5로 설정되었지만 2개의 추가 행이 행 5에 있는 **ORDER BY** 열의 값과 일치하는 경우 결과 집합에는 7개 행이 포함됩니다.  
   
 TOP 절은 WITH TIES 인수와 함께 SELECT 문에서만, 그리고 ORDER BY 절도 지정한 경우에만 지정할 수 있습니다. 연결 레코드의 반환 순서는 임의로 지정됩니다. ORDER BY는 이 규칙에 영향을 주지 않습니다.  
   
@@ -87,7 +87,7 @@ TOP 식은 트리거로 인해 실행될 수 있는 문에 영향을 주지 않�
   
 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]에서는 뷰를 통해 행을 업데이트할 수 있습니다. TOP 절을 뷰 정의에 포함할 수 있으므로 행이 업데이트로 인해 TOP 식의 요구 사항을 더 이상 충족하지 않는 경우에는 특정 행이 뷰에서 사라질 수 있습니다.  
   
-MERGE 문에 지정되는 경우 TOP 절은 전체 원본 테이블과 전체 대상 테이블이 조인된 ‘후에’ 적용됩니다.** 또한 삽입, 업데이트 또는 삭제 동작에 적합하지 않은 조인된 행이 제거됩니다. TOP 절은 조인된 행 수를 지정된 값으로 더 줄이며, 삽입, 업데이트 또는 삭제 동작은 나머지 조인된 행에 순서 없이 적용됩니다. 즉, 행은 WHEN 절에 정의된 동작에 순서 없이 분산됩니다. 예를 들어 TOP (10)을 지정하면 10개 행이 영향을 받는 경우 이 10개 행 중 7개가 업데이트되고 3개가 삽입될 수 있습니다. 또는 1개가 삭제되고 5개가 업데이트되고 4개가 삽입될 수 있습니다. MERGE 문은 원본과 대상 테이블 모두에 전체 테이블 검색을 수행하므로 큰 테이블을 수정하기 위해 TOP 절을 사용하여 다중 일괄 처리를 생성하는 경우에는 I/O 성능에 영향을 줄 수 있습니다. 이러한 시나리오에서 연속된 모든 일괄 처리는 새로운 행을 대상으로 해야 합니다.  
+MERGE 문에 지정되는 경우 TOP 절은 전체 원본 테이블과 전체 대상 테이블이 조인된 ‘후에’ 적용됩니다. 또한 삽입, 업데이트 또는 삭제 동작에 적합하지 않은 조인된 행이 제거됩니다. TOP 절은 조인된 행 수를 지정된 값으로 더 줄이며, 삽입, 업데이트 또는 삭제 동작은 나머지 조인된 행에 순서 없이 적용됩니다. 즉, 행은 WHEN 절에 정의된 동작에 순서 없이 분산됩니다. 예를 들어 TOP (10)을 지정하면 10개 행이 영향을 받는 경우 이 10개 행 중 7개가 업데이트되고 3개가 삽입될 수 있습니다. 또는 1개가 삭제되고 5개가 업데이트되고 4개가 삽입될 수 있습니다. MERGE 문은 원본과 대상 테이블 모두에 전체 테이블 검색을 수행하므로 큰 테이블을 수정하기 위해 TOP 절을 사용하여 다중 일괄 처리를 생성하는 경우에는 I/O 성능에 영향을 줄 수 있습니다. 이러한 시나리오에서 연속된 모든 일괄 처리는 새로운 행을 대상으로 해야 합니다.  
   
 UNION, UNION ALL, EXCEPT 또는 INTERSECT 연산자가 포함된 쿼리에서 TOP 절을 지정할 때는 주의해야 합니다. 이러한 연산자가 SELECT 작업에 사용된 경우에는 TOP 및 ORDER BY 절이 논리적으로 처리되는 순서가 직관적이지 않을 수 있으므로 예기치 않은 결과를 반환하는 쿼리가 작성될 수 있습니다. 예를 들어 다음 테이블 및 데이터에서 가장 저렴한 빨간색 차와 가장 저렴한 파란색 차, 즉 red sedan과 blue van을 반환하려는 경우를 가정해 봅니다.  
   
@@ -231,7 +231,7 @@ GO
 ###  <a name="limiting-the-rows-affected-by-delete-insert-or-update"></a><a name="DML"></a>DELETE, INSERT 또는 UPDATE의 영향을 받는 행 제한  
   
 #### <a name="a-using-top-to-limit-the-number-of-rows-deleted"></a>A. TOP를 사용하여 삭제되는 행 수 제한  
-DELETE와 함께 TOP (*n*) 절을 사용하면 임의로 선택된 *n*개의 행에 대해 삭제 작업이 수행됩니다. 즉, DELETE 문이 WHERE 절에 정의된 조건을 충족하는 행의 수(*n*)를 선택합니다. 다음 예에서는 `PurchaseOrderDetail` 테이블에서 기한이 2002년 7월 1일 이전인 행 중 `20`개의 행을 삭제합니다.  
+DELETE와 함께 TOP (*n*) 절을 사용하면 임의로 선택된 *n* 개의 행에 대해 삭제 작업이 수행됩니다. 즉, DELETE 문이 WHERE 절에 정의된 조건을 충족하는 행의 수(*n*)를 선택합니다. 다음 예에서는 `PurchaseOrderDetail` 테이블에서 기한이 2002년 7월 1일 이전인 행 중 `20`개의 행을 삭제합니다.  
   
 ```sql  
 USE AdventureWorks2012;  
@@ -321,7 +321,7 @@ GO
 ## <a name="examples-sssdwfull-and-sspdw"></a>예: [!INCLUDE[ssSDWfull](../../includes/sssdwfull-md.md)] 및 [!INCLUDE[ssPDW](../../includes/sspdw-md.md)]  
 다음 예제에서는 쿼리 조건과 일치하는 상위 31개 행을 반환합니다. **ORDER BY** 절을 사용하면 31개의 반환된 행이 `LastName` 열의 알파벳 순서에 따라 처음 31개 행이 됩니다.  
   
-동률을 지정하지 않고 **TOP**을 사용합니다.  
+동률을 지정하지 않고 **TOP** 을 사용합니다.  
   
 ```sql  
 SELECT TOP (31) FirstName, LastName   

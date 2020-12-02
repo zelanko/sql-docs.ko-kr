@@ -22,10 +22,10 @@ ms.assetid: d73c28ee-3972-4afd-af8d-ebbbd9e50793
 author: VanMSFT
 ms.author: vanto
 ms.openlocfilehash: 8444f4c3421f41cb94cdd716b1c2017f506b80c2
-ms.sourcegitcommit: cc23d8646041336d119b74bf239a6ac305ff3d31
+ms.sourcegitcommit: c5078791a07330a87a92abb19b791e950672e198
 ms.translationtype: HT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 09/23/2020
+ms.lasthandoff: 11/26/2020
 ms.locfileid: "91114711"
 ---
 # <a name="updatetext-transact-sql"></a>UPDATETEXT(Transact-SQL)
@@ -62,19 +62,19 @@ UPDATETEXT [BULK] { table_name.dest_column_name dest_text_ptr }
  업데이트할 테이블 및 **text**, **ntext** 또는 **image** 열의 이름입니다. 테이블 이름과 열 이름은 [식별자](../../relational-databases/databases/database-identifiers.md) 규칙을 따라야 합니다. 필요에 따라 데이터베이스 이름과 소유자 이름을 지정할 수 있습니다.  
   
  *dest_text_ptr*  
- 업데이트할 **text**, **ntext** 또는 **image** 데이터를 가리키는 텍스트 포인터 값(TEXTPTR 함수에서 반환된 값)입니다. *text_ptr*은 **이진(** 16 **)** 이여야 합니다.  
+ 업데이트할 **text**, **ntext** 또는 **image** 데이터를 가리키는 텍스트 포인터 값(TEXTPTR 함수에서 반환된 값)입니다. *text_ptr* 은 **이진(** 16 **)** 이여야 합니다.  
   
  *insert_offset*  
- 업데이트의 경우 0부터 시작하는 시작 위치입니다. **text** 또는 **image** 열의 경우 *insert_offset*은 새 데이터를 삽입하기 전에 기존 열의 시작점에서부터 건너뛰어야 하는 바이트 수입니다. **ntext** 열의 경우 *insert_offset*는 문자 수입니다(각 **ntext** 문자는 2 바이트를 사용합니다). 0부터 시작하는 시작 위치에 있는 기존의 **text**, **ntext** 또는 **image** 데이터는 새 데이터에 필요한 공간을 만들기 위해 오른쪽으로 옮겨집니다. 값이 0이면 기존 데이터의 시작점에 새 데이터를 삽입합니다. 값이 NULL이면 기존의 데이터 값에 데이터를 새로 추가합니다.  
+ 업데이트의 경우 0부터 시작하는 시작 위치입니다. **text** 또는 **image** 열의 경우 *insert_offset* 은 새 데이터를 삽입하기 전에 기존 열의 시작점에서부터 건너뛰어야 하는 바이트 수입니다. **ntext** 열의 경우 *insert_offset* 는 문자 수입니다(각 **ntext** 문자는 2 바이트를 사용합니다). 0부터 시작하는 시작 위치에 있는 기존의 **text**, **ntext** 또는 **image** 데이터는 새 데이터에 필요한 공간을 만들기 위해 오른쪽으로 옮겨집니다. 값이 0이면 기존 데이터의 시작점에 새 데이터를 삽입합니다. 값이 NULL이면 기존의 데이터 값에 데이터를 새로 추가합니다.  
   
  *delete_length*  
- 기존의 **text**, **ntext** 또는 **image** 열에서 삭제할 데이터의 길이로, *insert_offset* 위치부터 삭제됩니다. *delete_length* 값은 **text** 및 **image** 열에서는 바이트로 그리고 **ntext** 열에서는 문자로 지정됩니다. 각 **ntext** 문자는 2바이트를 사용합니다. 값이 0이면 데이터를 삭제하지 않습니다. 값이 NULL이면 *insert_offset*위치에서 기존의 **text** 또는 **image** 열의 끝까지 데이터를 모두 삭제합니다.  
+ 기존의 **text**, **ntext** 또는 **image** 열에서 삭제할 데이터의 길이로, *insert_offset* 위치부터 삭제됩니다. *delete_length* 값은 **text** 및 **image** 열에서는 바이트로 그리고 **ntext** 열에서는 문자로 지정됩니다. 각 **ntext** 문자는 2바이트를 사용합니다. 값이 0이면 데이터를 삭제하지 않습니다. 값이 NULL이면 *insert_offset* 위치에서 기존의 **text** 또는 **image** 열의 끝까지 데이터를 모두 삭제합니다.  
   
  WITH LOG  
  로깅은 데이터베이스에 영향을 주는 복구 모델에 의해 결정됩니다.  
   
  *inserted_data*  
- *insert_offset* 위치에서 기존 **text**, **ntext** 또는 **image** 열로 삽입할 데이터입니다. 이것은 단일 **char**, **nchar**, **varchar**, **nvarchar**, **binary**, **varbinary**, **text**, **ntext** 또는 **image** 값입니다. *inserted_data*는 리터럴 또는 변수일 수 있습니다.  
+ *insert_offset* 위치에서 기존 **text**, **ntext** 또는 **image** 열로 삽입할 데이터입니다. 이것은 단일 **char**, **nchar**, **varchar**, **nvarchar**, **binary**, **varbinary**, **text**, **ntext** 또는 **image** 값입니다. *inserted_data* 는 리터럴 또는 변수일 수 있습니다.  
   
  *table_name.src_column_name*  
  삽입된 데이터 원본으로 사용되는 **text**, **ntext** 또는 **image** 열 이름과 테이블의 이름입니다. 테이블 이름과 열 이름은 식별자 규칙을 따라야 합니다.  
@@ -91,7 +91,7 @@ UPDATETEXT [BULK] { table_name.dest_column_name dest_text_ptr }
 |업데이트 동작|UPDATETEXT 매개 변수|  
 |-------------------|---------------------------|  
 |기존 데이터를 바꾸려면|Null이 아닌 *insert_offset* 값, 0이 아닌 *delete_length* 값 및 삽입할 새 데이터를 지정합니다.|  
-|기존 데이터를 삭제하려면|Null이 아닌 *insert_offset* 값과 0이 아닌 *delete_length*를 지정합니다. 삽입할 새 데이터를 지정하지 않습니다.|  
+|기존 데이터를 삭제하려면|Null이 아닌 *insert_offset* 값과 0이 아닌 *delete_length* 를 지정합니다. 삽입할 새 데이터를 지정하지 않습니다.|  
 |새 데이터를 삽입하려면|*insert_offset* 값, 0의 *delete_length* 및 삽입할 새 데이터를 지정합니다.|  
   
  최고의 성능을 위해 **text**, **ntext** 및 **image** 데이터는 8,040바이트의 배수인 청크 크기로 삽입하거나 업데이트하는 것이 좋습니다.  

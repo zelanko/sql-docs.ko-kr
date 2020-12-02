@@ -16,10 +16,10 @@ ms.assetid: 4e4f739b-fd27-4dce-8be6-3d808040d8d7
 author: stevestein
 ms.author: sstein
 ms.openlocfilehash: 0e1af46a47e6e0e09c8e538fed06ecd1eb1ccc41
-ms.sourcegitcommit: e700497f962e4c2274df16d9e651059b42ff1a10
+ms.sourcegitcommit: c5078791a07330a87a92abb19b791e950672e198
 ms.translationtype: HT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 08/17/2020
+ms.lasthandoff: 11/26/2020
 ms.locfileid: "88465425"
 ---
 # <a name="model-database"></a>model 데이터베이스
@@ -29,7 +29,7 @@ ms.locfileid: "88465425"
  새로 만든 사용자 데이터베이스는 model 데이터베이스와 같은 [복구 모델](../../relational-databases/backup-restore/recovery-models-sql-server.md) 을 사용합니다. 기본값은 사용자 구성입니다. 모델의 현재 복구 모델에 대한 자세한 내용은 [데이터베이스 복구 모델 보기 또는 변경&#40;SQL Server&#41;](../../relational-databases/backup-restore/view-or-change-the-recovery-model-of-a-database-sql-server.md)을 참조하세요.  
   
 > [!IMPORTANT]  
->  사용자별 템플릿 정보를 사용하여 **model** 데이터베이스를 수정하는 경우 **model**을 백업하는 것이 좋습니다. 자세한 내용은 [시스템 데이터베이스 백업 및 복원&#40;SQL Server&#41;](../../relational-databases/backup-restore/back-up-and-restore-of-system-databases-sql-server.md)를 참조하세요.  
+>  사용자별 템플릿 정보를 사용하여 **model** 데이터베이스를 수정하는 경우 **model** 을 백업하는 것이 좋습니다. 자세한 내용은 [시스템 데이터베이스 백업 및 복원&#40;SQL Server&#41;](../../relational-databases/backup-restore/back-up-and-restore-of-system-databases-sql-server.md)를 참조하세요.  
   
 ## <a name="model-usage"></a>model 사용  
  CREATE DATABASE 문을 실행하면 **model** 데이터베이스의 내용을 복사하여 데이터베이스의 첫 번째 부분이 생성됩니다. 그런 다음 새 데이터베이스의 나머지 부분이 빈 페이지로 채워집니다.  
@@ -94,7 +94,7 @@ SQL Server 2014의 경우 기본 파일 증가 값은 [model 데이터베이스]
   
 -   데이터 정렬 변경. 기본 데이터 정렬은 서버 데이터 정렬입니다.  
   
--   데이터베이스 소유자 변경. **model** 은 **sa**가 소유합니다.  
+-   데이터베이스 소유자 변경. **model** 은 **sa** 가 소유합니다.  
   
 -   데이터베이스 삭제  
   
@@ -112,7 +112,7 @@ SQL Server 2014의 경우 기본 파일 증가 값은 [model 데이터베이스]
   
 -   주 파일 그룹을 READ_ONLY로 설정  
   
--   WITH ENCRYPTION 옵션을 사용하여 프로시저, 뷰 또는 트리거 생성. 암호화 키는 개체가 생성되는 데이터베이스에 연결됩니다. **model** 데이터베이스에 생성된 암호화된 개체는 **model**에서만 사용할 수 있습니다.  
+-   WITH ENCRYPTION 옵션을 사용하여 프로시저, 뷰 또는 트리거 생성. 암호화 키는 개체가 생성되는 데이터베이스에 연결됩니다. **model** 데이터베이스에 생성된 암호화된 개체는 **model** 에서만 사용할 수 있습니다.  
   
 ## <a name="related-content"></a>관련 내용  
  [시스템 데이터베이스](../../relational-databases/databases/system-databases.md)  

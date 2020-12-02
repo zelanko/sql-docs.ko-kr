@@ -28,10 +28,10 @@ author: markingmyname
 ms.author: maghan
 monikerRange: '>=aps-pdw-2016||=azuresqldb-current||=azure-sqldw-latest||>=sql-server-2016||=sqlallproducts-allversions||>=sql-server-linux-2017||=azuresqldb-mi-current'
 ms.openlocfilehash: 142b1edf321de63fb6a2ee6552c9bfc1255c1f93
-ms.sourcegitcommit: dd36d1cbe32cd5a65c6638e8f252b0bd8145e165
+ms.sourcegitcommit: c5078791a07330a87a92abb19b791e950672e198
 ms.translationtype: HT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 09/08/2020
+ms.lasthandoff: 11/26/2020
 ms.locfileid: "89539817"
 ---
 # <a name="set-xact_abort-transact-sql"></a>SET XACT_ABORT(Transact-SQL)
@@ -39,7 +39,7 @@ ms.locfileid: "89539817"
 [!INCLUDE [sql-asdb-asdbmi-asa-pdw](../../includes/applies-to-version/sql-asdb-asdbmi-asa-pdw.md)]
 
 > [!NOTE]
-> **THROW** 문은 **SET XACT_ABORT**를 인식합니다. **RAISERROR**는 그렇지 않습니다. 새 애플리케이션에서는 **RAISERROR** 대신 **THROW**를 사용해야 합니다.
+> **THROW** 문은 **SET XACT_ABORT** 를 인식합니다. **RAISERROR** 는 그렇지 않습니다. 새 애플리케이션에서는 **RAISERROR** 대신 **THROW** 를 사용해야 합니다.
 
 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 문에서 런타임 오류가 발생할 경우 [!INCLUDE[tsql](../../includes/tsql-md.md)]에서 현재 트랜잭션을 자동으로 롤백할 것인지 여부를 지정합니다.
 

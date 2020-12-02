@@ -19,10 +19,10 @@ ms.assetid: f5f39596-033e-4243-acbc-caa188b45b03
 author: MikeRayMSFT
 ms.author: mikeray
 ms.openlocfilehash: c5e76db626c0129253f343075894825c114da4ec
-ms.sourcegitcommit: 22dacedeb6e8721e7cdb6279a946d4002cfb5da3
+ms.sourcegitcommit: c5078791a07330a87a92abb19b791e950672e198
 ms.translationtype: HT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 10/14/2020
+ms.lasthandoff: 11/26/2020
 ms.locfileid: "92037157"
 ---
 # <a name="getdescendant-database-engine"></a>GetDescendant(데이터베이스 엔진)
@@ -46,10 +46,10 @@ SqlHierarchyId GetDescendant ( SqlHierarchyId child1 , SqlHierarchyId child2 )
 
 ## <a name="arguments"></a>인수
 *child1*  
-NULL 또는 현재 노드의 자식에 대한 **hierarchyid**입니다.
+NULL 또는 현재 노드의 자식에 대한 **hierarchyid** 입니다.
   
 *child2*  
-NULL 또는 현재 노드의 자식에 대한 **hierarchyid**입니다.
+NULL 또는 현재 노드의 자식에 대한 **hierarchyid** 입니다.
   
 ## <a name="return-types"></a>반환 형식  
 **SQL Server 반환 형식: hierarchyid**

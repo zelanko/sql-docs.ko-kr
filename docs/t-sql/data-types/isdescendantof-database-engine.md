@@ -19,16 +19,16 @@ ms.assetid: edc80444-b697-410f-9419-0f63c9b5618d
 author: MikeRayMSFT
 ms.author: mikeray
 ms.openlocfilehash: 8223928a7c0b537a26084eaa434567845e521719
-ms.sourcegitcommit: 22dacedeb6e8721e7cdb6279a946d4002cfb5da3
+ms.sourcegitcommit: c5078791a07330a87a92abb19b791e950672e198
 ms.translationtype: HT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 10/14/2020
+ms.lasthandoff: 11/26/2020
 ms.locfileid: "92037489"
 ---
 # <a name="isdescendantof-database-engine"></a>IsDescendantOf(데이터베이스 엔진)
 [!INCLUDE [SQL Server SQL Database](../../includes/applies-to-version/sql-asdb.md)]
 
-*this*가 부모의 하위 항목인 경우 true를 반환합니다.
+*this* 가 부모의 하위 항목인 경우 true를 반환합니다.
   
 ## <a name="syntax"></a>구문  
   

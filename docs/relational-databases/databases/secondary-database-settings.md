@@ -14,10 +14,10 @@ ms.assetid: f992ffc9-ee42-43fe-acec-512032f0ded1
 author: stevestein
 ms.author: sstein
 ms.openlocfilehash: d6db17f4c7930e03e65412c9addaef5340ec4645
-ms.sourcegitcommit: e700497f962e4c2274df16d9e651059b42ff1a10
+ms.sourcegitcommit: c5078791a07330a87a92abb19b791e950672e198
 ms.translationtype: HT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 08/17/2020
+ms.lasthandoff: 11/26/2020
 ms.locfileid: "88471137"
 ---
 # <a name="secondary-database-settings"></a>보조 데이터베이스 설정
@@ -97,7 +97,7 @@ ms.locfileid: "88471137"
  보조 데이터베이스를 STANDBY 모드로 유지합니다. 이 모드를 선택하면 데이터베이스에서 읽기 전용 작업을 수행할 수 있습니다.  
   
 > [!IMPORTANT]  
->  기존 보조 데이터베이스의 복구 모드를 변경하면(예: **복구 안 함 모드** 에서 **대기 모드**로) 다음 로그 백업이 데이터베이스로 복원된 후에만 변경 내용이 적용됩니다.  
+>  기존 보조 데이터베이스의 복구 모드를 변경하면(예: **복구 안 함 모드** 에서 **대기 모드** 로) 다음 로그 백업이 데이터베이스로 복원된 후에만 변경 내용이 적용됩니다.  
   
  **최소 다음 기간 동안 백업 복원 지연**  
  보조 데이터베이스에 트랜잭션 로그 백업(있는 경우)을 복원하기 전에 지연하는 시간을 선택합니다.  

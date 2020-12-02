@@ -28,10 +28,10 @@ author: julieMSFT
 ms.author: jrasnick
 monikerRange: '>=aps-pdw-2016||=azuresqldb-current||=azure-sqldw-latest||>=sql-server-2016||=sqlallproducts-allversions||>=sql-server-linux-2017||=azuresqldb-mi-current'
 ms.openlocfilehash: 5d441cba0f070f4d93210000f3b497e88ebf9011
-ms.sourcegitcommit: 197a6ffb643f93592edf9e90b04810a18be61133
+ms.sourcegitcommit: c5078791a07330a87a92abb19b791e950672e198
 ms.translationtype: HT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 09/26/2020
+ms.lasthandoff: 11/26/2020
 ms.locfileid: "91380068"
 ---
 # <a name="suser_sname-transact-sql"></a>SUSER_SNAME(Transact-SQL)
@@ -53,7 +53,7 @@ SUSER_SNAME ( [ server_user_sid ] )
  *server_user_sid*  
 **적용 대상**: [!INCLUDE[ssKatmai](../../includes/sskatmai-md.md)] 이상
   
- 선택적 로그인 보안 ID입니다. *server_user_sid*는 **varbinary(85)** 입니다. *server_user_sid*는 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 로그인 또는 [!INCLUDE[msCoName](../../includes/msconame-md.md)] Windows 사용자 또는 그룹의 보안 ID일 수 있습니다. *server_user_sid*가 지정되지 않은 경우 현재 사용자에 대한 정보가 반환됩니다. 매개 변수에 NULL이라는 단어가 포함되어 있으면 NULL이 반환됩니다.  
+ 선택적 로그인 보안 ID입니다. *server_user_sid* 는 **varbinary(85)** 입니다. *server_user_sid* 는 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 로그인 또는 [!INCLUDE[msCoName](../../includes/msconame-md.md)] Windows 사용자 또는 그룹의 보안 ID일 수 있습니다. *server_user_sid* 가 지정되지 않은 경우 현재 사용자에 대한 정보가 반환됩니다. 매개 변수에 NULL이라는 단어가 포함되어 있으면 NULL이 반환됩니다.  
   
 ## <a name="return-types"></a>반환 형식  
  **nvarchar(128)**  

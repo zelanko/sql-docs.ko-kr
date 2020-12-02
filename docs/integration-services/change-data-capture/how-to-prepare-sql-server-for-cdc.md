@@ -12,10 +12,10 @@ ms.assetid: a327fa18-58f4-4e69-bb87-44faf47e20ef
 author: chugugrace
 ms.author: chugu
 ms.openlocfilehash: 6f445a638f07ff6f524fc624f63cbc9bd6b29750
-ms.sourcegitcommit: e700497f962e4c2274df16d9e651059b42ff1a10
+ms.sourcegitcommit: c5078791a07330a87a92abb19b791e950672e198
 ms.translationtype: HT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 08/17/2020
+ms.lasthandoff: 11/26/2020
 ms.locfileid: "88496206"
 ---
 # <a name="how-to-prepare-sql-server-for-cdc"></a>CDC를 위해 SQL Server를 준비하는 방법
@@ -31,11 +31,11 @@ ms.locfileid: "88496206"
   
 ### <a name="to-enable-sql-server-for-cdc"></a>CDC용 SQL Server를 활성화하려면  
   
-1.  **시작** 메뉴에서 **Oracle CDC Service 구성**을 선택합니다.  
+1.  **시작** 메뉴에서 **Oracle CDC Service 구성** 을 선택합니다.  
   
-2.  왼쪽 창에서 **로컬 CDC Service** 를 선택한 다음 **작업** 창에서 **SQL Server 준비**를 클릭합니다.  
+2.  왼쪽 창에서 **로컬 CDC Service** 를 선택한 다음 **작업** 창에서 **SQL Server 준비** 를 클릭합니다.  
   
-     **로컬 CDC Service** 를 마우스 오른쪽 단추로 클릭하고 **SQL Server 준비**를 선택할 수도 있습니다.  
+     **로컬 CDC Service** 를 마우스 오른쪽 단추로 클릭하고 **SQL Server 준비** 를 선택할 수도 있습니다.  
   
 3.  Oracle CDC를 위한 SQL Server 인스턴스 준비 대화 상자에 필요한 정보를 입력합니다. 이 대화 상자에 필요한 정보를 입력하는 방법은 [Prepare SQL Server for CDC](../../integration-services/change-data-capture/prepare-sql-server-for-cdc.md)를 참조하십시오.  
   

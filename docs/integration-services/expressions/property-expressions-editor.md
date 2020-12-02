@@ -16,10 +16,10 @@ ms.assetid: 4c8b1681-d8fe-4f92-b76f-a396eb921c0c
 author: chugugrace
 ms.author: chugu
 ms.openlocfilehash: 3c12c260c4971763041bf41b5be7dafbdfd497c0
-ms.sourcegitcommit: e700497f962e4c2274df16d9e651059b42ff1a10
+ms.sourcegitcommit: c5078791a07330a87a92abb19b791e950672e198
 ms.translationtype: HT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 08/17/2020
+ms.lasthandoff: 11/26/2020
 ms.locfileid: "88477522"
 ---
 # <a name="property-expressions-editor"></a>속성 식 편집기
@@ -43,7 +43,7 @@ ms.locfileid: "88477522"
  **식 작성기** 대화 상자를 열려면 줄임표를 클릭합니다. 자세한 내용은 [Expression Builder](../../integration-services/expressions/expression-builder.md)를 참조하세요.  
   
  **Delete**  
- 속성을 선택한 다음 **삭제**를 클릭합니다.  
+ 속성을 선택한 다음 **삭제** 를 클릭합니다.  
   
 ## <a name="see-also"></a>참고 항목  
  [식 페이지](../../integration-services/expressions/expressions-page.md)   

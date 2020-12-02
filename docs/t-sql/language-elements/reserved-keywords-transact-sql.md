@@ -20,10 +20,10 @@ author: rothja
 ms.author: jroth
 monikerRange: '>=aps-pdw-2016||=azuresqldb-current||=azure-sqldw-latest||>=sql-server-2016||=sqlallproducts-allversions||>=sql-server-linux-2017||=azuresqldb-mi-current'
 ms.openlocfilehash: 9c0264ccc6e2f083b61b4c80c98248be80e33675
-ms.sourcegitcommit: 8f062015c2a033f5a0d805ee4adabbe15e7c8f94
+ms.sourcegitcommit: c5078791a07330a87a92abb19b791e950672e198
 ms.translationtype: HT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 09/25/2020
+ms.lasthandoff: 11/26/2020
 ms.locfileid: "91227364"
 ---
 # <a name="reserved-keywords-transact-sql"></a>예약어(Transact-SQL)
@@ -727,7 +727,7 @@ ms.locfileid: "91227364"
  또한 ISO 표준에서도 예약된 키워드 목록을 정의합니다. ISO 예약된 키워드를 개체 이름과 식별자에 사용하지 마십시오. 다음 표에 있는 ODBC 예약된 키워드 목록은 ISO 예약된 키워드 목록과 같습니다.  
   
 > [!NOTE]  
->  ISO 표준 예약된 키워드 목록은 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]보다 더 제한적인 경우도 있고 덜 제한적인 경우도 있습니다. 예를 들어 ISO 예약된 키워드 목록에는 **INT**가 있습니다. [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]에서는 이것을 예약된 키워드로 구분할 필요가 없습니다.  
+>  ISO 표준 예약된 키워드 목록은 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]보다 더 제한적인 경우도 있고 덜 제한적인 경우도 있습니다. 예를 들어 ISO 예약된 키워드 목록에는 **INT** 가 있습니다. [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]에서는 이것을 예약된 키워드로 구분할 필요가 없습니다.  
   
  [!INCLUDE[tsql](../../includes/tsql-md.md)] 예약된 키워드는 데이터베이스의 식별자나 이름 또는 데이터베이스 개체(예: 테이블, 열, 뷰 등)로 사용될 수 있습니다. 따옴표로 묶인 식별자나 구분 기호로 분리된 식별자를 사용합니다. 예약된 키워드를 변수 이름과 저장 프로시저 매개 변수로 사용하는 것은 제한되지 않습니다.  
   

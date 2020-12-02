@@ -24,10 +24,10 @@ author: julieMSFT
 ms.author: jrasnick
 monikerRange: '>=aps-pdw-2016||=azuresqldb-current||=azure-sqldw-latest||>=sql-server-2016||=sqlallproducts-allversions||>=sql-server-linux-2017||=azuresqldb-mi-current'
 ms.openlocfilehash: 657a3c207fb3e6928e183890ae5bc97b19da7387
-ms.sourcegitcommit: cc23d8646041336d119b74bf239a6ac305ff3d31
+ms.sourcegitcommit: c5078791a07330a87a92abb19b791e950672e198
 ms.translationtype: HT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 09/23/2020
+ms.lasthandoff: 11/26/2020
 ms.locfileid: "91116676"
 ---
 # <a name="objectproperty-transact-sql"></a>OBJECTPROPERTY(Transact-SQL)
@@ -47,13 +47,13 @@ OBJECTPROPERTY ( id , property )
 
 ## <a name="arguments"></a>인수
  *id*  
- 현재 데이터베이스에 있는 개체의 ID를 나타내는 식입니다. *id*는 **int**이며 현재 데이터베이스 컨텍스트에서 스키마 범위 개체로 간주됩니다.  
+ 현재 데이터베이스에 있는 개체의 ID를 나타내는 식입니다. *id* 는 **int** 이며 현재 데이터베이스 컨텍스트에서 스키마 범위 개체로 간주됩니다.  
   
  *property*  
- *id*로 지정한 개체에 대해 반환될 정보를 나타내는 식입니다. *property*는 다음 값 중 하나일 수 있습니다.  
+ *id* 로 지정한 개체에 대해 반환될 정보를 나타내는 식입니다. *property* 는 다음 값 중 하나일 수 있습니다.  
   
 > [!NOTE]  
->  달리 언급하지 않는 한 *속성*이 유효한 속성 이름이 아니거나, *id*가 유효한 개체 ID가 아니거나, *id*가 지정된 *속성*에 대해 지원되지 않는 개체 유형이거나 또는 호출자가 개체의 메타데이터를 볼 수 있는 권한이 없는 경우에는 NULL이 반환됩니다.  
+>  달리 언급하지 않는 한 *속성* 이 유효한 속성 이름이 아니거나, *id* 가 유효한 개체 ID가 아니거나, *id* 가 지정된 *속성* 에 대해 지원되지 않는 개체 유형이거나 또는 호출자가 개체의 메타데이터를 볼 수 있는 권한이 없는 경우에는 NULL이 반환됩니다.  
   
 |속성 이름|개체 유형|설명 및 반환 값|  
 |-------------------|-----------------|-------------------------------------|  
@@ -117,7 +117,7 @@ OBJECTPROPERTY ( id , property )
 |IsUniqueCnst|임의의 스키마 범위 개체|UNIQUE 제약 조건입니다.<br /><br /> 1 = True<br /><br /> 0 = False|  
 |IsUserTable|테이블|사용자 정의 테이블입니다.<br /><br /> 1 = True<br /><br /> 0 = False|  
 |IsView|View|뷰입니다.<br /><br /> 1 = True<br /><br /> 0 = False|  
-|OwnerId|임의의 스키마 범위 개체|개체의 소유자입니다.<br /><br /> **참고:** 스키마 소유자가 반드시 개체 소유자일 필요는 없습니다. 예를 들어 자식 개체(*parent_object_id*가 Null이 아닌 개체)는 항상 부모 개체와 같은 소유자 ID를 반환합니다.<br /><br /> Null이 아닌 경우 = 개체 소유자의 데이터베이스 사용자 ID입니다.|  
+|OwnerId|임의의 스키마 범위 개체|개체의 소유자입니다.<br /><br /> **참고:** 스키마 소유자가 반드시 개체 소유자일 필요는 없습니다. 예를 들어 자식 개체(*parent_object_id* 가 Null이 아닌 개체)는 항상 부모 개체와 같은 소유자 ID를 반환합니다.<br /><br /> Null이 아닌 경우 = 개체 소유자의 데이터베이스 사용자 ID입니다.|  
 |SchemaId|임의의 스키마 범위 개체| 개체가 속한 스키마의 스키마 ID입니다.| 
 |TableDeleteTrigger|테이블|테이블에 DELETE 트리거가 있습니다.<br /><br /> >1 = 지정된 유형의 첫 번째 트리거 ID.|  
 |TableDeleteTriggerCount|테이블|테이블에 지정된 개수의 DELETE 트리거가 있습니다.<br /><br /> >0 = DELETE 트리거의 수입니다.|  
@@ -170,7 +170,7 @@ OBJECTPROPERTY ( id , property )
  사용자는 소유하고 있거나 사용 권한을 부여 받은 보안 개체의 메타데이터만 볼 수 있습니다. 즉, 사용자가 개체에 대한 사용 권한이 없으면 OBJECTPROPERTY와 같은 메타데이터 내보내기 기본 제공 함수가 NULL을 반환합니다. 자세한 내용은 [Metadata Visibility Configuration](../../relational-databases/security/metadata-visibility-configuration.md)을 참조하세요.  
   
 ## <a name="remarks"></a>설명  
- [!INCLUDE[ssDE](../../includes/ssde-md.md)]에서는 *object_id*가 현재 데이터베이스 컨텍스트에 있다고 가정합니다. 다른 데이터베이스의 *object_id*를 참조하는 쿼리는 NULL 또는 잘못된 결과를 반환합니다. 예를 들어 다음 쿼리에서 현재 데이터베이스 컨텍스트는 마스터 데이터베이스입니다. [!INCLUDE[ssDE](../../includes/ssde-md.md)]는 쿼리에서 지정된 데이터베이스 대신 현재 데이터베이스에서 지정된 *object_id*에 대한 속성 값을 반환하려고 합니다. 마스터 데이터베이스에는 `vEmployee` 뷰가 없으므로 이 쿼리는 잘못된 결과를 반환합니다.  
+ [!INCLUDE[ssDE](../../includes/ssde-md.md)]에서는 *object_id* 가 현재 데이터베이스 컨텍스트에 있다고 가정합니다. 다른 데이터베이스의 *object_id* 를 참조하는 쿼리는 NULL 또는 잘못된 결과를 반환합니다. 예를 들어 다음 쿼리에서 현재 데이터베이스 컨텍스트는 마스터 데이터베이스입니다. [!INCLUDE[ssDE](../../includes/ssde-md.md)]는 쿼리에서 지정된 데이터베이스 대신 현재 데이터베이스에서 지정된 *object_id* 에 대한 속성 값을 반환하려고 합니다. 마스터 데이터베이스에는 `vEmployee` 뷰가 없으므로 이 쿼리는 잘못된 결과를 반환합니다.  
   
 ```sql  
 USE master;  
@@ -179,7 +179,7 @@ SELECT OBJECTPROPERTY(OBJECT_ID(N'AdventureWorks2012.HumanResources.vEmployee'),
 GO  
 ```  
   
- OBJECTPROPERTY(*view_i*d, 'IsIndexable')는 IsIndexable 속성 평가에 뷰 정의의 구문 분석, 정규화 및 부분 최적화를 요구하므로 상당히 많은 컴퓨터 리소스를 사용할 수 있습니다. IsIndexable 속성은 인덱싱 가능한 테이블이나 뷰를 식별할 수 있지만 인덱스 키에 대한 특정한 요구가 만족되지 않으면 인덱스가 실제로 생성되지 않을 수 있습니다. 자세한 내용은 [CREATE INDEX&#40;Transact-SQL&#41;](../../t-sql/statements/create-index-transact-sql.md)를 참조하세요.  
+ OBJECTPROPERTY(*view_i* d, 'IsIndexable')는 IsIndexable 속성 평가에 뷰 정의의 구문 분석, 정규화 및 부분 최적화를 요구하므로 상당히 많은 컴퓨터 리소스를 사용할 수 있습니다. IsIndexable 속성은 인덱싱 가능한 테이블이나 뷰를 식별할 수 있지만 인덱스 키에 대한 특정한 요구가 만족되지 않으면 인덱스가 실제로 생성되지 않을 수 있습니다. 자세한 내용은 [CREATE INDEX&#40;Transact-SQL&#41;](../../t-sql/statements/create-index-transact-sql.md)를 참조하세요.  
   
  OBJECTPROPERTY(*table_id*, 'TableHasActiveFulltextIndex')는 인덱싱을 위해 하나 이상의 테이블 열을 추가한 경우 값 1(true)을 반환합니다. 전체 텍스트 인덱싱은 첫 번째 열이 인덱싱용으로 추가되자마자 채우기용으로 활성화됩니다.  
   

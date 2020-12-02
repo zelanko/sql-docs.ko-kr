@@ -21,10 +21,10 @@ ms.assetid: e13b491f-4f1f-4cb6-8b63-5084120f98cf
 author: VanMSFT
 ms.author: vanto
 ms.openlocfilehash: 19b7d284a69997ef5b3c93713335fa7f3854849a
-ms.sourcegitcommit: cc23d8646041336d119b74bf239a6ac305ff3d31
+ms.sourcegitcommit: c5078791a07330a87a92abb19b791e950672e198
 ms.translationtype: HT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 09/23/2020
+ms.lasthandoff: 11/26/2020
 ms.locfileid: "91114794"
 ---
 # <a name="ident_incr-transact-sql"></a>IDENT_INCR(Transact-SQL)
@@ -44,7 +44,7 @@ IDENT_INCR ( 'table_or_view' )
 
 ## <a name="arguments"></a>인수
 **'** *table_or_view* **'**  
-올바른 ID 증가값을 확인할 테이블 또는 뷰를 지정하는 [식](../../t-sql/language-elements/expressions-transact-sql.md)입니다. *table_or_view*는 따옴표로 묶은 문자열 상수이거나 변수, 함수 또는 열 이름일 수도 있습니다. *table_or_view*는 **char**, **nchar**, **varchar** 또는 **nvarchar**입니다.  
+올바른 ID 증가값을 확인할 테이블 또는 뷰를 지정하는 [식](../../t-sql/language-elements/expressions-transact-sql.md)입니다. *table_or_view* 는 따옴표로 묶은 문자열 상수이거나 변수, 함수 또는 열 이름일 수도 있습니다. *table_or_view* 는 **char**, **nchar**, **varchar** 또는 **nvarchar** 입니다.  
   
 ## <a name="return-types"></a>반환 형식  
 **numeric**([@@MAXPRECISION](../../t-sql/functions/max-precision-transact-sql.md),0))  

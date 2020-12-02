@@ -22,10 +22,10 @@ author: VanMSFT
 ms.author: vanto
 monikerRange: '>=aps-pdw-2016||=azuresqldb-current||=azure-sqldw-latest||>=sql-server-2016||=sqlallproducts-allversions||>=sql-server-linux-2017||=azuresqldb-mi-current'
 ms.openlocfilehash: 856265d1ba66eb2cfae29b12ec23b432cb4c8e3f
-ms.sourcegitcommit: cc23d8646041336d119b74bf239a6ac305ff3d31
+ms.sourcegitcommit: c5078791a07330a87a92abb19b791e950672e198
 ms.translationtype: HT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 09/23/2020
+ms.lasthandoff: 11/26/2020
 ms.locfileid: "91116719"
 ---
 # <a name="is_rolemember-transact-sql"></a>IS_ROLEMEMBER(Transact-SQL)
@@ -45,34 +45,34 @@ IS_ROLEMEMBER ( 'role' [ , 'database_principal' ] )
 
 ## <a name="arguments"></a>인수
  **'** *role* **'**  
- 확인할 데이터베이스 역할의 이름입니다. *role*은 **sysname**입니다.  
+ 확인할 데이터베이스 역할의 이름입니다. *role* 은 **sysname** 입니다.  
   
  **'** *database_principal* **'**  
- 확인할 데이터베이스 사용자, 데이터베이스 역할 또는 애플리케이션 역할의 이름입니다. *database_principal*은 **sysname**이며 기본값은 NULL입니다. 값을 지정하지 않으면 현재의 실행 컨텍스트에 따른 결과를 얻게 됩니다. 매개 변수에 NULL이라는 단어가 포함되어 있으면 NULL이 반환됩니다.  
+ 확인할 데이터베이스 사용자, 데이터베이스 역할 또는 애플리케이션 역할의 이름입니다. *database_principal* 은 **sysname** 이며 기본값은 NULL입니다. 값을 지정하지 않으면 현재의 실행 컨텍스트에 따른 결과를 얻게 됩니다. 매개 변수에 NULL이라는 단어가 포함되어 있으면 NULL이 반환됩니다.  
   
 ## <a name="return-types"></a>반환 형식  
  **int**  
   
 |반환 값|설명|  
 |------------------|-----------------|  
-|0|*database_principal*은 *역할*의 구성원이 아닙니다.|  
-|1|*database_principal*은 *역할*의 구성원입니다.|  
-|NULL|*database_principal* 또는 *역할*이 올바르지 않거나 역할 멤버 자격을 볼 수 있는 사용 권한이 없습니다.|  
+|0|*database_principal* 은 *역할* 의 구성원이 아닙니다.|  
+|1|*database_principal* 은 *역할* 의 구성원입니다.|  
+|NULL|*database_principal* 또는 *역할* 이 올바르지 않거나 역할 멤버 자격을 볼 수 있는 사용 권한이 없습니다.|  
   
 ## <a name="remarks"></a>설명  
  IS_ROLEMEMBER를 사용하여 현재 사용자가 데이터베이스 역할의 사용 권한이 필요한 동작을 수행할 수 있는지 여부를 확인할 수 있습니다.  
   
- *database_principal*에 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]에 대한 직접 액세스가 부여 또는 거부되지 않은 경우 *database_principal*이 Contoso\Mary5 등의 Windows 로그인 기반이면 IS_ROLEMEMBER가 NULL을 반환합니다.  
+ *database_principal* 에 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]에 대한 직접 액세스가 부여 또는 거부되지 않은 경우 *database_principal* 이 Contoso\Mary5 등의 Windows 로그인 기반이면 IS_ROLEMEMBER가 NULL을 반환합니다.  
   
- 선택적 *database_principal* 매개 변수가 제공되지 않고 *database_principal*이 Windows 도메인 로그인 기반일 경우 Windows 그룹의 멤버 자격을 통해 데이터베이스 역할의 멤버가 될 수 있습니다. 이러한 간접 멤버 자격을 확인하기 위해 IS_ROLEMEMBER는 도메인 컨트롤러에 Windows 그룹 멤버 자격 정보를 요청합니다. 도메인 컨트롤러에 액세스할 수 없거나 도메인 컨트롤러가 응답하지 않으면 IS_ROLEMEMBER가 사용자 및 사용자의 로컬 그룹만 고려하여 역할 멤버 자격 정보를 반환합니다. 지정된 사용자가 현재 사용자가 아닌 경우 IS_ROLEMEMBER가 반환하는 값이 인증자(예: Active Directory)의 마지막 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 데이터 업데이트와 다를 수 있습니다.  
+ 선택적 *database_principal* 매개 변수가 제공되지 않고 *database_principal* 이 Windows 도메인 로그인 기반일 경우 Windows 그룹의 멤버 자격을 통해 데이터베이스 역할의 멤버가 될 수 있습니다. 이러한 간접 멤버 자격을 확인하기 위해 IS_ROLEMEMBER는 도메인 컨트롤러에 Windows 그룹 멤버 자격 정보를 요청합니다. 도메인 컨트롤러에 액세스할 수 없거나 도메인 컨트롤러가 응답하지 않으면 IS_ROLEMEMBER가 사용자 및 사용자의 로컬 그룹만 고려하여 역할 멤버 자격 정보를 반환합니다. 지정된 사용자가 현재 사용자가 아닌 경우 IS_ROLEMEMBER가 반환하는 값이 인증자(예: Active Directory)의 마지막 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 데이터 업데이트와 다를 수 있습니다.  
   
- 선택적 *database_principal* 매개 변수가 제공되지 않으면 쿼리 중인 데이터베이스 보안 주체가 sys.database_principals에 있어야 하거나 IS_ROLEMEMBER가 NULL을 반환합니다. 이는 *database_principal*이 이 데이터베이스에서 유효하지 않다는 의미입니다.  
+ 선택적 *database_principal* 매개 변수가 제공되지 않으면 쿼리 중인 데이터베이스 보안 주체가 sys.database_principals에 있어야 하거나 IS_ROLEMEMBER가 NULL을 반환합니다. 이는 *database_principal* 이 이 데이터베이스에서 유효하지 않다는 의미입니다.  
   
  *database_principal* 매개 변수가 도메인 로그인 기반 또는 Windows 그룹을 기반으로 하고 도메인 컨트롤러에 액세스할 수 없는 경우 IS_ROLEMEMBER 호출이 실패하고 올바르지 않거나 불완전한 데이터가 반환될 수 있습니다.  
   
  도메인 컨트롤러를 사용할 수 없으면 로컬 Windows 계정 또는 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 로그인과 같이 Windows 사용자를 로컬로 인증할 수 있는 경우 IS_ROLEMEMBER 호출이 정확한 정보를 반환합니다.  
   
- Windows 그룹이 데이터베이스 보안 주체 인수로 사용되는 경우 **IS_ROLEMEMBER**는 항상 0을 반환하며, 이 Windows 그룹은 지정된 데이터베이스 역할의 멤버인 또 다른 Windows 그룹의 멤버입니다.  
+ Windows 그룹이 데이터베이스 보안 주체 인수로 사용되는 경우 **IS_ROLEMEMBER** 는 항상 0을 반환하며, 이 Windows 그룹은 지정된 데이터베이스 역할의 멤버인 또 다른 Windows 그룹의 멤버입니다.  
   
  [!INCLUDE[wiprlhext](../../includes/wiprlhext-md.md)] 및 Windows Server 2008의 UAC(사용자 계정 컨트롤)도 다른 결과를 반환할 수 있습니다. 이는 사용자가 Windows 그룹 멤버 또는 특정 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 사용자 중 어떤 자격으로 서버에 액세스했는지에 따라 다릅니다.  
   

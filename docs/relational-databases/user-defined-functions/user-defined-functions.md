@@ -18,10 +18,10 @@ author: rothja
 ms.author: jroth
 monikerRange: =azuresqldb-current||>=sql-server-2016||=sqlallproducts-allversions||>=sql-server-linux-2017||=azuresqldb-mi-current
 ms.openlocfilehash: 7abbff8fbf88ccca3a0226b651da11f0825436b1
-ms.sourcegitcommit: e700497f962e4c2274df16d9e651059b42ff1a10
+ms.sourcegitcommit: c5078791a07330a87a92abb19b791e950672e198
 ms.translationtype: HT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 08/17/2020
+ms.lasthandoff: 11/26/2020
 ms.locfileid: "88472925"
 ---
 # <a name="user-defined-functions"></a>사용자 정의 함수
@@ -50,7 +50,7 @@ UDF(사용자 정의 함수)를 사용하는 이유는 무엇인가요?
   
 ##  <a name="types-of-functions"></a><a name="FunctionTypes"></a> 함수 유형  
 **스칼라 함수**  
- 사용자 정의 스칼라 함수는 RETURNS 절에 정의된 유형의 단일 데이터 값을 반환합니다. 인라인 스칼라 함수의 경우 반환된 스칼라 값이 단일 문의 결과입니다. 다중 문 스칼라 함수의 경우 함수 본문에 단일 값을 반환하는 일련의 [!INCLUDE[tsql](../../includes/tsql-md.md)] 문이 포함됩니다. 반환 유형은 **text**, **ntext**, **image**, **cursor**및 **timestamp**를 제외한 모든 데이터 형식일 수 있습니다. 
+ 사용자 정의 스칼라 함수는 RETURNS 절에 정의된 유형의 단일 데이터 값을 반환합니다. 인라인 스칼라 함수의 경우 반환된 스칼라 값이 단일 문의 결과입니다. 다중 문 스칼라 함수의 경우 함수 본문에 단일 값을 반환하는 일련의 [!INCLUDE[tsql](../../includes/tsql-md.md)] 문이 포함됩니다. 반환 유형은 **text**, **ntext**, **image**, **cursor** 및 **timestamp** 를 제외한 모든 데이터 형식일 수 있습니다. 
  **[예](../../relational-databases/user-defined-functions/create-user-defined-functions-database-engine.md#Scalar)**
   
 **테이블 반환 함수**  

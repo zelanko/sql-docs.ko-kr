@@ -22,10 +22,10 @@ author: julieMSFT
 ms.author: jrasnick
 monikerRange: '>=aps-pdw-2016||=azuresqldb-current||=azure-sqldw-latest||>=sql-server-2016||=sqlallproducts-allversions||>=sql-server-linux-2017||=azuresqldb-mi-current'
 ms.openlocfilehash: e0d97d422cb5f3ca7c248b3c3175eb172a5180be
-ms.sourcegitcommit: 197a6ffb643f93592edf9e90b04810a18be61133
+ms.sourcegitcommit: c5078791a07330a87a92abb19b791e950672e198
 ms.translationtype: HT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 09/26/2020
+ms.lasthandoff: 11/26/2020
 ms.locfileid: "91379473"
 ---
 # <a name="typeproperty-transact-sql"></a>TYPEPROPERTY(Transact-SQL)
@@ -48,14 +48,14 @@ TYPEPROPERTY (type , property)
  데이터 형식의 이름입니다.  
   
  *property*  
- 데이터 형식에 대해 반환할 정보의 유형입니다. *property*는 다음 값 중 하나일 수 있습니다.  
+ 데이터 형식에 대해 반환할 정보의 유형입니다. *property* 는 다음 값 중 하나일 수 있습니다.  
   
 |속성|Description|반환 값|  
 |--------------|-----------------|--------------------|  
 |**AllowsNull**|데이터 형식이 Null 값을 허용합니다.|1 = True<br /><br /> 0 = False<br /><br /> NULL = 데이터 형식을 찾지 못함.|  
 |**OwnerId**|형식의 소유자입니다.<br /><br /> 참고: 스키마 소유자가 반드시 형식 소유자일 필요는 없습니다.|Null이 아닌 경우 = 형식 소유자의 데이터베이스 사용자 ID입니다.<br /><br /> NULL = 지원되지 않는 형식이거나 형식 ID가 유효하지 않습니다.|  
 |**정밀도**|데이터 형식의 전체 자릿수입니다.|자릿수 또는 문자 수입니다.<br /><br /> -1 = **xml** 또는 큰 값 데이터 형식<br /><br /> NULL = 데이터 형식을 찾지 못함.|  
-|**크기 조정**|데이터 형식의 소수 자릿수입니다.|데이터 형식의 소수 자릿수입니다.<br /><br /> NULL = 데이터 형식이 **numeric**이 아니거나 데이터 형식을 찾지 못함.|  
+|**크기 조정**|데이터 형식의 소수 자릿수입니다.|데이터 형식의 소수 자릿수입니다.<br /><br /> NULL = 데이터 형식이 **numeric** 이 아니거나 데이터 형식을 찾지 못함.|  
 |**UsesAnsiTrim**|데이터 형식을 만들 때 ANSI 패딩 설정을 ON으로 설정했습니다.|1 = True<br /><br /> 0 = False<br /><br /> NULL = 데이터 형식을 찾을 수 없거나 이진 또는 문자열 데이터 형식이 아님.|  
   
 ## <a name="return-types"></a>반환 형식  

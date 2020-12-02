@@ -17,10 +17,10 @@ ms.assetid: 1fda034d-09e4-4647-9a9f-e8d508c2cc8f
 author: chugugrace
 ms.author: chugu
 ms.openlocfilehash: ac791960040a0bceb46e129b2f48a8410e953258
-ms.sourcegitcommit: e700497f962e4c2274df16d9e651059b42ff1a10
+ms.sourcegitcommit: c5078791a07330a87a92abb19b791e950672e198
 ms.translationtype: HT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 08/17/2020
+ms.lasthandoff: 11/26/2020
 ms.locfileid: "88477294"
 ---
 # <a name="parsing-non-standard-text-file-formats-with-the-script-component"></a>스크립트 구성 요소를 사용하여 비표준 텍스트 파일 형식의 구문 분석
@@ -44,7 +44,7 @@ ms.locfileid: "88477294"
   
 #### <a name="to-configure-this-script-component-example"></a>스크립트 구성 요소 예를 구성하려면  
   
-1.  다음 원본 데이터가 포함된 **rowdelimiteddata.txt**라는 텍스트 파일을 만들고 저장합니다.  
+1.  다음 원본 데이터가 포함된 **rowdelimiteddata.txt** 라는 텍스트 파일을 만들고 저장합니다.  
   
     ```  
     FirstName: Nancy  
@@ -91,15 +91,15 @@ ms.locfileid: "88477294"
   
 7.  패키지에 데이터 흐름 태스크를 추가하고 SSIS 디자이너의 **데이터 흐름** 탭을 클릭합니다.  
   
-8.  데이터 흐름에 플랫 파일 원본을 추가하고 해당 플랫 파일 원본이 RowDelimitedData 연결 관리자를 사용하도록 구성합니다. **플랫 파일 원본 편집기**의 **열** 페이지에서 사용 가능한 단일 외부 열을 선택합니다.  
+8.  데이터 흐름에 플랫 파일 원본을 추가하고 해당 플랫 파일 원본이 RowDelimitedData 연결 관리자를 사용하도록 구성합니다. **플랫 파일 원본 편집기** 의 **열** 페이지에서 사용 가능한 단일 외부 열을 선택합니다.  
   
 9. 데이터 흐름에 스크립트 구성 요소를 추가하고 이 구성 요소를 변환으로 구성합니다. 플랫 파일 원본의 출력을 스크립트 구성 요소에 연결합니다.  
   
-10. 스크립트 구성 요소를 두 번 클릭하여 **스크립트 변환 편집기**를 표시합니다.  
+10. 스크립트 구성 요소를 두 번 클릭하여 **스크립트 변환 편집기** 를 표시합니다.  
   
 11. **스크립트 변환 편집기** 대화 상자의 **입력 열** 페이지에서 사용 가능한 단일 입력 열을 선택합니다.  
   
-12. **스크립트 변환 편집기**의 **입/출력** 페이지에서 출력 0을 선택하고 **SynchronousInputID**를 None으로 설정합니다. 길이가 32이고 문자열 유형이 모두 [DT_STR]인 5개의 출력 열을 만듭니다.  
+12. **스크립트 변환 편집기** 의 **입/출력** 페이지에서 출력 0을 선택하고 **SynchronousInputID** 를 None으로 설정합니다. 길이가 32이고 문자열 유형이 모두 [DT_STR]인 5개의 출력 열을 만듭니다.  
   
     -   FirstName  
   
@@ -111,7 +111,7 @@ ms.locfileid: "88477294"
   
     -   StateProvince  
   
-13. **스크립트 변환 편집기**의 **스크립트** 페이지에서 **스크립트 편집**을 클릭하고 예제의 **ScriptMain** 클래스에 표시된 코드를 입력합니다. 스크립트 개발 환경과 **스크립트 변환 편집기**를 닫습니다.  
+13. **스크립트 변환 편집기** 의 **스크립트** 페이지에서 **스크립트 편집** 을 클릭하고 예제의 **ScriptMain** 클래스에 표시된 코드를 입력합니다. 스크립트 개발 환경과 **스크립트 변환 편집기** 를 닫습니다.  
   
 14. 데이트 흐름에 SQL Server 대상을 추가합니다. SQL Server 대상이 OLE DB 연결 관리자와 RowDelimitedData 테이블을 사용하도록 구성합니다. 이 대상에 스크립트 구성 요소의 출력을 연결합니다.  
   
@@ -202,7 +202,7 @@ public override void Input0_ProcessInputRow(Input0Buffer Row)
   
 #### <a name="to-configure-this-script-component-example"></a>스크립트 구성 요소 예를 구성하려면  
   
-1.  다음 원본 데이터가 포함된 **parentchilddata.txt**라는 텍스트 파일을 만들고 저장합니다.  
+1.  다음 원본 데이터가 포함된 **parentchilddata.txt** 라는 텍스트 파일을 만들고 저장합니다.  
   
     ```  
     **********  
@@ -250,21 +250,21 @@ public override void Input0_ProcessInputRow(Input0Buffer Row)
   
 7.  패키지에 데이터 흐름 태스크를 추가하고 SSIS 디자이너의 **데이터 흐름** 탭을 클릭합니다.  
   
-8.  데이터 흐름에 플랫 파일 원본을 추가하고 해당 플랫 파일 원본이 ParentChildData 연결 관리자를 사용하도록 구성합니다. **플랫 파일 원본 편집기**의 **열** 페이지에서 사용 가능한 단일 외부 열을 선택합니다.  
+8.  데이터 흐름에 플랫 파일 원본을 추가하고 해당 플랫 파일 원본이 ParentChildData 연결 관리자를 사용하도록 구성합니다. **플랫 파일 원본 편집기** 의 **열** 페이지에서 사용 가능한 단일 외부 열을 선택합니다.  
   
 9. 데이터 흐름에 스크립트 구성 요소를 추가하고 이 구성 요소를 변환으로 구성합니다. 플랫 파일 원본의 출력을 스크립트 구성 요소에 연결합니다.  
   
-10. 스크립트 구성 요소를 두 번 클릭하여 **스크립트 변환 편집기**를 표시합니다.  
+10. 스크립트 구성 요소를 두 번 클릭하여 **스크립트 변환 편집기** 를 표시합니다.  
   
 11. **스크립트 변환 편집기** 대화 상자의 **입력 열** 페이지에서 사용 가능한 단일 입력 열을 선택합니다.  
   
-12. **스크립트 변환 편집기**의 **입/출력** 페이지에서 출력 0을 선택하고, 이름을 ParentRecords로 바꾼 다음, **SynchronousInputID**를 None으로 설정합니다. 다음과 같이 2개의 출력 열을 만듭니다.  
+12. **스크립트 변환 편집기** 의 **입/출력** 페이지에서 출력 0을 선택하고, 이름을 ParentRecords로 바꾼 다음, **SynchronousInputID** 를 None으로 설정합니다. 다음과 같이 2개의 출력 열을 만듭니다.  
   
     -   부호 있는 4바이트 정수 [DT_I4] 형식의 ParentID(기본 키)  
   
     -   길이가 32인 문자열 [DT_STR] 형식의 ParentRecord  
   
-13. 두 번째 출력을 만들고 이름을 ChildRecords로 지정합니다. 새 출력의 **SynchronousInputID**는 이미 None으로 설정되어 있습니다. 다음과 같이 3개의 출력 열을 만듭니다.  
+13. 두 번째 출력을 만들고 이름을 ChildRecords로 지정합니다. 새 출력의 **SynchronousInputID** 는 이미 None으로 설정되어 있습니다. 다음과 같이 3개의 출력 열을 만듭니다.  
   
     -   부호 있는 4바이트 정수 [DT_I4] 형식의 ChildID(기본 키)  
   
@@ -272,7 +272,7 @@ public override void Input0_ProcessInputRow(Input0Buffer Row)
   
     -   길이가 50인 문자열 [DT_STR] 형식의 ChildRecord  
   
-14. **스크립트 변환 편집기**의 **스크립트** 페이지에서 **스크립트 편집**을 클릭합니다. **ScriptMain** 클래스에서 이 예제에 표시된 코드를 입력합니다. 스크립트 개발 환경과 **스크립트 변환 편집기**를 닫습니다.  
+14. **스크립트 변환 편집기** 의 **스크립트** 페이지에서 **스크립트 편집** 을 클릭합니다. **ScriptMain** 클래스에서 이 예제에 표시된 코드를 입력합니다. 스크립트 개발 환경과 **스크립트 변환 편집기** 를 닫습니다.  
   
 15. 데이트 흐름에 SQL Server 대상을 추가합니다. 이 대상에 스크립트 구성 요소의 ParentRecords 출력을 연결하고 해당 대상이 OLE DB 연결 관리자와 Parents 테이블을 사용하도록 구성합니다.  
   
@@ -289,7 +289,7 @@ Public Overrides Sub Input0_ProcessInputRow(ByVal Row As Input0Buffer)
   
     ' If current row starts with separator characters,  
     '  then following row contains new parent record.  
-    If Row.Column0.StartsWith("***") Then  
+    If Row.Column0.StartsWith("**_") Then  
         nextRowIsParent = True  
     Else  
         If nextRowIsParent Then  
@@ -322,7 +322,7 @@ public override void Input0_ProcessInputRow(Input0Buffer Row)
   
         // If current row starts with separator characters,   
         // then following row contains new parent record.   
-        if (Row.Column0.StartsWith("***"))  
+        if (Row.Column0.StartsWith("_**"))  
         {  
             static_Input0_ProcessInputRow_nextRowIsParent = true;  
         }  

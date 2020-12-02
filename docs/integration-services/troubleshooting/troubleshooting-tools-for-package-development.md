@@ -18,10 +18,10 @@ ms.assetid: 41dd248c-dab3-4318-b8ba-789a42d5c00c
 author: chugugrace
 ms.author: chugu
 ms.openlocfilehash: e4f59f38a15bf7a703bbdf18277b4e384d1f4c94
-ms.sourcegitcommit: e700497f962e4c2274df16d9e651059b42ff1a10
+ms.sourcegitcommit: c5078791a07330a87a92abb19b791e950672e198
 ms.translationtype: HT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 08/17/2020
+ms.lasthandoff: 11/26/2020
 ms.locfileid: "88495146"
 ---
 # <a name="troubleshooting-tools-for-package-development"></a>패키지 배포 문제 해결 도구
@@ -34,11 +34,11 @@ ms.locfileid: "88495146"
 ## <a name="troubleshooting-design-time-validation-issues"></a>디자인 타임 유효성 검사 문제 해결  
  현재 버전의 [!INCLUDE[ssISnoversion](../../includes/ssisnoversion-md.md)]에서 패키지를 열면 모든 데이터 흐름 구성 요소와 모든 연결에 대해 차례로 유효성 검사가 실행되고, 느리거나 오프라인으로 작업에 사용할 수 없는 연결이 설정됩니다. 이로써 패키지 데이터 흐름의 유효성 검사가 지연되는 것을 줄일 수 있습니다.  
   
- 패키지가 열리면 **연결 관리자** 영역에서 연결 관리자를 마우스 오른쪽 단추로 클릭하고 **오프라인으로 작업**을 클릭하여 연결을 해제할 수도 있습니다. 이를 통해 SSIS 디자이너에서 작업 속도를 높일 수 있습니다.  
+ 패키지가 열리면 **연결 관리자** 영역에서 연결 관리자를 마우스 오른쪽 단추로 클릭하고 **오프라인으로 작업** 을 클릭하여 연결을 해제할 수도 있습니다. 이를 통해 SSIS 디자이너에서 작업 속도를 높일 수 있습니다.  
   
  오프라인으로 작업하도록 설정된 작업은 사용자가 다음 중 하나를 수행할 때까지 오프라인으로 유지됩니다.  
   
--   SSIS 디자이너의 **연결 관리자** 영역에서 연결 관리자를 마우스 오른쪽 단추로 클릭하고 **테스트 연결**을 클릭하여 연결을 테스트합니다.  
+-   SSIS 디자이너의 **연결 관리자** 영역에서 연결 관리자를 마우스 오른쪽 단추로 클릭하고 **테스트 연결** 을 클릭하여 연결을 테스트합니다.  
   
      예를 들어, 패키지가 열릴 때 처음에는 연결이 오프라인으로 작업하도록 설정됩니다. 연결 문자열을 수정하여 이 문제를 해결하고 **테스트 연결** 을 클릭하여 연결을 테스트합니다.  
   
@@ -50,7 +50,7 @@ ms.locfileid: "88495146"
   
 -   **런타임까지 유효하지 않은 패키지 요소에 대해 DelayValidation 속성을 구성합니다**. 디자인 타임에는 구성이 유효하지 않은 패키지 요소의 **DelayValidation** 을 **True** 로 설정하여 유효성 검사 오류를 방지할 수 있습니다. 예를 들어 런타임에 SQL 실행 작업을 통해 테이블이 만들어지기 전까지는 존재하지 않는 대상 테이블을 사용하는 데이터 흐름 태스크가 있을 수 있습니다. **DelayValidation** 속성은 패키지 수준 또는 패키지에 포함된 개별 태스크 및 컨테이너 수준에서 설정할 수 있습니다. 일반적으로 패키지를 배포할 때는 동일한 패키지 요소에서 이 속성을 **True** 로 설정해야 런타임에 동일한 유효성 검사 오류를 방지할 수 있습니다.  
   
-     **DelayValidation** 속성은 데이터 흐름 태스크에만 설정할 수 있고 개별 데이터 흐름 구성 요소에는 설정할 수 없습니다. 개별 데이터 흐름 구성 요소의 <xref:Microsoft.SqlServer.Dts.Pipeline.Wrapper.IDTSComponentMetaData100.ValidateExternalMetadata%2A> 속성을 **false**을 참조하세요. 그러나 이 속성 값이 **false**이면 구성 요소에서 외부 데이터 원본의 메타데이터에 대한 변경 내용을 인식하지 못하게 됩니다.  
+     **DelayValidation** 속성은 데이터 흐름 태스크에만 설정할 수 있고 개별 데이터 흐름 구성 요소에는 설정할 수 없습니다. 개별 데이터 흐름 구성 요소의 <xref:Microsoft.SqlServer.Dts.Pipeline.Wrapper.IDTSComponentMetaData100.ValidateExternalMetadata%2A> 속성을 **false** 을 참조하세요. 그러나 이 속성 값이 **false** 이면 구성 요소에서 외부 데이터 원본의 메타데이터에 대한 변경 내용을 인식하지 못하게 됩니다.  
   
  유효성 검사가 발생할 때 패키지에서 사용하는 데이터베이스 개체가 잠기면 유효성 검사 프로세스가 응답하지 않을 수 있습니다. 이 경우 [!INCLUDE[ssIS](../../includes/ssis-md.md)] 디자이너도 응답하지 않습니다. [!INCLUDE[ssManStudio](../../includes/ssmanstudio-md.md)] 에서 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]를 사용하여 연관된 세션을 닫으면 유효성 검사를 다시 시작할 수 있습니다. 또한 이 섹션에서 설명하는 설정을 사용하면 이러한 문제를 방지할 수 있습니다.  
   

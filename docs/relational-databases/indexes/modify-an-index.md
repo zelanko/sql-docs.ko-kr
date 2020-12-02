@@ -17,10 +17,10 @@ author: MikeRayMSFT
 ms.author: mikeray
 monikerRange: = azuresqldb-current || >= sql-server-2016 || = sqlallproducts-allversions
 ms.openlocfilehash: 15a7386c08d2b9147858cab3fde212cf285902cb
-ms.sourcegitcommit: e700497f962e4c2274df16d9e651059b42ff1a10
+ms.sourcegitcommit: c5078791a07330a87a92abb19b791e950672e198
 ms.translationtype: HT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 08/17/2020
+ms.lasthandoff: 11/26/2020
 ms.locfileid: "88499367"
 ---
 # <a name="modify-an-index"></a>인덱스 수정
@@ -45,11 +45,11 @@ ms.locfileid: "88499367"
   
 1.  개체 탐색기에서 [!INCLUDE[ssDEnoversion](../../includes/ssdenoversion-md.md)] 의 인스턴스에 연결한 다음 해당 인스턴스를 확장합니다.  
   
-2.  **데이터베이스**를 확장하고 해당 테이블이 속한 데이터베이스를 확장한 다음 **테이블**을 확장합니다.  
+2.  **데이터베이스** 를 확장하고 해당 테이블이 속한 데이터베이스를 확장한 다음 **테이블** 을 확장합니다.  
   
-3.  인덱스가 속한 테이블을 확장하고 **인덱스**를 확장합니다.  
+3.  인덱스가 속한 테이블을 확장하고 **인덱스** 를 확장합니다.  
   
-4.  수정할 인덱스를 마우스 오른쪽 단추로 클릭한 다음 **속성**을 클릭합니다.  
+4.  수정할 인덱스를 마우스 오른쪽 단추로 클릭한 다음 **속성** 을 클릭합니다.  
   
 5.  **인덱스 속성** 대화 상자에서 원하는 대로 변경합니다. 예를 들어 인덱스 키에서 열을 추가 또는 제거하거나 인덱스 옵션의 설정을 변경할 수 있습니다.  
   

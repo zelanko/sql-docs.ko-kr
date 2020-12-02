@@ -23,10 +23,10 @@ author: julieMSFT
 ms.author: jrasnick
 monikerRange: '>=aps-pdw-2016||=azuresqldb-current||=azure-sqldw-latest||>=sql-server-2016||=sqlallproducts-allversions||>=sql-server-linux-2017||=azuresqldb-mi-current'
 ms.openlocfilehash: 5d34379bacee3a8d01f8f28c11930aefc5c00ab5
-ms.sourcegitcommit: 197a6ffb643f93592edf9e90b04810a18be61133
+ms.sourcegitcommit: c5078791a07330a87a92abb19b791e950672e198
 ms.translationtype: HT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 09/26/2020
+ms.lasthandoff: 11/26/2020
 ms.locfileid: "91379838"
 ---
 # <a name="str-transact-sql"></a>STR(Transact-SQL)
@@ -52,13 +52,13 @@ STR ( float_expression [ , length [ , decimal ] ] )
  총 길이입니다. 소수점, 부호, 숫자 및 공백을 포함한 길이입니다. 기본값은 10입니다.  
   
  *decimal*  
- 소수 자릿수(소수점 오른쪽의 자릿수)입니다. *decimal*은 16보다 작거나 같아야 합니다. *decimal*이 16보다 크면 결과는 소수점 오른쪽의 16자리까지로 잘립니다.  
+ 소수 자릿수(소수점 오른쪽의 자릿수)입니다. *decimal* 은 16보다 작거나 같아야 합니다. *decimal* 이 16보다 크면 결과는 소수점 오른쪽의 16자리까지로 잘립니다.  
   
 ## <a name="return-types"></a>반환 형식  
  **varchar**  
   
 ## <a name="remarks"></a>설명  
- STR에 대한 *length* 및 *decimal* 매개 변수가 제공되는 경우 해당 값은 양수여야 합니다. 숫자는 기본적으로 또는 decimal 매개 변수가 0인 경우 정수로 반올림됩니다. 지정된 길이는 소수점 앞의 숫자 부분과 숫자 부호(있는 경우)를 더한 것보다 크거나 같아야 합니다. 짧은 *float_expression*은 지정된 길이에서 오른쪽 정렬되며 긴 *float_expression*은 지정된 십진 자릿수에서 잘립니다. 예를 들어 STR(12, 10)의 결과는 12가 됩니다. 이는 결과 집합에서 오른쪽 정렬됩니다. 그러나 STR(1223, 2)은 결과 집합을 \*\*로 자릅니다. 문자열 함수는 중첩될 수 있습니다.  
+ STR에 대한 *length* 및 *decimal* 매개 변수가 제공되는 경우 해당 값은 양수여야 합니다. 숫자는 기본적으로 또는 decimal 매개 변수가 0인 경우 정수로 반올림됩니다. 지정된 길이는 소수점 앞의 숫자 부분과 숫자 부호(있는 경우)를 더한 것보다 크거나 같아야 합니다. 짧은 *float_expression* 은 지정된 길이에서 오른쪽 정렬되며 긴 *float_expression* 은 지정된 십진 자릿수에서 잘립니다. 예를 들어 STR(12, 10)의 결과는 12가 됩니다. 이는 결과 집합에서 오른쪽 정렬됩니다. 그러나 STR(1223, 2)은 결과 집합을 \*\*로 자릅니다. 문자열 함수는 중첩될 수 있습니다.  
   
 > [!NOTE]  
 >  유니코드 데이터로 변환하려면 CONVERT 또는 [CAST](../../t-sql/functions/cast-and-convert-transact-sql.md) 변환 함수에서 STR를 사용합니다.  

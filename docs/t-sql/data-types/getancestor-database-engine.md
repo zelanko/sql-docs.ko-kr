@@ -19,16 +19,16 @@ ms.assetid: b96a986f-d5e4-4034-8013-de7974594ee9
 author: MikeRayMSFT
 ms.author: mikeray
 ms.openlocfilehash: 0256deca482147f98ed93f788b8c77ea26a93b02
-ms.sourcegitcommit: 22dacedeb6e8721e7cdb6279a946d4002cfb5da3
+ms.sourcegitcommit: c5078791a07330a87a92abb19b791e950672e198
 ms.translationtype: HT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 10/14/2020
+ms.lasthandoff: 11/26/2020
 ms.locfileid: "92037176"
 ---
 # <a name="getancestor-database-engine"></a>GetAncestor(데이터베이스 엔진)
 [!INCLUDE [SQL Server SQL Database](../../includes/applies-to-version/sql-asdb.md)]
 
-*this*의 *n*번째 상위 항목을 나타내는 **hierarchyid**를 반환합니다.
+*this* 의 *n* 번째 상위 항목을 나타내는 **hierarchyid** 를 반환합니다.
   
 ## <a name="syntax"></a>구문  
   
@@ -46,7 +46,7 @@ SqlHierarchyId GetAncestor ( int n )
 
 ## <a name="arguments"></a>인수
 *n*  
-계층에서 위로 이동할 수준 수를 나타내는 **int**입니다.
+계층에서 위로 이동할 수준 수를 나타내는 **int** 입니다.
   
 ## <a name="return-types"></a>반환 형식
 **SQL Server 반환 형식: hierarchyid**

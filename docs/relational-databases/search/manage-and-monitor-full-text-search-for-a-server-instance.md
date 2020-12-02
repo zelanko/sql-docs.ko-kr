@@ -16,10 +16,10 @@ ms.reviewer: mikeray
 monikerRange: =azuresqldb-current||>=sql-server-2016||=sqlallproducts-allversions||>=sql-server-linux-2017||=azuresqldb-mi-current
 ms.custom: seo-lt-2019
 ms.openlocfilehash: e4ad414772e61a0100b52e9e665255922e5b908e
-ms.sourcegitcommit: e700497f962e4c2274df16d9e651059b42ff1a10
+ms.sourcegitcommit: c5078791a07330a87a92abb19b791e950672e198
 ms.translationtype: HT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 08/17/2020
+ms.lasthandoff: 11/26/2020
 ms.locfileid: "88470124"
 ---
 # <a name="manage-and-monitor-full-text-search-for-a-server-instance"></a>서버 인스턴스의 전체 텍스트 검색 관리 및 모니터링
@@ -37,7 +37,7 @@ ms.locfileid: "88470124"
   
 #### <a name="to-view-and-change-server-properties-for-full-text-search"></a>전체 텍스트 검색의 서버 속성을 보고 변경하려면  
   
-1.  개체 탐색기에서 서버를 마우스 오른쪽 단추로 클릭한 다음 **속성**을 클릭합니다.  
+1.  개체 탐색기에서 서버를 마우스 오른쪽 단추로 클릭한 다음 **속성** 을 클릭합니다.  
   
 2.  **서버 속성** 대화 상자에서 **고급** 페이지를 클릭하여 전체 텍스트 검색에 대한 서버 정보를 봅니다. 전체 텍스트 속성은 다음과 같습니다.  
 

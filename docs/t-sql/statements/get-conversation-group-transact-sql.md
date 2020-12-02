@@ -26,10 +26,10 @@ ms.assetid: 4da8a855-33c0-43b2-a49d-527487cb3b5c
 author: markingmyname
 ms.author: maghan
 ms.openlocfilehash: e433b0ba5513396d732c1230f8e3ce43539e3976
-ms.sourcegitcommit: b93beb4f03aee2c1971909cb1d15f79cd479a35c
+ms.sourcegitcommit: c5078791a07330a87a92abb19b791e950672e198
 ms.translationtype: HT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 09/29/2020
+ms.lasthandoff: 11/26/2020
 ms.locfileid: "91497873"
 ---
 # <a name="get-conversation-group-transact-sql"></a>GET CONVERSATION GROUP(Transact-SQL)
@@ -65,16 +65,16 @@ ms.locfileid: "91497873"
  대화 그룹을 가져올 큐를 지정합니다.  
   
  *database_name*  
- 대화 그룹을 가져올 큐를 포함하는 데이터베이스의 이름입니다. *database_name*을 제공하지 않으면 기본값은 현재 데이터베이스입니다.  
+ 대화 그룹을 가져올 큐를 포함하는 데이터베이스의 이름입니다. *database_name* 을 제공하지 않으면 기본값은 현재 데이터베이스입니다.  
   
  *schema_name*  
- 대화 그룹을 가져올 큐를 소유하는 스키마의 이름입니다. *schema_name*을 제공하지 않으면 기본값은 현재 사용자의 기본 스키마입니다.  
+ 대화 그룹을 가져올 큐를 소유하는 스키마의 이름입니다. *schema_name* 을 제공하지 않으면 기본값은 현재 사용자의 기본 스키마입니다.  
   
  *queue_name*  
  대화 그룹을 가져올 큐의 이름입니다.  
   
  TIMEOUT *제한 시간*  
- 메시지가 큐에 도착할 때까지 Service Broker에서 대기하는 시간(밀리초)을 지정합니다. 이 절은 WAITFOR 절에서만 사용할 수 있습니다. WAITFOR를 사용하는 문이 이 절을 포함하지 않거나 *timeout*이 -1이면 대기 시간에 제한이 없습니다. 제한 시간이 만료되면 GET CONVERSATION GROUP이 *\@conversation_group_id* 변수를 NULL로 설정합니다.  
+ 메시지가 큐에 도착할 때까지 Service Broker에서 대기하는 시간(밀리초)을 지정합니다. 이 절은 WAITFOR 절에서만 사용할 수 있습니다. WAITFOR를 사용하는 문이 이 절을 포함하지 않거나 *timeout* 이 -1이면 대기 시간에 제한이 없습니다. 제한 시간이 만료되면 GET CONVERSATION GROUP이 *\@conversation_group_id* 변수를 NULL로 설정합니다.  
   
 ## <a name="remarks"></a>설명  
   

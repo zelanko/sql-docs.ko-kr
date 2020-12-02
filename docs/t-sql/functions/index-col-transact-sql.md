@@ -23,10 +23,10 @@ ms.assetid: 4db1fb3b-e46f-43fb-b269-a5b6e8b39ed0
 author: markingmyname
 ms.author: maghan
 ms.openlocfilehash: e84cc199c94775a38268ab486712c5f5982bdb26
-ms.sourcegitcommit: cc23d8646041336d119b74bf239a6ac305ff3d31
+ms.sourcegitcommit: c5078791a07330a87a92abb19b791e950672e198
 ms.translationtype: HT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 09/23/2020
+ms.lasthandoff: 11/26/2020
 ms.locfileid: "91115451"
 ---
 # <a name="index_col-transact-sql"></a>INDEX_COL(Transact-SQL)
@@ -53,13 +53,13 @@ INDEX_COL ( '[ database_name . [ schema_name ] .| schema_name ]
  인덱스가 속한 스키마의 이름입니다.  
   
  *table_or_view_name*  
- 테이블 또는 인덱싱된 뷰의 이름입니다. *table_or_view_name*은 작은따옴표로 구분해야 하며 데이터베이스 이름 및 스키마 이름을 붙여 정규화할 수 있습니다.  
+ 테이블 또는 인덱싱된 뷰의 이름입니다. *table_or_view_name* 은 작은따옴표로 구분해야 하며 데이터베이스 이름 및 스키마 이름을 붙여 정규화할 수 있습니다.  
   
  *index_id*  
- 인덱스의 ID입니다. *index_ID*는 **int**입니다.  
+ 인덱스의 ID입니다. *index_ID* 는 **int** 입니다.  
   
  *key_id*  
- 인덱스 키 열 위치입니다. *key_ID*는 **int**입니다.  
+ 인덱스 키 열 위치입니다. *key_ID* 는 **int** 입니다.  
   
 ## <a name="return-types"></a>반환 형식  
  **nvarchar (128** **)**  

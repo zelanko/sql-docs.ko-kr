@@ -11,10 +11,10 @@ author: ronortloff
 ms.author: rortloff
 monikerRange: '>= aps-pdw-2016 || = azure-sqldw-latest || = sqlallproducts-allversions'
 ms.openlocfilehash: 97cabcda2e5b680e9fe2d5d6a4f0ce2130e19a27
-ms.sourcegitcommit: 8f062015c2a033f5a0d805ee4adabbe15e7c8f94
+ms.sourcegitcommit: c5078791a07330a87a92abb19b791e950672e198
 ms.translationtype: HT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 09/25/2020
+ms.lasthandoff: 11/26/2020
 ms.locfileid: "91226883"
 ---
 # <a name="rename-transact-sql"></a>RENAME(Transact-SQL)
@@ -56,12 +56,12 @@ RENAME OBJECT [::] [ [ database_name . [schema_name ] ] . ] | [schema_name . ] ]
 RENAME OBJECT [::] [ [*database_name* . [ *schema_name* ] . ] | [ *schema_name* . ] ]*table_name* TO *new_table_name*
 **적용 대상:** [!INCLUDE[ssSDW](../../includes/sssdw-md.md)], [!INCLUDE[ssPDW](../../includes/sspdw-md.md)]
 
-사용자 정의 테이블의 이름을 변경합니다. 이름을 변경할 테이블을 하나, 둘 또는 세 부분으로 지정합니다. 새 테이블 *new_table_name*을 한 부분 이름으로 지정합니다.
+사용자 정의 테이블의 이름을 변경합니다. 이름을 변경할 테이블을 하나, 둘 또는 세 부분으로 지정합니다. 새 테이블 *new_table_name* 을 한 부분 이름으로 지정합니다.
 
 RENAME DATABASE [::] [ *database_name* TO *new_database_name*
 **적용 대상:** [!INCLUDE[ssPDW](../../includes/sspdw-md.md)]
 
-*database_name*에서 사용자 정의 데이터베이스의 이름을 *new_database_name*으로 변경합니다. 데이터베이스 이름을 다음과 같은 [!INCLUDE[ssPDW](../../includes/sspdw-md.md)]예약된 데이터베이스 이름으로 바꿀 수 없습니다.
+*database_name* 에서 사용자 정의 데이터베이스의 이름을 *new_database_name* 으로 변경합니다. 데이터베이스 이름을 다음과 같은 [!INCLUDE[ssPDW](../../includes/sspdw-md.md)]예약된 데이터베이스 이름으로 바꿀 수 없습니다.
 
 - master
 - model

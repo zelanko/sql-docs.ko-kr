@@ -24,10 +24,10 @@ ms.assetid: 9f7c6e0b-5ba4-4dbb-994d-5bd59f4908de
 author: VanMSFT
 ms.author: vanto
 ms.openlocfilehash: 4f2a75cf3da8220e861d8320b2454683c3b65a1f
-ms.sourcegitcommit: 197a6ffb643f93592edf9e90b04810a18be61133
+ms.sourcegitcommit: c5078791a07330a87a92abb19b791e950672e198
 ms.translationtype: HT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 09/26/2020
+ms.lasthandoff: 11/26/2020
 ms.locfileid: "91380598"
 ---
 # <a name="verifysignedbyasymkey-transact-sql"></a>VERIFYSIGNEDBYASYMKEY(Transact-SQL)
@@ -53,7 +53,7 @@ VerifySignedByAsymKey( Asym_Key_ID , clear_text , signature )
  확인할 일반 텍스트 데이터입니다.  
   
  *서명*  
- 서명된 데이터에 첨부된 서명입니다. *signature*는 **varbinary**입니다.  
+ 서명된 데이터에 첨부된 서명입니다. *signature* 는 **varbinary** 입니다.  
   
 ## <a name="return-types"></a>반환 형식  
  **int**  
@@ -61,7 +61,7 @@ VerifySignedByAsymKey( Asym_Key_ID , clear_text , signature )
  서명이 일치하면 1을 반환하고 그렇지 않으면 0을 반환합니다.  
   
 ## <a name="remarks"></a>설명  
- **VerifySignedByAsymKey**는 지정한 비대칭 키의 공개 키를 사용하여 데이터의 서명을 해독하고 해독된 값을 데이터의 새로 계산된 MD5 해시와 비교합니다. 값이 일치하면 서명이 유효하게 됩니다.  
+ **VerifySignedByAsymKey** 는 지정한 비대칭 키의 공개 키를 사용하여 데이터의 서명을 해독하고 해독된 값을 데이터의 새로 계산된 MD5 해시와 비교합니다. 값이 일치하면 서명이 유효하게 됩니다.  
   
 ## <a name="permissions"></a>사용 권한  
  비대칭 키에 대한 VIEW DEFINITION 권한이 필요합니다.  

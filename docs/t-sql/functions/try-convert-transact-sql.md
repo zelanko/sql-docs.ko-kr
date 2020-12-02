@@ -20,10 +20,10 @@ author: julieMSFT
 ms.author: jrasnick
 monikerRange: = azuresqldb-current||>= sql-server-2016 ||>= sql-server-linux-2017||= sqlallproducts-allversions||>= aps-pdw-2016||= azure-sqldw-latest
 ms.openlocfilehash: 82c8807aef206867a8f50eed507e7a3a4cb48e59
-ms.sourcegitcommit: 197a6ffb643f93592edf9e90b04810a18be61133
+ms.sourcegitcommit: c5078791a07330a87a92abb19b791e950672e198
 ms.translationtype: HT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 09/26/2020
+ms.lasthandoff: 11/26/2020
 ms.locfileid: "91379508"
 ---
 # <a name="try_convert-transact-sql"></a>TRY_CONVERT(Transact-SQL)
@@ -43,25 +43,25 @@ TRY_CONVERT ( data_type [ ( length ) ], expression [, style ] )
 
 ## <a name="arguments"></a>인수
  *data_type [ ( length ) ]*  
- *expression*을 캐스팅할 데이터 형식입니다.  
+ *expression* 을 캐스팅할 데이터 형식입니다.  
   
  *expression*  
  캐스팅할 값입니다.  
   
  *style*  
- **TRY_CONVERT** 함수가 *expression*을 변환하는 방법을 지정하는 선택적 정수 식입니다.  
+ **TRY_CONVERT** 함수가 *expression* 을 변환하는 방법을 지정하는 선택적 정수 식입니다.  
   
- *style*은 **CONVERT** 함수의 *style* 매개 변수와 동일한 값을 허용합니다. 자세한 내용은 [CAST 및 CONVERT&#40;Transact-SQL&#41;](../../t-sql/functions/cast-and-convert-transact-sql.md)를 참조하세요.  
+ *style* 은 **CONVERT** 함수의 *style* 매개 변수와 동일한 값을 허용합니다. 자세한 내용은 [CAST 및 CONVERT&#40;Transact-SQL&#41;](../../t-sql/functions/cast-and-convert-transact-sql.md)를 참조하세요.  
   
- 허용되는 값 범위는 *data_type* 값에 따라 결정됩니다. *style*이 Null이면 **TRY_CONVERT**는 Null을 반환합니다.  
+ 허용되는 값 범위는 *data_type* 값에 따라 결정됩니다. *style* 이 Null이면 **TRY_CONVERT** 는 Null을 반환합니다.  
   
 ## <a name="return-types"></a>반환 형식  
  캐스트에 성공하면 지정한 데이터 형식으로 캐스팅된 값을 반환합니다. 그렇지 않으면 Null을 반환합니다.  
   
 ## <a name="remarks"></a>설명  
- **TRY_CONVERT** 함수는 전달된 값을 사용하여 지정된 *data_type*으로 변환을 시도합니다. 캐스팅에 성공하면 **TRY_CONVERT**는 지정된 *data_type*으로 값을 반환합니다. 오류가 발생하면 Null이 반환됩니다. 그러나 명시적으로 허용되지 않는 변환을 요청하면 오류와 함께 **TRY_CONVERT**가 실패합니다.  
+ **TRY_CONVERT** 함수는 전달된 값을 사용하여 지정된 *data_type* 으로 변환을 시도합니다. 캐스팅에 성공하면 **TRY_CONVERT** 는 지정된 *data_type* 으로 값을 반환합니다. 오류가 발생하면 Null이 반환됩니다. 그러나 명시적으로 허용되지 않는 변환을 요청하면 오류와 함께 **TRY_CONVERT** 가 실패합니다.  
   
- **TRY_CONVERT**는 호환성 수준 110 이상의 예약 키워드입니다.  
+ **TRY_CONVERT** 는 호환성 수준 110 이상의 예약 키워드입니다.  
   
  이 함수는 [!INCLUDE[ssSQL11](../../includes/sssql11-md.md)] 이상 버전이 설치되어 있는 서버에 대해서는 원격으로 실행할 수 있지만 [!INCLUDE[ssSQL11](../../includes/sssql11-md.md)] 이전 버전이 설치되어 있는 서버에 대해서는 원격으로 실행할 수 없습니다.  
   

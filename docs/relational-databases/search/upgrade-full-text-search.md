@@ -18,10 +18,10 @@ ms.author: pelopes
 ms.reviewer: mikeray
 monikerRange: =azuresqldb-current||>=sql-server-2016||=sqlallproducts-allversions||>=sql-server-linux-2017||=azuresqldb-mi-current
 ms.openlocfilehash: 4759838a20e721031db8e4ea5e644cc3822285a8
-ms.sourcegitcommit: 4d370399f6f142e25075b3714e5c2ce056b1bfd0
+ms.sourcegitcommit: c5078791a07330a87a92abb19b791e950672e198
 ms.translationtype: HT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 10/09/2020
+ms.lasthandoff: 11/26/2020
 ms.locfileid: "91868940"
 ---
 # <a name="upgrade-full-text-search"></a>전체 텍스트 검색 업그레이드
@@ -99,7 +99,7 @@ ms.locfileid: "91868940"
   
 -   [!INCLUDE[ssVersion2005](../../includes/ssversion2005-md.md)]에서 의미 없는 단어 파일이 수정되었으면 이러한 수정 사항은 업그레이드 동안 손실됩니다. 이러한 업데이트를 다시 만들려면 해당 [!INCLUDE[ssKatmai](../../includes/sskatmai-md.md)] 중지 목록에서 이러한 수정 사항을 수동으로 다시 만들어야 합니다. 자세한 내용은 [ALTER FULLTEXT STOPLIST&#40;Transact-SQL&#41;](../../t-sql/statements/alter-fulltext-stoplist-transact-sql.md)를 참조하세요.  
   
--   전체 텍스트 인덱스에 아무 중지 단어도 적용하지 않으려면(예를 들어 [!INCLUDE[ssVersion2005](../../includes/ssversion2005-md.md)] 설치에서 의미 없는 단어 파일을 삭제하거나 지운 경우) 업그레이드된 각 전체 텍스트 인덱스에 대해 중지 목록 설정을 해제해야 합니다. 다음 [!INCLUDE[tsql](../../includes/tsql-md.md)] 문을 실행합니다( *database* 를 업그레이드된 데이터베이스의 이름으로 바꾸고 *table* 을 *table*이름으로 바꿈).  
+-   전체 텍스트 인덱스에 아무 중지 단어도 적용하지 않으려면(예를 들어 [!INCLUDE[ssVersion2005](../../includes/ssversion2005-md.md)] 설치에서 의미 없는 단어 파일을 삭제하거나 지운 경우) 업그레이드된 각 전체 텍스트 인덱스에 대해 중지 목록 설정을 해제해야 합니다. 다음 [!INCLUDE[tsql](../../includes/tsql-md.md)] 문을 실행합니다( *database* 를 업그레이드된 데이터베이스의 이름으로 바꾸고 *table* 을 *table* 이름으로 바꿈).  
   
     ```  
     Use database;   
@@ -131,15 +131,15 @@ ms.locfileid: "91868940"
   
  [!INCLUDE[ssVersion2005](../../includes/ssversion2005-md.md)] 전체 텍스트 카탈로그를 가져올 때 데이터베이스와 카탈로그 파일을 백업 및 복원할 수 있습니다. 이 동작은 [!INCLUDE[ssVersion2005](../../includes/ssversion2005-md.md)]와 같습니다.  
   
--   전체 데이터베이스 백업에 전체 텍스트 카탈로그가 포함됩니다. 전체 텍스트 카탈로그를 참조하려면 해당 [!INCLUDE[ssVersion2005](../../includes/ssversion2005-md.md)] 파일 이름인 sysft_+*catalog-name*을 사용합니다.  
+-   전체 데이터베이스 백업에 전체 텍스트 카탈로그가 포함됩니다. 전체 텍스트 카탈로그를 참조하려면 해당 [!INCLUDE[ssVersion2005](../../includes/ssversion2005-md.md)] 파일 이름인 sysft_+*catalog-name* 을 사용합니다.  
   
 -   전체 텍스트 카탈로그가 오프라인 상태이면 백업이 실패합니다.  
   
  [!INCLUDE[ssVersion2005](../../includes/ssversion2005-md.md)] 전체 텍스트 카탈로그 백업 및 복원에 대한 자세한 내용은 온라인 설명서에서 [전체 텍스트 카탈로그 백업 및 복원](./back-up-and-restore-full-text-catalogs-and-indexes.md) 및 [파일 백업과 복원 및 전체 텍스트 카탈로그](/previous-versions/sql/sql-server-2008-r2/ms190643(v=sql.105))[!INCLUDE[ssVersion2005](../../includes/ssversion2005-md.md)] 를 참조하세요.  
   
- 데이터베이스를 [!INCLUDE[ssCurrent](../../includes/sscurrent-md.md)]에 복원하면 전체 텍스트 카탈로그에 대한 새 데이터베이스 파일이 만들어집니다. 이 파일의 기본 이름은 ftrow_*catalog-name*.ndf입니다. 예를 들어 *catalog-name* 이 `cat1`이면 [!INCLUDE[ssCurrent](../../includes/sscurrent-md.md)] 데이터베이스 파일의 기본 이름은 `ftrow_cat1.ndf`입니다. 대상 디렉터리에서 이 기본 이름이 이미 사용되고 있으면 새 데이터베이스 파일의 이름이 `ftrow_`*catalog-name*`{`*GUID*`}.ndf`로 지정됩니다. 여기에서 *GUID* 는 새 파일의 전역 고유 식별자입니다.  
+ 데이터베이스를 [!INCLUDE[ssCurrent](../../includes/sscurrent-md.md)]에 복원하면 전체 텍스트 카탈로그에 대한 새 데이터베이스 파일이 만들어집니다. 이 파일의 기본 이름은 ftrow_ *catalog-name*.ndf입니다. 예를 들어 *catalog-name* 이 `cat1`이면 [!INCLUDE[ssCurrent](../../includes/sscurrent-md.md)] 데이터베이스 파일의 기본 이름은 `ftrow_cat1.ndf`입니다. 대상 디렉터리에서 이 기본 이름이 이미 사용되고 있으면 새 데이터베이스 파일의 이름이 `ftrow_`*catalog-name*`{`*GUID*`}.ndf`로 지정됩니다. 여기에서 *GUID* 는 새 파일의 전역 고유 식별자입니다.  
   
- 카탈로그를 가져온 후 **sys.database_files** 및 **sys.master_files**가 업데이트되어 카탈로그 항목이 제거되고 **sys.fulltext_catalogs** 의 **path** 열이 NULL로 설정됩니다.  
+ 카탈로그를 가져온 후 **sys.database_files** 및 **sys.master_files** 가 업데이트되어 카탈로그 항목이 제거되고 **sys.fulltext_catalogs** 의 **path** 열이 NULL로 설정됩니다.  
   
  **데이터베이스를 백업하려면**  
   
@@ -174,7 +174,7 @@ RESTORE DATABASE [ftdb1] FROM  DISK = N'C:\temp\ftdb1.bak' WITH  FILE = 1,
   
  [!INCLUDE[ssCurrent](../../includes/sscurrent-md.md)] 에서 연결된 각 전체 텍스트 카탈로그의 상태는 [!INCLUDE[ssVersion2005](../../includes/ssversion2005-md.md)]에서 데이터베이스를 분리할 때의 상태와 같습니다. 분리 작업에 따라 전체 텍스트 인덱스 채우기가 일시 중지된 경우 [!INCLUDE[ssCurrent](../../includes/sscurrent-md.md)]에서 채우기가 재개되고 전체 텍스트 인덱스를 전체 텍스트 검색에 사용할 수 있게 됩니다.  
   
- [!INCLUDE[ssCurrent](../../includes/sscurrent-md.md)] 에서 전체 텍스트 카탈로그 파일을 찾을 수 없거나 연결 작업 도중 전체 텍스트 파일이 이동했는데 새 위치가 지정되지 않은 경우의 동작은 선택한 전체 텍스트 업그레이드 옵션에 따라 다릅니다. 전체 텍스트 업그레이드 옵션이 **가져오기** 또는 **다시 작성**이면 연결된 전체 텍스트 카탈로그가 다시 작성됩니다. 전체 텍스트 업그레이드 옵션이 **다시 설정**이면 연결된 전체 텍스트 카탈로그가 다시 설정됩니다.  
+ [!INCLUDE[ssCurrent](../../includes/sscurrent-md.md)] 에서 전체 텍스트 카탈로그 파일을 찾을 수 없거나 연결 작업 도중 전체 텍스트 파일이 이동했는데 새 위치가 지정되지 않은 경우의 동작은 선택한 전체 텍스트 업그레이드 옵션에 따라 다릅니다. 전체 텍스트 업그레이드 옵션이 **가져오기** 또는 **다시 작성** 이면 연결된 전체 텍스트 카탈로그가 다시 작성됩니다. 전체 텍스트 업그레이드 옵션이 **다시 설정** 이면 연결된 전체 텍스트 카탈로그가 다시 설정됩니다.  
   
  데이터베이스를 연결 및 분리하는 방법은 [데이터베이스 분리 및 연결&#40;SQL Server&#41;](../../relational-databases/databases/database-detach-and-attach-sql-server.md), [CREATE DATABASE&#40;SQL Server Transact-SQL&#41;](../../t-sql/statements/create-database-transact-sql.md), [sp_attach_db](../../relational-databases/system-stored-procedures/sp-attach-db-transact-sql.md) 및 [sp_detach_db&#40;Transact-SQL&#41;](../../relational-databases/system-stored-procedures/sp-detach-db-transact-sql.md)를 참조하세요.  
   

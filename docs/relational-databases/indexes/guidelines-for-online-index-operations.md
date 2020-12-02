@@ -20,10 +20,10 @@ ms.author: mikeray
 ms.prod_service: table-view-index, sql-database
 monikerRange: =azuresqldb-current||>=sql-server-2016||=sqlallproducts-allversions||>=sql-server-linux-2017||=azuresqldb-mi-current
 ms.openlocfilehash: 047ca1b9ebb3a9157dfe9cbea2ececb898f6b478
-ms.sourcegitcommit: 4d370399f6f142e25075b3714e5c2ce056b1bfd0
+ms.sourcegitcommit: c5078791a07330a87a92abb19b791e950672e198
 ms.translationtype: HT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 10/09/2020
+ms.lasthandoff: 11/26/2020
 ms.locfileid: "91867674"
 ---
 # <a name="guidelines-for-online-index-operations"></a>온라인 인덱스 작업에 대한 지침
@@ -32,7 +32,7 @@ ms.locfileid: "91867674"
 
 온라인 인덱스 작업을 수행할 때 다음 지침이 적용됩니다.  
 
-- 기본 테이블에 **image**, **ntext**및 **text**LOB(Large Object) 데이터 형식이 포함된 경우 클러스터형 인덱스는 오프라인으로 생성, 다시 작성 또는 삭제해야 합니다.  
+- 기본 테이블에 **image**, **ntext** 및 **text** LOB(Large Object) 데이터 형식이 포함된 경우 클러스터형 인덱스는 오프라인으로 생성, 다시 작성 또는 삭제해야 합니다.  
 - 테이블에 LOB 데이터 형식이 들어 있는 경우 비고유 비클러스터형 인덱스를 온라인 상태로 만들 수 있지만 이러한 열은 인덱스 정의에 키 또는 키가 아닌 포괄 열로 사용되지 않습니다.  
 - 로컬 임시 테이블의 인덱스를 온라인 상태로 만들거나 다시 작성하거나 삭제할 수 없습니다. 이 제한 사항은 전역 임시 테이블의 인덱스에는 적용되지 않습니다.
 - 예기치 않은 오류, 데이터베이스 장애 조치(failover) 또는 **PAUSE** 명령 실행 후 중지된 위치에서 인덱스를 다시 시작할 수 있습니다. [인덱스 만들기](../../t-sql/statements/create-index-transact-sql.md) 및 [인덱스 변경](../../t-sql/statements/alter-index-transact-sql.md)을 참조하세요.

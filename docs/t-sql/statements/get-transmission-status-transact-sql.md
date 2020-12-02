@@ -27,10 +27,10 @@ ms.assetid: 621805d5-49ed-4764-b3cb-2ae4a3bf797e
 author: markingmyname
 ms.author: maghan
 ms.openlocfilehash: 5a3aa4aecb35151734d2a0b9a7e7305dbb2643c1
-ms.sourcegitcommit: b93beb4f03aee2c1971909cb1d15f79cd479a35c
+ms.sourcegitcommit: c5078791a07330a87a92abb19b791e950672e198
 ms.translationtype: HT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 09/29/2020
+ms.lasthandoff: 11/26/2020
 ms.locfileid: "91497836"
 ---
 # <a name="get_transmission_status-transact-sql"></a>GET_TRANSMISSION_STATUS(Transact-SQL)
@@ -56,7 +56,7 @@ GET_TRANSMISSION_STATUS ( conversation_handle )
  **nchar**  
   
 ## <a name="remarks"></a>설명  
- 지정한 대화에 대한 마지막 전송 시도의 상태를 설명하는 문자열을 반환합니다. 마지막 전송 시도가 성공했거나 전송 시도가 아직 이루어지지 않았거나 *conversation_handle*이 없으면 빈 문자열이 반환됩니다.  
+ 지정한 대화에 대한 마지막 전송 시도의 상태를 설명하는 문자열을 반환합니다. 마지막 전송 시도가 성공했거나 전송 시도가 아직 이루어지지 않았거나 *conversation_handle* 이 없으면 빈 문자열이 반환됩니다.  
   
  이 함수가 반환하는 정보는 sys.transmission_queue 관리 뷰의 last_transmission_error 열에 표시되는 정보와 동일합니다. 그러나 이 함수는 현재 전송 큐에 메시지가 없는 대화의 전송 상태를 검색하는 데 사용할 수 있습니다.  
   

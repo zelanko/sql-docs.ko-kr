@@ -21,10 +21,10 @@ author: julieMSFT
 ms.author: jrasnick
 monikerRange: '>=aps-pdw-2016||=azuresqldb-current||=azure-sqldw-latest||>=sql-server-2016||=sqlallproducts-allversions||>=sql-server-linux-2017||=azuresqldb-mi-current'
 ms.openlocfilehash: ef311e220c23fdc8b8bb3b779426418559ee83a7
-ms.sourcegitcommit: 197a6ffb643f93592edf9e90b04810a18be61133
+ms.sourcegitcommit: c5078791a07330a87a92abb19b791e950672e198
 ms.translationtype: HT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 09/26/2020
+ms.lasthandoff: 11/26/2020
 ms.locfileid: "91379950"
 ---
 # <a name="schema_name-transact-sql"></a>SCHEMA_NAME(Transact-SQL)
@@ -46,12 +46,12 @@ SCHEMA_NAME ( [ schema_id ] )
   
 |용어|정의|  
 |----------|----------------|  
-|*schema_id*|스키마의 ID입니다. *schema_id*는 **int**입니다. *schema_id*가 정의되어 있지 않으면 SCHEMA_NAME은 호출자의 기본 스키마 이름을 반환합니다.|  
+|*schema_id*|스키마의 ID입니다. *schema_id* 는 **int** 입니다. *schema_id* 가 정의되어 있지 않으면 SCHEMA_NAME은 호출자의 기본 스키마 이름을 반환합니다.|  
   
 ## <a name="return-types"></a>반환 형식  
  **sysname**  
   
- *schema_id*가 유효한 ID가 아니면 NULL을 반환합니다.  
+ *schema_id* 가 유효한 ID가 아니면 NULL을 반환합니다.  
   
 ## <a name="remarks"></a>설명  
  SCHEMA_NAME은 시스템 스키마와 사용자 정의 스키마의 이름을 반환합니다. SCHEMA_NAME은 SELECT 목록, WHERE 절 및 식을 사용할 수 있는 곳이면 어디에서나 호출할 수 있습니다.  

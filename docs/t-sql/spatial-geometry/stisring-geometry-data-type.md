@@ -19,10 +19,10 @@ ms.assetid: ea0063be-1c74-4cc4-ac6f-b65321ddfa54
 author: MladjoA
 ms.author: mlandzic
 ms.openlocfilehash: 06702731a47683c44d6096b354c3ec2f773aefaf
-ms.sourcegitcommit: e700497f962e4c2274df16d9e651059b42ff1a10
+ms.sourcegitcommit: c5078791a07330a87a92abb19b791e950672e198
 ms.translationtype: HT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 08/17/2020
+ms.lasthandoff: 11/26/2020
 ms.locfileid: "88472498"
 ---
 # <a name="stisring-geometry-data-type"></a>STIsRing(geometry 데이터 형식)
@@ -32,9 +32,9 @@ ms.locfileid: "88472498"
 -   해당 인스턴스가 **LineString** 인스턴스입니다.  
 -   해당 인스턴스가 닫혀 있습니다.  
 -   해당 인스턴스가 단순합니다.  
--   **LineString**인스턴스가 해당 요구 사항을 충족하지 못하면 0을 반환합니다.  
+-   **LineString** 인스턴스가 해당 요구 사항을 충족하지 못하면 0을 반환합니다.  
 
- **geometry** 인스턴스가 닫히고 단순하려면 [STIsClosed()](../../t-sql/spatial-geometry/stisclosed-geometry-data-type.md)와 [STIsSimple()](../../t-sql/spatial-geometry/stissimple-geometry-data-type.md)이 해당 인스턴스에서 호출될 때 1을 반환해야 합니다. **geometry**의 인스턴스 형식을 확인하려면 [STGeometryType()](../../t-sql/spatial-geometry/stgeometrytype-geometry-data-type.md)을 사용하세요.  
+ **geometry** 인스턴스가 닫히고 단순하려면 [STIsClosed()](../../t-sql/spatial-geometry/stisclosed-geometry-data-type.md)와 [STIsSimple()](../../t-sql/spatial-geometry/stissimple-geometry-data-type.md)이 해당 인스턴스에서 호출될 때 1을 반환해야 합니다. **geometry** 의 인스턴스 형식을 확인하려면 [STGeometryType()](../../t-sql/spatial-geometry/stgeometrytype-geometry-data-type.md)을 사용하세요.  
   
 ## <a name="syntax"></a>구문  
   
@@ -51,7 +51,7 @@ ms.locfileid: "88472498"
  CLR 반환 형식: **SqlBoolean**  
   
 ## <a name="remarks"></a>설명  
- 이 메서드는 인스턴스가 **LineString**이 아니면 Null을 반합니다.  
+ 이 메서드는 인스턴스가 **LineString** 이 아니면 Null을 반합니다.  
   
 ## <a name="examples"></a>예제  
  다음 예에서는 `LineString` 인스턴스를 만들고 `STIsRing()`을 사용하여 인스턴스가 링인지 테스트합니다.  

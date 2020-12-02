@@ -14,15 +14,15 @@ ms.assetid: 5ee6f19a-6dd7-4730-a91c-bbed1bd77e0b
 author: MashaMSFT
 ms.author: mathoma
 ms.openlocfilehash: 4a56b34301386287ef954edae0528decd4d03fee
-ms.sourcegitcommit: 04cf7905fa32e0a9a44575a6f9641d9a2e5ac0f8
+ms.sourcegitcommit: c5078791a07330a87a92abb19b791e950672e198
 ms.translationtype: HT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 10/07/2020
+ms.lasthandoff: 11/26/2020
 ms.locfileid: "91809486"
 ---
 # <a name="lesson-1-converting-a-table-to-a-hierarchical-structure"></a>1단원: 테이블을 계층 구조로 변환
 [!INCLUDE [SQL Server](../../includes/applies-to-version/sqlserver.md)]
-자체 조인을 사용하여 계층 관계를 나타내는 테이블을 보유하고 있는 경우 이 단원의 내용을 참조하여 해당 테이블을 계층 구조로 변환할 수 있습니다. 이 표현을 **hierarchyid**를 사용하는 표현으로 마이그레이션하는 작업은 비교적 쉽습니다. 마이그레이션하면 간단하고 이해하기 쉬운 계층적 표현이 완성되며 효율적인 쿼리를 위해 여러 가지 방법으로 인덱싱할 수 있습니다.  
+자체 조인을 사용하여 계층 관계를 나타내는 테이블을 보유하고 있는 경우 이 단원의 내용을 참조하여 해당 테이블을 계층 구조로 변환할 수 있습니다. 이 표현을 **hierarchyid** 를 사용하는 표현으로 마이그레이션하는 작업은 비교적 쉽습니다. 마이그레이션하면 간단하고 이해하기 쉬운 계층적 표현이 완성되며 효율적인 쿼리를 위해 여러 가지 방법으로 인덱싱할 수 있습니다.  
   
 이 단원에서는 기존 테이블을 검토하고, **hierarchyid** 열이 포함된 새 테이블을 만들고, 원본 테이블의 데이터로 이 테이블을 채운 다음 인덱싱 방법 3가지를 보여 줍니다. 이 단원에서는 다음 항목을 다룹니다.  
  
@@ -37,11 +37,11 @@ ms.locfileid: "91809486"
 SSMS에서 데이터베이스를 복원하기 위한 지침은 [데이터베이스 복원](../backup-restore/restore-a-database-backup-using-ssms.md)을 참조하세요.  
 
 ## <a name="examine-the-current-structure-of-the-employee-table"></a>Employee 테이블의 현재 구조 검사
-샘플 Adventureworks2017(또는 이상) 데이터베이스에는 **HumanResources** 스키마에 **Employee** 테이블이 있습니다. 원래 테이블이 변경되지 않도록 이 단계에서는 **EmployeeDemo** 라는 **Employee**테이블의 복사본을 만듭니다. 예를 단순화하기 위해 원래 테이블에서 5개의 열만 복사합니다. 그런 다음 **HumanResources.EmployeeDemo** 테이블을 쿼리하여 **hierarchyid** 데이터 형식을 사용하지 않고 한 테이블에서 데이터가 구조화되는 방식을 검토합니다.  
+샘플 Adventureworks2017(또는 이상) 데이터베이스에는 **HumanResources** 스키마에 **Employee** 테이블이 있습니다. 원래 테이블이 변경되지 않도록 이 단계에서는 **EmployeeDemo** 라는 **Employee** 테이블의 복사본을 만듭니다. 예를 단순화하기 위해 원래 테이블에서 5개의 열만 복사합니다. 그런 다음 **HumanResources.EmployeeDemo** 테이블을 쿼리하여 **hierarchyid** 데이터 형식을 사용하지 않고 한 테이블에서 데이터가 구조화되는 방식을 검토합니다.  
   
 ### <a name="copy-the-employee-table"></a>Employee 테이블 복사  
   
-1.  쿼리 편집기 창에서 다음 코드를 실행하여 테이블 구조와 데이터를 **Employee** 테이블에서 **EmployeeDemo**라는 새 테이블로 복사합니다. 원래 테이블에서 hierarchyid를 이미 사용했으므로 이 쿼리는 기본적으로 계층 구조를 평면화하여 직원의 관리자를 검색합니다. 이 단원의 다음 부분에서는 이 계층 구조를 다시 구성합니다.
+1.  쿼리 편집기 창에서 다음 코드를 실행하여 테이블 구조와 데이터를 **Employee** 테이블에서 **EmployeeDemo** 라는 새 테이블로 복사합니다. 원래 테이블에서 hierarchyid를 이미 사용했으므로 이 쿼리는 기본적으로 계층 구조를 평면화하여 직원의 관리자를 검색합니다. 이 단원의 다음 부분에서는 이 계층 구조를 다시 구성합니다.
 
    ```sql  
    USE AdventureWorks2017;  
@@ -103,7 +103,7 @@ SSMS에서 데이터베이스를 복원하기 위한 지침은 [데이터베이�
   
 ### <a name="to-create-a-new-table-named-neworg"></a>NewOrg라는 새 테이블을 만들려면  
   
--   쿼리 편집기 창에서 다음 코드를 실행하여 **HumanResources.NewOrg**라는 새 테이블을 만듭니다.  
+-   쿼리 편집기 창에서 다음 코드를 실행하여 **HumanResources.NewOrg** 라는 새 테이블을 만듭니다.  
   
     ```sql   
     CREATE TABLE HumanResources.NewOrg  
@@ -232,7 +232,7 @@ SSMS에서 데이터베이스를 복원하기 위한 지침은 [데이터베이�
   
 ### <a name="create-index-on-neworg-table-for-efficient-searches"></a>효율적인 검색을 위해 NewOrg 테이블에 인덱스 만들기  
   
-1.  계층의 같은 수준에서의 쿼리를 돕기 위해 [GetLevel](../../t-sql/data-types/getlevel-database-engine.md) 메서드를 사용하여 계층의 수준을 포함하는 계산 열을 만듭니다. 그런 다음 수준 및 **Hierarchyid**에 대한 복합 인덱스를 만듭니다. 다음 코드를 실행하여 계산 열과 너비 우선 인덱스를 만듭니다.  
+1.  계층의 같은 수준에서의 쿼리를 돕기 위해 [GetLevel](../../t-sql/data-types/getlevel-database-engine.md) 메서드를 사용하여 계층의 수준을 포함하는 계산 열을 만듭니다. 그런 다음 수준 및 **Hierarchyid** 에 대한 복합 인덱스를 만듭니다. 다음 코드를 실행하여 계산 열과 너비 우선 인덱스를 만듭니다.  
   
     ```sql  
     ALTER TABLE HumanResources.NewOrg   
@@ -242,7 +242,7 @@ SSMS에서 데이터베이스를 복원하기 위한 지침은 [데이터베이�
     GO  
     ```  
   
-2.  **EmployeeID** 열에 대한 고유 인덱스를 만듭니다. 이는 **EmployeeID** 번호를 기준으로 단일 직원을 단일 조회하는 일반적인 방법입니다. 다음 코드를 실행하여 **EmployeeID**에 대한 인덱스를 만듭니다.  
+2.  **EmployeeID** 열에 대한 고유 인덱스를 만듭니다. 이는 **EmployeeID** 번호를 기준으로 단일 직원을 단일 조회하는 일반적인 방법입니다. 다음 코드를 실행하여 **EmployeeID** 에 대한 인덱스를 만듭니다.  
   
     ```sql  
     CREATE UNIQUE INDEX EmpIDs_unq ON HumanResources.NewOrg(EmployeeID) ;  
@@ -290,7 +290,7 @@ SSMS에서 데이터베이스를 복원하기 위한 지침은 [데이터베이�
     /1/1/5/ 0x5AE3  3   11  adventure-works\ovidiu0
     ```
 
-    **EmployeeID**우선 인덱스: 행이 **EmployeeID** 시퀀스에 저장됩니다.  
+    **EmployeeID** 우선 인덱스: 행이 **EmployeeID** 시퀀스에 저장됩니다.  
 
     ```
     LogicalNode OrgNode H_Level EmployeeID  LoginID

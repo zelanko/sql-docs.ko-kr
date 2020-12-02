@@ -23,10 +23,10 @@ ms.assetid: ddfb0991-cde3-4b97-a5b7-ee450133f160
 author: VanMSFT
 ms.author: vanto
 ms.openlocfilehash: eea845c7ebe9b40db0d5dfc2b09a7f69d94321f2
-ms.sourcegitcommit: cc23d8646041336d119b74bf239a6ac305ff3d31
+ms.sourcegitcommit: c5078791a07330a87a92abb19b791e950672e198
 ms.translationtype: HT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 09/23/2020
+ms.lasthandoff: 11/26/2020
 ms.locfileid: "91115864"
 ---
 # <a name="original_login-transact-sql"></a>ORIGINAL_LOGIN(Transact-SQL)
@@ -55,7 +55,7 @@ ORIGINAL_LOGIN( )
  다음 예에서는 현재 세션의 실행 컨텍스트를 문의 호출자에서 `login1`로 전환합니다. `SUSER_SNAME` 및 `ORIGINAL_LOGIN` 함수를 사용하여 현재 세션 사용자(컨텍스트가 전환되는 대상 사용자)와 원래 로그인 계정을 반환할 수 있습니다. 
  
   >[!NOTE]
-  > ORIGINAL_LOGIN 함수는 Azure SQL Database에서 지원되지만, *로그인으로 실행*은 Azure SQL Database에서 지원되지 않으므로 다음 스크립트가 실패합니다. 
+  > ORIGINAL_LOGIN 함수는 Azure SQL Database에서 지원되지만, *로그인으로 실행* 은 Azure SQL Database에서 지원되지 않으므로 다음 스크립트가 실패합니다. 
   
 ```sql  
 USE AdventureWorks2012;  

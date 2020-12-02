@@ -19,10 +19,10 @@ ms.assetid: cb4deab8-642b-44d9-b3d9-85114d64021e
 author: MladjoA
 ms.author: mlandzic
 ms.openlocfilehash: 1d39e58c6dd4fa648d8d4118414925777eb3535b
-ms.sourcegitcommit: 22dacedeb6e8721e7cdb6279a946d4002cfb5da3
+ms.sourcegitcommit: c5078791a07330a87a92abb19b791e950672e198
 ms.translationtype: HT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 10/14/2020
+ms.lasthandoff: 11/26/2020
 ms.locfileid: "92038320"
 ---
 # <a name="stbuffer-geography-data-type"></a>STBuffer(geography 데이터 형식)
@@ -59,7 +59,7 @@ ms.locfileid: "92038320"
   
  `STBuffer()`는 경우에 따라 **FullGlobe** 인스턴스를 반환합니다. 예를 들어 `STBuffer()`는 버퍼 거리가 적도에서 극지방까지의 거리보다 큰 경우 두 극지방에서 **FullGlobe** 인스턴스를 반환합니다. 버퍼는 전체 구형을 초과할 수 없습니다.  
   
- 이 메서드는 버퍼 거리가 다음 제한을 초과하는 경우 **FullGlobe** 인스턴스에서 **ArgumentException**을 생성합니다.  
+ 이 메서드는 버퍼 거리가 다음 제한을 초과하는 경우 **FullGlobe** 인스턴스에서 **ArgumentException** 을 생성합니다.  
   
  0.999 \* *π* * minorAxis \* minorAxis / majorAxis (~0.999 \* 지구 둘레의 1/2)  
   

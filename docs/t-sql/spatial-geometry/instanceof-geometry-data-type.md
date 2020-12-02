@@ -19,10 +19,10 @@ ms.assetid: fdea1248-29a4-4bab-a60d-a1b359b5e109
 author: MladjoA
 ms.author: mlandzic
 ms.openlocfilehash: 5b79e0d67f11258afb8cf7aeebbfc4d52b9f4907
-ms.sourcegitcommit: e700497f962e4c2274df16d9e651059b42ff1a10
+ms.sourcegitcommit: c5078791a07330a87a92abb19b791e950672e198
 ms.translationtype: HT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 08/17/2020
+ms.lasthandoff: 11/26/2020
 ms.locfileid: "88497075"
 ---
 # <a name="instanceof-geometry-data-type"></a>InstanceOf(geometry 데이터 형식)
@@ -49,7 +49,7 @@ ms.locfileid: "88497075"
  CLR 반환 형식: **SqlBoolean**  
   
 ## <a name="remarks"></a>설명  
- 메서드의 입력은 **Geometry**, **Point**, **Curve**, **LineString**, **CircularString**, **CompoundCurve**, **Surface**, **Polygon**, **CurvePolygon**, **GeometryCollection**, **MultiSurface**, **MultiPolygon**, **MultiCurve**, **MultiLineString** 및 **MultiPoint** 형식 중 하나여야 합니다. 이 메서드는 다른 문자열이 입력에 사용되면 **ArgumentException**을 throw합니다.  
+ 메서드의 입력은 **Geometry**, **Point**, **Curve**, **LineString**, **CircularString**, **CompoundCurve**, **Surface**, **Polygon**, **CurvePolygon**, **GeometryCollection**, **MultiSurface**, **MultiPolygon**, **MultiCurve**, **MultiLineString** 및 **MultiPoint** 형식 중 하나여야 합니다. 이 메서드는 다른 문자열이 입력에 사용되면 **ArgumentException** 을 throw합니다.  
   
 ## <a name="examples"></a>예제  
  다음 예에서는 `MultiPoint` 인스턴스를 만들고 `InstanceOf()`를 사용하여 인스턴스가 `GeometryCollection`인지 확인합니다.  

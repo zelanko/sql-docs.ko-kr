@@ -16,10 +16,10 @@ author: stevestein
 ms.author: sstein
 monikerRange: =azuresqldb-current||>=sql-server-2016||=sqlallproducts-allversions||>=sql-server-linux-2017||=azuresqldb-mi-current
 ms.openlocfilehash: b81e565875074e3ba3fc08dd85f27b9c077ebb08
-ms.sourcegitcommit: a5398f107599102af7c8cda815d8e5e9a367ce7e
+ms.sourcegitcommit: c5078791a07330a87a92abb19b791e950672e198
 ms.translationtype: HT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 10/13/2020
+ms.lasthandoff: 11/26/2020
 ms.locfileid: "92005512"
 ---
 # <a name="rename-a-database"></a>데이터베이스 이름 바꾸기
@@ -66,13 +66,13 @@ ms.locfileid: "92005512"
 다음 단계를 수행하면 SQL Server Management Studio를 사용하여 SQL Server 또는 Azure SQL Database의 이름을 바꿀 수 있습니다.
 
   
-1. **개체 탐색기**에서 SQL 인스턴스에 연결합니다.  
+1. **개체 탐색기** 에서 SQL 인스턴스에 연결합니다.  
   
 2. 데이터베이스에 대한 열린 연결이 없는지 확인하세요. SQL Server를 사용하는 경우 [데이터베이스를 단일 사용자 모드로 설정](../../relational-databases/databases/set-a-database-to-single-user-mode.md)하여 열려 있는 모든 연결을 닫고 데이터베이스 이름을 변경하는 동안 다른 사용자가 연결하지 못하도록 할 수 있습니다.  
   
-3. 개체 탐색기에서 **데이터베이스**를 확장하고, 이름을 바꿀 데이터베이스를 마우스 오른쪽 단추로 클릭한 다음, **이름 바꾸기**를 클릭합니다.  
+3. 개체 탐색기에서 **데이터베이스** 를 확장하고, 이름을 바꿀 데이터베이스를 마우스 오른쪽 단추로 클릭한 다음, **이름 바꾸기** 를 클릭합니다.  
   
-4. 새 데이터베이스 이름을 입력하고 **확인**을 클릭합니다.  
+4. 새 데이터베이스 이름을 입력하고 **확인** 을 클릭합니다.  
   
 5. 경우에 따라 데이터베이스가 기본 데이터베이스인 경우 [이름을 바꾼 후 기본 데이터베이스 다시 설정](#reset-your-default-database-after-rename)을 참조하세요.
 
@@ -84,7 +84,7 @@ ms.locfileid: "92005512"
   
 1. 인스턴스의 `master` 데이터베이스에 연결합니다.  
 2. 쿼리 창을 엽니다.  
-3. 다음 예를 복사하여 쿼리 창에 붙여 넣고 **실행**을 클릭합니다. 다음 예에서는 `MyTestDatabase` 데이터베이스의 이름을 `MyTestDatabaseCopy`로 변경합니다.
+3. 다음 예를 복사하여 쿼리 창에 붙여 넣고 **실행** 을 클릭합니다. 다음 예에서는 `MyTestDatabase` 데이터베이스의 이름을 `MyTestDatabaseCopy`로 변경합니다.
   
    ```sql
    USE master;  
@@ -106,7 +106,7 @@ ms.locfileid: "92005512"
 1. 인스턴스의 `master` 데이터베이스에 연결합니다.  
 2. 쿼리 창을 엽니다.
 3. 데이터베이스를 사용 중인 사용자가 없는지 확인합니다.
-4. 다음 예를 복사하여 쿼리 창에 붙여 넣고 **실행**을 클릭합니다. 다음 예에서는 `MyTestDatabase` 데이터베이스의 이름을 `MyTestDatabaseCopy`로 변경합니다.
+4. 다음 예를 복사하여 쿼리 창에 붙여 넣고 **실행** 을 클릭합니다. 다음 예에서는 `MyTestDatabase` 데이터베이스의 이름을 `MyTestDatabaseCopy`로 변경합니다.
   
    ```sql
    ALTER DATABASE MyTestDatabase MODIFY NAME = MyTestDatabaseCopy ;

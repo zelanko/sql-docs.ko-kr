@@ -12,10 +12,10 @@ ms.assetid: db5c718a-6e7f-48ec-82a3-9d5b131716e5
 author: chugugrace
 ms.author: chugu
 ms.openlocfilehash: b98acd138794028dcecce9d121295154358799b2
-ms.sourcegitcommit: e700497f962e4c2274df16d9e651059b42ff1a10
+ms.sourcegitcommit: c5078791a07330a87a92abb19b791e950672e198
 ms.translationtype: HT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 08/17/2020
+ms.lasthandoff: 11/26/2020
 ms.locfileid: "88496156"
 ---
 # <a name="how-to-work-with-cdc-services"></a>CDC Service에서 작업하는 방법
@@ -27,7 +27,7 @@ ms.locfileid: "88496156"
   
 ### <a name="to-work-with-cdc-services"></a>CDC Service에서 작업하려면  
   
-1.  **시작** 메뉴에서 **Oracle CDC Service 구성**을 선택합니다.  
+1.  **시작** 메뉴에서 **Oracle CDC Service 구성** 을 선택합니다.  
   
 2.  왼쪽 창에서 **로컬 CDC Service** (루트 수준)를 선택합니다.  
   
@@ -37,7 +37,7 @@ ms.locfileid: "88496156"
   
          CDC Service 구성 콘솔 오른쪽의 **작업** 창에서 이 옵션을 선택합니다.  
   
-         **로컬 CDC Service** 를 마우스 오른쪽 단추로 클릭하고 **SQL Server 준비**를 선택할 수도 있습니다.  
+         **로컬 CDC Service** 를 마우스 오른쪽 단추로 클릭하고 **SQL Server 준비** 를 선택할 수도 있습니다.  
   
          Oracle CDC를 위한 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 인스턴스 준비 대화 상자가 열립니다.  
   
@@ -49,7 +49,7 @@ ms.locfileid: "88496156"
   
          CDC Service 구성 콘솔 오른쪽의 **작업** 창에서 **새 서비스** 를 선택합니다.  
   
-         **로컬 CDC Service** 를 마우스 오른쪽 단추로 클릭하고 **새 서비스**를 선택할 수도 있습니다.  
+         **로컬 CDC Service** 를 마우스 오른쪽 단추로 클릭하고 **새 서비스** 를 선택할 수도 있습니다.  
   
          새 Oracle CDC Service 대화 상자가 열립니다.  
   

@@ -25,10 +25,10 @@ ms.assetid: 8f5bd3ed-3e79-43a4-b6c1-435e4c2cc8cc
 author: chugugrace
 ms.author: chugu
 ms.openlocfilehash: 76296ff7dc7c5084a2c62613182c4d3e0fa6f80b
-ms.sourcegitcommit: e700497f962e4c2274df16d9e651059b42ff1a10
+ms.sourcegitcommit: c5078791a07330a87a92abb19b791e950672e198
 ms.translationtype: HT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 08/17/2020
+ms.lasthandoff: 11/26/2020
 ms.locfileid: "88484205"
 ---
 # <a name="implementing-external-metadata"></a>외부 메타데이터 구현
@@ -80,12 +80,12 @@ End Sub
  유효성 검사를 수행할 때는 추가 열 컬렉션을 기준으로 해야 하므로 외부 메타데이터 열 컬렉션을 유지 관리하는 구성 요소에 대한 추가 단계가 필요합니다. 유효성 검사는 연결 시 유효성 검사와 연결 해제 시 유효성 검사로 나눌 수 있습니다.  
   
 ### <a name="connected-validation"></a>연결 시 유효성 검사  
- 구성 요소가 외부 데이터 원본에 연결되어 있는 경우 입력 또는 출력 컬렉션의 열은 외부 데이터 원본을 기준으로 직접 유효성이 검사됩니다. 외부 메타데이터 컬렉션의 열에 대한 유효성 검사도 수행해야 합니다. [!INCLUDE[ssBIDevStudioFull](../../../includes/ssbidevstudiofull-md.md)]의 **고급 편집기**에서는 외부 메타데이터 컬렉션을 수정할 수 있으며 이 때 컬렉션의 변경 내용은 검색할 수 없으므로 이 작업이 필요합니다. 따라서 연결된 상태일 때 구성 요소에서는 외부 메타데이터 열 컬렉션의 열이 계속해서 외부 데이터 원본의 열을 반영하는지 확인해야 합니다.  
+ 구성 요소가 외부 데이터 원본에 연결되어 있는 경우 입력 또는 출력 컬렉션의 열은 외부 데이터 원본을 기준으로 직접 유효성이 검사됩니다. 외부 메타데이터 컬렉션의 열에 대한 유효성 검사도 수행해야 합니다. [!INCLUDE[ssBIDevStudioFull](../../../includes/ssbidevstudiofull-md.md)]의 **고급 편집기** 에서는 외부 메타데이터 컬렉션을 수정할 수 있으며 이 때 컬렉션의 변경 내용은 검색할 수 없으므로 이 작업이 필요합니다. 따라서 연결된 상태일 때 구성 요소에서는 외부 메타데이터 열 컬렉션의 열이 계속해서 외부 데이터 원본의 열을 반영하는지 확인해야 합니다.  
   
- **고급 편집기**에서 외부 메타데이터 컬렉션의 <xref:Microsoft.SqlServer.Dts.Pipeline.Wrapper.IDTSExternalMetadataColumnCollection100.IsUsed%2A> 속성을 **false**로 설정하여 해당 컬렉션을 숨길 수 있습니다. 그러나 이렇게 하면 사용자가 입력 또는 출력 컬렉션의 열을 외부 메타데이터 열 컬렉션의 열에 매핑하는 데 사용할 수 있는 편집기의 **열 매핑** 탭도 숨겨집니다. 이 속성을 **false**로 설정해도 개발자는 컬렉션을 프로그래밍 방식으로 수정할 수 있지만 [!INCLUDE[ssBIDevStudioFull](../../../includes/ssbidevstudiofull-md.md)]에서만 사용되는 구성 요소의 외부 메타데이터 열 컬렉션은 어느 정도 보호됩니다.  
+ **고급 편집기** 에서 외부 메타데이터 컬렉션의 <xref:Microsoft.SqlServer.Dts.Pipeline.Wrapper.IDTSExternalMetadataColumnCollection100.IsUsed%2A> 속성을 **false** 로 설정하여 해당 컬렉션을 숨길 수 있습니다. 그러나 이렇게 하면 사용자가 입력 또는 출력 컬렉션의 열을 외부 메타데이터 열 컬렉션의 열에 매핑하는 데 사용할 수 있는 편집기의 **열 매핑** 탭도 숨겨집니다. 이 속성을 **false** 로 설정해도 개발자는 컬렉션을 프로그래밍 방식으로 수정할 수 있지만 [!INCLUDE[ssBIDevStudioFull](../../../includes/ssbidevstudiofull-md.md)]에서만 사용되는 구성 요소의 외부 메타데이터 열 컬렉션은 어느 정도 보호됩니다.  
   
 ### <a name="disconnected-validation"></a>연결 해제 시 유효성 검사  
- 구성 요소가 외부 데이터 원본에 연결되어 있지 않은 경우 입력 또는 출력 컬렉션의 열은 외부 원본이 아니라 외부 메타데이터 컬렉션의 열을 기준으로 유효성이 검사되므로 유효성 검사 과정이 간단해집니다. 외부 데이터 원본에 대한 연결이 설정되어 있지 않거나 <xref:Microsoft.SqlServer.Dts.Pipeline.Wrapper.IDTSComponentMetaData100.ValidateExternalMetadata%2A> 속성이 **false**인 경우 구성 요소에서는 연결 해제 시 유효성 검사를 수행해야 합니다.  
+ 구성 요소가 외부 데이터 원본에 연결되어 있지 않은 경우 입력 또는 출력 컬렉션의 열은 외부 원본이 아니라 외부 메타데이터 컬렉션의 열을 기준으로 유효성이 검사되므로 유효성 검사 과정이 간단해집니다. 외부 데이터 원본에 대한 연결이 설정되어 있지 않거나 <xref:Microsoft.SqlServer.Dts.Pipeline.Wrapper.IDTSComponentMetaData100.ValidateExternalMetadata%2A> 속성이 **false** 인 경우 구성 요소에서는 연결 해제 시 유효성 검사를 수행해야 합니다.  
   
  다음 코드 예에서는 외부 메타데이터 열 컬렉션을 기준으로 유효성 검사를 수행하는 구성 요소의 구현을 보여 줍니다.  
   

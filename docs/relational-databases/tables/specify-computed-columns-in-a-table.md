@@ -15,10 +15,10 @@ author: stevestein
 ms.author: sstein
 monikerRange: =azuresqldb-current||>=sql-server-2016||=sqlallproducts-allversions||>=sql-server-linux-2017||=azuresqldb-mi-current
 ms.openlocfilehash: ee1d32ce60064d6ab42b04a9aeddec4a6252d479
-ms.sourcegitcommit: e700497f962e4c2274df16d9e651059b42ff1a10
+ms.sourcegitcommit: c5078791a07330a87a92abb19b791e950672e198
 ms.translationtype: HT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 08/17/2020
+ms.lasthandoff: 11/26/2020
 ms.locfileid: "88488609"
 ---
 # <a name="specify-computed-columns-in-a-table"></a>테이블에서 계산 열 지정
@@ -58,22 +58,22 @@ ms.locfileid: "88488609"
 
 ### <a name="to-add-a-new-computed-column"></a><a name="NewColumn"></a> 새 계산 열을 추가하려면
 
-1. **개체 탐색기**에서 새 계산 열을 추가할 테이블을 확장합니다. **열** 을 마우스 오른쪽 단추로 클릭하고 **새 열**을 선택합니다.
-2. 열 이름을 입력하고 기본 데이터 형식(**nchar**(10))을 적용합니다. [!INCLUDE[ssDE](../../includes/ssde-md.md)] 에서는 수식에 지정된 식에 데이터 형식 우선 순위 규칙을 적용하여 계산 열의 데이터 형식을 결정합니다. 예를 들어 수식에서 **money** 형식 열과 **int**형식 열을 참조하는 경우 데이터 형식의 우선 순위가 더 높으므로 계산 열은 **money** 형식입니다. 자세한 내용은 [데이터 형식 우선 순위&#40;Transact-SQL&#41;](../../t-sql/data-types/data-type-precedence-transact-sql.md)를 참조하세요.
+1. **개체 탐색기** 에서 새 계산 열을 추가할 테이블을 확장합니다. **열** 을 마우스 오른쪽 단추로 클릭하고 **새 열** 을 선택합니다.
+2. 열 이름을 입력하고 기본 데이터 형식(**nchar**(10))을 적용합니다. [!INCLUDE[ssDE](../../includes/ssde-md.md)] 에서는 수식에 지정된 식에 데이터 형식 우선 순위 규칙을 적용하여 계산 열의 데이터 형식을 결정합니다. 예를 들어 수식에서 **money** 형식 열과 **int** 형식 열을 참조하는 경우 데이터 형식의 우선 순위가 더 높으므로 계산 열은 **money** 형식입니다. 자세한 내용은 [데이터 형식 우선 순위&#40;Transact-SQL&#41;](../../t-sql/data-types/data-type-precedence-transact-sql.md)를 참조하세요.
 3. **열 속성** 탭에서 **계산 열 사양** 속성을 확장합니다.
 4. **(수식)** 자식 속성에서 오른쪽에 있는 표 형태 셀에 현재 열의 식을 입력합니다. 예를 들어 `SalesTotal` 열에 입력한 수식이 `SubTotal+TaxAmt+Freight`일 경우 이 수식은 테이블의 각 행에 대해 이 열에 값을 추가합니다.
 
    > [!IMPORTANT]
-   > 수식으로 데이터 형식이 다른 두 식을 결합할 경우 데이터 형식 우선 순위 규칙에 따라 우선 순위가 낮은 데이터 형식이 우선 순위가 높은 데이터 형식으로 변환됩니다. 이 암시적 변환이 지원되지 않으면 "`Error validating the formula for column column_name.`" 오류가 반환됩니다. CAST 또는 CONVERT 함수를 사용하여 데이터 형식 충돌을 해결합니다. 예를 들어 **nvarchar** 형식 열을 **int**형식 열과 결합할 경우 **수식에 표시된 대로 정수 형식을** nvarchar `('Prod'+CONVERT(nvarchar(23),ProductID))`로 변환해야 합니다. 자세한 내용은 [CAST 및 CONVERT&#40;Transact-SQL&#41;](../../t-sql/functions/cast-and-convert-transact-sql.md)를 참조하세요.
+   > 수식으로 데이터 형식이 다른 두 식을 결합할 경우 데이터 형식 우선 순위 규칙에 따라 우선 순위가 낮은 데이터 형식이 우선 순위가 높은 데이터 형식으로 변환됩니다. 이 암시적 변환이 지원되지 않으면 "`Error validating the formula for column column_name.`" 오류가 반환됩니다. CAST 또는 CONVERT 함수를 사용하여 데이터 형식 충돌을 해결합니다. 예를 들어 **nvarchar** 형식 열을 **int** 형식 열과 결합할 경우 **수식에 표시된 대로 정수 형식을** nvarchar `('Prod'+CONVERT(nvarchar(23),ProductID))`로 변환해야 합니다. 자세한 내용은 [CAST 및 CONVERT&#40;Transact-SQL&#41;](../../t-sql/functions/cast-and-convert-transact-sql.md)를 참조하세요.
 
 5. **지속형** 자식 속성 드롭다운에서 **예** 또는 **아니요** 를 선택하여 데이터를 지속할지 여부를 지정합니다.
 
-6. **파일** 메뉴에서 ‘테이블 이름’ **저장을 클릭합니다.** __
+6. **파일** 메뉴에서 ‘테이블 이름’ **저장을 클릭합니다.** 
 
 #### <a name="to-add-a-computed-column-definition-to-an-existing-column"></a>기존 열에 계산 열 정의를 추가하려면
 
-1. **개체 탐색기**에서 변경할 열이 포함된 테이블을 마우스 오른쪽 단추로 클릭하고 **열** 폴더를 확장합니다.
-2. 계산 열 수식을 지정할 열을 마우스 오른쪽 단추로 클릭하고 **삭제**를 클릭합니다. **확인**을 클릭합니다.
+1. **개체 탐색기** 에서 변경할 열이 포함된 테이블을 마우스 오른쪽 단추로 클릭하고 **열** 폴더를 확장합니다.
+2. 계산 열 수식을 지정할 열을 마우스 오른쪽 단추로 클릭하고 **삭제** 를 클릭합니다. **확인** 을 클릭합니다.
 3. 새 열을 추가하고 이전 절차에 따라 새 계산 열을 추가하여 계산 열 수식을 지정합니다.
 
 ## <a name="using-transact-sql"></a><a name="TsqlProcedure"></a> Transact-SQL 사용

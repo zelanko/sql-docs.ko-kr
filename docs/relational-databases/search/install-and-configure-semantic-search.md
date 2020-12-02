@@ -14,10 +14,10 @@ author: pmasl
 ms.author: pelopes
 ms.reviewer: mikeray
 ms.openlocfilehash: 9d3339525dbf67ee6dd1a4e4ae3b75215dd2c05d
-ms.sourcegitcommit: 4d370399f6f142e25075b3714e5c2ce056b1bfd0
+ms.sourcegitcommit: c5078791a07330a87a92abb19b791e950672e198
 ms.translationtype: HT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 10/09/2020
+ms.lasthandoff: 11/26/2020
 ms.locfileid: "91868067"
 ---
 # <a name="install-and-configure-semantic-search"></a>의미 체계 검색 설치 및 구성
@@ -37,7 +37,7 @@ GO
 ```  
   
 ###  <a name="install-semantic-search"></a><a name="BasicsSemanticSearch"></a> 의미 체계 검색 설치  
- 의미 체계 검색을 설치하려면 SQL Server 설치 중에 **설치할 기능** 페이지에서 **검색을 위한 전체 텍스트 및 의미 체계 추출**을 선택합니다.  
+ 의미 체계 검색을 설치하려면 SQL Server 설치 중에 **설치할 기능** 페이지에서 **검색을 위한 전체 텍스트 및 의미 체계 추출** 을 선택합니다.  
   
  통계 의미 체계 검색은 전체 텍스트 검색을 기반으로 합니다. [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 의 이 두 가지 선택적 기능이 함께 설치됩니다.  
   
@@ -80,7 +80,7 @@ GO
    
  [!INCLUDE[ssManStudio](../../includes/ssmanstudio-md.md)]를 사용하거나 **FOR ATTACH** 구문으로 [CREATE DATABASE&#40;SQL Server Transact-SQL&#41;](../../t-sql/statements/create-database-transact-sql.md)를 호출하여 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 인스턴스에 데이터베이스를 연결합니다. 자세한 내용은 [데이터베이스 분리 및 연결&#40;SQL Server&#41;](../../relational-databases/databases/database-detach-and-attach-sql-server.md)을 참조하세요.  
   
- 기본적으로 데이터베이스의 이름은 **semanticsdb**입니다. 필요에 따라 데이터베이스를 연결할 때 데이터베이스에 다른 이름을 지정할 수 있습니다. 이후 단계에서 데이터베이스를 등록할 때 이 이름을 제공해야 합니다.  
+ 기본적으로 데이터베이스의 이름은 **semanticsdb** 입니다. 필요에 따라 데이터베이스를 연결할 때 데이터베이스에 다른 이름을 지정할 수 있습니다. 이후 단계에서 데이터베이스를 등록할 때 이 이름을 제공해야 합니다.  
   
 ```sql  
 CREATE DATABASE semanticsdb  

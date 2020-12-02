@@ -22,10 +22,10 @@ ms.assetid: 2ac837c7-eca9-4d29-b06e-72e30450c68d
 author: VanMSFT
 ms.author: vanto
 ms.openlocfilehash: 239a48b378e186e6149a31012785835939d2cde7
-ms.sourcegitcommit: cc23d8646041336d119b74bf239a6ac305ff3d31
+ms.sourcegitcommit: c5078791a07330a87a92abb19b791e950672e198
 ms.translationtype: HT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 09/23/2020
+ms.lasthandoff: 11/26/2020
 ms.locfileid: "91115954"
 ---
 # <a name="object_definition-transact-sql"></a>OBJECT_DEFINITION(Transact-SQL)
@@ -45,7 +45,7 @@ OBJECT_DEFINITION ( object_id )
 
 ## <a name="arguments"></a>인수
  *object_id*  
- 사용할 개체의 ID입니다. *object_id*은 **int**이며 현재 데이터베이스 컨텍스트에 개체가 있다고 간주합니다.  
+ 사용할 개체의 ID입니다. *object_id* 은 **int** 이며 현재 데이터베이스 컨텍스트에 개체가 있다고 간주합니다.  
   
 ## <a name="return-types"></a>반환 형식  
  **nvarchar(max)**  
@@ -56,7 +56,7 @@ OBJECT_DEFINITION ( object_id )
  사용자는 소유하고 있거나 사용 권한을 부여 받은 보안 개체의 메타데이터만 볼 수 있습니다. 즉, 사용자가 개체에 대한 사용 권한이 없으면 OBJECT_DEFINITION과 같은 메타데이터 내보내기 기본 제공 함수가 NULL을 반환합니다. 자세한 내용은 [Metadata Visibility Configuration](../../relational-databases/security/metadata-visibility-configuration.md)을 참조하세요.  
   
 ## <a name="remarks"></a>설명  
- [!INCLUDE[ssDEnoversion](../../includes/ssdenoversion-md.md)]에서는 *object_id*가 현재 데이터베이스 컨텍스트에 있다고 가정합니다. 개체 정의의 데이터 정렬은 항상 호출하는 데이터베이스 컨텍스트의 데이터 정렬과 일치합니다.  
+ [!INCLUDE[ssDEnoversion](../../includes/ssdenoversion-md.md)]에서는 *object_id* 가 현재 데이터베이스 컨텍스트에 있다고 가정합니다. 개체 정의의 데이터 정렬은 항상 호출하는 데이터베이스 컨텍스트의 데이터 정렬과 일치합니다.  
   
  OBJECT_DEFINITION은 다음 개체 유형에 적용됩니다.  
   
@@ -81,7 +81,7 @@ OBJECT_DEFINITION ( object_id )
 -   V = 뷰  
   
 ## <a name="permissions"></a>사용 권한  
- 시스템 개체 정의는 공개적으로 표시됩니다. 개체 소유자나 ALTER, CONTROL, TAKE OWNERSHIP 또는 VIEW DEFINITION 권한 중 하나를 부여 받은 사람은 사용자 개체의 정의를 볼 수 있습니다. 이 권한은 **db_owner**, **db_ddladmin**및 **db_securityadmin** 고정 데이터베이스 역할의 멤버가 암시적으로 보유합니다.  
+ 시스템 개체 정의는 공개적으로 표시됩니다. 개체 소유자나 ALTER, CONTROL, TAKE OWNERSHIP 또는 VIEW DEFINITION 권한 중 하나를 부여 받은 사람은 사용자 개체의 정의를 볼 수 있습니다. 이 권한은 **db_owner**, **db_ddladmin** 및 **db_securityadmin** 고정 데이터베이스 역할의 멤버가 암시적으로 보유합니다.  
   
 ## <a name="examples"></a>예  
   

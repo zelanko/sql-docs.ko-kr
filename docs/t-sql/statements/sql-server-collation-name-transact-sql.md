@@ -19,10 +19,10 @@ author: markingmyname
 ms.author: maghan
 monikerRange: '>=aps-pdw-2016||=azuresqldb-current||=azure-sqldw-latest||>=sql-server-2016||=sqlallproducts-allversions||>=sql-server-linux-2017||=azuresqldb-mi-current'
 ms.openlocfilehash: afec53715458129253f1f2bebb8eee40214d15c6
-ms.sourcegitcommit: dd36d1cbe32cd5a65c6638e8f252b0bd8145e165
+ms.sourcegitcommit: c5078791a07330a87a92abb19b791e950672e198
 ms.translationtype: HT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 09/08/2020
+ms.lasthandoff: 11/26/2020
 ms.locfileid: "89541330"
 ---
 # <a name="sql-server-collation-name-transact-sql"></a>SQL Server 데이터 정렬 이름(Transact-SQL)
@@ -53,13 +53,13 @@ _CaseSensitivity_AccentSensitivity | _BIN
 
 **Pref** 대문자 우선을 지정합니다. 비교에서 대소문자를 구분하더라도 다른 차이가 없는 경우 대문자가 소문자보다 먼저 정렬됩니다.
 
-*Codepage* 데이터 정렬에 사용되는 코드 페이지를 표시하는 1~4자리 숫자를 지정합니다. **CP1**은 코드 페이지 1252를 지정하며 다른 모든 코드 페이지에 대해서는 완전한 코드 페이지 번호를 지정합니다. 예를 들어 **CP1251**은 코드 페이지 1251을 지정하며 **CP850**은 코드 페이지 850을 지정합니다.
+*Codepage* 데이터 정렬에 사용되는 코드 페이지를 표시하는 1~4자리 숫자를 지정합니다. **CP1** 은 코드 페이지 1252를 지정하며 다른 모든 코드 페이지에 대해서는 완전한 코드 페이지 번호를 지정합니다. 예를 들어 **CP1251** 은 코드 페이지 1251을 지정하며 **CP850** 은 코드 페이지 850을 지정합니다.
 
 *CaseSensitivity*
-**CI**는 대/소문자를 구분하지 않도록 지정하고 **CS**는 대/소문자를 구분하도록 지정합니다.
+**CI** 는 대/소문자를 구분하지 않도록 지정하고 **CS** 는 대/소문자를 구분하도록 지정합니다.
 
 *AccentSensitivity*
-**AI**는 악센트를 구분하지 않도록 지정하고 **AS**는 악센트를 구분하도록 지정합니다.
+**AI** 는 악센트를 구분하지 않도록 지정하고 **AS** 는 악센트를 구분하도록 지정합니다.
 
 **BIN** 사용할 이진 정렬 순서를 지정합니다.
 

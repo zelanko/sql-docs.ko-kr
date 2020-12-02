@@ -16,10 +16,10 @@ ms.assetid: dc7929cc-55ca-4a2c-a4b9-f5452f95bde8
 author: MladjoA
 ms.author: mlandzic
 ms.openlocfilehash: 832c49b68150be650885176b301ecd772cac82e2
-ms.sourcegitcommit: e700497f962e4c2274df16d9e651059b42ff1a10
+ms.sourcegitcommit: c5078791a07330a87a92abb19b791e950672e198
 ms.translationtype: HT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 08/17/2020
+ms.lasthandoff: 11/26/2020
 ms.locfileid: "88472432"
 ---
 # <a name="unionaggregate-geometry-data-type"></a>UnionAggregate(geometry 데이터 형식)
@@ -47,12 +47,12 @@ UnionAggregate ( geometry_operand )
  유효하지 않은 입력 값이 있는 경우 `FormatException`을 발생시킵니다. [STIsValid &#40;geometry 데이터 형식&#41;](../../t-sql/spatial-geometry/stisvalid-geometry-data-type.md) 참조  
   
 ## <a name="remarks"></a>설명  
- 이 메서드는 입력이 비어 있거나 입력에 다른 SRID가 있는 경우 **null**을 반환합니다. [Spatial Reference Identifier&#40;SRIDs&#41;](../../relational-databases/spatial/spatial-reference-identifiers-srids.md) 참조  
+ 이 메서드는 입력이 비어 있거나 입력에 다른 SRID가 있는 경우 **null** 을 반환합니다. [Spatial Reference Identifier&#40;SRIDs&#41;](../../relational-databases/spatial/spatial-reference-identifiers-srids.md) 참조  
   
  이 메서드는 **null** 입력을 무시합니다.  
   
 > [!NOTE]  
->  이 메서드는 모든 입력 값이 **null**인 경우 **null**을 반환합니다.  
+>  이 메서드는 모든 입력 값이 **null** 인 경우 **null** 을 반환합니다.  
   
 ## <a name="examples"></a>예제  
  다음 예에서는 테이블 변수에 있는 **geometry** 개체 집합의 합집합을 반환합니다.  

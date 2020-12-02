@@ -19,10 +19,10 @@ ms.assetid: 79d39d88-5440-49a7-9247-190eafce3f4f
 author: MladjoA
 ms.author: mlandzic
 ms.openlocfilehash: 3f31d1af11761ca358a1cbbb844733b9fc32c985
-ms.sourcegitcommit: e700497f962e4c2274df16d9e651059b42ff1a10
+ms.sourcegitcommit: c5078791a07330a87a92abb19b791e950672e198
 ms.translationtype: HT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 08/17/2020
+ms.lasthandoff: 11/26/2020
 ms.locfileid: "88467462"
 ---
 # <a name="stgeomfromwkb-geography-data-type"></a>STGeomFromWKB(geography 데이터 형식)
@@ -43,7 +43,7 @@ STGeomFromWKB ( 'WKB_geography' , SRID )
 
 ## <a name="arguments"></a>인수
  *WKB_geography*  
- 반환할 **geography** 인스턴스의 WKB 표현입니다. *WKB_geography*은 **varbinary(max)** 식입니다.  
+ 반환할 **geography** 인스턴스의 WKB 표현입니다. *WKB_geography* 은 **varbinary(max)** 식입니다.  
   
  *SRID*  
  반환할 **geography** 인스턴스의 SRID(Spatial Reference ID)를 나타내는 **int** 식입니다.  
@@ -56,9 +56,9 @@ STGeomFromWKB ( 'WKB_geography' , SRID )
 ## <a name="remarks"></a>설명  
  `STGeomFromText()`에 의해 반환되는 **geography** 인스턴스의 OGC 형식은 해당 WKB 입력으로 설정됩니다.  
   
- 이 메서드는 입력이 잘못된 경우 **FormatException**을 throw합니다.  
+ 이 메서드는 입력이 잘못된 경우 **FormatException** 을 throw합니다.  
   
- 이 메서드는 입력에 대척점 끝이 있을 경우 **ArgumentException**을 throw합니다.  
+ 이 메서드는 입력에 대척점 끝이 있을 경우 **ArgumentException** 을 throw합니다.  
   
 ## <a name="examples"></a>예  
  다음 예에서는 `STGeomFromWKB()`를 사용하여 `geography` 인스턴스를 만듭니다.  

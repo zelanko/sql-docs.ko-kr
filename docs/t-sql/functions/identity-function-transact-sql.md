@@ -23,10 +23,10 @@ ms.assetid: ebec77eb-fc02-4feb-b6c5-f0098d43ccb6
 author: VanMSFT
 ms.author: vanto
 ms.openlocfilehash: 364bcd6eb68ca7c529c56fae70109b79cbc1dc18
-ms.sourcegitcommit: cc23d8646041336d119b74bf239a6ac305ff3d31
+ms.sourcegitcommit: c5078791a07330a87a92abb19b791e950672e198
 ms.translationtype: HT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 09/23/2020
+ms.lasthandoff: 11/26/2020
 ms.locfileid: "91114734"
 ---
 # <a name="identity-function-transact-sql"></a>IDENTITY(함수)(Transact-SQL)
@@ -52,16 +52,16 @@ IDENTITY (data_type [ , seed , increment ] ) AS column_name
  ID 열의 데이터 형식입니다. ID 열의 유효한 데이터 형식은 **bit** 데이터 형식을 제외한 정수 데이터 형식 범주의 모든 데이터 형식 또는 **decimal** 데이터 형식입니다.  
   
  *seed*  
- 테이블의 첫 번째 행에 할당되는 정수 값입니다. 후속 행에는 각각 마지막 IDENTITY 값에 *증가*값을 더한 것과 같은 다음 ID 값이 할당됩니다. *초기값* 및 *증가값*을 모두 지정하지 않으면 기본값은 모두 1이 됩니다.  
+ 테이블의 첫 번째 행에 할당되는 정수 값입니다. 후속 행에는 각각 마지막 IDENTITY 값에 *증가* 값을 더한 것과 같은 다음 ID 값이 할당됩니다. *초기값* 및 *증가값* 을 모두 지정하지 않으면 기본값은 모두 1이 됩니다.  
   
  *increment*  
- 테이블의 연속된 행에 대해 *초기*값에 추가되는 정수 값입니다.  
+ 테이블의 연속된 행에 대해 *초기* 값에 추가되는 정수 값입니다.  
   
  *column_name*  
  새 테이블에 삽입될 열의 이름입니다.  
   
 ## <a name="return-types"></a>반환 형식  
- *data_type*과 같은 유형을 반환합니다.  
+ *data_type* 과 같은 유형을 반환합니다.  
   
 ## <a name="remarks"></a>설명  
  이 함수는 테이블에 열을 만들기 때문에 다음 방법 중 하나를 사용하여 선택 목록에서 열 이름을 지정해야 합니다.  

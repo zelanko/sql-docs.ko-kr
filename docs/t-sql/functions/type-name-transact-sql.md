@@ -24,10 +24,10 @@ author: julieMSFT
 ms.author: jrasnick
 monikerRange: '>=aps-pdw-2016||=azuresqldb-current||=azure-sqldw-latest||>=sql-server-2016||=sqlallproducts-allversions||>=sql-server-linux-2017||=azuresqldb-mi-current'
 ms.openlocfilehash: 9ddc348ba8ee7ccf9d37d9133272b48730965fb1
-ms.sourcegitcommit: 197a6ffb643f93592edf9e90b04810a18be61133
+ms.sourcegitcommit: c5078791a07330a87a92abb19b791e950672e198
 ms.translationtype: HT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 09/26/2020
+ms.lasthandoff: 11/26/2020
 ms.locfileid: "91379487"
 ---
 # <a name="type_name-transact-sql"></a>TYPE_NAME(Transact-SQL)
@@ -47,7 +47,7 @@ TYPE_NAME ( type_id )
 
 ## <a name="arguments"></a>인수
  *type_id*  
- 사용될 형식의 ID입니다. *type_id*는 **int**이며 호출자가 액세스할 수 있는 모든 스키마의 형식을 참조할 수 있습니다.  
+ 사용될 형식의 ID입니다. *type_id* 는 **int** 이며 호출자가 액세스할 수 있는 모든 스키마의 형식을 참조할 수 있습니다.  
   
 ## <a name="return-types"></a>반환 형식  
  **sysname**  
@@ -58,7 +58,7 @@ TYPE_NAME ( type_id )
  [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]에서 사용자는 소유하고 있거나 사용 권한을 부여받은 보안 개체의 메타데이터만 볼 수 있습니다. 즉, 사용자가 개체에 대한 사용 권한이 없으면 TYPE_NAME과 같은 메타데이터 내보내기 기본 제공 함수가 NULL을 반환합니다. 자세한 내용은 [Metadata Visibility Configuration](../../relational-databases/security/metadata-visibility-configuration.md)을 참조하세요.  
   
 ## <a name="remarks"></a>설명  
- TYPE_NAME은 *type_id*가 유효하지 않거나 호출자에게 유형을 참조할 수 있는 충분한 권한이 없는 경우 NULL을 반환합니다.  
+ TYPE_NAME은 *type_id* 가 유효하지 않거나 호출자에게 유형을 참조할 수 있는 충분한 권한이 없는 경우 NULL을 반환합니다.  
   
  TYPE_NAME은 시스템 데이터 형식에 사용할 수 있으며 사용자 정의 데이터 형식에도 사용할 수 있습니다. 형식은 모든 스키마에 포함될 수 있지만 항상 정규화되지 않은 형식 이름이 반환됩니다. 따라서 이름에 _스키마_**가 포함되지 않습니다.** 찾습니다.  
   

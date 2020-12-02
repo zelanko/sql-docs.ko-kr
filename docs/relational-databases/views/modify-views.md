@@ -18,10 +18,10 @@ author: stevestein
 ms.author: sstein
 monikerRange: '>=aps-pdw-2016||=azuresqldb-current||=azure-sqldw-latest||>=sql-server-2016||=sqlallproducts-allversions||>=sql-server-linux-2017||=azuresqldb-mi-current'
 ms.openlocfilehash: d273277eff9a9d731aca1f60115aef28ef27a25f
-ms.sourcegitcommit: e700497f962e4c2274df16d9e651059b42ff1a10
+ms.sourcegitcommit: c5078791a07330a87a92abb19b791e950672e198
 ms.translationtype: HT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 08/17/2020
+ms.lasthandoff: 11/26/2020
 ms.locfileid: "88472975"
 ---
 # <a name="modify-views"></a>뷰 수정
@@ -61,9 +61,9 @@ ms.locfileid: "88472975"
   
 #### <a name="to-modify-a-view"></a>뷰를 수정하려면  
   
-1.  **개체 탐색기**에서 뷰가 있는 데이터베이스 옆의 더하기 기호를 클릭한 다음 **뷰** 폴더 옆의 더하기 기호를 클릭합니다.  
+1.  **개체 탐색기** 에서 뷰가 있는 데이터베이스 옆의 더하기 기호를 클릭한 다음 **뷰** 폴더 옆의 더하기 기호를 클릭합니다.  
   
-2.  수정할 뷰를 마우스 오른쪽 단추로 클릭하고 **디자인**을 클릭합니다.  
+2.  수정할 뷰를 마우스 오른쪽 단추로 클릭하고 **디자인** 을 클릭합니다.  
   
 3.  쿼리 디자이너의 다이어그램 창에서 다음과 같은 방법으로 뷰를 변경합니다.  
   
@@ -71,19 +71,19 @@ ms.locfileid: "88472975"
   
     2.  다이어그램 창 내부를 마우스 오른쪽 단추로 클릭하고 **테이블 추가...** 를 선택한 다음, **테이블 추가** 대화 상자에서 뷰에 추가할 열을 선택합니다.  
   
-    3.  제거할 테이블의 제목 표시줄을 마우스 오른쪽 단추로 클릭하고 **제거**를 선택합니다.  
+    3.  제거할 테이블의 제목 표시줄을 마우스 오른쪽 단추로 클릭하고 **제거** 를 선택합니다.  
   
-4.  **파일** 메뉴에서 **저장**_view name_을 클릭합니다.  
+4.  **파일** 메뉴에서 **저장**_view name_ 을 클릭합니다.  
   
 ##  <a name="using-transact-sql"></a><a name="TsqlProcedure"></a> Transact-SQL 사용  
   
 #### <a name="to-modify-a-view"></a>뷰를 수정하려면  
   
-1.  **개체 탐색기**에서 [!INCLUDE[ssDE](../../includes/ssde-md.md)]인스턴스에 연결합니다.  
+1.  **개체 탐색기** 에서 [!INCLUDE[ssDE](../../includes/ssde-md.md)]인스턴스에 연결합니다.  
   
-2.  표준 도구 모음에서 **새 쿼리**를 클릭합니다.  
+2.  표준 도구 모음에서 **새 쿼리** 를 클릭합니다.  
   
-3.  다음 예를 복사하여 쿼리 창에 붙여 넣고 **실행**을 클릭합니다. 다음 예에서는 먼저 뷰를 만든 다음 ALTER VIEW를 사용하여 이 뷰를 수정합니다. WHERE 절이 뷰 정의에 추가됩니다.  
+3.  다음 예를 복사하여 쿼리 창에 붙여 넣고 **실행** 을 클릭합니다. 다음 예에서는 먼저 뷰를 만든 다음 ALTER VIEW를 사용하여 이 뷰를 수정합니다. WHERE 절이 뷰 정의에 추가됩니다.  
   
     ```  
     USE AdventureWorks2012 ;  

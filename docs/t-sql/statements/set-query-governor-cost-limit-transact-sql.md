@@ -24,10 +24,10 @@ ms.assetid: 3424bb44-6915-462d-a8d7-fe834af81387
 author: markingmyname
 ms.author: maghan
 ms.openlocfilehash: bb7b16a18832bbdea950843409b0a17153c7a05b
-ms.sourcegitcommit: dd36d1cbe32cd5a65c6638e8f252b0bd8145e165
+ms.sourcegitcommit: c5078791a07330a87a92abb19b791e950672e198
 ms.translationtype: HT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 09/08/2020
+ms.lasthandoff: 11/26/2020
 ms.locfileid: "89547480"
 ---
 # <a name="set-query_governor_cost_limit-transact-sql"></a>SET QUERY_GOVERNOR_COST_LIMIT(Transact-SQL)
@@ -53,7 +53,7 @@ SET QUERY_GOVERNOR_COST_LIMIT value
  "쿼리 비용"이란 특정 하드웨어 구성에서 쿼리를 완료하는 데 필요한 예상 소요 시간(초)입니다.  
   
 ## <a name="remarks"></a>설명  
- SET QUERY_GOVERNOR_COST_LIMIT 옵션은 현재 연결에만 적용되며 현재 연결 기간 동안 지속됩니다. **sp_configure**의 [쿼리 관리자 비용 제한 Server Configuration Option 구성](../../database-engine/configure-windows/configure-the-query-governor-cost-limit-server-configuration-option.md) 옵션을 사용하여 서버 차원의 쿼리 관리자 비용 제한 값을 변경할 수 있습니다. 이 옵션의 구성에 대한 자세한 내용은 [sp_configure](../../relational-databases/system-stored-procedures/sp-configure-transact-sql.md) 및 [Server Configuration Options &#40;SQL Server&#41;](../../database-engine/configure-windows/server-configuration-options-sql-server.md)를 참조하세요.  
+ SET QUERY_GOVERNOR_COST_LIMIT 옵션은 현재 연결에만 적용되며 현재 연결 기간 동안 지속됩니다. **sp_configure** 의 [쿼리 관리자 비용 제한 Server Configuration Option 구성](../../database-engine/configure-windows/configure-the-query-governor-cost-limit-server-configuration-option.md) 옵션을 사용하여 서버 차원의 쿼리 관리자 비용 제한 값을 변경할 수 있습니다. 이 옵션의 구성에 대한 자세한 내용은 [sp_configure](../../relational-databases/system-stored-procedures/sp-configure-transact-sql.md) 및 [Server Configuration Options &#40;SQL Server&#41;](../../database-engine/configure-windows/server-configuration-options-sql-server.md)를 참조하세요.  
   
  SET QUERY_GOVERNOR_COST_LIMIT 옵션은 실행 시간 또는 런타임에 설정되며, 구문 분석 시에는 설정되지 않습니다.  
   

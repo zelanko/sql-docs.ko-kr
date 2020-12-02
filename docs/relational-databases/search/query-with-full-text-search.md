@@ -19,18 +19,18 @@ ms.author: pelopes
 ms.reviewer: mikeray
 monikerRange: =azuresqldb-current||>=sql-server-2016||=sqlallproducts-allversions||>=sql-server-linux-2017||=azuresqldb-mi-current
 ms.openlocfilehash: c34b76e3712dceabf407fcece92f223bb97f1563
-ms.sourcegitcommit: 4d370399f6f142e25075b3714e5c2ce056b1bfd0
+ms.sourcegitcommit: c5078791a07330a87a92abb19b791e950672e198
 ms.translationtype: HT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 10/09/2020
+ms.lasthandoff: 11/26/2020
 ms.locfileid: "91867439"
 ---
 # <a name="query-with-full-text-search"></a>Query with Full-Text Search
 [!INCLUDE [SQL Server Azure SQL Database](../../includes/applies-to-version/sql-asdb.md)]
-조건자 **CONTAINS** 및 **FREETEXT**와 **SELECT** 문에서 행 집합 반환 함수 **CONTAINSTABLE** 및 **FREETEXTTABLE**을 사용하여 전체 텍스트 쿼리를 작성합니다. 이 문서에서는 각 조건자 및 함수의 예제를 제공하여 최적의 사용 방법을 선택할 수 있습니다.
+조건자 **CONTAINS** 및 **FREETEXT** 와 **SELECT** 문에서 행 집합 반환 함수 **CONTAINSTABLE** 및 **FREETEXTTABLE** 을 사용하여 전체 텍스트 쿼리를 작성합니다. 이 문서에서는 각 조건자 및 함수의 예제를 제공하여 최적의 사용 방법을 선택할 수 있습니다.
 
--   단어 및 구를 일치시키려면 **CONTAINS** 및 **CONTAINSTABLE**을 사용합니다.
--   정확한 단어가 아닌 의미를 일치시키려면 **FREETEXT** 및 **FREETEXTTABLE**을 사용합니다.
+-   단어 및 구를 일치시키려면 **CONTAINS** 및 **CONTAINSTABLE** 을 사용합니다.
+-   정확한 단어가 아닌 의미를 일치시키려면 **FREETEXT** 및 **FREETEXTTABLE** 을 사용합니다.
 
 ## <a name="examples-of-each-predicate-and-function"></a><a name="examples_simple"></a> 각 조건자 및 함수의 예제
 
@@ -86,7 +86,7 @@ GO
 ```  
   
 ### <a name="example---freetexttable"></a>예제 - FREETEXTTABLE  
- 다음 예에서는 순위가 높은 행을 먼저 반환하고 SELECT 목록에 각 행의 순위를 추가하도록 FREETEXTTABLE 쿼리를 확장합니다. 비슷한 쿼리를 작성하려면 **ProductDescriptionID**가 **ProductDescription** 테이블의 고유 키 열임을 알아야 합니다.  
+ 다음 예에서는 순위가 높은 행을 먼저 반환하고 SELECT 목록에 각 행의 순위를 추가하도록 FREETEXTTABLE 쿼리를 확장합니다. 비슷한 쿼리를 작성하려면 **ProductDescriptionID** 가 **ProductDescription** 테이블의 고유 키 열임을 알아야 합니다.  
   
 ```sql 
 USE AdventureWorks2012  
@@ -192,7 +192,7 @@ GO
 
 #### <a name="more-info-about-simple-term-searches"></a>간단한 단어 검색에 대한 자세한 정보
 
-전체 텍스트 검색에서 *단어*(또는 *토큰*)는 지정된 언어의 언어 규칙에 따라 적절한 단어 분리기에 의해 경계가 식별되는 문자열입니다. 올바른 *구*는 여러 단어로 구성됩니다. 문장 부호는 있을 수도 있고 없을 수도 있습니다.
+전체 텍스트 검색에서 *단어*(또는 *토큰*)는 지정된 언어의 언어 규칙에 따라 적절한 단어 분리기에 의해 경계가 식별되는 문자열입니다. 올바른 *구* 는 여러 단어로 구성됩니다. 문장 부호는 있을 수도 있고 없을 수도 있습니다.
 
 예를 들어 "croissant"은 단어이고 "café au lait"는 구입니다. 이와 같은 단어 및 구를 단순 단어라고 합니다.
 
@@ -217,7 +217,7 @@ GO
 
 #### <a name="more-info-about-prefix-searches"></a>접두사 검색에 대한 자세한 정보
 
-*접두사 단어*는 파생어를 만들거나 굴절형을 만들기 위해 단어 앞에 추가되는 문자열을 말합니다.
+*접두사 단어* 는 파생어를 만들거나 굴절형을 만들기 위해 단어 앞에 추가되는 문자열을 말합니다.
 
 -   단일 접두사 단어의 경우 지정된 단어로 시작하는 모든 단어가 결과 집합의 일부로 반환됩니다. 예를 들어 "auto*" 단어를 사용하면 "automatic", "automobile" 등이 검색됩니다.
 
@@ -240,11 +240,11 @@ WHERE CONTAINS (Comments, 'FORMSOF(INFLECTIONAL, "foot")')
 GO  
 ```  
   
-전체 텍스트 검색에서는 동사의 다양한 시제와 변화 또는 명사의 단수형과 복수형을 모두 검색할 수 있는 *형태소 분석기*를 사용합니다. 형태소 분석기에 대한 자세한 내용은 [검색을 위해 단어 분리기와 형태소 분석기 구성 및 관리](../../relational-databases/search/configure-and-manage-word-breakers-and-stemmers-for-search.md)를 참조하세요.  
+전체 텍스트 검색에서는 동사의 다양한 시제와 변화 또는 명사의 단수형과 복수형을 모두 검색할 수 있는 *형태소 분석기* 를 사용합니다. 형태소 분석기에 대한 자세한 내용은 [검색을 위해 단어 분리기와 형태소 분석기 구성 및 관리](../../relational-databases/search/configure-and-manage-word-breakers-and-stemmers-for-search.md)를 참조하세요.  
 
 #### <a name="more-info-about-generation-term-searches"></a>생성 단어 검색에 대한 자세한 정보
 
-*굴절형*은 동사의 여러 시제 및 변화와 명사의 단수형 및 복수형을 의미합니다.
+*굴절형* 은 동사의 여러 시제 및 변화와 명사의 단수형 및 복수형을 의미합니다.
 
 예를 들어 "drive"라는 단어의 굴절형을 검색한다고 가정합니다. 테이블의 여러 행에 "drive", "drives", "drove", "driving", "driven" 등의 단어가 포함되어 있는 경우 이러한 각 단어는 drive라는 단어를 활용하여 생성된 것이므로 모두 결과 집합에 포함됩니다.
 
@@ -252,7 +252,7 @@ GO
 
 ### <a name="search-for-synonyms-of-a-specific-word"></a>특정 단어의 동의어 검색
 
-*동의어 사전*은 단어에 대한 사용자 지정 동의어를 정의합니다. 동의어 사전 파일에 대한 자세한 내용은 [전체 텍스트 검색에 사용할 동의어 사전 파일 구성 및 관리](../../relational-databases/search/configure-and-manage-thesaurus-files-for-full-text-search.md)를 참조하세요.
+*동의어 사전* 은 단어에 대한 사용자 지정 동의어를 정의합니다. 동의어 사전 파일에 대한 자세한 내용은 [전체 텍스트 검색에 사용할 동의어 사전 파일 구성 및 관리](../../relational-databases/search/configure-and-manage-thesaurus-files-for-full-text-search.md)를 참조하세요.
 
 예를 들어 동의어 사전에 "{car, automobile, truck, van}" 항목을 추가하면 "car"라는 단어의 동의어 형태를 검색할 수 있습니다. "automobile", "truck", "van" 또는 "car"라는 단어는 각각 "car"라는 단어를 포함하는 동의어 확장 집합에 속하므로 이러한 단어를 포함하는 쿼리된 테이블의 모든 행이 결과 집합에 나타납니다.
 
@@ -260,7 +260,7 @@ GO
 
 ### <a name="search-for-a-word-near-another-word"></a>다른 단어에 근접한 단어 검색
 
-*근접 단어*는 서로 근접한 단어나 구를 나타냅니다. 첫 번째 검색 단어와 마지막 검색 단어를 분리하는 검색 대상이 아닌 단어의 최대 수를 지정할 수도 있습니다. 또한 임의의 순서나 지정한 순서로 단어 또는 구를 검색할 수 있습니다.
+*근접 단어* 는 서로 근접한 단어나 구를 나타냅니다. 첫 번째 검색 단어와 마지막 검색 단어를 분리하는 검색 대상이 아닌 단어의 최대 수를 지정할 수도 있습니다. 또한 임의의 순서나 지정한 순서로 단어 또는 구를 검색할 수 있습니다.
 
 예를 들어 "ice"라는 단어가 "hockey"라는 단어와 근접해 있거나 "ice skating"이라는 구가 "ice hockey"라는 구와 근접해 있는 행을 검색할 수 있습니다. 
 
@@ -292,7 +292,7 @@ GO
 
 #### <a name="more-info-about-weighted-term-searches"></a>가중치 단어 검색에 대한 자세한 정보
 
-가중된 단어 검색에서 *가중치*는 단어와 구 집합에서 각 단어와 구의 중요도를 나타냅니다. 가중치는 0.0이 가장 낮고 1.0이 가장 높습니다.
+가중된 단어 검색에서 *가중치* 는 단어와 구 집합에서 각 단어와 구의 중요도를 나타냅니다. 가중치는 0.0이 가장 낮고 1.0이 가장 높습니다.
 
 예를 들어 여러 단어를 검색하는 쿼리에서 각 검색 단어에 검색 조건에 있는 다른 단어에 대한 상대적 중요도를 나타내는 가중치를 할당할 수 있습니다. 이러한 쿼리 유형의 결과에서는 검색 단어에 지정한 상대적 가중치에 따라 관련성이 가장 높은 행이 먼저 반환됩니다. 결과 집합에는 지정된 단어(또는 단어 사이의 내용) 중 적어도 하나를 포함하는 문서 또는 행이 반환되지만 일부 결과는 검색된 여러 개의 단어와 관련된 가중치의 차이 때문에 다른 결과보다 관련이 높은 것으로 간주됩니다.
 
@@ -324,9 +324,9 @@ GO
 
  전체 텍스트 쿼리를 작성할 때 다음 옵션도 지정할 수 있습니다.
   
--   **대/소문자 구분**를 참조하세요. 전체 텍스트 검색 쿼리는 대/소문자를 구분합니다. 그러나 일본어에는 철자 표준화 개념이 대/소문자를 구분하지 않는 것과 비슷한 여러 가지 음성 철자법이 있습니다(예: 가나를 구분하지 않음). 이러한 철자 표준화는 지원되지 않습니다.  
+-   **대/소문자 구분** 를 참조하세요. 전체 텍스트 검색 쿼리는 대/소문자를 구분합니다. 그러나 일본어에는 철자 표준화 개념이 대/소문자를 구분하지 않는 것과 비슷한 여러 가지 음성 철자법이 있습니다(예: 가나를 구분하지 않음). 이러한 철자 표준화는 지원되지 않습니다.  
 
--   **중지 단어**를 참조하세요. 전체 텍스트 쿼리를 정의할 때 전체 텍스트 엔진은 검색 조건에서 중지 단어(의미 없는 단어라고도 함)를 삭제합니다. 중지 단어란 "a", "and", "is", "the" 등과 같이 자주 사용되지만 일반적으로 특정 텍스트 검색에는 도움이 되지 않는 단어입니다. 중지 단어는 중지 목록에 나열됩니다. 인덱싱할 때 쿼리 또는 인덱스에서 생략된 중지 단어를 확인할 수 있도록 각 전체 텍스트 인덱스는 특정 중지 목록과 연결됩니다. 자세한 내용은 [전체 텍스트 검색에 사용할 중지 단어와 중지 목록 구성 및 관리](../../relational-databases/search/configure-and-manage-stopwords-and-stoplists-for-full-text-search.md)를 참조하세요.  
+-   **중지 단어** 를 참조하세요. 전체 텍스트 쿼리를 정의할 때 전체 텍스트 엔진은 검색 조건에서 중지 단어(의미 없는 단어라고도 함)를 삭제합니다. 중지 단어란 "a", "and", "is", "the" 등과 같이 자주 사용되지만 일반적으로 특정 텍스트 검색에는 도움이 되지 않는 단어입니다. 중지 단어는 중지 목록에 나열됩니다. 인덱싱할 때 쿼리 또는 인덱스에서 생략된 중지 단어를 확인할 수 있도록 각 전체 텍스트 인덱스는 특정 중지 목록과 연결됩니다. 자세한 내용은 [전체 텍스트 검색에 사용할 중지 단어와 중지 목록 구성 및 관리](../../relational-databases/search/configure-and-manage-stopwords-and-stoplists-for-full-text-search.md)를 참조하세요.  
 
 -   **언어**. **LANGUAGE** 옵션을 사용합니다. 많은 쿼리 용어는 단어 분리기 동작에 크게 의존합니다. 올바른 단어 분리기(및 형태소 분석기)를 사용하고 있는지 확인하려면 LANGUAGE 옵션을 지정하는 것이 좋습니다. 자세한 내용은 [전체 텍스트 인덱스 생성 시 언어 선택](../../relational-databases/search/choose-a-language-when-creating-a-full-text-index.md)을 참조하세요.  
   

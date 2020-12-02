@@ -15,10 +15,10 @@ ms.reviewer: jroth
 ms.custom: seo-dt-2019
 monikerRange: =azuresqldb-current||>=sql-server-2016||=sqlallproducts-allversions||>=sql-server-linux-2017||=azuresqldb-mi-current
 ms.openlocfilehash: 8be99986e6ca9ded5bb28e53b5c3ae166e8b86b3
-ms.sourcegitcommit: e700497f962e4c2274df16d9e651059b42ff1a10
+ms.sourcegitcommit: c5078791a07330a87a92abb19b791e950672e198
 ms.translationtype: HT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 08/17/2020
+ms.lasthandoff: 11/26/2020
 ms.locfileid: "88490956"
 ---
 # <a name="json-path-expressions-sql-server"></a>JSON 경로 식(SQL Server)
@@ -34,17 +34,17 @@ ms.locfileid: "88490956"
   
 -   JSON 개체 또는 배열을 추출하기 위해 **JSON_QUERY** 를 호출하는 경우. 자세한 내용은 [JSON_QUERY&#40;Transact-SQL&#41;](../../t-sql/functions/json-query-transact-sql.md)를 참조하세요.  
   
--   JSON 문자열에서 속성의 값을 업데이트하기 위해 **JSON_MODIFY**를 호출하는 경우. 자세한 내용은 [JSON_MODIFY &#40;Transact-SQL&#41;](../../t-sql/functions/json-modify-transact-sql.md)을 참조하세요.  
+-   JSON 문자열에서 속성의 값을 업데이트하기 위해 **JSON_MODIFY** 를 호출하는 경우. 자세한 내용은 [JSON_MODIFY &#40;Transact-SQL&#41;](../../t-sql/functions/json-modify-transact-sql.md)을 참조하세요.  
 
 ## <a name="parts-of-a-path-expression"></a>경로 식의 요소
  경로 식에는 두 가지 구성 요소가 있습니다.  
   
-1.  값이 **lax** 또는 **strict**인 선택적 [Path 모드](#PATHMODE)  
+1.  값이 **lax** 또는 **strict** 인 선택적 [Path 모드](#PATHMODE)  
   
 2.  [PATH](#PATH) 자체.  
 
 ##  <a name="path-mode"></a><a name="PATHMODE"></a> Path mode  
- 경로 식의 시작 부분에서 키워드 **lax** 또는 **strict**을(를) 지정하여 PATH 모드를 선택적으로 선언합니다. 기본값은 **lax**입니다.  
+ 경로 식의 시작 부분에서 키워드 **lax** 또는 **strict** 을(를) 지정하여 PATH 모드를 선택적으로 선언합니다. 기본값은 **lax** 입니다.  
   
 -   **lax** 모드에서 경로 식에 오류가 포함되어 있으면 함수는 빈 값을 반환합니다. 예를 들어 **$.name** 값을 요청했는데 JSON 텍스트에 **name** 키가 포함되어 있지 않으면 함수는 null을 반환하지만 오류를 발생시키지 않습니다.  
   
@@ -98,7 +98,7 @@ SELECT * FROM OPENJSON(@json, N'lax $.info');
 |$|{ "people": [ { "name": "John",  "surname": "Doe" },<br />   { "name": "Jane",  "surname": null, "active": true } ] }|  
   
 ## <a name="how-built-in-functions-handle-duplicate-paths"></a>기본 제공 함수에서 중복 경로를 처리하는 방법  
- JSON 텍스트에 중복된 속성(예: 수준과 이름이 같은 두 개의 키)이 포함되는 경우 **JSON_VALUE** 및 **JSON_QUERY** 함수는 경로와 일치하는 첫 번째 값만 반환합니다. 중복 키를 포함하는 JSON 개체의 구문을 분석하고 모든 값을 반환하려면 다음 예제와 같이 **OPENJSON**을 사용합니다.  
+ JSON 텍스트에 중복된 속성(예: 수준과 이름이 같은 두 개의 키)이 포함되는 경우 **JSON_VALUE** 및 **JSON_QUERY** 함수는 경로와 일치하는 첫 번째 값만 반환합니다. 중복 키를 포함하는 JSON 개체의 구문을 분석하고 모든 값을 반환하려면 다음 예제와 같이 **OPENJSON** 을 사용합니다.  
   
 ```sql  
 DECLARE @json NVARCHAR(MAX);

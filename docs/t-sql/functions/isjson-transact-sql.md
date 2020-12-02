@@ -18,10 +18,10 @@ ms.author: jovanpop
 ms.reviewer: jroth
 monikerRange: = azuresqldb-current||= azure-sqldw-latest||>= sql-server-2016||>= sql-server-linux-2017||= sqlallproducts-allversions
 ms.openlocfilehash: 1021ea35eac59145cc5042e8775b432618464286
-ms.sourcegitcommit: cc23d8646041336d119b74bf239a6ac305ff3d31
+ms.sourcegitcommit: c5078791a07330a87a92abb19b791e950672e198
 ms.translationtype: HT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 09/23/2020
+ms.lasthandoff: 11/26/2020
 ms.locfileid: "91111064"
 ---
 # <a name="isjson-transact-sql"></a>ISJSON(Transact-SQL)
@@ -42,12 +42,12 @@ ISJSON ( expression )
  테스트할 문자열입니다.  
   
 ## <a name="return-value"></a>반환 값  
- 문자열에 유효한 JSON이 포함되어 있으면 1을 반환하고 그렇지 않으면 0을 반환합니다. *expression*이 null이면 null을 반환합니다.  
+ 문자열에 유효한 JSON이 포함되어 있으면 1을 반환하고 그렇지 않으면 0을 반환합니다. *expression* 이 null이면 null을 반환합니다.  
   
  오류를 반환하지 않습니다.  
   
 ## <a name="remarks"></a>설명  
- **ISJSON**은 동일한 수준에서 키의 고유성을 확인하지 않습니다.  
+ **ISJSON** 은 동일한 수준에서 키의 고유성을 확인하지 않습니다.  
   
 ## <a name="examples"></a>예제  
   

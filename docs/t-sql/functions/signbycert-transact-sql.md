@@ -25,10 +25,10 @@ ms.assetid: b4c6bced-4473-4bae-85b9-56deced495f9
 author: VanMSFT
 ms.author: vanto
 ms.openlocfilehash: acc73e861b0c27b4a1fa46e7c4c2efa0e23cb55d
-ms.sourcegitcommit: 197a6ffb643f93592edf9e90b04810a18be61133
+ms.sourcegitcommit: c5078791a07330a87a92abb19b791e950672e198
 ms.translationtype: HT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 09/26/2020
+ms.lasthandoff: 11/26/2020
 ms.locfileid: "91378919"
 ---
 # <a name="signbycert-transact-sql"></a>SIGNBYCERT(Transact-SQL)
@@ -48,16 +48,16 @@ SignByCert ( certificate_ID , @cleartext [ , 'password' ] )
 
 ## <a name="arguments"></a>인수
  *certificate_ID*  
- 현재 데이터베이스에 있는 인증서 ID입니다. *certificate*_ID는 **int**입니다.  
+ 현재 데이터베이스에 있는 인증서 ID입니다. *certificate* _ID는 **int** 입니다.  
   
  *\@일반 텍스트(cleartext)*  
  서명될 데이터가 들어 있는 **nvarchar**, **char**, **varchar** 또는 **nchar** 형식의 변수입니다.  
   
  **'** *password* **'**  
- 인증서 프라이빗 키를 암호화할 때 사용한 암호입니다. *암호*는 **nvarchar(128)** 입니다.  
+ 인증서 프라이빗 키를 암호화할 때 사용한 암호입니다. *암호* 는 **nvarchar(128)** 입니다.  
   
 ## <a name="return-types"></a>반환 형식  
- 최대 크기가 8,000바이트인 **varbinary**입니다.  
+ 최대 크기가 8,000바이트인 **varbinary** 입니다.  
   
 ## <a name="remarks"></a>설명  
  인증서에 대한 CONTROL 권한이 필요합니다.  

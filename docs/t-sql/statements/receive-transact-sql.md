@@ -23,10 +23,10 @@ ms.assetid: 878c6c14-37ab-4b87-9854-7f8f42bac7dd
 author: markingmyname
 ms.author: maghan
 ms.openlocfilehash: b299ace817088af33732d9e4a9984d7978709f6c
-ms.sourcegitcommit: b93beb4f03aee2c1971909cb1d15f79cd479a35c
+ms.sourcegitcommit: c5078791a07330a87a92abb19b791e950672e198
 ms.translationtype: HT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 09/29/2020
+ms.lasthandoff: 11/26/2020
 ms.locfileid: "91498184"
 ---
 # <a name="receive-transact-sql"></a>RECEIVE(Transact-SQL)
@@ -84,10 +84,10 @@ ms.locfileid: "91498184"
  메시지를 가져올 큐를 지정합니다.  
   
  *database_name*  
- 메시지를 받을 큐가 포함된 데이터베이스의 이름입니다. *데이터베이스 이름*을 제공하지 않으면 기본값은 현재 데이터베이스입니다.  
+ 메시지를 받을 큐가 포함된 데이터베이스의 이름입니다. *데이터베이스 이름* 을 제공하지 않으면 기본값은 현재 데이터베이스입니다.  
   
  *schema_name*  
- 메시지를 받을 큐를 소유하는 스키마의 이름입니다. *스키마 이름*을 제공하지 않으면 기본값은 현재 사용자의 기본 스키마입니다.  
+ 메시지를 받을 큐를 소유하는 스키마의 이름입니다. *스키마 이름* 을 제공하지 않으면 기본값은 현재 사용자의 기본 스키마입니다.  
   
  *queue_name*  
  메시지를 받을 큐의 이름입니다.  
@@ -99,20 +99,20 @@ ms.locfileid: "91498184"
  받은 메시지에 대한 대화 또는 대화 그룹을 지정합니다. 생략하면 사용 가능한 다음 대화 그룹에서 메시지를 반환합니다.  
   
  conversation_handle = *conversation_handle*  
- 받은 메시지에 대한 대화를 지정합니다. 제공된 *대화 핸들*은 **uniqueidentifer**이거나 **uniqueidentifier**로 변환이 가능한 형식이어야 합니다.  
+ 받은 메시지에 대한 대화를 지정합니다. 제공된 *대화 핸들* 은 **uniqueidentifer** 이거나 **uniqueidentifier** 로 변환이 가능한 형식이어야 합니다.  
   
  conversation_group_id = *conversation_group_id*  
- 받은 메시지에 대한 대화 그룹을 지정합니다. 제공된 *대화 그룹 ID*는 **uniqueidentifer**이거나 **uniqueidentifier**로 변환이 가능한 형식이어야 합니다.  
+ 받은 메시지에 대한 대화 그룹을 지정합니다. 제공된 *대화 그룹 ID* 는 **uniqueidentifer** 이거나 **uniqueidentifier** 로 변환이 가능한 형식이어야 합니다.  
   
  TIMEOUT *제한 시간*  
- 문이 메시지를 대기하는 시간(밀리초)을 지정합니다. 이 절은 WAITFOR 절에서만 사용할 수 있습니다. 이 절을 지정하지 않거나 시간 제한이 -**1**이면 대기 시간은 무제한입니다. 제한 시간이 만료되면 RECEIVE가 빈 결과 집합을 반환합니다.  
+ 문이 메시지를 대기하는 시간(밀리초)을 지정합니다. 이 절은 WAITFOR 절에서만 사용할 수 있습니다. 이 절을 지정하지 않거나 시간 제한이 -**1** 이면 대기 시간은 무제한입니다. 제한 시간이 만료되면 RECEIVE가 빈 결과 집합을 반환합니다.  
   
 ## <a name="remarks"></a>설명  
   
 > [!IMPORTANT]  
 >  일괄 처리 또는 저장 프로시저에서 RECEIVE 문이 첫 번째 문이 아닌 경우 이전 문은 세미콜론(;)으로 끝나야 합니다.  
   
- RECEIVE 문은 큐에서 메시지를 읽고 결과 집합을 반환합니다. 결과 집합은 없거나 1개 이상의 행으로 구성되며 각 행에는 메시지 하나가 들어 있습니다. INTO 절을 사용하지 않고 *column_specifier*에서 지역 변수에 값을 할당하지 않으면 명령문은 호출 프로그램에 결과 집합을 반환합니다.  
+ RECEIVE 문은 큐에서 메시지를 읽고 결과 집합을 반환합니다. 결과 집합은 없거나 1개 이상의 행으로 구성되며 각 행에는 메시지 하나가 들어 있습니다. INTO 절을 사용하지 않고 *column_specifier* 에서 지역 변수에 값을 할당하지 않으면 명령문은 호출 프로그램에 결과 집합을 반환합니다.  
   
  RECEIVE 문에서 반환하는 메시지는 다양한 유형일 수 있습니다. 애플리케이션은 **message_type_name** 열을 사용하여 각 메시지를 연관된 메시지 유형을 처리하는 코드로 라우팅할 수 있습니다. 메시지 유형에는 다음과 같은 두 가지가 있습니다.  
   
@@ -120,17 +120,17 @@ ms.locfileid: "91498184"
   
 -   상태 또는 오류 정보를 반환하는 [!INCLUDE[ssSB](../../includes/sssb-md.md)] 시스템 메시지.  
   
- 큐에서 메시지 보존 기간을 지정하지 않으면 RECEIVE 문은 받은 메시지를 큐에서 제거합니다. 큐의 RETENTION 설정이 ON이면 RECEIVE 문은 **status** 열을 **0**으로 업데이트하고 메시지를 큐에 그대로 남겨둡니다. RECEIVE 문을 포함하는 트랜잭션이 롤백되면 트랜잭션 내에 있는 큐의 모든 변경 내용도 롤백되어 메시지를 큐로 반환합니다.  
+ 큐에서 메시지 보존 기간을 지정하지 않으면 RECEIVE 문은 받은 메시지를 큐에서 제거합니다. 큐의 RETENTION 설정이 ON이면 RECEIVE 문은 **status** 열을 **0** 으로 업데이트하고 메시지를 큐에 그대로 남겨둡니다. RECEIVE 문을 포함하는 트랜잭션이 롤백되면 트랜잭션 내에 있는 큐의 모든 변경 내용도 롤백되어 메시지를 큐로 반환합니다.  
   
- RECEIVE 문에 의해 반환된 모든 메시지는 동일한 대화 그룹에 속합니다. RECEIVE 문은 문을 포함하는 트랜잭션이 완료될 때까지 반환된 메시지에 대한 대화 그룹을 잠급니다. RECEIVE 문은 **status**가 **1**인 메시지를 반환합니다. RECEIVE 문에 의해 반환된 결과 집합은 다음과 같이 암시적으로 정렬됩니다.  
+ RECEIVE 문에 의해 반환된 모든 메시지는 동일한 대화 그룹에 속합니다. RECEIVE 문은 문을 포함하는 트랜잭션이 완료될 때까지 반환된 메시지에 대한 대화 그룹을 잠급니다. RECEIVE 문은 **status** 가 **1** 인 메시지를 반환합니다. RECEIVE 문에 의해 반환된 결과 집합은 다음과 같이 암시적으로 정렬됩니다.  
   
 -   여러 대화의 메시지가 WHERE 절 조건을 충족하는 경우 RECEIVE 문은 한 대화의 모든 메시지를 반환한 후 다른 대화의 메시지를 반환합니다. 대화는 우선 순위의 내림차순으로 처리됩니다.  
   
--   특정 대화에 대해 RECEIVE 문은 메시지를 **message_sequence_number**의 오름차순으로 반환합니다.  
+-   특정 대화에 대해 RECEIVE 문은 메시지를 **message_sequence_number** 의 오름차순으로 반환합니다.  
   
- RECEIVE 문의 WHERE 절에는 **conversation_handle** 또는 **conversation_group_id**를 사용하는 검색 조건이 하나만 포함될 수 있습니다. 검색 조건에는 큐에 있는 하나 이상의 다른 열이 포함되지 않습니다. **conversation_handle** 또는 **conversation_group_id**는 식이 될 수 없습니다. 반환되는 메시지 집합은 WHERE 절에 지정된 조건에 따라 달라집니다.  
+ RECEIVE 문의 WHERE 절에는 **conversation_handle** 또는 **conversation_group_id** 를 사용하는 검색 조건이 하나만 포함될 수 있습니다. 검색 조건에는 큐에 있는 하나 이상의 다른 열이 포함되지 않습니다. **conversation_handle** 또는 **conversation_group_id** 는 식이 될 수 없습니다. 반환되는 메시지 집합은 WHERE 절에 지정된 조건에 따라 달라집니다.  
   
--   **conversation_handle**을 지정하면 RECEIVE가 지정된 대화에 있는 큐에서 사용 가능한 모든 메시지를 반환합니다.  
+-   **conversation_handle** 을 지정하면 RECEIVE가 지정된 대화에 있는 큐에서 사용 가능한 모든 메시지를 반환합니다.  
   
 -   **conversation_group_id** 지정하면 RECEIVE가 지정된 대화 그룹에 속한 모든 대화의 큐에서 사용 가능한 모든 메시지를 반환합니다.  
   
@@ -159,7 +159,7 @@ ms.locfileid: "91498184"
   
 |열 이름|데이터 형식|Description|  
 |-----------------|---------------|-----------------|  
-|**status**|**tinyint**|메시지의 상태입니다. RECEIVE 명령에 의해 반환되는 메시지는 상태가 항상 **0**입니다. 큐의 메시지는 다음 값 중 하나를 포함할 수 있습니다.<br /><br /> **0**=준비**1**=받은 메시지**2**=아직 완료되지 않음**3**=보낸 메시지 보유|  
+|**status**|**tinyint**|메시지의 상태입니다. RECEIVE 명령에 의해 반환되는 메시지는 상태가 항상 **0** 입니다. 큐의 메시지는 다음 값 중 하나를 포함할 수 있습니다.<br /><br /> **0**=준비 **1**=받은 메시지 **2**=아직 완료되지 않음 **3**=보낸 메시지 보유|  
 |**priority**|**tinyint**|메시지에 적용된 대화의 우선 순위 수준입니다.|  
 |**queuing_order**|**bigint**|큐 내의 메시지 정렬 번호입니다.|  
 |**conversation_group_id**|**uniqueidentifier**|이 메시지가 속하는 대화 그룹의 식별자입니다.|  
@@ -171,7 +171,7 @@ ms.locfileid: "91498184"
 |**service_contract_id**|**int**|대화에서 준수하는 계약의 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 개체 식별자입니다.|  
 |**message_type_name**|**nvarchar(256)**|메시지 형식을 설명하는 메시지 유형의 이름입니다. 메시지는 애플리케이션 메시지 유형이거나 Broker 시스템 메시지일 수 있습니다.|  
 |**message_type_id**|**int**|메시지를 설명하는 메시지 유형의 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 개체 식별자입니다.|  
-|**validation**|**nchar(2)**|메시지에 사용된 유효성 검사입니다.<br /><br /> **E**=Empty**N**=None**X**=XML|  
+|**validation**|**nchar(2)**|메시지에 사용된 유효성 검사입니다.<br /><br /> **E**=Empty **N**=None **X**=XML|  
 |**message_body**|**varbinary(MAX)**|메시지 내용입니다.|  
   
 ## <a name="permissions"></a>사용 권한  

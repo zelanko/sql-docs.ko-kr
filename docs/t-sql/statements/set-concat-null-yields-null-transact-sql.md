@@ -25,10 +25,10 @@ author: markingmyname
 ms.author: maghan
 monikerRange: '>=aps-pdw-2016||=azure-sqldw-latest||>=sql-server-2016||=sqlallproducts-allversions||>=sql-server-linux-2017||=azuresqldb-mi-current'
 ms.openlocfilehash: cc2e5858e978aa88c55e2cdbbd7c54cb06a814dc
-ms.sourcegitcommit: 8f062015c2a033f5a0d805ee4adabbe15e7c8f94
+ms.sourcegitcommit: c5078791a07330a87a92abb19b791e950672e198
 ms.translationtype: HT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 09/25/2020
+ms.lasthandoff: 11/26/2020
 ms.locfileid: "91226773"
 ---
 # <a name="set-concat_null_yields_null-transact-sql"></a>SET CONCAT_NULL_YIELDS_NULL(Transact-SQL)
@@ -67,7 +67,7 @@ SET CONCAT_NULL_YIELDS_NULL ON
   
  SET CONCAT_NULL_YIELDS_NULL 옵션은 실행 시간 또는 런타임에 설정되며, 구문 분석 시에는 설정되지 않습니다.  
 
-인덱싱된 뷰, 계산 열의 인덱스, 필터링된 인덱스 또는 부분 인덱스를 만들거나 변경할 때는 SET CONCAT_NULL_YIELDS_NULL이 **ON**이어야 합니다. SET CONCAT_NULL_YIELDS_NULL이 **OFF**이면 계산 열의 인덱스, 필터링된 인덱스, 부분 인덱스 또는 인덱싱된 뷰가 있는 테이블에서 CREATE, UPDATE, INSERT, DELETE 문이 실패합니다. 인덱싱된 뷰 및 계산 열의 인덱스에 사용되는 필수 SET 옵션 설정에 대한 자세한 내용은 [SET Statements &#40;Transact-SQL&#41;](../../t-sql/statements/set-statements-transact-sql.md)에서 "SET 문 사용 시 고려 사항"을 참조하세요.
+인덱싱된 뷰, 계산 열의 인덱스, 필터링된 인덱스 또는 부분 인덱스를 만들거나 변경할 때는 SET CONCAT_NULL_YIELDS_NULL이 **ON** 이어야 합니다. SET CONCAT_NULL_YIELDS_NULL이 **OFF** 이면 계산 열의 인덱스, 필터링된 인덱스, 부분 인덱스 또는 인덱싱된 뷰가 있는 테이블에서 CREATE, UPDATE, INSERT, DELETE 문이 실패합니다. 인덱싱된 뷰 및 계산 열의 인덱스에 사용되는 필수 SET 옵션 설정에 대한 자세한 내용은 [SET Statements &#40;Transact-SQL&#41;](../../t-sql/statements/set-statements-transact-sql.md)에서 "SET 문 사용 시 고려 사항"을 참조하세요.
   
  CONCAT_NULL_YIELDS_NULL 옵션을 OFF로 설정하면 서버 경계 간에 문자열을 연결할 수 없습니다.  
   

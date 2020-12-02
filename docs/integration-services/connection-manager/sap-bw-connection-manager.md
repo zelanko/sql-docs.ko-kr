@@ -14,10 +14,10 @@ f1_keywords:
 author: chugugrace
 ms.author: chugu
 ms.openlocfilehash: 6e09a6cdf6f8d863e57d2de0749e29b33c989eea
-ms.sourcegitcommit: c7f40918dc3ecdb0ed2ef5c237a3996cb4cd268d
+ms.sourcegitcommit: c5078791a07330a87a92abb19b791e950672e198
 ms.translationtype: HT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 10/05/2020
+ms.lasthandoff: 11/26/2020
 ms.locfileid: "91719581"
 ---
 # <a name="sap-bw-connection-manager"></a>SAP BW 연결 관리자
@@ -30,7 +30,7 @@ ms.locfileid: "91719581"
 > [!IMPORTANT]  
 >  SAP BW용 Microsoft Connector 1.1 설명서는 SAP Netweaver BW 환경에 익숙한 것으로 가정합니다. SAP Netweaver BW 또는 SAP Netweaver BW 개체 및 프로세스 구성 방법에 대한 자세한 내용은 SAP 설명서를 참조하십시오.  
   
- SAP BW 연결 관리자를 패키지에 추가하면 연결 관리자의 **ConnectionManagerType** 속성이 **SAPBI**로 설정됩니다.  
+ SAP BW 연결 관리자를 패키지에 추가하면 연결 관리자의 **ConnectionManagerType** 속성이 **SAPBI** 로 설정됩니다.  
   
 ## <a name="configuring-the-sap-bw-connection-manager"></a>SAP BW 연결 관리자 구성  
  다음과 같은 방법으로 SAP BW 연결 관리자를 구성할 수 있습니다.  
@@ -75,7 +75,7 @@ ms.locfileid: "91719581"
   
          또는  
   
-    -   SAP BW 연결 관리자를 마우스 오른쪽 단추로 클릭한 다음 **편집**을 선택합니다.  
+    -   SAP BW 연결 관리자를 마우스 오른쪽 단추로 클릭한 다음 **편집** 을 선택합니다.  
   
 ### <a name="options"></a>옵션  
   
@@ -150,7 +150,7 @@ ms.locfileid: "91719581"
  로그 디렉터리로 사용할 폴더를 찾아봅니다.  
   
  **연결 테스트**  
- 사용자가 제공한 값을 사용하여 연결을 테스트합니다. **연결 테스트**를 클릭하면 메시지 상자가 표시되고 연결이 성공했는지 여부가 표시됩니다.  
+ 사용자가 제공한 값을 사용하여 연결을 테스트합니다. **연결 테스트** 를 클릭하면 메시지 상자가 표시되고 연결이 성공했는지 여부가 표시됩니다.  
   
 ## <a name="see-also"></a>관련 항목  
  [Microsoft Connector for SAP BW 구성 요소](../../integration-services/microsoft-connector-for-sap-bw-components.md)  

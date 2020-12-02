@@ -15,10 +15,10 @@ ms.assetid: 134e14ce-4f8d-4a20-889a-918014c841d8
 author: chugugrace
 ms.author: chugu
 ms.openlocfilehash: a65f5d8114907472eb03aa06e428927aa1408b7b
-ms.sourcegitcommit: e700497f962e4c2274df16d9e651059b42ff1a10
+ms.sourcegitcommit: c5078791a07330a87a92abb19b791e950672e198
 ms.translationtype: HT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 08/17/2020
+ms.lasthandoff: 11/26/2020
 ms.locfileid: "88484936"
 ---
 # <a name="validate-dialog-box"></a>유효성 검사 대화 상자
@@ -48,7 +48,7 @@ ms.locfileid: "88484936"
   
 4.  유효성을 검사하려는 프로젝트 또는 패키지가 포함된 폴더를 확장합니다.  
   
-5.  프로젝트 또는 패키지를 마우스 오른쪽 단추로 클릭하고 **유효성 검사**를 클릭합니다.  
+5.  프로젝트 또는 패키지를 마우스 오른쪽 단추로 클릭하고 **유효성 검사** 를 클릭합니다.  
   
 ##  <a name="set-the-options-on-the-general-page"></a><a name="general"></a> 일반 페이지의 옵션 설정  
  **환경**  

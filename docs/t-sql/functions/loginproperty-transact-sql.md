@@ -34,10 +34,10 @@ ms.assetid: b34df777-79b0-49a5-88db-b99998479a5d
 author: VanMSFT
 ms.author: vanto
 ms.openlocfilehash: 0daf074f9aff7c9e27c5b06744048ebc6af2e5ed
-ms.sourcegitcommit: cc23d8646041336d119b74bf239a6ac305ff3d31
+ms.sourcegitcommit: c5078791a07330a87a92abb19b791e950672e198
 ms.translationtype: HT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 09/23/2020
+ms.lasthandoff: 11/26/2020
 ms.locfileid: "91115998"
 ---
 # <a name="loginproperty-transact-sql"></a>LOGINPROPERTY(Transact-SQL)
@@ -60,14 +60,14 @@ LOGINPROPERTY ( 'login_name' , 'property_name' )
  로그인 속성 상태가 반환되는 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 로그인의 이름입니다.  
   
  *propertyname*  
- 반환될 로그인 속성 정보가 포함된 식입니다. *propertyname*은 다음 값 중 하나일 수 있습니다.  
+ 반환될 로그인 속성 정보가 포함된 식입니다. *propertyname* 은 다음 값 중 하나일 수 있습니다.  
   
 |값|Description|  
 |-----------|-----------------|  
 |**BadPasswordCount**|잘못된 암호를 사용하여 연속해서 로그인을 시도한 횟수를 반환합니다.|  
 |**BadPasswordTime**|잘못된 암호를 사용하여 마지막으로 로그인을 시도한 시간을 반환합니다.|  
 |**DaysUntilExpiration**|암호 만료일까지 남은 일 수를 반환합니다.|  
-|**DefaultDatabase**|데이터베이스가 지정되지 않은 경우 메타데이터 또는 **master**에 저장된 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 로그인의 기본 데이터베이스를 반환합니다. [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 이외 로그인이 제공되는 사용자(예: Windows 인증 사용자)의 경우 NULL을 반환합니다.|  
+|**DefaultDatabase**|데이터베이스가 지정되지 않은 경우 메타데이터 또는 **master** 에 저장된 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 로그인의 기본 데이터베이스를 반환합니다. [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 이외 로그인이 제공되는 사용자(예: Windows 인증 사용자)의 경우 NULL을 반환합니다.|  
 |**DefaultLanguage**|메타데이터에 저장된 로그인 기본 언어를 반환합니다. [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 이외 로그인이 제공되는 사용자(예: Windows 인증 사용자)의 경우 NULL을 반환합니다.|  
 |**HistoryLength**|암호 정책 적용 메커니즘을 사용하여 로그인에 대해 추적된 암호의 수를 반환합니다. 암호 정책이 적용되지 않을 경우 0이며 암호 정책 적용은 1에서 시작됩니다.|  
 |**IsExpired**|로그인이 만료되었는지 여부를 나타납니다.|  
@@ -81,21 +81,21 @@ LOGINPROPERTY ( 'login_name' , 'property_name' )
 ## <a name="returns"></a>반환  
  데이터 형식은 요청된 값에 따라 달라집니다.  
   
- **IsLocked**, **IsExpired** 및 **IsMustChange**는 **int** 형식입니다.  
+ **IsLocked**, **IsExpired** 및 **IsMustChange** 는 **int** 형식입니다.  
   
 -   로그인이 지정된 상태에 있으면 1을 반환합니다.  
   
 -   로그인이 지정된 상태에 있지 않으면 0을 반환합니다.  
   
- **BadPasswordCount**와 **HistoryLength**는 **int** 형식입니다.  
+ **BadPasswordCount** 와 **HistoryLength** 는 **int** 형식입니다.  
   
- **BadPasswordTime**, **LockoutTime**, **PasswordLastSetTime**은 **datetime** 형식입니다.  
+ **BadPasswordTime**, **LockoutTime**, **PasswordLastSetTime** 은 **datetime** 형식입니다.  
   
- **PasswordHash**는 **varbinary** 형식입니다.  
+ **PasswordHash** 는 **varbinary** 형식입니다.  
   
  로그인이 올바른 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 로그인이 아니면 NULL을 반환합니다.  
   
- **DaysUntilExpiration**은 **int** 형식입니다.  
+ **DaysUntilExpiration** 은 **int** 형식입니다.  
   
 -   로그인이 만료되었거나 쿼리한 날에 만료되는 경우 0입니다.  
   
@@ -103,7 +103,7 @@ LOGINPROPERTY ( 'login_name' , 'property_name' )
   
 -   CHECK_POLICY 또는 CHECK_EXPIRATION이 로그인에 대해 OFF이거나 운영 체제에서 암호 정책을 지원하지 않는 경우 NULL입니다.  
   
- **PasswordHashAlgorithm**은 int 형식입니다.  
+ **PasswordHashAlgorithm** 은 int 형식입니다.  
   
 -   0 SQL7.0 해시일 경우  
   
@@ -114,7 +114,7 @@ LOGINPROPERTY ( 'login_name' , 'property_name' )
 -   로그인이 올바른 SQL Server 로그인이 아니면 NULL을 반환합니다.  
   
 ## <a name="remarks"></a>설명  
- 이 기본 제공 함수는 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 로그인의 암호 정책 설정에 대한 정보를 반환합니다. 속성 이름은 대/소문자를 구분하지 않으므로 속성 이름 **BadPasswordCount**와 **badpasswordcount**는 같습니다. **PasswordHash, PasswordHashAlgorithm** 및 **PasswordLastSetTime** 속성 값은 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]에서 지원하는 모든 구성에서 사용할 수 있지만 다른 속성은 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]가 [!INCLUDE[winxpsvr](../../includes/winxpsvr-md.md)]에서 실행 중이고 CHECK_POLICY 및 CHECK_EXPIRATION이 모두 설정된 경우에만 사용할 수 있습니다. 자세한 내용은 [Password Policy](../../relational-databases/security/password-policy.md)을 참조하세요.  
+ 이 기본 제공 함수는 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 로그인의 암호 정책 설정에 대한 정보를 반환합니다. 속성 이름은 대/소문자를 구분하지 않으므로 속성 이름 **BadPasswordCount** 와 **badpasswordcount** 는 같습니다. **PasswordHash, PasswordHashAlgorithm** 및 **PasswordLastSetTime** 속성 값은 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]에서 지원하는 모든 구성에서 사용할 수 있지만 다른 속성은 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]가 [!INCLUDE[winxpsvr](../../includes/winxpsvr-md.md)]에서 실행 중이고 CHECK_POLICY 및 CHECK_EXPIRATION이 모두 설정된 경우에만 사용할 수 있습니다. 자세한 내용은 [Password Policy](../../relational-databases/security/password-policy.md)을 참조하세요.  
   
 ## <a name="permissions"></a>사용 권한  
  로그인에 대한 VIEW 권한이 필요합니다. 암호 해시를 요청하는 경우 CONTROL SERVER 권한도 필요합니다.  

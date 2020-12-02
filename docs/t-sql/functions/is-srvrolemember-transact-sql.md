@@ -21,10 +21,10 @@ ms.assetid: 3241a44a-6958-415b-b8b7-2a1207c36ab3
 author: VanMSFT
 ms.author: vanto
 ms.openlocfilehash: c956e6a17340e371b7135dcd22f73e2b3165a20d
-ms.sourcegitcommit: cc23d8646041336d119b74bf239a6ac305ff3d31
+ms.sourcegitcommit: c5078791a07330a87a92abb19b791e950672e198
 ms.translationtype: HT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 09/23/2020
+ms.lasthandoff: 11/26/2020
 ms.locfileid: "91117080"
 ---
 # <a name="is_srvrolemember-transact-sql"></a>IS_SRVROLEMEMBER(Transact-SQL)
@@ -45,9 +45,9 @@ IS_SRVROLEMEMBER ( 'role' [ , 'login' ] )
 
 ## <a name="arguments"></a>인수
  **'** *role* **'**  
- 확인할 서버 역할의 이름입니다. *role*은 **sysname**입니다.  
+ 확인할 서버 역할의 이름입니다. *role* 은 **sysname** 입니다.  
   
- *role*의 유효한 값은 사용자 정의 서버 역할이며 다음 고정 서버 역할입니다.  
+ *role* 의 유효한 값은 사용자 정의 서버 역할이며 다음 고정 서버 역할입니다.  
 
 - sysadmin
 - serveradmin
@@ -60,23 +60,23 @@ IS_SRVROLEMEMBER ( 'role' [ , 'login' ] )
 - processadmin
   
  **'** *login* **'**  
- 점검할 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 로그인의 이름입니다. *login*은 **sysname**이며 기본값은 NULL입니다. 값을 지정하지 않으면 현재의 실행 컨텍스트에 따른 결과를 얻게 됩니다. 매개 변수에 NULL이라는 단어가 포함되어 있으면 NULL이 반환됩니다.  
+ 점검할 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 로그인의 이름입니다. *login* 은 **sysname** 이며 기본값은 NULL입니다. 값을 지정하지 않으면 현재의 실행 컨텍스트에 따른 결과를 얻게 됩니다. 매개 변수에 NULL이라는 단어가 포함되어 있으면 NULL이 반환됩니다.  
   
 ## <a name="return-types"></a>반환 형식  
  **int**  
   
 |반환 값|설명|  
 |------------------|-----------------|  
-|0|*login*은 *role*의 구성원이 아닙니다.<br /><br /> [!INCLUDE[ssSDSfull](../../includes/sssdsfull-md.md)]에서 이 문은 항상 0을 반환합니다.|  
-|1|*login*은 *role*의 구성원입니다.|  
-|NULL|*role* 또는 *login*이 올바르지 않거나 역할 멤버 자격을 볼 수 있는 사용 권한이 없습니다.|  
+|0|*login* 은 *role* 의 구성원이 아닙니다.<br /><br /> [!INCLUDE[ssSDSfull](../../includes/sssdsfull-md.md)]에서 이 문은 항상 0을 반환합니다.|  
+|1|*login* 은 *role* 의 구성원입니다.|  
+|NULL|*role* 또는 *login* 이 올바르지 않거나 역할 멤버 자격을 볼 수 있는 사용 권한이 없습니다.|  
   
 ## <a name="remarks"></a>설명  
  UseIS_SRVROLEMEMBER를 사용하여 현재 사용자가 서버 역할의 사용 권한이 필요한 동작을 수행할 수 있는지 여부를 확인할 수 있습니다.  
   
- *login*에 Contoso\Mary5와 같은 Windows 로그인이 지정된 경우 해당 로그인에 대해 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]에 대한 직접 액세스가 허용 또는 거부되지 않으면 **IS_SRVROLEMEMBER**가 **NULL**을 반환합니다.  
+ *login* 에 Contoso\Mary5와 같은 Windows 로그인이 지정된 경우 해당 로그인에 대해 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]에 대한 직접 액세스가 허용 또는 거부되지 않으면 **IS_SRVROLEMEMBER** 가 **NULL** 을 반환합니다.  
   
- 선택적 *login* 매개 변수를 제공하지 않고 *login*이 Windows 도메인 로그인인 경우 Windows 그룹 멤버 자격을 통해 고정 서버 역할의 멤버가 될 수 있습니다. 이러한 간접 멤버 자격을 확인하기 위해 IS_SRVROLEMEMBER는 도메인 컨트롤러에 Windows 그룹 멤버 자격 정보를 요청합니다. 도메인 컨트롤러에 액세스할 수 없거나 도메인 컨트롤러가 응답하지 않으면 **IS_SRVROLEMEMBER**가 사용자 및 사용자의 로컬 그룹만 고려하여 역할 멤버 자격 정보를 반환합니다. 지정된 사용자가 현재 사용자가 아닌 경우 IS_SRVROLEMEMBER가 반환하는 값이 인증자(예: Active Directory)의 마지막 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 데이터 업데이트와 다를 수 있습니다.  
+ 선택적 *login* 매개 변수를 제공하지 않고 *login* 이 Windows 도메인 로그인인 경우 Windows 그룹 멤버 자격을 통해 고정 서버 역할의 멤버가 될 수 있습니다. 이러한 간접 멤버 자격을 확인하기 위해 IS_SRVROLEMEMBER는 도메인 컨트롤러에 Windows 그룹 멤버 자격 정보를 요청합니다. 도메인 컨트롤러에 액세스할 수 없거나 도메인 컨트롤러가 응답하지 않으면 **IS_SRVROLEMEMBER** 가 사용자 및 사용자의 로컬 그룹만 고려하여 역할 멤버 자격 정보를 반환합니다. 지정된 사용자가 현재 사용자가 아닌 경우 IS_SRVROLEMEMBER가 반환하는 값이 인증자(예: Active Directory)의 마지막 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 데이터 업데이트와 다를 수 있습니다.  
   
  선택적 로그인 매개 변수를 제공하지 않으면 쿼리 중인 Windows 로그인이 sys.server_principals에 있어야 하거나 IS_SRVROLEMEMBER가 NULL을 반환합니다. 이것은 올바른 로그인이 아님을 나타냅니다.  
   
@@ -84,7 +84,7 @@ IS_SRVROLEMEMBER ( 'role' [ , 'login' ] )
   
  도메인 컨트롤러를 사용할 수 없으면 IS_SRVROLEMEMBER 호출은 로컬 Windows 계정 또는 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 로그인과 같이 Windows 사용자를 로컬로 인증할 수 있는 경우 정확한 정보를 반환합니다.  
   
- Windows 그룹이 로그인 인수로 사용되는 경우 **IS_SRVROLEMEMBER**는 항상 0을 반환하며, 이 Windows 그룹은 지정된 서버 역할의 멤버인 또 다른 Windows 그룹의 멤버입니다.  
+ Windows 그룹이 로그인 인수로 사용되는 경우 **IS_SRVROLEMEMBER** 는 항상 0을 반환하며, 이 Windows 그룹은 지정된 서버 역할의 멤버인 또 다른 Windows 그룹의 멤버입니다.  
   
  사용자 계정 컨트롤(UAC) 설정도 다른 결과가 반환되는 원인이 될 수 있습니다. 이는 사용자가 Windows 그룹 멤버 또는 특정 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 사용자 중 어떤 자격으로 서버에 액세스했는지에 따라 다릅니다.  
   

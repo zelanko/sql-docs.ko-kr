@@ -18,10 +18,10 @@ author: stevestein
 ms.author: sstein
 monikerRange: =azuresqldb-current||>=sql-server-2016||=sqlallproducts-allversions||>=sql-server-linux-2017||=azuresqldb-mi-current
 ms.openlocfilehash: 024897c426ed1bee082a75f44365698274424977
-ms.sourcegitcommit: e700497f962e4c2274df16d9e651059b42ff1a10
+ms.sourcegitcommit: c5078791a07330a87a92abb19b791e950672e198
 ms.translationtype: HT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 08/17/2020
+ms.lasthandoff: 11/26/2020
 ms.locfileid: "88488575"
 ---
 # <a name="modify-check-constraints"></a>CHECK 제약 조건 수정
@@ -52,11 +52,11 @@ ms.locfileid: "88488575"
   
 #### <a name="to-modify-a-check-constraint"></a>CHECK 제약 조건을 수정하려면  
   
-1.  **개체 탐색기**에서 CHECK 제약 조건이 포함된 테이블을 마우스 오른쪽 단추로 클릭한 다음 **디자인**을 클릭합니다.  
+1.  **개체 탐색기** 에서 CHECK 제약 조건이 포함된 테이블을 마우스 오른쪽 단추로 클릭한 다음 **디자인** 을 클릭합니다.  
   
 2.  **테이블 디자이너** 메뉴에서 **CHECK 제약 조건...** 을 클릭합니다.  
   
-3.  **CHECK 제약 조건** 대화 상자의 **선택한 CHECK 제약 조건**아래에서 편집하려는 제약 조건을 선택합니다.  
+3.  **CHECK 제약 조건** 대화 상자의 **선택한 CHECK 제약 조건** 아래에서 편집하려는 제약 조건을 선택합니다.  
   
 4.  다음 표의 동작을 수행합니다.  
   
@@ -71,9 +71,9 @@ ms.locfileid: "88488575"
     > [!NOTE]  
     >  일부 데이터베이스의 경우 CHECK 제약 조건의 기능이 다릅니다.  
   
-5.  **닫기**를 클릭합니다.  
+5.  **닫기** 를 클릭합니다.  
   
-6.  **파일** 메뉴에서 ‘테이블 이름’ **저장**을 클릭합니다.__  
+6.  **파일** 메뉴에서 ‘테이블 이름’ **저장** 을 클릭합니다.  
 
 ##  <a name="using-transact-sql"></a><a name="TsqlProcedure"></a> Transact-SQL 사용  
  **CHECK 제약 조건을 수정하려면**  

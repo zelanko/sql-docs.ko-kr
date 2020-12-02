@@ -26,10 +26,10 @@ author: markingmyname
 ms.author: maghan
 monikerRange: '>=aps-pdw-2016||=azuresqldb-current||=azure-sqldw-latest||>=sql-server-2016||=sqlallproducts-allversions||>=sql-server-linux-2017||=azuresqldb-mi-current'
 ms.openlocfilehash: cc5ccb220c995e60e753d28fabbb90925daca3b4
-ms.sourcegitcommit: dd36d1cbe32cd5a65c6638e8f252b0bd8145e165
+ms.sourcegitcommit: c5078791a07330a87a92abb19b791e950672e198
 ms.translationtype: HT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 09/08/2020
+ms.lasthandoff: 11/26/2020
 ms.locfileid: "89544116"
 ---
 # <a name="set-textsize-transact-sql"></a>SET TEXTSIZE(Transact-SQL)
@@ -52,11 +52,11 @@ SET TEXTSIZE { number }
 
 ## <a name="arguments"></a>인수
  *number*  
- **varchar(max)**, **nvarchar(max)**, **varbinary(max)**, **text**, **ntext** 또는 **image** 데이터의 길이를 바이트 단위로 표시합니다. *숫자*는 최대 값이 2147483647(2GB)인 정수입니다.  값 -1은 무제한 크기를 나타냅니다. 값 0은 크기를 기본값(4KB)으로 다시 설정됩니다.  
+ **varchar(max)**, **nvarchar(max)**, **varbinary(max)**, **text**, **ntext** 또는 **image** 데이터의 길이를 바이트 단위로 표시합니다. *숫자* 는 최대 값이 2147483647(2GB)인 정수입니다.  값 -1은 무제한 크기를 나타냅니다. 값 0은 크기를 기본값(4KB)으로 다시 설정됩니다.  
   
  연결할 때 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] Native Client(10.0 이상) 및 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 용 ODBC 드라이버가 자동으로 `-1`(무제한)을 지정합니다.  
   
- [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]2008년보다 오래된 ** 드라이버:**[!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] Native Client ODBC 드라이버와 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]의 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] Native Client OLE DB 공급자(버전 9)는 연결될 때 TEXTSIZE를 2147483647로 자동으로 설정합니다.  
+ [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]2008년보다 오래된 **드라이버:**[!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] Native Client ODBC 드라이버와 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]의 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] Native Client OLE DB 공급자(버전 9)는 연결될 때 TEXTSIZE를 2147483647로 자동으로 설정합니다.  
   
 ## <a name="remarks"></a>설명  
  SET TEXTSIZE 설정은 @@TEXTSIZE 함수에 영향을 줍니다.  

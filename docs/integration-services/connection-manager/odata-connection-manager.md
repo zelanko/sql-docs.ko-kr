@@ -15,10 +15,10 @@ f1_keywords:
 author: chugugrace
 ms.author: chugu
 ms.openlocfilehash: 68b556070ef8714bc793a333b2a7e6c5d392d882
-ms.sourcegitcommit: c7f40918dc3ecdb0ed2ef5c237a3996cb4cd268d
+ms.sourcegitcommit: c5078791a07330a87a92abb19b791e950672e198
 ms.translationtype: HT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 10/05/2020
+ms.lasthandoff: 11/26/2020
 ms.locfileid: "91719881"
 ---
 # <a name="odata-connection-manager"></a>OData 연결 관리자
@@ -31,11 +31,11 @@ ms.locfileid: "91719881"
 ## <a name="adding-an-odata-connection-manager-to-an-ssis-package"></a>SSIS 패키지에 OData 연결 관리자 추가  
  세 가지 방법으로 새로운 OData 연결 관리자를 SSIS 패키지에 추가할 수 있습니다.  
   
--   **OData 원본 편집기**에서 **새로 만들기...** 단추를 클릭합니다.  
+-   **OData 원본 편집기** 에서 **새로 만들기...** 단추를 클릭합니다.  
   
--   **솔루션 탐색기** 에서 **연결 관리자**폴더를 마우스 오른쪽 단추로 클릭하고 **새 연결 관리자**를 클릭합니다. **연결 관리자 유형** 에 대해 **ODATA**를 선택합니다.  
+-   **솔루션 탐색기** 에서 **연결 관리자** 폴더를 마우스 오른쪽 단추로 클릭하고 **새 연결 관리자** 를 클릭합니다. **연결 관리자 유형** 에 대해 **ODATA** 를 선택합니다.  
   
--   패키지 디자이너 아래쪽에서 **연결 관리자** 창을 마우스 오른쪽 단추로 클릭하고 **새 연결**을 선택합니다. **연결 관리자 유형** 에 대해 **ODATA**를 선택합니다.  
+-   패키지 디자이너 아래쪽에서 **연결 관리자** 창을 마우스 오른쪽 단추로 클릭하고 **새 연결** 을 선택합니다. **연결 관리자 유형** 에 대해 **ODATA** 를 선택합니다.  
   
 ## <a name="connection-manager-authentication"></a>연결 관리자 인증  
  OData 연결 관리자는 5가지 모드의 인증을 지원합니다.  
@@ -87,7 +87,7 @@ Microsoft Dynamics AX Online 또는 Microsoft Dynamics CRM Online에 연결하�
 -   Dynamics CRM Online에 대한 **Microsoft Dynamics CRM Online**
 -   Microsoft Online Services에 대한 **Microsoft Online Services**
 
-Windows 인증 이외의 옵션을 선택하는 경우 **사용자 이름** 및 **암호**를 입력합니다. 
+Windows 인증 이외의 옵션을 선택하는 경우 **사용자 이름** 및 **암호** 를 입력합니다. 
 
 Microsoft Dynamics AX Online 또는 Microsoft Dynamics CRM Online에 연결하기 위해 **Microsoft 온라인 서비스** 인증 옵션을 사용할 수 없습니다. 또한 다단계 인증에 대해 구성된 모든 옵션을 사용할 수 없습니다.
 

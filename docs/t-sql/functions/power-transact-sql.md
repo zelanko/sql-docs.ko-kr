@@ -20,10 +20,10 @@ author: julieMSFT
 ms.author: jrasnick
 monikerRange: '>=aps-pdw-2016||=azuresqldb-current||=azure-sqldw-latest||>=sql-server-2016||=sqlallproducts-allversions||>=sql-server-linux-2017||=azuresqldb-mi-current'
 ms.openlocfilehash: 3fbed016f7c4126f937fd2c376126ebd9f8e5f7b
-ms.sourcegitcommit: 197a6ffb643f93592edf9e90b04810a18be61133
+ms.sourcegitcommit: c5078791a07330a87a92abb19b791e950672e198
 ms.translationtype: HT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 09/26/2020
+ms.lasthandoff: 11/26/2020
 ms.locfileid: "91380740"
 ---
 # <a name="power-transact-sql"></a>POWER(Transact-SQL)
@@ -43,13 +43,13 @@ POWER ( float_expression , y )
 
 ## <a name="arguments"></a>인수
  *float_expression*  
- **float** 형식 또는 **float**로 암시적으로 변환되는 형식의 [식](../../t-sql/language-elements/expressions-transact-sql.md)입니다.  
+ **float** 형식 또는 **float** 로 암시적으로 변환되는 형식의 [식](../../t-sql/language-elements/expressions-transact-sql.md)입니다.  
   
  *y*  
- *float_expression*의 거듭제곱입니다. *y*는 **bit** 데이터 형식을 제외한 정확한 수치 또는 근사치 데이터 형식 범주의 식일 수 있습니다.  
+ *float_expression* 의 거듭제곱입니다. *y* 는 **bit** 데이터 형식을 제외한 정확한 수치 또는 근사치 데이터 형식 범주의 식일 수 있습니다.  
   
 ## <a name="return-types"></a>반환 형식  
- 반환 형식은 *float_expression*의 입력 형식에 따라 달라집니다.
+ 반환 형식은 *float_expression* 의 입력 형식에 따라 달라집니다.
  
 |입력 형식|반환 형식|  
 |----------|-----------|  
@@ -86,7 +86,7 @@ Result1                Result2
 ```  
   
 ### <a name="b-using-power-to-show-results-of-data-type-conversion"></a>B. POWER를 사용하여 데이터 형식 자동 변환 표시  
- 다음 예에서는 *float_expression*에서 예기치 않은 결과를 반환할 수 있는 데이터 형식을 유지하는 방법을 보여 줍니다.  
+ 다음 예에서는 *float_expression* 에서 예기치 않은 결과를 반환할 수 있는 데이터 형식을 유지하는 방법을 보여 줍니다.  
   
 ```sql 
 SELECT   

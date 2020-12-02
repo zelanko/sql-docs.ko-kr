@@ -16,16 +16,16 @@ ms.reviewer: jroth
 ms.custom: seo-dt-2019
 monikerRange: =azuresqldb-current||= azure-sqldw-latest||>=sql-server-2016||=sqlallproducts-allversions||>=sql-server-linux-2017||=azuresqldb-mi-current
 ms.openlocfilehash: 6c92c89d86f14f108e1d21643da7b578d6a2f800
-ms.sourcegitcommit: e700497f962e4c2274df16d9e651059b42ff1a10
+ms.sourcegitcommit: c5078791a07330a87a92abb19b791e950672e198
 ms.translationtype: HT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 08/17/2020
+ms.lasthandoff: 11/26/2020
 ms.locfileid: "88499366"
 ---
 # <a name="parse-and-transform-json-data-with-openjson-sql-server"></a>OPENJSON을 사용하여 JSON 데이터 구문 분석 및 변환(SQL Server)
 [!INCLUDE [SQL Server ASDB, ASDBMI, ASDW ](../../includes/applies-to-version/sql-asdb-asdbmi-asa.md)]
 
-**OPENJSON** 행 집합 함수는 JSON 텍스트를 일련의 행과 열로 변환합니다. **OPENJSON**을 사용하여 JSON 컬렉션을 행 집합으로 변환한 후 반환된 데이터에 대해 SQL 쿼리를 실행하거나 SQL Server 테이블에 삽입할 수 있습니다. 
+**OPENJSON** 행 집합 함수는 JSON 텍스트를 일련의 행과 열로 변환합니다. **OPENJSON** 을 사용하여 JSON 컬렉션을 행 집합으로 변환한 후 반환된 데이터에 대해 SQL 쿼리를 실행하거나 SQL Server 테이블에 삽입할 수 있습니다. 
   
 **OPENJSON** 함수는 단일 JSON 개체 또는 JSON 개체 컬렉션을 받아서 하나 또는 여러 개의 행으로 변환합니다. 기본적으로 **OPENJSON** 함수는 다음 데이터를 반환합니다.
 -   JSON 개체에서 이 함수는 첫 번째 수준에서 발견된 모든 키/값 쌍을 반환합니다.
@@ -39,9 +39,9 @@ ms.locfileid: "88499366"
 2.  속성 또는 배열 요소의 **값**
 3.  **형식**(예: 문자열, 숫자, 부울, 배열 또는 개체)
 
-**OPENJSON**은 JSON 개체의 각 속성 또는 배열의 각 요소를 개별 행으로 반환합니다.  
+**OPENJSON** 은 JSON 개체의 각 속성 또는 배열의 각 요소를 개별 행으로 반환합니다.  
 
-다음은 기본 스키마와 함께 즉, 선택적 **WITH** 절 없이 **OPENJSON**을 사용하고 JSON 개체의 각 속성에 대해 행 한 개를 반환하는 간단한 예제입니다.  
+다음은 기본 스키마와 함께 즉, 선택적 **WITH** 절 없이 **OPENJSON** 을 사용하고 JSON 개체의 각 속성에 대해 행 한 개를 반환하는 간단한 예제입니다.  
 
 **예제**
 
@@ -71,9 +71,9 @@ FROM OPENJSON(@json);
 
 ## <a name="option-2---openjson-output-with-an-explicit-structure"></a>옵션 2 - 명시적 구조를 사용하는 OPENJSON
 
-**OPENJSON** 함수의 **WITH** 절을 사용하여 결과의 스키마를 지정하면 함수에서 **WITH** 절에 정의한 열만 포함된 테이블이 반환됩니다. 선택적 **WITH** 절에 출력 열 집합, 해당 형식 및 각 출력 값에 대한 JSON 원본 속성의 경로를 지정합니다. **OPENJSON**은 JSON 개체 배열을 반복하고, 각 열에 대해 지정된 경로에서 값을 읽고 지정된 형식으로 변환합니다.  
+**OPENJSON** 함수의 **WITH** 절을 사용하여 결과의 스키마를 지정하면 함수에서 **WITH** 절에 정의한 열만 포함된 테이블이 반환됩니다. 선택적 **WITH** 절에 출력 열 집합, 해당 형식 및 각 출력 값에 대한 JSON 원본 속성의 경로를 지정합니다. **OPENJSON** 은 JSON 개체 배열을 반복하고, 각 열에 대해 지정된 경로에서 값을 읽고 지정된 형식으로 변환합니다.  
 
-다음은 **WITH** 절에 명시적으로 지정한 출력의 스키마와 함께 **OPENJSON**을 사용하는 간단한 예제입니다.  
+다음은 **WITH** 절에 명시적으로 지정한 출력의 스키마와 함께 **OPENJSON** 을 사용하는 간단한 예제입니다.  
   
 **예제**
   
@@ -126,7 +126,7 @@ WITH (
   
 -   **OPENJSON** 은 출력 테이블에 JSON 배열의 각 요소에 대한 새 행을 생성합니다. JSON 배열의 두 요소는 반환된 테이블에서 두 개의 행으로 변환됩니다.  
   
--   `colName type json_path` 구문을 사용하여 지정된 각 열에 대해 **OPENJSON**은 지정된 경로의 각 배열 요소에 있는 값을 지정된 형식으로 변환합니다. 이 예제에서는 `$.Order.Date` 경로의 각 요소에서 `Date` 열의 값을 가져와 datetime 값으로 변환합니다.  
+-   `colName type json_path` 구문을 사용하여 지정된 각 열에 대해 **OPENJSON** 은 지정된 경로의 각 배열 요소에 있는 값을 지정된 형식으로 변환합니다. 이 예제에서는 `$.Order.Date` 경로의 각 요소에서 `Date` 열의 값을 가져와 datetime 값으로 변환합니다.  
   
 ### <a name="more-info-about-openjson-with-an-explicit-schema"></a>명시적 스키마를 사용하는 OPENJSON에 대한 추가 정보
 
@@ -136,7 +136,7 @@ WITH (
 
 ## <a name="openjson-requires-compatibility-level-130"></a>OPENJSON은 호환성 수준 130을 필요로 함
 
-**OPENJSON** 함수는 **호환성 수준 130**에서만 사용할 수 있습니다. 데이터베이스 호환성 수준이 130보다 낮으면 SQL Server에서 **OPENJSON** 함수를 찾아 실행할 수 없습니다. 다른 기본 제공 JSON 함수는 모든 호환성 수준에서 사용할 수 있습니다.
+**OPENJSON** 함수는 **호환성 수준 130** 에서만 사용할 수 있습니다. 데이터베이스 호환성 수준이 130보다 낮으면 SQL Server에서 **OPENJSON** 함수를 찾아 실행할 수 없습니다. 다른 기본 제공 JSON 함수는 모든 호환성 수준에서 사용할 수 있습니다.
 
 `sys.databases` 뷰 또는 데이터베이스 속성에서 호환성 수준을 확인할 수 있습니다.
 

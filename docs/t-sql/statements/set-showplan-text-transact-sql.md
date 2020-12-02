@@ -28,10 +28,10 @@ ms.assetid: 2c4f3fc8-ff2c-4790-8b74-e7e8ef58f9a6
 author: markingmyname
 ms.author: maghan
 ms.openlocfilehash: 3e80a5acb98e57ea3a3ae1b348c854b5030154a2
-ms.sourcegitcommit: dd36d1cbe32cd5a65c6638e8f252b0bd8145e165
+ms.sourcegitcommit: c5078791a07330a87a92abb19b791e950672e198
 ms.translationtype: HT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 09/08/2020
+ms.lasthandoff: 11/26/2020
 ms.locfileid: "89540515"
 ---
 # <a name="set-showplan_text-transact-sql"></a>SET SHOWPLAN_TEXT(Transact-SQL)

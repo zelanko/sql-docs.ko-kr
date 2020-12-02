@@ -22,10 +22,10 @@ ms.assetid: 6c4629a9-2ede-4011-9101-3b342249640e
 author: chugugrace
 ms.author: chugu
 ms.openlocfilehash: a69d70b9e58458303dbba3444b6a8c38fb40ccc0
-ms.sourcegitcommit: e700497f962e4c2274df16d9e651059b42ff1a10
+ms.sourcegitcommit: c5078791a07330a87a92abb19b791e950672e198
 ms.translationtype: HT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 08/17/2020
+ms.lasthandoff: 11/26/2020
 ms.locfileid: "88495861"
 ---
 # <a name="integration-services-paths"></a>Integration Services 경로
@@ -42,7 +42,7 @@ ms.locfileid: "88495861"
   
  구성 가능한 경로 속성에는 경로의 이름, 설명 및 주석이 포함됩니다. 또한 경로를 프로그래밍 방식으로 구성할 수 있습니다. 자세한 내용은 [프로그래밍 방식으로 데이터 흐름 구성 요소 연결](../../integration-services/building-packages-programmatically/connecting-data-flow-components-programmatically.md)을 참조하세요.  
   
- 경로 주석에는 **디자이너의** 데이터 흐름 [!INCLUDE[ssIS](../../includes/ssis-md.md)] 탭에서 디자인 화면에 표시된 경로 원본의 이름 또는 경로 이름이 표시됩니다. 경로 주석은 데이터 흐름, 제어 흐름 및 이벤트 처리기에 추가할 수 있는 주석과 비슷합니다. 단지 경로 주석은 경로에 연결되며, 다른 주석은 **디자이너의**데이터 흐름 **,** 제어 흐름 **및**이벤트 처리기 [!INCLUDE[ssIS](../../includes/ssis-md.md)] 테이블에 표시된다는 점만 다릅니다.  
+ 경로 주석에는 **디자이너의** 데이터 흐름 [!INCLUDE[ssIS](../../includes/ssis-md.md)] 탭에서 디자인 화면에 표시된 경로 원본의 이름 또는 경로 이름이 표시됩니다. 경로 주석은 데이터 흐름, 제어 흐름 및 이벤트 처리기에 추가할 수 있는 주석과 비슷합니다. 단지 경로 주석은 경로에 연결되며, 다른 주석은 **디자이너의** 데이터 흐름 **,** 제어 흐름 **및** 이벤트 처리기 [!INCLUDE[ssIS](../../includes/ssis-md.md)] 테이블에 표시된다는 점만 다릅니다.  
   
  메타데이터에는 이전 구성 요소의 출력에 있는 각 열의 이름, 데이터 형식, 전체 자릿수, 소수 자릿수, 길이, 코드 페이지 및 원본 구성 요소가 표시됩니다. 원본 구성 요소는 해당 열을 만든 데이터 흐름 구성 요소입니다. 이러한 구성 요소는 데이터 흐름에서 첫 번째 구성 요소일 수도 있으며, 아닐 수도 있습니다. 예를 들어 UNION ALL 및 정렬 변환은 해당 열을 만들며, 이는 출력 열에 대한 원본이 됩니다. 반대로 열 복사 변환은 열을 변경하지 않은 상태로 전달하거나 입력 열을 복사하여 새 열을 만들 수도 있습니다. 열 복사 변환은 새로운 열에 대해서만 원본 구성 요소가 됩니다.  
 
@@ -55,9 +55,9 @@ ms.locfileid: "88495861"
   
 3.  **데이터 흐름** 탭을 클릭한 후 경로를 두 번 클릭합니다.  
   
-4.  **데이터 흐름 경로 편집기**에서 **일반**을 클릭합니다. 그러면 경로의 기본 이름을 편집하고 경로에 대한 설명을 제공할 수 있습니다. 또한 PathAnnotation 속성을 수정할 수 있습니다.  
+4.  **데이터 흐름 경로 편집기** 에서 **일반** 을 클릭합니다. 그러면 경로의 기본 이름을 편집하고 경로에 대한 설명을 제공할 수 있습니다. 또한 PathAnnotation 속성을 수정할 수 있습니다.  
   
-5.  **확인**을 클릭합니다.  
+5.  **확인** 을 클릭합니다.  
   
 6.  업데이트된 패키지를 저장하려면 **파일** 메뉴에서 **선택한 항목 저장** 을 클릭합니다.  
 
@@ -159,6 +159,6 @@ ms.locfileid: "88495861"
   
 |속성 이름|데이터 형식|Description|  
 |-------------------|---------------|-----------------|  
-|PathAnnotation|Integer(열거형)|디자이너 화면에 주석을 경로와 함께 표시할지 여부를 나타내는 값입니다. 가능한 값은 **AsNeeded**, **SourceName**, **PathName**및 **Never**입니다. 기본값은 **AsNeeded**입니다.|  
+|PathAnnotation|Integer(열거형)|디자이너 화면에 주석을 경로와 함께 표시할지 여부를 나타내는 값입니다. 가능한 값은 **AsNeeded**, **SourceName**, **PathName** 및 **Never** 입니다. 기본값은 **AsNeeded** 입니다.|  
 |DestinationName|<xref:Microsoft.SqlServer.Dts.Pipeline.Wrapper.IDTSInput100>|경로에 연결된 입력입니다.|  
 |SourceName|<xref:Microsoft.SqlServer.Dts.Pipeline.Wrapper.IDTSOutput100>|경로에 연결된 출력입니다.|  

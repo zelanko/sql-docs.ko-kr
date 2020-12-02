@@ -26,10 +26,10 @@ author: julieMSFT
 ms.author: jrasnick
 monikerRange: '>=aps-pdw-2016||=azuresqldb-current||=azure-sqldw-latest||>=sql-server-2016||=sqlallproducts-allversions||>=sql-server-linux-2017||=azuresqldb-mi-current'
 ms.openlocfilehash: 0e266c23c0fdc712f5bab15173e187043fede5de
-ms.sourcegitcommit: 197a6ffb643f93592edf9e90b04810a18be61133
+ms.sourcegitcommit: c5078791a07330a87a92abb19b791e950672e198
 ms.translationtype: HT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 09/26/2020
+ms.lasthandoff: 11/26/2020
 ms.locfileid: "91380848"
 ---
 # <a name="switchoffset-transact-sql"></a>SWITCHOFFSET(Transact-SQL)
@@ -57,7 +57,7 @@ SWITCHOFFSET ( DATETIMEOFFSET, time_zone )
  [+|-]TZH:TZM 또는 부호 있는 정수(분) 형식의 문자열로, 표준 시간대 오프셋을 나타내고 일광 절약 시간제를 인식하고 조정할 수 있는 것으로 간주됩니다.  
   
 ## <a name="return-type"></a>반환 형식  
- **datetimeoffset**을 *DATETIMEOFFSET* 인수의 소수 자릿수로 표시합니다.  
+ **datetimeoffset** 을 *DATETIMEOFFSET* 인수의 소수 자릿수로 표시합니다.  
   
 ## <a name="remarks"></a>설명  
  처음 저장된 표준 시간대 오프셋과 다른 표준 시간대 오프셋으로 **datetimeoffset** 값을 선택하려면 SWITCHOFFSET을 사용합니다. SWITCHOFFSET은 저장된 *time_zone* 값을 업데이트하지 않습니다.  

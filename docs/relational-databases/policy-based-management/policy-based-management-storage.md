@@ -14,10 +14,10 @@ ms.assetid: d0cbf214-fc2e-4917-8d31-1d71c9ffa61d
 author: VanMSFT
 ms.author: vanto
 ms.openlocfilehash: abd24579c34b11332e235d29a5f7b89a6dc183e3
-ms.sourcegitcommit: e700497f962e4c2274df16d9e651059b42ff1a10
+ms.sourcegitcommit: c5078791a07330a87a92abb19b791e950672e198
 ms.translationtype: HT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 08/17/2020
+ms.lasthandoff: 11/26/2020
 ms.locfileid: "88475642"
 ---
 # <a name="policy-based-management-storage"></a>정책 기반 관리 스토리지

@@ -25,10 +25,10 @@ ms.assetid: 4e041f33-60c4-4190-91c7-220d51dd6c8f
 author: VanMSFT
 ms.author: vanto
 ms.openlocfilehash: 2524b2e828615ee1e413f36bd77cd8ebc3fa8b77
-ms.sourcegitcommit: 197a6ffb643f93592edf9e90b04810a18be61133
+ms.sourcegitcommit: c5078791a07330a87a92abb19b791e950672e198
 ms.translationtype: HT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 09/26/2020
+ms.lasthandoff: 11/26/2020
 ms.locfileid: "91380563"
 ---
 # <a name="verifysignedbycert-transact-sql"></a>VERIFYSIGNEDBYCERT(Transact-SQL)
@@ -48,13 +48,13 @@ VerifySignedByCert( Cert_ID , signed_data , signature )
 
 ## <a name="arguments"></a>인수
  *Cert_ID*  
- 데이터베이스에 있는 인증서의 ID입니다. *Cert_ID*는 **int**입니다.  
+ 데이터베이스에 있는 인증서의 ID입니다. *Cert_ID* 는 **int** 입니다.  
   
  *signed_data*  
  인증서로 서명된 데이터를 포함하는 **nvarchar**, **char**, **varchar** 또는 **nchar** 형식의 변수입니다.  
   
  *서명*  
- 서명된 데이터에 첨부된 서명입니다. *signature*는 **varbinary**입니다.  
+ 서명된 데이터에 첨부된 서명입니다. *signature* 는 **varbinary** 입니다.  
   
 ## <a name="return-types"></a>반환 형식  
  **int**  
@@ -62,7 +62,7 @@ VerifySignedByCert( Cert_ID , signed_data , signature )
  서명된 데이터가 변경되지 않았으면 1을, 변경되었으면 0을 반환합니다.  
   
 ## <a name="remarks"></a>설명  
- **VerifySignedBycert**는 지정한 인증서의 공개 키를 사용하여 데이터의 서명을 해독하고 해독된 값을 데이터의 새로 계산된 MD5 해시와 비교합니다. 값이 일치하면 서명이 유효하게 됩니다.  
+ **VerifySignedBycert** 는 지정한 인증서의 공개 키를 사용하여 데이터의 서명을 해독하고 해독된 값을 데이터의 새로 계산된 MD5 해시와 비교합니다. 값이 일치하면 서명이 유효하게 됩니다.  
   
 ## <a name="permissions"></a>사용 권한  
  인증서에 대한 VIEW DEFINITION 권한이 필요합니다.  

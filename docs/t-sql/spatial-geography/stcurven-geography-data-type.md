@@ -19,16 +19,16 @@ ms.assetid: 99ef7100-2c4b-4f07-8d66-b343da94b023
 author: MladjoA
 ms.author: mlandzic
 ms.openlocfilehash: 18d3a992b3f3d5eeecb09a16ce3fb6d582ee2fb2
-ms.sourcegitcommit: e700497f962e4c2274df16d9e651059b42ff1a10
+ms.sourcegitcommit: c5078791a07330a87a92abb19b791e950672e198
 ms.translationtype: HT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 08/17/2020
+ms.lasthandoff: 11/26/2020
 ms.locfileid: "88479368"
 ---
 # <a name="stcurven-geography-data-type"></a>STCurveN(geography 데이터 형식)
 [!INCLUDE [SQL Server SQL Database](../../includes/applies-to-version/sql-asdb.md)]
 
-  **LineString**, **CircularString** 또는 **CompoundCurve**인 **geography** 인스턴스에서 지정된 곡선을 반환합니다.  
+  **LineString**, **CircularString** 또는 **CompoundCurve** 인 **geography** 인스턴스에서 지정된 곡선을 반환합니다.  
   
 ## <a name="syntax"></a>구문  
   
@@ -49,10 +49,10 @@ ms.locfileid: "88479368"
  CLR 반환 형식: **SqlGeography**  
   
 ## <a name="exceptions"></a>예외  
- n < 1인 경우, **ArgumentOutOfRangeException**이 throw 됩니다.  
+ n < 1인 경우, **ArgumentOutOfRangeException** 이 throw 됩니다.  
   
 ## <a name="remarks"></a>설명  
- 다음 조건에서는 **NULL**이 반환됩니다.  
+ 다음 조건에서는 **NULL** 이 반환됩니다.  
   
 -   **geography** 인스턴스가 선언되었지만 인스턴스화되지 않았습니다.  
   
@@ -103,7 +103,7 @@ ms.locfileid: "88479368"
  `STCurveN()`은 사용되는 WKT(Well-Known Text) 형식과 관계없이 같은 결과를 반환합니다.  
   
 ### <a name="d-testing-for-validity-before-calling-stcurve"></a>D. STCurve()를 호출하기 전에 유효성 테스트  
- 다음 예제에서는 STCurveN() 메서드를 호출하기 전에 *n*이 유효한지 확인하는 방법을 보여 줍니다.  
+ 다음 예제에서는 STCurveN() 메서드를 호출하기 전에 *n* 이 유효한지 확인하는 방법을 보여 줍니다.  
   
 ```
  DECLARE @g geography;  

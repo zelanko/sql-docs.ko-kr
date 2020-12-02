@@ -15,10 +15,10 @@ author: MladjoA
 ms.author: mlandzic
 monikerRange: =azuresqldb-current||>=sql-server-2016||=sqlallproducts-allversions||>=sql-server-linux-2017||=azuresqldb-mi-current
 ms.openlocfilehash: 4a17fb30859866155b2e3976e3d1a1bb2890ac4e
-ms.sourcegitcommit: a5398f107599102af7c8cda815d8e5e9a367ce7e
+ms.sourcegitcommit: c5078791a07330a87a92abb19b791e950672e198
 ms.translationtype: HT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 10/13/2020
+ms.lasthandoff: 11/26/2020
 ms.locfileid: "92006230"
 ---
 # <a name="polygon"></a>Polygon
@@ -30,7 +30,7 @@ ms.locfileid: "92006230"
 ## <a name="polygon-instances"></a>Polygon 인스턴스  
  **Polygon** 인스턴스는 서로 다른 점이 3개 이상 있는 링에서 구성될 수 있습니다. **Polygon** 인스턴스가 비어 있을 수도 있습니다.  
   
-**Polygon** 의 외부 및 내부 링은 해당 경계를 정의합니다. 링 내부 공간은 **Polygon**의 내부를 정의합니다.  
+**Polygon** 의 외부 및 내부 링은 해당 경계를 정의합니다. 링 내부 공간은 **Polygon** 의 내부를 정의합니다.  
   
 다음 그림에서는 **Polygon** 인스턴스의 예를 보여 줍니다.  
   
@@ -48,7 +48,7 @@ ms.locfileid: "92006230"
  허용되는 **Polygon** 인스턴스는 예외를 발생시키지 않고 **geometry** 또는 **geography** 변수에 저장할 수 있는 인스턴스입니다. 다음 **Polygon** 인스턴스가 허용됩니다.  
   
 -   빈 **Polygon** 인스턴스  
--   허용 가능 외부 링(**LineString**) 및 0개 이상의 허용 가능 내부 링(**LineString**s)을 포함하는 **Polygon** 인스턴스  
+-   허용 가능 외부 링(**LineString**) 및 0개 이상의 허용 가능 내부 링(**LineString** s)을 포함하는 **Polygon** 인스턴스  
   
 링(**LineString**)이 허용되려면 다음 조건을 충족해야 합니다.  
   

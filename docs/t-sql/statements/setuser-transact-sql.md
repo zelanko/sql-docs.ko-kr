@@ -22,10 +22,10 @@ ms.assetid: 7acfac5c-9ad6-4226-b874-7add36c4ea43
 author: VanMSFT
 ms.author: vanto
 ms.openlocfilehash: e542bb0ef16017744c7f5f61d7358ec66149e1e8
-ms.sourcegitcommit: e700497f962e4c2274df16d9e651059b42ff1a10
+ms.sourcegitcommit: c5078791a07330a87a92abb19b791e950672e198
 ms.translationtype: HT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 08/17/2020
+ms.lasthandoff: 11/26/2020
 ms.locfileid: "88478673"
 ---
 # <a name="setuser-transact-sql"></a>SETUSER(Transact-SQL)
@@ -49,15 +49,15 @@ SETUSER [ 'username' [ WITH NORESET ] ]
 
 ## <a name="arguments"></a>인수
  **'** *username* **'**  
- 가장된 현재 데이터베이스 내의 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 또는 Windows 사용자 이름입니다. *username*을 지정하지 않으면 사용자 ID를 시스템 관리자 또는 사용자를 가장한 데이터베이스 소유자의 원래 ID로 다시 설정합니다.  
+ 가장된 현재 데이터베이스 내의 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 또는 Windows 사용자 이름입니다. *username* 을 지정하지 않으면 사용자 ID를 시스템 관리자 또는 사용자를 가장한 데이터베이스 소유자의 원래 ID로 다시 설정합니다.  
   
  WITH NORESET  
- *username*을 지정하지 않은 이후의 SETUSER 문이 사용자 ID를 시스템 관리자 또는 데이터베이스 소유자로 다시 설정하지 않도록 지정합니다.  
+ *username* 을 지정하지 않은 이후의 SETUSER 문이 사용자 ID를 시스템 관리자 또는 데이터베이스 소유자로 다시 설정하지 않도록 지정합니다.  
   
 ## <a name="remarks"></a>설명  
  **sysadmin** 고정 서버 역할 또는 데이터베이스 소유자 고정 데이터베이스 역할의 멤버는 SETUSER를 사용하여 다른 사용자로 가장하고, 해당 사용자의 사용 권한을 테스트할 수 있습니다. db_owner 고정 데이터베이스 역할의 멤버 자격으로는 충분하지 않습니다.  
   
- SETUSER는 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 사용자에만 사용하세요. Windows 사용자에는 SETUSER가 지원되지 않습니다. 다른 사용자의 ID를 가장하기 위해 SETUSER를 사용할 때 가장한 사용자가 만든 개체는 가장된 사용자가 소유합니다. 예를 들어 데이터베이스 소유자가 **Margaret**라는 사용자로 가장하여 **orders**라는 테이블을 만들면 **orders** 테이블의 소유자는 데이터베이스 소유자가 아니라 **Margaret**가 됩니다.  
+ SETUSER는 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 사용자에만 사용하세요. Windows 사용자에는 SETUSER가 지원되지 않습니다. 다른 사용자의 ID를 가장하기 위해 SETUSER를 사용할 때 가장한 사용자가 만든 개체는 가장된 사용자가 소유합니다. 예를 들어 데이터베이스 소유자가 **Margaret** 라는 사용자로 가장하여 **orders** 라는 테이블을 만들면 **orders** 테이블의 소유자는 데이터베이스 소유자가 아니라 **Margaret** 가 됩니다.  
   
  SETUSER는 다른 SETUSER 문을 지정할 때까지 또는 현재 데이터베이스가 USE 문을 통해 변경될 때까지 유효합니다.  
   

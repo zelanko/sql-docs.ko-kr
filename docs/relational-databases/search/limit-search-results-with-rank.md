@@ -20,10 +20,10 @@ ms.author: pelopes
 ms.reviewer: mikeray
 monikerRange: =azuresqldb-current||>=sql-server-2016||=sqlallproducts-allversions||>=sql-server-linux-2017||=azuresqldb-mi-current
 ms.openlocfilehash: f68204154f2bbbc3c78d3aeec7e9221a625f355d
-ms.sourcegitcommit: e700497f962e4c2274df16d9e651059b42ff1a10
+ms.sourcegitcommit: c5078791a07330a87a92abb19b791e950672e198
 ms.translationtype: HT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 08/17/2020
+ms.lasthandoff: 11/26/2020
 ms.locfileid: "88470160"
 ---
 # <a name="limit-search-results-with-rank"></a>RANK를 사용하여 검색 결과 제한
@@ -33,7 +33,7 @@ ms.locfileid: "88470160"
 > [!NOTE]  
 >  CONTAINS 및 FREETEXT 조건자는 순위 값을 반환하지 않습니다.  
   
- 검색 조건과 일치하는 항목 수는 종종 매우 많습니다. CONTAINSTABLE 또는 FREETEXTTABLE 쿼리가 반환하는 일치하는 항목 수를 줄이려면 행의 하위 집합만 반환하는 선택적 *top_n_by_rank* 매개 변수를 사용합니다. *top_n_by_rank* 는 내림차순으로 최고 등급 *n*개의 일치하는 항목만 반환되도록 지정하는 정수 값 *n* 입니다. *top_n_by_rank* 를 다른 매개 변수와 함께 사용하면 실제로 모든 조건자와 일치하는 행 수보다 적은 수의 행이 반환될 수 있습니다.  
+ 검색 조건과 일치하는 항목 수는 종종 매우 많습니다. CONTAINSTABLE 또는 FREETEXTTABLE 쿼리가 반환하는 일치하는 항목 수를 줄이려면 행의 하위 집합만 반환하는 선택적 *top_n_by_rank* 매개 변수를 사용합니다. *top_n_by_rank* 는 내림차순으로 최고 등급 *n* 개의 일치하는 항목만 반환되도록 지정하는 정수 값 *n* 입니다. *top_n_by_rank* 를 다른 매개 변수와 함께 사용하면 실제로 모든 조건자와 일치하는 행 수보다 적은 수의 행이 반환될 수 있습니다.  
   
  [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 는 일치하는 항목을 순위별로 정렬하고 지정한 개수만 반환합니다. 이 방법을 사용하면 성능이 크게 향상됩니다. 예를 들어 백만 개의 행이 있는 테이블에서 100,000개의 행을 반환하는 쿼리에 대해 상위 100개의 행만 요청하면 쿼리가 훨씬 빨리 처리됩니다.  
   

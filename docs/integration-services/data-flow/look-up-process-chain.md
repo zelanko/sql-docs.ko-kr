@@ -12,10 +12,10 @@ ms.assetid: f6303ea4-fbbf-4cba-bc60-828df62be8c2
 author: chugugrace
 ms.author: chugu
 ms.openlocfilehash: 28d354fce02498905c61df6b61a35a774d804eec
-ms.sourcegitcommit: e700497f962e4c2274df16d9e651059b42ff1a10
+ms.sourcegitcommit: c5078791a07330a87a92abb19b791e950672e198
 ms.translationtype: HT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 08/17/2020
+ms.lasthandoff: 11/26/2020
 ms.locfileid: "88495833"
 ---
 # <a name="look-up-process-chain"></a>프로세스 체인 조회
@@ -36,11 +36,11 @@ ms.locfileid: "88495833"
   
 2.  **데이터 흐름** 탭에서 SAP BW 원본을 두 번 클릭합니다.  
   
-3.  **SAP BW 원본 편집기**에서 **연결 관리자** 를 클릭하여 편집기의 **연결 관리자** 페이지를 엽니다.  
+3.  **SAP BW 원본 편집기** 에서 **연결 관리자** 를 클릭하여 편집기의 **연결 관리자** 페이지를 엽니다.  
   
 4.  **프로세스 체인** 그룹 상자에서 **조회** 를 클릭하여 **프로세스 체인 조회** 대화 상자를 표시합니다.  
   
-     **프로세스 체인** 그룹 상자는 **실행 모드** 의 값이 **P - 프로세스 체인 트리거**인 경우에만 나타납니다.  
+     **프로세스 체인** 그룹 상자는 **실행 모드** 의 값이 **P - 프로세스 체인 트리거** 인 경우에만 나타납니다.  
   
 ## <a name="lookup-options"></a>조회 옵션  
  조회 필드에 별표 와일드카드 문자(*)를 사용하거나 문자열 일부를 별표 와일드카드 문자와 함께 사용하여 결과를 필터링할 수 있습니다. 조회 필드를 비워 두면 해당 필드에서 빈 문자열만 일치하는 항목으로 필터링됩니다.  

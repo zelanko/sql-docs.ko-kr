@@ -25,10 +25,10 @@ ms.assetid: 80c252fd-a8b8-4a2e-888a-059081ed4109
 author: VanMSFT
 ms.author: vanto
 ms.openlocfilehash: 443abad18869728130299be24d542bc54cde670e
-ms.sourcegitcommit: cc23d8646041336d119b74bf239a6ac305ff3d31
+ms.sourcegitcommit: c5078791a07330a87a92abb19b791e950672e198
 ms.translationtype: HT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 09/23/2020
+ms.lasthandoff: 11/26/2020
 ms.locfileid: "91114706"
 ---
 # <a name="writetext-transact-sql"></a>WRITETEXT(Transact-SQL)
@@ -62,13 +62,13 @@ WRITETEXT [BULK]
  업데이트할 테이블 및 **text**, **ntext** 또는 **image** 열의 이름입니다. 테이블 이름 및 열 이름은 [식별자](../../relational-databases/databases/database-identifiers.md)에 대한 규칙을 따라야 합니다. 필요에 따라 데이터베이스 이름과 소유자 이름을 지정할 수 있습니다.  
   
  *text_ptr*  
- **text**, **ntext** 또는 **image** 데이터에 대한 포인터를 저장하는 값입니다. *text_ptr*은 **이진(16)** 이어야 합니다. 텍스트 포인터를 만들려면 **text**, **ntext** 또는 **image** 열에 대해 Null이 아닌 데이터를 사용하여 [INSERT](../../t-sql/statements/insert-transact-sql.md) 또는 [UPDATE](../../t-sql/queries/update-transact-sql.md) 문을 실행합니다.  
+ **text**, **ntext** 또는 **image** 데이터에 대한 포인터를 저장하는 값입니다. *text_ptr* 은 **이진(16)** 이어야 합니다. 텍스트 포인터를 만들려면 **text**, **ntext** 또는 **image** 열에 대해 Null이 아닌 데이터를 사용하여 [INSERT](../../t-sql/statements/insert-transact-sql.md) 또는 [UPDATE](../../t-sql/queries/update-transact-sql.md) 문을 실행합니다.  
   
  WITH LOG  
  [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]에서 무시됩니다. 로깅은 데이터베이스에 영향을 주는 복구 모델에 의해 결정됩니다.  
   
  *data*  
- 저장할 실제 **text**, **ntext** 또는 **image** 데이터입니다. *data*는 리터럴 또는 매개 변수일 수 있습니다. WRITETEXT와 함께 대화형으로 삽입할 수 있는 텍스트의 최대 길이는 **text**, **ntext** 또는 **image** 데이터의 경우 약 120KB입니다.  
+ 저장할 실제 **text**, **ntext** 또는 **image** 데이터입니다. *data* 는 리터럴 또는 매개 변수일 수 있습니다. WRITETEXT와 함께 대화형으로 삽입할 수 있는 텍스트의 최대 길이는 **text**, **ntext** 또는 **image** 데이터의 경우 약 120KB입니다.  
   
 ## <a name="remarks"></a>설명  
  WRITETEXT를 사용하여 **text**, **ntext** 및 **image** 데이터를 바꾸고 UPDATETEXT를 사용하여 **text**, **ntext** 및 **image** 데이터를 수정합니다. UPDATETEXT는 **text**, **ntext** 또는 **image** 열의 전체가 아닌 일부만 변경하므로 더 융통성이 있습니다.  
@@ -84,7 +84,7 @@ WRITETEXT [BULK]
   
  테이블에 행 내부 텍스트가 없는 경우 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]는 INSERT로 명시적 또는 암시적 Null 값이 **text** 열에 추가되고 이러한 Null 값에 대해 텍스트 포인터를 가져올 수 없을 때 **text** 열을 초기화하지 않음으로써 공백을 저장합니다. **text** 열을 NULL로 초기화하려면 UPDATE 문을 사용합니다. 테이블에 행 내부 텍스트가 있는 경우에는 text 열을 Null로 초기화할 필요 없이 항상 텍스트 포인터를 가져올 수 있습니다.  
   
- ODBC SQLPutData 함수는 WRITETEXT보다 빠르며 동적 메모리를 덜 사용합니다. 이 함수는**text**, **ntext** 또는 **image** 데이터를 2GB까지 삽입할 수 있습니다.  
+ ODBC SQLPutData 함수는 WRITETEXT보다 빠르며 동적 메모리를 덜 사용합니다. 이 함수는 **text**, **ntext** 또는 **image** 데이터를 2GB까지 삽입할 수 있습니다.  
   
  [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]에서는 **text**, **ntext** 또는 **image** 데이터에 대한 행 내부 텍스트 포인터가 있어도 유효하지 않을 수 있습니다. text in row 옵션에 대한 자세한 내용은 [sp_tableoption&#40;Transact-SQL&#41;](../../relational-databases/system-stored-procedures/sp-tableoption-transact-sql.md)을 참조하십시오. 텍스트 포인터를 무효화하는 방법은 [sp_invalidate_textptr&#40;Transact-SQL&#41;](../../relational-databases/system-stored-procedures/sp-invalidate-textptr-transact-sql.md)를 참조하십시오.  
   

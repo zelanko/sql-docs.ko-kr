@@ -12,10 +12,10 @@ author: jaszymas
 ms.author: jaszymas
 monikerRange: '>= sql-server-ver15 || = sqlallproducts-allversions'
 ms.openlocfilehash: 77a438ee4f495429bbe0eb9c1e98728ecb324009
-ms.sourcegitcommit: 4d370399f6f142e25075b3714e5c2ce056b1bfd0
+ms.sourcegitcommit: c5078791a07330a87a92abb19b791e950672e198
 ms.translationtype: HT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 10/09/2020
+ms.lasthandoff: 11/26/2020
 ms.locfileid: "91867661"
 ---
 # <a name="provision-enclave-enabled-keys"></a>Enclave 사용 키 프로비전
@@ -47,7 +47,7 @@ SQL Server Management Studio 18.3 이상에서는 다음을 프로비전할 수 
 > [Always Encrypted 마법사](always-encrypted-wizard.md)는 현재 enclave 사용 키 생성을 지원하지 않습니다. 그러나 위의 대화 상자를 먼저 사용하여 enclave 사용 키를 만든 다음 마법사를 실행할 때 암호화하려는 열에 대해 기존의 enclave 사용 열 암호화를 선택할 수 있습니다.
 
 ### <a name="provision-enclave-enabled-column-master-keys-with-the-new-column-master-key-dialog"></a>새 열 마스터 키 대화 상자를 사용하는 enclave 사용 열 마스터 키 프로비전
-Enclave 사용 열 마스터 키를 프로비전하려면 [새 열 마스터 키 대화 상자를 사용하여 열 마스터 키 프로비전](configure-always-encrypted-keys-using-ssms.md#provision-column-master-keys-with-the-new-column-master-key-dialog)의 단계를 수행합니다. **Enclave 계산 허용**을 선택해야 합니다. 아래 스크린샷을 참조하세요.
+Enclave 사용 열 마스터 키를 프로비전하려면 [새 열 마스터 키 대화 상자를 사용하여 열 마스터 키 프로비전](configure-always-encrypted-keys-using-ssms.md#provision-column-master-keys-with-the-new-column-master-key-dialog)의 단계를 수행합니다. **Enclave 계산 허용** 을 선택해야 합니다. 아래 스크린샷을 참조하세요.
 
 ![Enclave 계산 허용](./media/always-encrypted-enclaves/allow-enclave-computations.png)
 
@@ -55,13 +55,13 @@ Enclave 사용 열 마스터 키를 프로비전하려면 [새 열 마스터 키
 > **Enclave 계산 허용** 확인란은 [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] 인스턴스에 올바르게 초기화된 보안 enclave가 포함된 경우에만 나타납니다. 자세한 내용은 [Always Encrypted에 대한 enclave 유형 구성](../../../database-engine/configure-windows/configure-column-encryption-enclave-type.md)을 참조하세요.
 
 > [!TIP]
-> 열 마스터 키가 enclave를 사용하도록 설정되어 있는지 확인하려면 개체 탐색기에서 해당 키를 마우스 오른쪽 단추로 클릭하고 **속성**을 선택합니다. 키가 enclave를 사용하도록 설정된 경우 키 속성을 보여주는 창에 **Enclave 계산: 허용**이 표시됩니다. 또는 [sys.column_master_keys(Transact-SQL)](../../system-catalog-views/sys-column-master-keys-transact-sql.md) 보기를 사용할 수 있습니다.
+> 열 마스터 키가 enclave를 사용하도록 설정되어 있는지 확인하려면 개체 탐색기에서 해당 키를 마우스 오른쪽 단추로 클릭하고 **속성** 을 선택합니다. 키가 enclave를 사용하도록 설정된 경우 키 속성을 보여주는 창에 **Enclave 계산: 허용** 이 표시됩니다. 또는 [sys.column_master_keys(Transact-SQL)](../../system-catalog-views/sys-column-master-keys-transact-sql.md) 보기를 사용할 수 있습니다.
 
 ### <a name="provision-enclave-enabled-column-encryption-keys-with-the-new-column-encryption-key-dialog"></a>새 열 암호화 키 대화 상자를 사용하는 enclave 사용 열 암호화 키 프로비전
 Enclave 사용 열 암호화 키를 프로비전하려면 [새 열 암호화 키 대화 상자를 사용하여 열 암호화 키 프로비전](configure-always-encrypted-keys-using-ssms.md#provision-column-encryption-keys-with-the-new-column-encryption-key-dialog)의 단계를 수행합니다. 열 마스터 키를 선택하는 경우 enclave를 사용하도록 설정되어 있는지 확인합니다.
 
 > [!TIP]
-> 열 암호화 키가 enclave를 사용하도록 설정되어 있는지 확인하려면 개체 탐색기에서 해당 키를 마우스 오른쪽 단추로 클릭하고 **속성**을 선택합니다. 키가 enclave를 사용하도록 설정된 경우 키 속성을 보여주는 창에 **Enclave 계산: 허용**이 표시됩니다.
+> 열 암호화 키가 enclave를 사용하도록 설정되어 있는지 확인하려면 개체 탐색기에서 해당 키를 마우스 오른쪽 단추로 클릭하고 **속성** 을 선택합니다. 키가 enclave를 사용하도록 설정된 경우 키 속성을 보여주는 창에 **Enclave 계산: 허용** 이 표시됩니다.
 
 ## <a name="provision-enclave-enabled-keys-using-powershell"></a>PowerShell을 사용하여 Enclave 사용 키 프로비저닝
 PowerShell을 사용하여 enclave 사용 키를 프로비전하려면 SqlServer Powershell 모듈 버전 21.1.18179 이상이 필요합니다.
@@ -108,7 +108,7 @@ New-SqlColumnEncryptionKey -Name $cekName  -InputObject $database -ColumnMasterK
 ### <a name="example---provision-enclave-enabled-keys-using-azure-key-vault"></a>예제 - Azure Key Vault를 사용하여 enclave 사용 키 프로비전
 아래 엔드투엔드 예제에서는 Azure Key Vault에 열 마스터 키를 저장하여 enclave 사용 키를 프로비전하는 방법을 보여줍니다. 이 스크립트는 [역할 구분이 없는 Azure Key Vault(예)](configure-always-encrypted-keys-using-powershell.md#azure-key-vault-without-role-separation-example)의 예제를 기반으로 합니다. Enclave를 사용하지 않는 키와 비교하여 enclave 사용 키에 대한 워크플로에서 두 가지 차이점을 확인하는 것이 중요합니다. 
 - 아래 스크립트에서 [**New-SqlCertificateStoreColumnMasterKeySettings**](/powershell/module/sqlserver/new-sqlcertificatestorecolumnmasterkeysettings)는 `-AllowEnclaveComputations` 매개 변수를 사용하여 새 열 마스터 키를 enclave 사용으로 지정합니다. 
-- 아래 스크립트는 [**New-SqlAzureKeyVaultColumnMasterKeySettings**](/powershell/module/sqlserver/new-sqlazurekeyvaultcolumnmasterkeysettings) cmdlet을 호출하기 전에 [**Add-SqlAzureAuthenticationContext**](/powershell/module/sqlserver/add-sqlazureauthenticationcontext) cmdlet을 호출하여 Azure에 로그인합니다. `-AllowEnclaveComputations` 매개 변수는 **New-SqlAzureKeyVaultColumnMasterKeySettings**에서 Azure Key Vault를 호출하여 열 마스터 키의 속성에 서명하므로 먼저 Azure에로그인해야 합니다.
+- 아래 스크립트는 [**New-SqlAzureKeyVaultColumnMasterKeySettings**](/powershell/module/sqlserver/new-sqlazurekeyvaultcolumnmasterkeysettings) cmdlet을 호출하기 전에 [**Add-SqlAzureAuthenticationContext**](/powershell/module/sqlserver/add-sqlazureauthenticationcontext) cmdlet을 호출하여 Azure에 로그인합니다. `-AllowEnclaveComputations` 매개 변수는 **New-SqlAzureKeyVaultColumnMasterKeySettings** 에서 Azure Key Vault를 호출하여 열 마스터 키의 속성에 서명하므로 먼저 Azure에로그인해야 합니다.
 
 ```powershell
 # Create a column master key in Azure Key Vault.

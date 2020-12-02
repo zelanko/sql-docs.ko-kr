@@ -21,10 +21,10 @@ ms.assetid: f841dc79-2044-4863-aff0-56b8bb61f250
 author: markingmyname
 ms.author: maghan
 ms.openlocfilehash: 83213da53228a39b3642f9563aecd5d365d02355
-ms.sourcegitcommit: cc23d8646041336d119b74bf239a6ac305ff3d31
+ms.sourcegitcommit: c5078791a07330a87a92abb19b791e950672e198
 ms.translationtype: HT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 09/23/2020
+ms.lasthandoff: 11/26/2020
 ms.locfileid: "91116050"
 ---
 # <a name="fulltextcatalogproperty-transact-sql"></a>FULLTEXTCATALOGPROPERTY(Transact-SQL)
@@ -82,7 +82,7 @@ FULLTEXTCATALOGPROPERTY('_catalog\_name_','**IndexSize**')는 [sys.fulltext_inde
   
 `Error: 30059, Severity: 16, State: 1. A fatal error occurred during a full-text population and caused the population to be cancelled. Population type is: FULL; database name is FTS_Test (id: 13); catalog name is t1_cat (id: 5); table name t1 (id: 2105058535). Fix the errors that are logged in the full-text crawl log. Then, resume the population. The basic Transact-SQL syntax for this is: ALTER FULLTEXT INDEX ON table_name RESUME POPULATION.`  
   
-**PopulateStatus** 속성이 유휴 상태가 되는지 검사하여 애플리케이션이 타이트 루프에서 대기하지 않도록 해야 합니다. 유휴 상태가 되면 채우기가 완료된 것입니다. 이 검사를 수행하면 데이터베이스와 전체 텍스트 검색 프로세스에서 CPU 주기가 제거되고 시간이 초과됩니다. 일반적으로 OBJECTPROPERTYEX 시스템 함수의 테이블 수준 **TableFullTextPopulateStatus**에서 해당 **PopulateStatus** 속성을 확인하는 것이 더 좋습니다. OBJECTPROPERTYEX에서 이 전체 텍스트 속성과 기타 새 전체 텍스트 속성은 전체 텍스트 인덱싱 테이블에 대한 보다 자세한 정보를 제공합니다. 자세한 내용은 [OBJECTPROPERTYEX&#40;Transact-SQL&#41;](../../t-sql/functions/objectpropertyex-transact-sql.md)를 참조하세요.  
+**PopulateStatus** 속성이 유휴 상태가 되는지 검사하여 애플리케이션이 타이트 루프에서 대기하지 않도록 해야 합니다. 유휴 상태가 되면 채우기가 완료된 것입니다. 이 검사를 수행하면 데이터베이스와 전체 텍스트 검색 프로세스에서 CPU 주기가 제거되고 시간이 초과됩니다. 일반적으로 OBJECTPROPERTYEX 시스템 함수의 테이블 수준 **TableFullTextPopulateStatus** 에서 해당 **PopulateStatus** 속성을 확인하는 것이 더 좋습니다. OBJECTPROPERTYEX에서 이 전체 텍스트 속성과 기타 새 전체 텍스트 속성은 전체 텍스트 인덱싱 테이블에 대한 보다 자세한 정보를 제공합니다. 자세한 내용은 [OBJECTPROPERTYEX&#40;Transact-SQL&#41;](../../t-sql/functions/objectpropertyex-transact-sql.md)를 참조하세요.  
   
 ## <a name="examples"></a>예  
 다음 예에서는 `Cat_Desc`라는 전체 텍스트 카탈로그에서 전체 텍스트 인덱싱된 항목의 수를 반환합니다.  

@@ -19,16 +19,16 @@ ms.assetid: 7c554334-d2d9-4eae-a4ae-097aa4020e1a
 author: MikeRayMSFT
 ms.author: mikeray
 ms.openlocfilehash: eb08d6f4d10a5cdf0047022185e24828b3ae37b5
-ms.sourcegitcommit: 22dacedeb6e8721e7cdb6279a946d4002cfb5da3
+ms.sourcegitcommit: c5078791a07330a87a92abb19b791e950672e198
 ms.translationtype: HT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 10/14/2020
+ms.lasthandoff: 11/26/2020
 ms.locfileid: "92037456"
 ---
 # <a name="write-database-engine"></a>Write(데이터베이스 엔진)
 [!INCLUDE [SQL Server SQL Database](../../includes/applies-to-version/sql-asdb.md)]
 
-Write는 전달된 **BinaryWriter**에 **SqlHierarchyId**의 이진 표현을 씁니다. [!INCLUDE[tsql](../../includes/tsql-md.md)]을 사용하여 Write를 호출할 수 없습니다. 대신 CAST 또는 CONVERT를 사용합니다.
+Write는 전달된 **BinaryWriter** 에 **SqlHierarchyId** 의 이진 표현을 씁니다. [!INCLUDE[tsql](../../includes/tsql-md.md)]을 사용하여 Write를 호출할 수 없습니다. 대신 CAST 또는 CONVERT를 사용합니다.
   
 ## <a name="syntax"></a>구문  
   
@@ -46,7 +46,7 @@ void Write( BinaryWriter w )
 **CLR 반환 형식: void**
   
 ## <a name="remarks"></a>설명  
-Write는 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]이 **hierarchyid** 열에서 데이터를 로드할 때와 같이 필요한 경우 내부적으로 사용됩니다. 또한 Write는 **hierarchyid**와 **varbinary** 간의 변환 시 내부적으로 호출됩니다.
+Write는 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]이 **hierarchyid** 열에서 데이터를 로드할 때와 같이 필요한 경우 내부적으로 사용됩니다. 또한 Write는 **hierarchyid** 와 **varbinary** 간의 변환 시 내부적으로 호출됩니다.
   
 ## <a name="examples"></a>예  
   
