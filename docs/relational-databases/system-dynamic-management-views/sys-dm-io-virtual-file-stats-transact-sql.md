@@ -21,12 +21,12 @@ ms.assetid: fa3e321f-6fe5-45ff-b397-02a0dd3d6b7d
 author: markingmyname
 ms.author: maghan
 monikerRange: =azuresqldb-current||=azure-sqldw-latest||>=sql-server-2016||=sqlallproducts-allversions||>=sql-server-linux-2017||=azuresqldb-mi-current
-ms.openlocfilehash: 4d4d4c319afb3cfb40c05cc187ae4d6ea6e0eacb
-ms.sourcegitcommit: 76ab3b57718341c6057613c9bd38cf82fb17786e
+ms.openlocfilehash: f47083ceb58a7125ad1477c1471c1d9f329472c8
+ms.sourcegitcommit: 773c1203e3c4617606cecb2626f6b2f2c855a53d
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 10/14/2020
-ms.locfileid: "92059621"
+ms.lasthandoff: 12/02/2020
+ms.locfileid: "96535297"
 ---
 # <a name="sysdm_io_virtual_file_stats-transact-sql"></a>sys.dm_io_virtual_file_stats(Transact-SQL)
 [!INCLUDE [sql-asdb-asdbmi-asa-pdw](../../includes/applies-to-version/sql-asdb-asdbmi-asa.md)]
@@ -34,7 +34,7 @@ ms.locfileid: "92059621"
   데이터 및 로그 파일에 대한 I/O 통계를 반환합니다. 이 동적 관리 뷰는 [fn_virtualfilestats](../../relational-databases/system-functions/sys-fn-virtualfilestats-transact-sql.md) 함수를 대체 합니다.  
   
 > [!NOTE]  
->  에서이를 호출 하려면 [!INCLUDE[ssSDWfull](../../includes/sssdwfull-md.md)] **sys.dm_pdw_nodes_io_virtual_file_stats**이름을 사용 합니다. 
+>  에서이를 호출 하려면 [!INCLUDE[ssSDWfull](../../includes/sssdwfull-md.md)] **sys.dm_pdw_nodes_io_virtual_file_stats** 이름을 사용 합니다. 
 
 ## <a name="syntax"></a>구문  
   
@@ -76,7 +76,7 @@ sys.dm_pdw_nodes_io_virtual_file_stats
   
 |열 이름|데이터 형식|Description|  
 |-----------------|---------------|-----------------|  
-|**database_name**|**sysname**|데이터베이스 이름</br></br>Azure Synapse Analytics의 경우 pdw_node_id으로 식별 되는 노드에 저장 된 데이터베이스의 이름입니다. 각 노드에는 파일 13 개를 포함 하는 tempdb 데이터베이스가 하나 있습니다. 또한 각 노드에는 배포 당 하나의 데이터베이스가 있으며 각 배포 데이터베이스에는 5 개의 파일이 있습니다. 예를 들어 각 노드에 4 개의 분포가 포함 된 경우 결과는 pdw_node_id 당 배포 데이터베이스 파일 20 개를 표시 합니다. 
+|**database_name**|**sysname**|**::에는 적용 되지 않습니다** [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] .<br /><br /> 데이터베이스 이름</br></br>Azure Synapse Analytics의 경우 pdw_node_id으로 식별 되는 노드에 저장 된 데이터베이스의 이름입니다. 각 노드에는 파일 13 개를 포함 하는 tempdb 데이터베이스가 하나 있습니다. 또한 각 노드에는 배포 당 하나의 데이터베이스가 있으며 각 배포 데이터베이스에는 5 개의 파일이 있습니다. 예를 들어 각 노드에 4 개의 분포가 포함 된 경우 결과는 pdw_node_id 당 배포 데이터베이스 파일 20 개를 표시 합니다. 
 |**database_id**|**smallint**|데이터베이스의 ID입니다.|  
 |**file_id**|**smallint**|파일의 ID입니다.|  
 |**sample_ms**|**bigint**|컴퓨터가 시작된 이후로 경과한 시간(밀리초)입니다. 이 열은 이 함수의 다양한 출력을 비교하는 데 사용할 수 있습니다.</br></br>데이터 형식은 **정수** [!INCLUDE[ssKatmai](../../includes/sskatmai-md.md)] 형식입니다. [!INCLUDE[ssSQL14](../../includes/sssql14-md.md)]|  
@@ -99,7 +99,7 @@ sys.dm_pdw_nodes_io_virtual_file_stats
 ## <a name="permissions"></a>사용 권한  
  VIEW SERVER STATE 권한이 필요합니다. 자세한 내용은 [동적 관리 뷰 및 함수 &#40;transact-sql&#41;](~/relational-databases/system-dynamic-management-views/system-dynamic-management-views.md)를 참조 하세요.  
   
-## <a name="examples"></a>예  
+## <a name="examples"></a>예제  
 
 ### <a name="a-return-statistics-for-a-log-file"></a>A. 로그 파일에 대 한 통계 반환
 
