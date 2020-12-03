@@ -12,12 +12,12 @@ ms.topic: conceptual
 author: David-Engel
 ms.author: v-daenge
 ms.reviewer: v-chmalh
-ms.openlocfilehash: e81c541055305c056e8e90174b46bf8e4df4b34b
-ms.sourcegitcommit: 192f6a99e19e66f0f817fdb1977f564b2aaa133b
+ms.openlocfilehash: 67b805e4ec95047b843e6b72ba10dc8fee4688d5
+ms.sourcegitcommit: debaff72dbfae91b303f0acd42dd6d99e03135a2
 ms.translationtype: HT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 11/25/2020
-ms.locfileid: "96126526"
+ms.lasthandoff: 12/01/2020
+ms.locfileid: "96419824"
 ---
 # <a name="connection-events"></a>연결 이벤트
 
@@ -63,4 +63,4 @@ Microsoft SqlClient Data Provider for SQL Server에는 데이터 원본에서 �
 
 ## <a name="see-also"></a>참고 항목
 
-- [데이터 소스에 연결](connecting-to-data-source.md)
+- [데이터 원본에 연결](connecting-to-data-source.md)

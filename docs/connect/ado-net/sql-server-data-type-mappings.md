@@ -10,12 +10,12 @@ ms.topic: conceptual
 author: David-Engel
 ms.author: v-daenge
 ms.reviewer: v-chmalh
-ms.openlocfilehash: 3da101331d6c8ecfeae4fa2167fdae2101445cd2
-ms.sourcegitcommit: 192f6a99e19e66f0f817fdb1977f564b2aaa133b
+ms.openlocfilehash: 0b12445989fd044a39ab88b2d840368aec206025
+ms.sourcegitcommit: debaff72dbfae91b303f0acd42dd6d99e03135a2
 ms.translationtype: HT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 11/25/2020
-ms.locfileid: "96126466"
+ms.lasthandoff: 12/01/2020
+ms.locfileid: "96419714"
 ---
 # <a name="sql-server-data-type-mappings"></a>SQL Server 데이터 형식 매핑
 
@@ -73,4 +73,5 @@ SQL Server 데이터 형식에 대한 자세한 내용은 [데이터 형식(Tran
 
 - [SQL Server 데이터 형식 및 ADO.NET](./sql/sql-server-data-types.md)
 - [SQL Server 이진 및 큰 값 데이터](./sql/sql-server-binary-large-value-data.md)
+- [매개 변수 구성](configure-parameters.md)
 - [ADO.NET에서 데이터 형식 매핑](data-type-mappings-ado-net.md)

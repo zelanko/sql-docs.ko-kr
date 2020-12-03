@@ -12,12 +12,12 @@ ms.topic: conceptual
 author: David-Engel
 ms.author: v-daenge
 ms.reviewer: v-chmalh
-ms.openlocfilehash: 4b29191e5f7e42b5057d4258145f7b56001285b5
-ms.sourcegitcommit: 192f6a99e19e66f0f817fdb1977f564b2aaa133b
+ms.openlocfilehash: 2eb3c7d996463b9c581ea60bc11f853a5d131582
+ms.sourcegitcommit: debaff72dbfae91b303f0acd42dd6d99e03135a2
 ms.translationtype: HT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 11/25/2020
-ms.locfileid: "96126453"
+ms.lasthandoff: 12/01/2020
+ms.locfileid: "96419752"
 ---
 # <a name="establishing-connection"></a>연결 설정
 
@@ -55,5 +55,5 @@ ASP.NET 애플리케이션의 보안 ID는 여러 가지 서로 다른 옵션 �
 
 ## <a name="see-also"></a>참고 항목
 
-- [데이터 소스에 연결](connecting-to-data-source.md)
+- [데이터 원본에 연결](connecting-to-data-source.md)
 - [연결 문자열](connection-strings.md)
