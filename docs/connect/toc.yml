@@ -38,6 +38,8 @@
           href: ../connect/ado-net/enable-eventsource-tracing.md
         - name: AppContext 전환
           href: ../connect/ado-net/appcontext-switches.md
+        - name: 문제 해결 가이드
+          href: ../connect/ado-net/sqlclient-troubleshooting-guide.md
         - name: 추가 정보 찾기
           href: ../connect/ado-net/find-additional-sqlclient-driver-information.md
     - name: ADO.NET에서 데이터 형식 매핑
@@ -5177,6 +5179,8 @@
           href: ../connect/oledb/features/table-valued-parameters-oledb-driver-for-sql-server.md
         - name: Azure Active Directory 사용
           href: ../connect/oledb/features/using-azure-active-directory.md
+        - name: 데이터 분류 사용
+          href: ../connect/oledb/features/using-data-classification.md
         - name: 데이터베이스 미러링 사용
           href: ../connect/oledb/features/using-database-mirroring.md
         - name: 유효성 검사 없이 암호화 사용
@@ -5447,6 +5451,12 @@
                   href: ../connect/oledb/ole-db-interfaces/isscommandwithparameters-getparameterproperties-ole-db.md
                 - name: 'ISSCommandWithParameters::SetParameterProperties'
                   href: ../connect/oledb/ole-db-interfaces/isscommandwithparameters-setparameterproperties-ole-db.md
+                - name: ISSDataClassification
+                  items:
+                    - name: ISSDataClassification
+                      href: oledb/ole-db-interfaces/issdataclassification-ole-db.md
+                    - name: 'ISSDataClassification::GetSensitivityClassification'
+                      href: oledb/ole-db-interfaces/issdataclassification-getsensitivityclassification-ole-db.md
             - name: 방법
               href: ../connect/oledb/ole-db-how-to/ole-db-how-to-topics.md
               items:
