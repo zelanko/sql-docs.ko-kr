@@ -20,14 +20,14 @@ helpviewer_keywords:
 - database restores [SQL Server], scenarios
 - accelerated database recovery
 ms.assetid: e985c9a6-4230-4087-9fdb-de8571ba5a5f
-author: mashamsft
-ms.author: mathoma
-ms.openlocfilehash: 5157ab86adbbea5b6e9fa1bdb14264f5418ac07b
-ms.sourcegitcommit: 04cf7905fa32e0a9a44575a6f9641d9a2e5ac0f8
+author: cawrites
+ms.author: chadam
+ms.openlocfilehash: ef3d409ae656776b870119ccd14cb211cc16b32c
+ms.sourcegitcommit: 5a1ed81749800c33059dac91b0e18bd8bb3081b1
 ms.translationtype: HT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 10/07/2020
-ms.locfileid: "91810707"
+ms.lasthandoff: 11/23/2020
+ms.locfileid: "96125556"
 ---
 # <a name="restore-and-recovery-overview-sql-server"></a>복원 및 복구 개요(SQL Server)
  [!INCLUDE [SQL Server](../../includes/applies-to-version/sqlserver.md)]
@@ -56,11 +56,11 @@ ms.locfileid: "91810707"
 |의|단순 복구 모델의 경우|전체/대량 로그 복구 모델의 경우|  
 |----------------------|---------------------------------|----------------------------------------------|  
 |전체 데이터베이스 복원|이 전략이 기본 복원 전략입니다. 전체 데이터베이스 복원은 단순히 전체 데이터베이스 백업을 복원 및 복구하거나 전체 데이터베이스 백업을 복원한 다음 차등 백업을 복원 및 복구합니다.<br /><br /> 자세한 내용은 [전체 데이터베이스 복원&#40;단순 복구 모델&#41;](../../relational-databases/backup-restore/complete-database-restores-simple-recovery-model.md)을 참조하세요.|이 전략이 기본 복원 전략입니다. 전체 데이터베이스 복원은 전체 데이터베이스 백업 및 필요에 따라 차등 백업(있는 경우)을 복원한 후 모든 후속 로그 백업을 순서대로 복원합니다. 전체 데이터베이스 복원은 마지막 로그 백업을 복구 및 복원함으로써 완료됩니다(RESTORE WITH RECOVERY).<br /><br /> 자세한 내용은 [전체 데이터베이스 복원&#40;전체 복구 모델&#41;](../../relational-databases/backup-restore/complete-database-restores-full-recovery-model.md)을 참조하세요.|  
-|File restore **\***|전체 데이터베이스를 복원하지 않고 하나 이상의 손상된 읽기 전용 파일을 복원합니다. 파일 복원은 데이터베이스에 적어도 하나 이상의 읽기 전용 파일 그룹이 있는 경우에만 사용할 수 있습니다.|전체 데이터베이스를 복원하지 않고 하나 이상의 파일을 복원합니다. 파일 복원은 데이터베이스가 오프라인 상태일 때 수행할 수 있으며 일부 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]버전의 경우 데이터베이스가 여전히 온라인 상태일 때에도 수행할 수 있습니다. 파일을 복원하는 동안 복원되는 파일을 포함하는 파일 그룹은 항상 오프라인 상태입니다.|  
+|파일 복원 * *\** _|전체 데이터베이스를 복원하지 않고 하나 이상의 손상된 읽기 전용 파일을 복원합니다. 파일 복원은 데이터베이스에 적어도 하나 이상의 읽기 전용 파일 그룹이 있는 경우에만 사용할 수 있습니다.|전체 데이터베이스를 복원하지 않고 하나 이상의 파일을 복원합니다. 파일 복원은 데이터베이스가 오프라인 상태일 때 수행할 수 있으며 일부 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]버전의 경우 데이터베이스가 여전히 온라인 상태일 때에도 수행할 수 있습니다. 파일을 복원하는 동안 복원되는 파일을 포함하는 파일 그룹은 항상 오프라인 상태입니다.|  
 |페이지 복원|해당 없음|하나 이상의 손상된 페이지를 복원합니다. 페이지 복원은 데이터베이스가 오프라인 상태일 때 수행할 수 있으며 일부 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]버전의 경우 데이터베이스가 여전히 온라인 상태일 때에도 수행할 수 있습니다. 페이지를 복원하는 동안 복원되는 페이지는 항상 오프라인 상태입니다.<br /><br /> 손상되지 않은 로그 백업 체인은 현재 로그 파일을 포함하여 모두 사용할 수 있어야 하며 페이지가 현재 로그 파일 상태로 업데이트되도록 모두 적용되어야 합니다.<br /><br /> 자세한 내용은 [페이지 복원&#40;SQL Server&#41;](../../relational-databases/backup-restore/restore-pages-sql-server.md)을 참조하세요.|  
-|증분 복원 **\***|파일 그룹 수준의 주 파일 그룹에서 시작하여 읽기/쓰기가 가능한 모든 파일 그룹, 보조 파일 그룹순으로 단계별로 데이터베이스를 복원 및 복구합니다.|파일 그룹 수준에서 주 파일 그룹에서 시작하여 단계별로 데이터베이스를 복원 및 복구합니다.<br /><br /> 자세한 내용은 [증분 복원&#40;SQL Server&#41;](../../relational-databases/backup-restore/piecemeal-restores-sql-server.md)를 참조하세요.|  
+|증분 복원 _*\**_|파일 그룹 수준의 주 파일 그룹에서 시작하여 읽기/쓰기가 가능한 모든 파일 그룹, 보조 파일 그룹순으로 단계별로 데이터베이스를 복원 및 복구합니다.|파일 그룹 수준에서 주 파일 그룹에서 시작하여 단계별로 데이터베이스를 복원 및 복구합니다.<br /><br /> 자세한 내용은 [증분 복원&#40;SQL Server&#41;](../../relational-databases/backup-restore/piecemeal-restores-sql-server.md)를 참조하세요.|  
   
- **\*** 온라인 복원은 엔터프라이즈 버전에서만 지원됩니다.  
+ _*\**_ 온라인 복원은 Enterprise 버전에서만 지원됩니다.  
 
 ### <a name="steps-to-restore-a-database"></a>데이터베이스 복원 단계
 파일 복원을 수행하기 위해 [!INCLUDE[ssde_md](../../includes/ssde_md.md)]는 두 단계를 실행합니다. 
@@ -87,15 +87,15 @@ ms.locfileid: "91810707"
 -   [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 에서 파일 또는 페이지를 복원하면 복원 작업을 수행하는 동안 데이터베이스에 있는 다른 데이터가 온라인 상태를 유지할 수 있습니다.  
 
 ## <a name="recovery-and-the-transaction-log"></a><a name="TlogAndRecovery"></a> 복구 및 트랜잭션 로그
-대부분의 복원 시나리오에서는 트랜잭션 로그 백업을 적용하고 [!INCLUDE[ssDEnoversion](../../includes/ssdenoversion-md.md)]에서 **복구 프로세스**를 실행하여 데이터베이스를 온라인 상태로 만들도록 해야 합니다. 복구는 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]에서 각 데이터베이스에 대해 트랜잭션 측면에서 일관되거나 깨끗한 상태에서 시작하는 데 사용하는 프로세스입니다.
+대부분의 복원 시나리오에서는 트랜잭션 로그 백업을 적용하고 [!INCLUDE[ssDEnoversion](../../includes/ssdenoversion-md.md)]에서 _ *복구 프로세스**를 실행하여 데이터베이스를 온라인 상태로 만들도록 해야 합니다. 복구는 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]에서 각 데이터베이스에 대해 트랜잭션 측면에서 일관되거나 깨끗한 상태에서 시작하는 데 사용하는 프로세스입니다.
 
 장애 조치(failover) 또는 기타 완전하지 않은 종료가 발생하면 데이터베이스에서 일부 수정 내용이 버퍼 캐시에서 데이터 파일로 옮겨지지 않을 수 있으며 데이터 파일에 불완전한 트랜잭션으로 인한 일부 수정 내용이 그대로 남아 있을 수 있습니다. [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 인스턴스가 시작되면 각 데이터베이스에 대해 마지막 [데이터베이스 검사점](../../relational-databases/logs/database-checkpoints-sql-server.md)을 기반으로 세 단계로 구성되는 복구를 실행합니다.
 
--   **분석 단계**는 트랜잭션 로그를 분석하여 마지막 검사점이 무엇인지 확인하고 DPT(더티 페이지 테이블) 및 ATT(활성 트랜잭션 테이블)를 만듭니다. DPT에는 데이터베이스가 종료된 시점의 더티 페이지의 레코드가 포함되어 있습니다. ATT에는 데이터베이스가 완전하게 종료되지 않은 시점에 활성화된 트랜잭션의 레코드가 포함됩니다.
+-   **분석 단계** 는 트랜잭션 로그를 분석하여 마지막 검사점이 무엇인지 확인하고 DPT(더티 페이지 테이블) 및 ATT(활성 트랜잭션 테이블)를 만듭니다. DPT에는 데이터베이스가 종료된 시점의 더티 페이지의 레코드가 포함되어 있습니다. ATT에는 데이터베이스가 완전하게 종료되지 않은 시점에 활성화된 트랜잭션의 레코드가 포함됩니다.
 
--   **다시 실행 단계**는 데이터베이스를 종료할 때 데이터 파일에 기록되지 않았을 수 있는 로그에 기록된 모든 수정 내용을 전달합니다. 성공적인 데이터베이스 전체 복구에 필요한 [minLSN(최소 로그 시퀀스 수)](../../relational-databases/sql-server-transaction-log-architecture-and-management-guide.md#minlsn)는 DPT에서 찾을 수 있으며, 모든 더티 페이지에 필요한 다시 실행 작업의 시작을 표시합니다. 이 단계에서 [!INCLUDE[ssDEnoversion](../../includes/ssdenoversion-md.md)]는 커밋된 트랜잭션에 속하는 모든 더티 페이지를 디스크에 기록합니다.
+-   **다시 실행 단계** 는 데이터베이스를 종료할 때 데이터 파일에 기록되지 않았을 수 있는 로그에 기록된 모든 수정 내용을 전달합니다. 성공적인 데이터베이스 전체 복구에 필요한 [minLSN(최소 로그 시퀀스 수)](../../relational-databases/sql-server-transaction-log-architecture-and-management-guide.md#minlsn)는 DPT에서 찾을 수 있으며, 모든 더티 페이지에 필요한 다시 실행 작업의 시작을 표시합니다. 이 단계에서 [!INCLUDE[ssDEnoversion](../../includes/ssdenoversion-md.md)]는 커밋된 트랜잭션에 속하는 모든 더티 페이지를 디스크에 기록합니다.
 
--   **실행 취소 단계**는 해당 데이터베이스의 무결성이 유지되도록 ATT에서 발견된 불완전한 트랜잭션을 롤백합니다. 롤백 후 데이터베이스는 온라인 상태가 되고 트랜잭션 로그 백업이 더 이상 데이터베이스에 적용되지 않습니다.
+-   **실행 취소 단계** 는 해당 데이터베이스의 무결성이 유지되도록 ATT에서 발견된 불완전한 트랜잭션을 롤백합니다. 롤백 후 데이터베이스는 온라인 상태가 되고 트랜잭션 로그 백업이 더 이상 데이터베이스에 적용되지 않습니다.
 
 각 데이터베이스 복구 단계의 진행에 대한 정보는 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] [오류 로그](../../tools/configuration-manager/viewing-the-sql-server-error-log.md)에 기록됩니다. 확장 이벤트를 사용하여 데이터베이스 복구 진행률을 추적할 수도 있습니다. 자세한 내용은 블로그 게시물 [데이터베이스 복구 진행률에 대한 새 확장 이벤트](/archive/blogs/sql_server_team/new-extended-events-for-database-recovery-progress)를 참조하세요.
 
@@ -113,13 +113,13 @@ ms.locfileid: "91810707"
 |-----------------------|-------------------------|---------------------------------|---------------------------|  
 |데이터 복구|전체 복구합니다(로그를 사용 가능한 경우).|일부 데이터 손실이 노출됩니다.|마지막 전체 또는 차등 백업 이후의 데이터는 손실됩니다.|  
 |지정 시간 복원|로그 백업 범위 내의 시간에서 복원합니다.|로그 백업이 대량 로그된 변경 내용을 포함한 경우 허용되지 않습니다.|지원되지 않습니다.|  
-|File restore **\***|전체 지원됩니다.|경우에 따라 지원됩니다. **\*\***|읽기 전용 보조 파일에만 사용 가능합니다.|  
-|Page restore **\***|전체 지원됩니다.|경우에 따라 지원됩니다. **\*\***|없음|  
-|증분(파일 그룹 수준) 복원 **\***|전체 지원됩니다.|경우에 따라 지원됩니다. **\*\***|읽기 전용 보조 파일에만 사용 가능합니다.|  
+|파일 복원 * *\** _|전체 지원됩니다.|경우에 따라 지원됩니다._ *\*\** *|읽기 전용 보조 파일에만 사용 가능합니다.|  
+|페이지 복원 * *\** _|전체 지원됩니다.|경우에 따라 지원됩니다._ *\*\** *|없음|  
+|증분(파일 그룹 수준) 복원 * *\** _|전체 지원됩니다.|경우에 따라 지원됩니다._ *\*\** *|읽기 전용 보조 파일에만 사용 가능합니다.|  
   
- **\*** 엔터프라이즈 버전에서만 사용할 수 있습니다. [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]  
+ * *\** _ [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] Enterprise 버전에서만 사용할 수 있습니다.  
   
- **\*\*** 필요한 조건은 이 항목의 뒷부분에 나오는 [단순 복구 모델에서의 복원 제한 사항](#RMsimpleScenarios)을 참조하세요.  
+ _ *\*\** * 필요한 조건은 이 문서의 뒷부분에 나오는 [단순 복구 모델에서의 복원 제한 사항](#RMsimpleScenarios)을 참조하세요.  
   
 > [!IMPORTANT]  
 > 데이터베이스 복구 모델에 관계없이 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 백업은 해당 백업을 만든 버전보다 오래된 [!INCLUDE[ssDEnoversion](../../includes/ssdenoversion-md.md)] 버전으로 복원될 수는 없습니다.  

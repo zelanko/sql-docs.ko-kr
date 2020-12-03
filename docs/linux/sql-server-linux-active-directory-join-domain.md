@@ -2,19 +2,19 @@
 title: SQL Server on Linux를 Active Directory에 가입
 titleSuffix: SQL Server
 description: 이 문서에서는 SQL Server Linux 호스트 머신을 AD 도메인에 연결하기 위한 가이드를 제공합니다. 기본 제공 SSSD 패키지를 사용하거나 타사 AD 공급자를 사용할 수 있습니다.
-author: Dylan-MSFT
-ms.author: dygray
+author: tejasaks
+ms.author: tejasaks
 ms.reviewer: vanto
-ms.date: 04/01/2019
+ms.date: 11/30/2020
 ms.topic: conceptual
 ms.prod: sql
 ms.technology: linux
-ms.openlocfilehash: ff058b2e326399fa6d04503d984d540fba8efc1b
-ms.sourcegitcommit: f7ac1976d4bfa224332edd9ef2f4377a4d55a2c9
+ms.openlocfilehash: 184744aeea40dd8d21c023806cc63d644311ffde
+ms.sourcegitcommit: debaff72dbfae91b303f0acd42dd6d99e03135a2
 ms.translationtype: HT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 07/02/2020
-ms.locfileid: "85896973"
+ms.lasthandoff: 12/01/2020
+ms.locfileid: "96419849"
 ---
 # <a name="join-sql-server-on-a-linux-host-to-an-active-directory-domain"></a>Linux 호스트의 SQL Server를 Active Directory 도메인에 가입
 
@@ -29,17 +29,25 @@ Active Directory 인증을 구성하려면 먼저 네트워크에서 Active Dire
 > [!IMPORTANT]
 > 이 아티클에서 설명하는 샘플 단계는 지침을 제공하기 위한 것이며 Ubuntu 16.04, RHEL(Red Hat Enterprise Linux) 7.x 및 SLES(SUSE Enterprise Linux) 12 운영 체제를 참조합니다. 실제 단계는 전체 환경이 구성된 방식 및 운영 체제 버전에 따라 사용자 환경에서 약간 다를 수 있습니다. 예를 들어 Ubuntu 18.04에서는 netplan을 사용하는 반면, RHEL(Red Hat Enterprise Linux) 8.x에서는 다른 도구 중 nmcli를 사용하여 네트워크를 관리하고 구성합니다. 특정 도구, 구성, 사용자 지정 및 필요한 문제 해결 관련 정보는 사용자 환경의 시스템 및 도메인 관리자에게 문의하는 것이 좋습니다.
 
+### <a name="reverse-dns-rdns"></a>역방향 DNS(RDNS)
+
+Windows Server를 도메인 컨트롤러로 실행하는 컴퓨터를 설정하는 경우 기본적으로 RDNS 영역이 없을 수 있습니다. SQL Server를 실행할 Linux 머신의 IP 주소와 도메인 컨트롤러 모두에 해당하는 RDNS 영역이 있는지 확인합니다.
+
+또한 도메인 컨트롤러를 가리키는 PTR 레코드가 있는지 확인합니다.
+
 ## <a name="check-the-connection-to-a-domain-controller"></a>도메인 컨트롤러의 연결 확인
 
-도메인의 약식 이름과 정규화된 이름을 모두 사용하여 도메인 컨트롤러에 연결할 수 있는지 확인합니다.
+도메인의 짧은 이름과 정규화된 이름을 모두 사용하고 도메인 컨트롤러의 호스트 이름을 사용하여 도메인 컨트롤러에 연결할 수 있는지 확인합니다. 도메인 컨트롤러의 IP도 도메인 컨트롤러의 FQDN에 대해 확인되어야 합니다.
 
 ```bash
 ping contoso
 ping contoso.com
+ping dc1.contoso.com
+nslookup <IP address of dc1.contoso.com>
 ```
 
 > [!TIP]
-> 이 자습서에서는 예제 도메인과 영역 이름으로 각각 **contoso.com** 및 **CONTOSO.COM**을 사용합니다. 또한 **DC1.CONTOSO.COM**을 도메인 컨트롤러의 정규화된 도메인 이름 예제로 사용합니다. 이러한 이름을 사용자 고유의 값으로 바꾸어야 합니다.
+> 이 자습서에서는 예제 도메인과 영역 이름으로 각각 **contoso.com** 및 **CONTOSO.COM** 을 사용합니다. 또한 **DC1.CONTOSO.COM** 을 도메인 컨트롤러의 정규화된 도메인 이름 예제로 사용합니다. 이러한 이름을 사용자 고유의 값으로 바꾸어야 합니다.
 
 이러한 이름 확인 중 하나라도 실패하면 도메인 검색 목록을 업데이트합니다. 다음 섹션에서는 각각 Ubuntu, RHEL(Red Hat Enterprise Linux) 및 SLES(SUSE Linux Enterprise Server)에 관한 지침을 제공합니다.
 
@@ -56,12 +64,45 @@ ping contoso.com
    ```
 
    > [!NOTE]
-   > 네트워크 인터페이스 `eth0`은 머신마다 다를 수 있습니다. 사용 중인 인터페이스를 확인하려면 **ifconfig**를 실행합니다. 그런 다음 IP 주소와 전송 및 수신된 바이트가 있는 인터페이스를 복사합니다.
+   > 네트워크 인터페이스 `eth0`은 머신마다 다를 수 있습니다. 사용 중인 인터페이스를 확인하려면 **ifconfig** 를 실행합니다. 그런 다음 IP 주소와 전송 및 수신된 바이트가 있는 인터페이스를 복사합니다.
 
 1. 이 파일을 편집한 후 네트워크 서비스를 다시 시작합니다.
 
    ```bash
    sudo ifdown eth0 && sudo ifup eth0
+   ```
+
+1. 다음으로 **/etc/resolv.conf** 파일에 다음 예제와 같은 줄이 포함되어 있는지 확인합니다.
+
+   ```/etc/resolv.conf
+   search contoso.com com  
+   nameserver **<AD domain controller IP address>**
+   ```
+
+### <a name="ubuntu-1804"></a>Ubuntu 18.04
+
+1. Active Directory 도메인이 도메인 검색 목록에 있도록 [sudo vi /etc/netplan/******.yaml] 파일을 편집합니다.
+
+   ```/etc/netplan/******.yaml
+   network:
+     ethernets:
+       eth0:
+               dhcp4: true
+
+               dhcp6: true
+               nameservers:
+                       addresses: [ **<AD domain controller IP address>**]
+                       search: [**<AD domain name>**]
+     version: 2
+   ```
+
+   > [!NOTE]
+   > 네트워크 인터페이스 `eth0`은 머신마다 다를 수 있습니다. 사용 중인 인터페이스를 확인하려면 **ifconfig** 를 실행합니다. 그런 다음 IP 주소와 전송 및 수신된 바이트가 있는 인터페이스를 복사합니다.
+
+1. 이 파일을 편집한 후 네트워크 서비스를 다시 시작합니다.
+
+   ```bash
+   sudo netplan apply
    ```
 
 1. 다음으로 **/etc/resolv.conf** 파일에 다음 예제와 같은 줄이 포함되어 있는지 확인합니다.
@@ -94,7 +135,7 @@ ping contoso.com
    nameserver **<AD domain controller IP address>**
    ```
 
-1. 여전히 도메인 컨트롤러를 ping할 수 없으면 도메인 컨트롤러의 정규화된 도메인 이름 및 IP 주소를 찾습니다. 예제 도메인 이름은 **DC1.CONTOSO.COM**입니다. **/etc/hosts**에 다음 항목을 추가합니다.
+1. 여전히 도메인 컨트롤러를 ping할 수 없으면 도메인 컨트롤러의 정규화된 도메인 이름 및 IP 주소를 찾습니다. 예제 도메인 이름은 **DC1.CONTOSO.COM** 입니다. **/etc/hosts** 에 다음 항목을 추가합니다.
 
    ```/etc/hosts
    **<IP address>** DC1.CONTOSO.COM CONTOSO.COM CONTOSO
@@ -145,22 +186,41 @@ ping contoso.com
    ```base
    sudo yum install realmd krb5-workstation
    ```
-
-   **SUSE:**
+   
+   **SLES 12:**
+   
+   이러한 단계는 Linux용 SUSE의 유일한 공식 지원 버전인 SLES 12에만 해당합니다.
 
    ```bash
-   sudo zypper install realmd krb5-client
+   sudo zypper addrepo https://download.opensuse.org/repositories/network/SLE_12/network.repo
+   sudo zypper refresh
+   sudo zypper install realmd krb5-client sssd-ad
    ```
 
-   **Ubuntu:**
+   **Ubuntu 16.04:**
 
    ```bash
    sudo apt-get install realmd krb5-user software-properties-common python-software-properties packagekit
    ```
 
+   **Ubuntu 18.04:**
+
+   ```bash
+   sudo apt-get install realmd krb5-user software-properties-common python3-software-properties packagekit
+   sudo apt-get install adcli libpam-sss libnss-sss sssd sssd-tools
+   ```
+
 1. Kerberos 클라이언트 패키지 설치에서 영역 이름을 입력하라는 메시지가 표시되면 도메인 이름을 대문자로 입력합니다.
 
-1. DNS가 올바르게 구성되어 있는지 확인한 후 다음 명령을 실행하여 도메인을 조인합니다. AD에서 도메인에 새 머신을 조인할 수 있는 권한이 있는 AD 계정을 사용하여 인증해야 합니다. 이 명령은 AD에서 새 컴퓨터 계정을 만들고 **/etc/krb5.keytab** 호스트 keytab 파일을 만들고, **/etc/sssd/sssd.conf**에서 도메인을 구성하고, **/etc/krb5.conf**를 업데이트합니다.
+1. DNS가 올바르게 구성되어 있는지 확인한 후 다음 명령을 실행하여 도메인을 조인합니다. AD에서 도메인에 새 머신을 조인할 수 있는 권한이 있는 AD 계정을 사용하여 인증해야 합니다. 이 명령은 AD에서 새 컴퓨터 계정을 만들고 **/etc/krb5.keytab** 호스트 keytab 파일을 만들고, **/etc/sssd/sssd.conf** 에서 도메인을 구성하고, **/etc/krb5.conf** 를 업데이트합니다.
+
+   **realmd** 관련 문제로 인해 먼저 머신 호스트 이름을 머신 이름 대신 FQDN으로 설정합니다. 그러지 않으면 도메인 컨트롤러에서 동적 DNS 업데이트를 지원하는 경우에도 **realmd** 가 머신에 필요한 일부 SPN을 만들 수 없으며 DNS 항목이 자동으로 업데이트되지 않습니다.
+   
+   ```bash
+   sudo hostname <old hostname>.contoso.com
+   ```
+   
+   위 명령을 실행한 후 /etc/hostname 파일에 <old hostname>.contoso.com이 포함되어야 합니다.
 
    ```bash
    sudo realm join contoso.com -U 'user@CONTOSO.COM' -v
@@ -197,9 +257,9 @@ ping contoso.com
    ```
 
    > [!NOTE]
-   > - **id user\@contoso.com**에서 `No such user`를 반환하는 경우 `sudo systemctl status sssd` 명령을 실행하여 SSSD 서비스가 시작되었는지 확인하세요. SSSD 서비스가 실행 중인데도 오류가 계속 표시되는 경우에는 SSSD의 자세한 정보 로깅을 사용하도록 설정해 보세요. 자세한 내용은 Red Hat 설명서에서 [Troubleshooting SSSD](https://access.redhat.com/documentation/Red_Hat_Enterprise_Linux/7/html/System-Level_Authentication_Guide/trouble.html#SSSD-Troubleshooting)(SSSD 문제 해결)에 관한 내용을 참조하세요.
+   > - **id user\@contoso.com** 에서 `No such user`를 반환하는 경우 `sudo systemctl status sssd` 명령을 실행하여 SSSD 서비스가 시작되었는지 확인하세요. SSSD 서비스가 실행 중인데도 오류가 계속 표시되는 경우에는 SSSD의 자세한 정보 로깅을 사용하도록 설정해 보세요. 자세한 내용은 Red Hat 설명서에서 [Troubleshooting SSSD](https://access.redhat.com/documentation/Red_Hat_Enterprise_Linux/7/html/System-Level_Authentication_Guide/trouble.html#SSSD-Troubleshooting)(SSSD 문제 해결)에 관한 내용을 참조하세요.
    >
-   > - **kinit user\@CONTOSO.COM**을 반환하는 경우에는 `KDC reply did not match expectations while getting initial credentials`, 대문자로 영역을 지정했는지 확인합니다.
+   > - **kinit user\@CONTOSO.COM** 을 반환하는 경우에는 `KDC reply did not match expectations while getting initial credentials`, 대문자로 영역을 지정했는지 확인합니다.
 
 자세한 내용은 Red Hat 설명서에서 [Discovering and Joining Identity Domains](https://access.redhat.com/documentation/Red_Hat_Enterprise_Linux/7/html/Windows_Integration_Guide/realmd-domain.html)(ID 도메인 검색 및 조인)에 관한 내용을 참조하세요.
 
@@ -212,7 +272,7 @@ SQL Server는 AD 관련 쿼리에 타사 통합자의 코드 또는 라이브러
 > [!IMPORTANT]
 > **mssql-conf** `network.disablesssd` 구성 옵션 사용에 관한 권장 사항은 [SQL Server on Linux에서 Active Directory 인증 사용](sql-server-linux-active-directory-authentication.md#additionalconfig) 문서의 **추가 구성 옵션** 섹션을 참조하세요.
 
-**/etc/krb5.conf**가 올바르게 구성되어 있는지 확인합니다. 타사 Active Directory 공급자 대부분의 경우 이 구성이 자동으로 수행됩니다. 그러나 이후 문제를 방지하기 위해 **/etc/krb5.conf**에서 다음 값을 확인하세요.
+**/etc/krb5.conf** 가 올바르게 구성되어 있는지 확인합니다. 타사 Active Directory 공급자 대부분의 경우 이 구성이 자동으로 수행됩니다. 그러나 이후 문제를 방지하기 위해 **/etc/krb5.conf** 에서 다음 값을 확인하세요.
 
 ```/etc/krb5.conf
 [libdefaults]
@@ -229,7 +289,7 @@ contoso.com = CONTOSO.COM
 
 ## <a name="check-that-the-reverse-dns-is-properly-configured"></a>역방향 DNS가 제대로 구성되어 있는지 확인합니다.
 
-다음 명령은 SQL Server를 실행하는 호스트의 FQDN(정규화된 도메인 이름)을 반환해야 합니다. 예를 들어 **SqlHost.contoso.com**을 반환해야 합니다.
+다음 명령은 SQL Server를 실행하는 호스트의 FQDN(정규화된 도메인 이름)을 반환해야 합니다. 예를 들어 **SqlHost.contoso.com** 을 반환해야 합니다.
 
 ```bash
 host **<IP address of SQL Server host>**

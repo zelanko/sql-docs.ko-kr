@@ -24,12 +24,12 @@ ms.assetid: f82aaab0-334f-427b-89b0-de4af596b4fa
 author: markingmyname
 ms.author: maghan
 monikerRange: '>=aps-pdw-2016||=azuresqldb-current||=azure-sqldw-latest||>=sql-server-2016||=sqlallproducts-allversions||>=sql-server-linux-2017||=azuresqldb-mi-current'
-ms.openlocfilehash: 8b41f37f996015de4b853c9443ef700b16242b44
-ms.sourcegitcommit: bd3a135f061e4a49183bbebc7add41ab11872bae
+ms.openlocfilehash: d1dfea07a02effb5362b0f01ad496b536c646139
+ms.sourcegitcommit: 644223c40af7168f9d618526e9f4cd24e115d1db
 ms.translationtype: HT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 10/21/2020
-ms.locfileid: "92300834"
+ms.lasthandoff: 11/30/2020
+ms.locfileid: "96328118"
 ---
 # <a name="set-ansi_warnings-transact-sql"></a>SET ANSI_WARNINGS(Transact-SQL)
 [!INCLUDE [sql-asdb-asdbmi-asa-pdw](../../includes/applies-to-version/sql-asdb-asdbmi-asa-pdw.md)]
@@ -39,16 +39,14 @@ ms.locfileid: "92300834"
  ![항목 링크 아이콘](../../database-engine/configure-windows/media/topic-link.gif "항목 링크 아이콘") [Transact-SQL 구문 표기 규칙](../../t-sql/language-elements/transact-sql-syntax-conventions-transact-sql.md)  
   
 ## <a name="syntax"></a>구문
-  
+
+### <a name="syntax-for-ssnoversion-mdmd-and-sssodfull-mdmd"></a>[!INCLUDE[ssnoversion-md.md](../../includes/ssnoversion-md.md)] 및 [!INCLUDE[sssodfull-md.md](../../includes/sssodfull-md.md)] 구문
 ```syntaxsql
--- Syntax for SQL Server and Azure SQL Database
-  
 SET ANSI_WARNINGS { ON | OFF }
 ```
 
+### <a name="syntax-for-sssdw-mdmd-and-sspdw-mdmd"></a>[!INCLUDE[sssdw-md.md](../../includes/sssdw-md.md)] 및 [!INCLUDE[sspdw-md.md](../../includes/sspdw-md.md)] 구문
 ```syntaxsql
--- Syntax for Azure Synapse Analytics and Parallel Data Warehouse
-
 SET ANSI_WARNINGS ON
 ```
 
@@ -59,7 +57,7 @@ SET ANSI_WARNINGS ON
   
 -   ON으로 설정한 경우 SUM, AVG, MAX, MIN, STDEV, STDEVP, VAR, VARP, COUNT 등의 집계 함수에 NULL 값이 있으면 경고 메시지가 생성됩니다. OFF로 설정한 경우에는 경고가 발생하지 않습니다.  
   
--   ON으로 설정한 경우 0으로 나누기 및 산술 오버플로 오류가 발생하면 문이 롤백되고 오류 메시지가 생성됩니다. OFF로 설정한 경우 0으로 나누기 및 산술 오버플로 오류가 발생하면 NULL 값이 반환됩니다. 새 값의 길이가 열의 최대 크기를 초과하는 **character** , Unicode 또는 **binary** 열에 INSERT나 UPDATE를 시도하면 0으로 나누기 또는 산술 오버플로 오류로 인해 Null 값이 반환될 수 있습니다. SET ANSI_WARNINGS 옵션이 ON이면 ISO 표준에 지정된 대로 INSERT나 UPDATE가 취소됩니다. 문자 열에 대해서는 후행 공백이, 이진 열에 대해서는 후행 NULL 값이 무시됩니다. 이 옵션이 OFF이면 열의 크기에 맞게 데이터가 잘리고 문이 성공적으로 실행됩니다.  
+-   ON으로 설정한 경우 0으로 나누기 및 산술 오버플로 오류가 발생하면 문이 롤백되고 오류 메시지가 생성됩니다. OFF로 설정한 경우 0으로 나누기 및 산술 오버플로 오류가 발생하면 NULL 값이 반환됩니다. 새 값의 길이가 열의 최대 크기를 초과하는 **character**, Unicode 또는 **binary** 열에 INSERT나 UPDATE를 시도하면 0으로 나누기 또는 산술 오버플로 오류로 인해 Null 값이 반환될 수 있습니다. SET ANSI_WARNINGS 옵션이 ON이면 ISO 표준에 지정된 대로 INSERT나 UPDATE가 취소됩니다. 문자 열에 대해서는 후행 공백이, 이진 열에 대해서는 후행 NULL 값이 무시됩니다. 이 옵션이 OFF이면 열의 크기에 맞게 데이터가 잘리고 문이 성공적으로 실행됩니다.  
   
 > [!NOTE]  
 > **binary** 또는 **varbinary** 데이터로 또는 그 역으로의 변환에서 잘림이 일어날 때는 SET 옵션에 상관없이 경고나 오류가 생성되지 않습니다.  

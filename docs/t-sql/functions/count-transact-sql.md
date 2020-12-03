@@ -25,11 +25,11 @@ author: markingmyname
 ms.author: maghan
 monikerRange: '>=aps-pdw-2016||=azuresqldb-current||=azure-sqldw-latest||>=sql-server-2016||=sqlallproducts-allversions||>=sql-server-linux-2017||=azuresqldb-mi-current'
 ms.openlocfilehash: 973583b5c5dd32273312f6282e91d501659887fb
-ms.sourcegitcommit: cc23d8646041336d119b74bf239a6ac305ff3d31
+ms.sourcegitcommit: 192f6a99e19e66f0f817fdb1977f564b2aaa133b
 ms.translationtype: HT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 09/23/2020
-ms.locfileid: "91114894"
+ms.lasthandoff: 11/25/2020
+ms.locfileid: "96124853"
 ---
 # <a name="count-transact-sql"></a>COUNT(Transact-SQL)
 [!INCLUDE [sql-asdb-asdbmi-asa-pdw](../../includes/applies-to-version/sql-asdb-asdbmi-asa-pdw.md)]
@@ -59,13 +59,13 @@ DISTINCT
 `COUNT`이 Null이 아닌 고유한 값의 수를 반환하도록 지정합니다.
   
 *expression*  
-**image**, **ntext** 또는 **text**를 제외한 형식의 [식](../../t-sql/language-elements/expressions-transact-sql.md)입니다. `COUNT`이 식에서 집계 함수 또는 하위 쿼리를 지원하지 않습니다.
+**image**, **ntext** 또는 **text** 를 제외한 형식의 [식](../../t-sql/language-elements/expressions-transact-sql.md)입니다. `COUNT`이 식에서 집계 함수 또는 하위 쿼리를 지원하지 않습니다.
   
 \*  
 `COUNT`이 반환할 총 테이블 행 개수를 결정하는 모든 행을 계산해야 한다고 지정합니다. `COUNT(*)`에는 매개 변수가 없으며 DISTINCT의 사용을 지원하지 않습니다. `COUNT(*)`은 특정 열에 대한 정보를 사용하지 않도록 정의되어 있으므로 *expression* 매개 변수가 필요하지 않습니다. `COUNT(*)`은 지정한 테이블에서 행의 수를 반환하고 중복 행을 유지합니다. 각 행은 개별적으로 계산되며 Null 값을 가진 행도 포함됩니다.
   
 OVER **(** [ *partition_by_clause* ] [ *order_by_clause* ] [ *ROW_or_RANGE_clause* ] **)**  
-*partition_by_clause*는 `FROM` 절이 생성한 결과 집합을 `COUNT` 함수가 적용되는 파티션으로 나눕니다. 지정하지 않을 경우 쿼리 결과 집합의 모든 행이 단일 그룹으로 취급됩니다. *order_by_clause*는 작업의 논리적 순서를 결정합니다. 자세한 내용은 [OVER 절 &#40;Transact-SQL&#41;](../../t-sql/queries/select-over-clause-transact-sql.md)을 참조하세요. 
+*partition_by_clause* 는 `FROM` 절이 생성한 결과 집합을 `COUNT` 함수가 적용되는 파티션으로 나눕니다. 지정하지 않을 경우 쿼리 결과 집합의 모든 행이 단일 그룹으로 취급됩니다. *order_by_clause* 는 작업의 논리적 순서를 결정합니다. 자세한 내용은 [OVER 절 &#40;Transact-SQL&#41;](../../t-sql/queries/select-over-clause-transact-sql.md)을 참조하세요. 
 
 ## <a name="return-types"></a>반환 형식
  **int**  
@@ -73,13 +73,13 @@ OVER **(** [ *partition_by_clause* ] [ *order_by_clause* ] [ *ROW_or_RANGE_claus
 ## <a name="remarks"></a>설명  
 COUNT(\*)는 그룹에 포함된 항목 개수를 반환합니다. 여기에는 NULL 값과 중복 항목이 포함됩니다.
   
-COUNT(ALL *식*)은 그룹에 포함된 각 행의 *식*을 계산하여 Null이 아닌 값의 개수를 반환합니다.
+COUNT(ALL *식*)은 그룹에 포함된 각 행의 *식* 을 계산하여 Null이 아닌 값의 개수를 반환합니다.
   
-COUNT(DISTINCT *식*)은 그룹에 포함된 각 행의 *식*을 계산하여 Null이 아닌 고유 값의 개수를 반환합니다.
+COUNT(DISTINCT *식*)은 그룹에 포함된 각 행의 *식* 을 계산하여 Null이 아닌 고유 값의 개수를 반환합니다.
   
 2^31-1을 초과하는 반환 값의 경우 `COUNT`가 오류를 반환합니다. 이러한 경우 대신 `COUNT_BIG`를 사용합니다.
   
-`COUNT`은 OVER 및 ORDER BY 절 ***없이*** 사용되는 경우 결정적 함수이고, OVER 및 ORDER BY 절과 ***함께*** 사용되는 경우 비결정적 함수입니다. 자세한 내용은 [결정적 및 비결정 함수](../../relational-databases/user-defined-functions/deterministic-and-nondeterministic-functions.md)를 참조하세요.
+`COUNT`는 OVER 및 ORDER BY 절 **없이** 사용되는 경우 결정 함수이고, OVER 및 ORDER BY 절과 *_함께_* 사용되는 경우 비결정 함수입니다. 자세한 내용은 [결정적 및 비결정 함수](../../relational-databases/user-defined-functions/deterministic-and-nondeterministic-functions.md)를 참조하세요.
   
 ## <a name="examples"></a>예제  
   
@@ -101,7 +101,7 @@ GO
 (1 row(s) affected)
 ```
   
-### <a name="b-using-count"></a>B. COUNT(\*) 사용  
+### <a name="b-using-count_"></a>B. COUNT(\_) 사용  
 이 예제에서는 [!INCLUDE[ssSampleDBCoFull](../../includes/sssampledbcofull-md.md)] 직원의 총 수를 반환합니다.
   
 ```sql

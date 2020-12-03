@@ -18,11 +18,11 @@ author: pmasl
 ms.author: pelopes
 manager: amitban
 ms.openlocfilehash: 9b0f95a4afa1397783547f2804d92dd3fc37b357
-ms.sourcegitcommit: 9470c4d1fc8d2d9d08525c4f811282999d765e6e
+ms.sourcegitcommit: 192f6a99e19e66f0f817fdb1977f564b2aaa133b
 ms.translationtype: HT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 07/17/2020
-ms.locfileid: "86457262"
+ms.lasthandoff: 11/25/2020
+ms.locfileid: "96126617"
 ---
 # <a name="execution-plans"></a>실행 계획
 [!INCLUDE [SQL Server Azure SQL Database](../../includes/applies-to-version/sql-asdb.md)]
@@ -46,9 +46,9 @@ ms.locfileid: "86457262"
 
 > [!NOTE]
 > [!INCLUDE[ssManStudioFull](../../includes/ssmanstudiofull-md.md)]에는 실행 계획을 표시하는 세 가지 옵션이 있습니다.        
-> -  ******[예상 실행 계획](../../relational-databases/performance/display-the-estimated-execution-plan.md)은 쿼리 최적화 프로그램에서 추정을 기반으로 생성한 컴파일된 계획입니다. 계획 캐시에 저장되는 쿼리 계획입니다.        
-> -  ******[실제 실행 계획](../../relational-databases/performance/display-an-actual-execution-plan.md)은 컴파일된 계획 및 관련 [실행 컨텍스트](../../relational-databases/query-processing-architecture-guide.md#execution-plan-caching-and-reuse)입니다. **쿼리 실행이 완료된 후** 사용할 수 있게 됩니다. 여기에는 실행 경고 또는 최신 버전 [!INCLUDE[ssde_md](../../includes/ssde_md.md)]의 경우 실행 중에 사용된 경과 및 CPU 시간 같은 실제 런타임 정보가 포함됩니다.         
-> -  ******[활성 쿼리 통계](../../relational-databases/performance/live-query-statistics.md)는 컴파일된 계획 및 관련 실행 컨텍스트입니다. **진행 중인 쿼리 실행**에 사용할 수 있으며 매초 업데이트됩니다. 여기에는 [연산자](../../relational-databases/showplan-logical-and-physical-operators-reference.md)를 통과하는 실제 행 수, 경과된 시간, 예상 쿼리 진행률 같은 실제 런타임 정보가 포함됩니다.
+> -  *_[예상 실행 계획](../../relational-databases/performance/display-the-estimated-execution-plan.md)_* 은 쿼리 최적화 프로그램에서 예상치를 기반으로 생성한 컴파일된 계획입니다. 계획 캐시에 저장되는 쿼리 계획입니다.        
+> -  [실제 실행 계획](../../relational-databases/performance/display-an-actual-execution-plan.md)은 컴파일된 계획 및 관련 [실행 컨텍스트](../../relational-databases/query-processing-architecture-guide.md#execution-plan-caching-and-reuse)입니다.** _*쿼리 실행이 완료된 후** 사용할 수 있게 됩니다. 여기에는 실행 경고 또는 최신 버전 [!INCLUDE[ssde_md](../../includes/ssde_md.md)]의 경우 실행 중에 사용된 경과 및 CPU 시간 같은 실제 런타임 정보가 포함됩니다.         
+> -  **[라이브 쿼리 통계](../../relational-databases/performance/live-query-statistics.md) *_는 컴파일된 계획 및 관련 실행 컨텍스트입니다. _* 진행 중인 쿼리 실행** 에 사용할 수 있으며 매초 업데이트됩니다. 여기에는 [연산자](../../relational-databases/showplan-logical-and-physical-operators-reference.md)를 통과하는 실제 행 수, 경과된 시간, 예상 쿼리 진행률 같은 실제 런타임 정보가 포함됩니다.
 
 > [!TIP]
 > 쿼리 처리 및 쿼리 실행 계획에 대한 자세한 내용은 쿼리 처리 아키텍처 가이드의 [SELECT 문 최적화](../../relational-databases/query-processing-architecture-guide.md#optimizing-select-statements) 및 [실행 계획 캐싱 및 다시 사용](../../relational-databases/query-processing-architecture-guide.md#execution-plan-caching-and-reuse) 섹션을 참조하세요.

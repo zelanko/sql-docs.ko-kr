@@ -14,15 +14,15 @@ ms.author: mikeray
 ms.reviewer: genemi
 monikerRange: '>=aps-pdw-2016||=azuresqldb-current||=azure-sqldw-latest||>=sql-server-2016||=sqlallproducts-allversions||>=sql-server-linux-2017||=azuresqldb-mi-current'
 ms.openlocfilehash: 4c1d50cc58995479aa61b4c62639f9d13de6f400
-ms.sourcegitcommit: e700497f962e4c2274df16d9e651059b42ff1a10
+ms.sourcegitcommit: c5078791a07330a87a92abb19b791e950672e198
 ms.translationtype: HT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 08/17/2020
+ms.lasthandoff: 11/26/2020
 ms.locfileid: "88445871"
 ---
 # <a name="nondeterministic-conversion-of-literal-date-strings-into-date-values"></a>날짜 값으로 리터럴 날짜 문자열의 비결정적 변환
 
-날짜 데이터 형식으로 CHARACTER 문자열의 변환을 허용하는 경우에 주의해야 합니다. 이유는 이러한 변환이 자주 _비결정적_이기 때문입니다.
+날짜 데이터 형식으로 CHARACTER 문자열의 변환을 허용하는 경우에 주의해야 합니다. 이유는 이러한 변환이 자주 _비결정적_ 이기 때문입니다.
 
 [SET LANGUAGE](../statements/set-language-transact-sql.md) 및 [SET DATEFORMAT](../statements/set-dateformat-transact-sql.md)의 설정을 고려하여 이러한 비결정적 변환을 제어합니다.
 
@@ -34,9 +34,9 @@ ms.locfileid: "88445871"
 
 문자열은 월의 이름일 수 있습니다. 하지만 이름이 영어 또는 폴란드어 또는 크로아티아어 또는 다른 언어인가요? 사용자의 세션이 올바른 해당 언어로 설정되나요?
 
-예를 들어 단어 달의 이름인 _listopad_를 고려해봅니다. 하지만 SQL 시스템에서 믿는 언어에 따라 달라지는 달이 사용됩니다.
-- 폴란드어의 경우 _listopad_는 11월로 변역됩니다(영어로 _November_).
-- 크로아티아어의 경우 _listopad_는 10월로 변역됩니다(영어로 _October_).
+예를 들어 단어 달의 이름인 _listopad_ 를 고려해봅니다. 하지만 SQL 시스템에서 믿는 언어에 따라 달라지는 달이 사용됩니다.
+- 폴란드어의 경우 _listopad_ 는 11월로 변역됩니다(영어로 _November_).
+- 크로아티아어의 경우 _listopad_ 는 10월로 변역됩니다(영어로 _October_).
 
 #### <a name="code-example-of-set-language"></a>SET LANGUAGE의 코드 예제
 
@@ -60,7 +60,7 @@ SL_Polish
 
 SL_Croatian
 2018-10-28
-***/
+**_/
 ```
 
 
@@ -69,24 +69,24 @@ SL_Croatian
 
 - `SET DATEFORMAT dmy;`
 
-위의 **dmy** 형식은 '01-03-2018'의 예제 날짜 문자열이 _2018년 3월 1일_을 의미하는 것으로 번역되는 것을 말합니다.
+위의 _ *dmy** 형식은 ‘01-03-2018’의 예제 날짜 문자열이 ‘2018년 3월 1일’을 의미하는 것으로 해석되는 것을 말합니다.
 
-대신 **mdy**가 지정된 경우 동일한 '01-03-2018' 문자열은 _2018년 1월 3일_을 의미합니다.
+대신 **mdy** 가 지정된 경우 동일한 '01-03-2018' 문자열은 _2018년 1월 3일_ 을 의미합니다.
 
-**ymd**가 지정된 경우 출력 값은 보장되지 않습니다. '2018'의 숫자 값은 너무 커서 날이 될 수 없습니다.
+**ymd** 가 지정된 경우 출력 값은 보장되지 않습니다. '2018'의 숫자 값은 너무 커서 날이 될 수 없습니다.
 <!--
 The preceding claim of "no guarantee" might be incorrect, in the minds of the SQL query engine Developer team?
 -->
 
 #### <a name="specific-countries"></a>특정 국가
 
-일본 및 중국에서 **ymd**의 DATEFORMAT이 사용됩니다. 형식의 부분은 가장 큰 단위에서 가장 작은 단위까지 합리적인 순서로 배열되어 있습니다. 따라서 이 형식에서 잘 정렬합니다. 이 형식은 _국제_ 형식으로 간주됩니다. 연도의 네 자리는 모호하지 않으며, 지구상의 어떤 나라도 **ydm**의 낡은 형식을 사용하지 않으므로 이는 국제적입니다.
+일본 및 중국에서 **ymd** 의 DATEFORMAT이 사용됩니다. 형식의 부분은 가장 큰 단위에서 가장 작은 단위까지 합리적인 순서로 배열되어 있습니다. 따라서 이 형식에서 잘 정렬합니다. 이 형식은 _국제_ 형식으로 간주됩니다. 연도의 네 자리는 모호하지 않으며, 지구상의 어떤 나라도 **ydm** 의 낡은 형식을 사용하지 않으므로 이는 국제적입니다.
 
 독일 및 프랑스와 같은 다른 국가에서 DATEFORMAT은 **dmy**, 즉 **'dd-mm-yyyy'** 입니다. **dmy** 형식은 잘 정렬하지 않지만 가장 작은 단위에서 가장 큰 단위의 합리적인 순서입니다.
 
-미국 및 미크로네시아는 정렬되지 않는 **mdy**를 사용하는 유일한 국가입니다. 형식의 혼합 시퀀스는 구술 날짜의 구두 음성의 패턴과 일치합니다.
+미국 및 미크로네시아는 정렬되지 않는 **mdy** 를 사용하는 유일한 국가입니다. 형식의 혼합 시퀀스는 구술 날짜의 구두 음성의 패턴과 일치합니다.
 
-#### <a name="code-example-of-set-dateformat-mdy-versus-dmy"></a>SET DATEFORMAT의 코드 예제: *mdy*와 *dmy* 비교
+#### <a name="code-example-of-set-dateformat-mdy-versus-dmy"></a>SET DATEFORMAT의 코드 예제: *mdy* 와 *dmy* 비교
 
 다음 Transact-SQL 코드 예제에서는 세 가지 다른 DATEFORMAT 설정으로 동일한 날짜 문자열을 사용합니다. 코드를 실행하면 주석에서 표시되는 출력이 생성됩니다.
 
@@ -115,10 +115,10 @@ MDY-Interpretation-of-input-format
 
 YMD-Interpretation--?--NotGuaranteed
 2018-12-09
-***/
+**_/
 ```
 
-위의 코드 예제에서 마지막 예제에는 **ymd** 형식과 입력 문자열 간에 불일치가 있습니다. 입력 문자열의 세 번째 노드는 날이 되기에 너무 큰 숫자 값을 나타냅니다. Microsoft는 이러한 불일치에서 출력 값을 보장하지 않습니다.
+위의 코드 예제에서 마지막 예제에는 _ *ymd** 형식과 입력 문자열 간에 불일치가 있습니다. 입력 문자열의 세 번째 노드는 날이 되기에 너무 큰 숫자 값을 나타냅니다. Microsoft는 이러한 불일치에서 출력 값을 보장하지 않습니다.
 
 #### <a name="convert-offers-explicit-codes-for-_deterministic_-control-of-date-formats"></a>CONVERT는 날짜 형식의 _결정적_ 제어에 대한 명시적 코드를 제공합니다.
 

@@ -23,11 +23,11 @@ ms.assetid: f6ad87d5-6a34-435a-8456-8244947c5c83
 author: markingmyname
 ms.author: maghan
 ms.openlocfilehash: a314867515ecbde34702761e7c9ee8904523d0a3
-ms.sourcegitcommit: ac9feb0b10847b369b77f3c03f8200c86ee4f4e0
+ms.sourcegitcommit: 192f6a99e19e66f0f817fdb1977f564b2aaa133b
 ms.translationtype: HT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 09/16/2020
-ms.locfileid: "90688367"
+ms.lasthandoff: 11/25/2020
+ms.locfileid: "96128097"
 ---
 # <a name="alter-fulltext-stoplist-transact-sql"></a>ALTER FULLTEXT STOPLIST(Transact-SQL)
 [!INCLUDE [SQL Server SQL Database](../../includes/applies-to-version/sql-asdb.md)]
@@ -55,35 +55,35 @@ ALTER FULLTEXT STOPLIST stoplist_name
 
 ## <a name="arguments"></a>인수
  *stoplist_name*  
- 변경할 중지 목록의 이름입니다. *stoplist_name*은 최대 128자까지 가능합니다.  
+ 변경할 중지 목록의 이름입니다. *stoplist_name* 은 최대 128자까지 가능합니다.  
   
  **'** *stopword* **'**  
- 지정된 언어에서 언어적 의미가 있는 단어 또는 언어적 의미가 없는 토큰일 수 있는 문자열입니다. *stopword*는 최대 토큰 길이 64자로 제한됩니다. 중지 단어를 유니코드 문자열로 지정할 수 있습니다.  
+ 지정된 언어에서 언어적 의미가 있는 단어 또는 언어적 의미가 없는 토큰일 수 있는 문자열입니다. *stopword* 는 최대 토큰 길이 64자로 제한됩니다. 중지 단어를 유니코드 문자열로 지정할 수 있습니다.  
   
  LANGUAGE *language_term*  
- 추가 또는 삭제할 *stopword*와 연결할 언어를 지정합니다.  
+ 추가 또는 삭제할 *stopword* 와 연결할 언어를 지정합니다.  
   
- *language_term*은 다음과 같이 언어의 LCID(로캘 ID)에 해당하는 문자열, 정수 또는 16진수 값으로 지정할 수 있습니다.  
+ *language_term* 은 다음과 같이 언어의 LCID(로캘 ID)에 해당하는 문자열, 정수 또는 16진수 값으로 지정할 수 있습니다.  
   
 |서식|Description|  
 |------------|-----------------|  
-|String|*language_term*은 [sys.syslanguages (Transact-SQL)](../../relational-databases/system-compatibility-views/sys-syslanguages-transact-sql.md) 호환성 뷰의 **alias** 열 값에 해당합니다. 문자열은 **'***language_term***'** 과 같이 작은따옴표로 묶어야 합니다.|  
-|정수|*language_term*은 언어의 LCID입니다.|  
-|16진수|*language_term*은 0x로 시작하는 16진수 LCID 값입니다. 16진수 값은 앞에 오는 0을 포함하여 8자리 수를 초과할 수 없습니다. 값이 DBCS(더블바이트 문자 집합) 형식인 경우 SQL Server에서는 값을 유니코드로 변환합니다.|  
+|String|*language_term* 은 [sys.syslanguages (Transact-SQL)](../../relational-databases/system-compatibility-views/sys-syslanguages-transact-sql.md) 호환성 뷰의 **alias** 열 값에 해당합니다. 문자열은 **‘** _language_term_*_’_* 과 같이 작은따옴표로 묶어야 합니다.|  
+|정수|*language_term* 은 언어의 LCID입니다.|  
+|16진수|*language_term* 은 0x로 시작하는 16진수 LCID 값입니다. 16진수 값은 앞에 오는 0을 포함하여 8자리 수를 초과할 수 없습니다. 값이 DBCS(더블바이트 문자 집합) 형식인 경우 SQL Server에서는 값을 유니코드로 변환합니다.|  
   
- ADD **'***stopword***'** LANGUAGE *language_term*  
- LANGUAGE *language_term*으로 지정된 언어의 중지 목록에 중지 단어를 추가합니다.  
+ ADD **'** _stopword_*_'_* LANGUAGE *language_term*  
+ LANGUAGE *language_term* 으로 지정된 언어의 중지 목록에 중지 단어를 추가합니다.  
   
  지정된 키워드와 언어 LCID 값 조합이 STOPLIST에서 고유하지 않으면 오류가 반환됩니다.  LCID 값이 등록된 언어와 일치하지 않으면 오류가 발생합니다.  
   
- DROP { **'***stopword***'** LANGUAGE *language_term* | ALL LANGUAGE *language_term* | ALL }  
+ DROP { **'** _stopword_*_'_* LANGUAGE *language_term* | ALL LANGUAGE *language_term* | ALL }  
  중지 목록에서 중지 단어를 삭제합니다.  
   
  **‘** *stopword* **’** LANGUAGE *language_term*  
- *language_term*으로 지정된 언어에 대해 지정된 중지 단어를 삭제합니다.  
+ *language_term* 으로 지정된 언어에 대해 지정된 중지 단어를 삭제합니다.  
   
  ALL LANGUAGE *language_term*  
- *language_term*으로 지정된 언어에 대해 지정된 중지 단어를 모두 삭제합니다.  
+ *language_term* 으로 지정된 언어에 대해 지정된 중지 단어를 모두 삭제합니다.  
   
  ALL  
  중지 목록에 있는 모든 중지 단어를 삭제합니다.  

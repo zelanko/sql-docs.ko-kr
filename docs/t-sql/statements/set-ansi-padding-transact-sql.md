@@ -25,31 +25,29 @@ ms.assetid: 92bd29a3-9beb-410e-b7e0-7bc1dc1ae6d0
 author: markingmyname
 ms.author: maghan
 monikerRange: '>=aps-pdw-2016||=azure-sqldw-latest||>=sql-server-2016||=sqlallproducts-allversions||>=sql-server-linux-2017||=azuresqldb-mi-current'
-ms.openlocfilehash: 76af61ef4551da1a508de695b6c786f6d5283396
-ms.sourcegitcommit: 8f062015c2a033f5a0d805ee4adabbe15e7c8f94
+ms.openlocfilehash: f764b11533be2eb6e6e4a71e5b0fe388da9bdcc6
+ms.sourcegitcommit: 644223c40af7168f9d618526e9f4cd24e115d1db
 ms.translationtype: HT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 09/25/2020
-ms.locfileid: "91227107"
+ms.lasthandoff: 11/30/2020
+ms.locfileid: "96328091"
 ---
 # <a name="set-ansi_padding-transact-sql"></a>SET ANSI_PADDING(Transact-SQL)
 [!INCLUDE [sql-asdbmi-asa-pdw](../../includes/applies-to-version/sql-asdbmi-asa-pdw.md)]
 
-  열이 정의된 열 크기보다 짧은 값을 저장하는 방법과 **char**, **varchar**, **binary**및 **varbinary** 데이터에 후행 공백이 있는 값을 저장하는 방법을 제어합니다.  
+  열이 정의된 열 크기보다 짧은 값을 저장하는 방법과 **char**, **varchar**, **binary** 및 **varbinary** 데이터에 후행 공백이 있는 값을 저장하는 방법을 제어합니다.  
   
  ![항목 링크 아이콘](../../database-engine/configure-windows/media/topic-link.gif "항목 링크 아이콘") [Transact-SQL 구문 표기 규칙](../../t-sql/language-elements/transact-sql-syntax-conventions-transact-sql.md)  
   
 ## <a name="syntax"></a>구문
-  
+ 
+### <a name="syntax-for-ssnoversion-mdmd-and-sssodfull-mdmd"></a>[!INCLUDE[ssnoversion-md.md](../../includes/ssnoversion-md.md)] 및 [!INCLUDE[sssodfull-md.md](../../includes/sssodfull-md.md)] 구문 
 ```syntaxsql
--- Syntax for SQL Server
-
 SET ANSI_PADDING { ON | OFF }
 ```
 
+### <a name="syntax-for-sssdw-mdmd-and-sspdw-mdmd"></a>[!INCLUDE[sssdw-md.md](../../includes/sssdw-md.md)] 및 [!INCLUDE[sspdw-md.md](../../includes/sspdw-md.md)] 구문
 ```syntaxsql
--- Syntax for Azure Synapse Analytics and Parallel Data Warehouse
-
 SET ANSI_PADDING ON
 ```
 
@@ -68,7 +66,7 @@ SET ANSI_PADDING ON
 |설정|char(*n*) NOT NULL 또는 binary(*n*) NOT NULL|char(*n*) NULL 또는 binary(*n*) NULL|varchar(*n*) 또는 varbinary(*n*)|  
 |-------------|----------------------------------------------------|--------------------------------------------|----------------------------------------|  
 |켜기|열의 크기만큼 오른쪽으로 원래 값(**char** 열에 대해서는 후행 공백으로, **binary** 열에 대해서는 후행 0으로)을 채웁니다.|SET ANSI_PADDING이 ON일 때는 **char(** _n_ **)** 또는 **binary(** _n_ **)** NOT NULL과 동일한 규칙을 따릅니다.|**varchar** 열에 삽입된 문자 값의 후행 공백은 잘리지 않습니다. **varbinary** 열에 삽입된 이진 값 뒤에 오는 0은 잘리지 않습니다. 값은 열의 크기만큼 오른쪽에 공백으로 채워집니다.|  
-|OFF|열의 크기만큼 오른쪽으로 원래 값(**char** 열에 대해서는 후행 공백으로, **binary** 열에 대해서는 후행 0으로)을 채웁니다.|SET ANSI_PADDING 옵션이 OFF일 때 **varchar** 또는 **varbinary**의 경우와 같은 규칙을 따릅니다.|**varchar** 열에 삽입된 문자 값의 후행 공백은 잘립니다. **varbinary** 열에 삽입된 이진 값 뒤에 오는 0은 잘립니다.|  
+|OFF|열의 크기만큼 오른쪽으로 원래 값(**char** 열에 대해서는 후행 공백으로, **binary** 열에 대해서는 후행 0으로)을 채웁니다.|SET ANSI_PADDING 옵션이 OFF일 때 **varchar** 또는 **varbinary** 의 경우와 같은 규칙을 따릅니다.|**varchar** 열에 삽입된 문자 값의 후행 공백은 잘립니다. **varbinary** 열에 삽입된 이진 값 뒤에 오는 0은 잘립니다.|  
   
 > [!NOTE]  
 > 채워질 때 **char** 열은 공백으로, **binary** 열은 0으로 채워집니다. 잘릴 때 **char** 열에서는 후행 공백이, **binary** 열에서는 뒤에 오는 0이 잘립니다.  

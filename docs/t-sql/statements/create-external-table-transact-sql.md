@@ -22,12 +22,12 @@ ms.assetid: 6a6fd8fe-73f5-4639-9908-2279031abdec
 author: markingmyname
 ms.author: maghan
 monikerRange: '>=aps-pdw-2016||=azuresqldb-current||=azure-sqldw-latest||>=sql-server-2016||=sqlallproducts-allversions||>=sql-server-linux-2017||=azuresqldb-mi-current'
-ms.openlocfilehash: 76deea6c09a14a420ac5916248d0a3944ea5609a
-ms.sourcegitcommit: bd3a135f061e4a49183bbebc7add41ab11872bae
+ms.openlocfilehash: f6bfa965b74aada909b7e28e1429941d4a82b65a
+ms.sourcegitcommit: 644223c40af7168f9d618526e9f4cd24e115d1db
 ms.translationtype: HT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 10/21/2020
-ms.locfileid: "92300635"
+ms.lasthandoff: 11/30/2020
+ms.locfileid: "96328033"
 ---
 # <a name="create-external-table-transact-sql"></a>CREATE EXTERNAL TABLE(Transact-SQL)
 
@@ -62,7 +62,7 @@ ms.locfileid: "92300635"
 
 이 명령은 Hadoop 클러스터나 Azure Blob 스토리지에 저장된 데이터를 참조하는 Hadoop 클러스터나 Azure Blob 스토리지 PolyBase 외부 테이블에 저장된 데이터에 액세스하는 PolyBase용 외부 테이블을 만듭니다.
 
-**적용 대상** : SQL Server 2016 이상
+**적용 대상**: SQL Server 2016 이상
 
 PolyBase 쿼리에 대한 외부 데이터 원본이 있는 외부 테이블을 사용합니다. 외부 데이터 원본은 연결을 설정하고 다음과 같은 기본 사용 사례를 지원하는 데 사용됩니다.
 
@@ -102,11 +102,11 @@ column_name <data_type>
 
 *{ database_name.schema_name.table_name | schema_name.table_name | table_name }* 만들려는 테이블의 한 부분에서 세 부분으로 이루어진 이름입니다. 외부 테이블의 경우 SQL은 Hadoop 또는 Azure Blob 스토리지에서 참조되는 파일이나 폴더에 대한 기본 통계와 함께 메타데이터만 저장합니다. 실제 데이터가 이동되거나 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]에 저장되지 않습니다.
 
-\<column_definition> [ ,... *n* ] CREATE EXTERNAL TABLE은 열 이름, 데이터 형식, Null 허용 여부 및 데이터 정렬을 구성하는 기능을 지원합니다. 외부 테이블에 DEFAULT CONSTRAINT를 사용할 수 없습니다.
+\<column_definition> [ ,...*n* ] CREATE EXTERNAL TABLE은 열 이름, 데이터 형식, Null 허용 여부 및 데이터 정렬을 구성하는 기능을 지원합니다. 외부 테이블에 DEFAULT CONSTRAINT를 사용할 수 없습니다.
 
 데이터 형식 및 열 수를 포함한 열 정의는 외부 파일의 데이터와 일치해야 합니다. 불일치가 있는 경우 실제 데이터를 쿼리할 때 파일 행이 거부됩니다.
 
-LOCATION = ' *folder_or_filepath* ' Hadoop 또는 Azure Blob 스토리지의 실제 데이터에 대한 폴더 또는 파일 경로 및 파일 이름을 지정합니다. 위치는 루트 폴더에서 시작합니다. 루트 폴더는 외부 데이터 원본에 지정된 데이터 위치입니다.
+LOCATION = '*folder_or_filepath*' Hadoop 또는 Azure Blob 스토리지의 실제 데이터에 대한 폴더 또는 파일 경로 및 파일 이름을 지정합니다. 위치는 루트 폴더에서 시작합니다. 루트 폴더는 외부 데이터 원본에 지정된 데이터 위치입니다.
 
 SQL Server에서는 CREATE EXTERNAL TABLE 문이 경로 및 폴더가 없으면 만듭니다. 그런 다음, INSERT INTO를 사용하여 로컬 SQL Server 테이블에서 외부 데이터 원본으로 데이터를 내보냅니다. 자세한 내용은 [PolyBase 쿼리](../../relational-databases/polybase/polybase-queries.md)를 참조하세요.
 
@@ -132,7 +132,7 @@ value REJECT_VALUE는 백분율이 아닌 리터럴 값입니다. PolyBase 쿼�
 
 예를 들어 REJECT_VALUE = 5이고 REJECT_TYPE = value인 경우, PolyBase SELECT 쿼리는 5개 행이 거부된 후 실패합니다.
 
-percentage REJECT_VALUE는 리터럴 값이 아닌 백분율입니다. PolyBase 쿼리는 실패한 행의 백분율( *percentage* )이 *reject_value* 를 초과하면 실패합니다. 실패한 행의 백분율은 일정 간격으로 계산됩니다.
+percentage REJECT_VALUE는 리터럴 값이 아닌 백분율입니다. PolyBase 쿼리는 실패한 행의 백분율(*percentage*)이 *reject_value* 를 초과하면 실패합니다. 실패한 행의 백분율은 일정 간격으로 계산됩니다.
 
 REJECT_VALUE = *reject_value* 쿼리가 실패할 때까지 거부될 수 있는 값 또는 행의 백분율을 지정합니다.
 
@@ -163,7 +163,7 @@ SCHEMA_NAME: SCHEMA_NAME 절은 외부 테이블 정의를 원격 데이터베�
 
 OBJECT_NAME: OBJECT_NAME 절은 외부 테이블 정의를 원격 데이터베이스의 다른 이름을 가진 테이블에 매핑하는 기능을 제공합니다. 이 절을 사용하여 로컬 데이터베이스와 원격 데이터베이스 모두에 존재하는 개체 이름 사이를 구분합니다.
 
-배포 옵션입니다. 이 인수는 SHARD_MAP_MANAGER 형식의 데이터베이스에 대해서만 필요합니다. 이 인수는 테이블이 분할된 테이블로 처리되는지 아니면 복제된 테이블로 처리되는지를 제어합니다. **SHARDED** ( *열 이름* ) 테이블을 사용하면 서로 다른 테이블의 데이터가 겹치지 않습니다. **REPLICATED** 는 테이블이 모든 분할된 데이터베이스에서 같은 데이터를 갖도록 지정합니다. **ROUND_ROBIN** 은 애플리케이션 관련 방법을 사용하여 데이터를 배포하도록 지정합니다.
+배포 옵션입니다. 이 인수는 SHARD_MAP_MANAGER 형식의 데이터베이스에 대해서만 필요합니다. 이 인수는 테이블이 분할된 테이블로 처리되는지 아니면 복제된 테이블로 처리되는지를 제어합니다. **SHARDED**(*열 이름*) 테이블을 사용하면 서로 다른 테이블의 데이터가 겹치지 않습니다. **REPLICATED** 는 테이블이 모든 분할된 데이터베이스에서 같은 데이터를 갖도록 지정합니다. **ROUND_ROBIN** 은 애플리케이션 관련 방법을 사용하여 데이터를 배포하도록 지정합니다.
 
 ## <a name="permissions"></a>사용 권한
 
@@ -196,7 +196,7 @@ PolyBase는 쿼리 성능을 향상시키기 위해 쿼리 계산 중 일부를 
 
 ## <a name="limitations-and-restrictions"></a>제한 사항
 
-외부 테이블의 데이터가 SQL Server의 직접 관리 제어에 없으므로, 언제든지 외부 프로세스에 의해 변경 또는 제거될 수 있습니다. 따라서 외부 테이블에 대한 쿼리 결과는 결정적인 것으로 보증되지 않습니다. 즉, 외부 테이블에 대해 실행할 때마다 같은 쿼리가 서로 다른 결과를 반환할 수 있습니다. 마찬가지로 외부 데이터를 이동하거나 제거하면 쿼리가 실패할 수 있습니다.
+외부 테이블의 데이터가 SQL Server의 직접 관리 제어를 받고 있지 않으므로 언제든지 외부 프로세스에 의해 변경 또는 제거될 수 있습니다. 따라서 외부 테이블에 대한 쿼리 결과는 결정적인 것으로 보증되지 않습니다. 즉, 외부 테이블에 대해 실행할 때마다 같은 쿼리가 서로 다른 결과를 반환할 수 있습니다. 마찬가지로 외부 데이터를 이동하거나 제거하면 쿼리가 실패할 수 있습니다.
 
 각각 서로 다른 외부 데이터 원본을 참조하는 여러 개의 외부 테이블을 만들 수 있습니다. 서로 다른 Hadoop 데이터 원본에 대해 동시에 쿼리를 실행하는 경우 각 Hadoop 원본은 동일한 'hadoop 연결' 서버 구성 설정을 사용해야 합니다. 예를 들어 Cloudera Hadoop 클러스터 및 Hortonworks Hadoop 클러스터는 서로 다른 구성 설정을 사용하므로 이들에 대해 하나의 쿼리를 동시에 실행할 수 없습니다. 구성 설정 및 지원되는 결합에 대해서는 [PolyBase 연결 구성](../../database-engine/configure-windows/polybase-connectivity-configuration-transact-sql.md)을 참조하세요.
 
@@ -211,13 +211,26 @@ PolyBase는 쿼리 성능을 향상시키기 위해 쿼리 계산 중 일부를 
 - 외부 테이블 열에 대한 DEFAULT 제약 조건
 - 삭제, 삽입 및 업데이트의 DML(데이터 조작 언어) 작업
 
-쿼리 제한 사항:
+### <a name="query-limitations"></a>쿼리 제한 사항
 
 PolyBase는 32개의 동시 PolyBase 쿼리를 실행할 때 폴더당 최대 3만 3천 개의 파일을 사용할 수 있습니다. 이 최대 개수는 각 HDFS 폴더의 파일과 하위 폴더를 모두 포함합니다. 동시성 수준이 32보다 작은 경우 사용자는 33k보다 많은 파일을 포함하는 HDFS의 폴더에 대해 PolyBase 쿼리를 실행할 수 있습니다. 외부 파일 경로를 짧게 유지하고 HDFS 폴더당 30k 이하의 파일을 사용하는 것이 좋습니다. 너무 많은 파일이 참조되면 JVM(Java Virtual Machine) 메모리 부족 예외가 발생할 수 있습니다.
 
-테이블 너비 제한 사항:
+### <a name="table-width-limitations"></a>테이블 너비 제한 사항
 
 SQL Server 2016의 PolyBase에는 테이블 정의에 의해 유효한 단일 행의 최대 크기를 기반으로 32KB의 행 너비 한도가 적용됩니다. 열 스키마의 합계가 32KB보다 큰 경우 PolyBase는 데이터를 쿼리할 수 없습니다.
+
+### <a name="data-type-limitations"></a>데이터 형식 제한 사항
+
+다음 데이터 형식은 PolyBase 외부 테이블에 사용할 수 없습니다.
+
+- `geography`
+- `geometry`
+- `hierarchyid`
+- `image`
+- `text`
+- `nText`
+- `xml`
+- 모든 사용자 정의 형식
 
 ## <a name="locking"></a>잠금
 
@@ -629,7 +642,7 @@ column_name <data_type>
 
 *{ database_name.schema_name.table_name | schema_name.table_name | table_name }* 만들려는 테이블의 한 부분에서 세 부분으로 이루어진 이름입니다. 외부 테이블의 경우 SQL은 Azure SQL Database에서 참조되는 파일이나 폴더에 대한 기본 통계와 함께 메타데이터만 저장합니다. 실제 데이터가 이동되거나 Azure SQL Database에 저장되지 않습니다.
 
-\<column_definition> [ ,... *n* ] CREATE EXTERNAL TABLE은 열 이름, 데이터 형식, Null 허용 여부 및 데이터 정렬을 구성하는 기능을 지원합니다. 외부 테이블에 DEFAULT CONSTRAINT를 사용할 수 없습니다.
+\<column_definition> [ ,...*n* ] CREATE EXTERNAL TABLE은 열 이름, 데이터 형식, Null 허용 여부 및 데이터 정렬을 구성하는 기능을 지원합니다. 외부 테이블에 DEFAULT CONSTRAINT를 사용할 수 없습니다.
 
 > [!NOTE]
 > `Text`, `nText` 및 `XML`은(는) Azure SQL Database의 외부 테이블에 있는 열에서 지원되지 않는 데이터 형식입니다.
@@ -700,6 +713,19 @@ SELECT FROM EXTERNAL TABLE과 같은 임시 쿼리 시나리오에서 SQL Databa
 
 외부 테이블은 원격 쿼리로 구현되며 반환되는 예상 행 수는 일반적으로 1000개이므로 외부 테이블을 필터링하는 데 사용되는 조건자의 유형을 기반으로 하는 다른 규칙이 있습니다. 외부 테이블의 실제 데이터를 기반으로 하는 추정치가 아니라 규칙 기반 추정치입니다. 최적화 프로그램은 더 정확한 추정치를 얻기 위해 원격 데이터 원본에 액세스하지 않습니다.
 
+### <a name="data-type-limitations"></a>데이터 형식 제한 사항
+
+다음 데이터 형식은 PolyBase 외부 테이블에 사용할 수 없습니다.
+
+- `geography`
+- `geometry`
+- `hierarchyid`
+- `image`
+- `text`
+- `nText`
+- `xml`
+- 모든 사용자 정의 형식
+
 ## <a name="locking"></a>잠금
 
 SCHEMARESOLUTION 개체에 대한 공유 잠금입니다.
@@ -755,6 +781,7 @@ WITH
 
 ## <a name="syntax"></a>구문
 
+### [[!INCLUDE[sss-dedicated-pool-md.md](../../includes/sss-dedicated-pool-md.md)]](#tab/dedicated)
 ```syntaxsql
 CREATE EXTERNAL TABLE { database_name.schema_name.table_name | schema_name.table_name | table_name }
     ( <column_definition> [ ,...n ] )  
@@ -777,22 +804,36 @@ column_name <data_type>
     | REJECT_VALUE = reject_value,  
     | REJECT_SAMPLE_VALUE = reject_sample_value,
     | REJECTED_ROW_LOCATION = '/REJECT_Directory'
-  
 }  
 ```
+### [[!INCLUDE[sssod-md.md](../../includes/sssod-md.md)]](#tab/serverless)
+```syntaxsql
+CREATE EXTERNAL TABLE { database_name.schema_name.table_name | schema_name.table_name | table_name } 
+    ( <column_definition> [ ,...n ] )   
+    WITH ( 
+        LOCATION = 'folder_or_filepath',   
+        DATA_SOURCE = external_data_source_name,   
+        FILE_FORMAT = external_file_format_name   
+    )   
+[;]   
+<column_definition> ::= 
+column_name <data_type> 
+    [ COLLATE collation_name ] 
+```
+---
 
 ## <a name="arguments"></a>인수
 
 *{ database_name.schema_name.table_name | schema_name.table_name | table_name }* 만들려는 테이블의 한 부분에서 세 부분으로 이루어진 이름입니다. 외부 테이블의 경우, Azure Data Lake, Hadoop 또는 Azure Blob 스토리지에서 참조되는 파일이나 폴더에 대한 기본 통계와 함께 메타데이터만 해당합니다. 외부 테이블을 만들 때 실제 데이터가 이동하거나 저장되지 않습니다.
 
-\<column_definition> [ ,... *n* ] CREATE EXTERNAL TABLE은 열 이름, 데이터 형식, Null 허용 여부 및 데이터 정렬을 구성하는 기능을 지원합니다. 외부 테이블에 DEFAULT CONSTRAINT를 사용할 수 없습니다.
+\<column_definition> [ ,...*n* ] CREATE EXTERNAL TABLE은 열 이름, 데이터 형식, Null 허용 여부 및 데이터 정렬을 구성하는 기능을 지원합니다. 외부 테이블에 DEFAULT CONSTRAINT를 사용할 수 없습니다.
 
 > [!NOTE]
 > `Text`, `nText` 및`XML` 은 Azure SQL Warehouse의 외부 테이블에 있는 열에서 지원되지는 않는 데이터 형식입니다.
 
 데이터 형식 및 열 수를 포함한 열 정의는 외부 파일의 데이터와 일치해야 합니다. 불일치가 있는 경우 실제 데이터를 쿼리할 때 파일 행이 거부됩니다.
 
-LOCATION = ' *folder_or_filepath* ' Azure Data Lake, Hadoop 또는 Azure Blob 스토리지의 실제 데이터에 대한 폴더 또는 파일 경로 및 파일 이름을 지정합니다. 위치는 루트 폴더에서 시작합니다. 루트 폴더는 외부 데이터 원본에 지정된 데이터 위치입니다. [CREATE EXTERNAL TABLE AS SELECT](create-external-table-as-select-transact-sql.md) 문이 경로 및 폴더가 없으면 만듭니다. `CREATE EXTERNAL TABLE`은 경로 및 폴더를 만들지 않습니다.
+LOCATION = '*folder_or_filepath*' Azure Data Lake, Hadoop 또는 Azure Blob 스토리지의 실제 데이터에 대한 폴더 또는 파일 경로 및 파일 이름을 지정합니다. 위치는 루트 폴더에서 시작합니다. 루트 폴더는 외부 데이터 원본에 지정된 데이터 위치입니다. [CREATE EXTERNAL TABLE AS SELECT](create-external-table-as-select-transact-sql.md) 문이 경로 및 폴더가 없으면 만듭니다. `CREATE EXTERNAL TABLE`은 경로 및 폴더를 만들지 않습니다.
 
 위치(LOCATION)를 폴더로 지정할 경우, 외부 테이블에서 선택하는 PolyBase 쿼리는 폴더 및 해당 폴더의 모든 하위 폴더에서 파일을 검색합니다. Hadoop과 마찬가지로 PolyBase도 숨겨진 폴더를 반환하지 않습니다. 또한 파일 이름이 밑줄(_) 또는 마침표(.)로 시작하는 파일을 반환하지 않습니다.
 
@@ -816,7 +857,7 @@ value REJECT_VALUE는 백분율이 아닌 리터럴 값입니다. PolyBase 쿼�
 
 예를 들어 REJECT_VALUE = 5이고 REJECT_TYPE = value인 경우, PolyBase SELECT 쿼리는 5개 행이 거부된 후 실패합니다.
 
-percentage REJECT_VALUE는 리터럴 값이 아닌 백분율입니다. PolyBase 쿼리는 실패한 행의 백분율( *percentage* )이 *reject_value* 를 초과하면 실패합니다. 실패한 행의 백분율은 일정 간격으로 계산됩니다.
+percentage REJECT_VALUE는 리터럴 값이 아닌 백분율입니다. PolyBase 쿼리는 실패한 행의 백분율(*percentage*)이 *reject_value* 를 초과하면 실패합니다. 실패한 행의 백분율은 일정 간격으로 계산됩니다.
 
 REJECT_VALUE = *reject_value* 쿼리가 실패할 때까지 거부될 수 있는 값 또는 행의 백분율을 지정합니다.
 
@@ -898,13 +939,26 @@ PolyBase는 쿼리 성능을 향상시키기 위해 쿼리 계산 중 일부를 
 - 외부 테이블 열에 대한 DEFAULT 제약 조건
 - 삭제, 삽입 및 업데이트의 DML(데이터 조작 언어) 작업
 
-쿼리 제한 사항:
+### <a name="query-limitations"></a>쿼리 제한 사항
 
 폴더당 파일 크기가 30k를 초과하지 않는 것이 좋습니다. 너무 많은 파일이 참조되면 JVM(Java Virtual Machine) 메모리 부족 예외가 발생하거나 성능이 저하될 수 있습니다.
 
-테이블 너비 제한 사항:
+### <a name="table-width-limitations"></a>테이블 너비 제한 사항
 
 Data Warehouse의 PolyBase에는 테이블 정의에 의해 유효한 단일 행의 최대 크기를 기반으로 1MB의 행 너비 한도가 적용됩니다. 열 스키마의 합계가 1MB보다 큰 경우 PolyBase는 데이터를 쿼리할 수 없습니다.
+
+### <a name="data-type-limitations"></a>데이터 형식 제한 사항
+
+다음 데이터 형식은 PolyBase 외부 테이블에 사용할 수 없습니다.
+
+- `geography`
+- `geometry`
+- `hierarchyid`
+- `image`
+- `text`
+- `nText`
+- `xml`
+- 모든 사용자 정의 형식
 
 ## <a name="locking"></a>잠금
 
@@ -1025,11 +1079,11 @@ column_name <data_type>
 
 *{ database_name.schema_name.table_name | schema_name.table_name | table_name }* 만들려는 테이블의 한 부분에서 세 부분으로 이루어진 이름입니다. 외부 테이블의 경우 Analytics Platform System은 Hadoop 또는 Azure Blob 스토리지에서 참조되는 파일이나 폴더에 대한 기본 통계와 함께 메타데이터만 저장합니다. 실제 데이터가 이동되거나 Analytics Platform System에 저장되지 않습니다.
 
-\<column_definition> [ ,... *n* ] CREATE EXTERNAL TABLE은 열 이름, 데이터 형식, Null 허용 여부 및 데이터 정렬을 구성하는 기능을 지원합니다. 외부 테이블에 DEFAULT CONSTRAINT를 사용할 수 없습니다.
+\<column_definition> [ ,...*n* ] CREATE EXTERNAL TABLE은 열 이름, 데이터 형식, Null 허용 여부 및 데이터 정렬을 구성하는 기능을 지원합니다. 외부 테이블에 DEFAULT CONSTRAINT를 사용할 수 없습니다.
 
 데이터 형식 및 열 수를 포함한 열 정의는 외부 파일의 데이터와 일치해야 합니다. 불일치가 있는 경우 실제 데이터를 쿼리할 때 파일 행이 거부됩니다.
 
-LOCATION = ' *folder_or_filepath* ' Hadoop 또는 Azure Blob 스토리지의 실제 데이터에 대한 폴더 또는 파일 경로 및 파일 이름을 지정합니다. 위치는 루트 폴더에서 시작합니다. 루트 폴더는 외부 데이터 원본에 지정된 데이터 위치입니다.
+LOCATION = '*folder_or_filepath*' Hadoop 또는 Azure Blob 스토리지의 실제 데이터에 대한 폴더 또는 파일 경로 및 파일 이름을 지정합니다. 위치는 루트 폴더에서 시작합니다. 루트 폴더는 외부 데이터 원본에 지정된 데이터 위치입니다.
 
 Analytics Platform System에서는 [CREATE EXTERNAL TABLE AS SELECT](create-external-table-as-select-transact-sql.md) 문이 존재하지 않는 경로 및 폴더를 만듭니다. `CREATE EXTERNAL TABLE`은 경로 및 폴더를 만들지 않습니다.
 
@@ -1055,7 +1109,7 @@ value REJECT_VALUE는 백분율이 아닌 리터럴 값입니다. PolyBase 쿼�
 
 예를 들어 REJECT_VALUE = 5이고 REJECT_TYPE = value인 경우, PolyBase SELECT 쿼리는 5개 행이 거부된 후 실패합니다.
 
-percentage REJECT_VALUE는 리터럴 값이 아닌 백분율입니다. PolyBase 쿼리는 실패한 행의 백분율( *percentage* )이 *reject_value* 를 초과하면 실패합니다. 실패한 행의 백분율은 일정 간격으로 계산됩니다.
+percentage REJECT_VALUE는 리터럴 값이 아닌 백분율입니다. PolyBase 쿼리는 실패한 행의 백분율(*percentage*)이 *reject_value* 를 초과하면 실패합니다. 실패한 행의 백분율은 일정 간격으로 계산됩니다.
 
 REJECT_VALUE = *reject_value* 쿼리가 실패할 때까지 거부될 수 있는 값 또는 행의 백분율을 지정합니다.
 
@@ -1128,15 +1182,28 @@ PolyBase는 쿼리 성능을 향상시키기 위해 쿼리 계산 중 일부를 
 - 외부 테이블 열에 대한 DEFAULT 제약 조건
 - 삭제, 삽입 및 업데이트의 DML(데이터 조작 언어) 작업
 
-쿼리 제한 사항:
+### <a name="query-limitations"></a>쿼리 제한 사항
 
 PolyBase는 32개의 동시 PolyBase 쿼리를 실행할 때 폴더당 최대 3만 3천 개의 파일을 사용할 수 있습니다. 이 최대 개수는 각 HDFS 폴더의 파일과 하위 폴더를 모두 포함합니다. 동시성 수준이 32보다 작은 경우 사용자는 33k보다 많은 파일을 포함하는 HDFS의 폴더에 대해 PolyBase 쿼리를 실행할 수 있습니다. 외부 파일 경로를 짧게 유지하고 HDFS 폴더당 30k 이하의 파일을 사용하는 것이 좋습니다. 너무 많은 파일이 참조되면 JVM(Java Virtual Machine) 메모리 부족 예외가 발생할 수 있습니다.
 
-테이블 너비 제한 사항:
+### <a name="table-width-limitations"></a>테이블 너비 제한 사항
 
 SQL Server 2016의 PolyBase에는 테이블 정의에 의해 유효한 단일 행의 최대 크기를 기반으로 32KB의 행 너비 한도가 적용됩니다. 열 스키마의 합계가 32KB보다 큰 경우 PolyBase는 데이터를 쿼리할 수 없습니다.
 
 Azure Synapse Analytics에서는 이 제한이 1MB로 증가했습니다.
+
+### <a name="data-type-limitations"></a>데이터 형식 제한 사항
+
+다음 데이터 형식은 PolyBase 외부 테이블에 사용할 수 없습니다.
+
+- `geography`
+- `geometry`
+- `hierarchyid`
+- `image`
+- `text`
+- `nText`
+- `xml`
+- 모든 사용자 정의 형식
 
 ## <a name="locking"></a>잠금
 

@@ -11,10 +11,10 @@ ms.topic: conceptual
 author: chugugrace
 ms.author: chugu
 ms.openlocfilehash: a866d7d1083435acffeb157edf9fe4a0bb725d3e
-ms.sourcegitcommit: e700497f962e4c2274df16d9e651059b42ff1a10
+ms.sourcegitcommit: c5078791a07330a87a92abb19b791e950672e198
 ms.translationtype: HT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 08/17/2020
+ms.lasthandoff: 11/26/2020
 ms.locfileid: "88425765"
 ---
 # <a name="microsoft-connector-for-teradata"></a>Microsoft Connector for Teradata
@@ -77,28 +77,28 @@ Teradata 연결 관리자가 "TERADATA"로 표시됩니다.
 
 Attunity Teradata Connector를 사용하여 디자인된 기존 SSIS 패키지는 Microsoft Connector for Teradata를 사용하도록 자동으로 업그레이드됩니다. 아이콘도 변경됩니다.
 
-SQL Server 2017 및 이전 버전을 대상으로 하는 SSIS 패키지를 실행하려면 아래 링크에서 해당 버전과 함께 **Microsoft Connector for Teradata by Attunity**를 설치해야 합니다.
+SQL Server 2017 및 이전 버전을 대상으로 하는 SSIS 패키지를 실행하려면 아래 링크에서 해당 버전과 함께 **Microsoft Connector for Teradata by Attunity** 를 설치해야 합니다.
 
 - [SQL Server 2017: Microsoft Connector Version 5.0 for Teradata by Attunity](https://www.microsoft.com/download/details.aspx?id=55179)
 - [SQL Server 2016: Microsoft Connector Version 4.0 for Teradata by Attunity](https://www.microsoft.com/download/details.aspx?id=52950)
 - [SQL Server 2014: Microsoft Connector Version 3.0 for Teradata by Attunity](https://www.microsoft.com/download/details.aspx?id=44582)
 - [SQL Server 2012: Microsoft Connector Version 2.0 for Teradata by Attunity](https://www.microsoft.com/download/details.aspx?id=29283)
 
-SQL Server 2017 이하를 대상으로 SSDT에서 SSIS 패키지를 디자인하려면 **Microsoft Connector for Teradata**를 사용하고 해당 버전의 **Microsoft Connector for Teradata by Attunity**를 설치해야 합니다.
+SQL Server 2017 이하를 대상으로 SSDT에서 SSIS 패키지를 디자인하려면 **Microsoft Connector for Teradata** 를 사용하고 해당 버전의 **Microsoft Connector for Teradata by Attunity** 를 설치해야 합니다.
 
-## <a name="limitationsandknownissues"></a>제한 사항 및 알려진 문제
+## <a name="limitations-and-known-issues"></a>제한 사항 및 알려진 문제
 
-- Teradata 원본/대상 편집기 **기본 데이터베이스** 속성이 적용되지 않습니다. 해결하려면 드롭다운 상자에 데이터베이스 이름을 입력하여 테이블 또는 뷰를 필터링합니다.
+- Teradata 원본/대상 편집기, **기본 데이터베이스** 속성이 적용되지 않습니다.  해결하려면 드롭다운 상자에 데이터베이스 이름을 입력하여 테이블 또는 뷰를 필터링합니다.
 
-- Teradata 원본/대상 편집기, 매핑 단계는 \<database>.<table/view> 형식일 때 작동하지 않습니다. 해결하려면  \<database>.<table/view>를 입력한 다음 드롭다운 단추를 클릭합니다.
+- Teradata 원본/대상 편집기, 매핑 단계가 \<database>.<table/view> 형식일 때 작동하지 않습니다. 이 문제를 해결하려면 \<database>.<table/view>를 입력한 다음, 드롭다운 단추를 클릭합니다.
 
 - Teradata 원본 편집기, 데이터 액세스 모드가 "테이블 이름 – TPT 내보내기"이면 뷰를 표시할 수 없습니다. 해결하려면 Teradata 원본 고급 편집기를 사용합니다.
 
-- Teradata 대상, 'PackMaximum' 특성을 'True'로 설정할 수 없습니다. 설정하는 경우 오류가 발생합니다.
+- Teradata 대상, 'PackMaximum' 특성을 'True'로 설정할 수 없습니다.  설정하는 경우 오류가 발생합니다.
 
 ## <a name="uninstallation"></a>제거
 
-제거 마법사를 실행하여 **Microsoft connector for Teradata**를 제거할 수 있습니다.
+제거 마법사를 실행하여 **Microsoft connector for Teradata** 를 제거할 수 있습니다.
 
 ## <a name="next-steps"></a>다음 단계
 

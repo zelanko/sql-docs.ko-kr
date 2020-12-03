@@ -15,14 +15,14 @@ helpviewer_keywords:
 - backups [SQL Server], files or filegroups
 - file backups [SQL Server], related features
 ms.assetid: 69f212b8-edcd-4c5d-8a8a-679ced33c128
-author: MikeRayMSFT
-ms.author: mikeray
-ms.openlocfilehash: 3dcf1473fc92ba69d68f9aae9d871540e2604b52
-ms.sourcegitcommit: da88320c474c1c9124574f90d549c50ee3387b4c
+author: cawrites
+ms.author: chadam
+ms.openlocfilehash: 106773df7a5e9f88c123b614688ca19722613d7f
+ms.sourcegitcommit: 5a1ed81749800c33059dac91b0e18bd8bb3081b1
 ms.translationtype: HT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 07/01/2020
-ms.locfileid: "85737831"
+ms.lasthandoff: 11/23/2020
+ms.locfileid: "96130530"
 ---
 # <a name="backup-and-restore-interoperability-and-coexistence-sql-server"></a>백업 및 복원: 상호 운용성 및 공존성(SQL Server)
  [!INCLUDE [SQL Server](../../includes/applies-to-version/sqlserver.md)]
@@ -51,7 +51,7 @@ ms.locfileid: "85737831"
   
  데이터베이스 시작 중에 문제가 발생하면 복구에 실패하고 데이터베이스가 주의 대상으로 표시됩니다. 문제를 한 파일이나 몇 개의 파일로 격리시킬 수 있는 경우 데이터베이스 관리자는 해당 파일을 오프라인 상태로 만들고 데이터베이스를 다시 시작할 수 있습니다. 파일을 오프라인 상태로 만들려면 다음 [ALTER DATABASE](../../t-sql/statements/alter-database-transact-sql.md) 문을 실행합니다.  
   
- ALTER DATABASE *database_name* MODIFY FILE (NAME **='***filename***'** , OFFLINE)  
+ ALTER DATABASE *database_name* MODIFY FILE (NAME **='** _filename_*_'_*, OFFLINE)  
   
  데이터베이스가 성공적으로 시작되면 오프라인 파일을 포함하는 모든 파일 그룹은 오프라인 상태로 남게 됩니다.  
   

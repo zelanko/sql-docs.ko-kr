@@ -26,12 +26,12 @@ ms.assetid: aae263ef-a3c7-4dae-80c2-cc901e48c755
 author: markingmyname
 ms.author: maghan
 monikerRange: '>=aps-pdw-2016||=azure-sqldw-latest||>=sql-server-2016||=sqlallproducts-allversions||>=sql-server-linux-2017||=azuresqldb-mi-current || azuresqldb-current'
-ms.openlocfilehash: 670c9ed80a81ce2e276af815a840a9a9386a9872
-ms.sourcegitcommit: 8f062015c2a033f5a0d805ee4adabbe15e7c8f94
+ms.openlocfilehash: 8a18c0ff3422bc26046eca195dcd8f8ada41c9eb
+ms.sourcegitcommit: 644223c40af7168f9d618526e9f4cd24e115d1db
 ms.translationtype: HT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 09/25/2020
-ms.locfileid: "91227134"
+ms.lasthandoff: 11/30/2020
+ms.locfileid: "96328111"
 ---
 # <a name="set-ansi_nulls-transact-sql"></a>SET ANSI_NULLS (Transact-SQL)
 [!INCLUDE [sql-asdb-asdbmi-asa-pdw](../../includes/applies-to-version/sql-asdb-asdbmi-asa-pdw.md)]
@@ -42,24 +42,22 @@ ms.locfileid: "91227134"
 
 ## <a name="syntax"></a>구문
 
+### <a name="syntax-for-ssnoversion-mdmd-and-sssodfull-mdmd"></a>[!INCLUDE[ssnoversion-md.md](../../includes/ssnoversion-md.md)] 및 [!INCLUDE[sssodfull-md.md](../../includes/sssodfull-md.md)] 구문
 ```syntaxsql
--- Syntax for SQL Server
-
 SET ANSI_NULLS { ON | OFF }
 ```
 
+### <a name="syntax-for-sssdw-mdmd-and-sspdw-mdmd"></a>[!INCLUDE[sssdw-md.md](../../includes/sssdw-md.md)] 및 [!INCLUDE[sspdw-md.md](../../includes/sspdw-md.md)] 구문
 ```syntaxsql
--- Syntax for Azure Synapse Analytics and Parallel Data Warehouse
-
 SET ANSI_NULLS ON
 ```
 
 [!INCLUDE[sql-server-tsql-previous-offline-documentation](../../includes/sql-server-tsql-previous-offline-documentation.md)]
 
 ## <a name="remarks"></a>설명
-ANSI_NULLS 옵션이 ON인 경우, WHERE *column_name* = **NULL**을 사용하는 SELECT 문은 *column_name*에 null 값이 있어도 0행을 반환합니다. WHERE *column_name* <> **NULL**을 사용하는 SELECT 문은 *column_name*에 Null 이외의 값이 있어도 0행을 반환합니다.  
+ANSI_NULLS 옵션이 ON인 경우, WHERE *column_name* = **NULL** 을 사용하는 SELECT 문은 *column_name* 에 null 값이 있어도 0행을 반환합니다. WHERE *column_name* <> **NULL** 을 사용하는 SELECT 문은 *column_name* 에 Null 이외의 값이 있어도 0행을 반환합니다.  
   
-ANSI_NULLS 옵션이 OFF면 Equals(=)와 Not Equal(<>) 비교 연산자가 ISO 표준을 따르지 않습니다. WHERE *column_name* = **NULL**을 사용하는 SELECT 문은 *column_name*에 Null 값이 있는 행을 반환합니다. WHERE *column_name* <> **NULL**을 사용하는 SELECT 문은 열에 Null 이외의 값이 있는 행을 반환합니다. 또한 WHERE *column_name* <> *XYZ_value*를 사용하는 SELECT 문은 *XYZ_value*가 아니고 NULL이 아닌 모든 행을 반환합니다.  
+ANSI_NULLS 옵션이 OFF면 Equals(=)와 Not Equal(<>) 비교 연산자가 ISO 표준을 따르지 않습니다. WHERE *column_name* = **NULL** 을 사용하는 SELECT 문은 *column_name* 에 Null 값이 있는 행을 반환합니다. WHERE *column_name* <> **NULL** 을 사용하는 SELECT 문은 열에 Null 이외의 값이 있는 행을 반환합니다. 또한 WHERE *column_name* <> *XYZ_value* 를 사용하는 SELECT 문은 *XYZ_value* 가 아니고 NULL이 아닌 모든 행을 반환합니다.  
   
 ANSI_NULLS 옵션이 ON이면, null 값에 대한 모든 비교가 UNKNOWN이 됩니다. ANSI_NULLS 옵션이 OFF면 데이터 값이 NULL일 때 null 값에 대한 모든 데이터의 비교가 TRUE가 됩니다. SET ANSI_NULLS를 지정하지 않으면 현재 데이터베이스의 ANSI_NULLS 옵션 설정이 적용됩니다. ANSI_NULLS 데이터베이스 옵션에 대한 자세한 내용은 [ALTER DATABASE&#40;Transact-SQL&#41;](../../t-sql/statements/alter-database-transact-sql.md)를 참조하세요.  
 

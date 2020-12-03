@@ -16,12 +16,12 @@ ms.author: genemi
 ms.reviewer: maghan
 ms.date: 04/16/2020
 monikerRange: =azuresqldb-current||>=sql-server-2016||=sqlallproducts-allversions||>=sql-server-linux-2017||=azuresqldb-mi-current
-ms.openlocfilehash: b2cc5e7de4b96bbd85ebe36e3173189d08258139
-ms.sourcegitcommit: 4d370399f6f142e25075b3714e5c2ce056b1bfd0
+ms.openlocfilehash: 2e24711b7b67f19018b325da3c6b78dc954e6a31
+ms.sourcegitcommit: 4b98c54859a657023495dddb7595826662dcd9ab
 ms.translationtype: HT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 10/09/2020
-ms.locfileid: "91869424"
+ms.lasthandoff: 11/24/2020
+ms.locfileid: "96130291"
 ---
 # <a name="quickstart-extended-events-in-sql-server"></a>빠른 시작: SQL Server의 확장 이벤트
 
@@ -46,7 +46,7 @@ ms.locfileid: "91869424"
 - 확장 이벤트를 위한 DMV(동적 관리 뷰)에 포함된 기본 키와 외래 키 관계를 제공합니다.
 - 자세한 내용을 볼 수 있는 관련 문서를 소개합니다.
 
-블로그 및 기타 비공식 대화에서는 확장 이벤트를 약어 *xevents*로 부르기도 합니다.
+블로그 및 기타 비공식 대화에서는 확장 이벤트를 약어 *xevents* 로 부르기도 합니다.
 
 > [!NOTE]
 > 코드 샘플을 포함하여 Azure SQL Database의 확장 이벤트에 대한 자세한 내용은 [SQL Database의 확장 이벤트](/azure/azure-sql/database/xevent-db-diff-from-svr)를 참조하세요.
@@ -59,7 +59,7 @@ ms.locfileid: "91869424"
 
    매월 SSMS의 최신 월별 업데이트를 설치해야 합니다.
 2. Microsoft SQL Server 2014 이상에 로그인합니다.
-3. 사용자 계정에 [서버 사용 권한](../../t-sql/statements/grant-server-permissions-transact-sql.md)**ALTER ANY EVENT SESSION**이 있는지 확인합니다.
+3. 사용자 계정에 [서버 사용 권한](../../t-sql/statements/grant-server-permissions-transact-sql.md)**ALTER ANY EVENT SESSION** 이 있는지 확인합니다.
 
   확장 이벤트 관련 보안 및 사용 권한에 대한 자세한 내용은 이 문서 뒷부분에 있는 [부록](#appendix1)을 확인하세요.
 
@@ -82,9 +82,9 @@ SSMS.exe는 확장 이벤트에 대한 최상의 UI(사용자 인터페이스)�
 
 1. SSMS와 연결합니다.
 
-2. 개체 탐색기에서 **관리** > **확장 이벤트** > **새 세션**을 클릭합니다. 두 개가 서로 비슷하지만 **새 세션 마법사** 보다 **새 세션**대화 상자를 사용하는 것이 좋습니다.
+2. 개체 탐색기에서 **관리** > **확장 이벤트** > **새 세션** 을 클릭합니다. 두 개가 서로 비슷하지만 **새 세션 마법사** 보다 **새 세션** 대화 상자를 사용하는 것이 좋습니다.
 
-3. 왼쪽 위에서 **일반** 페이지를 클릭합니다. 그런 다음 *세션 이름*입력란에 **YourSession** 또는 원하는 이름을 입력합니다. **확인** 단추는 데모 마지막에 눌러야 하므로 아직 누르지 *마세요*.
+3. 왼쪽 위에서 **일반** 페이지를 클릭합니다. 그런 다음 *세션 이름* 입력란에 **YourSession** 또는 원하는 이름을 입력합니다. **확인** 단추는 데모 마지막에 눌러야 하므로 아직 누르지 *마세요*.
 
    ![새 세션 > 일반 > 세션 이름](../../relational-databases/extended-events/media/xevents-session-newsessions-10-general-ssms-yoursessionnode.png)
 
@@ -92,9 +92,9 @@ SSMS.exe는 확장 이벤트에 대한 최상의 UI(사용자 인터페이스)�
 
    ![새 세션 > 이벤트 > 선택 > 이벤트 라이브러리, 선택한 이벤트](../../relational-databases/extended-events/media/xevents-session-newsessions-14-events-ssms-rightclick-not-wizard.png)
 
-5. **이벤트 라이브러리** 영역의 드롭다운 목록에서 **이벤트 이름만**을 선택합니다.
-    - 입력란에 **sql**을 입력하면 *contains* 연산자를 사용하여 사용 가능한 이벤트의 긴 목록을 필터링하고 줄일 수 있습니다.
-    - 스크롤하여 **sql_statement_completed**이벤트를 클릭합니다.
+5. **이벤트 라이브러리** 영역의 드롭다운 목록에서 **이벤트 이름만** 을 선택합니다.
+    - 입력란에 **sql** 을 입력하면 *contains* 연산자를 사용하여 사용 가능한 이벤트의 긴 목록을 필터링하고 줄일 수 있습니다.
+    - 스크롤하여 **sql_statement_completed** 이벤트를 클릭합니다.
     - 오른쪽 화살표 단추 **>** 를 클릭하여 이벤트를 **선택한 이벤트** 상자로 이동합니다.
 
 6. **이벤트** 페이지에서 맨 오른쪽에 있는 **구성** 단추를 클릭합니다.
@@ -105,7 +105,7 @@ SSMS.exe는 확장 이벤트에 대한 최상의 UI(사용자 인터페이스)�
 
 7. **필터(조건자)** 탭을 클릭합니다. 그런 다음 **절을 추가하려면 여기를 클릭하세요.** 를 클릭하여 HAVING 절을 포함하는 모든 SQL SELECT 문을 캡처합니다.
 
-8. **필드** 드롭다운 목록에서 **sqlserver.sql_text**를 선택합니다.
+8. **필드** 드롭다운 목록에서 **sqlserver.sql_text** 를 선택합니다.
    - **연산자** 에 대해 LIKE 연산자를 선택합니다.
    - **값** 에 **%SELECT%HAVING%** 을 입력합니다.
 
@@ -115,13 +115,16 @@ SSMS.exe는 확장 이벤트에 대한 최상의 UI(사용자 인터페이스)�
 9. 왼쪽 위에서 **데이터 스토리지** 페이지를 클릭합니다.
 
 10. **대상** 영역에서 **대상을 추가하려면 여기를 클릭하세요.** 를 클릭합니다.
-    - **형식** 드롭다운 목록에서 **event_file**을 선택합니다.
+    - **형식** 드롭다운 목록에서 **event_file** 을 선택합니다.
     - 즉, 사용자가 볼 수 있는 파일에 이벤트 데이터가 저장됩니다.
+    
+    > [!NOTE]
+    > SQL Server의 온-프레미스 인스턴스에서 데이터 스토리지 대상으로 Azure Blob Storage를 사용할 수 없습니다.
 
     ![새 세션 &gt; 데이터 스토리지 &gt; 대상 &gt; 유형 &gt; event_file](../../relational-databases/extended-events/media/xevents-session-newsessions-30-datastorage-ssms-yoursessionnode.png)
 
 11. **속성** 영역의 **서버의 파일 이름** 입력란에 전체 경로 및 파일 이름을 입력합니다.
-    - 파일 이름 확장명은 *.xel*이어야 합니다.
+    - 파일 이름 확장명은 *.xel* 이어야 합니다.
     - 작은 테스트의 파일 크기는 1MB 미만이어야 합니다.
 
     ![새 세션 > 고급 > 최대 디스패치 대기 시간 > 확인](../../relational-databases/extended-events/media/xevents-session-newsessions-40-advanced-ssms-yoursessionnode.png)
@@ -130,22 +133,22 @@ SSMS.exe는 확장 이벤트에 대한 최상의 UI(사용자 인터페이스)�
     - **최대 디스패치 대기 시간** 을 3초 미만으로 줄입니다.
     - 마지막으로 아래쪽의 **확인** 단추를 클릭합니다.
 
-13. **개체 탐색기**로 돌아가서 **관리** > **세션**을 확장하고 **YourSession**에 대한 새 노드를 확인합니다.
+13. **개체 탐색기** 로 돌아가서 **관리** > **세션** 을 확장하고 **YourSession** 에 대한 새 노드를 확인합니다.
 
     ![개체 탐색기의 관리 > 확장 이벤트 > 세션에 있는 새 *이벤트 세션* YourSession의 노드](../../relational-databases/extended-events/media/xevents-session-newsessions-50-objectexplorer-ssms-yoursessionnode.png)
 
 #### <a name="edit-your-event-session"></a>이벤트 세션 편집
 
-SSMS **개체 탐색기**에서 해당 노드를 마우스 오른쪽 단추로 클릭하고 **속성**을 클릭하여 이벤트 세션을 편집할 수 있습니다. 동일한 다중 페이지 대화 상자가 표시됩니다.
+SSMS **개체 탐색기** 에서 해당 노드를 마우스 오른쪽 단추로 클릭하고 **속성** 을 클릭하여 이벤트 세션을 편집할 수 있습니다. 동일한 다중 페이지 대화 상자가 표시됩니다.
 
 ### <a name="corresponding-t-sql-for-your-event-session"></a>이벤트 세션에 대한 해당 T-SQL
 
 SSMS UI를 사용하여 이벤트 세션을 만든 T-SQL 스크립트를 생성했습니다. 다음과 같이 생성된 스크립트를 확인할 수 있습니다.
 
-- 세션 노드를 마우스 오른쪽 단추로 클릭하고 **세션 스크립팅** > **CREATE** > **클립보드**를 클릭합니다.
+- 세션 노드를 마우스 오른쪽 단추로 클릭하고 **세션 스크립팅** > **CREATE** > **클립보드** 를 클릭합니다.
 - 텍스트 편집기에 붙여넣습니다.
 
-다음은 UI를 클릭하여 생성된 *YourSession*에 대한 T-SQL CREATE EVENT SESSION 문입니다.
+다음은 UI를 클릭하여 생성된 *YourSession* 에 대한 T-SQL CREATE EVENT SESSION 문입니다.
 
 ```sql
 CREATE EVENT SESSION [YourSession]
@@ -209,10 +212,10 @@ SQL Server 인스턴스가 시작될 때 이벤트 세션이 자동으로 시작
 
 다음 간단한 단계를 통해 이벤트 세션을 테스트합니다.
 
-1. SSMS **개체 탐색기**에서 이벤트 세션 노드를 마우스 오른쪽 단추로 클릭한 다음 **세션 시작**을 클릭합니다.
+1. SSMS **개체 탐색기** 에서 이벤트 세션 노드를 마우스 오른쪽 단추로 클릭한 다음 **세션 시작** 을 클릭합니다.
 2. 다음 `SELECT...HAVING` 문을 두 번 실행합니다.
     - 두 번 실행 중 `HAVING Count` 값을 2와 3으로 전환하여 사용하는 것이 좋습니다. 이렇게 하면 결과의 차이점을 볼 수 있습니다.
-3. 세션 노드를 마우스 오른쪽 단추로 클릭한 다음 **세션 중지**를 클릭합니다.
+3. 세션 노드를 마우스 오른쪽 단추로 클릭한 다음 **세션 중지** 를 클릭합니다.
 4. 다음 하위 섹션에서 [결과 선택 및 확인 방법](#select-the-full-results-xml-37)을 읽어 보세요.
 
 ```sql
@@ -247,7 +250,7 @@ event_session_address  5
 event_session_id       5
 is_trigger_event       4
 trace_event_id         3
-***/
+**_/
 ```
 
 <a name="select-the-full-results-xml-37"/>
@@ -257,7 +260,7 @@ trace_event_id         3
 SSMS에서 다음 T-SQL SELECT를 실행하여 각 행에서 한 이벤트 항목에 관한 데이터를 제공하는 결과를 반환합니다. CAST AS XML을 사용하면 결과를 쉽게 확인할 수 있습니다.
 
 > [!NOTE]
-> 이벤트 시스템은 항상 지정한 *.xel* event_file 파일 이름에 long 형식의 숫자를 추가합니다. 파일에서 다음 SELECT를 실행하기 전에 먼저 시스템에 의해 지정된 전체 이름을 복사하고 SELECT에 붙여넣습니다.
+> 이벤트 시스템은 항상 지정한 _.xel* event_file 파일 이름에 long 형식의 숫자를 추가합니다. 파일에서 다음 SELECT를 실행하기 전에 먼저 시스템에 의해 지정된 전체 이름을 복사하고 SELECT에 붙여넣습니다.
 
 ```sql
 SELECT
@@ -334,11 +337,11 @@ SSMS UI에는 확장 이벤트에서 캡처된 데이터를 보는 데 사용할
 
 - [SQL Server 확장 이벤트의 대상 데이터 고급 보기](../../relational-databases/extended-events/advanced-viewing-of-target-data-from-extended-events-in-sql-server.md)
 
-기본적으로 상황에 맞는 메뉴 옵션인 **대상 데이터 보기** 및 **라이브 데이터 감시**에서 시작합니다.
+기본적으로 상황에 맞는 메뉴 옵션인 **대상 데이터 보기** 및 **라이브 데이터 감시** 에서 시작합니다.
 
 ### <a name="view-target-data"></a>대상 데이터 보기
 
-SSMS **개체 탐색기**에서 이벤트 세션 노드 아래의 대상 노드를 마우스 오른쪽 단추로 클릭할 수 있습니다. 상황에 맞는 메뉴에서 **대상 데이터 보기**를 클릭합니다. 데이터가 표시됩니다.
+SSMS **개체 탐색기** 에서 이벤트 세션 노드 아래의 대상 노드를 마우스 오른쪽 단추로 클릭할 수 있습니다. 상황에 맞는 메뉴에서 **대상 데이터 보기** 를 클릭합니다. 데이터가 표시됩니다.
 
 이벤트에서 새 데이터가 보고될 때 디스플레이가 업데이트되지 않습니다. 그러나 **대상 데이터 보기** 를 다시 클릭할 수 있습니다.
 
@@ -346,7 +349,7 @@ SSMS **개체 탐색기**에서 이벤트 세션 노드 아래의 대상 노드�
 
 ### <a name="watch-live-data"></a>라이브 데이터 감시
 
-SSMS **개체 탐색기**에서 이벤트 세션 노드를 마우스 오른쪽 단추로 클릭할 수 있습니다. 상황에 맞는 메뉴에서 **라이브 데이터 감시**를 클릭합니다. 실시간으로 계속 들어오는 데이터를 표시합니다.
+SSMS **개체 탐색기** 에서 이벤트 세션 노드를 마우스 오른쪽 단추로 클릭할 수 있습니다. 상황에 맞는 메뉴에서 **라이브 데이터 감시** 를 클릭합니다. 실시간으로 계속 들어오는 데이터를 표시합니다.
 
 ![라이브 데이터 감시, SSMS의 관리 > 확장 이벤트 > 세션 > YourSession, 마우스 오른쪽 단추 클릭](../../relational-databases/extended-events/media/xevents-watchlivedata-ssms-yoursessionnode-63.png)
 
@@ -367,11 +370,11 @@ SSMS **개체 탐색기**에서 이벤트 세션 노드를 마우스 오른쪽 �
 
 | 용어 | Description |
 | :--- | :---------- |
-| 이벤트 세션 | 하나 이상의 이벤트와 동작 및 대상 등 지원되는 항목에 대한 구성입니다. CREATE EVENT SESSION 문은 각 이벤트 세션을 생성합니다. 이벤트 세션이 원하는 대로 시작 및 중지되도록 변경할 수 있습니다. <br/> <br/> 이벤트 세션을 *세션*이라고 하는 경우도 있으며 컨텍스트상 구분이 필요한 경우에는 *이벤트 세션*이라고 합니다. <br/> <br/> 이벤트 세션에 대한 자세한 내용은 다음에서 설명되어 있습니다. [SQL Server 확장 이벤트 세션](../../relational-databases/extended-events/sql-server-extended-events-sessions.md). |
+| 이벤트 세션 | 하나 이상의 이벤트와 동작 및 대상 등 지원되는 항목에 대한 구성입니다. CREATE EVENT SESSION 문은 각 이벤트 세션을 생성합니다. 이벤트 세션이 원하는 대로 시작 및 중지되도록 변경할 수 있습니다. <br/> <br/> 이벤트 세션을 *세션* 이라고 하는 경우도 있으며 컨텍스트상 구분이 필요한 경우에는 *이벤트 세션* 이라고 합니다. <br/> <br/> 이벤트 세션에 대한 자세한 내용은 다음에서 설명되어 있습니다. [SQL Server 확장 이벤트 세션](../../relational-databases/extended-events/sql-server-extended-events-sessions.md). |
 | 이벤트 | 활성 이벤트 세션에서 감시하는 시스템의 특정 항목입니다. <br/> <br/> 예를 들어 *sql_statement_completed* 이벤트는 지정한 T-SQL 문이 완료되는 시점을 나타냅니다. 이벤트는 지속 시간 및 기타 데이터를 보고할 수 있습니다. |
-| 대상 | 캡처한 이벤트에서 출력 데이터를 수신하는 항목입니다. 대상은 데이터를 표시합니다. <br/> <br/> 예제에는 *event_file*및 간편한 메모리 *ring_buffer*가 있습니다. 조금 더 복잡한 *histogram* 대상은 표시하기 전에 데이터를 일부 처리합니다. <br/> <br/> 모든 대상을 모든 이벤트 세션에 대해 사용할 수 있습니다. 자세한 내용은 [SQL Server에서 확장 이벤트에 대한 대상](../../relational-databases/extended-events/targets-for-extended-events-in-sql-server.md)을 참조하세요. |
-| action | 이벤트에 알려진 필드입니다. 필드의 데이터가 대상으로 전송됩니다. 작업 필드는 *조건자 필터*와 밀접한 관련이 있습니다. |
-| 조건자 필터 | 이벤트 필드의 데이터 테스트는 이벤트 항목 중 관심 있는 하위 집합만 대상으로 전송되도록 하는 데 사용됩니다. <br/> <br/> 예를 들어 T-SQL 문에 *HAVING* 문자열이 포함된 *sql_statement_completed*이벤트 항목만 필터에 포함할 수 있습니다. |
+| 대상 | 캡처한 이벤트에서 출력 데이터를 수신하는 항목입니다. 대상은 데이터를 표시합니다. <br/> <br/> 예제에는 *event_file* 및 간편한 메모리 *ring_buffer* 가 있습니다. 조금 더 복잡한 *histogram* 대상은 표시하기 전에 데이터를 일부 처리합니다. <br/> <br/> 모든 대상을 모든 이벤트 세션에 대해 사용할 수 있습니다. 자세한 내용은 [SQL Server에서 확장 이벤트에 대한 대상](../../relational-databases/extended-events/targets-for-extended-events-in-sql-server.md)을 참조하세요. |
+| action | 이벤트에 알려진 필드입니다. 필드의 데이터가 대상으로 전송됩니다. 작업 필드는 *조건자 필터* 와 밀접한 관련이 있습니다. |
+| 조건자 필터 | 이벤트 필드의 데이터 테스트는 이벤트 항목 중 관심 있는 하위 집합만 대상으로 전송되도록 하는 데 사용됩니다. <br/> <br/> 예를 들어 T-SQL 문에 *HAVING* 문자열이 포함된 *sql_statement_completed* 이벤트 항목만 필터에 포함할 수 있습니다. |
 | 패키지 | 이벤트의 핵심과 관련된 항목 집합의 각 항목에 연결된 이름 한정자입니다. <br/> <br/> 예를 들어 패키지에는 T-SQL 텍스트에 대한 이벤트가 있을 수 있습니다. 하나의 이벤트가 GO로 구분된 일괄 처리의 모든 T-SQL과 관련될 수 있습니다. 한편 개별 T-SQL 문에 대한 이벤트도 있습니다. 또한 모든 T-SQL 문에 대해 시작 및 완료 이벤트가 있습니다. <br/> <br/> 이벤트에 적합한 필드는 이벤트가 있는 패키지에도 있습니다. 대부분의 대상은 *package0* 에 있으며 다른 여러 패키지의 이벤트와 함께 사용됩니다. |
 
 ## <a name="how-to-discover-the-available-events-in-packages"></a>패키지에서 사용할 수 있는 이벤트를 검색하는 방법
@@ -432,7 +435,7 @@ ETW(Windows용 이벤트 추적)에서 확장 이벤트 사용에 대한 설명�
 
 SQL Server는 몇 가지 확장 이벤트를 기본으로 제공합니다. 이 확장 이벤트는 모두 SQL 시스템이 시작될 때마다 시작하도록 구성되어 있습니다. 이러한 이벤트 세션은 시스템 오류 발생 시 도움이 되는 데이터를 수집합니다. 이러한 이벤트 세션은 모든 확장 이벤트와 마찬가지로 아주 적은 양의 리소스만 사용하므로 계속 실행하는 것이 좋습니다.
 
-이러한 이벤트 세션은 SSMS **개체 탐색기** 의 **관리** > **확장 이벤트** > **세션**에서 볼 수 있습니다.  2016년 6월을 기준으로 설치되는 이벤트 세션 목록은 다음과 같습니다.
+이러한 이벤트 세션은 SSMS **개체 탐색기** 의 **관리** > **확장 이벤트** > **세션** 에서 볼 수 있습니다.  2016년 6월을 기준으로 설치되는 이벤트 세션 목록은 다음과 같습니다.
 
 - AlwaysOn_health
 - system_health

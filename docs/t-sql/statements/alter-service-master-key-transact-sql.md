@@ -26,11 +26,11 @@ ms.assetid: a1e9be0e-4115-47d8-9d3a-3316d876a35e
 author: VanMSFT
 ms.author: vanto
 ms.openlocfilehash: 0c75769df4c504f71dfdd3a724648aea19b66460
-ms.sourcegitcommit: ac9feb0b10847b369b77f3c03f8200c86ee4f4e0
+ms.sourcegitcommit: 192f6a99e19e66f0f817fdb1977f564b2aaa133b
 ms.translationtype: HT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 09/16/2020
-ms.locfileid: "90688149"
+ms.lasthandoff: 11/25/2020
+ms.locfileid: "96124205"
 ---
 # <a name="alter-service-master-key-transact-sql"></a>ALTER SERVICE MASTER KEY(Transact-SQL)
 [!INCLUDE [SQL Server](../../includes/applies-to-version/sqlserver.md)]
@@ -64,25 +64,25 @@ ALTER SERVICE MASTER KEY
  REGENERATE  
  서비스 마스터 키를 다시 생성하도록 지정합니다.  
   
- OLD_ACCOUNT **='***account_name***'**  
+ OLD_ACCOUNT **='** _account_name_*_'_*  
  이전 Windows 서비스 계정 이름을 지정합니다.  
   
 > [!WARNING]  
 >  이 옵션은 더 이상 사용되지 않으므로 사용하지 마십시오. 대신 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 구성 관리자를 사용하십시오.  
   
- OLD_PASSWORD **='***password***'**  
+ OLD_PASSWORD **='** _password_*_'_*  
  이전 Windows 서비스 계정의 암호를 지정합니다.  
   
 > [!WARNING]  
 >  이 옵션은 더 이상 사용되지 않으므로 사용하지 마십시오. 대신 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 구성 관리자를 사용하십시오.  
   
- NEW_ACCOUNT **='***account_name***'**  
+ NEW_ACCOUNT **='** _account_name_*_'_*  
  새 Windows 서비스 계정 이름을 지정합니다.  
   
 > [!WARNING]  
 >  이 옵션은 더 이상 사용되지 않으므로 사용하지 마십시오. 대신 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 구성 관리자를 사용하십시오.  
   
- NEW_PASSWORD **='***password***'**  
+ NEW_PASSWORD **='** _password_*_'_*  
  새 Windows 서비스 계정의 암호를 지정합니다.  
   
 > [!WARNING]  

@@ -13,12 +13,12 @@ ms.assetid: 1a4a6564-9820-4a14-9305-2c0e9ea37454
 author: rothja
 ms.author: jroth
 monikerRange: =azuresqldb-current||>=sql-server-2016||=sqlallproducts-allversions||>=sql-server-linux-2017||=azuresqldb-mi-current
-ms.openlocfilehash: 0e70bf690c7e236bbe52eae905730dec8f9ac48a
-ms.sourcegitcommit: e700497f962e4c2274df16d9e651059b42ff1a10
+ms.openlocfilehash: e4e723b2ef95fa3b1916d972a5b911dda5201a3d
+ms.sourcegitcommit: 644223c40af7168f9d618526e9f4cd24e115d1db
 ms.translationtype: HT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 08/17/2020
-ms.locfileid: "88418957"
+ms.lasthandoff: 11/30/2020
+ms.locfileid: "96328063"
 ---
 # <a name="ddl-triggers"></a>DDL 트리거
 [!INCLUDE [SQL Server SQL Database](../../includes/applies-to-version/sql-asdb.md)]
@@ -94,7 +94,7 @@ GO
   
  [!INCLUDE[tsql](../../includes/tsql-md.md)] 문을 지정 가능한 범위에 매핑하는 목록은 이 항목의 뒷부분에 나오는 "DDL 트리거를 시작하기 위한 특정 DDL 문 선택" 섹션에 제공된 링크를 통해 볼 수 있습니다.  
   
- 데이터베이스 범위 DDL 트리거는 해당 트리거를 만든 데이터베이스에 개체로 저장됩니다. **master** 데이터베이스에서 DDL 트리거를 만들 수 있으며 이러한 DDL 트리거는 사용자가 디자인한 데이터베이스에서 만든 DDL 트리거와 똑같이 동작합니다. DDL 트리거에 대한 정보는 **sys.triggers** 카탈로그 뷰를 쿼리하여 얻을 수 있습니다. **sys.triggers** 는 트리거가 만들어진 데이터베이스 컨텍스트 내에서 또는 **master.sys.triggers**와 같이 데이터베이스 이름을 식별자로 지정하여 쿼리할 수 있습니다.  
+ 데이터베이스 범위 DDL 트리거는 해당 트리거를 만든 데이터베이스에 개체로 저장됩니다. **master** 데이터베이스에서 DDL 트리거를 만들 수 있으며 이러한 DDL 트리거는 사용자가 디자인한 데이터베이스에서 만든 DDL 트리거와 똑같이 동작합니다. DDL 트리거에 대한 정보는 **sys.triggers** 카탈로그 뷰를 쿼리하여 얻을 수 있습니다. **sys.triggers** 는 트리거가 만들어진 데이터베이스 컨텍스트 내에서 또는 **master.sys.triggers** 와 같이 데이터베이스 이름을 식별자로 지정하여 쿼리할 수 있습니다.  
   
  서버 범위 DDL 트리거는 **master** 데이터베이스에 개체로 저장됩니다. 그러나 서버 범위 DDL 트리거에 대한 정보는 임의의 데이터베이스 컨텍스트에서 **sys.server_triggers** 카탈로그 뷰를 쿼리하여 얻을 수 있습니다.  
   
@@ -124,5 +124,5 @@ GO
  [DML 트리거](../../relational-databases/triggers/dml-triggers.md)   
  [LOGON 트리거](../../relational-databases/triggers/logon-triggers.md)   
  [CREATE TRIGGER&#40;Transact-SQL&#41;](../../t-sql/statements/create-trigger-transact-sql.md)  
-  
+ [EVENT DATA&#40;Transact-SQL&#41;](../../t-sql/functions/eventdata-transact-sql.md)  
   

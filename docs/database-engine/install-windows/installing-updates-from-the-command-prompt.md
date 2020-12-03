@@ -8,15 +8,15 @@ ms.reviewer: ''
 ms.technology: install
 ms.topic: conceptual
 ms.assetid: bc98ba2b-aae9-4d01-aa85-d4c36428cb0b
-author: MashaMSFT
-ms.author: mathoma
+author: cawrites
+ms.author: chadam
 monikerRange: '>=sql-server-2016||=sqlallproducts-allversions'
-ms.openlocfilehash: 96a7bde8459edcc6e6fe4758167c35b95aaedfef
-ms.sourcegitcommit: 2f868a77903c1f1c4cecf4ea1c181deee12d5b15
+ms.openlocfilehash: e89e825dc8b5fd2748dc380c8b065e0baac02821
+ms.sourcegitcommit: 5a1ed81749800c33059dac91b0e18bd8bb3081b1
 ms.translationtype: HT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 10/02/2020
-ms.locfileid: "91670589"
+ms.lasthandoff: 11/23/2020
+ms.locfileid: "96125855"
 ---
 # <a name="installing-updates-from-the-command-prompt"></a>명령 프롬프트에서 업데이트 설치
 
@@ -80,8 +80,8 @@ ms.locfileid: "91670589"
 |**/?**|무인 설치 명령 프롬프트 도움말을 표시합니다.| 
 |**/action=Patch 또는 /action=RemovePatch**|설치 동작으로 Patch 또는 RemovePatch를 지정합니다.| 
 |**/allinstances**|[!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 업데이트를 모든 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 인스턴스에 적용하고 인스턴스를 인식하지 않는 모든 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 공유 구성 요소에도 적용합니다.| 
-|**/instancename=InstanceName***|[!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 업데이트를 InstanceName이라는 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 인스턴스에 적용하고 인스턴스를 인식하지 않는 모든 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 공유 구성 요소에도 적용합니다.| 
-|**/InstanceID=Inst1**|[!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 업데이트를 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] Inst1 인스턴스에 적용하고 인스턴스를 인식하지 않는 모든 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 공유 구성 요소에도 적용합니다.| 
+|**/instancename=InstanceName** _|[!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 업데이트를 InstanceName이라는 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 인스턴스에 적용하고 인스턴스를 인식하지 않는 모든 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 공유 구성 요소에도 적용합니다.| 
+|_ */InstanceID=Inst1**|[!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 업데이트를 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] Inst1 인스턴스에 적용하고 인스턴스를 인식하지 않는 모든 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 공유 구성 요소에도 적용합니다.| 
 |**/quiet**|무인 모드로 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 업데이트 설치 프로그램을 실행합니다.| 
 |**/qs**|진행률 UI 대화 상자만 표시합니다.| 
 |**/UpdateEnabled**|[!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 설치 프로그램이 제품 업데이트를 검색하고 포함하는지 여부를 지정합니다. 유효한 값은 True와 False 또는 1과 0입니다. 기본적으로 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 설치 프로그램에는 검색된 업데이트가 포함됩니다.| 

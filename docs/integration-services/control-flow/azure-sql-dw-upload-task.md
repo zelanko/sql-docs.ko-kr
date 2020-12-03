@@ -14,12 +14,12 @@ f1_keywords:
 ms.assetid: eef82c89-228a-4dc7-9bd0-ea00f57692f5
 author: Lingxi-Li
 ms.author: lingxl
-ms.openlocfilehash: c0864f868cc046fcd1f0763fff7e5a97e2fe8607
-ms.sourcegitcommit: a5398f107599102af7c8cda815d8e5e9a367ce7e
+ms.openlocfilehash: 5510fb2a0a4760b5465dad7f44eed8c85ef36251
+ms.sourcegitcommit: ece151df14dc2610d96cd0d40b370a4653796d74
 ms.translationtype: HT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 10/13/2020
-ms.locfileid: "92006208"
+ms.lasthandoff: 11/26/2020
+ms.locfileid: "96297965"
 ---
 # <a name="azure-sql-dw-upload-task"></a>Azure SQL DW 업로드 태스크
 
@@ -27,18 +27,23 @@ ms.locfileid: "92006208"
 
 
 
-**Azure SQL DW 업로드 태스크**를 사용하면 SSIS 패키지가 파일 시스템이나 Azure Blob Storage에서 Azure Synapse Analytics(DW)로 테이블 형식 데이터를 복사할 수 있습니다.
+**Azure SQL DW 업로드 태스크** 를 사용하면 SSIS 패키지가 파일 시스템이나 Azure Blob Storage에서 Azure Synapse Analytics(DW)로 테이블 형식 데이터를 복사할 수 있습니다.
 이 태스크는 [Azure Synapse Analytics 로딩 패턴 및 전략](/archive/blogs/sqlcat/azure-sql-data-warehouse-loading-patterns-and-strategies) 문서에 설명된 대로 PolyBase를 활용하여 성능을 향상합니다.
 현재 지원되는 원본 데이터 파일 형식은 UTF8 인코딩 방식의 구분 기호로 분리된 텍스트입니다.
 파일 시스템에서 복사할 때는 먼저 준비를 위해 데이터가 Azure Blob Storage에 업로드된 후 Azure SQL DW로 업로드됩니다. 따라서 Azure Blob Storage 계정이 필요합니다.
 
-**Azure SQL DW 업로드 태스크**는 [Azure용 SSIS(SQL Server Integration Services) 기능 팩](../../integration-services/azure-feature-pack-for-integration-services-ssis.md)의 구성 요소입니다.
+> [!NOTE]
+> Data Lake Gen2 서비스 유형을 사용하는 Azure Storage 연결 관리자가 지원되지 않습니다.
+>
+> 준비 또는 원본에 Azure Data Lake Gen2를 사용하려면 Blob Storage 서비스 유형을 사용하여 Azure Storage 연결 관리자를 통해 연결할 수 있습니다.
 
-**Azure SQL DW 업로드 태스크**를 추가하려면 해당 태스크를 SSIS 도구 상자에서 디자이너 캔버스로 끌어서 놓고 두 번 클릭하거나 마우스 오른쪽 단추를 클릭하고 **편집** 을 클릭하여 태스크 편집기 대화 상자를 표시합니다.
+**Azure SQL DW 업로드 태스크** 는 [Azure용 SSIS(SQL Server Integration Services) 기능 팩](../../integration-services/azure-feature-pack-for-integration-services-ssis.md)의 구성 요소입니다.
+
+**Azure SQL DW 업로드 태스크** 를 추가하려면 해당 태스크를 SSIS 도구 상자에서 디자이너 캔버스로 끌어서 놓고 두 번 클릭하거나 마우스 오른쪽 단추를 클릭하고 **편집** 을 클릭하여 태스크 편집기 대화 상자를 표시합니다.
 
 **일반** 페이지에서 다음 속성을 구성합니다.
 
-**SourceType**은 원본 데이터 저장소의 유형을 지정합니다. 다음 유형 중 하나를 선택합니다.
+**SourceType** 은 원본 데이터 저장소의 유형을 지정합니다. 다음 유형 중 하나를 선택합니다.
 
 * **FileSystem:** 원본 데이터가 로컬 파일 시스템에 있습니다.
 * **BlobStorage:** 원본 데이터가 Azure Blob Storage에 있습니다.
@@ -63,8 +68,8 @@ CompressionType|Azure Storage에 파일 업로드 시 사용할 압축 형식을
 CompressionLevel|압축 형식에 사용할 압축 수준을 지정합니다.
 AzureDwConnection|Azure SQL DW용 ADO.NET 연결 관리자를 지정합니다.
 TableName|대상 테이블의 이름을 지정합니다. 기존 테이블 이름을 선택하거나 **\<New Table ...>** 을 선택하여 새 테이블을 만듭니다.
-TableDistribution|새 테이블에 대한 배포 방법을 지정합니다. 새 테이블 이름이 **TableName**에 대해 지정된 경우 적용합니다.
-HashColumnName|해시 테이블 배포에 사용되는 열을 지정합니다. **TableDistribution** 에 대해 **HASH**가 지정된 경우 적용합니다.
+TableDistribution|새 테이블에 대한 배포 방법을 지정합니다. 새 테이블 이름이 **TableName** 에 대해 지정된 경우 적용합니다.
+HashColumnName|해시 테이블 배포에 사용되는 열을 지정합니다. **TableDistribution** 에 대해 **HASH** 가 지정된 경우 적용합니다.
 
 ### <a name="blobstorage"></a>BlobStorage
 
@@ -78,8 +83,8 @@ ColumnDelimiter|각 열의 끝을 표시하는 하나 이상의 문자를 지정
 CompressionType|원본 데이터에 사용되는 압축 형식을 지정합니다.
 AzureDwConnection|Azure SQL DW용 ADO.NET 연결 관리자를 지정합니다.
 TableName|대상 테이블의 이름을 지정합니다. 기존 테이블 이름을 선택하거나 **\<New Table ...>** 을 선택하여 새 테이블을 만듭니다.
-TableDistribution|새 테이블에 대한 배포 방법을 지정합니다. 새 테이블 이름이 **TableName**에 대해 지정된 경우 적용합니다.
-HashColumnName|해시 테이블 배포에 사용되는 열을 지정합니다. **TableDistribution** 에 대해 **HASH**가 지정된 경우 적용합니다.
+TableDistribution|새 테이블에 대한 배포 방법을 지정합니다. 새 테이블 이름이 **TableName** 에 대해 지정된 경우 적용합니다.
+HashColumnName|해시 테이블 배포에 사용되는 열을 지정합니다. **TableDistribution** 에 대해 **HASH** 가 지정된 경우 적용합니다.
 
 새 테이블 또는 기존 테이블에 복사하는지에 따라 다른 **매핑** 페이지가 표시됩니다.
 새 테이블에 업로드하는 경우 매핑할 원본 열과 생성할 대상 테이블의 해당 이름을 구성합니다.

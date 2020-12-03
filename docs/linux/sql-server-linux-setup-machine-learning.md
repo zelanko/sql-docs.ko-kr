@@ -5,23 +5,25 @@ description: Linux에 SQL Server Machine Learning Services(Python 및 R) 설치�
 author: dphansen
 ms.author: davidph
 manager: cgronlun
-ms.date: 03/05/2020
+ms.date: 11/24/2020
 ms.topic: how-to
 ms.prod: sql
 ms.technology: machine-learning-services
 monikerRange: '>=sql-server-ver15||>=sql-server-linux-ver15||=sqlallproducts-allversions'
-ms.openlocfilehash: fc671271d3e998e0329236c6c567438db1a5c48a
-ms.sourcegitcommit: 82b92f73ca32fc28e1948aab70f37f0efdb54e39
+ms.openlocfilehash: d236f70a3fdc3e03909078e366ec1f776b68c689
+ms.sourcegitcommit: f2bdebed3efa55a2b7e64de9d6d9d9b1c85f479e
 ms.translationtype: HT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 11/18/2020
-ms.locfileid: "94870018"
+ms.lasthandoff: 11/24/2020
+ms.locfileid: "96129437"
 ---
 # <a name="install-sql-server-machine-learning-services-python-and-r-on-linux"></a>Linux에 SQL Server Machine Learning Services(Python 및 R) 설치
 
 [!INCLUDE [SQL Server 2019 - Linux](../includes/applies-to-version/sqlserver2019-linux.md)]
 
-이 문서에서는 Linux에 [SQL Server Machine Learning Services](../machine-learning/index.yml)를 설치하는 과정을 안내합니다. Machine Learning Services를 사용하여 데이터베이스 내에서 Python 및 R 스크립트를 실행할 수 있습니다.
+이 문서에서는 Linux에 [SQL Server Machine Learning Services](../machine-learning//sql-server-machine-learning-services.md)를 설치하는 과정을 안내합니다. Machine Learning Services를 사용하여 데이터베이스 내에서 Python 및 R 스크립트를 실행할 수 있습니다.
+
+Machine Learning Services는 RHEL(Red Hat Enterprise Linux), SLES(SUSE Linux Enterprise Server) 및 Ubuntu에 설치할 수 있습니다. 자세한 내용은 [Installation guidance for SQL Server on Linux(SQL Server on Linux 설치 지침)의 Supported platforms(지원되는 플랫폼) 섹션](sql-server-linux-setup.md#supportedplatforms)을 참조하세요.
 
 > [!NOTE]
 > Machine Learning Services는 기본적으로 SQL Server 빅 데이터 클러스터에 설치됩니다. 자세한 내용은 [빅 데이터 클러스터에서 Machine Learning Services(Python 및 R) 사용](../big-data-cluster/machine-learning-services.md)을 참조하세요.
@@ -34,8 +36,6 @@ ms.locfileid: "94870018"
 
 * Python 및 R 확장의 SQL Server Linux 리포지토리를 확인합니다. 
   데이터베이스 엔진 설치에 대한 원본 리포지토리를 이미 구성한 경우 동일한 리포지토리 등록을 사용하여 **mssql-mlservices** 패키지 설치 명령을 실행할 수 있습니다.
-
-  SQL Server는 RHEL(Red Hat Enterprise Linux), SLES(SUSE Linux Enterprise Server) 및 Ubuntu에 설치할 수 있습니다. 자세한 내용은 [Installation guidance for SQL Server on Linux(SQL Server on Linux 설치 지침)의 Supported platforms(지원되는 플랫폼) 섹션](sql-server-linux-setup.md#supportedplatforms)을 참조하세요.
 
 * (R만 해당) MRO(Microsoft R Open)는 SQL Server의 R 기능을 위한 기본 R 배포를 제공하며 RevoScaleR, MicrosoftML 및 기타 Machine Learning Services와 함께 설치되는 R 패키지를 사용하기 위한 필수 조건입니다.
     * 필요한 버전은 MRO 3.5.2입니다.

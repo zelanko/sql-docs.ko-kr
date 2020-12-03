@@ -12,12 +12,12 @@ ms.assetid: e442303d-4de1-494e-94e4-4f66c29b5fb9
 author: markingmyname
 ms.author: maghan
 monikerRange: =azuresqldb-current||>=sql-server-2016||=sqlallproducts-allversions||>=sql-server-linux-2017||=azuresqldb-mi-current
-ms.openlocfilehash: d45c26459b43fecaedf401bf98d0a5346da34dbb
-ms.sourcegitcommit: 80701484b8f404316d934ad2a85fd773e26ca30c
+ms.openlocfilehash: 76eb3c73bf93b3cc8f037f96737f491c5d473173
+ms.sourcegitcommit: 4b98c54859a657023495dddb7595826662dcd9ab
 ms.translationtype: HT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 11/03/2020
-ms.locfileid: "93243562"
+ms.lasthandoff: 11/24/2020
+ms.locfileid: "96130864"
 ---
 # <a name="temporal-tables"></a>임시 테이블
 
@@ -99,10 +99,10 @@ CREATE TABLE dbo.Employee
 WITH (SYSTEM_VERSIONING = ON (HISTORY_TABLE = dbo.EmployeeHistory));
 ```
 
-- **INSERTS:** **INSERT** 에서 시스템은 시스템 클록을 기준으로 **SysStartTime** 열의 값을 현재 트랜잭션의 시작 시간(UTC 표준 시간대)으로 설정하고, **SysEndTime** 열의 값을 최댓값 9999-12-31에 할당합니다. 그러면 행이 열린 것으로 표시됩니다.
+- **INSERTS:** **INSERT** 에서 시스템은 시스템 클록을 기준으로 **SysStartTime** 열(예제에서 **ValidFrom**)의 값을 현재 트랜잭션의 시작 시간(UTC 표준 시간대)으로 설정하고, **SysEndTime** 열(예제에서 **ValidTo**)의 값을 최댓값 9999-12-31에 할당합니다. 그러면 행이 열린 것으로 표시됩니다.
 - **UPDATES:** **UPDATE** 에서 시스템은 기록 테이블에 있는 행의 이전 값을 저장하고, 시스템 클록을 기준으로 **SysEndTime** 열의 값을 현재 트랜잭션의 시작 시간(UTC 표준 시간대)으로 설정합니다. 그러면 행이 닫힌 것으로 표시되고 행이 유효 상태로 유지된 기간이 기록됩니다. 현재 테이블에서는 행이 새 값으로 업데이트되고 시스템에서 시스템 클록을 기준으로 **SysStartTime** 열의 값을 트랜잭션의 시작 시간(UTC 표준 시간대)으로 설정합니다. 현재 테이블에서 **SysEndTime** 열에 대해 업데이트된 행의 값은 최대값 9999-12-31로 그대로 유지됩니다.
 - **DELETES:** **DELETE** 에서 시스템은 기록 테이블에 있는 행의 이전 값을 저장하고, 시스템 클록을 기준으로 **SysEndTime** 열의 값을 현재 트랜잭션의 시작 시간(UTC 표준 시간대)으로 설정합니다. 그러면 행이 닫힌 것으로 표시되고 이전 행이 유효 상태로 유지된 기간이 기록됩니다. 현재 테이블에서는 행이 제거됩니다. 현재 테이블의 쿼리는 이 행을 반환하지 않습니다. 기록 데이터를 처리하는 쿼리만 행이 닫힌 데이터를 반환합니다.
-- **MERGE:** **MERGE** 에서는 작업이 **MERGE** 문에 동작으로 지정된 항목에 따라 정확히 최대 세 개의 문( **INSERT** , **UPDATE** 및/또는 **DELETE** )이 실행된 것처럼 동작합니다.
+- **MERGE:** **MERGE** 에서는 작업이 **MERGE** 문에 동작으로 지정된 항목에 따라 정확히 최대 세 개의 문(**INSERT**, **UPDATE** 및/또는 **DELETE**)이 실행된 것처럼 동작합니다.
 
 > [!IMPORTANT]
 > 시스템 datetime2 열에 기록되는 시작 시간은 트랜잭션 자체의 시간을 기반으로 합니다. 예를 들어 단일 트랜잭션 내에 삽입된 모든 행은 **SYSTEM_TIME** 기간의 시작에 해당하는 열에 기록된 것과 UTC 시간이 동일합니다.
@@ -123,7 +123,7 @@ SELECT * FROM Employee
 ```
 
 > [!NOTE]
-> **FOR SYSTEM_TIME** 은 유효 기간( **SysStartTime** = **SysEndTime** )이 0인 행을 필터링합니다.
+> **FOR SYSTEM_TIME** 은 유효 기간(**SysStartTime** = **SysEndTime**)이 0인 행을 필터링합니다.
 > 이러한 행은 동일한 트랜잭션 내의 동일한 기본 키에서 여러 업데이트를 수행하는 경우에 생성됩니다.
 > 이 경우 임시 쿼리는 트랜잭션 이전의 행 버전과 트랜잭션 이후에 실제가 된 행 버전만 표시합니다.
 > 이러한 행을 분석에 포함해야 하는 경우 기록 테이블을 직접 쿼리합니다.
@@ -132,14 +132,14 @@ SELECT * FROM Employee
 
 |식|행 한정|Description|
 |----------------|---------------------|-----------------|
-|**AS OF** <date_time>|SysStartTime \<= date_time AND SysEndTime > date_time|과거의 지정된 시간에 실제(현재)였던 값이 포함된 행이 있는 테이블을 반환합니다. 내부적으로 temporal 테이블과 기록 테이블 간에 합집합이 계산되며, 지정된 시간에 유효했던 행의 값을 반환하도록 결과가 *<date_time>* 매개 변수로 필터링됩니다. 행 값은 *system_start_time_column_name* 값이 *<date_time>* 매개 변수 값보다 작거나 같고 *system_end_time_column_name* 값이 *<date_time>* 매개 변수 값보다 큰 경우에 유효한 것으로 간주됩니다.|
-|**FROM** <start_date_time> **TO** <end_date_time>|SysStartTime < end_date_time AND SysEndTime > start_date_time|FROM 인수에 대한 *<start_date_time>* 매개 변수 값 이전에 활성 상태가 시작되었든 아니면 TO 인수에 대한 *<end_date_time>* 매개 변수 값 이후에 활성 상태가 중단되었든 상관없이 지정된 시간 범위 내에 활성 상태였던 모든 행 버전의 값을 포함하는 테이블을 반환합니다. 내부적으로 temporal 테이블과 기록 테이블 간에 합집합이 계산되며, 지정된 시간 범위 중 임의의 시점에 활성 상태였던 모든 행 버전을 반환하도록 결과가 필터링됩니다. FROM 엔드포인트로 정의된 하위 경계에서 정확히 활동이 중지된 행은 포함되지 않고 TO 엔드포인트로 정의된 상위 경계에서 정확히 활성화된 레코드도 포함되지 않습니다.|
-|**BETWEEN** <start_date_time> **AND** <end_date_time>|SysStartTime \<= end_date_time AND SysEndTime > start_date_time|&lt;end_date_time&gt; 엔드포인트로 정의된 상위 경계에서 활성화된 행이 반환되는 행 테이블에 포함된다는 점을 제외하고는 위의 **FOR SYSTEM_TIME FROM** &lt;start_date_time&gt; **TO** 설명과 같습니다.|
+|**AS OF**<date_time>|SysStartTime \<= date_time AND SysEndTime > date_time|과거의 지정된 시간에 실제(현재)였던 값이 포함된 행이 있는 테이블을 반환합니다. 내부적으로 temporal 테이블과 기록 테이블 간에 합집합이 계산되며, 지정된 시간에 유효했던 행의 값을 반환하도록 결과가 *<date_time>* 매개 변수로 필터링됩니다. 행 값은 *system_start_time_column_name* 값이 *<date_time>* 매개 변수 값보다 작거나 같고 *system_end_time_column_name* 값이 *<date_time>* 매개 변수 값보다 큰 경우에 유효한 것으로 간주됩니다.|
+|**FROM**<start_date_time>**TO**<end_date_time>|SysStartTime < end_date_time AND SysEndTime > start_date_time|FROM 인수에 대한 *<start_date_time>* 매개 변수 값 이전에 활성 상태가 시작되었든 아니면 TO 인수에 대한 *<end_date_time>* 매개 변수 값 이후에 활성 상태가 중단되었든 상관없이 지정된 시간 범위 내에 활성 상태였던 모든 행 버전의 값을 포함하는 테이블을 반환합니다. 내부적으로 temporal 테이블과 기록 테이블 간에 합집합이 계산되며, 지정된 시간 범위 중 임의의 시점에 활성 상태였던 모든 행 버전을 반환하도록 결과가 필터링됩니다. FROM 엔드포인트로 정의된 하위 경계에서 정확히 활동이 중지된 행은 포함되지 않고 TO 엔드포인트로 정의된 상위 경계에서 정확히 활성화된 레코드도 포함되지 않습니다.|
+|**BETWEEN**<start_date_time>**AND**<end_date_time>|SysStartTime \<= end_date_time AND SysEndTime > start_date_time|&lt;end_date_time&gt; 엔드포인트로 정의된 상위 경계에서 활성화된 행이 반환되는 행 테이블에 포함된다는 점을 제외하고는 위의 **FOR SYSTEM_TIME FROM** &lt;start_date_time&gt;**TO** 설명과 같습니다.|
 |**CONTAINED IN** (<start_date_time> , <end_date_time>)|SysStartTime >= start_date_time AND SysEndTime \<= end_date_time|CONTAINED IN 인수에 대한 두 개의 datetime 값으로 정의된 지정된 시간 범위 내에 열리고 닫힌 모든 행 버전의 값을 포함하는 테이블을 반환합니다. 정확히 하위 경계에서 활성화되거나 상위 경계에서 활성 상태가 중단된 행이 포함됩니다.|
 |**ALL**|모든 행|현재 테이블 및 기록 테이블에 속하는 행의 합집합을 반환합니다.|
 
 > [!NOTE]
-> 필요한 경우 이러한 기간 열을 명시적으로 참조하지 않는 쿼리에서 이러한 열이 반환되지 않도록 이러한 기간 열을 숨길 수 있습니다( **SELECT \* FROM** _\<table\>_ 시나리오). 숨겨진 열을 반환하려면 쿼리에서 숨겨진 열을 명시적으로 참조하기만 하면 됩니다. 마찬가지로 **INSERT** 및 **BULK INSERT** 문은 이러한 새 기간 열이 존재하지 않은 것처럼 계속되며, 열 값이 자동으로 채워집니다. **HIDDEN** 절 사용에 대한 자세한 내용은 [CREATE TABLE&#40;Transact-SQL&#41;](../../t-sql/statements/create-table-transact-sql.md) 및 [ALTER TABLE&#40;Transact-SQL&#41;](../../t-sql/statements/alter-table-transact-sql.md)을 참조하세요.
+> 필요한 경우 이러한 기간 열을 명시적으로 참조하지 않는 쿼리에서 이러한 열이 반환되지 않도록 이러한 기간 열을 숨길 수 있습니다(**SELECT \* FROM** _\<table\>_ 시나리오). 숨겨진 열을 반환하려면 쿼리에서 숨겨진 열을 명시적으로 참조하기만 하면 됩니다. 마찬가지로 **INSERT** 및 **BULK INSERT** 문은 이러한 새 기간 열이 존재하지 않은 것처럼 계속되며, 열 값이 자동으로 채워집니다. **HIDDEN** 절 사용에 대한 자세한 내용은 [CREATE TABLE&#40;Transact-SQL&#41;](../../t-sql/statements/create-table-transact-sql.md) 및 [ALTER TABLE&#40;Transact-SQL&#41;](../../t-sql/statements/alter-table-transact-sql.md)을 참조하세요.
 
 ## <a name="next-steps"></a>다음 단계
 

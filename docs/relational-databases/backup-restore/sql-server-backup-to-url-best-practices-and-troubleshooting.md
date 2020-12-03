@@ -9,14 +9,14 @@ ms.reviewer: ''
 ms.technology: backup-restore
 ms.topic: conceptual
 ms.assetid: de676bea-cec7-479d-891a-39ac8b85664f
-author: MikeRayMSFT
-ms.author: mikeray
-ms.openlocfilehash: d1487a5c7a6c9343438c1a3f6d42fd49e425000b
-ms.sourcegitcommit: 04cf7905fa32e0a9a44575a6f9641d9a2e5ac0f8
+author: cawrites
+ms.author: chadam
+ms.openlocfilehash: 4212c397c712351e951060032f6e7a2ece6a5c3f
+ms.sourcegitcommit: 5a1ed81749800c33059dac91b0e18bd8bb3081b1
 ms.translationtype: HT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 10/07/2020
-ms.locfileid: "91809179"
+ms.lasthandoff: 11/23/2020
+ms.locfileid: "96129030"
 ---
 # <a name="sql-server-backup-to-url-best-practices-and-troubleshooting"></a>URL에 대한 SQL Server 백업 모범 사례 및 문제 해결
 
@@ -35,7 +35,7 @@ ms.locfileid: "91809179"
   
 -   blob을 실수로 덮어쓰지 않도록 모든 백업에 고유한 파일 이름을 사용하는 것이 좋습니다.  
   
--   컨테이너를 만들 때 필요한 인증 정보를 제공할 수 있는 사용자 또는 계정만 컨테이너의 blob을 읽거나 쓸 수 있도록 액세스 수준을 **프라이빗**으로 설정하는 것이 좋습니다.  
+-   컨테이너를 만들 때 필요한 인증 정보를 제공할 수 있는 사용자 또는 계정만 컨테이너의 blob을 읽거나 쓸 수 있도록 액세스 수준을 **프라이빗** 으로 설정하는 것이 좋습니다.  
   
 -   Azure Virtual Machine에서 실행 중인 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 인스턴스의 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 데이터베이스의 경우 가상 머신과 같은 지역의 스토리지 계정을 사용하여 지역 간 데이터 전송 비용이 들지 않게 하십시오. 또한 동일한 지역을 사용하면 최적의 백업 및 복원 작업 성능이 보장됩니다.  
   
@@ -70,11 +70,11 @@ ms.locfileid: "91809179"
     , SECRET = '<storage access key>' ;  
     ```  
   
--   자격 증명이 있지만 백업 명령을 실행하는 데 사용되는 로그인 계정에 자격 증명 액세스 권한이 없습니다. **Alter any credential** 권한이 있는 ***db_backupoperator*** 역할의 로그인 계정을 사용합니다.  
+-   자격 증명이 있지만 백업 명령을 실행하는 데 사용되는 로그인 계정에 자격 증명 액세스 권한이 없습니다. *_모든 자격 증명 변경_* 권한이 있는 **db_backupoperator** 역할의 로그인 계정을 사용합니다.  
   
 -   스토리지 계정 이름과 키 값을 확인합니다. 자격 증명에 저장된 정보와 백업 및 복원 작업에 사용하는 Azure 스토리지 계정의 속성 값이 일치해야 합니다.  
   
- **백업 오류:**  
+ _ *백업 오류/실패:* *  
   
 -   동일한 blob으로 병렬 백업을 수행하면 **초기화 실패** 오류가 발생하여 백업 중 하나가 실패합니다.  
   
@@ -114,7 +114,7 @@ ms.locfileid: "91809179"
     -   `SqlException 3284 occurred. Severity: 16 State: 5  
         Message Filemark on device 'https://mystorage.blob.core.windows.net/mycontainer/TestDbBackupSetNumber2_0.bak' is not aligned.           Reissue the Restore statement with the same block size used to create the backupset: '65536' looks like a possible value.`  
   
-        이 오류를 해결하려면 **BLOCKSIZE = 65536**을 지정하여 **RESTORE** 문을 다시 실행하세요.  
+        이 오류를 해결하려면 **BLOCKSIZE = 65536** 을 지정하여 **RESTORE** 문을 다시 실행하세요.  
   
 -   Blob에 활성 임대가 있어 백업 중 오류가 발생합니다. 실패한 백업 작업으로 인해 Blob에 활성 임대가 있을 수 있습니다.  
   

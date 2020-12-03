@@ -21,11 +21,11 @@ ms.assetid: 958e95d6-fbe6-43e8-abbd-ccedbac2dbac
 author: VanMSFT
 ms.author: vanto
 ms.openlocfilehash: 814df70ce91d6cc65b6c2a86d0617dc42bbb4489
-ms.sourcegitcommit: ac9feb0b10847b369b77f3c03f8200c86ee4f4e0
+ms.sourcegitcommit: 192f6a99e19e66f0f817fdb1977f564b2aaa133b
 ms.translationtype: HT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 09/16/2020
-ms.locfileid: "90688695"
+ms.lasthandoff: 11/25/2020
+ms.locfileid: "96128148"
 ---
 # <a name="alter-asymmetric-key-transact-sql"></a>ALTER ASYMMETRIC KEY(Transact-SQL)
 [!INCLUDE [SQL Server SQL Database](../../includes/applies-to-version/sql-asdb.md)]
@@ -63,10 +63,10 @@ ALTER ASYMMETRIC KEY Asym_Key_Name <alter_option>
  WITH PRIVATE KEY  
  프라이빗 키의 보호를 변경합니다.  
   
- ENCRYPTION BY PASSWORD **='***strongPassword***'**  
- 프라이빗 키를 보호하기 위한 새 암호를 지정합니다. *password*는 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 인스턴스를 실행하는 컴퓨터의 Windows 암호 정책 요구 사항을 충족해야 합니다. 이 옵션을 생략하면 프라이빗 키가 데이터베이스 마스터 키로 암호화됩니다.  
+ ENCRYPTION BY PASSWORD **='** _strongPassword_*_'_*  
+ 프라이빗 키를 보호하기 위한 새 암호를 지정합니다. *password* 는 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 인스턴스를 실행하는 컴퓨터의 Windows 암호 정책 요구 사항을 충족해야 합니다. 이 옵션을 생략하면 프라이빗 키가 데이터베이스 마스터 키로 암호화됩니다.  
   
- DECRYPTION BY PASSWORD **='***oldPassword***'**  
+ DECRYPTION BY PASSWORD **='** _oldPassword_*_'_*  
  프라이빗 키가 현재 보호되는 이전 암호를 지정합니다. 프라이빗 키가 데이터베이스 마스터 키로 암호화된 경우 필요하지 않습니다.  
   
 ## <a name="remarks"></a>설명  

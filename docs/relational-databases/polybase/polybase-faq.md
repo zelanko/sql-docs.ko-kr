@@ -8,12 +8,12 @@ ms.topic: conceptual
 author: MikeRayMSFT
 ms.author: mikeray
 ms.reviewer: mikeray
-ms.openlocfilehash: 5083228cc44b859faec866eca7d36aae9626e8fa
-ms.sourcegitcommit: da88320c474c1c9124574f90d549c50ee3387b4c
+ms.openlocfilehash: 627afe62630dbca81c77bef45d8263824d8c41df
+ms.sourcegitcommit: 4c3949f620d09529658a2172d00bfe37aeb1a387
 ms.translationtype: HT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 07/01/2020
-ms.locfileid: "85760448"
+ms.lasthandoff: 11/21/2020
+ms.locfileid: "96127856"
 ---
 # <a name="frequently-asked-questions"></a>질문과 대답
 
@@ -28,7 +28,7 @@ ms.locfileid: "85760448"
 |ODBC 드라이버 사용|OLEDB 공급 기업 사용|
 |모든 데이터 원본에 대한 읽기 전용 작업과 HADOOP 및 데이터 풀 데이터 원본에 대한 삽입 작업만 지원합니다.|읽기와 쓰기 작업을 모두 지원합니다.|
 |단일 연결에서 원격 데이터 원본에 수행하는 쿼리는 확장할 수 있습니다. |단일 연결에서 원격 데이터 원본에 수행하는 쿼리는 확장할 수 없습니다.|
-|조건자 푸시 다운이 지원됩니다.|조건자 푸시 다운이 지원됩니다.|
+|조건자 푸시다운이 지원됩니다.|조건자 푸시다운이 지원됩니다.|
 |가용성 그룹에 필요한 별도 구성이 없습니다.|가용성 그룹의 각 인스턴스에 별도 구성이 필요합니다.|
 |기본 인증 전용입니다.|기본 및 통합 인증|
 |많은 수의 행을 처리하는 분석 쿼리에 적합합니다.|하나 또는 몇개의 행을 반환하는 OLTP 쿼리에 적합합니다.|
@@ -36,7 +36,7 @@ ms.locfileid: "85760448"
 
 ## <a name="whats-new-in-polybase-2019"></a>PolyBase 2019의 새로운 기능 
 
-이제 [!INCLUDE[sssqlv15](../../includes/sssqlv15-md.md)]의 PolyBase는 다양한 데이터 원본에서 데이터를 읽을 수 있습니다. 이러한 외부 데이터 원본의 데이터는 SQL Server의 외부 테이블인 저장소일 수 있습니다. PolyBase는 ODBC 제네릭 형식을 제외한 이러한 외부 데이터 원본에 대한 푸시다운 계산을 지원합니다.
+이제 [!INCLUDE[sssqlv15](../../includes/sssqlv15-md.md)]의 PolyBase는 다양한 데이터 원본에서 데이터를 읽을 수 있습니다. 이러한 외부 데이터 원본의 데이터는 SQL Server의 외부 테이블인 저장소일 수 있습니다. PolyBase는 ODBC 제네릭 형식을 제외한 이러한 외부 데이터 원본에 대한 푸시다운 계산도 지원합니다.
 
 ### <a name="compatible-data-sources"></a>호환 가능한 데이터 원본
 
