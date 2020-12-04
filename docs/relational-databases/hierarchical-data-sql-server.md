@@ -20,10 +20,10 @@ author: rothja
 ms.author: jroth
 monikerRange: =azuresqldb-current||>=sql-server-2016||=sqlallproducts-allversions||>=sql-server-linux-2017||=azuresqldb-mi-current
 ms.openlocfilehash: 994adada7ecef047967b07d03cd2a9a129c8f227
-ms.sourcegitcommit: 4d370399f6f142e25075b3714e5c2ce056b1bfd0
+ms.sourcegitcommit: c5078791a07330a87a92abb19b791e950672e198
 ms.translationtype: HT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 10/09/2020
+ms.lasthandoff: 11/26/2020
 ms.locfileid: "91869050"
 ---
 # <a name="hierarchical-data-sql-server"></a>계층적 데이터(SQL Server)
@@ -51,11 +51,11 @@ ms.locfileid: "91869050"
   
 -   높은 압축성  
   
-     *n* 개 노드가 포함된 트리에서 노드를 나타내는 데 필요한 평균 비트 수는 평균 fanout(노드의 평균 자식 수)에 따라 달라집니다. 작은 fanout(0-7)의 경우 크기는 약 6\*logA*n* 비트입니다. 여기서 A는 평균 fanout입니다. 평균 fanout 수준이 6인 100,000명으로 구성된 조직 계층의 노드는 약 38비트를 사용합니다. 이는 스토리지를 위해 40비트나 5바이트로 반올림됩니다.  
+     *n* 개 노드가 포함된 트리에서 노드를 나타내는 데 필요한 평균 비트 수는 평균 fanout(노드의 평균 자식 수)에 따라 달라집니다. 작은 fanout(0-7)의 경우 크기는 약 6\*logA *n* 비트입니다. 여기서 A는 평균 fanout입니다. 평균 fanout 수준이 6인 100,000명으로 구성된 조직 계층의 노드는 약 38비트를 사용합니다. 이는 스토리지를 위해 40비트나 5바이트로 반올림됩니다.  
   
 -   깊이 우선 순서로 비교  
   
-     두 개의 **hierarchyid** 값이 **a**와 **b**인 경우 **a<b**는 깊이 우선 트리 탐색에서 a가 b 앞에 온다는 의미입니다. **hierarchyid** 데이터 형식의 인덱스에는 깊이 우선 순서가 사용되며 깊이 우선 탐색에서 서로 가까이 있는 노드는 서로 가깝게 저장됩니다. 예를 들어 레코드의 자식은 해당 레코드에 인접하게 저장됩니다.  
+     두 개의 **hierarchyid** 값이 **a** 와 **b** 인 경우 **a<b** 는 깊이 우선 트리 탐색에서 a가 b 앞에 온다는 의미입니다. **hierarchyid** 데이터 형식의 인덱스에는 깊이 우선 순서가 사용되며 깊이 우선 탐색에서 서로 가까이 있는 노드는 서로 가깝게 저장됩니다. 예를 들어 레코드의 자식은 해당 레코드에 인접하게 저장됩니다.  
   
 -   임의 삽입 및 삭제 지원  
   
@@ -99,13 +99,13 @@ GO
   
  일반 작업에 대한 부모/자식과 **hierarchyid** 비교  
   
--   **hierarchyid**를 사용하면 하위 트리 쿼리가 훨씬 더 빨라집니다.  
+-   **hierarchyid** 를 사용하면 하위 트리 쿼리가 훨씬 더 빨라집니다.  
   
--   **hierarchyid**를 사용하면 직계 하위 항목 쿼리가 약간 더 느려집니다.  
+-   **hierarchyid** 를 사용하면 직계 하위 항목 쿼리가 약간 더 느려집니다.  
   
--   **hierarchyid**를 사용하면 리프가 아닌 노드 이동이 더 느려집니다.  
+-   **hierarchyid** 를 사용하면 리프가 아닌 노드 이동이 더 느려집니다.  
   
--   **hierarchyid**를 사용할 경우 리프가 아닌 노드 삽입과 리프 노드의 삽입 및 이동의 복잡성은 동일합니다.  
+-   **hierarchyid** 를 사용할 경우 리프가 아닌 노드 삽입과 리프 노드의 삽입 및 이동의 복잡성은 동일합니다.  
   
  다음 경우 부모/자식이 더 우수할 수 있습니다.  
   
@@ -127,7 +127,7 @@ GO
   
   
 ### <a name="xml"></a>XML  
- XML 문서는 트리이므로 단일 XML 데이터 형식 인스턴스가 전체 계층을 나타낼 수 있습니다. In [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)] when an XML hierarchyid 함수dex is created, **hierarchyid** values are used hierarchyid 함수ternally to represent the position hierarchyid 함수 the hierarchy.  
+ XML 문서는 트리이므로 단일 XML 데이터 형식 인스턴스가 전체 계층을 나타낼 수 있습니다. [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)]에서 XML 인덱스가 생성될 때 **hierarchyid** 값이 내부적으로 사용되어 계층 구조의 위치를 나타냅니다.  
   
  다음 경우 XML 데이터 형식이 더 우수할 수 있습니다.  
   
@@ -260,7 +260,7 @@ INSERT SimpleDemo
 SELECT CAST(Level AS nvarchar(100)) AS [Converted Level], * FROM SimpleDemo ORDER BY Level;  
 ```  
   
- 여기에서는 보다 가능한 문제를 보여 줍니다. Kyoto는 부모 수준 `/1/3/1/` 이 없어도 `/1/3/`수준으로 삽입될 수 있습니다. 그리고 London과 Kyoto의 **hierarchyid**값은 동일합니다. 여기에서도 사용자가 이 유형의 계층이 사용하기에 적합한지 결정해야 하고 사용하기에 적합하지 않은 값을 차단해야 합니다.  
+ 여기에서는 보다 가능한 문제를 보여 줍니다. Kyoto는 부모 수준 `/1/3/1/` 이 없어도 `/1/3/`수준으로 삽입될 수 있습니다. 그리고 London과 Kyoto의 **hierarchyid** 값은 동일합니다. 여기에서도 사용자가 이 유형의 계층이 사용하기에 적합한지 결정해야 하고 사용하기에 적합하지 않은 값을 차단해야 합니다.  
   
  또한 이 테이블에서는 계층의 최상위( `'/'`)를 사용하지 않았습니다. 계층의 최상위는 모든 대륙의 공통 부모가 없기 때문에 생략되었습니다. 전체 지구를 추가하여 계층의 최상위를 추가할 수 있습니다.  
   
@@ -326,7 +326,7 @@ GO
   
   
 #### <a name="example-using-a-serializable-transaction"></a>직렬화 가능 트랜잭션 사용 예  
- **Org_BreadthFirst** 인덱스를 사용하면 **\@last_child** 확인 시 범위 검색이 사용됩니다. 애플리케이션에서 확인할 수 있는 다른 오류 상황뿐만 아니라 삽입 후의 중복 키 위반은 ID가 같은 여러 직원을 추가하려고 했음을 나타내므로 **\@last_child**를 다시 계산해야 합니다. 다음 코드는 직렬화 가능 트랜잭션 내에서 새 노드 값을 컴퓨팅합니다.  
+ **Org_BreadthFirst** 인덱스를 사용하면 **\@last_child** 확인 시 범위 검색이 사용됩니다. 애플리케이션에서 확인할 수 있는 다른 오류 상황뿐만 아니라 삽입 후의 중복 키 위반은 ID가 같은 여러 직원을 추가하려고 했음을 나타내므로 **\@last_child** 를 다시 계산해야 합니다. 다음 코드는 직렬화 가능 트랜잭션 내에서 새 노드 값을 컴퓨팅합니다.  
   
 ```sql
 CREATE TABLE Org_T2  
@@ -513,7 +513,7 @@ WHERE OrgNode = dbo.CommonAncestor(@h1, @h2) ;
   
   
 ###  <a name="moving-subtrees"></a><a name="BKMK_MovingSubtrees"></a> 하위 트리 이동  
- 다른 일반적인 작업은 하위 트리를 이동하는 것입니다. 아래 절차에서는 **\@oldMgr**의 하위 트리를 사용하여 이 하위 트리( **\@oldMgr** 포함)를 **\@newMgr**의 하위 트리로 만듭니다.  
+ 다른 일반적인 작업은 하위 트리를 이동하는 것입니다. 아래 절차에서는 **\@oldMgr** 의 하위 트리를 사용하여 이 하위 트리( **\@oldMgr** 포함)를 **\@newMgr** 의 하위 트리로 만듭니다.  
   
 ```sql
 CREATE PROCEDURE MoveOrg(@oldMgr nvarchar(256), @newMgr nvarchar(256) )  

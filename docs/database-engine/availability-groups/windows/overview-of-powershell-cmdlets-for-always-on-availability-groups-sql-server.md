@@ -32,7 +32,7 @@ ms.locfileid: "94584156"
 > [!NOTE]  
 >  cmdlet을 사용하여 [!INCLUDE[ssCurrent](../../../includes/sscurrent-md.md)] 태스크를 수행하는 방법을 설명하는 [!INCLUDE[ssHADR](../../../includes/sshadr-md.md)] 온라인 설명서의 항목 목록은 [Always On 가용성 그룹 개요&#40;SQL Server&#41;](../../../database-engine/availability-groups/windows/overview-of-always-on-availability-groups-sql-server.md)의 "관련 태스크" 섹션을 참조하세요.  
   
-##  <a name="configuring-a-server-instance-for-always-on-availability-groups"></a><a name="ConfiguringServerInstance"></a> Configuring a Server Instance for Always On Availability Groups  
+##  <a name="configuring-a-server-instance-for-always-on-availability-groups"></a><a name="ConfiguringServerInstance"></a> Always On 가용성 그룹에 대한 서버 인스턴스 구성  
   
 |Cmdlet|Description|지원되는 위치|  
 |-------------|-----------------|------------------|
@@ -42,7 +42,7 @@ ms.locfileid: "94584156"
 |[**Set-SqlHadrEndpoint**](/powershell/module/sqlserver/set-sqlhadrendpoint)|기존 데이터베이스 미러링 엔드포인트의 속성(예: 이름, 상태 또는 인증 속성)을 변경합니다.|[!INCLUDE[ssHADR](../../../includes/sshadr-md.md)]을 지원하고 데이터베이스 미러링 엔드포인트가 부족한 서버 인스턴스|  
 
   
-##  <a name="backing-up-and-restoring-databases-and-transaction-logs"></a><a name="BnRcmdlets"></a> Backing Up and Restoring Databases and Transaction Logs  
+##  <a name="backing-up-and-restoring-databases-and-transaction-logs"></a><a name="BnRcmdlets"></a> 데이터베이스 및 트랜잭션 로그 백업 및 복원  
   
 |Cmdlet|Description|지원되는 위치|  
 |-------------|-----------------|------------------|  
@@ -63,7 +63,7 @@ ms.locfileid: "94584156"
 |[**Set-SqlAvailabilityGroup**](/powershell/module/sqlserver/set-sqlavailabilitygroup)|가용성 그룹의 속성을 설정하고 가용성 그룹을 온라인/오프라인으로 전환합니다.|주 복제본을 호스팅하는 서버 인스턴스|  
 |[**Switch-SqlAvailabilityGroup**](/powershell/module/sqlserver/switch-sqlavailabilitygroup)|다음 형식의 장애 조치 중 하나를 시작합니다.<br /><br /> 가용성 그룹의 강제 장애 조치(failover)(데이터가 손실될 수 있음)<br /><br /> 가용성 그룹 수동 장애 조치(failover)|대상 보조 복제본을 호스팅하는 서버 인스턴스|  
   
-##  <a name="creating-and-managing-an-availability-group-listener"></a><a name="AGlisteners"></a> Creating and Managing an Availability Group Listener  
+##  <a name="creating-and-managing-an-availability-group-listener"></a><a name="AGlisteners"></a> 가용성 그룹 수신기 만들기 및 관리  
   
 |Cmdlet|Description|지원되는 위치|  
 |------------|-----------------|------------------|  
