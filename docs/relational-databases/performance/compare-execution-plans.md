@@ -5,7 +5,7 @@ ms.custom: ''
 ms.date: 11/21/2018
 ms.prod: sql
 ms.prod_service: database-engine, sql-database
-ms.reviewer: ''
+ms.reviewer: wiassaf
 ms.technology: performance
 ms.topic: conceptual
 helpviewer_keywords:
@@ -18,12 +18,12 @@ ms.assetid: 9e583a18-5f4a-4054-bfe1-4b2a76630db6
 author: pmasl
 ms.author: pelopes
 manager: amitban
-ms.openlocfilehash: 855d893ddde9c3eba9f9197c510ed0d03bc658ce
-ms.sourcegitcommit: 9470c4d1fc8d2d9d08525c4f811282999d765e6e
+ms.openlocfilehash: 4f3c78649a8934af4add9bf0696aaf91f017e687
+ms.sourcegitcommit: 0e0cd9347c029e0c7c9f3fe6d39985a6d3af967d
 ms.translationtype: HT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 07/17/2020
-ms.locfileid: "86457389"
+ms.lasthandoff: 12/02/2020
+ms.locfileid: "96505357"
 ---
 # <a name="compare-execution-plans"></a>실행 계획 비교
  [!INCLUDE [SQL Server](../../includes/applies-to-version/sqlserver.md)]
@@ -52,9 +52,9 @@ ms.locfileid: "86457389"
   
 ## <a name="to-compare-execution-plans"></a>실행 계획을 비교하려면
   
-1.  **파일** 메뉴를 사용하고 **파일 열기**를 클릭하여 이전에 저장된 쿼리 실행 계획 파일(.sqlplan)을 열거나 [!INCLUDE[ssManStudio](../../includes/ssManStudio-md.md)] 창으로 계획 파일을 끌어 놓습니다. 또는 쿼리를 실행하고 해당 실행 계획을 표시하도록 선택한 경우 결과 창의 **실행 계획** 탭으로 이동합니다. 
+1.  **파일** 메뉴를 사용하고 **파일 열기** 를 클릭하여 이전에 저장된 쿼리 실행 계획 파일(.sqlplan)을 열거나 [!INCLUDE[ssManStudio](../../includes/ssManStudio-md.md)] 창으로 계획 파일을 끌어 놓습니다. 또는 쿼리를 실행하고 해당 실행 계획을 표시하도록 선택한 경우 결과 창의 **실행 계획** 탭으로 이동합니다. 
 
-2.  실행 계획의 빈 영역을 마우스 오른쪽 단추로 클릭하고 **실행 계획 비교**를 클릭합니다. 
+2.  실행 계획의 빈 영역을 마우스 오른쪽 단추로 클릭하고 **실행 계획 비교** 를 클릭합니다. 
 
     ![실행 계획 비교를 마우스 오른쪽 단추로 클릭](../../relational-databases/performance/media/plancomparisonmenuoption.png "실행 계획 비교를 마우스 오른쪽 단추로 클릭")   
 
@@ -65,7 +65,7 @@ ms.locfileid: "86457389"
     ![저장된 두 계획 파일의 계획 비교](../../relational-databases/performance/media/plancomparison-plans.png "저장된 두 계획 파일의 계획 비교")  
 
      > [!TIP]
-     > 실행 계획의 빈 영역을 마우스 오른쪽 단추로 클릭하고 **토글 분할자 방향**을 선택하여 실행 계획 비교의 표시를 병렬로 전환할 수 있습니다.
+     > 실행 계획의 빈 영역을 마우스 오른쪽 단추로 클릭하고 **토글 분할자 방향** 을 선택하여 실행 계획 비교의 표시를 병렬로 전환할 수 있습니다.
 
      > [!TIP]
      > 실행 계획에 사용 가능한 모든 확대/축소 및 탐색 옵션은 계획 비교 모드에서 작동합니다. 자세한 내용은 [실제 실행 계획 표시](../../relational-databases/performance/display-an-actual-execution-plan.md)를 참조하세요.
@@ -76,7 +76,7 @@ ms.locfileid: "86457389"
 
 6.  **실행 계획 분석** 비교 탐색 창이 아래에서 열립니다. 세 개의 탭을 사용할 수 있습니다.
 
-    1.  **명령문 옵션** 탭에서 기본 선택 사항은 *비슷한 작업 강조 표시*이며 비교된 계획에서 강조 표시된 동일한 연산자 또는 노드는 동일한 색과 선 패턴을 공유합니다. 선 패턴을 클릭하여 비교된 계획의 비슷한 영역 간을 이동합니다. *유사한 세그먼트와 일치하지 않는 작업 강조 표시*를 선택하여 유사점보다 계획의 차이점을 강조 표시하도록 선택할 수도 있습니다. 
+    1.  **명령문 옵션** 탭에서 기본 선택 사항은 *비슷한 작업 강조 표시* 이며 비교된 계획에서 강조 표시된 동일한 연산자 또는 노드는 동일한 색과 선 패턴을 공유합니다. 선 패턴을 클릭하여 비교된 계획의 비슷한 영역 간을 이동합니다. *유사한 세그먼트와 일치하지 않는 작업 강조 표시* 를 선택하여 유사점보다 계획의 차이점을 강조 표시하도록 선택할 수도 있습니다. 
     
        > [!NOTE]
        > 기본적으로 데이터베이스 이름은 다른 이름이 있지만 동일한 스키마를 공유하는 데이터베이스에 대해 캡처된 계획을 비교할 수 있도록 계획을 비교할 때 무시됩니다. 예를 들어 *ProdDB* 및 *TestDB* 데이터베이스의 계획을 비교하는 경우입니다. *연산자를 비교할 때 데이터베이스 이름 무시* 옵션을 사용하여 이 동작을 변경할 수 있습니다.
@@ -91,7 +91,7 @@ ms.locfileid: "86457389"
 
         ![예상 행 수가 다름](../../relational-databases/performance/media/plancomparison-scenarios.png "예상 행 수가 다름")  
 
-    이 창이 닫힌 경우 비교된 계획의 빈 영역을 마우스 오른쪽 단추로 클릭하고, **실행 계획 비교 옵션**을 선택하여 다시 엽니다.
+    이 창이 닫힌 경우 비교된 계획의 빈 영역을 마우스 오른쪽 단추로 클릭하고, **실행 계획 비교 옵션** 을 선택하여 다시 엽니다.
 
     ![계획 비교 옵션](../../relational-databases/performance/media/plancomparison-options.png "계획 비교 옵션")  
 
@@ -103,6 +103,6 @@ ms.locfileid: "86457389"
 
     ![쿼리 저장소에서 두 계획을 선택](../../relational-databases/performance/media/plancomparison-querystore.png "쿼리 저장소에서 두 계획을 선택")   
 
-3.  **별도 창에서 선택 쿼리에 대한 계획 비교** 단추를 사용하여 계획 비교를 시작합니다. 그런 다음, *실행 계획을 비교하려면*의 4~6단계를 적용할 수 있습니다. 
+3.  **별도 창에서 선택 쿼리에 대한 계획 비교** 단추를 사용하여 계획 비교를 시작합니다. 그런 다음, *실행 계획을 비교하려면* 의 4~6단계를 적용할 수 있습니다. 
 
     ![쿼리 저장소에서 실행 계획 비교](../../relational-databases/performance/media/plancomparison-querystoreoption.png "쿼리 저장소에서 실행 계획 비교") 

@@ -11,14 +11,14 @@ helpviewer_keywords:
 - Database Engine Tuning Advisor, columnstore index
 - Database Engine Tuning Advisor, columnstore and rowstore indexes
 ms.assetid: 9fba1139-82cb-4244-a41f-4337a7d0c132
-author: julieMSFT
-ms.author: jrasnick
-ms.openlocfilehash: f534e88529564f2fcb01c61911e291eaa7f99c30
-ms.sourcegitcommit: 9470c4d1fc8d2d9d08525c4f811282999d765e6e
+author: WilliamDAssafMSFT
+ms.author: wiassaf
+ms.openlocfilehash: 441b0c37a39efaf02ff00d64b893896cd3fe8f6f
+ms.sourcegitcommit: 0e0cd9347c029e0c7c9f3fe6d39985a6d3af967d
 ms.translationtype: HT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 07/17/2020
-ms.locfileid: "86457379"
+ms.lasthandoff: 12/02/2020
+ms.locfileid: "96505377"
 ---
 # <a name="columnstore-index-recommendations-in-database-engine-tuning-advisor-dta"></a>DTA(데이터베이스 엔진 튜닝 관리자)의 Columnstore 인덱스 권장 사항
  [!INCLUDE [SQL Server](../../includes/applies-to-version/sqlserver.md)]
@@ -43,7 +43,7 @@ ms.locfileid: "86457379"
   5. 튜닝이 완료되면 **권장 사항** 창에서 columnstore 인덱스를 포함하여 모든 권장 사항을 확인합니다(아래 그림 참조).      
   ![DTA columnstore 인덱스 권장 사항](../../relational-databases/performance/media/dta-columnstore-index-recommendation.gif)
   
-  6. **정의** 하이퍼링크를 클릭하여 권장 인덱스를 만들 수 있는 SQL DDL(데이터 정의 언어) 문을 확인합니다. 기본적으로 DTA는 columnstore 인덱스를 식별하기 쉽도록 columnstore 인덱스의 이름에 접미사 **col**을 사용합니다(아래 그림 참조).
+  6. **정의** 하이퍼링크를 클릭하여 권장 인덱스를 만들 수 있는 SQL DDL(데이터 정의 언어) 문을 확인합니다. 기본적으로 DTA는 columnstore 인덱스를 식별하기 쉽도록 columnstore 인덱스의 이름에 접미사 **col** 을 사용합니다(아래 그림 참조).
   ![DTA columnstore 인덱스 정의](../../relational-databases/performance/media/dta-columnstore-index-definition.gif) 
   
   

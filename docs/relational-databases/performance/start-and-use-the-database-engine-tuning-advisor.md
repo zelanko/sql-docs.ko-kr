@@ -17,14 +17,14 @@ f1_keywords:
 helpviewer_keywords:
 - Database Engine Tuning Advisor [SQL Server], starting
 ms.assetid: a4e3226a-3917-4ec8-bdf0-472879d231c9
-author: julieMSFT
-ms.author: jrasnick
-ms.openlocfilehash: 68e48fb6316b5794d51208b42ab10938b17126dc
-ms.sourcegitcommit: 783b35f6478006d654491cb52f6edf108acf2482
+author: WilliamDAssafMSFT
+ms.author: wiassaf
+ms.openlocfilehash: c8cd352c5347cbc48979af4e03775c9d7da8f3d1
+ms.sourcegitcommit: 0e0cd9347c029e0c7c9f3fe6d39985a6d3af967d
 ms.translationtype: HT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 10/09/2020
-ms.locfileid: "91890747"
+ms.lasthandoff: 12/02/2020
+ms.locfileid: "96504971"
 ---
 # <a name="start-and-use-the-database-engine-tuning-advisor"></a>데이터베이스 엔진 튜닝 관리자 시작 및 사용
  [!INCLUDE [SQL Server](../../includes/applies-to-version/sqlserver.md)]
@@ -47,21 +47,21 @@ ms.locfileid: "91890747"
   
 #### <a name="to-start-database-engine-tuning-advisor-from-the-windows-start-menu"></a>Windows 시작 메뉴에서 데이터베이스 엔진 튜닝 관리자를 시작하려면  
   
-1.  **시작** 메뉴에서 **모든 프로그램**, **Microsoft SQL Server**, **성능 도구**를 차례로 가리킨 다음 **데이터베이스 엔진 튜닝 관리자**를 클릭합니다.  
+1.  **시작** 메뉴에서 **모든 프로그램**, **Microsoft SQL Server**, **성능 도구** 를 차례로 가리킨 다음 **데이터베이스 엔진 튜닝 관리자** 를 클릭합니다.  
   
 #### <a name="to-start-the-database-engine-tuning-advisor-in-sql-server-management-studio"></a>SQL Server Management Studio에서 데이터베이스 엔진 튜닝 관리자를 시작하려면  
   
-1.  [!INCLUDE[ssManStudioFull](../../includes/ssmanstudiofull-md.md)] **도구** 메뉴에서 **데이터베이스 엔진 튜닝 관리자**를 클릭합니다.  
+1.  [!INCLUDE[ssManStudioFull](../../includes/ssmanstudiofull-md.md)] **도구** 메뉴에서 **데이터베이스 엔진 튜닝 관리자** 를 클릭합니다.  
   
 #### <a name="to-start-the-database-engine-tuning-advisor-from-the-sql-server-management-studio-query-editor"></a>SQL Server Management Studio 쿼리 편집기에서 데이터베이스 엔진 튜닝 관리자를 시작하려면  
   
 1.  [!INCLUDE[tsql](../../includes/tsql-md.md)] 에서 [!INCLUDE[ssManStudioFull](../../includes/ssmanstudiofull-md.md)]스크립트 파일을 엽니다. 자세한 내용은 [쿼리 및 텍스트 편집기&#40;SQL Server Management Studio&#41;](../../ssms/f1-help/database-engine-query-editor-sql-server-management-studio.md?view=sql-server-ver15)를 참조하세요.  
   
-2.  [!INCLUDE[tsql](../../includes/tsql-md.md)] 스크립트에서 쿼리를 선택하거나 전체 스크립트를 선택하고 선택 영역을 마우스 오른쪽 단추를 클릭한 다음 **데이터베이스 엔진 튜닝 관리자의 쿼리 분석**을 선택합니다. 데이터베이스 엔진 튜닝 관리자 GUI가 열리고 스크립트를 XML 파일 작업으로 가져옵니다. 세션 이름과 튜닝 옵션을 지정하여 선택한 [!INCLUDE[tsql](../../includes/tsql-md.md)] 쿼리를 작업으로 튜닝할 수 있습니다.  
+2.  [!INCLUDE[tsql](../../includes/tsql-md.md)] 스크립트에서 쿼리를 선택하거나 전체 스크립트를 선택하고 선택 영역을 마우스 오른쪽 단추를 클릭한 다음 **데이터베이스 엔진 튜닝 관리자의 쿼리 분석** 을 선택합니다. 데이터베이스 엔진 튜닝 관리자 GUI가 열리고 스크립트를 XML 파일 작업으로 가져옵니다. 세션 이름과 튜닝 옵션을 지정하여 선택한 [!INCLUDE[tsql](../../includes/tsql-md.md)] 쿼리를 작업으로 튜닝할 수 있습니다.  
   
 #### <a name="to-start-the-database-engine-tuning-advisor-in-sql-server-profiler"></a>SQL Server Profiler에서 데이터베이스 엔진 튜닝 관리자를 시작하려면  
   
-1.  SQL Server Profiler **도구** 메뉴에서 **데이터베이스 엔진 튜닝 관리자**를 클릭합니다.  
+1.  SQL Server Profiler **도구** 메뉴에서 **데이터베이스 엔진 튜닝 관리자** 를 클릭합니다.  
   
 ##  <a name="create-a-workload"></a><a name="Create"></a> 작업 만들기  
  작업은 튜닝하려는 데이터베이스에 대해 실행되는 일련의 [!INCLUDE[tsql](../../includes/tsql-md.md)] 문입니다. 데이터베이스 엔진 튜닝 관리자는 이러한 작업을 분석하여 서버의 쿼리 성능을 향상시키는 인덱스 또는 분할 전략을 권장합니다.  
@@ -98,9 +98,9 @@ ms.locfileid: "91890747"
   
 1.  다음 중 한 가지 방법을 사용하여 [!INCLUDE[ssSqlProfiler](../../includes/sssqlprofiler-md.md)] 를 시작합니다.  
   
-    -   **시작** 메뉴에서 **모든 프로그램**, **Microsoft SQL Server**, **성능 도구**를 차례로 가리킨 다음 **SQL Server Profiler**를 클릭합니다.  
+    -   **시작** 메뉴에서 **모든 프로그램**, **Microsoft SQL Server**, **성능 도구** 를 차례로 가리킨 다음 **SQL Server Profiler** 를 클릭합니다.  
   
-    -   [!INCLUDE[ssManStudioFull](../../includes/ssmanstudiofull-md.md)]에서 **도구** 메뉴를 클릭한 다음 **SQL Server Profiler**를 클릭합니다.  
+    -   [!INCLUDE[ssManStudioFull](../../includes/ssmanstudiofull-md.md)]에서 **도구** 메뉴를 클릭한 다음 **SQL Server Profiler** 를 클릭합니다.  
   
 2.  [!INCLUDE[ssSqlProfiler](../../includes/sssqlprofiler-md.md)] **Tuning** 템플릿을 사용하는 다음 절차에 따라 추적 파일 또는 테이블을 만듭니다.  
   
@@ -124,10 +124,10 @@ ms.locfileid: "91890747"
   
 -   **SP:StmtCompleted**  
   
- 이러한 추적 이벤트의 **Starting** 버전을 사용할 수도 있습니다. **SQL:BatchStarting**을 예로 들 수 있습니다. 한편 이러한 추적 이벤트의 **Completed** 버전에는 데이터베이스 엔진 튜닝 관리자의 작업 튜닝 효율을 높일 수 있도록 **Duration** 열이 포함됩니다. 데이터베이스 엔진 튜닝 관리자는 다른 유형의 추적 이벤트는 튜닝하지 않습니다. 이러한 추적 이벤트에 대한 자세한 내용은 [Stored Procedures Event Category](../../relational-databases/event-classes/stored-procedures-event-category.md) 및 [TSQL Event Category](../../relational-databases/event-classes/tsql-event-category.md)를 참조하세요. SQL 추적 저장 프로시저를 사용하여 추적 파일 작업을 만드는 방법은 [추적 만들기&#40;Transact-SQL&#41;](../../relational-databases/sql-trace/create-a-trace-transact-sql.md)를 참조하세요.  
+ 이러한 추적 이벤트의 **Starting** 버전을 사용할 수도 있습니다. **SQL:BatchStarting** 을 예로 들 수 있습니다. 한편 이러한 추적 이벤트의 **Completed** 버전에는 데이터베이스 엔진 튜닝 관리자의 작업 튜닝 효율을 높일 수 있도록 **Duration** 열이 포함됩니다. 데이터베이스 엔진 튜닝 관리자는 다른 유형의 추적 이벤트는 튜닝하지 않습니다. 이러한 추적 이벤트에 대한 자세한 내용은 [Stored Procedures Event Category](../../relational-databases/event-classes/stored-procedures-event-category.md) 및 [TSQL Event Category](../../relational-databases/event-classes/tsql-event-category.md)를 참조하세요. SQL 추적 저장 프로시저를 사용하여 추적 파일 작업을 만드는 방법은 [추적 만들기&#40;Transact-SQL&#41;](../../relational-databases/sql-trace/create-a-trace-transact-sql.md)를 참조하세요.  
   
 ### <a name="trace-file-or-trace-table-workloads-that-contain-the-loginname-data-column"></a>LoginName 데이터 열이 포함된 추적 파일 또는 추적 테이블 작업  
- 데이터베이스 엔진 튜닝 관리자는 튜닝 프로세스의 일부로 실행 계획 요청을 제출합니다. **LoginName** 데이터 열이 포함된 추적 테이블이나 파일이 작업으로 사용되면 데이터베이스 엔진 튜닝 관리자는 **LoginName**에 지정된 사용자를 가장합니다. 이 사용자에게 추적에 포함된 문의 실행 계획을 실행하고 생성할 수 있는 SHOWPLAN 권한이 없으면 데이터베이스 엔진 튜닝 관리자는 해당 문을 튜닝하지 않습니다.  
+ 데이터베이스 엔진 튜닝 관리자는 튜닝 프로세스의 일부로 실행 계획 요청을 제출합니다. **LoginName** 데이터 열이 포함된 추적 테이블이나 파일이 작업으로 사용되면 데이터베이스 엔진 튜닝 관리자는 **LoginName** 에 지정된 사용자를 가장합니다. 이 사용자에게 추적에 포함된 문의 실행 계획을 실행하고 생성할 수 있는 SHOWPLAN 권한이 없으면 데이터베이스 엔진 튜닝 관리자는 해당 문을 튜닝하지 않습니다.  
   
 ##### <a name="to-avoid-granting-the-showplan-permission-to-each-user-specified-in-the-loginname-column-of-the-trace"></a>추적의 LoginName 열에 지정된 각 사용자에게 SHOWPLAN 권한을 부여하지 않으려면  
   
@@ -161,7 +161,7 @@ ms.locfileid: "91890747"
   
 3.  **계획 캐시** 를 작업 옵션으로 선택합니다. 데이터베이스 엔진 튜닝 관리자가 계획 캐시에서 분석에 사용할 상위 1,000개의 이벤트를 선택합니다.  
   
-4.  튜닝할 데이터베이스를 선택하고 필요에 따라 **선택한 테이블**의 각 데이터베이스에서 하나 이상의 테이블을 선택합니다. 모든 데이터베이스에 대한 캐시 항목을 포함하려면 **튜닝 옵션**에서 **고급 옵션** 을 클릭한 다음 **모든 데이터베이스의 계획 캐시 이벤트 포함**을 선택합니다.  
+4.  튜닝할 데이터베이스를 선택하고 필요에 따라 **선택한 테이블** 의 각 데이터베이스에서 하나 이상의 테이블을 선택합니다. 모든 데이터베이스에 대한 캐시 항목을 포함하려면 **튜닝 옵션** 에서 **고급 옵션** 을 클릭한 다음 **모든 데이터베이스의 계획 캐시 이벤트 포함** 을 선택합니다.  
   
 5.  **튜닝 로그 저장** 을 선택하여 튜닝 로그 복사본을 저장합니다. 튜닝 로그 복사본을 저장하지 않으려면 이 확인란의 선택을 해제합니다.  
   
@@ -169,7 +169,7 @@ ms.locfileid: "91890747"
   
 6.  **튜닝 옵션** 탭을 클릭한 다음 나열된 옵션 중에서 선택합니다.  
   
-7.  **분석 시작**을 클릭합니다.  
+7.  **분석 시작** 을 클릭합니다.  
   
      튜닝 세션이 시작된 후에 이를 중지하려면 **동작** 메뉴에서 다음 옵션 중 하나를 선택합니다.  
   
@@ -198,7 +198,7 @@ ms.locfileid: "91890747"
     database_name.schema_name.table_name  
     ```  
   
-     작업 파일이나 테이블을 검색하려면 **찾아보기**를 클릭합니다. 데이터베이스 엔진 튜닝 관리자는 작업 파일을 롤오버 파일로 가정합니다. 롤오버 파일에 대한 자세한 내용은 [Limit Trace File and Table Sizes](../../relational-databases/sql-trace/limit-trace-file-and-table-sizes.md)을 참조하세요.  
+     작업 파일이나 테이블을 검색하려면 **찾아보기** 를 클릭합니다. 데이터베이스 엔진 튜닝 관리자는 작업 파일을 롤오버 파일로 가정합니다. 롤오버 파일에 대한 자세한 내용은 [Limit Trace File and Table Sizes](../../relational-databases/sql-trace/limit-trace-file-and-table-sizes.md)을 참조하세요.  
   
      추적 테이블을 작업으로 사용하는 경우 데이터베이스 엔진 튜닝 관리자가 튜닝 중인 서버와 같은 서버에 해당 테이블이 있어야 합니다. 다른 서버에 추적 테이블을 만든 경우에는 이 테이블을 데이터베이스 엔진 튜닝 관리자가 튜닝하는 서버로 이동한 다음 작업으로 사용합니다.  
   
@@ -384,7 +384,7 @@ database_name.owner_name.table_name
   
 1.  쿼리 편집기에 쿼리를 입력한 다음 선택합니다.  
   
-2.  선택한 쿼리를 마우스 오른쪽 단추로 클릭하고 **데이터베이스 엔진 튜닝 관리자의 쿼리 분석**을 클릭합니다.  
+2.  선택한 쿼리를 마우스 오른쪽 단추로 클릭하고 **데이터베이스 엔진 튜닝 관리자의 쿼리 분석** 을 클릭합니다.  
   
  **작업 파일(또는 테이블)을 찾습니다.**  
  작업 원본으로 **파일** 이나 **테이블** 을 선택한 경우 대상을 선택하려면 이 찾아보기 단추를 사용합니다.  
@@ -513,7 +513,7 @@ database_name.owner_name.table_name
  동작 단계에서 반환된 모든 메시지가 포함되어 있습니다.  
   
  **튜닝 로그**  
- 이 튜닝 세션에 관한 정보가 포함되어 있습니다. 이 로그를 인쇄하려면 로그를 마우스 오른쪽 단추로 클릭한 다음 **인쇄**를 클릭합니다.  
+ 이 튜닝 세션에 관한 정보가 포함되어 있습니다. 이 로그를 인쇄하려면 로그를 마우스 오른쪽 단추로 클릭한 다음 **인쇄** 를 클릭합니다.  
   
 ## <a name="see-also"></a>참고 항목  
  [데이터베이스 엔진 튜닝 관리자의 출력 보기 및 작업](../../relational-databases/performance/view-and-work-with-the-output-from-the-database-engine-tuning-advisor.md)   

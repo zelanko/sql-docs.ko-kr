@@ -14,15 +14,15 @@ helpviewer_keywords:
 - viewing execution plans
 - execution plans [SQL Server], displaying
 ms.assetid: 9e583a18-5f4a-4054-bfe1-4b2a76630db6
-author: julieMSFT
-ms.author: jrasnick
+author: WilliamDAssafMSFT
+ms.author: wiassaf
 monikerRange: =azuresqldb-current||>=sql-server-2016||=sqlallproducts-allversions||>=sql-server-linux-2017||=azuresqldb-mi-current
-ms.openlocfilehash: 2c1d781e54672263e08daac2101caccfecd8e32e
-ms.sourcegitcommit: 9470c4d1fc8d2d9d08525c4f811282999d765e6e
+ms.openlocfilehash: a2130a33cee0b0c5f070a45bb3b902a903dd82ee
+ms.sourcegitcommit: 0e0cd9347c029e0c7c9f3fe6d39985a6d3af967d
 ms.translationtype: HT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 07/17/2020
-ms.locfileid: "86457308"
+ms.lasthandoff: 12/02/2020
+ms.locfileid: "96505287"
 ---
 # <a name="display-an-actual-execution-plan"></a>실제 실행 계획 표시
 [!INCLUDE [SQL Server Azure SQL Database](../../includes/applies-to-version/sql-asdb.md)]
@@ -32,11 +32,11 @@ ms.locfileid: "86457308"
   
 ## <a name="to-include-an-execution-plan-for-a-query-during-execution"></a>실행 중에 쿼리의 실행 계획을 포함하려면  
   
-1.  [!INCLUDE[ssManStudioFull](../../includes/ssmanstudiofull-md.md)] 도구 모음에서 **데이터베이스 엔진 쿼리**를 클릭합니다. **파일 열기** 도구 모음 단추를 클릭하여 기존 쿼리를 열고 예상 실행 계획을 표시할 수도 있습니다. 
+1.  [!INCLUDE[ssManStudioFull](../../includes/ssmanstudiofull-md.md)] 도구 모음에서 **데이터베이스 엔진 쿼리** 를 클릭합니다. **파일 열기** 도구 모음 단추를 클릭하여 기존 쿼리를 열고 예상 실행 계획을 표시할 수도 있습니다. 
   
 2.  실제 실행 계획을 표시할 쿼리를 입력합니다.  
   
-3.  **쿼리** 메뉴에서 **실제 실행 계획 포함**을 클릭하거나 **실제 실행 계획 포함** 도구 모음 단추를 클릭합니다.
+3.  **쿼리** 메뉴에서 **실제 실행 계획 포함** 을 클릭하거나 **실제 실행 계획 포함** 도구 모음 단추를 클릭합니다.
 
     ![도구 모음의 실제 실행 계획 단추](../../relational-databases/performance/media/actualexecplantoolbar.png "도구 모음의 실제 실행 계획 단추")   
   
@@ -46,11 +46,11 @@ ms.locfileid: "86457308"
 
 5.  논리 및 물리적 연산자 위에 마우스를 놓아 루트 노드 연산자(위의 그림에서 SELECT 노드)를 선택하여 전체 실행 계획의 속성을 포함하여 표시된 도구 설명에서 연산자의 설명 및 속성을 봅니다.   
   
-    또는 속성 창에서 연산자 속성을 확인할 수 있습니다. 속성이 보이지 않으면 연산자를 마우스 오른쪽 단추로 클릭한 다음 **속성**을 클릭합니다. 속성을 확인할 연산자를 선택합니다.  
+    또는 속성 창에서 연산자 속성을 확인할 수 있습니다. 속성이 보이지 않으면 연산자를 마우스 오른쪽 단추로 클릭한 다음 **속성** 을 클릭합니다. 속성을 확인할 연산자를 선택합니다.  
 
     ![계획 연산자에서 속성을 마우스 오른쪽 단추로 클릭](../../relational-databases/performance/media/planproperties.png "계획 연산자에서 속성을 마우스 오른쪽 단추로 클릭")    
   
-6.  실행 계획을 마우스 오른쪽 단추로 클릭하고 **확대**, **축소**, **사용자 지정 확대/축소**또는 **크기에 맞게**를 선택하여 실행 계획의 보기를 변경할 수 있습니다. **확대** 및 **축소** 를 사용하면 실행 계획을 확대 또는 축소할 수 있으며 **사용자 지정 확대/축소** 를 사용하면 80% 축소와 같이 원하는 수준으로 확대 및 축소를 정의할 수 있습니다. **크기에 맞게** 는 결과 창에 맞게 실행 계획을 확대합니다. 또는 CTRL 키와 마우스 휠의 조합을 사용하여 **동적 확대/축소**를 활성화합니다.  
+6.  실행 계획을 마우스 오른쪽 단추로 클릭하고 **확대**, **축소**, **사용자 지정 확대/축소** 또는 **크기에 맞게** 를 선택하여 실행 계획의 보기를 변경할 수 있습니다. **확대** 및 **축소** 를 사용하면 실행 계획을 확대 또는 축소할 수 있으며 **사용자 지정 확대/축소** 를 사용하면 80% 축소와 같이 원하는 수준으로 확대 및 축소를 정의할 수 있습니다. **크기에 맞게** 는 결과 창에 맞게 실행 계획을 확대합니다. 또는 CTRL 키와 마우스 휠의 조합을 사용하여 **동적 확대/축소** 를 활성화합니다.  
 
 7.  실행 계획의 표시를 이동하려면 세로 및 가로 스크롤 막대를 사용하거나 실행 계획의 **빈 영역을 클릭하고 있으면서** **마우스를 끌어서 놓습니다**. 또는 실행 계획 창의 오른쪽 아래 모서리에서 더하기(+) 기호를 클릭하고 있어 전체 실행 계획의 간단한 지도를 표시합니다.
 

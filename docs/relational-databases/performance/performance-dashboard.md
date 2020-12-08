@@ -4,7 +4,7 @@ description: SQL Server 및 Azure SQL Managed Instance에 대한 신속한 인�
 ms.custom: ''
 ms.date: 11/13/2020
 ms.prod: sql
-ms.reviewer: ''
+ms.reviewer: wiassaf
 ms.technology: performance
 ms.topic: conceptual
 helpviewer_keywords:
@@ -15,12 +15,12 @@ ms.assetid: 07f8f594-75b4-4591-8c29-d63811d7753e
 author: pelopes
 ms.author: pelopes
 manager: amitban
-ms.openlocfilehash: 45b657be3cef9267431892eeced327e966b97b7d
-ms.sourcegitcommit: 2bf83972036bdbe6a039fb2d1fc7b5f9ca9589d3
+ms.openlocfilehash: 03bd2039fc132724ba78222c81a79c75f37764ff
+ms.sourcegitcommit: 0e0cd9347c029e0c7c9f3fe6d39985a6d3af967d
 ms.translationtype: HT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 11/17/2020
-ms.locfileid: "94674196"
+ms.lasthandoff: 12/02/2020
+ms.locfileid: "96505132"
 ---
 # <a name="performance-dashboard"></a>성능 대시보드
 [!INCLUDE [SQL Server SQL MI](../../includes/applies-to-version/sql-asdbmi.md)]

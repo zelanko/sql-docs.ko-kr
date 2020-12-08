@@ -11,14 +11,14 @@ helpviewer_keywords:
 - Resource Governor, resource pool delete
 - resource pools [SQL Server], delete
 ms.assetid: 3bdd348b-6582-4ffa-80ef-d49e50596ce5
-author: julieMSFT
-ms.author: jrasnick
-ms.openlocfilehash: 1b2494442986bd24febc90318502736faf5f2367
-ms.sourcegitcommit: 9470c4d1fc8d2d9d08525c4f811282999d765e6e
+author: WilliamDAssafMSFT
+ms.author: wiassaf
+ms.openlocfilehash: 2df6daca54fe31273d61226c210285fec305769d
+ms.sourcegitcommit: 0e0cd9347c029e0c7c9f3fe6d39985a6d3af967d
 ms.translationtype: HT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 07/17/2020
-ms.locfileid: "86457859"
+ms.lasthandoff: 12/02/2020
+ms.locfileid: "96504831"
 ---
 # <a name="delete-a-resource-pool"></a>리소스 풀 삭제
 [!INCLUDE [SQL Server SQL MI](../../includes/applies-to-version/sql-asdbmi.md)]
@@ -41,11 +41,11 @@ ms.locfileid: "86457859"
 ##  <a name="delete-a-resource-pool-using-object-explorer"></a><a name="DelRPSSMS"></a> 개체 탐색기를 사용하여 리소스 풀 삭제  
  **SQL Server Management Studio를 사용하여 리소스 풀을 삭제하려면**  
   
-1.  [!INCLUDE[ssManStudioFull](../../includes/ssmanstudiofull-md.md)]에서 개체 탐색기를 열고 **리소스 관리자** 가 나타날 때까지 **관리**노드를 계속 확장합니다.  
+1.  [!INCLUDE[ssManStudioFull](../../includes/ssmanstudiofull-md.md)]에서 개체 탐색기를 열고 **리소스 관리자** 가 나타날 때까지 **관리** 노드를 계속 확장합니다.  
   
-2.  삭제할 리소스 풀을 마우스 오른쪽 단추로 클릭한 다음 **삭제**를 클릭합니다.  
+2.  삭제할 리소스 풀을 마우스 오른쪽 단추로 클릭한 다음 **삭제** 를 클릭합니다.  
   
-3.  **개체 삭제** 창의 **삭제할 개체** 목록에 리소스 풀이 나열됩니다. 리소스 풀을 삭제하려면 **확인**을 클릭합니다.  
+3.  **개체 삭제** 창의 **삭제할 개체** 목록에 리소스 풀이 나열됩니다. 리소스 풀을 삭제하려면 **확인** 을 클릭합니다.  
 
     > [!NOTE]  
     >  삭제하려고 하는 리소스 풀에 작업 그룹이 들어 있으면 해당 리소스 풀을 삭제할 수 없습니다.  

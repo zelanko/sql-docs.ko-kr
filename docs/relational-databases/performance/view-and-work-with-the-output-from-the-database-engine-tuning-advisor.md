@@ -24,14 +24,14 @@ helpviewer_keywords:
 - reports [SQL Server], tuning
 - viewing tuning output
 ms.assetid: 47f9d9a7-80b0-416d-9d9a-9e265bc190dc
-author: julieMSFT
-ms.author: jrasnick
-ms.openlocfilehash: e81bbff1dd2eedace6ac7a5e535db9e9689157e8
-ms.sourcegitcommit: b09f069c6bef0655b47e9953a4385f1b52bada2b
+author: WilliamDAssafMSFT
+ms.author: wiassaf
+ms.openlocfilehash: 87ecdbd39bb5773b114358ed4d22e8c560b77f87
+ms.sourcegitcommit: 0e0cd9347c029e0c7c9f3fe6d39985a6d3af967d
 ms.translationtype: HT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 10/27/2020
-ms.locfileid: "92734668"
+ms.lasthandoff: 12/02/2020
+ms.locfileid: "96504897"
 ---
 # <a name="view-and-work-with-the-output-from-the-database-engine-tuning-advisor-dta"></a>DTA(데이터베이스 엔진 튜닝 관리자)의 출력 보기 및 작업
 

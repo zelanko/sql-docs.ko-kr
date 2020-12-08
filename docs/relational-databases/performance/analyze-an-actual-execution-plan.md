@@ -5,7 +5,7 @@ ms.custom: ''
 ms.date: 10/11/2019
 ms.prod: sql
 ms.prod_service: database-engine, sql-database
-ms.reviewer: ''
+ms.reviewer: wiassaf
 ms.technology: performance
 ms.topic: conceptual
 helpviewer_keywords:
@@ -16,12 +16,12 @@ ms.assetid: 9e583a18-5f4a-4054-bfe1-4b2a76630db6
 author: pmasl
 ms.author: pelopes
 manager: amitban
-ms.openlocfilehash: 1424558566e544acd1a65aeb39c9a83747bbbb64
-ms.sourcegitcommit: 9470c4d1fc8d2d9d08525c4f811282999d765e6e
+ms.openlocfilehash: 461f2ef3dc8617531513272d032eb30c6b59d790
+ms.sourcegitcommit: 0e0cd9347c029e0c7c9f3fe6d39985a6d3af967d
 ms.translationtype: HT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 07/17/2020
-ms.locfileid: "86458598"
+ms.lasthandoff: 12/02/2020
+ms.locfileid: "96505424"
 ---
 # <a name="analyze-an-actual-execution-plan"></a>실제 실행 계획 분석
 
@@ -41,9 +41,9 @@ ms.locfileid: "86458598"
   
 ## <a name="to-analyze-an-execution-plan-for-a-query"></a>쿼리에 대한 실행 계획을 분석하려면  
   
-1.  **파일** 메뉴를 사용하고 **파일 열기**를 클릭하여 이전에 저장된 쿼리 실행 계획 파일(.sqlplan)을 열거나 [!INCLUDE[ssManStudio](../../includes/ssManStudio-md.md)] 창으로 계획 파일을 끌어 놓습니다. 또는 쿼리를 실행하고 해당 실행 계획을 표시하도록 선택한 경우 결과 창의 **실행 계획** 탭으로 이동합니다. 
+1.  **파일** 메뉴를 사용하고 **파일 열기** 를 클릭하여 이전에 저장된 쿼리 실행 계획 파일(.sqlplan)을 열거나 [!INCLUDE[ssManStudio](../../includes/ssManStudio-md.md)] 창으로 계획 파일을 끌어 놓습니다. 또는 쿼리를 실행하고 해당 실행 계획을 표시하도록 선택한 경우 결과 창의 **실행 계획** 탭으로 이동합니다. 
 
-2.  실행 계획의 빈 영역을 마우스 오른쪽 단추로 클릭하고 **실제 실행 계획 분석**을 클릭합니다. 
+2.  실행 계획의 빈 영역을 마우스 오른쪽 단추로 클릭하고 **실제 실행 계획 분석** 을 클릭합니다. 
 
     ![실제 실행 계획 분석을 마우스 오른쪽 단추로 클릭](../../relational-databases/performance/media/plananalysismenuoption.png "실제 실행 계획 분석을 마우스 오른쪽 단추로 클릭")   
 

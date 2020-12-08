@@ -14,15 +14,15 @@ helpviewer_keywords:
 - subqueries [SQL Server], correlated
 - subqueries [SQL Server], types
 ms.assetid: bfc97432-c14c-4768-9dc5-a9c512f6b2bd
-author: julieMSFT
-ms.author: jrasnick
+author: WilliamDAssafMSFT
+ms.author: wiassaf
 monikerRange: '>=aps-pdw-2016||=azuresqldb-current||=azure-sqldw-latest||>=sql-server-2016||=sqlallproducts-allversions||>=sql-server-linux-2017||=azuresqldb-mi-current'
-ms.openlocfilehash: 4df3e14fc35abd0de05f87bb79d442e62df7dc1d
-ms.sourcegitcommit: 9470c4d1fc8d2d9d08525c4f811282999d765e6e
+ms.openlocfilehash: 5d14b528b1b5e0b0583b630644b8f174d3b58c9b
+ms.sourcegitcommit: 0e0cd9347c029e0c7c9f3fe6d39985a6d3af967d
 ms.translationtype: HT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 07/17/2020
-ms.locfileid: "86457601"
+ms.lasthandoff: 12/02/2020
+ms.locfileid: "96504967"
 ---
 # <a name="subqueries-sql-server"></a>하위 쿼리(SQL Server)
 [!INCLUDE[SQL Server Azure SQL Database Synapse Analytics PDW ](../../includes/applies-to-version/sql-asdb-asdbmi-asa-pdw.md)]
@@ -106,7 +106,7 @@ GO
 -   `EXISTS`로 시작하는 하위 쿼리의 선택 목록은 규칙에 따라 단일 열 이름 대신 별표(\*)로 구성됩니다. `EXISTS`로 시작하는 하위 쿼리는 존재 테스트를 만들며 데이터 대신 TRUE 또는 FALSE를 반환하므로 `EXISTS`로 시작하는 하위 쿼리에 대한 규칙은 표준 선택 목록의 규칙과 동일합니다.   
 
 ## <a name="qualifying-column-names-in-subqueries"></a><a name="qualifying"></a> 하위 쿼리의 열 이름 한정
-다음 예제에서는 외부 쿼리의 `WHERE` 절에 있는 *BusinessEntityID* 열이 외부 쿼리의 `FROM` 절에 있는 테이블 이름(*Sales.Store*)으로 암시적으로 한정됩니다. 하위 쿼리의 SELECT 목록에서 *CustomerID*에 대한 참조는 하위 쿼리의 `FROM` 절, 즉 *Sales.Customer* 테이블로 한정됩니다.
+다음 예제에서는 외부 쿼리의 `WHERE` 절에 있는 *BusinessEntityID* 열이 외부 쿼리의 `FROM` 절에 있는 테이블 이름(*Sales.Store*)으로 암시적으로 한정됩니다. 하위 쿼리의 SELECT 목록에서 *CustomerID* 에 대한 참조는 하위 쿼리의 `FROM` 절, 즉 *Sales.Customer* 테이블로 한정됩니다.
 
 ```sql
 USE AdventureWorks2016;
@@ -231,7 +231,7 @@ Saraiva José 282
 (2 row(s) affected)
 ```
 
-이 문의 이전 하위 쿼리는 외부 쿼리와 독립적으로 평가할 수 없습니다. 하위 쿼리에는 *Employee.BusinessEntityID* 값이 필요하지만 이 값은 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]에서 *Employee*의 다른 행을 검사할 때마다 바뀝니다.   
+이 문의 이전 하위 쿼리는 외부 쿼리와 독립적으로 평가할 수 없습니다. 하위 쿼리에는 *Employee.BusinessEntityID* 값이 필요하지만 이 값은 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]에서 *Employee* 의 다른 행을 검사할 때마다 바뀝니다.   
 위의 쿼리는 다음과 같은 방법으로 평가됩니다. [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]는 내부 쿼리에 각 행의 값을 대체함으로써 결과에 포함될 Employee 테이블의 각 행을 평가합니다.
 예를 들어 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]에서 먼저 `Syed Abbas`에 대한 행을 검사하는 경우 *Employee.BusinessEntityID* 변수의 값이 285가 되며 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]는 이 값을 내부 쿼리에 대체합니다.
 
@@ -325,7 +325,7 @@ WHERE e1.AddressID IN
 GO
 ```
 
-명시적 별칭은 하위 쿼리에서 *Person.Address*에 대한 참조가 외부 쿼리에서의 참조와 동일하지 않음을 분명하게 해 줍니다.   
+명시적 별칭은 하위 쿼리에서 *Person.Address* 에 대한 참조가 외부 쿼리에서의 참조와 동일하지 않음을 분명하게 해 줍니다.   
 
 ### <a name="subqueries-with-in"></a><a name="in"></a> IN이 있는 하위 쿼리
 `IN`(또는 `NOT IN`)으로 시작하는 하위 쿼리의 결과는 값이 0 이상인 목록입니다. 하위 쿼리에서 결과를 반환하면 외부 쿼리에서 이 값을 사용합니다.    

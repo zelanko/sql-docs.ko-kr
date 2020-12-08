@@ -21,14 +21,14 @@ helpviewer_keywords:
 - Profiler [SQL Server Profiler], plan guides
 - query-to-plan guide matching [SQL Server]
 ms.assetid: 7018dbf0-1a1a-411a-88af-327bedf9cfbd
-author: julieMSFT
-ms.author: jrasnick
-ms.openlocfilehash: cd63a1de999b04ed1c6c3b80efabdf9fc5dc1919
-ms.sourcegitcommit: 9470c4d1fc8d2d9d08525c4f811282999d765e6e
+author: WilliamDAssafMSFT
+ms.author: wiassaf
+ms.openlocfilehash: ff2a27878acfcbcc9c5dda12533ee90cb6a8a171
+ms.sourcegitcommit: 0e0cd9347c029e0c7c9f3fe6d39985a6d3af967d
 ms.translationtype: HT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 07/17/2020
-ms.locfileid: "86455915"
+ms.lasthandoff: 12/02/2020
+ms.locfileid: "96504927"
 ---
 # <a name="use-sql-server-profiler-to-create-and-test-plan-guides"></a>SQL Server Profiler를 사용하여 계획 지침 작성 및 테스트
 [!INCLUDE [SQL Server Azure SQL Database](../../includes/applies-to-version/sql-asdb.md)]
@@ -59,7 +59,7 @@ WHERE h.OrderDate BETWEEN '20000101' and '20050101';
   
 4.  이 쿼리에 해당하는 **SQL:BatchStarting** 이벤트를 클릭합니다.  
   
-5.  마우스 오른쪽 단추로 클릭하고 **이벤트 데이터 추출**을 선택합니다.  
+5.  마우스 오른쪽 단추로 클릭하고 **이벤트 데이터 추출** 을 선택합니다.  
   
     > [!IMPORTANT]  
     >  프로파일러 추적 창의 아래쪽 창에서 일괄 처리 텍스트를 선택하여 복사하려고 하지 마십시오. 이렇게 하면 만든 계획 지침이 원본 일괄 처리와 일치하지 않을 수 있습니다.  
@@ -94,7 +94,7 @@ EXEC sp_create_plan_guide
 4.  해당 쿼리에 대한 **Showplan XML** 이벤트를 찾습니다.  
   
     > [!NOTE]  
-    >  **Showplan XML for Query Compile** 이벤트를 사용할 수 없습니다. 해당 이벤트에**PlanGuideDB** 가 없습니다.  
+    >  **Showplan XML for Query Compile** 이벤트를 사용할 수 없습니다. 해당 이벤트에 **PlanGuideDB** 가 없습니다.  
   
 5.  계획 지침이 OBJECT 또는 SQL 유형인 경우 쿼리와 일치할 것으로 예상되는 계획 지침의 **PlanGuideDB** 및 **PlanGuideName** 특성이 **Showplan XML** 이벤트에 포함되어 있는지 확인합니다. 또는 TEMPLATE 계획 지침의 경우 예상되는 계획 지침의 **TemplatePlanGuideDB** 및 **TemplatePlanGuideName** 특성이 **Showplan XML** 이벤트에 포함되어 있는지 확인합니다. 그러면 계획 지침이 작동하는지 확인할 수 있습니다. 이러한 특성은 계획의 **\<StmtSimple>** 요소에 포함됩니다.  
   

@@ -15,15 +15,15 @@ helpviewer_keywords:
 - joins [SQL Server], about joins
 - join hints [SQL Server]
 ms.assetid: bfc97632-c14c-4768-9dc5-a9c512f4b2bd
-author: julieMSFT
-ms.author: jrasnick
+author: WilliamDAssafMSFT
+ms.author: wiassaf
 monikerRange: '>=aps-pdw-2016||=azuresqldb-current||=azure-sqldw-latest||>=sql-server-2016||=sqlallproducts-allversions||>=sql-server-linux-2017||=azuresqldb-mi-current'
-ms.openlocfilehash: c672ae4cf447f60f486eaaca8a50a1d79c3cd4b4
-ms.sourcegitcommit: c7f40918dc3ecdb0ed2ef5c237a3996cb4cd268d
+ms.openlocfilehash: 7dd500eb443af493403b64b652e047608d2a0dd1
+ms.sourcegitcommit: 0e0cd9347c029e0c7c9f3fe6d39985a6d3af967d
 ms.translationtype: HT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 10/05/2020
-ms.locfileid: "91726014"
+ms.lasthandoff: 12/02/2020
+ms.locfileid: "96505187"
 ---
 # <a name="joins-sql-server"></a>조인(SQL Server)
 [!INCLUDE[SQL Server Azure SQL Database Synapse Analytics PDW ](../../includes/applies-to-version/sql-asdb-asdbmi-asa-pdw.md)]
@@ -60,7 +60,7 @@ ms.locfileid: "91726014"
 -   FULL [ OUTER ] JOIN
 -   CROSS JOIN
 
-**내부 조인**은 `FROM` 또는 `WHERE` 절에서 지정할 수 있습니다. **외부 조인** 및 **크로스 조인**은 `FROM` 절에서만 지정할 수 있습니다. `WHERE` 및 `HAVING` 검색 조건과 결합된 조인 조건은 `FROM` 절에서 참조되는 기본 테이블에서 선택된 행을 제어합니다.    
+**내부 조인** 은 `FROM` 또는 `WHERE` 절에서 지정할 수 있습니다. **외부 조인** 및 **크로스 조인** 은 `FROM` 절에서만 지정할 수 있습니다. `WHERE` 및 `HAVING` 검색 조건과 결합된 조인 조건은 `FROM` 절에서 참조되는 기본 테이블에서 선택된 행을 제어합니다.    
 
 `FROM` 절에 조인 조건을 지정하면 `WHERE` 절에 지정할 수 있는 다른 검색 조건과 구분하기 쉬우므로 적합한 조인 지정 방법입니다. 간단한 ISO `FROM` 절의 조인 구문은 다음과 같습니다.
 
@@ -68,7 +68,7 @@ ms.locfileid: "91726014"
 FROM first_table < join_type > second_table [ ON ( join_condition ) ]
 ```
 
-*join_type*는 어떤 유형의 조인을 실행할지 지정합니다. 조인 유형에는 내부 조인, 외부 조인, 크로스 조인이 있습니다. *join_condition*은 조인된 행의 각 쌍에 대해 평가할 조건자를 정의합니다. 다음은 `FROM` 절 조인 사양의 예제입니다.
+*join_type* 는 어떤 유형의 조인을 실행할지 지정합니다. 조인 유형에는 내부 조인, 외부 조인, 크로스 조인이 있습니다. *join_condition* 은 조인된 행의 각 쌍에 대해 평가할 조건자를 정의합니다. 다음은 `FROM` 절 조인 사양의 예제입니다.
 
 ```sql
 FROM Purchasing.ProductVendor INNER JOIN Purchasing.Vendor
@@ -111,11 +111,11 @@ WHERE pv.BusinessEntityID=v.BusinessEntityID
     AND Name LIKE N'F%';
 ```
 
-조인의 `SELECT` 목록은 조인된 테이블의 모든 열이나 이러한 열의 하위 집합을 참조할 수 있습니다. 모든 테이블의 열을 조인에 포함하는 데 `SELECT` 목록은 필요하지 않습니다. 예를 들면 세 개의 테이블 조인에서 한 테이블만 사용하여 다른 한 테이블을 세 번째 테이블과 연결하고 중간 테이블의 열은 선택 목록에서 참조되지 않아도 됩니다. 이를 **anti semi join**이라고도 합니다.  
+조인의 `SELECT` 목록은 조인된 테이블의 모든 열이나 이러한 열의 하위 집합을 참조할 수 있습니다. 모든 테이블의 열을 조인에 포함하는 데 `SELECT` 목록은 필요하지 않습니다. 예를 들면 세 개의 테이블 조인에서 한 테이블만 사용하여 다른 한 테이블을 세 번째 테이블과 연결하고 중간 테이블의 열은 선택 목록에서 참조되지 않아도 됩니다. 이를 **anti semi join** 이라고도 합니다.  
 
 조인 조건에는 일반적으로 같음 연산자(=)를 사용하지만 다른 조건자처럼 기타 비교 연산자나 관계 연산자를 지정할 수 있습니다. 자세한 내용은 [Comparison Operators &#40;Transact-SQL&#41;](../../t-sql/language-elements/comparison-operators-transact-sql.md) 및 [WHERE &#40;Transact-SQL&#41;](../../t-sql/queries/where-transact-sql.md)를 참조하세요.  
 
-[!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]에서 조인을 처리할 때 쿼리 최적화 프로그램은 여러 가지 가능한 방법 중 가장 효율적인 방법을 선택합니다. 여기에는 가장 효율적인 유형의 물리적 조인 선택, 테이블이 조인되는 순서, **semi join** 및 **anti semi join**과 같이 [!INCLUDE[tsql](../../includes/tsql-md.md)] 구문으로 직접 표현할 수 없는 논리적 조인 작업 유형 사용이 포함됩니다. 다양한 조인의 물리적 실행에서는 다양한 최적화가 사용될 수 있으므로 이에 대해 신뢰할 수 있는 예측은 수행할 수 없습니다. semi join 및 anti semi join에 대한 자세한 내용은 [실행 계획 논리 및 물리 연산자 참조](../../relational-databases/showplan-logical-and-physical-operators-reference.md)를 확인하세요.  
+[!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]에서 조인을 처리할 때 쿼리 최적화 프로그램은 여러 가지 가능한 방법 중 가장 효율적인 방법을 선택합니다. 여기에는 가장 효율적인 유형의 물리적 조인 선택, 테이블이 조인되는 순서, **semi join** 및 **anti semi join** 과 같이 [!INCLUDE[tsql](../../includes/tsql-md.md)] 구문으로 직접 표현할 수 없는 논리적 조인 작업 유형 사용이 포함됩니다. 다양한 조인의 물리적 실행에서는 다양한 최적화가 사용될 수 있으므로 이에 대해 신뢰할 수 있는 예측은 수행할 수 없습니다. semi join 및 anti semi join에 대한 자세한 내용은 [실행 계획 논리 및 물리 연산자 참조](../../relational-databases/showplan-logical-and-physical-operators-reference.md)를 확인하세요.  
 
 조인 조건에 사용된 열의 이름이나 데이터 형식은 반드시 동일하지 않아도 됩니다. 그러나 데이터 형식이 다를 경우 서로 호환이 가능하거나 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]에서 암시적으로 변환할 수 있는 형식이어야 합니다. 데이터 형식을 암시적으로 변환할 수 없을 경우 조인 조건은 `CAST` 함수를 사용하여 데이터 형식을 명시적으로 변환해야 합니다. 암시적 및 명시적 데이터 변환에 대한 자세한 내용은 [데이터 형식 변환&#40;데이터베이스 엔진&#41;](../../t-sql/data-types/data-type-conversion-database-engine.md)을 참조하세요.    
 
@@ -129,13 +129,13 @@ WHERE pv.BusinessEntityID=v.BusinessEntityID
 ## <a name="understanding-nested-loops-joins"></a><a name="nested_loops"></a> 중첩 루프 조인 이해
 한 조인 입력은 작고(행이 10개 미만) 다른 조인 입력은 아주 크며 조인 열에 인덱스가 지정된 경우에는 I/O와 비교 작업이 가장 적은 인덱스 중첩 루프 조인이 가장 빠른 조인 연산입니다. 
 
-*중첩 반복*이라고도 하는 중첩 루프 조인은 조인 입력 한 개를 외부 입력 테이블(그래픽 실행 계획에서 최상위 입력으로 표시됨)로 사용하고 한 개는 내부(최하위) 입력 테이블로 사용합니다. 외부 루프는 외부 입력 테이블에서 한 번에 한 행씩 입력받아 처리합니다. 각 외부 행에 대해 실행되는 내부 루프는 외부 테이블의 행과 일치하는 내부 입력 테이블의 행을 검색합니다.   
+*중첩 반복* 이라고도 하는 중첩 루프 조인은 조인 입력 한 개를 외부 입력 테이블(그래픽 실행 계획에서 최상위 입력으로 표시됨)로 사용하고 한 개는 내부(최하위) 입력 테이블로 사용합니다. 외부 루프는 외부 입력 테이블에서 한 번에 한 행씩 입력받아 처리합니다. 각 외부 행에 대해 실행되는 내부 루프는 외부 테이블의 행과 일치하는 내부 입력 테이블의 행을 검색합니다.   
 
-가장 간단하게 전체 테이블 또는 인덱스를 검색하는 경우를 *원시 중첩 루프 조인*이라고 합니다. 검색에서 인덱스를 사용하는 경우에는 *인덱스 중첩 루프 조인*이라고 합니다. 인덱스가 쿼리 계획의 일부로 작성되고 쿼리 완료와 동시에 삭제되는 경우에는 *임시 인덱스 중첩 루프 조인*이라고 합니다. 어떤 방식을 사용할 것인지는 쿼리 최적화 프로그램에 의해 고려됩니다.   
+가장 간단하게 전체 테이블 또는 인덱스를 검색하는 경우를 *원시 중첩 루프 조인* 이라고 합니다. 검색에서 인덱스를 사용하는 경우에는 *인덱스 중첩 루프 조인* 이라고 합니다. 인덱스가 쿼리 계획의 일부로 작성되고 쿼리 완료와 동시에 삭제되는 경우에는 *임시 인덱스 중첩 루프 조인* 이라고 합니다. 어떤 방식을 사용할 것인지는 쿼리 최적화 프로그램에 의해 고려됩니다.   
 
 외부 입력은 작고 내부 입력은 크며 미리 인덱스가 정해져 있는 경우 중첩 루프 조인이 상당히 효과적입니다. 작은 행 집합에만 영향을 주는 일반적인 소규모 트랜잭션의 경우 인덱스 중첩 루프 조인이 병합 조인이나 해시 조인보다 훨씬 우수합니다. 그러나 크기가 큰 쿼리에서는 중첩 루프 조인이 최적의 선택이 아닌 경우도 많습니다.    
 
-중첩 루프의 조인 연산자의 OPTIMIZED 특성이 **True**로 설정되면 최적화된 중첩 루프(또는 일괄 처리 정렬)가 내부 쪽 테이블이 클 때 평행화 여부에 상관없이 I/O를 최소화하는 데 사용됨을 의미합니다. 정렬 자체가 숨겨진 작업임을 고려하면, 지정된 계획에서 이 최적화의 존재는 실행 계획을 분석할 때 아주 명백하지 않을 수 있습니다. 그러나 OPTIMIZED 특성에 대한 계획 XML을 살펴보면, 이는 중첩 루프 조인이 I/O 성능을 향상시키기 위해 입력 행을 다시 정렬하려고 함을 나타냅니다.
+중첩 루프의 조인 연산자의 OPTIMIZED 특성이 **True** 로 설정되면 최적화된 중첩 루프(또는 일괄 처리 정렬)가 내부 쪽 테이블이 클 때 평행화 여부에 상관없이 I/O를 최소화하는 데 사용됨을 의미합니다. 정렬 자체가 숨겨진 작업임을 고려하면, 지정된 계획에서 이 최적화의 존재는 실행 계획을 분석할 때 아주 명백하지 않을 수 있습니다. 그러나 OPTIMIZED 특성에 대한 계획 XML을 살펴보면, 이는 중첩 루프 조인이 I/O 성능을 향상시키기 위해 입력 행을 다시 정렬하려고 함을 나타냅니다.
 
 ## <a name="understanding-merge-joins"></a><a name="merge"></a> 병합 조인 이해
 두 조인 입력이 작지는 않지만 해당 조인 열을 기준으로 정렬되는 경우(예: 정렬된 인덱스 검색으로 가져온 경우)에는 병합 조인이 가장 빠른 조인 연산입니다. 두 조인 입력이 모두 크고 비슷한 크기인 경우에는 사전 정렬이 포함된 병합 조인과 해시 조인이 비슷한 성능을 제공합니다. 그러나 두 입력의 크기가 서로 많이 다를 때는 해시 조인 연산이 더 빠른 경우가 많습니다.       
@@ -191,7 +191,7 @@ WHERE pv.BusinessEntityID=v.BusinessEntityID
 해시 재귀 한도 초과에 대한 자세한 내용은 [해시 경고 이벤트 클래스](../../relational-databases/event-classes/hash-warning-event-class.md)를 참조하세요.    
 
 ## <a name="understanding-adaptive-joins"></a><a name="adaptive"></a> 적응 조인 이해
-[일괄 처리 모드](../../relational-databases/query-processing-architecture-guide.md#batch-mode-execution) 적응 조인을 사용하면 [해시 조인](#hash) 또는 [중첩 루프](#nested_loops) 조인 메서드 선택을 첫 번째 입력이 검사된 **후**까지 지연할 수 있습니다. 적응 조인 연산자는 중첩된 루프 계획으로 전환할 시기를 결정하는 데 사용되는 임계값을 정의합니다. 따라서 쿼리 계획을 다시 컴파일하지 않고도 실행 중에 더 나은 조인 전략으로 동적으로 전환할 수 있습니다. 
+[일괄 처리 모드](../../relational-databases/query-processing-architecture-guide.md#batch-mode-execution) 적응 조인을 사용하면 [해시 조인](#hash) 또는 [중첩 루프](#nested_loops) 조인 메서드 선택을 첫 번째 입력이 검사된 **후** 까지 지연할 수 있습니다. 적응 조인 연산자는 중첩된 루프 계획으로 전환할 시기를 결정하는 데 사용되는 임계값을 정의합니다. 따라서 쿼리 계획을 다시 컴파일하지 않고도 실행 중에 더 나은 조인 전략으로 동적으로 전환할 수 있습니다. 
 
 > [!TIP]
 > 작은 조인 입력 검색과 큰 조인 입력 검색 간에 자주 변동하는 워크로드가 이 기능에서 가장 큰 혜택을 받게 됩니다.

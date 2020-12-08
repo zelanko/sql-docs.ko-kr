@@ -10,15 +10,15 @@ ms.topic: conceptual
 helpviewer_keywords:
 - Query Store, best practices
 ms.assetid: 5b13b5ac-1e4c-45e7-bda7-ebebe2784551
-author: pmasl
-ms.author: jrasnick
+author: WilliamDAssafMSFT
+ms.author: wiassaf
 monikerRange: =azuresqldb-current||>=sql-server-2016||=sqlallproducts-allversions||= azure-sqldw-latest||>=sql-server-linux-2017||=azuresqldb-mi-current
-ms.openlocfilehash: 1ad9bb98b55e654efd60c028187d6085f698e1f9
-ms.sourcegitcommit: cfa04a73b26312bf18d8f6296891679166e2754d
+ms.openlocfilehash: dadf7f495198879035f4cbbbad1dcb06df5b6003
+ms.sourcegitcommit: 0e0cd9347c029e0c7c9f3fe6d39985a6d3af967d
 ms.translationtype: HT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 10/19/2020
-ms.locfileid: "92194345"
+ms.lasthandoff: 12/02/2020
+ms.locfileid: "96505408"
 ---
 # <a name="best-practices-with-query-store"></a>쿼리 저장소에 대한 모범 사례
 
@@ -76,7 +76,7 @@ ms.locfileid: "92194345"
 [!INCLUDE[ssSQL15](../../includes/sssql15-md.md)] 및 [!INCLUDE[ssSQL17](../../includes/sssql17-md.md)]의 기본값은 100MB입니다. 워크로드에서 서로 다른 쿼리와 계획을 많이 생성하거나 쿼리 기록을 장기간 유지하려는 경우 이 크기가 충분하지 않을 수도 있습니다. [!INCLUDE[sql-server-2019](../../includes/sssqlv15-md.md)]부터 기본값은 1GB입니다. 현재 공간 사용량을 계속 추적하고, **최대 크기(MB)** 값을 늘려 쿼리 저장소가 읽기 전용 모드로 전환되지 않도록 합니다.
 
 > [!IMPORTANT]
-> **최대 크기(MB)** 한도는 엄격하게 적용되지 않습니다. 쿼리 저장소가 디스크에 데이터를 쓰는 경우에만 스토리지 크기가 확인됩니다. 이 간격은 **데이터 플러시 간격(분)** 옵션으로 설정됩니다. 쿼리 저장소가 스토리지 크기 검사 간에 최대 크기 한도를 위반할 경우 읽기 전용 모드로 전환됩니다. **크기 기반 정리 모드**를 사용하도록 설정하면, 최대 크기 한도를 적용하는 정리 메커니즘도 트리거됩니다.
+> **최대 크기(MB)** 한도는 엄격하게 적용되지 않습니다. 쿼리 저장소가 디스크에 데이터를 쓰는 경우에만 스토리지 크기가 확인됩니다. 이 간격은 **데이터 플러시 간격(분)** 옵션으로 설정됩니다. 쿼리 저장소가 스토리지 크기 검사 간에 최대 크기 한도를 위반할 경우 읽기 전용 모드로 전환됩니다. **크기 기반 정리 모드** 를 사용하도록 설정하면, 최대 크기 한도를 적용하는 정리 메커니즘도 트리거됩니다.
 
 [!INCLUDE[ssManStudio](../../includes/ssmanstudio-md.md)] 를 사용하거나 다음 스크립트를 실행하여 쿼리 저장소 크기에 대한 최신 정보를 확인합니다.
 
@@ -101,14 +101,14 @@ SET QUERY_STORE (MAX_STORAGE_SIZE_MB = 1024);
 > [!NOTE]
 > 추적 플래그 7745를 사용하면 장애 조치(failover) 또는 종료 명령 시 쿼리 저장소 데이터를 디스크에 쓸 수 없습니다. 자세한 내용은 [중요 업무용 서버에서 추적 플래그 사용](#Recovery) 섹션을 참조하세요.
 
-[!INCLUDE[ssManStudioFull](../../includes/ssmanstudiofull-md.md)] 또는 [!INCLUDE[tsql](../../includes/tsql-md.md)]을 사용하여 **데이터 플러시 간격**에 다른 값을 설정할 수 있습니다.
+[!INCLUDE[ssManStudioFull](../../includes/ssmanstudiofull-md.md)] 또는 [!INCLUDE[tsql](../../includes/tsql-md.md)]을 사용하여 **데이터 플러시 간격** 에 다른 값을 설정할 수 있습니다.
 
 ```sql
 ALTER DATABASE [QueryStoreDB]
 SET QUERY_STORE (DATA_FLUSH_INTERVAL_SECONDS = 900);
 ```
 
-**통계 수집 간격**: 수집되는 런타임 통계의 세분성 수준(분)을 정의합니다. 기본값은 60분입니다. 문제를 검색하고 완화하는 시간을 줄이거나 높은 수준의 세분성이 필요한 경우 값을 줄이는 것이 좋습니다. 하지만 이 값은 쿼리 저장소 데이터 크기에 직접 영향을 미칠 수 있음을 염두에 둬야 합니다. [!INCLUDE[ssManStudioFull](../../includes/ssmanstudiofull-md.md)] 또는 [!INCLUDE[tsql](../../includes/tsql-md.md)]을 사용하여 **통계 수집 간격**에 다른 값을 설정할 수 있습니다.
+**통계 수집 간격**: 수집되는 런타임 통계의 세분성 수준(분)을 정의합니다. 기본값은 60분입니다. 문제를 검색하고 완화하는 시간을 줄이거나 높은 수준의 세분성이 필요한 경우 값을 줄이는 것이 좋습니다. 하지만 이 값은 쿼리 저장소 데이터 크기에 직접 영향을 미칠 수 있음을 염두에 둬야 합니다. [!INCLUDE[ssManStudioFull](../../includes/ssmanstudiofull-md.md)] 또는 [!INCLUDE[tsql](../../includes/tsql-md.md)]을 사용하여 **통계 수집 간격** 에 다른 값을 설정할 수 있습니다.
 
 ```sql
 ALTER DATABASE [QueryStoreDB]
@@ -139,7 +139,7 @@ SET QUERY_STORE (SIZE_BASED_CLEANUP_MODE = AUTO);
 - **Custom**: 추가 컨트롤 및 데이터 수집 정책을 미세 조정하는 기능을 허용합니다. 새 사용자 지정 설정은 내부 캡처 정책 시간 임계값 내에서 수행되는 작업을 정의합니다. 이 시간 경계 내에서 구성 가능한 조건이 평가되고, true인 조건이 있으면 쿼리 저장소에서 쿼리를 캡처할 수 있습니다.
 
 > [!IMPORTANT]
-> 쿼리 저장소 캡처 모드를 **All**, **Auto** 또는 **Custom**으로 설정하면 커서, 저장 프로시저 내부 쿼리 및 네이티브 컴파일된 쿼리가 항상 캡처됩니다. 네이티브 컴파일된 쿼리를 캡처하려면 [sp_xtp_control_query_exec_stats](../../relational-databases/system-stored-procedures/sys-sp-xtp-control-query-exec-stats-transact-sql.md)를 사용하여 쿼리별 통계 수집을 사용하도록 설정합니다.
+> 쿼리 저장소 캡처 모드를 **All**, **Auto** 또는 **Custom** 으로 설정하면 커서, 저장 프로시저 내부 쿼리 및 네이티브 컴파일된 쿼리가 항상 캡처됩니다. 네이티브 컴파일된 쿼리를 캡처하려면 [sp_xtp_control_query_exec_stats](../../relational-databases/system-stored-procedures/sys-sp-xtp-control-query-exec-stats-transact-sql.md)를 사용하여 쿼리별 통계 수집을 사용하도록 설정합니다.
 
  다음 스크립트는 QUERY_CAPTURE_MODE를 AUTO로 설정합니다.
 
@@ -290,11 +290,11 @@ FROM sys.database_query_store_options;
 
 `actual_state_desc` 및 `desired_state_desc` 간 차이는 작업 모드 변경이 자동으로 발생했음을 나타냅니다. 가장 일반적인 변경은 쿼리 저장소가 읽기 전용 모드로 자동 전환되는 경우입니다. 아주 드물긴 하지만, 내부 오류로 인해 쿼리 저장소가 오류 상태로 종료될 수도 있습니다.
 
-실제 상태가 읽기 전용인 경우 **readonly_reason** 열을 사용하여 원인을 파악합니다. 일반적으로 크기 할당량 초과로 인해 쿼리 저장소가 읽기 전용 모드로 전환되었음을 알 수 있습니다. 이 경우 **readonly_reason**은 65536으로 설정됩니다. 다른 이유를 보려면 [sys.database_query_store_options&#40;Transact-SQL&#41;](../../relational-databases/system-catalog-views/sys-database-query-store-options-transact-sql.md)를 참조하세요.
+실제 상태가 읽기 전용인 경우 **readonly_reason** 열을 사용하여 원인을 파악합니다. 일반적으로 크기 할당량 초과로 인해 쿼리 저장소가 읽기 전용 모드로 전환되었음을 알 수 있습니다. 이 경우 **readonly_reason** 은 65536으로 설정됩니다. 다른 이유를 보려면 [sys.database_query_store_options&#40;Transact-SQL&#41;](../../relational-databases/system-catalog-views/sys-database-query-store-options-transact-sql.md)를 참조하세요.
 
 다음 단계를 수행하여 쿼리 저장소를 읽기-쓰기 모드로 전환하고 데이터 수집을 활성화해 보세요.
 
-- **ALTER DATABASE** 의 **MAX_STORAGE_SIZE_MB**옵션을 사용하여 최대 스토리지 크기를 늘립니다.
+- **ALTER DATABASE** 의 **MAX_STORAGE_SIZE_MB** 옵션을 사용하여 최대 스토리지 크기를 늘립니다.
 - 다음 문을 사용하여 쿼리 저장소 데이터를 정리합니다.
 
   ```sql
@@ -312,7 +312,7 @@ SET QUERY_STORE (OPERATION_MODE = READ_WRITE);
 
 - 모범 사례를 적용하여 작동 모드의 자동 변동을 방지할 수 있습니다. 쿼리 저장소 크기가 항상 허용되는 최댓값 아래인지 확인하여 읽기 전용 모드로 전환될 가능성을 줄입니다. 크기가 한도에 도달할 때 쿼리 저장소에서 데이터를 자동으로 정리할 수 있도록 [쿼리 저장소 구성](#Configure) 섹션에 설명된 대로 크기 기반 정책을 활성화합니다.
 - 가장 최근 데이터가 보존되었는지 확인하려면 오래된 정보를 정기적으로 제거하도록 시간 기반 정책을 구성합니다.
-- 마지막으로 **쿼리 저장소 캡처 모드**를 **Auto**로 설정하는 것이 좋습니다. 이렇게 하면 주로 워크로드와 관련성이 낮은 쿼리가 필터링하여 제외됩니다.
+- 마지막으로 **쿼리 저장소 캡처 모드** 를 **Auto** 로 설정하는 것이 좋습니다. 이렇게 하면 주로 워크로드와 관련성이 낮은 쿼리가 필터링하여 제외됩니다.
 
 ### <a name="error-state"></a>ERROR 상태
 
@@ -364,7 +364,7 @@ FROM sys.database_query_store_options;
 |**Custom**|[!INCLUDE[sql-server-2019](../../includes/sssqlv15-md.md)]에서는 `ALTER DATABASE SET QUERY_STORE` 명령 아래에 Custom 캡처 모드가 도입되었습니다. 사용하도록 설정하면, 특정 서버의 데이터 수집을 세부적으로 튜닝하기 위한 추가 쿼리 저장소 구성이 새 쿼리 저장소 캡처 정책 설정 아래에 제공됩니다.<br /><br />새 사용자 지정 설정은 내부 캡처 정책 시간 임계값 내에서 수행되는 작업을 정의합니다. 이 시간 경계 내에서 구성 가능한 조건이 평가되고, true인 조건이 있으면 쿼리 저장소에서 쿼리를 캡처할 수 있습니다. 자세한 내용은 [ALTER DATABASE SET 옵션&#40;Transact-SQL&#41;](../../t-sql/statements/alter-database-transact-sql-set-options.md)을 참조하세요.|
 
 > [!NOTE]
-> 쿼리 저장소 캡처 모드를 **All**, **Auto** 또는 **Custom**으로 설정하면 커서, 저장 프로시저 내부 쿼리 및 네이티브 컴파일된 쿼리가 항상 캡처됩니다. 네이티브 컴파일된 쿼리를 캡처하려면 [sp_xtp_control_query_exec_stats](../../relational-databases/system-stored-procedures/sys-sp-xtp-control-query-exec-stats-transact-sql.md)를 사용하여 쿼리별 통계 수집을 사용하도록 설정합니다.
+> 쿼리 저장소 캡처 모드를 **All**, **Auto** 또는 **Custom** 으로 설정하면 커서, 저장 프로시저 내부 쿼리 및 네이티브 컴파일된 쿼리가 항상 캡처됩니다. 네이티브 컴파일된 쿼리를 캡처하려면 [sp_xtp_control_query_exec_stats](../../relational-databases/system-stored-procedures/sys-sp-xtp-control-query-exec-stats-transact-sql.md)를 사용하여 쿼리별 통계 수집을 사용하도록 설정합니다.
 
 ## <a name="keep-the-most-relevant-data-in-query-store"></a>쿼리 저장소에 가장 관련성이 높은 데이터 보관
 
@@ -374,7 +374,7 @@ FROM sys.database_query_store_options;
 |모범 사례|설정|
 |-------------------|-------------|
 |보관된 기록 데이터를 제한합니다.|자동 정리를 활성화하도록 시간 기반 정책을 구성합니다.|
-|관련 없는 쿼리를 필터링하여 제외합니다.|**쿼리 저장소 캡처 모드**를 **Auto**로 구성합니다.|
+|관련 없는 쿼리를 필터링하여 제외합니다.|**쿼리 저장소 캡처 모드** 를 **Auto** 로 구성합니다.|
 |최대 크기에 도달하면 관련성이 적은 쿼리를 삭제합니다.|크기 기반 정리 정책을 활성화합니다.|
 
 ## <a name="avoid-using-non-parameterized-queries"></a><a name="Parameterize"></a> 매개 변수화되지 않은 쿼리 사용 방지

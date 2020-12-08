@@ -10,14 +10,14 @@ ms.topic: conceptual
 helpviewer_keywords:
 - plan guides [SQL Server], deleting
 ms.assetid: aa4d3188-6927-43de-a3e3-90fc16eeaca7
-author: julieMSFT
-ms.author: jrasnick
-ms.openlocfilehash: e93982c0ad59b7016902c64cd4dd81d0f81c270f
-ms.sourcegitcommit: 9470c4d1fc8d2d9d08525c4f811282999d765e6e
+author: WilliamDAssafMSFT
+ms.author: wiassaf
+ms.openlocfilehash: 17e2c32fbf7f26ecb0e3044e248f3b52469dad5e
+ms.sourcegitcommit: 0e0cd9347c029e0c7c9f3fe6d39985a6d3af967d
 ms.translationtype: HT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 07/17/2020
-ms.locfileid: "86457316"
+ms.lasthandoff: 12/02/2020
+ms.locfileid: "96505307"
 ---
 # <a name="delete-a-plan-guide"></a>계획 지침 삭제
 [!INCLUDE [SQL Server Azure SQL Database](../../includes/applies-to-version/sql-asdb.md)]
@@ -50,19 +50,19 @@ ms.locfileid: "86457316"
   
 2.  더하기 기호를 클릭하여 **계획 지침** 폴더를 확장합니다.  
   
-3.  삭제할 계획 지침을 마우스 오른쪽 단추로 클릭하고 **삭제**를 선택합니다.  
+3.  삭제할 계획 지침을 마우스 오른쪽 단추로 클릭하고 **삭제** 를 선택합니다.  
   
-4.  **개체 삭제** 대화 상자에서 올바른 계획 지침을 선택했는지 확인한 다음 **확인**을 클릭합니다.  
+4.  **개체 삭제** 대화 상자에서 올바른 계획 지침을 선택했는지 확인한 다음 **확인** 을 클릭합니다.  
 
 ##  <a name="using-transact-sql"></a><a name="TsqlProcedure"></a> Transact-SQL 사용  
   
 #### <a name="to-delete-a-single-plan-guide"></a>단일 계획 지침을 삭제하려면  
   
-1.  **개체 탐색기**에서 [!INCLUDE[ssDE](../../includes/ssde-md.md)]인스턴스에 연결합니다.  
+1.  **개체 탐색기** 에서 [!INCLUDE[ssDE](../../includes/ssde-md.md)]인스턴스에 연결합니다.  
   
-2.  표준 도구 모음에서 **새 쿼리**를 클릭합니다.  
+2.  표준 도구 모음에서 **새 쿼리** 를 클릭합니다.  
   
-3.  다음 예를 복사하여 쿼리 창에 붙여 넣고 **실행**을 클릭합니다.  
+3.  다음 예를 복사하여 쿼리 창에 붙여 넣고 **실행** 을 클릭합니다.  
   
     ```  
     --Create a procedure on which to define the plan guide.  
@@ -99,11 +99,11 @@ ms.locfileid: "86457316"
   
 #### <a name="to-delete-all-plan-guides-in-a-database"></a>데이터베이스의 모든 계획 지침을 삭제하려면  
   
-1.  **개체 탐색기**에서 [!INCLUDE[ssDE](../../includes/ssde-md.md)]인스턴스에 연결합니다.  
+1.  **개체 탐색기** 에서 [!INCLUDE[ssDE](../../includes/ssde-md.md)]인스턴스에 연결합니다.  
   
-2.  표준 도구 모음에서 **새 쿼리**를 클릭합니다.  
+2.  표준 도구 모음에서 **새 쿼리** 를 클릭합니다.  
   
-3.  다음 예를 복사하여 쿼리 창에 붙여 넣고 **실행**을 클릭합니다.  
+3.  다음 예를 복사하여 쿼리 창에 붙여 넣고 **실행** 을 클릭합니다.  
   
     ```  
     USE AdventureWorks2012;  

@@ -16,14 +16,14 @@ helpviewer_keywords:
 - lightweight query profiling
 - lightweight profiling
 ms.assetid: 07f8f594-75b4-4591-8c29-d63811d7753e
-author: julieMSFT
-ms.author: jrasnick
-ms.openlocfilehash: fe6467cbe5cc915b876b9efa6b8afd9ff59e2bbd
-ms.sourcegitcommit: 783b35f6478006d654491cb52f6edf108acf2482
+author: WilliamDAssafMSFT
+ms.author: wiassaf
+ms.openlocfilehash: 2c45216331d940398c0d89e319c9f847d70faba0
+ms.sourcegitcommit: 0e0cd9347c029e0c7c9f3fe6d39985a6d3af967d
 ms.translationtype: HT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 10/09/2020
-ms.locfileid: "91890781"
+ms.lasthandoff: 12/02/2020
+ms.locfileid: "96505176"
 ---
 # <a name="live-query-statistics"></a>활성 쿼리 통계
 [!INCLUDE [SQL Server Azure SQL Database](../../includes/applies-to-version/sql-asdb.md)]
@@ -45,7 +45,7 @@ ms.locfileid: "91890781"
   
      ![도구 모음의 활성 쿼리 통계 단추](../../relational-databases/performance/media/livequerystatstoolbar.png "도구 모음의 활성 쿼리 통계 단추")  
   
-     또한 [!INCLUDE[ssManStudio](../../includes/ssmanstudio-md.md)]에서 선택한 쿼리를 마우스 오른쪽 단추로 클릭한 다음, **활성 쿼리 통계 포함**을 클릭하여 활성 쿼리 실행 계획에 액세스하고 볼 수도 있습니다.  
+     또한 [!INCLUDE[ssManStudio](../../includes/ssmanstudio-md.md)]에서 선택한 쿼리를 마우스 오른쪽 단추로 클릭한 다음, **활성 쿼리 통계 포함** 을 클릭하여 활성 쿼리 실행 계획에 액세스하고 볼 수도 있습니다.  
   
      ![팝업 메뉴의 활성 쿼리 통계 단추](../../relational-databases/performance/media/livequerystatsmenu.png "팝업 메뉴의 활성 쿼리 통계 단추")  
   

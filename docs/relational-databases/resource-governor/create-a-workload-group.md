@@ -10,14 +10,14 @@ ms.topic: conceptual
 helpviewer_keywords:
 - Resource Governor, workload group create
 - workload groups [SQL Server], create
-author: julieMSFT
-ms.author: jrasnick
-ms.openlocfilehash: eb23f8926cff87651ba0feda1b398112dec930af
-ms.sourcegitcommit: 9470c4d1fc8d2d9d08525c4f811282999d765e6e
+author: WilliamDAssafMSFT
+ms.author: wiassaf
+ms.openlocfilehash: b9ad4bf1f8c344a6ea4babe8d4ce737b2d6fe3d4
+ms.sourcegitcommit: 0e0cd9347c029e0c7c9f3fe6d39985a6d3af967d
 ms.translationtype: HT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 07/17/2020
-ms.locfileid: "86456917"
+ms.lasthandoff: 12/02/2020
+ms.locfileid: "96504842"
 ---
 # <a name="create-a-workload-group"></a>작업 그룹 만들기
 
@@ -49,7 +49,7 @@ ms.locfileid: "86456917"
   
 1.  개체 탐색기에서 수정할 작업 그룹이 포함된 리소스 풀이 나타날 때까지 **관리** 노드를 계속 확장합니다.  
   
-2.  **Workload Groups** 폴더를 마우스 오른쪽 단추로 클릭한 다음 **새 작업 그룹**을 클릭합니다.  
+2.  **Workload Groups** 폴더를 마우스 오른쪽 단추로 클릭한 다음 **새 작업 그룹** 을 클릭합니다.  
   
 3.  **리소스 풀** 표에 작업 그룹을 추가하려는 리소스 풀이 강조 표시되었는지 확인합니다.  
   
@@ -59,7 +59,7 @@ ms.locfileid: "86456917"
   
 6.  기본 설정에서 변경하려는 행의 다른 셀을 클릭 또는 두 번 클릭한 다음 새 값을 입력합니다.  
   
-7.  **확인**을 클릭하여 변경 내용을 저장합니다.  
+7.  **확인** 을 클릭하여 변경 내용을 저장합니다.  
 
 ##  <a name="create-a-workload-group-using-transact-sql"></a><a name="CreRPTSQL"></a> Transact-SQL을 사용하여 작업 그룹 만들기  
  **다음을 사용하여 작업 그룹을 만들기: [!INCLUDE[tsql](../../includes/tsql-md.md)]**  

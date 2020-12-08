@@ -17,14 +17,14 @@ helpviewer_keywords:
 - production servers [SQL Server]
 - offload tuning overhead [SQL Server]
 ms.assetid: 94e6c3e5-1f09-4616-9da2-4e44d066d494
-author: julieMSFT
-ms.author: jrasnick
-ms.openlocfilehash: f0013940f887991a622cf3cbc6f6e3f72ad78d8b
-ms.sourcegitcommit: 9470c4d1fc8d2d9d08525c4f811282999d765e6e
+author: WilliamDAssafMSFT
+ms.author: wiassaf
+ms.openlocfilehash: a286b61d3efa53aa862b5c69fbd3782d6c59cdd3
+ms.sourcegitcommit: 0e0cd9347c029e0c7c9f3fe6d39985a6d3af967d
 ms.translationtype: HT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 07/17/2020
-ms.locfileid: "86457338"
+ms.lasthandoff: 12/02/2020
+ms.locfileid: "96505343"
 ---
 # <a name="considerations-for-using-test-servers"></a>테스트 서버 사용 시 고려 사항
  [!INCLUDE [SQL Server](../../includes/applies-to-version/sqlserver.md)]
@@ -39,7 +39,7 @@ ms.locfileid: "86457338"
   
 -   테스트 서버를 사용하여 프로덕션 서버의 데이터베이스를 튜닝하려는 사용자는 두 서버 모두에 존재해야 합니다. 그렇지 않으면 이 시나리오를 실행할 수 없습니다.  
   
--   확장 저장 프로시저인 **xp_msver**는 테스트 서버/프로덕션 서버 시나리오를 사용하도록 설정해야 합니다. [!INCLUDE[ssDE](../../includes/ssde-md.md)] 튜닝 관리자는 이 확장 저장 프로시저를 사용하여 테스트 서버를 튜닝하는 동안 사용할 프로세서 수와 프로덕션 서버의 사용 가능한 메모리를 인출합니다. **xp_msver** 을 사용할 수 없는 경우 [!INCLUDE[ssDE](../../includes/ssde-md.md)] 튜닝 관리자는 [!INCLUDE[ssDE](../../includes/ssde-md.md)] 튜닝 관리자를 실행하는 컴퓨터의 하드웨어 특징을 가정합니다. [!INCLUDE[ssDE](../../includes/ssde-md.md)] 튜닝 관리자를 실행하는 컴퓨터의 하드웨어 특징을 알 수 없는 경우 프로세서는 하나이고 메모리는 1024MB라고 가정합니다. 이 확장 저장 프로시저는 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]가 설치될 때 기본적으로 튜닝됩니다. 자세한 내용은 [노출 영역 구성](../../relational-databases/security/surface-area-configuration.md) 및 [xp_msver&#40;Transact-SQL&#41;](../../relational-databases/system-stored-procedures/xp-msver-transact-sql.md)를 참조하세요.  
+-   확장 저장 프로시저인 **xp_msver** 는 테스트 서버/프로덕션 서버 시나리오를 사용하도록 설정해야 합니다. [!INCLUDE[ssDE](../../includes/ssde-md.md)] 튜닝 관리자는 이 확장 저장 프로시저를 사용하여 테스트 서버를 튜닝하는 동안 사용할 프로세서 수와 프로덕션 서버의 사용 가능한 메모리를 인출합니다. **xp_msver** 을 사용할 수 없는 경우 [!INCLUDE[ssDE](../../includes/ssde-md.md)] 튜닝 관리자는 [!INCLUDE[ssDE](../../includes/ssde-md.md)] 튜닝 관리자를 실행하는 컴퓨터의 하드웨어 특징을 가정합니다. [!INCLUDE[ssDE](../../includes/ssde-md.md)] 튜닝 관리자를 실행하는 컴퓨터의 하드웨어 특징을 알 수 없는 경우 프로세서는 하나이고 메모리는 1024MB라고 가정합니다. 이 확장 저장 프로시저는 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]가 설치될 때 기본적으로 튜닝됩니다. 자세한 내용은 [노출 영역 구성](../../relational-databases/security/surface-area-configuration.md) 및 [xp_msver&#40;Transact-SQL&#41;](../../relational-databases/system-stored-procedures/xp-msver-transact-sql.md)를 참조하세요.  
   
 -   [!INCLUDE[ssDE](../../includes/ssde-md.md)] 튜닝 관리자는 테스트 서버와 프로덕션 서버의 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 버전이 같다고 가정합니다. 버전이 서로 다른 경우 테스트 서버의 버전이 우선 적용됩니다. 예를 들어 테스트 서버에서 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] Standard를 실행하는 경우 [!INCLUDE[ssDE](../../includes/ssde-md.md)] 튜닝 관리자는 프로덕션 서버에서 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] Enterprise를 실행하고 있어도 인덱싱된 뷰, 분할 및 온라인 작업을 권장 구성에 포함하지 않습니다.  
   

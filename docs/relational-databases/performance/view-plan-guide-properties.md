@@ -13,14 +13,14 @@ helpviewer_keywords:
 - plan guides [SQL Server], view plan guide properties
 - viewing plan guide properties
 ms.assetid: 8c0d2f39-59c1-4168-a649-65473f6a771b
-author: julieMSFT
-ms.author: jrasnick
-ms.openlocfilehash: 18c1d7f663d5006cae078753e028caf133ec2c5c
-ms.sourcegitcommit: 9470c4d1fc8d2d9d08525c4f811282999d765e6e
+author: WilliamDAssafMSFT
+ms.author: wiassaf
+ms.openlocfilehash: 2c0615501d2cb191e5c45e33bb50f3898a412fbc
+ms.sourcegitcommit: 0e0cd9347c029e0c7c9f3fe6d39985a6d3af967d
 ms.translationtype: HT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 07/17/2020
-ms.locfileid: "86458891"
+ms.lasthandoff: 12/02/2020
+ms.locfileid: "96504887"
 ---
 # <a name="view-plan-guide-properties"></a>계획 지침 속성 보기
 [!INCLUDE [SQL Server Azure SQL Database](../../includes/applies-to-version/sql-asdb.md)]
@@ -53,7 +53,7 @@ ms.locfileid: "86458891"
   
 2.  더하기 기호를 클릭하여 **계획 지침** 폴더를 확장합니다.  
   
-3.  속성을 보려는 계획 지침을 마우스 오른쪽 단추로 클릭하고 **속성**을 선택합니다.  
+3.  속성을 보려는 계획 지침을 마우스 오른쪽 단추로 클릭하고 **속성** 을 선택합니다.  
   
      다음 속성이 **계획 지침 속성** 대화 상자에 표시됩니다.  
   
@@ -61,7 +61,7 @@ ms.locfileid: "86458891"
      [!INCLUDE[tsql](../../includes/tsql-md.md)] 문에 적용되는 쿼리 힌트 또는 쿼리 계획을 표시합니다. 쿼리 계획이 힌트로 지정되면 해당 계획의 XML 실행 계획 출력이 표시됩니다.  
   
      **사용 안 함**  
-     계획 지침의 상태를 표시합니다. 가능한 값은 **True** 및 **False**입니다.  
+     계획 지침의 상태를 표시합니다. 가능한 값은 **True** 및 **False** 입니다.  
   
      **이름**  
      계획 지침의 이름을 표시합니다.  
@@ -79,22 +79,22 @@ ms.locfileid: "86458891"
      범위 유형이 OBJECT인 경우 개체가 포함되는 스키마의 이름을 표시합니다.  
   
      **범위 유형**  
-     [!INCLUDE[tsql](../../includes/tsql-md.md)] 문이 나타나는 엔터티 유형을 표시합니다. 이것은 [!INCLUDE[tsql](../../includes/tsql-md.md)] 문을 계획 지침과 일치시키기 위한 컨텍스트를 제공합니다. 가능한 값은 **OBJECT**, **SQL**및 **TEMPLATE**입니다.  
+     [!INCLUDE[tsql](../../includes/tsql-md.md)] 문이 나타나는 엔터티 유형을 표시합니다. 이것은 [!INCLUDE[tsql](../../includes/tsql-md.md)] 문을 계획 지침과 일치시키기 위한 컨텍스트를 제공합니다. 가능한 값은 **OBJECT**, **SQL** 및 **TEMPLATE** 입니다.  
   
      **문**  
      계획 지침이 적용되는 [!INCLUDE[tsql](../../includes/tsql-md.md)] 문을 표시합니다.  
   
-4.  **확인**을 클릭합니다.  
+4.  **확인** 을 클릭합니다.  
   
 ##  <a name="using-transact-sql"></a><a name="TsqlProcedure"></a> Transact-SQL 사용  
   
 #### <a name="to-view-the-properties-of-a-plan-guide"></a>계획 지침의 속성을 보려면  
   
-1.  **개체 탐색기**에서 [!INCLUDE[ssDE](../../includes/ssde-md.md)]인스턴스에 연결합니다.  
+1.  **개체 탐색기** 에서 [!INCLUDE[ssDE](../../includes/ssde-md.md)]인스턴스에 연결합니다.  
   
-2.  표준 도구 모음에서 **새 쿼리**를 클릭합니다.  
+2.  표준 도구 모음에서 **새 쿼리** 를 클릭합니다.  
   
-3.  다음 예를 복사하여 쿼리 창에 붙여 넣고 **실행**을 클릭합니다.  
+3.  다음 예를 복사하여 쿼리 창에 붙여 넣고 **실행** 을 클릭합니다.  
   
     ```  
     -- If a plan guide named "Guide1" already exists in the AdventureWorks2012 database, delete it.  

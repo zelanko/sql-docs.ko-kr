@@ -14,14 +14,14 @@ helpviewer_keywords:
 - logs [SQL Server], SQL Server error logs
 - logs [SQL Server], viewing
 ms.assetid: 55f468ba-146c-4ab3-95cd-d35d051afd12
-author: julieMSFT
-ms.author: jrasnick
-ms.openlocfilehash: 54aa4b48837f171406edbbe4cbadcacf5b910a99
-ms.sourcegitcommit: 9470c4d1fc8d2d9d08525c4f811282999d765e6e
+author: WilliamDAssafMSFT
+ms.author: wiassaf
+ms.openlocfilehash: 4727287f27190ad865cf0ebe6142d674730dbc46
+ms.sourcegitcommit: 0e0cd9347c029e0c7c9f3fe6d39985a6d3af967d
 ms.translationtype: HT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 07/17/2020
-ms.locfileid: "86458055"
+ms.lasthandoff: 12/02/2020
+ms.locfileid: "96504877"
 ---
 # <a name="view-the-sql-server-error-log-in-sql-server-management-studio-ssms"></a>SSMS(SQL Server Management Studio)에서 SQL Server 오류 로그 보기
 
@@ -30,19 +30,19 @@ ms.locfileid: "86458055"
 
 ## <a name="view-the-logs"></a>로그 보기
 
-1. SQL Server Management Studio에서 **개체 탐색기**를 선택합니다. **개체 탐색기**를 열려면 F8을 선택합니다. 또는 상단 메뉴에서 **보기**를 선택하고 **개체 탐색기**를 선택합니다.
+1. SQL Server Management Studio에서 **개체 탐색기** 를 선택합니다. **개체 탐색기** 를 열려면 F8을 선택합니다. 또는 상단 메뉴에서 **보기** 를 선택하고 **개체 탐색기** 를 선택합니다.
     
     ![Object_Explorer](../../relational-databases/performance/media/object-explorer.png) 
 
-2. **개체 탐색기**에서 SQL Server의 인스턴스에 연결한 다음 해당 인스턴스를 확장합니다.
+2. **개체 탐색기** 에서 SQL Server의 인스턴스에 연결한 다음 해당 인스턴스를 확장합니다.
   
 3. **관리** 섹션(볼 수 있는 권한이 있다고 가정)을 찾아 확장합니다.
 
-4. **SQL Server 로그**를 마우스 오른쪽 단추로 클릭하고 **보기**를 선택하고 **SQL Server 로그 보기**를 선택합니다.
+4. **SQL Server 로그** 를 마우스 오른쪽 단추로 클릭하고 **보기** 를 선택하고 **SQL Server 로그 보기** 를 선택합니다.
 
     ![View_SQLServer_Log_SSMS](../../relational-databases/performance/media/view-sqlserver-log-ssms.png) 
  
-5. 확인할 로그 목록이 포함된 **로그 파일 뷰어**가 나타납니다(시간이 약간 걸릴 수 있음).
+5. 확인할 로그 목록이 포함된 **로그 파일 뷰어** 가 나타납니다(시간이 약간 걸릴 수 있음).
 
   ## <a name="see-also"></a>참고 항목
   자세한 내용은 [MSSQLTips.com](https://www.mssqltips.com/)의 유용한 게시물인 [Identify location of the SQL Server Error Log file](https://www.mssqltips.com/sqlservertip/2506/identify-location-of-the-sql-server-error-log-file/)(SQL Server 오류 로그 파일의 위치 식별)을 참조하세요.

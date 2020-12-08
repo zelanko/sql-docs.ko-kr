@@ -2,22 +2,22 @@
 title: DMV - 뷰의 사용 통계 및 성능
 description: DMV(동적 관리 뷰) sys.dm_exec_query_optimizer_info, sys.views 및 sys.dmv_exec_cached_plans를 사용하여 SQL 쿼리 성능 통계를 가져오는 방법에 대해 알아봅니다.
 ms.custom: seo-dt-2019
-author: julieMSFT
-ms.author: jrasnick
+author: WilliamDAssafMSFT
+ms.author: wiassaf
 ms.date: 09/27/2018
 ms.prod: sql
 ms.reviewer: ''
 ms.technology: performance
 ms.topic: conceptual
-ms.openlocfilehash: ea5ae310606097b9f25a31337222b941ac963fd0
-ms.sourcegitcommit: a4ee6957708089f7d0dda15668804e325b8a240c
+ms.openlocfilehash: d900786f27280eb66ded8801843e9c657f2ceb5f
+ms.sourcegitcommit: 0e0cd9347c029e0c7c9f3fe6d39985a6d3af967d
 ms.translationtype: HT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 08/06/2020
-ms.locfileid: "87899547"
+ms.lasthandoff: 12/02/2020
+ms.locfileid: "96504908"
 ---
 # <a name="use-dmvs-to-determine-usage-statistics-and-performance-of-views"></a>DMV를 사용하여 뷰의 사용 통계 및 성능 확인
-이 문서에서는 **보기를 사용하는 쿼리 성능**에 대한 정보를 가져오는 데 사용되는 방법 및 스크립트를 설명합니다. 이러한 스크립트의 목적은 데이터베이스 내에 있는 다양한 보기의 사용 및 성능 표시기를 제공하는 것입니다. 
+이 문서에서는 **보기를 사용하는 쿼리 성능** 에 대한 정보를 가져오는 데 사용되는 방법 및 스크립트를 설명합니다. 이러한 스크립트의 목적은 데이터베이스 내에 있는 다양한 보기의 사용 및 성능 표시기를 제공하는 것입니다. 
 
 ## <a name="sysdm_exec_query_optimizer_info"></a>sys.dm_exec_query_optimizer_info
 DMV [sys.dm_exec_query_optimizer_info](../../relational-databases/system-dynamic-management-views/sys-dm-exec-query-optimizer-info-transact-sql.md)는 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 쿼리 최적화 프로그램에서 수행한 최적화에 대한 통계를 제공합니다. 이러한 값은 누적되며 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]가 시작될 때 기록을 시작합니다. 쿼리 최적화 프로그램에 대한 자세한 내용은 [쿼리 처리 아키텍처 가이드](../../relational-databases/query-processing-architecture-guide.md)를 참조하세요.   

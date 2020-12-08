@@ -11,15 +11,15 @@ ms.topic: conceptual
 helpviewer_keywords:
 - Query Store, in-memory
 ms.assetid: aae5ae6d-7c90-4661-a1c5-df704319888a
-author: julieMSFT
-ms.author: jrasnick
+author: WilliamDAssafMSFT
+ms.author: wiassaf
 monikerRange: =azuresqldb-current||>=sql-server-2016||=sqlallproducts-allversions||>=sql-server-linux-2017||=azuresqldb-mi-current
-ms.openlocfilehash: b18741804460a5a95f74345f2158cb647ab3689c
-ms.sourcegitcommit: 9470c4d1fc8d2d9d08525c4f811282999d765e6e
+ms.openlocfilehash: 8c0da148cb3d1d733e506aee2ce06b5494e44c90
+ms.sourcegitcommit: 0e0cd9347c029e0c7c9f3fe6d39985a6d3af967d
 ms.translationtype: HT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 07/17/2020
-ms.locfileid: "86457119"
+ms.lasthandoff: 12/02/2020
+ms.locfileid: "96504917"
 ---
 # <a name="using-the-query-store-with-in-memory-oltp"></a>메모리 내 OLTP와 쿼리 저장소 사용
 [!INCLUDE [SQL Server Azure SQL Database](../../includes/applies-to-version/sql-asdb.md)]
@@ -34,7 +34,7 @@ ms.locfileid: "86457119"
   
 -   쿼리 저장소를 활성화하면 쿼리, 계획 및 컴파일 시간 통계가 기본적으로 수집됩니다. 그러나 사용자가 [sys.sp_xtp_control_query_exec_stats&#40;Transact-SQL&#41;](../../relational-databases/system-stored-procedures/sys-sp-xtp-control-query-exec-stats-transact-sql.md)를 통해 명시적으로 활성화한 경우를 제외하고 런타임 통계 컬렉션은 활성화되지 않습니다.  
   
--   *\@new_collection_value*를 0으로 설정한 경우 쿼리 저장소는 영향을 받는 프로시저 또는 전체 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 인스턴스에 대한 런타임 통계 수집을 중지합니다.  
+-   *\@new_collection_value* 를 0으로 설정한 경우 쿼리 저장소는 영향을 받는 프로시저 또는 전체 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 인스턴스에 대한 런타임 통계 수집을 중지합니다.  
   
 -   [sys.sp_xtp_control_query_exec_stats&#40;Transact-SQL&#41;](../../relational-databases/system-stored-procedures/sys-sp-xtp-control-query-exec-stats-transact-sql.md)로 구성된 값은 유지되지 않습니다. [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]을(를) 다시 시작한 후에는 통계 컬렉션을 확인 후 다시 구성해야 합니다.  
   

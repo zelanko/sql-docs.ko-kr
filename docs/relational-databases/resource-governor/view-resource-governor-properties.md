@@ -12,14 +12,14 @@ f1_keywords:
 helpviewer_keywords:
 - Resource Governor, properties
 ms.assetid: de3510df-f792-4a9d-80fa-f198fd36cdc8
-author: julieMSFT
-ms.author: jrasnick
-ms.openlocfilehash: 5ff1c4429b14e359ae249f7a9e9baf2f5da46224
-ms.sourcegitcommit: 9470c4d1fc8d2d9d08525c4f811282999d765e6e
+author: WilliamDAssafMSFT
+ms.author: wiassaf
+ms.openlocfilehash: d89ade42fe716e2d457ce0cd5db200773f8a413c
+ms.sourcegitcommit: 0e0cd9347c029e0c7c9f3fe6d39985a6d3af967d
 ms.translationtype: HT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 07/17/2020
-ms.locfileid: "86457827"
+ms.lasthandoff: 12/02/2020
+ms.locfileid: "96504787"
 ---
 # <a name="view-resource-governor-properties"></a>리소스 관리자 속성 보기
 [!INCLUDE [SQL Server SQL MI](../../includes/applies-to-version/sql-asdbmi.md)]
@@ -55,13 +55,13 @@ ms.locfileid: "86457827"
 ##  <a name="resource-governor-properties-page"></a><a name="ViewRGProp"></a> Resource Governor 속성 페이지  
  **Resource Governor 속성 페이지를 사용하여 Resource Governor 속성을 보려면 [!INCLUDE[ssManStudioFull](../../includes/ssmanstudiofull-md.md)]**  
   
-1.  [!INCLUDE[ssManStudioFull](../../includes/ssmanstudiofull-md.md)]에서 개체 탐색기를 열고 **리소스 관리자** 까지 **관리**노드를 계속 확장합니다.  
+1.  [!INCLUDE[ssManStudioFull](../../includes/ssmanstudiofull-md.md)]에서 개체 탐색기를 열고 **리소스 관리자** 까지 **관리** 노드를 계속 확장합니다.  
   
-2.  **Resource Governor** 를 마우스 오른쪽 단추로 클릭한 다음 **속성**을 클릭합니다. 그러면 **Resource Governor** 페이지가 열립니다.  
+2.  **Resource Governor** 를 마우스 오른쪽 단추로 클릭한 다음 **속성** 을 클릭합니다. 그러면 **Resource Governor** 페이지가 열립니다.  
   
 3.  이 페이지의 필드에 대한 설명을 보려면 [리소스 관리자 속성](#RGProp)을 참조하세요.  
   
-4.  변경 사항을 저장하려면 **확인**을 클릭합니다.  
+4.  변경 사항을 저장하려면 **확인** 을 클릭합니다.  
 
 ##  <a name="resource-governor-properties"></a><a name="RGProp"></a> Resource Governor properties  
  **분류자 함수 이름**  

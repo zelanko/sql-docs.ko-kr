@@ -17,14 +17,14 @@ helpviewer_keywords:
 - plan guides [SQL Server], parameterization
 - parameterized queries [SQL Server]
 ms.assetid: f0f738ff-2819-4675-a8c8-1eb6c210a7e6
-author: julieMSFT
-ms.author: jrasnick
-ms.openlocfilehash: df9520716c559b2f567d6c4a674b4ea9d250321d
-ms.sourcegitcommit: 9470c4d1fc8d2d9d08525c4f811282999d765e6e
+author: WilliamDAssafMSFT
+ms.author: wiassaf
+ms.openlocfilehash: d4aa6359d3de9ff2106e4e82ebc27a62f15a2efa
+ms.sourcegitcommit: 0e0cd9347c029e0c7c9f3fe6d39985a6d3af967d
 ms.translationtype: HT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 07/17/2020
-ms.locfileid: "86458617"
+ms.lasthandoff: 12/02/2020
+ms.locfileid: "96505011"
 ---
 # <a name="specify-query-parameterization-behavior-by-using-plan-guides"></a>계획 지침을 사용하여 쿼리 매개 변수화 동작 지정
 [!INCLUDE [SQL Server Azure SQL Database](../../includes/applies-to-version/sql-asdb.md)]
@@ -34,7 +34,7 @@ ms.locfileid: "86458617"
   
 -   PARAMETERIZATION 데이터베이스 옵션을 SIMPLE로 설정하면 특정 쿼리 클래스에 강제 매개 변수화가 시도되도록 지정할 수 있습니다. 이렇게 하려면 매개 변수가 있는 쿼리 형식에 대한 TEMPLATE 계획 지침을 만들고 PARAMETERIZATION FORCED 쿼리 힌트를 [sp_create_plan_guide](../../relational-databases/system-stored-procedures/sp-create-plan-guide-transact-sql.md) 저장 프로시저에 지정합니다. 모든 쿼리 대신 쿼리의 특정 클래스에만 강제 매개 변수화를 사용하여 이러한 종류의 계획 지침을 고려할 수 있습니다. 단순 매개 변수화에 대한 자세한 내용은 [쿼리 처리 아키텍처 가이드](../../relational-databases/query-processing-architecture-guide.md#SimpleParam)를 참조하세요. 
   
--   PARAMETERIZATION 데이터베이스 옵션을 FORCED로 설정하면 특정 쿼리 클래스에 대해 강제 매개 변수화가 아닌 단순 매개 변수화만 시도되도록 지정할 수 있습니다. 이렇게 하려면 매개 변수가 강제로 지정된 쿼리 형식에 대한 TEMPLATE 계획 지침을 만들고 PARAMETERIZATION SIMPLE 쿼리 힌트를 **sp_create_plan_guide**에 지정합니다.  강제 매개 변수화에 대한 자세한 내용은 [쿼리 처리 아키텍처 가이드](../../relational-databases/query-processing-architecture-guide.md#ForcedParam)를 참조하세요. 
+-   PARAMETERIZATION 데이터베이스 옵션을 FORCED로 설정하면 특정 쿼리 클래스에 대해 강제 매개 변수화가 아닌 단순 매개 변수화만 시도되도록 지정할 수 있습니다. 이렇게 하려면 매개 변수가 강제로 지정된 쿼리 형식에 대한 TEMPLATE 계획 지침을 만들고 PARAMETERIZATION SIMPLE 쿼리 힌트를 **sp_create_plan_guide** 에 지정합니다.  강제 매개 변수화에 대한 자세한 내용은 [쿼리 처리 아키텍처 가이드](../../relational-databases/query-processing-architecture-guide.md#ForcedParam)를 참조하세요. 
   
  [!INCLUDE[ssSampleDBobject](../../includes/sssampledbobject-md.md)] 데이터베이스에서 다음 쿼리를 검토하십시오.  
   

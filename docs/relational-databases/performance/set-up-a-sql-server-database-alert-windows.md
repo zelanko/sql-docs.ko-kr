@@ -10,14 +10,14 @@ ms.topic: conceptual
 helpviewer_keywords:
 - alerts [SQL Server], creating
 ms.assetid: 65d2c5c1-921f-4eff-9ef7-149170ab61e8
-author: julieMSFT
-ms.author: jrasnick
-ms.openlocfilehash: 982feaae1638250c80091778cdbacbfc21b0b3af
-ms.sourcegitcommit: 9470c4d1fc8d2d9d08525c4f811282999d765e6e
+author: WilliamDAssafMSFT
+ms.author: wiassaf
+ms.openlocfilehash: 60e50e5680aebd9db384a8f4ace56ee5687d640a
+ms.sourcegitcommit: 0e0cd9347c029e0c7c9f3fe6d39985a6d3af967d
 ms.translationtype: HT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 07/17/2020
-ms.locfileid: "86458706"
+ms.lasthandoff: 12/02/2020
+ms.locfileid: "96505007"
 ---
 # <a name="set-up-a-sql-server-database-alert-windows"></a>SQL Server 데이터베이스 경고 설정(Windows)
  [!INCLUDE [SQL Server](../../includes/applies-to-version/sqlserver.md)]
@@ -27,21 +27,21 @@ ms.locfileid: "86458706"
   
 ## <a name="set-up-a-sql-server-database-alert"></a>SQL Server 데이터베이스 경고 설정  
   
-1. **성능** 창의 탐색 트리에서 **성능 로그 및 경고**를 확장합니다.  
+1. **성능** 창의 탐색 트리에서 **성능 로그 및 경고** 를 확장합니다.  
   
-2. **경고**를 마우스 오른쪽 단추로 클릭한 다음 **새 경고 설정**을 선택합니다.
+2. **경고** 를 마우스 오른쪽 단추로 클릭한 다음 **새 경고 설정** 을 선택합니다.
   
-3. **새 경고 설정** 대화 상자에서 새 경고의 이름을 입력한 다음 **확인**을 선택합니다.  
+3. **새 경고 설정** 대화 상자에서 새 경고의 이름을 입력한 다음 **확인** 을 선택합니다.  
   
-4. 새 경고에 대한 대화 상자의 **일반** 탭에서 **설명**을 추가합니다. **추가**를 클릭하여 카운터를 경고에 추가합니다.  
+4. 새 경고에 대한 대화 상자의 **일반** 탭에서 **설명** 을 추가합니다. **추가** 를 클릭하여 카운터를 경고에 추가합니다.  
   
      모든 경고에는 적어도 하나의 카운터가 있어야 합니다.  
   
 5. **카운터 추가** 대화 상자의 **성능 개체** 목록에서 SQL Server 개체를 선택합니다. **다음에서 카운터 선택** 목록에서 카운터를 선택합니다.  
   
-6. 카운터를 경고에 추가하려면 **추가**를 선택합니다. 카운터를 계속 추가하거나 새 경고를 위해 대화 상자로 돌아가려면 **닫기**를 선택합니다.  
+6. 카운터를 경고에 추가하려면 **추가** 를 선택합니다. 카운터를 계속 추가하거나 새 경고를 위해 대화 상자로 돌아가려면 **닫기** 를 선택합니다.  
   
-7. 새 경고 대화 상자에서 **값이 다음일 때 경고 표시**에서 **초과** 또는 **미만**을 선택합니다. 그런 다음 **제한**에 임계값을 입력합니다.  
+7. 새 경고 대화 상자에서 **값이 다음일 때 경고 표시** 에서 **초과** 또는 **미만** 을 선택합니다. 그런 다음 **제한** 에 임계값을 입력합니다.  
   
      카운터의 값이 이 임계값보다 크거나 작으면 **초과** 또는 **미만** 선택 여부에 따라 경고가 생성됩니다.  
   

@@ -12,14 +12,14 @@ helpviewer_keywords:
 - starting Windows System Monitor
 - Windows System Monitor [SQL Server], starting
 ms.assetid: 5e51bb79-5737-470b-9c47-fac330c001c5
-author: julieMSFT
-ms.author: jrasnick
-ms.openlocfilehash: e03d2d02e970a4e76988664254e0f6f26a78355b
-ms.sourcegitcommit: 9470c4d1fc8d2d9d08525c4f811282999d765e6e
+author: WilliamDAssafMSFT
+ms.author: wiassaf
+ms.openlocfilehash: d250b928ec36006b75068a879c1c29e43a7d2352
+ms.sourcegitcommit: 0e0cd9347c029e0c7c9f3fe6d39985a6d3af967d
 ms.translationtype: HT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 07/17/2020
-ms.locfileid: "86457605"
+ms.lasthandoff: 12/02/2020
+ms.locfileid: "96504977"
 ---
 # <a name="start-system-monitor-windows"></a>시스템 모니터 시작(Windows)
  [!INCLUDE [SQL Server](../../includes/applies-to-version/sqlserver.md)]
@@ -27,7 +27,7 @@ ms.locfileid: "86457605"
   
 ## <a name="start-system-monitor-in-windows"></a>Windows에서 시스템 모니터링 시작  
   
-**시작** 메뉴에서 **실행**을 가리킨 다음 **실행** 대화 상자에 **perfmon**을 입력하고 **확인**을 선택합니다.  
+**시작** 메뉴에서 **실행** 을 가리킨 다음 **실행** 대화 상자에 **perfmon** 을 입력하고 **확인** 을 선택합니다.  
   
 ## <a name="see-also"></a>참고 항목  
  [시스템 모니터 실행](../../relational-databases/performance-monitor/run-system-monitor.md)  

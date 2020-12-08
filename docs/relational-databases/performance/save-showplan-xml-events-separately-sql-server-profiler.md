@@ -13,14 +13,14 @@ helpviewer_keywords:
 - saving Showplan XML events
 - events [SQL Server], Showplan XML
 ms.assetid: 33320a7a-36e8-401c-876d-5b82c49abd85
-author: julieMSFT
-ms.author: jrasnick
-ms.openlocfilehash: c7cac6673d190ab8860792a2de1c995804275570
-ms.sourcegitcommit: 9470c4d1fc8d2d9d08525c4f811282999d765e6e
+author: WilliamDAssafMSFT
+ms.author: wiassaf
+ms.openlocfilehash: 34c79b9f3dad13a8927296d424d827eb693ad1dd
+ms.sourcegitcommit: 0e0cd9347c029e0c7c9f3fe6d39985a6d3af967d
 ms.translationtype: HT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 07/17/2020
-ms.locfileid: "86458732"
+ms.lasthandoff: 12/02/2020
+ms.locfileid: "96505027"
 ---
 # <a name="save-showplan-xml-events-separately-sql-server-profiler"></a>Showplan XML 이벤트를 개별적으로 저장(SQL Server Profiler)
  [!INCLUDE [SQL Server](../../includes/applies-to-version/sqlserver.md)]
@@ -28,42 +28,42 @@ ms.locfileid: "86458732"
   
 ## <a name="save-showplan-xml-events-separately"></a>Showplan XML 이벤트를 개별적으로 저장  
   
-1. **파일** 메뉴에서 **새 추적**을 선택한 다음 SQL Server 인스턴스에 연결합니다.  
+1. **파일** 메뉴에서 **새 추적** 을 선택한 다음 SQL Server 인스턴스에 연결합니다.  
   
      **추적 속성** 대화 상자가 나타납니다.  
   
     > [!NOTE]  
-    >  **연결한 후 즉시 추적 시작**을 선택한 경우에는 **추적 속성** 대화 상자가 나타나지 않고 추적이 시작됩니다. 이 설정을 해제하려면 **도구** 메뉴에서 **옵션**을 선택한 다음 **연결한 후 즉시 추적 시작** 확인란의 선택을 취소합니다.  
+    >  **연결한 후 즉시 추적 시작** 을 선택한 경우에는 **추적 속성** 대화 상자가 나타나지 않고 추적이 시작됩니다. 이 설정을 해제하려면 **도구** 메뉴에서 **옵션** 을 선택한 다음 **연결한 후 즉시 추적 시작** 확인란의 선택을 취소합니다.  
   
 2. **추적 속성** 대화 상자에서 **추적 이름** 입력란에 추적의 이름을 입력합니다.  
   
-3. **템플릿 사용** 목록에서 추적의 기반이 되는 추적 템플릿을 선택합니다. 템플릿을 사용하지 않으려면 **비어 있음**을 선택합니다.  
+3. **템플릿 사용** 목록에서 추적의 기반이 되는 추적 템플릿을 선택합니다. 템플릿을 사용하지 않으려면 **비어 있음** 을 선택합니다.  
   
 4. 다음 중 하나를 수행합니다.  
   
-    -   추적을 파일에 캡처하려면 **파일에 저장** 확인란을 선택합니다. **최대 파일 크기 설정**에 대한 값을 지정합니다. 
+    -   추적을 파일에 캡처하려면 **파일에 저장** 확인란을 선택합니다. **최대 파일 크기 설정** 에 대한 값을 지정합니다. 
     
         또는 **파일 롤오버 사용** 및 **서버에서 추적 데이터 처리** 확인란을 선택합니다.  
   
     -   추적을 데이터베이스 테이블에 캡처하려면 **테이블에 저장** 확인란을 선택합니다. 
     
-        필요에 따라 **최대 행 수 설정**을 선택하고 값을 지정합니다.  
+        필요에 따라 **최대 행 수 설정** 을 선택하고 값을 지정합니다.  
   
 5. 필요에 따라 **추적 중지 시간 설정** 확인란을 선택하여 중지 날짜 및 시간을 지정합니다. 
   
 6. **이벤트 선택** 탭을 선택합니다.  
   
-7. **Events** 데이터 열에서 **Performance** 이벤트 범주를 확장한 다음 **Showplan XML** 확인란을 선택합니다. **Performance** 이벤트 범주가 나타나지 않는 경우 **모든 이벤트 표시**를 선택하여 이 범주를 표시합니다.  
+7. **Events** 데이터 열에서 **Performance** 이벤트 범주를 확장한 다음 **Showplan XML** 확인란을 선택합니다. **Performance** 이벤트 범주가 나타나지 않는 경우 **모든 이벤트 표시** 를 선택하여 이 범주를 표시합니다.  
   
      **이벤트 추출 설정** 탭이 **추적 속성** 대화 상자에 추가됩니다.  
   
-8. **이벤트 추출 설정** 탭에서 **별도로 XML 실행 계획 이벤트 저장**을 선택합니다.  
+8. **이벤트 추출 설정** 탭에서 **별도로 XML 실행 계획 이벤트 저장** 을 선택합니다.  
   
 9. **다른 이름으로 저장** 대화 상자에 **Showplan XML** 이벤트를 저장할 파일 이름을 입력합니다.  
   
-10. **모든 XML 실행 계획 일괄 처리를 단일 파일로 저장**을 선택하여 **Showplan XML** 이벤트를 단일 XML 파일로 저장합니다. 또는 **각 XML 실행 계획 일괄 처리를 개별 파일로 저장**을 선택하여 각 **Showplan XML** 이벤트에 대해 새 XML 파일을 만듭니다.  
+10. **모든 XML 실행 계획 일괄 처리를 단일 파일로 저장** 을 선택하여 **Showplan XML** 이벤트를 단일 XML 파일로 저장합니다. 또는 **각 XML 실행 계획 일괄 처리를 개별 파일로 저장** 을 선택하여 각 **Showplan XML** 이벤트에 대해 새 XML 파일을 만듭니다.  
   
-11. SQL Server Management Studio의 **Showplan XML** 이벤트 파일을 보려면 **파일** 메뉴에서 **열기**를 가리키고 **파일**을 선택합니다. **Showplan XML** 이벤트 파일을 저장한 디렉터리를 찾아보고 하나를 선택하여 엽니다. **Showplan XML** 이벤트 파일의 파일 확장자는 .SQLPlan입니다.  
+11. SQL Server Management Studio의 **Showplan XML** 이벤트 파일을 보려면 **파일** 메뉴에서 **열기** 를 가리키고 **파일** 을 선택합니다. **Showplan XML** 이벤트 파일을 저장한 디렉터리를 찾아보고 하나를 선택하여 엽니다. **Showplan XML** 이벤트 파일의 파일 확장자는 .SQLPlan입니다.  
 
 ## <a name="see-also"></a>참고 항목  
  [SQL Server Profiler에서 Showplan 결과로 쿼리 분석](../../tools/sql-server-profiler/analyze-queries-with-showplan-results-in-sql-server-profiler.md)  

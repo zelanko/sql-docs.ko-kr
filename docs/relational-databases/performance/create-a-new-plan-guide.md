@@ -13,14 +13,14 @@ helpviewer_keywords:
 - creating plan guides
 - plan guides [SQL Server]. creating
 ms.assetid: e1ad78bb-4857-40ea-a0c6-dcf5c28aef2f
-author: julieMSFT
-ms.author: jrasnick
-ms.openlocfilehash: 46a3cc2e95093a9d4d3a69f1b5ca0e1eddb38d21
-ms.sourcegitcommit: 9470c4d1fc8d2d9d08525c4f811282999d765e6e
+author: WilliamDAssafMSFT
+ms.author: wiassaf
+ms.openlocfilehash: b8f96167fff7c5d36209d43eedbbd53bc1daffee
+ms.sourcegitcommit: 0e0cd9347c029e0c7c9f3fe6d39985a6d3af967d
 ms.translationtype: HT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 07/17/2020
-ms.locfileid: "86457355"
+ms.lasthandoff: 12/02/2020
+ms.locfileid: "96505327"
 ---
 # <a name="create-a-new-plan-guide"></a>새 계획 지침 만들기
 [!INCLUDE [SQL Server Azure SQL Database](../../includes/applies-to-version/sql-asdb.md)]
@@ -29,7 +29,7 @@ ms.locfileid: "86457355"
 계획 지침에서는 해결된 쿼리 계획 및/또는 쿼리 힌트를 쿼리에 적용합니다.
   
 ##  <a name="limitations-and-restrictions"></a><a name="Restrictions"></a> 제한 사항  
--   sp_create_plan_guide 인수는 표시된 순서대로 제공해야 합니다. **sp_create_plan_guide**매개 변수 값을 제공하는 경우 모든 매개 변수 이름을 명시적으로 지정하거나 모두 지정하지 않아야 합니다. 예를 들어 **@name =** 을 지정한 경우 **@stmt =** , **@type =** 등도 지정해야 합니다. 마찬가지로 **@name =** 을 생략하고 매개 변수 값만 제공한 경우 나머지 매개 변수 이름도 생략하고 해당 값만 제공해야 합니다. 인수 이름은 구문 이해를 위한 설명 용도로만 사용됩니다. [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 는 지정된 매개 변수 이름과 해당 이름이 사용된 위치의 매개 변수 이름이 일치하는지 확인하지 않습니다.  
+-   sp_create_plan_guide 인수는 표시된 순서대로 제공해야 합니다. **sp_create_plan_guide** 매개 변수 값을 제공하는 경우 모든 매개 변수 이름을 명시적으로 지정하거나 모두 지정하지 않아야 합니다. 예를 들어 **@name =** 을 지정한 경우 **@stmt =** , **@type =** 등도 지정해야 합니다. 마찬가지로 **@name =** 을 생략하고 매개 변수 값만 제공한 경우 나머지 매개 변수 이름도 생략하고 해당 값만 제공해야 합니다. 인수 이름은 구문 이해를 위한 설명 용도로만 사용됩니다. [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 는 지정된 매개 변수 이름과 해당 이름이 사용된 위치의 매개 변수 이름이 일치하는지 확인하지 않습니다.  
   
 -   같은 쿼리 및 일괄 처리나 모듈에 대해 두 개 이상의 OBJECT 또는 SQL 계획 지침을 만들 수 있습니다. 그러나 지정된 시간에 한 개의 계획 지침만 사용할 수 있습니다.  
   
@@ -49,7 +49,7 @@ ms.locfileid: "86457355"
   
 4.  **문** 입력란에 계획 지침이 적용되는 [!INCLUDE[tsql](../../includes/tsql-md.md)] 문을 입력합니다.  
   
-5.  **범위 유형** 목록에서 [!INCLUDE[tsql](../../includes/tsql-md.md)] 문이 나타나는 엔터티 유형을 선택합니다. 이것은 [!INCLUDE[tsql](../../includes/tsql-md.md)] 문을 계획 지침과 일치시키기 위한 컨텍스트를 제공합니다. 가능한 값은 **OBJECT**, **SQL**및 **TEMPLATE**입니다.  
+5.  **범위 유형** 목록에서 [!INCLUDE[tsql](../../includes/tsql-md.md)] 문이 나타나는 엔터티 유형을 선택합니다. 이것은 [!INCLUDE[tsql](../../includes/tsql-md.md)] 문을 계획 지침과 일치시키기 위한 컨텍스트를 제공합니다. 가능한 값은 **OBJECT**, **SQL** 및 **TEMPLATE** 입니다.  
   
 6.  **범위 일괄 처리** 입력란에 [!INCLUDE[tsql](../../includes/tsql-md.md)] 문이 나타나는 일괄 처리 텍스트를 입력합니다. 일괄 처리 텍스트는 `USE`*database* 문을 포함할 수 없습니다. **범위 일괄 처리** 입력란은 **SQL** 이 범위 유형으로 선택되어 있는 경우에만 사용할 수 있습니다. 범위 유형이 SQL인 경우 범위 일괄 처리 입력란에 아무 것도 입력하지 않으면 일괄 처리 텍스트 값은 **문** 입력란의 값과 동일한 값으로 설정됩니다.  
   
@@ -61,22 +61,22 @@ ms.locfileid: "86457355"
   
    매개 변수는 다음 중 하나에 해당하는 경우에만 적용됩니다.  
   
-   -   범위 유형이 **SQL** 또는 **TEMPLATE**인 경우. **TEMPLATE**일 경우 매개 변수는 NULL일 수 없습니다.  
+   -   범위 유형이 **SQL** 또는 **TEMPLATE** 인 경우. **TEMPLATE** 일 경우 매개 변수는 NULL일 수 없습니다.  
   
    -   sp_executesql을 사용하여 [!INCLUDE[tsql](../../includes/tsql-md.md)] 문이 전송되고 매개 변수에 대한 값이 지정된 경우 또는 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 에서 문을 매개 변수화한 후에 내부에서 전송하는 경우.  
   
 10. **힌트** 입력란에 [!INCLUDE[tsql](../../includes/tsql-md.md)] 문에 적용되는 쿼리 힌트 또는 쿼리 계획을 입력합니다. 하나 이상의 쿼리 힌트를 지정하려면 유효한 OPTION 절을 입력합니다.  
   
-11. **확인**을 클릭합니다.  
+11. **확인** 을 클릭합니다.  
 
 ![plan_guide](../../relational-databases/performance/media/plan-guide.png)  
 
 ##  <a name="create-a-plan-guide-using-t-sql"></a><a name="TsqlProcedure"></a> T-SQL을 사용하여 계획 지침 만들기  
-1.  **개체 탐색기**에서 [!INCLUDE[ssDE](../../includes/ssde-md.md)]인스턴스에 연결합니다.  
+1.  **개체 탐색기** 에서 [!INCLUDE[ssDE](../../includes/ssde-md.md)]인스턴스에 연결합니다.  
   
-2.  표준 도구 모음에서 **새 쿼리**를 클릭합니다.  
+2.  표준 도구 모음에서 **새 쿼리** 를 클릭합니다.  
   
-3.  다음 예를 복사하여 쿼리 창에 붙여 넣고 **실행**을 클릭합니다.  
+3.  다음 예를 복사하여 쿼리 창에 붙여 넣고 **실행** 을 클릭합니다.  
   
     ```sql  
     -- creates a plan guide named Guide1 based on a SQL statement  

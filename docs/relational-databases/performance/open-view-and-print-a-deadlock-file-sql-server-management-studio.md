@@ -14,15 +14,15 @@ helpviewer_keywords:
 - opening deadlock files
 - printing deadlock files
 ms.assetid: 5061b13f-2cb7-457a-b8d0-fbd437b510ab
-author: julieMSFT
-ms.author: jrasnick
+author: WilliamDAssafMSFT
+ms.author: wiassaf
 monikerRange: =azuresqldb-current||>=sql-server-2016||=sqlallproducts-allversions||>=sql-server-linux-2017||=azuresqldb-mi-current
-ms.openlocfilehash: 3c55ad170e9d6a9fe58865ab28ac75f018b6905b
-ms.sourcegitcommit: 9470c4d1fc8d2d9d08525c4f811282999d765e6e
+ms.openlocfilehash: c5d778526336ce26a4cfb7932971a1be275a5dda
+ms.sourcegitcommit: 0e0cd9347c029e0c7c9f3fe6d39985a6d3af967d
 ms.translationtype: HT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 07/17/2020
-ms.locfileid: "86458477"
+ms.lasthandoff: 12/02/2020
+ms.locfileid: "96505119"
 ---
 # <a name="open-view-and-print-a-deadlock-file-in-sql-server-management-studio-ssms"></a>SSMS(SQL Server Management Studio)에서 교착 상태 파일 열기, 보기 및 인쇄
 
@@ -31,19 +31,19 @@ ms.locfileid: "86458477"
   
 ## <a name="open-and-view-a-deadlock-file"></a>교착 상태 파일 열기 및 보기  
   
-1. [!INCLUDE[ssManStudioFull](../../includes/ssmanstudiofull-md.md)]의 **파일** 메뉴에서 **열기**를 가리킨 다음 **파일**을 선택합니다.  
+1. [!INCLUDE[ssManStudioFull](../../includes/ssmanstudiofull-md.md)]의 **파일** 메뉴에서 **열기** 를 가리킨 다음 **파일** 을 선택합니다.  
   
 2. **파일 열기** 대화 상자의 **파일 유형** 확인란에서 .xdl 파일 유형을 선택합니다. 교착 상태 파일만 필터링한 목록이 남아 있을 것입니다.  
   
 ## <a name="print-a-deadlock-file"></a>교착 상태 파일 인쇄  
   
-1. [!INCLUDE[ssManStudioFull](../../includes/ssmanstudiofull-md.md)]의 **파일** 메뉴에서 **열기**를 가리킨 다음 **파일**을 선택합니다.  
+1. [!INCLUDE[ssManStudioFull](../../includes/ssmanstudiofull-md.md)]의 **파일** 메뉴에서 **열기** 를 가리킨 다음 **파일** 을 선택합니다.  
   
 2. **파일 열기** 대화 상자의 **파일 유형** 확인란에서 .xdl 파일 유형을 선택합니다. 교착 상태 파일만 필터링한 목록이 남아 있을 것입니다.  
   
-3. 인쇄할 교착 상태 파일을 선택하고 **열기**를 선택합니다.  
+3. 인쇄할 교착 상태 파일을 선택하고 **열기** 를 선택합니다.  
   
-4. **파일** 메뉴에서 **인쇄**를 선택합니다.  
+4. **파일** 메뉴에서 **인쇄** 를 선택합니다.  
   
 ## <a name="see-also"></a>참고 항목  
  [교착 상태 그래프 저장&#40;SQL Server Profiler&#41;](../../relational-databases/performance/save-deadlock-graphs-sql-server-profiler.md)  
