@@ -21,15 +21,15 @@ helpviewer_keywords:
 - data compression [Database Engine]
 - compressed tables [SQL Server]
 ms.assetid: 5f33e686-e115-4687-bd39-a00c48646513
-author: MikeRayMSFT
-ms.author: mikeray
+author: WilliamDAssafMSFT
+ms.author: wiassaf
 monikerRange: =azuresqldb-current||>=sql-server-2016||=sqlallproducts-allversions||>=sql-server-linux-2017||=azuresqldb-mi-current
-ms.openlocfilehash: 5da071f378edb771d4b1dc70ac8257febd78a522
-ms.sourcegitcommit: 9470c4d1fc8d2d9d08525c4f811282999d765e6e
+ms.openlocfilehash: 8fa0ba2c8cda457b64153875929f0c3e4d4fc5fc
+ms.sourcegitcommit: 0e0cd9347c029e0c7c9f3fe6d39985a6d3af967d
 ms.translationtype: HT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 07/17/2020
-ms.locfileid: "86459015"
+ms.lasthandoff: 12/02/2020
+ms.locfileid: "96506500"
 ---
 # <a name="data-compression"></a>Data Compression
 [!INCLUDE [SQL Server Azure SQL Database](../../includes/applies-to-version/sql-asdb.md)]
@@ -137,8 +137,8 @@ REBUILD PARTITION = ALL WITH (
   
 ### <a name="metadata"></a>메타데이터  
 다음 시스템 뷰에는 클러스터형 인덱스의 데이터 압축 정보가 포함되어 있습니다.  
--   [sys.indexes&#40;Transact-SQL&#41;](../../relational-databases/system-catalog-views/sys-indexes-transact-sql.md) - **type**과 **type_desc** 열에는 CLUSTERED COLUMNSTORE 및 NONCLUSTERED COLUMNSTORE가 포함됩니다.  
--   [sys.partitions&#40;Transact-SQL&#41;](../../relational-databases/system-catalog-views/sys-partitions-transact-sql.md) – **data_compression**과 **data_compression_desc** 열에는 COLUMNSTORE 및 COLUMNSTORE_ARCHIVE가 포함됩니다.  
+-   [sys.indexes&#40;Transact-SQL&#41;](../../relational-databases/system-catalog-views/sys-indexes-transact-sql.md) - **type** 과 **type_desc** 열에는 CLUSTERED COLUMNSTORE 및 NONCLUSTERED COLUMNSTORE가 포함됩니다.  
+-   [sys.partitions&#40;Transact-SQL&#41;](../../relational-databases/system-catalog-views/sys-partitions-transact-sql.md) – **data_compression** 과 **data_compression_desc** 열에는 COLUMNSTORE 및 COLUMNSTORE_ARCHIVE가 포함됩니다.  
   
 [sp_estimate_data_compression_savings &#40;Transact-SQL&#41;](../../relational-databases/system-stored-procedures/sp-estimate-data-compression-savings-transact-sql.md) 프로시저는 columnstore 인덱스에도 적용할 수 있습니다.  
   

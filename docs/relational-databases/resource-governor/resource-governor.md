@@ -11,14 +11,14 @@ helpviewer_keywords:
 - Resource Governor, overview
 - Resource Governor
 ms.assetid: 2bc89b66-e801-45ba-b30d-8ed197052212
-author: julieMSFT
-ms.author: jrasnick
-ms.openlocfilehash: 8654f25318bfc947394b0acaf0df19a8f7eb2bc3
-ms.sourcegitcommit: 9470c4d1fc8d2d9d08525c4f811282999d765e6e
+author: WilliamDAssafMSFT
+ms.author: wiassaf
+ms.openlocfilehash: 29d63602d4e3553ee2e5f1cb9053e445265fd301
+ms.sourcegitcommit: 0e0cd9347c029e0c7c9f3fe6d39985a6d3af967d
 ms.translationtype: HT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 07/17/2020
-ms.locfileid: "86457833"
+ms.lasthandoff: 12/02/2020
+ms.locfileid: "96506557"
 ---
 # <a name="resource-governor"></a>관리
 [!INCLUDE [SQL Server SQL MI](../../includes/applies-to-version/sql-asdbmi.md)]

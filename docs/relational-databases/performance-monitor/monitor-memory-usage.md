@@ -22,14 +22,14 @@ helpviewer_keywords:
 - monitoring performance [SQL Server], memory usage
 - server performance [SQL Server], memory
 ms.assetid: 1aee3933-a11c-4b87-91b7-32f5ea38c87f
-author: julieMSFT
-ms.author: jrasnick
-ms.openlocfilehash: 0d390a0ed1397a7f433c5582361def2f4022d09b
-ms.sourcegitcommit: c8e1553ff3fdf295e8dc6ce30d1c454d6fde8088
+author: WilliamDAssafMSFT
+ms.author: wiassaf
+ms.openlocfilehash: 93e2780c3e51ce46e0687864896c36b7d3166917
+ms.sourcegitcommit: 0e0cd9347c029e0c7c9f3fe6d39985a6d3af967d
 ms.translationtype: HT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 07/22/2020
-ms.locfileid: "86906288"
+ms.lasthandoff: 12/02/2020
+ms.locfileid: "96506011"
 ---
 # <a name="monitor-memory-usage"></a>메모리 사용량 모니터링
  [!INCLUDE [SQL Server](../../includes/applies-to-version/sqlserver.md)]
@@ -50,7 +50,7 @@ ms.locfileid: "86906288"
  과도한 페이징을 해결하는 방법은 Windows 운영 체제 설명서를 참조하세요.  
   
 ## <a name="isolating-memory-used-by-sql-server"></a>SQL Server가 사용하는 메모리 격리  
- 기본적으로 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 는 사용할 수 있는 시스템 리소스에 따라 메모리 요구 사항을 동적으로 변경합니다. [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 는 메모리가 더 필요할 경우 운영 체제를 쿼리하여 실제 여유 메모리가 사용 가능한지 확인하고 사용 가능한 메모리를 사용합니다. OS에서 사용 가능한 메모리가 부족한 경우 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]는 메모리 부족 상태가 완화될 때까지 또는 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]가 minservermemory 제한에 도달할 때까지 메모리를 해제하여 운영 체제로 돌려보냅니다. 그러나 **minservermemory**및 **maxservermemory** 서버 구성 옵션을 사용하여 메모리를 동적으로 사용하도록 옵션을 재정의할 수 있습니다. 자세한 내용은 [서버 메모리 옵션](../../database-engine/configure-windows/server-memory-server-configuration-options.md)을 참조하세요.  
+ 기본적으로 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 는 사용할 수 있는 시스템 리소스에 따라 메모리 요구 사항을 동적으로 변경합니다. [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 는 메모리가 더 필요할 경우 운영 체제를 쿼리하여 실제 여유 메모리가 사용 가능한지 확인하고 사용 가능한 메모리를 사용합니다. OS에서 사용 가능한 메모리가 부족한 경우 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]는 메모리 부족 상태가 완화될 때까지 또는 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]가 minservermemory 제한에 도달할 때까지 메모리를 해제하여 운영 체제로 돌려보냅니다. 그러나 **minservermemory** 및 **maxservermemory** 서버 구성 옵션을 사용하여 메모리를 동적으로 사용하도록 옵션을 재정의할 수 있습니다. 자세한 내용은 [서버 메모리 옵션](../../database-engine/configure-windows/server-memory-server-configuration-options.md)을 참조하세요.  
   
  [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 에서 사용하는 메모리의 양을 모니터링하려면 다음 성능 카운터를 검사하세요.  
   

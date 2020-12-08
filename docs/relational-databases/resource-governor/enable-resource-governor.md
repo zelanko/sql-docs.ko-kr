@@ -10,14 +10,14 @@ ms.topic: conceptual
 helpviewer_keywords:
 - Resource Governor, enabling
 ms.assetid: 4d17af53-cf11-4ce4-aab4-deda94a49836
-author: julieMSFT
-ms.author: jrasnick
-ms.openlocfilehash: 7e58987e36ee4119b282a303265d2b6d898c9b0b
-ms.sourcegitcommit: 9470c4d1fc8d2d9d08525c4f811282999d765e6e
+author: WilliamDAssafMSFT
+ms.author: wiassaf
+ms.openlocfilehash: 775956ae1a6f802a986bcca11755887644f797f9
+ms.sourcegitcommit: 0e0cd9347c029e0c7c9f3fe6d39985a6d3af967d
 ms.translationtype: HT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 07/17/2020
-ms.locfileid: "86457845"
+ms.lasthandoff: 12/02/2020
+ms.locfileid: "96506587"
 ---
 # <a name="enable-resource-governor"></a>리소스 관리자 사용
 [!INCLUDE [SQL Server SQL MI](../../includes/applies-to-version/sql-asdbmi.md)]
@@ -45,18 +45,18 @@ ms.locfileid: "86457845"
 ##  <a name="enable-resource-governor-using-object-explorer"></a><a name="RGOnObjEx"></a> 개체 탐색기를 사용하여 리소스 관리자를 사용하도록 설정  
  **개체 탐색기를 사용하여 리소스 관리자를 사용하도록 설정하려면**  
   
-1.  [!INCLUDE[ssManStudioFull](../../includes/ssmanstudiofull-md.md)]에서 개체 탐색기를 열고 **리소스 관리자** 까지 **관리**노드를 계속 확장합니다.  
+1.  [!INCLUDE[ssManStudioFull](../../includes/ssmanstudiofull-md.md)]에서 개체 탐색기를 열고 **리소스 관리자** 까지 **관리** 노드를 계속 확장합니다.  
   
-2.  **Resource Governor**를 마우스 오른쪽 단추로 클릭한 다음 **사용**을 클릭합니다.  
+2.  **Resource Governor** 를 마우스 오른쪽 단추로 클릭한 다음 **사용** 을 클릭합니다.  
   
 ##  <a name="enable-resource-governor-using-resource-governor-properties"></a><a name="RGOnProp"></a> 리소스 관리자 속성을 사용하여 리소스 관리자를 사용하도록 설정  
  **리소스 관리자 속성 페이지를 사용하여 리소스 관리자를 사용하도록 설정하려면**  
   
-1.  [!INCLUDE[ssManStudioFull](../../includes/ssmanstudiofull-md.md)]에서 개체 탐색기를 열고 **리소스 관리자** 까지 **관리**노드를 계속 확장합니다.  
+1.  [!INCLUDE[ssManStudioFull](../../includes/ssmanstudiofull-md.md)]에서 개체 탐색기를 열고 **리소스 관리자** 까지 **관리** 노드를 계속 확장합니다.  
   
-2.  **Resource Governor** 를 마우스 오른쪽 단추로 클릭한 다음 **속성**을 클릭합니다. 그러면 **Resource Governor** 페이지가 열립니다.  
+2.  **Resource Governor** 를 마우스 오른쪽 단추로 클릭한 다음 **속성** 을 클릭합니다. 그러면 **Resource Governor** 페이지가 열립니다.  
   
-3.  **리소스 관리자 사용** 확인란을 클릭한 다음 **확인**을 클릭합니다.  
+3.  **리소스 관리자 사용** 확인란을 클릭한 다음 **확인** 을 클릭합니다.  
   
 ##  <a name="enable-resource-governor-using-transact-sql"></a><a name="RGOnTSQL"></a> Transact-SQL을 사용하여 리소스 관리자를 사용하도록 설정  
  **Transact-SQL을 사용하여 리소스 관리자를 사용하도록 설정**  

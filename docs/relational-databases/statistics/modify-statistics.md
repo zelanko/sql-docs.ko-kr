@@ -11,15 +11,15 @@ helpviewer_keywords:
 - statistics [SQL Server], modifying
 - modifying statistics
 ms.assetid: b06299ca-ed52-411a-b245-45eac4628c99
-author: julieMSFT
-ms.author: jrasnick
+author: WilliamDAssafMSFT
+ms.author: wiassaf
 monikerRange: '>=aps-pdw-2016||=azuresqldb-current||=azure-sqldw-latest||>=sql-server-2016||=sqlallproducts-allversions||>=sql-server-linux-2017||=azuresqldb-mi-current'
-ms.openlocfilehash: d39e99b4c50d1b077cf3871ba5d89b7a170d2f16
-ms.sourcegitcommit: 9470c4d1fc8d2d9d08525c4f811282999d765e6e
+ms.openlocfilehash: 9fc8456ee8423cf8789e7fc1d8c44428958ac805
+ms.sourcegitcommit: 0e0cd9347c029e0c7c9f3fe6d39985a6d3af967d
 ms.translationtype: HT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 07/17/2020
-ms.locfileid: "86458105"
+ms.lasthandoff: 12/02/2020
+ms.locfileid: "96506542"
 ---
 # <a name="modify-statistics"></a>통계 수정
 [!INCLUDE[SQL Server Azure SQL Database Synapse Analytics PDW ](../../includes/applies-to-version/sql-asdb-asdbmi-asa-pdw.md)]
@@ -52,7 +52,7 @@ ms.locfileid: "86458105"
   
 #### <a name="to-modify-statistics"></a>통계를 수정하려면  
   
-1.  **개체 탐색기**에서 더하기 기호를 클릭하여 통계를 수정할 데이터베이스를 확장합니다.  
+1.  **개체 탐색기** 에서 더하기 기호를 클릭하여 통계를 수정할 데이터베이스를 확장합니다.  
   
 2.  더하기 기호를 클릭하여 **테이블** 폴더를 확장합니다.  
   
@@ -60,11 +60,11 @@ ms.locfileid: "86458105"
   
 4.  더하기 기호를 클릭하여 **통계** 폴더를 확장합니다.  
   
-5.  수정하려는 통계 개체를 마우스 오른쪽 단추로 클릭하고 **속성**을 선택합니다.  
+5.  수정하려는 통계 개체를 마우스 오른쪽 단추로 클릭하고 **속성** 을 선택합니다.  
   
-6.  **통계 속성 -** *statistics_name* 대화 상자의 **일반** 페이지에서 **추가**, **제거**, **위로 이동**, **아래로 이동**을 클릭하거나 이를 조합하여 통계 속성을 변경합니다. **통계 열** 표 안에 있는 열의 위치는 통계의 유용성에 큰 영향을 미칠 수 있습니다.  
+6.  **통계 속성 -** *statistics_name* 대화 상자의 **일반** 페이지에서 **추가**, **제거**, **위로 이동**, **아래로 이동** 을 클릭하거나 이를 조합하여 통계 속성을 변경합니다. **통계 열** 표 안에 있는 열의 위치는 통계의 유용성에 큰 영향을 미칠 수 있습니다.  
   
-7.  **확인**을 클릭합니다.  
+7.  **확인** 을 클릭합니다.  
 
 ##  <a name="using-transact-sql"></a><a name="TsqlProcedure"></a> Transact-SQL 사용  
  **통계를 수정하려면**  

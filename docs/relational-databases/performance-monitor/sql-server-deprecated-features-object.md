@@ -14,14 +14,14 @@ helpviewer_keywords:
 - deprecation [SQL Server], performance counters
 - Deprecated Features object
 ms.assetid: e95de9d6-c950-41cd-8aaa-be529c6de198
-author: julieMSFT
-ms.author: jrasnick
-ms.openlocfilehash: a833e7029697693a6620ce5196a10b6ef95acc8f
-ms.sourcegitcommit: 783b35f6478006d654491cb52f6edf108acf2482
+author: WilliamDAssafMSFT
+ms.author: wiassaf
+ms.openlocfilehash: 4e6e6ae53bfc9cf3c6c702e9caf8a1a9bdaf29a1
+ms.sourcegitcommit: 0e0cd9347c029e0c7c9f3fe6d39985a6d3af967d
 ms.translationtype: HT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 10/09/2020
-ms.locfileid: "91890923"
+ms.lasthandoff: 12/02/2020
+ms.locfileid: "96505725"
 ---
 # <a name="sql-server-deprecated-features-object"></a>SQL Server, Deprecated Features 개체
  [!INCLUDE [SQL Server](../../includes/applies-to-version/sqlserver.md)]
@@ -54,7 +54,7 @@ WHERE object_name = 'SQLServer:Deprecated Features';
 |ALTER LOGIN WITH SET CREDENTIAL|사용되지 않는 기능 구문인 ALTER LOGIN WITH SET CREDENTIAL 또는 ALTER LOGIN WITH NO CREDENTIAL이 발견되었습니다. 대신 ADD 또는 DROP CREDENTIAL 구문을 사용해야 합니다. 컴파일마다 한 번씩 발생합니다.|  
 |Azeri_Cyrilllic_90|데이터베이스를 시작하고 데이터 정렬을 사용할 때마다 이벤트가 한 번씩 발생합니다. 이 데이터 정렬을 사용하는 애플리케이션은 수정해야 합니다.|  
 |Azeri_Latin_90|데이터베이스를 시작하고 데이터 정렬을 사용할 때마다 이벤트가 한 번씩 발생합니다. 이 데이터 정렬을 사용하는 애플리케이션은 수정해야 합니다.|  
-|BACKUP DATABASE 또는 LOG TO TAPE|사용되지 않는 기능인 BACKUP { DATABASE &#124; LOG } TO TAPE 또는 BACKUP { DATABASE &#124; LOG } TO *device_that_is_a_tape*가 발견되었습니다.<br /><br /> 대신 BACKUP { DATABASE &#124; LOG } TO DISK 또는 BACKUP { DATABASE &#124; LOG } TO *device_that_is_a_disk*를 사용하세요. 사용할 때마다 한 번씩 발생합니다.|  
+|BACKUP DATABASE 또는 LOG TO TAPE|사용되지 않는 기능인 BACKUP { DATABASE &#124; LOG } TO TAPE 또는 BACKUP { DATABASE &#124; LOG } TO *device_that_is_a_tape* 가 발견되었습니다.<br /><br /> 대신 BACKUP { DATABASE &#124; LOG } TO DISK 또는 BACKUP { DATABASE &#124; LOG } TO *device_that_is_a_disk* 를 사용하세요. 사용할 때마다 한 번씩 발생합니다.|  
 |BACKUP DATABASE 또는 LOG WITH MEDIAPASSWORD|사용되지 않는 기능인 BACKUP DATABASE WITH MEDIAPASSWORD 또는 BACKUP LOG WITH MEDIAPASSWORD가 발견되었습니다. WITH MEDIAPASSWORD는 사용할 수 없습니다.|  
 |BACKUP DATABASE 또는 LOG WITH PASSWORD|사용되지 않는 기능인 BACKUP DATABASE WITH PASSWORD 또는 BACKUP LOG WITH PASSWORD가 발견되었습니다. WITH PASSWORD는 사용할 수 없습니다.|  
 |COMPUTE [BY]|COMPUTE 또는 COMPUTE BY 구문이 발견되었습니다. ROLLUP에 GROUP BY를 사용하도록 쿼리를 다시 작성해야 합니다. 컴파일마다 한 번씩 발생합니다.|  
@@ -62,7 +62,7 @@ WHERE object_name = 'SQLServer:Deprecated Features';
 |CREATE TRIGGER WITH APPEND|WITH APPEND 절이 포함된 CREATE TRIGGER 문이 발견되었습니다. 대신 전체 트리거를 다시 만들어야 합니다. DDL 문에서 사용할 때마다 한 번씩 발생합니다.|  
 |CREATE_DROP_DEFAULT|CREATE DEFAULT 또는 DROP DEFAULT 구문이 발견되었습니다. CREATE TABLE 또는 ALTER TABLE에 DEFAULT 옵션을 사용하여 명령을 다시 작성해야 합니다. 컴파일마다 한 번씩 발생합니다.|  
 |CREATE_DROP_RULE|CREATE RULE 구문이 발견되었습니다. 제약 조건을 사용하여 명령을 다시 작성해야 합니다. 컴파일마다 한 번씩 발생합니다.|  
-|데이터 형식: text, ntext 또는 image|**text**, **ntext**또는 **image** 데이터 형식이 발견되었습니다. **varchar(max)** 데이터 형식을 사용하고 **text**, **ntext**및 **image** 데이터 형식 구문을 제거하도록 애플리케이션을 다시 작성해야 합니다. 쿼리마다 한 번씩 발생합니다.|  
+|데이터 형식: text, ntext 또는 image|**text**, **ntext** 또는 **image** 데이터 형식이 발견되었습니다. **varchar(max)** 데이터 형식을 사용하고 **text**, **ntext** 및 **image** 데이터 형식 구문을 제거하도록 애플리케이션을 다시 작성해야 합니다. 쿼리마다 한 번씩 발생합니다.|  
 ||데이터베이스가 호환성 수준 80으로 변경된 총 횟수입니다. 다음 릴리스 전에 데이터베이스 및 애플리케이션을 업그레이드하도록 계획합니다. 또한 호환성 수준이 80인 데이터베이스가 시작될 때도 발생합니다.|  
 |데이터베이스 호환성 수준 100, 110 120|데이터베이스 호환성 수준이 변경된 총 횟수입니다. 이후 릴리스로 데이터베이스 및 애플리케이션을 업그레이드하도록 계획합니다. 또한 사용되지 않는 호환성 수준의 데이터베이스가 시작될 때도 발생합니다.|  
 |DATABASE_MIRRORING|데이터베이스 미러링 기능에 대한 참조가 발견되었습니다. Always On 가용성 그룹으로 업그레이드하도록 계획하거나 Always On 가용성 그룹을 지원하지 않는 SQL Server 버전을 실행 중인 경우 로그 전달로 마이그레이션하도록 계획하세요.|  
@@ -266,10 +266,10 @@ WHERE object_name = 'SQLServer:Deprecated Features';
 |sysusers|sysusers에 대한 참조가 발견되었습니다. 대신 sys.database_principals를 사용해야 합니다. 컴파일마다 한 번씩 발생합니다.|  
 |WITH가 없는 테이블 힌트|WITH 키워드 없이 테이블 힌트를 사용한 문이 발견되었습니다. WITH 단어를 포함하도록 문을 수정해야 합니다. 컴파일마다 한 번씩 발생합니다.|  
 |Text in row 테이블 옵션|'text in row' 테이블 옵션에 대한 참조가 발견되었습니다. 대신 sp_tableoption 'large value types out of row'를 사용해야 합니다. 쿼리마다 한 번씩 발생합니다.|  
-|TEXTPTR|TEXTPTR 함수에 대한 참조가 발견되었습니다. **varchar(max)** 데이터 형식을 사용하고 **text**, **ntext**및 **image** 데이터 형식 구문을 제거하도록 애플리케이션을 다시 작성해야 합니다. 쿼리마다 한 번씩 발생합니다.|  
-|TEXTVALID|TEXTVALID 함수에 대한 참조가 발견되었습니다. **varchar(max)** 데이터 형식을 사용하고 **text**, **ntext**및 **image** 데이터 형식 구문을 제거하도록 애플리케이션을 다시 작성해야 합니다. 쿼리마다 한 번씩 발생합니다.|  
+|TEXTPTR|TEXTPTR 함수에 대한 참조가 발견되었습니다. **varchar(max)** 데이터 형식을 사용하고 **text**, **ntext** 및 **image** 데이터 형식 구문을 제거하도록 애플리케이션을 다시 작성해야 합니다. 쿼리마다 한 번씩 발생합니다.|  
+|TEXTVALID|TEXTVALID 함수에 대한 참조가 발견되었습니다. **varchar(max)** 데이터 형식을 사용하고 **text**, **ntext** 및 **image** 데이터 형식 구문을 제거하도록 애플리케이션을 다시 작성해야 합니다. 쿼리마다 한 번씩 발생합니다.|  
 |timestamp|사용되지 않는 **timestamp** 데이터 형식이 DDL 문에서 발견된 총 횟수입니다. 대신 **rowversion** 데이터 형식을 사용해야 합니다.|  
-|UPDATETEXT 또는 WRITETEXT|UPDATETEXT 또는 WRITETEXT 문이 발견되었습니다. **varchar(max)** 데이터 형식을 사용하고 **text**, **ntext**및 **image** 데이터 형식 구문을 제거하도록 애플리케이션을 다시 작성해야 합니다. 쿼리마다 한 번씩 발생합니다.|  
+|UPDATETEXT 또는 WRITETEXT|UPDATETEXT 또는 WRITETEXT 문이 발견되었습니다. **varchar(max)** 데이터 형식을 사용하고 **text**, **ntext** 및 **image** 데이터 형식 구문을 제거하도록 애플리케이션을 다시 작성해야 합니다. 쿼리마다 한 번씩 발생합니다.|  
 |USER_ID|USER_ID 함수에 대한 참조가 발견되었습니다. 대신 DATABASE_PRINCIPAL_ID 함수를 사용해야 합니다. 컴파일마다 한 번씩 발생합니다.|  
 |연결된 서버에 OLEDB 사용||  
 |VarDecimal 스토리지 형식|**vardecimal** 스토리지 형식이 사용되었습니다. 대신 데이터 압축을 사용해야 합니다.|  

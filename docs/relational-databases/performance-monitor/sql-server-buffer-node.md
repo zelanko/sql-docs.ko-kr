@@ -12,14 +12,14 @@ helpviewer_keywords:
 - SQLServer:Buffer Node
 - Buffer Node object
 ms.assetid: fd3f9f0f-7c38-4cfd-a0c5-ee93dd52d9a5
-author: julieMSFT
-ms.author: jrasnick
-ms.openlocfilehash: ce9d30b4d7f8716dc256d1ea640924af7945d8fd
-ms.sourcegitcommit: 9470c4d1fc8d2d9d08525c4f811282999d765e6e
+author: WilliamDAssafMSFT
+ms.author: wiassaf
+ms.openlocfilehash: eb86d3734d7e2cf7799940837f6d3677fb53c89e
+ms.sourcegitcommit: 0e0cd9347c029e0c7c9f3fe6d39985a6d3af967d
 ms.translationtype: HT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 07/17/2020
-ms.locfileid: "86457445"
+ms.lasthandoff: 12/02/2020
+ms.locfileid: "96505844"
 ---
 # <a name="sql-serverbuffer-node"></a>SQL Server:Buffer Node
  [!INCLUDE [SQL Server](../../includes/applies-to-version/sqlserver.md)]
@@ -37,7 +37,7 @@ ms.locfileid: "86457445"
   
  비-NUMA 하드웨어에서 SQL Server를 실행하는 경우 **Buffer Node** 및 **Buffer Manager** 개체의 카운터가 일치해야 합니다.  
   
- NUMA 하드웨어에서 모든 **Buffer Nodes** 의 각 카운터 합계는 **Buffer Manager**의 해당 합계와 일치해야 합니다.  
+ NUMA 하드웨어에서 모든 **Buffer Nodes** 의 각 카운터 합계는 **Buffer Manager** 의 해당 합계와 일치해야 합니다.  
   
 > [!NOTE]  
 >  카운터의 동적 특성과 샘플링 정확도 때문에 카운터 값과 합계가 정확하게 일치하지 않을 수도 있습니다.  

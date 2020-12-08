@@ -14,14 +14,14 @@ helpviewer_keywords:
 - performance counters [SQL Server], AlwaysOn Availability Groups
 - Availability Groups [SQL Server], performance counters
 ms.assetid: a5f6bdce-2b13-4924-aaeb-b50b57d624d8
-author: julieMSFT
-ms.author: jrasnick
-ms.openlocfilehash: 280fae3d260995a15a7baa9e40a861cb2cfdecc4
-ms.sourcegitcommit: 783b35f6478006d654491cb52f6edf108acf2482
+author: WilliamDAssafMSFT
+ms.author: wiassaf
+ms.openlocfilehash: 176f7b9ba860e6ca7f72e35f6c6a87622948fc70
+ms.sourcegitcommit: 0e0cd9347c029e0c7c9f3fe6d39985a6d3af967d
 ms.translationtype: HT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 10/09/2020
-ms.locfileid: "91892233"
+ms.lasthandoff: 12/02/2020
+ms.locfileid: "96505757"
 ---
 # <a name="sql-server-database-replica"></a>SQL Server, 데이터베이스 복제본
 
@@ -42,7 +42,7 @@ ms.locfileid: "91892233"
 |**Redo Bytes Remaining**|되돌리기 단계를 완료하기 위해 다시 실행할 남은 로그 양(킬로바이트)입니다.|보조 복제본|  
 |**Redone Bytes/sec**|마지막 1초 동안 보조 데이터베이스에서 다시 실행된 로그 레코드의 양입니다.|보조 복제본|  
 |**Total Log requiring undo**|실행 취소해야 하는 로그의 총 크기(KB)입니다.|보조 복제본|  
-|**Transaction Delay**|모든 현재 트랜잭션 대한 종결되지 않은 커밋 승인을 기다리는 데 걸리는 시간(밀리초)입니다. *미러된 쓰기 트랜잭션/초*로 나누어 *평균 Transaction Delay*를 가져옵니다. 자세한 내용은 [SQL Server 2012 AlwaysOn – 파트 12 – 성능 측면 및 성능 모니터링 II](/archive/blogs/saponsqlserver/sql-server-2012-alwayson-part-12-performance-aspects-and-performance-monitoring-ii)를 참조하세요.|주 복제본|  
+|**Transaction Delay**|모든 현재 트랜잭션 대한 종결되지 않은 커밋 승인을 기다리는 데 걸리는 시간(밀리초)입니다. *미러된 쓰기 트랜잭션/초* 로 나누어 *평균 Transaction Delay* 를 가져옵니다. 자세한 내용은 [SQL Server 2012 AlwaysOn – 파트 12 – 성능 측면 및 성능 모니터링 II](/archive/blogs/saponsqlserver/sql-server-2012-alwayson-part-12-performance-aspects-and-performance-monitoring-ii)를 참조하세요.|주 복제본|  
   
 ## <a name="see-also"></a>참고 항목
   

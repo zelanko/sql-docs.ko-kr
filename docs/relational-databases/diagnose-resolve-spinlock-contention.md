@@ -3,18 +3,18 @@ title: '백서: 스핀 잠금 경합 진단 및 해결'
 description: 이 문서에서는 SQL Server의 스핀 잠금 경합을 진단하고 해결하는 방법을 자세히 살펴봅니다. 이 문서는 원래 Microsoft SQLCAT 팀이 게시한 것입니다.
 ms.date: 09/30/2020
 ms.prod: sql
-ms.reviewer: jroth
+ms.reviewer: wiassaf
 ms.technology: performance
 ms.topic: how-to
 author: bluefooted
 ms.author: pamela
 monikerRange: '>=aps-pdw-2016||=azuresqldb-current||=azure-sqldw-latest||>=sql-server-2016||=sqlallproducts-allversions||>=sql-server-linux-2017||=azuresqldb-mi-current'
-ms.openlocfilehash: bf22570ae96e0ee2a839088e6848443d0c9dddd9
-ms.sourcegitcommit: 04cf7905fa32e0a9a44575a6f9641d9a2e5ac0f8
+ms.openlocfilehash: 6ecce46a04943d36dc6d821d6a3457b056f00356
+ms.sourcegitcommit: 0e0cd9347c029e0c7c9f3fe6d39985a6d3af967d
 ms.translationtype: HT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 10/07/2020
-ms.locfileid: "91811863"
+ms.lasthandoff: 12/02/2020
+ms.locfileid: "96506317"
 ---
 # <a name="diagnose-and-resolve-spinlock-contention-on-sql-server"></a>SQL Server에서 스핀 잠금 경합 진단 및 해결
 
@@ -81,7 +81,7 @@ order by spins desc
 
 * 특정 스핀 잠금 유형에 대해 높은 스핀 횟수와 백오프 횟수가 관찰됩니다.
 
-* 시스템의 CPU 사용률이 높거나 CPU 사용량이 급증합니다. 과도한 CPU 사용 시나리오에서는 SOS_SCHEDULER_YEILD의 신호 대기 수가 높습니다(DMV *sys.dm_os_wait_stats*를 통해 보고됨).
+* 시스템의 CPU 사용률이 높거나 CPU 사용량이 급증합니다. 과도한 CPU 사용 시나리오에서는 SOS_SCHEDULER_YEILD의 신호 대기 수가 높습니다(DMV *sys.dm_os_wait_stats* 를 통해 보고됨).
 
 * 시스템의 동시성이 높습니다.
 
@@ -135,7 +135,7 @@ SQL Server 스핀 잠금 경합을 진단하는 일반적인 기술 프로세스
 
 1. **1단계**: 스핀 잠금과 관련된 경합이 있는지 확인합니다.
 
-2. **2단계**: *sys.dm\_ os_spinlock_stats*의 통계를 캡처하여 가장 많은 경합이 발생하는 스핀 잠금 유형을 찾습니다.
+2. **2단계**: *sys.dm\_ os_spinlock_stats* 의 통계를 캡처하여 가장 많은 경합이 발생하는 스핀 잠금 유형을 찾습니다.
 
 3. **3단계**: sqlservr.exe(sqlservr.pdb)의 디버그 기호를 가져와 SQL Server 인스턴스의 SQL Server 서비스 .exe 파일(sqlservr.exe)과 동일한 디렉터리에 기호를 저장합니다.\ 백오프 이벤트의 호출 스택을 확인하려면 실행하는 특정 SQL Server 버전의 기호가 있어야 합니다. SQL Server 기호는 Microsoft 기호 서버에서 다운로드할 수 있습니다. Microsoft 기호 서버에서 기호를 다운로드하는 방법에 대한 자세한 내용은 [기호를 사용하여 디버깅](https://docs.microsoft.com/windows/win32/dxtecharts/debugging-with-symbols)을 참조하세요.
 
@@ -155,7 +155,7 @@ CPU 사용률을 거의 100%까지 푸시하는 주기적 CPU 급증이 관찰�
 
 ![성능 모니터의 CPU 급증](./media/diagnose-resolve-spinlock-contention/image9.png)
 
-*sys.dm_os_spinlock_stats*를 쿼리하여 SOS_CACHESTORE에 상당한 경합이 있음을 확인한 후 확장 이벤트 스크립트를 사용하여 관심 있는 스핀 잠금 유형의 백오프 이벤트 수를 측정했습니다.
+*sys.dm_os_spinlock_stats* 를 쿼리하여 SOS_CACHESTORE에 상당한 경합이 있음을 확인한 후 확장 이벤트 스크립트를 사용하여 관심 있는 스핀 잠금 유형의 백오프 이벤트 수를 측정했습니다.
 
 | 이름 | 충돌 횟수 | 스핀 횟수 | 충돌당 스핀 횟수 | 백오프 횟수 |
 |---|---|---|---|---|

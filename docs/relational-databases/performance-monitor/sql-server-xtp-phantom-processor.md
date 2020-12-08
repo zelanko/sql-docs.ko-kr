@@ -9,14 +9,14 @@ ms.reviewer: ''
 ms.technology: performance
 ms.topic: conceptual
 ms.assetid: 0f691b3d-a8fd-4459-ad21-2cfc8574a8c0
-author: julieMSFT
-ms.author: jrasnick
-ms.openlocfilehash: 1ab23b48d001d9145a06b620a20812f856e699de
-ms.sourcegitcommit: 9470c4d1fc8d2d9d08525c4f811282999d765e6e
+author: WilliamDAssafMSFT
+ms.author: wiassaf
+ms.openlocfilehash: c0547f8f93b548e7dcf51271e7c796bad52f46ad
+ms.sourcegitcommit: 0e0cd9347c029e0c7c9f3fe6d39985a6d3af967d
 ms.translationtype: HT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 07/17/2020
-ms.locfileid: "86457933"
+ms.lasthandoff: 12/02/2020
+ms.locfileid: "96505477"
 ---
 # <a name="sql-server-xtp-phantom-processor"></a>SQL Server XTP 가상 프로세서
  [!INCLUDE [SQL Server](../../includes/applies-to-version/sqlserver.md)]

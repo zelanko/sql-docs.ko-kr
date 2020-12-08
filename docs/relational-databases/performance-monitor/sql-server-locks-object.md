@@ -12,14 +12,14 @@ helpviewer_keywords:
 - Locks object
 - SQLServer:Locks
 ms.assetid: ace04f0d-3993-4444-8317-ca39d7087e49
-author: julieMSFT
-ms.author: jrasnick
-ms.openlocfilehash: 1553985a2c85eb183841491854ef010eb12d941a
-ms.sourcegitcommit: 9470c4d1fc8d2d9d08525c4f811282999d765e6e
+author: WilliamDAssafMSFT
+ms.author: wiassaf
+ms.openlocfilehash: 94e726a108c78ffec8715e80c4b14f2274656be0
+ms.sourcegitcommit: 0e0cd9347c029e0c7c9f3fe6d39985a6d3af967d
 ms.translationtype: HT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 07/17/2020
-ms.locfileid: "86458131"
+ms.lasthandoff: 12/02/2020
+ms.locfileid: "96505669"
 ---
 # <a name="sql-server-locks-object"></a>SQL Server, Locks 개체
  [!INCLUDE [SQL Server](../../includes/applies-to-version/sqlserver.md)]
@@ -51,7 +51,7 @@ ms.locfileid: "86458131"
 |**Heap/BTree**|힙 또는 BTree(HOBT)입니다. 데이터 페이지의 힙 또는 인덱스의 BTree 구조에 대한 잠금입니다.|  
 |**Key**|인덱스의 행에 대한 잠금입니다.|  
 |**메타데이터**|메타데이터라고도 하는 카탈로그 정보에 대한 잠금입니다.|  
-|**Object**|모든 데이터 및 인덱스를 포함한 테이블, 저장 프로시저, 뷰 등에 대한 잠금입니다. **sys.all_objects**에 항목이 있는 모든 개체가 해당됩니다.|  
+|**Object**|모든 데이터 및 인덱스를 포함한 테이블, 저장 프로시저, 뷰 등에 대한 잠금입니다. **sys.all_objects** 에 항목이 있는 모든 개체가 해당됩니다.|  
 |**호출**|데이터베이스의 8KB 페이지에 대한 잠금입니다.|  
 |**RID**|행 ID를 의미하며 힙의 단일 행에 대한 잠금입니다.|  
   

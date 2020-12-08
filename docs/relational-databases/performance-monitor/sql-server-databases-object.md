@@ -14,14 +14,14 @@ helpviewer_keywords:
 - SQLServer:Databases
 - Availability Groups [SQL Server], performance counters
 ms.assetid: a7f9e7d4-fff4-4c72-8b3e-3f18dffc8919
-author: julieMSFT
-ms.author: jrasnick
-ms.openlocfilehash: d775ca3158b642c6184f9d6c909b349d49d779ef
-ms.sourcegitcommit: 9470c4d1fc8d2d9d08525c4f811282999d765e6e
+author: WilliamDAssafMSFT
+ms.author: wiassaf
+ms.openlocfilehash: 0c98d04b9b82feabe1c6ad96cc28faf828223e68
+ms.sourcegitcommit: 0e0cd9347c029e0c7c9f3fe6d39985a6d3af967d
 ms.translationtype: HT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 07/17/2020
-ms.locfileid: "86457985"
+ms.lasthandoff: 12/02/2020
+ms.locfileid: "96505747"
 ---
 # <a name="sql-server-databases-object"></a>SQL Server, Databases 개체
  [!INCLUDE [SQL Server](../../includes/applies-to-version/sqlserver.md)]
@@ -39,7 +39,7 @@ ms.locfileid: "86457985"
 |**Bulk Copy Rows/sec**|초당 대량 복사되는 행 수입니다.|  
 |**Bulk Copy Throughput/sec**|초당 대량 복사되는 데이터 양(KB)입니다.|  
 |**Commit table entries**|데이터베이스의 커밋 테이블에 대한 메모리 내 부분의 크기(행 수)입니다. 자세한 내용은 [sys.dm_tran_commit_table&#40;Transact-SQL&#41;](../../relational-databases/system-dynamic-management-views/change-tracking-sys-dm-tran-commit-table.md)을 참조하세요.|  
-|**Data File(s) Size (KB)**|모든 자동 증가를 포함한 데이터베이스에 있는 모든 데이터 파일의 총 크기(KB)입니다. 이 카운터를 모니터링하면 **tempdb**의 크기 등을 확인할 때 유용합니다.|  
+|**Data File(s) Size (KB)**|모든 자동 증가를 포함한 데이터베이스에 있는 모든 데이터 파일의 총 크기(KB)입니다. 이 카운터를 모니터링하면 **tempdb** 의 크기 등을 확인할 때 유용합니다.|  
 |**DBCC Logical Scan Bytes/sec**|DBCC(데이터베이스 콘솔 명령)의 초당 논리적 읽기 검색 바이트 수입니다.|  
 |**Group Commit Time/sec**|초당 그룹 정지 시간(마이크로초)입니다.|
 |**Log Bytes Flushed/sec**|플러시된 총 로그 바이트 수입니다.|  

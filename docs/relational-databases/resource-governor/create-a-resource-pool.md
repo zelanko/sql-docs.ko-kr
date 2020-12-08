@@ -11,14 +11,14 @@ helpviewer_keywords:
 - resource pools [SQL Server], create
 - Resource Governor, resource pool create
 ms.assetid: 44dd0567-a4c8-4c72-89ff-e76f6ddef344
-author: julieMSFT
-ms.author: jrasnick
-ms.openlocfilehash: cc46e2e759dbfec54064975281101cb694039786
-ms.sourcegitcommit: 9470c4d1fc8d2d9d08525c4f811282999d765e6e
+author: WilliamDAssafMSFT
+ms.author: wiassaf
+ms.openlocfilehash: a37ffa8d49f850d25aeb815683d9f3541e24bb64
+ms.sourcegitcommit: 0e0cd9347c029e0c7c9f3fe6d39985a6d3af967d
 ms.translationtype: HT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 07/17/2020
-ms.locfileid: "86457545"
+ms.lasthandoff: 12/02/2020
+ms.locfileid: "96506620"
 ---
 # <a name="create-a-resource-pool"></a>리소스 풀 만들기
 [!INCLUDE [SQL Server SQL MI](../../includes/applies-to-version/sql-asdbmi.md)]
@@ -42,9 +42,9 @@ ms.locfileid: "86457545"
 ##  <a name="create-a-resource-pool-using-sql-server-management-studio"></a><a name="CreRPProp"></a> SQL Server Management Studio를 사용하여 리소스 풀 만들기  
  **다음을 사용하여 리소스 풀 만들기: [!INCLUDE[ssManStudioFull](../../includes/ssmanstudiofull-md.md)]**  
   
-1.  [!INCLUDE[ssManStudioFull](../../includes/ssmanstudiofull-md.md)]에서 개체 탐색기를 열고 **리소스 관리자** 가 나타날 때까지 **관리**노드를 계속 확장합니다.  
+1.  [!INCLUDE[ssManStudioFull](../../includes/ssmanstudiofull-md.md)]에서 개체 탐색기를 열고 **리소스 관리자** 가 나타날 때까지 **관리** 노드를 계속 확장합니다.  
   
-2.  **Resource Governor**를 마우스 오른쪽 단추로 클릭한 다음 **속성**을 클릭합니다.  
+2.  **Resource Governor** 를 마우스 오른쪽 단추로 클릭한 다음 **속성** 을 클릭합니다.  
   
 3.  **리소스 풀** 표에서 빈 행의 첫 번째 열을 클릭합니다. 이 열에는 별표(*)가 표시되어 있습니다.  
   
@@ -52,7 +52,7 @@ ms.locfileid: "86457545"
   
 5.  변경할 행의 다른 셀을 클릭 또는 두 번 클릭한 다음 새 값을 입력합니다.  
   
-6.  **확인**을 클릭하여 변경 내용을 저장합니다.  
+6.  **확인** 을 클릭하여 변경 내용을 저장합니다.  
   
 ##  <a name="create-a-resource-pool-using-transact-sql"></a><a name="CreRPTSQL"></a> Transact-SQL을 사용하여 리소스 풀 만들기  
  **다음을 사용하여 리소스 풀 만들기: [!INCLUDE[tsql](../../includes/tsql-md.md)]**  

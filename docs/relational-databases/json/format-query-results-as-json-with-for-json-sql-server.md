@@ -15,24 +15,24 @@ ms.author: jovanpop
 ms.reviewer: jroth
 ms.custom: seo-dt-2019
 monikerRange: =azuresqldb-current||>=sql-server-2016||=sqlallproducts-allversions||>=sql-server-linux-2017||=azuresqldb-mi-current
-ms.openlocfilehash: f3621fcc105d7b03d2347bc723f2ddb552bc9e81
-ms.sourcegitcommit: 346a37242f889d76cd783f55aeed98023c693610
+ms.openlocfilehash: 852cb235738316312794a963879e49f1a5eb7ee6
+ms.sourcegitcommit: 28fecbf61ae7b53405ca378e2f5f90badb1a296a
 ms.translationtype: HT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 10/06/2020
-ms.locfileid: "91765710"
+ms.lasthandoff: 12/04/2020
+ms.locfileid: "96595224"
 ---
 # <a name="format-query-results-as-json-with-for-json-sql-server"></a>FOR JSON을 사용하여 쿼리 결과를 JSON으로 서식 지정(SQL Server)
 
-[!INCLUDE [SQL Server Azure SQL Database](../../includes/applies-to-version/sql-asdb.md)]
+[!INCLUDE [SQL Server Azure SQL Database](../../includes/applies-to-version/sqlserver2016-asdb.md)]
 
 **SELECT** 문에 **FOR JSON** 절을 추가하여 쿼리 결과를 JSON으로 서식 지정하거나 데이터를 SQL Server에서 JSON으로 내보냅니다. **FOR JSON** 절을 사용하면 JSON 출력 형식 지정을 앱에서 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]로 위임하여 클라이언트 애플리케이션을 간소화할 수 있습니다. [Azure Data Studio](../../azure-data-studio/download-azure-data-studio.md)는 일반 문자열을 표시하는 대신 이 문서에 표시된 대로 JSON 결과에 서식을 자동으로 지정하므로 JSON 쿼리에 권장되는 쿼리 편집기입니다.
   
  **FOR JSON** 절을 사용하는 경우 JSON 출력의 구조를 명시적으로 지정하거나 SELECT 문의 구조에 따라 출력이 결정되도록 할 수 있습니다.  
   
--   JSON 출력의 형식을 완전하게 제어하려면 **FOR JSON PATH**를 사용합니다. 래퍼 개체를 만들고 복잡한 속성을 중첩할 수 있습니다.  
+-   JSON 출력의 형식을 완전하게 제어하려면 **FOR JSON PATH** 를 사용합니다. 래퍼 개체를 만들고 복잡한 속성을 중첩할 수 있습니다.  
   
--   SELECT 문의 구조에 따라 JSON 출력 형식을 자동으로 지정하려면 **FOR JSON AUTO**를 사용합니다.  
+-   SELECT 문의 구조에 따라 JSON 출력 형식을 자동으로 지정하려면 **FOR JSON AUTO** 를 사용합니다.  
   
 다음은 **FOR JSON** 절을 사용한 **SELECT** 문 및 해당 출력의 예입니다.
   
@@ -181,7 +181,7 @@ JSON_F52E2B61-18A1-11d1-B105-00805F49916B
 1.  결과 집합이 단일 열을 포함합니다.
     -   작은 결과 집합은 단일 행을 포함할 수 있습니다.
     -   결과 집합이 크면 긴 JSON 문자열이 여러 행으로 분할됩니다.
-        -   기본적으로 SSMS(SQL Server Management Studio)는 출력 설정이 **표 형태로 결과 표시**인 경우 결과를 단일 행으로 연결합니다. SSMS 상태 표시줄에 실제 행 수가 표시됩니다.
+        -   기본적으로 SSMS(SQL Server Management Studio)는 출력 설정이 **표 형태로 결과 표시** 인 경우 결과를 단일 행으로 연결합니다. SSMS 상태 표시줄에 실제 행 수가 표시됩니다.
         -   다른 클라이언트 애플리케이션에는 여러 행의 내용을 연결하여 길이가 긴 결과를 하나의 유효한 JSON 문자열로 다시 결합하는 코드가 필요할 수 있습니다. C# 애플리케이션에서 이 코드의 예는 [C# 클라이언트 앱에서 FOR JSON 출력 사용](../../relational-databases/json/use-for-json-output-in-sql-server-and-in-client-apps-sql-server.md#use-for-json-output-in-a-c-client-app)을 참조하세요.
   
      ![FOR JSON 출력의 예](../../relational-databases/json/media/forjson-example2.png)  
@@ -201,7 +201,7 @@ JSON_F52E2B61-18A1-11d1-B105-00805F49916B
   
 **쿼리 결과**  
 
-|A|B|C|D|
+|A|b|C|D|
 |-|-|-|-|
 |10|11|12|X|  
 |20|21|22|Y|  

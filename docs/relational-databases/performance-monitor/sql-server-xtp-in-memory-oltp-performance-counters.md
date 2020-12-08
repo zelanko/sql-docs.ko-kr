@@ -9,21 +9,21 @@ ms.reviewer: ''
 ms.technology: performance
 ms.topic: conceptual
 ms.assetid: fe3cbaf4-65f4-44c5-acc6-7b735cda0c5d
-author: julieMSFT
-ms.author: jrasnick
-ms.openlocfilehash: da65c189145f9233194f7b86ab6acf8f11765bfa
-ms.sourcegitcommit: 9470c4d1fc8d2d9d08525c4f811282999d765e6e
+author: WilliamDAssafMSFT
+ms.author: wiassaf
+ms.openlocfilehash: bd5c0977a013d7375d3a814714c17eef0c30e51d
+ms.sourcegitcommit: 0e0cd9347c029e0c7c9f3fe6d39985a6d3af967d
 ms.translationtype: HT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 07/17/2020
-ms.locfileid: "86457955"
+ms.lasthandoff: 12/02/2020
+ms.locfileid: "96505510"
 ---
 # <a name="sql-server-xtp-in-memory-oltp-performance-counters"></a>SQL Server XTP(메모리 내 OLTP) 성능 카운터
  [!INCLUDE [SQL Server](../../includes/applies-to-version/sqlserver.md)]
 
   [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 는 메모리 내 OLTP 작업을 모니터링하기 위해 성능 모니터에서 사용할 수 있는 개체 및 카운터를 제공합니다. 개체 및 카운터는 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 부터 컴퓨터의 특정 [!INCLUDE[ssSQL14](../../includes/sssql14-md.md)]버전의 모든 인스턴스 간에 공유됩니다.  
   
- 과거에는 개체 및 카운터 이름이 *XTP 커서*처럼 **XTP**로 시작되었습니다. [!INCLUDE[ssSQL15](../../includes/sssql15-md.md)]부터 이름은 이제 다음 패턴과 같습니다.  
+ 과거에는 개체 및 카운터 이름이 *XTP 커서* 처럼 **XTP** 로 시작되었습니다. [!INCLUDE[ssSQL15](../../includes/sssql15-md.md)]부터 이름은 이제 다음 패턴과 같습니다.  
   
 -   **SQL Server** *\<version>* **XTP 커서**  
   

@@ -13,26 +13,26 @@ ms.author: jovanpop
 ms.reviewer: jroth
 ms.custom: seo-dt-2019
 monikerRange: =azuresqldb-current||>=sql-server-2016||=sqlallproducts-allversions||>=sql-server-linux-2017||=azuresqldb-mi-current
-ms.openlocfilehash: 2d010978b7c660b43a5fe6487ac57e0d6143b282
-ms.sourcegitcommit: e700497f962e4c2274df16d9e651059b42ff1a10
+ms.openlocfilehash: 7a9b6cb32af496b70a48ef4d32f3692b7b863b28
+ms.sourcegitcommit: 28fecbf61ae7b53405ca378e2f5f90badb1a296a
 ms.translationtype: HT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 08/17/2020
-ms.locfileid: "88499304"
+ms.lasthandoff: 12/04/2020
+ms.locfileid: "96595124"
 ---
 # <a name="how-for-json-converts-sql-server-data-types-to-json-data-types-sql-server"></a>FOR JSON을 통해 SQL Server 데이터 형식을 JSON 데이터 형식으로 변환하는 방법(SQL Server)
-[!INCLUDE [SQL Server Azure SQL Database](../../includes/applies-to-version/sql-asdb.md)]
+[!INCLUDE [SQL Server Azure SQL Database](../../includes/applies-to-version/sqlserver2016-asdb.md)]
 
   **FOR JSON** 절은 다음 규칙을 사용하여 JSON 출력에서 SQL Server 데이터 형식을 JSON 형식으로 변환합니다.  
   
 |범주|SQL Server 데이터 형식|JSON 데이터 형식|  
 |--------------|--------------|---------------|  
 |문자 및 문자열 유형|char, nchar, varchar, nvarchar|문자열|  
-|숫자 유형|int, bigint, float, decimal, numeric|number|  
+|숫자 유형|int, bigint, float, decimal, numeric|숫자|  
 |비트 유형|bit|부울(true 또는 false)|  
 |날짜 및 시간 유형|date, datetime, datetime2, time, datetimeoffset|문자열|  
 |이진 유형|varbinary, binary, image, timestamp, rowversion|Base64로 인코딩된 문자열|  
-|CLR 유형|geometry, geography, 기타 CLR 형식|지원되지 않습니다. 이러한 유형은 오류를 반환합니다.<br /><br /> SELECT 문에서 CAST 또는 CONVERT를 사용하거나 CLR 속성 또는 메서드를 사용하여, JSON 형식으로 변환할 수 있는 SQL Server 데이터 형식으로 원본 데이터를 변환합니다. 예를 들어 모든 geometry 형식의 경우 **STAsText()** 를 사용하고 CLR 형식의 경우 **ToString()** 를 사용합니다. 그러면 JSON 출력 값의 형식이 SELECT 문에서 적용하는 변환의 반환 형식에서 파생됩니다.|  
+|CLR 유형|geometry, geography, 기타 CLR 형식|지원 안 됨 이러한 유형은 오류를 반환합니다.<br /><br /> SELECT 문에서 CAST 또는 CONVERT를 사용하거나 CLR 속성 또는 메서드를 사용하여, JSON 형식으로 변환할 수 있는 SQL Server 데이터 형식으로 원본 데이터를 변환합니다. 예를 들어 모든 geometry 형식의 경우 **STAsText()** 를 사용하고 CLR 형식의 경우 **ToString()** 를 사용합니다. 그러면 JSON 출력 값의 형식이 SELECT 문에서 적용하는 변환의 반환 형식에서 파생됩니다.|  
 |기타 형식|uniqueidentifier, money|문자열|  
 
 ## <a name="learn-more-about-json-in-sql-server-and-azure-sql-database"></a>SQL Server 및 Azure SQL Database에서 JSON에 대한 자세한 정보  

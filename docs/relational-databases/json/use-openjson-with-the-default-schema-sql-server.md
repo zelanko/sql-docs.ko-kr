@@ -13,17 +13,17 @@ ms.author: jovanpop
 ms.reviewer: jroth
 ms.custom: seo-dt-2019
 monikerRange: =azuresqldb-current||>=sql-server-2016||=sqlallproducts-allversions||>=sql-server-linux-2017||=azuresqldb-mi-current
-ms.openlocfilehash: d88098e4317ebc5f4feb6b21b61cd9a98afee038
-ms.sourcegitcommit: e700497f962e4c2274df16d9e651059b42ff1a10
+ms.openlocfilehash: acb5e10ec6812787f905d927ed8d300badec8052
+ms.sourcegitcommit: 28fecbf61ae7b53405ca378e2f5f90badb1a296a
 ms.translationtype: HT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 08/17/2020
-ms.locfileid: "88424135"
+ms.lasthandoff: 12/04/2020
+ms.locfileid: "96595079"
 ---
 # <a name="use-openjson-with-the-default-schema"></a>기본 스키마와 함께 OPENJSON 사용 
-[!INCLUDE [SQL Server ASDB, ASDBMI, ASDW ](../../includes/applies-to-version/sql-asdb-asdbmi-asa.md)]
+[!INCLUDE [SQL Server ASDB, ASDBMI, ASDW ](../../includes/applies-to-version/sqlserver2016-asdb-asdbmi-asa.md)]
 
-  기본 스키마와 함께 **OPENJSON**을 사용하여 개체의 각 속성 또는 배열의 각 요소에 대해 행 한 개가 있는 테이블을 반환합니다.  
+  기본 스키마와 함께 **OPENJSON** 을 사용하여 개체의 각 속성 또는 배열의 각 요소에 대해 행 한 개가 있는 테이블을 반환합니다.  
   
  아래에는 기본 스키마와 함께 **OPENJSON** 을 사용하는 몇 가지 예가 나와 있습니다. 자세한 내용 및 더 많은 예제를 보려면 [OPENJSON&#40;Transact-SQL&#41;](../../t-sql/functions/openjson-transact-sql.md)을 참조하세요.  
   

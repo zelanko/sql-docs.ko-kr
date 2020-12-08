@@ -13,14 +13,14 @@ helpviewer_keywords:
 - workload groups [SQL Server], move
 - Resource Governor, workload group move
 ms.assetid: f2068636-6e53-486a-a6fc-c12de2a38424
-author: julieMSFT
-ms.author: jrasnick
-ms.openlocfilehash: a3ff2eff8f72499506aa129b064690693f1b14ff
-ms.sourcegitcommit: 9470c4d1fc8d2d9d08525c4f811282999d765e6e
+author: WilliamDAssafMSFT
+ms.author: wiassaf
+ms.openlocfilehash: 03ad7743638779aa1afc05359be45da377f997b7
+ms.sourcegitcommit: 0e0cd9347c029e0c7c9f3fe6d39985a6d3af967d
 ms.translationtype: HT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 07/17/2020
-ms.locfileid: "86456760"
+ms.lasthandoff: 12/02/2020
+ms.locfileid: "96506582"
 ---
 # <a name="move-a-workload-group"></a>작업 그룹 이동
 [!INCLUDE [SQL Server SQL MI](../../includes/applies-to-version/sql-asdbmi.md)]
@@ -42,17 +42,17 @@ ms.locfileid: "86456760"
 ##  <a name="move-a-workload-group-using-sql-server-management-studio"></a><a name="MoveWGSSMS"></a> SQL Server Management Studio를 사용하여 작업 그룹 이동  
  **다음을 사용하여 작업 그룹을 이동하려면 [!INCLUDE[ssManStudio](../../includes/ssmanstudio-md.md)]**  
   
-1.  개체 탐색기에서 **리소스 관리자** 까지 **관리**노드를 계속 확장합니다.  
+1.  개체 탐색기에서 **리소스 관리자** 까지 **관리** 노드를 계속 확장합니다.  
   
-2.  **Resource Governor** 를 마우스 오른쪽 단추로 클릭한 다음 **속성**을 클릭합니다. 그러면 **Resource Governor** 페이지가 열립니다.  
+2.  **Resource Governor** 를 마우스 오른쪽 단추로 클릭한 다음 **속성** 을 클릭합니다. 그러면 **Resource Governor** 페이지가 열립니다.  
   
 3.  **리소스 풀** 창에서 이동할 작업 그룹이 들어 있는 리소스 풀을 클릭합니다. **작업 그룹** 창에 해당 리소스 풀의 작업 그룹이 나열됩니다.  
   
-4.  **작업 그룹** 창에서 이동할 작업 그룹의 왼쪽에 있는 오른쪽 화살표를 마우스 오른쪽 단추로 클릭하고 **이동**을 클릭합니다. **작업 그룹 이동** 창이 표시됩니다.  
+4.  **작업 그룹** 창에서 이동할 작업 그룹의 왼쪽에 있는 오른쪽 화살표를 마우스 오른쪽 단추로 클릭하고 **이동** 을 클릭합니다. **작업 그룹 이동** 창이 표시됩니다.  
   
 5.  사용 가능한 리소스 풀이 창에 표시됩니다. 작업 그룹을 이동하려는 리소스 풀의 이름을 클릭한 다음 **확인** 을 클릭하여 이동합니다.  
   
-6.  **확인**을 클릭하지 않으면 이 동작이 완료되지 않습니다. **확인**을 클릭하면 ALTER RESOURCE GOVERNOR RECONFIGURE 문이 실행됩니다.  
+6.  **확인** 을 클릭하지 않으면 이 동작이 완료되지 않습니다. **확인** 을 클릭하면 ALTER RESOURCE GOVERNOR RECONFIGURE 문이 실행됩니다.  
   
 7.  리소스 풀이나 작업 그룹의 생성 또는 재구성 작업이 실패하면 속성 페이지의 제목 아래에 요약 오류 메시지가 표시됩니다. 자세한 오류 메시지를 보려면 오류 메시지에 있는 아래쪽 화살표를 클릭하세요.  
   

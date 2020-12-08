@@ -11,14 +11,14 @@ helpviewer_keywords:
 - workload groups [SQL Server], alter
 - Resource Governor, workload group alter
 ms.assetid: 73b6109c-2ad0-4915-b11b-d40d5a0fdc25
-author: julieMSFT
-ms.author: jrasnick
-ms.openlocfilehash: 882d0f15b946e49bf33338707ddeb2ea5354f922
-ms.sourcegitcommit: 9470c4d1fc8d2d9d08525c4f811282999d765e6e
+author: WilliamDAssafMSFT
+ms.author: wiassaf
+ms.openlocfilehash: 28b55fd7546db7378f79f98db213e7abd6aae40c
+ms.sourcegitcommit: 0e0cd9347c029e0c7c9f3fe6d39985a6d3af967d
 ms.translationtype: HT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 07/17/2020
-ms.locfileid: "86457555"
+ms.lasthandoff: 12/02/2020
+ms.locfileid: "96506627"
 ---
 # <a name="change-workload-group-settings"></a>작업 그룹 설정 변경
 [!INCLUDE [SQL Server SQL MI](../../includes/applies-to-version/sql-asdbmi.md)]
@@ -47,13 +47,13 @@ ms.locfileid: "86457555"
   
 1.  개체 탐색기에서 수정할 작업 그룹이 포함된 **작업 그룹** 폴더가 나타날 때까지 **관리** 노드를 계속 확장합니다.  
   
-2.  수정할 작업 그룹을 마우스 오른쪽 단추로 클릭하고 **속성**을 클릭합니다.  
+2.  수정할 작업 그룹을 마우스 오른쪽 단추로 클릭하고 **속성** 을 클릭합니다.  
   
 3.  **리소스 관리자 속성** 페이지의 **리소스 풀의 작업 그룹** 표에서 작업 그룹의 행이 자동으로 선택되어 있지 않으면 선택합니다.  
   
 4.  변경할 행의 셀을 클릭 또는 두 번 클릭한 다음 새 값을 입력합니다.  
   
-5.  **확인**을 클릭하여 변경 내용을 저장합니다.  
+5.  **확인** 을 클릭하여 변경 내용을 저장합니다.  
   
 ##  <a name="change-workload-group-settings-using-transact-sql"></a><a name="ChgWGTSQL"></a> Transact-SQL을 사용하여 작업 그룹 설정 변경  
  **Transact-SQL을 사용하여 작업 그룹 설정을 변경하려면**  

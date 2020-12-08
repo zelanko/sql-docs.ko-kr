@@ -13,15 +13,15 @@ ms.author: jovanpop
 ms.reviewer: jroth
 ms.custom: seo-dt-2019
 monikerRange: =azuresqldb-current||>=sql-server-2016||=sqlallproducts-allversions||>=sql-server-linux-2017||=azuresqldb-mi-current
-ms.openlocfilehash: 3d898f2e0c61b0775d9094580e319640f2aeadf2
-ms.sourcegitcommit: e700497f962e4c2274df16d9e651059b42ff1a10
+ms.openlocfilehash: 30e1204a188c4b71c001bd4c0d00c0df3ce9200f
+ms.sourcegitcommit: 28fecbf61ae7b53405ca378e2f5f90badb1a296a
 ms.translationtype: HT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 08/17/2020
-ms.locfileid: "88490911"
+ms.lasthandoff: 12/04/2020
+ms.locfileid: "96595132"
 ---
 # <a name="solve-common-issues-with-json-in-sql-server"></a>SQL Server에서 JSON으로 일반적인 문제 해결
-[!INCLUDE [SQL Server Azure SQL Database](../../includes/applies-to-version/sql-asdb.md)]
+[!INCLUDE [SQL Server Azure SQL Database](../../includes/applies-to-version/sqlserver2016-asdb.md)]
 
  JSON SQL Server에서 기본으로 제공되는 JSON 지원에 대한 일반적인 질문에 대한 대답을 여기에서 확인하십시오.  
  

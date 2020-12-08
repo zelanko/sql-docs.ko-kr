@@ -13,15 +13,15 @@ helpviewer_keywords:
 - viewing statistics properties
 - statistics [SQL Server], viewing properties
 ms.assetid: 0eaa2101-006e-4015-9979-3468b50e0aaa
-author: julieMSFT
-ms.author: jrasnick
+author: WilliamDAssafMSFT
+ms.author: wiassaf
 monikerRange: '>=aps-pdw-2016||=azuresqldb-current||=azure-sqldw-latest||>=sql-server-2016||=sqlallproducts-allversions||>=sql-server-linux-2017||=azuresqldb-mi-current'
-ms.openlocfilehash: 6ab4cc68a4fbc9e737498d68433de2effd9fe805
-ms.sourcegitcommit: 9470c4d1fc8d2d9d08525c4f811282999d765e6e
+ms.openlocfilehash: ea35cef5c24a73ca8f0e08b055429097bf7d5179
+ms.sourcegitcommit: 0e0cd9347c029e0c7c9f3fe6d39985a6d3af967d
 ms.translationtype: HT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 07/17/2020
-ms.locfileid: "86457253"
+ms.lasthandoff: 12/02/2020
+ms.locfileid: "96506523"
 ---
 # <a name="view-statistics-properties"></a>통계 속성 보기
 [!INCLUDE[SQL Server Azure SQL Database Synapse Analytics PDW ](../../includes/applies-to-version/sql-asdb-asdbmi-asa-pdw.md)]
@@ -50,7 +50,7 @@ ms.locfileid: "86457253"
   
 #### <a name="to-view-statistics-properties"></a>통계 속성을 보려면  
   
-1.  **개체 탐색기**에서 더하기 기호를 클릭하여 새 통계를 만들 데이터베이스를 확장합니다.  
+1.  **개체 탐색기** 에서 더하기 기호를 클릭하여 새 통계를 만들 데이터베이스를 확장합니다.  
   
 2.  더하기 기호를 클릭하여 **테이블** 폴더를 확장합니다.  
   
@@ -58,9 +58,9 @@ ms.locfileid: "86457253"
   
 4.  더하기 기호를 클릭하여 **통계** 폴더를 확장합니다.  
   
-5.  속성을 보려는 통계 개체를 마우스 오른쪽 단추로 클릭하고 **속성**을 선택합니다.  
+5.  속성을 보려는 통계 개체를 마우스 오른쪽 단추로 클릭하고 **속성** 을 선택합니다.  
   
-6.  **통계 속성 -** _statistics_name_ 대화 상자의 **페이지 선택** 창에서 **자세히**를 선택합니다.  
+6.  **통계 속성 -** _statistics_name_ 대화 상자의 **페이지 선택** 창에서 **자세히** 를 선택합니다.  
   
      **통계 속성 -** _statistics_name_ 대화 상자의 **자세히** 페이지에 다음 속성이 표시됩니다.  
   
@@ -97,7 +97,7 @@ ms.locfileid: "86457253"
      통계 개체의 키 열에 있는 모든 값에 대한 값당 평균 바이트 수입니다.  
   
      **문자열 인덱스**  
-     '예'는 통계 개체에 LIKE 연산자를 사용하는 쿼리 조건자(예: `WHERE ProductName LIKE '%Bike'`)의 카디널리티 예상치 정확도를 높이기 위한 문자열 요약 통계가 있음을 나타냅니다. 문자열 요약 통계는 히스토그램과는 별도로 저장되며 통계 개체에서 **char**, **varchar**, **nchar**, **nvarchar**, **varchar(max)** , **nvarchar(max)** , **text**또는 **ntext**형식인 첫 번째 키 열에 생성됩니다.  
+     '예'는 통계 개체에 LIKE 연산자를 사용하는 쿼리 조건자(예: `WHERE ProductName LIKE '%Bike'`)의 카디널리티 예상치 정확도를 높이기 위한 문자열 요약 통계가 있음을 나타냅니다. 문자열 요약 통계는 히스토그램과는 별도로 저장되며 통계 개체에서 **char**, **varchar**, **nchar**, **nvarchar**, **varchar(max)** , **nvarchar(max)** , **text** 또는 **ntext** 형식인 첫 번째 키 열에 생성됩니다.  
   
      **필터 식**  
      통계 개체에 포함된 테이블 행의 하위 집합에 대한 조건자입니다. NULL = 필터링되지 않은 통계입니다.  
@@ -108,7 +108,7 @@ ms.locfileid: "86457253"
      다음 정보는 밀도 벡터의 결과 집합에 반환되는 열에 대한 설명입니다.  
   
      **모든 밀도**  
-     밀도는 1/ *고유 값*입니다. 결과에는 통계 개체에 있는 각 열 접두사의 밀도가 한 행씩 표시됩니다. 고유 값은 행별 및 열 접두사별 열 값의 고유한 목록입니다. 예를 들어 통계 개체가 키 열 (A, B, C)를 포함하는 경우 결과에서 밀도는 이러한 각 열 접두사의 고유 값 목록인 (A), (A,B) 및 (A, B, C)로 보고됩니다. 접두사 (A, B, C)를 사용하면 이러한 각 목록은 다음과 같은 고유 값 목록입니다. (3, 5, 6), (4, 4, 6), (4, 5, 6), (4, 5, 7). 접두사 (A, B)를 사용하면 동일한 열 값은 고유 값 목록 (3, 5), (4, 4) 및 (4, 5)입니다.  
+     밀도는 1/ *고유 값* 입니다. 결과에는 통계 개체에 있는 각 열 접두사의 밀도가 한 행씩 표시됩니다. 고유 값은 행별 및 열 접두사별 열 값의 고유한 목록입니다. 예를 들어 통계 개체가 키 열 (A, B, C)를 포함하는 경우 결과에서 밀도는 이러한 각 열 접두사의 고유 값 목록인 (A), (A,B) 및 (A, B, C)로 보고됩니다. 접두사 (A, B, C)를 사용하면 이러한 각 목록은 다음과 같은 고유 값 목록입니다. (3, 5, 6), (4, 4, 6), (4, 5, 6), (4, 5, 7). 접두사 (A, B)를 사용하면 동일한 열 값은 고유 값 목록 (3, 5), (4, 4) 및 (4, 5)입니다.  
   
      **평균 길이**  
      열 접두사의 열 값 목록을 저장하기 위한 평균 길이(바이트)입니다. 예를 들어 목록 (3, 5, 6)의 각 값에 4바이트가 필요한 경우 길이는 12바이트입니다.  
@@ -133,17 +133,17 @@ ms.locfileid: "86457253"
      **AVG_RANGE_ROWS**  
      상한을 제외한 히스토그램 단계 내에 중복 열 값이 있는 평균 행 수입니다(DISTINCT_RANGE_ROWS > 0인 경우 RANGE_ROWS/DISTINCT_RANGE_ROWS).  
   
-7.  **확인**을 클릭합니다.  
+7.  **확인** 을 클릭합니다.  
 
 ##  <a name="using-transact-sql"></a><a name="TsqlProcedure"></a> Transact-SQL 사용  
   
 #### <a name="to-view-statistics-properties"></a>통계 속성을 보려면  
   
-1.  **개체 탐색기**에서 [!INCLUDE[ssDE](../../includes/ssde-md.md)]인스턴스에 연결합니다.  
+1.  **개체 탐색기** 에서 [!INCLUDE[ssDE](../../includes/ssde-md.md)]인스턴스에 연결합니다.  
   
-2.  표준 도구 모음에서 **새 쿼리**를 클릭합니다.  
+2.  표준 도구 모음에서 **새 쿼리** 를 클릭합니다.  
   
-3.  다음 예를 복사하여 쿼리 창에 붙여 넣고 **실행**을 클릭합니다.  
+3.  다음 예를 복사하여 쿼리 창에 붙여 넣고 **실행** 을 클릭합니다.  
   
     ```  
     USE AdventureWorks2012;  
@@ -157,11 +157,11 @@ ms.locfileid: "86457253"
   
 #### <a name="to-find-all-of-the-statistics-on-a-table-or-view"></a>테이블 또는 뷰에서 모든 통계를 찾으려면  
   
-1.  **개체 탐색기**에서 [!INCLUDE[ssDE](../../includes/ssde-md.md)]인스턴스에 연결합니다.  
+1.  **개체 탐색기** 에서 [!INCLUDE[ssDE](../../includes/ssde-md.md)]인스턴스에 연결합니다.  
   
-2.  표준 도구 모음에서 **새 쿼리**를 클릭합니다.  
+2.  표준 도구 모음에서 **새 쿼리** 를 클릭합니다.  
   
-3.  다음 예를 복사하여 쿼리 창에 붙여 넣고 **실행**을 클릭합니다.  
+3.  다음 예를 복사하여 쿼리 창에 붙여 넣고 **실행** 을 클릭합니다.  
   
     ```  
     USE AdventureWorks2012;   

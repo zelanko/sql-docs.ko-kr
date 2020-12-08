@@ -11,14 +11,14 @@ helpviewer_keywords:
 - workload groups [SQL Server], delete
 - Resource Governor, workload group delete
 ms.assetid: d5902c46-5c28-4ac1-8b56-cb4ca2b072d0
-author: julieMSFT
-ms.author: jrasnick
-ms.openlocfilehash: 160f7f998aa42ed86a9f46d9fab70e38ac1b2d02
-ms.sourcegitcommit: 9470c4d1fc8d2d9d08525c4f811282999d765e6e
+author: WilliamDAssafMSFT
+ms.author: wiassaf
+ms.openlocfilehash: 27708e9a4b5a6d0a2863595e7ee25dccf77e5d2f
+ms.sourcegitcommit: 0e0cd9347c029e0c7c9f3fe6d39985a6d3af967d
 ms.translationtype: HT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 07/17/2020
-ms.locfileid: "86457905"
+ms.lasthandoff: 12/02/2020
+ms.locfileid: "96506605"
 ---
 # <a name="delete-a-workload-group"></a>작업 그룹 삭제
 [!INCLUDE [SQL Server SQL MI](../../includes/applies-to-version/sql-asdbmi.md)]
@@ -46,24 +46,24 @@ ms.locfileid: "86457905"
 ##  <a name="delete-a-workload-group-using-object-explorer"></a><a name="DelWGObjEx"></a> 개체 탐색기를 사용하여 작업 그룹 삭제  
  **개체 탐색기를 사용하여 작업 그룹을 삭제하려면**  
   
-1.  [!INCLUDE[ssManStudioFull](../../includes/ssmanstudiofull-md.md)]에서 개체 탐색기를 열고 **리소스 풀** 이 나타날 때까지 **관리**노드를 계속 확장합니다.  
+1.  [!INCLUDE[ssManStudioFull](../../includes/ssmanstudiofull-md.md)]에서 개체 탐색기를 열고 **리소스 풀** 이 나타날 때까지 **관리** 노드를 계속 확장합니다.  
   
 2.  삭제할 작업 그룹이 포함된 리소스 풀의 **작업 그룹** 노드가 나타날 때까지 **리소스 풀** 을 계속 확장합니다.  
   
-3.  작업 그룹을 마우스 오른쪽 단추로 클릭한 다음 **삭제**를 클릭합니다.  
+3.  작업 그룹을 마우스 오른쪽 단추로 클릭한 다음 **삭제** 를 클릭합니다.  
   
-4.  **개체 삭제** 창의 **삭제할 개체** 목록에 작업 그룹이 나열됩니다. 작업 그룹을 삭제하려면 **확인**을 클릭합니다.  
+4.  **개체 삭제** 창의 **삭제할 개체** 목록에 작업 그룹이 나열됩니다. 작업 그룹을 삭제하려면 **확인** 을 클릭합니다.  
   
 ##  <a name="delete-a-workload-group-using-resource-governor-properties"></a><a name="DelWGRGProp"></a> 리소스 관리자 속성을 사용하여 작업 그룹 삭제  
  **리소스 관리자 속성 페이지를 사용하여 작업 그룹을 삭제하려면**  
   
-1.  개체 탐색기에서 **리소스 풀** 이 나타날 때까지 **관리**노드를 계속 확장합니다.  
+1.  개체 탐색기에서 **리소스 풀** 이 나타날 때까지 **관리** 노드를 계속 확장합니다.  
   
-2.  삭제할 작업 그룹이 포함된 리소스 풀을 마우스 오른쪽 단추로 클릭한 다음 **속성**을 클릭합니다. **리소스 관리자 속성** 페이지가 열립니다.  
+2.  삭제할 작업 그룹이 포함된 리소스 풀을 마우스 오른쪽 단추로 클릭한 다음 **속성** 을 클릭합니다. **리소스 관리자 속성** 페이지가 열립니다.  
   
-3.  **리소스 풀의 작업 그룹** 창에서 삭제할 작업 그룹의 줄을 클릭한 다음 줄 왼쪽에 있는 오른쪽 화살표를 마우스 오른쪽 단추로 클릭하고 **삭제**를 클릭합니다.  
+3.  **리소스 풀의 작업 그룹** 창에서 삭제할 작업 그룹의 줄을 클릭한 다음 줄 왼쪽에 있는 오른쪽 화살표를 마우스 오른쪽 단추로 클릭하고 **삭제** 를 클릭합니다.  
   
-4.  작업 그룹을 삭제하려면 **확인**을 클릭합니다.  
+4.  작업 그룹을 삭제하려면 **확인** 을 클릭합니다.  
   
 ##  <a name="delete-a-workload-group-using-transact-sql"></a><a name="DelWGTSQL"></a> Transact-SQL을 사용하여 작업 그룹 삭제  
  **Transact-SQL을 사용하여 작업 그룹을 삭제하려면**  

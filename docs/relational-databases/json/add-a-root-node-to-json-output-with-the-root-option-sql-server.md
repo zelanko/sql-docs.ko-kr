@@ -13,21 +13,21 @@ ms.author: jovanpop
 ms.reviewer: jroth
 ms.custom: seo-dt-2019
 monikerRange: =azuresqldb-current||>=sql-server-2016||=sqlallproducts-allversions||>=sql-server-linux-2017||=azuresqldb-mi-current
-ms.openlocfilehash: 109af1eaee80fee6882aa8b5128234e84e1a5d86
-ms.sourcegitcommit: e700497f962e4c2274df16d9e651059b42ff1a10
+ms.openlocfilehash: 3c925902fa8ab0181021dc837a00981299e5664e
+ms.sourcegitcommit: 28fecbf61ae7b53405ca378e2f5f90badb1a296a
 ms.translationtype: HT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 08/17/2020
-ms.locfileid: "88499406"
+ms.lasthandoff: 12/04/2020
+ms.locfileid: "96595244"
 ---
 # <a name="add-a-root-node-to-json-output-with-the-root-option-sql-server"></a>ROOT 옵션을 사용하여 JSON 출력에 루트 노드 추가(SQL Server)
-[!INCLUDE [SQL Server Azure SQL Database](../../includes/applies-to-version/sql-asdb.md)]
+[!INCLUDE [SQL Server Azure SQL Database](../../includes/applies-to-version/sqlserver2016-asdb.md)]
 
   단일 최상위 요소를 **FOR JSON** 절의 JSON 출력에 추가하려면 **ROOT** 옵션을 사용합니다.  
   
  **ROOT** 옵션을 지정하지 않은 경우 JSON 출력에는 루트 요소가 포함되지 않습니다.  
   
-## <a name="examples"></a>예제  
+## <a name="examples"></a>예  
  다음 표에는 **ROOT** 옵션을 사용한 경우와 사용하지 않은 경우 **FOR JSON** 절의 출력이 나와 있습니다.  
   
  다음 표의 예에서는 선택적 *RootName* 인수가 비어 있다고 가정합니다. 루트 요소의 이름을 입력하면 예의 **root** 값이 이 값으로 바뀝니다.  

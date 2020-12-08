@@ -14,15 +14,15 @@ author: jovanpop-msft
 ms.author: jovanpop
 ms.reviewer: jroth
 monikerRange: =azuresqldb-current||>=sql-server-2016||=sqlallproducts-allversions||>=sql-server-linux-2017||=azuresqldb-mi-current
-ms.openlocfilehash: 81ba47199707e4f59094ec0070017610f61d3187
-ms.sourcegitcommit: fb8724fb99c46ecf3a6d7b02a743af9b590402f0
+ms.openlocfilehash: eb884b2a3e2114d86dda60fc63b528e11a6386c9
+ms.sourcegitcommit: 28fecbf61ae7b53405ca378e2f5f90badb1a296a
 ms.translationtype: HT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 10/23/2020
-ms.locfileid: "92439464"
+ms.lasthandoff: 12/04/2020
+ms.locfileid: "96595054"
 ---
 # <a name="index-json-data"></a>JSON 데이터 인덱싱
-[!INCLUDE [SQL Server Azure SQL Database](../../includes/applies-to-version/sql-asdb.md)]
+[!INCLUDE [SQL Server Azure SQL Database](../../includes/applies-to-version/sqlserver2016-asdb.md)]
 
 SQL Server 및 SQL Database에서 JSON은 기본 제공 데이터 형식이 아니며 SQL Server에는 사용자 지정 JSON 인덱스가 없습니다. 그러나 표준 인덱스를 사용하여 JSON 문서에 대한 쿼리를 최적화할 수 있습니다. 
 

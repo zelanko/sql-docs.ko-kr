@@ -16,15 +16,15 @@ helpviewer_keywords:
 - creating statistics
 - statistics [SQL Server], creating
 ms.assetid: 95a455fb-664d-4c95-851e-c6b62d7ebe04
-author: julieMSFT
-ms.author: jrasnick
+author: WilliamDAssafMSFT
+ms.author: wiassaf
 monikerRange: '>=aps-pdw-2016||=azuresqldb-current||=azure-sqldw-latest||>=sql-server-2016||=sqlallproducts-allversions||>=sql-server-linux-2017||=azuresqldb-mi-current'
-ms.openlocfilehash: d7b91e2a3438e09de30a6be3c66bb4c22f9bd1ad
-ms.sourcegitcommit: 9470c4d1fc8d2d9d08525c4f811282999d765e6e
+ms.openlocfilehash: 7b2d5dc3f6822a7becc311367a7f0c6893a91f6f
+ms.sourcegitcommit: 0e0cd9347c029e0c7c9f3fe6d39985a6d3af967d
 ms.translationtype: HT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 07/17/2020
-ms.locfileid: "86458265"
+ms.lasthandoff: 12/02/2020
+ms.locfileid: "96506554"
 ---
 # <a name="create-statistics"></a>통계 만들기
 [!INCLUDE[SQL Server Azure SQL Database Synapse Analytics PDW ](../../includes/applies-to-version/sql-asdb-asdbmi-asa-pdw.md)]
@@ -63,7 +63,7 @@ ms.locfileid: "86458265"
   
 #### <a name="to-create-statistics"></a>통계를 만들려면  
   
-1.  **개체 탐색기**에서 더하기 기호를 클릭하여 새 통계를 만들 데이터베이스를 확장합니다.  
+1.  **개체 탐색기** 에서 더하기 기호를 클릭하여 새 통계를 만들 데이터베이스를 확장합니다.  
   
 2.  더하기 기호를 클릭하여 **테이블** 폴더를 확장합니다.  
   
@@ -115,12 +115,12 @@ ms.locfileid: "86458265"
      **이 열에 대한 통계 업데이트**  
      대화 상자를 닫을 때 통계를 업데이트하려면 선택합니다.  
   
-     **테이블에 대한 새 통계**_table\_name_ 대화 상자의**필터** 페이지에 다음 속성이 표시됩니다.  
+     **테이블에 대한 새 통계**_table\_name_ 대화 상자의 **필터** 페이지에 다음 속성이 표시됩니다.  
   
      **필터 식**  
      필터링된 통계에 포함할 데이터 행을 정의합니다. 예를 들어 `Production.ProductSubcategoryID IN ( 1,2,3 )`  
   
-5.  **테이블에 대한 새 통계**_table\_name_ 대화 상자의 **일반** 페이지에서 **추가**를 클릭합니다.  
+5.  **테이블에 대한 새 통계**_table\_name_ 대화 상자의 **일반** 페이지에서 **추가** 를 클릭합니다.  
   
      **열 선택** 대화 상자에 표시되는 속성은 다음과 같습니다. 이 정보는 읽기 전용입니다.  
   
@@ -139,19 +139,19 @@ ms.locfileid: "86458265"
      **NULL 허용**  
      열에 NULL 값을 사용할 수 있는지 여부를 나타냅니다.  
   
-6.  **열 선택** 대화 상자에서 통계를 만들려는 각 열의 확인란을 선택한 다음 **확인**을 클릭합니다.  
+6.  **열 선택** 대화 상자에서 통계를 만들려는 각 열의 확인란을 선택한 다음 **확인** 을 클릭합니다.  
   
-7.  **테이블에 대한 새 통계**_table\_name_ 대화 상자에서 **확인**을 클릭합니다.  
+7.  **테이블에 대한 새 통계**_table\_name_ 대화 상자에서 **확인** 을 클릭합니다.  
   
 ##  <a name="using-transact-sql"></a><a name="TsqlProcedure"></a> Transact-SQL 사용  
   
 #### <a name="to-create-statistics"></a>통계를 만들려면  
   
-1.  **개체 탐색기**에서 [!INCLUDE[ssDE](../../includes/ssde-md.md)]인스턴스에 연결합니다.  
+1.  **개체 탐색기** 에서 [!INCLUDE[ssDE](../../includes/ssde-md.md)]인스턴스에 연결합니다.  
   
-2.  표준 도구 모음에서 **새 쿼리**를 클릭합니다.  
+2.  표준 도구 모음에서 **새 쿼리** 를 클릭합니다.  
   
-3.  다음 예를 복사하여 쿼리 창에 붙여 넣고 **실행**을 클릭합니다.  
+3.  다음 예를 복사하여 쿼리 창에 붙여 넣고 **실행** 을 클릭합니다.  
   
     ```  
     USE AdventureWorks2012;   

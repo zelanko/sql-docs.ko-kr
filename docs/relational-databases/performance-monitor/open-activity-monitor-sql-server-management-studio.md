@@ -14,14 +14,14 @@ helpviewer_keywords:
 - Activity Monitor [SQL Server], opening
 - opening Activity Monitor
 ms.assetid: 0a6eeb16-f02b-479d-9a60-543e40ebf46b
-author: julieMSFT
-ms.author: jrasnick
-ms.openlocfilehash: d570faf51200708bcbd56371d68f53a12776d12e
-ms.sourcegitcommit: 9470c4d1fc8d2d9d08525c4f811282999d765e6e
+author: WilliamDAssafMSFT
+ms.author: wiassaf
+ms.openlocfilehash: 5569286a31b9897b8fcca0eafea6830593d05183
+ms.sourcegitcommit: 0e0cd9347c029e0c7c9f3fe6d39985a6d3af967d
 ms.translationtype: HT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 07/17/2020
-ms.locfileid: "86457475"
+ms.lasthandoff: 12/02/2020
+ms.locfileid: "96506013"
 ---
 # <a name="open-activity-monitor-in-sql-server-management-studio-ssms"></a>SSMS(SQL Server Management Studio)에서 작업 모니터 열기
  [!INCLUDE [SQL Server](../../includes/applies-to-version/sqlserver.md)]
@@ -51,13 +51,13 @@ ms.locfileid: "86457475"
   
 ## <a name="launch-activity-monitor-and-object-explorer-on-startup"></a>시작할 때 작업 모니터 및 개체 탐색기 시작
   
-1.  **도구** 메뉴에서 **옵션**을 클릭합니다.  
+1.  **도구** 메뉴에서 **옵션** 을 클릭합니다.  
   
-2.  **옵션** 대화 상자에서 **환경**을 확장한 다음 **시작**을 선택합니다.  
+2.  **옵션** 대화 상자에서 **환경** 을 확장한 다음 **시작** 을 선택합니다.  
   
-3.  **시작 시** 드롭다운 목록에서 **개체 탐색기 및 작업 모니터 열기**를 선택합니다.  
+3.  **시작 시** 드롭다운 목록에서 **개체 탐색기 및 작업 모니터 열기** 를 선택합니다.  
 
-4.  **확인**을 클릭합니다.
+4.  **확인** 을 클릭합니다.
 
 ![open_object_explorer](../../relational-databases/performance-monitor/media/open-object-explorer.png)
   
@@ -66,6 +66,6 @@ ms.locfileid: "86457475"
   
 1.   작업 모니터를 엽니다.  
   
-2.   **개요**를 마우스 오른쪽 단추로 클릭하고 **새로 고침 간격**을 선택한 다음 작업 모니터가 새 인스턴스 정보를 가져와야 하는 간격을 선택합니다.  
+2.   **개요** 를 마우스 오른쪽 단추로 클릭하고 **새로 고침 간격** 을 선택한 다음 작업 모니터가 새 인스턴스 정보를 가져와야 하는 간격을 선택합니다.  
   
   

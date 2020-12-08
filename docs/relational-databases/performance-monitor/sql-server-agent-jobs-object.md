@@ -12,14 +12,14 @@ helpviewer_keywords:
 - SQLAgent:Jobs
 - Jobs object
 ms.assetid: 225b5e2d-4a78-4178-b2b6-b419df83c4aa
-author: julieMSFT
-ms.author: jrasnick
-ms.openlocfilehash: d791edff7b4f9aa5dd8693bfec5b146fb44bb0c9
-ms.sourcegitcommit: 9470c4d1fc8d2d9d08525c4f811282999d765e6e
+author: WilliamDAssafMSFT
+ms.author: wiassaf
+ms.openlocfilehash: 34b4a1e9fc276da5e629d7521609bca5570a5798
+ms.sourcegitcommit: 0e0cd9347c029e0c7c9f3fe6d39985a6d3af967d
 ms.translationtype: HT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 07/17/2020
-ms.locfileid: "86458451"
+ms.lasthandoff: 12/02/2020
+ms.locfileid: "96505935"
 ---
 # <a name="sql-server-agent-jobs-object"></a>SQL Server 에이전트, Jobs 개체
  [!INCLUDE [SQL Server](../../includes/applies-to-version/sqlserver.md)]
@@ -42,7 +42,7 @@ ms.locfileid: "86458451"
 |--------------|-----------------|  
 |**_Total**|모든 작업에 대한 정보입니다.|  
 |**경고**|경고에 의해 시작된 작업의 정보입니다.|  
-|**Others**|경고나 일정에 의해 시작되지 않은 작업의 정보입니다. 대개 이런 작업은 **sp_start_job**을 사용하여 수동으로 시작됩니다.|  
+|**Others**|경고나 일정에 의해 시작되지 않은 작업의 정보입니다. 대개 이런 작업은 **sp_start_job** 을 사용하여 수동으로 시작됩니다.|  
 |**일정**|일정에 의해 시작된 작업의 정보입니다.|  
   
 ## <a name="see-also"></a>참고 항목  

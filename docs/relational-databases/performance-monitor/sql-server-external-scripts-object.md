@@ -14,14 +14,14 @@ helpviewer_keywords:
 - External Scripts object
 - SQLServer:External Scripts
 ms.assetid: 8a75ccce-b174-4937-bc92-8e413b55afe1
-author: julieMSFT
-ms.author: jrasnick
-ms.openlocfilehash: fb8ded658e80c3530b916ea81595ac5fa5c99f52
-ms.sourcegitcommit: 9470c4d1fc8d2d9d08525c4f811282999d765e6e
+author: WilliamDAssafMSFT
+ms.author: wiassaf
+ms.openlocfilehash: ffe1eb9f95f05262996e327929236f8fd05613f1
+ms.sourcegitcommit: 0e0cd9347c029e0c7c9f3fe6d39985a6d3af967d
 ms.translationtype: HT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 07/17/2020
-ms.locfileid: "86457427"
+ms.lasthandoff: 12/02/2020
+ms.locfileid: "96505697"
 ---
 # <a name="sql-server-external-scripts-object"></a>SQL Server, 외부 스크립트 개체
  [!INCLUDE [SQL Server](../../includes/applies-to-version/sqlserver.md)]
