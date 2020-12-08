@@ -11,12 +11,12 @@ ms.topic: conceptual
 ms.assetid: 21e19635-340d-49bb-b39d-4867102fb5df
 author: David-Engel
 ms.author: v-daenge
-ms.openlocfilehash: 69379b9af3dc126713cb2bbd3172003692a7d4de
-ms.sourcegitcommit: 9be0047805ff14e26710cfbc6e10d6d6809e8b2c
+ms.openlocfilehash: 52f465b4cfdcb2ff771a71c1ef956af78b522358
+ms.sourcegitcommit: 0c0e4ab90655dde3e34ebc08487493e621f25dda
 ms.translationtype: HT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 08/27/2020
-ms.locfileid: "89042236"
+ms.lasthandoff: 12/01/2020
+ms.locfileid: "96442875"
 ---
 # <a name="using-bulk-copy-with-the-jdbc-driver"></a>JDBC 드라이버에서 대량 복사 사용
 
@@ -364,9 +364,9 @@ public class BulkCopyMultiple {
 
 이 연결 속성을 `false`로 설정하면 **DATE**, **DATETIME**, **DATIMETIME2**, **DATETIMEOFFSET**, **SMALLDATETIME** 및 **TIME** 데이터를 문자열로 전송하는 대신 해당 형식으로 전송합니다.
 
-시간 데이터 형식을 해당 형식으로 전송하면 사용자가 Azure Synapse Analytics(SQL DW)의 해당 열로 데이터를 보낼 수 있습니다(이전에는 데이터를 문자열로 변환하기 때문에 가능하지 않았음). SQL Server에서는 시간 열에 문자열 데이터를 보낼 수 있습니다. SQL Server가 자동으로 암시적 변환을 수행하기 때문입니다. 그러나 Azure Synapse Analytics(SQL DW)에서는 문자열 데이터를 보낼 수 없습니다.
+시간 데이터 형식을 해당 형식으로 전송하면 사용자가 Azure Synapse Analytics의 해당 열로 데이터를 보낼 수 있습니다(이전에는 데이터를 문자열로 변환하기 때문에 가능하지 않았음). SQL Server에서는 시간 열에 문자열 데이터를 보낼 수 있습니다. SQL Server가 자동으로 암시적 변환을 수행하기 때문입니다. 그러나 Azure Synapse Analytics에서는 문자열 데이터를 보낼 수 없습니다.
 
-또한 이 연결 문자열을 'false'로 설정하지 않아도 **v8.4.1** 이상에서는 **MONEY** 및 **SMALLMONEY** 데이터 형식이 **DECIMAL** 대신 **MONEY** / **SMALLMONEY** 데이터 형식으로 전송됩니다. 그러므로 이 경우에도 해당 데이터 형식을 Azure Synapse Analytics(SQL DW)로 대량 복사할 수 있습니다.
+또한 이 연결 문자열을 'false'로 설정하지 않아도 **v8.4.1** 이상에서는 **MONEY** 및 **SMALLMONEY** 데이터 형식이 **DECIMAL** 대신 **MONEY** / **SMALLMONEY** 데이터 형식으로 전송됩니다. 그러므로 이 경우에도 해당 데이터 형식을 Azure Synapse Analytics로 대량 복사할 수 있습니다.
 
 ### <a name="extended-bulk-copy-for-azure-data-warehouse-limitations"></a>Azure Data Warehouse용 대량 복사 확대 제한 사항
 
@@ -599,19 +599,19 @@ public class BulkCopyExistingTransactions {
 > [!IMPORTANT]  
 > 이 샘플은 가져올 [테이블 설정](#table-setup)에 설명된 대로 작업 테이블을 만들지 않은 경우 실행되지 않습니다.  
   
-1. **SQL Server Management Studio**를 열고 AdventureWorks 데이터베이스가 있는 SQL Server에 연결합니다.  
+1. **SQL Server Management Studio** 를 열고 AdventureWorks 데이터베이스가 있는 SQL Server에 연결합니다.  
   
-2. 데이터베이스를 확장하고 AdventureWorks 데이터베이스를 마우스 오른쪽 단추로 클릭한 다음, **작업** 및 **데이터 내보내기**를 선택합니다.  
+2. 데이터베이스를 확장하고 AdventureWorks 데이터베이스를 마우스 오른쪽 단추로 클릭한 다음, **작업** 및 **데이터 내보내기** 를 선택합니다.  
   
-3. 데이터 원본에서 SQL Server(예: SQL Server Native Client 11.0)에 연결할 수 있는 **데이터 원본**을 선택하고 구성을 확인한 후, **다음**을 선택합니다.  
+3. 데이터 원본에서 SQL Server(예: SQL Server Native Client 11.0)에 연결할 수 있는 **데이터 원본** 을 선택하고 구성을 확인한 후, **다음** 을 선택합니다.  
   
-4. 대상에서 **플랫 파일 대상**을 선택하고 대상이 있는 **파일 이름**(예: `C:\Test\TestBulkCSVExample.csv`)을 입력합니다. **형식**이 구분 기호로 분리됨이고 **텍스트 한정자**가 없음인지 확인하고 **첫 번째 데이터 행의 열 이름**을 사용하도록 설정한 후, **다음**을 선택합니다.  
+4. 대상에서 **플랫 파일 대상** 을 선택하고 대상이 있는 **파일 이름**(예: `C:\Test\TestBulkCSVExample.csv`)을 입력합니다. **형식** 이 구분 기호로 분리됨이고 **텍스트 한정자** 가 없음인지 확인하고 **첫 번째 데이터 행의 열 이름** 을 사용하도록 설정한 후, **다음** 을 선택합니다.  
   
-5. **전송 데이터를 지정할 쿼리 작성** 및 **다음**을 선택합니다.  **SQL 문** `SELECT ProductID, Name, ProductNumber FROM Production.Product`를 입력하고 **다음**을 선택합니다.  
+5. **전송 데이터를 지정할 쿼리 작성** 및 **다음** 을 선택합니다.  **SQL 문** `SELECT ProductID, Name, ProductNumber FROM Production.Product`를 입력하고 **다음** 을 선택합니다.  
   
-6. 구성을 확인합니다. 행 구분 기호는 `{CR}{LF}`로, 열 구분 기호는 쉼표(`{,}`)로 유지할 수 있습니다.  **Edit Mappings**(매핑 편집)를 선택하고 각 열에 대해 데이터 **형식**이 올바른지 확인합니다(예: `ProductID`의 경우 정수, 그 외의 경우 유니코드 문자열).  
+6. 구성을 확인합니다. 행 구분 기호는 `{CR}{LF}`로, 열 구분 기호는 쉼표(`{,}`)로 유지할 수 있습니다.  **Edit Mappings**(매핑 편집)를 선택하고 각 열에 대해 데이터 **형식** 이 올바른지 확인합니다(예: `ProductID`의 경우 정수, 그 외의 경우 유니코드 문자열).  
   
-7. **마침**으로 건너뛰고 내보내기를 실행합니다.  
+7. **마침** 으로 건너뛰고 내보내기를 실행합니다.  
 
 ```java
 import java.sql.Connection;

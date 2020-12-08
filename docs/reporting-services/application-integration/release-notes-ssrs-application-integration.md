@@ -1,7 +1,7 @@
 ---
 title: 보고서 뷰어 컨트롤에 대한 릴리스 정보
 description: Reporting Services와 관련된 WebForms 및 WinForms 보고서 뷰어 컨트롤에 대한 릴리스 정보입니다.
-ms.date: 01/16/2020
+ms.date: 11/30/2020
 ms.prod: reporting-services
 ms.prod_service: reporting-services-native
 ms.technology: application-integration
@@ -11,18 +11,25 @@ ms.assetid: 112e0240-351d-46a9-98c7-2be09f26ac60
 ms.reviewer: maggies
 author: RhysSchmidtke
 ms.author: rhys
-ms.openlocfilehash: 1ed8d92f77a360d195c893c38ee08e642ee0b24a
-ms.sourcegitcommit: c6a2efe551e37883c1749bdd9e3c06eb54ccedc9
+ms.openlocfilehash: 7edb40b44108ebf66c9462e8c909fbbd9f39510f
+ms.sourcegitcommit: 0c0e4ab90655dde3e34ebc08487493e621f25dda
 ms.translationtype: HT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 04/06/2020
-ms.locfileid: "80752880"
+ms.lasthandoff: 12/01/2020
+ms.locfileid: "96443009"
 ---
 # <a name="release-notes-for-report-viewer-controls-for-webforms-and-winforms-of-ssrs"></a>SSRS의 WebForms 및 WinForms 보고서 뷰어 컨트롤의 릴리스 정보
 
 다음은 [!INCLUDE[ssnoversion](../../includes/ssnoversion-md.md)] [!INCLUDE[ssRSnoversion](../../includes/ssrsnoversion-md.md)](SSRS)와 관련된 WebForms 및 WinForms용 보고서 뷰어 컨트롤에 대한 릴리스 정보입니다.
 
 SSRS에 대한 릴리스 정보는 [SQL Server Reporting Services(SSRS) 2017 이상 릴리스 정보](../release-notes-reporting-services.md)를 참조하세요.
+
+## <a name="15014270"></a>150.1427.0
+| 변경 설명 | 세부 정보 |
+| :----------------- | :------ |
+| 버그 수정 | 클릭한 후 열어 본 링크로 표시되지 않는 문제를 수정했습니다. |
+|           | 특정 로캘에 영향을 주는 날짜/시간 구문 분석 문제를 수정했습니다. |
+| &nbsp; | &nbsp; |
 
 ## <a name="15014040"></a>150.1404.0
 | 변경 설명 | 세부 정보 |
@@ -61,7 +68,7 @@ SSRS에 대한 릴리스 정보는 [SQL Server Reporting Services(SSRS) 2017 이
 
 | 변경 설명 | 세부 정보 |
 | :----------------- | :------ |
-| 매개 변수 없는 보고서가 **Server.LoadReportDefinition**을 통해 로드되지 않도록 하는 버그 수정 | &nbsp; |
+| 매개 변수 없는 보고서가 **Server.LoadReportDefinition** 을 통해 로드되지 않도록 하는 버그 수정 | &nbsp; |
 | WebForms 보고서 뷰어 컨트롤 | RTL 페이지(*direction: rtl;* css 속성을 사용하여 텍스트 흐름을 변경하는 페이지)에 포함하도록 지원합니다.<br/><br/>*IReportViewerMessages5* 지역화 인터페이스를 통해 인쇄 대화 상자 텍스트를 사용자 지정하도록 지원합니다.<br/><br/>접근성 지원 개선<br/><br/>&bull; &nbsp; &nbsp; [WebForms 보고서 뷰어 컨트롤에 대한 NuGet 패키지](https://www.nuget.org/packages/Microsoft.ReportingServices.ReportViewerControl.Webforms/150.900.148) |
 | WinForms 보고서 뷰어 컨트롤 | 높은 DPI 모드에서 앱을 실행 중인 경우 인쇄 문제 수정<br/><br/>&bull; &nbsp; &nbsp; [WinForms 보고서 뷰어 컨트롤에 대한 NuGet 패키지](https://www.nuget.org/packages/Microsoft.ReportingServices.ReportViewerControl.Winforms/150.900.148) |
 | &nbsp; | &nbsp; |

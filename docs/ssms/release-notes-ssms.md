@@ -11,12 +11,12 @@ ms.author: drskwier
 ms.reviewer: maghan
 ms.custom: seo-lt-2019
 ms.date: 10/27/2020
-ms.openlocfilehash: eb3fa0a07e9a0b5e7cf1bc1c7564fdb7b0d82a62
-ms.sourcegitcommit: a2182276ba00c48dc1475b9c7dfa45179d4416dc
+ms.openlocfilehash: 4569c61552a03e928d01e47940ae02e7fee9dcec
+ms.sourcegitcommit: eeb30d9ac19d3ede8d07bfdb5d47f33c6c80a28f
 ms.translationtype: HT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 11/17/2020
-ms.locfileid: "94704198"
+ms.lasthandoff: 12/02/2020
+ms.locfileid: "96523092"
 ---
 # <a name="release-notes-for-sql-server-management-studio-ssms"></a>SSMS(SQL Server Management Studio) 릴리스 정보
 
@@ -56,12 +56,13 @@ SSMS 18.7은 SSMS의 최신 GA(일반 공급) 릴리스입니다. 이전 버전�
 |----------|---------|------------|
 | Analysis Services | msmdpump.dll을 통해 SSAS에 연결할 때 오류가 발생합니다. [SQL Server 사용자 피드백](https://feedback.azure.com/forums/908035-sql-server/suggestions/40144696)을 참조하세요. | 해당 없음 |
 | Analysis Services | 드물지만 업그레이드 설치 프로그램을 사용할 때 SSMS를 업그레이드한 후 DAX 편집기를 열려고 하면 "개체가 개체의 인스턴스로 설정되지 않았음" 오류가 발생할 수 있습니다. | 이 문제를 해결하려면 SSMS를 제거한 다음 다시 설치합니다. |
+| DAX 쿼리 편집기 | DAX 쿼리 편집기를 열면 "개체가 개체의 인스턴스로 설정되지 않음" 오류가 발생합니다. | SQL Server Management Studio를 제거하고 다시 설치합니다.  다시 설치로 해결되지 않는 경우 SSMS의 모든 인스턴스를 닫은 다음 `%AppData%\Microsoft\SQL Server Management Studio`와 `%LocalAppData%\Microsoft\SQL Server Management Studio`를 제거합니다. |
 | 일반 SSMS | 새 서버 감사 사양 대화 상자에서 SSMS가 액세스 위반 오류로 인해 충돌을 일으킬 수 있습니다. | 해당 없음 |
 | 일반 SSMS | SMO를 사용하는 SSMS 확장을 새로운 SSMS용 v161 패키지를 대상으로 지정하여 다시 컴파일해야 합니다. https://www.nuget.org/packages/Microsoft.SqlServer.SqlManagementObjects.SSMS/ 에서 미리 보기 버전을 사용할 수 있습니다. </br></br> Microsoft.SqlServer.SqlManagementObjects 패키지의 이전 160개 버전에 대해 컴파일된 확장도 계속해서 작동합니다. | 해당 없음 |
 | 스크립트 생성 마법사 | SQL Server 2014 이전 버전에서 데이터베이스 개체를 열거하려고 하면 마법사가 실패합니다. [SQL Server 사용자 피드백](https://feedback.azure.com/forums/908035-sql-server/suggestions/41885587)을 참조하세요. | SQL 2014 및 이전 버전의 스크립트 생성 마법사에서 SSMS 18.6을 사용하여 개체를 선택합니다. |
-| Integration Services | Azure-SSIS Integration Runtime에서 패키지를 가져오거나 내보낼 때 Integration Services 스크립트 태스크/구성 요소가 포함된 패키지에 대한 스크립트가 손실됩니다. 해결 방법: “C:\Program Files (x86)\Microsoft SQL Server Management Studio 18\Common7\IDE\CommonExtensions\MSBuild” 폴더를 제거합니다. | 해당 없음 |
-| Integration Services | 최신 운영 체제에서 Integration Services에 대한 원격 연결이 "지정된 서비스가 설치된 서비스로 존재하지 않습니다." 오류와 함께 실패할 수 있습니다. 해결 방법: Computer\HKEY_CLASSES_ROOT\AppID & Computer\HKEY_CLASSES_ROOT\ WOW6432Node\AppID에서 Integration Services 관련 레지스트리 위치를 확인하고, 이러한 하이브 내에서 연결하려는 특정 버전의 Integration Services에 대해 'LocalService'라는 레지스트리 키 이름을 'LocalService_A'로 바꿉니다. | 해당 없음 |
-| 개체 탐색기 | 18.7 이전의 SSMS 릴리스는 [Azure Synapse Analytics SQL 주문형](https://docs.microsoft.com/azure/synapse-analytics/sql/on-demand-workspace-overview)과 관련된 엔진 변경 사항으로 인해 개체 탐색기에서 호환성이 손상되는 변경이 적용되었습니다. | Azure Synapse Analytics SQL 주문형 SSMS에서 개체 탐색기를 계속 활용하려면 SSMS 18.7을 사용해야 합니다. |
+| Integration Services | Azure-SSIS Integration Runtime에서 패키지를 가져오거나 내보낼 때 Integration Services 스크립트 태스크/구성 요소가 포함된 패키지에 대한 스크립트가 손실됩니다. | “C:\Program Files (x86)\Microsoft SQL Server Management Studio 18\Common7\IDE\CommonExtensions\MSBuild” 폴더를 제거합니다. |
+| Integration Services | 최신 운영 체제에서 Integration Services에 대한 원격 연결이 "지정된 서비스가 설치된 서비스로 존재하지 않습니다." 오류와 함께 실패할 수 있습니다. | Computer\HKEY_CLASSES_ROOT\AppID & Computer\HKEY_CLASSES_ROOT\ WOW6432Node\AppID에서 Integration Services 관련 레지스트리 위치를 확인하고, 이러한 하이브 내에서 연결하려는 특정 버전의 Integration Services에 대해 'LocalService'라는 레지스트리 키 이름을 'LocalService_A'로 바꿉니다. |
+| 개체 탐색기 | 18.7 이전의 SSMS 릴리스에는 [Azure Synapse Analytics 서버리스 SQL 풀](https://docs.microsoft.com/azure/synapse-analytics/sql/on-demand-workspace-overview)과 관련된 엔진 변경으로 인해 개체 탐색기에 호환성이 손상되는 변경이 있습니다. | Azure Synapse Analytics 서버리스 SQL 풀이 있는 SSMS에서 개체 탐색기를 계속 활용하려면 SSMS 18.7을 사용해야 합니다. |
 
 다른 알려진 문제를 확인하고 제품 팀에 피드백을 제공하려면 [SQL Server 사용자 피드백](https://feedback.azure.com/forums/908035-sql-server)을 참조하세요.
 
@@ -129,7 +130,7 @@ SSMS 18.7은 SSMS의 최신 GA(일반 공급) 릴리스입니다. 이전 버전�
 | 일반 SSMS | Azure SQL DB에 연결하는 데 몇 초 정도 걸릴 수 있던 문제를 해결했습니다(사용자 데이터베이스에서 SQL 로그인). |
 | 일반 SSMS | SSMS가 캡처된 교착 상태(.xdl 파일)를 처리/표시하지 않는 문제를 해결했습니다. |
 | 일반 SSMS | SQL Server 2008 R2 및 이하에 대한 오류 로그 설정을 열려고 했지만 ErrorLogSizeKb 속성을 찾을 수 없어 실패하던 문제를 해결했습니다. |
-| 일반 SSMS | [Azure Synapse Analytics SQL 주문형](https://docs.microsoft.com/azure/synapse-analytics/sql/on-demand-workspace-overview) 지원에 대한 일반적인 수정 및 개선 사항을 적용했습니다. |
+| 일반 SSMS | [Azure Synapse Analytics 서버리스 SQL 풀](https://docs.microsoft.com/azure/synapse-analytics/sql/on-demand-workspace-overview) 지원에 대한 일반적인 수정 및 개선 사항이 적용되었습니다. |
 | 플랫 파일 가져오기 | 마법사가 다른 애플리케이션이 파일을 사용 중인 것을 감지하지 못하고 오류를 throw하는 문제를 해결했습니다. [SQL Server 사용자 피드백](https://feedback.azure.com/forums/908035/suggestions/40761574)을 참조하세요. |
 | 데이터 계층 애플리케이션 가져오기/내보내기 | bacpac을 가져올 때 기본 서비스 계층을 표준 S0으로 수정했습니다(Azure Portal 및 SqlPackage.exe 동작과 동일함). |
 | 플랫 파일 가져오기 | 마법사가 다른 애플리케이션이 파일을 사용 중인 것을 감지하지 못하고 오류를 throw하는 문제를 해결했습니다. [SQL Server 사용자 피드백](https://feedback.azure.com/forums/908035/suggestions/40761574)을 참조하세요. |
@@ -161,7 +162,7 @@ SSMS 18.7은 SSMS의 최신 GA(일반 공급) 릴리스입니다. 이전 버전�
 | 스크립트 생성 마법사 | SQL Server 2014 이전 버전에서 데이터베이스 개체를 열거하려고 하면 마법사가 실패합니다. [SQL Server 사용자 피드백](https://feedback.azure.com/forums/908035-sql-server/suggestions/41885587)을 참조하세요. | SQL 2014 및 이전 버전의 스크립트 생성 마법사에서 SSMS 18.6을 사용하여 개체를 선택합니다. |
 | Integration Services | Azure-SSIS Integration Runtime에서 패키지를 가져오거나 내보낼 때 Integration Services 스크립트 태스크/구성 요소가 포함된 패키지에 대한 스크립트가 손실됩니다. 해결 방법: “C:\Program Files (x86)\Microsoft SQL Server Management Studio 18\Common7\IDE\CommonExtensions\MSBuild” 폴더를 제거합니다. | 해당 없음 |
 | Integration Services | 최신 운영 체제에서 Integration Services에 대한 원격 연결이 "지정된 서비스가 설치된 서비스로 존재하지 않습니다." 오류와 함께 실패할 수 있습니다. 해결 방법: Computer\HKEY_CLASSES_ROOT\AppID & Computer\HKEY_CLASSES_ROOT\ WOW6432Node\AppID에서 Integration Services 관련 레지스트리 위치를 확인하고, 이러한 하이브 내에서 연결하려는 특정 버전의 Integration Services에 대해 'LocalService'라는 레지스트리 키 이름을 'LocalService_A'로 바꿉니다. | 해당 없음 |
-| 개체 탐색기 | 18.7 이전의 SSMS 릴리스는 [Azure Synapse Analytics SQL 주문형](https://docs.microsoft.com/azure/synapse-analytics/sql/on-demand-workspace-overview)과 관련된 엔진 변경 사항으로 인해 개체 탐색기에서 호환성이 손상되는 변경이 적용되었습니다. | Azure Synapse Analytics SQL 주문형 SSMS에서 개체 탐색기를 계속 활용하려면 SSMS 18.7 이상이 필요합니다. |
+| 개체 탐색기 | 18.7 이전의 SSMS 릴리스에는 [Azure Synapse Analytics 서버리스 SQL 풀](https://docs.microsoft.com/azure/synapse-analytics/sql/on-demand-workspace-overview)과 관련된 엔진 변경으로 인해 개체 탐색기에 호환성이 손상되는 변경이 있습니다. | Azure Synapse Analytics 서버리스 SQL 풀이 있는 SSMS에서 개체 탐색기를 계속 활용하려면 SSMS 18.7 이상이 필요합니다. |
 | 쿼리 저장소 | 쿼리 저장소의 개체 탐색기 노드를 마우스 오른쪽 단추로 클릭하면 오류가 발생합니다. | 노드를 확장하고 개별 하위 옵션을 마우스 오른쪽 단추로 클릭하여 항목에 직접 액세스합니다. |
 
 ### <a name="186"></a>18.6
@@ -185,7 +186,7 @@ SSMS 18.7은 SSMS의 최신 GA(일반 공급) 릴리스입니다. 이전 버전�
 | 플랫 파일 가져오기 | .csv/.tsv 파일이 각각 csv/tsv 파일로 구문 분석될 수 있도록 해당 파일의 고정 너비 파일 및 파일 형식 감지를 위한 지원이 추가되었습니다. |
 | Integration Services | Azure SQL Managed Instance 에이전트 작업이 Azure-SSIS IR의 패키지 스토어에서 SSIS 패키지를 실행하도록 하는 지원이 추가되었습니다. |
 | SMO/스크립팅 | [Azure Synapse Analytics](/azure/synapse-analytics/sql-data-warehouse/sql-data-warehouse-overview-what-is)(이전 명칭: SQL Azure DW)에서 동적 데이터 마스킹 스크립팅을 위한 지원이 추가되었습니다. |
-| SMO/스크립팅 | [Azure Synapse Analytics](/azure/synapse-analytics/sql-data-warehouse/sql-data-warehouse-overview-what-is)(이전 명칭: SQL DW)에서 보안 정책 스크립팅을 위한 지원이 추가되었습니다. |
+| SMO/스크립팅 | [Azure Synapse Analytics](/azure/synapse-analytics/sql-data-warehouse/sql-data-warehouse-overview-what-is)에서 보안 정책 스크립팅을 위한 지원이 추가되었습니다. |
 
 #### <a name="bug-fixes-in-186"></a>18.6의 버그 수정
 
@@ -278,7 +279,7 @@ SSMS 18.7은 SSMS의 최신 GA(일반 공급) 릴리스입니다. 이전 버전�
 | SMO/스크립팅 | 보기 개체에 새 DwMaterializedViewDistribution 속성을 추가했습니다. |
 | SMO/스크립팅 | *기능 제한* 에 대한 지원이 제거되었습니다(이 미리 보기 기능은 SQL Azure 및 SQL 온-프레미스에서 제거됨). |
 | SMO/스크립팅 | 스크립트 생성 마법사에 대한 대상으로 *Notebook* 을 추가했습니다. |
-| SMO/스크립팅 | *SQL On Demand* 에 대한 지원을 추가했습니다. |
+| SMO/스크립팅 | Azure Synapse Analytics 서버리스 SQL 풀에 대한 지원을 추가했습니다. |
 | SMO/스크립팅 | [SQL 평가 API](../tools/sql-assessment-api/sql-assessment-api-overview.md) - Platform, Name 및 engineEdition 필드에는 이제 일반적인 쉼표로 구분된 목록(*platform*: \[*Windows*, *Linux*\])뿐 아니라 정규식(*platform*: *\/Windows\|Linux\/* )도 포함될 수 있습니다.
 | SMO/스크립팅 | [SQL 평가 API](../tools/sql-assessment-api/sql-assessment-api-overview.md) - 13개의 평가 규칙이 추가되었습니다. 자세한 내용은 [GitHub](https://github.com/microsoft/sql-server-samples/tree/master/samples/manage/sql-assessment-api))를 참조하세요. |
 
@@ -301,9 +302,9 @@ SSMS 18.7은 SSMS의 최신 GA(일반 공급) 릴리스입니다. 이전 버전�
 | 일반 SSMS | MSODBC 및 MSOLEDB 드라이버의 버전을 업데이트하는 중입니다. |
 | 일반 SSMS | SSMS에서 두 개 이상의 공통 원본 중단 및 충돌을 해결했습니다. |
 | 일반 SSMS | 찾아보기 단추를 선택할 때 *복원 대화 상자* 가 중단되는 하나 이상의 사례를 해결했습니다. |
-| 일반 SSMS | SQL On Demand용 *새 데이터베이스 GUI* 를 수정했습니다. |
-| 일반 SSMS | SQL On Demand용 *새 외부 테이블...* 및 *새 외부 데이터 원본...* 템플릿을 수정했습니다. |
-| 일반 SSMS | SQL On Demand에 대한 데이터베이스 속성, 연결 속성, 보고서 숨기기 및 이름 바꾸기를 수정했습니다. |
+| 일반 SSMS | Azure Synapse Analytics 서버리스 SQL 풀의 새 데이터베이스 GUI를 수정했습니다. |
+| 일반 SSMS | Azure Synapse Analytics 서버리스 SQL 풀의 새 외부 테이블... 및 새 외부 데이터 원본... 템플릿을 수정했습니다. |
+| 일반 SSMS | Azure Synapse Analytics 서버리스 SQL 풀의 데이터베이스 속성, 연결 속성, 보고서 숨기기, 이름 바꾸기를 수정했습니다. |
 | 일반 SSMS | Always Encrypted: 새 Enclave 사용 키를 선택할 때 키 이름 드롭다운이 읽기 전용이 되는 문제를 해결했습니다. |
 | 일반 SSMS | 두 가지 *기타 범주* 가 표시되던 *데이터베이스 속성 옵션* 표를 정리했습니다. |
 | 일반 SSMS | "데이터베이스 속성 옵션" 표에서 스크롤 막대가 중간부터 시작하는 문제를 해결했습니다. |
@@ -330,7 +331,7 @@ SSMS 18.7은 SSMS의 최신 GA(일반 공급) 릴리스입니다. 이전 버전�
 | SQL 에이전트 | 작업 단계 페이지에서 탭 순서를 수정했습니다. |
 | SQL 에이전트 | 작업 단계 페이지에서 "다음" 및 "이전" 단추의 위치를 반대로 하여 논리적 순서로 배치했습니다. |
 | SQL 에이전트 | UI가 잘리지 않도록 작업 일정 창을 조정했습니다. |
-| SMO/스크립팅 | SQL On Demand에 대한 데이터베이스 스크립팅을 수정했습니다. |
+| SMO/스크립팅 | Azure Synapse Analytics 서버리스 SQL 풀의 데이터베이스 스크립팅을 수정했습니다. |
 | SMO/스크립팅 | SqlOnDemand에 대한 스크립팅을 수정하는 명시적인 sqlvariant 캐스트(SqlOnDemand에 대한 잘못된 T-SQL 구문)를 제거하는 중입니다. |
 | SMO/스크립팅 | SQL Azure 인덱스에 대한 FILLFACTOR를 건너뛰는 문제를 해결했습니다. |
 | SMO/스크립팅 | 외부 개체 스크립팅과 관련된 문제를 해결했습니다. |
@@ -370,7 +371,7 @@ SSMS 18.7은 SSMS의 최신 GA(일반 공급) 릴리스입니다. 이전 버전�
 | 쿼리 저장소 | 새 사용자 지정 캡처 정책에 대한 지원을 추가했습니다. |
 | 쿼리 저장소 | **대기 통계 캡처 모드** 를 **쿼리 저장소** **데이터베이스 속성** 옵션에 추가했습니다. |
 | SMO/스크립팅 | SQL DW에서 구체화된 뷰의 스크립트를 지원합니다. |
-| SMO/스크립팅 | *SQL On Demand* 에 대한 지원을 추가했습니다. |
+| SMO/스크립팅 | Azure Synapse Analytics 서버리스 SQL 풀에 대한 지원을 추가했습니다. |
 | SMO/스크립팅 | [SQL 평가 API](../tools/sql-assessment-api/sql-assessment-api-overview.md) - 50개 평가 규칙을 추가했습니다(GitHub에서 세부 정보 참조). |
 | SMO/스크립팅 | [SQL 평가 API](../tools/sql-assessment-api/sql-assessment-api-overview.md) - 규칙 조건에 기본 수학 식 및 비교를 추가했습니다. |
 | SMO/스크립팅 | [SQL 평가 API](../tools/sql-assessment-api/sql-assessment-api-overview.md) - RegisteredServer 개체에 대한 지원을 추가했습니다. |

@@ -9,12 +9,12 @@ ms.date: 10/19/2020
 ms.topic: conceptual
 ms.prod: sql
 ms.technology: big-data-cluster
-ms.openlocfilehash: 02fbb46968d51bc4dbe730fcc7d575793063bcff
-ms.sourcegitcommit: 0f484f32709a414f05562bbaafeca9a9fc57c9ed
+ms.openlocfilehash: b3265c99e185f4a8fcbe68e400ab1277b1e72671
+ms.sourcegitcommit: 0c0e4ab90655dde3e34ebc08487493e621f25dda
 ms.translationtype: HT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 11/14/2020
-ms.locfileid: "94631689"
+ms.lasthandoff: 12/01/2020
+ms.locfileid: "96442890"
 ---
 # <a name="sql-server-2019-big-data-clusters-release-notes"></a>SQL Server 2019 빅 데이터 클러스터 릴리스 정보
 
@@ -113,8 +113,10 @@ SQL Server 2019의 CU6(누적 업데이트 6) 릴리스입니다.
 - [Active Directory 모드에서 빅 데이터 클러스터 액세스 관리](manage-user-access.md)
 - [Active Directory 모드에서 [!INCLUDE[big-data-clusters-2019](../includes/ssbigdataclusters-ss-nover.md)] 배포](active-directory-deploy.md)
 - [Active Directory 모드에서 AKS에 [!INCLUDE[big-data-clusters-2019](../includes/ssbigdataclusters-ss-nover.md)] 배포](active-directory-deployment-aks.md)
-- [고가용성으로 [!INCLUDE[big-data-clusters-2019](../includes/ssbigdataclusters-ss-nover.md)] 배포](deployment-high-availability.md)
-- [[!INCLUDE[big-data-clusters-2019](../includes/ssbigdataclusters-ss-nover.md)] 구성](configure-cluster.md)
+- [Azure Kubernetes Service(AKS) 프라이빗 클러스터로 빅 데이터 클러스터 배포](private-deploy.md)
+- [AKS(Azure Kubernetes Service) 프라이빗 클러스터에서 BDC(빅 데이터 클러스터) 클러스터의 송신 트래픽 제한](private-restrict-egress-traffic.md)
+- [고가용성을 사용하여 SQL Server 빅 데이터 클러스터 배포](deployment-high-availability.md)
+- [SQL Server 빅 데이터 클러스터 구성](configure-cluster.md)
 - [빅 데이터 클러스터에서 Apache Spark 및 Apache Hadoop 구성](configure-spark-hdfs.md)
 - [SQL Server 마스터 인스턴스 구성 속성](reference-config-master-instance.md)
 - [Apache Spark 및 Apache Hadoop(HDFS) 구성 속성](reference-config-spark-hadoop.md)

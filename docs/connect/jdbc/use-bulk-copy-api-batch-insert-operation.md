@@ -11,12 +11,12 @@ ms.topic: conceptual
 ms.assetid: ''
 author: David-Engel
 ms.author: v-daenge
-ms.openlocfilehash: 09eac13d41656721a9a4cc6d8fb8fa9790779018
-ms.sourcegitcommit: e8f6c51d4702c0046aec1394109bc0503ca182f0
+ms.openlocfilehash: 14074b0136baf800b038e4b113325e81d65dc3e7
+ms.sourcegitcommit: 0c0e4ab90655dde3e34ebc08487493e621f25dda
 ms.translationtype: HT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 08/07/2020
-ms.locfileid: "87943032"
+ms.lasthandoff: 12/01/2020
+ms.locfileid: "96442593"
 ---
 # <a name="using-bulk-copy-api-for-batch-insert-operation"></a>일괄 처리 삽입 작업에 대량 복사 API 사용
 
@@ -51,7 +51,7 @@ Connection connection = DriverManager.getConnection("jdbc:sqlserver://<server>:<
 
 **SQLServerConnection.getUseBulkCopyForBatchInsert()** 는 **useBulkCopyForBatchInsert** 연결 속성의 현재 값을 검색합니다.
 
-**useBulkCopyForBatchInsert**의 값은 초기화 시 각각의 PreparedStatement에 대해 상수로 유지됩니다. **SQLServerConnection.setUseBulkCopyForBatchInsert()** 에 대한 후속 호출은 이미 생성된 PreparedStatement의 값에 영향을 미치지 않습니다.
+**useBulkCopyForBatchInsert** 의 값은 초기화 시 각각의 PreparedStatement에 대해 상수로 유지됩니다. **SQLServerConnection.setUseBulkCopyForBatchInsert()** 에 대한 후속 호출은 이미 생성된 PreparedStatement의 값에 영향을 미치지 않습니다.
 
 ### <a name="3-enabling-with-setusebulkcopyforbatchinsert-method-from-sqlserverdatasource-object"></a>3. SQLServerDataSource 개체의 setUseBulkCopyForBatchInsert() 메서드 사용 설정
 
@@ -71,7 +71,7 @@ Connection connection = DriverManager.getConnection("jdbc:sqlserver://<server>:<
 
 ## <a name="example"></a>예제
 
-아래에서는 1,000개 행의 Azure Synapse Analytics(SQL DW)에 대한 일괄 처리 삽입 작업의 사용 사례를 일반 및 대량 복사 API 시나리오 모두에 대해 소개합니다.
+아래의 예제 코드는 일반적 시나리오와 대량 복사 API 시나리오에서 Azure Synapse Analytics에 대한 1,000개 행의 일괄 처리 삽입 작업의 사용 사례를 보여 줍니다.
 
 ```java
     public static void main(String[] args) throws Exception

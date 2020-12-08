@@ -13,12 +13,12 @@ ms.topic: conceptual
 author: David-Engel
 ms.author: v-daenge
 ms.reviewer: v-jizho2
-ms.openlocfilehash: 30155a584de4e22692601a1dcf9551a67d4f580f
-ms.sourcegitcommit: 4c3949f620d09529658a2172d00bfe37aeb1a387
+ms.openlocfilehash: eef9e81c94c930b9f00689b41339d54a0f0302be
+ms.sourcegitcommit: 0c0e4ab90655dde3e34ebc08487493e621f25dda
 ms.translationtype: HT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 11/21/2020
-ms.locfileid: "95011788"
+ms.lasthandoff: 12/01/2020
+ms.locfileid: "96442714"
 ---
 # <a name="sqlclient-driver-support-lifecycle"></a>SqlClient 드라이버 지원 기간
 
@@ -30,16 +30,21 @@ Microsoft.Data.SqlClient 라이브러리는 모든 릴리스에 대한 최신 .N
 
 ## <a name="microsoftdatasqlclient-release-cadence"></a>Microsoft.Data.SqlClient 릴리스 주기
 
-안정적인 새로운(GA) 릴리스는 버전 1.2부터 6개월마다 정기적으로 게시되며 그 사이에 2~3 미리보기 릴리스도 게시됩니다. 몇 가지 조건과 고객 응답을 바탕으로 관련자와 유지 관리자가 장기 지원(LTS) 릴리스를 선택합니다.
+새로운 안정적(GA) 릴리스는 버전 1.2부터 6개월마다 정기적으로 게시되며, 그 사이에 2~3개의 미리 보기가 릴리스됩니다. 몇 가지 조건과 고객 응답을 바탕으로 관련자와 유지 관리자가 장기 지원(LTS) 릴리스를 선택합니다.
 
-### <a name="release-life-cycles"></a>릴리스 수명 주기
+### <a name="actively-supported-releases"></a>활발하게 지원되는 릴리스
 
 | 버전 | 공식 릴리스 날짜 | 최신 패치 버전 | 패치 릴리스 날짜 | 지원 수준  | 지원 종료 |
 | -- | -- | -- | -- | -- | -- |
 | 2.1 | 2020년 11월 19일 | 2.1.0 | 2020년 11월 19일 | 현재 | |
-| 2.0 | 2020년 6월 16일 | 2.0.1 | 2020년 8월 25일 | 현재 | |
+| 2.0 | 2020년 6월 16일 | 2.0.1 | 2020년 8월 25일 | 현재 | 2021년 2월 19일 |
 | 1.1 | 2019년 11월 20일 | 1.1.3 | 2020년 5월 15일 | LTS | 2022년 11월 21일 |
-| 1.0 | 2019년 8월 28일 | 1.0.19269.1 | 2019년 9월 26일 | 현재 | 2020년 2월 20일 |
+
+### <a name="out-of-support-releases"></a>지원되지 않는 릴리스
+
+| 버전 | 최신 패치 릴리스 날짜 | 최신 패치 버전 | 지원 종료됨 |
+| -- | -- | -- | -- |
+| 1.0 | 2019년 9월 26일 | 1.0.19269.1 | 2020년 2월 20일 |
 
 ### <a name="long-term-support-lts-releases"></a>LTS(장기 지원) 릴리스
 
@@ -57,3 +62,20 @@ LTS 릴리스는 첫 릴리스 후 3년 동안 지원됩니다.
 |2.0|예|예|예|예|예|예|예|예|
 |1.1|예|예|예|예|예|예|예|예|
 |1.0|예|예|예|예|예|예|예|예|
+
+## <a name="supported-os-versions"></a>지원된 OS 버전
+
+### <a name="support-for-net-framework-applications"></a>.NET Framework 애플리케이션 지원
+
+Microsoft.Data.SqlClient는 .NET Framework v4.6 이상에서 지원되는 모든 운영 체제를 지원합니다.
+
+[.NET Framework, 시스템 요구 사항](/dotnet/framework/get-started/system-requirements)
+
+### <a name="support-for-net-core-applications"></a>.NET Core 애플리케이션 지원
+
+Microsoft.Data.SqlClient는 .NET Core v2.1 이상에서 지원되는 모든 운영 체제를 지원합니다.
+
+[.NET Core 지원 OS 수명 주기 정책](https://github.com/dotnet/core/blob/master/os-lifecycle-policy.md)
+
+> [!NOTE]
+> 세계화 고정 모드는 현재 지원되지 않습니다.

@@ -10,12 +10,12 @@ ms.topic: conceptual
 author: David-Engel
 ms.author: v-daenge
 ms.reviewer: v-chmalh
-ms.openlocfilehash: 40fc82cdc264951d1e776875a48b5a516b4b26a8
-ms.sourcegitcommit: 192f6a99e19e66f0f817fdb1977f564b2aaa133b
+ms.openlocfilehash: f61b867b70825595a012b2167d2c63b13409a8e2
+ms.sourcegitcommit: 0c0e4ab90655dde3e34ebc08487493e621f25dda
 ms.translationtype: HT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 11/25/2020
-ms.locfileid: "96126521"
+ms.lasthandoff: 12/01/2020
+ms.locfileid: "96442821"
 ---
 # <a name="connection-string-syntax"></a>연결 문자열 구문
 
@@ -69,7 +69,7 @@ SQL Server에 연결하기 위해 기본적으로 Windows 인증이 사용됩니
 "Persist Security Info=False;User ID=*****;Password=*****;Initial Catalog=AdventureWorks;Server=MySqlServer"  
 ```  
 
-Azure SQL Database 또는 Azure SQL Data Warehouse에 연결하고 `user@servername` 형식으로 로그인을 제공하는 경우 로그인의 `servername` 값이 `Server=`에 대해 제공된 값과 일치하는지 확인합니다.
+Azure SQL Database 또는 Azure Synapse Analytics에 연결하고 `user@servername` 형식으로 로그인을 제공하는 경우 로그인의 `servername` 값이 `Server=`에 대해 제공된 값과 일치하는지 확인합니다.
 
 > [!NOTE]
 > Windows 인증은 SQL Server 로그인에 우선적으로 적용됩니다. Integrated Security=true와 사용자 이름 및 암호를 모두 지정하는 경우 사용자 이름과 암호는 무시되고 Windows 인증이 사용됩니다.
@@ -125,7 +125,7 @@ Azure SQL Database 또는 Azure SQL Data Warehouse에 연결하고 `user@servern
 
 자세한 내용은 [유효성 검사 없이 암호화 사용](/sql/relational-databases/native-client/features/using-encryption-without-validation)을 참조하세요.
 
-## <a name="see-also"></a>참고 항목
+## <a name="see-also"></a>참조
 
 - [연결 문자열](connection-strings.md)
-- [데이터 소스에 연결](connecting-to-data-source.md)
+- [데이터 원본에 연결](connecting-to-data-source.md)

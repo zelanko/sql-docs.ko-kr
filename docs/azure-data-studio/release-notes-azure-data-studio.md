@@ -9,12 +9,12 @@ ms.author: alayu
 ms.reviewer: maghan
 ms.custom: seodec18
 ms.date: 11/12/2020
-ms.openlocfilehash: a45b17b98ae8c8d398eee18c7678a119cb32a4f7
-ms.sourcegitcommit: 54cd97a33f417432aa26b948b3fc4b71a5e9162b
+ms.openlocfilehash: b9bfda0507b81211feefb0fdb2505ae31f0c8c3b
+ms.sourcegitcommit: 0c0e4ab90655dde3e34ebc08487493e621f25dda
 ms.translationtype: HT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 11/13/2020
-ms.locfileid: "94584806"
+ms.lasthandoff: 12/01/2020
+ms.locfileid: "96442644"
 ---
 # <a name="release-notes-for-azure-data-studio"></a>Azure Data Studio의 릴리스 정보
 
@@ -39,7 +39,7 @@ ms.locfileid: "94584806"
 | 새 항목 | 세부 정보 | 해결 방법 |
 |----------|---------|------------|
 | Azure Arc 확장 | [알려진 문제:](https://github.com/microsoft/azuredatastudio/issues/13319) Arc MIAA 및 PG 배포를 위한 "Notebook으로 스크립트" 단추는 Notebook으로 스크립팅 전에 필드 유효성 검사를 수행하지 않습니다. 즉, 사용자가 암호 확인 입력에 잘못된 암호를 입력할 경우 잘못된 암호 값을 가진 Notebook이 생깁니다.| 사용자가 대신 사용해야 하는 "배포" 단추는 예상대로 작동합니다. |
-| 개체 탐색기 | 1\.24.0 이전의 ADS 릴리스는 [Azure Synapse Analytics SQL 주문형](https://docs.microsoft.com/azure/synapse-analytics/sql/on-demand-workspace-overview)과 관련된 엔진 변경 사항으로 인해 개체 탐색기에서 호환성이 손상되는 변경이 적용되었습니다. | Azure Synapse Analytics SQL 주문형 Azure Data Studio에서 개체 탐색기를 계속 활용하려면 Azure Data Studio 1.24.0 이상을 사용해야 합니다. |
+| 개체 탐색기 | 1\.24.0 이전의 ADS 릴리스에는 [Azure Synapse Analytics 서버리스 SQL 풀](https://docs.microsoft.com/azure/synapse-analytics/sql/on-demand-workspace-overview)과 관련된 엔진 변경으로 인해 개체 탐색기에 호환성이 손상되는 변경이 있습니다. | Azure Synapse Analytics 서버리스 SQL 풀이 있는 Azure Data Studio에서 개체 탐색기를 계속 활용하려면 Azure Data Studio 1.24.0 이상을 사용해야 합니다. |
 
 다른 알려진 문제를 확인하고 제품 팀에 피드백을 제공하려면 [Azure Data Studio 피드백](https://github.com/microsoft/azuredatastudio)을 참조할 수 있습니다.
 

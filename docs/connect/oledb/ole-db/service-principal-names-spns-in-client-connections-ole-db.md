@@ -2,7 +2,7 @@
 title: 클라이언트 연결의 SPN(서비스 사용자 이름)(OLE DB) | Microsoft Docs
 description: 클라이언트 애플리케이션에서 서비스 사용자 이름을 지원하는 OLE DB Driver for SQL Server 속성 및 멤버 함수에 대해 알아봅니다.
 ms.custom: ''
-ms.date: 06/12/2018
+ms.date: 09/30/2020
 ms.prod: sql
 ms.prod_service: database-engine, sql-database, sql-data-warehouse, pdw
 ms.reviewer: ''
@@ -10,12 +10,12 @@ ms.technology: connectivity
 ms.topic: reference
 author: David-Engel
 ms.author: v-daenge
-ms.openlocfilehash: 5a97e889a8e36e0c9fc918f3f4724d283b8cfa5d
-ms.sourcegitcommit: c95f3ef5734dec753de09e07752a5d15884125e2
+ms.openlocfilehash: 43e0972f3dde7be226ccac2bd4039dd7403ade03
+ms.sourcegitcommit: 0e0cd9347c029e0c7c9f3fe6d39985a6d3af967d
 ms.translationtype: HT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 08/25/2020
-ms.locfileid: "88862231"
+ms.lasthandoff: 12/02/2020
+ms.locfileid: "96504747"
 ---
 # <a name="service-principal-names-spns-in-client-connections-ole-db-in-sql-server-native-client"></a>SQL Server Native Client에서 클라이언트 연결(OLE DB)의 SPN(서비스 사용자 이름)
 [!INCLUDE [SQL Server](../../../includes/applies-to-version/sql-asdb-asdbmi-asa-pdw.md)]
@@ -47,16 +47,16 @@ ms.locfileid: "88862231"
 |속성|Type|사용|  
 |----------|----------|-----------|  
 |SSPROP_INTEGRATEDAUTHENTICATIONMETHOD|VT_BSTR, 읽기 전용|연결에 사용된 인증 방법을 반환합니다. 애플리케이션으로 반환되는 값은 Windows에서 OLE DB Driver for SQL Server로 반환하는 값입니다. 다음은 가능한 값입니다. <br />NTLM 인증을 사용하여 연결을 열 때 반환되는 "NTLM"<br />Kerberos 인증을 사용하여 연결을 열 때 반환되는 "Kerberos"<br /><br /> 연결이 열려 있지만 인증 방법을 확인할 수 없는 경우에는 VT_EMPTY가 반환됩니다.<br /><br /> 이 속성은 데이터 원본이 초기화된 경우에만 읽을 수 있습니다. 데이터 원본이 초기화되기 전에 이 속성을 읽으려고 하면 IDBProperties::GetProperies에서 DB_S_ERRORSOCCURRED 또는 DB_E_ERRORSOCCURRED가 반환되고 이 속성의 DBPROPSET_PROPERTIESINERROR에 DBPROPSTATUS_NOTSUPPORTED가 설정됩니다. 이 동작은 OLE DB 핵심 사양을 따르는 것입니다.|  
-|SSPROP_MUTUALLYAUTHENICATED|VT_BOOL, 읽기 전용|연결의 서버가 상호 인증되었으면 VARIANT_TRUE가 반환되고, 그렇지 않으면 VARIANT_FALSE가 반환됩니다.<br /><br /> 이 속성은 데이터 원본이 초기화된 경우에만 읽을 수 있습니다. 데이터 원본이 초기화되기 전에 이 속성을 읽으려고 하면 IDBProperties::GetProperies에서 DB_S_ERRORSOCCURRED 또는 DB_E_ERRORSOCCURRED가 반환되고 이 속성의 DBPROPSET_PROPERTIESINERROR에 DBPROPSTATUS_NOTSUPPORTED가 설정됩니다. 이 동작은 OLE DB 핵심 사양을 따르는 것입니다.<br /><br /> Windows 인증을 사용하지 않은 연결에 대해 이 특성을 쿼리하면 VARIANT_FALSE가 반환됩니다.|  
+|SSPROP_MUTUALLYAUTHENTICATED|VT_BOOL, 읽기 전용|연결의 서버가 상호 인증되었으면 VARIANT_TRUE가 반환되고, 그렇지 않으면 VARIANT_FALSE가 반환됩니다.<br /><br /> 이 속성은 데이터 원본이 초기화된 경우에만 읽을 수 있습니다. 데이터 원본이 초기화되기 전에 이 속성을 읽으려고 하면 IDBProperties::GetProperies에서 DB_S_ERRORSOCCURRED 또는 DB_E_ERRORSOCCURRED가 반환되고 이 속성의 DBPROPSET_PROPERTIESINERROR에 DBPROPSTATUS_NOTSUPPORTED가 설정됩니다. 이 동작은 OLE DB 핵심 사양을 따르는 것입니다.<br /><br /> Windows 인증을 사용하지 않은 연결에 대해 이 특성을 쿼리하면 VARIANT_FALSE가 반환됩니다.|  
   
 ## <a name="ole-db-api-support-for-spns"></a>SPN에 대한 OLE DB API 지원  
  다음 표에서는 클라이언트 연결에서 SPN을 지원하는 OLE DB 멤버 함수에 대해 설명합니다.  
   
 |멤버 함수|Description|  
 |---------------------|-----------------|  
-|IDataInitialize::GetDataSource|*pwszInitializationString*은 **ServerSPN** 및 **FailoverPartnerSPN**을 키워드로 포함할 수 있습니다.|  
-|IDataInitialize::GetInitializationString|SSPROP_INIT_SERVERSPN 및 SSPROP_INIT_FAILOVERPARTNERSPN이 기본값이 아닌 경우 *ppwszInitString*을 통해 **ServerSPN** 및 **FailoverPartnerSPN**에 대한 키워드 값으로 초기화 문자열에 포함됩니다. 기본값인 경우에는 초기화 문자열에 포함되지 않습니다.|  
-|IDBInitialize::Initialize|데이터 원본 초기화 속성에서 DBPROP_INIT_PROMPT를 설정하여 프롬프트를 활성화한 경우 OLE DB 로그인 대화 상자가 표시됩니다. 이를 통해 주 서버 및 해당 장애 조치(Failover) 파트너 모두에 대한 SPN이 입력되도록 할 수 있습니다.<br /><br /> DPPROP_INIT_PROVIDERSTRING에 공급자 문자열이 설정되어 있으면 해당 문자열이 새 키워드인 **ServerSPN**과 **FailoverPartnerSPN**을 인식하고 해당 값을 사용하여(있는 경우) SSPROP_INIT_SERVER_SPN 및 SSPROP_INIT_FAILOVER_PARTNER_SPN을 초기화합니다.<br /><br /> IDBInitialize::Initialize를 호출하기 전에 IDBProperties::SetProperties를 호출하여 SSPROP_INIT_SERVER_SPN 및 SSPROP_INIT_FAILOVER_PARTNER_SPN 속성을 설정할 수 있습니다. 이 방법을 공급자 문자열 대신 사용할 수 있습니다.<br /><br /> 두 곳 이상에서 속성이 설정된 경우 프로그래밍 방식으로 설정된 값이 공급자 문자열에 설정된 값보다 우선적으로 적용됩니다. 초기화 문자열에 설정된 값은 로그인 대화 상자에서 설정된 값보다 우선적으로 적용됩니다.<br /><br /> 공급자 문자열에서 동일한 키워드가 여러 번 나타나는 경우 가장 먼저 발견된 값이 우선적으로 적용됩니다.|  
+|IDataInitialize::GetDataSource|*pwszInitializationString* 은 **ServerSPN** 및 **FailoverPartnerSPN** 을 키워드로 포함할 수 있습니다.|  
+|IDataInitialize::GetInitializationString|SSPROP_INIT_SERVERSPN 및 SSPROP_INIT_FAILOVERPARTNERSPN이 기본값이 아닌 경우 *ppwszInitString* 을 통해 **ServerSPN** 및 **FailoverPartnerSPN** 에 대한 키워드 값으로 초기화 문자열에 포함됩니다. 기본값인 경우에는 초기화 문자열에 포함되지 않습니다.|  
+|IDBInitialize::Initialize|데이터 원본 초기화 속성에서 DBPROP_INIT_PROMPT를 설정하여 프롬프트를 활성화한 경우 OLE DB 로그인 대화 상자가 표시됩니다. 이를 통해 주 서버 및 해당 장애 조치(Failover) 파트너 모두에 대한 SPN이 입력되도록 할 수 있습니다.<br /><br /> DPPROP_INIT_PROVIDERSTRING에 공급자 문자열이 설정되어 있으면 해당 문자열이 새 키워드인 **ServerSPN** 과 **FailoverPartnerSPN** 을 인식하고 해당 값을 사용하여(있는 경우) SSPROP_INIT_SERVER_SPN 및 SSPROP_INIT_FAILOVER_PARTNER_SPN을 초기화합니다.<br /><br /> IDBInitialize::Initialize를 호출하기 전에 IDBProperties::SetProperties를 호출하여 SSPROP_INIT_SERVER_SPN 및 SSPROP_INIT_FAILOVER_PARTNER_SPN 속성을 설정할 수 있습니다. 이 방법을 공급자 문자열 대신 사용할 수 있습니다.<br /><br /> 두 곳 이상에서 속성이 설정된 경우 프로그래밍 방식으로 설정된 값이 공급자 문자열에 설정된 값보다 우선적으로 적용됩니다. 초기화 문자열에 설정된 값은 로그인 대화 상자에서 설정된 값보다 우선적으로 적용됩니다.<br /><br /> 공급자 문자열에서 동일한 키워드가 여러 번 나타나는 경우 가장 먼저 발견된 값이 우선적으로 적용됩니다.|  
 |IDBProperties::GetProperties|IDBProperties::GetProperties를 호출하여 새 데이터 원본 초기화 속성 SSPROP_INIT_SERVERSPN 및 SSPROP_INIT_FAILOVERPARTNERSPN의 값과 새 데이터 원본 속성 SSPROP_AUTHENTICATIONMETHOD 및 SSPROP_MUTUALLYAUTHENTICATED의 값을 가져올 수 있습니다.|  
 |IDBProperties::GetPropertyInfo|IdbProperties::GetPropertyInfo에는 새 데이터 원본 초기화 속성 SSPROP_INIT_SERVERSPN 및 SSPROP_INIT_FAILOVERPARTNERSPN이나 새 데이터 원본 속성 SSPROP_AUTHENTICATION_METHOD 및 SSPROP_MUTUALLYAUTHENTICATED가 포함됩니다.|  
 |IDBProperties::SetProperties|IDBProperties::SetProperties를 호출하여 새 데이터 원본 초기화 속성 SSPROP_INITSERVERSPN 및 SSPROP_INIT_FAILOVERPARTNERSPN의 값을 설정할 수 있습니다.<br /><br /> 언제라도 이러한 속성을 설정할 수 있지만 데이터 원본이 열려 있는 경우에는 "DB_E_ERRORSOCCURRED, "여러 단계 OLE DB 작업을 하는 동안 오류가 발생했습니다. 각 OLE DB 상태 값이 있으면 확인해 보십시오. 완료된 작업이 없습니다.""라는 오류가 반환됩니다.|  

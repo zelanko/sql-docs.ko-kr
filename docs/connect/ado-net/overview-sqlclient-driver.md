@@ -11,32 +11,32 @@ ms.assetid: 5e467fce-7237-4678-bafa-a16f32323d0c
 author: David-Engel
 ms.author: v-daenge
 ms.reviewer: v-kaywon
-ms.openlocfilehash: aa13708615610effcb524c4cdf087b6302045a3e
-ms.sourcegitcommit: c7f40918dc3ecdb0ed2ef5c237a3996cb4cd268d
+ms.openlocfilehash: 8f08b90ef1c379e9f8c671610a5d26cbcc7af8aa
+ms.sourcegitcommit: 0c0e4ab90655dde3e34ebc08487493e621f25dda
 ms.translationtype: HT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 10/05/2020
-ms.locfileid: "91725694"
+ms.lasthandoff: 12/01/2020
+ms.locfileid: "96442704"
 ---
 # <a name="overview-of-the-sqlclient-driver"></a>SqlClient 드라이버 개요
 
 [!INCLUDE[Driver_ADONET_Download](../../includes/driver_adonet_download.md)]
 
- Microsoft SqlClient Data Provider for SQL Server는 데이터베이스에 연결하고, 명령을 실행하고, 결과를 검색하는 데 사용되는 .NET Framework 및 .NET Core 데이터 공급자입니다.  
-  
+ Microsoft SqlClient Data Provider for SQL Server는 데이터베이스에 연결하고, 명령을 실행하고, 결과를 검색하는 데 사용되는 .NET Framework 및 .NET Core 데이터 공급자입니다.
+
  이 섹션의 문서에서는 SqlClient 드라이버를 일반적으로 살펴봅니다.
-  
-## <a name="in-this-section"></a>섹션 내용  
-  
-|항목|Description|  
-|-----------|-----------------|  
-|[Microsoft.Data.SqlClient 네임스페이스 소개](introduction-microsoft-data-sqlclient-namespace.md)|Microsoft.Data.SqlClient 네임스페이스 소개 페이지입니다.|  
-|[Microsoft SqlClient Data Provider for SQL Server 다운로드](download-microsoft-sqlclient-data-provider.md)|ADO.NET 및 Microsoft SqlClient Data Provider for SQL Server 다운로드 페이지입니다.|  
-|[SqlClient에서 이벤트 추적 사용](enable-eventsource-tracing.md)|이벤트 추적을 사용하여 드라이버를 디버그하고 테스트하는 방법을 설명합니다.|  
-|[SqlClient의 AppContext 스위치](appcontext-switches.md)|드라이버에서 지원되는 AppContext 스위치에 대해 설명합니다.|  
-|[SqlClient 드라이버 지원 기간](sqlclient-driver-support-lifecycle.md)|제품 지원 기간 정보가 포함된 페이지입니다.|  
-|[추가 SqlClient 드라이버 정보 찾기](find-additional-sqlclient-driver-information.md)|드라이버에 대한 유용한 정보가 포함된 페이지입니다.|  
+
+## <a name="in-this-section"></a>섹션 내용
+
+|항목|Description|
+|-----------|-----------------|
+|[Microsoft.Data.SqlClient 네임스페이스 소개](introduction-microsoft-data-sqlclient-namespace.md)|Microsoft.Data.SqlClient 네임스페이스 소개 페이지입니다.|
+|[Microsoft SqlClient Data Provider for SQL Server 다운로드](download-microsoft-sqlclient-data-provider.md)|ADO.NET 및 Microsoft SqlClient Data Provider for SQL Server 다운로드 페이지입니다.|
+|[SqlClient에서 이벤트 추적 사용](enable-eventsource-tracing.md)|이벤트 추적을 사용하여 드라이버를 디버그하고 테스트하는 방법을 설명합니다.|
+|[SqlClient의 AppContext 스위치](appcontext-switches.md)|드라이버에서 지원되는 AppContext 스위치에 대해 설명합니다.|
+|[SqlClient 문제 해결 가이드](sqlclient-troubleshooting-guide.md)|일반적으로 관찰되는 문제의 해결 방법을 제공합니다.|
+|[SqlClient 드라이버 지원 기간](sqlclient-driver-support-lifecycle.md)|제품 지원 기간 정보가 포함된 페이지입니다.|
+|[추가 SqlClient 드라이버 정보 찾기](find-additional-sqlclient-driver-information.md)|드라이버에 대한 유용한 정보가 포함된 페이지입니다.|
 
 ## <a name="next-steps"></a>다음 단계
- [SqlClient 드라이버 GitHub 리포지토리](https://github.com/dotnet/SqlClient)  
- [.NET API 브라우저](/dotnet/api/)
+ [SqlClient 드라이버 GitHub 리포지토리](https://github.com/dotnet/SqlClient) [.NET API 브라우저](/dotnet/api/)

@@ -10,12 +10,12 @@ author: dzsquared
 ms.author: drskwier
 ms.reviewer: maghan; sstein
 ms.date: 11/4/2020
-ms.openlocfilehash: ee78b145965c17ff0a496611c6506d23df1a31a3
-ms.sourcegitcommit: 49ee3d388ddb52ed9cf78d42cff7797ad6d668f2
+ms.openlocfilehash: 7894ea12ef77a7fb07a61ff454f27150812c7dfb
+ms.sourcegitcommit: 0c0e4ab90655dde3e34ebc08487493e621f25dda
 ms.translationtype: HT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 11/09/2020
-ms.locfileid: "94384502"
+ms.lasthandoff: 12/01/2020
+ms.locfileid: "96443064"
 ---
 # <a name="sqlpackageexe"></a>SqlPackage.exe
 
@@ -86,7 +86,7 @@ SqlPackage.exe 추출 작업은 SQL Server 또는 Azure SQL Database에서 DACPA
 
 ### <a name="help-for-the-extract-action"></a>Extract 동작에 대한 도움말
 
-|매개 변수|약식|값|Description|
+|매개 변수|약식|값|설명|
 |---|---|---|---|
 |**/Action:**|**/a**|Extract|수행할 작업을 지정합니다. |
 |**/AccessToken:**|**/at**|{string}| 대상 데이터베이스에 연결할 때 사용할 액세스 토큰 기반 인증 액세스 토큰을 지정합니다. |
@@ -137,7 +137,7 @@ SqlPackage.exe 게시 작업은 원본 데이터베이스의 구조와 일치하
 
 ### <a name="help-for-publish-action"></a>Publish 동작에 대한 도움말
 
-|매개 변수|약식|값|Description|
+|매개 변수|약식|값|설명|
 |---|---|---|---|
 |**/Action:**|**/a**|게시|수행할 작업을 지정합니다. |
 |**/AccessToken:**|**/at**|{string}| 대상 데이터베이스에 연결할 때 사용할 액세스 토큰 기반 인증 액세스 토큰을 지정합니다. |
@@ -245,7 +245,7 @@ SqlPackage.exe 게시 작업은 원본 데이터베이스의 구조와 일치하
 |**/p:**|IgnoreRouteLifetime=(BOOLEAN 'True')|데이터베이스에 게시할 때 SQL Server가 라우팅 테이블에 경로를 유지하는 시간에 대한 차이를 무시할지 또는 업데이트할지를 지정합니다.|
 |**/p:**|IgnoreSemicolonBetweenStatements=(BOOLEAN 'True')|데이터베이스에 게시할 때 T-SQL 문 사이의 세미콜론의 차이를 무시할지 또는 업데이트할지를 지정합니다.|
 |**/p:**|IgnoreTableOptions=(BOOLEAN)|데이터베이스에 게시할 때 테이블 옵션의 차이를 무시할지 또는 업데이트할지를 지정합니다.|
-|**/p:**|IgnoreTablePartitionOptions=(BOOLEAN)|데이터베이스에 게시할 때 테이블 파티션 옵션의 차이를 무시할지 또는 업데이트할지를 지정합니다.  이 옵션은 Azure Synapse Analytics SQL 풀(데이터 웨어하우스) 데이터베이스에만 적용됩니다.|
+|**/p:**|IgnoreTablePartitionOptions=(BOOLEAN)|데이터베이스에 게시할 때 테이블 파티션 옵션의 차이를 무시할지 또는 업데이트할지를 지정합니다.  이 옵션은 Azure Synapse Analytics 전용 SQL 풀 데이터베이스에만 적용됩니다.|
 |**/p:**|IgnoreUserSettingsObjects=(BOOLEAN)|데이터베이스에 게시할 때 사용자 설정 개체의 차이를 무시할지 또는 업데이트할지를 지정합니다.|
 |**/p:**|IgnoreWhitespace=(BOOLEAN 'True')|데이터베이스에 게시할 때 공백의 차이를 무시할지 또는 업데이트할지를 지정합니다.|
 |**/p:**|IgnoreWithNocheckOnCheckConstraints=(BOOLEAN)|데이터베이스에 게시할 때 CHECK 제약 조건의 WITH NOCHECK 절에 대한 값의 차이를 무시할지 또는 업데이트할지를 지정합니다.|
@@ -285,7 +285,7 @@ SqlPackage.exe Export 작업은 SQL Server 또는 Azure SQL Database의 라이�
   
 ### <a name="help-for-export-action"></a>Export 동작에 대한 도움말
 
-|매개 변수|약식|값|Description|
+|매개 변수|약식|값|설명|
 |---|---|---|---|
 |**/Action:**|**/a**|내보내기|수행할 작업을 지정합니다. |
 |**/AccessToken:**|**/at**|{string}| 대상 데이터베이스에 연결할 때 사용할 액세스 토큰 기반 인증 액세스 토큰을 지정합니다. |
@@ -326,7 +326,7 @@ SqlPackage.exe Import 작업은 BACPAC 패키지(.bacpac 파일)의 스키마 �
   
 ### <a name="help-for-command-actions"></a>명령 동작에 대한 도움말
 
-|매개 변수|약식|값|Description|
+|매개 변수|약식|값|설명|
 |---|---|---|---|
 |**/Action:**|**/a**|가져오기|수행할 작업을 지정합니다. |
 |**/AccessToken:**|**/at**|{string}| 대상 데이터베이스에 연결할 때 사용할 액세스 토큰 기반 인증 액세스 토큰을 지정합니다. |
@@ -368,7 +368,7 @@ Import 동작과 관련된 속성:
   
 ### <a name="help-for-deployreport-action"></a>DeployReport 동작에 대한 도움말
 
-|매개 변수|약식|값|Description|
+|매개 변수|약식|값|설명|
 |---|---|---|---|
 |**/Action:**|**/a**|DeployReport|수행할 작업을 지정합니다. |
 |**/AccessToken:**|**/at**|{string}| 대상 데이터베이스에 연결할 때 사용할 액세스 토큰 기반 인증 액세스 토큰을 지정합니다. |
@@ -504,7 +504,7 @@ Import 동작과 관련된 속성:
   
 ### <a name="help-for-driftreport-action"></a>DriftReport 동작에 대한 도움말
 
-|매개 변수|약식|값|Description|
+|매개 변수|약식|값|설명|
 |---|---|---|---|
 |**/Action:**|**/a**|DriftReport|수행할 작업을 지정합니다. |
 |**/AccessToken:**|**/at**|{string}| 대상 데이터베이스에 연결할 때 사용할 액세스 토큰 기반 인증 액세스 토큰을 지정합니다. |
@@ -531,7 +531,7 @@ Import 동작과 관련된 속성:
   
 ### <a name="help-for-the-script-action"></a>Script 동작에 대한 도움말
 
-|매개 변수|약식|값|Description|
+|매개 변수|약식|값|설명|
 |---|---|---|---|
 |**/Action:**|**/a**|스크립트|수행할 작업을 지정합니다. |
 |**/AccessToken:**|**/at**|{string}| 대상 데이터베이스에 연결할 때 사용할 액세스 토큰 기반 인증 액세스 토큰을 지정합니다. |

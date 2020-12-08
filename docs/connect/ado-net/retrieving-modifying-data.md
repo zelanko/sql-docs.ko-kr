@@ -10,12 +10,12 @@ ms.topic: conceptual
 author: David-Engel
 ms.author: v-daenge
 ms.reviewer: v-chmalh
-ms.openlocfilehash: cbe61aafd8dcd1681230c355187a65a231535e00
-ms.sourcegitcommit: 192f6a99e19e66f0f817fdb1977f564b2aaa133b
+ms.openlocfilehash: 8fc6a8ed3cf4fec9b97b81c38fb1667588623ba7
+ms.sourcegitcommit: debaff72dbfae91b303f0acd42dd6d99e03135a2
 ms.translationtype: HT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 11/25/2020
-ms.locfileid: "96126461"
+ms.lasthandoff: 12/01/2020
+ms.locfileid: "96419749"
 ---
 # <a name="retrieving-and-modifying-data-in-adonet"></a>ADO.NET에서 데이터 검색 및 수정
 
@@ -33,7 +33,7 @@ ms.locfileid: "96126461"
 
 [연결 풀링](connection-pooling.md) Microsoft SqlClient Data Provider for SQL Server에 대한 연결 풀링을 설명합니다.
 
-## <a name="see-also"></a>참고 항목
+## <a name="see-also"></a>참조
 
 - [ADO.NET에서 데이터 형식 매핑](data-type-mappings-ado-net.md)
 - [SQL Server 및 ADO.NET](./sql/index.md)

@@ -1,19 +1,19 @@
 ---
 title: OLE DB Driver 릴리스 정보
 description: 이 릴리스 정보 문서에서는 Microsoft OLE DB Driver for SQL Server의 각 릴리스의 변경 사항을 설명합니다.
-ms.date: 05/25/2020
+ms.date: 12/01/2020
 ms.prod: sql
 ms.technology: connectivity
 ms.topic: conceptual
 ms.reviewer: genemi
 author: mateusz-kmiecik
 ms.author: v-makmie
-ms.openlocfilehash: 2e957fdb91720c46f5065f4b671c14b757a7cb0f
-ms.sourcegitcommit: c7f40918dc3ecdb0ed2ef5c237a3996cb4cd268d
+ms.openlocfilehash: e66856d7eac47bca5fe7093cbec02d9414c585ef
+ms.sourcegitcommit: eeb30d9ac19d3ede8d07bfdb5d47f33c6c80a28f
 ms.translationtype: HT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 10/05/2020
-ms.locfileid: "91726941"
+ms.lasthandoff: 12/02/2020
+ms.locfileid: "96523087"
 ---
 # <a name="release-notes-for-the-microsoft-ole-db-driver-for-sql-server"></a>SQL Server용 Microsoft OLE DB 드라이버에 대한 릴리스 정보
 
@@ -27,6 +27,34 @@ Hello, from now on, please use the table-based format standard for all new Relea
 See section "## 18.2.1" for a live example in this article.
 Thank you. For questions, contact GeneMi. (2019/03/16)
 -->
+
+## <a name="1850"></a>18.5.0
+![다운로드](../../ssms/media/download-icon.png) [x64 설치 관리자 다운로드](https://go.microsoft.com/fwlink/?linkid=2135577)  
+![다운로드](../../ssms/media/download-icon.png) [x86 설치 관리자 다운로드](https://go.microsoft.com/fwlink/?linkid=2135722)  
+
+릴리스 날짜: 2020년 12월 1일
+
+검색된 언어가 아닌 다른 언어로 설치 관리자를 다운로드해야 하는 경우 다음과 같은 직접 링크를 사용할 수 있습니다.  
+    x64 드라이버의 경우: [중국어(간체)](https://go.microsoft.com/fwlink/?linkid=2135577&clcid=0x804) | [중국어(번체)](https://go.microsoft.com/fwlink/?linkid=2135577&clcid=0x404) | [영어(미국)](https://go.microsoft.com/fwlink/?linkid=2135577&clcid=0x409) | [프랑스어](https://go.microsoft.com/fwlink/?linkid=2135577&clcid=0x40c) | [독일어](https://go.microsoft.com/fwlink/?linkid=2135577&clcid=0x407) | [이탈리아어](https://go.microsoft.com/fwlink/?linkid=2135577&clcid=0x410) | [일본어](https://go.microsoft.com/fwlink/?linkid=2135577&clcid=0x411) | [한국어](https://go.microsoft.com/fwlink/?linkid=2135577&clcid=0x412) | [포르투갈어(브라질)](https://go.microsoft.com/fwlink/?linkid=2135577&clcid=0x416) | [러시아어](https://go.microsoft.com/fwlink/?linkid=2135577&clcid=0x419) | [스페인어](https://go.microsoft.com/fwlink/?linkid=2135577&clcid=0x40a)  
+    x86 드라이버의 경우: [중국어(간체)](https://go.microsoft.com/fwlink/?linkid=2135722&clcid=0x804) | [중국어(번체)](https://go.microsoft.com/fwlink/?linkid=2135722&clcid=0x404) | [영어(미국)](https://go.microsoft.com/fwlink/?linkid=2135722&clcid=0x409) | [프랑스어](https://go.microsoft.com/fwlink/?linkid=2135722&clcid=0x40c) | [독일어](https://go.microsoft.com/fwlink/?linkid=2135722&clcid=0x407) | [이탈리아어](https://go.microsoft.com/fwlink/?linkid=2135722&clcid=0x410) | [일본어](https://go.microsoft.com/fwlink/?linkid=2135722&clcid=0x411) | [한국어](https://go.microsoft.com/fwlink/?linkid=2135722&clcid=0x412) | [포르투갈어(브라질)](https://go.microsoft.com/fwlink/?linkid=2135722&clcid=0x416) | [러시아어](https://go.microsoft.com/fwlink/?linkid=2135722&clcid=0x419) | [스페인어](https://go.microsoft.com/fwlink/?linkid=2135722&clcid=0x40a)  
+
+### <a name="features-added"></a>추가된 기능
+
+| 추가된 기능 | 세부 정보 |
+| :------------ | :------ |
+| [SQL 데이터 검색 및 분류](../../relational-databases/security/sql-data-discovery-and-classification.md) 지원 | [데이터 분류 사용](features/using-data-classification.md) |
+| Azure Active Directory 서비스 사용자 인증 지원(`ActiveDirectoryServicePrincipal`) | [Azure Active Directory 사용](features/using-azure-active-directory.md) |
+
+### <a name="bugs-fixed"></a>버그 수정
+
+| 버그 수정 | 세부 정보 |
+| :-------- | :------ |
+| 포함된 NUL 문자 문제를 수정했습니다. | NUL 문자가 포함된 잘못된 문자열 길이를 드라이버에서 반환하는 버그를 수정했습니다. |
+| [IBCPSession](ole-db-interfaces/ibcpsession-ole-db.md) 인터페이스의 메모리 누수 문제를 수정했습니다. | `sql_variant` 데이터 형식의 대량 복사 작업과 관련된 [IBCPSession](ole-db-interfaces/ibcpsession-ole-db.md) 인터페이스의 메모리 누수 문제를 수정했습니다. |
+| `SSPROP_INTEGRATEDAUTHENTICATIONMETHOD` 및 `SSPROP_MUTUALLYAUTHENTICATED` 속성에 대해 잘못된 값이 반환되는 버그를 수정했습니다. | 이전 버전의 드라이버는 `SSPROP_INTEGRATEDAUTHENTICATIONMETHOD` 속성의 잘린 값을 반환했습니다. 또한 `ActiveDirectoryIntegrated` 인증 사례에서 `SSPROP_MUTUALLYAUTHENTICATED` 속성의 반환된 값은 양쪽이 상호 인증된 경우에도 `VARIANT_FALSE`였습니다.|
+| 연결된 서버 원격 테이블 삽입 버그를 수정했습니다. | [NOCOUNT 서버 구성 옵션](../../database-engine/configure-windows/configure-the-user-options-server-configuration-option.md)을 사용하도록 설정된 경우 연결된 서버 원격 테이블 삽입이 실패하는 버그를 수정했습니다. |
+
+## <a name="previous-releases"></a>이전 릴리스
 
 ## <a name="1840"></a>18.4.0
 ![다운로드](../../ssms/media/download-icon.png) [x64 설치 관리자 다운로드](https://go.microsoft.com/fwlink/?linkid=2129954)  
@@ -52,12 +80,10 @@ x86 드라이버의 경우: [중국어(간체)](https://go.microsoft.com/fwlink/
 | [ISequentialStream](/previous-versions/windows/desktop/ms718035(v=vs.85)) 인터페이스에서 다양한 버그 수정 | 멀티 바이트 코드 페이지에 영향을 주는 몇 가지 버그 때문에 읽기 작업 중에 인터페이스가 도중에 스트림 끝을 보고했었습니다.|
 | [IOpenRowset::OpenRowset](/previous-versions/windows/desktop/ms716724(v=vs.85)) 인터페이스에서 메모리 누수 문제 수정 | `SSPROP_IRowsetFastLoad` 속성이 사용하도록 설정된 경우 [IOpenRowset::OpenRowset](/previous-versions/windows/desktop/ms716724(v=vs.85)) 인터페이스에서 발생한 메모리 누수 문제가 수정되었습니다. |
 | `sql_variant` 데이터 형식 및 비 ASCII 문자열을 포함하는 시나리오의 버그가 수정되었습니다. | `sql_variant` 데이터 형식 및 비 ASCII 문자열과 관련된 특정 시나리오를 실행하면 데이터가 손상될 수 있습니다. 자세한 내용은 다음을 참조하세요. [알려진 문제](ole-db-data-types/ssvariant-structure.md#known-issues). |
-| [UDL 구성 대화 상자](help-topics/data-link-pages.md)에서 연결 테스트 단추 문제 해결 | [UDL 구성 대화 상자](help-topics/data-link-pages.md)의 연결 테스트 단추가 이제 모든 탭에서 설정된 초기화 속성을 인식합니다. |
-| `SSPROP_INIT_PACKETSIZE` 속성 기본값 처리 수정 | `SSPROP_INIT_PACKETSIZE` 속성이 기본값 `0`으로 설정된 경우 발생하는 예기치 않은 오류가 수정되었습니다. 이 속성에 대한 자세한 내용은 [초기화 및 권한 부여 속성](ole-db-data-source-objects/initialization-and-authorization-properties.md)을 참조하세요. |
-| [IBCPSession](ole-db-interfaces/ibcpsession-ole-db.md)에서 버퍼 오버플로 문제 수정 | 형식이 잘못된 데이터 파일을 사용하는 경우 발생한 버퍼 오버플로 문제가 해결되었습니다. |
-| 접근성 문제 해결 | 설치 관리자 UI 및 [SQL Server 로그인 대화 상자](help-topics/sql-server-login-dialog.md)에서 접근성 문제가 해결되었습니다(내용 읽기, 탭 중지). |
-
-## <a name="previous-releases"></a>이전 릴리스
+| [UDL 구성 대화 상자](help-topics/data-link-pages.md)의 연결 테스트 단추 문제를 수정했습니다. | [UDL 구성 대화 상자](help-topics/data-link-pages.md)의 연결 테스트 단추가 이제 모든 탭에서 설정된 초기화 속성을 인식합니다. |
+| `SSPROP_INIT_PACKETSIZE` 속성 기본값 처리를 수정했습니다. | `SSPROP_INIT_PACKETSIZE` 속성이 기본값 `0`으로 설정된 경우 발생하는 예기치 않은 오류가 수정되었습니다. 이 속성에 대한 자세한 내용은 [초기화 및 권한 부여 속성](ole-db-data-source-objects/initialization-and-authorization-properties.md)을 참조하세요. |
+| [IBCPSession](ole-db-interfaces/ibcpsession-ole-db.md)에서 버퍼 오버플로 문제를 수정했습니다. | 형식이 잘못된 데이터 파일을 사용하는 경우 발생한 버퍼 오버플로 문제가 해결되었습니다. |
+| 접근성 문제를 수정했습니다. | 설치 관리자 UI 및 [SQL Server 로그인 대화 상자](help-topics/sql-server-login-dialog.md)에서 접근성 문제가 해결되었습니다(내용 읽기, 탭 중지). |
 
 ## <a name="1830"></a>18.3.0
 
@@ -74,7 +100,7 @@ x86 드라이버의 경우: [중국어(간체)](https://go.microsoft.com/fwlink/
 
 | 추가된 기능 | 세부 정보 |
 | :------------ | :------ |
-| Azure Active Directory 인증 지원(`ActiveDirectoryInteractive`, `ActiveDirectoryMSI`). | [Azure Active Directory 사용](features/using-azure-active-directory.md). |
+| Azure Active Directory 인증 지원(`ActiveDirectoryInteractive`, `ActiveDirectoryMSI`) | [Azure Active Directory 사용](features/using-azure-active-directory.md) |
 | 설치 프로그램에 Azure ADAL(Active Directory 인증 라이브러리)(adal.dll) 포함 | 이제 기본 드라이버 설치에 포함되는 OLE DB 설치 관리자는 SQL Server용 Microsoft Active Directory 인증 라이브러리의 기존 설치를 업그레이드하고 Windows의 설치된 애플리케이션 목록에서 제거합니다. |
 | &nbsp; | &nbsp; |
 
@@ -102,7 +128,7 @@ x86 드라이버의 경우: [중국어(간체)](https://go.microsoft.com/fwlink/
 
 | 추가된 기능 | 세부 정보 |
 | :------------ | :------ |
-| SQL Server 이동식 미디어에서 드라이버 업그레이드를 지원합니다. | 이러한 개선으로 SQL Server 이동식 미디어에서 드라이버를 직접 업그레이드할 수 있습니다. |
+| SQL Server 이동식 미디어에서 드라이버 업그레이드 지원 | 이러한 개선으로 SQL Server 이동식 미디어에서 드라이버를 직접 업그레이드할 수 있습니다. |
 | &nbsp; | &nbsp; |
 
 ## <a name="1822"></a>18.2.2
@@ -138,8 +164,8 @@ x86 드라이버의 경우: [중국어(간체)](https://go.microsoft.com/fwlink/
 
 | 추가된 기능 | 세부 정보 |
 | :------------ | :------ |
-| UTF-8 서버 인코딩 지원. | [OLE DB Driver for SQL Server에서 UTF-8 지원](features/utf-8-support-in-oledb-driver-for-sql-server.md), |
-| Azure Active Directory 인증 지원. | [Azure Active Directory 사용](features/using-azure-active-directory.md). |
+| UTF-8 서버 인코딩 지원 | [SQL Server용 OLE DB 드라이버에서 UTF-8 지원](features/utf-8-support-in-oledb-driver-for-sql-server.md) |
+| Azure Active Directory 인증 지원 | [Azure Active Directory 사용](features/using-azure-active-directory.md) |
 | &nbsp; | &nbsp; |
 
 ## <a name="1810"></a>18.1.0
@@ -157,7 +183,7 @@ x86 드라이버의 경우: [중국어(간체)](https://go.microsoft.com/fwlink/
 
 | 추가된 기능 | 세부 정보 |
 | :------------ | :------ |
-| `UseFMTONLY` 연결 문자열 키워드 및 `SSPROP_INIT_USEFMTONLY` 초기화 속성에 대해 지원합니다. | `UseFMTONLY`는 [!INCLUDE[ssSQL11](../../includes/sssql11-md.md)] 이상에 연결할 때 메타데이터를 검색하는 방법을 제어합니다.<br/><br/>자세한 내용은 다음을 참조하세요. [SQL Server용 OLE DB 드라이버에서 연결 문자열 키워드 사용](applications/using-connection-string-keywords-with-oledb-driver-for-sql-server.md). |
+| `UseFMTONLY` 연결 문자열 키워드 및 `SSPROP_INIT_USEFMTONLY` 초기화 속성에 대한 지원 | `UseFMTONLY`는 [!INCLUDE[ssSQL11](../../includes/sssql11-md.md)] 이상에 연결할 때 메타데이터를 검색하는 방법을 제어합니다.<br/><br/>자세한 내용은 다음을 참조하세요. [SQL Server용 OLE DB 드라이버에서 연결 문자열 키워드 사용](applications/using-connection-string-keywords-with-oledb-driver-for-sql-server.md). |
 | &nbsp; | &nbsp; |
 
 ### <a name="bugs-fixed-in-1810"></a>18.1.0에서 수정된 버그

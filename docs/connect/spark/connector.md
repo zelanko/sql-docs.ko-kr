@@ -10,12 +10,12 @@ ms.topic: conceptual
 author: rajmera3
 ms.author: raajmera
 ms.reviewer: mikeray
-ms.openlocfilehash: 059ecfb25389de1be0f8636a868e81e621e57bac
-ms.sourcegitcommit: 4d370399f6f142e25075b3714e5c2ce056b1bfd0
+ms.openlocfilehash: 7450ebddf94a4378313bb1793bcefe34a88407a5
+ms.sourcegitcommit: 0c0e4ab90655dde3e34ebc08487493e621f25dda
 ms.translationtype: HT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 10/09/2020
-ms.locfileid: "91867234"
+ms.lasthandoff: 12/01/2020
+ms.locfileid: "96442947"
 ---
 # <a name="apache-spark-connector-sql-server--azure-sql"></a>Apache Spark 커넥터: SQL Server 및 Azure SQL
 
@@ -44,7 +44,7 @@ Maven 좌표(`com.microsoft.azure:spark-mssql-connector:1.0.0`)를 통해 커넥
 | Azure SQL Databases                  | 지원됨                       |
 
 > [!NOTE]
-> Azure Synapse Analytics(Azure SQL DW) 사용은 이 커넥터에서 테스트되지 않았습니다. 작동할 수 있지만 의도하지 않은 결과가 발생할 수도 있습니다.
+> Azure Synapse Analytics 사용은 이 커넥터에서 테스트되지 않았습니다. 작동할 수 있지만 의도하지 않은 결과가 발생할 수도 있습니다.
 
 ### <a name="supported-options"></a>지원되는 옵션
 SQL Server 및 Azure SQL용 Apache Spark 커넥터는 여기에 정의된 옵션을 지원합니다. [SQL DataSource JDBC](https://spark.apache.org/docs/latest/sql-data-sources-jdbc.html)
@@ -215,9 +215,9 @@ jdbc_df = spark.read \
 
 Active Directory를 사용하여 인증하려면 필요한 종속성을 설치해야 합니다.
 
-**Scala**의 경우 `_com.microsoft.aad.adal4j_` 아티팩트를 설치해야 합니다.
+**Scala** 의 경우 `_com.microsoft.aad.adal4j_` 아티팩트를 설치해야 합니다.
 
-**Python**의 경우 `_adal_` 라이브러리 설치해야 합니다.  이 라이브러리는 PIP를 통해 사용할 수 있습니다.
+**Python** 의 경우 `_adal_` 라이브러리 설치해야 합니다.  이 라이브러리는 PIP를 통해 사용할 수 있습니다.
 
 예제는 [샘플 Notebook](https://github.com/microsoft/sql-spark-connector/tree/master/samples)을 참조하세요.
 

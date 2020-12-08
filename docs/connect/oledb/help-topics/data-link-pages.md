@@ -2,7 +2,7 @@
 title: UDL(유니버설 데이터 링크) 구성 | Microsoft Docs
 description: 연결 탭에서 OLE DB Driver for SQL Server를 사용하여 데이터에 연결하는 방법을 알아봅니다.
 ms.custom: ''
-ms.date: 10/11/2019
+ms.date: 09/30/2020
 ms.prod: sql
 ms.prod_service: database-engine, sql-database, sql-data-warehouse, pdw
 ms.reviewer: ''
@@ -10,12 +10,12 @@ ms.technology: connectivity
 ms.topic: reference
 ms.author: v-beaziz
 author: bazizi
-ms.openlocfilehash: b691d24bb1d700a63e1ecfc9daca3bbfb5399800
-ms.sourcegitcommit: c7f40918dc3ecdb0ed2ef5c237a3996cb4cd268d
+ms.openlocfilehash: f8d9444864dfe144918374c6d10e1a9f403faff3
+ms.sourcegitcommit: 0e0cd9347c029e0c7c9f3fe6d39985a6d3af967d
 ms.translationtype: HT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 10/05/2020
-ms.locfileid: "91727284"
+ms.lasthandoff: 12/02/2020
+ms.locfileid: "96504736"
 ---
 # <a name="universal-data-link-udl-configuration"></a>UDL(유니버설 데이터 링크) 구성
 [!INCLUDE [SQL Server](../../../includes/applies-to-version/sql-asdb-asdbmi-asa-pdw.md)]
@@ -32,7 +32,7 @@ ms.locfileid: "91727284"
 |옵션|Description|
 |---   |---        |
 |서버 이름 선택 또는 입력|드롭다운 목록에서 서버 이름을 선택하거나 액세스할 데이터베이스가 있는 서버의 위치를 입력합니다. 서버에서 데이터베이스를 선택하는 것은 별개의 동작입니다. “새로 고침”을 클릭하여 목록을 업데이트합니다.
-|서버 로그인 정보 입력|이 드롭다운 목록에서 다음 인증 옵션을 선택할 수 있습니다. <ul><li>`Windows Authentication:` 현재 로그인한 사용자의 Windows 계정 자격 증명을 사용하는 SQL Server 인증입니다.</li><li>`SQL Server Authentication:` 로그인 ID 및 암호를 사용하는 인증입니다.</li><li>`Active Directory - Integrated:` Azure Active Directory ID를 사용하는 통합 인증입니다. 이 모드는 SQL Server에 대한 Windows 인증에도 사용할 수 있습니다.</li><li>`Active Directory - Password:` Azure Active Directory ID를 사용하는 사용자 ID 및 암호 인증입니다.</li><li>`Active Directory - Universal with MFA support:` Azure Active Directory ID를 사용하는 대화형 인증입니다. 이 모드는 Azure MFA(다단계 인증)를 지원합니다.</li></ul>|
+|서버 로그인 정보 입력|이 드롭다운 목록에서 다음 인증 옵션을 선택할 수 있습니다. <ul><li>`Windows Authentication:` 현재 로그인한 사용자의 Windows 계정 자격 증명을 사용하는 SQL Server 인증입니다.</li><li>`SQL Server Authentication:` 로그인 ID 및 암호를 사용하는 인증입니다.</li><li>`Active Directory - Integrated:` Azure Active Directory ID를 사용하는 통합 인증입니다. 이 모드는 SQL Server에 대한 Windows 인증에도 사용할 수 있습니다.</li><li>`Active Directory - Password:` Azure Active Directory ID를 사용하는 사용자 ID 및 암호 인증입니다.</li><li>`Active Directory - Universal with MFA support:` Azure Active Directory ID를 사용하는 대화형 인증입니다. 이 모드는 Azure MFA(다단계 인증)를 지원합니다.</li><li>`Active Directory - Service Principal:` Azure Active Directory 서비스 사용자로 인증. **사용자 이름** 은 애플리케이션(클라이언트) ID로 설정해야 합니다. **암호** 는 애플리케이션(클라이언트) 비밀로 설정해야 합니다.</li></ul>|
 |서버 SPN|트러스트된 연결을 사용하면 서버에 대한 SPN(서비스 사용자 이름)을 지정할 수 있습니다.|
 |사용자 이름|데이터 원본에 로그인할 때 인증에 사용할 사용자 ID를 입력합니다.|
 |암호|데이터 원본에 로그인할 때 인증에 사용할 암호를 입력합니다.|
