@@ -20,12 +20,12 @@ helpviewer_keywords:
 ms.assetid: c4709ed1-bf88-4458-9e98-8e9b78150441
 author: markingmyname
 ms.author: maghan
-ms.openlocfilehash: 6273f057b7733b787ed2ed8e8b61d23fd107fbd7
-ms.sourcegitcommit: dd36d1cbe32cd5a65c6638e8f252b0bd8145e165
+ms.openlocfilehash: d470cda4e0c5cf54bcce0827fff4e5f9b9d1acb7
+ms.sourcegitcommit: 7f76975c29d948a9a3b51abce564b9c73d05dcf0
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 09/08/2020
-ms.locfileid: "89546845"
+ms.lasthandoff: 12/08/2020
+ms.locfileid: "96901066"
 ---
 # <a name="sysconfigurations-transact-sql"></a>sys.configurations(Transact-SQL)
 [!INCLUDE [SQL Server](../../includes/applies-to-version/sqlserver.md)]
@@ -53,7 +53,7 @@ ms.locfileid: "89546845"
 sys.configurations 카탈로그 뷰를 사용 하 여 config_value (값 열), run_value (value_in_use 열) 및 구성 옵션이 동적 인지 여부 (서버 엔진을 다시 시작 하거나 is_dynamic 열을 요구 하지 않음)를 확인할 수 있습니다.
 
 > [!NOTE]
-> Sp_configure 결과 집합의 config_value **sys.configurations** 열과 같습니다. **Run_value** 은 **sys.configurations. value_in_use** 열과 동일 합니다.
+> Sp_configure 결과 집합의 config_value **sys.configurations** 열과 같습니다. **Run_value** 은 **sys.configurations.value_in_use** 열과 동일 합니다.
 
 다음 쿼리를 사용 하 여 구성 된 값이 설치 되지 않은 경우를 확인할 수 있습니다.
 
@@ -63,11 +63,12 @@ select * from sys.configurations where value != value_in_use
 
 값이 구성 옵션에 대 한 변경 값과 동일 하지만 **value_in_use** 동일 하지 않은 경우 RECONFIGURE 명령이 실행 되지 않았거나 실패 했거나 서버 엔진을 다시 시작 해야 합니다.
 
-값과 value_in_use 동일 하지 않을 수 있는 구성 옵션이 있으며이는 예상 된 동작입니다. 예를 들면 다음과 같습니다.
+값과 value_in_use 동일 하지 않을 수 있는 구성 옵션이 있으며이는 예상 된 동작입니다. 예를 들어:
 
-"max server memory (MB)"-기본 구성 값 0은 value_in_use = 2147483647 "min server memory (MB)"로 표시 됩니다. 기본 구성 된 값 0은 value_in_use = 8 (32 비트) 또는 16 (64 비트)으로 표시 될 수 있습니다. 
+"max server memory (MB)"-기본 구성 값 0은 **value_in_use** = 2147483647로 표시 됩니다.<br>
 
-경우에 따라 **value_in_use** 0이 됩니다. 이 경우 "true" **value_in_use** 8 (32 비트) 또는 16 (64 비트)입니다.
+"min server memory (MB)"-기본 구성 값 0은 **value_in_use** = 8 (32 비트) 또는 16 (64 비트)으로 표시 될 수 있습니다. 경우에 따라 **value_in_use** 0이 됩니다. 이 경우 "true" **value_in_use** 8 (32 비트) 또는 16 (64 비트)입니다.
+
 
 **Is_dynamic** 열은 구성 옵션의 다시 시작이 필요한 지 여부를 확인 하는 데 사용할 수 있습니다. is_dynamic = 1은 다시 구성 (T-sql)이 실행 될 때 새 값이 "즉시" 적용 됨을 의미 합니다. 경우에 따라 서버 엔진은 새 값을 즉시 계산 하지 않을 수 있지만이 작업은 일반적인 실행 과정에서 수행 됩니다. is_dynamic = 0은 다시 구성 (T-sql) 명령이 실행 된 경우에도 서버를 다시 시작할 때까지 변경 된 구성 값이 적용 되지 않음을 의미 합니다.
 
