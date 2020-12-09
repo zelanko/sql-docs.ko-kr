@@ -27,12 +27,12 @@ ms.assetid: 15f8affd-8f39-4021-b092-0379fc6983da
 author: markingmyname
 ms.author: maghan
 monikerRange: '>=sql-server-2016||>=sql-server-linux-2017||=azuresqldb-current||=azuresqldb-mi-current||=azure-sqldw-latest||>=aps-pdw-2016||=sqlallproducts-allversions'
-ms.openlocfilehash: c452310bbc2813cb3d11ced51f680c7a1f66e5e0
-ms.sourcegitcommit: 442fbe1655d629ecef273b02fae1beb2455a762e
+ms.openlocfilehash: af8f519e7fec6a440fcdce44ccebbcfab2f0e0a9
+ms.sourcegitcommit: 0c0e4ab90655dde3e34ebc08487493e621f25dda
 ms.translationtype: HT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 11/03/2020
-ms.locfileid: "93235390"
+ms.lasthandoff: 12/01/2020
+ms.locfileid: "96443205"
 ---
 # <a name="alter-database-transact-sql"></a>ALTER DATABASE(Transact-SQL)
 
@@ -148,7 +148,7 @@ ALTER DATABASE { database_name | CURRENT }
 > 포함된 데이터베이스에서는 이 옵션을 사용할 수 없습니다.
 
 CURRENT   
-**적용 대상** : [!INCLUDE[ssSQL11](../../includes/sssql11-md.md)] 이상
+**적용 대상**: [!INCLUDE[ssSQL11](../../includes/sssql11-md.md)] 이상
 
 현재 사용 중인 데이터베이스를 변경하도록 지정합니다.
 
@@ -166,7 +166,7 @@ COLLATE *collation_name*
 Windows 데이터 정렬 이름 및 SQL 데이터 정렬 이름에 대한 자세한 내용은 [COLLATE](~/t-sql/statements/collations.md)를 참조하세요.
 
 **\<delayed_durability_option> ::=**    
-**적용 대상** : [!INCLUDE[ssSQL14](../../includes/sssql14-md.md)] 이상
+**적용 대상**: [!INCLUDE[ssSQL14](../../includes/sssql14-md.md)] 이상
 
 자세한 내용은 [ALTER DATABASE SET 옵션](../../t-sql/statements/alter-database-transact-sql-set-options.md) 및 [트랜잭션 내구성 제어](../../relational-databases/logs/control-transaction-durability.md)를 참조하세요.
 
@@ -263,7 +263,7 @@ GO
 
 다음 예에서는 `testdb`S 데이터 정렬을 사용하여 `SQL_Latin1_General_CP1_CI_A`라는 데이터베이스를 만든 다음 `testdb` 데이터베이스의 데이터 정렬을 `COLLATE French_CI_AI`로 변경합니다.
 
-**적용 대상** : [!INCLUDE[ssKatmai](../../includes/sskatmai-md.md)] 이상
+**적용 대상**: [!INCLUDE[ssKatmai](../../includes/sskatmai-md.md)] 이상
 
 ```sql
 USE master;
@@ -476,8 +476,8 @@ MODIFY (MAXSIZE **=** [100 MB \| 500 MB \| 1 \| 1024...4096] GB)
 |200GB|해당 없음|√|√|√|√|
 |250GB|해당 없음|√ (D)|√ (D)|√|√|
 |300GB|해당 없음|√|√|√|√|
-|400GB|해당 없음|√|√|√|√|
-|500GB|N/A|√|√|√ (D)|√|
+|400GB|N/A|√|√|√|√|
+|500GB|해당 없음|√|√|√ (D)|√|
 |750GB|해당 없음|√|√|√|√|
 |1024GB|해당 없음|√|√|√|√ (D)|
 |1024GB에서 최대 4096GB(256 GB*로 증분)|해당 없음|해당 없음|해당 없음|해당 없음|√|
@@ -950,7 +950,7 @@ ALTER DATABASE의 SET 옵션을 사용하여 데이터베이스의 특성을 변
 
 ## <a name="syntax"></a>구문
 
-### <a name="sql-pool"></a>[SQL 풀](#tab/sqlpool)
+### <a name="dedicated-sql-pool"></a>[전용 SQL 풀](#tab/sqlpool)
 ```syntaxsql
 ALTER DATABASE { database_name | CURRENT }
 {
@@ -974,7 +974,7 @@ ALTER DATABASE { database_name | CURRENT }
           | 'DW7500c' | 'DW10000c' | 'DW15000c' | 'DW30000c'
       }
 ```
-### <a name="sql-on-demand-preview"></a>[SQL 주문형(미리 보기)](#tab/sqlod)
+### <a name="serverless-sql-pool"></a>[서버리스 SQL 풀](#tab/sqlod)
 ```syntaxsql
 ALTER DATABASE { database_name | Current } 
 { 
