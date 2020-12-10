@@ -12,12 +12,12 @@ ms.topic: conceptual
 author: David-Engel
 ms.author: v-daenge
 ms.reviewer: v-chmalh
-ms.openlocfilehash: 2eb3c7d996463b9c581ea60bc11f853a5d131582
-ms.sourcegitcommit: debaff72dbfae91b303f0acd42dd6d99e03135a2
+ms.openlocfilehash: cb77d01ede16a6fa68aac6dcb49612ad8fd9a191
+ms.sourcegitcommit: 7a3fdd3f282f634f7382790841d2c2a06c917011
 ms.translationtype: HT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 12/01/2020
-ms.locfileid: "96419752"
+ms.lasthandoff: 12/03/2020
+ms.locfileid: "96563088"
 ---
 # <a name="establishing-connection"></a>연결 설정
 
@@ -29,12 +29,12 @@ Microsoft SQL Server에 연결하려면 Microsoft SqlClient Data Provider for SQ
 
 ## <a name="closing-connections"></a>연결 닫기
 
-사용이 끝나면 해당 연결이 풀로 반환되도록 닫아 두는 것이 좋습니다. Visual Basic 또는 C#의 `Using` 블록은 처리되지 않은 예외가 발생하더라도 코드에 블록이 있으면 연결을 자동으로 제거합니다. 자세한 내용은 [using 문](/dotnet/docs/csharp/language-reference/keywords/using-statement.md) 및 [Using 문](/dotnet/docs/visual-basic/language-reference/statements/using-statement.md)을 참조하세요.
+사용이 끝나면 해당 연결이 풀로 반환되도록 닫아 두는 것이 좋습니다. Visual Basic 또는 C#의 `Using` 블록은 처리되지 않은 예외가 발생하더라도 코드에 블록이 있으면 연결을 자동으로 제거합니다. 자세한 내용은 [using 문](/dotnet/csharp/language-reference/keywords/using-statement) 및 [Using 문](/dotnet/visual-basic/language-reference/statements/using-statement)을 참조하세요.
 
 연결 개체의 `Close` 또는 `Dispose` 메소드를 사용할 수도 있습니다. 명시적으로 닫히지 않은 연결은 풀에 추가되거나 반환되지 않을 수 있습니다. 예를 들어, 범위를 벗어났지만 명시적으로 닫히지 않은 연결은 최대 풀 크기에 도달했으며 여전히 유효한 경우에만 연결 풀로 반환됩니다.
 
 > [!NOTE]
-> 클래스의 `Finalize` 메소드에 있는 **Connection**, **DataReader** 또는 기타 관리 개체에서 `Close` 또는 `Dispose`를 호출하지 마세요. 종료자에서는 클래스에 직접 속한 관리되지 않는 리소스만 해제합니다. 클래스에 관리되지 않는 리소스가 없는 경우 클래스 정의에 `Finalize` 메서드를 포함하지 마세요. 자세한 내용은 [가비지 수집](/dotnet/docs/standard/garbage-collection/index.md)을 참조하세요.
+> 클래스의 `Finalize` 메소드에 있는 **Connection**, **DataReader** 또는 기타 관리 개체에서 `Close` 또는 `Dispose`를 호출하지 마세요. 종료자에서는 클래스에 직접 속한 관리되지 않는 리소스만 해제합니다. 클래스에 관리되지 않는 리소스가 없는 경우 클래스 정의에 `Finalize` 메서드를 포함하지 마세요. 자세한 내용은 [가비지 수집](/dotnet/standard/garbage-collection/index)을 참조하세요.
 
 > [!NOTE]
 > 연결이 연결 풀에서 반환될 경우에는 실제로 해제된 것이 아니므로 연결이 연결 풀에서 반입되거나 연결 풀로 반환되는 경우 서버에서 로그인 및 로그아웃 이벤트가 발생하지 않습니다. 자세한 내용은 [SQL Server 연결 풀링(ADO.NET)](sql-server-connection-pooling.md)을 참조하세요.

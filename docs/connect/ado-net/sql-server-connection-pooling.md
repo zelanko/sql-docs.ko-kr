@@ -12,12 +12,12 @@ ms.topic: conceptual
 author: David-Engel
 ms.author: v-daenge
 ms.reviewer: v-chmalh
-ms.openlocfilehash: 1cf7cf010724453aadcc3c93ef216e44d6a869fc
-ms.sourcegitcommit: debaff72dbfae91b303f0acd42dd6d99e03135a2
+ms.openlocfilehash: ef687114ff2ceceabc1ed87d67a4585a5846029d
+ms.sourcegitcommit: 7a3fdd3f282f634f7382790841d2c2a06c917011
 ms.translationtype: HT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 12/01/2020
-ms.locfileid: "96419747"
+ms.lasthandoff: 12/03/2020
+ms.locfileid: "96563082"
 ---
 # <a name="sql-server-connection-pooling-adonet"></a>SQL Server 연결 풀링(ADO.NET)
 
@@ -68,10 +68,10 @@ ms.locfileid: "96419747"
 연결 풀러는 연결이 다시 풀로 회수될 때 연결을 다시 할당하여 연결 요청을 처리합니다. 최대 풀 크기에 도달했는데 사용 가능한 연결이 없으면 요청이 대기됩니다. 그런 다음 풀러에서는 제한 시간(**기본값은 15 초**)에 도달할 때까지 모든 연결을 회수하려고 합니다. 연결 제한 시간을 초과하기 전에 풀러가 요청을 처리하지 못하면 예외가 throw됩니다.
 
 > [!CAUTION]
-> 사용이 끝난 연결은 풀로 반환되도록 항상 닫는 것이 좋습니다. `Connection` 개체의 `Close` 또는 `Dispose` 메서드를 사용하거나 C#의 `using` 문 또는 Visual Basic의 `Using` 문 내에서 모든 연결을 열어 이 작업을 수행할 수 있습니다. 명시적으로 닫히지 않은 연결은 풀에 추가되거나 반환되지 않을 수 있습니다. 자세한 내용은 Visual Basic에 대한 [using 문](/dotnet/docs/csharp/language-reference/keywords/using-statement.md) 또는 [방법: 시스템 리소스 폐기](/dotnet/docs/visual-basic/programming-guide/language-features/control-flow/how-to-dispose-of-a-system-resource.md)를 참조하세요.
+> 사용이 끝난 연결은 풀로 반환되도록 항상 닫는 것이 좋습니다. `Connection` 개체의 `Close` 또는 `Dispose` 메서드를 사용하거나 C#의 `using` 문 또는 Visual Basic의 `Using` 문 내에서 모든 연결을 열어 이 작업을 수행할 수 있습니다. 명시적으로 닫히지 않은 연결은 풀에 추가되거나 반환되지 않을 수 있습니다. 자세한 내용은 Visual Basic에 대한 [using 문](/dotnet/csharp/language-reference/keywords/using-statement) 또는 [방법: 시스템 리소스 폐기](/dotnet/visual-basic/programming-guide/language-features/control-flow/how-to-dispose-of-a-system-resource)를 참조하세요.
 
 > [!NOTE]
-> 클래스의 `Close` 메서드에 있는 `Dispose`, `Connection` 또는 다른 관리 개체에 `DataReader` 또는 `Finalize`를 호출해서는 안 됩니다. 종료자에서는 클래스에 직접 속한 관리되지 않는 리소스만 해제합니다. 클래스에 관리되지 않는 리소스가 없는 경우 클래스 정의에 `Finalize` 메서드를 포함하지 마세요. 자세한 내용은 [가비지 수집](/dotnet/docs/standard/garbage-collection/index.md)을 참조하세요.
+> 클래스의 `Close` 메서드에 있는 `Dispose`, `Connection` 또는 다른 관리 개체에 `DataReader` 또는 `Finalize`를 호출해서는 안 됩니다. 종료자에서는 클래스에 직접 속한 관리되지 않는 리소스만 해제합니다. 클래스에 관리되지 않는 리소스가 없는 경우 클래스 정의에 `Finalize` 메서드를 포함하지 마세요. 자세한 내용은 [가비지 수집](/dotnet/standard/garbage-collection/index)을 참조하세요.
 
 연결 열기 및 닫기와 관련된 이벤트에 대한 자세한 내용은 SQL Server 설명서에서 [감사 로그인 이벤트 클래스](/sql/relational-databases/event-classes/audit-login-event-class) 및 [감사 로그 아웃 이벤트 클래스](/sql/relational-databases/event-classes/audit-logout-event-class)를 참조하세요.
 

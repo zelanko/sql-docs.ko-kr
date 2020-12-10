@@ -9,12 +9,12 @@ ms.author: maghan
 ms.reviewer: alayu
 ms.custom: ''
 ms.date: 08/28/2020
-ms.openlocfilehash: 76fd809993b47f3ae3dad363887eb9ac735e6b0b
-ms.sourcegitcommit: 63aef5a96905f0b026322abc9ccb862ee497eebe
+ms.openlocfilehash: 127b163ff7f75b4c7ebeff37781f8a5670a47cf9
+ms.sourcegitcommit: 7f76975c29d948a9a3b51abce564b9c73d05dcf0
 ms.translationtype: HT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 09/25/2020
-ms.locfileid: "91364080"
+ms.lasthandoff: 12/08/2020
+ms.locfileid: "96900826"
 ---
 # <a name="create-an-azure-data-studio-keymap-extension"></a>Azure Data Studio 키맵 확장 만들기
 
@@ -44,7 +44,7 @@ Azure Data Studio는 Visual Studio Code와 동일한 프레임워크를 기준�
 확장을 만드는 과정을 간소화하기 위해 Yeoman을 사용하여 [확장 생성기](https://code.visualstudio.com/docs/extensions/yocode)를 빌드했습니다. 설치하려면 아래 명령 프롬프트에서 코드를 실행합니다.
 
 ```console
-`npm install -g yo generator-azuredatastudio`
+npm install -g yo generator-azuredatastudio
 ```
 
 ## <a name="create-your-keymap-extension"></a>키맵 확장 만들기
@@ -55,7 +55,7 @@ Azure Data Studio는 Visual Studio Code와 동일한 프레임워크를 기준�
 
    `yo azuredatastudio`
 
-2. 확장 유형 목록에서 **New Keymap**을 선택합니다.
+2. 확장 유형 목록에서 **New Keymap** 을 선택합니다.
 
    :::image type="content" source="media/keymap-extension/extension-generator.png" alt-text="확장 생성기":::
 
@@ -71,13 +71,13 @@ Azure Data Studio는 Visual Studio Code와 동일한 프레임워크를 기준�
 
 누락된 상위 항목은 다음과 같습니다.
 
-- 실제 실행 계획을 사용하도록 설정하여 쿼리를 실행합니다. SSMS에서는 **Ctrl+M**이며 Azure Data Studio에는 바인딩이 없습니다.
+- 실제 실행 계획을 사용하도록 설정하여 쿼리를 실행합니다. SSMS에서는 **Ctrl+M** 이며 Azure Data Studio에는 바인딩이 없습니다.
 - 쿼리를 실행하는 두 번째 방법인 **Ctrl+Shift+E**. 사용자 의견에 따르면 이 내용이 누락된 것으로 나타납니다.
-- **Alt+F1**을 사용하여 `sp_help`를 실행. 이 키 조합을 Azure Data Studio에 추가했지만 해당 바인딩이 이미 사용되고 있으므로 대신 **Alt+F2**에 매핑했습니다.
+- **Alt+F1** 을 사용하여 `sp_help`를 실행. 이 키 조합을 Azure Data Studio에 추가했지만 해당 바인딩이 이미 사용되고 있으므로 대신 **Alt+F2** 에 매핑했습니다.
 - 전체 화면을 설정/해제합니다(**Shift+Alt+Enter**).
-- **개체 탐색기** / **서비스 보기**를 표시하기 위한 **F8**.
+- **개체 탐색기** / **서비스 보기** 를 표시하기 위한 **F8**.
 
-이러한 키 바인딩을 쉽게 찾아서 바꿀 수 있습니다. Azure Data Studio에서 *바로 가기 키 열기*를 실행하여 **바로 가기 키** 탭을 표시하고, *쿼리*를 검색한 후 **키 바인딩 변경**을 선택합니다. 키 바인딩을 다 변경했으면 keybindings.json 파일에서 업데이트된 매핑을 볼 수 있습니다(*바로 가기 키 열기*를 실행하여 확인).
+이러한 키 바인딩을 쉽게 찾아서 바꿀 수 있습니다. Azure Data Studio에서 *바로 가기 키 열기* 를 실행하여 **바로 가기 키** 탭을 표시하고, *쿼리* 를 검색한 후 **키 바인딩 변경** 을 선택합니다. 키 바인딩을 다 변경했으면 keybindings.json 파일에서 업데이트된 매핑을 볼 수 있습니다(*바로 가기 키 열기* 를 실행하여 확인).
 
 :::image type="content" source="media/keymap-extension/keyboard-shortcuts.png" alt-text="바로 가기 키":::
 
@@ -137,7 +137,7 @@ Azure Data Studio 디버그 확장이 Visual Studio Code에 설치되어 있는�
 다른 사용자와 공유하려면 확장을 단일 파일로 패키지해야 합니다. 이러한 패키지를 Azure Data Studio 확장 Marketplace에 게시하거나 팀 또는 커뮤니티에서 공유할 수 있습니다. 이렇게 하려면 명령줄에서 다른 npm 패키지를 설치해야 합니다.
 
 ```console
-`npm install -g vsce`
+npm install -g vsce
 ```
 
 확장의 기본 디렉터리로 이동하고 `vsce package`를 실행합니다. *vsce* 도구가 문제를 발생하지 않도록 하기 위해 몇 개의 줄에 추가해야 했습니다.

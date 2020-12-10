@@ -2,19 +2,19 @@
 title: 드라이버 기능 지원 매트릭스
 description: SQL Server용 드라이버에서 지원되는 인기 기능 및 해당 기능에 대한 정보를 찾을 수 있는 위치에 대해 알아봅니다.
 ms.custom: ''
-ms.date: 11/30/2020
+ms.date: 12/03/2020
 ms.prod: sql
 ms.technology: connectivity
 ms.topic: conceptual
 author: David-Engel
 ms.author: v-daenge
 ms.reviewer: v-daenge
-ms.openlocfilehash: ac2f39826768cf7fe2948a4168bd93187a93ea3c
-ms.sourcegitcommit: debaff72dbfae91b303f0acd42dd6d99e03135a2
+ms.openlocfilehash: 4fff9c04098bd0796f714d160864e4edb93613ac
+ms.sourcegitcommit: 28fecbf61ae7b53405ca378e2f5f90badb1a296a
 ms.translationtype: HT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 12/01/2020
-ms.locfileid: "96419675"
+ms.lasthandoff: 12/04/2020
+ms.locfileid: "96595234"
 ---
 # <a name="driver-feature-support-matrix-for-microsoft-sql-server"></a>Microsoft SQL Server용 드라이버 기능 지원 매트릭스
 
@@ -40,14 +40,14 @@ Microsoft에서는 모든 드라이버가 모든 기능을 지원하기를 희�
 | [Always Encrypted](../relational-databases/security/encryption/always-encrypted-database-engine.md) | [예](ado-net/sql/sqlclient-support-always-encrypted.md) | [예](ado-net/sql/sqlclient-support-always-encrypted.md) | | [예](ado-net/sql/sqlclient-support-always-encrypted.md) |
 | [보안 enclave를 사용한 Always Encrypted](../relational-databases/security/encryption/always-encrypted-enclaves.md) | [예](ado-net/sql/sqlclient-support-always-encrypted.md#enabling-always-encrypted-with-secure-enclaves) | [예](ado-net/sql/sqlclient-support-always-encrypted.md#enabling-always-encrypted-with-secure-enclaves) | | [예](ado-net/sql/sqlclient-support-always-encrypted.md#enabling-always-encrypted-with-secure-enclaves) |
 | [Azure Active Directory 액세스 토큰 인증](/azure/active-directory/develop/access-tokens) | [예](/dotnet/api/system.data.sqlclient.sqlconnection.accesstoken) | [예](/dotnet/api/microsoft.data.sqlclient.sqlconnection.accesstoken) | [예](/dotnet/api/microsoft.data.sqlclient.sqlconnection.accesstoken) | [예](/dotnet/api/microsoft.data.sqlclient.sqlconnection.accesstoken) |
-| [Azure Active Directory 암호 인증](/azure/sql-database/sql-database-aad-authentication) | yes | yes | | 예 |
-| [Azure Active Directory 통합 인증](/azure/sql-database/sql-database-aad-authentication) | yes | yes | | 예 |
-| [Azure Active Directory 대화형(MFA) 인증](/azure/sql-database/sql-database-aad-authentication) | yes | yes | | 예 |
-| [Azure Active Directory 관리 ID 인증](/azure/active-directory/managed-identities-azure-resources/overview) | 예 | yes | | |
-| [Azure Active Directory 서비스 사용자 인증](/azure/active-directory/develop/app-objects-and-service-principals) | yes | 예 | | |
+| [Azure Active Directory 암호 인증](/azure/sql-database/sql-database-aad-authentication) | [예](ado-net/sql/azure-active-directory-authentication.md) | [예](ado-net/sql/azure-active-directory-authentication.md) | | 예 |
+| [Azure Active Directory 통합 인증](/azure/sql-database/sql-database-aad-authentication) | [예](ado-net/sql/azure-active-directory-authentication.md) | [예](ado-net/sql/azure-active-directory-authentication.md) | | 예 |
+| [Azure Active Directory 대화형(MFA) 인증](/azure/sql-database/sql-database-aad-authentication) | [예](ado-net/sql/azure-active-directory-authentication.md) | [예](ado-net/sql/azure-active-directory-authentication.md) | | 예 |
+| [Azure Active Directory 관리 ID 인증](/azure/active-directory/managed-identities-azure-resources/overview) | [예](ado-net/sql/azure-active-directory-authentication.md) | [예](ado-net/sql/azure-active-directory-authentication.md) | | |
+| [Azure Active Directory 서비스 사용자 인증](/azure/active-directory/develop/app-objects-and-service-principals) | [예](ado-net/sql/azure-active-directory-authentication.md) | [예](ado-net/sql/azure-active-directory-authentication.md) | | |
 | [Windows 통합 인증](/windows-server/security/windows-authentication/windows-authentication-overview) | [예](ado-net/sql/authentication-sql-server.md) | [예](ado-net/sql/authentication-sql-server.md) | [예](/dotnet/framework/data/adonet/sql/authentication-in-sql-server) | [예](/dotnet/framework/data/adonet/sql/authentication-in-sql-server) |
 | [대량 복사](../relational-databases/import-export/bulk-import-and-export-of-data-sql-server.md) | [예](ado-net/sql/bulk-copy-operations-sql-server.md) | [예](ado-net/sql/bulk-copy-operations-sql-server.md) | [예](/dotnet/framework/data/adonet/sql/bulk-copy-operations-in-sql-server) | [예](/dotnet/framework/data/adonet/sql/bulk-copy-operations-in-sql-server) |
-| [데이터 민감도 및 분류 메타데이터](../relational-databases/security/sql-data-discovery-and-classification.md) | yes | 예 | 예 | 예 |
+| [데이터 민감도 및 분류 메타데이터](../relational-databases/security/sql-data-discovery-and-classification.md) | [예](ado-net/sql/data-classification.md) | [예](ado-net/sql/data-classification.md) | 예 | 예 |
 | [MARS(Multiple Active Result Sets)](../relational-databases/native-client/features/using-multiple-active-result-sets-mars.md) | [예](ado-net/sql/multiple-active-result-sets-mars.md) | [예](ado-net/sql/multiple-active-result-sets-mars.md) | [예](/dotnet/framework/data/adonet/sql/multiple-active-result-sets-mars) | [예](/dotnet/framework/data/adonet/sql/multiple-active-result-sets-mars) |
 | [공간 데이터 형식](../relational-databases/spatial/spatial-data-sql-server.md) | | yes | | 예 |
 | [TVP(테이블 반환 매개 변수)](../relational-databases/tables/use-table-valued-parameters-database-engine.md) | [예](ado-net/sql/table-valued-parameters.md) | [예](ado-net/sql/table-valued-parameters.md) | [예](/dotnet/framework/data/adonet/sql/table-valued-parameters) | [예](/dotnet/framework/data/adonet/sql/table-valued-parameters) |
@@ -64,7 +64,7 @@ Microsoft에서는 모든 드라이버가 모든 기능을 지원하기를 희�
 | [Azure Active Directory 통합 인증](/azure/sql-database/sql-database-aad-authentication) | [예](odbc/using-azure-active-directory.md) | [예](odbc/using-azure-active-directory.md) | [예](jdbc/connecting-using-azure-active-directory-authentication.md) | [예](oledb/features/using-azure-active-directory.md) |
 | [Azure Active Directory 대화형(MFA) 인증](/azure/sql-database/sql-database-aad-authentication) | [예](odbc/using-azure-active-directory.md) | | | [예](oledb/features/using-azure-active-directory.md) |
 | [Azure Active Directory 관리 ID 인증](/azure/active-directory/managed-identities-azure-resources/overview) | [예](odbc/using-azure-active-directory.md) | [예](odbc/using-azure-active-directory.md) | [예](jdbc/connecting-using-azure-active-directory-authentication.md) | [예](oledb/features/using-azure-active-directory.md) |
-| [Azure Active Directory 서비스 사용자 인증](/azure/active-directory/develop/app-objects-and-service-principals) | | | | |
+| [Azure Active Directory 서비스 사용자 인증](/azure/active-directory/develop/app-objects-and-service-principals) | | | | [예](oledb/features/using-azure-active-directory.md) |
 | [Windows 통합 인증](/windows-server/security/windows-authentication/windows-authentication-overview) | 예 | [예](odbc/linux-mac/using-integrated-authentication.md) | [예](jdbc/using-kerberos-integrated-authentication-to-connect-to-sql-server.md) | 예 |
 | [대량 복사](../relational-databases/import-export/bulk-import-and-export-of-data-sql-server.md) | [예](../relational-databases/native-client-odbc-extensions-bulk-copy-functions/sql-server-driver-extensions-bulk-copy-functions.md) | [예](../relational-databases/native-client-odbc-extensions-bulk-copy-functions/sql-server-driver-extensions-bulk-copy-functions.md) | [예](jdbc/using-bulk-copy-with-the-jdbc-driver.md) | [예](oledb/features/performing-bulk-copy-operations.md) |
 | [데이터 검색 및 분류 메타데이터](../relational-databases/security/sql-data-discovery-and-classification.md) | [예](odbc/data-classification.md) | [예](odbc/data-classification.md) | [예](jdbc/data-discovery-classification-sample.md) | |

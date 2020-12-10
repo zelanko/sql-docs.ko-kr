@@ -9,12 +9,12 @@ ms.author: alayu
 ms.reviewer: alayu, maghan
 ms.custom: ''
 ms.date: 08/28/2020
-ms.openlocfilehash: e2996b583cd1005e26e4334c9934fff79c321ee4
-ms.sourcegitcommit: 63aef5a96905f0b026322abc9ccb862ee497eebe
+ms.openlocfilehash: 44080250d95d21cecca16ff605ca22683e5b4440
+ms.sourcegitcommit: 7f76975c29d948a9a3b51abce564b9c73d05dcf0
 ms.translationtype: HT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 09/25/2020
-ms.locfileid: "91364050"
+ms.lasthandoff: 12/08/2020
+ms.locfileid: "96900816"
 ---
 # <a name="create-a-jupyter-notebook-extension"></a>Jupyter Notebook 확장 만들기
 
@@ -55,7 +55,7 @@ Azure Data Studio는 Visual Studio Code와 동일한 프레임워크를 기반�
 확장을 만드는 과정을 간소화하기 위해 Yeoman을 사용하여 [확장 생성기](https://www.npmjs.com/package/generator-azuredatastudio)를 빌드했습니다. 설치하려면 명령 프롬프트에서 다음 명령을 실행합니다.
 
 ```console
-`npm install -g yo generator-azuredatastudio`
+npm install -g yo generator-azuredatastudio
 ```
 
 ## <a name="create-your-extension"></a>확장 만들기
@@ -70,7 +70,7 @@ Azure Data Studio는 Visual Studio Code와 동일한 프레임워크를 기반�
 
    :::image type="content" source="media/notebook-extension/notebook-extension-generator.png" alt-text="Notebook 확장 생성기":::
 
-3. 단계에 따라 확장 이름을 입력합니다. 이 자습서에서는 **Notebook 테스트**를 사용합니다. 그런 다음, 게시자 이름을 입력합니다. 이 자습서에서는 **Microsoft**를 사용합니다. 마지막으로 설명을 추가합니다.
+3. 단계에 따라 확장 이름을 입력합니다. 이 자습서에서는 **Notebook 테스트** 를 사용합니다. 그런 다음, 게시자 이름을 입력합니다. 이 자습서에서는 **Microsoft** 를 사용합니다. 마지막으로 설명을 추가합니다.
 
 이제 몇 가지 분기가 있습니다. 이미 만든 Jupyter Notebook을 추가하거나 생성기를 통해 제공되는 Notebook 샘플을 사용할 수 있습니다.
 
@@ -136,7 +136,7 @@ export function activate(context: vscode.ExtensionContext) {
 다른 사용자와 공유하려면 확장을 단일 파일로 패키지해야 합니다. 확장은 Azure Data Studio 확장 마켓플레이스에 게시하거나 팀 또는 커뮤니티와 공유할 수 있습니다. 이 단계를 수행하려면 명령줄에서 다른 npm 패키지를 설치해야 합니다.
 
 ```console
-`npm install -g vsce`
+npm install -g vsce
 ```
 
 `README.md` 파일을 원하는 대로 편집합니다. 그런 다음, 확장의 기본 디렉터리로 이동하여 `vsce package`를 실행합니다. 리포지토리를 확장에 연결하거나 연결 없이 계속 작업할 수 있습니다. 추가하려면 `package.json` 파일에 비슷한 줄을 추가합니다.
@@ -152,7 +152,7 @@ export function activate(context: vscode.ExtensionContext) {
 
 ## <a name="run-your-extension"></a>확장 실행
 
-확장을 실행하고 테스트하려면 Azure Data Studio를 열고, **Ctrl+Shift+P**를 선택하여 명령 팔레트를 엽니다. **확장: VSIX에서 설치** 명령을 찾고, 새 확장이 포함된 폴더로 이동합니다.
+확장을 실행하고 테스트하려면 Azure Data Studio를 열고, **Ctrl+Shift+P** 를 선택하여 명령 팔레트를 엽니다. **확장: VSIX에서 설치** 명령을 찾고, 새 확장이 포함된 폴더로 이동합니다.
 
    :::image type="content" source="media/notebook-extension/install-vsix.png" alt-text="VSIX 설치":::
 

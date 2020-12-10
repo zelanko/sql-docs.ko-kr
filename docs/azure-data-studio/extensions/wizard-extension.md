@@ -9,16 +9,16 @@ ms.author: alayu
 ms.reviewer: maghan
 ms.custom: ''
 ms.date: 08/28/2020
-ms.openlocfilehash: 50440aca120dad6cfd165262bd4bfd2e139393cf
-ms.sourcegitcommit: 63aef5a96905f0b026322abc9ccb862ee497eebe
+ms.openlocfilehash: 2d4864a3475b8e27fd86e90fbfa690c49a0c413d
+ms.sourcegitcommit: 7f76975c29d948a9a3b51abce564b9c73d05dcf0
 ms.translationtype: HT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 09/25/2020
-ms.locfileid: "91364060"
+ms.lasthandoff: 12/08/2020
+ms.locfileid: "96900796"
 ---
 # <a name="create-an-azure-data-studio-wizard-extension"></a>Azure Data Studio 마법사 확장 만들기
 
-이 자습서에서는 새 **Azure Data Studio 마법사 확장**을 만드는 방법을 보여 줍니다. 확장은 Azure Data Studio에서 사용자와 상호 작용할 수 있는 마법사를 기여합니다.
+이 자습서에서는 새 **Azure Data Studio 마법사 확장** 을 만드는 방법을 보여 줍니다. 확장은 Azure Data Studio에서 사용자와 상호 작용할 수 있는 마법사를 기여합니다.
 
 이 문서에서는 다음 방법을 알아봅니다.
 > [!div class="checklist"]
@@ -43,7 +43,7 @@ Azure Data Studio는 Visual Studio Code와 동일한 프레임워크를 기준�
 확장을 만드는 과정을 간소화하기 위해 Yeoman을 사용하여 [확장 생성기](https://code.visualstudio.com/docs/extensions/yocode)를 빌드했습니다. 설치하려면 명령 프롬프트에서 다음을 실행합니다.
 
 ```console
-`npm install -g yo generator-azuredatastudio`
+npm install -g yo generator-azuredatastudio
 ```
 
 ## <a name="create-your-wizard-extension"></a>마법사 확장 만들기
@@ -64,7 +64,7 @@ Azure Data Studio는 Visual Studio Code와 동일한 프레임워크를 기준�
 
    `yo azuredatastudio`
 
-2. 확장 유형 목록에서 **새 마법사 또는 대화 상자**를 선택합니다. 그런 다음, **마법사**를 선택하고 **시작하기 템플릿**을 선택합니다.
+2. 확장 유형 목록에서 **새 마법사 또는 대화 상자** 를 선택합니다. 그런 다음, **마법사** 를 선택하고 **시작하기 템플릿** 을 선택합니다.
 
 3. 단계에 따라 확장 이름(이 자습서에서는 **My Test Extension** 사용)을 입력하고 설명을 추가합니다.
 
@@ -74,7 +74,7 @@ Azure Data Studio는 Visual Studio Code와 동일한 프레임워크를 기준�
 
 ### <a name="run-the-extension"></a>확장 실행
 
-확장을 실행하여 마법사 템플릿에서 제공하는 작업을 확인해 보겠습니다. 실행 전에 **Azure Data Studio 디버그 확장**이 Visual Studio Code에 설치되어 있는지 확인합니다.
+확장을 실행하여 마법사 템플릿에서 제공하는 작업을 확인해 보겠습니다. 실행 전에 **Azure Data Studio 디버그 확장** 이 Visual Studio Code에 설치되어 있는지 확인합니다.
 
 VS Code에서 **F5** 키를 선택하여 해당 확장이 실행되는 디버그 모드에서 Azure Data Studio를 시작합니다. 그런 다음, Azure Data Studio의 새 창에 있는 명령 팔레트(Ctr+Shift+P)에서 **마법사 시작** 명령을 실행합니다. 그러면 이 확장에서 기여하는 기본 마법사가 시작됩니다.
 
@@ -104,7 +104,7 @@ VS Code에서 **F5** 키를 선택하여 해당 확장이 실행되는 디버그
 다른 사용자와 공유하려면 확장을 단일 파일로 패키지해야 합니다. 이러한 패키지를 Azure Data Studio 확장 Marketplace에 게시하거나 팀 또는 커뮤니티에서 공유할 수 있습니다. 이렇게 하려면 명령줄에서 다른 npm 패키지를 설치해야 합니다.
 
 ```console
-npm install -g vsce`
+npm install -g vsce
 ```
 
 원하는 대로 `README.md`를 편집하고 확장의 기본 디렉터리로 이동한 다음, `vsce package`를 실행합니다. 리포지토리를 확장에 연결하거나 연결 없이 계속 작업할 수 있습니다. 추가하려면 `package.json` 파일에 비슷한 줄을 추가합니다.

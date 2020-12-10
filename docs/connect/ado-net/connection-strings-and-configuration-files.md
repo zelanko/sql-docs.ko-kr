@@ -12,12 +12,12 @@ ms.topic: conceptual
 author: David-Engel
 ms.author: v-daenge
 ms.reviewer: v-chmalh
-ms.openlocfilehash: c5610f182adaab2197b67578e51331fd6d7ce19b
-ms.sourcegitcommit: 192f6a99e19e66f0f817fdb1977f564b2aaa133b
+ms.openlocfilehash: fb290f9a795c9f64bcb2ee95c66210790a80a71d
+ms.sourcegitcommit: 7a3fdd3f282f634f7382790841d2c2a06c917011
 ms.translationtype: HT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 11/25/2020
-ms.locfileid: "96126506"
+ms.lasthandoff: 12/03/2020
+ms.locfileid: "96563119"
 ---
 # <a name="connection-strings-and-configuration-files"></a>연결 문자열 및 구성 파일
 
@@ -25,7 +25,7 @@ ms.locfileid: "96126506"
 
 [!INCLUDE[Driver_ADONET_Download](../../includes/driver_adonet_download.md)]
 
-애플리케이션 코드에 연결 문자열을 포함하면 보안상 취약한 부분이 생기고 유지 관리상의 문제가 발생할 수 있습니다. [Ildasm.exe(IL 디스어셈블러)](/dotnet/docs/framework/tools/ildasm-exe-il-disassembler.md) 도구를 사용하면 애플리케이션의 소스 코드로 컴파일된 암호화되지 않은 연결 문자열을 볼 수 있습니다. 뿐만 아니라 연결 문자열이 계속해서 변경되는 경우에는 애플리케이션을 다시 컴파일해야 합니다. 이와 같은 여러 가지 이유로 연결 문자열은 애플리케이션 구성 파일에 저장하는 것이 좋습니다.
+애플리케이션 코드에 연결 문자열을 포함하면 보안상 취약한 부분이 생기고 유지 관리상의 문제가 발생할 수 있습니다. [Ildasm.exe(IL 디스어셈블러)](/dotnet/framework/tools/ildasm-exe-il-disassembler) 도구를 사용하면 애플리케이션의 소스 코드로 컴파일된 암호화되지 않은 연결 문자열을 볼 수 있습니다. 뿐만 아니라 연결 문자열이 계속해서 변경되는 경우에는 애플리케이션을 다시 컴파일해야 합니다. 이와 같은 여러 가지 이유로 연결 문자열은 애플리케이션 구성 파일에 저장하는 것이 좋습니다.
 
 ## <a name="working-with-application-configuration-files"></a>애플리케이션 구성 파일 사용
 
@@ -194,5 +194,5 @@ ASP.NET 애플리케이션 보안에 대한 자세한 내용은 [ASP.NET 웹 사
 - [연결 문자열 작성기](connection-string-builders.md)
 - [연결 정보 보호](protecting-connection-information.md)
 - [구성 클래스 사용](/previous-versions/visualstudio/visual-studio-2008/ms228063(v=vs.90))
-- [응용 프로그램 구성](/dotnet/docs/framework/configure-apps/index.md)
+- [응용 프로그램 구성](/dotnet/framework/configure-apps/index)
 - [ASP.NET 웹 사이트 관리 도구](/previous-versions/aspnet/6hy1xzbw(v=vs.100))

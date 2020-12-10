@@ -10,12 +10,12 @@ ms.topic: conceptual
 author: David-Engel
 ms.author: v-daenge
 ms.reviewer: v-chmalh
-ms.openlocfilehash: 87d8e2013693d2e8123adb97273309d6f22de03e
-ms.sourcegitcommit: 192f6a99e19e66f0f817fdb1977f564b2aaa133b
+ms.openlocfilehash: 146063d665b89a8541c34d9cc3b0b6da3939d801
+ms.sourcegitcommit: 7a3fdd3f282f634f7382790841d2c2a06c917011
 ms.translationtype: HT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 11/25/2020
-ms.locfileid: "96126458"
+ms.lasthandoff: 12/03/2020
+ms.locfileid: "96563099"
 ---
 # <a name="protecting-connection-information"></a>연결 정보 보호
 
@@ -23,7 +23,7 @@ ms.locfileid: "96126458"
 
 [!INCLUDE[Driver_ADONET_Download](../../includes/driver_adonet_download.md)]
 
-애플리케이션 보안의 가장 중요한 목표 중 하나는 데이터 소스에 대한 액세스를 보호하는 것입니다. 연결 문자열을 안전하게 보호하지 않으면 이로 인해 보안상 취약한 부분이 생길 수 있습니다. 연결 정보를 일반 텍스트로 저장하거나 메모리에 유지하면 전체 시스템을 손상시킬 위험이 있습니다. 소스 코드에 포함된 연결 문자열은 MSIL(Microsoft intermediate language)을 컴파일된 어셈블리에 표시하는 [Ildasm.exe(IL Disassembler)](/dotnet/docs/framework/tools/ildasm-exe-il-disassembler.md)를 사용하여 읽을 수 있습니다.
+애플리케이션 보안의 가장 중요한 목표 중 하나는 데이터 소스에 대한 액세스를 보호하는 것입니다. 연결 문자열을 안전하게 보호하지 않으면 이로 인해 보안상 취약한 부분이 생길 수 있습니다. 연결 정보를 일반 텍스트로 저장하거나 메모리에 유지하면 전체 시스템을 손상시킬 위험이 있습니다. 소스 코드에 포함된 연결 문자열은 MSIL(Microsoft intermediate language)을 컴파일된 어셈블리에 표시하는 [Ildasm.exe(IL Disassembler)](/dotnet/framework/tools/ildasm-exe-il-disassembler)를 사용하여 읽을 수 있습니다.
 
 연결 문자열과 관련된 보안 취약성은 사용된 인증 유형, 연결 문자열을 메모리와 디스크에 유지하는 방법 및 런타임에 연결 문자열을 구성하는 기술에 따라 발생됩니다.
 

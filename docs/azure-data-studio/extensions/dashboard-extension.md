@@ -9,12 +9,12 @@ ms.author: alayu
 ms.reviewer: alayu, maghan
 ms.custom: ''
 ms.date: 08/28/2020
-ms.openlocfilehash: 091bf94f01c66b3f991c0457adcfa4d119d49167
-ms.sourcegitcommit: 63aef5a96905f0b026322abc9ccb862ee497eebe
+ms.openlocfilehash: c7402c8dd0d2d85d38536a0bcfea3ce8cd780657
+ms.sourcegitcommit: 7f76975c29d948a9a3b51abce564b9c73d05dcf0
 ms.translationtype: HT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 09/25/2020
-ms.locfileid: "91364100"
+ms.lasthandoff: 12/08/2020
+ms.locfileid: "96900876"
 ---
 # <a name="create-an-azure-data-studio-dashboard-extension"></a>Azure Data Studio 대시보드 확장 만들기
 
@@ -44,7 +44,7 @@ Azure Data Studio는 Visual Studio Code와 동일한 프레임워크를 기반�
 확장을 만드는 과정을 간소화하기 위해 Yeoman을 사용하여 [확장 생성기](https://code.visualstudio.com/docs/extensions/yocode)를 빌드했습니다. 설치하려면 명령 프롬프트에서 다음 명령을 실행합니다.
 
 ```console
-`npm install -g yo generator-azuredatastudio`
+npm install -g yo generator-azuredatastudio
 ```
 
 ## <a name="create-your-dashboard-extension"></a>대시보드 확장 만들기
@@ -53,7 +53,7 @@ Azure Data Studio는 Visual Studio Code와 동일한 프레임워크를 기반�
 
 Azure Data Studio 연결 대시보드는 사용자의 연결에 대한 인사이트를 요약 및 제공하는 강력한 도구입니다.
 
-대시보드에는 두 가지 변형이 있습니다. *서버 대시보드*는 전체 서버를 요약하고, *데이터베이스 대시보드*는 개별 데이터베이스를 요약합니다. Azure Data Studio의 **연결** 뷰렛에 있는 서버 또는 데이터베이스를 마우스 오른쪽 단추로 클릭하고 **관리**를 선택하여 대시보드에 액세스할 수 있습니다.
+대시보드에는 두 가지 변형이 있습니다. *서버 대시보드* 는 전체 서버를 요약하고, *데이터베이스 대시보드* 는 개별 데이터베이스를 요약합니다. Azure Data Studio의 **연결** 뷰렛에 있는 서버 또는 데이터베이스를 마우스 오른쪽 단추로 클릭하고 **관리** 를 선택하여 대시보드에 액세스할 수 있습니다.
 
 :::image type="content" source="media/dashboard-extension/dashboard-summary.gif" alt-text="대시보드 소개를 보여주는 스크린샷.":::
 
@@ -73,7 +73,7 @@ Azure Data Studio 연결 대시보드는 사용자의 연결에 대한 인사이
 
    `yo azuredatastudio`
 
-1. 확장 유형 목록에서 **새 대시보드**를 선택합니다.
+1. 확장 유형 목록에서 **새 대시보드** 를 선택합니다.
 
 1. 표시된 대로 프롬프트를 입력하여 서버 대시보드에 탭을 기여하는 확장을 만듭니다.
 
@@ -87,9 +87,9 @@ Azure Data Studio 연결 대시보드는 사용자의 연결에 대한 인사이
 
 ### <a name="run-the-extension"></a>확장 실행
 
-확장을 실행하여 대시보드 템플릿에서 제공하는 작업을 확인해 보겠습니다. 실행하기 전에 **Azure Data Studio 디버그 확장**이 Visual Studio Code에 설치되어 있는지 확인합니다.
+확장을 실행하여 대시보드 템플릿에서 제공하는 작업을 확인해 보겠습니다. 실행하기 전에 **Azure Data Studio 디버그 확장** 이 Visual Studio Code에 설치되어 있는지 확인합니다.
 
-Visual Studio Code에서 **F5**를 선택하여 해당 확장이 실행되는 디버그 모드에서 Azure Data Studio를 시작합니다. 그런 다음, 기본 템플릿이 대시보드에 기여하는 방식을 확인할 수 있습니다.
+Visual Studio Code에서 **F5** 를 선택하여 해당 확장이 실행되는 디버그 모드에서 Azure Data Studio를 시작합니다. 그런 다음, 기본 템플릿이 대시보드에 기여하는 방식을 확인할 수 있습니다.
 
 다음으로, 이 기본 대시보드를 수정하는 방법을 살펴보겠습니다.
 
@@ -108,7 +108,7 @@ Visual Studio Code에서 **F5**를 선택하여 해당 확장이 실행되는 �
 다른 사용자와 공유하려면 확장을 단일 파일로 패키지해야 합니다. 확장은 Azure Data Studio 확장 마켓플레이스에 게시하거나 팀 또는 커뮤니티와 공유할 수 있습니다. 이 단계를 수행하려면 명령줄에서 다른 npm 패키지를 설치해야 합니다.
 
 ```console
-`npm install -g vsce`
+npm install -g vsce
 ```
 
 `README.md` 파일을 원하는 대로 편집합니다. 그런 다음, 확장의 기본 디렉터리로 이동하여 `vsce package`를 실행합니다. 리포지토리를 확장에 연결하거나 연결 없이 계속 작업할 수 있습니다. 추가하려면 `package.json` 파일에 비슷한 줄을 추가합니다.

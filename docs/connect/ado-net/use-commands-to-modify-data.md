@@ -10,12 +10,12 @@ ms.topic: conceptual
 author: David-Engel
 ms.author: v-daenge
 ms.reviewer: v-chmalh
-ms.openlocfilehash: 03ebdbdd15adfae8e765964e8338f043999319f3
-ms.sourcegitcommit: debaff72dbfae91b303f0acd42dd6d99e03135a2
+ms.openlocfilehash: 98127e41b5b07c38030ef27214c9c92bf7c4b4be
+ms.sourcegitcommit: c127c0752e84cccd38a7e23ac74c0362a40f952e
 ms.translationtype: HT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 12/01/2020
-ms.locfileid: "96428233"
+ms.lasthandoff: 12/07/2020
+ms.locfileid: "96761481"
 ---
 # <a name="using-commands-to-modify-data"></a>명령을 사용하여 데이터 수정
 
@@ -31,11 +31,14 @@ Microsoft SqlClient Data Provider for SQL Server를 사용하면 저장 프로�
 
 ## <a name="in-this-section"></a>섹션 내용
 
-[데이터 원본에서 데이터 업데이트](update-data-inside-data-source.md) 데이터베이스의 데이터를 수정하는 명령 또는 저장 프로시저를 실행하는 방법을 설명합니다.
+[데이터 원본에서 데이터 업데이트](update-data-inside-data-source.md)  
+데이터베이스의 데이터를 수정하는 명령 또는 저장 프로시저를 실행하는 방법을 설명합니다.
 
-[카탈로그 작업 수행](perform-catalog-operations.md) 데이터베이스 스키마를 수정하는 명령을 실행하는 방법을 설명합니다.
+[카탈로그 작업 수행](perform-catalog-operations.md)  
+데이터베이스 스키마를 수정하는 명령을 실행하는 방법을 설명합니다.
 
 ## <a name="see-also"></a>참조
 
 - [ADO.NET에서 데이터 검색 및 수정](retrieving-modifying-data.md)
 - [명령 및 매개 변수](commands-parameters.md)
+- [Microsoft ADO.NET for SQL Server](microsoft-ado-net-sql-server.md)
