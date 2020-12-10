@@ -93,6 +93,27 @@
                   href: ../connect/ado-net/update-data-inside-data-source.md
                 - name: 카탈로그 작업 수행
                   href: ../connect/ado-net/perform-catalog-operations.md
+        - name: DataAdapters 및 DataReaders
+          href: ../connect/ado-net/dataadapters-datareaders.md
+          items:
+            - name: DataReader로 데이터 검색
+              href: ../connect/ado-net/retrieve-data-by-datareader.md
+            - name: DataAdapter에서 DataSet 채우기
+              href: ../connect/ado-net/populate-dataset-from-dataadapter.md
+            - name: DataAdapter 매개 변수
+              href: ../connect/ado-net/dataadapter-parameters.md
+            - name: DataSet에 기존 제약 조건 추가
+              href: ../connect/ado-net/add-existing-constraints-to-dataset.md
+            - name: 'DataAdapter, DataTable 및 DataColumn 매핑'
+              href: ../connect/ado-net/dataadapter-datatable-datacolumn-mappings.md
+            - name: 쿼리 결과를 통해 페이징
+              href: ../connect/ado-net/paging-through-query-result.md
+            - name: DataAdapter로 데이터 원본 업데이트
+              href: ../connect/ado-net/update-data-sources-with-dataadapters.md
+            - name: DataAdapter 이벤트 처리
+              href: ../connect/ado-net/handle-dataadapter-events.md
+            - name: DataAdapter를 사용하여 일괄 작업 수행
+              href: ../connect/ado-net/batch-operations-using-dataadapters.md
     - name: SQL Server 및 ADO.NET
       href: ../connect/ado-net/sql/index.md
       items:
