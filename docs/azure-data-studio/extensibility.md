@@ -9,12 +9,12 @@ ms.author: maghan
 ms.reviewer: alayu, maghan, sstein
 ms.custom: seodec18
 ms.date: 09/24/2018
-ms.openlocfilehash: a8866c438b446715f7e804688f50881e0b0eb167
-ms.sourcegitcommit: 7345e4f05d6c06e1bcd73747a4a47873b3f3251f
+ms.openlocfilehash: 73f9f3a39f5a30fe611c5ec839d8d2c7172206d8
+ms.sourcegitcommit: c127c0752e84cccd38a7e23ac74c0362a40f952e
 ms.translationtype: HT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 08/24/2020
-ms.locfileid: "88778442"
+ms.lasthandoff: 12/07/2020
+ms.locfileid: "96761511"
 ---
 # <a name="azure-data-studio-extensibility"></a>Azure Data Studio 확장성
 
@@ -32,6 +32,9 @@ Azure Data Studio에는 사용자 환경을 사용자 지정하고 해당 사용
 ## <a name="visual-studio-code-extensibility-apis"></a>Visual Studio Code 확장성 API
 
 핵심 Azure Data Studio 플랫폼은 Visual Studio Code를 기반으로 하므로 Visual Studio Code 확장성 API에 대한 자세한 내용은 Visual Studio Code 웹 사이트의 [확장 작성](https://code.visualstudio.com/docs/extensions/overview) 및 [확장 API](https://code.visualstudio.com/docs/extensionAPI/overview) 설명서에서 찾을 수 있습니다.
+
+> [!NOTE]
+>  Azure Data Studio 릴리스는 최신 버전의 VS Code와 함께 사용할 수 있지만 포함된 VS Code 엔진은 현재 VS Code 릴리스가 아닐 수 있습니다. 예를 들어 2020년 11월 기준 Azure Data Studio의 VS Code 엔진은 1.48이고 현재 VS Code 버전은 1.51입니다.  패키지 매니페스트(`package.json`)에 정의된 이후 VS Code 엔진 버전을 포함하는 확장 때문에 확장을 설치할 때 "VS Code <version>와 호환되지 않아 '<name>' 확장을 설치할 수 없습니다."라는 오류 메시지가 나타날 수 있습니다. Azure Data Studio의 VS Code 엔진 버전은 **정보** 의 **도움말** 메뉴에서 확인할 수 있습니다.
 
 ## <a name="manage-dashboard-tab-panel-contributions"></a>대시보드 탭 패널 기여 관리
 
@@ -272,8 +275,8 @@ Azure Data Studio에서 확장에 데이터베이스 연결과 관련된 특정 
 
 |컨텍스트 변수| description|
 |:---|:---|
-|`connectionProvider` | 현재 연결 공급자의 식별자 문자열입니다. 예: `connectionProvider == 'MSSQL'`입니다.|
-|`serverName`|현재 연결의 서버 이름 문자열입니다. 예: `serverName == 'localhost'`입니다.|
-|`databaseName` | 현재 연결의 데이터베이스 이름 문자열입니다. 예: `databaseName == 'master'`입니다.|
+|`connectionProvider` | 현재 연결 공급자의 식별자 문자열입니다. 예: `connectionProvider == 'MSSQL'`.|
+|`serverName`|현재 연결의 서버 이름 문자열입니다. 예: `serverName == 'localhost'`.|
+|`databaseName` | 현재 연결의 데이터베이스 이름 문자열입니다. 예: `databaseName == 'master'`.|
 |`connection` | 현재 연결의 전체 연결 프로필 개체(IConnectionProfile)입니다.|
 |`dashboardContext` | 대시보드의 페이지 컨텍스트 문자열이 현재 설정되어 있습니다. 'database' 또는 'server'입니다. 예: `dashboardContext == 'database'`|

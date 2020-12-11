@@ -16,12 +16,12 @@ author: MikeRayMSFT
 ms.author: mikeray
 ms.reviewer: ''
 monikerRange: '>= sql-server-2016 || =sqlallproducts-allversions'
-ms.openlocfilehash: 11462e9c55f22e16fb3e20920c104bf1047d8991
-ms.sourcegitcommit: 67befbf7435f256e766bbce6c1de57799e1db9ad
+ms.openlocfilehash: 3ab1841c009094831ae114d701d526a1d3036dba
+ms.sourcegitcommit: 773c1203e3c4617606cecb2626f6b2f2c855a53d
 ms.translationtype: HT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 10/24/2020
-ms.locfileid: "92523858"
+ms.lasthandoff: 12/02/2020
+ms.locfileid: "96535277"
 ---
 # <a name="polybase-scale-out-groups"></a>PolyBase 스케일 아웃 그룹
 
@@ -35,11 +35,11 @@ PolyBase를 사용하는 독립 실행형 SQL Server 인스턴스는 Hadoop 또�
   
 ## <a name="head-node"></a>헤드 노드  
 
-헤드 노드는 PolyBase 쿼리가 제출되는 SQL Server 인스턴스를 포함합니다. 각 PolyBase 그룹은 헤드 노드를 하나만 가질 수 있습니다. 헤드 노드는 SQL Server 인스턴스에 있는 SQL 데이터베이스 엔진, PolyBase 엔진 및 PolyBase 데이터 이동 서비스의 논리적 그룹입니다.
+헤드 노드는 PolyBase 쿼리가 제출되는 SQL Server 인스턴스를 포함합니다. 각 PolyBase 그룹은 헤드 노드를 하나만 가질 수 있습니다. 헤드 노드는 SQL Server 인스턴스에 있는 SQL Server 데이터베이스 엔진, PolyBase 엔진 및 PolyBase 데이터 이동 서비스의 논리적 그룹입니다. SQL Server 2017 및 SQL Server 2016를 사용하는 경우 헤드 노드는 Enterprise Edition이어야 합니다. SQL Server 2019부터 PolyBase 헤드 노드는 Enterprise 또는 Standard Edition일 수 있습니다.
   
-## <a name="compute-node"></a>컴퓨팅 노드  
+## <a name="compute-node"></a>컴퓨팅 노드
 
-컴퓨팅 노드는 외부 데이터에서 확장 쿼리를 지원하는 SQL Server 인스턴스를 포함합니다. 컴퓨팅 노드는 SQL Server 인스턴스에 있는 SQL Server 및 PolyBase 데이터 이동 서비스의 논리적 그룹입니다. PolyBase 그룹은 여러 컴퓨팅 노드를 가질 수 있습니다. 헤드 노드와 컴퓨팅 노드는 동일한 SQL Server 버전을 실행해야 합니다.
+컴퓨팅 노드는 외부 데이터에서 확장 쿼리를 지원하는 SQL Server 인스턴스를 포함합니다. 컴퓨팅 노드는 SQL Server 인스턴스에 있는 SQL Server 및 PolyBase 데이터 이동 서비스의 논리적 그룹입니다. PolyBase 그룹은 여러 컴퓨팅 노드를 가질 수 있습니다. 헤드 노드와 컴퓨팅 노드는 동일한 SQL Server 버전을 실행해야 합니다. SQL Server 2016의 초기 릴리스의 컴퓨팅 노드는 Enterprise 또는 Standard Edition일 수 있습니다. SQL Server 2016 SP1부터는 SQL Server의 모든 버전이 컴퓨팅 노드일 수 있습니다.
 
 ## <a name="scale-out-reads"></a>스케일 아웃 읽기
 

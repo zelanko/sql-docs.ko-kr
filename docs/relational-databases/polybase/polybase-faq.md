@@ -1,19 +1,19 @@
 ---
 title: PolyBase의 질문과 대답 | Microsoft Docs
 description: PolyBase와 연결된 서버를 비교하고, 빅 데이터 클러스터에 있는 PolyBase와 독립 실행형 인스턴스에 있는 PolyBase를 비교합니다. PolyBase 2019의 새로운 기능을 알아봅니다.
-ms.date: 04/23/2019
+ms.date: 12/02/2020
 ms.prod: sql
 ms.technology: polybase
 ms.topic: conceptual
 author: MikeRayMSFT
 ms.author: mikeray
 ms.reviewer: mikeray
-ms.openlocfilehash: 627afe62630dbca81c77bef45d8263824d8c41df
-ms.sourcegitcommit: 4c3949f620d09529658a2172d00bfe37aeb1a387
+ms.openlocfilehash: 57d59e774c1042bf7989bcd2df4a652ed4498f0d
+ms.sourcegitcommit: 7a3fdd3f282f634f7382790841d2c2a06c917011
 ms.translationtype: HT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 11/21/2020
-ms.locfileid: "96127856"
+ms.lasthandoff: 12/03/2020
+ms.locfileid: "96563139"
 ---
 # <a name="frequently-asked-questions"></a>질문과 대답
 
@@ -55,13 +55,13 @@ ms.locfileid: "96127856"
 
 |기능 |빅 데이터 클러스터|독립 실행형 인스턴스|
 |--------------------------|--------------------------|---------|   
-|SQL Server, Oracle, Teradata 및 Mongo DB를 위한 외부 데이터 원본 만들기 |X|X |
+|SQL Server, Oracle, Teradata 및 Mongo DB를 위한 외부 데이터 원본 만들기 |X|X|
 |호환 가능한 타사 ODBC 드라이버를 사용하여 외부 데이터 원본 만들기 | | X|
 |HADOOP 데이터 원본용 외부 데이터 원본 만들기 | X| X|
 |Azure Blob Storage용 외부 데이터 원본 만들기 | X| X|
 |SQL Server 데이터 풀에서 외부 테이블 만들기 | X| |
 |SQL Server 스토리지 풀에서 외부 테이블 만들기 | X| |
-|쿼리 실행 확장 | X| X|
+|쿼리 실행 확장 | X| X(Windows만 해당) |
 
 > [!NOTE]
 >최신 [!INCLUDE[sssqlv15](../../includes/sssqlv15-md.md)] CTP에서 사용할 수 있는 기능은 이 표에서 설명하지 않습니다. 사용할 수 있는 기능에 대해서는 릴리스 정보를 참조하세요. ODBC 제네릭 커넥터를 사용하는 연결에 대한 자세한 내용은 [ODBC 제네릭 형식을 구성하는 방법 가이드](polybase-configure-odbc-generic.md)를 참조하세요.

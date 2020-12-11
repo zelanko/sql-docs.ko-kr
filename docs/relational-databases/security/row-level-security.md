@@ -18,12 +18,12 @@ ms.assetid: 7221fa4e-ca4a-4d5c-9f93-1b8a4af7b9e8
 author: VanMSFT
 ms.author: vanto
 monikerRange: =azuresqldb-current||=azure-sqldw-latest||>=sql-server-2016||=sqlallproducts-allversions||>=sql-server-linux-2017||=azuresqldb-mi-current
-ms.openlocfilehash: e5ddd76c050e50576a446e8e404b889fcc8fa92d
-ms.sourcegitcommit: 4d370399f6f142e25075b3714e5c2ce056b1bfd0
+ms.openlocfilehash: 728650497849454ab7c30dae04317a750665a26c
+ms.sourcegitcommit: 0c0e4ab90655dde3e34ebc08487493e621f25dda
 ms.translationtype: HT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 10/09/2020
-ms.locfileid: "91867963"
+ms.lasthandoff: 12/01/2020
+ms.locfileid: "96442954"
 ---
 # <a name="row-level-security"></a>행 수준 보안
 
@@ -80,7 +80,7 @@ RLS는 두 가지 유형의 보안 조건자를 지원합니다.
   
  필터 조건자는 다음 동작을 수행합니다.  
   
-- 테이블의 행을 필터링하는 보안 정책을 정의합니다. 애플리케이션은 **선택**, **업데이트** 및 **삭제** 작업에 대해 필터링된 모든 행을 인식하지 못합니다. 모든 행이 필터링으로 제외된 경우에도 마찬가지입니다. 행이 다른 작업 중에 필터링되는 경우에도 애플리케이션은 행을 **삽입**할 수 있습니다.  
+- 테이블의 행을 필터링하는 보안 정책을 정의합니다. 애플리케이션은 **선택**, **업데이트** 및 **삭제** 작업에 대해 필터링된 모든 행을 인식하지 못합니다. 모든 행이 필터링으로 제외된 경우에도 마찬가지입니다. 행이 다른 작업 중에 필터링되는 경우에도 애플리케이션은 행을 **삽입** 할 수 있습니다.  
   
  차단 조건자는 다음 동작을 수행합니다.  
   
@@ -110,11 +110,11 @@ RLS는 두 가지 유형의 보안 조건자를 지원합니다.
   
  또한 추가된 각 조건자에는 다음 권한이 필요합니다.  
   
-- 조건자로 사용되는 함수에 대한**SELECT** 및 **REFERENCES** 권한.  
+- 조건자로 사용되는 함수에 대한 **SELECT** 및 **REFERENCES** 권한.  
   
-- 정책에 바인딩되는 대상 테이블에 대한**REFERENCES** 권한.  
+- 정책에 바인딩되는 대상 테이블에 대한 **REFERENCES** 권한.  
   
-- 인수로 사용하는 대상 테이블의 모든 열에 대한**REFERENCES** 권한.  
+- 인수로 사용하는 대상 테이블의 모든 열에 대한 **REFERENCES** 권한.  
   
  보안 정책은 데이터베이스의 dbo 사용자를 포함한 모든 사용자에게 적용됩니다. Dbo 사용자는 보안 정책을 변경하거나 삭제할 수 있지만 해당 변경은 감사를 받을 수 있습니다. 높은 권한이 있는 사용자(예: sysadmin 또는 db_owner)가 문제를 해결하거나 데이터의 유효성을 검사하기 위해 모든 행을 볼 수 있어야 하는 경우 이를 허용하도록 보안 정책을 작성해야 합니다.  
   
@@ -134,13 +134,13 @@ RLS는 두 가지 유형의 보안 조건자를 지원합니다.
   
  세션별 [SET 옵션](../../t-sql/statements/set-statements-transact-sql.md)에 종속되는 조건자 논리 방지: 실제 애플리케이션에서는 사용되지 않지만 해당 논리가 특정 세션별 **SET** 옵션에 종속되는 조건자 함수는 사용자가 임의 쿼리를 실행할 수 있는 경우 정보를 누출할 수 있습니다. 예를 들어 문자열을 암시적으로 **datetime** 으로 변환하는 조건자 함수는 현재 세션에 대해 **SET DATEFORMAT** 옵션을 기반으로 여러 행을 필터링할 수 있습니다. 일반적으로 조건자 함수는 다음과 같은 규칙을 준수해야 합니다.  
   
-- 조건자 함수는 문자열을 암시적으로 **date**, **smalldatetime**, **datetime**, **datetime2** 또는 **datetimeoffset**으로 변환하거나 그 반대로 변환하지 않아야 합니다. 이러한 변환은 [SET DATEFORMAT&#40;Transact-SQL&#41;](../../t-sql/statements/set-dateformat-transact-sql.md) 및 [SET LANGUAGE&#40;Transact-SQL&#41;](../../t-sql/statements/set-language-transact-sql.md) 옵션의 영향을 받기 때문입니다. 대신 **CONVERT** 함수를 사용하여 스타일 매개 변수를 명시적으로 지정합니다.  
+- 조건자 함수는 문자열을 암시적으로 **date**, **smalldatetime**, **datetime**, **datetime2** 또는 **datetimeoffset** 으로 변환하거나 그 반대로 변환하지 않아야 합니다. 이러한 변환은 [SET DATEFORMAT&#40;Transact-SQL&#41;](../../t-sql/statements/set-dateformat-transact-sql.md) 및 [SET LANGUAGE&#40;Transact-SQL&#41;](../../t-sql/statements/set-language-transact-sql.md) 옵션의 영향을 받기 때문입니다. 대신 **CONVERT** 함수를 사용하여 스타일 매개 변수를 명시적으로 지정합니다.  
   
 - 조건자 함수는 주의 첫 번째 요일 값에 의존하지 않아야 합니다. 이 값은 [SET DATEFIRST&#40;Transact-SQL&#41;](../../t-sql/statements/set-datefirst-transact-sql.md) 옵션의 영향을 받기 때문입니다.  
   
-- 조건자 함수는 오류(예: 오버플로 또는 0으로 나누기)가 발생한 경우 **NULL**을 반환하는 산술 또는 집계 식을 사용하지 않아야 합니다. 이 동작은 [SET ANSI_WARNINGS&#40;Transact-SQL&#41;](../../t-sql/statements/set-ansi-warnings-transact-sql.md), [SET NUMERIC_ROUNDABORT&#40;Transact-SQL&#41;](../../t-sql/statements/set-numeric-roundabort-transact-sql.md) 및 [SET ARITHABORT&#40;Transact-SQL&#41;](../../t-sql/statements/set-arithabort-transact-sql.md) 옵션의 영향을 받기 때문입니다.  
+- 조건자 함수는 오류(예: 오버플로 또는 0으로 나누기)가 발생한 경우 **NULL** 을 반환하는 산술 또는 집계 식을 사용하지 않아야 합니다. 이 동작은 [SET ANSI_WARNINGS&#40;Transact-SQL&#41;](../../t-sql/statements/set-ansi-warnings-transact-sql.md), [SET NUMERIC_ROUNDABORT&#40;Transact-SQL&#41;](../../t-sql/statements/set-numeric-roundabort-transact-sql.md) 및 [SET ARITHABORT&#40;Transact-SQL&#41;](../../t-sql/statements/set-arithabort-transact-sql.md) 옵션의 영향을 받기 때문입니다.  
   
-- 조건자 함수는 연결된 문자열을 **NULL**과 비교하지 않아야 합니다. 이 동작은 [SET CONCAT_NULL_YIELDS_NULL&#40;Transact-SQL&#41;](../../t-sql/statements/set-concat-null-yields-null-transact-sql.md) 옵션의 영향을 받기 때문입니다.  
+- 조건자 함수는 연결된 문자열을 **NULL** 과 비교하지 않아야 합니다. 이 동작은 [SET CONCAT_NULL_YIELDS_NULL&#40;Transact-SQL&#41;](../../t-sql/statements/set-concat-null-yields-null-transact-sql.md) 옵션의 영향을 받기 때문입니다.  
 
 ## <a name="security-note-side-channel-attacks"></a><a name="SecNote"></a> 보안 정보: 부채널 공격
 
@@ -156,7 +156,7 @@ RLS는 두 가지 유형의 보안 조건자를 지원합니다.
 
  일반적으로 행 수준 보안은 기능 간에 예상대로 작동합니다. 그러나 몇 가지 예외가 있습니다. 이 섹션에서는 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]의 특정 다른 기능과 함께 행 수준 보안을 사용할 대의 몇 가지 주의 사항을 설명합니다.  
   
-- **DBCC SHOW_STATISTICS**는 필터링되지 않은 데이터에 대한 통계를 보고하고, 그렇지 않으면 보안 정책으로 보호되는 정보를 누출할 수 있습니다. 이러한 이유로 행 수준 보안 정책을 사용하는 테이블에 대한 통계 개체 보기 액세스 권한이 제한됩니다. 사용자는 테이블의 소유자이거나 sysadmin 고정 서버 역할, db_owner 고정 데이터베이스 역할 또는 db_ddladmin 고정 데이터베이스 역할의 구성원이여야 합니다.  
+- **DBCC SHOW_STATISTICS** 는 필터링되지 않은 데이터에 대한 통계를 보고하고, 그렇지 않으면 보안 정책으로 보호되는 정보를 누출할 수 있습니다. 이러한 이유로 행 수준 보안 정책을 사용하는 테이블에 대한 통계 개체 보기 액세스 권한이 제한됩니다. 사용자는 테이블의 소유자이거나 sysadmin 고정 서버 역할, db_owner 고정 데이터베이스 역할 또는 db_ddladmin 고정 데이터베이스 역할의 구성원이여야 합니다.  
   
 - **파일 스트림:** RLS는 파일 스트림과 호환되지 않습니다.  
   
@@ -166,7 +166,7 @@ RLS는 두 가지 유형의 보안 조건자를 지원합니다.
   
 - **인덱싱된 뷰:** 일반적으로 보안 정책은 뷰를 기반으로 만들 수 있으며 뷰는 보안 정책에 의해 바인딩된 테이블을 기반으로 만들 수 있습니다. 그러나 인덱스를 통한 행 조회는 정책을 무시하기 때문에 보안 정책이 있는 테이블을 기반으로 인덱싱된 뷰를 만들 수는 없습니다.  
   
-- **변경 데이터 캡처:** CDC(변경 데이터 캡처)는 필터링해야 하는 전체 행을 **db_owner**의 구성원 또는 테이블에 대해 CDC를 사용하도록 설정할 때 지정된 "gating(제어)" 역할의 구성원인 사용자에게 누출할 수 있습니다(참고: 모든 사용자가 변경 데이터에 액세스할 수 있도록 명시적으로 이 함수를 **NULL**로 설정할 수 있음). 실제로 **db_owner** 및 이 제어 역할의 멤버는 테이블에 대한 보안 정책이 있는 경우에도 테이블의 모든 데이터 변경 내용을 볼 수 있습니다.  
+- **변경 데이터 캡처:** CDC(변경 데이터 캡처)는 필터링해야 하는 전체 행을 **db_owner** 의 구성원 또는 테이블에 대해 CDC를 사용하도록 설정할 때 지정된 "gating(제어)" 역할의 구성원인 사용자에게 누출할 수 있습니다(참고: 모든 사용자가 변경 데이터에 액세스할 수 있도록 명시적으로 이 함수를 **NULL** 로 설정할 수 있음). 실제로 **db_owner** 및 이 제어 역할의 멤버는 테이블에 대한 보안 정책이 있는 경우에도 테이블의 모든 데이터 변경 내용을 볼 수 있습니다.  
   
 - **변경 내용 추적:** 변경 내용 추적은 **SELECT** 및 **VIEW CHANGE TRACKING** 권한이 둘 다 있는 사용자로 필터링되어야 하는 행의 기본 키를 누출할 수 있습니다. 실제 데이터 값은 누출되지 않습니다. 기본 키가 B인 행에 대해 열 A가 업데이트/삽입/삭제되었다는 사실만 누출됩니다. 이는 기본 키에 주민 등록 번호와 같은 기밀 요소가 포함된 경우 문제가 될 수 있습니다. 그러나 실제로 이 **CHANGETABLE** 은 최신 데이터를 가져오기 위해 거의 항상 원래 테이블과 조인됩니다.  
   
@@ -208,12 +208,12 @@ CREATE TABLE Sales
  각 영업 담당자별로 세 개의 주문을 보여 주는 6개의 데이터 행으로 테이블을 채웁니다.  
 
 ```sql
-INSERT INTO Sales VALUES (1, 'Sales1', 'Valve', 5);
-INSERT INTO Sales VALUES (2, 'Sales1', 'Wheel', 2);
-INSERT INTO Sales VALUES (3, 'Sales1', 'Valve', 4);
-INSERT INTO Sales VALUES (4, 'Sales2', 'Bracket', 2);
-INSERT INTO Sales VALUES (5, 'Sales2', 'Wheel', 5);
-INSERT INTO Sales VALUES (6, 'Sales2', 'Seat', 5);
+INSERT INTO Sales VALUES (1, 'Sales1', 'Valve', 5);
+INSERT INTO Sales VALUES (2, 'Sales1', 'Wheel', 2);
+INSERT INTO Sales VALUES (3, 'Sales1', 'Valve', 4);
+INSERT INTO Sales VALUES (4, 'Sales2', 'Bracket', 2);
+INSERT INTO Sales VALUES (5, 'Sales2', 'Wheel', 5);
+INSERT INTO Sales VALUES (6, 'Sales2', 'Seat', 5);
 -- View the 6 rows in the table  
 SELECT * FROM Sales;
 ```
@@ -302,8 +302,8 @@ DROP SCHEMA Security;
 
 ### <a name="prerequisites"></a>필수 조건
 
-1. SQL 풀이 있어야 합니다. [Synapse SQL 풀 만들기](/azure/synapse-analytics/sql-data-warehouse/create-data-warehouse-portal)를 참조하세요.
-1. SQL 풀을 호스트하는 서버는 AAD에 등록되어야 하며, 스토리지 블로그 기여자 권한이 있는 Azure Storage 계정이 있어야 합니다. [여기](/azure/azure-sql/database/vnet-service-endpoint-rule-overview#steps)의 단계를 따릅니다.
+1. 전용 SQL 풀 보안이 있어야 합니다. [전용 SQL 풀 만들기](/azure/synapse-analytics/sql-data-warehouse/create-data-warehouse-portal)를 참조하세요.
+1. 전용 SQL 풀을 호스트하는 서버는 AAD에 등록되어야 하며, 스토리지 블로그 기여자 권한이 있는 Azure Storage 계정이 있어야 합니다. [여기](/azure/azure-sql/database/vnet-service-endpoint-rule-overview#steps)의 단계를 따릅니다.
 1. Azure Storage 계정에 대한 파일 시스템을 만듭니다. Storage Explorer를 사용하여 스토리지 계정을 확인합니다. 컨테이너를 마우스 오른쪽 단추로 클릭하고 ‘파일 시스템 만들기’를 선택합니다.  
 
 필수 조건이 충족되면 서로 다른 액세스 기능을 보여 주는 3개의 사용자 계정을 만듭니다.
@@ -317,10 +317,10 @@ GO
 CREATE LOGIN Sales2 WITH PASSWORD = '<user_password>'
 GO
 
---run in master and your SQL pool database
-CREATE USER Manager FOR LOGIN Manager;  
-CREATE USER Sales1  FOR LOGIN Sales1;  
-CREATE USER Sales2  FOR LOGIN Sales2 ;
+--run in master and your dedicated SQL pool database
+CREATE USER Manager FOR LOGIN Manager;  
+CREATE USER Sales1  FOR LOGIN Sales1;  
+CREATE USER Sales2  FOR LOGIN Sales2 ;
 ```
 
 데이터를 보유하는 테이블을 만듭니다.  
@@ -493,7 +493,7 @@ AS
 GO  
 ```
 
-`Sales`에 대한 필터 조건자 및 차단 조건자로서 이 함수를 추가하는 보안 정책을 만듭니다. 차단 조건자에는 **AFTER INSERT**만 필요합니다. **BEFORE UPDATE** 및 **BEFORE DELETE** 는 이미 필터링되었고 **AFTER UPDATE** 는 이전에 설정된 열 권한으로 인해 `AppUserId` 열을 다른 값으로 업데이트할 수 없어 필요 없기 때문입니다.
+`Sales`에 대한 필터 조건자 및 차단 조건자로서 이 함수를 추가하는 보안 정책을 만듭니다. 차단 조건자에는 **AFTER INSERT** 만 필요합니다. **BEFORE UPDATE** 및 **BEFORE DELETE** 는 이미 필터링되었고 **AFTER UPDATE** 는 이전에 설정된 열 권한으로 인해 `AppUserId` 열을 다른 값으로 업데이트할 수 없어 필요 없기 때문입니다.
 
 ```sql
 CREATE SECURITY POLICY Security.SalesFilter  
@@ -504,7 +504,7 @@ CREATE SECURITY POLICY Security.SalesFilter
     WITH (STATE = ON);  
 ```
 
-이제 `Sales` SESSION_CONTEXT **에서 다른 응용 프로그램 사용자 ID를 설정한 후**테이블에서 선택하여 연결 필터링을 시뮬레이트할 수 있습니다. 실제로 애플리케이션은 연결을 연 후 **SESSION_CONTEXT** 에서 현재 사용자 ID를 설정합니다.
+이제 `Sales` SESSION_CONTEXT **에서 다른 응용 프로그램 사용자 ID를 설정한 후** 테이블에서 선택하여 연결 필터링을 시뮬레이트할 수 있습니다. 실제로 애플리케이션은 연결을 연 후 **SESSION_CONTEXT** 에서 현재 사용자 ID를 설정합니다.
 
 ```sql
 EXECUTE AS USER = 'AppUser';  

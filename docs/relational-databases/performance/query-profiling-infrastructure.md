@@ -4,7 +4,7 @@ description: SQL Server 데이터베이스 엔진이 쿼리 실행 계획의 런
 ms.custom: ''
 ms.date: 04/23/2019
 ms.prod: sql
-ms.reviewer: ''
+ms.reviewer: wiassaf
 ms.technology: performance
 ms.topic: conceptual
 helpviewer_keywords:
@@ -18,12 +18,12 @@ ms.assetid: 07f8f594-75b4-4591-8c29-d63811d7753e
 author: pmasl
 ms.author: pelopes
 manager: amitban
-ms.openlocfilehash: 02b4935c7608bb6912274ee017371f519df7bdf8
-ms.sourcegitcommit: 783b35f6478006d654491cb52f6edf108acf2482
+ms.openlocfilehash: 125a95f14f7082a3ed806d6dfa7fcb05b6d11c81
+ms.sourcegitcommit: 0e0cd9347c029e0c7c9f3fe6d39985a6d3af967d
 ms.translationtype: HT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 10/09/2020
-ms.locfileid: "91890768"
+ms.lasthandoff: 12/02/2020
+ms.locfileid: "96505081"
 ---
 # <a name="query-profiling-infrastructure"></a>쿼리 프로파일링 인프라
 [!INCLUDE [SQL Server Azure SQL Database](../../includes/applies-to-version/sql-asdb.md)]
@@ -34,7 +34,7 @@ ms.locfileid: "91890768"
 
 ## <a name="the-standard-query-execution-statistics-profiling-infrastructure"></a>표준 쿼리 실행 통계 프로파일링 인프라
 
-*쿼리 실행 통계 프로필 인프라* 또는 표준 프로파일링을 사용하도록 설정하여 실행 계획, 즉, 행 수, CPU 및 I/O 사용량에 대한 정보를 수집해야 합니다. **대상 세션**에 대한 실행 계획 정보를 수집하는 다음 방법은 표준 프로파일링 인프라를 활용합니다.
+*쿼리 실행 통계 프로필 인프라* 또는 표준 프로파일링을 사용하도록 설정하여 실행 계획, 즉, 행 수, CPU 및 I/O 사용량에 대한 정보를 수집해야 합니다. **대상 세션** 에 대한 실행 계획 정보를 수집하는 다음 방법은 표준 프로파일링 인프라를 활용합니다.
 
 - [SET STATISTICS XML](../../t-sql/statements/set-statistics-xml-transact-sql.md) 
 - [SET STATISTICS PROFILE](../../t-sql/statements/set-statistics-profile-transact-sql.md)
@@ -44,16 +44,16 @@ ms.locfileid: "91890768"
 > [!INCLUDE[ssManStudioFull](../../includes/ssmanstudiofull-md.md)]의 *활성 쿼리 통계 포함* 단추를 클릭하면 표준 프로파일링 인프라가 활용됩니다.    
 > [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]의 상위 버전에서는 [경량 프로파일링 인프라](#lwp)가 활성화된 경우 [작업 모니터](../../relational-databases/performance-monitor/activity-monitor.md)를 통해 보거나 [sys.dm_exec_query_profiles](../../relational-databases/system-dynamic-management-views/sys-dm-exec-query-profiles-transact-sql.md) DMV를 직접 쿼리할 때 표준 프로파일링 대신 활성 쿼리 통계에 의해 활용됩니다. 
 
-**모든 세션**에 대한 실행 계획 정보를 전역적으로 수집하는 다음 방법은 표준 프로파일링 인프라를 활용합니다.
+**모든 세션** 에 대한 실행 계획 정보를 전역적으로 수집하는 다음 방법은 표준 프로파일링 인프라를 활용합니다.
 
--  ***query_post_execution_showplan*** 확장 이벤트. 확장 이벤트를 사용하도록 설정하려면 [Monitor System Activity Using Extended Events](../../relational-databases/extended-events/monitor-system-activity-using-extended-events.md)을 참조하세요.  
-- [SQL 추적](../../relational-databases/sql-trace/sql-trace.md) 및 [SQL Server 프로파일러](../../tools/sql-server-profiler/sql-server-profiler.md)의 **Showplan XML** 추적 이벤트. 이 추적 이벤트에 대한 자세한 내용은 [Showplan XML 이벤트 클래스](../../relational-databases/event-classes/showplan-xml-event-class.md)를 참조하세요.
+-  **_query_post_execution_showplan_* _ 확장 이벤트. 확장 이벤트를 사용하도록 설정하려면 [Monitor System Activity Using Extended Events](../../relational-databases/extended-events/monitor-system-activity-using-extended-events.md)을 참조하세요.  
+- [SQL 추적](../../relational-databases/sql-trace/sql-trace.md) 및 [SQL Server Profiler](../../tools/sql-server-profiler/sql-server-profiler.md)의 _ *Showplan XML** 추적 이벤트. 이 추적 이벤트에 대한 자세한 내용은 [Showplan XML 이벤트 클래스](../../relational-databases/event-classes/showplan-xml-event-class.md)를 참조하세요.
 
 *query_post_execution_showplan* 이벤트를 사용하는 확장 이벤트 세션을 실행하면 [sys.dm_exec_query_profiles](../../relational-databases/system-dynamic-management-views/sys-dm-exec-query-profiles-transact-sql.md) DMV도 채워지며, 따라서 [Activity Monitor](../../relational-databases/performance-monitor/activity-monitor.md)를 사용하여 또는 DMV를 직접 쿼리하여 모든 세션에 활성 쿼리 통계를 사용할 수 있습니다. 자세한 내용은 [Live Query Statistics](../../relational-databases/performance/live-query-statistics.md)를 참조하세요.
 
 ## <a name="the-lightweight-query-execution-statistics-profiling-infrastructure"></a><a name="lwp"></a> 간단한 쿼리 실행 통계 프로파일링 인프라
 
-[!INCLUDE[ssSQL14](../../includes/sssql14-md.md)] SP2 및 [!INCLUDE[ssSQL15](../../includes/sssql15-md.md)]부터 새로운 *간단한 쿼리 실행 통계 프로파일링 인프라* 또는 **간단한 프로파일링**이 도입되었습니다. 
+[!INCLUDE[ssSQL14](../../includes/sssql14-md.md)] SP2 및 [!INCLUDE[ssSQL15](../../includes/sssql15-md.md)]부터 새로운 *간단한 쿼리 실행 통계 프로파일링 인프라* 또는 **간단한 프로파일링** 이 도입되었습니다. 
 
 > [!NOTE]
 > 고유하게 컴파일된 저장 프로시저는 간단한 프로파일링에서 지원되지 않습니다.  
@@ -64,7 +64,7 @@ ms.locfileid: "91890768"
   
 [!INCLUDE[ssSQL14](../../includes/sssql14-md.md)] SP2 및 [!INCLUDE[ssSQL15](../../includes/sssql15-md.md)]부터는 간단한 프로파일링을 도입하여 실행 계획에 대한 정보를 수집하는 성능 오버헤드를 줄였습니다. 표준 프로파일링과는 달리, 간단한 프로파일링에서 CPU 런타임 정보를 수집하지 않습니다. 그러나 간단한 프로파일링에서는 여전히 행 수 및 I/O 사용 정보를 수집합니다.
 
-간단한 프로파일링을 활용하는 새 ***query_thread_profile*** 확장 이벤트도 도입되었습니다. 이 확장 이벤트는 연산자별 실행 통계를 표시하므로 각 노드 및 스레드의 성능을 자세히 파악할 수 있습니다. 이 확장 이벤트를 사용하는 샘플 세션을 아래 예제처럼 구성할 수 있습니다.
+간단한 프로파일링을 활용하는 새**_query_thread_profile_* _ 확장 이벤트도 도입되었습니다. 이 확장 이벤트는 연산자별 실행 통계를 표시하므로 각 노드 및 스레드의 성능을 자세히 파악할 수 있습니다. 이 확장 이벤트를 사용하는 샘플 세션을 아래 예제처럼 구성할 수 있습니다.
 
 ```sql
 CREATE EVENT SESSION [NodePerfStats] ON SERVER
@@ -86,15 +86,15 @@ WITH (MAX_MEMORY=4096 KB,
 > [!NOTE]
 > 쿼리 프로파일링의 성능 오버헤드에 자세한 내용은 블로그 게시물 [개발자 선택 사항: 쿼리 진행률 - 언제, 어디서나](/archive/blogs/sql_server_team/query-progress-anytime-anywhere)를 참조하세요. 
 
-*query_thread_profile* 이벤트를 사용하는 확장 이벤트 세션을 실행하면 간단한 프로파일링을 사용하여 [sys.dm_exec_query_profiles](../../relational-databases/system-dynamic-management-views/sys-dm-exec-query-profiles-transact-sql.md) DMV도 채워지며, 따라서 [Activity Monitor](../../relational-databases/performance-monitor/activity-monitor.md)를 사용하여 또는 DMV를 직접 쿼리하여 모든 세션에 활성 쿼리 통계를 사용할 수 있습니다.
+_query_thread_profile* 이벤트를 사용하는 확장 이벤트 세션을 실행하면 간단한 프로파일링을 사용하여 [sys.dm_exec_query_profiles](../../relational-databases/system-dynamic-management-views/sys-dm-exec-query-profiles-transact-sql.md) DMV도 채워지며, 따라서 [Activity Monitor](../../relational-databases/performance-monitor/activity-monitor.md)를 사용하여 또는 DMV를 직접 쿼리하여 모든 세션에 활성 쿼리 통계를 사용할 수 있습니다.
 
 ### <a name="lightweight-query-execution-statistics-profiling-infrastructure-v2"></a>간단한 쿼리 실행 통계 프로파일링 인프라 v2
 
 **적용 대상**: [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]([!INCLUDE[ssSQL15](../../includes/sssql15-md.md)] SP1 ~ [!INCLUDE[ssSQL17](../../includes/sssql17-md.md)]) 
 
-[!INCLUDE[ssSQL15](../../includes/sssql15-md.md)] SP1에는 오버헤드를 최소화하도록 수정된 버전의 간단한 프로파일링이 포함되어 있습니다. 위의 *적용 대상*에 언급된 버전의 [추적 플래그 7412](../../t-sql/database-console-commands/dbcc-traceon-trace-flags-transact-sql.md)를 사용하여 간단한 프로파일링을 전역적으로 사용할 수도 있습니다. 새 DMF [sys.dm_exec_query_statistics_xml](../../relational-databases/system-dynamic-management-views/sys-dm-exec-query-statistics-xml-transact-sql.md)은 진행 중인 요청에 대한 쿼리 실행 계획을 반환하기 위해 도입되었습니다.
+[!INCLUDE[ssSQL15](../../includes/sssql15-md.md)] SP1에는 오버헤드를 최소화하도록 수정된 버전의 간단한 프로파일링이 포함되어 있습니다. 위의 *적용 대상* 에 언급된 버전의 [추적 플래그 7412](../../t-sql/database-console-commands/dbcc-traceon-trace-flags-transact-sql.md)를 사용하여 간단한 프로파일링을 전역적으로 사용할 수도 있습니다. 새 DMF [sys.dm_exec_query_statistics_xml](../../relational-databases/system-dynamic-management-views/sys-dm-exec-query-statistics-xml-transact-sql.md)은 진행 중인 요청에 대한 쿼리 실행 계획을 반환하기 위해 도입되었습니다.
 
-[!INCLUDE[ssSQL15](../../includes/sssql15-md.md)] SP2 CU3 및 [!INCLUDE[ssSQL17](../../includes/sssql17-md.md)] CU11부터는 간단한 프로파일링이 전역적으로 사용되지 않으면 새 [USE HINT 쿼리 힌트](../../t-sql/queries/hints-transact-sql-query.md#use_hint) 인수 **QUERY_PLAN_PROFILE**을 사용하여 쿼리 수준에서, 모든 세션에 간단한 프로파일링을 사용하도록 설정할 수 있습니다. 이 새 힌트를 포함하는 쿼리가 완료되면 *query_post_execution_showplan* 확장 이벤트와 마찬가지로 실제 실행 계획 XML을 제공하는 새 ***query_plan_profile*** 확장 이벤트도 출력됩니다. 
+[!INCLUDE[ssSQL15](../../includes/sssql15-md.md)] SP2 CU3 및 [!INCLUDE[ssSQL17](../../includes/sssql17-md.md)] CU11부터는 간단한 프로파일링이 전역적으로 사용되지 않으면 새 [USE HINT 쿼리 힌트](../../t-sql/queries/hints-transact-sql-query.md#use_hint) 인수 **QUERY_PLAN_PROFILE** 을 사용하여 쿼리 수준에서, 모든 세션에 간단한 프로파일링을 사용하도록 설정할 수 있습니다. 이 새 힌트를 포함하는 쿼리가 완료되면 _query_post_execution_showplan* 확장 이벤트와 마찬가지로 실제 실행 계획 XML을 제공하는 새 **_query_plan_profile_* _ 확장 이벤트도 출력됩니다. 
 
 > [!NOTE]
 > *query_plan_profile* 확장 이벤트는 쿼리 힌트를 사용하지 않더라도 간단한 프로파일링을 활용합니다. 
@@ -124,9 +124,9 @@ WITH (MAX_MEMORY=4096 KB,
 
 [!INCLUDE[sql-server-2019](../../includes/sssqlv15-md.md)] 및 [!INCLUDE[ssSDSfull](../../includes/sssdsfull-md.md)]에는 모든 실행의 행 개수 정보를 수집하는 수정된 버전의 간단한 프로파일링이 포함되어 있습니다. 간단한 프로파일링은 [!INCLUDE[sql-server-2019](../../includes/sssqlv15-md.md)] 및 [!INCLUDE[ssSDSfull](../../includes/sssdsfull-md.md)]에서 기본적으로 사용됩니다. [!INCLUDE[sql-server-2019](../../includes/sssqlv15-md.md)]부터 추적 플래그 7412는 적용되지 않습니다. LIGHTWEIGHT_QUERY_PROFILING [데이터베이스 범위 구성](../../t-sql/statements/alter-database-scoped-configuration-transact-sql.md): `ALTER DATABASE SCOPED CONFIGURATION SET LIGHTWEIGHT_QUERY_PROFILING = OFF;`를 사용하여 데이터베이스 수준에서 경량 프로파일링을 사용하지 않도록 설정할 수 있습니다.
 
-새 DMF [sys.dm_exec_query_plan_stats](../../relational-databases/system-dynamic-management-views/sys-dm-exec-query-plan-stats-transact-sql.md)는 대부분의 쿼리에 대해 마지막으로 알려진 실제 실행 계획과 동등한 것을 반환하기 위해 도입되었으며 *마지막 쿼리 계획 통계*라고 합니다. 마지막 쿼리 계획 통계는 LAST_QUERY_PLAN_STATS [데이터베이스 범위 구성](../../t-sql/statements/alter-database-scoped-configuration-transact-sql.md)(`ALTER DATABASE SCOPED CONFIGURATION SET LAST_QUERY_PLAN_STATS = ON;`)을 사용하여 데이터베이스 수준에서 사용하도록 설정할 수 있습니다.
+새 DMF [sys.dm_exec_query_plan_stats](../../relational-databases/system-dynamic-management-views/sys-dm-exec-query-plan-stats-transact-sql.md)는 대부분의 쿼리에 대해 마지막으로 알려진 실제 실행 계획과 동등한 것을 반환하기 위해 도입되었으며 *마지막 쿼리 계획 통계* 라고 합니다. 마지막 쿼리 계획 통계는 LAST_QUERY_PLAN_STATS [데이터베이스 범위 구성](../../t-sql/statements/alter-database-scoped-configuration-transact-sql.md)(`ALTER DATABASE SCOPED CONFIGURATION SET LAST_QUERY_PLAN_STATS = ON;`)을 사용하여 데이터베이스 수준에서 사용하도록 설정할 수 있습니다.
 
-새 *query_post_execution_plan_profile* 확장 이벤트는 표준 프로파일링을 사용하는 *query_post_execution_showplan*과 달리 경량 프로파일링에 기반한 실제 계획과 동등한 것을 수집합니다. [!INCLUDE[ssSQL17](../../includes/sssql17-md.md)]는 CU14부터 이 이벤트도 제공합니다. *query_post_execution_plan_profile* 확장 이벤트를 사용하는 샘플 세션은 아래 예제와 같이 구성할 수 있습니다.
+새 *query_post_execution_plan_profile* 확장 이벤트는 표준 프로파일링을 사용하는 *query_post_execution_showplan* 과 달리 경량 프로파일링에 기반한 실제 계획과 동등한 것을 수집합니다. [!INCLUDE[ssSQL17](../../includes/sssql17-md.md)]는 CU14부터 이 이벤트도 제공합니다. *query_post_execution_plan_profile* 확장 이벤트를 사용하는 샘플 세션은 아래 예제와 같이 구성할 수 있습니다.
 
 ```sql
 CREATE EVENT SESSION [PerfStats_LWP_All_Plans] ON SERVER

@@ -24,12 +24,12 @@ ms.assetid: 63373c2f-9a0b-431b-b9d2-6fa35641571a
 author: markingmyname
 ms.author: maghan
 monikerRange: = azuresqldb-current || = azuresqldb-mi-current || >= sql-server-2016 || >= sql-server-linux-2017 ||=azure-sqldw-latest|| = sqlallproducts-allversions
-ms.openlocfilehash: 99d2f29a4e0e1839256acb49b91307e48e39d057
-ms.sourcegitcommit: bd3a135f061e4a49183bbebc7add41ab11872bae
+ms.openlocfilehash: 092c6c8b99c7a30ff02aed450a4da9d991d7f3df
+ms.sourcegitcommit: 0c0e4ab90655dde3e34ebc08487493e621f25dda
 ms.translationtype: HT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 10/21/2020
-ms.locfileid: "92300323"
+ms.lasthandoff: 12/01/2020
+ms.locfileid: "96443013"
 ---
 # <a name="alter-database-scoped-configuration-transact-sql"></a>ALTER DATABASE SCOPED CONFIGURATION(Transact-SQL)
 
@@ -37,7 +37,7 @@ ms.locfileid: "92300323"
 
 이 명령은 **개별 데이터베이스** 수준에서 여러 데이터베이스 구성 설정을 사용하도록 설정합니다. 
 
-다음 설정은 [!INCLUDE[sssdsfull](../../includes/sssdsfull-md.md)] 및 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]에서 지원됩니다( [인수](#arguments) 섹션의 각 설정에 대한 **적용 대상** 줄로 표시됨). 
+다음 설정은 [!INCLUDE[sssdsfull](../../includes/sssdsfull-md.md)] 및 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]에서 지원됩니다([인수](#arguments) 섹션의 각 설정에 대한 **적용 대상** 줄로 표시됨). 
 
 - 프로시저 캐시를 지웁니다.
 - 주 데이터베이스의 경우 MAXDOP 매개 변수를 해당 데이터베이스에 가장 적합한 임의 값(1,2, ...)으로 설정하고 사용되는 보조 데이터베이스(예: 보고 쿼리용)에는 다른 값(예: 0)을 설정합니다.
@@ -58,7 +58,7 @@ ms.locfileid: "92300323"
 - 일시 중지된 다시 시작 가능 인덱스 작업이 SQL Server 엔진에서 자동으로 중단되기 전에 일시 중지되는 시간(분)을 지정합니다.
 - 비동기 통계 업데이트를 위한 낮은 우선 순위 잠금 대기를 사용하거나 사용하지 않도록 설정
 
-이 설정은 Azure Synapse Analytics(이전의 SQL DW)에서만 사용할 수 있습니다.
+이 설정은 Azure Synapse Analytics에서만 사용할 수 있습니다.
 - 사용자 데이터베이스의 호환성 수준 설정
 
 ![링크 아이콘](../../database-engine/configure-windows/media/topic-link.gif "링크 아이콘") [Transact-SQL 구문 표기 규칙](../../t-sql/language-elements/transact-sql-syntax-conventions-transact-sql.md)
@@ -113,7 +113,7 @@ ALTER DATABASE SCOPED CONFIGURATION
 > -  `DISABLE_BATCH_MODE_ADAPTIVE_JOINS`가 `BATCH_MODE_ADAPTIVE_JOINS`로 변경됨
 
 ```SQL
--- Syntax for Azure Synapse Analytics (Formerly SQL DW)
+-- Syntax for Azure Synapse Analytics
 
 ALTER DATABASE SCOPED CONFIGURATION
 {
@@ -139,7 +139,7 @@ CLEAR PROCEDURE_CACHE [plan_handle]
 
 쿼리 계획 핸들을 지정하여 계획 캐시에서 단일 쿼리 계획을 지웁니다.
 
-**적용 대상** : 쿼리 계획 핸들을 지정하는 작업은 Azure SQL Database 및 SQL Server 2019 이상에서 수행할 수 있습니다.
+**적용 대상**: 쿼리 계획 핸들을 지정하는 작업은 Azure SQL Database 및 SQL Server 2019 이상에서 수행할 수 있습니다.
 
 MAXDOP **=** {\<value> | PRIMARY } **\<value>**
 
@@ -192,7 +192,7 @@ PRIMARY
 
 데이터베이스의 호환성 수준에 관계없이 쿼리 최적화 프로그램 핫픽스를 사용하거나 사용하지 않도록 설정합니다. 기본값은 **OFF** 이며 가장 높은 호환성 수준이 특정 버전(RTM 이후)에 대해 도입된 후에 릴리스된 쿼리 최적화 프로그램 핫픽스를 비활성화합니다. 이 값을 **ON** 으로 설정하면 [추적 플래그 4199](../../t-sql/database-console-commands/dbcc-traceon-trace-flags-transact-sql.md)를 활성화하는 것과 동일합니다.
 
-**적용 대상** : [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] ([!INCLUDE[ssSQL16](../../includes/sssql16-md.md)]부터 시작) 및 [!INCLUDE[ssSDSfull](../../includes/sssdsfull-md.md)]
+**적용 대상**: [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] ([!INCLUDE[ssSQL16](../../includes/sssql16-md.md)]부터 시작) 및 [!INCLUDE[ssSDSfull](../../includes/sssdsfull-md.md)]
 
 > [!TIP]
 > 쿼리 수준에서 이 작업을 수행하려면 **QUERYTRACEON** [쿼리 힌트](../../t-sql/database-console-commands/dbcc-traceon-trace-flags-transact-sql.md)를 추가합니다.
@@ -204,7 +204,7 @@ PRIMARY
 
 IDENTITY_CACHE **=** { **ON** | OFF }
 
-**적용 대상** : [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] ([!INCLUDE[ssSQL17](../../includes/sssql17-md.md)]부터 시작) 및 [!INCLUDE[ssSDSfull](../../includes/sssdsfull-md.md)]
+**적용 대상**: [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] ([!INCLUDE[ssSQL17](../../includes/sssql17-md.md)]부터 시작) 및 [!INCLUDE[ssSDSfull](../../includes/sssdsfull-md.md)]
 
 데이터베이스 수준에서 ID 캐시를 사용하거나 사용하지 않도록 설정합니다. 기본값은 **ON** 입니다. ID 캐싱은 ID 열이 있는 테이블에서 INSERT 성능을 개선하기 위해 사용됩니다. 서버가 예기치 않게 다시 시작하거나 보조 서버로 장애 조치(failover)되는 경우에 ID 열의 값이 차이 나지 않도록 IDENTITY_CACHE 옵션을 비활성화합니다. 이 옵션은 서버 수준에서만이 아니라 데이터베이스 수준에서 설정될 수 있다는 점을 제외하고 기존 [추적 플래그 272](../../t-sql/database-console-commands/dbcc-traceon-trace-flags-transact-sql.md)와 비슷합니다.
 
@@ -213,7 +213,7 @@ IDENTITY_CACHE **=** { **ON** | OFF }
 
 INTERLEAVED_EXECUTION_TVF **=** { **ON** | OFF }
 
-**적용 대상** : [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] ([!INCLUDE[ssSQL17](../../includes/sssql17-md.md)]부터 시작) 및 [!INCLUDE[ssSDSfull](../../includes/sssdsfull-md.md)]
+**적용 대상**: [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] ([!INCLUDE[ssSQL17](../../includes/sssql17-md.md)]부터 시작) 및 [!INCLUDE[ssSDSfull](../../includes/sssdsfull-md.md)]
 
 데이터베이스 호환성 수준 140 이상을 유지하면서 데이터베이스 또는 명령문 범위에서 다중 명령문 테이블 값 함수에 대해 인터리브된 실행을 사용하거나 사용하지 않도록 설정할 수 있습니다. 인터리브된 실행은 [!INCLUDE[ssSDSfull](../../includes/sssdsfull-md.md)]의 적응 쿼리 처리의 일부인 기능입니다. 자세한 내용은 [지능형 쿼리 처리](../../relational-databases/performance/intelligent-query-processing.md)를 참조하세요.
 
@@ -224,7 +224,7 @@ INTERLEAVED_EXECUTION_TVF **=** { **ON** | OFF }
 
 BATCH_MODE_MEMORY_GRANT_FEEDBACK **=** { **ON** | OFF}
 
-**적용 대상** : [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] ([!INCLUDE[ssSQL17](../../includes/sssql17-md.md)]부터 시작) 및 [!INCLUDE[ssSDSfull](../../includes/sssdsfull-md.md)]
+**적용 대상**: [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] ([!INCLUDE[ssSQL17](../../includes/sssql17-md.md)]부터 시작) 및 [!INCLUDE[ssSDSfull](../../includes/sssdsfull-md.md)]
 
 데이터베이스 호환성 수준 140 이상을 유지하면서 데이터베이스 범위에서 일괄 처리 모드 메모리 부여 피드백을 사용하거나 사용하지 않도록 설정할 수 있습니다. 일괄 처리 모드 메모리 부여 피드백은 [!INCLUDE[ssSQL17](../../includes/sssql17-md.md)]에 도입된 [지능형 쿼리 처리](../../relational-databases/performance/intelligent-query-processing.md)의 일부 기능입니다.
 
@@ -233,7 +233,7 @@ BATCH_MODE_MEMORY_GRANT_FEEDBACK **=** { **ON** | OFF}
 
 BATCH_MODE_ADAPTIVE_JOINS **=** { **ON** | OFF}
 
-**적용 대상** : [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] ([!INCLUDE[ssSQL17](../../includes/sssql17-md.md)]부터 시작) 및 [!INCLUDE[ssSDSfull](../../includes/sssdsfull-md.md)]
+**적용 대상**: [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] ([!INCLUDE[ssSQL17](../../includes/sssql17-md.md)]부터 시작) 및 [!INCLUDE[ssSDSfull](../../includes/sssdsfull-md.md)]
 
 데이터베이스 호환성 수준 140 이상을 유지하면서 데이터베이스 범위에서 일괄 처리 모드 적응형 조인을 사용하거나 사용하지 않도록 설정할 수 있습니다. 일괄 처리 모드 적응형 조인은 [!INCLUDE[ssSQL17](../../includes/sssql17-md.md)]에 도입된 [지능형 쿼리 처리](../../relational-databases/performance/intelligent-query-processing.md)의 일부 기능입니다.
 
@@ -242,7 +242,7 @@ BATCH_MODE_ADAPTIVE_JOINS **=** { **ON** | OFF}
 
 TSQL_SCALAR_UDF_INLINING **=** { **ON** | OFF }
 
-**적용 대상** : [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] ([!INCLUDE[sql-server-2019](../../includes/sssqlv15-md.md)]부터 시작) 및 [!INCLUDE[ssSDSfull](../../includes/sssdsfull-md.md)](기능은 공개 미리 보기 상태)
+**적용 대상**: [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] ([!INCLUDE[sql-server-2019](../../includes/sssqlv15-md.md)]부터 시작) 및 [!INCLUDE[ssSDSfull](../../includes/sssdsfull-md.md)](기능은 공개 미리 보기 상태)
 
 데이터베이스 호환성 수준 150 이상을 유지하면서 데이터베이스 범위에서 T-SQL Scalar UDF 인라인을 활성화하거나 비활성화할 수 있습니다. T-SQL Scalar UDF 인라인은 [인텔리전트 쿼리 처리](../../relational-databases/performance/intelligent-query-processing.md) 기능 제품군의 일부입니다.
 
@@ -251,7 +251,7 @@ TSQL_SCALAR_UDF_INLINING **=** { **ON** | OFF }
 
 ELEVATE_ONLINE = { OFF | WHEN_SUPPORTED | FAIL_UNSUPPORTED }
 
-**적용 대상** : [!INCLUDE[ssSDSFull](../../includes/sssdsfull-md.md)](기능은 퍼블릭 미리 보기 상태임)
+**적용 대상**: [!INCLUDE[ssSDSFull](../../includes/sssdsfull-md.md)](기능은 퍼블릭 미리 보기 상태임)
 
 엔진이 지원되는 작업의 권한을 online으로 자동 상승시키도록 하는 옵션을 선택할 수 있습니다. 기본값은 OFF, 즉 명령문에 지정되지 않은 경우 작업의 권한이 online으로 상승하지 않는 것입니다. [sys.database_scoped_configurations](../../relational-databases/system-catalog-views/sys-database-scoped-configurations-transact-sql.md)는 ELEVATE_ONLINE의 현재 값을 나타냅니다. 이러한 옵션은 online에 지원되는 작업에만 적용됩니다.
 
@@ -268,7 +268,7 @@ WHEN_SUPPORTED
 
 ELEVATE_RESUMABLE= { OFF | WHEN_SUPPORTED | FAIL_UNSUPPORTED }
 
-**적용 대상** : [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] ([!INCLUDE[sql-server-2019](../../includes/sssqlv15-md.md)]부터 시작) 및 [!INCLUDE[ssSDSfull](../../includes/sssdsfull-md.md)](기능은 공개 미리 보기 상태)
+**적용 대상**: [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] ([!INCLUDE[sql-server-2019](../../includes/sssqlv15-md.md)]부터 시작) 및 [!INCLUDE[ssSDSfull](../../includes/sssdsfull-md.md)](기능은 공개 미리 보기 상태)
 
 엔진이 지원되는 작업의 권한을 resumable로 자동 상승시키도록 하는 옵션을 선택할 수 있습니다. 기본값은 OFF, 즉 명령문에 지정되지 않은 경우 작업의 권한이 resumable로 상승되지 않는 것입니다. [sys.database_scoped_configurations](../../relational-databases/system-catalog-views/sys-database-scoped-configurations-transact-sql.md)는 ELEVATE_ELEVATE_RESUMABLE의 현재 값을 나타냅니다. 이러한 옵션은 resumable에 지원되는 작업에만 적용됩니다.
 
@@ -285,13 +285,13 @@ WHEN_SUPPORTED
 
 OPTIMIZE_FOR_AD_HOC_WORKLOADS **=** { ON | **OFF** }
 
-**적용 대상** : [!INCLUDE[sssdsfull](../../includes/sssdsfull-md.md)]
+**적용 대상**: [!INCLUDE[sssdsfull](../../includes/sssdsfull-md.md)]
 
 일괄 처리가 처음으로 컴파일될 때 캐시에 저장될 컴파일된 계획 스텁을 사용하거나 사용하지 않도록 설정합니다. 기본값은 OFF입니다. 데이터베이스 범위 구성 OPTIMIZE_FOR_AD_HOC_WORKLOADS가 데이터베이스에 대해 활성화되면 컴파일된 계획 스텁은 일괄 처리가 처음으로 컴파일될 때 캐시에 저장됩니다. 계획 스텁은 전체 컴파일된 계획의 크기에 비해 작은 메모리 사용 공간을 갖습니다. 일괄 처리가 컴파일되거나 다시 실행되는 경우 컴파일된 계획 스텁은 제거되고 전체 컴파일된 계획으로 대체됩니다.
 
 XTP_PROCEDURE_EXECUTION_STATISTICS **=** { ON | **OFF** }
 
-**적용 대상** : [!INCLUDE[ssSDSFull](../../includes/sssdsfull-md.md)]
+**적용 대상**: [!INCLUDE[ssSDSFull](../../includes/sssdsfull-md.md)]
 
 현재 데이터베이스에 있는 고유하게 컴파일된 T-SQL 모듈에 대한 모듈 수준 실행 통계 수집을 활성화하거나 비활성화합니다. 기본값은 OFF입니다. 실행 통계는 [sys.dm_exec_procedure_stats](../../relational-databases/system-dynamic-management-views/sys-dm-exec-procedure-stats-transact-sql.md)에 반영됩니다.
 
@@ -299,7 +299,7 @@ XTP_PROCEDURE_EXECUTION_STATISTICS **=** { ON | **OFF** }
 
 XTP_QUERY_EXECUTION_STATISTICS **=** { ON | **OFF** }
 
-**적용 대상** : [!INCLUDE[ssSDSFull](../../includes/sssdsfull-md.md)]
+**적용 대상**: [!INCLUDE[ssSDSFull](../../includes/sssdsfull-md.md)]
 
 현재 데이터베이스에 있는 고유하게 컴파일된 T-SQL 모듈에 대한 명령문 수준 실행 통계 수집을 활성화하거나 비활성화합니다. 기본값은 OFF입니다. 실행 통계는 [sys.dm_exec_query_stats](../../relational-databases/system-dynamic-management-views/sys-dm-exec-query-stats-transact-sql.md) 및 [쿼리 저장소](../../relational-databases/performance/monitoring-performance-by-using-the-query-store.md)에 반영됩니다.
 
@@ -309,7 +309,7 @@ XTP_QUERY_EXECUTION_STATISTICS **=** { ON | **OFF** }
 
 ROW_MODE_MEMORY_GRANT_FEEDBACK **=** { **ON** | OFF}
 
-**적용 대상** : [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] ([!INCLUDE[sql-server-2019](../../includes/sssqlv15-md.md)]부터 시작) 및 [!INCLUDE[ssSDSfull](../../includes/sssdsfull-md.md)](기능은 공개 미리 보기 상태)
+**적용 대상**: [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] ([!INCLUDE[sql-server-2019](../../includes/sssqlv15-md.md)]부터 시작) 및 [!INCLUDE[ssSDSfull](../../includes/sssdsfull-md.md)](기능은 공개 미리 보기 상태)
 
 데이터베이스 호환성 수준 150 이상을 유지하면서 데이터베이스 범위에서 행 모드 메모리 부여 피드백을 사용하거나 사용하지 않도록 설정할 수 있습니다. 행 모드 메모리 부여 피드백은 [!INCLUDE[ssSQL17](../../includes/sssql17-md.md)]에 도입된 [지능형 쿼리 처리](../../relational-databases/performance/intelligent-query-processing.md)의 일부 기능입니다(행 모드는 [!INCLUDE[sql-server-2019](../../includes/sssqlv15-md.md)] 및 [!INCLUDE[ssSDSfull](../../includes/sssdsfull-md.md)]에서 지원됨).
 
@@ -318,7 +318,7 @@ ROW_MODE_MEMORY_GRANT_FEEDBACK **=** { **ON** | OFF}
 
 BATCH_MODE_ON_ROWSTORE **=** { **ON** | OFF}
 
-**적용 대상** : [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] ([!INCLUDE[sql-server-2019](../../includes/sssqlv15-md.md)]부터 시작) 및 [!INCLUDE[ssSDSfull](../../includes/sssdsfull-md.md)](기능은 공개 미리 보기 상태)
+**적용 대상**: [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] ([!INCLUDE[sql-server-2019](../../includes/sssqlv15-md.md)]부터 시작) 및 [!INCLUDE[ssSDSfull](../../includes/sssdsfull-md.md)](기능은 공개 미리 보기 상태)
 
 데이터베이스 호환성 수준 150 이상을 유지하면서 데이터베이스 범위에서 행 저장소의 일괄 처리 모드를 사용하거나 사용하지 않도록 설정할 수 있습니다. 행 저장소의 일괄 처리 모드는 [인텔리전트 쿼리 처리](../../relational-databases/performance/intelligent-query-processing.md) 기능 제품군의 일부 기능입니다.
 
@@ -327,7 +327,7 @@ BATCH_MODE_ON_ROWSTORE **=** { **ON** | OFF}
 
 DEFERRED_COMPILATION_TV **=** { **ON** | OFF}
 
-**적용 대상** : [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] ([!INCLUDE[sql-server-2019](../../includes/sssqlv15-md.md)]부터 시작) 및 [!INCLUDE[ssSDSfull](../../includes/sssdsfull-md.md)](기능은 공개 미리 보기 상태)
+**적용 대상**: [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] ([!INCLUDE[sql-server-2019](../../includes/sssqlv15-md.md)]부터 시작) 및 [!INCLUDE[ssSDSfull](../../includes/sssdsfull-md.md)](기능은 공개 미리 보기 상태)
 
 데이터베이스 호환성 수준 150 이상을 유지하면서 데이터베이스 범위에서 테이블 변수 지연 컴파일을 사용하거나 사용하지 않도록 설정할 수 있습니다. 테이블 변수 지연 컴파일은 [인텔리전트 쿼리 처리](../../relational-databases/performance/intelligent-query-processing.md) 기능 제품군의 일부 기능입니다.
 
@@ -336,7 +336,7 @@ DEFERRED_COMPILATION_TV **=** { **ON** | OFF}
 
 ACCELERATED_PLAN_FORCING **=** { **ON** | OFF }
 
-**적용 대상** : [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] ([!INCLUDE[sql-server-2019](../../includes/sssqlv15-md.md)]부터 시작)
+**적용 대상**: [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] ([!INCLUDE[sql-server-2019](../../includes/sssqlv15-md.md)]부터 시작)
 
 [쿼리 저장소 계획 강제 적용](../../relational-databases/performance/monitoring-performance-by-using-the-query-store.md#Regressed), [자동 튜닝](../../relational-databases/automatic-tuning/automatic-tuning.md#automatic-plan-correction) 또는 [USE PLAN](../../t-sql/queries/hints-transact-sql-query.md#use-plan) 쿼리 힌트 등 모든 형식의 계획 강제에 적용할 수 있는 쿼리 계획 강제 적용에 최적화된 메커니즘을 활성화합니다. 기본값은 ON입니다.
 
@@ -345,7 +345,7 @@ ACCELERATED_PLAN_FORCING **=** { **ON** | OFF }
 
 GLOBAL_TEMPORARY_TABLE_AUTO_DROP **=** { **ON** | OFF }
 
-**적용 대상** : [!INCLUDE[ssSDSFull](../../includes/sssdsfull-md.md)](기능은 퍼블릭 미리 보기 상태임)
+**적용 대상**: [!INCLUDE[ssSDSFull](../../includes/sssdsfull-md.md)](기능은 퍼블릭 미리 보기 상태임)
 
 [전역 임시 테이블](../../t-sql/statements/create-table-transact-sql.md#temporary-tables)에 대한 자동 삭제 기능을 설정할 수 있습니다. 기본값은 ON입니다. 이는 전역 임시 테이블이 세션에서 사용되지 않을 때 자동으로 삭제됨을 의미합니다. OFF로 설정하면 DROP TABLE 문을 사용하여 전역 임시 테이블을 명시적으로 삭제하거나 서버를 다시 시작할 때 자동으로 삭제됩니다.
 
@@ -356,7 +356,7 @@ GLOBAL_TEMPORARY_TABLE_AUTO_DROP **=** { **ON** | OFF }
 
 LIGHTWEIGHT_QUERY_PROFILING **=** { **ON** | OFF}
 
-**적용 대상** : [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] ([!INCLUDE[sql-server-2019](../../includes/sssqlv15-md.md)]부터 시작) 및 [!INCLUDE[ssSDSfull](../../includes/sssdsfull-md.md)]
+**적용 대상**: [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] ([!INCLUDE[sql-server-2019](../../includes/sssqlv15-md.md)]부터 시작) 및 [!INCLUDE[ssSDSfull](../../includes/sssdsfull-md.md)]
 
 [간단한 쿼리 프로파일링 인프라](../../relational-databases/performance/query-profiling-infrastructure.md)를 활성화하거나 비활성화할 수 있습니다. LWP(간단한 쿼리 프로파일링 인프라)는 표준 프로파일링 매커니즘보다 쿼리 성능 데이터를 더 효율적으로 제공하며 기본적으로 활성화되어 있습니다.
 
@@ -364,7 +364,7 @@ LIGHTWEIGHT_QUERY_PROFILING **=** { **ON** | OFF}
 
 VERBOSE_TRUNCATION_WARNINGS **=** { **ON** | OFF}
 
-**적용 대상** : [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] ([!INCLUDE[sql-server-2019](../../includes/sssqlv15-md.md)]부터 시작) 및 [!INCLUDE[ssSDSfull](../../includes/sssdsfull-md.md)]
+**적용 대상**: [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] ([!INCLUDE[sql-server-2019](../../includes/sssqlv15-md.md)]부터 시작) 및 [!INCLUDE[ssSDSfull](../../includes/sssdsfull-md.md)]
 
 새 `String or binary data would be truncated` 오류 메시지를 사용하거나 사용하지 않도록 설정할 수 있습니다. [!INCLUDE[sql-server-2019](../../includes/sssqlv15-md.md)]에서는 이 시나리오에 대해 보다 구체적인 새 오류 메시지(2628)를 제공합니다.
 
@@ -376,15 +376,15 @@ VERBOSE_TRUNCATION_WARNINGS **=** { **ON** | OFF}
 
 데이터베이스 호환성 수준 140 이하의 경우 오류 메시지 2628은 [추적 플래그](../../t-sql/database-console-commands/dbcc-traceon-trace-flags-transact-sql.md) 460을 사용하도록 설정해야 하는 옵트인 오류 메지시로 남아 있으며, 이 데이터베이스 범위 구성에 영향을 주지 않습니다.
 
-LAST_QUERY_PLAN_STATS **=** { ON | **OFF** }
+LAST_QUERY_PLAN_STATS **=** { ON | **OFF**}
 
-**적용 대상** : [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]([!INCLUDE[sql-server-2019](../../includes/sssqlv15-md.md)]부터 시작)(기능은 공개 미리 보기 상태임)
+**적용 대상**: [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]([!INCLUDE[sql-server-2019](../../includes/sssqlv15-md.md)]부터 시작)(기능은 공개 미리 보기 상태임)
 
 [sys.dm_exec_query_plan_stats](../../relational-databases/system-dynamic-management-views/sys-dm-exec-query-plan-stats-transact-sql.md)에서 마지막 쿼리 계획 통계(실제 실행 계획과 동일)의 수집을 활성화하거나 비활성화할 수 있습니다.
 
 PAUSED_RESUMABLE_INDEX_ABORT_DURATION_MINUTES
 
-**적용 대상** : Azure SQL Database만 해당
+**적용 대상**: Azure SQL Database만 해당
 
 `PAUSED_RESUMABLE_INDEX_ABORT_DURATION_MINUTES` 옵션은 엔진에 의해 자동으로 중단되기 전에 다시 시작 가능한 인덱스가 일시 중지되는 시간(분)을 결정합니다.
 
@@ -395,15 +395,15 @@ PAUSED_RESUMABLE_INDEX_ABORT_DURATION_MINUTES
 
 이 옵션의 현재 값은 [database_scoped_configurations](../../relational-databases/system-catalog-views/sys-database-scoped-configurations-transact-sql.md)에 표시됩니다.
 
-ISOLATE_SECURITY_POLICY_CARDINALITY **=** { ON | **OFF** }
+ISOLATE_SECURITY_POLICY_CARDINALITY **=** { ON | **OFF**}
 
-**적용 대상** : [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] ([!INCLUDE[sql-server-2019](../../includes/sssqlv15-md.md)]부터 시작) 및 [!INCLUDE[ssSDSfull](../../includes/sssdsfull-md.md)]
+**적용 대상**: [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] ([!INCLUDE[sql-server-2019](../../includes/sssqlv15-md.md)]부터 시작) 및 [!INCLUDE[ssSDSfull](../../includes/sssdsfull-md.md)]
 
 RLS([행 수준 보안](../../relational-databases/security/row-level-security.md)) 조건자가 전체 사용자 쿼리 실행 계획의 카디널리티에 영향을 주는지 아닌지를 제어할 수 있습니다. ISOLATE_SECURITY_POLICY_CARDINALITY가 ON이면 RLS 조건자는 실행 계획의 카디널리티에 영향을 주지 않습니다. 예를 들어 쿼리를 실행하는 특정 사용자에 대해 결과를 10개 행으로 제한하는 RLS 조건자와 100만 개의 행이 포함된 테이블이 있다고 가정합니다. 이 데이터베이스 범위 구성을 OFF로 설정할 경우 이 조건자의 예상 카디널리티는 10이 됩니다. 이 데이터베이스 범위 구성이 ON이면 쿼리 최적화는 100만 개의 행을 추정합니다. 대부분의 워크로드에는 기본값을 사용하는 것이 좋습니다.
 
-DW_COMPATIBILITY_LEVEL **=** { **AUTO** | 10 | 20 }
+DW_COMPATIBILITY_LEVEL **=** {**AUTO** | 10 | 20 }
 
-**적용 대상** : Azure Synapse Analytics만(이전의 SQL DW)
+**적용 대상**: Azure Synapse Analytics에만 해당
 
 지정된 버전의 데이터베이스 엔진과 호환되도록 Transact-SQL 및 쿼리 처리 동작을 설정합니다.  설정하고 나면, 해당 데이터베이스에서 쿼리를 실행할 때 호환되는 기능만 실행됩니다.  처음 만들 때는 데이터베이스의 호환성 수준이 기본적으로 AUTO로 설정됩니다.  호환성 수준은 데이터베이스 일시 중지/다시 시작, 백업/복원 작업 후에도 유지됩니다. 
 
@@ -413,9 +413,9 @@ DW_COMPATIBILITY_LEVEL **=** { **AUTO** | 10 | 20 }
 |**10**| 호환성 수준 지원이 도입되기 전의 Transact-SQL 및 쿼리 처리 동작을 실행합니다.|
 |**20**| 제어된 Transact-SQL 및 쿼리 처리 동작을 포함하는 첫 번째 호환성 수준입니다. |
 
-ASYNC_STATS_UPDATE_WAIT_AT_LOW_PRIORITY **=** { ON | **OFF** }
+ASYNC_STATS_UPDATE_WAIT_AT_LOW_PRIORITY **=** { ON | **OFF**}
 
-**적용 대상** : Azure SQL Database만(공개 미리 보기로 제공되는 기능)
+**적용 대상**: Azure SQL Database만(공개 미리 보기로 제공되는 기능)
 
 비동기 통계 업데이트를 사용하는 경우 이 구성을 사용하도록 설정하면 백그라운드 통계 업데이트 요청이 낮은 우선 순위의 큐에 대한 Sch-M 잠금을 대기하여 높은 동시성 시나리오에서 다른 세션을 차단하지 않도록 합니다. 자세한 내용은 [AUTO_UPDATE_STATISTICS_ASYNC](../../relational-databases/statistics/statistics.md#auto_update_statistics_async)를 참조하세요.
 
@@ -559,7 +559,7 @@ ALTER DATABASE SCOPED CONFIGURATION CLEAR PROCEDURE_CACHE;
 
 ### <a name="g-set-identity_cache"></a>G. IDENTITY_CACHE 설정
 
-**적용 대상** : [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] ([!INCLUDE[ssSQL17](../../includes/sssql17-md.md)]부터 시작) 및 [!INCLUDE[ssSDSfull](../../includes/sssdsfull-md.md)](기능은 공개 미리 보기 상태)
+**적용 대상**: [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] ([!INCLUDE[ssSQL17](../../includes/sssql17-md.md)]부터 시작) 및 [!INCLUDE[ssSDSfull](../../includes/sssdsfull-md.md)](기능은 공개 미리 보기 상태)
 
 이 예제는 ID 캐시를 비활성화합니다.
 
@@ -569,7 +569,7 @@ ALTER DATABASE SCOPED CONFIGURATION SET IDENTITY_CACHE = OFF ;
 
 ### <a name="h-set-optimize_for_ad_hoc_workloads"></a>H. OPTIMIZE_FOR_AD_HOC_WORKLOADS 설정
 
-**적용 대상** : [!INCLUDE[ssSDSfull](../../includes/sssdsfull-md.md)]
+**적용 대상**: [!INCLUDE[ssSDSfull](../../includes/sssdsfull-md.md)]
 
 이 예제는 일괄 처리가 처음으로 컴파일될 때 캐시에 저장될 컴파일된 계획 스텁을 활성화합니다.
 
@@ -579,7 +579,7 @@ ALTER DATABASE SCOPED CONFIGURATION SET OPTIMIZE_FOR_AD_HOC_WORKLOADS = ON;
 
 ### <a name="i-set-elevate_online"></a>9\. ELEVATE_ONLINE 설정
 
-**적용 대상** : [!INCLUDE[ssSDSFull](../../includes/sssdsfull-md.md)](기능은 퍼블릭 미리 보기 상태임)
+**적용 대상**: [!INCLUDE[ssSDSFull](../../includes/sssdsfull-md.md)](기능은 퍼블릭 미리 보기 상태임)
 
 이 예에서는 ELEVATE_ONLINE을 FAIL_UNSUPPORTED로 설정합니다.
 
@@ -589,7 +589,7 @@ ALTER DATABASE SCOPED CONFIGURATION SET ELEVATE_ONLINE = FAIL_UNSUPPORTED ;
 
 ### <a name="j-set-elevate_resumable"></a>J. ELEVATE_RESUMABLE 설정
 
-**적용 대상** : [!INCLUDE[ssSDSfull](../../includes/sssdsfull-md.md)] 및 [!INCLUDE[ssNoVersion](../../includes/sssqlv15-md.md)](기능은 퍼블릭 미리 보기 상태임)
+**적용 대상**: [!INCLUDE[ssSDSfull](../../includes/sssdsfull-md.md)] 및 [!INCLUDE[ssNoVersion](../../includes/sssqlv15-md.md)](기능은 퍼블릭 미리 보기 상태임)
 
 이 예에서는 ELEVATE_RESUMABLE을 WHEN_SUPPORTED로 설정합니다.
 
@@ -599,7 +599,7 @@ ALTER DATABASE SCOPED CONFIGURATION SET ELEVATE_RESUMABLE = WHEN_SUPPORTED ;
 
 ### <a name="k-clear-a-query-plan-from-the-plan-cache"></a>11. 계획 캐시에서 쿼리 계획 지우기
 
-**적용 대상** : [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] ([!INCLUDE[ssSQL17](../../includes/sssql17-md.md)]부터 시작) 및 [!INCLUDE[ssSDSfull](../../includes/sssdsfull-md.md)]
+**적용 대상**: [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] ([!INCLUDE[ssSQL17](../../includes/sssql17-md.md)]부터 시작) 및 [!INCLUDE[ssSDSfull](../../includes/sssdsfull-md.md)]
 
 이 예에서는 프로시저 캐시에서 특정 계획을 지웁니다.
 
@@ -609,7 +609,7 @@ ALTER DATABASE SCOPED CONFIGURATION CLEAR PROCEDURE_CACHE 0x06000500F443610F003B
 
 ### <a name="l-set-paused-duration"></a>12. 일시 중지 기간 설정
 
-**적용 대상** : Azure SQL Database만 해당
+**적용 대상**: Azure SQL Database만 해당
 
 이 예제에서는 다시 시작 가능한 인덱스 일시 중지 기간을 60분으로 설정합니다.
 

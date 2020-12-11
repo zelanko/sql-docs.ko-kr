@@ -20,12 +20,12 @@ helpviewer_keywords:
 author: markingmyname
 ms.author: maghan
 monikerRange: '>=aps-pdw-2016||=azuresqldb-current||=azure-sqldw-latest||>=sql-server-2016||=sqlallproducts-allversions||>=sql-server-linux-2017||=azuresqldb-mi-current'
-ms.openlocfilehash: 05995a1205677bbeefbb2b025268af20e445a1b4
-ms.sourcegitcommit: ab68925e9869e6cf5b39efdb415ecc8e8f5b08fc
+ms.openlocfilehash: 7888360aa4d4bdfa9b9eb782226f718d8f503ff8
+ms.sourcegitcommit: 0c0e4ab90655dde3e34ebc08487493e621f25dda
 ms.translationtype: HT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 11/06/2020
-ms.locfileid: "93417424"
+ms.lasthandoff: 12/01/2020
+ms.locfileid: "96443099"
 ---
 # <a name="create-external-data-source-transact-sql"></a>CREATE EXTERNAL DATA SOURCE(Transact-SQL)
 
@@ -63,7 +63,7 @@ PolyBase 쿼리에 대한 외부 데이터 원본을 만듭니다. 외부 데이
 - [PolyBase][intro_pb]를 사용하여 데이터 가상화 및 데이터 로드
 - `BULK INSERT` 또는 `OPENROWSET`를 사용한 대량 로드 작업
 
-**적용 대상** : [!INCLUDE[ssSQL15](../../includes/sssql15-md.md)]로 시작
+**적용 대상**: [!INCLUDE[ssSQL15](../../includes/sssql15-md.md)]로 시작
 
 ## <a name="syntax"></a>구문
 
@@ -732,7 +732,7 @@ WITH
 
 자격 증명 생성 시 추가 참고 사항 및 지침:
 
-- Azure Storage 또는 ADLS(Azure Data Lake Store) Gen 2에서 SQL DW로 데이터를 로드하려면 Azure Storage 키를 사용합니다.
+- Azure Storage 또는 ADLS(Azure Data Lake Store) Gen 2에서 Azure Synapse Analytics로 데이터를 로드하려면 Azure Storage 키를 사용합니다.
 - `CREDENTIAL`은 데이터 보안이 설정된 경우에만 필요합니다. 익명 액세스를 허용하는 데이터 세트에는 `CREDENTIAL`이 필요하지 않습니다.
 
 데이터베이스 범위 지정 자격 증명을 만들려면 [CREATE DATABASE SCOPED CREDENTIAL(Transact-SQL)][create_dsc]을 참조하세요.

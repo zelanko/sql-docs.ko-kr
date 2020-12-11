@@ -1,7 +1,7 @@
 ---
 title: '외부 데이터 액세스: Azure Blob Storage - PolyBase'
 description: 이 문서에서는 SQL Server 인스턴스에 있는 PolyBase와 Azure Blob Storage를 사용합니다. PolyBase는 외부 테이블의 임시 쿼리와 데이터 가져오기/내보내기에 적합합니다.
-ms.date: 12/13/2019
+ms.date: 12/02/2020
 ms.prod: sql
 ms.technology: polybase
 ms.topic: conceptual
@@ -10,12 +10,12 @@ ms.author: mikeray
 ms.reviewer: ''
 monikerRange: '>= sql-server-2016 || =sqlallproducts-allversions'
 ms.custom: seo-dt-2019, seo-lt-2019
-ms.openlocfilehash: eb9e04b48a6eb6894e3ef8f8227d573443934ab4
-ms.sourcegitcommit: 58158eda0aa0d7f87f9d958ae349a14c0ba8a209
+ms.openlocfilehash: 6621d01c9cb52d528f2d3578a128f0abada22db0
+ms.sourcegitcommit: 7a3fdd3f282f634f7382790841d2c2a06c917011
 ms.translationtype: HT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 03/30/2020
-ms.locfileid: "80215876"
+ms.lasthandoff: 12/03/2020
+ms.locfileid: "96563109"
 ---
 # <a name="configure-polybase-to-access-external-data-in-azure-blob-storage"></a>Azure Blob Storage의 외부 데이터에 액세스하도록 PolyBase 구성
 
@@ -44,7 +44,7 @@ PolyBase를 설치하지 않은 경우 [PolyBase 설치](polybase-installation.m
    GO
    ```  
 
-2. **services.msc**를 사용하여 SQL Server를 다시 시작해야 합니다. SQL Server를 다시 시작하면 다음 서비스도 다시 시작됩니다.  
+2. **services.msc** 를 사용하여 SQL Server를 다시 시작합니다. SQL Server를 다시 시작하면 다음 서비스도 다시 시작됩니다.  
 
    - SQL Server PolyBase 데이터 이동 서비스  
    - SQL Server PolyBase 엔진  
@@ -55,7 +55,7 @@ PolyBase를 설치하지 않은 경우 [PolyBase 설치](polybase-installation.m
 
 Hadoop 데이터 원본에서 데이터를 쿼리하려면 Transact-SQL 쿼리에 사용할 외부 테이블을 정의해야 합니다. 다음 단계에서는 외부 테이블을 구성하는 방법을 설명합니다.
 
-1. 데이터베이스에 마스터 키를 만듭니다. 이 키는 자격 증명 비밀을 암호화하는 데 필요합니다.
+1. 데이터베이스에 마스터 키를 만듭니다. 마스터 키는 자격 증명 비밀을 암호화하는 데 필요합니다.
 
    ```sql
    CREATE MASTER KEY ENCRYPTION BY PASSWORD = 'S0me!nfo';  
@@ -127,7 +127,7 @@ Hadoop 데이터 원본에서 데이터를 쿼리하려면 Transact-SQL 쿼리�
 
 ### <a name="ad-hoc-queries"></a>임시 쿼리  
 
-다음 임시 쿼리는 Hadoop 데이터와 관계형으로 조인됩니다. 이 쿼리는 35mph보다 빠르게 주행하는 고객을 선택한 후 SQL Server에 저장된 구조화된 고객 데이터를 Hadoop에 저장된 차량 센서 데이터와 조인합니다.  
+다음 임시 쿼리는 Hadoop 데이터와 관계형으로 조인됩니다. 이 쿼리는 35mph보다 빠르게 주행하는 고객을 선택하고 SQL Server에 저장된 구조화된 고객 데이터를 Hadoop에 저장된 차량 센서 데이터와 조인합니다.  
 
 ```sql  
 SELECT DISTINCT Insured_Customers.FirstName,Insured_Customers.LastName,
@@ -158,7 +158,7 @@ CREATE CLUSTERED COLUMNSTORE INDEX CCI_FastCustomers ON Fast_Customers;
 
 ### <a name="exporting-data"></a>데이터 내보내기  
 
-다음 쿼리는 SQL Server의 데이터를 Azure Blob Storage로 내보냅니다. 이를 수행하려면 먼저 PolyBase 내보내기를 사용하도록 설정해야 합니다. 데이터를 내보내기 전에 대상의 외부 테이블을 만듭니다.
+다음 쿼리는 SQL Server의 데이터를 Azure Blob Storage로 내보냅니다. PolyBase 내보내기를 사용하도록 설정합니다. 그런 다음, 데이터를 내보내기 전에 대상의 외부 테이블을 만듭니다.
 
 ```sql
 -- Enable INSERT into external table  
@@ -187,9 +187,11 @@ ON (T1.CustomerKey = T2.CustomerKey)
 WHERE T2.YearMeasured = 2009 and T2.Speed > 40;  
 ```  
 
+이 방법을 사용하여 PolyBase 내보내기로 여러 파일을 만들 수 있습니다.
+
 ## <a name="view-polybase-objects-in-ssms"></a>SSMS에서 PolyBase 개체 보기  
 
-SSMS에서 외부 테이블은 별도 폴더인 **외부 테이블**에 표시됩니다. 외부 데이터 원본 및 외부 파일 형식은 **외부 리소스**의 하위 폴더에 있습니다.  
+SSMS에서 외부 테이블은 별도 폴더인 **외부 테이블** 에 표시됩니다. 외부 데이터 원본 및 외부 파일 형식은 **외부 리소스** 의 하위 폴더에 있습니다.  
   
 ![SSMS의 PolyBase 개체](media/polybase-management.png)  
 

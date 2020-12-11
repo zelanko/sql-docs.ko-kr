@@ -1,38 +1,31 @@
 ---
-description: Microsoft SQL Server에 대한 최신 업데이트
-title: Microsoft SQL Server에 대한 최신 업데이트
-TOCTitle: Latest updates for Microsoft SQL Server
-ms:assetid: 0d1835fd-2b44-47cf-8f90-305ca14b7823
-ms:mtpsurl: https://technet.microsoft.com/library/Ff803383(v=MSDN.10)
-ms:contentKeyID: 31804705
-ms.date: 09/02/2020
+description: Microsoft SQL Server 빌드 번호를 포함한 최신 누적 업데이트 및 서비스 팩 목록입니다.
+title: SQL Server에 대한 최신 업데이트
+ms.date: 11/30/2020
 ms.prod: sql
 ms.technology: install
 ms.topic: conceptual
 author: tmichael-ms
 ms.author: tmichael
 ms.reviewer: hristins
-mtps_version: v=MSDN.10
-ms.openlocfilehash: 52db4b0919294929c393348ac64f8e854fd394c3
-ms.sourcegitcommit: 2f868a77903c1f1c4cecf4ea1c181deee12d5b15
+ms.openlocfilehash: 148df97bf2c353e2cf12fe8f31ef2f85f6307b7d
+ms.sourcegitcommit: 0c0e4ab90655dde3e34ebc08487493e621f25dda
 ms.translationtype: HT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 10/02/2020
-ms.locfileid: "91670563"
+ms.lasthandoff: 12/01/2020
+ms.locfileid: "96443078"
 ---
 # <a name="latest-updates-for-microsoft-sql-server"></a>Microsoft SQL Server에 대한 최신 업데이트
 
-SQL Server 제품에 대해 한 곳에서 업데이트를 찾고 관리합니다. 업데이트 정보를 받고 업데이트를 다운로드하려면 [SQL Server 릴리스 블로그](https://aka.ms/sqlreleases)를 팔로우합니다.
+[!INCLUDE [sqlserver](../../includes/applies-to-version/sqlserver.md)]
 
-이 페이지에서는 지원되는 모든 버전의 SQL Server에 대한 최신 업데이트를 추적합니다. 
+이 문서에서는 SQL Server 제품에 대한 최신 업데이트를 나열합니다. 업데이트 정보를 받고 업데이트를 다운로드하려면 [SQL Server 릴리스 블로그](https://aka.ms/sqlreleases)를 팔로우합니다.
 
-이전 업데이트에 대한 자세한 내용은 [SQL Server 빌드 블로그](https://sqlserverbuilds.blogspot.com/)를 참조하세요. 
-
-지원되는 제품에 대한 자세한 정보는 [Microsoft 제품 수명 주기 페이지](https://support.microsoft.com/lifecycle/)를 참조하세요. 
+지원되는 제품에 대한 자세한 정보는 [Microsoft 제품 수명 주기 페이지](/lifecycle/products/?terms=sql)를 참조하세요.
 
 ## <a name="latest-updates"></a>최신 업데이트
 
-다음 링크는 각각 이 페이지의 **적용 대상** 섹션에 나열된 모든 제품 및 기술에 대한 정보를 제공합니다.
+다음 링크는 각각 모든 제품 및 기술에 대한 정보를 제공합니다.
 
 |제품 버전   | 최신 서비스 팩 |  최신 GDR | 최신 누적 업데이트 | CU 릴리스 날짜 | 일반 지침  |
 |--|--|--|--|--|--|
@@ -53,25 +46,21 @@ SQL Server 제품에 대해 한 곳에서 업데이트를 찾고 관리합니다
 |SQL Server 2008 R2 |SP2[(KB 2630458)](https://support.microsoft.com/kb/2630458)|[MS 15-058](/security-updates/SecurityBulletins/2015/ms15-058)|CU 13[(KB 2967540)](https://support.microsoft.com/kb/2967540)|2014/6/30|[SQL Server 2008 R2 SP2 설치](https://www.microsoft.com/download/details.aspx?id=30437)|
 |SQL Server 2008 |SP4[(KB 2979596)](https://support.microsoft.com/kb/2979596)|[4057114](https://support.microsoft.com/help/4057114/security-update-for-vulnerabilities-in-sql-server)|해당 없음|해당 없음|[SQL Server 2008 서비스](/previous-versions/sql/sql-server-2008/dd638062(v=sql.100))|
 |SQL Server 2008|SP3[(KB 2546951)](https://support.microsoft.com/kb/2546951)|[MS 15-058](/security-updates/SecurityBulletins/2015/ms15-058)|CU 17[(KB 2958696)](https://support.microsoft.com/kb/2958696)|2014/5/19|[SQL Server 2008 서비스](/previous-versions/sql/sql-server-2008/dd638062(v=sql.100))|
-|SQL Server 2005 |SP4[(KB 2463332)](https://support.microsoft.com/kb/2463332)|해당 없음|해당 없음|해당 없음|[SQL Server 2005 설치](/previous-versions/sql/sql-server-2005/ms143516(v=sql.90))|
-|SQL Server 2000|SP4[(KB 290211)](https://support.microsoft.com/kb/290211)|해당 없음|해당 없음|해당 없음|[SQL Server 2000 설치](https://technet.microsoft.com/library/aa197941(sql.80).aspx)|
 
-**업데이트를 테스트하는 방법에 대해 알아봅니다.**  [Testing and Developing Supportability Roadmaps for ISV Applications(PDF)](https://msdnshared.blob.core.windows.net/media/TNBlogsFS/prod.evol.blogs.technet.com/CommunityServer.Blogs.Components.WeblogFiles/00/00/00/85/48/Files/0827.Testing%20And%20Developing%20Supportability%20Roadmaps%20for%20ISV%20Applications.pdf)
+**업데이트를 테스트하는 방법:** [Testing and Developing Supportability Roadmaps for ISV Applications (PDF)](https://msdnshared.blob.core.windows.net/media/TNBlogsFS/prod.evol.blogs.technet.com/CommunityServer.Blogs.Components.WeblogFiles/00/00/00/85/48/Files/0827.Testing%20And%20Developing%20Supportability%20Roadmaps%20for%20ISV%20Applications.pdf)
 
 [!INCLUDE [sql-server-servicing-updates-version-15](../../includes/sql-server-servicing-updates-version-15.md)]
 
-### <a name="knowledge-base"></a>기술 자료
+## <a name="knowledge-base"></a>기술 자료
 
-  - KB 935897: [보고된 문제에 대한 핫픽스를 제공하는 증분 서비스 모델을 SQL Server 팀에서 사용 가능](https://support.microsoft.com/kb/935897)
-  - KB 824684: [Microsoft 소프트웨어 업데이트를 설명하는 데 사용되는 표준 용어에 대한 설명](https://support.microsoft.com/kb/824684)
-  - KB 822499: [Microsoft SQL Server 소프트웨어 업데이트 패키지에 대한 명명 스키마](https://support.microsoft.com/kb/822499)
-  - KB 321185: [SQL Server 및 구성 요소의 버전 및 에디션 확인 방법](https://support.microsoft.com/kb/321185)
+- KB 935897: [보고된 문제에 대한 핫픽스를 제공하는 증분 서비스 모델을 SQL Server 팀에서 사용 가능](https://support.microsoft.com/kb/935897)
+- KB 824684: [Microsoft 소프트웨어 업데이트를 설명하는 데 사용되는 표준 용어에 대한 설명](https://support.microsoft.com/kb/824684)
+- KB 822499: [Microsoft SQL Server 소프트웨어 업데이트 패키지에 대한 명명 스키마](https://support.microsoft.com/kb/822499)
+- KB 321185: [SQL Server 및 구성 요소의 버전 및 에디션 확인 방법](https://support.microsoft.com/kb/321185)
 
-### <a name="additional-resources"></a>추가 리소스
+## <a name="additional-resources"></a>추가 리소스
 
-  - [SQL 고객 자문 팀 사이트](/archive/blogs/sqlcat/)
-  - [SQL Server DevCenter](../../sql-server/index.yml)
-  - [SQL Server TechCenter](../../sql-server/index.yml)
-  - [SQL Server 제품 정보 센터](https://www.microsoft.com/sqlserver/default.aspx)
-  - [SQL Server 빌드 블로그](https://sqlserverbuilds.blogspot.com/)
-  - [SQL Server 릴리스 블로그](https://aka.ms/sqlreleases)
+- [SQL Server 설명서](../../sql-server/index.yml)
+- [SQL Server 제품 정보 센터](https://www.microsoft.com/sqlserver/default.aspx)
+- [SQL Server 릴리스 블로그](https://aka.ms/sqlreleases)
+- [버전, 에디션, SQL Server 및 해당 구성 요소의 업데이트 수준을 확인하는 방법](https://support.microsoft.com/help/321185/how-to-determine-the-version-edition-and-update-level-of-sql-server-an)

@@ -28,12 +28,12 @@ helpviewer_keywords:
 ms.assetid: 72bb62ee-9602-4f71-be51-c466c1670878
 author: stevestein
 ms.author: sstein
-ms.openlocfilehash: c9edfd5b460a6a6b80900e1beced674b80bfce93
-ms.sourcegitcommit: cfa04a73b26312bf18d8f6296891679166e2754d
+ms.openlocfilehash: a72ccacd9401a8b7955eae10751c5ac67ca211ac
+ms.sourcegitcommit: eeb30d9ac19d3ede8d07bfdb5d47f33c6c80a28f
 ms.translationtype: HT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 10/19/2020
-ms.locfileid: "92195020"
+ms.lasthandoff: 12/02/2020
+ms.locfileid: "96523065"
 ---
 # <a name="move-system-databases"></a>시스템 데이터베이스 이동
  [!INCLUDE [SQL Server](../../includes/applies-to-version/sqlserver.md)]
@@ -54,7 +54,7 @@ ms.locfileid: "92195020"
 >  시스템 데이터베이스를 이동한 다음 나중에 master 데이터베이스를 다시 작성하는 경우 다시 작성 작업에서 모든 시스템 데이터베이스를 기본 위치에 설치하기 때문에 시스템 데이터베이스를 다시 이동해야 합니다.  
 
 > [!IMPORTANT]  
->  파일을 이동하고 나면 [!INCLUDE[ssNoVersion_md](../../includes/ssnoversion-md.md)] 서비스 계정에 새 파일 폴더 위치에서 파일에 액세스할 수 있는 권한이 있어야 합니다.
+>  파일을 이동하고 나면 [!INCLUDE[ssNoVersion_md](../../includes/ssnoversion-md.md)] 서비스 계정에 새 파일 폴더 위치에 있는 파일에 액세스할 수 있는 권한이 있어야 합니다. 자세한 내용은 [데이터베이스 엔진 액세스에 대한 파일 시스템 사용 권한 구성](../../database-engine/configure-windows/configure-file-system-permissions-for-database-engine-access.md)을 참조하십시오.
     
   
 ##  <a name="planned-relocation-and-scheduled-disk-maintenance-procedure"></a><a name="Planned"></a> 계획된 재배치 및 예약된 디스크 유지 관리 절차  
@@ -145,9 +145,9 @@ ms.locfileid: "92195020"
 ##  <a name="moving-the-master-database"></a><a name="master"></a> master 데이터베이스 이동  
  master 데이터베이스를 이동하려면 다음 단계를 수행합니다.  
   
-1.  **시작** 메뉴에서 **모든 프로그램**, **Microsoft SQL Server**, **구성 도구**를 차례로 가리킨 다음 **SQL Server 구성 관리자**를 클릭합니다.  
+1.  **시작** 메뉴에서 **모든 프로그램**, **Microsoft SQL Server**, **구성 도구** 를 차례로 가리킨 다음 **SQL Server 구성 관리자** 를 클릭합니다.  
   
-2.  **SQL Server 서비스** 노드에서 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 인스턴스(예: **SQL Server(MSSQLSERVER)** )를 마우스 오른쪽 단추로 클릭한 다음 **속성**을 선택합니다.  
+2.  **SQL Server 서비스** 노드에서 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 인스턴스(예: **SQL Server(MSSQLSERVER)** )를 마우스 오른쪽 단추로 클릭한 다음 **속성** 을 선택합니다.  
   
 3.  **SQL Server(** _instance_name_ **) 속성** 대화 상자에서 **시작 매개 변수** 탭을 클릭합니다.  
   
@@ -171,7 +171,7 @@ ms.locfileid: "92195020"
   
      `-lE:\SQLData\mastlog.ldf`  
   
-6.  인스턴스 이름을 마우스 오른쪽 단추로 클릭하고 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 중지 **를 선택하여**인스턴스를 중지합니다.  
+6.  인스턴스 이름을 마우스 오른쪽 단추로 클릭하고 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 중지 **를 선택하여** 인스턴스를 중지합니다.  
   
 7.  master.mdf 및 mastlog.ldf 파일을 새 위치로 이동합니다.  
   
@@ -201,19 +201,19 @@ ms.locfileid: "92195020"
   
 #### <a name="change-the-sql-server-agent-log-path"></a>SQL Server 에이전트 로그 경로를 변경합니다.  
   
-1.  SQL Server Management Studio의 개체 탐색기에서 **SQL Server 에이전트**를 확장합니다.  
+1.  SQL Server Management Studio의 개체 탐색기에서 **SQL Server 에이전트** 를 확장합니다.  
   
-2.  **오류 로그** 를 마우스 오른쪽 단추로 클릭한 다음 **구성**을 클릭합니다.  
+2.  **오류 로그** 를 마우스 오른쪽 단추로 클릭한 다음 **구성** 을 클릭합니다.  
   
 3.  **SQL Server 에이전트 오류 로그 구성** 대화 상자에서 SQLAGENT.OUT 파일의 새 위치를 지정합니다. 기본 위치는 C:\Program Files\Microsoft SQL Server\MSSQL\<version>.<instance_name>\MSSQL\Log\\입니다.  
   
 #### <a name="change-the-database-default-location"></a>데이터베이스 기본 위치 변경  
   
-1.  SQL Server Management Studio의 개체 탐색기에서 SQL Server 서비스를 마우스 오른쪽 단추로 클릭한 다음 **속성**을 클릭합니다.  
+1.  SQL Server Management Studio의 개체 탐색기에서 SQL Server 서비스를 마우스 오른쪽 단추로 클릭한 다음 **속성** 을 클릭합니다.  
   
-2.  **서버 속성** 대화 상자에서 **데이터베이스 설정**을 선택합니다.  
+2.  **서버 속성** 대화 상자에서 **데이터베이스 설정** 을 선택합니다.  
   
-3.  **데이터베이스 기본 위치**에서 데이터 및 로그 파일의 새 위치를 찾습니다.  
+3.  **데이터베이스 기본 위치** 에서 데이터 및 로그 파일의 새 위치를 찾습니다.  
   
 4.  변경을 완료하려면 SQL Server 서비스를 중지한 후 시작합니다.  
   

@@ -21,12 +21,12 @@ ms.assetid: 8a9e0ffb-28b5-4640-95b2-a54e3e5ad941
 author: markingmyname
 ms.author: maghan
 monikerRange: '>=aps-pdw-2016||=azuresqldb-current||=azure-sqldw-latest||>=sql-server-2016||=sqlallproducts-allversions||>=sql-server-linux-2017||=azuresqldb-mi-current'
-ms.openlocfilehash: d282a1dca21d2b76925c12dddf3002d159aaec64
-ms.sourcegitcommit: cc23d8646041336d119b74bf239a6ac305ff3d31
+ms.openlocfilehash: f7911d4f096c8b90b2ee01341405acd561c46ec9
+ms.sourcegitcommit: 0c0e4ab90655dde3e34ebc08487493e621f25dda
 ms.translationtype: HT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 09/23/2020
-ms.locfileid: "91116526"
+ms.lasthandoff: 12/01/2020
+ms.locfileid: "96443125"
 ---
 # <a name="databasepropertyex-transact-sql"></a>DATABASEPROPERTYEX(Transact-SQL)
 [!INCLUDE [sql-asdb-asdbmi-asa-pdw](../../includes/applies-to-version/sql-asdb-asdbmi-asa-pdw.md)]
@@ -45,12 +45,12 @@ DATABASEPROPERTYEX ( database , property )
 
 ## <a name="arguments"></a>인수
 *database*  
-`DATABASEPROPERTYEX`에서 명명된 속성 정보를 반환할 데이터베이스의 이름을 나타내는 식입니다. *database*에는 **nvarchar(128)** 데이터 형식이 있습니다.  
+`DATABASEPROPERTYEX`에서 명명된 속성 정보를 반환할 데이터베이스의 이름을 나타내는 식입니다. *database* 에는 **nvarchar(128)** 데이터 형식이 있습니다.  
 
 [!INCLUDE[ssSDS](../../includes/sssds-md.md)]에서는 `DATABASEPROPERTYEX`에 현재 데이터베이스의 이름을 반환합니다. 다른 데이터베이스 이름을 제공하는 경우 모든 속성에 대해 NULL을 반환합니다.
   
 *property*  
-반환할 데이터베이스 속성의 이름을 나타내는 식입니다. *property*에는 **varchar(128)** 데이터 형식이 있고, 이 표의 값 중 하나가 지원됩니다.
+반환할 데이터베이스 속성의 이름을 나타내는 식입니다. *property* 에는 **varchar(128)** 데이터 형식이 있고, 이 표의 값 중 하나가 지원됩니다.
   
 > [!NOTE]  
 >  데이터베이스가 아직 시작되지 않은 경우 `DATABASEPROPERTYEX`가 메타데이터에서 검색하는 대신 직접 데이터베이스 액세스를 통해 이러한 값을 검색할 경우 `DATABASEPROPERTYEX`에서 NULL을 반환합니다. AUTO_CLOSE가 ON으로 설정되어 있거나 오프라인 상태인 데이터베이스는 '시작되지 않은 것'으로 간주됩니다.  
@@ -90,12 +90,12 @@ DATABASEPROPERTYEX ( database , property )
 |IsXTPSupported|데이터베이스가 In-Memory OLTP, 즉, 메모리 최적화 테이블과 고유하게 컴파일된 모듈을 만들고 사용하는 것을 지원하는지 여부를 나타냅니다.<br /><br /> [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]에만 해당 :<br /><br /> IsXTPSupported는 In-Memory OLTP 개체를 만드는 데 필요한 MEMORY_OPTIMIZED_DATA 파일 그룹의 존재 여부와 관계가 없습니다.|**적용 대상**: [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]([!INCLUDE[ssSQL15](../../includes/sssql15-md.md)] 이상) 및 [!INCLUDE[ssSDSfull](../../includes/sssdsfull-md.md)].<br /><br /> 1: TRUE<br /><br /> 0: FALSE<br /><br /> NULL: 입력이 유효하지 않거나, 오류이거나, 적용 가능하지 않음<br /><br /> 기본 데이터 형식: **int**|  
 |LastGoodCheckDbTime|지정된 데이터베이스에서 성공적으로 실행된 마지막 DBCC CHECKDB의 시간 및 날짜입니다.<sup>1</sup> DBCC CHECKDB가 데이터베이스에서 실행되지 않은 경우 1900-01-01 00:00:00.000이 반환됩니다.|**적용 대상**: [!INCLUDE[ssSQL15](../../includes/sssql15-md.md)] SP2부터</br>[!INCLUDE[sssqlv14](../../includes/sssqlv14-md.md)] CU9부터</br>[!INCLUDE[sssqlv15](../../includes/sssqlv15-md.md)] 이상</br>Azure SQL Database.<br/><br/>datetime 값<br /><br /> NULL: 잘못된 입력<br /><br /> 기본 데이터 형식: **datetime**| 
 |LCID|데이터 정렬의 Windows LCID(로캘 ID)입니다.|LCID 값(10진수 형식)입니다.<br /><br /> 기본 데이터 형식: **int**|  
-|MaxSizeInBytes|최대 데이터베이스 크기(바이트)입니다.|**적용 대상**: [!INCLUDE[ssSDSfull](../../includes/sssdsfull-md.md)], [!INCLUDE[ssSDW](../../includes/sssdw-md.md)]<br /><br />[Azure SQL Database 및 Azure Synapse Analytics(SQL DW)](/azure/sql-database/sql-database-single-database-scale#dtu-based-purchasing-model) – 추가 스토리지를 구매하지 않으면 값은 SLO를 기반으로 합니다.<br /><br />[vCore](/azure/sql-database/sql-database-single-database-scale#vcore-based-purchasing-model) – 값은 최대 크기까지 1GB씩 증가합니다.<br /><br />NULL: 데이터베이스가 시작되지 않음<br /><br /> 기본 데이터 형식: **bigint**|  
+|MaxSizeInBytes|최대 데이터베이스 크기(바이트)입니다.|**적용 대상**: [!INCLUDE[ssSDSfull](../../includes/sssdsfull-md.md)], [!INCLUDE[ssSDW](../../includes/sssdw-md.md)]<br /><br />[Azure SQL Database 및 Azure Synapse Analytics](/azure/sql-database/sql-database-single-database-scale#dtu-based-purchasing-model) – 추가 스토리지를 구매하지 않으면 값은 SLO를 기반으로 합니다.<br /><br />[vCore](/azure/sql-database/sql-database-single-database-scale#vcore-based-purchasing-model) – 값은 최대 크기까지 1GB씩 증가합니다.<br /><br />NULL: 데이터베이스가 시작되지 않음<br /><br /> 기본 데이터 형식: **bigint**|  
 |복구|데이터베이스 복구 모델|FULL: 전체 복구 모델<br /><br /> BULK_LOGGED: 대량 로그 모델<br /><br /> SIMPLE: 단순 복구 모델<br /><br /> 기본 데이터 형식: **nvarchar(128)**|  
 |ServiceObjective|[!INCLUDE[sqldbesa](../../includes/sqldbesa-md.md)] 또는 [!INCLUDE[ssSDW](../../includes/sssdw-md.md)]의 데이터베이스 성능 수준을 설명합니다.|다음 중 하나<br /><br /> Null: 데이터베이스가 시작되지 않았습니다.<br /><br /> 공유(Web/Business 버전)<br /><br /> Basic<br /><br /> S0<br /><br /> S1<br /><br /> S2<br /><br /> S3<br /><br /> P1<br /><br /> P2<br /><br /> P3<br /><br /> ElasticPool<br /><br /> 시스템(master DB용)<br /><br /> 기본 데이터 형식: **nvarchar(32)**|  
-|ServiceObjectiveId|[!INCLUDE[sqldbesa](../../includes/sqldbesa-md.md)]의 서비스 목표 ID입니다.|서비스 목표를 식별하는 **uniqueidentifier**입니다.|  
+|ServiceObjectiveId|[!INCLUDE[sqldbesa](../../includes/sqldbesa-md.md)]의 서비스 목표 ID입니다.|서비스 목표를 식별하는 **uniqueidentifier** 입니다.|  
 |SQLSortOrder|이전 버전의 SQL Server에서 지원하는 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 정렬 순서 ID입니다.|0: 데이터베이스가 Windows 데이터 정렬을 사용함<br /><br /> >0: [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 정렬 순서 ID<br /><br /> NULL: 입력이 잘못되었거나 데이터베이스가 시작되지 않음<br /><br /> 기본 데이터 형식: **tinyint**|  
-|상태|데이터베이스 상태입니다.|ONLINE: 쿼리에서 데이터베이스를 제공합니다.<br /><br /> **참고:** 데이터베이스가 열려 있고 아직 복구되지 않았을 때는 함수가 ONLINE 상태를 반환할 수 있습니다. ONLINE 데이터베이스가 연결을 허용할 수 있는지 파악하려면 **DATABASEPROPERTYEX**의 데이터 정렬 속성을 쿼리합니다. 데이터베이스 데이터 정렬이 null이 아닌 값을 반환하면 ONLINE 데이터베이스가 연결을 허용할 수 있습니다. Always On 데이터베이스의 경우 `sys.dm_hadr_database_replica_states`의 database_state 또는 database_state_desc 열을 쿼리합니다.<br /><br /> OFFLINE: 데이터베이스가 명시적으로 오프라인 상태입니다.<br /><br /> RESTORING: 데이터베이스 복원이 시작되었습니다.<br /><br /> RECOVERING: 데이터베이스 복구가 시작되었고 데이터베이스가 아직 쿼리에 대해 준비되지 않았습니다.<br /><br /> SUSPECT: 데이터베이스가 복구되지 않았습니다.<br /><br /> EMERGENCY: 데이터베이스가 응급 읽기 전용 상태입니다. sysadmin 멤버만 액세스할 수 있습니다.<br /><br /> 기본 데이터 형식: **nvarchar(128)**|  
+|상태|데이터베이스 상태입니다.|ONLINE: 쿼리에서 데이터베이스를 제공합니다.<br /><br /> **참고:** 데이터베이스가 열려 있고 아직 복구되지 않았을 때는 함수가 ONLINE 상태를 반환할 수 있습니다. ONLINE 데이터베이스가 연결을 허용할 수 있는지 파악하려면 **DATABASEPROPERTYEX** 의 데이터 정렬 속성을 쿼리합니다. 데이터베이스 데이터 정렬이 null이 아닌 값을 반환하면 ONLINE 데이터베이스가 연결을 허용할 수 있습니다. Always On 데이터베이스의 경우 `sys.dm_hadr_database_replica_states`의 database_state 또는 database_state_desc 열을 쿼리합니다.<br /><br /> OFFLINE: 데이터베이스가 명시적으로 오프라인 상태입니다.<br /><br /> RESTORING: 데이터베이스 복원이 시작되었습니다.<br /><br /> RECOVERING: 데이터베이스 복구가 시작되었고 데이터베이스가 아직 쿼리에 대해 준비되지 않았습니다.<br /><br /> SUSPECT: 데이터베이스가 복구되지 않았습니다.<br /><br /> EMERGENCY: 데이터베이스가 응급 읽기 전용 상태입니다. sysadmin 멤버만 액세스할 수 있습니다.<br /><br /> 기본 데이터 형식: **nvarchar(128)**|  
 |Updateability|데이터 수정 가능 여부를 나타냅니다.|READ_ONLY: 데이터베이스가 데이터 읽기를 지원하지만 데이터 수정은 지원하지 않습니다.<br /><br /> READ_WRITE: 데이터베이스가 데이터 읽기 및 수정을 지원합니다.<br /><br /> 기본 데이터 형식: **nvarchar(128)**|  
 |UserAccess|데이터베이스에 액세스할 수 있는 사용자를 나타냅니다.|SINGLE_USER: 한 번에 한 명의 db_owner, dbcreator 또는 sysadmin 사용자만 액세스할 수 있습니다.<br /><br /> RESTRICTED_USER: db_owner, dbcreator 또는 sysadmin 역할의 멤버만 액세스할 수 있습니다.<br /><br /> MULTI_USER: 모든 사용자가 액세스할 수 있습니다.<br /><br /> 기본 데이터 형식: **nvarchar(128)**|  
 |버전|데이터베이스가 만들어진 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 코드의 내부 버전 번호입니다. [!INCLUDE[ssInternalOnly](../../includes/ssinternalonly-md.md)]|버전 번호: 데이터베이스가 열려 있습니다.<br /><br /> NULL: 데이터베이스가 시작되지 않았습니다.<br /><br /> 기본 데이터 형식: **int**| 

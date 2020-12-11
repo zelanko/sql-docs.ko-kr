@@ -18,18 +18,18 @@ ms.author: vanto
 ms.reviewer: ''
 ms.custom: ''
 ms.date: 06/10/2020
-ms.openlocfilehash: 0f0ed0ee3619abae19df06879fbfd1d60b22a0b0
-ms.sourcegitcommit: ac9feb0b10847b369b77f3c03f8200c86ee4f4e0
+ms.openlocfilehash: 1202cb470530941b23c3e0a742ea9a1715170784
+ms.sourcegitcommit: eeb30d9ac19d3ede8d07bfdb5d47f33c6c80a28f
 ms.translationtype: HT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 09/16/2020
-ms.locfileid: "90688428"
+ms.lasthandoff: 12/02/2020
+ms.locfileid: "96523079"
 ---
 # <a name="add-signature-transact-sql"></a>ADD SIGNATURE(Transact-SQL)
 
 [!INCLUDE [SQL Server SQL Database](../../includes/applies-to-version/sql-asdb.md)]
 
-저장 프로시저, 함수, 어셈블리 또는 트리거에 디지털 서명을 추가하고 연대 서명도 추가합니다.
+저장 프로시저, 함수, 어셈블리 또는 DML 트리거에 디지털 서명을 추가하고 연대 서명도 추가합니다.
 
 ![항목 링크 아이콘](../../database-engine/configure-windows/media/topic-link.gif "항목 링크 아이콘") [Transact-SQL 구문 표기 규칙](../../t-sql/language-elements/transact-sql-syntax-conventions-transact-sql.md)  
 
@@ -65,7 +65,7 @@ ADD [ COUNTER ] SIGNATURE TO module_class::module_name
  인증서의 프라이빗 키나 비대칭 키의 암호를 해독하는 데 필요한 암호입니다. 이 절은 프라이빗 키가 데이터베이스 마스터 키로 보호되지 않는 경우에만 필요합니다.  
   
  SIGNATURE =*signed_blob*  
- 모듈의 서명된 BLOB(Binary Large Object)를 지정합니다. 이 절은 프라이빗 키를 포함하지 않고 모듈을 제공하려는 경우 유용합니다. 이 절을 사용할 때는 모듈, 서명 및 공개 키만 있으면 서명된 BLOB(Binary Large Object)을 데이터베이스에 추가할 수 있습니다. *signed_blob*은 16진수 형식의 BLOB 자체입니다.  
+ 모듈의 서명된 BLOB(Binary Large Object)를 지정합니다. 이 절은 프라이빗 키를 포함하지 않고 모듈을 제공하려는 경우 유용합니다. 이 절을 사용할 때는 모듈, 서명 및 공개 키만 있으면 서명된 BLOB(Binary Large Object)을 데이터베이스에 추가할 수 있습니다. *signed_blob* 은 16진수 형식의 BLOB 자체입니다.  
   
  ASYMMETRIC KEY *Asym_Key_Name*  
  저장 프로시저, 함수, 어셈블리 또는 트리거에 서명하거나 연대 서명하는 데 사용할 비대칭 키의 이름입니다.  
@@ -83,7 +83,7 @@ ADD [ COUNTER ] SIGNATURE TO module_class::module_name
 > [!CAUTION]
 > 모듈 서명은 사용 권한을 부여하는 용도로만 사용해야 하며 사용 권한을 거부하거나 취소하는 용도로 사용하면 안 됩니다.  
   
- 인라인 테이블 반환 함수에 서명할 수 없습니다.  
+ DDL(데이터 정의 언어)는 트리거 및 인라인 테이블 반환 함수는 서명될 수 없습니다.  
   
  서명 정보는 sys.crypt_properties 카탈로그 뷰에 표시됩니다.  
   

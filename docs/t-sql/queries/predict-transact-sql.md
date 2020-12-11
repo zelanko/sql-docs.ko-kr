@@ -19,12 +19,12 @@ helpviewer_keywords:
 author: dphansen
 ms.author: davidph
 monikerRange: '>=sql-server-2017||=azuresqldb-current||>=sql-server-linux-2017||=azuresqldb-mi-current||>=azure-sqldw-latest||=sqlallproducts-allversions'
-ms.openlocfilehash: 6a21506caf12537eb8acab96c97fa53c62b7fadf
-ms.sourcegitcommit: cc23d8646041336d119b74bf239a6ac305ff3d31
+ms.openlocfilehash: ff521b8cf230bcb2113937ee6c223b55c61be02a
+ms.sourcegitcommit: eeb30d9ac19d3ede8d07bfdb5d47f33c6c80a28f
 ms.translationtype: HT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 09/23/2020
-ms.locfileid: "91116278"
+ms.lasthandoff: 12/02/2020
+ms.locfileid: "96523052"
 ---
 # <a name="predict-transact-sql"></a>PREDICT(Transact-SQL)
 
@@ -120,9 +120,9 @@ DATA 매개 변수를 사용하여 점수 매기기 또는 예측에 사용되�
 **RUNTIME = ONNX**
 
 > [!IMPORTANT]
-> `RUNTIME = ONNX` 인수는 [Azure SQL Managed Instance](/azure/azure-sql/managed-instance/machine-learning-services-overview) 및 [Azure SQL Edge](/azure/sql-database-edge/onnx-overview)에서만 사용할 수 있습니다.
+> `RUNTIME = ONNX` 인수는 [Azure SQL Managed Instance](/azure/azure-sql/managed-instance/machine-learning-services-overview), [Azure SQL Edge](/azure/sql-database-edge/onnx-overview) 및 [Azure Synapse Analytics](/azure/synapse-analytics/overview-what-is)에서만 사용할 수 있습니다.
 
-모델 실행에 사용되는 기계 학습 엔진을 나타냅니다. `RUNTIME` 매개 변수 값은 항상 `ONNX`입니다. 이 매개 변수는 Azure SQL Edge에 필요합니다. Azure SQL Managed Instance에서 이 매개 변수는 선택 사항이며 ONNX 모델을 사용할 때만 사용됩니다.
+모델 실행에 사용되는 기계 학습 엔진을 나타냅니다. `RUNTIME` 매개 변수 값은 항상 `ONNX`입니다. 이 매개 변수는 Azure SQL Edge 및 Azure Synapse Analytics에 필요합니다. Azure SQL Managed Instance에서 이 매개 변수는 선택 사항이며 ONNX 모델을 사용할 때만 사용됩니다.
 
 **WITH ( <result_set_definition> )**
 
@@ -186,16 +186,16 @@ DECLARE @model VARBINARY(max) = (SELECT test_model FROM scoring_model WHERE mode
 
 SELECT d.*, p.Score
 FROM PREDICT(MODEL = @model,
-    DATA = dbo.mytable AS d) WITH (Score FLOAT) AS p;
+    DATA = dbo.mytable AS d, RUNTIME = ONNX) WITH (Score FLOAT) AS p;
 ```
 
 ::: moniker-end
 
-`DATA` 매개 변수에서 테이블 원본에 대해 지정된 별칭 **d**는 `dbo.mytable`에 속하는 열을 참조하는 데 사용됩니다. `PREDICT` 함수에 대해 지정된 별칭 **p**는 `PREDICT` 함수에서 반환한 열을 참조하는 데 사용됩니다.
+`DATA` 매개 변수에서 테이블 원본에 대해 지정된 별칭 **d** 는 `dbo.mytable`에 속하는 열을 참조하는 데 사용됩니다. `PREDICT` 함수에 대해 지정된 별칭 **p** 는 `PREDICT` 함수에서 반환한 열을 참조하는 데 사용됩니다.
 
-- 모델은 테이블 호출 **모델**에서 `varbinary(max)` 열로 저장됩니다. **ID** 및 **설명** 같은 추가 정보가 테이블에 저장되어 모델을 식별합니다.
-- `DATA` 매개 변수에서 테이블 원본에 대해 지정된 별칭 **d**는 `dbo.mytable`에 속하는 열을 참조하는 데 사용됩니다. 입력 데이터 열 이름은 모델의 입력 이름과 일치해야 합니다.
-- `PREDICT` 함수에 대해 지정된 별칭 **p**는 `PREDICT` 함수에서 반환한 예측 열을 참조하는 데 사용됩니다. 열 이름에는 모델의 출력 이름과 같은 이름을 지정해야 합니다.
+- 모델은 테이블 호출 **모델** 에서 `varbinary(max)` 열로 저장됩니다. **ID** 및 **설명** 같은 추가 정보가 테이블에 저장되어 모델을 식별합니다.
+- `DATA` 매개 변수에서 테이블 원본에 대해 지정된 별칭 **d** 는 `dbo.mytable`에 속하는 열을 참조하는 데 사용됩니다. 입력 데이터 열 이름은 모델의 입력 이름과 일치해야 합니다.
+- `PREDICT` 함수에 대해 지정된 별칭 **p** 는 `PREDICT` 함수에서 반환한 예측 열을 참조하는 데 사용됩니다. 열 이름에는 모델의 출력 이름과 같은 이름을 지정해야 합니다.
 - 모든 입력 데이터 열 및 예측 열은 SELECT 문에 표시될 수 있습니다.
 
 ::: moniker range=">=azure-sqldw-latest||=sqlallproducts-allversions"
@@ -207,7 +207,7 @@ CREATE VIEW predictions
 AS
 SELECT d.*, p.Score
 FROM PREDICT(MODEL = (SELECT test_model FROM scoring_model WHERE model_id = 1),
-             DATA = dbo.mytable AS d) WITH (Score FLOAT) AS p;
+             DATA = dbo.mytable AS d, RUNTIME = ONNX) WITH (Score FLOAT) AS p;
 ```
 
 :::moniker-end
@@ -215,6 +215,8 @@ FROM PREDICT(MODEL = (SELECT test_model FROM scoring_model WHERE model_id = 1),
 ### <a name="combining-predict-with-an-insert-statement"></a>INSERT 문과 PREDICT 결합
 
 예측에 대한 일반적인 사용 사례는 입력 데이터에 대한 점수를 생성한 다음, 예측된 값을 테이블에 삽입하는 것입니다. 다음 예제에서는 호출 애플리케이션이 저장 프로시저를 사용하여 예측 값이 포함된 행을 테이블에 삽입하는 것으로 가정합니다.
+
+::: moniker range=">=sql-server-2017||=azuresqldb-current||>=sql-server-linux-2017||=azuresqldb-mi-current||=sqlallproducts-allversions"
 
 ```sql
 DECLARE @model VARBINARY(max) = (SELECT model FROM scoring_model WHERE model_name = 'ScoringModelV1');
@@ -224,10 +226,24 @@ SELECT d.c1, d.c2, d.c3, d.c4, p.score
 FROM PREDICT(MODEL = @model, DATA = dbo.mytable AS d) WITH(score FLOAT) AS p;
 ```
 
+:::moniker-end
+
+::: moniker range=">=azure-sqldw-latest||=sqlallproducts-allversions"
+
+```sql
+DECLARE @model VARBINARY(max) = (SELECT model FROM scoring_model WHERE model_name = 'ScoringModelV1');
+
+INSERT INTO loan_applications (c1, c2, c3, c4, score)
+SELECT d.c1, d.c2, d.c3, d.c4, p.score
+FROM PREDICT(MODEL = @model, DATA = dbo.mytable AS d, RUNTIME = ONNX) WITH(score FLOAT) AS p;
+```
+
+:::moniker-end
+
 - `PREDICT`의 결과는 PredictionResults라는 테이블에 저장됩니다. 
-- 모델은 테이블 호출 **모델**에서 `varbinary(max)` 열로 저장됩니다. ID 및 설명과 같은 추가 정보를 테이블에 저장하여 모델을 식별할 수 있습니다.
-- `DATA` 매개 변수에서 테이블 원본에 대해 지정된 별칭 **d**는 `dbo.mytable`의 열을 참조하는 데 사용됩니다. 입력 데이터 열 이름은 모델의 입력 이름과 일치해야 합니다.
-- `PREDICT` 함수에 대해 지정된 별칭 **p**는 `PREDICT` 함수에서 반환한 예측 열을 참조하는 데 사용됩니다. 열 이름에는 모델의 출력 이름과 같은 이름을 지정해야 합니다.
+- 모델은 테이블 호출 **모델** 에서 `varbinary(max)` 열로 저장됩니다. ID 및 설명과 같은 추가 정보를 테이블에 저장하여 모델을 식별할 수 있습니다.
+- `DATA` 매개 변수에서 테이블 원본에 대해 지정된 별칭 **d** 는 `dbo.mytable`의 열을 참조하는 데 사용됩니다. 입력 데이터 열 이름은 모델의 입력 이름과 일치해야 합니다.
+- `PREDICT` 함수에 대해 지정된 별칭 **p** 는 `PREDICT` 함수에서 반환한 예측 열을 참조하는 데 사용됩니다. 열 이름에는 모델의 출력 이름과 같은 이름을 지정해야 합니다.
 - 모든 입력 열 및 예측 열은 SELECT 문에 표시될 수 있습니다.
 
 ## <a name="next-steps"></a>다음 단계

@@ -12,15 +12,15 @@ helpviewer_keywords:
 - Query Store
 - Query Store, described
 ms.assetid: e06344a4-22a5-4c67-b6c6-a7060deb5de6
-author: julieMSFT
-ms.author: jrasnick
+author: WilliamDAssafMSFT
+ms.author: wiassaf
 monikerRange: =azuresqldb-current||>=sql-server-2016||=sqlallproducts-allversions||>=sql-server-linux-2017||=azuresqldb-mi-current||=azure-sqldw-latest
-ms.openlocfilehash: 4cccda1a792b8c006b758c3788d910e745e94989
-ms.sourcegitcommit: 863420525a1f5d5b56b311b84a6fb14e79404860
+ms.openlocfilehash: 96e137f3e49ac21a38577704c2663d3de85151ff
+ms.sourcegitcommit: 0e0cd9347c029e0c7c9f3fe6d39985a6d3af967d
 ms.translationtype: HT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 11/10/2020
-ms.locfileid: "94418030"
+ms.lasthandoff: 12/02/2020
+ms.locfileid: "96505147"
 ---
 # <a name="monitoring-performance-by-using-the-query-store"></a>쿼리 저장소를 사용하여 성능 모니터링
 
@@ -35,7 +35,7 @@ Azure [!INCLUDE[ssSDS](../../includes/sssds-md.md)]의 쿼리 저장소 작업�
 
 ## <a name="enabling-the-query-store"></a><a name="Enabling"></a> 쿼리 저장소 사용
 
- 쿼리 저장소는 새 SQL Server 및 Azure Synapse Analytics(SQL DW) 데이터베이스에는 기본적으로 사용되지 않고, 새 Azure SQL Database 데이터베이스에는 기본적으로 사용됩니다.
+ 쿼리 저장소는 새 SQL Server 및 Azure Synapse Analytics 데이터베이스에는 기본적으로 사용되지 않고, 새 Azure SQL Database 데이터베이스에는 기본적으로 사용됩니다.
 
 ### <a name="use-the-query-store-page-in-ssmanstudiofull"></a>[!INCLUDE[ssManStudioFull](../../includes/ssmanstudiofull-md.md)]에서 쿼리 저장소 페이지를 사용합니다.
 
@@ -130,7 +130,7 @@ INNER JOIN sys.query_store_query_text AS Txt
 
 쿼리 저장소에서 대기 유형이 **대기 범주** 에 결합됩니다. 대기 범주를 대기 형식에 매핑하는 작업은 [sys.query_store_wait_stats &#40;Transact-SQL&#41;](../../relational-databases/system-catalog-views/sys-query-store-wait-stats-transact-sql.md#wait-categories-mapping-table)에서 제공됩니다.
 
-**쿼리 대기 통계** 를 선택하여 [!INCLUDE[ssManStudioFull](../../includes/ssmanstudiofull-md.md)] v18 이상에서 **쿼리 대기 통계** 창을 엽니다. 쿼리 대기 통계 창에는 쿼리 저장소의 상위 대기 범주가 포함된 가로 막대형 차트가 표시됩니다. 맨 위의 드롭다운 상자를 사용하여 대기 시간의 집계 기준을 평균, 최대, 최소, 표준 편차, **합계** (기본값) 중에서 선택합니다.
+**쿼리 대기 통계** 를 선택하여 [!INCLUDE[ssManStudioFull](../../includes/ssmanstudiofull-md.md)] v18 이상에서 **쿼리 대기 통계** 창을 엽니다. 쿼리 대기 통계 창에는 쿼리 저장소의 상위 대기 범주가 포함된 가로 막대형 차트가 표시됩니다. 맨 위의 드롭다운 상자를 사용하여 대기 시간의 집계 기준을 평균, 최대, 최소, 표준 편차, **합계**(기본값) 중에서 선택합니다.
 
 ![SSMS 개체 탐색기의 SQL Server 2017 쿼리 대기 통계](../../relational-databases/performance/media/query-store-waits.PNG "SSMS 개체 탐색기의 SQL Server 2017 쿼리 대기 통계")
 
@@ -138,7 +138,7 @@ INNER JOIN sys.query_store_query_text AS Txt
 
 ![SSMS 개체 탐색기의 SQL Server 2017 쿼리 대기 통계 세부 정보 보기](../../relational-databases/performance/media/query-store-waits-detail.PNG "SSMS 개체 탐색기의 SQL Server 2017 쿼리 대기 통계 세부 정보 보기")
 
-맨 위의 드롭다운 상자를 사용하여 평균, 최대, 최소, 표준 편차, **합계** (기본값)를 포함해서 선택한 대기 범주에 대한 다양한 대기 시간 기준으로 쿼리를 필터링합니다. 계획을 선택하면 그래픽 쿼리 계획이 표시됩니다. 단추를 사용하여 원본 쿼리를 보고, 쿼리 계획을 강제 적용 및 적용 취소하고 표시를 새로 고칠 수 있습니다.
+맨 위의 드롭다운 상자를 사용하여 평균, 최대, 최소, 표준 편차, **합계**(기본값)를 포함해서 선택한 대기 범주에 대한 다양한 대기 시간 기준으로 쿼리를 필터링합니다. 계획을 선택하면 그래픽 쿼리 계획이 표시됩니다. 단추를 사용하여 원본 쿼리를 보고, 쿼리 계획을 강제 적용 및 적용 취소하고 표시를 새로 고칠 수 있습니다.
 
 **대기 범주** 는 다양한 대기 유형을 본질적으로 유사한 버킷으로 결합합니다. 대기 범주마다 문제 해결을 위해 다른 후속 분석이 필요하지만 동일한 범주의 대기 유형은 매우 유사한 문제 해결 경험을 생성하므로 대기를 기반으로 해서 영향을 받는 쿼리를 제공하면 대부분의 조사를 성공적으로 완료할 수 있습니다.
 

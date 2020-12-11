@@ -1,5 +1,5 @@
 ---
-title: COPY INTO(Transact-SQL)(미리 보기)
+title: COPY INTO(Transact-SQL)
 titleSuffix: (Azure Synapse Analytics) - SQL Server
 description: Azure Synapse Analytics의 COPY 문을 사용하여 외부 스토리지 계정에서 로드할 수 있습니다.
 ms.date: 09/25/2020
@@ -18,12 +18,12 @@ dev_langs:
 author: kevinvngo
 ms.author: kevin
 monikerRange: =sqlallproducts-allversions||=azure-sqldw-latest
-ms.openlocfilehash: 0951081be190fff9c2d7f88d28f88b14f793eb43
-ms.sourcegitcommit: bd3a135f061e4a49183bbebc7add41ab11872bae
+ms.openlocfilehash: a6cb58245e4128b58e237d61e2a278ea039afe9c
+ms.sourcegitcommit: dc858552f0c9314b3411e630bbd9bbce65f85913
 ms.translationtype: HT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 10/21/2020
-ms.locfileid: "92300286"
+ms.lasthandoff: 12/07/2020
+ms.locfileid: "96788012"
 ---
 # <a name="copy-transact-sql"></a>COPY(Transact-SQL)
 
@@ -33,7 +33,7 @@ ms.locfileid: "92300286"
 
 - 권한이 낮은 사용자를 사용하여 데이터 웨어하우스에 대한 엄격한 제어 권한 없이 로드
 - 추가 데이터베이스 개체를 만들 필요 없이 단일 T-SQL 문을 실행
-- **구분 기호** (문자열, 필드, 행) **가** **문자열로 구분된 열 내에서 이스케이프** 되는 경우 CSV 파일을 올바르게 구문 분석하고 로드
+- **구분 기호**(문자열, 필드, 행)**가** **문자열로 구분된 열 내에서 이스케이프** 되는 경우 CSV 파일을 올바르게 구문 분석하고 로드
 - SAS(공유 액세스 서명)를 사용하여 스토리지 계정 키를 노출하지 않고 보다 세부적인 사용 권한 모델을 지정
 - ERRORFILE 위치(REJECTED_ROW_LOCATION)에 대해 다른 스토리지 계정을 사용
 - 각 대상 열에 대한 기본값을 사용자 지정하고 원본 데이터 필드를 지정하여 특정 대상 열에 로드
@@ -45,7 +45,7 @@ COPY 문을 사용하는 포괄적인 예제 및 빠른 시작은 다음 설명�
 
 - [빠른 시작: COPY 문을 사용하여 데이터 대량 로드](/azure/synapse-analytics/sql-data-warehouse/quickstart-bulk-load-copy-tsql)
 - [빠른 시작: COPY 문 및 지원되는 인증 방법을 사용하는 예제](/azure/synapse-analytics/sql-data-warehouse/quickstart-bulk-load-copy-tsql-examples)
-- [빠른 시작: 풍부한 Synapse Studio UI를 사용하여 COPY 문 만들기(작업 영역 미리 보기)](/azure/synapse-analytics/quickstart-load-studio-sql-pool)
+- [빠른 시작: 풍부한 Synapse Studio UI를 사용하여 COPY 문 만들기](/azure/synapse-analytics/quickstart-load-studio-sql-pool)
 
 ## <a name="syntax"></a>구문  
 
@@ -95,8 +95,8 @@ WITH
 *외부 위치*</br>
 데이터가 포함된 파일이 준비되는 위치입니다. 현재 ADLS(Azure Data Lake Storage) Gen2 및 Azure Blob Storage가 지원됩니다.
 
-- Blob Storage의 *외부 위치* : https://<account>.blob.core.windows.net/<container>/<path>
-- ADLS Gen2의 *외부 위치* : https://<account>. dfs.core.windows.net/<container>/<path>
+- Blob Storage의 *외부 위치*: https://<account>.blob.core.windows.net/<container>/<path>
+- ADLS Gen2의 *외부 위치*: https://<account>. dfs.core.windows.net/<container>/<path>
 
 > [!NOTE]  
 > .blob 엔드포인트는 ADLS Gen2에서도 사용할 수 있으며 현재 최상의 성능을 제공합니다. 인증 방법에 .dfs가 필요하지 않은 경우에는 .blob 엔드포인트를 사용합니다.
@@ -141,9 +141,9 @@ WITH
 |  **Azure Blob 스토리지**  | SAS/MSI/SERVICE PRINCIPAL/KEY/AAD |                      SAS/KEY                       |                      SAS/KEY                       |
 | **Azure Data Lake Gen2** | SAS/MSI/SERVICE PRINCIPAL/KEY/AAD | SAS(blob<sup>1</sup>)/MSI(dfs<sup>2</sup>)/SERVICE PRINCIPAL/KEY/AAD | SAS(blob<sup>1</sup>)/MSI(dfs<sup>2</sup>)/SERVICE PRINCIPAL/KEY/AAD |
 
-1: 이 인증 방법에는 외부 위치 경로의 .blob 엔드포인트( **.blob** .core.windows.net)가 필요합니다.
+1: 이 인증 방법에는 외부 위치 경로의 .blob 엔드포인트( **.blob**.core.windows.net)가 필요합니다.
 
-2: 이 인증 방법에는 외부 위치 경로의 .dfs 엔드포인트( **.dfs** .core.windows.net)가 필요합니다.
+2: 이 인증 방법에는 외부 위치 경로의 .dfs 엔드포인트( **.dfs**.core.windows.net)가 필요합니다.
 
 
 > [!NOTE]  
@@ -179,7 +179,7 @@ WITH
   - 필요한 최소 RBAC 역할: Storage Blob 데이터 기여자 또는 AAD 사용자용 Storage Blob 데이터 소유자
 
 *ERRORFILE = 디렉터리 위치*</br>
-*ERRORFILE* 는 CSV에만 적용됩니다. 거부된 행과 해당 오류 파일을 작성해야 하는 COPY 문 내의 디렉터리를 지정합니다. 스토리지 계정의 전체 경로를 지정하거나 컨테이너와 관련된 경로를 지정할 수 있습니다. 지정된 경로가 존재하지 않으면 사용자를 대신하여 경로를 만듭니다. " _rejectedrows"라는 이름의 하위 디렉터리가 생성됩니다. "_ " 문자는 위치 매개 변수에 명시적으로 명명되지 않는 한, 다른 데이터 처리를 위해 디렉터리를 이스케이프합니다. 
+*ERRORFILE* 는 CSV에만 적용됩니다. 거부된 행과 해당 오류 파일을 작성해야 하는 COPY 문 내의 디렉터리를 지정합니다. 스토리지 계정의 전체 경로를 지정하거나 컨테이너와 관련된 경로를 지정할 수 있습니다. 지정된 경로가 존재하지 않으면 사용자를 대신하여 경로를 만듭니다. "_rejectedrows"라는 이름의 하위 디렉터리가 생성됩니다. "_ " 문자는 위치 매개 변수에 명시적으로 명명되지 않는 한, 다른 데이터 처리를 위해 디렉터리를 이스케이프합니다. 
 
 이 디렉터리 내에는 로드 제출 시간을 기준으로 YearMonthDay -HourMinuteSecond 형식에 따라 생성된 폴더가 있습니다(예: 20180330-173205). 이 폴더에는 queryID, distributionID 및 파일 guid가 각각 사전에 추가된 이유(오류) 파일과 데이터(행) 파일의 두 가지 유형의 파일이 작성됩니다. data와 reason은 별도의 파일에 있으므로 해당 파일에는 일치하는 접두사가 있습니다.
 
@@ -234,7 +234,7 @@ COPY 명령은 이 매개 변수가 지정되지 않은 경우 파일 확장명�
 
 - .gz  - **GZIP**
 - .snappy – **Snappy**
-- .deflate - **DefaultCodec** (Parquet 및 ORC만 해당)
+- .deflate - **DefaultCodec**(Parquet 및 ORC만 해당)
 
  *FIELDQUOTE = 'field_quote'*</br>
 *FIELDQUOTE* 는 CSV에 적용되며 CSV 파일에서 따옴표 문자(문자열 구분 기호)로 사용될 단일 문자를 지정합니다. 지정하지 않으면 RFC 4180 표준에 정의한 대로 따옴표 문자(")가 따옴표 문자로 사용됩니다. 확장 ASCII 및 멀티바이트 문자는 FIELDQUOTE의 UTF-8에 지원되지 않습니다.
@@ -262,7 +262,7 @@ DATEFORMAT은 CSV에만 적용되며 SQL Server 날짜 형식에 대한 날짜 �
 *ENCODING* 은 CSV에만 적용됩니다. 기본값은 UTF8입니다. COPY 명령으로 로드된 파일의 데이터 인코딩 표준을 지정합니다. 
 
 *IDENTITY_INSERT = ‘ON’ | ‘OFF’*</br>
-IDENTITY_INSERT는 가져온 데이터 파일의 ID 값 또는 값을 ID 열에 사용할지 여부를 지정합니다. IDENTITY_INSERT가 OFF(기본값)이면 이 열의 ID 값은 확인되지만 가져오지는 않습니다. SQL DW는 테이블 생성 중에 지정된 시드 및 증분 값을 기준으로 고유 값을 자동으로 할당합니다. COPY 명령을 사용하여 다음 동작을 기록합니다.
+IDENTITY_INSERT는 가져온 데이터 파일의 ID 값 또는 값을 ID 열에 사용할지 여부를 지정합니다. IDENTITY_INSERT가 OFF(기본값)이면 이 열의 ID 값은 확인되지만 가져오지는 않습니다. Azure Synapse Analytics는 테이블 생성 중에 지정된 시드 및 증분 값을 기준으로 고유 값을 자동으로 할당합니다. COPY 명령을 사용하여 다음 동작을 기록합니다.
 
 - IDENTITY_INSERT가 OFF이고 테이블에 ID 열이 있는 경우
   - 입력 필드를 ID 열에 매핑하지 않는 열 목록을 지정해야 합니다.
@@ -433,17 +433,6 @@ Parquet 및 ORC 파일은 COPY 명령이 자동으로 분할하기 때문에 파
 ### <a name="are-there-any-limitations-on-the-number-or-size-of-files"></a>파일 개수 또는 크기에 제한이 있나요?
 파일 개수 또는 크기에 제한이 없습니다. 하지만 최상의 성능을 위해 4MB 이상의 파일을 사용하는 것이 좋습니다.
 
-### <a name="are-there-any-limitations-with-copy-using-synapse-workspaces-preview"></a>Synapse 작업 영역(미리 보기)을 사용하는 COPY에 제한이 있나요?
-
-관리 ID(MSI)를 사용한 인증은 COPY 문이나 PolyBase로 지원되지 않습니다(파이프라인에서 사용하는 경우 포함). 다음과 유사한 오류 메시지가 나타날 수 있습니다.
-
-*com.microsoft.sqlserver.jdbc.SQLServerException: 이 서버에서 관리 서비스 ID를 사용하도록 설정하지 않았습니다. 관리 서비스 ID를 사용하도록 설정하고 다시 시도하세요.*
-
-스토리지 계정이 VNet에 연결된 경우 MSI 인증이 필요합니다. 스토리지 계정이 VNet에 연결된 경우에는 COPY 또는 PolyBase 대신 BCP/Bulk insert를 사용하여 데이터를 로드해야 합니다.
-
-이 제한은 Synapse 작업 영역(미리 보기)에 속하는 SQL 풀에만 적용됩니다. 향후 릴리스에서는 Synapse 작업 영역에서 MSI 지원을 설정할 예정입니다. 
-
-피드백이나 문제가 있으면 배포 목록(sqldwcopypreview@service.microsoft.com)으로 보내주세요.
 
 ## <a name="see-also"></a>참고 항목  
 

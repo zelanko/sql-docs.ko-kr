@@ -17,12 +17,12 @@ helpviewer_keywords:
 ms.assetid: 5a641a46-7cfb-4d7b-a90d-6e4625719d74
 author: markingmyname
 ms.author: maghan
-ms.openlocfilehash: 1b0fea6ec995f383cd290ebbee786e31623b25f1
-ms.sourcegitcommit: 2f868a77903c1f1c4cecf4ea1c181deee12d5b15
+ms.openlocfilehash: f290da98335aaf46c3c0d12c94d265f14dc1e2bd
+ms.sourcegitcommit: 773c1203e3c4617606cecb2626f6b2f2c855a53d
 ms.translationtype: HT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 10/02/2020
-ms.locfileid: "91669699"
+ms.lasthandoff: 12/02/2020
+ms.locfileid: "96535287"
 ---
 # <a name="sql-server-express-localdb"></a>SQL Server Express LocalDB
 
@@ -65,6 +65,10 @@ LocalDB의 인스턴스 데이터 정렬은 `SQL_Latin1_General_CP1_CI_AS`로 �
 
 ### <a name="restrictions"></a>제한
 
+- LocalDB는 서비스 팩을 벗어나 패치될 수 없습니다. CU 및 보안 업데이트를 수동으로 적용할 수 없으며 Windows 업데이트, 비즈니스용 Windows 업데이트 또는 다른 방법을 통해 적용되지도 않습니다.
+
+- LocalDB는 SQL Management Studio를 통해 원격으로 관리할 수 없습니다.
+
 - LocalDB는 병합 복제 구독자일 수 없습니다.
 
 - LocalDB는 FILESTREAM을 지원하지 않습니다.
@@ -77,7 +81,7 @@ LocalDB의 인스턴스 데이터 정렬은 `SQL_Latin1_General_CP1_CI_AS`로 �
 
 LocalDB는 자동 인스턴스 및 명명된 인스턴스의 두 가지 인스턴스 유형을 지원합니다.
 
-- LocalDB의 자동 인스턴스는 공용입니다. 이 인스턴스는 자동으로 생성 및 관리되고 모든 애플리케이션에서 사용될 수 있습니다. 사용자의 컴퓨터에 설치되는 모든 버전의 LocalDB에는 LocalDB의 자동 인스턴스가 하나씩 있습니다. LocalDB의 자동 인스턴스는 효율적으로 관리됩니다. 인스턴스를 만들 필요 없이 그대로 작동합니다. 이 기능을 사용하면 애플리케이션을 쉽게 설치할 수 있으며 다른 컴퓨터에 쉽게 마이그레이션할 수 있습니다. 대상 컴퓨터에 특정 버전의 LocalDB가 설치되어 있을 경우 해당 버전에 대한 LocalDB의 자동 인스턴스를 대상 컴퓨터에서도 사용할 수 있습니다. LocalDB의 자동 인스턴스는 예약된 네임스페이스에 속하는 특수한 인스턴스 이름 패턴을 사용합니다. 이러한 방식은 명명된 LocalDB 인스턴스와 이름이 충돌하는 것을 방지합니다. 자동 인스턴스의 이름은 **MSSQLLocalDB**입니다.
+- LocalDB의 자동 인스턴스는 공용입니다. 이 인스턴스는 자동으로 생성 및 관리되고 모든 애플리케이션에서 사용될 수 있습니다. 사용자의 컴퓨터에 설치되는 모든 버전의 LocalDB에는 LocalDB의 자동 인스턴스가 하나씩 있습니다. LocalDB의 자동 인스턴스는 효율적으로 관리됩니다. 인스턴스를 만들 필요 없이 그대로 작동합니다. 이 기능을 사용하면 애플리케이션을 쉽게 설치할 수 있으며 다른 컴퓨터에 쉽게 마이그레이션할 수 있습니다. 대상 컴퓨터에 특정 버전의 LocalDB가 설치되어 있을 경우 해당 버전에 대한 LocalDB의 자동 인스턴스를 대상 컴퓨터에서도 사용할 수 있습니다. LocalDB의 자동 인스턴스는 예약된 네임스페이스에 속하는 특수한 인스턴스 이름 패턴을 사용합니다. 이러한 방식은 명명된 LocalDB 인스턴스와 이름이 충돌하는 것을 방지합니다. 자동 인스턴스의 이름은 **MSSQLLocalDB** 입니다.
 
 - LocalDB의 명명된 인스턴스는 프라이빗입니다. 이 인스턴스는 인스턴스 만들기와 관리를 담당하는 단일 애플리케이션에 의해 소유됩니다. 명명된 인스턴스는 다른 인스턴스로부터의 격리를 제공하고 다른 데이터베이스 사용자와의 리소스 경합을 줄여서 성능을 향상시킬 수 있습니다. 명명된 인스턴스는 사용자가 LocalDB 관리 API를 통해 명시적으로 또는 관리형 애플리케이션에 대한 app.config 파일을 통해 암시적으로(관리형 애플리케이션에서 필요에 따라 해당 API를 사용하더라도) 만들어야 합니다. LocalDB의 각 명명된 인스턴스에는 해당 LocalDB 바이너리 집합을 가리키는 LocalDB 버전이 연결되어 있습니다. LocalDB의 인스턴스 이름은 **sysname** 데이터 형식이며 최대 128자를 포함할 수 있습니다. 이러한 특성은 이름을 16 ASCII 문자의 일반 NetBIOS 이름으로 제한하는 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]의 일반적인 명명된 인스턴스와 다릅니다. LocalDB 인스턴스의 이름에는 파일 이름에 사용 가능한 유니코드 문자만 포함될 수 있습니다. 자동 인스턴스 이름을 사용하는 명명된 인스턴스는 자동 인스턴스가 됩니다.
 

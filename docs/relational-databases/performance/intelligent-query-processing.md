@@ -5,23 +5,23 @@ ms.custom: seo-dt-2019
 ms.date: 11/27/2019
 ms.prod: sql
 ms.prod_service: database-engine, sql-database
-ms.reviewer: ''
+ms.reviewer: wiassaf
 ms.technology: performance
 ms.topic: conceptual
 helpviewer_keywords: ''
 author: joesackmsft
 ms.author: josack
 monikerRange: =azuresqldb-current||>=sql-server-2016||=sqlallproducts-allversions||>=sql-server-linux-2017||=azuresqldb-mi-current
-ms.openlocfilehash: ce39e398db9d3676bc9c6e2257c9847774927e26
-ms.sourcegitcommit: 757b827cf322c9f792f05915ff3450e95ba7a58a
+ms.openlocfilehash: d1171d4f3570c6bcfcf222043c5036de15c98241
+ms.sourcegitcommit: 28fecbf61ae7b53405ca378e2f5f90badb1a296a
 ms.translationtype: HT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 10/16/2020
-ms.locfileid: "92134871"
+ms.lasthandoff: 12/04/2020
+ms.locfileid: "96595144"
 ---
 # <a name="intelligent-query-processing-in-sql-databases"></a>SQL 데이터베이스의 지능형 쿼리 처리
 
-[!INCLUDE [SQL Server Azure SQL Database](../../includes/applies-to-version/sql-asdb.md)]
+[!INCLUDE [SQL Server Azure SQL Database Azure SQL Managed Instance](../../includes/applies-to-version/sql-asdb-asdbmi.md)]
 
 IQP(인텔리전트 쿼리 처리) 기능 제품군에는 최소한의 구현 노력으로 기존 워크로드의 성능을 개선하는 광범위한 영향을 가진 기능이 포함됩니다. 
 
@@ -40,8 +40,8 @@ ALTER DATABASE [WideWorldImportersDW] SET COMPATIBILITY_LEVEL = 150;
 
 다음 표에는 데이터베이스 호환성 수준에 대한 요구 사항과 함께 모든 지능형 쿼리 처리 기능이 자세히 설명되어 있습니다.
 
-| **IQP 기능** | **Azure SQL Database에서 지원** | **SQL Server에서 지원** |**설명** |
-| --- | --- | --- |--- |
+| **IQP 기능** | **[!INCLUDE[ssSDSfull](../../includes/sssdsfull-md.md)] 및 [!INCLUDE[ssSDSMIfull](../../includes/sssdsmifull-md.md)]에서 지원** | **[!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]에서 지원** |**설명** |
+| ---------------- | ------- | ------- | ---------------- |
 | [적응 조인(일괄 처리 모드)](#batch-mode-adaptive-joins) | 예. 호환성 수준 140 미만| 예. 호환성 수준 140 미만 [!INCLUDE[ssSQL17](../../includes/sssql17-md.md)]부터|적응형 조인은 실제 입력된 행에 따라 런타임 동안 조인 유형을 동적으로 선택합니다.|
 | [대략적인 Count Distinct](#approximate-query-processing) | 예| 예. [!INCLUDE[sql-server-2019](../../includes/sssqlv15-md.md)]부터|고성능 및 낮은 메모리 사용 공간을 통해 빅 데이터 시나리오에 대한 대략적인 COUNT DISTINCT를 제공합니다. |
 | [Rowstore의 일괄 처리 모드](#batch-mode-on-rowstore) | 예. 호환성 수준 150 미만| 예. 호환성 수준 150 미만 [!INCLUDE[sql-server-2019](../../includes/sssqlv15-md.md)]부터|columnstore 인덱스를 요구하지 않고 CPU 바인딩된 관계형 DW 워크로드에 대한 일괄 처리 모드를 제공합니다.  | 
@@ -52,13 +52,13 @@ ALTER DATABASE [WideWorldImportersDW] SET COMPATIBILITY_LEVEL = 150;
 | [테이블 변수 지연 컴파일](#table-variable-deferred-compilation) | 예. 호환성 수준 150 미만| 예. 호환성 수준 150 미만 [!INCLUDE[sql-server-2019](../../includes/sssqlv15-md.md)]부터|고정 추측 대신 첫 번째 컴파일에서 발생한 테이블의 변수의 실제 카디널리티를 사용합니다.|
 
 ## <a name="batch-mode-adaptive-joins"></a>일괄 처리 모드 적응 조인
-일괄 처리 모드 적응 조인 기능을 사용하면 [해시 조인 또는 중첩된 루프 조인](../../relational-databases/performance/joins.md) 메서드 선택을 단일 캐시 계획을 통해 첫 번째 입력이 검사된 **후**까지 지연할 수 있습니다. 적응 조인 연산자는 중첩된 루프 계획으로 전환할 시기를 결정하는 데 사용되는 임계값을 정의합니다. 따라서 계획이 실행 중에 더 나은 조인 전략으로 동적으로 전환할 수 있습니다.
+일괄 처리 모드 적응 조인 기능을 사용하면 [해시 조인 또는 중첩된 루프 조인](../../relational-databases/performance/joins.md) 메서드 선택을 단일 캐시 계획을 통해 첫 번째 입력이 검사된 **후** 까지 지연할 수 있습니다. 적응 조인 연산자는 중첩된 루프 계획으로 전환할 시기를 결정하는 데 사용되는 임계값을 정의합니다. 따라서 계획이 실행 중에 더 나은 조인 전략으로 동적으로 전환할 수 있습니다.
 
 호환성 수준을 변경하지 않고 적응형 조인을 사용하지 않도록 설정하는 방법을 포함하여 자세한 내용은 [적응형 조인 이해](../../relational-databases/performance/joins.md#adaptive)를 참조하세요.
 
 ## <a name="batch-mode-memory-grant-feedback"></a>일괄 처리 모드 메모리 부여 피드백
 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]의 쿼리 실행 후 계획에는 실행에 필요한 최소 필수 메모리 및 모든 행을 메모리에 포함하기 위한 이상적인 메모리 부여 크기가 포함됩니다. 메모리 부여 크기가 잘못 지정된 경우 성능이 저하됩니다. 과도하게 부여하면 메모리가 낭비되고 동시성이 줄어듭니다. 메모리 부여가 부족하면 디스크로 분산되어 비용이 증가합니다. 반복 워크로드를 처리함으로써 일괄 처리 모드 메모리 부여 피드백은 쿼리에 필요한 실제 메모리를 다시 계산한 후 캐시된 계획에 대한 부여 값을 업데이트합니다. 동일한 쿼리 문을 실행할 경우 쿼리는 수정된 메모리 부여 크기를 사용하여 동시성에 영향을 주는 과도한 메모리 부여를 줄이고 디스크로 분산하여 비용을 늘리는 부족한 메모리 부여를 수정합니다.
-다음 그래프에서는 일괄 처리 모드 적응 메모리 부여 피드백을 사용하는 한 가지 예를 보여 줍니다. 쿼리를 처음 실행하는 경우 높은 분산으로 인해 기간이 **88초**였습니다.   
+다음 그래프에서는 일괄 처리 모드 적응 메모리 부여 피드백을 사용하는 한 가지 예를 보여 줍니다. 쿼리를 처음 실행하는 경우 높은 분산으로 인해 기간이 **88초** 였습니다.   
 
 ```sql
 DECLARE @EndTime datetime = '2016-09-22 00:00:00.000';
@@ -136,9 +136,9 @@ USE HINT 쿼리 힌트는 데이터베이스 범위 구성 또는 추적 플래�
 
 행 모드 메모리 부여 피드백 작업은 **memory_grant_updated_by_feedback** XEvent를 통해 표시됩니다. 
 
-행 모드 메모리 부여 피드백부터 실제 실행 후 계획에 대한 두 가지 새로운 쿼리 계획 특성이 표시됩니다. ***IsMemoryGrantFeedbackAdjusted*** 및 ***LastRequestedMemory***는 *MemoryGrantInfo* 쿼리 계획 XML 요소에 추가됩니다. 
+행 모드 메모리 부여 피드백부터 실제 실행 후 계획의 경우 MemoryGrantInfo 쿼리 계획 XML 요소에 추가되는 두 개의 새 쿼리 계획 특성인 IsMemoryGrantFeedbackAdjusted 및 LastRequestedMemory가 표시됩니다. 
 
-*LastRequestedMemory*는 이전 쿼리 실행에서 부여된 메모리를 KB(킬로바이트) 단위로 표시합니다. *IsMemoryGrantFeedbackAdjusted* 특성을 사용하면 실제 쿼리 실행 계획 내의 명령문에 대한 메모리 부여 피드백의 상태를 확인할 수 있습니다. 이 특성에 표시된 값은 다음과 같습니다.
+*LastRequestedMemory* 는 이전 쿼리 실행에서 부여된 메모리를 KB(킬로바이트) 단위로 표시합니다. *IsMemoryGrantFeedbackAdjusted* 특성을 사용하면 실제 쿼리 실행 계획 내의 명령문에 대한 메모리 부여 피드백의 상태를 확인할 수 있습니다. 이 특성에 표시된 값은 다음과 같습니다.
 
 | IsMemoryGrantFeedbackAdjusted 값 | Description |
 |---|---|
@@ -179,7 +179,7 @@ USE HINT 쿼리 힌트는 데이터베이스 범위 구성 또는 추적 플래�
 [!INCLUDE[ssSQL14](../../includes/sssql14-md.md)]에서는 MSTVF에 대한 고정 카디널리티 추정이 100이고, 이전 버전의 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]에서는 1입니다. 인터리브 실행은 MSTVF와 연결된 이러한 고정 카디널리티 예상치 때문에 발생하는 워크로드 성능 문제에 도움이 됩니다. MSTVF에 대한 자세한 내용은 [사용자 정의 함수 만들기(데이터베이스 엔진)](../../relational-databases/user-defined-functions/create-user-defined-functions-database-engine.md#TVF)를 참조하세요.
 
 다음 이미지에서는 MSTVF의 고정 카디널리티 예상치 영향을 보여주는 전체 실행 계획의 하위 집합인 [활성 쿼리 통계](../../relational-databases/performance/live-query-statistics.md) 출력을 보여줍니다. 실제 행 흐름 및 예상 행 수를 확인할 수 있습니다. 중요한 세 가지 계획 영역은 다음과 같습니다(오른쪽에서 왼쪽으로 흐름).
-1. MSTVF 테이블 검색의 고정 예상치는 100개 행입니다. 그러나 이 예제에서는 실제/예상인 *527597/100*을 통해 활성 쿼리 통계에 표시되는 것처럼 527,597개 행이 이 MSTVF 테이블 검색을 통과하므로 고정 예상치와 큰 차이가 있습니다.
+1. MSTVF 테이블 검색의 고정 예상치는 100개 행입니다. 그러나 이 예제에서는 실제/예상인 *527597/100* 을 통해 활성 쿼리 통계에 표시되는 것처럼 527,597개 행이 이 MSTVF 테이블 검색을 통과하므로 고정 예상치와 큰 차이가 있습니다.
 1. 중첩된 루프 작업의 경우 100개의 행만 조인의 외부 측면에서 반환된다고 가정합니다. 실제로 MSTVF에서 반환되는 많은 행 개수를 고려할 때 다른 조인 알고리즘을 사용하는 것이 나을 수도 있습니다.
 1. 해시 일치 작업의 경우 작은 경고 기호가 표시되며, 이 경우 디스크로 분산을 나타냅니다.
 
@@ -215,8 +215,8 @@ USE HINT 쿼리 힌트는 데이터베이스 범위 구성 또는 추적 플래�
 
 | 실행 계획 특성 | Description |
 | --- | --- |
-| ContainsInterleavedExecutionCandidates | *QueryPlan* 노드에 적용됩니다. *true*이면 계획에 인터리브 실행 후보가 포함됩니다. |
-| IsInterleavedExecuted | TVF 노드에 대한 RelOp 아래의 *RuntimeInformation* 요소의 특성입니다. *true*이면 작업이 인터리브 실행 작업의 일부로 구체화된 것입니다. |
+| ContainsInterleavedExecutionCandidates | *QueryPlan* 노드에 적용됩니다. *true* 이면 계획에 인터리브 실행 후보가 포함됩니다. |
+| IsInterleavedExecuted | TVF 노드에 대한 RelOp 아래의 *RuntimeInformation* 요소의 특성입니다. *true* 이면 작업이 인터리브 실행 작업의 일부로 구체화된 것입니다. |
 
 다음과 같은 xEvent를 통해 인터리브 실행 발생을 추적할 수도 있습니다.
 
@@ -281,7 +281,7 @@ USE HINT 쿼리 힌트는 데이터베이스 범위 구성 또는 추적 플래�
 
 **적용 대상:** [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]([!INCLUDE[sql-server-2019](../../includes/sssqlv15-md.md)]부터), [!INCLUDE[ssSDSfull](../../includes/sssdsfull-md.md)] 
 
-**테이블 변수 지연 컴파일**은 테이블 변수를 참조하는 쿼리의 플랜 품질 및 전체 성능을 개선합니다. 최적화 및 초기 플랜 컴파일 중에 이 기능은 실제 테이블 변수 행 수를 기반으로 하는 카디널리티 예측을 전파합니다. 이 정확한 행 수 정보는 다운스트림 계획 작업을 최적화하는 데 사용됩니다.
+**테이블 변수 지연 컴파일** 은 테이블 변수를 참조하는 쿼리의 플랜 품질 및 전체 성능을 개선합니다. 최적화 및 초기 플랜 컴파일 중에 이 기능은 실제 테이블 변수 행 수를 기반으로 하는 카디널리티 예측을 전파합니다. 이 정확한 행 수 정보는 다운스트림 계획 작업을 최적화하는 데 사용됩니다.
 
 테이블 변수 지연 컴파일을 사용하면 테이블 변수를 참조하는 문 컴파일은 문이 실제로 처음 실행될 때까지 지연됩니다. 이 지연 컴파일 동작은 임시 테이블의 동작과 동일합니다. 이 변경으로 인해 원래 1행 추측 대신에 실제 카디널리티가 사용됩니다. 
 
@@ -319,14 +319,14 @@ SELECT L_OrderKey, L_Quantity
 FROM dbo.lineitem
 WHERE L_Quantity = 5;
 
-SELECT  O_OrderKey,
+SELECT O_OrderKey,
     O_CustKey,
     O_OrderStatus,
     L_QUANTITY
 FROM    
     ORDERS,
     @LINEITEMS
-WHERE   O_ORDERKEY  =   L_ORDERKEY
+WHERE    O_ORDERKEY    =    L_ORDERKEY
     AND O_OrderStatus = 'O'
 OPTION (USE HINT('DISABLE_DEFERRED_COMPILATION_TV'));
 ```
@@ -392,8 +392,7 @@ columnstore 인덱스는 일부 애플리케이션에 적합하지 않을 수 �
 1. 입력 쿼리에서 테이블 크기, 사용되는 연산자, 예상 카디널리티의 초기 검사
 2. 추가 검사점(최적화 프로그램이 쿼리에 대해 좀 더 저렴한 새 계획을 검색하기 때문에 필요) 이 대체 계획이 일괄 처리 모드를 충분히 사용하지 않을 경우 최적화 프로그램은 일괄 처리 모드의 대안을 더 이상 검색하지 않습니다.
 
-
-rowstore에서 일괄 처리 모드가 사용되는 경우에는 쿼리 계획에서 실제 실행 모드가 **일괄 처리 모드**로 표시됩니다. scan 연산자는 디스크의 힙 및 B-트리 인덱스에 일괄 처리 모드를 사용합니다. 이 일괄 처리 모드 검사는 일괄 처리 모드 비트맵 필터를 평가할 수 있습니다. 또한 계획에 다른 일괄 처리 모드 연산자가 표시될 수 있습니다. 예를 들어 해시 조인, 해시 기반 집계, 정렬, 창 집계, 필터, 연결 및 컴퓨팅 스칼라 연산자가 있습니다.
+rowstore에서 일괄 처리 모드가 사용되는 경우에는 쿼리 계획에서 실제 실행 모드가 **일괄 처리 모드** 로 표시됩니다. scan 연산자는 디스크의 힙 및 B-트리 인덱스에 일괄 처리 모드를 사용합니다. 이 일괄 처리 모드 검사는 일괄 처리 모드 비트맵 필터를 평가할 수 있습니다. 또한 계획에 다른 일괄 처리 모드 연산자가 표시될 수 있습니다. 예를 들어 해시 조인, 해시 기반 집계, 정렬, 창 집계, 필터, 연결 및 컴퓨팅 스칼라 연산자가 있습니다.
 
 ### <a name="remarks"></a>설명
 
