@@ -1,6 +1,6 @@
 ---
 description: sys.dm_tran_current_snapshot(Transact-SQL)
-title: sys. dm_tran_current_snapshot (Transact-sql) | Microsoft Docs
+title: sys.dm_tran_current_snapshot (Transact-sql) | Microsoft Docs
 ms.custom: ''
 ms.date: 03/15/2017
 ms.prod: sql
@@ -21,22 +21,22 @@ ms.assetid: 7509d595-c0e1-4237-a5ac-b41ad934544c
 author: markingmyname
 ms.author: maghan
 monikerRange: '>=aps-pdw-2016||=azuresqldb-current||=azure-sqldw-latest||>=sql-server-2016||=sqlallproducts-allversions||>=sql-server-linux-2017||=azuresqldb-mi-current'
-ms.openlocfilehash: e9785cf52937f2e8a6ec17489d4bedd0d4726149
-ms.sourcegitcommit: dd36d1cbe32cd5a65c6638e8f252b0bd8145e165
+ms.openlocfilehash: c1d6681ec21993481e7ff1c395b0ed2c61eb5190
+ms.sourcegitcommit: 2991ad5324601c8618739915aec9b184a8a49c74
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 09/08/2020
-ms.locfileid: "89543850"
+ms.lasthandoff: 12/11/2020
+ms.locfileid: "97334414"
 ---
 # <a name="sysdm_tran_current_snapshot-transact-sql"></a>sys.dm_tran_current_snapshot(Transact-SQL)
 [!INCLUDE [sql-asdb-asdbmi-asa-pdw](../../includes/applies-to-version/sql-asdb-asdbmi-asa-pdw.md)]
 
-  현재 스냅샷 트랜잭션이 시작될 때의 모든 활성 트랜잭션을 표시하는 가상 테이블을 반환합니다. 현재 트랜잭션이 스냅샷 트랜잭션이 아니면 이 함수는 행을 반환하지 않습니다. **dm_tran_current_snapshot** 은 sys. **dm_tran_transactions_snapshot**와 유사 합니다. 단, **dm_tran_current_snapshot** 는 현재 스냅숏 트랜잭션에 대 한 활성 트랜잭션만 반환 합니다.  
+  현재 스냅샷 트랜잭션이 시작될 때의 모든 활성 트랜잭션을 표시하는 가상 테이블을 반환합니다. 현재 트랜잭션이 스냅샷 트랜잭션이 아니면 이 함수는 행을 반환하지 않습니다. **sys.dm_tran_current_snapshot** 은 현재 스냅숏 트랜잭션에 대 한 활성 트랜잭션만 반환 **sys.dm_tran_current_snapshot** 는 점을 제외 하 고 **sys.dm_tran_transactions_snapshot** 와 비슷합니다.  
   
 > [!NOTE]  
->  또는에서이를 호출 하려면 [!INCLUDE[ssSDWfull](../../includes/sssdwfull-md.md)] [!INCLUDE[ssPDW](../../includes/sspdw-md.md)] 이름 **sys. dm_pdw_nodes_tran_current_snapshot**을 사용 합니다.  
+>  또는에서이를 호출 하려면 [!INCLUDE[ssSDWfull](../../includes/sssdwfull-md.md)] [!INCLUDE[ssPDW](../../includes/sspdw-md.md)] **sys.dm_pdw_nodes_tran_current_snapshot** 이름을 사용 합니다.  
   
-## <a name="syntax"></a>구문  
+## <a name="syntax"></a>Syntax  
   
 ```  
   
@@ -53,7 +53,7 @@ sys.dm_tran_current_snapshot
 ## <a name="permissions"></a>사용 권한
 
 에 [!INCLUDE[ssNoVersion_md](../../includes/ssnoversion-md.md)] 는 `VIEW SERVER STATE` 권한이 필요 합니다.   
-[!INCLUDE[ssSDS_md](../../includes/sssds-md.md)]Premium 계층에서는 데이터베이스에 대 한 권한이 필요 합니다 `VIEW DATABASE STATE` . [!INCLUDE[ssSDS_md](../../includes/sssds-md.md)]표준 및 기본 계층에서는 **서버 관리자** 또는 **Azure Active Directory 관리자** 계정이 필요 합니다.   
+SQL Database Basic, S0 및 S1 서비스 목적과 탄력적 풀의 데이터베이스에 대해서는 `Server admin` 또는 `Azure Active Directory admin` 계정이 필요 합니다. 다른 모든 SQL Database 서비스 목표에서 `VIEW DATABASE STATE` 사용 권한은 데이터베이스에서 필요 합니다.   
 
 ## <a name="examples"></a>예제  
  다음 예에서는 ALLOW_SNAPSHOT_ISOLATION 및 READ_COMMITTED_SNAPSHOT 옵션이 ON으로 설정된 데이터베이스에서 각각 XSN(트랜잭션 시퀀스 번호)으로 식별되는 4개의 동시 트랜잭션이 실행되는 테스트 시나리오를 사용합니다. 다음 트랜잭션이 실행되고 있습니다.  

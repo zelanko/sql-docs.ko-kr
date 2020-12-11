@@ -1,6 +1,6 @@
 ---
 description: sys.dm_tran_version_store(Transact-SQL)
-title: sys. dm_tran_version_store (Transact-sql) | Microsoft Docs
+title: sys.dm_tran_version_store (Transact-sql) | Microsoft Docs
 ms.custom: ''
 ms.date: 03/30/2017
 ms.prod: sql
@@ -21,24 +21,24 @@ ms.assetid: 7ab44517-0351-4f91-bdd9-7cf940f03c51
 author: markingmyname
 ms.author: maghan
 monikerRange: =azuresqldb-current||>=sql-server-2016||=sqlallproducts-allversions||>=sql-server-linux-2017||=azuresqldb-mi-current
-ms.openlocfilehash: cd71e1c70ef06d5e669158aea06b7f3dde720951
-ms.sourcegitcommit: dd36d1cbe32cd5a65c6638e8f252b0bd8145e165
+ms.openlocfilehash: d56dc48e37d7f0b03f59a1fecb024a74d3ed75cb
+ms.sourcegitcommit: 2991ad5324601c8618739915aec9b184a8a49c74
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 09/08/2020
-ms.locfileid: "89546457"
+ms.lasthandoff: 12/11/2020
+ms.locfileid: "97333060"
 ---
 # <a name="sysdm_tran_version_store-transact-sql"></a>sys.dm_tran_version_store(Transact-SQL)
 [!INCLUDE [SQL Server SQL Database](../../includes/applies-to-version/sql-asdb.md)]
 
-  버전 저장소의 모든 버전 레코드를 표시하는 가상 테이블을 반환합니다. **dm_tran_version_store** 는 전체 버전 저장소를 쿼리 하기 때문에 실행이 비효율적 이며, 버전 저장소가 매우 클 수 있습니다.  
+  버전 저장소의 모든 버전 레코드를 표시하는 가상 테이블을 반환합니다. **sys.dm_tran_version_store** 는 전체 버전 저장소를 쿼리 하기 때문에 실행이 비효율적 이며, 버전 저장소가 매우 클 수 있습니다.  
   
  각 버전 레코드는 일부 추적/상태 정보와 함께 이진 데이터로 저장됩니다. 데이터베이스 테이블의 레코드와 마찬가지로 버전 저장소 레코드도 8192바이트 페이지로 저장됩니다. 레코드가 8192바이트를 초과하면 두 개의 레코드로 분할됩니다.  
   
- 버전 레코드는 이진 데이터로 저장되므로 각 데이터베이스의 다양한 데이터 정렬로 인한 문제가 발생하지 않습니다. 버전 저장소에 있는 것 처럼 이진 표현에서 이전 버전의 행을 찾으려면 **dm_tran_version_store** 를 사용 합니다.  
+ 버전 레코드는 이진 데이터로 저장되므로 각 데이터베이스의 다양한 데이터 정렬로 인한 문제가 발생하지 않습니다. 버전 저장소에 있는 것 처럼 이진 표현에서 이전 버전의 행을 찾으려면 **sys.dm_tran_version_store** 를 사용 합니다.  
   
   
-## <a name="syntax"></a>구문  
+## <a name="syntax"></a>Syntax  
   
 ```  
 sys.dm_tran_version_store  
@@ -62,7 +62,7 @@ sys.dm_tran_version_store
 ## <a name="permissions"></a>사용 권한
 
 에 [!INCLUDE[ssNoVersion_md](../../includes/ssnoversion-md.md)] 는 `VIEW SERVER STATE` 권한이 필요 합니다.   
-[!INCLUDE[ssSDS_md](../../includes/sssds-md.md)]Premium 계층에서는 데이터베이스에 대 한 권한이 필요 합니다 `VIEW DATABASE STATE` . [!INCLUDE[ssSDS_md](../../includes/sssds-md.md)]표준 및 기본 계층에서는 **서버 관리자** 또는 **Azure Active Directory 관리자** 계정이 필요 합니다.   
+SQL Database Basic, S0 및 S1 서비스 목적과 탄력적 풀의 데이터베이스에 대해서는 `Server admin` 또는 `Azure Active Directory admin` 계정이 필요 합니다. 다른 모든 SQL Database 서비스 목표에서 `VIEW DATABASE STATE` 사용 권한은 데이터베이스에서 필요 합니다.   
   
 ## <a name="examples"></a>예제  
  다음 예에서는 ALLOW_SNAPSHOT_ISOLATION 및 READ_COMMITTED_SNAPSHOT 옵션이 ON으로 설정된 데이터베이스에서 각각 XSN(트랜잭션 시퀀스 번호)으로 식별되는 4개의 동시 트랜잭션이 실행되는 테스트 시나리오를 사용합니다. 다음 트랜잭션이 실행되고 있습니다.  

@@ -1,6 +1,6 @@
 ---
 description: sys.dm_exec_plan_attributes(Transact-SQL)
-title: sys. dm_exec_plan_attributes (Transact-sql) | Microsoft Docs
+title: sys.dm_exec_plan_attributes (Transact-sql) | Microsoft Docs
 ms.custom: ''
 ms.date: 10/20/2017
 ms.prod: sql
@@ -19,12 +19,12 @@ helpviewer_keywords:
 ms.assetid: dacf3ab3-f214-482e-aab5-0dab9f0a3648
 author: markingmyname
 ms.author: maghan
-ms.openlocfilehash: 481638908fea0dbad0c593b2ca8ee28195b3eaf8
-ms.sourcegitcommit: dd36d1cbe32cd5a65c6638e8f252b0bd8145e165
+ms.openlocfilehash: c80e576bd6f2872a2486da5fd09292609f86ba60
+ms.sourcegitcommit: 2991ad5324601c8618739915aec9b184a8a49c74
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 09/08/2020
-ms.locfileid: "89546608"
+ms.lasthandoff: 12/11/2020
+ms.locfileid: "97331989"
 ---
 # <a name="sysdm_exec_plan_attributes-transact-sql"></a>sys.dm_exec_plan_attributes(Transact-SQL)
 [!INCLUDE [SQL Server](../../includes/applies-to-version/sqlserver.md)]
@@ -41,19 +41,19 @@ sys.dm_exec_plan_attributes ( plan_handle )
   
 ## <a name="arguments"></a>인수  
  *plan_handle*  
- 실행된 일괄 처리에 대한 쿼리 계획을 고유하게 식별하며 해당 계획은 계획 캐시에 있습니다. *plan_handle* 은 **varbinary (64)** 입니다. 계획 핸들은 [sys. dm_exec_cached_plans](../../relational-databases/system-dynamic-management-views/sys-dm-exec-cached-plans-transact-sql.md) 동적 관리 뷰에서 가져올 수 있습니다.  
+ 실행된 일괄 처리에 대한 쿼리 계획을 고유하게 식별하며 해당 계획은 계획 캐시에 있습니다. *plan_handle* 은 **varbinary (64)** 입니다. [Sys.dm_exec_cached_plans](../../relational-databases/system-dynamic-management-views/sys-dm-exec-cached-plans-transact-sql.md) 동적 관리 뷰에서 계획 핸들을 가져올 수 있습니다.  
   
 ## <a name="table-returned"></a>반환된 테이블  
   
 |열 이름|데이터 형식|Description|  
 |-----------------|---------------|-----------------|  
 |특성|**varchar(128)**|이 계획과 연결된 특성의 이름입니다. 이 항목의 바로 아래 표에는 가능한 특성, 해당 데이터 형식 및 해당 설명이 나열 되어 있습니다.|  
-|value|**sql_variant**|이 계획과 연결된 특성의 값입니다.|  
+|값|**sql_variant**|이 계획과 연결된 특성의 값입니다.|  
 |is_cache_key|**bit**|특성이 계획에 대한 캐시 조회 키의 일부로 사용되는지 여부를 나타냅니다.|  
 
 위의 표에서 **특성** 에는 다음 값을 사용할 수 있습니다.
 
-|attribute|데이터 형식|Description|  
+|특성|데이터 형식|Description|  
 |---------------|---------------|-----------------|  
 |set_options|**int**|계획을 컴파일할 때 사용하는 옵션 값을 나타냅니다.|  
 |objectid|**int**|캐시에서 개체를 찾는 데 사용되는 기본 키 중 하나입니다. 이는 데이터베이스 개체 (프로시저, 뷰, 트리거 등)에 대해 [sys. 개체](../../relational-databases/system-catalog-views/sys-objects-transact-sql.md) 에 저장 된 개체 ID입니다. 계획 유형이 "임시" 또는 "준비됨"일 경우 일괄 처리 텍스트의 내부 해시입니다.|  
@@ -82,7 +82,7 @@ sys.dm_exec_plan_attributes ( plan_handle )
 ## <a name="permissions"></a>사용 권한  
 
 에 [!INCLUDE[ssNoVersion_md](../../includes/ssnoversion-md.md)] 는 `VIEW SERVER STATE` 권한이 필요 합니다.   
-[!INCLUDE[ssSDS_md](../../includes/sssds-md.md)]Premium 계층에서는 데이터베이스에 대 한 권한이 필요 합니다 `VIEW DATABASE STATE` . [!INCLUDE[ssSDS_md](../../includes/sssds-md.md)]표준 및 기본 계층에서는 **서버 관리자** 또는 **Azure Active Directory 관리자** 계정이 필요 합니다.   
+SQL Database Basic, S0 및 S1 서비스 목적과 탄력적 풀의 데이터베이스에 대해서는 `Server admin` 또는 `Azure Active Directory admin` 계정이 필요 합니다. 다른 모든 SQL Database 서비스 목표에서 `VIEW DATABASE STATE` 사용 권한은 데이터베이스에서 필요 합니다.   
 
 ## <a name="remarks"></a>설명  
   

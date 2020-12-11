@@ -1,6 +1,6 @@
 ---
 description: sys.dm_tran_active_snapshot_database_transactions(Transact-SQL)
-title: sys. dm_tran_active_snapshot_database_transactions (Transact-sql) | Microsoft Docs
+title: sys.dm_tran_active_snapshot_database_transactions (Transact-sql) | Microsoft Docs
 ms.custom: ''
 ms.date: 03/15/2017
 ms.prod: sql
@@ -21,12 +21,12 @@ ms.assetid: 55b83f9c-da10-4e65-9846-f4ef3c0c0f36
 author: markingmyname
 ms.author: maghan
 monikerRange: '>=aps-pdw-2016||=azuresqldb-current||=azure-sqldw-latest||>=sql-server-2016||=sqlallproducts-allversions||>=sql-server-linux-2017||=azuresqldb-mi-current'
-ms.openlocfilehash: 3f9d0d8b71bf4c4a1dac1ecdefd5422137a3a755
-ms.sourcegitcommit: dd36d1cbe32cd5a65c6638e8f252b0bd8145e165
+ms.openlocfilehash: 537cc5a047536c682d8eb6f61d8d4811ccba1a73
+ms.sourcegitcommit: 2991ad5324601c8618739915aec9b184a8a49c74
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 09/08/2020
-ms.locfileid: "89550239"
+ms.lasthandoff: 12/11/2020
+ms.locfileid: "97330670"
 ---
 # <a name="sysdm_tran_active_snapshot_database_transactions-transact-sql"></a>sys.dm_tran_active_snapshot_database_transactions(Transact-SQL)
 [!INCLUDE [sql-asdb-asdbmi-asa-pdw](../../includes/applies-to-version/sql-asdb-asdbmi-asa-pdw.md)]
@@ -48,9 +48,9 @@ ms.locfileid: "89550239"
  이 동적 관리 뷰에는 시스템 트랜잭션이 포함되지 않습니다.  
   
 > [!NOTE]  
->  또는에서이를 호출 하려면 [!INCLUDE[ssSDWfull](../../includes/sssdwfull-md.md)] [!INCLUDE[ssPDW](../../includes/sspdw-md.md)] 이름 **sys. dm_pdw_nodes_tran_active_snapshot_database_transactions**을 사용 합니다.  
+>  또는에서이를 호출 하려면 [!INCLUDE[ssSDWfull](../../includes/sssdwfull-md.md)] [!INCLUDE[ssPDW](../../includes/sspdw-md.md)] **sys.dm_pdw_nodes_tran_active_snapshot_database_transactions** 이름을 사용 합니다.  
   
-## <a name="syntax"></a>구문  
+## <a name="syntax"></a>Syntax  
   
 ```  
   
@@ -75,10 +75,10 @@ sys.dm_tran_active_snapshot_database_transactions
 ## <a name="permissions"></a>사용 권한
 
 에 [!INCLUDE[ssNoVersion_md](../../includes/ssnoversion-md.md)] 는 `VIEW SERVER STATE` 권한이 필요 합니다.   
-[!INCLUDE[ssSDS_md](../../includes/sssds-md.md)]Premium 계층에서는 데이터베이스에 대 한 권한이 필요 합니다 `VIEW DATABASE STATE` . [!INCLUDE[ssSDS_md](../../includes/sssds-md.md)]표준 및 기본 계층에서는 **서버 관리자** 또는 **Azure Active Directory 관리자** 계정이 필요 합니다.   
+SQL Database Basic, S0 및 S1 서비스 목적과 탄력적 풀의 데이터베이스에 대해서는 `Server admin` 또는 `Azure Active Directory admin` 계정이 필요 합니다. 다른 모든 SQL Database 서비스 목표에서 `VIEW DATABASE STATE` 사용 권한은 데이터베이스에서 필요 합니다.   
 
 ## <a name="remarks"></a>설명  
- **dm_tran_active_snapshot_database_transactions** 는 XSN (트랜잭션 시퀀스 번호)이 할당 된 트랜잭션을 보고 합니다. 트랜잭션이 처음으로 버전 저장소에 액세스하면 XSN이 할당됩니다. 스냅샷 격리나 행 버전 관리를 사용하는 커밋된 읽기 격리가 설정된 데이터베이스에서 이 예는 XSN이 트랜잭션에 할당된 시기를 보여 줍니다.  
+ **sys.dm_tran_active_snapshot_database_transactions** 는 XSN (트랜잭션 시퀀스 번호)이 할당 된 트랜잭션을 보고 합니다. 트랜잭션이 처음으로 버전 저장소에 액세스하면 XSN이 할당됩니다. 스냅샷 격리나 행 버전 관리를 사용하는 커밋된 읽기 격리가 설정된 데이터베이스에서 이 예는 XSN이 트랜잭션에 할당된 시기를 보여 줍니다.  
   
 -   트랜잭션이 직렬화 가능 격리 수준에서 실행되는 경우 트랜잭션에서 행 버전이 생성되게 하는 UPDATE 작업 등의 문을 처음으로 실행할 때 XSN이 할당됩니다.  
   
@@ -144,7 +144,7 @@ elapsed_time_seconds
 333  
 ```  
   
- 다음 정보는 **dm_tran_active_snapshot_database_transactions**의 결과를 평가 합니다.  
+ 다음 정보는 **sys.dm_tran_active_snapshot_database_transactions** 의 결과를 평가 합니다.  
   
 -   XSN-57:이 트랜잭션이 스냅숏 격리에서 실행 되 고 있지 않기 때문에 `is_snapshot` 및 값은 `first_snapshot_sequence_num` `0` 입니다. ALLOW_SNAPSHOT_ISOLATION 또는 READ_COMMITTED_SNAPSHOT 데이터베이스 옵션 중 하나 또는 둘 다가 ON이므로 `transaction_sequence_num`은 이 트랜잭션에 트랜잭션 시퀀스 번호가 할당되었음을 보여 줍니다.  
   

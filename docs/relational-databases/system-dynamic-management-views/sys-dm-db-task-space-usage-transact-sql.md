@@ -1,6 +1,6 @@
 ---
 description: sys.dm_db_task_space_usage(Transact-SQL)
-title: sys. dm_db_task_space_usage (Transact-sql) | Microsoft Docs
+title: sys.dm_db_task_space_usage (Transact-sql) | Microsoft Docs
 ms.custom: ''
 ms.date: 03/15/2017
 ms.prod: sql
@@ -21,12 +21,12 @@ ms.assetid: fb0c87e5-43b9-466a-a8df-11b3851dc6d0
 author: markingmyname
 ms.author: maghan
 monikerRange: '>=aps-pdw-2016||=azuresqldb-current||=azure-sqldw-latest||>=sql-server-2016||=sqlallproducts-allversions||>=sql-server-linux-2017||=azuresqldb-mi-current'
-ms.openlocfilehash: 6676eba5608202de4a1ba1df69a8134ac4ece208
-ms.sourcegitcommit: dd36d1cbe32cd5a65c6638e8f252b0bd8145e165
+ms.openlocfilehash: b12250fd43e716d480269ffca1d1d7df2a535230
+ms.sourcegitcommit: 2991ad5324601c8618739915aec9b184a8a49c74
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 09/08/2020
-ms.locfileid: "89544006"
+ms.lasthandoff: 12/11/2020
+ms.locfileid: "97331444"
 ---
 # <a name="sysdm_db_task_space_usage-transact-sql"></a>sys.dm_db_task_space_usage(Transact-SQL)
 [!INCLUDE [sql-asdb-asdbmi-asa-pdw](../../includes/applies-to-version/sql-asdb-asdbmi-asa-pdw.md)]
@@ -37,13 +37,13 @@ ms.locfileid: "89544006"
 >  이 뷰는 [tempdb 데이터베이스](../../relational-databases/databases/tempdb-database.md)에만 적용 됩니다.  
   
 > [!NOTE]  
->  또는에서이를 호출 하려면 [!INCLUDE[ssSDWfull](../../includes/sssdwfull-md.md)] [!INCLUDE[ssPDW](../../includes/sspdw-md.md)] 이름 **sys. dm_pdw_nodes_db_task_space_usage**을 사용 합니다.  
+>  또는에서이를 호출 하려면 [!INCLUDE[ssSDWfull](../../includes/sssdwfull-md.md)] [!INCLUDE[ssPDW](../../includes/sspdw-md.md)] **sys.dm_pdw_nodes_db_task_space_usage** 이름을 사용 합니다.  
   
 |열 이름|데이터 형식|Description|  
 |-----------------|---------------|-----------------|  
 |**session_id**|**smallint**|세션 ID입니다.|  
 |**request_id**|**int**|세션 내의 요청 ID입니다.<br /><br /> 요청은 일괄 처리라고도 하며 하나 이상의 쿼리를 포함할 수 있습니다. 하나의 세션은 동시에 활성 상태에 있는 요청을 여러 개 포함할 수 있습니다. 병렬 실행 계획이 사용되는 경우 요청의 각 쿼리가 여러 개의 스레드(태스크)를 시작할 수도 있습니다.|  
-|**exec_context_id**|**int**|태스크의 실행 컨텍스트 ID입니다. 자세한 내용은 [dm_os_tasks &#40;transact-sql&#41;](../../relational-databases/system-dynamic-management-views/sys-dm-os-tasks-transact-sql.md)을 참조 하십시오.|  
+|**exec_context_id**|**int**|태스크의 실행 컨텍스트 ID입니다. 자세한 내용은 [sys.dm_os_tasks &#40;transact-sql&#41;](../../relational-databases/system-dynamic-management-views/sys-dm-os-tasks-transact-sql.md)를 참조 하세요.|  
 |**database_id**|**smallint**|데이터베이스 ID입니다.|  
 |**user_objects_alloc_page_count**|**bigint**|이 태스크에 의해 사용자 개체에 예약되거나 할당된 페이지 수입니다.|  
 |**user_objects_dealloc_page_count**|**bigint**|이 태스크에 의해 사용자 개체에서 할당 취소되고 더 이상 예약되지 않는 페이지 수입니다.|  
@@ -54,7 +54,7 @@ ms.locfileid: "89544006"
 ## <a name="permissions"></a>사용 권한
 
 에 [!INCLUDE[ssNoVersion_md](../../includes/ssnoversion-md.md)] 는 `VIEW SERVER STATE` 권한이 필요 합니다.   
-[!INCLUDE[ssSDS_md](../../includes/sssds-md.md)]Premium 계층에서는 데이터베이스에 대 한 권한이 필요 합니다 `VIEW DATABASE STATE` . [!INCLUDE[ssSDS_md](../../includes/sssds-md.md)]표준 및 기본 계층에서는 **서버 관리자** 또는 **Azure Active Directory 관리자** 계정이 필요 합니다.   
+SQL Database Basic, S0 및 S1 서비스 목적과 탄력적 풀의 데이터베이스에 대해서는 `Server admin` 또는 `Azure Active Directory admin` 계정이 필요 합니다. 다른 모든 SQL Database 서비스 목표에서 `VIEW DATABASE STATE` 사용 권한은 데이터베이스에서 필요 합니다.   
 
 ## <a name="remarks"></a>설명  
  IAM 페이지는 이 뷰에서 보고되는 페이지 수에 포함되지 않습니다.  
@@ -79,7 +79,7 @@ ms.locfileid: "89544006"
 -   테이블 반환 함수에서 반환된 테이블  
   
 ## <a name="internal-objects"></a>내부 개체  
- 내부 개체는 **tempdb**에만 있습니다. 내부 개체 페이지 카운터에 포함되는 개체는 다음과 같습니다.  
+ 내부 개체는 **tempdb** 에만 있습니다. 내부 개체 페이지 카운터에 포함되는 개체는 다음과 같습니다.  
   
 -   커서 또는 스풀 작업에 대한 작업 테이블 및 임시 LOB(Large Object) 스토리지  
   
@@ -92,7 +92,7 @@ ms.locfileid: "89544006"
   
 ## <a name="relationship-cardinalities"></a>관계 카디널리티  
   
-|시작|대상|관계|  
+|From|대상|관계|  
 |----------|--------|------------------|  
 |dm_db_task_space_usage.request_id|dm_exec_requests.request_id|일대일|  
 |dm_db_task_space_usage.session_id|dm_exec_requests.session_id|일대일|  
@@ -102,8 +102,8 @@ ms.locfileid: "89544006"
  [Transact-sql&#41;&#40;데이터베이스 관련 동적 관리 뷰 ](../../relational-databases/system-dynamic-management-views/database-related-dynamic-management-views-transact-sql.md)   
  [sys.dm_exec_sessions &#40;Transact-SQL&#41;](../../relational-databases/system-dynamic-management-views/sys-dm-exec-sessions-transact-sql.md)   
  [sys.dm_exec_requests &#40;Transact-SQL&#41;](../../relational-databases/system-dynamic-management-views/sys-dm-exec-requests-transact-sql.md)   
- [dm_os_tasks &#40;Transact-sql&#41;](../../relational-databases/system-dynamic-management-views/sys-dm-os-tasks-transact-sql.md)   
- [dm_db_session_space_usage &#40;Transact-sql&#41;](../../relational-databases/system-dynamic-management-views/sys-dm-db-session-space-usage-transact-sql.md)   
+ [Transact-sql&#41;sys.dm_os_tasks &#40;](../../relational-databases/system-dynamic-management-views/sys-dm-os-tasks-transact-sql.md)   
+ [Transact-sql&#41;sys.dm_db_session_space_usage &#40;](../../relational-databases/system-dynamic-management-views/sys-dm-db-session-space-usage-transact-sql.md)   
  [sys.dm_db_file_space_usage&#40;Transact-SQL&#41;](../../relational-databases/system-dynamic-management-views/sys-dm-db-file-space-usage-transact-sql.md)  
   
   

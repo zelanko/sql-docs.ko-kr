@@ -1,6 +1,6 @@
 ---
 description: sys.dm_fts_memory_buffers(Transact-SQL)
-title: sys. dm_fts_memory_buffers (Transact-sql) | Microsoft Docs
+title: sys.dm_fts_memory_buffers (Transact-sql) | Microsoft Docs
 ms.custom: ''
 ms.date: 03/29/2017
 ms.prod: sql
@@ -21,12 +21,12 @@ ms.assetid: 56895fe5-e8df-4d75-9adc-c1f7757cdef8
 author: pmasl
 ms.author: pelopes
 monikerRange: =azuresqldb-current||>=sql-server-2016||=sqlallproducts-allversions||>=sql-server-linux-2017||=azuresqldb-mi-current
-ms.openlocfilehash: 876030e17d795ec703a915afaba63abcd2bc7dd4
-ms.sourcegitcommit: e700497f962e4c2274df16d9e651059b42ff1a10
+ms.openlocfilehash: d4948ec70d4073f3c3fbae8774b1974c84af84e2
+ms.sourcegitcommit: 2991ad5324601c8618739915aec9b184a8a49c74
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 08/17/2020
-ms.locfileid: "88474933"
+ms.lasthandoff: 12/11/2020
+ms.locfileid: "97323936"
 ---
 # <a name="sysdm_fts_memory_buffers-transact-sql"></a>sys.dm_fts_memory_buffers(Transact-SQL)
 [!INCLUDE [SQL Server SQL Database](../../includes/applies-to-version/sql-asdb.md)]
@@ -50,14 +50,14 @@ ms.locfileid: "88474933"
 ## <a name="permissions"></a>사용 권한  
 
 에 [!INCLUDE[ssNoVersion_md](../../includes/ssnoversion-md.md)] 는 `VIEW SERVER STATE` 권한이 필요 합니다.   
-[!INCLUDE[ssSDS_md](../../includes/sssds-md.md)]Premium 계층에서는 데이터베이스에 대 한 권한이 필요 합니다 `VIEW DATABASE STATE` . [!INCLUDE[ssSDS_md](../../includes/sssds-md.md)]표준 및 기본 계층에서는 **서버 관리자** 또는 **Azure Active Directory 관리자** 계정이 필요 합니다.   
+SQL Database Basic, S0 및 S1 서비스 목적과 탄력적 풀의 데이터베이스에 대해서는 `Server admin` 또는 `Azure Active Directory admin` 계정이 필요 합니다. 다른 모든 SQL Database 서비스 목표에서 `VIEW DATABASE STATE` 사용 권한은 데이터베이스에서 필요 합니다.   
   
 ## <a name="physical-joins"></a>물리적 조인  
  ![이 동적 관리 뷰의 유효 조인](../../relational-databases/system-dynamic-management-views/media/join-dm-fts-memory-buffers-1.gif "이 동적 관리 뷰의 유효 조인")  
   
 ## <a name="relationship-cardinalities"></a>관계 카디널리티  
   
-|보낸 사람|대상|관계|  
+|From|대상|관계|  
 |----------|--------|------------------|  
 |dm_fts_memory_buffers.pool_id|dm_fts_memory_pools.pool_id|다 대 일|  
   

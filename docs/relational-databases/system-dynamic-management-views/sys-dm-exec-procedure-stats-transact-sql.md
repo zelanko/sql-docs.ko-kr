@@ -1,6 +1,6 @@
 ---
 description: sys.dm_exec_procedure_stats(Transact-SQL)
-title: sys. dm_exec_procedure_stats (Transact-sql) | Microsoft Docs
+title: sys.dm_exec_procedure_stats (Transact-sql) | Microsoft Docs
 ms.custom: ''
 ms.date: 06/03/2019
 ms.prod: sql
@@ -21,23 +21,23 @@ ms.assetid: ab8ddde8-1cea-4b41-a7e4-697e6ddd785a
 author: markingmyname
 ms.author: maghan
 monikerRange: '>=aps-pdw-2016||=azuresqldb-current||=azure-sqldw-latest||>=sql-server-2016||=sqlallproducts-allversions||>=sql-server-linux-2017||=azuresqldb-mi-current'
-ms.openlocfilehash: 958167d816d50a32e11d45983c47f3e98c50a70a
-ms.sourcegitcommit: dd36d1cbe32cd5a65c6638e8f252b0bd8145e165
+ms.openlocfilehash: 70ee1a165c97c2af3a9a277f641f79ec0af4b69e
+ms.sourcegitcommit: 2991ad5324601c8618739915aec9b184a8a49c74
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 09/08/2020
-ms.locfileid: "89546649"
+ms.lasthandoff: 12/11/2020
+ms.locfileid: "97330200"
 ---
 # <a name="sysdm_exec_procedure_stats-transact-sql"></a>sys.dm_exec_procedure_stats(Transact-SQL)
 [!INCLUDE [sql-asdb-asdbmi-asa-pdw](../../includes/applies-to-version/sql-asdb-asdbmi-asa-pdw.md)]
 
-  캐시된 저장 프로시저에 대한 집계 성능 통계를 반환합니다. 이 뷰에는 캐시된 각 저장 프로시저 계획에 대해 하나의 행이 반환되며 행의 유효 기간은 저장 프로시저가 캐시에 남아 있는 기간과 같습니다. 캐시에서 저장 프로시저가 제거되면 이 뷰에서도 해당 행이 제거됩니다. 이때 Performance Statistics SQL 추적 이벤트가 **sys.dm_exec_query_stats**와 유사하게 발생합니다.  
+  캐시된 저장 프로시저에 대한 집계 성능 통계를 반환합니다. 이 뷰에는 캐시된 각 저장 프로시저 계획에 대해 하나의 행이 반환되며 행의 유효 기간은 저장 프로시저가 캐시에 남아 있는 기간과 같습니다. 캐시에서 저장 프로시저가 제거되면 이 뷰에서도 해당 행이 제거됩니다. 이때 Performance Statistics SQL 추적 이벤트가 **sys.dm_exec_query_stats** 와 유사하게 발생합니다.  
   
  [!INCLUDE[ssSDSfull](../../includes/sssdsfull-md.md)]에서 동적 관리 뷰는 데이터베이스 포함에 영향을 줄 수 있는 정보 또는 사용자가 액세스할 수 있는 다른 데이터베이스 정보를 노출할 수 없습니다. 이 정보를 노출 하지 않도록 하기 위해 연결 된 테 넌 트에 속하지 않는 데이터를 포함 하는 모든 행이 필터링 됩니다.  
   
 > [!NOTE]
-> 데이터는 완료 된 쿼리만 반영 하 고 아직 진행 중인 쿼리는 반영 하지 않으므로, **dm_exec_procedure_stats**  의 결과는 각 실행에 따라 달라질 수 있습니다.
-> 또는에서이를 호출 하려면 [!INCLUDE[ssSDWfull](../../includes/sssdwfull-md.md)] [!INCLUDE[ssPDW](../../includes/sspdw-md.md)] 이름 **sys. dm_pdw_nodes_exec_procedure_stats**을 사용 합니다. 
+> 데이터는 완료 된 쿼리만 반영 하 고 진행 중인 쿼리는 반영 하지 않으므로 **sys.dm_exec_procedure_stats**  의 결과는 각 실행에 따라 다를 수 있습니다.
+> 또는에서이를 호출 하려면 [!INCLUDE[ssSDWfull](../../includes/sssdwfull-md.md)] [!INCLUDE[ssPDW](../../includes/sspdw-md.md)] **sys.dm_pdw_nodes_exec_procedure_stats** 이름을 사용 합니다. 
 
   
 |열 이름|데이터 형식|Description|  
@@ -46,8 +46,8 @@ ms.locfileid: "89546649"
 |**object_id**|**int**|이 저장 프로시저의 개체 ID입니다.|  
 |**type**|**char(2)**|개체의 유형입니다.<br /><br /> P = SQL 저장 프로시저<br /><br /> PC = 어셈블리(CLR) 저장 프로시저<br /><br /> X = 확장 저장 프로시저|  
 |**type_desc**|**nvarchar(60)**|개체 유형에 대한 설명:<br /><br /> SQL_STORED_PROCEDURE<br /><br /> CLR_STORED_PROCEDURE<br /><br /> EXTENDED_STORED_PROCEDURE|  
-|**sql_handle**|**varbinary(64)**|이 저장 프로시저 내에서 실행 된 **dm_exec_query_stats** 의 쿼리와 상호 연결 하는 데 사용할 수 있습니다.|  
-|**plan_handle**|**varbinary(64)**|메모리 내 계획의 식별자입니다. 이 식별자는 일시적이며 계획이 캐시에 있는 동안에만 일정하게 유지됩니다. 이 값은 **dm_exec_cached_plans** 동적 관리 뷰와 함께 사용할 수 있습니다.<br /><br /> 고유하게 컴파일된 저장 프로시저에서 메모리 최적화 테이블을 쿼리하는 경우 항상 0x000입니다.|  
+|**sql_handle**|**varbinary(64)**|이 저장 프로시저 내에서 실행 된 **sys.dm_exec_query_stats** 의 쿼리와 상호 연결 하는 데 사용할 수 있습니다.|  
+|**plan_handle**|**varbinary(64)**|메모리 내 계획의 식별자입니다. 이 식별자는 일시적이며 계획이 캐시에 있는 동안에만 일정하게 유지됩니다. 이 값은 **sys.dm_exec_cached_plans** 동적 관리 뷰와 함께 사용할 수 있습니다.<br /><br /> 고유하게 컴파일된 저장 프로시저에서 메모리 최적화 테이블을 쿼리하는 경우 항상 0x000입니다.|  
 |**cached_time**|**datetime**|이 저장 프로시저가 캐시에 추가된 시간입니다.|  
 |**last_execution_time**|**datetime**|이 저장 프로시저가 마지막으로 실행된 시간입니다.|  
 |**execution_count**|**bigint**|저장 프로시저가 마지막으로 컴파일된 이후 실행 된 횟수입니다.|  
@@ -86,7 +86,7 @@ ms.locfileid: "89546649"
 ## <a name="permissions"></a>사용 권한  
 
 에 [!INCLUDE[ssNoVersion_md](../../includes/ssnoversion-md.md)] 는 `VIEW SERVER STATE` 권한이 필요 합니다.   
-[!INCLUDE[ssSDS_md](../../includes/sssds-md.md)]Premium 계층에서는 데이터베이스에 대 한 권한이 필요 합니다 `VIEW DATABASE STATE` . [!INCLUDE[ssSDS_md](../../includes/sssds-md.md)]표준 및 기본 계층에서는 **서버 관리자** 또는 **Azure Active Directory 관리자** 계정이 필요 합니다.   
+SQL Database Basic, S0 및 S1 서비스 목적과 탄력적 풀의 데이터베이스에 대해서는 `Server admin` 또는 `Azure Active Directory admin` 계정이 필요 합니다. 다른 모든 SQL Database 서비스 목표에서 `VIEW DATABASE STATE` 사용 권한은 데이터베이스에서 필요 합니다.   
    
 ## <a name="remarks"></a>설명  
  저장 프로시저의 실행이 완료되면 뷰에 있는 통계가 업데이트됩니다.  
@@ -105,10 +105,10 @@ ORDER BY [total_worker_time] DESC;
   
 ## <a name="see-also"></a>참고 항목  
 [Transact-sql&#41;&#40;관련 동적 관리 뷰 및 함수 실행 ](../../relational-databases/system-dynamic-management-views/execution-related-dynamic-management-views-and-functions-transact-sql.md)   
-[dm_exec_sql_text &#40;Transact-sql&#41;](../../relational-databases/system-dynamic-management-views/sys-dm-exec-sql-text-transact-sql.md)   
-[dm_exec_query_plan &#40;Transact-sql&#41;](../../relational-databases/system-dynamic-management-views/sys-dm-exec-query-plan-transact-sql.md)    
-[dm_exec_query_stats &#40;Transact-sql&#41;](../../relational-databases/system-dynamic-management-views/sys-dm-exec-query-stats-transact-sql.md)    
-[dm_exec_trigger_stats &#40;Transact-sql&#41;](../../relational-databases/system-dynamic-management-views/sys-dm-exec-trigger-stats-transact-sql.md)    
+[Transact-sql&#41;sys.dm_exec_sql_text &#40;](../../relational-databases/system-dynamic-management-views/sys-dm-exec-sql-text-transact-sql.md)   
+[Transact-sql&#41;sys.dm_exec_query_plan &#40;](../../relational-databases/system-dynamic-management-views/sys-dm-exec-query-plan-transact-sql.md)    
+[Transact-sql&#41;sys.dm_exec_query_stats &#40;](../../relational-databases/system-dynamic-management-views/sys-dm-exec-query-stats-transact-sql.md)    
+[Transact-sql&#41;sys.dm_exec_trigger_stats &#40;](../../relational-databases/system-dynamic-management-views/sys-dm-exec-trigger-stats-transact-sql.md)    
 [sys.dm_exec_cached_plans&#40;Transact-SQL&#41;](../../relational-databases/system-dynamic-management-views/sys-dm-exec-cached-plans-transact-sql.md)    
   
   

@@ -1,6 +1,6 @@
 ---
 description: sys.dm_exec_query_resource_semaphores(Transact-SQL)
-title: sys. dm_exec_query_resource_semaphores (Transact-sql) | Microsoft Docs
+title: sys.dm_exec_query_resource_semaphores (Transact-sql) | Microsoft Docs
 ms.custom: ''
 ms.date: 08/09/2016
 ms.prod: sql
@@ -21,24 +21,24 @@ ms.assetid: e43a2aa9-dd52-4c89-911e-1a7d05f7ffbb
 author: markingmyname
 ms.author: maghan
 monikerRange: '>=aps-pdw-2016||=azuresqldb-current||=azure-sqldw-latest||>=sql-server-2016||=sqlallproducts-allversions||>=sql-server-linux-2017||=azuresqldb-mi-current'
-ms.openlocfilehash: 6d782c81ce803441e91d6008ae5b0117522c3286
-ms.sourcegitcommit: dd36d1cbe32cd5a65c6638e8f252b0bd8145e165
+ms.openlocfilehash: d8c04104f41631e57a277c339151157353d0d830
+ms.sourcegitcommit: 2991ad5324601c8618739915aec9b184a8a49c74
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 09/08/2020
-ms.locfileid: "89548570"
+ms.lasthandoff: 12/11/2020
+ms.locfileid: "97330929"
 ---
 # <a name="sysdm_exec_query_resource_semaphores-transact-sql"></a>sys.dm_exec_query_resource_semaphores(Transact-SQL)
 [!INCLUDE [sql-asdb-asdbmi-asa-pdw](../../includes/applies-to-version/sql-asdb-asdbmi-asa-pdw.md)]
 
-  [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]에서 현재 쿼리 리소스 세마포 상태에 대한 정보를 반환합니다. **dm_exec_query_resource_semaphores** 일반적인 쿼리 실행 메모리 상태를 제공 하며 시스템에서 충분 한 메모리에 액세스할 수 있는지 여부를 확인할 수 있습니다. 이 뷰는 서버 메모리 상태에 대 한 전체 그림을 제공 하기 위해 [dm_os_memory_clerks](../../relational-databases/system-dynamic-management-views/sys-dm-os-memory-clerks-transact-sql.md) 에서 가져온 메모리 정보를 보완 합니다. **dm_exec_query_resource_semaphores** 는 일반 리소스 세마포에 대해 한 행을 반환 하 고, 작은 쿼리 리소스 세마포의 경우 다른 행을 반환 합니다. 작은 쿼리 세마포에는 다음과 같은 두 가지 요구 사항이 있습니다.  
+  [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]에서 현재 쿼리 리소스 세마포 상태에 대한 정보를 반환합니다. **sys.dm_exec_query_resource_semaphores** 일반적인 쿼리 실행 메모리 상태를 제공 하며 시스템에서 충분 한 메모리에 액세스할 수 있는지 여부를 확인할 수 있습니다. 이 보기는 [sys.dm_os_memory_clerks](../../relational-databases/system-dynamic-management-views/sys-dm-os-memory-clerks-transact-sql.md) 에서 얻은 메모리 정보를 보완 하 여 서버 메모리 상태에 대 한 전체 그림을 제공 합니다. **sys.dm_exec_query_resource_semaphores** 는 일반 리소스 세마포에 대해 한 행을 반환 하 고, 작은 쿼리 리소스 세마포의 경우 다른 행을 반환 합니다. 작은 쿼리 세마포에는 다음과 같은 두 가지 요구 사항이 있습니다.  
   
 -   요청 된 메모리 부여는 5mb 미만 이어야 합니다.  
   
 -   쿼리 비용은 3 개의 비용 단위 미만 이어야 합니다.  
   
 > [!NOTE]  
->  또는에서이를 호출 하려면 [!INCLUDE[ssSDWfull](../../includes/sssdwfull-md.md)] [!INCLUDE[ssPDW](../../includes/sspdw-md.md)] 이름 **sys. dm_pdw_nodes_exec_query_resource_semaphores**을 사용 합니다.  
+>  또는에서이를 호출 하려면 [!INCLUDE[ssSDWfull](../../includes/sssdwfull-md.md)] [!INCLUDE[ssPDW](../../includes/sspdw-md.md)] **sys.dm_pdw_nodes_exec_query_resource_semaphores** 이름을 사용 합니다.  
   
 |열 이름|데이터 형식|Description|  
 |-----------------|---------------|-----------------|  
@@ -59,12 +59,12 @@ ms.locfileid: "89548570"
 ## <a name="permissions"></a>사용 권한  
 
 에 [!INCLUDE[ssNoVersion_md](../../includes/ssnoversion-md.md)] 는 `VIEW SERVER STATE` 권한이 필요 합니다.   
-[!INCLUDE[ssSDS_md](../../includes/sssds-md.md)]Premium 계층에서는 데이터베이스에 대 한 권한이 필요 합니다 `VIEW DATABASE STATE` . [!INCLUDE[ssSDS_md](../../includes/sssds-md.md)]표준 및 기본 계층에서는 **서버 관리자** 또는 **Azure Active Directory 관리자** 계정이 필요 합니다.   
+SQL Database Basic, S0 및 S1 서비스 목적과 탄력적 풀의 데이터베이스에 대해서는 `Server admin` 또는 `Azure Active Directory admin` 계정이 필요 합니다. 다른 모든 SQL Database 서비스 목표에서 `VIEW DATABASE STATE` 사용 권한은 데이터베이스에서 필요 합니다.   
   
 ## <a name="remarks"></a>설명  
  쿼리에서 ORDER BY 또는 집계가 포함된 동적 관리 뷰를 사용하는 경우 메모리 사용이 증가하여 해결하려는 문제가 악화될 수 있습니다.  
   
- 문제 해결을 위해 dm_exec_query_resource_semaphores를 사용 하지만 이후 버전의를 사용 하는 응용 프로그램에는이를 포함 하지 않습니다 **.** [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]  
+ 문제 해결을 위해 **sys.dm_exec_query_resource_semaphores** 를 사용 하지만 이후 버전의를 사용 하는 응용 프로그램에는이를 포함 하지 않습니다 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] .  
   
  데이터베이스 관리자는 리소스 관리자 기능을 사용하여 서버 리소스를 최대 20개의 리소스 풀에 배치할 수 있습니다. [!INCLUDE[ssSQL11](../../includes/sssql11-md.md)] 이상에서 각 풀은 독립된 작은 서버 인스턴스와 같이 작동하며 2개의 세마포가 필요합니다.  
   

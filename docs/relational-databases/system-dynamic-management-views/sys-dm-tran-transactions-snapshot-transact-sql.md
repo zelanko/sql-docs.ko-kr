@@ -1,6 +1,6 @@
 ---
 description: sys.dm_tran_transactions_snapshot(Transact-SQL)
-title: sys. dm_tran_transactions_snapshot (Transact-sql) | Microsoft Docs
+title: sys.dm_tran_transactions_snapshot (Transact-sql) | Microsoft Docs
 ms.custom: ''
 ms.date: 03/30/2017
 ms.prod: sql
@@ -21,12 +21,12 @@ ms.assetid: 03f64883-07ad-4092-8be0-31973348c647
 author: markingmyname
 ms.author: maghan
 monikerRange: =azuresqldb-current||>=sql-server-2016||=sqlallproducts-allversions||>=sql-server-linux-2017||=azuresqldb-mi-current
-ms.openlocfilehash: bb750ba886aeddc9871e9b3fdbc6d020b9839079
-ms.sourcegitcommit: dd36d1cbe32cd5a65c6638e8f252b0bd8145e165
+ms.openlocfilehash: b7ecd301c08127e4fdc8dbec923961f397006964
+ms.sourcegitcommit: 2991ad5324601c8618739915aec9b184a8a49c74
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 09/08/2020
-ms.locfileid: "89546444"
+ms.lasthandoff: 12/11/2020
+ms.locfileid: "97333094"
 ---
 # <a name="sysdm_tran_transactions_snapshot-transact-sql"></a>sys.dm_tran_transactions_snapshot(Transact-SQL)
 [!INCLUDE [SQL Server SQL Database](../../includes/applies-to-version/sql-asdb.md)]
@@ -37,7 +37,7 @@ ms.locfileid: "89546444"
   
 -   특정 스냅샷 트랜잭션에서 무시하는 데이터 수정 내용을 식별합니다. 스냅샷 트랜잭션이 시작될 때 활성 상태인 트랜잭션의 경우 트랜잭션이 커밋된 후에도 스냅샷 트랜잭션이 해당 트랜잭션에 의한 데이터 수정 내용을 모두 무시합니다.  
   
- 예를 들어, **dm_tran_transactions_snapshot**에서 다음 출력을 고려 하십시오.  
+ 예를 들어 **sys.dm_tran_transactions_snapshot** 에서 다음 출력을 고려 하십시오.  
   
 ```  
 transaction_sequence_num snapshot_id snapshot_sequence_num  
@@ -70,10 +70,10 @@ transaction_sequence_num snapshot_id snapshot_sequence_num
 ## <a name="permissions"></a>사용 권한
 
 에 [!INCLUDE[ssNoVersion_md](../../includes/ssnoversion-md.md)] 는 `VIEW SERVER STATE` 권한이 필요 합니다.   
-[!INCLUDE[ssSDS_md](../../includes/sssds-md.md)]Premium 계층에서는 데이터베이스에 대 한 권한이 필요 합니다 `VIEW DATABASE STATE` . [!INCLUDE[ssSDS_md](../../includes/sssds-md.md)]표준 및 기본 계층에서는 **서버 관리자** 또는 **Azure Active Directory 관리자** 계정이 필요 합니다.   
+SQL Database Basic, S0 및 S1 서비스 목적과 탄력적 풀의 데이터베이스에 대해서는 `Server admin` 또는 `Azure Active Directory admin` 계정이 필요 합니다. 다른 모든 SQL Database 서비스 목표에서 `VIEW DATABASE STATE` 사용 권한은 데이터베이스에서 필요 합니다.   
   
 ## <a name="remarks"></a>설명  
- 스냅샷 트랜잭션이 시작될 때 [!INCLUDE[ssDE](../../includes/ssde-md.md)]은 해당 시점에 활성 상태인 모든 트랜잭션을 기록합니다. **dm_tran_transactions_snapshot** 현재 활성 상태인 모든 스냅숏 트랜잭션에 대해이 정보를 보고 합니다.  
+ 스냅샷 트랜잭션이 시작될 때 [!INCLUDE[ssDE](../../includes/ssde-md.md)]은 해당 시점에 활성 상태인 모든 트랜잭션을 기록합니다. **sys.dm_tran_transactions_snapshot** 현재 활성 상태인 모든 스냅숏 트랜잭션에 대해이 정보를 보고 합니다.  
   
  각 트랜잭션은 트랜잭션이 시작될 때 할당된 트랜잭션 시퀀스 번호로 식별됩니다. 트랜잭션은 BEGIN TRANSACTION 또는 BEGIN WORK 문이 실행될 때 시작됩니다. 그러나 [!INCLUDE[ssDE](../../includes/ssde-md.md)]은 BEGIN TRANSACTION 또는 BEGIN WORK 문 이후 데이터에 액세스하는 첫 번째 [!INCLUDE[tsql](../../includes/tsql-md.md)] 문을 실행할 때 트랜잭션 시퀀스 번호를 할당합니다. 트랜잭션 시퀀스 번호는 1씩 증가합니다.  
   

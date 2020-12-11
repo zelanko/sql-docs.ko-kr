@@ -1,6 +1,6 @@
 ---
 description: sys.dm_os_latch_stats(Transact-SQL)
-title: sys. dm_os_latch_stats (Transact-sql) | Microsoft Docs
+title: sys.dm_os_latch_stats (Transact-sql) | Microsoft Docs
 ms.custom: ''
 ms.date: 08/18/2017
 ms.prod: sql
@@ -19,12 +19,12 @@ helpviewer_keywords:
 ms.assetid: 2085d9fc-828c-453e-82ec-b54ed8347ae5
 author: markingmyname
 ms.author: maghan
-ms.openlocfilehash: 1e4e29a7e416a5c3aebb109c871af00bbd31871a
-ms.sourcegitcommit: dd36d1cbe32cd5a65c6638e8f252b0bd8145e165
+ms.openlocfilehash: abb813e008fdf00e7094ce59000f07be8da6bf25
+ms.sourcegitcommit: 2991ad5324601c8618739915aec9b184a8a49c74
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 09/08/2020
-ms.locfileid: "89548547"
+ms.lasthandoff: 12/11/2020
+ms.locfileid: "97322171"
 ---
 # <a name="sysdm_os_latch_stats-transact-sql"></a>sys.dm_os_latch_stats(Transact-SQL)
 [!INCLUDE [SQL Server SQL Database](../../includes/applies-to-version/sql-asdb.md)]
@@ -32,7 +32,7 @@ ms.locfileid: "89548547"
 클래스별로 구성된 모든 래치 대기에 대한 정보를 반환합니다. 
   
 > [!NOTE]  
-> 또는에서이를 호출 하려면 [!INCLUDE[ssSDWfull](../../includes/sssdwfull-md.md)] [!INCLUDE[ssPDW](../../includes/sspdw-md.md)] 이름 **sys. dm_pdw_nodes_os_latch_stats**을 사용 합니다.  
+> 또는에서이를 호출 하려면 [!INCLUDE[ssSDWfull](../../includes/sssdwfull-md.md)] [!INCLUDE[ssPDW](../../includes/sspdw-md.md)] **sys.dm_pdw_nodes_os_latch_stats** 이름을 사용 합니다.  
   
 |열 이름|데이터 형식|Description|  
 |-----------------|---------------|-----------------|  
@@ -44,7 +44,7 @@ ms.locfileid: "89548547"
   
 ## <a name="permissions"></a>사용 권한  
 에 [!INCLUDE[ssNoVersion_md](../../includes/ssnoversion-md.md)] 는 `VIEW SERVER STATE` 권한이 필요 합니다.   
-[!INCLUDE[ssSDS_md](../../includes/sssds-md.md)]Premium 계층에서는 데이터베이스에 대 한 권한이 필요 합니다 `VIEW DATABASE STATE` . [!INCLUDE[ssSDS_md](../../includes/sssds-md.md)]표준 및 기본 계층에서는 **서버 관리자** 또는 **Azure Active Directory 관리자** 계정이 필요 합니다.   
+SQL Database Basic, S0 및 S1 서비스 목적과 탄력적 풀의 데이터베이스에 대해서는 `Server admin` 또는 `Azure Active Directory admin` 계정이 필요 합니다. 다른 모든 SQL Database 서비스 목표에서 `VIEW DATABASE STATE` 사용 권한은 데이터베이스에서 필요 합니다.   
   
 ## <a name="remarks"></a>설명  
  sys.dm_os_latch_stats를 사용하면 여러 래치 클래스에 대한 상대적 대기 수와 대기 시간을 조사하여 래치 경합의 원인을 확인할 수 있습니다. 어떤 경우에는 래치 경합을 해결하거나 줄일 수 있습니다. 그러나 [!INCLUDE[msCoName](../../includes/msconame-md.md)] 고객 지원 서비스에 연락해야 할 경우도 있습니다.  
@@ -73,7 +73,7 @@ GO
   
  다음 표에서는 다양한 래치 클래스에 대한 간략한 설명을 제공합니다.  
   
-|래치 클래스|Description|  
+|래치 클래스|설명|  
 |-----------------|-----------------|  
 |ALLOC_CREATE_RINGBUF|[!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]에서 내부적으로 할당 링 버퍼 만들기의 동기화를 초기화하는 데 사용됩니다.|  
 |ALLOC_CREATE_FREESPACE_CACHE|힙에 대한 내부 사용 가능한 공간 캐시의 동기화를 초기화하는 데 사용됩니다.|  
@@ -101,98 +101,98 @@ GO
 |BACKUP_MANAGER_DIFFERENTIAL|DBCC를 사용하여 차등 백업 작업을 동기화하는 데 사용됩니다.|  
 |BACKUP_OPERATION|데이터베이스, 로그 또는 파일 백업 같은 백업 작업 내의 내부 데이터 구조 동기화에 사용됩니다.|  
 |BACKUP_FILE_HANDLE|복원 작업 동안 파일 열기 작업을 동기화하는 데 사용됩니다.|  
-|BUFFER|데이터베이스 페이지에 대한 단기 액세스를 동기화하는 데 사용됩니다. 데이터베이스 페이지를 읽거나 수정하기 전에 버퍼 래치가 필요합니다. 버퍼 래치 경합은 핫 페이지와 느린 I/O를 비롯하여 여러 문제를 나타낼 수 있습니다.<br /><br /> 이 래치 클래스는 페이지 래치의 가능한 모든 용도에 적용됩니다. dm_os_wait_stats는 페이지에서 i/o 작업 및 읽기/쓰기 작업으로 인 한 페이지 래치 대기와의 차이를 만듭니다.|  
+|BUFFER|데이터베이스 페이지에 대한 단기 액세스를 동기화하는 데 사용됩니다. 데이터베이스 페이지를 읽거나 수정하기 전에 버퍼 래치가 필요합니다. 버퍼 래치 경합은 핫 페이지와 느린 I/O를 비롯하여 여러 문제를 나타낼 수 있습니다.<br /><br /> 이 래치 클래스는 페이지 래치의 가능한 모든 용도에 적용됩니다. sys.dm_os_wait_stats는 페이지에서 i/o 작업 및 읽기/쓰기 작업으로 인 한 페이지 래치 대기 간에 차이가 있습니다.|  
 |BUFFER_POOL_GROW|버퍼 풀 증가 작업 동안 내부 버퍼 관리자 동기화에 사용됩니다.|  
 |DATABASE_CHECKPOINT|데이터베이스 내의 검사점 직렬화에 사용됩니다.|  
-|CLR_PROCEDURE_HASHTABLE|내부적으로만 사용됩니다.|  
-|CLR_UDX_STORE|내부적으로만 사용됩니다.|  
-|CLR_DATAT_ACCESS|내부적으로만 사용됩니다.|  
-|CLR_XVAR_PROXY_LIST|내부적으로만 사용됩니다.|  
-|DBCC_CHECK_AGGREGATE|내부적으로만 사용됩니다.|  
-|DBCC_CHECK_RESULTSET|내부적으로만 사용됩니다.|  
-|DBCC_CHECK_TABLE|내부적으로만 사용됩니다.|  
-|DBCC_CHECK_TABLE_INIT|내부적으로만 사용됩니다.|  
-|DBCC_CHECK_TRACE_LIST|내부적으로만 사용됩니다.|  
-|DBCC_FILE_CHECK_OBJECT|내부적으로만 사용됩니다.|  
+|CLR_PROCEDURE_HASHTABLE|내부 전용입니다.|  
+|CLR_UDX_STORE|내부 전용입니다.|  
+|CLR_DATAT_ACCESS|내부 전용입니다.|  
+|CLR_XVAR_PROXY_LIST|내부 전용입니다.|  
+|DBCC_CHECK_AGGREGATE|내부 전용입니다.|  
+|DBCC_CHECK_RESULTSET|내부 전용입니다.|  
+|DBCC_CHECK_TABLE|내부 전용입니다.|  
+|DBCC_CHECK_TABLE_INIT|내부 전용입니다.|  
+|DBCC_CHECK_TRACE_LIST|내부 전용입니다.|  
+|DBCC_FILE_CHECK_OBJECT|내부 전용입니다.|  
 |DBCC_PERF|내부 성능 모니터 카운터를 동기화하는 데 사용됩니다.|  
-|DBCC_PFS_STATUS|내부적으로만 사용됩니다.|  
-|DBCC_OBJECT_METADATA|내부적으로만 사용됩니다.|  
-|DBCC_HASH_DLL|내부적으로만 사용됩니다.|  
-|EVENTING_CACHE|내부적으로만 사용됩니다.|  
+|DBCC_PFS_STATUS|내부 전용입니다.|  
+|DBCC_OBJECT_METADATA|내부 전용입니다.|  
+|DBCC_HASH_DLL|내부 전용입니다.|  
+|EVENTING_CACHE|내부 전용입니다.|  
 |FCB|파일 제어 블록에 대한 액세스를 동기화하는 데 사용됩니다.|  
-|FCB_REPLICA|내부적으로만 사용됩니다.|  
+|FCB_REPLICA|내부 전용입니다.|  
 |FGCB_ALLOC|파일 그룹 내에서 라운드 로빈 할당 정보에 대한 액세스를 동기화하는 데 사용됩니다.|  
 |FGCB_ADD_REMOVE|파일 추가, 삭제, 확장 및 축소 작업을 위해 파일 그룹에 대 한 액세스를 동기화 하는 데 사용 합니다.|  
-|FILEGROUP_MANAGER|내부적으로만 사용됩니다.|  
-|FILE_MANAGER|내부적으로만 사용됩니다.|  
-|FILESTREAM_FCB|내부적으로만 사용됩니다.|  
-|FILESTREAM_FILE_MANAGER|내부적으로만 사용됩니다.|  
-|FILESTREAM_GHOST_FILES|내부적으로만 사용됩니다.|  
-|FILESTREAM_DFS_ROOT|내부적으로만 사용됩니다.|  
-|LOG_MANAGER|내부적으로만 사용됩니다.|  
-|FULLTEXT_DOCUMENT_ID|내부적으로만 사용됩니다.|  
-|FULLTEXT_DOCUMENT_ID_TRANSACTION|내부적으로만 사용됩니다.|  
-|FULLTEXT_DOCUMENT_ID_NOTIFY|내부적으로만 사용됩니다.|  
-|FULLTEXT_LOGS|내부적으로만 사용됩니다.|  
-|FULLTEXT_CRAWL_LOG|내부적으로만 사용됩니다.|  
-|FULLTEXT_ADMIN|내부적으로만 사용됩니다.|  
-|FULLTEXT_AMDIN_COMMAND_CACHE|내부적으로만 사용됩니다.|  
-|FULLTEXT_LANGUAGE_TABLE|내부적으로만 사용됩니다.|  
-|FULLTEXT_CRAWL_DM_LIST|내부적으로만 사용됩니다.|  
-|FULLTEXT_CRAWL_CATALOG|내부적으로만 사용됩니다.|  
-|FULLTEXT_FILE_MANAGER|내부적으로만 사용됩니다.|  
-|DATABASE_MIRRORING_REDO|내부적으로만 사용됩니다.|  
-|DATABASE_MIRRORING_SERVER|내부적으로만 사용됩니다.|  
-|DATABASE_MIRRORING_CONNECTION|내부적으로만 사용됩니다.|  
-|DATABASE_MIRRORING_STREAM|내부적으로만 사용됩니다.|  
-|QUERY_OPTIMIZER_VD_MANAGER|내부적으로만 사용됩니다.|  
-|QUERY_OPTIMIZER_ID_MANAGER|내부적으로만 사용됩니다.|  
-|QUERY_OPTIMIZER_VIEW_REP|내부적으로만 사용됩니다.|  
-|RECOVERY_BAD_PAGE_TABLE|내부적으로만 사용됩니다.|  
-|RECOVERY_MANAGER|내부적으로만 사용됩니다.|  
-|SECURITY_OPERATION_RULE_TABLE|내부적으로만 사용됩니다.|  
-|SECURITY_OBJPERM_CACHE|내부적으로만 사용됩니다.|  
-|SECURITY_CRYPTO|내부적으로만 사용됩니다.|  
-|SECURITY_KEY_RING|내부적으로만 사용됩니다.|  
-|SECURITY_KEY_LIST|내부적으로만 사용됩니다.|  
-|SERVICE_BROKER_CONNECTION_RECEIVE|내부적으로만 사용됩니다.|  
-|SERVICE_BROKER_TRANSMISSION|내부적으로만 사용됩니다.|  
-|SERVICE_BROKER_TRANSMISSION_UPDATE|내부적으로만 사용됩니다.|  
-|SERVICE_BROKER_TRANSMISSION_STATE|내부적으로만 사용됩니다.|  
-|SERVICE_BROKER_TRANSMISSION_ERRORS|내부적으로만 사용됩니다.|  
-|SSBXmitWork|내부적으로만 사용됩니다.|  
-|SERVICE_BROKER_MESSAGE_TRANSMISSION|내부적으로만 사용됩니다.|  
-|SERVICE_BROKER_MAP_MANAGER|내부적으로만 사용됩니다.|  
-|SERVICE_BROKER_HOST_NAME|내부적으로만 사용됩니다.|  
-|SERVICE_BROKER_READ_CACHE|내부적으로만 사용됩니다.|  
+|FILEGROUP_MANAGER|내부 전용입니다.|  
+|FILE_MANAGER|내부 전용입니다.|  
+|FILESTREAM_FCB|내부 전용입니다.|  
+|FILESTREAM_FILE_MANAGER|내부 전용입니다.|  
+|FILESTREAM_GHOST_FILES|내부 전용입니다.|  
+|FILESTREAM_DFS_ROOT|내부 전용입니다.|  
+|LOG_MANAGER|내부 전용입니다.|  
+|FULLTEXT_DOCUMENT_ID|내부 전용입니다.|  
+|FULLTEXT_DOCUMENT_ID_TRANSACTION|내부 전용입니다.|  
+|FULLTEXT_DOCUMENT_ID_NOTIFY|내부 전용입니다.|  
+|FULLTEXT_LOGS|내부 전용입니다.|  
+|FULLTEXT_CRAWL_LOG|내부 전용입니다.|  
+|FULLTEXT_ADMIN|내부 전용입니다.|  
+|FULLTEXT_AMDIN_COMMAND_CACHE|내부 전용입니다.|  
+|FULLTEXT_LANGUAGE_TABLE|내부 전용입니다.|  
+|FULLTEXT_CRAWL_DM_LIST|내부 전용입니다.|  
+|FULLTEXT_CRAWL_CATALOG|내부 전용입니다.|  
+|FULLTEXT_FILE_MANAGER|내부 전용입니다.|  
+|DATABASE_MIRRORING_REDO|내부 전용입니다.|  
+|DATABASE_MIRRORING_SERVER|내부 전용입니다.|  
+|DATABASE_MIRRORING_CONNECTION|내부 전용입니다.|  
+|DATABASE_MIRRORING_STREAM|내부 전용입니다.|  
+|QUERY_OPTIMIZER_VD_MANAGER|내부 전용입니다.|  
+|QUERY_OPTIMIZER_ID_MANAGER|내부 전용입니다.|  
+|QUERY_OPTIMIZER_VIEW_REP|내부 전용입니다.|  
+|RECOVERY_BAD_PAGE_TABLE|내부 전용입니다.|  
+|RECOVERY_MANAGER|내부 전용입니다.|  
+|SECURITY_OPERATION_RULE_TABLE|내부 전용입니다.|  
+|SECURITY_OBJPERM_CACHE|내부 전용입니다.|  
+|SECURITY_CRYPTO|내부 전용입니다.|  
+|SECURITY_KEY_RING|내부 전용입니다.|  
+|SECURITY_KEY_LIST|내부 전용입니다.|  
+|SERVICE_BROKER_CONNECTION_RECEIVE|내부 전용입니다.|  
+|SERVICE_BROKER_TRANSMISSION|내부 전용입니다.|  
+|SERVICE_BROKER_TRANSMISSION_UPDATE|내부 전용입니다.|  
+|SERVICE_BROKER_TRANSMISSION_STATE|내부 전용입니다.|  
+|SERVICE_BROKER_TRANSMISSION_ERRORS|내부 전용입니다.|  
+|SSBXmitWork|내부 전용입니다.|  
+|SERVICE_BROKER_MESSAGE_TRANSMISSION|내부 전용입니다.|  
+|SERVICE_BROKER_MAP_MANAGER|내부 전용입니다.|  
+|SERVICE_BROKER_HOST_NAME|내부 전용입니다.|  
+|SERVICE_BROKER_READ_CACHE|내부 전용입니다.|  
 |SERVICE_BROKER_WAITFOR_MANAGER| 대기자 큐의 인스턴스 수준 맵을 동기화 하는 데 사용 됩니다. 데이터베이스 ID, 데이터베이스 버전 및 큐 ID 튜플 마다 하나의 큐가 있습니다. 이 클래스의 래치에 대 한 경합은 많은 연결이 WAITFOR (수신) 대기 상태에 있는 경우 발생할 수 있습니다. WAITFOR (RECEIVE) 호출 WAITFOR 제한 시간 초과 메시지 수신 WAITFOR (RECEIVE)를 포함 하는 트랜잭션을 커밋하거나 롤백합니다. WAITFOR (수신) 대기 상태의 스레드 수를 줄임으로써 경합을 줄일 수 있습니다. |  
-|SERVICE_BROKER_WAITFOR_TRANSACTION_DATA|내부적으로만 사용됩니다.|  
-|SERVICE_BROKER_TRANSMISSION_TRANSACTION_DATA|내부적으로만 사용됩니다.|  
-|SERVICE_BROKER_TRANSPORT|내부적으로만 사용됩니다.|  
-|SERVICE_BROKER_MIRROR_ROUTE|내부적으로만 사용됩니다.|  
-|TRACE_ID|내부적으로만 사용됩니다.|  
-|TRACE_AUDIT_ID|내부적으로만 사용됩니다.|  
-|TRACE|내부적으로만 사용됩니다.|  
-|TRACE_CONTROLLER|내부적으로만 사용됩니다.|  
-|TRACE_EVENT_QUEUE|내부적으로만 사용됩니다.|  
-|TRANSACTION_DISTRIBUTED_MARK|내부적으로만 사용됩니다.|  
-|TRANSACTION_OUTCOME|내부적으로만 사용됩니다.|  
-|NESTING_TRANSACTION_READONLY|내부적으로만 사용됩니다.|  
-|NESTING_TRANSACTION_FULL|내부적으로만 사용됩니다.|  
-|MSQL_TRANSACTION_MANAGER|내부적으로만 사용됩니다.|  
-|DATABASE_AUTONAME_MANAGER|내부적으로만 사용됩니다.|  
-|UTILITY_DYNAMIC_VECTOR|내부적으로만 사용됩니다.|  
-|UTILITY_SPARSE_BITMAP|내부적으로만 사용됩니다.|  
-|UTILITY_DATABASE_DROP|내부적으로만 사용됩니다.|  
-|UTILITY_DYNAMIC_MANAGER_VIEW|내부적으로만 사용됩니다.|  
-|UTILITY_DEBUG_FILESTREAM|내부적으로만 사용됩니다.|  
-|UTILITY_LOCK_INFORMATION|내부적으로만 사용됩니다.|  
-|VERSIONING_TRANSACTION|내부적으로만 사용됩니다.|  
-|VERSIONING_TRANSACTION_LIST|내부적으로만 사용됩니다.|  
-|VERSIONING_TRANSACTION_CHAIN|내부적으로만 사용됩니다.|  
-|VERSIONING_STATE|내부적으로만 사용됩니다.|  
-|VERSIONING_STATE_CHANGE|내부적으로만 사용됩니다.|  
-|KTM_VIRTUAL_CLOCK|내부적으로만 사용됩니다.|  
+|SERVICE_BROKER_WAITFOR_TRANSACTION_DATA|내부 전용입니다.|  
+|SERVICE_BROKER_TRANSMISSION_TRANSACTION_DATA|내부 전용입니다.|  
+|SERVICE_BROKER_TRANSPORT|내부 전용입니다.|  
+|SERVICE_BROKER_MIRROR_ROUTE|내부 전용입니다.|  
+|TRACE_ID|내부 전용입니다.|  
+|TRACE_AUDIT_ID|내부 전용입니다.|  
+|TRACE|내부 전용입니다.|  
+|TRACE_CONTROLLER|내부 전용입니다.|  
+|TRACE_EVENT_QUEUE|내부 전용입니다.|  
+|TRANSACTION_DISTRIBUTED_MARK|내부 전용입니다.|  
+|TRANSACTION_OUTCOME|내부 전용입니다.|  
+|NESTING_TRANSACTION_READONLY|내부 전용입니다.|  
+|NESTING_TRANSACTION_FULL|내부 전용입니다.|  
+|MSQL_TRANSACTION_MANAGER|내부 전용입니다.|  
+|DATABASE_AUTONAME_MANAGER|내부 전용입니다.|  
+|UTILITY_DYNAMIC_VECTOR|내부 전용입니다.|  
+|UTILITY_SPARSE_BITMAP|내부 전용입니다.|  
+|UTILITY_DATABASE_DROP|내부 전용입니다.|  
+|UTILITY_DYNAMIC_MANAGER_VIEW|내부 전용입니다.|  
+|UTILITY_DEBUG_FILESTREAM|내부 전용입니다.|  
+|UTILITY_LOCK_INFORMATION|내부 전용입니다.|  
+|VERSIONING_TRANSACTION|내부 전용입니다.|  
+|VERSIONING_TRANSACTION_LIST|내부 전용입니다.|  
+|VERSIONING_TRANSACTION_CHAIN|내부 전용입니다.|  
+|VERSIONING_STATE|내부 전용입니다.|  
+|VERSIONING_STATE_CHANGE|내부 전용입니다.|  
+|KTM_VIRTUAL_CLOCK|내부 전용입니다.|  
   
 ## <a name="see-also"></a>참고 항목  
 [DBCC SQLPERF &#40;Transact-sql&#41;](../../t-sql/database-console-commands/dbcc-sqlperf-transact-sql.md)       

@@ -1,6 +1,6 @@
 ---
 description: sys.dm_tran_top_version_generators(Transact-SQL)
-title: sys. dm_tran_top_version_generators (Transact-sql) | Microsoft Docs
+title: sys.dm_tran_top_version_generators (Transact-sql) | Microsoft Docs
 ms.custom: ''
 ms.date: 03/15/2017
 ms.prod: sql
@@ -21,22 +21,22 @@ ms.assetid: cec7809b-ba8a-4df9-b5bb-d4f651ff1a86
 author: markingmyname
 ms.author: maghan
 monikerRange: '>=aps-pdw-2016||=azuresqldb-current||=azure-sqldw-latest||>=sql-server-2016||=sqlallproducts-allversions||>=sql-server-linux-2017||=azuresqldb-mi-current'
-ms.openlocfilehash: 54e3caeb50a0c6fd9f3a6b1523675eb482005384
-ms.sourcegitcommit: dd36d1cbe32cd5a65c6638e8f252b0bd8145e165
+ms.openlocfilehash: 77cabe4416c3168930822d85710cb663b5752a86
+ms.sourcegitcommit: 2991ad5324601c8618739915aec9b184a8a49c74
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 09/08/2020
-ms.locfileid: "89546518"
+ms.lasthandoff: 12/11/2020
+ms.locfileid: "97334427"
 ---
 # <a name="sysdm_tran_top_version_generators-transact-sql"></a>sys.dm_tran_top_version_generators(Transact-SQL)
 [!INCLUDE [sql-asdb-asdbmi-asa-pdw](../../includes/applies-to-version/sql-asdb-asdbmi-asa-pdw.md)]
 
-  버전 저장소의 버전 대부분을 생성하는 개체에 대한 가상 테이블을 반환합니다. **dm_tran_top_version_generators** 은 **database_id** 및 **rowset_id**별로 그룹화 된 상위 256 집계 레코드 길이를 반환 합니다. **dm_tran_top_version_generators** 은 **dm_tran_version_store** 가상 테이블을 쿼리하여 데이터를 검색 합니다. 이 뷰는 버전 저장소를 쿼리 하 고 버전 저장소는 매우 클 수 있기 때문에 dm_tran_top_version_generators를 실행 하는 데 비효율적인 뷰입니다 **.** 버전 저장소를 가장 많이 사용하는 소비자를 찾으려면 이 함수를 사용하는 것이 좋습니다.  
+  버전 저장소의 버전 대부분을 생성하는 개체에 대한 가상 테이블을 반환합니다. **sys.dm_tran_top_version_generators** **database_id** 및 **rowset_id** 별로 그룹화 된 상위 256 집계 레코드 길이를 반환 합니다. **sys.dm_tran_top_version_generators** 은 **dm_tran_version_store** 가상 테이블을 쿼리하여 데이터를 검색 합니다. 이 뷰는 버전 저장소를 쿼리 하 고 버전 저장소는 매우 클 수 있기 때문에 **sys.dm_tran_top_version_generators** 를 실행 하는 데 비효율적인 뷰입니다. 버전 저장소를 가장 많이 사용하는 소비자를 찾으려면 이 함수를 사용하는 것이 좋습니다.  
   
 > [!NOTE]  
->  또는에서이를 호출 하려면 [!INCLUDE[ssSDWfull](../../includes/sssdwfull-md.md)] [!INCLUDE[ssPDW](../../includes/sspdw-md.md)] 이름 **sys. dm_pdw_nodes_tran_top_version_generators**을 사용 합니다.  
+>  또는에서이를 호출 하려면 [!INCLUDE[ssSDWfull](../../includes/sssdwfull-md.md)] [!INCLUDE[ssPDW](../../includes/sspdw-md.md)] **sys.dm_pdw_nodes_tran_top_version_generators** 이름을 사용 합니다.  
   
-## <a name="syntax"></a>구문  
+## <a name="syntax"></a>Syntax  
   
 ```  
   
@@ -55,10 +55,10 @@ sys.dm_tran_top_version_generators
 ## <a name="permissions"></a>사용 권한
 
 에 [!INCLUDE[ssNoVersion_md](../../includes/ssnoversion-md.md)] 는 `VIEW SERVER STATE` 권한이 필요 합니다.   
-[!INCLUDE[ssSDS_md](../../includes/sssds-md.md)]Premium 계층에서는 데이터베이스에 대 한 권한이 필요 합니다 `VIEW DATABASE STATE` . [!INCLUDE[ssSDS_md](../../includes/sssds-md.md)]표준 및 기본 계층에서는 **서버 관리자** 또는 **Azure Active Directory 관리자** 계정이 필요 합니다.   
+SQL Database Basic, S0 및 S1 서비스 목적과 탄력적 풀의 데이터베이스에 대해서는 `Server admin` 또는 `Azure Active Directory admin` 계정이 필요 합니다. 다른 모든 SQL Database 서비스 목표에서 `VIEW DATABASE STATE` 사용 권한은 데이터베이스에서 필요 합니다.   
 
 ## <a name="remarks"></a>설명  
- **Sys. dm_tran_top_version_generators** 는 전체 버전 저장소를 검색할 때 많은 페이지를 읽어야 할 수 있습니다 **. dm_tran_top_version_generators** 를 실행 하면 시스템 성능에 방해가 될 수 있습니다.  
+ **Sys.dm_tran_top_version_generators** 는 전체 버전 저장소를 검색할 때 많은 페이지를 읽어야 할 수 있으므로 **sys.dm_tran_top_version_generators** 실행 하면 시스템 성능에 방해가 될 수 있습니다.  
   
 ## <a name="examples"></a>예제  
  다음 예에서는 ALLOW_SNAPSHOT_ISOLATION 및 READ_COMMITTED_SNAPSHOT 옵션이 ON으로 설정된 데이터베이스에서 각각 XSN(트랜잭션 시퀀스 번호)으로 식별되는 4개의 동시 트랜잭션이 실행되는 테스트 시나리오를 사용합니다. 다음 트랜잭션이 실행되고 있습니다.  

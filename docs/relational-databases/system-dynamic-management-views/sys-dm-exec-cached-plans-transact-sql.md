@@ -1,6 +1,6 @@
 ---
 description: sys.dm_exec_cached_plans(Transact-SQL)
-title: sys. dm_exec_cached_plans (Transact-sql) | Microsoft Docs
+title: sys.dm_exec_cached_plans (Transact-sql) | Microsoft Docs
 ms.custom: ''
 ms.date: 09/18/2017
 ms.prod: sql
@@ -21,12 +21,12 @@ ms.assetid: 95b707d3-3a93-407f-8e88-4515d4f2039d
 author: markingmyname
 ms.author: maghan
 monikerRange: =azuresqldb-current||>=sql-server-2016||=sqlallproducts-allversions||>=sql-server-linux-2017||=azuresqldb-mi-current
-ms.openlocfilehash: 02e10051c13f55b703e0f45ab2b657d7f0d66230
-ms.sourcegitcommit: dd36d1cbe32cd5a65c6638e8f252b0bd8145e165
+ms.openlocfilehash: a4625b80bd709528288d0e9a6afec70a3c730ee1
+ms.sourcegitcommit: 2991ad5324601c8618739915aec9b184a8a49c74
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 09/08/2020
-ms.locfileid: "89542208"
+ms.lasthandoff: 12/11/2020
+ms.locfileid: "97332718"
 ---
 # <a name="sysdm_exec_cached_plans-transact-sql"></a>sys.dm_exec_cached_plans(Transact-SQL)
 [!INCLUDE [SQL Server SQL Database](../../includes/applies-to-version/sql-asdb.md)]
@@ -36,12 +36,12 @@ ms.locfileid: "89542208"
  [!INCLUDE[ssSDSfull](../../includes/sssdsfull-md.md)]에서 동적 관리 뷰는 데이터베이스 포함에 영향을 줄 수 있는 정보 또는 사용자가 액세스할 수 있는 다른 데이터베이스 정보를 노출할 수 없습니다. 이 정보를 노출 하지 않도록 하기 위해 연결 된 테 넌 트에 속하지 않는 데이터를 포함 하는 모든 행이 필터링 됩니다. 또한 **memory_object_address** 및 **pool_id** 열의 값이 필터링 됩니다. 열 값이 NULL로 설정 됩니다.  
   
 > [!NOTE]  
->  또는에서이를 호출 하려면 [!INCLUDE[ssSDWfull](../../includes/sssdwfull-md.md)] [!INCLUDE[ssPDW](../../includes/sspdw-md.md)] 이름 **sys. dm_pdw_nodes_exec_cached_plans**을 사용 합니다.  
+>  또는에서이를 호출 하려면 [!INCLUDE[ssSDWfull](../../includes/sssdwfull-md.md)] [!INCLUDE[ssPDW](../../includes/sspdw-md.md)] **sys.dm_pdw_nodes_exec_cached_plans** 이름을 사용 합니다.  
   
 |열 이름|데이터 형식|Description|  
 |-----------------|---------------|-----------------|  
 |bucketid|**int**|항목이 캐시된 해시 버킷의 ID입니다. 값은 0에서 캐시 유형별 해시 테이블 크기까지의 범위를 나타냅니다.<br /><br /> SQL Plans 및 Object Plans 캐시의 경우 해시 테이블 크기는 32비트 시스템에서 최대 10007까지, 64비트 시스템에서 최대 40009까지 가능합니다. Bound Trees 캐시의 경우 해시 테이블 크기는 32비트 시스템에서 최대 1009까지, 64비트 시스템에서 최대 4001까지 가능합니다. Extended Stored Procedures 캐시의 경우 해시 테이블 크기는 32비트 및 64비트 시스템에서 최대 127까지 가능합니다.|  
-|refcounts|**int**|이 캐시 개체를 참조하는 캐시 개체의 수입니다. 항목이 캐시에 있으려면 **Refcounts**가 1 이상이어야 합니다.|  
+|refcounts|**int**|이 캐시 개체를 참조하는 캐시 개체의 수입니다. 항목이 캐시에 있으려면 **Refcounts** 가 1 이상이어야 합니다.|  
 |usecounts|**int**|캐시 개체를 조회한 횟수입니다. 매개 변수가 있는 쿼리가 캐시에서 계획을 찾는 경우에는 증가하지 않습니다. 실행 계획을 사용하는 경우에는 여러 번 증가할 수 있습니다.|  
 |size_in_bytes|**int**|캐시 개체가 사용한 바이트 수입니다.|  
 |memory_object_address|**varbinary(8)**|캐시된 항목의 메모리 주소입니다. 이 값은 [sys.dm_os_memory_objects](../../relational-databases/system-dynamic-management-views/sys-dm-os-memory-objects-transact-sql.md)와 함께 사용하여 캐시된 계획의 메모리 분석을 가져올 수 있으며 [sys.dm_os_memory_cache_entries](../../relational-databases/system-dynamic-management-views/sys-dm-os-memory-cache-entries-transact-sql.md)와 함께 사용하여 항목 캐시 비용을 구할 수 있습니다.|  
@@ -56,7 +56,7 @@ ms.locfileid: "89542208"
 ## <a name="permissions"></a>사용 권한
 
 에 [!INCLUDE[ssNoVersion_md](../../includes/ssnoversion-md.md)] 는 `VIEW SERVER STATE` 권한이 필요 합니다.   
-[!INCLUDE[ssSDS_md](../../includes/sssds-md.md)]Premium 계층에서는 데이터베이스에 대 한 권한이 필요 합니다 `VIEW DATABASE STATE` . [!INCLUDE[ssSDS_md](../../includes/sssds-md.md)]표준 및 기본 계층에서는 **서버 관리자** 또는 **Azure Active Directory 관리자** 계정이 필요 합니다.   
+SQL Database Basic, S0 및 S1 서비스 목적과 탄력적 풀의 데이터베이스에 대해서는 `Server admin` 또는 `Azure Active Directory admin` 계정이 필요 합니다. 다른 모든 SQL Database 서비스 목표에서 `VIEW DATABASE STATE` 사용 권한은 데이터베이스에서 필요 합니다.   
 
 ## <a name="examples"></a>예제  
   
@@ -84,7 +84,7 @@ GO
 ```  
   
 ### <a name="c-returning-the-set-options-with-which-the-plan-was-compiled"></a>C. 계획 컴파일 시 사용된 SET 옵션의 반환  
- 다음 예에서는 계획 컴파일 시 사용된 SET 옵션을 반환합니다. `sql_handle`계획에 대 한도 반환 됩니다. PIVOT 연산자는 `set_options` 및 특성을 행이 아닌 열로 출력 하는 데 사용 됩니다 `sql_handle` . 에서 반환 되는 값에 대 한 자세한 내용은 `set_options` [Dm_exec_plan_attributes &#40;transact-sql&#41;](../../relational-databases/system-dynamic-management-views/sys-dm-exec-plan-attributes-transact-sql.md)을 참조 하십시오.  
+ 다음 예에서는 계획 컴파일 시 사용된 SET 옵션을 반환합니다. `sql_handle`계획에 대 한도 반환 됩니다. PIVOT 연산자는 `set_options` 및 특성을 행이 아닌 열로 출력 하는 데 사용 됩니다 `sql_handle` . 에서 반환 되는 값에 대 한 자세한 내용은 `set_options` [Sys.dm_exec_plan_attributes &#40;transact-sql&#41;](../../relational-databases/system-dynamic-management-views/sys-dm-exec-plan-attributes-transact-sql.md)를 참조 하세요.  
   
 ```sql  
 SELECT plan_handle, pvt.set_options, pvt.sql_handle  
@@ -115,11 +115,11 @@ GO
 ## <a name="see-also"></a>참고 항목  
  [동적 관리 뷰 및 함수&#40;Transact-SQL&#41;](~/relational-databases/system-dynamic-management-views/system-dynamic-management-views.md)   
  [Transact-sql&#41;&#40;관련 동적 관리 뷰 및 함수 실행 ](../../relational-databases/system-dynamic-management-views/execution-related-dynamic-management-views-and-functions-transact-sql.md)   
- [dm_exec_query_plan &#40;Transact-sql&#41;](../../relational-databases/system-dynamic-management-views/sys-dm-exec-query-plan-transact-sql.md)   
- [dm_exec_plan_attributes &#40;Transact-sql&#41;](../../relational-databases/system-dynamic-management-views/sys-dm-exec-plan-attributes-transact-sql.md)   
- [dm_exec_sql_text &#40;Transact-sql&#41;](../../relational-databases/system-dynamic-management-views/sys-dm-exec-sql-text-transact-sql.md)   
- [dm_os_memory_objects &#40;Transact-sql&#41;](../../relational-databases/system-dynamic-management-views/sys-dm-os-memory-objects-transact-sql.md)   
- [dm_os_memory_cache_entries &#40;Transact-sql&#41;](../../relational-databases/system-dynamic-management-views/sys-dm-os-memory-cache-entries-transact-sql.md)   
+ [Transact-sql&#41;sys.dm_exec_query_plan &#40;](../../relational-databases/system-dynamic-management-views/sys-dm-exec-query-plan-transact-sql.md)   
+ [Transact-sql&#41;sys.dm_exec_plan_attributes &#40;](../../relational-databases/system-dynamic-management-views/sys-dm-exec-plan-attributes-transact-sql.md)   
+ [Transact-sql&#41;sys.dm_exec_sql_text &#40;](../../relational-databases/system-dynamic-management-views/sys-dm-exec-sql-text-transact-sql.md)   
+ [Transact-sql&#41;sys.dm_os_memory_objects &#40;](../../relational-databases/system-dynamic-management-views/sys-dm-os-memory-objects-transact-sql.md)   
+ [Transact-sql&#41;sys.dm_os_memory_cache_entries &#40;](../../relational-databases/system-dynamic-management-views/sys-dm-os-memory-cache-entries-transact-sql.md)   
  [FROM&#40;Transact-SQL&#41;](../../t-sql/queries/from-transact-sql.md)  
   
   

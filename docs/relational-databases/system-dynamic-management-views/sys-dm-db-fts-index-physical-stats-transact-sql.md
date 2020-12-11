@@ -1,6 +1,6 @@
 ---
 description: sys.dm_db_fts_index_physical_stats(Transact-SQL)
-title: sys. dm_db_fts_index_physical_stats (Transact-sql) | Microsoft Docs
+title: sys.dm_db_fts_index_physical_stats (Transact-sql) | Microsoft Docs
 ms.custom: ''
 ms.date: 03/20/2017
 ms.prod: sql
@@ -21,12 +21,12 @@ ms.assetid: 997c3278-3630-47f6-ada3-190b6c16ce0e
 author: markingmyname
 ms.author: maghan
 monikerRange: =azuresqldb-current||>=sql-server-2016||=sqlallproducts-allversions||>=sql-server-linux-2017||=azuresqldb-mi-current
-ms.openlocfilehash: a10ebff9ba050ab63479b8819d60498c6a71af0a
-ms.sourcegitcommit: dd36d1cbe32cd5a65c6638e8f252b0bd8145e165
+ms.openlocfilehash: 3884a802e2eca87cb829bfa5e906155675080922
+ms.sourcegitcommit: 2991ad5324601c8618739915aec9b184a8a49c74
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 09/08/2020
-ms.locfileid: "89534350"
+ms.lasthandoff: 12/11/2020
+ms.locfileid: "97328478"
 ---
 # <a name="sysdm_db_fts_index_physical_stats-transact-sql"></a>sys.dm_db_fts_index_physical_stats(Transact-SQL)
 [!INCLUDE [SQL Server Azure SQL Database ](../../includes/applies-to-version/sql-asdb.md)]
@@ -35,7 +35,7 @@ ms.locfileid: "89534350"
   
 ||||  
 |-|-|-|  
-|**열 이름**|**형식**|**설명**|  
+|**열 이름**|**Type**|**설명**|  
 |**object_id**|int|인덱스를 포함하는 테이블의 개체 ID입니다.|  
 |**fulltext_index_page_count**|**bigint**|추출의 논리적 크기(인덱스 페이지의 수)입니다.|  
 |**keyphrase_index_page_count**|**bigint**|추출의 논리적 크기(인덱스 페이지의 수)입니다.|  
@@ -54,7 +54,7 @@ ms.locfileid: "89534350"
 ## <a name="permissions"></a>사용 권한
 
 에 [!INCLUDE[ssNoVersion_md](../../includes/ssnoversion-md.md)] 는 `VIEW SERVER STATE` 권한이 필요 합니다.   
-[!INCLUDE[ssSDS_md](../../includes/sssds-md.md)]Premium 계층에서는 데이터베이스에 대 한 권한이 필요 합니다 `VIEW DATABASE STATE` . [!INCLUDE[ssSDS_md](../../includes/sssds-md.md)]표준 및 기본 계층에서는 **서버 관리자** 또는 **Azure Active Directory 관리자** 계정이 필요 합니다.   
+SQL Database Basic, S0 및 S1 서비스 목적과 탄력적 풀의 데이터베이스에 대해서는 `Server admin` 또는 `Azure Active Directory admin` 계정이 필요 합니다. 다른 모든 SQL Database 서비스 목표에서 `VIEW DATABASE STATE` 사용 권한은 데이터베이스에서 필요 합니다.   
 
 ## <a name="examples"></a>예제  
  다음 예에서는 연결된 전체 텍스트 또는 의미 체계 인덱스가 있는 모든 테이블에서 각 전체 텍스트 또는 의미 체계 인덱스의 논리적 크기를 쿼리하는 방법을 보여 줍니다.  

@@ -1,6 +1,6 @@
 ---
-description: sys. dm_exec_function_stats (Transact-sql)
-title: sys. dm_exec_function_stats (Transact-sql) | Microsoft Docs
+description: sys.dm_exec_function_stats (Transact-sql)
+title: sys.dm_exec_function_stats (Transact-sql) | Microsoft Docs
 ms.custom: ''
 ms.date: 05/30/2019
 ms.prod: sql
@@ -19,22 +19,22 @@ ms.assetid: 4c3d6a02-08e4-414b-90be-36b89a0e5a3a
 author: markingmyname
 ms.author: maghan
 monikerRange: =azuresqldb-current||=azure-sqldw-latest||>=sql-server-2016||=sqlallproducts-allversions||>=sql-server-linux-2017||=azuresqldb-mi-current
-ms.openlocfilehash: 0ec3f05f40f6de423cec2d08f2a240729201e43e
-ms.sourcegitcommit: dd36d1cbe32cd5a65c6638e8f252b0bd8145e165
+ms.openlocfilehash: 35f0ab89e1aa90ea8eeeb09f57911b7b526026f9
+ms.sourcegitcommit: 2991ad5324601c8618739915aec9b184a8a49c74
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 09/08/2020
-ms.locfileid: "89550296"
+ms.lasthandoff: 12/11/2020
+ms.locfileid: "97332176"
 ---
-# <a name="sysdm_exec_function_stats-transact-sql"></a>sys. dm_exec_function_stats (Transact-sql)
+# <a name="sysdm_exec_function_stats-transact-sql"></a>sys.dm_exec_function_stats (Transact-sql)
 [!INCLUDE [sqlserver2016-asdb-asdbmi-asa](../../includes/applies-to-version/sqlserver2016-asdb-asdbmi-asa.md)]
 
-  캐시 된 함수에 대 한 집계 성능 통계를 반환 합니다. 이 뷰는 캐시 된 각 함수 계획에 대해 하나의 행을 반환 하 고, 해당 함수는 캐시 된 상태로 유지 되는 동안에는 행의 수명이 지속 됩니다. 캐시에서 함수를 제거 하면 해당 행이이 뷰에서 제거 됩니다. 이때 Performance Statistics SQL 추적 이벤트가 **sys.dm_exec_query_stats**와 유사하게 발생합니다. 메모리 내 함수 및 CLR 스칼라 함수를 비롯 한 스칼라 함수에 대 한 정보를 반환 합니다. 는 테이블 반환 함수에 대 한 정보를 반환 하지 않습니다.  
+  캐시 된 함수에 대 한 집계 성능 통계를 반환 합니다. 이 뷰는 캐시 된 각 함수 계획에 대해 하나의 행을 반환 하 고, 해당 함수는 캐시 된 상태로 유지 되는 동안에는 행의 수명이 지속 됩니다. 캐시에서 함수를 제거 하면 해당 행이이 뷰에서 제거 됩니다. 이때 Performance Statistics SQL 추적 이벤트가 **sys.dm_exec_query_stats** 와 유사하게 발생합니다. 메모리 내 함수 및 CLR 스칼라 함수를 비롯 한 스칼라 함수에 대 한 정보를 반환 합니다. 는 테이블 반환 함수에 대 한 정보를 반환 하지 않습니다.  
   
  [!INCLUDE[ssSDSfull](../../includes/sssdsfull-md.md)]에서 동적 관리 뷰는 데이터베이스 포함에 영향을 줄 수 있는 정보 또는 사용자가 액세스할 수 있는 다른 데이터베이스 정보를 노출할 수 없습니다. 이 정보를 노출 하지 않도록 하기 위해 연결 된 테 넌 트에 속하지 않는 데이터를 포함 하는 모든 행이 필터링 됩니다.  
   
 > [!NOTE]
-> 데이터는 완료 된 쿼리만 반영 하 고 아직 진행 중인 쿼리는 반영 하지 않으므로, **dm_exec_function_stats**  의 결과는 각 실행에 따라 달라질 수 있습니다. 
+> 데이터는 완료 된 쿼리만 반영 하 고 진행 중인 쿼리는 반영 하지 않으므로 **sys.dm_exec_function_stats**  의 결과는 각 실행에 따라 다를 수 있습니다. 
 
   
 |열 이름|데이터 형식|Description|  
@@ -43,8 +43,8 @@ ms.locfileid: "89550296"
 |**object_id**|**int**|함수의 개체 id입니다.|  
 |**type**|**char(2)**|개체의 유형: FN = 스칼라 반환 함수|  
 |**type_desc**|**nvarchar(60)**|개체 유형에 대 한 설명: SQL_SCALAR_FUNCTION|  
-|**sql_handle**|**varbinary(64)**|이 함수 내에서 실행 된 **dm_exec_query_stats** 의 쿼리와 상호 연결 하는 데 사용할 수 있습니다.|  
-|**plan_handle**|**varbinary(64)**|메모리 내 계획의 식별자입니다. 이 식별자는 일시적이며 계획이 캐시에 있는 동안에만 일정하게 유지됩니다. 이 값은 **dm_exec_cached_plans** 동적 관리 뷰와 함께 사용할 수 있습니다.<br /><br /> 고유 하 게 컴파일된 함수가 메모리 최적화 테이블을 쿼리하면 항상 0x000입니다.|  
+|**sql_handle**|**varbinary(64)**|이 함수 내에서 실행 된 **sys.dm_exec_query_stats** 의 쿼리와 상호 연결 하는 데 사용할 수 있습니다.|  
+|**plan_handle**|**varbinary(64)**|메모리 내 계획의 식별자입니다. 이 식별자는 일시적이며 계획이 캐시에 있는 동안에만 일정하게 유지됩니다. 이 값은 **sys.dm_exec_cached_plans** 동적 관리 뷰와 함께 사용할 수 있습니다.<br /><br /> 고유 하 게 컴파일된 함수가 메모리 최적화 테이블을 쿼리하면 항상 0x000입니다.|  
 |**cached_time**|**datetime**|함수가 캐시에 추가 된 시간입니다.|  
 |**last_execution_time**|**datetime**|함수가 마지막으로 실행 된 시간입니다.|  
 |**execution_count**|**bigint**|함수가 마지막으로 컴파일된 이후 실행 된 횟수입니다.|  
@@ -76,7 +76,7 @@ ms.locfileid: "89550296"
 ## <a name="permissions"></a>사용 권한  
 
 에 [!INCLUDE[ssNoVersion_md](../../includes/ssnoversion-md.md)] 는 `VIEW SERVER STATE` 권한이 필요 합니다.   
-[!INCLUDE[ssSDS_md](../../includes/sssds-md.md)]Premium 계층에서는 데이터베이스에 대 한 권한이 필요 합니다 `VIEW DATABASE STATE` . [!INCLUDE[ssSDS_md](../../includes/sssds-md.md)]표준 및 기본 계층에서는 **서버 관리자** 또는 **Azure Active Directory 관리자** 계정이 필요 합니다.   
+SQL Database Basic, S0 및 S1 서비스 목적과 탄력적 풀의 데이터베이스에 대해서는 `Server admin` 또는 `Azure Active Directory admin` 계정이 필요 합니다. 다른 모든 SQL Database 서비스 목표에서 `VIEW DATABASE STATE` 사용 권한은 데이터베이스에서 필요 합니다.   
   
 ## <a name="examples"></a>예제  
  다음 예에서는 평균 경과 시간으로 식별 된 상위 10 개의 함수에 대 한 정보를 반환 합니다.  
@@ -92,10 +92,10 @@ ORDER BY [total_worker_time] DESC;
   
 ## <a name="see-also"></a>참고 항목  
  [Transact-sql&#41;&#40;관련 동적 관리 뷰 및 함수 실행 ](../../relational-databases/system-dynamic-management-views/execution-related-dynamic-management-views-and-functions-transact-sql.md)   
- [dm_exec_sql_text &#40;Transact-sql&#41;](../../relational-databases/system-dynamic-management-views/sys-dm-exec-sql-text-transact-sql.md)   
+ [Transact-sql&#41;sys.dm_exec_sql_text &#40;](../../relational-databases/system-dynamic-management-views/sys-dm-exec-sql-text-transact-sql.md)   
  [sys.dm_exec_query_stats&#40;Transact-SQL&#41;](../../relational-databases/system-dynamic-management-views/sys-dm-exec-query-stats-transact-sql.md)   
  
- [dm_exec_trigger_stats &#40;Transact-sql&#41;](../../relational-databases/system-dynamic-management-views/sys-dm-exec-trigger-stats-transact-sql.md)   
- [dm_exec_procedure_stats &#40;Transact-sql&#41;](../../relational-databases/system-dynamic-management-views/sys-dm-exec-procedure-stats-transact-sql.md)  
+ [Transact-sql&#41;sys.dm_exec_trigger_stats &#40;](../../relational-databases/system-dynamic-management-views/sys-dm-exec-trigger-stats-transact-sql.md)   
+ [Transact-sql&#41;sys.dm_exec_procedure_stats &#40;](../../relational-databases/system-dynamic-management-views/sys-dm-exec-procedure-stats-transact-sql.md)  
   
   

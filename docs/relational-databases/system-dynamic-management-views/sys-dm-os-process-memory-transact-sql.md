@@ -1,6 +1,6 @@
 ---
 description: sys.dm_os_process_memory(Transact-SQL)
-title: sys. dm_os_process_memory (Transact-sql) | Microsoft Docs
+title: sys.dm_os_process_memory (Transact-sql) | Microsoft Docs
 ms.custom: ''
 ms.date: 03/15/2017
 ms.prod: sql
@@ -21,24 +21,24 @@ ms.assetid: e838130c-95d4-4605-9e3b-eb0ab71cd250
 author: markingmyname
 ms.author: maghan
 monikerRange: '>=aps-pdw-2016||=azure-sqldw-latest||>=sql-server-2016||=sqlallproducts-allversions||>=sql-server-linux-2017||=azuresqldb-mi-current'
-ms.openlocfilehash: 4234894d907a383902a00a659e954ccfea2ff74c
-ms.sourcegitcommit: dd36d1cbe32cd5a65c6638e8f252b0bd8145e165
+ms.openlocfilehash: 6a60651016355dcf6b78a514a4b4ee3b523c9136
+ms.sourcegitcommit: 2991ad5324601c8618739915aec9b184a8a49c74
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 09/08/2020
-ms.locfileid: "89539322"
+ms.lasthandoff: 12/11/2020
+ms.locfileid: "97325606"
 ---
 # <a name="sysdm_os_process_memory-transact-sql"></a>sys.dm_os_process_memory(Transact-SQL)
 [!INCLUDE [sql-asdbmi-asa-pdw](../../includes/applies-to-version/sql-asdbmi-asa-pdw.md)]
 
   [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 프로세스 공간에 소요되는 대부분의 메모리 할당은 이러한 할당을 추적 및 계산하도록 허용된 인터페이스를 통해 제어됩니다. 그러나 메모리 할당은 내부 메모리 관리 루틴을 거치지 않는 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 주소 공간에서 수행될 수도 있습니다. 값은 기본 운영 체제 호출을 통해 얻습니다. [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]이 클래스는 잠긴 또는 대량 페이지 할당에 대해 조정 하는 경우를 제외 하 고 내부 메서드를 통해 조작 되지 않습니다.  
   
- 메모리 크기를 나타내는 모든 반환 값은 킬로바이트(KB) 단위로 표시됩니다. 열 **total_virtual_address_space_reserved_kb** 은 (는) **dm_os_sys_info**의 **virtual_memory_in_bytes** 와 중복 됩니다.  
+ 메모리 크기를 나타내는 모든 반환 값은 킬로바이트(KB) 단위로 표시됩니다. 열 **total_virtual_address_space_reserved_kb** **sys.dm_os_sys_info** 의 **virtual_memory_in_bytes** 중복 됩니다.  
   
  다음 표에서는 프로세스 주소 공간의 전체적인 구조를 보여 줍니다.  
   
 > [!NOTE]  
->  또는에서이를 호출 하려면 [!INCLUDE[ssSDWfull](../../includes/sssdwfull-md.md)] [!INCLUDE[ssPDW](../../includes/sspdw-md.md)] 이름 **sys. dm_pdw_nodes_os_process_memory**을 사용 합니다.  
+>  또는에서이를 호출 하려면 [!INCLUDE[ssSDWfull](../../includes/sssdwfull-md.md)] [!INCLUDE[ssPDW](../../includes/sspdw-md.md)] **sys.dm_pdw_nodes_os_process_memory** 이름을 사용 합니다.  
   
 |열 이름|데이터 형식|Description|  
 |-----------------|---------------|-----------------|  
@@ -60,7 +60,7 @@ ms.locfileid: "89539322"
  [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]에서 서버에 대한 VIEW SERVER STATE 권한이 필요합니다.  
   
 에 [!INCLUDE[ssNoVersion_md](../../includes/ssnoversion-md.md)] 는 `VIEW SERVER STATE` 권한이 필요 합니다.   
-[!INCLUDE[ssSDS_md](../../includes/sssds-md.md)]Premium 계층에서는 데이터베이스에 대 한 권한이 필요 합니다 `VIEW DATABASE STATE` . [!INCLUDE[ssSDS_md](../../includes/sssds-md.md)]표준 및 기본 계층에서는 **서버 관리자** 또는 **Azure Active Directory 관리자** 계정이 필요 합니다.   
+SQL Database Basic, S0 및 S1 서비스 목적과 탄력적 풀의 데이터베이스에 대해서는 `Server admin` 또는 `Azure Active Directory admin` 계정이 필요 합니다. 다른 모든 SQL Database 서비스 목표에서 `VIEW DATABASE STATE` 사용 권한은 데이터베이스에서 필요 합니다.   
   
 ## <a name="see-also"></a>참고 항목  
  [동적 관리 뷰 및 함수&#40;Transact-SQL&#41;](~/relational-databases/system-dynamic-management-views/system-dynamic-management-views.md)   
