@@ -21,13 +21,13 @@ ms.assetid: 2e266ed9-4cfb-434a-af55-d0839f64bb9a
 author: MightyPen
 ms.author: genemi
 ms.custom: seo-lt-2019
-monikerRange: =azuresqldb-current||>=sql-server-2016||=sqlallproducts-allversions||>=sql-server-linux-2017||=azuresqldb-mi-current
-ms.openlocfilehash: 06299f367f987cfc716154f4d26ffb8e5e07a868
-ms.sourcegitcommit: da88320c474c1c9124574f90d549c50ee3387b4c
+monikerRange: =azuresqldb-current||>=sql-server-2016||>=sql-server-linux-2017||=azuresqldb-mi-current
+ms.openlocfilehash: 8c8643c40f7b62c0a0fdc3d85d32111d05ee955f
+ms.sourcegitcommit: 1a544cf4dd2720b124c3697d1e62ae7741db757c
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 07/01/2020
-ms.locfileid: "85760412"
+ms.lasthandoff: 12/14/2020
+ms.locfileid: "97405137"
 ---
 # <a name="specifying-an-annotated-mapping-schema-in-an-updategram-sqlxml-40"></a>Updategram에 주석이 추가된 매핑 스키마 지정(SQLXML 4.0)
 [!INCLUDE [SQL Server Azure SQL Database](../../../includes/applies-to-version/sql-asdb.md)]
@@ -39,13 +39,13 @@ ms.locfileid: "85760412"
 >  이 설명서에서는 사용자가 [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] 의 템플릿 및 매핑 스키마 지원에 대해 잘 알고 있다고 가정합니다. 자세한 내용은 주석이 추가 된 [XSD 스키마 소개 &#40;SQLXML 4.0&#41;](../../../relational-databases/sqlxml/annotated-xsd-schemas/introduction-to-annotated-xsd-schemas-sqlxml-4-0.md)를 참조 하세요. XDR을 사용 하는 레거시 응용 프로그램의 경우 [SQLXML 4.0&#41;에서 사용 되지 &#40;주석이 추가 된 Xdr 스키마 ](../../../relational-databases/sqlxml/annotated-xsd-schemas/annotated-xdr-schemas-deprecated-in-sqlxml-4-0.md)를 참조 하세요.  
   
 ## <a name="dealing-with-data-types"></a>데이터 형식 처리  
- 스키마가 sql: datatype을 사용 하 여 **image**, **binary**또는 **varbinary** [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] 데이터 형식을 **sql:datatype**지정 하 고 XML 데이터 형식을 지정 하지 않는 경우 updategram는 xml 데이터 형식이 **binary base 64**이라고 가정 합니다. 데이터가 **bin. 기본** 형식 인 경우 형식을 명시적으로 지정 해야 합니다 (**dt: type = bin. base** 또는 **Type = "xsd: hexBinary"**).  
+ 스키마가 sql: datatype을 사용 하 여 **image**, **binary** 또는 **varbinary** [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] 데이터 형식을 지정 하 고 XML 데이터 형식을 지정 하지 않는 경우 updategram는 xml 데이터 형식이 **binary base 64** 이라고 가정 합니다. 데이터가 **bin. 기본** 형식 인 경우 형식을 명시적으로 지정 해야 합니다 (**dt: type = bin. base** 또는 **Type = "xsd: hexBinary"**).  
   
- 스키마가 **dateTime**, **date**또는 **time** XSD 데이터 형식을 지정 하는 경우 [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] **sql: datatype = "dateTime"** 을 사용 하 여 해당 데이터 형식을 지정 해야 합니다.  
+ 스키마가 **dateTime**, **date** 또는 **time** XSD 데이터 형식을 지정 하는 경우 [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] **sql: datatype = "dateTime"** 을 사용 하 여 해당 데이터 형식을 지정 해야 합니다.  
   
- Money 형식의 매개 변수를 처리 하는 경우 [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] **money** 매핑 스키마의 해당 노드에 **sql: datatype = "money"** 를 명시적으로 지정 해야 합니다.  
+ Money 형식의 매개 변수를 처리 하는 경우 [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)]  매핑 스키마의 해당 노드에 **sql: datatype = "money"** 를 명시적으로 지정 해야 합니다.  
   
-## <a name="examples"></a>예제  
+## <a name="examples"></a>예  
  다음 예제를 사용 하 여 작업 예제를 만들려면 [SQLXML 예를 실행 하기 위한 요구 사항](../../../relational-databases/sqlxml/requirements-for-running-sqlxml-examples.md)에 지정 된 요구 사항을 충족 해야 합니다.  
   
 ### <a name="a-creating-an-updategram-with-a-simple-mapping-schema"></a>A. 단순한 매핑 스키마를 사용하여 Updategram 만들기  

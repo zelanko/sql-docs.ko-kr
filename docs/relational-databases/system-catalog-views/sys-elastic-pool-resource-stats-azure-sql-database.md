@@ -18,13 +18,13 @@ ms.assetid: f242c1bd-3cc8-4c8b-8aaf-c79b6a8a0329
 author: markingmyname
 ms.author: maghan
 ms.custom: seo-dt-2019
-monikerRange: = azuresqldb-current || = sqlallproducts-allversions
-ms.openlocfilehash: 39db2d1bd2d3525e1dc2902c11e362d70b212ebd
-ms.sourcegitcommit: 04cf7905fa32e0a9a44575a6f9641d9a2e5ac0f8
+monikerRange: = azuresqldb-current
+ms.openlocfilehash: dbe893e86824ad727b7eaca96b4e01e4ded971d5
+ms.sourcegitcommit: 1a544cf4dd2720b124c3697d1e62ae7741db757c
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 10/07/2020
-ms.locfileid: "91809869"
+ms.lasthandoff: 12/14/2020
+ms.locfileid: "97405039"
 ---
 # <a name="syselastic_pool_resource_stats-azure-sql-database"></a>sys.elastic_pool_resource_stats (Azure SQL Database)
 [!INCLUDE[Azure SQL Database Azure SQL Managed Instance](../../includes/applies-to-version/asdb-asdbmi.md)]
@@ -33,7 +33,7 @@ ms.locfileid: "91809869"
   
 ||  
 |-|  
-|**적용**대상:  [!INCLUDE[ssSDS](../../includes/sssds-md.md)] V12.|  
+|**적용** 대상:  [!INCLUDE[ssSDS](../../includes/sssds-md.md)] V12.|  
   
 |열 이름|데이터 형식|Description|  
 |-----------------|---------------|-----------------|  
@@ -52,7 +52,7 @@ ms.locfileid: "91809869"
   
 ## <a name="remarks"></a>설명
 
- 이 보기는 SQL Database 서버의 master 데이터베이스에 있습니다. **Sys.elastic_pool_resource_stats**를 쿼리하려면 master 데이터베이스에 연결 되어 있어야 합니다.  
+ 이 보기는 SQL Database 서버의 master 데이터베이스에 있습니다. **Sys.elastic_pool_resource_stats** 를 쿼리하려면 master 데이터베이스에 연결 되어 있어야 합니다.  
   
 ## <a name="permissions"></a>사용 권한
 

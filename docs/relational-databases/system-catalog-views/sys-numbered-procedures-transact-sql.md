@@ -1,6 +1,6 @@
 ---
 description: sys.numbered_procedures(Transact-SQL)
-title: sys. numbered_procedures (Transact-sql) | Microsoft Docs
+title: sys.numbered_procedures (Transact-sql) | Microsoft Docs
 ms.custom: ''
 ms.date: 03/15/2017
 ms.prod: sql
@@ -20,18 +20,18 @@ helpviewer_keywords:
 ms.assetid: 5b6d6498-bac6-4266-94b9-d16ef5089cf0
 author: markingmyname
 ms.author: maghan
-monikerRange: '>=aps-pdw-2016||=azure-sqldw-latest||>=sql-server-2016||=sqlallproducts-allversions||>=sql-server-linux-2017||=azuresqldb-mi-current'
-ms.openlocfilehash: b849c5f2d02af85f3cab09dfc0cef05a5df8cac1
-ms.sourcegitcommit: dd36d1cbe32cd5a65c6638e8f252b0bd8145e165
+monikerRange: '>=aps-pdw-2016||=azure-sqldw-latest||>=sql-server-2016||>=sql-server-linux-2017||=azuresqldb-mi-current'
+ms.openlocfilehash: 410c7b9a04463aeed0a777bb8c3bfcb75dfc9e32
+ms.sourcegitcommit: 1a544cf4dd2720b124c3697d1e62ae7741db757c
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 09/08/2020
-ms.locfileid: "89539621"
+ms.lasthandoff: 12/14/2020
+ms.locfileid: "97405159"
 ---
 # <a name="sysnumbered_procedures-transact-sql"></a>sys.numbered_procedures(Transact-SQL)
 [!INCLUDE [sql-asdbmi-asa-pdw](../../includes/applies-to-version/sql-asdbmi-asa-pdw.md)]
 
-  번호를 매긴 프로시저로 작성된 각 SQL Server 저장 프로시저당 한 개의 행을 포함합니다. 여기에는 기본(번호 = 1) 저장 프로시저에 대한 행은 표시되지 않습니다. 기본 저장 프로시저에 대 한 항목은 **sys. objects** 및 **sys.debug**와 같은 뷰에서 찾을 수 있습니다.  
+  번호를 매긴 프로시저로 작성된 각 SQL Server 저장 프로시저당 한 개의 행을 포함합니다. 여기에는 기본(번호 = 1) 저장 프로시저에 대한 행은 표시되지 않습니다. 기본 저장 프로시저에 대 한 항목은 **sys. objects** 및 **sys.debug** 와 같은 뷰에서 찾을 수 있습니다.  
   
 > [!IMPORTANT]  
 >  번호를 매긴 프로시저는 더 이상 사용되지 않으므로 사용하지 않는 것이 좋습니다. 이 카탈로그 뷰를 사용하는 쿼리가 컴파일되면 DEPRECATION_ANNOUNCEMENT 이벤트가 발생합니다.  

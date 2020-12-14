@@ -14,18 +14,18 @@ helpviewer_keywords:
 ms.assetid: 0c3f2d7c-4ff2-4887-adfd-1f488a27c21c
 author: markingmyname
 ms.author: maghan
-monikerRange: '>=aps-pdw-2016||=azuresqldb-current||=azure-sqldw-latest||>=sql-server-2016||=sqlallproducts-allversions||>=sql-server-linux-2017||=azuresqldb-mi-current'
-ms.openlocfilehash: b6d8e85f20ff85133da38b1b1bafa6b4c5f6fbed
-ms.sourcegitcommit: 4d370399f6f142e25075b3714e5c2ce056b1bfd0
+monikerRange: '>=aps-pdw-2016||=azuresqldb-current||=azure-sqldw-latest||>=sql-server-2016||>=sql-server-linux-2017||=azuresqldb-mi-current'
+ms.openlocfilehash: ebaf54783b3141714a1cf23b4a1d5e3fd0ee7ef6
+ms.sourcegitcommit: 1a544cf4dd2720b124c3697d1e62ae7741db757c
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 10/09/2020
-ms.locfileid: "91867078"
+ms.lasthandoff: 12/14/2020
+ms.locfileid: "97407410"
 ---
 # <a name="bulk-copy-data-from-program-variables-odbc"></a>프로그램 변수에서 데이터 대량 복사(ODBC)
 [!INCLUDE [SQL Server](../../../includes/applies-to-version/sql-asdb-asdbmi-asa-pdw.md)]
 
-  이 샘플에서는 **bcp_bind** 및 **bcp_sendrow**를 사용 하 여 프로그램 변수에서 SQL Server로 데이터를 대량 복사 하는 대량 복사 함수를 사용 하는 방법을 보여 줍니다. 이 예제를 간소화하기 위해 오류 검사 코드는 제거했습니다.  
+  이 샘플에서는 **bcp_bind** 및 **bcp_sendrow** 를 사용 하 여 프로그램 변수에서 SQL Server로 데이터를 대량 복사 하는 대량 복사 함수를 사용 하는 방법을 보여 줍니다. 이 예제를 간소화하기 위해 오류 검사 코드는 제거했습니다.  
   
  이 예제는 ODBC 버전 3.0 이상용으로 개발되었습니다.  
   
@@ -57,7 +57,7 @@ ms.locfileid: "91867078"
   
 8.  모든 행을 보낸 후에는 [bcp_done](../../../relational-databases/native-client-odbc-extensions-bulk-copy-functions/bcp-done.md) 를 호출 하 여 작업을 완료 합니다.  
 
- [Bcp_colptr](../../../relational-databases/native-client-odbc-extensions-bulk-copy-functions/bcp-colptr.md) 및 [bcp_collen](../../../relational-databases/native-client-odbc-extensions-bulk-copy-functions/bcp-collen.md)를 호출 하 여 대량 복사 작업을 수행 하는 동안 프로그램 변수의 위치와 길이를 변경할 수 있습니다. [Bcp_control](../../../relational-databases/native-client-odbc-extensions-bulk-copy-functions/bcp-control.md) 를 사용 하 여 다양 한 대량 복사 옵션을 설정 합니다. [Bcp_moretext](../../../relational-databases/native-client-odbc-extensions-bulk-copy-functions/bcp-moretext.md) 를 사용 하 여 **text**, **ntext**및 **image** 데이터를 세그먼트에 서버에 보냅니다.  
+ [Bcp_colptr](../../../relational-databases/native-client-odbc-extensions-bulk-copy-functions/bcp-colptr.md) 및 [bcp_collen](../../../relational-databases/native-client-odbc-extensions-bulk-copy-functions/bcp-collen.md)를 호출 하 여 대량 복사 작업을 수행 하는 동안 프로그램 변수의 위치와 길이를 변경할 수 있습니다. [Bcp_control](../../../relational-databases/native-client-odbc-extensions-bulk-copy-functions/bcp-control.md) 를 사용 하 여 다양 한 대량 복사 옵션을 설정 합니다. [Bcp_moretext](../../../relational-databases/native-client-odbc-extensions-bulk-copy-functions/bcp-moretext.md) 를 사용 하 여 **text**, **ntext** 및 **image** 데이터를 세그먼트에 서버에 보냅니다.  
   
 ## <a name="example"></a>예  
  이 예제는 IA64에서 지원되지 않습니다.  

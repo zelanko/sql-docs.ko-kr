@@ -1,6 +1,6 @@
 ---
 description: sys.master_files(Transact-SQL)
-title: sys. master_files (Transact-sql) | Microsoft Docs
+title: sys.master_files (Transact-sql) | Microsoft Docs
 ms.custom: ''
 ms.date: 03/10/2016
 ms.prod: sql
@@ -20,13 +20,13 @@ helpviewer_keywords:
 ms.assetid: 803b22f2-0016-436b-a561-ce6f023d6b6a
 author: markingmyname
 ms.author: maghan
-monikerRange: '>=aps-pdw-2016||>=sql-server-2016||=sqlallproducts-allversions||>=sql-server-linux-2017||=azuresqldb-mi-current'
-ms.openlocfilehash: ecf00931301e468f3fcaa92b95e15f778bd1607c
-ms.sourcegitcommit: dd36d1cbe32cd5a65c6638e8f252b0bd8145e165
+monikerRange: '>=aps-pdw-2016||>=sql-server-2016||>=sql-server-linux-2017||=azuresqldb-mi-current'
+ms.openlocfilehash: 3bd6320435c372b99d9b88f9e0ecc7e41c41cf90
+ms.sourcegitcommit: 1a544cf4dd2720b124c3697d1e62ae7741db757c
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 09/08/2020
-ms.locfileid: "89548705"
+ms.lasthandoff: 12/14/2020
+ms.locfileid: "97405418"
 ---
 # <a name="sysmaster_files-transact-sql"></a>sys.master_files(Transact-SQL)
 [!INCLUDE [sql-asdbmi-pdw](../../includes/applies-to-version/sql-asdbmi-pdw.md)]
@@ -45,7 +45,7 @@ ms.locfileid: "89548705"
 |physical_name|**nvarchar(260)**|운영 체제 파일 이름입니다.|  
 |state|**tinyint**|파일 상태입니다.<br /><br /> 0 = ONLINE<br /><br /> 1 = RESTORING<br /><br /> 2 = RECOVERING<br /><br /> 3 = RECOVERY_PENDING<br /><br /> 4 = SUSPECT<br /><br /> 5 = [!INCLUDE[ssInternalOnly](../../includes/ssinternalonly-md.md)]<br /><br /> 6 = OFFLINE<br /><br /> 7 = DEFUNCT|  
 |state_desc|**nvarchar(60)**|파일 상태에 대한 설명입니다.<br /><br /> ONLINE<br /><br /> RESTORING<br /><br /> RECOVERING<br /><br /> RECOVERY_PENDING<br /><br /> SUSPECT<br /><br /> OFFLINE<br /><br /> DEFUNCT<br /><br /> 자세한 내용은 [파일 상태](../../relational-databases/databases/file-states.md)를 참조하세요.|  
-|크기|**int**|8KB 페이지 단위로 나타낸 파일의 현재 크기입니다. 데이터베이스 스냅샷의 경우 size는 스냅샷이 파일에 대해 사용할 수 있는 최대 공간을 나타냅니다.<br /><br /> 참고:이 필드는 FILESTREAM 컨테이너에 대해 0으로 채워집니다. FILESTREAM 컨테이너의 실제 크기에 대 한 *database_files* 카탈로그 뷰를 쿼리 합니다.|  
+|크기|**int**|8KB 페이지 단위로 나타낸 파일의 현재 크기입니다. 데이터베이스 스냅샷의 경우 size는 스냅샷이 파일에 대해 사용할 수 있는 최대 공간을 나타냅니다.<br /><br /> 참고:이 필드는 FILESTREAM 컨테이너에 대해 0으로 채워집니다. FILESTREAM 컨테이너의 실제 크기에 대 한 *sys.database_files* 카탈로그 뷰를 쿼리 합니다.|  
 |max_size|**int**|8KB 페이지 단위로 나타낸 파일의 최대 크기입니다.<br /><br /> 0 = 증가를 허용하지 않습니다.<br /><br /> -1 = 디스크가 꽉 찰 때까지 파일이 증가합니다.<br /><br /> 268435456 = 로그 파일이 최대 2TB까지 증가합니다.<br /><br /> 참고: 무제한 로그 파일 크기로 업그레이드 된 데이터베이스는 로그 파일의 최대 크기에 대해-1을 보고 합니다.|  
 |growth|**int**|0 = 파일 크기가 고정되어 증가하지 않습니다.<br /><br /> >0 = 파일은 자동으로 증가 합니다.<br /><br /> is_percent_growth = 0일 경우 증분은 8KB 페이지 단위로 표시되며 64KB 단위로 반올림됩니다.<br /><br /> is_percent_growth = 1이면 증분은 정수 백분율로 표시됩니다.|  
 |is_media_read_onlyF|**bit**|1 = 파일이 읽기 전용 미디어에 있습니다.<br /><br /> 0 = 파일이 읽기/쓰기 미디어에 있습니다.|  

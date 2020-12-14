@@ -13,13 +13,13 @@ helpviewer_keywords:
 ms.assetid: d43c8dca-bb6b-4a41-8a79-c96fd546fc91
 author: markingmyname
 ms.author: maghan
-monikerRange: =azuresqldb-current||=azure-sqldw-latest||>=sql-server-2016||=sqlallproducts-allversions||>=sql-server-linux-2017||=azuresqldb-mi-current
-ms.openlocfilehash: d0bb2d2e7ae8b5c36cf8535cd27e5164dc2113ea
-ms.sourcegitcommit: e700497f962e4c2274df16d9e651059b42ff1a10
+monikerRange: =azuresqldb-current||=azure-sqldw-latest||>=sql-server-2016||>=sql-server-linux-2017||=azuresqldb-mi-current
+ms.openlocfilehash: 7f420598b2c404251f57ce968f42c009654ce7ae
+ms.sourcegitcommit: 1a544cf4dd2720b124c3697d1e62ae7741db757c
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 08/17/2020
-ms.locfileid: "88404029"
+ms.lasthandoff: 12/14/2020
+ms.locfileid: "97405593"
 ---
 # <a name="creating-altering-and-removing-foreign-keys"></a>외래 키 생성, 변경 및 제거
 [!INCLUDE [SQL Server ASDB, ASDBMI, ASDW ](../../../includes/applies-to-version/sql-asdb-asdbmi-asa.md)]
@@ -30,7 +30,7 @@ ms.locfileid: "88404029"
   
  외래 키를 나타내는 열은 개체의 **columns** 개체 속성에 나열 됩니다 <xref:Microsoft.SqlServer.Management.Smo.ForeignKey> . 외래 키에서 참조되는 기본 키는 <xref:Microsoft.SqlServer.Management.Smo.ForeignKey.ReferencedKey%2A> 속성에 지정된 테이블에 있는 <xref:Microsoft.SqlServer.Management.Smo.ForeignKey.ReferencedTable%2A> 속성으로 표시됩니다.  
   
-## <a name="example"></a>예제  
+## <a name="example"></a>예  
  제공된 코드 예제를 사용하려면 애플리케이션을 만들 프로그래밍 환경, 프로그래밍 템플릿 및 프로그래밍 언어를 선택해야 합니다. 자세한 내용은 [Visual Studio .net에서 Visual C&#35; SMO 프로젝트 만들기](../../../relational-databases/server-management-objects-smo/how-to-create-a-visual-csharp-smo-project-in-visual-studio-net.md)를 참조 하세요.  
   
 ## <a name="creating-altering-and-removing-a-foreign-key-in-visual-basic"></a>Visual Basic에서 외래 키 생성, 변경 및 제거  

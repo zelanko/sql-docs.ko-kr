@@ -1,6 +1,6 @@
 ---
 description: sys.database_role_members(Transact-SQL)
-title: sys. database_role_members (Transact-sql) | Microsoft Docs
+title: sys.database_role_members (Transact-sql) | Microsoft Docs
 ms.custom: ''
 ms.date: 01/31/2017
 ms.prod: sql
@@ -20,18 +20,18 @@ helpviewer_keywords:
 ms.assetid: ed1b019d-ca48-4db3-85df-cf6d2db591cf
 author: VanMSFT
 ms.author: vanto
-monikerRange: '>=aps-pdw-2016||=azuresqldb-current||=azure-sqldw-latest||>=sql-server-2016||=sqlallproducts-allversions||>=sql-server-linux-2017||=azuresqldb-mi-current'
-ms.openlocfilehash: 443df263f534d6f15648caacb5a810a0c15e555a
-ms.sourcegitcommit: e700497f962e4c2274df16d9e651059b42ff1a10
+monikerRange: '>=aps-pdw-2016||=azuresqldb-current||=azure-sqldw-latest||>=sql-server-2016||>=sql-server-linux-2017||=azuresqldb-mi-current'
+ms.openlocfilehash: 603ecd155e076b4f8798e7d5259eee902e4eab79
+ms.sourcegitcommit: 1a544cf4dd2720b124c3697d1e62ae7741db757c
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 08/17/2020
-ms.locfileid: "88482147"
+ms.lasthandoff: 12/14/2020
+ms.locfileid: "97405650"
 ---
 # <a name="sysdatabase_role_members-transact-sql"></a>sys.database_role_members(Transact-SQL)
 [!INCLUDE [sql-asdb-asdbmi-asa-pdw](../../includes/applies-to-version/sql-asdb-asdbmi-asa-pdw.md)]
 
-  각 데이터베이스 역할의 각 멤버에 대해 행을 반환합니다.  데이터베이스 사용자, 응용 프로그램 역할 및 기타 데이터베이스 역할은 데이터베이스 역할의 멤버일 수 있습니다. 역할에 멤버를 추가 하려면 [ALTER role](../../t-sql/statements/alter-role-transact-sql.md) 문을 옵션과 함께 사용 `ADD MEMBER` 합니다. 값의 이름을 반환 하려면 [database_principals](../../relational-databases/system-catalog-views/sys-database-principals-transact-sql.md) 와 조인 `principal_id` 합니다.
+  각 데이터베이스 역할의 각 멤버에 대해 행을 반환합니다.  데이터베이스 사용자, 응용 프로그램 역할 및 기타 데이터베이스 역할은 데이터베이스 역할의 멤버일 수 있습니다. 역할에 멤버를 추가 하려면 [ALTER role](../../t-sql/statements/alter-role-transact-sql.md) 문을 옵션과 함께 사용 `ADD MEMBER` 합니다. [Sys.database_principals](../../relational-databases/system-catalog-views/sys-database-principals-transact-sql.md) 와 조인 하 여 값의 이름을 반환 `principal_id` 합니다.
   
 |열 이름|데이터 형식|Description|  
 |-----------------|---------------|-----------------|  
@@ -43,7 +43,7 @@ ms.locfileid: "88482147"
   
  [!INCLUDE[ssCatViewPerm](../../includes/sscatviewperm-md.md)] 자세한 내용은 [Metadata Visibility Configuration](../../relational-databases/security/metadata-visibility-configuration.md)을 참조하세요.  
   
-## <a name="example"></a>예제  
+## <a name="example"></a>예  
  다음 쿼리는 데이터베이스 역할의 멤버를 반환 합니다.  
   
 ```  
