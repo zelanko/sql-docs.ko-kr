@@ -14,13 +14,13 @@ ms.assetid: 71614aaf-0fa4-4fe0-b522-68e2e0b66f43
 author: markingmyname
 ms.author: maghan
 ms.custom: seo-dt-2019
-monikerRange: '>=aps-pdw-2016||=azuresqldb-current||=azure-sqldw-latest||>=sql-server-2016||=sqlallproducts-allversions||>=sql-server-linux-2017||=azuresqldb-mi-current'
-ms.openlocfilehash: 7092b653634f23230983244aa6030e14ab67ac70
-ms.sourcegitcommit: 4d370399f6f142e25075b3714e5c2ce056b1bfd0
+monikerRange: '>=aps-pdw-2016||=azuresqldb-current||=azure-sqldw-latest||>=sql-server-2016||>=sql-server-linux-2017||=azuresqldb-mi-current'
+ms.openlocfilehash: 7d6afbedc35ca1da8f3d9325fc4721d92062f4d2
+ms.sourcegitcommit: 1a544cf4dd2720b124c3697d1e62ae7741db757c
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 10/09/2020
-ms.locfileid: "91869037"
+ms.lasthandoff: 12/14/2020
+ms.locfileid: "97435001"
 ---
 # <a name="sql-server-native-client-date-and-time-improvements-ole-db"></a>SQL Server Native Client 날짜 및 시간 기능 향상 (OLE DB)
 [!INCLUDE[SQL Server Azure SQL Database Synapse Analytics PDW ](../../includes/applies-to-version/sql-asdb-asdbmi-asa-pdw.md)]
@@ -34,7 +34,7 @@ ms.locfileid: "91869037"
  [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]날짜 및 시간 데이터 형식을 지 원하는 OLE DB (Native Client) 형식에 대 한 정보를 제공 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 합니다.  
   
  [메타데이터&#40;OLE DB&#41;](./data-type-support-for-ole-db-date-and-time-improvements.md)  
- DBBINDING 구조 **ICommandWithParameters::GetParameterInfo**, **ICommandWithParameters::SetParameterInfo**, **IColumnsRowset::GetColumnsRowset**, I**ColumnsInfo::GetColumnInfo**에 관한 정보를 포함합니다. OLE DB 스키마 행 집합의 업데이트에 대한 정보도 제공합니다.  
+ DBBINDING 구조 **ICommandWithParameters::GetParameterInfo**, **ICommandWithParameters::SetParameterInfo**, **IColumnsRowset::GetColumnsRowset**, I **ColumnsInfo::GetColumnInfo** 에 관한 정보를 포함합니다. OLE DB 스키마 행 집합의 업데이트에 대한 정보도 제공합니다.  
   
  [바인딩 및 변환&#40;OLE DB&#41;](../../relational-databases/native-client-ole-db-date-time/conversions-ole-db.md)  
  기존 데이터 형식 및 새로운 데이터 형식에 대한 서버와 클라이언트 간 변환 규칙을 설명합니다.  
@@ -46,7 +46,7 @@ ms.locfileid: "91869037"
  향상된 날짜/시간 기능을 지원하는 OLE DB API에 대해 설명합니다.  
   
  [IRowsetFind 비교](../../relational-databases/native-client-ole-db-date-time/comparability-for-irowsetfind.md)  
- 날짜/시간 형식 및 **IRowsetFind**를 설명합니다.  
+ 날짜/시간 형식 및 **IRowsetFind** 를 설명합니다.  
   
  [이전 SQL Server 버전 &#40;OLE DB의 새로운 날짜 및 시간 기능&#41;](../../relational-databases/native-client-ole-db-date-time/new-date-and-time-features-with-previous-sql-server-versions-ole-db.md)  
  향상된 날짜 및 시간 기능을 사용하는 클라이언트 애플리케이션이 이전 버전의 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]와 통신할 때, 그리고 이전 버전의 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] Native Client를 사용하여 컴파일한 클라이언트가 향상된 날짜 및 시간 기능을 지원하는 서버에 명령을 전송할 때 예상되는 동작에 대해 설명합니다.  

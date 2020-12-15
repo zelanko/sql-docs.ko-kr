@@ -19,13 +19,13 @@ helpviewer_keywords:
 ms.assetid: 61a8db19-6571-47dd-84e8-fcc97cb60b45
 author: markingmyname
 ms.author: maghan
-monikerRange: '>=aps-pdw-2016||=azuresqldb-current||=azure-sqldw-latest||>=sql-server-2016||=sqlallproducts-allversions||>=sql-server-linux-2017||=azuresqldb-mi-current'
-ms.openlocfilehash: 912a025e689343ffe3dce2ccc19dbec600576cd1
-ms.sourcegitcommit: 4d370399f6f142e25075b3714e5c2ce056b1bfd0
+monikerRange: '>=aps-pdw-2016||=azuresqldb-current||=azure-sqldw-latest||>=sql-server-2016||>=sql-server-linux-2017||=azuresqldb-mi-current'
+ms.openlocfilehash: a7e51247bec904bbd4d735e5706814c2b60bdfed
+ms.sourcegitcommit: 1a544cf4dd2720b124c3697d1e62ae7741db757c
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 10/09/2020
-ms.locfileid: "91867275"
+ms.lasthandoff: 12/14/2020
+ms.locfileid: "97438037"
 ---
 # <a name="processing-results-odbc"></a>결과 처리(ODBC)
 [!INCLUDE[SQL Server Azure SQL Database Synapse Analytics PDW ](../../includes/applies-to-version/sql-asdb-asdbmi-asa-pdw.md)]
@@ -36,7 +36,7 @@ ms.locfileid: "91867275"
   
  GRANT 또는 REVOKE와 같은 다른 SQL 문은 결과 집합을 반환하지 않습니다. 이러한 문의 경우 **Sqlexecute** 또는 **sqlexecdirect** 의 반환 코드는 일반적으로 문이 성공 했음을 나타냅니다.  
   
- 각 INSERT, UPDATE 및 DELETE 문은 수정 내용이 적용되는 행 수만 포함된 결과 집합을 반환합니다. 이 개수는 응용 프로그램이 [Sqlrowcount](../../relational-databases/native-client-odbc-api/sqlrowcount.md)를 호출할 때 사용할 수 있습니다. ODBC 3. *x* 응용 프로그램은 **sqlrowcount** 를 호출 하 여 결과 집합을 검색 하거나 [SQLMoreResults](../../relational-databases/native-client-odbc-api/sqlmoreresults.md) 를 호출 하 여 취소 해야 합니다. 응용 프로그램이 여러 INSERT, UPDATE 또는 DELETE 문을 포함 하는 일괄 처리 또는 저장 프로시저를 실행 하는 경우 각 수정 문의 결과 집합을 **Sqlrowcount** 를 사용 하 여 처리 하거나 **SQLMoreResults**를 사용 하 여 취소 해야 합니다. 일괄 처리나 저장 프로시저에 SET NOCOUNT ON 문을 포함하여 이 개수를 취소할 수 있습니다.  
+ 각 INSERT, UPDATE 및 DELETE 문은 수정 내용이 적용되는 행 수만 포함된 결과 집합을 반환합니다. 이 개수는 응용 프로그램이 [Sqlrowcount](../../relational-databases/native-client-odbc-api/sqlrowcount.md)를 호출할 때 사용할 수 있습니다. ODBC 3. *x* 응용 프로그램은 **sqlrowcount** 를 호출 하 여 결과 집합을 검색 하거나 [SQLMoreResults](../../relational-databases/native-client-odbc-api/sqlmoreresults.md) 를 호출 하 여 취소 해야 합니다. 응용 프로그램이 여러 INSERT, UPDATE 또는 DELETE 문을 포함 하는 일괄 처리 또는 저장 프로시저를 실행 하는 경우 각 수정 문의 결과 집합을 **Sqlrowcount** 를 사용 하 여 처리 하거나 **SQLMoreResults** 를 사용 하 여 취소 해야 합니다. 일괄 처리나 저장 프로시저에 SET NOCOUNT ON 문을 포함하여 이 개수를 취소할 수 있습니다.  
   
  Transact-SQL에는 SET NOCOUNT 문이 포함되어 있습니다. NOCOUNT 옵션을 on으로 설정 하면 SQL Server는 문의 영향을 받는 행 수를 반환 하지 않으며 **Sqlrowcount** 는 0을 반환 합니다. [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]Native CLIENT ODBC 드라이버 버전은 NOCOUNT 옵션의 설정 또는 해제 여부를 보고 하는 드라이버 관련 [SQLGetStmtAttr](../../relational-databases/native-client-odbc-api/sqlgetstmtattr.md) 옵션인 SQL_SOPT_SS_NOCOUNT_STATUS를 소개 합니다. **Sqlrowcount** 가 0을 반환할 때마다 응용 프로그램이 SQL_SOPT_SS_NOCOUNT_STATUS를 테스트 해야 합니다. SQL_NC_ON 반환 되는 경우 **Sqlrowcount** 의 값이 0 이면 SQL Server 행 개수가 반환 되지 않았음을 나타냅니다. SQL_NC_OFF 반환 되는 경우에는 NOCOUNT가 OFF이 고 **Sqlrowcount** 의 값 0은 문이 행에 영향을 주지 않았음을 나타냅니다. SQL_SOPT_SS_NOCOUNT_STATUS SQL_NC_OFF 되 면 응용 프로그램에서 **Sqlrowcount** 값을 표시 해서는 안 됩니다. 큰 일괄 처리나 저장 프로시저에는 여러 개의 SET NOCOUNT 문이 포함될 수 있으므로 프로그래머는 SQL_SOPT_SS_NOCOUNT_STATUS가 일정하게 유지된다고 가정할 수 없습니다. **Sqlrowcount** 가 0을 반환할 때마다이 옵션을 테스트 해야 합니다.  
   

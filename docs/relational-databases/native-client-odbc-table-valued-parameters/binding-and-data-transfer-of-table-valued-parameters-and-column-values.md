@@ -1,6 +1,6 @@
 ---
-title: 테이블 반환 매개 변수의 데이터 전송
-description: 테이블 반환 매개 변수의 데이터 전송 설명
+title: Table-Valued 매개 변수의 데이터 전송
+description: Table-Valued 매개 변수의 데이터 전송 설명
 ms.prod: sql
 ms.prod_service: database-engine, sql-database, sql-data-warehouse, pdw
 ms.technology: native-client
@@ -11,12 +11,13 @@ ms.author: maghan
 ms.reviewer: ''
 ms.custom: ''
 ms.date: 07/01/2020
-monikerRange: '>=aps-pdw-2016||=azuresqldb-current||=azure-sqldw-latest||>=sql-server-2016||=sqlallproducts-allversions||>=sql-server-linux-2017||=azuresqldb-mi-current'
-ms.openlocfilehash: 0be2ffbfb7160d5be8f5ebb2a2ed688103a54b4d
-ms.sourcegitcommit: f3321ed29d6d8725ba6378d207277a57cb5fe8c2
+monikerRange: '>=aps-pdw-2016||=azuresqldb-current||=azure-sqldw-latest||>=sql-server-2016||>=sql-server-linux-2017||=azuresqldb-mi-current'
+ms.openlocfilehash: 19a7f22cd26ea4988364d51ff70300cdbf42d365
+ms.sourcegitcommit: 1a544cf4dd2720b124c3697d1e62ae7741db757c
+ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 07/06/2020
-ms.locfileid: "86004616"
+ms.lasthandoff: 12/14/2020
+ms.locfileid: "97436161"
 ---
 # <a name="binding-and-data-transfer-of-table-valued-parameters-and-column-values"></a>테이블 반환 매개 변수 및 열 값에 대한 바인딩 및 데이터 전송
 
@@ -43,7 +44,7 @@ SQL_CA_SS_COL_HAS_DEFAULT_VALUE 특성을 사용하여 전체 테이블 반환 �
 |*InputOutputType*|IPD의 SQL_DESC_PARAMETER_TYPE<br /><br /> 테이블 반환 매개 변수 열의 경우 이 값은 테이블 반환 매개 변수 자체에 대한 설정과 같습니다.|IPD의 SQL_DESC_PARAMETER_TYPE<br /><br /> SQL_PARAM_INPUT이여야 합니다.|  
 |*ValueType*|APD의 SQL_DESC_TYPE, SQL_DESC_CONCISE_TYPE|APD의 SQL_DESC_TYPE, SQL_DESC_CONCISE_TYPE<br /><br /> SQL_C_DEFAULT 또는 SQL_C_BINARY여야 합니다.|  
 |*ParameterType*|IPD의 SQL_DESC_TYPE, SQL_DESC_CONCISE_TYPE|IPD의 SQL_DESC_TYPE, SQL_DESC_CONCISE_TYPE<br /><br /> SQL_SS_TABLE이여야 합니다.|  
-|*ColumnSize*|IPD의 SQL_DESC_LENGTH 또는 SQL_DESC_PRECISION<br /><br /> 이는 *ParameterType*의 값에 따라 달라 집니다.|SQL_DESC_ARRAY_SIZE<br /><br /> 매개 변수 포커스를 테이블 반환 매개 변수로 설정할 때 SQL_ATTR_PARAM_SET_SIZE를 사용하여 설정할 수도 있습니다.<br /><br /> 테이블 반환 매개 변수의 경우 이 값은 테이블 반환 매개 변수 열 버퍼의 행 수입니다.|  
+|*ColumnSize*|IPD의 SQL_DESC_LENGTH 또는 SQL_DESC_PRECISION<br /><br /> 이는 *ParameterType* 의 값에 따라 달라 집니다.|SQL_DESC_ARRAY_SIZE<br /><br /> 매개 변수 포커스를 테이블 반환 매개 변수로 설정할 때 SQL_ATTR_PARAM_SET_SIZE를 사용하여 설정할 수도 있습니다.<br /><br /> 테이블 반환 매개 변수의 경우 이 값은 테이블 반환 매개 변수 열 버퍼의 행 수입니다.|  
 |*DecimalDigits*|IPD의 SQL_DESC_PRECISION 또는 SQL_DESC_SCALE|사용되지 않습니다. 0이어야 합니다.<br /><br /> 이 매개 변수가 0이 아닌 경우 SQLBindParameter는 SQL_ERROR를 반환 하 고 SQLSTATE = HY104 및 "잘못 된 전체 자릿수 또는 소수 자릿수" 라는 메시지가 포함 된 진단 레코드가 생성 됩니다.|  
 |*ParameterValuePtr*|APD의 SQL_DESC_DATA_PTR|SQL_CA_SS_TYPE_NAME<br /><br /> 저장 프로시저 호출의 경우 선택 사항이 며 필요 하지 않은 경우 NULL을 지정할 수 있습니다. 프로시저 호출이 아닌 SQL 문에 대해 지정 해야 합니다.<br /><br /> 또한 이 매개 변수는 변수 행 바인딩을 사용할 때 애플리케이션에서 이 테이블 반환 매개 변수를 식별하는 데 사용할 수 있는 고유 값으로도 사용됩니다. 자세한 내용은 이 항목의 뒷부분에 나오는 "가변 테이블 반환 매개 변수 행 바인딩" 섹션을 참조하십시오.<br /><br /> SQLBindParameter에 대 한 호출에 테이블 반환 매개 변수 형식 이름을 지정 하는 경우 ANSI 응용 프로그램으로 빌드된 응용 프로그램 에서도 해당 이름을 유니코드 값으로 지정 해야 합니다. *StrLen_or_IndPtr* 매개 변수에 사용 되는 값은 SQL_NTS 이거나 이름의 문자열 길이에 (WCHAR) 크기를 곱합니다.|  
 |*BufferLength*|APD의 SQL_DESC_OCTET_LENGTH|테이블 반환 매개 변수 형식 이름의 길이(바이트)입니다.<br /><br /> 형식 이름이 null로 종료 된 경우에는 SQL_NTS 수 있으며, 테이블 반환 매개 변수 형식 이름이 필요 하지 않은 경우에는 0이 될 수 있습니다.|  
@@ -78,13 +79,13 @@ SQL_CA_SS_COL_HAS_DEFAULT_VALUE 특성을 사용하여 전체 테이블 반환 �
 
 가변 행 바인딩의 경우 행은 실행 시 일괄 처리로 전송 되 고 응용 프로그램은 요청 시 행을 드라이버에 전달 합니다. 이는 개별 매개 변수 값의 실행 시 데이터와 유사합니다. 가변 행 바인딩에서 애플리케이션은 다음을 수행합니다.  
 
-1. 이전 섹션인 "고정 테이블 반환 매개 변수 행 바인딩"의 1 ~ 3 단계에 설명 된 대로 매개 변수 및 테이블 반환 매개 변수 열을 바인딩합니다.  
+1. 이전 섹션인 "고정 Table-Valued 매개 변수 행 바인딩"의 1 ~ 3 단계에 설명 된 대로 매개 변수 및 테이블 반환 매개 변수 열을 바인딩합니다.  
 
 2. 실행 시 SQL_DATA_AT_EXEC에 전달할 테이블 반환 매개 변수에 대 한 *StrLen_or_IndPtr* 또는 SQL_DESC_OCTET_LENGTH_PTR를 설정 합니다. 설정 하지 않은 경우 매개 변수는 이전 섹션에 설명 된 대로 처리 됩니다.  
 
 3. SQLExecute 또는 SQLExecDirect를 호출 합니다. SQL_PARAM_INPUT 또는 SQL_PARAM_INPUT_OUTPUT 매개 변수가 실행 시 데이터 매개 변수로 처리 될 경우 SQL_NEED_DATA를 반환 합니다. 이 경우 애플리케이션을 다음을 수행합니다.  
 
-    - SQLParamData를 호출 합니다. 이렇게 하면 실행 시 데이터 매개 변수 및 SQL_NEED_DATA 반환 코드에 대 한 *Parametervalueptr* 값이 반환 됩니다. 모든 매개 변수 데이터가 드라이버에 전달 된 경우 SQLParamData는 SQL_SUCCESS, SQL_SUCCESS_WITH_INFO 또는 SQL_ERROR를 반환 합니다. 실행 시 데이터 매개 변수의 경우 설명자 필드 SQL_DESC_DATA_PTR와 동일한 *Parametervalueptr*은 값이 고유 하 게 필요한 매개 변수를 식별 하는 토큰으로 간주 될 수 있습니다. 이 &quot;토큰&quot;은 바인딩 시 애플리케이션에서 드라이버로 전달된 다음 실행 시 애플리케이션으로 다시 전달됩니다.  
+    - SQLParamData를 호출 합니다. 이렇게 하면 실행 시 데이터 매개 변수 및 SQL_NEED_DATA 반환 코드에 대 한 *Parametervalueptr* 값이 반환 됩니다. 모든 매개 변수 데이터가 드라이버에 전달 된 경우 SQLParamData는 SQL_SUCCESS, SQL_SUCCESS_WITH_INFO 또는 SQL_ERROR를 반환 합니다. 실행 시 데이터 매개 변수의 경우 설명자 필드 SQL_DESC_DATA_PTR와 동일한 *Parametervalueptr* 은 값이 고유 하 게 필요한 매개 변수를 식별 하는 토큰으로 간주 될 수 있습니다. 이 &quot;토큰&quot;은 바인딩 시 애플리케이션에서 드라이버로 전달된 다음 실행 시 애플리케이션으로 다시 전달됩니다.  
   
 4. Null 테이블 반환 매개 변수에 대 한 테이블 반환 매개 변수 행 데이터를 전송 하기 위해 테이블 반환 매개 변수에 행이 없는 경우 응용 프로그램은 *StrLen_or_Ind* 이 SQL_DEFAULT_PARAM으로 설정 된 SQLPutData를 호출 합니다.  
 
