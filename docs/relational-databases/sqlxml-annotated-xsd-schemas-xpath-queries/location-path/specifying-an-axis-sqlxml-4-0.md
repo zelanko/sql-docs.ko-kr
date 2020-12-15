@@ -21,18 +21,18 @@ ms.assetid: 65631795-3389-40cf-90ea-85e9438956c5
 author: MightyPen
 ms.author: genemi
 ms.custom: seo-lt-2019
-monikerRange: =azuresqldb-current||>=sql-server-2016||=sqlallproducts-allversions||>=sql-server-linux-2017||=azuresqldb-mi-current
-ms.openlocfilehash: df40d531bcb9c1fddcad5d78cd76ca98831834ea
-ms.sourcegitcommit: da88320c474c1c9124574f90d549c50ee3387b4c
+monikerRange: =azuresqldb-current||>=sql-server-2016||>=sql-server-linux-2017||=azuresqldb-mi-current
+ms.openlocfilehash: 03c0fff271ef3774116eb9c97025b1f602f7852c
+ms.sourcegitcommit: 1a544cf4dd2720b124c3697d1e62ae7741db757c
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 07/01/2020
-ms.locfileid: "85649727"
+ms.lasthandoff: 12/14/2020
+ms.locfileid: "97431161"
 ---
 # <a name="specifying-an-axis-sqlxml-40"></a>축 지정(SQLXML 4.0)
 [!INCLUDE [SQL Server Azure SQL Database](../../../includes/applies-to-version/sql-asdb.md)]
     
--   축은 위치 단계에서 선택되는 노드와 컨텍스트 노드 간의 트리 관계를 지정합니다. 다음 축이 지원 됩니다. **자식**  
+-   축은 위치 단계에서 선택되는 노드와 컨텍스트 노드 간의 트리 관계를 지정합니다. 다음 축이 지원 됩니다.  **자식**  
   
      컨텍스트 노드의 자식을 포함합니다.  
   
@@ -44,7 +44,7 @@ ms.locfileid: "85649727"
   
      다음 XPath 쿼리에서`child`는 축이고 `Customer`는 노드 테스트입니다.  
   
--   **부모**  
+-   **parent**  
   
      컨텍스트 노드의 부모를 포함합니다.  
   

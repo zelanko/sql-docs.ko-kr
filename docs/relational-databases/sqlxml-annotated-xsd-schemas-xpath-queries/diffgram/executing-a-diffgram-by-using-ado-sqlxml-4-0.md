@@ -17,13 +17,13 @@ ms.assetid: 741fce82-de83-4923-86eb-30acb5b9a5e6
 author: MightyPen
 ms.author: genemi
 ms.custom: seo-lt-2019
-monikerRange: =azuresqldb-current||>=sql-server-2016||=sqlallproducts-allversions||>=sql-server-linux-2017||=azuresqldb-mi-current
-ms.openlocfilehash: 9a6e50a1e7a770ad8be9777d37b84bc328248159
-ms.sourcegitcommit: da88320c474c1c9124574f90d549c50ee3387b4c
+monikerRange: =azuresqldb-current||>=sql-server-2016||>=sql-server-linux-2017||=azuresqldb-mi-current
+ms.openlocfilehash: a28fe03f8e52d58f0e31c2e7d3cabebfd8a6113c
+ms.sourcegitcommit: 1a544cf4dd2720b124c3697d1e62ae7741db757c
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 07/01/2020
-ms.locfileid: "85650050"
+ms.lasthandoff: 12/14/2020
+ms.locfileid: "97431522"
 ---
 # <a name="executing-a-diffgram-by-using-ado-sqlxml-40"></a>ADO를 사용하여 DiffGram 실행(SQLXML 4.0)
 [!INCLUDE [SQL Server Azure SQL Database](../../../includes/applies-to-version/sql-asdb.md)]
@@ -97,7 +97,7 @@ End Sub
     Microsoft ActiveX Data Objects 2.8 Library  
     ```  
   
-4.  도구 상자에서 **CommandButton**을 클릭 한 다음 폼에 단추를 그립니다.  
+4.  도구 상자에서 **CommandButton** 을 클릭 한 다음 폼에 단추를 그립니다.  
   
 5.  단추를 두 번 클릭하여 코드를 편집하고 이 항목에서 제공된 애플리케이션 코드를 추가합니다.  
   

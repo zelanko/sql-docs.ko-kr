@@ -18,13 +18,13 @@ helpviewer_keywords:
 ms.assetid: d18b251d-b37a-4f5f-b50c-502d689594c8
 author: markingmyname
 ms.author: maghan
-monikerRange: '>=aps-pdw-2016||=azuresqldb-mi-current||>=sql-server-2016||=sqlallproducts-allversions||>=sql-server-linux-2017'
-ms.openlocfilehash: e02f07a78dc5f3022bfd1f374738f22b326ca94e
-ms.sourcegitcommit: afb02c275b7c79fbd90fac4bfcfd92b00a399019
+monikerRange: '>=aps-pdw-2016||=azuresqldb-mi-current||>=sql-server-2016||>=sql-server-linux-2017'
+ms.openlocfilehash: bd045c01439e2913179fdf2188448772f20d9f48
+ms.sourcegitcommit: 1a544cf4dd2720b124c3697d1e62ae7741db757c
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 10/12/2020
-ms.locfileid: "91955864"
+ms.lasthandoff: 12/14/2020
+ms.locfileid: "97427400"
 ---
 # <a name="sp_configure-transact-sql"></a>sp_configure(Transact-SQL)
 [!INCLUDE[tsql-appliesto-ss2008-xxxx-xxxx-pdw-md](../../includes/tsql-appliesto-ss2008-asdbmi-xxxx-pdw-md.md)]
@@ -65,7 +65,7 @@ RECONFIGURE
   
  사용 가능한 구성 옵션 및 해당 설정에 대 한 자세한 내용은 [서버 구성 옵션 &#40;SQL Server&#41;](../../database-engine/configure-windows/server-configuration-options-sql-server.md)를 참조 하세요.  
   
-`[ @configvalue = ] 'value'` 새 구성 설정입니다. *value* 는 **int**이며 기본값은 NULL입니다. 최대값은 개별 옵션에 따라 달라집니다.  
+`[ @configvalue = ] 'value'` 새 구성 설정입니다. *value* 는 **int** 이며 기본값은 NULL입니다. 최대값은 개별 옵션에 따라 달라집니다.  
   
  각 옵션에 대 한 최대값을 확인 하려면 **sys.configurations** 카탈로그 뷰의 **최 댓** 열을 참조 하세요.  
   
@@ -75,15 +75,15 @@ RECONFIGURE
 ## <a name="result-sets"></a>결과 집합  
  매개 변수 없이 실행할 경우 **sp_configure** 는 다음 표에 나와 있는 것 처럼 5 개의 열이 있는 결과 집합을 반환 하 고 옵션을 사전순으로 오름차순으로 정렬 합니다.  
   
- **Config_value** 및 **run_value** 값은 자동으로 동일 하지 않습니다. **Sp_configure**를 사용 하 여 구성 설정을 업데이트 한 후에는 다시 구성 또는 다시 설정 재정의를 사용 하 여 시스템 관리자가 실행 중인 구성 값을 업데이트 해야 합니다. 자세한 내용은 설명 섹션을 참조하세요.  
+ **Config_value** 및 **run_value** 값은 자동으로 동일 하지 않습니다. **Sp_configure** 를 사용 하 여 구성 설정을 업데이트 한 후에는 다시 구성 또는 다시 설정 재정의를 사용 하 여 시스템 관리자가 실행 중인 구성 값을 업데이트 해야 합니다. 자세한 내용은 설명 섹션을 참조하세요.  
   
 |열 이름|데이터 형식|Description|  
 |-----------------|---------------|-----------------|  
 |**name**|**nvarchar(35)**|구성 옵션의 이름입니다.|  
 |**minimum**|**int**|구성 옵션의 최소값입니다.|  
 |**maximum**|**int**|구성 옵션의 최대값입니다.|  
-|**config_value**|**int**|**Sp_configure** ( **sys.configurations**값)를 사용 하 여 구성 옵션이 설정 된 값입니다. 이러한 옵션에 대 한 자세한 내용은 [서버 구성 옵션 &#40;SQL Server&#41;](../../database-engine/configure-windows/server-configuration-options-sql-server.md) 및 [sys.configurations &#40;transact-sql&#41;](../../relational-databases/system-catalog-views/sys-configurations-transact-sql.md)을 참조 하세요.|  
-|**run_value**|**int**|현재 실행 중인 구성 옵션 값 ( **sys.configurations.value_in_use**의 값)입니다.<br /><br /> 자세한 내용은 [sys.configurations &#40;transact-sql&#41;](../../relational-databases/system-catalog-views/sys-configurations-transact-sql.md)를 참조 하세요.|  
+|**config_value**|**int**|**Sp_configure** ( **sys.configurations** 값)를 사용 하 여 구성 옵션이 설정 된 값입니다. 이러한 옵션에 대 한 자세한 내용은 [서버 구성 옵션 &#40;SQL Server&#41;](../../database-engine/configure-windows/server-configuration-options-sql-server.md) 및 [sys.configurations &#40;transact-sql&#41;](../../relational-databases/system-catalog-views/sys-configurations-transact-sql.md)을 참조 하세요.|  
+|**run_value**|**int**|현재 실행 중인 구성 옵션 값 ( **sys.configurations.value_in_use** 의 값)입니다.<br /><br /> 자세한 내용은 [sys.configurations &#40;transact-sql&#41;](../../relational-databases/system-catalog-views/sys-configurations-transact-sql.md)를 참조 하세요.|  
   
 ## <a name="remarks"></a>설명  
  **Sp_configure** 를 사용 하 여 서버 수준 설정을 표시 하거나 변경할 수 있습니다. 데이터베이스 수준의 설정을 변경하려면 ALTER DATABASE를 사용합니다. 현재 사용자 세션에만 적용되는 설정을 변경하려면 SET 문을 사용합니다.  
@@ -93,7 +93,7 @@ RECONFIGURE
 [!INCLUDE [big-data-clusters-master-instance-ha-endpoint-requirement](../../includes/big-data-clusters-master-instance-ha-endpoint-requirement.md)]
 
 ## <a name="updating-the-running-configuration-value"></a>실행 중인 구성 값 업데이트  
- *옵션*에 새 *값* 을 지정 하면 결과 집합에 **config_value** 열에이 값이 표시 됩니다. 이 값은 처음에 현재 실행 중인 구성 값을 보여 주는 **run_value** 열의 값과 다릅니다. **Run_value** 열에서 실행 중인 구성 값을 업데이트 하려면 시스템 관리자가 RECONFIGURE 또는 RECONFIGURE WITH OVERRIDE를 실행 해야 합니다.  
+ *옵션* 에 새 *값* 을 지정 하면 결과 집합에 **config_value** 열에이 값이 표시 됩니다. 이 값은 처음에 현재 실행 중인 구성 값을 보여 주는 **run_value** 열의 값과 다릅니다. **Run_value** 열에서 실행 중인 구성 값을 업데이트 하려면 시스템 관리자가 RECONFIGURE 또는 RECONFIGURE WITH OVERRIDE를 실행 해야 합니다.  
   
  RECONFIGURE와 RECONFIGURE WITH OVERRIDE는 둘 다 모든 구성 옵션에 사용할 수 있습니다. 그러나 기본 RECONFIGURE 문은 적당한 범위 밖에 있는 옵션 값이나 옵션 간에 충돌을 일으킬 수 있는 옵션 값을 거부합니다. 예를 들어 **recovery interval** 값이 60 분 보다 크거나 **선호도 마스크** 값이 **affinity I/O MASK** 값과 겹치면 다시 구성에서 오류를 생성 합니다. 이와 달리 RECONFIGURE WITH OVERRIDE는 데이터 형식만 맞으면 모든 옵션 값을 허용하며 지정된 값으로 다시 구성합니다.  
   
@@ -102,7 +102,7 @@ RECONFIGURE
   
  RECONFIGURE 문은 일부 옵션을 동적으로 업데이트합니다. 그 외의 옵션을 업데이트하려면 서버를 중지하고 다시 시작해야 합니다. 예를 들어 **min server memory** 및 **max server** memory 서버 메모리 옵션은에서 동적으로 업데이트 [!INCLUDE[ssDE](../../includes/ssde-md.md)] 되므로 서버를 다시 시작 하지 않고 변경할 수 있습니다. 반면 **채우기 비율** 옵션의 실행 값을 다시 구성 하려면을 다시 시작 해야 [!INCLUDE[ssDE](../../includes/ssde-md.md)] 합니다.  
   
- 구성 옵션에서 RECONFIGURE를 실행 한 후 **sp_configure '***option_name***'** 를 실행 하 여 옵션이 동적으로 업데이트 되었는지 여부를 확인할 수 있습니다. **Run_value** 및 **config_value** 열의 값은 동적으로 업데이트 된 옵션에 대해 일치 해야 합니다. **sys.configurations** 카탈로그 뷰의 **is_dynamic** 열을 살펴보면 동적 옵션을 확인할 수도 있습니다.  
+ 구성 옵션에서 RECONFIGURE를 실행 한 후 **sp_configure '**_option_name_*_'_* 를 실행 하 여 옵션이 동적으로 업데이트 되었는지 여부를 확인할 수 있습니다. **Run_value** 및 **config_value** 열의 값은 동적으로 업데이트 된 옵션에 대해 일치 해야 합니다. **sys.configurations** 카탈로그 뷰의 **is_dynamic** 열을 살펴보면 동적 옵션을 확인할 수도 있습니다.  
  
  변경 내용은 SQL Server 오류 로그에도 기록 됩니다.
   
@@ -112,7 +112,7 @@ RECONFIGURE
  자세한 내용은 [RECONFIGURE &#40;transact-sql&#41;](../../t-sql/language-elements/reconfigure-transact-sql.md)를 참조 하세요.  
   
 ## <a name="advanced-options"></a>고급 옵션  
- **선호도 마스크** 및 **복구 간격과**같은 일부 구성 옵션은 고급 옵션으로 지정 됩니다. 기본적으로 이 옵션은 보거나 변경할 수 없습니다. 사용할 수 있도록 하려면 **고급 옵션 표시** 구성 옵션을 1로 설정 합니다. 
+ **선호도 마스크** 및 **복구 간격과** 같은 일부 구성 옵션은 고급 옵션으로 지정 됩니다. 기본적으로 이 옵션은 보거나 변경할 수 없습니다. 사용할 수 있도록 하려면 **고급 옵션 표시** 구성 옵션을 1로 설정 합니다. 
  
 > [!CAUTION]  
 > **고급 옵션 표시** 옵션이 1로 설정 된 경우이 설정은 모든 사용자에 게 적용 됩니다. 이 상태를 일시적으로 사용 하 고 고급 옵션을 확인 해야 하는 작업이 완료 되 면 0으로 다시 전환 하는 것이 좋습니다.  

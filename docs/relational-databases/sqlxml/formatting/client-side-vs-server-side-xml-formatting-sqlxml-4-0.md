@@ -19,13 +19,13 @@ ms.assetid: f807ab7a-c5f8-4e61-9b00-23aebfabc47e
 author: MightyPen
 ms.author: genemi
 ms.custom: seo-lt-2019
-monikerRange: =azuresqldb-current||>=sql-server-2016||=sqlallproducts-allversions||>=sql-server-linux-2017||=azuresqldb-mi-current
-ms.openlocfilehash: b80124c112f4a64044ea54040b8085b73f9ff83e
-ms.sourcegitcommit: da88320c474c1c9124574f90d549c50ee3387b4c
+monikerRange: =azuresqldb-current||>=sql-server-2016||>=sql-server-linux-2017||=azuresqldb-mi-current
+ms.openlocfilehash: 36eb9ef6872fdd8ec4f286f3acf16cd75f2f2ce0
+ms.sourcegitcommit: 1a544cf4dd2720b124c3697d1e62ae7741db757c
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 07/01/2020
-ms.locfileid: "85666137"
+ms.lasthandoff: 12/14/2020
+ms.locfileid: "97430117"
 ---
 # <a name="client-side-vs-server-side-xml-formatting-sqlxml-40"></a>클라이언트 쪽 vs. 서버 쪽 XML 서식 지정(SQLXML 4.0)
 [!INCLUDE [SQL Server Azure SQL Database](../../../includes/applies-to-version/sql-asdb.md)]
@@ -48,7 +48,7 @@ ms.locfileid: "85666137"
 ## <a name="timestamp-maps-differently-in-client--vs-server-side-formatting"></a>클라이언트 쪽 서식과 서버 쪽 서식에서 서로 다르게 매핑되는 타임스탬프  
  서버 쪽 XML 서식에서 **timestamp** 형식의 데이터베이스 열은 i8 XDR 형식 (쿼리에서 XMLDATA 옵션이 지정 된 경우)에 매핑됩니다.  
   
- 클라이언트 쪽 XML 서식에서 **timestamp** 형식의 데이터베이스 열은 **uri** 또는 **bin. base64** XDR 형식에 매핑됩니다 (binary base64 옵션이 쿼리에 지정 되어 있는지 여부에 따라 다름). Updategram **bin.base64** 및 bulkload 기능을 사용 하는 경우이 형식이 [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] **타임 스탬프** 형식으로 변환 되기 때문에 bin을 사용 하면 유용 합니다. 이러한 변환 작업을 통해 삽입, 업데이트 또는 삭제 작업이 성공합니다.  
+ 클라이언트 쪽 XML 서식에서 **timestamp** 형식의 데이터베이스 열은 **uri** 또는 **bin. base64** XDR 형식에 매핑됩니다 (binary base64 옵션이 쿼리에 지정 되어 있는지 여부에 따라 다름). Updategram  및 bulkload 기능을 사용 하는 경우이 형식이 [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] **타임 스탬프** 형식으로 변환 되기 때문에 bin을 사용 하면 유용 합니다. 이러한 변환 작업을 통해 삽입, 업데이트 또는 삭제 작업이 성공합니다.  
   
 ## <a name="deep-variants-are-used-in-server-side-formatting"></a>서버 쪽 서식에는 중첩이 많은 VARIANT가 사용됨  
  서버 쪽 XML 서식에는 중첩이 많은 VARIANT 형식이 사용됩니다. 클라이언트 쪽 XML 서식을 사용하는 경우 변형은 유니코드 문자열로 변환되고 VARIANT의 하위 유형은 사용되지 않습니다.  

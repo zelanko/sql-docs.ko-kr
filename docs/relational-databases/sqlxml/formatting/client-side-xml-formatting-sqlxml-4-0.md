@@ -16,13 +16,13 @@ ms.assetid: 9630a21d-a93b-4d3b-8a25-c4b32399f993
 author: MightyPen
 ms.author: genemi
 ms.custom: seo-lt-2019
-monikerRange: =azuresqldb-current||>=sql-server-2016||=sqlallproducts-allversions||>=sql-server-linux-2017||=azuresqldb-mi-current
-ms.openlocfilehash: 526f47678e09f10bdd412bb35287d6363c41cabc
-ms.sourcegitcommit: da88320c474c1c9124574f90d549c50ee3387b4c
+monikerRange: =azuresqldb-current||>=sql-server-2016||>=sql-server-linux-2017||=azuresqldb-mi-current
+ms.openlocfilehash: 9d13f5252fade9a05db1b9d31cc62f1ed9292aa4
+ms.sourcegitcommit: 1a544cf4dd2720b124c3697d1e62ae7741db757c
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 07/01/2020
-ms.locfileid: "85666143"
+ms.lasthandoff: 12/14/2020
+ms.locfileid: "97430171"
 ---
 # <a name="client-side-xml-formatting-sqlxml-40"></a>클라이언트 쪽 XML 서식 지정(SQLXML 4.0)
 [!INCLUDE [SQL Server Azure SQL Database](../../../includes/applies-to-version/sql-asdb.md)]
@@ -126,7 +126,7 @@ AS
 >  SQLXMLOLEDB 공급자를 사용 하는 ADO 응용 프로그램에서 XML 템플릿을 실행 하 고 템플릿에서 **클라이언트 쪽 xml** 특성과 공급자 clientside xml 속성을 둘 다 지정 하는 경우 템플릿에 지정 된 값이 우선 적용 됩니다.  
   
 ## <a name="see-also"></a>참고 항목  
- [클라이언트 쪽 및 서버 쪽 XML 서식 &#40;SQLXML 4.0&#41;의 아키텍처](../../../relational-databases/sqlxml/formatting/architecture-of-client-side-and-server-side-xml-formatting-sqlxml-4-0.md)   
+ [클라이언트 쪽 및 서버 쪽 XML 서식 &#40;SQLXML 4.0&#41;의 아키텍처 ](../../../relational-databases/sqlxml/formatting/architecture-of-client-side-and-server-side-xml-formatting-sqlxml-4-0.md)   
  [FOR XML &#40;SQL Server&#41;](../../../relational-databases/xml/for-xml-sql-server.md)   
  [XML 보안 고려 사항은 SQLXML 4.0을 &#40;&#41;](../../../relational-databases/sqlxml-annotated-xsd-schemas-xpath-queries/security/for-xml-security-considerations-sqlxml-4-0.md)   
  [SQLXML 4.0의 xml 데이터 형식 지원](../../../relational-databases/sqlxml/xml-data-type-support-in-sqlxml-4-0.md)   

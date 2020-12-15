@@ -19,13 +19,13 @@ helpviewer_keywords:
 ms.assetid: 02379a1b-3622-4578-8c59-a1b8f1a17914
 author: julieMSFT
 ms.author: jrasnick
-monikerRange: = azuresqldb-current || = sqlallproducts-allversions
-ms.openlocfilehash: eea603b089c93b86b92ac39a22d0c6e9c64b49d9
-ms.sourcegitcommit: 04cf7905fa32e0a9a44575a6f9641d9a2e5ac0f8
+monikerRange: = azuresqldb-current
+ms.openlocfilehash: 835fcabe9a247efb7cf280eb89a0baefd4076640
+ms.sourcegitcommit: 1a544cf4dd2720b124c3697d1e62ae7741db757c
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 10/07/2020
-ms.locfileid: "91807023"
+ms.lasthandoff: 12/14/2020
+ms.locfileid: "97429128"
 ---
 # <a name="sysresource_stats-azure-sql-database"></a>sys.resource_stats(Azure SQL Database)
 [!INCLUDE[Azure SQL Database Azure SQL Managed Instance](../../includes/applies-to-version/asdb-asdbmi.md)]
@@ -36,7 +36,7 @@ ms.locfileid: "91807023"
   
  다음 표에는 v12 서버에서 사용할 수 있는 열이 설명되어 있습니다.  
   
-|열|데이터 형식|Description|  
+|열|데이터 형식|설명|  
 |----------------------------|---------------|-----------------|  
 |start_time|**datetime**|5 분 보고 간격의 시작을 나타내는 UTC 시간입니다.|  
 |end_time|**datetime**|5 분 보고 간격의 끝을 나타내는 UTC 시간입니다.|  
@@ -49,7 +49,7 @@ ms.locfileid: "91807023"
 |max_worker_percent|**decimal (5, 2)**|데이터베이스의 서비스 계층 한도에 따라 최대 동시 작업자 (요청)의 백분율입니다.<br /><br /> 현재 최대 개수는 동시 작업자 수의 15 초 샘플을 기반으로 5 분 간격으로 계산 됩니다.|  
 |max_session_percent|**decimal (5, 2)**|데이터베이스의 서비스 계층 한도를 기준으로 하는 최대 동시 세션 (백분율)입니다.<br /><br /> 현재 최대는 동시 세션 수의 15 초 샘플을 기준으로 5 분 간격으로 계산 됩니다.|  
 |dtu_limit|**int**|이 간격 동안이 데이터베이스에 대 한 현재 최대 데이터베이스 DTU 설정입니다. |
-|xtp_storage_percent|**decimal (5, 2)**|메모리 내 OLTP에 대 한 저장소 사용률 (보고 간격의 끝에 있는 서비스 계층의 제한 백분율) 여기에는 메모리 내 OLTP 개체를 저장 하는 데 사용 되는 메모리 (메모리 최적화 테이블, 인덱스 및 테이블 변수)가 포함 됩니다. 또한 ALTER TABLE 작업을 처리 하는 데 사용 되는 메모리가 포함 됩니다.<br /><br /> 데이터베이스에서 메모리 내 OLTP를 사용 하지 않는 경우 0을 반환 합니다.|
+|xtp_storage_percent|**decimal (5, 2)**|In-Memory OLTP에 대 한 저장소 사용률 (보고 간격이 끝나면 서비스 계층의 한도에 대 한 백분율)입니다. 여기에는 메모리 액세스에 최적화 된 테이블, 인덱스 및 테이블 변수와 같은 In-Memory OLTP 개체의 저장에 사용 되는 메모리가 포함 됩니다. 또한 ALTER TABLE 작업을 처리 하는 데 사용 되는 메모리가 포함 됩니다.<br /><br /> In-Memory OLTP가 데이터베이스에서 사용 되지 않는 경우 0을 반환 합니다.|
 |avg_login_rate_percent|**decimal (5, 2)**|정보를 제공하기 위해서만 확인됩니다. 지원 안 됨 향후 호환성은 보장되지 않습니다.|
 |avg_instance_cpu_percent|**decimal (5, 2)**|SQL Database 프로세스의 백분율로 나타낸 평균 데이터베이스 CPU 사용량입니다.|
 |avg_instance_memory_percent|**decimal (5, 2)**|SQL Database 프로세스의 백분율로 나타낸 평균 데이터베이스 메모리 사용량입니다.|

@@ -16,13 +16,13 @@ helpviewer_keywords:
 ms.assetid: acfee2eb-cf35-4377-9fde-82ad1d938011
 author: MightyPen
 ms.author: genemi
-monikerRange: =azuresqldb-current||>=sql-server-2016||=sqlallproducts-allversions||>=sql-server-linux-2017||=azuresqldb-mi-current
-ms.openlocfilehash: aefb58e8f483c22772bf228dc7707efff50ee47f
-ms.sourcegitcommit: da88320c474c1c9124574f90d549c50ee3387b4c
+monikerRange: =azuresqldb-current||>=sql-server-2016||>=sql-server-linux-2017||=azuresqldb-mi-current
+ms.openlocfilehash: e9babfb8a3d29e3b094c3fb1cd42257dcb9fa0a4
+ms.sourcegitcommit: 1a544cf4dd2720b124c3697d1e62ae7741db757c
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 07/01/2020
-ms.locfileid: "85666167"
+ms.lasthandoff: 12/14/2020
+ms.locfileid: "97429967"
 ---
 # <a name="requirements-for-running-sqlxml-examples"></a>SQLXML 예 실행을 위한 요구 사항
 [!INCLUDE [SQL Server Azure SQL Database](../../includes/applies-to-version/sql-asdb.md)]

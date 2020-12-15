@@ -1,6 +1,6 @@
 ---
-description: 변경 내용 추적 dm_tran_commit_table
-title: sys. dm_tran_commit_table (Transact-sql) | Microsoft Docs
+description: 변경 내용 추적-sys.dm_tran_commit_table
+title: sys.dm_tran_commit_table (Transact-sql) | Microsoft Docs
 ms.custom: ''
 ms.date: 03/15/2017
 ms.prod: sql
@@ -20,21 +20,21 @@ helpviewer_keywords:
 ms.assetid: 732d23c5-1f6c-4e96-bc85-8f29b520cf0e
 author: markingmyname
 ms.author: maghan
-monikerRange: =azuresqldb-current||>=sql-server-2016||=sqlallproducts-allversions||>=sql-server-linux-2017||=azuresqldb-mi-current
-ms.openlocfilehash: 4b35493324a0a7585c7f07a11b8dc234048b4e3f
-ms.sourcegitcommit: dd36d1cbe32cd5a65c6638e8f252b0bd8145e165
+monikerRange: =azuresqldb-current||>=sql-server-2016||>=sql-server-linux-2017||=azuresqldb-mi-current
+ms.openlocfilehash: 8f74f5fb4bc69b559f2544a9a7fbffa95a1aa404
+ms.sourcegitcommit: 1a544cf4dd2720b124c3697d1e62ae7741db757c
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 09/08/2020
-ms.locfileid: "89537700"
+ms.lasthandoff: 12/14/2020
+ms.locfileid: "97428171"
 ---
-# <a name="change-tracking---sysdm_tran_commit_table"></a>변경 내용 추적 dm_tran_commit_table
+# <a name="change-tracking---sysdm_tran_commit_table"></a>변경 내용 추적-sys.dm_tran_commit_table
 [!INCLUDE [SQL Server SQL Database](../../includes/applies-to-version/sql-asdb.md)]
 
-  [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 변경 내용 추적에서 추적된 테이블에 대해 커밋한 각 트랜잭션을 한 행으로 표시합니다. 지원 가능성을 위해 제공 되며 sys.syscommittab 시스템 테이블에서 추적 저장소를 변경 하는 트랜잭션 관련 정보를 제공 하는 dm_tran_commit_table 관리 뷰입니다. sys.syscommittab 테이블에서는 데이터베이스별 트랜잭션 ID를 트랜잭션의 커밋 LSN(로그 시퀀스 번호) 및 커밋 타임스탬프에 지속적으로 매핑하는 효과적인 방법을 제공합니다. sys.syscommittab 테이블에 저장되고 이 관리 뷰에 표시되는 데이터는 변경 내용 추적을 구성할 때 지정한 보존 기간에 따라 정리될 수 있습니다.  
+  [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 변경 내용 추적에서 추적된 테이블에 대해 커밋한 각 트랜잭션을 한 행으로 표시합니다. 지원 가능성을 위해 제공 되며 sys.syscommittab 시스템 테이블에서 추적 저장소를 변경 하는 트랜잭션 관련 정보를 제공 하는 sys.dm_tran_commit_table 관리 뷰입니다. sys.syscommittab 테이블에서는 데이터베이스별 트랜잭션 ID를 트랜잭션의 커밋 LSN(로그 시퀀스 번호) 및 커밋 타임스탬프에 지속적으로 매핑하는 효과적인 방법을 제공합니다. sys.syscommittab 테이블에 저장되고 이 관리 뷰에 표시되는 데이터는 변경 내용 추적을 구성할 때 지정한 보존 기간에 따라 정리될 수 있습니다.  
   
 > [!NOTE]  
->  또는에서이를 호출 하려면 [!INCLUDE[ssSDWfull](../../includes/sssdwfull-md.md)] [!INCLUDE[ssPDW](../../includes/sspdw-md.md)] 이름 **sys. dm_pdw_nodes_tran_commit_table**을 사용 합니다.  
+>  또는에서이를 호출 하려면 [!INCLUDE[ssSDWfull](../../includes/sssdwfull-md.md)] [!INCLUDE[ssPDW](../../includes/sspdw-md.md)] **sys.dm_pdw_nodes_tran_commit_table** 이름을 사용 합니다.  
   
 |열 이름|데이터 형식|Description|  
 |-----------------|---------------|-----------------|  

@@ -22,13 +22,13 @@ helpviewer_keywords:
 ms.assetid: 0de4b7a4-401f-4e2d-9ab0-c54587e05154
 author: markingmyname
 ms.author: maghan
-monikerRange: '>=aps-pdw-2016||=azure-sqldw-latest||>=sql-server-2016||=sqlallproducts-allversions||>=sql-server-linux-2017||=azuresqldb-mi-current'
-ms.openlocfilehash: 85a63b9df2e4d1bbb7a0f4c9096ae8ff192315eb
-ms.sourcegitcommit: 32135463a8494d9ed1600a58f51819359e3c09dc
+monikerRange: '>=aps-pdw-2016||=azure-sqldw-latest||>=sql-server-2016||>=sql-server-linux-2017||=azuresqldb-mi-current'
+ms.openlocfilehash: 6a9776a0fa0e1d6c939c41d66f32a6cc4855e360
+ms.sourcegitcommit: 1a544cf4dd2720b124c3697d1e62ae7741db757c
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 10/08/2020
-ms.locfileid: "91834162"
+ms.lasthandoff: 12/14/2020
+ms.locfileid: "97428062"
 ---
 # <a name="sysdm_exec_compute_nodes-transact-sql"></a>sys.dm_exec_compute_nodes (Transact-sql)
 
@@ -41,7 +41,7 @@ ms.locfileid: "91834162"
 |열 이름|데이터 형식|Description|범위|  
 |-----------------|---------------|-----------------|-----------|  
 |compute_node_id|**int**|노드와 연결 된 고유 숫자 id입니다. 이 보기의 키입니다.|형식에 관계 없이 스케일 아웃 클러스터에서 고유 합니다.|  
-|type|**nvarchar(32)**|노드의 유형입니다.|' COMPUTE ', ' HEAD '|  
+|형식|**nvarchar(32)**|노드의 유형입니다.|' COMPUTE ', ' HEAD '|  
 |name|**nvarchar(32)**|노드의 논리적 이름입니다.|적절 한 길이의 문자열입니다.|  
 |address|**nvarchar(32)**|이 노드의 IP 주소입니다.|IP 주소 범위|  
   

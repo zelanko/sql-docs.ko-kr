@@ -21,13 +21,13 @@ helpviewer_keywords:
 ms.assetid: 0068f258-b998-4e4e-b47b-e375157c8213
 author: markingmyname
 ms.author: maghan
-monikerRange: =azuresqldb-current||>=sql-server-2016||=sqlallproducts-allversions||>=sql-server-linux-2017||=azuresqldb-mi-current
-ms.openlocfilehash: 503305e4e1954f7d549244bee058ad449c975ec7
-ms.sourcegitcommit: dd36d1cbe32cd5a65c6638e8f252b0bd8145e165
+monikerRange: =azuresqldb-current||>=sql-server-2016||>=sql-server-linux-2017||=azuresqldb-mi-current
+ms.openlocfilehash: 14bf8a5f4e8ca74a7419c62200f87bc7fb4ce052
+ms.sourcegitcommit: 1a544cf4dd2720b124c3697d1e62ae7741db757c
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 09/08/2020
-ms.locfileid: "89534998"
+ms.lasthandoff: 12/14/2020
+ms.locfileid: "97427354"
 ---
 # <a name="sp_query_store_force_plan-transact-sql"></a>sp_query_store_force_plan (Transact-sql)
 
@@ -46,9 +46,9 @@ sp_query_store_force_plan [ @query_id = ] query_id , [ @plan_id = ] plan_id [;]
 ```  
   
 ## <a name="arguments"></a>인수  
-`[ @query_id = ] query_id` 쿼리 id입니다. *query_id* 는 **bigint**이며 기본값은 없습니다.  
+`[ @query_id = ] query_id` 쿼리 id입니다. *query_id* 는 **bigint** 이며 기본값은 없습니다.  
   
-`[ @plan_id = ] plan_id` 강제 적용할 쿼리 계획의 id입니다. *plan_id* 는 **bigint**이며 기본값은 없습니다.  
+`[ @plan_id = ] plan_id` 강제 적용할 쿼리 계획의 id입니다. *plan_id* 는 **bigint** 이며 기본값은 없습니다.  
   
 ## <a name="return-code-values"></a>반환 코드 값  
  0(성공) 또는 1(실패)  
@@ -58,7 +58,7 @@ sp_query_store_force_plan [ @query_id = ] query_id , [ @plan_id = ] plan_id [;]
 ## <a name="permissions"></a>사용 권한  
  데이터베이스에 대 한 **ALTER** 권한이 필요 합니다.
   
-## <a name="examples"></a>예제  
+## <a name="examples"></a>예  
  다음 예에서는 쿼리 저장소의 쿼리에 대 한 정보를 반환 합니다.  
   
 ```sql  

@@ -20,18 +20,18 @@ helpviewer_keywords:
 ms.assetid: cefa4fc4-b8b9-4cd7-b124-eed5283acbfc
 author: markingmyname
 ms.author: maghan
-monikerRange: =azuresqldb-current||>=sql-server-2016||=sqlallproducts-allversions||>=sql-server-linux-2017||=azuresqldb-mi-current
-ms.openlocfilehash: b533a4bd4f2b404975e8315f36aba9b31e3b51ce
-ms.sourcegitcommit: dd36d1cbe32cd5a65c6638e8f252b0bd8145e165
+monikerRange: =azuresqldb-current||>=sql-server-2016||>=sql-server-linux-2017||=azuresqldb-mi-current
+ms.openlocfilehash: 6f39b3bff2073475c9bd0d969efa3901ff055edb
+ms.sourcegitcommit: 1a544cf4dd2720b124c3697d1e62ae7741db757c
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 09/08/2020
-ms.locfileid: "89545377"
+ms.lasthandoff: 12/14/2020
+ms.locfileid: "97428862"
 ---
 # <a name="systriggers-transact-sql"></a>sys.triggers(Transact-SQL)
 [!INCLUDE [SQL Server SQL Database](../../includes/applies-to-version/sql-asdb.md)]
 
-  트리거인 각 개체에 대해 TR 또는 TA 유형으로 한 행을 포함합니다. DML 트리거 이름은 스키마 범위 이므로 **sys. 개체**에 표시 됩니다. DDL 트리거 이름은 부모 엔터티에 의해 범위가 결정되며 이 뷰에서만 볼 수 있습니다.  
+  트리거인 각 개체에 대해 TR 또는 TA 유형으로 한 행을 포함합니다. DML 트리거 이름은 스키마 범위 이므로 **sys. 개체** 에 표시 됩니다. DDL 트리거 이름은 부모 엔터티에 의해 범위가 결정되며 이 뷰에서만 볼 수 있습니다.  
   
  **Parent_class** 및 **이름** 열은 데이터베이스에서 트리거를 고유 하 게 식별 합니다.  
   

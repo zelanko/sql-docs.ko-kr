@@ -19,13 +19,13 @@ helpviewer_keywords:
 ms.assetid: a8d68d72-0f4d-4ecb-ae86-1235b962f646
 author: markingmyname
 ms.author: maghan
-monikerRange: '>=aps-pdw-2016||=azuresqldb-current||=azure-sqldw-latest||>=sql-server-2016||=sqlallproducts-allversions||>=sql-server-linux-2017||=azuresqldb-mi-current'
-ms.openlocfilehash: 6eac2107c22781c278e173992d8994fc68fea981
-ms.sourcegitcommit: a5398f107599102af7c8cda815d8e5e9a367ce7e
+monikerRange: '>=aps-pdw-2016||=azuresqldb-current||=azure-sqldw-latest||>=sql-server-2016||>=sql-server-linux-2017||=azuresqldb-mi-current'
+ms.openlocfilehash: 315abb75423d2d7fa11d70ab1b2d6897b8bbc372
+ms.sourcegitcommit: 1a544cf4dd2720b124c3697d1e62ae7741db757c
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 10/13/2020
-ms.locfileid: "92005760"
+ms.lasthandoff: 12/14/2020
+ms.locfileid: "97428037"
 ---
 # <a name="sp_executesql-transact-sql"></a>sp_executesql(Transact-SQL)
 [!INCLUDE [sql-asdb-asdbmi-asa-pdw](../../includes/applies-to-version/sql-asdb-asdbmi-asa-pdw.md)]
@@ -51,7 +51,7 @@ sp_executesql [ @stmt = ] statement
   
 ## <a name="arguments"></a>인수  
  [ \@ stmt =] *문*  
- 문이나 일괄 처리를 포함 하는 유니코드 문자열입니다 [!INCLUDE[tsql](../../includes/tsql-md.md)] . \@stmt는 유니코드 상수 또는 유니코드 변수 여야 합니다. + 연산자로 두 문자열을 연결한 식처럼 더 복잡한 유니코드 식은 사용할 수 없습니다. 문자 상수도 사용할 수 없습니다. 유니코드 상수를 지정 하는 경우에는 접두사 **N**을 접두사로 사용 해야 합니다. 예를 들어 유니코드 상수 **N ' sp_who '** 는 올바르지만 **' sp_who '** 문자 상수는 유효 하지 않습니다. 문자열의 크기는 사용 가능한 데이터베이스 서버 메모리의 용량에 따라서만 제한됩니다. 64 비트 서버에서 문자열 크기는 최대 **nvarchar (max)** 크기인 2gb로 제한 됩니다.  
+ 문이나 일괄 처리를 포함 하는 유니코드 문자열입니다 [!INCLUDE[tsql](../../includes/tsql-md.md)] . \@stmt는 유니코드 상수 또는 유니코드 변수 여야 합니다. + 연산자로 두 문자열을 연결한 식처럼 더 복잡한 유니코드 식은 사용할 수 없습니다. 문자 상수도 사용할 수 없습니다. 유니코드 상수를 지정 하는 경우에는 접두사 **N** 을 접두사로 사용 해야 합니다. 예를 들어 유니코드 상수 **N ' sp_who '** 는 올바르지만 **' sp_who '** 문자 상수는 유효 하지 않습니다. 문자열의 크기는 사용 가능한 데이터베이스 서버 메모리의 용량에 따라서만 제한됩니다. 64 비트 서버에서 문자열 크기는 최대 **nvarchar (max)** 크기인 2gb로 제한 됩니다.  
   
 > [!NOTE]  
 >  \@stmt는 변수 이름과 같은 형식의 매개 변수를 포함할 수 있습니다. 예를 들면 다음과 같습니다. `N'SELECT * FROM HumanResources.Employee WHERE EmployeeID = @IDParameter'`  
@@ -65,7 +65,7 @@ sp_executesql [ @stmt = ] statement
  매개 변수 문자열에 정의된 첫 번째 매개 변수의 값입니다. 값은 유니코드 상수 또는 유니코드 변수가 될 수 있습니다. Stmt에 포함 된 모든 매개 변수에 대해 제공 되는 매개 변수 값이 있어야 합니다 \@ . [!INCLUDE[tsql](../../includes/tsql-md.md)] Stmt의 문 또는 일괄 처리에 매개 변수가 없는 경우에는 값이 필요 하지 않습니다 \@ .  
   
  [ OUT | OUTPUT ]  
- 매개 변수가 출력 매개 변수임을 나타냅니다. 프로시저가 CLR (공용 언어 런타임) 프로시저가 아닌 경우 **text**, **ntext**및 **image** 매개 변수를 OUTPUT 매개 변수로 사용할 수 있습니다. 프로시저가 CLR 프로시저가 아닐 경우 OUTPUT 키워드를 사용하는 출력 매개 변수가 커서 자리 표시자일 수 있습니다.  
+ 매개 변수가 출력 매개 변수임을 나타냅니다. 프로시저가 CLR (공용 언어 런타임) 프로시저가 아닌 경우 **text**, **ntext** 및 **image** 매개 변수를 OUTPUT 매개 변수로 사용할 수 있습니다. 프로시저가 CLR 프로시저가 아닐 경우 OUTPUT 키워드를 사용하는 출력 매개 변수가 커서 자리 표시자일 수 있습니다.  
   
  *n*  
  추가 매개 변수의 값에 대한 자리 표시자입니다. 값은 상수 또는 변수만 가능합니다. 함수 또는 연산자를 사용하여 작성한 식처럼 더 복잡한 식은 값으로 사용할 수 없습니다.  

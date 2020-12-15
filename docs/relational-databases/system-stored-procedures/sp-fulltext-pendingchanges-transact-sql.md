@@ -18,13 +18,13 @@ helpviewer_keywords:
 ms.assetid: fee042fe-4781-4a33-a01b-d98fb5629f1b
 author: markingmyname
 ms.author: maghan
-monikerRange: =azuresqldb-current||>=sql-server-2016||=sqlallproducts-allversions||>=sql-server-linux-2017||=azuresqldb-mi-current
-ms.openlocfilehash: 6befa1abf7f427ab59c851fac9e51933ecc97bb7
-ms.sourcegitcommit: dd36d1cbe32cd5a65c6638e8f252b0bd8145e165
+monikerRange: =azuresqldb-current||>=sql-server-2016||>=sql-server-linux-2017||=azuresqldb-mi-current
+ms.openlocfilehash: fa2b81ce294183b005aa59de141d78945f6b3f04
+ms.sourcegitcommit: 1a544cf4dd2720b124c3697d1e62ae7741db757c
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 09/08/2020
-ms.locfileid: "89538912"
+ms.lasthandoff: 12/14/2020
+ms.locfileid: "97427471"
 ---
 # <a name="sp_fulltext_pendingchanges-transact-sql"></a>sp_fulltext_pendingchanges(Transact-SQL)
 [!INCLUDE [SQL Server SQL Database](../../includes/applies-to-version/sql-asdb.md)]
@@ -48,9 +48,9 @@ sp_fulltext_pendingchanges table_id
   
 |열 이름|데이터 형식|Description|  
 |-----------------|---------------|-----------------|  
-|**Key**|*|지정한 테이블의 전체 텍스트 키 값입니다.|  
+|**키**|*|지정한 테이블의 전체 텍스트 키 값입니다.|  
 |**DocId**|**bigint**|키 값에 해당하는 내부 문서 ID(DocId) 열입니다.|  
-|**Status**|**int**|0 = 행이 전체 텍스트 인덱스에서 제거됩니다.<br /><br /> 1 = 행이 전체 텍스트 인덱싱됩니다.<br /><br /> 2 = 행이 최신 상태입니다.<br /><br /> -1 = 행이 과도기적(일괄 처리되었지만 커밋되지는 않음) 상태 또는 오류 상태에 있습니다.|  
+|**상태**|**int**|0 = 행이 전체 텍스트 인덱스에서 제거됩니다.<br /><br /> 1 = 행이 전체 텍스트 인덱싱됩니다.<br /><br /> 2 = 행이 최신 상태입니다.<br /><br /> -1 = 행이 과도기적(일괄 처리되었지만 커밋되지는 않음) 상태 또는 오류 상태에 있습니다.|  
 |**DocState**|**tinyint**|내부 문서 ID(DocId) 맵 상태 열의 원시 덤프입니다.|  
   
  <sup>* Key의 데이터 형식은 기본 테이블의 전체 텍스트 키 열의 데이터 형식과 동일합니다.</sup>  

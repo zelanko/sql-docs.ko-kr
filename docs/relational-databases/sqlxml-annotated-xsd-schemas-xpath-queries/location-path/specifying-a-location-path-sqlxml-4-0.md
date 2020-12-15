@@ -17,13 +17,13 @@ ms.assetid: a23a2b75-bc69-49f0-99db-05e14dc15bc0
 author: MightyPen
 ms.author: genemi
 ms.custom: seo-lt-2019
-monikerRange: =azuresqldb-current||>=sql-server-2016||=sqlallproducts-allversions||>=sql-server-linux-2017||=azuresqldb-mi-current
-ms.openlocfilehash: 9f5793bef7a6b025198972b1be40fc9f482fd53c
-ms.sourcegitcommit: da88320c474c1c9124574f90d549c50ee3387b4c
+monikerRange: =azuresqldb-current||>=sql-server-2016||>=sql-server-linux-2017||=azuresqldb-mi-current
+ms.openlocfilehash: 9dedf4df4aa43f79ca4146da6f1183b0ee06286b
+ms.sourcegitcommit: 1a544cf4dd2720b124c3697d1e62ae7741db757c
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 07/01/2020
-ms.locfileid: "85649735"
+ms.lasthandoff: 12/14/2020
+ms.locfileid: "97431348"
 ---
 # <a name="specifying-a-location-path-sqlxml-40"></a>위치 경로 지정(SQLXML 4.0)
 [!INCLUDE [SQL Server Azure SQL Database](../../../includes/applies-to-version/sql-asdb.md)]
@@ -48,13 +48,13 @@ ms.locfileid: "85649735"
   
 -   **축**  
   
-     축은 위치 단계에서 선택되는 노드와 컨텍스트 노드 간의 트리 관계를 지정합니다. **부모**, **자식**, **특성**및 **자체** 축이 지원 됩니다. 위치 경로에 **자식** 축이 지정 된 경우 쿼리에서 선택한 모든 노드가 컨텍스트 노드의 자식 노드가 됩니다. **부모** 축이 지정 된 경우 선택 된 노드는 컨텍스트 노드의 부모 노드입니다. **특성** 축이 지정 된 경우 선택 된 노드는 컨텍스트 노드의 특성입니다.  
+     축은 위치 단계에서 선택되는 노드와 컨텍스트 노드 간의 트리 관계를 지정합니다. **부모**, **자식**, **특성** 및 **자체** 축이 지원 됩니다. 위치 경로에 **자식** 축이 지정 된 경우 쿼리에서 선택한 모든 노드가 컨텍스트 노드의 자식 노드가 됩니다. **부모** 축이 지정 된 경우 선택 된 노드는 컨텍스트 노드의 부모 노드입니다. **특성** 축이 지정 된 경우 선택 된 노드는 컨텍스트 노드의 특성입니다.  
   
 -   **노드 테스트**  
   
-     노드 테스트는 위치 단계에서 선택되는 노드 유형을 지정합니다. 모든 축 (**자식**, **부모**, **특성**및 **자체**)에는 주 노드 유형이 있습니다. **특성** 축의 경우 주 노드 형식은 **\<attribute>** 입니다. **부모**, **자식**및 **자체** 축의 경우 주 노드 형식은 **\<element>** 입니다.  
+     노드 테스트는 위치 단계에서 선택되는 노드 유형을 지정합니다. 모든 축 (**자식**, **부모**, **특성** 및 **자체**)에는 주 노드 유형이 있습니다. **특성** 축의 경우 주 노드 형식은 **\<attribute>** 입니다. **부모**, **자식** 및 **자체** 축의 경우 주 노드 형식은 **\<element>** 입니다.  
   
-     예를 들어 위치 경로가 **child:: Customer**를 지정 하는 경우 **\<Customer>** 컨텍스트 노드의 자식 요소가 선택 됩니다. **자식** 축은 **\<element>** 주 노드 유형 이므로 customer가 노드인 경우 노드 테스트는 TRUE입니다 **\<element>** .  
+     예를 들어 위치 경로가 **child:: Customer** 를 지정 하는 경우 **\<Customer>** 컨텍스트 노드의 자식 요소가 선택 됩니다. **자식** 축은 **\<element>** 주 노드 유형 이므로 customer가 노드인 경우 노드 테스트는 TRUE입니다 **\<element>** .  
   
 -   **선택 조건자(0개 이상)**  
   
@@ -63,7 +63,7 @@ ms.locfileid: "85649735"
      위치 단계의 구문은 두 개의 콜론(::)으로 구분된 축 이름과 노드 테스트, 그리고 각각 대괄호로 묶인 0개 이상의 식으로 구성됩니다. 예를 들어 XPath 식 (위치 경로) **child:: Customer [ @CustomerID = ' ALFKI ']** 는 **\<Customer>** 컨텍스트 노드의 모든 요소 자식을 선택 합니다. 그런 다음 조건자의 테스트가 **\<Customer>** 해당 **CustomerID** 특성에 대해 특성 값이 ' ALFKI ' 인 요소 노드만 반환 하는 노드 집합에 적용 됩니다.  
   
 ## <a name="in-this-section"></a>섹션 내용  
- [&#40;SQLXML 4.0&#41;축을 지정 합니다.](../../../relational-databases/sqlxml-annotated-xsd-schemas-xpath-queries/location-path/specifying-an-axis-sqlxml-4-0.md)  
+ [&#40;SQLXML 4.0&#41;축을 지정 합니다. ](../../../relational-databases/sqlxml-annotated-xsd-schemas-xpath-queries/location-path/specifying-an-axis-sqlxml-4-0.md)  
  축을 지정하는 예를 제공합니다.  
   
  [위치 경로에 노드 테스트 지정 &#40;SQLXML 4.0&#41;](../../../relational-databases/sqlxml-annotated-xsd-schemas-xpath-queries/location-path/specifying-a-node-test-in-the-location-path-sqlxml-4-0.md)  

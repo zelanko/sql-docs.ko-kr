@@ -22,13 +22,13 @@ helpviewer_keywords:
 ms.assetid: 9a03c039-70e4-4974-95d8-d3fa45984ffb
 author: markingmyname
 ms.author: maghan
-monikerRange: '>=aps-pdw-2016||=azure-sqldw-latest||>=sql-server-2016||=sqlallproducts-allversions||>=sql-server-linux-2017||=azuresqldb-mi-current'
-ms.openlocfilehash: 68f260aa547550d08c853b69cc6fb6e3e46d9a72
-ms.sourcegitcommit: 32135463a8494d9ed1600a58f51819359e3c09dc
+monikerRange: '>=aps-pdw-2016||=azure-sqldw-latest||>=sql-server-2016||>=sql-server-linux-2017||=azuresqldb-mi-current'
+ms.openlocfilehash: 8259a8a2f80bc96c52f0059cedef3036ce29cde9
+ms.sourcegitcommit: 1a544cf4dd2720b124c3697d1e62ae7741db757c
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 10/08/2020
-ms.locfileid: "91833565"
+ms.lasthandoff: 12/14/2020
+ms.locfileid: "97428160"
 ---
 # <a name="sysdm_exec_compute_node_errors-transact-sql"></a>sys.dm_exec_compute_node_errors (Transact-sql)
 
@@ -40,7 +40,7 @@ ms.locfileid: "91833565"
 |-----------------|---------------|-----------------|-----------|  
 |error_id|`nvarchar(36)`|오류와 연결 된 고유 숫자 id입니다.|시스템의 모든 쿼리 오류에서 고유|  
 |source|`nvarchar(255)`|소스 스레드 또는 프로세스 설명||  
-|type|`nvarchar(255)`|오류 유형입니다.||  
+|형식|`nvarchar(255)`|오류 유형입니다.||  
 |create_time|`datetime`|오류가 발생 한 시간입니다.||  
 |compute_node_id|`int`|특정 계산 노드의 식별자입니다.|Compute_node_id [sys.dm_exec_compute_nodes &#40;transact-sql](../../relational-databases/system-dynamic-management-views/sys-dm-exec-compute-nodes-transact-sql.md) 을 참조 하세요&#41;|  
 |rexecution_id|`nvarchar(36)`|PolyBase 쿼리 (있는 경우)의 식별자입니다.||  
