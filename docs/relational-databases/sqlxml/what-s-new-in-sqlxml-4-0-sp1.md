@@ -20,13 +20,13 @@ helpviewer_keywords:
 ms.assetid: 48f7720b-1705-402d-93ce-097ff1737877
 author: MightyPen
 ms.author: genemi
-monikerRange: =azuresqldb-current||>=sql-server-2016||=sqlallproducts-allversions||>=sql-server-linux-2017||=azuresqldb-mi-current
-ms.openlocfilehash: cdb176233f3490daa428e7cf6bb8f7c9b0b58255
-ms.sourcegitcommit: da88320c474c1c9124574f90d549c50ee3387b4c
+monikerRange: =azuresqldb-current||>=sql-server-2016||>=sql-server-linux-2017||=azuresqldb-mi-current
+ms.openlocfilehash: 2665584ac6ac791ca489ea452779a93b71b35c68
+ms.sourcegitcommit: 1a544cf4dd2720b124c3697d1e62ae7741db757c
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 07/01/2020
-ms.locfileid: "85665602"
+ms.lasthandoff: 12/14/2020
+ms.locfileid: "97479214"
 ---
 # <a name="what39s-new-in-sqlxml-40-sp1"></a>SQLXML 4.0 s p 1의 새로운&#39;기능
 [!INCLUDE [SQL Server Azure SQL Database](../../includes/applies-to-version/sql-asdb.md)]
@@ -85,7 +85,7 @@ ms.locfileid: "85665602"
  애플리케이션에서 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] Native Client를 데이터 공급자로 사용하는 경우 이 프로그램도 재배포해야 합니다. 자세한 내용은 [Installing SQL Server Native Client](../../relational-databases/native-client/applications/installing-sql-server-native-client.md)(SQL Server Native Client 설치)를 참조하세요.  
   
 ## <a name="support-for-sql-server-native-client"></a>SQL Server Native Client 지원  
- SQLXML 4.0은 SQLOLEDB 및 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] Native Client 공급자를 모두 지원 합니다. Native client는 동일한 버전의 native Client 공급자를 사용 하는 것이 좋으며 native client [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 는에서 **Date, Time**, **DateTime2**및 **dateTimeOffset** 데이터 형식과 같은 서버에 제공 되는 새로운 데이터 형식을 지원 하도록 개발 되었으므로 native [!INCLUDE[ssKatmai](../../includes/sskatmai-md.md)] client에서 지원 됩니다 [!INCLUDE[ssCurrent](../../includes/sscurrent-md.md)] .  
+ SQLXML 4.0은 SQLOLEDB 및 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] Native Client 공급자를 모두 지원 합니다. Native client는 동일한 버전의 native Client 공급자를 사용 하는 것이 좋으며 native client [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 는에서 **Date, Time**, **DateTime2** 및 **dateTimeOffset** 데이터 형식과 같은 서버에 제공 되는 새로운 데이터 형식을 지원 하도록 개발 되었으므로 native [!INCLUDE[ssKatmai](../../includes/sskatmai-md.md)] client에서 지원 됩니다 [!INCLUDE[ssCurrent](../../includes/sscurrent-md.md)] .  
   
  [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] Native Client는 [!INCLUDE[ssVersion2005](../../includes/ssversion2005-md.md)]에 처음 도입된 데이터 액세스 기술입니다. 이 기술은 SQLOLEDB 공급자와 SQLODBC 드라이버를 하나의 네이티브 DLL(동적 링크 라이브러리)로 조합한 것이며 MDAC(Microsoft Data Access Components)와는 분리된 고유한 새 기능을 제공합니다.  
   
@@ -95,7 +95,7 @@ ms.locfileid: "85665602"
 >  SQLXML 4.0은 SQLXML 3.0과 완전히 호환되지 않습니다. 일부 버그 수정 및 기타 기능 변경, 특히 SQLXML ISAPI 지원 제거로 인해 SQLXML 4.0에서는 IIS 가상 디렉터리를 사용할 수 없습니다. 대부분의 애플리케이션은 약간만 수정해도 실행되지만 SQLXML 4.0과 함께 프로덕션에 배치하기 전에 테스트해야 합니다.  
   
 ## <a name="support-for-data-types-introduced-in-sql-server-2005-and-sql-server-2008"></a>SQL Server 2005 및 SQL Server 2008에 도입된 데이터 형식 지원  
- [!INCLUDE[ssVersion2005](../../includes/ssversion2005-md.md)]는 **xml** 데이터 형식을 도입 했으며 SQLXML 4.0은 **xml** 데이터 형식을 지원 합니다. 자세한 내용은 [SQLXML 4.0의 Xml 데이터 형식 지원](../../relational-databases/sqlxml/xml-data-type-support-in-sqlxml-4-0.md)을 참조 하세요.  
+ [!INCLUDE[ssVersion2005](../../includes/ssversion2005-md.md)] 는 **xml** 데이터 형식을 도입 했으며 SQLXML 4.0은 **xml** 데이터 형식을 지원 합니다. 자세한 내용은 [SQLXML 4.0의 Xml 데이터 형식 지원](../../relational-databases/sqlxml/xml-data-type-support-in-sqlxml-4-0.md)을 참조 하세요.  
   
  Xml 뷰를 매핑할 때 SQLXML에서 **xml 데이터 형식을** 사용 하는 방법에 대 한 예는 xml 일괄 로드 또는 xml updategrams 실행에 대 한 예를 보려면 다음 항목에서 제공 하는 예제를 참조 하십시오.  
   
@@ -105,7 +105,7 @@ ms.locfileid: "85665602"
   
 -   [XML 문서 대량 로드 예](../../relational-databases/sqlxml-annotated-xsd-schemas-xpath-queries/bulk-load-xml/xml-bulk-load-examples-sqlxml-4-0.md)  
   
- [!INCLUDE[ssKatmai](../../includes/sskatmai-md.md)]에는 **Date, Time**, **DateTime2**및 **DateTimeOffset** 데이터 형식이 도입 되었습니다. [!INCLUDE[ssCurrent](../../includes/sscurrent-md.md)]에 기본 제공되는 [!INCLUDE[ssCurrent](../../includes/sscurrent-md.md)] Native Client OLE DB Provider(SQLNCLI11)와 함께 SQLXML 4.0 SP1을 사용하는 경우 이러한 네 가지 새로운 데이터 형식이 기본 제공 스칼라 형식으로 사용됩니다.  
+ [!INCLUDE[ssKatmai](../../includes/sskatmai-md.md)] 에는 **Date, Time**, **DateTime2** 및 **DateTimeOffset** 데이터 형식이 도입 되었습니다. [!INCLUDE[ssCurrent](../../includes/sscurrent-md.md)]에 기본 제공되는 [!INCLUDE[ssCurrent](../../includes/sscurrent-md.md)] Native Client OLE DB Provider(SQLNCLI11)와 함께 SQLXML 4.0 SP1을 사용하는 경우 이러한 네 가지 새로운 데이터 형식이 기본 제공 스칼라 형식으로 사용됩니다.  
   
 ## <a name="xml-bulk-load-changes-for-sqlxml-40-sp1"></a>SQLXML 4.0 SP1에 대한 XML 대량 로드 변경 내용  
   
@@ -147,7 +147,7 @@ ms.locfileid: "85665602"
   
      이 키는 데이터의 공백 문자를 유지할 수 있도록 도입되었습니다. 이 레지스트리 키를 추가하고 해당 값을 0으로 설정하면 특성 값의 경우 XML의 공백 문자(LF, CR 및 탭)가 인코딩되어 반환됩니다. 요소 값의 경우 CR만 인코딩되어 반환됩니다.  
   
-     예를 들면 다음과 같습니다.  
+     예를 들어:  
   
     ```  
     CREATE TABLE T( Col1 int, Col2 nvarchar(100));  

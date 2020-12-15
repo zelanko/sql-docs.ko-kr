@@ -20,13 +20,13 @@ helpviewer_keywords:
 ms.assetid: eb7b58b8-3508-4114-97c2-d877bcb12964
 author: markingmyname
 ms.author: maghan
-monikerRange: =azuresqldb-current||>=sql-server-2016||=sqlallproducts-allversions||>=sql-server-linux-2017||=azuresqldb-mi-current
-ms.openlocfilehash: a3097ba3a920a049dd69b54a8a9f7b84638ff3fb
-ms.sourcegitcommit: 2991ad5324601c8618739915aec9b184a8a49c74
+monikerRange: =azuresqldb-current||>=sql-server-2016||>=sql-server-linux-2017||=azuresqldb-mi-current
+ms.openlocfilehash: 1fce9f5d723006fdccba975b1014012e4a21ad13
+ms.sourcegitcommit: 1a544cf4dd2720b124c3697d1e62ae7741db757c
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 12/11/2020
-ms.locfileid: "97328469"
+ms.lasthandoff: 12/14/2020
+ms.locfileid: "97482814"
 ---
 # <a name="sysdm_exec_query_stats-transact-sql"></a>sys.dm_exec_query_stats(Transact-SQL)
 [!INCLUDE [SQL Server SQL Database](../../includes/applies-to-version/sql-asdb.md)]
@@ -132,7 +132,7 @@ SQL Database Basic, S0 및 S1 서비스 목적과 탄력적 풀의 데이터베�
 ## <a name="remarks"></a>설명  
  쿼리가 완료되면 뷰의 통계가 업데이트됩니다.  
   
-## <a name="examples"></a>예제  
+## <a name="examples"></a>예  
   
 ### <a name="a-finding-the-top-n-queries"></a>A. TOP N 쿼리 찾기  
  다음 예제는 평균 CPU 시간별로 상위 5개의 쿼리에 대한 정보를 반환합니다. 이 예에서는 논리적으로 동일한 쿼리를 누적 리소스 소비량에 따라 그룹화할 수 있도록 쿼리 해시에 따라 쿼리를 집계합니다.  
@@ -174,7 +174,7 @@ WHERE qt.text like '%SELECT%'
 ORDER BY qs.execution_count DESC;  
 ```  
   
-## <a name="see-also"></a>참고 항목  
+## <a name="see-also"></a>참조  
 [Transact-sql&#41;&#40;관련 동적 관리 뷰 및 함수 실행 ](../../relational-databases/system-dynamic-management-views/execution-related-dynamic-management-views-and-functions-transact-sql.md)    
 [Transact-sql&#41;sys.dm_exec_sql_text &#40;](../../relational-databases/system-dynamic-management-views/sys-dm-exec-sql-text-transact-sql.md)    
 [Transact-sql&#41;sys.dm_exec_query_plan &#40;](../../relational-databases/system-dynamic-management-views/sys-dm-exec-query-plan-transact-sql.md)    

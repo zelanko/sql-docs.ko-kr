@@ -12,13 +12,13 @@ dev_langs:
 ms.assetid: 0a284d18-3c46-4ffa-bcc9-689e660ee8b4
 author: ronortloff
 ms.author: rortloff
-monikerRange: '>= aps-pdw-2016 || = azure-sqldw-latest || = sqlallproducts-allversions'
-ms.openlocfilehash: cf53d8d1ae8787ee8cff12ea944398f90707d7ea
-ms.sourcegitcommit: 22dacedeb6e8721e7cdb6279a946d4002cfb5da3
+monikerRange: '>= aps-pdw-2016 || = azure-sqldw-latest'
+ms.openlocfilehash: 2c81bb5c02b11753fa98024cfd4d3861b2768d24
+ms.sourcegitcommit: 1a544cf4dd2720b124c3697d1e62ae7741db757c
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 10/14/2020
-ms.locfileid: "92035396"
+ms.lasthandoff: 12/14/2020
+ms.locfileid: "97482594"
 ---
 # <a name="sysdm_pdw_dms_workers-transact-sql"></a>sys.dm_pdw_dms_workers (Transact-sql)
 [!INCLUDE[applies-to-version/asa-pdw](../../includes/applies-to-version/asa-pdw.md)]
@@ -32,7 +32,7 @@ ms.locfileid: "92035396"
 |dms_step_index|**int**|이 작업자를 실행 하는 DMS 계획의 단계입니다.<br /><br /> 이 보기의 키를 request_id, step_index 및 dms_step_index 구성 합니다.||  
 |pdw_node_id|**int**|Worker가 실행 되는 노드입니다.|[Sys.dm_pdw_nodes &#40;transact-sql&#41;](../../relational-databases/system-dynamic-management-views/sys-dm-pdw-nodes-transact-sql.md)에서 node_id를 참조 하세요.|  
 |distribution_id|**정수**|작업자 (있는 경우)가 실행 되 고 있는 배포입니다.|[Sys.pdw_distributions &#40;transact-sql&#41;](../../relational-databases/system-catalog-views/sys-pdw-distributions-transact-sql.md)에서 distribution_id를 참조 하세요.|  
-|type|**nvarchar(32)**|이 항목이 나타내는 DMS 작업자 스레드의 형식입니다.|' DIRECT_CONVERTER ', ' DIRECT_READER ', ' FILE_READER ', ' HASH_CONVERTER ', ' HASH_READER ', ' ROUNDROBIN_CONVERTER ', ' EXPORT_READER ', ' EXTERNAL_READER ', ' EXTERNAL_WRITER ', ' PARALLEL_COPY_READER ', ' REJECT_WRITER ', ' WRITER '|  
+|형식|**nvarchar(32)**|이 항목이 나타내는 DMS 작업자 스레드의 형식입니다.|' DIRECT_CONVERTER ', ' DIRECT_READER ', ' FILE_READER ', ' HASH_CONVERTER ', ' HASH_READER ', ' ROUNDROBIN_CONVERTER ', ' EXPORT_READER ', ' EXTERNAL_READER ', ' EXTERNAL_WRITER ', ' PARALLEL_COPY_READER ', ' REJECT_WRITER ', ' WRITER '|  
 |상태|**nvarchar(32)**|DMS 작업자의 상태입니다.|[!INCLUDE[ssInfoNA](../../includes/ssinfona-md.md)]|  
 |bytes_per_sec|**bigint**|마지막 1 초 동안 읽기 또는 쓰기 처리량입니다.|0 보다 크거나 같습니다. Worker가 실행 되기 전에 쿼리가 취소 되거나 실패 한 경우 NULL입니다.|  
 |bytes_processed|**bigint**|이 작업자에서 처리 한 총 바이트 수입니다.|0 보다 크거나 같습니다. Worker가 실행 되기 전에 쿼리가 취소 되거나 실패 한 경우 NULL입니다.|  

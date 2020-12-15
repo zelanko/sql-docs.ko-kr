@@ -22,18 +22,18 @@ helpviewer_keywords:
 ms.assetid: 3d831ff8-3b79-4698-b2c1-2b5dd2f8235c
 author: markingmyname
 ms.author: maghan
-monikerRange: '>=aps-pdw-2016||=azuresqldb-current||=azure-sqldw-latest||>=sql-server-2016||=sqlallproducts-allversions||>=sql-server-linux-2017||=azuresqldb-mi-current'
-ms.openlocfilehash: 5804f8b5aa598908262d1e3fb89ec13a9b183ed7
-ms.sourcegitcommit: e700497f962e4c2274df16d9e651059b42ff1a10
+monikerRange: '>=aps-pdw-2016||=azuresqldb-current||=azure-sqldw-latest||>=sql-server-2016||>=sql-server-linux-2017||=azuresqldb-mi-current'
+ms.openlocfilehash: f99e4c0106817b0defdcc09fc045ce985634571e
+ms.sourcegitcommit: 1a544cf4dd2720b124c3697d1e62ae7741db757c
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 08/17/2020
-ms.locfileid: "88448525"
+ms.lasthandoff: 12/14/2020
+ms.locfileid: "97477954"
 ---
 # <a name="sql-server-native-client-data-type-mapping-in-rowsets-and-parameters"></a>행 집합 및 매개 변수의 데이터 형식 매핑 SQL Server Native Client
 [!INCLUDE[SQL Server Azure SQL Database Synapse Analytics PDW ](../../includes/applies-to-version/sql-asdb-asdbmi-asa-pdw.md)]
 
-  행 집합 및 매개 변수 값에서 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] Native Client OLE DB 공급자는 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] **IColumnsInfo:: GetColumnInfo** 및 **ICommandWithParameters:: GetParameterInfo**함수에 보고 된 다음 OLE DB 정의 된 데이터 형식을 사용 하 여 데이터를 나타냅니다.  
+  행 집합 및 매개 변수 값에서 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] Native Client OLE DB 공급자는 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] **IColumnsInfo:: GetColumnInfo** 및 **ICommandWithParameters:: GetParameterInfo** 함수에 보고 된 다음 OLE DB 정의 된 데이터 형식을 사용 하 여 데이터를 나타냅니다.  
   
 |SQL Server 데이터 형식|OLE DB 데이터 형식|  
 |--------------------------|----------------------|  
@@ -82,7 +82,7 @@ ms.locfileid: "88448525"
  또한 세션 속성 SSPROP_ALLOWNATIVEVARIANT를 TRUE로 설정해야 합니다.  
   
 ## <a name="provider-specific-property-ssprop_allownativevariant"></a>공급자별 속성 SSPROP_ALLOWNATIVEVARIANT  
- 데이터를 인출할 때 열 또는 매개 변수에 대해 반환되어야 하는 데이터 형식 종류를 명시적으로 지정할 수 있습니다. **IColumnsInfo**를 사용하여 열 정보를 가져오고 이 정보를 기반으로 바인딩을 수행할 수도 있습니다. 바인딩 목적을 위해 **IColumnsInfo**를 사용하여 열 정보를 가져오는 경우 SSPROP_ALLOWNATIVEVARIANT 세션 속성이 FALSE(기본값)이면 **sql_variant** 열에 대해 DBTYPE_VARIANT가 반환됩니다. SSPROP_ALLOWNATIVEVARIANT 속성이 FALSE이면 DBTYPE_SQLVARIANT가 지원되지 않습니다. SSPROP_ALLOWNATIVEVARIANT 속성을 TRUE로 설정하면 열 유형이 DBTYPE_SQLVARIANT로 반환되고, 이 경우 버퍼에 SSVARIANT 구조가 포함됩니다. **sql_variant** 데이터를 DBTYPE_SQLVARIANT로 인출하는 경우 세션 속성 SSPROP_ALLOWNATIVEVARIANT를 TRUE로 설정해야 합니다.  
+ 데이터를 인출할 때 열 또는 매개 변수에 대해 반환되어야 하는 데이터 형식 종류를 명시적으로 지정할 수 있습니다. **IColumnsInfo** 를 사용하여 열 정보를 가져오고 이 정보를 기반으로 바인딩을 수행할 수도 있습니다. 바인딩 목적을 위해 **IColumnsInfo** 를 사용하여 열 정보를 가져오는 경우 SSPROP_ALLOWNATIVEVARIANT 세션 속성이 FALSE(기본값)이면 **sql_variant** 열에 대해 DBTYPE_VARIANT가 반환됩니다. SSPROP_ALLOWNATIVEVARIANT 속성이 FALSE이면 DBTYPE_SQLVARIANT가 지원되지 않습니다. SSPROP_ALLOWNATIVEVARIANT 속성을 TRUE로 설정하면 열 유형이 DBTYPE_SQLVARIANT로 반환되고, 이 경우 버퍼에 SSVARIANT 구조가 포함됩니다. **sql_variant** 데이터를 DBTYPE_SQLVARIANT로 인출하는 경우 세션 속성 SSPROP_ALLOWNATIVEVARIANT를 TRUE로 설정해야 합니다.  
   
  SSPROP_ALLOWNATIVEVARIANT 속성은 공급자별 DBPROPSET_SQLSERVERSESSION 속성 집합의 일부이며 세션 속성입니다.  
   

@@ -19,13 +19,13 @@ helpviewer_keywords:
 - sys.dm_exec_query_optimizer_memory_gateways dynamic management view
 author: josack
 ms.author: josack
-monikerRange: =azuresqldb-current||>=sql-server-2016||=sqlallproducts-allversions||>=sql-server-linux-2017||=azuresqldb-mi-current
-ms.openlocfilehash: 1db599449d45263445ae9628e2cfbacfe768f0f1
-ms.sourcegitcommit: 0e0cd9347c029e0c7c9f3fe6d39985a6d3af967d
+monikerRange: =azuresqldb-current||>=sql-server-2016||>=sql-server-linux-2017||=azuresqldb-mi-current
+ms.openlocfilehash: a87f08bd2992d752b57af9519d351c198cb4d78b
+ms.sourcegitcommit: 1a544cf4dd2720b124c3697d1e62ae7741db757c
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 12/02/2020
-ms.locfileid: "96503532"
+ms.lasthandoff: 12/14/2020
+ms.locfileid: "97477234"
 ---
 # <a name="sysdm_exec_query_optimizer_memory_gateways-transact-sql"></a>sys.dm_exec_query_optimizer_memory_gateways (Transact-sql)
 
@@ -56,7 +56,7 @@ SQL Server는 계층화 된 게이트웨이 방법을 사용 하 여 허용 되�
 
 지연 된 컴파일이 발생 하면 게이트웨이를 대기 합니다. 컴파일 지연 외에도 제한 된 요청에는 연결 된 RESOURCE_SEMAPHORE_QUERY_COMPILE 대기 유형이 누적 됩니다. RESOURCE_SEMAPHORE_QUERY_COMPILE 대기 유형은 쿼리가 많은 양의 메모리를 컴파일하기 위해 사용 중이거나 메모리가 고갈 되었거나 전체적으로 사용 가능한 충분 한 메모리가 있지만 특정 게이트웨이에서 사용 가능한 단위가 모두 사용 되었음을 나타낼 수 있습니다. **Sys.dm_exec_query_optimizer_memory_gateways** 출력을 사용 하 여 쿼리 실행 계획을 컴파일하는 데 필요한 메모리가 부족 한 시나리오를 해결할 수 있습니다.  
 
-## <a name="examples"></a>예제  
+## <a name="examples"></a>예  
 
 ### <a name="a-viewing-statistics-on-resource-semaphores"></a>A. 리소스 세마포에 대 한 통계 보기  
 이 SQL Server 인스턴스에 대 한 현재 최적화 프로그램 메모리 게이트웨이 통계는 무엇 인가요?

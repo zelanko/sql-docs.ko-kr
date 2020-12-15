@@ -1,6 +1,6 @@
 ---
 description: sys.asymmetric_keys(Transact-SQL)
-title: sys. asymmetric_keys (Transact-sql) | Microsoft Docs
+title: sys.asymmetric_keys (Transact-sql) | Microsoft Docs
 ms.custom: ''
 ms.date: 06/10/2016
 ms.prod: sql
@@ -20,13 +20,13 @@ helpviewer_keywords:
 ms.assetid: bbca796a-9bb5-4a62-9ca8-1d255984553d
 author: markingmyname
 ms.author: maghan
-monikerRange: =azuresqldb-current||>=sql-server-2016||=sqlallproducts-allversions||>=sql-server-linux-2017||=azuresqldb-mi-current
-ms.openlocfilehash: d8ff4d42014f0e3b61c4087ae879edfb8f9da744
-ms.sourcegitcommit: dd36d1cbe32cd5a65c6638e8f252b0bd8145e165
+monikerRange: =azuresqldb-current||>=sql-server-2016||>=sql-server-linux-2017||=azuresqldb-mi-current
+ms.openlocfilehash: 785b3095987a0ade14008f9251a45167ce5011ce
+ms.sourcegitcommit: 1a544cf4dd2720b124c3697d1e62ae7741db757c
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 09/08/2020
-ms.locfileid: "89539709"
+ms.lasthandoff: 12/14/2020
+ms.locfileid: "97479074"
 ---
 # <a name="sysasymmetric_keys-transact-sql"></a>sys.asymmetric_keys(Transact-SQL)
 [!INCLUDE [SQL Server SQL Database](../../includes/applies-to-version/sql-asdb.md)]
@@ -40,7 +40,7 @@ ms.locfileid: "89539709"
 |**asymmetric_key_id**|**int**|키 ID입니다. 데이터베이스 내에서 고유합니다.|  
 |**pvt_key_encryption_type**|**char(2)**|키가 암호화된 방법입니다.<br /><br /> NA = 암호화되지 않음<br /><br /> MK = 마스터 키로 암호화됨<br /><br /> PW = 사용자 정의 암호로 암호화됨<br /><br /> SK = 서비스 마스터 키로 암호화됨|  
 |**pvt_key_encryption_type_desc**|**nvarchar(60)**|프라이빗 키를 암호화하는 방법에 대한 설명입니다.<br /><br /> NO_PRIVATE_KEY<br /><br /> ENCRYPTED_BY_MASTER_KEY<br /><br /> ENCRYPTED_BY_PASSWORD<br /><br /> ENCRYPTED_BY_SERVICE_MASTER_KEY|  
-|**n**|**varbinary(32)**|키의 SHA-1 해시입니다. 해시는 전역적으로 고유합니다.|  
+|**thumbprint**|**varbinary(32)**|키의 SHA-1 해시입니다. 해시는 전역적으로 고유합니다.|  
 |**알고리즘과**|**char(2)**|키에 사용된 알고리즘입니다.<br /><br /> 1R = 512비트 RSA<br /><br /> 2R = 1024비트 RSA<br /><br /> 3R = 2048비트 RSA|  
 |**algorithm_desc**|**nvarchar(60)**|키에 사용된 알고리즘에 대한 설명입니다.<br /><br /> RSA_512<br /><br /> RSA_1024<br /><br /> RSA_2048|  
 |**key_length**|**int**|키의 비트 길이입니다.|  

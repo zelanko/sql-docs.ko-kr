@@ -22,18 +22,18 @@ helpviewer_keywords:
 ms.assetid: 4523ae15-4260-40a7-a53c-8df15e1fee79
 author: MikeRayMSFT
 ms.author: mikeray
-monikerRange: =azuresqldb-current||>=sql-server-2016||=sqlallproducts-allversions||>=sql-server-linux-2017||=azuresqldb-mi-current
-ms.openlocfilehash: 0f44a757695d067f518de22f9d3bc59af455a67c
-ms.sourcegitcommit: 968969b62bc158b9843aba5034c9d913519bc4a7
+monikerRange: =azuresqldb-current||>=sql-server-2016||>=sql-server-linux-2017||=azuresqldb-mi-current
+ms.openlocfilehash: 83aa956f8a9a9421cdbc411856be78af272f1fa6
+ms.sourcegitcommit: 1a544cf4dd2720b124c3697d1e62ae7741db757c
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 10/06/2020
-ms.locfileid: "91753775"
+ms.lasthandoff: 12/14/2020
+ms.locfileid: "97482509"
 ---
 # <a name="freetexttable-transact-sql"></a>FREETEXTTABLE(Transact-SQL)
 [!INCLUDE [SQL Server SQL Database](../../includes/applies-to-version/sql-asdb.md)]
 
-  [FROM clause](../../t-sql/queries/from-transact-sql.md) [!INCLUDE[tsql](../../includes/tsql-md.md)] [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 문자 기반 데이터 형식이 포함 된 전체 텍스트 인덱싱된 열에 대해 전체 텍스트 검색을 수행 하기 위해 SELECT 문의 FROM 절에 사용 되는 함수입니다. 이 함수는 지정 된 *freetext_string*에 있는 텍스트의 의미와 일치 하는 값을 포함 하는 값을 포함 하는 열에 대해 0 개 이상의 행이 포함 된 테이블을 반환 합니다. FREETEXTTABLE은 일반 테이블 이름처럼 참조됩니다.  
+  [](../../t-sql/queries/from-transact-sql.md) [!INCLUDE[tsql](../../includes/tsql-md.md)] [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 문자 기반 데이터 형식이 포함 된 전체 텍스트 인덱싱된 열에 대해 전체 텍스트 검색을 수행 하기 위해 SELECT 문의 FROM 절에 사용 되는 함수입니다. 이 함수는 지정 된 *freetext_string* 에 있는 텍스트의 의미와 일치 하는 값을 포함 하는 값을 포함 하는 열에 대해 0 개 이상의 행이 포함 된 테이블을 반환 합니다. FREETEXTTABLE은 일반 테이블 이름처럼 참조됩니다.  
   
  FREETEXTTABLE는 [FREETEXT &#40;transact-sql&#41;](../../t-sql/queries/freetext-transact-sql.md)와 동일한 종류의 일치에 유용 합니다.  
   
@@ -58,7 +58,7 @@ FREETEXTTABLE (table , { column_name | (column_list) | * }
   
 ## <a name="arguments"></a>인수  
  *table*  
- 전체 텍스트 쿼리용으로 표시된 테이블 이름입니다. *테이블이* 나 *뷰*는 한 부분, 두 부분 또는 세 부분으로 구성 된 데이터베이스 개체 이름일 수 있습니다. 뷰를 쿼리할 때는 전체 텍스트 인덱싱된 기본 테이블 하나만 포함할 수 있습니다.  
+ 전체 텍스트 쿼리용으로 표시된 테이블 이름입니다. *테이블이* 나 *뷰* 는 한 부분, 두 부분 또는 세 부분으로 구성 된 데이터베이스 개체 이름일 수 있습니다. 뷰를 쿼리할 때는 전체 텍스트 인덱싱된 기본 테이블 하나만 포함할 수 있습니다.  
   
  *테이블이* 서버 이름을 지정할 수 없으며 연결 된 서버에 대 한 쿼리에서 사용할 수 없습니다.  
   
@@ -66,38 +66,38 @@ FREETEXTTABLE (table , { column_name | (column_list) | * }
  FROM 절에 지정된 테이블에 대한 하나 이상의 전체 텍스트 인덱싱된 열의 이름입니다. 열은 **char**, **varchar**, **nchar**, **nvarchar**, **text**, **ntext**, **image**, **xml**, **varbinary** 또는 **varbinary(max)** 형식이 될 수 있습니다.  
   
  *column_list*  
- 여러 개의 열을 쉼표로 구분하여 지정할 수 있음을 나타냅니다. *column_list*는 괄호로 묶어야 합니다. *language_term*을 지정하지 않을 경우 *column_list*에 있는 모든 열의 언어가 같아야 합니다.  
+ 여러 개의 열을 쉼표로 구분하여 지정할 수 있음을 나타냅니다. *column_list* 는 괄호로 묶어야 합니다. *language_term* 을 지정하지 않을 경우 *column_list* 에 있는 모든 열의 언어가 같아야 합니다.  
   
  \*  
- 주어진 *freetext_string*을 검색하는 데 전체 텍스트 검색용으로 등록된 모든 열을 사용하도록 지정합니다. *Language_term* 지정 하지 않으면 테이블의 모든 전체 텍스트 인덱싱된 열 언어가 동일 해야 합니다.  
+ 주어진 *freetext_string* 을 검색하는 데 전체 텍스트 검색용으로 등록된 모든 열을 사용하도록 지정합니다. *Language_term* 지정 하지 않으면 테이블의 모든 전체 텍스트 인덱싱된 열 언어가 동일 해야 합니다.  
   
  *freetext_string*  
- *column_name*에서 검색할 텍스트입니다. 단어, 구 또는 문장을 포함하여 모든 텍스트를 입력할 수 있습니다. 모든 용어나 용어의 형식이 전체 텍스트 인덱스에 있으면 일치하는 항목이 생성됩니다.  
+ *column_name* 에서 검색할 텍스트입니다. 단어, 구 또는 문장을 포함하여 모든 텍스트를 입력할 수 있습니다. 모든 용어나 용어의 형식이 전체 텍스트 인덱스에 있으면 일치하는 항목이 생성됩니다.  
   
  AND가 키워드인 CONTAINS 검색 조건과 달리 *freetext_string* 에서 사용 하는 경우 ' a l s '는 의미 없는 단어 또는 [중지 단어](../../relational-databases/search/configure-and-manage-stopwords-and-stoplists-for-full-text-search.md)로 간주 되어 무시 됩니다.  
   
- WEIGHT, FORMSOF, 와일드카드, NEAR 및 기타 구문은 사용할 수 없습니다. *freetext_string*은 단어가 분리되고 형태소가 분석되며 동의어 사전을 통해 전달됩니다.  
+ WEIGHT, FORMSOF, 와일드카드, NEAR 및 기타 구문은 사용할 수 없습니다. *freetext_string* 은 단어가 분리되고 형태소가 분석되며 동의어 사전을 통해 전달됩니다.  
   
  LANGUAGE *language_term*  
- 쿼리의 일부로 단어 분리, 형태소 분석, 동의어 사전 및 중지 단어 제거에 리소스를 사용할 언어입니다. 이 매개 변수는 선택적이며 언어의 LCID(로캘 ID)에 해당하는 문자열, 정수 또는 16진수 값으로 지정할 수 있습니다. *language_term*을 지정할 경우 해당 언어는 검색 조건의 모든 요소에 적용됩니다. 값을 지정하지 않으면 열의 전체 텍스트 언어가 사용됩니다.  
+ 쿼리의 일부로 단어 분리, 형태소 분석, 동의어 사전 및 중지 단어 제거에 리소스를 사용할 언어입니다. 이 매개 변수는 선택적이며 언어의 LCID(로캘 ID)에 해당하는 문자열, 정수 또는 16진수 값으로 지정할 수 있습니다. *language_term* 을 지정할 경우 해당 언어는 검색 조건의 모든 요소에 적용됩니다. 값을 지정하지 않으면 열의 전체 텍스트 언어가 사용됩니다.  
   
  언어가 다른 문서가 단일 열에 BLOB(Binary Large Object)으로 함께 저장된 경우 지정된 문서의 LCID(로캘 ID)에 따라 해당 내용을 인덱싱하는 데 사용할 언어가 결정됩니다. 이러한 열을 쿼리할 때 *LANGUAGE language_term* 지정 하면 일치 하는 항목의 확률을 높일 수 있습니다.  
   
- 문자열로 지정하는 경우 *language_term*은 [sys.syslanguages &#40;Transact-SQL&#41;](../../relational-databases/system-compatibility-views/sys-syslanguages-transact-sql.md) 호환성 뷰의 **alias** 열 값에 해당합니다.  문자열은 '*language_term*'과 같이 작은따옴표로 묶어야 합니다. 정수로 지정하는 경우 *language_term*은 언어를 식별하는 실제 LCID입니다. 16진수 값으로 지정하는 경우 *language_term*은 0x로 시작하는 16진수 LCID 값입니다. 16진수 값은 앞에 오는 0을 포함하여 8자리 수를 초과할 수 없습니다.  
+ 문자열로 지정하는 경우 *language_term* 은 [sys.syslanguages &#40;Transact-SQL&#41;](../../relational-databases/system-compatibility-views/sys-syslanguages-transact-sql.md) 호환성 뷰의 **alias** 열 값에 해당합니다.  문자열은 '*language_term*'과 같이 작은따옴표로 묶어야 합니다. 정수로 지정하는 경우 *language_term* 은 언어를 식별하는 실제 LCID입니다. 16진수 값으로 지정하는 경우 *language_term* 은 0x로 시작하는 16진수 LCID 값입니다. 16진수 값은 앞에 오는 0을 포함하여 8자리 수를 초과할 수 없습니다.  
   
  값이 DBCS(더블바이트 문자 집합) 형식인 경우 [!INCLUDE[msCoName](../../includes/msconame-md.md)] [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]는 값을 유니코드로 변환합니다.  
   
- 지정된 언어가 잘못되었거나 해당 언어에 해당하는 리소스가 설치되지 않은 경우 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]는 오류를 반환합니다. 중립 언어 리소스를 사용하려면 0x0을 *language_term*으로 지정합니다.  
+ 지정된 언어가 잘못되었거나 해당 언어에 해당하는 리소스가 설치되지 않은 경우 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]는 오류를 반환합니다. 중립 언어 리소스를 사용하려면 0x0을 *language_term* 으로 지정합니다.  
   
  *top_n_by_rank*  
- 내림차순으로 가장 높은 *n*개의 일치 하는 항목만 반환 되도록 지정 합니다. 정수 값 *n*이 지정 된 경우에만 적용 됩니다. *top_n_by_rank* 를 다른 매개 변수와 함께 사용하면 실제로 모든 조건자와 일치하는 행 수보다 적은 수의 행이 반환될 수 있습니다. *top_n_by_rank* 를 사용 하면 관련성이 가장 높은 항목만 회수 하 여 쿼리 성능을 높일 수 있습니다.  
+ 내림차순으로 가장 높은 *n* 개의 일치 하는 항목만 반환 되도록 지정 합니다. 정수 값 *n* 이 지정 된 경우에만 적용 됩니다. *top_n_by_rank* 를 다른 매개 변수와 함께 사용하면 실제로 모든 조건자와 일치하는 행 수보다 적은 수의 행이 반환될 수 있습니다. *top_n_by_rank* 를 사용 하면 관련성이 가장 높은 항목만 회수 하 여 쿼리 성능을 높일 수 있습니다.  
   
 ## <a name="remarks"></a>설명  
  전체 텍스트 조건자와 함수는 단일 테이블에서 작동합니다. 이 사실은 FROM 조건자에 표시됩니다. 여러 테이블을 검색하려면 FROM 절에 조인된 테이블을 사용하여 두 개 이상의 테이블을 합한 결과 집합을 대상으로 검색 작업을 수행합니다.  
   
  FREETEXTTABLE은 FREETEXT 조건자와 동일한 검색 조건을 사용합니다.  
   
- CONTAINSTABLE와 마찬가지로 반환 된 테이블에는 **키** 및 **순위**라는 열이 있습니다 .이 열에는 적절 한 행을 가져오고 행 순위 값을 사용 하기 위해 쿼리 내에서 참조 됩니다.  
+ CONTAINSTABLE와 마찬가지로 반환 된 테이블에는 **키** 및 **순위** 라는 열이 있습니다 .이 열에는 적절 한 행을 가져오고 행 순위 값을 사용 하기 위해 쿼리 내에서 참조 됩니다.  
   
 ## <a name="permissions"></a>사용 권한  
  FREETEXTTABLE은 지정된 테이블이나 테이블에서 참조되는 열에 대해 적절한 SELECT 권한이 있는 사용자만 호출할 수 있습니다.  

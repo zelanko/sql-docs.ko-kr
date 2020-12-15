@@ -21,13 +21,13 @@ ms.assetid: d4b908d1-b25b-4ad9-8478-9cd882e8c44e
 author: MightyPen
 ms.author: genemi
 ms.custom: seo-lt-2019
-monikerRange: =azuresqldb-current||>=sql-server-2016||=sqlallproducts-allversions||>=sql-server-linux-2017||=azuresqldb-mi-current
-ms.openlocfilehash: 11e4a7a875dd2c9b9450619f389b2f082136c536
-ms.sourcegitcommit: da88320c474c1c9124574f90d549c50ee3387b4c
+monikerRange: =azuresqldb-current||>=sql-server-2016||>=sql-server-linux-2017||=azuresqldb-mi-current
+ms.openlocfilehash: 0f7c39eac7fc19d9f35c800f71ac874159fe284b
+ms.sourcegitcommit: 1a544cf4dd2720b124c3697d1e62ae7741db757c
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 07/01/2020
-ms.locfileid: "85790595"
+ms.lasthandoff: 12/14/2020
+ms.locfileid: "97479204"
 ---
 # <a name="handling-database-concurrency-issues-in-updategrams-sqlxml-40"></a>Updategram의 데이터베이스 동시성 문제 처리(SQLXML 4.0)
 [!INCLUDE [SQL Server Azure SQL Database](../../../includes/applies-to-version/sql-asdb.md)]

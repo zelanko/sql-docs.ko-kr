@@ -18,13 +18,13 @@ helpviewer_keywords:
 ms.assetid: 01184651-6e61-45d9-a502-366fecca0ee4
 author: markingmyname
 ms.author: maghan
-monikerRange: =azuresqldb-current||>=sql-server-2016||=sqlallproducts-allversions||>=sql-server-linux-2017||=azuresqldb-mi-current
-ms.openlocfilehash: dee5ef30ca260855c9df6a7823e7dce605c3ff72
-ms.sourcegitcommit: dd36d1cbe32cd5a65c6638e8f252b0bd8145e165
+monikerRange: =azuresqldb-current||>=sql-server-2016||>=sql-server-linux-2017||=azuresqldb-mi-current
+ms.openlocfilehash: f976f9be51d688833a09e5faaae42b8864ecc274
+ms.sourcegitcommit: 1a544cf4dd2720b124c3697d1e62ae7741db757c
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 09/08/2020
-ms.locfileid: "89534811"
+ms.lasthandoff: 12/14/2020
+ms.locfileid: "97482384"
 ---
 # <a name="sp_updatestats-transact-sql"></a>sp_updatestats(Transact-SQL)
 [!INCLUDE [SQL Server SQL Database](../../includes/applies-to-version/sql-asdb.md)]
@@ -52,7 +52,7 @@ sp_updatestats [ [ @resample = ] 'resample']
   
 **sp_updatestats** 는 비활성화 된 비클러스터형 인덱스에 대 한 통계를 업데이트 하 고 비활성화 된 클러스터형 인덱스에 대 한 통계를 업데이트 하지 않습니다.  
   
-디스크 기반 테이블의 경우 **sp_updatestats** 는 **dm_db_stats_properties** 카탈로그 뷰의 **modification_counter** 정보에 따라 통계를 업데이트 하 여 하나 이상의 행이 수정 된 통계를 업데이트 합니다. **Sp_updatestats**를 실행 하면 메모리 최적화 테이블에 대 한 통계가 항상 업데이트 됩니다. 따라서 **sp_updatestats** 필요 이상으로 실행 되지 않습니다.  
+디스크 기반 테이블의 경우 **sp_updatestats** 는 **sys.dm_db_stats_properties** 카탈로그 뷰의 **modification_counter** 정보에 따라 통계를 업데이트 하 여 하나 이상의 행이 수정 된 통계를 업데이트 합니다. **Sp_updatestats** 를 실행 하면 메모리 최적화 테이블에 대 한 통계가 항상 업데이트 됩니다. 따라서 **sp_updatestats** 필요 이상으로 실행 되지 않습니다.  
   
 **sp_updatestats** 저장 프로시저나 다른 컴파일된 코드를 다시 컴파일할 수 있습니다. 그러나 참조 된 테이블과 인덱스에 대 한 쿼리 계획을 하나만 사용할 수 있는 경우에는 **sp_updatestats** 에서 재컴파일을 발생 시 키 지 않을 수 있습니다. 이러한 경우에는 통계가 업데이트되었더라도 재컴파일이 필요하지 않습니다.  
   
@@ -60,9 +60,9 @@ sp_updatestats [ [ @resample = ] 'resample']
   
 ## <a name="permissions"></a>사용 권한  
 
-**Sp_updatestats**를 실행 하려면 사용자가 데이터베이스의 소유자 ( `dbo` 역할의 멤버가 아니라 `db_owner` ) 이거나 sysadmin 고정 서버 역할의 멤버 여야 합니다.
+**Sp_updatestats** 를 실행 하려면 사용자가 데이터베이스의 소유자 ( `dbo` 역할의 멤버가 아니라 `db_owner` ) 이거나 sysadmin 고정 서버 역할의 멤버 여야 합니다.
 
-## <a name="examples"></a>예제  
+## <a name="examples"></a>예  
 다음 예에서는 [!INCLUDE[ssSampleDBobject](../../includes/sssampledbobject-md.md)] 데이터베이스의 테이블에 대한 통계를 업데이트합니다.  
   
 ```sql  

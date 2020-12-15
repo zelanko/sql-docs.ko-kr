@@ -14,13 +14,13 @@ helpviewer_keywords:
 ms.assetid: 102ae1d0-973d-4e12-992c-d844bf05160d
 author: markingmyname
 ms.author: maghan
-monikerRange: '>=aps-pdw-2016||=azuresqldb-current||=azure-sqldw-latest||>=sql-server-2016||=sqlallproducts-allversions||>=sql-server-linux-2017||=azuresqldb-mi-current'
-ms.openlocfilehash: d71c4b453ca9e3f48f5ac2d4d7cbcf46da1d26e8
-ms.sourcegitcommit: 4d370399f6f142e25075b3714e5c2ce056b1bfd0
+monikerRange: '>=aps-pdw-2016||=azuresqldb-current||=azure-sqldw-latest||>=sql-server-2016||>=sql-server-linux-2017||=azuresqldb-mi-current'
+ms.openlocfilehash: 25366965de65289e895cda888a7bb3a6d8956d54
+ms.sourcegitcommit: 1a544cf4dd2720b124c3697d1e62ae7741db757c
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 10/09/2020
-ms.locfileid: "91869382"
+ms.lasthandoff: 12/14/2020
+ms.locfileid: "97481154"
 ---
 # <a name="running-stored-procedures---process-return-codes-and-output-parameters"></a>저장 프로시저 실행 - 반환 코드 및 출력 매개 변수 처리
 [!INCLUDE[SQL Server Azure SQL Database Synapse Analytics PDW ](../../includes/applies-to-version/sql-asdb-asdbmi-asa-pdw.md)]
@@ -38,7 +38,7 @@ ms.locfileid: "91869382"
   
 2.  각 입력, 입/출력 및 출력 매개 변수와 프로시저 반환 값(있는 경우)에 대해 [SQLBindParameter](../../relational-databases/native-client-odbc-api/sqlbindparameter.md) 를 호출합니다.  
   
-3.  **SQLExecDirect**를 사용하여 문을 실행합니다.  
+3.  **SQLExecDirect** 를 사용하여 문을 실행합니다.  
   
 4.  마지막 결과 집합을 처리하는 동안 **SQLFetch** 또는 **SQLFetchScroll** 에서 SQL_NO_DATA를 반환하거나 **SQLMoreResults** 에서 SQL_NO_DATA를 반환할 때까지 결과 집합을 처리합니다. 이때 반환 코드 및 출력 매개 변수에 바인딩된 변수가 반환된 데이터 값으로 채워집니다.  
 

@@ -1,6 +1,6 @@
 ---
 description: sys.dm_column_encryption_enclave(Transact-SQL)
-title: sys. dm_column_encryption_enclave (Transact-sql) | Microsoft Docs
+title: sys.dm_column_encryption_enclave (Transact-sql) | Microsoft Docs
 ms.custom: ''
 ms.date: 10/11/2019
 ms.prod: sql
@@ -9,13 +9,13 @@ ms.technology: system-objects
 ms.topic: language-reference
 author: jaszymas
 ms.author: jaszymas
-monikerRange: '>= sql-server-ver15 || = sqlallproducts-allversions'
-ms.openlocfilehash: 480215cc2157887eedbafd7a5cf4368f03e65c93
-ms.sourcegitcommit: e700497f962e4c2274df16d9e651059b42ff1a10
+monikerRange: '>= sql-server-ver15'
+ms.openlocfilehash: 6d15c17b4e023909210cef55884064757ae5ddc2
+ms.sourcegitcommit: 1a544cf4dd2720b124c3697d1e62ae7741db757c
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 08/17/2020
-ms.locfileid: "88423287"
+ms.lasthandoff: 12/14/2020
+ms.locfileid: "97482784"
 ---
 # <a name="sysdm_column_encryption_enclave-transact-sql"></a>sys.dm_column_encryption_enclave(Transact-SQL)
 [!INCLUDE [sqlserver2019-windows-only](../../includes/applies-to-version/sqlserver2019-windows-only.md)]
@@ -34,7 +34,7 @@ Always Encrypted의 secure enclave에 대 한 성능 카운터를 반환 합니�
 ## <a name="permissions"></a>사용 권한  
 `VIEW SERVER STATE` 권한이 필요합니다.   
   
-## <a name="examples"></a>예제  
+## <a name="examples"></a>예  
  
 ```sql  
 SELECT * FROM sys.dm_column_encryption_enclave;  

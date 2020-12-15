@@ -20,13 +20,13 @@ helpviewer_keywords:
 ms.assetid: 863498b4-849c-434d-b748-837411458738
 author: markingmyname
 ms.author: maghan
-monikerRange: =azuresqldb-current||>=sql-server-2016||=sqlallproducts-allversions||>=sql-server-linux-2017||=azuresqldb-mi-current
-ms.openlocfilehash: 51a83d1a812df700c2685598498312ee6b29bde0
-ms.sourcegitcommit: 2991ad5324601c8618739915aec9b184a8a49c74
+monikerRange: =azuresqldb-current||>=sql-server-2016||>=sql-server-linux-2017||=azuresqldb-mi-current
+ms.openlocfilehash: 1977e0310074842cdd1af8f1bc7b1888e8443966
+ms.sourcegitcommit: 1a544cf4dd2720b124c3697d1e62ae7741db757c
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 12/11/2020
-ms.locfileid: "97334141"
+ms.lasthandoff: 12/14/2020
+ms.locfileid: "97482724"
 ---
 # <a name="sysdm_exec_trigger_stats-transact-sql"></a>sys.dm_exec_trigger_stats(Transact-SQL)
 [!INCLUDE [SQL Server SQL Database](../../includes/applies-to-version/sql-asdb.md)]
@@ -84,7 +84,7 @@ ms.locfileid: "97334141"
 에 [!INCLUDE[ssNoVersion_md](../../includes/ssnoversion-md.md)] 는 `VIEW SERVER STATE` 권한이 필요 합니다.   
 SQL Database Basic, S0 및 S1 서비스 목적과 탄력적 풀의 데이터베이스에 대해서는 `Server admin` 또는 `Azure Active Directory admin` 계정이 필요 합니다. 다른 모든 SQL Database 서비스 목표에서 `VIEW DATABASE STATE` 사용 권한은 데이터베이스에서 필요 합니다.   
   
-## <a name="examples"></a>예제  
+## <a name="examples"></a>예  
  다음 예에서는 평균 경과 시간으로 식별된 상위 5개의 트리거에 대한 정보를 반환합니다.  
   
 ```sql  

@@ -22,13 +22,13 @@ ms.assetid: f7b4d37b-d6d3-4ac3-b2fd-a0b534a924e4
 author: MightyPen
 ms.author: genemi
 ms.custom: seo-lt-2019
-monikerRange: =azuresqldb-current||>=sql-server-2016||=sqlallproducts-allversions||>=sql-server-linux-2017||=azuresqldb-mi-current
-ms.openlocfilehash: 6780a99b5bca826a9e92890ebe317f32c93300fc
-ms.sourcegitcommit: da88320c474c1c9124574f90d549c50ee3387b4c
+monikerRange: =azuresqldb-current||>=sql-server-2016||>=sql-server-linux-2017||=azuresqldb-mi-current
+ms.openlocfilehash: fff8833c03658b5d55ba96ba27f7b1779944bd77
+ms.sourcegitcommit: 1a544cf4dd2720b124c3697d1e62ae7741db757c
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 07/01/2020
-ms.locfileid: "85724729"
+ms.lasthandoff: 12/14/2020
+ms.locfileid: "97479304"
 ---
 # <a name="annotation-interpretation---other-annotations"></a>주석 해석 - 기타 주석
 [!INCLUDE [SQL Server Azure SQL Database](../../../includes/applies-to-version/sql-asdb.md)]
@@ -44,7 +44,7 @@ ms.locfileid: "85724729"
  XML 대량 로드는 이 주석을 지원하지 않습니다. 예를 들어 XML 데이터 입력에 URL을 지정하면 XML 대량 로드는 데이터베이스의 해당 데이터 저장 위치에서 데이터를 읽지 못합니다.  
   
  **sql:is-mapping-schema**  
- XML 대량 로드는 이 주석이나 **sql:id**를 지원하지 않습니다.  
+ XML 대량 로드는 이 주석이나 **sql:id** 를 지원하지 않습니다.  
   
 > [!NOTE]  
 >  XML 대량 로드는 인라인 매핑 스키마를 지원하지 않습니다.  

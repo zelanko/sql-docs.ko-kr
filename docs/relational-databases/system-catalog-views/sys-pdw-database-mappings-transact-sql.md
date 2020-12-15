@@ -12,18 +12,18 @@ dev_langs:
 ms.assetid: 4ae2c71e-dd56-41ea-a16b-64936175b459
 author: ronortloff
 ms.author: rortloff
-monikerRange: '>= aps-pdw-2016 || = sqlallproducts-allversions'
-ms.openlocfilehash: fb32b46347105b6dd80bf8013fe263018fad80e3
-ms.sourcegitcommit: 22dacedeb6e8721e7cdb6279a946d4002cfb5da3
+monikerRange: '>= aps-pdw-2016'
+ms.openlocfilehash: 8c93497ad0fd1c51a5422b80c835f3dbc8f1aff7
+ms.sourcegitcommit: 1a544cf4dd2720b124c3697d1e62ae7741db757c
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 10/14/2020
-ms.locfileid: "92035016"
+ms.lasthandoff: 12/14/2020
+ms.locfileid: "97477374"
 ---
 # <a name="syspdw_database_mappings-transact-sql"></a>sys.pdw_database_mappings (Transact-sql)
 [!INCLUDE [pdw](../../includes/applies-to-version/pdw.md)]
 
-  는 데이터베이스의 **database_id**를 계산 노드에 사용 되는 실제 이름에 매핑하고 시스템에서 데이터베이스 소유자의 **보안 주체 id** 를 제공 합니다. **Sys.pdw_database_mappings** 를 **sys.pdw_nodes_pdw_physical_databases**및 **데이터베이스** 에 조인 합니다.  
+  는 데이터베이스의 **database_id** 를 계산 노드에 사용 되는 실제 이름에 매핑하고 시스템에서 데이터베이스 소유자의 **보안 주체 id** 를 제공 합니다. **Sys.pdw_database_mappings** 를 **sys.pdw_nodes_pdw_physical_databases** 및 **데이터베이스** 에 조인 합니다.  
   
 |열 이름|데이터 형식|Description|범위|  
 |-----------------|---------------|-----------------|-----------|  

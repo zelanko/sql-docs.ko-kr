@@ -12,13 +12,13 @@ dev_langs:
 ms.assetid: ''
 author: XiaoyuMSFT
 ms.author: xiaoyul
-monikerRange: =azure-sqldw-latest || = sqlallproducts-allversions
-ms.openlocfilehash: f03d7b8c8b840c86cd462381d24ada70ded15147
-ms.sourcegitcommit: 76ab3b57718341c6057613c9bd38cf82fb17786e
+monikerRange: =azure-sqldw-latest
+ms.openlocfilehash: 540a5632997c025a98e259e23f87780134649b75
+ms.sourcegitcommit: 1a544cf4dd2720b124c3697d1e62ae7741db757c
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 10/14/2020
-ms.locfileid: "92059478"
+ms.lasthandoff: 12/14/2020
+ms.locfileid: "97482552"
 ---
 # <a name="dm_pdw_nodes_exec_query_statistics_xml-transact-sql"></a>dm_pdw_nodes_exec_query_statistics_xml (Transact-sql)
 [!INCLUDE [asa](../../includes/applies-to-version/asa.md)]
@@ -42,7 +42,7 @@ ms.locfileid: "92059478"
 ## <a name="permissions"></a>사용 권한  
  서버에 대한 `VIEW SERVER STATE` 권한이 필요합니다.  
 
-## <a name="see-also"></a>참고 항목  
+## <a name="see-also"></a>참조  
  [Transact-sql&#41;&#40;Azure Synapse 분석 및 병렬 데이터 웨어하우스 동적 관리 뷰 ](../../relational-databases/system-dynamic-management-views/sql-and-parallel-data-warehouse-dynamic-management-views.md)  
 
  ## <a name="next-steps"></a>다음 단계

@@ -1,6 +1,6 @@
 ---
 description: sys.firewall_rules(Azure SQL Database)
-title: firewall_rules (Azure SQL Database) | Microsoft Docs
+title: sys.firewall_rules (Azure SQL Database) | Microsoft Docs
 ms.date: 03/26/2019
 ms.prod: sql
 ms.technology: system-objects
@@ -18,13 +18,13 @@ helpviewer_keywords:
 ms.assetid: 140d2cd8-9aa1-4cc5-870d-e1dbc873b3fe
 author: markingmyname
 ms.author: maghan
-monikerRange: = azuresqldb-current || = sqlallproducts-allversions
-ms.openlocfilehash: 3fbe5a555ffde0a06d43c737fbc424ed9648cfef
-ms.sourcegitcommit: dd36d1cbe32cd5a65c6638e8f252b0bd8145e165
+monikerRange: = azuresqldb-current
+ms.openlocfilehash: b7e08498a9f3867c03c2198957af0ac35f9a0a01
+ms.sourcegitcommit: 1a544cf4dd2720b124c3697d1e62ae7741db757c
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 09/08/2020
-ms.locfileid: "89546811"
+ms.lasthandoff: 12/14/2020
+ms.locfileid: "97477434"
 ---
 # <a name="sysfirewall_rules-azure-sql-database"></a>sys.firewall_rules(Azure SQL Database)
 [!INCLUDE[Azure SQL Database Azure SQL Managed Instance](../../includes/applies-to-version/asdb-asdbmi.md)]
@@ -44,7 +44,7 @@ ms.locfileid: "89546811"
   
 ## <a name="remarks"></a>설명
 
- Microsoft Azure SQL Database와 연결 된 데이터베이스 수준 방화벽 설정에 대 한 정보를 반환 하려면 [&#41;&#40;Azure SQL Database database_firewall_rules ](../../relational-databases/system-catalog-views/sys-database-firewall-rules-azure-sql-database.md)를 사용 합니다.  
+ Microsoft Azure SQL Database와 연결 된 데이터베이스 수준 방화벽 설정에 대 한 정보를 반환 하려면 [sys.database_firewall_rules &#40;Azure SQL Database&#41;](../../relational-databases/system-catalog-views/sys-database-firewall-rules-azure-sql-database.md)를 사용 합니다.  
   
 ## <a name="permissions"></a>사용 권한
 
@@ -56,7 +56,7 @@ ms.locfileid: "89546811"
 [sp_delete_firewall_rule &#40;Azure SQL Database&#41;](../../relational-databases/system-stored-procedures/sp-delete-firewall-rule-azure-sql-database.md)   
 [sp_set_database_firewall_rule&#40;Azure SQL 데이터베이스&#41;](../../relational-databases/system-stored-procedures/sp-set-database-firewall-rule-azure-sql-database.md)  
 [sp_delete_database_firewall_rule &#40;Azure SQL Database&#41;](../../relational-databases/system-stored-procedures/sp-delete-database-firewall-rule-azure-sql-database.md)  
-[database_firewall_rules &#40;Azure SQL Database&#41;](../../relational-databases/system-catalog-views/sys-database-firewall-rules-azure-sql-database.md)  
+[sys.database_firewall_rules &#40;Azure SQL Database&#41;](../../relational-databases/system-catalog-views/sys-database-firewall-rules-azure-sql-database.md)  
 [데이터베이스 엔진 액세스에 대 한 Windows 방화벽 구성](../../database-engine/configure-windows/configure-a-windows-firewall-for-database-engine-access.md)     
 [FILESTREAM 액세스를 위한 방화벽 구성](../../relational-databases/blob/configure-a-firewall-for-filestream-access.md)  
 [보고서 서버 액세스를 위한 방화벽 구성](../../reporting-services/report-server/configure-a-firewall-for-report-server-access.md) 

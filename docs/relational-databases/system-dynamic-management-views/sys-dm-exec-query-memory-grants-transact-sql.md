@@ -1,6 +1,6 @@
 ---
 description: sys.dm_exec_query_memory_grants(Transact-SQL)
-title: sys. dm_exec_query_memory_grants (Transact-sql) | Microsoft Docs
+title: sys.dm_exec_query_memory_grants (Transact-sql) | Microsoft Docs
 ms.custom: ''
 ms.date: 05/19/2020
 ms.prod: sql
@@ -20,13 +20,13 @@ helpviewer_keywords:
 ms.assetid: 2c417747-2edd-4e0d-8a9c-e5f445985c1a
 author: markingmyname
 ms.author: maghan
-monikerRange: =azuresqldb-current||>=sql-server-2016||=sqlallproducts-allversions||>=sql-server-linux-2017||=azuresqldb-mi-current
-ms.openlocfilehash: da496a91a9ed3fa6a391d0862de7eb7fde391480
-ms.sourcegitcommit: dd36d1cbe32cd5a65c6638e8f252b0bd8145e165
+monikerRange: =azuresqldb-current||>=sql-server-2016||>=sql-server-linux-2017||=azuresqldb-mi-current
+ms.openlocfilehash: b38c73b671329a13923604965f9529113d0549d7
+ms.sourcegitcommit: 1a544cf4dd2720b124c3697d1e62ae7741db757c
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 09/08/2020
-ms.locfileid: "89546616"
+ms.lasthandoff: 12/14/2020
+ms.locfileid: "97477284"
 ---
 # <a name="sysdm_exec_query_memory_grants-transact-sql"></a>sys.dm_exec_query_memory_grants(Transact-SQL)
 [!INCLUDE [SQL Server SQL Database](../../includes/applies-to-version/sql-asdb.md)]
@@ -36,7 +36,7 @@ ms.locfileid: "89546616"
  [!INCLUDE[ssSDSfull](../../includes/sssdsfull-md.md)]에서 동적 관리 뷰는 데이터베이스 포함에 영향을 줄 수 있는 정보 또는 사용자가 액세스할 수 있는 다른 데이터베이스 정보를 노출할 수 없습니다. 이 정보를 노출 하지 않도록 하기 위해 연결 된 테 넌 트에 속하지 않는 데이터를 포함 하는 모든 행이 필터링 됩니다. 또한 **scheduler_id**, **wait_order**, **pool_id**, **group_id** 열의 값이 필터링 됩니다. 열 값이 NULL로 설정 됩니다.  
   
 > [!NOTE]  
-> 또는에서이를 호출 하려면 [!INCLUDE[ssSDWfull](../../includes/sssdwfull-md.md)] [!INCLUDE[ssPDW](../../includes/sspdw-md.md)] 이름 **sys. dm_pdw_nodes_exec_query_memory_grants**을 사용 합니다.  
+> 또는에서이를 호출 하려면 [!INCLUDE[ssSDWfull](../../includes/sssdwfull-md.md)] [!INCLUDE[ssPDW](../../includes/sspdw-md.md)] **sys.dm_pdw_nodes_exec_query_memory_grants** 이름을 사용 합니다.  
   
 |열 이름|데이터 형식|Description|  
 |-----------------|---------------|-----------------|  
@@ -47,7 +47,7 @@ ms.locfileid: "89546616"
 |**request_time**|**datetime**|이 쿼리가 메모리 부여를 요청한 날짜와 시간입니다.|  
 |**grant_time**|**datetime**|이 쿼리에 메모리가 부여된 날짜와 시간입니다. 아직 메모리가 부여되지 않은 경우 NULL이 됩니다.|  
 |**requested_memory_kb**|**bigint**|요청된 총 메모리 양(KB)입니다.|  
-|**granted_memory_kb**|**bigint**|실제로 부여된 총 메모리 양(KB)입니다. 아직 메모리가 부여되지 않은 경우 NULL이 될 수 있습니다. 일반적인 경우 이 값은 **requested_memory_kb**와 같아야 합니다. 인덱스 생성 시에는 서버가 처음 부여된 메모리 외에 요청 시 메모리를 추가로 허용할 수 있습니다.|  
+|**granted_memory_kb**|**bigint**|실제로 부여된 총 메모리 양(KB)입니다. 아직 메모리가 부여되지 않은 경우 NULL이 될 수 있습니다. 일반적인 경우 이 값은 **requested_memory_kb** 와 같아야 합니다. 인덱스 생성 시에는 서버가 처음 부여된 메모리 외에 요청 시 메모리를 추가로 허용할 수 있습니다.|  
 |**required_memory_kb**|**bigint**|이 쿼리를 실행하는 데 필요한 최소 메모리(KB)입니다. **requested_memory_kb** 이 값 보다 크거나 같습니다.|  
 |**used_memory_kb**|**bigint**|현재 사용된 실제 메모리(KB)입니다.|  
 |**max_used_memory_kb**|**bigint**|현재까지 사용된 최대 실제 메모리(KB)입니다.|  
@@ -58,8 +58,8 @@ ms.locfileid: "89546616"
 |**wait_order**|**int**|지정한 **queue_id** 내에서 대기 큐의 순차적 순서입니다. 다른 쿼리가 메모리 부여를 얻거나 시간이 초과 되는 경우 지정 된 쿼리에 대해이 값이 변경 될 수 있습니다. 메모리가 이미 부여 된 경우 NULL입니다.|  
 |**is_next_candidate**|**bit**|다음 메모리 부여 후보입니다.<br /><br /> 1 = 예<br /><br /> 0 = 아니요<br /><br /> NULL = 메모리가 이미 부여된 경우|  
 |**wait_time_ms**|**bigint**|대기 시간(밀리초)입니다. 메모리가 이미 부여된 경우 NULL이 됩니다.|  
-|**plan_handle**|**varbinary(64)**|이 쿼리 계획의 식별자입니다. **sys.dm_exec_query_plan**을 사용하여 실제 XML 계획을 추출할 수 있습니다.|  
-|**sql_handle**|**varbinary(64)**|이 쿼리에 대한 [!INCLUDE[tsql](../../includes/tsql-md.md)] 텍스트의 식별자입니다. **sys.dm_exec_sql_text**를 사용하여 실제 [!INCLUDE[tsql](../../includes/tsql-md.md)] 텍스트를 가져올 수 있습니다.|  
+|**plan_handle**|**varbinary(64)**|이 쿼리 계획의 식별자입니다. **sys.dm_exec_query_plan** 을 사용하여 실제 XML 계획을 추출할 수 있습니다.|  
+|**sql_handle**|**varbinary(64)**|이 쿼리에 대한 [!INCLUDE[tsql](../../includes/tsql-md.md)] 텍스트의 식별자입니다. **sys.dm_exec_sql_text** 를 사용하여 실제 [!INCLUDE[tsql](../../includes/tsql-md.md)] 텍스트를 가져올 수 있습니다.|  
 |**group_id**|**int**|이 쿼리가 실행하고 있는 작업 그룹의 ID입니다.|  
 |**pool_id**|**int**|이 작업 그룹이 속한 리소스 풀의 ID입니다.|  
 |**is_small**|**tinyint**|1로 설정되면 이 부여에서 작은 리소스 세마포를 사용합니다. 0으로 설정되면 일반 세마포가 사용됩니다.|  
@@ -80,9 +80,9 @@ ms.locfileid: "89546616"
   
 -   [sys.dm_os_memory_clerks](../../relational-databases/system-dynamic-management-views/sys-dm-os-memory-clerks-transact-sql.md), [sys.dm_os_sys_info](../../relational-databases/system-dynamic-management-views/sys-dm-os-sys-info-transact-sql.md) 및 다양한 성능 카운터를 사용하여 전체 시스템 메모리 상태를 확인합니다.  
   
--   **sys.dm_os_memory_clerks**의 `type = 'MEMORYCLERK_SQLQERESERVATIONS'`에서 쿼리 실행 메모리 예약을 확인합니다.  
+-   **sys.dm_os_memory_clerks** 의 `type = 'MEMORYCLERK_SQLQERESERVATIONS'`에서 쿼리 실행 메모리 예약을 확인합니다.  
   
--   **Dm_exec_query_memory_grants**를 사용 하 여 권한을 부여 하기 위해<sup>1</sup> 을 대기 하는 쿼리를 확인 합니다.  
+-   **Sys.dm_exec_query_memory_grants** 를 사용 하 여 권한을 부여 하기 위해 <sup>1</sup> 을 대기 하는 쿼리를 확인 합니다.  
   
     ```sql  
     --Find all queries waiting in the memory queue  
@@ -91,7 +91,7 @@ ms.locfileid: "89546616"
     
     <sup>1</sup> 이 시나리오에서 대기 형식은 일반적으로 RESOURCE_SEMAPHORE입니다. 자세한 내용은 [sys.dm_os_wait_stats&#40;Transact-SQL&#41;](../../relational-databases/system-dynamic-management-views/sys-dm-os-wait-stats-transact-sql.md)를 참조하세요. 
   
--   [&#40;dm_exec_cached_plans](../../relational-databases/system-dynamic-management-views/sys-dm-exec-cached-plans-transact-sql.md) 를 사용 하 여 메모리 부여가 있는 쿼리에 대 한 캐시 검색 transact-sql&#41;및 [&#40;dm_exec_query_plan&#41;](../../relational-databases/system-dynamic-management-views/sys-dm-exec-query-plan-transact-sql.md)  
+-   Transact-sql&#41;및 [sys.dm_exec_query_plan &#40;](../../relational-databases/system-dynamic-management-views/sys-dm-exec-query-plan-transact-sql.md) transact-sql을 사용 하 여 메모리 부여를 사용 하는 쿼리에 대 한 캐시 검색 [sys.dm_exec_cached_plans &#40;](../../relational-databases/system-dynamic-management-views/sys-dm-exec-cached-plans-transact-sql.md)  
   
     ```sql  
     -- retrieve every query plan from the plan cache  
@@ -117,10 +117,10 @@ ms.locfileid: "89546616"
   
  또는 집계가 포함 된 동적 관리 뷰를 사용 하는 쿼리를 사용 하면 메모리 사용이 증가 하 여 `ORDER BY` 문제 해결에 도움이 될 수 있습니다.  
   
- 데이터베이스 관리자는 리소스 관리자 기능을 사용하여 서버 리소스를 최대 20개의 리소스 풀에 배치할 수 있습니다. 부터 [!INCLUDE[ssKatmai](../../includes/sskatmai-md.md)] 각 풀은 작은 독립 서버 인스턴스와 같이 작동 하며 2 개의 세마포가 필요 합니다. **Dm_exec_query_resource_semaphores** 에서 반환 되는 행 수는에서 반환 되는 행 보다 최대 20 배가 될 수 [!INCLUDE[ssVersion2005](../../includes/ssversion2005-md.md)] 있습니다.  
+ 데이터베이스 관리자는 리소스 관리자 기능을 사용하여 서버 리소스를 최대 20개의 리소스 풀에 배치할 수 있습니다. 부터 [!INCLUDE[ssKatmai](../../includes/sskatmai-md.md)] 각 풀은 작은 독립 서버 인스턴스와 같이 작동 하며 2 개의 세마포가 필요 합니다. **Sys.dm_exec_query_resource_semaphores** 에서 반환 되는 행 수는에 반환 되는 행 보다 최대 20 배까지 걸릴 수 있습니다 [!INCLUDE[ssVersion2005](../../includes/ssversion2005-md.md)] .  
   
 ## <a name="see-also"></a>참고 항목  
- [dm_exec_query_resource_semaphores &#40;Transact-sql&#41;](../../relational-databases/system-dynamic-management-views/sys-dm-exec-query-resource-semaphores-transact-sql.md)     
+ [Transact-sql&#41;sys.dm_exec_query_resource_semaphores &#40;](../../relational-databases/system-dynamic-management-views/sys-dm-exec-query-resource-semaphores-transact-sql.md)     
  [sys.dm_os_wait_stats&#40;Transact-SQL&#41;](../../relational-databases/system-dynamic-management-views/sys-dm-os-wait-stats-transact-sql.md)     
  [Transact-sql&#41;&#40;관련 동적 관리 뷰 및 함수 실행 ](../../relational-databases/system-dynamic-management-views/execution-related-dynamic-management-views-and-functions-transact-sql.md)    
  [스레드 및 태스크 아키텍처 가이드](../../relational-databases/thread-and-task-architecture-guide.md)   

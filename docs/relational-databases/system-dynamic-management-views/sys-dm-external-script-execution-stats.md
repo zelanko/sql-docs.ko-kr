@@ -1,6 +1,6 @@
 ---
 description: sys.dm_external_script_execution_stats
-title: sys. dm_external_script_execution_stats | Microsoft Docs
+title: sys.dm_external_script_execution_stats | Microsoft Docs
 ms.custom: ''
 ms.date: 06/25/2020
 ms.prod: sql
@@ -20,13 +20,13 @@ ms.assetid: 2e99f026-ceb2-42a2-a549-c71d31ed0cf4
 author: dphansen
 ms.author: davidph
 manager: cgronlun
-monikerRange: '>=sql-server-2016||>=sql-server-linux-ver15||=azuresqldb-mi-current||=sqlallproducts-allversions'
-ms.openlocfilehash: 9c8244de0efc2bdd3dc506e5e1ebcddcd4843dea
-ms.sourcegitcommit: e700497f962e4c2274df16d9e651059b42ff1a10
+monikerRange: '>=sql-server-2016||>=sql-server-linux-ver15||=azuresqldb-mi-current'
+ms.openlocfilehash: 32a35224dd40cfc33bdc3c8bb0c93fd5a783966a
+ms.sourcegitcommit: 1a544cf4dd2720b124c3697d1e62ae7741db757c
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 08/17/2020
-ms.locfileid: "88489926"
+ms.lasthandoff: 12/14/2020
+ms.locfileid: "97482694"
 ---
 # <a name="sysdm_external_script_execution_stats"></a>sys.dm_external_script_execution_stats
 [!INCLUDE [SQL Server 2016 SQL MI](../../includes/applies-to-version/sqlserver2016-asdbmi.md)]
@@ -67,7 +67,7 @@ R 언어에서 *counter_name* 필드에 표시되는 카운터 값은 등록된 
 
 Python의 경우이 DMV는 인스턴스에 대해 만들어진 Python 호출 수를 추적 합니다.
 
-수는 인스턴스에서 기능을 설치하고 사용하도록 설정되면 시작되며 상태를 유지 관리하는 파일이 관리자에 의해 삭제되거나 덮어쓸 때까지 누적됩니다. 따라서 일반적으로 *counter_value*에서는 값을 다시 설정할 수 없습니다. 세션, 일정 시간 또는 기타 시간 간격을 기준으로 사용량을 모니터링하려면 개수를 테이블에 캡처하는 것이 좋습니다.
+수는 인스턴스에서 기능을 설치하고 사용하도록 설정되면 시작되며 상태를 유지 관리하는 파일이 관리자에 의해 삭제되거나 덮어쓸 때까지 누적됩니다. 따라서 일반적으로 *counter_value* 에서는 값을 다시 설정할 수 없습니다. 세션, 일정 시간 또는 기타 시간 간격을 기준으로 사용량을 모니터링하려면 개수를 테이블에 캡처하는 것이 좋습니다.
 
 ### <a name="registration-of-external-script-functions-in-r"></a>R에서 외부 스크립트 함수 등록
 
@@ -75,7 +75,7 @@ R은 임의의 스크립트를 지원 하 고, R 커뮤니티는 각각 고유�
 
 이러한 함수는 기능이 설치될 때 등록되며 등록된 함수는 추가하거나 삭제할 수 없습니다.
 
-## <a name="examples"></a>예제  
+## <a name="examples"></a>예  
   
 ### <a name="viewing-the-number-of-r-scripts-run-on-the-server"></a>서버에서 실행되는 R 스크립트 수 보기
 
@@ -97,7 +97,7 @@ FROM sys.dm_external_script_execution_stats
 WHERE language = 'Python';
 ```  
 
-## <a name="see-also"></a>참고 항목
+## <a name="see-also"></a>참조
 
 + [동적 관리 뷰 및 함수&#40;Transact-SQL&#41;](~/relational-databases/system-dynamic-management-views/system-dynamic-management-views.md)
 + [실행 관련 동적 관리 뷰 및 함수&#40;Transact-SQL&#41;](../../relational-databases/system-dynamic-management-views/execution-related-dynamic-management-views-and-functions-transact-sql.md)

@@ -15,13 +15,13 @@ helpviewer_keywords:
 ms.assetid: 0761f469-9b6c-4fa6-bbd7-f0cb936e4f1c
 author: markingmyname
 ms.author: maghan
-monikerRange: '>=aps-pdw-2016||=azuresqldb-current||=azure-sqldw-latest||>=sql-server-2016||=sqlallproducts-allversions||>=sql-server-linux-2017||=azuresqldb-mi-current'
-ms.openlocfilehash: 1f3e1e650c91236edd76ae2800b14f5ab65e1f1f
-ms.sourcegitcommit: 4d370399f6f142e25075b3714e5c2ce056b1bfd0
+monikerRange: '>=aps-pdw-2016||=azuresqldb-current||=azure-sqldw-latest||>=sql-server-2016||>=sql-server-linux-2017||=azuresqldb-mi-current'
+ms.openlocfilehash: 4dddb762b47f1e96ea1c6c4ec4507bc14d0aec86
+ms.sourcegitcommit: 1a544cf4dd2720b124c3697d1e62ae7741db757c
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 10/09/2020
-ms.locfileid: "91867009"
+ms.lasthandoff: 12/14/2020
+ms.locfileid: "97477974"
 ---
 # <a name="fetch-columns-using-irowgetcolumns-or-irowopen-and-isequentialstream"></a>IRow::GetColumns/IRow::Open 및 ISequentialStream을 사용하여 열 인출
 [!INCLUDE[SQL Server Azure SQL Database Synapse Analytics PDW ](../../includes/applies-to-version/sql-asdb-asdbmi-asa-pdw.md)]
@@ -39,7 +39,7 @@ ms.locfileid: "91867009"
   
 3.  **IRow::Open()** 또는 **IRow::GetColumns()** 를 사용하여 열 데이터를 페치합니다.  
   
-    -   **IRow::Open()** 을 사용하여 행에서 **ISequentialStream**을 열 수 있습니다. DBGUID_STREAM을 지정하여 열에 이진 데이터 스트림이 있음을 나타냅니다. 그런 다음, **IStream** 또는 **ISequentialStream**을 사용하여 열에서 데이터를 읽을 수 있습니다.  
+    -   **IRow::Open()** 을 사용하여 행에서 **ISequentialStream** 을 열 수 있습니다. DBGUID_STREAM을 지정하여 열에 이진 데이터 스트림이 있음을 나타냅니다. 그런 다음, **IStream** 또는 **ISequentialStream** 을 사용하여 열에서 데이터를 읽을 수 있습니다.  
   
     -   **IRow::GetColumns()** 를 사용하는 경우 DBCOLUMNACCESS 구조의 **pData** 요소가 스트림 개체를 가리키도록 설정됩니다.  
   

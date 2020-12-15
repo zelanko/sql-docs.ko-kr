@@ -14,30 +14,30 @@ helpviewer_keywords:
 ms.assetid: 9a6f5ad8-4a8f-4de7-ac17-81d5ccf78459
 author: MightyPen
 ms.author: genemi
-monikerRange: =azuresqldb-current||>=sql-server-2016||=sqlallproducts-allversions||>=sql-server-linux-2017||=azuresqldb-mi-current
-ms.openlocfilehash: 8dbebdd4908b4721ce91cd5994a6a25975ebdd42
-ms.sourcegitcommit: da88320c474c1c9124574f90d549c50ee3387b4c
+monikerRange: =azuresqldb-current||>=sql-server-2016||>=sql-server-linux-2017||=azuresqldb-mi-current
+ms.openlocfilehash: 0c2400239b5ad8d19733b1fa74f7750c6edc4382
+ms.sourcegitcommit: 1a544cf4dd2720b124c3697d1e62ae7741db757c
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 07/01/2020
-ms.locfileid: "85665511"
+ms.lasthandoff: 12/14/2020
+ms.locfileid: "97479184"
 ---
 # <a name="xml-data-type-support-in-sqlxml-40"></a>SQLXML 4.0의 xml 데이터 형식 지원
 [!INCLUDE [SQL Server Azure SQL Database](../../includes/applies-to-version/sql-asdb.md)]
-  부터 [!INCLUDE[ssVersion2005](../../includes/ssversion2005-md.md)] 은 xml [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 데이터 형식을 사용 하 여 xml **xml** 형식의 데이터를 지원 합니다. 이 항목에서는 SQLXML 4.0에서 **xml** 데이터 형식의 인스턴스를 인식 하 고이에 대 한 지원을 구현 하는 방법에 대 한 정보를 제공 합니다.  
+  부터 [!INCLUDE[ssVersion2005](../../includes/ssversion2005-md.md)] 은 xml [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 데이터 형식을 사용 하 여 xml  형식의 데이터를 지원 합니다. 이 항목에서는 SQLXML 4.0에서 **xml** 데이터 형식의 인스턴스를 인식 하 고이에 대 한 지원을 구현 하는 방법에 대 한 정보를 제공 합니다.  
   
 ## <a name="working-with-xml-data-types"></a>xml 데이터 형식 작업  
  **Xml** 데이터 형식 열을 구현 하는 SQL 테이블을 사용 하는 방법에 대해 자세히 알아보려면 다음 예를 제공 합니다.  
   
-|작업|예제|항목|  
+|작업|예|항목|  
 |----------|-------------|-----------|  
 |Xml 뷰에 **xml** 열을 매핑하고 포함 하는 방법|"XML 요소를 XML 데이터 형식 열에 매핑"|[SQLXML 4.0 &#40;테이블 및 열에 대 한 XSD 요소 및 특성의 기본 매핑&#41;](../../relational-databases/sqlxml-annotated-xsd-schemas-using/default-mapping-of-xsd-elements-and-attributes-to-tables-and-columns-sqlxml-4-0.md)|  
-|Updategram을 사용 하 여 **xml** 열에 데이터를 삽입 하는 방법|"XML 데이터 형식 열에 데이터 삽입"|[XML Updategrams &#40;SQLXML 4.0&#41;를 사용 하 여 데이터 삽입](../../relational-databases/sqlxml-annotated-xsd-schemas-xpath-queries/updategrams/inserting-data-using-xml-updategrams-sqlxml-4-0.md)|  
+|Updategram을 사용 하 여 **xml** 열에 데이터를 삽입 하는 방법|"XML 데이터 형식 열에 데이터 삽입"|[XML Updategrams &#40;SQLXML 4.0&#41;를 사용 하 여 데이터 삽입 ](../../relational-databases/sqlxml-annotated-xsd-schemas-xpath-queries/updategrams/inserting-data-using-xml-updategrams-sqlxml-4-0.md)|  
 |**Xml 열에** xml 데이터 대량 로드|"xml 데이터 형식 열에 대량 로드"|[XML 대량 로드 예 &#40;SQLXML 4.0&#41;](../../relational-databases/sqlxml-annotated-xsd-schemas-xpath-queries/bulk-load-xml/xml-bulk-load-examples-sqlxml-4-0.md)|  
   
 ## <a name="guidelines-and-limitations"></a>지침 및 제한 사항  
   
--   **\<xsd:any>****xml** 데이터 형식을 포함 하는 열에 매핑할 수 없습니다. SQLXML에서이 시나리오에 대 한 지원은 **sql: 오버플로 필드** 주석을 통해 제공 됩니다. 또 다른 해결 방법은 **xml** 데이터 형식 필드를 **xsd: anyType**의 요소로 매핑하는 것입니다. 이 해결 방법은 위의 테이블에 나와 있는 "XML 요소를 XML 데이터 형식 열에 매핑" 예에서 보여 줍니다.  
+-   **\<xsd:any>****xml** 데이터 형식을 포함 하는 열에 매핑할 수 없습니다. SQLXML에서이 시나리오에 대 한 지원은 **sql: 오버플로 필드** 주석을 통해 제공 됩니다. 또 다른 해결 방법은 **xml** 데이터 형식 필드를 **xsd: anyType** 의 요소로 매핑하는 것입니다. 이 해결 방법은 위의 테이블에 나와 있는 "XML 요소를 XML 데이터 형식 열에 매핑" 예에서 보여 줍니다.  
   
 -   **Xml** 데이터 형식 열의 내용에 대 한 XPath 쿼리는 지원 되지 않습니다.  
   

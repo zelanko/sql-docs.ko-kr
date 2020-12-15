@@ -18,13 +18,13 @@ helpviewer_keywords:
 ms.assetid: 4c3d6a02-08e4-414b-90be-36b89a0e5a3a
 author: markingmyname
 ms.author: maghan
-monikerRange: =azuresqldb-current||=azure-sqldw-latest||>=sql-server-2016||=sqlallproducts-allversions||>=sql-server-linux-2017||=azuresqldb-mi-current
-ms.openlocfilehash: 35f0ab89e1aa90ea8eeeb09f57911b7b526026f9
-ms.sourcegitcommit: 2991ad5324601c8618739915aec9b184a8a49c74
+monikerRange: =azuresqldb-current||=azure-sqldw-latest||>=sql-server-2016||>=sql-server-linux-2017||=azuresqldb-mi-current
+ms.openlocfilehash: c695cedaef77306aeb62d4a053deb650f6841427
+ms.sourcegitcommit: 1a544cf4dd2720b124c3697d1e62ae7741db757c
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 12/11/2020
-ms.locfileid: "97332176"
+ms.lasthandoff: 12/14/2020
+ms.locfileid: "97477324"
 ---
 # <a name="sysdm_exec_function_stats-transact-sql"></a>sys.dm_exec_function_stats (Transact-sql)
 [!INCLUDE [sqlserver2016-asdb-asdbmi-asa](../../includes/applies-to-version/sqlserver2016-asdb-asdbmi-asa.md)]
@@ -78,7 +78,7 @@ ms.locfileid: "97332176"
 에 [!INCLUDE[ssNoVersion_md](../../includes/ssnoversion-md.md)] 는 `VIEW SERVER STATE` 권한이 필요 합니다.   
 SQL Database Basic, S0 및 S1 서비스 목적과 탄력적 풀의 데이터베이스에 대해서는 `Server admin` 또는 `Azure Active Directory admin` 계정이 필요 합니다. 다른 모든 SQL Database 서비스 목표에서 `VIEW DATABASE STATE` 사용 권한은 데이터베이스에서 필요 합니다.   
   
-## <a name="examples"></a>예제  
+## <a name="examples"></a>예  
  다음 예에서는 평균 경과 시간으로 식별 된 상위 10 개의 함수에 대 한 정보를 반환 합니다.  
   
 ```  

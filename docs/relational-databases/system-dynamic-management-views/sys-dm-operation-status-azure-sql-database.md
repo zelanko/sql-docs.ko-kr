@@ -19,13 +19,13 @@ helpviewer_keywords:
 ms.assetid: cc847784-7f61-4c69-8b78-5f971bb24d61
 author: markingmyname
 ms.author: maghan
-monikerRange: = azuresqldb-current || = azure-sqldw-latest || = sqlallproducts-allversions
-ms.openlocfilehash: 777dd89339ef2eefccdb5ee180178100a16b5216
-ms.sourcegitcommit: 32135463a8494d9ed1600a58f51819359e3c09dc
+monikerRange: = azuresqldb-current || = azure-sqldw-latest
+ms.openlocfilehash: 7146d3455d4d9a36304cc0a1cc69ba3c4c841479
+ms.sourcegitcommit: 1a544cf4dd2720b124c3697d1e62ae7741db757c
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 10/08/2020
-ms.locfileid: "91834148"
+ms.lasthandoff: 12/14/2020
+ms.locfileid: "97477224"
 ---
 # <a name="sysdm_operation_status"></a>sys.dm_operation_status
 
@@ -33,7 +33,7 @@ ms.locfileid: "91834148"
 
   [!INCLUDE[ssSDSfull](../../includes/sssdsfull-md.md)] 서버의 데이터베이스에 대해 수행된 작업 정보를 반환합니다.  
   
-|열 이름|데이터 형식|Description|  
+|열 이름|데이터 형식|설명|  
 |-----------------|---------------|-----------------|  
 |session_activity_id|**uniqueidentifier**|작업의 ID입니다. Null이 아닙니다.|  
 |resource_type|**int**|작업이 수행된 리소스의 유형을 나타냅니다. Null이 아닙니다. 현재 릴리스에서 이 뷰는 [!INCLUDE[ssSDS](../../includes/sssds-md.md)]에서 수행된 작업을 추적하며 해당 정수 값은 0입니다.|  
@@ -47,7 +47,7 @@ ms.locfileid: "91834148"
 |error_code|**int**|실패한 작업 중에 발생한 오류를 나타내는 코드입니다. 값이 0이면 작업이 성공적으로 완료되었음을 나타냅니다.|  
 |error_desc|**nvarchar(2048)**|실패한 작업 중에 발생한 오류에 대한 설명입니다.|  
 |error_severity|**int**|실패한 작업 중에 발생한 오류의 심각도 수준입니다. 오류 심각도에 대 한 자세한 내용은 [데이터베이스 엔진 오류 심각도](../errors-events/database-engine-error-severities.md)를 참조 하세요.|  
-|error_state|**int**|나중에 사용하기 위해 예약되어 있습니다. 향후 호환성은 보장되지 않습니다.|  
+|error_state|**int**|다음에 사용하도록 예약됩니다. 향후 호환성은 보장되지 않습니다.|  
 |start_time|**datetime**|작업이 시작된 타임스탬프입니다.|  
 |last_modify_time|**datetime**|장기 실행 작업에 대해 레코드가 마지막으로 수정된 타임스탬프입니다. 완료된 작업의 경우 이 필드에는 작업 완료 시간의 타임스탬프가 표시됩니다.|  
   
@@ -77,7 +77,7 @@ ms.locfileid: "91834148"
 
 이 보기의 정보는 약 1 시간 동안 보존 됩니다. 최근 90 일 동안의 작업 세부 정보를 보려면 [Azure 활동 로그](/azure/azure-monitor/platform/activity-log) 를 사용 하세요. 90 일 넘게 보존 하려면 Log Analytics 작업 영역에 [활동 로그](/azure/azure-monitor/platform/activity-log#send-to-log-analytics-workspace) 항목을 전송 하는 것이 좋습니다.
 
-## <a name="example"></a>예제  
+## <a name="example"></a>예  
  데이터베이스 ' mydb '와 연결 된 최근 지역 복제 작업을 표시 합니다.  
   
 ```  

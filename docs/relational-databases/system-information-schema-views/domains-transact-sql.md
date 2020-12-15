@@ -19,13 +19,13 @@ helpviewer_keywords:
 ms.assetid: f0b734d5-816f-4b10-a60c-615931b515c2
 author: markingmyname
 ms.author: maghan
-monikerRange: =azuresqldb-current||>=sql-server-2016||=sqlallproducts-allversions||>=sql-server-linux-2017||=azuresqldb-mi-current
-ms.openlocfilehash: 7c7237d75abfcc67dc1045896cd095cea4f78123
-ms.sourcegitcommit: 968969b62bc158b9843aba5034c9d913519bc4a7
+monikerRange: =azuresqldb-current||>=sql-server-2016||>=sql-server-linux-2017||=azuresqldb-mi-current
+ms.openlocfilehash: 1621d12ef0382f4df071d41a8bc3f84b447c8b20
+ms.sourcegitcommit: 1a544cf4dd2720b124c3697d1e62ae7741db757c
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 10/06/2020
-ms.locfileid: "91753628"
+ms.lasthandoff: 12/14/2020
+ms.locfileid: "97482453"
 ---
 # <a name="domains-transact-sql"></a>DOMAINS(Transact-SQL)
 [!INCLUDE [SQL Server SQL Database](../../includes/applies-to-version/sql-asdb.md)]
@@ -45,7 +45,7 @@ ms.locfileid: "91753628"
 |**COLLATION_CATALOG**|**varchar (** 6 **)**|항상 NULL을 반환합니다.|  
 |**COLLATION_SCHEMA**|**varchar (** 3 **)**|항상 NULL을 반환합니다.|  
 |**COLLATION_NAME**|**nvarchar (** 128 **)**|열이 문자 데이터 또는 **텍스트** 데이터 형식인 경우 정렬 순서에 대 한 고유 이름을 반환 합니다. 다른 데이터 형식에 대해서는 NULL이 반환됩니다.|  
-|**CHARACTER_SET_CATALOG**|**varchar (** 6 **)**|**Master**를 반환 합니다. 이 열이 문자 데이터 또는 **텍스트** 데이터 형식인 경우 문자 집합이 있는 데이터베이스를 나타냅니다. 다른 데이터 형식에 대해서는 NULL이 반환됩니다.|  
+|**CHARACTER_SET_CATALOG**|**varchar (** 6 **)**|**Master** 를 반환 합니다. 이 열이 문자 데이터 또는 **텍스트** 데이터 형식인 경우 문자 집합이 있는 데이터베이스를 나타냅니다. 다른 데이터 형식에 대해서는 NULL이 반환됩니다.|  
 |**CHARACTER_SET_SCHEMA**|**varchar (** 3 **)**|항상 NULL을 반환합니다.|  
 |**CHARACTER_SET_NAME**|**nvarchar (** 128 **)**|이 열이 문자 데이터 또는 **텍스트** 데이터 형식이 면 문자 집합의 고유 이름을 반환 합니다. 다른 데이터 형식에 대해서는 NULL이 반환됩니다.|  
 |**NUMERIC_PRECISION**|**tinyint**|근사 숫자 데이터, 정확한 숫자 데이터, 정수 데이터 또는 통화 데이터의 전체 자릿수입니다. 다른 데이터 형식에 대해서는 NULL이 반환됩니다.|  

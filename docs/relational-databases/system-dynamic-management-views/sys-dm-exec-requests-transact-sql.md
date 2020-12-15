@@ -1,6 +1,6 @@
 ---
 description: sys.dm_exec_requests(Transact-SQL)
-title: sys. dm_exec_requests (Transact-sql) | Microsoft Docs
+title: sys.dm_exec_requests (Transact-sql) | Microsoft Docs
 ms.custom: ''
 ms.date: 10/01/2019
 ms.prod: sql
@@ -20,13 +20,13 @@ ms.assetid: 4161dc57-f3e7-4492-8972-8cfb77b29643
 author: pmasl
 ms.author: pelopes
 ms.reviewer: sstein
-monikerRange: =azuresqldb-current||>=sql-server-2016||=sqlallproducts-allversions||>=sql-server-linux-2017||=azuresqldb-mi-current
-ms.openlocfilehash: 375dc6e15f8bf592ff3d5d9e8f9388f188008d3b
-ms.sourcegitcommit: e700497f962e4c2274df16d9e651059b42ff1a10
+monikerRange: =azuresqldb-current||>=sql-server-2016||>=sql-server-linux-2017||=azuresqldb-mi-current
+ms.openlocfilehash: f1c9ac32f202766e118f7e44d3cf7c0d7fafdb6a
+ms.sourcegitcommit: 1a544cf4dd2720b124c3697d1e62ae7741db757c
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 08/17/2020
-ms.locfileid: "88489975"
+ms.lasthandoff: 12/14/2020
+ms.locfileid: "97482804"
 ---
 # <a name="sysdm_exec_requests-transact-sql"></a>sys.dm_exec_requests(Transact-SQL)
 
@@ -49,7 +49,7 @@ ms.locfileid: "88489975"
 |user_id|**int**|요청을 제출한 사용자의 ID입니다. Null을 허용하지 않습니다.|  
 |connection_id|**uniqueidentifier**|요청이 도착한 연결의 ID입니다. Null을 허용합니다.|  
 |blocking_session_id|**smallint**|요청을 차단하고 있는 세션의 ID입니다. 이 열이 NULL 이거나 0 이면 요청이 차단 되지 않거나 차단 세션의 세션 정보를 사용할 수 없습니다 (또는 식별할 수 없음).<br /><br /> -2 = 분리된 분산 트랜잭션이 차단 리소스를 소유합니다.<br /><br /> -3 = 지연된 복구 트랜잭션이 차단 리소스를 소유합니다.<br /><br /> -4 = 내부 래치 상태 전환 때문에 현재 차단 래치 소유자의 세션 ID를 확인할 수 없습니다.|  
-|wait_type|**nvarchar(60)**|요청이 현재 차단된 경우 이 열은 대기 유형을 반환합니다. Null을 허용합니다.<br /><br /> 대기 유형에 대 한 자세한 내용은 [dm_os_wait_stats &#40;transact-sql&#41;](../../relational-databases/system-dynamic-management-views/sys-dm-os-wait-stats-transact-sql.md)을 참조 하십시오.|  
+|wait_type|**nvarchar(60)**|요청이 현재 차단된 경우 이 열은 대기 유형을 반환합니다. Null을 허용합니다.<br /><br /> 대기 유형에 대 한 자세한 내용은 [sys.dm_os_wait_stats &#40;transact-sql&#41;](../../relational-databases/system-dynamic-management-views/sys-dm-os-wait-stats-transact-sql.md)를 참조 하세요.|  
 |wait_time|**int**|요청이 현재 차단된 경우 이 열은 현재 대기의 기간(밀리초)을 반환합니다. Null을 허용하지 않습니다.|  
 |last_wait_type|**nvarchar(60)**|이 요청이 이전에 차단된 경우 이 열은 마지막 대기의 유형을 반환합니다. Null을 허용하지 않습니다.|  
 |wait_resource|**nvarchar(256)**|요청이 현재 차단된 경우 이 열은 요청이 현재 대기하고 있는 리소스를 반환합니다. Null을 허용하지 않습니다.|  
@@ -90,27 +90,27 @@ ms.locfileid: "88489975"
 |query_hash|**binary (8)**|쿼리에서 계산되는 이진 해시 값으로, 비슷한 논리를 가진 쿼리를 식별하는 데 사용됩니다. 쿼리 해시를 사용하여 리터럴 값만 다른 쿼리에 대한 집계 리소스 사용을 확인할 수 있습니다.|  
 |query_plan_hash|**binary (8)**|쿼리 실행 계획에서 계산되는 이진 해시 값으로, 비슷한 쿼리 실행 계획을 식별하는 데 사용됩니다. 쿼리 계획 해시를 사용하여 비슷한 실행 계획을 가진 쿼리의 누적 비용을 찾을 수 있습니다.|  
 |statement_sql_handle|**varbinary(64)**|**적용 대상**: [!INCLUDE[ssSQL14](../../includes/sssql14-md.md)] 이상<br /><br /> 개별 쿼리의 SQL 핸들입니다.<br /><br />데이터베이스에 대해 쿼리 저장소를 사용 하도록 설정 하지 않은 경우이 열은 NULL입니다. |  
-|statement_context_id|**bigint**|**적용 대상**: [!INCLUDE[ssSQL14](../../includes/sssql14-md.md)] 이상<br /><br /> Query_context_settings에 대 한 선택적 외래 키입니다.<br /><br />데이터베이스에 대해 쿼리 저장소를 사용 하도록 설정 하지 않은 경우이 열은 NULL입니다. |  
+|statement_context_id|**bigint**|**적용 대상**: [!INCLUDE[ssSQL14](../../includes/sssql14-md.md)] 이상<br /><br /> Sys.query_context_settings 선택적 외래 키입니다.<br /><br />데이터베이스에 대해 쿼리 저장소를 사용 하도록 설정 하지 않은 경우이 열은 NULL입니다. |  
 |dop |**int** |**적용 대상**: [!INCLUDE[ssSQL15](../../includes/sssql15-md.md)] 이상<br /><br /> 쿼리의 병렬 처리 수준입니다. |  
 |parallel_worker_count |**int** |**적용 대상**: [!INCLUDE[ssSQL15](../../includes/sssql15-md.md)] 이상<br /><br /> 병렬 쿼리 인 경우 예약 된 병렬 작업자의 수입니다.  |  
 |external_script_request_id |**uniqueidentifier** |**적용 대상**: [!INCLUDE[ssSQL15](../../includes/sssql15-md.md)] 이상<br /><br /> 현재 요청과 연결 된 외부 스크립트 요청 ID입니다. |  
 |is_resumable |**bit** |**적용 대상**: [!INCLUDE[sssqlv14-md](../../includes/sssqlv14-md.md)] 이상<br /><br /> 요청이 다시 시작 가능한 인덱스 작업 인지 여부를 나타냅니다. |  
-|page_resource |**binary (8)** |**적용 대상**: [!INCLUDE[sql-server-2019](../../includes/sssqlv15-md.md)]<br /><br /> 열이 페이지를 포함 하는 경우 페이지 리소스의 8 바이트 16 진수 표현입니다 `wait_resource` . 자세한 내용은 [fn_PageResCracker](../../relational-databases/system-functions/sys-fn-pagerescracker-transact-sql.md)를 참조 하세요. |  
+|page_resource |**binary (8)** |**적용 대상**: [!INCLUDE[sql-server-2019](../../includes/sssqlv15-md.md)]<br /><br /> 열이 페이지를 포함 하는 경우 페이지 리소스의 8 바이트 16 진수 표현입니다 `wait_resource` . 자세한 내용은 [sys.fn_PageResCracker](../../relational-databases/system-functions/sys-fn-pagerescracker-transact-sql.md)를 참조 하세요. |  
 |page_server_reads|**bigint**|**적용 대상**: Azure SQL Database hyperscale<br /><br /> 이 요청에서 수행 된 페이지 서버 읽기 수입니다. Null을 허용하지 않습니다.|  
 | &nbsp; | &nbsp; | &nbsp; |
 
 ## <a name="remarks"></a>설명 
 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 외부의 코드(예: 확장 저장 프로시저 및 분산 쿼리)를 실행하려면 비선점형 스케줄러의 제어를 벗어나서 스레드를 실행해야 합니다. 작업자는 이 작업을 수행하기 위해 선점형 모드로 전환합니다. 이 동적 관리 뷰에서 반환된 시간 값은 선점형 모드에서 사용된 시간을 포함하지 않습니다.
 
-[행 모드](../../relational-databases/query-processing-architecture-guide.md#row-mode-execution)에서 병렬 요청을 실행할 경우는 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 할당 된 작업을 완료 하는 작업을 담당 하는 작업자 스레드를 조정 하는 작업자 스레드를 할당 합니다. 이 DMV에서는 요청에 대해 코디네이터 스레드만 볼 수 있습니다. **읽기**, **쓰기**, **logical_reads**및 **row_count** 열은 코디네이터 스레드에 대해 **업데이트 되지 않습니다** . **Wait_type**, **wait_time**, **last_wait_type**, **wait_resource**및 **granted_query_memory** 열은 코디네이터 스레드에 대해서 **만 업데이트** 됩니다. 자세한 내용은 [스레드 및 태스크 아키텍처 가이드](../../relational-databases/thread-and-task-architecture-guide.md)를 참조하세요.
+[행 모드](../../relational-databases/query-processing-architecture-guide.md#row-mode-execution)에서 병렬 요청을 실행할 경우는 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 할당 된 작업을 완료 하는 작업을 담당 하는 작업자 스레드를 조정 하는 작업자 스레드를 할당 합니다. 이 DMV에서는 요청에 대해 코디네이터 스레드만 볼 수 있습니다. **읽기**, **쓰기**, **logical_reads** 및 **row_count** 열은 코디네이터 스레드에 대해 **업데이트 되지 않습니다** . **Wait_type**, **wait_time**, **last_wait_type**, **wait_resource** 및 **granted_query_memory** 열은 코디네이터 스레드에 대해서 **만 업데이트** 됩니다. 자세한 내용은 [스레드 및 태스크 아키텍처 가이드](../../relational-databases/thread-and-task-architecture-guide.md)를 참조하세요.
 
 ## <a name="permissions"></a>사용 권한
 사용자에 `VIEW SERVER STATE` 게 서버에 대 한 권한이 있는 경우 사용자는 인스턴스에서 실행 중인 모든 세션을 볼 수 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 있습니다. 그렇지 않으면 사용자에 게 현재 세션만 표시 됩니다. `VIEW SERVER STATE` 는 Azure SQL Database에서 부여할 수 없으므로 `sys.dm_exec_requests` 항상 현재 연결로 제한 됩니다.
 
-Always On 시나리오에서 보조 복제본이 **읽기**전용으로 설정 된 경우 보조 복제본에 대 한 연결은를 추가 하 여 연결 문자열 매개 변수에 응용 프로그램 의도를 지정 해야 합니다 `applicationintent=readonly` . 그렇지 않으면 권한이 있는 경우에도에 대 한 액세스 검사는 `sys.dm_exec_requests` 가용성 그룹의 데이터베이스에 대해 전달 되지 않습니다 `VIEW SERVER STATE` .
+Always-On 시나리오에서 보조 복제본이 **읽기** 전용으로 설정 된 경우 보조 복제본에 대 한 연결은를 추가 하 여 연결 문자열 매개 변수에 응용 프로그램 의도를 지정 해야 합니다 `applicationintent=readonly` . 그렇지 않으면 권한이 있는 경우에도에 대 한 액세스 검사는 `sys.dm_exec_requests` 가용성 그룹의 데이터베이스에 대해 전달 되지 않습니다 `VIEW SERVER STATE` .
 
   
-## <a name="examples"></a>예제  
+## <a name="examples"></a>예  
   
 ### <a name="a-finding-the-query-text-for-a-running-batch"></a>A. 실행 중인 일괄 처리에 대한 쿼리 텍스트 찾기
 
@@ -130,14 +130,14 @@ GO
 
 ### <a name="b-finding-all-locks-that-a-running-batch-is-holding"></a>B. 실행 중인 일괄 처리에서 보유하고 있는 모든 잠금 찾기
 
-다음 예에서는 **dm_exec_requests** 를 쿼리하여 흥미로운 일괄 처리를 찾고 출력에서 해당 일괄 처리를 복사 합니다. `transaction_id`
+다음 예제에서는 **sys.dm_exec_requests** 쿼리하여 흥미로운 일괄 처리를 찾고 출력에서 해당 일괄 처리를 복사 합니다 `transaction_id` .
 
 ```sql
 SELECT * FROM sys.dm_exec_requests;  
 GO
 ```
 
-그런 다음 잠금 정보를 찾으려면 `transaction_id` 시스템 함수 **sys. dm_tran_locks**와 함께 복사 된를 사용 합니다.  
+그런 다음 잠금 정보를 찾으려면 시스템 함수 sys.dm_tran_locks 복사 된를 사용 `transaction_id` 합니다 .  
 
 ```sql
 SELECT * FROM sys.dm_tran_locks
@@ -148,7 +148,7 @@ GO
 
 ### <a name="c-finding-all-currently-blocked-requests"></a>C. 현재 차단된 모든 요청 찾기
 
-다음 예에서는 **dm_exec_requests** 를 쿼리하여 차단 된 요청에 대 한 정보를 찾습니다.  
+다음 예에서는 **sys.dm_exec_requests** 를 쿼리하여 차단 된 요청에 대 한 정보를 찾습니다.  
 
 ```sql
 SELECT session_id ,status ,blocking_session_id  
@@ -187,14 +187,14 @@ FROM sys.dm_exec_requests AS req
 GO
 ```
 
-## <a name="see-also"></a>관련 항목
+## <a name="see-also"></a>참고 항목
 [동적 관리 뷰 및 함수](~/relational-databases/system-dynamic-management-views/system-dynamic-management-views.md)     
 [실행 관련 동적 관리 뷰 및 함수](../../relational-databases/system-dynamic-management-views/execution-related-dynamic-management-views-and-functions-transact-sql.md)      
-[sys. dm_os_memory_clerks](../../relational-databases/system-dynamic-management-views/sys-dm-os-memory-clerks-transact-sql.md)     
-[sys. dm_os_sys_info](../../relational-databases/system-dynamic-management-views/sys-dm-os-sys-info-transact-sql.md)     
-[sys. dm_exec_query_memory_grants](../../relational-databases/system-dynamic-management-views/sys-dm-exec-query-memory-grants-transact-sql.md)    
-[sys. dm_exec_query_plan](../../relational-databases/system-dynamic-management-views/sys-dm-exec-query-plan-transact-sql.md)    
-[sys. dm_exec_sql_text](../../relational-databases/system-dynamic-management-views/sys-dm-exec-sql-text-transact-sql.md)      
+[sys.dm_os_memory_clerks](../../relational-databases/system-dynamic-management-views/sys-dm-os-memory-clerks-transact-sql.md)     
+[sys.dm_os_sys_info](../../relational-databases/system-dynamic-management-views/sys-dm-os-sys-info-transact-sql.md)     
+[sys.dm_exec_query_memory_grants](../../relational-databases/system-dynamic-management-views/sys-dm-exec-query-memory-grants-transact-sql.md)    
+[sys.dm_exec_query_plan](../../relational-databases/system-dynamic-management-views/sys-dm-exec-query-plan-transact-sql.md)    
+[sys.dm_exec_sql_text](../../relational-databases/system-dynamic-management-views/sys-dm-exec-sql-text-transact-sql.md)      
 [SQL Server, SQL Statistics 개체](../../relational-databases/performance-monitor/sql-server-sql-statistics-object.md)     
 [쿼리 처리 아키텍처 가이드](../../relational-databases/query-processing-architecture-guide.md#DOP)       
 [스레드 및 태스크 아키텍처 가이드](../../relational-databases/thread-and-task-architecture-guide.md)    

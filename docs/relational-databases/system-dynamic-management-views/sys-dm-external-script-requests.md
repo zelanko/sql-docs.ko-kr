@@ -1,6 +1,6 @@
 ---
 description: sys.dm_external_script_requests
-title: sys. dm_external_script_requests | Microsoft Docs
+title: sys.dm_external_script_requests | Microsoft Docs
 ms.custom: ''
 ms.date: 06/26/2020
 ms.prod: sql
@@ -20,13 +20,13 @@ ms.assetid: e7e7c50f-b8b2-403c-b8c8-1955da5636c3
 author: dphansen
 ms.author: davidph
 manager: cgronlun
-monikerRange: '>=sql-server-2016||>=sql-server-linux-ver15||=azuresqldb-mi-current||=sqlallproducts-allversions'
-ms.openlocfilehash: 1b3c1f10be0b454503c5fbcfd9cdab191a687797
-ms.sourcegitcommit: e700497f962e4c2274df16d9e651059b42ff1a10
+monikerRange: '>=sql-server-2016||>=sql-server-linux-ver15||=azuresqldb-mi-current'
+ms.openlocfilehash: 972e9527db2eaa546210ccc54528d0ce60197b4c
+ms.sourcegitcommit: 1a544cf4dd2720b124c3697d1e62ae7741db757c
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 08/17/2020
-ms.locfileid: "88489847"
+ms.lasthandoff: 12/14/2020
+ms.locfileid: "97482684"
 ---
 # <a name="sysdm_external_script_requests"></a>sys.dm_external_script_requests
 [!INCLUDE [SQL Server 2016 SQL MI](../../includes/applies-to-version/sqlserver2016-asdbmi.md)]
@@ -60,7 +60,7 @@ ms.locfileid: "88489847"
 
 이 DMV는 활성 프로세스만 모니터링하며, 이미 완료된 스크립트에 대해서는 보고할 수 없습니다. 스크립트 기간을 추적해야 하는 경우에는 스크립트에 타이밍 정보를 추가하고 스크립트 실행의 일부로 캡처하는 것이 좋습니다.
 
-## <a name="examples"></a>예제  
+## <a name="examples"></a>예  
   
 ### <a name="viewing-the-currently-active-scripts-for-a-particular-process"></a>특정 프로세스에 대 한 현재 활성 스크립트 보기
 
@@ -80,7 +80,7 @@ external_script_request_id  |language  |degree_of_parallelism  |external_user_na
 ---------|---------|---------|---------
 183EE6FC-7399-4318-AA2E-7A6C68E435A8     |     R    |      1   |  MSSQLSERVER01
 
-## <a name="see-also"></a>참고 항목
+## <a name="see-also"></a>참조
 
 + [동적 관리 뷰 및 함수&#40;Transact-SQL&#41;](~/relational-databases/system-dynamic-management-views/system-dynamic-management-views.md)
 + [실행 관련 동적 관리 뷰 및 함수&#40;Transact-SQL&#41;](../../relational-databases/system-dynamic-management-views/execution-related-dynamic-management-views-and-functions-transact-sql.md)  

@@ -20,13 +20,13 @@ helpviewer_keywords:
 ms.assetid: 3a09d81b-55d5-416f-9cda-1a3a5492abe0
 author: markingmyname
 ms.author: maghan
-monikerRange: '>=aps-pdw-2016||=azuresqldb-current||=azure-sqldw-latest||>=sql-server-2016||=sqlallproducts-allversions||>=sql-server-linux-2017||=azuresqldb-mi-current'
-ms.openlocfilehash: b6055413a3ff32882e86c65dd69353e44b2353bb
-ms.sourcegitcommit: 2991ad5324601c8618739915aec9b184a8a49c74
+monikerRange: '>=aps-pdw-2016||=azuresqldb-current||=azure-sqldw-latest||>=sql-server-2016||>=sql-server-linux-2017||=azuresqldb-mi-current'
+ms.openlocfilehash: 7398d74e0d13ca08e6943922f46617dc828e9aa2
+ms.sourcegitcommit: 1a544cf4dd2720b124c3697d1e62ae7741db757c
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 12/11/2020
-ms.locfileid: "97332999"
+ms.lasthandoff: 12/14/2020
+ms.locfileid: "97480824"
 ---
 # <a name="sysdm_os_schedulers-transact-sql"></a>sys.dm_os_schedulers(Transact-SQL)
 [!INCLUDE [sql-asdb-asdbmi-asa-pdw](../../includes/applies-to-version/sql-asdb-asdbmi-asa-pdw.md)]
@@ -72,7 +72,7 @@ ms.locfileid: "97332999"
 에 [!INCLUDE[ssNoVersion_md](../../includes/ssnoversion-md.md)] 는 `VIEW SERVER STATE` 권한이 필요 합니다.   
 SQL Database Basic, S0 및 S1 서비스 목적과 탄력적 풀의 데이터베이스에 대해서는 `Server admin` 또는 `Azure Active Directory admin` 계정이 필요 합니다. 다른 모든 SQL Database 서비스 목표에서 `VIEW DATABASE STATE` 사용 권한은 데이터베이스에서 필요 합니다.   
 
-## <a name="examples"></a>예제  
+## <a name="examples"></a>예  
   
 ### <a name="a-monitoring-hidden-and-nonhidden-schedulers"></a>A. 숨겨진 스케줄러 및 숨겨지지 않은 스케줄러 모니터링  
  다음 쿼리에서는 모든 스케줄러에 있는 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]의 태스크 및 작업자 상태를 출력합니다. 이 쿼리는 다음 조건을 충족시키는 컴퓨터 시스템에서 실행되었습니다.  

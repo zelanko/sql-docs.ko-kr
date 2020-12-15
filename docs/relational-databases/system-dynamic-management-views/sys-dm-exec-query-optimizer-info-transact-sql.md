@@ -20,13 +20,13 @@ helpviewer_keywords:
 ms.assetid: 1d72cef1-22d8-4ae0-91db-6694fe918c9e
 author: markingmyname
 ms.author: maghan
-monikerRange: '>=aps-pdw-2016||=azuresqldb-current||=azure-sqldw-latest||>=sql-server-2016||=sqlallproducts-allversions||>=sql-server-linux-2017||=azuresqldb-mi-current'
-ms.openlocfilehash: 656655d56e7188cc92b92f22d0f0155f9a0166f1
-ms.sourcegitcommit: 2991ad5324601c8618739915aec9b184a8a49c74
+monikerRange: '>=aps-pdw-2016||=azuresqldb-current||=azure-sqldw-latest||>=sql-server-2016||>=sql-server-linux-2017||=azuresqldb-mi-current'
+ms.openlocfilehash: 84aba37ec81645b1f369a527f5cee57bc807a7c1
+ms.sourcegitcommit: 1a544cf4dd2720b124c3697d1e62ae7741db757c
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 12/11/2020
-ms.locfileid: "97329405"
+ms.lasthandoff: 12/14/2020
+ms.locfileid: "97477314"
 ---
 # <a name="sysdm_exec_query_optimizer_info-transact-sql"></a>sys.dm_exec_query_optimizer_info(Transact-SQL)
 [!INCLUDE [sql-asdb-asdbmi-asa-pdw](../../includes/applies-to-version/sql-asdb-asdbmi-asa-pdw.md)]
@@ -93,7 +93,7 @@ SQL Database Basic, S0 및 S1 서비스 목적과 탄력적 풀의 데이터베�
 |fast forward cursor request|빠른 전진 커서 요청이 지정된 최적화 수입니다.|해당 없음|  
 |merge stmt|MERGE 문에 대한 최적화 수입니다.|해당 없음|  
   
-## <a name="examples"></a>예제  
+## <a name="examples"></a>예  
   
 ### <a name="a-viewing-statistics-on-optimizer-execution"></a>A. 최적화 프로그램 실행 통계 보기  
  이 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 인스턴스에 대한 현재 최적화 프로그램 실행 통계를 확인할 수 있습니다.  

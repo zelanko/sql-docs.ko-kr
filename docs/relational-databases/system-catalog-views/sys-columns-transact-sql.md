@@ -20,13 +20,13 @@ helpviewer_keywords:
 ms.assetid: 323ac9ea-fc52-4b8c-8a7e-e0e44f8ed86c
 author: markingmyname
 ms.author: maghan
-monikerRange: '>=aps-pdw-2016||=azuresqldb-current||=azure-sqldw-latest||>=sql-server-2016||=sqlallproducts-allversions||>=sql-server-linux-2017||=azuresqldb-mi-current'
-ms.openlocfilehash: 2498cb1a25c93cabe8d5939eb117c9101cd473d3
-ms.sourcegitcommit: 04cf7905fa32e0a9a44575a6f9641d9a2e5ac0f8
+monikerRange: '>=aps-pdw-2016||=azuresqldb-current||=azure-sqldw-latest||>=sql-server-2016||>=sql-server-linux-2017||=azuresqldb-mi-current'
+ms.openlocfilehash: 9a2d25739eaf041a5c69b52b8c0ce27dc56cde89
+ms.sourcegitcommit: 1a544cf4dd2720b124c3697d1e62ae7741db757c
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 10/07/2020
-ms.locfileid: "91809999"
+ms.lasthandoff: 12/14/2020
+ms.locfileid: "97477534"
 ---
 # <a name="syscolumns-transact-sql"></a>sys.columns(Transact-SQL)
 [!INCLUDE [sql-asdb-asdbmi-asa-pdw](../../includes/applies-to-version/sql-asdb-asdbmi-asa-pdw.md)]
@@ -54,7 +54,7 @@ ms.locfileid: "91809999"
 |column_id|**int**|열의 ID입니다. 개체 내에서 고유합니다.<br /><br /> 열 ID는 순차적이지 않을 수 있습니다.|  
 |system_type_id|**tinyint**|열의 시스템 유형 ID입니다.|  
 |user_type_id|**int**|열의 유형에 대한 사용자 정의 ID입니다.<br /><br /> 형식의 이름을 반환 하려면이 열에 대 한 [sys. types](../../relational-databases/system-catalog-views/sys-types-transact-sql.md) 카탈로그 뷰에 조인 합니다.|  
-|max_length|**smallint**|열의 최대 길이(바이트)입니다.<br /><br /> -1 = 열 데이터 형식이 **varchar (max)**, **nvarchar (max)**, **varbinary (max)** 또는 **xml**입니다.<br /><br /> **텍스트** 열의 경우 max_length 값은 16 이거나 ' text in row ' sp_tableoption 값으로 설정 됩니다.|  
+|max_length|**smallint**|열의 최대 길이(바이트)입니다.<br /><br /> -1 = 열 데이터 형식이 **varchar (max)**, **nvarchar (max)**, **varbinary (max)** 또는 **xml** 입니다.<br /><br /> **텍스트** 열의 경우 max_length 값은 16 이거나 ' text in row ' sp_tableoption 값으로 설정 됩니다.|  
 |정밀도|**tinyint**|숫자 기반일 경우에는 열의 전체 자릿수이고, 그렇지 않으면 0입니다.|  
 |소수 자릿수|**tinyint**|숫자 기반일 경우에는 열의 소수 자릿수이고, 그렇지 않으면 0입니다.|  
 |collation_name|**sysname**|문자 기반일 경우에는 열의 데이터 정렬 이름이고, 그렇지 않으면 NULL입니다.|  
@@ -68,7 +68,7 @@ ms.locfileid: "91809999"
 |is_non_sql_subscribed|**bit**|1 = 열에 SQL Server 이외 구독자가 있습니다.|  
 |is_merge_published|**bit**|1 = 병합 게시 열입니다.|  
 |is_dts_replicated|**bit**|1 = [!INCLUDE[ssIS](../../includes/ssis-md.md)]를 사용해 복제된 열입니다.|  
-|is_xml_document|**bit**|1 = 내용이 완전한 XML 문서입니다.<br /><br /> 0 = 내용이 문서 조각 이거나 열 데이터 형식이 **xml**이 아닙니다.|  
+|is_xml_document|**bit**|1 = 내용이 완전한 XML 문서입니다.<br /><br /> 0 = 내용이 문서 조각 이거나 열 데이터 형식이 **xml** 이 아닙니다.|  
 |xml_collection_id|**int**|열의 데이터 형식이 **xml** 이 고 xml이 입력 된 경우 0이 아닌 값입니다. 이 값은 열의 유효성 검사 XML 스키마 네임스페이스가 들어 있는 컬렉션의 ID가 됩니다.<br /><br /> 0 = XML 스키마 컬렉션이 없습니다.|  
 |default_object_id|**int**|독립 실행형 개체 [sys.sp_bindefault](../../relational-databases/system-stored-procedures/sp-bindefault-transact-sql.md)인지 또는 인라인 열 수준 기본 제약 조건에 관계 없이 기본 개체의 ID입니다. 인라인 열 수준 기본 개체의 parent_object_id 열은 테이블 자체에 대한 역참조입니다.<br /><br /> 0 = 기본값이 없습니다.|  
 |rule_object_id|**int**|sys.sp_bindrule을 사용하여 열에 바인딩된 독립 실행형 규칙의 ID입니다.<br /><br /> 0 = 독립 실행형 규칙이 없습니다. 열 수준 CHECK 제약 조건에 대해서는 [sys.check_constraints &#40;transact-sql&#41;](../../relational-databases/system-catalog-views/sys-check-constraints-transact-sql.md)을 참조 하십시오.|  

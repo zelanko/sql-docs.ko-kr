@@ -10,13 +10,13 @@ ms.topic: conceptual
 ms.assetid: c53e4a36-b841-424a-b8e2-255b1878deb6
 author: markingmyname
 ms.author: maghan
-monikerRange: '>= aps-pdw-2016 || = sqlallproducts-allversions'
-ms.openlocfilehash: 2bc90e6d3526b6b1727d8bc43263b21c34b88106
-ms.sourcegitcommit: 22dacedeb6e8721e7cdb6279a946d4002cfb5da3
+monikerRange: '>= aps-pdw-2016'
+ms.openlocfilehash: 2fc20f82b594b98938802b21e9b876c5a5e8da95
+ms.sourcegitcommit: 1a544cf4dd2720b124c3697d1e62ae7741db757c
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 10/14/2020
-ms.locfileid: "92035446"
+ms.lasthandoff: 12/14/2020
+ms.locfileid: "97482654"
 ---
 # <a name="sysdm_pdw_component_health_active_alerts-transact-sql"></a>sys.dm_pdw_component_health_active_alerts (Transact-sql)
 [!INCLUDE [pdw](../../includes/applies-to-version/pdw.md)]

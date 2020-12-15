@@ -1,6 +1,6 @@
 ---
 description: sys.fn_virtualservernodes(Transact-SQL)
-title: sys. fn_virtualservernodes (Transact-sql) | Microsoft Docs
+title: sys.fn_virtualservernodes (Transact-sql) | Microsoft Docs
 ms.custom: ''
 ms.date: 03/14/2017
 ms.prod: sql
@@ -23,13 +23,13 @@ helpviewer_keywords:
 ms.assetid: 257f3b8d-93c0-4444-87f1-ea211bd8cad0
 author: rothja
 ms.author: jroth
-monikerRange: '>=aps-pdw-2016||>=sql-server-2016||=sqlallproducts-allversions||>=sql-server-linux-2017||=azuresqldb-mi-current'
-ms.openlocfilehash: 085867d196e9ba2a29557819f76dbe4586e0bbec
-ms.sourcegitcommit: e700497f962e4c2274df16d9e651059b42ff1a10
+monikerRange: '>=aps-pdw-2016||>=sql-server-2016||>=sql-server-linux-2017||=azuresqldb-mi-current'
+ms.openlocfilehash: 3b1f721eeb58fbb2d1b072a4156511bf24b191cb
+ms.sourcegitcommit: 1a544cf4dd2720b124c3697d1e62ae7741db757c
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 08/17/2020
-ms.locfileid: "88481751"
+ms.lasthandoff: 12/14/2020
+ms.locfileid: "97482494"
 ---
 # <a name="sysfn_virtualservernodes-transact-sql"></a>sys.fn_virtualservernodes(Transact-SQL)
 [!INCLUDE [sql-asdbmi-pdw](../../includes/applies-to-version/sql-asdbmi-pdw.md)]
@@ -37,7 +37,7 @@ ms.locfileid: "88481751"
   [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]의 인스턴스를 실행할 수 있는 장애 조치(Failover) 클러스터형 인스턴스 노드의 목록을 반환합니다. 이 정보는 장애 조치 클러스터링 환경에서 유용하게 사용됩니다.  
   
 > [!IMPORTANT]
->  이 [!INCLUDE[msCoName](../../includes/msconame-md.md)] [!INCLUDE[ssSQL11](../../includes/sssql11-md.md)] 시스템 함수는 이전 버전과의 호환성을 위해 포함 되었습니다. 대신 [dm_os_cluster_nodes &#40;transact-sql&#41;](../../relational-databases/system-dynamic-management-views/sys-dm-os-cluster-nodes-transact-sql.md) 를 사용 하는 것이 좋습니다.  
+>  이 [!INCLUDE[msCoName](../../includes/msconame-md.md)] [!INCLUDE[ssSQL11](../../includes/sssql11-md.md)] 시스템 함수는 이전 버전과의 호환성을 위해 포함 되었습니다. 대신 [sys.dm_os_cluster_nodes &#40;transact-sql&#41;](../../relational-databases/system-dynamic-management-views/sys-dm-os-cluster-nodes-transact-sql.md) 를 사용 하는 것이 좋습니다.  
   
  ![항목 링크 아이콘](../../database-engine/configure-windows/media/topic-link.gif "항목 링크 아이콘") [Transact-SQL 구문 표기 규칙](../../t-sql/language-elements/transact-sql-syntax-conventions-transact-sql.md)  
   
@@ -56,7 +56,7 @@ fn_virtualservernodes()
 ## <a name="permissions"></a>사용 권한  
  [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]의 인스턴스에 대해 VIEW SERVER STATE 권한이 있어야 합니다.  
   
-## <a name="examples"></a>예제  
+## <a name="examples"></a>예  
  다음 예에서는 `fn_virtualservernodes`를 사용하여 클러스터형 서버 인스턴스에서 쿼리합니다.  
   
 ```  
@@ -74,7 +74,7 @@ SELECT * FROM fn_virtualservernodes();
  SS3-CLUSN2  
   
 ## <a name="see-also"></a>참고 항목  
- [dm_os_cluster_nodes &#40;Transact-sql&#41;](../../relational-databases/system-dynamic-management-views/sys-dm-os-cluster-nodes-transact-sql.md)   
- [fn_servershareddrives &#40;Transact-sql&#41;](../../relational-databases/system-functions/sys-fn-servershareddrives-transact-sql.md)  
+ [Transact-sql&#41;sys.dm_os_cluster_nodes &#40;](../../relational-databases/system-dynamic-management-views/sys-dm-os-cluster-nodes-transact-sql.md)   
+ [Transact-sql&#41;sys.fn_servershareddrives &#40;](../../relational-databases/system-functions/sys-fn-servershareddrives-transact-sql.md)  
   
   

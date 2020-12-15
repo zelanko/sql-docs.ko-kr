@@ -1,6 +1,6 @@
 ---
-description: sys. security_policies (Transact-sql)
-title: sys. security_policies (Transact-sql) | Microsoft Docs
+description: sys.security_policies (Transact-sql)
+title: sys.security_policies (Transact-sql) | Microsoft Docs
 ms.custom: ''
 ms.date: 06/10/2016
 ms.prod: sql
@@ -21,15 +21,15 @@ helpviewer_keywords:
 ms.assetid: 35362f5b-e601-4049-9e1d-c5307e823831
 author: VanMSFT
 ms.author: vanto
-monikerRange: =azuresqldb-current||>=sql-server-2016||=azure-sqldw-latest||=sqlallproducts-allversions||>=sql-server-linux-2017||=azuresqldb-mi-current
-ms.openlocfilehash: ae97e6f310561339c24e712dd3d0f07552232bf2
-ms.sourcegitcommit: e700497f962e4c2274df16d9e651059b42ff1a10
+monikerRange: =azuresqldb-current||>=sql-server-2016||=azure-sqldw-latest||>=sql-server-linux-2017||=azuresqldb-mi-current
+ms.openlocfilehash: e2d1cd685055d4dd91bdb9cda445c7847bf5bbd6
+ms.sourcegitcommit: 1a544cf4dd2720b124c3697d1e62ae7741db757c
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 08/17/2020
-ms.locfileid: "88490153"
+ms.lasthandoff: 12/14/2020
+ms.locfileid: "97479034"
 ---
-# <a name="syssecurity_policies-transact-sql"></a>sys. security_policies (Transact-sql)
+# <a name="syssecurity_policies-transact-sql"></a>sys.security_policies (Transact-sql)
 [!INCLUDE [sqlserver2016-asdb-asdbmi-asa](../../includes/applies-to-version/sqlserver2016-asdb-asdbmi-asa.md)]
 
   데이터베이스의 각 보안 정책에 대해 하나의 행을 반환 합니다.  
@@ -41,7 +41,7 @@ ms.locfileid: "88490153"
 |principal_id|**int**|데이터베이스에 등록된 보안 정책 소유자의 ID입니다. 소유자가 스키마를 통해 결정되는 경우 NULL입니다.|  
 |schema_id|**int**|개체가 상주하는 스키마의 ID입니다.|  
 |parent_object_id|**int**|정책이 속하는 개체의 ID입니다. 0이어야 합니다.|  
-|type|**vachar (2)**|**SP**여야 합니다.|  
+|형식|**vachar (2)**|**SP** 여야 합니다.|  
 |type_desc|**nvarchar(60)**|**SECURITY_POLICY**.|  
 |create_date|**datetime**|보안 정책이 만들어진 UTC 날짜입니다.|  
 |modify_date|**datetime**|보안 정책이 마지막으로 수정된 UTC 날짜입니다.|  
@@ -56,7 +56,7 @@ ms.locfileid: "88490153"
   
 ## <a name="see-also"></a>참고 항목  
  [행 수준 보안](../../relational-databases/security/row-level-security.md)   
- [security_predicates &#40;Transact-sql&#41;](../../relational-databases/system-catalog-views/sys-security-predicates-transact-sql.md)   
+ [Transact-sql&#41;sys.security_predicates &#40;](../../relational-databases/system-catalog-views/sys-security-predicates-transact-sql.md)   
  [CREATE SECURITY POLICY&#40;Transact-SQL&#41;](../../t-sql/statements/create-security-policy-transact-sql.md)   
  [보안 카탈로그 뷰&#40;Transact-SQL&#41;](../../relational-databases/system-catalog-views/security-catalog-views-transact-sql.md)   
  [카탈로그 뷰&#40;Transact-SQL&#41;](../../relational-databases/system-catalog-views/catalog-views-transact-sql.md)   

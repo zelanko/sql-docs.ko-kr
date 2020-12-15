@@ -19,13 +19,13 @@ helpviewer_keywords:
 ms.assetid: 2427d886-ec6c-49d7-b0b6-0d998b64cdb9
 author: markingmyname
 ms.author: maghan
-monikerRange: '>=aps-pdw-2016||=azuresqldb-current||=azure-sqldw-latest||>=sql-server-2016||=sqlallproducts-allversions||>=sql-server-linux-2017||=azuresqldb-mi-current'
-ms.openlocfilehash: 81f55a758949f3be55c70d55b06d5c7860f407d1
-ms.sourcegitcommit: e700497f962e4c2274df16d9e651059b42ff1a10
+monikerRange: '>=aps-pdw-2016||=azuresqldb-current||=azure-sqldw-latest||>=sql-server-2016||>=sql-server-linux-2017||=azuresqldb-mi-current'
+ms.openlocfilehash: b05c7d20deb1108e5e4c7f74fffce42072ba8515
+ms.sourcegitcommit: 1a544cf4dd2720b124c3697d1e62ae7741db757c
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 08/17/2020
-ms.locfileid: "88499116"
+ms.lasthandoff: 12/14/2020
+ms.locfileid: "97478064"
 ---
 # <a name="using-statement-parameters"></a>문 매개 변수 사용
 [!INCLUDE[SQL Server Azure SQL Database Synapse Analytics PDW ](../../includes/applies-to-version/sql-asdb-asdbmi-asa-pdw.md)]
@@ -36,9 +36,9 @@ ms.locfileid: "88499116"
   
 -   쿼리 조건을 생성하여 사용자 상호 작용을 향상시킵니다.  
   
--   **Text**, **ntext**및 **image** 데이터와 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 관련 C 데이터 형식을 관리 합니다.  
+-   **Text**, **ntext** 및 **image** 데이터와 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 관련 C 데이터 형식을 관리 합니다.  
   
- 예를 들어 **부품** 테이블에는 **PartID**, **설명**및 **가격**이라는 열이 있습니다. 매개 변수 없이 부품을 추가하려면 다음과 같이 SQL 문을 생성해야 합니다.  
+ 예를 들어 **부품** 테이블에는 **PartID**, **설명** 및 **가격** 이라는 열이 있습니다. 매개 변수 없이 부품을 추가하려면 다음과 같이 SQL 문을 생성해야 합니다.  
   
 ```  
 INSERT INTO Parts (PartID, Description, Price) VALUES (2100, 'Drive shaft', 50.00)  

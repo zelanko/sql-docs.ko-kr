@@ -20,18 +20,18 @@ helpviewer_keywords:
 ms.assetid: 78a218e4-bf99-4a6a-acbf-ff82425a5946
 author: markingmyname
 ms.author: maghan
-monikerRange: '>=aps-pdw-2016||=azure-sqldw-latest||>=sql-server-2016||=sqlallproducts-allversions||>=sql-server-linux-2017||=azuresqldb-mi-current'
-ms.openlocfilehash: 012d3d8b944b162e317bee53f4f25dcaaf5a1541
-ms.sourcegitcommit: a5398f107599102af7c8cda815d8e5e9a367ce7e
+monikerRange: '>=aps-pdw-2016||=azure-sqldw-latest||>=sql-server-2016||>=sql-server-linux-2017||=azuresqldb-mi-current'
+ms.openlocfilehash: 2a9810d1c1fbda616b6dec588375529f4cbbb15c
+ms.sourcegitcommit: 1a544cf4dd2720b124c3697d1e62ae7741db757c
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 10/13/2020
-ms.locfileid: "92006427"
+ms.lasthandoff: 12/14/2020
+ms.locfileid: "97477414"
 ---
 # <a name="syssql_expression_dependencies-transact-sql"></a>sys.sql_expression_dependencies(Transact-SQL)
 [!INCLUDE [sql-asdbmi-asa-pdw](../../includes/applies-to-version/sql-asdbmi-asa-pdw.md)]
 
-  현재 데이터베이스에서 사용자 정의 엔터티의 이름별 종속성마다 한 개의 행을 포함합니다. 여기에는 고유 하 게 컴파일된, 스칼라 사용자 정의 함수 및 기타 모듈 간의 종속성 포함 됩니다 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] . 두 엔터티 간의 종속성은 *참조 된 엔터티*라고 하는 한 엔터티가 *참조 엔터티*라고 하는 다른 엔터티의 지속형 SQL 식에서 이름별로 표시 될 때 생성 됩니다. 예를 들어 뷰 정의에서 테이블을 참조하면 참조 엔터티인 뷰는 참조된 엔터티인 테이블에 종속됩니다. 테이블이 삭제되면 뷰를 사용할 수 없습니다.  
+  현재 데이터베이스에서 사용자 정의 엔터티의 이름별 종속성마다 한 개의 행을 포함합니다. 여기에는 고유 하 게 컴파일된, 스칼라 사용자 정의 함수 및 기타 모듈 간의 종속성 포함 됩니다 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] . 두 엔터티 간의 종속성은 *참조 된 엔터티* 라고 하는 한 엔터티가 *참조 엔터티* 라고 하는 다른 엔터티의 지속형 SQL 식에서 이름별로 표시 될 때 생성 됩니다. 예를 들어 뷰 정의에서 테이블을 참조하면 참조 엔터티인 뷰는 참조된 엔터티인 테이블에 종속됩니다. 테이블이 삭제되면 뷰를 사용할 수 없습니다.  
   
  자세한 내용은 [메모리 내 OLTP에 대한 사용자 정의 스칼라 함수](../../relational-databases/in-memory-oltp/scalar-user-defined-functions-for-in-memory-oltp.md)를 참조하세요.  
   
@@ -63,7 +63,7 @@ ms.locfileid: "92006427"
 |referenced_id|**int**|참조된 엔터티의 ID입니다. 스키마 바운드 참조의 경우이 열의 값은 NULL 일 수 없습니다. 서버 간 및 데이터베이스 간 참조의 경우이 열의 값은 항상 NULL입니다.<br /><br /> 데이터베이스 내 참조의 경우 ID를 확인할 수 없으면 NULL입니다. 비스키마 바운드 참조는 다음과 같은 경우 ID를 확인할 수 없습니다.<br /><br /> 참조된 엔터티가 데이터베이스에 없는 경우<br /><br /> 호출자 스키마에 종속되는 참조된 엔터티의 스키마이며 런타임에 확인됩니다. 이 경우 is_caller_dependent는 1로 설정됩니다.|  
 |referenced_minor_id|**int**|참조 엔터티가 열인 경우 참조된 열의 ID이며 그렇지 않은 경우 0입니다. Null을 허용하지 않습니다.<br /><br /> 열이 참조 엔터티에서 이름으로 식별되거나 부모 엔터티가 SELECT * 문에 사용된 경우 참조된 엔터티는 열입니다.|  
 |is_caller_dependent|**bit**|참조된 엔터티에 대한 스키마 바인딩이 런타임에 발생하므로 엔터티 ID 확인이 호출자의 스키마에 종속됨을 나타냅니다. 이는 참조된 엔터티가 저장 프로시저, 확장 저장 프로시저, 또는 EXECUTE 문에서 호출되는 비스키마 바운드 사용자 정의 함수인 경우에 발생합니다.<br /><br /> 1 = 참조된 엔터티가 호출자에 종속되고 런타임에 확인됩니다. 이 경우 referenced_id는 NULL입니다.<br /><br /> 0 = 참조된 엔터티 ID가 호출자에 종속되지 않습니다.<br /><br /> 스키마 이름을 명시적으로 지정하는 스키마 바운드 참조와 데이터베이스 간 및 서버 간 참조의 경우 항상 0입니다. 예를 들어 `EXEC MyDatabase.MySchema.MyProc` 형식의 엔터티에 대한 참조는 호출자에 종속되지 않습니다. 하지만 `EXEC MyDatabase..MyProc` 형식의 참조는 호출자에 종속됩니다.|  
-|is_ambiguous|**bit**|참조가 모호 하며 런타임에 사용자 정의 함수, UDT (사용자 정의 형식) 또는 **xml**형식의 열에 대 한 xquery 참조로 확인 될 수 있음을 나타냅니다.<br /><br /> 예를 들어 `SELECT Sales.GetOrder() FROM Sales.MySales` 문이 저장 프로시저에 정의되어 있다고 가정해 보겠습니다. `Sales.GetOrder()`가 `Sales` 스키마의 사용자 정의 함수인지, 아니면 `Sales`라는 메서드가 있는 UDT 형식의 `GetOrder()` 열인지는 저장 프로시저가 실행될 때까지 알 수 없습니다.<br /><br /> 1 = 참조가 모호합니다.<br /><br /> 0 = 참조가 명확하거나 뷰를 호출할 때 엔터티를 바인딩할 수 있습니다.<br /><br /> 스키마 바운드 참조의 경우 항상 0입니다.|  
+|is_ambiguous|**bit**|참조가 모호 하며 런타임에 사용자 정의 함수, UDT (사용자 정의 형식) 또는 **xml** 형식의 열에 대 한 xquery 참조로 확인 될 수 있음을 나타냅니다.<br /><br /> 예를 들어 `SELECT Sales.GetOrder() FROM Sales.MySales` 문이 저장 프로시저에 정의되어 있다고 가정해 보겠습니다. `Sales.GetOrder()`가 `Sales` 스키마의 사용자 정의 함수인지, 아니면 `Sales`라는 메서드가 있는 UDT 형식의 `GetOrder()` 열인지는 저장 프로시저가 실행될 때까지 알 수 없습니다.<br /><br /> 1 = 참조가 모호합니다.<br /><br /> 0 = 참조가 명확하거나 뷰를 호출할 때 엔터티를 바인딩할 수 있습니다.<br /><br /> 스키마 바운드 참조의 경우 항상 0입니다.|  
   
 ## <a name="remarks"></a>설명  
  다음 표에서는 종속성 정보가 생성 및 유지되는 엔터티 유형을 보여 줍니다. 종속성 정보는 규칙, 기본값, 임시 테이블, 임시 저장 프로시저 또는 시스템 개체에 대해서는 생성 및 유지되지 않습니다.  
@@ -75,28 +75,28 @@ ms.locfileid: "92006427"
 |-----------------|------------------------|-----------------------|  
 |테이블|예*|예|  
 |보기|예|예|  
-|필터링된 인덱스|예**|아니요|  
-|필터링된 통계|예**|아니요|  
-|[!INCLUDE[tsql](../../includes/tsql-md.md)] 저장 프로시저***|예|예|  
-|CLR 저장 프로시저|아니요|예|  
+|필터링된 인덱스|예**|예|  
+|필터링된 통계|예**|예|  
+|[!INCLUDE[tsql](../../includes/tsql-md.md)] 저장 프로시저 * * _|예|예|  
+|CLR 저장 프로시저|예|예|  
 |[!INCLUDE[tsql](../../includes/tsql-md.md)] 사용자 정의 함수|예|예|  
-|CLR 사용자 정의 함수|아니요|예|  
-|CLR 트리거(DML 및 DDL)|아니요|아니요|  
-|[!INCLUDE[tsql](../../includes/tsql-md.md)] DML 트리거|예|아니요|  
-|[!INCLUDE[tsql](../../includes/tsql-md.md)] 데이터베이스 수준 DDL 트리거|예|아니요|  
-|[!INCLUDE[tsql](../../includes/tsql-md.md)] 서버 수준 DDL 트리거|예|아니요|  
-|확장된 저장 프로시저|아니요|예|  
-|큐|아니요|예|  
-|동의어|아니요|예|  
-|형식(별칭 및 CLR 사용자 정의 형식)|아니요|예|  
-|XML 스키마 컬렉션|아니요|예|  
-|파티션 함수|아니요|예|  
+|CLR 사용자 정의 함수|예|예|  
+|CLR 트리거(DML 및 DDL)|예|예|  
+|[!INCLUDE[tsql](../../includes/tsql-md.md)] DML 트리거|예|예|  
+|[!INCLUDE[tsql](../../includes/tsql-md.md)] 데이터베이스 수준 DDL 트리거|예|예|  
+|[!INCLUDE[tsql](../../includes/tsql-md.md)] 서버 수준 DDL 트리거|예|예|  
+|확장된 저장 프로시저|예|예|  
+|큐|예|예|  
+|동의어|예|예|  
+|형식(별칭 및 CLR 사용자 정의 형식)|예|예|  
+|XML 스키마 컬렉션|예|예|  
+|파티션 함수|예|예|  
   
- \* 테이블은 [!INCLUDE[tsql](../../includes/tsql-md.md)] 계산 열, CHECK 제약 조건 또는 DEFAULT 제약 조건 정의에서 모듈, 사용자 정의 형식 또는 XML 스키마 컬렉션을 참조 하는 경우에만 참조 엔터티로 추적 됩니다.  
+ \_ 테이블은 [!INCLUDE[tsql](../../includes/tsql-md.md)] 계산 열, CHECK 제약 조건 또는 DEFAULT 제약 조건 정의에서 모듈, 사용자 정의 형식 또는 XML 스키마 컬렉션을 참조 하는 경우에만 참조 엔터티로 추적 됩니다.  
   
  ** 필터 조건자에 사용된 각 열은 참조 엔터티로 추적됩니다.  
   
- *** 1보다 큰 정수 값의 번호가 부여된 저장 프로시저는 참조 엔터티나 참조된 엔터티로 추적되지 않습니다.  
+ * * 정수 값이 1 보다 큰 숫자의 저장 프로시저는 참조 또는 참조 된 엔터티로 추적 되지 않습니다.  
   
 ## <a name="permissions"></a>사용 권한  
  데이터베이스에 대한 VIEW DEFINITION 권한과 데이터베이스의 sys.sql_expression_dependencies에 대한 SELECT 권한이 필요합니다. 기본적으로 SELECT 권한은 db_owner 고정 데이터베이스 역할의 멤버에게만 부여됩니다. SELECT와 VIEW DEFINITION 권한을 다른 사용자에게 부여하면 피부여자는 데이터베이스의 모든 종속성을 볼 수 있습니다.  
@@ -154,7 +154,7 @@ CREATE DATABASE db1;
 GO  
 USE db1;  
 GO  
-CREATE PROCEDURE p1 AS SELECT * FROM db2.s1.t1;  
+CREATE PROCEDURE p1 AS SELECT _ FROM db2.s1.t1;  
 GO  
 CREATE PROCEDURE p2 AS  
     UPDATE db3..t3  

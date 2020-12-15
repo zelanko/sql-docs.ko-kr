@@ -22,13 +22,13 @@ helpviewer_keywords:
 ms.assetid: 7597d97b-1fde-4135-ac35-4af12968f300
 author: markingmyname
 ms.author: maghan
-monikerRange: '>=aps-pdw-2016||=azure-sqldw-latest||>=sql-server-2016||=sqlallproducts-allversions||>=sql-server-linux-2017||=azuresqldb-mi-current'
-ms.openlocfilehash: 5559a1f1ce7ebc4a231a24022c9642d598d81f73
-ms.sourcegitcommit: 32135463a8494d9ed1600a58f51819359e3c09dc
+monikerRange: '>=aps-pdw-2016||=azure-sqldw-latest||>=sql-server-2016||>=sql-server-linux-2017||=azuresqldb-mi-current'
+ms.openlocfilehash: 6d373e5900cfebca38c6305bbe9e8cac3d36cb22
+ms.sourcegitcommit: 1a544cf4dd2720b124c3697d1e62ae7741db757c
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 10/08/2020
-ms.locfileid: "91834419"
+ms.lasthandoff: 12/14/2020
+ms.locfileid: "97477294"
 ---
 # <a name="sysdm_exec_external_work-transact-sql"></a>sys.dm_exec_external_work (Transact-sql)
 [!INCLUDE [sqlserver2016-asa-pdw](../../includes/applies-to-version/sqlserver2016-asa-pdw.md)]
@@ -43,7 +43,7 @@ ms.locfileid: "91834419"
 |step_index|`int`|이 작업자에서 수행 하는 요청입니다.|[Sys.dm_exec_requests &#40;transact-sql&#41;](../../relational-databases/system-dynamic-management-views/sys-dm-exec-requests-transact-sql.md)에서 *step_index* 를 참조 하세요.|  
 |dms_step_index|`int`|이 작업자를 실행 하는 DMS 계획의 단계입니다.|[Sys.dm_exec_dms_workers &#40;transact-sql&#41;](../../relational-databases/system-dynamic-management-views/sys-dm-exec-dms-workers-transact-sql.md)를 참조 하세요.|  
 |compute_node_id|`int`|Worker가 실행 되 고 있는 노드입니다.|[Sys.dm_exec_compute_nodes &#40;transact-sql&#41;](../../relational-databases/system-dynamic-management-views/sys-dm-exec-compute-nodes-transact-sql.md)를 참조 하세요.|  
-|type|`nvarchar(60)`|외부 작업의 형식입니다.|' 파일 분할 '|  
+|형식|`nvarchar(60)`|외부 작업의 형식입니다.|' 파일 분할 '|  
 |work_id|`int`|실제 분할의 ID입니다.|0 보다 크거나 같습니다.|  
 |input_name|`nvarchar(4000)`|읽을 입력의 이름입니다.|Hadoop을 사용 하는 경우의 파일 이름입니다.|  
 |read_location|`bigint`|오프셋 또는 읽기 위치입니다.|읽을 파일의 오프셋입니다.|  

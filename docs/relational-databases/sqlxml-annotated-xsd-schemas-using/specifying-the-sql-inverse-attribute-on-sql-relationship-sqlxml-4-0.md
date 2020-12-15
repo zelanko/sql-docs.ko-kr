@@ -21,13 +21,13 @@ author: MightyPen
 ms.author: genemi
 ms.reviewer: ''
 ms.custom: seo-lt-2019
-monikerRange: =azuresqldb-current||>=sql-server-2016||=sqlallproducts-allversions||>=sql-server-linux-2017||=azuresqldb-mi-current
-ms.openlocfilehash: 0bf9f98482ad83d1cf5104f9379ac294f2064c62
-ms.sourcegitcommit: da88320c474c1c9124574f90d549c50ee3387b4c
+monikerRange: =azuresqldb-current||>=sql-server-2016||>=sql-server-linux-2017||=azuresqldb-mi-current
+ms.openlocfilehash: b714a70cb3d537d3f9859945b5fdee6842aa5d58
+ms.sourcegitcommit: 1a544cf4dd2720b124c3697d1e62ae7741db757c
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 07/01/2020
-ms.locfileid: "85725878"
+ms.lasthandoff: 12/14/2020
+ms.locfileid: "97479344"
 ---
 # <a name="specifying-the-sqlinverse-attribute-on-sqlrelationship-sqlxml-40"></a>sql:relationship에 sql:inverse 특성 지정(SQLXML 4.0)
 [!INCLUDE [SQL Server Azure SQL Database](../../includes/applies-to-version/sql-asdb.md)]
@@ -40,6 +40,6 @@ ms.locfileid: "85725878"
  **Sql: 역** 주석을 사용 하는 작업 예제는 [Updategram에서 주석이 추가 된 매핑 스키마 지정](../../relational-databases/sqlxml-annotated-xsd-schemas-xpath-queries/updategrams/specifying-an-annotated-mapping-schema-in-an-updategram-sqlxml-4-0.md)을 참조 하세요.  
   
 ## <a name="see-also"></a>참고 항목  
- [Sql: relationship &#40;SQLXML 4.0&#41;를 사용 하 여 관계 지정](../../relational-databases/sqlxml-annotated-xsd-schemas-using/specifying-relationships-using-sql-relationship-sqlxml-4-0.md)  
+ [Sql: relationship &#40;SQLXML 4.0&#41;를 사용 하 여 관계 지정 ](../../relational-databases/sqlxml-annotated-xsd-schemas-using/specifying-relationships-using-sql-relationship-sqlxml-4-0.md)  
   
   

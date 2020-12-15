@@ -22,13 +22,13 @@ helpviewer_keywords:
 ms.assetid: c041d416-d8c6-435e-a563-6a310abd33e3
 author: markingmyname
 ms.author: maghan
-monikerRange: '>=aps-pdw-2016||=azure-sqldw-latest||>=sql-server-2016||=sqlallproducts-allversions||>=sql-server-linux-2017||=azuresqldb-mi-current'
-ms.openlocfilehash: 4ceec8dbac1d66a516ad80e2e029fce2d5f405fc
-ms.sourcegitcommit: 32135463a8494d9ed1600a58f51819359e3c09dc
+monikerRange: '>=aps-pdw-2016||=azure-sqldw-latest||>=sql-server-2016||>=sql-server-linux-2017||=azuresqldb-mi-current'
+ms.openlocfilehash: b10eed0596291e3030f6a0a24feded8087c95c30
+ms.sourcegitcommit: 1a544cf4dd2720b124c3697d1e62ae7741db757c
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 10/08/2020
-ms.locfileid: "91834368"
+ms.lasthandoff: 12/14/2020
+ms.locfileid: "97482774"
 ---
 # <a name="sysdm_exec_distributed_requests-transact-sql"></a>sys.dm_exec_distributed_requests (Transact-sql)
 [!INCLUDE [sqlserver2016-asa-pdw](../../includes/applies-to-version/sqlserver2016-asa-pdw.md)]

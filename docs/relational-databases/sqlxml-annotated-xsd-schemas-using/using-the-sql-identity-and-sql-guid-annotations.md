@@ -24,13 +24,13 @@ ms.assetid: 7661dfd0-6573-4692-a8f1-3597adcd33c4
 author: MightyPen
 ms.author: genemi
 ms.reviewer: ''
-monikerRange: =azuresqldb-current||>=sql-server-2016||=sqlallproducts-allversions||>=sql-server-linux-2017||=azuresqldb-mi-current
-ms.openlocfilehash: 2d1d8c72851c945f178bb9e206ad536a23f24891
-ms.sourcegitcommit: da88320c474c1c9124574f90d549c50ee3387b4c
+monikerRange: =azuresqldb-current||>=sql-server-2016||>=sql-server-linux-2017||=azuresqldb-mi-current
+ms.openlocfilehash: 7c66bac3f83aff00a458d3fed14296d2b03071f7
+ms.sourcegitcommit: 1a544cf4dd2720b124c3697d1e62ae7741db757c
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 07/01/2020
-ms.locfileid: "85724756"
+ms.lasthandoff: 12/14/2020
+ms.locfileid: "97479324"
 ---
 # <a name="using-the-sqlidentity-and-sqlguid-annotations"></a>sql:identity 및 sql:guid 주석 사용
 [!INCLUDE [SQL Server Azure SQL Database](../../includes/applies-to-version/sql-asdb.md)]

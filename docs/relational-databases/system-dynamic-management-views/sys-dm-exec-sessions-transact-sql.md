@@ -1,6 +1,6 @@
 ---
 description: sys.dm_exec_sessions(Transact-SQL)
-title: sys. dm_exec_sessions (Transact-sql) | Microsoft Docs
+title: sys.dm_exec_sessions (Transact-sql) | Microsoft Docs
 ms.custom: ''
 ms.date: 06/03/2019
 ms.prod: sql
@@ -20,22 +20,22 @@ helpviewer_keywords:
 ms.assetid: 2b7e8e0c-eea0-431e-819f-8ccd12ec8cfa
 author: markingmyname
 ms.author: maghan
-monikerRange: =azuresqldb-current||>=sql-server-2016||=sqlallproducts-allversions||>=sql-server-linux-2017||=azuresqldb-mi-current
-ms.openlocfilehash: d160be9c71c75e58a892f4b43494046b293caeb6
-ms.sourcegitcommit: dd36d1cbe32cd5a65c6638e8f252b0bd8145e165
+monikerRange: =azuresqldb-current||>=sql-server-2016||>=sql-server-linux-2017||=azuresqldb-mi-current
+ms.openlocfilehash: 7b50b83a71df6485afae83fb371abb04209898ae
+ms.sourcegitcommit: 1a544cf4dd2720b124c3697d1e62ae7741db757c
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 09/08/2020
-ms.locfileid: "89539452"
+ms.lasthandoff: 12/14/2020
+ms.locfileid: "97482794"
 ---
 # <a name="sysdm_exec_sessions-transact-sql"></a>sys.dm_exec_sessions(Transact-SQL)
 [!INCLUDE [SQL Server SQL Database](../../includes/applies-to-version/sql-asdb.md)]
 
   [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]에서 인증된 세션당 행 하나를 반환합니다. sys.dm_exec_sessions는 모든 활성 사용자 연결 및 내부 태스크에 대한 정보를 표시하는 서버 범위 뷰입니다. 이 정보에는 클라이언트 버전, 클라이언트 프로그램 이름, 클라이언트 로그인 시간, 로그인 사용자, 현재 세션 설정 등이 포함됩니다. sys.dm_exec_sessions를 사용하여 우선 현재 시스템 로드를 보고 원하는 세션을 확인한 다음 다른 동적 관리 뷰 또는 동적 관리 함수를 사용하여 해당 세션에 대한 자세한 내용을 볼 수 있습니다.  
   
- Dm_exec_connections, dm_exec_sessions 및 sys. dm_exec_requests 동적 관리 뷰는 [sys.sys프로세스](../../relational-databases/system-compatibility-views/sys-sysprocesses-transact-sql.md) 시스템 테이블에 매핑됩니다.  
+ Sys.dm_exec_connections, sys.dm_exec_sessions 및 sys.dm_exec_requests 동적 관리 뷰는 [sys.sys프로세스](../../relational-databases/system-compatibility-views/sys-sysprocesses-transact-sql.md) 시스템 테이블에 매핑됩니다.  
   
-> **참고:** 또는에서이를 호출 하려면 [!INCLUDE[ssSDWfull](../../includes/sssdwfull-md.md)] [!INCLUDE[ssPDW](../../includes/sspdw-md.md)] 이름 **sys. dm_pdw_nodes_exec_sessions**을 사용 합니다.  
+> **참고:** 또는에서이를 호출 하려면 [!INCLUDE[ssSDWfull](../../includes/sssdwfull-md.md)] [!INCLUDE[ssPDW](../../includes/sspdw-md.md)] **sys.dm_pdw_nodes_exec_sessions** 이름을 사용 합니다.  
   
 |열 이름|데이터 형식|설명 및 버전별 정보|  
 |-----------------|---------------|-----------------|  
@@ -94,8 +94,8 @@ ms.locfileid: "89539452"
   
 ## <a name="permissions"></a>사용 권한  
 누구나 자신의 세션 정보를 볼 수 있습니다.  
-** [!INCLUDE[ssNoVersion_md](../../includes/ssnoversion-md.md)] :** `VIEW SERVER STATE` [!INCLUDE[ssNoVersion_md](../../includes/ssnoversion-md.md)] 서버의 모든 세션을 보려면에 대 한 권한이 필요 합니다.  
-** [!INCLUDE[ssSDS_md](../../includes/sssds-md.md)] :** 를 사용 `VIEW DATABASE STATE` 하 여 현재 데이터베이스에 대 한 모든 연결을 확인 합니다. `VIEW DATABASE STATE` 데이터베이스에서를 부여할 수 없습니다 `master` . 
+**[!INCLUDE[ssNoVersion_md](../../includes/ssnoversion-md.md)] :** `VIEW SERVER STATE` [!INCLUDE[ssNoVersion_md](../../includes/ssnoversion-md.md)] 서버의 모든 세션을 보려면에 대 한 권한이 필요 합니다.  
+**[!INCLUDE[ssSDS_md](../../includes/sssds-md.md)] :** 를 사용 `VIEW DATABASE STATE` 하 여 현재 데이터베이스에 대 한 모든 연결을 확인 합니다. `VIEW DATABASE STATE` 데이터베이스에서를 부여할 수 없습니다 `master` . 
   
   
 ## <a name="remarks"></a>설명  
@@ -115,15 +115,15 @@ ms.locfileid: "89539452"
   
 ## <a name="relationship-cardinalities"></a>관계 카디널리티  
   
-|시작|대상|열 이름/APPLY|관계|  
+|From|대상|열 이름/APPLY|관계|  
 |----------|--------|---------------|------------------|  
 |sys.dm_exec_sessions|[sys.dm_exec_requests](../../relational-databases/system-dynamic-management-views/sys-dm-exec-requests-transact-sql.md)|session_id|일 대 영 또는 일 대 다|  
 |sys.dm_exec_sessions|[sys.dm_exec_connections](../../relational-databases/system-dynamic-management-views/sys-dm-exec-connections-transact-sql.md)|session_id|일 대 영 또는 일 대 다|  
 |sys.dm_exec_sessions|[sys.dm_tran_session_transactions](../../relational-databases/system-dynamic-management-views/sys-dm-tran-session-transactions-transact-sql.md)|session_id|일 대 영 또는 일 대 다|  
-|sys.dm_exec_sessions|[dm_exec_cursors](../../relational-databases/system-dynamic-management-views/sys-dm-exec-cursors-transact-sql.md)(session_id &#124; 0)|session_id CROSS APPLY<br /><br /> OUTER APPLY|일 대 영 또는 일 대 다|  
+|sys.dm_exec_sessions|[sys.dm_exec_cursors](../../relational-databases/system-dynamic-management-views/sys-dm-exec-cursors-transact-sql.md)(session_id &#124; 0)|session_id CROSS APPLY<br /><br /> OUTER APPLY|일 대 영 또는 일 대 다|  
 |sys.dm_exec_sessions|[sys.dm_db_session_space_usage](../../relational-databases/system-dynamic-management-views/sys-dm-db-session-space-usage-transact-sql.md)|session_id|일대일|  
   
-## <a name="examples"></a>예제  
+## <a name="examples"></a>예  
   
 ### <a name="a-finding-users-that-are-connected-to-the-server"></a>A. 서버에 연결된 사용자 찾기  
  다음 예에서는 서버에 연결되는 사용자를 찾고 각 사용자에 대한 세션 수를 반환합니다.  

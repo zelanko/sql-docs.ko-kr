@@ -1,6 +1,6 @@
 ---
 description: sys.assembly_types(Transact-SQL)
-title: sys. assembly_types (Transact-sql) | Microsoft Docs
+title: sys.assembly_types (Transact-sql) | Microsoft Docs
 ms.custom: ''
 ms.date: 03/15/2017
 ms.prod: sql
@@ -20,18 +20,18 @@ helpviewer_keywords:
 ms.assetid: 35f0384f-7a6d-41b1-9461-f1406d68f317
 author: markingmyname
 ms.author: maghan
-monikerRange: '>=aps-pdw-2016||=azure-sqldw-latest||>=sql-server-2016||=sqlallproducts-allversions||>=sql-server-linux-2017||=azuresqldb-mi-current'
-ms.openlocfilehash: 06eb2eb4fe6b0983b798ea38fa98057be73af77a
-ms.sourcegitcommit: dd36d1cbe32cd5a65c6638e8f252b0bd8145e165
+monikerRange: '>=aps-pdw-2016||=azure-sqldw-latest||>=sql-server-2016||>=sql-server-linux-2017||=azuresqldb-mi-current'
+ms.openlocfilehash: 006495335ab8a6bfa48adf8d840b3b96a0c936d0
+ms.sourcegitcommit: 1a544cf4dd2720b124c3697d1e62ae7741db757c
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 09/08/2020
-ms.locfileid: "89545095"
+ms.lasthandoff: 12/14/2020
+ms.locfileid: "97479094"
 ---
 # <a name="sysassembly_types-transact-sql"></a>sys.assembly_types(Transact-SQL)
 [!INCLUDE [sql-asdbmi-asa-pdw](../../includes/applies-to-version/sql-asdbmi-asa-pdw.md)]
 
-  CLR 어셈블리에 의해 정의되는 각 사용자 정의 형식당 한 개의 행을 포함합니다. 다음 **sys. assembly_types** 는 상속 된 열 목록에 표시 됩니다 ( **rule_object_id**후에는 [&#40;transact-sql&#41;](../../relational-databases/system-catalog-views/sys-types-transact-sql.md)).  
+  CLR 어셈블리에 의해 정의되는 각 사용자 정의 형식당 한 개의 행을 포함합니다. 다음 **sys.assembly_types** **rule_object_id** 후 상속 된 열 목록에 표시 됩니다 ( [transact-sql&#41;&#40;](../../relational-databases/system-catalog-views/sys-types-transact-sql.md)참조).  
   
 |열 이름|데이터 형식|Description|  
 |-----------------|---------------|-----------------|  

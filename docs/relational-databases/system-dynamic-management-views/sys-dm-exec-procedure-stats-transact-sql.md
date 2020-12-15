@@ -20,13 +20,13 @@ helpviewer_keywords:
 ms.assetid: ab8ddde8-1cea-4b41-a7e4-697e6ddd785a
 author: markingmyname
 ms.author: maghan
-monikerRange: '>=aps-pdw-2016||=azuresqldb-current||=azure-sqldw-latest||>=sql-server-2016||=sqlallproducts-allversions||>=sql-server-linux-2017||=azuresqldb-mi-current'
-ms.openlocfilehash: 70ee1a165c97c2af3a9a277f641f79ec0af4b69e
-ms.sourcegitcommit: 2991ad5324601c8618739915aec9b184a8a49c74
+monikerRange: '>=aps-pdw-2016||=azuresqldb-current||=azure-sqldw-latest||>=sql-server-2016||>=sql-server-linux-2017||=azuresqldb-mi-current'
+ms.openlocfilehash: ee23ce9715928a0743ebcec165be0a67a293319e
+ms.sourcegitcommit: 1a544cf4dd2720b124c3697d1e62ae7741db757c
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 12/11/2020
-ms.locfileid: "97330200"
+ms.lasthandoff: 12/14/2020
+ms.locfileid: "97477354"
 ---
 # <a name="sysdm_exec_procedure_stats-transact-sql"></a>sys.dm_exec_procedure_stats(Transact-SQL)
 [!INCLUDE [sql-asdb-asdbmi-asa-pdw](../../includes/applies-to-version/sql-asdb-asdbmi-asa-pdw.md)]
@@ -91,7 +91,7 @@ SQL Database Basic, S0 및 S1 서비스 목적과 탄력적 풀의 데이터베�
 ## <a name="remarks"></a>설명  
  저장 프로시저의 실행이 완료되면 뷰에 있는 통계가 업데이트됩니다.  
   
-## <a name="examples"></a>예제  
+## <a name="examples"></a>예  
  다음 예에서는 평균 경과 시간으로 식별된 상위 10개의 저장 프로시저에 대한 정보를 반환합니다.  
   
 ```sql  

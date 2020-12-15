@@ -19,13 +19,13 @@ helpviewer_keywords:
 ms.assetid: fc0b3608-a7e8-4532-8215-32235d6670f1
 author: markingmyname
 ms.author: maghan
-monikerRange: '>=aps-pdw-2016||=azuresqldb-current||=azure-sqldw-latest||>=sql-server-2016||=sqlallproducts-allversions||>=sql-server-linux-2017||=azuresqldb-mi-current'
-ms.openlocfilehash: aacea1639acd400334c19922588f0e9fc1298631
-ms.sourcegitcommit: 968969b62bc158b9843aba5034c9d913519bc4a7
+monikerRange: '>=aps-pdw-2016||=azuresqldb-current||=azure-sqldw-latest||>=sql-server-2016||>=sql-server-linux-2017||=azuresqldb-mi-current'
+ms.openlocfilehash: 4765b8955b47d67fb9e324cd019b7103d448bb6f
+ms.sourcegitcommit: 1a544cf4dd2720b124c3697d1e62ae7741db757c
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 10/06/2020
-ms.locfileid: "91753861"
+ms.lasthandoff: 12/14/2020
+ms.locfileid: "97482474"
 ---
 # <a name="view_column_usage-transact-sql"></a>VIEW_COLUMN_USAGE(Transact-SQL)
 [!INCLUDE [sql-asdb-asdbmi-asa-pdw](../../includes/applies-to-version/sql-asdb-asdbmi-asa-pdw.md)]
@@ -37,10 +37,10 @@ ms.locfileid: "91753861"
 |열 이름|데이터 형식|Description|  
 |-----------------|---------------|-----------------|  
 |**VIEW_CATALOG**|**nvarchar (** 128 **)**|뷰 한정자입니다.|  
-|**VIEW_SCHEMA**|**nvarchar (** 128 **)**|뷰가 포함된 스키마의 이름입니다.<br /><br /> **&#42;&#42; 중요 한 것 **  은 개체의 스키마를 찾는 신뢰할 수 있는 방법 으로만 &#42;&#42;하 여 개체의 카탈로그 뷰를 쿼리 하는 것입니다.|  
+|**VIEW_SCHEMA**|**nvarchar (** 128 **)**|뷰가 포함된 스키마의 이름입니다.<br /><br /> **&#42;&#42; 중요 한 것**  은 개체의 스키마를 찾는 신뢰할 수 있는 방법 으로만 &#42;&#42;하 여 개체의 카탈로그 뷰를 쿼리 하는 것입니다.|  
 |**VIEW_NAME**|**sysname**|뷰 이름입니다.|  
 |**TABLE_CATALOG**|**nvarchar (** 128 **)**|테이블 한정자입니다.|  
-|**TABLE_SCHEMA**|**nvarchar (** 128 **)**|테이블이 포함된 스키마의 이름입니다.<br /><br /> **&#42;&#42; 중요 한 것 **  은 개체의 스키마를 찾는 신뢰할 수 있는 방법 으로만 &#42;&#42;하 여 개체의 카탈로그 뷰를 쿼리 하는 것입니다.|  
+|**TABLE_SCHEMA**|**nvarchar (** 128 **)**|테이블이 포함된 스키마의 이름입니다.<br /><br /> **&#42;&#42; 중요 한 것**  은 개체의 스키마를 찾는 신뢰할 수 있는 방법 으로만 &#42;&#42;하 여 개체의 카탈로그 뷰를 쿼리 하는 것입니다.|  
 |**TABLE_NAME**|**sysname**|기본 테이블입니다.|  
 |**COLUMN_NAME**|**sysname**|열 이름입니다.|  
   

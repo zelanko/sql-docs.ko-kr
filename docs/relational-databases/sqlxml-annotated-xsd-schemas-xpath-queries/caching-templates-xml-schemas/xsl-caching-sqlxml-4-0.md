@@ -15,13 +15,13 @@ ms.assetid: 91994142-32f0-4d8d-a8cf-eb0d8b1f1999
 author: MightyPen
 ms.author: genemi
 ms.custom: seo-lt-2019
-monikerRange: =azuresqldb-current||>=sql-server-2016||=sqlallproducts-allversions||>=sql-server-linux-2017||=azuresqldb-mi-current
-ms.openlocfilehash: 4227c8e90c71fff8e0af1149e95940862f757071
-ms.sourcegitcommit: da88320c474c1c9124574f90d549c50ee3387b4c
+monikerRange: =azuresqldb-current||>=sql-server-2016||>=sql-server-linux-2017||=azuresqldb-mi-current
+ms.openlocfilehash: da5e68eb863ebaa76b6b9901f77d38027c46e1f4
+ms.sourcegitcommit: 1a544cf4dd2720b124c3697d1e62ae7741db757c
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 07/01/2020
-ms.locfileid: "85650510"
+ms.lasthandoff: 12/14/2020
+ms.locfileid: "97479274"
 ---
 # <a name="xsl-caching-sqlxml-40"></a>XSL 캐싱(SQLXML 4.0)
 [!INCLUDE [SQL Server Azure SQL Database](../../../includes/applies-to-version/sql-asdb.md)]

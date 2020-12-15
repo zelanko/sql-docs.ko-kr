@@ -20,13 +20,13 @@ helpviewer_keywords:
 ms.assetid: 012aab95-8888-4f35-9ea3-b5dff6e3f60f
 author: markingmyname
 ms.author: maghan
-monikerRange: =azuresqldb-current||>=sql-server-2016||=sqlallproducts-allversions||>=sql-server-linux-2017||=azuresqldb-mi-current
-ms.openlocfilehash: c778e2e2ccc1d54a6a61110457ce6a2b0756920e
-ms.sourcegitcommit: 2991ad5324601c8618739915aec9b184a8a49c74
+monikerRange: =azuresqldb-current||>=sql-server-2016||>=sql-server-linux-2017||=azuresqldb-mi-current
+ms.openlocfilehash: 23f4db8f365aabc51ced7fc0d2ebfb9c5f94a788
+ms.sourcegitcommit: 1a544cf4dd2720b124c3697d1e62ae7741db757c
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 12/11/2020
-ms.locfileid: "97322219"
+ms.lasthandoff: 12/14/2020
+ms.locfileid: "97482764"
 ---
 # <a name="sysdm_os_buffer_descriptors-transact-sql"></a>sys.dm_os_buffer_descriptors(Transact-SQL)
 [!INCLUDE [SQL Server SQL Database](../../includes/applies-to-version/sql-asdb.md)]
@@ -68,7 +68,7 @@ SQL Database Basic, S0 및 S1 서비스 목적과 탄력적 풀의 데이터베�
 |sys.dm_os_buffer_descriptors|\<userdb>.sys.database_files|file_id|다 대 일|  
 |sys.dm_os_buffer_descriptors|sys.dm_os_buffer_pool_extension_configuration|file_id|다 대 일|  
   
-## <a name="examples"></a>예제  
+## <a name="examples"></a>예  
   
 ### <a name="a-returning-cached-page-count-for-each-database"></a>A. 각 데이터베이스에 대해 캐시된 페이지 수 반환  
  다음 예에서는 각 데이터베이스에 대해 로드된 페이지 수를 반환합니다.  

@@ -19,13 +19,13 @@ helpviewer_keywords:
 ms.assetid: 6119bc94-0b22-45d4-a34b-967afd810a9d
 author: markingmyname
 ms.author: maghan
-monikerRange: '>=aps-pdw-2016||=azuresqldb-current||=azure-sqldw-latest||>=sql-server-2016||=sqlallproducts-allversions||>=sql-server-linux-2017||=azuresqldb-mi-current'
-ms.openlocfilehash: 0a5656cac26865f58549e6531e371970b8afe205
-ms.sourcegitcommit: 968969b62bc158b9843aba5034c9d913519bc4a7
+monikerRange: '>=aps-pdw-2016||=azuresqldb-current||=azure-sqldw-latest||>=sql-server-2016||>=sql-server-linux-2017||=azuresqldb-mi-current'
+ms.openlocfilehash: c2e09f62858865c9ae1420efff17b0a3a0de9736
+ms.sourcegitcommit: 1a544cf4dd2720b124c3697d1e62ae7741db757c
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 10/06/2020
-ms.locfileid: "91753545"
+ms.lasthandoff: 12/14/2020
+ms.locfileid: "97482428"
 ---
 # <a name="views-transact-sql"></a>VIEWS(Transact-SQL)
 [!INCLUDE [sql-asdb-asdbmi-asa-pdw](../../includes/applies-to-version/sql-asdb-asdbmi-asa-pdw.md)]
@@ -37,7 +37,7 @@ ms.locfileid: "91753545"
 |열 이름|데이터 형식|Description|  
 |-----------------|---------------|-----------------|  
 |**TABLE_CATALOG**|**nvarchar (** 128 **)**|뷰 한정자입니다.|  
-|**TABLE_SCHEMA**|**nvarchar (** 128 **)**|뷰가 포함된 스키마의 이름입니다.<br /><br /> **&#42;&#42; 중요 한 것 **  은 개체의 스키마를 찾는 신뢰할 수 있는 방법 으로만 &#42;&#42;하 여 개체의 카탈로그 뷰를 쿼리 하는 것입니다.|  
+|**TABLE_SCHEMA**|**nvarchar (** 128 **)**|뷰가 포함된 스키마의 이름입니다.<br /><br /> **&#42;&#42; 중요 한 것**  은 개체의 스키마를 찾는 신뢰할 수 있는 방법 으로만 &#42;&#42;하 여 개체의 카탈로그 뷰를 쿼리 하는 것입니다.|  
 |**TABLE_NAME**|**nvarchar (** 128 **)**|뷰 이름입니다.|  
 |**VIEW_DEFINITION**|**nvarchar (** 4000 **)**|정의 길이가 **nvarchar (** 4000 **)** 보다 큰 경우이 열은 NULL입니다. 그렇지 않으면 이 열은 뷰 정의 텍스트입니다.|  
 |**CHECK_OPTION**|**varchar (** 7 **)**|WITH CHECK OPTION의 유형입니다. 원래 뷰를 WITH CHECK OPTION으로 만든 경우에는 CASCADE입니다. 그렇지 않으면 NONE이 반환됩니다.|  

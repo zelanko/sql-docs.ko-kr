@@ -21,13 +21,13 @@ helpviewer_keywords:
 ms.assetid: b4d05439-6360-45db-b1cd-794f4a64935e
 author: markingmyname
 ms.author: maghan
-monikerRange: =azuresqldb-current||>=sql-server-2016||= azure-sqldw-latest||=sqlallproducts-allversions||>=sql-server-linux-2017||=azuresqldb-mi-current
-ms.openlocfilehash: 2bb73d0374426e3210da14bdb38c5e34cbbcf357
-ms.sourcegitcommit: a5398f107599102af7c8cda815d8e5e9a367ce7e
+monikerRange: =azuresqldb-current||>=sql-server-2016||= azure-sqldw-latest||>=sql-server-linux-2017||=azuresqldb-mi-current
+ms.openlocfilehash: 2fa0f779726303ac30cfd235394bf7c8f5d09c44
+ms.sourcegitcommit: 1a544cf4dd2720b124c3697d1e62ae7741db757c
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 10/13/2020
-ms.locfileid: "92005639"
+ms.lasthandoff: 12/14/2020
+ms.locfileid: "97479044"
 ---
 # <a name="sysquery_store_plan-transact-sql"></a>sys.query_store_plan(Transact-SQL)
 [!INCLUDE [sqlserver2016-asdb-asdbmi-asa](../../includes/applies-to-version/sqlserver2016-asdb-asdbmi-asa.md)]
@@ -46,11 +46,11 @@ ms.locfileid: "92005639"
 |**is_online_index_plan**|**bit**|온라인 인덱스 작성 중에 요금제를 사용 했습니다. <br/>**참고:** Azure Synapse Analytics는 항상 0을 반환 합니다.|  
 |**is_trivial_plan**|**bit**|요금제는 쿼리 최적화 프로그램의 0 단계에서 출력 되는 간단한 계획입니다. <br/>**참고:** Azure Synapse Analytics는 항상 0을 반환 합니다.|  
 |**is_parallel_plan**|**bit**|계획이 병렬 계획입니다. <br/>**참고:** Azure Synapse Analytics는 항상 1을 반환 합니다.|  
-|**is_forced_plan**|**bit**|사용자가 저장 프로시저 **sys.sp_query_store_force_plan**를 실행 하면 계획이 강제로 표시 됩니다. 메커니즘을 강제 적용 하면 **query_id**에서 참조 하는 쿼리에 정확히이 계획이 사용 되는 것을 *보장할 수 없습니다* . 계획 강제 적용을 수행 하면 쿼리가 다시 컴파일되고 일반적으로 **plan_id**에서 참조 하는 계획에 대해 정확 하 게 동일 하거나 유사한 계획을 생성 합니다. 계획 강제 적용에 성공 하지 않으면 **force_failure_count** 증가 하 고 **last_force_failure_reason** 실패 원인으로 채워집니다. <br/>**참고:** Azure Synapse Analytics는 항상 0을 반환 합니다.|  
+|**is_forced_plan**|**bit**|사용자가 저장 프로시저 **sys.sp_query_store_force_plan** 를 실행 하면 계획이 강제로 표시 됩니다. 메커니즘을 강제 적용 하면 **query_id** 에서 참조 하는 쿼리에 정확히이 계획이 사용 되는 것을 *보장할 수 없습니다* . 계획 강제 적용을 수행 하면 쿼리가 다시 컴파일되고 일반적으로 **plan_id** 에서 참조 하는 계획에 대해 정확 하 게 동일 하거나 유사한 계획을 생성 합니다. 계획 강제 적용에 성공 하지 않으면 **force_failure_count** 증가 하 고 **last_force_failure_reason** 실패 원인으로 채워집니다. <br/>**참고:** Azure Synapse Analytics는 항상 0을 반환 합니다.|  
 |**is_natively_compiled**|**bit**|계획에는 고유 하 게 컴파일된 메모리 액세스에 최적화 된 프로시저가 포함 됩니다. (0 = FALSE, 1 = TRUE). <br/>**참고:** Azure Synapse Analytics는 항상 0을 반환 합니다.|  
-|**force_failure_count**|**bigint**|이 계획을 강제로 적용 하지 못한 횟수입니다. 쿼리가 다시 컴파일되는 경우에만 증가 시킬 수 있습니다 (*모든 실행에는 아님*). **Is_plan_forced** 이 **FALSE** 에서 **TRUE**로 변경 될 때마다 0으로 다시 설정 됩니다. <br/>**참고:** Azure Synapse Analytics는 항상 0을 반환 합니다.|  
+|**force_failure_count**|**bigint**|이 계획을 강제로 적용 하지 못한 횟수입니다. 쿼리가 다시 컴파일되는 경우에만 증가 시킬 수 있습니다 (*모든 실행에는 아님*). **Is_plan_forced** 이 **FALSE** 에서 **TRUE** 로 변경 될 때마다 0으로 다시 설정 됩니다. <br/>**참고:** Azure Synapse Analytics는 항상 0을 반환 합니다.|  
 |**last_force_failure_reason**|**int**|계획 강제 적용에 실패 한 이유입니다.<br /><br /> 0: 오류가 발생 하지 않습니다. 그렇지 않으면 강제 실패를 일으킨 오류의 오류 번호<br /><br /> 8637: ONLINE_INDEX_BUILD<br /><br /> 8683: INVALID_STARJOIN<br /><br /> 8684: TIME_OUT<br /><br /> 8689: NO_DB<br /><br /> 8690: HINT_CONFLICT<br /><br /> 8691: SETOPT_CONFLICT<br /><br /> 8694: DQ_NO_FORCING_SUPPORTED<br /><br /> 8698: NO_PLAN<br /><br /> 8712: NO_INDEX<br /><br /> 8713: VIEW_COMPILE_FAILED<br /><br /> \<other value>: GENERAL_FAILURE <br/>**참고:** Azure Synapse Analytics는 항상 0을 반환 합니다.|  
-|**last_force_failure_reason_desc**|**nvarchar(128)**|Last_force_failure_reason_desc에 대 한 텍스트 설명입니다.<br /><br /> ONLINE_INDEX_BUILD: 쿼리에서 대상 테이블에 온라인으로 작성 되는 인덱스를 포함 하는 동안 데이터를 수정 하려고 합니다.<br /><br /> INVALID_STARJOIN: 계획에 잘못 된 StarJoin 사양이 있습니다.<br /><br /> TIME_OUT: 최적화 프로그램이 강제 계획으로 지정 된 계획을 검색 하는 동안 허용 되는 작업 수를 초과 했습니다.<br /><br /> NO_DB: 계획에 지정 된 데이터베이스가 없습니다.<br /><br /> HINT_CONFLICT: 계획이 쿼리 힌트와 충돌 하므로 쿼리를 컴파일할 수 없습니다.<br /><br /> DQ_NO_FORCING_SUPPORTED: 계획은 분산 쿼리 또는 전체 텍스트 작업 사용과 충돌 하므로 쿼리를 실행할 수 없습니다.<br /><br /> NO_PLAN: 강제 계획이 쿼리에 대해 유효한 지 확인할 수 없으므로 쿼리 프로세서에서 쿼리 계획을 생성할 수 없습니다.<br /><br /> NO_INDEX: 계획에 지정 된 인덱스가 더 이상 존재 하지 않습니다.<br /><br /> VIEW_COMPILE_FAILED: 계획에서 참조 되는 인덱싱된 뷰의 문제로 인해 쿼리 계획을 강제 실행할 수 없습니다.<br /><br /> GENERAL_FAILURE: 일반 강제 오류 (위의 이유로 다루지 않음) <br/>**참고:** Azure Synapse Analytics는 항상 *NONE*을 반환 합니다.|  
+|**last_force_failure_reason_desc**|**nvarchar(128)**|Last_force_failure_reason_desc에 대 한 텍스트 설명입니다.<br /><br /> ONLINE_INDEX_BUILD: 쿼리에서 대상 테이블에 온라인으로 작성 되는 인덱스를 포함 하는 동안 데이터를 수정 하려고 합니다.<br /><br /> INVALID_STARJOIN: 계획에 잘못 된 StarJoin 사양이 있습니다.<br /><br /> TIME_OUT: 최적화 프로그램이 강제 계획으로 지정 된 계획을 검색 하는 동안 허용 되는 작업 수를 초과 했습니다.<br /><br /> NO_DB: 계획에 지정 된 데이터베이스가 없습니다.<br /><br /> HINT_CONFLICT: 계획이 쿼리 힌트와 충돌 하므로 쿼리를 컴파일할 수 없습니다.<br /><br /> DQ_NO_FORCING_SUPPORTED: 계획은 분산 쿼리 또는 전체 텍스트 작업 사용과 충돌 하므로 쿼리를 실행할 수 없습니다.<br /><br /> NO_PLAN: 강제 계획이 쿼리에 대해 유효한 지 확인할 수 없으므로 쿼리 프로세서에서 쿼리 계획을 생성할 수 없습니다.<br /><br /> NO_INDEX: 계획에 지정 된 인덱스가 더 이상 존재 하지 않습니다.<br /><br /> VIEW_COMPILE_FAILED: 계획에서 참조 되는 인덱싱된 뷰의 문제로 인해 쿼리 계획을 강제 실행할 수 없습니다.<br /><br /> GENERAL_FAILURE: 일반 강제 오류 (위의 이유로 다루지 않음) <br/>**참고:** Azure Synapse Analytics는 항상 *NONE* 을 반환 합니다.|  
 |**count_compiles**|**bigint**|컴파일 통계를 계획 합니다.|  
 |**initial_compile_start_time**|**datetimeoffset**|컴파일 통계를 계획 합니다.|  
 |**last_compile_start_time**|**datetimeoffset**|컴파일 통계를 계획 합니다.|  

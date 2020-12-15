@@ -18,13 +18,13 @@ helpviewer_keywords:
 - SQL graph, MATCH statement
 author: shkale-msft
 ms.author: shkale
-monikerRange: =azuresqldb-current||>=sql-server-ver15||=sqlallproducts-allversions||=azuresqldb-mi-current
-ms.openlocfilehash: a77835335aa2fe3e9b5d4436dcac07556e9a3c26
-ms.sourcegitcommit: e700497f962e4c2274df16d9e651059b42ff1a10
+monikerRange: =azuresqldb-current||>=sql-server-ver15||=azuresqldb-mi-current
+ms.openlocfilehash: c916466f6a105a2b10508e23f1739bba0d192970
+ms.sourcegitcommit: 1a544cf4dd2720b124c3697d1e62ae7741db757c
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 08/17/2020
-ms.locfileid: "88475847"
+ms.lasthandoff: 12/14/2020
+ms.locfileid: "97480184"
 ---
 # <a name="shortest_path-transact-sql"></a>SHORTEST_PATH (Transact-sql)
 [!INCLUDE[tsql-appliesto-SQL 19-SQL DB-SQL MI](../../includes/applies-to-version/sqlserver2019-asdb-asdbmi.md)]
@@ -50,7 +50,7 @@ FOR PATH는 임의의 길이 패턴에 참여 하는 FROM 절에서 모든 노�
 이 패턴에는 원하는 노드에 도달할 때까지 또는 패턴에 지정 된 최대 반복 횟수가 충족 될 때까지 반복적으로 이동 해야 하는 노드 및 가장자리가 포함 됩니다. 쿼리가 실행 될 때마다이 패턴을 실행 한 결과는 시작 노드에서 끝 노드로 경로를 따라 이동 하는 노드의 정렬 된 컬렉션입니다. 정규식 스타일 구문 패턴이 며 다음 두 가지 패턴 수량자가 지원 됩니다.
 
 * **' + '**: 패턴을 1 번 이상 반복 합니다. 최단 경로를 찾는 즉시 종료됩니다.
-* **{1, n}**: 패턴 1 ~ ' n '을 반복 합니다. 가장 짧은 항목이 발견 되 면 즉시 종료 합니다.
+* **{1,n}** : 패턴을 1~‘n’번 반복합니다. 가장 짧은 항목이 발견 되 면 즉시 종료 합니다.
 
 ## <a name="last_node"></a>LAST_NODE
 LAST_NODE () 함수는 두 개의 임의 길이 트래버스 패턴의 체인을 허용 합니다. 다음과 같은 시나리오에서 사용할 수 있습니다.    
@@ -90,23 +90,23 @@ STRING_AGG 함수는 식과 구분 기호를 입력으로 사용 하 고 문자�
 
 반면 마지막 노드는이 패턴에 대 한 출력 그래프 경로의 마지막 n 번째 노드입니다. `MATCH(SHORTEST_PATH((n<-(e)-)+p))`    
 
-### <a name="sum"></a>SUM
+### <a name="sum"></a>합계
 이 함수는 트래버스하 경로에 나타난 제공 된 노드/가장자리 특성 값 또는 식의 합계를 반환 합니다.
 
-### <a name="count"></a>COUNT
+### <a name="count"></a>개수
 이 함수는 경로에서 원하는 node/edge 특성의 null이 아닌 값의 개수를 반환 합니다. COUNT 함수는 \* 노드 또는에 지 테이블 별칭이 있는 ' ' 연산자를 지원 합니다. 노드 또는에 지 테이블 별칭이 없으면의 사용법이 \* 모호 하 고 오류가 발생 합니다.
 
 ```syntaxsql
 {  COUNT( <expression> | <node_or_edge_alias>.* )  <order_clause>  }
 ```
 
-### <a name="avg"></a>AVG
+### <a name="avg"></a>평균
 제공 된 노드/가장자리 특성 값 또는 트래버스 된 경로에 나타난 식의 평균을 반환 합니다.
 
-### <a name="min"></a>MIN
+### <a name="min"></a>최소
 제공 된 노드/가장자리 특성 값 또는 트래버스 된 경로에 나타난 식의 최소값을 반환 합니다.
 
-### <a name="max"></a>MAX
+### <a name="max"></a>최대
 제공 된 노드/가장자리 특성 값 또는 트래버스 된 경로에 나타난 식의 최대값을 반환 합니다.
 
 ## <a name="remarks"></a>설명  
@@ -116,7 +116,7 @@ LAST_NODE은 shortest_path 내 에서만 지원 됩니다.
 경우에 따라 홉 수가 더 많은 쿼리에 대해 잘못 된 계획이 생성 될 수 있으며이로 인해 쿼리 실행 시간이 더 높아질 수 있습니다. Hash join 힌트를 사용 하면 도움이 될 수 있습니다.    
 
 
-## <a name="examples"></a>예제 
+## <a name="examples"></a>예 
 여기에 표시 된 예제 쿼리의 경우 [SQL Graph 샘플](./sql-graph-sample.md) 에서 만든 노드와에 지 테이블을 사용 합니다.
 
 ### <a name="a--find-shortest-path-between-2-people"></a>A.  2 명 사이의 최단 경로 찾기
@@ -212,7 +212,7 @@ WHERE Q.levels = 2
 
 ## <a name="see-also"></a>참고 항목  
  [MATCH (SQL 그래프)](../../t-sql/queries/match-sql-graph.md)    
- [SQL 그래프를 &#40;CREATE TABLE&#41;](../../t-sql/statements/create-table-sql-graph.md)   
- [INSERT (SQL Graph)](../../t-sql/statements/insert-sql-graph.md)]  
+ [CREATE TABLE &#40;SQL Graph&#41;](../../t-sql/statements/create-table-sql-graph.md)   
+ [INSERT(SQL Graph)](../../t-sql/statements/insert-sql-graph.md)]  
  [SQL Server 2017에서 그래프 처리](../../relational-databases/graphs/sql-graph-overview.md)     
  

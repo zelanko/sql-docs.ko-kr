@@ -17,13 +17,13 @@ ms.assetid: cb5e41ab-dd20-4873-af20-f417bd1bbf6d
 author: MightyPen
 ms.author: genemi
 ms.custom: seo-lt-2019
-monikerRange: =azuresqldb-current||>=sql-server-2016||=sqlallproducts-allversions||>=sql-server-linux-2017||=azuresqldb-mi-current
-ms.openlocfilehash: 567eb423d4def73169fc8d06828af1c34e536136
-ms.sourcegitcommit: da88320c474c1c9124574f90d549c50ee3387b4c
+monikerRange: =azuresqldb-current||>=sql-server-2016||>=sql-server-linux-2017||=azuresqldb-mi-current
+ms.openlocfilehash: 13b34c51cf1d963613cab47455e718d6b46c8f5b
+ms.sourcegitcommit: 1a544cf4dd2720b124c3697d1e62ae7741db757c
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 07/01/2020
-ms.locfileid: "85650415"
+ms.lasthandoff: 12/14/2020
+ms.locfileid: "97479254"
 ---
 # <a name="applying-an-xsl-transformation-sqlxmloledb-provider"></a>XSL 변환 적용(SQLXMLOLEDB 공급자)
 [!INCLUDE [SQL Server Azure SQL Database](../../../includes/applies-to-version/sql-asdb.md)]

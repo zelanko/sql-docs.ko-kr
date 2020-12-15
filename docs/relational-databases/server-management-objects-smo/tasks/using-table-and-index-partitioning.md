@@ -16,13 +16,13 @@ helpviewer_keywords:
 ms.assetid: 0e682d7e-86c3-4d73-950d-aa692d46cb62
 author: markingmyname
 ms.author: maghan
-monikerRange: =azuresqldb-current||=azure-sqldw-latest||>=sql-server-2016||=sqlallproducts-allversions||>=sql-server-linux-2017||=azuresqldb-mi-current
-ms.openlocfilehash: 9744fe42994499539d57f0e84fd73b2809208642
-ms.sourcegitcommit: e700497f962e4c2274df16d9e651059b42ff1a10
+monikerRange: =azuresqldb-current||=azure-sqldw-latest||>=sql-server-2016||>=sql-server-linux-2017||=azuresqldb-mi-current
+ms.openlocfilehash: 8d44f6907e523a1627e42360f7afb7260e352ade
+ms.sourcegitcommit: 1a544cf4dd2720b124c3697d1e62ae7741db757c
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 08/17/2020
-ms.locfileid: "88464895"
+ms.lasthandoff: 12/14/2020
+ms.locfileid: "97480834"
 ---
 # <a name="using-table-and-index-partitioning"></a>테이블 및 인덱스 분할 사용
 [!INCLUDE [SQL Server ASDB, ASDBMI, ASDW ](../../../includes/applies-to-version/sql-asdb-asdbmi-asa.md)]
@@ -36,7 +36,7 @@ ms.locfileid: "88464895"
   
  각 <xref:Microsoft.SqlServer.Management.Smo.Table> 및 <xref:Microsoft.SqlServer.Management.Smo.Index> 개체는 <xref:Microsoft.SqlServer.Management.Smo.PartitionScheme> 속성에 사용할 파티션 구성표를 지정하고 <xref:Microsoft.SqlServer.Management.Smo.PartitionSchemeParameterCollection>에 열을 지정합니다.  
   
-## <a name="example"></a>예제  
+## <a name="example"></a>예  
  다음 코드 예제를 사용하려면 애플리케이션을 만들 프로그래밍 환경, 프로그래밍 템플릿 및 프로그래밍 언어를 선택해야 합니다. 자세한 내용은 [Visual Studio .net에서 Visual C&#35; SMO 프로젝트 만들기](../../../relational-databases/server-management-objects-smo/how-to-create-a-visual-csharp-smo-project-in-visual-studio-net.md)를 참조 하세요.  
   
 ## <a name="setting-up-a-partition-scheme-for-a-table-in-visual-c"></a>Visual C#에서 테이블에 대한 파티션 구성표 설정  

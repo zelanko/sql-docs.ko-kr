@@ -14,13 +14,13 @@ helpviewer_keywords:
 ms.assetid: 921a24d1-ea09-4a3c-980a-4dcbd0a43d31
 author: markingmyname
 ms.author: maghan
-monikerRange: '>=aps-pdw-2016||=azuresqldb-current||=azure-sqldw-latest||>=sql-server-2016||=sqlallproducts-allversions||>=sql-server-linux-2017||=azuresqldb-mi-current'
-ms.openlocfilehash: 5785874d7046cfe1822feeb43a9ee9e3c9b191b0
-ms.sourcegitcommit: 4d370399f6f142e25075b3714e5c2ce056b1bfd0
+monikerRange: '>=aps-pdw-2016||=azuresqldb-current||=azure-sqldw-latest||>=sql-server-2016||>=sql-server-linux-2017||=azuresqldb-mi-current'
+ms.openlocfilehash: 9600980f1965b689ce3c1d39aa8eed346fb2cb69
+ms.sourcegitcommit: 1a544cf4dd2720b124c3697d1e62ae7741db757c
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 10/09/2020
-ms.locfileid: "91867650"
+ms.lasthandoff: 12/14/2020
+ms.locfileid: "97481064"
 ---
 # <a name="execute-sql-server-native-client-stored-procedure-with-odbc-call-and-process-output"></a>ODBC 호출 및 프로세스 출력을 사용 하 여 SQL Server Native Client 저장 프로시저 실행
 [!INCLUDE [SQL Server](../../../includes/applies-to-version/sql-asdb-asdbmi-asa-pdw.md)]

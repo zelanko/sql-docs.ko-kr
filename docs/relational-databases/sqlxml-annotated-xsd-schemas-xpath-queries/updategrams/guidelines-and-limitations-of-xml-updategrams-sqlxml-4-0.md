@@ -13,13 +13,13 @@ ms.assetid: b5231859-14e2-4276-bc17-db2817b6f235
 author: MightyPen
 ms.author: genemi
 ms.custom: seo-lt-2019
-monikerRange: =azuresqldb-current||>=sql-server-2016||=sqlallproducts-allversions||>=sql-server-linux-2017||=azuresqldb-mi-current
-ms.openlocfilehash: fb774fd8dbb05b52e4f57fcf78d4ecd4c923ccb8
-ms.sourcegitcommit: da88320c474c1c9124574f90d549c50ee3387b4c
+monikerRange: =azuresqldb-current||>=sql-server-2016||>=sql-server-linux-2017||=azuresqldb-mi-current
+ms.openlocfilehash: 71bd56145c0ef26736a7b567db22b783ea258e1c
+ms.sourcegitcommit: 1a544cf4dd2720b124c3697d1e62ae7741db757c
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 07/01/2020
-ms.locfileid: "85790646"
+ms.lasthandoff: 12/14/2020
+ms.locfileid: "97479194"
 ---
 # <a name="guidelines-and-limitations-of-xml-updategrams-sqlxml-40"></a>XML updategram에 대한 지침 및 제한 사항(SQLXML 4.0)
 [!INCLUDE [SQL Server Azure SQL Database](../../../includes/applies-to-version/sql-asdb.md)]
@@ -33,7 +33,7 @@ ms.locfileid: "85790646"
   
 -   SQLXML 4.0에서는 updategram의 모든 열 값이 제공된 스키마(XDR 또는 XSD)에서 명시적으로 매핑되어야 해당 자식 요소에 대한 XML 뷰를 만들 수 있습니다. 이 동작은 **sql: relationship** 주석에서 외래 키의 일부로 암시 된 경우 스키마에서 매핑되지 않은 열에 대 한 값을 허용 하는 이전 버전의 SQLXML과 다릅니다. 이 변경 사항은 기본 키 값이 자식 요소로 전파되는 것에는 영향을 주지 않습니다. SQLXML 4.0에서 이 동작은 자식 요소에 대해 값이 명시적으로 지정되지 않은 경우에도 수행됩니다.  
   
--   Updategram를 사용 하 여 이진 열 (예: image 데이터 형식)의 데이터를 수정 하는 경우에는 [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] **image** [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] 데이터 형식 (예: **sql: datatype = "image"**) 및 XML 데이터 형식 (예: **dt: type = "binhex"** 또는 **dt: type = "binbase64**)을 지정 해야 하는 매핑 스키마를 제공 해야 합니다. Updategram에 이진 열의 데이터를 지정 해야 합니다. 매핑 스키마에 지정 된 **sql: url 인코딩** 주석은 updategram에서 무시 됩니다.  
+-   Updategram를 사용 하 여 이진 열 (예: image 데이터 형식)의 데이터를 수정 하는 경우에는 [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)]  [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] 데이터 형식 (예: **sql: datatype = "image"**) 및 XML 데이터 형식 (예: **dt: type = "binhex"** 또는 **dt: type = "binbase64**)을 지정 해야 하는 매핑 스키마를 제공 해야 합니다. Updategram에 이진 열의 데이터를 지정 해야 합니다. 매핑 스키마에 지정 된 **sql: url 인코딩** 주석은 updategram에서 무시 됩니다.  
   
 -   XSD 스키마를 작성할 때 **sql: relation** 또는 **sql: field** annotation에 지정 하는 값에 공백 문자 (예: "order details" 테이블 이름)와 같은 특수 문자가 포함 된 경우이 값을 대괄호로 묶어야 합니다 (예: "[order details]").  
   

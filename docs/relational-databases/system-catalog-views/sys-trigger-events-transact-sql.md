@@ -1,6 +1,6 @@
 ---
 description: sys.trace_events(Transact SQL)
-title: sys. trigger_events (Transact-sql) | Microsoft Docs
+title: sys.trigger_events (Transact-sql) | Microsoft Docs
 ms.custom: ''
 ms.date: 06/10/2016
 ms.prod: sql
@@ -20,13 +20,13 @@ helpviewer_keywords:
 ms.assetid: 92540447-131c-491c-b033-c064c7d950e1
 author: markingmyname
 ms.author: maghan
-monikerRange: =azuresqldb-current||>=sql-server-2016||=sqlallproducts-allversions||>=sql-server-linux-2017||=azuresqldb-mi-current
-ms.openlocfilehash: ead6f918e85c73d344924bfe1bc7c878bf4d44c6
-ms.sourcegitcommit: dd36d1cbe32cd5a65c6638e8f252b0bd8145e165
+monikerRange: =azuresqldb-current||>=sql-server-2016||>=sql-server-linux-2017||=azuresqldb-mi-current
+ms.openlocfilehash: 18f9453079f7a11da4c1d073cda4dd750a3c91c1
+ms.sourcegitcommit: 1a544cf4dd2720b124c3697d1e62ae7741db757c
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 09/08/2020
-ms.locfileid: "89537987"
+ms.lasthandoff: 12/14/2020
+ms.locfileid: "97482874"
 ---
 # <a name="systrigger_events-transact-sql"></a>sys.trace_events(Transact SQL)
 [!INCLUDE [SQL Server SQL Database](../../includes/applies-to-version/sql-asdb.md)]
@@ -34,7 +34,7 @@ ms.locfileid: "89537987"
   트리거가 실행되는 각 이벤트당 한 개의 행을 포함합니다.  
   
 > [!NOTE]  
->  **trigger_events** 이벤트 알림에 적용 되지 않습니다.  
+>  **sys.trigger_events** 는 이벤트 알림에 적용 되지 않습니다.  
   
 |열 이름|데이터 형식|Description|  
 |-----------------|---------------|-----------------|  

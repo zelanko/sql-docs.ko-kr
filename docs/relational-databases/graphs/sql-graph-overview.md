@@ -15,13 +15,13 @@ ms.assetid: ''
 author: shkale-msft
 ms.author: shkale
 ms.custom: seo-dt-2019
-monikerRange: =azuresqldb-current||>=sql-server-2017||=sqlallproducts-allversions||>=sql-server-linux-2017||=azuresqldb-mi-current
-ms.openlocfilehash: 79ffa64e3a567a219e192c9108b04e2c96efaf5c
-ms.sourcegitcommit: 442fbe1655d629ecef273b02fae1beb2455a762e
+monikerRange: =azuresqldb-current||>=sql-server-2017||>=sql-server-linux-2017||=azuresqldb-mi-current
+ms.openlocfilehash: 846f37923f8388e15663c56a4f724984a1a2588f
+ms.sourcegitcommit: 1a544cf4dd2720b124c3697d1e62ae7741db757c
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 11/03/2020
-ms.locfileid: "93235636"
+ms.lasthandoff: 12/14/2020
+ms.locfileid: "97480174"
 ---
 # <a name="graph-processing-with-sql-server-and-azure-sql-database"></a>SQL Server 및 Azure SQL Database를 사용한 Graph 처리
 [!INCLUDE[sqlserver2017-asdb](../../includes/applies-to-version/sqlserver2017-asdb.md)]
@@ -59,7 +59,7 @@ CREATE TABLE friends (StartDate date) AS EDGE;
 노드 및 가장자리가 테이블로 저장 됩니다.  
 
 ### <a name="query-language-extensions"></a>쿼리 언어 확장  
-New `MATCH` 절은 그래프를 통해 패턴 일치 및 다중 홉 탐색을 지원 하기 위해 도입 되었습니다. `MATCH`함수는 패턴 일치에 ASCII 아트 스타일 구문을 사용 합니다. 다음은 그 예입니다.   
+New `MATCH` 절은 그래프를 통해 패턴 일치 및 다중 홉 탐색을 지원 하기 위해 도입 되었습니다. `MATCH`함수는 패턴 일치에 ASCII 아트 스타일 구문을 사용 합니다. 예를 들어:  
 
 ```   
 -- Find friends of John

@@ -20,13 +20,13 @@ helpviewer_keywords:
 ms.assetid: 40ab5453-040c-4d2e-bb49-e340cf90c3ee
 author: pmasl
 ms.author: pelopes
-monikerRange: =azuresqldb-current||>=sql-server-2016||=sqlallproducts-allversions||>=sql-server-linux-2017||=azuresqldb-mi-current
-ms.openlocfilehash: 3f352af03115de658f16e56e27bc5ecf3bd900c3
-ms.sourcegitcommit: 2991ad5324601c8618739915aec9b184a8a49c74
+monikerRange: =azuresqldb-current||>=sql-server-2016||>=sql-server-linux-2017||=azuresqldb-mi-current
+ms.openlocfilehash: 6b557073c7ad5d9aaef7f90380bf80f6ba382901
+ms.sourcegitcommit: 1a544cf4dd2720b124c3697d1e62ae7741db757c
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 12/11/2020
-ms.locfileid: "97324568"
+ms.lasthandoff: 12/14/2020
+ms.locfileid: "97482734"
 ---
 # <a name="sysdm_fts_active_catalogs-transact-sql"></a>sys.dm_fts_active_catalogs(Transact-SQL)
 [!INCLUDE [SQL Server SQL Database](../../includes/applies-to-version/sql-asdb.md)]
@@ -74,7 +74,7 @@ SQL Database Basic, S0 및 S1 서비스 목적과 탄력적 풀의 데이터베�
 |dm_fts_active_catalogs.database_id|dm_fts_index_population.database_id|일대일|  
 |dm_fts_active_catalogs.catalog_id|dm_fts_index_population.catalog_id|일대일|  
   
-## <a name="examples"></a>예제  
+## <a name="examples"></a>예  
  다음 예에서는 현재 데이터베이스의 활성 전체 텍스트 카탈로그에 대한 정보를 반환합니다.  
   
 ```  

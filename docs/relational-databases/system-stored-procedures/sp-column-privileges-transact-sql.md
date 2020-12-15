@@ -18,13 +18,13 @@ helpviewer_keywords:
 ms.assetid: a3784301-2517-4b1d-bbd9-47404483fad0
 author: markingmyname
 ms.author: maghan
-monikerRange: =azuresqldb-current||>=sql-server-2016||=sqlallproducts-allversions||>=sql-server-linux-2017||=azuresqldb-mi-current
-ms.openlocfilehash: 44097fb7340dd61f467b4bb08e0b4a718d6ab323
-ms.sourcegitcommit: dd36d1cbe32cd5a65c6638e8f252b0bd8145e165
+monikerRange: =azuresqldb-current||>=sql-server-2016||>=sql-server-linux-2017||=azuresqldb-mi-current
+ms.openlocfilehash: 279789c40dbc79dd3d7b2d421d757a936b0e6126
+ms.sourcegitcommit: 1a544cf4dd2720b124c3697d1e62ae7741db757c
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 09/08/2020
-ms.locfileid: "89528557"
+ms.lasthandoff: 12/14/2020
+ms.locfileid: "97482405"
 ---
 # <a name="sp_column_privileges-transact-sql"></a>sp_column_privileges(Transact-SQL)
 [!INCLUDE [SQL Server SQL Database](../../includes/applies-to-version/sql-asdb.md)]
@@ -45,15 +45,15 @@ sp_column_privileges [ @table_name = ] 'table_name'
   
 ## <a name="arguments"></a>인수  
  [ @table_name =] '*table_name*'  
- 카탈로그 정보를 반환하는 데 사용되는 테이블입니다. *table_name* 는 **sysname**이며 기본값은 없습니다. 와일드카드 패턴 일치는 지원되지 않습니다.  
+ 카탈로그 정보를 반환하는 데 사용되는 테이블입니다. *table_name* 는 **sysname** 이며 기본값은 없습니다. 와일드카드 패턴 일치는 지원되지 않습니다.  
   
  [ @table_owner =] '*table_owner*'  
- 카탈로그 정보를 반환하는 데 사용하는 테이블의 소유자입니다. *table_owner* 는 **sysname**이며 기본값은 NULL입니다. 와일드카드 패턴 일치는 지원되지 않습니다. *Table_owner* 지정 하지 않으면 기본 DBMS (데이터베이스 관리 시스템)의 기본 테이블 표시 규칙이 적용 됩니다.  
+ 카탈로그 정보를 반환하는 데 사용하는 테이블의 소유자입니다. *table_owner* 는 **sysname** 이며 기본값은 NULL입니다. 와일드카드 패턴 일치는 지원되지 않습니다. *Table_owner* 지정 하지 않으면 기본 DBMS (데이터베이스 관리 시스템)의 기본 테이블 표시 규칙이 적용 됩니다.  
   
- 현재 사용자가 지정한 이름의 테이블을 소유하고 있는 경우 해당 테이블의 열이 반환됩니다. *Table_owner* 지정 되지 않은 상태에서 현재 사용자가 지정 된 *table_name*있는 테이블을 소유 하 고 있지 않은 경우 sp_column 권한은 데이터베이스 소유자가 소유한 지정 된 *table_name* 를 사용 하 여 테이블을 찾습니다. 테이블이 있으면 테이블의 열이 반환됩니다.  
+ 현재 사용자가 지정한 이름의 테이블을 소유하고 있는 경우 해당 테이블의 열이 반환됩니다. *Table_owner* 지정 되지 않은 상태에서 현재 사용자가 지정 된 *table_name* 있는 테이블을 소유 하 고 있지 않은 경우 sp_column 권한은 데이터베이스 소유자가 소유한 지정 된 *table_name* 를 사용 하 여 테이블을 찾습니다. 테이블이 있으면 테이블의 열이 반환됩니다.  
   
  [ @table_qualifier =] '*table_qualifier*'  
- 테이블 한정자의 이름입니다. *table_qualifier* 는 *sysname*이며 기본값은 NULL입니다. 다양 한 DBMS 제품에서 테이블에 대해 세 부분으로 구성 되는 이름 (_한정자_)을 지원**합니다.** _소유자_**.** _이름_). [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]에서 이 열은 데이터베이스 이름을 나타냅니다. 일부 제품에서는 테이블 데이터베이스 환경의 서버 이름을 나타냅니다.  
+ 테이블 한정자의 이름입니다. *table_qualifier* 는 *sysname* 이며 기본값은 NULL입니다. 다양 한 DBMS 제품에서 테이블에 대해 세 부분으로 구성 되는 이름 (_한정자_)을 지원 **합니다.** _소유자_**.** _이름_). [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]에서 이 열은 데이터베이스 이름을 나타냅니다. 일부 제품에서는 테이블 데이터베이스 환경의 서버 이름을 나타냅니다.  
   
  [ @column_name =] '*열*'  
  카탈로그 정보 중 한 열만 확보될 때 사용되는 단일 열입니다. *열* 은 **nvarchar (** 384 **)** 이며 기본값은 NULL입니다. *열* 을 지정 하지 않으면 모든 열이 반환 됩니다. 에서 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] *열* 은 행 이름 테이블에 나열 된 열 이름을 나타냅니다. *열* 은 기본 DBMS의 와일드 카드 일치 패턴을 사용 하는 와일드 카드 문자를 포함할 수 있습니다. 상호 운용성을 극대화하려면 게이트웨이 클라이언트에서 ISO 표준 패턴 일치(% 및 _ 와일드카드 문자)만 사용해야 합니다.  
@@ -78,7 +78,7 @@ sp_column_privileges [ @table_name = ] 'table_name'
 ## <a name="permissions"></a>사용 권한  
  스키마에 대한 SELECT 권한이 필요합니다.  
   
-## <a name="examples"></a>예제  
+## <a name="examples"></a>예  
  다음 예에서는 특정 열에 대한 열 권한 정보를 반환하는 방법을 보여 줍니다.  
   
 ```  

@@ -11,18 +11,18 @@ ms.topic: reference
 ms.assetid: 50f98cab-8c80-43c5-bc9a-5d2f95f67f17
 author: markingmyname
 ms.author: maghan
-monikerRange: '>=aps-pdw-2016||=azuresqldb-current||=azure-sqldw-latest||>=sql-server-2016||=sqlallproducts-allversions||>=sql-server-linux-2017||=azuresqldb-mi-current'
-ms.openlocfilehash: b19c4bea8498ddb8ba900ba9f4e566b7176bf1b9
-ms.sourcegitcommit: 4d370399f6f142e25075b3714e5c2ce056b1bfd0
+monikerRange: '>=aps-pdw-2016||=azuresqldb-current||=azure-sqldw-latest||>=sql-server-2016||>=sql-server-linux-2017||=azuresqldb-mi-current'
+ms.openlocfilehash: 336c63cf5b9be674ef8dfe972da67cf386e42f92
+ms.sourcegitcommit: 1a544cf4dd2720b124c3697d1e62ae7741db757c
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 10/09/2020
-ms.locfileid: "91868408"
+ms.lasthandoff: 12/14/2020
+ms.locfileid: "97481054"
 ---
 # <a name="use-enhanced-date-and-time-features-in-sql-server-native-client-ole-db"></a>SQL Server Native Client에서 향상 된 날짜 및 시간 기능 사용 (OLE DB)
 [!INCLUDE[SQL Server Azure SQL Database Synapse Analytics PDW ](../../includes/applies-to-version/sql-asdb-asdbmi-asa-pdw.md)]
 
-  이 예제에서는 [!INCLUDE[ssKatmai](../../includes/sskatmai-md.md)]에 도입된 날짜/시간 기능을 사용하는 방법을 보여 줍니다. 이 예제에서는 새로운 네 가지 날짜 및 시간 형식(**date**, **time**, **datetime2**및 **datetimeoffset**)을 사용하여 매개 변수가 있는 명령을 실행하고 행 집합 결과를 검색합니다.  
+  이 예제에서는 [!INCLUDE[ssKatmai](../../includes/sskatmai-md.md)]에 도입된 날짜/시간 기능을 사용하는 방법을 보여 줍니다. 이 예제에서는 새로운 네 가지 날짜 및 시간 형식(**date**, **time**, **datetime2** 및 **datetimeoffset**)을 사용하여 매개 변수가 있는 명령을 실행하고 행 집합 결과를 검색합니다.  
   
  이 예제에는 [Microsoft SQL Server 예제 및 커뮤니티 프로젝트(Microsoft SQL Server Samples and Community Projects)](https://go.microsoft.com/fwlink/?LinkID=85384) 홈 페이지에서 다운로드할 수 있는 AdventureWorks 예제 데이터베이스가 필요합니다.  
   

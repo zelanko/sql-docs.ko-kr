@@ -1,6 +1,6 @@
 ---
-description: sys. dm_exec_input_buffer (Transact-sql)
-title: sys. dm_exec_input_buffer (Transact-sql) | Microsoft Docs
+description: sys.dm_exec_input_buffer (Transact-sql)
+title: sys.dm_exec_input_buffer (Transact-sql) | Microsoft Docs
 ms.custom: ''
 ms.date: 11/14/2019
 ms.prod: sql
@@ -20,15 +20,15 @@ helpviewer_keywords:
 ms.assetid: fb34a560-bde9-4ad9-aa96-0d4baa4fc104
 author: markingmyname
 ms.author: maghan
-monikerRange: =azuresqldb-current||>=sql-server-2016||=sqlallproducts-allversions||>=sql-server-linux-2017||=azuresqldb-mi-current
-ms.openlocfilehash: 4fecdc698dc7015ab47e5a8c97b3990c7e5bf1f4
-ms.sourcegitcommit: dd36d1cbe32cd5a65c6638e8f252b0bd8145e165
+monikerRange: =azuresqldb-current||>=sql-server-2016||>=sql-server-linux-2017||=azuresqldb-mi-current
+ms.openlocfilehash: 68673cb11ce5a003b2c9317939942b1d602095be
+ms.sourcegitcommit: 1a544cf4dd2720b124c3697d1e62ae7741db757c
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 09/08/2020
-ms.locfileid: "89536957"
+ms.lasthandoff: 12/14/2020
+ms.locfileid: "97477264"
 ---
-# <a name="sysdm_exec_input_buffer-transact-sql"></a>sys. dm_exec_input_buffer (Transact-sql)
+# <a name="sysdm_exec_input_buffer-transact-sql"></a>sys.dm_exec_input_buffer (Transact-sql)
 
 [!INCLUDE[tsql-appliesto-2014sp2-asdb-xxxx-xxx-md](../../includes/tsql-appliesto-2014sp2-asdb-xxxx-xxx-md.md)]
 
@@ -42,13 +42,13 @@ sys.dm_exec_input_buffer ( session_id , request_id )
 
 ## <a name="arguments"></a>인수
 
-*session_id* 조회할 일괄 처리를 실행 하는 세션 ID입니다. *session_id* 은 **smallint**입니다. *session_id* 는 다음과 같은 동적 관리 개체에서 가져올 수 있습니다.
+*session_id* 조회할 일괄 처리를 실행 하는 세션 ID입니다. *session_id* 은 **smallint** 입니다. *session_id* 는 다음과 같은 동적 관리 개체에서 가져올 수 있습니다.
 
 - [sys.dm_exec_requests](../../relational-databases/system-dynamic-management-views/sys-dm-exec-requests-transact-sql.md)
 - [sys.dm_exec_sessions](../../relational-databases/system-dynamic-management-views/sys-dm-exec-sessions-transact-sql.md)
 - [sys.dm_exec_connections](../../relational-databases/system-dynamic-management-views/sys-dm-exec-connections-transact-sql.md)
 
-*request_id* [Dm_exec_requests](../../relational-databases/system-dynamic-management-views/sys-dm-exec-requests-transact-sql.md)의 request_id입니다. *request_id* 은 **int**입니다.
+*request_id* [Sys.dm_exec_requests](../../relational-databases/system-dynamic-management-views/sys-dm-exec-requests-transact-sql.md)request_id입니다. *request_id* 은 **int** 입니다.
 
 ## <a name="table-returned"></a>반환된 테이블
 
@@ -72,9 +72,9 @@ sys.dm_exec_input_buffer ( session_id , request_id )
 
 ## <a name="remarks"></a>설명
 
-이 동적 관리 함수는 **CROSS APPLY**를 수행 하 여 dm_exec_sessions 또는 dm_exec_requests와 함께 사용할 수 있습니다.
+이 동적 관리 함수는 **CROSS APPLY** 를 수행 하 여 sys.dm_exec_sessions 또는 sys.dm_exec_requests와 함께 사용할 수 있습니다.
 
-## <a name="examples"></a>예제
+## <a name="examples"></a>예
 
 ### <a name="a-simple-example"></a>A. 간단한 예
 

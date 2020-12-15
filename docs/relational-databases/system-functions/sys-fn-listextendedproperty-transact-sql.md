@@ -1,6 +1,6 @@
 ---
 description: sys.fn_listextendedproperty(Transact-SQL)
-title: sys. fn_listextendedproperty (Transact-sql) | Microsoft Docs
+title: sys.fn_listextendedproperty (Transact-sql) | Microsoft Docs
 ms.custom: ''
 ms.date: 06/10/2016
 ms.prod: sql
@@ -26,13 +26,13 @@ helpviewer_keywords:
 ms.assetid: 59bbb91f-a277-4a35-803e-dcb91e847a49
 author: rothja
 ms.author: jroth
-monikerRange: =azuresqldb-current||>=sql-server-2016||=sqlallproducts-allversions||>=sql-server-linux-2017||=azuresqldb-mi-current
-ms.openlocfilehash: dd891bcfdaddfb42e2b55e1b69e3f320563c1ba7
-ms.sourcegitcommit: e700497f962e4c2274df16d9e651059b42ff1a10
+monikerRange: =azuresqldb-current||>=sql-server-2016||>=sql-server-linux-2017||=azuresqldb-mi-current
+ms.openlocfilehash: 3efd2428f9eeae241c0ec9be497c854ba0d91417
+ms.sourcegitcommit: 1a544cf4dd2720b124c3697d1e62ae7741db757c
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 08/17/2020
-ms.locfileid: "88427825"
+ms.lasthandoff: 12/14/2020
+ms.locfileid: "97478954"
 ---
 # <a name="sysfn_listextendedproperty-transact-sql"></a>sys.fn_listextendedproperty(Transact-SQL)
 [!INCLUDE [SQL Server SQL Database](../../includes/applies-to-version/sql-asdb.md)]
@@ -59,7 +59,7 @@ fn_listextendedproperty (
   
 ## <a name="arguments"></a>인수  
  {기본값 | '*property_name*' | N  
- 속성 이름입니다. *property_name* 는 **sysname**입니다. 유효한 입력은 기본값, NULL, 속성 이름입니다.  
+ 속성 이름입니다. *property_name* 는 **sysname** 입니다. 유효한 입력은 기본값, NULL, 속성 이름입니다.  
   
  {기본값 | '*level0_object_type*' | N  
  사용자 또는 사용자 정의 형식입니다. *level0_object_type* 는 **varchar (128)** 이며 기본값은 NULL입니다. 유효한 입력은 ASSEMBLY, CONTRACT, EVENT NOTIFICATION, FILEGROUP, MESSAGE TYPE, PARTITION FUNCTION, PARTITION SCHEME, REMOTE SERVICE BINDING, ROUTE, SCHEMA, SERVICE, TRIGGER, TYPE, USER 및 NULL입니다.  
@@ -93,7 +93,7 @@ fn_listextendedproperty (
 |objtype|**sysname**|  
 |objname|**sysname**|  
 |name|**sysname**|  
-|값|**sql_variant**|  
+|value|**sql_variant**|  
   
  반환되는 테이블이 비어 있는 경우는 개체에 확장 속성이 없거나 사용자에게 개체의 확장 속성을 나열할 수 있는 권한이 없기 때문입니다. 데이터베이스 자체의 확장 속성을 반환하는 경우 objtype 및 objname 열은 NULL이 됩니다.  
   
@@ -119,7 +119,7 @@ WHERE o.name = 'Employee';
 ## <a name="permissions"></a>사용 권한  
  개체의 확장 속성을 나열하는 권한은 개체 유형에 따라 다릅니다.  
   
-## <a name="examples"></a>예제  
+## <a name="examples"></a>예  
   
 ### <a name="a-displaying-extended-properties-on-a-database"></a>A. 데이터베이스의 확장 속성 표시  
  다음 예에서는 데이터베이스 개체 자체에 설정된 모든 확장 속성을 표시합니다.  
@@ -182,6 +182,6 @@ GO
  [Transact-sql&#41;sp_addextendedproperty &#40;](../../relational-databases/system-stored-procedures/sp-addextendedproperty-transact-sql.md)   
  [Transact-sql&#41;sp_dropextendedproperty &#40;](../../relational-databases/system-stored-procedures/sp-dropextendedproperty-transact-sql.md)   
  [Transact-sql&#41;sp_updateextendedproperty &#40;](../../relational-databases/system-stored-procedures/sp-updateextendedproperty-transact-sql.md)   
- [extended_properties &#40;Transact-sql&#41;](../../relational-databases/system-catalog-views/extended-properties-catalog-views-sys-extended-properties.md)  
+ [Transact-sql&#41;sys.extended_properties &#40;](../../relational-databases/system-catalog-views/extended-properties-catalog-views-sys-extended-properties.md)  
   
   
