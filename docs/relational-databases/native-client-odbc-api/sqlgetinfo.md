@@ -14,20 +14,20 @@ helpviewer_keywords:
 ms.assetid: f6215bac-ed3d-4c36-86d5-d56ffbc106aa
 author: markingmyname
 ms.author: maghan
-monikerRange: '>=aps-pdw-2016||=azuresqldb-current||=azure-sqldw-latest||>=sql-server-2016||=sqlallproducts-allversions||>=sql-server-linux-2017||=azuresqldb-mi-current'
-ms.openlocfilehash: 0d98baf95cbc3efac8c5bf36b53b6e0d88097e3a
-ms.sourcegitcommit: 04cf7905fa32e0a9a44575a6f9641d9a2e5ac0f8
+monikerRange: '>=aps-pdw-2016||=azuresqldb-current||=azure-sqldw-latest||>=sql-server-2016||>=sql-server-linux-2017||=azuresqldb-mi-current'
+ms.openlocfilehash: 5eb5e2ea9c7fc354ec414ecd95cd090f6cd406f1
+ms.sourcegitcommit: 1a544cf4dd2720b124c3697d1e62ae7741db757c
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 10/07/2020
-ms.locfileid: "91810990"
+ms.lasthandoff: 12/14/2020
+ms.locfileid: "97485125"
 ---
 # <a name="sqlgetinfo"></a>SQLGetInfo
 [!INCLUDE[SQL Server Azure SQL Database Synapse Analytics PDW ](../../includes/applies-to-version/sql-asdb-asdbmi-asa-pdw.md)]
 
-  테이블은 **SQLGetInfo**에서 반환 되는 값을 보여 줍니다. 값은 연결된 서버의 버전 번호에 따라 다를 수 있습니다.  
+  테이블은 **SQLGetInfo** 에서 반환 되는 값을 보여 줍니다. 값은 연결된 서버의 버전 번호에 따라 다를 수 있습니다.  
   
- **SQLGetInfo** [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] Native Client의 sqlgetinfo **SQLGetInfo** [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 는 SQL_KEYWORDS 및 0 버퍼 길이를 사용 하 여 **sqlgetinfo** 를 호출할 때 ODBC 드라이버 (SQLSRV32.DLL)에서 sqlgetinfo와 다릅니다.  [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] Native Client 드라이버는 SQL_SUCCESS를 반환하지만 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] ODBC 드라이버는 SQL_SUCCESS_WITH_INFO를 반환합니다.  그러나 output 키워드 문자열 보다 작은 0이 아닌 버퍼 길이를 사용 하 여 호출 하는 경우 Native Client의 **SQLGetInfo** 는 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] SQL_SUCCESS_WITH_INFO 및 SQLState 01004을 반환 합니다.  
+  [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] Native Client의 sqlgetinfo  [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 는 SQL_KEYWORDS 및 0 버퍼 길이를 사용 하 여 **sqlgetinfo** 를 호출할 때 ODBC 드라이버 (SQLSRV32.DLL)에서 sqlgetinfo와 다릅니다.  [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] Native Client 드라이버는 SQL_SUCCESS를 반환하지만 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] ODBC 드라이버는 SQL_SUCCESS_WITH_INFO를 반환합니다.  그러나 output 키워드 문자열 보다 작은 0이 아닌 버퍼 길이를 사용 하 여 호출 하는 경우 Native Client의 **SQLGetInfo** 는 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] SQL_SUCCESS_WITH_INFO 및 SQLState 01004을 반환 합니다.  
   
 |fInfoType|rgbInfoValue|  
 |---------------|------------------|  

@@ -9,12 +9,12 @@ ms.date: 01/19/2019
 ms.author: murshedz
 ms.reviewer: martinle
 ms.custom: seo-dt-2019
-ms.openlocfilehash: e7f106e462d3d1bb7848b15523ef3d3f7feed2a1
-ms.sourcegitcommit: 7345e4f05d6c06e1bcd73747a4a47873b3f3251f
+ms.openlocfilehash: 9dd52db9d34519f2b09cbaba880806c17509c84c
+ms.sourcegitcommit: 3bd188e652102f3703812af53ba877cce94b44a9
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 08/24/2020
-ms.locfileid: "88767212"
+ms.lasthandoff: 12/15/2020
+ms.locfileid: "97489713"
 ---
 # <a name="backup-and-restore"></a>백업 및 복원
 
@@ -24,7 +24,7 @@ ms.locfileid: "88767212"
 
 PDW *데이터베이스 백업은* 원본 데이터베이스를 어플라이언스로 복원 하는 데 사용할 수 있도록 형식으로 저장 된 어플라이언스 데이터베이스의 복사본입니다.  
   
-PDW 데이터베이스 백업은 [BACKUP database](../t-sql/statements/backup-transact-sql.md?view=aps-pdw-2016) t-sql 문을 사용 하 여 생성 되 고 [RESTORE database](../t-sql/statements/restore-statements-transact-sql.md?view=aps-pdw-2016) 문에 사용할 수 있도록 형식이 지정 됩니다. 다른 용도로는 사용할 수 없습니다. 백업은 동일한 수 또는 많은 수의 계산 노드를 포함 하는 어플라이언스로만 복원할 수 있습니다.  
+PDW 데이터베이스 백업은 [BACKUP database](../t-sql/statements/backup-transact-sql.md?view=aps-pdw-2016&preserve-view=true) t-sql 문을 사용 하 여 생성 되 고 [RESTORE database](../t-sql/statements/restore-statements-transact-sql.md?view=aps-pdw-2016&preserve-view=true) 문에 사용할 수 있도록 형식이 지정 됩니다. 다른 용도로는 사용할 수 없습니다. 백업은 동일한 수 또는 많은 수의 계산 노드를 포함 하는 어플라이언스로만 복원할 수 있습니다.  
   
 <!-- MISSING LINKS
 The [master database](master-database.md) is a SMP SQL Server database. It is backed up with the BACKUP DATABASE statement. To restore master, use the [Restore the Master Database](configuration-manager-restore-master-database.md) page of the Configuration Manager tool.  
@@ -104,7 +104,7 @@ PDW는 SQL Server 백업 기술을 사용 하 여 어플라이언스 데이터�
   
 1.  복원할 데이터베이스 백업은 비 어플라이언스 백업 서버의 Windows 파일 공유에서 사용할 수 있습니다. 최상의 성능을 위해이 서버는 어플라이언스 InfiniBand 네트워크에 연결 됩니다.  
   
-2.  사용자가 Control 노드에 [RESTORE DATABASE](../t-sql/statements/restore-statements-transact-sql.md?view=aps-pdw-2016) tsql 문을 전송 합니다.  
+2.  사용자가 Control 노드에 [RESTORE DATABASE](../t-sql/statements/restore-statements-transact-sql.md?view=aps-pdw-2016&preserve-view=true) tsql 문을 전송 합니다.  
   
     -   복원은 전체 복원 또는 헤더 복원 중 하나입니다. 전체 복원은 전체 백업을 복원한 다음 필요에 따라 차등 백업을 복원 합니다.  
   
@@ -130,11 +130,11 @@ PDW는 SQL Server 백업 기술을 사용 하 여 어플라이언스 데이터�
   
 ## <a name="related-tasks"></a>관련 작업  
   
-|백업 및 복원 태스크|설명|  
+|백업 및 복원 태스크|Description|  
 |---------------------------|---------------|  
 |서버를 백업 서버로 준비 합니다.|[백업 서버 획득 및 구성](acquire-and-configure-backup-server.md)|  
-|데이터베이스를 백업 합니다.|[BACKUP DATABASE](../t-sql/statements/backup-transact-sql.md?view=aps-pdw-2016)|  
-|데이터베이스를 복원 합니다.|[데이터베이스 복원](../t-sql/statements/restore-statements-transact-sql.md?view=aps-pdw-2016)|    
+|데이터베이스를 백업 합니다.|[BACKUP DATABASE](../t-sql/statements/backup-transact-sql.md?view=aps-pdw-2016&preserve-view=true)|  
+|데이터베이스를 복원합니다.|[데이터베이스 복원](../t-sql/statements/restore-statements-transact-sql.md?view=aps-pdw-2016&preserve-view=true)|    
 
 <!-- MISSING LINKS
 

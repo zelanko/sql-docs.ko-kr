@@ -1,5 +1,5 @@
 ---
-title: dwloader 명령줄 로더
+title: dwloader Command-Line 로더
 description: dwloader는 테이블 행을 기존 테이블에 대량으로 로드 하는 PDW (병렬 데이터 웨어하우스) 명령줄 도구입니다.
 author: mzaman1
 ms.prod: sql
@@ -9,14 +9,14 @@ ms.date: 04/17/2018
 ms.author: murshedz
 ms.reviewer: martinle
 ms.custom: seo-dt-2019
-ms.openlocfilehash: 7dd0ccf960b53b3cd1b474f61c60a58ff9b0a2c6
-ms.sourcegitcommit: 7345e4f05d6c06e1bcd73747a4a47873b3f3251f
+ms.openlocfilehash: 3635aff3c3dad371c969acd3d72b2fb738748ecc
+ms.sourcegitcommit: 3bd188e652102f3703812af53ba877cce94b44a9
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 08/24/2020
-ms.locfileid: "88767052"
+ms.lasthandoff: 12/15/2020
+ms.locfileid: "97489693"
 ---
-# <a name="dwloader-command-line-loader-for-parallel-data-warehouse"></a>병렬 데이터 웨어하우스의 dwloader 명령줄 로더
+# <a name="dwloader-command-line-loader-for-parallel-data-warehouse"></a>병렬 데이터 웨어하우스의 dwloader Command-Line 로더
 **dwloader** 는 테이블 행을 기존 테이블에 대량으로 로드 하는 PDW (병렬 데이터 웨어하우스) 명령줄 도구입니다. 행을 로드할 때 모든 행을 테이블의 끝에 추가 (*추가 모드* 또는 *fastappend 모드*) 하거나, 새 행을 추가 하 고 기존 행을 업데이트 (*upsert 모드*) 하거나, 로드 하기 전에 기존 행을 모두 삭제 하 고 모든 행을 빈 테이블 (*다시 로드 모드*)에 삽입할 수 있습니다.  
   
 **데이터 로드 프로세스**  
@@ -33,7 +33,7 @@ ms.locfileid: "88767052"
   
     **Dwloader** 에서 로드에 실패 한 행을 처리 하는 방법을 결정 합니다. 부하를 수행 하기 위해 **dwloader** 는 먼저 준비 테이블에 데이터를 로드 한 다음 대상 테이블로 데이터를 전송 합니다. 로더가 준비 테이블에 데이터를 로드할 때 로드에 실패 한 행의 수를 추적 합니다. 예를 들어, 형식이 올바르게 지정 되지 않은 행은 로드 되지 않습니다. 실패 한 행은 거부 파일에 복사 됩니다. 기본적으로 다른 거부 임계값을 지정 하지 않으면 첫 번째 거부 후에 부하가 중단 됩니다.  
   
-4.  **Dwloader**를 설치 합니다.  
+4.  **Dwloader** 를 설치 합니다.  
   
     아직 설치 되지 않은 경우 로드 서버에 dwloader를 설치 합니다. 
 
@@ -41,11 +41,11 @@ ms.locfileid: "88767052"
     See [Install dwloader Command-Line Loader &#40;SQL Server PDW&#41;](install-dwloader-command-line-loader-sql-server-pdw.md). 
 --> 
   
-5.  **Dwloader**를 실행 합니다.  
+5.  **Dwloader** 를 실행 합니다.  
   
     로드 서버에 로그인 하 고 적절 한 명령줄 옵션을 사용 하 여 실행 파일 **dwloader.exe** 를 실행 합니다.  
   
-6.  결과를 확인 합니다.  
+6.  결과를 확인합니다.  
   
     -R으로 지정 된 실패 한 행 파일을 확인 하 여 로드에 실패 한 행이 있는지 확인할 수 있습니다. 이 파일이 비어 있으면 모든 행이 성공적으로 로드 됩니다. **dwloader** 는 트랜잭션 이므로 모든 단계가 실패 한 경우 (거부 된 행 제외) 모든 단계는 초기 상태로 롤백됩니다.  
   
@@ -124,7 +124,7 @@ dwloader.exe
 로드를 수행할 수 있는 적절 한 권한이 있는 유효한 SQL Server 인증 로그인입니다.  
   
 **-P** *password*  
-*Login_name*SQL Server 인증에 대 한 암호입니다.  
+*Login_name* SQL Server 인증에 대 한 암호입니다.  
   
 **-W**  
 Windows 인증을 사용합니다. *Login_name* 또는 *암호가* 필요 하지 않습니다. 
@@ -134,7 +134,7 @@ For information about configuring Windows Authentication, see [Security - Config
 -->
   
 **-f** *parameter_file_name*  
-명령줄 매개 변수 대신 *parameter_file_name*매개 변수 파일을 사용 합니다. *parameter_file_name* 는 *user_name* 와 *암호*를 제외한 모든 명령줄 매개 변수를 포함할 수 있습니다. 명령줄과 매개 변수 파일에 매개 변수가 지정 된 경우 명령줄은 file 매개 변수를 재정의 합니다.  
+명령줄 매개 변수 대신 *parameter_file_name* 매개 변수 파일을 사용 합니다. *parameter_file_name* 는 *user_name* 와 *암호* 를 제외한 모든 명령줄 매개 변수를 포함할 수 있습니다. 명령줄과 매개 변수 파일에 매개 변수가 지정 된 경우 명령줄은 file 매개 변수를 재정의 합니다.  
   
 매개 변수 파일에는 한 줄에 접두사 없이 하나의 매개 변수가 포함 되어 있습니다 **-** .  
   
@@ -147,7 +147,7 @@ For information about configuring Windows Authentication, see [Security - Config
 **-S** *target_appliance*  
 로드 된 데이터를 받을 SQL Server PDW 어플라이언스를 지정 합니다.  
   
-*Infiniband 연결의*경우 *target_appliance* <어플라이언스-이름>-SQLCTL01로 지정 됩니다. 이 명명 된 연결을 구성 하려면 [InfiniBand 네트워크 어댑터 구성](configure-infiniband-network-adapters.md)을 참조 하세요.  
+*Infiniband 연결의* 경우 *target_appliance* <어플라이언스-이름>-SQLCTL01로 지정 됩니다. 이 명명 된 연결을 구성 하려면 [InfiniBand 네트워크 어댑터 구성](configure-infiniband-network-adapters.md)을 참조 하세요.  
   
 이더넷 연결의 경우 *target_appliance* 는 제어 노드 클러스터에 대 한 IP 주소입니다.  
   
@@ -206,10 +206,10 @@ For more information about this install option, see [Install dwloader Command-Li
 -   -i \\ \loadserver\loads\daily\\*  
   
 **-R** *load_failure_file_name*  
-로드 오류가 발생 한 경우 **dwloader** 는 로드에 실패 한 행을 저장 하 고 오류는 *load_failure_file_name*이라는 파일에 오류 정보를 설명 합니다. 이 파일이 이미 있으면 dwloader는 기존 파일을 덮어씁니다. *load_failure_file_name* 는 첫 번째 오류가 발생할 때 생성 됩니다. 모든 행이 성공적으로 로드 되 면 *load_failure_file_name* 생성 되지 않습니다.  
+로드 오류가 발생 한 경우 **dwloader** 는 로드에 실패 한 행을 저장 하 고 오류는 *load_failure_file_name* 이라는 파일에 오류 정보를 설명 합니다. 이 파일이 이미 있으면 dwloader는 기존 파일을 덮어씁니다. *load_failure_file_name* 는 첫 번째 오류가 발생할 때 생성 됩니다. 모든 행이 성공적으로 로드 되 면 *load_failure_file_name* 생성 되지 않습니다.  
   
 **-fh** *number_header_rows*  
-*Source_data_file_name*시작 부분에서 무시할 줄 (행) 수입니다. 기본값은 0입니다.  
+*Source_data_file_name* 시작 부분에서 무시할 줄 (행) 수입니다. 기본값은 0입니다.  
   
 <variable_length_column_options>  
 문자 구분 가변 길이 열을 포함 하는 *source_data_file_name* 에 대 한 옵션입니다. 기본적으로 *source_data_file_name* 는 가변 길이 열에 ASCII 문자를 포함 합니다.  
@@ -300,7 +300,7 @@ SalesCode = 3
   
 SalesID = 10  
   
-*Source_data_file_name*의 예제 줄:  
+*Source_data_file_name* 의 예제 줄:  
   
 230Shirts0056  
   
@@ -344,7 +344,7 @@ Unix에는 LF가 필요 합니다. Windows에는 CR이 필요 합니다.
 입력 파일의 모든 날짜/시간 필드에 대 한 월 (m), 일 (d) 및 연도 (y)의 순서를 지정 합니다. 기본 순서는 ymd입니다. 동일한 원본 파일에 대해 여러 주문 형식을 지정 하려면-dt 옵션을 사용 합니다.  
   
 ymd \|  
-ydm 및 amy는 동일한 입력 형식을 허용 합니다. 모두 날짜의 시작 또는 끝에 연도를 사용할 수 있습니다. 예를 들어 **ydm** 및 adate **dmy** 형식의 경우 입력 파일에 2013-02-03 또는 02-03-2013이 있을 수 있습니다.  
+ydm 및 amy는 동일한 입력 형식을 허용 합니다. 모두 날짜의 시작 또는 끝에 연도를 사용할 수 있습니다. 예를 들어 **ydm** 및 adate  형식의 경우 입력 파일에 2013-02-03 또는 02-03-2013이 있을 수 있습니다.  
   
 ydm  
 Datetime 및 smalldatetime 데이터 형식의 열에는 ydm 형식의 입력만 로드할 수 있습니다. 데이터 형식의 datetime2, date 또는 datetimeoffset 열에 ydm 값을 로드할 수 없습니다.  
@@ -376,7 +376,7 @@ dym
 보다 포괄적인 서식 지정 정보는 [dwloader의 데이터 형식 변환 규칙](dwloader-data-type-conversion-rules.md)을 참조 하세요.  
   
 **-dt** *datetime_format_file*  
-각 datetime 형식은 *datetime_format_file*이라는 파일에 지정 됩니다. 명령줄 매개 변수와 달리 공백을 포함 하는 파일 매개 변수는 큰따옴표로 묶어야 합니다. 데이터를 로드할 때 datetime 형식을 변경할 수 없습니다. 원본 데이터 파일 및 대상 테이블의 해당 열은 동일한 형식 이어야 합니다.  
+각 datetime 형식은 *datetime_format_file* 이라는 파일에 지정 됩니다. 명령줄 매개 변수와 달리 공백을 포함 하는 파일 매개 변수는 큰따옴표로 묶어야 합니다. 데이터를 로드할 때 datetime 형식을 변경할 수 없습니다. 원본 데이터 파일 및 대상 테이블의 해당 열은 동일한 형식 이어야 합니다.  
   
 각 줄에는 대상 테이블의 열 이름과 해당 날짜/시간 형식이 포함 됩니다.  
   
@@ -440,7 +440,7 @@ SQL Server 2012 PDW부터 제어 노드는 기본적으로 각 로드에 대 한
   
 -Rt 값과 함께 사용 하는 경우, 거부 된 행 수가 reject_value을 초과 하면 로더가 로드를 중지 합니다.  
   
--Rt 백분율을 사용 하는 경우 로더는 간격 (-rs 옵션)에서 백분율을 계산 합니다. 따라서 실패 한 행의 백분율이 *reject_value*를 초과할 수 있습니다.  
+-Rt 백분율을 사용 하는 경우 로더는 간격 (-rs 옵션)에서 백분율을 계산 합니다. 따라서 실패 한 행의 백분율이 *reject_value* 를 초과할 수 있습니다.  
   
 **-rs** *reject_sample_size*  
 `-rt percentage`증분 백분율 검사를 지정 하는 옵션과 함께 사용 됩니다. 예를 들어 reject_sample_size가 1000 인 경우 로더는 1000 행을 로드 하려고 시도한 후 실패 한 행의 백분율을 계산 합니다. 각 추가 1000 행을 로드 하려고 시도한 후 실패 한 행의 백분율을 다시 계산 합니다.  
@@ -462,11 +462,11 @@ Char, nchar, varchar 및 nvarchar 필드의 왼쪽과 오른쪽에서 공백 문
 **-m**  
 로드의 두 번째 단계에서 다중 트랜잭션 모드를 사용 합니다. 준비 테이블에서 분산 테이블로 데이터를 로드 하는 경우  
   
-**-M**을 사용 하 여 SQL Server PDW를 수행 하 고 커밋을 병렬로 로드 합니다. 이는 기본 로드 모드 보다 훨씬 더 빠르게 수행 되지만 트랜잭션이 안전 하지 않습니다.  
+**-M** 을 사용 하 여 SQL Server PDW를 수행 하 고 커밋을 병렬로 로드 합니다. 이는 기본 로드 모드 보다 훨씬 더 빠르게 수행 되지만 트랜잭션이 안전 하지 않습니다.  
   
-**-M을 사용**하지 않을 경우 SQL Server PDW는 각 계산 노드 내의 배포에서 순차적으로 부하를 수행 하 고 커밋합니다. 이 방법은 다중 트랜잭션 모드 보다 느리지만 트랜잭션을 안전 하 게 보호 합니다.  
+**-M을 사용** 하지 않을 경우 SQL Server PDW는 각 계산 노드 내의 배포에서 순차적으로 부하를 수행 하 고 커밋합니다. 이 방법은 다중 트랜잭션 모드 보다 느리지만 트랜잭션을 안전 하 게 보호 합니다.  
   
-**-m** 은 *append*, *reload*및 *upsert*의 경우 선택 사항입니다.  
+**-m** 은 *append*, *reload* 및 *upsert* 의 경우 선택 사항입니다.  
   
 fastappend에는 **-m** 이 필요 합니다.  
   
@@ -490,7 +490,7 @@ CU 7.4 update에서 사용할 수 있으며 로드할 수 있는 최대 행 길�
 ## <a name="return-code-values"></a>반환 코드 값  
 0 (성공) 또는 기타 정수 값 (오류)  
   
-명령 창이 나 배치 파일에서를 사용 `errorlevel` 하 여 반환 코드를 표시 합니다. 예를 들면 다음과 같습니다.  
+명령 창이 나 배치 파일에서를 사용 `errorlevel` 하 여 반환 코드를 표시 합니다. 예를 들어:  
   
 ```  
 dwloader  
@@ -528,14 +528,14 @@ For the maximum number of loads per appliance, see [Minimum and Maximum Values](
 **Dwloader** 는 트랜잭션 프로세스이 고 실패 시 정상적으로 롤백되기 때문에 대량 로드가 성공적으로 완료 되 면 롤백할 수 없습니다. 활성 **dwloader** 프로세스를 취소 하려면 CTRL + C를 입력 합니다.  
   
 ## <a name="limitations-and-restrictions"></a>제한 사항  
-동시에 발생 하는 모든 로드의 총 크기는 데이터베이스의 LOG_SIZE 보다 작아야 하며, 모든 동시 로드의 총 크기가 LOG_SIZE의 50% 미만인 것이 좋습니다. 이러한 크기 제한을 얻으려면 큰 부하를 여러 일괄 처리로 분할할 수 있습니다. LOG_SIZE에 대 한 자세한 내용은 [CREATE DATABASE](../t-sql/statements/create-database-transact-sql.md?view=aps-pdw-2016) 를 참조 하세요.  
+동시에 발생 하는 모든 로드의 총 크기는 데이터베이스의 LOG_SIZE 보다 작아야 하며, 모든 동시 로드의 총 크기가 LOG_SIZE의 50% 미만인 것이 좋습니다. 이러한 크기 제한을 얻으려면 큰 부하를 여러 일괄 처리로 분할할 수 있습니다. LOG_SIZE에 대 한 자세한 내용은 [CREATE DATABASE](../t-sql/statements/create-database-transact-sql.md?view=aps-pdw-2016&preserve-view=true) 를 참조 하세요.  
   
 하나의 load 명령을 사용 하 여 여러 파일을 로드할 때 거부 된 모든 행은 동일한 거부 파일에 기록 됩니다. 거부 파일에는 거부 된 각 행이 포함 된 입력 파일이 표시 되지 않습니다.  
   
 빈 문자열은 구분 기호로 사용 하면 안 됩니다. 빈 문자열이 행 구분 기호로 사용 되는 경우 로드는 실패 합니다. 열 구분 기호로 사용 하는 경우 로드는 구분 기호를 무시 하 고 계속 해 서 기본 "|"를 열 구분 기호로 사용 합니다. 문자열 구분 기호로 사용 하는 경우 빈 문자열이 무시 되 고 기본 동작이 적용 됩니다.  
   
 ## <a name="locking-behavior"></a>잠금 동작  
-**dwloader** 잠금 동작은 *load_mode_option*에 따라 달라 집니다.  
+**dwloader** 잠금 동작은 *load_mode_option* 에 따라 달라 집니다.  
   
 -   **추가** -추가가 권장 및 가장 일반적인 옵션입니다. 추가는 준비 테이블에 데이터를 로드 합니다. 잠금은 아래에 자세히 설명 되어 있습니다.  
   
@@ -565,10 +565,10 @@ For the maximum number of loads per appliance, see [Minimum and Maximum Values](
   
 위의 표에서는 추가 모드를 힙 또는 CI (클러스터형 인덱스) 테이블로 로드 하 여 다중 트랜잭션 플래그를 사용 하거나 사용 하지 않고 빈 테이블이 나 비어 있지 않은 테이블에 로드 하는 **dwloader** 를 보여 줍니다. 이러한 각 부하 조합의 잠금 및 로깅 동작이 표에 표시 됩니다. 예를 들어, 추가 모드를 사용 하 여 다중 트랜잭션 모드를 사용 하지 않는 클러스터형 인덱스에 추가 모드를 로드 하 고 빈 테이블로 로드 하는 경우 PDW는 테이블에 대 한 배타적 잠금을 만들고 로깅은 최소화 합니다. 즉, 고객은 두 번째 단계와 쿼리를 빈 테이블로 동시에 로드할 수 없습니다. 그러나 동일한 구성을 사용 하 여 비어 있지 않은 테이블에 로드 하는 경우 PDW는 테이블에 대해 배타 잠금을 실행 하지 않으며 동시성이 가능 합니다. 그러나 전체 로깅이 발생 하 여 프로세스가 느려집니다.  
   
-## <a name="examples"></a>예제  
+## <a name="examples"></a>예  
   
 ### <a name="a-simple-dwloader-example"></a>A. Simple dwloader 예  
-다음 예에서는 필수 옵션만 선택 하 여 **로더** 를 시작 하는 방법을 보여 줍니다. 기타 옵션은 *loadparamfile.txt*전역 구성 파일에서 가져옵니다.  
+다음 예에서는 필수 옵션만 선택 하 여 **로더** 를 시작 하는 방법을 보여 줍니다. 기타 옵션은 *loadparamfile.txt* 전역 구성 파일에서 가져옵니다.  
   
 SQL Server 인증을 사용 하는 예입니다.  
   
@@ -598,7 +598,7 @@ dwloader.exe -U mylogin -P 123jkl -S 10.192.63.148  -i C:\SQLData\AWDimEmployees
 ```  
   
 ### <a name="b-load-data-into-an-adventureworks-table"></a>B. AdventureWorks 테이블로 데이터 로드  
-다음 예는 **AdventureWorksPDW2012**으로 데이터를 로드 하는 일괄 처리 스크립트의 일부입니다.  전체 스크립트를 보려면 **AdventureWorksPDW2012** 설치 패키지와 함께 제공 되는 aw_create.bat 파일을 엽니다. 
+다음 예는 **AdventureWorksPDW2012** 으로 데이터를 로드 하는 일괄 처리 스크립트의 일부입니다.  전체 스크립트를 보려면 **AdventureWorksPDW2012** 설치 패키지와 함께 제공 되는 aw_create.bat 파일을 엽니다. 
 
 <!-- Missing link
 For more information, see [Install AdventureWorksPDW2012](install-adventureworkspdw2012.md).  
@@ -695,7 +695,7 @@ C:\Program Files\Microsoft SQL Server Parallel Data Warehouse\100\dwloader.exe -
   
 -   *-r \r\n* DimAccount.txt의 각 행을 캐리지 리턴 및 줄 바꿈 문자로 지정 합니다.  
   
--   *-U <login_name>-P <password> * 로드를 수행할 수 있는 권한이 있는 로그인에 대 한 로그인 및 암호를 지정 합니다.  
+-   *-U <login_name>-P <password>* 로드를 수행할 수 있는 권한이 있는 로그인에 대 한 로그인 및 암호를 지정 합니다.  
   
 
 <!-- MISSING LINK

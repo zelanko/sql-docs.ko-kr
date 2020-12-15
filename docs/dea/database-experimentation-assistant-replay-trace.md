@@ -12,12 +12,12 @@ ms.topic: conceptual
 author: pochiraju
 ms.author: rajpo
 ms.reviewer: mathoma
-ms.openlocfilehash: fa37fb348aa94e59ac3816d523cc5a30bc314713
-ms.sourcegitcommit: 71d2389cf27156fa0404a6e6f65fb7a61c40789a
+ms.openlocfilehash: b91385f587668b17bd9cde9f173cebacce48dc91
+ms.sourcegitcommit: 3bd188e652102f3703812af53ba877cce94b44a9
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 10/01/2020
-ms.locfileid: "91636173"
+ms.lasthandoff: 12/15/2020
+ms.locfileid: "97489547"
 ---
 # <a name="replay-a-trace-in-database-experimentation-assistant"></a>데이터베이스 실험 도우미에서 추적 재생
 
@@ -31,14 +31,14 @@ ms.locfileid: "91636173"
 
 먼저 기존 프로덕션 환경을 나타내는 대상 1에 대해 추적 재생을 수행 해야 합니다.
 
-1. DEA의 왼쪽 탐색 모음에서 화살표 아이콘을 선택 하 고 **모든 재생** 페이지에서 **새 재생**을 선택 합니다.
+1. DEA의 왼쪽 탐색 모음에서 화살표 아이콘을 선택 하 고 **모든 재생** 페이지에서 **새 재생** 을 선택 합니다.
 
     ![DEA에서 재생 만들기](./media/database-experimentation-assistant-replay-trace/dea-create-replay.png)
 
     > [!NOTE]
     > Distributed Replay 컨트롤러 컴퓨터를 사용 하려면 원격으로 연결 하는 데 사용 하는 사용자 계정에 대 한 권한이 필요 합니다.
 
-2. **새 재생** 페이지의 **재생 세부 정보**에서 다음 정보를 입력 하거나 선택 합니다.
+2. **새 재생** 페이지의 **재생 세부 정보** 에서 다음 정보를 입력 하거나 선택 합니다.
 
     - **재생 이름**: 추적 재생의 이름을 입력 합니다.
     - **원본 추적 형식**: 원본 추적 파일의 형식 (Trace 또는 xevent)을 지정 합니다.
@@ -52,11 +52,11 @@ ms.locfileid: "91636173"
 
 3. **예, 데이터베이스를 수동으로 복원** 했습니다. 확인란을 선택 하 여 데이터베이스를 복원 했는지 확인 합니다.
 
-4. **SQL Server 연결 세부 정보**에서 다음 정보를 입력 하거나 선택 합니다.
+4. **SQL Server 연결 세부 정보** 에서 다음 정보를 입력 하거나 선택 합니다.
 
     - **서버 유형**: SQL Server의 유형 (**SqlServer**, **AzureSqlDb**, **AzureSqlManagedInstance**)을 지정 합니다.
     - **서버 이름**: SQL Server의 서버 이름 또는 IP 주소를 지정 합니다.
-    - **인증 유형**: 인증 유형으로 **Windows**를 선택 합니다.
+    - **인증 유형**: 인증 유형으로 **Windows** 를 선택 합니다.
     - **데이터베이스 이름**: 서버 쪽 추적을 시작할 데이터베이스의 이름을 입력 합니다. 데이터베이스를 지정 하지 않으면 서버에 있는 모든 데이터베이스에서 추적이 캡처됩니다.
 
 5. 시나리오에 적절 한 **연결 암호화** 및 **서버 인증서 신뢰** 확인란을 선택 하거나 선택 취소 합니다.
@@ -67,7 +67,7 @@ ms.locfileid: "91636173"
 
 - 필요한 정보를 입력 하거나 선택한 후 **시작** 을 선택 하 여 추적 재생을 시작 합니다.
 
-  입력 한 정보가 유효 하면 Distributed Replay 프로세스가 시작 됩니다. 그렇지 않으면 잘못 된 정보가 있는 텍스트 상자가 빨간색으로 강조 표시 됩니다. 입력 한 값이 올바른지 확인 한 다음 **시작**을 선택 합니다.
+  입력 한 정보가 유효 하면 Distributed Replay 프로세스가 시작 됩니다. 그렇지 않으면 잘못 된 정보가 있는 텍스트 상자가 빨간색으로 강조 표시 됩니다. 입력 한 값이 올바른지 확인 한 다음 **시작** 을 선택 합니다.
 
   ![대상 1에 대 한 재생 진행률](./media/database-experimentation-assistant-replay-trace/dea-run-replay-target1.png)
 
@@ -98,7 +98,7 @@ ms.locfileid: "91636173"
 
 **Q: 둘 이상의 재생을 동시에 시작할 수 있나요?**
 
-예. 단, **컨트롤러와 클라이언트**에서 선택한 것과 동일한 컴퓨터 집합이 아닙니다. 컨트롤러와 클라이언트는 사용 중입니다. **컨트롤러 Plus 클라이언트** 에서 별도의 컴퓨터 집합을 설정 하 여 병렬 재생을 시작 합니다.
+예. 단, **컨트롤러와 클라이언트** 에서 선택한 것과 동일한 컴퓨터 집합이 아닙니다. 컨트롤러와 클라이언트는 사용 중입니다. **컨트롤러 Plus 클라이언트** 에서 별도의 컴퓨터 집합을 설정 하 여 병렬 재생을 시작 합니다.
 
 **Q: 재생은 일반적으로 완료 하는 데 걸리는 시간**
 
@@ -139,7 +139,7 @@ DEA는 성능 관련 정보를 포함 하는 추적 이벤트를 캡처합니다
 
 - 컨트롤러 컴퓨터에서 Distributed Replay controller 서비스가 실행 중인지 확인 합니다. 확인 하려면 Distributed Replay 관리 도구 (명령 실행)를 사용 `dreplay.exe status -f 1` 합니다.
 - 재생이 원격으로 시작 되는 경우:
-  - DEA를 실행 하는 컴퓨터가 컨트롤러를 성공적으로 ping 할 수 있는지 확인 합니다. **재생 환경 구성** 페이지의 지침에 따라 방화벽 설정에서 연결을 허용 하는지 확인 합니다. 자세한 내용은 [SQL Server Distributed Replay](../tools/distributed-replay/sql-server-distributed-replay.md?view=sql-server-2017)문서를 참조 하세요.
+  - DEA를 실행 하는 컴퓨터가 컨트롤러를 성공적으로 ping 할 수 있는지 확인 합니다. **재생 환경 구성** 페이지의 지침에 따라 방화벽 설정에서 연결을 허용 하는지 확인 합니다. 자세한 내용은 [SQL Server Distributed Replay](../tools/distributed-replay/sql-server-distributed-replay.md)문서를 참조 하세요.
   - Distributed Replay 컨트롤러의 사용자에 대해 DCOM 원격 시작 및 원격 활성화가 허용 되는지 확인 합니다.
   - Distributed Replay 컨트롤러의 사용자에 대해 DCOM 원격 액세스 사용자 권한이 허용 되는지 확인 합니다.
 
@@ -163,6 +163,6 @@ UNC 경로는 Distributed Replay와 호환 되지 않습니다. Distributed Repl
   
 SQL Server 2017에 대 한 최신 누적 업데이트 1에서이 문제가 해결 되었습니다. [SQL Server 2017에 대 한 최신 버전의 누적 업데이트 1](https://support.microsoft.com/help/4038634/cumulative-update-1-for-sql-server-2017)을 다운로드 합니다.
 
-## <a name="see-also"></a>참조
+## <a name="see-also"></a>참고 항목
 
 - 제안 된 변경 내용에 대 한 정보를 얻는 데 도움이 되는 분석 보고서를 만들려면 [보고서 만들기](database-experimentation-assistant-create-report.md)를 참조 하세요.

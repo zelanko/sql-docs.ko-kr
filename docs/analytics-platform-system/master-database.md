@@ -9,12 +9,12 @@ ms.date: 04/17/2018
 ms.author: murshedz
 ms.reviewer: martinle
 ms.custom: seo-dt-2019
-ms.openlocfilehash: 7bf3928bfb21d34d0f60e6c52be8dae43621e4bd
-ms.sourcegitcommit: 7345e4f05d6c06e1bcd73747a4a47873b3f3251f
+ms.openlocfilehash: 526f7c7bea8d7ed1e7499649d929f6c732ab07a3
+ms.sourcegitcommit: 3bd188e652102f3703812af53ba877cce94b44a9
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 08/24/2020
-ms.locfileid: "88766742"
+ms.lasthandoff: 12/15/2020
+ms.locfileid: "97489683"
 ---
 # <a name="master-database---parallel-data-warehouse"></a>Master 데이터베이스-병렬 데이터 웨어하우스
 SQL Server PDW master 데이터베이스는 어플라이언스 수준 로그인 정보 및 데이터베이스 카탈로그를 저장 합니다. 이는 컨트롤 노드에 있는 SQL Server master 데이터베이스입니다. 따라서 master에서 SQL Server에 제공 하는 것과 비슷한 기능을 SQL Server PDW 합니다.  
@@ -38,13 +38,13 @@ SQL Server PDW master 데이터베이스는 어플라이언스 수준 로그인 
   
 -   Master에 대 한 사용 권한을 수정 합니다.  
   
--   **DBCC SHRINKLOG**를 실행 합니다.  
+-   **DBCC SHRINKLOG** 를 실행 합니다.  
   
 ## <a name="related-tasks"></a>관련 작업  
   
 |Task|Description|  
 |--------|---------------|  
-|Master의 전체 백업을 만듭니다.|예:<br /><br />`BACKUP DATABASE master TO backup_directory;`<br /><br />자세한 내용은 [BACKUP DATABASE](../t-sql/statements/backup-transact-sql.md?view=aps-pdw-2016)를 참조 하세요.|  
+|Master의 전체 백업을 만듭니다.|예:<br /><br />`BACKUP DATABASE master TO backup_directory;`<br /><br />자세한 내용은 [BACKUP DATABASE](../t-sql/statements/backup-transact-sql.md?view=aps-pdw-2016&preserve-view=true)를 참조 하세요.|  
 |master 데이터베이스 복원|Master 데이터베이스를 복원 하려면 Configuration Manager 도구의 [Master 데이터베이스 복원](restore-the-master-database.md) 페이지를 사용 합니다.|  
 |데이터베이스 카탈로그 정보를 봅니다.|`SELECT * FROM master.sys.databases;`|  
 |시스템 전체 로그인 및 사용 권한 정보를 확인 합니다.|`SELECT * FROM master.sys.server_permissions;`<br /><br />`SELECT * FROM master.sys.server_principals;`<br /><br />`SELECT * FROM master.sys.sql_logins;`|  

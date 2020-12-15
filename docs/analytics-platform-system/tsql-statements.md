@@ -9,24 +9,24 @@ ms.date: 04/17/2018
 ms.author: murshedz
 ms.reviewer: martinle
 ms.custom: seo-dt-2019
-ms.openlocfilehash: 078c0364e64ddca8974544734e8e5a45950e14e0
-ms.sourcegitcommit: 7345e4f05d6c06e1bcd73747a4a47873b3f3251f
+ms.openlocfilehash: df390f724f6903a1cd87deee1f9d48b363ce4f57
+ms.sourcegitcommit: 3bd188e652102f3703812af53ba877cce94b44a9
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 08/24/2020
-ms.locfileid: "88778402"
+ms.lasthandoff: 12/15/2020
+ms.locfileid: "97489631"
 ---
 # <a name="t-sql-statements-for-parallel-data-warehouse"></a>병렬 데이터 웨어하우스의 t-sql 문
 PDW (병렬 데이터 웨어하우스)를 SQL Server 하는 APS (분석 플랫폼 시스템)에 대 한 transact-sql (T-sql) 문
 
 ## <a name="data-definition-language-ddl-statements"></a>데이터 정의 언어(DDL) 문
-* [ALTER DATABASE](../t-sql/statements/alter-database-transact-sql.md?view=aps-pdw-2016)
+* [ALTER DATABASE](../t-sql/statements/alter-database-transact-sql.md?view=aps-pdw-2016&preserve-view=true)
 * [ALTER INDEX](../t-sql/statements/alter-index-transact-sql.md)
 * [ALTER PROCEDURE](../t-sql/statements/alter-procedure-transact-sql.md)
 * [ALTER SCHEMA](../t-sql/statements/alter-schema-transact-sql.md)
 * [ALTER TABLE](../t-sql/statements/alter-table-transact-sql.md)
 * [CREATE COLUMNSTORE INDEX](../t-sql/statements/create-columnstore-index-transact-sql.md)
-* [CREATE DATABASE](../t-sql/statements/create-database-transact-sql.md?view=aps-pdw-2016)
+* [CREATE DATABASE](../t-sql/statements/create-database-transact-sql.md?view=aps-pdw-2016&preserve-view=true)
 * [CREATE DATABASE SCOPED CREDENTIAL](../t-sql/statements/create-database-scoped-credential-transact-sql.md)
 * [CREATE EXTERNAL DATA SOURCE](../t-sql/statements/create-external-data-source-transact-sql.md)
 * [CREATE EXTERNAL FILE FORMAT](../t-sql/statements/create-external-file-format-transact-sql.md)
@@ -48,7 +48,7 @@ PDW (병렬 데이터 웨어하우스)를 SQL Server 하는 APS (분석 플랫�
 * [DROP TABLE](../t-sql/statements/drop-table-transact-sql.md)
 * [DROP SCHEMA](../t-sql/statements/drop-schema-transact-sql.md)
 * [DROP VIEW](../t-sql/statements/drop-view-transact-sql.md)
-* [바꾸면](../t-sql/statements/rename-transact-sql.md)
+* [RENAME](../t-sql/statements/rename-transact-sql.md)
 * [TRUNCATE TABLE](../t-sql/statements/truncate-table-transact-sql.md)
 * [UPDATE STATISTICS](../t-sql/statements/update-statistics-transact-sql.md)
 
@@ -70,7 +70,7 @@ PDW (병렬 데이터 웨어하우스)를 SQL Server 하는 APS (분석 플랫�
 * [SELECT](../t-sql/queries/select-transact-sql.md)
 * [WITH common_table_expression](../t-sql/queries/with-common-table-expression-transact-sql.md)
 * [EXCEPT 및 INTERSECT](../t-sql/language-elements/set-operators-except-and-intersect-transact-sql.md)
-* [하겠습니다](../t-sql/queries/explain-transact-sql.md)
+* [EXPLAIN](../t-sql/queries/explain-transact-sql.md)
 * [FROM](../t-sql/queries/from-transact-sql.md)
 * [PIVOT 및 UNPIVOT 사용](../t-sql/queries/from-using-pivot-and-unpivot.md)
 * [GROUP BY](../t-sql/queries/select-group-by-transact-sql.md)
@@ -91,7 +91,7 @@ PDW (병렬 데이터 웨어하우스)를 SQL Server 하는 APS (분석 플랫�
 * [ALTER DATABASE ENCRYPTION KEY](../t-sql/statements/alter-database-encryption-key-transact-sql.md)
 * [ALTER LOGIN](../t-sql/statements/alter-login-transact-sql.md)
 * [ALTER MASTER KEY](../t-sql/statements/alter-master-key-transact-sql.md)
-* [ALTER ROLE](../t-sql/statements/alter-role-transact-sql.md)
+* [ALTER_ROLE](../t-sql/statements/alter-role-transact-sql.md)
 * [ALTER USER](../t-sql/statements/alter-user-transact-sql.md)
 * [BACKUP CERTIFICATE](../t-sql/statements/backup-certificate-transact-sql.md)
 * [CLOSE MASTER KEY](../t-sql/statements/close-master-key-transact-sql.md)
@@ -100,7 +100,7 @@ PDW (병렬 데이터 웨어하우스)를 SQL Server 하는 APS (분석 플랫�
 * [CREATE LOGIN](../t-sql/statements/create-login-transact-sql.md)
 * [CREATE MASTER KEY](../t-sql/statements/create-master-key-transact-sql.md)
 * [CREATE ROLE](../t-sql/statements/create-role-transact-sql.md)
-* [CREATE USER](../t-sql/statements/create-user-transact-sql.md)
+* [사용자 만들기](../t-sql/statements/create-user-transact-sql.md)
 * [DROP CERTIFICATE](../t-sql/statements/drop-certificate-transact-sql.md)
 * [DROP DATABASE ENCRYPTION KEY](../t-sql/statements/drop-database-encryption-key-transact-sql.md)
 * [DROP LOGIN](../t-sql/statements/drop-login-transact-sql.md)

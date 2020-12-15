@@ -9,12 +9,12 @@ ms.date: 06/27/2018
 ms.author: murshedz
 ms.reviewer: martinle
 ms.custom: seo-dt-2019
-ms.openlocfilehash: 693e724256d8792581770e7fde4f4e6c991701bf
-ms.sourcegitcommit: 1a544cf4dd2720b124c3697d1e62ae7741db757c
+ms.openlocfilehash: 590ca4149bc93fd2c22d04f22c3c47b7389245a2
+ms.sourcegitcommit: 3bd188e652102f3703812af53ba877cce94b44a9
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 12/14/2020
-ms.locfileid: "97420170"
+ms.lasthandoff: 12/15/2020
+ms.locfileid: "97489610"
 ---
 # <a name="whats-new-in-analytics-platform-system-a-scale-out-mpp-data-warehouse"></a>확장 MPP 데이터 웨어하우스의 분석 플랫폼 시스템의 새로운 기능
 최신 어플라이언스 업데이트 Microsoft Analytics Platform System (APS)의 새로운 기능을 참조 하세요. APS는 MPP SQL Server 병렬 데이터 웨어하우스를 호스팅하는 스케일 아웃 온-프레미스 어플라이언스입니다. 
@@ -45,13 +45,13 @@ CU 7.6으로 업그레이드 한 후 고객은 사용자가 만든 테이블의 
 릴리스 날짜-9 월 2019
 
 ### <a name="alter-external-data-source"></a>외부 데이터 원본 변경
-고객은 CU 7.5 업데이트를 사용 하 여 외부 데이터 원본 정의를 변경할 수 있습니다. Hadoop 이름 노드 고가용성을 사용 하는 고객은 이제 장애 조치 (failover) 발생 시 인수를 변경 하도록 데이터 원본을 변경할 수 있습니다. APS의 경우 위치, RESOURCE_MANAGER_LOCATION 및 자격 증명만 변경할 수 있습니다. 자세한 내용은 [alter external data source](../t-sql/statements/alter-external-data-source-transact-sql.md?view=sql-server-2017) 를 참조 하세요.
+고객은 CU 7.5 업데이트를 사용 하 여 외부 데이터 원본 정의를 변경할 수 있습니다. Hadoop 이름 노드 고가용성을 사용 하는 고객은 이제 장애 조치 (failover) 발생 시 인수를 변경 하도록 데이터 원본을 변경할 수 있습니다. APS의 경우 위치, RESOURCE_MANAGER_LOCATION 및 자격 증명만 변경할 수 있습니다. 자세한 내용은 [alter external data source](../t-sql/statements/alter-external-data-source-transact-sql.md?view=sql-server-2017&preserve-view=true) 를 참조 하세요.
 
 ### <a name="cdh-515-and-516-support-with-polybase"></a>PolyBase를 사용한 CDH 5.15 및 5.16 지원
 CU 7.5 업데이트를 사용 하는 APS의 PolyBase는 이제 Cloudera에서 CDH 5.15 및 5.16 버전의 Hadoop 배포를 지원 합니다. Cdh .x 버전의 경우 옵션 6을 사용 합니다. 
 
 ### <a name="try_convert-and-try_cast-support"></a>Try_Convert 및 Try_Cast 지원
-CU 7.5 AP는 이제 [TRY_CAST](../t-sql/functions/try-cast-transact-sql.md?view=sql-server-2017) 및 [TRY_CONVERT](../t-sql/functions/try-convert-transact-sql.md?view=sql-server-2017) tsql 함수를 지원 합니다. 이러한 함수는 모두 변환이 성공 하는 경우 지정 된 데이터 형식으로 변환 된 값을 반환 합니다. 그렇지 않으면 null을 반환 합니다.
+CU 7.5 AP는 이제 [TRY_CAST](../t-sql/functions/try-cast-transact-sql.md?view=sql-server-2017&preserve-view=true) 및 [TRY_CONVERT](../t-sql/functions/try-convert-transact-sql.md?view=sql-server-2017&preserve-view=true) tsql 함수를 지원 합니다. 이러한 함수는 모두 변환이 성공 하는 경우 지정 된 데이터 형식으로 변환 된 값을 반환 합니다. 그렇지 않으면 null을 반환 합니다.
 
 <a name="h2-aps-cu7.4"></a>
 ## <a name="aps-cu74"></a>APS CU7.4
@@ -150,7 +150,7 @@ SMO를 사용 하는 대신 메타 데이터 호출에 대해 카탈로그 개�
 ### <a name="bug-fixes"></a>버그 수정
 Microsoft는 APS CU 7.1을 사용 하 여 SQL Server 2016 SP2 CU2로 업그레이드 했습니다. 업그레이드는 아래에 설명 된 몇 가지 문제를 해결 합니다.
 
-| 제목 | 설명 |
+| 제목 | Description |
 |:---|:---|
 | **잠재적 튜플 이동 교착 상태** |업그레이드는 분산 트랜잭션과 튜플 이동 기 백그라운드 스레드에서 교착 상태의 긴 가능성을 수정 합니다. CU 7.1을 설치한 후 TF634를 사용 하 여 시작 매개 변수 또는 전역 추적 플래그로 SQL Server 튜플 이동 기를 중지 하는 고객은이를 안전 하 게 제거할 수 있습니다. | 
 | **특정 지연/리드 쿼리 실패** |오류가 발생 하는 중첩 된 지연/리드 함수를 사용 하는 CCI 테이블의 특정 쿼리는 이제이 업그레이드로 수정 되었습니다. | 

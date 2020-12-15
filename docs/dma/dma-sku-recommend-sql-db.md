@@ -14,12 +14,12 @@ helpviewer_keywords:
 ms.assetid: ''
 author: rajeshsetlem
 ms.author: rajpo
-ms.openlocfilehash: 035273939e2141b8497b5b0c38762fd7b7d47564
-ms.sourcegitcommit: ce15cbbcb0d5f820f328262ff5451818e508b480
+ms.openlocfilehash: 8d4de2aea0a9020a7f971f36dd011c435a3cec3d
+ms.sourcegitcommit: 3bd188e652102f3703812af53ba877cce94b44a9
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 11/20/2020
-ms.locfileid: "94947933"
+ms.lasthandoff: 12/15/2020
+ms.locfileid: "97489499"
 ---
 # <a name="identify-the-right-azure-sql-databasemanaged-instance-sku-for-your-on-premises-database"></a>온-프레미스 데이터베이스에 적합 한 Azure SQL Database/Managed Instance SKU 식별
 
@@ -38,13 +38,13 @@ SKU 권장 사항 기능을 사용 하면 데이터베이스를 호스트 하는
 
 다음은 SKU 권장 사항을 결정 하 고 DMA를 사용 하 여 Azure에서 해당 하는 단일 데이터베이스 또는 관리 되는 인스턴스를 프로 비전 하는 데 도움이 되는 지침입니다.
 
-## <a name="prerequisites"></a>사전 요구 사항
+## <a name="prerequisites"></a>필수 구성 요소
 
 - 최신 버전의 [DMA](https://aka.ms/get-dma)를 다운로드 하 여 설치 합니다. 이전 버전의 도구가 이미 있는 경우이를 열면 DMA를 업그레이드할지 묻는 메시지가 표시 됩니다.
 - 모든 스크립트를 실행 하는 데 필요한 [PowerShell 버전 5.1](https://www.microsoft.com/download/details.aspx?id=54616) 이상이 컴퓨터에 있는지 확인 합니다. 컴퓨터에 설치 된 PowerShell 버전을 확인 하는 방법에 대 한 자세한 내용은 [Windows powershell 5.1 다운로드 및 설치](/skypeforbusiness/set-up-your-computer-for-windows-powershell/download-and-install-windows-powershell-5-1)문서를 참조 하세요.
   > [!NOTE]
   > 데이터 수집 스크립트는 컴퓨터 정보를 수집 하기 위해 PowerShell 6에서 더 이상 사용 되지 않는 Get-WmiObject cmdlet을 사용 합니다. PowerShell 6 또는 7에서이 스크립트를 실행 하려면 WMI cmdlet을 최신 CIM cmdlet으로 바꾸어야 합니다.
-- 컴퓨터에 Azure Powershell 모듈이 설치 되어 있는지 확인 합니다. 자세한 내용은 [Azure PowerShell 모듈 설치](/powershell/azure/install-az-ps?view=azps-1.8.0)문서를 참조 하세요.
+- 컴퓨터에 Azure Powershell 모듈이 설치 되어 있는지 확인 합니다. 자세한 내용은 [Azure PowerShell 모듈 설치](/powershell/azure/install-az-ps?view=azps-1.8.0&preserve-view=true)문서를 참조 하세요.
 - 성능 카운터를 수집 하는 데 필요한 PowerShell 파일 **SkuRecommendationDataCollectionScript.ps1** 이 DMA 폴더에 설치 되어 있는지 확인 합니다.
 - 이 프로세스를 수행할 컴퓨터에 데이터베이스를 호스트 하는 컴퓨터에 대 한 관리자 권한이 있는지 확인 합니다.
 
@@ -239,4 +239,4 @@ HTML 파일에는이 정보가 그래픽 형식으로 포함 되어 있습니다
 
 ## <a name="next-step"></a>다음 단계
 
-- CLI에서 DMA를 실행 하는 명령에 대 한 전체 목록은 [명령줄에서 Data Migration Assistant 실행](./dma-commandline.md?view=sql-server-2017)문서를 참조 하세요.
+- CLI에서 DMA를 실행 하는 명령에 대 한 전체 목록은 [명령줄에서 Data Migration Assistant 실행](./dma-commandline.md)문서를 참조 하세요.

@@ -16,12 +16,12 @@ helpviewer_keywords:
 author: dphansen
 ms.author: davidph
 monikerRange: '>=sql-server-2016'
-ms.openlocfilehash: 55514f89487a06e16413f199f744013d2c4f8c90
-ms.sourcegitcommit: 1a544cf4dd2720b124c3697d1e62ae7741db757c
+ms.openlocfilehash: fb1f2af32479ef295d578b3fd6f0f7581524d960
+ms.sourcegitcommit: 3bd188e652102f3703812af53ba877cce94b44a9
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 12/14/2020
-ms.locfileid: "97461504"
+ms.lasthandoff: 12/15/2020
+ms.locfileid: "97489533"
 ---
 # <a name="sp_rxpredict"></a>sp_rxPredict  
 [!INCLUDE [SQL Server 2016 Windows only](../../includes/applies-to-version/sqlserver2016-windows-only.md)]
@@ -58,13 +58,13 @@ sp_rxPredict  ( @model, @input )
 저장 프로시저를 사용 하려면 인스턴스에서 SQLCLR을 사용 하도록 설정 해야 합니다.
 
 > [!NOTE]
-> 이 옵션을 enabing 보안에 영향을 미칩니다. 서버에서 SQLCLR을 사용 하도록 설정할 수 없는 경우 [TRANSACT-SQL PREDICT](../../t-sql/queries/predict-transact-sql.md?view=sql-server-2017) 함수와 같은 대체 구현을 사용 합니다.
+> 이 옵션을 사용 하도록 설정 하는 경우 보안에 영향을 줍니다. 서버에서 SQLCLR을 사용 하도록 설정할 수 없는 경우 [TRANSACT-SQL PREDICT](../../t-sql/queries/predict-transact-sql.md?view=sql-server-2017&preserve-view=true) 함수와 같은 대체 구현을 사용 합니다.
 
 사용자에 게 `EXECUTE` 데이터베이스에 대 한 권한이 필요 합니다.
 
 ### <a name="supported-algorithms"></a>지원되는 알고리즘
 
-모델을 만들고 학습 하려면 [SQL Server Machine Learning Services (r 또는 python)](../../machine-learning/sql-server-machine-learning-services.md)에서 제공 하는 r 또는 python에 대해 지원 되는 알고리즘 중 하나를 사용 하 고, [SQL Server 2016 R Services](../../machine-learning/r/sql-server-r-services.md), [SQL Server Machine Learning Server (독립 실행형) (r 또는 Python)](../../machine-learning/r/r-server-standalone.md)또는 [SQL Server 2016 R 서버 (독립 실행형)](../../machine-learning/r/r-server-standalone.md?view=sql-server-2016)를 사용 합니다.
+모델을 만들고 학습 하려면 [SQL Server Machine Learning Services (r 또는 python)](../../machine-learning/sql-server-machine-learning-services.md)에서 제공 하는 r 또는 python에 대해 지원 되는 알고리즘 중 하나를 사용 하 고, [SQL Server 2016 R Services](../../machine-learning/r/sql-server-r-services.md), [SQL Server Machine Learning Server (독립 실행형) (r 또는 Python)](../../machine-learning/r/r-server-standalone.md)또는 [SQL Server 2016 R 서버 (독립 실행형)](../../machine-learning/r/r-server-standalone.md?view=sql-server-2016&preserve-view=true)를 사용 합니다.
 
 #### <a name="r-revoscaler-models"></a>R: RevoScaleR 모델
 

@@ -9,12 +9,12 @@ ms.date: 04/17/2018
 ms.author: murshedz
 ms.reviewer: martinle
 ms.custom: seo-dt-2019
-ms.openlocfilehash: b1d817bae593d4083f3e4873d626e147e58d5c28
-ms.sourcegitcommit: 7345e4f05d6c06e1bcd73747a4a47873b3f3251f
+ms.openlocfilehash: b6e0bbfd3acbc7616fca0f180d6de3238a724231
+ms.sourcegitcommit: 3bd188e652102f3703812af53ba877cce94b44a9
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 08/24/2020
-ms.locfileid: "88767162"
+ms.lasthandoff: 12/15/2020
+ms.locfileid: "97489723"
 ---
 # <a name="acquire-and-configure-a-backup-server-for-parallel-data-warehouse"></a>병렬 데이터 웨어하우스의 백업 서버 가져오기 및 구성
 이 문서에서는 비 어플라이언스 Windows 시스템을 AP (Analytics Platform System) 및 PDW (병렬 데이터 웨어하우스)의 백업 및 복원 기능과 함께 사용할 백업 서버로 구성 하는 방법을 설명 합니다.  
@@ -89,7 +89,7 @@ PDW는 UNC 파일 공유를 통해 백업 서버에 액세스 합니다. 파일 
   
 5.  PDW에 백업 도메인 계정 자격 증명을 추가 합니다.  
   
-    예를 들면 다음과 같습니다.  
+    예를 들어:  
   
     ```sql  
     EXEC sp_pdw_add_network_credentials '10.192.147.63', 'seattle\david', '********';  
@@ -120,9 +120,9 @@ FROM DISK = '\\10.172.14.255\backups\yearly\Invoices2013Full'
   
 자세한 내용은 다음을 참조하세요. 
   
--   [BACKUP DATABASE](../t-sql/statements/backup-transact-sql.md?view=aps-pdw-2016)   
+-   [BACKUP DATABASE](../t-sql/statements/backup-transact-sql.md?view=aps-pdw-2016&preserve-view=true)   
   
--   [데이터베이스 복원](../t-sql/statements/restore-statements-transact-sql.md?view=aps-pdw-2016)  
+-   [데이터베이스 복원](../t-sql/statements/restore-statements-transact-sql.md?view=aps-pdw-2016&preserve-view=true)  
   
 ## <a name="security-notices"></a><a name="Security"></a>보안 알림  
 백업 서버가 어플라이언스의 개인 도메인에 가입 되어 있지 않습니다. 사용자의 네트워크에 있으며 사용자의 도메인과 개인 어플라이언스 도메인 간에 트러스트 관계가 없습니다.  
@@ -140,7 +140,7 @@ PDW에 사용자 이름과 암호를 저장 하려면 [sp_pdw_add_network_creden
   
 PDW에서 네트워크 자격 증명을 제거 하려면 [sp_pdw_remove_network_credentials](../relational-databases/system-stored-procedures/sp-pdw-remove-network-credentials-sql-data-warehouse.md) 저장 프로시저를 사용 합니다.  
   
-SQL Server PDW에 저장 된 모든 네트워크 자격 증명을 나열 하려면 [dm_pdw_network_credentials](../relational-databases/system-dynamic-management-views/sys-dm-pdw-network-credentials-transact-sql.md) 동적 관리 뷰를 사용 합니다.  
+SQL Server PDW에 저장 된 모든 네트워크 자격 증명을 나열 하려면 [sys.dm_pdw_network_credentials](../relational-databases/system-dynamic-management-views/sys-dm-pdw-network-credentials-transact-sql.md) 동적 관리 뷰를 사용 합니다.  
   
 ### <a name="secure-communications"></a>통신 보안  
   
@@ -150,4 +150,4 @@ SQL Server PDW에 저장 된 모든 네트워크 자격 증명을 나열 하려�
 - 로드 서버에서 보안 설정 \ 로컬 정책 \ 보안 옵션: Microsoft 네트워크 클라이언트: 디지털 서명 통신 (항상): 사용에 다음 그룹 정책 옵션을 설정 합니다.  
   
 ## <a name="see-also"></a>참고 항목  
-[Backup and Restore (백업 및 복원)](backup-and-restore-overview.md)  
+[Backup 및 복원](backup-and-restore-overview.md)  

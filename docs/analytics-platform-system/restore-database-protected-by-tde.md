@@ -9,12 +9,12 @@ ms.date: 04/17/2018
 ms.author: murshedz
 ms.reviewer: martinle
 ms.custom: seo-dt-2019
-ms.openlocfilehash: bfd345ff4f55311de41140d5675809838eb06297
-ms.sourcegitcommit: 7345e4f05d6c06e1bcd73747a4a47873b3f3251f
+ms.openlocfilehash: 3e794d8311aa79cb12a5be7326b93117518d716f
+ms.sourcegitcommit: 3bd188e652102f3703812af53ba877cce94b44a9
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 08/24/2020
-ms.locfileid: "88766722"
+ms.lasthandoff: 12/15/2020
+ms.locfileid: "97489653"
 ---
 # <a name="restore-a-database-protected-by-tde-in-parallel-data-warehouse"></a>병렬 데이터 웨어하우스에서 TDE로 보호 되는 데이터베이스 복원
 다음 단계를 사용 하 여 투명 한 데이터 암호화를 사용 하 여 암호화 된 데이터베이스를 복원 합니다.  
@@ -59,9 +59,9 @@ RESTORE DATABASE AdventureWorksPDW2012
 ```  
   
 ## <a name="see-also"></a>참고 항목  
-[BACKUP DATABASE](../t-sql/statements/backup-transact-sql.md?view=aps-pdw-2016)  
+[BACKUP DATABASE](../t-sql/statements/backup-transact-sql.md?view=aps-pdw-2016&preserve-view=true)  
 [마스터 키 만들기](../t-sql/statements/create-master-key-transact-sql.md)  
  [sp_pdw_add_network_credentials](../relational-databases/system-stored-procedures/sp-pdw-add-network-credentials-sql-data-warehouse.md)  
 [sp_pdw_database_encryption](../relational-databases/system-stored-procedures/sp-pdw-database-encryption-sql-data-warehouse.md)  
 [CREATE CERTIFICATE](../t-sql/statements/create-certificate-transact-sql.md)  
-[데이터베이스 복원](../t-sql/statements/restore-statements-transact-sql.md?view=aps-pdw-2016)
+[데이터베이스 복원](../t-sql/statements/restore-statements-transact-sql.md?view=aps-pdw-2016&preserve-view=true)
