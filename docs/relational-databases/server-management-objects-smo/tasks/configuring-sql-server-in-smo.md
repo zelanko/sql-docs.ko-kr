@@ -14,13 +14,13 @@ helpviewer_keywords:
 ms.assetid: 0a372643-15cb-45a7-8665-04f1215df8ed
 author: markingmyname
 ms.author: maghan
-monikerRange: =azuresqldb-current||=azure-sqldw-latest||>=sql-server-2016||=sqlallproducts-allversions||>=sql-server-linux-2017||=azuresqldb-mi-current
-ms.openlocfilehash: 82b797bdf365b5b1226f63bae31047f4c6aa29c3
-ms.sourcegitcommit: e700497f962e4c2274df16d9e651059b42ff1a10
+monikerRange: =azuresqldb-current||=azure-sqldw-latest||>=sql-server-2016||>=sql-server-linux-2017||=azuresqldb-mi-current
+ms.openlocfilehash: afb9cbc371fa962d9c7b63dea6e2a9fe82cbfae8
+ms.sourcegitcommit: 1a544cf4dd2720b124c3697d1e62ae7741db757c
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 08/17/2020
-ms.locfileid: "88498563"
+ms.lasthandoff: 12/14/2020
+ms.locfileid: "97439744"
 ---
 # <a name="configuring-sql-server-in-smo"></a>SMO에서 SQL Server 구성
 [!INCLUDE [SQL Server ASDB, ASDBMI, ASDW ](../../../includes/applies-to-version/sql-asdb-asdbmi-asa.md)]
@@ -36,13 +36,13 @@ ms.locfileid: "88498563"
   
  <xref:Microsoft.SqlServer.Management.Smo.UserOptions> 개체 속성은 산술 연산, ANSI 표준 및 트랜잭션과 관련된 현재 연결 동작에 대한 정보를 포함합니다.  
   
- <xref:Microsoft.SqlServer.Management.Smo.Configuration> 개체로 표시되는 일련의 구성 옵션도 있습니다. 이 개체는 **sp_configure** 저장 프로시저로 수정할 수 있는 옵션을 나타내는 일련의 속성을 포함합니다. **우선 순위 높임**, **복구 간격** 및 **네트워크 패킷 크기**와 같은 옵션은 인스턴스의 성능을 제어 [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] 합니다. 이러한 옵션은 대부분 동적으로 변경할 수 있지만, 먼저 값이 구성된 다음 [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] 인스턴스가 다시 시작될 때 변경되는 경우도 있습니다.  
+ <xref:Microsoft.SqlServer.Management.Smo.Configuration> 개체로 표시되는 일련의 구성 옵션도 있습니다. 이 개체는 **sp_configure** 저장 프로시저로 수정할 수 있는 옵션을 나타내는 일련의 속성을 포함합니다. **우선 순위 높임**, **복구 간격** 및 **네트워크 패킷 크기** 와 같은 옵션은 인스턴스의 성능을 제어 [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] 합니다. 이러한 옵션은 대부분 동적으로 변경할 수 있지만, 먼저 값이 구성된 다음 [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] 인스턴스가 다시 시작될 때 변경되는 경우도 있습니다.  
   
  모든 구성 옵션에는 <xref:Microsoft.SqlServer.Management.Smo.Configuration> 개체 속성이 있습니다. <xref:Microsoft.SqlServer.Management.Smo.ConfigProperty> 개체를 사용하여 전역 구성 설정을 수정할 수 있습니다. 대부분의 속성에는 최대값 및 최소값이 있으며 이것 역시 <xref:Microsoft.SqlServer.Management.Smo.ConfigProperty> 속성으로 저장됩니다. 이러한 속성에는 <xref:Microsoft.SqlServer.Management.Smo.ConfigurationBase.Alter%2A> 인스턴스에 변경 내용을 커밋하는 메서드가 필요 합니다 [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] .  
   
  <xref:Microsoft.SqlServer.Management.Smo.Configuration> 개체의 모든 구성 옵션은 시스템 관리자가 변경해야 합니다.  
   
-## <a name="examples"></a>예제  
+## <a name="examples"></a>예  
  다음 코드 예제를 사용하려면 애플리케이션을 만들 프로그래밍 환경, 프로그래밍 템플릿 및 프로그래밍 언어를 선택해야 합니다. 자세한 내용은 [Visual Studio .net에서 Visual C&#35; SMO 프로젝트 만들기](../../../relational-databases/server-management-objects-smo/how-to-create-a-visual-csharp-smo-project-in-visual-studio-net.md)를 참조 하세요.  
   
 ## <a name="modifying-sql-server-configuration-options-in-visual-basic"></a>Visual Basic에서 SQL Server 구성 옵션 수정  

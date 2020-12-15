@@ -18,13 +18,13 @@ helpviewer_keywords:
 ms.assetid: 2dec79cf-2baf-4c0f-8cbb-afb1a8654e1e
 author: markingmyname
 ms.author: maghan
-monikerRange: '>=aps-pdw-2016||=azuresqldb-current||=azure-sqldw-latest||>=sql-server-2016||=sqlallproducts-allversions||>=sql-server-linux-2017||=azuresqldb-mi-current'
-ms.openlocfilehash: 0c7a46f76385a724f1aa8622ac85301cdc7e12b6
-ms.sourcegitcommit: a5398f107599102af7c8cda815d8e5e9a367ce7e
+monikerRange: '>=aps-pdw-2016||=azuresqldb-current||=azure-sqldw-latest||>=sql-server-2016||>=sql-server-linux-2017||=azuresqldb-mi-current'
+ms.openlocfilehash: 7257b24d2908ea17977c0b08f0517d65d2481979
+ms.sourcegitcommit: 1a544cf4dd2720b124c3697d1e62ae7741db757c
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 10/13/2020
-ms.locfileid: "92006510"
+ms.lasthandoff: 12/14/2020
+ms.locfileid: "97439488"
 ---
 # <a name="sp_columns-transact-sql"></a>sp_columns(Transact-SQL)
 [!INCLUDE [sql-asdb-asdbmi-asa-pdw](../../includes/applies-to-version/sql-asdb-asdbmi-asa-pdw.md)]
@@ -50,19 +50,19 @@ sp_columns [ @table_name = ] object
   
 `[ \@table_owner = ] owner` 카탈로그 정보를 반환 하는 데 사용 되는 개체의 개체 소유자입니다. *owner* 는 **nvarchar (384)** 이며 기본값은 NULL입니다. 와일드카드 패턴 일치가 지원됩니다. *Owner* 를 지정 하지 않은 경우 기본 DBMS의 기본 개체 표시 규칙이 적용 됩니다.  
   
- 현재 사용자가 지정된 이름의 개체를 소유한 경우 해당 개체의 열이 반환됩니다. *Owner* 를 지정 하지 않고 현재 사용자가 지정 된 *개체*의 개체를 소유 하 고 있지 않은 경우 **sp_columns** 는 데이터베이스 소유자가 소유한 지정 된 *개체* 를 사용 하 여 개체를 찾습니다. 개체가 있으면 개체의 열이 반환됩니다.  
+ 현재 사용자가 지정된 이름의 개체를 소유한 경우 해당 개체의 열이 반환됩니다. *Owner* 를 지정 하지 않고 현재 사용자가 지정 된 *개체* 의 개체를 소유 하 고 있지 않은 경우 **sp_columns** 는 데이터베이스 소유자가 소유한 지정 된 *개체* 를 사용 하 여 개체를 찾습니다. 개체가 있으면 개체의 열이 반환됩니다.  
   
-`[ \@table_qualifier = ] qualifier` 개체 한정자의 이름입니다. *한정자* 는 **sysname**이며 기본값은 NULL입니다. 다양 한 DBMS 제품에서 개체 (_한정자_)에 대해 세 부분으로 구성 되는 이름을 지원**합니다.** _소유자_**.** _이름_). [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]에서 이 열은 데이터베이스 이름을 나타냅니다. 일부 제품에서는 개체 데이터베이스 환경의 서버 이름을 나타냅니다.  
+`[ \@table_qualifier = ] qualifier` 개체 한정자의 이름입니다. *한정자* 는 **sysname** 이며 기본값은 NULL입니다. 다양 한 DBMS 제품에서 개체 (_한정자_)에 대해 세 부분으로 구성 되는 이름을 지원 **합니다.** _소유자_**.** _이름_). [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]에서 이 열은 데이터베이스 이름을 나타냅니다. 일부 제품에서는 개체 데이터베이스 환경의 서버 이름을 나타냅니다.  
   
 `[ \@column_name = ] column` 단일 열 이며 카탈로그 정보의 열이 한 개만 필요한 경우에 사용 됩니다. *열* 은 **nvarchar (384)** 이며 기본값은 NULL입니다. *열* 을 지정 하지 않으면 모든 열이 반환 됩니다. 에서 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] *열* 은 **syscolumns** 테이블에 나열 된 열 이름을 나타냅니다. 와일드카드 패턴 일치가 지원됩니다. 상호 운용성을 극대화하려면 게이트웨이 클라이언트가 SQL-92 표준 패턴 일치(% 및 _ 와일드카드 문자)만을 사용해야 합니다.  
   
-`[ \@ODBCVer = ] ODBCVer` 사용 중인 ODBC의 버전입니다. *ODBCVer* 는 **int**이며 기본값은 2입니다. 이 값은 ODBC 버전 2를 나타내며 유효한 값은 2 또는 3입니다. 버전 2와 3의 동작 차이에 대 한 자세한 내용은 ODBC **Sqlcolumns** 사양을 참조 하십시오.  
+`[ \@ODBCVer = ] ODBCVer` 사용 중인 ODBC의 버전입니다. *ODBCVer* 는 **int** 이며 기본값은 2입니다. 이 값은 ODBC 버전 2를 나타내며 유효한 값은 2 또는 3입니다. 버전 2와 3의 동작 차이에 대 한 자세한 내용은 ODBC **Sqlcolumns** 사양을 참조 하십시오.  
   
 ## <a name="return-code-values"></a>반환 코드 값  
  None  
   
 ## <a name="result-sets"></a>결과 집합  
- **Sp_columns** 카탈로그 저장 프로시저는 ODBC의 **sqlcolumns** 와 동일 합니다. 반환 되는 결과는 **TABLE_QUALIFIER**, **TABLE_OWNER**및 **TABLE_NAME**순으로 정렬 됩니다.  
+ **Sp_columns** 카탈로그 저장 프로시저는 ODBC의 **sqlcolumns** 와 동일 합니다. 반환 되는 결과는 **TABLE_QUALIFIER**, **TABLE_OWNER** 및 **TABLE_NAME** 순으로 정렬 됩니다.  
   
 |열 이름|데이터 형식|Description|  
 |-----------------|---------------|-----------------|  

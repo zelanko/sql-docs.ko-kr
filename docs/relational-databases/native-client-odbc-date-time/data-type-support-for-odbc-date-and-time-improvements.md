@@ -14,12 +14,13 @@ helpviewer_keywords:
 ms.assetid: 8e0d9ba2-3ec1-4680-86e3-b2590ba8e2e9
 author: markingmyname
 ms.author: maghan
-monikerRange: '>=aps-pdw-2016||=azuresqldb-current||=azure-sqldw-latest||>=sql-server-2016||=sqlallproducts-allversions||>=sql-server-linux-2017||=azuresqldb-mi-current'
-ms.openlocfilehash: 87f0d54585cafac90a2ab47ec3a7f691c80fe9e5
-ms.sourcegitcommit: f3321ed29d6d8725ba6378d207277a57cb5fe8c2
+monikerRange: '>=aps-pdw-2016||=azuresqldb-current||=azure-sqldw-latest||>=sql-server-2016||>=sql-server-linux-2017||=azuresqldb-mi-current'
+ms.openlocfilehash: 9b886ac6a15930146fedda1d6ee336234fc6cf57
+ms.sourcegitcommit: 1a544cf4dd2720b124c3697d1e62ae7741db757c
+ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 07/06/2020
-ms.locfileid: "86001471"
+ms.lasthandoff: 12/14/2020
+ms.locfileid: "97438589"
 ---
 # <a name="data-type-support-for-odbc-date-and-time-improvements"></a>ODBC 날짜 및 시간 기능 향상을 위한 데이터 형식 지원
 [!INCLUDE[SQL Server Azure SQL Database Synapse Analytics PDW ](../../includes/applies-to-version/sql-asdb-asdbmi-asa-pdw.md)]
@@ -39,7 +40,7 @@ ms.locfileid: "86001471"
 |--------------------------|-------------------|-----------|  
 |DateTime|SQL_TYPE_TIMESTAMP<br /><br /> SQL_TIMESTAMP|93(sql.h)<br /><br /> 11(sqlext.h)|  
 |Smalldatetime|SQL_TYPE_TIMESTAMP<br /><br /> SQL_TIMESTAMP|93(sql.h)<br /><br /> 11(sqlext.h)|  
-|날짜|SQL_TYPE_DATE<br /><br /> SQL_DATE|91 (sql .h)<br /><br /> 9 (sqlext .h)|  
+|Date|SQL_TYPE_DATE<br /><br /> SQL_DATE|91 (sql .h)<br /><br /> 9 (sqlext .h)|  
 |시간|SQL_SS_TIME2|-154 (SQLNCLI)|  
 |DatetimeOFFSET|SQL_SS_TIMESTAMPOFFSET|-155(SQLNCLI.h)|  
 |Datetime2|SQL_TYPE_TIMESTAMP<br /><br /> SQL_TIMESTAMP|93(sql.h)<br /><br /> 11(sqlext.h)|  
@@ -64,7 +65,7 @@ ms.locfileid: "86001471"
 |--------------------------|--------------------|------------------------------------------|  
 |DateTime|SQL_TYPE_TIMESTAMP<br /><br /> SQL_TIMESTAMP|'yyyy-mm-dd hh:mm:ss[.999]'<br /><br /> [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]는 Datetime에 대해 최대 3자리의 소수 자릿수 초를 지원합니다.|  
 |Smalldatetime|SQL_TYPE_TIMESTAMP<br /><br /> SQL_TIMESTAMP|'yyyy-mm-dd hh:hh:ss'<br /><br /> 이 데이터 형식의 정확도는 1분 단위입니다. 초 구성 요소 부분은 출력 시 0이 되고, 입력 시 서버에 의해 반올림됩니다.|  
-|날짜|SQL_TYPE_DATE<br /><br /> SQL_DATE|'yyyy-mm-dd'|  
+|Date|SQL_TYPE_DATE<br /><br /> SQL_DATE|'yyyy-mm-dd'|  
 |시간|SQL_SS_TIME2|'hh:mm:ss[.9999999]'<br /><br /> 필요한 경우 소수 자릿수 초를 일곱 자리까지 지정할 수 있습니다.|  
 |Datetime2|SQL_TYPE_TIMESTAMP<br /><br /> SQL_TIMESTAMP|' yyyy-mm-dd hh: mm: ss [. 9999999] '<br /><br /> 필요한 경우 소수 자릿수 초를 일곱 자리까지 지정할 수 있습니다.|  
 |DatetimeOFFSET|SQL_SS_TIMESTAMPOFFSET|'yyyy-mm-dd hh:mm:ss[.9999999] +/- hh:mm'<br /><br /> 필요한 경우 소수 자릿수 초를 일곱 자리까지 지정할 수 있습니다.|  
@@ -142,4 +143,4 @@ typedef struct tagSS_TIMESTAMPOFFSET_STRUCT {
  **Timezone_hour** 음수 이면 **timezone_minute** 음수 이거나 0 이어야 합니다. **Timezone_hour** 양수 이면 **timezone_minute** 는 양수 또는 0 이어야 합니다. **Timezone_hour** 0 인 경우 **timezone_minute** 범위는-59에서 + 59 사이의 값이 될 수 있습니다.  
   
 ## <a name="see-also"></a>참고 항목  
- [ODBC&#41;&#40;날짜 및 시간 기능 향상](../../relational-databases/native-client-odbc-date-time/date-and-time-improvements-odbc.md)  
+ [ODBC&#41;&#40;날짜 및 시간 기능 향상 ](../../relational-databases/native-client-odbc-date-time/date-and-time-improvements-odbc.md)  

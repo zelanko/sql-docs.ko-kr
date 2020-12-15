@@ -18,13 +18,13 @@ helpviewer_keywords:
 ms.assetid: 134003fd-9c93-4f5c-a988-045990933b80
 author: markingmyname
 ms.author: maghan
-monikerRange: '>=aps-pdw-2016||=azuresqldb-current||=azure-sqldw-latest||>=sql-server-2016||=sqlallproducts-allversions||>=sql-server-linux-2017||=azuresqldb-mi-current'
-ms.openlocfilehash: a67f2a7ed3d01ee3a98356efc4c15cf2865ee154
-ms.sourcegitcommit: e700497f962e4c2274df16d9e651059b42ff1a10
+monikerRange: '>=aps-pdw-2016||=azuresqldb-current||=azure-sqldw-latest||>=sql-server-2016||>=sql-server-linux-2017||=azuresqldb-mi-current'
+ms.openlocfilehash: 4a50dbcecebeb46fb2ce96f5018c2ac4c1a70094
+ms.sourcegitcommit: 1a544cf4dd2720b124c3697d1e62ae7741db757c
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 08/17/2020
-ms.locfileid: "88470395"
+ms.lasthandoff: 12/14/2020
+ms.locfileid: "97438416"
 ---
 # <a name="constructing-sql-statements-for-cursors"></a>쿼리에 대한 SQL 문 생성
 [!INCLUDE[SQL Server Azure SQL Database Synapse Analytics PDW ](../../includes/applies-to-version/sql-asdb-asdbmi-asa-pdw.md)]
@@ -59,7 +59,7 @@ ms.locfileid: "88470395"
   
      둘 이상의 SELECT 문이 포함된 저장 프로시저를 실행하는 SQL 문. 여기에는 매개 변수나 변수를 채우는 SELECT 문도 포함됩니다.  
   
--   키워드  
+-   키워드가  
   
      FOR BROWSE 또는 INTO 키워드를 포함하는 SQL 문  
   

@@ -19,18 +19,18 @@ helpviewer_keywords:
 ms.assetid: 3c610d3d-6e06-49cf-9a40-05b6a1c83a32
 author: markingmyname
 ms.author: maghan
-monikerRange: '>=aps-pdw-2016||=azuresqldb-current||=azure-sqldw-latest||>=sql-server-2016||=sqlallproducts-allversions||>=sql-server-linux-2017||=azuresqldb-mi-current'
-ms.openlocfilehash: 5aad8e51d4f3e13612242bd80cd6882d7f0c1533
-ms.sourcegitcommit: e700497f962e4c2274df16d9e651059b42ff1a10
+monikerRange: '>=aps-pdw-2016||=azuresqldb-current||=azure-sqldw-latest||>=sql-server-2016||>=sql-server-linux-2017||=azuresqldb-mi-current'
+ms.openlocfilehash: ee3d3a71520f11d2e611c2b71eb6588e20cfdbb6
+ms.sourcegitcommit: 1a544cf4dd2720b124c3697d1e62ae7741db757c
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 08/17/2020
-ms.locfileid: "88423935"
+ms.lasthandoff: 12/14/2020
+ms.locfileid: "97438646"
 ---
 # <a name="odbc-cursor-library"></a>ODBC 커서 라이브러리
 [!INCLUDE [SQL Server](../../../includes/applies-to-version/sql-asdb-asdbmi-asa-pdw.md)]
 
-  일부 ODBC 드라이버는 기본 커서 설정만 지원 합니다. 또한 이러한 드라이버는 **SQLSetPos**와 같은 위치 지정 커서 작업을 지원 하지 않습니다. ODBC 커서 라이브러리는 일반적으로 블록 또는 정적 커서를 지원하지 않는 드라이버에서 블록 또는 정적 커서를 구현하는 데 사용되는 MDAC(Microsoft Data Access Components) 구성 요소입니다. 커서 라이브러리는 만든 커서에 대해 위치 지정 업데이트 및 DELETE 문과 **SQLSetPos** 도 구현 합니다.  
+  일부 ODBC 드라이버는 기본 커서 설정만 지원 합니다. 또한 이러한 드라이버는 **SQLSetPos** 와 같은 위치 지정 커서 작업을 지원 하지 않습니다. ODBC 커서 라이브러리는 일반적으로 블록 또는 정적 커서를 지원하지 않는 드라이버에서 블록 또는 정적 커서를 구현하는 데 사용되는 MDAC(Microsoft Data Access Components) 구성 요소입니다. 커서 라이브러리는 만든 커서에 대해 위치 지정 업데이트 및 DELETE 문과 **SQLSetPos** 도 구현 합니다.  
   
  ODBC 커서 라이브러리는 ODBC 드라이버 관리자와 ODBC 드라이버 사이의 계층으로 구현됩니다. ODBC 커서 라이브러리가 로드되면 ODBC 드라이버 관리자에서 모든 커서 관련 명령을 드라이버 대신 커서 라이브러리로 라우팅합니다. 커서 라이브러리는 기본 드라이버에서 전체 결과 집합을 인출하고 결과 집합을 클라이언트에 캐시하여 커서를 구현합니다. ODBC 커서 라이브러리를 사용하는 경우 애플리케이션은 커서 라이브러리의 커서 기능으로 제한됩니다. 기본 드라이버의 추가 커서 기능에 대한 지원은 애플리케이션에서 사용할 수 없습니다.  
   

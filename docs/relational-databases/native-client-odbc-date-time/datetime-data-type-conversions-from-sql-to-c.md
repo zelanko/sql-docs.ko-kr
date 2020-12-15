@@ -13,13 +13,13 @@ helpviewer_keywords:
 ms.assetid: 059431e2-a65c-4587-ba4a-9929a1611e96
 author: markingmyname
 ms.author: maghan
-monikerRange: '>=aps-pdw-2016||=azuresqldb-current||=azure-sqldw-latest||>=sql-server-2016||=sqlallproducts-allversions||>=sql-server-linux-2017||=azuresqldb-mi-current'
-ms.openlocfilehash: b317f23ef9e960fe407e68ef108f31ba0fcfa2c6
-ms.sourcegitcommit: e700497f962e4c2274df16d9e651059b42ff1a10
+monikerRange: '>=aps-pdw-2016||=azuresqldb-current||=azure-sqldw-latest||>=sql-server-2016||>=sql-server-linux-2017||=azuresqldb-mi-current'
+ms.openlocfilehash: c7434c34d2e39ae85ecc11ebf5603f825672a919
+ms.sourcegitcommit: 1a544cf4dd2720b124c3697d1e62ae7741db757c
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 08/17/2020
-ms.locfileid: "88420637"
+ms.lasthandoff: 12/14/2020
+ms.locfileid: "97438546"
 ---
 # <a name="datetime-data-type-conversions-from-sql-to-c"></a>날짜/시간 데이터 형식을 SQL에서 C로 변환
 [!INCLUDE[SQL Server Azure SQL Database Synapse Analytics PDW ](../../includes/applies-to-version/sql-asdb-asdbmi-asa-pdw.md)]
@@ -41,7 +41,7 @@ ms.locfileid: "88420637"
   
 |기호|의미|  
 |------------|-------------|  
-|정상|변환 문제가 발생하지 않습니다.|  
+|확인|변환 문제가 발생하지 않습니다.|  
 |1|[!INCLUDE[ssKatmai](../../includes/sskatmai-md.md)] 이전의 규칙이 적용됩니다.|  
 |2|선행 공백과 후행 공백이 무시됩니다.|  
 |3|문자열이 날짜, 시간, 표준 시간대 또는 표준 시간대 오프셋으로 구문 분석되고 소수 자릿수 초에 대해 9자리까지 허용합니다. 표준 시간대 오프셋이 구문 분석되는 경우 시간이 클라이언트 표준 시간대로 변환됩니다. 이 변환 중에 오류가 발생 하면 SQLSTATE 22018 및 "Datetime 필드 오버플로" 라는 메시지가 포함 된 진단 레코드가 생성 됩니다.|  

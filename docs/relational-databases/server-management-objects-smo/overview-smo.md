@@ -11,13 +11,13 @@ ms.topic: reference
 ms.assetid: e988f9e8-6801-41d1-8069-726f487244d5
 author: markingmyname
 ms.author: maghan
-monikerRange: =azuresqldb-current||=azure-sqldw-latest||>=sql-server-2016||=sqlallproducts-allversions||>=sql-server-linux-2017||=azuresqldb-mi-current
-ms.openlocfilehash: 8f472c3354e2cfefe10aeeedd8935360e3a4751a
-ms.sourcegitcommit: 4d370399f6f142e25075b3714e5c2ce056b1bfd0
+monikerRange: =azuresqldb-current||=azure-sqldw-latest||>=sql-server-2016||>=sql-server-linux-2017||=azuresqldb-mi-current
+ms.openlocfilehash: 8b3a9c15979d162ca345a0d440f7093c4bd15ad9
+ms.sourcegitcommit: 1a544cf4dd2720b124c3697d1e62ae7741db757c
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 10/09/2020
-ms.locfileid: "91868262"
+ms.lasthandoff: 12/14/2020
+ms.locfileid: "97439839"
 ---
 # <a name="overview-smo"></a>개요(SMO)
 [!INCLUDE [SQL Server ASDB, ASDBMI, ASDW ](../../includes/applies-to-version/sql-asdb-asdbmi-asa.md)]
@@ -102,9 +102,9 @@ ms.locfileid: "91868262"
   
  직접 실행이 일반적인 실행 방법입니다. 문은 문이 발생할 때 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 의 인스턴스로 직접 전송됩니다. 실행 캡처는 이러한 직접 전송 대신 사용되는 방식입니다.  
   
- 실행 캡처를 사용하면 일반적으로 실행할 수 있는 [!INCLUDE[tsql](../../includes/tsql-md.md)] 일괄 처리를 캡처할 수 있습니다. 이 기능을 사용하면 SMO 프로그래머가 스크립트를 지연시키거나, 나중에 실행할 수 있도록 저장하거나, 최종 사용자에게 미리 보기를 제공할 수 있습니다. 예를 들어 **create database**, **create table**및 **create index** 문을 한 번에 전송한 다음 세 개의 순차적 단계로 실행할 수 있습니다. 이 기능은 사용자가 <xref:Microsoft.SqlServer.Management.Smo.Server.%23ctor%2A> 개체를 사용하여 제어합니다.  
+ 실행 캡처를 사용하면 일반적으로 실행할 수 있는 [!INCLUDE[tsql](../../includes/tsql-md.md)] 일괄 처리를 캡처할 수 있습니다. 이 기능을 사용하면 SMO 프로그래머가 스크립트를 지연시키거나, 나중에 실행할 수 있도록 저장하거나, 최종 사용자에게 미리 보기를 제공할 수 있습니다. 예를 들어 **create database**, **create table** 및 **create index** 문을 한 번에 전송한 다음 세 개의 순차적 단계로 실행할 수 있습니다. 이 기능은 사용자가 <xref:Microsoft.SqlServer.Management.Smo.Server.%23ctor%2A> 개체를 사용하여 제어합니다.  
   
- **WMI 공급자**  
+ **WMI Provider**  
   
  WMI 공급자 개체는 SMO로 래핑됩니다. 따라서 SMO 프로그래머는 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] WMI 공급자의 네임스페이스와 세부 정보로 표현되는 프로그래밍 모델을 이해하지 못한 상태에서도 SMO 클래스와 매우 유사한 간단한 개체 모델을 사용할 수 있습니다. WMI 공급자를 사용하면 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 서비스, 별칭, 그리고 클라이언트 및 서버 네트워크 라이브러리를 구성할 수 있습니다.  
   

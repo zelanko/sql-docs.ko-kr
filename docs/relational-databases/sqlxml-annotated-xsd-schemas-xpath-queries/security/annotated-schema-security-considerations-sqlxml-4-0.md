@@ -21,13 +21,13 @@ ms.assetid: 7d7e44dc-b6d3-4e0f-95c7-8f99930c94f2
 author: MightyPen
 ms.author: genemi
 ms.custom: seo-lt-2019
-monikerRange: =azuresqldb-current||>=sql-server-2016||=sqlallproducts-allversions||>=sql-server-linux-2017||=azuresqldb-mi-current
-ms.openlocfilehash: 5c96688eefd1568576a65aa9306fb6deb0f8c5f5
-ms.sourcegitcommit: da88320c474c1c9124574f90d549c50ee3387b4c
+monikerRange: =azuresqldb-current||>=sql-server-2016||>=sql-server-linux-2017||=azuresqldb-mi-current
+ms.openlocfilehash: 635c32709e8ac0a97dfe669dbbba104dbb179197
+ms.sourcegitcommit: 1a544cf4dd2720b124c3697d1e62ae7741db757c
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 07/01/2020
-ms.locfileid: "85771653"
+ms.lasthandoff: 12/14/2020
+ms.locfileid: "97439614"
 ---
 # <a name="annotated-schema-security-considerations-sqlxml-40"></a>주석 스키마 보안 고려 사항(SQLXML 4.0)
 [!INCLUDE [SQL Server Azure SQL Database](../../../includes/applies-to-version/sql-asdb.md)]

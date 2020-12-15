@@ -14,13 +14,13 @@ ms.assetid: c5885d14-c7c1-47b3-a389-455e99a7ece1
 author: MightyPen
 ms.author: genemi
 ms.custom: seo-lt-2019
-monikerRange: =azuresqldb-current||>=sql-server-2016||=sqlallproducts-allversions||>=sql-server-linux-2017||=azuresqldb-mi-current
-ms.openlocfilehash: 7fd6795105bb2540c08f1f241444b6464f131601
-ms.sourcegitcommit: da88320c474c1c9124574f90d549c50ee3387b4c
+monikerRange: =azuresqldb-current||>=sql-server-2016||>=sql-server-linux-2017||=azuresqldb-mi-current
+ms.openlocfilehash: b17b1990f168326ae884b4db4f1ff22a63b24e21
+ms.sourcegitcommit: 1a544cf4dd2720b124c3697d1e62ae7741db757c
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 07/01/2020
-ms.locfileid: "85762831"
+ms.lasthandoff: 12/14/2020
+ms.locfileid: "97439694"
 ---
 # <a name="guidelines-and-limitations-of-xml-bulk-load-sqlxml-40"></a>XML 대량 로드에 대한 지침 및 제한 사항(SQLXML 4.0)
 [!INCLUDE [SQL Server Azure SQL Database](../../../includes/applies-to-version/sql-asdb.md)]
@@ -108,7 +108,7 @@ ms.locfileid: "85762831"
     </AllCustomers>  
     ```  
   
-     XML 대량 로드는 이러한 **\<Order>** 요소를 무시 합니다. 그러나 스키마에서 **sql: 오버플로 필드**주석을 사용 하 여 열을 오버플로 열로 식별 하는 경우 XML 대량 로드는이 열에 사용 되지 않은 모든 데이터를 저장 합니다.  
+     XML 대량 로드는 이러한 **\<Order>** 요소를 무시 합니다. 그러나 스키마에서 **sql: 오버플로 필드** 주석을 사용 하 여 열을 오버플로 열로 식별 하는 경우 XML 대량 로드는이 열에 사용 되지 않은 모든 데이터를 저장 합니다.  
   
 -   CDATA 섹션과 엔터티 참조는 데이터베이스에 저장되기 전에 해당하는 문자열로 변환됩니다.  
   
@@ -174,6 +174,6 @@ ms.locfileid: "85762831"
   
 -   XML 대량 로드를 사용하여 날짜 값을 삽입할 경우 값을 (-)CCYY-MM-DD((+-)TZ) 형식으로 지정해야 합니다. 이 형식은 날짜에 대한 표준 XSD 형식입니다.  
   
--   일부 속성 플래그는 다른 속성 플래그와 함께 사용할 수 없습니다. 예를 들어 대량 로드는 **Keepidentity = false**와 함께 **Ignoreduplicatekeys = true** 를 지원 하지 않습니다. **Keepidentity = false**인 경우 대량 로드는 서버에서 키 값을 생성 하는 것으로 예상 합니다. 테이블에는 키에 대 한 **IDENTITY** 제약 조건이 있어야 합니다. 서버에서는 중복 키를 생성 하지 않습니다. 즉, **Ignoreduplicatekeys** 를 **true**로 설정할 필요가 없습니다. 들어오는 데이터의 기본 키 값을 행이 있는 테이블로 업로드 하 고 기본 키 값이 충돌할 가능성이 있는 경우에만 **Ignoreduplicatekeys** 를 **true** 로 설정 해야 합니다.  
+-   일부 속성 플래그는 다른 속성 플래그와 함께 사용할 수 없습니다. 예를 들어 대량 로드는 **Keepidentity = false** 와 함께 **Ignoreduplicatekeys = true** 를 지원 하지 않습니다. **Keepidentity = false** 인 경우 대량 로드는 서버에서 키 값을 생성 하는 것으로 예상 합니다. 테이블에는 키에 대 한 **IDENTITY** 제약 조건이 있어야 합니다. 서버에서는 중복 키를 생성 하지 않습니다. 즉, **Ignoreduplicatekeys** 를 **true** 로 설정할 필요가 없습니다. 들어오는 데이터의 기본 키 값을 행이 있는 테이블로 업로드 하 고 기본 키 값이 충돌할 가능성이 있는 경우에만 **Ignoreduplicatekeys** 를 **true** 로 설정 해야 합니다.  
   
   

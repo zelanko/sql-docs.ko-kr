@@ -13,13 +13,13 @@ helpviewer_keywords:
 ms.assetid: 1518e6e5-a6a8-4489-b779-064c5624df53
 author: markingmyname
 ms.author: maghan
-monikerRange: '>=aps-pdw-2016||=azuresqldb-current||=azure-sqldw-latest||>=sql-server-2016||=sqlallproducts-allversions||>=sql-server-linux-2017||=azuresqldb-mi-current'
-ms.openlocfilehash: b2205348e8b0ba913cdb12a990d88233c74dfe12
-ms.sourcegitcommit: 4d370399f6f142e25075b3714e5c2ce056b1bfd0
+monikerRange: '>=aps-pdw-2016||=azuresqldb-current||=azure-sqldw-latest||>=sql-server-2016||>=sql-server-linux-2017||=azuresqldb-mi-current'
+ms.openlocfilehash: 8753d87fec58d948ccea67c139cc8b1d30861fe5
+ms.sourcegitcommit: 1a544cf4dd2720b124c3697d1e62ae7741db757c
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 10/09/2020
-ms.locfileid: "91868349"
+ms.lasthandoff: 12/14/2020
+ms.locfileid: "97438540"
 ---
 # <a name="metadata---parameter-and-result"></a>메타데이터 - 매개 변수 및 결과
 [!INCLUDE[SQL Server Azure SQL Database Synapse Analytics PDW ](../../includes/applies-to-version/sql-asdb-asdbmi-asa-pdw.md)]
@@ -44,7 +44,7 @@ ms.locfileid: "91868349"
 |SQL_DESC_TYPE_NAME|**date**|**time**|IRD의 **smalldatetime** , IPD의 **datetime2**|IRD의 **datetime** , IPD의 **datetime2**|**datetime2**|datetimeoffset|  
 |SQL_CA_SS_VARIANT_TYPE|SQL_C_TYPE_DATE|SQL_C_TYPE_BINARY|SQL_C_TYPE_TIMESTAMP|SQL_C_TYPE_TIMESTAMP|SQL_C_TYPE_TIMESTAMP|SQL_C_TYPE_BINARY|  
 |SQL_CA_SS_VARIANT_SQL_TYPE|SQL_TYPE_DATE|SQL_SS_TIME2|SQL_TYPE_TIMESTAMP|SQL_TYPE_TIMESTAMP|SQL_TYPE_TIMESTAMP|SQL_SS_TIMESTAMPOFFSET|  
-|SQL_CA_SS_SERVER_TYPE|해당 없음|해당 없음|SQL_SS_TYPE_SMALLDATETIME|SQL_SS_TYPE_DATETIME|SQL_SS_TYPE_DEFAULT|해당 없음|  
+|SQL_CA_SS_SERVER_TYPE|N/A|N/A|SQL_SS_TYPE_SMALLDATETIME|SQL_SS_TYPE_DATETIME|SQL_SS_TYPE_DEFAULT|N/A|  
   
  값 범위가 연속되지 않을 수도 있습니다. 예를 들어 8,10..16에서는 9가 누락되어 있습니다. 이러한 경우는 소수 부분 자릿수가 0보다 커서 소수점을 추가했을 때 발생합니다.  
   
@@ -70,7 +70,7 @@ ms.locfileid: "91868349"
   
  SQLSetDescField를 호출 하 여 SQL_CA_SS_SERVER_TYPE를 설정 하는 경우 해당 값은 SQL_SS_TYPE_DEFAULT, SQL_SS_TYPE_SMALLDATETIME 또는 SQL_SS_TYPE_DATETIME 이어야 합니다. 그렇지 않으면 SQL_ERROR가 반환되고 SQLState HY092 및 "잘못된 특성/옵션 식별자입니다"라는 메시지가 포함된 진단 레코드가 기록됩니다.  
   
- SQL_CA_SS_SERVER_TYPE 특성은 **날짜/시간** 및 **smalldatetime**에서 지 원하는 기능에 종속 되지만 **datetime2**이 아닌 응용 프로그램에서 사용할 수 있습니다. 예를 들어 **datetime2** 는 **dateadd** 및 **datediif** 함수를 사용 해야 하지만 **datetime** 및 **smalldatetime** 은 산술 연산자도 허용 합니다. 이 속성은 대부분의 애플리케이션에서 사용할 필요가 없으며 사용해서는 안 됩니다.  
+ SQL_CA_SS_SERVER_TYPE 특성은 **날짜/시간** 및 **smalldatetime** 에서 지 원하는 기능에 종속 되지만 **datetime2** 이 아닌 응용 프로그램에서 사용할 수 있습니다. 예를 들어 **datetime2** 는 **dateadd** 및 **datediif** 함수를 사용 해야 하지만 **datetime** 및 **smalldatetime** 은 산술 연산자도 허용 합니다. 이 속성은 대부분의 애플리케이션에서 사용할 필요가 없으며 사용해서는 안 됩니다.  
   
 ## <a name="information-returned-in-ird-fields"></a>IRD 필드에서 반환되는 정보  
  다음은 IRD 필드에서 반환되는 정보입니다.  

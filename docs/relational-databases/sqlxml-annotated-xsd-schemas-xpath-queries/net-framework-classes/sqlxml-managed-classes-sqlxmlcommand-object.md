@@ -31,13 +31,13 @@ ms.assetid: c1f9e0bb-a89d-4d6a-a96e-289ef516a3a6
 author: MightyPen
 ms.author: genemi
 ms.custom: seo-lt-2019
-monikerRange: =azuresqldb-current||>=sql-server-2016||=sqlallproducts-allversions||>=sql-server-linux-2017||=azuresqldb-mi-current
-ms.openlocfilehash: c3c3c829b49f52476498e744c91fa5c1af37b6b7
-ms.sourcegitcommit: da88320c474c1c9124574f90d549c50ee3387b4c
+monikerRange: =azuresqldb-current||>=sql-server-2016||>=sql-server-linux-2017||=azuresqldb-mi-current
+ms.openlocfilehash: c5736ffab10bc0be104f06dbd6627d48aa45cd98
+ms.sourcegitcommit: 1a544cf4dd2720b124c3697d1e62ae7741db757c
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 07/01/2020
-ms.locfileid: "85767540"
+ms.lasthandoff: 12/14/2020
+ms.locfileid: "97439664"
 ---
 # <a name="sqlxml-managed-classes---sqlxmlcommand-object"></a>SQLXML 관리되는 클래스 - SqlXmlCommand 개체
 [!INCLUDE [SQL Server Azure SQL Database](../../../includes/applies-to-version/sql-asdb.md)]

@@ -19,13 +19,13 @@ ms.assetid: 3708b493-322e-4f3c-9b27-441d0c0ee346
 author: MightyPen
 ms.author: genemi
 ms.custom: seo-lt-2019
-monikerRange: =azuresqldb-current||>=sql-server-2016||=sqlallproducts-allversions||>=sql-server-linux-2017||=azuresqldb-mi-current
-ms.openlocfilehash: c696f39c3e41afa42f5f4f0fac5c7dfd1a4dd080
-ms.sourcegitcommit: da88320c474c1c9124574f90d549c50ee3387b4c
+monikerRange: =azuresqldb-current||>=sql-server-2016||>=sql-server-linux-2017||=azuresqldb-mi-current
+ms.openlocfilehash: b04af587bc3bfd7b7a87027c41be648736389950
+ms.sourcegitcommit: 1a544cf4dd2720b124c3697d1e62ae7741db757c
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 07/01/2020
-ms.locfileid: "85773071"
+ms.lasthandoff: 12/14/2020
+ms.locfileid: "97439681"
 ---
 # <a name="performing-bulk-load-of-xml-data-sqlxml-40"></a>XML 데이터 대량 로드 수행(SQLXML 4.0)
 [!INCLUDE [SQL Server Azure SQL Database](../../../includes/applies-to-version/sql-asdb.md)]
@@ -47,7 +47,7 @@ ms.locfileid: "85773071"
  [XML 대량 로드 예 &#40;SQLXML 4.0&#41;](../../../relational-databases/sqlxml-annotated-xsd-schemas-xpath-queries/bulk-load-xml/xml-bulk-load-examples-sqlxml-4-0.md)  
  XML 대량 로드를 사용하는 예제 코드를 제공합니다.  
   
- [SQLXML 4.0&#41;&#40;데이터 형식 및 XML 대량 로드 동작](../../../relational-databases/sqlxml-annotated-xsd-schemas-xpath-queries/bulk-load-xml/data-types-and-xml-bulk-load-behavior-sqlxml-4-0.md)  
+ [SQLXML 4.0&#41;&#40;데이터 형식 및 XML 대량 로드 동작 ](../../../relational-databases/sqlxml-annotated-xsd-schemas-xpath-queries/bulk-load-xml/data-types-and-xml-bulk-load-behavior-sqlxml-4-0.md)  
  XSD 및 XDR의 여러 유형에서의 XML 대량 로드 동작에 대해 설명합니다.  
   
  [XML 대량 로드에 대 한 지침 및 제한 사항 &#40;SQLXML 4.0&#41;](../../../relational-databases/sqlxml-annotated-xsd-schemas-xpath-queries/bulk-load-xml/guidelines-and-limitations-of-xml-bulk-load-sqlxml-4-0.md)  

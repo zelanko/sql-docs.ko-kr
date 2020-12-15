@@ -15,12 +15,13 @@ helpviewer_keywords:
 ms.assetid: 0acc71e2-8004-4dd8-8592-05c022bdd692
 author: markingmyname
 ms.author: maghan
-monikerRange: '>=aps-pdw-2016||=azuresqldb-current||=azure-sqldw-latest||>=sql-server-2016||=sqlallproducts-allversions||>=sql-server-linux-2017||=azuresqldb-mi-current'
-ms.openlocfilehash: 0c10271b031c34e8da0c7da2bc3643f8dee95c0c
-ms.sourcegitcommit: f3321ed29d6d8725ba6378d207277a57cb5fe8c2
+monikerRange: '>=aps-pdw-2016||=azuresqldb-current||=azure-sqldw-latest||>=sql-server-2016||>=sql-server-linux-2017||=azuresqldb-mi-current'
+ms.openlocfilehash: 5963474c575dc33d7c33da14ae13dc43608a81b8
+ms.sourcegitcommit: 1a544cf4dd2720b124c3697d1e62ae7741db757c
+ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 07/06/2020
-ms.locfileid: "86001453"
+ms.lasthandoff: 12/14/2020
+ms.locfileid: "97438429"
 ---
 # <a name="constructing-an-sql-statement-odbc"></a>SQL 문 생성(ODBC)
 [!INCLUDE[SQL Server Azure SQL Database Synapse Analytics PDW ](../../includes/applies-to-version/sql-asdb-asdbmi-asa-pdw.md)]
@@ -48,6 +49,6 @@ ms.locfileid: "86001453"
  SELECT 문의 열 목록에는 현재 태스크를 수행하는 데 필요한 열만 포함되어 있어야 합니다. 그래야만 네트워크를 통해 보내는 데이터의 양이 줄 뿐 아니라 데이터베이스 변경이 애플리케이션에 미치는 영향도 줄어듭니다. 애플리케이션에서 테이블의 열을 참조하지 않는 경우 해당 열이 변경되어도 애플리케이션에는 영향을 주지 않습니다.  
   
 ## <a name="see-also"></a>참고 항목  
- [ODBC&#41;&#40;쿼리 실행](../../relational-databases/native-client-odbc-queries/executing-queries-odbc.md)  
+ [ODBC&#41;&#40;쿼리 실행 ](../../relational-databases/native-client-odbc-queries/executing-queries-odbc.md)  
   
   

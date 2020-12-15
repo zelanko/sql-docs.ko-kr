@@ -16,13 +16,13 @@ helpviewer_keywords:
 ms.assetid: 2b1d7dd4-08a4-43fc-b3eb-70c183d0941f
 author: markingmyname
 ms.author: maghan
-monikerRange: '>=aps-pdw-2016||=azuresqldb-current||=azure-sqldw-latest||>=sql-server-2016||=sqlallproducts-allversions||>=sql-server-linux-2017||=azuresqldb-mi-current'
-ms.openlocfilehash: 44a6a9228c2b6d9914b1a6126b797736ffc4d72e
-ms.sourcegitcommit: e700497f962e4c2274df16d9e651059b42ff1a10
+monikerRange: '>=aps-pdw-2016||=azuresqldb-current||=azure-sqldw-latest||>=sql-server-2016||>=sql-server-linux-2017||=azuresqldb-mi-current'
+ms.openlocfilehash: 0eaa1db7e0a1de4a893e95e2ca6c6d7c7e7e761f
+ms.sourcegitcommit: 1a544cf4dd2720b124c3697d1e62ae7741db757c
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 08/17/2020
-ms.locfileid: "88423945"
+ms.lasthandoff: 12/14/2020
+ms.locfileid: "97438676"
 ---
 # <a name="how-cursors-are-implemented"></a>커서 구현 방법
 [!INCLUDE [SQL Server](../../../includes/applies-to-version/sql-asdb-asdbmi-asa-pdw.md)]
@@ -35,7 +35,7 @@ ms.locfileid: "88423945"
   
 -   커서 동작  
   
-     커서 동작은 **SQLSetStmtAttr**의 SQL_ATTR_CURSOR_SCROLLABLE 및 SQL_ATTR_CURSOR_SENSITIVITY 특성을 사용 하 여 설정 됩니다. 이러한 특성은 ISO 표준에서 DECLARE CURSOR에 대해 정의된 SCROLL 및 SENSITIVE 키워드를 기반으로 모델링됩니다. 이 두 개의 ISO 옵션은 ODBC 버전 3.0에서 도입되었습니다.  
+     커서 동작은 **SQLSetStmtAttr** 의 SQL_ATTR_CURSOR_SCROLLABLE 및 SQL_ATTR_CURSOR_SENSITIVITY 특성을 사용 하 여 설정 됩니다. 이러한 특성은 ISO 표준에서 DECLARE CURSOR에 대해 정의된 SCROLL 및 SENSITIVE 키워드를 기반으로 모델링됩니다. 이 두 개의 ISO 옵션은 ODBC 버전 3.0에서 도입되었습니다.  
   
  ODBC 커서의 특징은 두 방법 중 하나를 사용하여 지정해야 하며, ODBC 커서 유형을 사용하는 것이 좋습니다.  
   

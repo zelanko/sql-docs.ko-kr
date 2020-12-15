@@ -16,18 +16,18 @@ helpviewer_keywords:
 ms.assetid: 46c0c22e-d105-4d5b-bb9d-5694472e8651
 author: markingmyname
 ms.author: maghan
-monikerRange: '>=aps-pdw-2016||=azuresqldb-current||=azure-sqldw-latest||>=sql-server-2016||=sqlallproducts-allversions||>=sql-server-linux-2017||=azuresqldb-mi-current'
-ms.openlocfilehash: edc77084715eaa05dda8364159918668d7ce1078
-ms.sourcegitcommit: e700497f962e4c2274df16d9e651059b42ff1a10
+monikerRange: '>=aps-pdw-2016||=azuresqldb-current||=azure-sqldw-latest||>=sql-server-2016||>=sql-server-linux-2017||=azuresqldb-mi-current'
+ms.openlocfilehash: a814c4b1c1d0de7843803863f7587cbc11ddcf16
+ms.sourcegitcommit: 1a544cf4dd2720b124c3697d1e62ae7741db757c
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 08/17/2020
-ms.locfileid: "88420527"
+ms.lasthandoff: 12/14/2020
+ms.locfileid: "97438494"
 ---
 # <a name="error-messages"></a>오류 메시지
 [!INCLUDE[SQL Server Azure SQL Database Synapse Analytics PDW ](../../includes/applies-to-version/sql-asdb-asdbmi-asa-pdw.md)]
 
-  Native Client ODBC 드라이버에서 반환 하는 메시지의 텍스트는 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] **SQLGetDiagRec**의 *MessageText* 매개 변수에 배치 됩니다. 오류의 원본은 메시지 헤더에 표시됩니다.  
+  Native Client ODBC 드라이버에서 반환 하는 메시지의 텍스트는 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] **SQLGetDiagRec** 의 *MessageText* 매개 변수에 배치 됩니다. 오류의 원본은 메시지 헤더에 표시됩니다.  
   
  [Microsoft][ODBC Driver Manager]  
  이러한 오류는 ODBC 드라이버 관리자에서 발생됩니다.  

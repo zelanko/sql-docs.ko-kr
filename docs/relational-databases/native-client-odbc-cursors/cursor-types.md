@@ -16,24 +16,24 @@ helpviewer_keywords:
 ms.assetid: 3a916cc7-f352-42cb-8b83-f78e06cef991
 author: markingmyname
 ms.author: maghan
-monikerRange: '>=aps-pdw-2016||=azuresqldb-current||=azure-sqldw-latest||>=sql-server-2016||=sqlallproducts-allversions||>=sql-server-linux-2017||=azuresqldb-mi-current'
-ms.openlocfilehash: a7459f8a312cbfbb960d6cfdf87e64d5b8015429
-ms.sourcegitcommit: e700497f962e4c2274df16d9e651059b42ff1a10
+monikerRange: '>=aps-pdw-2016||=azuresqldb-current||=azure-sqldw-latest||>=sql-server-2016||>=sql-server-linux-2017||=azuresqldb-mi-current'
+ms.openlocfilehash: 9bffc8d5197117533913dca63c171fb4fffab588
+ms.sourcegitcommit: 1a544cf4dd2720b124c3697d1e62ae7741db757c
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 08/17/2020
-ms.locfileid: "88460805"
+ms.lasthandoff: 12/14/2020
+ms.locfileid: "97438657"
 ---
 # <a name="cursor-types"></a>커서 유형
 [!INCLUDE[SQL Server Azure SQL Database Synapse Analytics PDW ](../../includes/applies-to-version/sql-asdb-asdbmi-asa-pdw.md)]
 
-  ODBC [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 는 Microsoft 및 Native CLIENT ODBC 드라이버에서 지원 되는 네 가지 커서 유형을 정의 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 합니다. 이러한 커서는 결과 집합의 변경 내용 및 사용 하는 리소스 (예: **tempdb**의 메모리 및 공간)를 검색 하는 기능에 따라 달라 집니다. 커서는 이러한 행을 다시 인출할 때만 행 변경 내용을 검색할 수 있습니다. 데이터 원본은 현재 인출된 행의 변경 내용을 커서에 알릴 수 없습니다. 커서를 통해 변경되지 않은 내용에 대한 커서의 검색 기능은 트랜잭션 격리 수준에 의해서도 영향을 받습니다.  
+  ODBC [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 는 Microsoft 및 Native CLIENT ODBC 드라이버에서 지원 되는 네 가지 커서 유형을 정의 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 합니다. 이러한 커서는 결과 집합의 변경 내용 및 사용 하는 리소스 (예: **tempdb** 의 메모리 및 공간)를 검색 하는 기능에 따라 달라 집니다. 커서는 이러한 행을 다시 인출할 때만 행 변경 내용을 검색할 수 있습니다. 데이터 원본은 현재 인출된 행의 변경 내용을 커서에 알릴 수 없습니다. 커서를 통해 변경되지 않은 내용에 대한 커서의 검색 기능은 트랜잭션 격리 수준에 의해서도 영향을 받습니다.  
   
  [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]지원하는 네 가지 ODBC 커서 유형은 다음과 같습니다.  
   
 -   정방향 전용 커서는 스크롤을 지원하지 않으며 커서의 처음부터 끝까지 순차적인 행 인출만 지원합니다.  
   
--   정적 커서는 커서가 열릴 때 **tempdb** 에 작성 됩니다. 항상 커서가 열렸을 당시의 결과 집합을 표시합니다. 데이터 변경 내용은 반영되지 않습니다. [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 정적 커서는 항상 읽기 전용입니다. 정적 서버 커서는 **tempdb**의 작업 테이블로 작성 되므로 커서 결과 집합의 크기는에서 허용 하는 최대 행 크기를 초과할 수 없습니다 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] .  
+-   정적 커서는 커서가 열릴 때 **tempdb** 에 작성 됩니다. 항상 커서가 열렸을 당시의 결과 집합을 표시합니다. 데이터 변경 내용은 반영되지 않습니다. [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 정적 커서는 항상 읽기 전용입니다. 정적 서버 커서는 **tempdb** 의 작업 테이블로 작성 되므로 커서 결과 집합의 크기는에서 허용 하는 최대 행 크기를 초과할 수 없습니다 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] .  
   
 -   키 집합 커서의 멤버 자격과 결과 집합의 행 순서는 커서가 열릴 때 고정됩니다. 키가 아닌 열의 변경 내용은 커서를 통해 볼 수 있습니다.  
   

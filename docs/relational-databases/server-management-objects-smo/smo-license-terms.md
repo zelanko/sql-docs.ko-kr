@@ -9,13 +9,13 @@ ms.topic: conceptual
 ms.assetid: 8f3d273c-c663-4341-aa2f-5ed8ebcba5b0
 author: markingmyname
 ms.author: maghan
-monikerRange: =azuresqldb-current||=azure-sqldw-latest||>=sql-server-2016||=sqlallproducts-allversions||>=sql-server-linux-2017||=azuresqldb-mi-current
-ms.openlocfilehash: 8939bfbec2f309c899a527288de35a3d3ea10d09
-ms.sourcegitcommit: e700497f962e4c2274df16d9e651059b42ff1a10
+monikerRange: =azuresqldb-current||=azure-sqldw-latest||>=sql-server-2016||>=sql-server-linux-2017||=azuresqldb-mi-current
+ms.openlocfilehash: 91301000df95b19338313d4541d7a7de4956095d
+ms.sourcegitcommit: 1a544cf4dd2720b124c3697d1e62ae7741db757c
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 08/17/2020
-ms.locfileid: "88420197"
+ms.lasthandoff: 12/14/2020
+ms.locfileid: "97439824"
 ---
 # <a name="sql-server-shared-management-objects-smo-license-terms"></a>SMO(SQL Server 공유 관리 개체) 사용 조건
 [!INCLUDE [SQL Server ASDB, ASDBMI, ASDW ](../../includes/applies-to-version/sql-asdb-asdbmi-asa.md)]
@@ -43,7 +43,7 @@ ms.locfileid: "88420197"
 
 **2.    추가 라이선스 요구 사항 및/또는 사용 권한.**
 
-&nbsp;&nbsp;**. 배포 가능 코드.**
+&nbsp;&nbsp;**은.    배포 가능한 코드.**
 
 &nbsp;&nbsp;&nbsp;&nbsp;**네. 사용 및 배포 권한. 아래 조건을 준수 하는 경우:**
 *   귀하가 개발하는 프로그램에서 개체 코드 형태의 소프트웨어(“배포 가능한 코드”)를 복사하고 배포하는 행위
@@ -86,9 +86,9 @@ ms.locfileid: "88420197"
 
 **10.   관련 법률.**
 
-&nbsp;&nbsp;**미국.** 소프트웨어를 미국에서 구입한 경우, 국제사법 원칙에 관계없이 본 계약의 해석은 워싱턴 주법을 따르며 계약 위반에 대한 청구 발생 시에도 워싱턴 주법이 적용됩니다. 소비자 보호법, 불공정거래법 및 기타 불법 행위 관련 법규의 적용을 받는 청구가 발생한 경우 귀하가 거주하고 있는 주의 주법이 적용됩니다.
+&nbsp;&nbsp;**은.    미국.** 소프트웨어를 미국에서 구입한 경우, 국제사법 원칙에 관계없이 본 계약의 해석은 워싱턴 주법을 따르며 계약 위반에 대한 청구 발생 시에도 워싱턴 주법이 적용됩니다. 소비자 보호법, 불공정거래법 및 기타 불법 행위 관련 법규의 적용을 받는 청구가 발생한 경우 귀하가 거주하고 있는 주의 주법이 적용됩니다.
 
-&nbsp;&nbsp;**b. 미국 외 지역.** 본 사용 조건에는 대한민국 법이 적용됩니다.
+&nbsp;&nbsp;**b.    미국 외 지역.** 본 사용 조건에는 대한민국 법이 적용됩니다.
 
 **11.   법적 효력.** 본 계약은 특정 법적 권리에 대해 기술하고 있습니다. 귀하는 귀하가 거주하고 있는 국가의 법규가 보장하는 다른 권리를 보유할 수 있습니다. 또한 귀하가 소프트웨어를 구입한 당사자와 관련된 권리를 보유할 수도 있습니다. 귀하가 거주하고 있는 국가의 법에서 권리 변경을 허용하지 않는 경우 본 계약은 해당 권리를 변경하지 않습니다.
 

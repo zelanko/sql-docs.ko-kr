@@ -14,13 +14,13 @@ helpviewer_keywords:
 ms.assetid: e31d5ca5-2103-498f-954c-1ee93e217186
 author: markingmyname
 ms.author: maghan
-monikerRange: '>=aps-pdw-2016||=azuresqldb-current||=azure-sqldw-latest||>=sql-server-2016||=sqlallproducts-allversions||>=sql-server-linux-2017||=azuresqldb-mi-current'
-ms.openlocfilehash: 596dd2755e41eb476ee5588909cae5e13cf1e1ca
-ms.sourcegitcommit: 4d370399f6f142e25075b3714e5c2ce056b1bfd0
+monikerRange: '>=aps-pdw-2016||=azuresqldb-current||=azure-sqldw-latest||>=sql-server-2016||>=sql-server-linux-2017||=azuresqldb-mi-current'
+ms.openlocfilehash: 177d09f28be3a0cef799ad0b280d408f9aac2516
+ms.sourcegitcommit: 1a544cf4dd2720b124c3697d1e62ae7741db757c
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 10/09/2020
-ms.locfileid: "91868953"
+ms.lasthandoff: 12/14/2020
+ms.locfileid: "97438579"
 ---
 # <a name="date-and-time-improvements-odbc"></a>날짜 및 시간 기능 향상(ODBC)
 [!INCLUDE[SQL Server Azure SQL Database Synapse Analytics PDW ](../../includes/applies-to-version/sql-asdb-asdbmi-asa-pdw.md)]
@@ -34,7 +34,7 @@ ms.locfileid: "91868953"
  [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 날짜 및 시간 데이터 형식을 지원하는 ODBC 형식에 대한 정보를 제공합니다.  
   
  [ODBC&#41;&#40;메타 데이터 ]()  
- IPD (구현 매개 변수 설명자) 및 IRD (구현 행 설명자) 필드에 반환 되는 정보와 **Sqlcolumns** 및 **SQLProcedureColumns**에서 반환 되는 열 메타 데이터에 대해 설명 합니다. **SQLGetTypeInfo**에서 반환 하는 데이터 형식 메타 데이터에 대해서도 설명 합니다.  
+ IPD (구현 매개 변수 설명자) 및 IRD (구현 행 설명자) 필드에 반환 되는 정보와 **Sqlcolumns** 및 **SQLProcedureColumns** 에서 반환 되는 열 메타 데이터에 대해 설명 합니다. **SQLGetTypeInfo** 에서 반환 하는 데이터 형식 메타 데이터에 대해서도 설명 합니다.  
   
  [ODBC&#41;&#40;datetime 데이터 형식 변환 ](../../relational-databases/native-client-odbc-date-time/datetime-data-type-conversions-odbc.md)  
  datetime 값과 datetimeoffset 값을 서로 변환하는 방법에 대해 설명합니다.  

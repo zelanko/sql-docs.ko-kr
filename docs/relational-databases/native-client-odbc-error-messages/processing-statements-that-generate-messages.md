@@ -25,13 +25,13 @@ helpviewer_keywords:
 ms.assetid: 672ebdc5-7fa1-4ceb-8d52-fd25ef646654
 author: markingmyname
 ms.author: maghan
-monikerRange: '>=aps-pdw-2016||=azuresqldb-current||=azure-sqldw-latest||>=sql-server-2016||=sqlallproducts-allversions||>=sql-server-linux-2017||=azuresqldb-mi-current'
-ms.openlocfilehash: ca60a4bbe9652d20cb4db0f9f4522d2fa1ff1afc
-ms.sourcegitcommit: e700497f962e4c2274df16d9e651059b42ff1a10
+monikerRange: '>=aps-pdw-2016||=azuresqldb-current||=azure-sqldw-latest||>=sql-server-2016||>=sql-server-linux-2017||=azuresqldb-mi-current'
+ms.openlocfilehash: c648e39186dada7527678f6a1c8efcd764d86355
+ms.sourcegitcommit: 1a544cf4dd2720b124c3697d1e62ae7741db757c
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 08/17/2020
-ms.locfileid: "88420517"
+ms.lasthandoff: 12/14/2020
+ms.locfileid: "97438456"
 ---
 # <a name="processing-statements-that-generate-messages"></a>메시지를 생성하는 문 처리
 [!INCLUDE[SQL Server Azure SQL Database Synapse Analytics PDW ](../../includes/applies-to-version/sql-asdb-asdbmi-asa-pdw.md)]
@@ -100,7 +100,7 @@ szErrorMsg="[Microsoft][ SQL Server Native Client][SQL Server]
 ```  
   
 ## <a name="using-print-and-raiserror-statements"></a>PRINT 및 RAISERROR 문 사용  
- [!INCLUDE[tsql](../../includes/tsql-md.md)] 또한 PRINT 및 RAISERROR 문은 **SQLGetDiagRec**를 호출 하 여 데이터를 반환 합니다. PRINT 문은 SQL 문 실행이 SQL_SUCCESS_WITH_INFO을 반환 하 고 **SQLGetDiagRec** 에 대 한 후속 호출에서는 *SQLState* 01000을 반환 합니다. 심각도가 10 이하인 RAISERROR는 PRINT와 동일하게 동작합니다. 심각도가 11 이상인 RAISERROR는 실행이 SQL_ERROR을 반환 하 고 **SQLGetDiagRec** 에 대 한 후속 호출은 *SQLState* 42000을 반환 합니다. 예를 들어 다음 문은 SQL_SUCCESS_WITH_INFO를 반환합니다.  
+ [!INCLUDE[tsql](../../includes/tsql-md.md)] 또한 PRINT 및 RAISERROR 문은 **SQLGetDiagRec** 를 호출 하 여 데이터를 반환 합니다. PRINT 문은 SQL 문 실행이 SQL_SUCCESS_WITH_INFO을 반환 하 고 **SQLGetDiagRec** 에 대 한 후속 호출에서는 *SQLState* 01000을 반환 합니다. 심각도가 10 이하인 RAISERROR는 PRINT와 동일하게 동작합니다. 심각도가 11 이상인 RAISERROR는 실행이 SQL_ERROR을 반환 하 고 **SQLGetDiagRec** 에 대 한 후속 호출은 *SQLState* 42000을 반환 합니다. 예를 들어 다음 문은 SQL_SUCCESS_WITH_INFO를 반환합니다.  
   
 ```  
 SQLExecDirect (hstmt, "PRINT  'Some message' ", SQL_NTS);  

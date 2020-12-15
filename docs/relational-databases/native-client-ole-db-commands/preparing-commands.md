@@ -16,13 +16,13 @@ helpviewer_keywords:
 ms.assetid: 09ec0c6c-0a44-4766-b9b7-5092f676ee54
 author: markingmyname
 ms.author: maghan
-monikerRange: '>=aps-pdw-2016||=azuresqldb-current||=azure-sqldw-latest||>=sql-server-2016||=sqlallproducts-allversions||>=sql-server-linux-2017||=azuresqldb-mi-current'
-ms.openlocfilehash: 8119cf7e254d4d016b21b9a2aeaa976121df8703
-ms.sourcegitcommit: e700497f962e4c2274df16d9e651059b42ff1a10
+monikerRange: '>=aps-pdw-2016||=azuresqldb-current||=azure-sqldw-latest||>=sql-server-2016||>=sql-server-linux-2017||=azuresqldb-mi-current'
+ms.openlocfilehash: 91e52c307ce06c01a91d9c81158f5adea4c31a00
+ms.sourcegitcommit: 1a544cf4dd2720b124c3697d1e62ae7741db757c
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 08/17/2020
-ms.locfileid: "88455827"
+ms.lasthandoff: 12/14/2020
+ms.locfileid: "97439884"
 ---
 # <a name="preparing-commands-in-sql-server-native-client"></a>SQL Server Native Client에서 명령 준비
 [!INCLUDE[SQL Server Azure SQL Database Synapse Analytics PDW ](../../includes/applies-to-version/sql-asdb-asdbmi-asa-pdw.md)]
@@ -43,17 +43,17 @@ ms.locfileid: "88455827"
   
  임시 저장 프로시저 생성은 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] Native Client OLE DB 공급자별 초기화 속성 SSPROP_INIT_USEPROCFORPREP에서 제어합니다. 이 속성 값이 SSPROPVAL_USEPROCFORPREP_ON 또는 SSPROPVAL_USEPROCFORPREP_ON_DROP이면 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] Native Client OLE DB 공급자는 명령을 준비할 때 저장 프로시저를 만들려고 합니다. 애플리케이션 사용자에게 충분한 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 권한이 있으면 저장 프로시저가 성공적으로 만들어집니다.  
   
- 연결이 자주 끊기지 않는 소비자의 경우 임시 저장 프로시저 생성에는 임시 개체가 만들어지는 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 시스템 데이터베이스인 **tempdb**의 리소스가 상당히 필요합니다. SSPROP_INIT_USEPROCFORPREP 값이 SSPROPVAL_USEPROCFORPREP_ ON이면 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] Native Client OLE DB 공급자가 만든 임시 저장 프로시저는 명령을 만든 세션과 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 인스턴스 사이의 연결이 끊기는 경우에만 삭제됩니다. 해당 연결이 데이터 원본 초기화 시 만들어진 기본 연결인 경우 임시 저장 프로시저는 데이터 원본 초기화가 취소되는 경우에만 삭제됩니다.  
+ 연결이 자주 끊기지 않는 소비자의 경우 임시 저장 프로시저 생성에는 임시 개체가 만들어지는 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 시스템 데이터베이스인 **tempdb** 의 리소스가 상당히 필요합니다. SSPROP_INIT_USEPROCFORPREP 값이 SSPROPVAL_USEPROCFORPREP_ ON이면 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] Native Client OLE DB 공급자가 만든 임시 저장 프로시저는 명령을 만든 세션과 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 인스턴스 사이의 연결이 끊기는 경우에만 삭제됩니다. 해당 연결이 데이터 원본 초기화 시 만들어진 기본 연결인 경우 임시 저장 프로시저는 데이터 원본 초기화가 취소되는 경우에만 삭제됩니다.  
   
  SSPROP_INIT_USEPROCFORPREP 값이 SSPROPVAL_USEPROCFORPREP_ON_DROP이면 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] Native Client OLE DB 공급자 임시 저장 프로시저는 다음과 같은 경우 삭제됩니다.  
   
--   소비자가 **ICommandText::SetCommandText**를 사용하여 새 명령을 지정합니다.  
+-   소비자가 **ICommandText::SetCommandText** 를 사용하여 새 명령을 지정합니다.  
   
--   소비자가 **ICommandPrepare::Unprepare**를 사용하여 명령 텍스트가 더 이상 필요 없음을 나타냅니다.  
+-   소비자가 **ICommandPrepare::Unprepare** 를 사용하여 명령 텍스트가 더 이상 필요 없음을 나타냅니다.  
   
 -   소비자가 임시 저장 프로시저를 사용하여 명령 개체에 대한 모든 참조를 해제합니다.  
   
- 명령 개체는 **tempdb**에 임시 저장 프로시저를 하나만 포함합니다. 기존 임시 저장 프로시저는 특정 명령 개체의 현재 명령 텍스트를 나타냅니다.  
+ 명령 개체는 **tempdb** 에 임시 저장 프로시저를 하나만 포함합니다. 기존 임시 저장 프로시저는 특정 명령 개체의 현재 명령 텍스트를 나타냅니다.  
   
 ## <a name="see-also"></a>참고 항목  
  [명령](../../relational-databases/native-client-ole-db-commands/commands.md)  

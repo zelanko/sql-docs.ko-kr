@@ -18,13 +18,13 @@ helpviewer_keywords:
 ms.assetid: 6192ca87-febd-4075-8199-14b4fa609b8c
 author: markingmyname
 ms.author: maghan
-monikerRange: =azuresqldb-current||>=sql-server-2016||=sqlallproducts-allversions||>=sql-server-linux-2017||=azuresqldb-mi-current
-ms.openlocfilehash: 3e0f32166351f80b87b28a169ea0204af97f832f
-ms.sourcegitcommit: dd36d1cbe32cd5a65c6638e8f252b0bd8145e165
+monikerRange: =azuresqldb-current||>=sql-server-2016||>=sql-server-linux-2017||=azuresqldb-mi-current
+ms.openlocfilehash: bf933bec30b2434583970992f79dfc4e898cd479
+ms.sourcegitcommit: 1a544cf4dd2720b124c3697d1e62ae7741db757c
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 09/08/2020
-ms.locfileid: "89547609"
+ms.lasthandoff: 12/14/2020
+ms.locfileid: "97439438"
 ---
 # <a name="sp_recompile-transact-sql"></a>sp_recompile(Transact-SQL)
 [!INCLUDE [SQL Server SQL Database](../../includes/applies-to-version/sql-asdb.md)]
@@ -58,7 +58,7 @@ sp_recompile [ @objname = ] 'object'
 ## <a name="permissions"></a>사용 권한  
  지정된 개체에 대한 ALTER 권한이 필요합니다.  
   
-## <a name="examples"></a>예제  
+## <a name="examples"></a>예  
  다음 예에서는 `Customer` 테이블에 대해 수행되는 저장 프로시저, 트리거 및 사용자 정의 함수가 다음에 실행될 때 다시 컴파일되도록 합니다.  
   
 ```  

@@ -18,18 +18,18 @@ helpviewer_keywords:
 ms.assetid: 057d7c1c-1428-4780-9447-a002ea741188
 author: markingmyname
 ms.author: maghan
-monikerRange: '>=aps-pdw-2016||=azuresqldb-current||=azure-sqldw-latest||>=sql-server-2016||=sqlallproducts-allversions||>=sql-server-linux-2017||=azuresqldb-mi-current'
-ms.openlocfilehash: 9d0842a0cc4c38c25af9dc3bdf334f846993f480
-ms.sourcegitcommit: 4d370399f6f142e25075b3714e5c2ce056b1bfd0
+monikerRange: '>=aps-pdw-2016||=azuresqldb-current||=azure-sqldw-latest||>=sql-server-2016||>=sql-server-linux-2017||=azuresqldb-mi-current'
+ms.openlocfilehash: 77ca9dc51b0c4529b54e6107adfcf19fb4f8bab8
+ms.sourcegitcommit: 1a544cf4dd2720b124c3697d1e62ae7741db757c
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 10/09/2020
-ms.locfileid: "91867309"
+ms.lasthandoff: 12/14/2020
+ms.locfileid: "97438396"
 ---
 # <a name="batches-of-statements"></a>문의 일괄 처리
 [!INCLUDE [SQL Server](../../../includes/applies-to-version/sql-asdb-asdbmi-asa-pdw.md)]
 
-  문 일괄 처리에는 두 개 이상의 [!INCLUDE[tsql](../../../includes/tsql-md.md)] 문이 포함 되어 있습니다. 세미콜론 (;)은 **Sqlexecdirect** 또는 [sqlprepare 함수](../../../odbc/reference/syntax/sqlprepare-function.md)에 전달 된 단일 문자열로 기본 제공 됩니다. 예를 들면 다음과 같습니다.  
+  문 일괄 처리에는 두 개 이상의 [!INCLUDE[tsql](../../../includes/tsql-md.md)] 문이 포함 되어 있습니다. 세미콜론 (;)은 **Sqlexecdirect** 또는 [sqlprepare 함수](../../../odbc/reference/syntax/sqlprepare-function.md)에 전달 된 단일 문자열로 기본 제공 됩니다. 예를 들어:  
   
 ```  
 SQLExecDirect(hstmt,   

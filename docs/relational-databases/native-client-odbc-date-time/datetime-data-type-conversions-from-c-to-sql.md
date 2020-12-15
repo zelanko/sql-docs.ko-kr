@@ -13,13 +13,13 @@ helpviewer_keywords:
 ms.assetid: 7ac098db-9147-4883-8da9-a58ab24a0d31
 author: markingmyname
 ms.author: maghan
-monikerRange: '>=aps-pdw-2016||=azuresqldb-current||=azure-sqldw-latest||>=sql-server-2016||=sqlallproducts-allversions||>=sql-server-linux-2017||=azuresqldb-mi-current'
-ms.openlocfilehash: e6fa65cd3bdfd8b6054be31f91eef811d7db4aac
-ms.sourcegitcommit: e700497f962e4c2274df16d9e651059b42ff1a10
+monikerRange: '>=aps-pdw-2016||=azuresqldb-current||=azure-sqldw-latest||>=sql-server-2016||>=sql-server-linux-2017||=azuresqldb-mi-current'
+ms.openlocfilehash: 0a65be08afc1a8570c64f7ffabddcb6c2d2d51b1
+ms.sourcegitcommit: 1a544cf4dd2720b124c3697d1e62ae7741db757c
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 08/17/2020
-ms.locfileid: "88420657"
+ms.lasthandoff: 12/14/2020
+ms.locfileid: "97438556"
 ---
 # <a name="datetime-data-type-conversions-from-c-to-sql"></a>날짜/시간 데이터 형식을 C에서 SQL로 변환
 [!INCLUDE[SQL Server Azure SQL Database Synapse Analytics PDW ](../../includes/applies-to-version/sql-asdb-asdbmi-asa-pdw.md)]
@@ -33,17 +33,17 @@ ms.locfileid: "88420657"
 | **SQL_C_DATE** |1|-|-|1,6|1,5,6|1,13|1,13|  
 | **SQL_C_TIME** |-|1|1|1,7|1, 5, 7|1,13|1,13|  
 | **SQL_C_SS_TIME2** |-|1,3|1,10|1,7|1, 5, 7|1,13|1,13|  
-| **SQL_C_BINARY(SQL_SS_TIME2_STRUCT)** |해당 없음|해당 없음|1,10,11|해당 없음|해당 없음|해당 없음|해당 없음|  
+| **SQL_C_BINARY(SQL_SS_TIME2_STRUCT)** |N/A|N/A|1,10,11|N/A|N/A|N/A|N/A|  
 | **SQL_C_TYPE_TIMESTAMP** |1,2|1,3,4|1,4,10|1,10|1,5,10|1,13|1,13|  
 | **SQL_C_SS_TIMESTAMPOFFSET** |1,2,8|1,3,4,8|1,4,8,10|1,8,10|1,10|1,13|1,13|  
-| **SQL_C_BINARY(SQL_SS_TIMESTAMPOFFSET_STRUCT)** |해당 없음|해당 없음|해당 없음|해당 없음|1,10,11|해당 없음|해당 없음|  
-| **SQL_C_CHAR/SQL_WCHAR(date)** |9|9|9|9,6|9,5,6|해당 없음|해당 없음|  
-| **SQL_C_CHAR/SQL_WCHAR(time2)** |9|9, 3|9,10|9,7,10|9,5,7,10|해당 없음|해당 없음|  
-| **SQL_C_CHAR/SQL_WCHAR(datetime)** |9,2|9, 3, 4|9,4,10|9,10|9,5,10|해당 없음|해당 없음|  
-| **SQL_C_CHAR/SQL_WCHAR(datetimeoffset)** |9,2,8|9, 3, 4, 8|9,4,8,10|9,8,10|9,10|해당 없음|해당 없음|  
-| **SQL_C_BINARY(SQL_DATE_STRUCT)** |1,11|해당 없음|해당 없음|해당 없음|해당 없음|해당 없음|해당 없음|  
-| **SQL_C_BINARY(SQL_TIME_STRUCT)** |해당 없음|해당 없음|해당 없음|해당 없음|해당 없음|해당 없음|해당 없음|  
-| **SQL_C_BINARY(SQL_TIMESTAMP_STRUCT)** |해당 없음|해당 없음|해당 없음|해당 없음|해당 없음|해당 없음|해당 없음|  
+| **SQL_C_BINARY(SQL_SS_TIMESTAMPOFFSET_STRUCT)** |N/A|N/A|N/A|N/A|1,10,11|N/A|N/A|  
+| **SQL_C_CHAR/SQL_WCHAR(date)** |9|9|9|9,6|9,5,6|N/A|N/A|  
+| **SQL_C_CHAR/SQL_WCHAR(time2)** |9|9, 3|9,10|9,7,10|9,5,7,10|N/A|N/A|  
+| **SQL_C_CHAR/SQL_WCHAR(datetime)** |9,2|9, 3, 4|9,4,10|9,10|9,5,10|N/A|N/A|  
+| **SQL_C_CHAR/SQL_WCHAR(datetimeoffset)** |9,2,8|9, 3, 4, 8|9,4,8,10|9,8,10|9,10|N/A|N/A|  
+| **SQL_C_BINARY(SQL_DATE_STRUCT)** |1,11|N/A|N/A|N/A|N/A|N/A|N/A|  
+| **SQL_C_BINARY(SQL_TIME_STRUCT)** |N/A|N/A|N/A|N/A|N/A|N/A|N/A|  
+| **SQL_C_BINARY(SQL_TIMESTAMP_STRUCT)** |N/A|N/A|N/A|N/A|N/A|N/A|해당 없음|  
   
 ## <a name="key-to-symbols"></a>기호 설명  
   

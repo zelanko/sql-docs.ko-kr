@@ -13,13 +13,13 @@ helpviewer_keywords:
 ms.assetid: 12ff1ea6-e2cc-40e6-910c-3126974a90b3
 author: markingmyname
 ms.author: maghan
-monikerRange: '>=aps-pdw-2016||=azuresqldb-current||=azure-sqldw-latest||>=sql-server-2016||=sqlallproducts-allversions||>=sql-server-linux-2017||=azuresqldb-mi-current'
-ms.openlocfilehash: fc1836b2e36ac3e665119ba86888bc5e38eecb52
-ms.sourcegitcommit: e700497f962e4c2274df16d9e651059b42ff1a10
+monikerRange: '>=aps-pdw-2016||=azuresqldb-current||=azure-sqldw-latest||>=sql-server-2016||>=sql-server-linux-2017||=azuresqldb-mi-current'
+ms.openlocfilehash: d0d7570b35f3d65c9f092b346e81fc37556dc5f1
+ms.sourcegitcommit: 1a544cf4dd2720b124c3697d1e62ae7741db757c
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 08/17/2020
-ms.locfileid: "88420597"
+ms.lasthandoff: 12/14/2020
+ms.locfileid: "97438516"
 ---
 # <a name="sql_variant-support-for-date-and-time-types"></a>날짜 및 시간 형식에 대한 sql_variant 지원
 [!INCLUDE[SQL Server Azure SQL Database Synapse Analytics PDW ](../../includes/applies-to-version/sql-asdb-asdbmi-asa-pdw.md)]
@@ -52,12 +52,12 @@ ms.locfileid: "88420597"
 |SQL_C_BIT|bit|SQL_CA_SS_VARIANT_SQL_TYPE이 무시됩니다.|  
 |SQL_C_UTINYINT|tinyint|SQL_CA_SS_VARIANT_SQL_TYPE이 무시됩니다.|  
 |SQL_C_BINARY|varbinary|SQL_CA_SS_VARIANT_SQL_TYPE이 설정되지 않습니다.|  
-|SQL_C_BINARY|time|SQL_CA_SS_VARIANT_SQL_TYPE = SQL_SS_TIME2<br /><br /> 소수 자릿수가 SQL_DESC_PRECISION( *DecimalDigits* 의 **SQLBindParameter**매개 변수)으로 설정됩니다.|  
-|SQL_C_BINARY|datetimeoffset|SQL_CA_SS_VARIANT_SQL_TYPE= SQL_SS_TIMESTAMPOFFSET<br /><br /> 소수 자릿수가 SQL_DESC_PRECISION( *DecimalDigits* 의 **SQLBindParameter**매개 변수)으로 설정됩니다.|  
+|SQL_C_BINARY|time|SQL_CA_SS_VARIANT_SQL_TYPE = SQL_SS_TIME2<br /><br /> 소수 자릿수가 SQL_DESC_PRECISION( *DecimalDigits* 의 **SQLBindParameter** 매개 변수)으로 설정됩니다.|  
+|SQL_C_BINARY|datetimeoffset|SQL_CA_SS_VARIANT_SQL_TYPE= SQL_SS_TIMESTAMPOFFSET<br /><br /> 소수 자릿수가 SQL_DESC_PRECISION( *DecimalDigits* 의 **SQLBindParameter** 매개 변수)으로 설정됩니다.|  
 |SQL_C_TYPE_DATE|date|SQL_CA_SS_VARIANT_SQL_TYPE이 무시됩니다.|  
 |SQL_C_TYPE_TIME|time(0)|SQL_CA_SS_VARIANT_SQL_TYPE이 무시됩니다.|  
-|SQL_C_TYPE_TIMESTAMP|datetime2|소수 자릿수가 SQL_DESC_PRECISION( *DecimalDigits* 의 **SQLBindParameter**매개 변수)으로 설정됩니다.|  
-|SQL_C_NUMERIC|decimal|전체 자릿수가 SQL_DESC_PRECISION( *ColumnSize* 의 **SQLBindParameter**매개 변수)으로 설정됩니다.<br /><br /> 소수 자릿수가 SQL_DESC_SCALE(SQLBindParameter의 *DecimalDigits* 매개 변수)로 설정됩니다.|  
+|SQL_C_TYPE_TIMESTAMP|datetime2|소수 자릿수가 SQL_DESC_PRECISION( *DecimalDigits* 의 **SQLBindParameter** 매개 변수)으로 설정됩니다.|  
+|SQL_C_NUMERIC|decimal|전체 자릿수가 SQL_DESC_PRECISION( *ColumnSize* 의 **SQLBindParameter** 매개 변수)으로 설정됩니다.<br /><br /> 소수 자릿수가 SQL_DESC_SCALE(SQLBindParameter의 *DecimalDigits* 매개 변수)로 설정됩니다.|  
 |SQL_C_SS_TIME2|time|SQL_CA_SS_VARIANT_SQL_TYPE이 무시됩니다.|  
 |SQL_C_SS_TIMESTAMPOFFSET|datetimeoffset|SQL_CA_SS_VARIANT_SQL_TYPE이 무시됩니다.|  
   

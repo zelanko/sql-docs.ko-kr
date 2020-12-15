@@ -1,6 +1,6 @@
 ---
 description: 빠른 정방향 전용 커서(ODBC)
-title: 빠른 전진 전용 커서 (ODBC) | Microsoft Docs
+title: 빠른 Forward-Only 커서 (ODBC) | Microsoft Docs
 ms.custom: ''
 ms.date: 03/14/2017
 ms.prod: sql
@@ -16,13 +16,13 @@ helpviewer_keywords:
 ms.assetid: 0707d07e-fc95-42ed-9280-b7e508ac8c62
 author: markingmyname
 ms.author: maghan
-monikerRange: '>=aps-pdw-2016||=azuresqldb-current||=azure-sqldw-latest||>=sql-server-2016||=sqlallproducts-allversions||>=sql-server-linux-2017||=azuresqldb-mi-current'
-ms.openlocfilehash: 3c365461cc7dc4874ae76978019da2c67e3b84fd
-ms.sourcegitcommit: e700497f962e4c2274df16d9e651059b42ff1a10
+monikerRange: '>=aps-pdw-2016||=azuresqldb-current||=azure-sqldw-latest||>=sql-server-2016||>=sql-server-linux-2017||=azuresqldb-mi-current'
+ms.openlocfilehash: ef941028ffaf9c515b42d319bee522a03c928569
+ms.sourcegitcommit: 1a544cf4dd2720b124c3697d1e62ae7741db757c
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 08/17/2020
-ms.locfileid: "88423915"
+ms.lasthandoff: 12/14/2020
+ms.locfileid: "97438596"
 ---
 # <a name="fast-forward-only-cursors-odbc"></a>빠른 정방향 전용 커서(ODBC)
 [!INCLUDE [SQL Server](../../../includes/applies-to-version/sql-asdb-asdbmi-asa-pdw.md)]
@@ -43,7 +43,7 @@ ms.locfileid: "88423915"
   
 3.  N 개 이상의 행이 실제로 인출 *되 면 안전* 하 게 하기 위해 *n* + 1 개 요소의 배열에 결과 열을 바인딩합니다.  
   
-4.  **Sqlexecdirect** 또는 **sqlexecute**를 사용 하 여 커서를 엽니다.  
+4.  **Sqlexecdirect** 또는 **sqlexecute** 를 사용 하 여 커서를 엽니다.  
   
 5.  반환 상태가 SQL_SUCCESS 인 경우 **SQLFreeStmt** 또는 **SQLCloseCursor** 를 호출 하 여 커서를 닫습니다. 행의 모든 데이터가 바인딩된 프로그램 변수에 포함됩니다.  
   
