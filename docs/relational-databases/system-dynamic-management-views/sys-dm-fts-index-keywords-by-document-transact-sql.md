@@ -1,6 +1,6 @@
 ---
 description: sys.dm_fts_index_keywords_by_document(Transact-SQL)
-title: sys. dm_fts_index_keywords_by_document (Transact-sql) | Microsoft Docs
+title: sys.dm_fts_index_keywords_by_document (Transact-sql) | Microsoft Docs
 ms.custom: ''
 ms.date: 06/10/2016
 ms.prod: sql
@@ -22,13 +22,13 @@ helpviewer_keywords:
 ms.assetid: 793b978b-c8a1-428c-90c2-a3e49d81b5c9
 author: pmasl
 ms.author: pelopes
-monikerRange: '>=aps-pdw-2016||>=sql-server-2016||=sqlallproducts-allversions||>=sql-server-linux-2017||=azuresqldb-mi-current'
-ms.openlocfilehash: 1d9526c20757ca8f63c468f88c56e26de7ad2b1a
-ms.sourcegitcommit: e700497f962e4c2274df16d9e651059b42ff1a10
+monikerRange: '>=aps-pdw-2016||>=sql-server-2016||>=sql-server-linux-2017||=azuresqldb-mi-current'
+ms.openlocfilehash: 353fcb321549546ff1b44956d5ebc20826e6c0e3
+ms.sourcegitcommit: 1a544cf4dd2720b124c3697d1e62ae7741db757c
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 08/17/2020
-ms.locfileid: "88481973"
+ms.lasthandoff: 12/14/2020
+ms.locfileid: "97484705"
 ---
 # <a name="sysdm_fts_index_keywords_by_document-transact-sql"></a>sys.dm_fts_index_keywords_by_document(Transact-SQL)
 [!INCLUDE [sql-asdbmi-pdw](../../includes/applies-to-version/sql-asdbmi-pdw.md)]
@@ -57,7 +57,7 @@ sys.dm_fts_index_keywords_by_document
   
 ## <a name="arguments"></a>인수  
  db_id ('*database_name*')  
- [DB_ID ()](../../t-sql/functions/db-id-transact-sql.md) 함수에 대 한 호출입니다. 이 함수는 데이터베이스 이름을 받아서 데이터베이스 ID를 반환합니다. 이 ID는 지정된 데이터베이스를 찾기 위해 sys.dm_fts_index_keywords_by_document에 사용됩니다. *database_name*을 생략하면 현재 데이터베이스 ID가 반환됩니다.  
+ [DB_ID ()](../../t-sql/functions/db-id-transact-sql.md) 함수에 대 한 호출입니다. 이 함수는 데이터베이스 이름을 받아서 데이터베이스 ID를 반환합니다. 이 ID는 지정된 데이터베이스를 찾기 위해 sys.dm_fts_index_keywords_by_document에 사용됩니다. *database_name* 을 생략하면 현재 데이터베이스 ID가 반환됩니다.  
   
  object_id ('*table_name*')  
  [OBJECT_ID ()](../../t-sql/functions/object-id-transact-sql.md) 함수에 대 한 호출입니다. 이 함수는 테이블 이름을 받아서 검사할 전체 텍스트 인덱스가 들어 있는 테이블의 테이블 ID를 반환합니다.  
@@ -70,7 +70,7 @@ sys.dm_fts_index_keywords_by_document
 |display_term|**nvarchar(4000)**|사람이 인식할 수 있는 키워드 형식입니다. 이 형식은 전체 텍스트 인덱스에 저장되는 내부 형식에서 파생됩니다.<br /><br /> 참고: OxFF는 파일이 나 데이터 집합의 끝을 나타내는 특수 문자를 나타냅니다.|  
 |column_id|**int**|현재 키워드가 전체 텍스트 인덱싱된 열의 ID입니다.|  
 |document_id|**int**|현재 단어가 전체 텍스트 인덱싱된 문서 또는 행의 ID입니다. 이 ID는 해당 문서 또는 행의 전체 텍스트 키 값과 일치합니다.|  
-|occurrence_count|**int**|**Document_id**로 표시 되는 문서 또는 행에서 현재 키워드의 발생 횟수입니다. '*Search_property_name*'를 지정 하면 occurrence_count은 문서 또는 행 내의 지정 된 검색 속성에 현재 키워드의 발생 횟수만 표시 합니다.|  
+|occurrence_count|**int**|**Document_id** 로 표시 되는 문서 또는 행에서 현재 키워드의 발생 횟수입니다. '*Search_property_name*'를 지정 하면 occurrence_count은 문서 또는 행 내의 지정 된 검색 속성에 현재 키워드의 발생 횟수만 표시 합니다.|  
   
 ## <a name="remarks"></a>설명  
  sys.dm_fts_index_keywords_by_document에서 반환하는 정보는 특히 다음을 확인하는 데 유용합니다.  
@@ -114,7 +114,7 @@ GO
 ## <a name="permissions"></a>사용 권한  
  전체 텍스트 인덱스가 적용되는 열에 대한 SELECT 권한 및 CREATE FULLTEXT CATALOG 권한이 필요합니다.  
   
-## <a name="examples"></a>예제  
+## <a name="examples"></a>예  
   
 ### <a name="a-displaying-full-text-index-content-at-the-document-level"></a>A. 문서 수준의 전체 텍스트 인덱스 내용 표시  
  다음 예에서는 `HumanResources.JobCandidate` 예제 데이터베이스의 `AdventureWorks2012` 테이블에 문서 수준의 전체 텍스트 인덱스 내용을 표시합니다.  
@@ -131,8 +131,8 @@ GO
 ## <a name="see-also"></a>참고 항목  
  [Transact-sql&#41;전체 텍스트 검색 및 의미 체계 검색 동적 관리 뷰 및 함수 &#40;](../../relational-databases/system-dynamic-management-views/full-text-and-semantic-search-dynamic-management-views-functions.md)   
  [전체 텍스트 검색](../../relational-databases/search/full-text-search.md)   
- [dm_fts_index_keywords &#40;Transact-sql&#41;](../../relational-databases/system-dynamic-management-views/sys-dm-fts-index-keywords-transact-sql.md)   
- [dm_fts_index_keywords_by_property &#40;Transact-sql&#41;](../../relational-databases/system-dynamic-management-views/sys-dm-fts-index-keywords-by-property-transact-sql.md)   
+ [Transact-sql&#41;sys.dm_fts_index_keywords &#40;](../../relational-databases/system-dynamic-management-views/sys-dm-fts-index-keywords-transact-sql.md)   
+ [sys.dm_fts_index_keywords_by_property &#40;Transact-SQL&#41;](../../relational-databases/system-dynamic-management-views/sys-dm-fts-index-keywords-by-property-transact-sql.md)   
  [Transact-sql&#41;sp_fulltext_keymappings &#40;](../../relational-databases/system-stored-procedures/sp-fulltext-keymappings-transact-sql.md)   
  [전체 텍스트 인덱스 성능 향상](../../relational-databases/search/improve-the-performance-of-full-text-indexes.md)  
   

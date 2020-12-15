@@ -1,6 +1,6 @@
 ---
 description: sys.dm_sql_referenced_entities(Transact-SQL)
-title: sys. dm_sql_referenced_entities (Transact-sql) | Microsoft Docs
+title: sys.dm_sql_referenced_entities (Transact-sql) | Microsoft Docs
 ms.custom: ''
 ms.date: 05/01/2019
 ms.prod: sql
@@ -20,19 +20,19 @@ helpviewer_keywords:
 ms.assetid: 077111cb-b860-4d61-916f-bac5d532912f
 author: markingmyname
 ms.author: maghan
-monikerRange: =azuresqldb-current||>=sql-server-2016||=sqlallproducts-allversions||>=sql-server-linux-2017||=azuresqldb-mi-current
-ms.openlocfilehash: de7e748e1e993d0e60bde500af1443707ee9020c
-ms.sourcegitcommit: dd36d1cbe32cd5a65c6638e8f252b0bd8145e165
+monikerRange: =azuresqldb-current||>=sql-server-2016||>=sql-server-linux-2017||=azuresqldb-mi-current
+ms.openlocfilehash: cd6c12416a4e1626b7439ace6921b5d1981f0051
+ms.sourcegitcommit: 1a544cf4dd2720b124c3697d1e62ae7741db757c
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 09/08/2020
-ms.locfileid: "89550216"
+ms.lasthandoff: 12/14/2020
+ms.locfileid: "97484605"
 ---
 # <a name="sysdm_sql_referenced_entities-transact-sql"></a>sys.dm_sql_referenced_entities(Transact-SQL)
 
 [!INCLUDE [SQL Server SQL Database](../../includes/applies-to-version/sql-asdb.md)]
 
-에서 지정 된 참조 엔터티 정의에 이름으로 참조 되는 각 사용자 정의 엔터티에 대해 하나의 행을 반환 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 합니다. 두 엔터티 간의 종속성은 *참조*된 엔터티 라는 하나의 사용자 정의 엔터티를 *참조 엔터티*라고 하는 다른 사용자 정의 엔터티의 지속형 SQL 식에 이름으로 표시 하는 경우 생성 됩니다. 예를 들어 저장 프로시저가 지정된 참조 엔터티인 경우 이 함수는 테이블, 뷰, UDT(사용자 정의 형식), 또는 다른 저장 프로시저 등 이 저장 프로시저에서 참조되는 모든 사용자 정의 엔터티를 반환합니다.  
+에서 지정 된 참조 엔터티 정의에 이름으로 참조 되는 각 사용자 정의 엔터티에 대해 하나의 행을 반환 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 합니다. 두 엔터티 간의 종속성은 *참조* 된 엔터티 라는 하나의 사용자 정의 엔터티를 *참조 엔터티* 라고 하는 다른 사용자 정의 엔터티의 지속형 SQL 식에 이름으로 표시 하는 경우 생성 됩니다. 예를 들어 저장 프로시저가 지정된 참조 엔터티인 경우 이 함수는 테이블, 뷰, UDT(사용자 정의 형식), 또는 다른 저장 프로시저 등 이 저장 프로시저에서 참조되는 모든 사용자 정의 엔터티를 반환합니다.  
   
  이러한 동적 관리 함수를 사용하면 지정된 참조 엔터티에 의해 참조되는 다음과 같은 엔터티 유형을 보고할 수 있습니다.  
   
@@ -69,7 +69,7 @@ sys.dm_sql_referenced_entities (
  [ *schema_name*. ] *referencing_entity_name*  
  참조 엔터티의 이름입니다. 참조 하는 클래스가 OBJECT 인 경우 *schema_name* 필요 합니다.  
   
- *schema_name referencing_entity_name* **nvarchar (517)** 입니다.  
+ *schema_name. referencing_entity_name* 는 **nvarchar (517)** 입니다.  
   
  *<referencing_class>* :: = {OBJECT | DATABASE_DDL_TRIGGER | SERVER_DDL_TRIGGER}  
  지정된 참조 엔터티의 클래스입니다. 각 문에는 하나의 클래스만 지정할 수 있습니다.  
@@ -91,7 +91,7 @@ sys.dm_sql_referenced_entities (
 |referenced_class|**tinyint**|참조된 엔터티의 클래스입니다.<br /><br /> 1 = 개체 또는 열<br /><br /> 6 = 형식<br /><br /> 10 = XML 스키마 컬렉션<br /><br /> 21 = 파티션 함수|  
 |referenced_class_desc|**nvarchar(60)**|참조된 엔터티의 클래스에 대한 설명입니다.<br /><br /> OBJECT_OR_COLUMN<br /><br /> TYPE<br /><br /> XML_SCHEMA_COLLECTION<br /><br /> PARTITION_FUNCTION|  
 |is_caller_dependent|**bit**|참조된 엔터티에 대한 스키마 바인딩이 런타임에 발생하며 따라서 엔터티 ID 확인은 호출자의 스키마에 종속됨을 나타냅니다. 이는 참조된 엔터티가 EXECUTE 문 내에서 호출되는 저장 프로시저, 확장 저장 프로시저 또는 사용자 정의 함수인 경우 발생합니다.<br /><br /> 1 = 참조된 엔터티가 호출자에 종속되고 런타임에 확인됩니다. 이 경우 referenced_id는 NULL입니다.<br /><br /> 0 = 참조된 엔터티 ID가 호출자에 종속되지 않습니다. 스키마 이름을 명시적으로 지정하는 스키마 바운드 참조와 데이터베이스 간 및 서버 간 참조의 경우 항상 0입니다. 예를 들어 `EXEC MyDatabase.MySchema.MyProc` 형식의 엔터티에 대한 참조는 호출자에 종속되지 않습니다. 하지만 `EXEC MyDatabase..MyProc` 형식의 참조는 호출자에 종속됩니다.|  
-|is_ambiguous|**bit**|참조가 모호 하며 런타임에 사용자 정의 함수, UDT (사용자 정의 형식) 또는 **xml**형식의 열에 대 한 xquery 참조로 확인 될 수 있음을 나타냅니다. 예를 들어 저장 프로시저에 `SELECT Sales.GetOrder() FROM Sales.MySales` 문이 정의된 경우 `Sales.GetOrder()`가 `Sales` 스키마의 사용자 정의 함수인지, 아니면 `Sales`라는 메서드가 있는 UDT 형식의 `GetOrder()` 열인지는 저장 프로시저가 실행될 때까지 알 수 없습니다.<br /><br /> 1 = 사용자 정의 함수 또는 열 UDT(사용자 정의 형식) 메서드에 대한 참조가 모호합니다.<br /><br /> 0 = 참조가 분명하거나 함수가 호출될 때 엔터티를 성공적으로 바인딩할 수 있습니다.<br /><br /> 스키마 바운드 참조의 경우 항상 0입니다.|  
+|is_ambiguous|**bit**|참조가 모호 하며 런타임에 사용자 정의 함수, UDT (사용자 정의 형식) 또는 **xml** 형식의 열에 대 한 xquery 참조로 확인 될 수 있음을 나타냅니다. 예를 들어 저장 프로시저에 `SELECT Sales.GetOrder() FROM Sales.MySales` 문이 정의된 경우 `Sales.GetOrder()`가 `Sales` 스키마의 사용자 정의 함수인지, 아니면 `Sales`라는 메서드가 있는 UDT 형식의 `GetOrder()` 열인지는 저장 프로시저가 실행될 때까지 알 수 없습니다.<br /><br /> 1 = 사용자 정의 함수 또는 열 UDT(사용자 정의 형식) 메서드에 대한 참조가 모호합니다.<br /><br /> 0 = 참조가 분명하거나 함수가 호출될 때 엔터티를 성공적으로 바인딩할 수 있습니다.<br /><br /> 스키마 바운드 참조의 경우 항상 0입니다.|  
 |is_selected|**bit**|1 = 개체 또는 열이 선택됩니다.|  
 |is_updated|**bit**|1 = 개체 또는 열이 수정됩니다.|  
 |is_select_all|**bit**|1 = 개체가 SELECT * 절에서 사용됩니다(개체 수준만 해당).|  
@@ -123,21 +123,21 @@ sys.dm_sql_referenced_entities (
 |엔터티 유형|참조 엔터티|참조된 엔터티|  
 |-----------------|------------------------|-----------------------|  
 |테이블|예*|예|  
-|View|예|예|  
+|보기|예|예|  
 |[!INCLUDE[tsql](../../includes/tsql-md.md)] 저장 프로시저**|예|예|  
-|CLR 저장 프로시저|아니요|예|  
+|CLR 저장 프로시저|예|예|  
 |[!INCLUDE[tsql](../../includes/tsql-md.md)] 사용자 정의 함수|예|예|  
-|CLR 사용자 정의 함수|아니요|예|  
-|CLR 트리거(DML 및 DDL)|아니요|아니요|  
-|[!INCLUDE[tsql](../../includes/tsql-md.md)] DML 트리거|예|아니요|  
-|[!INCLUDE[tsql](../../includes/tsql-md.md)] 데이터베이스 수준 DDL 트리거|예|아니요|  
-|[!INCLUDE[tsql](../../includes/tsql-md.md)] 서버 수준 DDL 트리거|예|아니요|  
-|확장된 저장 프로시저|아니요|예|  
-|큐|아니요|예|  
-|동의어|아니요|예|  
-|형식(별칭 및 CLR 사용자 정의 형식)|아니요|예|  
-|XML 스키마 컬렉션|아니요|예|  
-|파티션 함수|아니요|예|  
+|CLR 사용자 정의 함수|예|예|  
+|CLR 트리거(DML 및 DDL)|예|예|  
+|[!INCLUDE[tsql](../../includes/tsql-md.md)] DML 트리거|예|예|  
+|[!INCLUDE[tsql](../../includes/tsql-md.md)] 데이터베이스 수준 DDL 트리거|예|예|  
+|[!INCLUDE[tsql](../../includes/tsql-md.md)] 서버 수준 DDL 트리거|예|예|  
+|확장된 저장 프로시저|예|예|  
+|큐|예|예|  
+|동의어|예|예|  
+|형식(별칭 및 CLR 사용자 정의 형식)|예|예|  
+|XML 스키마 컬렉션|예|예|  
+|파티션 함수|예|예|  
 | &nbsp; | &nbsp; | &nbsp; |
 
  \* 테이블은 [!INCLUDE[tsql](../../includes/tsql-md.md)] 계산 열, CHECK 제약 조건 또는 DEFAULT 제약 조건 정의에서 모듈, 사용자 정의 형식 또는 XML 스키마 컬렉션을 참조 하는 경우에만 참조 엔터티로 추적 됩니다.  
@@ -147,7 +147,7 @@ sys.dm_sql_referenced_entities (
 ## <a name="permissions"></a>사용 권한  
  sys.dm_sql_referenced_entities에 대한 SELECT 권한 및 참조 엔터티에 대한 VIEW DEFINITION 권한이 필요합니다. 기본적으로 SELECT 권한은 public에 부여됩니다. 참조 엔터티가 데이터 수준 DDL 트리거인 경우 데이터베이스에 대한 ALTER DATABASE DDL TRIGGER 권한 또는 데이터베이스에 대한 VIEW DEFINITION 권한이 필요합니다. 참조 엔터티가 서버 수준 DDL 트리거인 경우 서버에 대한 VIEW ANY DEFINITION 권한이 필요합니다.  
   
-## <a name="examples"></a>예제  
+## <a name="examples"></a>예  
   
 ### <a name="a-return-entities-that-are-referenced-by-a-database-level-ddl-trigger"></a>A. 데이터베이스 수준 DDL 트리거에서 참조 하는 엔터티 반환  
  다음 예에서는 데이터베이스 수준 DDL 트리거 `ddlDatabaseTriggerLog`에 의해 참조되는 엔터티(테이블 및 열)를 반환합니다.  

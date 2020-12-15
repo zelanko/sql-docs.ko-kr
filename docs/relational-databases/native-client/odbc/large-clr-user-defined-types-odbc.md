@@ -1,6 +1,6 @@
 ---
 description: 큰 CLR 사용자 정의 형식(ODBC)
-title: 대량 CLR 사용자 정의 형식 (ODBC) | Microsoft Docs
+title: 대량 CLR User-Defined 형식 (ODBC) | Microsoft Docs
 ms.custom: ''
 ms.date: 03/17/2017
 ms.prod: sql
@@ -14,13 +14,13 @@ helpviewer_keywords:
 ms.assetid: ddce337e-bb6e-4a30-b7cc-4969bb1520a9
 author: markingmyname
 ms.author: maghan
-monikerRange: '>=aps-pdw-2016||=azuresqldb-current||=azure-sqldw-latest||>=sql-server-2016||=sqlallproducts-allversions||>=sql-server-linux-2017||=azuresqldb-mi-current'
-ms.openlocfilehash: 3f1beb11da79f41349ef0f01bb203d969654db07
-ms.sourcegitcommit: e700497f962e4c2274df16d9e651059b42ff1a10
+monikerRange: '>=aps-pdw-2016||=azuresqldb-current||=azure-sqldw-latest||>=sql-server-2016||>=sql-server-linux-2017||=azuresqldb-mi-current'
+ms.openlocfilehash: 52944d98e4e3141ffbe036b1166b083195ea7fb4
+ms.sourcegitcommit: 1a544cf4dd2720b124c3697d1e62ae7741db757c
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 08/17/2020
-ms.locfileid: "88428165"
+ms.lasthandoff: 12/14/2020
+ms.locfileid: "97483164"
 ---
 # <a name="large-clr-user-defined-types-odbc"></a>큰 CLR 사용자 정의 형식(ODBC)
 [!INCLUDE [SQL Server](../../../includes/applies-to-version/sql-asdb-asdbmi-asa-pdw.md)]
@@ -29,7 +29,7 @@ ms.locfileid: "88428165"
   
  대량 CLR Udt에 대 한 ODBC 지원을 보여 주는 예제는 [Large udt에 대 한 지원](../../../relational-databases/native-client-odbc-how-to/support-for-large-udts.md)을 참조 하세요.  
   
- SQL Server Native Client의 large CLR Udt 지원에 대 한 자세한 내용은 [LARGE Clr 사용자 정의 형식](../../../relational-databases/native-client/features/large-clr-user-defined-types.md)을 참조 하세요.  
+ SQL Server Native Client의 large CLR Udt 지원에 대 한 자세한 내용은 [LARGE clr User-Defined 형식](../../../relational-databases/native-client/features/large-clr-user-defined-types.md)을 참조 하세요.  
   
 ## <a name="data-format"></a>데이터 형식  
  SQL Server Native Client는 SQL_SS_LENGTH_UNLIMITED를 사용하여 LOB(Large Object) 형식에 대해 8,000바이트 이상인 열의 크기를 나타냅니다. SQL Server 2008부터 크기가 8,000바이트보다 큰 CLR UDT에도 같은 값이 사용됩니다.  
@@ -71,7 +71,7 @@ ms.locfileid: "88428165"
 |SQL_CA_SS_UDT_TYPE_NAME|UDT의 이름입니다.|UDT의 이름입니다.|  
 |SQL_CA_SS_UDT_ASSEMBLY_TYPE_NAME|UDT의 정규화된 이름입니다.|UDT의 정규화된 이름입니다.|  
   
- UDT 매개 변수의 경우 SQL_CA_SS_UDT_TYPE_NAME는 항상 **SQLSetDescField**을 통해 설정 해야 합니다. SQL_CA_SS_UDT_CATALOG_NAME 및 SQL_CA_SS_UDT_SCHEMA_NAME은 선택 사항입니다.  
+ UDT 매개 변수의 경우 SQL_CA_SS_UDT_TYPE_NAME는 항상 **SQLSetDescField** 을 통해 설정 해야 합니다. SQL_CA_SS_UDT_CATALOG_NAME 및 SQL_CA_SS_UDT_SCHEMA_NAME은 선택 사항입니다.  
   
  UDT가 테이블과 다른 스키마가 있는 동일한 데이터베이스에 정의되어 있으면 SQL_CA_SS_UDT_SCHEMA_NAME을 설정해야 합니다.  
   
@@ -89,7 +89,7 @@ ms.locfileid: "88428165"
 |SQL_DESC_CONCISE_TYPE|SQL_SS_UDT|SQL_SS_UDT|  
 |SQL_DESC_DATETIME_INTERVAL_CODE|0|0|  
 |SQL_DESC_DATETIME_INTERVAL_PRECISION|*n*|SQL_SS_LENGTH_UNLIMITED (0)|  
-|SQL_DESC_DISPLAY_SIZE|2*n*|SQL_SS_LENGTH_UNLIMITED (0)|  
+|SQL_DESC_DISPLAY_SIZE|2 *n*|SQL_SS_LENGTH_UNLIMITED (0)|  
 |SQL_DESC_FIXED_PREC_SCALE|SQL_FALSE|SQL_FALSE|  
 |SQL_DESC_LENGTH|*n*|SQL_SS_LENGTH_UNLIMITED (0)|  
 |SQL_DESC_LITERAL_PREFIX|"0x"|"0x"|  
@@ -214,7 +214,7 @@ ms.locfileid: "88428165"
 ### <a name="sqlgetdescrec"></a>SQLGetDescRec  
  UDT에 대해 반환되는 값은 다음과 같습니다.  
   
-|SQL 데이터 형식|Type|하위 유형|길이|전체 자릿수|확장|  
+|SQL 데이터 형식|유형|하위 유형|길이|전체 자릿수|확장|  
 |-------------------|----------|-------------|------------|---------------|-----------|  
 |SQL_SS_UDT<br /><br /> (8,000바이트 이하 길이)|SQL_SS_UDT|0|*n*|n|0|  
 |SQL_SS_UDT<br /><br /> (8,000바이트를 초과하는 길이)|SQL_SS_UDT|0|SQL_SS_LENGTH_UNLIMITED (0)|SQL_SS_LENGTH_UNLIMITED (0)|0|  
@@ -234,7 +234,7 @@ ms.locfileid: "88428165"
 ### <a name="sqlsetdescrec"></a>SQLSetDescRec  
  UDT에 허용되는 값은 다음과 같습니다.  
   
-|SQL 데이터 형식|Type|하위 유형|길이|전체 자릿수|확장|  
+|SQL 데이터 형식|유형|하위 유형|길이|전체 자릿수|확장|  
 |-------------------|----------|-------------|------------|---------------|-----------|  
 |SQL_SS_UDT<br /><br /> (8,000바이트 이하 길이)|SQL_SS_UDT|0|*n*|*n*|0|  
 |SQL_SS_UDT<br /><br /> (8,000바이트를 초과하는 길이)|SQL_SS_UDT|0|SQL_SS_LENGTH_UNLIMITED (0)|SQL_SS_LENGTH_UNLIMITED (0)|0|  

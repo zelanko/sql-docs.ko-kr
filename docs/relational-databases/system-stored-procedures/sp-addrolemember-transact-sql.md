@@ -18,13 +18,13 @@ helpviewer_keywords:
 ms.assetid: a583c087-bdb3-46d2-b9e5-3921b3e6d10b
 author: VanMSFT
 ms.author: vanto
-monikerRange: '>=aps-pdw-2016||=azuresqldb-current||=azure-sqldw-latest||>=sql-server-2016||=sqlallproducts-allversions||>=sql-server-linux-2017||=azuresqldb-mi-current'
-ms.openlocfilehash: a5531450e79b036138e581aa0fb8083ebb121c6f
-ms.sourcegitcommit: 2f868a77903c1f1c4cecf4ea1c181deee12d5b15
+monikerRange: '>=aps-pdw-2016||=azuresqldb-current||=azure-sqldw-latest||>=sql-server-2016||>=sql-server-linux-2017||=azuresqldb-mi-current'
+ms.openlocfilehash: c4b37d6bd4acfb88aacbeb7f86186bb8a3fcf02c
+ms.sourcegitcommit: 1a544cf4dd2720b124c3697d1e62ae7741db757c
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 10/02/2020
-ms.locfileid: "91670866"
+ms.lasthandoff: 12/14/2020
+ms.locfileid: "97484555"
 ---
 # <a name="sp_addrolemember-transact-sql"></a>sp_addrolemember(Transact-SQL)
 [!INCLUDE [sql-asdb-asdbmi-asa-pdw](../../includes/applies-to-version/sql-asdb-asdbmi-asa-pdw.md)]
@@ -46,10 +46,10 @@ sp_addrolemember [ @rolename = ] 'role', [ @membername = ] 'security_account'
   
 ## <a name="arguments"></a>인수  
  [ @rolename =] '*role*'  
- 현재 데이터베이스에 있는 데이터베이스 역할의 이름입니다. *role* 은 **sysname**이며 기본값은 없습니다.  
+ 현재 데이터베이스에 있는 데이터베이스 역할의 이름입니다. *role* 은 **sysname** 이며 기본값은 없습니다.  
   
  [ @membername =] '*security_account*'  
- 역할에 추가될 보안 계정입니다. *security_account* 는 **sysname**이며 기본값은 없습니다. *security_account* 는 데이터베이스 사용자, 데이터베이스 역할, windows 로그인 또는 windows 그룹이 될 수 있습니다.  
+ 역할에 추가될 보안 계정입니다. *security_account* 는 **sysname** 이며 기본값은 없습니다. *security_account* 는 데이터베이스 사용자, 데이터베이스 역할, windows 로그인 또는 windows 그룹이 될 수 있습니다.  
   
 ## <a name="return-code-values"></a>반환 코드 값  
  0(성공) 또는 1(실패)  

@@ -20,13 +20,13 @@ helpviewer_keywords:
 ms.assetid: 54efc6cb-eea8-4f6d-a4d0-aa05eeb54081
 author: markingmyname
 ms.author: maghan
-monikerRange: =azure-sqldw-latest||>=sql-server-2016||=sqlallproducts-allversions||>=sql-server-linux-2017||=azuresqldb-mi-current
-ms.openlocfilehash: 332b554797282510463ae3ec837fb00256db31b3
-ms.sourcegitcommit: 2991ad5324601c8618739915aec9b184a8a49c74
+monikerRange: =azure-sqldw-latest||>=sql-server-2016||>=sql-server-linux-2017||=azuresqldb-mi-current
+ms.openlocfilehash: e2f2148762f6f3a3b644d4c77d89cfc7879ba2f4
+ms.sourcegitcommit: 1a544cf4dd2720b124c3697d1e62ae7741db757c
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 12/11/2020
-ms.locfileid: "97330891"
+ms.lasthandoff: 12/14/2020
+ms.locfileid: "97484745"
 ---
 # <a name="sysdm_exec_query_profiles-transact-sql"></a>sys.dm_exec_query_profiles(Transact-SQL)
 [!INCLUDE[sql-asdb-asdbmi](../../includes/applies-to-version/sql-asdb-asdbmi.md)]
@@ -93,7 +93,7 @@ S p 1 부터는 [!INCLUDE[ssSQL15](../../includes/sssql15-md.md)] *표준 쿼리
 [!INCLUDE[ssNoVersion_md](../../includes/ssnoversion-md.md)]및 AZURE SQL Managed Instance에는 `VIEW DATABASE STATE` 데이터베이스 역할의 권한 및 멤버 자격이 필요 `db_owner` 합니다.   
 [!INCLUDE[ssSDSfull](../../includes/sssdsfull-md.md)]Premium 계층에서는 데이터베이스에 대 한 권한이 필요 합니다 `VIEW DATABASE STATE` . [!INCLUDE[ssSDSfull](../../includes/sssdsfull-md.md)]SQL Database Basic, S0 및 S1 서비스 목적과 탄력적 풀의 데이터베이스에서 `Server admin` 또는 `Azure Active Directory admin` 계정이 필요 합니다. 다른 모든 SQL Database 서비스 목표에서 `VIEW DATABASE STATE` 사용 권한은 데이터베이스에서 필요 합니다.   
    
-## <a name="examples"></a>예제  
+## <a name="examples"></a>예  
  1 단계: 분석할 쿼리를 실행 하려는 세션에 로그인 `sys.dm_exec_query_profiles` 합니다. 프로 파일링 사용을 위해 쿼리를 구성 `SET STATISTICS PROFILE ON` 합니다. 동일한 세션에서 쿼리를 실행합니다.  
   
 ```sql  

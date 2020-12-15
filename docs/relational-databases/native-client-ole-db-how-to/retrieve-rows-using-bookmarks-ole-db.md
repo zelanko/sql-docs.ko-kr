@@ -14,18 +14,18 @@ helpviewer_keywords:
 ms.assetid: 5e14d5c8-e7c6-498f-8041-7e006a1c2d81
 author: markingmyname
 ms.author: maghan
-monikerRange: '>=aps-pdw-2016||=azuresqldb-current||=azure-sqldw-latest||>=sql-server-2016||=sqlallproducts-allversions||>=sql-server-linux-2017||=azuresqldb-mi-current'
-ms.openlocfilehash: ac7f7f4a1bef87ed823a9db953281ee3e2682bbf
-ms.sourcegitcommit: 4d370399f6f142e25075b3714e5c2ce056b1bfd0
+monikerRange: '>=aps-pdw-2016||=azuresqldb-current||=azure-sqldw-latest||>=sql-server-2016||>=sql-server-linux-2017||=azuresqldb-mi-current'
+ms.openlocfilehash: 1fbb2523c6bd25a5903984a722a2e9ad70b69b2f
+ms.sourcegitcommit: 1a544cf4dd2720b124c3697d1e62ae7741db757c
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 10/09/2020
-ms.locfileid: "91867638"
+ms.lasthandoff: 12/14/2020
+ms.locfileid: "97483214"
 ---
 # <a name="retrieve-rows-using-bookmarks-native-client-ole-db-provider"></a>책갈피를 사용 하 여 행 검색 (Native Client OLE DB 공급자)
 [!INCLUDE[SQL Server Azure SQL Database Synapse Analytics PDW ](../../includes/applies-to-version/sql-asdb-asdbmi-asa-pdw.md)]
 
-  소비자는 바인딩 구조의 **dwFlag** 필드 값을 DBCOLUMNSINFO_ISBOOKMARK로 설정하여 해당 열이 책갈피로 사용되도록 지정합니다. 소비자는 또한 행 집합 속성 DBPROP_BOOKMARKS를 VARIANT_TRUE로 설정합니다. 이렇게 하면 행 집합에 열 0이 포함될 수 있습니다. 그런 다음**IRowsetLocate::GetRowsAt** 을 사용하여 책갈피에서의 오프셋으로 지정된 행부터 시작하여 행을 인출합니다.  
+  소비자는 바인딩 구조의 **dwFlag** 필드 값을 DBCOLUMNSINFO_ISBOOKMARK로 설정하여 해당 열이 책갈피로 사용되도록 지정합니다. 소비자는 또한 행 집합 속성 DBPROP_BOOKMARKS를 VARIANT_TRUE로 설정합니다. 이렇게 하면 행 집합에 열 0이 포함될 수 있습니다. 그런 다음 **IRowsetLocate::GetRowsAt** 을 사용하여 책갈피에서의 오프셋으로 지정된 행부터 시작하여 행을 인출합니다.  
   
 > [!IMPORTANT]  
 >  가능하면 Windows 인증을 사용하세요. Windows 인증을 사용할 수 없으면 런타임에 사용자에게 자격 증명을 입력하라는 메시지를 표시합니다. 자격 증명은 파일에 저장하지 않는 것이 좋습니다. 자격 증명을 유지하려면 [Win32 crypto API](/windows/win32/seccrypto/cryptography-reference)를 사용하여 자격 증명을 암호화해야 합니다.  

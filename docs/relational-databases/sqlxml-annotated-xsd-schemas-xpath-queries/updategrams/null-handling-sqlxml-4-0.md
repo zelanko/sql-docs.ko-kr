@@ -16,17 +16,17 @@ ms.assetid: 5e11eebb-d94e-4ce6-a6d0-870225706bc1
 author: MightyPen
 ms.author: genemi
 ms.custom: seo-lt-2019
-monikerRange: =azuresqldb-current||>=sql-server-2016||=sqlallproducts-allversions||>=sql-server-linux-2017||=azuresqldb-mi-current
-ms.openlocfilehash: 57a0517bc698d2969d1ee1808cb52769fa8ef4ae
-ms.sourcegitcommit: da88320c474c1c9124574f90d549c50ee3387b4c
+monikerRange: =azuresqldb-current||>=sql-server-2016||>=sql-server-linux-2017||=azuresqldb-mi-current
+ms.openlocfilehash: b3fac9c5de10981dbb8afff517a106135ccca82f
+ms.sourcegitcommit: 1a544cf4dd2720b124c3697d1e62ae7741db757c
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 07/01/2020
-ms.locfileid: "85790574"
+ms.lasthandoff: 12/14/2020
+ms.locfileid: "97484825"
 ---
 # <a name="null-handling-sqlxml-40"></a>NULL 처리(SQLXML 4.0)
 [!INCLUDE [SQL Server Azure SQL Database](../../../includes/applies-to-version/sql-asdb.md)]
-  XML 구문에서는 NULL을 부재로 해석합니다. 예를 들어 특성 또는 요소 값이 NULL 이면 해당 특성이 나 요소가 XML 문서에 없는 것입니다. [!INCLUDE[msCoName](../../../includes/msconame-md.md)]SQLXML에서 **updg: nullvalue** 특성은 요소 또는 특성 값에 NULL을 지정할 수 있도록 합니다.  
+  XML 구문에서는 NULL을 부재로 해석합니다. 예를 들어 특성 또는 요소 값이 NULL 이면 해당 특성이 나 요소가 XML 문서에 없는 것입니다. [!INCLUDE[msCoName](../../../includes/msconame-md.md)] SQLXML에서 **updg: nullvalue** 특성은 요소 또는 특성 값에 NULL을 지정할 수 있도록 합니다.  
   
  예를 들어 다음 updategram은 **ContactID** 가 64 인 연락처의 **TITLE** 값이 NULL 인지 확인 하 고 **title** 값을 "Mr"로 업데이트 합니다. 업데이트합니다.  
   

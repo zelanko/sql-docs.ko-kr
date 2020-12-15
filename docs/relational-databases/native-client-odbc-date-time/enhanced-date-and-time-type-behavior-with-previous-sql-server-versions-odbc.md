@@ -13,13 +13,13 @@ helpviewer_keywords:
 ms.assetid: cd4e137f-dc5e-4df7-bc95-51fe18c587e0
 author: markingmyname
 ms.author: maghan
-monikerRange: '>=aps-pdw-2016||=azuresqldb-current||=azure-sqldw-latest||>=sql-server-2016||=sqlallproducts-allversions||>=sql-server-linux-2017||=azuresqldb-mi-current'
-ms.openlocfilehash: 83616c86aec74aa7d30c71d9347722d89f1448e5
-ms.sourcegitcommit: e700497f962e4c2274df16d9e651059b42ff1a10
+monikerRange: '>=aps-pdw-2016||=azuresqldb-current||=azure-sqldw-latest||>=sql-server-2016||>=sql-server-linux-2017||=azuresqldb-mi-current'
+ms.openlocfilehash: 0d9f25706641a20a59c01d44b487ef692e9cdbb2
+ms.sourcegitcommit: 1a544cf4dd2720b124c3697d1e62ae7741db757c
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 08/17/2020
-ms.locfileid: "88420617"
+ms.lasthandoff: 12/14/2020
+ms.locfileid: "97483385"
 ---
 # <a name="enhanced-date-and-time-type-behavior-with-previous-sql-server-versions-odbc"></a>이전 버전 SQL Server에 대한 향상된 날짜 및 시간 형식 동작(ODBC)
 [!INCLUDE[SQL Server Azure SQL Database Synapse Analytics PDW ](../../includes/applies-to-version/sql-asdb-asdbmi-asa-pdw.md)]
@@ -31,7 +31,7 @@ ms.locfileid: "88420617"
   
  카탈로그 API는 클라이언트에 반환된 하위 수준 데이터 형식 코드(예: nvarchar)와 일관된 메타데이터 및 관련된 하위 수준 표현(예: 적절한 리터럴 형식)을 반환합니다. 그러나 반환되는 데이터 형식의 이름은 실제 [!INCLUDE[ssKatmai](../../includes/sskatmai-md.md)] 형식 이름입니다.  
   
- SQLDescribeCol, SQLDescribeParam, SQGetDescField 및 SQLColAttribute에서 반환 된 문 메타 데이터는 형식 이름을 포함 하 여 모든 측면에서 하위 수준 형식과 일치 하는 메타 데이터를 반환 합니다. 이러한 하위 수준 형식의 예는 **nvarchar**입니다.  
+ SQLDescribeCol, SQLDescribeParam, SQGetDescField 및 SQLColAttribute에서 반환 된 문 메타 데이터는 형식 이름을 포함 하 여 모든 측면에서 하위 수준 형식과 일치 하는 메타 데이터를 반환 합니다. 이러한 하위 수준 형식의 예는 **nvarchar** 입니다.  
   
  [!INCLUDE[ssKatmai](../../includes/sskatmai-md.md)]날짜/시간 형식에 대 한 스키마가 변경 된 (또는 이후) 서버에 대해 하위 수준 클라이언트 응용 프로그램이 실행 되는 경우 예상 되는 동작은 다음과 같습니다.  
   

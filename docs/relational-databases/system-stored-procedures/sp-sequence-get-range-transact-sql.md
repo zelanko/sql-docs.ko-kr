@@ -19,13 +19,13 @@ helpviewer_keywords:
 ms.assetid: 8ca6b0c6-8d9c-4eee-b02f-51ddffab4492
 author: markingmyname
 ms.author: maghan
-monikerRange: =azuresqldb-current||=azure-sqldw-latest||>=sql-server-2016||=sqlallproducts-allversions||>=sql-server-linux-2017||=azuresqldb-mi-current
-ms.openlocfilehash: 25f65c590c4b1d6dadfc0c34dc375a97ce638086
-ms.sourcegitcommit: dd36d1cbe32cd5a65c6638e8f252b0bd8145e165
+monikerRange: =azuresqldb-current||=azure-sqldw-latest||>=sql-server-2016||>=sql-server-linux-2017||=azuresqldb-mi-current
+ms.openlocfilehash: ca7253dc04d629f1bed01b8e952752af06b236b4
+ms.sourcegitcommit: 1a544cf4dd2720b124c3697d1e62ae7741db757c
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 09/08/2020
-ms.locfileid: "89547942"
+ms.lasthandoff: 12/14/2020
+ms.locfileid: "97484535"
 ---
 # <a name="sp_sequence_get_range-transact-sql"></a>sp_sequence_get_range(Transact-SQL)
 [!INCLUDE [sql-asdb-asdbmi-asa](../../includes/applies-to-version/sql-asdb-asdbmi-asa.md)]
@@ -54,25 +54,25 @@ sp_sequence_get_range [ @sequence_name = ] N'<sequence>'
 ## <a name="arguments"></a>인수  
 `[ @sequence_name = ] N'sequence'` 시퀀스 개체의 이름입니다. 스키마는 선택 사항입니다. *sequence_name* 은 **nvarchar (776)** 입니다.  
   
-`[ @range_size = ] range_size` 시퀀스에서 인출할 값의 수입니다. ** \@ range_size** 는 **bigint**입니다.  
+`[ @range_size = ] range_size` 시퀀스에서 인출할 값의 수입니다. **\@ range_size** 는 **bigint** 입니다.  
   
-`[ @range_first_value = ] range_first_value` Output 매개 변수는 요청 된 범위를 계산 하는 데 사용 되는 시퀀스 개체의 첫 번째 (최소 또는 최대) 값을 반환 합니다. ** \@ range_first_value** 는 요청에 사용 된 시퀀스 개체의 기본 유형과 동일한 **sql_variant** 됩니다.  
+`[ @range_first_value = ] range_first_value` Output 매개 변수는 요청 된 범위를 계산 하는 데 사용 되는 시퀀스 개체의 첫 번째 (최소 또는 최대) 값을 반환 합니다. **\@ range_first_value** 는 요청에 사용 된 시퀀스 개체의 기본 유형과 동일한 **sql_variant** 됩니다.  
   
-`[ @range_last_value = ] range_last_value` 선택적 출력 매개 변수는 요청 된 범위의 마지막 값을 반환 합니다. ** \@ range_last_value** 는 요청에 사용 된 시퀀스 개체의 기본 유형과 동일한 **sql_variant** 됩니다.  
+`[ @range_last_value = ] range_last_value` 선택적 출력 매개 변수는 요청 된 범위의 마지막 값을 반환 합니다. **\@ range_last_value** 는 요청에 사용 된 시퀀스 개체의 기본 유형과 동일한 **sql_variant** 됩니다.  
   
-`[ @range_cycle_count = ] range_cycle_count` 선택적 출력 매개 변수는 시퀀스 개체가 요청 된 범위를 반환 하기 위해 순환 하는 횟수를 반환 합니다. ** \@ range_cycle_count** 은 **int**입니다.  
+`[ @range_cycle_count = ] range_cycle_count` 선택적 출력 매개 변수는 시퀀스 개체가 요청 된 범위를 반환 하기 위해 순환 하는 횟수를 반환 합니다. **\@ range_cycle_count** 은 **int** 입니다.  
   
-`[ @sequence_increment = ] sequence_increment` 선택적 출력 매개 변수는 요청 된 범위를 계산 하는 데 사용 되는 시퀀스 개체의 증가값을 반환 합니다. ** \@ sequence_increment** 는 요청에 사용 된 시퀀스 개체의 기본 유형과 동일한 **sql_variant** 됩니다.  
+`[ @sequence_increment = ] sequence_increment` 선택적 출력 매개 변수는 요청 된 범위를 계산 하는 데 사용 되는 시퀀스 개체의 증가값을 반환 합니다. **\@ sequence_increment** 는 요청에 사용 된 시퀀스 개체의 기본 유형과 동일한 **sql_variant** 됩니다.  
   
-`[ @sequence_min_value = ] sequence_min_value` 선택적 출력 매개 변수는 시퀀스 개체의 최 솟 값을 반환 합니다. ** \@ sequence_min_value** 는 요청에 사용 된 시퀀스 개체의 기본 유형과 동일한 **sql_variant** 됩니다.  
+`[ @sequence_min_value = ] sequence_min_value` 선택적 출력 매개 변수는 시퀀스 개체의 최 솟 값을 반환 합니다. **\@ sequence_min_value** 는 요청에 사용 된 시퀀스 개체의 기본 유형과 동일한 **sql_variant** 됩니다.  
   
-`[ @sequence_max_value = ] sequence_max_value` 선택적 출력 매개 변수는 시퀀스 개체의 최 댓 값을 반환 합니다. ** \@ sequence_max_value** 는 요청에 사용 된 시퀀스 개체의 기본 유형과 동일한 **sql_variant** 됩니다.  
+`[ @sequence_max_value = ] sequence_max_value` 선택적 출력 매개 변수는 시퀀스 개체의 최 댓 값을 반환 합니다. **\@ sequence_max_value** 는 요청에 사용 된 시퀀스 개체의 기본 유형과 동일한 **sql_variant** 됩니다.  
   
 ## <a name="return-code-values"></a>반환 코드 값  
  0(성공) 또는 1(실패)  
   
 ## <a name="remarks"></a>설명  
- sys에서 sp_sequence_get_rangeis 합니다. 스키마 및을 (를) sp_sequence_get_range으로 참조할 수 있습니다.  
+ sys에서 sp_sequence_get_rangeis 합니다. 스키마를 sys.sp_sequence_get_range으로 참조할 수 있습니다.  
   
 ### <a name="cycling-sequences"></a>순환 시퀀스  
  필요할 경우 시퀀스 개체는 적절한 횟수로 순환하여 요청한 범위를 처리합니다. 순환 횟수는 `@range_cycle_count`를 통해 호출자에게 반환됩니다.  
@@ -88,7 +88,7 @@ sp_sequence_get_range [ @sequence_name = ] N'<sequence>'
 ## <a name="permissions"></a>사용 권한  
  시퀀스 개체 또는 시퀀스 개체의 스키마에 대한 UPDATE 권한이 필요합니다.  
   
-## <a name="examples"></a>예제  
+## <a name="examples"></a>예  
  다음 예제에서는 RangeSeq 라는 시퀀스 개체를 사용 합니다. 다음 문을 사용 하 여 RangeSeq 시퀀스를 만듭니다.  
   
 ```  

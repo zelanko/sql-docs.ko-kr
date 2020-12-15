@@ -15,13 +15,13 @@ helpviewer_keywords:
 ms.assetid: 6172cd52-9c9a-467d-992f-def07f3f3bb1
 author: markingmyname
 ms.author: maghan
-monikerRange: '>=aps-pdw-2016||=azuresqldb-current||=azure-sqldw-latest||>=sql-server-2016||=sqlallproducts-allversions||>=sql-server-linux-2017||=azuresqldb-mi-current'
-ms.openlocfilehash: 100973ff2e7ae4d3bf066bfe49f09aa3a979230f
-ms.sourcegitcommit: 4d370399f6f142e25075b3714e5c2ce056b1bfd0
+monikerRange: '>=aps-pdw-2016||=azuresqldb-current||=azure-sqldw-latest||>=sql-server-2016||>=sql-server-linux-2017||=azuresqldb-mi-current'
+ms.openlocfilehash: 040089efc3cba453381381768d1445c8d85109c1
+ms.sourcegitcommit: 1a544cf4dd2720b124c3697d1e62ae7741db757c
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 10/09/2020
-ms.locfileid: "91866967"
+ms.lasthandoff: 12/14/2020
+ms.locfileid: "97483274"
 ---
 # <a name="allocate-handles-and-connect-to-sql-server-odbc"></a>핸들 할당 및 SQL Server에 연결(ODBC)
 [!INCLUDE[SQL Server Azure SQL Database Synapse Analytics PDW ](../../includes/applies-to-version/sql-asdb-asdbmi-asa-pdw.md)]
@@ -35,7 +35,7 @@ ms.locfileid: "91866967"
   
 3.  [SQLAllocHandle](../../odbc/reference/syntax/sqlallochandle-function.md) 를 SQL_HANDLE_ENV **HandleType** 로 호출 하 여 ODBC를 초기화 하 고 환경 핸들을 할당 합니다.  
   
-4.  SQL_ATTR_ODBC_VERSION **로 설정 된** **특성** 을 사용 하 여 SQLSetEnvAttr를 호출 하 고, [SQLSetEnvAttr](../../relational-databases/native-client-odbc-api/sqlsetenvattr.md) 로 SQL_OV_ODBC3 설정 하 여 응용 프로그램에서 ODBC 3. x 형식의 함수 호출을 사용 하도록 지정 합니다.  
+4.  SQL_ATTR_ODBC_VERSION **로 설정 된** **특성** 을 사용 하 여 SQLSetEnvAttr를 호출 하 고, [](../../relational-databases/native-client-odbc-api/sqlsetenvattr.md) 로 SQL_OV_ODBC3 설정 하 여 응용 프로그램에서 ODBC 3. x 형식의 함수 호출을 사용 하도록 지정 합니다.  
   
 5.  필요에 따라 [SQLSetEnvAttr](../../relational-databases/native-client-odbc-api/sqlsetenvattr.md) 를 호출 하 여 다른 환경 옵션을 설정 하거나 [SQLGetEnvAttr](../../odbc/reference/syntax/sqlgetenvattr-function.md) 를 호출 하 여 환경 옵션을 가져옵니다.  
   
@@ -76,7 +76,7 @@ ms.locfileid: "91866967"
 >  가능하면 Windows 인증을 사용하세요. Windows 인증을 사용할 수 없으면 런타임에 사용자에게 자격 증명을 입력하라는 메시지를 표시합니다. 자격 증명은 파일에 저장하지 않는 것이 좋습니다. 자격 증명을 유지하려면 [Win32 crypto API](/windows/win32/seccrypto/cryptography-reference)를 사용하여 자격 증명을 암호화해야 합니다.  
   
 ## <a name="example"></a>예제  
- 이 예에서는 **SQLDriverConnect** [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 기존 ODBC 데이터 원본을 요구 하지 않고 인스턴스에 연결 하기 위해 SQLDriverConnect를 호출 하는 방법을 보여 줍니다. **SQLDriverConnect**에 불완전 한 연결 문자열을 전달 하면 ODBC 드라이버가 누락 된 정보를 입력 하 라는 메시지를 표시 합니다.  
+ 이 예에서는  [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 기존 ODBC 데이터 원본을 요구 하지 않고 인스턴스에 연결 하기 위해 SQLDriverConnect를 호출 하는 방법을 보여 줍니다. **SQLDriverConnect** 에 불완전 한 연결 문자열을 전달 하면 ODBC 드라이버가 누락 된 정보를 입력 하 라는 메시지를 표시 합니다.  
   
 ```  
 #define MAXBUFLEN   255  

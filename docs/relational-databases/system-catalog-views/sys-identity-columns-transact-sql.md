@@ -1,6 +1,6 @@
 ---
 description: sys.identity_columns(Transact-SQL)
-title: sys. identity_columns (Transact-sql) | Microsoft Docs
+title: sys.identity_columns (Transact-sql) | Microsoft Docs
 ms.custom: ''
 ms.date: 03/15/2017
 ms.prod: sql
@@ -20,24 +20,24 @@ helpviewer_keywords:
 ms.assetid: 97ee01e6-9c9e-4fd9-884b-68b4084669d5
 author: VanMSFT
 ms.author: vanto
-monikerRange: '>=aps-pdw-2016||=azuresqldb-current||=azure-sqldw-latest||>=sql-server-2016||=sqlallproducts-allversions||>=sql-server-linux-2017||=azuresqldb-mi-current'
-ms.openlocfilehash: 67282343c26f607ef0d6f44401cdf2a1c291fafd
-ms.sourcegitcommit: e700497f962e4c2274df16d9e651059b42ff1a10
+monikerRange: '>=aps-pdw-2016||=azuresqldb-current||=azure-sqldw-latest||>=sql-server-2016||>=sql-server-linux-2017||=azuresqldb-mi-current'
+ms.openlocfilehash: 195768c830e13f2cb61f04bff9fe67f6eefe6dc4
+ms.sourcegitcommit: 1a544cf4dd2720b124c3697d1e62ae7741db757c
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 08/17/2020
-ms.locfileid: "88420137"
+ms.lasthandoff: 12/14/2020
+ms.locfileid: "97484765"
 ---
 # <a name="sysidentity_columns-transact-sql"></a>sys.identity_columns(Transact-SQL)
 [!INCLUDE [sql-asdb-asdbmi-asa-pdw](../../includes/applies-to-version/sql-asdb-asdbmi-asa-pdw.md)]
 
   각 ID 열당 한 개의 행을 포함합니다.  
   
- **Identity_columns** 뷰는 **sys. columns** 뷰에서 행을 상속 합니다. **Identity_columns** 뷰는 **sys. columns** 뷰의 열과 **seed_value**, **increment_value**, **last_value**및 **is_not_for_replication** 열을 반환 합니다. 자세한 내용은 [카탈로그 뷰&#40;Transact-SQL&#41;](../../relational-databases/system-catalog-views/catalog-views-transact-sql.md)를 참조하세요.  
+ **Sys.identity_columns** 뷰는 **sys. columns** 뷰에서 행을 상속 합니다. **Sys.identity_columns** 뷰는 **sys. columns** 뷰의 열과 **seed_value**, **increment_value**, **last_value** 및 **is_not_for_replication** 열을 반환 합니다. 자세한 내용은 [카탈로그 뷰&#40;Transact-SQL&#41;](../../relational-databases/system-catalog-views/catalog-views-transact-sql.md)를 참조하세요.  
   
 |열 이름|데이터 형식|Description|  
 |-----------------|---------------|-----------------|  
-|**\<columns inherited from sys.columns>**||**Identity_columns** 뷰는 **sys. columns** 뷰의 모든 열을 반환 합니다. 또한 아래에 설명된 추가 열도 반환합니다. **Identity_columns** 뷰가 **sys.debug**에서 상속 하는 열에 대 한 설명은 [&#40;transact-sql&#41;](../../relational-databases/system-catalog-views/sys-columns-transact-sql.md)을 참조 하십시오.|  
+|**\<columns inherited from sys.columns>**||**Sys.identity_columns** 뷰는 **sys. columns** 뷰의 모든 열을 반환 합니다. 또한 아래에 설명된 추가 열도 반환합니다. **Sys.identity_columns** 뷰에서 상속 하는 열에 대 한 설명은 [sys. columns &#40;transact-sql&#41;](../../relational-databases/system-catalog-views/sys-columns-transact-sql.md) **을 참조 하십시오.**|  
 |**seed_value**|**sql_variant**|이 ID 열에 대한 초기값입니다. 초기값의 데이터 형식은 열의 데이터 형식과 같습니다.|  
 |**increment_value**|**sql_variant**|이 ID 열에 대한 증가값입니다. 초기값의 데이터 형식은 열의 데이터 형식과 같습니다.|  
 |**last_value**|**sql_variant**|이 ID 열에 대해 생성된 마지막 값입니다. 초기값의 데이터 형식은 열의 데이터 형식과 같습니다.|  

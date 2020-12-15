@@ -13,13 +13,13 @@ helpviewer_keywords:
 ms.assetid: de56f206-1f7e-4c03-bf22-da9c7f9f4433
 author: markingmyname
 ms.author: maghan
-monikerRange: '>=aps-pdw-2016||=azuresqldb-current||=azure-sqldw-latest||>=sql-server-2016||=sqlallproducts-allversions||>=sql-server-linux-2017||=azuresqldb-mi-current'
-ms.openlocfilehash: 43302565cd49cc176b0ad3808398b28b86c57a39
-ms.sourcegitcommit: e700497f962e4c2274df16d9e651059b42ff1a10
+monikerRange: '>=aps-pdw-2016||=azuresqldb-current||=azure-sqldw-latest||>=sql-server-2016||>=sql-server-linux-2017||=azuresqldb-mi-current'
+ms.openlocfilehash: e84a650e0cfec42129a7ab8ab972ecf2e0728092
+ms.sourcegitcommit: 1a544cf4dd2720b124c3697d1e62ae7741db757c
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 08/17/2020
-ms.locfileid: "88494105"
+ms.lasthandoff: 12/14/2020
+ms.locfileid: "97483314"
 ---
 # <a name="bcp_setbulkmode"></a>bcp_setbulkmode
 [!INCLUDE[SQL Server Azure SQL Database Synapse Analytics PDW ](../../includes/applies-to-version/sql-asdb-asdbmi-asa-pdw.md)]
@@ -71,8 +71,8 @@ RETCODE bcp_setbulkmode (
   
 |속성|Description|  
 |--------------|-----------------|  
-|BCP_OUT_CHARACTER_MODE|문자 출력 모드를 지정합니다.<br /><br /> 는 BCP.EXE의-c 옵션에 해당 하 고 **BCP_FMT_TYPE** 속성이 **sqlcharacter**로 설정 된 bcp_setcolfmt 합니다.|  
-|BCP_OUT_WIDE_CHARACTER_MODE|유니코드 출력 모드를 지정합니다.<br /><br /> BCP.EXE의-w 옵션 및 **BCP_FMT_TYPE** 속성이 **sqlnchar**로 설정 된 bcp_setcolfmt에 해당 합니다.|  
+|BCP_OUT_CHARACTER_MODE|문자 출력 모드를 지정합니다.<br /><br /> 는 BCP.EXE의-c 옵션에 해당 하 고 **BCP_FMT_TYPE** 속성이 **sqlcharacter** 로 설정 된 bcp_setcolfmt 합니다.|  
+|BCP_OUT_WIDE_CHARACTER_MODE|유니코드 출력 모드를 지정합니다.<br /><br /> BCP.EXE의-w 옵션 및 **BCP_FMT_TYPE** 속성이 **sqlnchar** 로 설정 된 bcp_setcolfmt에 해당 합니다.|  
 |BCP_OUT_NATIVE_TEXT_MODE|비문자 유형의 경우 네이티브 유형을 지정하고 문자 유형의 경우 유니코드를 지정합니다.<br /><br /> BCP.EXE의-N 옵션 및 열 유형이 문자열인 경우 (기본값은 문자열이 아닌 경우 기본값) **Sqlnchar** 로 설정 **BCP_FMT_TYPE** 된 bcp_setcolfmt에 해당 합니다.|  
 |BCP_OUT_NATIVE_MODE|네이티브 데이터베이스 유형을 지정합니다.<br /><br /> BCP.EXE의-n 옵션과 해당 **BCP_FMT_TYPE** 속성이 기본값으로 설정 된 bcp_setcolfmt에 해당 합니다.|  
   

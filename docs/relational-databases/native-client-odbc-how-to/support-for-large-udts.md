@@ -11,13 +11,13 @@ ms.topic: reference
 ms.assetid: 621b6d13-10f1-47d0-b63c-7adb6ab904e0
 author: markingmyname
 ms.author: maghan
-monikerRange: '>=aps-pdw-2016||=azuresqldb-current||=azure-sqldw-latest||>=sql-server-2016||=sqlallproducts-allversions||>=sql-server-linux-2017||=azuresqldb-mi-current'
-ms.openlocfilehash: dfbe490e23869b85cf740bd5595dca782a22524b
-ms.sourcegitcommit: e700497f962e4c2274df16d9e651059b42ff1a10
+monikerRange: '>=aps-pdw-2016||=azuresqldb-current||=azure-sqldw-latest||>=sql-server-2016||>=sql-server-linux-2017||=azuresqldb-mi-current'
+ms.openlocfilehash: 97c57455d8fe155be8873cf0ea0c87e16b34925c
+ms.sourcegitcommit: 1a544cf4dd2720b124c3697d1e62ae7741db757c
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 08/17/2020
-ms.locfileid: "88470413"
+ms.lasthandoff: 12/14/2020
+ms.locfileid: "97484985"
 ---
 # <a name="support-for-large-udts"></a>큰 UDT에 대한 지원
 [!INCLUDE[SQL Server Azure SQL Database Synapse Analytics PDW ](../../includes/applies-to-version/sql-asdb-asdbmi-asa-pdw.md)]
@@ -26,9 +26,9 @@ ms.locfileid: "88470413"
   
  [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 이전 버전의 [!INCLUDE[ssKatmai](../../includes/sskatmai-md.md)]에서는 이 예제를 사용할 수 없습니다.  
   
- 많은 Udt에 대 한 지원에 대 한 자세한 내용은 [ODBC&#41;&#40;LARGE CLR 사용자 정의 형식 ](../../relational-databases/native-client/odbc/large-clr-user-defined-types-odbc.md)을 참조 하세요.  
+ 많은 Udt에 대 한 지원에 대 한 자세한 내용은 [ODBC&#41;&#40;대량 CLR User-Defined 형식 ](../../relational-databases/native-client/odbc/large-clr-user-defined-types-odbc.md)을 참조 하세요.  
   
-## <a name="example"></a>예제  
+## <a name="example"></a>예  
  첫 번째 코드 목록은 C# 원본 코드입니다. 이 코드 목록을 LargeStringUDT.cs라는 파일에 붙여 넣고 DLL로 컴파일합니다. LargeStringUDT.dll을 C 드라이브의 루트 디렉터리에 복사합니다.  
   
  두 번째 ( [!INCLUDE[tsql](../../includes/tsql-md.md)] ) 코드 목록은 master 데이터베이스에서 어셈블리를 만듭니다.  

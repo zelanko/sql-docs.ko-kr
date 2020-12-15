@@ -1,5 +1,5 @@
 ---
-description: SQL Server Native Client에서 테이블 반환 매개 변수 행 집합 만들기
+description: SQL Server Native Client에서 매개 변수 행 집합 생성 Table-Valued
 title: 테이블 반환 매개 변수 행 집합 만들기 (Native Client OLE DB 공급자)
 ms.custom: ''
 ms.date: 03/14/2017
@@ -13,15 +13,15 @@ helpviewer_keywords:
 ms.assetid: ffe213ca-cc0e-465e-b31c-a8272324c4fe
 author: markingmyname
 ms.author: maghan
-monikerRange: '>=aps-pdw-2016||=azuresqldb-current||=azure-sqldw-latest||>=sql-server-2016||=sqlallproducts-allversions||>=sql-server-linux-2017||=azuresqldb-mi-current'
-ms.openlocfilehash: 0bf030073ce8b8a22fe605ef54ea521253aa3337
-ms.sourcegitcommit: e700497f962e4c2274df16d9e651059b42ff1a10
+monikerRange: '>=aps-pdw-2016||=azuresqldb-current||=azure-sqldw-latest||>=sql-server-2016||>=sql-server-linux-2017||=azuresqldb-mi-current'
+ms.openlocfilehash: 65215eebf7a0e8dd91529f5a231f8597cadfda2c
+ms.sourcegitcommit: 1a544cf4dd2720b124c3697d1e62ae7741db757c
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 08/17/2020
-ms.locfileid: "88482578"
+ms.lasthandoff: 12/14/2020
+ms.locfileid: "97483144"
 ---
-# <a name="table-valued-parameter-rowset-creation-in-sql-server-native-client"></a>SQL Server Native Client에서 테이블 반환 매개 변수 행 집합 만들기
+# <a name="table-valued-parameter-rowset-creation-in-sql-server-native-client"></a>SQL Server Native Client에서 매개 변수 행 집합 생성 Table-Valued
 [!INCLUDE[SQL Server Azure SQL Database Synapse Analytics PDW ](../../includes/applies-to-version/sql-asdb-asdbmi-asa-pdw.md)]
 
   소비자는 테이블 반환 매개 변수에 대해 모든 행 집합 개체를 제공할 수 있지만 일반적으로 행 집합 개체는 백 엔드 데이터 저장소에 대해 구현되므로 성능이 제한되는 경우가 많습니다. 이러한 이유로 소비자는 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] Native Client OLE DB 공급자를 사용하여 메모리 내 데이터에 대해 특수화된 행 집합 개체를 만들 수 있습니다. 이 특수 한 메모리 내 행 집합 개체는 테이블 반환 매개 변수 행 집합 이라는 새 COM 개체입니다. 이 개체는 매개 변수 집합과 비슷한 기능을 제공합니다.  
@@ -35,7 +35,7 @@ ms.locfileid: "88482578"
   
  소비자는 집계를 위해 제어용 IUnknown을 사용하여 *pUnkOuter* 매개 변수를 전달합니다.  
   
- 테이블 반환 매개 변수 행 집합 개체 속성은 읽기 전용 이므로 소비자는 *rgPropertySets*에서 속성을 설정 하지 않아도 됩니다.  
+ 테이블 반환 매개 변수 행 집합 개체 속성은 읽기 전용 이므로 소비자는 *rgPropertySets* 에서 속성을 설정 하지 않아도 됩니다.  
   
  각 DBCOLUMNDESC 구조의 *rgPropertySets* 멤버에 대해 소비자는 각 열의 추가 속성을 지정할 수 있습니다. 이러한 속성은 DBPROPSET_SQLSERVERCOLUMN 속성 집합에 속하며 각 열에 대해 계산된 설정과 기본 설정을 지정할 수 있도록 해 줍니다. 또한 Null 허용 여부나 ID 같은 기존 열 속성도 지원합니다.  
   

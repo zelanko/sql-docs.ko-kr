@@ -19,13 +19,13 @@ helpviewer_keywords:
 ms.assetid: 6a25862c-7f31-4873-ab65-30f3abde89d2
 author: markingmyname
 ms.author: maghan
-monikerRange: '>=aps-pdw-2016||=azuresqldb-current||=azure-sqldw-latest||>=sql-server-2016||=sqlallproducts-allversions||>=sql-server-linux-2017||=azuresqldb-mi-current'
-ms.openlocfilehash: 3c32343c060eab0d70ba3bbc4419d30809ae745c
-ms.sourcegitcommit: e700497f962e4c2274df16d9e651059b42ff1a10
+monikerRange: '>=aps-pdw-2016||=azuresqldb-current||=azure-sqldw-latest||>=sql-server-2016||>=sql-server-linux-2017||=azuresqldb-mi-current'
+ms.openlocfilehash: 7e325b7e88b2958b8870151516f991f27ba79e44
+ms.sourcegitcommit: 1a544cf4dd2720b124c3697d1e62ae7741db757c
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 08/17/2020
-ms.locfileid: "88448581"
+ms.lasthandoff: 12/14/2020
+ms.locfileid: "97483344"
 ---
 # <a name="bcp_init"></a>bcp_init
 [!INCLUDE[SQL Server Azure SQL Database Synapse Analytics PDW ](../../includes/applies-to-version/sql-asdb-asdbmi-asa-pdw.md)]
@@ -52,7 +52,7 @@ RETCODE bcp_init (
  대량 복사가 가능한 ODBC 연결 핸들입니다.  
   
  *szTable*  
- 복사의 원본 또는 대상이 될 데이터베이스 테이블의 이름입니다. 이 이름은 데이터베이스 이름 또는 소유자 이름도 포함할 수 있습니다. 예를 들어 **pubs. gracie**, **pubs.. 제목**, **gracie**및 **제목은** 모두 유효한 테이블 이름입니다.  
+ 복사의 원본 또는 대상이 될 데이터베이스 테이블의 이름입니다. 이 이름은 데이터베이스 이름 또는 소유자 이름도 포함할 수 있습니다. 예를 들어 **pubs. gracie**, **pubs.. 제목**, **gracie** 및 **제목은** 모두 유효한 테이블 이름입니다.  
   
  *Edirection* 이 DB_OUT 이면 *sztable* 은 데이터베이스 뷰의 이름일 수도 있습니다.  
   
@@ -62,7 +62,7 @@ RETCODE bcp_init (
  복사의 원본 또는 대상이 될 사용자 파일의 이름입니다. [Bcp_sendrow](../../relational-databases/native-client-odbc-extensions-bulk-copy-functions/bcp-sendrow.md)를 사용 하 여 변수에서 직접 데이터를 복사 하는 경우 *SZDATAFILE* 집합을 NULL로 설정 합니다.  
   
  *szErrorFile*  
- 진행 메시지, 오류 메시지, 그리고 어떤 이유로 인해 사용자 파일에서 테이블로 복사하지 못한 모든 행의 복사본으로 채워질 오류 파일의 이름입니다. NULL이 *Szerrorfile*로 전달 되 면 오류 파일이 사용 되지 않습니다.  
+ 진행 메시지, 오류 메시지, 그리고 어떤 이유로 인해 사용자 파일에서 테이블로 복사하지 못한 모든 행의 복사본으로 채워질 오류 파일의 이름입니다. NULL이 *Szerrorfile* 로 전달 되 면 오류 파일이 사용 되지 않습니다.  
   
  *eDirection*  
  복사의 방향이며 DB_IN 또는 DB_OUT입니다. DB_IN은 프로그램 변수 또는 사용자 파일에서 테이블로의 복사를 나타냅니다. DB_OUT은 데이터베이스 테이블에서 사용자 파일로의 복사를 나타냅니다. DB_OUT에는 사용자 파일 이름을 지정해야 합니다.  
@@ -95,7 +95,7 @@ RETCODE bcp_init (
   
  데이터 파일을 사용 하지 않는 경우 [bcp_bind](../../relational-databases/native-client-odbc-extensions-bulk-copy-functions/bcp-bind.md) 를 호출 하 여 각 열에 대 한 데이터의 메모리 내 형식 및 위치를 지정한 다음 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] [bcp_sendrow](../../relational-databases/native-client-odbc-extensions-bulk-copy-functions/bcp-sendrow.md)를 사용 하 여 데이터 행을에 복사 합니다.  
   
-## <a name="example"></a>예제  
+## <a name="example"></a>예  
  이 예제에서는 ODBC bcp_init 함수를 서식 파일과 함께 사용하는 방법을 보여 줍니다.  
   
  C++ 코드를 컴파일하고 실행하기 전에 다음을 수행해야 합니다.  
@@ -224,7 +224,7 @@ int main() {
   
 ```  
 
-## <a name="see-also"></a>관련 항목  
+## <a name="see-also"></a>참고 항목  
  [Bulk Copy Functions](../../relational-databases/native-client-odbc-extensions-bulk-copy-functions/sql-server-driver-extensions-bulk-copy-functions.md)  
   
   

@@ -11,13 +11,13 @@ ms.topic: reference
 ms.assetid: cb022814-a86b-425d-9b24-eaac20ab664e
 author: markingmyname
 ms.author: maghan
-monikerRange: '>=aps-pdw-2016||=azuresqldb-current||=azure-sqldw-latest||>=sql-server-2016||=sqlallproducts-allversions||>=sql-server-linux-2017||=azuresqldb-mi-current'
-ms.openlocfilehash: d506af0de83b2c8256a1ec5294b1362cba7fc735
-ms.sourcegitcommit: 4d370399f6f142e25075b3714e5c2ce056b1bfd0
+monikerRange: '>=aps-pdw-2016||=azuresqldb-current||=azure-sqldw-latest||>=sql-server-2016||>=sql-server-linux-2017||=azuresqldb-mi-current'
+ms.openlocfilehash: 65a4880bb018ad535c211bc102fa26cd0814e8ae
+ms.sourcegitcommit: 1a544cf4dd2720b124c3697d1e62ae7741db757c
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 10/09/2020
-ms.locfileid: "91867622"
+ms.lasthandoff: 12/14/2020
+ms.locfileid: "97483204"
 ---
 # <a name="send-blob-data-to-sql-server-using-irowsetfastload-and-isequentialstream-in-native-client-ole-db"></a>IROWSETFASTLOAD 및 ISEQUENTIALSTREAM를 사용 하 여 SQL SERVER에 BLOB 데이터 전송 (Native Client OLE DB)
 [!INCLUDE[SQL Server Azure SQL Database Synapse Analytics PDW ](../../includes/applies-to-version/sql-asdb-asdbmi-asa-pdw.md)]

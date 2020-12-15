@@ -18,13 +18,13 @@ helpviewer_keywords:
 ms.assetid: ddbdb4bd-ad4e-4bf1-9a75-656aa26ce10a
 author: markingmyname
 ms.author: maghan
-monikerRange: '>=aps-pdw-2016||=azuresqldb-current||=azure-sqldw-latest||>=sql-server-2016||=sqlallproducts-allversions||>=sql-server-linux-2017||=azuresqldb-mi-current'
-ms.openlocfilehash: af653ae2263093304120dbfc732605865d63db5a
-ms.sourcegitcommit: e700497f962e4c2274df16d9e651059b42ff1a10
+monikerRange: '>=aps-pdw-2016||=azuresqldb-current||=azure-sqldw-latest||>=sql-server-2016||>=sql-server-linux-2017||=azuresqldb-mi-current'
+ms.openlocfilehash: c470244b1a739b989b5bcff36e8d0804b464bb4a
+ms.sourcegitcommit: 1a544cf4dd2720b124c3697d1e62ae7741db757c
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 08/17/2020
-ms.locfileid: "88494096"
+ms.lasthandoff: 12/14/2020
+ms.locfileid: "97483294"
 ---
 # <a name="bcp_sendrow"></a>bcp_sendrow
 [!INCLUDE[SQL Server Azure SQL Database Synapse Analytics PDW ](../../includes/applies-to-version/sql-asdb-asdbmi-asa-pdw.md)]
@@ -49,7 +49,7 @@ RETCODE bcp_sendrow (
 ## <a name="remarks"></a>설명  
  **Bcp_sendrow** 함수는 프로그램 변수에서 행을 빌드하고로 보냅니다 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] .  
   
- **Bcp_sendrow**를 호출 하기 전에 [bcp_bind](../../relational-databases/native-client-odbc-extensions-bulk-copy-functions/bcp-bind.md) 를 호출 하 여 행 데이터가 포함 된 프로그램 변수를 지정 해야 합니다.  
+ **Bcp_sendrow** 를 호출 하기 전에 [bcp_bind](../../relational-databases/native-client-odbc-extensions-bulk-copy-functions/bcp-bind.md) 를 호출 하 여 행 데이터가 포함 된 프로그램 변수를 지정 해야 합니다.  
   
  Long, 가변 길이 데이터 형식 (예: SQLTEXT의 *Edatatype* 매개 변수 및 NULL이 아닌 *.pdata* 매개 변수)을 지정 하는 **bcp_bind** 를 호출 하면 **bcp_sendrow** 는 다른 데이터 형식과 마찬가지로 전체 데이터 값을 보냅니다. 그러나 **bcp_bind** 에 NULL *.pdata* 매개 변수가 있는 경우에는 지정 된 데이터가 있는 모든 열이로 전송 되는 즉시 응용 프로그램에 제어를 반환 **bcp_sendrow** [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] . 그런 다음 응용 프로그램은 [bcp_moretext](../../relational-databases/native-client-odbc-extensions-bulk-copy-functions/bcp-moretext.md) 를 반복적으로 호출 하 여 긴 가변 길이 데이터를 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 한 번에 청크로 보낼 수 있습니다. 자세한 내용은 [bcp_moretext](../../relational-databases/native-client-odbc-extensions-bulk-copy-functions/bcp-moretext.md)를 참조 하세요.  
   

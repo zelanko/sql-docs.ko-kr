@@ -11,20 +11,20 @@ ms.topic: reference
 ms.assetid: a2aa5644-1e39-4d78-b149-0599d3502cda
 author: markingmyname
 ms.author: maghan
-monikerRange: '>=aps-pdw-2016||=azuresqldb-current||=azure-sqldw-latest||>=sql-server-2016||=sqlallproducts-allversions||>=sql-server-linux-2017||=azuresqldb-mi-current'
-ms.openlocfilehash: de9a93cf1c05652b09676c215533f26ddf3e0d2c
-ms.sourcegitcommit: e700497f962e4c2274df16d9e651059b42ff1a10
+monikerRange: '>=aps-pdw-2016||=azuresqldb-current||=azure-sqldw-latest||>=sql-server-2016||>=sql-server-linux-2017||=azuresqldb-mi-current'
+ms.openlocfilehash: 229d651d39c76b00374ace3bea513620cab84193
+ms.sourcegitcommit: 1a544cf4dd2720b124c3697d1e62ae7741db757c
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 08/17/2020
-ms.locfileid: "88499204"
+ms.lasthandoff: 12/14/2020
+ms.locfileid: "97484975"
 ---
 # <a name="use-date-and-time-types"></a>날짜 및 시간 형식 사용
 [!INCLUDE[SQL Server Azure SQL Database Synapse Analytics PDW ](../../includes/applies-to-version/sql-asdb-asdbmi-asa-pdw.md)]
 
   이 예제에서는 [!INCLUDE[ssKatmai](../../includes/sskatmai-md.md)]에 추가된 날짜/시간 데이터 구조체를 초기화하는 방법을 보여 줍니다. 그런 다음 입력 값을 준비하고, 매개 변수를 바인딩하고, 쿼리를 실행합니다. 이러한 유형을 사용 하는 방법에 대 한 자세한 내용은 [ODBC&#41;&#40;날짜 및 시간 향상 ](../../relational-databases/native-client-odbc-date-time/date-and-time-improvements-odbc.md)을 참조 하세요.  
   
-## <a name="example"></a>예제  
+## <a name="example"></a>예  
  DateTime이라는 ODBC 데이터 원본이 필요합니다. DateTime의 기본 데이터베이스는 tempdb입니다. 이 데이터 원본은 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] Native Client에 대한 ODBC 드라이버를 기반으로 해야 합니다.  
   
  이 예제를 64비트 운영 체제에서 32비트 애플리케이션으로 작성하여 실행하려는 경우 %windir%\SysWOW64\odbcad32.exe에서 ODBC 관리자를 사용하여 ODBC 데이터 원본을 만들어야 합니다.  

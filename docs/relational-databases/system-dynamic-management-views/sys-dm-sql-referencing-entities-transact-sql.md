@@ -1,6 +1,6 @@
 ---
 description: sys.dm_sql_referencing_entities(Transact-SQL)
-title: sys. dm_sql_referencing_entities (Transact-sql) | Microsoft Docs
+title: sys.dm_sql_referencing_entities (Transact-sql) | Microsoft Docs
 ms.custom: ''
 ms.date: 06/10/2016
 ms.prod: sql
@@ -20,18 +20,18 @@ helpviewer_keywords:
 ms.assetid: c16f8f0a-483f-4feb-842e-da90426045ae
 author: markingmyname
 ms.author: maghan
-monikerRange: =azuresqldb-current||>=sql-server-2016||=sqlallproducts-allversions||>=sql-server-linux-2017||=azuresqldb-mi-current
-ms.openlocfilehash: 9855ef4c747c411476df5700f4a61f43f31de299
-ms.sourcegitcommit: dd36d1cbe32cd5a65c6638e8f252b0bd8145e165
+monikerRange: =azuresqldb-current||>=sql-server-2016||>=sql-server-linux-2017||=azuresqldb-mi-current
+ms.openlocfilehash: 517e6f8faaccf40091535b8a78d47d0fa8a43032
+ms.sourcegitcommit: 1a544cf4dd2720b124c3697d1e62ae7741db757c
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 09/08/2020
-ms.locfileid: "89550203"
+ms.lasthandoff: 12/14/2020
+ms.locfileid: "97484575"
 ---
 # <a name="sysdm_sql_referencing_entities-transact-sql"></a>sys.dm_sql_referencing_entities(Transact-SQL)
 [!INCLUDE [SQL Server SQL Database](../../includes/applies-to-version/sql-asdb.md)]
 
-  이름별로 다른 사용자 정의 엔터티를 참조하는 현재 데이터베이스의 각 엔터티에 대해 한 개의 행을 반환합니다. 두 엔터티 간의 종속성은 *참조 된 엔터티*라고 하는 한 엔터티가 *참조 엔터티*라고 하는 다른 엔터티의 지속형 SQL 식에서 이름별로 표시 될 때 생성 됩니다. 예를 들어 UDT(사용자 정의 형식)가 참조 엔터티로 지정된 경우 이 함수는 정의에서 이름별로 해당 유형을 참조하는 각 사용자 정의 엔터티를 반환합니다. 지정된 엔터티를 참조하는 다른 데이터베이스의 엔터티는 반환하지 않습니다. 이 함수는 master 데이터베이스 컨텍스트에서 실행되어 서버 수준 DDL 트리거를 참조 엔터티로 반환해야 합니다.  
+  이름별로 다른 사용자 정의 엔터티를 참조하는 현재 데이터베이스의 각 엔터티에 대해 한 개의 행을 반환합니다. 두 엔터티 간의 종속성은 *참조 된 엔터티* 라고 하는 한 엔터티가 *참조 엔터티* 라고 하는 다른 엔터티의 지속형 SQL 식에서 이름별로 표시 될 때 생성 됩니다. 예를 들어 UDT(사용자 정의 형식)가 참조 엔터티로 지정된 경우 이 함수는 정의에서 이름별로 해당 유형을 참조하는 각 사용자 정의 엔터티를 반환합니다. 지정된 엔터티를 참조하는 다른 데이터베이스의 엔터티는 반환하지 않습니다. 이 함수는 master 데이터베이스 컨텍스트에서 실행되어 서버 수준 DDL 트리거를 참조 엔터티로 반환해야 합니다.  
   
  이 동적 관리 함수를 사용하면 지정된 엔터티를 참조하는 현재 데이터베이스에 있는 다음과 같은 엔터티 유형을 보고할 수 있습니다.  
   
@@ -101,21 +101,21 @@ sys.dm_sql_referencing_entities (
 |엔터티 유형|참조 엔터티|참조된 엔터티|  
 |-----------------|------------------------|-----------------------|  
 |테이블|예*|예|  
-|View|예|예|  
+|보기|예|예|  
 |[!INCLUDE[tsql](../../includes/tsql-md.md)] 저장 프로시저**|예|예|  
-|CLR 저장 프로시저|아니요|예|  
+|CLR 저장 프로시저|예|예|  
 |[!INCLUDE[tsql](../../includes/tsql-md.md)] 사용자 정의 함수|예|예|  
-|CLR 사용자 정의 함수|아니요|예|  
-|CLR 트리거(DML 및 DDL)|아니요|아니요|  
-|[!INCLUDE[tsql](../../includes/tsql-md.md)] DML 트리거|예|아니요|  
-|[!INCLUDE[tsql](../../includes/tsql-md.md)] 데이터베이스 수준 DDL 트리거|예|아니요|  
-|[!INCLUDE[tsql](../../includes/tsql-md.md)] 서버 수준 DDL 트리거|예|아니요|  
-|확장된 저장 프로시저|아니요|예|  
-|큐|아니요|예|  
-|동의어|아니요|예|  
-|형식(별칭 및 CLR 사용자 정의 형식)|아니요|예|  
-|XML 스키마 컬렉션|아니요|예|  
-|파티션 함수|아니요|예|  
+|CLR 사용자 정의 함수|예|예|  
+|CLR 트리거(DML 및 DDL)|예|예|  
+|[!INCLUDE[tsql](../../includes/tsql-md.md)] DML 트리거|예|예|  
+|[!INCLUDE[tsql](../../includes/tsql-md.md)] 데이터베이스 수준 DDL 트리거|예|예|  
+|[!INCLUDE[tsql](../../includes/tsql-md.md)] 서버 수준 DDL 트리거|예|예|  
+|확장된 저장 프로시저|예|예|  
+|큐|예|예|  
+|동의어|예|예|  
+|형식(별칭 및 CLR 사용자 정의 형식)|예|예|  
+|XML 스키마 컬렉션|예|예|  
+|파티션 함수|예|예|  
   
  \* 테이블은 [!INCLUDE[tsql](../../includes/tsql-md.md)] 계산 열, CHECK 제약 조건 또는 DEFAULT 제약 조건 정의에서 모듈, 사용자 정의 형식 또는 XML 스키마 컬렉션을 참조 하는 경우에만 참조 엔터티로 추적 됩니다.  
   
@@ -127,7 +127,7 @@ sys.dm_sql_referencing_entities (
   
 -   참조된 개체에 대한 CONTROL 권한이 필요합니다. 참조된 엔터티가 파티션 함수인 경우 데이터베이스에 대한 CONTROL 권한이 필요합니다.  
   
--   Dm_sql_referencing_entities에 대 한 SELECT 권한이 필요 합니다. 기본적으로 SELECT 권한은 public에 부여됩니다.  
+-   Sys.dm_sql_referencing_entities에 대 한 SELECT 권한이 필요 합니다. 기본적으로 SELECT 권한은 public에 부여됩니다.  
   
 ### <a name="sssql14---sscurrent"></a>[!INCLUDE[ssSQL14](../../includes/sssql14-md.md)] - [!INCLUDE[ssCurrent](../../includes/sscurrent-md.md)]  
   
@@ -139,7 +139,7 @@ sys.dm_sql_referencing_entities (
   
 -   참조 엔터티가 서버 수준 DDL 트리거인 경우 서버에 대한 VIEW ANY DEFINITION이 필요합니다.  
   
-## <a name="examples"></a>예제  
+## <a name="examples"></a>예  
   
 ### <a name="a-returning-the-entities-that-refer-to-a-given-entity"></a>A. 지정된 엔터티를 참조하는 엔터티 반환  
  다음 예에서는 지정된 테이블을 참조하는 현재 데이터베이스의 엔터티를 반환합니다.  

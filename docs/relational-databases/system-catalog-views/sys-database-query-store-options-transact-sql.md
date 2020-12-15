@@ -21,13 +21,13 @@ helpviewer_keywords:
 ms.assetid: 16b47d55-8019-41ff-ad34-1e0112178067
 author: markingmyname
 ms.author: maghan
-monikerRange: =azuresqldb-current||>=sql-server-2016||= azure-sqldw-latest||=sqlallproducts-allversions||>=sql-server-linux-2017||=azuresqldb-mi-current
-ms.openlocfilehash: d1c77693808a1571069e9b921e7efe017d55a514
-ms.sourcegitcommit: 2b6760408de3b99193edeccce4b92a2f9ed5bcc6
+monikerRange: =azuresqldb-current||>=sql-server-2016||= azure-sqldw-latest||>=sql-server-linux-2017||=azuresqldb-mi-current
+ms.openlocfilehash: c6b346496eb08e9121abac463b3e87f6e27362e2
+ms.sourcegitcommit: 1a544cf4dd2720b124c3697d1e62ae7741db757c
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 10/19/2020
-ms.locfileid: "92175921"
+ms.lasthandoff: 12/14/2020
+ms.locfileid: "97484785"
 ---
 # <a name="sysdatabase_query_store_options-transact-sql"></a>sys.database_query_store_options (Transact-sql)
 [!INCLUDE [sqlserver2016-asdb-asdbmi-asa](../../includes/applies-to-version/sqlserver2016-asdb-asdbmi-asa.md)]
@@ -47,11 +47,11 @@ ms.locfileid: "92175921"
 |**flush_interval_seconds**|**bigint**|쿼리 저장소 데이터를 디스크에 정기적으로 플러시하는 기간 (초)입니다. 기본값은 **900** (15 분)입니다.<br /><br /> 문을 사용 하 여 변경 `ALTER DATABASE <database> SET QUERY_STORE (DATA_FLUSH_INTERVAL_SECONDS  = <interval>)` 합니다.|  
 |**interval_length_minutes**|**bigint**|통계 집계 간격 (분)입니다. 임의 값은 허용 되지 않습니다. 다음 중 하나를 사용 합니다. 1, 5, 10, 15, 30, 60 및 1440 분 기본값은 **60** 분입니다.|  
 |**max_storage_size_mb**|**bigint**|쿼리 저장소에 대 한 최대 디스크 크기 (mb)입니다. 기본값은 **100** ,로 시작 하는 [!INCLUDE[ssSQL17](../../includes/sssql17-md.md)] **1gb** 입니다 [!INCLUDE[sql-server-2019](../../includes/sssqlv15-md.md)] .<br />[!INCLUDE[sqldbesa](../../includes/sqldbesa-md.md)]Premium edition의 경우 기본값은 1gb이 고 [!INCLUDE[sqldbesa](../../includes/sqldbesa-md.md)] Basic 버전의 경우 기본값은 10mb입니다.<br /><br /> 문을 사용 하 여 변경 `ALTER DATABASE <database> SET QUERY_STORE (MAX_STORAGE_SIZE_MB = <size>)` 합니다.|  
-|**stale_query_threshold_days**|**bigint**|쿼리 정보를 쿼리 저장소 유지 하는 일 수입니다. 기본값은 **30**입니다. 보존 정책을 사용 하지 않으려면 0으로 설정 합니다.<br />[!INCLUDE[sqldbesa](../../includes/sqldbesa-md.md)] Basic 버전의 경우 기본값은 7일입니다.<br /><br /> 문을 사용 하 여 변경 `ALTER DATABASE <database> SET QUERY_STORE ( CLEANUP_POLICY = ( STALE_QUERY_THRESHOLD_DAYS = <value> ) )` 합니다.|  
-|**max_plans_per_query**|**bigint**|저장 된 계획의 최대 수를 제한 합니다. 기본값은 **200**입니다. 최 댓 값에 도달 하면 쿼리 저장소 해당 쿼리에 대 한 새 계획의 캡처가 중지 됩니다. 를 0으로 설정 하면 캡처된 계획의 수와 관련 된 제한이 제거 됩니다.<br /><br /> 문을 사용 하 여 변경 `ALTER DATABASE<database> SET QUERY_STORE (MAX_PLANS_PER_QUERY = <n>)` 합니다.|  
+|**stale_query_threshold_days**|**bigint**|쿼리 정보를 쿼리 저장소 유지 하는 일 수입니다. 기본값은 **30** 입니다. 보존 정책을 사용 하지 않으려면 0으로 설정 합니다.<br />[!INCLUDE[sqldbesa](../../includes/sqldbesa-md.md)] Basic 버전의 경우 기본값은 7일입니다.<br /><br /> 문을 사용 하 여 변경 `ALTER DATABASE <database> SET QUERY_STORE ( CLEANUP_POLICY = ( STALE_QUERY_THRESHOLD_DAYS = <value> ) )` 합니다.|  
+|**max_plans_per_query**|**bigint**|저장 된 계획의 최대 수를 제한 합니다. 기본값은 **200** 입니다. 최 댓 값에 도달 하면 쿼리 저장소 해당 쿼리에 대 한 새 계획의 캡처가 중지 됩니다. 를 0으로 설정 하면 캡처된 계획의 수와 관련 된 제한이 제거 됩니다.<br /><br /> 문을 사용 하 여 변경 `ALTER DATABASE<database> SET QUERY_STORE (MAX_PLANS_PER_QUERY = <n>)` 합니다.|  
 |**query_capture_mode**|**smallint**|현재 활성 쿼리 캡처 모드:<br /><br /> **1** = 모두-모든 쿼리가 캡처됩니다. 이는 이상에 대 한 기본 구성 값입니다 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] [!INCLUDE[ssSQL15](../../includes/sssql15-md.md)] .<br /><br /> 2 = 실행 수 및 리소스 소비량에 따라 관련 쿼리를 자동으로 캡처합니다. 이것이 [!INCLUDE[sqldbesa](../../includes/sqldbesa-md.md)]에 대한 기본 구성 값입니다.<br /><br /> 3 = 없음-새 쿼리 캡처를 중지 합니다. Query Store는 이미 캡처된 쿼리에 대한 컴파일 및 런타임 통계를 계속 수집합니다. 중요 한 쿼리 캡처가 누락 될 수 있으므로이 구성을 신중 하 게 사용 합니다.|  
 |**query_capture_mode_desc**|**nvarchar(60)**|쿼리 저장소의 실제 캡처 모드에 대 한 텍스트 설명입니다.<br /><br /> 모두 (의 기본값 [!INCLUDE[ssSQL15](../../includes/sssql15-md.md)] )<br /><br /> **AUTO** (기본값 [!INCLUDE[sqldbesa](../../includes/sqldbesa-md.md)] )<br /><br /> 없음|  
-|**size_based_cleanup_mode**|**smallint**|총 데이터 양이 최대 크기에 가까워지면 정리가 자동으로 활성화될지 여부를 제어합니다.<br /><br /> 0 = 오프-크기 기반 정리가 자동으로 활성화 되지 않습니다.<br /><br /> **1** = 디스크의 크기가 *max_storage_size_mb*의 **90%** 에 도달 하면 자동 크기 조정 기반 정리가 자동으로 활성화 됩니다. 이것은 기본 구성 값입니다.<br /><br />크기 기반 정리는 가장 저렴하고 가장 오래된 쿼리를 먼저 제거합니다. *Max_storage_size_mb* 약 **80%** 에 도달 하면 중지 됩니다.|  
+|**size_based_cleanup_mode**|**smallint**|총 데이터 양이 최대 크기에 가까워지면 정리가 자동으로 활성화될지 여부를 제어합니다.<br /><br /> 0 = 오프-크기 기반 정리가 자동으로 활성화 되지 않습니다.<br /><br /> **1** = 디스크의 크기가 *max_storage_size_mb* 의 **90%** 에 도달 하면 자동 크기 조정 기반 정리가 자동으로 활성화 됩니다. 이것은 기본 구성 값입니다.<br /><br />크기 기반 정리는 가장 저렴하고 가장 오래된 쿼리를 먼저 제거합니다. *Max_storage_size_mb* 약 **80%** 에 도달 하면 중지 됩니다.|  
 |**size_based_cleanup_mode_desc**|**nvarchar(60)**|쿼리 저장소의 실제 크기 기반 정리 모드에 대 한 텍스트 설명입니다.<br /><br /> OFF <br /> **AUTO** (기본값)|  
 |**wait_stats_capture_mode**|**smallint**|쿼리 저장소 대기 통계의 캡처를 수행할지 여부를 제어 합니다. <br /><br /> 0 = OFF <br /> **1** = 설정<br /> **적용 대상**: [!INCLUDE[ssSQL17](../../includes/sssql17-md.md)] 이상|
 |**wait_stats_capture_mode_desc**|**nvarchar(60)**|실제 대기 통계 캡처 모드에 대 한 텍스트 설명입니다. <br /><br /> OFF <br /> **켜** 않음 (기본값)<br /> **적용 대상**: [!INCLUDE[ssSQL17](../../includes/sssql17-md.md)] 이상| 

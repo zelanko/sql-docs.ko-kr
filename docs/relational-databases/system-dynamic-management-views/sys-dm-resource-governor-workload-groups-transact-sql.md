@@ -1,6 +1,6 @@
 ---
 description: sys.dm_resource_governor_workload_groups(Transact-SQL)
-title: sys. dm_resource_governor_workload_groups (Transact-sql) | Microsoft Docs
+title: sys.dm_resource_governor_workload_groups (Transact-sql) | Microsoft Docs
 ms.custom: ''
 ms.date: 06/15/2020
 ms.prod: sql
@@ -20,13 +20,13 @@ helpviewer_keywords:
 ms.assetid: f63c4914-1272-43ef-b135-fe1aabd953e0
 author: markingmyname
 ms.author: maghan
-monikerRange: '>=aps-pdw-2016||=azure-sqldw-latest||>=sql-server-2016||=sqlallproducts-allversions||>=sql-server-linux-2017||=azuresqldb-mi-current'
-ms.openlocfilehash: 27116016633e9a7d12bf87c39f1bb6e6fc6cd4bd
-ms.sourcegitcommit: dd36d1cbe32cd5a65c6638e8f252b0bd8145e165
+monikerRange: '>=aps-pdw-2016||=azure-sqldw-latest||>=sql-server-2016||>=sql-server-linux-2017||=azuresqldb-mi-current'
+ms.openlocfilehash: 696543b1fc06090609a6404f228970e02a540a8e
+ms.sourcegitcommit: 1a544cf4dd2720b124c3697d1e62ae7741db757c
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 09/08/2020
-ms.locfileid: "89543887"
+ms.lasthandoff: 12/14/2020
+ms.locfileid: "97484615"
 ---
 # <a name="sysdm_resource_governor_workload_groups-transact-sql"></a>sys.dm_resource_governor_workload_groups(Transact-SQL)
 [!INCLUDE [sql-asdb-asdbmi-asa-pdw](../../includes/applies-to-version/sql-asdb-asdbmi-asa-pdw.md)]
@@ -34,7 +34,7 @@ ms.locfileid: "89543887"
   작업 그룹 통계 및 작업 그룹의 현재 메모리 내 구성을 반환합니다. 이 뷰는 sys.dm_resource_governor_resource_pools와 조인하여 리소스 풀 이름을 가져올 수 있습니다.  
   
 > [!NOTE]  
->  또는에서이를 호출 하려면 [!INCLUDE[ssSDWfull](../../includes/sssdwfull-md.md)] [!INCLUDE[ssPDW](../../includes/sspdw-md.md)] 이름 **sys. dm_pdw_nodes_resource_governor_workload_groups**을 사용 합니다.  
+>  또는에서이를 호출 하려면 [!INCLUDE[ssSDWfull](../../includes/sssdwfull-md.md)] [!INCLUDE[ssPDW](../../includes/sspdw-md.md)] **sys.dm_pdw_nodes_resource_governor_workload_groups** 이름을 사용 합니다.  
   
 |열 이름|데이터 형식|Description|  
 |-----------------|---------------|-----------------|  
@@ -70,7 +70,7 @@ ms.locfileid: "89543887"
 |pdw_node_id|**int**|**적용 대상**: [!INCLUDE[ssSDWfull](../../includes/sssdwfull-md.md)] , [!INCLUDE[ssPDW](../../includes/sspdw-md.md)]<br /><br /> 이 배포가 설정 된 노드의 식별자입니다.|  
   
 ## <a name="remarks"></a>설명  
- 이 동적 관리 뷰는 인-메모리 구성을 표시합니다. 저장 된 구성 메타 데이터를 보려면 [resource_governor_workload_groups &#40;transact-sql&#41;](../../relational-databases/system-catalog-views/sys-resource-governor-workload-groups-transact-sql.md) 카탈로그 뷰를 사용 합니다.  
+ 이 동적 관리 뷰는 인-메모리 구성을 표시합니다. 저장 된 구성 메타 데이터를 보려면 [sys.resource_governor_workload_groups &#40;transact-sql&#41;](../../relational-databases/system-catalog-views/sys-resource-governor-workload-groups-transact-sql.md) 카탈로그 뷰를 사용 합니다.  
   
  가 성공적으로 실행 되 면,,,,,,,,,, `ALTER RESOURCE GOVERNOR RESET STATISTICS` `statistics_start_time` `total_request_count` `total_queued_request_count` `total_cpu_limit_violation_count` `total_cpu_usage_ms` `max_request_cpu_time_ms` `total_lock_wait_count` `total_lock_wait_time_ms` `total_query_optimization_count` `total_suboptimal_plan_generation_count` `total_reduced_memgrant_count` 및 `max_request_grant_memory_kb` 카운터가 다시 설정 됩니다. 카운터는 `statistics_start_time` 현재 시스템 날짜 및 시간으로 설정 되 고 다른 카운터는 0으로 설정 됩니다.  
   
@@ -79,7 +79,7 @@ ms.locfileid: "89543887"
   
 ## <a name="see-also"></a>참고 항목  
  [동적 관리 뷰 및 함수&#40;Transact-SQL&#41;](~/relational-databases/system-dynamic-management-views/system-dynamic-management-views.md)   
- [dm_resource_governor_resource_pools &#40;Transact-sql&#41;](../../relational-databases/system-dynamic-management-views/sys-dm-resource-governor-resource-pools-transact-sql.md)   
- [resource_governor_workload_groups &#40;Transact-sql&#41;](../../relational-databases/system-catalog-views/sys-resource-governor-workload-groups-transact-sql.md)   
+ [Transact-sql&#41;sys.dm_resource_governor_resource_pools &#40;](../../relational-databases/system-dynamic-management-views/sys-dm-resource-governor-resource-pools-transact-sql.md)   
+ [Transact-sql&#41;sys.resource_governor_workload_groups &#40;](../../relational-databases/system-catalog-views/sys-resource-governor-workload-groups-transact-sql.md)   
  [ALTER RESOURCE GOVERNOR&#40;Transact-SQL&#41;](../../t-sql/statements/alter-resource-governor-transact-sql.md)  
   

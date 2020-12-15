@@ -17,20 +17,20 @@ helpviewer_keywords:
 ms.assetid: ''
 author: jovanpop-msft
 ms.author: jovanpop
-monikerRange: =azuresqldb-current||>=sql-server-2017||=sqlallproducts-allversions||>=sql-server-linux-2017||=azuresqldb-mi-current
-ms.openlocfilehash: 65fc7918a3e8064310757a2875e62d6e001f750c
-ms.sourcegitcommit: 04cf7905fa32e0a9a44575a6f9641d9a2e5ac0f8
+monikerRange: =azuresqldb-current||>=sql-server-2017||>=sql-server-linux-2017||=azuresqldb-mi-current
+ms.openlocfilehash: 57a595a2bcb78d86c3a770db6b584974c229a0df
+ms.sourcegitcommit: 1a544cf4dd2720b124c3697d1e62ae7741db757c
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 10/07/2020
-ms.locfileid: "91808570"
+ms.lasthandoff: 12/14/2020
+ms.locfileid: "97483655"
 ---
 # <a name="automatic-tuning"></a>자동 조정
 [!INCLUDE[sqlserver2017-asdb](../../includes/applies-to-version/sqlserver2017-asdb.md)]
 
 자동 튜닝은 잠재적 쿼리 성능 문제에 대한 정보를 제공하고, 솔루션을 권장하며, 식별된 문제를 자동으로 해결하는 데이터베이스 기능입니다.
 
-에서 도입 된 자동 조정은 [!INCLUDE[sssqlv14-md](../../includes/sssqlv14-md.md)] 잠재적 성능 문제가 감지 될 때마다 사용자에 게 알리고 정정 작업을 적용 하거나에서 [!INCLUDE[ssde_md](../../includes/ssde_md.md)] 성능 문제를 자동으로 해결할 수 있도록 합니다. 자동 조정을 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 사용 하면 **쿼리 실행 계획 선택 재발**으로 인 한 성능 문제를 식별 하 고 해결할 수 있습니다. 또한의 자동 조정은 [!INCLUDE[ssazure_md](../../includes/ssazure_md.md)] 필요한 인덱스를 만들고 사용 하지 않는 인덱스를 삭제 합니다. 쿼리 실행 계획에 대 한 자세한 내용은 [실행 계획](../../relational-databases/performance/execution-plans.md)을 참조 하세요.
+에서 도입 된 자동 조정은 [!INCLUDE[sssqlv14-md](../../includes/sssqlv14-md.md)] 잠재적 성능 문제가 감지 될 때마다 사용자에 게 알리고 정정 작업을 적용 하거나에서 [!INCLUDE[ssde_md](../../includes/ssde_md.md)] 성능 문제를 자동으로 해결할 수 있도록 합니다. 자동 조정을 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 사용 하면 **쿼리 실행 계획 선택 재발** 으로 인 한 성능 문제를 식별 하 고 해결할 수 있습니다. 또한의 자동 조정은 [!INCLUDE[ssazure_md](../../includes/ssazure_md.md)] 필요한 인덱스를 만들고 사용 하지 않는 인덱스를 삭제 합니다. 쿼리 실행 계획에 대 한 자세한 내용은 [실행 계획](../../relational-databases/performance/execution-plans.md)을 참조 하세요.
 
 는 [!INCLUDE[ssDEnoversion](../../includes/ssdenoversion-md.md)] 데이터베이스에서 실행 되는 쿼리를 모니터링 하 고 자동으로 작업의 성능을 향상 시킵니다. 에는 [!INCLUDE[ssde_md](../../includes/ssde_md.md)] 데이터베이스를 작업에 동적으로 적용 하 여 쿼리 성능을 자동으로 조정 하 고 향상 시킬 수 있는 기본 제공 인텔리전스 메커니즘이 있습니다. 다음과 같은 두 가지 자동 조정 기능을 사용할 수 있습니다.
 
@@ -101,7 +101,7 @@ SET AUTOMATIC_TUNING ( FORCE_LAST_GOOD_PLAN = ON );
 
 에서 [!INCLUDE[sssql15-md](../../includes/sssql15-md.md)] 쿼리 저장소 시스템 뷰를 사용 하 여 계획 선택 회귀를 찾을 수 있습니다. 부터 [!INCLUDE[sssqlv14-md](../../includes/sssqlv14-md.md)] 은 [!INCLUDE[ssde_md](../../includes/ssde_md.md)] 잠재적 계획 선택 재발 및 [sys.dm_db_tuning_recommendations &#40;transact-sql&#41;](../../relational-databases/system-dynamic-management-views/sys-dm-db-tuning-recommendations-transact-sql.md) DMV에 적용 해야 하는 권장 작업을 검색 하 고 표시 합니다. DMV에는 문제에 대 한 정보, 문제의 중요성, 식별 된 쿼리, 회귀 된 계획의 ID, 비교할 기준으로 사용 된 계획의 ID, [!INCLUDE[tsql_md](../../includes/tsql-md.md)] 문제를 해결 하기 위해 실행할 수 있는 문이 표시 됩니다.
 
-| type | description | Datetime | score | 자세히 | ... |
+| 형식 | description | Datetime | score | 자세히 | ... |
 | --- | --- | --- | --- | --- | --- |
 | `FORCE_LAST_GOOD_PLAN` | CPU 시간이 4 밀리초에서 14 밀리초로 변경 되었습니다. | 3/17/2017 | 83 | `queryId` `recommendedPlanId` `regressedPlanId` `T-SQL` |   |
 | `FORCE_LAST_GOOD_PLAN` | CPU 시간이 37 밀리초에서 84 밀리초로 변경 되었습니다. | 3/16/2017 | 26 | `queryId` `recommendedPlanId` `regressedPlanId` `T-SQL` |   |

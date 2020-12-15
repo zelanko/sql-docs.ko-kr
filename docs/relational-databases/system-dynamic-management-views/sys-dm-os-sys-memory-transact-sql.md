@@ -20,13 +20,13 @@ helpviewer_keywords:
 ms.assetid: 1ca58814-1caa-44c1-b307-ff0bdcbbef62
 author: markingmyname
 ms.author: maghan
-monikerRange: '>=aps-pdw-2016||=azure-sqldw-latest||>=sql-server-2016||=sqlallproducts-allversions||>=sql-server-linux-2017||=azuresqldb-mi-current'
-ms.openlocfilehash: b91e4ac74636f30f390cf38526be55d0767a27b1
-ms.sourcegitcommit: 32135463a8494d9ed1600a58f51819359e3c09dc
+monikerRange: '>=aps-pdw-2016||=azure-sqldw-latest||>=sql-server-2016||>=sql-server-linux-2017||=azuresqldb-mi-current'
+ms.openlocfilehash: a8d6e6098bf4e480a7279e7243111dd720dcd1b5
+ms.sourcegitcommit: 1a544cf4dd2720b124c3697d1e62ae7741db757c
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 10/08/2020
-ms.locfileid: "91834062"
+ms.lasthandoff: 12/14/2020
+ms.locfileid: "97484625"
 ---
 # <a name="sysdm_os_sys_memory-transact-sql"></a>sys.dm_os_sys_memory(Transact-SQL)
 [!INCLUDE [sql-asdbmi-asa-pdw](../../includes/applies-to-version/sql-asdbmi-asa-pdw.md)]
@@ -36,7 +36,7 @@ ms.locfileid: "91834062"
  [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]는 운영 체제 수준의 외부 메모리 상태 및 기본 하드웨어의 물리적 제한에 제약을 받고 이에 따라 반응합니다. 전체 시스템 상태 파악은 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 메모리 사용량 평가에서 중요한 부분입니다.  
   
 > [!NOTE]  
->  또는에서이를 호출 하려면 [!INCLUDE[ssSDWfull](../../includes/sssdwfull-md.md)] [!INCLUDE[ssPDW](../../includes/sspdw-md.md)] **sys.dm_pdw_nodes_os_sys_memory**이름을 사용 합니다.  
+>  또는에서이를 호출 하려면 [!INCLUDE[ssSDWfull](../../includes/sssdwfull-md.md)] [!INCLUDE[ssPDW](../../includes/sspdw-md.md)] **sys.dm_pdw_nodes_os_sys_memory** 이름을 사용 합니다.  
   
 |열 이름|데이터 형식|Description|  
 |-----------------|---------------|-----------------|  

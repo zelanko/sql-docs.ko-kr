@@ -27,13 +27,13 @@ ms.assetid: 90ef8a33-5ae3-4984-8259-608d2f1d727f
 author: MightyPen
 ms.author: genemi
 ms.custom: seo-lt-2019
-monikerRange: =azuresqldb-current||>=sql-server-2016||=sqlallproducts-allversions||>=sql-server-linux-2017||=azuresqldb-mi-current
-ms.openlocfilehash: 01fd8e99d6eb770c2f5680ead1e2c4d9b9ec98b8
-ms.sourcegitcommit: da88320c474c1c9124574f90d549c50ee3387b4c
+monikerRange: =azuresqldb-current||>=sql-server-2016||>=sql-server-linux-2017||=azuresqldb-mi-current
+ms.openlocfilehash: b5539c07b9faab5c426ad9b101d94c683ed665c5
+ms.sourcegitcommit: 1a544cf4dd2720b124c3697d1e62ae7741db757c
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 07/01/2020
-ms.locfileid: "85733657"
+ms.lasthandoff: 12/14/2020
+ms.locfileid: "97484815"
 ---
 # <a name="updating-data-using-xml-updategrams-sqlxml-40"></a>XML Updategram을 사용하여 데이터 업데이트(SQLXML 4.0)
 [!INCLUDE [SQL Server Azure SQL Database](../../../includes/applies-to-version/sql-asdb.md)]
@@ -81,13 +81,13 @@ ms.locfileid: "85733657"
   
  두 경우 모두 updategram는 **sql: key 필드** 에 지정 된 키 열을 사용 하 여 및 블록의 요소를 쌍으로 연결 합니다 **\<before>** **\<after>** .  
   
- 매핑 스키마가 키 열을 식별 하지 않는 경우 ( **sql: 키-필드**를 사용 하 여) 또는 updategram에서 키 열 값을 업데이트 하는 경우 **updg: id**를 지정 해야 합니다.  
+ 매핑 스키마가 키 열을 식별 하지 않는 경우 ( **sql: 키-필드** 를 사용 하 여) 또는 updategram에서 키 열 값을 업데이트 하는 경우 **updg: id** 를 지정 해야 합니다.  
   
  및 블록에서 식별 된 레코드는 **\<before>** **\<after>** 동일한 순서로 지정할 필요가 없습니다. **Updg: id** 특성은 및 블록에 지정 된 요소 간의 연결을 강제로 적용 **\<before>** 합니다 **\<after>** .  
   
  블록에서 하나의 요소를 지정 하 **\<before>** 고 블록에 해당 요소를 하나만 지정 하는 경우 **\<after>** **updg: id** 를 사용 하지 않아도 됩니다. 그러나 모호성을 방지 하려면 **updg: id** 를 지정 하는 것이 좋습니다.  
   
-## <a name="examples"></a>예제  
+## <a name="examples"></a>예  
  Updategram 예를 사용하기 전에 다음 사항을 확인하십시오.  
   
 -   대부분의 예에서는 기본 매핑을 사용합니다. 즉, Updategram에 매핑 스키마가 지정되지 않습니다. 매핑 스키마를 사용 하는 updategram의 추가 예제는 [Updategram &#40;SQLXML 4.0&#41;에서 주석이 추가 된 매핑 스키마 지정 ](../../../relational-databases/sqlxml-annotated-xsd-schemas-xpath-queries/updategrams/specifying-an-annotated-mapping-schema-in-an-updategram-sqlxml-4-0.md)을 참조 하세요.  

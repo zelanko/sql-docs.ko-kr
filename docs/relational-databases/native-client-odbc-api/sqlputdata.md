@@ -14,13 +14,13 @@ helpviewer_keywords:
 ms.assetid: d39aaa5b-7fbc-4315-a7f2-5a7787e04f25
 author: markingmyname
 ms.author: maghan
-monikerRange: '>=aps-pdw-2016||=azuresqldb-current||=azure-sqldw-latest||>=sql-server-2016||=sqlallproducts-allversions||>=sql-server-linux-2017||=azuresqldb-mi-current'
-ms.openlocfilehash: 42323e6fbf35ddb6093ac4e764e81e7f0274cbb2
-ms.sourcegitcommit: 4d370399f6f142e25075b3714e5c2ce056b1bfd0
+monikerRange: '>=aps-pdw-2016||=azuresqldb-current||=azure-sqldw-latest||>=sql-server-2016||>=sql-server-linux-2017||=azuresqldb-mi-current'
+ms.openlocfilehash: 81b090ce7c0e7231fac2296149546b64f481b38f
+ms.sourcegitcommit: 1a544cf4dd2720b124c3697d1e62ae7741db757c
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 10/09/2020
-ms.locfileid: "91867479"
+ms.lasthandoff: 12/14/2020
+ms.locfileid: "97483435"
 ---
 # <a name="sqlputdata"></a>SQLPutData
 [!INCLUDE[SQL Server Azure SQL Database Synapse Analytics PDW ](../../includes/applies-to-version/sql-asdb-asdbmi-asa-pdw.md)]
@@ -31,7 +31,7 @@ ms.locfileid: "91867479"
   
 -   참조 된 매개 변수는 UPDATE 문의 SET 절에 있는 *식일* 수 있습니다.  
   
- 을 실행 하는 서버에 블록의 데이터를 제공 하는 SQLPutData 호출의 시퀀스를 취소 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 하면 버전 6.5 또는 이전 버전을 사용할 때 열의 값이 부분적으로 업데이트 됩니다. SQLCancel이 호출 될 때 참조 된 **text**, **ntext**또는 **image** 열이 중간 자리 표시자 값으로 설정 되어 있습니다.  
+ 을 실행 하는 서버에 블록의 데이터를 제공 하는 SQLPutData 호출의 시퀀스를 취소 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 하면 버전 6.5 또는 이전 버전을 사용할 때 열의 값이 부분적으로 업데이트 됩니다. SQLCancel이 호출 될 때 참조 된 **text**, **ntext** 또는 **image** 열이 중간 자리 표시자 값으로 설정 되어 있습니다.  
   
 > [!NOTE]  
 >  [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] Native Client ODBC 드라이버는 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 6.5 및 이전 버전에 대한 연결을 지원하지 않습니다.  
@@ -39,9 +39,9 @@ ms.locfileid: "91867479"
 ## <a name="diagnostics"></a>진단  
  [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]SQLPutData에 대해 하나의 Native Client 특정 SQLSTATE가 있습니다.  
   
-|SQLSTATE|Error|설명|  
+|SQLSTATE|오류|설명|  
 |--------------|-----------|-----------------|  
-|22026|문자열 데이터, 길이가 일치하지 않음|전송할 데이터 길이 (바이트)를 응용 프로그램에서 지정 하는*경우 (예*SQL_LEN_DATA_AT_EXEC: *n* 이 0 보다 큰 경우)에는 sqlputdata를 통해 응용 프로그램에서 제공 하는 총 바이트 수가 지정 된 길이와 일치 해야 합니다.|  
+|22026|문자열 데이터, 길이가 일치하지 않음|전송할 데이터 길이 (바이트)를 응용 프로그램에서 지정 하는 *경우 (예* SQL_LEN_DATA_AT_EXEC: *n* 이 0 보다 큰 경우)에는 sqlputdata를 통해 응용 프로그램에서 제공 하는 총 바이트 수가 지정 된 길이와 일치 해야 합니다.|  
   
 ## <a name="sqlputdata-and-table-valued-parameters"></a>SQLPutData 및 테이블 반환 매개 변수  
  SQLPutData는 테이블 반환 매개 변수와 함께 가변 행 바인딩을 사용할 때 응용 프로그램에서 사용 됩니다. *StrLen_Or_Ind* 매개 변수는 드라이버가 다음 행 또는 테이블 반환 매개 변수 데이터의 행에 대 한 데이터를 수집할 준비가 되었거나 더 이상 행을 사용할 수 없음을 나타냅니다.  

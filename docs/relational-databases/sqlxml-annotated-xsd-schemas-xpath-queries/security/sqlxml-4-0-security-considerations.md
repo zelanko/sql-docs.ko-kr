@@ -14,13 +14,13 @@ helpviewer_keywords:
 ms.assetid: 7281bdbd-cf1d-4d73-9fe7-ee8b2b946696
 author: MightyPen
 ms.author: genemi
-monikerRange: =azuresqldb-current||>=sql-server-2016||=sqlallproducts-allversions||>=sql-server-linux-2017||=azuresqldb-mi-current
-ms.openlocfilehash: b21bd5b2a2a02ccc8cc9dbbd04cd24cf1165d77e
-ms.sourcegitcommit: da88320c474c1c9124574f90d549c50ee3387b4c
+monikerRange: =azuresqldb-current||>=sql-server-2016||>=sql-server-linux-2017||=azuresqldb-mi-current
+ms.openlocfilehash: 04d7596f9edf7c65c59354cf376b85a974f5c3a3
+ms.sourcegitcommit: 1a544cf4dd2720b124c3697d1e62ae7741db757c
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 07/01/2020
-ms.locfileid: "85750728"
+ms.lasthandoff: 12/14/2020
+ms.locfileid: "97482924"
 ---
 # <a name="sqlxml-40-security-considerations"></a>SQLXML 4.0 보안 고려 사항
 [!INCLUDE [SQL Server Azure SQL Database](../../../includes/applies-to-version/sql-asdb.md)]

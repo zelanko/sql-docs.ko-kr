@@ -17,13 +17,13 @@ helpviewer_keywords:
 ms.assetid: 2c17fba0-7a3c-453c-91b7-f801e7b39ccb
 author: markingmyname
 ms.author: maghan
-monikerRange: '>=aps-pdw-2016||=azuresqldb-current||=azure-sqldw-latest||>=sql-server-2016||=sqlallproducts-allversions||>=sql-server-linux-2017||=azuresqldb-mi-current'
-ms.openlocfilehash: e5ace381694dcc3afdbed36e35e48af147067b32
-ms.sourcegitcommit: a5398f107599102af7c8cda815d8e5e9a367ce7e
+monikerRange: '>=aps-pdw-2016||=azuresqldb-current||=azure-sqldw-latest||>=sql-server-2016||>=sql-server-linux-2017||=azuresqldb-mi-current'
+ms.openlocfilehash: 23f772f61191f593900147a293400997345844bc
+ms.sourcegitcommit: 1a544cf4dd2720b124c3697d1e62ae7741db757c
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 10/13/2020
-ms.locfileid: "92005966"
+ms.lasthandoff: 12/14/2020
+ms.locfileid: "97483134"
 ---
 # <a name="create-a-distributed-transaction"></a>분산 트랜잭션 만들기
 
@@ -54,7 +54,7 @@ MSDTC는 c + + 프로그램에서 분산 트랜잭션을 관리할 때 ODBC (Ope
 
 4. 마지막으로 응용 프로그램은 SQL_COMMIT 또는 SQL_ROLLBACK 옵션을 사용 하 여 [Sqlendtran _(1)_](../../../relational-databases/native-client-odbc-api/sqlendtran.md)을 호출 하 여 트랜잭션을 종료 합니다.
 
-_(1)_ ODBC 없이 MSDTC를 호출할 수 있습니다. 이 경우 MSDTC는 트랜잭션 관리자가 되며 응용 프로그램은 더 이상 **Sqlendtran**을 사용 하지 않습니다.
+_(1)_ ODBC 없이 MSDTC를 호출할 수 있습니다. 이 경우 MSDTC는 트랜잭션 관리자가 되며 응용 프로그램은 더 이상 **Sqlendtran** 을 사용 하지 않습니다.
 
 ### <a name="only-one-distributed-transaction"></a>하나의 분산 트랜잭션만
 

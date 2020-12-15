@@ -1,6 +1,6 @@
 ---
 description: sys.dm_db_stats_histogram(Transact-SQL)
-title: sys. dm_db_stats_histogram (Transact-sql) | Microsoft Docs
+title: sys.dm_db_stats_histogram (Transact-sql) | Microsoft Docs
 ms.custom: ''
 ms.date: 03/14/2017
 ms.prod: sql
@@ -20,13 +20,13 @@ helpviewer_keywords:
 ms.assetid: 1897fd4a-8d51-461e-8ef2-c60be9e563f2
 author: markingmyname
 ms.author: maghan
-monikerRange: =azuresqldb-current||>=sql-server-2016||=sqlallproducts-allversions||>=sql-server-linux-2017||=azuresqldb-mi-current
-ms.openlocfilehash: af4e3e3739475ff3beac61802606499874fdff58
-ms.sourcegitcommit: cc23d8646041336d119b74bf239a6ac305ff3d31
+monikerRange: =azuresqldb-current||>=sql-server-2016||>=sql-server-linux-2017||=azuresqldb-mi-current
+ms.openlocfilehash: 0c6bf618fe665a3c988a7148a4958979f0d151d4
+ms.sourcegitcommit: 1a544cf4dd2720b124c3697d1e62ae7741db757c
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 09/23/2020
-ms.locfileid: "91117004"
+ms.lasthandoff: 12/14/2020
+ms.locfileid: "97484735"
 ---
 # <a name="sysdm_db_stats_histogram-transact-sql"></a>sys.dm_db_stats_histogram(Transact-SQL)
 
@@ -45,10 +45,10 @@ sys.dm_db_stats_histogram (object_id, stats_id)
   
 ## <a name="arguments"></a>인수  
  *object_id*  
- 해당 통계 중 하나의 속성이 요청되는 현재 데이터베이스에 포함된 개체의 ID입니다. *object_id* 은 **int**입니다.  
+ 해당 통계 중 하나의 속성이 요청되는 현재 데이터베이스에 포함된 개체의 ID입니다. *object_id* 은 **int** 입니다.  
   
  *stats_id*  
- 지정된 *object_id*통계의 ID입니다. 통계 ID는 [sys.stats](../../relational-databases/system-catalog-views/sys-stats-transact-sql.md) 동적 관리 뷰에서 얻을 수 있습니다. *stats_id* 는 **int**입니다.  
+ 지정된 *object_id* 통계의 ID입니다. 통계 ID는 [sys.stats](../../relational-databases/system-catalog-views/sys-stats-transact-sql.md) 동적 관리 뷰에서 얻을 수 있습니다. *stats_id* 는 **int** 입니다.  
   
 ## <a name="table-returned"></a>반환된 테이블  
   
@@ -83,9 +83,9 @@ sys.dm_db_stats_histogram (object_id, stats_id)
   
 -   굵은 선은 상한 값(*range_high_key*)과 발생한 횟수(*equal_rows*)를 나타냅니다.  
   
--   *range_high_key* 왼쪽의 채워진 영역은 열 값의 범위와 각 열 값이 발생한 평균 횟수(*average_range_rows*)를 나타냅니다. 첫 번째 히스토그램 단계의 *average_range_rows*는 항상 0입니다.  
+-   *range_high_key* 왼쪽의 채워진 영역은 열 값의 범위와 각 열 값이 발생한 평균 횟수(*average_range_rows*)를 나타냅니다. 첫 번째 히스토그램 단계의 *average_range_rows* 는 항상 0입니다.  
   
--   점선은 범위 내 고유 값의 총 개수(*distinct_range_rows*) 및 범위 내 값의 총 개수(*range_rows*)를 예상하는 데 사용되는 샘플링된 값을 나타냅니다. 쿼리 최적화 프로그램은 *range_rows* 및 *distinct_range_rows*를 사용하여 *average_range_rows*를 컴퓨팅하며 샘플링된 값은 저장하지 않습니다.  
+-   점선은 범위 내 고유 값의 총 개수(*distinct_range_rows*) 및 범위 내 값의 총 개수(*range_rows*)를 예상하는 데 사용되는 샘플링된 값을 나타냅니다. 쿼리 최적화 프로그램은 *range_rows* 및 *distinct_range_rows* 를 사용하여 *average_range_rows* 를 컴퓨팅하며 샘플링된 값은 저장하지 않습니다.  
   
  쿼리 최적화 프로그램은 통계적 중요성에 따라 히스토그램 단계를 정의합니다. 또한 히스토그램의 단계 수를 최소화하면서 경계 값 간의 차이를 최대화하기 위해 최대 차이 알고리즘을 사용합니다. 최대 단계 수는 200개입니다. 히스토그램 단계 수는 경계 지점이 200개 미만인 열에서도 고유 값의 개수보다 적을 수 있습니다. 예를 들어 100개의 고유 값을 가진 열의 히스토그램에 100개 미만의 경계 지점이 있을 수 있습니다.  
   
@@ -93,7 +93,7 @@ sys.dm_db_stats_histogram (object_id, stats_id)
 
 사용자가 통계 열에 대한 select 권한이 있거나 테이블을 소유하거나 `sysadmin` 고정 서버 역할, `db_owner` 고정 데이터베이스 역할, 또는 `db_ddladmin` 고정 데이터베이스 역할의 멤버여야 합니다.
 
-## <a name="examples"></a>예제  
+## <a name="examples"></a>예  
 
 ### <a name="a-simple-example"></a>A. 간단한 예    
 다음 예에서는 간단한 테이블을 만들고 채웁니다. 는 열에 대 한 통계를 만듭니다 `Country_Name` .
