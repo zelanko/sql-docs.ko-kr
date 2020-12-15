@@ -9,13 +9,13 @@ ms.date: 12/17/2018
 ms.author: murshedz
 ms.reviewer: martinle
 ms.custom: seo-dt-2019
-monikerRange: '>= aps-pdw-2016-au7 || = sqlallproducts-allversions'
-ms.openlocfilehash: d05314f4d100e469c621d42a10ed89671b2bdd9c
-ms.sourcegitcommit: e042272a38fb646df05152c676e5cbeae3f9cd13
+monikerRange: '>= aps-pdw-2016-au7'
+ms.openlocfilehash: 8dfadabcae27ff8705d86294b1c05851245d199c
+ms.sourcegitcommit: 1a544cf4dd2720b124c3697d1e62ae7741db757c
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 04/27/2020
-ms.locfileid: "74401330"
+ms.lasthandoff: 12/14/2020
+ms.locfileid: "97420202"
 ---
 # <a name="common-subexpression-elimination-explained"></a>Common 부분식 제거 설명
 

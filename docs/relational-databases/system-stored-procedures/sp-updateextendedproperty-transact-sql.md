@@ -18,13 +18,13 @@ helpviewer_keywords:
 ms.assetid: 7f02360f-cb9e-48b4-b75f-29b4bc9ea304
 author: markingmyname
 ms.author: maghan
-monikerRange: =azuresqldb-current||>=sql-server-2016||=sqlallproducts-allversions||>=sql-server-linux-2017||=azuresqldb-mi-current
-ms.openlocfilehash: 52c91c09c440402df383253996e660d7abdb317c
-ms.sourcegitcommit: dd36d1cbe32cd5a65c6638e8f252b0bd8145e165
+monikerRange: =azuresqldb-current||>=sql-server-2016||>=sql-server-linux-2017||=azuresqldb-mi-current
+ms.openlocfilehash: 13d9b45efd0fc75e1e17ea0ec5b21537fae71971
+ms.sourcegitcommit: 1a544cf4dd2720b124c3697d1e62ae7741db757c
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 09/08/2020
-ms.locfileid: "89551177"
+ms.lasthandoff: 12/14/2020
+ms.locfileid: "97427225"
 ---
 # <a name="sp_updateextendedproperty-transact-sql"></a>sp_updateextendedproperty(Transact-SQL)
 [!INCLUDE [SQL Server SQL Database](../../includes/applies-to-version/sql-asdb.md)]
@@ -54,10 +54,10 @@ sp_updateextendedproperty
   
 ## <a name="arguments"></a>인수  
  [ @name =] {'*property_name*'}  
- 업데이트할 속성의 이름입니다. *property_name* 는 **sysname**이며 NULL 일 수 없습니다.  
+ 업데이트할 속성의 이름입니다. *property_name* 는 **sysname** 이며 NULL 일 수 없습니다.  
   
  [ @value =] {'*value*'}  
- 속성에 연결된 값입니다. *값* 은 **sql_variant**이며 기본값은 NULL입니다. *값* 의 크기는 7500 바이트를 초과할 수 없습니다.  
+ 속성에 연결된 값입니다. *값* 은 **sql_variant** 이며 기본값은 NULL입니다. *값* 의 크기는 7500 바이트를 초과할 수 없습니다.  
   
  [ @level0type =] {'*level0_object_type*'}  
  사용자 또는 사용자 정의 형식입니다. *level0_object_type* 는 **varchar (128)** 이며 기본값은 NULL입니다. 유효한 입력은 ASSEMBLY, CONTRACT, EVENT NOTIFICATION, FILEGROUP, MESSAGE TYPE, PARTITION FUNCTION, PARTITION SCHEME, PLAN GUIDE, REMOTE SERVICE BINDING, ROUTE, SCHEMA, SERVICE, USER, TRIGGER, TYPE 및 NULL입니다.  
@@ -78,7 +78,7 @@ sp_updateextendedproperty
  수준 2 개체의 유형입니다. *level2_object_type* 는 **varchar (128)** 이며 기본값은 NULL입니다. 유효한 입력은 COLUMN, CONSTRAINT, EVENT NOTIFICATION, INDEX, PARAMETER, TRIGGER 및 NULL입니다.  
   
  [ @level2name =] {'*level2_object_name*'}  
- 지정된 수준 2 개체 유형의 이름입니다. *level2_object_name* 는 **sysname**이며 기본값은 NULL입니다.  
+ 지정된 수준 2 개체 유형의 이름입니다. *level2_object_name* 는 **sysname** 이며 기본값은 NULL입니다.  
   
 ## <a name="return-code-values"></a>반환 코드 값  
  0(성공) 또는 1(실패)  
@@ -86,14 +86,14 @@ sp_updateextendedproperty
 ## <a name="remarks"></a>설명  
  확장 속성을 지정하기 위해 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 데이터베이스의 개체는 세 수준(0, 1, 2)으로 분류됩니다. 수준 0은 최고 수준이며 데이터베이스 범위에 포함된 개체로 정의됩니다. 수준 1 개체는 스키마나 USER 범위에 포함되어 있고 수준 2 개체는 수준 1 개체에 포함되어 있습니다. 모든 수준의 개체에 대해 확장 속성을 정의할 수 있습니다. 한 수준에 있는 개체를 참조할 때는 해당 개체를 소유하거나 포함하는 더 높은 수준의 개체 이름을 지정해야 합니다.  
   
- 유효한 *property_name* 및 *값*이 지정 된 경우 모든 개체 형식 및 이름이 null 이면 업데이트 된 속성이 현재 데이터베이스에 속합니다.  
+ 유효한 *property_name* 및 *값* 이 지정 된 경우 모든 개체 형식 및 이름이 null 이면 업데이트 된 속성이 현재 데이터베이스에 속합니다.  
   
 ## <a name="permissions"></a>사용 권한  
  Db_owner 및 db_ddladmin 고정 데이터베이스 역할의 멤버는 개체의 확장 속성을 업데이트할 수 있습니다. 단, 데이터베이스 자체 나 사용자 또는 역할에는 속성을 추가할 수 없습니다 db_ddladmin.  
   
  사용자는 자신이 소유하거나 ALTER 또는 CONTROL 권한이 있는 개체의 확장 속성을 업데이트할 수 있습니다.  
   
-## <a name="examples"></a>예제  
+## <a name="examples"></a>예  
   
 ### <a name="a-updating-an-extended-property-on-a-column"></a>A. 열의 확장 속성 업데이트  
  다음 예에서는 `Caption` 테이블의 `ID` 열에서 `T1` 속성의 값을 업데이트합니다.  
@@ -138,9 +138,9 @@ GO
   
 ## <a name="see-also"></a>참고 항목  
  [Transact-sql&#41;&#40;저장 프로시저 데이터베이스 엔진 ](../../relational-databases/system-stored-procedures/database-engine-stored-procedures-transact-sql.md)   
- [fn_listextendedproperty &#40;Transact-sql&#41;](../../relational-databases/system-functions/sys-fn-listextendedproperty-transact-sql.md)   
+ [Transact-sql&#41;sys.fn_listextendedproperty &#40;](../../relational-databases/system-functions/sys-fn-listextendedproperty-transact-sql.md)   
  [Transact-sql&#41;sp_addextendedproperty &#40;](../../relational-databases/system-stored-procedures/sp-addextendedproperty-transact-sql.md)   
  [Transact-sql&#41;sp_dropextendedproperty &#40;](../../relational-databases/system-stored-procedures/sp-dropextendedproperty-transact-sql.md)   
- [extended_properties &#40;Transact-sql&#41;](../../relational-databases/system-catalog-views/extended-properties-catalog-views-sys-extended-properties.md)  
+ [Transact-sql&#41;sys.extended_properties &#40;](../../relational-databases/system-catalog-views/extended-properties-catalog-views-sys-extended-properties.md)  
   
   

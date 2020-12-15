@@ -8,13 +8,13 @@ ms.topic: conceptual
 ms.date: 06/27/2018
 ms.author: murshedz
 ms.reviewer: martinle
-monikerRange: '>= aps-pdw-2016-au7 || = sqlallproducts-allversions'
-ms.openlocfilehash: 8642f27a329da8819acf0ab99a648c4979ed40d0
-ms.sourcegitcommit: e042272a38fb646df05152c676e5cbeae3f9cd13
+monikerRange: '>= aps-pdw-2016-au7'
+ms.openlocfilehash: cd9e93b1b734737eda94501df7a30a07c8f8042a
+ms.sourcegitcommit: 1a544cf4dd2720b124c3697d1e62ae7741db757c
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 04/27/2020
-ms.locfileid: "74401450"
+ms.lasthandoff: 12/14/2020
+ms.locfileid: "97420266"
 ---
 # <a name="appliance-feature-switches"></a>어플라이언스 기능 스위치
 

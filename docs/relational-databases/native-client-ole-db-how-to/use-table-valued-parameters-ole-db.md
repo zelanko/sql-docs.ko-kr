@@ -1,5 +1,5 @@
 ---
-description: SQL Server Native Client에서 테이블 반환 매개 변수 사용 (OLE DB)
+description: SQL Server Native Client에서 Table-Valued 매개 변수 사용 (OLE DB)
 title: 테이블 반환 매개 변수 사용 (Native Client OLE DB 공급자)
 ms.custom: ''
 ms.date: 03/14/2017
@@ -11,15 +11,15 @@ ms.topic: reference
 ms.assetid: 18cb684f-c307-4fda-a2ab-8b638416c3f0
 author: markingmyname
 ms.author: maghan
-monikerRange: '>=aps-pdw-2016||=azuresqldb-current||=azure-sqldw-latest||>=sql-server-2016||=sqlallproducts-allversions||>=sql-server-linux-2017||=azuresqldb-mi-current'
-ms.openlocfilehash: 4d8e35803c71047f73faac83cb79f309cf803a27
-ms.sourcegitcommit: e700497f962e4c2274df16d9e651059b42ff1a10
+monikerRange: '>=aps-pdw-2016||=azuresqldb-current||=azure-sqldw-latest||>=sql-server-2016||>=sql-server-linux-2017||=azuresqldb-mi-current'
+ms.openlocfilehash: 9e5c470cc438f9985e93313d746bf0671c0b8a59
+ms.sourcegitcommit: 1a544cf4dd2720b124c3697d1e62ae7741db757c
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 08/17/2020
-ms.locfileid: "88448439"
+ms.lasthandoff: 12/14/2020
+ms.locfileid: "97419738"
 ---
-# <a name="use-table-valued-parameters-in-sql-server-native-client-ole-db"></a>SQL Server Native Client에서 테이블 반환 매개 변수 사용 (OLE DB)
+# <a name="use-table-valued-parameters-in-sql-server-native-client-ole-db"></a>SQL Server Native Client에서 Table-Valued 매개 변수 사용 (OLE DB)
 [!INCLUDE[SQL Server Azure SQL Database Synapse Analytics PDW ](../../includes/applies-to-version/sql-asdb-asdbmi-asa-pdw.md)]
 
   이 예제는 [!INCLUDE[ssKatmai](../../includes/sskatmai-md.md)] 이상에서만 작동합니다. 이 샘플 애플리케이션은 다음을 수행합니다.  

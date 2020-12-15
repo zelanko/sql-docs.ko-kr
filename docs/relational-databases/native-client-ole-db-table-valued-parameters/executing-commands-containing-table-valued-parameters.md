@@ -1,6 +1,6 @@
 ---
-description: 테이블 반환 매개 변수를 포함 하는 SQL Server Native Client 명령 실행
-title: 테이블 반환 매개 변수를 사용 하는 명령
+description: Table-Valued 매개 변수를 포함 하는 SQL Server Native Client 명령 실행
+title: Table-Valued 매개 변수를 사용 하는 명령
 ms.custom: ''
 ms.date: 03/06/2017
 ms.prod: sql
@@ -13,15 +13,15 @@ helpviewer_keywords:
 ms.assetid: 7ecba6f6-fe7a-462a-9aa3-d5115b6d4529
 author: markingmyname
 ms.author: maghan
-monikerRange: '>=aps-pdw-2016||=azuresqldb-current||=azure-sqldw-latest||>=sql-server-2016||=sqlallproducts-allversions||>=sql-server-linux-2017||=azuresqldb-mi-current'
-ms.openlocfilehash: dfacff2fb4c09f3b2bff6230d0963bef292c1266
-ms.sourcegitcommit: e700497f962e4c2274df16d9e651059b42ff1a10
+monikerRange: '>=aps-pdw-2016||=azuresqldb-current||=azure-sqldw-latest||>=sql-server-2016||>=sql-server-linux-2017||=azuresqldb-mi-current'
+ms.openlocfilehash: 0d1c2e6d2ecf739f63f00702f55f653d14ededc1
+ms.sourcegitcommit: 1a544cf4dd2720b124c3697d1e62ae7741db757c
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 08/17/2020
-ms.locfileid: "88448315"
+ms.lasthandoff: 12/14/2020
+ms.locfileid: "97419158"
 ---
-# <a name="executing-sql-server-native-client-commands-containing-table-valued-parameters"></a>테이블 반환 매개 변수를 포함 하는 SQL Server Native Client 명령 실행
+# <a name="executing-sql-server-native-client-commands-containing-table-valued-parameters"></a>Table-Valued 매개 변수를 포함 하는 SQL Server Native Client 명령 실행
 [!INCLUDE[SQL Server Azure SQL Database Synapse Analytics PDW ](../../includes/applies-to-version/sql-asdb-asdbmi-asa-pdw.md)]
 
   테이블 반환 매개 변수가 포함된 명령을 실행하려면 두 단계가 필요합니다.  
@@ -38,7 +38,7 @@ ms.locfileid: "88448315"
 ## <a name="table-valued-parameter-binding"></a>테이블 반환 매개 변수 바인딩  
  테이블 반환 매개 변수는 모든 행 집합 개체가 될 수 있습니다. 공급자는 실행 중에 서버로 테이블 반환 매개 변수를 보내는 동안 이 개체를 읽어 들입니다.  
   
- 소비자는 테이블 반환 매개 변수를 바인딩하기 위해 IAccessor::CreateAccessor를 호출합니다. 테이블 반환 매개 변수의 DBBINDING 구조에 있는 *wType* 필드는 DBTYPE_TABLE로 설정됩니다. DBBINDING 구조의 *pObject* 멤버는 NULL이 아니며 *pObject*의 *iid* 멤버는 IID_IRowset 또는 다른 테이블 반환 매개 변수 행 집합 개체 인터페이스로 설정됩니다. DBBINDING 구조의 나머지 필드는 스트림된 BLOB에 설정할 때와 같은 방법으로 설정됩니다.  
+ 소비자는 테이블 반환 매개 변수를 바인딩하기 위해 IAccessor::CreateAccessor를 호출합니다. 테이블 반환 매개 변수의 DBBINDING 구조에 있는 *wType* 필드는 DBTYPE_TABLE로 설정됩니다. DBBINDING 구조의 *pObject* 멤버는 NULL이 아니며 *pObject* 의 *iid* 멤버는 IID_IRowset 또는 다른 테이블 반환 매개 변수 행 집합 개체 인터페이스로 설정됩니다. DBBINDING 구조의 나머지 필드는 스트림된 BLOB에 설정할 때와 같은 방법으로 설정됩니다.  
   
  테이블 반환 매개 변수에 대한 바인딩과 테이블 반환 매개 변수와 연결된 행 집합 개체에는 다음과 같은 제한 사항이 적용됩니다.  
   

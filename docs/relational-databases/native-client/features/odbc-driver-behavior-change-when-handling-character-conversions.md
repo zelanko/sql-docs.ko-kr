@@ -10,13 +10,13 @@ ms.topic: reference
 ms.assetid: 682a232a-bf89-4849-88a1-95b2fbac1467
 author: markingmyname
 ms.author: maghan
-monikerRange: '>=aps-pdw-2016||=azuresqldb-current||=azure-sqldw-latest||>=sql-server-2016||=sqlallproducts-allversions||>=sql-server-linux-2017||=azuresqldb-mi-current'
-ms.openlocfilehash: 48c2230327a92a560291aacbf802ae775b99fe8f
-ms.sourcegitcommit: e700497f962e4c2274df16d9e651059b42ff1a10
+monikerRange: '>=aps-pdw-2016||=azuresqldb-current||=azure-sqldw-latest||>=sql-server-2016||>=sql-server-linux-2017||=azuresqldb-mi-current'
+ms.openlocfilehash: 5d74887afafcc4ab0c00881081bf8abf941ac551
+ms.sourcegitcommit: 1a544cf4dd2720b124c3697d1e62ae7741db757c
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 08/17/2020
-ms.locfileid: "88498908"
+ms.lasthandoff: 12/14/2020
+ms.locfileid: "97418905"
 ---
 # <a name="odbc-driver-behavior-change-when-handling-character-conversions"></a>문자 변환을 처리 시 ODBC 드라이버 동작 변경
 [!INCLUDE [SQL Server](../../../includes/applies-to-version/sql-asdb-asdbmi-asa-pdw.md)]
@@ -106,9 +106,9 @@ SQLBindParameter(... SQL_W_CHAR, ...)   // Only bind up to first 64 characters
 ## <a name="performing-char-and-wchar-conversions"></a>CHAR 및 WCHAR 변환 수행  
  [!INCLUDE[ssSQL11](../../../includes/sssql11-md.md)] Native Client ODBC 드라이버는 CHAR 및 WCHAR 변환을 수행하는 여러 가지 방법을 제공합니다. 논리는 blob (varchar (max), nvarchar (max), ...)을 조작 하는 것과 비슷합니다.  
   
--   **SQLBindCol** 또는 **SQLBindParameter**를 사용 하 여 바인딩할 때 데이터는 지정 된 버퍼에 저장 되거나 잘립니다.  
+-   **SQLBindCol** 또는 **SQLBindParameter** 를 사용 하 여 바인딩할 때 데이터는 지정 된 버퍼에 저장 되거나 잘립니다.  
   
--   바인딩하지 않으면 **SQLGetData** 및 **sqlparamdata**를 사용 하 여 데이터를 청크로 검색할 수 있습니다.  
+-   바인딩하지 않으면 **SQLGetData** 및 **sqlparamdata** 를 사용 하 여 데이터를 청크로 검색할 수 있습니다.  
   
 ## <a name="see-also"></a>참고 항목  
  [SQL Server Native Client 기능](../../../relational-databases/native-client/features/sql-server-native-client-features.md)  
