@@ -13,13 +13,13 @@ helpviewer_keywords:
 ms.assetid: 5d2e4c68-7e0b-4405-8919-f5b203e46770
 author: stevestein
 ms.author: sstein
-monikerRange: =azuresqldb-current||>=sql-server-2016||=sqlallproducts-allversions||>=sql-server-linux-2017||=azuresqldb-mi-current
-ms.openlocfilehash: ddf1685f89d24c5b1b6dec4956c3e0c7542ac236
-ms.sourcegitcommit: 75f767c7b1ead31f33a870fddab6bef52f99906b
+monikerRange: =azuresqldb-current||>=sql-server-2016||>=sql-server-linux-2017||=azuresqldb-mi-current
+ms.openlocfilehash: 3258b7e17ab6d30a090fbbcd3bea44f146ab74e8
+ms.sourcegitcommit: 1a544cf4dd2720b124c3697d1e62ae7741db757c
 ms.translationtype: HT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 07/28/2020
-ms.locfileid: "87332533"
+ms.lasthandoff: 12/14/2020
+ms.locfileid: "97405300"
 ---
 # <a name="rename-a-stored-procedure"></a>저장 프로시저 이름 바꾸기
 
@@ -67,9 +67,9 @@ ms.locfileid: "87332533"
 #### <a name="to-rename-a-stored-procedure"></a>저장 프로시저의 이름을 바꾸려면  
   
 1.  개체 탐색기에서 [!INCLUDE[ssDE](../../includes/ssde-md.md)] 의 인스턴스에 연결한 다음 해당 인스턴스를 확장합니다.  
-2.  **데이터베이스**를 확장하고 해당 프로시저가 속한 데이터베이스를 확장한 다음 **프로그래밍 기능**을 확장합니다.  
+2.  **데이터베이스** 를 확장하고 해당 프로시저가 속한 데이터베이스를 확장한 다음 **프로그래밍 기능** 을 확장합니다.  
 3.  [저장 프로시저의 종속성을 결정합니다](../../relational-databases/stored-procedures/view-the-dependencies-of-a-stored-procedure.md).  
-4.  **저장 프로시저**를 확장하고 이름을 바꿀 프로시저를 마우스 오른쪽 단추로 클릭한 다음 **이름 바꾸기**를 클릭합니다.  
+4.  **저장 프로시저** 를 확장하고 이름을 바꿀 프로시저를 마우스 오른쪽 단추로 클릭한 다음 **이름 바꾸기** 를 클릭합니다.  
 5.  프로시저 이름을 수정합니다.  
 6.  종속 개체 또는 스크립트에서 참조된 프로시저 이름을 수정합니다.  
   
@@ -78,8 +78,8 @@ ms.locfileid: "87332533"
 #### <a name="to-rename-a-stored-procedure"></a>저장 프로시저의 이름을 바꾸려면  
   
 1.  [!INCLUDE[ssDE](../../includes/ssde-md.md)]에 연결합니다.  
-2.  표준 도구 모음에서 **새 쿼리**를 클릭합니다.  
-3.  다음 예를 복사하여 쿼리 창에 붙여 넣고 **실행**을 클릭합니다. 이 예에서는 프로시저를 삭제하고 새 이름으로 다시 만들어 프로시저의 이름을 바꾸는 방법을 보여 줍니다. 첫 번째 예에서는 `'HumanResources.uspGetAllEmployeesTest`저장 프로시저를 만듭니다. 두 번째 예에서는 `HumanResources.uspEveryEmployeeTest`저장 프로시저의 이름을 바꿉니다.  
+2.  표준 도구 모음에서 **새 쿼리** 를 클릭합니다.  
+3.  다음 예를 복사하여 쿼리 창에 붙여 넣고 **실행** 을 클릭합니다. 이 예에서는 프로시저를 삭제하고 새 이름으로 다시 만들어 프로시저의 이름을 바꾸는 방법을 보여 줍니다. 첫 번째 예에서는 `'HumanResources.uspGetAllEmployeesTest`저장 프로시저를 만듭니다. 두 번째 예에서는 `HumanResources.uspEveryEmployeeTest`저장 프로시저의 이름을 바꿉니다.  
   
 ```sql  
 --Create the stored procedure.  

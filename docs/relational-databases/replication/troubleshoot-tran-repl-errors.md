@@ -11,13 +11,13 @@ helpviewer_keywords:
 - replication [SQL Server], tutorials
 author: MashaMSFT
 ms.author: mathoma
-monikerRange: =azuresqldb-mi-current||>=sql-server-2016||=sqlallproducts-allversions
-ms.openlocfilehash: d7c818e48c916a8ad3da7dfda7eaad6230c16ebd
-ms.sourcegitcommit: f7ac1976d4bfa224332edd9ef2f4377a4d55a2c9
+monikerRange: =azuresqldb-mi-current||>=sql-server-2016
+ms.openlocfilehash: 62e047a11d62e8c634f0188746a0f901ab26efdc
+ms.sourcegitcommit: 1a544cf4dd2720b124c3697d1e62ae7741db757c
 ms.translationtype: HT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 07/02/2020
-ms.locfileid: "85882276"
+ms.lasthandoff: 12/14/2020
+ms.locfileid: "97406519"
 ---
 # <a name="troubleshooter-find-errors-with-sql-server-transactional-replication"></a>문제 해결사: SQL Server 트랜잭션 복제를 사용하여 오류 찾기 
 [!INCLUDE [SQL Server SQL MI](../../includes/applies-to-version/sql-asdbmi.md)]
@@ -59,17 +59,17 @@ ms.locfileid: "85882276"
 
     a. 개체 탐색기에서 **복제** 아래에서 **로컬 게시** 노드를 확장합니다.
 
-    b. 해당 게시 **AdvWorksProductTrans** > **스냅샷 에이전트 상태 보기**를 마우스 오른쪽 단추로 클릭합니다. 
+    b. 해당 게시 **AdvWorksProductTrans** > **스냅샷 에이전트 상태 보기** 를 마우스 오른쪽 단추로 클릭합니다. 
 
     ![바로 가기 메뉴의 “스냅샷 에이전트 상태 보기” 명령](media/troubleshooting-tran-repl-errors/view-snapshot-agent-status.png)
 
 1. 스냅샷 에이전트 상태에 오류가 보고되면 스냅샷 에이전트 작업 기록에서 자세한 내용을 확인할 수 있습니다.
 
-    a. 개체 탐색기에서 **SQL Server 에이전트**를 확장하고 작업 활동 모니터를 엽니다. 
+    a. 개체 탐색기에서 **SQL Server 에이전트** 를 확장하고 작업 활동 모니터를 엽니다. 
 
-    b. **범주**로 정렬하고 **REPL-스냅샷** 범주로 스냅샷 에이전트를 식별합니다.
+    b. **범주** 로 정렬하고 **REPL-스냅샷** 범주로 스냅샷 에이전트를 식별합니다.
 
-    다. 스냅샷 에이전트를 오른쪽 단추로 클릭한 다음, **기록 보기**를 선택합니다. 
+    다. 스냅샷 에이전트를 오른쪽 단추로 클릭한 다음, **기록 보기** 를 선택합니다. 
 
    ![스냅샷 에이전트 기록을 열기 위한 선택](media/troubleshooting-tran-repl-errors/snapshot-agent-history.png)
     
@@ -87,19 +87,19 @@ ms.locfileid: "85882276"
 ## <a name="find-errors-with-the-log-reader-agent"></a>로그 판독기 에이전트를 사용하여 오류 찾기
 로그 판독기 에이전트는 게시자 데이터베이스에 연결하고 트랜잭션 로그에서 '복제용'으로 표시된 트랜잭션을 검색합니다. 그런 다음, 해당 트랜잭션을 배포 데이터베이스에 추가합니다. 
 
-1.  [!INCLUDE[ssManStudioFull](../../includes/ssmanstudiofull-md.md)]에서 게시자에 연결합니다. 서버 노드를 확장하고 **복제** 폴더를 마우스 오른쪽 단추로 클릭한 다음, **복제 모니터 시작**을 선택합니다.  
+1.  [!INCLUDE[ssManStudioFull](../../includes/ssmanstudiofull-md.md)]에서 게시자에 연결합니다. 서버 노드를 확장하고 **복제** 폴더를 마우스 오른쪽 단추로 클릭한 다음, **복제 모니터 시작** 을 선택합니다.  
 
     ![바로 가기 메뉴에서 "복제 모니터 시작" 명령](media/troubleshooting-tran-repl-errors/launch-repl-monitor.png)
   
     복제 모니터가 열립니다. ![복제 모니터](media/troubleshooting-tran-repl-errors/repl-monitor.png) 
    
-2. 빨간색 X는 게시가 동기화되지 않음을 나타냅니다. 왼쪽에서 **내 게시자**를 확장한 다음, 관련 게시자 서버를 확장합니다.  
+2. 빨간색 X는 게시가 동기화되지 않음을 나타냅니다. 왼쪽에서 **내 게시자** 를 확장한 다음, 관련 게시자 서버를 확장합니다.  
   
 3.  왼쪽에 있는 **AdvWorksProductTrans** 게시를 선택한 다음, 탭 중 하나에서 빨간색 X를 찾아 문제가 어디에 있는지 확인합니다. 이 경우 빨간색 X가 **에이전트** 탭에 있으므로 에이전트 중 하나에 오류가 발생합니다. 
 
     ![“에이전트” 탭의 빨간색 X](media/troubleshooting-tran-repl-errors/agent-error.png)
 
-4. **에이전트 탭**을 선택하여 오류가 발생한 에이전트를 확인합니다. 
+4. **에이전트 탭** 을 선택하여 오류가 발생한 에이전트를 확인합니다. 
 
     ![실패한 로그 판독기 에이전트의 빨간색 X](media/troubleshooting-tran-repl-errors/log-reader-agent-failure.png)
 
@@ -119,9 +119,9 @@ ms.locfileid: "85882276"
 
 6. 오류는 일반적으로 게시자 데이터베이스의 소유자가 올바로 설정되어 있지 않은 경우에 발생합니다. 이는 데이터베이스가 복원되는 경우 발생할 수 있습니다. 이를 확인하려면
 
-    a. 개체 탐색기에서 **데이터베이스**를 확장합니다.
+    a. 개체 탐색기에서 **데이터베이스** 를 확장합니다.
 
-    b. **AdventureWorks2012** > **속성**을 마우스 오른쪽 단추로 클릭합니다. 
+    b. **AdventureWorks2012** > **속성** 을 마우스 오른쪽 단추로 클릭합니다. 
 
     다. **파일** 페이지 아래에 소유자가 있는지 확인합니다. 이 박스가 비어 있는 경우 문제의 가능한 원인은 다음과 같습니다. 
 
@@ -140,13 +140,13 @@ ms.locfileid: "85882276"
 
     a. 개체 탐색기에서 **SQL Server 에이전트** 노드를 확장하고 작업 활동 모니터를 엽니다.
 
-    b. **범주**로 정렬하고 **'REPL-LogReader'** 범주로 로그 판독기 에이전트를 확인합니다. 
+    b. **범주** 로 정렬하고 **'REPL-LogReader'** 범주로 로그 판독기 에이전트를 확인합니다. 
 
-    다. **로그 판독기 에이전트** 작업을 마우스 오른쪽 단추로 클릭하고 **작업 시작 단계**를 선택합니다. 
+    다. **로그 판독기 에이전트** 작업을 마우스 오른쪽 단추로 클릭하고 **작업 시작 단계** 를 선택합니다. 
 
     ![로그 판독기 에이전트를 다시 시작하도록 선택](media/troubleshooting-tran-repl-errors/start-job-at-step.png)
 
-9. 복제 모니터를 다시 열어 게시가 동기화되고 있는지 확인합니다. 아직 열려 있지 않은 경우 개체 탐색기에서 **복제**를 마우스 오른쪽 단추로 클릭하여 찾을 수 있습니다. 
+9. 복제 모니터를 다시 열어 게시가 동기화되고 있는지 확인합니다. 아직 열려 있지 않은 경우 개체 탐색기에서 **복제** 를 마우스 오른쪽 단추로 클릭하여 찾을 수 있습니다. 
 10. **AdvWorksProductTrans** 게시, **에이전트** 탭을 차례로 선택하고 로그 판독기 에이전트를 두 번 클릭하여 에이전트 기록을 엽니다. 이제 로그 판독기 에이전트가 실행 중이며 명령을 복제하고 있거나 "복제된 트랜잭션 없음"이라는 메시지가 나타납니다.
 
     ![복제된 트랜잭션이 없이 실행되는 로그 판독기 에이전트](media/troubleshooting-tran-repl-errors/log-reader-running.png)
@@ -154,8 +154,8 @@ ms.locfileid: "85882276"
 ## <a name="find-errors-with-the-distribution-agent"></a>배포 에이전트로 오류 찾기
 배포 에이전트는 배포 데이터베이스에서 데이터를 찾은 다음, 구독자에게 적용합니다. 
 
-1. [!INCLUDE[ssManStudioFull](../../includes/ssmanstudiofull-md.md)]에서 게시자에 연결합니다. 서버 노드를 확장하고 **복제** 폴더를 마우스 오른쪽 단추로 클릭한 다음, **복제 모니터 시작**을 선택합니다.  
-2. **복제 모니터**에서 **AdvWorksProductTrans** 게시를 선택하고, **모든 구독** 탭을 선택합니다. 구독을 오른쪽 단추로 클릭하고 **자세히 보기**를 선택합니다.
+1. [!INCLUDE[ssManStudioFull](../../includes/ssmanstudiofull-md.md)]에서 게시자에 연결합니다. 서버 노드를 확장하고 **복제** 폴더를 마우스 오른쪽 단추로 클릭한 다음, **복제 모니터 시작** 을 선택합니다.  
+2. **복제 모니터** 에서 **AdvWorksProductTrans** 게시를 선택하고, **모든 구독** 탭을 선택합니다. 구독을 오른쪽 단추로 클릭하고 **자세히 보기** 를 선택합니다.
 
     ![바로 가기 메뉴에서 "자세히 보기" 명령](media/troubleshooting-tran-repl-errors/view-details.png)
 
@@ -170,11 +170,11 @@ ms.locfileid: "85882276"
 
 3. 이 오류는 배포 에이전트가 다시 시도 중이라는 것을 나타냅니다. 자세한 정보를 찾으려면 배포 에이전트에 대한 작업 기록을 확인합니다. 
 
-    a. 개체 탐색기에서 **SQL Server 에이전트** > **작업 활동 모니터**를 확장합니다. 
+    a. 개체 탐색기에서 **SQL Server 에이전트** > **작업 활동 모니터** 를 확장합니다. 
     
-    b. **범주**별로 작업을 정렬합니다. 
+    b. **범주** 별로 작업을 정렬합니다. 
 
-    다. **REPL-Distribution** 범주를 사용하여 배포 에이전트를 확인합니다. 에이전트를 마우스 오른쪽 단추로 클릭하고 **기록 보기**를 선택합니다.
+    다. **REPL-Distribution** 범주를 사용하여 배포 에이전트를 확인합니다. 에이전트를 마우스 오른쪽 단추로 클릭하고 **기록 보기** 를 선택합니다.
 
     ![배포 에이전트 기록 보기에 대한 선택](media/troubleshooting-tran-repl-errors/view-dist-agent-history.png)
 
@@ -191,15 +191,15 @@ ms.locfileid: "85882276"
 
     a. 개체 탐색기에서 **복제** 노드를 확장합니다.
     
-    b. 구독 > **속성**을 마우스 오른쪽 단추로 클릭합니다.
+    b. 구독 > **속성** 을 마우스 오른쪽 단추로 클릭합니다.
     
     다. **에이전트 프로세스 계정** 옆에 있는 줄임표(...)를 선택하고 암호를 수정합니다.
 
     ![배포 에이전트에 대한 암호를 수정하기 위한 선택](media/troubleshooting-tran-repl-errors/dist-agent-pw-change.png)
 
-7. 개체 탐색기에서 **복제**를 마우스 오른쪽 단추로 클릭하여 복제 모니터를 다시 확인합니다. **모든 구독**에 있는 빨간색 X는 배포 에이전트에 여전히 오류가 있음을 나타냅니다. 
+7. 개체 탐색기에서 **복제** 를 마우스 오른쪽 단추로 클릭하여 복제 모니터를 다시 확인합니다. **모든 구독** 에 있는 빨간색 X는 배포 에이전트에 여전히 오류가 있음을 나타냅니다. 
 
-    **복제 모니터** > **세부 정보 보기**에서 구독을 마우스 오른쪽 단추로 클릭하여 **구독자에게 배포** 기록을 엽니다. 이제 여기에는 오류가 다르게 표시됩니다. 
+    **복제 모니터** > **세부 정보 보기** 에서 구독을 마우스 오른쪽 단추로 클릭하여 **구독자에게 배포** 기록을 엽니다. 이제 여기에는 오류가 다르게 표시됩니다. 
 
     ![배포 에이전트가 연결할 수 없음을 나타내는 오류](media/troubleshooting-tran-repl-errors/dist-agent-cant-connect.png)
 
@@ -210,13 +210,13 @@ ms.locfileid: "85882276"
     Message: Login failed for user 'NODE2\repl_distribution'.
     ```
 
-8. 이 오류는 사용자 **NODE2\repl_distribution**에 대한 로그인이 실패했으므로 배포 에이전트가 구독자에게 연결할 수 없음을 나타냅니다. 더 자세히 조사하려면 구독자에 연결하고 개체 탐색기의 **관리** 노드에 있는 *현재*SQL 오류 로그를 엽니다. 
+8. 이 오류는 사용자 **NODE2\repl_distribution** 에 대한 로그인이 실패했으므로 배포 에이전트가 구독자에게 연결할 수 없음을 나타냅니다. 더 자세히 조사하려면 구독자에 연결하고 개체 탐색기의 **관리** 노드에 있는 *현재* SQL 오류 로그를 엽니다. 
 
     ![구독자에 대한 로그인이 실패했음을 나타내는 오류](media/troubleshooting-tran-repl-errors/login-failed.png)
     
     이 오류가 표시되는 경우 구독자에 대한 로그인은 누락됩니다. 이 오류를 해결하려면 [복제에 대한 사용 권한](../../relational-databases/replication/security/security-role-requirements-for-replication.md)을 참조합니다.
 
-9. 로그인 오류가 해결된 후 복제 모니터를 다시 확인합니다. 모든 문제가 해결되었으면 **모든 구독**에서 **게시 이름** 옆에 녹색 화살표 및 **실행 중** 상태가 표시됩니다. 
+9. 로그인 오류가 해결된 후 복제 모니터를 다시 확인합니다. 모든 문제가 해결되었으면 **모든 구독** 에서 **게시 이름** 옆에 녹색 화살표 및 **실행 중** 상태가 표시됩니다. 
 
     성공을 확인하려면 구독을 마우스 오른쪽 단추로 클릭하여 **배포자에서 구독자로 연결** 기록을 한 번 더 엽니다. 배포 에이전트를 처음 실행하는 경우, 스냅샷이 구독자에게 대량 복사되었음을 알 수 있습니다. 
 
@@ -234,15 +234,15 @@ ms.locfileid: "85882276"
 
     ![작업 활동 모니터에 대한 바로 가기 메뉴의 "작업 활동 보기" 명령](media/troubleshooting-tran-repl-errors/job-activity-monitor.png)    
 
-1. **범주**로 정렬하고 관심 있는 에이전트를 확인합니다. 이 예제에서는 로그 판독기 에이전트를 사용 합니다. 관심 있는 에이전트 > **속성**을 마우스 오른쪽 단추로 클릭합니다.
+1. **범주** 로 정렬하고 관심 있는 에이전트를 확인합니다. 이 예제에서는 로그 판독기 에이전트를 사용 합니다. 관심 있는 에이전트 > **속성** 을 마우스 오른쪽 단추로 클릭합니다.
 
     ![에이전트 속성을 열기 위한 선택](media/troubleshooting-tran-repl-errors/log-agent-properties.png)
 
-1. **단계** 페이지를 선택한 다음, **에이전트 실행** 단계를 강조 표시합니다. **편집**을 선택합니다. 
+1. **단계** 페이지를 선택한 다음, **에이전트 실행** 단계를 강조 표시합니다. **편집** 을 선택합니다. 
 
     !["에이전트 실행" 단계를 편집하기 위한 선택](media/troubleshooting-tran-repl-errors/edit-steps.png)
 
-1. **명령** 상자에서 새 줄을 시작하고, 다음 텍스트를 입력하고 **확인**을 선택합니다. 
+1. **명령** 상자에서 새 줄을 시작하고, 다음 텍스트를 입력하고 **확인** 을 선택합니다. 
 
     ```console
     -Output C:\Temp\OUTPUTFILE.txt -Outputverboselevel 3
@@ -259,7 +259,7 @@ ms.locfileid: "85882276"
    > - 마지막 매개 변수 및 `-Output` 매개 변수 간에 누락된 공간이 있습니다. 
    > - 다른 에이전트는 다른 수준의 자세한 정도를 지원합니다. 자세한 로깅을 사용하도록 설정했지만 에이전트가 시작하지 못한 경우 지정된 자세한 표시 수준을 1로 줄여보십시오. 
 
-1. 에이전트 > **중지 작업 단계**를 마우스 오른쪽 단추로 클릭하여 로그 판독기 에이전트를 다시 시작합니다. 도구 모음에서 **새로 고침** 아이콘을 선택하여 새로 고침합니다. 에이전트 > **작업 시작 단계**를 마우스 오른쪽 단추로 클릭합니다.
+1. 에이전트 > **중지 작업 단계** 를 마우스 오른쪽 단추로 클릭하여 로그 판독기 에이전트를 다시 시작합니다. 도구 모음에서 **새로 고침** 아이콘을 선택하여 새로 고침합니다. 에이전트 > **작업 시작 단계** 를 마우스 오른쪽 단추로 클릭합니다.
 2. 디스크에서 출력을 검토합니다. 
 
     ![출력 텍스트 파일](media/troubleshooting-tran-repl-errors/output.png)

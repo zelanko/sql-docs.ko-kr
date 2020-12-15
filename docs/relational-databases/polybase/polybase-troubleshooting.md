@@ -14,13 +14,13 @@ ms.assetid: f119e819-c3ae-4e0b-a955-3948388a9cfe
 author: MikeRayMSFT
 ms.author: mikeray
 ms.reviewer: ''
-monikerRange: '>= sql-server-linux-ver15 || >= sql-server-2016 || =sqlallproducts-allversions'
-ms.openlocfilehash: c54a2d16acafefdc763ca7e02f9b42c81cb1c2f7
-ms.sourcegitcommit: 783b35f6478006d654491cb52f6edf108acf2482
+monikerRange: '>= sql-server-linux-ver15 || >= sql-server-2016'
+ms.openlocfilehash: 4440573f9c9ae00cc293ff356127c1de65b272ff
+ms.sourcegitcommit: 1a544cf4dd2720b124c3697d1e62ae7741db757c
 ms.translationtype: HT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 10/09/2020
-ms.locfileid: "91892393"
+ms.lasthandoff: 12/14/2020
+ms.locfileid: "97406528"
 ---
 # <a name="monitor-and-troubleshoot-polybase"></a>PolyBase 모니터링 및 문제 해결
 
@@ -179,7 +179,7 @@ PolyBase 쿼리는 sys.dm_exec_distributed_request_steps 내에 있는 일련의
 
    ![PolyBase 쿼리 계획](../../relational-databases/polybase/media/polybase-query-plan.png "PolyBase 쿼리 계획")  
 
-3. **원격 쿼리 연산자** 를 마우스 오른쪽 단추로 클릭하고 **속성**을 선택합니다.
+3. **원격 쿼리 연산자** 를 마우스 오른쪽 단추로 클릭하고 **속성** 을 선택합니다.
 
 4. 원격 쿼리 값을 복사한 다음 텍스트 편집기에 붙여넣어 XML 원격 쿼리 계획을 확인합니다. 아래에 예제가 나와 있습니다.
 

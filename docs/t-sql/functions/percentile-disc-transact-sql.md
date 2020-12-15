@@ -19,18 +19,18 @@ helpviewer_keywords:
 ms.assetid: b545413d-c4f7-4c8e-8617-607599a26680
 author: julieMSFT
 ms.author: jrasnick
-monikerRange: '>=aps-pdw-2016||=azuresqldb-current||=azure-sqldw-latest||>=sql-server-2016||=sqlallproducts-allversions||>=sql-server-linux-2017||=azuresqldb-mi-current'
-ms.openlocfilehash: aba51bed39dc07ce130e22c6e701c8ada754e4f1
-ms.sourcegitcommit: e700497f962e4c2274df16d9e651059b42ff1a10
+monikerRange: '>=aps-pdw-2016||=azuresqldb-current||=azure-sqldw-latest||>=sql-server-2016||>=sql-server-linux-2017||=azuresqldb-mi-current'
+ms.openlocfilehash: 2d789a0e3a4584043081cd446a2ea0542fdff232
+ms.sourcegitcommit: 1a544cf4dd2720b124c3697d1e62ae7741db757c
 ms.translationtype: HT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 08/17/2020
-ms.locfileid: "88445684"
+ms.lasthandoff: 12/14/2020
+ms.locfileid: "97402248"
 ---
 # <a name="percentile_disc-transact-sql"></a>PERCENTILE_DISC(Transact-SQL)
 [!INCLUDE [sql-asdb-asdbmi-asa-pdw](../../includes/applies-to-version/sql-asdb-asdbmi-asa-pdw.md)]
 
-  [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]의 전체 행 집합에 정렬된 값 또는 행 집합의 고유 파티션 내에 정렬된 값의 특정 백분위수를 계산합니다. 지정된 백분위수 값 *P*에 대해 PERCENTILE_DISC는 ORDER BY 절의 식 값을 정렬합니다. *P*보다 크거나 같은 가장 작은 지정된 CUME_DIST 값(동일한 정렬 사양 기준)을 반환합니다. 예를 들어 PERCENTILE_DISC (0.5)는 식의 50번째 백분위수(즉, 중앙값)를 컴퓨팅합니다. PERCENTILE_DISC는 열 값의 불연속 분포를 기반으로 백분위수를 계산합니다. 결과는 열의 특정 값과 같습니다.  
+  [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]의 전체 행 집합에 정렬된 값 또는 행 집합의 고유 파티션 내에 정렬된 값의 특정 백분위수를 계산합니다. 지정된 백분위수 값 *P* 에 대해 PERCENTILE_DISC는 ORDER BY 절의 식 값을 정렬합니다. *P* 보다 크거나 같은 가장 작은 지정된 CUME_DIST 값(동일한 정렬 사양 기준)을 반환합니다. 예를 들어 PERCENTILE_DISC (0.5)는 식의 50번째 백분위수(즉, 중앙값)를 컴퓨팅합니다. PERCENTILE_DISC는 열 값의 불연속 분포를 기반으로 백분위수를 계산합니다. 결과는 열의 특정 값과 같습니다.  
   
  ![아티클 링크 아이콘](../../database-engine/configure-windows/media/topic-link.gif "항목 링크 아이콘") [Transact-SQL 구문 표기 규칙&#40;Transact-SQL&#41;](../../t-sql/language-elements/transact-sql-syntax-conventions-transact-sql.md)  
   
@@ -48,7 +48,7 @@ PERCENTILE_DISC ( numeric_literal ) WITHIN GROUP ( ORDER BY order_by_expression 
  계산할 백분위수입니다. 값은 0.0에서 1.0 사이여야 합니다.  
   
  WITHIN GROUP **(** ORDER BY *order_by_expression* [ **ASC** | DESC)**  
- 정렬할 값 목록을 지정하고 백분위수를 컴퓨팅합니다. *order_by_expression*은 하나만 허용됩니다. 기본 정렬 순서는 오름차순입니다. 값 목록은 정렬 조작에 유효한 모든 데이터 형식일 수 있습니다.  
+ 정렬할 값 목록을 지정하고 백분위수를 컴퓨팅합니다. *order_by_expression* 은 하나만 허용됩니다. 기본 정렬 순서는 오름차순입니다. 값 목록은 정렬 조작에 유효한 모든 데이터 형식일 수 있습니다.  
   
  OVER **(** \<partition_by_clause>)**  
  FROM 절의 결과 집합을 파티션으로 분할합니다. Percentile 함수는 해당 파티션에 적용됩니다. 자세한 내용은 [OVER 절&#40;Transact-SQL&#41;](../../t-sql/queries/select-over-clause-transact-sql.md)을 참조하세요. \<ORDER BY clause> 및 \<rows or range clause>은 PERCENTILE_DISC 함수에 지정할 수 없습니다.  

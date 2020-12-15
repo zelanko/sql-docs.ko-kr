@@ -12,13 +12,13 @@ helpviewer_keywords:
 ms.assetid: 29816a41-f105-4414-8be1-070675d62e84
 author: jaszymas
 ms.author: jaszymas
-monikerRange: =azuresqldb-current||>=sql-server-2016||=sqlallproducts-allversions||>=sql-server-linux-2017||=azuresqldb-mi-current
-ms.openlocfilehash: 4bb90c0f00087f0d2b0b76b3fa66b8cca2f4707c
-ms.sourcegitcommit: 192f6a99e19e66f0f817fdb1977f564b2aaa133b
+monikerRange: =azuresqldb-current||>=sql-server-2016||>=sql-server-linux-2017||=azuresqldb-mi-current
+ms.openlocfilehash: c18b6842139e5a4f5f0261761fa93cc42d3a506c
+ms.sourcegitcommit: 1a544cf4dd2720b124c3697d1e62ae7741db757c
 ms.translationtype: HT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 11/25/2020
-ms.locfileid: "96130903"
+ms.lasthandoff: 12/14/2020
+ms.locfileid: "97405707"
 ---
 # <a name="configure-column-encryption-using-always-encrypted-with-a-dac-package"></a>DAC package로 Always Encrypted를 사용하여 열 암호화 구성 
 [!INCLUDE [SQL Server Azure SQL Database](../../../includes/applies-to-version/sql-asdb.md)]
@@ -38,7 +38,7 @@ DAC 패키지를 배포하면 Always Encrypted에 사용되는 열 마스터 키
 ## <a name="performance-considerations"></a>성능 고려 사항
 암호화 작업을 수행하려면 DACPAC를 배포하는 데 사용하는 도구가 데이터베이스 외부로 데이터를 이동해야 합니다. 이 도구는 데이터베이스에서 원하는 암호화 구성을 사용하여 새 테이블을 만들고, 원래 테이블에서 모든 데이터를 로드하고, 요청된 암호화 작업을 수행하고, 데이터를 새 테이블에 업로드한 후 원래 테이블을 새 테이블로 바꿉니다. 암호화 작업을 실행하는 데 시간이 오래 걸릴 수 있습니다. 이 시간 동안에는 데이터베이스에서 트랜잭션을 쓸 수 없습니다. 
 
-::: moniker range=">=sql-server-ver15||=sqlallproducts-allversions"
+::: moniker range=">=sql-server-ver15"
 
 > [!NOTE]
 > [!INCLUDE [sssqlv15-md](../../../includes/sssqlv15-md.md)]를 사용하고 SQL Server 인스턴스가 보안 Enclave로 구성된 경우 데이터베이스 외부로 데이터를 이동하지 않고도 바로 암호화 작업을 실행할 수 있습니다. [보안 enclave를 사용한 Always Encrypted를 이용하여 내부 열 암호화 구성](always-encrypted-enclaves-configure-encryption.md)을 참조하세요. DACPAC 배포에는 바로 암호화를 사용할 수 없습니다.

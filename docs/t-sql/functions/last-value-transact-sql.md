@@ -19,13 +19,13 @@ helpviewer_keywords:
 ms.assetid: fd833e34-8092-42b7-80fc-95ca6b0eab6b
 author: markingmyname
 ms.author: maghan
-monikerRange: =azuresqldb-current||=azure-sqldw-latest||>=sql-server-2016||=sqlallproducts-allversions||>=sql-server-linux-2017||=azuresqldb-mi-current
-ms.openlocfilehash: afff4f59dace8695e8b209acb2201a8cddd86069
-ms.sourcegitcommit: cc23d8646041336d119b74bf239a6ac305ff3d31
+monikerRange: =azuresqldb-current||=azure-sqldw-latest||>=sql-server-2016||>=sql-server-linux-2017||=azuresqldb-mi-current
+ms.openlocfilehash: a6a6db79eb38604947b19bd8e5fe0f46e7a56db3
+ms.sourcegitcommit: 1a544cf4dd2720b124c3697d1e62ae7741db757c
 ms.translationtype: HT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 09/23/2020
-ms.locfileid: "91116086"
+ms.lasthandoff: 12/14/2020
+ms.locfileid: "97402236"
 ---
 # <a name="last_value-transact-sql"></a>LAST_VALUE(Transact-SQL)
 [!INCLUDE [sql-asdb-asdbmi-asa](../../includes/applies-to-version/sql-asdb-asdbmi-asa.md)]
@@ -46,7 +46,7 @@ LAST_VALUE ( [ scalar_expression ] )  [ IGNORE NULLS | RESPECT NULLS ]
 
 ## <a name="arguments"></a>인수
  *scalar_expression*  
- 반환할 값입니다. *scalar_expression*은 열, 하위 쿼리 또는 결과로 반환되는 값이 하나뿐인 다른 식일 수 있습니다. 다른 분석 함수는 사용할 수 없습니다.  
+ 반환할 값입니다. *scalar_expression* 은 열, 하위 쿼리 또는 결과로 반환되는 값이 하나뿐인 다른 식일 수 있습니다. 다른 분석 함수는 사용할 수 없습니다.  
   
  [ IGNORE NULLS | RESPECT NULLS ]     
  **적용 대상**: Azure SQL Edge
@@ -57,12 +57,12 @@ LAST_VALUE ( [ scalar_expression ] )  [ IGNORE NULLS | RESPECT NULLS ]
   자세한 내용은 [누락 값 입력](/azure/azure-sql-edge/imputing-missing-values/)을 참조하세요.
   
  OVER **(** [ *partition_by_clause* ] *order_by_clause* [ *rows_range_clause* ] **)**  
- *partition_by_clause*는 FROM 절이 생성한 결과 집합을 함수가 적용되는 파티션으로 나눕니다. 지정하지 않을 경우 쿼리 결과 집합의 모든 행이 단일 그룹으로 취급됩니다.  
+ *partition_by_clause* 는 FROM 절이 생성한 결과 집합을 함수가 적용되는 파티션으로 나눕니다. 지정하지 않을 경우 쿼리 결과 집합의 모든 행이 단일 그룹으로 취급됩니다.  
   
- *order_by_clause*는 함수를 적용하기 전에 데이터의 순서를 결정합니다. *order_by_clause*가 필요합니다. *rows_range_clause*는 시작점 및 끝점을 지정하여 파티션 내에서 행을 추가로 제한합니다. 자세한 내용은 [OVER 절&#40;Transact-SQL&#41;](../../t-sql/queries/select-over-clause-transact-sql.md)을 참조하세요.  
+ *order_by_clause* 는 함수를 적용하기 전에 데이터의 순서를 결정합니다. *order_by_clause* 가 필요합니다. *rows_range_clause* 는 시작점 및 끝점을 지정하여 파티션 내에서 행을 추가로 제한합니다. 자세한 내용은 [OVER 절&#40;Transact-SQL&#41;](../../t-sql/queries/select-over-clause-transact-sql.md)을 참조하세요.  
   
 ## <a name="return-types"></a>반환 형식  
- *scalar_expression*과 같은 유형입니다.  
+ *scalar_expression* 과 같은 유형입니다.  
   
 ## <a name="general-remarks"></a>일반적인 주의 사항  
  LAST_VALUE는 비결정적입니다. 자세한 내용은 [Deterministic and Nondeterministic Functions](../../relational-databases/user-defined-functions/deterministic-and-nondeterministic-functions.md)을 참조하세요.  

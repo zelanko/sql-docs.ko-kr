@@ -12,13 +12,13 @@ helpviewer_keywords:
 ms.assetid: 29816a41-f105-4414-8be1-070675d62e84
 author: jaszymas
 ms.author: jaszymas
-monikerRange: =azuresqldb-current||>=sql-server-2016||=sqlallproducts-allversions||>=sql-server-linux-2017||=azuresqldb-mi-current
-ms.openlocfilehash: 37ac7271be5090f17db16f67968df6eca138856d
-ms.sourcegitcommit: 22e97435c8b692f7612c4a6d3fe9e9baeaecbb94
+monikerRange: =azuresqldb-current||>=sql-server-2016||>=sql-server-linux-2017||=azuresqldb-mi-current
+ms.openlocfilehash: 1406b28cae6d73228d54059cf7463b8eaa578385
+ms.sourcegitcommit: 1a544cf4dd2720b124c3697d1e62ae7741db757c
 ms.translationtype: HT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 10/27/2020
-ms.locfileid: "92679033"
+ms.lasthandoff: 12/14/2020
+ms.locfileid: "97406069"
 ---
 # <a name="query-columns-using-always-encrypted-with-sql-server-management-studio"></a>SQL Server Management Studio로 Always Encrypted를 사용하는 열 쿼리
 [!INCLUDE [SQL Server Azure SQL Database](../../../includes/applies-to-version/sql-asdb.md)]
@@ -98,7 +98,7 @@ Always Encrypted를 사용하거나 사용하지 않도록 설정하려면 다�
     1. [!INCLUDE [sssqlv15-md](../../../includes/sssqlv15-md.md)]를 사용하고 SQL Server 인스턴스가 보안 enclave로 구성된 경우 Enclave 증명 URL을 지정할 수 있습니다. SQL Server 인스턴스에서 보안 enclave를 사용하지 않는 경우 **Enclave 증명 URL** 텍스트 상자를 비워 두어야 합니다. 자세한 내용은 [보안 Enclave를 사용한 Always Encrypted](always-encrypted-enclaves.md)를 참조하세요.
 1. SSMS 17 이하 버전을 사용하는 경우:
     1. **추가 속성** 탭을 선택합니다.
-    1. Always Encrypted를 사용하도록 설정하려면 `Column Encryption Setting = Enabled`를 입력합니다. Always Encrypted 사용하지 않도록 설정하려면 `Column Encryption Setting = Disabled`를 지정하거나 **추가 속성** 탭에서 **열 암호화 설정** 의 설정을 제거합니다(기본값은 **사용 안 함** ).   
+    1. Always Encrypted를 사용하도록 설정하려면 `Column Encryption Setting = Enabled`를 입력합니다. Always Encrypted 사용하지 않도록 설정하려면 `Column Encryption Setting = Disabled`를 지정하거나 **추가 속성** 탭에서 **열 암호화 설정** 의 설정을 제거합니다(기본값은 **사용 안 함**).   
  1. **연결** 을 클릭합니다.
 
 > [!TIP]

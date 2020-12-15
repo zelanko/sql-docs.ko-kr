@@ -15,13 +15,13 @@ helpviewer_keywords:
 ms.assetid: 29816a41-f105-4414-8be1-070675d62e84
 author: jaszymas
 ms.author: jaszymas
-monikerRange: =azuresqldb-current||>=sql-server-2016||=sqlallproducts-allversions||>=sql-server-linux-2017||=azuresqldb-mi-current
-ms.openlocfilehash: 8b84de259222b9e2bde8c9b99f67328ea317e645
-ms.sourcegitcommit: da88320c474c1c9124574f90d549c50ee3387b4c
+monikerRange: =azuresqldb-current||>=sql-server-2016||>=sql-server-linux-2017||=azuresqldb-mi-current
+ms.openlocfilehash: 35f08a014fd1abbc8af6db994ba4c2d9b85a0bd4
+ms.sourcegitcommit: 1a544cf4dd2720b124c3697d1e62ae7741db757c
 ms.translationtype: HT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 07/01/2020
-ms.locfileid: "85765146"
+ms.lasthandoff: 12/14/2020
+ms.locfileid: "97405706"
 ---
 # <a name="provision-always-encrypted-keys-using-sql-server-management-studio"></a>SQL Server Management Studio를 사용하여 Always Encrypted 키 프로비저닝
 [!INCLUDE [SQL Server Azure SQL Database](../../../includes/applies-to-version/sql-asdb.md)]
@@ -35,14 +35,14 @@ ms.locfileid: "85765146"
 
 **새 열 마스터 키** 대화 상자에서 열 마스터 키를 생성하거나 키 저장소를 통해 기존 키를 선택하고 데이터베이스에서 생성된 키 또는 선택한 키에 대한 열 마스터 키 메타데이터를 만들 수 있습니다.
 
-1.  **개체 탐색기**를 사용하여 데이터베이스 아래의 **보안>상시 암호화 키** 폴더로 이동합니다.
+1.  **개체 탐색기** 를 사용하여 데이터베이스 아래의 **보안>상시 암호화 키** 폴더로 이동합니다.
 2.  **열 마스터 키** 폴더를 마우스 오른쪽 단추로 클릭하고 **새 열 마스터 키...** 를 선택합니다. 
 3.  **새 열 마스터 키** 대화 상자에서 열 마스터 키 메타데이터 개체의 이름을 입력합니다.
 4.  키 저장소를 선택합니다.
     - **인증서 저장소 - 현재 사용자** – 개인 저장소인 Windows 인증서 저장소의 현재 사용자 인증서 저장소 위치를 나타냅니다. 
     - **인증서 저장소 - 로컬 컴퓨터** – Windows 인증서 저장소의 로컬 컴퓨터 인증서 저장소 위치를 나타냅니다. 
     - **Azure Key Vault** - Azure에 로그인해야 합니다(**로그인** 클릭). 로그인하면 Azure 구독 및 주요 자격 증명 모음 중 하나를 선택할 수 있습니다.
-    - **KSP(키 저장소 공급자)** – CNG(암호화 서비스 공급자) API를 구현하는 KSP(키 저장소 공급자)를 통해 액세스할 수 있는 키 저장소를 나타냅니다. 일반적으로 이 유형의 저장소는 HSM(하드웨어 보안 모듈)입니다. 이 옵션을 선택한 후 KSP를 선택해야 합니다. 기본적으로**Microsoft 소프트웨어 키 저장소 공급자** 가 선택되어 있습니다. HSM에 저장된 열 마스터 키를 사용하려는 경우 디바이스에 대해 KSP를 선택합니다(대화 상자를 열기 전에 컴퓨터에 설치 및 구성해야 함).
+    - **KSP(키 저장소 공급자)** – CNG(암호화 서비스 공급자) API를 구현하는 KSP(키 저장소 공급자)를 통해 액세스할 수 있는 키 저장소를 나타냅니다. 일반적으로 이 유형의 저장소는 HSM(하드웨어 보안 모듈)입니다. 이 옵션을 선택한 후 KSP를 선택해야 합니다. 기본적으로 **Microsoft 소프트웨어 키 저장소 공급자** 가 선택되어 있습니다. HSM에 저장된 열 마스터 키를 사용하려는 경우 디바이스에 대해 KSP를 선택합니다(대화 상자를 열기 전에 컴퓨터에 설치 및 구성해야 함).
     -   **CSP(암호화 서비스 공급자)** - CAPI(암호화 API)를 구현하는 CSP(암호화 서비스 공급자)를 통해 액세스할 수 있는 키 저장소입니다. 일반적으로 이러한 저장소는 HSM(하드웨어 보안 모듈)입니다. 이 옵션을 선택한 후 CSP를 선택해야 합니다.  HSM에 저장된 열 마스터 키를 사용하려는 경우 디바이스에 대해 CSP를 선택합니다(대화 상자를 열기 전에 컴퓨터에 설치 및 구성해야 함).
     
     > [!NOTE]
@@ -60,7 +60,7 @@ ms.locfileid: "85765146"
 
 대화 상자를 작성하면 SQL Server Management Studio에서 데이터베이스에 열 마스터 키에 대한 메타데이터를 만듭니다. 대화 상자에서 이 작업을 위해 [CREATE COLUMN MASTER KEY(Transact-SQL)](../../../t-sql/statements/create-column-master-key-transact-sql.md) 문을 생성하고 실행합니다.
 
-::: moniker range=">=sql-server-ver15||=sqlallproducts-allversions"
+::: moniker range=">=sql-server-ver15"
 
 Enclave를 사용하도록 설정된 열 마스터 키를 구성 중인 경우 SSMS가 열 마스터 키를 사용하여 메타데이터에 서명합니다. 
 
@@ -70,7 +70,7 @@ Enclave를 사용하도록 설정된 열 마스터 키를 구성 중인 경우 S
 
 대화 상자에서 열 마스터 키를 만들려면 데이터베이스에서 *ALTER ANY COLUMN MASTER KEY* 권한이 있어야 합니다. 대화 상자를 사용하여 새 열 마스터 키를 만들거나 키 저장소 만들기에서 기존 키를 사용하려면 키 저장소 및/또는 키에 대한 권한을 요구해야 합니다.
 - **인증서 저장소 - 로컬 컴퓨터** - 열 마스터 키로 사용되는 인증서에 대한 읽기 권한이 있거나 컴퓨터의 관리자여야 합니다.
-- **Azure Key Vault** - 키를 선택하고 사용하기 위한 *get* 및 *list* 권한과 새 키를 만들기 위한 *create* 권한이 필요합니다. Enclave를 사용하도록 설정된 열 마스터 키를 구성하려면 권한에 *서명*하여 키 메타데이터의 서명을 생성해야 합니다.
+- **Azure Key Vault** - 키를 선택하고 사용하기 위한 *get* 및 *list* 권한과 새 키를 만들기 위한 *create* 권한이 필요합니다. Enclave를 사용하도록 설정된 열 마스터 키를 구성하려면 권한에 *서명* 하여 키 메타데이터의 서명을 생성해야 합니다.
 - **CNG(키 저장소 공급 기업)** – 저장소 및 KSP 구성에 따라 키 저장소 또는 키를 사용할 때 필수 사용 권한 및 자격 증명을 확인하는 메시지가 표시될 수도 있습니다.
 - **CAPI(암호화 서비스 공급 기업)** – 저장소 및 CSP 구성에 따라 키 저장소 또는 키를 사용할 때 필수 사용 권한 및 자격 증명을 확인하는 메시지가 표시될 수도 있습니다.
 
@@ -81,11 +81,11 @@ Enclave를 사용하도록 설정된 열 마스터 키를 구성 중인 경우 S
 
 **새 열 암호화 키** 대화 상자에서 새 열 암호화 키를 생성하고, 열 마스터 키로 암호화하고, 데이터베이스에 열 암호화 키 메타데이터를 만들 수 있습니다.
 
-1.  **개체 탐색기**를 사용하여 데이터베이스 아래의 **보안/상시 암호화 키** 폴더로 이동합니다.
+1.  **개체 탐색기** 를 사용하여 데이터베이스 아래의 **보안/상시 암호화 키** 폴더로 이동합니다.
 2.  **열 암호화 키** 폴더를 마우스 오른쪽 단추로 클릭하고 **새 열 암호화 키...** 를 선택합니다. 
 3.  **새 열 암호화 키** 대화 상자에서 열 암호화 키 메타데이터 개체의 이름을 입력합니다.
 4.  데이터베이스에서 열 마스터 키를 나타내는 메타데이터 개체를 선택합니다.
-5.  **확인**을 클릭합니다. 
+5.  **확인** 을 클릭합니다. 
 
 대화 상자를 작성하면 SQL Server Management Studio에서 새 열 암호화 키를 생성한 다음 사용자가 데이터베이스에서 선택한 열 마스터 키에 대한 메타데이터를 가져옵니다. 그런 다음 SSMS는 열 마스터 키 메타데이터를 사용하여 열 마스터 키가 포함된 키 저장소에 연결하고 열 암호화 키를 암호화합니다. 마지막으로, SSMS는 [CREATE COLUMN ENCRYPTION KEY (Transact-SQL)](../../../t-sql/statements/create-column-encryption-key-transact-sql.md) 문을 생성하고 실행하여 데이터베이스에 새 열 암호화를 위한 메타데이터 데이터를 만듭니다.
 

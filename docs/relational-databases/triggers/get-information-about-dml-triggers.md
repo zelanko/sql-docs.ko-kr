@@ -17,13 +17,13 @@ helpviewer_keywords:
 ms.assetid: 37574aac-181d-4aca-a2cc-8abff64237dc
 author: rothja
 ms.author: jroth
-monikerRange: =azuresqldb-current||>=sql-server-2016||=sqlallproducts-allversions||>=sql-server-linux-2017||=azuresqldb-mi-current
-ms.openlocfilehash: de602d5a975cb04c6c2f1496f0fcf01eae5a85a4
-ms.sourcegitcommit: e700497f962e4c2274df16d9e651059b42ff1a10
+monikerRange: =azuresqldb-current||>=sql-server-2016||>=sql-server-linux-2017||=azuresqldb-mi-current
+ms.openlocfilehash: 39a4d0a6136990cdb583a432757503099f61cfb6
+ms.sourcegitcommit: 1a544cf4dd2720b124c3697d1e62ae7741db757c
 ms.translationtype: HT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 08/17/2020
-ms.locfileid: "88485375"
+ms.lasthandoff: 12/14/2020
+ms.locfileid: "97403587"
 ---
 # <a name="get-information-about-dml-triggers"></a>DML 트리거에 대한 정보 가져오기
 [!INCLUDE [SQL Server SQL Database](../../includes/applies-to-version/sql-asdb.md)]
@@ -50,7 +50,7 @@ ms.locfileid: "88485375"
  [!INCLUDE[ssCatViewPerm](../../includes/sscatviewperm-md.md)] 자세한 내용은 [Metadata Visibility Configuration](../../relational-databases/security/metadata-visibility-configuration.md)을 참조하세요.  
   
  OBJECT_DEFINITION, OBJECTPROPERTY, **sp_helptext**  
- **public** 역할의 멤버 자격이 필요합니다. 개체 소유자나 ALTER, CONTROL, TAKE OWNERSHIP 또는 VIEW DEFINITION 권한 중 하나를 부여 받은 사람은 사용자 개체의 정의를 볼 수 있습니다. 이 권한은 **db_owner**, **db_ddladmin**및 **db_securityadmin** 고정 데이터베이스 역할의 멤버가 암시적으로 보유합니다.  
+ **public** 역할의 멤버 자격이 필요합니다. 개체 소유자나 ALTER, CONTROL, TAKE OWNERSHIP 또는 VIEW DEFINITION 권한 중 하나를 부여 받은 사람은 사용자 개체의 정의를 볼 수 있습니다. 이 권한은 **db_owner**, **db_ddladmin** 및 **db_securityadmin** 고정 데이터베이스 역할의 멤버가 암시적으로 보유합니다.  
   
  **sys.sql_expression_dependencies**  
  데이터베이스에 대한 VIEW DEFINITION 권한과 데이터베이스의 **sys.sql_expression_dependencies** 에 대한 SELECT 권한이 필요합니다. 기본적으로 SELECT 권한은 **db_owner** 고정 데이터베이스 역할의 멤버에게만 부여됩니다. SELECT와 VIEW DEFINITION 권한을 다른 사용자에게 부여하면 피부여자는 데이터베이스의 모든 종속성을 볼 수 있습니다.  
@@ -59,27 +59,27 @@ ms.locfileid: "88485375"
   
 #### <a name="to-view-the-definition-of-a-dml-trigger"></a>DML 트리거의 정의를 보려면  
   
-1.  **개체 탐색기**에서 [!INCLUDE[ssDE](../../includes/ssde-md.md)] 의 인스턴스에 연결한 다음 해당 인스턴스를 확장합니다.  
+1.  **개체 탐색기** 에서 [!INCLUDE[ssDE](../../includes/ssde-md.md)] 의 인스턴스에 연결한 다음 해당 인스턴스를 확장합니다.  
   
-2.  원하는 데이터베이스를 확장하고 **테이블**을 확장한 다음 정의를 볼 트리거가 포함된 테이블을 확장합니다.  
+2.  원하는 데이터베이스를 확장하고 **테이블** 을 확장한 다음 정의를 볼 트리거가 포함된 테이블을 확장합니다.  
   
-3.  **트리거**를 확장하고 원하는 트리거를 마우스 오른쪽 단추로 클릭한 다음 **수정**을 클릭합니다. DML 트리거의 정의가 쿼리 창에 나타납니다.  
+3.  **트리거** 를 확장하고 원하는 트리거를 마우스 오른쪽 단추로 클릭한 다음 **수정** 을 클릭합니다. DML 트리거의 정의가 쿼리 창에 나타납니다.  
 
 #### <a name="to-view-the-dependencies-of-a-dml-trigger"></a>DML 트리거의 종속성을 보려면  
   
-1.  **개체 탐색기**에서 [!INCLUDE[ssDE](../../includes/ssde-md.md)] 의 인스턴스에 연결한 다음 해당 인스턴스를 확장합니다.  
+1.  **개체 탐색기** 에서 [!INCLUDE[ssDE](../../includes/ssde-md.md)] 의 인스턴스에 연결한 다음 해당 인스턴스를 확장합니다.  
   
-2.  원하는 데이터베이스를 확장하고 **테이블**을 확장한 다음 보려는 트리거와 해당 종속성이 포함된 테이블을 확장합니다.  
+2.  원하는 데이터베이스를 확장하고 **테이블** 을 확장한 다음 보려는 트리거와 해당 종속성이 포함된 테이블을 확장합니다.  
   
-3.  **트리거**를 확장하고 원하는 트리거를 마우스 오른쪽 단추로 클릭한 다음 **종속성 보기**를 클릭합니다.  
+3.  **트리거** 를 확장하고 원하는 트리거를 마우스 오른쪽 단추로 클릭한 다음 **종속성 보기** 를 클릭합니다.  
   
-4.  **개체 종속성** 창에서 DML 트리거에 종속되는 개체를 보려면 **\<DML trigger name>에 종속된 개체**를 선택합니다. 개체가 **종속성** 영역에 나타납니다.  
+4.  **개체 종속성** 창에서 DML 트리거에 종속되는 개체를 보려면 **\<DML trigger name>에 종속된 개체** 를 선택합니다. 개체가 **종속성** 영역에 나타납니다.  
   
-     DML이 종속되는 개체를 보려면 **\<DML trigger name>이 종속된 개체**를 선택합니다. 개체가 **종속성** 영역에 나타납니다. 각 노드를 확장하여 모든 개체를 표시합니다.  
+     DML이 종속되는 개체를 보려면 **\<DML trigger name>이 종속된 개체** 를 선택합니다. 개체가 **종속성** 영역에 나타납니다. 각 노드를 확장하여 모든 개체를 표시합니다.  
   
-5.  **종속성** 영역에 나타나는 개체에 대한 정보를 얻으려면 개체를 클릭합니다. **선택한 개체** 필드에서 **이름**, **유형**및 **종속성 유형** 상자에 정보가 제공됩니다.  
+5.  **종속성** 영역에 나타나는 개체에 대한 정보를 얻으려면 개체를 클릭합니다. **선택한 개체** 필드에서 **이름**, **유형** 및 **종속성 유형** 상자에 정보가 제공됩니다.  
   
-6.  **개체 종속성** 창을 닫으려면 **확인**을 클릭합니다.  
+6.  **개체 종속성** 창을 닫으려면 **확인** 을 클릭합니다.  
   
 ##  <a name="using-transact-sql"></a><a name="TsqlProcedure"></a> Transact-SQL 사용  
   
@@ -87,9 +87,9 @@ ms.locfileid: "88485375"
   
 1.  [!INCLUDE[ssDE](../../includes/ssde-md.md)]에 연결합니다.  
   
-2.  표준 도구 모음에서 **새 쿼리**를 클릭합니다.  
+2.  표준 도구 모음에서 **새 쿼리** 를 클릭합니다.  
   
-3.  다음 예 중 하나를 복사하여 쿼리 창에 붙여 넣고 **실행**을 클릭합니다. 각 예에서는 `iuPerson` 트리거의 정의를 보는 방법을 보여 줍니다.  
+3.  다음 예 중 하나를 복사하여 쿼리 창에 붙여 넣고 **실행** 을 클릭합니다. 각 예에서는 `iuPerson` 트리거의 정의를 보는 방법을 보여 줍니다.  
   
 ```sql  
 USE AdventureWorks2012;  
@@ -120,9 +120,9 @@ GO
   
 1.  [!INCLUDE[ssDE](../../includes/ssde-md.md)]에 연결합니다.  
   
-2.  표준 도구 모음에서 **새 쿼리**를 클릭합니다.  
+2.  표준 도구 모음에서 **새 쿼리** 를 클릭합니다.  
   
-3.  다음 예 중 하나를 복사하여 쿼리 창에 붙여 넣고 **실행**을 클릭합니다. 각 예에서는 `iuPerson` 트리거의 종속성을 보는 방법을 보여 줍니다.  
+3.  다음 예 중 하나를 복사하여 쿼리 창에 붙여 넣고 **실행** 을 클릭합니다. 각 예에서는 `iuPerson` 트리거의 종속성을 보는 방법을 보여 줍니다.  
   
 ```  
 USE AdventureWorks2012;   
@@ -146,9 +146,9 @@ GO
   
 1.  [!INCLUDE[ssDE](../../includes/ssde-md.md)]에 연결합니다.  
   
-2.  표준 도구 모음에서 **새 쿼리**를 클릭합니다.  
+2.  표준 도구 모음에서 **새 쿼리** 를 클릭합니다.  
   
-3.  다음 예 중 하나를 복사하여 쿼리 창에 붙여 넣고 **실행**을 클릭합니다. 각 예에서는 데이터베이스에서 DML 트리거(`TR`)에 대한 정보를 보는 방법을 보여 줍니다.  
+3.  다음 예 중 하나를 복사하여 쿼리 창에 붙여 넣고 **실행** 을 클릭합니다. 각 예에서는 데이터베이스에서 DML 트리거(`TR`)에 대한 정보를 보는 방법을 보여 줍니다.  
   
 ```  
 USE AdventureWorks2012;   
@@ -182,9 +182,9 @@ GO
   
 1.  [!INCLUDE[ssDE](../../includes/ssde-md.md)]에 연결합니다.  
   
-2.  표준 도구 모음에서 **새 쿼리**를 클릭합니다.  
+2.  표준 도구 모음에서 **새 쿼리** 를 클릭합니다.  
   
-3.  다음 예 중 하나를 복사하여 쿼리 창에 붙여 넣고 **실행**을 클릭합니다. 각 예에서는 `iuPerson` 트리거를 실행하는 이벤트를 보는 방법을 보여 줍니다.  
+3.  다음 예 중 하나를 복사하여 쿼리 창에 붙여 넣고 **실행** 을 클릭합니다. 각 예에서는 `iuPerson` 트리거를 실행하는 이벤트를 보는 방법을 보여 줍니다.  
   
 ```sql  
 USE AdventureWorks2012;   
