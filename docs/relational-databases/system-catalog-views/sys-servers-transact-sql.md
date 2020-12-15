@@ -20,13 +20,13 @@ helpviewer_keywords:
 ms.assetid: 4e774ed9-4e83-4726-9f1d-8efde8f9feff
 author: markingmyname
 ms.author: maghan
-monikerRange: =azuresqldb-mi-current||>=sql-server-2016||=sqlallproducts-allversions||>=sql-server-linux-2017
-ms.openlocfilehash: a3befa2740bd11fcd88233cef3000deec0d7006e
-ms.sourcegitcommit: 04cf7905fa32e0a9a44575a6f9641d9a2e5ac0f8
+monikerRange: =azuresqldb-mi-current||>=sql-server-2016||>=sql-server-linux-2017
+ms.openlocfilehash: 7ab227e9df241914cba5f242eed6a38cf35815b3
+ms.sourcegitcommit: 1a544cf4dd2720b124c3697d1e62ae7741db757c
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 10/07/2020
-ms.locfileid: "91809329"
+ms.lasthandoff: 12/14/2020
+ms.locfileid: "97472934"
 ---
 # <a name="sysservers-transact-sql"></a>sys.servers(Transact-SQL)
 [!INCLUDE [SQL Server - ASDBMI](../../includes/applies-to-version/sql-asdbmi.md)]
@@ -45,7 +45,7 @@ ms.locfileid: "91809329"
 |**catalog**|**sysname**|카탈로그 연결 속성을 OLE DB 합니다. 이 속성이 없으면 NULL입니다.|  
 |**connect_timeout**|**int**|연결 제한 시간(초)이며 제한 시간이 없으면 0입니다.|  
 |**query_timeout**|**int**|쿼리 제한 시간(초)이며 제한 시간이 없으면 0입니다.|  
-|**is_linked**|**bit**|0 = 다른 RPC 및 분산 트랜잭션 동작을 통해 **sp_addserver**를 사용 하 여 추가 된 이전 스타일의 서버입니다.<br /><br /> 1 = 표준 연결된 서버입니다.|  
+|**is_linked**|**bit**|0 = 다른 RPC 및 분산 트랜잭션 동작을 통해 **sp_addserver** 를 사용 하 여 추가 된 이전 스타일의 서버입니다.<br /><br /> 1 = 표준 연결된 서버입니다.|  
 |**is_remote_login_enabled**|**bit**|이 서버에 들어오는 원격 로그인을 허용하도록 RPC 옵션이 설정됩니다.|  
 |**is_rpc_out_enabled**|**bit**|이 서버에서 보내는 RPC가 가능합니다.|  
 |**is_data_access_enabled**|**bit**|서버에서 분산 쿼리 사용이 가능합니다.|  

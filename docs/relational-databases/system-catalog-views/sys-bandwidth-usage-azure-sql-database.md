@@ -1,6 +1,6 @@
 ---
 description: sys.bandwidth_usage(Azure SQL Database)
-title: bandwidth_usage (Azure SQL Database) | Microsoft Docs
+title: sys.bandwidth_usage (Azure SQL Database) | Microsoft Docs
 ms.custom: ''
 ms.date: 01/28/2019
 ms.service: sql-database
@@ -19,13 +19,13 @@ helpviewer_keywords:
 ms.assetid: 43ed8435-f059-4907-b5c0-193a258b394a
 author: julieMSFT
 ms.author: jrasnick
-monikerRange: = azuresqldb-current || = sqlallproducts-allversions
-ms.openlocfilehash: d39486a513e012fc53e66c408145bbf148696ff2
-ms.sourcegitcommit: e700497f962e4c2274df16d9e651059b42ff1a10
+monikerRange: = azuresqldb-current
+ms.openlocfilehash: c71fdc21c634e8f473d628373ae5adfa9c1c072f
+ms.sourcegitcommit: 1a544cf4dd2720b124c3697d1e62ae7741db757c
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 08/17/2020
-ms.locfileid: "88402529"
+ms.lasthandoff: 12/14/2020
+ms.locfileid: "97473034"
 ---
 # <a name="sysbandwidth_usage-azure-sql-database"></a>sys.bandwidth_usage(Azure SQL Database)
 
@@ -34,11 +34,11 @@ ms.locfileid: "88402529"
 > [!NOTE]
 > 이는 V11에만 적용 됩니다 [!INCLUDE[ssSDSfull](../../includes/sssdsfull-md.md)] . * *  
   
- ** [!INCLUDE[ssSDSfull](../../includes/sssdsfull-md.md)] V11 데이터베이스 서버**에서 각 데이터베이스에 사용 되는 네트워크 대역폭에 대 한 정보를 반환 합니다. 지정된 데이터베이스에 대해 반환된 각 행에는 1시간 동안 이루어진 단일 방향 및 클래스 사용이 요약되어 있습니다.  
+ **[!INCLUDE[ssSDSfull](../../includes/sssdsfull-md.md)] V11 데이터베이스 서버** 에서 각 데이터베이스에 사용 되는 네트워크 대역폭에 대 한 정보를 반환 합니다. 지정된 데이터베이스에 대해 반환된 각 행에는 1시간 동안 이루어진 단일 방향 및 클래스 사용이 요약되어 있습니다.  
   
  **이는에서 더 이상 사용 되지 않습니다 [!INCLUDE[ssSDSfull](../../includes/sssdsfull-md.md)] .**  
   
- **Bandwidth_usage** 뷰에는 다음 열이 포함 되어 있습니다.  
+ **Sys.bandwidth_usage** 뷰에는 다음 열이 포함 되어 있습니다.  
   
 |열 이름|설명|  
 |-----------------|-----------------|  
@@ -57,7 +57,7 @@ ms.locfileid: "88402529"
   
 ### <a name="external-and-internal-classes"></a>External 및 Internal 클래스
 
- 지정 된 시간에 사용 되는 각 데이터베이스에 대해 **bandwidth_usage** 뷰는 대역폭 사용의 클래스 및 방향을 표시 하는 행을 반환 합니다. 다음 예에서는 지정된 데이터베이스에 대해 노출될 수 있는 데이터를 보여 줍니다. 이 예에서 시간은 2012-04-21 17:00:00이고 피크 시간 중에 발생합니다. 데이터베이스 이름은 Db1입니다. 이 예제에서 **bandwidth_usage** 는 다음과 같이 수신 및 송신 방향과 외부 및 내부 클래스의 네 가지 조합 모두에 대해 행을 반환 했습니다.  
+ 지정 된 시간에 사용 되는 각 데이터베이스에 대해 **sys.bandwidth_usage** 뷰는 대역폭 사용의 클래스 및 방향을 표시 하는 행을 반환 합니다. 다음 예에서는 지정된 데이터베이스에 대해 노출될 수 있는 데이터를 보여 줍니다. 이 예에서 시간은 2012-04-21 17:00:00이고 피크 시간 중에 발생합니다. 데이터베이스 이름은 Db1입니다. 이 예제에서 **sys.bandwidth_usage** 는 다음과 같이 수신 및 송신 방향과 외부 및 내부 클래스의 네 가지 조합 모두에 대해 행을 반환 했습니다.  
   
 |time|database_name|direction|class|time_period|quantity|  
 |----------|--------------------|---------------|-----------|------------------|--------------|  

@@ -1,6 +1,6 @@
 ---
 description: sys.fn_xe_file_target_read_file(Transact-SQL)
-title: sys. fn_xe_file_target_read_file (Transact-sql) | Microsoft Docs
+title: sys.fn_xe_file_target_read_file (Transact-sql) | Microsoft Docs
 ms.custom: ''
 ms.date: 06/22/2017
 ms.prod: sql
@@ -22,13 +22,13 @@ helpviewer_keywords:
 ms.assetid: cc0351ae-4882-4b67-b0d8-bd235d20c901
 author: rothja
 ms.author: jroth
-monikerRange: =azuresqldb-current||>=sql-server-2016||=sqlallproducts-allversions||>=sql-server-linux-2017||=azuresqldb-mi-current
-ms.openlocfilehash: 9edd7d5181979beb5bbbc0e4069aac31d9b302bb
-ms.sourcegitcommit: e700497f962e4c2274df16d9e651059b42ff1a10
+monikerRange: =azuresqldb-current||>=sql-server-2016||>=sql-server-linux-2017||=azuresqldb-mi-current
+ms.openlocfilehash: e5a79b5e3f9ded81069364ec144a8e88fede811d
+ms.sourcegitcommit: 1a544cf4dd2720b124c3697d1e62ae7741db757c
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 08/17/2020
-ms.locfileid: "88469850"
+ms.lasthandoff: 12/14/2020
+ms.locfileid: "97474724"
 ---
 # <a name="sysfn_xe_file_target_read_file-transact-sql"></a>sys.fn_xe_file_target_read_file(Transact-SQL)
 [!INCLUDE [SQL Server SQL Database](../../includes/applies-to-version/sql-asdb.md)]
@@ -58,13 +58,13 @@ sys.fn_xe_file_target_read_file ( path, mdpath, initial_file_name, initial_offse
 >  [!INCLUDE[ssSQL11](../../includes/sssql11-md.md)] 에는 *mdpath* 매개 변수가 필요 하지 않습니다. 그러나 이전 버전의 SQL Server에서 생성된 로그 파일의 경우 이전 버전과의 호환성을 위해 이 매개 변수가 유지됩니다.  
   
  *initial_file_name*  
- *경로*에서 읽을 첫 번째 파일입니다. *initial_file_name* 은 **nvarchar (260)** 입니다. 기본값은 없습니다. **Null** 이 인수로 지정 된 경우 *경로* 에 있는 모든 파일을 읽습니다.  
+ *경로* 에서 읽을 첫 번째 파일입니다. *initial_file_name* 은 **nvarchar (260)** 입니다. 기본값은 없습니다. **Null** 이 인수로 지정 된 경우 *경로* 에 있는 모든 파일을 읽습니다.  
   
 > [!NOTE]  
 >  *initial_file_name* 및 *initial_offset* 는 쌍을 이루는 인수입니다. 둘 중 한 인수의 값을 지정하는 경우 다른 한 인수의 값도 지정해야 합니다.  
   
  *initial_offset*  
- 이전에 읽은 마지막 오프셋을 지정하는데 사용되고 오프셋(포함)까지 모든 이벤트를 건너뜁니다. 이벤트 열거는 오프셋이 지정된 후에 시작됩니다. *initial_offset* 는 **bigint**입니다. **Null** 을 인수로 지정 하면 전체 파일을 읽을 수 있습니다.  
+ 이전에 읽은 마지막 오프셋을 지정하는데 사용되고 오프셋(포함)까지 모든 이벤트를 건너뜁니다. 이벤트 열거는 오프셋이 지정된 후에 시작됩니다. *initial_offset* 는 **bigint** 입니다. **Null** 을 인수로 지정 하면 전체 파일을 읽을 수 있습니다.  
   
 ## <a name="table-returned"></a>반환된 테이블  
   
@@ -80,12 +80,12 @@ sys.fn_xe_file_target_read_file ( path, mdpath, initial_file_name, initial_offse
 
   
 ## <a name="remarks"></a>설명  
- 에서 **fn_xe_file_target_read_file** 를 실행 하 여 대량 결과 집합을 읽으면 [!INCLUDE[ssManStudio](../../includes/ssmanstudio-md.md)] 오류가 발생할 수 있습니다. **결과 파일** 모드 (**Ctrl + Shift + F**)를 사용 하 여 많은 결과 집합을 파일로 내보내고 대신 다른 도구를 사용 하 여 파일을 읽습니다.  
+ 에서 **sys.fn_xe_file_target_read_file** 를 실행 하 여 많은 결과 집합을 읽으면 [!INCLUDE[ssManStudio](../../includes/ssmanstudio-md.md)] 오류가 발생할 수 있습니다. **결과 파일** 모드 (**Ctrl + Shift + F**)를 사용 하 여 많은 결과 집합을 파일로 내보내고 대신 다른 도구를 사용 하 여 파일을 읽습니다.  
   
 ## <a name="permissions"></a>사용 권한  
  을 실행하려면 서버에 대해 VIEW SERVER STATE 권한이 필요합니다.  
   
-## <a name="examples"></a>예제  
+## <a name="examples"></a>예  
   
 ### <a name="a-retrieving-data-from-file-targets"></a>A. 파일 대상에서 데이터 가져오기  
  다음 예에서는 모든 파일의 행을 모두 가져옵니다. 이 예에서 파일 대상과 메타파일은 C:\ 드라이브의 추적 폴더에 있습니다.  

@@ -15,13 +15,13 @@ helpviewer_keywords:
 ms.assetid: 74e411fa-74ed-49ec-ab58-68c250f2280e
 author: markingmyname
 ms.author: maghan
-monikerRange: =azuresqldb-current||=azure-sqldw-latest||>=sql-server-2016||=sqlallproducts-allversions||>=sql-server-linux-2017||=azuresqldb-mi-current
-ms.openlocfilehash: ca50fbcdaa1f94fbe91210db69613335257986f4
-ms.sourcegitcommit: e700497f962e4c2274df16d9e651059b42ff1a10
+monikerRange: =azuresqldb-current||=azure-sqldw-latest||>=sql-server-2016||>=sql-server-linux-2017||=azuresqldb-mi-current
+ms.openlocfilehash: 365d9ef4654ad196f8d43de3b491c6d810d169e8
+ms.sourcegitcommit: 1a544cf4dd2720b124c3697d1e62ae7741db757c
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 08/17/2020
-ms.locfileid: "88403389"
+ms.lasthandoff: 12/14/2020
+ms.locfileid: "97475514"
 ---
 # <a name="managing-users-roles-and-logins"></a>사용자, 역할 및 로그인 관리
 [!INCLUDE [SQL Server ASDB, ASDBMI, ASDW ](../../../includes/applies-to-version/sql-asdb-asdbmi-asa.md)]
@@ -34,7 +34,7 @@ ms.locfileid: "88403389"
   
  [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] 데이터베이스는 사용자가 특정 태스크를 수행할 수 있는 일련의 데이터베이스 수준 권한을 지정하는 역할도 포함합니다. 서버 역할과 달리 데이터베이스 역할은 고정되지 않아서 생성, 수정 및 제거할 수 있습니다. 대량 관리를 위해 데이터베이스 역할에 권한 및 사용자를 할당할 수 있습니다.  
   
-## <a name="example"></a>예제  
+## <a name="example"></a>예  
  다음 코드 예제를 사용하려면 애플리케이션을 만들 프로그래밍 환경, 프로그래밍 템플릿 및 프로그래밍 언어를 선택해야 합니다. 자세한 내용은 [Visual Studio .net에서 Visual C&#35; SMO 프로젝트 만들기](../../../relational-databases/server-management-objects-smo/how-to-create-a-visual-csharp-smo-project-in-visual-studio-net.md)를 참조 하세요.  
   
 ## <a name="enumerating-logins-and-associated-users-in-visual-c"></a>Visual C#에서 로그인 및 연관된 사용자 열거  

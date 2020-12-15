@@ -17,12 +17,13 @@ helpviewer_keywords:
 ms.assetid: 51322f92-0d76-44c9-9c33-9223676cf1d3
 author: markingmyname
 ms.author: maghan
-monikerRange: '>=aps-pdw-2016||=azuresqldb-current||=azure-sqldw-latest||>=sql-server-2016||=sqlallproducts-allversions||>=sql-server-linux-2017||=azuresqldb-mi-current'
-ms.openlocfilehash: d07ce69238db57d0e4480769121d2c6d6c741906
-ms.sourcegitcommit: f3321ed29d6d8725ba6378d207277a57cb5fe8c2
+monikerRange: '>=aps-pdw-2016||=azuresqldb-current||=azure-sqldw-latest||>=sql-server-2016||>=sql-server-linux-2017||=azuresqldb-mi-current'
+ms.openlocfilehash: dcf74d45e2f936cd095fa0512cba5beb555ad0b4
+ms.sourcegitcommit: 1a544cf4dd2720b124c3697d1e62ae7741db757c
+ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 07/06/2020
-ms.locfileid: "86006497"
+ms.lasthandoff: 12/14/2020
+ms.locfileid: "97473684"
 ---
 # <a name="using-cursors-odbc"></a>커서 사용(ODBC)
 [!INCLUDE[SQL Server Azure SQL Database Synapse Analytics PDW ](../../includes/applies-to-version/sql-asdb-asdbmi-asa-pdw.md)]
@@ -61,19 +62,19 @@ ms.locfileid: "86006497"
   
 -   [커서 속성](../../relational-databases/native-client-odbc-cursors/properties/cursor-properties.md)  
   
--   [ODBC&#41;&#40;커서 프로그래밍 정보](../../relational-databases/native-client-odbc-cursors/programming/cursor-programming-details-odbc.md)  
+-   [ODBC&#41;&#40;커서 프로그래밍 정보 ](../../relational-databases/native-client-odbc-cursors/programming/cursor-programming-details-odbc.md)  
   
 -   [행 스크롤 및 페치](../../relational-databases/native-client-odbc-cursors/scrolling-and-fetching-rows.md)  
   
--   [ODBC&#41;&#40;위치 지정 업데이트](../../relational-databases/native-client-odbc-cursors/positioned-updates-odbc.md)  
+-   [ODBC&#41;&#40;위치 지정 업데이트 ](../../relational-databases/native-client-odbc-cursors/positioned-updates-odbc.md)  
   
 ## <a name="see-also"></a>참고 항목  
  [ODBC&#41;SQL Server Native Client &#40;](../../relational-databases/native-client/odbc/sql-server-native-client-odbc.md)   
- [&#40;Transact-sql&#41;를 닫습니다.](../../t-sql/language-elements/close-transact-sql.md)   
- [커서로](../../relational-databases/cursors.md)   
- [Transact-sql&#41;&#40;할당 취소](../../t-sql/language-elements/deallocate-transact-sql.md)   
- [Transact-sql&#41;&#40;커서를 선언 합니다.](../../t-sql/language-elements/declare-cursor-transact-sql.md)   
- [FETCH &#40;Transact-sql&#41;](../../t-sql/language-elements/fetch-transact-sql.md)   
+ [CLOSE &#40;Transact-SQL&#41;](../../t-sql/language-elements/close-transact-sql.md)   
+ [커서](../../relational-databases/cursors.md)   
+ [DEALLOCATE &#40;Transact-SQL&#41;](../../t-sql/language-elements/deallocate-transact-sql.md)   
+ [DECLARE CURSOR&#40;Transact-SQL&#41;](../../t-sql/language-elements/declare-cursor-transact-sql.md)   
+ [FETCH &#40;Transact-SQL&#41;](../../t-sql/language-elements/fetch-transact-sql.md)   
  [OPEN&#40;Transact-SQL&#41;](../../t-sql/language-elements/open-transact-sql.md)  
   
   

@@ -10,13 +10,13 @@ ms.topic: conceptual
 ms.assetid: 49c01e5f-ee47-41a0-871d-35a759f50851
 author: ronortloff
 ms.author: rortloff
-monikerRange: '>= aps-pdw-2016 || = sqlallproducts-allversions'
-ms.openlocfilehash: e2e265a7905313a988a15fb29de0a8c86b397ac8
-ms.sourcegitcommit: 22dacedeb6e8721e7cdb6279a946d4002cfb5da3
+monikerRange: '>= aps-pdw-2016'
+ms.openlocfilehash: fcdb396016c58f82f3e67f08af2b5489adb40731
+ms.sourcegitcommit: 1a544cf4dd2720b124c3697d1e62ae7741db757c
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 10/14/2020
-ms.locfileid: "92036757"
+ms.lasthandoff: 12/14/2020
+ms.locfileid: "97472944"
 ---
 # <a name="syspdw_health_alerts-transact-sql"></a>sys.pdw_health_alerts (Transact-sql)
 [!INCLUDE [pdw](../../includes/applies-to-version/pdw.md)]
@@ -30,7 +30,7 @@ ms.locfileid: "92036757"
 |alert_name|**nvarchar(255)**|경고의 이름입니다.|NOT NULL|  
 |state|**nvarchar(32)**|경고의 상태입니다.|NOT NULL<br /><br /> 가능한 값은 다음과 같습니다.<br /><br /> 주기와<br /><br /> 'NonOperational'<br /><br /> 성능<br /><br /> 오류가|  
 |severity|**nvarchar(32)**|경고의 심각도입니다.|NOT NULL<br /><br /> 가능한 값은 다음과 같습니다.<br /><br /> 위해서<br /><br /> 내용의<br /><br /> 메시지가|  
-|type|**nvarchar(32)**|경고의 유형입니다.|NOT NULL<br /><br /> 가능한 값은 다음과 같습니다.<br /><br /> StatusChange-장치 상태가 변경 되었습니다.<br /><br /> Threshold-값이 임계값을 초과 했습니다.|  
+|형식|**nvarchar(32)**|경고의 유형입니다.|NOT NULL<br /><br /> 가능한 값은 다음과 같습니다.<br /><br /> StatusChange-장치 상태가 변경 되었습니다.<br /><br /> Threshold-값이 임계값을 초과 했습니다.|  
 |description|**nvarchar(4000)**|경고에 대한 설명입니다.|NOT NULL|  
 |condition(조건)|**nvarchar(255)**|Type = Threshold 인 경우 사용 됩니다. 경고 임계값을 계산 하는 방법을 정의 합니다.|NULL|  
 |상태|**nvarchar(32)**|경고 상태|NULL|  

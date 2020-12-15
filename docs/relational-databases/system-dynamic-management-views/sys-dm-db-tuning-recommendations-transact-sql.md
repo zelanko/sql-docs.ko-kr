@@ -21,13 +21,13 @@ helpviewer_keywords:
 ms.assetid: ced484ae-7c17-4613-a3f9-6d8aba65a110
 author: jovanpop-msft
 ms.author: jovanpop
-monikerRange: =azuresqldb-current||>=sql-server-2017||=sqlallproducts-allversions||>=sql-server-linux-2017||=azuresqldb-mi-current
-ms.openlocfilehash: adf2a1eb88397acbbc8e092eb320e15f239ae8f2
-ms.sourcegitcommit: 32135463a8494d9ed1600a58f51819359e3c09dc
+monikerRange: =azuresqldb-current||>=sql-server-2017||>=sql-server-linux-2017||=azuresqldb-mi-current
+ms.openlocfilehash: cad75b88b14fd9bc64acbbd8b167619d3dbcc2e3
+ms.sourcegitcommit: 1a544cf4dd2720b124c3697d1e62ae7741db757c
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 10/08/2020
-ms.locfileid: "91834524"
+ms.lasthandoff: 12/14/2020
+ms.locfileid: "97472884"
 ---
 # <a name="sysdm_db_tuning_recommendations-transact-sql"></a>sys.dm \_ db \_ 튜닝 \_ 권장 구성 (transact-sql)
 [!INCLUDE[sqlserver2017-asdb](../../includes/applies-to-version/sqlserver2017-asdb.md)]
@@ -62,7 +62,7 @@ ms.locfileid: "91834524"
 
  `currentValue``state`열의 필드 값은 다음과 같습니다.
  
- | 상태 | Description |
+ | 상태 | 설명 |
  |--------|-------------|
  | `Active` | 권장 사항이 활성 상태 이며 아직 적용 되지 않았습니다. 사용자는 권장 스크립트를 사용 하 여 수동으로 실행할 수 있습니다. |
  | `Verifying` | 권장 사항은에 의해 적용 되 [!INCLUDE[ssde_md](../../includes/ssde_md.md)] 고 내부 확인 프로세스는 강제 계획의 성능과 회귀 된 계획을 비교 합니다. |
@@ -72,7 +72,7 @@ ms.locfileid: "91834524"
 
 열의 JSON 문서에는 `state` 현재 상태의 권장 구성이 무엇 인지 설명 하는 이유가 포함 되어 있습니다. 이유 필드의 값은 다음과 같을 수 있습니다. 
 
-| 이유 | Description |
+| 이유 | 설명 |
 |--------|-------------|
 | `SchemaChanged` | 참조 된 테이블의 스키마가 변경 되어 권장 구성이 만료 되었습니다. 새 스키마에서 새 쿼리 계획 회귀를 검색 하면 새로운 권장 사항이 생성 됩니다. |
 | `StatisticsChanged`| 참조 된 테이블의 통계 변경으로 인해 권장 구성이 만료 되었습니다. 새 통계를 기반으로 새 쿼리 계획 회귀를 검색 하면 새로운 권장 사항이 생성 됩니다. |

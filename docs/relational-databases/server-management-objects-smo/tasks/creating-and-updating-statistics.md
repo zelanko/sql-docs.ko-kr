@@ -13,13 +13,13 @@ ms.author: maghan
 ms.reviewer: matteot
 ms.custom: seo-dt-2019
 ms.date: 06/04/2020
-monikerRange: =azuresqldb-current||=azure-sqldw-latest||>=sql-server-2016||=sqlallproducts-allversions||>=sql-server-linux-2017||=azuresqldb-mi-current
-ms.openlocfilehash: 3939942c7655206a448797f0258d883eac904fef
-ms.sourcegitcommit: e700497f962e4c2274df16d9e651059b42ff1a10
+monikerRange: =azuresqldb-current||=azure-sqldw-latest||>=sql-server-2016||>=sql-server-linux-2017||=azuresqldb-mi-current
+ms.openlocfilehash: 64b631219afcd37bbc6883ef7e1c89d6335b7095
+ms.sourcegitcommit: 1a544cf4dd2720b124c3697d1e62ae7741db757c
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 08/17/2020
-ms.locfileid: "88455510"
+ms.lasthandoff: 12/14/2020
+ms.locfileid: "97475534"
 ---
 # <a name="create-and-update-statistics"></a>통계 만들기 및 업데이트
 
@@ -29,7 +29,7 @@ SMO에서 <xref:Microsoft.SqlServer.Management.Smo.Statistic> 개체를 사용�
 
 및 개체를 사용 하 여 모든 열에 대 한 통계를 만들 수 <xref:Microsoft.SqlServer.Management.Smo.Statistic> <xref:Microsoft.SqlServer.Management.Smo.StatisticColumn> 있습니다. <xref:Microsoft.SqlServer.Management.Smo.Statistic.Update%2A> 개체에서 통계를 업데이트하려면 <xref:Microsoft.SqlServer.Management.Smo.Statistic> 메서드를 실행할 수 있습니다. 결과는 쿼리 최적화 프로그램에서 볼 수 있습니다.
 
-## <a name="example"></a>예제
+## <a name="example"></a>예
 
 제공 된 코드 예제를 사용 하려면 응용 프로그램을 만들 프로그래밍 환경, 프로그래밍 템플릿 및 프로그래밍 언어를 선택할 수 있습니다. 자세한 내용은 [Visual Studio .net에서 Visual C&#35; SMO 프로젝트 만들기](../../../relational-databases/server-management-objects-smo/how-to-create-a-visual-csharp-smo-project-in-visual-studio-net.md)를 참조 하세요.
 

@@ -18,13 +18,13 @@ helpviewer_keywords:
 ms.assetid: 0bda489e-86bc-4a7e-80f6-96047e03f281
 author: markingmyname
 ms.author: maghan
-monikerRange: '>=aps-pdw-2016||=azuresqldb-current||=azure-sqldw-latest||>=sql-server-2016||=sqlallproducts-allversions||>=sql-server-linux-2017||=azuresqldb-mi-current'
-ms.openlocfilehash: 8ac49426f57d8f2e83c2d8b42a1d73c81fa10d3b
-ms.sourcegitcommit: e700497f962e4c2274df16d9e651059b42ff1a10
+monikerRange: '>=aps-pdw-2016||=azuresqldb-current||=azure-sqldw-latest||>=sql-server-2016||>=sql-server-linux-2017||=azuresqldb-mi-current'
+ms.openlocfilehash: 5cedd2ac5d5803f7b32d69ba1924a6e690aee311
+ms.sourcegitcommit: 1a544cf4dd2720b124c3697d1e62ae7741db757c
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 08/17/2020
-ms.locfileid: "88423793"
+ms.lasthandoff: 12/14/2020
+ms.locfileid: "97473654"
 ---
 # <a name="bcp_batch"></a>bcp_batch
 [!INCLUDE[SQL Server Azure SQL Database Synapse Analytics PDW ](../../includes/applies-to-version/sql-asdb-asdbmi-asa-pdw.md)]
@@ -44,7 +44,7 @@ DBINT bcp_batch (HDBC
  대량 복사가 가능한 ODBC 연결 핸들입니다.  
   
 ## <a name="returns"></a>반환  
- **bcp_batch**를 마지막으로 호출한 후 저장된 행의 수입니다. 또는 오류가 발생하는 경우 -1입니다.  
+ **bcp_batch** 를 마지막으로 호출한 후 저장된 행의 수입니다. 또는 오류가 발생하는 경우 -1입니다.  
   
 ## <a name="remarks"></a>설명  
  대량 복사 일괄 처리에서 트랜잭션을 정의합니다. 애플리케이션에서 [bcp_bind](../../relational-databases/native-client-odbc-extensions-bulk-copy-functions/bcp-bind.md) 및 **bcp_sendrow** 를 사용하여 프로그램 변수에서 SQL Server 테이블로 행을 대량 복사할 때 프로그램에서 **bcp_batch** 또는 [bcp_done](../../relational-databases/native-client-odbc-extensions-bulk-copy-functions/bcp-done.md)을 호출할 경우에만 행이 커밋됩니다.  

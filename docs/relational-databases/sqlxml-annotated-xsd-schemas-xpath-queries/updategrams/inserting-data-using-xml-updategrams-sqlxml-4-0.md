@@ -34,13 +34,13 @@ ms.assetid: 4dc48762-bc12-43fb-b356-ea1b9c1e287e
 author: MightyPen
 ms.author: genemi
 ms.custom: seo-lt-2019
-monikerRange: =azuresqldb-current||>=sql-server-2016||=sqlallproducts-allversions||>=sql-server-linux-2017||=azuresqldb-mi-current
-ms.openlocfilehash: 88e1f334629482182fb182dde60f715c0d122d25
-ms.sourcegitcommit: da88320c474c1c9124574f90d549c50ee3387b4c
+monikerRange: =azuresqldb-current||>=sql-server-2016||>=sql-server-linux-2017||=azuresqldb-mi-current
+ms.openlocfilehash: ac801a52e89e60bb05d1431de77078fa750f6d34
+ms.sourcegitcommit: 1a544cf4dd2720b124c3697d1e62ae7741db757c
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 07/01/2020
-ms.locfileid: "85790603"
+ms.lasthandoff: 12/14/2020
+ms.locfileid: "97473114"
 ---
 # <a name="inserting-data-using-xml-updategrams-sqlxml-40"></a>XML Updategram을 사용하여 데이터 삽입(SQLXML 4.0)
 [!INCLUDE [SQL Server Azure SQL Database](../../../includes/applies-to-version/sql-asdb.md)]
@@ -67,16 +67,16 @@ ms.locfileid: "85790603"
 </ROOT>  
 ```  
   
-## <a name="before-block"></a>\<before>거부  
+## <a name="before-block"></a>\<before> 거부  
  **\<before>** 삽입 작업에 대해 블록을 생략할 수 있습니다. 선택적 **매핑 스키마** 특성을 지정 하지 않으면 **\<ElementName>** updategram에 지정 된가 데이터베이스 테이블에 매핑되고 자식 요소 또는 특성은 테이블의 열에 매핑됩니다.  
   
-## <a name="after-block"></a>\<after>거부  
+## <a name="after-block"></a>\<after> 거부  
  블록에서 하나 이상의 레코드를 지정할 수 있습니다 **\<after>** .  
   
  **\<after>** 블록이 특정 열에 대 한 값을 제공 하지 않으면 updategram는 주석이 지정 된 스키마 (스키마가 지정 된 경우)에 지정 된 기본값을 사용 합니다. 스키마가 열의 기본값을 지정 하지 않는 경우 updategram는이 열에 명시적 값을 지정 하지 않고 대신 [!INCLUDE[msCoName](../../../includes/msconame-md.md)] [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] 기본값 (지정 된 경우)을이 열에 할당 합니다. [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] 기본값이 없고 열에서 NULL 값을 허용하는 경우 Updategram에서 열 값을 NULL로 설정합니다. 열에 기본값이 없고 NULL 값을 허용하지도 않는 경우 명령이 실패하고 Updategram에서 오류를 반환합니다. 선택적인 **updg: returnid** 특성은 id 유형 열이 있는 테이블에 레코드가 추가 될 때 시스템에서 생성 하는 id 값을 반환 하는 데 사용 됩니다.  
   
 ## <a name="updgid-attribute"></a>updg:id 특성  
- Updategram는 레코드만 삽입 하는 경우 updategram에 **updg: id** 특성이 필요 하지 않습니다. **Updg: id**에 대 한 자세한 내용은 [XML UPDATEGRAMS &#40;SQLXML 4.0&#41;를 사용 하 여 데이터 업데이트 ](../../../relational-databases/sqlxml-annotated-xsd-schemas-xpath-queries/updategrams/updating-data-using-xml-updategrams-sqlxml-4-0.md)를 참조 하세요.  
+ Updategram는 레코드만 삽입 하는 경우 updategram에 **updg: id** 특성이 필요 하지 않습니다. **Updg: id** 에 대 한 자세한 내용은 [XML UPDATEGRAMS &#40;SQLXML 4.0&#41;를 사용 하 여 데이터 업데이트](../../../relational-databases/sqlxml-annotated-xsd-schemas-xpath-queries/updategrams/updating-data-using-xml-updategrams-sqlxml-4-0.md)를 참조 하세요.  
   
 ## <a name="updgat-identity-attribute"></a>updg:at-identity 특성  
  Updategram가 ID 유형 열을 포함 하는 테이블에 레코드를 삽입 하는 경우 updategram는 선택적 **updg: id** 특성을 사용 하 여 시스템 할당 값을 캡처할 수 있습니다. Updategram은 이 값을 이후 작업에 사용할 수 있습니다. Updategram 실행 시 **updg: returnid** 특성을 지정 하 여 생성 된 id 값을 반환할 수 있습니다.  
@@ -84,7 +84,7 @@ ms.locfileid: "85790603"
 ## <a name="updgguid-attribute"></a>updg:guid 특성  
  **Updg: guid** 특성은 guid (globally unique identifier)를 생성 하는 선택적 특성입니다. 이 값은 지정 된 전체 블록의 범위 내에 유지 됩니다 **\<sync>** . 블록의 아무 곳에서 나이 값을 사용할 수 있습니다 **\<sync>** . 특성은 **Newguid ()** [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] 함수를 호출 하 여 고유 식별자를 생성 합니다.  
   
-## <a name="examples"></a>예제  
+## <a name="examples"></a>예  
  다음 예제를 사용 하 여 작업 예제를 만들려면 [SQLXML 예를 실행 하기 위한 요구 사항](../../../relational-databases/sqlxml/requirements-for-running-sqlxml-examples.md)에 지정 된 요구 사항을 충족 해야 합니다.  
   
  Updategram 예를 사용하기 전에 다음 사항을 확인하십시오.  

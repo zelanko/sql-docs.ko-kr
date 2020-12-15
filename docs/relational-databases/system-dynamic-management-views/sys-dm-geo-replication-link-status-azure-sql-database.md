@@ -17,14 +17,14 @@ helpviewer_keywords:
 ms.assetid: d763d679-470a-4c21-86ab-dfe98d37e9fd
 author: markingmyname
 ms.author: maghan
-monikerRange: = azuresqldb-current || = sqlallproducts-allversions
+monikerRange: = azuresqldb-current
 ms.custom: seo-dt-2019
-ms.openlocfilehash: 0d105ddedeafa8a82c068fce90f3e29bc4622f57
-ms.sourcegitcommit: 32135463a8494d9ed1600a58f51819359e3c09dc
+ms.openlocfilehash: cb9936ce01a68055b7f050ddc7dbdb21a9802438
+ms.sourcegitcommit: 1a544cf4dd2720b124c3697d1e62ae7741db757c
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 10/08/2020
-ms.locfileid: "91834251"
+ms.lasthandoff: 12/14/2020
+ms.locfileid: "97474854"
 ---
 # <a name="sysdm_geo_replication_link_status-azure-sql-database"></a>sys.dm_geo_replication_link_status(Azure SQL Database)
 
@@ -51,9 +51,9 @@ ms.locfileid: "91834251"
 >  보조 데이터베이스를 제거 하 여 복제 관계를 종료 하는 경우 (4.2 섹션) **sys.dm_geo_replication_link_status** 보기에서 해당 데이터베이스에 대 한 행이 사라집니다.  
   
 ## <a name="permissions"></a>사용 권한  
- View_database_state 권한이 있는 계정은 **sys.dm_geo_replication_link_status**를 쿼리할 수 있습니다.  
+ View_database_state 권한이 있는 계정은 **sys.dm_geo_replication_link_status** 를 쿼리할 수 있습니다.  
   
-## <a name="example"></a>예제  
+## <a name="example"></a>예  
  보조 데이터베이스의 복제 지연 및 마지막 복제 시간을 표시 합니다.  
   
 ```  

@@ -11,13 +11,13 @@ ms.topic: reference
 ms.assetid: 0b6516f7-1fc0-4b01-a2d0-add0571070d5
 author: markingmyname
 ms.author: maghan
-monikerRange: '>=aps-pdw-2016||=azuresqldb-current||=azure-sqldw-latest||>=sql-server-2016||=sqlallproducts-allversions||>=sql-server-linux-2017||=azuresqldb-mi-current'
-ms.openlocfilehash: eb225cdb2a1407ecc4941823471bd569c6d9b943
-ms.sourcegitcommit: e700497f962e4c2274df16d9e651059b42ff1a10
+monikerRange: '>=aps-pdw-2016||=azuresqldb-current||=azure-sqldw-latest||>=sql-server-2016||>=sql-server-linux-2017||=azuresqldb-mi-current'
+ms.openlocfilehash: 7df48a706ab1a6983b1c1f32422c691f21a49fd8
+ms.sourcegitcommit: 1a544cf4dd2720b124c3697d1e62ae7741db757c
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 08/17/2020
-ms.locfileid: "88470473"
+ms.lasthandoff: 12/14/2020
+ms.locfileid: "97473594"
 ---
 # <a name="how-to-insert-rows-into-geography-column-odbc"></a>방법: Geography 열에 행 삽입(ODBC)
 [!INCLUDE[SQL Server Azure SQL Database Synapse Analytics PDW ](../../includes/applies-to-version/sql-asdb-asdbmi-asa-pdw.md)]
@@ -30,7 +30,7 @@ ms.locfileid: "88470473"
   
  공간 저장소에 대 한 자세한 내용은 [공간 데이터 &#40;SQL Server&#41;](../../relational-databases/spatial/spatial-data-sql-server.md)를 참조 하세요.  
   
-## <a name="example"></a>예제  
+## <a name="example"></a>예  
  첫 번째 ( [!INCLUDE[tsql](../../includes/tsql-md.md)] ) 코드 목록은이 예제에서 사용 하는 테이블을 만듭니다.  
   
  odbc32.lib 및 user32.lib를 사용하여 두 번째(C++) 코드 목록을 컴파일합니다. INCLUDE 환경 변수에 sqlncli.h가 들어 있는 디렉터리를 포함해야 합니다.  

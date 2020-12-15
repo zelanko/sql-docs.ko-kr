@@ -13,18 +13,18 @@ helpviewer_keywords:
 ms.assetid: 66ab0762-79fe-4a31-b655-27dd215a0af7
 author: markingmyname
 ms.author: maghan
-monikerRange: '>=aps-pdw-2016||=azuresqldb-current||=azure-sqldw-latest||>=sql-server-2016||=sqlallproducts-allversions||>=sql-server-linux-2017||=azuresqldb-mi-current'
-ms.openlocfilehash: 21cab8507af433b39a6be6e35063d8a89c713af3
-ms.sourcegitcommit: 4d370399f6f142e25075b3714e5c2ce056b1bfd0
+monikerRange: '>=aps-pdw-2016||=azuresqldb-current||=azure-sqldw-latest||>=sql-server-2016||>=sql-server-linux-2017||=azuresqldb-mi-current'
+ms.openlocfilehash: 42b33bd1c94d9cf4d99a7f9061517d5d3de39b3a
+ms.sourcegitcommit: 1a544cf4dd2720b124c3697d1e62ae7741db757c
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 10/09/2020
-ms.locfileid: "91868877"
+ms.lasthandoff: 12/14/2020
+ms.locfileid: "97473524"
 ---
 # <a name="process-odbc-errors-odbc"></a>프로세스 ODBC 오류(ODBC)
 [!INCLUDE[SQL Server Azure SQL Database Synapse Analytics PDW ](../../includes/applies-to-version/sql-asdb-asdbmi-asa-pdw.md)]
 
-  ODBC 메시지를 검색 하는 데는 두 개의 ODBC 함수 호출 ( [SQLGetDiagRec](../../odbc/reference/syntax/sqlgetdiagrec-function.md) 및 [SQLGetDiagField](../../relational-databases/native-client-odbc-api/sqlgetdiagfield.md))을 사용할 수 있습니다. **SQLState**, **pfNative**및 **ErrorMessage** 진단 필드에 있는 기본 ODBC 관련 정보를 가져오려면 SQL_NO_DATA를 반환할 때까지 [SQLGetDiagRec](../../odbc/reference/syntax/sqlgetdiagrec-function.md) 를 호출합니다. 각 진단 레코드에 대해 [SQLGetDiagField](../../relational-databases/native-client-odbc-api/sqlgetdiagfield.md) 를 호출하여 개별 필드를 검색할 수 있습니다. 드라이버별 필드는 모두 **SQLGetDiagField**를 사용하여 검색해야 합니다.  
+  ODBC 메시지를 검색 하는 데는 두 개의 ODBC 함수 호출 ( [SQLGetDiagRec](../../odbc/reference/syntax/sqlgetdiagrec-function.md) 및 [SQLGetDiagField](../../relational-databases/native-client-odbc-api/sqlgetdiagfield.md))을 사용할 수 있습니다. **SQLState**, **pfNative** 및 **ErrorMessage** 진단 필드에 있는 기본 ODBC 관련 정보를 가져오려면 SQL_NO_DATA를 반환할 때까지 [SQLGetDiagRec](../../odbc/reference/syntax/sqlgetdiagrec-function.md) 를 호출합니다. 각 진단 레코드에 대해 [SQLGetDiagField](../../relational-databases/native-client-odbc-api/sqlgetdiagfield.md) 를 호출하여 개별 필드를 검색할 수 있습니다. 드라이버별 필드는 모두 **SQLGetDiagField** 를 사용하여 검색해야 합니다.  
   
  [SQLGetDiagRec](../../odbc/reference/syntax/sqlgetdiagrec-function.md) 및 [SQLGetDiagField](../../relational-databases/native-client-odbc-api/sqlgetdiagfield.md) 는 개별 드라이버가 아니라 ODBC 드라이버 관리자에 의해 처리됩니다. ODBC 드라이버 관리자는 성공적으로 연결될 때까지 드라이버별 진단 필드를 캐시하지 않습니다. 성공적으로 연결되기 전에는 드라이버별 진단 필드에 대해 [SQLGetDiagField](../../relational-databases/native-client-odbc-api/sqlgetdiagfield.md) 를 호출할 수 없습니다. 여기에는 ODBC 연결 명령이 포함되며, 이러한 명령에서 SQL_SUCCESS_WITH_INFO를 반환하는 경우에도 마찬가지입니다. 다음에 ODBC 함수를 호출할 때까지 드라이버별 진단 필드를 사용할 수 없습니다.  
   

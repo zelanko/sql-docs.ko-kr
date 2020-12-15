@@ -16,22 +16,22 @@ helpviewer_keywords:
 ms.assetid: 0b8908d1-fd6d-47a9-9e30-514cee8f60c8
 author: markingmyname
 ms.author: maghan
-monikerRange: '>=aps-pdw-2016||=azuresqldb-current||=azure-sqldw-latest||>=sql-server-2016||=sqlallproducts-allversions||>=sql-server-linux-2017||=azuresqldb-mi-current'
-ms.openlocfilehash: 053d9c0b9dd2a6c3e06eb55540fbde5e655759f1
-ms.sourcegitcommit: 4d370399f6f142e25075b3714e5c2ce056b1bfd0
+monikerRange: '>=aps-pdw-2016||=azuresqldb-current||=azure-sqldw-latest||>=sql-server-2016||>=sql-server-linux-2017||=azuresqldb-mi-current'
+ms.openlocfilehash: e9ee4b4f73f12636afa498a740fbafbce3a2367b
+ms.sourcegitcommit: 1a544cf4dd2720b124c3697d1e62ae7741db757c
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 10/09/2020
-ms.locfileid: "91869213"
+ms.lasthandoff: 12/14/2020
+ms.locfileid: "97476144"
 ---
 # <a name="bulk-copy-data-using-irowsetfastload-ole-db-in--sql-server-native-client"></a>SQL Server Native Client에서 IRowsetFastLoad (OLE DB)를 사용 하는 대량 데이터 복사
 [!INCLUDE[SQL Server Azure SQL Database Synapse Analytics PDW ](../../includes/applies-to-version/sql-asdb-asdbmi-asa-pdw.md)]
 
   이 예제에서는 레코드를 테이블에 대량 복사하기 위해 IRowsetFastLoad를 사용하는 방법을 보여 줍니다.  
   
- 소비자는 SQLOLEDB 공급자별 속성 SSPROP_ENABLEFASTLOAD를 VARIANT_TRUE로 설정하여 대량 복사가 필요하다는 것을 SQLOLEDB에 알립니다. 데이터 원본의 속성 집합을 사용하여 소비자는 SQLOLEDB 세션을 만듭니다. 새 세션을 통해 소비자는 **IRowsetFastLoad**에 액세스할 수 있습니다.  
+ 소비자는 SQLOLEDB 공급자별 속성 SSPROP_ENABLEFASTLOAD를 VARIANT_TRUE로 설정하여 대량 복사가 필요하다는 것을 SQLOLEDB에 알립니다. 데이터 원본의 속성 집합을 사용하여 소비자는 SQLOLEDB 세션을 만듭니다. 새 세션을 통해 소비자는 **IRowsetFastLoad** 에 액세스할 수 있습니다.  
   
- **IRowsetFastLoad**를 사용하여 레코드를 테이블에 대량 복사하는 방법을 보여 주는 전체 예제가 있습니다. 이 예제에서는 10개의 레코드를 **IRFLTable** 테이블에 추가합니다. 이를 위해 데이터베이스에 **IRFLTable** 테이블을 만들어야 합니다.  
+ **IRowsetFastLoad** 를 사용하여 레코드를 테이블에 대량 복사하는 방법을 보여 주는 전체 예제가 있습니다. 이 예제에서는 10개의 레코드를 **IRFLTable** 테이블에 추가합니다. 이를 위해 데이터베이스에 **IRFLTable** 테이블을 만들어야 합니다.  
   
  이 예제에는 [Microsoft SQL Server 예제 및 커뮤니티 프로젝트(Microsoft SQL Server Samples and Community Projects)](https://go.microsoft.com/fwlink/?LinkID=85384) 홈 페이지에서 다운로드할 수 있는 AdventureWorks 예제 데이터베이스가 필요합니다.  
   
@@ -42,17 +42,17 @@ ms.locfileid: "91869213"
   
 1.  데이터 원본에 대한 연결을 설정합니다.  
   
-2.  SQLOLEDB 공급자별 데이터 원본 속성 SSPROP_ENABLEFASTLOAD를 VARIANT_TRUE로 설정합니다. 이 속성을 VARIANT_TRUE로 설정하면 새로 생성되는 세션에서 소비자가 **IRowsetFastLoad**에 액세스할 수 있습니다.  
+2.  SQLOLEDB 공급자별 데이터 원본 속성 SSPROP_ENABLEFASTLOAD를 VARIANT_TRUE로 설정합니다. 이 속성을 VARIANT_TRUE로 설정하면 새로 생성되는 세션에서 소비자가 **IRowsetFastLoad** 에 액세스할 수 있습니다.  
   
 3.  **IOpenRowset** 인터페이스를 요청하는 세션을 만듭니다.  
   
-4.  **IOpenRowset::OpenRowset**을 호출하여 대량 복사 작업을 통해 데이터를 복사할 테이블의 모든 행이 포함된 행 집합을 엽니다.  
+4.  **IOpenRowset::OpenRowset** 을 호출하여 대량 복사 작업을 통해 데이터를 복사할 테이블의 모든 행이 포함된 행 집합을 엽니다.  
   
-5.  필요한 바인딩을 수행하고 **IAccessor::CreateAccessor**를 사용하여 접근자를 만듭니다.  
+5.  필요한 바인딩을 수행하고 **IAccessor::CreateAccessor** 를 사용하여 접근자를 만듭니다.  
   
 6.  테이블에 복사할 데이터를 가져올 메모리 버퍼를 설정합니다.  
   
-7.  **IRowsetFastLoad:: InsertRow**를 호출하여 데이터를 테이블에 대량 복사합니다.  
+7.  **IRowsetFastLoad:: InsertRow** 를 호출하여 데이터를 테이블에 대량 복사합니다.  
 
 ## <a name="example"></a>예제  
  이 예에서는 10개의 레코드를 IRFLTable 테이블에 추가합니다. 이를 위해 데이터베이스에 IRFLTable 테이블을 만들어야 합니다. 이 예제는 IA64에서 지원되지 않습니다.  

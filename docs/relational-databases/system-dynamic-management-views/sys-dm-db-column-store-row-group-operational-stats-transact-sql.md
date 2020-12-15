@@ -1,6 +1,6 @@
 ---
-description: sys. dm_db_column_store_row_group_operational_stats (Transact-sql)
-title: sys. dm_db_column_store_row_group_operational_stats (Transact-sql) | Microsoft Docs
+description: sys.dm_db_column_store_row_group_operational_stats (Transact-sql)
+title: sys.dm_db_column_store_row_group_operational_stats (Transact-sql) | Microsoft Docs
 ms.custom: ''
 ms.date: 06/10/2016
 ms.prod: sql
@@ -13,19 +13,19 @@ dev_langs:
 ms.assetid: 31b71c68-50a0-4fd8-a7fe-2d2292be1163
 author: markingmyname
 ms.author: maghan
-monikerRange: =azuresqldb-current||>=sql-server-2016||=sqlallproducts-allversions||>=sql-server-linux-2017||=azuresqldb-mi-current
-ms.openlocfilehash: d384029cb8a226dfed01d14360247d00cb998cd8
-ms.sourcegitcommit: dd36d1cbe32cd5a65c6638e8f252b0bd8145e165
+monikerRange: =azuresqldb-current||>=sql-server-2016||>=sql-server-linux-2017||=azuresqldb-mi-current
+ms.openlocfilehash: aa29c7c3eed19871479e116d8d8969d71c38641d
+ms.sourcegitcommit: 1a544cf4dd2720b124c3697d1e62ae7741db757c
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 09/08/2020
-ms.locfileid: "89537620"
+ms.lasthandoff: 12/14/2020
+ms.locfileid: "97475024"
 ---
-# <a name="sysdm_db_column_store_row_group_operational_stats-transact-sql"></a>sys. dm_db_column_store_row_group_operational_stats (Transact-sql)
+# <a name="sysdm_db_column_store_row_group_operational_stats-transact-sql"></a>sys.dm_db_column_store_row_group_operational_stats (Transact-sql)
 
 [!INCLUDE [sqlserver2016-asdb-asdbmi](../../includes/applies-to-version/sqlserver2016-asdb-asdbmi.md)]
 
-  Columnstore 인덱스의 압축 된 행 그룹에 대 한 현재 행 수준 i/o, 잠금 및 액세스 방법 작업을 반환 합니다. 행 그룹를 사용 하 여 사용자 쿼리가 columnstore 인덱스의 압축 된 또는 파티션에 대 한 읽기 또는 쓰기를 대기 해야 하는 시간을 추적 하 고, 상당한 i/o 작업 또는 핫 스폿이 발생 하는 행 그룹을 식별할 수 **있습니다 dm_db_column_store_row_group_operational_stats.**  
+  Columnstore 인덱스의 압축 된 행 그룹에 대 한 현재 행 수준 i/o, 잠금 및 액세스 방법 작업을 반환 합니다. **Sys.dm_db_column_store_row_group_operational_stats** 를 사용 하 여 사용자 쿼리가 columnstore 인덱스의 압축 된 행 그룹 또는 파티션에 대 한 읽기 또는 쓰기를 대기 해야 하는 시간을 추적 하 고, 상당한 i/o 작업 또는 핫 스폿이 발생 하는 행 그룹을 식별할 수 있습니다.  
   
  메모리 내 columnstore 인덱스는이 DMV에 나타나지 않습니다.  
  
@@ -61,9 +61,9 @@ ms.locfileid: "89537620"
  [인덱스 관련 동적 관리 뷰 및 함수 &#40;Transact-SQL&#41;](../../relational-databases/system-dynamic-management-views/index-related-dynamic-management-views-and-functions-transact-sql.md)   
  [성능 모니터링 및 튜닝](../../relational-databases/performance/monitor-and-tune-for-performance.md)   
  [sys.dm_db_index_physical_stats&#40;Transact-SQL&#41;](../../relational-databases/system-dynamic-management-views/sys-dm-db-index-physical-stats-transact-sql.md)   
- [dm_db_index_usage_stats &#40;Transact-sql&#41;](../../relational-databases/system-dynamic-management-views/sys-dm-db-index-usage-stats-transact-sql.md)   
+ [Transact-sql&#41;sys.dm_db_index_usage_stats &#40;](../../relational-databases/system-dynamic-management-views/sys-dm-db-index-usage-stats-transact-sql.md)   
  [sys.dm_os_latch_stats&#40;Transact-SQL&#41;](../../relational-databases/system-dynamic-management-views/sys-dm-os-latch-stats-transact-sql.md)   
- [dm_db_partition_stats &#40;Transact-sql&#41;](../../relational-databases/system-dynamic-management-views/sys-dm-db-partition-stats-transact-sql.md)   
+ [Transact-sql&#41;sys.dm_db_partition_stats &#40;](../../relational-databases/system-dynamic-management-views/sys-dm-db-partition-stats-transact-sql.md)   
  [sys.allocation_units &#40;Transact-SQL&#41;](../../relational-databases/system-catalog-views/sys-allocation-units-transact-sql.md)   
  [sys.indexes&#40;Transact-SQL&#41;](../../relational-databases/system-catalog-views/sys-indexes-transact-sql.md)  
   

@@ -10,14 +10,14 @@ ms.topic: language-reference
 ms.assetid: 9e985a19-f93f-4c56-b644-12c529298011
 author: markingmyname
 ms.author: maghan
-monikerRange: = azuresqldb-current || = sqlallproducts-allversions
+monikerRange: = azuresqldb-current
 ms.custom: seo-lt-2019
-ms.openlocfilehash: 6e8175b720a109c11ebdeeb4843360ff2ade340b
-ms.sourcegitcommit: dd36d1cbe32cd5a65c6638e8f252b0bd8145e165
+ms.openlocfilehash: 7810edf96b148e6539f7c713c886a91fb6f28af0
+ms.sourcegitcommit: 1a544cf4dd2720b124c3697d1e62ae7741db757c
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 09/08/2020
-ms.locfileid: "89546413"
+ms.lasthandoff: 12/14/2020
+ms.locfileid: "97474734"
 ---
 # <a name="sysdm_xe_database_session_events-azure-sql-database"></a>sys.dm_xe_database_session_events(Azure SQL Database)
 [!INCLUDE[Azure SQL Database Azure SQL Managed Instance](../../includes/applies-to-version/asdb-asdbmi.md)]
@@ -26,7 +26,7 @@ ms.locfileid: "89546413"
   
 ||  
 |-|  
-|**적용**대상: [!INCLUDE[ssSDSfull](../../includes/sssdsfull-md.md)] V12 이상 버전.|  
+|**적용** 대상: [!INCLUDE[ssSDSfull](../../includes/sssdsfull-md.md)] V12 이상 버전.|  
   
 |열 이름|데이터 형식|Description|  
 |-----------------|---------------|-----------------|  
@@ -40,9 +40,9 @@ ms.locfileid: "89546413"
   
 ### <a name="relationship-cardinalities"></a>관계 카디널리티  
   
-|시작|대상|관계|  
+|From|대상|관계|  
 |----------|--------|------------------|  
-|dm_xe_database_session_events. event_session_address|dm_xe_database_sessions. 주소|다 대 일|  
-|dm_xe_database_session_events. event_package_guid, dm_xe_database_session_events event_name|sys.dm_xe_objects.name, sys.dm_xe_objects.package_guid|다 대 일|  
+|sys.dm_xe_database_session_events sys.dm_xe_database_session_events.event_session_address|sys.dm_xe_database_sessions. 주소|다 대 일|  
+|_xe_database_session_events event_package_guid, _xe_database_session_events. event_name|sys.dm_xe_objects.name, sys.dm_xe_objects.package_guid|다 대 일|  
   
   

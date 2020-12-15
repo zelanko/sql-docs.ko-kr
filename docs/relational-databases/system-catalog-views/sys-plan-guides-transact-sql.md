@@ -1,6 +1,6 @@
 ---
 description: sys.plan_guides(Transact-SQL)
-title: sys. plan_guides (Transact-sql) | Microsoft Docs
+title: sys.plan_guides (Transact-sql) | Microsoft Docs
 ms.custom: ''
 ms.date: 06/10/2016
 ms.prod: sql
@@ -20,13 +20,13 @@ helpviewer_keywords:
 ms.assetid: 3dde0397-ef6f-4b3f-8250-3f25584eb62b
 author: markingmyname
 ms.author: maghan
-monikerRange: =azuresqldb-current||>=sql-server-2016||=sqlallproducts-allversions||>=sql-server-linux-2017||=azuresqldb-mi-current
-ms.openlocfilehash: e8aacbeebf50eae1a6e20d35262dbdc054f1429d
-ms.sourcegitcommit: dd36d1cbe32cd5a65c6638e8f252b0bd8145e165
+monikerRange: =azuresqldb-current||>=sql-server-2016||>=sql-server-linux-2017||=azuresqldb-mi-current
+ms.openlocfilehash: 11e71695f2deddfec1e84c608bcf893fe7073361
+ms.sourcegitcommit: 1a544cf4dd2720b124c3697d1e62ae7741db757c
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 09/08/2020
-ms.locfileid: "89550483"
+ms.lasthandoff: 12/14/2020
+ms.locfileid: "97475134"
 ---
 # <a name="sysplan_guides-transact-sql"></a>sys.plan_guides(Transact-SQL)
 [!INCLUDE [SQL Server SQL Database](../../includes/applies-to-version/sql-asdb.md)]
@@ -44,7 +44,7 @@ ms.locfileid: "89550483"
 |**scope_type**|**tinyint**|계획 지침 범위를 식별합니다.<br /><br /> 1 = OBJECT<br /><br /> 2 = SQL<br /><br /> 3 = TEMPLATE|  
 |**scope_type_desc**|**nvarchar(60)**|계획 지침의 범위에 대한 설명입니다.<br /><br /> OBJECT<br /><br /> SQL<br /><br /> TEMPLATE|  
 |**scope_object_id**|**정수**|범위가 OBJECT인 경우 계획 지침의 범위를 정의하는 개체의 object_id입니다.<br /><br /> 계획 지침 범위가 OBJECT가 아니면 NULL입니다.|  
-|**scope_batch**|**nvarchar(max)**|**scope_type**이 SQL이면 일괄 처리 텍스트입니다.<br /><br /> 일괄 처리 형식이 SQL이 아니면 NULL입니다.<br /><br /> NULL 및 **SCOPE_TYPE** SQL 인 경우 **query_text** 의 값이 적용 됩니다.|  
+|**scope_batch**|**nvarchar(max)**|**scope_type** 이 SQL이면 일괄 처리 텍스트입니다.<br /><br /> 일괄 처리 형식이 SQL이 아니면 NULL입니다.<br /><br /> NULL 및 **SCOPE_TYPE** SQL 인 경우 **query_text** 의 값이 적용 됩니다.|  
 |**parameters**|**nvarchar(max)**|계획 지침과 연결된 매개 변수 목록을 정의하는 문자열입니다.<br /><br /> NULL = 계획 지침에 연결되는 매개 변수 목록이 없습니다.|  
 |**힌트가**|**nvarchar(max)**|계획 지침과 연결된 OPTION 절 힌트입니다.|  
   

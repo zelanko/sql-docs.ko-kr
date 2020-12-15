@@ -20,13 +20,13 @@ helpviewer_keywords:
 ms.assetid: a5052701-edbf-4209-a7cb-afc9e65c41c1
 author: markingmyname
 ms.author: maghan
-monikerRange: '>=aps-pdw-2016||=azuresqldb-current||=azure-sqldw-latest||>=sql-server-2016||=sqlallproducts-allversions||>=sql-server-linux-2017||=azuresqldb-mi-current'
-ms.openlocfilehash: 61fbf1bd1abb0b0a28182e3546313e7860f67a80
-ms.sourcegitcommit: 2991ad5324601c8618739915aec9b184a8a49c74
+monikerRange: '>=aps-pdw-2016||=azuresqldb-current||=azure-sqldw-latest||>=sql-server-2016||>=sql-server-linux-2017||=azuresqldb-mi-current'
+ms.openlocfilehash: 96a25a69c14919c4e0108537af105108a813c3fd
+ms.sourcegitcommit: 1a544cf4dd2720b124c3697d1e62ae7741db757c
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 12/11/2020
-ms.locfileid: "97331674"
+ms.lasthandoff: 12/14/2020
+ms.locfileid: "97472874"
 ---
 # <a name="sysdm_os_threads-transact-sql"></a>sys.dm_os_threads(Transact-SQL)
 [!INCLUDE [sql-asdb-asdbmi-asa-pdw](../../includes/applies-to-version/sql-asdb-asdbmi-asa-pdw.md)]
@@ -75,7 +75,7 @@ SQL Database Basic, S0 및 S1 서비스 목적과 탄력적 풀의 데이터베�
 
 Linux에서 SQL 엔진의 작동 방식으로 인해이 정보 중 일부는 Linux 진단 데이터와 일치 하지 않습니다. 예를 들어는, `os_thread_id` `ps` `top` 또는 procfs (/proc/)와 같은 도구의 결과와 일치 하지 않습니다 `pid` .  이는 SQL Server 구성 요소와 운영 체제 간의 레이어인 SQLPAL (Platform 추상화 계층) 때문입니다.
 
-## <a name="examples"></a>예제  
+## <a name="examples"></a>예  
  시작 시 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]에서 스레드를 시작한 다음 작업자를 해당 스레드에 연결합니다. 그러나 확장 저장 프로시저와 같은 외부 구성 요소가 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 프로세스에서 스레드를 시작할 수 있습니다. [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]는 이러한 스레드를 제어하지 않습니다. sys.dm_os_threads는 프로세스에서 리소스를 사용 하는 rogue 스레드에 대 한 정보를 제공할 수 있습니다 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] .  
   
  다음 쿼리는 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]에서 시작하지 않은 스레드를 실행하는 작업자와 실행 소요 시간을 확인하는 데 사용됩니다.  

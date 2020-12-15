@@ -12,13 +12,13 @@ dev_langs:
 ms.assetid: d4fee3ad-6285-4ea5-8513-5e6eb617abb0
 author: markingmyname
 ms.author: maghan
-monikerRange: '>= aps-pdw-2016 || = sqlallproducts-allversions'
-ms.openlocfilehash: 243319d55d703317847dd1475398b23bea56afc6
-ms.sourcegitcommit: 22dacedeb6e8721e7cdb6279a946d4002cfb5da3
+monikerRange: '>= aps-pdw-2016'
+ms.openlocfilehash: 7d94853e62c1e9e97ddd65ad973e9e481d90bcb0
+ms.sourcegitcommit: 1a544cf4dd2720b124c3697d1e62ae7741db757c
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 10/14/2020
-ms.locfileid: "92035345"
+ms.lasthandoff: 12/14/2020
+ms.locfileid: "97472744"
 ---
 # <a name="sysdm_pdw_network_credentials-transact-sql"></a>sys.dm_pdw_network_credentials (Transact-sql)
 [!INCLUDE [pdw](../../includes/applies-to-version/pdw.md)]
@@ -36,7 +36,7 @@ ms.locfileid: "92035345"
  뷰 서버 상태가 필요 합니다.  
   
 ## <a name="general-remarks"></a>일반적인 주의 사항  
- 이 동적 관리 뷰의 키는 *pdw_node_id* 및 *target_server_name*입니다.  
+ 이 동적 관리 뷰의 키는 *pdw_node_id* 및 *target_server_name* 입니다.  
   
 ## <a name="see-also"></a>참고 항목  
  [Transact-sql&#41;&#40;Azure Synapse 분석 및 병렬 데이터 웨어하우스 동적 관리 뷰 ](../../relational-databases/system-dynamic-management-views/sql-and-parallel-data-warehouse-dynamic-management-views.md)  

@@ -1,6 +1,6 @@
 ---
 description: sys.dm_db_xtp_nonclustered_index_stats(Transact-SQL)
-title: sys. dm_db_xtp_nonclustered_index_stats (Transact-sql) | Microsoft Docs
+title: sys.dm_db_xtp_nonclustered_index_stats (Transact-sql) | Microsoft Docs
 ms.custom: ''
 ms.date: 08/29/2016
 ms.prod: sql
@@ -20,13 +20,13 @@ helpviewer_keywords:
 ms.assetid: d55ba31c-296c-419b-9c4b-c126e0a3d156
 author: markingmyname
 ms.author: maghan
-monikerRange: =azure-sqldw-latest||>=sql-server-2016||=sqlallproducts-allversions||>=sql-server-linux-2017||=azuresqldb-mi-current
-ms.openlocfilehash: 8c48807db007bd5d622283fd07c3aed8aec0198a
-ms.sourcegitcommit: dd36d1cbe32cd5a65c6638e8f252b0bd8145e165
+monikerRange: =azure-sqldw-latest||>=sql-server-2016||>=sql-server-linux-2017||=azuresqldb-mi-current
+ms.openlocfilehash: 3688330769cbac60841f29d98efb5219cfc965a3
+ms.sourcegitcommit: 1a544cf4dd2720b124c3697d1e62ae7741db757c
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 09/08/2020
-ms.locfileid: "89542218"
+ms.lasthandoff: 12/14/2020
+ms.locfileid: "97474944"
 ---
 # <a name="sysdm_db_xtp_nonclustered_index_stats-transact-sql"></a>sys.dm_db_xtp_nonclustered_index_stats(Transact-SQL)
 [!INCLUDE[sql-asdb-asdbmi](../../includes/applies-to-version/sql-asdb-asdbmi.md)]
@@ -39,7 +39,7 @@ ms.locfileid: "89542218"
   
  다시 시도 횟수가 많으면 동시성 오류가 발생할 수 있습니다. [!INCLUDE[msCoName](../../includes/msconame-md.md)] 지원을 호출합니다.  
   
- 메모리 액세스에 최적화 된 비클러스터형 인덱스에 대 한 자세한 내용은 [메모리 내 OLTP 내부 개요](https://t.co/T6zToWc6y6), 페이지 17을 SQL Server 참조 하십시오.  
+ 메모리 액세스에 최적화 된 비클러스터형 인덱스에 대 한 자세한 내용은 [SQL Server In-Memory OLTP 내부 개요](https://t.co/T6zToWc6y6), 17 페이지를 참조 하십시오.  
   
 |열 이름|데이터 형식|Description|  
 |-----------------|---------------|-----------------|  

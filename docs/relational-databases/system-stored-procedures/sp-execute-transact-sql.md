@@ -18,13 +18,13 @@ helpviewer_keywords:
 ms.assetid: 2009acd3-0d92-435a-a8fb-057e50dc7146
 author: markingmyname
 ms.author: maghan
-monikerRange: '>=aps-pdw-2016||=azure-sqldw-latest||>=sql-server-2016||=sqlallproducts-allversions||>=sql-server-linux-2017||=azuresqldb-mi-current'
-ms.openlocfilehash: 49b5548d149640b7e9d78b38c70c22fd6c5ae163
-ms.sourcegitcommit: a5398f107599102af7c8cda815d8e5e9a367ce7e
+monikerRange: '>=aps-pdw-2016||=azure-sqldw-latest||>=sql-server-2016||>=sql-server-linux-2017||=azuresqldb-mi-current'
+ms.openlocfilehash: 72018e5e064a3d3f35fb8495f3b32d7a3e76d4fd
+ms.sourcegitcommit: 1a544cf4dd2720b124c3697d1e62ae7741db757c
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 10/13/2020
-ms.locfileid: "92005612"
+ms.lasthandoff: 12/14/2020
+ms.locfileid: "97472714"
 ---
 # <a name="sp_execute-transact-sql"></a>sp_execute(Transact-SQL)
 [!INCLUDE [sql-asdbmi-asa-pdw](../../includes/applies-to-version/sql-asdbmi-asa-pdw.md)]
@@ -50,7 +50,7 @@ sp_execute handle OUTPUT
  추가 매개 변수의 사용을 나타냅니다. *bound_param* 은 프로시저에 대 한 추가 매개 변수를 나타내기 위해 모든 데이터 형식의 입력 값을 호출 하는 필수 매개 변수입니다.  
   
 > [!NOTE]  
->  *bound_param* 은 sp_prepare*params* 값에 의해 생성 된 선언과 일치 해야 하며 * @name = value* 또는 *value*형식으로 지정할 수 있습니다.  
+>  *bound_param* 은 sp_prepare *params* 값에 의해 생성 된 선언과 일치 해야 하며 *@name = value* 또는 *value* 형식으로 지정할 수 있습니다.  
   
 ## <a name="see-also"></a>참고 항목  
  [시스템 저장 프로시저&#40;Transact-SQL&#41;](../../relational-databases/system-stored-procedures/system-stored-procedures-transact-sql.md)   

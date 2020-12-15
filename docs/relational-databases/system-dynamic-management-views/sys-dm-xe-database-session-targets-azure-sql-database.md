@@ -10,14 +10,14 @@ ms.topic: language-reference
 ms.assetid: 7f353e2a-f8fc-4366-97e4-aa1c49eadaf4
 author: markingmyname
 ms.author: maghan
-monikerRange: = azuresqldb-current || = sqlallproducts-allversions
+monikerRange: = azuresqldb-current
 ms.custom: seo-dt-2019
-ms.openlocfilehash: 483fa1c826c4b495d609d1c893f5bb022ac6f943
-ms.sourcegitcommit: dd36d1cbe32cd5a65c6638e8f252b0bd8145e165
+ms.openlocfilehash: b65d705e6b6f961629d64d08408c4e3dece9d377
+ms.sourcegitcommit: 1a544cf4dd2720b124c3697d1e62ae7741db757c
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 09/08/2020
-ms.locfileid: "89546391"
+ms.lasthandoff: 12/14/2020
+ms.locfileid: "97474774"
 ---
 # <a name="sysdm_xe_database_session_targets-azure-sql-database"></a>sys.dm_xe_database_session_targets(Azure SQL Database)
 [!INCLUDE[Azure SQL Database Azure SQL Managed Instance](../../includes/applies-to-version/asdb-asdbmi.md)]
@@ -26,11 +26,11 @@ ms.locfileid: "89546391"
   
 ||  
 |-|  
-|**적용**대상: [!INCLUDE[ssSDSfull](../../includes/sssdsfull-md.md)] V12 및 이후 버전|  
+|**적용** 대상: [!INCLUDE[ssSDSfull](../../includes/sssdsfull-md.md)] V12 및 이후 버전|  
   
 |열 이름|데이터 형식|Description|  
 |-----------------|---------------|-----------------|  
-|event_session_address|**varbinary(8)**|이벤트 세션의 메모리 주소입니다. 에는 dm_xe_database_sessions와 다 대 일 관계가 있습니다. Null을 허용하지 않습니다.|  
+|event_session_address|**varbinary(8)**|이벤트 세션의 메모리 주소입니다. Sys.dm_xe_database_sessions와 다 대 일 관계가 있습니다. Null을 허용하지 않습니다.|  
 |target_name|**nvarchar(60)**|세션 내에 있는 대상의 이름입니다. Null을 허용하지 않습니다.|  
 |target_package_guid|**uniqueidentifier**|대상이 포함된 패키지의 GUID입니다. Null을 허용하지 않습니다.|  
 |execution_count|**bigint**|세션에 대해 대상이 실행된 횟수입니다. Null을 허용하지 않습니다.|  
@@ -42,8 +42,8 @@ ms.locfileid: "89546391"
   
 ### <a name="relationship-cardinalities"></a>관계 카디널리티  
   
-|시작|대상|관계|  
+|From|대상|관계|  
 |----------|--------|------------------|  
-|dm_xe_database_session_targets. event_session_address|dm_xe_database_sessions. 주소|다 대 일|  
+|sys.dm_xe_database_session_targets sys.dm_xe_database_session_targets.event_session_address|sys.dm_xe_database_sessions. 주소|다 대 일|  
   
   

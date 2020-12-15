@@ -21,13 +21,13 @@ helpviewer_keywords:
 ms.assetid: 9109f10d-326b-4a6d-8c97-831f60da8c4c
 author: markingmyname
 ms.author: maghan
-monikerRange: '>=aps-pdw-2016||=azuresqldb-current||=azure-sqldw-latest||>=sql-server-2016||=sqlallproducts-allversions||>=sql-server-linux-2017||=azuresqldb-mi-current'
-ms.openlocfilehash: 9648f17ccd3688e166612f3d753d3208a83ebb52
-ms.sourcegitcommit: e700497f962e4c2274df16d9e651059b42ff1a10
+monikerRange: '>=aps-pdw-2016||=azuresqldb-current||=azure-sqldw-latest||>=sql-server-2016||>=sql-server-linux-2017||=azuresqldb-mi-current'
+ms.openlocfilehash: 16caf538ea5406ea4d5f23d4fbd05b2a646a0ba7
+ms.sourcegitcommit: 1a544cf4dd2720b124c3697d1e62ae7741db757c
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 08/17/2020
-ms.locfileid: "88460791"
+ms.lasthandoff: 12/14/2020
+ms.locfileid: "97473674"
 ---
 # <a name="scrolling-and-fetching-rows"></a>행 스크롤 및 인출
 [!INCLUDE[SQL Server Azure SQL Database Synapse Analytics PDW ](../../includes/applies-to-version/sql-asdb-asdbmi-asa-pdw.md)]
@@ -36,7 +36,7 @@ ms.locfileid: "88460791"
   
 -   [SQLSetStmtAttr](../../relational-databases/native-client-odbc-api/sqlsetstmtattr.md)를 사용 하 여 커서 기능을 설정 합니다.  
   
--   **Sqlexecute** 또는 **sqlexecdirect**를 사용 하 여 커서를 엽니다.  
+-   **Sqlexecute** 또는 **sqlexecdirect** 를 사용 하 여 커서를 엽니다.  
   
 -   **Sqlfetch** 또는 [sqlfetchscroll](../../relational-databases/native-client-odbc-api/sqlfetchscroll.md)을 사용 하 여 행을 스크롤하고 페치합니다.  
   
@@ -44,9 +44,9 @@ ms.locfileid: "88460791"
   
  ODBC 응용 프로그램은 **Sqlfetch** 를 사용 하 여 앞 으로만 이동 가능한 커서를 통해 인출할 수 있습니다.  
   
- **Sqlfetchscroll** 은 커서 주위의 스크롤에 사용 됩니다. **Sqlfetchscroll** 은 상대 인출 (현재 행 집합의 시작 부분에서 행 집합 *n* 행 인출) 및 절대 인출 (행 *n*에서 시작 하는 행 집합 인출) 외에도 다음, 이전, 첫 번째 및 마지막 행 집합을 인출 하는 것을 지원 합니다. 절대 인출에서 *n* 이 음수 이면 결과 집합의 끝에서 행이 계산 됩니다. 예를 들어 이 숫자가 -1이면 결과 집합의 마지막 행에서 시작하는 행 집합이 인출됩니다.  
+ **Sqlfetchscroll** 은 커서 주위의 스크롤에 사용 됩니다. **Sqlfetchscroll** 은 상대 인출 (현재 행 집합의 시작 부분에서 행 집합 *n* 행 인출) 및 절대 인출 (행 *n* 에서 시작 하는 행 집합 인출) 외에도 다음, 이전, 첫 번째 및 마지막 행 집합을 인출 하는 것을 지원 합니다. 절대 인출에서 *n* 이 음수 이면 결과 집합의 끝에서 행이 계산 됩니다. 예를 들어 이 숫자가 -1이면 결과 집합의 마지막 행에서 시작하는 행 집합이 인출됩니다.  
   
- 보고서와 같은 블록 커서 기능에 대해서만 **Sqlfetchscroll** 을 사용 하는 응용 프로그램은 다음 행 집합을 인출 하는 옵션만 사용 하 여 결과 집합을 한 번에 전달할 수 있습니다. 반면에 화면 기반 응용 프로그램은 **Sqlfetchscroll**의 모든 기능을 활용할 수 있습니다. 응용 프로그램에서 행 집합 크기를 화면에 표시 되는 행 수로 설정 하 고 화면 버퍼를 결과 집합에 바인딩하는 경우 스크롤 막대 작업을 **Sqlfetchscroll**에 대 한 호출로 직접 변환할 수 있습니다.  
+ 보고서와 같은 블록 커서 기능에 대해서만 **Sqlfetchscroll** 을 사용 하는 응용 프로그램은 다음 행 집합을 인출 하는 옵션만 사용 하 여 결과 집합을 한 번에 전달할 수 있습니다. 반면에 화면 기반 응용 프로그램은 **Sqlfetchscroll** 의 모든 기능을 활용할 수 있습니다. 응용 프로그램에서 행 집합 크기를 화면에 표시 되는 행 수로 설정 하 고 화면 버퍼를 결과 집합에 바인딩하는 경우 스크롤 막대 작업을 **Sqlfetchscroll** 에 대 한 호출로 직접 변환할 수 있습니다.  
   
 |스크롤 막대 작업|SQLFetchScroll 스크롤 옵션|  
 |--------------------------|-------------------------------------|  

@@ -20,13 +20,13 @@ helpviewer_keywords:
 ms.assetid: ''
 author: joesackmsft
 ms.author: josack
-monikerRange: =azuresqldb-current||=sqlallproducts-allversions
-ms.openlocfilehash: 2038883693288a75f9e2dbe17d80b6b9c7474343
-ms.sourcegitcommit: 968969b62bc158b9843aba5034c9d913519bc4a7
+monikerRange: =azuresqldb-current
+ms.openlocfilehash: 933b7749218e71a66cdc6d0a25666be32c8badfe
+ms.sourcegitcommit: 1a544cf4dd2720b124c3697d1e62ae7741db757c
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 10/06/2020
-ms.locfileid: "91753729"
+ms.lasthandoff: 12/14/2020
+ms.locfileid: "97474754"
 ---
 # <a name="sysdm_user_db_resource_governance-transact-sql"></a>sys.dm_user_db_resource_governance (Transact-sql)
 
@@ -47,27 +47,27 @@ ms.locfileid: "91753729"
 |**min_cpu**|tinyint|사용자 작업 리소스 풀의 MIN_CPU_PERCENT 값입니다. [리소스 풀 개념](../resource-governor/resource-governor-resource-pool.md#resource-pool-concepts)을 참조 하세요.|
 |**max_cpu**|tinyint|사용자 작업 리소스 풀의 MAX_CPU_PERCENT 값입니다. [리소스 풀 개념](../resource-governor/resource-governor-resource-pool.md#resource-pool-concepts)을 참조 하세요.|
 |**cap_cpu**|tinyint|사용자 작업 리소스 풀의 CAP_CPU_PERCENT 값입니다. [리소스 풀 개념](../resource-governor/resource-governor-resource-pool.md#resource-pool-concepts)을 참조 하세요.|
-|**min_cores**|smallint|내부적으로만 사용됩니다.|
+|**min_cores**|smallint|내부 전용입니다.|
 |**max_dop**|smallint|사용자 작업 그룹의 MAX_DOP 값입니다. [작업 그룹 만들기](../../t-sql/statements/create-workload-group-transact-sql.md)를 참조 하세요.|
 |**min_memory**|int|사용자 작업 리소스 풀의 MIN_MEMORY_PERCENT 값입니다. [리소스 풀 개념](../resource-governor/resource-governor-resource-pool.md#resource-pool-concepts)을 참조 하세요.|
 |**max_memory**|int|사용자 작업 리소스 풀의 MAX_MEMORY_PERCENT 값입니다. [리소스 풀 개념](../resource-governor/resource-governor-resource-pool.md#resource-pool-concepts)을 참조 하세요.|
 |**max_sessions**|int|사용자 작업 그룹에 허용 되는 최대 세션 수입니다.|
 |**max_memory_grant**|int|사용자 작업 그룹의 REQUEST_MAX_MEMORY_GRANT_PERCENT 값입니다. [작업 그룹 만들기](../../t-sql/statements/create-workload-group-transact-sql.md)를 참조 하세요.|
-|**max_db_memory**|int|내부적으로만 사용됩니다.|
-|**govern_background_io**|bit|내부적으로만 사용됩니다.|
+|**max_db_memory**|int|내부 전용입니다.|
+|**govern_background_io**|bit|내부 전용입니다.|
 |**min_db_max_size_in_mb**|bigint|데이터 파일의 최소 max_size 값 (MB)입니다. [Sys.database_files](../system-catalog-views/sys-database-files-transact-sql.md)를 참조 하세요.|
 |**max_db_max_size_in_mb**|bigint|데이터 파일의 최대 max_size 값 (MB)입니다. [Sys.database_files](../system-catalog-views/sys-database-files-transact-sql.md)를 참조 하세요.|
 |**default_db_max_size_in_mb**|bigint|데이터 파일에 대 한 기본 max_size 값 (MB)입니다. [Sys.database_files](../system-catalog-views/sys-database-files-transact-sql.md)를 참조 하세요.|
 |**db_file_growth_in_mb**|bigint|데이터 파일의 기본 증가분 (MB)입니다. [Sys.database_files](../system-catalog-views/sys-database-files-transact-sql.md)를 참조 하세요.|
 |**initial_db_file_size_in_mb**|bigint|새 데이터 파일의 기본 크기 (MB)입니다. [Sys.database_files](../system-catalog-views/sys-database-files-transact-sql.md)를 참조 하세요.|
 |**log_size_in_mb**|bigint|새 로그 파일의 기본 크기 (MB)입니다. [Sys.database_files](../system-catalog-views/sys-database-files-transact-sql.md)를 참조 하세요.|
-|**instance_cap_cpu**|int|내부적으로만 사용됩니다.|
+|**instance_cap_cpu**|int|내부 전용입니다.|
 |**instance_max_log_rate**|bigint|SQL Server 인스턴스의 로그 생성 률 한도 (바이트/초)입니다. 및 기타 시스템 데이터베이스를 포함 하 여 인스턴스에 의해 생성 된 모든 로그에 적용 됩니다 `tempdb` . 탄력적 풀에서는 풀에 있는 모든 데이터베이스에 의해 생성 된 로그에 적용 됩니다.|
 |**instance_max_worker_threads**|int|SQL Server 인스턴스에 대 한 작업자 스레드 제한입니다.|
 |**replica_type**|int|복제본 유형 (0은 Primary, 1은 보조)입니다.|
 |**max_transaction_size**|bigint|모든 트랜잭션에서 사용 되는 최대 로그 공간 (KB)입니다.|
-|**checkpoint_rate_mbps**|int|내부적으로만 사용됩니다.|
-|**checkpoint_rate_io**|int|내부적으로만 사용됩니다.|
+|**checkpoint_rate_mbps**|int|내부 전용입니다.|
+|**checkpoint_rate_io**|int|내부 전용입니다.|
 |**last_updated_date_utc**|Datetime|마지막 설정 변경 또는 재구성 날짜와 시간 (UTC)입니다.|
 |**primary_group_id**|int|주 복제본 및 보조 복제본의 사용자 작업에 대 한 작업 그룹 ID입니다.|
 |**primary_group_max_workers**|int|사용자 작업 그룹에 대 한 작업자 스레드 제한입니다.|
@@ -80,15 +80,15 @@ ms.locfileid: "91753729"
 |**primary_log_commit_fee**|int|사용자 작업 그룹의 로그 전송률 관리 커밋 요금 (바이트)입니다. 커밋 요금은 로그 율 계정에 대해서만 고정 값을 사용 하 여 각 로그 IO의 크기를 늘립니다. 저장소에 대 한 실제 로그 IO는 증가 되지 않습니다.|
 |**primary_pool_max_workers**|int|사용자 작업 리소스 풀에 대 한 작업자 스레드 제한입니다.|
 |**pool_max_io**|int|사용자 작업 리소스 풀에 대 한 최대 IOPS 제한입니다.|
-|**govern_db_memory_in_resource_pool**|bit|내부적으로만 사용됩니다.|
-|**volume_local_iops**|int|내부적으로만 사용됩니다.|
-|**volume_managed_xstore_iops**|int|내부적으로만 사용됩니다.|
-|**volume_external_xstore_iops**|int|내부적으로만 사용됩니다.|
-|**volume_type_local_iops**|int|내부적으로만 사용됩니다.|
-|**volume_type_managed_xstore_iops**|int|내부적으로만 사용됩니다.|
-|**volume_type_external_xstore_iops**|int|내부적으로만 사용됩니다.|
-|**volume_pfs_iops**|int|내부적으로만 사용됩니다.|
-|**volume_type_pfs_iops**|int|내부적으로만 사용됩니다.|
+|**govern_db_memory_in_resource_pool**|bit|내부 전용입니다.|
+|**volume_local_iops**|int|내부 전용입니다.|
+|**volume_managed_xstore_iops**|int|내부 전용입니다.|
+|**volume_external_xstore_iops**|int|내부 전용입니다.|
+|**volume_type_local_iops**|int|내부 전용입니다.|
+|**volume_type_managed_xstore_iops**|int|내부 전용입니다.|
+|**volume_type_external_xstore_iops**|int|내부 전용입니다.|
+|**volume_pfs_iops**|int|내부 전용입니다.|
+|**volume_type_pfs_iops**|int|내부 전용입니다.|
 |||
 
 ## <a name="permissions"></a>사용 권한

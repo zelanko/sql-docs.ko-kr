@@ -19,13 +19,13 @@ helpviewer_keywords:
 ms.assetid: d03d4657-86d1-4496-97e6-cc3bc292e0b1
 author: markingmyname
 ms.author: maghan
-monikerRange: = azuresqldb-current || = sqlallproducts-allversions
-ms.openlocfilehash: acdb347af36812095df03f61ae9f118493496e51
-ms.sourcegitcommit: b3a711a673baebb2ff10d7142b209982b46973ae
+monikerRange: = azuresqldb-current
+ms.openlocfilehash: f0ae8e1f4ec9fdf83ce3f143c175fd08b153a960
+ms.sourcegitcommit: 1a544cf4dd2720b124c3697d1e62ae7741db757c
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 11/05/2020
-ms.locfileid: "93364775"
+ms.lasthandoff: 12/14/2020
+ms.locfileid: "97475064"
 ---
 # <a name="sysdm_database_copies-azure-sql-database"></a>sys.dm_database_copies(Azure SQL Database)
 [!INCLUDE[Azure SQL Database](../../includes/applies-to-version/asdb.md)]
@@ -35,7 +35,7 @@ ms.locfileid: "93364775"
 지역에서 복제 링크에 대 한 정보를 반환 하려면 [sys.geo_replication_links](../../relational-databases/system-dynamic-management-views/sys-geo-replication-links-azure-sql-database.md) 또는 [sys.dm_geo_replication_link_status](../../relational-databases/system-dynamic-management-views/sys-dm-geo-replication-link-status-azure-sql-database.md) 뷰 (SQL Database V12에서 사용 가능)를 사용 합니다.
   
   
-|열 이름|데이터 형식|Description|  
+|열 이름|데이터 형식|설명|  
 |-----------------|---------------|-----------------|  
 |**database_id**|**int**|`sys.databases` 뷰의 현재 데이터베이스 ID입니다.|  
 |**start_date**|**datetimeoffset**|지역의 [!INCLUDE[ssSDS](../../includes/sssds-md.md)] 데이터 센터에서 데이터베이스 복사가 시작된 UTC 시간입니다.|  

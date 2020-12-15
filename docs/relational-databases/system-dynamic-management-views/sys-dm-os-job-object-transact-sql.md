@@ -19,13 +19,13 @@ helpviewer_keywords:
 ms.assetid: 6e76b39f-236e-4bbf-b0b5-38be190d81e8
 author: julieMSFT
 ms.author: jrasnick
-monikerRange: = azuresqldb-current || = sqlallproducts-allversions
-ms.openlocfilehash: c8ee9c4054a9bb39f7eebcd30aa0fa9c85d7bde7
-ms.sourcegitcommit: 32135463a8494d9ed1600a58f51819359e3c09dc
+monikerRange: = azuresqldb-current
+ms.openlocfilehash: 456197c4519ca4135cf4a5edbf38d58c6d9246a8
+ms.sourcegitcommit: 1a544cf4dd2720b124c3697d1e62ae7741db757c
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 10/08/2020
-ms.locfileid: "91834072"
+ms.lasthandoff: 12/14/2020
+ms.locfileid: "97472854"
 ---
 # <a name="sysdm_os_job_object-azure-sql-database"></a>sys.dm_os_job_object(Azure SQL Database)
 [!INCLUDE[Azure SQL Database Azure SQL Managed Instance](../../includes/applies-to-version/asdb-asdbmi.md)]
@@ -34,7 +34,7 @@ ms.locfileid: "91834072"
 
 작업 개체는 운영 체제 수준에서 CPU, 메모리 및 IO 리소스 관리를 구현 하는 Windows 구문입니다. 작업 개체에 대 한 자세한 내용은 [작업 개체](/windows/desktop/ProcThread/job-objects)를 참조 하세요.
   
-|열|데이터 형식|Description|  
+|열|데이터 형식|설명|  
 |-------------|---------------|-----------------|  
 |cpu_rate|**int**|각 일정 간격 중에 SQL Server 스레드가 사용할 수 있는 프로세서 주기 부분을 지정 합니다. 값은 1만-주기 예약 간격 내에서 사용 가능한 주기의 백분율로 보고 되며 논리 Cpu 수를 곱합니다. 예를 들어 논리적 Cpu가 8 인 SQL Server 인스턴스의 값 800은 스레드가 Cpu를 사용할 수 있다는 것을 의미 합니다.|
 |cpu_affinity_mask|**bigint**|SQL Server 프로세스가 프로세서 그룹 내에서 사용할 수 있는 논리 프로세서를 설명 하는 비트 마스크입니다. 예를 들어 cpu_affinity_mask 255 (이진의 1111 1111)는 처음 8 개의 논리적 프로세서를 사용할 수 있음을 의미 합니다. <br /><br />이 열은 이전 버전과의 호환성을 위해 제공 됩니다. 프로세서 그룹을 보고 하지 않으며 프로세서 그룹이 64 개 이상의 논리 프로세서를 포함 하는 경우 보고 된 값이 잘못 될 수 있습니다. 대신이 `process_physical_affinity` 열을 사용 하 여 프로세서 선호도를 확인 합니다.|

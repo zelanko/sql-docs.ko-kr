@@ -21,13 +21,13 @@ helpviewer_keywords:
 ms.assetid: a5dbc842-71a0-4f62-b5e0-f560a99b7f8c
 author: markingmyname
 ms.author: maghan
-monikerRange: '>=aps-pdw-2016||=azuresqldb-current||=azure-sqldw-latest||>=sql-server-2016||=sqlallproducts-allversions||>=sql-server-linux-2017||=azuresqldb-mi-current'
-ms.openlocfilehash: 8400701be6e002701da112294bbfbf7c11b7da18
-ms.sourcegitcommit: dd36d1cbe32cd5a65c6638e8f252b0bd8145e165
+monikerRange: '>=aps-pdw-2016||=azuresqldb-current||=azure-sqldw-latest||>=sql-server-2016||>=sql-server-linux-2017||=azuresqldb-mi-current'
+ms.openlocfilehash: 09a7add1433bc9eb8184843f24d113e3706a4c36
+ms.sourcegitcommit: 1a544cf4dd2720b124c3697d1e62ae7741db757c
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 09/08/2020
-ms.locfileid: "89537362"
+ms.lasthandoff: 12/14/2020
+ms.locfileid: "97475094"
 ---
 # <a name="systypes-transact-sql"></a>sys.types(Transact-SQL)
 [!INCLUDE [sql-asdb-asdbmi-asa-pdw](../../includes/applies-to-version/sql-asdb-asdbmi-asa-pdw.md)]
@@ -38,10 +38,10 @@ ms.locfileid: "89537362"
 |-----------------|---------------|-----------------|  
 |**name**|**sysname**|형식의 이름입니다. 스키마 내에서 고유합니다.|  
 |**system_type_id**|**tinyint**|형식의 내부 시스템 형식 ID입니다.|  
-|**user_type_id**|**int**|유형 ID입니다. 데이터베이스 내에서 고유합니다. 시스템 데이터 형식의 경우 system_type_id을 **user_type_id**  =  **system_type_id**합니다.|  
+|**user_type_id**|**int**|유형 ID입니다. 데이터베이스 내에서 고유합니다. 시스템 데이터 형식의 경우 system_type_id을 **user_type_id**  =  합니다.|  
 |**schema_id**|**int**|형식이 속한 스키마의 ID입니다.|  
 |**principal_id**|**int**|스키마 소유자와 다른 경우 개별 소유자의 ID입니다. 기본적으로 스키마에 포함된 개체는 스키마 소유자가 소유합니다. 그러나 ALTER AUTHORIZATION 문으로 대체 소유자를 지정하여 소유권을 변경할 수 있습니다.<br /><br /> 대체 개별 소유자가 없으면 NULL입니다.|  
-|**max_length**|**smallint**|유형의 최대 길이(바이트)입니다.<br /><br /> -1 = 열 데이터 형식이 **varchar (max)**, **nvarchar (max)**, **varbinary (max)** 또는 **xml**입니다.<br /><br /> **텍스트** 열의 경우에는 **max_length** 값이 16이 됩니다.|  
+|**max_length**|**smallint**|유형의 최대 길이(바이트)입니다.<br /><br /> -1 = 열 데이터 형식이 **varchar (max)**, **nvarchar (max)**, **varbinary (max)** 또는 **xml** 입니다.<br /><br /> **텍스트** 열의 경우에는 **max_length** 값이 16이 됩니다.|  
 |**전체 자릿수**|**tinyint**|숫자 기반 형식인 경우에는 형식의 최대 전체 자릿수이며 그렇지 않으면 0입니다.|  
 |**scale**|**tinyint**|숫자 기반 형식인 경우에는 형식의 최대 소수 자릿수이며 그렇지 않으면 0입니다.|  
 |**collation_name**|**sysname**|문자 기반인 경우에는 형식의 데이터 정렬 이름이고 그렇지 않으면 NULL입니다.|  

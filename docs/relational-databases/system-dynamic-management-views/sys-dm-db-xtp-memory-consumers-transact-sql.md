@@ -1,6 +1,6 @@
 ---
 description: sys.dm_db_xtp_memory_consumers(Transact-SQL)
-title: sys. dm_db_xtp_memory_consumers (Transact-sql) | Microsoft Docs
+title: sys.dm_db_xtp_memory_consumers (Transact-sql) | Microsoft Docs
 ms.custom: ''
 ms.date: 03/07/2017
 ms.prod: sql
@@ -20,13 +20,13 @@ helpviewer_keywords:
 ms.assetid: f7ab2eaf-e627-464d-91fe-0e170b3f37bc
 author: markingmyname
 ms.author: maghan
-monikerRange: =azure-sqldw-latest||>=sql-server-2016||=sqlallproducts-allversions||>=sql-server-linux-2017||=azuresqldb-mi-current
-ms.openlocfilehash: 321297a2590a18ed7e51364b3f532076f90ce740
-ms.sourcegitcommit: dd36d1cbe32cd5a65c6638e8f252b0bd8145e165
+monikerRange: =azure-sqldw-latest||>=sql-server-2016||>=sql-server-linux-2017||=azuresqldb-mi-current
+ms.openlocfilehash: a962925e0a359055286b6598914cd3e79cf8036c
+ms.sourcegitcommit: 1a544cf4dd2720b124c3697d1e62ae7741db757c
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 09/08/2020
-ms.locfileid: "89542241"
+ms.lasthandoff: 12/14/2020
+ms.locfileid: "97474974"
 ---
 # <a name="sysdm_db_xtp_memory_consumers-transact-sql"></a>sys.dm_db_xtp_memory_consumers(Transact-SQL)
 [!INCLUDE[sql-asdb-asdbmi](../../includes/applies-to-version/sql-asdb-asdbmi.md)]
@@ -47,10 +47,10 @@ ms.locfileid: "89542241"
 |allocated_bytes|**bigint**|이 소비자에 대해 예약된 바이트 수입니다.|  
 |used_bytes|**bigint**|이 소비자가 사용하는 바이트입니다. varheap에만 적용됩니다.|  
 |allocation_count|**int**|할당 수입니다.|  
-|partition_count|**int**|내부적으로만 사용됩니다.|  
-|sizeclass_count|**int**|내부적으로만 사용됩니다.|  
-|min_sizeclass|**int**|내부적으로만 사용됩니다.|  
-|max_sizeclass|**int**|내부적으로만 사용됩니다.|  
+|partition_count|**int**|내부 전용입니다.|  
+|sizeclass_count|**int**|내부 전용입니다.|  
+|min_sizeclass|**int**|내부 전용입니다.|  
+|max_sizeclass|**int**|내부 전용입니다.|  
 |memory_consumer_address|**varbinary**|소비자의 내부 주소입니다. 내부 전용입니다.|  
 |xtp_object_id|**bigint**|메모리 액세스에 최적화 된 테이블에 해당 하는 메모리 내 OLTP 개체 ID입니다.|  
   
@@ -65,10 +65,10 @@ ms.locfileid: "89542241"
  시스템 테이블은 VIEW DATABASE STATE 권한이 있는 사용자의 경우에만 반환됩니다.  
   
 ## <a name="general-remarks"></a>일반적인 주의 사항  
- 메모리 최적화 테이블에 columnstore 인덱스가 있는 경우 시스템은 일부 메모리를 사용 하는 일부 내부 테이블을 사용 하 여 columnstore 인덱스에 대 한 데이터를 추적 합니다. 이러한 내부 테이블 및 메모리 사용을 보여 주는 예제 쿼리에 대 한 자세한 내용은 [memory_optimized_tables_internal_attributes (transact-sql)](../../relational-databases/system-catalog-views/sys-memory-optimized-tables-internal-attributes-transact-sql.md)를 참조 하세요.
+ 메모리 최적화 테이블에 columnstore 인덱스가 있는 경우 시스템은 일부 메모리를 사용 하는 일부 내부 테이블을 사용 하 여 columnstore 인덱스에 대 한 데이터를 추적 합니다. 이러한 내부 테이블 및 메모리 사용을 보여 주는 예제 쿼리에 대 한 자세한 내용은 [sys.memory_optimized_tables_internal_attributes (transact-sql)](../../relational-databases/system-catalog-views/sys-memory-optimized-tables-internal-attributes-transact-sql.md)를 참조 하세요.
  
   
-## <a name="examples"></a>예제  
+## <a name="examples"></a>예  
   
 ```  
 -- memory consumers (database level)  
@@ -112,7 +112,7 @@ NULL       VARHEAP                   NULL        NULL        1405943808         
 (17 row(s) affected)  
 ```  
   
- 이 DMV에서 할당 되 고 사용 되는 총 메모리는 [dm_db_xtp_table_memory_stats &#40;transact-sql&#41;](../../relational-databases/system-dynamic-management-views/sys-dm-db-xtp-table-memory-stats-transact-sql.md)의 개체 수준과 동일 합니다.  
+ 이 DMV에서 할당 되 고 사용 되는 총 메모리는 [sys.dm_db_xtp_table_memory_stats &#40;transact-sql&#41;](../../relational-databases/system-dynamic-management-views/sys-dm-db-xtp-table-memory-stats-transact-sql.md)의 개체 수준과 동일 합니다.  
   
 ```  
 select  sum(allocated_bytes)/(1024*1024) as total_allocated_MB,   

@@ -14,13 +14,13 @@ helpviewer_keywords:
 ms.assetid: d40e3fd6-9057-4371-8236-95cef300603e
 author: markingmyname
 ms.author: maghan
-monikerRange: '>=aps-pdw-2016||=azuresqldb-current||=azure-sqldw-latest||>=sql-server-2016||=sqlallproducts-allversions||>=sql-server-linux-2017||=azuresqldb-mi-current'
-ms.openlocfilehash: 741906e1673d5ac8fe5b88e4d546ee1807667063
-ms.sourcegitcommit: e700497f962e4c2274df16d9e651059b42ff1a10
+monikerRange: '>=aps-pdw-2016||=azuresqldb-current||=azure-sqldw-latest||>=sql-server-2016||>=sql-server-linux-2017||=azuresqldb-mi-current'
+ms.openlocfilehash: 4d126d6718836f5fb1b242564047ab1f0ca807a3
+ms.sourcegitcommit: 1a544cf4dd2720b124c3697d1e62ae7741db757c
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 08/17/2020
-ms.locfileid: "88486750"
+ms.lasthandoff: 12/14/2020
+ms.locfileid: "97473474"
 ---
 # <a name="sql-server-native-client-data-type-support-for-ole-db-date-and-time-improvements"></a>OLE DB 날짜 및 시간 기능 향상을 위한 데이터 형식 지원 SQL Server Native Client
 [!INCLUDE[SQL Server Azure SQL Database Synapse Analytics PDW ](../../includes/applies-to-version/sql-asdb-asdbmi-asa-pdw.md)]
@@ -75,7 +75,7 @@ ms.locfileid: "88486750"
   
  다음과 같은 기존 OLE DB 구조체의 구현은 새로운 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 날짜 및 시간 데이터 형식을 지원하도록 수정되었습니다. 단, 정의는 변경되지 않았습니다.  
   
--   DBTYPE_DATE. 자동 DATE 형식입니다. 내부적으로 **double**로 표시됩니다. 정수 부분은 1899년 12월 30일 이후의 일 수이고, 소수 부분은 하루를 분수로 표시한 수입니다. 이 형식의 정확도는 1초 단위이므로 소수 자릿수가 0입니다.  
+-   DBTYPE_DATE. 자동 DATE 형식입니다. 내부적으로 **double** 로 표시됩니다. 정수 부분은 1899년 12월 30일 이후의 일 수이고, 소수 부분은 하루를 분수로 표시한 수입니다. 이 형식의 정확도는 1초 단위이므로 소수 자릿수가 0입니다.  
   
 -   DBTYPE_DBDATE  
   
@@ -160,7 +160,7 @@ enum SQLVARENUM {
 };  
 ```  
   
- [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]기본 스키마가 **datetime**이 아닌 **datetime2** 를 사용 하도록 업데이트 되는 경우 **sql_variant** 를 사용 하 고 **datetime** 의 제한 된 전체 자릿수를 사용 하는 Native Client로 마이그레이션하는 응용 프로그램은 업데이트 되어야 합니다.  
+ [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]기본 스키마가 **datetime** 이 아닌 **datetime2** 를 사용 하도록 업데이트 되는 경우 **sql_variant** 를 사용 하 고 **datetime** 의 제한 된 전체 자릿수를 사용 하는 Native Client로 마이그레이션하는 응용 프로그램은 업데이트 되어야 합니다.  
   
  SSVARIANT의 액세스 매크로도 다음과 같은 추가를 통해 확장되었습니다.  
   
@@ -181,7 +181,7 @@ enum SQLVARENUM {
 |DBTYPE_DBTIME2|**time**(p)|[!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]Native Client OLE DB 공급자는 DBCOLUMDESC *bscale* 멤버를 검사 하 여 초 소수 부분 자릿수를 확인 합니다.|  
 |DBTYPE_DBTIMESTAMPOFFSET|**datetimeoffset**(p)|[!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]Native Client OLE DB 공급자는 DBCOLUMDESC *bscale* 멤버를 검사 하 여 초 소수 부분 자릿수를 확인 합니다.|  
   
- 애플리케이션은 *wType*에 DBTYPE_DBTIMESTAMP를 지정하면 *pwszTypeName*에 형식 이름을 지정하여 **datetime2**에 대한 매핑을 재정의할 수 있습니다. **datetime**을 지정하는 경우 *bScale*은 3이어야 합니다. **smalldatetime**을 지정하는 경우 *bScale*은 0이어야 합니다. *bScale*이 *wType* 및 *pwszTypeName*과 일치하지 않는 경우 DB_E_BADSCALE이 반환됩니다.  
+ 애플리케이션은 *wType* 에 DBTYPE_DBTIMESTAMP를 지정하면 *pwszTypeName* 에 형식 이름을 지정하여 **datetime2** 에 대한 매핑을 재정의할 수 있습니다. **datetime** 을 지정하는 경우 *bScale* 은 3이어야 합니다. **smalldatetime** 을 지정하는 경우 *bScale* 은 0이어야 합니다. *bScale* 이 *wType* 및 *pwszTypeName* 과 일치하지 않는 경우 DB_E_BADSCALE이 반환됩니다.  
   
 ## <a name="see-also"></a>참고 항목  
  [날짜 및 시간 기능 향상&#40;OLE DB&#41;](../../relational-databases/native-client-ole-db-date-time/date-and-time-improvements-ole-db.md)  

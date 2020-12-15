@@ -19,14 +19,14 @@ helpviewer_keywords:
 ms.assetid: 411b2e71-4421-4ef5-900d-5af068750899
 author: markingmyname
 ms.author: maghan
-monikerRange: = azuresqldb-current || = sqlallproducts-allversions
+monikerRange: = azuresqldb-current
 ms.custom: seo-dt-2019
-ms.openlocfilehash: a27c286316dd49407b0cb74027eefc296a8ca654
-ms.sourcegitcommit: 32135463a8494d9ed1600a58f51819359e3c09dc
+ms.openlocfilehash: 69dfbde65d00f3d6995d1bce784a46a64515f8fe
+ms.sourcegitcommit: 1a544cf4dd2720b124c3697d1e62ae7741db757c
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 10/08/2020
-ms.locfileid: "91834274"
+ms.lasthandoff: 12/14/2020
+ms.locfileid: "97472894"
 ---
 # <a name="sysdm_continuous_copy_status-azure-sql-database"></a>sys.dm_continuous_copy_status(Azure SQL Database)
 [!INCLUDE[Azure SQL Database Azure SQL Managed Instance](../../includes/applies-to-version/asdb-asdbmi.md)]
@@ -36,7 +36,7 @@ ms.locfileid: "91834274"
 SQL Database V12를 사용 하는 경우에는 *sys.dm_continuous_copy_status* 에만 적용 되므로 [sys.dm_geo_replication_link_status](../../relational-databases/system-dynamic-management-views/sys-dm-geo-replication-link-status-azure-sql-database.md) 를 사용 해야 합니다.
 
   
-|열 이름|데이터 형식|Description|  
+|열 이름|데이터 형식|설명|  
 |-----------------|---------------|-----------------|  
 |**copy_guid**|**uniqueidentifier**|복제본 데이터베이스의 고유 ID입니다.|  
 |**partner_server**|**sysname**|연결된 SQL Database 서버의 이름입니다.|  
@@ -57,9 +57,9 @@ SQL Database V12를 사용 하는 경우에는 *sys.dm_continuous_copy_status* �
   
  데이터베이스에서 연속 복사 관계가 종료 되 면 **sys.dm_continuous_copy_status** 보기에서 해당 데이터베이스에 대 한 행이 사라집니다.  
   
- **Sys.dm_database_copies** 뷰와 마찬가지로 **sys.dm_continuous_copy_status** 는 데이터베이스가 주 데이터베이스 또는 활성 보조 데이터베이스 중에서 연속 복사 관계의 상태를 반영 합니다. **Sys.dm_database_copies**와 달리 **sys.dm_continuous_copy_status** 에는 작업과 성능에 대 한 세부 정보를 제공 하는 여러 열이 포함 되어 있습니다. 이러한 열에는 **last_replication**및 **replication_lag_sec**가 포함 됩니다.  
+ **Sys.dm_database_copies** 뷰와 마찬가지로 **sys.dm_continuous_copy_status** 는 데이터베이스가 주 데이터베이스 또는 활성 보조 데이터베이스 중에서 연속 복사 관계의 상태를 반영 합니다. **Sys.dm_database_copies** 와 달리 **sys.dm_continuous_copy_status** 에는 작업과 성능에 대 한 세부 정보를 제공 하는 여러 열이 포함 되어 있습니다. 이러한 열에는 **last_replication** 및 **replication_lag_sec** 가 포함 됩니다.  
   
 ## <a name="see-also"></a>참고 항목  
  [sys.dm_database_copies &#40;Azure SQL Database&#41;](../../relational-databases/system-dynamic-management-views/sys-dm-database-copies-azure-sql-database.md)   
- [Transact-sql&#41;&#40;활성 지역 복제 저장 프로시저 ](../system-stored-procedures/system-stored-procedures-transact-sql.md)  
+ [Transact-sql&#41;&#40;활성 Geo-Replication 저장 프로시저 ](../system-stored-procedures/system-stored-procedures-transact-sql.md)  
   

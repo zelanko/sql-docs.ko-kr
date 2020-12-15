@@ -13,13 +13,13 @@ helpviewer_keywords:
 ms.assetid: 2a738aef-c991-4f62-bdab-a5221c335f31
 author: markingmyname
 ms.author: maghan
-monikerRange: '>=aps-pdw-2016||=azuresqldb-current||=azure-sqldw-latest||>=sql-server-2016||=sqlallproducts-allversions||>=sql-server-linux-2017||=azuresqldb-mi-current'
-ms.openlocfilehash: 5ce4d81317218c8823b528c3e37df40694471e9c
-ms.sourcegitcommit: 4d370399f6f142e25075b3714e5c2ce056b1bfd0
+monikerRange: '>=aps-pdw-2016||=azuresqldb-current||=azure-sqldw-latest||>=sql-server-2016||>=sql-server-linux-2017||=azuresqldb-mi-current'
+ms.openlocfilehash: 0c5c24773ebf373c9158d819a4efb95a9b63b779
+ms.sourcegitcommit: 1a544cf4dd2720b124c3697d1e62ae7741db757c
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 10/09/2020
-ms.locfileid: "91868916"
+ms.lasthandoff: 12/14/2020
+ms.locfileid: "97473544"
 ---
 # <a name="managing-text-and-image-columns---use-data-at-execution-parameters"></a>텍스트 및 이미지 열 관리 - Data-at-Execution 매개 변수 사용
 [!INCLUDE[SQL Server Azure SQL Database Synapse Analytics PDW ](../../includes/applies-to-version/sql-asdb-asdbmi-asa-pdw.md)]
@@ -29,7 +29,7 @@ ms.locfileid: "91868916"
   
 1.  [SQLBindParameter](../../relational-databases/native-client-odbc-api/sqlbindparameter.md)를 호출하여 프로그램 버퍼를 문 매개 변수에 바인딩하는 경우:  
   
-    -   마지막 매개 변수에 대해 SQL_LEN_DATA_AT_EXEC(*길이*)를 사용합니다. 여기서 *길이* 는 **text**, **ntext**또는 **image** 매개 변수 데이터의 총 길이(바이트)입니다.  
+    -   마지막 매개 변수에 대해 SQL_LEN_DATA_AT_EXEC(*길이*)를 사용합니다. 여기서 *길이* 는 **text**, **ntext** 또는 **image** 매개 변수 데이터의 총 길이(바이트)입니다.  
   
     -   프로그램에서 정의된 매개 변수 식별자의 **rgbValue** (8번째 매개 변수)를 사용합니다.  
   

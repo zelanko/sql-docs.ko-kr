@@ -19,13 +19,13 @@ helpviewer_keywords:
 ms.assetid: d405fb8d-3b02-4327-8d45-f643df7f501a
 author: rothja
 ms.author: jroth
-monikerRange: =azuresqldb-current||>=sql-server-2016||=sqlallproducts-allversions||>=sql-server-linux-2017||=azuresqldb-mi-current
-ms.openlocfilehash: 4f142f5de6f5580e7b0e21658e4b3c276984cd88
-ms.sourcegitcommit: e700497f962e4c2274df16d9e651059b42ff1a10
+monikerRange: =azuresqldb-current||>=sql-server-2016||>=sql-server-linux-2017||=azuresqldb-mi-current
+ms.openlocfilehash: f1c547cee24397cc9cc1c0b139bd728aef92c2b3
+ms.sourcegitcommit: 1a544cf4dd2720b124c3697d1e62ae7741db757c
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 08/17/2020
-ms.locfileid: "88474705"
+ms.lasthandoff: 12/14/2020
+ms.locfileid: "97472784"
 ---
 # <a name="changetable-transact-sql"></a>CHANGETABLE(Transact-SQL)
 [!INCLUDE [SQL Server SQL Database](../../includes/applies-to-version/sql-asdb.md)]
@@ -48,7 +48,7 @@ CHANGETABLE (
   
 ## <a name="arguments"></a>인수  
  변경 *테이블* , *last_sync_version*  
- *Last_sync_version*지정 된 버전 이후에 발생 한 테이블의 모든 변경 내용에 대 한 추적 정보를 반환 합니다.  
+ *Last_sync_version* 지정 된 버전 이후에 발생 한 테이블의 모든 변경 내용에 대 한 추적 정보를 반환 합니다.  
   
  *table*  
  추적된 변경 내용을 가져올 사용자 정의 테이블입니다. 테이블에서 변경 내용 추적을 사용할 수 있어야 합니다. 한 부분, 두 부분, 세 부분 또는 네 부분으로 이루어진 테이블 이름을 사용할 수 있습니다. 테이블 이름은 테이블에 대한 동의어가 될 수 있습니다.  
@@ -60,7 +60,7 @@ CHANGETABLE (
   
  호출 애플리케이션에서 last_sync_version을 가져오므로 애플리케이션은 값을 유지해야 합니다. 애플리케이션에서 이 값을 손실하면 데이터를 다시 초기화해야 합니다.  
   
- *last_sync_version* 는 **bigint**입니다. 값은 스칼라여야 합니다. 식은 구문 오류를 야기합니다.  
+ *last_sync_version* 는 **bigint** 입니다. 값은 스칼라여야 합니다. 식은 구문 오류를 야기합니다.  
   
  값이 NULL이면 추적되는 모든 변경 내용이 반환됩니다.  
   
@@ -149,7 +149,7 @@ CHANGETABLE (
   
 -   VIEW CHANGE TRACKING  
   
-## <a name="examples"></a>예제  
+## <a name="examples"></a>예  
   
 ### <a name="a-returning-rows-for-an-initial-synchronization-of-data"></a>A. 데이터의 초기 동기화에 대한 행 반환  
  다음 예제에서는 테이블 데이터의 초기 동기화에 대한 데이터를 가져오는 방법을 보여 줍니다. 쿼리는 모든 행 데이터 및 연관된 버전을 반환합니다. 그러면 동기화된 데이터를 포함하는 시스템에 이 데이터를 추가하거나 삽입할 수 있습니다.  
@@ -214,7 +214,7 @@ WHERE
  [변경 내용 추적 함수&#40;Transact-SQL&#41;](../../relational-databases/system-functions/change-tracking-functions-transact-sql.md)   
  [데이터 변경 내용 추적&#40;SQL Server&#41;](../../relational-databases/track-changes/track-data-changes-sql-server.md)   
  [Transact-sql&#41;CHANGE_TRACKING_IS_COLUMN_IN_MASK &#40;](../../relational-databases/system-functions/change-tracking-is-column-in-mask-transact-sql.md)   
- [Transact-sql&#41;CHANGE_TRACKING_CURRENT_VERSION &#40;](../../relational-databases/system-functions/change-tracking-current-version-transact-sql.md)   
+ [CHANGE_TRACKING_CURRENT_VERSION&#40;Transact-SQL&#41;](../../relational-databases/system-functions/change-tracking-current-version-transact-sql.md)   
  [CHANGE_TRACKING_MIN_VALID_VERSION&#40;Transact-SQL&#41;](../../relational-databases/system-functions/change-tracking-min-valid-version-transact-sql.md)  
   
   

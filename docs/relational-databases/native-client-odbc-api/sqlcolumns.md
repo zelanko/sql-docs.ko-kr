@@ -14,27 +14,27 @@ helpviewer_keywords:
 ms.assetid: 69d3af44-8196-43ab-8037-cdd06207b171
 author: markingmyname
 ms.author: maghan
-monikerRange: '>=aps-pdw-2016||=azuresqldb-current||=azure-sqldw-latest||>=sql-server-2016||=sqlallproducts-allversions||>=sql-server-linux-2017||=azuresqldb-mi-current'
-ms.openlocfilehash: f44f2e1c9754096ae08bc64298815a8849f92478
-ms.sourcegitcommit: 04cf7905fa32e0a9a44575a6f9641d9a2e5ac0f8
+monikerRange: '>=aps-pdw-2016||=azuresqldb-current||=azure-sqldw-latest||>=sql-server-2016||>=sql-server-linux-2017||=azuresqldb-mi-current'
+ms.openlocfilehash: 73bdc833b31251e3cf0747aca19371ad2b0cb839
+ms.sourcegitcommit: 1a544cf4dd2720b124c3697d1e62ae7741db757c
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 10/07/2020
-ms.locfileid: "91810599"
+ms.lasthandoff: 12/14/2020
+ms.locfileid: "97473774"
 ---
 # <a name="sqlcolumns"></a>SQLColumns
 [!INCLUDE[SQL Server Azure SQL Database Synapse Analytics PDW ](../../includes/applies-to-version/sql-asdb-asdbmi-asa-pdw.md)]
 
-  **Sqlcolumns** 는 *CatalogName*, *TableName*또는 *ColumnName* 매개 변수에 대 한 값이 있는지 여부를 SQL_SUCCESS을 반환 합니다. 이러한 매개 변수에 잘못 된 값이 사용 되는 경우 **Sqlfetch** SQL_NO_DATA 반환 합니다.  
+  **Sqlcolumns** 는 *CatalogName*, *TableName* 또는 *ColumnName* 매개 변수에 대 한 값이 있는지 여부를 SQL_SUCCESS을 반환 합니다. 이러한 매개 변수에 잘못 된 값이 사용 되는 경우 **Sqlfetch** SQL_NO_DATA 반환 합니다.  
   
 > [!NOTE]  
 >  큰 값 형식의 경우 모든 길이 매개 변수는 SQL_SS_LENGTH_UNLIMITED 값으로 반환됩니다.  
   
  **Sqlcolumns** 는 정적 서버 커서에 대해 실행할 수 있습니다. 업데이트할 수 있는 (동적 또는 키 집합) 커서에 대해 **Sqlcolumns** 를 실행 하려고 하면 커서 유형이 변경 되었음을 나타내는 SQL_SUCCESS_WITH_INFO 반환 됩니다.  
   
- [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] Native Client ODBC 드라이버는 *CatalogName* 매개 변수의 두 부분으로 구성된 이름인 *Linked_Server_Name.Catalog_Name*을 사용하여 연결된 서버의 테이블에 대한 정보를 보고할 수 있도록 지원합니다.  
+ [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] Native Client ODBC 드라이버는 *CatalogName* 매개 변수의 두 부분으로 구성된 이름인 *Linked_Server_Name.Catalog_Name* 을 사용하여 연결된 서버의 테이블에 대한 정보를 보고할 수 있도록 지원합니다.  
   
- ODBC 2의 경우. *x* 응용 프로그램 *tablename*에서 와일드 카드를 사용 하지 않습니다. **sqlcolumns** 는 이름이 *tablename* 과 일치 하 고 현재 사용자가 소유 하 고 있는 모든 테이블에 대 한 정보를 반환 합니다. 현재 사용자가 이름이 *tablename* 매개 변수와 일치 하는 테이블을 소유 하지 않는 경우 **sqlcolumns** 는 다른 사용자가 소유 하 고 있는 테이블에 대 한 정보를 반환 합니다 .이는 테이블 이름이 *tablename* 매개 변수와 일치 합니다. ODBC 2의 경우. 와일드 카드를 사용 하는 *x* 응용 프로그램 **sqlcolumns** 는 이름이 *TableName*과 일치 하는 모든 테이블을 반환 합니다. ODBC 3의 경우. *x* 응용 프로그램 **sqlcolumns** 는 소유자 또는 와일드 카드 사용 여부에 관계 없이 이름이 *TableName* 과 일치 하는 모든 테이블을 반환 합니다.  
+ ODBC 2의 경우. *x* 응용 프로그램 *tablename* 에서 와일드 카드를 사용 하지 않습니다. **sqlcolumns** 는 이름이 *tablename* 과 일치 하 고 현재 사용자가 소유 하 고 있는 모든 테이블에 대 한 정보를 반환 합니다. 현재 사용자가 이름이 *tablename* 매개 변수와 일치 하는 테이블을 소유 하지 않는 경우 **sqlcolumns** 는 다른 사용자가 소유 하 고 있는 테이블에 대 한 정보를 반환 합니다 .이는 테이블 이름이 *tablename* 매개 변수와 일치 합니다. ODBC 2의 경우. 와일드 카드를 사용 하는 *x* 응용 프로그램 **sqlcolumns** 는 이름이 *TableName* 과 일치 하는 모든 테이블을 반환 합니다. ODBC 3의 경우. *x* 응용 프로그램 **sqlcolumns** 는 소유자 또는 와일드 카드 사용 여부에 관계 없이 이름이 *TableName* 과 일치 하는 모든 테이블을 반환 합니다.  
   
  다음 표에서는 결과 집합에서 반환되는 열을 나열합니다.  
   
@@ -75,7 +75,7 @@ ms.locfileid: "91810599"
  자세한 내용은 [ODBC&#41;&#40;날짜 및 시간 향상 ](../../relational-databases/native-client-odbc-date-time/date-and-time-improvements-odbc.md)을 참조 하세요.  
   
 ## <a name="sqlcolumns-support-for-large-clr-udts"></a>큰 CLR UDT에 대한 SQLColumns 지원  
- **Sqlcolumns** 는 크기가 높은 CLR udt (사용자 정의 형식)를 지원 합니다. 자세한 내용은 [ODBC&#41;&#40;LARGE CLR 사용자 정의 형식 ](../../relational-databases/native-client/odbc/large-clr-user-defined-types-odbc.md)을 참조 하세요.  
+ **Sqlcolumns** 는 크기가 높은 CLR udt (사용자 정의 형식)를 지원 합니다. 자세한 내용은 [ODBC&#41;&#40;대량 CLR User-Defined 형식 ](../../relational-databases/native-client/odbc/large-clr-user-defined-types-odbc.md)을 참조 하세요.  
   
 ## <a name="sqlcolumns-support-for-sparse-columns"></a>스파스 열에 대한 SQLColumns 지원  
  [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]SQLColumns의 결과 집합에는 두 개의 특정 열이 추가 되었습니다.  

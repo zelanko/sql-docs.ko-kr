@@ -1,6 +1,6 @@
 ---
 description: sys.dm_db_log_stats(Transact-SQL)
-title: sys. dm_db_log_stats (Transact-sql) | Microsoft Docs
+title: sys.dm_db_log_stats (Transact-sql) | Microsoft Docs
 ms.custom: ''
 ms.date: 05/17/2017
 ms.prod: sql
@@ -19,13 +19,13 @@ helpviewer_keywords:
 ms.assetid: ''
 author: markingmyname
 ms.author: maghan
-monikerRange: '>=sql-server-2017||=sqlallproducts-allversions||>=sql-server-linux-2017||=azuresqldb-mi-current'
-ms.openlocfilehash: 98c8b45ccde39b7155443b1ef7fabd994f6b26ab
-ms.sourcegitcommit: dd36d1cbe32cd5a65c6638e8f252b0bd8145e165
+monikerRange: '>=sql-server-2017||>=sql-server-linux-2017||=azuresqldb-mi-current'
+ms.openlocfilehash: 5a5ea85a212e33a3e26ef295cc4d38c84967560a
+ms.sourcegitcommit: 1a544cf4dd2720b124c3697d1e62ae7741db757c
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 09/08/2020
-ms.locfileid: "89550307"
+ms.lasthandoff: 12/14/2020
+ms.locfileid: "97472834"
 ---
 # <a name="sysdm_db_log_stats-transact-sql"></a>sys.dm_db_log_stats(Transact-SQL)   
 [!INCLUDE[tsql-appliesto-2016sp2-asdb-xxxx-xxx-md](../../includes/tsql-appliesto-2016sp2-asdb-xxxx-xxx-md.md)]
@@ -79,7 +79,7 @@ ms.locfileid: "89550307"
 ## <a name="permissions"></a>사용 권한  
 데이터베이스에 대 한 권한이 필요 합니다 `VIEW DATABASE STATE` .   
   
-## <a name="examples"></a>예제  
+## <a name="examples"></a>예  
 
 ### <a name="a-determining-databases-in-a-ssnoversion-instance-with-high-number-of-vlfs"></a>A. Vlf 수가 많은 인스턴스에서 데이터베이스 확인 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]   
 다음 쿼리는 로그 파일에 100 개를 초과 하는 Vlf 데이터베이스를 반환 합니다. Vlf이 많으면 데이터베이스 시작, 복원 및 복구 시간에 영향을 줄 수 있습니다.

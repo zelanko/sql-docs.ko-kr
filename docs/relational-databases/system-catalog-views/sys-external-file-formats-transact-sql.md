@@ -1,6 +1,6 @@
 ---
-description: sys. external_file_formats (Transact-sql)
-title: sys. external_file_formats (Transact-sql) | Microsoft Docs
+description: sys.external_file_formats (Transact-sql)
+title: sys.external_file_formats (Transact-sql) | Microsoft Docs
 ms.custom: ''
 ms.date: 03/14/2017
 ms.prod: sql
@@ -13,15 +13,15 @@ dev_langs:
 ms.assetid: a89efb2c-0a3a-4b64-9284-6e93263e29ac
 author: markingmyname
 ms.author: maghan
-monikerRange: '>=aps-pdw-2016||=azure-sqldw-latest||>=sql-server-2016||=sqlallproducts-allversions||>=sql-server-linux-2017||=azuresqldb-mi-current'
-ms.openlocfilehash: e6e268e6169bf46cd0c7fa71290535aa4b456e39
-ms.sourcegitcommit: dd36d1cbe32cd5a65c6638e8f252b0bd8145e165
+monikerRange: '>=aps-pdw-2016||=azure-sqldw-latest||>=sql-server-2016||>=sql-server-linux-2017||=azuresqldb-mi-current'
+ms.openlocfilehash: dc5bd073b8948adbe7a31eebb43b70fa3d4358aa
+ms.sourcegitcommit: 1a544cf4dd2720b124c3697d1e62ae7741db757c
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 09/08/2020
-ms.locfileid: "89546848"
+ms.lasthandoff: 12/14/2020
+ms.locfileid: "97473014"
 ---
-# <a name="sysexternal_file_formats-transact-sql"></a>sys. external_file_formats (Transact-sql)
+# <a name="sysexternal_file_formats-transact-sql"></a>sys.external_file_formats (Transact-sql)
 [!INCLUDE [sqlserver2016-asdbmi-asa-pdw](../../includes/applies-to-version/sqlserver2016-asdbmi-asa-pdw.md)]
 
   , 및에 대 한 현재 데이터베이스의 각 외부 파일 형식에 대 한 행을 포함 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] [!INCLUDE[ssSDS](../../includes/sssds-md.md)] [!INCLUDE[ssSDW](../../includes/sssdw-md.md)] 합니다.  
@@ -46,8 +46,8 @@ ms.locfileid: "89546848"
  사용자가 소유하고 있거나 사용 권한을 부여 받은 보안 개체에 대해서만 카탈로그 뷰의 메타데이터를 볼 수 있습니다. 자세한 내용은 [Metadata Visibility Configuration](../../relational-databases/security/metadata-visibility-configuration.md)을 참조하세요.  
   
 ## <a name="see-also"></a>참고 항목  
- [external_data_sources &#40;Transact-sql&#41;](../../relational-databases/system-catalog-views/sys-external-data-sources-transact-sql.md)   
- [external_tables &#40;Transact-sql&#41;](../../relational-databases/system-catalog-views/sys-external-tables-transact-sql.md)   
+ [Transact-sql&#41;sys.external_data_sources &#40;](../../relational-databases/system-catalog-views/sys-external-data-sources-transact-sql.md)   
+ [Transact-sql&#41;sys.external_tables &#40;](../../relational-databases/system-catalog-views/sys-external-tables-transact-sql.md)   
  [CREATE EXTERNAL FILE FORMAT&#40;Transact-SQL&#41;](../../t-sql/statements/create-external-file-format-transact-sql.md)  
   
   

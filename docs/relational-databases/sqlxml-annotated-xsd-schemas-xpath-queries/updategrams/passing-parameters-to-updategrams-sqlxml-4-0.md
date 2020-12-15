@@ -17,13 +17,13 @@ ms.assetid: 2354e6e7-1860-471f-8711-4e374c5a4ed2
 author: MightyPen
 ms.author: genemi
 ms.custom: seo-lt-2019
-monikerRange: =azuresqldb-current||>=sql-server-2016||=sqlallproducts-allversions||>=sql-server-linux-2017||=azuresqldb-mi-current
-ms.openlocfilehash: ce7be0a6f01ac92f13f35e4410dc59601fdbdc01
-ms.sourcegitcommit: da88320c474c1c9124574f90d549c50ee3387b4c
+monikerRange: =azuresqldb-current||>=sql-server-2016||>=sql-server-linux-2017||=azuresqldb-mi-current
+ms.openlocfilehash: 129fceaeac7de8ca1ab44ff181dd0971b3744fa5
+ms.sourcegitcommit: 1a544cf4dd2720b124c3697d1e62ae7741db757c
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 07/01/2020
-ms.locfileid: "85790560"
+ms.lasthandoff: 12/14/2020
+ms.locfileid: "97473104"
 ---
 # <a name="passing-parameters-to-updategrams-sqlxml-40"></a>Updategram에 매개 변수 전달(SQLXML 4.0)
 [!INCLUDE [SQL Server Azure SQL Database](../../../includes/applies-to-version/sql-asdb.md)]
@@ -34,7 +34,7 @@ ms.locfileid: "85790560"
 > [!NOTE]  
 >  **\<sql:header>** 및에서는 **\<updg:header>** **nullvalue** 를 정규화 되지 않은 값으로 지정 해야 합니다. 반면에서는 **\<updg:sync>** **nullvalue** 를 정규화 된 값으로 지정 합니다 (예 **: updg: nullvalue**).  
   
-## <a name="examples"></a>예제  
+## <a name="examples"></a>예  
  다음 예제를 사용 하 여 작업 예제를 만들려면 [SQLXML 예를 실행 하기 위한 요구 사항](../../../relational-databases/sqlxml/requirements-for-running-sqlxml-examples.md)에 지정 된 요구 사항을 충족 해야 합니다.  
   
  Updategram 예를 사용하기 전에 다음 사항을 확인하십시오.  
@@ -65,7 +65,7 @@ ms.locfileid: "85790560"
   
 1.  위의 Updategram을 메모장에 복사하고 UpdategramWithParameters.xml로 파일에 저장합니다.  
   
-2.  다음 줄을 추가 하 여 sqlxml4test.vbs를 실행 하는 데 [ADO를 사용 하 여 sqlxml](../../../relational-databases/sqlxml/using-ado-to-execute-sqlxml-4-0-queries.md) 4.0 테스트 스크립트 ()를 준비 하 고 Sqlxml 4.0 쿼리를 실행 하 여 updategram를 실행 합니다 `cmd.Properties("Output Stream").Value = outStream` .  
+2.  다음 줄을 추가 하 여 updategram를 실행 하기 위해 [ADO를 사용 하 여 sqlxml 4.0 쿼리를 실행](../../../relational-databases/sqlxml/using-ado-to-execute-sqlxml-4-0-queries.md) 하는 sqlxml 4.0 테스트 스크립트 (Sqlxml4test.vbs)를 준비 합니다 `cmd.Properties("Output Stream").Value = outStream` .  
 
     ```  
     cmd.NamedParameters = True  
@@ -100,7 +100,7 @@ ms.locfileid: "85790560"
   
 1.  위의 Updategram을 메모장에 복사하고 UpdategramPassingNullvalues.xml로 파일에 저장합니다.  
   
-2.  다음 줄을 추가 하 여 sqlxml4test.vbs를 실행 하는 데 [ADO를 사용 하 여 sqlxml](../../../relational-databases/sqlxml/using-ado-to-execute-sqlxml-4-0-queries.md) 4.0 테스트 스크립트 ()를 준비 하 고 Sqlxml 4.0 쿼리를 실행 하 여 updategram를 실행 합니다 `cmd.Properties("Output Stream").Value = outStream` .  
+2.  다음 줄을 추가 하 여 updategram를 실행 하기 위해 [ADO를 사용 하 여 sqlxml 4.0 쿼리를 실행](../../../relational-databases/sqlxml/using-ado-to-execute-sqlxml-4-0-queries.md) 하는 sqlxml 4.0 테스트 스크립트 (Sqlxml4test.vbs)를 준비 합니다 `cmd.Properties("Output Stream").Value = outStream` .  
   
     ```  
     cmd.NamedParameters = True  

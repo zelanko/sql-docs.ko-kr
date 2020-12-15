@@ -20,19 +20,19 @@ helpviewer_keywords:
 ms.assetid: 8f0506b6-a4ac-4e4d-91db-8077c40cb17a
 author: VanMSFT
 ms.author: vanto
-monikerRange: = azuresqldb-current || = sqlallproducts-allversions
+monikerRange: = azuresqldb-current
 ms.custom: seo-dt-2019
-ms.openlocfilehash: 0b6f9130a4250bdb6f9c250bacbcaaa3943eeef3
-ms.sourcegitcommit: 04cf7905fa32e0a9a44575a6f9641d9a2e5ac0f8
+ms.openlocfilehash: edbe51dc6694a94fcf68b012153e065906ce2208
+ms.sourcegitcommit: 1a544cf4dd2720b124c3697d1e62ae7741db757c
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 10/07/2020
-ms.locfileid: "91810505"
+ms.lasthandoff: 12/14/2020
+ms.locfileid: "97472644"
 ---
 # <a name="sp_set_database_firewall_rule-azure-sql-database"></a>sp_set_database_firewall_rule(Azure SQL Database)
 [!INCLUDE[Azure SQL Database](../../includes/applies-to-version/asdb.md)]
 
-  에 대 한 데이터베이스 수준 방화벽 규칙을 만들거나 업데이트 [!INCLUDE[ssSDSfull](../../includes/sssdsfull-md.md)] 합니다. 데이터베이스 방화벽 규칙은 **master** 데이터베이스 및의 사용자 데이터베이스에 대해 구성할 수 있습니다 [!INCLUDE[ssSDS](../../includes/sssds-md.md)] . 데이터베이스 방화벽 규칙은 포함 된 데이터베이스 사용자를 사용할 때 특히 유용 합니다. 자세한 내용은 [포함된 데이터베이스 사용자 - 이식 가능한 데이터베이스 만들기](../../relational-databases/security/contained-database-users-making-your-database-portable.md)를 참조하세요.  
+  에 대 한 데이터베이스 수준 방화벽 규칙을 만들거나 업데이트 [!INCLUDE[ssSDSfull](../../includes/sssdsfull-md.md)] 합니다. 데이터베이스 방화벽 규칙은 **master** 데이터베이스 및의 사용자 데이터베이스에 대해 구성할 수 있습니다 [!INCLUDE[ssSDS](../../includes/sssds-md.md)] . 데이터베이스 방화벽 규칙은 포함 된 데이터베이스 사용자를 사용할 때 특히 유용 합니다. 자세한 내용은 [포함된 데이터베이스 사용자 - 데이터베이스를 이식 가능하게 만들기](../../relational-databases/security/contained-database-users-making-your-database-portable.md)를 참조하세요.  
   
 ## <a name="syntax"></a>구문  
   

@@ -18,13 +18,13 @@ ms.author: maghan
 ms.custom: ''
 ms.reviewer: ''
 ms.date: 03/14/2017
-monikerRange: '>=aps-pdw-2016||=azuresqldb-current||=azure-sqldw-latest||>=sql-server-2016||=sqlallproducts-allversions||>=sql-server-linux-2017||=azuresqldb-mi-current'
-ms.openlocfilehash: 7cbf8a5d7fa207b7be9eb2e6359766064dbef343
-ms.sourcegitcommit: e700497f962e4c2274df16d9e651059b42ff1a10
+monikerRange: '>=aps-pdw-2016||=azuresqldb-current||=azure-sqldw-latest||>=sql-server-2016||>=sql-server-linux-2017||=azuresqldb-mi-current'
+ms.openlocfilehash: edff3154a4385ee87bf7686cf5e2954e026e495f
+ms.sourcegitcommit: 1a544cf4dd2720b124c3697d1e62ae7741db757c
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 08/17/2020
-ms.locfileid: "88455925"
+ms.lasthandoff: 12/14/2020
+ms.locfileid: "97473664"
 ---
 # <a name="bcp_bind"></a>bcp_bind
 
@@ -188,7 +188,7 @@ bcp_bind(hdbc, szName, 0,
 
 [Bcp_control](../../relational-databases/native-client-odbc-extensions-bulk-copy-functions/bcp-control.md)로 지정 된 컨트롤 매개 변수 설정은 **bcp_bind** 행 전송에 영향을 주지 않습니다.  
 
-열에 대 한 *.pdata* 가 [bcp_moretext](../../relational-databases/native-client-odbc-extensions-bulk-copy-functions/bcp-moretext.md)에 대 한 호출에서 제공 되기 때문에 열에 대해 .pdata가 null로 설정 된 경우 *edatatype* 이 SQLTEXT, SQLTEXT, SQLXML, SQLTEXT, SQLTEXT, SQLTEXT, SQLTEXT, SQLBINARY, sqltext 또는 SQLIMAGE로 설정 된 이후의 모든 열은 null로 설정 된 *.pdata* 와 바인딩되어야 하 고 **bcp_moretext**에 대 한 호출을 통해 해당 값  
+열에 대 한 *.pdata* 가 [bcp_moretext](../../relational-databases/native-client-odbc-extensions-bulk-copy-functions/bcp-moretext.md)에 대 한 호출에서 제공 되기 때문에 열에 대해 .pdata가 null로 설정 된 경우 *edatatype* 이 SQLTEXT, SQLTEXT, SQLXML, SQLTEXT, SQLTEXT, SQLTEXT, SQLTEXT, SQLBINARY, sqltext 또는 SQLIMAGE로 설정 된 이후의 모든 열은 null로 설정 된 *.pdata* 와 바인딩되어야 하 고 **bcp_moretext** 에 대 한 호출을 통해 해당 값  
 
 **Varchar (max)**, **varbinary (max)** 또는 **nvarchar (max)** 와 같은 새 대량 값 형식의 경우 *EDATATYPE* 매개 변수에서 SQLCHARACTER, SQLCHARACTER, sqlcharacter, SQLBINARY 및 sqlcharacter를 형식 표시기로 사용할 수 있습니다.  
 

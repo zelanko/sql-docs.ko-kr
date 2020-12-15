@@ -18,13 +18,13 @@ helpviewer_keywords:
 ms.assetid: ed295312-e586-4fc2-9e80-806b490ee7bd
 author: VanMSFT
 ms.author: vanto
-monikerRange: = azuresqldb-current || = sqlallproducts-allversions
-ms.openlocfilehash: f4a3a7a16ed2f222a7d179cbae17b6bdfb2982f5
-ms.sourcegitcommit: 04cf7905fa32e0a9a44575a6f9641d9a2e5ac0f8
+monikerRange: = azuresqldb-current
+ms.openlocfilehash: ae71838bd9a384e616d0f1fe50d612535f840919
+ms.sourcegitcommit: 1a544cf4dd2720b124c3697d1e62ae7741db757c
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 10/07/2020
-ms.locfileid: "91810343"
+ms.lasthandoff: 12/14/2020
+ms.locfileid: "97472694"
 ---
 # <a name="sp_delete_database_firewall_rule-azure-sql-database"></a>sp_delete_database_firewall_rule(Azure SQL Database)
 [!INCLUDE[Azure SQL Database](../../includes/applies-to-version/asdb.md)]
@@ -46,7 +46,7 @@ sp_delete_database_firewall_rule [@name =] [N]'name'
 ## <a name="permissions"></a>사용 권한  
  프로 비전 프로세스에서 생성 된 서버 수준 보안 주체 로그인 또는 관리자로 할당 된 Azure Active Directory 보안 주체가 데이터베이스 수준 방화벽 규칙을 삭제할 수 있습니다.  
   
-## <a name="example"></a>예제  
+## <a name="example"></a>예  
  다음 예에서는 이라는 데이터베이스 수준 방화벽 설정을 제거 합니다 `Example DB Setting 1` .
   
 ```  

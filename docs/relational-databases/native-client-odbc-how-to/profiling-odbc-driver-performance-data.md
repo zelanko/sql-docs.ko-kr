@@ -13,13 +13,13 @@ helpviewer_keywords:
 ms.assetid: b997790a-8cc6-4800-8867-74c1bef07be3
 author: markingmyname
 ms.author: maghan
-monikerRange: '>=aps-pdw-2016||=azuresqldb-current||=azure-sqldw-latest||>=sql-server-2016||=sqlallproducts-allversions||>=sql-server-linux-2017||=azuresqldb-mi-current'
-ms.openlocfilehash: 9b55ba95c05d75c384cc89bd55452a5663bbc959
-ms.sourcegitcommit: 4d370399f6f142e25075b3714e5c2ce056b1bfd0
+monikerRange: '>=aps-pdw-2016||=azuresqldb-current||=azure-sqldw-latest||>=sql-server-2016||>=sql-server-linux-2017||=azuresqldb-mi-current'
+ms.openlocfilehash: ae2c238cb6e11293887211d3a72041ff06888fdd
+ms.sourcegitcommit: 1a544cf4dd2720b124c3697d1e62ae7741db757c
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 10/09/2020
-ms.locfileid: "91868855"
+ms.lasthandoff: 12/14/2020
+ms.locfileid: "97469544"
 ---
 # <a name="profiling-odbc-driver-performance-data"></a>ODBC 드라이버 성능 데이터 프로파일링
 [!INCLUDE[SQL Server Azure SQL Database Synapse Analytics PDW ](../../includes/applies-to-version/sql-asdb-asdbmi-asa-pdw.md)]
@@ -31,21 +31,21 @@ ms.locfileid: "91868855"
   
 ### <a name="to-log-driver-performance-data-using-odbc-administrator"></a>ODBC 관리자를 사용하여 드라이버 성능 데이터를 기록하려면  
   
-1.  **제어판**에서 **관리 도구** 를 두 번 클릭 한 다음 **데이터 원본 (ODBC)** 을 두 번 클릭 합니다. 또는 odbcad32.exe를 호출할 수도 있습니다.  
+1.  **제어판** 에서 **관리 도구** 를 두 번 클릭 한 다음 **데이터 원본 (ODBC)** 을 두 번 클릭 합니다. 또는 odbcad32.exe를 호출할 수도 있습니다.  
   
-2.  **사용자 dsn**, **시스템 DSN**또는 **파일 dsn** 탭을 클릭 합니다.  
+2.  **사용자 dsn**, **시스템 DSN** 또는 **파일 dsn** 탭을 클릭 합니다.  
   
 3.  성능 데이터를 기록할 데이터 원본을 클릭합니다.  
   
-4.  **Configure**를 클릭합니다.  
+4.  **Configure** 를 클릭합니다.  
   
-5.  Microsoft SQL Server DSN 구성 마법사에서 **로그 파일에 ODBC 드라이버 통계 로그**를 포함 하는 페이지로 이동 합니다.  
+5.  Microsoft SQL Server DSN 구성 마법사에서 **로그 파일에 ODBC 드라이버 통계 로그** 를 포함 하는 페이지로 이동 합니다.  
   
-6.  **로그 파일에 ODBC 드라이버 통계 기록을**선택 합니다. 상자에서 통계를 기록할 파일 이름을 입력합니다. 필요에 따라 **찾아보기** 를 클릭 하 여 파일 시스템에서 통계 로그를 찾습니다.  
+6.  **로그 파일에 ODBC 드라이버 통계 기록을** 선택 합니다. 상자에서 통계를 기록할 파일 이름을 입력합니다. 필요에 따라 **찾아보기** 를 클릭 하 여 파일 시스템에서 통계 로그를 찾습니다.  
   
 ### <a name="to-log-driver-performance-data-programmatically"></a>드라이버 성능 데이터를 프로그래밍 방식으로 기록하려면  
   
-1.  SQL_COPT_SS_PERF_DATA_LOG와 성능 데이터 로그 파일의 전체 경로 및 파일 이름을 사용 하 여 [SQLSetConnectAttr](../../relational-databases/native-client-odbc-api/sqlsetconnectattr.md) 를 호출 합니다. 예를 들면 다음과 같습니다.  
+1.  SQL_COPT_SS_PERF_DATA_LOG와 성능 데이터 로그 파일의 전체 경로 및 파일 이름을 사용 하 여 [SQLSetConnectAttr](../../relational-databases/native-client-odbc-api/sqlsetconnectattr.md) 를 호출 합니다. 예를 들어:  
   
     ```  
     "C:\\Odbcperf.log"  

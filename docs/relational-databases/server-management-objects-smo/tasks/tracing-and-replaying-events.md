@@ -16,13 +16,13 @@ helpviewer_keywords:
 ms.assetid: f41b3f85-2f6c-4c3e-9776-8c73d2cc7a53
 author: markingmyname
 ms.author: maghan
-monikerRange: =azuresqldb-current||=azure-sqldw-latest||>=sql-server-2016||=sqlallproducts-allversions||>=sql-server-linux-2017||=azuresqldb-mi-current
-ms.openlocfilehash: a483cbdf9fdeb7e60992ddfb044239a6d495f432
-ms.sourcegitcommit: 4d370399f6f142e25075b3714e5c2ce056b1bfd0
+monikerRange: =azuresqldb-current||=azure-sqldw-latest||>=sql-server-2016||>=sql-server-linux-2017||=azuresqldb-mi-current
+ms.openlocfilehash: 8280f8891d4ccd57b4496125a62bd96ba03eb49f
+ms.sourcegitcommit: 1a544cf4dd2720b124c3697d1e62ae7741db757c
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 10/09/2020
-ms.locfileid: "91868605"
+ms.lasthandoff: 12/14/2020
+ms.locfileid: "97475434"
 ---
 # <a name="tracing-and-replaying-events"></a>이벤트 추적 및 재생
 [!INCLUDE [SQL Server ASDB, ASDBMI, ASDW ](../../../includes/applies-to-version/sql-asdb-asdbmi-asa.md)]
@@ -57,7 +57,7 @@ ms.locfileid: "91868605"
   
  SMO 추적 개체는 Microsoft.SQLServer.ConnectionInfo.dll 파일에 대한 참조가 필요한 <xref:Microsoft.SqlServer.Management.Trace> 네임스페이스에 있습니다.  
   
- **추적** 및 **재생** 개체를 [ServerConnection](/previous-versions/sql/sql-server-2014/ms218641(v=sql.120)) <xref:Microsoft.SqlServer.Management.Smo.Server.%23ctor%2A> 사용 하려면 인스턴스와의 연결을 설정 하는 ServerConnection 개체가 필요 합니다 [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] . ServerConnection 개체는 Microsoft.SQLServer.ConnectionInfo.dll 파일에 대 한 참조를 필요로 하는 [ServerConnection](/previous-versions/sql/sql-server-2014/ms218641(v=sql.120)) 네임 스페이스에 상주 [합니다.](/previous-versions/sql/sql-server-2014/ms212673(v=sql.120))  
+ **추적** 및 **재생** 개체를 [](/previous-versions/sql/sql-server-2014/ms218641(v=sql.120)) <xref:Microsoft.SqlServer.Management.Smo.Server.%23ctor%2A> 사용 하려면 인스턴스와의 연결을 설정 하는 ServerConnection 개체가 필요 합니다 [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] . ServerConnection 개체는 Microsoft.SQLServer.ConnectionInfo.dll 파일에 대 한 참조를 필요로 하는 [](/previous-versions/sql/sql-server-2014/ms218641(v=sql.120)) 네임 스페이스에 상주 [합니다.](/previous-versions/sql/sql-server-2014/ms212673(v=sql.120))  
   
 > [!NOTE]  
 >  64비트 플랫폼에서는 **Trace** 및 **Replay** 개체가 지원되지 않습니다.  

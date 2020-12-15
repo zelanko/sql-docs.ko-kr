@@ -19,27 +19,27 @@ helpviewer_keywords:
 ms.assetid: 6e76b39f-236e-4bbf-b0b5-38be190d81e8
 author: julieMSFT
 ms.author: jrasnick
-monikerRange: = azuresqldb-current || = sqlallproducts-allversions
-ms.openlocfilehash: 21cef237634891d4795e46f96f63eba701f55852
-ms.sourcegitcommit: 32135463a8494d9ed1600a58f51819359e3c09dc
+monikerRange: = azuresqldb-current
+ms.openlocfilehash: 0f1a31c5822ca8d3d7a18eed49145d37a07b49ec
+ms.sourcegitcommit: 1a544cf4dd2720b124c3697d1e62ae7741db757c
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 10/08/2020
-ms.locfileid: "91833700"
+ms.lasthandoff: 12/14/2020
+ms.locfileid: "97475014"
 ---
 # <a name="sysdm_db_resource_stats-azure-sql-database"></a>sys.dm_db_resource_stats(Azure SQL 데이터베이스)
 [!INCLUDE[Azure SQL Database Azure SQL Managed Instance](../../includes/applies-to-version/asdb-asdbmi.md)]
 
   [!INCLUDE[ssSDSfull](../../includes/sssdsfull-md.md)] 데이터베이스에 대해 CPU, I/O 및 메모리 사용을 반환합니다. 데이터베이스에서 활동이 없더라도 15초 간격으로 한 행이 있습니다. 기록 데이터는 약 1 시간 동안 유지 관리 됩니다.  
   
-|열|데이터 형식|Description|  
+|열|데이터 형식|설명|  
 |-------------|---------------|-----------------|  
 |end_time|**datetime**|현재 보고 간격의 끝을 나타내는 UTC 시간입니다.|  
 |avg_cpu_percent|**decimal (5, 2)**|서비스 계층 한도의 비율로 계산된 평균 계산 활용률입니다.|  
 |avg_data_io_percent|**decimal (5, 2)**|서비스 계층 한도의 백분율로 나타낸 평균 데이터 i/o 사용률입니다. Hyperscale 데이터베이스의 경우 [리소스 사용률 통계의 데이터 IO](/azure/sql-database/sql-database-hyperscale-performance-diagnostics#data-io-in-resource-utilization-statistics)를 참조 하세요.|  
 |avg_log_write_percent|**decimal (5, 2)**|서비스 계층 한도의 백분율로 나타낸 평균 트랜잭션 로그 쓰기 (MBps)입니다.|  
-|avg_memory_usage_percent|**decimal (5, 2)**|서비스 계층 한도의 비율로 계산된 평균 메모리 활용률입니다.<br /><br /> 여기에는 메모리 내 OLTP 개체의 버퍼 풀 페이지 및 저장소에 사용 되는 메모리가 포함 됩니다.|  
-|xtp_storage_percent|**decimal (5, 2)**|메모리 내 OLTP에 대 한 저장소 사용률 (보고 간격의 끝에 있는 서비스 계층의 제한 백분율) 여기에는 메모리 내 OLTP 개체를 저장 하는 데 사용 되는 메모리 (메모리 최적화 테이블, 인덱스 및 테이블 변수)가 포함 됩니다. 또한 ALTER TABLE 작업을 처리 하는 데 사용 되는 메모리가 포함 됩니다.<br /><br /> 데이터베이스에서 메모리 내 OLTP를 사용 하지 않는 경우 0을 반환 합니다.|  
+|avg_memory_usage_percent|**decimal (5, 2)**|서비스 계층 한도의 비율로 계산된 평균 메모리 활용률입니다.<br /><br /> 여기에는 버퍼 풀 페이지와 In-Memory OLTP 개체의 저장소에 사용 되는 메모리가 포함 됩니다.|  
+|xtp_storage_percent|**decimal (5, 2)**|In-Memory OLTP에 대 한 저장소 사용률 (보고 간격이 끝나면 서비스 계층의 한도에 대 한 백분율)입니다. 여기에는 메모리 액세스에 최적화 된 테이블, 인덱스 및 테이블 변수와 같은 In-Memory OLTP 개체의 저장에 사용 되는 메모리가 포함 됩니다. 또한 ALTER TABLE 작업을 처리 하는 데 사용 되는 메모리가 포함 됩니다.<br /><br /> In-Memory OLTP가 데이터베이스에서 사용 되지 않는 경우 0을 반환 합니다.|  
 |max_worker_percent|**decimal (5, 2)**|데이터베이스의 서비스 계층에 대 한 최대 동시 작업자 (요청) 한도의 백분율입니다.|  
 |max_session_percent|**decimal (5, 2)**|데이터베이스 서비스 계층 한도의 비율로 나타낸 최대 동시 세션|  
 |dtu_limit|**int**|이 간격 동안이 데이터베이스에 대 한 현재 최대 데이터베이스 DTU 설정입니다. VCore 기반 모델을 사용 하는 데이터베이스의 경우이 열은 NULL입니다.|
@@ -65,7 +65,7 @@ ms.locfileid: "91833700"
   
  데이터베이스가 탄력적 풀의 구성원이 면 백분율 값으로 표시 되는 리소스 통계가 탄력적 풀 구성에 설정 된 데이터베이스에 대 한 최대 한도의 백분율로 표시 됩니다.  
   
-## <a name="example"></a>예제  
+## <a name="example"></a>예  
   
 다음 예에서는 현재 연결된 데이터베이스에 대해 가장 최근 시간 순서로 리소스 사용 데이터를 반환합니다.  
   

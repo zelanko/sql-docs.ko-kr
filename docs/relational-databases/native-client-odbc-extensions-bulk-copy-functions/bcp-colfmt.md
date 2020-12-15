@@ -18,18 +18,18 @@ helpviewer_keywords:
 ms.assetid: 5c3b6299-80c7-4e84-8e69-4ff33009548e
 author: markingmyname
 ms.author: maghan
-monikerRange: '>=aps-pdw-2016||=azuresqldb-current||=azure-sqldw-latest||>=sql-server-2016||=sqlallproducts-allversions||>=sql-server-linux-2017||=azuresqldb-mi-current'
-ms.openlocfilehash: 7b5ae01aef91edd1a7fe45c9203be407dbf7620c
-ms.sourcegitcommit: e700497f962e4c2274df16d9e651059b42ff1a10
+monikerRange: '>=aps-pdw-2016||=azuresqldb-current||=azure-sqldw-latest||>=sql-server-2016||>=sql-server-linux-2017||=azuresqldb-mi-current'
+ms.openlocfilehash: 2478558cdb8df2de852fcdd4654c90d51b8356a2
+ms.sourcegitcommit: 1a544cf4dd2720b124c3697d1e62ae7741db757c
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 08/17/2020
-ms.locfileid: "88455922"
+ms.lasthandoff: 12/14/2020
+ms.locfileid: "97473634"
 ---
 # <a name="bcp_colfmt"></a>bcp_colfmt
 [!INCLUDE[SQL Server Azure SQL Database Synapse Analytics PDW ](../../includes/applies-to-version/sql-asdb-asdbmi-asa-pdw.md)]
 
-  사용자 파일에 있는 데이터의 원본 또는 대상 형식을 지정합니다. 원본 형식으로 사용될 경우 **bcp_colfmt** 는 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 테이블로의 대량 복사에서 데이터 원본으로 사용되는 기존 데이터 파일의 형식을 지정합니다. 대상 형식으로 사용될 경우에는 데이터 파일이 **bcp_colfmt**에 지정된 열 형식을 사용하여 만들어집니다.  
+  사용자 파일에 있는 데이터의 원본 또는 대상 형식을 지정합니다. 원본 형식으로 사용될 경우 **bcp_colfmt** 는 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 테이블로의 대량 복사에서 데이터 원본으로 사용되는 기존 데이터 파일의 형식을 지정합니다. 대상 형식으로 사용될 경우에는 데이터 파일이 **bcp_colfmt** 에 지정된 열 형식을 사용하여 만들어집니다.  
   
 ## <a name="syntax"></a>구문  
   
@@ -64,9 +64,9 @@ RETCODE bcp_colfmt (
   
  [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 에서 파일로의 대량 복사에서 *eUserDataType* 이 SQLDECIMAL 또는 SQLNUMERIC인 경우  
   
--   원본 열이 **decimal** 또는 **numeric**이 아니면 기본 전체 자릿수 및 소수 자릿수가 사용 됩니다.  
+-   원본 열이 **decimal** 또는 **numeric** 이 아니면 기본 전체 자릿수 및 소수 자릿수가 사용 됩니다.  
   
--   원본 열이 **decimal** 또는 **numeric**이면 원본 열의 전체 자릿수와 소수 자릿수가 사용 됩니다.  
+-   원본 열이 **decimal** 또는 **numeric** 이면 원본 열의 전체 자릿수와 소수 자릿수가 사용 됩니다.  
   
  *cbIndicator*  
  열 데이터의 길이 또는 Null 표시기의 길이(바이트)입니다. 올바른 표시기 길이 값은 0(표시기를 사용하지 않을 경우), 1, 2, 4 또는 8입니다.  
@@ -88,7 +88,7 @@ RETCODE bcp_colfmt (
   
  [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 문자 및 이진 데이터 형식의 경우 *cbUserData* 는 SQL_VARLEN_DATA, SQL_NULL_DATA, 0 또는 양수 값일 수 있습니다. *cbUserData* 가 SQL_VARLEN_DATA이면 시스템에서 길이 표시기(있는 경우)나 종결자 시퀀스를 사용하여 데이터 길이를 확인합니다. 길이 표시기와 종결자 시퀀스를 모두 지정하는 경우 대량 복사에는 복사되는 데이터 크기가 가장 작은 방법이 사용됩니다. *cbUserData* 가 SQL_VARLEN_DATA인 경우 열의 데이터 형식은 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 문자 또는 이진 형식이며 길이 표시기나 종결자 시퀀스를 모두 지정하지 않으면 시스템에서 오류 메시지를 반환합니다.  
   
- *cbUserData* 가 0이거나 양수 값이면 시스템은 *cbUserData* 를 최대 데이터 길이로 사용합니다. 그러나 *cbUserData*가 양수이고 길이 표시자 또는 종결자 시퀀스도 제공되는 경우 시스템은 복사할 데이터가 적은 방법을 사용하여 데이터 길이를 확인합니다.  
+ *cbUserData* 가 0이거나 양수 값이면 시스템은 *cbUserData* 를 최대 데이터 길이로 사용합니다. 그러나 *cbUserData* 가 양수이고 길이 표시자 또는 종결자 시퀀스도 제공되는 경우 시스템은 복사할 데이터가 적은 방법을 사용하여 데이터 길이를 확인합니다.  
   
  *cbUserData* 값은 데이터의 바이트 수를 나타냅니다. 문자 데이터가 유니코드 와이드 문자로 표현되는 경우 양수 *cbUserData* 매개 변수 값은 문자 수와 각 문자의 바이트 크기를 곱한 값을 나타냅니다.  
   
@@ -127,11 +127,11 @@ RETCODE bcp_colfmt (
   
 -   선택 사항인 종결 바이트 시퀀스의 길이  
   
- **bcp_colfmt** 에 대한 각 호출에서는 사용자 파일의 한 열에 대한 서식을 지정합니다. 예를 들어 다섯 개의 열로 구성된 사용자 데이터 파일의 세 열에 대해 기본 설정을 변경하려면 먼저 [bcp_columns](../../relational-databases/native-client-odbc-extensions-bulk-copy-functions/bcp-columns.md)**(5)** 를 호출한 다음 **bcp_colfmt** 를 다섯 번 호출합니다. 이 중 세 번의 호출에서 사용자 지정 형식을 설정합니다. 나머지 두 번의 호출에서는 *eUserDataType* 을 0으로 설정하고 *cbIndicator*, *cbUserData*및 *cbUserDataTerm* 을 각각 0, SQL_VARLEN_DATA 및 0으로 설정합니다. 이 프로시저는 다섯 개의 열을 모두 복사하는데 이 중 세 개는 사용자 지정된 형식으로, 두 개는 기본 형식으로 복사합니다.  
+ **bcp_colfmt** 에 대한 각 호출에서는 사용자 파일의 한 열에 대한 서식을 지정합니다. 예를 들어 다섯 개의 열로 구성된 사용자 데이터 파일의 세 열에 대해 기본 설정을 변경하려면 먼저 [bcp_columns](../../relational-databases/native-client-odbc-extensions-bulk-copy-functions/bcp-columns.md)**(5)** 를 호출한 다음 **bcp_colfmt** 를 다섯 번 호출합니다. 이 중 세 번의 호출에서 사용자 지정 형식을 설정합니다. 나머지 두 번의 호출에서는 *eUserDataType* 을 0으로 설정하고 *cbIndicator*, *cbUserData* 및 *cbUserDataTerm* 을 각각 0, SQL_VARLEN_DATA 및 0으로 설정합니다. 이 프로시저는 다섯 개의 열을 모두 복사하는데 이 중 세 개는 사용자 지정된 형식으로, 두 개는 기본 형식으로 복사합니다.  
   
- *cbIndicator*의 경우 이제 큰 값 형식을 나타내는 값 8이 유효합니다. 해당 열이 새로운 최대 유형인 필드에 접두사가 지정되어 있으면 필드 값을 8로만 설정할 수 있습니다. 자세한 내용은 [bcp_bind](../../relational-databases/native-client-odbc-extensions-bulk-copy-functions/bcp-bind.md)를 참조 하세요.  
+ *cbIndicator* 의 경우 이제 큰 값 형식을 나타내는 값 8이 유효합니다. 해당 열이 새로운 최대 유형인 필드에 접두사가 지정되어 있으면 필드 값을 8로만 설정할 수 있습니다. 자세한 내용은 [bcp_bind](../../relational-databases/native-client-odbc-extensions-bulk-copy-functions/bcp-bind.md)를 참조 하세요.  
   
- **bcp_colfmt** 를 호출하기 전에 **bcp_columns**함수를 호출해야 합니다.  
+ **bcp_colfmt** 를 호출하기 전에 **bcp_columns** 함수를 호출해야 합니다.  
   
  사용자 파일의 각 열에 대해 **bcp_colfmt** 를 한 번씩 호출 해야 합니다.  
   

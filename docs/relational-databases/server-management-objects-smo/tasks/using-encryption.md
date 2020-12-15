@@ -20,13 +20,13 @@ helpviewer_keywords:
 ms.assetid: 405e0ed7-50a9-430e-a343-471f54b4af76
 author: markingmyname
 ms.author: maghan
-monikerRange: =azuresqldb-current||=azure-sqldw-latest||>=sql-server-2016||=sqlallproducts-allversions||>=sql-server-linux-2017||=azuresqldb-mi-current
-ms.openlocfilehash: d3b777922998a4ef8159f0b2e61a2748d0185a53
-ms.sourcegitcommit: e700497f962e4c2274df16d9e651059b42ff1a10
+monikerRange: =azuresqldb-current||=azure-sqldw-latest||>=sql-server-2016||>=sql-server-linux-2017||=azuresqldb-mi-current
+ms.openlocfilehash: d5c9818d80ab7ad1eb57e108525ff5a182a01714
+ms.sourcegitcommit: 1a544cf4dd2720b124c3697d1e62ae7741db757c
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 08/17/2020
-ms.locfileid: "88325363"
+ms.lasthandoff: 12/14/2020
+ms.locfileid: "97475394"
 ---
 # <a name="using-encryption"></a>암호화 사용
 [!INCLUDE [SQL Server ASDB, ASDBMI, ASDW ](../../../includes/applies-to-version/sql-asdb-asdbmi-asa.md)]
@@ -43,7 +43,7 @@ ms.locfileid: "88325363"
   
  SMO에서 인증서는 <xref:Microsoft.SqlServer.Management.Smo.Certificate> 개체로 표시됩니다. <xref:Microsoft.SqlServer.Management.Smo.Certificate> 개체에는 공개 키, 주체 이름, 유효 기간 및 발급자 정보를 지정하는 속성이 있습니다. 인증서에 대한 액세스 권한은 **Grant**, **Revoke** 및 **Deny** 메서드를 사용하여 제어합니다.  
   
-## <a name="example"></a>예제  
+## <a name="example"></a>예  
  다음 코드 예제를 사용하려면 애플리케이션을 만들 프로그래밍 환경, 프로그래밍 템플릿 및 프로그래밍 언어를 선택해야 합니다. 자세한 내용은 [Visual Studio .net에서 Visual C&#35; SMO 프로젝트 만들기](../../../relational-databases/server-management-objects-smo/how-to-create-a-visual-csharp-smo-project-in-visual-studio-net.md)를 참조 하세요.  
   
 ## <a name="adding-a-certificate-in-visual-c"></a>Visual C#에서 인증서 추가  

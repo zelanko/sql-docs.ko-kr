@@ -18,13 +18,13 @@ helpviewer_keywords:
 ms.assetid: 565483ea-875b-4133-b327-d0006d2d7b4c
 author: markingmyname
 ms.author: maghan
-monikerRange: =azuresqldb-current||>=sql-server-2016||=sqlallproducts-allversions||>=sql-server-linux-2017||=azuresqldb-mi-current
-ms.openlocfilehash: 4fb15ad9040276302586efc1b9661ff1e08e62e2
-ms.sourcegitcommit: dd36d1cbe32cd5a65c6638e8f252b0bd8145e165
+monikerRange: =azuresqldb-current||>=sql-server-2016||>=sql-server-linux-2017||=azuresqldb-mi-current
+ms.openlocfilehash: 184328e9b6d5c197b06f89f151942535a90f7f91
+ms.sourcegitcommit: 1a544cf4dd2720b124c3697d1e62ae7741db757c
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 09/08/2020
-ms.locfileid: "89548428"
+ms.lasthandoff: 12/14/2020
+ms.locfileid: "97474654"
 ---
 # <a name="sp_addextendedproperty-transact-sql"></a>sp_addextendedproperty(Transact-SQL)
 [!INCLUDE [SQL Server SQL Database](../../includes/applies-to-version/sql-asdb.md)]
@@ -58,7 +58,7 @@ sp_addextendedproperty
  추가할 속성의 이름입니다. *property_name* 는 **sysname** 이며 NULL 일 수 없습니다. 또한 이름은 영숫자가 아닌 문자열 또는 공백 및 이진 값을 포함할 수 있습니다.  
   
  [ @value =] {'*value*'}  
- 속성과 연결할 값입니다. *값* 은 **sql_variant**이며 기본값은 NULL입니다. *value* 의 크기는 7,500바이트보다 클 수 없습니다.  
+ 속성과 연결할 값입니다. *값* 은 **sql_variant** 이며 기본값은 NULL입니다. *value* 의 크기는 7,500바이트보다 클 수 없습니다.  
   
  [ @level0type =] {'*level0_object_type*'}  
  수준 0 개체의 유형입니다. *level0_object_type* 는 **varchar (128)** 이며 기본값은 NULL입니다.  
@@ -74,13 +74,13 @@ sp_addextendedproperty
  [ @level1type =] {'*level1_object_type*'}  
  수준 1 개체의 유형입니다. *level1_object_type* 는 **varchar (128)** 이며 기본값은 NULL입니다. 유효한 입력은 AGGREGATE, DEFAULT, FUNCTION, LOGICAL FILE NAME, PROCEDURE, QUEUE, RULE, SEQUENCE, 동의어, TABLE, TABLE_TYPE, TYPE, VIEW, XML SCHEMA COLLECTION 및 NULL입니다.    
  [ @level1name =] {'*level1_object_name*'}  
- 지정된 수준 1 개체 유형의 이름입니다. *level1_object_name* 는 **sysname**이며 기본값은 NULL입니다.  
+ 지정된 수준 1 개체 유형의 이름입니다. *level1_object_name* 는 **sysname** 이며 기본값은 NULL입니다.  
   
  [ @level2type =] {'*level2_object_type*'}  
  수준 2 개체의 유형입니다. *level2_object_type* 는 **varchar (128)** 이며 기본값은 NULL입니다. 유효한 입력은 COLUMN, CONSTRAINT, EVENT NOTIFICATION, INDEX, PARAMETER, TRIGGER 및 NULL입니다.  
   
  [ @level2name =] {'*level2_object_name*'}  
- 지정된 수준 2 개체 유형의 이름입니다. *level2_object_name* 는 **sysname**이며 기본값은 NULL입니다.  
+ 지정된 수준 2 개체 유형의 이름입니다. *level2_object_name* 는 **sysname** 이며 기본값은 NULL입니다.  
   
 ## <a name="return-code-values"></a>반환 코드 값  
  0(성공) 또는 1(실패)  
@@ -100,14 +100,14 @@ sp_addextendedproperty
  확장 속성은 게시자와 구독자 간의 초기 동기화 수행 시에만 복제됩니다. 초기 동기화 후에 확장 속성을 추가하거나 수정하면 변경 내용이 복제되지 않습니다. 데이터베이스 개체를 복제 하는 방법에 대 한 자세한 내용은 [데이터 및 데이터베이스 개체 게시](../../relational-databases/replication/publish/publish-data-and-database-objects.md)를 참조 하세요.  
   
 ## <a name="schema-vs-user"></a>SCHEMA와  사용자  
- 확장 속성을 데이터베이스 개체에 적용할 때 USER를 수준 0 유형으로 지정하는 것은 이름 확인에 혼동을 일으킬 수 있으므로 사용하지 않는 것이 좋습니다. 예를 들어 사용자 Mary가 두 개의 스키마(Mary 및 MySchema)를 소유하고 있고 두 스키마 모두 MyTable이라는 테이블을 포함하고 있다고 가정합니다. Mary가 확장 속성을 MyTable 테이블에 추가 하 고 ** @level0type = N'USER '**, ** @level0name = Mary**를 지정 하는 경우 확장 속성이 적용 되는 테이블을 명확 하 게 알 수 없습니다. 이전 버전과의 호환성을 유지하기 위해 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]는 해당 속성을 Mary라는 스키마에 포함된 테이블에 적용합니다.  
+ 확장 속성을 데이터베이스 개체에 적용할 때 USER를 수준 0 유형으로 지정하는 것은 이름 확인에 혼동을 일으킬 수 있으므로 사용하지 않는 것이 좋습니다. 예를 들어 사용자 Mary가 두 개의 스키마(Mary 및 MySchema)를 소유하고 있고 두 스키마 모두 MyTable이라는 테이블을 포함하고 있다고 가정합니다. Mary가 확장 속성을 MyTable 테이블에 추가 하 고 **@level0type = N'USER '**, **@level0name = Mary** 를 지정 하는 경우 확장 속성이 적용 되는 테이블을 명확 하 게 알 수 없습니다. 이전 버전과의 호환성을 유지하기 위해 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]는 해당 속성을 Mary라는 스키마에 포함된 테이블에 적용합니다.  
   
 ## <a name="permissions"></a>사용 권한  
  Db_owner 및 db_ddladmin 고정 데이터베이스 역할의 멤버는 확장 속성을 모든 개체에 추가할 수 있습니다. 단, 데이터베이스 자체 나 사용자 또는 역할에 속성을 추가할 수 db_ddladmin.  
   
  사용자는 자신이 소유하거나 ALTER 또는 CONTROL 권한이 있는 개체에 확장 속성을 추가할 수 있습니다.  
   
-## <a name="examples"></a>예제  
+## <a name="examples"></a>예  
   
 ### <a name="a-adding-an-extended-property-to-a-database"></a>A. 데이터베이스에 확장 속성 추가  
  다음 예에서는 값이 `'Caption'` 인 `'AdventureWorks2012 Sample OLTP Database'` 속성 이름이 `AdventureWorks2012` 예제 데이터베이스에 추가됩니다.  
@@ -238,7 +238,7 @@ EXEC sys.sp_addextendedproperty
   
 ## <a name="see-also"></a>참고 항목  
  [Transact-sql&#41;&#40;저장 프로시저 데이터베이스 엔진 ](../../relational-databases/system-stored-procedures/database-engine-stored-procedures-transact-sql.md)   
- [fn_listextendedproperty &#40;Transact-sql&#41;](../../relational-databases/system-functions/sys-fn-listextendedproperty-transact-sql.md)   
+ [Transact-sql&#41;sys.fn_listextendedproperty &#40;](../../relational-databases/system-functions/sys-fn-listextendedproperty-transact-sql.md)   
  [Transact-sql&#41;sp_dropextendedproperty &#40;](../../relational-databases/system-stored-procedures/sp-dropextendedproperty-transact-sql.md)   
  [Transact-sql&#41;sp_updateextendedproperty &#40;](../../relational-databases/system-stored-procedures/sp-updateextendedproperty-transact-sql.md)  
   

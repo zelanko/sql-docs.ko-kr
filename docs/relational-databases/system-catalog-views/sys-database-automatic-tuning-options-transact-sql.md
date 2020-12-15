@@ -1,5 +1,5 @@
 ---
-title: sys. database_automatic_tuning_options (Transact-sql) | Microsoft Docs
+title: sys.database_automatic_tuning_options (Transact-sql) | Microsoft Docs
 description: SQL Database에서 자동 조정 옵션을 확인 하는 방법에 대해 알아봅니다. 필요한 권한을 확인 하 고 사용 가능한 추가 리소스를 확인 합니다.
 ms.custom: ''
 ms.date: 07/20/2017
@@ -21,13 +21,13 @@ helpviewer_keywords:
 ms.assetid: 16b47d55-8019-41ff-ad34-1e0112178067
 author: jovanpop-msft
 ms.author: jovanpop
-monikerRange: =azuresqldb-current||>=sql-server-2017||=sqlallproducts-allversions||>=sql-server-linux-2017||=azuresqldb-mi-current
-ms.openlocfilehash: 4de2851505d7c5c240d792ecacdaa6bf3d1c6c3e
-ms.sourcegitcommit: 216f377451e53874718ae1645a2611cdb198808a
+monikerRange: =azuresqldb-current||>=sql-server-2017||>=sql-server-linux-2017||=azuresqldb-mi-current
+ms.openlocfilehash: 4da712a23dde26d12164957718c3bdfbf89eb487
+ms.sourcegitcommit: 1a544cf4dd2720b124c3697d1e62ae7741db757c
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 07/28/2020
-ms.locfileid: "87242953"
+ms.lasthandoff: 12/14/2020
+ms.locfileid: "97475224"
 ---
 # <a name="sysdatabase_automatic_tuning_options-transact-sql"></a>sys. 데이터베이스 \_ 자동 \_ Tuning_options (transact-sql)
 [!INCLUDE[sqlserver2017-asdb](../../includes/applies-to-version/sqlserver2017-asdb.md)]
@@ -50,6 +50,6 @@ ms.locfileid: "87242953"
 ## <a name="see-also"></a>참고 항목  
  [자동 조정](../../relational-databases/automatic-tuning/automatic-tuning.md)   
  [ALTER DATABASE SET AUTOMATIC_TUNING &#40;Transact-sql&#41;](../../t-sql/statements/alter-database-transact-sql-set-options.md)   
- [database_query_store_options &#40;Transact-sql&#41;](../../relational-databases/system-catalog-views/sys-database-query-store-options-transact-sql.md)   
- [dm_db_tuning_recommendations &#40;Transact-sql&#41;](../../relational-databases/system-dynamic-management-views/sys-dm-db-tuning-recommendations-transact-sql.md)   
+ [Transact-sql&#41;sys.database_query_store_options &#40;](../../relational-databases/system-catalog-views/sys-database-query-store-options-transact-sql.md)   
+ [Transact-sql&#41;sys.dm_db_tuning_recommendations &#40;](../../relational-databases/system-dynamic-management-views/sys-dm-db-tuning-recommendations-transact-sql.md)   
  

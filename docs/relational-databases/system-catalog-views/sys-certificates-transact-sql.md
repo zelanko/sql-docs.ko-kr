@@ -20,13 +20,13 @@ helpviewer_keywords:
 ms.assetid: e5046102-a65c-401e-b80d-05636884dec9
 author: VanMSFT
 ms.author: vanto
-monikerRange: '>=aps-pdw-2016||=azuresqldb-current||=azure-sqldw-latest||>=sql-server-2016||=sqlallproducts-allversions||>=sql-server-linux-2017||=azuresqldb-mi-current'
-ms.openlocfilehash: 95e4d3b3b1b06810fc1e60564a4ad7c84e85189a
-ms.sourcegitcommit: e700497f962e4c2274df16d9e651059b42ff1a10
+monikerRange: '>=aps-pdw-2016||=azuresqldb-current||=azure-sqldw-latest||>=sql-server-2016||>=sql-server-linux-2017||=azuresqldb-mi-current'
+ms.openlocfilehash: 169f0069565c3d1f6561d6edc8e8b459fc77ac9a
+ms.sourcegitcommit: 1a544cf4dd2720b124c3697d1e62ae7741db757c
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 08/17/2020
-ms.locfileid: "88486544"
+ms.lasthandoff: 12/14/2020
+ms.locfileid: "97475264"
 ---
 # <a name="syscertificates-transact-sql"></a>sys.certificates(Transact-SQL)
 [!INCLUDE [sql-asdb-asdbmi-asa-pdw](../../includes/applies-to-version/sql-asdb-asdbmi-asa-pdw.md)]
@@ -43,12 +43,12 @@ ms.locfileid: "88486544"
 |**is_active_for_begin_dialog**|**bit**|1인 경우 이 인증서는 암호화된 서비스 대화 상자를 초기화하는 데 사용됩니다.|  
 |**issuer_name**|**nvarchar (442)**|인증서 발급자의 이름입니다.|  
 |**cert_serial_number**|**nvarchar (64)**|인증서의 일련 번호입니다.|  
-|**sid**|**varbinary(85)**|이 인증서의 로그인 SID입니다.|  
+|**s**|**varbinary(85)**|이 인증서의 로그인 SID입니다.|  
 |**string_sid**|**nvarchar(128)**|이 인증서의 로그인 SID를 나타내는 문자열입니다.|  
 |**subject**|**nvarchar(4000)**|이 인증서의 주체입니다.|  
 |**expiry_date**|**datetime**|인증서 만료 날짜입니다.|  
 |**start_date**|**datetime**|인증서가 유효하게 되는 날짜입니다.|  
-|**n**|**varbinary(32)**|인증서의 SHA-1 해시입니다. SHA-1 해시는 전역적으로 고유합니다.|  
+|**thumbprint**|**varbinary(32)**|인증서의 SHA-1 해시입니다. SHA-1 해시는 전역적으로 고유합니다.|  
 |**attested_by**|**nvarchar(260)**|시스템에서만 사용됩니다.|  
 |**pvt_key_last_backup_date**|**datetime**|인증서의 개인 키를 마지막으로 내보낸 날짜와 시간입니다.|  
   

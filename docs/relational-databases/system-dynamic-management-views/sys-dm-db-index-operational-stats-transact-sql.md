@@ -20,13 +20,13 @@ helpviewer_keywords:
 ms.assetid: 13adf2e5-2150-40a6-b346-e74a33ce29c6
 author: markingmyname
 ms.author: maghan
-monikerRange: '>=aps-pdw-2016||=azuresqldb-current||=azure-sqldw-latest||>=sql-server-2016||=sqlallproducts-allversions||>=sql-server-linux-2017||=azuresqldb-mi-current'
-ms.openlocfilehash: e4d69890ba5c76c3d37ecd6accd9ba13caa7b089
-ms.sourcegitcommit: 9c6130d498f1cfe11cde9f2e65c306af2fa8378d
+monikerRange: '>=aps-pdw-2016||=azuresqldb-current||=azure-sqldw-latest||>=sql-server-2016||>=sql-server-linux-2017||=azuresqldb-mi-current'
+ms.openlocfilehash: b1f177d09dd741eadc967a2b32a87a905e04dfb6
+ms.sourcegitcommit: 1a544cf4dd2720b124c3697d1e62ae7741db757c
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 10/30/2020
-ms.locfileid: "93036099"
+ms.lasthandoff: 12/14/2020
+ms.locfileid: "97475074"
 ---
 # <a name="sysdm_db_index_operational_stats-transact-sql"></a>sys.dm_db_index_operational_stats(Transact-SQL)
 [!INCLUDE [sql-asdb-asdbmi-asa-pdw](../../includes/applies-to-version/sql-asdb-asdbmi-asa-pdw.md)]
@@ -57,7 +57,7 @@ sys.dm_db_index_operational_stats (
 
   데이터베이스의 ID입니다. *database_id* 은 **smallint** 입니다. 올바른 입력은 데이터베이스의 ID 번호, NULL, 0 또는 DEFAULT입니다. 기본값은 0입니다. 이 컨텍스트에서 NULL, 0 및 DEFAULT는 동등한 값입니다.    
     
- [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 인스턴스의 모든 데이터베이스에 대한 정보를 반환하려면 NULL을 지정합니다. *Database_id* 에 대해 null을 지정 하는 경우 *object_id* , *index_id* 및 *partition_number* 에 대해서도 null을 지정 해야 합니다.    
+ [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 인스턴스의 모든 데이터베이스에 대한 정보를 반환하려면 NULL을 지정합니다. *Database_id* 에 대해 null을 지정 하는 경우 *object_id*, *index_id* 및 *partition_number* 에 대해서도 null을 지정 해야 합니다.    
     
  [DB_ID](../../t-sql/functions/db-id-transact-sql.md) 기본 제공 함수를 지정할 수 있습니다.    
 
@@ -91,7 +91,7 @@ sys.dm_db_index_operational_stats (
 |**object_id**|**int**|테이블 또는 뷰의 ID입니다.|    
 |**index_id**|**int**|인덱스 또는 힙의 ID입니다.<br /><br /> 0 = 힙| 
 |**partition_number**|**int**|인덱스 또는 힙 내의 1부터 시작하는 파티션 번호입니다.| 
-|**hobt_id**|**bigint**|**적용 대상** : [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] ( [!INCLUDE[ssSQL15](../../includes/sssql15-md.md)] ~ [현재 버전](../../sql-server/what-s-new-in-sql-server-2016.md)), [!INCLUDE[ssSDSfull](../../includes/sssdsfull-md.md)] .<br /><br /> Columnstore 인덱스에 대 한 내부 데이터를 추적 하는 데이터 힙 또는 B-트리 행 집합의 ID입니다.<br /><br /> NULL-내부 columnstore 행 집합이 아닙니다.<br /><br /> 자세한 내용은 [sys.internal_partitions &#40;transact-sql](../../relational-databases/system-catalog-views/sys-internal-partitions-transact-sql.md) 을 참조 하세요&#41;|       
+|**hobt_id**|**bigint**|**적용 대상**: [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] ( [!INCLUDE[ssSQL15](../../includes/sssql15-md.md)] ~ [현재 버전](../../sql-server/what-s-new-in-sql-server-2016.md)), [!INCLUDE[ssSDSfull](../../includes/sssdsfull-md.md)] .<br /><br /> Columnstore 인덱스에 대 한 내부 데이터를 추적 하는 데이터 힙 또는 B-트리 행 집합의 ID입니다.<br /><br /> NULL-내부 columnstore 행 집합이 아닙니다.<br /><br /> 자세한 내용은 [sys.internal_partitions &#40;transact-sql](../../relational-databases/system-catalog-views/sys-internal-partitions-transact-sql.md) 을 참조 하세요&#41;|       
 |**leaf_insert_count**|**bigint**|리프 수준 삽입의 누적 횟수입니다.|    
 |**leaf_delete_count**|**bigint**|리프 수준 삭제의 누적 횟수입니다. leaf_delete_count은 고스트로 표시 되지 않은 삭제 된 레코드에 대해서만 증가 합니다. 먼저 고스트 된 삭제 된 레코드의 경우 **leaf_ghost_count** 가 대신 증가 합니다.|    
 |**leaf_update_count**|**bigint**|리프 수준 업데이트의 누적 횟수입니다.|    
@@ -106,11 +106,11 @@ sys.dm_db_index_operational_stats (
 |**range_scan_count**|**bigint**|인덱스 또는 힙에서 시작된 범위 및 테이블 검색의 누적 횟수입니다.|    
 |**singleton_lookup_count**|**bigint**|인덱스 또는 힙에서 발생한 단일 행 검색의 누적 횟수입니다.|    
 |**forwarded_fetch_count**|**bigint**|전달된 레코드를 통해 인출된 행 수입니다.<br /><br /> 0 = 인덱스|    
-|**lob_fetch_in_pages**|**bigint**|LOB_DATA 할당 단위에서 검색된 LOB(Large Object) 페이지의 누적 개수입니다. 이러한 페이지에는 **text** , **ntext** , **image** , **varchar (max)** , **nvarchar (max** ), **varbinary (max)** 및 **xml** 형식의 열에 저장 된 데이터가 포함 됩니다. 자세한 내용은 [데이터 형식&#40;Transact-SQL&#41;](../../t-sql/data-types/data-types-transact-sql.md)을 참조하세요.|    
+|**lob_fetch_in_pages**|**bigint**|LOB_DATA 할당 단위에서 검색된 LOB(Large Object) 페이지의 누적 개수입니다. 이러한 페이지에는 **text**, **ntext**, **image**, **varchar (max)**, **nvarchar (max**), **varbinary (max)** 및 **xml** 형식의 열에 저장 된 데이터가 포함 됩니다. 자세한 내용은 [데이터 형식&#40;Transact-SQL&#41;](../../t-sql/data-types/data-types-transact-sql.md)을 참조하세요.|    
 |**lob_fetch_in_bytes**|**bigint**|검색된 LOB 데이터 바이트의 누적값입니다.|    
 |**lob_orphan_create_count**|**bigint**|대량 작업 중에 생성된 고아 LOB의 누적값입니다.<br /><br /> 0 = 비클러스터형 인덱스|    
 |**lob_orphan_insert_count**|**bigint**|대량 작업 중에 삽입된 고아 LOB의 누적값입니다.<br /><br /> 0 = 비클러스터형 인덱스|    
-|**row_overflow_fetch_in_pages**|**bigint**|ROW_OVERFLOW_DATA 할당 단위에서 검색된 행 오버플로 데이터 페이지의 누적 개수입니다.<br /><br /> 이러한 페이지에는 **varchar (n)** , **nvarchar (n)** , **varbinary (n)** 및 행 외부에서 푸시된 **sql_variant** 형식의 열에 저장 된 데이터가 포함 됩니다.|    
+|**row_overflow_fetch_in_pages**|**bigint**|ROW_OVERFLOW_DATA 할당 단위에서 검색된 행 오버플로 데이터 페이지의 누적 개수입니다.<br /><br /> 이러한 페이지에는 **varchar (n)**, **nvarchar (n)**, **varbinary (n)** 및 행 외부에서 푸시된 **sql_variant** 형식의 열에 저장 된 데이터가 포함 됩니다.|    
 |**row_overflow_fetch_in_bytes**|**bigint**|검색된 행 오버플로 데이터 바이트의 누적값입니다.|    
 |**column_value_push_off_row_count**|**bigint**|삽입되거나 업데이트된 행을 페이지에 맞추기 위해 행 외부로 밀어넣은 LOB 데이터 및 행 오버플로 데이터에 대한 열 값의 누적값입니다.|    
 |**column_value_pull_in_row_count**|**bigint**|행 내부로 밀어넣은 LOB 데이터 및 행 오버플로 데이터에 대한 열 값의 누적값입니다. 업데이트 작업이 레코드의 공간을 비울 때 발생하며 LOB_DATA 또는 ROW_OVERFLOW_DATA 할당 단위에서 IN_ROW_DATA 할당 단위로 하나 이상의 행 외부 값을 밀어넣을 수 있게 됩니다.|    
@@ -192,9 +192,9 @@ sys.dm_db_index_operational_stats (
     
 -   `CONTROL` 데이터베이스 내의 지정 된 개체에 대 한 사용 권한    
     
--   `VIEW DATABASE STATE` 와일드 카드 @ *object_id* = NULL 개체를 사용 하 여 지정 된 데이터베이스 내의 모든 개체에 대 한 정보를 반환할 수 있는 권한    
+-   `VIEW DATABASE STATE` 와일드 카드 @*object_id* = NULL 개체를 사용 하 여 지정 된 데이터베이스 내의 모든 개체에 대 한 정보를 반환할 수 있는 권한    
     
--   `VIEW SERVER STATE` 데이터베이스 와일드 카드 @ *database_id* = NULL을 사용 하 여 모든 데이터베이스에 대 한 정보를 반환할 수 있는 권한    
+-   `VIEW SERVER STATE` 데이터베이스 와일드 카드 @*database_id* = NULL을 사용 하 여 모든 데이터베이스에 대 한 정보를 반환할 수 있는 권한    
     
  `VIEW DATABASE STATE`을 부여 하면 특정 개체에 대해 거부 된 제어 권한에 관계 없이 데이터베이스의 모든 개체가 반환 될 수 있습니다.    
     

@@ -19,13 +19,13 @@ helpviewer_keywords:
 ms.assetid: e1e85908-9f31-47cf-8af6-88c77e6f24c9
 author: markingmyname
 ms.author: maghan
-monikerRange: =azuresqldb-current||>=sql-server-2016||=sqlallproducts-allversions||>=sql-server-linux-2017||=azuresqldb-mi-current
-ms.openlocfilehash: 8f60adc4bdd8e8d3cdfc7f44751854b97a2f7345
-ms.sourcegitcommit: dd36d1cbe32cd5a65c6638e8f252b0bd8145e165
+monikerRange: =azuresqldb-current||>=sql-server-2016||>=sql-server-linux-2017||=azuresqldb-mi-current
+ms.openlocfilehash: 16a51a2578718db33e27a5c0c027f607eb4d37fc
+ms.sourcegitcommit: 1a544cf4dd2720b124c3697d1e62ae7741db757c
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 09/08/2020
-ms.locfileid: "89535898"
+ms.lasthandoff: 12/14/2020
+ms.locfileid: "97474644"
 ---
 # <a name="sp_getapplock-transact-sql"></a>sp_getapplock(Transact-SQL)
 [!INCLUDE [SQL Server SQL Database](../../includes/applies-to-version/sql-asdb.md)]
@@ -56,10 +56,10 @@ sp_getapplock [ @Resource = ] 'resource_name' ,
 >  애플리케이션 잠금을 획득한 후에는 처음 32자만 일반 텍스트로 검색되고 나머지는 해시됩니다.  
   
  [ @LockMode =] '*lock_mode*'  
- 특정 리소스에 대해 획득할 잠금 모드입니다. *lock_mode* 는 **varchar (32)** 이며 기본값은 없습니다. 값은 **Shared**, **Update**, **intentshared**, **intentshared**또는 **Exclusive**중 하나일 수 있습니다. 자세한 내용은 [잠금 모드](../sql-server-transaction-locking-and-row-versioning-guide.md#lock_modes)를 참조 하세요.
+ 특정 리소스에 대해 획득할 잠금 모드입니다. *lock_mode* 는 **varchar (32)** 이며 기본값은 없습니다. 값은 **Shared**, **Update**, **intentshared**, **intentshared** 또는 **Exclusive** 중 하나일 수 있습니다. 자세한 내용은 [잠금 모드](../sql-server-transaction-locking-and-row-versioning-guide.md#lock_modes)를 참조 하세요.
   
  [ @LockOwner =] '*lock_owner*'  
- 잠금의 소유자이며 잠금이 요청되었을 때의 *lock_owner* 값입니다. *lock_owner* 는 **varchar (32)** 입니다. 값은 **Transaction**(기본값) 또는 **Session**일 수 있습니다. *Lock_owner* 값이 **transaction**이면 기본적으로 또는 명시적으로 지정 된 sp_getapplock 트랜잭션 내에서 실행 되어야 합니다.  
+ 잠금의 소유자이며 잠금이 요청되었을 때의 *lock_owner* 값입니다. *lock_owner* 는 **varchar (32)** 입니다. 값은 **Transaction**(기본값) 또는 **Session** 일 수 있습니다. *Lock_owner* 값이 **transaction** 이면 기본적으로 또는 명시적으로 지정 된 sp_getapplock 트랜잭션 내에서 실행 되어야 합니다.  
   
  [ @LockTimeout =] '*value*'  
  잠금 제한 시간 값(밀리초)입니다. 기본값은 @에서 반환 하는 값과 같습니다 @LOCK_TIMEOUT . 요청을 즉시 허용할 수 없을 때 잠금 요청에서 잠금 대기 대신-1의 반환 코드를 반환 해야 함을 나타내려면 0을 지정 합니다.  
@@ -112,7 +112,7 @@ GO
   
  애플리케이션을 잠그는 교착 상태가 발생해도 애플리케이션 잠금을 요청한 트랜잭션이 롤백되지 않습니다. 반환 값의 결과로 필요할 수 있는 롤백은 모두 직접 수행해야 합니다. 따라서 특정 값(예: -3)을 반환하는 경우 ROLLBACK TRANSACTION 또는 대체 동작을 시작하도록 코드에 오류 확인 작업을 포함시키는 것이 좋습니다.  
   
- 예를 들면 다음과 같습니다.  
+ 다음은 예제입니다.  
   
 ```  
 USE AdventureWorks2012;  

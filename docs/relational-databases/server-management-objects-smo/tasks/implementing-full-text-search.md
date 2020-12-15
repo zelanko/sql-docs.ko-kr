@@ -13,13 +13,13 @@ helpviewer_keywords:
 ms.assetid: 9ce9ad9c-f671-4760-90b5-e0c8ca051473
 author: markingmyname
 ms.author: maghan
-monikerRange: =azuresqldb-current||=azure-sqldw-latest||>=sql-server-2016||=sqlallproducts-allversions||>=sql-server-linux-2017||=azuresqldb-mi-current
-ms.openlocfilehash: 788e26bd9526399580b0f24aa74fdaca05ef5b24
-ms.sourcegitcommit: e700497f962e4c2274df16d9e651059b42ff1a10
+monikerRange: =azuresqldb-current||=azure-sqldw-latest||>=sql-server-2016||>=sql-server-linux-2017||=azuresqldb-mi-current
+ms.openlocfilehash: 7abb309d4abba88f947205db6a8d58eabdcb1188
+ms.sourcegitcommit: 1a544cf4dd2720b124c3697d1e62ae7741db757c
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 08/17/2020
-ms.locfileid: "88403829"
+ms.lasthandoff: 12/14/2020
+ms.locfileid: "97475494"
 ---
 # <a name="implementing-full-text-search"></a>전체 텍스트 검색 구현
 [!INCLUDE [SQL Server ASDB, ASDBMI, ASDW ](../../../includes/applies-to-version/sql-asdb-asdbmi-asa.md)]
@@ -30,7 +30,7 @@ ms.locfileid: "88403829"
   
  먼저, <xref:Microsoft.SqlServer.Management.Smo.FullTextCatalog> 생성자를 호출하고 카탈로그 이름을 지정하여 데이터베이스에 전체 텍스트 카탈로그를 만듭니다. 그런 다음 생성자를 호출하고 저장할 테이블을 지정하여 전체 텍스트 인덱스를 만듭니다. 그리고 나서 <xref:Microsoft.SqlServer.Management.Smo.FullTextIndexColumn> 개체를 사용하여 테이블의 열 이름을 지정하면 전체 텍스트 인덱스에 대한 인덱스 열을 추가할 수 있습니다. 그런 다음 생성한 카탈로그에 <xref:Microsoft.SqlServer.Management.Smo.FullTextIndex.CatalogName%2A> 속성을 설정합니다. 마지막으로, <xref:Microsoft.SqlServer.Management.Smo.FullTextIndex.Create%2A> 메서드를 호출하고 [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] 인스턴스에 전체 텍스트 인덱스를 만듭니다.  
   
-## <a name="example"></a>예제  
+## <a name="example"></a>예  
  제공된 코드 예제를 사용하려면 애플리케이션을 만들 프로그래밍 환경, 프로그래밍 템플릿 및 프로그래밍 언어를 선택해야 합니다. 자세한 내용은 [Visual Studio .net에서 Visual C&#35; SMO 프로젝트 만들기](../../../relational-databases/server-management-objects-smo/how-to-create-a-visual-csharp-smo-project-in-visual-studio-net.md)를 참조 하세요.  
   
 ## <a name="creating-a-full-text-search-service-in-visual-basic"></a>Visual Basic에서 전체 텍스트 검색 서비스 만들기  

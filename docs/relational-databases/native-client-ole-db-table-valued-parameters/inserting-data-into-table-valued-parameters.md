@@ -13,15 +13,15 @@ helpviewer_keywords:
 ms.assetid: 9c1a3234-4675-40d3-b473-8df06208f880
 author: markingmyname
 ms.author: maghan
-monikerRange: '>=aps-pdw-2016||=azuresqldb-current||=azure-sqldw-latest||>=sql-server-2016||=sqlallproducts-allversions||>=sql-server-linux-2017||=azuresqldb-mi-current'
-ms.openlocfilehash: 823ca21dd04fe89c3b1598fba068a0f58bcceaf3
-ms.sourcegitcommit: 216f377451e53874718ae1645a2611cdb198808a
+monikerRange: '>=aps-pdw-2016||=azuresqldb-current||=azure-sqldw-latest||>=sql-server-2016||>=sql-server-linux-2017||=azuresqldb-mi-current'
+ms.openlocfilehash: 2e5cd2a11340fe40dbfce93447054be1520fb50e
+ms.sourcegitcommit: 1a544cf4dd2720b124c3697d1e62ae7741db757c
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 07/28/2020
-ms.locfileid: "87246764"
+ms.lasthandoff: 12/14/2020
+ms.locfileid: "97476024"
 ---
-# <a name="inserting-data-into-table-valued-parameters-native-client-ole-db-provider"></a>테이블 반환 매개 변수에 데이터 삽입 (Native Client OLE DB 공급자)
+# <a name="inserting-data-into-table-valued-parameters-native-client-ole-db-provider"></a>Table-Valued 매개 변수에 데이터 삽입 (Native Client OLE DB 공급자)
 [!INCLUDE[SQL Server Azure SQL Database Synapse Analytics PDW ](../../includes/applies-to-version/sql-asdb-asdbmi-asa-pdw.md)]
 
   [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]Native Client OLE DB 공급자는 소비자가 테이블 반환 매개 변수 행의 데이터를 지정 하는 두 가지 모델, 밀어넣기 모델 및 끌어오기 모델을 지원 합니다. 끌어오기 모델을 보여 주는 예제를 사용할 수 있습니다. [SQL Server 데이터 프로그래밍 예제](https://msftdpprodsamples.codeplex.com/)를 참조하십시오.  
@@ -29,7 +29,7 @@ ms.locfileid: "87246764"
 > [!NOTE]  
 >  테이블 반환 매개 변수 열은 모든 행에 기본값이 아닌 값이 있거나 모든 행에 기본값이 있어야 합니다. 일부 행에만 기본값이 있으면 안 됩니다. 따라서 테이블 반환 매개 변수 바인딩에서 테이블 반환 매개 변수 행 집합 열 데이터에는 DBSTATUS_S_ISNULL 및 DBSTATUS_S_OK 상태 값만 사용할 수 있습니다. DBSTATUS_S_DEFAULT를 사용하면 오류가 발생하며 바인딩 상태 값은 DBSTATUS_E_BADSTATUS로 설정됩니다.  
   
-## <a name="push-model-loads-all-table-valued-parameter-data-in-memory"></a>모델 푸시 (모든 테이블 반환 매개 변수 데이터를 메모리에 로드)  
+## <a name="push-model-loads-all-table-valued-parameter-data-in-memory"></a>밀어넣기 모델(모든 테이블 반환 매개 변수 데이터를 메모리에 로드)  
  밀어넣기 모델은 매개 변수 집합(ICommand::Execute의 DBPARAMS 매개 변수)을 사용하는 것과 비슷합니다. 테이블 반환 매개 변수 행 집합 개체가 IRowset 인터페이스의 사용자 지정된 구현 없이 사용되는 경우에만 밀어넣기 모델이 사용됩니다. 밀어넣기 모델은 테이블 반환 매개 변수 행 집합의 행 수가 적어 애플리케이션에 과도한 메모리 부담을 주지 않는 경우에만 사용하는 것이 좋습니다. 이 모델은 현재 일반적인 OLE DB 애플리케이션에서 흔히 사용되는 기능 이외의 기능은 소비자 애플리케이션에 요구하지 않기 때문에 끌어오기 모델보다 간단합니다.  
   
  소비자는 명령을 실행하기 전에 모든 테이블 반환 매개 변수 데이터를 공급자에게 제공해야 합니다. 데이터를 제공하기 위해 소비자는 각 테이블 반환 매개 변수의 테이블 반환 매개 변수 행 집합 개체를 채웁니다. 테이블 반환 매개 변수 행 집합 개체는 행 집합 삽입, 설정 및 삭제 작업을 제공하며, 소비자는 이를 사용하여 테이블 반환 매개 변수 데이터를 조작합니다. 공급자는 실행 시에 이 테이블 반환 매개 변수 행 집합 개체에서 데이터를 인출합니다.  

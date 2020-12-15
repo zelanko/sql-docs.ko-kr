@@ -12,13 +12,13 @@ dev_langs:
 ms.assetid: 2b72034c-6a11-46b9-a76c-7a88b2bea360
 author: ronortloff
 ms.author: rortloff
-monikerRange: '>= aps-pdw-2016 || = azure-sqldw-latest || = sqlallproducts-allversions'
-ms.openlocfilehash: 31d8ae2e196d116b6e3ff58c23deedc20425fdf5
-ms.sourcegitcommit: 22dacedeb6e8721e7cdb6279a946d4002cfb5da3
+monikerRange: '>= aps-pdw-2016 || = azure-sqldw-latest'
+ms.openlocfilehash: e74c866747b7e8f9c784f43e60ab7fb6ce4cc673
+ms.sourcegitcommit: 1a544cf4dd2720b124c3697d1e62ae7741db757c
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 10/14/2020
-ms.locfileid: "92036986"
+ms.lasthandoff: 12/14/2020
+ms.locfileid: "97472914"
 ---
 # <a name="syspdw_loader_backup_runs-transact-sql"></a>sys.pdw_loader_backup_runs (Transact-sql)
 [!INCLUDE[applies-to-version/asa-pdw](../../includes/applies-to-version/asa-pdw.md)]
@@ -34,7 +34,7 @@ ms.locfileid: "92036986"
 |end_time|**datetime**|작업이 완료, 실패 또는 취소 된 시간입니다.||  
 |total_elapsed_time|**int**|완료, 취소 또는 실패 한 실행에 대 한 start_time와 현재 시간 사이 또는 start_time와 end_time 간에 경과 된 총 시간입니다.|Total_elapsed_time 정수 24.8 (밀리초)의 최대값을 초과 하는 경우 오버플로로 인 한 구체화 실패가 발생 합니다.<br /><br /> 최대 값 (밀리초)은 24.8 일에 해당 합니다.|  
 |operation_type|**nvarchar (16)**|로드 형식입니다.|' 백업 ', ' 로드 ', ' 복원 '|  
-|mode|**nvarchar (16)**|실행 형식 내의 모드입니다.|Operation_type = **백업**<br />**DIFFERENTIAL**<br />**FULL**<br /><br /> Operation_type = **로드**<br />**추가할**<br />**로딩**<br />**UPSERT**<br /><br /> Operation_type = **복원**<br />**데이터**<br />**HEADER_ONLY**|  
+|mode|**nvarchar (16)**|실행 형식 내의 모드입니다.|Operation_type = **백업**<br />**DIFFERENTIAL**<br />**FULL**<br /><br /> Operation_type = **로드**<br />**추가할**<br />**로딩**<br />**UPSERT**<br /><br /> Operation_type = **복원**<br />**DATABASE**<br />**HEADER_ONLY**|  
 |database_name|**nvarchar(255)**|이 작업의 컨텍스트인 데이터베이스의 이름입니다.||  
 |table_name|**nvarchar(255)**|[!INCLUDE[ssInfoNA](../../includes/ssinfona-md.md)]||  
 |Principal_id|**int**|작업을 요청 하는 사용자의 ID입니다.||  

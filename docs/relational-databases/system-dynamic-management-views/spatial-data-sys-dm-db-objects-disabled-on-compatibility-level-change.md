@@ -1,6 +1,6 @@
 ---
 description: sys.dm_db_objects_disabled_on_compatibility_level_change(Transact-SQL)
-title: sys. dm_db_objects_disabled_on_compatibility_level_change (Transact-sql) | Microsoft Docs
+title: sys.dm_db_objects_disabled_on_compatibility_level_change (Transact-sql) | Microsoft Docs
 ms.custom: ''
 ms.date: 06/10/2016
 ms.prod: sql
@@ -20,15 +20,15 @@ helpviewer_keywords:
 ms.assetid: a5d70064-0330-48b9-b853-01eba50755d0
 author: markingmyname
 ms.author: maghan
-monikerRange: =azuresqldb-current||>=sql-server-2016||=sqlallproducts-allversions||>=sql-server-linux-2017||=azuresqldb-mi-current
-ms.openlocfilehash: f4779675cd37f6f49f90ab01fa17e5f5e9259260
-ms.sourcegitcommit: dd36d1cbe32cd5a65c6638e8f252b0bd8145e165
+monikerRange: =azuresqldb-current||>=sql-server-2016||>=sql-server-linux-2017||=azuresqldb-mi-current
+ms.openlocfilehash: fdb9fb661ed0da6eee45206acb302922243609c8
+ms.sourcegitcommit: 1a544cf4dd2720b124c3697d1e62ae7741db757c
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 09/08/2020
-ms.locfileid: "89519272"
+ms.lasthandoff: 12/14/2020
+ms.locfileid: "97475084"
 ---
-# <a name="spatial-data---sysdm_db_objects_disabled_on_compatibility_level_change"></a>공간 데이터-sys. dm_db_objects_disabled_on_compatibility_level_change
+# <a name="spatial-data---sysdm_db_objects_disabled_on_compatibility_level_change"></a>공간 데이터-sys.dm_db_objects_disabled_on_compatibility_level_change
 [!INCLUDE [SQL Server Azure SQL Database ](../../includes/applies-to-version/sql-asdb.md)]
 
   [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]에서 호환성 수준 변경의 결과로 비활성화되는 인덱스 및 제약 조건을 나열합니다. 식에서 공간 UDT를 사용하는 지속형 계산 열을 포함하는 인덱스 및 제약 조건은 호환성 수준을 업그레이드하거나 변경하면 비활성화됩니다. 이 동적 관리 함수를 사용하여 호환성 수준 변경의 결과를 확인할 수 있습니다.  
@@ -135,7 +135,7 @@ sys.dm_db_objects_disabled_on_compatibility_level_change ( compatibility_level )
   
  **CHECK 제약 조건 및 외래 키**  
   
- 비활성화된 CHECK 제약 조건 및 외래 키는 오류를 일으키지 않습니다. 그러나 행이 수정될 때 제약 조건이 적용되지 않습니다. 이러한 개체를 다시 사용 하도록 설정 하려면 업그레이드 후 **ALTER TABLE ... CHECK 제약 조건**입니다.  
+ 비활성화된 CHECK 제약 조건 및 외래 키는 오류를 일으키지 않습니다. 그러나 행이 수정될 때 제약 조건이 적용되지 않습니다. 이러한 개체를 다시 사용 하도록 설정 하려면 업그레이드 후 **ALTER TABLE ... CHECK 제약 조건** 입니다.  
   
  **지속형 계산 열**  
   
@@ -146,8 +146,8 @@ sys.dm_db_objects_disabled_on_compatibility_level_change ( compatibility_level )
 ### <a name="permissions"></a>사용 권한  
  VIEW DATABASE STATE 권한이 필요합니다.  
   
-## <a name="example"></a>예제  
- 다음 예에서는 dm_db_objects_disabled_on_compatibility_level_change에 대 한 쿼리를 보여 줍니다 **.** 이를 통해 호환성 수준을 120로 변경 하 여 영향을 받는 개체를 찾을 수 있습니다.  
+## <a name="example"></a>예  
+ 다음 예에서는 호환성 수준을 120로 변경 하 여 영향을 받는 개체를 찾는 **sys.dm_db_objects_disabled_on_compatibility_level_change** 에 대 한 쿼리를 보여 줍니다.  
   
 ```sql  
 SELECT * FROM sys.dm_db_objects_disabled_on_compatibility_level_change(120);  

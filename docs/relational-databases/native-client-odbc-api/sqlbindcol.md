@@ -14,13 +14,13 @@ helpviewer_keywords:
 ms.assetid: fbd7ba20-d917-4ca9-b018-018ac6af9f98
 author: markingmyname
 ms.author: maghan
-monikerRange: '>=aps-pdw-2016||=azuresqldb-current||=azure-sqldw-latest||>=sql-server-2016||=sqlallproducts-allversions||>=sql-server-linux-2017||=azuresqldb-mi-current'
-ms.openlocfilehash: 66fe93f3657cc4e9c49e7092ed519b7570645f21
-ms.sourcegitcommit: 04cf7905fa32e0a9a44575a6f9641d9a2e5ac0f8
+monikerRange: '>=aps-pdw-2016||=azuresqldb-current||=azure-sqldw-latest||>=sql-server-2016||>=sql-server-linux-2017||=azuresqldb-mi-current'
+ms.openlocfilehash: f891ab146a80c99462be9c2634d687c61fe52b99
+ms.sourcegitcommit: 1a544cf4dd2720b124c3697d1e62ae7741db757c
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 10/07/2020
-ms.locfileid: "91809719"
+ms.lasthandoff: 12/14/2020
+ms.locfileid: "97469554"
 ---
 # <a name="sqlbindcol"></a>SQLBindCol
 [!INCLUDE[SQL Server Azure SQL Database Synapse Analytics PDW ](../../includes/applies-to-version/sql-asdb-asdbmi-asa-pdw.md)]
@@ -36,12 +36,12 @@ ms.locfileid: "91809719"
  Large value 데이터 형식의 경우 사용자가 제공한 버퍼가 열의 전체 값을 저장 하기에 충분히 크지 않은 경우 **SQL_SUCCESS_WITH_INFO** 반환 되 고 "문자열 데이터; 오른쪽 잘림 "경고가 발생 합니다. **StrLen_or_IndPtr** 인수에는 버퍼에 저장 된 문자/바이트 수가 포함 됩니다.  
   
 ## <a name="sqlbindcol-support-for-enhanced-date-and-time-features"></a>향상된 날짜 및 시간 기능에 대한 SQLBindCol 지원  
- 날짜/시간 형식의 결과 열 값은 [SQL에서 C로 변환](../../relational-databases/native-client-odbc-date-time/datetime-data-type-conversions-from-sql-to-c.md)에 설명 된 대로 변환 됩니다. Time 및 datetimeoffset 열을 해당 구조 (**SQL_SS_TIME2_STRUCT** 및 **SQL_SS_TIMESTAMPOFFSET_STRUCT**)로 검색 하려면 *TargetType* 을 **SQL_C_DEFAULT** 또는 **SQL_C_BINARY**로 지정 해야 합니다.  
+ 날짜/시간 형식의 결과 열 값은 [SQL에서 C로 변환](../../relational-databases/native-client-odbc-date-time/datetime-data-type-conversions-from-sql-to-c.md)에 설명 된 대로 변환 됩니다. Time 및 datetimeoffset 열을 해당 구조 (**SQL_SS_TIME2_STRUCT** 및 **SQL_SS_TIMESTAMPOFFSET_STRUCT**)로 검색 하려면 *TargetType* 을 **SQL_C_DEFAULT** 또는 **SQL_C_BINARY** 로 지정 해야 합니다.  
   
  자세한 내용은 [ODBC&#41;&#40;날짜 및 시간 향상 ](../../relational-databases/native-client-odbc-date-time/date-and-time-improvements-odbc.md)을 참조 하세요.  
   
 ## <a name="sqlbindcol-support-for-large-clr-udts"></a>큰 CLR UDT에 대한 SQLBindCol 지원  
- **SQLBindCol** 는 많은 CLR udt (사용자 정의 형식)를 지원 합니다. 자세한 내용은 [ODBC&#41;&#40;LARGE CLR 사용자 정의 형식 ](../../relational-databases/native-client/odbc/large-clr-user-defined-types-odbc.md)을 참조 하세요.  
+ **SQLBindCol** 는 많은 CLR udt (사용자 정의 형식)를 지원 합니다. 자세한 내용은 [ODBC&#41;&#40;대량 CLR User-Defined 형식 ](../../relational-databases/native-client/odbc/large-clr-user-defined-types-odbc.md)을 참조 하세요.  
   
 ## <a name="see-also"></a>참고 항목  
  [SQLBindCol 함수](../../odbc/reference/syntax/sqlbindcol-function.md)   

@@ -18,13 +18,13 @@ helpviewer_keywords:
 ms.assetid: 787a2fa5-87a1-49bd-938b-6043c245f46b
 author: markingmyname
 ms.author: maghan
-monikerRange: '>=aps-pdw-2016||=azuresqldb-current||=azure-sqldw-latest||>=sql-server-2016||=sqlallproducts-allversions||>=sql-server-linux-2017||=azuresqldb-mi-current'
-ms.openlocfilehash: e58f27f22e0a0d69ab35f21b9dcecdc80fd12e63
-ms.sourcegitcommit: a5398f107599102af7c8cda815d8e5e9a367ce7e
+monikerRange: '>=aps-pdw-2016||=azuresqldb-current||=azure-sqldw-latest||>=sql-server-2016||>=sql-server-linux-2017||=azuresqldb-mi-current'
+ms.openlocfilehash: dbbf927943b34c81ad1f0a49b831314803969d7c
+ms.sourcegitcommit: 1a544cf4dd2720b124c3697d1e62ae7741db757c
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 10/13/2020
-ms.locfileid: "92005560"
+ms.lasthandoff: 12/14/2020
+ms.locfileid: "97472654"
 ---
 # <a name="sp_tables-transact-sql"></a>sp_tables(Transact-SQL)
 [!INCLUDE [sql-asdb-asdbmi-asa-pdw](../../includes/applies-to-version/sql-asdb-asdbmi-asa-pdw.md)]
@@ -55,14 +55,14 @@ sp_tables [ [ @table_name = ] 'name' ]
   
  [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]에서는 현재 사용자가 지정된 이름의 테이블을 소유한 경우 해당 테이블의 열이 반환됩니다. 소유자를 지정하지 않았으며 현재 사용자가 지정된 이름의 테이블을 소유하고 있지 않은 경우 이 프로시저는 데이터베이스 소유자가 소유한 지정된 이름의 테이블을 찾습니다. 테이블이 있을 경우 해당 테이블의 열이 반환됩니다.  
   
-`[ @table_qualifier = ] 'qualifier'` 테이블 한정자의 이름입니다. *한정자* 는 **sysname**이며 기본값은 NULL입니다. 다양 한 DBMS 제품에서 테이블에 대해 세 부분으로 구성 되는 이름 (_한정자_)을 지원**합니다.** _소유자_**.** _이름_). [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]에서 이 열은 데이터베이스 이름을 나타냅니다. 일부 제품에서는 테이블 데이터베이스 환경의 서버 이름을 나타냅니다.  
+`[ @table_qualifier = ] 'qualifier'` 테이블 한정자의 이름입니다. *한정자* 는 **sysname** 이며 기본값은 NULL입니다. 다양 한 DBMS 제품에서 테이블에 대해 세 부분으로 구성 되는 이름 (_한정자_)을 지원 **합니다.** _소유자_**.** _이름_). [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]에서 이 열은 데이터베이스 이름을 나타냅니다. 일부 제품에서는 테이블 데이터베이스 환경의 서버 이름을 나타냅니다.  
   
-``[ , [ @table_type = ] "'type', 'type'" ]`` 지정 된 테이블 형식의 모든 테이블에 대 한 정보를 제공 하는 쉼표로 구분 된 값 목록입니다. 여기에는 **table**, **Systemtable**및 **VIEW**가 포함 됩니다. *type* 은 **varchar (100)** 이며 기본값은 NULL입니다.  
+``[ , [ @table_type = ] "'type', 'type'" ]`` 지정 된 테이블 형식의 모든 테이블에 대 한 정보를 제공 하는 쉼표로 구분 된 값 목록입니다. 여기에는 **table**, **Systemtable** 및 **VIEW** 가 포함 됩니다. *type* 은 **varchar (100)** 이며 기본값은 NULL입니다.  
   
 > [!NOTE]  
 >  각 테이블 유형은 작은따옴표로 묶고, 전체 매개 변수는 큰따옴표로 묶어야 합니다. 테이블 유형은 대문자로 표시해야 합니다. SET QUOTED_IDENTIFIER가 ON이면 모든 작은따옴표는 큰따옴표로 바꾸고 전체 매개 변수는 작은따옴표로 묶어야 합니다.  
   
-`[ @fUsePattern = ] 'fUsePattern'` 밑줄 (_), 백분율 (%) 및 대괄호 ([또는]) 문자를 와일드 카드 문자로 해석할지 여부를 결정 합니다. 유효한 값은 0(패턴 일치 해제)과 1(패턴 일치 설정)입니다. *fUsePattern* 는 **bit**이며 기본값은 1입니다.  
+`[ @fUsePattern = ] 'fUsePattern'` 밑줄 (_), 백분율 (%) 및 대괄호 ([또는]) 문자를 와일드 카드 문자로 해석할지 여부를 결정 합니다. 유효한 값은 0(패턴 일치 해제)과 1(패턴 일치 설정)입니다. *fUsePattern* 는 **bit** 이며 기본값은 1입니다.  
   
 ## <a name="return-code-values"></a>반환 코드 값  
  None  
@@ -80,9 +80,9 @@ sp_tables [ [ @table_name = ] 'name' ]
 ## <a name="remarks"></a>설명  
  상호 운용성을 최대한 높이려면 게이트웨이 클라이언트가 SQL-92-표준 SQL 패턴 일치(% 및 _ 와일드카드 문자)만 허용해야 합니다.  
   
- 현재 사용자의 특정 테이블에 대한 읽기 또는 쓰기 액세스에 대한 권한 정보는 항상 확인되지는 않습니다. 그렇기 때문에 액세스는 보장되지 않습니다. 이 결과 집합은 테이블 및 뷰뿐만 아니라 이러한 유형을 지원하는 DBMS 제품으로의 게이트웨이에 대한 동의어 및 별칭을 포함합니다. **Sp_server_info**에 대 한 결과 집합에서 서버 특성 **ACCESSIBLE_TABLES** 가 Y 인 경우 현재 사용자가 액세스할 수 있는 테이블만 반환 됩니다.  
+ 현재 사용자의 특정 테이블에 대한 읽기 또는 쓰기 액세스에 대한 권한 정보는 항상 확인되지는 않습니다. 그렇기 때문에 액세스는 보장되지 않습니다. 이 결과 집합은 테이블 및 뷰뿐만 아니라 이러한 유형을 지원하는 DBMS 제품으로의 게이트웨이에 대한 동의어 및 별칭을 포함합니다. **Sp_server_info** 에 대 한 결과 집합에서 서버 특성 **ACCESSIBLE_TABLES** 가 Y 인 경우 현재 사용자가 액세스할 수 있는 테이블만 반환 됩니다.  
   
- **sp_tables** 는 ODBC의 **sqltables** 와 동일 합니다. 반환 된 결과는 **TABLE_TYPE**, **TABLE_QUALIFIER**, **TABLE_OWNER**및 **TABLE_NAME**를 기준으로 정렬 됩니다.  
+ **sp_tables** 는 ODBC의 **sqltables** 와 동일 합니다. 반환 된 결과는 **TABLE_TYPE**, **TABLE_QUALIFIER**, **TABLE_OWNER** 및 **TABLE_NAME** 를 기준으로 정렬 됩니다.  
   
 ## <a name="permissions"></a>사용 권한  
  스키마에 대한 SELECT 권한이 필요합니다.  

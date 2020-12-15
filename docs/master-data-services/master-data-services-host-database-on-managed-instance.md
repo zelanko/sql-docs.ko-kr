@@ -11,13 +11,13 @@ ms.topic: conceptual
 ms.assetid: 19519697-c219-44a8-9339-ee1b02545445
 author: v-redu
 ms.author: lle
-monikerRange: '>=sql-server-ver15||=sqlallproducts-allversions'
-ms.openlocfilehash: 5fa8a1df313af5473de9c49137166a6c2ac50589
-ms.sourcegitcommit: 36fe62a3ccf34979bfde3e192cfa778505add465
+monikerRange: '>=sql-server-ver15'
+ms.openlocfilehash: ef24acb23a346b59b747d876d60d9a58374188bd
+ms.sourcegitcommit: 1a544cf4dd2720b124c3697d1e62ae7741db757c
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 11/11/2020
-ms.locfileid: "94521110"
+ms.lasthandoff: 12/14/2020
+ms.locfileid: "97469974"
 ---
 # <a name="host-an-mds-database-on-a-managed-instance"></a>관리 되는 인스턴스에서 MDS 데이터베이스를 호스팅합니다.
 
@@ -228,7 +228,7 @@ MDS는 다음 샘플 연결 문자열에 표시 된 것 처럼 Active Directory 
 
 1. 모든 작업이 완료 되 면 **마침** 을 선택 합니다.
 
-## <a name="see-also"></a>참고 항목
+## <a name="see-also"></a>참조
 
 - [Master Data Services 데이터베이스](../master-data-services/master-data-services-database.md)
 - [마스터 데이터 관리자 웹 애플리케이션](../master-data-services/master-data-manager-web-application.md)

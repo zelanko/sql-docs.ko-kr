@@ -21,13 +21,13 @@ helpviewer_keywords:
 ms.assetid: 0e1b0e32-1cce-40f7-83c8-860ec660138a
 author: markingmyname
 ms.author: maghan
-monikerRange: =azuresqldb-current||>=sql-server-2016||=sqlallproducts-allversions||>=sql-server-linux-2017||=azuresqldb-mi-current
-ms.openlocfilehash: 8dcd78028499875016828e31bd3386eaf23c85a4
-ms.sourcegitcommit: dd36d1cbe32cd5a65c6638e8f252b0bd8145e165
+monikerRange: =azuresqldb-current||>=sql-server-2016||>=sql-server-linux-2017||=azuresqldb-mi-current
+ms.openlocfilehash: 51123619f1369b61bcbcba4db8314989cd9a0fd4
+ms.sourcegitcommit: 1a544cf4dd2720b124c3697d1e62ae7741db757c
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 09/08/2020
-ms.locfileid: "89550412"
+ms.lasthandoff: 12/14/2020
+ms.locfileid: "97472964"
 ---
 # <a name="syssequences-transact-sql"></a>sys.sequences(Transact-SQL)
 [!INCLUDE [SQL Server SQL Database](../../includes/applies-to-version/sql-asdb.md)]
@@ -37,7 +37,7 @@ ms.locfileid: "89550412"
 |열 이름|데이터 형식|Description|  
 |-----------------|---------------|-----------------|  
 |\<inherited columns>||는 [sys. 개체](../../relational-databases/system-catalog-views/sys-objects-transact-sql.md)의 모든 열을 상속 합니다.|  
-|**start_value**|**NULL이 아님 sql_variant**|시퀀스 개체의 시작 값입니다. ALTER SEQUENCE를 사용하여 시퀀스 개체가 다시 시작될 경우 이 값에서 다시 시작됩니다. 시퀀스 개체를 순환 하는 경우 **start_value**가 아닌 **minimum_value** 또는 **maximum_value**으로 진행 됩니다.|  
+|**start_value**|**NULL이 아님 sql_variant**|시퀀스 개체의 시작 값입니다. ALTER SEQUENCE를 사용하여 시퀀스 개체가 다시 시작될 경우 이 값에서 다시 시작됩니다. 시퀀스 개체를 순환 하는 경우 **start_value** 가 아닌 **minimum_value** 또는 **maximum_value** 으로 진행 됩니다.|  
 |**increment**|**NULL이 아님 sql_variant**|각각의 생성되는 값 다음에 시퀀스 개체를 늘리는 데 사용되는 값입니다.|  
 |**minimum_value**|**NULL sql_variant**|시퀀스 개체가 생성할 수 있는 최소값입니다. 이 값에 도달하면 시퀀스 개체가 값을 더 생성하려고 할 때 오류를 반환하거나 CYCLE 옵션이 지정되는 경우 다시 시작됩니다. MINVALUE가 지정 되지 않은 경우이 열은 시퀀스 생성기의 데이터 형식에서 지 원하는 최소값을 반환 합니다.|  
 |**maximum_value**|**NULL sql_variant**|시퀀스 개체가 생성할 수 있는 최대값입니다. 이 값에 도달하면 시퀀스 개체가 값을 더 생성하려고 할 때 오류 반환을 시작하거나 CYCLE 옵션이 지정되는 경우 다시 시작됩니다. MAXVALUE가 지정되지 않은 경우 이 열은 시퀀스 개체의 데이터 형식이 지원하는 최대값을 반환합니다.|  

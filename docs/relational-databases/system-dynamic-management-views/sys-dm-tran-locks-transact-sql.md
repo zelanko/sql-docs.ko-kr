@@ -20,13 +20,13 @@ helpviewer_keywords:
 ms.assetid: f0d3b95a-8a00-471b-9da4-14cb8f5b045f
 author: markingmyname
 ms.author: maghan
-monikerRange: '>=aps-pdw-2016||=azuresqldb-current||=azure-sqldw-latest||>=sql-server-2016||=sqlallproducts-allversions||>=sql-server-linux-2017||=azuresqldb-mi-current'
-ms.openlocfilehash: c8bd6ad5c10d8aacf76fb6219e4e0152b2d35776
-ms.sourcegitcommit: 2991ad5324601c8618739915aec9b184a8a49c74
+monikerRange: '>=aps-pdw-2016||=azuresqldb-current||=azure-sqldw-latest||>=sql-server-2016||>=sql-server-linux-2017||=azuresqldb-mi-current'
+ms.openlocfilehash: ba977b0b2f33e9c45a94c92aeb4d6fb9fba5cd0c
+ms.sourcegitcommit: 1a544cf4dd2720b124c3697d1e62ae7741db757c
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 12/11/2020
-ms.locfileid: "97334175"
+ms.lasthandoff: 12/14/2020
+ms.locfileid: "97474844"
 ---
 # <a name="sysdm_tran_locks-transact-sql"></a>sys.dm_tran_locks(Transact-SQL)
 [!INCLUDE [sql-asdb-asdbmi-asa-pdw](../../includes/applies-to-version/sql-asdb-asdbmi-asa-pdw.md)]
@@ -286,7 +286,7 @@ SQL Database Basic, S0 및 S1 서비스 목적과 탄력적 풀의 데이터베�
   
  온라인 인덱스 작업에 대 한 기존 XEvent **progress_report_online_index_operation** **partition_number** 및 **partition_id** 를 추가 하 여 확장 되었습니다.  
   
-## <a name="examples"></a>예제  
+## <a name="examples"></a>예  
   
 ### <a name="a-using-sysdm_tran_locks-with-other-tools"></a>A. 다른 도구와 함께 sys.dm_tran_locks 사용  
  다음 예에는 다른 트랜잭션에 의해 업데이트 작업이 차단되는 시나리오에서 실행됩니다. **sys.dm_tran_locks** 와 다른 도구를 사용하여 리소스 잠금에 대한 정보를 제공합니다.  

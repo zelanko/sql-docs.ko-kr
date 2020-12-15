@@ -19,13 +19,13 @@ ms.assetid: cf93eed1-ba97-4850-9fcc-b9c5a9317908
 author: VanMSFT
 ms.author: vanto
 ms.custom: seo-dt-2019
-monikerRange: = azuresqldb-current || = azure-sqldw-latest || = sqlallproducts-allversions
-ms.openlocfilehash: 3b88db4894b7d24599ccade131fdf2de7fd82d9b
-ms.sourcegitcommit: 04cf7905fa32e0a9a44575a6f9641d9a2e5ac0f8
+monikerRange: = azuresqldb-current || = azure-sqldw-latest
+ms.openlocfilehash: 22edbde7dacf45c670c94d77e7cf48833445c346
+ms.sourcegitcommit: 1a544cf4dd2720b124c3697d1e62ae7741db757c
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 10/07/2020
-ms.locfileid: "91810328"
+ms.lasthandoff: 12/14/2020
+ms.locfileid: "97472704"
 ---
 # <a name="sp_delete_firewall_rule-azure-sql-database"></a>sp_delete_firewall_rule(Azure SQL Database)
 [!INCLUDE [asdb-asa](../../includes/applies-to-version/asdb-asa.md)]
@@ -52,7 +52,7 @@ sp_delete_firewall_rule [@name =] 'name'
 ## <a name="permissions"></a>사용 권한  
  프로비전 프로세스로 만들어진 서버 수준의 보안 주체 로그인만 서버 수준 방화벽 규칙을 삭제할 수 있습니다. Sp_delete_firewall_rule를 실행 하려면 사용자가 master 데이터베이스에 연결 되어 있어야 합니다.  
   
-## <a name="example"></a>예제  
+## <a name="example"></a>예  
  다음 예에서는 'Example setting 1'이라는 서버 수준 방화벽 설정을 제거합니다. 가상 master 데이터베이스에서 문을 실행 합니다.  
   
 ```   

@@ -1,5 +1,5 @@
 ---
-title: sys. dm_db_xtp_checkpoint_stats (Transact-sql) | Microsoft Docs
+title: sys.dm_db_xtp_checkpoint_stats (Transact-sql) | Microsoft Docs
 description: 현재 데이터베이스의 메모리 내 OLTP 검사점 작업에 대한 통계를 반환합니다. SQL Server 버전에 대해이 보기가 어떻게 다른 지 알아보세요.
 ms.custom: ''
 ms.date: 03/20/2017
@@ -20,13 +20,13 @@ helpviewer_keywords:
 ms.assetid: 8d0b18ca-db4d-4376-9905-3e4457727c46
 author: markingmyname
 ms.author: maghan
-monikerRange: =azure-sqldw-latest||>=sql-server-2016||=sqlallproducts-allversions||>=sql-server-linux-2017||=azuresqldb-mi-current
-ms.openlocfilehash: 66532a6ed19dc3a7929fe7d5638fa850c893d119
-ms.sourcegitcommit: dd36d1cbe32cd5a65c6638e8f252b0bd8145e165
+monikerRange: =azure-sqldw-latest||>=sql-server-2016||>=sql-server-linux-2017||=azuresqldb-mi-current
+ms.openlocfilehash: 39e4d0d0e4198fee1be446675bd0314e0fefcb7a
+ms.sourcegitcommit: 1a544cf4dd2720b124c3697d1e62ae7741db757c
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 09/08/2020
-ms.locfileid: "89542330"
+ms.lasthandoff: 12/14/2020
+ms.locfileid: "97475004"
 ---
 # <a name="sysdm_db_xtp_checkpoint_stats-transact-sql"></a>sys.dm_db_xtp_checkpoint_stats(Transact-SQL)
 [!INCLUDE[sql-asdb-asdbmi](../../includes/applies-to-version/sql-asdb-asdbmi.md)]
@@ -45,7 +45,7 @@ SELECT * FROM sys.dm_db_xtp_checkpoint_stats;
 ## <a name="sssql15-and-later"></a>[!INCLUDE[ssSQL15](../../includes/sssql15-md.md)] 이상.  
  다음 표에서는부터 시작 하 여의 열에 대해 설명 합니다 `sys.dm_db_xtp_checkpoint_stats` **[!INCLUDE[ssSQL15](../../includes/sssql15-md.md)]** .  
   
-|열 이름|Type|Description|  
+|열 이름|Type|설명|  
 |-----------------|----------|-----------------|  
 |last_lsn_processed|**bigint**|컨트롤러에서 표시 한 마지막 LSN입니다.|  
 |end_of_log_lsn|**numeric (38)**|로그 끝의 LSN입니다.|  
@@ -68,13 +68,13 @@ SELECT * FROM sys.dm_db_xtp_checkpoint_stats;
 |last_closed_checkpoint_ts|**bigint**|마지막으로 닫힌 검사점의 타임 스탬프입니다.|  
 |hardened_recovery_lsn|**numeric (38)**|이 LSN에서 복구가 시작 됩니다.|  
 |hardened_root_file_guid|**uniqueidentifier**|마지막으로 완료 된 검사점의 결과로 확정 된 루트 파일의 GUID입니다.|  
-|hardened_root_file_watermark|**bigint**|**내부 전용**입니다. 최대 루트 파일을 읽을 수 있는 정도입니다 (내부적으로는 BSN 이라고 함).|  
+|hardened_root_file_watermark|**bigint**|**내부 전용** 입니다. 최대 루트 파일을 읽을 수 있는 정도입니다 (내부적으로는 BSN 이라고 함).|  
 |hardened_truncation_lsn|**numeric (38)**|잘림 지점의 LSN입니다.|  
 |log_bytes_since_last_close|**bigint**|마지막으로 가까운 로그 끝에 있는 바이트입니다.|  
 |time_since_last_close_in_ms|**bigint**|검사점을 마지막으로 닫은 후의 시간입니다.|  
 |current_checkpoint_id|**bigint**|현재 새 세그먼트를이 검사점에 할당 하는 중입니다. 검사점 시스템이 파이프라인입니다. 현재 검사점은 로그에서 세그먼트가 할당 되는 세그먼트입니다. 한도에 도달 하면 컨트롤러에서 검사점을 해제 하 고 현재로 만든 새 컨트롤러를 만듭니다.|  
 |current_checkpoint_segment_count|**bigint**|현재 검사점의 세그먼트 수입니다.|  
-|recovery_lsn_candidate|**bigint**|**내부적 으로만**입니다. Current_checkpoint_id 닫힐 때 recoverylsn으로 선택할 후보입니다.|  
+|recovery_lsn_candidate|**bigint**|**내부적 으로만** 입니다. Current_checkpoint_id 닫힐 때 recoverylsn으로 선택할 후보입니다.|  
 |outstanding_checkpoint_count|**bigint**|파이프라인에서 종결 되기를 기다리는 검사점의 수입니다.|  
 |closing_checkpoint_id|**bigint**|닫는 검사점의 ID입니다.<br /><br /> Serializer가 병렬로 작동 하 고 있으므로 완료 된 후에는 종료 스레드를 사용 하 여 검사점을 닫아야 합니다. 그러나 close 스레드는 한 번에 하나만 닫을 수 있으며 순서 대로 되어 있어야 합니다. 따라서 닫는 스레드가 작업 중인 종료 검사점입니다.|  
 |recovery_checkpoint_id|**bigint**|복구에 사용할 검사점의 ID입니다.|  
@@ -87,7 +87,7 @@ SELECT * FROM sys.dm_db_xtp_checkpoint_stats;
 ##  <a name="sssql14"></a><a name="bkmk_2014"></a> [!INCLUDE[ssSQL14](../../includes/sssql14-md.md)]  
  다음 표에서는의 열에 대해 설명 합니다 `sys.dm_db_xtp_checkpoint_stats` **[!INCLUDE[ssSQL14](../../includes/sssql14-md.md)]** .  
   
-|열 이름|Type|Description|  
+|열 이름|Type|설명|  
 |-----------------|----------|-----------------|  
 |log_to_process_in_bytes|**bigint**|스레드의 현재 LSN(로그 시퀀스 번호) 및 로그 끝 사이의 로그 바이트 수입니다.|  
 |total_log_blocks_processed|**bigint**|서버 시작 후 처리된 총 로그 블록 수입니다.|  

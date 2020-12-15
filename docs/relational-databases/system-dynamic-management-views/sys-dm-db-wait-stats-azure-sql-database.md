@@ -1,6 +1,6 @@
 ---
 description: sys.dm_db_wait_stats(Azure SQL Database)
-title: dm_db_wait_stats (Azure SQL Database) | Microsoft Docs
+title: sys.dm_db_wait_stats (Azure SQL Database) | Microsoft Docs
 ms.custom: ''
 ms.date: 03/14/2017
 ms.service: sql-database
@@ -19,13 +19,13 @@ helpviewer_keywords:
 ms.assetid: 00abd0a5-bae0-4d71-b173-f7a14cddf795
 author: markingmyname
 ms.author: maghan
-monikerRange: = azuresqldb-current || = sqlallproducts-allversions
-ms.openlocfilehash: 555bdfd47a44fa2d8be2e59be3a18f0b55a6fdd5
-ms.sourcegitcommit: dd36d1cbe32cd5a65c6638e8f252b0bd8145e165
+monikerRange: = azuresqldb-current
+ms.openlocfilehash: 97134afbf0a23700bcaa0529c85b276399f6d81e
+ms.sourcegitcommit: 1a544cf4dd2720b124c3697d1e62ae7741db757c
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 09/08/2020
-ms.locfileid: "89542301"
+ms.lasthandoff: 12/14/2020
+ms.locfileid: "97474994"
 ---
 # <a name="sysdm_db_wait_stats-azure-sql-database"></a>sys.dm_db_wait_stats(Azure SQL Database)
 [!INCLUDE[Azure SQL Database Azure SQL Managed Instance](../../includes/applies-to-version/asdb-asdbmi.md)]
@@ -193,27 +193,27 @@ ms.locfileid: "89542301"
 |LATCH_SH|SH(공유) 래치를 대기하는 경우에 발생합니다. 버퍼 래치 또는 트랜잭션 표시 래치를 포함하지 않습니다. sys.dm_os_latch_stats에서 LATCH_* 대기 목록을 사용할 수 있습니다. sys.dm_os_latch_stats는 LATCH_NL, LATCH_SH, LATCH_UP, LATCH_EX 및 LATCH_DT 대기를 그룹화합니다.|  
 |LATCH_UP|UP(업데이트) 래치를 대기하는 경우에 발생합니다. 버퍼 래치 또는 트랜잭션 표시 래치를 포함하지 않습니다. sys.dm_os_latch_stats에서 LATCH_* 대기 목록을 사용할 수 있습니다. sys.dm_os_latch_stats는 LATCH_NL, LATCH_SH, LATCH_UP, LATCH_EX 및 LATCH_DT 대기를 그룹화합니다.|  
 |LAZYWRITER_SLEEP|지연 기록기 태스크가 일시 중지되는 경우에 발생합니다. 대기 중인 백그라운드 태스크에서 사용한 시간을 측정한 것입니다. 사용자 대기를 찾을 때 이 상태는 고려하지 마세요.|  
-|LCK_M_BU|태스크가 대량 업데이트(BU) 잠금을 획득하려고 대기하는 경우에 발생합니다. 잠금 호환성 매트릭스는 [dm_tran_locks &#40;transact-sql&#41;](../../relational-databases/system-dynamic-management-views/sys-dm-tran-locks-transact-sql.md)를 참조 하세요.|  
-|LCK_M_IS|태스크가 내재된 공유(IS) 잠금을 획득하려고 대기하는 경우에 발생합니다. 잠금 호환성 매트릭스는 [dm_tran_locks &#40;transact-sql&#41;](../../relational-databases/system-dynamic-management-views/sys-dm-tran-locks-transact-sql.md)를 참조 하세요.|  
-|LCK_M_IU|태스크가 의도 업데이트(IU) 잠금을 획득하려고 대기하는 경우에 발생합니다. 잠금 호환성 매트릭스는 [dm_tran_locks &#40;transact-sql&#41;](../../relational-databases/system-dynamic-management-views/sys-dm-tran-locks-transact-sql.md)를 참조 하세요.|  
-|LCK_M_IX|태스크가 의도 배타(IX) 잠금을 획득하려고 대기하는 경우에 발생합니다. 잠금 호환성 매트릭스는 [dm_tran_locks &#40;transact-sql&#41;](../../relational-databases/system-dynamic-management-views/sys-dm-tran-locks-transact-sql.md)를 참조 하세요.|  
-|LCK_M_RIn_NL|태스크가 현재 키 값의 NULL 잠금 및 현재 키와 이전 키 간의 삽입 범위 잠금을 획득하려고 대기하는 경우에 발생합니다. 키의 NULL 잠금은 즉시 해제 잠금입니다. 잠금 호환성 매트릭스는 [dm_tran_locks &#40;transact-sql&#41;](../../relational-databases/system-dynamic-management-views/sys-dm-tran-locks-transact-sql.md)를 참조 하세요.|  
-|LCK_M_RIn_S|태스크가 현재 키 값의 공유 잠금 및 현재 키와 이전 키 간의 삽입 범위 잠금을 획득하려고 대기하는 경우에 발생합니다. 잠금 호환성 매트릭스는 [dm_tran_locks &#40;transact-sql&#41;](../../relational-databases/system-dynamic-management-views/sys-dm-tran-locks-transact-sql.md)를 참조 하세요.|  
-|LCK_M_RIn_U|태스크가 현재 키 값의 업데이트 잠금 및 현재 키와 이전 키 간의 삽입 범위 잠금을 획득하려고 대기하는 경우에 발생합니다. 잠금 호환성 매트릭스는 [dm_tran_locks &#40;transact-sql&#41;](../../relational-databases/system-dynamic-management-views/sys-dm-tran-locks-transact-sql.md)를 참조 하세요.|  
-|LCK_M_RIn_X|태스크가 현재 키 값의 배타 잠금 및 현재 키와 이전 키 간의 삽입 범위 잠금을 획득하려고 대기하는 경우에 발생합니다. 잠금 호환성 매트릭스는 [dm_tran_locks &#40;transact-sql&#41;](../../relational-databases/system-dynamic-management-views/sys-dm-tran-locks-transact-sql.md)를 참조 하세요.|  
-|LCK_M_RS_S|태스크가 현재 키 값의 공유 잠금 및 현재 키와 이전 키 간의 공유 범위 잠금을 획득하려고 대기하는 경우에 발생합니다. 잠금 호환성 매트릭스는 [dm_tran_locks &#40;transact-sql&#41;](../../relational-databases/system-dynamic-management-views/sys-dm-tran-locks-transact-sql.md)를 참조 하세요.|  
-|LCK_M_RS_U|태스크가 현재 키 값의 업데이트 잠금 및 현재 키와 이전 키 간의 업데이트 범위 잠금을 획득하려고 대기하는 경우에 발생합니다. 잠금 호환성 매트릭스는 [dm_tran_locks &#40;transact-sql&#41;](../../relational-databases/system-dynamic-management-views/sys-dm-tran-locks-transact-sql.md)를 참조 하세요.|  
-|LCK_M_RX_S|태스크가 현재 키 값의 공유 잠금 및 현재 키와 이전 키 간의 배타 범위 잠금을 획득하려고 대기하는 경우에 발생합니다. 잠금 호환성 매트릭스는 [dm_tran_locks &#40;transact-sql&#41;](../../relational-databases/system-dynamic-management-views/sys-dm-tran-locks-transact-sql.md)를 참조 하세요.|  
-|LCK_M_RX_U|태스크가 현재 키 값의 업데이트 잠금 및 현재 키와 이전 키 간의 배타 범위 잠금을 획득하려고 대기하는 경우에 발생합니다. 잠금 호환성 매트릭스는 [dm_tran_locks &#40;transact-sql&#41;](../../relational-databases/system-dynamic-management-views/sys-dm-tran-locks-transact-sql.md)를 참조 하세요.|  
-|LCK_M_RX_X|태스크가 현재 키 값의 배타 잠금 및 현재 키와 이전 키 간의 배타 범위 잠금을 획득하려고 대기하는 경우에 발생합니다. 잠금 호환성 매트릭스는 [dm_tran_locks &#40;transact-sql&#41;](../../relational-databases/system-dynamic-management-views/sys-dm-tran-locks-transact-sql.md)를 참조 하세요.|  
-|LCK_M_S|태스크가 공유 잠금을 획득하려고 대기하는 경우에 발생합니다. 잠금 호환성 매트릭스는 [dm_tran_locks &#40;transact-sql&#41;](../../relational-databases/system-dynamic-management-views/sys-dm-tran-locks-transact-sql.md)를 참조 하세요.|  
-|LCK_M_SCH_M|태스크가 스키마 수정 잠금을 획득하려고 대기하는 경우에 발생합니다. 잠금 호환성 매트릭스는 [dm_tran_locks &#40;transact-sql&#41;](../../relational-databases/system-dynamic-management-views/sys-dm-tran-locks-transact-sql.md)를 참조 하세요.|  
-|LCK_M_SCH_S|태스크가 스키마 공유 잠금을 획득하려고 대기하는 경우에 발생합니다. 잠금 호환성 매트릭스는 [dm_tran_locks &#40;transact-sql&#41;](../../relational-databases/system-dynamic-management-views/sys-dm-tran-locks-transact-sql.md)를 참조 하세요.|  
-|LCK_M_SIU|태스크가 의도 업데이트 공유 잠금을 획득하려고 대기하는 경우에 발생합니다. 잠금 호환성 매트릭스는 [dm_tran_locks &#40;transact-sql&#41;](../../relational-databases/system-dynamic-management-views/sys-dm-tran-locks-transact-sql.md)를 참조 하세요.|  
-|LCK_M_SIX|태스크가 의도 배타 공유 잠금을 획득하려고 대기하는 경우에 발생합니다. 잠금 호환성 매트릭스는 [dm_tran_locks &#40;transact-sql&#41;](../../relational-databases/system-dynamic-management-views/sys-dm-tran-locks-transact-sql.md)를 참조 하세요.|  
-|LCK_M_U|태스크가 업데이트 잠금을 획득하려고 대기하는 경우에 발생합니다. 잠금 호환성 매트릭스는 [dm_tran_locks &#40;transact-sql&#41;](../../relational-databases/system-dynamic-management-views/sys-dm-tran-locks-transact-sql.md)를 참조 하세요.|  
-|LCK_M_UIX|태스크가 의도 배타 업데이트 잠금을 획득하려고 대기하는 경우에 발생합니다. 잠금 호환성 매트릭스는 [dm_tran_locks &#40;transact-sql&#41;](../../relational-databases/system-dynamic-management-views/sys-dm-tran-locks-transact-sql.md)를 참조 하세요.|  
-|LCK_M_X|태스크가 배타 잠금을 획득하려고 대기하는 경우에 발생합니다. 잠금 호환성 매트릭스는 [dm_tran_locks &#40;transact-sql&#41;](../../relational-databases/system-dynamic-management-views/sys-dm-tran-locks-transact-sql.md)를 참조 하세요.|  
+|LCK_M_BU|태스크가 대량 업데이트(BU) 잠금을 획득하려고 대기하는 경우에 발생합니다. 잠금 호환성 매트릭스는 [sys.dm_tran_locks &#40;transact-sql&#41;](../../relational-databases/system-dynamic-management-views/sys-dm-tran-locks-transact-sql.md)를 참조 하세요.|  
+|LCK_M_IS|태스크가 내재된 공유(IS) 잠금을 획득하려고 대기하는 경우에 발생합니다. 잠금 호환성 매트릭스는 [sys.dm_tran_locks &#40;transact-sql&#41;](../../relational-databases/system-dynamic-management-views/sys-dm-tran-locks-transact-sql.md)를 참조 하세요.|  
+|LCK_M_IU|태스크가 의도 업데이트(IU) 잠금을 획득하려고 대기하는 경우에 발생합니다. 잠금 호환성 매트릭스는 [sys.dm_tran_locks &#40;transact-sql&#41;](../../relational-databases/system-dynamic-management-views/sys-dm-tran-locks-transact-sql.md)를 참조 하세요.|  
+|LCK_M_IX|태스크가 의도 배타(IX) 잠금을 획득하려고 대기하는 경우에 발생합니다. 잠금 호환성 매트릭스는 [sys.dm_tran_locks &#40;transact-sql&#41;](../../relational-databases/system-dynamic-management-views/sys-dm-tran-locks-transact-sql.md)를 참조 하세요.|  
+|LCK_M_RIn_NL|태스크가 현재 키 값의 NULL 잠금 및 현재 키와 이전 키 간의 삽입 범위 잠금을 획득하려고 대기하는 경우에 발생합니다. 키의 NULL 잠금은 즉시 해제 잠금입니다. 잠금 호환성 매트릭스는 [sys.dm_tran_locks &#40;transact-sql&#41;](../../relational-databases/system-dynamic-management-views/sys-dm-tran-locks-transact-sql.md)를 참조 하세요.|  
+|LCK_M_RIn_S|태스크가 현재 키 값의 공유 잠금 및 현재 키와 이전 키 간의 삽입 범위 잠금을 획득하려고 대기하는 경우에 발생합니다. 잠금 호환성 매트릭스는 [sys.dm_tran_locks &#40;transact-sql&#41;](../../relational-databases/system-dynamic-management-views/sys-dm-tran-locks-transact-sql.md)를 참조 하세요.|  
+|LCK_M_RIn_U|태스크가 현재 키 값의 업데이트 잠금 및 현재 키와 이전 키 간의 삽입 범위 잠금을 획득하려고 대기하는 경우에 발생합니다. 잠금 호환성 매트릭스는 [sys.dm_tran_locks &#40;transact-sql&#41;](../../relational-databases/system-dynamic-management-views/sys-dm-tran-locks-transact-sql.md)를 참조 하세요.|  
+|LCK_M_RIn_X|태스크가 현재 키 값의 배타 잠금 및 현재 키와 이전 키 간의 삽입 범위 잠금을 획득하려고 대기하는 경우에 발생합니다. 잠금 호환성 매트릭스는 [sys.dm_tran_locks &#40;transact-sql&#41;](../../relational-databases/system-dynamic-management-views/sys-dm-tran-locks-transact-sql.md)를 참조 하세요.|  
+|LCK_M_RS_S|태스크가 현재 키 값의 공유 잠금 및 현재 키와 이전 키 간의 공유 범위 잠금을 획득하려고 대기하는 경우에 발생합니다. 잠금 호환성 매트릭스는 [sys.dm_tran_locks &#40;transact-sql&#41;](../../relational-databases/system-dynamic-management-views/sys-dm-tran-locks-transact-sql.md)를 참조 하세요.|  
+|LCK_M_RS_U|태스크가 현재 키 값의 업데이트 잠금 및 현재 키와 이전 키 간의 업데이트 범위 잠금을 획득하려고 대기하는 경우에 발생합니다. 잠금 호환성 매트릭스는 [sys.dm_tran_locks &#40;transact-sql&#41;](../../relational-databases/system-dynamic-management-views/sys-dm-tran-locks-transact-sql.md)를 참조 하세요.|  
+|LCK_M_RX_S|태스크가 현재 키 값의 공유 잠금 및 현재 키와 이전 키 간의 배타 범위 잠금을 획득하려고 대기하는 경우에 발생합니다. 잠금 호환성 매트릭스는 [sys.dm_tran_locks &#40;transact-sql&#41;](../../relational-databases/system-dynamic-management-views/sys-dm-tran-locks-transact-sql.md)를 참조 하세요.|  
+|LCK_M_RX_U|태스크가 현재 키 값의 업데이트 잠금 및 현재 키와 이전 키 간의 배타 범위 잠금을 획득하려고 대기하는 경우에 발생합니다. 잠금 호환성 매트릭스는 [sys.dm_tran_locks &#40;transact-sql&#41;](../../relational-databases/system-dynamic-management-views/sys-dm-tran-locks-transact-sql.md)를 참조 하세요.|  
+|LCK_M_RX_X|태스크가 현재 키 값의 배타 잠금 및 현재 키와 이전 키 간의 배타 범위 잠금을 획득하려고 대기하는 경우에 발생합니다. 잠금 호환성 매트릭스는 [sys.dm_tran_locks &#40;transact-sql&#41;](../../relational-databases/system-dynamic-management-views/sys-dm-tran-locks-transact-sql.md)를 참조 하세요.|  
+|LCK_M_S|태스크가 공유 잠금을 획득하려고 대기하는 경우에 발생합니다. 잠금 호환성 매트릭스는 [sys.dm_tran_locks &#40;transact-sql&#41;](../../relational-databases/system-dynamic-management-views/sys-dm-tran-locks-transact-sql.md)를 참조 하세요.|  
+|LCK_M_SCH_M|태스크가 스키마 수정 잠금을 획득하려고 대기하는 경우에 발생합니다. 잠금 호환성 매트릭스는 [sys.dm_tran_locks &#40;transact-sql&#41;](../../relational-databases/system-dynamic-management-views/sys-dm-tran-locks-transact-sql.md)를 참조 하세요.|  
+|LCK_M_SCH_S|태스크가 스키마 공유 잠금을 획득하려고 대기하는 경우에 발생합니다. 잠금 호환성 매트릭스는 [sys.dm_tran_locks &#40;transact-sql&#41;](../../relational-databases/system-dynamic-management-views/sys-dm-tran-locks-transact-sql.md)를 참조 하세요.|  
+|LCK_M_SIU|태스크가 의도 업데이트 공유 잠금을 획득하려고 대기하는 경우에 발생합니다. 잠금 호환성 매트릭스는 [sys.dm_tran_locks &#40;transact-sql&#41;](../../relational-databases/system-dynamic-management-views/sys-dm-tran-locks-transact-sql.md)를 참조 하세요.|  
+|LCK_M_SIX|태스크가 의도 배타 공유 잠금을 획득하려고 대기하는 경우에 발생합니다. 잠금 호환성 매트릭스는 [sys.dm_tran_locks &#40;transact-sql&#41;](../../relational-databases/system-dynamic-management-views/sys-dm-tran-locks-transact-sql.md)를 참조 하세요.|  
+|LCK_M_U|태스크가 업데이트 잠금을 획득하려고 대기하는 경우에 발생합니다. 잠금 호환성 매트릭스는 [sys.dm_tran_locks &#40;transact-sql&#41;](../../relational-databases/system-dynamic-management-views/sys-dm-tran-locks-transact-sql.md)를 참조 하세요.|  
+|LCK_M_UIX|태스크가 의도 배타 업데이트 잠금을 획득하려고 대기하는 경우에 발생합니다. 잠금 호환성 매트릭스는 [sys.dm_tran_locks &#40;transact-sql&#41;](../../relational-databases/system-dynamic-management-views/sys-dm-tran-locks-transact-sql.md)를 참조 하세요.|  
+|LCK_M_X|태스크가 배타 잠금을 획득하려고 대기하는 경우에 발생합니다. 잠금 호환성 매트릭스는 [sys.dm_tran_locks &#40;transact-sql&#41;](../../relational-databases/system-dynamic-management-views/sys-dm-tran-locks-transact-sql.md)를 참조 하세요.|  
 |LOG_RATE_GOVERNOR|DB에서 견적을 로그에 작성할 때까지 기다릴 때 발생합니다.|  
 |LOGBUFFER|태스크가 로그 버퍼의 공간에 로그 레코드가 저장될 때까지 대기하는 경우에 발생합니다. 값이 계속 높게 나타나면 로그 디바이스가 서버에서 생성하는 로그의 양을 따라갈 수 없는 것일 수 있습니다.|  
 |LOGGENERATION|[!INCLUDE[ssInternalOnly](../../includes/ssinternalonly-md.md)]|  
@@ -257,8 +257,8 @@ ms.locfileid: "89542301"
 |PREEMPTIVE_TESTING|[!INCLUDE[ssInternalOnly](../../includes/ssinternalonly-md.md)]|  
 |PREEMPTIVE_XETESTING|[!INCLUDE[ssInternalOnly](../../includes/ssinternalonly-md.md)]|  
 |PRINT_ROLLBACK_PROGRESS|ALTER DATABASE termination 절을 사용하여 전환된 데이터베이스에서 사용자 프로세스가 끝나기를 기다리는 데 사용됩니다. 자세한 내용은 [ALTER DATABASE&#40;Transact-SQL&#41;](../../t-sql/statements/alter-database-transact-sql.md)를 참조하세요.|  
-|PWAIT_HADR_CHANGE_NOTIFIER_TERMINATION_SYNC|백그라운드 태스크가 폴링을 통해 Windows Server 장애 조치(Failover) 클러스터링 알림을 받는 백그라운드 태스크가 종료될 때까지 기다리는 경우에 발생합니다.  내부적으로만 사용됩니다.|  
-|PWAIT_HADR_CLUSTER_INTEGRATION|추가, 바꾸기 및/또는 제거 작업에서 Always On 내부 목록 (예: 네트워크, 네트워크 주소 또는 가용성 그룹 수신기의 목록)에 대 한 쓰기 잠금을 잡기 위해 대기 하 고 있습니다.  내부적으로만 사용됩니다.|  
+|PWAIT_HADR_CHANGE_NOTIFIER_TERMINATION_SYNC|백그라운드 태스크가 폴링을 통해 Windows Server 장애 조치(Failover) 클러스터링 알림을 받는 백그라운드 태스크가 종료될 때까지 기다리는 경우에 발생합니다.  내부 전용입니다.|  
+|PWAIT_HADR_CLUSTER_INTEGRATION|추가, 바꾸기 및/또는 제거 작업에서 Always On 내부 목록 (예: 네트워크, 네트워크 주소 또는 가용성 그룹 수신기의 목록)에 대 한 쓰기 잠금을 잡기 위해 대기 하 고 있습니다.  내부 전용입니다.|  
 |PWAIT_HADR_OFFLINE_COMPLETED|Always On drop availability group 작업이 Windows Server 장애 조치 (Failover) 클러스터링 개체를 삭제 하기 전에 대상 가용성 그룹이 오프 라인 상태가 될 때까지 기다리고 있습니다.|  
 |PWAIT_HADR_ONLINE_COMPLETED|가용성 그룹 만들기 또는 장애 조치 (failover) 작업이 대상 가용성 그룹이 온라인 상태가 될 때까지 기다리고 있습니다. Always On|  
 |PWAIT_HADR_POST_ONLINE_COMPLETED|Always On drop availability group 작업이 이전 명령의 일부로 예약 된 백그라운드 태스크가 종료 될 때까지 기다리고 있습니다. 예를 들어 가용성 데이터베이스를 주 역할로 전환 중인 백그라운드 작업이 있을 수 있습니다. 경합 상태를 방지하기 위해 DROP AVAILABILITY GROUP DDL이 이 백그라운드 태스크가 종료될 때까지 기다려야 합니다.|  
