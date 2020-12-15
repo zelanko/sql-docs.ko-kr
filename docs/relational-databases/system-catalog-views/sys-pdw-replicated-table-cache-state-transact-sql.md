@@ -11,25 +11,25 @@ dev_langs:
 - TSQL
 author: ronortloff
 ms.author: rortloff
-monikerRange: = azure-sqldw-latest || = sqlallproducts-allversions
-ms.openlocfilehash: 19a5132bd78b3cc1cca48be193b34126a9f83c3e
-ms.sourcegitcommit: 22dacedeb6e8721e7cdb6279a946d4002cfb5da3
+monikerRange: = azure-sqldw-latest
+ms.openlocfilehash: 76b5f9ec684b4733934a8cdd703942f12cf1b541
+ms.sourcegitcommit: 1a544cf4dd2720b124c3697d1e62ae7741db757c
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 10/14/2020
-ms.locfileid: "92036898"
+ms.lasthandoff: 12/14/2020
+ms.locfileid: "97404488"
 ---
 # <a name="syspdw_replicated_table_cache_state-transact-sql"></a>sys.pdw_replicated_table_cache_state(Transact-SQL)
 [!INCLUDE [asa](../../includes/applies-to-version/asa.md)]
 
-  **Object_id**여 복제 된 테이블과 연결 된 캐시의 상태를 반환 합니다.  
+  **Object_id** 여 복제 된 테이블과 연결 된 캐시의 상태를 반환 합니다.  
   
 |열 이름|데이터 형식|Description|범위|  
 |-----------------|---------------|-----------------|-----------|  
 |object_id|**int**|테이블의 개체 ID입니다. [Sys.debug &#40;transact-sql&#41;](../../relational-databases/system-catalog-views/sys-objects-transact-sql.md)를 참조 하세요.<br /><br /> **object_id** 는이 뷰의 키입니다.||  
 |state|**nvarchar(40)**|이 테이블에 대 한 복제 된 테이블 캐시 상태입니다.|' NotReady ', ' Ready '|  
   
-## <a name="example"></a>예제
+## <a name="example"></a>예
 이 예에서는 테이블 이름 및 복제 된 테이블 캐시의 상태를 검색 하기 위해 sys.pdw_replicated_table_cache_state를 sys. tables와 조인 합니다.
 
 ```sql

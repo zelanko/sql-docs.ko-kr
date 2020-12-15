@@ -1,6 +1,6 @@
 ---
-description: sys. query_store_runtime_stats_interval (Transact-sql)
-title: sys. query_store_runtime_stats_interval (Transact-sql) | Microsoft Docs
+description: sys.query_store_runtime_stats_interval (Transact-sql)
+title: sys.query_store_runtime_stats_interval (Transact-sql) | Microsoft Docs
 ms.custom: ''
 ms.date: 01/23/2019
 ms.prod: sql
@@ -21,15 +21,15 @@ helpviewer_keywords:
 ms.assetid: 2be83785-0569-41a3-88c8-59bfa0932e6e
 author: markingmyname
 ms.author: maghan
-monikerRange: =azuresqldb-current||>=sql-server-2016||= azure-sqldw-latest||=sqlallproducts-allversions||>=sql-server-linux-2017||=azuresqldb-mi-current
-ms.openlocfilehash: f285e59164457a566f3d8561fb62e33da003dfca
-ms.sourcegitcommit: dd36d1cbe32cd5a65c6638e8f252b0bd8145e165
+monikerRange: =azuresqldb-current||>=sql-server-2016||= azure-sqldw-latest||>=sql-server-linux-2017||=azuresqldb-mi-current
+ms.openlocfilehash: 49c45098a319a3a9577fe5911ac1f5f0accc6990
+ms.sourcegitcommit: 1a544cf4dd2720b124c3697d1e62ae7741db757c
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 09/08/2020
-ms.locfileid: "89548681"
+ms.lasthandoff: 12/14/2020
+ms.locfileid: "97404453"
 ---
-# <a name="sysquery_store_runtime_stats_interval-transact-sql"></a>sys. query_store_runtime_stats_interval (Transact-sql)
+# <a name="sysquery_store_runtime_stats_interval-transact-sql"></a>sys.query_store_runtime_stats_interval (Transact-sql)
 [!INCLUDE [sqlserver2016-asdb-asdbmi-asa](../../includes/applies-to-version/sqlserver2016-asdb-asdbmi-asa.md)]
 
   쿼리에 대 한 런타임 실행 통계 정보를 수집 하는 각 간격의 시작 및 종료 시간에 대 한 정보를 포함 합니다.  
@@ -45,12 +45,12 @@ ms.locfileid: "89548681"
  **VIEW DATABASE STATE** 권한이 필요 합니다.  
   
 ## <a name="see-also"></a>참고 항목  
- [database_query_store_options &#40;Transact-sql&#41;](../../relational-databases/system-catalog-views/sys-database-query-store-options-transact-sql.md)   
- [query_context_settings &#40;Transact-sql&#41;](../../relational-databases/system-catalog-views/sys-query-context-settings-transact-sql.md)   
- [query_store_plan &#40;Transact-sql&#41;](../../relational-databases/system-catalog-views/sys-query-store-plan-transact-sql.md)   
- [query_store_query &#40;Transact-sql&#41;](../../relational-databases/system-catalog-views/sys-query-store-query-transact-sql.md)   
- [query_store_query_text &#40;Transact-sql&#41;](../../relational-databases/system-catalog-views/sys-query-store-query-text-transact-sql.md)   
- [query_store_runtime_stats &#40;Transact-sql&#41;](../../relational-databases/system-catalog-views/sys-query-store-runtime-stats-transact-sql.md)   
+ [Transact-sql&#41;sys.database_query_store_options &#40;](../../relational-databases/system-catalog-views/sys-database-query-store-options-transact-sql.md)   
+ [Transact-sql&#41;sys.query_context_settings &#40;](../../relational-databases/system-catalog-views/sys-query-context-settings-transact-sql.md)   
+ [Transact-sql&#41;sys.query_store_plan &#40;](../../relational-databases/system-catalog-views/sys-query-store-plan-transact-sql.md)   
+ [Transact-sql&#41;sys.query_store_query &#40;](../../relational-databases/system-catalog-views/sys-query-store-query-transact-sql.md)   
+ [Transact-sql&#41;sys.query_store_query_text &#40;](../../relational-databases/system-catalog-views/sys-query-store-query-text-transact-sql.md)   
+ [Transact-sql&#41;sys.query_store_runtime_stats &#40;](../../relational-databases/system-catalog-views/sys-query-store-runtime-stats-transact-sql.md)   
  [sys.query_store_wait_stats&#40;Transact-SQL&#41;](../../relational-databases/system-catalog-views/sys-query-store-wait-stats-transact-sql.md)  
  [관련된 뷰, 함수 및 프로시저](../../relational-databases/performance/monitoring-performance-by-using-the-query-store.md)   
  [카탈로그 뷰&#40;Transact-SQL&#41;](../../relational-databases/system-catalog-views/catalog-views-transact-sql.md)   

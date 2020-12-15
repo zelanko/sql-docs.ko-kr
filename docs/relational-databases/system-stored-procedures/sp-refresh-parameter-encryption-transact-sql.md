@@ -19,13 +19,13 @@ helpviewer_keywords:
 ms.assetid: 00b44baf-fcf0-4095-aabe-49fa87e77316
 author: markingmyname
 ms.author: maghan
-monikerRange: =azuresqldb-current||>=sql-server-2016||=sqlallproducts-allversions||>=sql-server-linux-2017||=azuresqldb-mi-current
-ms.openlocfilehash: b2172c7d17d9c3d9ebb6680fc7af0212c0a01e12
-ms.sourcegitcommit: dd36d1cbe32cd5a65c6638e8f252b0bd8145e165
+monikerRange: =azuresqldb-current||>=sql-server-2016||>=sql-server-linux-2017||=azuresqldb-mi-current
+ms.openlocfilehash: 2e55b0a69fde6e80c6c7124b9fe800c2f6818109
+ms.sourcegitcommit: 1a544cf4dd2720b124c3697d1e62ae7741db757c
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 09/08/2020
-ms.locfileid: "89526199"
+ms.lasthandoff: 12/14/2020
+ms.locfileid: "97410672"
 ---
 # <a name="sp_refresh_parameter_encryption-transact-sql"></a>sp_refresh_parameter_encryption (Transact-sql)
 
@@ -82,7 +82,7 @@ sys.sp_refresh_parameter_encryption [ @name = ] 'module_name'
 
 절로 정의 된 모듈의 경우 `EXECUTE AS` `IMPERSONATE` 지정 된 보안 주체에 대 한 권한이 필요 합니다. 일반적으로를 사용 하 여 모듈을 정의 하지 않으면 개체를 새로 고치면 해당 보안 주체가 변경 되지 않으며 `EXECUTE AS` , `EXECUTE AS USER` 보안 주체의 사용자 이름이 모듈이 생성 될 때와 다른 사용자로 확인 됩니다.
  
-## <a name="examples"></a>예제
+## <a name="examples"></a>예
 
 다음 예에서는 테이블 및 테이블을 참조 하는 프로시저를 만들고 Always Encrypted 구성한 다음 테이블을 변경 하 고 프로시저를 실행 하는 방법을 보여 줍니다 `sp_refresh_parameter_encryption` .  
 

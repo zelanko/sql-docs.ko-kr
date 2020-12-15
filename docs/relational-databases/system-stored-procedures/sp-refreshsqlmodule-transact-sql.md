@@ -26,13 +26,13 @@ helpviewer_keywords:
 ms.assetid: f0022a05-50dd-4620-961d-361b1681d375
 author: markingmyname
 ms.author: maghan
-monikerRange: =azuresqldb-current||>=sql-server-2016||=sqlallproducts-allversions||>=sql-server-linux-2017||=azuresqldb-mi-current
-ms.openlocfilehash: 5265d2b38f8d41be321a63b701bb286b3b793e1c
-ms.sourcegitcommit: dd36d1cbe32cd5a65c6638e8f252b0bd8145e165
+monikerRange: =azuresqldb-current||>=sql-server-2016||>=sql-server-linux-2017||=azuresqldb-mi-current
+ms.openlocfilehash: dc3be80416180b8e87cacc848a4322e013ce368a
+ms.sourcegitcommit: 1a544cf4dd2720b124c3697d1e62ae7741db757c
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 09/08/2020
-ms.locfileid: "89535039"
+ms.lasthandoff: 12/14/2020
+ms.locfileid: "97410521"
 ---
 # <a name="sp_refreshsqlmodule-transact-sql"></a>sp_refreshsqlmodule(Transact-SQL)
 [!INCLUDE [sql-asdb-asdbmi-asa-pdw](../../includes/applies-to-version/sql-asdb-asdbmi-asa.md)]
@@ -57,13 +57,13 @@ sys.sp_refreshsqlmodule [ @name = ] 'module_name'
 ```  
   
 ## <a name="arguments"></a>인수  
-`[ @name = ] 'module\_name'` 저장 프로시저, 사용자 정의 함수, 뷰, DML 트리거, 데이터베이스 수준 DDL 트리거 또는 서버 수준 DDL 트리거의 이름입니다. *module_name* 은 clr (공용 언어 런타임) 저장 프로시저 또는 clr 함수가 될 수 없습니다. *module_name* 은 스키마 바인딩될 수 없습니다. *module_name* 는 **nvarchar**이며 기본값은 없습니다. *module_name* 은 여러 부분으로 구성 된 식별자가 될 수 있지만 현재 데이터베이스의 개체만 참조할 수 있습니다.  
+`[ @name = ] 'module\_name'` 저장 프로시저, 사용자 정의 함수, 뷰, DML 트리거, 데이터베이스 수준 DDL 트리거 또는 서버 수준 DDL 트리거의 이름입니다. *module_name* 은 clr (공용 언어 런타임) 저장 프로시저 또는 clr 함수가 될 수 없습니다. *module_name* 은 스키마 바인딩될 수 없습니다. *module_name* 는 **nvarchar** 이며 기본값은 없습니다. *module_name* 은 여러 부분으로 구성 된 식별자가 될 수 있지만 현재 데이터베이스의 개체만 참조할 수 있습니다.  
   
 `[ , @namespace = ] ' \<class> '` 는 지정 된 모듈의 클래스입니다. *MODULE_NAME* DDL 트리거 인 경우 \<class> 가 필요 합니다. *\<class>* 는 **nvarchar**(20)입니다. 잘못된 입력:  
 
 * DATABASE_DDL_TRIGGER
 
-* SERVER_DDL_TRIGGER- **이상에 적용**됩니다. [!INCLUDE[ssKatmai](../../includes/sskatmai-md.md)]
+* SERVER_DDL_TRIGGER- **이상에 적용** 됩니다. [!INCLUDE[ssKatmai](../../includes/sskatmai-md.md)]
 
 ## <a name="return-code-values"></a>반환 코드 값  
  0(성공) 또는 0이 아닌 수(실패)  
@@ -76,14 +76,14 @@ sys.sp_refreshsqlmodule [ @name = ] 'module_name'
  서버 수준 DDL 트리거를 새로 고치려면 아무 데이터베이스 컨텍스트에서 이 저장 프로시저를 실행하세요.  
   
 > [!NOTE]  
->  **Sp_refreshsqlmodule**를 실행 하면 개체와 연결 된 모든 서명이 삭제 됩니다.  
+>  **Sp_refreshsqlmodule** 를 실행 하면 개체와 연결 된 모든 서명이 삭제 됩니다.  
   
 ## <a name="permissions"></a>사용 권한  
  모듈에 대한 ALTER 권한 및 개체가 참조하는 CLR 사용자 정의 형식과 XML 스키마 컬렉션에 대한 REFERENCES 권한이 필요합니다. 지정된 모듈이 데이터베이스 수준 DDL 트리거일 경우 현재 데이터베이스에 ALTER ANY DATABASE DDL TRIGGER 권한이 필요합니다. 지정된 모듈이 서버 수준 DDL 트리거일 경우 CONTROL SERVER 권한이 필요합니다.  
   
  또한 EXECUTE AS 절로 정의되는 모듈의 경우 지정된 보안 주체에 대해 IMPERSONATE 권한이 필요합니다. 일반적으로 모듈이 EXECUTE AS USER로 정의되었으며 보안 주체의 사용자 이름이 모듈이 만들어진 때의 사용자와 다른 사용자로 확인되지 않는 이상 개체를 새로 고쳐도 EXECUTE AS 보안 주체가 변경되지 않습니다.  
   
-## <a name="examples"></a>예제  
+## <a name="examples"></a>예  
   
 ### <a name="a-refreshing-a-user-defined-function"></a>A. 사용자 정의 함수 새로 고침  
  다음 예에서는 사용자 정의 함수를 새로 고칩니다. 이 예에서는 별칭 데이터 형식인 `mytype`과 `to_upper`을 사용하는 사용자 정의 함수 `mytype`를 만듭니다. 그런 다음 `mytype`의 이름을 `myoldtype`으로 바꾸고 다른 정의가 있는 새 `mytype`을 만듭니다. `dbo.to_upper` 함수를 새로 고치면 이전 항목 대신 새로 구현된 `mytype`이 참조됩니다.  

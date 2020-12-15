@@ -1,5 +1,5 @@
 ---
-description: 활성 지역 복제-sp_wait_for_database_copy_sync
+description: 활성 Geo-Replication-sp_wait_for_database_copy_sync
 title: sp_wait_for_database_copy_sync
 titleSuffix: Azure SQL Database
 ms.date: 03/03/2017
@@ -16,16 +16,16 @@ helpviewer_keywords:
 ms.assetid: 7068da7f-cb74-47f2-b064-eb076a0d3885
 author: markingmyname
 ms.author: maghan
-monikerRange: =azuresqldb-current||>=sql-server-2016||=sqlallproducts-allversions||>=sql-server-linux-2017||=azuresqldb-mi-current
+monikerRange: =azuresqldb-current||>=sql-server-2016||>=sql-server-linux-2017||=azuresqldb-mi-current
 ms.custom: seo-dt-2019
-ms.openlocfilehash: 72d18f2857b561015348a7738128cd8f1e51cf00
-ms.sourcegitcommit: dd36d1cbe32cd5a65c6638e8f252b0bd8145e165
+ms.openlocfilehash: 8d453d6d3fa43226921aa6f5f0322b8f574a5e31
+ms.sourcegitcommit: 1a544cf4dd2720b124c3697d1e62ae7741db757c
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 09/08/2020
-ms.locfileid: "89542071"
+ms.lasthandoff: 12/14/2020
+ms.locfileid: "97410852"
 ---
-# <a name="active-geo-replication---sp_wait_for_database_copy_sync"></a>활성 지역 복제-sp_wait_for_database_copy_sync
+# <a name="active-geo-replication---sp_wait_for_database_copy_sync"></a>활성 Geo-Replication-sp_wait_for_database_copy_sync
 [!INCLUDE[Azure SQL Database Azure SQL Managed Instance](../../includes/applies-to-version/asdb-asdbmi.md)]
 
   이 프로시저는 기본 및 보조 간 [!INCLUDE[ssGeoDR](../../includes/ssgeodr-md.md)] 관계로 한정됩니다. **Sp_wait_for_database_copy_sync** 를 호출 하면 모든 커밋된 트랜잭션이 활성 보조 데이터베이스에서 복제 되 고 승인 될 때까지 응용 프로그램이 대기 합니다. 주 데이터베이스 에서만 **sp_wait_for_database_copy_sync** 를 실행 합니다.  
@@ -65,7 +65,7 @@ sp_wait_for_database_copy_sync [ @target_server = ] 'server_name'
 ## <a name="remarks"></a>설명  
  **Sp_wait_for_database_copy_sync** 호출 전에 커밋된 모든 트랜잭션이 활성 보조 데이터베이스에 전송 됩니다.  
   
-## <a name="examples"></a>예제  
+## <a name="examples"></a>예  
  다음 예에서는 **sp_wait_for_database_copy_sync** 를 호출 하 여 모든 트랜잭션이 주 데이터베이스인 d b 0에서 대상 서버 ubfyu5ssyt의 활성 보조 데이터베이스로 전송 되도록 합니다.  
   
 ```  
@@ -76,7 +76,7 @@ GO
 ```  
   
 ## <a name="see-also"></a>참고 항목  
- [dm_continuous_copy_status &#40;Azure SQL Database&#41;](../../relational-databases/system-dynamic-management-views/sys-dm-continuous-copy-status-azure-sql-database.md)   
+ [sys.dm_continuous_copy_status &#40;Azure SQL Database&#41;](../../relational-databases/system-dynamic-management-views/sys-dm-continuous-copy-status-azure-sql-database.md)   
  [지역에서 복제 Dmv (동적 관리 뷰) 및 함수 &#40;Azure SQL Database&#41;](../../relational-databases/system-dynamic-management-views/geo-replication-dynamic-management-views-and-functions-azure-sql-database.md)   
  [sys.dm_geo_replication_link_status](../system-dynamic-management-views/sys-dm-geo-replication-link-status-azure-sql-database.md)
   

@@ -18,13 +18,13 @@ helpviewer_keywords:
 ms.assetid: ac1fc7a0-7f46-4a12-8c5c-8d378226a8ce
 author: markingmyname
 ms.author: maghan
-monikerRange: =azure-sqldw-latest||>=sql-server-2016||=sqlallproducts-allversions||>=sql-server-linux-2017||=azuresqldb-mi-current
-ms.openlocfilehash: a2455a2d6ccf3c17c1cd60e159ce429af681dca4
-ms.sourcegitcommit: dd36d1cbe32cd5a65c6638e8f252b0bd8145e165
+monikerRange: =azure-sqldw-latest||>=sql-server-2016||>=sql-server-linux-2017||=azuresqldb-mi-current
+ms.openlocfilehash: 9b8d7b3188afcc30aecc17c1e731ca9c5fae4127
+ms.sourcegitcommit: 1a544cf4dd2720b124c3697d1e62ae7741db757c
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 09/08/2020
-ms.locfileid: "89541716"
+ms.lasthandoff: 12/14/2020
+ms.locfileid: "97410555"
 ---
 # <a name="sp_help_fulltext_system_components-transact-sql"></a>sp_help_fulltext_system_components(Transact-SQL)
 [!INCLUDE[tsql-appliesto-ss2008-xxxx-asdw-xxx-md](../../includes/tsql-appliesto-ss2008-xxxx-asdw-xxx-md.md)]
@@ -73,9 +73,9 @@ sp_help_fulltext_system_components
 |**가**|**uniqueidentifier**|구성 요소의 클래스 식별자입니다.|  
 |**fullpath**|**nvarchar(256)**|구성 요소 위치에 대한 경로입니다.<br /><br /> NULL = 호출자가 **serveradmin** 고정 서버 역할의 멤버가 아닙니다.|  
 |**version**|**nvarchar(30)**|구성 요소 버전입니다.|  
-|**제조업체**|**sysname**|구성 요소 제조업체의 이름입니다.|  
+|**manufacturer**|**sysname**|구성 요소 제조업체의 이름입니다.|  
   
- 다음 결과 집합은 *component_type*를 사용 하는 하나 이상의 전체 텍스트 카탈로그가 있는 경우에만 반환 됩니다.  
+ 다음 결과 집합은 *component_type* 를 사용 하는 하나 이상의 전체 텍스트 카탈로그가 있는 경우에만 반환 됩니다.  
   
 |열 이름|데이터 형식|Description|  
 |-----------------|---------------|-----------------|  
@@ -88,7 +88,7 @@ sp_help_fulltext_system_components
 ## <a name="remarks"></a>설명  
  이 메서드는 업그레이드를 준비할 때 특히 중요합니다. 특정 데이터베이스 내에서 저장 프로시저를 실행하고, 출력을 사용하여 특정 카탈로그가 업그레이드에 영향을 받는지 여부를 지정합니다.  
   
-## <a name="examples"></a>예제  
+## <a name="examples"></a>예  
   
 ### <a name="a-listing-all-full-text-system-components"></a>A. 모든 전체 텍스트 시스템 구성 요소 나열  
  다음 예에서는 서버 인스턴스에 등록된 모든 전체 텍스트 시스템 구성 요소를 나열합니다.  
@@ -107,7 +107,7 @@ GO
 ```  
   
 ### <a name="c-determining-whether-a-specific-word-breaker-is-registered"></a>C. 특정 단어 분리기의 등록 여부 확인  
- 다음 예에서는 시스템에 설치되어 있으며 서비스 인스턴스에 등록되어 있는 터키어(LCID=1055)용 단어 분리기를 나열합니다. 이 예에서는 매개 변수 이름 ** \@ component_type** 및 매개 ** \@ 변수**를 지정 합니다.  
+ 다음 예에서는 시스템에 설치되어 있으며 서비스 인스턴스에 등록되어 있는 터키어(LCID=1055)용 단어 분리기를 나열합니다. 이 예에서는 매개 변수 이름 **\@ component_type** 및 매개 **\@ 변수** 를 지정 합니다.  
   
 ```  
 EXEC sp_help_fulltext_system_components @component_type = 'wordbreaker', @param = 1055;  

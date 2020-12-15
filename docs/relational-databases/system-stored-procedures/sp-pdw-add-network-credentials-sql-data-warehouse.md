@@ -11,14 +11,14 @@ dev_langs:
 ms.assetid: 0729eeff-ac7e-43f0-80fa-ff5346a75985
 author: ronortloff
 ms.author: rortloff
-monikerRange: '>= aps-pdw-2016 || = azure-sqldw-latest || = sqlallproducts-allversions'
+monikerRange: '>= aps-pdw-2016 || = azure-sqldw-latest'
 ms.custom: seo-dt-2019
-ms.openlocfilehash: 212e8e5ab05204a6497282e79c4134dcff844299
-ms.sourcegitcommit: 894c1a23e922dc29b82c1d2c34c7b0ff28b38654
+ms.openlocfilehash: 0aeb775ea03d022337f45463b16e7134cfb12dc8
+ms.sourcegitcommit: 1a544cf4dd2720b124c3697d1e62ae7741db757c
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 10/30/2020
-ms.locfileid: "93067325"
+ms.lasthandoff: 12/14/2020
+ms.locfileid: "97410760"
 ---
 # <a name="sp_pdw_add_network_credentials-azure-synapse-analytics"></a>sp_pdw_add_network_credentials (Azure Synapse Analytics)
 [!INCLUDE[applies-to-version/asa-pdw](../../includes/applies-to-version/asa-pdw.md)]
@@ -37,19 +37,19 @@ sp_pdw_add_network_credentials 'target_server_name',  'user_name', 'password'
 [!INCLUDE[synapse-analytics-od-unsupported-syntax](../../includes/synapse-analytics-od-unsupported-syntax.md)]
 
 ## <a name="arguments"></a>인수  
- ' *target_server_name* '  
+ '*target_server_name*'  
  대상 서버 호스트 이름 또는 IP 주소를 지정 합니다. [!INCLUDE[ssSDW](../../includes/sssdw-md.md)] 에서이 저장 프로시저에 전달 된 사용자 이름 및 암호 자격 증명을 사용 하 여이 서버에 액세스 합니다.  
   
  InfiniBand 네트워크를 통해 연결 하려면 대상 서버의 InfiniBand IP 주소를 사용 합니다.  
   
  *target_server_name* 은 nvarchar (337)로 정의 됩니다.  
   
- ' *user_name* '  
+ '*user_name*'  
  대상 서버에 액세스할 수 있는 권한이 있는 user_name를 지정 합니다. 대상 서버에 대 한 자격 증명이 이미 있는 경우 새 자격 증명으로 업데이트 됩니다.  
   
  *user_name* 은 nvarchar (513)로 정의 됩니다.  
   
- ' *password* ꞌ  
+ '*password* ꞌ  
  *User_name* 에 대 한 암호를 지정 합니다.  
   
 ## <a name="return-code-values"></a>반환 코드 값  

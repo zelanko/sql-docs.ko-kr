@@ -12,18 +12,18 @@ dev_langs:
 ms.assetid: 1af14fe0-e562-4f48-a7f0-783f300a88ac
 author: ronortloff
 ms.author: rortloff
-monikerRange: '>= aps-pdw-2016 || = azure-sqldw-latest || = sqlallproducts-allversions'
-ms.openlocfilehash: 6e1b94ea731f42890a07c7d708444a95b694b317
-ms.sourcegitcommit: 22dacedeb6e8721e7cdb6279a946d4002cfb5da3
+monikerRange: '>= aps-pdw-2016 || = azure-sqldw-latest'
+ms.openlocfilehash: b227bb143342ba03130cc5d2e486316053d51531
+ms.sourcegitcommit: 1a544cf4dd2720b124c3697d1e62ae7741db757c
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 10/14/2020
-ms.locfileid: "92034796"
+ms.lasthandoff: 12/14/2020
+ms.locfileid: "97404165"
 ---
 # <a name="syspdw_table_mappings-transact-sql"></a>sys.pdw_table_mappings (Transact-sql)
 [!INCLUDE[applies-to-version/asa-pdw](../../includes/applies-to-version/asa-pdw.md)]
 
-  **Object_id**를 사용 하 여 사용자 테이블을 내부 개체 이름에 연결 합니다.  
+  **Object_id** 를 사용 하 여 사용자 테이블을 내부 개체 이름에 연결 합니다.  
   
 |열 이름|데이터 형식|Description|범위|  
 |-----------------|---------------|-----------------|-----------|  

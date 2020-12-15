@@ -10,18 +10,18 @@ dev_langs:
 - TSQL
 author: mstehrani
 ms.author: emtehran
-monikerRange: = azure-sqldw-latest || = sqlallproducts-allversions
-ms.openlocfilehash: c164399e11cd5824017dafbc8e0f7d7e277e1a0c
-ms.sourcegitcommit: 22dacedeb6e8721e7cdb6279a946d4002cfb5da3
+monikerRange: = azure-sqldw-latest
+ms.openlocfilehash: d832c11ccf2090454a11fa3c913455d38aff84e6
+ms.sourcegitcommit: 1a544cf4dd2720b124c3697d1e62ae7741db757c
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 10/14/2020
-ms.locfileid: "92035737"
+ms.lasthandoff: 12/14/2020
+ms.locfileid: "97404342"
 ---
 # <a name="syspdw_permanent_table_mappings-transact-sql"></a>sys.pdw_permanent_table_mappings (Transact-sql)
 [!INCLUDE [applies-to-version/asa](../../includes/applies-to-version/asa.md)]
 
-  **Object_id**를 사용 하 여 영구 사용자 테이블을 내부 개체 이름과 연결 합니다.  
+  **Object_id** 를 사용 하 여 영구 사용자 테이블을 내부 개체 이름과 연결 합니다.  
   
 > [!NOTE]
 > **sys.pdw_permanent_table_mappings** 영구 테이블에 대 한 매핑을 보유 하며 임시 또는 외부 테이블 매핑을 포함 하지 않습니다.

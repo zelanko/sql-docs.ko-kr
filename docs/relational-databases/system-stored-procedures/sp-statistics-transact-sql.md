@@ -18,13 +18,13 @@ helpviewer_keywords:
 ms.assetid: 0bb6495f-258a-47ec-9f74-fd16671d23b8
 author: markingmyname
 ms.author: maghan
-monikerRange: '>=aps-pdw-2016||=azuresqldb-current||=azure-sqldw-latest||>=sql-server-2016||=sqlallproducts-allversions||>=sql-server-linux-2017||=azuresqldb-mi-current'
-ms.openlocfilehash: 4b22227de702e787f183a7ec15e3b26d685fd6cb
-ms.sourcegitcommit: a5398f107599102af7c8cda815d8e5e9a367ce7e
+monikerRange: '>=aps-pdw-2016||=azuresqldb-current||=azure-sqldw-latest||>=sql-server-2016||>=sql-server-linux-2017||=azuresqldb-mi-current'
+ms.openlocfilehash: ab64c4fa1ea96390631508130ba9a7b57d8a8493
+ms.sourcegitcommit: 1a544cf4dd2720b124c3697d1e62ae7741db757c
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 10/13/2020
-ms.locfileid: "92005962"
+ms.lasthandoff: 12/14/2020
+ms.locfileid: "97410548"
 ---
 # <a name="sp_statistics-transact-sql"></a>sp_statistics(Transact-SQL)
 [!INCLUDE [sql-asdb-asdbmi-asa-pdw](../../includes/applies-to-version/sql-asdb-asdbmi-asa-pdw.md)]
@@ -49,19 +49,19 @@ sp_statistics [ @table_name = ] 'table_name'
 [!INCLUDE[synapse-analytics-od-unsupported-syntax](../../includes/synapse-analytics-od-unsupported-syntax.md)]
 
 ## <a name="arguments"></a>인수  
-`[ @table_name = ] 'table_name'` 카탈로그 정보를 반환 하는 데 사용 되는 테이블을 지정 합니다. *table_name* 는 **sysname**이며 기본값은 없습니다. 와일드카드 패턴 일치는 지원되지 않습니다.  
+`[ @table_name = ] 'table_name'` 카탈로그 정보를 반환 하는 데 사용 되는 테이블을 지정 합니다. *table_name* 는 **sysname** 이며 기본값은 없습니다. 와일드카드 패턴 일치는 지원되지 않습니다.  
   
-`[ @table_owner = ] 'owner'` 카탈로그 정보를 반환 하는 데 사용 되는 테이블의 소유자 이름입니다. *table_owner* 는 **sysname**이며 기본값은 NULL입니다. 와일드카드 패턴 일치는 지원되지 않습니다. *Owner* 를 지정 하지 않은 경우 기본 DBMS의 기본 테이블 표시 규칙이 적용 됩니다.  
+`[ @table_owner = ] 'owner'` 카탈로그 정보를 반환 하는 데 사용 되는 테이블의 소유자 이름입니다. *table_owner* 는 **sysname** 이며 기본값은 NULL입니다. 와일드카드 패턴 일치는 지원되지 않습니다. *Owner* 를 지정 하지 않은 경우 기본 DBMS의 기본 테이블 표시 규칙이 적용 됩니다.  
   
- [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]에서는 현재 사용자가 지정된 이름의 테이블을 소유한 경우 해당 테이블의 인덱스가 반환됩니다. *Owner* 를 지정 하지 않은 경우 현재 사용자가 지정 된 *이름의*테이블을 소유 하 고 있지 않은 경우이 프로시저는 데이터베이스 소유자가 소유한 지정 된 *이름의* 테이블을 찾습니다. 테이블이 있을 경우 해당 테이블의 인덱스가 반환됩니다.  
+ [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]에서는 현재 사용자가 지정된 이름의 테이블을 소유한 경우 해당 테이블의 인덱스가 반환됩니다. *Owner* 를 지정 하지 않은 경우 현재 사용자가 지정 된 *이름의* 테이블을 소유 하 고 있지 않은 경우이 프로시저는 데이터베이스 소유자가 소유한 지정 된 *이름의* 테이블을 찾습니다. 테이블이 있을 경우 해당 테이블의 인덱스가 반환됩니다.  
   
-`[ @table_qualifier = ] 'qualifier'` 테이블 한정자의 이름입니다. *한정자* 는 **sysname**이며 기본값은 NULL입니다. 다양 한 DBMS 제품에서 테이블에 대해 세 부분으로 구성 되는 이름 (_한정자_)을 지원**합니다.** _소유자_**.** _이름_). [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]에서 이 매개 변수는 데이터베이스 이름을 나타냅니다. 일부 제품에서는 테이블 데이터베이스 환경의 서버 이름을 나타냅니다.  
+`[ @table_qualifier = ] 'qualifier'` 테이블 한정자의 이름입니다. *한정자* 는 **sysname** 이며 기본값은 NULL입니다. 다양 한 DBMS 제품에서 테이블에 대해 세 부분으로 구성 되는 이름 (_한정자_)을 지원 **합니다.** _소유자_**.** _이름_). [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]에서 이 매개 변수는 데이터베이스 이름을 나타냅니다. 일부 제품에서는 테이블 데이터베이스 환경의 서버 이름을 나타냅니다.  
   
-`[ @index_name = ] 'index_name'` 인덱스 이름입니다. *index_name* 는 **sysname**이며 기본값 은%입니다. 와일드카드 패턴 일치가 지원됩니다.  
+`[ @index_name = ] 'index_name'` 인덱스 이름입니다. *index_name* 는 **sysname** 이며 기본값 은%입니다. 와일드카드 패턴 일치가 지원됩니다.  
   
-`[ @is_unique = ] 'is_unique'` 고유 인덱스 ( **Y**인 경우)만 반환할지 여부입니다. *is_unique* 은 **char (1)** 이며 기본값은 **N**입니다.  
+`[ @is_unique = ] 'is_unique'` 고유 인덱스 ( **Y** 인 경우)만 반환할지 여부입니다. *is_unique* 은 **char (1)** 이며 기본값은 **N** 입니다.  
   
-`[ @accuracy = ] 'accuracy'` 통계의 카디널리티 및 페이지 정확도 수준입니다. *정확도* 는 **char (1)** 이며 기본값은 **Q**입니다. 카디널리티 및 페이지가 정확한 지 확인 하기 위해 통계를 업데이트 하려면 **E** 를 지정 합니다.  
+`[ @accuracy = ] 'accuracy'` 통계의 카디널리티 및 페이지 정확도 수준입니다. *정확도* 는 **char (1)** 이며 기본값은 **Q** 입니다. 카디널리티 및 페이지가 정확한 지 확인 하기 위해 통계를 업데이트 하려면 **E** 를 지정 합니다.  
   
  **E** (SQL_ENSURE) 값은 통계를 무조건 검색 하도록 드라이버에 요청 합니다.  
   
@@ -75,13 +75,13 @@ sp_statistics [ @table_name = ] 'table_name'
 |**TABLE_OWNER**|**sysname**|테이블 소유자 이름입니다. 이 열은 항상 값을 반환합니다.|  
 |**TABLE_NAME**|**sysname**|테이블 이름입니다. 이 열은 항상 값을 반환합니다.|  
 |**NON_UNIQUE**|**smallint**|NOT NULL입니다.<br /><br /> 0 = 고유함<br /><br /> 1 = 고유하지 않음|  
-|**INDEX_QUALIFIER**|**sysname**|인덱스 소유자 이름입니다. 일부 DBMS 제품은 테이블 소유자 이외의 사용자가 인덱스를 만들 수 있도록 허용합니다. 에서 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 이 열은 항상 **TABLE_NAME**와 동일 합니다.|  
+|**INDEX_QUALIFIER**|**sysname**|인덱스 소유자 이름입니다. 일부 DBMS 제품은 테이블 소유자 이외의 사용자가 인덱스를 만들 수 있도록 허용합니다. 에서 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 이 열은 항상 **TABLE_NAME** 와 동일 합니다.|  
 |**INDEX_NAME**|**sysname**|인덱스의 이름입니다. 이 열은 항상 값을 반환합니다.|  
 |**TYPE**|**smallint**|이 열은 항상 값을 반환합니다.<br /><br /> 0 = 테이블에 대한 통계<br /><br /> 1 = 클러스터형<br /><br /> 2 = 해시됨<br /><br /> 3 = 비클러스터형|  
 |**SEQ_IN_INDEX**|**smallint**|인덱스 내의 열 위치입니다.|  
 |**COLUMN_NAME**|**sysname**|반환 된 **TABLE_NAME** 의 각 열에 대 한 열 이름입니다. 이 열은 항상 값을 반환합니다.|  
 |**COLLATION**|**char(1)**|데이터 정렬에 사용되는 순서입니다. 다음 값 중 하나일 수 있습니다.<br /><br /> A = 오름차순<br /><br /> D = 내림차순<br /><br /> NULL = 해당 사항 없음|  
-|**CARDINALITY**|**int**|테이블의 행 수 또는 인덱스의 고유한 값입니다.|  
+|**카디널리티**|**int**|테이블의 행 수 또는 인덱스의 고유한 값입니다.|  
 |**마주보**|**int**|인덱스 또는 테이블을 저장할 페이지의 번호입니다.|  
 |**FILTER_CONDITION**|**varchar(128)**|[!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]는 값을 반환하지 않습니다.|  
   
@@ -89,13 +89,13 @@ sp_statistics [ @table_name = ] 'table_name'
  없음  
   
 ## <a name="remarks"></a>설명  
- 결과 집합의 인덱스는 **NON_UNIQUE**, **형식**, **INDEX_NAME**및 **SEQ_IN_INDEX**열을 기준으로 오름차순으로 표시 됩니다.  
+ 결과 집합의 인덱스는 **NON_UNIQUE**, **형식**, **INDEX_NAME** 및 **SEQ_IN_INDEX** 열을 기준으로 오름차순으로 표시 됩니다.  
   
  클러스터형 인덱스 유형은 테이블 데이터가 그 안에서 인덱스 순서로 저장된 인덱스를 의미합니다. 이는 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 클러스터형 인덱스에 해당 합니다.  
   
  해시됨 인덱스 유형은 정확하게 일치하는 항목 검색 또는 범위 검색을 허용하지만 패턴 일치 검색은 이 인덱스를 사용하지 않습니다.  
   
- **sp_statistics** 은 ODBC의 **SQLStatistics** 와 동일 합니다. 반환 되는 결과는 **NON_UNIQUE**, **형식**, **INDEX_QUALIFIER**, **INDEX_NAME**및 **SEQ_IN_INDEX**를 기준으로 정렬 됩니다. 자세한 내용은 [ODBC API 참조](../../odbc/reference/syntax/odbc-reference.md)를 참조 하세요.  
+ **sp_statistics** 은 ODBC의 **SQLStatistics** 와 동일 합니다. 반환 되는 결과는 **NON_UNIQUE**, **형식**, **INDEX_QUALIFIER**, **INDEX_NAME** 및 **SEQ_IN_INDEX** 를 기준으로 정렬 됩니다. 자세한 내용은 [ODBC API 참조](../../odbc/reference/syntax/odbc-reference.md)를 참조 하세요.  
   
 ## <a name="permissions"></a>사용 권한  
  스키마에 대한 SELECT 권한이 필요합니다.  
