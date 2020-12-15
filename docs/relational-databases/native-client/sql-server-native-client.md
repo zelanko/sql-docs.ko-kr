@@ -10,13 +10,13 @@ ms.topic: conceptual
 ms.assetid: e4d4fe39-0090-42a7-8405-6378370d11cb
 author: markingmyname
 ms.author: maghan
-monikerRange: '>=aps-pdw-2016||=azuresqldb-current||=azure-sqldw-latest||>=sql-server-2016||=sqlallproducts-allversions||>=sql-server-linux-2017||=azuresqldb-mi-current'
-ms.openlocfilehash: f62b0fa0d27ed5db06f85b2c77e1ab381534d731
-ms.sourcegitcommit: 783b35f6478006d654491cb52f6edf108acf2482
+monikerRange: '>=aps-pdw-2016||=azuresqldb-current||=azure-sqldw-latest||>=sql-server-2016||>=sql-server-linux-2017||=azuresqldb-mi-current'
+ms.openlocfilehash: b65b009d5dc88dc9d5a0cd5cc6f5592c8160c8bb
+ms.sourcegitcommit: 1a544cf4dd2720b124c3697d1e62ae7741db757c
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 10/09/2020
-ms.locfileid: "91891113"
+ms.lasthandoff: 12/14/2020
+ms.locfileid: "97467504"
 ---
 # <a name="sql-server-native-client"></a>SQL Server Native Client
 [!INCLUDE[SQL Server Azure SQL Database Synapse Analytics PDW ](../../includes/applies-to-version/sql-asdb-asdbmi-asa-pdw.md)]
@@ -48,13 +48,13 @@ Native Client의 ODBC는 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md
 
 -   C 데이터 형식 확장성. 자세한 내용은 [ODBC의 C 데이터 형식](../../odbc/reference/develop-app/c-data-types-in-odbc.md)을 참조 하세요.  
 
-     Native Client에서이 기능을 지원 하기 위해 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] SQLGetDescField는 응용 프로그램에서 ODBC 3.8를 사용 하는 경우 **SQL_C_BINARY**대신 **SQL_C_SS_TIME2** ( **시간** 형식) 또는 **SQL_C_SS_TIMESTAMPOFFSET** ( **datetimeoffset**)를 반환할 수 있습니다. 자세한 내용은 [ODBC 날짜 및 시간 향상을 위한 데이터 형식 지원](../../relational-databases/native-client-odbc-date-time/data-type-support-for-odbc-date-and-time-improvements.md)을 참조 하세요.  
+     Native Client에서이 기능을 지원 하기 위해 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] SQLGetDescField는 응용 프로그램에서 ODBC 3.8를 사용 하는 경우 **SQL_C_BINARY** 대신 **SQL_C_SS_TIME2** ( **시간** 형식) 또는 **SQL_C_SS_TIMESTAMPOFFSET** ( **datetimeoffset**)를 반환할 수 있습니다. 자세한 내용은 [ODBC 날짜 및 시간 향상을 위한 데이터 형식 지원](../../relational-databases/native-client-odbc-date-time/data-type-support-for-odbc-date-and-time-improvements.md)을 참조 하세요.  
 
 -   작은 버퍼로 **SQLGetData** 를 여러 번 호출 하 여 많은 매개 변수 값을 검색 합니다. 자세한 내용은 [SQLGetData를 사용 하 여 출력 매개 변수 검색](../../odbc/reference/develop-app/retrieving-output-parameters-using-sqlgetdata.md)을 참조 하세요.  
 
  다음 항목에서는 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]에서의 [!INCLUDE[ssSQL11](../../includes/sssql11-md.md)] Native Client 동작 변경에 대해 설명합니다.  
 
--   **ICommandWithParameters:: SetParameterInfo**를 호출 하는 경우 *pwszName* 매개 변수에 전달 된 값은 올바른 식별자 여야 합니다. 자세한 내용은 [ICommandWithParameters](../../relational-databases/native-client-ole-db-interfaces/icommandwithparameters.md)를 참조 하세요.  
+-   **ICommandWithParameters:: SetParameterInfo** 를 호출 하는 경우 *pwszName* 매개 변수에 전달 된 값은 올바른 식별자 여야 합니다. 자세한 내용은 [ICommandWithParameters](../../relational-databases/native-client-ole-db-interfaces/icommandwithparameters.md)를 참조 하세요.  
 
 -   **SQLDescribeParam** 는 ODBC 사양에 맞는 값을 일관 되 게 반환 합니다. 자세한 내용은 [SQLDescribeParam](../../relational-databases/native-client-odbc-api/sqldescribeparam.md)를 참조 하세요.  
 

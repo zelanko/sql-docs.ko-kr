@@ -21,13 +21,13 @@ helpviewer_keywords:
 ms.assetid: 88734726-135b-4b61-9f3f-f568c1fbece6
 author: markingmyname
 ms.author: maghan
-monikerRange: =azuresqldb-current||>=sql-server-2016||=sqlallproducts-allversions||>=sql-server-linux-2017||=azuresqldb-mi-current
-ms.openlocfilehash: 8e931ab070b022f1e7649fd998642fed2694944c
-ms.sourcegitcommit: dd36d1cbe32cd5a65c6638e8f252b0bd8145e165
+monikerRange: =azuresqldb-current||>=sql-server-2016||>=sql-server-linux-2017||=azuresqldb-mi-current
+ms.openlocfilehash: c21bf8fc4b5c502b566b4ad87ded9a3d064435ee
+ms.sourcegitcommit: 1a544cf4dd2720b124c3697d1e62ae7741db757c
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 09/08/2020
-ms.locfileid: "89541615"
+ms.lasthandoff: 12/14/2020
+ms.locfileid: "97468334"
 ---
 # <a name="sp_query_store_remove_plan-transct-sql"></a>sp_query_store_remove_plan(Transct-SQL)
 
@@ -45,7 +45,7 @@ sp_query_store_remove_plan [ @plan_id = ] plan_id [;]
 ```  
   
 ## <a name="arguments"></a>인수  
-`[ @plan_id = ] plan_id` 제거할 쿼리 계획의 id입니다. *plan_id* 는 **bigint**이며 기본값은 없습니다.  
+`[ @plan_id = ] plan_id` 제거할 쿼리 계획의 id입니다. *plan_id* 는 **bigint** 이며 기본값은 없습니다.  
   
 ## <a name="return-code-values"></a>반환 코드 값  
  0(성공) 또는 1(실패)  
@@ -55,7 +55,7 @@ sp_query_store_remove_plan [ @plan_id = ] plan_id [;]
 ## <a name="permissions"></a>사용 권한  
  데이터베이스에 대 한 **ALTER** 권한이 필요 합니다.
   
-## <a name="examples"></a>예제  
+## <a name="examples"></a>예  
  다음 예에서는 쿼리 저장소의 쿼리에 대 한 정보를 반환 합니다.  
   
 ```  

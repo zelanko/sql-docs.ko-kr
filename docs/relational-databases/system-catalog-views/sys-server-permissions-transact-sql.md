@@ -1,6 +1,6 @@
 ---
 description: sys.server_permissions(Transact-SQL)
-title: sys. server_permissions (Transact-sql) | Microsoft Docs
+title: sys.server_permissions (Transact-sql) | Microsoft Docs
 ms.custom: ''
 ms.date: 09/20/2019
 ms.prod: sql
@@ -20,13 +20,13 @@ helpviewer_keywords:
 ms.assetid: 7d78bf17-6c64-4166-bd0b-9e9e20992136
 author: VanMSFT
 ms.author: vanto
-monikerRange: '>=aps-pdw-2016||>=sql-server-2016||=sqlallproducts-allversions||>=sql-server-linux-2017||=azuresqldb-mi-current'
-ms.openlocfilehash: a8f0541d743ea7feaa8991c2b085173b4c6e8f40
-ms.sourcegitcommit: e700497f962e4c2274df16d9e651059b42ff1a10
+monikerRange: '>=aps-pdw-2016||>=sql-server-2016||>=sql-server-linux-2017||=azuresqldb-mi-current'
+ms.openlocfilehash: bc833da8d53eadd88152e603777b4799ac30938f
+ms.sourcegitcommit: 1a544cf4dd2720b124c3697d1e62ae7741db757c
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 08/17/2020
-ms.locfileid: "88376939"
+ms.lasthandoff: 12/14/2020
+ms.locfileid: "97464664"
 ---
 # <a name="sysserver_permissions-transact-sql"></a>sys.server_permissions(Transact-SQL)
 [!INCLUDE [sql-asdbmi-pdw](../../includes/applies-to-version/sql-asdbmi-pdw.md)]
@@ -36,14 +36,14 @@ ms.locfileid: "88376939"
 |열 이름|데이터 형식|Description|  
 |-----------------|---------------|-----------------|  
 |**class**|**tinyint**|사용 권한이 있는 클래스를 나타냅니다.<br /><br /> 100 = 서버<br /><br /> 101 = 서버 보안 주체<br /><br /> 105 = 엔드포인트|  
-|**class_desc**|**nvarchar(60)**|사용 권한이 있는 클래스에 대한 설명입니다. 다음 값 중 하나입니다.<br /><br /> **서버인**<br /><br /> **SERVER_PRINCIPAL**<br /><br /> **끝점만**|  
+|**class_desc**|**nvarchar(60)**|사용 권한이 있는 클래스에 대한 설명입니다. 다음 값 중 하나입니다.<br /><br /> **서버인**<br /><br /> **SERVER_PRINCIPAL**<br /><br /> **엔드포인트**|  
 |**major_id**|**int**|사용 권한이 있는 보안 개체의 ID이며 클래스에 따라 해석됩니다. 대부분의 항목에서 이 ID는 클래스가 나타내는 대상의 ID입니다. 비표준 ID는 다음과 같이 해석됩니다.<br /><br /> 100 = 항상 0|  
 |**minor_id**|**int**|사용 권한이 있는 대상의 보조 ID이며 클래스에 따라 해석됩니다.|  
 |**grantee_principal_id**|**int**|사용 권한을 부여할 서버 보안 주체 ID입니다.|  
 |**grantor_principal_id**|**int**|이 사용 권한을 부여한 사용자의 서버 보안 주체 ID입니다.|  
 |**type**|**char (4)**|서버 사용 권한의 유형입니다. 사용 권한 유형 목록은 다음 표를 참조하세요.|  
 |**permission_name**|**nvarchar(128)**|사용 권한 이름입니다.|  
-|**상태**|**char (1)**|사용 권한 상태입니다.<br /><br /> D = 거부<br /><br /> R = 취소<br /><br /> G = 허용<br /><br /> W = Grant 옵션을 사용하여 허용|  
+|**state**|**char(1)**|사용 권한 상태입니다.<br /><br /> D = 거부<br /><br /> R = 취소<br /><br /> G = 허용<br /><br /> W = Grant 옵션을 사용하여 허용|  
 |**state_desc**|**nvarchar(60)**|사용 권한 상태에 대한 설명입니다.<br /><br /> 거부<br /><br /> REVOKE<br /><br /> GRANT<br /><br /> GRANT_WITH_GRANT_OPTION|  
   
 |사용 권한 유형|사용 권한 이름|보안 개체에 적용되는 항목|  
@@ -94,7 +94,7 @@ ms.locfileid: "88376939"
   
  [!INCLUDE[ssCatViewPerm](../../includes/sscatviewperm-md.md)] 자세한 내용은 [Metadata Visibility Configuration](../../relational-databases/security/metadata-visibility-configuration.md)을 참조하세요.  
   
-## <a name="examples"></a>예제  
+## <a name="examples"></a>예  
  다음 쿼리는 서버 보안 주체에 대해 명시적으로 부여되거나 거부된 사용 권한을 나열합니다.  
   
 > [!IMPORTANT]  

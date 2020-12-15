@@ -19,13 +19,13 @@ helpviewer_keywords:
 ms.assetid: e4284a1b-7534-4b34-8488-b8d05ed67b8c
 author: markingmyname
 ms.author: maghan
-monikerRange: '>=aps-pdw-2016||=azuresqldb-current||=azure-sqldw-latest||>=sql-server-2016||=sqlallproducts-allversions||>=sql-server-linux-2017||=azuresqldb-mi-current'
-ms.openlocfilehash: 50b1177e65ad2ef082335fa29a180ddd8f489adf
-ms.sourcegitcommit: e700497f962e4c2274df16d9e651059b42ff1a10
+monikerRange: '>=aps-pdw-2016||=azuresqldb-current||=azure-sqldw-latest||>=sql-server-2016||>=sql-server-linux-2017||=azuresqldb-mi-current'
+ms.openlocfilehash: 66fc82b8253c5bb9eeac669bf88846737b315d91
+ms.sourcegitcommit: 1a544cf4dd2720b124c3697d1e62ae7741db757c
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 08/17/2020
-ms.locfileid: "88455980"
+ms.lasthandoff: 12/14/2020
+ms.locfileid: "97465064"
 ---
 # <a name="bulk-copying-from-program-variables"></a>프로그램 변수에서 대량 복사
 [!INCLUDE[SQL Server Azure SQL Database Synapse Analytics PDW ](../../includes/applies-to-version/sql-asdb-asdbmi-asa-pdw.md)]
@@ -42,11 +42,11 @@ ms.locfileid: "88455980"
   
  **bcp_bind** 는 가변 길이 데이터를 처리하는 다음과 같은 세 가지 메서드를 지원합니다.  
   
--   데이터 변수 하나만 있는 *cbData* 사용. 데이터 길이를 *cbData*에 저장합니다. 대량 복사 될 데이터의 길이가 변경 될 때마다 [bcp_collen](../../relational-databases/native-client-odbc-extensions-bulk-copy-functions/bcp-collen.md)를 호출 하 여 *cbdata*를 다시 설정 합니다. 다른 두 메서드 중 하나를 사용할 경우에는 *cbData*에 SQL_VARLEN_DATA를 지정합니다. 열에 제공할 데이터 값이 모두 NULL인 경우에는 *cbData*에 SQL_NULL_DATA를 지정합니다.  
+-   데이터 변수 하나만 있는 *cbData* 사용. 데이터 길이를 *cbData* 에 저장합니다. 대량 복사 될 데이터의 길이가 변경 될 때마다 [bcp_collen](../../relational-databases/native-client-odbc-extensions-bulk-copy-functions/bcp-collen.md)를 호출 하 여 *cbdata* 를 다시 설정 합니다. 다른 두 메서드 중 하나를 사용할 경우에는 *cbData* 에 SQL_VARLEN_DATA를 지정합니다. 열에 제공할 데이터 값이 모두 NULL인 경우에는 *cbData* 에 SQL_NULL_DATA를 지정합니다.  
   
--   표시자 변수 사용. 각각의 새 데이터 값이 데이터 변수로 이동할 때 값 길이를 표시자 변수에 저장합니다. 다른 두 메서드 중 하나를 사용할 경우에는 *cbIndicator*에 0을 지정합니다.  
+-   표시자 변수 사용. 각각의 새 데이터 값이 데이터 변수로 이동할 때 값 길이를 표시자 변수에 저장합니다. 다른 두 메서드 중 하나를 사용할 경우에는 *cbIndicator* 에 0을 지정합니다.  
   
--   종결자 포인터 사용. 데이터를 종료하는 비트 패턴 주소를 사용하여 **bcp_bind**_pTerm_ 매개 변수를 로드합니다. 다른 두 메서드 중 하나를 사용할 경우에는 *pTerm*에 NULL을 지정합니다.  
+-   종결자 포인터 사용. 데이터를 종료하는 비트 패턴 주소를 사용하여 **bcp_bind**_pTerm_ 매개 변수를 로드합니다. 다른 두 메서드 중 하나를 사용할 경우에는 *pTerm* 에 NULL을 지정합니다.  
   
  동일한 **bcp_bind** 호출에서 이 세 메서드를 모두 사용할 수 있습니다. 그럴 경우 가장 작은 양의 데이터를 복사하는 사양이 사용됩니다.  
   
@@ -58,7 +58,7 @@ ms.locfileid: "88455980"
   
 |ODBC SQL 데이터 형식|ODBC C 데이터 형식|bcp_bind *type* 매개 변수|SQL Server 데이터 형식|  
 |-----------------------|----------------------|--------------------------------|--------------------------|  
-|SQL_CHAR|SQL_C_CHAR|SQLCHARACTER|**자의**<br /><br /> **char**|  
+|SQL_CHAR|SQL_C_CHAR|SQLCHARACTER|**character**<br /><br /> **char**|  
 |SQL_VARCHAR|SQL_C_CHAR|SQLCHARACTER|**varchar**<br /><br /> **character varying**<br /><br /> **char varying**<br /><br /> **sysname**|  
 |SQL_LONGVARCHAR|SQL_C_CHAR|SQLCHARACTER|**text**|  
 |SQL_WCHAR|SQL_C_WCHAR|SQLNCHAR|**nchar**|  
@@ -78,7 +78,7 @@ ms.locfileid: "88455980"
 |SQL_FLOAT|SQL_C_DOUBLE|SQLFLT8|**float**|  
 |SQL_DOUBLE|SQL_C_DOUBLE|SQLFLT8|**float**|  
 |SQL_BINARY|SQL_C_BINARY|SQLBINARY|**binary**<br /><br /> **timestamp**|  
-|SQL_VARBINARY|SQL_C_BINARY|SQLBINARY|**varbinary**<br /><br /> **binary varying**|  
+|SQL_VARBINARY|SQL_C_BINARY|SQLBINARY|**varbinary**<br /><br /> **이진 변경**|  
 |SQL_LONGVARBINARY|SQL_C_BINARY|SQLBINARY|**image**|  
 |SQL_TYPE_DATE|SQL_C_CHAR|SQLCHARACTER|**datetime**<br /><br /> **smalldatetime**|  
 |SQL_TYPE_TIME|SQL_C_CHAR|SQLCHARACTER|**datetime**<br /><br /> **smalldatetime**|  
@@ -86,7 +86,7 @@ ms.locfileid: "88455980"
 |SQL_GUID|SQL_C_GUID|SQLUNIQUEID|**uniqueidentifier**|  
 |SQL_INTERVAL_|SQL_C_CHAR|SQLCHARACTER|**char**|  
   
- [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 에는 서명 된 **tinyint**, unsigned **smallint**또는 unsigned **int** 데이터 형식이 없습니다. 이러한 데이터 형식을 마이그레이션할 때 데이터 값이 손실되지 않게 하려면 다음으로 큰 정수 데이터 형식을 사용하여 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 테이블을 만드십시오. 나중에 사용자가 원래 데이터 형식에서 허용되는 범위를 벗어나는 값을 추가하지 못하도록 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 열에 원래 원본의 데이터 형식에서 지원하는 범위로 사용 가능한 값을 제한하는 규칙을 적용합니다.  
+ [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 에는 서명 된 **tinyint**, unsigned **smallint** 또는 unsigned **int** 데이터 형식이 없습니다. 이러한 데이터 형식을 마이그레이션할 때 데이터 값이 손실되지 않게 하려면 다음으로 큰 정수 데이터 형식을 사용하여 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 테이블을 만드십시오. 나중에 사용자가 원래 데이터 형식에서 허용되는 범위를 벗어나는 값을 추가하지 못하도록 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 열에 원래 원본의 데이터 형식에서 지원하는 범위로 사용 가능한 값을 제한하는 규칙을 적용합니다.  
   
 ```  
 CREATE TABLE Sample_Ints(STinyIntCol   SMALLINT,  

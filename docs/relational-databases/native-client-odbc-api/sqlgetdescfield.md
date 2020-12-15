@@ -14,13 +14,13 @@ helpviewer_keywords:
 ms.assetid: 3e59a37a-28ee-4c91-8968-7fe3b966739d
 author: markingmyname
 ms.author: maghan
-monikerRange: '>=aps-pdw-2016||=azuresqldb-current||=azure-sqldw-latest||>=sql-server-2016||=sqlallproducts-allversions||>=sql-server-linux-2017||=azuresqldb-mi-current'
-ms.openlocfilehash: e81ed53721914502d1a4c90aeff9c55808588c7f
-ms.sourcegitcommit: 04cf7905fa32e0a9a44575a6f9641d9a2e5ac0f8
+monikerRange: '>=aps-pdw-2016||=azuresqldb-current||=azure-sqldw-latest||>=sql-server-2016||>=sql-server-linux-2017||=azuresqldb-mi-current'
+ms.openlocfilehash: 93d040ac1d32ad04eda08d86646202621b9254b6
+ms.sourcegitcommit: 1a544cf4dd2720b124c3697d1e62ae7741db757c
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 10/07/2020
-ms.locfileid: "91810554"
+ms.lasthandoff: 12/14/2020
+ms.locfileid: "97465154"
 ---
 # <a name="sqlgetdescfield"></a>SQLGetDescField
 [!INCLUDE[SQL Server Azure SQL Database Synapse Analytics PDW ](../../includes/applies-to-version/sql-asdb-asdbmi-asa-pdw.md)]
@@ -39,10 +39,10 @@ ms.locfileid: "91810554"
   
  자세한 내용은 [ODBC&#41;&#40;날짜 및 시간 향상 ](../../relational-databases/native-client-odbc-date-time/date-and-time-improvements-odbc.md)을 참조 하세요.  
   
- 부터 [!INCLUDE[ssSQL11](../../includes/sssql11-md.md)] SQLGetDescField는 응용 프로그램에서 ODBC 3.8를 사용 하는 경우 **SQL_C_BINARY**대신 ( **시간** 형식) 또는 **SQL_C_SS_TIMESTAMPOFFSET** ( **datetimeoffset**) **SQL_C_SS_TIME2** 를 반환할 수 있습니다.  
+ 부터 [!INCLUDE[ssSQL11](../../includes/sssql11-md.md)] SQLGetDescField는 응용 프로그램에서 ODBC 3.8를 사용 하는 경우 **SQL_C_BINARY** 대신 ( **시간** 형식) 또는 **SQL_C_SS_TIMESTAMPOFFSET** ( **datetimeoffset**) **SQL_C_SS_TIME2** 를 반환할 수 있습니다.  
   
 ## <a name="sqlgetdescfield-support-for-large-clr-udts"></a>큰 CLR UDT에 대한 SQLGetDescField 지원  
- **SQLGetDescField** 는 큰 CLR UDT(사용자 정의 형식)를 지원합니다. 자세한 내용은 [ODBC&#41;&#40;LARGE CLR 사용자 정의 형식 ](../../relational-databases/native-client/odbc/large-clr-user-defined-types-odbc.md)을 참조 하세요.  
+ **SQLGetDescField** 는 큰 CLR UDT(사용자 정의 형식)를 지원합니다. 자세한 내용은 [ODBC&#41;&#40;대량 CLR User-Defined 형식 ](../../relational-databases/native-client/odbc/large-clr-user-defined-types-odbc.md)을 참조 하세요.  
   
 ## <a name="sqlgetdescfield-support-for-sparse-columns"></a>스파스 열에 대한 SQLGetDescField 지원  
  SQLGetDescField를 사용 하면 SQL_CA_SS_IS_COLUMN_SET 새 IRD 필드를 쿼리하여 열이 **column_set** 열인지 확인할 수 있습니다.  

@@ -21,13 +21,13 @@ helpviewer_keywords:
 ms.assetid: 899df1ff-e871-44df-9361-f3b87ac3ea31
 author: markingmyname
 ms.author: maghan
-monikerRange: =azuresqldb-current||>=sql-server-2016||=sqlallproducts-allversions||>=sql-server-linux-2017||=azuresqldb-mi-current
-ms.openlocfilehash: fcfdd367937cb00d98ed79edf6758b74c96ad330
-ms.sourcegitcommit: dd36d1cbe32cd5a65c6638e8f252b0bd8145e165
+monikerRange: =azuresqldb-current||>=sql-server-2016||>=sql-server-linux-2017||=azuresqldb-mi-current
+ms.openlocfilehash: 99e1d43c60dde82762ccca13568509031c8d5225
+ms.sourcegitcommit: 1a544cf4dd2720b124c3697d1e62ae7741db757c
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 09/08/2020
-ms.locfileid: "89547875"
+ms.lasthandoff: 12/14/2020
+ms.locfileid: "97468314"
 ---
 # <a name="sp_query_store_reset_exec_stats-transact-sql"></a>sp_query_store_reset_exec_stats (Transact-sql)
 
@@ -45,7 +45,7 @@ sp_query_store_reset_exec_stats [ @plan_id = ] plan_id [;]
 ```  
   
 ## <a name="arguments"></a>인수  
-`[ @plan_id = ] plan_id` 지워지는 쿼리 계획의 id입니다. *plan_id* 는 **bigint**이며 기본값은 없습니다.  
+`[ @plan_id = ] plan_id` 지워지는 쿼리 계획의 id입니다. *plan_id* 는 **bigint** 이며 기본값은 없습니다.  
   
 ## <a name="return-code-values"></a>반환 코드 값  
  0(성공) 또는 1(실패)  
@@ -55,7 +55,7 @@ sp_query_store_reset_exec_stats [ @plan_id = ] plan_id [;]
 ## <a name="permissions"></a>사용 권한  
  데이터베이스에 대 한 **ALTER** 권한이 필요 합니다. 
   
-## <a name="examples"></a>예제  
+## <a name="examples"></a>예  
  다음 예에서는 쿼리 저장소의 쿼리에 대 한 정보를 반환 합니다.  
   
 ```  

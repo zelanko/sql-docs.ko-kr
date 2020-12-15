@@ -18,13 +18,13 @@ helpviewer_keywords:
 ms.assetid: 8204f6f2-5704-40a7-8d51-43fc832eeb54
 author: markingmyname
 ms.author: maghan
-monikerRange: =azuresqldb-current||>=sql-server-2016||=sqlallproducts-allversions||>=sql-server-linux-2017||=azuresqldb-mi-current
-ms.openlocfilehash: 6c49367f78a257b1ba4e19d9916b590a67991d1a
-ms.sourcegitcommit: dd36d1cbe32cd5a65c6638e8f252b0bd8145e165
+monikerRange: =azuresqldb-current||>=sql-server-2016||>=sql-server-linux-2017||=azuresqldb-mi-current
+ms.openlocfilehash: 7af34bd1bbe065012b18826f7edaec31940d1e50
+ms.sourcegitcommit: 1a544cf4dd2720b124c3697d1e62ae7741db757c
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 09/08/2020
-ms.locfileid: "89536711"
+ms.lasthandoff: 12/14/2020
+ms.locfileid: "97466874"
 ---
 # <a name="sp_createstats-transact-sql"></a>sp_createstats(Transact-SQL)
 [!INCLUDE [SQL Server SQL Database](../../includes/applies-to-version/sql-asdb.md)]
@@ -71,7 +71,7 @@ sp_createstats
 ## <a name="permissions"></a>사용 권한  
  db_owner 고정 데이터베이스 역할의 멤버 자격이 필요합니다.  
   
-## <a name="examples"></a>예제  
+## <a name="examples"></a>예  
   
 ### <a name="a-create-single-column-statistics-on-all-eligible-columns"></a>A. 적합한 모든 열에 대한 단일 열 통계 만들기  
  다음 예에서는 현재 데이터베이스에 있는 적합한 모든 열에 대한 단일 열 통계를 만듭니다.  

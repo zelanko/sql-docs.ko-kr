@@ -19,13 +19,13 @@ helpviewer_keywords:
 ms.assetid: a974a561-5382-4039-8499-3a56767bcefe
 author: VanMSFT
 ms.author: vanto
-monikerRange: = azuresqldb-current || = azure-sqldw-latest || = sqlallproducts-allversions
-ms.openlocfilehash: ed1df2288067d30f9443736b914b7560c0c6a784
-ms.sourcegitcommit: 04cf7905fa32e0a9a44575a6f9641d9a2e5ac0f8
+monikerRange: = azuresqldb-current || = azure-sqldw-latest
+ms.openlocfilehash: 795aeb9a03f839cae400e92060ac21056f314d2f
+ms.sourcegitcommit: 1a544cf4dd2720b124c3697d1e62ae7741db757c
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 10/07/2020
-ms.locfileid: "91810483"
+ms.lasthandoff: 12/14/2020
+ms.locfileid: "97468284"
 ---
 # <a name="sp_set_firewall_rule-azure-sql-database"></a>sp_set_firewall_rule(Azure SQL Database)
 [!INCLUDE [asdb-asa](../../includes/applies-to-version/asdb-asa.md)]
@@ -45,7 +45,7 @@ sp_set_firewall_rule [@name =] 'name',
 ## <a name="arguments"></a>인수  
  다음 표에서는에서 지원 되는 인수와 옵션을 보여 줍니다 [!INCLUDE[msCoName](../../includes/msconame-md.md)] [!INCLUDE[ssSDSfull](../../includes/sssdsfull-md.md)] .  
   
-|이름|Datatype|Description|  
+|Name|Datatype|설명|  
 |----------|--------------|-----------------|  
 |[ @name =] ' name '|**NVARCHAR (128)**|서버 수준의 방화벽 설정을 설명하고 구분하는 데 사용된 이름입니다.|  
 |[ @start_ip_address =] ' start_ip_address '|**VARCHAR (50)**|서버 수준 방화벽 설정 범위에서 가장 낮은 IP 주소입니다. 이 값보다 크거나 같은 IP 주소는 [!INCLUDE[ssSDS](../../includes/sssds-md.md)] 서버에 연결을 시도할 수 있습니다. 가능한 가장 낮은 IP 주소는 `0.0.0.0`입니다.|  

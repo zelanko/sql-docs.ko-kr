@@ -14,13 +14,13 @@ helpviewer_keywords:
 ms.assetid: 77b6c15c-9cf7-4019-b3f0-3d27d23ef656
 author: markingmyname
 ms.author: maghan
-monikerRange: '>=aps-pdw-2016||=azuresqldb-current||=azure-sqldw-latest||>=sql-server-2016||=sqlallproducts-allversions||>=sql-server-linux-2017||=azuresqldb-mi-current'
-ms.openlocfilehash: 141eca7a03b2bb6339712a2b9a1aa459b0c09ada
-ms.sourcegitcommit: 4d370399f6f142e25075b3714e5c2ce056b1bfd0
+monikerRange: '>=aps-pdw-2016||=azuresqldb-current||=azure-sqldw-latest||>=sql-server-2016||>=sql-server-linux-2017||=azuresqldb-mi-current'
+ms.openlocfilehash: 44ec790c3a372bfd2dae8f22cbdc6f50608c9426
+ms.sourcegitcommit: 1a544cf4dd2720b124c3697d1e62ae7741db757c
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 10/09/2020
-ms.locfileid: "91868443"
+ms.lasthandoff: 12/14/2020
+ms.locfileid: "97465054"
 ---
 # <a name="sqltables"></a>SQLTables
 [!INCLUDE[SQL Server Azure SQL Database Synapse Analytics PDW ](../../includes/applies-to-version/sql-asdb-asdbmi-asa-pdw.md)]
@@ -31,7 +31,7 @@ ms.locfileid: "91868443"
   
  SQLTables는 사용 가능한 카탈로그, 스키마 및 테이블 형식을 보고 하기 위해 빈 문자열 (길이가 0 인 바이트 포인터)을 특별 하 게 사용 합니다. 빈 문자열은 기본값(NULL 포인터)이 아닙니다.  
   
- [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] Native Client ODBC 드라이버는 *CatalogName* 매개 변수의 두 부분으로 구성된 이름인 *Linked_Server_Name.Catalog_Name*을 사용하여 연결된 서버의 테이블에 대한 정보를 보고할 수 있도록 지원합니다.  
+ [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] Native Client ODBC 드라이버는 *CatalogName* 매개 변수의 두 부분으로 구성된 이름인 *Linked_Server_Name.Catalog_Name* 을 사용하여 연결된 서버의 테이블에 대한 정보를 보고할 수 있도록 지원합니다.  
   
  SQLTables는 이름이 *TableName* 과 일치 하 고 현재 사용자가 소유 하 고 있는 모든 테이블에 대 한 정보를 반환 합니다.  
   

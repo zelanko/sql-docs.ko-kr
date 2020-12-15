@@ -18,13 +18,13 @@ helpviewer_keywords:
 ms.assetid: 7a3a3b2a-1408-4767-a376-c690e3c1fc5b
 author: VanMSFT
 ms.author: vanto
-monikerRange: =azuresqldb-current||=azure-sqldw-latest||>=sql-server-2016||=sqlallproducts-allversions||>=sql-server-linux-2017||=azuresqldb-mi-current
-ms.openlocfilehash: 462c857e6067e6431248e86edb72d007e56d84e7
-ms.sourcegitcommit: b09f069c6bef0655b47e9953a4385f1b52bada2b
+monikerRange: =azuresqldb-current||=azure-sqldw-latest||>=sql-server-2016||>=sql-server-linux-2017||=azuresqldb-mi-current
+ms.openlocfilehash: 2145297325aa71aad6a235e93254bbc2857d8afc
+ms.sourcegitcommit: 1a544cf4dd2720b124c3697d1e62ae7741db757c
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 10/27/2020
-ms.locfileid: "92734615"
+ms.lasthandoff: 12/14/2020
+ms.locfileid: "97468294"
 ---
 # <a name="sp_set_session_context-transact-sql"></a>sp_set_session_context (Transact-sql)
 [!INCLUDE [sqlserver2016-asdb-asdbmi-asa](../../includes/applies-to-version/sqlserver2016-asdb-asdbmi-asa.md)]
@@ -52,7 +52,7 @@ sp_set_session_context [ @key= ] N'key', [ @value= ] 'value'
  [ @read_only =] {0 | 1}  
  **Bit** 형식의 플래그입니다. 1 인 경우이 논리 연결에서 지정 된 키의 값을 다시 변경할 수 없습니다. 0 (기본값) 이면 값을 변경할 수 있습니다.  
   
-## <a name="permissions"></a>권한  
+## <a name="permissions"></a>사용 권한  
  모든 사용자는 세션에 대 한 세션 컨텍스트를 설정할 수 있습니다.  
   
 ## <a name="remarks"></a>설명  

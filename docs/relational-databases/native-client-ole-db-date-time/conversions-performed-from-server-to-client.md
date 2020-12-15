@@ -13,13 +13,13 @@ ms.assetid: 676fdf24-fb72-4ea0-a8d2-2b197da3c83f
 author: markingmyname
 ms.author: maghan
 ms.custom: seo-dt-2019
-monikerRange: '>=aps-pdw-2016||=azuresqldb-current||=azure-sqldw-latest||>=sql-server-2016||=sqlallproducts-allversions||>=sql-server-linux-2017||=azuresqldb-mi-current'
-ms.openlocfilehash: 7960647af0d661d52fe6ebce467468691cc2e785
-ms.sourcegitcommit: e700497f962e4c2274df16d9e651059b42ff1a10
+monikerRange: '>=aps-pdw-2016||=azuresqldb-current||=azure-sqldw-latest||>=sql-server-2016||>=sql-server-linux-2017||=azuresqldb-mi-current'
+ms.openlocfilehash: f91e2dfd6570808c5b385f07bcb6b3d66e2bd55b
+ms.sourcegitcommit: 1a544cf4dd2720b124c3697d1e62ae7741db757c
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 08/17/2020
-ms.locfileid: "88328029"
+ms.lasthandoff: 12/14/2020
+ms.locfileid: "97467694"
 ---
 # <a name="sql-server-native-client-conversions-performed-from-server-to-client"></a>서버에서 클라이언트로 수행 되는 SQL Server Native Client 변환
 [!INCLUDE[SQL Server Azure SQL Database Synapse Analytics PDW ](../../includes/applies-to-version/sql-asdb-asdbmi-asa-pdw.md)]
@@ -27,7 +27,7 @@ ms.locfileid: "88328029"
   이 항목에서는 [!INCLUDE[ssKatmai](../../includes/sskatmai-md.md)]이상 버전과 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] Native Client OLE DB로 작성된 클라이언트 애플리케이션 간에 수행되는 날짜 및 시간 변환에 대해 설명합니다.  
   
 ## <a name="conversions"></a>변환  
- 다음 표에서는 클라이언트로 반환된 형식과 바인딩 형식 간의 변환에 대해 설명합니다. 출력 매개 변수의 경우 ICommandWithParameters::SetParameterInfo가 호출된 후 *pwszDataSourceType*에 지정된 형식이 서버의 실제 형식과 일치하지 않으면 서버에 의해 암시적 변환이 수행되며 클라이언트로 반환되는 형식은 ICommandWithParameters::SetParameterInfo를 통해 지정된 형식과 일치하게 됩니다. 따라서 서버의 변환 규칙이이 항목에 설명 된 것과 다를 경우 예기치 않은 변환 결과가 발생할 수 있습니다. 예를 들어 기본 날짜를 입력해야 하는 경우 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]는 1899-12-30을 사용하지 않고, 1900-1-1을 사용합니다.  
+ 다음 표에서는 클라이언트로 반환된 형식과 바인딩 형식 간의 변환에 대해 설명합니다. 출력 매개 변수의 경우 ICommandWithParameters::SetParameterInfo가 호출된 후 *pwszDataSourceType* 에 지정된 형식이 서버의 실제 형식과 일치하지 않으면 서버에 의해 암시적 변환이 수행되며 클라이언트로 반환되는 형식은 ICommandWithParameters::SetParameterInfo를 통해 지정된 형식과 일치하게 됩니다. 따라서 서버의 변환 규칙이이 항목에 설명 된 것과 다를 경우 예기치 않은 변환 결과가 발생할 수 있습니다. 예를 들어 기본 날짜를 입력해야 하는 경우 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]는 1899-12-30을 사용하지 않고, 1900-1-1을 사용합니다.  
   
 |대상 -><br /><br /> 보낸 사람|DATE|DBDATE|DBTIME|DBTIME2|DBTIMESTAMP|DBTIMESTAMPOFFSET|FILETIME|BYTES|VARIANT|SSVARIANT|BSTR|STR|WSTR|  
 |----------------------|----------|------------|------------|-------------|-----------------|-----------------------|--------------|-----------|-------------|---------------|----------|---------|----------|  
@@ -50,7 +50,7 @@ ms.locfileid: "88328029"
 |기호|의미|  
 |------------|-------------|  
 |확인|변환이 필요 없습니다.|  
-|-|변환이 지원되지 않습니다. IAccessor::CreateAccessor가 호출될 때 바인딩의 유효성이 검사되면 *rgStatus*에 DBBINDSTATUS_UPSUPPORTEDCONVERSION이 반환됩니다. 접근자 유효성 검사가 지연되면 DBSTATUS_E_BADACCESSOR가 설정됩니다.|  
+|-|변환이 지원되지 않습니다. IAccessor::CreateAccessor가 호출될 때 바인딩의 유효성이 검사되면 *rgStatus* 에 DBBINDSTATUS_UPSUPPORTEDCONVERSION이 반환됩니다. 접근자 유효성 검사가 지연되면 DBSTATUS_E_BADACCESSOR가 설정됩니다.|  
 |1|시간 필드가 0으로 설정됩니다.|  
 |2|DBSTATUS_E_CANTCONVERTVALUE가 설정됩니다.|  
 |3|표준 시간대가 0으로 설정됩니다.|  

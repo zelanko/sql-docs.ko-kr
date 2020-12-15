@@ -14,13 +14,13 @@ helpviewer_keywords:
 ms.assetid: 799c80fd-c561-4912-8562-9229076dfd19
 author: markingmyname
 ms.author: maghan
-monikerRange: '>=aps-pdw-2016||=azuresqldb-current||=azure-sqldw-latest||>=sql-server-2016||=sqlallproducts-allversions||>=sql-server-linux-2017||=azuresqldb-mi-current'
-ms.openlocfilehash: 043e8e62174f286ad229485ecce4e4db0990557a
-ms.sourcegitcommit: 4d370399f6f142e25075b3714e5c2ce056b1bfd0
+monikerRange: '>=aps-pdw-2016||=azuresqldb-current||=azure-sqldw-latest||>=sql-server-2016||>=sql-server-linux-2017||=azuresqldb-mi-current'
+ms.openlocfilehash: e338ba67bdd2535f54e4678b4ff013c768571da8
+ms.sourcegitcommit: 1a544cf4dd2720b124c3697d1e62ae7741db757c
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 10/09/2020
-ms.locfileid: "91868456"
+ms.lasthandoff: 12/14/2020
+ms.locfileid: "97465104"
 ---
 # <a name="sqlsetstmtattr"></a>SQLSetStmtAttr
 [!INCLUDE[SQL Server Azure SQL Database Synapse Analytics PDW ](../../includes/applies-to-version/sql-asdb-asdbmi-asa-pdw.md)]
@@ -60,7 +60,7 @@ ms.locfileid: "91868456"
   
  이러한 옵션이 설정된 경우 서버는 마지막 행이 인출되면 자동으로 커서를 닫습니다. 응용 프로그램은 여전히 [SQLFreeStmt](../../relational-databases/native-client-odbc-api/sqlfreestmt.md) (SQL_CLOSE) 또는 [SQLCloseCursor](../../relational-databases/native-client-odbc-api/sqlclosecursor.md)를 호출 해야 하지만 드라이버에서 서버에 CLOSE 알림을 보낼 필요가 없습니다.  
   
- Select 목록에 **text**, **ntext**또는 **image** 열이 포함 된 경우에는 빠른 전진 전용 커서가 동적 커서로 변환 되 고 **SQLGetData** 가 허용 됩니다.  
+ Select 목록에 **text**, **ntext** 또는 **image** 열이 포함 된 경우에는 빠른 전진 전용 커서가 동적 커서로 변환 되 고 **SQLGetData** 가 허용 됩니다.  
   
 ### <a name="sql_sopt_ss_defer_prepare"></a>SQL_SOPT_SS_DEFER_PREPARE  
  SQL_SOPT_SS_DEFER_PREPARE 특성은 **Sqlexecute**, [SQLDescribeCol](../../relational-databases/native-client-odbc-api/sqldescribecol.md) 또는 [SQLDescribeParam](../../relational-databases/native-client-odbc-api/sqldescribeparam.md) 가 실행 될 때까지 문이 즉시 준비 되거나 지연 되는지 여부를 결정 합니다. [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 7.0 및 이전 버전에서는 이 속성이 무시됩니다(준비 지연이 지원되지 않음). *ValuePtr* 값은 SQLLEN 유형입니다.  
@@ -83,7 +83,7 @@ ms.locfileid: "91868456"
  국가별 변환 설정이 통화, 숫자, 날짜 및 시간 데이터 형식에 적용됩니다. 변환 설정은 통화, 숫자, 날짜 또는 시간 값을 문자열로 변환한 경우 출력 변환에만 적용할 수 있습니다.  
   
 > [!NOTE]  
->  문 옵션 SQL_SOPT_SS_REGIONALIZE가 사용되면 드라이버는 현재 사용자의 로캘 레지스트리 설정을 사용합니다. 응용 프로그램에서 **SetThreadLocale**를 호출 하는 등을 통해이를 설정 하는 경우 드라이버는 현재 스레드의 로캘을 인식 하지 못합니다.  
+>  문 옵션 SQL_SOPT_SS_REGIONALIZE가 사용되면 드라이버는 현재 사용자의 로캘 레지스트리 설정을 사용합니다. 응용 프로그램에서 **SetThreadLocale** 를 호출 하는 등을 통해이를 설정 하는 경우 드라이버는 현재 스레드의 로캘을 인식 하지 못합니다.  
   
  데이터 원본의 국가별 동작을 변경하면 애플리케이션에서 오류가 발생할 수 있습니다. 날짜 문자열을 구문 분석하며 날짜 문자열이 ODBC에 정의된 대로 표시될 것으로 예상하는 애플리케이션에서 이 값을 변경하면 부정적인 영향을 줄 수 있습니다.  
   
@@ -134,10 +134,10 @@ ms.locfileid: "91868456"
   
 |*값*|설명|  
 |----------------------|-----------------|  
-|SQL_SS_NAME_SCOPE_TABLE|기본값<br /><br /> 테이블 반환 매개 변수를 사용할 때 실제 테이블의 메타데이터가 반환되도록 지정합니다.<br /><br /> 스파스 열 기능을 사용 하는 경우 SQLColumns는 스파스 **column_set**의 멤버가 아닌 열만 반환 합니다.|  
+|SQL_SS_NAME_SCOPE_TABLE|기본값<br /><br /> 테이블 반환 매개 변수를 사용할 때 실제 테이블의 메타데이터가 반환되도록 지정합니다.<br /><br /> 스파스 열 기능을 사용 하는 경우 SQLColumns는 스파스 **column_set** 의 멤버가 아닌 열만 반환 합니다.|  
 |SQL_SS_NAME_SCOPE_TABLE_TYPE|애플리케이션이 실제 테이블이 아니라 테이블 형식의 메타데이터를 요구한다는 것을 나타냅니다. 카탈로그 함수가 테이블 형식의 메타데이터를 반환해야 합니다. 그런 다음 응용 프로그램은 테이블 반환 매개 변수의 TYPE_NAME를 *TableName* 매개 변수로 전달 합니다.|  
 |SQL_SS_NAME_SCOPE_EXTENDED|스파스 열 기능을 사용 하는 경우 SQLColumns는 **column_set** 멤버 자격에 관계 없이 모든 열을 반환 합니다.|  
-|SQL_SS_NAME_SCOPE_SPARSE_COLUMN_SET|스파스 열 기능을 사용 하는 경우 SQLColumns는 스파스 **column_set**의 멤버인 열만 반환 합니다.|  
+|SQL_SS_NAME_SCOPE_SPARSE_COLUMN_SET|스파스 열 기능을 사용 하는 경우 SQLColumns는 스파스 **column_set** 의 멤버인 열만 반환 합니다.|  
 |SQL_SS_NAME_SCOPE_DEFAULT|SQL_SS_NAME_SCOPE_TABLE과 같습니다.|  
   
  SS_TYPE_CATALOG_NAME 및 SS_TYPE_SCHEMA_NAME는 각각 *CatalogName* 및 *SchemaName* 매개 변수와 함께 사용 되어 테이블 반환 매개 변수의 카탈로그와 스키마를 식별 합니다. 애플리케이션이 테이블 반환 매개 변수의 메타데이터 검색을 마치면 SQL_SOPT_SS_NAME_SCOPE가 기본값인 SQL_SS_NAME_SCOPE_TABLE로 다시 설정됩니다.  

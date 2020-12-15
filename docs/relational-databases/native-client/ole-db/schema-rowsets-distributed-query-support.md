@@ -18,20 +18,20 @@ helpviewer_keywords:
 ms.assetid: 11354bb6-be42-4d8d-854c-42dd3dc38656
 author: markingmyname
 ms.author: maghan
-monikerRange: '>=aps-pdw-2016||=azuresqldb-current||=azure-sqldw-latest||>=sql-server-2016||=sqlallproducts-allversions||>=sql-server-linux-2017||=azuresqldb-mi-current'
-ms.openlocfilehash: a09330a2ce78c9282a0980897df65d65e10a73c6
-ms.sourcegitcommit: e700497f962e4c2274df16d9e651059b42ff1a10
+monikerRange: '>=aps-pdw-2016||=azuresqldb-current||=azure-sqldw-latest||>=sql-server-2016||>=sql-server-linux-2017||=azuresqldb-mi-current'
+ms.openlocfilehash: ac2620d98753fe60af0a0d6d49a8dde5b6bb9952
+ms.sourcegitcommit: 1a544cf4dd2720b124c3697d1e62ae7741db757c
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 08/17/2020
-ms.locfileid: "88428065"
+ms.lasthandoff: 12/14/2020
+ms.locfileid: "97467594"
 ---
 # <a name="schema-rowsets---distributed-query-support-in-sql-server-native-client"></a>스키마 행 집합-SQL Server Native Client의 분산 쿼리 지원
 [!INCLUDE [SQL Server](../../../includes/applies-to-version/sql-asdb-asdbmi-asa-pdw.md)]
 
   [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)]분산 쿼리를 지원 하기 위해 [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] Native Client OLE DB provider **IDBSchemaRowset** 인터페이스는 연결 된 서버에 대 한 메타 데이터를 반환 합니다.  
   
- DBPROPSET_SQLSERVERSESSION 속성 SSPROP_QUOTEDCATALOGNAMES가 VARIANT_TRUE이면 카탈로그 이름에 따옴표 붙은 식별자(예: "my.catalog")를 지정할 수 있습니다. Catalog에서 스키마 행 집합 출력을 제한할 때 [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] Native Client OLE DB 공급자는 연결 된 서버 및 카탈로그 이름을 포함 하는 두 부분으로 구성 된 이름을 인식 합니다. 아래 표의 스키마 행 집합에 대해 두 부분으로 구성 된 카탈로그 이름을 _linked_server_로 지정 합니다 **.** _catalog_ 는 지정 된 연결 된 서버의 해당 카탈로그로 출력을 제한 합니다.  
+ DBPROPSET_SQLSERVERSESSION 속성 SSPROP_QUOTEDCATALOGNAMES가 VARIANT_TRUE이면 카탈로그 이름에 따옴표 붙은 식별자(예: "my.catalog")를 지정할 수 있습니다. Catalog에서 스키마 행 집합 출력을 제한할 때 [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] Native Client OLE DB 공급자는 연결 된 서버 및 카탈로그 이름을 포함 하는 두 부분으로 구성 된 이름을 인식 합니다. 아래 표의 스키마 행 집합에 대해 두 부분으로 구성 된 카탈로그 이름을 _linked_server_ 로 지정 합니다 **.** _catalog_ 는 지정 된 연결 된 서버의 해당 카탈로그로 출력을 제한 합니다.  
   
 |스키마 행 집합|카탈로그 제한|  
 |-------------------|-------------------------|  

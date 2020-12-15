@@ -16,13 +16,13 @@ helpviewer_keywords:
 ms.assetid: 4cd0281a-a2a0-43df-8e46-eb478b64cb4b
 author: markingmyname
 ms.author: maghan
-monikerRange: '>=aps-pdw-2016||=azuresqldb-current||=azure-sqldw-latest||>=sql-server-2016||=sqlallproducts-allversions||>=sql-server-linux-2017||=azuresqldb-mi-current'
-ms.openlocfilehash: ec0621d8967f2fa351e9147815bddf2d80f0e300
-ms.sourcegitcommit: e700497f962e4c2274df16d9e651059b42ff1a10
+monikerRange: '>=aps-pdw-2016||=azuresqldb-current||=azure-sqldw-latest||>=sql-server-2016||>=sql-server-linux-2017||=azuresqldb-mi-current'
+ms.openlocfilehash: 6a7e6b24ac8cb66f594985f79b8605569d91d0de
+ms.sourcegitcommit: 1a544cf4dd2720b124c3697d1e62ae7741db757c
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 08/17/2020
-ms.locfileid: "88490764"
+ms.lasthandoff: 12/14/2020
+ms.locfileid: "97469344"
 ---
 # <a name="isscommandwithparameterssetparameterproperties-in-sql-server-native-client-ole-db"></a>SQL Server Native Client의 ISSCommandWithParameters:: SetParameterProperties (OLE DB)
 [!INCLUDE[SQL Server Azure SQL Database Synapse Analytics PDW ](../../includes/applies-to-version/sql-asdb-asdbmi-asa-pdw.md)]
@@ -39,7 +39,7 @@ HRESULT SetParameterProperties(
   
 ## <a name="arguments"></a>인수  
  *cParams*[in]  
- *rgParamProperties* 배열의 SSPARAMPROPS 구조 수입니다. 이 개수가 0이면 **ISSCommandWithParameters::SetParameterProperties**가 명령의 매개 변수에 대해 지정되었을 수 있는 모든 속성을 삭제합니다.  
+ *rgParamProperties* 배열의 SSPARAMPROPS 구조 수입니다. 이 개수가 0이면 **ISSCommandWithParameters::SetParameterProperties** 가 명령의 매개 변수에 대해 지정되었을 수 있는 모든 속성을 삭제합니다.  
   
  *rgParamProperties*[in]  
  설정할 SSPARAMPROPS 구조의 배열입니다.  
@@ -54,11 +54,11 @@ HRESULT SetParameterProperties(
   
  **ISSCommandWithParameters:: SetParameterProperties** 를 호출 하 여 DBTYPE_XML 또는 DBTYPE_UDT 형식이 아닌 매개 변수에 대 한 속성을 지정 하면 DB_E_ERRORSOCCURRED 또는 DB_S_ERRORSOCCURRED 반환 되 고 해당 매개 변수에 대 한 SSPARAMPROPS에 포함 된 모든 Dbprops의 *dwstatus* 필드가 DBPROPSTATUS_NOTSET로 표시 됩니다. DB_E_ERRORSOCCURRED 또는 DB_S_ERRORSOCCURRED가 참조하는 매개 변수를 검색하기 위해 SSPARAMPROPS에 포함된 각 DBPROPSET의 DBPROP 배열을 이동해야 합니다.  
   
- **SetParameterInfo**를 사용하여 매개 변수 정보가 아직 설정되지 않은 매개 변수의 속성을 지정하기 위해 **ISSCommandWithParameters::SetParameterProperties**를 호출하면 공급자가 다음 오류 메시지와 함께 E_UNEXPECTED를 반환합니다.  
+ **SetParameterInfo** 를 사용하여 매개 변수 정보가 아직 설정되지 않은 매개 변수의 속성을 지정하기 위해 **ISSCommandWithParameters::SetParameterProperties** 를 호출하면 공급자가 다음 오류 메시지와 함께 E_UNEXPECTED를 반환합니다.  
   
  먼저 SetParameterInfo 메서드를 호출해야만 지정한 매개 변수에 대해 SetParameterProperties 메서드를 호출할 수 있습니다. 매개 변수 속성을 설정하기 전에 매개 변수 정보를 설정해야 합니다.  
   
- **ISSCommandWithParameters::SetParameterProperties**에 대한 호출에 포함된 일부 매개 변수는 매개 변수 정보가 설정되어 있고 다른 일부 매개 변수는 매개 변수 정보가 설정되어 있지 않은 경우 SSPARAMPROPS 속성 집합의 DBPROPSET에 있는 dwStatus 속성이 DBSTATUS_NOTSET로 반환됩니다.  
+ **ISSCommandWithParameters::SetParameterProperties** 에 대한 호출에 포함된 일부 매개 변수는 매개 변수 정보가 설정되어 있고 다른 일부 매개 변수는 매개 변수 정보가 설정되어 있지 않은 경우 SSPARAMPROPS 속성 집합의 DBPROPSET에 있는 dwStatus 속성이 DBSTATUS_NOTSET로 반환됩니다.  
   
  SSPARAMPROPS 구조는 다음과 같이 정의됩니다.  
 
@@ -75,7 +75,7 @@ struct SSPARAMPROPS {
 |멤버|Description|  
 |------------|-----------------|  
 |*iOrdinal*|전달된 매개 변수의 서수입니다.|  
-|*cPropertySets*|*rgPropertySets*에 있는 DBPROPSET 구조의 개수입니다.|  
+|*cPropertySets*|*rgPropertySets* 에 있는 DBPROPSET 구조의 개수입니다.|  
 |*rgPropertySets*|DBPROPSET 구조의 배열을 반환할 메모리에 대한 포인터입니다.|  
 |||
 

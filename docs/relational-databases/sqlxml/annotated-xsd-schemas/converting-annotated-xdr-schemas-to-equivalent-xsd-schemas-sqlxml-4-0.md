@@ -19,13 +19,13 @@ ms.assetid: 151c94a8-66d3-4c46-a5ff-a22df456940a
 author: MightyPen
 ms.author: genemi
 ms.custom: seo-lt-2019
-monikerRange: =azuresqldb-current||>=sql-server-2016||=sqlallproducts-allversions||>=sql-server-linux-2017||=azuresqldb-mi-current
-ms.openlocfilehash: d39fc016514076ed4b0c4722e3da32b6f6d7e09b
-ms.sourcegitcommit: da88320c474c1c9124574f90d549c50ee3387b4c
+monikerRange: =azuresqldb-current||>=sql-server-2016||>=sql-server-linux-2017||=azuresqldb-mi-current
+ms.openlocfilehash: d7936bf8d9d9c37620ef9b692c125ff16f1cea85
+ms.sourcegitcommit: 1a544cf4dd2720b124c3697d1e62ae7741db757c
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 07/01/2020
-ms.locfileid: "85764839"
+ms.lasthandoff: 12/14/2020
+ms.locfileid: "97467114"
 ---
 # <a name="converting-annotated-xdr-schemas-to-equivalent-xsd-schemas-sqlxml-40"></a>주석이 추가된 XDR 스키마를 해당 XSD 스키마로 변환(SQLXML 4.0)
 [!INCLUDE [SQL Server Azure SQL Database](../../../includes/applies-to-version/sql-asdb.md)]
@@ -56,10 +56,10 @@ cvtschema XDRFileName, [-y], [-w] [-?]
  (옵션) 도구의 변환 프로세스에서 생성된 심각하지 않은 경고를 반환합니다. 기본적으로 심각한 오류에 대한 메시지만 표시됩니다.  
   
  -?  
- 설명과 함께 **cvtschema**를 사용 하 여 지정할 수 있는 옵션의 목록을 반환 합니다.  
+ 설명과 함께 **cvtschema** 를 사용 하 여 지정할 수 있는 옵션의 목록을 반환 합니다.  
   
 ## <a name="see-also"></a>참고 항목  
- [&#40;SQLXML 4.0&#41;XSD 데이터 형식을 XPath 데이터 형식에 매핑](../../../relational-databases/sqlxml-annotated-xsd-schemas-using/mapping-xsd-data-types-to-xpath-data-types-sqlxml-4-0.md)   
- [&#40;SQLXML 4.0&#41;XSD 주석](../../../relational-databases/sqlxml-annotated-xsd-schemas-using/xsd-annotations-sqlxml-4-0.md)  
+ [&#40;SQLXML 4.0&#41;XSD 데이터 형식을 XPath 데이터 형식에 매핑 ](../../../relational-databases/sqlxml-annotated-xsd-schemas-using/mapping-xsd-data-types-to-xpath-data-types-sqlxml-4-0.md)   
+ [&#40;SQLXML 4.0&#41;XSD 주석 ](../../../relational-databases/sqlxml-annotated-xsd-schemas-using/xsd-annotations-sqlxml-4-0.md)  
   
   

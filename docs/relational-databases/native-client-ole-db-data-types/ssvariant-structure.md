@@ -15,23 +15,23 @@ helpviewer_keywords:
 ms.assetid: d13c6aa6-bd49-467a-9093-495df8f1e2d9
 author: markingmyname
 ms.author: maghan
-monikerRange: '>=aps-pdw-2016||=azuresqldb-current||=azure-sqldw-latest||>=sql-server-2016||=sqlallproducts-allversions||>=sql-server-linux-2017||=azuresqldb-mi-current'
-ms.openlocfilehash: 318e6d9a9b830b2e4e61bde835b6e1b02d2acdae
-ms.sourcegitcommit: 4d370399f6f142e25075b3714e5c2ce056b1bfd0
+monikerRange: '>=aps-pdw-2016||=azuresqldb-current||=azure-sqldw-latest||>=sql-server-2016||>=sql-server-linux-2017||=azuresqldb-mi-current'
+ms.openlocfilehash: c081f415ad651ac48d033f298dd8f50064f3b982
+ms.sourcegitcommit: 1a544cf4dd2720b124c3697d1e62ae7741db757c
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 10/09/2020
-ms.locfileid: "91867140"
+ms.lasthandoff: 12/14/2020
+ms.locfileid: "97467674"
 ---
 # <a name="ssvariant-structure-in-sql-server-native-client"></a>SQL Server Native Client의 SSVARIANT 구조
 [!INCLUDE[SQL Server Azure SQL Database Synapse Analytics PDW ](../../includes/applies-to-version/sql-asdb-asdbmi-asa-pdw.md)]
 
   Sqlncli에 정의 된 **Ssvariant** 구조는 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] Native Client OLEDB 공급자의 DBTYPE_SQLVARIANT 값에 해당 합니다.  
   
- **SSVARIANT**는 판별 공용 구조체입니다. vt 멤버의 값에 따라 소비자는 읽을 멤버를 결정할 수 있습니다. vt 값은 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 데이터 형식에 해당하므로 **SSVARIANT** 구조는 모든 SQL Server 형식을 보유할 수 있습니다. 표준 OLE DB 형식의 데이터 구조에 대한 자세한 내용은 [형식 표시기](/previous-versions/windows/desktop/ms711251(v=vs.85))를 참조하세요.  
+ **SSVARIANT** 는 판별 공용 구조체입니다. vt 멤버의 값에 따라 소비자는 읽을 멤버를 결정할 수 있습니다. vt 값은 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 데이터 형식에 해당하므로 **SSVARIANT** 구조는 모든 SQL Server 형식을 보유할 수 있습니다. 표준 OLE DB 형식의 데이터 구조에 대한 자세한 내용은 [형식 표시기](/previous-versions/windows/desktop/ms711251(v=vs.85))를 참조하세요.  
   
 ## <a name="remarks"></a>설명  
- DataTypeCompat==80인 경우, 여러 **SSVARIANT** 하위 유형이 문자열이 됩니다. 예를 들면 다음 vt 값이 **SSVARIANT**에 VT_SS_WVARSTRING으로 나타납니다.  
+ DataTypeCompat==80인 경우, 여러 **SSVARIANT** 하위 유형이 문자열이 됩니다. 예를 들면 다음 vt 값이 **SSVARIANT** 에 VT_SS_WVARSTRING으로 나타납니다.  
   
 -   VT_SS_DATETIMEOFFSET  
   
@@ -74,9 +74,9 @@ V_SS_DATETIMEOFFSET(pssVar).bScale = bScale;
 |Time2Val|DBTYPE_DBTIME2|**DBTIME2**|**VT_SS_TIME2**|**time**[!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 데이터 형식을 지원합니다.<br /><br /> 포함되는 멤버는 다음과 같습니다.<br /><br /> *tTime2Val*(**DBTIME2**)<br /><br /> *bScale*(**BYTE**) *tTime2Val* 값의 소수 자릿수를 지정합니다.|  
 |DateTimeVal|DBTYPE_DBTIMESTAMP|**DBTIMESTAMP**|**VT_SS_DATETIME2**|**datetime2**[!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 데이터 형식을 지원합니다.<br /><br /> 포함되는 멤버는 다음과 같습니다.<br /><br /> *tsDataTimeVal*(DBTIMESTAMP)<br /><br /> *bScale*(**BYTE**) *tsDataTimeVal* 값의 소수 자릿수를 지정합니다.|  
 |DateTimeOffsetVal|DBTYPE_DBTIMESTAMPOFSET|**DBTIMESTAMPOFFSET**|**VT_SS_DATETIMEOFFSET**|**datetimeoffset**[!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 데이터 형식을 지원합니다.<br /><br /> 포함되는 멤버는 다음과 같습니다.<br /><br /> *tsoDateTimeOffsetVal*(**DBTIMESTAMPOFFSET**)<br /><br /> *bScale*(**BYTE**) *tsoDateTimeOffsetVal* 값의 소수 자릿수를 지정합니다.|  
-|NCharVal|해당하는 OLE DB 유형 표시기 없음|**struct _NCharVal**|**VT_SS_WVARSTRING,**<br /><br /> **VT_SS_WSTRING**|**nchar** 및 **nvarchar**[!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 데이터 형식을 지원합니다.<br /><br /> 포함되는 멤버는 다음과 같습니다.<br /><br /> *sActualLength*(**SHORT**) *pwchNCharVal*이 가리키는 문자열의 실제 길이를 지정합니다. 이 값은 0으로 끝나지 않습니다.<br /><br /> *sMaxLength*(**SHORT**) *pwchNCharVal*이 가리키는 문자열의 최대 길이를 지정합니다.<br /><br /> *pwchNCharVal*(**WCHAR** \*) 문자열에 대한 포인터입니다.<br /><br /> 사용되지 않는 멤버: *rgbReserved*, *dwReserved* 및 *pwchReserved*.|  
-|CharVal|해당하는 OLE DB 유형 표시기 없음|**struct _CharVal**|**VT_SS_STRING,**<br /><br /> **VT_SS_VARSTRING**|**char** 및 **varchar**[!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 데이터 형식을 지원합니다.<br /><br /> 포함되는 멤버는 다음과 같습니다.<br /><br /> *sActualLength*(**SHORT**) *pchCharVal*이 가리키는 문자열의 실제 길이를 지정합니다. 이 값은 0으로 끝나지 않습니다.<br /><br /> *sMaxLength*(**SHORT**) *pchCharVal*이 가리키는 문자열의 최대 길이를 지정합니다.<br /><br /> *pchCharVal*(**CHAR** \*) 문자열에 대한 포인터입니다.<br /><br /> 사용되지 않은 멤버:<br /><br /> *rgbReserved*, *dwReserved* 및 *pwchReserved*.|  
-|BinaryVal|해당하는 OLE DB 유형 표시기 없음|**struct _BinaryVal**|**VT_SS_VARBINARY,**<br /><br /> **VT_SS_BINARY**|**binary** 및 **varbinary**[!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 데이터 형식을 지원합니다.<br /><br /> 포함되는 멤버는 다음과 같습니다.<br /><br /> *sActualLength*(**SHORT**) *prgbBinaryVal*이 가리키는 문자열의 실제 길이를 지정합니다.<br /><br /> *sMaxLength*(**SHORT**) *prgbBinaryVal*이 가리키는 문자열의 최대 길이를 지정합니다.<br /><br /> *prgbBinaryVal*(**BYTE** \*) 이진 데이터에 대한 포인터입니다.<br /><br /> 사용되지 않는 멤버: *dwReserved*.|  
+|NCharVal|해당하는 OLE DB 유형 표시기 없음|**struct _NCharVal**|**VT_SS_WVARSTRING,**<br /><br /> **VT_SS_WSTRING**|**nchar** 및 **nvarchar**[!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 데이터 형식을 지원합니다.<br /><br /> 포함되는 멤버는 다음과 같습니다.<br /><br /> *sActualLength*(**SHORT**) *pwchNCharVal* 이 가리키는 문자열의 실제 길이를 지정합니다. 이 값은 0으로 끝나지 않습니다.<br /><br /> *sMaxLength*(**SHORT**) *pwchNCharVal* 이 가리키는 문자열의 최대 길이를 지정합니다.<br /><br /> *pwchNCharVal*(**WCHAR** \*) 문자열에 대한 포인터입니다.<br /><br /> 사용되지 않는 멤버: *rgbReserved*, *dwReserved* 및 *pwchReserved*.|  
+|CharVal|해당하는 OLE DB 유형 표시기 없음|**struct _CharVal**|**VT_SS_STRING,**<br /><br /> **VT_SS_VARSTRING**|**char** 및 **varchar**[!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 데이터 형식을 지원합니다.<br /><br /> 포함되는 멤버는 다음과 같습니다.<br /><br /> *sActualLength*(**SHORT**) *pchCharVal* 이 가리키는 문자열의 실제 길이를 지정합니다. 이 값은 0으로 끝나지 않습니다.<br /><br /> *sMaxLength*(**SHORT**) *pchCharVal* 이 가리키는 문자열의 최대 길이를 지정합니다.<br /><br /> *pchCharVal*(**CHAR** \*) 문자열에 대한 포인터입니다.<br /><br /> 사용되지 않은 멤버:<br /><br /> *rgbReserved*, *dwReserved* 및 *pwchReserved*.|  
+|BinaryVal|해당하는 OLE DB 유형 표시기 없음|**struct _BinaryVal**|**VT_SS_VARBINARY,**<br /><br /> **VT_SS_BINARY**|**binary** 및 **varbinary**[!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 데이터 형식을 지원합니다.<br /><br /> 포함되는 멤버는 다음과 같습니다.<br /><br /> *sActualLength*(**SHORT**) *prgbBinaryVal* 이 가리키는 문자열의 실제 길이를 지정합니다.<br /><br /> *sMaxLength*(**SHORT**) *prgbBinaryVal* 이 가리키는 문자열의 최대 길이를 지정합니다.<br /><br /> *prgbBinaryVal*(**BYTE** \*) 이진 데이터에 대한 포인터입니다.<br /><br /> 사용되지 않는 멤버: *dwReserved*.|  
 |UnknownType|UNUSED|UNUSED|UNUSED|UNUSED|  
 |BLOBType|UNUSED|UNUSED|UNUSED|UNUSED|  
   

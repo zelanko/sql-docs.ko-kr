@@ -18,18 +18,18 @@ helpviewer_keywords:
 ms.assetid: f2355a75-3a8e-43e6-96ad-4f41038f6d22
 author: markingmyname
 ms.author: maghan
-monikerRange: '>=aps-pdw-2016||=azuresqldb-current||=azure-sqldw-latest||>=sql-server-2016||=sqlallproducts-allversions||>=sql-server-linux-2017||=azuresqldb-mi-current'
-ms.openlocfilehash: 9cc2e3bef68a6900d5b9735ef3a5f8a050a34361
-ms.sourcegitcommit: dd36d1cbe32cd5a65c6638e8f252b0bd8145e165
+monikerRange: '>=aps-pdw-2016||=azuresqldb-current||=azure-sqldw-latest||>=sql-server-2016||>=sql-server-linux-2017||=azuresqldb-mi-current'
+ms.openlocfilehash: 5c95a79bb42cbc3ab32a5521682aacc8f4f9079d
+ms.sourcegitcommit: 1a544cf4dd2720b124c3697d1e62ae7741db757c
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 09/08/2020
-ms.locfileid: "89548136"
+ms.lasthandoff: 12/14/2020
+ms.locfileid: "97466914"
 ---
 # <a name="sp_describe_first_result_set-transact-sql"></a>sp_describe_first_result_set(Transact-SQL)
 [!INCLUDE [sql-asdb-asdbmi-asa-pdw](../../includes/applies-to-version/sql-asdb-asdbmi-asa-pdw.md)]
 
-  일괄 처리의 첫 번째 가능한 결과 집합에 대 한 메타 데이터를 반환 합니다 [!INCLUDE[tsql](../../includes/tsql-md.md)] . 일괄 처리에서 아무 결과도 반환되지 않은 경우 빈 결과 집합을 반환합니다. 에서 [!INCLUDE[ssDE](../../includes/ssde-md.md)] 정적 분석을 수행 하 여 실행 되는 첫 번째 쿼리에 대 한 메타 데이터를 확인할 수 없는 경우에서 오류를 발생 시킵니다. 동적 관리 뷰 [dm_exec_describe_first_result_set &#40;transact-sql&#41;](../../relational-databases/system-dynamic-management-views/sys-dm-exec-describe-first-result-set-transact-sql.md) 는 동일한 정보를 반환 합니다.  
+  일괄 처리의 첫 번째 가능한 결과 집합에 대 한 메타 데이터를 반환 합니다 [!INCLUDE[tsql](../../includes/tsql-md.md)] . 일괄 처리에서 아무 결과도 반환되지 않은 경우 빈 결과 집합을 반환합니다. 에서 [!INCLUDE[ssDE](../../includes/ssde-md.md)] 정적 분석을 수행 하 여 실행 되는 첫 번째 쿼리에 대 한 메타 데이터를 확인할 수 없는 경우에서 오류를 발생 시킵니다. [Transact-sql&#41;&#40;sys.dm_exec_describe_first_result_set](../../relational-databases/system-dynamic-management-views/sys-dm-exec-describe-first-result-set-transact-sql.md) 동적 관리 뷰는 동일한 정보를 반환 합니다.  
   
  ![항목 링크 아이콘](../../database-engine/configure-windows/media/topic-link.gif "항목 링크 아이콘") [Transact-SQL 구문 표기 규칙](../../t-sql/language-elements/transact-sql-syntax-conventions-transact-sql.md)  
   
@@ -43,11 +43,11 @@ sp_describe_first_result_set [ @tsql = ] N'Transact-SQL_batch'
 ```  
   
 ## <a name="arguments"></a>인수  
-`[ \@tsql = ] 'Transact-SQL_batch'` 하나 이상의 [!INCLUDE[tsql](../../includes/tsql-md.md)] 문입니다. *SQL_batch* 는 **nvarchar (***n***)** 또는 **nvarchar (max)** 일 수 있습니다.  
+`[ \@tsql = ] 'Transact-SQL_batch'` 하나 이상의 [!INCLUDE[tsql](../../includes/tsql-md.md)] 문입니다. *SQL_batch* 는 **nvarchar (**_n_*_)_* 또는 **nvarchar (max)** 일 수 있습니다.  
   
 `[ \@params = ] N'parameters'`\@params는 [!INCLUDE[tsql](../../includes/tsql-md.md)] sp_executesql와 비슷한 일괄 처리에 대 한 매개 변수에 대 한 선언 문자열을 제공 합니다. 매개 변수는 **nvarchar (n)** 또는 **nvarchar (max)** 일 수 있습니다.  
   
- _Batch에 포함 된 모든 매개 변수의 정의를 포함 하는 하나의 문자열입니다 [!INCLUDE[tsql](../../includes/tsql-md.md)] *_batch*. 문자열은 유니코드 상수 또는 유니코드 변수여야 합니다. 각 매개 변수의 정의는 매개 변수 이름과 데이터 형식으로 구성됩니다. *n* 은 추가 매개 변수 정의를 나타내는 자리 표시자입니다. 문에 지정 된 모든 매개 변수는 params에 정의 되어야 합니다 \@ . 문의 [!INCLUDE[tsql](../../includes/tsql-md.md)] 문 또는 일괄 처리에 매개 변수가 없는 경우 \@ params가 필요 하지 않습니다. NULL이 이 매개 변수의 기본값입니다.  
+ _Batch에 포함 된 모든 매개 변수의 정의를 포함 하는 하나의 문자열입니다 [!INCLUDE[tsql](../../includes/tsql-md.md)] . 문자열은 유니코드 상수 또는 유니코드 변수여야 합니다. 각 매개 변수의 정의는 매개 변수 이름과 데이터 형식으로 구성됩니다. *n* 은 추가 매개 변수 정의를 나타내는 자리 표시자입니다. 문에 지정 된 모든 매개 변수는 params에 정의 되어야 합니다 \@ . 문의 [!INCLUDE[tsql](../../includes/tsql-md.md)] 문 또는 일괄 처리에 매개 변수가 없는 경우 \@ params가 필요 하지 않습니다. NULL이 이 매개 변수의 기본값입니다.  
   
 `[ \@browse_information_mode = ] tinyint` 추가 키 열과 원본 테이블 정보가 반환 되는지 여부를 지정 합니다. 1로 설정되면 쿼리에 FOR BROWSE 옵션이 포함된 것처럼 각 쿼리가 분석됩니다. 추가 키 열과 원본 테이블 정보가 반환됩니다.  
   
@@ -58,7 +58,7 @@ sp_describe_first_result_set [ @tsql = ] N'Transact-SQL_batch'
 -   2로 설정되면 쿼리에 커서 준비 또는 실행에 사용되는 것처럼 각 쿼리가 분석됩니다. 그러면 원본 열 정보로 보기 이름을 반환합니다.  
   
 ## <a name="return-code-values"></a>반환 코드 값  
- **sp_describe_first_result_set** 은 성공 시 항상 상태 0을 반환 합니다. 프로시저에서 오류가 발생 하 고 프로시저가 RPC로 호출 된 경우에는 dm_exec_describe_first_result_set의 error_type 열에 설명 된 오류 유형으로 반환 상태가 채워집니다. [!INCLUDE[tsql](../../includes/tsql-md.md)]에서 프로시저를 호출한 경우 반환 값은 오류가 발생한 경우에도 항상 0입니다.  
+ **sp_describe_first_result_set** 은 성공 시 항상 상태 0을 반환 합니다. 프로시저에서 오류가 발생 하 고 프로시저가 RPC로 호출 된 경우에는 sys.dm_exec_describe_first_result_set의 error_type 열에 설명 된 오류 유형으로 반환 상태가 채워집니다. [!INCLUDE[tsql](../../includes/tsql-md.md)]에서 프로시저를 호출한 경우 반환 값은 오류가 발생한 경우에도 항상 0입니다.  
   
 ## <a name="result-sets"></a>결과 집합  
  이 공통 메타데이터는 결과 메타데이터의 각 열에 대한 하나의 행이 포함된 결과 집합으로 반환됩니다. 각 행은 다음 섹션에 설명된 형식으로 열의 유형과 Null 허용 여부를 설명합니다. 모든 제어 경로에 대해 첫 번째 문이 없을 경우 행이 0개인 결과 집합이 반환됩니다.  
@@ -71,7 +71,7 @@ sp_describe_first_result_set [ @tsql = ] N'Transact-SQL_batch'
 |**is_nullable**|**비트 NOT NULL**|열이 NULL을 허용하는 경우 1, 열이 NULL을 허용하지 않는 경우 0, 열이 NULL을 허용하는지 확인할 수 없는 경우 1을 포함합니다.|  
 |**system_type_id**|**int NOT NULL**|Sys. types에 지정 된 대로 열 데이터 형식의 system_type_id를 포함 합니다. CLR 형식의 경우 system_type_name 열에서 NULL을 반환해도 이 열은 값 240을 반환합니다.|  
 |**system_type_name**|**nvarchar (256) NULL**|열의 데이터 형식에 지정한 이름 및 인수(length, precision, scale 등)를 포함합니다. 데이터 형식이 사용자 정의 별칭 형식인 경우 기본 시스템 형식이 여기에 지정됩니다. 데이터 형식이 CLR 사용자 정의 형식인 경우 이 열에 NULL이 반환됩니다.|  
-|**max_length**|**NULL이 아닌 smallint**|열의 최대 길이(바이트)입니다.<br /><br /> -1 = 열 데이터 형식이 **varchar (max)**, **nvarchar (max)**, **varbinary (max)** 또는 **xml**입니다.<br /><br /> **텍스트** 열의 경우 **max_length** 값은 16 이거나 **' text in row ' sp_tableoption**값으로 설정 됩니다.|  
+|**max_length**|**NULL이 아닌 smallint**|열의 최대 길이(바이트)입니다.<br /><br /> -1 = 열 데이터 형식이 **varchar (max)**, **nvarchar (max)**, **varbinary (max)** 또는 **xml** 입니다.<br /><br /> **텍스트** 열의 경우 **max_length** 값은 16 이거나 **' text in row ' sp_tableoption** 값으로 설정 됩니다.|  
 |**전체 자릿수**|**tinyint NOT NULL**|숫자 기반일 경우 열의 전체 자릿수이고 그렇지 않으면 0을 반환합니다.|  
 |**scale**|**tinyint NOT NULL**|숫자 기반일 경우 열의 소수 자릿수이고 그렇지 않으면 0을 반환합니다.|  
 |**collation_name**|**sysname NULL**|문자 기반일 경우 열의 데이터 정렬 이름이고 그렇지 않으면 NULL을 반환합니다.|  
@@ -106,7 +106,7 @@ sp_describe_first_result_set [ @tsql = ] N'Transact-SQL_batch'
 |**tds_collation_sort_id**|**tinyint NULL**|내부적으로만 사용할 수 있습니다.|  
   
 ## <a name="remarks"></a>설명  
- **sp_describe_first_result_set** 프로시저에서 (가상) 일괄 처리에 대 한 첫 번째 결과 집합 메타 데이터를 반환 하 고 해당 일괄 처리 (a)를 나중에 실행 하는 경우 일괄 처리는 (1) 최적화 시간 오류를 발생 시킵니다. (2) 런타임 오류가 발생 하거나 (3) 결과 집합을 반환 하지 않거나 (4) **sp_describe_first_result_set**에서 설명 하는 동일한 메타 데이터가 포함 된 첫 번째 결과 집합을 반환 합니다.  
+ **sp_describe_first_result_set** 프로시저에서 (가상) 일괄 처리에 대 한 첫 번째 결과 집합 메타 데이터를 반환 하 고 해당 일괄 처리 (a)를 나중에 실행 하는 경우 일괄 처리는 (1) 최적화 시간 오류를 발생 시킵니다. (2) 런타임 오류가 발생 하거나 (3) 결과 집합을 반환 하지 않거나 (4) **sp_describe_first_result_set** 에서 설명 하는 동일한 메타 데이터가 포함 된 첫 번째 결과 집합을 반환 합니다.  
   
  이름, Null 허용 여부 및 데이터 형식이 다를 수 있습니다. **Sp_describe_first_result_set** 빈 결과 집합을 반환 하는 경우에는 일괄 처리 실행이 결과 집합을 반환 하지 않습니다.  
   
@@ -126,7 +126,7 @@ sp_describe_first_result_set [ @tsql = ] N'Transact-SQL_batch'
   
  다른 모든 확인이 성공한 경우에는 입력 일괄 처리 내에서 가능한 모든 제어 흐름 경로가 고려됩니다. 이는 모든 제어 흐름 문 (GOTO, [!INCLUDE[tsql](../../includes/tsql-md.md)] EXEC 문에 의해 입력 일괄 처리에서 호출 된 프로시저, 동적 일괄 처리 또는 트리거와 함께 IF/ELSE, WHILE 및 TRY/CATCH 블록을 비롯 하 여, [!INCLUDE[tsql](../../includes/tsql-md.md)] ddl 트리거를 발생 시키는 ddl 문 또는 외래 키 제약 조건에 대 한 연계 동작으로 인해 대상 테이블 또는 테이블에서 트리거를 발생 시키는 DML 문이 있습니다. 가능한 대부분의 제어 경로에서 특정 시점에 알고리즘이 중지됩니다.  
   
- 각 제어 흐름 경로에 대해 결과 집합을 반환 하는 첫 번째 문 (있는 경우)은 **sp_describe_first_result_set**에 의해 결정 됩니다.  
+ 각 제어 흐름 경로에 대해 결과 집합을 반환 하는 첫 번째 문 (있는 경우)은 **sp_describe_first_result_set** 에 의해 결정 됩니다.  
   
  일괄 처리에서 가능한 첫 번째 문이 여러 개 발견된 경우 해당 결과는 열 수, 열 이름, Null 허용 여부 및 데이터 형식이 다를 수 있습니다. 이러한 차이점이 처리되는 방식은 다음과 같습니다.  
   
@@ -155,7 +155,7 @@ sp_describe_first_result_set [ @tsql = ] N'Transact-SQL_batch'
 ## <a name="permissions"></a>사용 권한  
  Tsql 인수를 실행할 수 있는 권한이 필요 \@ 합니다.  
   
-## <a name="examples"></a>예제  
+## <a name="examples"></a>예  
   
 ### <a name="typical-examples"></a>일반적인 예  
   
@@ -401,6 +401,6 @@ N'
   
 ## <a name="see-also"></a>참고 항목  
  [Transact-sql&#41;sp_describe_undeclared_parameters &#40;](../../relational-databases/system-stored-procedures/sp-describe-undeclared-parameters-transact-sql.md)   
- [dm_exec_describe_first_result_set &#40;Transact-sql&#41;](../../relational-databases/system-dynamic-management-views/sys-dm-exec-describe-first-result-set-transact-sql.md)   
- [dm_exec_describe_first_result_set_for_object &#40;Transact-sql&#41;](../../relational-databases/system-dynamic-management-views/sys-dm-exec-describe-first-result-set-for-object-transact-sql.md)  
+ [Transact-sql&#41;sys.dm_exec_describe_first_result_set &#40;](../../relational-databases/system-dynamic-management-views/sys-dm-exec-describe-first-result-set-transact-sql.md)   
+ [Transact-sql&#41;sys.dm_exec_describe_first_result_set_for_object &#40;](../../relational-databases/system-dynamic-management-views/sys-dm-exec-describe-first-result-set-for-object-transact-sql.md)  
  

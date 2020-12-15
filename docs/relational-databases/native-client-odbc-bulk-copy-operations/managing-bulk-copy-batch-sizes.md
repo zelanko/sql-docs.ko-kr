@@ -16,12 +16,13 @@ helpviewer_keywords:
 ms.assetid: 4b24139f-788b-45a6-86dc-ae835435d737
 author: markingmyname
 ms.author: maghan
-monikerRange: '>=aps-pdw-2016||=azuresqldb-current||=azure-sqldw-latest||>=sql-server-2016||=sqlallproducts-allversions||>=sql-server-linux-2017||=azuresqldb-mi-current'
-ms.openlocfilehash: 1b558b9bdab0a7f582cf446b020ebaa76a07ce4f
-ms.sourcegitcommit: f3321ed29d6d8725ba6378d207277a57cb5fe8c2
+monikerRange: '>=aps-pdw-2016||=azuresqldb-current||=azure-sqldw-latest||>=sql-server-2016||>=sql-server-linux-2017||=azuresqldb-mi-current'
+ms.openlocfilehash: f9be8ff6adc10b74ae176011dd1ae0f3a2b9cae1
+ms.sourcegitcommit: 1a544cf4dd2720b124c3697d1e62ae7741db757c
+ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 07/06/2020
-ms.locfileid: "86007160"
+ms.lasthandoff: 12/14/2020
+ms.locfileid: "97465024"
 ---
 # <a name="managing-bulk-copy-batch-sizes"></a>대량 복사 일괄 처리 크기 관리
 [!INCLUDE[SQL Server Azure SQL Database Synapse Analytics PDW ](../../includes/applies-to-version/sql-asdb-asdbmi-asa-pdw.md)]
@@ -40,9 +41,9 @@ ms.locfileid: "86007160"
   
  데이터 파일에서 대량 복사 하는 경우 [bcp_exec](../../relational-databases/native-client-odbc-extensions-bulk-copy-functions/bcp-exec.md)를 호출 하기 전에 bcpbatch 옵션과 함께 **bcp_control** 를 호출 하 여 일괄 처리 크기를 지정 합니다. [Bcp_bind](../../relational-databases/native-client-odbc-extensions-bulk-copy-functions/bcp-bind.md) 및 [bcp_sendrow](../../relational-databases/native-client-odbc-extensions-bulk-copy-functions/bcp-sendrow.md)를 사용 하 여 프로그램 변수에서 대량 복사 하는 경우 [bcp_sendrow](../../relational-databases/native-client-odbc-extensions-bulk-copy-functions/bcp-sendrow.md) *x* 번 호출한 후 [bcp_batch](../../relational-databases/native-client-odbc-extensions-bulk-copy-functions/bcp-batch.md) 를 호출 하 여 일괄 처리 크기를 제어 합니다. 여기서 *x* 는 일괄 처리의 행 수입니다.  
   
- 트랜잭션 크기를 지정하는 것 외에도 일괄 처리는 행이 네트워크를 통해 서버로 전송되는 시기에 영향을 줍니다. 대량 복사 함수는 일반적으로 네트워크 패킷이 채워질 때까지 **bcp_sendrow** 의 행을 캐시 한 다음 전체 패킷을 서버에 보냅니다. 그러나 응용 프로그램에서 **bcp_batch**를 호출 하는 경우에는 입력 된 내용이 있는지 여부에 관계 없이 현재 패킷이 서버에 전송 됩니다. 매우 작은 일괄 처리 크기를 사용하면 부분적으로 채워진 많은 패킷이 서버로 전송되므로 성능이 느려질 수 있습니다. 예를 들어 모든 **bcp_sendrow** 후 **bcp_batch** 를 호출 하면 각 행이 별도의 패킷으로 전송 되 고 행이 너무 크면 각 패킷의 공간을 낭비 하 게 됩니다. SQL Server에 대 한 네트워크 패킷의 기본 크기는 4kb 이지만 응용 프로그램에서 SQL_ATTR_PACKET_SIZE 특성을 지정 하 여 [SQLSetConnectAttr](../../relational-databases/native-client-odbc-api/sqlsetconnectattr.md) 를 호출 하 여 크기를 변경할 수 있습니다.  
+ 트랜잭션 크기를 지정하는 것 외에도 일괄 처리는 행이 네트워크를 통해 서버로 전송되는 시기에 영향을 줍니다. 대량 복사 함수는 일반적으로 네트워크 패킷이 채워질 때까지 **bcp_sendrow** 의 행을 캐시 한 다음 전체 패킷을 서버에 보냅니다. 그러나 응용 프로그램에서 **bcp_batch** 를 호출 하는 경우에는 입력 된 내용이 있는지 여부에 관계 없이 현재 패킷이 서버에 전송 됩니다. 매우 작은 일괄 처리 크기를 사용하면 부분적으로 채워진 많은 패킷이 서버로 전송되므로 성능이 느려질 수 있습니다. 예를 들어 모든 **bcp_sendrow** 후 **bcp_batch** 를 호출 하면 각 행이 별도의 패킷으로 전송 되 고 행이 너무 크면 각 패킷의 공간을 낭비 하 게 됩니다. SQL Server에 대 한 네트워크 패킷의 기본 크기는 4kb 이지만 응용 프로그램에서 SQL_ATTR_PACKET_SIZE 특성을 지정 하 여 [SQLSetConnectAttr](../../relational-databases/native-client-odbc-api/sqlsetconnectattr.md) 를 호출 하 여 크기를 변경할 수 있습니다.  
   
- 일괄 처리의 또 다른 부작용은 **bcp_batch**를 사용 하 여 완료 될 때까지 각 일괄 처리가 처리 되지 않은 결과 집합으로 간주 된다는 것입니다. 일괄 처리가 처리 중인 동안 연결 핸들에서 다른 작업을 시도 하면 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] Native CLIENT ODBC 드라이버는 SQLState = "HY000"와 오류 메시지 문자열을 사용 하 여 오류를 발생 시킵니다.  
+ 일괄 처리의 또 다른 부작용은 **bcp_batch** 를 사용 하 여 완료 될 때까지 각 일괄 처리가 처리 되지 않은 결과 집합으로 간주 된다는 것입니다. 일괄 처리가 처리 중인 동안 연결 핸들에서 다른 작업을 시도 하면 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] Native CLIENT ODBC 드라이버는 SQLState = "HY000"와 오류 메시지 문자열을 사용 하 여 오류를 발생 시킵니다.  
   
 ```  
 "[Microsoft][SQL Server Native Client] Connection is busy with  
@@ -50,7 +51,7 @@ results for another hstmt."
 ```  
   
 ## <a name="see-also"></a>참고 항목  
- [ODBC&#41;&#40;대량 복사 작업 수행](../../relational-databases/native-client-odbc-bulk-copy-operations/performing-bulk-copy-operations-odbc.md)   
+ [ODBC&#41;&#40;대량 복사 작업 수행 ](../../relational-databases/native-client-odbc-bulk-copy-operations/performing-bulk-copy-operations-odbc.md)   
  [데이터 대량 가져오기 및 내보내기&#40;SQL Server&#41;](../../relational-databases/import-export/bulk-import-and-export-of-data-sql-server.md)  
   
   

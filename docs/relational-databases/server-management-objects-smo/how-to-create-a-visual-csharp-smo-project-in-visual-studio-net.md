@@ -13,13 +13,13 @@ helpviewer_keywords:
 ms.assetid: 1e7abb16-23a0-4a18-91ad-253261e6bf84
 author: markingmyname
 ms.author: maghan
-monikerRange: =azuresqldb-current||=azure-sqldw-latest||>=sql-server-2016||=sqlallproducts-allversions||>=sql-server-linux-2017||=azuresqldb-mi-current
-ms.openlocfilehash: 518e8441c19286e3a0daccca724062a8ff54294a
-ms.sourcegitcommit: e700497f962e4c2274df16d9e651059b42ff1a10
+monikerRange: =azuresqldb-current||=azure-sqldw-latest||>=sql-server-2016||>=sql-server-linux-2017||=azuresqldb-mi-current
+ms.openlocfilehash: 943cfd787cccff42973862b12f0f52feae24410c
+ms.sourcegitcommit: 1a544cf4dd2720b124c3697d1e62ae7741db757c
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 08/17/2020
-ms.locfileid: "88420257"
+ms.lasthandoff: 12/14/2020
+ms.locfileid: "97467194"
 ---
 # <a name="how-to-create-a-visual-c-smo-project-in-visual-studio-net"></a>방법: Visual Studio .NET에서 Visual C# SMO 프로젝트 만들기
 [!INCLUDE [SQL Server ASDB, ASDBMI, ASDW ](../../includes/applies-to-version/sql-asdb-asdbmi-asa.md)]
@@ -32,9 +32,9 @@ ms.locfileid: "88420257"
   
 1. Visual Studio를 시작합니다.
   
-2. **파일** 메뉴에서 **새로 만들기** , **프로젝트**를 차례로 클릭 합니다.  **새 프로젝트** 대화 상자가 나타납니다.   
+2. **파일** 메뉴에서 **새로 만들기** , **프로젝트** 를 차례로 클릭 합니다.  **새 프로젝트** 대화 상자가 나타납니다.   
   
-3. [!INCLUDE[vsprvs](../../includes/vsprvs-md.md)] **설치 됨** 창에서 **템플릿** \\ **Visual c #** \\ **Windows** 로 이동 하 고 **콘솔 응용 프로그램**을 선택 합니다.  
+3. [!INCLUDE[vsprvs](../../includes/vsprvs-md.md)] **설치 됨** 창에서 **템플릿** \\ **Visual c #** \\ **Windows** 로 이동 하 고 **콘솔 응용 프로그램** 을 선택 합니다.  
   
 4. 필드 **이름** 텍스트 상자에 새 응용 프로그램의 이름을 입력 합니다.  
 
@@ -42,7 +42,7 @@ ms.locfileid: "88420257"
 
 6. [SMO 설치](installing-smo.md) 의 지침에 따라 참조할 프로젝트에 대 한 패키지를 설치 합니다.
   
-7. **보기** 메뉴에서 **코드**를 클릭합니다.
+7. **보기** 메뉴에서 **코드** 를 클릭합니다.
     
 8. 코드에서 네임 스페이스 문 앞에 다음 **using** 문을 입력 하 여 SMO 네임 스페이스의 형식을 한정 합니다.
   

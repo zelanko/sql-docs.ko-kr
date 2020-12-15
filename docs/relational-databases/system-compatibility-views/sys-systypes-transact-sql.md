@@ -21,13 +21,13 @@ helpviewer_keywords:
 ms.assetid: 1b0b1d0c-5f7b-470b-bd52-8bfa922d7889
 author: rothja
 ms.author: jroth
-monikerRange: '>=aps-pdw-2016||=azuresqldb-current||=azure-sqldw-latest||>=sql-server-2016||=sqlallproducts-allversions||>=sql-server-linux-2017||=azuresqldb-mi-current'
-ms.openlocfilehash: 6b5e4f2d0974889d0ce4158648b2fc44692926b9
-ms.sourcegitcommit: e700497f962e4c2274df16d9e651059b42ff1a10
+monikerRange: '>=aps-pdw-2016||=azuresqldb-current||=azure-sqldw-latest||>=sql-server-2016||>=sql-server-linux-2017||=azuresqldb-mi-current'
+ms.openlocfilehash: 9bd2a68f151a136a5bb9de7efd170c7178d8001e
+ms.sourcegitcommit: 1a544cf4dd2720b124c3697d1e62ae7741db757c
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 08/17/2020
-ms.locfileid: "88375229"
+ms.lasthandoff: 12/14/2020
+ms.locfileid: "97464674"
 ---
 # <a name="syssystypes-transact-sql"></a>sys.systypes(Transact-SQL)
 [!INCLUDE [sql-asdb-asdbmi-asa-pdw](../../includes/applies-to-version/sql-asdb-asdbmi-asa-pdw.md)]
@@ -48,11 +48,11 @@ ms.locfileid: "88375229"
 |**xscale**|**tinyint**|서버에서 사용하는 내부적인 소수 자릿수입니다. 쿼리에서는 사용하지 않습니다.|  
 |**tdefault**|**int**|해당 데이터 형식에 대한 무결성 검사를 포함하는 저장 프로시저의 ID입니다.|  
 |**도메인**|**int**|해당 데이터 형식에 대한 무결성 검사를 포함하는 저장 프로시저의 ID입니다.|  
-|**uid**|**smallint**|형식 소유자의 스키마 ID입니다.<br /><br /> 이전 버전의 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]에서 업그레이드한 데이터베이스의 경우 스키마 ID는 소유자의 사용자 ID와 동일합니다.<br /><br /> 중요 다음 DDL 문 중 하나를 사용 하는 경우sys.sys** \* 형식 대신에는 \* sys. types 카탈로그 뷰를 사용 해야 합니다. \* \* ** [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] [sys.types](../../relational-databases/system-catalog-views/sys-types-transact-sql.md) **sys.systypes**<br /><br /> ALTER AUTHORIZATION ON TYPE<br /><br /> CREATE TYPE<br /><br /> 사용자 및 역할 수가 32,767을 초과하는 경우 오버플로되거나 NULL을 반환합니다.|  
+|**uid**|**smallint**|형식 소유자의 스키마 ID입니다.<br /><br /> 이전 버전의 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]에서 업그레이드한 데이터베이스의 경우 스키마 ID는 소유자의 사용자 ID와 동일합니다.<br /><br /> 중요 다음 DDL 문 중 하나를 사용 하는 경우sys.sys **\* 형식 대신에는 \* sys. types 카탈로그 뷰를 사용 해야 합니다. \* \*** [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] [](../../relational-databases/system-catalog-views/sys-types-transact-sql.md) <br /><br /> ALTER AUTHORIZATION ON TYPE<br /><br /> CREATE TYPE<br /><br /> 사용자 및 역할 수가 32,767을 초과하는 경우 오버플로되거나 NULL을 반환합니다.|  
 |**쓰이는**|**smallint**|[!INCLUDE[ssInternalOnly](../../includes/ssinternalonly-md.md)]|  
 |**collationid**|**int**|Character based 인 경우 **collationid** 는 현재 데이터베이스의 데이터 정렬 id입니다. 그렇지 않으면 NULL입니다.|  
 |**usertype**|**smallint**|사용자 유형 ID입니다. 데이터 형식 수가 32,767을 초과하면 오버플로되거나 NULL을 반환합니다.|  
-|**변수**|**bit**|가변 길이 데이터 형식입니다.<br /><br /> 1 = True<br /><br /> 0 = False|  
+|**variable**|**bit**|가변 길이 데이터 형식입니다.<br /><br /> 1 = True<br /><br /> 0 = False|  
 |**allownulls**|**bit**|해당 데이터 형식의 기본 NULL 허용 여부를 표시합니다. 이 기본값은 [CREATE TABLE](../../t-sql/statements/create-table-transact-sql.md) 또는 [ALTER table](../../t-sql/statements/alter-table-transact-sql.md)을 사용 하 여 null 허용 여부를 지정 하는 경우에 의해 재정의 됩니다.|  
 |**type**|**tinyint**|물리적인 스토리지 데이터 형식입니다.|  
 |**printfmt**|**varchar(255)**|[!INCLUDE[ssInternalOnly](../../includes/ssinternalonly-md.md)]|  

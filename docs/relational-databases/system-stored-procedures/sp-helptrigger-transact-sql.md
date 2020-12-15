@@ -18,13 +18,13 @@ helpviewer_keywords:
 ms.assetid: e486d39b-771d-488d-a786-7136433a2203
 author: markingmyname
 ms.author: maghan
-monikerRange: =azuresqldb-current||>=sql-server-2016||=sqlallproducts-allversions||>=sql-server-linux-2017||=azuresqldb-mi-current
-ms.openlocfilehash: 5b7bf378b184a019c45fe20fac4dae8f995f7009
-ms.sourcegitcommit: dd36d1cbe32cd5a65c6638e8f252b0bd8145e165
+monikerRange: =azuresqldb-current||>=sql-server-2016||>=sql-server-linux-2017||=azuresqldb-mi-current
+ms.openlocfilehash: 8b03afedd01095ddfc233eca9722e9eecde8f840
+ms.sourcegitcommit: 1a544cf4dd2720b124c3697d1e62ae7741db757c
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 09/08/2020
-ms.locfileid: "89543253"
+ms.lasthandoff: 12/14/2020
+ms.locfileid: "97468364"
 ---
 # <a name="sp_helptrigger-transact-sql"></a>sp_helptrigger(Transact-SQL)
 [!INCLUDE [SQL Server SQL Database](../../includes/applies-to-version/sql-asdb.md)]
@@ -46,7 +46,7 @@ sp_helptrigger [ @tabname = ] 'table'
   
 `[ @triggertype = ] 'type'` 정보를 반환할 DML 트리거의 유형입니다. *type* 은 **char (6)** 이며 기본값은 NULL이 고 다음 값 중 하나일 수 있습니다.  
   
-|값|Description|  
+|값|설명|  
 |-----------|-----------------|  
 |**DELETE**|DELETE 트리거 정보를 반환합니다.|  
 |**INSERT**|INSERT 트리거 정보를 반환합니다.|  
@@ -72,7 +72,7 @@ sp_helptrigger [ @tabname = ] 'table'
 ## <a name="permissions"></a>사용 권한  
  테이블에 대 한 [메타 데이터 표시 유형 구성](../../relational-databases/security/metadata-visibility-configuration.md) 권한이 필요 합니다.  
   
-## <a name="examples"></a>예제  
+## <a name="examples"></a>예  
  다음 예에서는 `sp_helptrigger`를 실행하여 `Person.Person` 테이블의 트리거에 대한 정보를 출력합니다.  
   
 ```  

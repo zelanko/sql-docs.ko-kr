@@ -20,13 +20,13 @@ helpviewer_keywords:
 ms.assetid: 220d062f-d117-46e7-a448-06fe48db8163
 author: markingmyname
 ms.author: maghan
-monikerRange: '>=aps-pdw-2016||>=sql-server-2016||=sqlallproducts-allversions||>=sql-server-linux-2017||=azuresqldb-mi-current'
-ms.openlocfilehash: e313b3e873fbd59a53306475d0641ddbe5566703
-ms.sourcegitcommit: 2991ad5324601c8618739915aec9b184a8a49c74
+monikerRange: '>=aps-pdw-2016||>=sql-server-2016||>=sql-server-linux-2017||=azuresqldb-mi-current'
+ms.openlocfilehash: 81f9cde748697d9c69bdcfd67b3e2a4db7907ab7
+ms.sourcegitcommit: 1a544cf4dd2720b124c3697d1e62ae7741db757c
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 12/11/2020
-ms.locfileid: "97330028"
+ms.lasthandoff: 12/14/2020
+ms.locfileid: "97466894"
 ---
 # <a name="sysdm_clr_properties-transact-sql"></a>sys.dm_clr_properties(Transact-SQL)
 [!INCLUDE [sql-asdbmi-pdw](../../includes/applies-to-version/sql-asdbmi-pdw.md)]
@@ -77,7 +77,7 @@ ms.locfileid: "97330028"
 에 [!INCLUDE[ssNoVersion_md](../../includes/ssnoversion-md.md)] 는 `VIEW SERVER STATE` 권한이 필요 합니다.   
 SQL Database Basic, S0 및 S1 서비스 목적과 탄력적 풀의 데이터베이스에 대해서는 `Server admin` 또는 `Azure Active Directory admin` 계정이 필요 합니다. 다른 모든 SQL Database 서비스 목표에서 `VIEW DATABASE STATE` 사용 권한은 데이터베이스에서 필요 합니다.   
 
-## <a name="examples"></a>예제  
+## <a name="examples"></a>예  
  다음 예에서는 호스팅된 CLR에 대한 정보를 검색합니다.  
   
 ```  

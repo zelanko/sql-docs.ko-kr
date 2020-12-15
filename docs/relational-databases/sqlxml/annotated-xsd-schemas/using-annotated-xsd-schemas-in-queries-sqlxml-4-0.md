@@ -22,13 +22,13 @@ ms.assetid: 927a30a2-eae8-420d-851d-551c5f884f3c
 author: MightyPen
 ms.author: genemi
 ms.custom: seo-lt-2019
-monikerRange: =azuresqldb-current||>=sql-server-2016||=sqlallproducts-allversions||>=sql-server-linux-2017||=azuresqldb-mi-current
-ms.openlocfilehash: 857710f894ddc8ef2c874bdc3fed127f0625c8f4
-ms.sourcegitcommit: da88320c474c1c9124574f90d549c50ee3387b4c
+monikerRange: =azuresqldb-current||>=sql-server-2016||>=sql-server-linux-2017||=azuresqldb-mi-current
+ms.openlocfilehash: 030c1d04575c412c2cae9c69d0798e7d40e89450
+ms.sourcegitcommit: 1a544cf4dd2720b124c3697d1e62ae7741db757c
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 07/01/2020
-ms.locfileid: "85725853"
+ms.lasthandoff: 12/14/2020
+ms.locfileid: "97467104"
 ---
 # <a name="using-annotated-xsd-schemas-in-queries-sqlxml-40"></a>쿼리에 주석이 추가된 XSD 스키마 사용(SQLXML 4.0)
 [!INCLUDE [SQL Server Azure SQL Database](../../../includes/applies-to-version/sql-asdb.md)]
@@ -121,7 +121,7 @@ ms.locfileid: "85725853"
   
  템플릿에서 인라인 스키마를 지정 하는 경우에는 요소에 **sql: is-매핑 스키마** 주석도 지정 해야 합니다 **\<xsd:schema>** . **Sql: is 매핑-스키마** 는 부울 값 (0 = false, 1 = true)을 사용 합니다. **Sql: is 매핑-schema = "1"** 인 인라인 스키마는 인라인 주석이 추가 된 스키마로 처리 되 고 XML 문서에서 반환 되지 않습니다.  
   
- **Sql: is 매핑 스키마** 주석은 템플릿 네임 스페이스 **urn: schema-microsoft-com: xml-sql**에 속합니다.  
+ **Sql: is 매핑 스키마** 주석은 템플릿 네임 스페이스 **urn: schema-microsoft-com: xml-sql** 에 속합니다.  
   
  이 예를 테스트하려면 로컬 디렉터리에 템플릿(InlineSchemaTemplate.xml)을 지정한 다음 SQLXML 4.0 테스트 스크립트(Sqlxml4test.vbs)를 만들어서 사용하여 템플릿을 실행합니다. 자세한 내용은 [ADO를 사용 하 여 SQLXML 4.0 쿼리 실행](../../../relational-databases/sqlxml/using-ado-to-execute-sqlxml-4-0-queries.md)을 참조 하세요.  
   
@@ -142,6 +142,6 @@ ms.locfileid: "85725853"
 </sql:xpath-query>  
 ```  
   
- 이 템플릿에서는 XPath 쿼리만 지정하고 매핑 스키마는 지정하지 않습니다. 따라서이 쿼리는 **dbobject** 형식 쿼리로 처리 됩니다. 여기서는 Production photo가 테이블 이름이 고 @ProductPhotoID = ' 100 '은 ID 값이 100 인 제품 사진을 찾는 조건자입니다. @LargePhoto값을 검색할 열입니다.  
+ 이 템플릿에서는 XPath 쿼리만 지정하고 매핑 스키마는 지정하지 않습니다. 따라서이 쿼리는 **dbobject** 형식 쿼리로 처리 됩니다. 여기서는 Production photo가 테이블 이름이 고 @ProductPhotoID = ' 100 '은 ID 값이 100 인 제품 사진을 찾는 조건자입니다. @LargePhoto 값을 검색할 열입니다.  
   
   

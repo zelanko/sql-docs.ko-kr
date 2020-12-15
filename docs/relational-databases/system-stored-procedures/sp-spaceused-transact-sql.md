@@ -18,13 +18,13 @@ helpviewer_keywords:
 ms.assetid: c6253b48-29f5-4371-bfcd-3ef404060621
 author: markingmyname
 ms.author: maghan
-monikerRange: '>=aps-pdw-2016||=azuresqldb-current||=azure-sqldw-latest||>=sql-server-2016||=sqlallproducts-allversions||>=sql-server-linux-2017||=azuresqldb-mi-current'
-ms.openlocfilehash: 0f2e03e32842a9187761c0f4471d871277682005
-ms.sourcegitcommit: 894c1a23e922dc29b82c1d2c34c7b0ff28b38654
+monikerRange: '>=aps-pdw-2016||=azuresqldb-current||=azure-sqldw-latest||>=sql-server-2016||>=sql-server-linux-2017||=azuresqldb-mi-current'
+ms.openlocfilehash: b887b79a2e768f3c73a683ae6f60b06fb8d16a2c
+ms.sourcegitcommit: 1a544cf4dd2720b124c3697d1e62ae7741db757c
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 10/30/2020
-ms.locfileid: "93067515"
+ms.lasthandoff: 12/14/2020
+ms.locfileid: "97466834"
 ---
 # <a name="sp_spaceused-transact-sql"></a>sp_spaceused(Transact-SQL)
 [!INCLUDE [sql-asdb-asdbmi-asa-pdw](../../includes/applies-to-version/sql-asdb-asdbmi-asa-pdw.md)]
@@ -162,18 +162,18 @@ sp_spaceused [[ @objname = ] 'objname' ]
 |**data**|**varchar (18)**|데이터가 사용하는 총 공간입니다.|  
 |**index_size**|**varchar (18)**|인덱스가 사용하는 총 공간입니다.|  
 |**사용 되지 않는**|**varchar (18)**|데이터베이스의 개체에 예약되었지만 아직 사용되지 않은 총 공간입니다.|
-|**xtp_precreated**|**varchar (18)**|상태가 사전 생성 된 검사점 파일의 총 크기 (KB)입니다. 이는 전체 데이터베이스의 할당 되지 않은 공간을 계산 합니다. 하나 이상의 컨테이너를 포함 하는 memory_optimized_data 파일 그룹이 데이터베이스에 없는 경우 NULL을 반환 합니다. *이 열은 @include_total_xtp_storage = 1 인 경우에만 포함 됩니다* .| 
-|**xtp_used**|**varchar (18)**|생성, 활성 및 병합 대상에서 상태의 검사점 파일의 총 크기 (KB)입니다. 메모리 최적화 테이블의 데이터에 적극적으로 사용 되는 디스크 공간입니다. 하나 이상의 컨테이너를 포함 하는 memory_optimized_data 파일 그룹이 데이터베이스에 없는 경우 NULL을 반환 합니다. *이 열은 @include_total_xtp_storage = 1 인 경우에만 포함 됩니다* .| 
+|**xtp_precreated**|**varchar (18)**|상태가 사전 생성 된 검사점 파일의 총 크기 (KB)입니다. 이는 전체 데이터베이스의 할당 되지 않은 공간을 계산 합니다. 하나 이상의 컨테이너를 포함 하는 memory_optimized_data 파일 그룹이 데이터베이스에 없는 경우 NULL을 반환 합니다. *이 열은 @include_total_xtp_storage = 1 인 경우에만 포함 됩니다*.| 
+|**xtp_used**|**varchar (18)**|생성, 활성 및 병합 대상에서 상태의 검사점 파일의 총 크기 (KB)입니다. 메모리 최적화 테이블의 데이터에 적극적으로 사용 되는 디스크 공간입니다. 하나 이상의 컨테이너를 포함 하는 memory_optimized_data 파일 그룹이 데이터베이스에 없는 경우 NULL을 반환 합니다. *이 열은 @include_total_xtp_storage = 1 인 경우에만 포함 됩니다*.| 
 |**xtp_pending_truncation**|**varchar (18)**|상태 WAITING_FOR_LOG_TRUNCATION의 전체 검사점 파일 크기 (KB)입니다. 로그 잘림이 발생 한 후 정리를 대기 중인 검사점 파일에 사용 되는 디스크 공간입니다. 하나 이상의 컨테이너를 포함 하는 memory_optimized_data 파일 그룹이 데이터베이스에 없는 경우 NULL을 반환 합니다. 이 열은 인 경우에만 포함 됩니다 `@include_total_xtp_storage=1` .|
 
 ## <a name="remarks"></a>설명  
- **database_size** 은 **reserved**  +  로그 파일의 크기를 포함 하기 때문에 예약 된 **할당 되지 않은 공간의** 합계 보다 일반적으로 더 큽니다. **예약** 된 공간 및 **unallocated_space** 데이터 페이지만 고려 합니다. Azure Synapse Analytics를 사용 하는 경우이 문은 true가 아닐 수 있습니다. 
+ **database_size** 은   +  로그 파일의 크기를 포함 하기 때문에 예약 된 **할당 되지 않은 공간의** 합계 보다 일반적으로 더 큽니다. **예약** 된 공간 및 **unallocated_space** 데이터 페이지만 고려 합니다. Azure Synapse Analytics를 사용 하는 경우이 문은 true가 아닐 수 있습니다. 
   
  XML 인덱스 및 전체 텍스트 인덱스에 사용 되는 페이지는 두 결과 집합의 **index_size** 에 포함 됩니다. *Objname* 을 지정 하면 개체의 XML 인덱스 및 전체 텍스트 인덱스에 대 한 페이지도 총 **예약** 된 결과와 **index_size** 결과에 계산 됩니다.  
   
- 데이터베이스 또는 공간 인덱스를 포함 하는 개체에 대해 공간 사용량이 계산 된 경우 **database_size** , **예약 됨** , **index_size** 등의 공간 크기 열에는 공간 인덱스의 크기가 포함 됩니다.  
+ 데이터베이스 또는 공간 인덱스를 포함 하는 개체에 대해 공간 사용량이 계산 된 경우 **database_size**, **예약 됨**, **index_size** 등의 공간 크기 열에는 공간 인덱스의 크기가 포함 됩니다.  
   
- *Updateusage* 를 지정 하면는 [!INCLUDE[ssDEnoversion](../../includes/ssdenoversion-md.md)] 데이터베이스의 데이터 페이지를 검색 하 고, 각 테이블에서 사용 하는 저장소 공간 **sys.partitions** 에 대 한 **sys.allocation_units** 및 카탈로그 뷰에 필요한 수정 사항을 만듭니다. 인덱스가 삭제된 후처럼 테이블에 대한 공간 정보가 최신 상태가 아닌 경우도 있습니다. *updateusage* 는 많은 테이블이 나 데이터베이스에서 실행 하는 데 다소 시간이 걸릴 수 있습니다. 잘못 된 값이 반환 되 고 의심 되는 경우와 데이터베이스의 다른 사용자 또는 프로세스에 부정적인 영향을 주지 않는 경우에만 *updateusage* 를 사용 합니다. 원하는 경우에는 DBCC UPDATEUSAGE를 별도로 실행할 수 있습니다.  
+ *Updateusage* 를 지정 하면는 [!INCLUDE[ssDEnoversion](../../includes/ssdenoversion-md.md)] 데이터베이스의 데이터 페이지를 검색 하 고, 각 테이블에서 사용 하는 저장소 공간  에 대 한 **sys.allocation_units** 및 카탈로그 뷰에 필요한 수정 사항을 만듭니다. 인덱스가 삭제된 후처럼 테이블에 대한 공간 정보가 최신 상태가 아닌 경우도 있습니다. *updateusage* 는 많은 테이블이 나 데이터베이스에서 실행 하는 데 다소 시간이 걸릴 수 있습니다. 잘못 된 값이 반환 되 고 의심 되는 경우와 데이터베이스의 다른 사용자 또는 프로세스에 부정적인 영향을 주지 않는 경우에만 *updateusage* 를 사용 합니다. 원하는 경우에는 DBCC UPDATEUSAGE를 별도로 실행할 수 있습니다.  
   
 > [!NOTE]  
 >  대형 인덱스를 삭제하거나 다시 작성할 때 또는 대형 테이블을 삭제하거나 자를 때 [!INCLUDE[ssDE](../../includes/ssde-md.md)]에서는 트랜잭션이 커밋될 때까지 실제 페이지 할당 해제 및 관련 잠금을 연기합니다. 삭제 작업이 지연되어도 할당된 공간이 즉시 해제되지는 않습니다. 따라서 대량 개체를 삭제 하거나 자른 직후 **sp_spaceused** 에서 반환 하는 값에는 사용 가능한 실제 디스크 공간이 반영 되지 않을 수 있습니다.  

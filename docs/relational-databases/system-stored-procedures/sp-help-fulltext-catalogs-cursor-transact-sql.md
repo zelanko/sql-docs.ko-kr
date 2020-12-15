@@ -18,13 +18,13 @@ helpviewer_keywords:
 ms.assetid: d44478d1-0cc4-415e-9d1a-6dccb64674fa
 author: markingmyname
 ms.author: maghan
-monikerRange: =azuresqldb-current||>=sql-server-2016||=sqlallproducts-allversions||>=sql-server-linux-2017||=azuresqldb-mi-current
-ms.openlocfilehash: 4ad9cbdb0fba866cd126d9a55b322e027b3db1bb
-ms.sourcegitcommit: dd36d1cbe32cd5a65c6638e8f252b0bd8145e165
+monikerRange: =azuresqldb-current||>=sql-server-2016||>=sql-server-linux-2017||=azuresqldb-mi-current
+ms.openlocfilehash: 2a999b80932f4b6fb81307614d2d03bbb301e260
+ms.sourcegitcommit: 1a544cf4dd2720b124c3697d1e62ae7741db757c
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 09/08/2020
-ms.locfileid: "89538841"
+ms.lasthandoff: 12/14/2020
+ms.locfileid: "97468414"
 ---
 # <a name="sp_help_fulltext_catalogs_cursor-transact-sql"></a>sp_help_fulltext_catalogs_cursor(Transact-SQL)
 [!INCLUDE [SQL Server SQL Database](../../includes/applies-to-version/sql-asdb.md)]
@@ -32,7 +32,7 @@ ms.locfileid: "89538841"
   커서를 사용하여 지정된 전체 텍스트 카탈로그에 대해 전체 텍스트 인덱싱된 테이블의 ID, 이름, 루트 디렉터리, 상태 및 번호를 반환할 수 있습니다.  
   
 > [!IMPORTANT]  
->  [!INCLUDE[ssNoteDepFutureAvoid](../../includes/ssnotedepfutureavoid-md.md)] 대신 [fulltext_catalogs](../../relational-databases/system-catalog-views/sys-fulltext-catalogs-transact-sql.md) 카탈로그 뷰를 사용 하십시오.  
+>  [!INCLUDE[ssNoteDepFutureAvoid](../../includes/ssnotedepfutureavoid-md.md)] 대신 [sys.fulltext_catalogs](../../relational-databases/system-catalog-views/sys-fulltext-catalogs-transact-sql.md) 카탈로그 뷰를 사용 하십시오.  
   
  ![항목 링크 아이콘](../../database-engine/configure-windows/media/topic-link.gif "항목 링크 아이콘") [Transact-SQL 구문 표기 규칙](../../t-sql/language-elements/transact-sql-syntax-conventions-transact-sql.md)  
   
@@ -45,9 +45,9 @@ sp_help_fulltext_catalogs_cursor [ @cursor_return= ] @cursor_variable OUTPUT ,
 ```  
   
 ## <a name="arguments"></a>인수  
-`[ @cursor_return = ] @cursor_variable OUTPUT`**Cursor**유형의 출력 변수입니다. 커서는 읽기 전용의 스크롤할 수 있는 동적 커서입니다.  
+`[ @cursor_return = ] @cursor_variable OUTPUT`**Cursor** 유형의 출력 변수입니다. 커서는 읽기 전용의 스크롤할 수 있는 동적 커서입니다.  
   
-`[ @fulltext_catalog_name = ] 'fulltext_catalog_name'` 전체 텍스트 카탈로그의 이름입니다. *fulltext_catalog_name* 는 **sysname**입니다. 매개 변수를 생략하거나 그 값이 NULL인 경우에는 현재 데이터베이스와 연결된 모든 전체 텍스트 카탈로그에 대한 정보가 반환됩니다.  
+`[ @fulltext_catalog_name = ] 'fulltext_catalog_name'` 전체 텍스트 카탈로그의 이름입니다. *fulltext_catalog_name* 는 **sysname** 입니다. 매개 변수를 생략하거나 그 값이 NULL인 경우에는 현재 데이터베이스와 연결된 모든 전체 텍스트 카탈로그에 대한 정보가 반환됩니다.  
   
 ## <a name="return-code-values"></a>반환 코드 값  
  0(성공) 또는 1(실패)  
@@ -65,7 +65,7 @@ sp_help_fulltext_catalogs_cursor [ @cursor_return= ] @cursor_variable OUTPUT ,
 ## <a name="permissions"></a>사용 권한  
  실행 권한은 기본적으로 **public** 역할로 사용 됩니다.  
   
-## <a name="examples"></a>예제  
+## <a name="examples"></a>예  
  다음 예에서는 `Cat_Desc` 전체 텍스트 카탈로그에 대한 정보를 반환합니다.  
   
 ```  

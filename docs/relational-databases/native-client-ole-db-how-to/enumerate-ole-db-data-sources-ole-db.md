@@ -13,13 +13,13 @@ helpviewer_keywords:
 ms.assetid: ba240060-3237-4fb8-b2fb-b87fda2b1e7a
 author: markingmyname
 ms.author: maghan
-monikerRange: '>=aps-pdw-2016||=azuresqldb-current||=azure-sqldw-latest||>=sql-server-2016||=sqlallproducts-allversions||>=sql-server-linux-2017||=azuresqldb-mi-current'
-ms.openlocfilehash: 8fc37fff75c3ba078c104e87af38cbcc03954563
-ms.sourcegitcommit: 4d370399f6f142e25075b3714e5c2ce056b1bfd0
+monikerRange: '>=aps-pdw-2016||=azuresqldb-current||=azure-sqldw-latest||>=sql-server-2016||>=sql-server-linux-2017||=azuresqldb-mi-current'
+ms.openlocfilehash: 42e11b7c4a973312cb71756d0e67cc964664410e
+ms.sourcegitcommit: 1a544cf4dd2720b124c3697d1e62ae7741db757c
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 10/09/2020
-ms.locfileid: "91867995"
+ms.lasthandoff: 12/14/2020
+ms.locfileid: "97469464"
 ---
 # <a name="enumerate-sql-server-native-client-ole-db-data-sources-ole-db"></a>데이터 원본 SQL Server Native Client OLE DB 열거 (OLE DB)
 [!INCLUDE[SQL Server Azure SQL Database Synapse Analytics PDW ](../../includes/applies-to-version/sql-asdb-asdbmi-asa-pdw.md)]
@@ -39,17 +39,17 @@ ms.locfileid: "91867995"
   
 ### <a name="to-enumerate-ole-db-data-sources"></a>OLE DB 데이터 원본을 열거하려면  
   
-1.  **ISourceRowset::GetSourcesRowset**을 호출하여 원본 행 집합을 검색합니다.  
+1.  **ISourceRowset::GetSourcesRowset** 을 호출하여 원본 행 집합을 검색합니다.  
   
-2.  **GetColumnInfo::IColumnInfo**를 호출하여 열거자 행 집합에 대한 설명을 찾습니다.  
+2.  **GetColumnInfo::IColumnInfo** 를 호출하여 열거자 행 집합에 대한 설명을 찾습니다.  
   
 3.  열 정보를 사용하여 바인딩 구조를 만듭니다.  
   
-4.  **IAccessor::CreateAccessor**를 호출하여 행 집합 접근자를 만듭니다.  
+4.  **IAccessor::CreateAccessor** 를 호출하여 행 집합 접근자를 만듭니다.  
   
-5.  **IRowset::GetNextRows**를 호출하여 행을 인출합니다.  
+5.  **IRowset::GetNextRows** 를 호출하여 행을 인출합니다.  
   
-6.  **IRowset::GetData**를 호출하여 행 집합의 행 복사본에서 데이터를 검색합니다.  
+6.  **IRowset::GetData** 를 호출하여 행 집합의 행 복사본에서 데이터를 검색합니다.  
   
 ## <a name="example"></a>예제  
  ole32.lib를 사용하여 컴파일하고 다음 C++ 코드 목록을 실행합니다. 이 애플리케이션은 컴퓨터의 기본 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 인스턴스에 연결됩니다. 일부 Windows 운영 체제에서는 (localhost) 또는 (local)을 해당 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 인스턴스의 이름으로 변경해야 합니다. 명명된 인스턴스에 연결하려면 연결 문자열을 L"(local)"에서 L"(local)\\\name"으로 변경합니다. 여기서 name은 명명된 인스턴스입니다. 기본적으로 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] Express는 명명된 인스턴스에 설치됩니다. INCLUDE 환경 변수에 sqlncli.h가 들어 있는 디렉터리를 포함해야 합니다.  

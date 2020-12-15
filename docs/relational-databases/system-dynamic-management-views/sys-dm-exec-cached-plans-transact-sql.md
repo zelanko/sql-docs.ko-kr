@@ -20,13 +20,13 @@ helpviewer_keywords:
 ms.assetid: 95b707d3-3a93-407f-8e88-4515d4f2039d
 author: markingmyname
 ms.author: maghan
-monikerRange: =azuresqldb-current||>=sql-server-2016||=sqlallproducts-allversions||>=sql-server-linux-2017||=azuresqldb-mi-current
-ms.openlocfilehash: a4625b80bd709528288d0e9a6afec70a3c730ee1
-ms.sourcegitcommit: 2991ad5324601c8618739915aec9b184a8a49c74
+monikerRange: =azuresqldb-current||>=sql-server-2016||>=sql-server-linux-2017||=azuresqldb-mi-current
+ms.openlocfilehash: d98ae349991cfb3309e80b0b9afa12706efdfc90
+ms.sourcegitcommit: 1a544cf4dd2720b124c3697d1e62ae7741db757c
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 12/11/2020
-ms.locfileid: "97332718"
+ms.lasthandoff: 12/14/2020
+ms.locfileid: "97466864"
 ---
 # <a name="sysdm_exec_cached_plans-transact-sql"></a>sys.dm_exec_cached_plans(Transact-SQL)
 [!INCLUDE [SQL Server SQL Database](../../includes/applies-to-version/sql-asdb.md)]
@@ -58,7 +58,7 @@ ms.locfileid: "97332718"
 에 [!INCLUDE[ssNoVersion_md](../../includes/ssnoversion-md.md)] 는 `VIEW SERVER STATE` 권한이 필요 합니다.   
 SQL Database Basic, S0 및 S1 서비스 목적과 탄력적 풀의 데이터베이스에 대해서는 `Server admin` 또는 `Azure Active Directory admin` 계정이 필요 합니다. 다른 모든 SQL Database 서비스 목표에서 `VIEW DATABASE STATE` 사용 권한은 데이터베이스에서 필요 합니다.   
 
-## <a name="examples"></a>예제  
+## <a name="examples"></a>예  
   
 ### <a name="a-returning-the-batch-text-of-cached-entries-that-are-reused"></a>A. 다시 사용된 캐시된 항목의 일괄 처리 텍스트 반환  
  다음 예에서는 두 번 이상 사용되었던 모든 캐시된 항목의 SQL 텍스트를 반환합니다.  

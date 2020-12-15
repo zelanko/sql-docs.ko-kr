@@ -13,13 +13,13 @@ helpviewer_keywords:
 ms.assetid: 0ebebd3b-0775-41c2-989d-aa4cf81af12a
 author: markingmyname
 ms.author: maghan
-monikerRange: =azuresqldb-current||=azure-sqldw-latest||>=sql-server-2016||=sqlallproducts-allversions||>=sql-server-linux-2017||=azuresqldb-mi-current
-ms.openlocfilehash: 34ca2b972b27e34cf3cc0f5705de3fe9fa1ffb74
-ms.sourcegitcommit: e700497f962e4c2274df16d9e651059b42ff1a10
+monikerRange: =azuresqldb-current||=azure-sqldw-latest||>=sql-server-2016||>=sql-server-linux-2017||=azuresqldb-mi-current
+ms.openlocfilehash: a5f2adc78d8885f534d852b8d7f51913e50f104a
+ms.sourcegitcommit: 1a544cf4dd2720b124c3697d1e62ae7741db757c
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 08/17/2020
-ms.locfileid: "88403849"
+ms.lasthandoff: 12/14/2020
+ms.locfileid: "97468514"
 ---
 # <a name="creating-altering-and-removing-user-defined-functions"></a>사용자 정의 함수 생성, 변경 및 제거
 [!INCLUDE [SQL Server ASDB, ASDBMI, ASDW ](../../../includes/applies-to-version/sql-asdb-asdbmi-asa.md)]
@@ -31,7 +31,7 @@ ms.locfileid: "88403849"
   
  <xref:Microsoft.SqlServer.Management.Smo.UserDefinedFunction> 개체가 .NET 어셈블리를 참조하는 경우 <xref:Microsoft.SqlServer.Management.Smo.SqlAssembly> 개체를 만들고 이를 <xref:Microsoft.SqlServer.Management.Smo.SqlAssemblyCollection> 개체에 속하는 <xref:Microsoft.SqlServer.Management.Smo.Database> 개체에 추가하여 어셈블리를 등록해야 합니다.  
   
-## <a name="example"></a>예제  
+## <a name="example"></a>예  
  제공된 코드 예제를 사용하려면 애플리케이션을 만들 프로그래밍 환경, 프로그래밍 템플릿 및 프로그래밍 언어를 선택해야 합니다. 자세한 내용은 [Visual Studio .net에서 Visual C&#35; SMO 프로젝트 만들기](../../../relational-databases/server-management-objects-smo/how-to-create-a-visual-csharp-smo-project-in-visual-studio-net.md)를 참조 하세요.  
   
 ## <a name="creating-a-scalar-user-defined-function-in-visual-basic"></a>Visual Basic에서 스칼라 사용자 정의 함수 만들기  

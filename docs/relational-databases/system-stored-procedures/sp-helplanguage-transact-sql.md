@@ -19,13 +19,13 @@ helpviewer_keywords:
 ms.assetid: 8c4651a5-7dbc-49c5-8691-dc72103c2dfa
 author: markingmyname
 ms.author: maghan
-monikerRange: =azuresqldb-current||>=sql-server-2016||=sqlallproducts-allversions||>=sql-server-linux-2017||=azuresqldb-mi-current
-ms.openlocfilehash: e0e28b9c039bd620780930a2795914432bf07669
-ms.sourcegitcommit: dd36d1cbe32cd5a65c6638e8f252b0bd8145e165
+monikerRange: =azuresqldb-current||>=sql-server-2016||>=sql-server-linux-2017||=azuresqldb-mi-current
+ms.openlocfilehash: b40e6caf31616f7dc1749a80746ea4ab2b9039ed
+ms.sourcegitcommit: 1a544cf4dd2720b124c3697d1e62ae7741db757c
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 09/08/2020
-ms.locfileid: "89535221"
+ms.lasthandoff: 12/14/2020
+ms.locfileid: "97468384"
 ---
 # <a name="sp_helplanguage-transact-sql"></a>sp_helplanguage(Transact-SQL)
 [!INCLUDE [SQL Server SQL Database](../../includes/applies-to-version/sql-asdb.md)]
@@ -42,7 +42,7 @@ sp_helplanguage [ [ @language = ] 'language' ]
 ```  
   
 ## <a name="arguments"></a>인수  
-`[ @language = ] 'language'` 정보를 표시할 대체 언어의 이름입니다. *language* 는 **sysname**이며 기본값은 NULL입니다. *Language* 를 지정 하면 지정 된 언어에 대 한 정보가 반환 됩니다. Language를 지정 하지 않으면 **sys.sys언어** 호환성 보기의 모든 언어에 대 한 정보가 반환 됩니다.  
+`[ @language = ] 'language'` 정보를 표시할 대체 언어의 이름입니다. *language* 는 **sysname** 이며 기본값은 NULL입니다. *Language* 를 지정 하면 지정 된 언어에 대 한 정보가 반환 됩니다. Language를 지정 하지 않으면 **sys.sys언어** 호환성 보기의 모든 언어에 대 한 정보가 반환 됩니다.  
   
 ## <a name="return-code-values"></a>반환 코드 값  
  0(성공) 또는 1(실패)  
@@ -66,7 +66,7 @@ sp_helplanguage [ [ @language = ] 'language' ]
 ## <a name="permissions"></a>사용 권한  
  **public** 역할의 멤버 자격이 필요합니다.  
   
-## <a name="examples"></a>예제  
+## <a name="examples"></a>예  
   
 ### <a name="a-returning-information-about-a-single-language"></a>A. 단일 언어에 관한 정보 반환  
  다음 예에서는 대체 언어 `French`에 관한 정보를 표시합니다.  

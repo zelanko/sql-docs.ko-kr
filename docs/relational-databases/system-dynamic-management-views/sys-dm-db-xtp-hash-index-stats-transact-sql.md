@@ -1,6 +1,6 @@
 ---
 description: sys.dm_db_xtp_hash_index_stats(Transact-SQL)
-title: sys. dm_db_xtp_hash_index_stats (Transact-sql) | Microsoft Docs
+title: sys.dm_db_xtp_hash_index_stats (Transact-sql) | Microsoft Docs
 ms.custom: ''
 ms.date: 08/29/2016
 ms.prod: sql
@@ -20,13 +20,13 @@ helpviewer_keywords:
 ms.assetid: 45969884-cd61-48e8-aee5-c725c78e3e4c
 author: markingmyname
 ms.author: maghan
-monikerRange: =azure-sqldw-latest||>=sql-server-2016||=sqlallproducts-allversions||>=sql-server-linux-2017||=azuresqldb-mi-current
-ms.openlocfilehash: 5e8b28d292de4d860a8e46f7a679e42d99ac8c88
-ms.sourcegitcommit: dd36d1cbe32cd5a65c6638e8f252b0bd8145e165
+monikerRange: =azure-sqldw-latest||>=sql-server-2016||>=sql-server-linux-2017||=azuresqldb-mi-current
+ms.openlocfilehash: 310fb757ca9956ac3206ac3d9bff0cc99c857a87
+ms.sourcegitcommit: 1a544cf4dd2720b124c3697d1e62ae7741db757c
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 09/08/2020
-ms.locfileid: "89542264"
+ms.lasthandoff: 12/14/2020
+ms.locfileid: "97468484"
 ---
 # <a name="sysdm_db_xtp_hash_index_stats-transact-sql"></a>sys.dm_db_xtp_hash_index_stats(Transact-SQL)
 [!INCLUDE[sql-asdb-asdbmi](../../includes/applies-to-version/sql-asdb-asdbmi.md)]
@@ -42,11 +42,11 @@ ms.locfileid: "89542264"
 긴 체인 길이는 SELECT 및 INSERT를 포함하여 개별 행에 대한 모든 DML 작업의 성능에 상당한 영향을 미칠 수 있습니다. 빈 버킷 수가 많은 짧은 체인 길이는 bucket_count가 너무 높다는 것을 나타냅니다. 이것은 인덱스 스캔 성능을 저하시킵니다.  
   
 > [!WARNING]
-> **dm_db_xtp_hash_index_stats** 는 전체 테이블을 검색 합니다. 따라서 데이터베이스에 규모가 많은 테이블이 있는 경우 **dm_db_xtp_hash_index_stats** 를 실행 하는 데 시간이 오래 걸릴 수 있습니다.  
+> **sys.dm_db_xtp_hash_index_stats** 는 전체 테이블을 검색 합니다. 따라서 데이터베이스에 규모가 많은 테이블이 있는 경우 **sys.dm_db_xtp_hash_index_stats** 실행 시간이 길어질 수 있습니다.  
   
-자세한 내용은 [메모리 액세스에 최적화 된 테이블의 해시 인덱스](../../relational-databases/sql-server-index-design-guide.md#hash_index)를 참조 하세요.  
+자세한 내용은 [Memory-Optimized 테이블에 대 한 해시 인덱스](../../relational-databases/sql-server-index-design-guide.md#hash_index)를 참조 하세요.  
   
-|열 이름|Type|Description|  
+|열 이름|Type|설명|  
 |-----------------|----------|-----------------|  
 |object_id|**int**|부모 테이블의 개체 ID입니다.|  
 |xtp_object_id|**bigint**|메모리 액세스에 최적화 된 테이블의 ID입니다.|  
@@ -60,7 +60,7 @@ ms.locfileid: "89542264"
 ## <a name="permissions"></a>사용 권한  
  서버에 대한 VIEW DATABASE STATE 권한이 필요합니다.  
 
-## <a name="examples"></a>예제  
+## <a name="examples"></a>예  
   
 ### <a name="a-troubleshooting-hash-index-bucket-count"></a>A. 해시 인덱스 버킷 수 문제 해결
 
@@ -88,7 +88,7 @@ ms.locfileid: "89542264"
   ORDER BY [table], [index];  
 ``` 
 
-이 쿼리의 결과를 해석 하는 방법에 대 한 자세한 내용은 [메모리 액세스에 최적화 된 테이블의 해시 인덱스 문제 해결](../../relational-databases/in-memory-oltp/hash-indexes-for-memory-optimized-tables.md) 을 참조 하세요.  
+이 쿼리의 결과를 해석 하는 방법에 대 한 자세한 내용은 [Memory-Optimized 테이블의 해시 인덱스 문제 해결](../../relational-databases/in-memory-oltp/hash-indexes-for-memory-optimized-tables.md) 을 참조 하세요.  
 
 ### <a name="b-hash-index-statistics-for-internal-tables"></a>B. 내부 테이블에 대 한 해시 인덱스 통계
 

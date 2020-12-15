@@ -20,13 +20,13 @@ helpviewer_keywords:
 ms.assetid: 07300b59-3cab-4d3e-8138-5ea8f584f88f
 author: markingmyname
 ms.author: maghan
-monikerRange: =azure-sqldw-latest||>=sql-server-2016||=sqlallproducts-allversions||>=sql-server-linux-2017||=azuresqldb-mi-current
-ms.openlocfilehash: f6d6c0d191022099e027b29a5be1b34b592da31f
-ms.sourcegitcommit: 32135463a8494d9ed1600a58f51819359e3c09dc
+monikerRange: =azure-sqldw-latest||>=sql-server-2016||>=sql-server-linux-2017||=azuresqldb-mi-current
+ms.openlocfilehash: a082e789e05a5ca59afb9db74790a5cfb54232d7
+ms.sourcegitcommit: 1a544cf4dd2720b124c3697d1e62ae7741db757c
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 10/08/2020
-ms.locfileid: "91834120"
+ms.lasthandoff: 12/14/2020
+ms.locfileid: "97468474"
 ---
 # <a name="sysdm_db_xtp_object_stats-transact-sql"></a>sys.dm_db_xtp_object_stats(Transact-SQL)
 [!INCLUDE[sql-asdb-asdbmi](../../includes/applies-to-version/sql-asdb-asdbmi.md)]
@@ -49,7 +49,7 @@ ms.locfileid: "91834120"
 |row_delete_attempts|**bigint**|마지막 데이터베이스 다시 시작 이후 커밋된 트랜잭션 및 중단된 트랜잭션 모두에 의해 테이블에서 삭제된 행 수입니다.|  
 |write_conflicts|**bigint**|마지막 데이터베이스 다시 시작 이후 발생한 쓰기 충돌 수입니다.|  
 |unique_constraint_violations|**bigint**|마지막 데이터베이스 다시 시작 이후 발생한 UNIQUE 제약 조건 위반 수입니다.|  
-|object_address|**varbinary(8)**|내부적으로만 사용됩니다.|  
+|object_address|**varbinary(8)**|내부 전용입니다.|  
   
 ## <a name="permissions"></a>사용 권한  
  현재 데이터베이스에 대해 VIEW DATABASE STATE 권한이 필요합니다.  

@@ -13,13 +13,13 @@ dev_langs:
 ms.assetid: 5774fadc-77cc-46f8-8f9f-a0f9efe95e21
 author: ronortloff
 ms.author: rortloff
-monikerRange: '>= aps-pdw-2016 || = azure-sqldw-latest || = sqlallproducts-allversions'
-ms.openlocfilehash: 03397db88a1a99e2fbf661662311537671bfa862
-ms.sourcegitcommit: 76ab3b57718341c6057613c9bd38cf82fb17786e
+monikerRange: '>= aps-pdw-2016 || = azure-sqldw-latest'
+ms.openlocfilehash: d3cf3310528625b4fb477fbcc02a38d3cdf6c077
+ms.sourcegitcommit: 1a544cf4dd2720b124c3697d1e62ae7741db757c
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 10/14/2020
-ms.locfileid: "92059451"
+ms.lasthandoff: 12/14/2020
+ms.locfileid: "97466804"
 ---
 # <a name="sp_special_columns_100-azure-synapse-analytics"></a>sp_special_columns_100 (Azure Synapse Analytics)
 [!INCLUDE[applies-to-version/asa-pdw](../../includes/applies-to-version/asa-pdw.md)]
@@ -47,15 +47,15 @@ sp_special_columns_100 [ @table_name = ] 'table_name'
   
 ## <a name="arguments"></a>인수  
  [ @table_name =] '*table_name*'  
- 카탈로그 정보를 반환하는 데 사용되는 테이블의 이름입니다. *name* 은 **sysname**이며 기본값은 없습니다. 와일드카드 패턴 일치는 지원되지 않습니다.  
+ 카탈로그 정보를 반환하는 데 사용되는 테이블의 이름입니다. *name* 은 **sysname** 이며 기본값은 없습니다. 와일드카드 패턴 일치는 지원되지 않습니다.  
   
  [ @table_owner =] '*table_owner*'  
- 카탈로그 정보를 반환하는 데 사용하는 테이블의 소유자입니다. *owner* 는 **sysname**이며 기본값은 NULL입니다. 와일드카드 패턴 일치는 지원되지 않습니다. *Owner* 를 지정 하지 않은 경우 기본 DBMS의 기본 테이블 표시 규칙이 적용 됩니다.  
+ 카탈로그 정보를 반환하는 데 사용하는 테이블의 소유자입니다. *owner* 는 **sysname** 이며 기본값은 NULL입니다. 와일드카드 패턴 일치는 지원되지 않습니다. *Owner* 를 지정 하지 않은 경우 기본 DBMS의 기본 테이블 표시 규칙이 적용 됩니다.  
   
- [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]에서는 현재 사용자가 지정된 이름의 테이블을 소유한 경우 해당 테이블의 열이 반환됩니다. *Owner* 를 지정 하지 않은 경우 현재 사용자가 지정 된 *이름의*테이블을 소유 하 고 있지 않은 경우이 프로시저는 데이터베이스 소유자가 소유한 지정 된 *이름의* 테이블을 찾습니다. 테이블이 있으면 해당 열이 반환됩니다.  
+ [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]에서는 현재 사용자가 지정된 이름의 테이블을 소유한 경우 해당 테이블의 열이 반환됩니다. *Owner* 를 지정 하지 않은 경우 현재 사용자가 지정 된 *이름의* 테이블을 소유 하 고 있지 않은 경우이 프로시저는 데이터베이스 소유자가 소유한 지정 된 *이름의* 테이블을 찾습니다. 테이블이 있으면 해당 열이 반환됩니다.  
   
  [ @qualifier =] '*한정자*'  
- 테이블 한정자의 이름입니다. *한정자* 는 **sysname**이며 기본값은 NULL입니다. 다양 한 DBMS 제품에서 테이블 (*qualifier.owner.name*)에 대 한 세 부분으로 구성 되는 이름을 지원 합니다. [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]에서 이 열은 데이터베이스 이름을 나타냅니다. 일부 제품에서는 테이블 데이터베이스 환경의 서버 이름을 나타냅니다.  
+ 테이블 한정자의 이름입니다. *한정자* 는 **sysname** 이며 기본값은 NULL입니다. 다양 한 DBMS 제품에서 테이블 (*qualifier.owner.name*)에 대 한 세 부분으로 구성 되는 이름을 지원 합니다. [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]에서 이 열은 데이터베이스 이름을 나타냅니다. 일부 제품에서는 테이블 데이터베이스 환경의 서버 이름을 나타냅니다.  
   
  [ @col_type =] '*col_type*'  
  열 유형입니다. *col_type* 은 **char (** 1 **)** 이 고 기본값은 r입니다. r 유형은 열에서 값을 검색 하 여 지정 된 테이블의 모든 행을 고유 하 게 식별할 수 있는 최적의 열 또는 열 집합을 반환 합니다. 열은 이 목적을 위해 특별히 구성된 의사 열 또는 테이블의 고유한 인덱스 열이 될 수 있습니다. V 유형은 지정된 테이블에 열이 있는 경우 해당 열을 반환합니다. 이 열은 트랜잭션에 의해 행의 값이 업데이트될 때 데이터 원본에 의해 자동으로 업데이트됩니다.  
@@ -79,9 +79,9 @@ sp_special_columns_100 [ @table_name = ] 'table_name'
 |SCOPE|**smallint**|행 ID의 실제 범위로 0, 1 또는 2가 될 수 있습니다. [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 항상 0을 반환 합니다. 이 필드는 항상 값을 반환합니다.<br /><br /> 0 = SQL_SCOPE_CURROW. 행 ID는 해당 행에 있는 동안에만 유효하도록 보장됩니다. 행 ID를 사용하여 나중에 다시 선택하는 경우 행이 업데이트되거나 다른 트랜잭션에 의해 삭제되면 그 행을 반환하지 않을 수도 있습니다.<br /><br /> 1 = SQL_SCOPE_TRANSACTION. 행 ID는 현재 트랜잭션 기간 동안 유효하도록 보장됩니다.<br /><br /> 2 = SQL_SCOPE_SESSION. 행 ID는 트랜잭션 경계와 상관없이 세션 기간 동안 유효하도록 보장됩니다.|  
 |COLUMN_NAME|**sysname**|반환 된 *테이블* 의 각 열에 대 한 열 이름입니다. 이 필드는 항상 값을 반환합니다.|  
 |DATA_TYPE|**smallint**|ODBC SQL 데이터 형식입니다.|  
-|TYPE_NAME|**sysname**|데이터 원본 종속 데이터 형식 이름입니다. 예를 들어 **char**, **varchar**, **money**또는 **text**입니다.|  
+|TYPE_NAME|**sysname**|데이터 원본 종속 데이터 형식 이름입니다. 예를 들어 **char**, **varchar**, **money** 또는 **text** 입니다.|  
 |PRECISION|**정수**|데이터 원본의 행 전체 자릿수입니다. 이 필드는 항상 값을 반환합니다.|  
-|LENGTH|**정수**|데이터 원본에서 이진 형식의 데이터 형식에 필요한 길이 (바이트)입니다 (예: **char (** 10)의 경우 10, **정수**의 경우 4, **smallint**의 경우 2 **)**.|  
+|LENGTH|**정수**|데이터 원본에서 이진 형식의 데이터 형식에 필요한 길이 (바이트)입니다 (예: **char (** 10)의 경우 10, **정수** 의 경우 4, **smallint** 의 경우 2 **)**.|  
 |SCALE|**smallint**|데이터 원본의 소수 자릿수입니다. 소수 자릿수가 적용되지 않는 데이터 형식에 대해서는 NULL이 반환됩니다.|  
 |PSEUDO_COLUMN|**smallint**|열이 의사(pseudo) 열인지 여부를 나타냅니다. [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]은 항상 1을 반환합니다.<br /><br /> 0 = SQL_PC_UNKNOWN<br /><br /> 1 = SQL_PC_NOT_PSEUDO<br /><br /> 2 = SQL_PC_PSEUDO|  
   

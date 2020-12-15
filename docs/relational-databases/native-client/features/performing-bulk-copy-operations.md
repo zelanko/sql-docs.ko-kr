@@ -15,13 +15,13 @@ helpviewer_keywords:
 ms.assetid: 50d8456b-e6a1-4b25-bc7e-56946ed654a7
 author: markingmyname
 ms.author: maghan
-monikerRange: '>=aps-pdw-2016||=azuresqldb-current||=azure-sqldw-latest||>=sql-server-2016||=sqlallproducts-allversions||>=sql-server-linux-2017||=azuresqldb-mi-current'
-ms.openlocfilehash: 4ddb2ace735188b86761257675a496bc95489b94
-ms.sourcegitcommit: e700497f962e4c2274df16d9e651059b42ff1a10
+monikerRange: '>=aps-pdw-2016||=azuresqldb-current||=azure-sqldw-latest||>=sql-server-2016||>=sql-server-linux-2017||=azuresqldb-mi-current'
+ms.openlocfilehash: a99510bb6ae8847882b4242af524cc894b533961
+ms.sourcegitcommit: 1a544cf4dd2720b124c3697d1e62ae7741db757c
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 08/17/2020
-ms.locfileid: "88498887"
+ms.lasthandoff: 12/14/2020
+ms.locfileid: "97469204"
 ---
 # <a name="performing-bulk-copy-operations-in-sql-server-native-client"></a>SQL Server Native Client에서 대량 복사 작업 수행 
 [!INCLUDE [SQL Server](../../../includes/applies-to-version/sql-asdb-asdbmi-asa-pdw.md)]
@@ -98,13 +98,13 @@ ms.locfileid: "88498887"
   
 -   **ISupportErrorInfo**  
   
- 공급자별 속성 SSPROP_FASTLOADOPTIONS, SSPROP_FASTLOADKEEPNULLS 및 SSPROP_FASTLOADKEEPIDENTITY는 [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] Native Client OLE DB 공급자 대량 복사 행 집합의 동작을 제어합니다. 속성은 _rgPropertySets_**iopenrowset**매개 변수 멤버의 *rgProperties* 멤버에 지정 됩니다.  
+ 공급자별 속성 SSPROP_FASTLOADOPTIONS, SSPROP_FASTLOADKEEPNULLS 및 SSPROP_FASTLOADKEEPIDENTITY는 [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] Native Client OLE DB 공급자 대량 복사 행 집합의 동작을 제어합니다. 속성은 _rgPropertySets_**iopenrowset** 매개 변수 멤버의 *rgProperties* 멤버에 지정 됩니다.  
   
 |속성 ID|Description|  
 |-----------------|-----------------|  
-|SSPROP_FASTLOADKEEPIDENTITY|열: 예<br /><br /> R/W: 읽기/쓰기<br /><br /> 유형: VT_BOOL<br /><br /> Default: VARIANT_FALSE<br /><br /> 설명: 소비자가 제공한 ID 값을 유지합니다.<br /><br /> VARIANT_FALSE: [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] 테이블에 있는 ID 열의 값은 [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)]에서 생성됩니다. Native Client OLE DB 공급자는 열에 바인딩되는 모든 값을 무시 [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] 합니다.<br /><br /> VARIANT_TRUE: 소비자는 [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] ID 열의 값을 제공하는 접근자를 바인딩합니다. NULL을 허용하는 열에서는 ID 속성을 사용할 수 없으므로 소비자가 **IRowsetFastLoad::Insert**를 호출할 때마다 고유한 값을 제공합니다.|  
+|SSPROP_FASTLOADKEEPIDENTITY|열: 예<br /><br /> R/W: 읽기/쓰기<br /><br /> 유형: VT_BOOL<br /><br /> Default: VARIANT_FALSE<br /><br /> 설명: 소비자가 제공한 ID 값을 유지합니다.<br /><br /> VARIANT_FALSE: [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] 테이블에 있는 ID 열의 값은 [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)]에서 생성됩니다. Native Client OLE DB 공급자는 열에 바인딩되는 모든 값을 무시 [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] 합니다.<br /><br /> VARIANT_TRUE: 소비자는 [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] ID 열의 값을 제공하는 접근자를 바인딩합니다. NULL을 허용하는 열에서는 ID 속성을 사용할 수 없으므로 소비자가 **IRowsetFastLoad::Insert** 를 호출할 때마다 고유한 값을 제공합니다.|  
 |SSPROP_FASTLOADKEEPNULLS|열: 예<br /><br /> R/W: 읽기/쓰기<br /><br /> 유형: VT_BOOL<br /><br /> Default: VARIANT_FALSE<br /><br /> 설명: DEFAULT 제약 조건이 있는 열에 대해 NULL을 유지합니다. NULL을 허용하고 DEFAULT 제약 조건이 적용된 [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] 열에만 영향을 줍니다.<br /><br /> VARIANT_FALSE: [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] Native Client OLE DB 공급자 소비자가 열에 대해 NULL이 포함된 행을 삽입하는 경우 [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)]에서 열의 기본값을 삽입합니다.<br /><br /> VARIANT_TRUE: [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] Native Client OLE DB 공급자 소비자가 열에 대해 NULL이 포함된 행을 삽입하는 경우 [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)]에서 열 값으로 NULL을 삽입합니다.|  
-|SSPROP_FASTLOADOPTIONS|열: 예<br /><br /> R/W: 읽기/쓰기<br /><br /> 유형: VT_BSTR<br /><br /> 기본값: 없음<br /><br /> 설명: 이 속성은 **bcp** 유틸리티의 **-h** "*hint*[,...*n*]" 옵션과 같습니다. 데이터를 테이블로 대량 복사할 때 다음 문자열을 옵션으로 사용할 수 있습니다.<br /><br /> **ORDER**(*column*[**ASC** &#124; **DESC**][,...*n*]): 데이터 파일에 있는 데이터의 순서를 정렬합니다. 로드되는 데이터 파일을 테이블의 클러스터형 인덱스에 따라 정렬하면 대량 복사 성능이 향상됩니다.<br /><br /> **ROWS_PER_BATCH** = *bb*: 일괄 처리당 데이터 행 수( *bb*)입니다. 서버는 *bb*값에 따라 대량 로드를 최적화합니다. 기본적으로 **ROWS_PER_BATCH**는 알 수 없습니다.<br /><br /> **KILOBYTES_PER_BATCH** = *cc*: 일괄 처리당 데이터의 대략적인 KB 수(cc)입니다. 기본적으로 **KILOBYTES_PER_BATCH**는 알 수 없습니다.<br /><br /> **TABLOCK**: 대량 복사 작업이 지속되는 동안 테이블 수준 잠금이 유지됩니다. 대량 복사 작업 동안에만 잠금을 사용하면 테이블의 잠금 경쟁이 줄어들기 때문에 이 옵션을 사용하면 성능이 훨씬 향상됩니다. 테이블에 인덱스가 없고 **TABLOCK**이 지정되어 있으면 여러 클라이언트가 동시에 테이블을 로드할 수 있습니다. 기본적으로 잠금 동작은 **table lock on bulk load** 테이블 옵션에 의해 결정됩니다.<br /><br /> **CHECK_CONSTRAINTS**: 대량 복사 작업 동안 *table_name*의 모든 제약 조건이 확인됩니다. 기본적으로 제약 조건은 무시됩니다.<br /><br /> **FIRE_TRIGGER**: [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)]에서 트리거에 대해 행 버전 관리를 사용하고 **tempdb**의 버전 저장소에 행 버전을 저장합니다. 따라서 트리거가 사용되는 경우에도 대량 로깅 최적화를 사용할 수 있습니다. 트리거를 사용하여 많은 행이 포함된 일괄 처리를 대량 가져오기 전에 **tempdb**의 크기를 확장해야 할 수도 있습니다.|  
+|SSPROP_FASTLOADOPTIONS|열: 예<br /><br /> R/W: 읽기/쓰기<br /><br /> 유형: VT_BSTR<br /><br /> 기본값: 없음<br /><br /> 설명: 이 속성은 **bcp** 유틸리티의 **-h** "*hint*[,...*n*]" 옵션과 같습니다. 데이터를 테이블로 대량 복사할 때 다음 문자열을 옵션으로 사용할 수 있습니다.<br /><br /> **ORDER**(*column*[**ASC** &#124; **DESC**][,...*n*]): 데이터 파일에 있는 데이터의 순서를 정렬합니다. 로드되는 데이터 파일을 테이블의 클러스터형 인덱스에 따라 정렬하면 대량 복사 성능이 향상됩니다.<br /><br /> **ROWS_PER_BATCH** = *bb*: 일괄 처리당 데이터 행 수( *bb*)입니다. 서버는 *bb* 값에 따라 대량 로드를 최적화합니다. 기본적으로 **ROWS_PER_BATCH** 는 알 수 없습니다.<br /><br /> **KILOBYTES_PER_BATCH** = *cc*: 일괄 처리당 데이터의 대략적인 KB 수(cc)입니다. 기본적으로 **KILOBYTES_PER_BATCH** 는 알 수 없습니다.<br /><br /> **TABLOCK**: 대량 복사 작업이 지속되는 동안 테이블 수준 잠금이 유지됩니다. 대량 복사 작업 동안에만 잠금을 사용하면 테이블의 잠금 경쟁이 줄어들기 때문에 이 옵션을 사용하면 성능이 훨씬 향상됩니다. 테이블에 인덱스가 없고 **TABLOCK** 이 지정되어 있으면 여러 클라이언트가 동시에 테이블을 로드할 수 있습니다. 기본적으로 잠금 동작은 **table lock on bulk load** 테이블 옵션에 의해 결정됩니다.<br /><br /> **CHECK_CONSTRAINTS**: 대량 복사 작업 동안 *table_name* 의 모든 제약 조건이 확인됩니다. 기본적으로 제약 조건은 무시됩니다.<br /><br /> **FIRE_TRIGGER**: [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)]에서 트리거에 대해 행 버전 관리를 사용하고 **tempdb** 의 버전 저장소에 행 버전을 저장합니다. 따라서 트리거가 사용되는 경우에도 대량 로깅 최적화를 사용할 수 있습니다. 트리거를 사용하여 많은 행이 포함된 일괄 처리를 대량 가져오기 전에 **tempdb** 의 크기를 확장해야 할 수도 있습니다.|  
   
 ### <a name="using-file-based-bulk-copy-operations"></a>파일 기반 대량 복사 작업 사용  
  [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)]Native Client OLE DB 공급자는 **IBCPSession** 인터페이스를 구현 하 여 [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] 파일 기반 대량 복사 작업에 대 한 지원을 노출 합니다. **IBCPSession** 인터페이스는 [IBCPSession::BCPColFmt](../../../relational-databases/native-client-ole-db-interfaces/ibcpsession-bcpcolfmt-ole-db.md), [IBCPSession::BCPColumns](../../../relational-databases/native-client-ole-db-interfaces/ibcpsession-bcpcolumns-ole-db.md), [IBCPSession::BCPControl](../../../relational-databases/native-client-ole-db-interfaces/ibcpsession-bcpcontrol-ole-db.md), [IBCPSession::BCPDone](../../../relational-databases/native-client-ole-db-interfaces/ibcpsession-bcpdone-ole-db.md), [IBCPSession::BCPExec](../../../relational-databases/native-client-ole-db-interfaces/ibcpsession-bcpexec-ole-db.md), [IBCPSession::BCPInit](../../../relational-databases/native-client-ole-db-interfaces/ibcpsession-bcpinit-ole-db.md), [IBCPSession::BCPReadFmt](../../../relational-databases/native-client-ole-db-interfaces/ibcpsession-bcpreadfmt-ole-db.md) 및 [IBCPSession::BCPWriteFmt](../../../relational-databases/native-client-ole-db-interfaces/ibcpsession-bcpwritefmt-ole-db.md) 메서드를 구현합니다.  
@@ -117,7 +117,7 @@ ms.locfileid: "88498887"
  [데이터 원본 속성&#40;OLE DB&#41;](../../../relational-databases/native-client-ole-db-data-source-objects/data-source-properties-ole-db.md)   
  [데이터 대량 가져오기 및 내보내기&#40;SQL Server&#41;](../../../relational-databases/import-export/bulk-import-and-export-of-data-sql-server.md)   
  [IRowsetFastLoad &#40;OLE DB&#41;](../../../relational-databases/native-client-ole-db-interfaces/irowsetfastload-ole-db.md)   
- [IBCPSession &#40;OLE DB&#41;](../../../relational-databases/native-client-ole-db-interfaces/ibcpsession-ole-db.md)   
+ [IBCPSession&#40;OLE DB&#41;](../../../relational-databases/native-client-ole-db-interfaces/ibcpsession-ole-db.md)   
  [대량 가져오기 성능 최적화](https://msdn.microsoft.com/library/ms190421\(SQL.105\).aspx)  
   
   

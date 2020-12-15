@@ -20,13 +20,13 @@ helpviewer_keywords:
 ms.assetid: 05d9884f-b74c-4e3c-a23b-c90c1ea5ef02
 author: markingmyname
 ms.author: maghan
-monikerRange: '>=aps-pdw-2016||=azuresqldb-current||=azure-sqldw-latest||>=sql-server-2016||=sqlallproducts-allversions||>=sql-server-linux-2017||=azuresqldb-mi-current'
-ms.openlocfilehash: b60bed7d0e0126b8ac765c2fc910d75da6475a01
-ms.sourcegitcommit: 2991ad5324601c8618739915aec9b184a8a49c74
+monikerRange: '>=aps-pdw-2016||=azuresqldb-current||=azure-sqldw-latest||>=sql-server-2016||>=sql-server-linux-2017||=azuresqldb-mi-current'
+ms.openlocfilehash: d735aef31af5572ae1227ea3211a61d372104ab8
+ms.sourcegitcommit: 1a544cf4dd2720b124c3697d1e62ae7741db757c
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 12/11/2020
-ms.locfileid: "97334561"
+ms.lasthandoff: 12/14/2020
+ms.locfileid: "97468444"
 ---
 # <a name="sysdm_exec_background_job_queue-transact-sql"></a>sys.dm_exec_background_job_queue(Transact-SQL)
 [!INCLUDE [sql-asdb-asdbmi-asa-pdw](../../includes/applies-to-version/sql-asdb-asdbmi-asa-pdw.md)]
@@ -65,7 +65,7 @@ SQL Database Basic, S0 및 S1 서비스 목적과 탄력적 풀의 데이터베�
 |------------------|-----------------|-----------------|-----------------|-----------------|  
 |비동기 업데이트 통계|테이블 또는 뷰 ID|통계 ID|사용되지 않음|사용되지 않음|  
   
-## <a name="examples"></a>예제  
+## <a name="examples"></a>예  
  다음 예에서는 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 인스턴스의 각 데이터베이스에 대한 백그라운드 큐에 있는 활성 비동기 작업의 수를 반환합니다.  
   
 ```  

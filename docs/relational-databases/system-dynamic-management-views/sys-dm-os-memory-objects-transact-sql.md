@@ -20,13 +20,13 @@ helpviewer_keywords:
 ms.assetid: 5688bcf8-5da9-4ff9-960b-742b671d7096
 author: markingmyname
 ms.author: maghan
-monikerRange: '>=aps-pdw-2016||=azuresqldb-current||=azure-sqldw-latest||>=sql-server-2016||=sqlallproducts-allversions||>=sql-server-linux-2017||=azuresqldb-mi-current'
-ms.openlocfilehash: bf5fff49104658af4cf5a5102e538200d0393a1f
-ms.sourcegitcommit: 2991ad5324601c8618739915aec9b184a8a49c74
+monikerRange: '>=aps-pdw-2016||=azuresqldb-current||=azure-sqldw-latest||>=sql-server-2016||>=sql-server-linux-2017||=azuresqldb-mi-current'
+ms.openlocfilehash: 9988a7d10342711a0a648496ed65dc6a84398278
+ms.sourcegitcommit: 1a544cf4dd2720b124c3697d1e62ae7741db757c
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 12/11/2020
-ms.locfileid: "97326230"
+ms.lasthandoff: 12/14/2020
+ms.locfileid: "97468434"
 ---
 # <a name="sysdm_os_memory_objects-transact-sql"></a>sys.dm_os_memory_objects(Transact-SQL)
 [!INCLUDE [sql-asdb-asdbmi-asa-pdw](../../includes/applies-to-version/sql-asdb-asdbmi-asa-pdw.md)]
@@ -72,7 +72,7 @@ SQL Database Basic, S0 및 S1 서비스 목적과 탄력적 풀의 데이터베�
 > [!NOTE]  
 >  페이지 크기는 최대 할당이 아닙니다. 대신에 페이지 크기는 페이지 할당자에서 지원하고 메모리 클럭에서 구현하는 할당 세분성을 지원합니다. 메모리 개체에서 8KB보다 큰 할당을 요청할 수 있습니다.  
   
-## <a name="examples"></a>예제  
+## <a name="examples"></a>예  
  다음 예에서는 각 메모리 개체 유형에서 할당한 메모리를 반환합니다.  
   
 ```  

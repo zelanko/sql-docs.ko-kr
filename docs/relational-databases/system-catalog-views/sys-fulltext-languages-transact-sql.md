@@ -1,6 +1,6 @@
 ---
 description: sys.fulltext_languages(Transact-SQL)
-title: sys. fulltext_languages (Transact-sql) | Microsoft Docs
+title: sys.fulltext_languages (Transact-sql) | Microsoft Docs
 ms.custom: ''
 ms.date: 06/10/2016
 ms.prod: sql
@@ -21,13 +21,13 @@ ms.assetid: 2ed6b53d-1cf2-4763-9d58-36ea24a610ef
 author: pmasl
 ms.author: pelopes
 ms.reviewer: mikeray
-monikerRange: =azuresqldb-current||>=sql-server-2016||=sqlallproducts-allversions||>=sql-server-linux-2017||=azuresqldb-mi-current
-ms.openlocfilehash: ab4f793c243671edeaf2684d40b87c40cddaf8cb
-ms.sourcegitcommit: e700497f962e4c2274df16d9e651059b42ff1a10
+monikerRange: =azuresqldb-current||>=sql-server-2016||>=sql-server-linux-2017||=azuresqldb-mi-current
+ms.openlocfilehash: 9e8c29c32323c2c75e573e8e76851e4026a6e815
+ms.sourcegitcommit: 1a544cf4dd2720b124c3697d1e62ae7741db757c
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 08/17/2020
-ms.locfileid: "88420167"
+ms.lasthandoff: 12/14/2020
+ms.locfileid: "97464694"
 ---
 # <a name="sysfulltext_languages-transact-sql"></a>sys.fulltext_languages(Transact-SQL)
 [!INCLUDE [SQL Server SQL Database](../../includes/applies-to-version/sql-asdb.md)]
@@ -42,7 +42,7 @@ ms.locfileid: "88420167"
 ## <a name="values-returned-for-default-languages"></a>기본 언어에 대해 반환되는 값  
  다음 표에서는 기본적으로 단어 분리기가 등록되는 언어의 값을 보여 줍니다.  
   
-|Language|LCID|  
+|언어|LCID|  
 |--------------|----------|  
 |아랍어|1025|  
 |벵골어(인도)|1093|  
@@ -106,10 +106,10 @@ ms.locfileid: "88420167"
   
 ## <a name="see-also"></a>참고 항목  
  [Transact-sql&#41;sp_fulltext_load_thesaurus_file &#40;](../../relational-databases/system-stored-procedures/sp-fulltext-load-thesaurus-file-transact-sql.md)   
- [Transact-sql&#41;sp_fulltext_service &#40;](../../relational-databases/system-stored-procedures/sp-fulltext-service-transact-sql.md)   
+ [sp_fulltext_service&#40;Transact-SQL&#41;](../../relational-databases/system-stored-procedures/sp-fulltext-service-transact-sql.md)   
  [검색을 위해 단어 분리기와 형태소 분석기 구성 및 관리](../../relational-databases/search/configure-and-manage-word-breakers-and-stemmers-for-search.md)   
- [전체 텍스트 검색에 사용할 동의어 사전 파일 구성 및 관리](../../relational-databases/search/configure-and-manage-thesaurus-files-for-full-text-search.md)   
- [전체 텍스트 검색에 대 한 중지 단어 및 중지 목록 구성 및 관리](../../relational-databases/search/configure-and-manage-stopwords-and-stoplists-for-full-text-search.md)   
+ [Full-Text 검색을 위한 동의어 사전 파일 구성 및 관리](../../relational-databases/search/configure-and-manage-thesaurus-files-for-full-text-search.md)   
+ [전체 텍스트 검색에 사용할 중지 단어와 중지 목록 구성 및 관리](../../relational-databases/search/configure-and-manage-stopwords-and-stoplists-for-full-text-search.md)   
  [전체 텍스트 검색 업그레이드](../../relational-databases/search/upgrade-full-text-search.md)  
   
   

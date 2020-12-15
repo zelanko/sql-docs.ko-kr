@@ -18,13 +18,13 @@ helpviewer_keywords:
 ms.assetid: 24135456-05f0-427c-884b-93cf38dd47a8
 author: markingmyname
 ms.author: maghan
-monikerRange: =azuresqldb-current||>=sql-server-2016||=sqlallproducts-allversions||>=sql-server-linux-2017||=azuresqldb-mi-current
-ms.openlocfilehash: 4461c311c32c1f500a4481b36f4a17d0be0134bf
-ms.sourcegitcommit: dd36d1cbe32cd5a65c6638e8f252b0bd8145e165
+monikerRange: =azuresqldb-current||>=sql-server-2016||>=sql-server-linux-2017||=azuresqldb-mi-current
+ms.openlocfilehash: e6d2fbb2311392ee046b4aad84705b8ccd91a48c
+ms.sourcegitcommit: 1a544cf4dd2720b124c3697d1e62ae7741db757c
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 09/08/2020
-ms.locfileid: "89548021"
+ms.lasthandoff: 12/14/2020
+ms.locfileid: "97468374"
 ---
 # <a name="sp_helptext-transact-sql"></a>sp_helptext(Transact-SQL)
 [!INCLUDE [SQL Server SQL Database](../../includes/applies-to-version/sql-asdb.md)]
@@ -43,7 +43,7 @@ sp_helptext [ @objname = ] 'name' [ , [ @columnname = ] computed_column_name ]
 ## <a name="arguments"></a>인수  
 `[ @objname = ] 'name'` 사용자 정의 스키마 범위 개체의 정규화 된 이름 또는 정규화 되지 않은 이름입니다. 따옴표는 정규화된 개체를 지정하는 경우에만 필요합니다. 데이터베이스 이름을 포함한 정규화된 이름인 경우 반드시 현재 데이터베이스의 이름을 사용해야 합니다. 개체는 반드시 현재 데이터베이스에 있어야 합니다. *name* 은 **nvarchar (776)** 이며 기본값은 없습니다.  
   
-`[ @columnname = ] 'computed_column_name'` 정의 정보를 표시할 계산 열의 이름입니다. 열이 포함 된 테이블을 *이름*으로 지정 해야 합니다. *column_name* 는 **sysname**이며 기본값은 없습니다.  
+`[ @columnname = ] 'computed_column_name'` 정의 정보를 표시할 계산 열의 이름입니다. 열이 포함 된 테이블을 *이름* 으로 지정 해야 합니다. *column_name* 는 **sysname** 이며 기본값은 없습니다.  
   
 ## <a name="return-code-values"></a>반환 코드 값  
  0(성공) 또는 1(실패)  
@@ -55,12 +55,12 @@ sp_helptext [ @objname = ] 'name' [ , [ @columnname = ] computed_column_name ]
 |**Text**|**nvarchar(255)**|개체 정의|  
   
 ## <a name="remarks"></a>설명  
- sp_helptext는 여러 행에 개체를 만드는 데 사용하는 정의를 표시합니다. 각 행은 255자의 [!INCLUDE[tsql](../../includes/tsql-md.md)] 정의를 포함합니다. 정의는 [sql_modules](../../relational-databases/system-catalog-views/sys-sql-modules-transact-sql.md) 카탈로그 뷰의 **정의** 열에 있습니다.  
+ sp_helptext는 여러 행에 개체를 만드는 데 사용하는 정의를 표시합니다. 각 행은 255자의 [!INCLUDE[tsql](../../includes/tsql-md.md)] 정의를 포함합니다. 정의는 [sys.sql_modules](../../relational-databases/system-catalog-views/sys-sql-modules-transact-sql.md) 카탈로그 뷰의 **정의** 열에 있습니다.  
   
 ## <a name="permissions"></a>사용 권한  
  **public** 역할의 멤버 자격이 필요합니다. 시스템 개체 정의는 공개적으로 표시됩니다. 개체 소유자나 ALTER, CONTROL, TAKE OWNERSHIP 또는 VIEW DEFINITION 권한 중 하나를 부여 받은 사람은 사용자 개체의 정의를 볼 수 있습니다.  
   
-## <a name="examples"></a>예제  
+## <a name="examples"></a>예  
   
 ### <a name="a-displaying-the-definition-of-a-trigger"></a>A. 트리거의 정의 표시  
  다음 예에서는 [!INCLUDE[ssSampleDBobject](../../includes/sssampledbobject-md.md)] 데이터베이스에서 `dEmployee` 트리거 정의를 표시합니다.  

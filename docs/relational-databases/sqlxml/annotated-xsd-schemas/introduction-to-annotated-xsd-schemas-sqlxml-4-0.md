@@ -22,13 +22,13 @@ ms.assetid: 15282db1-65c4-43be-bdb7-e9ef49cb33a2
 author: MightyPen
 ms.author: genemi
 ms.custom: seo-lt-2019
-monikerRange: =azuresqldb-current||>=sql-server-2016||=sqlallproducts-allversions||>=sql-server-linux-2017||=azuresqldb-mi-current
-ms.openlocfilehash: 6567b5dfa6a6b83298793c9e5f2962d9c1bdb878
-ms.sourcegitcommit: da88320c474c1c9124574f90d549c50ee3387b4c
+monikerRange: =azuresqldb-current||>=sql-server-2016||>=sql-server-linux-2017||=azuresqldb-mi-current
+ms.openlocfilehash: d82028477d11cb53034a8ea3f6e40fde17cf205e
+ms.sourcegitcommit: 1a544cf4dd2720b124c3697d1e62ae7741db757c
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 07/01/2020
-ms.locfileid: "85764825"
+ms.lasthandoff: 12/14/2020
+ms.locfileid: "97467094"
 ---
 # <a name="introduction-to-annotated-xsd-schemas-sqlxml-40"></a>주석이 추가된 XSD 스키마 소개(SQLXML 4.0)
 [!INCLUDE [SQL Server Azure SQL Database](../../../includes/applies-to-version/sql-asdb.md)]
@@ -55,10 +55,10 @@ ms.locfileid: "85764825"
 > [!NOTE]  
 >  [!INCLUDE[msCoName](../../../includes/msconame-md.md)] SQLXML 4.0의 XSD 스키마 언어는 [!INCLUDE[ssVersion2000](../../../includes/ssversion2000-md.md)]에서 주석이 추가된 XDR(XML-Data Reduced) 스키마 언어에 도입된 주석을 지원합니다. 주석이 추가된 XDR은 SQLXML 4.0에서 더 이상 사용되지 않습니다.  
   
- 관계형 데이터베이스 컨텍스트에서는 임의의 XSD 스키마를 관계형 저장소에 매핑하는 것이 유용합니다. 이를 수행하는 한 가지 방법은 XSD 스키마에 주석을 추가하는 것입니다. 주석을 포함 하는 XSD 스키마를 *매핑 스키마*라고 하며,이 스키마는 XML 데이터가 관계형 저장소에 매핑되는 방법과 관련 된 정보를 제공 합니다. 매핑 스키마는 궁극적으로 관계형 데이터에 대한 XML 뷰로 생각할 수 있습니다. 이러한 매핑을 사용하여 관계형 데이터를 XML 문서로 검색할 수 있습니다.  
+ 관계형 데이터베이스 컨텍스트에서는 임의의 XSD 스키마를 관계형 저장소에 매핑하는 것이 유용합니다. 이를 수행하는 한 가지 방법은 XSD 스키마에 주석을 추가하는 것입니다. 주석을 포함 하는 XSD 스키마를 *매핑 스키마* 라고 하며,이 스키마는 XML 데이터가 관계형 저장소에 매핑되는 방법과 관련 된 정보를 제공 합니다. 매핑 스키마는 궁극적으로 관계형 데이터에 대한 XML 뷰로 생각할 수 있습니다. 이러한 매핑을 사용하여 관계형 데이터를 XML 문서로 검색할 수 있습니다.  
   
 ## <a name="namespace-for-annotations"></a>주석에 대한 네임스페이스  
- XSD 스키마에서 주석은 **urn: schema-microsoft-com: mapping 스키마**네임 스페이스를 사용 하 여 지정 됩니다. 다음 예제와 같이 네임 스페이스를 지정 하는 가장 쉬운 방법은 태그에서 지정 하는 것입니다 **\<xsd:schema>** .  
+ XSD 스키마에서 주석은 **urn: schema-microsoft-com: mapping 스키마** 네임 스페이스를 사용 하 여 지정 됩니다. 다음 예제와 같이 네임 스페이스를 지정 하는 가장 쉬운 방법은 태그에서 지정 하는 것입니다 **\<xsd:schema>** .  
   
 ```  
 <xsd:schema xmlns:xsd="http://www.w3.org/2001/XMLSchema"   
@@ -118,7 +118,7 @@ ms.locfileid: "85764825"
 > [!NOTE]  
 >  매핑 스키마에서 지정된 관계형 값(예: 테이블 이름 및 열 이름)의 대/소문자 구분은 SQL Server에서 대/소문자 구분 데이터 정렬 설정을 사용하고 있는지 여부에 따라 결정됩니다. 자세한 내용은 [Collation and Unicode Support](../../../relational-databases/collations/collation-and-unicode-support.md)을 참조하세요.  
   
-## <a name="other-resources"></a>기타 리소스  
+## <a name="other-resources"></a>관련 자료  
  XSD(XML 스키마 정의 언어), XPath(XML Path Language) 및 XSLT(Extensible Stylesheet Language Transformations)에 대한 자세한 내용은 다음 웹 사이트를 참조하십시오.  
   
 -   XML 스키마 파트 0: 입문, W3C 권장 사항 (https://www.w3.org/TR/xmlschema-0/)  

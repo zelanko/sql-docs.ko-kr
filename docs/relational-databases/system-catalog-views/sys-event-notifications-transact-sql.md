@@ -1,6 +1,6 @@
 ---
 description: sys.event_notifications(Transact-SQL)
-title: sys. event_notifications (Transact-sql) | Microsoft Docs
+title: sys.event_notifications (Transact-sql) | Microsoft Docs
 ms.custom: ''
 ms.date: 06/10/2016
 ms.prod: sql
@@ -20,13 +20,13 @@ helpviewer_keywords:
 ms.assetid: 136a76ee-2b35-4418-ab46-fda2d51f7d99
 author: markingmyname
 ms.author: maghan
-monikerRange: =azuresqldb-current||>=sql-server-2016||=sqlallproducts-allversions||>=sql-server-linux-2017||=azuresqldb-mi-current
-ms.openlocfilehash: b7051716ff8b401c04f1be90ec92d4a154dd0d68
-ms.sourcegitcommit: dd36d1cbe32cd5a65c6638e8f252b0bd8145e165
+monikerRange: =azuresqldb-current||>=sql-server-2016||>=sql-server-linux-2017||=azuresqldb-mi-current
+ms.openlocfilehash: fa6f06df580b7f76309660a87e24ae458bf1c2d5
+ms.sourcegitcommit: 1a544cf4dd2720b124c3697d1e62ae7741db757c
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 09/08/2020
-ms.locfileid: "89548811"
+ms.lasthandoff: 12/14/2020
+ms.locfileid: "97467044"
 ---
 # <a name="sysevent_notifications-transact-sql"></a>sys.event_notifications(Transact-SQL)
 [!INCLUDE [SQL Server SQL Database](../../includes/applies-to-version/sql-asdb.md)]
@@ -41,7 +41,7 @@ ms.locfileid: "89548811"
 |**parent_class_desc**|**nvarchar(60)**|DATABASE<br /><br /> OBJECT_OR_COLUMN|  
 |**parent_id**|**int**|부모 개체의 0이 아닌 ID입니다.<br /><br /> 0 = 부모 클래스는 데이터베이스입니다.|  
 |**create_date**|**datetime**|만든 날짜입니다.|  
-|**modify_date**|**datetime**|항상 **create_date**와 같습니다.|  
+|**modify_date**|**datetime**|항상 **create_date** 와 같습니다.|  
 |**service_name**|**nvarchar(256)**|알림을 보낸 대상 서비스의 이름입니다.|  
 |**broker_instance**|**nvarchar(128)**|알림을 보낸 Broker 인스턴스입니다.|  
 |**principal_id**|**int**|이 이벤트 알림을 소유한 데이터베이스 보안 주체의 ID입니다.|  

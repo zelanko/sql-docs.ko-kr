@@ -13,12 +13,13 @@ helpviewer_keywords:
 ms.assetid: 910e3e16-7b91-49d8-80bb-b4243926afaa
 author: markingmyname
 ms.author: maghan
-monikerRange: '>=aps-pdw-2016||=azuresqldb-current||=azure-sqldw-latest||>=sql-server-2016||=sqlallproducts-allversions||>=sql-server-linux-2017||=azuresqldb-mi-current'
-ms.openlocfilehash: 9bf2767bdf043543f84f50a2c72fbfc8a5f10890
-ms.sourcegitcommit: f3321ed29d6d8725ba6378d207277a57cb5fe8c2
+monikerRange: '>=aps-pdw-2016||=azuresqldb-current||=azure-sqldw-latest||>=sql-server-2016||>=sql-server-linux-2017||=azuresqldb-mi-current'
+ms.openlocfilehash: 56b013873ef8060101e28d9b2c4609fa41c0c798
+ms.sourcegitcommit: 1a544cf4dd2720b124c3697d1e62ae7741db757c
+ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 07/06/2020
-ms.locfileid: "86009522"
+ms.lasthandoff: 12/14/2020
+ms.locfileid: "97467814"
 ---
 # <a name="configuring-the-sql-server-odbc-driver---delete-a-data-source"></a>SQL Server ODBC 드라이버 구성 - 데이터 원본 삭제
 [!INCLUDE[SQL Server Azure SQL Database Synapse Analytics PDW ](../../includes/applies-to-version/sql-asdb-asdbmi-asa-pdw.md)]
@@ -29,15 +30,15 @@ ms.locfileid: "86009522"
   
 ### <a name="to-delete-a-data-source-by-using-odbc-administrator"></a>ODBC 관리자를 사용하여 데이터 원본을 삭제하려면  
   
-1.  **제어판**에서 **관리 도구**를 연 다음 **odbc 데이터 원본 (64 비트)** 또는 **odbc 데이터 원본 (32 비트)** 중 하나를 두 번 클릭 합니다. 또는 명령 프롬프트에서 odbcad32.exe를 실행할 수도 있습니다.  
+1.  **제어판** 에서 **관리 도구** 를 연 다음 **odbc 데이터 원본 (64 비트)** 또는 **odbc 데이터 원본 (32 비트)** 중 하나를 두 번 클릭 합니다. 또는 명령 프롬프트에서 odbcad32.exe를 실행할 수도 있습니다.  
   
-2.  **사용자 dsn**, **시스템 DSN**또는 **파일 dsn** 탭을 클릭 합니다.  
+2.  **사용자 dsn**, **시스템 DSN** 또는 **파일 dsn** 탭을 클릭 합니다.  
   
 3.  삭제할 데이터 원본을 선택 합니다.  
   
-4.  **제거**를 클릭 한 다음 삭제를 확인 합니다.  
+4.  **제거** 를 클릭 한 다음 삭제를 확인 합니다.  
 
-## <a name="example"></a>예제  
+## <a name="example"></a>예  
  데이터 원본을 프로그래밍 방식으로 삭제 하려면 ODBC_REMOVE_DSN 또는 ODBC_REMOVE_SYS_DSN를 두 번째 매개 변수로 사용 하 여 [SQLConfigDataSource](../../relational-databases/native-client-odbc-api/sqlconfigdatasource.md) 를 호출 합니다.  
   
  다음 예에서는 데이터 원본을 프로그래밍 방식으로 삭제하는 방법을 보여 줍니다.  
@@ -60,6 +61,6 @@ int main() {
 ```  
   
 ## <a name="see-also"></a>참고 항목  
- [ODBC&#41;&#40;데이터 원본 추가](../../relational-databases/native-client-odbc-how-to/configuring-the-sql-server-odbc-driver-add-a-data-source.md)  
+ [ODBC&#41;&#40;데이터 원본 추가 ](../../relational-databases/native-client-odbc-how-to/configuring-the-sql-server-odbc-driver-add-a-data-source.md)  
   
   

@@ -1,5 +1,5 @@
 ---
-description: OLE DB 테이블 반환 매개 변수 형식 지원 (Native Client OLE DB 공급자)
+description: OLE DB Table-Valued 매개 변수 형식 지원 (Native Client OLE DB 공급자)
 title: 테이블 반환 매개 변수 형식 지원 (Native Client OLE DB 공급자)
 ms.custom: ''
 ms.date: 03/06/2017
@@ -13,21 +13,21 @@ helpviewer_keywords:
 ms.assetid: 147036a0-260e-4f81-8b3b-89209e023a32
 author: markingmyname
 ms.author: maghan
-monikerRange: '>=aps-pdw-2016||=azuresqldb-current||=azure-sqldw-latest||>=sql-server-2016||=sqlallproducts-allversions||>=sql-server-linux-2017||=azuresqldb-mi-current'
-ms.openlocfilehash: 6852ac833d45f132d514f9e707e6a3c2103c82b5
-ms.sourcegitcommit: e700497f962e4c2274df16d9e651059b42ff1a10
+monikerRange: '>=aps-pdw-2016||=azuresqldb-current||=azure-sqldw-latest||>=sql-server-2016||>=sql-server-linux-2017||=azuresqldb-mi-current'
+ms.openlocfilehash: d8b0817146d1be3ce15349844ce37a1cdae853a6
+ms.sourcegitcommit: 1a544cf4dd2720b124c3697d1e62ae7741db757c
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 08/17/2020
-ms.locfileid: "88482602"
+ms.lasthandoff: 12/14/2020
+ms.locfileid: "97469274"
 ---
-# <a name="ole-db-table-valued-parameter-type-support-native-client-ole-db-provider"></a>OLE DB 테이블 반환 매개 변수 형식 지원 (Native Client OLE DB 공급자)
+# <a name="ole-db-table-valued-parameter-type-support-native-client-ole-db-provider"></a>OLE DB Table-Valued 매개 변수 형식 지원 (Native Client OLE DB 공급자)
 [!INCLUDE[SQL Server Azure SQL Database Synapse Analytics PDW ](../../includes/applies-to-version/sql-asdb-asdbmi-asa-pdw.md)]
 
   이 항목에서는 테이블 반환 매개 변수에 대한 OLE DB 형식 지원에 대해 설명합니다.  
   
 ## <a name="table-valued-parameter-rowset-object"></a>테이블 반환 매개 변수 행 집합 개체  
- 테이블 반환 매개 변수에 대한 특수한 행 집합 개체를 만들 수 있습니다. ITableDefinitionWithConstraints::CreateTableWithConstraints 또는 IOpenRowset::OpenRowset을 사용하여 테이블 반환 매개 변수 행 집합 개체를 만듭니다. 이렇게 하려면 *pTableID* 매개 변수의 *eKind* 멤버를 DBKIND_GUID_NAME으로 설정하고 CLSID_ROWSET_INMEMORY를 *guid* 멤버로 지정합니다. 테이블 반환 매개 변수의 서버 유형 이름은 IOpenRowset::OpenRowset을 사용할 때 *pTableID*의 *pwszName* 멤버에 지정해야 합니다. 테이블 반환 매개 변수 행 집합 개체는 일반 SQL Server Native Client OLE DB 공급자 개체처럼 작동합니다.  
+ 테이블 반환 매개 변수에 대한 특수한 행 집합 개체를 만들 수 있습니다. ITableDefinitionWithConstraints::CreateTableWithConstraints 또는 IOpenRowset::OpenRowset을 사용하여 테이블 반환 매개 변수 행 집합 개체를 만듭니다. 이렇게 하려면 *pTableID* 매개 변수의 *eKind* 멤버를 DBKIND_GUID_NAME으로 설정하고 CLSID_ROWSET_INMEMORY를 *guid* 멤버로 지정합니다. 테이블 반환 매개 변수의 서버 유형 이름은 IOpenRowset::OpenRowset을 사용할 때 *pTableID* 의 *pwszName* 멤버에 지정해야 합니다. 테이블 반환 매개 변수 행 집합 개체는 일반 SQL Server Native Client OLE DB 공급자 개체처럼 작동합니다.  
   
 ```  
 const GUID CLSID_ROWSET_TVP =   
@@ -53,7 +53,7 @@ CoType RowsetTVP
 #define DBTYPE_TABLE (143)  
 ```  
   
- DBTYPE_TABLE은 DBTYPE_IUNKNOWN과 형식이 동일하며 데이터 버퍼의 개체에 대한 포인터입니다. 전체 바인딩 지정을 위해 소비자는 DBOBJECT 버퍼를 채우고 *iid*를 행 집합 개체 인터페이스 중 하나(IID_IRowset)로 설정합니다. 바인딩에 DBOBJECT를 지정하지 않으면 IID_IRowset으로 간주됩니다.  
+ DBTYPE_TABLE은 DBTYPE_IUNKNOWN과 형식이 동일하며 데이터 버퍼의 개체에 대한 포인터입니다. 전체 바인딩 지정을 위해 소비자는 DBOBJECT 버퍼를 채우고 *iid* 를 행 집합 개체 인터페이스 중 하나(IID_IRowset)로 설정합니다. 바인딩에 DBOBJECT를 지정하지 않으면 IID_IRowset으로 간주됩니다.  
   
  DBTYPE_TABLE과 다른 형식 간의 변환은 지원되지 않습니다. DBTYPE_TABLE에서 DBTYPE_TABLE로의 변환이 아닌 지원되지 않는 변환을 요청하면 IConvertType::CanConvert에서 S_FALSE를 반환합니다. 이는 명령 개체의 DBCONVERTFLAGS_PARAMETER로 간주됩니다.  
   

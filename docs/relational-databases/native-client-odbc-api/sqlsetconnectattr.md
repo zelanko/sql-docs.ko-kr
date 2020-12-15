@@ -14,13 +14,13 @@ helpviewer_keywords:
 ms.assetid: d21b5cf1-3724-43f7-bc96-5097df0677b4
 author: markingmyname
 ms.author: maghan
-monikerRange: '>=aps-pdw-2016||=azuresqldb-current||=azure-sqldw-latest||>=sql-server-2016||=sqlallproducts-allversions||>=sql-server-linux-2017||=azuresqldb-mi-current'
-ms.openlocfilehash: 03dd345e2b7fc3be27b9bd1c61f3d252d7afb229
-ms.sourcegitcommit: 4d370399f6f142e25075b3714e5c2ce056b1bfd0
+monikerRange: '>=aps-pdw-2016||=azuresqldb-current||=azure-sqldw-latest||>=sql-server-2016||>=sql-server-linux-2017||=azuresqldb-mi-current'
+ms.openlocfilehash: 3b3c006da487774a8de01ccf9a9b8cd12d9ca15f
+ms.sourcegitcommit: 1a544cf4dd2720b124c3697d1e62ae7741db757c
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 10/09/2020
-ms.locfileid: "91867814"
+ms.lasthandoff: 12/14/2020
+ms.locfileid: "97465124"
 ---
 # <a name="sqlsetconnectattr"></a>SQLSetConnectAttr
 
@@ -75,7 +75,7 @@ ms.locfileid: "91867814"
 |SQL_COPT_SS_USER_DATA|여기서는|  
 |SQL_COPT_SS_WARN_ON_CP_ERROR|이전|  
   
- 동일한 세션, 데이터베이스 또는 [!INCLUDE[tsql](../../includes/tsql-md.md)] 상태에 대해 사전 연결 특성 및 해당 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 명령을 사용하면 예기치 못한 동작이 발생할 수 있습니다. 예를 들면 다음과 같습니다.  
+ 동일한 세션, 데이터베이스 또는 [!INCLUDE[tsql](../../includes/tsql-md.md)] 상태에 대해 사전 연결 특성 및 해당 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 명령을 사용하면 예기치 못한 동작이 발생할 수 있습니다. 예제:  
   
 ```  
 SQLSetConnectAttr(SQL_COPT_SS_QUOTED_IDENT, SQL_QI_ON) // turn ON via attribute  
@@ -97,13 +97,13 @@ SQLSetConnectAttr(SQL_ATTR_CURRENT_CATALOG, ...) // restores to pre-connect attr
 
 <a name="sqlcoptssapplicationintent"></a>
 ## <a name="sql_copt_ss_application_intent"></a>SQL_COPT_SS_APPLICATION_INTENT  
- 서버에 연결할 때 애플리케이션 작업 유형을 선언합니다. 가능한 값은 **Readonly** 및 **ReadWrite**입니다. 예를 들면 다음과 같습니다.  
+ 서버에 연결할 때 애플리케이션 작업 유형을 선언합니다. 가능한 값은 **Readonly** 및 **ReadWrite** 입니다. 예를 들어:  
   
 ```  
 SQLSetConnectAttr(hdbc, SQL_COPT_SS_APPLICATION_INTENT, TEXT("Readonly"), SQL_NTS)  
 ```  
   
- 기본값은 **ReadWrite**입니다. [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]Native Client의 ag 지원에 대 한 자세한 내용은 [!INCLUDE[ssHADR](../../includes/sshadr-md.md)] [고가용성, 재해 복구를 위한 SQL Server Native Client 지원](../../relational-databases/native-client/features/sql-server-native-client-support-for-high-availability-disaster-recovery.md)을 참조 하세요.  
+ 기본값은 **ReadWrite** 입니다. [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]Native Client의 ag 지원에 대 한 자세한 내용은 [!INCLUDE[ssHADR](../../includes/sshadr-md.md)] [고가용성, 재해 복구를 위한 SQL Server Native Client 지원](../../relational-databases/native-client/features/sql-server-native-client-support-for-high-availability-disaster-recovery.md)을 참조 하세요.  
 
 <a name="sqlcoptssattachdbfilename"></a>
 ## <a name="sql_copt_ss_attachdbfilename"></a>SQL_COPT_SS_ATTACHDBFILENAME  
@@ -133,7 +133,7 @@ SQLSetConnectAttr(hdbc, SQL_COPT_SS_APPLICATION_INTENT, TEXT("Readonly"), SQL_NT
 
 <a name="sqlcoptssbrowseserver"></a>
 ## <a name="sql_copt_ss_browse_server"></a>SQL_COPT_SS_BROWSE_SERVER  
- 이 특성은 **SQLBrowseConnect**에서 반환 된 결과 집합을 사용자 지정 하는 데 사용 됩니다. SQL_COPT_SS_BROWSE_SERVER **SQLBrowseConnect** 정보를 반환 하는 서버 이름을 지정 합니다.  
+ 이 특성은 **SQLBrowseConnect** 에서 반환 된 결과 집합을 사용자 지정 하는 데 사용 됩니다. SQL_COPT_SS_BROWSE_SERVER **SQLBrowseConnect** 정보를 반환 하는 서버 이름을 지정 합니다.  
   
 |값|설명|  
 |-----------|-----------------|  
@@ -206,7 +206,7 @@ SQLSetConnectAttr(hdbc, SQL_COPT_SS_APPLICATION_INTENT, TEXT("Readonly"), SQL_NT
 
 <a name="sqlcoptssmultisubnetfailover"></a>
 ## <a name="sql_copt_ss_multisubnet_failover"></a>SQL_COPT_SS_MULTISUBNET_FAILOVER  
- 애플리케이션이 다른 서브넷에 있는 [!INCLUDE[ssHADR](../../includes/sshadr-md.md)] AG(가용성 그룹)에 연결하는 경우 이 연결 속성을 설정하면 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] Native Client가 현재 활성 서버를 보다 빠르게 검색하고 연결할 수 있도록 구성됩니다. 예를 들면 다음과 같습니다.  
+ 애플리케이션이 다른 서브넷에 있는 [!INCLUDE[ssHADR](../../includes/sshadr-md.md)] AG(가용성 그룹)에 연결하는 경우 이 연결 속성을 설정하면 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] Native Client가 현재 활성 서버를 보다 빠르게 검색하고 연결할 수 있도록 구성됩니다. 예를 들어:  
   
 ```  
 SQLSetConnectAttr(hdbc, SQL_COPT_SS_MULTISUBNET_FAILOVER, SQL_IS_ON, SQL_IS_INTEGER)  
@@ -273,8 +273,8 @@ SQLSetConnectAttr(hdbc, SQL_COPT_SS_MULTISUBNET_FAILOVER, SQL_IS_ON, SQL_IS_INTE
   
 |값|설명|  
 |-----------|-----------------|  
-|SQL_PC_OFF|기본값 **Sqlendtran**을 사용 하 여 트랜잭션을 커밋하거나 롤백할 때 커서가 닫힙니다.|  
-|SQL_PC_ON|비동기 모드에서 정적 또는 키 집합 커서를 사용 하는 경우를 제외 하 고 **Sqlendtran**을 사용 하 여 트랜잭션을 커밋하거나 롤백하는 경우에는 커서가 닫히지 않습니다. 커서가 완전하게 채워지지 않은 상태에서 롤백을 실행하면 커서가 닫힙니다.|  
+|SQL_PC_OFF|기본값 **Sqlendtran** 을 사용 하 여 트랜잭션을 커밋하거나 롤백할 때 커서가 닫힙니다.|  
+|SQL_PC_ON|비동기 모드에서 정적 또는 키 집합 커서를 사용 하는 경우를 제외 하 고 **Sqlendtran** 을 사용 하 여 트랜잭션을 커밋하거나 롤백하는 경우에는 커서가 닫히지 않습니다. 커서가 완전하게 채워지지 않은 상태에서 롤백을 실행하면 커서가 닫힙니다.|  
 
 <a name="sqlcoptssquotedident"></a>
 ## <a name="sql_copt_ss_quoted_ident"></a>SQL_COPT_SS_QUOTED_IDENT  
@@ -287,7 +287,7 @@ SQLSetConnectAttr(hdbc, SQL_COPT_SS_MULTISUBNET_FAILOVER, SQL_IS_ON, SQL_IS_INTE
 
 <a name="sqlcoptsstranslate"></a>
 ## <a name="sql_copt_ss_translate"></a>SQL_COPT_SS_TRANSLATE  
- SQL_COPT_SS_TRANSLATE를 설정하면 MBCS 데이터를 교환할 때 드라이버가 클라이언트와 서버 코드 페이지 간에 문자를 변환합니다. 특성은 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] **char**, **varchar**및 **text** 열에 저장 된 데이터에만 영향을 줍니다.  
+ SQL_COPT_SS_TRANSLATE를 설정하면 MBCS 데이터를 교환할 때 드라이버가 클라이언트와 서버 코드 페이지 간에 문자를 변환합니다. 특성은 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] **char**, **varchar** 및 **text** 열에 저장 된 데이터에만 영향을 줍니다.  
   
 |값|설명|  
 |-----------|-----------------|  

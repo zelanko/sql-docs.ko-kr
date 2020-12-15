@@ -17,13 +17,13 @@ helpviewer_keywords:
 ms.assetid: 7d2f0bcf-f1ae-45b8-bc3f-7aea4fae7e45
 author: markingmyname
 ms.author: maghan
-monikerRange: =azuresqldb-current||=azure-sqldw-latest||>=sql-server-2016||=sqlallproducts-allversions||>=sql-server-linux-2017||=azuresqldb-mi-current
-ms.openlocfilehash: b55530e34a77878c551dc8ea4ff0fa2936325755
-ms.sourcegitcommit: e700497f962e4c2274df16d9e651059b42ff1a10
+monikerRange: =azuresqldb-current||=azure-sqldw-latest||>=sql-server-2016||>=sql-server-linux-2017||=azuresqldb-mi-current
+ms.openlocfilehash: 00ae0e27bb4d90c286ef1b199c200ab5b900f706
+ms.sourcegitcommit: 1a544cf4dd2720b124c3697d1e62ae7741db757c
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 08/17/2020
-ms.locfileid: "88490449"
+ms.lasthandoff: 12/14/2020
+ms.locfileid: "97467264"
 ---
 # <a name="creating-smo-programs"></a>SMO 프로그램 만들기
 [!INCLUDE [SQL Server ASDB, ASDBMI, ASDW ](../../../includes/applies-to-version/sql-asdb-asdbmi-asa.md)]
@@ -39,7 +39,7 @@ ms.locfileid: "88490449"
 |[컬렉션 사용](../../../relational-databases/server-management-objects-smo/create-program/using-collections.md)|개체 컬렉션에 사용되는 기법에 대해 설명하는 여러 프로그램이 포함되어 있습니다. 컬렉션을 사용하여 개체를 참조하는 방법을 보여 줍니다. 컬렉션의 멤버를 대상으로 반복을 수행하는 방법에 대한 예도 포함되어 있습니다.|  
 |[SMO 이벤트 처리](../../../relational-databases/server-management-objects-smo/create-program/handling-smo-events.md)|이 섹션에서는 SMO에서 이벤트를 설정하고 처리하는 방법을 설명합니다. 이벤트 처리기를 설정하는 방법과 이벤트 구독을 설정하는 방법에 대한 예가 포함되어 있습니다.|  
 |[SMO 예외 처리](../../../relational-databases/server-management-objects-smo/create-program/handling-smo-exceptions.md)|이 섹션에서는 SMO에서 예외를 트래핑하는 방법을 설명합니다. 예외를 포착하는 방법과 내부 예외를 표시하는 방법에 대한 예가 포함되어 있습니다.|  
-|[데이터 형식 작업](../../../relational-databases/server-management-objects-smo/create-program/working-with-data-types.md)|이 섹션에서는 여러 [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] 데이터 형식을 사용하는 방법에 대해 설명합니다. 개체 생성자의 사양으로 데이터 형식을 구성하는 방법을 설명합니다. 기본 생성자를 사용하여 데이터 형식을 만드는 방법에 대한 예도 포함되어 있습니다.|  
+|[데이터 형식 사용](../../../relational-databases/server-management-objects-smo/create-program/working-with-data-types.md)|이 섹션에서는 여러 [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] 데이터 형식을 사용하는 방법에 대해 설명합니다. 개체 생성자의 사양으로 데이터 형식을 구성하는 방법을 설명합니다. 기본 생성자를 사용하여 데이터 형식을 만드는 방법에 대한 예도 포함되어 있습니다.|  
 |[트랜잭션 사용](../../../relational-databases/server-management-objects-smo/create-program/using-transactions.md)|이 섹션에서는 SMO 프로그램에서 트랜잭션 처리를 구현하는 방법을 설명합니다. SMO 프로그램에서 트랜잭션을 사용하는 방법에 대한 예가 포함되어 있습니다.|  
 |[캡처 모드 사용](../../../relational-databases/server-management-objects-smo/create-program/using-capture-mode.md)|이 섹션에서는 SMO 프로그램의 출력을 기록하는 방법을 설명합니다. 예에서는 SMO 프로그램을 나중에 실행하기 위해 [!INCLUDE[tsql](../../../includes/tsql-md.md)] 인스턴스에 전송된 [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] 문으로 기록합니다.|  
   

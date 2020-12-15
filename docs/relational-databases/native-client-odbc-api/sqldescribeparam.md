@@ -14,13 +14,13 @@ helpviewer_keywords:
 ms.assetid: 396e74b1-5d08-46dc-b404-2ef2003e4689
 author: markingmyname
 ms.author: maghan
-monikerRange: '>=aps-pdw-2016||=azuresqldb-current||=azure-sqldw-latest||>=sql-server-2016||=sqlallproducts-allversions||>=sql-server-linux-2017||=azuresqldb-mi-current'
-ms.openlocfilehash: 20463fcf61f5d9842f4e5a84814970c57d4712f3
-ms.sourcegitcommit: 04cf7905fa32e0a9a44575a6f9641d9a2e5ac0f8
+monikerRange: '>=aps-pdw-2016||=azuresqldb-current||=azure-sqldw-latest||>=sql-server-2016||>=sql-server-linux-2017||=azuresqldb-mi-current'
+ms.openlocfilehash: 5352afc5b711cd0158a7119da367fe5659b78989
+ms.sourcegitcommit: 1a544cf4dd2720b124c3697d1e62ae7741db757c
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 10/07/2020
-ms.locfileid: "91809274"
+ms.lasthandoff: 12/14/2020
+ms.locfileid: "97465329"
 ---
 # <a name="sqldescribeparam"></a>SQLDescribeParam
 [!INCLUDE[SQL Server Azure SQL Database Synapse Analytics PDW ](../../includes/applies-to-version/sql-asdb-asdbmi-asa-pdw.md)]
@@ -53,7 +53,7 @@ ms.locfileid: "91809274"
 SQLPrepare(hstmt, "{call sp_who(?)}", SQL_NTS);  
 ```  
   
- 준비가 완료 된 후 SQLDescribeParam를 실행 하면 데이터베이스에 연결 되었지만 **master**에는 빈 행 집합이 반환 됩니다. 다음과 같이 준비 된 동일한 호출로 인해 현재 사용자 데이터베이스에 관계 없이 SQLDescribeParam이 성공 합니다.  
+ 준비가 완료 된 후 SQLDescribeParam를 실행 하면 데이터베이스에 연결 되었지만 **master** 에는 빈 행 집합이 반환 됩니다. 다음과 같이 준비 된 동일한 호출로 인해 현재 사용자 데이터베이스에 관계 없이 SQLDescribeParam이 성공 합니다.  
   
 ```  
 SQLPrepare(hstmt, "{call master..sp_who(?)}", SQL_NTS);  
@@ -76,7 +76,7 @@ SQLPrepare(hstmt, "{call master..sp_who(?)}", SQL_NTS);
 ## <a name="sqldescribeparam-support-for-enhanced-date-and-time-features"></a>향상된 날짜 및 시간 기능에 대한 SQLDescribeParam 지원  
  날짜/시간 형식에 대해 반환되는 값은 다음과 같습니다.  
   
-| attribute | *DataTypePtr* | *ParameterSizePtr* | *DecimalDigitsPtr* |  
+| 특성 | *DataTypePtr* | *ParameterSizePtr* | *DecimalDigitsPtr* |  
 | --------- | ------------- | ------------------ | ------------------ |  
 |Datetime|SQL_TYPE_TIMESTAMP|23|3|  
 |smalldatetime|SQL_TYPE_TIMESTAMP|16|0|  
@@ -88,7 +88,7 @@ SQLPrepare(hstmt, "{call master..sp_who(?)}", SQL_NTS);
  자세한 내용은 [ODBC&#41;&#40;날짜 및 시간 향상 ](../../relational-databases/native-client-odbc-date-time/date-and-time-improvements-odbc.md)을 참조 하세요.  
   
 ## <a name="sqldescribeparam-support-for-large-clr-udts"></a>큰 CLR UDT에 대한 SQLDescribeParam 지원  
- **SQLDescribeParam** 는 많은 CLR udt (사용자 정의 형식)를 지원 합니다. 자세한 내용은 [ODBC&#41;&#40;LARGE CLR 사용자 정의 형식 ](../../relational-databases/native-client/odbc/large-clr-user-defined-types-odbc.md)을 참조 하세요.  
+ **SQLDescribeParam** 는 많은 CLR udt (사용자 정의 형식)를 지원 합니다. 자세한 내용은 [ODBC&#41;&#40;대량 CLR User-Defined 형식 ](../../relational-databases/native-client/odbc/large-clr-user-defined-types-odbc.md)을 참조 하세요.  
   
 ## <a name="see-also"></a>참고 항목  
  [SQLDescribeParam 함수](../../odbc/reference/syntax/sqldescribeparam-function.md)   

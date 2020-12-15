@@ -14,18 +14,18 @@ helpviewer_keywords:
 ms.assetid: ffbf34c6-8268-434f-829a-82009a6cda59
 author: markingmyname
 ms.author: maghan
-monikerRange: '>=aps-pdw-2016||=azuresqldb-current||=azure-sqldw-latest||>=sql-server-2016||=sqlallproducts-allversions||>=sql-server-linux-2017||=azuresqldb-mi-current'
-ms.openlocfilehash: b75eeeb466c8b611437cc0984b1c50fbc3130953
-ms.sourcegitcommit: 04cf7905fa32e0a9a44575a6f9641d9a2e5ac0f8
+monikerRange: '>=aps-pdw-2016||=azuresqldb-current||=azure-sqldw-latest||>=sql-server-2016||>=sql-server-linux-2017||=azuresqldb-mi-current'
+ms.openlocfilehash: f85320fff9c44a1904ea3500b32b0d9305237b99
+ms.sourcegitcommit: 1a544cf4dd2720b124c3697d1e62ae7741db757c
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 10/07/2020
-ms.locfileid: "91810029"
+ms.lasthandoff: 12/14/2020
+ms.locfileid: "97465333"
 ---
 # <a name="sqldescribecol"></a>SQLDescribeCol
 [!INCLUDE[SQL Server Azure SQL Database Synapse Analytics PDW ](../../includes/applies-to-version/sql-asdb-asdbmi-asa-pdw.md)]
 
-  실행 된 문의 경우 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] Native CLIENT ODBC 드라이버는 결과 집합의 열을 설명 하기 위해 서버를 쿼리할 필요가 없습니다. 이 경우 **SQLDescribeCol** 는 서버 왕복을 발생 시 키 지 않습니다. [Sqlcolattribute](../../relational-databases/native-client-odbc-api/sqlcolattribute.md)및[Sqlnumresultcols](../../relational-databases/native-client-odbc-api/sqlnumresultcols.md)와 같이 준비 되었지만 실행 되지 않은 문에 대해 **SQLDescribeCol** 를 호출 하면 서버 왕복이 생성 됩니다.  
+  실행 된 문의 경우 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] Native CLIENT ODBC 드라이버는 결과 집합의 열을 설명 하기 위해 서버를 쿼리할 필요가 없습니다. 이 경우 **SQLDescribeCol** 는 서버 왕복을 발생 시 키 지 않습니다. [Sqlcolattribute](../../relational-databases/native-client-odbc-api/sqlcolattribute.md)및 [Sqlnumresultcols](../../relational-databases/native-client-odbc-api/sqlnumresultcols.md)와 같이 준비 되었지만 실행 되지 않은 문에 대해 **SQLDescribeCol** 를 호출 하면 서버 왕복이 생성 됩니다.  
   
  [!INCLUDE[tsql](../../includes/tsql-md.md)] 문 또는 문 일괄 처리에서 여러 결과 행 집합이 반환되는 경우 서수로 참조되는 열이 별도의 테이블에서 시작되거나 결과 집합의 완전히 다른 열을 참조할 수 있습니다. 각 집합에 대해 **SQLDescribeCol** 를 호출 해야 합니다. 결과 집합이 변경되면 애플리케이션에서는 행 결과를 인출하기 전에 데이터 값을 다시 바인딩해야 합니다. 여러 결과 집합 반환을 처리하는 방법은 [SQLMoreResults](../../relational-databases/native-client-odbc-api/sqlmoreresults.md)를 참조하십시오.  
   
@@ -38,7 +38,7 @@ ms.locfileid: "91810029"
 ## <a name="sqldescribecol-support-for-enhanced-date-and-time-features"></a>향상된 날짜 및 시간 기능에 대한 SQLDescribeCol 지원  
  날짜/시간 형식에 대해 반환되는 값은 다음과 같습니다.  
   
-| attribute | *DataTypePtr* | *ColumnSizePtr* | *DecimalDigitsPtr* |  
+| 특성 | *DataTypePtr* | *ColumnSizePtr* | *DecimalDigitsPtr* |  
 | --------- | ------------- |---------------- | ------------------ |  
 |Datetime|SQL_TYPE_TIMESTAMP|23|3|  
 |smalldatetime|SQL_TYPE_TIMESTAMP|16|0|  
@@ -50,7 +50,7 @@ ms.locfileid: "91810029"
  자세한 내용은 [ODBC&#41;&#40;날짜 및 시간 향상 ](../../relational-databases/native-client-odbc-date-time/date-and-time-improvements-odbc.md)을 참조 하세요.  
   
 ## <a name="sqldescribecol-support-for-large-clr-udts"></a>큰 CLR UDT에 대한 SQLDescribeCol 지원  
- **SQLDescribeCol** 는 많은 CLR udt (사용자 정의 형식)를 지원 합니다. 자세한 내용은 [ODBC&#41;&#40;LARGE CLR 사용자 정의 형식 ](../../relational-databases/native-client/odbc/large-clr-user-defined-types-odbc.md)을 참조 하세요.  
+ **SQLDescribeCol** 는 많은 CLR udt (사용자 정의 형식)를 지원 합니다. 자세한 내용은 [ODBC&#41;&#40;대량 CLR User-Defined 형식 ](../../relational-databases/native-client/odbc/large-clr-user-defined-types-odbc.md)을 참조 하세요.  
   
 ## <a name="see-also"></a>참고 항목  
  [SQLDescribeCol 함수](../../odbc/reference/syntax/sqldescribecol-function.md)   

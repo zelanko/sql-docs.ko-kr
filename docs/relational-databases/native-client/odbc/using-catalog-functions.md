@@ -18,13 +18,13 @@ helpviewer_keywords:
 ms.assetid: 7773fb2e-06b5-4c4b-88e9-0ad9132ad273
 author: markingmyname
 ms.author: maghan
-monikerRange: '>=aps-pdw-2016||=azuresqldb-current||=azure-sqldw-latest||>=sql-server-2016||=sqlallproducts-allversions||>=sql-server-linux-2017||=azuresqldb-mi-current'
-ms.openlocfilehash: a9bdc781aaef55a074083e111777b99c0b6ebd6e
-ms.sourcegitcommit: e700497f962e4c2274df16d9e651059b42ff1a10
+monikerRange: '>=aps-pdw-2016||=azuresqldb-current||=azure-sqldw-latest||>=sql-server-2016||>=sql-server-linux-2017||=azuresqldb-mi-current'
+ms.openlocfilehash: 5047e64eed31c1b6853cbe23fc2008d61015fbca
+ms.sourcegitcommit: 1a544cf4dd2720b124c3697d1e62ae7741db757c
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 08/17/2020
-ms.locfileid: "88428095"
+ms.lasthandoff: 12/14/2020
+ms.locfileid: "97467614"
 ---
 # <a name="using-catalog-functions"></a>카탈로그 함수 사용
 [!INCLUDE [SQL Server](../../../includes/applies-to-version/sql-asdb-asdbmi-asa-pdw.md)]
@@ -47,7 +47,7 @@ ms.locfileid: "88428095"
   
      연결된 서버에 포함되어 있는 카탈로그 목록을 반환합니다.  
   
- 연결 된 서버 이름과 카탈로그 이름이 있으면 [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] Native CLIENT ODBC 드라이버는 _linked_server_name_의 두 부분으로 된 이름을 사용 하 여 카탈로그에서 정보 가져오기를 지원 합니다 **.** 다음 ODBC 카탈로그 함수에서 *CatalogName* 에 대 한 _카탈로그_ :  
+ 연결 된 서버 이름과 카탈로그 이름이 있으면 [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] Native CLIENT ODBC 드라이버는 _linked_server_name_ 의 두 부분으로 된 이름을 사용 하 여 카탈로그에서 정보 가져오기를 지원 합니다 **.** 다음 ODBC 카탈로그 함수에서 *CatalogName* 에 대 한 _카탈로그_ :  
   
 -   **SQLColumnPrivileges**  
   

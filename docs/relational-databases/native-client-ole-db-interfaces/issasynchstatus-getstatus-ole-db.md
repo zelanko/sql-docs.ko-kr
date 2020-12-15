@@ -16,13 +16,13 @@ helpviewer_keywords:
 ms.assetid: 354b6ee4-b5a1-48f6-9403-da3bdc911067
 author: markingmyname
 ms.author: maghan
-monikerRange: '>=aps-pdw-2016||=azuresqldb-current||=azure-sqldw-latest||>=sql-server-2016||=sqlallproducts-allversions||>=sql-server-linux-2017||=azuresqldb-mi-current'
-ms.openlocfilehash: c7bd8db285c1c8d9801adb7d37d4f03a9103b444
-ms.sourcegitcommit: e700497f962e4c2274df16d9e651059b42ff1a10
+monikerRange: '>=aps-pdw-2016||=azuresqldb-current||=azure-sqldw-latest||>=sql-server-2016||>=sql-server-linux-2017||=azuresqldb-mi-current'
+ms.openlocfilehash: 4dec7256e445ff41f5e8549e4dff4e6c5c341fe1
+ms.sourcegitcommit: 1a544cf4dd2720b124c3697d1e62ae7741db757c
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 08/17/2020
-ms.locfileid: "88490819"
+ms.lasthandoff: 12/14/2020
+ms.locfileid: "97469384"
 ---
 # <a name="issasynchstatusgetstatus-native-client-ole-db-provider"></a>ISSAsynchStatus:: GetStatus (Native Client OLE DB 공급자)
 [!INCLUDE[SQL Server Azure SQL Database Synapse Analytics PDW ](../../includes/applies-to-version/sql-asdb-asdbmi-asa-pdw.md)]
@@ -52,12 +52,12 @@ HRESULT GetStatus(
  DBASYNCHOP_OPEN - 소비자가 행 세트의 비동기 열기 또는 채우기나 데이터 원본 개체의 비동기 초기화에 대한 정보를 요청합니다. 공급자가 직접 URL 바인딩을 지원하는 OLE DB 2.5 규격 공급자이면 소비자는 데이터 원본, 행 집합, 행 또는 스트림 개체의 비동기 초기화나 채우기에 대한 정보를 요청합니다.  
   
  *pulProgress*[out]  
- *pulProgressMax* 매개 변수에 표시된 예상 최대값을 기준으로 비동기 작업의 현재 진행률을 반환할 메모리에 대한 포인터입니다. *pulProgress*의 의미에 대한 자세한 내용은 *peAsynchPhase*설명을 참조하십시오.  
+ *pulProgressMax* 매개 변수에 표시된 예상 최대값을 기준으로 비동기 작업의 현재 진행률을 반환할 메모리에 대한 포인터입니다. *pulProgress* 의 의미에 대한 자세한 내용은 *peAsynchPhase* 설명을 참조하십시오.  
   
  *pulProgress* 가 Null 포인터이면 진행률이 반환되지 않습니다.  
   
  *pulProgressMax*[out]  
- *pulProgress* 매개 변수의 예상 최대값을 반환할 메모리에 대한 포인터입니다. 이 메서드에 대한 호출에서 이 값이 변경될 수도 있습니다. *pulProgressMax*의 의미에 대한 자세한 내용은 *peAsynchPhase*설명을 참조하십시오.  
+ *pulProgress* 매개 변수의 예상 최대값을 반환할 메모리에 대한 포인터입니다. 이 메서드에 대한 호출에서 이 값이 변경될 수도 있습니다. *pulProgressMax* 의 의미에 대한 자세한 내용은 *peAsynchPhase* 설명을 참조하십시오.  
   
  *pulProgressMax* 가 Null 포인터이면 예상 최대값이 반환되지 않습니다.  
   
@@ -75,7 +75,7 @@ HRESULT GetStatus(
  *ppwszStatusText*[in/out]  
  작업에 대한 추가 정보가 포함된 메모리에 대한 포인터입니다. 공급자는 이 값을 사용하여 작업의 서로 다른 요소(예: 액세스되는 다른 리소스)를 구분할 수 있습니다. 이 문자열은 데이터 원본 개체의 DBPROP_INIT_LCID 속성에 따라 지역화됩니다.  
   
- *ppwszStatusText* 가 입력 시 Null이 아니면 공급자는 *ppwszStatusText*로 식별된 특정 요소와 연결된 상태를 반환합니다. *ppwszStatusText* 가 *eOperation*의 요소를 나타내지 않으면 공급자는 *pulProgress* 및 *pulProgressMax* 를 같은 값으로 설정하여 S_OK를 반환합니다. 공급자는 텍스트 식별자를 기반으로 요소를 구분하지 않는 경우 *ppwszStatusText* 를 NULL로 설정하고 작업 전체에 대한 정보를 반환합니다. 그렇지 않고 *ppwszStatusText* 가 입력 시 Null이 아니면 공급자는 *ppwszStatusText* 를 그대로 둡니다.  
+ *ppwszStatusText* 가 입력 시 Null이 아니면 공급자는 *ppwszStatusText* 로 식별된 특정 요소와 연결된 상태를 반환합니다. *ppwszStatusText* 가 *eOperation* 의 요소를 나타내지 않으면 공급자는 *pulProgress* 및 *pulProgressMax* 를 같은 값으로 설정하여 S_OK를 반환합니다. 공급자는 텍스트 식별자를 기반으로 요소를 구분하지 않는 경우 *ppwszStatusText* 를 NULL로 설정하고 작업 전체에 대한 정보를 반환합니다. 그렇지 않고 *ppwszStatusText* 가 입력 시 Null이 아니면 공급자는 *ppwszStatusText* 를 그대로 둡니다.  
   
  *ppwszStatusText* 가 입력 시 Null이면 공급자는 *ppwszStatusText* 를 특정 값으로 설정하여 작업에 대한 추가 정보를 나타내거나, 해당 정보를 사용할 수 없는 경우 또는 **ISSAsynchStatus::GetStatus** 에서 오류를 반환하는 경우 NULL로 설정합니다. *ppwszStatusText* 가 입력 시 Null이면 공급자는 상태 문자열에 대해 메모리를 할당하고 이 메모리에 대한 주소를 반환합니다. 해당 문자열이 더 이상 필요하지 않은 경우 소비자는 **IMalloc::Free** 를 사용하여 이 메모리를 해제합니다.  
   
@@ -104,7 +104,7 @@ HRESULT GetStatus(
   
  **ISSAsynchStatus::GetStatus** 가 행 집합에서 호출되고 **ITransaction::Commit** 또는 **ITransaction::Abort** 가 호출되었으며 개체가 좀비 상태에 있습니다.  
   
- 초기화 단계에서 비동기적으로 취소된 행 집합에서**ISSAsynchStatus::GetStatus** 가 취소되었습니다. 행 집합이 좀비 상태에 있습니다.  
+ 초기화 단계에서 비동기적으로 취소된 행 집합에서 **ISSAsynchStatus::GetStatus** 가 취소되었습니다. 행 집합이 좀비 상태에 있습니다.  
   
  E_FAIL  
  공급자 관련 오류가 발생했습니다.  

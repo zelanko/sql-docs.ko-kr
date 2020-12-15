@@ -1,6 +1,6 @@
 ---
 description: sys.dm_hadr_cluster_members(Transact-SQL)
-title: sys. dm_hadr_cluster_members (Transact-sql) | Microsoft Docs
+title: sys.dm_hadr_cluster_members (Transact-sql) | Microsoft Docs
 ms.custom: ''
 ms.date: 01/31/2019
 ms.prod: sql
@@ -22,18 +22,18 @@ helpviewer_keywords:
 ms.assetid: feb20b3a-8835-41d3-9a1c-91d3117bc170
 author: markingmyname
 ms.author: maghan
-monikerRange: =azuresqldb-current||>=sql-server-2016||=sqlallproducts-allversions||>=sql-server-linux-2017||=azuresqldb-mi-current
-ms.openlocfilehash: 9c7e182c4b8efb2ecc882c0e81bb1c1863b310a1
-ms.sourcegitcommit: dd36d1cbe32cd5a65c6638e8f252b0bd8145e165
+monikerRange: =azuresqldb-current||>=sql-server-2016||>=sql-server-linux-2017||=azuresqldb-mi-current
+ms.openlocfilehash: d7c9f7b1145eec5d9c0c7f3644f18e8de7739b11
+ms.sourcegitcommit: 1a544cf4dd2720b124c3697d1e62ae7741db757c
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 09/08/2020
-ms.locfileid: "89546573"
+ms.lasthandoff: 12/14/2020
+ms.locfileid: "97468464"
 ---
 # <a name="sysdm_hadr_cluster_members-transact-sql"></a>sys.dm_hadr_cluster_members(Transact-SQL)
 [!INCLUDE [SQL Server Azure SQL Database ](../../includes/applies-to-version/sql-asdb.md)]
 
-  [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]에 대해 사용하도록 설정된 [!INCLUDE[ssHADR](../../includes/sshadr-md.md)]의 로컬 인스턴스를 호스팅하는 WSFC 노드에 WSFC 쿼럼이 있는 경우 쿼럼을 구성하는 각 멤버에 대한 행과 각 멤버의 상태를 반환합니다. 여기에는 클러스터의 모든 노드 ( **Clusterenum** 함수를 사용 하 여 CLUSTER_ENUM_NODE 형식으로 반환)와 디스크 또는 파일 공유 감시 (있는 경우)가 포함 됩니다. 지정된 구성원에 대해 반환되는 행에는 해당 구성원의 상태에 대한 정보가 들어 있습니다. 예를 들어 한 노드가 다운 되는 주 노드 쿼럼이 있는 5 개 노드 클러스터의 경우,가 쿼럼 인 노드에 있는에 대해 사용 하도록 설정 된 서버 인스턴스에서 **dm_hadr_cluster_members** 를 쿼리하면 s [!INCLUDE[ssHADR](../../includes/sshadr-md.md)] **. dm_hadr_cluster_members** 에서 다운 노드의 상태를 "NODE_DOWN"로 나타냅니다.  
+  [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]에 대해 사용하도록 설정된 [!INCLUDE[ssHADR](../../includes/sshadr-md.md)]의 로컬 인스턴스를 호스팅하는 WSFC 노드에 WSFC 쿼럼이 있는 경우 쿼럼을 구성하는 각 멤버에 대한 행과 각 멤버의 상태를 반환합니다. 여기에는 클러스터의 모든 노드 ( **Clusterenum** 함수를 사용 하 여 CLUSTER_ENUM_NODE 형식으로 반환)와 디스크 또는 파일 공유 감시 (있는 경우)가 포함 됩니다. 지정된 구성원에 대해 반환되는 행에는 해당 구성원의 상태에 대한 정보가 들어 있습니다. 예를 들어 한 노드가 다운 되는 주 노드 쿼럼이 있는 5 개 노드 클러스터의 경우,가 쿼럼 인 노드에 있는에 대해 사용 하도록 설정 된 서버 인스턴스에서 **sys.dm_hadr_cluster_members** 쿼리하면 [!INCLUDE[ssHADR](../../includes/sshadr-md.md)] **sys.dm_hadr_cluster_members** 는 다운 노드의 상태를 "NODE_DOWN"으로 반영 합니다.  
   
  WSFC 노드에 쿼럼이 없으면 반환되는 행이 없습니다.  
   
@@ -50,15 +50,15 @@ ms.locfileid: "89546573"
 |-----------------|---------------|-----------------|  
 |**member_name**|**nvarchar(128)**|구성원 이름이며, 컴퓨터 이름, 드라이브 문자 또는 파일 공유 경로일 수 있습니다.|  
 |**member_type**|**tinyint**|구성원의 유형이며 다음 중 하나입니다.<br /><br /> 0 = WSFC 노드<br /><br /> 1 = 디스크 미러링 모니터<br /><br /> 2 = 파일 공유 미러링 모니터<br /><br /> 3 = 클라우드 감시|  
-|**member_type_desc**|**nvarchar(50)**|**Member_type**에 대 한 설명 이며 다음 중 하나입니다.<br /><br /> CLUSTER_NODE<br /><br /> DISK_WITNESS<br /><br /> FILE_SHARE_WITNESS<br /><br /> CLOUD_WITNESS|  
+|**member_type_desc**|**nvarchar(50)**|**Member_type** 에 대 한 설명 이며 다음 중 하나입니다.<br /><br /> CLUSTER_NODE<br /><br /> DISK_WITNESS<br /><br /> FILE_SHARE_WITNESS<br /><br /> CLOUD_WITNESS|  
 |**member_state**|**tinyint**|구성원 상태이며 다음 중 하나입니다.<br /><br /> 0 = 오프라인<br /><br /> 1 = 온라인|  
-|**member_state_desc**|**nvarchar(60)**|**Member_state**에 대 한 설명 이며 다음 중 하나입니다.<br /><br /> UP<br /><br /> 아래로|  
+|**member_state_desc**|**nvarchar(60)**|**Member_state** 에 대 한 설명 이며 다음 중 하나입니다.<br /><br /> UP<br /><br /> 아래로|  
 |**number_of_quorum_votes**|**tinyint**|이 쿼럼 구성원이 소유한 쿼럼 투표의 수입니다. 과반수 없음: 디스크만 쿼럼이 값의 기본값은 0입니다. 다른 쿼럼 유형의 경우 기본값은 1입니다.|  
   
 ## <a name="permissions"></a>사용 권한  
  을 실행하려면 서버에 대해 VIEW SERVER STATE 권한이 필요합니다.  
   
-## <a name="examples"></a>예제  
+## <a name="examples"></a>예  
   
 ## <a name="see-also"></a>참고 항목  
  [Always On 가용성 그룹 동적 관리 뷰 및 함수 &#40;Transact-sql&#41;](../../relational-databases/system-dynamic-management-views/always-on-availability-groups-dynamic-management-views-functions.md)   

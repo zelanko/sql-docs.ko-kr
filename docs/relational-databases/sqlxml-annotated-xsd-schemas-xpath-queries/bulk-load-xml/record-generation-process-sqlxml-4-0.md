@@ -22,13 +22,13 @@ ms.assetid: d8885bbe-6f15-4fb9-9684-ca7883cfe9ac
 author: MightyPen
 ms.author: genemi
 ms.custom: seo-lt-2019
-monikerRange: =azuresqldb-current||>=sql-server-2016||=sqlallproducts-allversions||>=sql-server-linux-2017||=azuresqldb-mi-current
-ms.openlocfilehash: 380698d9d164012f8e0be53f19be6cef8b7c56e8
-ms.sourcegitcommit: da88320c474c1c9124574f90d549c50ee3387b4c
+monikerRange: =azuresqldb-current||>=sql-server-2016||>=sql-server-linux-2017||=azuresqldb-mi-current
+ms.openlocfilehash: 3b6a29abf5c1c0fd02a6af3c48845553bb88756f
+ms.sourcegitcommit: 1a544cf4dd2720b124c3697d1e62ae7741db757c
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 07/01/2020
-ms.locfileid: "85773052"
+ms.lasthandoff: 12/14/2020
+ms.locfileid: "97467174"
 ---
 # <a name="record-generation-process-sqlxml-40"></a>레코드 생성 프로세스(SQLXML 4.0)
 [!INCLUDE [SQL Server Azure SQL Database](../../../includes/applies-to-version/sql-asdb.md)]
@@ -151,7 +151,7 @@ ms.locfileid: "85773052"
   
 -   **\<Customer>** Xml 데이터 파일의 요소 노드가 범위에 들어가면 Xml 대량 로드가 Cust 테이블에 대 한 레코드를 생성 합니다. 그러면 XML 대량 로드에서 필요한 열 값 (CustomerID, CompanyName 및 City) **\<CustomerID>** 을, **\<CompanyName>** 및 **\<City>** 자식 요소에서 범위에 입력 하는 자식 요소에 복사 합니다.  
   
--   **\<Order>** 요소 노드가 범위에 들어가면 XML 대량 로드는 CustOrder 테이블에 대 한 레코드를 생성 합니다. XML 대량 로드는 **OrderID** 특성의 값을이 레코드에 복사 합니다. CustomerID 열에 필요한 값은 **\<CustomerID>** 요소의 자식 요소에서 가져옵니다 **\<Customer>** . XML 대량 로드는 요소에 Customerid 특성을 지정 하지 않은 경우에 지정 된 정보를 사용 하 여 **\<sql:relationship>** 이 레코드 **CustomerID** 에 대 한 customerid 외래 키 값을 가져옵니다 **\<Order>** . 일반 규칙은 자식 요소가 외래 키 특성에 대 한 값을 명시적으로 지정 하는 경우 XML 대량 로드에서 해당 값을 사용 하 고 지정 된을 사용 하 여 부모 요소에서 값을 가져오지 않는다는 것입니다 **\<sql:relationship>** . 이 **\<Order>** 요소 노드가 범위를 벗어나면 XML 대량 로드는 레코드를에 보낸 [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] 다음 동일한 방식으로 모든 후속 **\<Order>** 요소 노드를 처리 합니다.  
+-   **\<Order>** 요소 노드가 범위에 들어가면 XML 대량 로드는 CustOrder 테이블에 대 한 레코드를 생성 합니다. XML 대량 로드는 **OrderID** 특성의 값을이 레코드에 복사 합니다. CustomerID 열에 필요한 값은 **\<CustomerID>** 요소의 자식 요소에서 가져옵니다 **\<Customer>** . XML 대량 로드는 요소에 Customerid 특성을 지정 하지 않은 경우에 지정 된 정보를 사용 하 여 **\<sql:relationship>** 이 레코드  에 대 한 customerid 외래 키 값을 가져옵니다 **\<Order>** . 일반 규칙은 자식 요소가 외래 키 특성에 대 한 값을 명시적으로 지정 하는 경우 XML 대량 로드에서 해당 값을 사용 하 고 지정 된을 사용 하 여 부모 요소에서 값을 가져오지 않는다는 것입니다 **\<sql:relationship>** . 이 **\<Order>** 요소 노드가 범위를 벗어나면 XML 대량 로드는 레코드를에 보낸 [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] 다음 동일한 방식으로 모든 후속 **\<Order>** 요소 노드를 처리 합니다.  
   
 -   마지막으로 **\<Customer>** 요소 노드가 범위를 벗어났습니다. 이 시점에서 XML 대량 로드가 고객 레코드를 [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)]로 보냅니다. XML 대량 로드는 XML 데이터 스트림의 모든 후속 고객에 대해 이 프로세스를 따릅니다.  
   

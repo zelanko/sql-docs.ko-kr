@@ -11,13 +11,13 @@ ms.topic: reference
 ms.assetid: e212010e-a5b6-4ad1-a3c0-575327d3ffd3
 author: markingmyname
 ms.author: maghan
-monikerRange: '>=aps-pdw-2016||=azuresqldb-current||=azure-sqldw-latest||>=sql-server-2016||=sqlallproducts-allversions||>=sql-server-linux-2017||=azuresqldb-mi-current'
-ms.openlocfilehash: 7215c4d2727ece82b223e7546480fafc5808bc32
-ms.sourcegitcommit: e700497f962e4c2274df16d9e651059b42ff1a10
+monikerRange: '>=aps-pdw-2016||=azuresqldb-current||=azure-sqldw-latest||>=sql-server-2016||>=sql-server-linux-2017||=azuresqldb-mi-current'
+ms.openlocfilehash: 46829a2b33ee00aa986f73126a9ab2f4cf1a896d
+ms.sourcegitcommit: 1a544cf4dd2720b124c3697d1e62ae7741db757c
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 08/17/2020
-ms.locfileid: "88448293"
+ms.lasthandoff: 12/14/2020
+ms.locfileid: "97467544"
 ---
 # <a name="service-principal-names-spns-in-client-connections-ole-db"></a>클라이언트 연결의 SPN(서비스 사용자 이름)(OLE DB)
 [!INCLUDE [SQL Server](../../../includes/applies-to-version/sql-asdb-asdbmi-asa-pdw.md)]
@@ -53,9 +53,9 @@ ms.locfileid: "88448293"
   
 |멤버 함수|Description|  
 |---------------------|-----------------|  
-|IDataInitialize::GetDataSource|*pwszInitializationString*은 **ServerSPN** 및 **FailoverPartnerSPN**을 키워드로 포함할 수 있습니다.|  
-|IDataInitialize::GetInitializationString|SSPROP_INIT_SERVERSPN 및 SSPROP_INIT_FAILOVERPARTNERSPN이 기본값이 아닌 경우 *ppwszInitString*을 통해 **ServerSPN** 및 **FailoverPartnerSPN**에 대한 키워드 값으로 초기화 문자열에 포함됩니다. 기본값인 경우에는 초기화 문자열에 포함되지 않습니다.|  
-|IDBInitialize::Initialize|데이터 원본 초기화 속성에서 DBPROP_INIT_PROMPT를 설정하여 프롬프트를 활성화한 경우 OLE DB 로그인 대화 상자가 표시됩니다. 이를 통해 주 서버 및 해당 장애 조치(Failover) 파트너 모두에 대한 SPN이 입력되도록 할 수 있습니다.<br /><br /> DPPROP_INIT_PROVIDERSTRING에 공급자 문자열이 설정되어 있으면 해당 문자열이 새 키워드인 **ServerSPN**과 **FailoverPartnerSPN**을 인식하고 해당 값을 사용하여(있는 경우) SSPROP_INIT_SERVER_SPN 및 SSPROP_INIT_FAILOVER_PARTNER_SPN을 초기화합니다.<br /><br /> IDBInitialize::Initialize를 호출하기 전에 IDBProperties::SetProperties를 호출하여 SSPROP_INIT_SERVER_SPN 및 SSPROP_INIT_FAILOVER_PARTNER_SPN 속성을 설정할 수 있습니다. 이 방법을 공급자 문자열 대신 사용할 수 있습니다.<br /><br /> 두 곳 이상에서 속성이 설정된 경우 프로그래밍 방식으로 설정된 값이 공급자 문자열에 설정된 값보다 우선적으로 적용됩니다. 초기화 문자열에 설정된 값은 로그인 대화 상자에서 설정된 값보다 우선적으로 적용됩니다.<br /><br /> 공급자 문자열에서 동일한 키워드가 여러 번 나타나는 경우 가장 먼저 발견된 값이 우선적으로 적용됩니다.|  
+|IDataInitialize::GetDataSource|*pwszInitializationString* 은 **ServerSPN** 및 **FailoverPartnerSPN** 을 키워드로 포함할 수 있습니다.|  
+|IDataInitialize::GetInitializationString|SSPROP_INIT_SERVERSPN 및 SSPROP_INIT_FAILOVERPARTNERSPN이 기본값이 아닌 경우 *ppwszInitString* 을 통해 **ServerSPN** 및 **FailoverPartnerSPN** 에 대한 키워드 값으로 초기화 문자열에 포함됩니다. 기본값인 경우에는 초기화 문자열에 포함되지 않습니다.|  
+|IDBInitialize::Initialize|데이터 원본 초기화 속성에서 DBPROP_INIT_PROMPT를 설정하여 프롬프트를 활성화한 경우 OLE DB 로그인 대화 상자가 표시됩니다. 이를 통해 주 서버 및 해당 장애 조치(Failover) 파트너 모두에 대한 SPN이 입력되도록 할 수 있습니다.<br /><br /> DPPROP_INIT_PROVIDERSTRING에 공급자 문자열이 설정되어 있으면 해당 문자열이 새 키워드인 **ServerSPN** 과 **FailoverPartnerSPN** 을 인식하고 해당 값을 사용하여(있는 경우) SSPROP_INIT_SERVER_SPN 및 SSPROP_INIT_FAILOVER_PARTNER_SPN을 초기화합니다.<br /><br /> IDBInitialize::Initialize를 호출하기 전에 IDBProperties::SetProperties를 호출하여 SSPROP_INIT_SERVER_SPN 및 SSPROP_INIT_FAILOVER_PARTNER_SPN 속성을 설정할 수 있습니다. 이 방법을 공급자 문자열 대신 사용할 수 있습니다.<br /><br /> 두 곳 이상에서 속성이 설정된 경우 프로그래밍 방식으로 설정된 값이 공급자 문자열에 설정된 값보다 우선적으로 적용됩니다. 초기화 문자열에 설정된 값은 로그인 대화 상자에서 설정된 값보다 우선적으로 적용됩니다.<br /><br /> 공급자 문자열에서 동일한 키워드가 여러 번 나타나는 경우 가장 먼저 발견된 값이 우선적으로 적용됩니다.|  
 |IDBProperties::GetProperties|IDBProperties::GetProperties를 호출하여 새 데이터 원본 초기화 속성 SSPROP_INIT_SERVERSPN 및 SSPROP_INIT_FAILOVERPARTNERSPN의 값과 새 데이터 원본 속성 SSPROP_AUTHENTICATIONMETHOD 및 SSPROP_MUTUALLYAUTHENTICATED의 값을 가져올 수 있습니다.|  
 |IDBProperties::GetPropertyInfo|IdbProperties::GetPropertyInfo에는 새 데이터 원본 초기화 속성 SSPROP_INIT_SERVERSPN 및 SSPROP_INIT_FAILOVERPARTNERSPN이나 새 데이터 원본 속성 SSPROP_AUTHENTICATION_METHOD 및 SSPROP_MUTUALLYAUTHENTICATED가 포함됩니다.|  
 |IDBProperties::SetProperties|IDBProperties::SetProperties를 호출하여 새 데이터 원본 초기화 속성 SSPROP_INITSERVERSPN 및 SSPROP_INIT_FAILOVERPARTNERSPN의 값을 설정할 수 있습니다.<br /><br /> 언제라도 이러한 속성을 설정할 수 있지만 데이터 원본이 열려 있는 경우에는 "DB_E_ERRORSOCCURRED, "여러 단계 OLE DB 작업을 하는 동안 오류가 발생했습니다. 각 OLE DB 상태 값이 있으면 확인해 보십시오. 완료된 작업이 없습니다.""라는 오류가 반환됩니다.|  

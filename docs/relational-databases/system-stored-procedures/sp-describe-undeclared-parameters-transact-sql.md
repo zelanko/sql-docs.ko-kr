@@ -18,13 +18,13 @@ helpviewer_keywords:
 ms.assetid: 6f016da6-dfee-4228-8b0d-7cd8e7d5a354
 author: markingmyname
 ms.author: maghan
-monikerRange: = azuresqldb-current||= azure-sqldw-latest||>= sql-server-2016||>= sql-server-linux-2017||= sqlallproducts-allversions
-ms.openlocfilehash: 232ad1cfe65fca719260a9ed8ab87a7f2d7ed3dd
-ms.sourcegitcommit: 0c0e4ab90655dde3e34ebc08487493e621f25dda
+monikerRange: = azuresqldb-current||= azure-sqldw-latest||>= sql-server-2016||>= sql-server-linux-2017
+ms.openlocfilehash: 710265fca96078ef08d54ca503f174a8150aca8e
+ms.sourcegitcommit: 1a544cf4dd2720b124c3697d1e62ae7741db757c
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 12/01/2020
-ms.locfileid: "96443159"
+ms.lasthandoff: 12/14/2020
+ms.locfileid: "97466844"
 ---
 # <a name="sp_describe_undeclared_parameters-transact-sql"></a>sp_describe_undeclared_parameters(Transact-SQL)
 [!INCLUDE [sql-asdb-asdbmi-asa](../../includes/applies-to-version/sql-asdb-asdbmi-asa.md)] 
@@ -170,7 +170,7 @@ SELECT * FROM t1 WHERE @p1 = dbo.tbl(c1, @p2, @p3)
   
 -   단순 추론  
   
-     E ( \@ p) = \@ p 및 TT (p)가 있는 경우 (예 \@ : \@ p가 2 단계 시작 부분에 나열 된 식 중 하나에 대 한 인수) 이면 형식 추론 알고리즘에서 p의 데이터 형식을 \@ TT ( \@ p)로 추론 합니다. 다음은 그 예입니다.   
+     E ( \@ p) = \@ p 및 TT (p)가 있는 경우 (예 \@ : \@ p가 2 단계 시작 부분에 나열 된 식 중 하나에 대 한 인수) 이면 형식 추론 알고리즘에서 p의 데이터 형식을 \@ TT ( \@ p)로 추론 합니다. 예를 들어:  
   
     ```sql
     SELECT * FROM t WHERE c1 = @p1 AND @p2 = dbo.tbl(@p3)  
@@ -218,7 +218,7 @@ SELECT * FROM t1 WHERE @p1 = dbo.tbl(c1, @p2, @p3)
   
 1.  E (p)에서 가장 적은 수의 암시적 변환을 생성 하는 데이터 형식이 \@ 선택 됩니다. 특정 데이터 형식이 E (p)에 대해 TT (p)와 다른 데이터 형식을 생성 하는 경우 \@ \@ 형식 추론 알고리즘은이를 e (p)의 데이터 형식에서 \@ tt (p)로 추가 암시적 변환으로 간주 합니다 \@ .  
   
-     다음은 그 예입니다.   
+     예를 들어:  
   
     ```sql
     SELECT * FROM t WHERE Col_Int = Col_Int + @p  
@@ -250,12 +250,12 @@ SELECT * FROM t1 WHERE @p1 = dbo.tbl(c1, @p2, @p3)
   
  예를 들어 쿼리의 경우 `SELECT * FROM t WHERE [Col_varchar(30)] > @p` 변환 (a)이 가장 적합 하므로 **varchar (8000)** 가 선택 됩니다. 쿼리의 경우 `SELECT * FROM t WHERE [Col_char(30)] > @p` varchar ( **8000)** 는 형식 (b)을 변환 하 고, 다른 선택 (예: **varchar (4000)**)을 통해 형식 (d) 변환이 발생 하기 때문에 계속 선택 됩니다.  
   
- 마지막 예로, 쿼리를 지정 하면 `SELECT NULL + @p` **int** \@ 형식 (c) 변환이 발생 하므로 p에 대해 int가 선택 됩니다.  
+ 마지막 예로, 쿼리를 지정 하면 `SELECT NULL + @p`  \@ 형식 (c) 변환이 발생 하므로 p에 대해 int가 선택 됩니다.  
   
 ## <a name="permissions"></a>사용 권한  
  Tsql 인수를 실행할 수 있는 권한이 필요 \@ 합니다.  
   
-## <a name="examples"></a>예제  
+## <a name="examples"></a>예  
  다음 예에서는 선언되지 않은 `@id` 및 `@name` 매개 변수에 필요한 데이터 형식과 같은 정보를 반환합니다.  
   
 ```sql

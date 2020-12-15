@@ -16,13 +16,13 @@ helpviewer_keywords:
 ms.assetid: 2a4bd312-839a-45a8-a299-fc8609be9a2a
 author: markingmyname
 ms.author: maghan
-monikerRange: '>=aps-pdw-2016||=azuresqldb-current||=azure-sqldw-latest||>=sql-server-2016||=sqlallproducts-allversions||>=sql-server-linux-2017||=azuresqldb-mi-current'
-ms.openlocfilehash: f159a85e4dd60706402c08931f0350e9f7efaf67
-ms.sourcegitcommit: e700497f962e4c2274df16d9e651059b42ff1a10
+monikerRange: '>=aps-pdw-2016||=azuresqldb-current||=azure-sqldw-latest||>=sql-server-2016||>=sql-server-linux-2017||=azuresqldb-mi-current'
+ms.openlocfilehash: 39453e5f06b2702b171d639cc6989dd1d9aaf3b4
+ms.sourcegitcommit: 1a544cf4dd2720b124c3697d1e62ae7741db757c
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 08/17/2020
-ms.locfileid: "88490912"
+ms.lasthandoff: 12/14/2020
+ms.locfileid: "97469394"
 ---
 # <a name="issasynchstatusabort-native-client-ole-db-provider"></a>ISSAsynchStatus:: Abort (Native Client OLE DB 공급자)
 [!INCLUDE[SQL Server Azure SQL Database Synapse Analytics PDW ](../../includes/applies-to-version/sql-asdb-asdbmi-asa-pdw.md)]
@@ -68,9 +68,9 @@ HRESULT Abort(
   
  **IDBInitialize::Initialize** 가 호출되었지만 초기화 전에 취소된 데이터 원본 개체에서 **ISSAsynchStatus::Abort** 가 호출되었거나 시간이 초과되었습니다. 데이터 원본 개체가 여전히 초기화가 취소되지 않았습니다.  
   
- 이전에**ITransaction::Ab가 호출된 행 집합에서t** 또는 **ITransaction::Ab가 호출된 행 집합에서t** 가 호출된 행 집합에서 **ITransaction::Ab가 호출된 행 집합에서t** was previously called, and the rowset did not survive the commit 가 호출된 행 집합에서 ab가 호출된 행 집합에서t and is in a zombie state.  
+ 이전에 **ITransaction::Ab가 호출된 행 집합에서t** 또는 **ITransaction::Ab가 호출된 행 집합에서t** 가 호출된 행 집합에서 **ITransaction::Ab가 호출된 행 집합에서t** was previously called, and the rowset did not survive the commit 가 호출된 행 집합에서 ab가 호출된 행 집합에서t and is in a zombie state.  
   
- 초기화 단계에서 비동기적으로 취소된 행 집합에서**ISSAsynchStatus::Abort** 가 취소되었습니다. 행 집합이 좀비 상태에 있습니다.  
+ 초기화 단계에서 비동기적으로 취소된 행 집합에서 **ISSAsynchStatus::Abort** 가 취소되었습니다. 행 집합이 좀비 상태에 있습니다.  
   
 ## <a name="remarks"></a>설명  
  행 집합이나 데이터 원본 개체의 초기화를 중단하면 행 집합이나 데이터 원본 개체가 좀비 상태로 유지되어 **IUnknown** 메서드가 아닌 모든 메서드에서 E_UNEXPECTED를 반환할 수 있습니다. 이 경우 소비자가 사용할 수 있는 유일한 동작은 행 집합이나 데이터 원본 개체를 해제하는 것입니다.  

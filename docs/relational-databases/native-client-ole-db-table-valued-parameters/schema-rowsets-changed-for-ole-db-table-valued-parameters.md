@@ -1,6 +1,6 @@
 ---
-description: SQL Server Native Client의 OLE DB 테이블 반환 매개 변수에 대해 변경 된 스키마 행 집합
-title: 스키마 행 집합, OLE DB 테이블 반환 매개 변수
+description: SQL Server Native Client에서 OLE DB Table-Valued 매개 변수에 대해 변경 된 스키마 행 집합
+title: 스키마 행 집합, OLE DB Table-Valued 매개 변수
 ms.custom: ''
 ms.date: 03/06/2017
 ms.prod: sql
@@ -14,15 +14,15 @@ helpviewer_keywords:
 ms.assetid: 581e3ead-53db-44da-8718-f3fc4b5108f1
 author: markingmyname
 ms.author: maghan
-monikerRange: '>=aps-pdw-2016||=azuresqldb-current||=azure-sqldw-latest||>=sql-server-2016||=sqlallproducts-allversions||>=sql-server-linux-2017||=azuresqldb-mi-current'
-ms.openlocfilehash: d68366d87fdee64096ebca492b318c711fd2b038
-ms.sourcegitcommit: e700497f962e4c2274df16d9e651059b42ff1a10
+monikerRange: '>=aps-pdw-2016||=azuresqldb-current||=azure-sqldw-latest||>=sql-server-2016||>=sql-server-linux-2017||=azuresqldb-mi-current'
+ms.openlocfilehash: a5daac97d996eee396607fb62b19fe4352f3995f
+ms.sourcegitcommit: 1a544cf4dd2720b124c3697d1e62ae7741db757c
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 08/17/2020
-ms.locfileid: "88482612"
+ms.lasthandoff: 12/14/2020
+ms.locfileid: "97469264"
 ---
-# <a name="schema-rowsets-changed-for-ole-db-table-valued-parameters-in-sql-server-native-client"></a>SQL Server Native Client의 OLE DB 테이블 반환 매개 변수에 대해 변경 된 스키마 행 집합
+# <a name="schema-rowsets-changed-for-ole-db-table-valued-parameters-in-sql-server-native-client"></a>SQL Server Native Client에서 OLE DB Table-Valued 매개 변수에 대해 변경 된 스키마 행 집합
 [!INCLUDE[SQL Server Azure SQL Database Synapse Analytics PDW ](../../includes/applies-to-version/sql-asdb-asdbmi-asa-pdw.md)]
 
   다음은 테이블 반환 매개 변수를 지원하기 위해 변경 또는 추가된 스키마 행 집합입니다.  

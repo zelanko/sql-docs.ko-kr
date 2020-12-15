@@ -18,13 +18,13 @@ helpviewer_keywords:
 ms.assetid: 0fc83e35-0caa-49a3-a4b6-a1890d4f46ef
 author: markingmyname
 ms.author: maghan
-monikerRange: =azuresqldb-mi-current||>=sql-server-2016||=sqlallproducts-allversions||>=sql-server-linux-2017
-ms.openlocfilehash: c6bb8e372ffa6a9bea01052f4185040dd9942157
-ms.sourcegitcommit: dd36d1cbe32cd5a65c6638e8f252b0bd8145e165
+monikerRange: =azuresqldb-mi-current||>=sql-server-2016||>=sql-server-linux-2017
+ms.openlocfilehash: e3caee2593f6b02688ab82fcfd72686670c493dd
+ms.sourcegitcommit: 1a544cf4dd2720b124c3697d1e62ae7741db757c
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 09/08/2020
-ms.locfileid: "89549821"
+ms.lasthandoff: 12/14/2020
+ms.locfileid: "97466814"
 ---
 # <a name="sp_dropserver-transact-sql"></a>sp_dropserver(Transact-SQL)
 [!INCLUDE [SQL Server - ASDBMI](../../includes/applies-to-version/sql-asdbmi.md)]
@@ -42,7 +42,7 @@ sp_dropserver [ @server = ] 'server'
   
 ## <a name="arguments"></a>인수  
  *server*  
- 제거할 서버입니다. *server* 은 **sysname**이며 기본값은 없습니다. *서버* 가 있어야 합니다.  
+ 제거할 서버입니다. *server* 은 **sysname** 이며 기본값은 없습니다. *서버* 가 있어야 합니다.  
   
  *droplogins*  
  **Droplogins** 가 지정 된 경우 *서버* 에 대 한 관련 원격 및 연결 된 서버 로그인도 제거 해야 함을 나타냅니다. **`@droplogins`** 는 **char (10)** 이며 기본값은 NULL입니다.  
@@ -58,7 +58,7 @@ sp_dropserver [ @server = ] 'server'
 ## <a name="permissions"></a>사용 권한  
  서버에 대한 ALTER ANY LINKED SERVER 권한이 필요합니다.  
   
-## <a name="examples"></a>예제  
+## <a name="examples"></a>예  
  다음 예에서는 로컬 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 인스턴스에서 원격 서버 `ACCOUNTS`와 모든 연관된 원격 로그인을 제거합니다.  
   
 ```  
