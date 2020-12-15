@@ -19,13 +19,13 @@ helpviewer_keywords:
 - sp_enclave_send_keys
 author: jaszymas
 ms.author: jaszymas
-monikerRange: '>= sql-server-ver15 || = sqlallproducts-allversions'
-ms.openlocfilehash: 09409a3c3b71a668d897d50d6bb22e51f21e51d8
-ms.sourcegitcommit: e700497f962e4c2274df16d9e651059b42ff1a10
+monikerRange: '>= sql-server-ver15'
+ms.openlocfilehash: 0fc33aa4e45e742f50321336bd01ab136c8e966a
+ms.sourcegitcommit: 1a544cf4dd2720b124c3697d1e62ae7741db757c
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 08/17/2020
-ms.locfileid: "88447201"
+ms.lasthandoff: 12/14/2020
+ms.locfileid: "97462704"
 ---
 # <a name="sp_enclave_send_keys-transact-sql"></a>sp_Enclave_send_keys (Transact-SQL)
 [!INCLUDE [sqlserver2019-windows-only](../../includes/applies-to-version/sqlserver2019-windows-only.md)]
@@ -64,7 +64,7 @@ sp_enclave_send_keys
 
  `VIEW ANY COLUMN ENCRYPTION KEY DEFINITION` `VIEW ANY COLUMN MASTER KEY DEFINITION` 데이터베이스에서 및 사용 권한이 필요 합니다.  
   
-## <a name="examples"></a>예제  
+## <a name="examples"></a>예  
   
 ```sql
 EXEC sp_enclave_send_keys;  

@@ -16,13 +16,13 @@ helpviewer_keywords:
 ms.assetid: ad3cf354-b2e3-468b-b986-1232e375fd84
 author: markingmyname
 ms.author: maghan
-monikerRange: =azuresqldb-current||=azure-sqldw-latest||>=sql-server-2016||=sqlallproducts-allversions||>=sql-server-linux-2017||=azuresqldb-mi-current
-ms.openlocfilehash: 32e004da26b8cba5df8b44e4fbef3fd90967cdfc
-ms.sourcegitcommit: e700497f962e4c2274df16d9e651059b42ff1a10
+monikerRange: =azuresqldb-current||=azure-sqldw-latest||>=sql-server-2016||>=sql-server-linux-2017||=azuresqldb-mi-current
+ms.openlocfilehash: 7de50d6040e53bffe18e4e13e8458c55c32ac46c
+ms.sourcegitcommit: 1a544cf4dd2720b124c3697d1e62ae7741db757c
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 08/17/2020
-ms.locfileid: "88490463"
+ms.lasthandoff: 12/14/2020
+ms.locfileid: "97463054"
 ---
 # <a name="connecting-to-an-instance-of-sql-server"></a>SQL Server 인스턴스에 연결
 [!INCLUDE [SQL Server ASDB, ASDBMI, ASDW ](../../../includes/applies-to-version/sql-asdb-asdbmi-asa.md)]
@@ -52,7 +52,7 @@ ms.locfileid: "88490463"
 ## <a name="connecting-to-an-instance-of-sql-server-for-rmo"></a>RMO의 SQL Server 인스턴스 연결  
  RMO(복제 관리 개체)는 SMO와는 약간 다른 방법으로 복제 서버에 연결합니다.  
   
- RMO 프로그래밍 개체의 경우에는의 인스턴스에 연결 해야 합니다. 즉, Microsoft. n a m a. [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] <xref:Microsoft.SqlServer.Management.Common.ServerConnection> x 네임 스페이스에서 구현 된 개체를 사용 해야 합니다 **Microsoft.SqlServer.Management.Common** . 이 서버 연결은 RMO 프로그래밍 개체와는 독립적으로 이루어집니다. 그런 다음에는 인스턴스 생성 중에 또는 개체의 <xref:Microsoft.SqlServer.Replication.ReplicationObject.ConnectionContext%2A> 속성을 할당하여 연결이 RMO 개체로 전달됩니다. 이런 식으로 RMO 프로그래밍 개체와 연결 개체 인스턴스를 별도로 만들고 관리할 수 있으며 여러 RMO 프로그래밍 개체에서 단일 연결 개체를 다시 사용할 수 있습니다. 복제 서버에 대한 연결에는 다음 규칙이 적용됩니다.  
+ RMO 프로그래밍 개체의 경우에는의 인스턴스에 연결 해야 합니다. 즉, Microsoft. n a m a. [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] <xref:Microsoft.SqlServer.Management.Common.ServerConnection> x 네임 스페이스에서 구현 된 개체를 사용 해야 합니다  . 이 서버 연결은 RMO 프로그래밍 개체와는 독립적으로 이루어집니다. 그런 다음에는 인스턴스 생성 중에 또는 개체의 <xref:Microsoft.SqlServer.Replication.ReplicationObject.ConnectionContext%2A> 속성을 할당하여 연결이 RMO 개체로 전달됩니다. 이런 식으로 RMO 프로그래밍 개체와 연결 개체 인스턴스를 별도로 만들고 관리할 수 있으며 여러 RMO 프로그래밍 개체에서 단일 연결 개체를 다시 사용할 수 있습니다. 복제 서버에 대한 연결에는 다음 규칙이 적용됩니다.  
   
 -   지정된 <xref:Microsoft.SqlServer.Management.Common.ServerConnection> 개체에 대해 모든 연결 속성이 정의됩니다.  
   
@@ -64,7 +64,7 @@ ms.locfileid: "88490463"
   
 -   연결을 RMO 프로그래밍 개체에 전달하기 전에 <xref:Microsoft.SqlServer.Management.Common.ConnectionManager.Connect%2A> 메서드를 호출해야 합니다.  
   
-## <a name="examples"></a>예제  
+## <a name="examples"></a>예  
 제공된 코드 예제를 사용하려면 애플리케이션을 만들 프로그래밍 환경, 프로그래밍 템플릿 및 프로그래밍 언어를 선택해야 합니다. 자세한 내용은  [Visual Studio .net에서 Visual C&#35; SMO 프로젝트 만들기](../../../relational-databases/server-management-objects-smo/how-to-create-a-visual-csharp-smo-project-in-visual-studio-net.md)를 참조 하세요.  
   
 ## <a name="connecting-to-the-local-instance-of-sql-server-by-using-windows-authentication-in-visual-basic"></a>Visual Basic에서 Windows 인증을 사용하여 SQL Server 로컬 인스턴스에 연결  

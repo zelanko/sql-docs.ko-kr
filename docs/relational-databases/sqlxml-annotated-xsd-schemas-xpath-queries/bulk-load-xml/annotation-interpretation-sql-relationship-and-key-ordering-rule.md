@@ -15,13 +15,13 @@ ms.assetid: 914cb152-09f5-4b08-b35d-71940e4e9986
 author: MightyPen
 ms.author: genemi
 ms.custom: seo-lt-2019
-monikerRange: =azuresqldb-current||>=sql-server-2016||=sqlallproducts-allversions||>=sql-server-linux-2017||=azuresqldb-mi-current
-ms.openlocfilehash: 788dd201372524b85ce3cd13d998f5f09a1ca287
-ms.sourcegitcommit: da88320c474c1c9124574f90d549c50ee3387b4c
+monikerRange: =azuresqldb-current||>=sql-server-2016||>=sql-server-linux-2017||=azuresqldb-mi-current
+ms.openlocfilehash: 1846a3db3194a81ce1d1522ac175e3988d3d3d23
+ms.sourcegitcommit: 1a544cf4dd2720b124c3697d1e62ae7741db757c
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 07/01/2020
-ms.locfileid: "85724692"
+ms.lasthandoff: 12/14/2020
+ms.locfileid: "97462934"
 ---
 # <a name="annotation-interpretation---sqlrelationship-and-key-ordering-rule"></a>주석 해석 - sql:relationship 및 키 순서 지정 규칙
 [!INCLUDE [SQL Server Azure SQL Database](../../../includes/applies-to-version/sql-asdb.md)]

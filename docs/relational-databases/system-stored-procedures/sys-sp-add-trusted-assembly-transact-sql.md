@@ -1,6 +1,6 @@
 ---
 description: sys.sp_add_trusted_assembly(Transact-SQL)
-title: sys. sp_add_trusted_assembly (Transact-sql) | Microsoft Docs
+title: sys.sp_add_trusted_assembly (Transact-sql) | Microsoft Docs
 ms.custom: ''
 ms.date: 06/14/2017
 ms.prod: sql
@@ -18,13 +18,13 @@ helpviewer_keywords:
 ms.assetid: ''
 author: VanMSFT
 ms.author: vanto
-monikerRange: '>=sql-server-2017||=sqlallproducts-allversions||>=sql-server-linux-2017||=azuresqldb-mi-current'
-ms.openlocfilehash: 2e59cd1836a838294904970f00a677a0fdfe6c03
-ms.sourcegitcommit: e700497f962e4c2274df16d9e651059b42ff1a10
+monikerRange: '>=sql-server-2017||>=sql-server-linux-2017||=azuresqldb-mi-current'
+ms.openlocfilehash: dd109cbb67ced59488d6436880be495501e92034
+ms.sourcegitcommit: 1a544cf4dd2720b124c3697d1e62ae7741db757c
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 08/17/2020
-ms.locfileid: "88480885"
+ms.lasthandoff: 12/14/2020
+ms.locfileid: "97462654"
 ---
 # <a name="syssp_add_trusted_assembly-transact-sql"></a>sys.sp_add_trusted_assembly(Transact-SQL)  
 [!INCLUDE[tsql-appliesto-ss2017-asdbmi-xxxx-xxx-md](../../includes/tsql-appliesto-ss2017-asdbmi-xxxx-xxx-md.md)]
@@ -43,7 +43,7 @@ sp_add_trusted_assembly
 
 ## <a name="remarks"></a>설명  
 
-이 프로시저는  [trusted_assemblies](../../relational-databases/system-catalog-views/sys-trusted-assemblies-transact-sql.md)에 어셈블리를 추가 합니다.
+이 프로시저는  [sys.trusted_assemblies](../../relational-databases/system-catalog-views/sys-trusted-assemblies-transact-sql.md)에 어셈블리를 추가 합니다.
 
 ## <a name="arguments"></a>인수
 
@@ -57,7 +57,7 @@ sp_add_trusted_assembly
 
 `sysadmin`고정 서버 역할 또는 권한의 멤버 자격이 필요 `CONTROL SERVER` 합니다.
 
-## <a name="examples"></a>예제  
+## <a name="examples"></a>예  
 
 다음 예제에서는 라는 어셈블리를 `pointudt` 서버에 대 한 신뢰할 수 있는 어셈블리 목록에 추가 합니다. 이러한 값은  [sys. 어셈블리](../../relational-databases/system-catalog-views/sys-assemblies-transact-sql.md)에서 사용할 수 있습니다.     
 
@@ -66,11 +66,11 @@ EXEC sp_add_trusted_assembly 0x8893AD6D78D14EE43DF482E2EAD44123E3A0B684A8873C3F7
 N'pointudt, version=0.0.0.0, culture=neutral, publickeytoken=null, processorarchitecture=msil';
 ```  
 
-## <a name="see-also"></a>관련 항목  
-  [sys. sp_drop_trusted_assembly](sys-sp-drop-trusted-assembly-transact-sql.md)  
-  [sys. trusted_assemblies](../../relational-databases/system-catalog-views/sys-trusted-assemblies-transact-sql.md)  
+## <a name="see-also"></a>참고 항목  
+  [sys.sp_drop_trusted_assembly](sys-sp-drop-trusted-assembly-transact-sql.md)  
+  [sys.trusted_assemblies](../../relational-databases/system-catalog-views/sys-trusted-assemblies-transact-sql.md)  
   [CREATE ASSEMBLY&#40;Transact-SQL&#41;](../../t-sql/statements/create-assembly-transact-sql.md)  
-  [CLR 엄격한 보안](../../database-engine/configure-windows/clr-strict-security.md)  
+  [CLR strict security](../../database-engine/configure-windows/clr-strict-security.md)  
   [sys.assemblies](../../relational-databases/system-catalog-views/sys-assemblies-transact-sql.md)  
   [sys.dm_clr_loaded_assemblies](../../relational-databases/system-dynamic-management-views/sys-dm-clr-loaded-assemblies-transact-sql.md)  
 

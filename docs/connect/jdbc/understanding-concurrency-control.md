@@ -2,7 +2,7 @@
 title: 동시성 제어 이해
 description: 동시성 제어에 대해 살펴보고 SQL Server용 JDBC Driver를 사용하여 다중 사용자 애플리케이션을 개발할 때 데이터베이스 무결성을 유지하는 방법을 알아봅니다.
 ms.custom: ''
-ms.date: 08/12/2019
+ms.date: 12/08/2020
 ms.prod: sql
 ms.prod_service: connectivity
 ms.reviewer: ''
@@ -11,12 +11,12 @@ ms.topic: conceptual
 ms.assetid: 98b7dabe-9b12-4e1d-adeb-e5b5cb0c96f3
 author: David-Engel
 ms.author: v-daenge
-ms.openlocfilehash: 9350c62c29acce5e56d60cfcd1fa854a7e2414cd
-ms.sourcegitcommit: 129f8574eba201eb6ade1f1620c6b80dfe63b331
+ms.openlocfilehash: c44f52697fa8048a8c7db2286c3e69114f658152
+ms.sourcegitcommit: 7f76975c29d948a9a3b51abce564b9c73d05dcf0
 ms.translationtype: HT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 07/30/2020
-ms.locfileid: "87435307"
+ms.lasthandoff: 12/08/2020
+ms.locfileid: "96900946"
 ---
 # <a name="understanding-concurrency-control"></a>동시성 제어 이해
 [!INCLUDE[Driver_JDBC_Download](../../includes/driver_jdbc_download.md)]
@@ -24,7 +24,7 @@ ms.locfileid: "87435307"
   동시성 제어란 여러 명의 사용자가 동시에 행을 업데이트할 때 데이터베이스의 무결성을 유지하기 위해 사용되는 여러 가지 기술을 말합니다. 잘못된 동시성으로 인해 커밋되지 않은 읽기, 가상 읽기, 반복되지 않는 읽기와 같은 문제가 발생할 수 있습니다. [!INCLUDE[jdbcNoVersion](../../includes/jdbcnoversion_md.md)]는 이러한 문제를 해결하기 위해 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]에서 사용하는 모든 동시성 기술에 대한 인터페이스를 제공합니다.  
   
 > [!NOTE]  
->  [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 동시성에 대한 자세한 내용은 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 온라인 설명서에서 "동시 데이터 액세스 관리"를 참조하세요.  
+>  [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 동시성에 대한 자세한 내용은 [“동시 데이터 액세스 관리”](../../relational-databases/sql-server-transaction-locking-and-row-versioning-guide.md#managing-concurrent-data-access)를 참조하세요.  
   
 ## <a name="remarks"></a>설명  
  JDBC 드라이버에서 지원하는 동시성 유형은 다음과 같습니다.  

@@ -1,6 +1,6 @@
 ---
 description: sys.dm_db_missing_index_groups(Transact-SQL)
-title: sys. dm_db_missing_index_groups (Transact-sql) | Microsoft Docs
+title: sys.dm_db_missing_index_groups (Transact-sql) | Microsoft Docs
 ms.custom: ''
 ms.date: 06/10/2016
 ms.prod: sql
@@ -21,13 +21,13 @@ helpviewer_keywords:
 ms.assetid: 9cc00acd-d83d-49f8-be72-5b2aebed246b
 author: markingmyname
 ms.author: maghan
-monikerRange: =azuresqldb-current||>=sql-server-2016||=sqlallproducts-allversions||>=sql-server-linux-2017||=azuresqldb-mi-current
-ms.openlocfilehash: 79c1cb3bf387af73e1505b8452cd44a1a5f55675
-ms.sourcegitcommit: dd36d1cbe32cd5a65c6638e8f252b0bd8145e165
+monikerRange: =azuresqldb-current||>=sql-server-2016||>=sql-server-linux-2017||=azuresqldb-mi-current
+ms.openlocfilehash: fec8a59796a51b05556af606f1ef48c634d7cb5b
+ms.sourcegitcommit: 1a544cf4dd2720b124c3697d1e62ae7741db757c
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 09/08/2020
-ms.locfileid: "89542302"
+ms.lasthandoff: 12/14/2020
+ms.locfileid: "97462754"
 ---
 # <a name="sysdm_db_missing_index_groups-transact-sql"></a>sys.dm_db_missing_index_groups(Transact-SQL)
 [!INCLUDE [SQL Server SQL Database](../../includes/applies-to-version/sql-asdb.md)]
@@ -39,10 +39,10 @@ ms.locfileid: "89542302"
 |열 이름|데이터 형식|Description|  
 |-----------------|---------------|-----------------|  
 |**index_group_handle**|**int**|누락된 인덱스 그룹을 식별합니다.|  
-|**index_handle**|**int**|**index_group_handle**로 지정된 그룹에 속하는 누락된 인덱스를 식별합니다.<br /><br /> 인덱스 그룹에는 인덱스가 하나만 포함되어 있습니다.|  
+|**index_handle**|**int**|**index_group_handle** 로 지정된 그룹에 속하는 누락된 인덱스를 식별합니다.<br /><br /> 인덱스 그룹에는 인덱스가 하나만 포함되어 있습니다.|  
   
 ## <a name="remarks"></a>설명  
- **sys.dm_db_missing_index_groups**에서 반환된 정보는 쿼리 최적화 프로그램이 쿼리를 최적화할 때 업데이트되며 지속되지 않습니다. 누락된 인덱스 정보는 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]를 다시 시작할 때까지만 유지됩니다. 서버 재활용 후에도 누락된 인덱스 정보를 유지하려면 데이터베이스 관리자가 정기적으로 누락된 인덱스 정보의 백업 복사본을 만들어야 합니다.  
+ **sys.dm_db_missing_index_groups** 에서 반환된 정보는 쿼리 최적화 프로그램이 쿼리를 최적화할 때 업데이트되며 지속되지 않습니다. 누락된 인덱스 정보는 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]를 다시 시작할 때까지만 유지됩니다. 서버 재활용 후에도 누락된 인덱스 정보를 유지하려면 데이터베이스 관리자가 정기적으로 누락된 인덱스 정보의 백업 복사본을 만들어야 합니다.  
   
  출력 결과 집합의 두 열은 키가 아니지만 함께 결합되어 인덱스 키를 형성합니다.  
 
@@ -53,8 +53,8 @@ ms.locfileid: "89542302"
  이 동적 관리 뷰를 쿼리하려면 사용자에게 VIEW SERVER STATE 권한이나 VIEW SERVER STATE 권한을 나타내는 사용 권한을 부여해야 합니다.  
   
 ## <a name="see-also"></a>참고 항목  
- [dm_db_missing_index_columns &#40;Transact-sql&#41;](../../relational-databases/system-dynamic-management-views/sys-dm-db-missing-index-columns-transact-sql.md)   
- [dm_db_missing_index_details &#40;Transact-sql&#41;](../../relational-databases/system-dynamic-management-views/sys-dm-db-missing-index-details-transact-sql.md)   
- [dm_db_missing_index_group_stats &#40;Transact-sql&#41;](../../relational-databases/system-dynamic-management-views/sys-dm-db-missing-index-group-stats-transact-sql.md)  
+ [Transact-sql&#41;sys.dm_db_missing_index_columns &#40;](../../relational-databases/system-dynamic-management-views/sys-dm-db-missing-index-columns-transact-sql.md)   
+ [Transact-sql&#41;sys.dm_db_missing_index_details &#40;](../../relational-databases/system-dynamic-management-views/sys-dm-db-missing-index-details-transact-sql.md)   
+ [Transact-sql&#41;sys.dm_db_missing_index_group_stats &#40;](../../relational-databases/system-dynamic-management-views/sys-dm-db-missing-index-group-stats-transact-sql.md)  
   
   

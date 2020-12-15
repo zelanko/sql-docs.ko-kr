@@ -21,13 +21,13 @@ helpviewer_keywords:
 ms.assetid: d294dd8e-82d5-4628-aa2d-e57702230613
 author: markingmyname
 ms.author: maghan
-monikerRange: =azuresqldb-current||>=sql-server-2016||=sqlallproducts-allversions||>=sql-server-linux-2017||=azuresqldb-mi-current
-ms.openlocfilehash: dd4c4946b5e62b9e7f06ca2beea8e75732f17e43
-ms.sourcegitcommit: 32135463a8494d9ed1600a58f51819359e3c09dc
+monikerRange: =azuresqldb-current||>=sql-server-2016||>=sql-server-linux-2017||=azuresqldb-mi-current
+ms.openlocfilehash: 1e4d175fe42497d2a75c23d3ae49d60821952ccf
+ms.sourcegitcommit: 1a544cf4dd2720b124c3697d1e62ae7741db757c
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 10/08/2020
-ms.locfileid: "91833863"
+ms.lasthandoff: 12/14/2020
+ms.locfileid: "97458498"
 ---
 # <a name="sysdm_db_index_physical_stats-transact-sql"></a>sys.dm_db_index_physical_stats(Transact-SQL)
 [!INCLUDE [SQL Server SQL Database](../../includes/applies-to-version/sql-asdb.md)]
@@ -57,33 +57,33 @@ sys.dm_db_index_physical_stats (
   
 ## <a name="arguments"></a>인수  
  *database_id* \| NULL \| 0 \| 기본값  
- 데이터베이스의 ID입니다. *database_id* 은 **smallint**입니다. 올바른 입력은 데이터베이스의 ID 번호, NULL, 0 또는 DEFAULT입니다. 기본값은 0입니다. 이 컨텍스트에서 NULL, 0 및 DEFAULT는 동등한 값입니다.  
+ 데이터베이스의 ID입니다. *database_id* 은 **smallint** 입니다. 올바른 입력은 데이터베이스의 ID 번호, NULL, 0 또는 DEFAULT입니다. 기본값은 0입니다. 이 컨텍스트에서 NULL, 0 및 DEFAULT는 동등한 값입니다.  
   
- [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 인스턴스의 모든 데이터베이스에 대한 정보를 반환하려면 NULL을 지정합니다. *Database_id*에 대해 null을 지정 하는 경우 *object_id*, *index_id*및 *partition_number*에 대해서도 null을 지정 해야 합니다.  
+ [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 인스턴스의 모든 데이터베이스에 대한 정보를 반환하려면 NULL을 지정합니다. *Database_id* 에 대해 null을 지정 하는 경우 *object_id*, *index_id* 및 *partition_number* 에 대해서도 null을 지정 해야 합니다.  
   
  [DB_ID](../../t-sql/functions/db-id-transact-sql.md) 기본 제공 함수를 지정할 수 있습니다. 데이터베이스 이름을 지정하지 않고 DB_ID를 사용하는 경우 현재 데이터베이스의 호환성 수준은 90 이상이어야 합니다.  
   
  *object_id* \| NULL \| 0 \| 기본값  
- 인덱스가 있는 테이블 또는 뷰의 개체 ID입니다. *object_id* 은 **int**입니다.  
+ 인덱스가 있는 테이블 또는 뷰의 개체 ID입니다. *object_id* 은 **int** 입니다.  
   
  올바른 입력은 테이블 및 뷰의 ID 번호, NULL, 0 또는 DEFAULT입니다. 기본값은 0입니다. 이 컨텍스트에서 NULL, 0 및 DEFAULT는 동등한 값입니다. [!INCLUDE[ssSQL15](../../includes/sssql15-md.md)]에서 유효한 입력은 service broker 큐 이름 또는 큐 내부 테이블 이름을 포함 합니다. 모든 개체, 모든 인덱스 등의 기본 매개 변수를 적용 하는 경우 모든 큐에 대 한 조각화 정보는 결과 집합에 포함 됩니다.  
   
- 지정된 데이터베이스에 있는 모든 테이블 및 뷰에 대한 정보를 반환하려면 NULL을 지정합니다. *Object_id*에 대해 null을 지정 하는 경우 *index_id* 및 *partition_number*에 대해서도 null을 지정 해야 합니다.  
+ 지정된 데이터베이스에 있는 모든 테이블 및 뷰에 대한 정보를 반환하려면 NULL을 지정합니다. *Object_id* 에 대해 null을 지정 하는 경우 *index_id* 및 *partition_number* 에 대해서도 null을 지정 해야 합니다.  
   
  *index_id* \| 0 \| NULL \| -1 \| 기본값  
- 인덱스의 ID입니다. *index_id* 은 **int**입니다. 유효한 입력은 인덱스의 ID 번호, *object_id* 가 힙, NULL,-1 또는 DEFAULT 인 경우 0입니다. 기본값은 -1입니다. 이 컨텍스트에서 NULL,-1 및 DEFAULT는 동일한 값입니다.  
+ 인덱스의 ID입니다. *index_id* 은 **int** 입니다. 유효한 입력은 인덱스의 ID 번호, *object_id* 가 힙, NULL,-1 또는 DEFAULT 인 경우 0입니다. 기본값은 -1입니다. 이 컨텍스트에서 NULL,-1 및 DEFAULT는 동일한 값입니다.  
   
- 기본 테이블 또는 뷰에 대한 모든 인덱스 정보를 반환하려면 NULL을 지정합니다. *Index_id*에 대해 null을 지정 하는 경우 *partition_number*에 대해서도 null을 지정 해야 합니다.  
+ 기본 테이블 또는 뷰에 대한 모든 인덱스 정보를 반환하려면 NULL을 지정합니다. *Index_id* 에 대해 null을 지정 하는 경우 *partition_number* 에 대해서도 null을 지정 해야 합니다.  
   
  *partition_number* \| NULL \| 0 \| 기본값  
- 개체의 파티션 번호입니다. *partition_number* 은 **int**입니다. 유효한 입력은 인덱스 또는 힙의 *partion_number* , NULL, 0 또는 DEFAULT입니다. 기본값은 0입니다. 이 컨텍스트에서 NULL, 0 및 DEFAULT는 동등한 값입니다.  
+ 개체의 파티션 번호입니다. *partition_number* 은 **int** 입니다. 유효한 입력은 인덱스 또는 힙의 *partion_number* , NULL, 0 또는 DEFAULT입니다. 기본값은 0입니다. 이 컨텍스트에서 NULL, 0 및 DEFAULT는 동등한 값입니다.  
   
  소유하는 개체의 모든 파티션에 대한 정보를 반환하려면 NULL을 지정합니다.  
   
  *partition_number* 은 1부터 사용 됩니다. 분할 되지 않은 인덱스 또는 힙의 *partition_number* 1로 설정 되어 있습니다.  
   
  *모드* \| NULL \| 기본값  
- 모드 이름입니다. *모드* 통계를 얻는 데 사용 되는 검색 수준을 지정 합니다. *모드* 는 **sysname**입니다. 유효한 입력은 DEFAULT, NULL, LIMITED, SAMPLED 또는 DETAILED입니다. 기본값(NULL)은 LIMITED입니다.  
+ 모드 이름입니다. *모드* 통계를 얻는 데 사용 되는 검색 수준을 지정 합니다. *모드* 는 **sysname** 입니다. 유효한 입력은 DEFAULT, NULL, LIMITED, SAMPLED 또는 DETAILED입니다. 기본값(NULL)은 LIMITED입니다.  
   
 ## <a name="table-returned"></a>반환된 테이블  
   
@@ -95,7 +95,7 @@ sys.dm_db_index_physical_stats (
 |partition_number|**int**|테이블, 뷰 또는 인덱스 등의 소유하는 개체 내의 1부터 시작하는 파티션 번호입니다.<br /><br /> 1 = 분할되지 않은 인덱스 또는 힙|  
 |index_type_desc|**nvarchar(60)**|인덱스 유형에 대한 설명입니다.<br /><br /> HEAP<br /><br /> CLUSTERED  INDEX<br /><br /> NONCLUSTERED  INDEX<br /><br /> PRIMARY  XML  INDEX<br /><br /> 확장 인덱스<br /><br /> XML INDEX<br /><br /> COLUMNSTORE 매핑 인덱스 (내부)<br /><br /> COLUMNSTORE DELETEBUFFER 인덱스 (내부)<br /><br /> COLUMNSTORE DELETEBITMAP 인덱스 (내부)|  
 |hobt_id|**bigint**|힙 또는 B-인덱스 또는 파티션의 ID입니다.<br /><br /> 사용자 정의 인덱스의 hobt_id 반환 하는 것 외에도 내부 columnstore 인덱스의 hobt_id 반환 합니다.|  
-|alloc_unit_type_desc|**nvarchar(60)**|할당 단위 유형에 대한 설명입니다.<br /><br /> IN_ROW_DATA<br /><br /> LOB_DATA<br /><br /> ROW_OVERFLOW_DATA<br /><br /> LOB_DATA 할당 단위에는 **text**, **ntext**, **image**, **varchar (max)**, **nvarchar (max**), **varbinary (max)** 및 **xml**형식의 열에 저장 되는 데이터가 포함 됩니다. 자세한 내용은 [데이터 형식&#40;Transact-SQL&#41;](../../t-sql/data-types/data-types-transact-sql.md)을 참조하세요.<br /><br /> ROW_OVERFLOW_DATA 할당 단위에는 **varchar (n)**, **nvarchar (n)**, **varbinary (n)** 및 **sql_variant** 행 외부로 푸시된 데이터 형식의 열에 저장 된 데이터가 포함 됩니다.|  
+|alloc_unit_type_desc|**nvarchar(60)**|할당 단위 유형에 대한 설명입니다.<br /><br /> IN_ROW_DATA<br /><br /> LOB_DATA<br /><br /> ROW_OVERFLOW_DATA<br /><br /> LOB_DATA 할당 단위에는 **text**, **ntext**, **image**, **varchar (max)**, **nvarchar (max**), **varbinary (max)** 및 **xml** 형식의 열에 저장 되는 데이터가 포함 됩니다. 자세한 내용은 [데이터 형식&#40;Transact-SQL&#41;](../../t-sql/data-types/data-types-transact-sql.md)을 참조하세요.<br /><br /> ROW_OVERFLOW_DATA 할당 단위에는 **varchar (n)**, **nvarchar (n)**, **varbinary (n)** 및 **sql_variant** 행 외부로 푸시된 데이터 형식의 열에 저장 된 데이터가 포함 됩니다.|  
 |index_depth|**tinyint**|인덱스 수준의 수입니다.<br /><br /> 1 = 힙 또는 LOB_DATA나 ROW_OVERFLOW_DATA 할당 단위|  
 |index_level|**tinyint**|인덱스의 현재 수준입니다.<br /><br /> 인덱스 리프 수준, 힙 및 LOB_DATA 또는 ROW_OVERFLOW_DATA 할당 단위에 대해 0입니다.<br /><br /> 리프가 아닌 인덱스 수준의 경우 0보다 큽니다. *index_level* 은 인덱스의 루트 수준에서 가장 높습니다.<br /><br /> 리프가 아닌 인덱스 수준은 *mode* = DETAILED 인 경우에만 처리 됩니다.|  
 |avg_fragmentation_in_percent|**float**|인덱스의 논리적 조각화 또는 IN_ROW_DATA 할당 단위에서 힙의 익스텐트 조각화입니다.<br /><br /> 값은 여러 파일을 고려하여 백분율로 측정됩니다. 논리적 조각화 및 익스텐트 조각화에 대한 정의는 주의를 참조하세요.<br /><br /> LOB_DATA 및 ROW_OVERFLOW_DATA 할당 단위에 대해 0입니다.<br /><br /> *Mode* = 샘플링 된 경우 힙의 경우 NULL입니다.|  
@@ -125,7 +125,7 @@ sys.dm_db_index_physical_stats (
  sys.dm_db_index_physical_stats 동적 관리 함수는 DBCC SHOWCONTIG 문을 대체합니다.  
   
 ## <a name="scanning-modes"></a>검색 모드  
- 함수가 실행되는 모드에 따라 함수에 사용되는 통계 데이터를 가져오기 위해 수행하는 검색 수준이 결정됩니다. *모드* 는 제한 됨, 샘플링 됨 또는 자세히로 지정 됩니다. 함수는 테이블이나 인덱스의 지정한 파티션을 구성하는 할당 단위에 대해 페이지 체인을 탐색합니다. sys.dm_db_index_physical_stats는 실행 되는 모드에 관계 없이 내재 된 공유 (IS) 테이블 잠금만 필요 합니다.  
+ 함수가 실행되는 모드에 따라 함수에 사용되는 통계 데이터를 가져오기 위해 수행하는 검색 수준이 결정됩니다. *모드* 는 제한 됨, 샘플링 됨 또는 자세히로 지정 됩니다. 함수는 테이블이나 인덱스의 지정한 파티션을 구성하는 할당 단위에 대해 페이지 체인을 탐색합니다. sys.dm_db_index_physical_stats에는 실행 되는 모드에 관계 없이 Intent-Shared (IS) 테이블 잠금만 필요 합니다.  
   
  LIMITED 모드는 가장 빠른 모드이며 가장 적은 수의 페이지를 검색합니다. 인덱스의 경우 B-트리의 부모 수준 페이지만(즉, 리프 수준 이상의 페이지) 검색합니다. 힙의 경우 연결된 PFS 및 IAM 페이지가 검사되고 힙의 데이터 페이지는 LIMITED 모드로 검색됩니다.  
   
@@ -138,7 +138,7 @@ sys.dm_db_index_physical_stats (
 ## <a name="using-system-functions-to-specify-parameter-values"></a>시스템 함수를 사용하여 매개 변수 값 지정  
  [!INCLUDE[tsql](../../includes/tsql-md.md)] [DB_ID](../../t-sql/functions/db-id-transact-sql.md) 및 [OBJECT_ID](../../t-sql/functions/object-id-transact-sql.md) 함수를 사용 하 여 *database_id* 및 *object_id* 매개 변수에 대 한 값을 지정할 수 있습니다. 그러나 이러한 함수에 유효하지 않은 값을 전달하면 의도하지 않은 결과가 발생할 수 있습니다. 존재하지 않거나 철자가 틀린 경우와 같이 데이터베이스 또는 개체 이름을 찾을 수 없는 경우에는 두 함수 모두 NULL을 반환합니다. sys.dm_db_index_physical_stats 함수는 NULL을 모든 데이터베이스나 모든 개체를 지정하는 와일드카드 값으로 해석합니다.  
   
- 또한 OBJECT_ID 함수는 sys.dm_db_index_physical_stats 함수가 호출 되기 전에 처리 되므로 *database_id*에 지정 된 데이터베이스가 아니라 현재 데이터베이스의 컨텍스트에서 평가 됩니다. 이 동작으로 인해 OBJECT_ID 함수에서 NULL 값이 반환될 수 있습니다. 또는 개체 이름이 현재 데이터베이스 컨텍스트와 지정된 데이터베이스 둘 다에 있는 경우에는 오류 메시지가 반환될 수도 있습니다. 다음 예에서는 의도되지 않은 이러한 결과를 보여 줍니다.  
+ 또한 OBJECT_ID 함수는 sys.dm_db_index_physical_stats 함수가 호출 되기 전에 처리 되므로 *database_id* 에 지정 된 데이터베이스가 아니라 현재 데이터베이스의 컨텍스트에서 평가 됩니다. 이 동작으로 인해 OBJECT_ID 함수에서 NULL 값이 반환될 수 있습니다. 또는 개체 이름이 현재 데이터베이스 컨텍스트와 지정된 데이터베이스 둘 다에 있는 경우에는 오류 메시지가 반환될 수도 있습니다. 다음 예에서는 의도되지 않은 이러한 결과를 보여 줍니다.  
   
 ```  
 USE master;  

@@ -12,13 +12,13 @@ dev_langs:
 ms.assetid: 8e263b65-81d0-49d0-8873-62ef424369d6
 author: markingmyname
 ms.author: maghan
-monikerRange: '>= aps-pdw-2016 || = sqlallproducts-allversions'
-ms.openlocfilehash: 267b2aa14e85f77af91a0cf1a5640a16ee158215
-ms.sourcegitcommit: 22dacedeb6e8721e7cdb6279a946d4002cfb5da3
+monikerRange: '>= aps-pdw-2016'
+ms.openlocfilehash: ae7d516d143adb54427146a1675433575d5a2529
+ms.sourcegitcommit: 1a544cf4dd2720b124c3697d1e62ae7741db757c
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 10/14/2020
-ms.locfileid: "92035316"
+ms.lasthandoff: 12/14/2020
+ms.locfileid: "97461584"
 ---
 # <a name="sysdm_pdw_node_status-transact-sql"></a>sys.dm_pdw_node_status (Transact-sql)
 

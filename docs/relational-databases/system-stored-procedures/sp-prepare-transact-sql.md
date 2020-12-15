@@ -18,13 +18,13 @@ helpviewer_keywords:
 ms.assetid: f328c9eb-8211-4863-bafa-347e1bf7bb3f
 author: markingmyname
 ms.author: maghan
-monikerRange: '>=aps-pdw-2016||=azure-sqldw-latest||>=sql-server-2016||=sqlallproducts-allversions||>=sql-server-linux-2017||=azuresqldb-mi-current'
-ms.openlocfilehash: 198707a1ffda49a3ffc28d0d35eadced99e4b149
-ms.sourcegitcommit: dd36d1cbe32cd5a65c6638e8f252b0bd8145e165
+monikerRange: '>=aps-pdw-2016||=azure-sqldw-latest||>=sql-server-2016||>=sql-server-linux-2017||=azuresqldb-mi-current'
+ms.openlocfilehash: 9726ac52d0579c56de3c3ad971028cd606748726
+ms.sourcegitcommit: 1a544cf4dd2720b124c3697d1e62ae7741db757c
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 09/08/2020
-ms.locfileid: "89535068"
+ms.lasthandoff: 12/14/2020
+ms.locfileid: "97462684"
 ---
 # <a name="sp_prepare-transact-sql"></a>sp_prepare(Transact SQL)
 [!INCLUDE [sql-asdbmi-asa-pdw](../../includes/applies-to-version/sql-asdbmi-asa-pdw.md)]
@@ -44,19 +44,19 @@ sp_prepare handle OUTPUT, params, stmt, options
  는 SQL Server 생성 준비 된 *핸들* 식별자입니다. *handle* 은 **int** 반환 값을 포함 하는 필수 매개 변수입니다.  
   
  *params*  
- 매개 변수가 있는 문을 식별합니다. 변수의 매개 변수 정의는 문에서 매개 변수 표식을 *대체 합니다.* *params* 는 **ntext**, **nchar**또는 **nvarchar** 입력 값을 호출 하는 필수 매개 변수입니다. 문에 매개 변수가 없으면 NULL 값을 입력합니다.  
+ 매개 변수가 있는 문을 식별합니다. 변수의 매개 변수 정의는 문에서 매개 변수 표식을 *대체 합니다.* *params* 는 **ntext**, **nchar** 또는 **nvarchar** 입력 값을 호출 하는 필수 매개 변수입니다. 문에 매개 변수가 없으면 NULL 값을 입력합니다.  
   
  *stmt*  
- 커서 결과 집합을 정의합니다. *Stmt* 매개 변수는 필수 이며 **ntext**, **nchar**또는 **nvarchar** 입력 값에 대해를 호출 합니다.  
+ 커서 결과 집합을 정의합니다. *Stmt* 매개 변수는 필수 이며 **ntext**, **nchar** 또는 **nvarchar** 입력 값에 대해를 호출 합니다.  
   
  *options*  
  커서 결과 집합 열의 설명을 반환하는 선택적 매개 변수입니다. *옵션* 에는 다음 int 입력 값이 필요 합니다.  
   
-|값|Description|  
+|값|설명|  
 |-----------|-----------------|  
 |0x0001|RETURN_METADATA|  
   
-## <a name="examples"></a>예제  
+## <a name="examples"></a>예  
 A. 다음 예제에서는 간단한 문을 준비하고 실행합니다.  
   
 ```sql  

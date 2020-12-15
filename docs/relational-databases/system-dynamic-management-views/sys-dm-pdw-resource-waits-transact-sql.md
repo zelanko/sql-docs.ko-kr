@@ -12,13 +12,13 @@ dev_langs:
 ms.assetid: a43ce9a2-5261-41e3-97f0-555ba05ebed9
 author: ronortloff
 ms.author: rortloff
-monikerRange: '>= aps-pdw-2016 || = azure-sqldw-latest || = sqlallproducts-allversions'
-ms.openlocfilehash: fad0e8410294ecfe477ccf24215772531260bd50
-ms.sourcegitcommit: 22dacedeb6e8721e7cdb6279a946d4002cfb5da3
+monikerRange: '>= aps-pdw-2016 || = azure-sqldw-latest'
+ms.openlocfilehash: 95e974c7a62722ea63510504d057b2e67370925b
+ms.sourcegitcommit: 1a544cf4dd2720b124c3697d1e62ae7741db757c
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 10/14/2020
-ms.locfileid: "92035226"
+ms.lasthandoff: 12/14/2020
+ms.locfileid: "97440731"
 ---
 # <a name="sysdm_pdw_resource_waits-transact-sql"></a>sys.dm_pdw_resource_waits (Transact-sql)
 [!INCLUDE[applies-to-version/asa-pdw](../../includes/applies-to-version/asa-pdw.md)]
@@ -29,8 +29,8 @@ ms.locfileid: "92035226"
 |-----------------|---------------|-----------------|-----------|  
 |wait_id|**bigint**|대기 목록에서 요청에 대 한 위치입니다.|0부터 기반으로 하는 서 수입니다. 이는 모든 대기 항목에서 고유 하지 않습니다.|  
 |session_id|**nvarchar(32)**|대기 상태가 발생 한 세션의 ID입니다.|[Sys.dm_pdw_exec_sessions &#40;transact-sql&#41;](../../relational-databases/system-dynamic-management-views/sys-dm-pdw-exec-sessions-transact-sql.md)에서 session_id를 참조 하세요.|  
-|type|**nvarchar(255)**|이 항목이 나타내는 대기 유형입니다.|가능한 값은 다음과 같습니다.<br /><br /> 연결<br /><br /> 로컬 쿼리 동시성<br /><br /> 분산 쿼리 동시성<br /><br /> DMS 동시성<br /><br /> 백업 동시성|  
-|object_type|**nvarchar(255)**|대기의 영향을 받는 개체의 형식입니다.|가능한 값은 다음과 같습니다.<br /><br /> **개체가**<br /><br /> **데이터**<br /><br /> **컴퓨터**<br /><br /> **SCHEMA**<br /><br /> **프로그램별**|  
+|형식|**nvarchar(255)**|이 항목이 나타내는 대기 유형입니다.|가능한 값은 다음과 같습니다.<br /><br /> 연결<br /><br /> 로컬 쿼리 동시성<br /><br /> 분산 쿼리 동시성<br /><br /> DMS 동시성<br /><br /> 백업 동시성|  
+|object_type|**nvarchar(255)**|대기의 영향을 받는 개체의 형식입니다.|가능한 값은 다음과 같습니다.<br /><br /> **개체가**<br /><br /> **DATABASE**<br /><br /> **컴퓨터**<br /><br /> **SCHEMA**<br /><br /> **프로그램별**|  
 |object_name|**nvarchar (386)**|대기의 영향을 받은 지정 된 개체의 이름 또는 GUID입니다.|테이블과 뷰는 세 부분으로 구성 된 이름으로 표시 됩니다.<br /><br /> 인덱스와 통계는 네 부분으로 구성 된 이름으로 표시 됩니다.<br /><br /> 이름, 보안 주체 및 데이터베이스는 문자열 이름입니다.|  
 |request_id|**nvarchar(32)**|대기 상태가 발생 한 요청의 ID입니다.|요청의 QID 식별자입니다.<br /><br /> 로드 요청의 GUID 식별자입니다.|  
 |request_time|**datetime**|잠금 또는 리소스가 요청 된 시간입니다.||  

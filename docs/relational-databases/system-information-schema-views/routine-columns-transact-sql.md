@@ -19,13 +19,13 @@ helpviewer_keywords:
 ms.assetid: 91dbc61b-e4c0-4826-976c-b2fce88b7793
 author: markingmyname
 ms.author: maghan
-monikerRange: =azuresqldb-current||>=sql-server-2016||=sqlallproducts-allversions||>=sql-server-linux-2017||=azuresqldb-mi-current
-ms.openlocfilehash: ec57f41be3971b41d5bebf6c139b9913666e8c20
-ms.sourcegitcommit: 968969b62bc158b9843aba5034c9d913519bc4a7
+monikerRange: =azuresqldb-current||>=sql-server-2016||>=sql-server-linux-2017||=azuresqldb-mi-current
+ms.openlocfilehash: eb990b9cb78d36bfe680562574eda0688422c7c3
+ms.sourcegitcommit: 1a544cf4dd2720b124c3697d1e62ae7741db757c
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 10/06/2020
-ms.locfileid: "91753973"
+ms.lasthandoff: 12/14/2020
+ms.locfileid: "97462734"
 ---
 # <a name="routine_columns-transact-sql"></a>ROUTINE_COLUMNS(Transact-SQL)
 [!INCLUDE [SQL Server SQL Database](../../includes/applies-to-version/sql-asdb.md)]
@@ -49,8 +49,8 @@ ms.locfileid: "91753973"
 |**NUMERIC_PRECISION**|**tinyint**|근사 숫자 데이터, 정확한 숫자 데이터, 정수 데이터 또는 통화 데이터의 전체 자릿수입니다. 다른 데이터 형식에 대해서는 NULL을 반환합니다.|  
 |**NUMERIC_PRECISION_RADIX**|**smallint**|근사 숫자 데이터, 정확한 숫자 데이터, 정수 데이터 또는 통화 데이터의 전체 자릿수 기수입니다. 다른 데이터 형식에 대해서는 NULL을 반환합니다.|  
 |**NUMERIC_SCALE**|**tinyint**|근사 숫자 데이터, 정확한 숫자 데이터, 정수 데이터 또는 통화 데이터의 소수 자릿수입니다. 다른 데이터 형식에 대해서는 NULL을 반환합니다.|  
-|**DATETIME_PRECISION**|**smallint**|**Datetime** 및 ISO**정수** 데이터 형식에 대 한 하위 형식 코드입니다. 다른 데이터 형식에 대해서는 NULL을 반환합니다.|  
-|**CHARACTER_SET_CATALOG**|**varchar (** 6 **)**|**Master**를 반환 합니다. 이 열이 문자 데이터 또는 **텍스트** 데이터 형식인 경우 문자 집합이 있는 데이터베이스를 나타냅니다. 다른 데이터 형식에 대해서는 NULL을 반환합니다.|  
+|**DATETIME_PRECISION**|**smallint**|**Datetime** 및 ISO **정수** 데이터 형식에 대 한 하위 형식 코드입니다. 다른 데이터 형식에 대해서는 NULL을 반환합니다.|  
+|**CHARACTER_SET_CATALOG**|**varchar (** 6 **)**|**Master** 를 반환 합니다. 이 열이 문자 데이터 또는 **텍스트** 데이터 형식인 경우 문자 집합이 있는 데이터베이스를 나타냅니다. 다른 데이터 형식에 대해서는 NULL을 반환합니다.|  
 |**CHARACTER_SET_SCHEMA**|**varchar (** 3 **)**|항상 NULL을 반환합니다.|  
 |**CHARACTER_SET_NAME**|**nvarchar (** 128 **)**|이 열이 문자 데이터 또는 **텍스트** 데이터 형식이 면 문자 집합의 고유 이름을 반환 합니다. 다른 데이터 형식에 대해서는 NULL을 반환합니다.|  
 |**COLLATION_CATALOG**|**varchar (** 6 **)**|항상 NULL을 반환합니다.|  

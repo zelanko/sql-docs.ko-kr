@@ -19,13 +19,13 @@ helpviewer_keywords:
 ms.assetid: 649b370b-da54-4915-919d-1b597a39d505
 author: rothja
 ms.author: jroth
-monikerRange: =azuresqldb-current||>=sql-server-2016||=sqlallproducts-allversions||>=sql-server-linux-2017||=azuresqldb-mi-current
-ms.openlocfilehash: c774b419283ea0d4799ef89c8628095424f169bd
-ms.sourcegitcommit: e700497f962e4c2274df16d9e651059b42ff1a10
+monikerRange: =azuresqldb-current||>=sql-server-2016||>=sql-server-linux-2017||=azuresqldb-mi-current
+ms.openlocfilehash: e1961dec1f32006d7a4b3d91b7b8763f34ce3514
+ms.sourcegitcommit: 1a544cf4dd2720b124c3697d1e62ae7741db757c
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 08/17/2020
-ms.locfileid: "88498206"
+ms.lasthandoff: 12/14/2020
+ms.locfileid: "97440621"
 ---
 # <a name="change_tracking_is_column_in_mask-transact-sql"></a>CHANGE_TRACKING_IS_COLUMN_IN_MASK(Transact-SQL)
 [!INCLUDE [SQL Server SQL Database](../../includes/applies-to-version/sql-asdb.md)]
@@ -62,7 +62,7 @@ CHANGE_TRACKING_IS_COLUMN_IN_MASK ( column_id , change_columns )
 ## <a name="remarks"></a>설명  
  CHANGE_TRACKING_IS_COLUMN_IN_MASK는 *column_id* 값의 유효성을 검사 하거나 *column_id* 를 가져온 테이블에서 *change_columns* 매개 변수를 가져왔는지 검사를 수행 하지 않습니다.  
   
-## <a name="examples"></a>예제  
+## <a name="examples"></a>예  
  다음 예에서는 `Salary` 테이블의 `Employees` 열이 업데이트되었는지 여부를 확인합니다. `COLUMNPROPERTY`함수는 열의 열 ID를 반환 합니다 `Salary` . `@change_columns` 지역 변수는 CHANGETABLE을 데이터 원본으로 사용하여 쿼리의 결과에 설정되어야 합니다.  
   
 ```sql  
@@ -73,7 +73,7 @@ SET @SalaryChanged = CHANGE_TRACKING_IS_COLUMN_IN_MASK
   
 ## <a name="see-also"></a>참고 항목  
  [변경 내용 추적 함수&#40;Transact-SQL&#41;](../../relational-databases/system-functions/change-tracking-functions-transact-sql.md)   
- [CHANGETABLE &#40;Transact-sql&#41;](../../relational-databases/system-functions/changetable-transact-sql.md)   
+ [CHANGETABLE&#40;Transact-SQL&#41;](../../relational-databases/system-functions/changetable-transact-sql.md)   
  [데이터 변경 내용 추적&#40;SQL Server&#41;](../../relational-databases/track-changes/track-data-changes-sql-server.md)  
   
   

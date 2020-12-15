@@ -1,7 +1,7 @@
 ---
 title: Reporting Services에서 지원하는 데이터 원본 | Microsoft Docs
 description: Microsoft SQL Server, Oracle, ODBC 등 Reporting Services에서 지원하는 다양한 데이터 원본에 대해 알아봅니다.
-ms.date: 05/21/2020
+ms.date: 11/10/2020
 ms.prod: reporting-services
 ms.prod_service: reporting-services-native
 ms.technology: report-data
@@ -19,12 +19,12 @@ helpviewer_keywords:
 ms.assetid: 9d11d055-a3be-45aa-99a7-46447a94ed42
 author: maggiesMSFT
 ms.author: maggies
-ms.openlocfilehash: 5b8fb15c2fb479471000fc9979c691761e4d81cd
-ms.sourcegitcommit: 985e2e8e494badeac6d6b652cd35765fd9c12d80
+ms.openlocfilehash: 34d5618950a96fd275a334dd78d914ee7e036c2f
+ms.sourcegitcommit: dc858552f0c9314b3411e630bbd9bbce65f85913
 ms.translationtype: HT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 11/04/2020
-ms.locfileid: "93328567"
+ms.lasthandoff: 12/07/2020
+ms.locfileid: "96788400"
 ---
 # <a name="data-sources-supported-by-reporting-services-ssrs"></a>Reporting Services에서 지원하는 데이터 원본(SSRS)
   [!INCLUDE[ssRSnoversion](../../includes/ssrsnoversion-md.md)] 에서는 데이터 처리 확장 프로그램을 사용하는 확장 가능한 모듈식 데이터 계층을 통해 데이터 원본에서 보고서 데이터를 검색합니다. 데이터 원본에서 보고서 데이터를 검색하려면 데이터 원본 유형, 데이터 원본에서 실행 중인 소프트웨어 버전 및 데이터 원본 플랫폼(32비트 또는 64비트 [!INCLUDE[vcprx64](../../includes/vcprx64-md.md)])을 지원하는 데이터 처리 확장 프로그램을 선택해야 합니다.  
@@ -172,6 +172,8 @@ ms.locfileid: "93328567"
  이 데이터 공급자는 ADOMD.NET 개체 모델을 사용하여 XMLA(XML for Analysis) 버전 1.1을 사용하는 쿼리를 만듭니다. 결과는 일반 행 집합으로 반환됩니다. 자세한 내용은 [MDX용 Analysis Services 연결 형식&#40;SSRS&#41;](../../reporting-services/report-data/analysis-services-connection-type-for-mdx-ssrs.md), [DMX용 Analysis Services 연결 형식&#40;SSRS&#41;](../../reporting-services/report-data/analysis-services-connection-type-for-dmx-ssrs.md), [Analysis Services MDX 쿼리 디자이너 사용자 인터페이스](../../reporting-services/report-data/analysis-services-mdx-query-designer-user-interface.md) 및 [Analysis Services DMX 쿼리 디자이너 사용자 인터페이스](../../reporting-services/report-data/analysis-services-dmx-query-designer-user-interface.md)를 참조하세요. 
  
  Azure Analysis Services 및 Power BI Premium 데이터 세트 데이터 원본의 경우 데이터 원본에 연결하는 데 사용되는 자격 증명에 대해 다단계 인증을 사용하지 않도록 설정해야 합니다. 사용자 환경에서 다단계 인증을 사용하도록 설정해야 하는 경우 데이터 원본에 사용되는 자격 증명에 다단계 인증을 사용하지 않도록 설정하는 옵션으로 <a href="/azure/active-directory/conditional-access/overview">Azure Active Directory 조건부 액세스</a>를 검토합니다.
+  
+ Power BI Premium 데이터 세트를 데이터 원본으로 사용하는 경우 가져오기 모드와 DirectQuery만 지원됩니다.
   
  [!INCLUDE[ssASnoversion](../../includes/ssasnoversion-md.md)] 데이터 원본에 연결할 때 [!INCLUDE[msCoName](../../includes/msconame-md.md)] [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] [!INCLUDE[ssASnoversion](../../includes/ssasnoversion-md.md)] 데이터 처리 확장 프로그램은 다중값 매개 변수를 지원하고 셀 및 멤버 속성을 [!INCLUDE[ssRSnoversion](../../includes/ssrsnoversion-md.md)]에서 지원되는 확장 속성에 매핑합니다. 자세한 내용은 [Analysis Services 데이터베이스에 대한 확장 필드 속성 &#40;SSRS&#41;](../../reporting-services/report-data/extended-field-properties-for-an-analysis-services-database-ssrs.md)을 참조하세요.  
   

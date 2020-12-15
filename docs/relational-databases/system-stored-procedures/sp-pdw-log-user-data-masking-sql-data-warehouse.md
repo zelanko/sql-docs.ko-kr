@@ -11,13 +11,13 @@ dev_langs:
 ms.assetid: 43c63b42-03cb-4fb5-8362-ec3b7e22a590
 author: ronortloff
 ms.author: rortloff
-monikerRange: '>= aps-pdw-2016 || = azure-sqldw-latest || = sqlallproducts-allversions'
-ms.openlocfilehash: c014f76aac1544e16ec693277a034779f75883cd
-ms.sourcegitcommit: ae474d21db4f724523e419622ce79f611e956a22
+monikerRange: '>= aps-pdw-2016 || = azure-sqldw-latest'
+ms.openlocfilehash: 2d2b3de8cf86e7597c944b827326dd070bc2ffce
+ms.sourcegitcommit: 1a544cf4dd2720b124c3697d1e62ae7741db757c
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 10/20/2020
-ms.locfileid: "92255616"
+ms.lasthandoff: 12/14/2020
+ms.locfileid: "97461554"
 ---
 # <a name="sp_pdw_log_user_data_masking-azure-synapse-analytics"></a>sp_pdw_log_user_data_masking (Azure Synapse Analytics)
 [!INCLUDE[applies-to-version/asa-pdw](../../includes/applies-to-version/asa-pdw.md)]
@@ -27,7 +27,7 @@ ms.locfileid: "92255616"
 > [!IMPORTANT]  
 >  [!INCLUDE[ssSDW](../../includes/sssdw-md.md)] **Sp_pdw_log_user_data_masking** 의 영향을 받는 활동 로그는 특정 [!INCLUDE[ssSDW](../../includes/sssdw-md.md)] 활동 로그입니다. **sp_pdw_log_user_data_masking** 는 데이터베이스 트랜잭션 로그 또는 오류 로그에 영향을 주지 않습니다 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] .  
   
- **배경:** 기본 구성 [!INCLUDE[ssSDW](../../includes/sssdw-md.md)] 활동 로그에는 전체 문이 포함 되어 있으며 [!INCLUDE[tsql](../../includes/tsql-md.md)] **INSERT**, **UPDATE**및 **SELECT** 문과 같은 작업에 포함 된 사용자 데이터를 포함 하는 경우도 있습니다. 어플라이언스에서 문제가 발생 하는 경우 문제를 재현할 필요 없이 문제를 일으킨 조건을 분석할 수 있습니다. 사용자 데이터가 활동 로그에 기록 되는 것을 방지 하기 위해 [!INCLUDE[ssSDW](../../includes/sssdw-md.md)] 고객은이 저장 프로시저를 사용 하 여 사용자 데이터 마스킹을 설정 하도록 선택할 수 있습니다. 문은 활동 로그에 계속 기록 [!INCLUDE[ssSDW](../../includes/sssdw-md.md)] 되지만 사용자 데이터를 포함할 수 있는 문의 모든 리터럴은 마스킹 되며 미리 정의 된 상수 값으로 대체 됩니다.  
+ **배경:** 기본 구성 [!INCLUDE[ssSDW](../../includes/sssdw-md.md)] 활동 로그에는 전체 문이 포함 되어 있으며 [!INCLUDE[tsql](../../includes/tsql-md.md)] **INSERT**, **UPDATE** 및 **SELECT** 문과 같은 작업에 포함 된 사용자 데이터를 포함 하는 경우도 있습니다. 어플라이언스에서 문제가 발생 하는 경우 문제를 재현할 필요 없이 문제를 일으킨 조건을 분석할 수 있습니다. 사용자 데이터가 활동 로그에 기록 되는 것을 방지 하기 위해 [!INCLUDE[ssSDW](../../includes/sssdw-md.md)] 고객은이 저장 프로시저를 사용 하 여 사용자 데이터 마스킹을 설정 하도록 선택할 수 있습니다. 문은 활동 로그에 계속 기록 [!INCLUDE[ssSDW](../../includes/sssdw-md.md)] 되지만 사용자 데이터를 포함할 수 있는 문의 모든 리터럴은 마스킹 되며 미리 정의 된 상수 값으로 대체 됩니다.  
   
  기기에서 투명 한 데이터 암호화를 사용 하는 경우 활동 로그의 사용자 데이터에 대 한 마스킹을 [!INCLUDE[ssSDW](../../includes/sssdw-md.md)] 자동으로 설정 됩니다.  
   
@@ -42,7 +42,7 @@ sp_pdw_log_user_data_masking [ [ @masking_mode = ] value ] ;
 [!INCLUDE[synapse-analytics-od-unsupported-syntax](../../includes/synapse-analytics-od-unsupported-syntax.md)]
 
 #### <a name="parameters"></a>매개 변수  
-`[ @masking_mode = ] masking_mode` 투명 한 데이터 암호화 로그 사용자 데이터 마스킹을 사용 하는지 여부를 결정 합니다. *masking_mode* 은 **int**이며 다음 값 중 하나일 수 있습니다.  
+`[ @masking_mode = ] masking_mode` 투명 한 데이터 암호화 로그 사용자 데이터 마스킹을 사용 하는지 여부를 결정 합니다. *masking_mode* 은 **int** 이며 다음 값 중 하나일 수 있습니다.  
   
 -   0 = 사용 안 함, 사용자 데이터가 활동 로그에 표시 됩니다 [!INCLUDE[ssSDW](../../includes/sssdw-md.md)] .  
   
@@ -68,7 +68,7 @@ sp_pdw_log_user_data_masking [ [ @masking_mode = ] value ] ;
 ## <a name="permissions"></a>사용 권한  
  **Sysadmin** 고정 데이터베이스 역할의 멤버 자격 또는 **CONTROL SERVER** 권한이 필요 합니다.  
   
-## <a name="example"></a>예제  
+## <a name="example"></a>예  
  다음 예에서는 어플라이언스에서 TDE 로그 사용자 데이터 마스킹을 사용 하도록 설정 합니다.  
   
 ```sql  

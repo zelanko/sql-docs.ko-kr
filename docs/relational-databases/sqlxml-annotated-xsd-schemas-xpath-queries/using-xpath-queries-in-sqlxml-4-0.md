@@ -16,13 +16,13 @@ helpviewer_keywords:
 ms.assetid: 7814d099-81ec-4fb8-894a-729cdbb5015a
 author: MightyPen
 ms.author: genemi
-monikerRange: =azuresqldb-current||>=sql-server-2016||=sqlallproducts-allversions||>=sql-server-linux-2017||=azuresqldb-mi-current
-ms.openlocfilehash: fbd1dc17ae8204bf4bb744797dc858fe61f2a768
-ms.sourcegitcommit: da88320c474c1c9124574f90d549c50ee3387b4c
+monikerRange: =azuresqldb-current||>=sql-server-2016||>=sql-server-linux-2017||=azuresqldb-mi-current
+ms.openlocfilehash: 2eeb70e8f4c884be5ac2e132c30c2b40c5aed3d9
+ms.sourcegitcommit: 1a544cf4dd2720b124c3697d1e62ae7741db757c
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 07/01/2020
-ms.locfileid: "85764880"
+ms.lasthandoff: 12/14/2020
+ms.locfileid: "97460012"
 ---
 # <a name="using-xpath-queries-in-sqlxml-40"></a>SQLXML 4.0의 XPath 쿼리 사용
 [!INCLUDE [SQL Server Azure SQL Database](../../includes/applies-to-version/sql-asdb.md)]
@@ -35,13 +35,13 @@ ms.locfileid: "85764880"
  [&#40;하는 XPath 쿼리 사용에 대 한 소개 SQLXML 4.0&#41;](../../relational-databases/sqlxml-annotated-xsd-schemas-xpath-queries/introduction-to-using-xpath-queries-sqlxml-4-0.md)  
  W3C XPath 사양에서 지원되는 기능과 그렇지 않은 기능 등 SQLXML 4.0의 XPath 쿼리에 대한 개요를 제공합니다.  
   
- [&#40;SQLXML 4.0&#41;위치 경로를 지정 합니다.](../../relational-databases/sqlxml-annotated-xsd-schemas-xpath-queries/location-path/specifying-a-location-path-sqlxml-4-0.md)  
+ [&#40;SQLXML 4.0&#41;위치 경로를 지정 합니다. ](../../relational-databases/sqlxml-annotated-xsd-schemas-xpath-queries/location-path/specifying-a-location-path-sqlxml-4-0.md)  
  XPath 쿼리에서 위치 경로를 지정하는 방법을 설명합니다.  
   
  [예제 XPath 쿼리 &#40;SQLXML 4.0&#41;](../../relational-databases/sqlxml-annotated-xsd-schemas-xpath-queries/samples/sample-xpath-queries-sqlxml-4-0.md)  
  SQLXML 4.0용 Xpath 쿼리 예제를 제공합니다.  
   
- [&#40;SQLXML 4.0&#41;XPath 데이터 형식](../../relational-databases/sqlxml-annotated-xsd-schemas-xpath-queries/xpath-data-types-sqlxml-4-0.md)  
+ [&#40;SQLXML 4.0&#41;XPath 데이터 형식 ](../../relational-databases/sqlxml-annotated-xsd-schemas-xpath-queries/xpath-data-types-sqlxml-4-0.md)  
  [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 및 XSD의 데이터 형식과는 많이 다른 XPath 데이터 형식에 대해 설명합니다.  
   
 ## <a name="see-also"></a>참고 항목  

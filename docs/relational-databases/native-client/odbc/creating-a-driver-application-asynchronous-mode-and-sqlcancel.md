@@ -19,13 +19,13 @@ helpviewer_keywords:
 ms.assetid: f31702a2-df76-4589-ac3b-da5412c03dc2
 author: markingmyname
 ms.author: maghan
-monikerRange: '>=aps-pdw-2016||=azuresqldb-current||=azure-sqldw-latest||>=sql-server-2016||=sqlallproducts-allversions||>=sql-server-linux-2017||=azuresqldb-mi-current'
-ms.openlocfilehash: 6b0e94854b13377b9d608c027992cdc48a396093
-ms.sourcegitcommit: e700497f962e4c2274df16d9e651059b42ff1a10
+monikerRange: '>=aps-pdw-2016||=azuresqldb-current||=azure-sqldw-latest||>=sql-server-2016||>=sql-server-linux-2017||=azuresqldb-mi-current'
+ms.openlocfilehash: 4b2e0d637dcd3e956afcbe3867c02464453ece2a
+ms.sourcegitcommit: 1a544cf4dd2720b124c3697d1e62ae7741db757c
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 08/17/2020
-ms.locfileid: "88428155"
+ms.lasthandoff: 12/14/2020
+ms.locfileid: "97463334"
 ---
 # <a name="creating-a-driver-application---asynchronous-mode-and-sqlcancel"></a>드라이버 애플리케이션 만들기 - 비동기 모드 및 SQLCancel
 [!INCLUDE [SQL Server](../../../includes/applies-to-version/sql-asdb-asdbmi-asa-pdw.md)]
@@ -49,7 +49,7 @@ SQLSetStmtAttr(hstmt, SQL_ATTR_ASYNC_ENABLE,
   
  명령 실행이 완료되었는지 테스트할 때 애플리케이션은 드라이버에 대해 동일한 매개 변수를 사용하여 동일한 함수를 호출합니다. 드라이버는 서버로부터 아직 응답을 받지 않은 경우 다시 SQL_STILL_EXECUTING을 반환합니다. 애플리케이션은 SQL_STILL_EXECUTING 이외의 코드가 반환될 때까지 명령을 주기적으로 테스트해야 합니다. 애플리케이션은 다른 반환 코드(SQL_ERROR 포함)가 수신되면 명령이 완료된 것으로 판단할 수 있습니다.  
   
- 명령이 오랫동안 보류되는 경우도 있습니다. 응용 프로그램이 응답을 기다리지 않고 명령을 취소 해야 하는 경우에는 처리 되지 않은 명령과 동일한 문 핸들을 사용 하 여 **Sqlcancel** 을 호출 하면 됩니다. 이 경우에만 **Sqlcancel** 을 사용 해야 합니다. 일부 프로그래머는 결과 집합을 통해 파트 방법을 처리 하 고 나머지 결과 집합을 취소 하려는 경우 **Sqlcancel** 을 사용 합니다. [SQLMoreResults](../../../relational-databases/native-client-odbc-api/sqlmoreresults.md) 또는 [SQLCloseCursor](../../../relational-databases/native-client-odbc-api/sqlclosecursor.md) 는 **sqlcancel**이 아닌 미해결 결과 집합의 나머지를 취소 하는 데 사용 해야 합니다.  
+ 명령이 오랫동안 보류되는 경우도 있습니다. 응용 프로그램이 응답을 기다리지 않고 명령을 취소 해야 하는 경우에는 처리 되지 않은 명령과 동일한 문 핸들을 사용 하 여 **Sqlcancel** 을 호출 하면 됩니다. 이 경우에만 **Sqlcancel** 을 사용 해야 합니다. 일부 프로그래머는 결과 집합을 통해 파트 방법을 처리 하 고 나머지 결과 집합을 취소 하려는 경우 **Sqlcancel** 을 사용 합니다. [SQLMoreResults](../../../relational-databases/native-client-odbc-api/sqlmoreresults.md) 또는 [SQLCloseCursor](../../../relational-databases/native-client-odbc-api/sqlclosecursor.md) 는 **sqlcancel** 이 아닌 미해결 결과 집합의 나머지를 취소 하는 데 사용 해야 합니다.  
   
 ## <a name="see-also"></a>참고 항목  
  [SQL Server Native Client ODBC 드라이버 애플리케이션 만들기](../../../relational-databases/native-client/odbc/creating-a-driver-application.md)  

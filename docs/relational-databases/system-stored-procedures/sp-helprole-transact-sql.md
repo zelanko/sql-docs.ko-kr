@@ -18,13 +18,13 @@ helpviewer_keywords:
 ms.assetid: b023103f-ccf3-44e2-b418-4be9bdd49f4a
 author: markingmyname
 ms.author: maghan
-monikerRange: =azuresqldb-current||>=sql-server-2016||=sqlallproducts-allversions||>=sql-server-linux-2017||=azuresqldb-mi-current
-ms.openlocfilehash: 8b96269437d8dd793c6a1baf0884d8a16160145d
-ms.sourcegitcommit: dd36d1cbe32cd5a65c6638e8f252b0bd8145e165
+monikerRange: =azuresqldb-current||>=sql-server-2016||>=sql-server-linux-2017||=azuresqldb-mi-current
+ms.openlocfilehash: 9832373d4b6c65ba16bfa83b8ef54cba963777c0
+ms.sourcegitcommit: 1a544cf4dd2720b124c3697d1e62ae7741db757c
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 09/08/2020
-ms.locfileid: "89538725"
+ms.lasthandoff: 12/14/2020
+ms.locfileid: "97462714"
 ---
 # <a name="sp_helprole-transact-sql"></a>sp_helprole(Transact-SQL)
 [!INCLUDE [SQL Server SQL Database](../../includes/applies-to-version/sql-asdb.md)]
@@ -41,7 +41,7 @@ sp_helprole [ [ @rolename = ] 'role' ]
 ```  
   
 ## <a name="arguments"></a>인수  
-`[ @rolename = ] 'role'` 현재 데이터베이스에 있는 역할의 이름입니다. *role* 은 **sysname**이며 기본값은 NULL입니다. 현재 데이터베이스에 *역할이* 있어야 합니다. *Role* 을 지정 하지 않으면 현재 데이터베이스의 모든 역할에 대 한 정보가 반환 됩니다.  
+`[ @rolename = ] 'role'` 현재 데이터베이스에 있는 역할의 이름입니다. *role* 은 **sysname** 이며 기본값은 NULL입니다. 현재 데이터베이스에 *역할이* 있어야 합니다. *Role* 을 지정 하지 않으면 현재 데이터베이스의 모든 역할에 대 한 정보가 반환 됩니다.  
   
 ## <a name="return-code-values"></a>반환 코드 값  
  0(성공) 또는 1(실패)  
@@ -51,16 +51,16 @@ sp_helprole [ [ @rolename = ] 'role' ]
 |열 이름|데이터 형식|Description|  
 |-----------------|---------------|-----------------|  
 |**RoleName**|**sysname**|현재 데이터베이스의 역할 이름입니다.|  
-|**RoleId**|**smallint**|**RoleName**의 ID입니다.|  
+|**RoleId**|**smallint**|**RoleName** 의 ID입니다.|  
 |**IsAppRole**|**int**|0 = **RoleName** 가 응용 프로그램 역할이 아닙니다.<br /><br /> 1 = **RoleName** 는 응용 프로그램 역할입니다.|  
   
 ## <a name="remarks"></a>설명  
- 역할과 연결 된 사용 권한을 보려면 **sp_helprotect**를 사용 합니다. 데이터베이스 역할의 멤버를 보려면 **sp_helprolemember**를 사용 합니다.  
+ 역할과 연결 된 사용 권한을 보려면 **sp_helprotect** 를 사용 합니다. 데이터베이스 역할의 멤버를 보려면 **sp_helprolemember** 를 사용 합니다.  
   
 ## <a name="permissions"></a>사용 권한  
  **public** 역할의 멤버 자격이 필요합니다.  
   
-## <a name="examples"></a>예제  
+## <a name="examples"></a>예  
  다음 쿼리는 현재 데이터베이스의 모든 역할을 반환합니다.  
   
 ```  

@@ -15,12 +15,13 @@ helpviewer_keywords:
 ms.assetid: 7bb32865-5afb-41ab-98b4-3fa545ee8953
 author: markingmyname
 ms.author: maghan
-monikerRange: '>=aps-pdw-2016||=azuresqldb-current||=azure-sqldw-latest||>=sql-server-2016||=sqlallproducts-allversions||>=sql-server-linux-2017||=azuresqldb-mi-current'
-ms.openlocfilehash: ec878229524d048969acbf3ca1af7cca4e318084
-ms.sourcegitcommit: f3321ed29d6d8725ba6378d207277a57cb5fe8c2
+monikerRange: '>=aps-pdw-2016||=azuresqldb-current||=azure-sqldw-latest||>=sql-server-2016||>=sql-server-linux-2017||=azuresqldb-mi-current'
+ms.openlocfilehash: d192f469759ae57d01f4789aef887f4cbb60adca
+ms.sourcegitcommit: 1a544cf4dd2720b124c3697d1e62ae7741db757c
+ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 07/06/2020
-ms.locfileid: "86008989"
+ms.lasthandoff: 12/14/2020
+ms.locfileid: "97462104"
 ---
 # <a name="sql-server-native-client-features"></a>SQL Server Native Client 기능
 [!INCLUDE [SQL Server](../../../includes/applies-to-version/sql-asdb-asdbmi-asa-pdw.md)]
@@ -44,7 +45,7 @@ ms.locfileid: "86008989"
  [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] Native Client가 XML 데이터 형식을 지원하는 방법을 설명합니다. XML 데이터 형식은 열 형식, 변수 형식, 매개 변수 형식 또는 함수 반환 형식에 사용할 수 있는 XML 기반 데이터 형식입니다.  
   
  [사용자 정의 형식 사용](../../../relational-databases/native-client/features/using-user-defined-types.md)  
- [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)]Native Client에서 UDT (사용자 정의 형식)를 지 원하는 방법에 대해 설명 합니다. 이러한 UDT는 데이터베이스에 개체 및 사용자 지정 데이터 구조를 저장할 수 있도록 하 여 SQL 형식 시스템을 확장 합니다 [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] .  
+ [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)]Native Client에서 UDT (User-Defined 형식)를 지 원하는 방법에 대해 설명 합니다. 이러한 UDT는 데이터베이스에 개체 및 사용자 지정 데이터 구조를 저장할 수 있도록 하 여 SQL 형식 시스템을 확장 합니다 [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] .  
   
  [큰 값 형식 사용](../../../relational-databases/native-client/features/using-large-value-types.md)  
  [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] Native Client가 큰 값 데이터 형식인 LOB(Large Object) 데이터 형식을 지원하는 방법을 설명합니다.  
@@ -73,7 +74,7 @@ ms.locfileid: "86008989"
  [FILESTREAM 지원](../../../relational-databases/native-client/features/filestream-support.md)  
  [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)]향상 된 FILESTREAM 기능에 대 한 Native Client 지원을 설명 합니다.  
   
- [클라이언트 연결의 SPN&#40;서비스 사용자 이름&#41; 지원](../../../relational-databases/native-client/features/service-principal-name-spn-support-in-client-connections.md)  
+ [클라이언트 연결의 서비스 사용자 이름&#40;SPN&#41; 지원](../../../relational-databases/native-client/features/service-principal-name-spn-support-in-client-connections.md)  
  모든 프로토콜에서 상호 인증을 지원하기 위해 SPN(서비스 사용자 이름)이 어떻게 확장되었는지 설명합니다.  
   
  [SQL Server Native Client의 스파스 열 지원](../../../relational-databases/native-client/features/sparse-columns-support-in-sql-server-native-client.md)  

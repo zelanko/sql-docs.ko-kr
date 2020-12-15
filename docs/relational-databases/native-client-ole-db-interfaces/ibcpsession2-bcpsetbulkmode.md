@@ -13,13 +13,13 @@ helpviewer_keywords:
 ms.assetid: babba19f-e67b-450c-b0e6-523a0f9d23ab
 author: markingmyname
 ms.author: maghan
-monikerRange: '>=aps-pdw-2016||=azuresqldb-current||=azure-sqldw-latest||>=sql-server-2016||=sqlallproducts-allversions||>=sql-server-linux-2017||=azuresqldb-mi-current'
-ms.openlocfilehash: 001eae4473b25c440dc3db54a5936e351f5566c1
-ms.sourcegitcommit: e700497f962e4c2274df16d9e651059b42ff1a10
+monikerRange: '>=aps-pdw-2016||=azuresqldb-current||=azure-sqldw-latest||>=sql-server-2016||>=sql-server-linux-2017||=azuresqldb-mi-current'
+ms.openlocfilehash: 422c80c19624201ca29b05f22e197ead2e4dbbf7
+ms.sourcegitcommit: 1a544cf4dd2720b124c3697d1e62ae7741db757c
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 08/17/2020
-ms.locfileid: "88475722"
+ms.lasthandoff: 12/14/2020
+ms.locfileid: "97460356"
 ---
 # <a name="ibcpsession2bcpsetbulkmode-native-client-ole-db-provider"></a>IBCPSession2:: Bcpset대량 모드 (Native Client OLE DB 공급자)
 [!INCLUDE[SQL Server Azure SQL Database Synapse Analytics PDW ](../../includes/applies-to-version/sql-asdb-asdbmi-asa-pdw.md)]
@@ -75,10 +75,10 @@ HRESULT BCPSetBulkMode (
   
 |속성|Description|  
 |--------------|-----------------|  
-|BCP_OUT_CHARACTER_MODE|문자 출력 모드를 지정합니다.<br /><br /> BCP.EXE의 -c 옵션에 해당하며, *eUserDataType* 속성이 **BCP_TYPE_SQLCHARACTER**로 설정된 IBCPSession::BCPColFmt에 해당합니다.|  
-|BCP_OUT_WIDE_CHARACTER_MODE|유니코드 출력 모드를 지정합니다.<br /><br /> BCP.EXE의 -w 옵션에 해당하며, *eUserDataType* 속성이 **BCP_TYPE_SQLNCHAR**로 설정된 IBCPSession::BCPColFmt에 해당합니다.|  
+|BCP_OUT_CHARACTER_MODE|문자 출력 모드를 지정합니다.<br /><br /> BCP.EXE의 -c 옵션에 해당하며, *eUserDataType* 속성이 **BCP_TYPE_SQLCHARACTER** 로 설정된 IBCPSession::BCPColFmt에 해당합니다.|  
+|BCP_OUT_WIDE_CHARACTER_MODE|유니코드 출력 모드를 지정합니다.<br /><br /> BCP.EXE의 -w 옵션에 해당하며, *eUserDataType* 속성이 **BCP_TYPE_SQLNCHAR** 로 설정된 IBCPSession::BCPColFmt에 해당합니다.|  
 |BCP_OUT_NATIVE_TEXT_MODE|비문자 유형의 경우 네이티브 유형을 지정하고 문자 유형의 경우 유니코드를 지정합니다.<br /><br /> BCP.EXE의 -N 옵션에 해당하며, *eUserDataType* 속성이 **BCP_TYPE_SQLNCHAR**(열 형식이 문자열인 경우) 또는 **BCP_TYPE_DEFAULT**(열 형식이 문자열이 아닌 경우)로 설정된 IBCPSession::BCPColFmt에 해당합니다.|  
-|BCP_OUT_NATIVE_MODE|네이티브 데이터베이스 유형을 지정합니다.<br /><br /> BCP.EXE의 -n 옵션에 해당하며, *eUserDataType* 속성이 **BCP_TYPE_DEFAULT**로 설정된 IBCPSession::BCPColFmt에 해당합니다.|  
+|BCP_OUT_NATIVE_MODE|네이티브 데이터베이스 유형을 지정합니다.<br /><br /> BCP.EXE의 -n 옵션에 해당하며, *eUserDataType* 속성이 **BCP_TYPE_DEFAULT** 로 설정된 IBCPSession::BCPColFmt에 해당합니다.|  
   
  IBCPSession2::BCPSetBulkMode와 충돌하지 않는 IBCPSession::BCPControl 옵션에 대해 IBCPSession::BCPControl 및 IBCPSession2::BCPSetBulkMode를 호출할 수 있습니다. 예를 들어 **BCP_OPTION_FIRST** 및 IBCPSession2::BCPSetBulkMode를 사용하여 IBCPSession::BCPControl을 호출할 수 있습니다.  
   

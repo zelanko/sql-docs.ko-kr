@@ -17,13 +17,13 @@ helpviewer_keywords:
 - INFORMATION_SCHEMA.SEQUENCES view
 author: markingmyname
 ms.author: maghan
-monikerRange: =azuresqldb-current||>=sql-server-2016||=sqlallproducts-allversions||>=sql-server-linux-2017||=azuresqldb-mi-current
-ms.openlocfilehash: 7fa13582e155387bbe7b7122e0051d830be2261b
-ms.sourcegitcommit: dd36d1cbe32cd5a65c6638e8f252b0bd8145e165
+monikerRange: =azuresqldb-current||>=sql-server-2016||>=sql-server-linux-2017||=azuresqldb-mi-current
+ms.openlocfilehash: 365b91660769cbb189b23366671486271177e6e4
+ms.sourcegitcommit: 1a544cf4dd2720b124c3697d1e62ae7741db757c
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 09/08/2020
-ms.locfileid: "89546339"
+ms.lasthandoff: 12/14/2020
+ms.locfileid: "97440594"
 ---
 # <a name="sequences-transact-sql"></a>시퀀스 (Transact-sql)
 
@@ -31,7 +31,7 @@ ms.locfileid: "89546339"
 
 현재 데이터베이스에서 현재 사용자가 액세스할 수 있는 각 시퀀스에 대해 하나의 행을 반환 합니다.
 
-이러한 뷰에서 정보를 검색 하려면 **INFORMATION_SCHEMA**의 정규화 된 이름을 지정_view_name_합니다.
+이러한 뷰에서 정보를 검색 하려면 **INFORMATION_SCHEMA**_.view_name_ 의 정규화 된 이름을 지정 합니다.
 
 |열 이름|데이터 형식|Description|
 |-----------------|---------------|-----------------|

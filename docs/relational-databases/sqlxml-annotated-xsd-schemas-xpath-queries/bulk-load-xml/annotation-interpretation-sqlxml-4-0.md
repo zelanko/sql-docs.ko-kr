@@ -17,13 +17,13 @@ ms.assetid: 1c46bdb6-2812-4a13-b60b-7101c04b299f
 author: MightyPen
 ms.author: genemi
 ms.custom: seo-lt-2019
-monikerRange: =azuresqldb-current||>=sql-server-2016||=sqlallproducts-allversions||>=sql-server-linux-2017||=azuresqldb-mi-current
-ms.openlocfilehash: 41cb1a0e65b7e453f408a43b71b1cad831b0cba4
-ms.sourcegitcommit: da88320c474c1c9124574f90d549c50ee3387b4c
+monikerRange: =azuresqldb-current||>=sql-server-2016||>=sql-server-linux-2017||=azuresqldb-mi-current
+ms.openlocfilehash: 9763f36a2a2d4678ec76f77cec65bc68d5cbef85
+ms.sourcegitcommit: 1a544cf4dd2720b124c3697d1e62ae7741db757c
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 07/01/2020
-ms.locfileid: "85790894"
+ms.lasthandoff: 12/14/2020
+ms.locfileid: "97462924"
 ---
 # <a name="annotation-interpretation-sqlxml-40"></a>주석 해석(SQLXML 4.0)
 [!INCLUDE [SQL Server Azure SQL Database](../../../includes/applies-to-version/sql-asdb.md)]

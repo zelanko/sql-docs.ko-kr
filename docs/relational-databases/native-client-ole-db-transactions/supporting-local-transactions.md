@@ -18,13 +18,13 @@ helpviewer_keywords:
 ms.assetid: 78f2e5fc-b6fb-4eda-9f71-991a4d6c4902
 author: markingmyname
 ms.author: maghan
-monikerRange: '>=aps-pdw-2016||=azuresqldb-current||=azure-sqldw-latest||>=sql-server-2016||=sqlallproducts-allversions||>=sql-server-linux-2017||=azuresqldb-mi-current'
-ms.openlocfilehash: d39825cbf19ffdb00f1031c603fb99337f7c2eb9
-ms.sourcegitcommit: e700497f962e4c2274df16d9e651059b42ff1a10
+monikerRange: '>=aps-pdw-2016||=azuresqldb-current||=azure-sqldw-latest||>=sql-server-2016||>=sql-server-linux-2017||=azuresqldb-mi-current'
+ms.openlocfilehash: 70db41bdf982201269b5274436ccafd3602861e3
+ms.sourcegitcommit: 1a544cf4dd2720b124c3697d1e62ae7741db757c
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 08/17/2020
-ms.locfileid: "88498947"
+ms.lasthandoff: 12/14/2020
+ms.locfileid: "97462124"
 ---
 # <a name="supporting-local-transactions-in-sql-server-native-client"></a>SQL Server Native Client에서 로컬 트랜잭션 지원
 [!INCLUDE[SQL Server Azure SQL Database Synapse Analytics PDW ](../../includes/applies-to-version/sql-asdb-asdbmi-asa-pdw.md)]
@@ -39,7 +39,7 @@ ms.locfileid: "88498947"
   
 |매개 변수|Description|  
 |---------------|-----------------|  
-|*isoLevel*[in]|이 트랜잭션에 사용할 격리 수준입니다. 로컬 트랜잭션에서 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] Native Client OLE DB 공급자는 다음을 지원 합니다.<br /><br /> **ISOLATIONLEVEL_UNSPECIFIED**<br /><br /> **ISOLATIONLEVEL_CHAOS**<br /><br /> **ISOLATIONLEVEL_READUNCOMMITTED**<br /><br /> **ISOLATIONLEVEL_READCOMMITTED**<br /><br /> **ISOLATIONLEVEL_REPEATABLEREAD**<br /><br /> **ISOLATIONLEVEL_CURSORSTABILITY**<br /><br /> **ISOLATIONLEVEL_REPEATABLEREAD**<br /><br /> **ISOLATIONLEVEL_SERIALIZABLE**<br /><br /> **ISOLATIONLEVEL_ISOLATED**<br /><br /> **ISOLATIONLEVEL_SNAPSHOT**<br /><br /> <br /><br /> 참고: [!INCLUDE[ssVersion2005](../../includes/ssversion2005-md.md)]부터는 데이터베이스에 버전 관리가 설정되어 있는지 여부에 관계없이 *isoLevel* 인수에 대해 ISOLATIONLEVEL_SNAPSHOT이 유효합니다. 그러나 버전 관리가 설정되어 있지 않거나 데이터베이스가 읽기 전용이 아닌 상태에서 사용자가 문을 실행하려고 하면 오류가 발생합니다. 또한 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 이전의 [!INCLUDE[ssVersion2005](../../includes/ssversion2005-md.md)] 버전에 연결할 때 ISOLATIONLEVEL_SNAPSHOT을 *isoLevel*로 지정하면 XACT_E_ISOLATIONLEVEL 오류가 발생합니다.|  
+|*isoLevel*[in]|이 트랜잭션에 사용할 격리 수준입니다. 로컬 트랜잭션에서 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] Native Client OLE DB 공급자는 다음을 지원 합니다.<br /><br /> **ISOLATIONLEVEL_UNSPECIFIED**<br /><br /> **ISOLATIONLEVEL_CHAOS**<br /><br /> **ISOLATIONLEVEL_READUNCOMMITTED**<br /><br /> **ISOLATIONLEVEL_READCOMMITTED**<br /><br /> **ISOLATIONLEVEL_REPEATABLEREAD**<br /><br /> **ISOLATIONLEVEL_CURSORSTABILITY**<br /><br /> **ISOLATIONLEVEL_REPEATABLEREAD**<br /><br /> **ISOLATIONLEVEL_SERIALIZABLE**<br /><br /> **ISOLATIONLEVEL_ISOLATED**<br /><br /> **ISOLATIONLEVEL_SNAPSHOT**<br /><br /> <br /><br /> 참고: [!INCLUDE[ssVersion2005](../../includes/ssversion2005-md.md)]부터는 데이터베이스에 버전 관리가 설정되어 있는지 여부에 관계없이 *isoLevel* 인수에 대해 ISOLATIONLEVEL_SNAPSHOT이 유효합니다. 그러나 버전 관리가 설정되어 있지 않거나 데이터베이스가 읽기 전용이 아닌 상태에서 사용자가 문을 실행하려고 하면 오류가 발생합니다. 또한 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 이전의 [!INCLUDE[ssVersion2005](../../includes/ssversion2005-md.md)] 버전에 연결할 때 ISOLATIONLEVEL_SNAPSHOT을 *isoLevel* 로 지정하면 XACT_E_ISOLATIONLEVEL 오류가 발생합니다.|  
 |*isoFlags*[in]|[!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]Native Client OLE DB 공급자는 0 이외의 값에 대해 오류를 반환 합니다.|  
 |*pOtherOptions*[in]|NULL이 아닌 경우 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] Native Client OLE DB 공급자는 인터페이스에서 options 개체를 요청 합니다. [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]옵션 개체의 *ultimeout* 멤버가 0이 아니면 Native Client OLE DB 공급자가 XACT_E_NOTIMEOUT을 반환 합니다. [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]Native Client OLE DB 공급자는 *szdescription* 멤버의 값을 무시 합니다.|  
 |*pulTransactionLevel*[out]|NULL이 아닌 경우 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] Native Client OLE DB 공급자는 트랜잭션 중첩 수준을 반환 합니다.|  
@@ -64,7 +64,7 @@ ms.locfileid: "88498947"
   
  [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]Native Client OLE DB 공급자가 **ITransactionObject** 인터페이스를 구현 하지 않습니다. 소비자가 인터페이스에 대한 참조를 얻으려고 하면 E_NOINTERFACE가 반환됩니다.  
   
- 이 예에서는 **ITransactionLocal**을 사용합니다.  
+ 이 예에서는 **ITransactionLocal** 을 사용합니다.  
   
 ```  
 // Interfaces used in the example.  

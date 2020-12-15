@@ -10,13 +10,13 @@ ms.topic: reference
 ms.assetid: 9b1d0d9d-1f6e-4399-8f61-e23f9a486a7a
 author: markingmyname
 ms.author: maghan
-monikerRange: '>=aps-pdw-2016||=azuresqldb-current||=azure-sqldw-latest||>=sql-server-2016||=sqlallproducts-allversions||>=sql-server-linux-2017||=azuresqldb-mi-current'
-ms.openlocfilehash: d95150bfc204607b4a89449b66cc8b89b433b1b2
-ms.sourcegitcommit: e700497f962e4c2274df16d9e651059b42ff1a10
+monikerRange: '>=aps-pdw-2016||=azuresqldb-current||=azure-sqldw-latest||>=sql-server-2016||>=sql-server-linux-2017||=azuresqldb-mi-current'
+ms.openlocfilehash: c7b5a802c430ce958e448edeac3066cd0012021f
+ms.sourcegitcommit: 1a544cf4dd2720b124c3697d1e62ae7741db757c
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 08/17/2020
-ms.locfileid: "88499029"
+ms.lasthandoff: 12/14/2020
+ms.locfileid: "97463394"
 ---
 # <a name="sql-server-native-client-date-and-time-improvements"></a>SQL Server Native Client 날짜 및 시간 기능 향상
 [!INCLUDE [SQL Server](../../../includes/applies-to-version/sql-asdb-asdbmi-asa-pdw.md)]
@@ -42,9 +42,9 @@ ms.locfileid: "88499029"
  프로세스 제어 및 제조 애플리케이션과 같은 일부 애플리케이션에는 정밀도가 최대 100나노초인 시간 데이터를 처리하는 기능이 필요합니다. 이를 위해 새 DBTYPE_DBTIME2(OLE DB) 및 SQL_SS_TIME2(ODBC) 형식이 추가되었습니다.  
   
 ### <a name="use-datetime-with-extended-fractional-seconds-precision"></a>확장된 초 소수 부분 자릿수의 Datetime 사용  
- OLE DB에는 정밀도가 최대 1나노초인 형식이 이미 정의되어 있습니다. 그러나 이 형식은 기존 [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] 애플리케이션에서 이미 사용되고 있고 이러한 애플리케이션에서는 1/300초의 정밀도만 허용합니다. 새 **datetime2 (3)** 형식은 기존 datetime 형식과 직접 호환 되지 않습니다. 이 형식이 애플리케이션의 동작에 영향을 미칠 수 있는 경우 애플리케이션에서 새 DBCOLUMN 플래그를 사용하여 실제 서버 유형을 확인해야 합니다.  
+ OLE DB에는 정밀도가 최대 1나노초인 형식이 이미 정의되어 있습니다. 그러나 이 형식은 기존 [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] 애플리케이션에서 이미 사용되고 있고 이러한 애플리케이션에서는 1/300초의 정밀도만 허용합니다. 새 **datetime2(3)** 형식은 기존 datetime 형식과 직접 호환되지 않습니다. 이 형식이 애플리케이션의 동작에 영향을 미칠 수 있는 경우 애플리케이션에서 새 DBCOLUMN 플래그를 사용하여 실제 서버 유형을 확인해야 합니다.  
   
- ODBC에도 정밀도가 최대 1나노초인 형식이 이미 정의되어 있습니다. 그러나 이 형식은 기존 [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] 애플리케이션에서 이미 사용되고 있고 이러한 애플리케이션에서는 3밀리초의 정밀도만 허용합니다. 새 **datetime2(3)** 형식은 기존 **datetime** 형식과 직접 호환되지 않습니다. **datetime2(3)** 의 정밀도는 1밀리초이고 **datetime** 의 정밀도는 1/300초입니다. ODBC 애플리케이션에서는 설명자 필드 SQL_DESC_TYPE_NAME으로 사용 중인 서버 유형을 확인할 수 있습니다. 따라서 기존 SQL_TYPE_TIMESTAMP(ODBC 2.0 애플리케이션의 경우 SQL_TIMESTAMP) 형식을 두 형식 모두에 사용할 수 있습니다.  
+ ODBC에도 정밀도가 최대 1나노초인 형식이 이미 정의되어 있습니다. 그러나 이 형식은 기존 [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] 애플리케이션에서 이미 사용되고 있고 이러한 애플리케이션에서는 3밀리초의 정밀도만 허용합니다. 새 **datetime2 (3)** 형식은 기존 **datetime** 형식과 직접 호환 되지 않습니다. **datetime2(3)** 의 정밀도는 1밀리초이고 **datetime** 의 정밀도는 1/300초입니다. ODBC 애플리케이션에서는 설명자 필드 SQL_DESC_TYPE_NAME으로 사용 중인 서버 유형을 확인할 수 있습니다. 따라서 기존 SQL_TYPE_TIMESTAMP(ODBC 2.0 애플리케이션의 경우 SQL_TIMESTAMP) 형식을 두 형식 모두에 사용할 수 있습니다.  
   
 ### <a name="use-datetime-with-extended-fractional-seconds-precision-and-timezone"></a>확장된 초 소수 부분 자릿수 및 표준 시간대의 Datetime 사용  
  일부 애플리케이션에는 표준 시간대 정보가 포함된 datetime 값이 필요합니다. 이러한 값은 새 DBTYPE_DBTIMESTAMPOFFSET(OLE DB) 및 SQL_SS_TIMESTAMPOFFSET(ODBC) 형식을 통해 지원됩니다.  

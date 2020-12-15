@@ -21,13 +21,13 @@ helpviewer_keywords:
 ms.assetid: 624ad949-5fed-4ce5-b319-878549f9487b
 author: markingmyname
 ms.author: maghan
-monikerRange: '>=aps-pdw-2016||=azuresqldb-current||=azure-sqldw-latest||>=sql-server-2016||=sqlallproducts-allversions||>=sql-server-linux-2017||=azuresqldb-mi-current'
-ms.openlocfilehash: c67769e4afd62c4b69628a263f3485ee63081a2a
-ms.sourcegitcommit: 783b35f6478006d654491cb52f6edf108acf2482
+monikerRange: '>=aps-pdw-2016||=azuresqldb-current||=azure-sqldw-latest||>=sql-server-2016||>=sql-server-linux-2017||=azuresqldb-mi-current'
+ms.openlocfilehash: a356ea0603d096fc339495f028b1e4f86af81f92
+ms.sourcegitcommit: 1a544cf4dd2720b124c3697d1e62ae7741db757c
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 10/09/2020
-ms.locfileid: "91892013"
+ms.lasthandoff: 12/14/2020
+ms.locfileid: "97463384"
 ---
 # <a name="changing-sql-server-native-client-passwords-programmatically"></a>프로그래밍 방식으로 SQL Server Native Client 암호 변경
 [!INCLUDE [SQL Server](../../../includes/applies-to-version/sql-asdb-asdbmi-asa-pdw.md)]
@@ -58,7 +58,7 @@ ms.locfileid: "91892013"
 ### <a name="ole-db-user-interface-password-expiration"></a>OLE DB 사용자 인터페이스 암호 만료  
  [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)]Native Client OLE DB 공급자는 **SQL Server 로그인** 대화 상자에 대 한 변경 내용을 통해 암호 만료를 지원 합니다. DBPROP_INIT_PROMPT 값을 DBPROMPT_NOPROMPT로 설정하면 암호가 만료할 경우 초기 연결 시도가 실패합니다.  
   
- DBPROP_INIT_PROMPT를 다른 값으로 설정하면 암호 만료 여부에 관계없이 사용자에게 **SQL Server 로그인** 대화 상자가 표시됩니다. 사용자는 **옵션** 단추를 클릭하고 **암호 변경**을 선택하여 암호를 변경할 수 있습니다.  
+ DBPROP_INIT_PROMPT를 다른 값으로 설정하면 암호 만료 여부에 관계없이 사용자에게 **SQL Server 로그인** 대화 상자가 표시됩니다. 사용자는 **옵션** 단추를 클릭하고 **암호 변경** 을 선택하여 암호를 변경할 수 있습니다.  
   
  사용자가 확인을 클릭하면 암호가 만료된 경우 [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)]에서 **SQL Server 암호 변경** 대화 상자를 사용하여 새 암호를 입력하고 확인하라는 메시지를 사용자에게 표시합니다.  
   
@@ -85,7 +85,7 @@ ms.locfileid: "91892013"
   
  "이전 암호" 속성을 설정할 때마다 공급자는 Windows 인증도 지정되어 항상 우선 적용되지 않는 경우 암호 변경이 시도되고 있다고 가정합니다.  
   
- Windows 인증이 사용되는 경우 이전 암호를 지정하면 이전 암호가 REQUIRED 또는 OPTIONAL로 지정되었는지에 따라 각각 DB_E_ERRORSOCCURRED 또는 DB_S_ERRORSOCCURRED가 발생하고, DBPROPSTATUS_CONFLICTINGBADVALUE의 상태 값이 *dwStatus*에 반환됩니다. 이 값은 **IDBInitialize::Initialize**를 호출할 때 검색됩니다.  
+ Windows 인증이 사용되는 경우 이전 암호를 지정하면 이전 암호가 REQUIRED 또는 OPTIONAL로 지정되었는지에 따라 각각 DB_E_ERRORSOCCURRED 또는 DB_S_ERRORSOCCURRED가 발생하고, DBPROPSTATUS_CONFLICTINGBADVALUE의 상태 값이 *dwStatus* 에 반환됩니다. 이 값은 **IDBInitialize::Initialize** 를 호출할 때 검색됩니다.  
   
  암호 변경 시도가 예기치 않게 실패하는 경우 서버에서 오류 코드 18468을 반환합니다. 연결 시도에서 표준 OLEDB 오류가 반환됩니다.  
   
@@ -97,9 +97,9 @@ ms.locfileid: "91892013"
 ### <a name="odbc-user-interface-password-expiration"></a>ODBC 사용자 인터페이스 암호 만료  
  [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)]Native CLIENT ODBC 드라이버는 **SQL Server 로그인** 대화 상자에 대 한 변경 내용을 통해 암호 만료를 지원 합니다.  
   
- [SQLDriverConnect](../../../relational-databases/native-client-odbc-api/sqldriverconnect.md) 이 호출 되 고 **drivercompletion** 값이 SQL_DRIVER_NOPROMPT로 설정 된 경우 암호가 만료 되 면 초기 연결 시도가 실패 합니다. SQLSTATE 값 28000 및 네이티브 오류 코드 값 18487은 **SQLError** 또는 **SQLGetDiagRec**에 대 한 후속 호출에서 반환 됩니다.  
+ [SQLDriverConnect](../../../relational-databases/native-client-odbc-api/sqldriverconnect.md) 이 호출 되 고 **drivercompletion** 값이 SQL_DRIVER_NOPROMPT로 설정 된 경우 암호가 만료 되 면 초기 연결 시도가 실패 합니다. SQLSTATE 값 28000 및 네이티브 오류 코드 값 18487은 **SQLError** 또는 **SQLGetDiagRec** 에 대 한 후속 호출에서 반환 됩니다.  
   
- **Drivercompletion** 가 다른 값으로 설정 된 경우 암호가 만료 되었는지 여부에 관계 없이 사용자에 게 **SQL Server 로그인** 대화 상자가 표시 됩니다. 사용자는 **옵션** 단추를 클릭하고 **암호 변경**을 선택하여 암호를 변경할 수 있습니다.  
+ **Drivercompletion** 가 다른 값으로 설정 된 경우 암호가 만료 되었는지 여부에 관계 없이 사용자에 게 **SQL Server 로그인** 대화 상자가 표시 됩니다. 사용자는 **옵션** 단추를 클릭하고 **암호 변경** 을 선택하여 암호를 변경할 수 있습니다.  
   
  사용자가 확인을 클릭 하 고 암호가 만료 되 면에서 [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] **암호 SQL Server 변경** 대화 상자를 사용 하 여 새 암호를 입력 하 고 확인 하 라는 메시지를 표시 합니다.  
   

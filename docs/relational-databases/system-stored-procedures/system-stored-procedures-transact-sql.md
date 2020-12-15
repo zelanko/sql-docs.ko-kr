@@ -22,13 +22,13 @@ helpviewer_keywords:
 ms.assetid: a5c4d5b8-5a24-4a2d-99b4-d003b546ee3a
 author: VanMSFT
 ms.author: vanto
-monikerRange: =azuresqldb-current||>=sql-server-2016||=sqlallproducts-allversions||>=sql-server-linux-2017||=azuresqldb-mi-current
-ms.openlocfilehash: 581ac92066750ac578cf8103383087fddeb01e65
-ms.sourcegitcommit: 04cf7905fa32e0a9a44575a6f9641d9a2e5ac0f8
+monikerRange: =azuresqldb-current||>=sql-server-2016||>=sql-server-linux-2017||=azuresqldb-mi-current
+ms.openlocfilehash: 60d30105f0c56224748a3c676ba4d76b73aa989b
+ms.sourcegitcommit: 1a544cf4dd2720b124c3697d1e62ae7741db757c
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 10/07/2020
-ms.locfileid: "91810303"
+ms.lasthandoff: 12/14/2020
+ms.locfileid: "97462674"
 ---
 # <a name="system-stored-procedures-transact-sql"></a>시스템 저장 프로시저(Transact-SQL)
 
@@ -38,9 +38,9 @@ ms.locfileid: "91810303"
   
 ## <a name="in-this-section"></a>섹션 내용  
   
-|범주|Description|  
+|범주|설명|  
 |--------------|-----------------|  
-|[활성 지역 복제 저장 프로시저]()|Azure SQL Database에서 활성 지역 복제 구성을 관리 하는 데 사용 됩니다.|  
+|[활성 Geo-Replication 저장 프로시저]()|에서 활성 Geo-Replication 구성을 관리 하기 위해를 관리 하는 데 사용 됩니다 Azure SQL Database|  
 |[카탈로그 저장 프로시저](../../relational-databases/system-stored-procedures/catalog-stored-procedures-transact-sql.md)|ODBC 데이터 사전 기능을 구현하고 ODBC 애플리케이션을 원본 시스템 테이블 변경으로부터 격리합니다.|  
 |[변경 데이터 캡처 저장 프로시저](../../relational-databases/system-stored-procedures/change-data-capture-stored-procedures-transact-sql.md)|변경 데이터 캡처 개체를 사용하도록 설정 또는 해제하거나 해당 개체에 대해 보고합니다.|  
 |[커서 저장 프로시저](../../relational-databases/system-stored-procedures/cursor-stored-procedures-transact-sql.md)|커서 변수 기능을 구현합니다.|  
@@ -75,7 +75,7 @@ ms.locfileid: "91810303"
 ## <a name="api-system-stored-procedures"></a>API 시스템 저장 프로시저  
  ADO, OLE DB 및 ODBC 애플리케이션에 대해 [!INCLUDE[ssSqlProfiler](../../includes/sssqlprofiler-md.md)]를 실행하는 사용자는 이러한 애플리케이션이 [!INCLUDE[tsql](../../includes/tsql-md.md)] 참조에서 다루지 않는 시스템 저장 프로시저를 사용한다는 사실을 알 수 있습니다. 이러한 저장 프로시저는 [!INCLUDE[msCoName](../../includes/msconame-md.md)] [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] native Client OLE DB 공급자와 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] native client ODBC 드라이버에서 데이터베이스 API 기능을 구현 하는 데 사용 됩니다. 이러한 저장 프로시저는 사용자 요청을 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]에 전달하기 위해 공급자 또는 드라이버가 사용하는 메커니즘으로 공급자 또는 드라이버에서 내부적으로만 사용하도록 되어 있습니다. 기반 응용 프로그램에서 명시적으로 호출 하 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 는 것은 지원 되지 않습니다.  
   
- Sp_createorphan 및 sp_droporphans 저장 프로시저는 ODBC **ntext**, **text**및 **image** 처리에 사용 됩니다.  
+ Sp_createorphan 및 sp_droporphans 저장 프로시저는 ODBC **ntext**, **text** 및 **image** 처리에 사용 됩니다.  
   
  sp_reset_connection 저장 프로시저는 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]에서 트랜잭션의 원격 저장 프로시저 호출을 지원하는 데 사용됩니다. 이 저장 프로시저는 연결 풀에서 연결이 다시 사용될 때 Audit Login 및 Audit Logout 이벤트도 실행합니다.  
   

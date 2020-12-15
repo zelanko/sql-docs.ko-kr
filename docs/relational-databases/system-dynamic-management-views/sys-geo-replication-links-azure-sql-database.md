@@ -17,13 +17,13 @@ helpviewer_keywords:
 ms.assetid: 58911798-1d60-4f28-87ab-2def2bfc3de7
 author: markingmyname
 ms.author: maghan
-monikerRange: = azuresqldb-current || = sqlallproducts-allversions
-ms.openlocfilehash: 568cda98a1bbb55e5c4f3e07bd53592ff642f0bd
-ms.sourcegitcommit: 968969b62bc158b9843aba5034c9d913519bc4a7
+monikerRange: = azuresqldb-current
+ms.openlocfilehash: 12adf94f84fbe9c1b47093cf8ab6b106fb9d5249
+ms.sourcegitcommit: 1a544cf4dd2720b124c3697d1e62ae7741db757c
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 10/06/2020
-ms.locfileid: "91753695"
+ms.lasthandoff: 12/14/2020
+ms.locfileid: "97440668"
 ---
 # <a name="sysgeo_replication_links-azure-sql-database"></a>sys.geo_replication_links(Azure SQL Database)
 
@@ -50,7 +50,7 @@ ms.locfileid: "91753695"
 
 이 뷰는 **master** 데이터베이스에서 서버 수준 보안 주체 로그인에 대해서만 사용할 수 있습니다.  
   
-## <a name="example"></a>예제
+## <a name="example"></a>예
 
 지역에서 복제 링크를 사용 하 여 모든 데이터베이스를 표시 합니다.  
 

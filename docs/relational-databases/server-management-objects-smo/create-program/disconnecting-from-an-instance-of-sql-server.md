@@ -16,13 +16,13 @@ helpviewer_keywords:
 ms.assetid: 4ca7f7eb-6b3f-4c73-ac63-88afa8570b61
 author: markingmyname
 ms.author: maghan
-monikerRange: =azuresqldb-current||=azure-sqldw-latest||>=sql-server-2016||=sqlallproducts-allversions||>=sql-server-linux-2017||=azuresqldb-mi-current
-ms.openlocfilehash: 2e98180b877fb81c5d32f908a2f8e9cdc131a45a
-ms.sourcegitcommit: 4d370399f6f142e25075b3714e5c2ce056b1bfd0
+monikerRange: =azuresqldb-current||=azure-sqldw-latest||>=sql-server-2016||>=sql-server-linux-2017||=azuresqldb-mi-current
+ms.openlocfilehash: 7d556721c3fcd0b52e202f17bd07eb1781b58867
+ms.sourcegitcommit: 1a544cf4dd2720b124c3697d1e62ae7741db757c
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 10/09/2020
-ms.locfileid: "91868618"
+ms.lasthandoff: 12/14/2020
+ms.locfileid: "97463044"
 ---
 # <a name="disconnecting-from-an-instance-of-sql-server"></a>SQL Server 인스턴스에서 연결 끊기
 [!INCLUDE [SQL Server ASDB, ASDBMI, ASDW ](../../../includes/applies-to-version/sql-asdb-asdbmi-asa.md)]
@@ -30,7 +30,7 @@ ms.locfileid: "91868618"
   수동으로 SMO( [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] Management Objects) 개체를 닫고 연결을 끊을 필요는 없습니다. 필요에 따라 연결이 열리고 닫힙니다.  
   
 ## <a name="connection-pooling"></a>연결 풀링  
- [Connect](/previous-versions/sql/sql-server-2014/ms199449(v=sql.120)) 메서드를 호출 하면 연결이 자동으로 해제 되지 않습니다. 연결 풀에 대 한 연결을 해제 하려면 [Disconnect](/previous-versions/sql/sql-server-2014/ms199428(v=sql.120)) 메서드를 명시적으로 호출 해야 합니다. 풀링되지 않은 연결을 요청할 수도 있습니다. ServerConnection 개체를 참조 하는 속성의 [Nonpooledconnection](/previous-versions/sql/sql-server-2014/ms214357(v=sql.120)) 속성을 설정 하 여이 작업을 수행 <xref:Microsoft.SqlServer.Management.Smo.Server.ConnectionContext%2A> 합니다. [ServerConnection](/previous-versions/sql/sql-server-2014/ms218641(v=sql.120))  
+ [Connect](/previous-versions/sql/sql-server-2014/ms199449(v=sql.120)) 메서드를 호출 하면 연결이 자동으로 해제 되지 않습니다. 연결 풀에 대 한 연결을 해제 하려면 [Disconnect](/previous-versions/sql/sql-server-2014/ms199428(v=sql.120)) 메서드를 명시적으로 호출 해야 합니다. 풀링되지 않은 연결을 요청할 수도 있습니다. ServerConnection 개체를 참조 하는 속성의 [Nonpooledconnection](/previous-versions/sql/sql-server-2014/ms214357(v=sql.120)) 속성을 설정 하 여이 작업을 수행 <xref:Microsoft.SqlServer.Management.Smo.Server.ConnectionContext%2A> 합니다. [](/previous-versions/sql/sql-server-2014/ms218641(v=sql.120))  
   
 ## <a name="disconnecting-from-an-instance-of-sql-server-for-rmo"></a>RMO에 대해 SQL Server 인스턴스에서 연결 끊기  
  RMO를 사용하여 프로그래밍할 때 서버 연결을 닫는 방법은 SMO와는 약간 다릅니다.  

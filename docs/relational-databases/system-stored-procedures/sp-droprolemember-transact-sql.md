@@ -18,13 +18,13 @@ helpviewer_keywords:
 ms.assetid: c2f19ab1-e742-4d56-ba8e-8ffd40cf4925
 ms.author: vanto
 author: VanMSFT
-monikerRange: '>=aps-pdw-2016||=azuresqldb-current||=azure-sqldw-latest||>=sql-server-2016||=sqlallproducts-allversions||>=sql-server-linux-2017||=azuresqldb-mi-current'
-ms.openlocfilehash: 2ef98244eec97fda5d0d11220348dbd4f14dcf61
-ms.sourcegitcommit: a5398f107599102af7c8cda815d8e5e9a367ce7e
+monikerRange: '>=aps-pdw-2016||=azuresqldb-current||=azure-sqldw-latest||>=sql-server-2016||>=sql-server-linux-2017||=azuresqldb-mi-current'
+ms.openlocfilehash: 013cd061a96bd4f199591fa65f15718d27056d89
+ms.sourcegitcommit: 1a544cf4dd2720b124c3697d1e62ae7741db757c
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 10/13/2020
-ms.locfileid: "92006519"
+ms.lasthandoff: 12/14/2020
+ms.locfileid: "97440569"
 ---
 # <a name="sp_droprolemember-transact-sql"></a>sp_droprolemember(Transact-SQL)
 
@@ -56,9 +56,9 @@ sp_droprolemember 'role' ,
 [!INCLUDE[synapse-analytics-od-unsupported-syntax](../../includes/synapse-analytics-od-unsupported-syntax.md)]
   
 ## <a name="arguments"></a>인수  
-`[ @rolename = ] 'role'` 멤버가 제거 되는 역할의 이름입니다. *role* 은 **sysname**이며 기본값은 없습니다. 현재 데이터베이스에 *역할이* 있어야 합니다.  
+`[ @rolename = ] 'role'` 멤버가 제거 되는 역할의 이름입니다. *role* 은 **sysname** 이며 기본값은 없습니다. 현재 데이터베이스에 *역할이* 있어야 합니다.  
   
-`[ @membername = ] 'security_account'` 역할에서 제거 되는 보안 계정의 이름입니다. *security_account* 는 **sysname**이며 기본값은 없습니다. *security_account* 는 데이터베이스 사용자, 다른 데이터베이스 역할, windows 로그인 또는 windows 그룹이 될 수 있습니다. *security_account* 는 현재 데이터베이스에 있어야 합니다.  
+`[ @membername = ] 'security_account'` 역할에서 제거 되는 보안 계정의 이름입니다. *security_account* 는 **sysname** 이며 기본값은 없습니다. *security_account* 는 데이터베이스 사용자, 다른 데이터베이스 역할, windows 로그인 또는 windows 그룹이 될 수 있습니다. *security_account* 는 현재 데이터베이스에 있어야 합니다.  
   
 ## <a name="return-code-values"></a>반환 코드 값  
  0(성공) 또는 1(실패)  

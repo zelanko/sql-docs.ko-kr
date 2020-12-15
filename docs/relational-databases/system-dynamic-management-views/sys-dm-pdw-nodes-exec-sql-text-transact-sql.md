@@ -12,18 +12,18 @@ dev_langs:
 ms.assetid: ''
 author: XiaoyuMSFT
 ms.author: xiaoyul
-monikerRange: =azure-sqldw-latest || = sqlallproducts-allversions
-ms.openlocfilehash: 2bf5b58a1e9dca5f282691ae29dd534a06ca5002
-ms.sourcegitcommit: 76ab3b57718341c6057613c9bd38cf82fb17786e
+monikerRange: =azure-sqldw-latest
+ms.openlocfilehash: 9bb87af8d580830072dd3a8199958497b8e38a25
+ms.sourcegitcommit: 1a544cf4dd2720b124c3697d1e62ae7741db757c
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 10/14/2020
-ms.locfileid: "92059479"
+ms.lasthandoff: 12/14/2020
+ms.locfileid: "97440816"
 ---
 # <a name="syspdw_nodes_dm_exec_sql_text-transact-sql"></a>sys.pdw_nodes_dm_exec_sql_text (Transact-sql)
 [!INCLUDE [asa](../../includes/applies-to-version/asa.md)]
 
-지정 된 *sql_handle*에 의해 식별 되는 SQL 일괄 처리의 텍스트를 반환 합니다. 이 테이블 반환 함수는 시스템 함수 **fn_get_sql**을 대체합니다.  
+지정 된 *sql_handle* 에 의해 식별 되는 SQL 일괄 처리의 텍스트를 반환 합니다. 이 테이블 반환 함수는 시스템 함수 **fn_get_sql** 을 대체합니다.  
    
 ## <a name="table-returned"></a>반환 된 테이블  
 |열 이름|데이터 형식|Description|  
@@ -41,7 +41,7 @@ ms.locfileid: "92059479"
 ## <a name="permissions"></a>사용 권한  
  서버에 대 한 **sysadmin** 서버 역할 또는 `VIEW SERVER STATE` 권한이 필요 합니다.  
   
-## <a name="see-also"></a>참고 항목  
+## <a name="see-also"></a>참조  
  [Transact-sql&#41;&#40;Azure Synapse 분석 및 병렬 데이터 웨어하우스 동적 관리 뷰 ](../../relational-databases/system-dynamic-management-views/sql-and-parallel-data-warehouse-dynamic-management-views.md)  
 
   ## <a name="next-steps"></a>다음 단계

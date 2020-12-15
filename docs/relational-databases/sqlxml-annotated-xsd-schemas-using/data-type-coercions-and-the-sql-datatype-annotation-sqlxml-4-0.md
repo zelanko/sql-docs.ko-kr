@@ -22,13 +22,13 @@ author: MightyPen
 ms.author: genemi
 ms.reviewer: ''
 ms.custom: seo-lt-2019
-monikerRange: =azuresqldb-current||>=sql-server-2016||=sqlallproducts-allversions||>=sql-server-linux-2017||=azuresqldb-mi-current
-ms.openlocfilehash: 926f9588ad5bf9a29490a84017f3317f8ec5c424
-ms.sourcegitcommit: da88320c474c1c9124574f90d549c50ee3387b4c
+monikerRange: =azuresqldb-current||>=sql-server-2016||>=sql-server-linux-2017||=azuresqldb-mi-current
+ms.openlocfilehash: 0e457aa6c1d1e16e96682f19898e22813254e9ef
+ms.sourcegitcommit: 1a544cf4dd2720b124c3697d1e62ae7741db757c
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 07/01/2020
-ms.locfileid: "85750785"
+ms.lasthandoff: 12/14/2020
+ms.locfileid: "97461804"
 ---
 # <a name="data-type-conversions-and-the-sqldatatype-annotation-sqlxml-40"></a>데이터 형식 변환 및 sql: datatype 주석 (SQLXML 4.0)
 [!INCLUDE [SQL Server Azure SQL Database](../../includes/applies-to-version/sql-asdb.md)]
@@ -37,7 +37,7 @@ ms.locfileid: "85750785"
  스키마에 XSD 형식을 지정 하는 것 외에도 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] **sql: datatype** 주석을 사용 하 여 Microsoft 데이터 형식을 지정할 수 있습니다. **Xsd: type** 및 **sql: DATATYPE** 특성은 xsd 데이터 형식과 데이터 형식 간의 매핑을 제어 합니다 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] .  
   
 ## <a name="xsdtype-attribute"></a>xsd:type 특성  
- **Xsd: type** 특성을 사용 하 여 열에 매핑되는 특성 또는 요소의 XML 데이터 형식을 지정할 수 있습니다. **Xsd: type** 은 서버에서 반환 되는 문서 및 실행 되는 XPath 쿼리에 영향을 줍니다. **Xsd: type**이 포함 된 매핑 스키마에 대해 xpath 쿼리를 실행 하면 xpath는 쿼리를 처리할 때 지정 된 데이터 형식을 사용 합니다. XPath에서 **xsd: type**을 사용 하는 방법에 대 한 자세한 내용은 [&#40;SQLXML 4.0&#41;Xsd 데이터 형식을 xpath 데이터 형식에 매핑 ](../../relational-databases/sqlxml-annotated-xsd-schemas-using/mapping-xsd-data-types-to-xpath-data-types-sqlxml-4-0.md)을 참조 하세요.  
+ **Xsd: type** 특성을 사용 하 여 열에 매핑되는 특성 또는 요소의 XML 데이터 형식을 지정할 수 있습니다. **Xsd: type** 은 서버에서 반환 되는 문서 및 실행 되는 XPath 쿼리에 영향을 줍니다. **Xsd: type** 이 포함 된 매핑 스키마에 대해 xpath 쿼리를 실행 하면 xpath는 쿼리를 처리할 때 지정 된 데이터 형식을 사용 합니다. XPath에서 **xsd: type** 을 사용 하는 방법에 대 한 자세한 내용은 [&#40;SQLXML 4.0&#41;Xsd 데이터 형식을 xpath 데이터 형식에 매핑](../../relational-databases/sqlxml-annotated-xsd-schemas-using/mapping-xsd-data-types-to-xpath-data-types-sqlxml-4-0.md)을 참조 하세요.  
   
  반환된 문서에서 모든 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 데이터 형식은 문자열 표현으로 변환됩니다. 일부 데이터 형식에는 추가적인 변환이 필요합니다. 다음 표에서는 다양 한 **xsd: type** 값에 사용 되는 변환을 나열 합니다.  
   
@@ -52,7 +52,7 @@ ms.locfileid: "85750785"
 |나머지|추가 변환 없음|  
   
 > [!NOTE]  
->  에서 반환 하는 값 중 일부는 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] **xsd: type**을 사용 하 여 지정 된 XML 데이터 형식과 호환 되지 않을 수 있습니다. 예를 들어 "XYZ"를 **decimal** 데이터 형식으로 변환 하는 것과 같이 변환할 수 없거나 값이 해당 데이터 형식의 범위를 초과 하는 경우 (예:-10만을 **unsignedshort** 않는 xsd 형식으로 변환) 호환되지 않는 형식 변환은 XML 문서를 유효하지 않게 만들거나 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 오류를 발생시킬 수 있습니다.  
+>  에서 반환 하는 값 중 일부는 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] **xsd: type** 을 사용 하 여 지정 된 XML 데이터 형식과 호환 되지 않을 수 있습니다. 예를 들어 "XYZ"를 **decimal** 데이터 형식으로 변환 하는 것과 같이 변환할 수 없거나 값이 해당 데이터 형식의 범위를 초과 하는 경우 (예:-10만을 **unsignedshort** 않는 xsd 형식으로 변환) 호환되지 않는 형식 변환은 XML 문서를 유효하지 않게 만들거나 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 오류를 발생시킬 수 있습니다.  
   
 ## <a name="mapping-from-sql-server-data-types-to-xsd-data-types"></a>SQL Server 데이터 형식에서 XSD 데이터 형식으로의 매핑  
  다음 표에서는 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 데이터 형식에서 XSD 데이터 형식으로의 명확한 매핑을 보여 줍니다. [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 형식을 아는 경우 이 표를 통해 XSD 스키마에 지정할 수 있는 해당 XSD 형식을 확인할 수 있습니다.  
@@ -89,15 +89,15 @@ ms.locfileid: "85750785"
 ## <a name="sqldatatype-annotation"></a>sql:datatype 주석  
  **Sql: datatype** 주석은 데이터 형식을 지정 하는 데 사용 됩니다. [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 다음 경우에는이 주석을 지정 해야 합니다.  
   
--   **dateTime** [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] XSD **날짜**/시간, **날짜**또는 **시간** 형식에서 datetime 열로 대량 로드 합니다. 이 경우 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] **sql: datatype = "dateTime"** 을 사용 하 여 열 데이터 형식을 식별 해야 합니다. 이 규칙은 updategram에도 적용됩니다.  
+-    [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] XSD **날짜**/시간, **날짜** 또는 **시간** 형식에서 datetime 열로 대량 로드 합니다. 이 경우 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] **sql: datatype = "dateTime"** 을 사용 하 여 열 데이터 형식을 식별 해야 합니다. 이 규칙은 updategram에도 적용됩니다.  
   
--   Uniqueidentifier 형식의 열에 대량 로드 하 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] **uniqueidentifier** 고 XSD 값은 중괄호 ({및})를 포함 하는 GUID입니다. **Sql: datatype = "uniqueidentifier"** 를 지정 하면 열에 삽입 되기 전에 값에서 중괄호가 제거 됩니다. **Sql: datatype** 을 지정 하지 않으면 값이 중괄호와 함께 전송 되 고 삽입 또는 업데이트가 실패 합니다.  
+-   Uniqueidentifier 형식의 열에 대량 로드 하 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]  고 XSD 값은 중괄호 ({및})를 포함 하는 GUID입니다. **Sql: datatype = "uniqueidentifier"** 를 지정 하면 열에 삽입 되기 전에 값에서 중괄호가 제거 됩니다. **Sql: datatype** 을 지정 하지 않으면 값이 중괄호와 함께 전송 되 고 삽입 또는 업데이트가 실패 합니다.  
   
--   XML 데이터 형식 **base64Binary** 는 다양 한 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 데이터 형식 (**binary**, **image**또는 **varbinary**)에 매핑됩니다. XML 데이터 형식 **base64Binary** 을 특정 데이터 형식에 매핑하려면 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] **sql: datatype** 주석을 사용 합니다. 이 주석은 특성이 매핑될 열의 명시적인 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 데이터 형식을 지정합니다. 데이터가 데이터베이스에 저장될 경우 이 주석을 사용하는 것이 좋습니다. **Sql: datatype** 주석을 지정 하 여 명시적 데이터 형식을 식별할 수 있습니다 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] .  
+-   XML 데이터 형식 **base64Binary** 는 다양 한 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 데이터 형식 (**binary**, **image** 또는 **varbinary**)에 매핑됩니다. XML 데이터 형식 **base64Binary** 을 특정 데이터 형식에 매핑하려면 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] **sql: datatype** 주석을 사용 합니다. 이 주석은 특성이 매핑될 열의 명시적인 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 데이터 형식을 지정합니다. 데이터가 데이터베이스에 저장될 경우 이 주석을 사용하는 것이 좋습니다. **Sql: datatype** 주석을 지정 하 여 명시적 데이터 형식을 식별할 수 있습니다 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] .  
   
  일반적으로 스키마에서 **sql: datatype** 을 지정 하는 것이 좋습니다.  
   
-## <a name="examples"></a>예제  
+## <a name="examples"></a>예  
  다음 예를 사용하여 작업 예제를 만들려면 특정 요구 사항이 충족되어야 합니다. 자세한 내용은 [SQLXML 예를 실행 하기 위한 요구 사항](../../relational-databases/sqlxml/requirements-for-running-sqlxml-examples.md)을 참조 하세요.  
   
 ### <a name="a-specifying-xsdtype"></a>A. xsd:type 지정  
@@ -193,6 +193,6 @@ ms.locfileid: "85750785"
 ```  
   
 ### <a name="b-specifying-sql-data-type-using-sqldatatype"></a>B. sql:datatype을 사용하여 SQL 데이터 형식 지정  
- 작업 샘플은 [SQLXML 4.0&#41;&#40;XML 대량 로드 예제의 ](../../relational-databases/sqlxml-annotated-xsd-schemas-xpath-queries/bulk-load-xml/xml-bulk-load-examples-sqlxml-4-0.md)예제 G를 참조 하세요. 이 예에서는 "{" 및 "}"을 포함하는 GUID 값을 대량 로드합니다. 이 예의 스키마는 **sql: datatype** 을 지정 하 여 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 데이터 형식을 **uniqueidentifier**로 식별 합니다. 이 예에서는 스키마에 **sql: datatype** 을 지정 해야 하는 경우를 보여 줍니다.  
+ 작업 샘플은 [SQLXML 4.0&#41;&#40;XML 대량 로드 예제의 ](../../relational-databases/sqlxml-annotated-xsd-schemas-xpath-queries/bulk-load-xml/xml-bulk-load-examples-sqlxml-4-0.md)예제 G를 참조 하세요. 이 예에서는 "{" 및 "}"을 포함하는 GUID 값을 대량 로드합니다. 이 예의 스키마는 **sql: datatype** 을 지정 하 여 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 데이터 형식을 **uniqueidentifier** 로 식별 합니다. 이 예에서는 스키마에 **sql: datatype** 을 지정 해야 하는 경우를 보여 줍니다.  
   
   

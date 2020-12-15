@@ -13,13 +13,13 @@ helpviewer_keywords:
 ms.assetid: 4810fe3f-78ee-4f0d-8bcc-a4659fbcf46f
 author: markingmyname
 ms.author: maghan
-monikerRange: '>=aps-pdw-2016||=azuresqldb-current||=azure-sqldw-latest||>=sql-server-2016||=sqlallproducts-allversions||>=sql-server-linux-2017||=azuresqldb-mi-current'
-ms.openlocfilehash: d61cdfb974a59f61fe53ba65656d49002a816d32
-ms.sourcegitcommit: 4d370399f6f142e25075b3714e5c2ce056b1bfd0
+monikerRange: '>=aps-pdw-2016||=azuresqldb-current||=azure-sqldw-latest||>=sql-server-2016||>=sql-server-linux-2017||=azuresqldb-mi-current'
+ms.openlocfilehash: 12c2e1a04ce4ed79d90d7f8e10852e68e0e86352
+ms.sourcegitcommit: 1a544cf4dd2720b124c3697d1e62ae7741db757c
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 10/09/2020
-ms.locfileid: "91868866"
+ms.lasthandoff: 12/14/2020
+ms.locfileid: "97440028"
 ---
 # <a name="processing-results---process-results"></a>결과 처리 - 결과 처리
 [!INCLUDE[SQL Server Azure SQL Database Synapse Analytics PDW ](../../includes/applies-to-version/sql-asdb-asdbmi-asa-pdw.md)]
@@ -38,7 +38,7 @@ ODBC 응용 프로그램에서 결과를 처리 하려면 먼저 결과 집합�
   
     -   바인딩된 열을 사용하는 경우 이제 바인딩된 열 버퍼에서 사용할 수 있는 데이터를 사용합니다.  
   
-    -   바인딩되지 않은 열을 사용하는 경우 [SQLGetData](../../relational-databases/native-client-odbc-api/sqlgetdata.md)를 한 번 이상 호출하여 바인딩된 마지막 열 다음의 바인딩되지 않은 열 데이터를 가져옵니다. **SQLGetData**는 번호가 가장 작은 열부터 차례로 호출해야 합니다.  
+    -   바인딩되지 않은 열을 사용하는 경우 [SQLGetData](../../relational-databases/native-client-odbc-api/sqlgetdata.md)를 한 번 이상 호출하여 바인딩된 마지막 열 다음의 바인딩되지 않은 열 데이터를 가져옵니다. **SQLGetData** 는 번호가 가장 작은 열부터 차례로 호출해야 합니다.  
   
     -   **SQLGetData** 를 여러 번 호출하여 텍스트나 이미지 열에서 데이터를 가져옵니다.  
   
@@ -50,7 +50,7 @@ ODBC 응용 프로그램에서 결과를 처리 하려면 먼저 결과 집합�
   
     -   SQL_SUCCESS_WITH_INFO 또는 SQL_ERROR가 반환되면 [SQLGetDiagRec](../../odbc/reference/syntax/sqlgetdiagrec-function.md)를 호출하여 사용할 수 있는 PRINT 또는 RAISERROR 문 출력이 있는지 확인합니다.  
   
-         바인딩된 문 매개 변수가 출력 매개 변수 또는 저장 프로시저의 반환 값으로 사용될 경우 바인딩된 매개 변수 버퍼에서 현재 사용할 수 있는 데이터를 사용합니다. 또한 바인딩된 매개 변수를 사용하면 [SQLExecute](../../odbc/reference/syntax/sqlexecute-function.md) 또는 [SQLExecDirect](../../odbc/reference/syntax/sqlexecdirect-function.md)를 호출할 때마다 SQL 문이 *S*번 실행됩니다. 여기서 *S*는 바인딩된 매개 변수 배열에 포함된 요소 수입니다. 즉, 각 결과 집합은 SQL 문을 한 번 실행 했을 때 일반적으로 반환 되는 모든 결과 집합, 출력 매개 변수 및 반환 코드를 구성 하는 결과 집합을 *처리할 수 있습니다* .  
+         바인딩된 문 매개 변수가 출력 매개 변수 또는 저장 프로시저의 반환 값으로 사용될 경우 바인딩된 매개 변수 버퍼에서 현재 사용할 수 있는 데이터를 사용합니다. 또한 바인딩된 매개 변수를 사용하면 [SQLExecute](../../odbc/reference/syntax/sqlexecute-function.md) 또는 [SQLExecDirect](../../odbc/reference/syntax/sqlexecdirect-function.md)를 호출할 때마다 SQL 문이 *S* 번 실행됩니다. 여기서 *S* 는 바인딩된 매개 변수 배열에 포함된 요소 수입니다. 즉, 각 결과 집합은 SQL 문을 한 번 실행 했을 때 일반적으로 반환 되는 모든 결과 집합, 출력 매개 변수 및 반환 코드를 구성 하는 결과 집합을 *처리할 수 있습니다* .  
   
     > [!NOTE]  
     >  결과 집합에 컴퓨팅 행이 포함된 경우 각 컴퓨팅 행은 별도의 결과 집합으로 사용할 수 있습니다. 이러한 컴퓨팅 결과 집합은 일반 행 내에 섞여 일반 행을 여러 개의 결과 집합으로 나눕니다.  

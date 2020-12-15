@@ -18,13 +18,13 @@ helpviewer_keywords:
 ms.assetid: 71b15712-7972-4465-9274-e0ddc271eedc
 author: markingmyname
 ms.author: maghan
-monikerRange: '>=aps-pdw-2016||=azuresqldb-current||=azure-sqldw-latest||>=sql-server-2016||=sqlallproducts-allversions||>=sql-server-linux-2017||=azuresqldb-mi-current'
-ms.openlocfilehash: f664a072461674f47157265a770c154550b440b1
-ms.sourcegitcommit: e700497f962e4c2274df16d9e651059b42ff1a10
+monikerRange: '>=aps-pdw-2016||=azuresqldb-current||=azure-sqldw-latest||>=sql-server-2016||>=sql-server-linux-2017||=azuresqldb-mi-current'
+ms.openlocfilehash: 365df99f56d247e5d7fd5e262e8045c9ff0a8083
+ms.sourcegitcommit: 1a544cf4dd2720b124c3697d1e62ae7741db757c
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 08/17/2020
-ms.locfileid: "88448306"
+ms.lasthandoff: 12/14/2020
+ms.locfileid: "97462014"
 ---
 # <a name="using-database-mirroring-in-sql-server-native-client"></a>SQL Server Native Client에서 데이터베이스 미러링 사용
 [!INCLUDE [SQL Server](../../../includes/applies-to-version/sql-asdb-asdbmi-asa-pdw.md)]
@@ -37,9 +37,9 @@ ms.locfileid: "88448306"
   
  데이터베이스 단위로 구현되는 데이터베이스 미러링은 대기 서버에 [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] 프로덕션 데이터베이스의 복사본을 보관합니다. 이 서버는 데이터베이스 미러링 세션의 구성 및 상태에 따라 핫 대기 서버나 웜 대기 서버가 됩니다. 핫 대기 서버는 커밋된 트랜잭션이 손실되지 않는 신속한 장애 조치(Failover)를 지원하며, 웜 대기 서버는 강제 서비스(데이터 손실 가능성이 있음)를 지원합니다.  
   
- 프로덕션 데이터베이스는 *주 데이터베이스*, 대기 복사본은 *미러 데이터베이스*라고 부릅니다. 주 데이터베이스 및 미러 데이터베이스는 별도의 [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] 인스턴스(서버 인스턴스)에 상주해야 하며 가능한 한 상주하는 컴퓨터도 달라야 합니다.  
+ 프로덕션 데이터베이스는 *주 데이터베이스*, 대기 복사본은 *미러 데이터베이스* 라고 부릅니다. 주 데이터베이스 및 미러 데이터베이스는 별도의 [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] 인스턴스(서버 인스턴스)에 상주해야 하며 가능한 한 상주하는 컴퓨터도 달라야 합니다.  
   
- *주 서버*라고 하는 프로덕션 서버 인스턴스는 *미러 서버*라고 하는 대기 서버 인스턴스와 통신합니다. 주 서버 및 미러 서버는 데이터베이스 미러링 *세션* 내에서 서로 파트너 역할을 합니다. 주 서버가 실패하면 미러 서버가 *장애 조치(failover)* 라는 프로세스를 통해 자신의 데이터베이스를 주 데이터베이스로 만듭니다. 예를 들어 서로 파트너 관계인 Partner_A와 Partner_B 서버가 있는데, 처음에 주 데이터베이스는 주 서버인 Partner_A에 상주하고 미러 데이터베이스는 미러 서버인 Partner_B에 상주한다고 가정합니다. Partner_A가 오프라인이 된 경우 Partner_B에 있는 데이터베이스가 장애 조치(Failover)되어 현재 주 데이터베이스가 될 수 있습니다. Partner_A가 미러링 세션에 다시 참여하면 Partner_A는 미러 서버가 되고 그 데이터베이스가 미러 데이터베이스가 됩니다.  
+ *주 서버* 라고 하는 프로덕션 서버 인스턴스는 *미러 서버* 라고 하는 대기 서버 인스턴스와 통신합니다. 주 서버 및 미러 서버는 데이터베이스 미러링 *세션* 내에서 서로 파트너 역할을 합니다. 주 서버가 실패하면 미러 서버가 *장애 조치(failover)* 라는 프로세스를 통해 자신의 데이터베이스를 주 데이터베이스로 만듭니다. 예를 들어 서로 파트너 관계인 Partner_A와 Partner_B 서버가 있는데, 처음에 주 데이터베이스는 주 서버인 Partner_A에 상주하고 미러 데이터베이스는 미러 서버인 Partner_B에 상주한다고 가정합니다. Partner_A가 오프라인이 된 경우 Partner_B에 있는 데이터베이스가 장애 조치(Failover)되어 현재 주 데이터베이스가 될 수 있습니다. Partner_A가 미러링 세션에 다시 참여하면 Partner_A는 미러 서버가 되고 그 데이터베이스가 미러 데이터베이스가 됩니다.  
   
  대체 데이터베이스 미러링 구성은 성능 및 데이터 안전 수준이 다르며 지원되는 장애 조치(Failover) 형태도 다릅니다. 자세한 내용은 [데이터베이스 미러링&#40;SQL Server&#41;](../../../database-engine/database-mirroring/database-mirroring-sql-server.md)을 참조하세요.  
   

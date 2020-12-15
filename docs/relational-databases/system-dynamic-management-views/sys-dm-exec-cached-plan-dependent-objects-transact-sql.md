@@ -1,6 +1,6 @@
 ---
 description: sys.dm_exec_cached_plan_dependent_objects(Transact-SQL)
-title: sys. dm_exec_cached_plan_dependent_objects (Transact-sql) | Microsoft Docs
+title: sys.dm_exec_cached_plan_dependent_objects (Transact-sql) | Microsoft Docs
 ms.custom: ''
 ms.date: 03/16/2017
 ms.prod: sql
@@ -20,13 +20,13 @@ helpviewer_keywords:
 ms.assetid: 9b6cf5f7-b267-44fb-aac8-f49c9aa10cc1
 author: markingmyname
 ms.author: maghan
-monikerRange: =azuresqldb-current||>=sql-server-2016||=sqlallproducts-allversions||>=sql-server-linux-2017||=azuresqldb-mi-current
-ms.openlocfilehash: ea18d0f3def41404fd6dd7b42dbf1e66a7ceea23
-ms.sourcegitcommit: dd36d1cbe32cd5a65c6638e8f252b0bd8145e165
+monikerRange: =azuresqldb-current||>=sql-server-2016||>=sql-server-linux-2017||=azuresqldb-mi-current
+ms.openlocfilehash: 29b533890f22891d8bd7e4cfe7a0323507874753
+ms.sourcegitcommit: 1a544cf4dd2720b124c3697d1e62ae7741db757c
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 09/08/2020
-ms.locfileid: "89548630"
+ms.lasthandoff: 12/14/2020
+ms.locfileid: "97464614"
 ---
 # <a name="sysdm_exec_cached_plan_dependent_objects-transact-sql"></a>sys.dm_exec_cached_plan_dependent_objects(Transact-SQL)
 [!INCLUDE [SQL Server SQL Database](../../includes/applies-to-version/sql-asdb.md)]
@@ -51,9 +51,9 @@ sys.dm_exec_cached_plan_dependent_objects(plan_handle)
   
 -   [sys.dm_exec_requests&#40;Transact-SQL&#41](../../relational-databases/system-dynamic-management-views/sys-dm-exec-requests-transact-sql.md)  
 
--   [dm_exec_procedure_stats &#40;Transact-sql&#41;](../../relational-databases/system-dynamic-management-views/sys-dm-exec-procedure-stats-transact-sql.md)  
+-   [Transact-sql&#41;sys.dm_exec_procedure_stats &#40;](../../relational-databases/system-dynamic-management-views/sys-dm-exec-procedure-stats-transact-sql.md)  
 
--   [dm_exec_trigger_stats &#40;Transact-sql&#41;](../../relational-databases/system-dynamic-management-views/sys-dm-exec-trigger-stats-transact-sql.md)  
+-   [Transact-sql&#41;sys.dm_exec_trigger_stats &#40;](../../relational-databases/system-dynamic-management-views/sys-dm-exec-trigger-stats-transact-sql.md)  
   
 ## <a name="table-returned"></a>반환된 테이블  
   
@@ -71,7 +71,7 @@ sys.dm_exec_cached_plan_dependent_objects(plan_handle)
   
 ## <a name="relationship-cardinalities"></a>관계 카디널리티  
   
-|시작|대상|켜기|관계|  
+|From|대상|켜기|관계|  
 |----------|--------|--------|------------------|  
 |**dm_exec_cached_plan_dependent_objects**|**dm_os_memory_objects**|**memory_object_address**|일대일|  
   

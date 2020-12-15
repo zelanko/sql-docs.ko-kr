@@ -1,5 +1,5 @@
 ---
-description: SQL Server Native Client에서 사용자 정의 형식 사용
+description: SQL Server Native Client에서 User-Defined 형식 사용
 title: 사용자 정의 형식 사용 | Microsoft Docs
 ms.custom: ''
 ms.date: 03/14/2017
@@ -21,15 +21,15 @@ helpviewer_keywords:
 ms.assetid: e15d8169-3517-4323-9c9e-0f5c34aff7df
 author: markingmyname
 ms.author: maghan
-monikerRange: '>=aps-pdw-2016||=azuresqldb-current||=azure-sqldw-latest||>=sql-server-2016||=sqlallproducts-allversions||>=sql-server-linux-2017||=azuresqldb-mi-current'
-ms.openlocfilehash: b56a4e3446c827ecd8372876aa54cb023827a861
-ms.sourcegitcommit: e700497f962e4c2274df16d9e651059b42ff1a10
+monikerRange: '>=aps-pdw-2016||=azuresqldb-current||=azure-sqldw-latest||>=sql-server-2016||>=sql-server-linux-2017||=azuresqldb-mi-current'
+ms.openlocfilehash: 2808e712491271fe5738ba4d20ad3e7e2133a451
+ms.sourcegitcommit: 1a544cf4dd2720b124c3697d1e62ae7741db757c
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 08/17/2020
-ms.locfileid: "88448230"
+ms.lasthandoff: 12/14/2020
+ms.locfileid: "97461954"
 ---
-# <a name="using-user-defined-types-in-sql-server-native-client"></a>SQL Server Native Client에서 사용자 정의 형식 사용
+# <a name="using-user-defined-types-in-sql-server-native-client"></a>SQL Server Native Client에서 User-Defined 형식 사용
 [!INCLUDE[appliesto-ss-asdb-xxxx-pdw-md](../../../includes/appliesto-ss-asdb-xxxx-pdw-md.md)]
 
   [!INCLUDE[ssVersion2005](../../../includes/ssversion2005-md.md)]부터 UDT(사용자 정의 형식)가 도입되었습니다. UDT는 개체와 사용자 지정 데이터 구조를 [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] 데이터베이스에 저장할 수 있도록 SQL 유형 시스템을 확장합니다. UDT는 여러 데이터 형식과 동작이 포함될 수 있어 단일 [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] 시스템 데이터 형식으로 구성된 일반적인 별칭 데이터 형식과 차별화됩니다. UDT는 검증할 수 있는 코드를 생성하는 .NET CLR(공용 언어 런타임)에서 지원하는 모든 언어를 사용하여 정의합니다. 이러한 언어에는 Microsoft Visual C#<sup>®</sup> 및 Visual Basic<sup>®</sup> .NET 등이 있습니다. 데이터는 .NET 클래스 또는 구조체의 필드와 속성으로 노출되며 동작은 클래스 또는 구조체의 메서드로 정의됩니다.  
@@ -37,7 +37,7 @@ ms.locfileid: "88448230"
  UDT를 테이블의 열 정의, [!INCLUDE[tsql](../../../includes/tsql-md.md)] 일괄 처리의 변수 또는 [!INCLUDE[tsql](../../../includes/tsql-md.md)] 함수나 저장 프로시저의 인수로 사용할 수 있습니다.  
   
 ## <a name="sql-server-native-client-ole-db-provider"></a>SQL Server Native Client OLE DB 공급자  
- [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)]Native Client OLE DB 공급자는 udt를 개체로 관리할 수 있는 메타 데이터 정보를 사용 하 여 udt를 이진 형식으로 지원 합니다. UDT 열은 DBTYPE_UDT로 노출되고 해당 메타데이터는 핵심 OLE DB 인터페이스인 **IColumnRowset**와 새로운 [ISSCommandWithParameters](../../../relational-databases/native-client-ole-db-interfaces/isscommandwithparameters-ole-db.md) 인터페이스를 통해 노출됩니다.  
+ [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)]Native Client OLE DB 공급자는 udt를 개체로 관리할 수 있는 메타 데이터 정보를 사용 하 여 udt를 이진 형식으로 지원 합니다. UDT 열은 DBTYPE_UDT로 노출되고 해당 메타데이터는 핵심 OLE DB 인터페이스인 **IColumnRowset** 와 새로운 [ISSCommandWithParameters](../../../relational-databases/native-client-ole-db-interfaces/isscommandwithparameters-ole-db.md) 인터페이스를 통해 노출됩니다.  
   
 > [!NOTE]  
 >  **IRowsetFind::FindNextRow** 메서드는 UDT 데이터 형식과 함께 사용할 수 없습니다. UDT가 검색 열 유형으로 사용되는 경우 DB_E_BADCOMPAREOP가 반환됩니다.  
@@ -56,7 +56,7 @@ ms.locfileid: "88448230"
 |DBTYPE_VARIANT(VT_UI1 &#124; VT_ARRAY)|지원됨<sup>6</sup>|해당 없음<sup>2</sup>|지원됨<sup>4</sup>|해당 없음<sup>2</sup>|  
 |DBTYPE_VARIANT (VT_BSTR)|지원됨<sup>3,6</sup>|해당 없음<sup>2</sup>|해당 없음|해당 없음<sup>2</sup>|  
   
- <sup>1</sup>DBTYPE_UDT 이외의 서버 유형이 **ICommandWithParameters::SetParameterInfo**로 지정되고 접근자 유형이 DBTYPE_UDT인 경우 문을 실행하면 오류가 발생합니다(DB_E_ERRORSOCCURRED, 매개 변수 상태는 DBSTATUS_E_BADACCESSOR임). 그렇지 않은 경우에는 데이터가 서버로 전송되지만 UDT에서 매개 변수의 데이터 형식으로의 암시적 변환이 이루어지지 않았음을 나타내는 오류가 반환됩니다.  
+ <sup>1</sup>DBTYPE_UDT 이외의 서버 유형이 **ICommandWithParameters::SetParameterInfo** 로 지정되고 접근자 유형이 DBTYPE_UDT인 경우 문을 실행하면 오류가 발생합니다(DB_E_ERRORSOCCURRED, 매개 변수 상태는 DBSTATUS_E_BADACCESSOR임). 그렇지 않은 경우에는 데이터가 서버로 전송되지만 UDT에서 매개 변수의 데이터 형식으로의 암시적 변환이 이루어지지 않았음을 나타내는 오류가 반환됩니다.  
   
  <sup>2</sup> 이 항목의 범위를 벗어났습니다.  
   
@@ -73,9 +73,9 @@ ms.locfileid: "88448230"
  DBTYPE_UDT를 DBTYPE_EMPTY와 DBTYPE_NULL로 변환할 수 있지만 DBTYPE_NULL 및 DBTYPE_EMPTY는 DBTYPE_UDT로 변환할 수 없습니다. 이는 DBTYPE_BYTES와 일치합니다.  
   
 > [!NOTE]  
->  새 인터페이스는 UDT를 매개 변수인 **ISSCommandWithParameters**로 처리하는 데 사용됩니다. 이 매개 변수는 **ICommandWithParameters**에서 상속됩니다. 애플리케이션은 이 인터페이스를 사용하여 UDT 매개 변수에 대해 적어도 DBPROPSET_SQLSERVERPARAMETER 속성 집합의 SSPROP_PARAM_UDT_NAME을 설정해야 합니다. 이 설정을 수행하지 않으면 **ICommand::Execute**가 DB_E_ERRORSOCCURRED를 반환합니다. 이 인터페이스와 속성 집합에 대해서는 이 항목의 뒷부분에서 설명합니다.  
+>  새 인터페이스는 UDT를 매개 변수인 **ISSCommandWithParameters** 로 처리하는 데 사용됩니다. 이 매개 변수는 **ICommandWithParameters** 에서 상속됩니다. 애플리케이션은 이 인터페이스를 사용하여 UDT 매개 변수에 대해 적어도 DBPROPSET_SQLSERVERPARAMETER 속성 집합의 SSPROP_PARAM_UDT_NAME을 설정해야 합니다. 이 설정을 수행하지 않으면 **ICommand::Execute** 가 DB_E_ERRORSOCCURRED를 반환합니다. 이 인터페이스와 속성 집합에 대해서는 이 항목의 뒷부분에서 설명합니다.  
   
- 사용자 정의 형식이 크기가 작아 해당 형식의 모든 데이터를 유지할 수 없는 열에 삽입되는 경우 **ICommand::Execute**는 DB_E_ERRORSOCCURRED 상태와 함께 S_OK를 반환합니다.  
+ 사용자 정의 형식이 크기가 작아 해당 형식의 모든 데이터를 유지할 수 없는 열에 삽입되는 경우 **ICommand::Execute** 는 DB_E_ERRORSOCCURRED 상태와 함께 S_OK를 반환합니다.  
   
  OLE DB 핵심 서비스(**IDataConvert**)에서 제공하는 데이터 변환은 DBTYPE_UDT에는 적용되지 않습니다. 다른 바인딩은 지원되지 않습니다.  
   
@@ -162,7 +162,7 @@ ms.locfileid: "88448230"
   
  ADO는 설명 열의 해당 항목을 사용하여 이러한 속성을 참조합니다.  
   
- SSPROP_COL_UDTNAME은 필수입니다. SSPROP_COL_UDT_CATALOGNAME 및 SSPROP_COL_UDT_SCHEMANAME은 옵션입니다. 이러한 속성 중 하나가 잘못 지정되면 **DB_E_ERRORSINCOMMAND**가 반환됩니다.  
+ SSPROP_COL_UDTNAME은 필수입니다. SSPROP_COL_UDT_CATALOGNAME 및 SSPROP_COL_UDT_SCHEMANAME은 옵션입니다. 이러한 속성 중 하나가 잘못 지정되면 **DB_E_ERRORSINCOMMAND** 가 반환됩니다.  
   
  SSPROP_COL_UDT_CATALOGNAME 및 SSPROP_COL_UDT_SCHEMANAME이 모두 지정되지 않은 경우 테이블과 동일한 데이터베이스와 스키마에서 UDT를 정의해야 합니다.  
   
@@ -174,7 +174,7 @@ ms.locfileid: "88448230"
  [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] Native Client는 많은 핵심 OLE DB 인터페이스에 새로운 값 이나 변경 내용을 추가 합니다.  
   
 #### <a name="the-isscommandwithparameters-interface"></a>ISSCommandWithParameters 인터페이스  
- OLE DB를 통해 Udt를 지원 하기 위해 [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] Native Client는 **ISSCommandWithParameters** 인터페이스의 추가를 포함 하 여 많은 변경 내용을 구현 합니다. 이 새 인터페이스는 핵심 OLE DB 인터페이스인 **ICommandWithParameters**에서 상속됩니다. **ICommandWithParameters**에서 상속 된 세 가지 메서드 외에도 **GetParameterInfo**, **Mapparameternames**및 **SetParameterInfo**; **ISSCommandWithParameters** 은 서버별 데이터 형식을 처리 하는 데 사용 되는 **getparameterproperties** 및 **setparameterproperties** 메서드를 제공 합니다.  
+ OLE DB를 통해 Udt를 지원 하기 위해 [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] Native Client는 **ISSCommandWithParameters** 인터페이스의 추가를 포함 하 여 많은 변경 내용을 구현 합니다. 이 새 인터페이스는 핵심 OLE DB 인터페이스인 **ICommandWithParameters** 에서 상속됩니다. **ICommandWithParameters** 에서 상속 된 세 가지 메서드 외에도 **GetParameterInfo**, **Mapparameternames** 및 **SetParameterInfo**; **ISSCommandWithParameters** 은 서버별 데이터 형식을 처리 하는 데 사용 되는 **getparameterproperties** 및 **setparameterproperties** 메서드를 제공 합니다.  
   
 > [!NOTE]  
 >  또한 **ISSCommandWithParameters** 인터페이스는 새로운 SSPARAMPROPS 구조를 사용합니다.  

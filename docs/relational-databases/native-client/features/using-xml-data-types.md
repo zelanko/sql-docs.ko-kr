@@ -30,18 +30,18 @@ helpviewer_keywords:
 ms.assetid: a7af5b72-c5c2-418d-a636-ae4ac6270ee5
 author: markingmyname
 ms.author: maghan
-monikerRange: '>=aps-pdw-2016||=azuresqldb-current||=azure-sqldw-latest||>=sql-server-2016||=sqlallproducts-allversions||>=sql-server-linux-2017||=azuresqldb-mi-current'
-ms.openlocfilehash: b095eace82538b8d10efd0c628b467560ef36edf
-ms.sourcegitcommit: e700497f962e4c2274df16d9e651059b42ff1a10
+monikerRange: '>=aps-pdw-2016||=azuresqldb-current||=azure-sqldw-latest||>=sql-server-2016||>=sql-server-linux-2017||=azuresqldb-mi-current'
+ms.openlocfilehash: 76b24491df72773fb45b0513720151ed9a9c6585
+ms.sourcegitcommit: 1a544cf4dd2720b124c3697d1e62ae7741db757c
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 08/17/2020
-ms.locfileid: "88428215"
+ms.lasthandoff: 12/14/2020
+ms.locfileid: "97461964"
 ---
 # <a name="using-xml-data-types-in-sql-server-native-clients"></a>SQL Server Native client에서 XML 데이터 형식 사용
 [!INCLUDE [SQL Server](../../../includes/applies-to-version/sql-asdb-asdbmi-asa-pdw.md)]
 
-  [!INCLUDE[ssVersion2005](../../../includes/ssversion2005-md.md)]에는 XML 문서와 조각을 [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] 데이터베이스에 저장할 수 있는 **xml** 데이터 형식이 도입되었습니다. **xml** 데이터 형식은 [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)]의 기본 제공 데이터 형식이며 **int** 및 **varchar**와 같은 다른 기본 제공 형식과 비슷합니다. 다른 기본 제공 형식과 마찬가지로 **xml** 데이터 형식도 변수 유형, 매개 변수 유형, 함수 반환 유형 또는 테이블을 만드는 경우 열 유형으로 사용하거나 CAST 및 CONVERT 함수에 사용할 수 있습니다.  
+  [!INCLUDE[ssVersion2005](../../../includes/ssversion2005-md.md)]에는 XML 문서와 조각을 [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] 데이터베이스에 저장할 수 있는 **xml** 데이터 형식이 도입되었습니다. **xml** 데이터 형식은 [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)]의 기본 제공 데이터 형식이며 **int** 및 **varchar** 와 같은 다른 기본 제공 형식과 비슷합니다. 다른 기본 제공 형식과 마찬가지로 **xml** 데이터 형식도 변수 유형, 매개 변수 유형, 함수 반환 유형 또는 테이블을 만드는 경우 열 유형으로 사용하거나 CAST 및 CONVERT 함수에 사용할 수 있습니다.  
   
 ## <a name="programming-considerations"></a>프로그래밍 고려 사항  
  XML은 원하는 경우 문서의 인코딩을 지정하는 XML 헤더를 포함할 수 있다는 점에서 자체 설명적 데이터 형식이라고 할 수 있습니다. 예를 들면 다음과 같습니다.  
@@ -71,7 +71,7 @@ ms.locfileid: "88428215"
  행 집합의 XML 형식 열에 저장된 데이터는 **IRow::GetColumns**, **IRowChange::SetColumns** 및 **ICommand::Execute** 같은 일반 인터페이스를 통해 애플리케이션에 의해서도 검색, 삽입 또는 업데이트될 수 있습니다. 검색 사례와 마찬가지로 응용 프로그램은 텍스트 문자열이 나 **ISequentialStream** 를 [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] Native Client OLE DB 공급자에 전달할 수 있습니다.  
   
 > [!NOTE]  
->  문자열 형식의 XML 데이터를 **ISequentialStream** 인터페이스를 통해 보내려면 바인딩에서 DBTYPE_IUNKNOWN을 지정하고 해당 *pObject* 인수를 null로 설정하여 **ISequentialStream**을 가져와야 합니다.  
+>  문자열 형식의 XML 데이터를 **ISequentialStream** 인터페이스를 통해 보내려면 바인딩에서 DBTYPE_IUNKNOWN을 지정하고 해당 *pObject* 인수를 null로 설정하여 **ISequentialStream** 을 가져와야 합니다.  
   
  소비자 버퍼가 너무 작아 검색된 XML 데이터가 잘린 경우 길이가 알 수 없는 길이를 나타내는 0xffffffff로 반환될 수 있습니다. 이는 실제 데이터를 보내기 전에 길이 정보를 보내지 않고 클라이언트로 스트리밍되는 데이터 형식으로 구현하는 것과 같습니다. 경우에 따라 공급자가 전체 값 (예: **IRowset:: GetData** )을 버퍼링 했을 때 데이터 변환이 수행 될 때 실제 길이가 반환 될 수 있습니다.  
   
@@ -89,11 +89,11 @@ ms.locfileid: "88428215"
 |DBTYPE_WSTR|통과<sup>6,10</sup>|해당 없음<sup>2</sup>|OK<sup>4, 6, 12</sup>|해당 없음<sup>2</sup>|  
 |DBTYPE_BSTR|통과<sup>6,10</sup>|해당 없음<sup>2</sup>|확인<sup>3</sup>|해당 없음<sup>2</sup>|  
 |DBTYPE_STR|확인<sup>6, 9, 10</sup>|해당 없음<sup>2</sup>|확인<sup>5, 6, 12</sup>|해당 없음<sup>2</sup>|  
-|DBTYPE_IUNKNOWN|**ISequentialStream**을 통한 바이트 스트림<sup>7</sup>|해당 없음<sup>2</sup>|**ISequentialStream**을 통한 바이트 스트림<sup>11</sup>|해당 없음<sup>2</sup>|  
+|DBTYPE_IUNKNOWN|**ISequentialStream** 을 통한 바이트 스트림 <sup>7</sup>|해당 없음<sup>2</sup>|**ISequentialStream** 을 통한 바이트 스트림 <sup>11</sup>|해당 없음<sup>2</sup>|  
 |DBTYPE_VARIANT(VT_UI1 &#124; VT_ARRAY)|통과<sup>6,7</sup>|해당 없음<sup>2</sup>|해당 없음|해당 없음<sup>2</sup>|  
 |DBTYPE_VARIANT (VT_BSTR)|통과<sup>6,10</sup>|해당 없음<sup>2</sup>|확인<sup>3</sup>|해당 없음<sup>2</sup>|  
   
- <sup>1</sup>DBTYPE_XML 이외의 서버 유형이 **ICommandWithParameters::SetParameterInfo**에 지정되었고 접근자 유형이 DBTYPE_XML이면 문이 실행될 때 오류가 발생합니다(DB_E_ERRORSOCCURRED, 매개 변수 상태는 DBSTATUS_E_BADACCESSOR임). 그렇지 않은 경우에는 데이터가 서버로 전송되지만 XML에서 매개 변수 데이터 형식으로의 암시적 변환이 이루어지지 않았음을 나타내는 오류가 반환됩니다.  
+ <sup>1</sup>DBTYPE_XML 이외의 서버 유형이 **ICommandWithParameters::SetParameterInfo** 에 지정되었고 접근자 유형이 DBTYPE_XML이면 문이 실행될 때 오류가 발생합니다(DB_E_ERRORSOCCURRED, 매개 변수 상태는 DBSTATUS_E_BADACCESSOR임). 그렇지 않은 경우에는 데이터가 서버로 전송되지만 XML에서 매개 변수 데이터 형식으로의 암시적 변환이 이루어지지 않았음을 나타내는 오류가 반환됩니다.  
   
  <sup>2</sup> 이 항목의 범위를 벗어났습니다.  
   
@@ -138,7 +138,7 @@ ms.locfileid: "88428215"
 #### <a name="the-columns-and-procedure_parameters-schema-rowsets"></a>COLUMNS 및 PROCEDURE_PARAMETERS 스키마 행 집합  
  COLUMNS 및 PROCEDURE_PARAMETERS 스키마 행 집합에 추가된 열은 다음과 같습니다.  
   
-|열 이름|Type|설명|  
+|열 이름|Type|Description|  
 |-----------------|----------|-----------------|  
 |SS_XML_SCHEMACOLLECTION_CATALOGNAME|DBTYPE_WSTR|XML 스키마 컬렉션이 정의된 카탈로그의 이름입니다. 비XML 열 또는 형식화되지 않은 XML 열에 대해서는 NULL입니다.|  
 |SS_XML_SCHEMACOLLECTION_SCHEMANAME|DBTYPE_WSTR|XML 스키마 컬렉션이 정의된 스키마의 이름입니다. 비XML 열 또는 형식화되지 않은 XML 열에 대해서는 NULL입니다.|  
@@ -150,7 +150,7 @@ ms.locfileid: "88428215"
 #### <a name="the-ss_xmlschema-schema-rowset"></a>SS_XMLSCHEMA 스키마 행 집합  
  새로운 스키마 행 집합인 SS_XMLSCHEMA는 클라이언트가 XML 스키마 정보를 검색할 수 있도록 도입되었습니다. SS_XMLSCHEMA 행 집합에는 다음 열이 포함됩니다.  
   
-|열 이름|Type|설명|  
+|열 이름|Type|Description|  
 |-----------------|----------|-----------------|  
 |SCHEMACOLLECTION_CATALOGNAME|DBTYPE_WSTR|XML 컬렉션이 속한 카탈로그입니다.|  
 |SCHEMACOLLECTION_SCHEMANAME|DBTYPE_WSTR|XML 컬렉션이 속한 스키마입니다.|  
@@ -170,7 +170,7 @@ ms.locfileid: "88428215"
 #### <a name="the-dbpropset_sqlserverparameter-property-set"></a>DBPROPSET_SQLSERVERPARAMETER 속성 집합  
  OLE DB를 통해 **xml** 데이터 형식을 지원 하기 위해 [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] Native Client는 다음 값을 포함 하는 새 DBPROPSET_SQLSERVERPARAMETER 속성 집합을 구현 합니다.  
   
-|Name|Type|설명|  
+|Name|유형|Description|  
 |----------|----------|-----------------|  
 |SSPROP_PARAM_XML_SCHEMACOLLECTION_CATALOGNAME|DBTYPE_WSTR|XML 스키마 컬렉션이 정의된 카탈로그(데이터베이스)의 이름입니다. SQL의 세 부분으로 구성된 이름 식별자의 일부입니다.|  
 |SSPROP_PARAM_XML_SCHEMACOLLECTION_SCHEMANAME|DBTYPE_WSTR|스키마 컬렉션 내 XML 스키마의 이름입니다. SQL의 세 부분으로 구성된 이름 식별자의 일부입니다.|  
@@ -179,7 +179,7 @@ ms.locfileid: "88428215"
 #### <a name="the-dbpropset_sqlservercolumn-property-set"></a>DBPROPSET_SQLSERVERCOLUMN 속성 집합  
  **Itabledefinition** 인터페이스에서 테이블 생성을 지원 하기 위해 [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] Native Client는 DBPROPSET_SQLSERVERCOLUMN 속성 집합에 세 개의 새 열을 추가 합니다.  
   
-|Name|Type|설명|  
+|Name|유형|Description|  
 |----------|----------|-----------------|  
 |SSPROP_COL_XML_SCHEMACOLLECTION_CATALOGNAME|VT_BSTR|형식화된 XML 열에 대해서는 이 속성이 XML 스키마가 저장된 카탈로그의 이름을 지정하는 문자열입니다. 다른 열 유형에 대해서는 이 속성이 빈 문자열을 반환합니다.|  
 |SSPROP_COL_XML_SCHEMACOLLECTION_SCHEMANAME|VT_BSTR|형식화된 XML 열에 대해서는 이 속성이 이 열을 정의하는 XML 스키마의 이름을 지정하는 문자열입니다.|  
@@ -191,7 +191,7 @@ ms.locfileid: "88428215"
  [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] Native Client는 많은 핵심 OLE DB 인터페이스에 새로운 값 이나 변경 내용을 추가 합니다.  
   
 #### <a name="the-isscommandwithparameters-interface"></a>ISSCommandWithParameters 인터페이스  
- OLE DB를 통해 **xml** 데이터 형식을 지원 하기 위해 [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] Native Client는 [ISSCommandWithParameters](../../../relational-databases/native-client-ole-db-interfaces/isscommandwithparameters-ole-db.md) 인터페이스를 추가 하는 등의 많은 변경 내용을 구현 합니다. 이 새 인터페이스는 핵심 OLE DB 인터페이스인 **ICommandWithParameters**에서 상속됩니다. **ICommandWithParameters**에서 상속 된 세 가지 메서드 외에도 **GetParameterInfo**, **Mapparameternames**및 **SetParameterInfo**; **ISSCommandWithParameters** 은 서버별 데이터 형식을 처리 하는 데 사용 되는 [getparameterproperties](../../../relational-databases/native-client-ole-db-interfaces/isscommandwithparameters-getparameterproperties-ole-db.md) 및 [setparameterproperties](../../../relational-databases/native-client-ole-db-interfaces/isscommandwithparameters-setparameterproperties-ole-db.md) 메서드를 제공 합니다.  
+ OLE DB를 통해 **xml** 데이터 형식을 지원 하기 위해 [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] Native Client는 [ISSCommandWithParameters](../../../relational-databases/native-client-ole-db-interfaces/isscommandwithparameters-ole-db.md) 인터페이스를 추가 하는 등의 많은 변경 내용을 구현 합니다. 이 새 인터페이스는 핵심 OLE DB 인터페이스인 **ICommandWithParameters** 에서 상속됩니다. **ICommandWithParameters** 에서 상속 된 세 가지 메서드 외에도 **GetParameterInfo**, **Mapparameternames** 및 **SetParameterInfo**; **ISSCommandWithParameters** 은 서버별 데이터 형식을 처리 하는 데 사용 되는 [getparameterproperties](../../../relational-databases/native-client-ole-db-interfaces/isscommandwithparameters-getparameterproperties-ole-db.md) 및 [setparameterproperties](../../../relational-databases/native-client-ole-db-interfaces/isscommandwithparameters-setparameterproperties-ole-db.md) 메서드를 제공 합니다.  
   
 > [!NOTE]  
 >  또한 **ISSCommandWithParameters** 인터페이스는 새로운 SSPARAMPROPS 구조를 사용합니다.  
@@ -199,7 +199,7 @@ ms.locfileid: "88428215"
 #### <a name="the-icolumnsrowset-interface"></a>IColumnsRowset 인터페이스  
  [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] Native Client는 [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] **IColumnRowset:: GetColumnsRowset** 메서드에서 반환 된 행 집합에 다음의 특정 열을 추가 합니다. 이러한 열에는 XML 스키마 컬렉션의 세 부분으로 구성된 이름이 포함됩니다. 비XML 열이나 형식화되지 않은 XML 열에 대해서는 이 세 열 모두 기본값인 NULL을 사용합니다.  
   
-|열 이름|Type|설명|  
+|열 이름|Type|Description|  
 |-----------------|----------|-----------------|  
 |DBCOLUMN_SS_XML_SCHEMACOLLECTION_CATALOGNAME|DBTYPE_WSTR|XML 스키마 컬렉션이 속한 카탈로그입니다.<br /><br /> 그렇지 않으면 NULL입니다.|  
 |DBCOLUMN_SS_XML_SCHEMACOLLECTION_SCHEMANAME|DBTYPE_WSTR|XML 스키마 컬렉션이 속한 스키마입니다. 그렇지 않으면 NULL입니다.|  
@@ -208,12 +208,12 @@ ms.locfileid: "88428215"
 #### <a name="the-irowset-interface"></a>IRowset 인터페이스  
  XML 열의 XML 인스턴스는 **IRowset::GetData** 메서드를 통해 검색됩니다. 클라이언트에서 지정한 바인딩에 따라 XML 인스턴스가 DBTYPE_BSTR, DBTYPE_WSTR, DBTYPE_VARIANT, DBTYPE_XML, DBTYPE_STR, DBTYPE_BYTES로 검색되거나 DBTYPE_IUNKNOWN을 통해 인터페이스로 검색될 수 있습니다. 소비자가 DBTYPE_BSTR, DBTYPE_WSTR 또는 DBTYPE_VARIANT를 지정하면 공급자는 XML 인스턴스를 사용자가 요청한 형식으로 변환한 후 해당 바인딩에 지정된 위치에 가져다 놓습니다.  
   
- 소비자가 DBTYPE_IUNKNOWN을 지정하고 *pObject* 인수를 NULL로 설정하거나 *pObject* 인수를 IID_ISequentialStream으로 설정하면 소비자가 열에서 XML 데이터를 스트리밍할 수 있도록 공급자가 **ISequentialStream** 인터페이스를 소비자에게 반환합니다. 그러면 **ISequentialStream**이 XML 데이터를 유니코드 문자 스트림으로 반환합니다.  
+ 소비자가 DBTYPE_IUNKNOWN을 지정하고 *pObject* 인수를 NULL로 설정하거나 *pObject* 인수를 IID_ISequentialStream으로 설정하면 소비자가 열에서 XML 데이터를 스트리밍할 수 있도록 공급자가 **ISequentialStream** 인터페이스를 소비자에게 반환합니다. 그러면 **ISequentialStream** 이 XML 데이터를 유니코드 문자 스트림으로 반환합니다.  
   
  DBTYPE_IUNKNOWN에 바인딩된 XML 값을 반환할 때 공급자는 `sizeof (IUnknown *)`의 크기 값을 보고합니다. 이는 열이 DBTYPE_IUnknown 또는 DBTYPE_IDISPATCH로 바인딩되어 있는데 정확한 열 크기를 확인할 수 없는 경우 DBTYPE_IUNKNOWN/ISequentialStream이 취하는 방법과 같습니다.  
   
 #### <a name="the-irowsetchange-interface"></a>IRowsetChange 인터페이스  
- 소비자는 두 가지 방법으로 열의 XML 인스턴스를 업데이트할 수 있습니다. 하나는 공급자가 만든 스토리지 개체 **ISequentialStream**을 사용하는 것입니다. 소비자는 **ISequentialStream::Write** 메서드를 호출하여 공급자가 반환한 XML 인스턴스를 직접 업데이트할 수 있습니다.  
+ 소비자는 두 가지 방법으로 열의 XML 인스턴스를 업데이트할 수 있습니다. 하나는 공급자가 만든 스토리지 개체 **ISequentialStream** 을 사용하는 것입니다. 소비자는 **ISequentialStream::Write** 메서드를 호출하여 공급자가 반환한 XML 인스턴스를 직접 업데이트할 수 있습니다.  
   
  다른 하나는 **IRowsetChange::SetData** 또는 **IRowsetChange::InsertRow** 메서드를 사용하는 것입니다. 이 방법을 사용할 경우 소비자 버퍼의 XML 인스턴스를 DBTYPE_BSTR, DBTYPE_WSTR, DBTYPE_VARIANT, DBTYPE_XML 또는 DBTYPE_IUNKNOWN 유형의 바인딩에 지정할 수 있습니다.  
   
@@ -225,7 +225,7 @@ ms.locfileid: "88428215"
  **IRowsetUpdate** 인터페이스는 지연된 업데이트에 사용할 수 있는 기능을 제공합니다. 소비자가 **IRowsetUpdate: Update** 메서드를 호출할 때까지 행 집합에 사용할 수 있는 데이터를 다른 트랜잭션에서 사용할 수 없습니다.  
   
 #### <a name="the-irowsetfind-interface"></a>IRowsetFind 인터페이스  
- **IRowsetFind::FindNextRow** 메서드는 **xml** 데이터 형식에 사용할 수 없습니다. *hAccessor* 인수에 DBTYPE_XML 열이 지정되어 **IRowsetFind::FindNextRow**가 호출되면 DB_E_BADBINDINFO가 반환되며 이는 검색하는 열의 유형에 관계없이 발생합니다. 이외 다른 바인딩 유형의 경우 검색하는 열이 **xml** 데이터 형식이면 **FindNextRow**가 실패하며 DB_E_BADCOMPAREOP가 반환됩니다.  
+ **IRowsetFind::FindNextRow** 메서드는 **xml** 데이터 형식에 사용할 수 없습니다. *hAccessor* 인수에 DBTYPE_XML 열이 지정되어 **IRowsetFind::FindNextRow** 가 호출되면 DB_E_BADBINDINFO가 반환되며 이는 검색하는 열의 유형에 관계없이 발생합니다. 이외 다른 바인딩 유형의 경우 검색하는 열이 **xml** 데이터 형식이면 **FindNextRow** 가 실패하며 DB_E_BADCOMPAREOP가 반환됩니다.  
   
 ## <a name="sql-server-native-client-odbc-driver"></a>SQL Server Native Client ODBC 드라이버  
  [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)]Native CLIENT ODBC 드라이버에서 **xml** 데이터 형식을 지원 하기 위해 다양 한 함수에 많은 변경 내용이 적용 되었습니다.  

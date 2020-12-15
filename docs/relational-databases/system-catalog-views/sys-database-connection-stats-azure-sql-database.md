@@ -20,27 +20,27 @@ ms.assetid: 5c8cece0-63b0-4dee-8db7-6b43d94027ec
 author: markingmyname
 ms.author: maghan
 ms.custom: seo-dt-2019
-monikerRange: = azuresqldb-current || = sqlallproducts-allversions
-ms.openlocfilehash: 2a3d57bb4ba8c36778d3d4e552d9a69bd285db9e
-ms.sourcegitcommit: dd36d1cbe32cd5a65c6638e8f252b0bd8145e165
+monikerRange: = azuresqldb-current
+ms.openlocfilehash: e303099001b1708b6227547fdd68e94dba5c5eee
+ms.sourcegitcommit: 1a544cf4dd2720b124c3697d1e62ae7741db757c
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 09/08/2020
-ms.locfileid: "89542597"
+ms.lasthandoff: 12/14/2020
+ms.locfileid: "97459894"
 ---
 # <a name="sysdatabase_connection_stats-azure-sql-database"></a>sys.database_connection_stats(Azure SQL Database)
 
 [!INCLUDE[Azure SQL Database Azure SQL Managed Instance](../../includes/applies-to-version/asdb-asdbmi.md)]
 
-  데이터베이스 연결 이벤트에 대 한 통계 [!INCLUDE[ssSDS](../../includes/sssds-md.md)] 를 포함 하 여 데이터베이스 연결 성공 및 실패에 대 한 개요를 제공 합니다. **connectivity** 연결 이벤트에 대 한 자세한 내용은 [event_log &#40;Azure SQL Database&#41;](../../relational-databases/system-catalog-views/sys-event-log-azure-sql-database.md)에서 이벤트 유형을 참조 하세요.  
+  데이터베이스 연결 이벤트에 대 한 통계 [!INCLUDE[ssSDS](../../includes/sssds-md.md)] 를 포함 하 여 데이터베이스 연결 성공 및 실패에 대 한 개요를 제공 합니다.  연결 이벤트에 대 한 자세한 내용은 [sys.event_log &#40;Azure SQL Database&#41;](../../relational-databases/system-catalog-views/sys-event-log-azure-sql-database.md)에서 이벤트 유형을 참조 하세요.  
   
-|통계|Type|Description|  
+|통계|형식|설명|  
 |---------------|----------|-----------------|  
 |**database_name**|**sysname**|데이터베이스의 이름입니다.|  
-|**start_time**|**datetime2**|집계 간격 시작의 UTC 날짜 및 시간입니다. 시간은 항상 5분의 배수입니다. 예를 들면 다음과 같습니다.<br /><br /> '2011-09-28 16:00:00'<br />'2011-09-28 16:05:00'<br />'2011-09-28 16:10:00'|  
+|**start_time**|**datetime2**|집계 간격 시작의 UTC 날짜 및 시간입니다. 시간은 항상 5분의 배수입니다. 예를 들어:<br /><br /> '2011-09-28 16:00:00'<br />'2011-09-28 16:05:00'<br />'2011-09-28 16:10:00'|  
 |**end_time**|**datetime2**|집계 간격 끝의 UTC 날짜 및 시간입니다. **End_time** 은 항상 같은 행에 있는 해당 **start_time** 보다 정확히 5 분 후입니다.|  
 |**success_count**|**int**|성공한 연결 수:|  
-|**total_failure_count**|**int**|실패한 연결의 총 수입니다. **Connection_failure_count**, **terminated_connection_count**및 **throttled_connection_count**의 합계 이며, 교착 상태 이벤트를 포함 하지 않습니다.|  
+|**total_failure_count**|**int**|실패한 연결의 총 수입니다. **Connection_failure_count**, **terminated_connection_count** 및 **throttled_connection_count** 의 합계 이며, 교착 상태 이벤트를 포함 하지 않습니다.|  
 |**connection_failure_count**|**int**|로그인 실패 횟수입니다.|  
 |**terminated_connection_count**|**int**|**_V11에만 적용 [!INCLUDE[ssSDSfull](../../includes/sssdsfull-md.md)] 됩니다._**<br /><br /> 종료된 연결 수:|  
 |**throttled_connection_count**|**int**|**_V11에만 적용 [!INCLUDE[ssSDSfull](../../includes/sssdsfull-md.md)] 됩니다._**<br /><br /> 정체된 연결 수입니다.|  
@@ -59,7 +59,7 @@ ms.locfileid: "89542597"
   
 ### <a name="interval-start_time-and-end_time"></a>간격 start_time 및 end_time
 
- 이벤트는 *이벤트가 발생 하거나* **start_time** 된 _후_또는 해당 간격에 대해**end_time** _되기 전에_집계 간격에 포함 됩니다. 예를 들어, 정확히 `2012-10-30 19:25:00.0000000`에 발생하는 이벤트는 아래에 표시된 초 간격에만 표시됩니다.  
+ 이벤트는 *이벤트가 발생 하거나* **start_time** 된 _후_ 또는 해당 간격에 대해 **end_time** _되기 전에_ 집계 간격에 포함 됩니다. 예를 들어, 정확히 `2012-10-30 19:25:00.0000000`에 발생하는 이벤트는 아래에 표시된 초 간격에만 표시됩니다.  
   
 ```  
   
@@ -80,7 +80,7 @@ start_time                    end_time
 
  이 뷰에는 일부 연결 및 오류 정보가 포함되지 않을 수 있습니다.  
   
-- 이 뷰에는 [!INCLUDE[ssSDS](../../includes/sssds-md.md)] 발생할 수 있는 모든 데이터베이스 오류가 포함 되어 있지 않습니다. event_log의 이벤트 유형에 지정 된 오류 [&#40;Azure SQL Database&#41;](../../relational-databases/system-catalog-views/sys-event-log-azure-sql-database.md).  
+- 이 뷰에는 [!INCLUDE[ssSDS](../../includes/sssds-md.md)] 발생할 수 있는 모든 데이터베이스 오류가 포함 되어 있지 않습니다. sys.event_log의 이벤트 유형에 지정 된 오류 [&#40;Azure SQL Database&#41;](../../relational-databases/system-catalog-views/sys-event-log-azure-sql-database.md).  
   
 - 데이터 센터 내에 컴퓨터 오류가 발생 하면 [!INCLUDE[ssSDS](../../includes/sssds-md.md)] 이벤트 테이블에서 소량의 데이터가 누락 될 수 있습니다.  
   
@@ -90,9 +90,9 @@ start_time                    end_time
 
  **Master** 데이터베이스에 액세스할 수 있는 권한이 있는 사용자에 게는이 뷰에 대 한 읽기 전용 액세스 권한이 있습니다.  
   
-## <a name="example"></a>예제
+## <a name="example"></a>예
 
- 다음 예에서는 **database_connection_stats** 의 쿼리를 보여 줍니다 .이 쿼리는 정오 9/25/2011 및 정오 9/28/2011 (UTC) 사이에 발생 한 데이터베이스 연결의 요약을 반환 합니다. 기본적으로 쿼리 결과는 **start_time** (오름차순) 순으로 정렬 됩니다.  
+ 다음 예에서는 정오 9/25/2011 및 정오 on 9/28/2011 (UTC) 사이에 발생 한 데이터베이스 연결의 요약을 반환 하는 **sys.database_connection_stats** 의 쿼리를 보여 줍니다. 기본적으로 쿼리 결과는 **start_time** (오름차순) 순으로 정렬 됩니다.  
   
 ```sql
 SELECT *  

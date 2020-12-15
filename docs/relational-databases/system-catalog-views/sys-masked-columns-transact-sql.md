@@ -1,6 +1,6 @@
 ---
-description: sys. masked_columns (Transact-sql)
-title: sys. masked_columns (Transact-sql) | Microsoft Docs
+description: sys.masked_columns (Transact-sql)
+title: sys.masked_columns (Transact-sql) | Microsoft Docs
 ms.custom: ''
 ms.date: 02/25/2016
 ms.prod: sql
@@ -18,26 +18,26 @@ helpviewer_keywords:
 ms.assetid: 671577e4-d757-4b8d-9aa9-0fc8d51ea9ca
 author: markingmyname
 ms.author: maghan
-monikerRange: =azuresqldb-current||>=sql-server-2016||=sqlallproducts-allversions||>=sql-server-linux-2017||=azuresqldb-mi-current
-ms.openlocfilehash: 2e8c61cfbce42517f63729f35e159b479b3120f6
-ms.sourcegitcommit: dd36d1cbe32cd5a65c6638e8f252b0bd8145e165
+monikerRange: =azuresqldb-current||>=sql-server-2016||>=sql-server-linux-2017||=azuresqldb-mi-current
+ms.openlocfilehash: 5a146c289ddd50484a515413571cc67588b687d1
+ms.sourcegitcommit: 1a544cf4dd2720b124c3697d1e62ae7741db757c
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 09/08/2020
-ms.locfileid: "89537374"
+ms.lasthandoff: 12/14/2020
+ms.locfileid: "97458497"
 ---
-# <a name="sysmasked_columns-transact-sql"></a>sys. masked_columns (Transact-sql)
+# <a name="sysmasked_columns-transact-sql"></a>sys.masked_columns (Transact-sql)
 
 [!INCLUDE [sqlserver2016-asdb-asdbmi](../../includes/applies-to-version/sqlserver2016-asdb-asdbmi.md)]
 
-  **Masked_columns** 뷰를 사용 하 여 동적 데이터 마스킹 함수가 적용 된 테이블 열을 쿼리 합니다. 이 보기는 **sys.columns** 보기에서 상속됩니다. **sys.columns** 뷰의 모든 열과 열이 마스킹되었는지, 그렇다면 정의된 마스킹 함수가 무엇인지 나타내는 **is_masked** 및 **masking_function** 열을 반환합니다. 이 보기는 마스킹 함수가 적용된 열만 보여줍니다.  
+  **Sys.masked_columns** 뷰를 사용 하 여 동적 데이터 마스킹 함수가 적용 된 테이블 열을 쿼리 합니다. 이 보기는 **sys.columns** 보기에서 상속됩니다. **sys.columns** 뷰의 모든 열과 열이 마스킹되었는지, 그렇다면 정의된 마스킹 함수가 무엇인지 나타내는 **is_masked** 및 **masking_function** 열을 반환합니다. 이 보기는 마스킹 함수가 적용된 열만 보여줍니다.  
   
 |열 이름|데이터 형식|Description|  
 |-----------------|---------------|-----------------|  
 |object_id|**int**|이 열이 속한 개체의 ID입니다.|  
 |name|**sysname**|열의 이름입니다. 개체 내에서 고유합니다.|  
 |column_id|**int**|열의 ID입니다. 개체 내에서 고유합니다.<br /><br /> 열 ID는 순차적이지 않을 수 있습니다.|  
-|**masked_columns** 은 **sys 열**에서 상속 된 더 많은 열을 반환 합니다.|다양|자세한 열 정의는 [&#40;transact-sql&#41;](../../relational-databases/system-catalog-views/sys-columns-transact-sql.md) 를 참조 하세요.|  
+|**sys.masked_columns** 은 **sys. 열** 에서 상속 된 더 많은 열을 반환 합니다.|다양|자세한 열 정의는 [&#40;transact-sql&#41;](../../relational-databases/system-catalog-views/sys-columns-transact-sql.md) 를 참조 하세요.|  
 |is_masked|**bit**|열이 마스킹 되는지 여부를 나타냅니다. 1은 마스킹 됨을 나타냅니다.|  
 |masking_function|**nvarchar(4000)**|열에 대 한 마스킹 함수입니다.|  
   
@@ -46,8 +46,8 @@ ms.locfileid: "89537374"
 ## <a name="permissions"></a>사용 권한  
  이 뷰는 사용자에 게 테이블에 대 한 일부 사용 권한이 있거나 사용자에 게 VIEW ANY DEFINITION 권한이 있는 경우 테이블에 대 한 정보를 반환 합니다.  
   
-## <a name="example"></a>예제  
- 다음 쿼리는 sys **. masked_columns** 를 조인 **하 여 마스킹된** 모든 열에 대 한 정보를 반환 합니다.  
+## <a name="example"></a>예  
+ 다음 쿼리는 **테이블** 에 **sys.masked_columns** 조인 하 여 마스킹된 모든 열에 대 한 정보를 반환 합니다.  
   
 ```  
 SELECT tbl.name as table_name, c.name AS column_name, c.is_masked, c.masking_function  

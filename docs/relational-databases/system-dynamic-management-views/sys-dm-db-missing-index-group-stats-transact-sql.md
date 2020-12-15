@@ -1,6 +1,6 @@
 ---
 description: sys.dm_db_missing_index_group_stats(Transact-SQL)
-title: sys. dm_db_missing_index_group_stats (Transact-sql) | Microsoft Docs
+title: sys.dm_db_missing_index_group_stats (Transact-sql) | Microsoft Docs
 ms.custom: ''
 ms.date: 06/10/2016
 ms.prod: sql
@@ -21,13 +21,13 @@ helpviewer_keywords:
 ms.assetid: c2886986-9e07-44ea-a350-feeac05ee4f4
 author: markingmyname
 ms.author: maghan
-monikerRange: =azuresqldb-current||>=sql-server-2016||=sqlallproducts-allversions||>=sql-server-linux-2017||=azuresqldb-mi-current
-ms.openlocfilehash: 8e90b4b972786db7e5edf2459a9f5a081f42f3ef
-ms.sourcegitcommit: dd36d1cbe32cd5a65c6638e8f252b0bd8145e165
+monikerRange: =azuresqldb-current||>=sql-server-2016||>=sql-server-linux-2017||=azuresqldb-mi-current
+ms.openlocfilehash: f91bc4e1698fe6a0b96f7b92931d84769d4d7351
+ms.sourcegitcommit: 1a544cf4dd2720b124c3697d1e62ae7741db757c
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 09/08/2020
-ms.locfileid: "89518097"
+ms.lasthandoff: 12/14/2020
+ms.locfileid: "97462774"
 ---
 # <a name="sysdm_db_missing_index_group_stats-transact-sql"></a>sys.dm_db_missing_index_group_stats(Transact-SQL)
 [!INCLUDE [SQL Server SQL Database](../../includes/applies-to-version/sql-asdb.md)]
@@ -54,7 +54,7 @@ ms.locfileid: "89518097"
 |**avg_system_impact**|**float**|누락된 인덱스 그룹을 구현할 경우 시스템 쿼리에서 얻을 수 있는 적합한 평균 백분율입니다. 즉, 이 누락된 인덱스 그룹을 구현할 경우 쿼리 비용이 평균적으로 이 백분율만큼 감소합니다.|  
   
 ## <a name="remarks"></a>설명  
- **sys.dm_db_missing_index_group_stats**에서 반환되는 정보는 쿼리 컴파일 또는 다시 컴파일 시가 아니라 쿼리 실행 시마다 업데이트됩니다. 사용 통계는 지속되지 않으며 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]를 다시 시작할 때까지만 유지됩니다. 서버 재활용 후에도 사용 통계를 유지하려면 데이터베이스 관리자가 정기적으로 누락된 인덱스 정보의 백업 복사본을 만들어야 합니다.  
+ **sys.dm_db_missing_index_group_stats** 에서 반환되는 정보는 쿼리 컴파일 또는 다시 컴파일 시가 아니라 쿼리 실행 시마다 업데이트됩니다. 사용 통계는 지속되지 않으며 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]를 다시 시작할 때까지만 유지됩니다. 서버 재활용 후에도 사용 통계를 유지하려면 데이터베이스 관리자가 정기적으로 누락된 인덱스 정보의 백업 복사본을 만들어야 합니다.  
 
   >[!NOTE]
   >이 DMV의 결과 집합은 600 개 행으로 제한 됩니다. 각 행에는 누락 된 인덱스가 하나 있습니다. 인덱스가 600 개를 초과 하는 경우 기존 누락 된 인덱스를 처리 하 여 최신 인덱스를 볼 수 있도록 해야 합니다.
@@ -62,7 +62,7 @@ ms.locfileid: "89518097"
 ## <a name="permissions"></a>사용 권한  
  이 동적 관리 뷰를 쿼리하려면 사용자에게 VIEW SERVER STATE 권한이나 VIEW SERVER STATE 권한을 나타내는 사용 권한을 부여해야 합니다.  
   
-## <a name="examples"></a>예제  
+## <a name="examples"></a>예  
  다음 예에서는 **sys.dm_db_missing_index_group_stats** 동적 관리 뷰를 사용하는 방법을 보여 줍니다.  
   
 ### <a name="a-find-the-10-missing-indexes-with-the-highest-anticipated-improvement-for-user-queries"></a>A. 사용자 쿼리 성능이 가장 많이 향상될 것으로 예상되는 누락된 인덱스 10개 찾기  
@@ -90,9 +90,9 @@ WHERE migs.group_handle = 24;
  이 쿼리는 인덱스가 누락된 데이터베이스, 스키마 및 테이블의 이름을 제공합니다. 또한 인덱스 키로 사용해야 하는 열의 이름을 제공합니다. CREATE INDEX DDL 문을 작성 하 여 누락 된 인덱스를 구현 하는 경우 CREATE INDEX 문의 ON 절에 먼저 같음 열을 나열 하 고 같지 않음 열을 나열 \<*table_name*> 합니다. 포괄 열은 CREATE INDEX 문의 INCLUDE 절에 나열해야 합니다. 같음 열에 효율적인 순서를 결정하려면 선택도를 기준으로 열을 정렬합니다. 즉, 가장 많이 선택되는 열을 먼저 나열합니다(열 목록에서 맨 왼쪽).  
   
 ## <a name="see-also"></a>참고 항목  
- [dm_db_missing_index_columns &#40;Transact-sql&#41;](../../relational-databases/system-dynamic-management-views/sys-dm-db-missing-index-columns-transact-sql.md)   
- [dm_db_missing_index_details &#40;Transact-sql&#41;](../../relational-databases/system-dynamic-management-views/sys-dm-db-missing-index-details-transact-sql.md)   
- [dm_db_missing_index_groups &#40;Transact-sql&#41;](../../relational-databases/system-dynamic-management-views/sys-dm-db-missing-index-groups-transact-sql.md)   
+ [Transact-sql&#41;sys.dm_db_missing_index_columns &#40;](../../relational-databases/system-dynamic-management-views/sys-dm-db-missing-index-columns-transact-sql.md)   
+ [Transact-sql&#41;sys.dm_db_missing_index_details &#40;](../../relational-databases/system-dynamic-management-views/sys-dm-db-missing-index-details-transact-sql.md)   
+ [Transact-sql&#41;sys.dm_db_missing_index_groups &#40;](../../relational-databases/system-dynamic-management-views/sys-dm-db-missing-index-groups-transact-sql.md)   
  [CREATE INDEX&#40;Transact-SQL&#41;](../../t-sql/statements/create-index-transact-sql.md)  
   
   

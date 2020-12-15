@@ -16,13 +16,13 @@ helpviewer_keywords:
 ms.assetid: b85df83b-ba56-43bf-bcdf-b2a6fca43276
 author: MightyPen
 ms.author: genemi
-monikerRange: =azuresqldb-current||>=sql-server-2016||=sqlallproducts-allversions||>=sql-server-linux-2017||=azuresqldb-mi-current
-ms.openlocfilehash: 66d987556c0de9a64b7572be324b9f59563af830
-ms.sourcegitcommit: da88320c474c1c9124574f90d549c50ee3387b4c
+monikerRange: =azuresqldb-current||>=sql-server-2016||>=sql-server-linux-2017||=azuresqldb-mi-current
+ms.openlocfilehash: 5bc731438d8691664b4db502ab05e3489e5faaa1
+ms.sourcegitcommit: 1a544cf4dd2720b124c3697d1e62ae7741db757c
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 07/01/2020
-ms.locfileid: "85730174"
+ms.lasthandoff: 12/14/2020
+ms.locfileid: "97461724"
 ---
 # <a name="sqlxml-40-net-framework-support---using-bulk-load"></a>SQLXML 4.0 .NET Framework 지원 - 대량 로드 사용
 [!INCLUDE [SQL Server Azure SQL Database](../../includes/applies-to-version/sql-asdb.md)]
@@ -114,9 +114,9 @@ ms.locfileid: "85730174"
   
 5.  C# 콘솔 애플리케이션을 만듭니다.  
   
-6.  **프로젝트** 메뉴에서 **참조 추가**를 선택 합니다.  
+6.  **프로젝트** 메뉴에서 **참조 추가** 를 선택 합니다.  
   
-7.  **COM** 탭에서 **Microsoft SQLXML Bulkload 4.0 형식 라이브러리** (xblkld4.dll)를 선택 하 고 **확인**을 클릭 합니다. 프로젝트에서 생성 된 **Interop. Sqlxml대량 Loadlib** 어셈블리가 표시 됩니다.  
+7.  **COM** 탭에서 **Microsoft SQLXML Bulkload 4.0 형식 라이브러리** (xblkld4.dll)를 선택 하 고 **확인** 을 클릭 합니다. 프로젝트에서 생성 된 **Interop. Sqlxml대량 Loadlib** 어셈블리가 표시 됩니다.  
   
 8.  Main() 메서드를 다음 코드로 바꿉니다. **ConnectionString** 속성 및 파일 경로를 스키마 및 데이터 파일로 업데이트 합니다.  
   
@@ -142,7 +142,7 @@ ms.locfileid: "85730174"
 9. 앞에서 만든 테이블에 XML을 로드하려면 프로젝트를 빌드하고 실행합니다.  
   
     > [!NOTE]  
-    >  대량 로드 구성 요소(xblkld4.dll)에 대한 참조는 .NET Framework에 포함된 tlbimp.exe 도구를 사용하여 추가할 수도 있습니다. 이 도구는 네이티브 DLL(xblkld4.dll)에 대한 관리되는 래퍼를 만들며 이 래퍼는 모든 .NET 프로젝트에서 사용할 수 있습니다. 예를 들면 다음과 같습니다.  
+    >  대량 로드 구성 요소(xblkld4.dll)에 대한 참조는 .NET Framework에 포함된 tlbimp.exe 도구를 사용하여 추가할 수도 있습니다. 이 도구는 네이티브 DLL(xblkld4.dll)에 대한 관리되는 래퍼를 만들며 이 래퍼는 모든 .NET 프로젝트에서 사용할 수 있습니다. 예를 들어:  
   
     ```  
     c:\>tlbimp xblkld4.dll  

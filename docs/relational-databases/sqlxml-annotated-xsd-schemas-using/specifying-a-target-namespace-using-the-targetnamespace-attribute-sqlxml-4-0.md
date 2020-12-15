@@ -20,25 +20,25 @@ author: MightyPen
 ms.author: genemi
 ms.reviewer: ''
 ms.custom: seo-lt-2019
-monikerRange: =azuresqldb-current||>=sql-server-2016||=sqlallproducts-allversions||>=sql-server-linux-2017||=azuresqldb-mi-current
-ms.openlocfilehash: bfa6234aae5e2744a88c4fcfb158575cb07000f5
-ms.sourcegitcommit: da88320c474c1c9124574f90d549c50ee3387b4c
+monikerRange: =azuresqldb-current||>=sql-server-2016||>=sql-server-linux-2017||=azuresqldb-mi-current
+ms.openlocfilehash: 50eda94d40b819a5cd1fd51855232a53ecfc93db
+ms.sourcegitcommit: 1a544cf4dd2720b124c3697d1e62ae7741db757c
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 07/01/2020
-ms.locfileid: "85764895"
+ms.lasthandoff: 12/14/2020
+ms.locfileid: "97461744"
 ---
 # <a name="specifying-a-target-namespace-using-the-targetnamespace-attribute-sqlxml-40"></a>targetNamespace 특성을 사용하여 대상 네임스페이스 지정(SQLXML 4.0)
 [!INCLUDE [SQL Server Azure SQL Database](../../includes/applies-to-version/sql-asdb.md)]
-  XSD 스키마를 작성할 때 XSD **targetNamespace** 특성을 사용 하 여 대상 네임 스페이스를 지정할 수 있습니다. 이 항목에서는 XSD **targetNamespace**, **Elementformdefault**및 **attributeformdefault** 특성의 작동 방식, 생성 되는 XML 인스턴스에 미치는 영향 및 네임 스페이스로 XPath 쿼리를 지정 하는 방법에 대해 설명 합니다.  
+  XSD 스키마를 작성할 때 XSD **targetNamespace** 특성을 사용 하 여 대상 네임 스페이스를 지정할 수 있습니다. 이 항목에서는 XSD **targetNamespace**, **Elementformdefault** 및 **attributeformdefault** 특성의 작동 방식, 생성 되는 XML 인스턴스에 미치는 영향 및 네임 스페이스로 XPath 쿼리를 지정 하는 방법에 대해 설명 합니다.  
   
  **Xsd: targetNamespace** 특성을 사용 하 여 기본 네임 스페이스의 요소와 특성을 다른 네임 스페이스에 넣을 수 있습니다. 또한 로컬로 선언된 스키마 요소 및 특성을 접두사를 사용하여 명시적으로 또는 암시적으로(기본 설정) 네임스페이스에서 정규화된 것으로 표시할지 여부를 지정할 수도 있습니다. 요소에 **elementformdefault** 및 **attributeformdefault** 특성을 사용 하 여 **\<xsd:schema>** 로컬 요소 및 특성의 정규화를 전역적으로 지정 하거나 **form** 특성을 사용 하 여 개별 요소와 특성을 개별적으로 지정할 수 있습니다.  
   
-## <a name="examples"></a>예제  
+## <a name="examples"></a>예  
  다음 예를 사용하여 작업 예제를 만들려면 특정 요구 사항이 충족되어야 합니다. 자세한 내용은 [SQLXML 예를 실행 하기 위한 요구 사항](../../relational-databases/sqlxml/requirements-for-running-sqlxml-examples.md)을 참조 하세요.  
   
 ### <a name="a-specifying-a-target-namespace"></a>A. 대상 네임스페이스 지정  
- 다음 XSD 스키마는 **xsd: targetNamespace** 특성을 사용 하 여 대상 네임 스페이스를 지정 합니다. 또한 스키마는 **elementformdefault** 및 **attributeformdefault** 특성 값을 **"정규화** 되지 않음" (이러한 특성의 기본값)으로 설정 합니다. 이 선언은 전역 선언 이며 스키마의 모든 로컬 요소 **\<Order>** 와 스키마의 특성 (**CustomerID**, **ContactName**및 **OrderID** )에 영향을 줍니다.  
+ 다음 XSD 스키마는 **xsd: targetNamespace** 특성을 사용 하 여 대상 네임 스페이스를 지정 합니다. 또한 스키마는 **elementformdefault** 및 **attributeformdefault** 특성 값을 **"정규화** 되지 않음" (이러한 특성의 기본값)으로 설정 합니다. 이 선언은 전역 선언 이며 스키마의 모든 로컬 요소 **\<Order>** 와 스키마의 특성 (**CustomerID**, **ContactName** 및 **OrderID** )에 영향을 줍니다.  
   
 ```  
 <xsd:schema xmlns:xsd="http://www.w3.org/2001/XMLSchema"  
@@ -103,7 +103,7 @@ ms.locfileid: "85764895"
   
  이 인스턴스 문서는 urn: MyNamespace 네임 스페이스를 정의 하 고이 네임 스페이스에 접두사 (y0)를 연결 합니다. 접두사는 전역 요소에만 적용 됩니다 **\<Customer>** . 요소는 스키마에서 요소의 자식으로 선언 되기 때문에 전역적입니다 **\<xsd:schema>** .  
   
- **Elementformdefault** 및 **attributeformdefault** 특성의 값이 스키마에서 **"정규화** 되지 않음"으로 설정 되어 있기 때문에 로컬 요소 및 특성에는 접두사가 적용 되지 않습니다. 요소는 **\<Order>** 해당 선언이 **\<complexType>** 요소를 정의 하는 요소의 자식으로 나타나기 때문에 로컬입니다 **\<CustomerType>** . 마찬가지로 특성 (**CustomerID**, **OrderID**및 **ContactName**)은 global이 아닌 로컬입니다.  
+ **Elementformdefault** 및 **attributeformdefault** 특성의 값이 스키마에서 **"정규화** 되지 않음"으로 설정 되어 있기 때문에 로컬 요소 및 특성에는 접두사가 적용 되지 않습니다. 요소는 **\<Order>** 해당 선언이 **\<complexType>** 요소를 정의 하는 요소의 자식으로 나타나기 때문에 로컬입니다 **\<CustomerType>** . 마찬가지로 특성 (**CustomerID**, **OrderID** 및 **ContactName**)은 global이 아닌 로컬입니다.  
   
 ##### <a name="to-create-a-working-sample-of-this-schema"></a>이 스키마의 작업 예제를 만들려면  
   

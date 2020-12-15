@@ -16,13 +16,13 @@ helpviewer_keywords:
 ms.assetid: f4c63206-80bb-4d31-84ae-ccfcd563effa
 author: markingmyname
 ms.author: maghan
-monikerRange: '>=aps-pdw-2016||=azuresqldb-current||=azure-sqldw-latest||>=sql-server-2016||=sqlallproducts-allversions||>=sql-server-linux-2017||=azuresqldb-mi-current'
-ms.openlocfilehash: e22fcf286b0f1d336eebdbc5726af7b2c9f15ff0
-ms.sourcegitcommit: 216f377451e53874718ae1645a2611cdb198808a
+monikerRange: '>=aps-pdw-2016||=azuresqldb-current||=azure-sqldw-latest||>=sql-server-2016||>=sql-server-linux-2017||=azuresqldb-mi-current'
+ms.openlocfilehash: 09cccfb889bb2eae2b80c2c466eaed1a96520be8
+ms.sourcegitcommit: 1a544cf4dd2720b124c3697d1e62ae7741db757c
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 07/28/2020
-ms.locfileid: "87246744"
+ms.lasthandoff: 12/14/2020
+ms.locfileid: "97462004"
 ---
 # <a name="using-encryption-without-validation-in-sql-server-native-client"></a>SQL Server Native Client에서 유효성 검사 없이 암호화 사용
 [!INCLUDE [SQL Server](../../../includes/applies-to-version/sql-asdb-asdbmi-asa-pdw.md)]
@@ -31,7 +31,7 @@ ms.locfileid: "87246744"
 
 자체 서명된 인증서는 보안을 보장하지 않습니다. 암호화된 핸드셰이크는 NTLM(NT LAN Manager)을 기반으로 합니다. 보안 연결을 위해 SQL Server에 확인할 수 있는 인증서를 프로비전하는 것이 좋습니다. TLS(Transport Security Layer)는 인증서 유효성 검사를 통해서만 안전하게 만들 수 있습니다.
 
-애플리케이션에 따라 연결 문자열 키워드나 연결 속성을 사용하여 모든 네트워크 트래픽을 암호화해야 할 수도 있습니다. 키워드는 **IDbInitialize:: Initialize**를 사용 하 여 공급자 문자열을 사용 하는 경우, **IDataInitialize**과 함께 초기화 문자열을 사용 하는 경우 ADO 및 OLE DB에서 "데이터 암호화 사용"을 사용 하는 경우에는 OLE DB ODBC의 "Encrypt"입니다. 이는 **강제 프로토콜 암호화** 옵션을 사용하고 클라이언트가 암호화된 연결을 요청하도록 구성하여 [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] 구성 관리자에서도 구성할 수 있습니다. 기본적으로 연결의 모든 네트워크 트래픽을 암호화하려면 서버에 인증서를 제공해야 합니다. 서버에서 인증서를 신뢰하도록 클라이언트를 설정하면 메시지 가로채기(man-in-the-middle) 공격에 취약해질 수 있습니다. 서버에 확인할 수 있는 인증서를 배포하는 경우 인증서를 신뢰하는 방법에 대한 클라이언트 설정을 FALSE로 변경해야 합니다.
+애플리케이션에 따라 연결 문자열 키워드나 연결 속성을 사용하여 모든 네트워크 트래픽을 암호화해야 할 수도 있습니다. 키워드는 **IDbInitialize:: Initialize** 를 사용 하 여 공급자 문자열을 사용 하는 경우, **IDataInitialize** 과 함께 초기화 문자열을 사용 하는 경우 ADO 및 OLE DB에서 "데이터 암호화 사용"을 사용 하는 경우에는 OLE DB ODBC의 "Encrypt"입니다. 이는 **강제 프로토콜 암호화** 옵션을 사용하고 클라이언트가 암호화된 연결을 요청하도록 구성하여 [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] 구성 관리자에서도 구성할 수 있습니다. 기본적으로 연결의 모든 네트워크 트래픽을 암호화하려면 서버에 인증서를 제공해야 합니다. 서버에서 인증서를 신뢰하도록 클라이언트를 설정하면 메시지 가로채기(man-in-the-middle) 공격에 취약해질 수 있습니다. 서버에 확인할 수 있는 인증서를 배포하는 경우 인증서를 신뢰하는 방법에 대한 클라이언트 설정을 FALSE로 변경해야 합니다.
 
 연결 문자열 키워드에 대 한 자세한 내용은 [SQL Server Native Client 연결 문자열 키워드 사용](../../../relational-databases/native-client/applications/using-connection-string-keywords-with-sql-server-native-client.md)을 참조 하세요.  
   
@@ -41,12 +41,12 @@ ms.locfileid: "87246744"
   
 |프로토콜 암호화 강제 사용 클라이언트 설정|서버 인증서 신뢰 클라이언트 설정|연결 문자열/연결 특성 Encrypt/Use Encryption for Data|연결 문자열/연결 특성 서버 인증서 신뢰|결과|  
 |----------------------------------------------|---------------------------------------------|------------------------------------------------------------------------------|----------------------------------------------------------------------|------------|  
-|예|해당 없음|아니요(기본값)|무시됨|암호화가 수행되지 않습니다.|  
-|예|해당 없음|yes|아니요(기본값)|확인할 수 있는 서버 인증서가 있는 경우에만 암호화가 수행되고 그렇지 않으면 연결 시도가 실패합니다.|  
-|예|해당 없음|yes|yes|항상 암호화가 수행되지만 자체 서명된 서버 인증서가 사용될 수 있습니다.|  
-|yes|예|무시됨|무시됨|확인할 수 있는 서버 인증서가 있는 경우에만 암호화가 수행되고 그렇지 않으면 연결 시도가 실패합니다.|  
+|아니요|해당 없음|아니요(기본값)|무시됨|암호화가 수행되지 않습니다.|  
+|아니요|해당 없음|예|아니요(기본값)|확인할 수 있는 서버 인증서가 있는 경우에만 암호화가 수행되고 그렇지 않으면 연결 시도가 실패합니다.|  
+|아니요|해당 없음|예|yes|항상 암호화가 수행되지만 자체 서명된 서버 인증서가 사용될 수 있습니다.|  
+|예|아니요|무시됨|무시됨|확인할 수 있는 서버 인증서가 있는 경우에만 암호화가 수행되고 그렇지 않으면 연결 시도가 실패합니다.|  
 |yes|yes|아니요(기본값)|무시됨|항상 암호화가 수행되지만 자체 서명된 서버 인증서가 사용될 수 있습니다.|  
-|yes|yes|yes|아니요(기본값)|확인할 수 있는 서버 인증서가 있는 경우에만 암호화가 수행되고 그렇지 않으면 연결 시도가 실패합니다.|  
+|예|yes|yes|아니요(기본값)|확인할 수 있는 서버 인증서가 있는 경우에만 암호화가 수행되고 그렇지 않으면 연결 시도가 실패합니다.|  
 |yes|yes|yes|yes|항상 암호화가 수행되지만 자체 서명된 서버 인증서가 사용될 수 있습니다.|  
 ||||||
 

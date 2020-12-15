@@ -29,13 +29,13 @@ author: MightyPen
 ms.author: genemi
 ms.reviewer: ''
 ms.custom: seo-lt-2019
-monikerRange: =azuresqldb-current||>=sql-server-2016||=sqlallproducts-allversions||>=sql-server-linux-2017||=azuresqldb-mi-current
-ms.openlocfilehash: 15274c3b46ac7b0dfb3e9f43fad0dd1174f5fbbf
-ms.sourcegitcommit: da88320c474c1c9124574f90d549c50ee3387b4c
+monikerRange: =azuresqldb-current||>=sql-server-2016||>=sql-server-linux-2017||=azuresqldb-mi-current
+ms.openlocfilehash: 6c050a6b34781fc6312e7d410aeccace29e3dc84
+ms.sourcegitcommit: 1a544cf4dd2720b124c3697d1e62ae7741db757c
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 07/01/2020
-ms.locfileid: "85775764"
+ms.lasthandoff: 12/14/2020
+ms.locfileid: "97461764"
 ---
 # <a name="specifying-relationships-using-sqlrelationship-sqlxml-40"></a>sql:relationship을 사용하여 관계 지정(SQLXML 4.0)
 [!INCLUDE [SQL Server Azure SQL Database](../../includes/applies-to-version/sql-asdb.md)]
@@ -75,7 +75,7 @@ ms.locfileid: "85775764"
   
  결과에서 적절 한 중첩을 생성 하려면 **sql: key 필드가** 모든 스키마에 지정 되는 것이 좋습니다.  
   
-## <a name="examples"></a>예제  
+## <a name="examples"></a>예  
  다음 예를 사용하여 작업 예제를 만들려면 특정 요구 사항이 충족되어야 합니다. 자세한 내용은 [SQLXML 예를 실행 하기 위한 요구 사항](../../relational-databases/sqlxml/requirements-for-running-sqlxml-examples.md)을 참조 하세요.  
   
 ### <a name="a-specifying-the-sqlrelationship-annotation-on-an-element"></a>A. 요소에 sql:relationship 주석 지정  
@@ -486,7 +486,7 @@ ms.locfileid: "85775764"
 ```  
   
 ### <a name="e-specifying-the-sqlrelationship-without-the-parent-attribute"></a>E. \<sql:relationship>부모 특성을 사용 하지 않고를 지정 합니다.  
- 이 예에서는 부모 특성을 사용 하지 않고를 지정 하는 방법을 보여 줍니다 **\<sql:relationship>** . **parent** 예를 들어 다음과 같은 직원 테이블을 가정해 보십시오.  
+ 이 예에서는 부모 특성을 사용 하지 않고를 지정 하는 방법을 보여 줍니다 **\<sql:relationship>** .  예를 들어 다음과 같은 직원 테이블을 가정해 보십시오.  
   
 ```  
 Emp1(SalesPersonID, FirstName, LastName, ReportsTo)  
@@ -527,7 +527,7 @@ Emp2(SalesPersonID, FirstName, LastName, ReportsTo)
 </xsd:schema>  
 ```  
   
- 스키마에서 **\<Emp1>** 요소와 요소는 모두 **\<Emp2>** **EmpType**유형입니다. **EmpType** 형식에는 **\<Order>** 자식 요소와 해당이 설명 되어 **\<sql:relationship>** 있습니다. 이 경우 부모 특성을 사용 하 여에서 식별할 수 있는 단일 부모가 없습니다 **\<sql:relationship>** . **parent** 이 경우에서 **부모** 특성을 지정 하지 않습니다. **\<sql:relationship>** **부모** 특성 정보는 스키마의 계층에서 가져옵니다.  
+ 스키마에서 **\<Emp1>** 요소와 요소는 모두 **\<Emp2>** **EmpType** 유형입니다. **EmpType** 형식에는 **\<Order>** 자식 요소와 해당이 설명 되어 **\<sql:relationship>** 있습니다. 이 경우 부모 특성을 사용 하 여에서 식별할 수 있는 단일 부모가 없습니다 **\<sql:relationship>** .  이 경우에서 **부모** 특성을 지정 하지 않습니다. **\<sql:relationship>** **부모** 특성 정보는 스키마의 계층에서 가져옵니다.  
   
 ##### <a name="to-test-a-sample-xpath-query-against-the-schema"></a>스키마에 대해 예제 XPath 쿼리를 테스트하려면  
   

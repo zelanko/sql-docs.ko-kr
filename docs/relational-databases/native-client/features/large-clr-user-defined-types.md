@@ -1,5 +1,5 @@
 ---
-description: SQL Server Native Client의 많은 CLR 사용자 정의 형식
+description: SQL Server Native Client의 Large CLR User-Defined 형식
 title: 큰 CLR 사용자 정의 형식 | Microsoft Docs
 ms.custom: ''
 ms.date: 03/17/2017
@@ -12,20 +12,20 @@ helpviewer_keywords:
 ms.assetid: b65eb61d-ccf6-49c0-98e7-9a4ef4b2f790
 author: markingmyname
 ms.author: maghan
-monikerRange: '>=aps-pdw-2016||=azuresqldb-current||=azure-sqldw-latest||>=sql-server-2016||=sqlallproducts-allversions||>=sql-server-linux-2017||=azuresqldb-mi-current'
-ms.openlocfilehash: 9b841020b73ea7dde90eca5a0b693bb1f943fa4e
-ms.sourcegitcommit: e700497f962e4c2274df16d9e651059b42ff1a10
+monikerRange: '>=aps-pdw-2016||=azuresqldb-current||=azure-sqldw-latest||>=sql-server-2016||>=sql-server-linux-2017||=azuresqldb-mi-current'
+ms.openlocfilehash: 039b57d8eaaee8004dda5988cb877c4ec7ccc037
+ms.sourcegitcommit: 1a544cf4dd2720b124c3697d1e62ae7741db757c
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 08/17/2020
-ms.locfileid: "88498926"
+ms.lasthandoff: 12/14/2020
+ms.locfileid: "97463374"
 ---
-# <a name="large-clr-user-defined-types-in-sql-server-native-client"></a>SQL Server Native Client의 많은 CLR 사용자 정의 형식
+# <a name="large-clr-user-defined-types-in-sql-server-native-client"></a>SQL Server Native Client의 Large CLR User-Defined 형식
 [!INCLUDE [SQL Server](../../../includes/applies-to-version/sql-asdb-asdbmi-asa-pdw.md)]
 
   SQL Server 2005에서는 CLR(공용 언어 런타임)에서의 UDT(사용자 정의 형식) 크기가 8,000바이트로 제한되었습니다. [!INCLUDE[ssKatmai](../../../includes/sskatmai-md.md)] 이상 버전에서는 이 제한이 더 이상 적용되지 않습니다. 이제 CLR UDT가 LOB(Large Object) 형식과 비슷하게 처리됩니다. 즉, 8,000바이트보다 작거나 같은 UDT는 SQL Server 2005에서와 동일하게 처리되나 이보다 큰 UDT도 지원되며 이 경우 크기가 "제한 없음"으로 보고됩니다.  
   
- 자세한 내용은 [ODBC&#41;&#40;](../../../relational-databases/native-client/odbc/large-clr-user-defined-types-odbc.md) [&#41;OLE DB &#40;크고](../../../relational-databases/native-client/ole-db/large-clr-user-defined-types-ole-db.md) clr 사용자 정의 형식을 참조 하세요.  
+ 자세한 내용은 [ODBC User-Defined &#40;OLE DB&#41;및 LARGE clr&#41;types ](../../../relational-databases/native-client/odbc/large-clr-user-defined-types-odbc.md) [&#40;Large clr User-Defined 형식](../../../relational-databases/native-client/ole-db/large-clr-user-defined-types-ole-db.md) 을 참조 하세요.  
   
 ## <a name="use-cases"></a>사용 사례  
  ODBC의 경우 UDT 값을 실행 시 데이터 매개 변수로 조각으로 나누어 보낼 수 있는 기능이 큰 UDT에 대한 지원에 포함되었습니다. SQLPutData를 사용 하 여이 작업을 수행 합니다.  

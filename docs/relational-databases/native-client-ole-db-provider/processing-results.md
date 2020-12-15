@@ -16,13 +16,13 @@ helpviewer_keywords:
 ms.assetid: 20887ac4-f649-4e7f-92e6-f929e2e70952
 author: markingmyname
 ms.author: maghan
-monikerRange: '>=aps-pdw-2016||=azuresqldb-current||=azure-sqldw-latest||>=sql-server-2016||=sqlallproducts-allversions||>=sql-server-linux-2017||=azuresqldb-mi-current'
-ms.openlocfilehash: c2e88f5b81c29d249e58f972646b9335d02c31f6
-ms.sourcegitcommit: e700497f962e4c2274df16d9e651059b42ff1a10
+monikerRange: '>=aps-pdw-2016||=azuresqldb-current||=azure-sqldw-latest||>=sql-server-2016||>=sql-server-linux-2017||=azuresqldb-mi-current'
+ms.openlocfilehash: 725757b2aefb6350f3f95ebaac896d1454e79386
+ms.sourcegitcommit: 1a544cf4dd2720b124c3697d1e62ae7741db757c
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 08/17/2020
-ms.locfileid: "88490722"
+ms.lasthandoff: 12/14/2020
+ms.locfileid: "97463484"
 ---
 # <a name="processing-results-native-client-ole-db-provider"></a>결과 처리 (Native Client OLE DB 공급자)
 [!INCLUDE[SQL Server Azure SQL Database Synapse Analytics PDW ](../../includes/applies-to-version/sql-asdb-asdbmi-asa-pdw.md)]
@@ -31,7 +31,7 @@ ms.locfileid: "88490722"
   
  행 집합은 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] Native Client OLE DB 공급자가 데이터를 테이블 형식으로 노출할 수 있도록 하는 중앙 개체입니다. 개념상, 행 집합은 각 행이 열 데이터를 갖는 행의 집합입니다. 행 집합 개체는 **IRowset**(행 집합에서 순차적으로 행을 인출하기 위한 메서드 포함), **IAccessor**(테이블 형식 데이터가 소비자 프로그램 변수에 바인딩되는 방법을 설명하는 열 바인딩 그룹의 정의 허용), **IColumnsInfo**(행 집합의 열에 대한 정보 제공) 및 **IRowsetInfo**(행 집합에 대한 정보 제공)와 같은 인터페이스를 노출합니다.  
   
- 소비자는 **IRowset::GetData** 메서드를 호출하여 행 집합의 데이터 행을 버퍼로 검색할 수 있습니다. **GetData**를 호출하기 전에 소비자는 DBBINDING 구조 집합을 사용하여 버퍼를 설명합니다. 각 바인딩은 행 집합이 소비자 버퍼에 저장되는 방법을 설명하며 다음을 포함합니다.  
+ 소비자는 **IRowset::GetData** 메서드를 호출하여 행 집합의 데이터 행을 버퍼로 검색할 수 있습니다. **GetData** 를 호출하기 전에 소비자는 DBBINDING 구조 집합을 사용하여 버퍼를 설명합니다. 각 바인딩은 행 집합이 소비자 버퍼에 저장되는 방법을 설명하며 다음을 포함합니다.  
   
 -   바인딩이 적용되는 열(또는 매개 변수)의 서수  
   

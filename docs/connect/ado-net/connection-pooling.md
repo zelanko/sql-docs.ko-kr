@@ -10,12 +10,12 @@ ms.topic: conceptual
 author: David-Engel
 ms.author: v-daenge
 ms.reviewer: v-chmalh
-ms.openlocfilehash: 41842a2eb754aedc31bad206ad427a86bb65f00f
-ms.sourcegitcommit: 192f6a99e19e66f0f817fdb1977f564b2aaa133b
+ms.openlocfilehash: 41b139d2f22a9cb3137879d96224b02eafc24bab
+ms.sourcegitcommit: c127c0752e84cccd38a7e23ac74c0362a40f952e
 ms.translationtype: HT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 11/25/2020
-ms.locfileid: "96126511"
+ms.lasthandoff: 12/07/2020
+ms.locfileid: "96761501"
 ---
 # <a name="connection-pooling"></a>연결 풀링
 
@@ -27,8 +27,10 @@ ms.locfileid: "96126511"
 
 ## <a name="in-this-section"></a>섹션 내용  
 
-[SQL Server 연결 풀링(ADO.NET)](sql-server-connection-pooling.md) 연결 풀링에 대한 개요를 제공하고 SQL Server에서 연결 풀링이 작동하는 방식을 설명합니다.
+[SQL Server 연결 풀링(ADO.NET)](sql-server-connection-pooling.md)  
+연결 풀링에 대해 간략하게 설명하고 SQL Server에서 연결 풀링이 작동하는 방식을 설명합니다.
 
 ## <a name="see-also"></a>참고 항목
 
 - [ADO.NET에서 데이터 검색 및 수정](retrieving-modifying-data.md)
+- [Microsoft ADO.NET for SQL Server](microsoft-ado-net-sql-server.md)

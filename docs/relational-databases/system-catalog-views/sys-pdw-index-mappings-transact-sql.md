@@ -12,13 +12,13 @@ dev_langs:
 ms.assetid: d62b0e25-3226-4f87-a10a-b3a0d9555e19
 author: ronortloff
 ms.author: rortloff
-monikerRange: '>= aps-pdw-2016 || = azure-sqldw-latest || = sqlallproducts-allversions'
-ms.openlocfilehash: 05aec55dda150df8e686d5f2f50deca9e5b722ff
-ms.sourcegitcommit: 22dacedeb6e8721e7cdb6279a946d4002cfb5da3
+monikerRange: '>= aps-pdw-2016 || = azure-sqldw-latest'
+ms.openlocfilehash: 31e4b7e34df647a7c3a12b187cb0067ec399bcbd
+ms.sourcegitcommit: 1a544cf4dd2720b124c3697d1e62ae7741db757c
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 10/14/2020
-ms.locfileid: "92037006"
+ms.lasthandoff: 12/14/2020
+ms.locfileid: "97444288"
 ---
 # <a name="syspdw_index_mappings-transact-sql"></a>sys.pdw_index_mappings (Transact-sql)
 [!INCLUDE[applies-to-version/asa-pdw](../../includes/applies-to-version/asa-pdw.md)]

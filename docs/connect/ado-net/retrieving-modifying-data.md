@@ -10,12 +10,12 @@ ms.topic: conceptual
 author: David-Engel
 ms.author: v-daenge
 ms.reviewer: v-chmalh
-ms.openlocfilehash: 8fc6a8ed3cf4fec9b97b81c38fb1667588623ba7
-ms.sourcegitcommit: debaff72dbfae91b303f0acd42dd6d99e03135a2
+ms.openlocfilehash: d6e4d6c298c632c446e1671b5d9adabaa19e0776
+ms.sourcegitcommit: c127c0752e84cccd38a7e23ac74c0362a40f952e
 ms.translationtype: HT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 12/01/2020
-ms.locfileid: "96419749"
+ms.lasthandoff: 12/07/2020
+ms.locfileid: "96761491"
 ---
 # <a name="retrieving-and-modifying-data-in-adonet"></a>ADO.NET에서 데이터 검색 및 수정
 
@@ -27,13 +27,23 @@ ms.locfileid: "96419749"
 
 ## <a name="in-this-section"></a>섹션 내용
 
-[데이터 원본에 연결](connecting-to-data-source.md) 데이터 원본에 대한 연결을 설정하는 방법과 연결 이벤트로 작업하는 방법을 설명합니다.
+[데이터 원본에 연결](connecting-to-data-source.md)  
+데이터 소스에 대한 연결을 설정하고 연결 이벤트로 작업하는 방법을 설명합니다.
 
-[연결 문자열](connection-strings.md) 연결 문자열 키워드, 보안 정보, 저장 및 검색 등 연결 문자열 사용의 다양한 측면을 설명하는 항목이 포함되어 있습니다.
+[연결 문자열](connection-strings.md)  
+연결 문자열 키워드, 보안 정보와 이에 대한 저장 및 검색을 비롯하여 다양한 연결 문자열 사용 방법을 설명하는 항목을 제공합니다.
 
-[연결 풀링](connection-pooling.md) Microsoft SqlClient Data Provider for SQL Server에 대한 연결 풀링을 설명합니다.
+[연결 풀링](connection-pooling.md)  
+Microsoft SqlClient Data Provider for SQL Server에 대한 연결 풀링을 설명합니다.
+
+[명령 및 매개 변수](commands-parameters.md)  
+명령 및 명령 작성기를 만드는 방법, 매개 변수를 구성하는 방법 및 명령을 실행하여 데이터를 검색하고 수정하는 방법에 대한 항목을 제공합니다.
+
+[DataAdapters 및 DataReaders](dataadapters-datareaders.md)  
+DataReaders, DataAdapters, 매개 변수, DataAdapter 이벤트 처리 및 배치 작업 수행 방법을 설명하는 항목을 제공합니다.
 
 ## <a name="see-also"></a>참조
 
 - [ADO.NET에서 데이터 형식 매핑](data-type-mappings-ado-net.md)
 - [SQL Server 및 ADO.NET](./sql/index.md)
+- [Microsoft ADO.NET for SQL Server](microsoft-ado-net-sql-server.md)

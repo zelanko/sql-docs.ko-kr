@@ -12,13 +12,13 @@ dev_langs:
 ms.assetid: 93966909-d758-4d50-950b-f5066d104fa6
 author: ronortloff
 ms.author: rortloff
-monikerRange: '>= aps-pdw-2016 || = azure-sqldw-latest || = sqlallproducts-allversions'
-ms.openlocfilehash: b758dafadc743ffc6c51c6d1c94ab3a5ea597e2d
-ms.sourcegitcommit: 22dacedeb6e8721e7cdb6279a946d4002cfb5da3
+monikerRange: '>= aps-pdw-2016 || = azure-sqldw-latest'
+ms.openlocfilehash: 28c2f14eebfecd386cc49678a1429b678a428239
+ms.sourcegitcommit: 1a544cf4dd2720b124c3697d1e62ae7741db757c
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 10/14/2020
-ms.locfileid: "92037688"
+ms.lasthandoff: 12/14/2020
+ms.locfileid: "97440778"
 ---
 # <a name="sysdm_pdw_nodes-transact-sql"></a>sys.dm_pdw_nodes (Transact-sql)
 [!INCLUDE[applies-to-version/asa-pdw](../../includes/applies-to-version/asa-pdw.md)]
@@ -28,7 +28,7 @@ ms.locfileid: "92037688"
 |열 이름|데이터 형식|Description|범위|  
 |-----------------|---------------|-----------------|-----------|  
 |pdw_node_id|**int**|노드와 연결 된 고유 숫자 id입니다.<br /><br /> 이 보기의 키입니다.|형식에 관계 없이 어플라이언스 전체에서 고유 합니다.|  
-|type|**nvarchar(32)**|노드의 유형입니다.|' COMPUTE ', ' CONTROL ', ' MANAGEMENT '|  
+|형식|**nvarchar(32)**|노드의 유형입니다.|' COMPUTE ', ' CONTROL ', ' MANAGEMENT '|  
 |name|**nvarchar(32)**|노드의 논리적 이름입니다.|적절 한 길이의 문자열입니다.|  
 |address|**nvarchar(32)**|이 노드의 IP 주소입니다.|[0-255] 형식으로 되어 있습니다. [0-255]. [0-255]. [0-255].|  
 |is_passive|**int**|노드를 실행 하는 가상 머신이 할당 된 서버에서 실행 되 고 있는지 또는 예비 서버로 장애 조치 (failover) 되었는지 여부를 나타냅니다.|0-노드 VM이 원래 서버에서 실행 중입니다.<br /><br /> 1-노드 VM이 예비 서버에서 실행 중입니다.|  

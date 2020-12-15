@@ -17,13 +17,13 @@ helpviewer_keywords:
 ms.assetid: 4a58b05c-8848-44bb-8704-f9f409efa5af
 author: markingmyname
 ms.author: maghan
-monikerRange: '>=aps-pdw-2016||=azuresqldb-current||=azure-sqldw-latest||>=sql-server-2016||=sqlallproducts-allversions||>=sql-server-linux-2017||=azuresqldb-mi-current'
-ms.openlocfilehash: 40196c8ec895bbf6bfc8e092e82ca8704d4f803e
-ms.sourcegitcommit: 216f377451e53874718ae1645a2611cdb198808a
+monikerRange: '>=aps-pdw-2016||=azuresqldb-current||=azure-sqldw-latest||>=sql-server-2016||>=sql-server-linux-2017||=azuresqldb-mi-current'
+ms.openlocfilehash: dce3adf92772a69875a644a2dc23344b6b139f51
+ms.sourcegitcommit: 1a544cf4dd2720b124c3697d1e62ae7741db757c
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 07/28/2020
-ms.locfileid: "87243904"
+ms.lasthandoff: 12/14/2020
+ms.locfileid: "97461994"
 ---
 # <a name="using-large-value-types-in-sql-server-native-client"></a>SQL Server Native Client에서 많은 값 형식 사용
 [!INCLUDE [SQL Server](../../../includes/applies-to-version/sql-asdb-asdbmi-asa-pdw.md)]
@@ -33,7 +33,7 @@ ms.locfileid: "87243904"
 > [!NOTE]  
 >  큰 값 데이터 형식은 1-8KB의 최대 크기를 가질 수 있거나 무제한으로 지정될 수 있습니다.  
   
- 이전에는 **text**, **ntext** 및 **image**와 같은 [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] 데이터 형식만 이러한 길이에 도달할 수 있었습니다. **Varchar**, **nvarchar** 및 **varbinary** 의 **max** 지정자는 이러한 데이터 형식을 중복 했습니다. 그러나 긴 데이터 형식은 여전히 사용할 수 있으므로, OLE DB 및 ODBC 데이터 액세스 구성 요소에 대한 대부분의 인터페이스는 동일하게 유지됩니다. 이전 릴리스와의 호환성을 위해 [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] Native  Client  OLE  DB  공급자의 DBCOLUMNFLAGS_ISLONG  플래그와 [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] Native  Client  ODBC  드라이버의 SQL_LONGVARCHAR는 계속 사용됩니다. [!INCLUDE[ssVersion2005](../../../includes/ssversion2005-md.md)] 이상 버전 대해 작성된 공급자와 드라이버는 무제한 최대 길이로 설정된 경우 새 형식에 대해 계속 이러한 용어를 사용합니다.  
+ 이전에는 **text**, **ntext** 및 **image** 와 같은 [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] 데이터 형식만 이러한 길이에 도달할 수 있었습니다. **Varchar**, **nvarchar** 및 **varbinary** 의 **max** 지정자는 이러한 데이터 형식을 중복 했습니다. 그러나 긴 데이터 형식은 여전히 사용할 수 있으므로, OLE DB 및 ODBC 데이터 액세스 구성 요소에 대한 대부분의 인터페이스는 동일하게 유지됩니다. 이전 릴리스와의 호환성을 위해 [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] Native  Client  OLE  DB  공급자의 DBCOLUMNFLAGS_ISLONG  플래그와 [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] Native  Client  ODBC  드라이버의 SQL_LONGVARCHAR는 계속 사용됩니다. [!INCLUDE[ssVersion2005](../../../includes/ssversion2005-md.md)] 이상 버전 대해 작성된 공급자와 드라이버는 무제한 최대 길이로 설정된 경우 새 형식에 대해 계속 이러한 용어를 사용합니다.  
   
 > [!NOTE]  
 >  저장 프로시저, 함수 반환 형식 또는 [CAST 및 CONVERT](../../../t-sql/functions/cast-and-convert-transact-sql.md) 함수의 입력 및 출력 매개 변수 형식으로 **varchar(max)**, **nvarchar(max)** 및 **varbinary(max)** 데이터 형식을 지정할 수도 있습니다.  
@@ -46,11 +46,11 @@ ms.locfileid: "87243904"
   
  **max** 크기가 무제한으로 설정된 열의 **varchar(max)**, **varbinary(max)** 및 **nvarchar(max)** 데이터 형식은 열 데이터 형식을 반환하는 핵심 OLE DB 스키마 행 집합과 인터페이스를 통해 ISLONG으로 표시됩니다.  
   
- 명령 개체의 **IAccessor** 구현이 DBTYPE_IUNKNOWN으로의 바인딩을 허용하도록 변경되었습니다. 소비자가 DBTYPE_IUNKNOWN을 지정하고 *pObject*를 Null로 설정하면 소비자가 출력 변수에서 **varchar(max)**, **nvarchar(max)** 또는 **varbinary(max)** 데이터를 스트리밍할 수 있도록 공급자가 **ISequentialStream** 인터페이스를 소비자에게 반환합니다.  
+ 명령 개체의 **IAccessor** 구현이 DBTYPE_IUNKNOWN으로의 바인딩을 허용하도록 변경되었습니다. 소비자가 DBTYPE_IUNKNOWN을 지정하고 *pObject* 를 Null로 설정하면 소비자가 출력 변수에서 **varchar(max)**, **nvarchar(max)** 또는 **varbinary(max)** 데이터를 스트리밍할 수 있도록 공급자가 **ISequentialStream** 인터페이스를 소비자에게 반환합니다.  
   
- 스트리밍된 출력 매개 변수 값은 결과 행 뒤에 반환됩니다. 애플리케이션이 반환된 모든 출력 매개 변수 값을 사용하지 않고 **IMultipleResults::GetResult**를 호출하여 다음 결과 집합으로 이동하면 DB_E_OBJECTOPEN이 반환됩니다.  
+ 스트리밍된 출력 매개 변수 값은 결과 행 뒤에 반환됩니다. 애플리케이션이 반환된 모든 출력 매개 변수 값을 사용하지 않고 **IMultipleResults::GetResult** 를 호출하여 다음 결과 집합으로 이동하면 DB_E_OBJECTOPEN이 반환됩니다.  
   
- 스트리밍을 지원 하기 위해 [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] Native Client OLE DB 공급자는 가변 길이 매개 변수를 순차적인 순서로 액세스 해야 합니다. 즉, **varchar(max)** , **nvarchchar(max)** 또는 **varbinary(max)** 열이나 출력 매개 변수가 DBTYPE_IUNKNOWN에 바인딩되어 있을 때마다 DBPROP_ACCESSORDER를 DBPROPVAL_AO_SEQUENTIALSTORAGEOBJECTS 또는 DBPROPVAL_AO_SEQUENTIAL로 설정해야 합니다. 이 액세스 순서 제한을 따르지 않으면 DBSTATUS_E_UNAVAILABLE로 인해 **IRowset::GetData**에 대한 호출이 실패합니다. DBTYPE_IUNKNOWN을 사용한 출력 바인딩이 없을 경우에는 이 제한이 적용되지 않습니다.  
+ 스트리밍을 지원 하기 위해 [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] Native Client OLE DB 공급자는 가변 길이 매개 변수를 순차적인 순서로 액세스 해야 합니다. 즉, **varchar(max)** , **nvarchchar(max)** 또는 **varbinary(max)** 열이나 출력 매개 변수가 DBTYPE_IUNKNOWN에 바인딩되어 있을 때마다 DBPROP_ACCESSORDER를 DBPROPVAL_AO_SEQUENTIALSTORAGEOBJECTS 또는 DBPROPVAL_AO_SEQUENTIAL로 설정해야 합니다. 이 액세스 순서 제한을 따르지 않으면 DBSTATUS_E_UNAVAILABLE로 인해 **IRowset::GetData** 에 대한 호출이 실패합니다. DBTYPE_IUNKNOWN을 사용한 출력 바인딩이 없을 경우에는 이 제한이 적용되지 않습니다.  
   
  [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)]Native client OLE DB 공급자는 또한 대량 값 데이터 형식에 대 한 DBTYPE_IUNKNOWN로 출력 매개 변수를 바인딩할 수 있습니다 .이 경우 저장 프로시저에서 클라이언트에 DBTYPE_IUNKNOWN 표시 되는 반환 값으로 많은 값 형식을 반환 합니다.  
   

@@ -9,12 +9,12 @@ ms.author: maghan
 ms.reviewer: jukoesma
 ms.custom: ''
 ms.date: 10/29/2020
-ms.openlocfilehash: 436c176e469e7ce0f34e26a883fae4cdd6bb59a1
-ms.sourcegitcommit: 894c1a23e922dc29b82c1d2c34c7b0ff28b38654
+ms.openlocfilehash: cdb110059043741627300e1f6d080582363d834b
+ms.sourcegitcommit: 7f76975c29d948a9a3b51abce564b9c73d05dcf0
 ms.translationtype: HT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 10/30/2020
-ms.locfileid: "93067245"
+ms.lasthandoff: 12/08/2020
+ms.locfileid: "96900836"
 ---
 # <a name="kqlmagic-in-azure-data-studio"></a>Azure Data Studio의 Kqlmagic
 

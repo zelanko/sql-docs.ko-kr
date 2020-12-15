@@ -18,13 +18,13 @@ helpviewer_keywords:
 ms.assetid: d1df8c15-ee73-49eb-9d13-6e98943c3e38
 author: markingmyname
 ms.author: maghan
-monikerRange: =azuresqldb-current||>=sql-server-2016||=sqlallproducts-allversions||>=sql-server-linux-2017||=azuresqldb-mi-current
-ms.openlocfilehash: 79995dc681db76f3de5b6d6af200f6f57f087464
-ms.sourcegitcommit: c74bb5944994e34b102615b592fdaabe54713047
+monikerRange: =azuresqldb-current||>=sql-server-2016||>=sql-server-linux-2017||=azuresqldb-mi-current
+ms.openlocfilehash: b3ccfa642b98165dcbdad57adac38f300063ccdb
+ms.sourcegitcommit: 1a544cf4dd2720b124c3697d1e62ae7741db757c
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 09/22/2020
-ms.locfileid: "90989941"
+ms.lasthandoff: 12/14/2020
+ms.locfileid: "97462764"
 ---
 # <a name="sp_autostats-transact-sql"></a>sp_autostats(Transact-SQL)
 [!INCLUDE [SQL Server SQL Database](../../includes/applies-to-version/sql-asdb.md)]
@@ -57,7 +57,7 @@ sp_autostats [ @tblname = ] 'table_or_indexed_view_name'
   
 `[ @indname = ] 'statistics_name'` AUTO_UPDATE_STATISTICS 옵션을 표시 하거나 업데이트할 통계의 이름입니다. 인덱스에 대한 통계를 표시하려면 인덱스 이름을 사용하면 됩니다. 인덱스와 해당 통계 개체는 동일한 이름을 갖습니다.  
   
- *statistics_name* 는 **sysname**이며 기본값은 NULL입니다.  
+ *statistics_name* 는 **sysname** 이며 기본값은 NULL입니다.  
   
 ## <a name="return-code-values"></a>반환 코드 값  
  0(성공) 또는 1(실패)  
@@ -81,7 +81,7 @@ sp_autostats [ @tblname = ] 'table_or_indexed_view_name'
  메모리 최적화 테이블의 AUTO_UPDATE_STATISTICS는 항상 OFF입니다.  
   
 ## <a name="permissions"></a>사용 권한  
- AUTO_UPDATE_STATISTICS 옵션을 변경 하려면 **db_owner** 고정 데이터베이스 역할의 멤버 자격 또는 *table_name*에 대 한 ALTER 권한이 필요 합니다. AUTO_UPDATE_STATISTICS 옵션을 표시 하려면 **public** 역할의 멤버 자격이 필요 합니다.  
+ AUTO_UPDATE_STATISTICS 옵션을 변경 하려면 **db_owner** 고정 데이터베이스 역할의 멤버 자격 또는 *table_name* 에 대 한 ALTER 권한이 필요 합니다. AUTO_UPDATE_STATISTICS 옵션을 표시 하려면 **public** 역할의 멤버 자격이 필요 합니다.  
   
 ## <a name="examples"></a>예  
   

@@ -10,12 +10,13 @@ ms.topic: reference
 ms.assetid: 2b06186b-4090-4728-b96b-90d6ebd9f66f
 author: markingmyname
 ms.author: maghan
-monikerRange: '>=aps-pdw-2016||=azuresqldb-current||=azure-sqldw-latest||>=sql-server-2016||=sqlallproducts-allversions||>=sql-server-linux-2017||=azuresqldb-mi-current'
-ms.openlocfilehash: 63b641e86c03dfdbc5bd7b5b506586fca3343b18
-ms.sourcegitcommit: f3321ed29d6d8725ba6378d207277a57cb5fe8c2
+monikerRange: '>=aps-pdw-2016||=azuresqldb-current||=azure-sqldw-latest||>=sql-server-2016||>=sql-server-linux-2017||=azuresqldb-mi-current'
+ms.openlocfilehash: 22a707d2a373045666b8eae0ad6f9d48d23c88ba
+ms.sourcegitcommit: 1a544cf4dd2720b124c3697d1e62ae7741db757c
+ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 07/06/2020
-ms.locfileid: "86008988"
+ms.lasthandoff: 12/14/2020
+ms.locfileid: "97462044"
 ---
 # <a name="sql-server-native-client-support-for-high-availability-disaster-recovery"></a>고가용성 재해 복구를 위한 SQL Server Native Client 지원
 [!INCLUDE [SQL Server](../../../includes/applies-to-version/sql-asdb-asdbmi-asa-pdw.md)]
@@ -30,23 +31,23 @@ ms.locfileid: "86008988"
 >  연결 제한 시간을 늘리고 연결 재시도 논리를 구현하면 애플리케이션이 가용성 그룹에 연결될 가능성이 증가합니다. 또한 가용성 그룹 장애 조치(failover)로 인해 연결이 실패할 수 있으므로 실패한 연결을 다시 연결할 때까지 다시 시도하는 연결 재시도 논리를 구현해야 합니다.  
   
 ## <a name="connecting-with-multisubnetfailover"></a>MultiSubnetFailover로 연결  
- SQL Server 2012 가용성 그룹 수신기 또는 SQL Server 2012 장애 조치(Failover) 클러스터 인스턴스에 연결할 때는 항상 **MultiSubnetFailover=Yes**를 지정하세요. **MultiSubnetFailover** 는 SQL Server 2012에서 모든 가용성 그룹 및 장애 조치 (failover) 클러스터 인스턴스에 대해 빠른 장애 조치 (failover)를 지원 하며, 단일 및 다중 서브넷 Always On 토폴로지의 장애 조치 시간을 크게 줄입니다. 다중 서브넷 장애 조치(Failover) 중에는 클라이언트가 연결을 병렬로 시도합니다. 서브넷 장애 조치(Failover) 중에는 [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] Native Client가 적극적으로 TCP 연결을 다시 시도합니다.  
+ SQL Server 2012 가용성 그룹 수신기 또는 SQL Server 2012 장애 조치(Failover) 클러스터 인스턴스에 연결할 때는 항상 **MultiSubnetFailover=Yes** 를 지정하세요. **MultiSubnetFailover** 는 SQL Server 2012에서 모든 가용성 그룹 및 장애 조치 (failover) 클러스터 인스턴스에 대해 빠른 장애 조치 (failover)를 지원 하며, 단일 및 다중 서브넷 Always On 토폴로지의 장애 조치 시간을 크게 줄입니다. 다중 서브넷 장애 조치(Failover) 중에는 클라이언트가 연결을 병렬로 시도합니다. 서브넷 장애 조치(Failover) 중에는 [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] Native Client가 적극적으로 TCP 연결을 다시 시도합니다.  
   
- **MultiSubnetFailover** 연결 속성은 애플리케이션을 가용성 그룹 또는 장애 조치(Failover) 클러스터 인스턴스에 배포하는 중이며 [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] Native Client가 모든 IP 주소에 연결을 시도하여 주 [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] 인스턴스의 데이터베이스에 연결을 시도함을 나타냅니다. 연결에 대해 **MultiSubnetFailover=Yes**를 지정하면 클라이언트는 운영 체제의 기본 TCP 재전송 간격보다 빠르게 TCP 연결을 다시 시도합니다. 이를 통해 Always On 가용성 그룹 또는 Always On 장애 조치 (Failover) 클러스터 인스턴스의 장애 조치 (failover) 후 더 빠르게 다시 연결할 수 있으며, 단일 및 다중 서브넷 가용성 그룹과 장애 조치 (Failover) 클러스터 인스턴스 모두에 적용할 수 있습니다.  
+ **MultiSubnetFailover** 연결 속성은 애플리케이션을 가용성 그룹 또는 장애 조치(Failover) 클러스터 인스턴스에 배포하는 중이며 [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] Native Client가 모든 IP 주소에 연결을 시도하여 주 [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] 인스턴스의 데이터베이스에 연결을 시도함을 나타냅니다. 연결에 대해 **MultiSubnetFailover=Yes** 를 지정하면 클라이언트는 운영 체제의 기본 TCP 재전송 간격보다 빠르게 TCP 연결을 다시 시도합니다. 이를 통해 Always On 가용성 그룹 또는 Always On 장애 조치 (Failover) 클러스터 인스턴스의 장애 조치 (failover) 후 더 빠르게 다시 연결할 수 있으며, 단일 및 다중 서브넷 가용성 그룹과 장애 조치 (Failover) 클러스터 인스턴스 모두에 적용할 수 있습니다.  
   
  연결 문자열 키워드에 대한 자세한 내용은 [SQL Server Native Client에서 연결 문자열 키워드 사용](../../../relational-databases/native-client/applications/using-connection-string-keywords-with-sql-server-native-client.md)을 참조하세요.  
   
- 가용성 그룹 수신기 또는 장애 조치(Failover) 클러스터 인스턴스 이외의 다른 항목에 연결할 때 **MultiSubnetFailover=Yes**를 지정하면 성능에 상당히 부정적인 영향을 줄 수 있으므로 이러한 설정은 지원되지 않습니다.  
+ 가용성 그룹 수신기 또는 장애 조치(Failover) 클러스터 인스턴스 이외의 다른 항목에 연결할 때 **MultiSubnetFailover=Yes** 를 지정하면 성능에 상당히 부정적인 영향을 줄 수 있으므로 이러한 설정은 지원되지 않습니다.  
   
  다음 지침에 따라 장애 조치(Failover) 클러스터 인스턴스 또는 가용성 그룹의 서버에 연결하십시오.  
   
--   단일 서브넷 또는 다중 서브넷에 연결할 때 **MultiSubnetFailover** connection 속성을 사용 합니다. 이를 통해 성능이 향상 됩니다.  
+-   단일 서브넷 또는 다중 서브넷에 연결할 때 **MultiSubnetFailover** 연결 속성을 사용하면 두 서브넷의 성능이 향상됩니다.  
   
 -   가용성 그룹에 연결하려면 가용성 그룹에 대한 가용성 그룹 수신기를 연결 문자열의 서버로 지정합니다.  
   
 -   IP 주소가 64개 이상으로 구성된 [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] 인스턴스에 연결하면 연결 오류가 발생합니다.  
   
--   **MultiSubnetFailover** 연결 속성을 사용 하는 응용 프로그램의 동작은 인증 유형 ( [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] 인증, Kerberos 인증 또는 Windows 인증)에 따라 영향을 받지 않습니다.  
+-   **MultiSubnetFailover** 연결 속성을 사용하는 애플리케이션 동작은 [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] 인증, Kerberos 인증, Windows 인증과 같은 인증 유형의 영향을 받지 않습니다.  
   
 -   장애 조치(failover) 시간을 수용하고 애플리케이션의 연결 재시도 횟수를 줄이기 위해 **loginTimeout** 값을 늘릴 수 있습니다.  
   
@@ -56,16 +57,16 @@ ms.locfileid: "86008988"
   
 1.  보조 복제본 위치가 연결을 허용하도록 구성되어 있지 않은 경우  
   
-2.  응용 프로그램에서 **Applicationintent = ReadWrite** 를 사용 하 고 (아래 설명 참조) 보조 복제본 위치가 읽기 전용 액세스용으로 구성 되어 있는 경우  
+2.  애플리케이션에서 **ApplicationIntent=ReadWrite**(아래에서 설명)를 사용하고 보조 복제본 위치가 읽기 전용 액세스용으로 구성되어 있는 경우  
   
- 주 복제본이 읽기 전용 작업을 거부하도록 구성되어 있고 연결 문자열에 **ApplicationIntent=ReadOnly**가 포함되어 있으면 연결이 실패합니다.  
+ 주 복제본이 읽기 전용 작업을 거부하도록 구성되어 있고 연결 문자열에 **ApplicationIntent=ReadOnly** 가 포함되어 있으면 연결이 실패합니다.  
   
 ## <a name="upgrading-to-use-multi-subnet-clusters-from-database-mirroring"></a>데이터베이스 미러링에서 다중 서브넷 클러스터를 사용하도록 업그레이드  
- 연결 문자열에 **MultiSubnetFailover** 및 **Failover_Partner** 연결 키워드가 있으면 연결 오류가 발생합니다. **MultiSubnetFailover**가 사용되고 [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)]에서 데이터베이스 미러링 쌍의 일부임을 나타내는 장애 조치(failover) 파트너 응답을 반환하는 경우에도 오류가 발생합니다.  
+ 연결 문자열에 **MultiSubnetFailover** 및 **Failover_Partner** 연결 키워드가 있으면 연결 오류가 발생합니다. **MultiSubnetFailover** 가 사용되고 [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)]에서 데이터베이스 미러링 쌍의 일부임을 나타내는 장애 조치(failover) 파트너 응답을 반환하는 경우에도 오류가 발생합니다.  
   
- 현재 데이터베이스 미러링을 사용 중인 [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] Native Client 애플리케이션을 다중 서브넷 시나리오로 업그레이드할 경우에는 **Failover_Partner** 연결 속성을 제거하고, 이를 **Yes**로 설정된 **MultiSubnetFailover**로 바꾸고, 연결 문자열에서 서버 이름을 가용성 그룹 수신기로 바꿔야 합니다. 연결 문자열에서 **Failover_Partner** 및 **MultiSubnetFailover=Yes**를 사용하는 경우 드라이버에서 오류가 발생합니다. 그러나 연결 문자열에서 **Failover_Partner** 및 **MultiSubnetFailover=No**(또는 **ApplicationIntent=ReadWrite**)를 사용하면 애플리케이션에서 데이터베이스 미러링을 사용합니다.  
+ 현재 데이터베이스 미러링을 사용 중인 [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] Native Client 애플리케이션을 다중 서브넷 시나리오로 업그레이드할 경우에는 **Failover_Partner** 연결 속성을 제거하고, 이를 **Yes** 로 설정된 **MultiSubnetFailover** 로 바꾸고, 연결 문자열에서 서버 이름을 가용성 그룹 수신기로 바꿔야 합니다. 연결 문자열에서 **Failover_Partner** 및 **MultiSubnetFailover=Yes** 를 사용하는 경우 드라이버에서 오류가 발생합니다. 그러나 연결 문자열에서 **Failover_Partner** 및 **MultiSubnetFailover=No**(또는 **ApplicationIntent=ReadWrite**)를 사용하면 애플리케이션에서 데이터베이스 미러링을 사용합니다.  
   
- 가용성 그룹의 주 데이터베이스에서 데이터베이스 미러링이 사용되고 가용성 그룹 수신기가 아닌 주 데이터베이스에 연결하는 연결 문자열에 **MultiSubnetFailover=Yes**가 사용될 경우 드라이버에서 오류를 반환합니다.  
+ 가용성 그룹의 주 데이터베이스에서 데이터베이스 미러링이 사용되고 가용성 그룹 수신기가 아닌 주 데이터베이스에 연결하는 연결 문자열에 **MultiSubnetFailover=Yes** 가 사용될 경우 드라이버에서 오류를 반환합니다.  
 
 
 [!INCLUDE[specify-application-intent_read-only-routing](~/includes/paragraph-content/specify-application-intent-read-only-routing.md)]
@@ -92,9 +93,9 @@ ms.locfileid: "86008988"
   
  [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] Native Client ODBC 애플리케이션에서는 다음 세 가지 함수 중 하나를 사용하여 연결할 수 있습니다.  
   
-|함수|Description|  
+|기능|설명|  
 |--------------|-----------------|  
-|[SQLBrowseConnect](../../../relational-databases/native-client-odbc-api/sqlbrowseconnect.md)|**SQLBrowseConnect**에서 반환된 서버 목록에는 VNN이 포함되지 않습니다. 서버가 독립 실행형 서버인지, 아니면 [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)]에 대해 사용하도록 설정된 둘 이상의 [!INCLUDE[ssHADR](../../../includes/sshadr-md.md)] 인스턴스를 포함하는 WSFC(Windows Server 장애 조치(failover) 클러스터링) 클러스터의 주 또는 보조 서버인지는 표시되지 않고 서버 목록만 표시됩니다. 서버에 연결한 후 오류가 발생하면 서버에 연결은 되었지만 **ApplicationIntent** 설정이 서버 구성과 호환되지 않기 때문일 수 있습니다.<br /><br /> **SQLBrowseConnect**는 [!INCLUDE[ssHADR](../../../includes/sshadr-md.md)]에 대해 사용하도록 설정된 둘 이상의 [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] 인스턴스를 포함하는 WSFC(Windows Server 장애 조치(Failover) 클러스터링) 클러스터의 서버를 인식하지 못하므로 **SQLBrowseConnect**는 **MultiSubnetFailover** 연결 문자열 키워드를 무시합니다.|  
+|[SQLBrowseConnect](../../../relational-databases/native-client-odbc-api/sqlbrowseconnect.md)|**SQLBrowseConnect** 에서 반환된 서버 목록에는 VNN이 포함되지 않습니다. 서버가 독립 실행형 서버인지, 아니면 [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)]에 대해 사용하도록 설정된 둘 이상의 [!INCLUDE[ssHADR](../../../includes/sshadr-md.md)] 인스턴스를 포함하는 WSFC(Windows Server 장애 조치(failover) 클러스터링) 클러스터의 주 또는 보조 서버인지는 표시되지 않고 서버 목록만 표시됩니다. 서버에 연결한 후 오류가 발생하면 서버에 연결은 되었지만 **ApplicationIntent** 설정이 서버 구성과 호환되지 않기 때문일 수 있습니다.<br /><br /> **SQLBrowseConnect** 는 [!INCLUDE[ssHADR](../../../includes/sshadr-md.md)]에 대해 사용하도록 설정된 둘 이상의 [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] 인스턴스를 포함하는 WSFC(Windows Server 장애 조치(Failover) 클러스터링) 클러스터의 서버를 인식하지 못하므로 **SQLBrowseConnect** 는 **MultiSubnetFailover** 연결 문자열 키워드를 무시합니다.|  
 |[SQLConnect](../../../relational-databases/native-client-odbc-api/sqlconnect.md)|**SQLConnect** 는 DSN(데이터 원본 이름) 또는 연결 속성을 통해 **ApplicationIntent** 와 **MultiSubnetFailover** 를 모두 지원합니다.|  
 |[SQLDriverConnect](../../../relational-databases/native-client-odbc-api/sqldriverconnect.md)|**SQLDriverConnect** 는 연결 문자열 키워드, 연결 속성 또는 DSN을 통해 **ApplicationIntent** 및 **MultiSubnetFailover** 를 지원합니다.|  
   
@@ -118,16 +119,16 @@ ms.locfileid: "86008988"
  [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] Native Client OLE DB 애플리케이션에서는 다음 메서드 중 하나를 사용하여 애플리케이션 의도를 지정할 수 있습니다.  
   
  **IDBInitialize::Initialize**  
- **IDBInitialize::Initialize**는 이전에 구성한 속성 집합을 사용하여 데이터 원본을 초기화하고 데이터 원본 개체를 만듭니다. 애플리케이션 의도를 공급자 속성 또는 확장 속성 문자열의 일부로 지정합니다.  
+ **IDBInitialize::Initialize** 는 이전에 구성한 속성 집합을 사용하여 데이터 원본을 초기화하고 데이터 원본 개체를 만듭니다. 애플리케이션 의도를 공급자 속성 또는 확장 속성 문자열의 일부로 지정합니다.  
   
  **IDataInitialize::GetDataSource**  
- **IDataInitialize::GetDataSource**는 **애플리케이션 의도** 키워드를 포함할 수 있는 입력 연결 문자열을 사용합니다.  
+ **IDataInitialize::GetDataSource** 는 **애플리케이션 의도** 키워드를 포함할 수 있는 입력 연결 문자열을 사용합니다.  
   
  **IDBProperties::GetProperties**  
- **IDBProperties::GetProperties**는 현재 데이터 원본에 설정된 속성의 값을 검색합니다.  DBPROP_INIT_PROVIDERSTRING 속성과 SSPROP_INIT_APPLICATIONINTENT 속성을 통해 **애플리케이션 의도** 값을 검색할 수 있습니다.  
+ **IDBProperties::GetProperties** 는 현재 데이터 원본에 설정된 속성의 값을 검색합니다.  DBPROP_INIT_PROVIDERSTRING 속성과 SSPROP_INIT_APPLICATIONINTENT 속성을 통해 **애플리케이션 의도** 값을 검색할 수 있습니다.  
   
  **IDBProperties::SetProperties**  
- **ApplicationIntent** 속성 값을 설정하려면 값이 "**ReadWrite**" 또는 "**ReadOnly**"인 **SSPROP_INIT_APPLICATIONINTENT** 속성이나 값이 "**ApplicationIntent=ReadOnly**" 또는 "**ApplicationIntent=ReadWrite**"를 포함하는 **DBPROP_INIT_PROVIDERSTRING** 속성을 전달하여 **IDBProperties::SetProperties**를 호출합니다.  
+ **ApplicationIntent** 속성 값을 설정하려면 값이 "**ReadWrite**" 또는 "**ReadOnly**"인 **SSPROP_INIT_APPLICATIONINTENT** 속성이나 값이 "**ApplicationIntent=ReadOnly**" 또는 "**ApplicationIntent=ReadWrite**"를 포함하는 **DBPROP_INIT_PROVIDERSTRING** 속성을 전달하여 **IDBProperties::SetProperties** 를 호출합니다.  
   
  **데이터 연결 속성** 대화 상자의 모두 탭에 있는 애플리케이션 의도 속성 필드에서 애플리케이션 의도를 지정할 수 있습니다.  
   

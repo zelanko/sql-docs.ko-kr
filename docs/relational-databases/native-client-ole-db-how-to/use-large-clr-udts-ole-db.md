@@ -11,13 +11,13 @@ ms.topic: reference
 ms.assetid: 30f59c11-3bca-41be-8bd7-0d1efaf1f0be
 author: markingmyname
 ms.author: maghan
-monikerRange: '>=aps-pdw-2016||=azuresqldb-current||=azure-sqldw-latest||>=sql-server-2016||=sqlallproducts-allversions||>=sql-server-linux-2017||=azuresqldb-mi-current'
-ms.openlocfilehash: 6cec1e6076820e8d41feb077db417b168e80b05c
-ms.sourcegitcommit: e700497f962e4c2274df16d9e651059b42ff1a10
+monikerRange: '>=aps-pdw-2016||=azuresqldb-current||=azure-sqldw-latest||>=sql-server-2016||>=sql-server-linux-2017||=azuresqldb-mi-current'
+ms.openlocfilehash: b1376f6ab56ae100d70882ee5c2b86301c8d4f42
+ms.sourcegitcommit: 1a544cf4dd2720b124c3697d1e62ae7741db757c
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 08/17/2020
-ms.locfileid: "88448475"
+ms.lasthandoff: 12/14/2020
+ms.locfileid: "97462214"
 ---
 # <a name="use-large-clr-udts--in-sql-server-native-client-ole-db"></a>SQL Server Native Client에서 Large CLR Udt 사용 (OLE DB)
 [!INCLUDE[SQL Server Azure SQL Database Synapse Analytics PDW ](../../includes/applies-to-version/sql-asdb-asdbmi-asa-pdw.md)]
@@ -25,7 +25,7 @@ ms.locfileid: "88448475"
   이 예제에서는 결과 집합에서 큰 사용자 정의 형식의 행을 인출하는 방법을 보여 줍니다. 자세한 내용은 [큰 CLR 사용자 정의 형식&#40;OLE DB&#41;](../../relational-databases/native-client/ole-db/large-clr-user-defined-types-ole-db.md)을 참조하세요. 이 예제는 [!INCLUDE[ssKatmai](../../includes/sskatmai-md.md)] 이상에서만 작동합니다.  
   
 ## <a name="example"></a>예제  
- 이 예제에는 두 개의 프로젝트가 포함되어 있습니다. 첫 번째 프로젝트는 C# 원본 코드에서 어셈블리(DLL)를 만듭니다. 이 어셈블리에는 CLR 유형이 포함되어 있습니다. 테이블이 데이터베이스에 추가됩니다. 테이블의 열은 어셈블리에 정의 된 유형입니다. 기본적으로이 예제에서는 master 데이터베이스를 사용 합니다. 두 번째 프로젝트는 테이블에서 데이터를 읽는 네이티브 C 애플리케이션입니다.  
+ 이 예제에는 두 개의 프로젝트가 포함되어 있습니다. 첫 번째 프로젝트는 C# 원본 코드에서 어셈블리(DLL)를 만듭니다. 이 어셈블리에는 CLR 유형이 포함되어 있습니다. 테이블이 데이터베이스에 추가됩니다. 테이블의 열은 어셈블리에 정의된 형식입니다. 기본적으로 이 예제에서는 마스터 데이터베이스를 사용합니다. 두 번째 프로젝트는 테이블에서 데이터를 읽는 네이티브 C 애플리케이션입니다.  
   
  첫 번째(C#) 코드 목록을 DLL로 컴파일합니다.  그리고 나서 DLL을 C 드라이브의 루트 디렉터리에 복사합니다.  
   

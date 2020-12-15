@@ -20,13 +20,13 @@ helpviewer_keywords:
 ms.assetid: 1c19e1b1-c925-4dad-a652-581692f4ab5e
 author: markingmyname
 ms.author: maghan
-monikerRange: '>=aps-pdw-2016||=azuresqldb-current||=azure-sqldw-latest||>=sql-server-2016||=sqlallproducts-allversions||>=sql-server-linux-2017||=azuresqldb-mi-current'
-ms.openlocfilehash: 0947a58b607d781b05eb5633b0664d7f0da4d107
-ms.sourcegitcommit: dd36d1cbe32cd5a65c6638e8f252b0bd8145e165
+monikerRange: '>=aps-pdw-2016||=azuresqldb-current||=azure-sqldw-latest||>=sql-server-2016||>=sql-server-linux-2017||=azuresqldb-mi-current'
+ms.openlocfilehash: 889b96df7adaff39f3f032a272c319e62d1e8e51
+ms.sourcegitcommit: 1a544cf4dd2720b124c3697d1e62ae7741db757c
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 09/08/2020
-ms.locfileid: "89546756"
+ms.lasthandoff: 12/14/2020
+ms.locfileid: "97461674"
 ---
 # <a name="syspartitions-transact-sql"></a>sys.partitions(Transact-SQL)
 [!INCLUDE [sql-asdb-asdbmi-asa-pdw](../../includes/applies-to-version/sql-asdb-asdbmi-asa-pdw.md)]
@@ -42,7 +42,7 @@ ms.locfileid: "89546756"
 |hobt_id|**bigint**|이 파티션에 대 한 행을 포함 하는 데이터 힙 또는 B-트리 (HoBT)의 ID를 나타냅니다.|  
 |rows|**bigint**|이 파티션에 있는 행의 대략적인 수를 나타냅니다.|  
 |filestream_filegroup_id|**smallint**|**적용 대상**: [!INCLUDE[ssSQL11](../../includes/sssql11-md.md)] 이상<br /><br /> 이 파티션에 저장된 FILESTREAM 파일 그룹의 ID를 나타냅니다.|  
-|data_compression|**tinyint**|각 파티션의 압축 상태를 나타냅니다.<br /><br /> 0 = 없음 <br />1 = ROW <br />2 = PAGE <br />3 = COLUMNSTORE: 다음 **에 적용 됩니다**. [!INCLUDE[ssSQL11](../../includes/sssql11-md.md)] 이상<br />4 = COLUMNSTORE_ARCHIVE: **이상에 적용**됨 [!INCLUDE[ssSQL14](../../includes/sssql14-md.md)]<br /><br /> **참고:** 전체 텍스트 인덱스는 모든 버전에서 압축 됩니다 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] .|  
+|data_compression|**tinyint**|각 파티션의 압축 상태를 나타냅니다.<br /><br /> 0 = 없음 <br />1 = ROW <br />2 = PAGE <br />3 = COLUMNSTORE: 다음 **에 적용 됩니다**. [!INCLUDE[ssSQL11](../../includes/sssql11-md.md)] 이상<br />4 = COLUMNSTORE_ARCHIVE: **이상에 적용** 됨 [!INCLUDE[ssSQL14](../../includes/sssql14-md.md)]<br /><br /> **참고:** 전체 텍스트 인덱스는 모든 버전에서 압축 됩니다 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] .|  
 |data_compression_desc|**nvarchar(60)**|각 파티션의 압축 상태를 나타냅니다. rowstore 테이블의 가능한 값은 NONE, ROW 및 PAGE입니다. columnstore 테이블의 가능한 값은 COLUMNSTORE 및 COLUMNSTORE_ARCHIVE입니다.|  
   
 ## <a name="permissions"></a>사용 권한  

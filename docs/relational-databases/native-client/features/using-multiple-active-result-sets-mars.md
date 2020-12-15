@@ -18,13 +18,13 @@ helpviewer_keywords:
 ms.assetid: ecfd9c6b-7d29-41d8-af2e-89d7fb9a1d83
 author: markingmyname
 ms.author: maghan
-monikerRange: '>=aps-pdw-2016||=azuresqldb-current||=azure-sqldw-latest||>=sql-server-2016||=sqlallproducts-allversions||>=sql-server-linux-2017||=azuresqldb-mi-current'
-ms.openlocfilehash: a1b31e142760e6799b743ab8771cc52c068d1b3e
-ms.sourcegitcommit: 216f377451e53874718ae1645a2611cdb198808a
+monikerRange: '>=aps-pdw-2016||=azuresqldb-current||=azure-sqldw-latest||>=sql-server-2016||>=sql-server-linux-2017||=azuresqldb-mi-current'
+ms.openlocfilehash: 468de09dbbf49b14f1794de5956df7e6125407fa
+ms.sourcegitcommit: 1a544cf4dd2720b124c3697d1e62ae7741db757c
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 07/28/2020
-ms.locfileid: "87243881"
+ms.lasthandoff: 12/14/2020
+ms.locfileid: "97461984"
 ---
 # <a name="using-multiple-active-result-sets-mars-in-sql-server-native-client"></a>SQL Server Native Client에서 MARS (Multiple Active Result Sets) 사용
 
@@ -59,7 +59,7 @@ ms.locfileid: "87243881"
   
  MARS를 사용하면 단일 연결 내에서 여러 요청의 실행을 인터리브할 수 있습니다. 즉, 일괄 처리를 실행할 수 있으며 해당 일괄 처리가 실행되는 동안 요청을 실행할 수 있습니다. 하지만 MARS는 병렬 실행이 아니라 인터리브로 정의된다는 것에 주의하십시오.  
   
- MARS 인프라에서는 다중 일괄 처리를 인터리브 방식으로 실행할 수 있습니다. 하지만 실행은 잘 정의된 지점에서만 전환할 수 있습니다. 또한 대부분의 문은 일괄 처리 내에서 개별적으로 실행되어야 합니다. 클라이언트에 행을 반환 하는 문 (예: *생성 지점이*라고도 함)은 행이 클라이언트에 전송 되는 동안 완료 되기 전에 인터리브 실행이 허용 됩니다. 예를 들면 다음과 같습니다.  
+ MARS 인프라에서는 다중 일괄 처리를 인터리브 방식으로 실행할 수 있습니다. 하지만 실행은 잘 정의된 지점에서만 전환할 수 있습니다. 또한 대부분의 문은 일괄 처리 내에서 개별적으로 실행되어야 합니다. 클라이언트에 행을 반환 하는 문 (예: *생성 지점이* 라고도 함)은 행이 클라이언트에 전송 되는 동안 완료 되기 전에 인터리브 실행이 허용 됩니다. 예를 들면 다음과 같습니다.  
   
 -   SELECT  
   
@@ -114,7 +114,7 @@ Data Source=MSSQL; Initial Catalog=AdventureWorks; Integrated Security=SSPI; Mul
  SQL Server(2016부터)는 columnstore 인덱스를 사용하는 MARS를 지원합니다. SQL Server 2014는 MARS를 사용하여 columnstore 인덱스가 있는 테이블에 대한 읽기 전용 연결을 합니다.    그러나 SQL Server 2014는 columnstore 인덱스가 있는 테이블에서 DML(동시 데이터 조작 언어) 작업에 대해서는 MARS를 지원하지 않습니다. 이 경우 SQL Server는 연결을 종료하고 트랜잭션을 중단합니다.   SQL Server 2012에는 읽기 전용 columnstore 인덱스가 있으며 MARS는 적용되지 않습니다.  
   
 ## <a name="sql-server-native-client-ole-db-provider"></a>SQL Server Native Client OLE DB 공급자  
- [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)]Native Client OLE DB 공급자는 DBPROPSET_SQLSERVERDBINIT 속성 집합에서 구현 된 SSPROP_INIT_MARSCONNECTION 데이터 원본 초기화 속성을 추가 하 여 MARS를 지원 합니다. 이와 함께 새 연결 문자열 키워드인 **MarsConn**이 추가되었습니다. **true** 또는 **false** 값이 허용되며, 기본값은 **false**입니다.  
+ [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)]Native Client OLE DB 공급자는 DBPROPSET_SQLSERVERDBINIT 속성 집합에서 구현 된 SSPROP_INIT_MARSCONNECTION 데이터 원본 초기화 속성을 추가 하 여 MARS를 지원 합니다. 이와 함께 새 연결 문자열 키워드인 **MarsConn** 이 추가되었습니다. **true** 또는 **false** 값이 허용되며, 기본값은 **false** 입니다.  
   
  데이터 원본 속성 DBPROP_MULTIPLECONNECTIONS의 기본값은 VARIANT_TRUE입니다. 이것은 공급자가 다중 동시 명령 및 행 집합 개체를 지원하기 위해 다중 연결을 생성한다는 의미입니다. MARS를 사용 하는 경우 [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] Native Client는 단일 연결에서 여러 명령 및 행 집합 개체를 지원할 수 있으므로 MULTIPLE_CONNECTIONS는 기본적으로 VARIANT_FALSE로 설정 됩니다.  
   
@@ -207,7 +207,7 @@ hr = pIOpenRowset->OpenRowset (NULL,
 ```  
   
 ## <a name="sql-server-native-client-odbc-driver"></a>SQL Server Native Client ODBC 드라이버  
- [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)]Native CLIENT ODBC 드라이버는 [SQLSetConnectAttr](../../../relational-databases/native-client-odbc-api/sqlsetconnectattr.md) 및 [SQLGetConnectAttr](../../../relational-databases/native-client-odbc-api/sqlgetconnectattr.md) 함수를 추가 하 여 MARS를 지원 합니다. SQL_MARS_ENABLED_YES 또는 SQL_MARS_ENABLED_NO를 받아들이는 SQL_COPT_SS_MARS_ENABLED가 추가되었으며 기본값은 SQL_MARS_ENABLED_NO입니다. 또한 새 연결 문자열 키워드인 **Mars_Connection**추가 되었습니다. 이 키워드는 "yes" 또는 "no" 값을 받으며, 기본값은 "no"입니다.  
+ [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)]Native CLIENT ODBC 드라이버는 [SQLSetConnectAttr](../../../relational-databases/native-client-odbc-api/sqlsetconnectattr.md) 및 [SQLGetConnectAttr](../../../relational-databases/native-client-odbc-api/sqlgetconnectattr.md) 함수를 추가 하 여 MARS를 지원 합니다. SQL_MARS_ENABLED_YES 또는 SQL_MARS_ENABLED_NO를 받아들이는 SQL_COPT_SS_MARS_ENABLED가 추가되었으며 기본값은 SQL_MARS_ENABLED_NO입니다. 또한 새 연결 문자열 키워드인 **Mars_Connection** 추가 되었습니다. 이 키워드는 "yes" 또는 "no" 값을 받으며, 기본값은 "no"입니다.  
   
 ### <a name="sql-server-native-client-odbc-driver-example"></a>SQL Server Native Client ODBC 드라이버 예  
  이 예에서는 **SQLDriverConnect** 함수를 호출 하 여 데이터베이스를 연결 하기 전에 **SQLSetConnectAttr** 함수를 사용 하 여 MARS를 설정 합니다. 연결이 설정 되 면 두 개의 **Sqlexecdirect** 함수를 호출 하 여 동일한 연결에서 두 개의 별도 결과 집합을 만듭니다.  

@@ -1,6 +1,6 @@
 ---
 description: sys.dm_db_stats_properties(Transact-SQL)
-title: sys. dm_db_stats_properties (Transact-sql) | Microsoft Docs
+title: sys.dm_db_stats_properties (Transact-sql) | Microsoft Docs
 ms.custom: ''
 ms.date: 12/18/2017
 ms.prod: sql
@@ -20,18 +20,18 @@ helpviewer_keywords:
 ms.assetid: 8a54889d-e263-4881-9fcb-b1db410a9453
 author: markingmyname
 ms.author: maghan
-monikerRange: =azuresqldb-current||>=sql-server-2016||=sqlallproducts-allversions||>=sql-server-linux-2017||=azuresqldb-mi-current
-ms.openlocfilehash: 1039850e4322003ddfedd5407d18ab6170077c42
-ms.sourcegitcommit: dd36d1cbe32cd5a65c6638e8f252b0bd8145e165
+monikerRange: =azuresqldb-current||>=sql-server-2016||>=sql-server-linux-2017||=azuresqldb-mi-current
+ms.openlocfilehash: f412097e74c8230ee7fe9941e48f39b034c2ebca
+ms.sourcegitcommit: 1a544cf4dd2720b124c3697d1e62ae7741db757c
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 09/08/2020
-ms.locfileid: "89537038"
+ms.lasthandoff: 12/14/2020
+ms.locfileid: "97462744"
 ---
 # <a name="sysdm_db_stats_properties-transact-sql"></a>sys.dm_db_stats_properties(Transact-SQL)
 [!INCLUDE [SQL Server SQL Database](../../includes/applies-to-version/sql-asdb.md)]
 
-  현재 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 데이터베이스에서 지정한 데이터베이스 개체(테이블 또는 인덱싱된 뷰)에 대한 통계 속성을 반환합니다. 분할 된 테이블에 대해서는 유사한 [sys. dm_db_incremental_stats_properties](../../relational-databases/system-dynamic-management-views/sys-dm-db-incremental-stats-properties-transact-sql.md)를 참조 하세요. 
+  현재 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 데이터베이스에서 지정한 데이터베이스 개체(테이블 또는 인덱싱된 뷰)에 대한 통계 속성을 반환합니다. 분할 된 테이블에 대해서는 비슷한 [sys.dm_db_incremental_stats_properties](../../relational-databases/system-dynamic-management-views/sys-dm-db-incremental-stats-properties-transact-sql.md)를 참조 하세요. 
  
 ## <a name="syntax"></a>구문  
   
@@ -41,10 +41,10 @@ sys.dm_db_stats_properties (object_id, stats_id)
   
 ## <a name="arguments"></a>인수  
  *object_id*  
- 해당 통계 중 하나의 속성이 요청되는 현재 데이터베이스에 포함된 개체의 ID입니다. *object_id* 은 **int**입니다.  
+ 해당 통계 중 하나의 속성이 요청되는 현재 데이터베이스에 포함된 개체의 ID입니다. *object_id* 은 **int** 입니다.  
   
  *stats_id*  
- 지정된 *object_id*통계의 ID입니다. 통계 ID는 [sys.stats](../../relational-databases/system-catalog-views/sys-stats-transact-sql.md) 동적 관리 뷰에서 얻을 수 있습니다. *stats_id* 는 **int**입니다.  
+ 지정된 *object_id* 통계의 ID입니다. 통계 ID는 [sys.stats](../../relational-databases/system-catalog-views/sys-stats-transact-sql.md) 동적 관리 뷰에서 얻을 수 있습니다. *stats_id* 는 **int** 입니다.  
   
 ## <a name="table-returned"></a>반환된 테이블  
   
@@ -61,21 +61,21 @@ sys.dm_db_stats_properties (object_id, stats_id)
 |persisted_sample_percent|**float**|샘플링 비율을 명시적으로 지정하지 않은 통계 업데이트에 사용되는 샘플 비율을 유지합니다. 값이 0이면 이 통계에 대해 지속 된 샘플 백분율이 설정되지 않습니다.<br /><br /> **적용 대상:** [!INCLUDE[ssSQL15](../../includes/sssql15-md.md)] SP1 CU4|  
   
 ## <a name="remarks"></a><a name="Remarks"></a> 주의  
- **dm_db_stats_properties** 는 다음 조건 중 하나에서 빈 행 집합을 반환 합니다.  
+ **sys.dm_db_stats_properties** 는 다음 조건 중 하나에서 빈 행 집합을 반환 합니다.  
   
 -   **object_id** 또는 **stats_id** 가 NULL입니다.    
 -   지정한 개체를 찾을 수 없거나 지정한 개체가 테이블 또는 인덱싱된 뷰에 해당되지 않습니다.    
 -   지정한 통계 ID가 특정 개체 ID의 기존 통계에 해당되지 않습니다.    
 -   현재 사용자에게 통계 개체를 볼 수 있는 권한이 없습니다.  
   
- 이 동작을 사용 하면 sys. **objects** 및 **sys.debug**와 같은 뷰의 행에 cross이 적용 될 때 **dm_db_stats_properties** 의 안전한 사용을 허용 합니다.  
+ 이 동작을 사용 하면 **sys. objects** 및 **sys.debug** 와 같은 뷰의 행에 cross를 적용할 때 **sys.dm_db_stats_properties** 를 안전 하 게 사용할 수 있습니다.  
  
 통계 업데이트 날짜는 [히스토그램](../../relational-databases/statistics/statistics.md#histogram) 및 [밀도 벡터](../../relational-databases/statistics/statistics.md#density)와 함께 메타데이터가 아닌 [통계 BLOB 개체](../../relational-databases/statistics/statistics.md#DefinitionQOStatistics)에 저장됩니다. 통계 데이터를 생성 하기 위해 데이터를 읽을 수 없는 경우 통계 blob이 만들어지지 않고 날짜를 사용할 수 없으며 *last_updated* 열이 NULL입니다. 이 경우는 조건자가 행을 반환하지 않는 필터링된 통계 또는 빈 테이블에 대해 필터링된 통계에 해당하는 경우입니다.
   
 ## <a name="permissions"></a>사용 권한  
  사용자가 통계 열에 대한 select 권한이 있거나 테이블을 소유하거나 `sysadmin` 고정 서버 역할, `db_owner` 고정 데이터베이스 역할, 또는 `db_ddladmin` 고정 데이터베이스 역할의 멤버여야 합니다.  
   
-## <a name="examples"></a>예제  
+## <a name="examples"></a>예  
 
 ### <a name="a-simple-example"></a>A. 간단한 예
 다음 예에서는 `Person.Person` AdventureWorks 데이터베이스에서 테이블에 대 한 통계를 반환 합니다.

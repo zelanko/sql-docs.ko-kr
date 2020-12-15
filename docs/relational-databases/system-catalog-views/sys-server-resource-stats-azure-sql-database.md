@@ -18,13 +18,13 @@ helpviewer_keywords:
 ms.assetid: ''
 author: jovanpop-msft
 ms.author: jovanpop
-monikerRange: =azuresqldb-current||=sqlallproducts-allversions
-ms.openlocfilehash: 57d0a8e10eb79213de7eb29a2d18ea8837d7f908
-ms.sourcegitcommit: 04cf7905fa32e0a9a44575a6f9641d9a2e5ac0f8
+monikerRange: =azuresqldb-current
+ms.openlocfilehash: 142269f7c3cd8a5a1e764e2e48cf41f83490bd76
+ms.sourcegitcommit: 1a544cf4dd2720b124c3697d1e62ae7741db757c
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 10/07/2020
-ms.locfileid: "91809324"
+ms.lasthandoff: 12/14/2020
+ms.locfileid: "97464604"
 ---
 # <a name="sysserver_resource_stats-azure-sql-database"></a>sys.server_resource_stats (Azure SQL Database)
 [!INCLUDE[Azure SQL Database Azure SQL Managed Instance](../../includes/applies-to-version/asdb-asdbmi.md)]
@@ -36,7 +36,7 @@ Azure SQL Managed Instance에 대 한 CPU 사용량, IO 및 저장소 데이터�
   
  다음 표에는 v12 서버에서 사용할 수 있는 열이 설명되어 있습니다.  
   
-|열|데이터 형식|Description|  
+|열|데이터 형식|설명|  
 |----------------------------|---------------|-----------------|  
 |start_time|**datetime2**|15 초 보고 간격의 시작을 나타내는 UTC 시간입니다.|  
 |end_time|**datetime**|15 초 보고 간격의 끝을 나타내는 UTC 시간입니다.|

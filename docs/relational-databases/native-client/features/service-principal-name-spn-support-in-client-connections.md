@@ -15,13 +15,13 @@ helpviewer_keywords:
 ms.assetid: 96598c69-ce9a-4090-aacb-d546591e8af7
 author: markingmyname
 ms.author: maghan
-monikerRange: '>=aps-pdw-2016||=azuresqldb-current||=azure-sqldw-latest||>=sql-server-2016||=sqlallproducts-allversions||>=sql-server-linux-2017||=azuresqldb-mi-current'
-ms.openlocfilehash: f500e41737bf3c1c17ada377f533bd1241d0db4b
-ms.sourcegitcommit: 783b35f6478006d654491cb52f6edf108acf2482
+monikerRange: '>=aps-pdw-2016||=azuresqldb-current||=azure-sqldw-latest||>=sql-server-2016||>=sql-server-linux-2017||=azuresqldb-mi-current'
+ms.openlocfilehash: 492ec9b3aad422ffe2c075bdeab6db932b14ff21
+ms.sourcegitcommit: 1a544cf4dd2720b124c3697d1e62ae7741db757c
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 10/09/2020
-ms.locfileid: "91892293"
+ms.lasthandoff: 12/14/2020
+ms.locfileid: "97462064"
 ---
 # <a name="service-principal-name-spn-support-in-client-connections-in-sql-server-native-client"></a>SQL Server Native Client에서 클라이언트 연결의 SPN (서비스 사용자 이름) 지원
 [!INCLUDE [SQL Server](../../../includes/applies-to-version/sql-asdb-asdbmi-asa-pdw.md)]
@@ -36,7 +36,7 @@ ms.locfileid: "91892293"
 >  클라이언트 애플리케이션에서 지정한 SPN은 Windows 통합 보안으로 연결이 설정되는 경우에만 사용됩니다.  
   
 > [!TIP]  
->  **[!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)]용 [!INCLUDE[msCoName](../../../includes/msconame-md.md)] Kerberos 구성 관리자**는 [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)]과의 Kerberos 관련 연결 문제를 해결하는 진단 도구입니다. 자세한 내용은 [SQL Server용 Microsoft Kerberos 구성 관리자](https://www.microsoft.com/download/details.aspx?id=39046)를 참조하십시오.  
+>  **[!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)]용 [!INCLUDE[msCoName](../../../includes/msconame-md.md)] Kerberos 구성 관리자** 는 [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)]과의 Kerberos 관련 연결 문제를 해결하는 진단 도구입니다. 자세한 내용은 [SQL Server용 Microsoft Kerberos 구성 관리자](https://www.microsoft.com/download/details.aspx?id=39046)를 참조하십시오.  
   
  Kerberos에 대한 자세한 내용은 다음 문서를 참조하십시오.  
   
@@ -55,8 +55,8 @@ ms.locfileid: "91892293"
 |OLE DB 애플리케이션이 주 서버 또는 장애 조치 파트너 서버에 대한 데이터 원본 초기화 속성으로 SPN을 지정합니다.|**SSPROP_INIT_SERVER_SPN** 속성 집합의 **DBPROPSET_SQLSERVERDBINIT** 연결 속성을 사용하여 연결에 대한 SPN을 지정할 수 있습니다.<br /><br /> **SSPROP_INIT_FAILOVER_PARTNER_SPN** 의 **DBPROPSET_SQLSERVERDBINIT** 연결 속성을 사용하여 장애 조치 파트너 서버에 대한 SPN을 지정할 수 있습니다.|  
 |사용자가 ODBC DSN(데이터 원본 이름)에 서버 또는 장애 조치 파트너 서버에 대한 SPN을 지정합니다.|DSN 설정 대화 상자를 통해 SPN을 ODBC DSN에 지정할 수 있습니다.|  
 |사용자가 OLE DB **데이터 연결** 또는 **로그인** 대화 상자에 서버 또는 장애 조치 파트너 서버에 대한 SPN을 지정합니다.|SPN은 **데이터 연결** 또는 **로그인** 대화 상자에 지정할 수 있습니다. **로그인** 대화 상자는 ODBC 또는 OLE DB에서 사용할 수 있습니다.|  
-|ODBC 애플리케이션이 연결을 설정하는 데 사용된 인증 방법을 확인합니다.|연결이 성공적으로 열리면 애플리케이션은 **SQL_COPT_SS_INTEGRATED_AUTHENTICATION_METHOD** 연결 특성을 쿼리하여 사용된 인증 방법을 확인할 수 있습니다. 값에는 **NTLM** , **Kerberos**등이 포함됩니다.|  
-|OLE DB 애플리케이션이 연결을 설정하는 데 사용된 인증 방법을 확인합니다.|연결이 성공적으로 열리면 애플리케이션은 **SSPROP_AUTHENTICATION_METHOD** 속성 집합의 **DBPROPSET_SQLSERVERDATASOURCEINFO** 연결 속성을 쿼리하여 사용된 인증 방법을 확인할 수 있습니다. 값에는 **NTLM** , **Kerberos**등이 포함됩니다.|  
+|ODBC 애플리케이션이 연결을 설정하는 데 사용된 인증 방법을 확인합니다.|연결이 성공적으로 열리면 애플리케이션은 **SQL_COPT_SS_INTEGRATED_AUTHENTICATION_METHOD** 연결 특성을 쿼리하여 사용된 인증 방법을 확인할 수 있습니다. 값에는 **NTLM** , **Kerberos** 등이 포함됩니다.|  
+|OLE DB 애플리케이션이 연결을 설정하는 데 사용된 인증 방법을 확인합니다.|연결이 성공적으로 열리면 애플리케이션은 **SSPROP_AUTHENTICATION_METHOD** 속성 집합의 **DBPROPSET_SQLSERVERDATASOURCEINFO** 연결 속성을 쿼리하여 사용된 인증 방법을 확인할 수 있습니다. 값에는 **NTLM** , **Kerberos** 등이 포함됩니다.|  
   
 ## <a name="failover"></a>장애 조치  
  SPN이 장애 조치 캐시에 저장되지 않아 연결 간에 전달될 수 없습니다. 연결 문자열 또는 연결 특성에 SPN이 지정되면 주 서버 및 파트너 서버에 대한 모든 연결 시도에 SPN이 사용됩니다.  
@@ -96,7 +96,7 @@ ms.locfileid: "91892293"
 |------------|-----------------|  
 |MSSQLSvc/*fqdn*|TCP 이외의 프로토콜이 사용될 때 기본 인스턴스에 대해 공급자가 생성하는 기본 SPN입니다.<br /><br /> *fqdn* 은 정규화된 도메인 이름입니다.|  
 |MSSQLSvc/*fqdn*:*port*|TCP가 사용될 때 공급자가 생성하는 기본 SPN입니다.<br /><br /> *port* 는 TCP 포트 번호입니다.|  
-|MSSQLSvc/*fqdn*:*InstanceName*|TCP 이외의 프로토콜이 사용될 때 명명된 인스턴스에 대해 공급자가 생성하는 기본 SPN입니다.<br /><br /> *InstanceName*은 [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] 인스턴스 이름입니다.|  
+|MSSQLSvc/*fqdn*:*InstanceName*|TCP 이외의 프로토콜이 사용될 때 명명된 인스턴스에 대해 공급자가 생성하는 기본 SPN입니다.<br /><br /> *InstanceName* 은 [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] 인스턴스 이름입니다.|  
 |HOST/*fqdn*<br /><br /> HOST/*MachineName*|Windows에서 자동으로 등록되는 기본 제공 컴퓨터 계정에 매핑되는 SPN입니다.|  
 |*Username*@*Domain*|도메인 계정 직접 지정입니다.<br /><br /> *Username* 은 Windows 사용자 계정 이름입니다.<br /><br /> *Domain* 은 Windows 도메인 이름 또는 정규화된 도메인 이름입니다.|  
 |*MachineName*$@*Domain*|컴퓨터 계정 직접 지정입니다.<br /><br /> 연결 중인 서버가 LOCAL SYSTEM 또는 NETWORK SERVICE 계정으로 실행되는 경우 **ServerSPN** 을 *MachineName*$@*Domain* 형식으로 사용하여 Kerberos 인증을 받을 수 있습니다.|  

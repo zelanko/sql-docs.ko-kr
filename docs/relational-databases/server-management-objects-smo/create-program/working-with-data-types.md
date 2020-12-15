@@ -16,13 +16,13 @@ helpviewer_keywords:
 ms.assetid: 1e0e736a-c709-4d89-aeb2-b32dcfd641fa
 author: markingmyname
 ms.author: maghan
-monikerRange: =azuresqldb-current||=azure-sqldw-latest||>=sql-server-2016||=sqlallproducts-allversions||>=sql-server-linux-2017||=azuresqldb-mi-current
-ms.openlocfilehash: 99ac0e206244404d1f4155acdd10c0a35df6e719
-ms.sourcegitcommit: e700497f962e4c2274df16d9e651059b42ff1a10
+monikerRange: =azuresqldb-current||=azure-sqldw-latest||>=sql-server-2016||>=sql-server-linux-2017||=azuresqldb-mi-current
+ms.openlocfilehash: 1939f6608b6175463103fce2a69a3d5936346605
+ms.sourcegitcommit: 1a544cf4dd2720b124c3697d1e62ae7741db757c
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 08/17/2020
-ms.locfileid: "88420307"
+ms.lasthandoff: 12/14/2020
+ms.locfileid: "97463004"
 ---
 # <a name="working-with-data-types"></a>데이터 형식 사용
 [!INCLUDE [SQL Server ASDB, ASDBMI, ASDW ](../../../includes/applies-to-version/sql-asdb-asdbmi-asa.md)]
@@ -53,7 +53,7 @@ ms.locfileid: "88420307"
   
 -   클래스의 정적 멤버 중 하나를 사용 <xref:Microsoft.SqlServer.Management.Smo.DataType> 합니다 (예: **Int**). 실제로 개체의 인스턴스를 반환 <xref:Microsoft.SqlServer.Management.Smo.DataType> 합니다.  
   
- <xref:Microsoft.SqlServer.Management.Smo.DataType> 개체에는 데이터 형식을 정의하는 몇 가지 속성이 있습니다. 예를 들어 <xref:Microsoft.SqlServer.Management.Smo.SqlDataType> 속성을 [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] 데이터 형식을 지정합니다. [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] 데이터 형식을 나타내는 상수 값은 <xref:Microsoft.SqlServer.Management.Smo.SqlDataType> 열거형으로 표시됩니다. 이것은 **varchar**, **nchar**, **currency**, **integer**, **float**및 **datetime**과 같은 데이터 형식을 참조합니다.  
+ <xref:Microsoft.SqlServer.Management.Smo.DataType> 개체에는 데이터 형식을 정의하는 몇 가지 속성이 있습니다. 예를 들어 <xref:Microsoft.SqlServer.Management.Smo.SqlDataType> 속성을 [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] 데이터 형식을 지정합니다. [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] 데이터 형식을 나타내는 상수 값은 <xref:Microsoft.SqlServer.Management.Smo.SqlDataType> 열거형으로 표시됩니다. 이것은 **varchar**, **nchar**, **currency**, **integer**, **float** 및 **datetime** 과 같은 데이터 형식을 참조합니다.  
   
  데이터 형식이 설정된 경우 데이터의 특정 속성을 설정해야 합니다. 예를 들어 **nchar** 유형인 경우 **Length** 속성에서 문자열 데이터의 길이를 설정해야 합니다. 전체 자릿수와 소수 자릿수를 지정해야 하는 숫자 값의 경우도 마찬가지입니다.  
   
@@ -61,7 +61,7 @@ ms.locfileid: "88420307"
   
  <xref:Microsoft.SqlServer.Management.Smo.SqlDataType> 열거형에는 [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)]에서 지원되는 모든 데이터 형식 목록이 포함되어 있습니다.  
   
-## <a name="examples"></a>예제  
+## <a name="examples"></a>예  
 제공된 코드 예제를 사용하려면 애플리케이션을 만들 프로그래밍 환경, 프로그래밍 템플릿 및 프로그래밍 언어를 선택해야 합니다. 자세한 내용은 [Visual Studio .net에서 Visual C&#35; SMO 프로젝트 만들기](../../../relational-databases/server-management-objects-smo/how-to-create-a-visual-csharp-smo-project-in-visual-studio-net.md)를 참조 하세요.  
   
   

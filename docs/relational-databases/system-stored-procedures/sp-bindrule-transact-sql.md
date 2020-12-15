@@ -18,13 +18,13 @@ helpviewer_keywords:
 ms.assetid: 2606073e-c52f-498d-a923-5026b9d97e67
 author: markingmyname
 ms.author: maghan
-monikerRange: =azuresqldb-current||>=sql-server-2016||=sqlallproducts-allversions||>=sql-server-linux-2017||=azuresqldb-mi-current
-ms.openlocfilehash: c7355f421701c5eb24da58dec5037b5fb1b8317c
-ms.sourcegitcommit: dd36d1cbe32cd5a65c6638e8f252b0bd8145e165
+monikerRange: =azuresqldb-current||>=sql-server-2016||>=sql-server-linux-2017||=azuresqldb-mi-current
+ms.openlocfilehash: 0616ed8334665f1c6226ad8bd28ed3e968a04be7
+ms.sourcegitcommit: 1a544cf4dd2720b124c3697d1e62ae7741db757c
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 09/08/2020
-ms.locfileid: "89548326"
+ms.lasthandoff: 12/14/2020
+ms.locfileid: "97462724"
 ---
 # <a name="sp_bindrule-transact-sql"></a>sp_bindrule(Transact-SQL)
 [!INCLUDE [SQL Server SQL Database](../../includes/applies-to-version/sql-asdb.md)]
@@ -68,14 +68,14 @@ sp_bindrule [ @rulename = ] 'rule' ,
   
  규칙은 바인딩 시점이 아니라 INSERT 문을 시도할 때 적용되며 **숫자** 데이터 형식의 열에 문자 규칙을 바인딩할 수 있지만 이러한 삽입 작업은 유효 하지 않습니다.  
   
- 별칭 데이터 형식의 기존 열 *futureonly_flag* 이 **futureonly**로 지정 되지 않은 경우 새 규칙을 상속 합니다. 별칭 데이터 형식으로 정의된 새 열은 항상 규칙을 상속합니다. 그러나 ALTER TABLE 문의 ALTER COLUMN 절이 열의 데이터 형식을 규칙에 바인딩된 별칭 데이터 형식으로 변경하는 경우에는 데이터 형식에 바인딩된 규칙이 열에 상속되지 않습니다. 규칙은 특히 **sp_bindrule**를 사용 하 여 열에 바인딩되어야 합니다.  
+ 별칭 데이터 형식의 기존 열 *futureonly_flag* 이 **futureonly** 로 지정 되지 않은 경우 새 규칙을 상속 합니다. 별칭 데이터 형식으로 정의된 새 열은 항상 규칙을 상속합니다. 그러나 ALTER TABLE 문의 ALTER COLUMN 절이 열의 데이터 형식을 규칙에 바인딩된 별칭 데이터 형식으로 변경하는 경우에는 데이터 형식에 바인딩된 규칙이 열에 상속되지 않습니다. 규칙은 특히 **sp_bindrule** 를 사용 하 여 열에 바인딩되어야 합니다.  
   
  열에 규칙을 바인딩하면 관련 정보가 **sys. columns** 테이블에 추가 됩니다. 별칭 데이터 형식에 규칙을 바인딩하면 관련 정보가 **sys. types** 테이블에 추가 됩니다.  
   
 ## <a name="permissions"></a>사용 권한  
  테이블 열에 규칙을 바인딩하려면 해당 테이블에 대한 ALTER 권한이 필요합니다. 별칭 데이터 형식에 규칙을 바인딩하려면 별칭 데이터 형식에 대한 CONTROL 권한 또는 그 형식이 속한 스키마에 대한 ALTER 권한이 필요합니다.  
   
-## <a name="examples"></a>예제  
+## <a name="examples"></a>예  
   
 ### <a name="a-binding-a-rule-to-a-column"></a>A. 열에 규칙 바인딩  
  CREATE RULE 문을 사용하여 현재 데이터베이스에 `today`라는 규칙을 만들었다고 가정할 때 다음 예에서는 `HireDate` 테이블의 `Employee` 열에 이 규칙을 바인딩하는 방법을 보여 줍니다. 이제 `Employee`에 행을 추가하면 `HireDate` 열의 데이터가 `today` 규칙에 부합하는지 확인합니다.  
@@ -87,7 +87,7 @@ EXEC sp_bindrule 'today', 'HumanResources.Employee.HireDate';
 ```  
   
 ### <a name="b-binding-a-rule-to-an-alias-data-type"></a>B. 별칭 데이터 형식에 규칙 바인딩  
- `rule_ssn`이라는 규칙과 `ssn`이라는 별칭 데이터 형식이 있다고 가정할 때 다음 예에서는 `rule_ssn`에 `ssn`을 바인딩하는 방법을 보여 줍니다. CREATE TABLE 문에서 `ssn` 형식의 열은 `rule_ssn` 규칙을 상속합니다. `ssn` `rule_ssn` *Futureonly_flag*에 대해 **futureonly** 를 지정 하지 않거나 `ssn` 해당 규칙에 직접 바인딩된 규칙을 포함 하는 경우에도 형식의 기존 열은 규칙을 상속 합니다. 데이터 형식에 바인딩한 규칙보다 열에 바인딩한 규칙이 항상 우선합니다.  
+ `rule_ssn`이라는 규칙과 `ssn`이라는 별칭 데이터 형식이 있다고 가정할 때 다음 예에서는 `rule_ssn`에 `ssn`을 바인딩하는 방법을 보여 줍니다. CREATE TABLE 문에서 `ssn` 형식의 열은 `rule_ssn` 규칙을 상속합니다. `ssn` `rule_ssn` *Futureonly_flag* 에 대해 **futureonly** 를 지정 하지 않거나 `ssn` 해당 규칙에 직접 바인딩된 규칙을 포함 하는 경우에도 형식의 기존 열은 규칙을 상속 합니다. 데이터 형식에 바인딩한 규칙보다 열에 바인딩한 규칙이 항상 우선합니다.  
   
 ```  
 USE master;  

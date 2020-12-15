@@ -1,6 +1,6 @@
 ---
-description: sys. dm_db_log_info (Transact-sql)
-title: sys. dm_db_log_info (Transact-sql) | Microsoft Docs
+description: sys.dm_db_log_info (Transact-sql)
+title: sys.dm_db_log_info (Transact-sql) | Microsoft Docs
 ms.custom: ''
 ms.date: 04/24/2018
 ms.prod: sql
@@ -20,15 +20,15 @@ ms.assetid: f6b40060-c17d-472f-b0a3-3b350275d487
 author: savjani
 ms.author: pariks
 manager: ajayj
-monikerRange: '>=sql-server-2016||=sqlallproducts-allversions||>=sql-server-linux-2017||=azuresqldb-mi-current'
-ms.openlocfilehash: aba965d4a0289db9ef7def58b90f15a1479cb485
-ms.sourcegitcommit: e700497f962e4c2274df16d9e651059b42ff1a10
+monikerRange: '>=sql-server-2016||>=sql-server-linux-2017||=azuresqldb-mi-current'
+ms.openlocfilehash: 12fe1e95cbb1c7ad26025ee52ce111cb3f835704
+ms.sourcegitcommit: 1a544cf4dd2720b124c3697d1e62ae7741db757c
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 08/17/2020
-ms.locfileid: "88447665"
+ms.lasthandoff: 12/14/2020
+ms.locfileid: "97440828"
 ---
-# <a name="sysdm_db_log_info-transact-sql"></a>sys. dm_db_log_info (Transact-sql)
+# <a name="sysdm_db_log_info-transact-sql"></a>sys.dm_db_log_info (Transact-sql)
 [!INCLUDE[tsql-appliesto-2016sp2-asdb-xxxx-xxx-md](../../includes/tsql-appliesto-2016sp2-asdb-xxxx-xxx-md.md)]
 
 트랜잭션 로그의 [가상 로그 파일 (VLF)](../../relational-databases/sql-server-transaction-log-architecture-and-management-guide.md#physical_arch) 정보를 반환 합니다. 모든 트랜잭션 로그 파일은 테이블 출력에 결합 됩니다. 출력의 각 행은 트랜잭션 로그의 VLF를 나타내며 로그에서 해당 VLF와 관련 된 정보를 제공 합니다.
@@ -41,7 +41,7 @@ sys.dm_db_log_info ( database_id )
 
 ## <a name="arguments"></a>인수  
  *database_id* | NULL | 기본  
- 데이터베이스의 ID입니다. *database_id* 은 **int**입니다. 올바른 입력은 데이터베이스의 ID 번호, NULL 또는 DEFAULT입니다. 기본값은 NULL입니다. NULL 및 기본값은 현재 데이터베이스의 컨텍스트에서 동일한 값입니다.
+ 데이터베이스의 ID입니다. *database_id* 은 **int** 입니다. 올바른 입력은 데이터베이스의 ID 번호, NULL 또는 DEFAULT입니다. 기본값은 NULL입니다. NULL 및 기본값은 현재 데이터베이스의 컨텍스트에서 동일한 값입니다.
  
  현재 데이터베이스의 VLF 정보를 반환 하려면 NULL을 지정 합니다.
 
@@ -69,7 +69,7 @@ sys.dm_db_log_info ( database_id )
 ## <a name="permissions"></a>사용 권한  
 데이터베이스에 대 한 권한이 필요 합니다 `VIEW DATABASE STATE` .  
   
-## <a name="examples"></a>예제  
+## <a name="examples"></a>예  
   
 ### <a name="a-determing-databases-in-a-sql-server-instance-with-high-number-of-vlfs"></a>A. Vlf 수가 많은 SQL Server 인스턴스의 데이터베이스 판단
 다음 쿼리는 데이터베이스 시작, 복원 및 복구 시간에 영향을 줄 수 있는 로그 파일의 Vlf가 100 이상인 데이터베이스를 결정 합니다.

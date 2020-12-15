@@ -12,13 +12,13 @@ dev_langs:
 ms.assetid: 0673a8f8-8bed-41eb-8959-a9e3e9e03a65
 author: markingmyname
 ms.author: maghan
-monikerRange: '>= aps-pdw-2016 || = sqlallproducts-allversions'
-ms.openlocfilehash: d2a5715df9f95f6f2090ba4a25ddc22329bb4160
-ms.sourcegitcommit: 22dacedeb6e8721e7cdb6279a946d4002cfb5da3
+monikerRange: '>= aps-pdw-2016'
+ms.openlocfilehash: 67a0bf0b52b0fc4d31400bf009476d76fdc1b1f5
+ms.sourcegitcommit: 1a544cf4dd2720b124c3697d1e62ae7741db757c
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 10/14/2020
-ms.locfileid: "92035259"
+ms.lasthandoff: 12/14/2020
+ms.locfileid: "97440768"
 ---
 # <a name="sysdm_pdw_os_performance_counters-transact-sql"></a>sys.dm_pdw_os_performance_counters (Transact-sql)
 [!INCLUDE [pdw](../../includes/applies-to-version/pdw.md)]

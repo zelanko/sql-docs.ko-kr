@@ -10,12 +10,12 @@ author: dphansen
 ms.author: davidph
 ms.custom: seo-lt-2019
 monikerRange: '>=sql-server-2016||>=sql-server-linux-ver15||>=azuresqldb-mi-current||=sqlallproducts-allversions'
-ms.openlocfilehash: d42d51371b0641fe460150e68fe96c5eb68e09cb
-ms.sourcegitcommit: ead0b8c334d487a07e41256ce5d6acafa2d23c9d
+ms.openlocfilehash: 0b5f930568e655df645cbaed140f163ada3e3afa
+ms.sourcegitcommit: d983ad60779d90bb1c89a34d7b3d6da18447fdd8
 ms.translationtype: HT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 10/22/2020
-ms.locfileid: "92412548"
+ms.lasthandoff: 12/09/2020
+ms.locfileid: "96934035"
 ---
 # <a name="r-tutorial-train-and-save-model"></a>R 자습서: 모델 학습 및 저장
 [!INCLUDE [SQL Server 2016 SQL MI](../../includes/applies-to-version/sqlserver2016-asdbmi.md)]
@@ -79,7 +79,7 @@ T-SQL에서 R을 호출하는 경우 시스템 저장 프로시저 [sp_execute_e
   
    + R 스크립트는 R 함수 **glm** 을 호출하여 로지스틱 회귀 모델을 만듭니다.
   
-     이진 변수 _tipped_ 는 *label* 또는 결과 열로 사용되며  _passenger_count_ , _trip_distance_ , _trip_time_in_secs_ , _direct_distance_ 등의 기능 열을 사용하여 모델을 맞춥니다.
+     이진 변수 _tipped_ 는 *label* 또는 결과 열로 사용되며  _passenger_count_, _trip_distance_, _trip_time_in_secs_, _direct_distance_ 등의 기능 열을 사용하여 모델을 맞춥니다.
   
    + R 변수 `logitObj`에 저장된 학습된 모델을 serialize한 후 출력 매개 변수로 반환합니다.
 
@@ -101,7 +101,7 @@ T-SQL에서 R을 호출하는 경우 시스템 저장 프로시저 [sp_execute_e
 
 3. 문이 완료되면 테이블 *nyc_taxi_models* 를 엽니다. 데이터를 처리하고 모델을 맞추는 데 시간이 걸릴 수도 있습니다.
 
-   _모델_ 열에 직렬화된 모델을 포함하고 _이름_ 열에 모델 이름 **TrainLog_model** 을 포함하는 하나의 새 행이 추가된 것을 확인할 수 있습니다.
+   ‘모델’ 열에 직렬화된 모델을 포함하고 ‘이름’ 열에 모델 이름 **RTrainLogit_model** 을 포함하는 하나의 새 행이 추가된 것을 확인할 수 있습니다. 
 
    ```text
    model                        name

@@ -14,12 +14,12 @@ helpviewer_keywords:
 ms.assetid: a655225d-8c54-4b30-95fd-31f588167899
 author: cawrites
 ms.author: chadam
-ms.openlocfilehash: b26571c01db073aa2567ebbee19ff2183c47a552
-ms.sourcegitcommit: 5a1ed81749800c33059dac91b0e18bd8bb3081b1
+ms.openlocfilehash: fd95dd20cf72900a85c675c0e6b89689553d55f5
+ms.sourcegitcommit: 821e7039a342bf76306d66c61db247dc2caabc46
 ms.translationtype: HT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 11/23/2020
-ms.locfileid: "96127671"
+ms.lasthandoff: 12/10/2020
+ms.locfileid: "96999250"
 ---
 # <a name="before-installing-failover-clustering"></a>장애 조치(Failover) 클러스터링을 설치하기 전에
 [!INCLUDE [SQL Server](../../../includes/applies-to-version/sqlserver.md)]
@@ -170,7 +170,7 @@ ms.locfileid: "96127671"
   
 -   원격 관리를 설정해야 합니다.  
   
--   [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] 포트의 경우 [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] 구성 관리자를 사용하여 차단을 해제하려는 인스턴스의 TCP/IP 프로토콜에 대한 [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] 네트워크 구성을 검사합니다. 설치 후 TCP를 사용하여 [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] 에 연결하려면 IPALL에 대한 TCP 포트를 설정해야 합니다. 기본적으로 SQL Browser는 UDP 포트 1434에서 수신합니다.  
+- 기본 포트가 아닌 포트를 사용하는 SQL Server 인스턴스의 경우, 차단을 해제할 SQL Server 인스턴스에서 사용하는 포트를 확인하려면 SQL Server 구성 관리자의 네트워크 구성을 사용합니다. 클러스터된 인스턴스와 다른 IP 주소 및 UDP 포트 1434를 사용하는 [SQL Server Browser 서비스](../../../tools/configuration-manager/sql-server-browser-service.md)를 사용하여 SQL Server 인스턴스에 연결하려는 경우 방화벽에서 IPALL에 대해 TCP 포트를 활성화합니다. 
   
 -   장애 조치(Failover) 클러스터 설치 작업에는 네트워크 바인딩 순서를 검사하는 규칙이 포함됩니다. 바인딩 순서가 올바르게 보이더라도 시스템의 NIC 구성이 비활성화되었거나 "삭제"되었을 수 있습니다. "삭제된" NIC 구성은 바인딩 순서에 영향을 줄 수 있으며 바인딩 순서 규칙에서 경고가 발생하도록 할 수 있습니다. 이러한 상황을 방지하기 위해 다음 단계에 따라 비활성화된 네트워크 어댑터를 확인하고 제거합니다.  
   
@@ -189,12 +189,12 @@ ms.locfileid: "96127671"
   
 |[!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] 버전|[!INCLUDE[firstref_longhorn](../../../includes/firstref-longhorn-md.md)] Enterprise|[!INCLUDE[firstref_longhorn](../../../includes/firstref-longhorn-md.md)] Datacenter Server|[!INCLUDE[winserver2008r2](../../../includes/winserver2008r2-md.md)] Enterprise|[!INCLUDE[winserver2008r2](../../../includes/winserver2008r2-md.md)] Datacenter Server|  
 |---------------------------------------|------------------------------------------------|-------------------------------------------------------|----------------------------------------------|-----------------------------------------------------|  
-|[!INCLUDE[ssSQL14](../../../includes/sssql14-md.md)] Enterprise(64비트) x64*|yes|예|예**|예**|  
-|[!INCLUDE[ssSQL14](../../../includes/sssql14-md.md)] Enterprise(32비트)|yes|예|||  
-|[!INCLUDE[ssCurrent](../../../includes/sscurrent-md.md)] Developer(64비트)|yes|예|예**|예**|  
-|[!INCLUDE[ssCurrent](../../../includes/sscurrent-md.md)] Developer(32비트)|yes|예|||  
-|[!INCLUDE[ssCurrent](../../../includes/sscurrent-md.md)] Standard(64비트)|yes|yes|yes|예|  
-|[!INCLUDE[ssCurrent](../../../includes/sscurrent-md.md)] Standard(32비트)|yes|예|||  
+|[!INCLUDE[ssSQL14](../../../includes/sssql14-md.md)] Enterprise(64비트) x64*|yes|yes|예**|예**|  
+|[!INCLUDE[ssSQL14](../../../includes/sssql14-md.md)] Enterprise(32비트)|yes|yes|||  
+|[!INCLUDE[ssCurrent](../../../includes/sscurrent-md.md)] Developer(64비트)|yes|yes|예**|예**|  
+|[!INCLUDE[ssCurrent](../../../includes/sscurrent-md.md)] Developer(32비트)|yes|yes|||  
+|[!INCLUDE[ssCurrent](../../../includes/sscurrent-md.md)] Standard(64비트)|yes|yes|yes|yes|  
+|[!INCLUDE[ssCurrent](../../../includes/sscurrent-md.md)] Standard(32비트)|yes|yes|||  
   
  *[!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] 클러스터는 WOW 모드에서 지원되지 않습니다. 또한 WOW에 원래 설치했던 이전 버전의 [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] 장애 조치(Failover) 클러스터에서 업그레이드하는 것도 지원되지 않습니다. 이 경우 업그레이드할 수 있는 유일한 방법은 새 버전을 추가로 설치한 후 마이그레이션하는 것 뿐입니다.  
   

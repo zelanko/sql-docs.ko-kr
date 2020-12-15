@@ -18,13 +18,13 @@ ms.assetid: 024a4b7d-435d-47ba-9e80-2c2f640108f5
 author: MightyPen
 ms.author: genemi
 ms.custom: seo-lt-2019
-monikerRange: =azuresqldb-current||>=sql-server-2016||=sqlallproducts-allversions||>=sql-server-linux-2017||=azuresqldb-mi-current
-ms.openlocfilehash: fd51dccee8f6b0b42001951fb096400182197deb
-ms.sourcegitcommit: da88320c474c1c9124574f90d549c50ee3387b4c
+monikerRange: =azuresqldb-current||>=sql-server-2016||>=sql-server-linux-2017||=azuresqldb-mi-current
+ms.openlocfilehash: ee24d16dce8ae60ccf51a866a274b15b2737ca89
+ms.sourcegitcommit: 1a544cf4dd2720b124c3697d1e62ae7741db757c
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 07/01/2020
-ms.locfileid: "85650355"
+ms.lasthandoff: 12/14/2020
+ms.locfileid: "97462914"
 ---
 # <a name="executing-xpath-queries-with-namespaces-sqlxmloledb-provider"></a>네임스페이스가 있는 XPath 쿼리 실행(SQLXMLOLEDB 공급자)
 [!INCLUDE [SQL Server Azure SQL Database](../../../includes/applies-to-version/sql-asdb.md)]
@@ -38,7 +38,7 @@ ms.locfileid: "85650355"
 /*[local-name() = 'Contact' and namespace-uri() = 'urn:myschema:Contacts']  
 ```  
   
- SQLXML 4.0에서는 이 XPath 쿼리를 네임스페이스 접두사를 사용하여 지정해야 합니다. 예는 **X:contact**입니다. 여기서 **x** 는 네임 스페이스 접두사입니다. 다음과 같은 XSD 스키마를 살펴보십시오.  
+ SQLXML 4.0에서는 이 XPath 쿼리를 네임스페이스 접두사를 사용하여 지정해야 합니다. 예는 **X:contact** 입니다. 여기서 **x** 는 네임 스페이스 접두사입니다. 다음과 같은 XSD 스키마를 살펴보십시오.  
   
 ```  
 <schema xmlns="http://www.w3.org/2001/XMLSchema"  

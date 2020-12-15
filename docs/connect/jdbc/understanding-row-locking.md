@@ -2,7 +2,7 @@
 description: 행 잠금 이해
 title: 행 잠금 이해 | Microsoft Docs
 ms.custom: ''
-ms.date: 08/12/2019
+ms.date: 12/08/2020
 ms.prod: sql
 ms.prod_service: connectivity
 ms.reviewer: ''
@@ -11,12 +11,12 @@ ms.topic: conceptual
 ms.assetid: 63c76a2f-f2b9-461f-8904-acbda0169ac3
 author: David-Engel
 ms.author: v-daenge
-ms.openlocfilehash: 69b04db86ce8784f5f346a4ac0d19b2bedd0e456
-ms.sourcegitcommit: e700497f962e4c2274df16d9e651059b42ff1a10
+ms.openlocfilehash: e5305f3feaa80d0a83dd1e7bfd97088492608ae5
+ms.sourcegitcommit: 7f76975c29d948a9a3b51abce564b9c73d05dcf0
 ms.translationtype: HT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 08/17/2020
-ms.locfileid: "88488036"
+ms.lasthandoff: 12/08/2020
+ms.locfileid: "96901063"
 ---
 # <a name="understanding-row-locking"></a>행 잠금 이해
 
@@ -30,7 +30,7 @@ ms.locfileid: "88488036"
 잠금은 트랜잭션 무결성 및 데이터베이스 동시성을 보장하는 데 사용됩니다. 잠금은 다른 사용자가 변경하고 있는 데이터를 렌더링할 수 없도록 하고 여러 사용자가 동일한 데이터를 동시에 변경하지 못하도록 합니다. 잠금 기능을 사용하지 않으면 데이터베이스 내의 데이터가 논리적으로 올바르지 않게 되고, 해당 데이터에 대해 실행한 쿼리에서 예상치 못한 결과가 발생할 수 있습니다.
 
 > [!NOTE]  
-> [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]에서 행 잠금에 대한 자세한 내용은 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 온라인 설명서의 "[!INCLUDE[ssDE](../../includes/ssde_md.md)]에서의 잠금"을 참조하세요.
+> [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]에서 행 잠금에 대한 자세한 내용은 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 온라인 설명서의 [“[!INCLUDE[ssDE](../../includes/ssde_md.md)]에서의 잠금”](../../relational-databases/sql-server-transaction-locking-and-row-versioning-guide.md#Lock_Engine)을 참조하세요.
 
 ## <a name="see-also"></a>참조
 

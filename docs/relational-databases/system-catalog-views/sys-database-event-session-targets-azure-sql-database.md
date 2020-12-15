@@ -1,6 +1,6 @@
 ---
 description: sys.database_event_session_targets(Azure SQL Database)
-title: database_event_session_targets (Azure SQL Database) | Microsoft Docs
+title: sys.database_event_session_targets (Azure SQL Database) | Microsoft Docs
 ms.custom: ''
 ms.date: 03/06/2017
 ms.prod: sql
@@ -11,13 +11,13 @@ ms.topic: language-reference
 ms.assetid: 38d775ee-1fe1-4820-88c6-02b2f875a66b
 author: markingmyname
 ms.author: maghan
-monikerRange: =azuresqldb-current||>=sql-server-2016||=sqlallproducts-allversions||>=sql-server-linux-2017||=azuresqldb-mi-current
-ms.openlocfilehash: 680cac9474fd63806c046ffeede22e83c04773c5
-ms.sourcegitcommit: dd36d1cbe32cd5a65c6638e8f252b0bd8145e165
+monikerRange: =azuresqldb-current||>=sql-server-2016||>=sql-server-linux-2017||=azuresqldb-mi-current
+ms.openlocfilehash: 2b77a6340fe245884c137fb24fbeac653a8a2ff0
+ms.sourcegitcommit: 1a544cf4dd2720b124c3697d1e62ae7741db757c
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 09/08/2020
-ms.locfileid: "89537399"
+ms.lasthandoff: 12/14/2020
+ms.locfileid: "97458521"
 ---
 # <a name="sysdatabase_event_session_targets-azure-sql-database"></a>sys.database_event_session_targets(Azure SQL Database)
 
@@ -27,7 +27,7 @@ ms.locfileid: "89537399"
   
 ||  
 |-|  
-|**적용**대상: [!INCLUDE[ssSDSfull](../../includes/sssdsfull-md.md)] V12 이상 버전.|  
+|**적용** 대상: [!INCLUDE[ssSDSfull](../../includes/sssdsfull-md.md)] V12 이상 버전.|  
   
 |열 이름|데이터 형식|Description|  
 |-----------------|---------------|-----------------|  
@@ -43,9 +43,9 @@ ms.locfileid: "89537399"
 ## <a name="remarks"></a>설명  
  이 뷰는 다음과 같은 관계 카디널리티를 가집니다.  
   
-|시작|대상|관계|  
+|From|대상|관계|  
 |-|-|-|  
-|database_event_session_targets. event_session_id|database_event_sessions. event_session_id|다 대 일|  
+|sys.database_event_session_targets sys.database_event_session_targets.event_session_id|sys.database_event_sessions sys.database_event_sessions.event_session_id|다 대 일|  
   
 ## <a name="see-also"></a>참고 항목  
  [확장 이벤트](../../relational-databases/extended-events/extended-events.md)  

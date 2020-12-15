@@ -19,13 +19,13 @@ helpviewer_keywords:
 ms.assetid: 5a43d23f-adcf-4c0b-95ad-07cee03c1f9d
 author: rothja
 ms.author: jroth
-monikerRange: =azuresqldb-current||>=sql-server-2016||=sqlallproducts-allversions||>=sql-server-linux-2017||=azuresqldb-mi-current
-ms.openlocfilehash: af42a0f719e490ce32c6f81ee92722a540f1271a
-ms.sourcegitcommit: e700497f962e4c2274df16d9e651059b42ff1a10
+monikerRange: =azuresqldb-current||>=sql-server-2016||>=sql-server-linux-2017||=azuresqldb-mi-current
+ms.openlocfilehash: d1a3144ed51592d3014564d7d5b9690fed958fb9
+ms.sourcegitcommit: 1a544cf4dd2720b124c3697d1e62ae7741db757c
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 08/17/2020
-ms.locfileid: "88498150"
+ms.lasthandoff: 12/14/2020
+ms.locfileid: "97440605"
 ---
 # <a name="change_tracking_min_valid_version-transact-sql"></a>CHANGE_TRACKING_MIN_VALID_VERSION(Transact-SQL)
 [!INCLUDE [SQL Server SQL Database](../../includes/applies-to-version/sql-asdb.md)]
@@ -43,7 +43,7 @@ CHANGE_TRACKING_MIN_VALID_VERSION ( table_object_id )
   
 ## <a name="arguments"></a>인수  
  *table_object_id*  
- 테이블의 개체 ID입니다. *table_object_id* 은 **int**입니다.  
+ 테이블의 개체 ID입니다. *table_object_id* 은 **int** 입니다.  
   
 ## <a name="return-type"></a>반환 형식  
  **bigint**  
@@ -67,7 +67,7 @@ CHANGE_TRACKING_MIN_VALID_VERSION ( table_object_id )
   
 -   개체 ID로 지정한 테이블에 대한 권한이 부족한 경우  
   
-## <a name="examples"></a>예제  
+## <a name="examples"></a>예  
  다음 예에서는 지정한 버전이 유효한 버전인지 여부를 확인합니다. 예제에는 `dbo.Employees` 테이블의 유효한 최소 버전을 가져와 `@last_sync_version` 변수 값과 비교합니다. `@last_sync_version` 값이 `@min_valid_version` 값보다 작으면 변경된 행 목록이 유효하지 않습니다.  
   
 > [!NOTE]  

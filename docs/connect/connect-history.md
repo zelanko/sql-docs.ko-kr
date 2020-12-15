@@ -2,18 +2,18 @@
 title: Microsoft SQL Server용 드라이버 기록 | Microsoft Docs
 description: 이 페이지에서는 SQL Server에 연결하기 위한 Microsoft의 기록 데이터 연결 기술에 대해 설명합니다.
 ms.custom: ''
-ms.date: 05/06/2020
+ms.date: 12/08/2020
 ms.prod: sql
 ms.technology: connectivity
 ms.topic: conceptual
 author: David-Engel
 ms.author: v-daenge
-ms.openlocfilehash: f5db99b78cc5c5d251baee6028d1c9bc4e7448bf
-ms.sourcegitcommit: fb1430aedbb91b55b92f07934e9b9bdfbbd2b0c5
+ms.openlocfilehash: dee1514230f3e0ce0f0ba4c0d3af904cc90c9720
+ms.sourcegitcommit: d983ad60779d90bb1c89a34d7b3d6da18447fdd8
 ms.translationtype: HT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 05/07/2020
-ms.locfileid: "82885770"
+ms.lasthandoff: 12/09/2020
+ms.locfileid: "96933812"
 ---
 # <a name="driver-history-for-microsoft-sql-server"></a>Microsoft SQL Server용 드라이버 기록
 
@@ -21,7 +21,7 @@ ms.locfileid: "82885770"
 
 ## <a name="odbc"></a>ODBC
 
-SQL Server용 Microsoft ODBC 드라이버의 세 가지 고유한 세대가 있습니다. 첫 번째 "SQL Server" ODBC 드라이버는 [Windows Data Access Components](#microsoft-or-windows-data-access-components)의 일부로 여전히 제공됩니다. 새 개발 작업에는 이 드라이버를 사용하지 않는 것이 좋습니다. SQL Server 2005부터 [SQL Server Native Client](#sql-server-native-client)가 ODBC 인터페이스를 포함하며, SQL Server 2005부터 SQL Server 2012까지 함께 제공되는 ODBC 드라이버입니다. 새 개발 작업에는 이 드라이버를 사용하지 않는 것이 좋습니다. SQL Server 2012 이후는 [Microsoft ODBC Driver for SQL Server](#microsoft-odbc-driver-for-sql-server)가 최신 서버 기능으로 업데이트된 드라이버입니다.
+SQL Server용 Microsoft ODBC 드라이버의 세 가지 고유한 세대가 있습니다. 첫 번째 "SQL Server" ODBC 드라이버는 [Windows Data Access Components](#microsoft-or-windows-data-access-components)의 일부로 여전히 제공됩니다. 이 드라이버는 새로운 개발에는 권장되지 않습니다. SQL Server 2005부터 [SQL Server Native Client](#sql-server-native-client)가 ODBC 인터페이스를 포함하며, SQL Server 2005부터 SQL Server 2012까지 함께 제공되는 ODBC 드라이버입니다. 또한 이 드라이버는 새로운 개발에는 권장되지 않습니다. SQL Server 2012 이후는 [Microsoft ODBC Driver for SQL Server](#microsoft-odbc-driver-for-sql-server)가 최신 서버 기능으로 업데이트된 드라이버입니다.
 
 ### <a name="sql-server-native-client"></a>SQL Server Native Client
 
@@ -35,11 +35,19 @@ SQL Server 2012 이후 SQL Server용 기본 ODBC 드라이버가 개발되고 Mi
 
 ## <a name="ole-db"></a>OLE DB
 
-Microsoft OLE DB Provider for SQL Server의 세 가지 고유한 세대가 있습니다. 첫 번째 “Microsoft OLE DB Provider for SQL Server”(SQLOLEDB)는 [Windows Data Access Components](#microsoft-or-windows-data-access-components)의 일부로 계속 제공됩니다. 이 공급자는 새 기능으로 업데이트되지 않으며 새 개발 작업에 이 드라이버를 사용하지 않는 것이 좋습니다. SQL Server 2005부터 [SQL Server Native Client](#sql-server-native-client)가 SQLNCLI(OLE DB 공급자 인터페이스)를 포함하며 SQL Server 2005~SQL Server 2017에 제공된 OLE DB 공급자입니다. [2011년에 사용되지 않는 드라이버로 발표](/archive/blogs/sqlnativeclient/microsoft-is-aligning-with-odbc-for-native-relational-data-access)되었으며, 새로운 개발에 이 드라이버를 사용하지 않는 것이 좋습니다. 2017년에는 OLE DB 데이터 액세스 기술이 [사용되지 않으며 2018년 릴리스 계획이 발표되었습니다](/archive/blogs/sqlnativeclient/announcing-the-new-release-of-ole-db-driver-for-sql-server). 새 OLE DB 공급자를 "Microsoft OLE DB Driver for SQL Server"(MSOLEDBSQL)라고 하며 현재 유지 관리 및 지원되고 있습니다.
+Microsoft OLE DB Provider for SQL Server의 세 가지 고유한 세대가 있습니다. 첫 번째 “Microsoft OLE DB Provider for SQL Server”(SQLOLEDB)는 [Windows Data Access Components](#microsoft-or-windows-data-access-components)의 일부로 계속 제공됩니다. 이 공급자는 새 기능으로 업데이트되지 않으며 새 개발 작업에 이 드라이버를 사용하지 않는 것이 좋습니다. SQL Server 2005부터 [SQL Server Native Client](#sql-server-native-client)가 SQLNCLI(OLE DB 공급자 인터페이스)를 포함하며 SQL Server 2005~SQL Server 2017에 제공된 OLE DB 공급자입니다. [2011년에 사용되지 않는 드라이버로 발표](/archive/blogs/sqlnativeclient/microsoft-is-aligning-with-odbc-for-native-relational-data-access)되었으며, 새로운 개발에 이 드라이버를 사용하지 않는 것이 좋습니다. 2017년에는 OLE DB 데이터 액세스 기술이 나중에 [사용되지 않았으며 2018년 릴리스 계획이 발표되었습니다](/archive/blogs/sqlnativeclient/announcing-the-new-release-of-ole-db-driver-for-sql-server). 새 OLE DB 공급자를 "Microsoft OLE DB Driver for SQL Server"(MSOLEDBSQL)라고 하며 현재 유지 관리 및 지원되고 있습니다.
 
 ## <a name="adonet"></a>ADO.NET
 
-ADO.NET는 Microsoft .NET Framework에서 도입되었으며 계속 유지 관리 및 향상되고 있습니다. Microsoft .NET Framework의 핵심 구성 요소입니다. 자세한 내용은 [Microsoft ADO.NET for SQL Server](ado-net/microsoft-ado-net-sql-server.md)를 참조하세요.
+ADO.NET은 모든 종류의 데이터 원본(관계형 및 비관계형)에 액세스하기 위한 인터페이스를 정의하는 클래스 세트입니다. ADO.NET은 Microsoft .NET Framework에서 도입되었으며 .NET에서 계속 유지 관리 및 향상되고 있습니다. SqlClient 라이브러리는 SQL Server 및 Azure SQL 데이터 원본에 대한 연결을 제공하는 ADO.NET 데이터 공급자입니다.
+
+### <a name="systemdatasqlclient"></a>System.Data.SqlClient
+
+System.Data.SqlClient는 .NET Framework 및 .NET Core의 일부로 포함되어 있습니다. 2019까지는 일반 기능 업데이트를 수신했습니다. [.NET Core의 미래인 .NET Framework](https://devblogs.microsoft.com/dotnet/net-core-is-the-future-of-net/) 및 [일반적인 .NET](https://devblogs.microsoft.com/dotnet/introducing-net-5/)이 발표됨에 따라 SqlClient 개발은 .NET 외부의 패키지로 전환해야 했습니다. System.Data.SqlClient는 계속 지원되지만 기능 업데이트를 받지 못하므로 새로운 개발에 권장되지 않습니다.
+
+### <a name="microsoftdatasqlclient"></a>Microsoft.Data.SqlClient
+
+[2019년에 도입된](https://devblogs.microsoft.com/dotnet/introducing-the-new-microsoftdatasqlclient/) Microsoft SqlClient Data Provider for SQL Server는 .NET Framework, .NET Core 및 .NET Standard를 대상으로 하는 애플리케이션을 지원하는 ADO.NET 데이터 공급자입니다. Microsoft.Data.SqlClient 네임스페이스에 대한 자세한 내용은 [Microsoft ADO.NET for SQL Server](ado-net/microsoft-ado-net-sql-server.md)를 참조하세요.
 
 ## <a name="jdbc"></a>JDBC
 
@@ -79,8 +87,8 @@ Microsoft/Windows Data Access Components(MDAC/WDAC)는 이전 버전 애플리�
 
 MDAC/WDAC에는 다음 구성 요소가 포함됩니다.
 
-* **ODBC:** Microsoft ODBC(Open Database Connectivity) 인터페이스는 애플리케이션에서 다양한 DBMS(데이터베이스 관리 시스템)의 데이터에 액세스할 수 있도록 하는 C 프로그래밍 언어 인터페이스입니다. 이 API를 사용하는 애플리케이션은 관계형 데이터 원본에만 액세스하도록 제한됩니다.
-* **OLE DB:** OLE DB는 다양한 데이터 저장소의 데이터에 액세스하기 위한 COM 인터페이스 집합입니다. 데이터베이스, 파일 시스템, 메시지 저장소, 디렉터리 서비스, 워크플로 및 문서 저장소의 데이터에 액세스하기 위한 OLE DB 공급자가 있습니다.
+* **ODBC:** Microsoft ODBC(Open Database Connectivity) 인터페이스는 애플리케이션에서 서로 다른 종류의 DBMS(데이터베이스 관리 시스템)의 데이터에 액세스할 수 있도록 하는 C 프로그래밍 언어 인터페이스입니다. 이 API를 사용하는 애플리케이션은 관계형 데이터 원본에만 액세스하도록 제한됩니다.
+* **OLE DB:** OLE DB는 서로 다른 종류의 데이터 저장소의 데이터에 액세스하기 위한 COM 인터페이스 세트입니다. 데이터베이스, 파일 시스템, 메시지 저장소, 디렉터리 서비스, 워크플로 및 문서 저장소의 데이터에 액세스하기 위한 OLE DB 공급자가 있습니다.
 * **ADO:** ADO(ActiveX Data Objects)는 상위 수준 프로그래밍 모델을 제공합니다. OLE DB 또는 ODBC를 직접 코딩하는 것보다 약간 떨어지는 성능이지만 ADO는 학습하고 사용하기 쉽습니다. VBScript(Microsoft Visual Basic Scripting Edition) 또는 Microsoft JScript와 같은 스크립트 언어에서 사용할 수 있습니다.
 * **ADOMD:** ADOMD(ADO Multi-Dimensional)는 Microsoft Analysis Services Provider라고도하는 Microsoft OLAP Provider와 같은 다차원 데이터 공급자와 함께 사용됩니다. MDAC 2.0 이후 주요 기능 향상이 적용되지 않았습니다.
 * **ADOX:** DDL 및 보안용 ADOX(ADO 확장)를 사용하면 데이터베이스, 테이블, 인덱스 또는 저장 프로시저의 정의를 만들고 수정할 수 있습니다. 모든 공급자에서 ADOX를 사용할 수 있습니다. Microsoft Jet OLE DB Provider는 ADOX에 대한 전체 지원을 제공하고, Microsoft SQL Server OLE DB Provider는 제한된 지원을 제공합니다.
@@ -105,10 +113,10 @@ MDAC/WDAC에는 다음 구성 요소가 포함됩니다.
   > [!NOTE]
   > SQL Server 애플리케이션은 2007 Office 시스템 드라이버를 통해 SQL Server 이종 데이터 연결 및 통합 서비스 기능에서 2007 Office 시스템(및 이전) 파일에도 액세스할 수 있습니다. 또한 64비트 SQL Server 애플리케이션은 64비트 Windows에서 32비트 SSIS(SQL Server Integration Services)를 사용하여 32비트 Jet 및 2007 Office 시스템 파일에 액세스할 수 있습니다.
 
-* **MSDADS:** MSDADS(Microsoft OLE DB Provider for Data Shaping)를 사용하여 애플리케이션의 키, 필드 또는 행 집합 간에 계층 관계를 만들 수 있습니다. MDAC 2.1 이후 주요 기능 향상이 없습니다. 이 공급자는 더 이상 사용되지 않습니다. MSDADS 대신 XML을 사용하는 것이 좋습니다.
-* **Oracle ODBC 및 Oracle OLE DB:** Microsoft Oracle ODBC Driver(Oracle ODBC) 및 Microsoft OLE DB Provider for Oracle(Oracle OLE DB)는 Oracle 데이터베이스 서버에 대한 액세스를 제공합니다. 이러한 기능은 OCI(Oracle Call Interface) 버전 7을 사용하여 작성되었으며 Oracle 7에 대한 전체 지원을 제공합니다. 또한 Oracle 7 에뮬레이션을 사용하여 Oracle 8 데이터베이스에 대해 제한된 지원을 제공합니다. Oracle은 OCI 버전 7 호출을 사용하는 애플리케이션을 더 이상 지원하지 않습니다. 이러한 기술은 더 이상 사용되지 않습니다. Oracle 데이터 원본을 사용하는 경우 Oracle에서 제공하는 드라이버 및 공급자로 마이그레이션해야 합니다.
-* **RDS:** RDS(Remote Data Services )는 인터넷 또는 인트라넷을 통해 원격 ADO 레코드 집합 개체에 액세스하는 데 사용할 수 있는 전용 Microsoft 메커니즘입니다. RDS는 더 이상 사용되지 않습니다. MDAC 2.1 이후 RDS에 대한 주요 기능이 향상되지 않았습니다. Microsoft는 다양한 SOAP 기능이 있고 RDS 구성 요소를 대체하는 .NET Framework를 출시했습니다. 모든 RDS 서버 구성 요소는 Windows 7 이후 운영 체제에서 제거됩니다.
-* **JRO:** JRO(Jet Replication Objects)는 더 이상 사용되지 않습니다. JRO는 Jet 데이터베이스(.mdb)를 만들고 압축하고 Jet 복제 관리를 수행하기 위해 Jet( *.mdb) 데이터베이스를 사용하는 ADO 내에서 사용됩니다. MDAC 2.7이 마지막 릴리스가 될 예정입니다. JRO는 64비트 Windows 운영 체제에서 사용할 수 없습니다. JRO은 Microsoft Access 2007 파일 형식(* .accdb)에서 지원되지 않습니다.
+* **MSDADS(Microsoft OLE DB Provider for Data Shaping):** MSDADS를 사용하여 애플리케이션의 키, 필드 또는 행 집합 간에 계층 관계를 만들 수 있습니다. MDAC 2.1 이후 주요 기능 향상이 없습니다. 이 공급자는 더 이상 사용되지 않습니다. MSDADS 대신 XML을 사용하는 것이 좋습니다.
+* **Oracle ODBC 및 Oracle OLE DB:** Microsoft Oracle ODBC Driver(Oracle ODBC) 및 Microsoft OLE DB Provider for Oracle(Oracle OLE DB)는 Oracle 데이터베이스 서버에 대한 액세스를 제공합니다. 이러한 기능은 OCI(Oracle Call Interface) 버전 7을 사용하여 빌드되었으며 Oracle 7에 대한 전체 지원을 제공합니다. 또한 Oracle 7 에뮬레이션을 사용하여 Oracle 8 데이터베이스에 대해 제한된 지원을 제공합니다. Oracle은 OCI 버전 7 호출을 사용하는 애플리케이션을 더 이상 지원하지 않습니다. 이러한 기술은 더 이상 사용되지 않습니다. Oracle 데이터 원본을 사용하는 경우 Oracle에서 제공하는 드라이버 및 공급자로 마이그레이션해야 합니다.
+* **RDS(원격 데이터 서비스):** RDS는 인터넷 또는 인트라넷을 통해 원격 ADO 레코드 집합 개체에 액세스하는 데 사용할 수 있는 전용 Microsoft 메커니즘입니다. RDS는 더 이상 사용되지 않습니다. MDAC 2.1 이후 RDS에 대한 주요 기능이 향상되지 않았습니다. Microsoft는 다양한 SOAP 기능이 있고 RDS 구성 요소를 대체하는 .NET Framework를 출시했습니다. 모든 RDS 서버 구성 요소는 Windows 7 이후 운영 체제에서 제거됩니다.
+* **JRO(Jet 복제 개체):** JRO는 사용되지 않습니다. JRO는 Jet 데이터베이스(.mdb)를 만들고 압축하고 Jet 복제 관리를 수행하기 위해 Jet( *.mdb) 데이터베이스를 사용하는 ADO 내에서 사용됩니다. MDAC 2.7이 마지막 릴리스가 될 예정입니다. JRO는 64비트 Windows 운영 체제에서 사용할 수 없습니다. JRO는 Microsoft Access 2007 파일 형식(* .accdb)에서 지원되지 않습니다.
 * **16비트 ODBC 지원:** 16비트 애플리케이션을 사용하는 경우 32비트 애플리케이션으로 마이그레이션해야 합니다. 16비트 기능은 더 이상 사용되지 않으며 64비트 운영 체제에서 제거됩니다. 자세한 내용은 [기술 자료 문서 896458](https://support.microsoft.com/kb/896458)을 참조하십시오.
 * **MSDAOSP(OLEDB Simple Provider):** OLEDB Simple Provider는 간단한 데이터를 통해 OLE DB 공급자를 빠르게 구축하기 위한 프레임워크를 제공합니다. MSDAOSP는 더 이상 사용되지 않습니다.
 * **ODBC 커서 라이브러리:** ODBC 커서 라이브러리(ODBCCR32)는 제한된 클라이언트 쪽 데이터 커서를 제공합니다. ODBC 커서 라이브러리는 더 이상 사용되지 않습니다. 애플리케이션은 대체 방법으로 서버 쪽 커서 구현을 사용할 수 있습니다.
