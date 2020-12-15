@@ -15,13 +15,13 @@ ms.assetid: 1e43537c-bf67-4db3-9908-3cb45c6fdaa1
 author: MikeRayMSFT
 ms.author: mikeray
 ms.prod_service: table-view-index, sql-database
-monikerRange: =azuresqldb-current||>=sql-server-2016||=sqlallproducts-allversions||>=sql-server-linux-2017||=azuresqldb-mi-current
-ms.openlocfilehash: c8bb42554935076679107d78ee5c2eed0b838797
-ms.sourcegitcommit: e700497f962e4c2274df16d9e651059b42ff1a10
+monikerRange: =azuresqldb-current||>=sql-server-2016||>=sql-server-linux-2017||=azuresqldb-mi-current
+ms.openlocfilehash: 3b54f8e3f4cc2656469aaccabe810a89cb661e5c
+ms.sourcegitcommit: 1a544cf4dd2720b124c3697d1e62ae7741db757c
 ms.translationtype: HT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 08/17/2020
-ms.locfileid: "88470465"
+ms.lasthandoff: 12/14/2020
+ms.locfileid: "97407361"
 ---
 # <a name="perform-index-operations-online"></a>온라인으로 인덱스 작업 수행
 [!INCLUDE [SQL Server Azure SQL Database](../../includes/applies-to-version/sql-asdb.md)]
@@ -82,17 +82,17 @@ ms.locfileid: "88470465"
   
 4.  **인덱스** 폴더를 확장합니다.  
   
-5.  온라인으로 다시 작성할 인덱스를 마우스 오른쪽 단추로 클릭하고 **속성**을 선택합니다.  
+5.  온라인으로 다시 작성할 인덱스를 마우스 오른쪽 단추로 클릭하고 **속성** 을 선택합니다.  
   
-6.  **페이지 선택**아래에서 **옵션**을 선택합니다.  
+6.  **페이지 선택** 아래에서 **옵션** 을 선택합니다.  
   
-7.  **온라인 DML 처리 허용**을 선택한 다음 목록에서 **True** 를 선택합니다.  
+7.  **온라인 DML 처리 허용** 을 선택한 다음 목록에서 **True** 를 선택합니다.  
   
-8.  **확인**을 클릭합니다.  
+8.  **확인** 을 클릭합니다.  
   
-9. 온라인으로 다시 작성할 인덱스를 마우스 오른쪽 단추로 클릭하고 **다시 작성**을 선택합니다.  
+9. 온라인으로 다시 작성할 인덱스를 마우스 오른쪽 단추로 클릭하고 **다시 작성** 을 선택합니다.  
   
-10. **인덱스 다시 작성** 대화 상자에서 **다시 작성할 인덱스** 표에 올바른 인덱스가 있는지 확인한 다음 **확인**을 클릭합니다.  
+10. **인덱스 다시 작성** 대화 상자에서 **다시 작성할 인덱스** 표에 올바른 인덱스가 있는지 확인한 다음 **확인** 을 클릭합니다.  
   
 ##  <a name="using-transact-sql"></a><a name="TsqlProcedure"></a> Transact-SQL 사용  
   

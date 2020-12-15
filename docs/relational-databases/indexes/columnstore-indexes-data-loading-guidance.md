@@ -11,13 +11,13 @@ ms.topic: conceptual
 ms.assetid: b29850b5-5530-498d-8298-c4d4a741cdaf
 author: MikeRayMSFT
 ms.author: mikeray
-monikerRange: '>=aps-pdw-2016||=azuresqldb-current||=azure-sqldw-latest||>=sql-server-2016||=sqlallproducts-allversions||>=sql-server-linux-2017||=azuresqldb-mi-current'
-ms.openlocfilehash: 6b057d193af0cea47e1dc19c58c508d45786b940
-ms.sourcegitcommit: e700497f962e4c2274df16d9e651059b42ff1a10
+monikerRange: '>=aps-pdw-2016||=azuresqldb-current||=azure-sqldw-latest||>=sql-server-2016||>=sql-server-linux-2017||=azuresqldb-mi-current'
+ms.openlocfilehash: 3dd7431a208db3f0da1e2ee53522920319b40af0
+ms.sourcegitcommit: 1a544cf4dd2720b124c3697d1e62ae7741db757c
 ms.translationtype: HT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 08/17/2020
-ms.locfileid: "88482740"
+ms.lasthandoff: 12/14/2020
+ms.locfileid: "97407477"
 ---
 # <a name="columnstore-indexes---data-loading-guidance"></a>Columnstore 인덱스 - 데이터 로드 지침
 
@@ -28,7 +28,7 @@ ms.locfileid: "88482740"
  columnstore 인덱스를 처음 사용하십니까? [Columnstore 인덱스 - 개요](../../relational-databases/indexes/columnstore-indexes-overview.md) 및 [Columnstore 인덱스 아키텍처](../../relational-databases/sql-server-index-design-guide.md#columnstore_index)를 참조하세요.
   
 ## <a name="what-is-bulk-loading"></a>대량 로드란 무엇인가요?
-*대량 로드*는 많은 행이 데이터 저장소에 추가되는 방식을 가리킵니다. 행 일괄 처리로 작동하기 때문에 데이터를 columnstore 인덱스로 이동하는 가장 성능 효과적인 방법입니다. 대량 로드는 최대 용량까지 행 그룹을 채우고 columnstore에 직접 압축합니다. 행 그룹당 102,400개의 최소 행 수를 충족하지 않는, 로드의 끝에 있는 행만 deltastore로 이동합니다.  
+*대량 로드* 는 많은 행이 데이터 저장소에 추가되는 방식을 가리킵니다. 행 일괄 처리로 작동하기 때문에 데이터를 columnstore 인덱스로 이동하는 가장 성능 효과적인 방법입니다. 대량 로드는 최대 용량까지 행 그룹을 채우고 columnstore에 직접 압축합니다. 행 그룹당 102,400개의 최소 행 수를 충족하지 않는, 로드의 끝에 있는 행만 deltastore로 이동합니다.  
 
 대량 로드를 수행하려면 [bcp 유틸리티](../../tools/bcp-utility.md) 또는 [Integration Services](../../integration-services/sql-server-integration-services.md)를 사용하거나 준비 테이블에서 행을 선택합니다.
 
@@ -104,7 +104,7 @@ SELECT <list of columns> FROM <Staging Table>
   
 ## <a name="what-is-trickle-insert"></a>trickle insert란 무엇인가요?
 
-*trickle insert*는 개별 행이 columnstore 인덱스로 이동하는 방식을 가리킵니다. trickle insert는 [INSERT INTO](../../t-sql/statements/insert-transact-sql.md) 문을 사용합니다. trickle insert를 사용할 경우 모든 행이 deltastore로 이동합니다. 이 기능은 행 수가 적은 경우에 유용하며 대규모 로드에는 적합하지 않습니다.
+*trickle insert* 는 개별 행이 columnstore 인덱스로 이동하는 방식을 가리킵니다. trickle insert는 [INSERT INTO](../../t-sql/statements/insert-transact-sql.md) 문을 사용합니다. trickle insert를 사용할 경우 모든 행이 deltastore로 이동합니다. 이 기능은 행 수가 적은 경우에 유용하며 대규모 로드에는 적합하지 않습니다.
   
 ```sql  
 INSERT INTO <table-name> VALUES (<set of values>)  
@@ -130,4 +130,4 @@ ALTER INDEX <index-name> on <table-name> REORGANIZE with (COMPRESS_ALL_ROW_GROUP
   
 ## <a name="next-steps"></a>다음 단계
 
-_techcommunity_에 호스트된 블로그 게시물, 2015년 3월 11일 작성: [Data Loading performance considerations with Clustered Columnstore indexes](https://techcommunity.microsoft.com/t5/DataCAT/Data-Loading-performance-considerations-with-Clustered/ba-p/305223)(클러스터형 columnstore 인덱스를 사용하는 데이터 로드 성능 고려 사항)
+_techcommunity_ 에 호스트된 블로그 게시물, 2015년 3월 11일 작성: [Data Loading performance considerations with Clustered Columnstore indexes](https://techcommunity.microsoft.com/t5/DataCAT/Data-Loading-performance-considerations-with-Clustered/ba-p/305223)(클러스터형 columnstore 인덱스를 사용하는 데이터 로드 성능 고려 사항)

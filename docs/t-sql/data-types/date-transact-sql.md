@@ -22,13 +22,13 @@ helpviewer_keywords:
 ms.assetid: c963e8b4-5a85-4bd0-9d48-3f8da8f6516b
 author: MikeRayMSFT
 ms.author: mikeray
-monikerRange: '>=aps-pdw-2016||=azuresqldb-current||=azure-sqldw-latest||>=sql-server-2016||=sqlallproducts-allversions||>=sql-server-linux-2017||=azuresqldb-mi-current'
-ms.openlocfilehash: 0d6246c3b8318ae2596dfd1f4240692be7941e49
-ms.sourcegitcommit: 2b6760408de3b99193edeccce4b92a2f9ed5bcc6
+monikerRange: '>=aps-pdw-2016||=azuresqldb-current||=azure-sqldw-latest||>=sql-server-2016||>=sql-server-linux-2017||=azuresqldb-mi-current'
+ms.openlocfilehash: 68268a384ab4d89944a3c26322555326948629f2
+ms.sourcegitcommit: 1a544cf4dd2720b124c3697d1e62ae7741db757c
 ms.translationtype: HT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 10/19/2020
-ms.locfileid: "92175953"
+ms.lasthandoff: 12/14/2020
+ms.locfileid: "97408282"
 ---
 # <a name="date-transact-sql"></a>date(Transact-SQL)
 
@@ -50,7 +50,7 @@ ms.locfileid: "92175953"
 |스토리지 크기|3바이트(고정)|  
 |스토리지 구조|1, 3바이트 정수로 날짜를 저장합니다.|  
 |정확도|1일|  
-|기본값|1900-01-01<br /><br /> 이 값은 **time**에서 **datetime2** 또는 **datetimeoffset**으로의 암시적 변환을 위해 추가되는 날짜 부분에 사용됩니다.|  
+|기본값|1900-01-01<br /><br /> 이 값은 **time** 에서 **datetime2** 또는 **datetimeoffset** 으로의 암시적 변환을 위해 추가되는 날짜 부분에 사용됩니다.|  
 |달력|일반 달력|  
 |사용자 정의 초 소수 부분 자릿수|예|  
 |표준 시간대 오프셋 인식 및 유지|예|  
@@ -61,11 +61,11 @@ ms.locfileid: "92175953"
   
 |숫자|Description|  
 |-------------|-----------------|  
-|mdy<br /><br /> [m]m/dd/[yy]yy<br /><br /> [m]m-dd-[yy]yy<br /><br /> [m]m.dd.[yy]yy<br /><br /> myd<br /><br /> mm/[yy]yy/dd<br /><br /> mm-[yy]yy/dd<br /><br /> [m]m.[yy]yy.dd<br /><br /> dmy<br /><br /> dd/[m]m/[yy]yy<br /><br /> dd-[m]m-[yy]yy<br /><br /> dd.[m]m.[yy]yy<br /><br /> dym<br /><br /> dd/[yy]yy/[m]m<br /><br /> dd-[yy]yy-[m]m<br /><br /> dd.[yy]yy.[m]m<br /><br /> ymd<br /><br /> [yy]yy/[m]m/dd<br /><br /> [yy]yy-[m]m-dd<br /><br /> [yy]yy-[m]m-dd|[m]m, dd, [yy]yy는 슬래시(/), 하이픈(-) 또는 마침표(.)로 구분된 문자열에서 월, 일, 연도를 나타냅니다.<br /><br /> 네 자리 또는 두 자리 연도만 지원됩니다. 가능하면 네 자리 연도를 사용하세요. 두 자리 연도를 4자리 연도로 해석할 구분 연도를 0001부터 9999까지의 정수 중에서 지정하려면 [두 자리 연도 구분 서버 구성 옵션 구성](../../database-engine/configure-windows/configure-the-two-digit-year-cutoff-server-configuration-option.md)을 사용합니다.<br /><br /> **참고!** Informatica의 경우, YYYY는 1582에서 9999까지의 범위로 제한됩니다.<br /><br /> 마지막 두 자리와 같거나 작은 두 자리 연도는 구분 연도와 같은 세기 연도입니다. 두 자리 연도가 구분 연도의 마지막 두 자리보다 크면 구분 연도보다 하나 이전의 세기로 해석됩니다. 예를 들어 두 자리 연도 구분이 2049(기본값)이면 두 자리 연도 49는 2049로 해석되고 두 자리 연도 50은 1950으로 해석됩니다.<br /><br /> 기본 날짜 형식은 현재 언어 설정에 따라 결정됩니다. [SET LANGUAGE](../../t-sql/statements/set-language-transact-sql.md) 및 [SET DATEFORMAT](../../t-sql/statements/set-dateformat-transact-sql.md) 문을 사용하여 날짜 형식을 변경할 수 있습니다.<br /><br /> **ydm** 형식은 **date**에 대해 지원되지 않습니다.|  
+|mdy<br /><br /> [m]m/dd/[yy]yy<br /><br /> [m]m-dd-[yy]yy<br /><br /> [m]m.dd.[yy]yy<br /><br /> myd<br /><br /> mm/[yy]yy/dd<br /><br /> mm-[yy]yy/dd<br /><br /> [m]m.[yy]yy.dd<br /><br /> dmy<br /><br /> dd/[m]m/[yy]yy<br /><br /> dd-[m]m-[yy]yy<br /><br /> dd.[m]m.[yy]yy<br /><br /> dym<br /><br /> dd/[yy]yy/[m]m<br /><br /> dd-[yy]yy-[m]m<br /><br /> dd.[yy]yy.[m]m<br /><br /> ymd<br /><br /> [yy]yy/[m]m/dd<br /><br /> [yy]yy-[m]m-dd<br /><br /> [yy]yy-[m]m-dd|[m]m, dd, [yy]yy는 슬래시(/), 하이픈(-) 또는 마침표(.)로 구분된 문자열에서 월, 일, 연도를 나타냅니다.<br /><br /> 네 자리 또는 두 자리 연도만 지원됩니다. 가능하면 네 자리 연도를 사용하세요. 두 자리 연도를 4자리 연도로 해석할 구분 연도를 0001부터 9999까지의 정수 중에서 지정하려면 [두 자리 연도 구분 서버 구성 옵션 구성](../../database-engine/configure-windows/configure-the-two-digit-year-cutoff-server-configuration-option.md)을 사용합니다.<br /><br /> **참고!** Informatica의 경우, YYYY는 1582에서 9999까지의 범위로 제한됩니다.<br /><br /> 마지막 두 자리와 같거나 작은 두 자리 연도는 구분 연도와 같은 세기 연도입니다. 두 자리 연도가 구분 연도의 마지막 두 자리보다 크면 구분 연도보다 하나 이전의 세기로 해석됩니다. 예를 들어 두 자리 연도 구분이 2049(기본값)이면 두 자리 연도 49는 2049로 해석되고 두 자리 연도 50은 1950으로 해석됩니다.<br /><br /> 기본 날짜 형식은 현재 언어 설정에 따라 결정됩니다. [SET LANGUAGE](../../t-sql/statements/set-language-transact-sql.md) 및 [SET DATEFORMAT](../../t-sql/statements/set-dateformat-transact-sql.md) 문을 사용하여 날짜 형식을 변경할 수 있습니다.<br /><br /> **ydm** 형식은 **date** 에 대해 지원되지 않습니다.|  
   
 |알파벳|Description|  
 |------------------|-----------------|  
-|mon [dd][,] yyyy<br /><br /> mon dd[,] [yy]<br /><br /> mon yyyy [dd]<br /><br /> [dd] mon[,] yyyy<br /><br /> dd mon[,][yy]yy<br /><br /> dd [yy]yy mon<br /><br /> [dd] yyyy mon<br /><br /> yyyy mon [dd]<br /><br /> yyyy [dd] mon|**mon**은 현재 언어에서 지정된 월의 전체 이름 또는 약어를 나타냅니다. 쉼표는 선택 사항이며 대문자는 무시됩니다.<br /><br /> 모호성을 피하려면 4자리 연도를 사용하세요.<br /><br /> 일이 생략된 경우 해당 월의 첫째 날이 사용됩니다.|  
+|mon [dd][,] yyyy<br /><br /> mon dd[,] [yy]<br /><br /> mon yyyy [dd]<br /><br /> [dd] mon[,] yyyy<br /><br /> dd mon[,][yy]yy<br /><br /> dd [yy]yy mon<br /><br /> [dd] yyyy mon<br /><br /> yyyy mon [dd]<br /><br /> yyyy [dd] mon|**mon** 은 현재 언어에서 지정된 월의 전체 이름 또는 약어를 나타냅니다. 쉼표는 선택 사항이며 대문자는 무시됩니다.<br /><br /> 모호성을 피하려면 4자리 연도를 사용하세요.<br /><br /> 일이 생략된 경우 해당 월의 첫째 날이 사용됩니다.|  
   
 |ISO 8601|Description|  
 |--------------|----------------|  
@@ -73,7 +73,7 @@ ms.locfileid: "92175953"
   
 |구분되지 않음|Description|  
 |-----------------|-----------------|  
-|[yy]yymmdd<br /><br /> yyyy[mm][dd]|**date** 데이터는 4자리, 6자리 또는 8자리로 지정할 수 있습니다. 6자리 또는 8자리 문자열은 항상 **ymd**로 해석됩니다. 월과 일은 항상 두 자리여야 합니다. 4자리 문자열은 연도로 해석됩니다.|  
+|[yy]yymmdd<br /><br /> yyyy[mm][dd]|**date** 데이터는 4자리, 6자리 또는 8자리로 지정할 수 있습니다. 6자리 또는 8자리 문자열은 항상 **ymd** 로 해석됩니다. 월과 일은 항상 두 자리여야 합니다. 4자리 문자열은 연도로 해석됩니다.|  
   
 |ODBC|Description|  
 |----------|-----------------|  
@@ -84,7 +84,7 @@ ms.locfileid: "92175953"
 |yyyy-mm-ddTZD|XML/SOAP을 사용할 경우 지원됩니다.<br /><br /> TZD는 표준 시간대 지정자(Z나 +hh:mm 또는 -hh:mm)입니다.<br /><br /> - hh:mm은 표준 시간대 오프셋을 나타냅니다. hh는 0에서 14 사이에 속하는 두 자리 숫자로, 표준 시간대 오프셋의 시간(시간)을 나타냅니다.<br />- MM은 0에서 59 사이에 속하는 두 자리 숫자로, 표준 시간대 오프셋의 추가 시간(분)을 나타냅니다.<br />- +(더하기) 또는 -(빼기)는 표준 시간대 오프셋의 필수 기호입니다. 이 기호는 현지 시간을 가져오기 위해 UTC(협정 세계시)에서 표준 시간대 오프셋을 더했는지 또는 뺐는지를 나타냅니다. 올바른 표준 시간대 오프셋 범위는 -14:00에서 +14:00 사이입니다.|  
   
 ## <a name="ansi-and-iso-8601-compliance"></a>ANSI 및 ISO 8601 호환성  
-**날짜**는 일반 달력에 대한 ANSI SQL 표준 정의를 준수합니다. "NOTE 85 - Datetime 데이터 형식을 사용하면 일반 달력 형식의 날짜를 0001–01–01 CE에서 9999-12-31 CE 사이에 속하는 날짜 범위에 저장할 수 있습니다."를 따릅니다.
+**날짜** 는 일반 달력에 대한 ANSI SQL 표준 정의를 준수합니다. "NOTE 85 - Datetime 데이터 형식을 사용하면 일반 달력 형식의 날짜를 0001–01–01 CE에서 9999-12-31 CE 사이에 속하는 날짜 범위에 저장할 수 있습니다."를 따릅니다.
   
 하위 클라이언트에 대해 사용되는 기본 문자열 리터럴 형식은 YYYY-MM-DD로 정의되는 SQL 표준 형식을 따릅니다. 이 형식은 DATE에 대한 ISO 8601 정의와 같습니다.
   
@@ -110,7 +110,7 @@ ms.locfileid: "92175953"
   
 변환이 **time(n)** 에서 일어나는 경우 이 변환이 실패하고, "피연산자 유형 충돌: date는 time과 호환되지 않습니다"라는 오류 메시지 206이 발생합니다.
   
-변환이 **datetime**에서 일어나는 경우 날짜가 복사 됩니다. 다음 코드에서는 `date` 값을 `datetime` 값으로 변환한 결과를 보여 줍니다.
+변환이 **datetime** 에서 일어나는 경우 날짜가 복사 됩니다. 다음 코드에서는 `date` 값을 `datetime` 값으로 변환한 결과를 보여 줍니다.
   
 ```sql
 DECLARE @date date= '12-10-25';  
@@ -126,7 +126,7 @@ SELECT @date AS '@date', @datetime AS '@datetime';
 --(1 row(s) affected)  
 ```  
   
-변환이 **smalldatetime**에서 일어나는 경우 **date** 값이 [smalldatetime](../../t-sql/data-types/smalldatetime-transact-sql.md) 범위 안에 있으면 날짜 구성 요소가 복사되고 시간 구성 요소는 00:00:00.000으로 설정됩니다. **날짜** 값이 **smalldatetime** 값의 범위 밖에 있으면, “data 데이터 형식을 smalldatetime 데이터 형식으로 변환하는 중 값 범위를 벗어났습니다.”라는 오류 메시지 242가 발생하고 **smalldatetime** 값이 NULL로 설정됩니다. 다음 코드에서는 `date` 값을 `smalldatetime` 값으로 변환한 결과를 보여 줍니다.
+변환이 **smalldatetime** 에서 일어나는 경우 **date** 값이 [smalldatetime](../../t-sql/data-types/smalldatetime-transact-sql.md) 범위 안에 있으면 날짜 구성 요소가 복사되고 시간 구성 요소는 00:00:00.000으로 설정됩니다. **날짜** 값이 **smalldatetime** 값의 범위 밖에 있으면, “data 데이터 형식을 smalldatetime 데이터 형식으로 변환하는 중 값 범위를 벗어났습니다.”라는 오류 메시지 242가 발생하고 **smalldatetime** 값이 NULL로 설정됩니다. 다음 코드에서는 `date` 값을 `smalldatetime` 값으로 변환한 결과를 보여 줍니다.
   
 ```sql
 DECLARE @date date= '1912-10-25';  
@@ -179,7 +179,7 @@ SELECT @date AS '@date', @datetime2 AS '@datetime2(3)';
   
 |입력 문자열 리터럴|**date**|  
 |---|---|
-|ODBC DATE|ODBC 문자열 리터럴은 **datetime** 데이터 형식으로 매핑됩니다. ODBC DATETIME 리터럴에서 **date** 형식으로 할당하면 **datetime**과 변환 규칙이 정의하는 형식 간에 암시적 변환이 발생합니다.|  
+|ODBC DATE|ODBC 문자열 리터럴은 **datetime** 데이터 형식으로 매핑됩니다. ODBC DATETIME 리터럴에서 **date** 형식으로 할당하면 **datetime** 과 변환 규칙이 정의하는 형식 간에 암시적 변환이 발생합니다.|  
 |ODBC TIME|이전 ODBC DATE 규칙을 참조하세요.|  
 |ODBC DATETIME|이전 ODBC DATE 규칙을 참조하세요.|  
 |DATE만|중요하지 않음|  
