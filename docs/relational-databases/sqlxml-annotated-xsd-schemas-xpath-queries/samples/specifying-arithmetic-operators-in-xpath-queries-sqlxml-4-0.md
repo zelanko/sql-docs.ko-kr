@@ -16,19 +16,19 @@ ms.assetid: fdfbc87d-759f-4abc-acf5-a21de01f78d3
 author: MightyPen
 ms.author: genemi
 ms.custom: seo-lt-2019
-monikerRange: =azuresqldb-current||>=sql-server-2016||=sqlallproducts-allversions||>=sql-server-linux-2017||=azuresqldb-mi-current
-ms.openlocfilehash: d2115d00f8b51fa16452eba3a41483c499bf9fd0
-ms.sourcegitcommit: da88320c474c1c9124574f90d549c50ee3387b4c
+monikerRange: =azuresqldb-current||>=sql-server-2016||>=sql-server-linux-2017||=azuresqldb-mi-current
+ms.openlocfilehash: af979995dbc3978783396797f0f29c9c89cf84e0
+ms.sourcegitcommit: 1a544cf4dd2720b124c3697d1e62ae7741db757c
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 07/01/2020
-ms.locfileid: "85649363"
+ms.lasthandoff: 12/14/2020
+ms.locfileid: "97413928"
 ---
 # <a name="specifying-arithmetic-operators-in-xpath-queries-sqlxml-40"></a>XPath 쿼리에 산술 연산자 지정(SQLXML 4.0)
 [!INCLUDE [SQL Server Azure SQL Database](../../../includes/applies-to-version/sql-asdb.md)]
   다음 예에서는 XPath 쿼리에 산술 연산자를 지정하는 방법을 보여 줍니다. 이 예의 XPath 쿼리는 SampleSchema1.xml에 포함된 매핑 스키마에 대해 지정되었습니다. 이 샘플 스키마에 대 한 자세한 내용은 [예제 주석 XSD schema For XPath 예제 &#40;SQLXML 4.0&#41;](../../../relational-databases/sqlxml-annotated-xsd-schemas-xpath-queries/samples/sample-annotated-xsd-schema-for-xpath-examples-sqlxml-4-0.md)를 참조 하세요.  
   
-## <a name="examples"></a>예제  
+## <a name="examples"></a>예  
   
 ### <a name="a-specify-the--arithmetic-operator"></a>A. * 산술 연산자 지정  
  이 XPath 쿼리 **\<OrderDetail>** 는 지정 된 조건자를 충족 하는 요소를 반환 합니다.  

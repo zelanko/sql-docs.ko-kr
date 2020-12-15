@@ -20,13 +20,13 @@ helpviewer_keywords:
 ms.assetid: f245a97a-80fc-43fb-a6e4-139420c9a47a
 author: markingmyname
 ms.author: maghan
-monikerRange: =azuresqldb-current||>=sql-server-2016||=sqlallproducts-allversions||>=sql-server-linux-2017||=azuresqldb-mi-current
-ms.openlocfilehash: 1e1e9ec35cc93b27179565131cedebd4226e7b6d
-ms.sourcegitcommit: dd36d1cbe32cd5a65c6638e8f252b0bd8145e165
+monikerRange: =azuresqldb-current||>=sql-server-2016||>=sql-server-linux-2017||=azuresqldb-mi-current
+ms.openlocfilehash: 3383217a22167b5255f748792952949396138fe4
+ms.sourcegitcommit: 1a544cf4dd2720b124c3697d1e62ae7741db757c
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 09/08/2020
-ms.locfileid: "89551503"
+ms.lasthandoff: 12/14/2020
+ms.locfileid: "97413154"
 ---
 # <a name="sysevents-transact-sql"></a>sys.events(Transact-SQL)
 [!INCLUDE [SQL Server SQL Database](../../includes/applies-to-version/sql-asdb.md)]
@@ -35,7 +35,7 @@ ms.locfileid: "89551503"
   
 |열 이름|데이터 형식|Description|  
 |-----------------|---------------|-----------------|  
-|**object_id**|**int**|트리거 또는 이벤트 알림의 ID입니다. 이 값은 **형식과**함께 행을 고유 하 게 식별 합니다.|  
+|**object_id**|**int**|트리거 또는 이벤트 알림의 ID입니다. 이 값은 **형식과** 함께 행을 고유 하 게 식별 합니다.|  
 |**type**|**int**|트리거를 발생시키는 이벤트입니다.|  
 |**type_desc**|**nvarchar(60)**|트리거를 실행시키는 이벤트에 대한 설명입니다.|  
 |**is_trigger_event**|**bit**|1 = 트리거 이벤트<br /><br /> 0 = 알림 이벤트|  

@@ -20,13 +20,13 @@ helpviewer_keywords:
 ms.assetid: ad5496b5-e5c7-4a18-b5a0-3f985d7c4758
 author: markingmyname
 ms.author: maghan
-monikerRange: = azuresqldb-current || = sqlallproducts-allversions
-ms.openlocfilehash: 67c111b15728f92e3a6f0ac8dac830fe32f2f8da
-ms.sourcegitcommit: 783b35f6478006d654491cb52f6edf108acf2482
+monikerRange: = azuresqldb-current
+ms.openlocfilehash: d60c081eecf88868db4541bc79960bf1bbd8723c
+ms.sourcegitcommit: 1a544cf4dd2720b124c3697d1e62ae7741db757c
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 10/09/2020
-ms.locfileid: "91892403"
+ms.lasthandoff: 12/14/2020
+ms.locfileid: "97412964"
 ---
 # <a name="sysevent_log-azure-sql-database"></a>sys.event_log(Azure SQL Database)
 
@@ -42,7 +42,7 @@ ms.locfileid: "91892403"
 |열 이름|데이터 형식|설명|  
 |-----------------|---------------|-----------------|  
 |**database_name**|**sysname**|데이터베이스의 이름입니다. 연결이 실패하고 사용자가 데이터베이스 이름을 지정하지 않은 경우 이 열은 비어 있습니다.|  
-|**start_time**|**datetime2**|집계 간격 시작의 UTC 날짜 및 시간입니다. 집계 이벤트에 대해 시간은 항상 5분의 배수입니다. 예를 들면 다음과 같습니다.<br /><br /> '2011-09-28 16:00:00'<br />'2011-09-28 16:05:00'<br />'2011-09-28 16:10:00'|  
+|**start_time**|**datetime2**|집계 간격 시작의 UTC 날짜 및 시간입니다. 집계 이벤트에 대해 시간은 항상 5분의 배수입니다. 예를 들어:<br /><br /> '2011-09-28 16:00:00'<br />'2011-09-28 16:05:00'<br />'2011-09-28 16:10:00'|  
 |**end_time**|**datetime2**|집계 간격 끝의 UTC 날짜 및 시간입니다. 집계 된 이벤트의 경우 **End_time** 은 항상 같은 행의 해당 **start_time** 보다 정확히 5 분 후입니다. 집계 되지 않은 이벤트의 경우 **start_time** 및 **end_time** 이벤트의 실제 UTC 날짜 및 시간과 같습니다.|  
 |**event_category**|**nvarchar (64)**|이 이벤트를 생성한 높은 수준의 구성 요소입니다.<br /><br /> 가능한 값 목록은 [이벤트 유형](../../relational-databases/system-catalog-views/sys-event-log-azure-sql-database.md#EventTypes) 을 참조 하세요.|  
 |**event_type**|**nvarchar (64)**|이벤트의 유형입니다.<br /><br /> 가능한 값 목록은 [이벤트 유형](../../relational-databases/system-catalog-views/sys-event-log-azure-sql-database.md#EventTypes) 을 참조 하세요.|  
@@ -105,7 +105,7 @@ ms.locfileid: "91892403"
 |`Database1`|`2012-02-05 11:00:00`|`2012-02-05 11:05:00`|`connectivity`|`connection_failed`|`4`|`login_failed_for_user`|`2`|`7`|`Login failed for user.`|`NULL`|  
   
 ### <a name="interval-start_time-and-end_time"></a>간격 start_time 및 end_time  
- 이벤트는 *이벤트가 발생 하거나* **start_time** 된 _후_또는 해당 간격에 대해**end_time** _되기 전에_집계 간격에 포함 됩니다. 예를 들어, 정확히 `2012-10-30 19:25:00.0000000`에 발생하는 이벤트는 아래에 표시된 초 간격에만 표시됩니다.  
+ 이벤트는 *이벤트가 발생 하거나* **start_time** 된 _후_ 또는 해당 간격에 대해 **end_time** _되기 전에_ 집계 간격에 포함 됩니다. 예를 들어, 정확히 `2012-10-30 19:25:00.0000000`에 발생하는 이벤트는 아래에 표시된 초 간격에만 표시됩니다.  
   
 ```
 start_time                    end_time  
@@ -129,7 +129,7 @@ start_time                    end_time
 - 데이터 센터 내에 컴퓨터 오류가 발생 하면 [!INCLUDE[ssSDS](../../includes/sssds-md.md)] 이벤트 테이블에서 소량의 데이터가 누락 될 수 있습니다.  
 - DoSGuard를 통해 IP 주소를 차단하는 경우 해당 IP 주소로부터의 연결 시도 이벤트는 수집할 수 없으며 이 뷰에 나타나지 않습니다.  
   
-## <a name="examples"></a>예제  
+## <a name="examples"></a>예  
   
 ### <a name="simple-examples"></a>간단한 예제
 
@@ -231,4 +231,4 @@ SELECT * FROM CTE2;
 
 ## <a name="see-also"></a>참고 항목
 
- [Azure SQL Database 확장 이벤트](/azure/azure-sql/database/xevent-db-diff-from-svr)  
+ [Azure SQL Database의 확장 이벤트](/azure/azure-sql/database/xevent-db-diff-from-svr)  

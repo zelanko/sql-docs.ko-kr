@@ -16,13 +16,13 @@ ms.assetid: fc148583-dfd3-4efb-a413-f47b150b0975
 author: MightyPen
 ms.author: genemi
 ms.custom: seo-lt-2019
-monikerRange: =azuresqldb-current||>=sql-server-2016||=sqlallproducts-allversions||>=sql-server-linux-2017||=azuresqldb-mi-current
-ms.openlocfilehash: 1dbc6d4d2be27ca0a91a7ed312d26baf19a72551
-ms.sourcegitcommit: da88320c474c1c9124574f90d549c50ee3387b4c
+monikerRange: =azuresqldb-current||>=sql-server-2016||>=sql-server-linux-2017||=azuresqldb-mi-current
+ms.openlocfilehash: c4681c4babe25ec9c683d78e583ddd2c1a4d91fe
+ms.sourcegitcommit: 1a544cf4dd2720b124c3697d1e62ae7741db757c
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 07/01/2020
-ms.locfileid: "85650009"
+ms.lasthandoff: 12/14/2020
+ms.locfileid: "97415321"
 ---
 # <a name="diffgram-examples-sqlxml-40"></a>DiffGram 예(SQLXML 4.0)
 [!INCLUDE [SQL Server Azure SQL Database](../../../includes/applies-to-version/sql-asdb.md)]
@@ -102,7 +102,7 @@ ms.locfileid: "85650009"
 </ROOT>  
 ```  
   
- 블록에 **\<before>** 는 **\<Order>** 요소 (**diffgr: Id = "Order1"**)와 **\<Customer>** 요소 (**Diffgr: id = "Customer1"**)가 있습니다. 이러한 요소는 데이터베이스의 기존 레코드를 나타냅니다. 요소에 해당 하는 **\<DataInstance>** 레코드 ( **diffgr: id**가 같음)가 없습니다. 이는 삭제 작업임을 나타냅니다.  
+ 블록에 **\<before>** 는 **\<Order>** 요소 (**diffgr: Id = "Order1"**)와 **\<Customer>** 요소 (**Diffgr: id = "Customer1"**)가 있습니다. 이러한 요소는 데이터베이스의 기존 레코드를 나타냅니다. 요소에 해당 하는 **\<DataInstance>** 레코드 ( **diffgr: id** 가 같음)가 없습니다. 이는 삭제 작업임을 나타냅니다.  
   
 #### <a name="to-test-the-diffgram"></a>DiffGram을 테스트하려면  
   
@@ -241,7 +241,7 @@ ms.locfileid: "85650009"
 </ROOT>  
 ```  
   
- **\<before>** 블록에는 **\<Customer>** 요소 (**diffgr: Id = "Customer1"**)가 포함 됩니다. 블록에는 **\<DataInstance>** **\<Customer>** **id가**같은 해당 요소가 포함 됩니다. **\<customer>** 의 요소는 **\<NewDataSet>** **Diffgr: haschanges = "modified"** 도 지정 합니다. 이는 업데이트 작업을 나타내며,이에 따라 **Cust** 테이블의 고객 레코드가 업데이트 됩니다. **Diffgr: hasChanges** 특성이 지정 되지 않은 경우 DiffGram 처리 논리는이 요소를 무시 하 고 업데이트를 수행 하지 않습니다.  
+ **\<before>** 블록에는 **\<Customer>** 요소 (**diffgr: Id = "Customer1"**)가 포함 됩니다. 블록에는 **\<DataInstance>** **\<Customer>** **id가** 같은 해당 요소가 포함 됩니다. **\<customer>** 의 요소는 **\<NewDataSet>** **Diffgr: haschanges = "modified"** 도 지정 합니다. 이는 업데이트 작업을 나타내며,이에 따라 **Cust** 테이블의 고객 레코드가 업데이트 됩니다. **Diffgr: hasChanges** 특성이 지정 되지 않은 경우 DiffGram 처리 논리는이 요소를 무시 하 고 업데이트를 수행 하지 않습니다.  
   
 #### <a name="to-test-the-diffgram"></a>DiffGram을 테스트하려면  
   

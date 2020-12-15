@@ -16,13 +16,13 @@ ms.assetid: 8562043b-3e9f-41a3-bb41-92b9f14363c4
 author: MightyPen
 ms.author: genemi
 ms.custom: seo-lt-2019
-monikerRange: =azuresqldb-current||>=sql-server-2016||=sqlallproducts-allversions||>=sql-server-linux-2017||=azuresqldb-mi-current
-ms.openlocfilehash: 6ecdb718dec421703ffe97ec1b36617476b99ed3
-ms.sourcegitcommit: da88320c474c1c9124574f90d549c50ee3387b4c
+monikerRange: =azuresqldb-current||>=sql-server-2016||>=sql-server-linux-2017||=azuresqldb-mi-current
+ms.openlocfilehash: 03b33945a727cd7010800c9d78254733fb9f2d7e
+ms.sourcegitcommit: 1a544cf4dd2720b124c3697d1e62ae7741db757c
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 07/01/2020
-ms.locfileid: "85649714"
+ms.lasthandoff: 12/14/2020
+ms.locfileid: "97414624"
 ---
 # <a name="applying-an-xsl-transformation-sqlxml-managed-classes"></a>XSL 변환 적용(SQLXML 관리되는 클래스)
 [!INCLUDE [SQL Server Azure SQL Database](../../../includes/applies-to-version/sql-asdb.md)]

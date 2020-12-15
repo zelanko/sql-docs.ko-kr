@@ -15,13 +15,13 @@ ms.assetid: 01050a8e-0ccc-4a02-a4eb-b48be5c3f4f3
 author: MightyPen
 ms.author: genemi
 ms.custom: seo-lt-2019
-monikerRange: =azuresqldb-current||>=sql-server-2016||=sqlallproducts-allversions||>=sql-server-linux-2017||=azuresqldb-mi-current
-ms.openlocfilehash: 544a8741557c222577f124014d6a04a9d066add1
-ms.sourcegitcommit: da88320c474c1c9124574f90d549c50ee3387b4c
+monikerRange: =azuresqldb-current||>=sql-server-2016||>=sql-server-linux-2017||=azuresqldb-mi-current
+ms.openlocfilehash: 2e69adfb9fcd75592f25595c70741864ba4493af
+ms.sourcegitcommit: 1a544cf4dd2720b124c3697d1e62ae7741db757c
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 07/01/2020
-ms.locfileid: "85649770"
+ms.lasthandoff: 12/14/2020
+ms.locfileid: "97415127"
 ---
 # <a name="introduction-to-using-xpath-queries-sqlxml-40"></a>XPath 쿼리 사용 소개(SQLXML 4.0)
 [!INCLUDE [SQL Server Azure SQL Database](../../includes/applies-to-version/sql-asdb.md)]
@@ -75,7 +75,7 @@ ms.locfileid: "85649770"
   
 -   **데이터 형식**  
   
-     SQLXML 4.0에는 XPath **문자열**, **숫자**및 **부울** 데이터 형식의 구현에 대 한 제한이 있습니다. 자세한 내용은 [&#40;SQLXML 4.0&#41;XPath 데이터 형식 ](../../relational-databases/sqlxml-annotated-xsd-schemas-xpath-queries/xpath-data-types-sqlxml-4-0.md)을 참조 하세요.  
+     SQLXML 4.0에는 XPath **문자열**, **숫자** 및 **부울** 데이터 형식의 구현에 대 한 제한이 있습니다. 자세한 내용은 [&#40;SQLXML 4.0&#41;XPath 데이터 형식 ](../../relational-databases/sqlxml-annotated-xsd-schemas-xpath-queries/xpath-data-types-sqlxml-4-0.md)을 참조 하세요.  
   
 -   **교차곱 쿼리**  
   
@@ -94,7 +94,7 @@ ms.locfileid: "85649770"
   
 |기능|항목|샘플 쿼리에 대한 링크|  
 |-------------|----------|----------------------------|  
-|Axes|**특성**, **자식**, **부모**및 **자체** 축|[XPath 쿼리에 축 지정 &#40;SQLXML 4.0&#41;](../../relational-databases/sqlxml-annotated-xsd-schemas-xpath-queries/samples/specifying-axes-in-xpath-queries-sqlxml-4-0.md)|  
+|Axes|**특성**, **자식**, **부모** 및 **자체** 축|[XPath 쿼리에 축 지정 &#40;SQLXML 4.0&#41;](../../relational-databases/sqlxml-annotated-xsd-schemas-xpath-queries/samples/specifying-axes-in-xpath-queries-sqlxml-4-0.md)|  
 |연속 및 중첩 조건자를 포함하는 부울 값 조건자||[XPath 쿼리에 산술 연산자 지정 &#40;SQLXML 4.0&#41;](../../relational-databases/sqlxml-annotated-xsd-schemas-xpath-queries/samples/specifying-arithmetic-operators-in-xpath-queries-sqlxml-4-0.md)|  
 |모든 관계 연산자|=,! =, <, \<=, > , >=|[XPath 쿼리에 관계형 연산자 지정 &#40;SQLXML 4.0&#41;](../../relational-databases/sqlxml-annotated-xsd-schemas-xpath-queries/samples/specifying-relational-operators-in-xpath-queries-sqlxml-4-0.md)|  
 |산술 연산자|+, -, *, div|[XPath 쿼리에 산술 연산자 지정 &#40;SQLXML 4.0&#41;](../../relational-databases/sqlxml-annotated-xsd-schemas-xpath-queries/samples/specifying-arithmetic-operators-in-xpath-queries-sqlxml-4-0.md)|  
@@ -108,10 +108,10 @@ ms.locfileid: "85649770"
   
 |기능|항목|  
 |-------------|----------|  
-|Axes|**상위**항목, 상위 항목, **상위**항목, 하위 **항목,** 하위 항목, 하위 항목, **하위 항목 (//)** **, 다음** **-형제**, **네임 스페이스**, **이전**, **이전 형제**|  
+|Axes|**상위** 항목, 상위 항목, **상위** 항목, 하위 **항목,** 하위 항목, 하위 항목, **하위 항목 (//)** **, 다음** **-형제**, **네임 스페이스**, **이전**, **이전 형제**|  
 |숫자 값 조건자||  
 |산술 연산자|mod|  
-|노드 함수|**상위**항목, 상위 항목, **상위**항목, 하위 **항목,** 하위 항목, 하위 항목, **하위 항목 (//)** **, 다음** **-형제**, **네임 스페이스**, **이전**, **이전 형제**|  
+|노드 함수|**상위** 항목, 상위 항목, **상위** 항목, 하위 **항목,** 하위 항목, 하위 항목, **하위 항목 (//)** **, 다음** **-형제**, **네임 스페이스**, **이전**, **이전 형제**|  
 |문자열 함수|**string ()**, **concat ()**, **시작-포함 (**), **contains (**), **substring-before ()**, **substring-after ()**, **substring ()**, **문자열 길이 ()**, **정규화 ()**, **변환 ()**|  
 |부울 함수|**lang ()**|  
 |숫자 함수|**sum ()**, **floor ()**, **천장 ()**, **round ()**|  

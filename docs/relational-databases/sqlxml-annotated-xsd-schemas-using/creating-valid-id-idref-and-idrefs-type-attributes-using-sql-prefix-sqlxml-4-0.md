@@ -23,13 +23,13 @@ author: MightyPen
 ms.author: genemi
 ms.reviewer: ''
 ms.custom: seo-lt-2019
-monikerRange: =azuresqldb-current||>=sql-server-2016||=sqlallproducts-allversions||>=sql-server-linux-2017||=azuresqldb-mi-current
-ms.openlocfilehash: 832607a376c8c08dbcdcff0c70278401a166a7f4
-ms.sourcegitcommit: da88320c474c1c9124574f90d549c50ee3387b4c
+monikerRange: =azuresqldb-current||>=sql-server-2016||>=sql-server-linux-2017||=azuresqldb-mi-current
+ms.openlocfilehash: 51e236b690c8523337b66d19a9b47755a6117f0c
+ms.sourcegitcommit: 1a544cf4dd2720b124c3697d1e62ae7741db757c
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 07/01/2020
-ms.locfileid: "85750815"
+ms.lasthandoff: 12/14/2020
+ms.locfileid: "97415951"
 ---
 # <a name="creating-valid-id-idref-and-idrefs-type-attributes-using-sqlprefix-sqlxml-40"></a>sql:prefix(SQLXML 4.0)를 사용하여 유효한 ID, IDREF 및 IDREFS 유형 특성 만들기
 [!INCLUDE [SQL Server Azure SQL Database](../../includes/applies-to-version/sql-asdb.md)]
@@ -45,13 +45,13 @@ ms.locfileid: "85750815"
   
 -   ID, IDREF 및 IDREFS 값은 명명된 토큰이어야 합니다. 예를 들어 정수 값 101은 ID 값일 수 없습니다.  
   
--   ID, IDREF 및 IDREFS 유형의 특성은 **text**, **ntext**또는 **image** 형식의 열 또는 기타 이진 데이터 형식 (예: **timestamp**)에 매핑할 수 없습니다.  
+-   ID, IDREF 및 IDREFS 유형의 특성은 **text**, **ntext** 또는 **image** 형식의 열 또는 기타 이진 데이터 형식 (예: **timestamp**)에 매핑할 수 없습니다.  
   
  XML 문서에 Id가 여러 개 있는 경우 **sql: prefix** 주석을 사용 하 여 값이 고유한 지 확인 합니다.  
   
  **Sql: prefix** 주석은 XSD fixed 특성과 함께 사용할 수 없습니다.  
   
-## <a name="examples"></a>예제  
+## <a name="examples"></a>예  
  다음 예를 사용하여 작업 예제를 만들려면 특정 요구 사항이 충족되어야 합니다. 자세한 내용은 [SQLXML 예를 실행 하기 위한 요구 사항](../../relational-databases/sqlxml/requirements-for-running-sqlxml-examples.md)을 참조 하세요.  
   
 ### <a name="a-specifying-id-and-idrefs-types"></a>A. ID 및 IDREFS 유형 지정  

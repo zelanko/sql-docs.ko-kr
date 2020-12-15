@@ -17,19 +17,19 @@ ms.assetid: 9928cff5-62ac-42aa-96bf-2e09a1df0bc3
 author: MightyPen
 ms.author: genemi
 ms.custom: seo-lt-2019
-monikerRange: =azuresqldb-current||>=sql-server-2016||=sqlallproducts-allversions||>=sql-server-linux-2017||=azuresqldb-mi-current
-ms.openlocfilehash: 06d56d0537bfda3a2ce44033a30d0f8e429fc0c4
-ms.sourcegitcommit: da88320c474c1c9124574f90d549c50ee3387b4c
+monikerRange: =azuresqldb-current||>=sql-server-2016||>=sql-server-linux-2017||=azuresqldb-mi-current
+ms.openlocfilehash: a5650365557417f34fb0f446afd77ddad97e1e72
+ms.sourcegitcommit: 1a544cf4dd2720b124c3697d1e62ae7741db757c
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 07/01/2020
-ms.locfileid: "85773015"
+ms.lasthandoff: 12/14/2020
+ms.locfileid: "97413616"
 ---
 # <a name="specifying-boolean-operators-in-xpath-queries-sqlxml-40"></a>XPath 쿼리에 부울 연산자 지정(SQLXML 4.0)
 [!INCLUDE [SQL Server Azure SQL Database](../../../includes/applies-to-version/sql-asdb.md)]
   다음 예에서는 XPath 쿼리에 부울 연산자를 지정하는 방법을 보여 줍니다. 이 예의 XPath 쿼리는 SampleSchema1.xml에 포함된 매핑 스키마에 대해 지정되었습니다. 이 샘플 스키마에 대 한 자세한 내용은 [예제 주석 XSD schema For XPath 예제 &#40;SQLXML 4.0&#41;](../../../relational-databases/sqlxml-annotated-xsd-schemas-xpath-queries/samples/sample-annotated-xsd-schema-for-xpath-examples-sqlxml-4-0.md)를 참조 하세요.  
   
-## <a name="examples"></a>예제  
+## <a name="examples"></a>예  
   
 ### <a name="a-specify-the-or-boolean-operator"></a>A. OR 부울 연산자 지정  
  이 XPath 쿼리는 **\<Customer>** **CustomerID** 특성 값이 13 또는 31 인 컨텍스트 노드의 요소 자식을 반환 합니다.  
@@ -44,7 +44,7 @@ ms.locfileid: "85773015"
 /Customer[@CustomerID="13" or @CustomerID="31"]  
 ```  
   
- 조건자에서 `attribute` 는 축이 고 `CustomerID` 는 노드 테스트 ( **CustomerID** **\<attribute>** 해당 **\<attribute>** 노드가 **특성** 축에 대 한 주 노드인지 때문에 CustomerID가 노드인 경우 TRUE)입니다. 조건자는 요소를 필터링 **\<Customer>** 하 고 조건자에 지정 된 조건을 만족 하는 요소만 반환 합니다.  
+ 조건자에서 `attribute` 는 축이 고 `CustomerID` 는 노드 테스트 (  **\<attribute>** 해당 **\<attribute>** 노드가 **특성** 축에 대 한 주 노드인지 때문에 CustomerID가 노드인 경우 TRUE)입니다. 조건자는 요소를 필터링 **\<Customer>** 하 고 조건자에 지정 된 조건을 만족 하는 요소만 반환 합니다.  
   
 ##### <a name="to-test-the-xpath-queries-against-the-mapping-schema"></a>매핑 스키마에 대해 XPath 쿼리를 테스트하려면  
   

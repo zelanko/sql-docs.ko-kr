@@ -15,13 +15,13 @@ ms.assetid: fefa2cc8-2d3c-4336-aeae-ce063a3a8df2
 author: MightyPen
 ms.author: genemi
 ms.custom: seo-lt-2019
-monikerRange: =azuresqldb-current||>=sql-server-2016||=sqlallproducts-allversions||>=sql-server-linux-2017||=azuresqldb-mi-current
-ms.openlocfilehash: a3919201b1e65277d9fc248c48ece00d98c69940
-ms.sourcegitcommit: da88320c474c1c9124574f90d549c50ee3387b4c
+monikerRange: =azuresqldb-current||>=sql-server-2016||>=sql-server-linux-2017||=azuresqldb-mi-current
+ms.openlocfilehash: 8a0e5bd72af4fa0465de72c24640992992ddb78b
+ms.sourcegitcommit: 1a544cf4dd2720b124c3697d1e62ae7741db757c
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 07/01/2020
-ms.locfileid: "85725863"
+ms.lasthandoff: 12/14/2020
+ms.locfileid: "97414031"
 ---
 # <a name="sample-annotated-xsd-schema-for-xpath-examples-sqlxml-40"></a>XPath 예에 대한 주석이 추가된 예제 XSD 스키마(SQLXML 4.0)
 [!INCLUDE [SQL Server Azure SQL Database](../../../includes/applies-to-version/sql-asdb.md)]

@@ -1,6 +1,6 @@
 ---
 description: sys.securable_classes(Transact-SQL)
-title: sys. securable_classes (Transact-sql) | Microsoft Docs
+title: sys.securable_classes (Transact-sql) | Microsoft Docs
 ms.custom: ''
 ms.date: 12/01/2016
 ms.prod: sql
@@ -20,13 +20,13 @@ helpviewer_keywords:
 ms.assetid: ae2bf589-17be-4cad-b5d5-05a34173b32d
 author: VanMSFT
 ms.author: vanto
-monikerRange: '>=aps-pdw-2016||=azuresqldb-current||=azure-sqldw-latest||>=sql-server-2016||=sqlallproducts-allversions||>=sql-server-linux-2017||=azuresqldb-mi-current'
-ms.openlocfilehash: 64fbaf23147c8d383ca59de3e6679e1239d141f2
-ms.sourcegitcommit: e700497f962e4c2274df16d9e651059b42ff1a10
+monikerRange: '>=aps-pdw-2016||=azuresqldb-current||=azure-sqldw-latest||>=sql-server-2016||>=sql-server-linux-2017||=azuresqldb-mi-current'
+ms.openlocfilehash: 0f667e4536a65675c0901ad881baea5bb4dd01ba
+ms.sourcegitcommit: 1a544cf4dd2720b124c3697d1e62ae7741db757c
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 08/17/2020
-ms.locfileid: "88447875"
+ms.lasthandoff: 12/14/2020
+ms.locfileid: "97412133"
 ---
 # <a name="syssecurable_classes-transact-sql"></a>sys.securable_classes(Transact-SQL)
 [!INCLUDE [sql-asdb-asdbmi-asa-pdw](../../includes/applies-to-version/sql-asdb-asdbmi-asa-pdw.md)]
@@ -41,7 +41,7 @@ ms.locfileid: "88447875"
 ## <a name="permissions"></a>사용 권한  
  [!INCLUDE[ssCatViewPerm](../../includes/sscatviewperm-md.md)] 자세한 내용은 [Metadata Visibility Configuration](../../relational-databases/security/metadata-visibility-configuration.md)을 참조하세요.  
   
-## <a name="examples"></a>예제  
+## <a name="examples"></a>예  
  다음 예에서는 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]의 이 인스턴스에서 지원하는 보안 개체 클래스를 반환합니다.  
   
 ```sql  

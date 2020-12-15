@@ -32,13 +32,13 @@ ms.assetid: 970e4553-b41d-4a12-ad50-0ee65d1f305d
 author: MightyPen
 ms.author: genemi
 ms.custom: seo-lt-2019
-monikerRange: =azuresqldb-current||>=sql-server-2016||=sqlallproducts-allversions||>=sql-server-linux-2017||=azuresqldb-mi-current
-ms.openlocfilehash: e9ec14bb6a13b3dc8675c2bf2710bdcf101b80ff
-ms.sourcegitcommit: da88320c474c1c9124574f90d549c50ee3387b4c
+monikerRange: =azuresqldb-current||>=sql-server-2016||>=sql-server-linux-2017||=azuresqldb-mi-current
+ms.openlocfilehash: 181b5a7dd62b5a3cae2ff433f718d8c40b40e6bf
+ms.sourcegitcommit: 1a544cf4dd2720b124c3697d1e62ae7741db757c
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 07/01/2020
-ms.locfileid: "85650831"
+ms.lasthandoff: 12/14/2020
+ms.locfileid: "97415322"
 ---
 # <a name="xml-bulk-load-examples-sqlxml-40"></a>XML 대량 로드 예(SQLXML 4.0)
 [!INCLUDE [SQL Server Azure SQL Database](../../../includes/applies-to-version/sql-asdb.md)]
@@ -227,7 +227,7 @@ End Function
 </ROOT>  
 ```  
   
- 이 예에서는 XML 데이터를 **Cust** 및 **CustOrder**라는 두 테이블에 대량 로드 합니다.  
+ 이 예에서는 XML 데이터를 **Cust** 및 **CustOrder** 라는 두 테이블에 대량 로드 합니다.  
   
 -   Cust (CustomerID, CompanyName, City)  
   
@@ -458,7 +458,7 @@ OrderDetail (OrderID, ProductID)
   
  여기에서 XML 대량 로드는 테이블 간의 기본 키/외래 키 관계를 식별합니다. 대량 로드는 먼저 기본 키가 있는 테이블에 레코드를 삽입한 후 [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)]에서 생성한 ID 값을 외래 키 열이 있는 테이블로 전파합니다. 다음 예의 XML 대량 로드는 다음 순서에 따라 데이터를 테이블에 삽입합니다.  
   
-1.  Product  
+1.  제품  
   
 2.  Ord  
   
@@ -1065,7 +1065,7 @@ set objBL=Nothing
     </xsd:schema>  
     ```  
   
-     **Sql: datatype** 이 열 유형을 **uniqueidentifier**로 식별 하도록 지정 된 경우 대량 로드 작업은 열에 삽입 하기 전에 **CustomerID** 값에서 중괄호 ({및})를 제거 합니다.  
+     **Sql: datatype** 이 열 유형을 **uniqueidentifier** 로 식별 하도록 지정 된 경우 대량 로드 작업은 열에 삽입 하기 전에 **CustomerID** 값에서 중괄호 ({및})를 제거 합니다.  
   
  다음은 동등한 XDR 스키마입니다.  
   

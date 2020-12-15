@@ -16,13 +16,13 @@ helpviewer_keywords:
 ms.assetid: c88d5c5f-9ff0-4f84-b2b6-24c6b90fa15e
 author: markingmyname
 ms.author: maghan
-monikerRange: =azuresqldb-current||=azure-sqldw-latest||>=sql-server-2016||=sqlallproducts-allversions||>=sql-server-linux-2017||=azuresqldb-mi-current
-ms.openlocfilehash: bfcb45457c5b9625bb4f1eda3704c37e9e89cbc8
-ms.sourcegitcommit: e700497f962e4c2274df16d9e651059b42ff1a10
+monikerRange: =azuresqldb-current||=azure-sqldw-latest||>=sql-server-2016||>=sql-server-linux-2017||=azuresqldb-mi-current
+ms.openlocfilehash: b07761711e38e1a8446550408a73e4b1f239b3d7
+ms.sourcegitcommit: 1a544cf4dd2720b124c3697d1e62ae7741db757c
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 08/17/2020
-ms.locfileid: "88498583"
+ms.lasthandoff: 12/14/2020
+ms.locfileid: "97416741"
 ---
 # <a name="calling-methods"></a>메서드 호출
 [!INCLUDE [SQL Server ASDB, ASDBMI, ASDW ](../../../includes/applies-to-version/sql-asdb-asdbmi-asa.md)]
@@ -33,7 +33,7 @@ ms.locfileid: "88498583"
   
  메서드가 성공적으로 실행되었는지 여부를 확인하려면 예외 처리를 사용합니다. 자세한 내용은 [Handling SMO Exceptions](../../../relational-databases/server-management-objects-smo/create-program/handling-smo-exceptions.md)을 참조하세요.  
   
-## <a name="examples"></a>예제  
+## <a name="examples"></a>예  
 제공된 코드 예제를 사용하려면 애플리케이션을 만들 프로그래밍 환경, 프로그래밍 템플릿 및 프로그래밍 언어를 선택해야 합니다. 자세한 내용은  [Visual Studio .net에서 Visual C&#35; SMO 프로젝트 만들기](../../../relational-databases/server-management-objects-smo/how-to-create-a-visual-csharp-smo-project-in-visual-studio-net.md)를 참조 하세요.  
  
   
@@ -69,7 +69,7 @@ db.Create();
  }  
   
 ## <a name="using-an-smo-method-with-a-parameter-in-visual-basic"></a>Visual Basic에서 매개 변수가 있는 SMO 메서드 사용  
- <xref:Microsoft.SqlServer.Management.Smo.Table> 개체에는 <xref:Microsoft.SqlServer.Management.Smo.Table.RebuildIndexes%2A>라는 메서드가 있습니다. 이 메서드에는 **FillFactor**를 지정하는 숫자 매개 변수가 필요합니다.  
+ <xref:Microsoft.SqlServer.Management.Smo.Table> 개체에는 <xref:Microsoft.SqlServer.Management.Smo.Table.RebuildIndexes%2A>라는 메서드가 있습니다. 이 메서드에는 **FillFactor** 를 지정하는 숫자 매개 변수가 필요합니다.  
   
 ```VBNET
 Dim srv As Server  

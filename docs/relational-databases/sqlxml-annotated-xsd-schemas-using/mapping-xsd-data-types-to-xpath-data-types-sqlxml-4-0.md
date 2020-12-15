@@ -20,13 +20,13 @@ author: MightyPen
 ms.author: genemi
 ms.reviewer: ''
 ms.custom: seo-lt-2019
-monikerRange: =azuresqldb-current||>=sql-server-2016||=sqlallproducts-allversions||>=sql-server-linux-2017||=azuresqldb-mi-current
-ms.openlocfilehash: 4bc4f771d2afaefa3e214008c59c6200ebd29549
-ms.sourcegitcommit: da88320c474c1c9124574f90d549c50ee3387b4c
+monikerRange: =azuresqldb-current||>=sql-server-2016||>=sql-server-linux-2017||=azuresqldb-mi-current
+ms.openlocfilehash: 75a7ef44e18566781215bab806caa43860c57cb7
+ms.sourcegitcommit: 1a544cf4dd2720b124c3697d1e62ae7741db757c
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 07/01/2020
-ms.locfileid: "85764931"
+ms.lasthandoff: 12/14/2020
+ms.locfileid: "97415851"
 ---
 # <a name="mapping-xsd-data-types-to-xpath-data-types-sqlxml-40"></a>XSD 데이터 형식을 XPath 데이터 형식에 매핑(SQLXML 4.0)
 [!INCLUDE [SQL Server Azure SQL Database](../../includes/applies-to-version/sql-asdb.md)]
@@ -34,9 +34,9 @@ ms.locfileid: "85764931"
   
  다음 표에서 볼 수 있는 것처럼 노드의 XPath 데이터 형식은 스키마의 XSD 데이터 형식에서 파생됩니다. EmployeeID 노드는 설명을 위해 사용되었습니다.  
   
-|XSD 데이터 형식|XDR 데이터 형식|해당<br /><br /> XPath 데이터 형식|SQL  Server<br /><br /> 변환|  
+|XSD 데이터 형식|XDR 데이터 형식|해당<br /><br /> XPath 데이터 형식|SQL Server<br /><br /> 변환|  
 |-------------------|-------------------|------------------------------------|--------------------------------------------|  
-|**Base64Binary**<br /><br /> **HexBinary**|**없음**<br /><br /> **base64bin**|**해당 없음**|없음<br /><br /> EmployeeID|  
+|**Base64Binary**<br /><br /> **HexBinary**|**없음**<br /><br /> **base64bin**|**해당 사항 없음**|없음<br /><br /> EmployeeID|  
 |**Boolean**|**boolean**|**boolean**|CONVERT(bit, EmployeeID)|  
 |**Decimal, integer, float, byte, short, int, long, float, double, unsignedByte**|**number, int, float,i1, i2, i4, i8,r4, r8ui1, ui2, ui4, ui8**|**number**|CONVERT(float(53), EmployeeID)|  
 |**id, idref, idrefsentity, entities, notation, nmtoken, nmtokens, DateTime, string, AnyURI**|**id, idref, idrefsentity, entities, enumeration, notation, nmtoken, nmtokens, char, dateTime, dateTime.tz, string, uri, uuid**|**string**|CONVERT(nvarchar(4000), EmployeeID, 126)|  

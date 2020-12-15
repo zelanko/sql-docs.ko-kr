@@ -25,13 +25,13 @@ ms.assetid: 0978301b-f068-46b6-82b9-dc555161f52e
 author: MightyPen
 ms.author: genemi
 ms.reviewer: ''
-monikerRange: =azuresqldb-current||>=sql-server-2016||=sqlallproducts-allversions||>=sql-server-linux-2017||=azuresqldb-mi-current
-ms.openlocfilehash: 81b6570f0301d501f1f8899da70e60f04f1c5c44
-ms.sourcegitcommit: da88320c474c1c9124574f90d549c50ee3387b4c
+monikerRange: =azuresqldb-current||>=sql-server-2016||>=sql-server-linux-2017||=azuresqldb-mi-current
+ms.openlocfilehash: 44f7bf464742b1863ebc62a5def3f484932b52c2
+ms.sourcegitcommit: 1a544cf4dd2720b124c3697d1e62ae7741db757c
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 07/01/2020
-ms.locfileid: "85750756"
+ms.lasthandoff: 12/14/2020
+ms.locfileid: "97415831"
 ---
 # <a name="hiding-elements-and-attributes-by-using-sqlhide"></a>sql:hide를 사용하여 요소 및 특성 숨기기
 [!INCLUDE [SQL Server Azure SQL Database](../../includes/applies-to-version/sql-asdb.md)]
@@ -39,11 +39,11 @@ ms.locfileid: "85750756"
   
  **Sql: hide** 주석은 부울 값 (0 = false, 1 = true)을 사용 합니다. 허용되는 값은 0, 1, true 및 false입니다.  
   
-## <a name="examples"></a>예제  
+## <a name="examples"></a>예  
  다음 예를 사용하여 작업 예제를 만들려면 특정 요구 사항이 충족되어야 합니다. 자세한 내용은 [SQLXML 예를 실행 하기 위한 요구 사항](../../relational-databases/sqlxml/requirements-for-running-sqlxml-examples.md)을 참조 하세요.  
   
 ### <a name="a-specifying-sqlhide-on-an-attribute"></a>A. 특성에 sql:hide 지정  
- 이 예의 XSD 스키마는 **\<Person.Contact>** **ContactID**, **FirstName**및 **LastName** 특성이 있는 요소로 구성 됩니다.  
+ 이 예의 XSD 스키마는 **\<Person.Contact>** **ContactID**, **FirstName** 및 **LastName** 특성이 있는 요소로 구성 됩니다.  
   
  **\<Person.Contact>** 요소는 복합 유형 이므로 동일한 이름 (기본 매핑)의 테이블에 매핑됩니다. 요소의 모든 특성은 **\<Person.Contact>** 단순 형식이 며 AdventureWorks 데이터베이스의 Person 테이블에서 이름이 같은 열에 매핑됩니다. 스키마에서는 **ContactID** 특성에 **sql: hide** 주석이 지정 됩니다. 이 스키마에 대해 XPath 쿼리를 지정 하면 **ContactID** 는 XML 문서에 반환 되지 않습니다.  
   

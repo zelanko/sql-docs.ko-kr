@@ -20,13 +20,13 @@ author: MightyPen
 ms.author: genemi
 ms.reviewer: ''
 ms.custom: seo-lt-2019
-monikerRange: =azuresqldb-current||>=sql-server-2016||=sqlallproducts-allversions||>=sql-server-linux-2017||=azuresqldb-mi-current
-ms.openlocfilehash: 700d2cb18bad966e1a2edfd1f11e5fde9ac1b040
-ms.sourcegitcommit: da88320c474c1c9124574f90d549c50ee3387b4c
+monikerRange: =azuresqldb-current||>=sql-server-2016||>=sql-server-linux-2017||=azuresqldb-mi-current
+ms.openlocfilehash: c7237148ffe168299ab20246261969c787a6179a
+ms.sourcegitcommit: 1a544cf4dd2720b124c3697d1e62ae7741db757c
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 07/01/2020
-ms.locfileid: "85750857"
+ms.lasthandoff: 12/14/2020
+ms.locfileid: "97415959"
 ---
 # <a name="creating-cdata-sections-using-sqluse-cdata-sqlxml-40"></a>sql:use-cdata를 사용하여 CDATA 섹션 만들기(SQLXML 4.0)
 
@@ -41,7 +41,7 @@ ms.locfileid: "85750857"
   
  이 주석은 **sql: url 인코딩** 또는 ID, IDREF, IDREFS, NMTOKEN 및 NMTOKENS 특성 유형에 사용할 수 없습니다.  
   
-## <a name="examples"></a>예제  
+## <a name="examples"></a>예  
  다음 예를 사용하여 작업 예제를 만들려면 특정 요구 사항이 충족되어야 합니다. 자세한 내용은 [SQLXML 예를 실행 하기 위한 요구 사항](../../relational-databases/sqlxml/requirements-for-running-sqlxml-examples.md)을 참조 하세요.  
   
 ### <a name="a-specifying-sqluse-cdata-on-an-element"></a>A. 요소에 sql:use-cdata 지정  

@@ -19,13 +19,13 @@ ms.assetid: d17b8278-da58-4576-95b4-7a92772566d8
 author: MightyPen
 ms.author: genemi
 ms.custom: seo-lt-2019
-monikerRange: =azuresqldb-current||>=sql-server-2016||=sqlallproducts-allversions||>=sql-server-linux-2017||=azuresqldb-mi-current
-ms.openlocfilehash: aabd650308ecab085b121bb5ac8f5253b681a92c
-ms.sourcegitcommit: da88320c474c1c9124574f90d549c50ee3387b4c
+monikerRange: =azuresqldb-current||>=sql-server-2016||>=sql-server-linux-2017||=azuresqldb-mi-current
+ms.openlocfilehash: 81bbefa0969cd4408ed0fbb21a2a035ddde5508e
+ms.sourcegitcommit: 1a544cf4dd2720b124c3697d1e62ae7741db757c
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 07/01/2020
-ms.locfileid: "85773032"
+ms.lasthandoff: 12/14/2020
+ms.locfileid: "97413826"
 ---
 # <a name="specifying-axes-in-xpath-queries-sqlxml-40"></a>XPath 쿼리에 축 지정(SQLXML 4.0)
 [!INCLUDE [SQL Server Azure SQL Database](../../../includes/applies-to-version/sql-asdb.md)]
@@ -33,7 +33,7 @@ ms.locfileid: "85773032"
   
  이 예의 XPath 쿼리는 SampleSchema1.xml에 포함된 매핑 스키마에 대해 지정되었습니다. 이 샘플 스키마에 대 한 자세한 내용은 [예제 주석 XSD schema For XPath 예제 &#40;SQLXML 4.0&#41;](../../../relational-databases/sqlxml-annotated-xsd-schemas-xpath-queries/samples/sample-annotated-xsd-schema-for-xpath-examples-sqlxml-4-0.md)를 참조 하세요.  
   
-## <a name="examples"></a>예제  
+## <a name="examples"></a>예  
   
 ### <a name="a-retrieve-child-elements-of-the-context-node"></a>A. 컨텍스트 노드의 자식 요소 검색  
  다음 XPath 쿼리는 **\<Contact>** 컨텍스트 노드의 모든 자식 요소를 선택 합니다.  

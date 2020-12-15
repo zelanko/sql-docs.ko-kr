@@ -1,6 +1,6 @@
 ---
-description: sys. index_resumable_operations (Transact-sql)
-title: sys. index_resumable_operations (Transact-sql) | Microsoft Docs
+description: sys.index_resumable_operations (Transact-sql)
+title: sys.index_resumable_operations (Transact-sql) | Microsoft Docs
 ms.custom: ''
 ms.date: 11/12/2019
 ms.prod: sql
@@ -19,18 +19,18 @@ helpviewer_keywords:
 ms.assetid: ''
 author: markingmyname
 ms.author: maghan
-monikerRange: =azuresqldb-current||>=sql-server-2017||=sqlallproducts-allversions||>=sql-server-linux-2017||=azuresqldb-mi-current
-ms.openlocfilehash: d6878ccf5d267c265ca7bd90120c1bfc227f16ed
-ms.sourcegitcommit: dd36d1cbe32cd5a65c6638e8f252b0bd8145e165
+monikerRange: =azuresqldb-current||>=sql-server-2017||>=sql-server-linux-2017||=azuresqldb-mi-current
+ms.openlocfilehash: 97f0c09e20da61cce1904b17ae830e5ab24abb98
+ms.sourcegitcommit: 1a544cf4dd2720b124c3697d1e62ae7741db757c
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 09/08/2020
-ms.locfileid: "89546773"
+ms.lasthandoff: 12/14/2020
+ms.locfileid: "97412734"
 ---
-# <a name="sysindex_resumable_operations-transact-sql"></a>sys. index_resumable_operations (Transact-sql)
+# <a name="sysindex_resumable_operations-transact-sql"></a>sys.index_resumable_operations (Transact-sql)
 
 [!INCLUDE[sqlserver2017-asdb](../../includes/applies-to-version/sqlserver2017-asdb.md)]
-**index_resumable_operations** 는 다시 시작 가능한 인덱스 다시 작성 또는 만들기에 대 한 현재 실행 상태를 모니터링 하 고 확인 하는 시스템 뷰입니다.  
+**sys.index_resumable_operations** 는 다시 시작 가능한 인덱스 다시 작성 또는 만들기에 대 한 현재 실행 상태를 모니터링 하 고 확인 하는 시스템 뷰입니다.  
 **적용 대상**: SQL Server (2017 이상) 및 Azure SQL Database
   
 |열 이름|데이터 형식|Description|  
@@ -41,7 +41,7 @@ ms.locfileid: "89546773"
 |**sql_text**|**nvarchar(max)**|DDL T-sql 문 텍스트|
 |**last_max_dop**|**smallint**|마지막으로 사용한 MAX_DOP (기본값 = 0)|
 |**partition_number**|**int**|소유 인덱스 또는 힙 내의 파티션 번호입니다. 분할 되지 않은 테이블 및 인덱스의 경우 또는 모든 파티션이 다시 작성 되는 경우이 열의 값은 NULL입니다.|
-|**상태**|**tinyint**|다시 시작 가능한 인덱스의 작동 상태:<br /><br />0 = 실행 중<br /><br />1 = 일시 중지|
+|**state**|**tinyint**|다시 시작 가능한 인덱스의 작동 상태:<br /><br />0 = 실행 중<br /><br />1 = 일시 중지|
 |**state_desc**|**nvarchar(60)**|다시 시작 가능한 인덱스의 작동 상태 (실행 중 또는 일시 중지 됨)에 대 한 설명입니다.|  
 |**start_time**|**datetime**|인덱스 작업 시작 시간 (null 허용 안 함)|
 |**last_pause_time**|**datatime**| 인덱스 작업 마지막 일시 중지 시간 (nullable)입니다. 작업이 실행 중이 고 일시 중지 되지 않은 경우 NULL입니다.|
@@ -53,7 +53,7 @@ ms.locfileid: "89546773"
 
 [!INCLUDE[ssCatViewPerm](../../includes/sscatviewperm-md.md)] 자세한 내용은 [Metadata Visibility Configuration](../../relational-databases/security/metadata-visibility-configuration.md)을 참조하세요.  
 
-## <a name="example"></a>예제
+## <a name="example"></a>예
 
  일시 중지 상태의 다시 시작 가능한 인덱스 생성 또는 다시 작성 작업을 모두 나열 합니다.
 

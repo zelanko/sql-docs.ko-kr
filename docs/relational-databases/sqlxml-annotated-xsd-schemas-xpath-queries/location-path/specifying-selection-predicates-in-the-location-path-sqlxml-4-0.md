@@ -18,13 +18,13 @@ ms.assetid: dbef4cf4-a89b-4d7e-b72b-4062f7b29a80
 author: MightyPen
 ms.author: genemi
 ms.custom: seo-lt-2019
-monikerRange: =azuresqldb-current||>=sql-server-2016||=sqlallproducts-allversions||>=sql-server-linux-2017||=azuresqldb-mi-current
-ms.openlocfilehash: 17f6ca29f9a91315eef11c39a884bf773cad6daa
-ms.sourcegitcommit: da88320c474c1c9124574f90d549c50ee3387b4c
+monikerRange: =azuresqldb-current||>=sql-server-2016||>=sql-server-linux-2017||=azuresqldb-mi-current
+ms.openlocfilehash: 8c02a33e76fd478e77e2b5a743b5cc6e1d32f1ff
+ms.sourcegitcommit: 1a544cf4dd2720b124c3697d1e62ae7741db757c
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 07/01/2020
-ms.locfileid: "85649779"
+ms.lasthandoff: 12/14/2020
+ms.locfileid: "97414536"
 ---
 # <a name="specifying-selection-predicates-in-the-location-path-sqlxml-40"></a>위치 경로에서 선택 조건자 지정(SQLXML 4.0)
 [!INCLUDE [SQL Server Azure SQL Database](../../../includes/applies-to-version/sql-asdb.md)]
@@ -42,7 +42,7 @@ ms.locfileid: "85649779"
 /child::Customer[attribute::CustomerID="ALFKI"]  
 ```  
   
- 이 XPath 쿼리에서 `child` 및 `attribute`는 축 이름이고, `Customer`는 노드 테스트 (가 `Customer` **\<element node>** **\<element>** 축의 주 노드 유형 이므로가 인 경우 TRUE `child` )입니다. `attribute::CustomerID="ALFKI"`는 조건자입니다. 조건자에서는 `attribute` 축이 고 `CustomerID` 는 노드 테스트 ( **CustomerID** **\<attribute>** 는 **특성** 축의 주 노드 유형 이므로 CustomerID가 컨텍스트 노드의 특성인 경우 TRUE)입니다.  
+ 이 XPath 쿼리에서 `child` 및 `attribute`는 축 이름이고, `Customer` 는 노드 테스트 (가 `Customer` **\<element node>** **\<element>** 축의 주 노드 유형 이므로가 인 경우 TRUE `child` )입니다. `attribute::CustomerID="ALFKI"`는 조건자입니다. 조건자에서는 `attribute` 축이 고 `CustomerID` 는 노드 테스트 (  **\<attribute>** 는 **특성** 축의 주 노드 유형 이므로 CustomerID가 컨텍스트 노드의 특성인 경우 TRUE)입니다.  
   
  축약형 구문을 사용하여 XPath 쿼리를 다음과 같이 지정할 수도 있습니다.  
   
@@ -74,7 +74,7 @@ child::Customer[child::ContactName]
   
  이 예에서는이 **\<ContactName>** XML 문서에서 요소의 자식 요소 라고 가정 합니다 .이 요소는 **\<Customer>** 주석이 추가 된 XSD 스키마에서 *요소 중심의 매핑* 이라고 합니다.  
   
- 이 XPath 식에서 `child`는 축 이름이고, `Customer`는 노드 테스트 (가 `Customer` **\<element>** **\<element>** 축에 대 한 주 노드 유형 이므로가 노드인 경우 TRUE `child` )입니다. `child::ContactName`는 조건자입니다. 조건자에서는 `child` 축이 고 `ContactName` 는 노드 테스트 ( `ContactName` 가 노드인 경우 TRUE)입니다 **\<element>** .  
+ 이 XPath 식에서 `child`는 축 이름이고, `Customer` 는 노드 테스트 (가 `Customer` **\<element>** **\<element>** 축에 대 한 주 노드 유형 이므로가 노드인 경우 TRUE `child` )입니다. `child::ContactName`는 조건자입니다. 조건자에서는 `child` 축이 고 `ContactName` 는 노드 테스트 ( `ContactName` 가 노드인 경우 TRUE)입니다 **\<element>** .  
   
  이 식은 **\<Customer>** 요소 자식이 있는 컨텍스트 노드의 요소 자식만 반환 합니다 **\<ContactName>** .  
   
@@ -93,7 +93,7 @@ child::Customer[not(child::ContactName)]
   
  이 예에서는이 **\<ContactName>** **\<Customer>** XML 문서에서 요소의 자식 요소이 고 ContactName 필드가 데이터베이스에 필요 하지 않다고 가정 합니다.  
   
- 이 예에서 `child`는 축이고, `Customer`노드 테스트 (가 노드인 경우 TRUE `Customer` )입니다 \<element> . `not(child::ContactName)`는 조건자입니다. 조건자에서는 `child` 축이 고 `ContactName` 는 노드 테스트 ( `ContactName` 가 노드인 경우 TRUE)입니다 \<element> .  
+ 이 예에서 `child`는 축이고, `Customer` 노드 테스트 (가 노드인 경우 TRUE `Customer` )입니다 \<element> . `not(child::ContactName)`는 조건자입니다. 조건자에서는 `child` 축이 고 `ContactName` 는 노드 테스트 ( `ContactName` 가 노드인 경우 TRUE)입니다 \<element> .  
   
  축약형 구문을 사용하여 XPath 쿼리를 다음과 같이 지정할 수도 있습니다.  
   
@@ -102,7 +102,7 @@ Customer[not(ContactName)]
 ```  
   
 ## <a name="selection-predicate-example-5"></a>선택 조건자: 예제 5  
- 다음 XPath 식은 CustomerID 특성이 있는 모든 자식을 현재 컨텍스트 노드에서 선택 합니다 **\<Customer>** . **CustomerID**  
+ 다음 XPath 식은 CustomerID 특성이 있는 모든 자식을 현재 컨텍스트 노드에서 선택 합니다 **\<Customer>** .   
   
 ```  
 child::Customer[attribute::CustomerID]  
@@ -126,7 +126,7 @@ Customer[Order/@OrderDate=Order/@ShipDate]
  이 쿼리는 `Order`가 `OrderDate` 중 하나의 `ShipDate`와 동일한 `Order`가 있는 모든 고객을 선택합니다.  
   
 ## <a name="see-also"></a>참고 항목  
- [SQLXML 4.0&#41;&#40;주석이 추가 된 XSD 스키마 소개](../../../relational-databases/sqlxml/annotated-xsd-schemas/introduction-to-annotated-xsd-schemas-sqlxml-4-0.md)   
+ [SQLXML 4.0&#41;&#40;주석이 추가 된 XSD 스키마 소개 ](../../../relational-databases/sqlxml/annotated-xsd-schemas/introduction-to-annotated-xsd-schemas-sqlxml-4-0.md)   
  [클라이언트 쪽 XML 서식 지정 &#40;SQLXML 4.0&#41;](../../../relational-databases/sqlxml/formatting/client-side-xml-formatting-sqlxml-4-0.md)  
   
   

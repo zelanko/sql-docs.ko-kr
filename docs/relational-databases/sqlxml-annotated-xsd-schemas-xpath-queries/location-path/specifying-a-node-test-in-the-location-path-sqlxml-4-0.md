@@ -16,17 +16,17 @@ ms.assetid: f46c30bf-1e24-4435-9ac2-f8ba43a8ff94
 author: MightyPen
 ms.author: genemi
 ms.custom: seo-lt-2019
-monikerRange: =azuresqldb-current||>=sql-server-2016||=sqlallproducts-allversions||>=sql-server-linux-2017||=azuresqldb-mi-current
-ms.openlocfilehash: e0b7934b73589f71e5152bff33b2080c6eeb353e
-ms.sourcegitcommit: da88320c474c1c9124574f90d549c50ee3387b4c
+monikerRange: =azuresqldb-current||>=sql-server-2016||>=sql-server-linux-2017||=azuresqldb-mi-current
+ms.openlocfilehash: b8fdee8bdc7f3fbc3281ecab7682efdc8378bbdf
+ms.sourcegitcommit: 1a544cf4dd2720b124c3697d1e62ae7741db757c
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 07/01/2020
-ms.locfileid: "85649747"
+ms.lasthandoff: 12/14/2020
+ms.locfileid: "97414864"
 ---
 # <a name="specifying-a-node-test-in-the-location-path-sqlxml-40"></a>위치 경로에 노드 테스트 지정(SQLXML 4.0)
 [!INCLUDE [SQL Server Azure SQL Database](../../../includes/applies-to-version/sql-asdb.md)]
-  노드 테스트는 위치 단계에서 선택되는 노드 유형을 지정합니다. 모든 축 (**자식**, **부모**, **특성**또는 **자체**)에는 주 노드 유형이 있습니다. **특성** 축의 경우 주 노드 형식은 **\<attribute>** 입니다. **부모**, **자식**및 **자체** 축의 경우 주 노드 형식은 **\<element>** 입니다.  
+  노드 테스트는 위치 단계에서 선택되는 노드 유형을 지정합니다. 모든 축 (**자식**, **부모**, **특성** 또는 **자체**)에는 주 노드 유형이 있습니다. **특성** 축의 경우 주 노드 형식은 **\<attribute>** 입니다. **부모**, **자식** 및 **자체** 축의 경우 주 노드 형식은 **\<element>** 입니다.  
   
 > [!NOTE]  
 >  와일드카드 노드 테스트 *(예: `child::*`)는 지원되지 않습니다.  
@@ -39,7 +39,7 @@ ms.locfileid: "85649747"
 ## <a name="node-test-example-2"></a>노드 테스트: 예 2  
  위치 경로는 `attribute::CustomerID` 컨텍스트 노드의 **CustomerID** 특성을 선택 합니다.  
   
- 이 예에서는 `attribute`가 축이고 `CustomerID`가 노드 테스트입니다. **특성** 축의 주 노드 형식은 **\<attribute>** 입니다. 따라서 **CustomerID** 가 노드인 경우 노드 테스트는 TRUE입니다 **\<attribute>** . 컨텍스트 노드에 **CustomerID**가 없으면 빈 노드 집합이 반환 됩니다.  
+ 이 예에서는 `attribute`가 축이고 `CustomerID`가 노드 테스트입니다. **특성** 축의 주 노드 형식은 **\<attribute>** 입니다. 따라서 **CustomerID** 가 노드인 경우 노드 테스트는 TRUE입니다 **\<attribute>** . 컨텍스트 노드에 **CustomerID** 가 없으면 빈 노드 집합이 반환 됩니다.  
   
 > [!NOTE]  
 >  이 XPath 구현에서 위치 단계가 **\<element>** 스키마에 선언 되지 않은 또는 유형을 참조 하는 경우 **\<attribute>** 오류가 발생 합니다. 이 동작은 빈 노드 집합을 반환하는 MSXML에서의 XPath 구현과는 다릅니다.  

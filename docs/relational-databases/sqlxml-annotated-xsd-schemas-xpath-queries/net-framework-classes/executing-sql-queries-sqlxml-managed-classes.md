@@ -17,13 +17,13 @@ ms.assetid: a561ae83-a8b6-4b9b-a819-9b86839546b4
 author: MightyPen
 ms.author: genemi
 ms.custom: seo-lt-2019
-monikerRange: =azuresqldb-current||>=sql-server-2016||=sqlallproducts-allversions||>=sql-server-linux-2017||=azuresqldb-mi-current
-ms.openlocfilehash: dcb35f21b2208d2d5f924102a48ba1364eb9c154
-ms.sourcegitcommit: da88320c474c1c9124574f90d549c50ee3387b4c
+monikerRange: =azuresqldb-current||>=sql-server-2016||>=sql-server-linux-2017||=azuresqldb-mi-current
+ms.openlocfilehash: 9a20d41c1002f9e17ef10dbb86feaef100ce293f
+ms.sourcegitcommit: 1a544cf4dd2720b124c3697d1e62ae7741db757c
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 07/01/2020
-ms.locfileid: "85649550"
+ms.lasthandoff: 12/14/2020
+ms.locfileid: "97414302"
 ---
 # <a name="executing-sql-queries-sqlxml-managed-classes"></a>SQL 쿼리 실행(SQLXML 관리되는 클래스)
 [!INCLUDE [SQL Server Azure SQL Database](../../../includes/applies-to-version/sql-asdb.md)]
@@ -35,7 +35,7 @@ ms.locfileid: "85649550"
   
  이 예에서는 간단한 SQL 쿼리를 실행하여 성이 매개 변수로 전달된 직원의 이름, 성 및 생년월일을 검색합니다. 매개 변수 (*LastName*)를 지정할 때 Value 속성만 설정 됩니다. Name 속성은 설정 되지 않습니다 .이 쿼리에서 매개 변수는 위치 이며 이름이 필요 하지 않기 때문입니다.  
   
- SqlXmlCommand 개체의 CommandType 속성은 기본적으로 **Sql**입니다. 명시적으로 설정되지 않았습니다.  
+ SqlXmlCommand 개체의 CommandType 속성은 기본적으로 **Sql** 입니다. 명시적으로 설정되지 않았습니다.  
   
 > [!NOTE]  
 >  코드에서 연결 문자열에 Microsoft [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] 인스턴스의 이름을 지정해야 합니다.  

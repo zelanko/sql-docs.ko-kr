@@ -29,13 +29,13 @@ author: MightyPen
 ms.author: genemi
 ms.reviewer: ''
 ms.custom: seo-lt-2019
-monikerRange: =azuresqldb-current||>=sql-server-2016||=sqlallproducts-allversions||>=sql-server-linux-2017||=azuresqldb-mi-current
-ms.openlocfilehash: 534de76c28dea79ba52b28983fe56daf666760f5
-ms.sourcegitcommit: da88320c474c1c9124574f90d549c50ee3387b4c
+monikerRange: =azuresqldb-current||>=sql-server-2016||>=sql-server-linux-2017||=azuresqldb-mi-current
+ms.openlocfilehash: 988a15524f4d0fdbdd3174ba1017dfd85562e3a6
+ms.sourcegitcommit: 1a544cf4dd2720b124c3697d1e62ae7741db757c
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 07/01/2020
-ms.locfileid: "85750760"
+ms.lasthandoff: 12/14/2020
+ms.locfileid: "97415960"
 ---
 # <a name="custom-xsd-mappings-to-tablescolumns-sqlxml"></a>테이블/열에 대 한 사용자 지정 XSD 매핑 (SQLXML)
 [!INCLUDE [SQL Server Azure SQL Database](../../includes/applies-to-version/sql-asdb.md)]
@@ -57,7 +57,7 @@ ms.locfileid: "85750760"
 ## <a name="sql-field"></a>sql-field  
  **Sql 필드** 주석은 요소나 특성을 데이터베이스 열에 매핑합니다. **Sql: field** 주석이 추가 되어 스키마의 XML 노드를 데이터베이스 열에 매핑합니다. 빈 콘텐츠 요소에는 **sql: field** 를 지정할 수 없습니다.  
   
-## <a name="examples"></a>예제  
+## <a name="examples"></a>예  
  다음 예를 사용하여 작업 예제를 만들려면 특정 요구 사항이 충족되어야 합니다. 자세한 내용은 [SQLXML 예를 실행 하기 위한 요구 사항](../../relational-databases/sqlxml/requirements-for-running-sqlxml-examples.md)을 참조 하세요.  
   
 ### <a name="a-specifying-the-sqlrelation-and-sqlfield-annotations"></a>A. sql:relation 및 sql:field 주석 지정  

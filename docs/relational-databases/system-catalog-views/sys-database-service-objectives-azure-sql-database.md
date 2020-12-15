@@ -16,13 +16,13 @@ ms.assetid: cecd8c31-06c0-4aa7-85d3-ac590e6874fa
 author: markingmyname
 ms.author: maghan
 ms.custom: seo-dt-2019
-monikerRange: = azuresqldb-current || = azure-sqldw-latest || = sqlallproducts-allversions
-ms.openlocfilehash: fd660dcd2e4e79515065bfc9d221afbb3fe2806e
-ms.sourcegitcommit: 76ab3b57718341c6057613c9bd38cf82fb17786e
+monikerRange: = azuresqldb-current || = azure-sqldw-latest
+ms.openlocfilehash: ca0b8567115c2a9209efb61185aad4fa4d05fa24
+ms.sourcegitcommit: 1a544cf4dd2720b124c3697d1e62ae7741db757c
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 10/14/2020
-ms.locfileid: "92059349"
+ms.lasthandoff: 12/14/2020
+ms.locfileid: "97412989"
 ---
 # <a name="sysdatabase_service_objectives-azure-sql-database"></a>sys.database_service_objectives(Azure SQL Database)
 [!INCLUDE [asdb-asdbmi-asa](../../includes/applies-to-version/asdb-asdbmi-asa.md)]
@@ -38,9 +38,9 @@ Azure SQL database 또는 Azure Synapse Analytics의 버전 (서비스 계층), 
   
 |열 이름|데이터 형식|Description|  
 |-----------------|---------------|-----------------|  
-|database_id|Int|Azure SQL Database server의 인스턴스 내에서 고유한 데이터베이스 ID입니다. 조인 가능를 사용 하 여 [transact-sql&#41;&#40;](../../relational-databases/system-catalog-views/sys-databases-transact-sql.md).|  
+|database_id|int|Azure SQL Database server의 인스턴스 내에서 고유한 데이터베이스 ID입니다. 조인 가능를 사용 하 여 [transact-sql&#41;&#40;](../../relational-databases/system-catalog-views/sys-databases-transact-sql.md).|  
 |edition|sysname|데이터베이스 또는 데이터 웨어하우스의 서비스 계층: **Basic**, **Standard**, **Premium** 또는 **data warehouse**.|  
-|service_objective|sysname|데이터베이스의 가격 책정 계층입니다. 데이터베이스가 탄력적 풀에 있는 경우 **ElasticPool**를 반환 합니다.<br /><br /> **기본** 계층에서 **basic**을 반환 합니다.<br /><br /> **표준 서비스 계층의 단일 데이터베이스** 는 S0, S1, S2, S3, S4, S6, S7, S9 또는 s 12 중 하나를 반환 합니다.<br /><br /> **프리미엄 계층의 단일 데이터베이스** 는 P1, P2, P4, P6, P11 또는 P15을 반환 합니다.<br /><br /> **Azure Synapse Analytics** 는 DW30000c를 통해 DW100를 반환 합니다.<br /><br /> 자세한 내용은 [단일 데이터베이스](/azure/sql-database/sql-database-dtu-resource-limits-single-databases/), [탄력적 풀](/azure/sql-database/sql-database-dtu-resource-limits-elastic-pools/), [데이터 웨어하우스](/azure/sql-data-warehouse/what-is-a-data-warehouse-unit-dwu-cdwu/) 를 참조 하세요.|  
+|service_objective|sysname|데이터베이스의 가격 책정 계층입니다. 데이터베이스가 탄력적 풀에 있는 경우 **ElasticPool** 를 반환 합니다.<br /><br /> **기본** 계층에서 **basic** 을 반환 합니다.<br /><br /> **표준 서비스 계층의 단일 데이터베이스** 는 S0, S1, S2, S3, S4, S6, S7, S9 또는 s 12 중 하나를 반환 합니다.<br /><br /> **프리미엄 계층의 단일 데이터베이스** 는 P1, P2, P4, P6, P11 또는 P15을 반환 합니다.<br /><br /> **Azure Synapse Analytics** 는 DW30000c를 통해 DW100를 반환 합니다.<br /><br /> 자세한 내용은 [단일 데이터베이스](/azure/sql-database/sql-database-dtu-resource-limits-single-databases/), [탄력적 풀](/azure/sql-database/sql-database-dtu-resource-limits-elastic-pools/), [데이터 웨어하우스](/azure/sql-data-warehouse/what-is-a-data-warehouse-unit-dwu-cdwu/) 를 참조 하세요.|  
 |elastic_pool_name|sysname|데이터베이스가 속한 [탄력적 풀](/azure/azure-sql/database/elastic-pool-overview) 의 이름입니다. 데이터베이스가 단일 데이터베이스 또는 데이터 웨어하우스 인 경우 **NULL** 을 반환 합니다.|  
   
 ## <a name="permissions"></a>사용 권한  
