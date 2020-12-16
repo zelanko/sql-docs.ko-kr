@@ -13,13 +13,13 @@ helpviewer_keywords:
 ms.assetid: e9582244-7d00-45f4-be16-020a65c76a5e
 author: MashaMSFT
 ms.author: mathoma
-monikerRange: =azuresqldb-mi-current||>=sql-server-2016||=sqlallproducts-allversions
-ms.openlocfilehash: c3a493417a4c45b43e6b4b6c4c95f20fb4e4fac2
-ms.sourcegitcommit: e700497f962e4c2274df16d9e651059b42ff1a10
+monikerRange: =azuresqldb-mi-current||>=sql-server-2016
+ms.openlocfilehash: adc29367fae4cd4e32a4cced3684f16771765c18
+ms.sourcegitcommit: 1a544cf4dd2720b124c3697d1e62ae7741db757c
 ms.translationtype: HT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 08/17/2020
-ms.locfileid: "88380209"
+ms.lasthandoff: 12/14/2020
+ms.locfileid: "97432831"
 ---
 # <a name="refresh-data-in-replication-monitor"></a>복제 모니터에서 데이터 새로 고침
 [!INCLUDE[sql-asdbmi](../../../includes/applies-to-version/sql-asdbmi.md)]
@@ -29,7 +29,7 @@ ms.locfileid: "88380209"
   
 ### <a name="to-set-refresh-options-for-replication-monitor"></a>복제 모니터에 대한 새로 고침 옵션을 설정하려면
   
-1.  복제 모니터의 왼쪽 창에서 게시자를 마우스 오른쪽 단추로 클릭한 다음 **게시자 설정**을 클릭합니다.  
+1.  복제 모니터의 왼쪽 창에서 게시자를 마우스 오른쪽 단추로 클릭한 다음 **게시자 설정** 을 클릭합니다.  
   
 2.  **게시자 설정** 대화 상자에서 **자동 새로 고침** 및 **새로 고침 빈도** 옵션을 설정합니다. **자동 새로 고침** 설정은 복제 모니터의 주 창에 영향을 줍니다. **새로 고침 빈도** 설정은 자동으로 새로 고치도록 설정된 세부 정보 창에도 영향을 줍니다. 이러한 설정을 변경하면 변경 후 열린 세부 정보 창에만 영향을 줍니다.  
   
@@ -43,9 +43,9 @@ ms.locfileid: "88380209"
   
     2.  **모든 구독** 탭을 클릭합니다.  
   
-    3.  구독을 마우스 오른쪽 단추로 클릭한 다음 **자세히 보기**를 클릭합니다.  
+    3.  구독을 마우스 오른쪽 단추로 클릭한 다음 **자세히 보기** 를 클릭합니다.  
   
-2.  **구독\<SubscriptionName>** 세부 정보 창에서 **동작**을 클릭한 다음, **자동 새로 고침**을 클릭합니다. 새로 고침 빈도는 **게시자 설정** 대화 상자의 **새로 고침 빈도** 설정에 의해 결정됩니다.  
+2.  **구독\<SubscriptionName>** 세부 정보 창에서 **동작** 을 클릭한 다음, **자동 새로 고침** 을 클릭합니다. 새로 고침 빈도는 **게시자 설정** 대화 상자의 **새로 고침 빈도** 설정에 의해 결정됩니다.  
   
 ## <a name="see-also"></a>참고 항목  
  [복제 모니터링](../../../relational-databases/replication/monitor/monitoring-replication.md)  

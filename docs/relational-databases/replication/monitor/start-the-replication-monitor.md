@@ -13,13 +13,13 @@ helpviewer_keywords:
 ms.assetid: e037bd27-cc87-4ee9-9e5f-83f6d717cfa4
 author: MashaMSFT
 ms.author: mathoma
-monikerRange: =azuresqldb-mi-current||>=sql-server-2016||=sqlallproducts-allversions
-ms.openlocfilehash: 193cb6d82b39c645dc467f7c6dd805d638c8eb37
-ms.sourcegitcommit: e700497f962e4c2274df16d9e651059b42ff1a10
+monikerRange: =azuresqldb-mi-current||>=sql-server-2016
+ms.openlocfilehash: d88c974bbf6d8f18271f4ea6f68b95e5c0506203
+ms.sourcegitcommit: 1a544cf4dd2720b124c3697d1e62ae7741db757c
 ms.translationtype: HT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 08/17/2020
-ms.locfileid: "88380099"
+ms.lasthandoff: 12/14/2020
+ms.locfileid: "97432591"
 ---
 # <a name="start-the-replication-monitor"></a>복제 모니터 시작
 [!INCLUDE[sql-asdbmi](../../../includes/applies-to-version/sql-asdbmi.md)]
@@ -29,7 +29,7 @@ ms.locfileid: "88380099"
   
 1.  [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] 에서 [!INCLUDE[ssManStudioFull](../../../includes/ssmanstudiofull-md.md)]인스턴스에 연결한 다음 서버 노드를 확장합니다.  
   
-2.  **복제** 폴더 또는 하위 폴더를 마우스 오른쪽 단추로 클릭한 다음 **복제 모니터 시작**을 클릭합니다.  
+2.  **복제** 폴더 또는 하위 폴더를 마우스 오른쪽 단추로 클릭한 다음 **복제 모니터 시작** 을 클릭합니다.  
 
 ### <a name="to-start-replication-monitor-from-the-command-prompt"></a>명령 프롬프트에서 복제 모니터를 시작하려면  
   

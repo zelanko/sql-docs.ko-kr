@@ -17,13 +17,13 @@ helpviewer_keywords:
 ms.assetid: f7df51ef-c088-4efc-b247-f91fb2c6ff32
 author: MashaMSFT
 ms.author: mathoma
-monikerRange: =azuresqldb-mi-current||>=sql-server-2016||=sqlallproducts-allversions
-ms.openlocfilehash: b11e768bac90b70174c736ae828c39a9a78b3bb9
-ms.sourcegitcommit: e700497f962e4c2274df16d9e651059b42ff1a10
+monikerRange: =azuresqldb-mi-current||>=sql-server-2016
+ms.openlocfilehash: 49a92b0caf261b812e83a4a888930c8533d7cdf9
+ms.sourcegitcommit: 1a544cf4dd2720b124c3697d1e62ae7741db757c
 ms.translationtype: HT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 08/17/2020
-ms.locfileid: "88470177"
+ms.lasthandoff: 12/14/2020
+ms.locfileid: "97432201"
 ---
 # <a name="change-publication-and-article-properties"></a>게시 및 아티클 속성 변경
 [!INCLUDE[sql-asdbmi](../../../includes/applies-to-version/sql-asdbmi.md)]
@@ -74,7 +74,7 @@ ms.locfileid: "88470177"
 |조인 필터 또는 논리적 레코드를 추가합니다.|**sp_addmergefilter**|모든 매개 변수|새 스냅샷<br /><br /> 구독을 다시 초기화합니다.|  
 |조인 필터 또는 논리적 레코드를 삭제합니다.|**sp_dropmergefilter**|모든 매개 변수|새 스냅샷<br /><br /> 구독을 다시 초기화합니다.|  
 |조인 필터 또는 논리적 레코드를 변경합니다.|**sp_changemergefilter**|`@property`<br /><br /> `@value`|새 스냅샷<br /><br /> 구독을 다시 초기화합니다.|  
-|매개 변수가 있는 필터의 사용을 해제합니다. 매개 변수가 있는 필터 사용 시 특별한 조치는 필요하지 않습니다.|**sp_changemergepublication**|**false** 에 대한 **false**값|새 스냅샷<br /><br /> 구독을 다시 초기화합니다.|  
+|매개 변수가 있는 필터의 사용을 해제합니다. 매개 변수가 있는 필터 사용 시 특별한 조치는 필요하지 않습니다.|**sp_changemergepublication**|**false** 에 대한 **false** 값|새 스냅샷<br /><br /> 구독을 다시 초기화합니다.|  
 |사전 계산 파티션 사용을 설정 또는 해제합니다.|**sp_changemergepublication**|**use_partition_groups**|새 스냅샷|  
 |[!INCLUDE[msCoName](../../../includes/msconame-md.md)] [!INCLUDE[ssVersion2000](../../../includes/ssversion2000-md.md)] 파티션 최적화를 설정 또는 해제합니다.|**sp_changemergepublication**|**keep_partition_changes**|구독을 다시 초기화합니다.|  
 |구독자 파티션 유효성 검사를 설정 또는 해제합니다.|**sp_changemergepublication**|**validate_subscriber_info**|구독을 다시 초기화합니다.|  
@@ -90,9 +90,9 @@ ms.locfileid: "88470177"
 |이전에 게시되지 않은 열 필터를 포함합니다.|**sp_mergearticlecolumn**|`@column`<br /><br /> `@operation`|새 스냅샷<br /><br /> 구독을 다시 초기화합니다.|  
 |행 필터를 추가, 삭제 또는 변경합니다.|**sp_changemergearticle**|**subset_filterclause**|새 스냅샷<br /><br /> 구독을 다시 초기화합니다.<br /><br /> 매개 변수가 있는 필터를 추가, 삭제 또는 변경할 경우 다시 초기화를 진행하는 동안에는 보류 중인 구독자의 변경 내용을 게시자로 업로드할 수 없습니다. 보류 중인 변경 내용을 업로드하려면 필터를 변경하기 전에 모든 구독을 동기화하세요.<br /><br /> 아티클이 조인 필터에 포함되지 않은 경우 아티클을 삭제하고 이를 다른 행 필터로 다시 추가할 수 있습니다. 이 경우 전체 구독을 다시 초기화할 필요가 없습니다. 아티클을 추가 및 삭제하는 방법에 대한 자세한 내용은 [기존 게시에 대한 아티클 추가 및 삭제](../../../relational-databases/replication/publish/add-articles-to-and-drop-articles-from-existing-publications.md)를 참조하세요.|  
 |스키마 옵션을 변경합니다.|**sp_changemergearticle**|**schema_option**|새 스냅샷|  
-|열 수준 추적을 행 수준 추적을 변경합니다. 행 수준 추적에서 열 수준 추적으로 변경할 때는 특별한 조치가 필요하지 않습니다.|**sp_changemergearticle**|**false** 에 대한 **false**값|새 스냅샷<br /><br /> 구독을 다시 초기화합니다.|  
+|열 수준 추적을 행 수준 추적을 변경합니다. 행 수준 추적에서 열 수준 추적으로 변경할 때는 특별한 조치가 필요하지 않습니다.|**sp_changemergearticle**|**false** 에 대한 **false** 값|새 스냅샷<br /><br /> 구독을 다시 초기화합니다.|  
 |구독자에서 작성된 문이 게시자에 적용되기 전에 사용 권한을 확인할지 여부를 변경합니다.|**sp_changemergearticle**|**check_permissions**|새 스냅샷<br /><br /> 구독을 다시 초기화합니다.|  
-|다운로드 전용 구독을 설정 또는 해제합니다. 다른 업로드 옵션 간에 변경할 때는 특별한 조치가 필요하지 않습니다.|**sp_changemergearticle**|**2** 에 대한 값 **2**를 변경|구독을 다시 초기화합니다.|  
+|다운로드 전용 구독을 설정 또는 해제합니다. 다른 업로드 옵션 간에 변경할 때는 특별한 조치가 필요하지 않습니다.|**sp_changemergearticle**|**2** 에 대한 값 **2** 를 변경|구독을 다시 초기화합니다.|  
 |대상 테이블 소유자를 변경합니다.|**sp_changemergearticle**|**destination_owner**|새 스냅샷<br /><br /> 구독을 다시 초기화합니다.|  
   
 ## <a name="see-also"></a>참고 항목  
