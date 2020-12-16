@@ -13,13 +13,13 @@ helpviewer_keywords:
 ms.assetid: 8519aa2f-f09c-4c1c-96b5-abc24811e60c
 author: VanMSFT
 ms.author: vanto
-monikerRange: '>=aps-pdw-2016||=azuresqldb-current||=azure-sqldw-latest||>=sql-server-2016||=sqlallproducts-allversions||>=sql-server-linux-2017||=azuresqldb-mi-current'
-ms.openlocfilehash: 0da744d41c2135038e14a8aef71e088df7ba851d
-ms.sourcegitcommit: 75f767c7b1ead31f33a870fddab6bef52f99906b
+monikerRange: '>=aps-pdw-2016||=azuresqldb-current||=azure-sqldw-latest||>=sql-server-2016||>=sql-server-linux-2017||=azuresqldb-mi-current'
+ms.openlocfilehash: 9120af44ce0f1cb8447b34e47a9ce54b9ba17367
+ms.sourcegitcommit: 1a544cf4dd2720b124c3697d1e62ae7741db757c
 ms.translationtype: HT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 07/28/2020
-ms.locfileid: "87332652"
+ms.lasthandoff: 12/14/2020
+ms.locfileid: "97431896"
 ---
 # <a name="sql-server-certificates-and-asymmetric-keys"></a>SQL Server 인증서 및 비대칭 키
 [!INCLUDE[SQL Server Azure SQL Database Synapse Analytics PDW ](../../includes/applies-to-version/sql-asdb-asdbmi-asa-pdw.md)]
@@ -71,7 +71,7 @@ ms.locfileid: "87332652"
 | 도구 | 목적 |
 | ---- | ------- |
 |[New-SelfSignedCertificate](/powershell/module/pkiclient/new-selfsignedcertificate)|자체 서명된 인증서를 만듭니다.|  
-|[makecert](/windows/desktop/SecCrypto/makecert)|인증서를 만듭니다. **New-SelfSignedCertificate**가 대신 사용됩니다.|  
+|[makecert](/windows/desktop/SecCrypto/makecert)|인증서를 만듭니다. **New-SelfSignedCertificate** 가 대신 사용됩니다.|  
 |[sn](/dotnet/framework/tools/sn-exe-strong-name-tool)|대칭 키에 대한 강력한 이름을 만듭니다.|  
   
 ## <a name="related-tasks"></a>관련 작업  
