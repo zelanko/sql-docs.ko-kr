@@ -13,13 +13,13 @@ helpviewer_keywords:
 ms.assetid: 85c623ca-4656-4d70-a9db-ee4d897cd214
 author: stevestein
 ms.author: sstein
-monikerRange: =azuresqldb-current||>=sql-server-2016||=sqlallproducts-allversions||>=sql-server-linux-2017||=azuresqldb-mi-current
-ms.openlocfilehash: 5f636cfad5425ec24a41984ddf3b650439b5c13a
-ms.sourcegitcommit: 331b8495e4ab37266945c81ff5b93d250bdaa6da
+monikerRange: =azuresqldb-current||>=sql-server-2016||>=sql-server-linux-2017||=azuresqldb-mi-current
+ms.openlocfilehash: edc3d1c699000e72dd963fc7b115edb72904329a
+ms.sourcegitcommit: 1a544cf4dd2720b124c3697d1e62ae7741db757c
 ms.translationtype: HT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 08/20/2020
-ms.locfileid: "88646367"
+ms.lasthandoff: 12/14/2020
+ms.locfileid: "97484505"
 ---
 # <a name="create-primary-keys"></a>기본 키 만들기
 
@@ -48,9 +48,9 @@ ms.locfileid: "88646367"
 
 ### <a name="to-create-a-primary-key"></a>기본 키를 만들려면
 
-1. 개체 탐색기에서 UNIQUE 제약 조건을 추가하려는 테이블을 마우스 오른쪽 단추로 클릭하고 **디자인**을 선택합니다.
-2. **테이블 디자이너**에서 기본 키로 정의하려는 데이터베이스 열의 행 선택기를 클릭합니다. 여러 열을 선택하려면 Ctrl 키를 누른 상태로 다른 열의 행 선택기를 클릭합니다.
-3. 열의 행 선택기를 마우스 오른쪽 단추로 클릭하고 **기본 키 설정**을 선택합니다.
+1. 개체 탐색기에서 UNIQUE 제약 조건을 추가하려는 테이블을 마우스 오른쪽 단추로 클릭하고 **디자인** 을 선택합니다.
+2. **테이블 디자이너** 에서 기본 키로 정의하려는 데이터베이스 열의 행 선택기를 클릭합니다. 여러 열을 선택하려면 Ctrl 키를 누른 상태로 다른 열의 행 선택기를 클릭합니다.
+3. 열의 행 선택기를 마우스 오른쪽 단추로 클릭하고 **기본 키 설정** 을 선택합니다.
 
 > [!CAUTION]
 > 기본 키를 다시 정의하려면 기존의 기본 키에 대한 관계를 모두 삭제한 다음 기본 키를 새로 만들어야 합니다. 이 과정에서 기존의 관계가 자동으로 삭제된다는 경고 메시지가 나타납니다.

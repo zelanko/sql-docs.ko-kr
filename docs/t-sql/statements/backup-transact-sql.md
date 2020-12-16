@@ -46,13 +46,13 @@ helpviewer_keywords:
 ms.assetid: 89a4658a-62f1-4289-8982-f072229720a1
 author: MikeRayMSFT
 ms.author: mikeray
-monikerRange: '>=sql-server-2016||>=sql-server-linux-2017||=azuresqldb-mi-current||>=aps-pdw-2016||=sqlallproducts-allversions'
-ms.openlocfilehash: e4763f4c4f28ad4787785b4e5838155fb9a05f10
-ms.sourcegitcommit: d35d0901296580bfceda6e0ab2e14cf2b7e99a0f
+monikerRange: '>=sql-server-2016||>=sql-server-linux-2017||=azuresqldb-mi-current||>=aps-pdw-2016'
+ms.openlocfilehash: 194aecd7e601c95047c9601a99d28626909b9be5
+ms.sourcegitcommit: 3bd188e652102f3703812af53ba877cce94b44a9
 ms.translationtype: HT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 10/24/2020
-ms.locfileid: "92496871"
+ms.lasthandoff: 12/15/2020
+ms.locfileid: "97489443"
 ---
 # <a name="backup-transact-sql"></a>BACKUP(Transact-SQL)
 
@@ -64,7 +64,7 @@ SQL 데이터베이스를 백업합니다.
 
 [!INCLUDE[select-product](../../includes/select-product.md)]
 
-::: moniker range=">=sql-server-2016||>=sql-server-linux-2017||=sqlallproducts-allversions"
+::: moniker range=">=sql-server-2016||>=sql-server-linux-2017"
 
 :::row:::
     :::column:::
@@ -74,7 +74,7 @@ SQL 데이터베이스를 백업합니다.
         [SQL Managed Instance](backup-transact-sql.md?view=azuresqldb-mi-current)
     :::column-end:::
     :::column:::
-        [Analytics Platform<br />System(PDW)](backup-transact-sql.md?view=aps-pdw-2016)
+        [Analytics Platform<br />System(PDW)](backup-transact-sql.md?view=aps-pdw-2016&preserve-view=true)
     :::column-end:::
 :::row-end:::
 
@@ -205,12 +205,12 @@ LOG
 > [!NOTE]
 > 일반적인 로그 백업 후 `WITH NO_TRUNCATE` 또는 `COPY_ONLY`를 지정하지 않으면 일부 트랜잭션 로그 레코드가 비활성 상태가 됩니다. 하나 이상의 가상 로그 파일 내의 모든 레코드가 비활성 상태가 된 후에는 로그가 잘립니다. 일상적인 로그 백업 후 로그가 잘리지 않을 경우 로그 잘림이 지연되는 것일 수 있습니다. 자세한 내용은 [로그 잘림을 지연시킬 수 있는 요소](../../relational-databases/logs/the-transaction-log-sql-server.md#FactorsThatDelayTruncation)를 참조하세요.
 
-{ _database\_name_ |  **@** _database\_name\_var_ } 트랜잭션 로그, 일부 데이터베이스, 전체 데이터베이스가 백업되는 데이터베이스입니다. 변수( **@** _database\_name\_var_ )로 제공된 경우, 이 이름은 문자열 상수( **@** _database\_name\_var_ **=** _database name_ )나 **ntext** 또는 **text** 데이터 형식을 제외한 문자열 데이터 형식의 변수로 지정할 수 있습니다.
+{ _database\_name_ |  **@** _database\_name\_var_ } 트랜잭션 로그, 일부 데이터베이스, 전체 데이터베이스가 백업되는 데이터베이스입니다. 변수( **@** _database\_name\_var_)로 제공된 경우, 이 이름은 문자열 상수( **@** _database\_name\_var_ **=** _database name_)나 **ntext** 또는 **text** 데이터 형식을 제외한 문자열 데이터 형식의 변수로 지정할 수 있습니다.
 
 > [!NOTE]
 > 데이터베이스 미러링 파트너 관계의 미러 데이터베이스는 백업할 수 없습니다.
 
-\<file_or_filegroup> [ **,** ... *n* ] BACKUP DATABASE와 함께만 사용되며, 파일 백업에 포함시킬 데이터베이스 파일 또는 파일 그룹을 지정하거나 부분 백업에 포함시킬 읽기 전용 파일 또는 파일 그룹을 지정합니다.
+\<file_or_filegroup> [ **,** ...*n* ] BACKUP DATABASE와 함께만 사용되며, 파일 백업에 포함시킬 데이터베이스 파일 또는 파일 그룹을 지정하거나 부분 백업에 포함시킬 읽기 전용 파일 또는 파일 그룹을 지정합니다.
 
 FILE **=** { *logical_file_name* | **@** _logical\_file\_name\_var_ } 파일의 논리적 이름이거나 해당 값이 백업에 포함할 파일의 논리적 이름과 같은 변수입니다.
 
@@ -223,7 +223,7 @@ FILEGROUP **=** { _logical\_filegroup\_name_ |  **@** _logical\_filegroup\_name\
 
 자세한 내용은 [전체 파일 백업](../../relational-databases/backup-restore/full-file-backups-sql-server.md) 및 [파일 및 파일 그룹 백업](../../relational-databases/backup-restore/back-up-files-and-filegroups-sql-server.md)을 참조하세요.
 
-READ_WRITE_FILEGROUPS [ **,** FILEGROUP = { _logical\_filegroup\_name_ |  **@** _logical\_filegroup\_name\_var_ } [ **,** ... _n_ ] ] 부분 백업을 지정합니다. 부분 백업은 주 파일 그룹, 모든 읽기/쓰기 보조 파일 그룹, 지정된 모든 읽기 전용 파일이나 파일 그룹과 같은 데이터베이스에 있는 모든 읽기/쓰기 파일을 포함합니다.
+READ_WRITE_FILEGROUPS [ **,** FILEGROUP = { _logical\_filegroup\_name_ |  **@** _logical\_filegroup\_name\_var_ } [ **,** ..._n_ ] ] 부분 백업을 지정합니다. 부분 백업은 주 파일 그룹, 모든 읽기/쓰기 보조 파일 그룹, 지정된 모든 읽기 전용 파일이나 파일 그룹과 같은 데이터베이스에 있는 모든 읽기/쓰기 파일을 포함합니다.
 
 READ_WRITE_FILEGROUPS 부분 백업 시 모든 읽기/쓰기 파일 그룹을 백업하도록 지정합니다. 데이터베이스가 읽기 전용일 경우 READ_WRITE_FILEGROUPS에는 주 파일 그룹만 포함됩니다.
 
@@ -236,13 +236,13 @@ FILEGROUP = { *logical_filegroup_name* |  **@** _logical\_filegroup\_name\_var_ 
 
 부분 백업에 대한 자세한 내용은 [부분 백업](../../relational-databases/backup-restore/partial-backups-sql-server.md)을 참조하세요.
 
-TO \<backup_device> [ **,** ... *n* ] 함께 제공되는 [백업 디바이스](../../relational-databases/backup-restore/backup-devices-sql-server.md) 세트가 미러되지 않은 미디어 세트이거나 하나 이상의 MIRROR TO 절이 선언된 경우 미러된 미디어 세트 내의 미러 중 첫 번째임을 나타냅니다.
+TO \<backup_device> [ **,** ...*n* ] 함께 제공되는 [백업 디바이스](../../relational-databases/backup-restore/backup-devices-sql-server.md) 세트가 미러되지 않은 미디어 세트이거나 하나 이상의 MIRROR TO 절이 선언된 경우 미러된 미디어 세트 내의 미러 중 첫 번째임을 나타냅니다.
 
 \<backup_device>
 
 백업 작업에 사용할 논리적 백업 디바이스나 물리적 백업 디바이스를 지정합니다.
 
-{ *logical_device_name* \| **@** _logical\_device\_name\_var_ } **적용 대상:** SQL Server 데이터베이스를 백업할 백업 디바이스의 논리적 이름입니다. 논리적 이름은 식별자 규칙을 따라야 합니다. 변수(@ *logical_device_name_var* )로 제공한 경우 백업 디바이스 이름은 문자열 상수(@ _logical\_device\_name\_var_ **=** 논리적 백업 디바이스 이름)나 **ntext** 또는 **text** 데이터 형식을 제외한 문자열 데이터 형식의 변수로 지정할 수 있습니다.
+{ *logical_device_name* \| **@** _logical\_device\_name\_var_ } **적용 대상:** SQL Server 데이터베이스를 백업할 백업 디바이스의 논리적 이름입니다. 논리적 이름은 식별자 규칙을 따라야 합니다. 변수(@*logical_device_name_var*)로 제공한 경우 백업 디바이스 이름은 문자열 상수(@_logical\_device\_name\_var_ **=** 논리적 백업 디바이스 이름)나 **ntext** 또는 **text** 데이터 형식을 제외한 문자열 데이터 형식의 변수로 지정할 수 있습니다.
 
 { DISK \| TAPE \| URL} **=** { **'** _physical\_device\_name_ **'** \| **@** _physical\_device\_name\_var_ \| 'NUL' } **적용 대상:** DISK, TAPE 및 URL이 SQL Server에 적용됩니다.
 디스크 파일이나 테이프 디바이스 또는 Microsoft Azure Blob Storage 서비스를 지정합니다. URL 형식은 Microsoft Azure Storage 서비스에 대한 백업을 만드는 데 사용됩니다. 자세한 내용과 예제는 [Microsoft Azure Blob Storage 서비스로 SQL Server 백업 및 복원](../../relational-databases/backup-restore/sql-server-backup-and-restore-with-microsoft-azure-blob-storage-service.md)을 참조하세요. 자습서는 [자습서: Microsoft Azure Blob Storage Service에 SQL Server 백업 및 복원](~/relational-databases/tutorial-sql-server-backup-and-restore-to-azure-blob-storage-service.md)을 참조하세요.
@@ -252,7 +252,7 @@ TO \<backup_device> [ **,** ... *n* ] 함께 제공되는 [백업 디바이스](
 > [!IMPORTANT]
 > [!INCLUDE[ssSQL11](../../includes/sssql11-md.md)] SP1 CU2부터 [!INCLUDE[ssSQL14](../../includes/sssql14-md.md)]까지는 URL로 백업할 때 단일 디바이스로만 백업할 수 있습니다. URL로 백업할 때 여러 디바이스에 백업하려면 [!INCLUDE[ssSQL15](../../includes/sssql15-md.md)] 이상을 사용해야 하고 SAS(공유 액세스 서명) 토큰을 사용해야 합니다. 공유 액세스 서명 만들기에 대한 자세한 내용은 [URL에 대한 SQL Server 백업](../../relational-databases/backup-restore/sql-server-backup-to-url.md) 및 [Powershell로 Azure Storage의 SAS(공유 액세스 서명) 토큰이 있는 SQL 자격 증명 만들기 간소화](/archive/blogs/sqlcat/simplifying-creation-of-sql-credentials-with-shared-access-signature-sas-tokens-on-azure-storage-with-powershell)를 참조하세요.
 
-**URL 적용 대상** : [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]([!INCLUDE[ssSQL11](../../includes/sssql11-md.md)] SP1 CU2 이상).
+**URL 적용 대상**: [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]([!INCLUDE[ssSQL11](../../includes/sssql11-md.md)] SP1 CU2 이상).
 
 BACKUP 문에 지정되기 전에는 디스크 디바이스가 없어도 됩니다. 물리적 디바이스가 존재하고 BACKUP 문에서 INIT 옵션이 지정되지 않은 경우에는 백업이 디바이스에 추가됩니다.
 
@@ -266,7 +266,7 @@ BACKUP 문에 지정되기 전에는 디스크 디바이스가 없어도 됩니�
 
 *n* 쉼표로 구분된 목록에 백업 디바이스를 최대 64개까지 지정할 수 있음을 나타내는 자리 표시자입니다.
 
-MIRROR TO \<backup_device> [ **,** ... *n* ] TO 절에 지정된 각각의 백업 디바이스를 미러할 최대 3개의 보조 백업 디바이스 세트를 지정합니다. MIRROR TO 절에는 TO 절에서와 같은 유형과 개수의 백업 디바이스를 지정해야 합니다. MIRROR TO 절은 최대 3개까지 포함시킬 수 있습니다.
+MIRROR TO \<backup_device> [ **,** ...*n* ] TO 절에 지정된 각각의 백업 디바이스를 미러할 최대 3개의 보조 백업 디바이스 세트를 지정합니다. MIRROR TO 절에는 TO 절에서와 같은 유형과 개수의 백업 디바이스를 지정해야 합니다. MIRROR TO 절은 최대 3개까지 포함시킬 수 있습니다.
 
 이 옵션은 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]의 엔터프라이즈 버전에서만 사용할 수 있습니다.
 
@@ -285,10 +285,10 @@ MIRROR TO \<backup_device> [ **,** ... *n* ] TO 절에 지정된 각각의 백�
 
 백업 작업에 사용할 옵션을 지정합니다.
 
-CREDENTIAL **적용 대상** : [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]([!INCLUDE[ssSQL11](../../includes/sssql11-md.md)] SP1 CU2 이상).
+CREDENTIAL **적용 대상**: [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]([!INCLUDE[ssSQL11](../../includes/sssql11-md.md)] SP1 CU2 이상).
 Microsoft Azure Blob Storage 서비스에 대한 백업을 만들 때에만 사용됩니다.
 
-FILE_SNAPSHOT **적용 대상** : [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]( [!INCLUDE[ssSQL15](../../includes/sssql15-md.md)] 이상).
+FILE_SNAPSHOT **적용 대상**: [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]( [!INCLUDE[ssSQL15](../../includes/sssql15-md.md)] 이상).
 
 Azure Blob 스토리지 서비스를 사용하여 모든 SQL Server 데이터베이스 파일을 저장할 때 데이터베이스 파일의 Azure 스냅샷을 만드는 데 사용됩니다. 자세한 내용은 [Microsoft Azure의 SQL Server 데이터 파일](../../relational-databases/databases/sql-server-data-files-in-microsoft-azure.md)을 참조하세요. [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 스냅샷 백업은 일관된 상태에서 데이터베이스 파일(데이터 및 로그 파일)의 Azure 스냅샷을 사용합니다. 일관된 Azure 스냅샷 집합이 백업을 구성하고 백업 파일에 기록됩니다. `BACKUP DATABASE TO URL WITH FILE_SNAPSHOT`과 `BACKUP LOG TO URL WITH FILE_SNAPSHOT`의 유일한 차이점은 후자는 트랜잭션 로그를 자르지만 전자는 그렇지 않다는 점입니다. [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] Server 스냅샷 백업에서 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]에서 백업 체인을 설정하는 데 필요한 초기 전체 백업 이후에 트랜잭션 로그 백업 시점으로 데이터베이스를 복원하려면 단일 트랜잭션 로그 백업만 필요합니다. 또한 두 건의 트랜잭션 로그 백업 시간 사이의 특정 시점으로 데이터베이스를 복원하려면 트랜잭션 로그 백업이 두 개만 필요합니다.
 
@@ -326,7 +326,7 @@ ENCRYPTION 백업에 대한 암호화를 지정하는 데 사용됩니다. 백�
 > [!NOTE]
 > 복원 작업에 백업 세트를 지정하려면 `FILE = <backup_set_file_number>` 옵션을 사용합니다. 백업 세트를 지정하는 방법에 대한 자세한 내용은 [RESTORE 인수](../../t-sql/statements/restore-statements-arguments-transact-sql.md)에서 "백업 세트 지정"을 참조하세요.
 
-COPY_ONLY 백업이 정상적인 백업 시퀀스에 영향을 주지 않는 복사 전용 백업( *copy-only backup* )임을 지정합니다. 복사 전용 백업은 정기적으로 예약되어 수행되는 기존 백업과는 별개로 생성됩니다. 복사 전용 백업은 백업 전체에 영향을 주지 않고 데이터베이스에 대한 프로시저를 복원합니다.
+COPY_ONLY 백업이 정상적인 백업 시퀀스에 영향을 주지 않는 복사 전용 백업(*copy-only backup*)임을 지정합니다. 복사 전용 백업은 정기적으로 예약되어 수행되는 기존 백업과는 별개로 생성됩니다. 복사 전용 백업은 백업 전체에 영향을 주지 않고 데이터베이스에 대한 프로시저를 복원합니다.
 
 복사 전용 백업은 온라인 파일을 복원하기 전에 로그를 백업하는 것과 같은 특별한 목적을 위해 백업을 수행할 때 사용됩니다. 일반적으로 복사 전용 로그 백업은 한 번만 사용된 후 삭제됩니다.
 
@@ -335,7 +335,7 @@ COPY_ONLY 백업이 정상적인 백업 시퀀스에 영향을 주지 않는 복
     > [!IMPORTANT]
     > `DIFFERENTIAL`과 `COPY_ONLY`를 함께 사용하면 `COPY_ONLY`가 무시되고 차등 백업이 생성됩니다.
 
-- `BACKUP LOG`와 함께 사용하는 경우 `COPY_ONLY` 옵션은 트랜잭션 로그를 자르지 않는 복사 전용 백업( *copy-only log backup* )을 만듭니다. 복사 전용 로그 백업은 로그 체인에 영향을 주지 않으며 기타 로그 백업은 복사 전용 백업이 없는 것처럼 작동합니다.
+- `BACKUP LOG`와 함께 사용하는 경우 `COPY_ONLY` 옵션은 트랜잭션 로그를 자르지 않는 복사 전용 백업(*copy-only log backup*)을 만듭니다. 복사 전용 로그 백업은 로그 체인에 영향을 주지 않으며 기타 로그 백업은 복사 전용 백업이 없는 것처럼 작동합니다.
 
 자세한 내용은 [복사 전용 백업](../../relational-databases/backup-restore/copy-only-backups-sql-server.md)을 참조하세요.
 
@@ -360,9 +360,9 @@ NAME **=** { *backup_set_name* |  **@** _backup\_set\_var_ } 백업 세트의 �
 > [!IMPORTANT]
 > 이러한 옵션은 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]에서 파일을 덮어쓰지 못하도록 하기 위한 것입니다. 테이프는 다른 방법을 사용하여 지울 수 있고 디스크 파일은 운영 체제를 통해 삭제할 수 있습니다. 만료일 확인에 대한 자세한 내용은 이 항목에서 SKIP과 FORMAT을 참조하십시오.
 
-EXPIREDATE **=** { **'** _date_ **'**  |  **@** _date\_var_ } 백업 세트가 만료되어 덮어쓸 수 있는 날짜를 지정합니다. 변수(@ _date\_var_ )로 제공한 경우 이 날짜는 구성된 시스템 **datetime** 형식을 따라야 하며 다음 중 하나로 지정해야 합니다.
+EXPIREDATE **=** { **'** _date_ **'**  |  **@** _date\_var_ } 백업 세트가 만료되어 덮어쓸 수 있는 날짜를 지정합니다. 변수(@_date\_var_)로 제공한 경우 이 날짜는 구성된 시스템 **datetime** 형식을 따라야 하며 다음 중 하나로 지정해야 합니다.
 
-- 문자열 상수(@ _date\_var_ **=** date)
+- 문자열 상수(@_date\_var_ **=** date)
 - **ntext** 또는 **text** 데이터 형식을 제외한 문자열 데이터 형식의 변수
 - **smalldatetime**
 - **datetime** 변수
@@ -377,7 +377,7 @@ EXPIREDATE **=** { **'** _date_ **'**  |  **@** _date\_var_ } 백업 세트가 �
 > [!NOTE]
 > 만료 날짜를 무시하려면 `SKIP` 옵션을 사용합니다.
 
-RETAINDAYS **=** { *days* |  **@** _days\_var_ } 백업 미디어 세트를 덮어쓰지 않고 보존할 일 수를 지정합니다. 변수( **@** _days\_var_ )로 제공한 경우 정수로 지정해야 합니다.
+RETAINDAYS **=** { *days* |  **@** _days\_var_ } 백업 미디어 세트를 덮어쓰지 않고 보존할 일 수를 지정합니다. 변수( **@** _days\_var_)로 제공한 경우 정수로 지정해야 합니다.
 
 **미디어 세트 옵션**
 
@@ -935,17 +935,17 @@ WHERE r.command LIKE 'BACKUP%'
 - [메모리 액세스에 최적화된 테이블이 있는 데이터베이스의 증분 복원](../../relational-databases/in-memory-oltp/piecemeal-restore-of-databases-with-memory-optimized-tables.md)
 
 ::: moniker-end
-::: moniker range="=azuresqldb-mi-current||=sqlallproducts-allversions"
+::: moniker range="=azuresqldb-mi-current"
 
 :::row:::
     :::column:::
-        [SQL Server](backup-transact-sql.md?view=sql-server-2016)
+        [SQL Server](backup-transact-sql.md?view=sql-server-ver15&preserve-view=true)
     :::column-end:::
     :::column:::
         **_\* SQL Managed Instance \*_** &nbsp;
     :::column-end:::
     :::column:::
-        [Analytics Platform<br />System(PDW)](backup-transact-sql.md?view=aps-pdw-2016)
+        [Analytics Platform<br />System(PDW)](backup-transact-sql.md?view=aps-pdw-2016&preserve-view=true)
     :::column-end:::
 :::row-end:::
 
@@ -998,7 +998,7 @@ DATABASE 전체 데이터베이스 백업을 지정합니다. 데이터베이스
 
 BACKUP DATABASE(데이터베이스 백업)로 만든 백업을 복원하면 전체 백업이 복원됩니다. SQL Managed Instance 자동 백업에서 복원하려면 [관리되는 인스턴스로 데이터베이스 복원](/azure/sql-database/sql-database-managed-instance-get-started-restore)을 참조하세요.
 
-{ *database_name* |  **@** _database\_name\_var_ } 전체 데이터베이스를 백업하는 데이터베이스입니다. 변수( **@** _database\_name\_var_ )로 제공된 경우, 이 이름은 문자열 상수( **@** _database\_name\_var_ **=** _database name_ )나 **ntext** 또는 **text** 데이터 형식을 제외한 문자열 데이터 형식의 변수로 지정할 수 있습니다.
+{ *database_name* |  **@** _database\_name\_var_ } 전체 데이터베이스를 백업하는 데이터베이스입니다. 변수( **@** _database\_name\_var_)로 제공된 경우, 이 이름은 문자열 상수( **@** _database\_name\_var_ **=** _database name_)나 **ntext** 또는 **text** 데이터 형식을 제외한 문자열 데이터 형식의 변수로 지정할 수 있습니다.
 
 자세한 내용은 [전체 파일 백업](../../relational-databases/backup-restore/full-file-backups-sql-server.md) 및 [파일 및 파일 그룹 백업](../../relational-databases/backup-restore/back-up-files-and-filegroups-sql-server.md)을 참조하세요.
 
@@ -1030,7 +1030,7 @@ ENCRYPTION 백업에 대한 암호화를 지정하는 데 사용됩니다. 백�
 
 **백업 세트 옵션**
 
-COPY_ONLY 백업이 정상적인 백업 시퀀스에 영향을 주지 않는 복사 전용 백업( *copy-only backup* )임을 지정합니다. 복사 전용 백업은 Azure SQL Database 자동 백업과 독립적으로 만들어집니다. 자세한 내용은 [복사 전용 백업](../../relational-databases/backup-restore/copy-only-backups-sql-server.md)을 참조하세요.
+COPY_ONLY 백업이 정상적인 백업 시퀀스에 영향을 주지 않는 복사 전용 백업(*copy-only backup*)임을 지정합니다. 복사 전용 백업은 Azure SQL Database 자동 백업과 독립적으로 만들어집니다. 자세한 내용은 [복사 전용 백업](../../relational-databases/backup-restore/copy-only-backups-sql-server.md)을 참조하세요.
 
 { COMPRESSION | NO_COMPRESSION } 이 백업에서 [백업 압축](../../relational-databases/backup-restore/backup-compression-sql-server.md)을 수행할지 여부를 지정하여 서버 수준 기본값을 재정의합니다.
 
@@ -1125,11 +1125,11 @@ WITH STATS = 5, COPY_ONLY;
 [데이터베이스 복원](restore-statements-transact-sql.md)
 
 ::: moniker-end
-::: moniker range=">=aps-pdw-2016||=sqlallproducts-allversions"
+::: moniker range=">=aps-pdw-2016"
 
 :::row:::
     :::column:::
-        [SQL Server](backup-transact-sql.md?view=sql-server-2016)
+        [SQL Server](backup-transact-sql.md?view=sql-server-ver15&preserve-view=true)
     :::column-end:::
     :::column:::
         [SQL Managed Instance](backup-transact-sql.md?view=azuresqldb-mi-current)
@@ -1145,7 +1145,7 @@ WITH STATS = 5, COPY_ONLY;
 
 [!INCLUDE[ssPDW](../../includes/sspdw-md.md)] 데이터베이스의 백업을 만들고 사용자 지정 네트워크 위치에 어플라이언스의 백업을 저장합니다. 재해 복구를 하거나 하나의 어플라이언스에서 다른 어플라이언스로 데이터베이스를 복사하려면 [RESTORE DATABASE - Analytics Platform System](../../t-sql/statements/restore-statements-transact-sql.md)과 함께 이 문을 사용합니다.
 
-**시작하기 전에** , [!INCLUDE[pdw-product-documentation](../../includes/pdw-product-documentation-md.md)]에서 "백업 서버 확보 및 구성"을 참조하세요.
+**시작하기 전에**, [!INCLUDE[pdw-product-documentation](../../includes/pdw-product-documentation-md.md)]에서 "백업 서버 확보 및 구성"을 참조하세요.
 
 [!INCLUDE[ssPDW](../../includes/sspdw-md.md)]에는 두 가지 백업 유형이 있습니다. *전체 데이터베이스 백업* 은 전체 [!INCLUDE[ssPDW](../../includes/sspdw-md.md)] 데이터베이스의 백업입니다. *차등 데이터베이스 백업* 에는 마지막 전체 백업 이후의 변경 내용만 포함됩니다. 사용자 데이터베이스 백업에는 데이터베이스 사용자 및 데이터베이스 역할이 포함됩니다. master 데이터베이스 백업에는 로그인 정보가 포함됩니다.
 
@@ -1176,7 +1176,7 @@ BACKUP DATABASE database_name
 
 *database_name* 백업을 만들 데이터베이스의 이름입니다. 데이터베이스는 master 데이터베이스 또는 사용자 데이터베이스가 될 수 있습니다.
 
-TO DISK = '\\\\*UNC_path*\\*backup_directory* ' [!INCLUDE[ssPDW](../../includes/sspdw-md.md)]가 백업 파일을 작성할 네트워크 경로 및 디렉터리입니다. 예: '\\\xxx.xxx.xxx.xxx\backups\2012\Monthly\08.2012.Mybackup'.
+TO DISK = '\\\\*UNC_path*\\*backup_directory*' [!INCLUDE[ssPDW](../../includes/sspdw-md.md)]가 백업 파일을 작성할 네트워크 경로 및 디렉터리입니다. 예: '\\\xxx.xxx.xxx.xxx\backups\2012\Monthly\08.2012.Mybackup'.
 
 - 백업 디렉터리 이름에 대한 경로가 이미 존재해야 하며 정규화된 UNC(범용 명명 규칙) 경로로 지정해야합니다.
 - 백업 명령을 실행하기 전에는 백업 디렉토리 *backup_directory* 가 없어야 합니다. [!INCLUDE[ssPDW](../../includes/sspdw-md.md)]은 백업 디렉토리를 만듭니다.
@@ -1207,7 +1207,7 @@ DIFFERENTIAL 사용자 데이터베이스의 차등 백업을 수행하도록 �
 
 ## <a name="permissions"></a>사용 권한
 
-**db_backupoperator** 고정 데이터베이스 역할에서 **BACKUP DATABASE** 권한 또는 멤버 자격이 필요합니다. master 데이터베이스는 백업할 수 없지만 **db_backupoperator** 고정 데이터베이스 역할에 추가된 일반 사용자의 경우 할 수 있습니다. master 데이터베이스는 **sa** , 패브릭 관리자 또는 **sysadmin** 고정 서버 역할을 하는 멤버만이 백업할 수 있습니다.
+**db_backupoperator** 고정 데이터베이스 역할에서 **BACKUP DATABASE** 권한 또는 멤버 자격이 필요합니다. master 데이터베이스는 백업할 수 없지만 **db_backupoperator** 고정 데이터베이스 역할에 추가된 일반 사용자의 경우 할 수 있습니다. master 데이터베이스는 **sa**, 패브릭 관리자 또는 **sysadmin** 고정 서버 역할을 하는 멤버만이 백업할 수 있습니다.
 
 백업 디렉토리에 액세스하고, 만들고, 쓸 수 있는 권한이 있는 Windows 계정이 필요합니다. 또한 Windows 계정 이름 및 암호를 [!INCLUDE[ssPDW](../../includes/sspdw-md.md)]에 저장해야 합니다. 해당 네트워크 자격 증명을 [!INCLUDE[ssPDW](../../includes/sspdw-md.md)]에 추가하려면 [sp_pdw_add_network_credentials - [!INCLUDE[ssSDW](../../includes/sssdwfull-md.md)]](../../relational-databases/system-stored-procedures/sp-pdw-add-network-credentials-sql-data-warehouse.md) 저장 프로시저를 사용합니다.
 
@@ -1226,7 +1226,7 @@ DIFFERENTIAL 사용자 데이터베이스의 차등 백업을 수행하도록 �
 - 트랜잭션 내에서 백업을 시작하려고 시도합니다.
 
 ::: moniker-end
-::: moniker range=">=aps-pdw-2016||>=sql-server-2016||>=sql-server-linux-2017||=sqlallproducts-allversions"
+::: moniker range=">=aps-pdw-2016||>=sql-server-2016||>=sql-server-linux-2017"
 ## <a name="general-remarks"></a>일반적인 주의 사항
 
 데이터베이스 백업을 수행하기 전에 [DBCC SHRINKLOG([!INCLUDE[ssSDW](../../includes/sssdwfull-md.md)])](../../t-sql/database-console-commands/dbcc-shrinklog-azure-sql-data-warehouse.md)를 사용하여 데이터베이스 크기를 줄입니다.
@@ -1240,7 +1240,7 @@ BACKUP 명령을 취소하면 [!INCLUDE[ssPDW](../../includes/sspdw-md.md)]은 �
 전체 백업과 차등 백업은 서로 다른 디렉토리에 저장됩니다. 전체 백업과 차등 백업이 서로 관련 있음을 나타내기 위한 명명 규칙이 강제되지 않습니다. 자신 만의 명명 규칙을 통해 이 관련성을 추적할 수 있습니다. 또는 WITH DESCRIPTION 옵션을 사용하여 설명을 추가한 다음, RESTORE HEADERONLY 문을 사용하여 설명을 검색할 수 있습니다.
 
 ::: moniker-end
-::: moniker range=">=aps-pdw-2016||=sqlallproducts-allversions"
+::: moniker range=">=aps-pdw-2016"
 ## <a name="limitations-and-restrictions"></a>제한 사항
 
 master 데이터베이스의 차등 백업을 수행할 수 없습니다. master 데이터베이스의 전체 백업 만 지원됩니다.

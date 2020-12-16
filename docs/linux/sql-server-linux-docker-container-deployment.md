@@ -10,14 +10,14 @@ ms.topic: conceptual
 ms.prod: sql
 ms.technology: linux
 ms.assetid: 82737f18-f5d6-4dce-a255-688889fdde69
-moniker: '>= sql-server-linux-2017 || >= sql-server-2017 || =sqlallproducts-allversions'
+moniker: '>= sql-server-linux-2017 || >= sql-server-2017 '
 zone_pivot_groups: cs1-command-shell
-ms.openlocfilehash: 380fa9b4cb6941b438d0308be38956659862ce50
-ms.sourcegitcommit: 22102f25db5ccca39aebf96bc861c92f2367c77a
+ms.openlocfilehash: 6fbf5782ff67b3406cffad808b27c47112a48d97
+ms.sourcegitcommit: 3bd188e652102f3703812af53ba877cce94b44a9
 ms.translationtype: HT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 10/16/2020
-ms.locfileid: "92115468"
+ms.lasthandoff: 12/15/2020
+ms.locfileid: "97489863"
 ---
 # <a name="deploy-and-connect-to-sql-server-docker-containers"></a>SQL Server Docker 컨테이너 배포 및 연결
 
@@ -45,8 +45,8 @@ ms.locfileid: "92115468"
 
 SQL Server 2017 및 SQL Server 2019용 Docker 컨테이너 이미지를 끌어오고 실행하려면 다음 빠른 시작의 필수 조건 및 단계를 따르세요.
 
-- [Docker에서 SQL Server 2017 컨테이너 이미지 실행](quickstart-install-connect-docker.md?view=sql-server-2017)
-- [Docker에서 SQL Server 2019 컨테이너 이미지 실행](quickstart-install-connect-docker.md?view=sql-server-ver15)
+- [Docker에서 SQL Server 2017 컨테이너 이미지 실행](quickstart-install-connect-docker.md?view=sql-server-2017&preserve-view=true)
+- [Docker에서 SQL Server 2019 컨테이너 이미지 실행](quickstart-install-connect-docker.md?view=sql-server-ver15&preserve-view=true)
 
 이 구성 문서의 다음 섹션에서는 추가 사용 시나리오를 제공합니다.
 
@@ -63,7 +63,7 @@ SQL 연결을 지원하는 모든 외부 Linux, Windows 또는 macOS 도구에�
 - [Visual Studio Code](../tools/visual-studio-code/sql-server-develop-use-vscode.md)
 - [Windows의 SSMS(SQL Server Management Studio)](sql-server-linux-manage-ssms.md)
 
-다음 예제에서는 **sqlcmd**를 사용하여 Docker 컨테이너에서 실행되는 SQL Server에 연결합니다. 연결 문자열의 IP 주소는 컨테이너를 실행하는 호스트 머신의 IP 주소입니다.
+다음 예제에서는 **sqlcmd** 를 사용하여 Docker 컨테이너에서 실행되는 SQL Server에 연결합니다. 연결 문자열의 IP 주소는 컨테이너를 실행하는 호스트 머신의 IP 주소입니다.
 
 ::: zone pivot="cs1-bash"
 ```bash
@@ -83,7 +83,7 @@ sqlcmd -S 10.3.2.4 -U SA -P "<YourPassword>"
 ```
 ::: zone-end
 
-기본값 **1433**이 아닌 호스트 포트를 매핑한 경우 해당 포트를 연결 문자열에 추가합니다. 예를 들어 `docker run` 명령에 `-p 1400:1433`을 지정한 경우 포트 1400을 명시적으로 지정하여 연결합니다.
+기본값 **1433** 이 아닌 호스트 포트를 매핑한 경우 해당 포트를 연결 문자열에 추가합니다. 예를 들어 `docker run` 명령에 `-p 1400:1433`을 지정한 경우 포트 1400을 명시적으로 지정하여 연결합니다.
 
 ::: zone pivot="cs1-bash"
 ```bash
@@ -214,7 +214,7 @@ Packages
 
 최신 SQL Server 컨테이너 이미지를 사용하지 않으려는 시나리오도 있습니다. 특정 SQL Server 컨테이너 이미지를 실행하려면 다음 단계를 사용합니다.
 
-1. 사용하려는 릴리스의 Docker **태그**를 확인합니다. 사용 가능한 태그를 보려면 [mssql-server-linux Docker Hub 페이지](https://hub.docker.com/_/microsoft-mssql-server)를 참조하세요.
+1. 사용하려는 릴리스의 Docker **태그** 를 확인합니다. 사용 가능한 태그를 보려면 [mssql-server-linux Docker Hub 페이지](https://hub.docker.com/_/microsoft-mssql-server)를 참조하세요.
 
 2. 태그를 사용하여 SQL Server 컨테이너 이미지를 끌어옵니다. 예를 들어 2019-CU7-ubuntu-18.04 이미지를 끌어오려면 다음 명령에서 `<image_tag>`를 `2019-CU7-ubuntu-18.04`로 바꿉니다.
 
@@ -245,11 +245,11 @@ Packages
 이러한 단계를 사용하여 기존 컨테이너를 다운그레이드할 수도 있습니다. 예를 들어 문제 해결이나 테스트를 위해 실행 중인 컨테이너를 롤백 또는 다운그레이드할 수 있습니다. 실행 중인 컨테이너를 다운그레이드하려면 데이터 폴더에 대해 지속성 방법을 사용해야 합니다. [업그레이드 섹션](#upgrade)에 간략하게 설명된 것과 동일한 단계를 수행하지만, 새 컨테이너를 실행할 때 이전 버전의 태그 이름을 지정합니다.
 
 <!--SQL Server 2019 on Linux-->
-::: moniker range=">= sql-server-linux-ver15 || >= sql-server-ver15 || =sqlallproducts-allversions"
+::: moniker range=">= sql-server-linux-ver15 || >= sql-server-ver15 "
 
 ## <a name="run-rhel-based-container-images"></a><a id="rhel"></a> RHEL 기반 컨테이너 이미지 실행
 
-SQL Server Linux 컨테이너 이미지에 대한 문서는 Ubuntu 기반 컨테이너를 가리킵니다. SQL Server 2019부터 RHEL(Red Hat Enterprise Linux)를 기반으로 하는 컨테이너를 사용할 수 있습니다. RHEL에 대한 이미지 예제는 **mcr.microsoft.com/mssql/rhel/server:2019-CU1-rhel-8**과 같을 것입니다.
+SQL Server Linux 컨테이너 이미지에 대한 문서는 Ubuntu 기반 컨테이너를 가리킵니다. SQL Server 2019부터 RHEL(Red Hat Enterprise Linux)를 기반으로 하는 컨테이너를 사용할 수 있습니다. RHEL에 대한 이미지 예제는 **mcr.microsoft.com/mssql/rhel/server:2019-CU1-rhel-8** 과 같을 것입니다.
 
 예를 들어 다음 명령은 RHEL을 사용하는 SQL Server 2019 컨테이너의 누적 업데이트 1을 끌어옵니다.
 
@@ -311,10 +311,10 @@ docker run --name sqlenterprise `
 ::: zone-end
 
 > [!IMPORTANT]
-> **ACCEPT_EULA** 환경 변수에 **Y** 값을 전달하고 **MSSQL_PID**에 버전 값을 전달하면 사용하려는 SQL Server 에디션 및 버전에 유효한 기존 라이선스가 있음을 나타냅니다. 또한 Docker 컨테이너 이미지에서 실행되는 SQL Server 소프트웨어 사용에 SQL Server 사용 조건이 적용되는 것에 동의하게 됩니다.
+> **ACCEPT_EULA** 환경 변수에 **Y** 값을 전달하고 **MSSQL_PID** 에 버전 값을 전달하면 사용하려는 SQL Server 에디션 및 버전에 유효한 기존 라이선스가 있음을 나타냅니다. 또한 Docker 컨테이너 이미지에서 실행되는 SQL Server 소프트웨어 사용에 SQL Server 사용 조건이 적용되는 것에 동의하게 됩니다.
 
 > [!NOTE]
-> **MSSQL_PID**에 사용 가능한 값의 전체 목록은 [Linux에서 환경 변수를 사용하여 SQL Server 설정 구성](sql-server-linux-configure-environment-variables.md)을 참조하세요.
+> **MSSQL_PID** 에 사용 가능한 값의 전체 목록은 [Linux에서 환경 변수를 사용하여 SQL Server 설정 구성](sql-server-linux-configure-environment-variables.md)을 참조하세요.
 
 ## <a name="run-multiple-sql-server-containers"></a><a id="multiple"></a>여러 SQL Server 컨테이너 실행
 
@@ -348,7 +348,7 @@ docker run -e "ACCEPT_EULA=Y" -e "MSSQL_SA_PASSWORD=<YourStrong!Passw0rd>" -p 14
 
 ::: moniker-end
 <!--SQL Server 2019 on Linux-->
-::: moniker range=">= sql-server-linux-ver15 || >= sql-server-ver15 || =sqlallproducts-allversions"
+::: moniker range=">= sql-server-linux-ver15 || >= sql-server-ver15 "
 
 다음 예제에서는 SQL Server 2019 컨테이너 2개를 만들고 호스트 머신의 **1401** 및 **1402** 포트에 매핑합니다.
 
@@ -426,12 +426,12 @@ docker pull mcr.microsoft.com/mssql/server:<image_tag>
 <!--SQL Server 2017 on Linux -->
 ::: moniker range="= sql-server-linux-2017 || = sql-server-2017"
 
-- [빠른 시작](quickstart-install-connect-docker.md?view=sql-server-2017)을 진행하여 Docker에서 SQL Server 2017 컨테이너 이미지로 시작합니다.
+- [빠른 시작](quickstart-install-connect-docker.md?view=sql-server-2017&preserve-view=true)을 진행하여 Docker에서 SQL Server 2017 컨테이너 이미지로 시작합니다.
 
 ::: moniker-end
 
 <!--SQL Server 2019 on Linux-->
-::: moniker range=">= sql-server-linux-ver15 || >= sql-server-ver15 || =sqlallproducts-allversions"
+::: moniker range=">= sql-server-linux-ver15 || >= sql-server-ver15 "
 
 - [빠른 시작](quickstart-install-connect-docker.md?view=sql-server-ver15)을 진행하여 Docker에서 SQL Server 2019 컨테이너 이미지로 시작합니다.
 

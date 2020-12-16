@@ -27,13 +27,13 @@ helpviewer_keywords:
 ms.assetid: eb737149-7c92-4552-946b-91085d8b1b01
 author: VanMSFT
 ms.author: vanto
-monikerRange: '>=aps-pdw-2016||=azuresqldb-current||=azuresqldb-current||=azure-sqldw-latest||>=sql-server-2016||=sqlallproducts-allversions||>=sql-server-linux-2017||=azuresqldb-mi-current'
-ms.openlocfilehash: 8fbb5128236808e6ac7ca833aa82280c68ca1263
-ms.sourcegitcommit: bd3a135f061e4a49183bbebc7add41ab11872bae
+monikerRange: '>=aps-pdw-2016||=azuresqldb-current||=azuresqldb-current||=azure-sqldw-latest||>=sql-server-2016||>=sql-server-linux-2017||=azuresqldb-mi-current'
+ms.openlocfilehash: 26284d43476c4d0777a6adcefc5b39d6a5a1ae75
+ms.sourcegitcommit: 3bd188e652102f3703812af53ba877cce94b44a9
 ms.translationtype: HT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 10/21/2020
-ms.locfileid: "92300533"
+ms.lasthandoff: 12/15/2020
+ms.locfileid: "97488863"
 ---
 # <a name="create-login-transact-sql"></a>CREATE LOGIN(Transact-SQL)
 
@@ -45,7 +45,7 @@ CREATE LOGIN은 트랜잭션에 참여합니다. CREATE LOGIN이 트랜잭션 �
 
 [!INCLUDE[select-product](../../includes/select-product.md)]
 
-::: moniker range=">=sql-server-2016||>=sql-server-linux-2017||=sqlallproducts-allversions"
+::: moniker range=">=sql-server-2016||>=sql-server-linux-2017"
 
 :::row:::
     :::column:::
@@ -61,7 +61,7 @@ CREATE LOGIN은 트랜잭션에 참여합니다. CREATE LOGIN이 트랜잭션 �
         [Azure Synapse<br />Analytics](create-login-transact-sql.md?view=azure-sqldw-latest)
     :::column-end:::
     :::column:::
-        [Analytics Platform<br />System(PDW)](create-login-transact-sql.md?view=aps-pdw-2016)
+        [Analytics Platform<br />System(PDW)](create-login-transact-sql.md?view=aps-pdw-2016&preserve-view=true)
     :::column-end:::
 :::row-end:::
 
@@ -101,7 +101,7 @@ CREATE LOGIN login_name { WITH <option_list1> | FROM <sources> }
 
 *login_name* 만들 로그인 이름을 지정합니다. 로그인에는 SQL Server 로그인, Windows 로그인, 인증서 매핑 로그인 및 비대칭 키 매핑 로그인의 네 가지 유형이 있습니다. Windows 도메인 계정에서 매핑된 로그인을 만들 경우 Windows 2000 이전 버전의 사용자 로그온 이름을 [\<domainName>\\<login_name>] 형식으로 사용해야 합니다. login_name@DomainName 형식의 UPN은 사용할 수 없습니다. 이 문서의 뒷부분에 나오는 예 4를 참조하세요. 인증 로그인은 **sysname** 형식이고 [식별자](../../relational-databases/databases/database-identifiers.md)에 대한 규칙을 따라야 하며 ' **\\** '을 포함할 수 없습니다. Windows 로그인은 ' **\\** '를 포함할 수 없습니다. Active Directory 사용자에 기반한 로그인은 21자 미만의 이름으로 제한됩니다.
 
-PASSWORD **=** ' *password* ' SQL Server 로그인에만 적용됩니다. 만들 로그인의 암호를 지정합니다. 강력한 암호를 사용하세요. 자세한 내용은 [강력한 암호](../../relational-databases/security/strong-passwords.md) 및 [암호 정책](../../relational-databases/security/password-policy.md)을 참조하세요. SQL Server 2012(11.x)부터 저장된 암호 정보는 솔트 암호의 SHA-512를 사용하여 계산됩니다.
+PASSWORD **=** '*password*' SQL Server 로그인에만 적용됩니다. 만들 로그인의 암호를 지정합니다. 강력한 암호를 사용하세요. 자세한 내용은 [강력한 암호](../../relational-databases/security/strong-passwords.md) 및 [암호 정책](../../relational-databases/security/password-policy.md)을 참조하세요. SQL Server 2012(11.x)부터 저장된 암호 정보는 솔트 암호의 SHA-512를 사용하여 계산됩니다.
 
 암호는 대소문자를 구분합니다. 암호의 길이는 항상 8자 이상이어야 하며 128자를 초과할 수 없습니다. 암호에는 a-z, A-Z, 0-9 및 영숫자가 아닌 대부분의 문자를 포함할 수 있습니다. 암호는 홑따옴표 또는 *login_name* 을 포함할 수 없습니다.
 
@@ -113,7 +113,7 @@ MUST_CHANGE는 SQL Server 로그인에만 적용됩니다. 이 옵션을 선택�
 
 CREDENTIAL **=** _credential\_name_ 새 SQL Server 로그인에 매핑할 자격 증명의 이름입니다. 자격 증명이 서버에 이미 있어야 합니다. 현재 이 옵션은 자격 증명을 로그인에 연결하는 역할만 합니다. 자격 증명은 시스템 관리자(sa) 로그인에 매핑할 수 없습니다.
 
-SID = *sid* 로그인을 다시 만드는데 사용됩니다. SQL Server 인증 로그인에만 적용되고 Windows 인증 로그인에는 적용되지 않습니다. 새 SQL Server 인증 로그인의 SID를 지정합니다. 이 옵션을 사용하지 않으면 SQL Server에서 자동으로 SID를 할당합니다. SID 구조는 SQL Server 버전에 따라 달라집니다. SQL Server 로그인 SID: GUID에 기반한 16바이트( **binary(16)** ) 리터럴 값입니다. 예들 들어 `SID = 0x14585E90117152449347750164BA00A7`입니다.
+SID = *sid* 로그인을 다시 만드는데 사용됩니다. SQL Server 인증 로그인에만 적용되고 Windows 인증 로그인에는 적용되지 않습니다. 새 SQL Server 인증 로그인의 SID를 지정합니다. 이 옵션을 사용하지 않으면 SQL Server에서 자동으로 SID를 할당합니다. SID 구조는 SQL Server 버전에 따라 달라집니다. SQL Server 로그인 SID: GUID에 기반한 16바이트(**binary(16)** ) 리터럴 값입니다. 예들 들어 `SID = 0x14585E90117152449347750164BA00A7`입니다.
 
 DEFAULT_DATABASE **=** _database_ 로그인에 할당할 기본 데이터베이스를 지정합니다. 이 옵션을 선택하지 않으면 기본 데이터베이스가 master로 설정됩니다.
 
@@ -182,7 +182,7 @@ GO
 
 다음 예에서는 특정 사용자에 대한 로그인을 만들고 암호를 할당합니다. `MUST_CHANGE` 옵션을 사용하는 경우 사용자는 서버에 처음 연결할 때 이 암호를 변경해야 합니다.
 
-**적용 대상** : [!INCLUDE[ssKatmai](../../includes/sskatmai-md.md)] 이상
+**적용 대상**: [!INCLUDE[ssKatmai](../../includes/sskatmai-md.md)] 이상
 
 ```sql
 CREATE LOGIN <login_name> WITH PASSWORD = '<enterStrongPasswordHere>'
@@ -197,7 +197,7 @@ GO
 
 다음 예에서는 사용자를 사용하여 특정 사용자에 대한 로그인을 만듭니다. 이 로그인은 자격 증명에 매핑됩니다.
 
-**적용 대상** : [!INCLUDE[ssKatmai](../../includes/sskatmai-md.md)] 이상
+**적용 대상**: [!INCLUDE[ssKatmai](../../includes/sskatmai-md.md)] 이상
 
 ```sql
 CREATE LOGIN <login_name> WITH PASSWORD = '<enterStrongPasswordHere>',
@@ -209,7 +209,7 @@ GO
 
 다음 예제에서는 마스터의 인증서에서 특정 사용자에 대한 로그인을 만듭니다.
 
-**적용 대상** : [!INCLUDE[ssKatmai](../../includes/sskatmai-md.md)] 이상
+**적용 대상**: [!INCLUDE[ssKatmai](../../includes/sskatmai-md.md)] 이상
 
 ```sql
 USE MASTER;
@@ -225,7 +225,7 @@ GO
 
 다음 예에서는 Windows 도메인 계정을 사용하여 로그인을 만듭니다.
 
-**적용 대상** : [!INCLUDE[ssKatmai](../../includes/sskatmai-md.md)] 이상
+**적용 대상**: [!INCLUDE[ssKatmai](../../includes/sskatmai-md.md)] 이상
 
 ```sql
 CREATE LOGIN [<domainName>\<login_name>] FROM WINDOWS;
@@ -278,11 +278,11 @@ CHECK_EXPIRATION = OFF ;
 - [로그인 만들기](../../relational-databases/security/authentication-access/create-a-login.md)
 
 ::: moniker-end
-::: moniker range="=azuresqldb-current||=sqlallproducts-allversions"
+::: moniker range="=azuresqldb-current"
 
 :::row:::
     :::column:::
-        [SQL Server](create-login-transact-sql.md?view=sql-server-2017)
+        [SQL Server](create-login-transact-sql.md?view=sql-server-ver15&preserve-view=true)
     :::column-end:::
     :::column:::
         **_\* Azure SQL Database \*_**
@@ -294,7 +294,7 @@ CHECK_EXPIRATION = OFF ;
         [Azure Synapse<br />Analytics](create-login-transact-sql.md?view=azure-sqldw-latest)
     :::column-end:::
     :::column:::
-        [Analytics Platform<br />System(PDW)](create-login-transact-sql.md?view=aps-pdw-2016)
+        [Analytics Platform<br />System(PDW)](create-login-transact-sql.md?view=aps-pdw-2016&preserve-view=true)
     :::column-end:::
 :::row-end:::
 
@@ -322,7 +322,7 @@ PASSWORD **='** password* *'* 만들 SQL 로그인의 암호를 지정합니다.
 
 암호는 대소문자를 구분합니다. 암호의 길이는 항상 8자 이상이어야 하며 128자를 초과할 수 없습니다. 암호에는 a-z, A-Z, 0-9 및 영숫자가 아닌 대부분의 문자를 포함할 수 있습니다. 암호는 홑따옴표 또는 *login_name* 을 포함할 수 없습니다.
 
-SID = *sid* 로그인을 다시 만드는데 사용됩니다. SQL Server 인증 로그인에만 적용되고 Windows 인증 로그인에는 적용되지 않습니다. 새 SQL Server 인증 로그인의 SID를 지정합니다. 이 옵션을 사용하지 않으면 SQL Server에서 자동으로 SID를 할당합니다. SID 구조는 SQL Server 버전에 따라 달라집니다. SQL Database의 경우 `0x01060000000000640000000000000000`과 GUID를 나타내는 16바이트로 구성된 32바이트( **binary(32)** ) 리터럴입니다. 예들 들어 `SID = 0x0106000000000064000000000000000014585E90117152449347750164BA00A7`입니다.
+SID = *sid* 로그인을 다시 만드는데 사용됩니다. SQL Server 인증 로그인에만 적용되고 Windows 인증 로그인에는 적용되지 않습니다. 새 SQL Server 인증 로그인의 SID를 지정합니다. 이 옵션을 사용하지 않으면 SQL Server에서 자동으로 SID를 할당합니다. SID 구조는 SQL Server 버전에 따라 달라집니다. SQL Database의 경우 `0x01060000000000640000000000000000`과 GUID를 나타내는 16바이트로 구성된 32바이트(**binary(32)** ) 리터럴입니다. 예들 들어 `SID = 0x0106000000000064000000000000000014585E90117152449347750164BA00A7`입니다.
 
 ## <a name="remarks"></a>설명
 
@@ -396,11 +396,11 @@ GO
 - [로그인 만들기](../../relational-databases/security/authentication-access/create-a-login.md)
 
 ::: moniker-end
-::: moniker range="=azuresqldb-mi-current||=sqlallproducts-allversions"
+::: moniker range="=azuresqldb-mi-current"
 
 :::row:::
     :::column:::
-        [SQL Server](create-login-transact-sql.md?view=sql-server-2017)
+        [SQL Server](create-login-transact-sql.md?view=sql-server-ver15&preserve-view=true)
     :::column-end:::
     :::column:::
         [Azure SQL Database](create-login-transact-sql.md?view=azuresqldb-current)
@@ -412,7 +412,7 @@ GO
         [Azure Synapse<br />Analytics](create-login-transact-sql.md?view=azure-sqldw-latest)
     :::column-end:::
     :::column:::
-        [Analytics Platform<br />System(PDW)](create-login-transact-sql.md?view=aps-pdw-2016)
+        [Analytics Platform<br />System(PDW)](create-login-transact-sql.md?view=aps-pdw-2016&preserve-view=true)
     :::column-end:::
 :::row-end:::
 
@@ -440,16 +440,16 @@ CREATE LOGIN login_name [FROM EXTERNAL PROVIDER] { WITH <option_list> [,..]}
 FROM EXTERNAL PROVIDER </br>
 Azure AD 인증을 위한 로그인임을 지정합니다.
 
-PASSWORD **=** ' *password* ' 만들 SQL 로그인의 암호를 지정합니다. 강력한 암호를 사용하세요. 자세한 내용은 [강력한 암호](../../relational-databases/security/strong-passwords.md) 및 [암호 정책](../../relational-databases/security/password-policy.md)을 참조하세요. [!INCLUDE[ssSQL11](../../includes/sssql11-md.md)]부터 저장된 암호 정보는 솔트 암호의 SHA-512를 사용하여 계산됩니다.
+PASSWORD **=** '*password*' 만들 SQL 로그인의 암호를 지정합니다. 강력한 암호를 사용하세요. 자세한 내용은 [강력한 암호](../../relational-databases/security/strong-passwords.md) 및 [암호 정책](../../relational-databases/security/password-policy.md)을 참조하세요. [!INCLUDE[ssSQL11](../../includes/sssql11-md.md)]부터 저장된 암호 정보는 솔트 암호의 SHA-512를 사용하여 계산됩니다.
 
 암호는 대소문자를 구분합니다. 암호의 길이는 항상 10자 이상이어야 하며 128자를 초과할 수 없습니다. 암호에는 a-z, A-Z, 0-9 및 영숫자가 아닌 대부분의 문자를 포함할 수 있습니다. 암호는 홑따옴표 또는 *login_name* 을 포함할 수 없습니다.
 
-SID **=** *sid* 로그인을 다시 만드는데 사용됩니다. SQL Server 인증 로그인에만 적용됩니다. 새 SQL Server 인증 로그인의 SID를 지정합니다. 이 옵션을 사용하지 않으면 SQL Server에서 자동으로 SID를 할당합니다. SID 구조는 SQL Server 버전에 따라 달라집니다. SQL Database의 경우 `0x01060000000000640000000000000000`과 GUID를 나타내는 16바이트로 구성된 32바이트( **binary(32)** ) 리터럴입니다. 예들 들어 `SID = 0x0106000000000064000000000000000014585E90117152449347750164BA00A7`입니다.
+SID **=** *sid* 로그인을 다시 만드는데 사용됩니다. SQL Server 인증 로그인에만 적용됩니다. 새 SQL Server 인증 로그인의 SID를 지정합니다. 이 옵션을 사용하지 않으면 SQL Server에서 자동으로 SID를 할당합니다. SID 구조는 SQL Server 버전에 따라 달라집니다. SQL Database의 경우 `0x01060000000000640000000000000000`과 GUID를 나타내는 16바이트로 구성된 32바이트(**binary(32)** ) 리터럴입니다. 예들 들어 `SID = 0x0106000000000064000000000000000014585E90117152449347750164BA00A7`입니다.
 
 ## <a name="remarks"></a>설명
 
 - 암호는 대소문자를 구분합니다.
-- Azure AD 계정에 매핑된 서버 수준 보안 주체를 만들기 위한 새 구문이 도입되었습니다( **FROM EXTERNAL PROVIDER** ).
+- Azure AD 계정에 매핑된 서버 수준 보안 주체를 만들기 위한 새 구문이 도입되었습니다(**FROM EXTERNAL PROVIDER**).
 - **FROM EXTERNAL PROVIDER** 가 지정된 경우:
 
   - login_name은 현재 Azure SQL Managed Instance로 Azure AD에서 액세스할 수 있는 기존 Azure AD 계정(사용자, 그룹 또는 애플리케이션)을 나타내야 합니다. Azure AD 주체의 경우 CREATE LOGIN 구문에는 다음 항목이 필요합니다.
@@ -595,11 +595,11 @@ GO
 - [로그인 만들기](../../relational-databases/security/authentication-access/create-a-login.md)
 
 ::: moniker-end
-::: moniker range="=azure-sqldw-latest||=sqlallproducts-allversions"
+::: moniker range="=azure-sqldw-latest"
 
 :::row:::
     :::column:::
-        [SQL Server](create-login-transact-sql.md?view=sql-server-2017)
+        [SQL Server](create-login-transact-sql.md?view=sql-server-ver15&preserve-view=true)
     :::column-end:::
     :::column:::
         [Azure SQL Database](create-login-transact-sql.md?view=azuresqldb-current)
@@ -611,7 +611,7 @@ GO
         **_\* Azure Synapse<br />Analytics \*_**
     :::column-end:::
     :::column:::
-        [Analytics Platform<br />System(PDW)](create-login-transact-sql.md?view=aps-pdw-2016)
+        [Analytics Platform<br />System(PDW)](create-login-transact-sql.md?view=aps-pdw-2016&preserve-view=true)
     :::column-end:::
 :::row-end:::
 
@@ -639,7 +639,7 @@ PASSWORD **='** password* *'* 만들 SQL 로그인의 암호를 지정합니다.
 
 암호는 대소문자를 구분합니다. 암호의 길이는 항상 8자 이상이어야 하며 128자를 초과할 수 없습니다. 암호에는 a-z, A-Z, 0-9 및 영숫자가 아닌 대부분의 문자를 포함할 수 있습니다. 암호는 홑따옴표 또는 *login_name* 을 포함할 수 없습니다.
 
- SID = *sid* 로그인을 다시 만드는데 사용됩니다. SQL Server 인증 로그인에만 적용되고 Windows 인증 로그인에는 적용되지 않습니다. 새 SQL Server 인증 로그인의 SID를 지정합니다. 이 옵션을 사용하지 않으면 SQL Server에서 자동으로 SID를 할당합니다. SID 구조는 SQL Server 버전에 따라 달라집니다. SQL Analytics의 경우 `0x01060000000000640000000000000000`과 GUID를 나타내는 16바이트로 구성된 32바이트( **binary(32)** ) 리터럴입니다. 예들 들어 `SID = 0x0106000000000064000000000000000014585E90117152449347750164BA00A7`입니다.
+ SID = *sid* 로그인을 다시 만드는데 사용됩니다. SQL Server 인증 로그인에만 적용되고 Windows 인증 로그인에는 적용되지 않습니다. 새 SQL Server 인증 로그인의 SID를 지정합니다. 이 옵션을 사용하지 않으면 SQL Server에서 자동으로 SID를 할당합니다. SID 구조는 SQL Server 버전에 따라 달라집니다. SQL Analytics의 경우 `0x01060000000000640000000000000000`과 GUID를 나타내는 16바이트로 구성된 32바이트(**binary(32)** ) 리터럴입니다. 예들 들어 `SID = 0x0106000000000064000000000000000014585E90117152449347750164BA00A7`입니다.
 
 ## <a name="remarks"></a>설명
 
@@ -723,11 +723,11 @@ GO
 - [로그인 만들기](../../relational-databases/security/authentication-access/create-a-login.md)
 
 ::: moniker-end
-::: moniker range=">=aps-pdw-2016||=sqlallproducts-allversions"
+::: moniker range=">=aps-pdw-2016"
 
 :::row:::
     :::column:::
-        [SQL Server](create-login-transact-sql.md?view=sql-server-2017)
+        [SQL Server](create-login-transact-sql.md?view=sql-server-ver15&preserve-view=true)
     :::column-end:::
     :::column:::
         [Azure SQL Database](create-login-transact-sql.md?view=azuresqldb-current)
@@ -766,7 +766,7 @@ CREATE LOGIN loginName { WITH <option_list1> | FROM WINDOWS }
 
 *login_name* 만들 로그인 이름을 지정합니다. 로그인에는 SQL Server 로그인, Windows 로그인, 인증서 매핑 로그인 및 비대칭 키 매핑 로그인의 네 가지 유형이 있습니다. Windows 도메인 계정에서 매핑된 로그인을 만들 경우 Windows 2000 이전 버전의 사용자 로그온 이름을 [\<domainName>\\<login_name>] 형식으로 사용해야 합니다. login_name@DomainName 형식의 UPN은 사용할 수 없습니다. 이 문서의 뒷부분에 나오는 예 4를 참조하세요. 인증 로그인은 **sysname** 형식이고 [식별자](../../relational-databases/databases/database-identifiers.md)에 대한 규칙을 따라야 하며 ' **\\** '을 포함할 수 없습니다. Windows 로그인은 ' **\\** '를 포함할 수 없습니다. Active Directory 사용자에 기반한 로그인은 21자 미만의 이름으로 제한됩니다.
 
-PASSWORD **='** _password_ ' SQL Server 로그인에만 적용됩니다. 만들 로그인의 암호를 지정합니다. 강력한 암호를 사용하세요. 자세한 내용은 [강력한 암호](../../relational-databases/security/strong-passwords.md) 및 [암호 정책](../../relational-databases/security/password-policy.md)을 참조하세요. SQL Server 2012(11.x)부터 저장된 암호 정보는 솔트 암호의 SHA-512를 사용하여 계산됩니다.
+PASSWORD **='** _password_' SQL Server 로그인에만 적용됩니다. 만들 로그인의 암호를 지정합니다. 강력한 암호를 사용하세요. 자세한 내용은 [강력한 암호](../../relational-databases/security/strong-passwords.md) 및 [암호 정책](../../relational-databases/security/password-policy.md)을 참조하세요. SQL Server 2012(11.x)부터 저장된 암호 정보는 솔트 암호의 SHA-512를 사용하여 계산됩니다.
 
 암호는 대소문자를 구분합니다. 암호의 길이는 항상 8자 이상이어야 하며 128자를 초과할 수 없습니다. 암호에는 a-z, A-Z, 0-9 및 영숫자가 아닌 대부분의 문자를 포함할 수 있습니다. 암호는 홑따옴표 또는 *login_name* 을 포함할 수 없습니다.
 

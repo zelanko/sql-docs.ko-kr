@@ -10,13 +10,13 @@ ms.technology: install
 ms.topic: conceptual
 author: randomnote1
 ms.author: dareist
-monikerRange: '>=sql-server-2016||=sqlallproducts-allversions'
-ms.openlocfilehash: 5a9770cd648fe804ee973878adee27b2d55080d0
-ms.sourcegitcommit: 2f868a77903c1f1c4cecf4ea1c181deee12d5b15
+monikerRange: '>=sql-server-2016'
+ms.openlocfilehash: 7fb3e4847bef4b14fe7ce68b800b9cc8e95a5a64
+ms.sourcegitcommit: 3bd188e652102f3703812af53ba877cce94b44a9
 ms.translationtype: HT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 10/02/2020
-ms.locfileid: "91671066"
+ms.lasthandoff: 12/15/2020
+ms.locfileid: "97489567"
 ---
 # <a name="install-sql-server-with-powershell-desired-state-configuration"></a>PowerShell Desired State Configuration을 사용하여 SQL Server 설치
 
@@ -44,7 +44,7 @@ SQL Server 설치 인터페이스를 통해 별생각 없이 같은 단추를 �
 
 ## <a name="install-the-sqlserverdsc-dsc-resource"></a>SqlServerDsc DSC 리소스 설치
 
-[Install-Module](/powershell/module/powershellget/Install-Module?view=powershell-5.1) cmdlet을 사용하여 [PowerShell 갤러리](https://www.powershellgallery.com/)에서 [SqlServerDsc](https://www.powershellgallery.com/packages/SqlServerDsc) DSC 리소스를 다운로드합니다. 
+[Install-Module](/powershell/module/powershellget/Install-Module?view=powershell-5.1&preserve-view=true) cmdlet을 사용하여 [PowerShell 갤러리](https://www.powershellgallery.com/)에서 [SqlServerDsc](https://www.powershellgallery.com/packages/SqlServerDsc) DSC 리소스를 다운로드합니다. 
 
 > [!NOTE]
 > 모듈을 설치하려면 PowerShell이 **관리자 권한으로** 실행되고 있는지 확인하세요.
@@ -104,7 +104,7 @@ WindowsFeature 'NetFramework45'
 
 **SqlSetup** 리소스는 SQL Server 설치 방법을 DSC에 알려주는 데 사용됩니다. 기본 설치에 필요한 매개 변수는 다음과 같습니다.
 
-- **InstanceName**. 인스턴스의 이름입니다. 기본 인스턴스의 경우 **MSSQLSERVER**를 사용합니다.
+- **InstanceName**. 인스턴스의 이름입니다. 기본 인스턴스의 경우 **MSSQLSERVER** 를 사용합니다.
 - **기능**. 설치할 기능입니다. 이 예제에서는 **SQLEngine** 기능만 설치합니다.
 - **SourcePath**. SQL 설치 미디어의 경로입니다. 이 예제에서는 `C:\SQL2017`에서 SQL 설치 미디어에 저장하겠습니다. 네트워크 공유는 서버에서 사용되는 공간을 최소화할 수 있습니다.
 - **SQLSysAdminAccounts**. **sysadmin** 역할의 구성원이 될 사용자 또는 그룹입니다. 이 예제에서는 로컬 관리자 그룹 **sysadmin** 액세스 권한을 부여하겠습니다. 
@@ -112,9 +112,9 @@ WindowsFeature 'NetFramework45'
 > [!NOTE]
 > 높은 수준의 보안 환경에서는 이 구성을 권장하지 않습니다.
 
-**SqlSetup**에서 사용할 수 있는 매개 변수의 전체 목록과 설명은 [SqlServerDsc GitHub 리포지토리](https://github.com/PowerShell/SqlServerDsc/tree/master#sqlsetup)에서 확인할 수 있습니다.
+**SqlSetup** 에서 사용할 수 있는 매개 변수의 전체 목록과 설명은 [SqlServerDsc GitHub 리포지토리](https://github.com/PowerShell/SqlServerDsc/tree/master#sqlsetup)에서 확인할 수 있습니다.
 
-**SqlSetup** 리소스는 SQL Server만 설치하고 적용된 설정은 유지 관리하지 **않습니다**. 설치 시 **SQLSysAdminAccounts**가 지정된 경우를 예로 들 수 있습니다. 관리자는 **sysadmin** 역할에 로그인을 추가하거나 로그인을 제거할 수 있습니다. 그러나 **SqlSetup** 리소스는 영향을 받지 않습니다. DSC에서 **sysadmin** 역할의 멤버 자격을 적용하려면 [SqlServerRole](https://github.com/PowerShell/SqlServerDsc/tree/master#sqlserverrole) 리소스를 사용합니다.
+**SqlSetup** 리소스는 SQL Server만 설치하고 적용된 설정은 유지 관리하지 **않습니다**. 설치 시 **SQLSysAdminAccounts** 가 지정된 경우를 예로 들 수 있습니다. 관리자는 **sysadmin** 역할에 로그인을 추가하거나 로그인을 제거할 수 있습니다. 그러나 **SqlSetup** 리소스는 영향을 받지 않습니다. DSC에서 **sysadmin** 역할의 멤버 자격을 적용하려면 [SqlServerRole](https://github.com/PowerShell/SqlServerDsc/tree/master#sqlserverrole) 리소스를 사용합니다.
 
 #### <a name="finish-configuration"></a>구성 완료
 
@@ -159,7 +159,7 @@ Configuration SQLInstall
 SQLInstall
 ```
 
-**SQLInstall**라는 디렉터리는 작업 디렉터리에서 만들어집니다. **localhost.mof**라는 파일이 포함되어 있습니다. 컴파일된 DSC 구성을 보여주는 MOF의 콘텐츠를 검토합니다.
+**SQLInstall** 라는 디렉터리는 작업 디렉터리에서 만들어집니다. **localhost.mof** 라는 파일이 포함되어 있습니다. 컴파일된 DSC 구성을 보여주는 MOF의 콘텐츠를 검토합니다.
 
 ### <a name="deploy-the-configuration"></a>구성 배포
 
@@ -174,13 +174,13 @@ SQL Server의 DSC 배포를 시작하려면 **Start-DscConfiguration** cmdlet을
 Start-DscConfiguration -Path C:\SQLInstall -Wait -Force -Verbose
 ```
 
-구성이 적용되면 자세한 정보 출력이 현재 상황을 보여줍니다. 오류(빨간색 텍스트)가 throw되지 않는 한 **Operation 'Invoke CimMethod' complete**가 화면에 나타나면 SQL Server 를 설치해야 합니다.
+구성이 적용되면 자세한 정보 출력이 현재 상황을 보여줍니다. 오류(빨간색 텍스트)가 throw되지 않는 한 **Operation 'Invoke CimMethod' complete** 가 화면에 나타나면 SQL Server 를 설치해야 합니다.
 
 ## <a name="validate-installation"></a>설치 유효성 검사
 
 ### <a name="dsc"></a>DSC
 
-[Test-DscConfiguration](/powershell/module/psdesiredstateconfiguration/test-dscconfiguration) cmdlet은 서버의 현재 상태가 원하는 상태를 충족하는지 확인할 수 있습니다. 이 경우 SQL Server 설치입니다. **Test-DscConfiguration**의 결과는 **True**이어야 합니다.
+[Test-DscConfiguration](/powershell/module/psdesiredstateconfiguration/test-dscconfiguration) cmdlet은 서버의 현재 상태가 원하는 상태를 충족하는지 확인할 수 있습니다. 이 경우 SQL Server 설치입니다. **Test-DscConfiguration** 의 결과는 **True** 이어야 합니다.
 
 ```PowerShell
 PS C:\> Test-DscConfiguration

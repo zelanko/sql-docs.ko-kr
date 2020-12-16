@@ -14,13 +14,13 @@ helpviewer_keywords:
 ms.assetid: c1ef96f1-290d-4952-8369-2f49f27afee2
 author: MightyPen
 ms.author: genemi
-monikerRange: =azuresqldb-current||>=sql-server-2016||=sqlallproducts-allversions||>=sql-server-linux-2017||=azuresqldb-mi-current
-ms.openlocfilehash: 8e484cfef4f805f1456101ad966ddf64912daca5
-ms.sourcegitcommit: 4d370399f6f142e25075b3714e5c2ce056b1bfd0
+monikerRange: =azuresqldb-current||>=sql-server-2016||>=sql-server-linux-2017||=azuresqldb-mi-current
+ms.openlocfilehash: 5159591eeafc76ca16fde95f8a7b9789acc084e1
+ms.sourcegitcommit: 1a544cf4dd2720b124c3697d1e62ae7741db757c
 ms.translationtype: HT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 10/09/2020
-ms.locfileid: "91867188"
+ms.lasthandoff: 12/14/2020
+ms.locfileid: "97485315"
 ---
 # <a name="determining-if-a-table-or-stored-procedure-should-be-ported-to-in-memory-oltp"></a>메모리 내 OLTP에 테이블 또는 저장 프로시저를 이식해야 하는지 확인
 [!INCLUDE [SQL Server Azure SQL Database](../../includes/applies-to-version/sql-asdb.md)]
@@ -40,10 +40,10 @@ ms.locfileid: "91867188"
     > [!IMPORTANT]  
     >  데이터베이스 시스템의 성능은 다양한 요소에 따라 달라지며 트랜잭션 성능 수집기 중 일부는 관찰하고 측정하지 못할 수도 있습니다. 따라서 트랜잭션 성능 분석 보고서는 실제 성능 향상 정도가 어떠한 예측과도 일치한다고 보증하지 않습니다.  
   
- 트랜잭션 성능 분석 보고서 및 마이그레이션 관리자는 [!INCLUDE[ssCurrent](../../includes/sscurrent-md.md)]을 설치 시 **관리 도구-기본** 또는 **관리 도구-고급**을 선택하거나 [SQL Server Management Studio를 다운로드](../../ssms/download-sql-server-management-studio-ssms.md)할 때 SSMS(SQL Server Management Studio)의 일부로 설치됩니다.    
+ 트랜잭션 성능 분석 보고서 및 마이그레이션 관리자는 [!INCLUDE[ssCurrent](../../includes/sscurrent-md.md)]을 설치 시 **관리 도구-기본** 또는 **관리 도구-고급** 을 선택하거나 [SQL Server Management Studio를 다운로드](../../ssms/download-sql-server-management-studio-ssms.md)할 때 SSMS(SQL Server Management Studio)의 일부로 설치됩니다.    
   
 ## <a name="transaction-performance-analysis-reports"></a>트랜잭션 성능 분석 보고서  
- 데이터베이스를 마우스 오른쪽 단추로 클릭하고 **보고서** 를 선택한 후 **표준 보고서**를 선택하고 **트랜잭션 성능 분석 개요**를 선택하여 **개체 탐색기**에 트랜잭션 성능 분석 보고서를 생성할 수 있습니다. 의미 있는 분석 보고서를 생성하려면 데이터베이스에 활성 작업이 있거나 최근에 작업이 실행되어야 합니다.  
+ 데이터베이스를 마우스 오른쪽 단추로 클릭하고 **보고서** 를 선택한 후 **표준 보고서** 를 선택하고 **트랜잭션 성능 분석 개요** 를 선택하여 **개체 탐색기** 에 트랜잭션 성능 분석 보고서를 생성할 수 있습니다. 의미 있는 분석 보고서를 생성하려면 데이터베이스에 활성 작업이 있거나 최근에 작업이 실행되어야 합니다.  
   
 ### <a name="tables"></a>테이블
   
@@ -108,7 +108,7 @@ ms.locfileid: "91867188"
   
 **UI 명령을 사용하여 마이그레이션 검사 목록을 생성하려면**  
   
-1.  **개체 탐색기**에서 시스템 데이터베이스가 아닌 데이터베이스를 마우스 오른쪽 단추로 클릭하고 **태스크**클릭한 후 **메모리 내 OLTP 마이그레이션 검사 목록 생성**을 클릭합니다.  
+1.  **개체 탐색기** 에서 시스템 데이터베이스가 아닌 데이터베이스를 마우스 오른쪽 단추로 클릭하고 **태스크** 클릭한 후 **메모리 내 OLTP 마이그레이션 검사 목록 생성** 을 클릭합니다.  
   
 2.  메모리 내 OLTP 마이그레이션 검사 목록 생성 대화 상자에서 다음을 클릭하여 **검사 목록 생성 옵션 구성** 페이지로 이동합니다. 이 페이지에서 다음을 수행합니다.  
   
@@ -122,13 +122,13 @@ ms.locfileid: "91867188"
   
 3.  **다음** 을 클릭하고 작업 목록이 **검사 목록 생성 옵션 구성** 페이지의 설정과 일치하는지 확인합니다.  
   
-4.  **종료**를 클릭한 후 선택한 개체에 대해서만 마이그레이션 검사 목록 보고서가 생성되었는지 확인합니다.  
+4.  **종료** 를 클릭한 후 선택한 개체에 대해서만 마이그레이션 검사 목록 보고서가 생성되었는지 확인합니다.  
 
  메모리 최적화 관리자 도구 및 네이티브 컴파일 관리자 도구에서 생성된 보고서와 비교하여 보고서의 정확성을 확인합니다. 자세한 내용은 [Memory Optimization Advisor](../../relational-databases/in-memory-oltp/memory-optimization-advisor.md) 및 [Native Compilation Advisor](../../relational-databases/in-memory-oltp/native-compilation-advisor.md)를 참조하세요.  
   
 **SQL Server PowerShell을 사용하여 마이그레이션 검사 목록을 생성하려면**  
   
-1.  **개체 탐색기**에서 데이터베이스를 클릭한 다음 **PowerShell 시작**을 클릭합니다. 다음과 같은 메시지가 표시되는지 확인합니다.  
+1.  **개체 탐색기** 에서 데이터베이스를 클릭한 다음 **PowerShell 시작** 을 클릭합니다. 다음과 같은 메시지가 표시되는지 확인합니다.  
   
     ```  
     PS SQLSERVER: \SQL\{Instance Name}\DEFAULT\Databases\{two-part DB Name}>  

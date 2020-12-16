@@ -11,14 +11,14 @@ ms.prod: sql
 ms.technology: linux
 ms.prod_service: linux
 ms.assetid: 82737f18-f5d6-4dce-a255-688889fdde69
-moniker: '>= sql-server-linux-2017 || >= sql-server-2017 || =sqlallproducts-allversions'
+monikerRange: '>= sql-server-linux-2017 || >= sql-server-2017'
 zone_pivot_groups: cs1-command-shell
-ms.openlocfilehash: 8e87ca7630fca5e72daf2a3e4eedfd38d50482fd
-ms.sourcegitcommit: 22102f25db5ccca39aebf96bc861c92f2367c77a
+ms.openlocfilehash: 94ca368b7eaf9b9ad37107c01eb84e239d5fb3c0
+ms.sourcegitcommit: 3bd188e652102f3703812af53ba877cce94b44a9
 ms.translationtype: HT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 10/16/2020
-ms.locfileid: "92115666"
+ms.lasthandoff: 12/15/2020
+ms.locfileid: "97490033"
 ---
 # <a name="quickstart-run-sql-server-container-images-with-docker"></a>빠른 시작: Docker에서 SQL Server 컨테이너 이미지 실행
 [!INCLUDE [SQL Server - Linux](../includes/applies-to-version/sql-linux.md)]
@@ -29,22 +29,22 @@ ms.locfileid: "92115666"
 <!--SQL Server 2017 on Linux-->
 ::: moniker range="= sql-server-linux-2017 || = sql-server-2017"
 
-이 빠른 시작에서 Docker를 사용하여 SQL Server 2017 컨테이너 이미지인 [mssql-server-linux](https://hub.docker.com/_/microsoft-mssql-server)를 끌어와 실행합니다. 그런 다음, **sqlcmd**로 연결하여 첫 번째 데이터베이스를 만들고 쿼리를 실행합니다.
+이 빠른 시작에서 Docker를 사용하여 SQL Server 2017 컨테이너 이미지인 [mssql-server-linux](https://hub.docker.com/_/microsoft-mssql-server)를 끌어와 실행합니다. 그런 다음, **sqlcmd** 로 연결하여 첫 번째 데이터베이스를 만들고 쿼리를 실행합니다.
 
 > [!TIP]
 > SQL Server 2019 컨테이너를 실행하려면 [이 문서의 SQL Server 2019 버전](quickstart-install-connect-docker.md?view=sql-server-linux-ver15)을 참조하세요.
 
 ::: moniker-end
 <!--SQL Server 2019 on Linux-->
-::: moniker range=">= sql-server-linux-ver15 || >= sql-server-ver15 || =sqlallproducts-allversions"
+::: moniker range=">= sql-server-linux-ver15 || >= sql-server-ver15 "
 
 > [!NOTE]
 > SQL Server 2019 CU3부터 Ubuntu 18.04가 지원됩니다.
 
-이 빠른 시작에서 Docker를 사용하여 SQL Server 2019 컨테이너 이미지인 [mssql-server](https://hub.docker.com/r/microsoft/mssql-server)를 끌어와 실행합니다. 그런 다음, **sqlcmd**로 연결하여 첫 번째 데이터베이스를 만들고 쿼리를 실행합니다.
+이 빠른 시작에서 Docker를 사용하여 SQL Server 2019 컨테이너 이미지인 [mssql-server](https://hub.docker.com/r/microsoft/mssql-server)를 끌어와 실행합니다. 그런 다음, **sqlcmd** 로 연결하여 첫 번째 데이터베이스를 만들고 쿼리를 실행합니다.
 
 > [!TIP]
-> 이 빠른 시작에서는 SQL Server 2019 컨테이너를 만듭니다. SQL Server 2017 컨테이너를 만들려는 경우 [이 문서의 SQL Server 2017 버전](quickstart-install-connect-docker.md?view=sql-server-linux-2017)을 참조하세요.
+> 이 빠른 시작에서는 SQL Server 2019 컨테이너를 만듭니다. SQL Server 2017 컨테이너를 만들려는 경우 [이 문서의 SQL Server 2017 버전](quickstart-install-connect-docker.md?view=sql-server-linux-2017&preserve-view=true)을 참조하세요.
 
 ::: moniker-end
 
@@ -171,7 +171,7 @@ any changes to one section should be duplicated in the other-->
 
    ![Docker ps 명령 출력](./media/sql-server-linux-setup-docker/docker-ps-command.png)
 
-4. **상태** 열이 **Up**의 상태를 표시하는 경우, SQL Server는 컨테이너에서 실행되며 **포트** 열의 지정된 포트에서 수신 대기합니다. SQL Server 컨테이너의 **상태** 열이 **Exited**를 표시하는 경우, [구성 가이드의 문제 해결 섹션](./sql-server-linux-docker-container-troubleshooting.md)을 참조하세요.
+4. **상태** 열이 **Up** 의 상태를 표시하는 경우, SQL Server는 컨테이너에서 실행되며 **포트** 열의 지정된 포트에서 수신 대기합니다. SQL Server 컨테이너의 **상태** 열이 **Exited** 를 표시하는 경우, [구성 가이드의 문제 해결 섹션](./sql-server-linux-docker-container-troubleshooting.md)을 참조하세요.
 
 위에서 설명한 것처럼 `-h`(호스트 이름) 매개 변수는 컨테이너의 내부 이름을 사용자 지정 값으로 변경합니다. 이 값은 다음 Transact SQL 쿼리에서 반환되는 이름입니다.
 
@@ -190,7 +190,7 @@ SELECT @@SERVERNAME,
 <!--End of 2017 "Pull and run" section-->
 
 <!--This is the 2019 version of the "Pull and run" section-->
-::: moniker range=">= sql-server-linux-ver15 || >= sql-server-ver15 || =sqlallproducts-allversions"
+::: moniker range=">= sql-server-linux-ver15 || >= sql-server-ver15 "
 
 ## <a name="pull-and-run-the-2019-container-image"></a><a id="pullandrun2019"></a> 2019 컨테이너 이미지를 끌어와 실행
 
@@ -221,7 +221,7 @@ SELECT @@SERVERNAME,
    ::: zone-end
 
    > [!TIP]
-   > 이 빠른 시작에서는 SQL Server 2019 Docker 이미지를 사용합니다. SQL Server 2017 이미지를 실행하려면 [이 문서의 SQL Server 2017 버전](quickstart-install-connect-docker.md?view=sql-server-linux-2017#pullandrun2017)을 참조하세요.
+   > 이 빠른 시작에서는 SQL Server 2019 Docker 이미지를 사용합니다. SQL Server 2017 이미지를 실행하려면 [이 문서의 SQL Server 2017 버전](quickstart-install-connect-docker.md?view=sql-server-linux-2017&preserve-view=true#pullandrun2017)을 참조하세요.
 
    이전 명령은 Ubuntu를 기반으로 하는 SQL Server 2019 컨테이너 이미지를 끌어옵니다. RedHat을 기반으로 하는 컨테이너 이미지를 대신 사용하려면 [RHEL 기반 컨테이너 이미지 실행](./sql-server-linux-docker-container-deployment.md#rhel)을 참조하세요. 사용 가능한 모든 이미지를 보려면 [mssql-server-linux Docker 허브 페이지](https://hub.docker.com/_/microsoft-mssql-server)를 참조하세요.
 
@@ -295,7 +295,7 @@ SELECT @@SERVERNAME,
 
    ![Docker ps 명령 출력](./media/sql-server-linux-setup-docker/docker-ps-command.png)
 
-4. **상태** 열이 **Up**의 상태를 표시하는 경우, SQL Server는 컨테이너에서 실행되며 **포트** 열의 지정된 포트에서 수신 대기합니다. SQL Server 컨테이너의 **상태** 열이 **Exited**를 표시하는 경우, [SQL Server Docker 컨테이너 문제 해결](sql-server-linux-docker-container-troubleshooting.md)을 참조하세요.
+4. **상태** 열이 **Up** 의 상태를 표시하는 경우, SQL Server는 컨테이너에서 실행되며 **포트** 열의 지정된 포트에서 수신 대기합니다. SQL Server 컨테이너의 **상태** 열이 **Exited** 를 표시하는 경우, [SQL Server Docker 컨테이너 문제 해결](sql-server-linux-docker-container-troubleshooting.md)을 참조하세요.
 
 위에서 설명한 것처럼 `-h`(호스트 이름) 매개 변수는 컨테이너의 내부 이름을 사용자 지정 값으로 변경합니다. 이렇게 하면 컨테이너의 내부 이름이 사용자 지정 값으로 변경됩니다. 이 값은 다음 Transact SQL 쿼리에서 반환되는 이름입니다.
 
@@ -325,7 +325,7 @@ SELECT @@SERVERNAME,
 
 1. SA 사용자에게 사용할 강력한 암호를 선택합니다.
 
-1. `docker exec`를 사용하여 **sqlcmd**를 실행하고 Transact-SQL을 사용하여 암호를 변경합니다. 다음 예제에서는 이전 암호 `<YourStrong!Passw0rd>`와 새 암호 `<YourNewStrong!Passw0rd>`를 사용자 고유의 암호 값으로 바꿉니다.
+1. `docker exec`를 사용하여 **sqlcmd** 를 실행하고 Transact-SQL을 사용하여 암호를 변경합니다. 다음 예제에서는 이전 암호 `<YourStrong!Passw0rd>`와 새 암호 `<YourNewStrong!Passw0rd>`를 사용자 고유의 암호 값으로 바꿉니다.
 
    ::: zone pivot="cs1-bash"
    ```bash
@@ -470,9 +470,9 @@ SELECT @@SERVERNAME,
 
 SQL 연결을 지원하는 모든 외부 Linux, Windows 또는 macOS 도구에서 Docker 컴퓨터에 있는 SQL Server 인스턴스에 연결할 수 있습니다.
 
-다음 단계는 컨테이너에서 실행 중인 SQL Server에 연결하기 위해 컨테이너 외부에서 **sqlcmd**를 사용합니다. 이러한 단계는 컨테이너의 외부에 설치된 SQL Server 명령줄 도구가 이미 있다고 가정합니다. 다른 도구를 사용하는 경우에도 동일한 보안 주체가 적용되지만 연결 프로세스는 도구마다 고유합니다.
+다음 단계는 컨테이너에서 실행 중인 SQL Server에 연결하기 위해 컨테이너 외부에서 **sqlcmd** 를 사용합니다. 이러한 단계는 컨테이너의 외부에 설치된 SQL Server 명령줄 도구가 이미 있다고 가정합니다. 다른 도구를 사용하는 경우에도 동일한 보안 주체가 적용되지만 연결 프로세스는 도구마다 고유합니다.
 
-1. 컨테이너를 호스팅하는 컴퓨터에 대한 IP 주소를 찾습니다. Linux에서 **ifconfig** 또는 **ip 주소**를 사용합니다. Windows에서 **ipconfig**를 사용합니다.
+1. 컨테이너를 호스팅하는 컴퓨터에 대한 IP 주소를 찾습니다. Linux에서 **ifconfig** 또는 **ip 주소** 를 사용합니다. Windows에서 **ipconfig** 를 사용합니다.
 
 1. 이 예제에서는 클라이언트 머신에 **sqlcmd** 도구를 설치합니다. 자세한 내용은 [Windows에서 sqlcmd 설치](../tools/sqlcmd-utility.md) 또는 [Linux에서 sqlcmd 설치](sql-server-linux-setup-tools.md)를 참조하세요.
 

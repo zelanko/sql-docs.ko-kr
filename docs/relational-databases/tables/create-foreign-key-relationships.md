@@ -13,13 +13,13 @@ helpviewer_keywords:
 ms.assetid: 867a54b8-5be4-46e6-9702-49ae6dabf67c
 author: stevestein
 ms.author: sstein
-monikerRange: =azuresqldb-current||>=sql-server-2016||=sqlallproducts-allversions||>=sql-server-linux-2017||=azuresqldb-mi-current
-ms.openlocfilehash: ea3a7bec04dcd7e584d541cf4fa4ccee3cf48915
-ms.sourcegitcommit: 331b8495e4ab37266945c81ff5b93d250bdaa6da
+monikerRange: =azuresqldb-current||>=sql-server-2016||>=sql-server-linux-2017||=azuresqldb-mi-current
+ms.openlocfilehash: fdd110fd51d42ae13054a5d189c1180a9af623ee
+ms.sourcegitcommit: 1a544cf4dd2720b124c3697d1e62ae7741db757c
 ms.translationtype: HT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 08/20/2020
-ms.locfileid: "88645848"
+ms.lasthandoff: 12/14/2020
+ms.locfileid: "97484515"
 ---
 # <a name="create-foreign-key-relationships"></a>외래 키 관계 만들기
 
@@ -56,21 +56,21 @@ ms.locfileid: "88645848"
 
 ### <a name="using-sql-server-management-studio"></a>SQL Server Management Studio 사용
 
-1. 개체 탐색기에서 관계의 외래 키 쪽에 표시할 테이블을 마우스 오른쪽 단추로 클릭하고 **디자인**을 클릭합니다.
+1. 개체 탐색기에서 관계의 외래 키 쪽에 표시할 테이블을 마우스 오른쪽 단추로 클릭하고 **디자인** 을 클릭합니다.
 
    [**테이블 디자이너**](../../ssms/visual-db-tools/design-tables-visual-database-tools.md)에서 테이블이 열립니다.
-2. **테이블 디자이너** 메뉴에서 **관계**를 클릭합니다.
-3. **외래 키 관계** 대화 상자에서 **추가**를 클릭합니다.
+2. **테이블 디자이너** 메뉴에서 **관계** 를 클릭합니다.
+3. **외래 키 관계** 대화 상자에서 **추가** 를 클릭합니다.
 
-   **선택한 관계** 목록에 FK_\<*tablename*>_\<*tablename*> 형식으로 자동 지정된 이름과 함께 관계가 표시됩니다. 여기에서 *tablename*은 외래 키 테이블의 이름입니다.
+   **선택한 관계** 목록에 FK_\<*tablename*>_\<*tablename*> 형식으로 자동 지정된 이름과 함께 관계가 표시됩니다. 여기에서 *tablename* 은 외래 키 테이블의 이름입니다.
 4. **선택한 관계** 목록에서 관계를 클릭합니다.
-5. 오른쪽에 있는 표에서 **테이블 및 열 사양**을 클릭한 다음, 속성의 오른쪽에 있는 줄임표( **…** )를 클릭합니다.
+5. 오른쪽에 있는 표에서 **테이블 및 열 사양** 을 클릭한 다음, 속성의 오른쪽에 있는 줄임표( **…** )를 클릭합니다.
 6. **테이블 및 열** 대화 상자의 **기본 키** 드롭다운 목록에서 관계의 기본 키 쪽에 사용할 테이블을 선택합니다.
 7. 아래 표에서 테이블의 기본 키로 사용할 열을 선택합니다. 각 열 오른쪽에 있는 그리드의 셀에서 외래 키 테이블의 해당 외래 키 열을 선택합니다.
 
    **테이블 디자이너** 에서 관계의 이름이 자동으로 지정됩니다. 이 이름을 변경하려면 **관계 이름** 입력란의 내용을 편집합니다.
 8. **확인** 을 선택하여 관계를 만듭니다.
-9. 테이블 디자이너 창을 닫고 외래 키 관계 변경 내용이 적용되도록 **저장**합니다.
+9. 테이블 디자이너 창을 닫고 외래 키 관계 변경 내용이 적용되도록 **저장** 합니다.
 
 ## <a name="create-a-foreign-key-in-a-new-table"></a>새 테이블에서 외래 키 만들기
 

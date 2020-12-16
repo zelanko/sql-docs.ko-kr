@@ -12,13 +12,13 @@ helpviewer_keywords:
 ms.assetid: cb93c620-4be9-4362-8bf0-af3f2048bdaf
 author: stevestein
 ms.author: sstein
-monikerRange: =azuresqldb-current||>=sql-server-2016||=sqlallproducts-allversions||>=sql-server-linux-2017||=azuresqldb-mi-current
-ms.openlocfilehash: c4a39dcf3f4d9023b85d05a5368a979a8dc1ee5e
-ms.sourcegitcommit: e700497f962e4c2274df16d9e651059b42ff1a10
+monikerRange: =azuresqldb-current||>=sql-server-2016||>=sql-server-linux-2017||=azuresqldb-mi-current
+ms.openlocfilehash: ec0ced044ba6405d36f53bed4a42f17b57e7d342
+ms.sourcegitcommit: 1a544cf4dd2720b124c3697d1e62ae7741db757c
 ms.translationtype: HT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 08/17/2020
-ms.locfileid: "88428495"
+ms.lasthandoff: 12/14/2020
+ms.locfileid: "97485425"
 ---
 # <a name="hash-warning-event-class"></a>Hash Warning 이벤트 클래스
 [!INCLUDE [SQL Server - ASDB](../../includes/applies-to-version/sql-asdb.md)]
@@ -44,7 +44,7 @@ ms.locfileid: "88428495"
 >  *유예 해시 조인* 및 *재귀 해시 조인* 도 해시 재귀 한도 초과와 관련이 있는 용어입니다.  
   
 > [!IMPORTANT]  
->  쿼리 최적화 프로그램이 실행 계획을 생성할 때 Hash Warning 이벤트가 발생하는 위치를 확인하려면 추적에서 Showplan 이벤트 클래스도 수집해야 합니다. 노드 ID를 반환하지 않는 Showplan Text 및 Showplan Text (Unencoded) 이벤트 클래스를 제외한 모든 Showplan 이벤트 클래스를 선택할 수 있습니다. 실행 계획의 노드 ID는 쿼리 최적화 프로그램이 쿼리 실행 계획을 생성할 때 수행하는 각 연산을 식별합니다. 이러한 연산을 *연산자*라고 하며 실행 계획의 각 연산자에는 노드 ID가 있습니다. Hash Warning 이벤트의 ObjectID 열은 실행 계획의 노드 ID에 해당하므로 오류가 발생하는 연산자, 즉 연산을 확인할 수 있습니다.  
+>  쿼리 최적화 프로그램이 실행 계획을 생성할 때 Hash Warning 이벤트가 발생하는 위치를 확인하려면 추적에서 Showplan 이벤트 클래스도 수집해야 합니다. 노드 ID를 반환하지 않는 Showplan Text 및 Showplan Text (Unencoded) 이벤트 클래스를 제외한 모든 Showplan 이벤트 클래스를 선택할 수 있습니다. 실행 계획의 노드 ID는 쿼리 최적화 프로그램이 쿼리 실행 계획을 생성할 때 수행하는 각 연산을 식별합니다. 이러한 연산을 *연산자* 라고 하며 실행 계획의 각 연산자에는 노드 ID가 있습니다. Hash Warning 이벤트의 ObjectID 열은 실행 계획의 노드 ID에 해당하므로 오류가 발생하는 연산자, 즉 연산을 확인할 수 있습니다.  
   
 ## <a name="hash-warning-event-class-data-columns"></a>Hash Warning 이벤트 클래스 데이터 열  
   

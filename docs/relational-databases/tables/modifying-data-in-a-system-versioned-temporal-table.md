@@ -11,13 +11,13 @@ ms.topic: conceptual
 ms.assetid: 5f398470-c531-47b5-84d5-7c67c27df6e5
 author: markingmyname
 ms.author: maghan
-monikerRange: =azuresqldb-current||>=sql-server-2016||=sqlallproducts-allversions||>=sql-server-linux-2017||=azuresqldb-mi-current
-ms.openlocfilehash: f6c431669d89f87c49cfd96d48e6b3c53c8d866e
-ms.sourcegitcommit: dd36d1cbe32cd5a65c6638e8f252b0bd8145e165
+monikerRange: =azuresqldb-current||>=sql-server-2016||>=sql-server-linux-2017||=azuresqldb-mi-current
+ms.openlocfilehash: 7acb5296f5cfcefd5c39c9ceb643a1076c11bfbd
+ms.sourcegitcommit: 1a544cf4dd2720b124c3697d1e62ae7741db757c
 ms.translationtype: HT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 09/08/2020
-ms.locfileid: "89548879"
+ms.lasthandoff: 12/14/2020
+ms.locfileid: "97484475"
 ---
 # <a name="modifying-data-in-a-system-versioned-temporal-table"></a>시스템 버전 관리 temporal 테이블의 데이터 수정
 
@@ -29,7 +29,7 @@ ms.locfileid: "89548879"
 
 ## <a name="inserting-data"></a>데이터 삽입
 
-새 데이터를 삽입하면, **HIDDEN** 이(가) 아니면 **PERIOD**열을 설명해야 합니다. 시스템 버전 temporal 테이블로 파티션 전환을 사용할 수도 있습니다.
+새 데이터를 삽입하면, **HIDDEN** 이(가) 아니면 **PERIOD** 열을 설명해야 합니다. 시스템 버전 temporal 테이블로 파티션 전환을 사용할 수도 있습니다.
 
 ### <a name="insert-new-data-with-visible-period-columns"></a>표시되는 기간 열을 사용하여 새 데이터 삽입
 
@@ -53,7 +53,7 @@ ms.locfileid: "89548879"
          ) ;
    ```
 
-- **INSERT** 문의 열 목록에 **PERIOD** 열을 지정하면 해당 값으로 **DEFAULT**를 지정해야 합니다.
+- **INSERT** 문의 열 목록에 **PERIOD** 열을 지정하면 해당 값으로 **DEFAULT** 를 지정해야 합니다.
 
   ```sql
   INSERT INTO [dbo].[Department]
@@ -153,7 +153,7 @@ SWITCH TO [dbo].[Department] PARTITION 2;
 
 ## <a name="updating-data"></a>데이터 업데이트
 
-일반 **UPDATE** 문으로 현재 테이블의 데이터를 업데이트합니다. 기록 테이블의 현재 테이블 데이터를 "oops" 시나리오용으로 업데이트할 수 있습니다. 하지만 **PERIOD** 열을 업데이트할 수 없으며 **SYSTEM_VERSIONING = ON**상태에서 기록 테이블의 데이터를 직접 업데이트할 수 없습니다.
+일반 **UPDATE** 문으로 현재 테이블의 데이터를 업데이트합니다. 기록 테이블의 현재 테이블 데이터를 "oops" 시나리오용으로 업데이트할 수 있습니다. 하지만 **PERIOD** 열을 업데이트할 수 없으며 **SYSTEM_VERSIONING = ON** 상태에서 기록 테이블의 데이터를 직접 업데이트할 수 없습니다.
 
 **SYSTEM_VERSIONING = OFF** 를 설정하고 현재 및 기록 테이블의 행을 업데이트합니다. 다만 시스템에 변경 기록이 보존되지 않는다는 것에 유의합니다.
 
@@ -178,7 +178,7 @@ Cannot update GENERATED ALWAYS columns in table 'TmpDev.dbo.Department'.
 
 ### <a name="updating-the-current-table-from-the-history-table"></a>기록 테이블에서 현재 테이블 업데이트
 
-현재 테이블에 **UPDATE**를 사용하여 실제 행 상태를 과거 특정 지점의 유효한 상태로 되돌릴 수 있습니다("마지막으로 알려진 행 버전"으로 되돌리기). 다음 예제에서는 기록 테이블의 값으로, DeptID = 10인 2015-04-25으로 되돌리는 것을 보여줍니다.
+현재 테이블에 **UPDATE** 를 사용하여 실제 행 상태를 과거 특정 지점의 유효한 상태로 되돌릴 수 있습니다("마지막으로 알려진 행 버전"으로 되돌리기). 다음 예제에서는 기록 테이블의 값으로, DeptID = 10인 2015-04-25으로 되돌리는 것을 보여줍니다.
 
 ```sql
 UPDATE Department
@@ -191,7 +191,7 @@ AND Department.DeptID = 10 ;
 
 ## <a name="deleting-data"></a>데이터 삭제
 
-일반 **DELETE** 문으로 현재 테이블의 데이터를 삭제합니다. 삭제된 행의 종료 기간 열은 기본 트랜잭션의 시작 시간으로 채워집니다. **SYSTEM_VERSIONING = ON**상태이면 기록 테이블에서 행을 직접 삭제할 수 없습니다. **SYSTEM_VERSIONING = OFF** 를 설정하고 현재 및 기록 테이블의 행을 삭제합니다. 다만 시스템에 변경 기록이 보존되지 않는다는 것에 유의합니다. 현재 테이블 및**SWITCH PARTITION OUT**, **TRUNCATE** , **SWITCH PARTITION OUT** 은 **SYSTEM_VERSIONING = ON**상태에서는 지원되지 않습니다.
+일반 **DELETE** 문으로 현재 테이블의 데이터를 삭제합니다. 삭제된 행의 종료 기간 열은 기본 트랜잭션의 시작 시간으로 채워집니다. **SYSTEM_VERSIONING = ON** 상태이면 기록 테이블에서 행을 직접 삭제할 수 없습니다. **SYSTEM_VERSIONING = OFF** 를 설정하고 현재 및 기록 테이블의 행을 삭제합니다. 다만 시스템에 변경 기록이 보존되지 않는다는 것에 유의합니다. 현재 테이블 및 **SWITCH PARTITION OUT**, **TRUNCATE** , **SWITCH PARTITION OUT** 은 **SYSTEM_VERSIONING = ON** 상태에서는 지원되지 않습니다.
 
 ## <a name="using-merge-to-modify-data-in-temporal-table"></a>MERGE를 사용하여 temporal 테이블의 데이터 수정
 

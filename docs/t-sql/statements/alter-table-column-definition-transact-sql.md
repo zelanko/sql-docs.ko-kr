@@ -21,13 +21,13 @@ helpviewer_keywords:
 ms.assetid: a1742649-ca29-4d9b-9975-661cdbf18f78
 author: markingmyname
 ms.author: maghan
-monikerRange: =azuresqldb-current||>=sql-server-2016||=sqlallproducts-allversions||>=sql-server-linux-2017||=azuresqldb-mi-current
-ms.openlocfilehash: 28472efd6747239910630388133bdfe3ca95a6a0
-ms.sourcegitcommit: dd36d1cbe32cd5a65c6638e8f252b0bd8145e165
+monikerRange: =azuresqldb-current||>=sql-server-2016||>=sql-server-linux-2017||=azuresqldb-mi-current
+ms.openlocfilehash: f4ff1708cf4c3986a90aff1b4c8048879bf0658e
+ms.sourcegitcommit: 3bd188e652102f3703812af53ba877cce94b44a9
 ms.translationtype: HT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 09/08/2020
-ms.locfileid: "89547809"
+ms.lasthandoff: 12/15/2020
+ms.locfileid: "97489480"
 ---
 # <a name="alter-table-column_definition-transact-sql"></a>ALTER TABLE column_definition(Transact-SQL)
 [!INCLUDE [sql-asdb-asdbmi](../../includes/applies-to-version/sql-asdb-asdbmi.md)]
@@ -85,12 +85,12 @@ column_name <data_type>
 
 ## <a name="arguments"></a>인수
  *column_name*  
- 변경, 추가 또는 삭제할 열의 이름입니다. *column_name*은 1~128자로 구성될 수 있습니다. 새 열의 경우 타임스탬프 데이터 형식으로 만들어진 *column_name*을 생략할 수 있습니다. **타임스탬프** 데이터 형식 열에 대해 *column_name*이 지정되지 않으면 **타임스탬프**가 이름으로 사용됩니다.  
+ 변경, 추가 또는 삭제할 열의 이름입니다. *column_name* 은 1~128자로 구성될 수 있습니다. 새 열의 경우 타임스탬프 데이터 형식으로 만들어진 *column_name* 을 생략할 수 있습니다. **타임스탬프** 데이터 형식 열에 대해 *column_name* 이 지정되지 않으면 **타임스탬프** 가 이름으로 사용됩니다.  
   
  [ _type_schema_name_ **.** ] *type_name*  
  추가된 열 및 해당 열이 속한 스키마의 데이터 형식입니다.  
   
- *type_name*은 다음과 같을 수 있습니다.  
+ *type_name* 은 다음과 같을 수 있습니다.  
   
 -   [!INCLUDE[msCoName](../../includes/msconame-md.md)][!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 시스템 데이터 형식.  
   
@@ -98,7 +98,7 @@ column_name <data_type>
   
 -   [!INCLUDE[msCoName](../../includes/msconame-md.md)] [!INCLUDE[dnprdnshort](../../includes/dnprdnshort-md.md)] 사용자 정의 형식 및 이 형식이 속한 스키마. [!INCLUDE[dnprdnshort](../../includes/dnprdnshort-md.md)] 사용자 정의 형식은 테이블 정의에 사용하기 전에 CREATE TYPE을 사용하여 생성되어야 합니다.  
   
- *type_schema_name*을 지정하지 않으면 [!INCLUDE[msCoName](../../includes/msconame-md.md)] [!INCLUDE[ssDE](../../includes/ssde-md.md)]에서는 다음 순서로 *type_name*을 참조합니다.  
+ *type_schema_name* 을 지정하지 않으면 [!INCLUDE[msCoName](../../includes/msconame-md.md)] [!INCLUDE[ssDE](../../includes/ssde-md.md)]에서는 다음 순서로 *type_name* 을 참조합니다.  
   
 -   [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 시스템 데이터 형식  
   
@@ -116,10 +116,10 @@ column_name <data_type>
  **varchar**, **nvarchar** 및 **varbinary** 데이터 유형에만 적용됩니다. 2^31바이트의 문자 및 이진 데이터와 2^30바이트의 유니코드 데이터를 저장하는 데 사용됩니다.  
   
 **CONTENT**  
- *column_name*에 있는 **xml** 데이터 형식의 각 인스턴스가 여러 개의 최상위 요소를 포함할 수 있도록 지정합니다. CONTENT는 **xml** 데이터 형식에만 적용되며 *xml_schema_collection*도 지정한 경우에만 지정할 수 있습니다. 지정되지 않은 경우 기본 동작은 CONTENT입니다.  
+ *column_name* 에 있는 **xml** 데이터 형식의 각 인스턴스가 여러 개의 최상위 요소를 포함할 수 있도록 지정합니다. CONTENT는 **xml** 데이터 형식에만 적용되며 *xml_schema_collection* 도 지정한 경우에만 지정할 수 있습니다. 지정되지 않은 경우 기본 동작은 CONTENT입니다.  
   
 DOCUMENT  
- *column_name*에 있는 **xml** 데이터 형식의 각 인스턴스가 최상위 요소를 하나만 포함할 수 있도록 지정합니다. DOCUMENT는 **xml** 데이터 형식에만 적용되며 *xml_schema_collection*도 지정한 경우에만 지정할 수 있습니다.  
+ *column_name* 에 있는 **xml** 데이터 형식의 각 인스턴스가 최상위 요소를 하나만 포함할 수 있도록 지정합니다. DOCUMENT는 **xml** 데이터 형식에만 적용되며 *xml_schema_collection* 도 지정한 경우에만 지정할 수 있습니다.  
   
  *xml_schema_collection*  
  **적용 대상**: [!INCLUDE[ssKatmai](../../includes/sskatmai-md.md)] 이상  
@@ -127,7 +127,7 @@ DOCUMENT
  XML 스키마 컬렉션과의 연결을 위해 **xml** 데이터 형식에만 적용됩니다. 스키마에 **xml** 열을 입력하기 전에 먼저 [CREATE XML SCHEMA COLLECTION](../../t-sql/statements/create-xml-schema-collection-transact-sql.md)을 사용하여 데이터베이스에 해당 스키마를 만들어야 합니다.  
   
 FILESTREAM  
- 선택적으로 **varbinary(max)** 의 *type_name*인 열에 대해 FILESTREAM 스토리지 특성을 지정합니다.  
+ 선택적으로 **varbinary(max)** 의 *type_name* 인 열에 대해 FILESTREAM 스토리지 특성을 지정합니다.  
   
  열에 대해 FILESTREAM이 지정된 경우 ROWGUIDCOL 특성을 갖는 **uniqueidentifier** 데이터 형식의 열도 테이블에 있어야 합니다. 이 열은 Null 값을 허용하지 않으며 UNIQUE 또는 PRIMARY KEY 단일 열 제약 조건을 가져야 합니다. 열의 GUID 값은 애플리케이션(데이터가 삽입되는 경우)에 의해 또는 NEWID () 함수를 사용하는 DEFAULT 제약 조건에 의해 제공되어야 합니다.  
   
@@ -148,19 +148,19 @@ COLLATE *collation_name*
  열의 Null 값 허용 여부를 결정합니다. NULL은 엄격하게 말해 제약 조건이 아니지만 NOT NULL처럼 지정할 수 있습니다.  
   
 [ CONSTRAINT *constraint_name* ]  
- DEFAULT 값 정의의 시작을 지정합니다. 이전 버전의 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]와 호환성을 유지하기 위해 DEFAULT에 제약 조건 이름을 할당할 수 있습니다. *constraint_name*은 [식별자](../../relational-databases/databases/database-identifiers.md)에 적용되는 규칙을 따라야 하지만 숫자 기호(#)로 시작될 수 없습니다. *constraint_name*을 지정하지 않으면 시스템 생성 이름이 DEFAULT 정의에 할당됩니다.  
+ DEFAULT 값 정의의 시작을 지정합니다. 이전 버전의 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]와 호환성을 유지하기 위해 DEFAULT에 제약 조건 이름을 할당할 수 있습니다. *constraint_name* 은 [식별자](../../relational-databases/databases/database-identifiers.md)에 적용되는 규칙을 따라야 하지만 숫자 기호(#)로 시작될 수 없습니다. *constraint_name* 을 지정하지 않으면 시스템 생성 이름이 DEFAULT 정의에 할당됩니다.  
   
 DEFAULT  
- 열의 기본값을 지정하는 키워드입니다. DEFAULT 정의를 사용하여 기존 데이터 행에 새 열의 값을 제공할 수 있습니다. DEFAULT 정의는 **timestamp** 열 또는 IDENTITY 속성이 있는 열에는 적용할 수 없습니다. 사용자 정의 형식 열에 대해 기본값을 지정할 경우 *constant_expression*에서 해당 사용자 정의 형식으로 암시적으로 변환할 수 있어야 합니다.  
+ 열의 기본값을 지정하는 키워드입니다. DEFAULT 정의를 사용하여 기존 데이터 행에 새 열의 값을 제공할 수 있습니다. DEFAULT 정의는 **timestamp** 열 또는 IDENTITY 속성이 있는 열에는 적용할 수 없습니다. 사용자 정의 형식 열에 대해 기본값을 지정할 경우 *constant_expression* 에서 해당 사용자 정의 형식으로 암시적으로 변환할 수 있어야 합니다.  
   
 *constant_expression*  
- 기본 열 값으로 사용되는 리터럴 값, NULL, 시스템 함수입니다. [!INCLUDE[dnprdnshort](../../includes/dnprdnshort-md.md)] 사용자 정의 유형으로 정의된 열과 함께 사용할 경우 *constant_expression*에서 사용자 정의 유형으로의 암시적 변환이 지원되어야 합니다.  
+ 기본 열 값으로 사용되는 리터럴 값, NULL, 시스템 함수입니다. [!INCLUDE[dnprdnshort](../../includes/dnprdnshort-md.md)] 사용자 정의 유형으로 정의된 열과 함께 사용할 경우 *constant_expression* 에서 사용자 정의 유형으로의 암시적 변환이 지원되어야 합니다.  
   
 WITH VALUES   
- 열 및 DEFAULT 제약 조건을 추가할 때 열에서 NULLS를 허용하는 경우 기존 행에 WITH VALUES를 사용하면 새 열의 값이 DEFAULT *constant_expression*에 제공된 값으로 설정됩니다. 추가되는 열에서 NULLS를 허용하지 않으면 기존 행의 열 값은 항상 DEFAULT *constant expression*에 제공된 값으로 설정됩니다. SQL Server 2012부터 이 작업은 메타데이터 작업 [온라인 작업으로 null 열을 추가하지 않음](alter-table-transact-sql.md?view=sql-server-2017#adding-not-null-columns-as-an-online-operation)입니다.
+ 열 및 DEFAULT 제약 조건을 추가할 때 열에서 NULLS를 허용하는 경우 기존 행에 WITH VALUES를 사용하면 새 열의 값이 DEFAULT *constant_expression* 에 제공된 값으로 설정됩니다. 추가되는 열에서 NULLS를 허용하지 않으면 기존 행의 열 값은 항상 DEFAULT *constant expression* 에 제공된 값으로 설정됩니다. SQL Server 2012부터 이 작업은 메타데이터 작업 [온라인 작업으로 null 열을 추가하지 않음](alter-table-transact-sql.md#adding-not-null-columns-as-an-online-operation)입니다.
 관련 열이 추가되지 않을 때 이 작업이 사용되면 아무런 영향을 주지 않습니다.
  
- DEFAULT *constant_expression*에 지정된 값이 기존 행에 추가된 새 열에 저장되도록 지정합니다. 추가된 열이 Null 값을 허용하고 WITH VALUES가 지정된 경우 기존 행에 추가된 새 열에 기본값이 저장됩니다. Null을 허용하는 열에 WITH VALUES를 지정하지 않으면 NULL 값은 기존 행의 새 열에 저장됩니다. 새 열이 Null을 허용하지 않으면 WITH VALUES의 지정 여부에 관계없이 새 행에 기본값이 저장됩니다.  
+ DEFAULT *constant_expression* 에 지정된 값이 기존 행에 추가된 새 열에 저장되도록 지정합니다. 추가된 열이 Null 값을 허용하고 WITH VALUES가 지정된 경우 기존 행에 추가된 새 열에 기본값이 저장됩니다. Null을 허용하는 열에 WITH VALUES를 지정하지 않으면 NULL 값은 기존 행의 새 열에 저장됩니다. 새 열이 Null을 허용하지 않으면 WITH VALUES의 지정 여부에 관계없이 새 행에 기본값이 저장됩니다.  
   
 IDENTITY  
  새 열이 ID 열임을 지정합니다. [!INCLUDE[ssDEnoversion](../../includes/ssdenoversion-md.md)]은 열에 고유한 증가값을 제공합니다. 기존 테이블에 ID 열을 추가하면 ID 번호가 테이블의 기존 행에 추가되며 초기값과 증가값이 적용됩니다. 행이 업데이트되는 순서는 보장되지 않습니다. 새로 추가한 모든 행에 대한 ID 열도 생성됩니다.  
@@ -225,7 +225,7 @@ ALGORITHM
 ADD MASKED WITH ( FUNCTION = ' *mask_function* ')  
  **적용 대상**: [!INCLUDE[ssSQL15](../../includes/sssql15-md.md)] 이상, [!INCLUDE[sqldbesa](../../includes/sqldbesa-md.md)].  
   
- 동적 데이터 마스크를 지정합니다. *mask_function*은 적절한 매개 변수를 포함한 마스킹 함수의 이름 입니다. 사용할 수 있는 옵션은 다음과 같습니다.  
+ 동적 데이터 마스크를 지정합니다. *mask_function* 은 적절한 매개 변수를 포함한 마스킹 함수의 이름 입니다. 사용할 수 있는 옵션은 다음과 같습니다.  
   
 -   default()  
   

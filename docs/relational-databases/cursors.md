@@ -19,13 +19,13 @@ helpviewer_keywords:
 ms.assetid: e668b40c-bd4d-4415-850d-20fc4872ee72
 author: rothja
 ms.author: jroth
-monikerRange: =azuresqldb-current||>=sql-server-2016||=sqlallproducts-allversions||>=sql-server-linux-2017||=azuresqldb-mi-current
-ms.openlocfilehash: a26ba9a6d321de5b13277e52829286a4f3cfe13d
-ms.sourcegitcommit: e700497f962e4c2274df16d9e651059b42ff1a10
+monikerRange: =azuresqldb-current||>=sql-server-2016||>=sql-server-linux-2017||=azuresqldb-mi-current
+ms.openlocfilehash: a209c033a9218423e298b54bb04809355c9d0507
+ms.sourcegitcommit: 1a544cf4dd2720b124c3697d1e62ae7741db757c
 ms.translationtype: HT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 08/17/2020
-ms.locfileid: "88465501"
+ms.lasthandoff: 12/14/2020
+ms.locfileid: "97485535"
 ---
 # <a name="sql-server-cursors"></a>SQL Server 커서
 [!INCLUDE [SQL Server Azure SQL Database](../includes/applies-to-version/sql-asdb.md)]
@@ -66,7 +66,7 @@ API 커서는 OLE DB와 ODBC의 API 커서 함수를 지원합니다. API 서버
 > 커서는 tempdb 작업 테이블을 활용할 수 있습니다. 분산되는 집계 또는 정렬 작업과 마찬가지로, I/O에서 발생하며 성능 병목 가능성이 있습니다. `STATIC` 커서는 처음부터 작업 테이블을 사용합니다. 자세한 내용은 [쿼리 처리 아키텍처의 작업 테이블 가이드](../relational-databases/query-processing-architecture-guide.md#worktables)를 참조하세요.
 
 ### <a name="forward-only"></a>정방향 전용  
-정방향 전용 커서는 `FORWARD_ONLY` 및 `READ_ONLY`로 지정되며 스크롤을 지원하지 않습니다. 이러한 커서를 *firehose*라고도 하며 커서의 시작부터 끝까지 행을 순차적으로 인출하는 것만 지원합니다. 행은 인출될 때까지 데이터베이스에서 검색되지 않습니다. 현재 사용자가 만들거나 다른 사용자가 커밋하여 결과 세트의 행에 영향을 주는 모든 `INSERT`, `UPDATE` 및 `DELETE` 문의 결과는 행이 커서에서 인출될 때 표시됩니다.  
+정방향 전용 커서는 `FORWARD_ONLY` 및 `READ_ONLY`로 지정되며 스크롤을 지원하지 않습니다. 이러한 커서를 *firehose* 라고도 하며 커서의 시작부터 끝까지 행을 순차적으로 인출하는 것만 지원합니다. 행은 인출될 때까지 데이터베이스에서 검색되지 않습니다. 현재 사용자가 만들거나 다른 사용자가 커밋하여 결과 세트의 행에 영향을 주는 모든 `INSERT`, `UPDATE` 및 `DELETE` 문의 결과는 행이 커서에서 인출될 때 표시됩니다.  
   
  이 커서는 뒤로 스크롤할 수 없기 때문에 행이 인출된 후 데이터베이스 행의 변경 내용은 대부분 커서를 통해 표시되지 않습니다. 클러스터형 인덱스가 적용되는 열을 업데이트하는 경우와 같이 결과 집합 내의 행 위치를 결정하는 데 사용되는 값이 수정되면 커서를 통해 수정된 값이 표시됩니다.  
   
@@ -81,7 +81,7 @@ API 커서는 OLE DB와 ODBC의 API 커서 함수를 지원합니다. API 서버
 > [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)] 정적 커서는 항상 읽기 전용입니다.  
   
 > [!NOTE]
-> 정적 커서의 결과 세트는 **tempdb**의 작업 테이블에 저장되므로 결과 세트의 행 크기가 [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)] 테이블의 최대 행 크기를 초과할 수 없습니다.  
+> 정적 커서의 결과 세트는 **tempdb** 의 작업 테이블에 저장되므로 결과 세트의 행 크기가 [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)] 테이블의 최대 행 크기를 초과할 수 없습니다.  
 > 자세한 내용은 [쿼리 처리 아키텍처의 작업 테이블 가이드](../relational-databases/query-processing-architecture-guide.md#worktables)를 참조하세요. 자세한 내용은 [SQL Server의 최대 용량 사양](../sql-server/maximum-capacity-specifications-for-sql-server.md)을 참조하세요.  
   
 [!INCLUDE[tsql](../includes/tsql-md.md)] 에서는 정적 커서와 무관한 용어를 사용합니다. 일부 데이터베이스 API에서는 정적 커서를 스냅샷 커서로 식별합니다.  

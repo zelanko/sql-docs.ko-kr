@@ -18,13 +18,13 @@ helpviewer_keywords:
 ms.assetid: f86dd29f-52dd-44a9-91ac-1eb305c1ca8d
 author: stevestein
 ms.author: sstein
-monikerRange: =azuresqldb-current||>=sql-server-2016||=sqlallproducts-allversions||>=sql-server-linux-2017||=azuresqldb-mi-current
-ms.openlocfilehash: 409a097af866b76655c4693b29145d26a387690c
-ms.sourcegitcommit: e700497f962e4c2274df16d9e651059b42ff1a10
+monikerRange: =azuresqldb-current||>=sql-server-2016||>=sql-server-linux-2017||=azuresqldb-mi-current
+ms.openlocfilehash: 872d40262da465bac6e336472e8beca402482b5f
+ms.sourcegitcommit: 1a544cf4dd2720b124c3697d1e62ae7741db757c
 ms.translationtype: HT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 08/17/2020
-ms.locfileid: "88427365"
+ms.lasthandoff: 12/14/2020
+ms.locfileid: "97484375"
 ---
 # <a name="create-indexed-views"></a>인덱싱된 뷰 만들기
 
@@ -150,7 +150,7 @@ SET 옵션 및 결정적 함수 요구 사항 외에 다음 요구 사항을 충
 
 테이블 및 뷰의 인덱스를 비활성화할 수 있습니다. 테이블의 클러스터형 인덱스가 비활성화되면 테이블과 관련된 뷰의 인덱스도 비활성화됩니다.
 
-<a name="nondeterministic"></a>문자열을 **datetime** 또는 **smalldatetime**으로 암시적으로 변환하는 작업과 관련된 식은 비결정적인 것으로 간주됩니다. 자세한 내용은 [날짜 값으로 리터럴 날짜 문자열의 비결정적 변환](../../t-sql/data-types/nondeterministic-convert-date-literals.md)을 참조하세요.
+<a name="nondeterministic"></a>문자열을 **datetime** 또는 **smalldatetime** 으로 암시적으로 변환하는 작업과 관련된 식은 비결정적인 것으로 간주됩니다. 자세한 내용은 [날짜 값으로 리터럴 날짜 문자열의 비결정적 변환](../../t-sql/data-types/nondeterministic-convert-date-literals.md)을 참조하세요.
 
 ### <a name="security"></a><a name="Security"></a> 보안
 

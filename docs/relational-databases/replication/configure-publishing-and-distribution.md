@@ -15,13 +15,13 @@ helpviewer_keywords:
 ms.assetid: 3cfc8966-833e-42fa-80cb-09175d1feed7
 author: MashaMSFT
 ms.author: mathoma
-monikerRange: =azuresqldb-mi-current||>=sql-server-2016||=sqlallproducts-allversions
-ms.openlocfilehash: f321bc96749a0a5c6bf260a8093113258c64f3f1
-ms.sourcegitcommit: 4d370399f6f142e25075b3714e5c2ce056b1bfd0
+monikerRange: =azuresqldb-mi-current||>=sql-server-2016
+ms.openlocfilehash: 72e6a2ed252e895f1e55a7263c089e8e618ec115
+ms.sourcegitcommit: 1a544cf4dd2720b124c3697d1e62ae7741db757c
 ms.translationtype: HT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 10/09/2020
-ms.locfileid: "91866564"
+ms.lasthandoff: 12/14/2020
+ms.locfileid: "97484915"
 ---
 # <a name="configure-publishing-and-distribution"></a>게시 및 배포 구성
 [!INCLUDE [SQL Server SQL MI](../../includes/applies-to-version/sql-asdbmi.md)]
@@ -39,11 +39,11 @@ ms.locfileid: "91866564"
 
 1. [!INCLUDE[msCoName](../../includes/msconame-md.md)] [!INCLUDE[ssManStudioFull](../../includes/ssmanstudiofull-md.md)]에서 배포자가 될 서버에 연결한 다음 서버 노드를 확장합니다. 게시자와 배포자가 같은 서버인 경우가 많습니다.
 
-2. **복제** 폴더를 마우스 오른쪽 단추로 클릭한 다음 **배포 구성**을 클릭합니다.
+2. **복제** 폴더를 마우스 오른쪽 단추로 클릭한 다음 **배포 구성** 을 클릭합니다.
 
 3. 배포 구성 마법사에 따라 다음을 수행하세요. 
 
-  - 배포자를 선택합니다. 로컬 배포자를 사용하려면 **ServerName을 자체 배포자로 사용합니다. SQL Server에서 배포 데이터베이스와 로그를 만듭니다.** 를 선택합니다. 원격 배포자를 사용하려면 **다음 서버를 배포자로 사용**을 선택한 다음 서버를 선택합니다. 서버는 미리 배포자로 구성되어 있어야 하며 해당 배포자를 사용하도록 게시자를 설정해야 합니다. 자세한 내용은 [배포자에서 원격 게시자 설정&#40;SQL Server Management Studio&#41;](../../relational-databases/replication/enable-a-remote-publisher-at-a-distributor-sql-server-management-studio.md)을 참조하세요.
+  - 배포자를 선택합니다. 로컬 배포자를 사용하려면 **ServerName을 자체 배포자로 사용합니다. SQL Server에서 배포 데이터베이스와 로그를 만듭니다.** 를 선택합니다. 원격 배포자를 사용하려면 **다음 서버를 배포자로 사용** 을 선택한 다음 서버를 선택합니다. 서버는 미리 배포자로 구성되어 있어야 하며 해당 배포자를 사용하도록 게시자를 설정해야 합니다. 자세한 내용은 [배포자에서 원격 게시자 설정&#40;SQL Server Management Studio&#41;](../../relational-databases/replication/enable-a-remote-publisher-at-a-distributor-sql-server-management-studio.md)을 참조하세요.
 
      원격 배포자를 선택할 경우 **관리 암호** 페이지에서 게시자에서 배포자로 연결할 때 사용될 암호를 입력합니다. 이 암호는 원격 배포자에서 게시자를 설정할 때 지정한 암호와 일치해야 합니다.
 

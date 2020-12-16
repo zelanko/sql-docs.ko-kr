@@ -11,13 +11,13 @@ ms.topic: conceptual
 ms.assetid: 313714b8-4ad1-4c14-93a3-7f628a334a51
 author: markingmyname
 ms.author: maghan
-monikerRange: =azuresqldb-current||>=sql-server-2016||=sqlallproducts-allversions||>=sql-server-linux-2017||=azuresqldb-mi-current
-ms.openlocfilehash: 0af4a041580d59cc77d5605dc1df72ca8b823f0c
-ms.sourcegitcommit: dd36d1cbe32cd5a65c6638e8f252b0bd8145e165
+monikerRange: =azuresqldb-current||>=sql-server-2016||>=sql-server-linux-2017||=azuresqldb-mi-current
+ms.openlocfilehash: 83180bde505a156c5a6fd5832916e578fb73c52c
+ms.sourcegitcommit: 1a544cf4dd2720b124c3697d1e62ae7741db757c
 ms.translationtype: HT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 09/08/2020
-ms.locfileid: "89548855"
+ms.lasthandoff: 12/14/2020
+ms.locfileid: "97484455"
 ---
 # <a name="partitioning-with-temporal-tables"></a>Temporal 테이블을 사용하여 분할
 
@@ -32,7 +32,7 @@ ms.locfileid: "89548855"
 
 - **현재 테이블:**
 
-  - 현재 테이블에 대한**SWITCH IN** 은 **SYSTEM_VERSIONING** 이 **ON**인 동안 데이터 로드 및 쿼리를 용이하게 하는 데 사용할 수 있습니다.
+  - 현재 테이블에 대한 **SWITCH IN** 은 **SYSTEM_VERSIONING** 이 **ON** 인 동안 데이터 로드 및 쿼리를 용이하게 하는 데 사용할 수 있습니다.
   - **SYSTEM_VERSIONING** 이 **SYSTEM_VERSIONING** 이 **ON**
 
 - **기록 테이블:**

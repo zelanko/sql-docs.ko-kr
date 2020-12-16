@@ -25,13 +25,13 @@ helpviewer_keywords:
 ms.assetid: 344fc6ce-a008-47c8-a02e-47fae66cc590
 author: VanMSFT
 ms.author: vanto
-monikerRange: '>=aps-pdw-2016||=azuresqldb-current||=azure-sqldw-latest||>=sql-server-2016||=sqlallproducts-allversions||>=sql-server-linux-2017||=azuresqldb-mi-current'
-ms.openlocfilehash: ecb1710f992535ca4e6ebca3a3f825c5e1bffc9a
-ms.sourcegitcommit: d35d0901296580bfceda6e0ab2e14cf2b7e99a0f
+monikerRange: '>=aps-pdw-2016||=azuresqldb-current||=azure-sqldw-latest||>=sql-server-2016||>=sql-server-linux-2017||=azuresqldb-mi-current'
+ms.openlocfilehash: 4f2a00a567282eb4a2d5990360b630817d1950c6
+ms.sourcegitcommit: 3bd188e652102f3703812af53ba877cce94b44a9
 ms.translationtype: HT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 10/24/2020
-ms.locfileid: "92496973"
+ms.lasthandoff: 12/15/2020
+ms.locfileid: "97489477"
 ---
 # <a name="alter-user-transact-sql"></a>ALTER USER(Transact-SQL)
 
@@ -41,7 +41,7 @@ ms.locfileid: "92496973"
 
 [!INCLUDE[select-product](../../includes/select-product.md)]
 
-::: moniker range=">=sql-server-2016||>=sql-server-linux-2017||=sqlallproducts-allversions"
+::: moniker range=">=sql-server-2016||>=sql-server-linux-2017"
 
 :::row:::
     :::column:::
@@ -57,7 +57,7 @@ ms.locfileid: "92496973"
         [Azure Synapse<br />Analytics](alter-user-transact-sql.md?view=azure-sqldw-latest)
     :::column-end:::
     :::column:::
-        [Analytics Platform<br />System(PDW)](alter-user-transact-sql.md?view=aps-pdw-2016)
+        [Analytics Platform<br />System(PDW)](alter-user-transact-sql.md?view=aps-pdw-2016&preserve-view=true)
     :::column-end:::
 :::row-end:::
 
@@ -93,28 +93,28 @@ NAME = newUserName
 
  DEFAULT_SCHEMA **=** { *schemaName* | NULL } 서버에서 이 사용자에 대한 개체 이름을 확인할 때 첫 번째로 검색할 스키마를 지정합니다. 기본 스키마를 NULL로 설정하면 Windows 그룹에서 기본 스키마가 제거됩니다. Windows 사용자에는 NULL 옵션을 사용할 수 없습니다.
 
- PASSWORD **=** ' *password* '  **적용 대상** : [!INCLUDE[ssSQL11](../../includes/sssql11-md.md)] 이상, [!INCLUDE[sqldbesa](../../includes/sqldbesa-md.md)].
+ PASSWORD **=** '*password*'  **적용 대상**: [!INCLUDE[ssSQL11](../../includes/sssql11-md.md)] 이상, [!INCLUDE[sqldbesa](../../includes/sqldbesa-md.md)].
 
  변경할 사용자의 암호를 지정합니다. 암호는 대소문자를 구분합니다.
 
 > [!NOTE]
 > 이 옵션은 포함된 사용자에 대해서만 사용할 수 있습니다. 자세한 내용은 [포함된 데이터베이스](../../relational-databases/databases/contained-databases.md) 및 [sp_migrate_user_to_contained &#40;Transact-SQL&#41;](../../relational-databases/system-stored-procedures/sp-migrate-user-to-contained-transact-sql.md)를 참조하세요.
 
- OLD_PASSWORD **=** _'oldpassword'_ **적용 대상** : [!INCLUDE[ssSQL11](../../includes/sssql11-md.md)] 이상, [!INCLUDE[sqldbesa](../../includes/sqldbesa-md.md)].
+ OLD_PASSWORD **=** _'oldpassword'_ **적용 대상**: [!INCLUDE[ssSQL11](../../includes/sssql11-md.md)] 이상, [!INCLUDE[sqldbesa](../../includes/sqldbesa-md.md)].
 
- ' *암호* '로 바뀔 현재 사용자 암호입니다. 암호는 대소문자를 구분합니다. **ALTER ANY USER** 권한이 없으면 *OLD_PASSWORD* 가 있어야 암호를 변경할 수 있습니다. *OLD_PASSWORD* 를 요구하면 **IMPERSONATION** 권한을 가진 사용자가 암호를 변경할 수 없습니다.
+ '*암호*'로 바뀔 현재 사용자 암호입니다. 암호는 대소문자를 구분합니다. **ALTER ANY USER** 권한이 없으면 *OLD_PASSWORD* 가 있어야 암호를 변경할 수 있습니다. *OLD_PASSWORD* 를 요구하면 **IMPERSONATION** 권한을 가진 사용자가 암호를 변경할 수 없습니다.
 
 > [!NOTE]
 > 이 옵션은 포함된 사용자에 대해서만 사용할 수 있습니다.
 
- DEFAULT_LANGUAGE **=** _{ NONE \| \<lcid> \| \<language name> \| \<language alias> }_ **적용 대상** : [!INCLUDE[ssSQL11](../../includes/sssql11-md.md)] 이상.
+ DEFAULT_LANGUAGE **=** _{ NONE \| \<lcid> \| \<language name> \| \<language alias> }_ **적용 대상**: [!INCLUDE[ssSQL11](../../includes/sssql11-md.md)] 이상.
 
  사용자에게 할당할 기본 언어를 지정합니다. 이 옵션을 NONE으로 설정하면 기본 언어가 데이터베이스의 현재 기본 언어로 설정됩니다. 나중에 데이터베이스의 기본 언어가 변경되더라도 사용자의 기본 언어는 그대로 유지됩니다. *DEFAULT_LANGUAGE* 는 로컬 ID(lcid), 언어 이름 또는 언어 별칭이 될 수 있습니다.
 
 > [!NOTE]
 > 이 옵션은 포함된 데이터베이스에서 포함된 사용자에 대해서만 지정할 수 있습니다.
 
- ALLOW_ENCRYPTED_VALUE_MODIFICATIONS = [ ON | **OFF** ]  **적용 대상** : [!INCLUDE[ssSQL15](../../includes/sssql15-md.md)] 이상, [!INCLUDE[ssSDS](../../includes/sssds-md.md)].
+ ALLOW_ENCRYPTED_VALUE_MODIFICATIONS = [ ON | **OFF** ]  **적용 대상**: [!INCLUDE[ssSQL15](../../includes/sssql15-md.md)] 이상, [!INCLUDE[ssSDS](../../includes/sssds-md.md)].
 
  대량 복사 작업에서 서버에 대한 암호화 메타데이터 검사를 표시하지 않습니다. 이를 통해 사용자는 데이터를 암호 해독하지 않고도 테이블이나 데이터베이스 사이에 암호화된 데이터를 대량 복사할 수 있습니다. 기본값은 OFF입니다.
 
@@ -196,7 +196,7 @@ GO
 
  다음 예에서는 포함된 데이터베이스 사용자에 대해 여러 옵션을 하나의 문에서 변경합니다.
 
-**적용 대상** : [!INCLUDE[ssSQL11](../../includes/sssql11-md.md)] 이상
+**적용 대상**: [!INCLUDE[ssSQL11](../../includes/sssql11-md.md)] 이상
 
 ```sql
 ALTER USER Philip
@@ -216,11 +216,11 @@ GO
 - [sp_migrate_user_to_contained &#40;Transact-SQL&#41;](../../relational-databases/system-stored-procedures/sp-migrate-user-to-contained-transact-sql.md)
 
 ::: moniker-end
-::: moniker range="=azuresqldb-current||=sqlallproducts-allversions"
+::: moniker range="=azuresqldb-current"
 
 :::row:::
     :::column:::
-        [SQL Server](alter-user-transact-sql.md?view=sql-server-2017)
+        [SQL Server](alter-user-transact-sql.md?view=sql-server-ver15&preserve-view=true)
     :::column-end:::
     :::column:::
         **_\* SQL Database \*_**
@@ -232,7 +232,7 @@ GO
         [Azure Synapse<br />Analytics](alter-user-transact-sql.md?view=azure-sqldw-latest)
     :::column-end:::
     :::column:::
-        [Analytics Platform<br />System(PDW)](alter-user-transact-sql.md?view=aps-pdw-2016)
+        [Analytics Platform<br />System(PDW)](alter-user-transact-sql.md?view=aps-pdw-2016&preserve-view=true)
     :::column-end:::
 :::row-end:::
 
@@ -288,21 +288,21 @@ ALTER USER userName
 
  DEFAULT_SCHEMA **=** { *schemaName* | NULL } 서버에서 이 사용자에 대한 개체 이름을 확인할 때 첫 번째로 검색할 스키마를 지정합니다. 기본 스키마를 NULL로 설정하면 Windows 그룹에서 기본 스키마가 제거됩니다. Windows 사용자에는 NULL 옵션을 사용할 수 없습니다.
 
- PASSWORD **=** ' *password* '  **적용 대상** : [!INCLUDE[ssSQL11](../../includes/sssql11-md.md)] 이상, [!INCLUDE[sqldbesa](../../includes/sqldbesa-md.md)].
+ PASSWORD **=** '*password*'  **적용 대상**: [!INCLUDE[ssSQL11](../../includes/sssql11-md.md)] 이상, [!INCLUDE[sqldbesa](../../includes/sqldbesa-md.md)].
 
  변경할 사용자의 암호를 지정합니다. 암호는 대소문자를 구분합니다.
 
 > [!NOTE]
 > 이 옵션은 포함된 사용자에 대해서만 사용할 수 있습니다. 자세한 내용은 [포함된 데이터베이스](../../relational-databases/databases/contained-databases.md) 및 [sp_migrate_user_to_contained &#40;Transact-SQL&#41;](../../relational-databases/system-stored-procedures/sp-migrate-user-to-contained-transact-sql.md)를 참조하세요.
 
- OLD_PASSWORD **=** _'oldpassword'_ **적용 대상** : [!INCLUDE[ssSQL11](../../includes/sssql11-md.md)] 이상, [!INCLUDE[sqldbesa](../../includes/sqldbesa-md.md)].
+ OLD_PASSWORD **=** _'oldpassword'_ **적용 대상**: [!INCLUDE[ssSQL11](../../includes/sssql11-md.md)] 이상, [!INCLUDE[sqldbesa](../../includes/sqldbesa-md.md)].
 
- ' *암호* '로 바뀔 현재 사용자 암호입니다. 암호는 대소문자를 구분합니다. **ALTER ANY USER** 권한이 없으면 *OLD_PASSWORD* 가 있어야 암호를 변경할 수 있습니다. *OLD_PASSWORD* 를 요구하면 **IMPERSONATION** 권한을 가진 사용자가 암호를 변경할 수 없습니다.
+ '*암호*'로 바뀔 현재 사용자 암호입니다. 암호는 대소문자를 구분합니다. **ALTER ANY USER** 권한이 없으면 *OLD_PASSWORD* 가 있어야 암호를 변경할 수 있습니다. *OLD_PASSWORD* 를 요구하면 **IMPERSONATION** 권한을 가진 사용자가 암호를 변경할 수 없습니다.
 
 > [!NOTE]
 > 이 옵션은 포함된 사용자에 대해서만 사용할 수 있습니다.
 
- ALLOW_ENCRYPTED_VALUE_MODIFICATIONS = [ ON | **OFF** ]  **적용 대상** : [!INCLUDE[ssSQL15](../../includes/sssql15-md.md)] 이상, [!INCLUDE[ssSDS](../../includes/sssds-md.md)].
+ ALLOW_ENCRYPTED_VALUE_MODIFICATIONS = [ ON | **OFF** ]  **적용 대상**: [!INCLUDE[ssSQL15](../../includes/sssql15-md.md)] 이상, [!INCLUDE[ssSDS](../../includes/sssds-md.md)].
 
  대량 복사 작업에서 서버에 대한 암호화 메타데이터 검사를 표시하지 않습니다. 이를 통해 사용자는 데이터를 암호 해독하지 않고도 테이블이나 데이터베이스 사이에 암호화된 데이터를 대량 복사할 수 있습니다. 기본값은 OFF입니다.
 
@@ -401,11 +401,11 @@ GO
 - [sp_migrate_user_to_contained &#40;Transact-SQL&#41;](../../relational-databases/system-stored-procedures/sp-migrate-user-to-contained-transact-sql.md)
 
 ::: moniker-end
-::: moniker range="=azuresqldb-mi-current||=sqlallproducts-allversions"
+::: moniker range="=azuresqldb-mi-current"
 
 :::row:::
     :::column:::
-        [SQL Server](alter-user-transact-sql.md?view=sql-server-2017)
+        [SQL Server](alter-user-transact-sql.md?view=sql-server-ver15&preserve-view=true)
     :::column-end:::
     :::column:::
         [SQL 데이터베이스](alter-user-transact-sql.md?view=azuresqldb-current)
@@ -417,7 +417,7 @@ GO
         [Azure Synapse<br />Analytics](alter-user-transact-sql.md?view=azure-sqldw-latest)
     :::column-end:::
     :::column:::
-        [Analytics Platform<br />System(PDW)](alter-user-transact-sql.md?view=aps-pdw-2016)
+        [Analytics Platform<br />System(PDW)](alter-user-transact-sql.md?view=aps-pdw-2016&preserve-view=true)
     :::column-end:::
 :::row-end:::
 
@@ -476,7 +476,7 @@ ALTER USER userName
 
  DEFAULT_SCHEMA **=** { *schemaName* | NULL } 서버에서 이 사용자에 대한 개체 이름을 확인할 때 첫 번째로 검색할 스키마를 지정합니다. 기본 스키마를 NULL로 설정하면 Windows 그룹에서 기본 스키마가 제거됩니다. Windows 사용자에는 NULL 옵션을 사용할 수 없습니다.
 
- PASSWORD **=** ' *password* '
+ PASSWORD **=** '*password*'
 
  변경할 사용자의 암호를 지정합니다. 암호는 대소문자를 구분합니다.
 
@@ -485,7 +485,7 @@ ALTER USER userName
 
  OLD_PASSWORD **=** _'oldpassword'_
 
- ' *암호* '로 바뀔 현재 사용자 암호입니다. 암호는 대소문자를 구분합니다. **ALTER ANY USER** 권한이 없으면 *OLD_PASSWORD* 가 있어야 암호를 변경할 수 있습니다. *OLD_PASSWORD* 를 요구하면 **IMPERSONATION** 권한을 가진 사용자가 암호를 변경할 수 없습니다.
+ '*암호*'로 바뀔 현재 사용자 암호입니다. 암호는 대소문자를 구분합니다. **ALTER ANY USER** 권한이 없으면 *OLD_PASSWORD* 가 있어야 암호를 변경할 수 있습니다. *OLD_PASSWORD* 를 요구하면 **IMPERSONATION** 권한을 가진 사용자가 암호를 변경할 수 없습니다.
 
 > [!NOTE]
 > 이 옵션은 포함된 사용자에 대해서만 사용할 수 있습니다.
@@ -557,13 +557,13 @@ ALTER USER userName
 - 모든 마이그레이션 사례에서 Windows 사용자 또는 그룹의 역할 및 권한이 자동으로 새 Azure AD 사용자 또는 그룹으로 이전됩니다.
 - 새 구문 확장 **FROM EXTERNAL PROVIDER** 은 SQL 온-프레미스의 Windows 사용자 및 그룹을 Azure AD 사용자 및 그룹으로 변경하는 데 사용할 수 있습니다. 이 확장을 사용하는 경우 Windows 도메인이 Azure AD와 페더레이션되어 있어야 하며 모든 Windows 도메인 구성원이 Azure AD에 있어야 합니다. **FROM EXTERNAL PROVIDER** 구문은 Azure SQL Managed Instance에 적용되며 Windows 사용자가 원래 SQL 인스턴스에 대한 로그인이 없고 독립 실행형 Azure AD 데이터베이스 사용자에 매핑되어야 하는 경우에 사용해야 합니다.
 - 이 경우 허용되는 사용자 이름은 다음과 같습니다.
-- Widows 사용자( _domain\user_ ).
-- Windows 그룹( _MyWidnowsGroup_ ).
-- Windows 별칭( _MyWindowsAlias_ ).
+- Widows 사용자(_domain\user_).
+- Windows 그룹(_MyWidnowsGroup_).
+- Windows 별칭(_MyWindowsAlias_).
 - ALTER 명령의 결과는 기존 사용자 이름을 기존 사용자 이름의 원래 SID를 기반으로 Azure AD에서 발견되는 해당 이름으로 바꿉니다. 변경된 이름이 데이터베이스의 메타데이터에 저장됩니다.
-- ( _domain\user_ )가 Azure AD user@domain.com로 바뀝니다.
-- ( _domain\\MyWidnowsGroup_ )이 Azure AD 그룹으로 바뀝니다.
-- ( _MyWindowsAlias_ )는 변경되지 않은 상태로 유지되지만 이 사용자의 SID는 Azure AD에서 확인됩니다.
+- (_domain\user_)가 Azure AD user@domain.com로 바뀝니다.
+- (_domain\\MyWidnowsGroup_)이 Azure AD 그룹으로 바뀝니다.
+- (_MyWindowsAlias_)는 변경되지 않은 상태로 유지되지만 이 사용자의 SID는 Azure AD에서 확인됩니다.
 
 > [!NOTE]
 > objectID로 변환된 원래 사용자의 SID를 Azure AD에서 찾을 수 없는 경우 ALTER USER 명령이 실패합니다.
@@ -669,11 +669,11 @@ ALTER USER [westus\mygroup] WITH LOGIN = mygroup
 - [자습서: T-SQL DDL 구문을 사용하여 SQL Server 온-프레미스 Windows 사용자 및 그룹을 SQL Managed Instance로 마이그레이션](/azure/sql-database/tutorial-managed-instance-azure-active-directory-migration)
 
 ::: moniker-end
-::: moniker range="=azure-sqldw-latest||=sqlallproducts-allversions"
+::: moniker range="=azure-sqldw-latest"
 
 :::row:::
     :::column:::
-        [SQL Server](alter-user-transact-sql.md?view=sql-server-2017)
+        [SQL Server](alter-user-transact-sql.md?view=sql-server-ver15&preserve-view=true)
     :::column-end:::
     :::column:::
         [SQL 데이터베이스](alter-user-transact-sql.md?view=azuresqldb-current)
@@ -685,7 +685,7 @@ ALTER USER [westus\mygroup] WITH LOGIN = mygroup
         **_\* Azure Synapse<br />Analytics \*_**
     :::column-end:::
     :::column:::
-        [Analytics Platform<br />System(PDW)](alter-user-transact-sql.md?view=aps-pdw-2016)
+        [Analytics Platform<br />System(PDW)](alter-user-transact-sql.md?view=aps-pdw-2016&preserve-view=true)
     :::column-end:::
 :::row-end:::
 
@@ -794,11 +794,11 @@ GO
 - [sp_migrate_user_to_contained &#40;Transact-SQL&#41;](../../relational-databases/system-stored-procedures/sp-migrate-user-to-contained-transact-sql.md)
 
 ::: moniker-end
-::: moniker range=">=aps-pdw-2016||=sqlallproducts-allversions"
+::: moniker range=">=aps-pdw-2016"
 
 :::row:::
     :::column:::
-        [SQL Server](alter-user-transact-sql.md?view=sql-server-2017)
+        [SQL Server](alter-user-transact-sql.md?view=sql-server-ver15&preserve-view=true)
     :::column-end:::
     :::column:::
         [SQL 데이터베이스](alter-user-transact-sql.md?view=azuresqldb-current)

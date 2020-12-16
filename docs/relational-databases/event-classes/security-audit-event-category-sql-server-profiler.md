@@ -13,14 +13,14 @@ helpviewer_keywords:
 ms.assetid: e64f7695-2f23-4adb-b83d-52f147cc1a2f
 author: stevestein
 ms.author: sstein
-monikerRange: =azuresqldb-current||>=sql-server-2016||=sqlallproducts-allversions||>=sql-server-linux-2017||=azuresqldb-mi-current
+monikerRange: =azuresqldb-current||>=sql-server-2016||>=sql-server-linux-2017||=azuresqldb-mi-current
 ms.custom: seo-lt-2019
-ms.openlocfilehash: a1e6bcb89b8206f34c8438f6ebab2ef983210057
-ms.sourcegitcommit: e700497f962e4c2274df16d9e651059b42ff1a10
+ms.openlocfilehash: 910671ecefc7a52f86a7e025492c3e5ec1371e65
+ms.sourcegitcommit: 1a544cf4dd2720b124c3697d1e62ae7741db757c
 ms.translationtype: HT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 08/17/2020
-ms.locfileid: "88330439"
+ms.lasthandoff: 12/14/2020
+ms.locfileid: "97485365"
 ---
 # <a name="security-audit-event-category-sql-server-profiler"></a>Security Audit 이벤트 범주(SQL Server Profiler)
 [!INCLUDE [SQL Server - ASDB](../../includes/applies-to-version/sql-asdb.md)]
@@ -54,7 +54,7 @@ ms.locfileid: "88330439"
 |[Audit DBCC 이벤트 클래스](../../relational-databases/event-classes/audit-dbcc-event-class.md)|DBCC 명령이 실행되었음을 나타냅니다.|  
 |[Audit Fulltext 이벤트 클래스](../../relational-databases/event-classes/audit-fulltext-event-class.md)|전체 텍스트 이벤트가 발생했음을 나타냅니다.|  
 |[Audit Login Change Password 이벤트 클래스](../../relational-databases/event-classes/audit-login-change-password-event-class.md)|사용자가 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 로그인 암호를 변경했음을 나타냅니다.|  
-|[Audit Login Change Property 이벤트 클래스](../../relational-databases/event-classes/audit-login-change-property-event-class.md)|**sp_defaultdb**, **sp_defaultlanguage**또는 ALTER LOGIN을 사용하여 로그인 속성을 수정했음을 나타냅니다.|  
+|[Audit Login Change Property 이벤트 클래스](../../relational-databases/event-classes/audit-login-change-property-event-class.md)|**sp_defaultdb**, **sp_defaultlanguage** 또는 ALTER LOGIN을 사용하여 로그인 속성을 수정했음을 나타냅니다.|  
 |[Audit Login 이벤트 클래스](../../relational-databases/event-classes/audit-login-event-class.md)|사용자가 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]에 성공적으로 로그인했음을 나타냅니다.|  
 |[Audit Login Failed 이벤트 클래스](../../relational-databases/event-classes/audit-login-failed-event-class.md)|사용자의 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 에 대한 로그인 시도가 실패했음을 나타냅니다.|  
 |[Audit Login GDR 이벤트 클래스](../../relational-databases/event-classes/audit-login-gdr-event-class.md)|[!INCLUDE[msCoName](../../includes/msconame-md.md)] Windows 로그인 권한이 추가 또는 제거되었음을 나타냅니다.|  

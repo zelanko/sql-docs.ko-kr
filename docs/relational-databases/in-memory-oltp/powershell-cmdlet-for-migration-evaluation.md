@@ -11,13 +11,13 @@ ms.topic: conceptual
 ms.assetid: 117250d3-9982-47fe-94fd-6f29f6159940
 author: MightyPen
 ms.author: genemi
-monikerRange: =azuresqldb-current||>=sql-server-2016||=sqlallproducts-allversions||>=sql-server-linux-2017||=azuresqldb-mi-current
-ms.openlocfilehash: f0c3489dab411718eb32e8ff4dd6c182ec59f2b8
-ms.sourcegitcommit: da88320c474c1c9124574f90d549c50ee3387b4c
+monikerRange: =azuresqldb-current||>=sql-server-2016||>=sql-server-linux-2017||=azuresqldb-mi-current
+ms.openlocfilehash: 522045cafa1effd04dae5b20193089ea34b4145e
+ms.sourcegitcommit: 1a544cf4dd2720b124c3697d1e62ae7741db757c
 ms.translationtype: HT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 07/01/2020
-ms.locfileid: "85722379"
+ms.lasthandoff: 12/14/2020
+ms.locfileid: "97485245"
 ---
 # <a name="powershell-cmdlet-for-migration-evaluation"></a>마이그레이션 평가용 PowerShell cmdlet
 
@@ -27,7 +27,7 @@ ms.locfileid: "85722379"
 
 현재 이 cmdlet에서는 메모리 내 OLTP에 대한 마이그레이션 적합성만 평가할 수 있습니다. 이 cmdlet은 관리자 권한 Windows PowerShell 환경과 sqlps에서 모두 실행할 수 있습니다.
 
-이 PowerShell cmdlet을 직접 실행하는 대신 SSMS(SQL Server Management Studio)를 사용하여 암시적으로 cmdlet을 실행할 수 있습니다. SSMS **개체 탐색기**에서 테이블을 마우스 오른쪽 단추로 클릭한 다음 **메모리 최적화 관리자**를 클릭할 수 있습니다.
+이 PowerShell cmdlet을 직접 실행하는 대신 SSMS(SQL Server Management Studio)를 사용하여 암시적으로 cmdlet을 실행할 수 있습니다. SSMS **개체 탐색기** 에서 테이블을 마우스 오른쪽 단추로 클릭한 다음 **메모리 최적화 관리자** 를 클릭할 수 있습니다.
 
 ## <a name="syntax"></a>구문
 
@@ -73,7 +73,7 @@ Save-SqlMigrationReport
 
 ## <a name="prerequisites"></a>필수 구성 요소
 
-이 cmdlet을 실행하려면 먼저 **SqlServer**라는 모듈을 설치해야 합니다.
+이 cmdlet을 실행하려면 먼저 **SqlServer** 라는 모듈을 설치해야 합니다.
 
 - `Install-Module -Name SqlServer`
 
@@ -108,7 +108,7 @@ Save-SqlMigrationReport `
 
 각 개체 보고서 파일은 해당 폴더 아래에 저장됩니다.
 
-보고서 파일 이름의 확장명은 **.html**입니다. 예를 들어 실제 생성된 파일 이름은 **MigrationAdvisorChecklistReport_Table2_20190728.html**입니다.
+보고서 파일 이름의 확장명은 **.html** 입니다. 예를 들어 실제 생성된 파일 이름은 **MigrationAdvisorChecklistReport_Table2_20190728.html** 입니다.
 
 HTML은 주로 다음과 같은 헤더가 있는 2열 테이블입니다.
 

@@ -20,13 +20,13 @@ helpviewer_keywords:
 ms.assetid: 82fa9016-77db-4b42-b4c8-df6095b81906
 author: julieMSFT
 ms.author: jrasnick
-monikerRange: '>=aps-pdw-2016||=azuresqldb-current||=azure-sqldw-latest||>=sql-server-2016||=sqlallproducts-allversions||>=sql-server-linux-2017||=azuresqldb-mi-current'
-ms.openlocfilehash: 283e82c1476d49d847333a7c03e05c06aa6f3b41
-ms.sourcegitcommit: 768f046107642f72693514f51bf2cbd00f58f58a
+monikerRange: '>=aps-pdw-2016||=azuresqldb-current||=azure-sqldw-latest||>=sql-server-2016||>=sql-server-linux-2017||=azuresqldb-mi-current'
+ms.openlocfilehash: 4e53bb9ca4b2c3466a7dd694712e52d6c076306e
+ms.sourcegitcommit: 1a544cf4dd2720b124c3697d1e62ae7741db757c
 ms.translationtype: HT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 07/23/2020
-ms.locfileid: "87111368"
+ms.lasthandoff: 12/14/2020
+ms.locfileid: "97484175"
 ---
 # <a name="row_number-transact-sql"></a>ROW_NUMBER(Transact-SQL)
 [!INCLUDE [sql-asdb-asdbmi-asa-pdw](../../includes/applies-to-version/sql-asdb-asdbmi-asa-pdw.md)]
@@ -52,7 +52,7 @@ ROW_NUMBER ( )
 
 ## <a name="arguments"></a>인수
  PARTITION BY *value_expression*  
- [FROM](../../t-sql/queries/from-transact-sql.md) 절이 생성한 결과 집합을 ROW_NUMBER 함수가 적용되는 파티션으로 나눕니다. *value_expression*은 결과 집합을 분할하는 데 사용하는 열을 지정합니다. `PARTITION BY`를 지정하지 않을 경우 쿼리 결과 집합의 모든 행이 단일 그룹으로 취급됩니다. 자세한 내용은 [OVER 절&#40;Transact-SQL&#41;](../../t-sql/queries/select-over-clause-transact-sql.md)을 참조하세요.  
+ [FROM](../../t-sql/queries/from-transact-sql.md) 절이 생성한 결과 집합을 ROW_NUMBER 함수가 적용되는 파티션으로 나눕니다. *value_expression* 은 결과 집합을 분할하는 데 사용하는 열을 지정합니다. `PARTITION BY`를 지정하지 않을 경우 쿼리 결과 집합의 모든 행이 단일 그룹으로 취급됩니다. 자세한 내용은 [OVER 절&#40;Transact-SQL&#41;](../../t-sql/queries/select-over-clause-transact-sql.md)을 참조하세요.  
   
  *order_by_clause*  
  `ORDER BY` 절은 지정된 파티션 내에서 행에 고유 `ROW_NUMBER`가 할당되는 순서를 결정합니다. 필수 항목입니다. 자세한 내용은 [OVER 절&#40;Transact-SQL&#41;](../../t-sql/queries/select-over-clause-transact-sql.md)을 참조하세요.  

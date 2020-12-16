@@ -2,7 +2,7 @@
 title: CREATE DATABASE(Transact-SQL) | Microsoft Docs
 description: SQL Server, Azure SQL Database, Azure Synapse Analytics 및 Analytics Platform System의 데이터베이스 구문 만들기
 ms.custom: references_regions
-ms.date: 10/30/2020
+ms.date: 12/11/2020
 ms.prod: sql
 ms.prod_service: sql-database
 ms.reviewer: ''
@@ -36,13 +36,13 @@ helpviewer_keywords:
 ms.assetid: 29ddac46-7a0f-4151-bd94-75c1908c89f8
 author: markingmyname
 ms.author: maghan
-monikerRange: '>=sql-server-2016||>=sql-server-linux-2017||=azuresqldb-current||=azuresqldb-mi-current||=azure-sqldw-latest||>=aps-pdw-2016||=sqlallproducts-allversions'
-ms.openlocfilehash: e66c5801b3a927b28f355e450be9d31c796e78dc
-ms.sourcegitcommit: 442fbe1655d629ecef273b02fae1beb2455a762e
+monikerRange: '>=sql-server-2016||>=sql-server-linux-2017||=azuresqldb-current||=azuresqldb-mi-current||=azure-sqldw-latest||>=aps-pdw-2016'
+ms.openlocfilehash: 0e0cf7b17061340f347af536cad762f63cc38ef3
+ms.sourcegitcommit: 3bd188e652102f3703812af53ba877cce94b44a9
 ms.translationtype: HT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 11/03/2020
-ms.locfileid: "93235400"
+ms.lasthandoff: 12/15/2020
+ms.locfileid: "97489144"
 ---
 # <a name="create-database"></a>CREATE DATABASE
 
@@ -54,7 +54,7 @@ ms.locfileid: "93235400"
 
 [!INCLUDE[select-product](../../includes/select-product.md)]
 
-::: moniker range=">=sql-server-2016||>=sql-server-linux-2017||=sqlallproducts-allversions"
+::: moniker range=">=sql-server-2016||>=sql-server-linux-2017"
 
 :::row:::
     :::column:::
@@ -70,7 +70,7 @@ ms.locfileid: "93235400"
         [Azure Synapse<br />Analytics](create-database-transact-sql.md?view=azure-sqldw-latest)
     :::column-end:::
     :::column:::
-        [Analytics Platform<br />System(PDW)](create-database-transact-sql.md?view=aps-pdw-2016)
+        [Analytics Platform<br />System(PDW)](create-database-transact-sql.md?view=aps-pdw-2016&preserve-view=true)
     :::column-end:::
 :::row-end:::
 
@@ -182,7 +182,7 @@ CREATE DATABASE database_snapshot_name
 
 CONTAINMENT = { NONE | PARTIAL }
 
-**적용 대상** : [!INCLUDE[ssSQL11](../../includes/sssql11-md.md)] 이상
+**적용 대상**: [!INCLUDE[ssSQL11](../../includes/sssql11-md.md)] 이상
 
 데이터베이스의 포함 상태를 지정합니다. NONE = 포함되지 않은 데이터베이스입니다. PARTIAL = 부분적으로 포함된 데이터베이스입니다.
 
@@ -208,7 +208,7 @@ Windows 데이터 정렬 이름 및 SQL 데이터 정렬 이름에 대한 자세
 WITH \<option>
  **\<filestream_option>**
 
-NON_TRANSACTED_ACCESS = { **OFF** | READ_ONLY | FULL } **적용 대상** : [!INCLUDE[ssSQL11](../../includes/sssql11-md.md)] 이상
+NON_TRANSACTED_ACCESS = { **OFF** | READ_ONLY | FULL } **적용 대상**: [!INCLUDE[ssSQL11](../../includes/sssql11-md.md)] 이상
 
 데이터베이스에 대한 비트랜잭션 FILESTREAM 액세스 수준을 지정합니다.
 
@@ -219,7 +219,7 @@ NON_TRANSACTED_ACCESS = { **OFF** | READ_ONLY | FULL } **적용 대상** : [!INC
 |FULL|FILESTREAM FileTable에 대한 전체 비트랜잭션 액세스를 사용할 수 있습니다.|
 
 DIRECTORY_NAME = \<directory_name>
-**적용 대상** : [!INCLUDE[ssSQL11](../../includes/sssql11-md.md)] 이상
+**적용 대상**: [!INCLUDE[ssSQL11](../../includes/sssql11-md.md)] 이상
 
 Windows 호환 디렉터리 이름입니다. 이 이름은 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 인스턴스의 모든 Database_Directory 이름 중에서 고유해야 합니다. 고유성 비교는 대/소문자를 구분하며 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 데이터 정렬 설정과 관계가 없습니다. 데이터베이스에 FileTable을 만들기 전에 이 옵션을 설정해야 합니다.
 
@@ -227,25 +227,25 @@ CONTAINMENT가 PARTIAL로 설정된 경우에만 다음 옵션을 사용할 수 
 
 - **DEFAULT_FULLTEXT_LANGUAGE = \<lcid> | \<language name> | \<language alias>**
 
-  **적용 대상** : [!INCLUDE[ssSQL11](../../includes/sssql11-md.md)] 이상
+  **적용 대상**: [!INCLUDE[ssSQL11](../../includes/sssql11-md.md)] 이상
 
   이 옵션에 대한 전체 설명은 [기본 전체 텍스트 언어 서버 구성 옵션 구성](../../database-engine/configure-windows/configure-the-default-full-text-language-server-configuration-option.md)을 참조하세요.
 
 - **DEFAULT_LANGUAGE = \<lcid> | \<language name> | \<language alias>**
 
-  **적용 대상** : [!INCLUDE[ssSQL11](../../includes/sssql11-md.md)] 이상
+  **적용 대상**: [!INCLUDE[ssSQL11](../../includes/sssql11-md.md)] 이상
 
   이 옵션에 대한 전체 설명은 [기본 언어 서버 구성 옵션 구성](../../database-engine/configure-windows/configure-the-default-language-server-configuration-option.md)을 참조하세요.
 
 - **NESTED_TRIGGERS = { OFF | ON}**
 
-  **적용 대상** : [!INCLUDE[ssSQL11](../../includes/sssql11-md.md)] 이상
+  **적용 대상**: [!INCLUDE[ssSQL11](../../includes/sssql11-md.md)] 이상
 
   이 옵션에 대한 전체 설명은 [nested triggers 서버 구성 옵션 구성](../../database-engine/configure-windows/configure-the-nested-triggers-server-configuration-option.md)을 참조하세요.
 
 - **TRANSFORM_NOISE_WORDS = { OFF | ON}**
 
-  **적용 대상** : [!INCLUDE[ssSQL11](../../includes/sssql11-md.md)] 이상
+  **적용 대상**: [!INCLUDE[ssSQL11](../../includes/sssql11-md.md)] 이상
 
   이 옵션에 대한 전체 설명은 [의미 없는 단어 변환 서버 구성 옵션](../../database-engine/configure-windows/transform-noise-words-server-configuration-option.md)을 참조하세요.
 
@@ -276,7 +276,7 @@ CONTAINMENT가 PARTIAL로 설정된 경우에만 다음 옵션을 사용할 수 
 
 - **PERSISTENT_LOG_BUFFER=ON ( DIRECTORY_NAME='' )**
 
-  이 옵션을 지정하면 트랜잭션 로그 버퍼는 스토리지 클래스 메모리(NVDIMM-N 비휘발성 스토리지)로 지원되는 디스크 디바이스에 있는 볼륨에서 생성되며 영구적 로그 버퍼라고도 합니다. 자세한 내용은 [스토리지 클래스 메모리를 사용하는 트랜잭션 커밋 대기 시간 가속화](https://blogs.msdn.microsoft.com/sqlserverstorageengine/2016/12/02/transaction-commit-latency-acceleration-using-storage-class-memory-in-windows-server-2016sql-server-2016-sp1/) 를 참조하세요. **적용 대상** : [!INCLUDE[ssSQL17](../../includes/sssql17-md.md)] 이상.
+  이 옵션을 지정하면 트랜잭션 로그 버퍼는 스토리지 클래스 메모리(NVDIMM-N 비휘발성 스토리지)로 지원되는 디스크 디바이스에 있는 볼륨에서 생성되며 영구적 로그 버퍼라고도 합니다. 자세한 내용은 [스토리지 클래스 메모리를 사용하는 트랜잭션 커밋 대기 시간 가속화](https://blogs.msdn.microsoft.com/sqlserverstorageengine/2016/12/02/transaction-commit-latency-acceleration-using-storage-class-memory-in-windows-server-2016sql-server-2016-sp1/) 를 참조하세요. **적용 대상**: [!INCLUDE[ssSQL17](../../includes/sssql17-md.md)] 이상.
 
 FOR ATTACH [ WITH \< attach_database_option > ] 기존 운영 체제 파일 집합을 [연결](../../relational-databases/databases/database-detach-and-attach-sql-server.md)하여 데이터베이스를 만들도록 지정합니다. 여기에는 주 파일을 지정하는 \<filespec> 항목이 반드시 필요합니다. 또한 데이터베이스를 처음 만들었거나 마지막으로 연결했을 때의 경로와 다른 경로를 가진 파일의 \<filespec> 항목이 필요합니다. 이러한 파일에는 반드시 \<filespec> 항목을 지정해야 합니다.
 
@@ -411,7 +411,7 @@ CONTAINS FILESTREAM 파일 그룹이 FILESTREAM BLOB(Binary Large Object)을 파
 
 CONTAINS MEMORY_OPTIMIZED_DATA
 
-**적용 대상** : [!INCLUDE[ssSQL14](../../includes/sssql14-md.md)] 이상
+**적용 대상**: [!INCLUDE[ssSQL14](../../includes/sssql14-md.md)] 이상
 
 파일 그룹이 memory_optimized 데이터를 파일 시스템에 저장하도록 지정합니다. 자세한 내용은 [메모리 내 OLTP - 메모리 내 최적화](../../relational-databases/in-memory-oltp/in-memory-oltp-in-memory-optimization.md)를 참조하세요. 데이터베이스당 MEMORY_OPTIMIZED_DATA 파일 그룹이 하나만 허용됩니다. 메모리 최적화 데이터를 저장하기 위해 파일 그룹을 만드는 코드 샘플은 [메모리 최적화 테이블 및 고유하게 컴파일된 저장 프로시저 만들기](../../relational-databases/in-memory-oltp/creating-a-memory-optimized-table-and-a-natively-compiled-stored-procedure.md)를 참조하세요.
 
@@ -859,11 +859,11 @@ GO
 - [BLOB(Binary Large Object) - Blob 데이터](../../relational-databases/blob/binary-large-object-blob-data-sql-server.md)
 
 ::: moniker-end
-::: moniker range="=azuresqldb-current||=sqlallproducts-allversions"
+::: moniker range="=azuresqldb-current"
 
 :::row:::
     :::column:::
-        [SQL Server](create-database-transact-sql.md?view=sql-server-2017)
+        [SQL Server](create-database-transact-sql.md?view=sql-server-ver15&preserve-view=true)
     :::column-end:::
     :::column:::
         **_\* SQL Database \*_**
@@ -875,7 +875,7 @@ GO
         [Azure Synapse<br />Analytics](create-database-transact-sql.md?view=azure-sqldw-latest)
     :::column-end:::
     :::column:::
-        [Analytics Platform<br />System(PDW)](create-database-transact-sql.md?view=aps-pdw-2016)
+        [Analytics Platform<br />System(PDW)](create-database-transact-sql.md?view=aps-pdw-2016&preserve-view=true)
     :::column-end:::
 :::row-end:::
 
@@ -1009,11 +1009,11 @@ MAXSIZE 데이터베이스의 최대 크기를 지정합니다. MAXSIZE는 지�
 |200GB|해당 없음|√|√|√|√|
 |250GB|해당 없음|√ (D)|√ (D)|√|√|
 |300GB|해당 없음|해당 없음|√|√|√|
-|400GB|N/A|N/A|√|√|√|
-|500GB|N/A|N/A|√|√ (D)|√|
-|750GB|N/A|N/A|√|√|√|
-|1024GB|N/A|N/A|√|√|√ (D)|
-|1024GB에서 최대 4096GB(256 GB*로 증분) |N/A|N/A|해당 없음|해당 없음|√|√|
+|400GB|해당 없음|해당 없음|√|√|√|
+|500GB|해당 없음|해당 없음|√|√ (D)|√|
+|750GB|해당 없음|해당 없음|√|√|√|
+|1024GB|해당 없음|해당 없음|√|√|√ (D)|
+|1024GB에서 최대 4096GB(256 GB*로 증분) |해당 없음|해당 없음|해당 없음|N/A|√|√|
 
 \* P11과 P15는 기본 크기인 1024를 사용하여 MAXSIZE를 최대 4TB까지 허용합니다. P11 및 P15는 추가 비용 없이 최대 4TB가 포함된 스토리지를 사용할 수 있습니다. 프리미엄 계층에서 1TB 초과 MAXSIZE는 현재 다음 지역에서 사용할 수 있습니다. 미국 동부2, 미국 서부, US Gov 버지니아, 서유럽, 독일 중부, 동남 아시아, 일본 동부, 오스트레일리아 동부, 캐나다 중부 및 캐나다 동부. DTU 모델에 대한 리소스 제한에 관한 자세한 내용은 [DTU 리소스 제한](https://docs.microsoft.com/azure/sql-database/sql-database-dtu-resource-limits)을 참조하세요.
 
@@ -1288,11 +1288,11 @@ CREATE DATABASE test_zone_redundancy
 - [ALTER DATABASE - Azure SQL Database](alter-database-transact-sql.md?view=azuresqldb-currentls)
 
 ::: moniker-end
-::: moniker range="=azuresqldb-mi-current||=sqlallproducts-allversions"
+::: moniker range="=azuresqldb-mi-current"
 
 :::row:::
     :::column:::
-        [SQL Server](create-database-transact-sql.md?view=sql-server-2017)
+        [SQL Server](create-database-transact-sql.md?view=sql-server-ver15&preserve-view=true)
     :::column-end:::
     :::column:::
         [SQL 데이터베이스](create-database-transact-sql.md?view=azuresqldb-current)
@@ -1304,7 +1304,7 @@ CREATE DATABASE test_zone_redundancy
         [Azure Synapse<br />Analytics](create-database-transact-sql.md?view=azure-sqldw-latest)
     :::column-end:::
     :::column:::
-        [Analytics Platform<br />System(PDW)](create-database-transact-sql.md?view=aps-pdw-2016)
+        [Analytics Platform<br />System(PDW)](create-database-transact-sql.md?view=aps-pdw-2016&preserve-view=true)
     :::column-end:::
 :::row-end:::
 
@@ -1324,7 +1324,7 @@ CREATE DATABASE database_name [ COLLATE collation_name ]
 ```
 
 > [!IMPORTANT]
-> 관리되는 인스턴스에서 데이터베이스에 대한 파일을 추가하거나 포함을 설정하려면 [ALTER DATABASE](alter-database-transact-sql.md?view=sqlallproducts-allversions&tabs=sqldbmi) 문을 사용합니다.
+> 관리되는 인스턴스에서 데이터베이스에 대한 파일을 추가하거나 포함을 설정하려면 [ALTER DATABASE](alter-database-transact-sql.md?tabs=sqldbmi) 문을 사용합니다.
 
 ## <a name="arguments"></a>인수
 
@@ -1372,11 +1372,11 @@ CREATE DATABASE TestDB1;
 [ALTER DATABASE](alter-database-transact-sql.md?view=azuresqldb-mi-current) 참조
 
 ::: moniker-end
-::: moniker range="=azure-sqldw-latest||=sqlallproducts-allversions"
+::: moniker range="=azure-sqldw-latest"
 
 :::row:::
     :::column:::
-        [SQL Server](create-database-transact-sql.md?view=sql-server-2017)
+        [SQL Server](create-database-transact-sql.md?view=sql-server-ver15&preserve-view=true)
     :::column-end:::
     :::column:::
         [SQL 데이터베이스](create-database-transact-sql.md?view=azuresqldb-current)
@@ -1388,7 +1388,7 @@ CREATE DATABASE TestDB1;
         **_\* Azure Synapse<br />Analytics \*_**
     :::column-end:::
     :::column:::
-        [Analytics Platform<br />System(PDW)](create-database-transact-sql.md?view=aps-pdw-2016)
+        [Analytics Platform<br />System(PDW)](create-database-transact-sql.md?view=aps-pdw-2016&preserve-view=true)
     :::column-end:::
 :::row-end:::
 
@@ -1402,7 +1402,7 @@ Azure Synapse에서 이 문을 Azure SQL Database 서버와 함께 사용하여 
 
 ## <a name="syntax"></a>구문
 
-### <a name="sql-pool"></a>[SQL 풀](#tab/sqlpool)
+### <a name="dedicated-sql-pool"></a>[전용 SQL 풀](#tab/sqlpool)
 ```syntaxsql
 CREATE DATABASE database_name [ COLLATE collation_name ]
 (
@@ -1423,7 +1423,7 @@ CREATE DATABASE database_name [ COLLATE collation_name ]
 )
 [;]
 ```
-### <a name="sql-on-demand-preview"></a>[SQL 주문형(미리 보기)](#tab/sqlod)
+### <a name="serverless-sql-pool"></a>[서버리스 SQL 풀](#tab/sqlod)
 ```syntaxsql
 CREATE DATABASE database_name [ COLLATE collation_name ]
 [;] 
@@ -1504,11 +1504,11 @@ CREATE DATABASE TestDW COLLATE Latin1_General_100_CI_AS_KS_WS
 - [DROP DATABASE - Transact-SQL](../../t-sql/statements/drop-database-transact-sql.md)
 
 ::: moniker-end
-::: moniker range=">=aps-pdw-2016||=sqlallproducts-allversions"
+::: moniker range=">=aps-pdw-2016"
 
 :::row:::
     :::column:::
-        [SQL Server](create-database-transact-sql.md?view=sql-server-2017)
+        [SQL Server](create-database-transact-sql.md?view=sql-server-ver15&preserve-view=true)
     :::column-end:::
     :::column:::
         [SQL 데이터베이스](create-database-transact-sql.md?view=azuresqldb-current)
@@ -1548,11 +1548,11 @@ WITH (
 
 *database_name* 새 데이터베이스의 이름입니다. 허용된 데이터베이스 이름에 대한 자세한 내용은 [!INCLUDE[pdw-product-documentation](../../includes/pdw-product-documentation-md.md)]에서 "개체 명명 규칙" 및 "예약된 데이터베이스 이름"을 참조합니다.
 
-AUTOGROW = ON | **OFF** 이 데이터베이스에 대한 *replicated_size* , *distributed_size* 및 *log_size* 매개 변수가 지정된 크기를 넘어 필요에 따라 자동으로 증가하는지 여부를 지정합니다. 기본값은 **OFF** 입니다.
+AUTOGROW = ON | **OFF** 이 데이터베이스에 대한 *replicated_size*, *distributed_size* 및 *log_size* 매개 변수가 지정된 크기를 넘어 필요에 따라 자동으로 증가하는지 여부를 지정합니다. 기본값은 **OFF** 입니다.
 
-AUTOGROW가 ON인 경우 *replicated_size* , *distributed_size* 및 *log_size* 가 각 데이터 삽입, 업데이트 또는 이미 할당된 것보다 더 많은 스토리지 용량이 필요한 기타 작업의 필요에 따라(지정된 초기 크기의 블록에서가 아니라) 성장하게 됩니다.
+AUTOGROW가 ON인 경우 *replicated_size*, *distributed_size* 및 *log_size* 가 각 데이터 삽입, 업데이트 또는 이미 할당된 것보다 더 많은 스토리지 용량이 필요한 기타 작업의 필요에 따라(지정된 초기 크기의 블록에서가 아니라) 성장하게 됩니다.
 
-AUTOGROW가 OFF이면 크기가 자동으로 증가하지 않습니다. [!INCLUDE[ssPDW](../../includes/sspdw-md.md)]은 *replicated_size* , *distributed_size* 또는 *log_size* 가 지정된 값을 초과하여 성장할 것을 요구하는 작업을 시도할 경우 오류를 반환합니다.
+AUTOGROW가 OFF이면 크기가 자동으로 증가하지 않습니다. [!INCLUDE[ssPDW](../../includes/sspdw-md.md)]은 *replicated_size*, *distributed_size* 또는 *log_size* 가 지정된 값을 초과하여 성장할 것을 요구하는 작업을 시도할 경우 오류를 반환합니다.
 
 AUTOGROW는 모든 크기에 대해 ON이거나 OFF입니다. 예를 들어 *log_size* 에 대해 AUTOGROW를 ON으로 설정하는 것이 가능하지 않지만 *replicated_size* 에 대해서는 ON으로 설정하지 않습니다.
 
@@ -1602,8 +1602,8 @@ GO
 데이터베이스를 만들 경우 다음 크기의 총합계를 할당하기 위해 *각 컴퓨팅 노드* 에 충분히 사용할 수 있는 여유 공간이 있어야 합니다.
 
 - *replicated_table_size* 크기의 테이블이 있는 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 데이터베이스입니다.
-- ( *distributed_table_size* / 컴퓨팅 노드 수) 크기의 테이블이 있는 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 데이터베이스입니다.
-- ( *log_size* / 컴퓨팅 노드 수) 크기의 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 로그입니다.
+- (*distributed_table_size* / 컴퓨팅 노드 수) 크기의 테이블이 있는 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 데이터베이스입니다.
+- (*log_size* / 컴퓨팅 노드 수) 크기의 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 로그입니다.
 
 ## <a name="locking"></a>잠금
 

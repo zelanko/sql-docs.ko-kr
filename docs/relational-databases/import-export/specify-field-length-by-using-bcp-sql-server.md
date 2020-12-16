@@ -17,13 +17,13 @@ helpviewer_keywords:
 ms.assetid: 240f33ca-ef4a-413a-a4de-831885cb505b
 author: MashaMSFT
 ms.author: mathoma
-monikerRange: '>=aps-pdw-2016||=azuresqldb-current||=azure-sqldw-latest||>=sql-server-2016||=sqlallproducts-allversions||>=sql-server-linux-2017||=azuresqldb-mi-current'
-ms.openlocfilehash: e39c277ac7fb0c09baca8bb98058c0ddc8766a55
-ms.sourcegitcommit: f3321ed29d6d8725ba6378d207277a57cb5fe8c2
+monikerRange: '>=aps-pdw-2016||=azuresqldb-current||=azure-sqldw-latest||>=sql-server-2016||>=sql-server-linux-2017||=azuresqldb-mi-current'
+ms.openlocfilehash: 3a7e42033f677837cf7d4a21fadcb9ac348621b5
+ms.sourcegitcommit: 1a544cf4dd2720b124c3697d1e62ae7741db757c
 ms.translationtype: HT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 07/06/2020
-ms.locfileid: "86000385"
+ms.lasthandoff: 12/14/2020
+ms.locfileid: "97485345"
 ---
 # <a name="specify-field-length-by-using-bcp-sql-server"></a>bcp를 사용하여 필드 길이 지정(SQL Server)
 [!INCLUDE[SQL Server Azure SQL Database Synapse Analytics PDW ](../../includes/applies-to-version/sql-asdb-asdbmi-asa-pdw.md)]
@@ -48,7 +48,7 @@ ms.locfileid: "86000385"
 -   파일 스토리지 유형이 문자 형식이 아니면 **bcp** 명령은 필드 길이 입력 메시지를 표시하지 않습니다. 데이터는 [!INCLUDE[msCoName](../../includes/msconame-md.md)] [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 네이티브 데이터 표현(원시 형식)으로 저장됩니다.  
   
 ## <a name="using-default-field-lengths"></a>기본 필드 길이 사용  
- 일반적으로는 [!INCLUDE[msCoName](../../includes/msconame-md.md)] 의 권장 사항에 따라 **bcp**에서 제시하는 필드 길이의 기본값을 사용하는 것이 좋습니다. 문자 모드 데이터 파일을 만들 때 기본 필드 길이를 사용하면 데이터가 잘리지 않으며 숫자 오버플로 오류도 발생하지 않습니다.  
+ 일반적으로는 [!INCLUDE[msCoName](../../includes/msconame-md.md)] 의 권장 사항에 따라 **bcp** 에서 제시하는 필드 길이의 기본값을 사용하는 것이 좋습니다. 문자 모드 데이터 파일을 만들 때 기본 필드 길이를 사용하면 데이터가 잘리지 않으며 숫자 오버플로 오류도 발생하지 않습니다.  
   
  필드 길이를 잘못 지정하면 문제가 발생할 수 있습니다. 예를 들어 숫자 데이터를 복사할 때 이 데이터의 필드 길이가 너무 짧으면 **bcp** 유틸리티는 오버플로 메시지를 표시하며 데이터를 복사하지 않습니다. 또한 **datetime** 데이터를 내보낸 후 문자열의 필드 길이를 26바이트 미만으로 지정하면 **bcp** 유틸리티는 오류 메시지를 표시하지 않고 데이터를 자릅니다.  
   

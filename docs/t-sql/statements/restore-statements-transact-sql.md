@@ -40,13 +40,13 @@ helpviewer_keywords:
 ms.assetid: 877ecd57-3f2e-4237-890a-08f16e944ef1
 author: MikeRayMSFT
 ms.author: mikeray
-monikerRange: '>=sql-server-2016||>=sql-server-linux-2017||=azuresqldb-mi-current||>=aps-pdw-2016||=sqlallproducts-allversions'
-ms.openlocfilehash: b2e568e5fc2bc170101b47a436b8af24a22b0137
-ms.sourcegitcommit: d35d0901296580bfceda6e0ab2e14cf2b7e99a0f
+monikerRange: '>=sql-server-2016||>=sql-server-linux-2017||=azuresqldb-mi-current||>=aps-pdw-2016'
+ms.openlocfilehash: d1146d2b937c542a46ad0bf8cc473854e40800b2
+ms.sourcegitcommit: 3bd188e652102f3703812af53ba877cce94b44a9
 ms.translationtype: HT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 10/24/2020
-ms.locfileid: "92496885"
+ms.lasthandoff: 12/15/2020
+ms.locfileid: "97489753"
 ---
 # <a name="restore-statements-transact-sql"></a>RESTORE 문(Transact-SQL)
 
@@ -58,7 +58,7 @@ BACKUP 명령을 사용하여 만든 SQL 데이터베이스 백업을 복원합�
 
 [!INCLUDE[select-product](../../includes/select-product.md)]
 
-::: moniker range=">=sql-server-2016||>=sql-server-linux-2017||=sqlallproducts-allversions"
+::: moniker range=">=sql-server-2016||>=sql-server-linux-2017"
 
 :::row:::
     :::column:::
@@ -326,17 +326,17 @@ RESTORE 문에서 다음과 같이 [ RECOVERY | NORECOVERY ] 옵션을 통해 �
 
 - RECOVERY(기본값)는 현재 백업에 대해 롤포워드가 완료된 다음 롤백이 수행되어야 한다는 의미입니다.
 
-  데이터베이스를 복구하려면 복원할 전체 데이터 집합( *롤포워드 세트* )이 데이터베이스와 일치해야 합니다. 롤포워드 세트가 데이터베이스와 일치할 만큼 충분히 롤포워드되지 않은 경우 RECOVERY를 지정하면 [!INCLUDE[ssDE](../../includes/ssde-md.md)]에서 오류가 발생합니다. 복구 프로세스에 대한 자세한 내용은 [복원 및 복구 개요(SQL Server)](../../relational-databases/backup-restore/restore-and-recovery-overview-sql-server.md#TlogAndRecovery)를 참조하세요.
+  데이터베이스를 복구하려면 복원할 전체 데이터 집합(*롤포워드 세트*)이 데이터베이스와 일치해야 합니다. 롤포워드 세트가 데이터베이스와 일치할 만큼 충분히 롤포워드되지 않은 경우 RECOVERY를 지정하면 [!INCLUDE[ssDE](../../includes/ssde-md.md)]에서 오류가 발생합니다. 복구 프로세스에 대한 자세한 내용은 [복원 및 복구 개요(SQL Server)](../../relational-databases/backup-restore/restore-and-recovery-overview-sql-server.md#TlogAndRecovery)를 참조하세요.
 
 ## <a name="compatibility-support"></a>호환성 지원
-이전 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 버전을 사용하여 만든 **master** , **model** 및 **msdb** 백업은 [!INCLUDE[ssCurrent](../../includes/sscurrent-md.md)]를 통해 복원할 수 없습니다.
+이전 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 버전을 사용하여 만든 **master**, **model** 및 **msdb** 백업은 [!INCLUDE[ssCurrent](../../includes/sscurrent-md.md)]를 통해 복원할 수 없습니다.
 
 > [!NOTE]
 > [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 백업은 백업을 만든 버전 이전의 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 버전으로 복원할 수 없습니다.
 
 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]의 각 버전은 이전 버전과는 다른 기본 경로를 사용합니다. 따라서 이전 버전 백업의 기본 위치에 만든 데이터베이스를 복원하려면 MOVE 옵션을 사용해야 합니다. 새 기본 경로에 대한 자세한 내용은 [SQL Server의 기본값 및 명명된 인스턴스에 대한 파일 위치](../../sql-server/install/file-locations-for-default-and-named-instances-of-sql-server.md)를 참조하세요.
 
-[!INCLUDE[ssCurrent](../../includes/sscurrent-md.md)]로 이전 버전 데이터베이스를 복원하면 데이터베이스가 자동으로 업그레이드됩니다. 일반적으로 데이터베이스는 즉시 사용할 수 있습니다. 그러나 [!INCLUDE[ssVersion2005](../../includes/ssversion2005-md.md)] 데이터베이스에 전체 텍스트 인덱스가 있는 경우 업그레이드 프로세스는 **upgrade_option** 서버 속성의 설정에 따라 인덱스를 가져오거나 다시 설정하거나 다시 작성합니다. 업그레이드 옵션이 가져오기( **upgrade_option** = 2) 또는 다시 작성( **upgrade_option** = 0)으로 설정되어 있는 경우 업그레이드하는 동안 전체 텍스트 인덱스를 사용할 수 없습니다. 인덱싱되는 데이터 양에 따라 가져오기 작업은 몇 시간씩 걸릴 수 있으며 다시 작성 작업은 10배 정도 더 걸릴 수 있습니다. 업그레이드 옵션이 가져오기로 설정되어 있으면 전체 텍스트 카탈로그를 사용할 수 없는 경우 관련된 전체 텍스트 인덱스가 다시 작성됩니다. **upgrade_option** 서버 속성의 설정을 변경하려면 [sp_fulltext_service](../../relational-databases/system-stored-procedures/sp-fulltext-service-transact-sql.md)를 사용합니다.
+[!INCLUDE[ssCurrent](../../includes/sscurrent-md.md)]로 이전 버전 데이터베이스를 복원하면 데이터베이스가 자동으로 업그레이드됩니다. 일반적으로 데이터베이스는 즉시 사용할 수 있습니다. 그러나 [!INCLUDE[ssVersion2005](../../includes/ssversion2005-md.md)] 데이터베이스에 전체 텍스트 인덱스가 있는 경우 업그레이드 프로세스는 **upgrade_option** 서버 속성의 설정에 따라 인덱스를 가져오거나 다시 설정하거나 다시 작성합니다. 업그레이드 옵션이 가져오기(**upgrade_option** = 2) 또는 다시 작성(**upgrade_option** = 0)으로 설정되어 있는 경우 업그레이드하는 동안 전체 텍스트 인덱스를 사용할 수 없습니다. 인덱싱되는 데이터 양에 따라 가져오기 작업은 몇 시간씩 걸릴 수 있으며 다시 작성 작업은 10배 정도 더 걸릴 수 있습니다. 업그레이드 옵션이 가져오기로 설정되어 있으면 전체 텍스트 카탈로그를 사용할 수 없는 경우 관련된 전체 텍스트 인덱스가 다시 작성됩니다. **upgrade_option** 서버 속성의 설정을 변경하려면 [sp_fulltext_service](../../relational-databases/system-stored-procedures/sp-fulltext-service-transact-sql.md)를 사용합니다.
 
 데이터베이스가 새 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]인스턴스로 처음으로 연결되거나 복원될 때 데이터베이스 마스터 키(서비스 마스터 키로 암호화됨)의 복사본은 서버에 아직 저장되지 않은 상태입니다. 데이터베이스 마스터 키를 암호 해독하려면 **OPEN MASTER KEY** 문을 사용해야 합니다. DMK를 암호 해독한 후에는 **ALTER MASTER KEY REGENERATE** 문을 사용하여 SMK(서비스 마스터 키)로 암호화된 DMK의 복사본을 서버에 프로비전함으로써 앞으로 자동 암호 해독을 사용하도록 설정할 수 있습니다. 데이터베이스가 이전 버전에서 업그레이드되지 않은 경우에는 DMK를 다시 생성해야 최신 AES 알고리즘을 사용할 수 있습니다. DMK를 다시 생성하는 방법은 [ALTER MASTER KEY](../../t-sql/statements/alter-master-key-transact-sql.md)를 참조하세요. AES로 업그레이드하기 위해 DMK 키를 다시 생성하는 데 소요되는 시간은 DMK에서 보호하는 개체 수에 따라 달라집니다. AES로 업그레이드하기 위해 DMK 키를 다시 생성하는 작업은 한 번만 필요하며 키 회전 전략의 일부로 이후에 수행하는 다시 생성 작업에 영향을 주지 않습니다.
 
@@ -733,7 +733,7 @@ RESTORE DATABASE Sales
 [백업 기록 및 헤더 정보](../../relational-databases/backup-restore/backup-history-and-header-information-sql-server.md)       
 
 ::: moniker-end
-::: moniker range="=azuresqldb-mi-current||=sqlallproducts-allversions"
+::: moniker range="=azuresqldb-mi-current"
 
 :::row:::
     :::column:::
@@ -880,11 +880,11 @@ WHERE r.command = 'RESTORE DATABASE'
 > 이 보기에는 두 개의 복원 요청이 표시될 수 있습니다. 하나는 클라이언트가 보낸 원래 RESTORE 문이고, 다른 하나는 클라이언트 연결에 실패하더라도 실행되는 백그라운드 RESTORE 문입니다.
 
 ::: moniker-end
-::: moniker range=">=aps-pdw-2016||=sqlallproducts-allversions"
+::: moniker range=">=aps-pdw-2016"
 
 :::row:::
     :::column:::
-        [SQL Server](restore-statements-transact-sql.md?view=sql-server-2017)
+        [SQL Server](restore-statements-transact-sql.md?view=sql-server-ver15&preserve-view=true)
     :::column-end:::
     :::column:::
         [SQL Managed Instance](restore-statements-transact-sql.md?view=azuresqldb-mi-current)
@@ -933,7 +933,7 @@ RESTORE DATABASE *database_name* 사용자 데이터베이스를 *database_name*
 
 사용자 데이터베이스를 복원하면 전체 데이터베이스 백업을 복원한 다음, 선택적으로 차등 백업을 어플라이언스에 복원합니다. 사용자 데이터베이스 복원에는 데이터베이스 사용자 및 데이터베이스 역할이 포함됩니다.
 
-FROM DISK = '\\\\*UNC_path*\\*backup_directory* ' [!INCLUDE[ssPDW](../../includes/sspdw-md.md)]가 백업 파일을 복원할 네트워크 경로 및 디렉터리입니다. 예: FROM DISK = ‘\\\xxx.xxx.xxx.xxx\backups\2012\Monthly\08.2012.Mybackup’.
+FROM DISK = '\\\\*UNC_path*\\*backup_directory*' [!INCLUDE[ssPDW](../../includes/sspdw-md.md)]가 백업 파일을 복원할 네트워크 경로 및 디렉터리입니다. 예: FROM DISK = ‘\\\xxx.xxx.xxx.xxx\backups\2012\Monthly\08.2012.Mybackup’.
 
 *backup_directory* 전체 또는 차등 백업이 포함된 디렉터리의 이름을 지정합니다. 예를 들어 전체 또는 차등 백업에서 RESTORE HEADERONLY 작업을 수행할 수 있습니다.
 

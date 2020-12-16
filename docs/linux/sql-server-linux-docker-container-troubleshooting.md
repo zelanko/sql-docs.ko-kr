@@ -9,14 +9,14 @@ ms.date: 09/07/2020
 ms.topic: conceptual
 ms.prod: sql
 ms.technology: linux
-moniker: '>= sql-server-linux-2017 || >= sql-server-2017 || =sqlallproducts-allversions'
+moniker: '>= sql-server-linux-2017 || >= sql-server-2017'
 zone_pivot_groups: cs1-command-shell
-ms.openlocfilehash: 0a58ad0e4271833c7aef24333b14a61ef80a16c9
-ms.sourcegitcommit: 678f513b0c4846797ba82a3f921ac95f7a5ac863
+ms.openlocfilehash: 051dbe0d44cbd798653632df114beb6727f1c9af
+ms.sourcegitcommit: 3bd188e652102f3703812af53ba877cce94b44a9
 ms.translationtype: HT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 09/07/2020
-ms.locfileid: "89511584"
+ms.lasthandoff: 12/15/2020
+ms.locfileid: "97489823"
 ---
 # <a name="troubleshooting-sql-server-docker-containers"></a>SQL Server Docker 컨테이너 문제 해결
 
@@ -73,7 +73,7 @@ SQL Server 컨테이너가 실행되지 않으면 다음 테스트를 시도합�
     ::: moniker-end
     
     <!--SQL Server 2019 on Linux-->
-    ::: moniker range=">= sql-server-linux-ver15 || >= sql-server-ver15 || =sqlallproducts-allversions"
+    ::: moniker range=">= sql-server-linux-ver15 || >= sql-server-ver15"
     
     ::: zone pivot="cs1-bash"
     ```bash
@@ -117,7 +117,7 @@ SQL Server 컨테이너가 실행되지 않으면 다음 테스트를 시도합�
 
 ## <a name="enable-dump-captures"></a>덤프 캡처 사용
 
-컨테이너 내부에서 SQL Server 프로세스가 실패하는 경우 **SYS_PTRACE**를 사용하도록 설정하여 새 컨테이너를 만들어야 합니다. 그러면 예외 발생 시 덤프 파일을 만드는 데 필요한 Linux 프로세스 추적 기능이 추가됩니다. 덤프 파일은 고객 지원팀이 문제를 해결하는 데 사용할 수 있습니다. 다음 docker run 명령은 이 기능을 사용하도록 설정합니다.
+컨테이너 내부에서 SQL Server 프로세스가 실패하는 경우 **SYS_PTRACE** 를 사용하도록 설정하여 새 컨테이너를 만들어야 합니다. 그러면 예외 발생 시 덤프 파일을 만드는 데 필요한 Linux 프로세스 추적 기능이 추가됩니다. 덤프 파일은 고객 지원팀이 문제를 해결하는 데 사용할 수 있습니다. 다음 docker run 명령은 이 기능을 사용하도록 설정합니다.
 
 <!--SQL Server 2017 on Linux -->
 ::: moniker range="= sql-server-linux-2017 || = sql-server-2017"
@@ -142,7 +142,7 @@ docker run -e "ACCEPT_EULA=Y" -e "MSSQL_SA_PASSWORD=<YourStrong!Passw0rd>" -e "M
 
 ::: moniker-end
 <!--SQL Server 2019 on Linux-->
-::: moniker range=">= sql-server-linux-ver15 || >= sql-server-ver15 || =sqlallproducts-allversions"
+::: moniker range=">= sql-server-linux-ver15 || >= sql-server-ver15 "
 
 ::: zone pivot="cs1-bash"
 ```bash
@@ -200,11 +200,11 @@ SQL Server 가용성 그룹과 함께 Docker를 사용하는 경우 두 가지 �
 
 - 복제본 통신에 사용되는 포트를 매핑합니다(기본값 5022). 예를 들어 `docker run` 명령의 일부로 `-p 5022:5022`를 지정합니다.
 
-- `docker run` 명령의 `-h YOURHOSTNAME` 매개 변수를 사용하여 컨테이너 호스트 이름을 명시적으로 설정합니다. 이 호스트 이름은 가용성 그룹을 구성할 때 사용됩니다. `-h`를 사용하여 지정하지 않으면 기본적으로 **컨테이너 ID**로 설정됩니다.
+- `docker run` 명령의 `-h YOURHOSTNAME` 매개 변수를 사용하여 컨테이너 호스트 이름을 명시적으로 설정합니다. 이 호스트 이름은 가용성 그룹을 구성할 때 사용됩니다. `-h`를 사용하여 지정하지 않으면 기본적으로 **컨테이너 ID** 로 설정됩니다.
 
 ## <a name="sql-server-setup-and-error-logs"></a><a id="errorlogs"></a> SQL Server 설치 및 오류 로그
 
-**/var/opt/mssql/log**에서 SQL Server 설치 및 오류 로그를 확인할 수 있습니다. 컨테이너가 실행되고 있지 않으면 먼저 컨테이너를 시작합니다. 그런 다음, 대화형 명령 프롬프트를 사용하여 로그를 검사합니다. `docker ps` 명령을 실행하여 컨테이너 ID를 가져올 수 있습니다.
+**/var/opt/mssql/log** 에서 SQL Server 설치 및 오류 로그를 확인할 수 있습니다. 컨테이너가 실행되고 있지 않으면 먼저 컨테이너를 시작합니다. 그런 다음, 대화형 명령 프롬프트를 사용하여 로그를 검사합니다. `docker ps` 명령을 실행하여 컨테이너 ID를 가져올 수 있습니다.
 
 ```bash
 docker start <ContainerID>
@@ -220,7 +220,7 @@ cat errorlog
 ```
 
 > [!TIP]
-> 컨테이너를 만들 때 호스트 디렉터리를 **/var/opt/mssql**에 탑재한 경우, 대신 호스트의 매핑된 경로에 있는 **log** 하위 디렉터리에서 확인할 수 있습니다.
+> 컨테이너를 만들 때 호스트 디렉터리를 **/var/opt/mssql** 에 탑재한 경우, 대신 호스트의 매핑된 경로에 있는 **log** 하위 디렉터리에서 확인할 수 있습니다.
 
 ## <a name="execute-commands-in-a-container"></a>컨테이너에서 명령 실행
 
@@ -245,12 +245,12 @@ docker exec -it <Container ID> /bin/bash
 <!--SQL Server 2017 on Linux -->
 ::: moniker range="= sql-server-linux-2017 || = sql-server-2017"
 
-- [빠른 시작](quickstart-install-connect-docker.md?view=sql-server-2017)을 진행하여 Docker에서 SQL Server 2017 컨테이너 이미지로 시작합니다.
+- [빠른 시작](quickstart-install-connect-docker.md?view=sql-server-2017&preserve-view=true)을 진행하여 Docker에서 SQL Server 2017 컨테이너 이미지로 시작합니다.
 
 ::: moniker-end
 
 <!--SQL Server 2019 on Linux-->
-::: moniker range=">= sql-server-linux-ver15 || >= sql-server-ver15 || =sqlallproducts-allversions"
+::: moniker range=">= sql-server-linux-ver15 || >= sql-server-ver15 "
 
 - [빠른 시작](quickstart-install-connect-docker.md?view=sql-server-ver15)을 진행하여 Docker에서 SQL Server 2019 컨테이너 이미지로 시작합니다.
 

@@ -10,12 +10,12 @@ ms.prod: sql
 ms.custom: sqlfreshmay19
 ms.technology: linux
 ms.assetid: 565156c3-7256-4e63-aaf0-884522ef2a52
-ms.openlocfilehash: 363eca526099396001f8df688657e50be32a9c79
-ms.sourcegitcommit: 22102f25db5ccca39aebf96bc861c92f2367c77a
+ms.openlocfilehash: de619ed83ca42f853a528ad280f49b4f256b18ea
+ms.sourcegitcommit: 3bd188e652102f3703812af53ba877cce94b44a9
 ms.translationtype: HT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 10/16/2020
-ms.locfileid: "92115624"
+ms.lasthandoff: 12/15/2020
+ms.locfileid: "97490053"
 ---
 # <a name="installation-guidance-for-sql-server-on-linux"></a>SQL Server on Linux 설치 지침
 
@@ -55,7 +55,7 @@ SQL Server는 RHEL(Red Hat Enterprise Linux), SLES(SUSE Linux Enterprise Server)
 ::: moniker-end
 
 <!--SQL Server 2019 on Linux-->
-::: moniker range=">= sql-server-linux-ver15 || >= sql-server-ver15 || =sqlallproducts-allversions"
+::: moniker range=">= sql-server-linux-ver15 || >= sql-server-ver15 "
 
 [!INCLUDE [linux-supported-platfoms-2019](../includes/linux-supported-platfoms-2019.md)]
 
@@ -81,7 +81,7 @@ SQL Server에 대한 Linux의 시스템 요구 사항은 다음과 같습니다.
 
 프로덕션에서 **NFS(네트워크 파일 시스템)** 원격 공유를 사용하는 경우 다음과 같은 지원 요구 사항을 확인합니다.
 
-- NFS 버전 **4.2 이상**을 사용합니다. 이전 버전의 NFS는 최신 파일 시스템에서 일반적으로 필요한 기능(예: fallocate, 스파스 파일 만들기)을 지원하지 않습니다.
+- NFS 버전 **4.2 이상** 을 사용합니다. 이전 버전의 NFS는 최신 파일 시스템에서 일반적으로 필요한 기능(예: fallocate, 스파스 파일 만들기)을 지원하지 않습니다.
 - NFS 탑재에 **/var/opt/mssql** 디렉터리만 배치합니다. SQL Server 시스템 이진 파일 등의 다른 파일은 지원되지 않습니다.
 - NFS 클라이언트가 원격 공유를 탑재할 때 ‘nolock’ 옵션을 사용하는지 확인합니다.
 
@@ -95,10 +95,10 @@ SQL Server를 설치하거나 업그레이드하는 경우 구성된 Microsoft �
 
 | 플랫폼 | 설치 빠른 시작 |
 |---|---|
-| RHEL(Red Hat Enterprise Linux) | [2017](quickstart-install-connect-red-hat.md?view=sql-server-2017) \| [2019](quickstart-install-connect-red-hat.md?view=sql-server-linux-ver15) |
-| SLES(SUSE Linux Enterprise Server) | [2017](quickstart-install-connect-suse.md?view=sql-server-2017) \| [2019](quickstart-install-connect-suse.md?view=sql-server-linux-ver15) |
-| Ubuntu | [2017](quickstart-install-connect-ubuntu.md?view=sql-server-2017) \| [2019](quickstart-install-connect-ubuntu.md?view=sql-server-linux-ver15) |
-| Docker | [2017](quickstart-install-connect-docker.md?view=sql-server-2017) \| [2019](quickstart-install-connect-docker.md?view=sql-server-linux-ver15) |
+| RHEL(Red Hat Enterprise Linux) | [2017](quickstart-install-connect-red-hat.md?view=sql-server-2017&preserve-view=true) \| [2019](quickstart-install-connect-red-hat.md?view=sql-server-linux-ver15) |
+| SLES(SUSE Linux Enterprise Server) | [2017](quickstart-install-connect-suse.md?view=sql-server-2017&preserve-view=true) \| [2019](quickstart-install-connect-suse.md?view=sql-server-linux-ver15) |
+| Ubuntu | [2017](quickstart-install-connect-ubuntu.md?view=sql-server-2017&preserve-view=true) \| [2019](quickstart-install-connect-ubuntu.md?view=sql-server-linux-ver15) |
+| Docker | [2017](quickstart-install-connect-docker.md?view=sql-server-2017&preserve-view=true) \| [2019](quickstart-install-connect-docker.md?view=sql-server-linux-ver15) |
 
 Azure 가상 머신에서도 SQL Server on Linux를 실행할 수 있습니다. 자세한 내용은 [Azure에서 SQL VM 프로비전](/azure/virtual-machines/linux/sql/provision-sql-server-linux-virtual-machine?toc=/sql/toc/toc.json)을 참조하세요.
 
@@ -141,7 +141,7 @@ SQL Server on Linux의 현재 버전을 확인하려면 다음 절차를 사용�
 
 1. [SQL Server 명령줄 도구](sql-server-linux-setup-tools.md)를 아직 설치하지 않은 경우 지금 설치합니다.
 
-1. **sqlcmd**를 사용하여 SQL Server 버전을 표시하는 Transact-SQL 명령을 실행합니다.
+1. **sqlcmd** 를 사용하여 SQL Server 버전을 표시하는 Transact-SQL 명령을 실행합니다.
 
    ```bash
    sqlcmd -S localhost -U SA -Q 'select @@VERSION'
@@ -193,7 +193,7 @@ Linux 머신에 [빠른 시작](#platforms)에서 사용된 온라인 리포지�
 
 1. **해당 플랫폼용 데이터베이스 엔진 패키지를 다운로드합니다**. [릴리스 정보](../linux/sql-server-linux-release-notes.md)의 패키지 정보 섹션에서 패키지 다운로드 링크를 찾습니다.
 
-1. **다운로드한 패키지를 Linux 머신으로 이동**합니다. 다른 머신을 사용하여 패키지를 다운로드한 경우 패키지를 Linux 머신으로 이동하는 한 가지 방법은 **scp** 명령을 사용하는 것입니다.
+1. **다운로드한 패키지를 Linux 머신으로 이동** 합니다. 다른 머신을 사용하여 패키지를 다운로드한 경우 패키지를 Linux 머신으로 이동하는 한 가지 방법은 **scp** 명령을 사용하는 것입니다.
 
 1. **데이터베이스 엔진 패키지를 설치합니다**. 해당 플랫폼에 따라 다음 명령 중 하나를 사용합니다. 이 예제의 패키지 파일 이름을 다운로드한 정확한 이름으로 바꿉니다.
 
@@ -216,7 +216,7 @@ Linux 머신에 [빠른 시작](#platforms)에서 사용된 온라인 리포지�
 
    누락된 종속성을 해결한 후에 mssql-server 패키지 설치를 다시 시도합니다.
 
-1. **SQL Server 설치를 완료합니다**. **mssql-conf**를 사용하여 SQL Server 설치를 완료합니다.
+1. **SQL Server 설치를 완료합니다**. **mssql-conf** 를 사용하여 SQL Server 설치를 완료합니다.
 
    ```bash
    sudo /opt/mssql/bin/mssql-conf setup

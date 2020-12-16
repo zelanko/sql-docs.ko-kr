@@ -20,13 +20,13 @@ helpviewer_keywords:
 ms.assetid: 78c10341-8373-4b30-b404-3db20e1a3ac4
 author: markingmyname
 ms.author: maghan
-monikerRange: '>=aps-pdw-2016||=azuresqldb-current||=azure-sqldw-latest||>=sql-server-2016||=sqlallproducts-allversions||>=sql-server-linux-2017||=azuresqldb-mi-current'
-ms.openlocfilehash: c1ebbb0fc376d4c3995218c499816725dbe12932
-ms.sourcegitcommit: cc23d8646041336d119b74bf239a6ac305ff3d31
+monikerRange: '>=aps-pdw-2016||=azuresqldb-current||=azure-sqldw-latest||>=sql-server-2016||>=sql-server-linux-2017||=azuresqldb-mi-current'
+ms.openlocfilehash: 3a4fab1b718ca4cc4db563a3065f6b33fd1584ec
+ms.sourcegitcommit: 1a544cf4dd2720b124c3697d1e62ae7741db757c
 ms.translationtype: HT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 09/23/2020
-ms.locfileid: "91114939"
+ms.lasthandoff: 12/14/2020
+ms.locfileid: "97484205"
 ---
 # <a name="charindex-transact-sql"></a>CHARINDEX(Transact-SQL)
 [!INCLUDE [sql-asdb-asdbmi-asa-pdw](../../includes/applies-to-version/sql-asdb-asdbmi-asa-pdw.md)]
@@ -45,23 +45,23 @@ CHARINDEX ( expressionToFind , expressionToSearch [ , start_location ] )
 
 ## <a name="arguments"></a>인수
 *expressionToFind*  
-찾으려는 시퀀스가 포함된 문자 [식](../../t-sql/language-elements/expressions-transact-sql.md)입니다. *expressionToFind*는 8,000자로 제한됩니다.
+찾으려는 시퀀스가 포함된 문자 [식](../../t-sql/language-elements/expressions-transact-sql.md)입니다. *expressionToFind* 는 8,000자로 제한됩니다.
   
 *expressionToSearch*  
 검색할 문자 식입니다.
   
 *start_location*  
-검색이 시작되는 **integer** 또는 **bigint** 식입니다. *start_location*이 지정되지 않았거나 음수 값 또는 0 값이면, *expressionToSearch*의 시작 부분에서 검색이 시작됩니다.
+검색이 시작되는 **integer** 또는 **bigint** 식입니다. *start_location* 이 지정되지 않았거나 음수 값 또는 0 값이면, *expressionToSearch* 의 시작 부분에서 검색이 시작됩니다.
   
 ## <a name="return-types"></a>반환 형식
-*expressionToSearch*의 데이터 형식이 **nvarchar(max)** , **varbinary(max)** 또는 **varchar(max)** 이면 **bigint**이고, 그렇지 않으면 **int**입니다.
+*expressionToSearch* 의 데이터 형식이 **nvarchar(max)** , **varbinary(max)** 또는 **varchar(max)** 이면 **bigint** 이고, 그렇지 않으면 **int** 입니다.
   
 ## <a name="remarks"></a>설명  
 *expressionToFind* 또는 *expressionToSearch* 식에 유니코드 데이터 형식(**nchar** 또는 **nvarchar**)이 있고 다른 식에는 이러한 형식이 없으면, CHARINDEX 함수에서 다른 식을 유니코드 데이터 형식으로 변환합니다. CHARINDEX는 **image**, **ntext** 및 **text** 데이터 형식으로 사용할 수 없습니다.
   
 *expressionToFind* 또는 *expressionToSearch* 식에 NULL 값이 있으면 CHARINDEX에서 NULL을 반환합니다.
   
-CHARINDEX가 *expressionToSearch* 내에서 *expressionToFind*를 찾지 못하면 CHARINDEX에서 0을 반환합니다.
+CHARINDEX가 *expressionToSearch* 내에서 *expressionToFind* 를 찾지 못하면 CHARINDEX에서 0을 반환합니다.
   
 CHARINDEX는 입력 데이터 정렬을 기반으로 하는 비교를 수행합니다. 지정된 데이터 정렬에서 비교를 수행하려면 COLLATE를 사용하여 명시적 데이터 정렬을 입력에 적용합니다.
   
@@ -70,7 +70,7 @@ CHARINDEX는 입력 데이터 정렬을 기반으로 하는 비교를 수행합�
 0x0000(**char(0)** )은 Windows 데이터 정렬에서 정의되지 않은 문자이며 CHARINDEX에 포함할 수 없습니다.
   
 ## <a name="supplementary-characters-surrogate-pairs"></a>보조 문자(서로게이트 쌍)  
-SC 데이터 정렬을 사용하는 경우 *start_location*과 반환 값 둘 다 서로게이트 쌍을 둘이 아닌 한 문자로 계산합니다. 자세한 내용은 [Collation and Unicode Support](../../relational-databases/collations/collation-and-unicode-support.md)을 참조하세요.
+SC 데이터 정렬을 사용하는 경우 *start_location* 과 반환 값 둘 다 서로게이트 쌍을 둘이 아닌 한 문자로 계산합니다. 자세한 내용은 [Collation and Unicode Support](../../relational-databases/collations/collation-and-unicode-support.md)을 참조하세요.
   
 ## <a name="examples"></a>예  
   
@@ -114,7 +114,7 @@ GO
 ```  
   
 ### <a name="c-searching-for-a-nonexistent-expression"></a>C. 존재하지 않는 식 검색  
-다음 예제에서는 CHARINDEX가 *expressionToSearch* 내에서 *expressionToFind*를 찾지 못했을 때의 결과 집합을 보여 줍니다.
+다음 예제에서는 CHARINDEX가 *expressionToSearch* 내에서 *expressionToFind* 를 찾지 못했을 때의 결과 집합을 보여 줍니다.
   
 ```sql
 DECLARE @document VARCHAR(64);  

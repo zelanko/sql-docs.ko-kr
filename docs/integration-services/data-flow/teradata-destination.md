@@ -10,12 +10,12 @@ ms.technology: integration-services
 ms.topic: conceptual
 author: chugugrace
 ms.author: chugu
-ms.openlocfilehash: 191c89d1fdced6ad1581dadff1e4ed92f397f640
-ms.sourcegitcommit: c5078791a07330a87a92abb19b791e950672e198
+ms.openlocfilehash: 158184ea961aa8938bb0eb2b6f94890dd1eddbfa
+ms.sourcegitcommit: 3bd188e652102f3703812af53ba877cce94b44a9
 ms.translationtype: HT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 11/26/2020
-ms.locfileid: "92194721"
+ms.lasthandoff: 12/15/2020
+ms.locfileid: "97489873"
 ---
 # <a name="teradata-destination"></a>Teradata 대상
 
@@ -223,7 +223,7 @@ Teradata 대상 편집기 대화 상자의 오류 출력 페이지를 사용하�
 
 Teradata 대상에서 흐름 오류를 처리하는 방법을 선택합니다. 오류 무시, 행 리디렉션 또는 구성 요소 실패를 지정할 수 있습니다.
 
-**관련 항목**: [데이터 오류 처리](./error-handling-in-data.md?view=sql-server-2017)
+**관련 항목**: [데이터 오류 처리](./error-handling-in-data.md)
 
 **잘림**
 

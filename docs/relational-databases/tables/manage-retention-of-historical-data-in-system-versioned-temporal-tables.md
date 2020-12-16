@@ -11,13 +11,13 @@ ms.topic: conceptual
 ms.assetid: 7925ebef-cdb1-4cfe-b660-a8604b9d2153
 author: markingmyname
 ms.author: maghan
-monikerRange: =azuresqldb-current||>=sql-server-2016||=sqlallproducts-allversions||>=sql-server-linux-2017||=azuresqldb-mi-current
-ms.openlocfilehash: 7d1c849a1828664fa24d8e2473dfe9c692c048cd
-ms.sourcegitcommit: 80701484b8f404316d934ad2a85fd773e26ca30c
+monikerRange: =azuresqldb-current||>=sql-server-2016||>=sql-server-linux-2017||=azuresqldb-mi-current
+ms.openlocfilehash: f742ece496377a224a67b12223b09d198327812a
+ms.sourcegitcommit: 1a544cf4dd2720b124c3697d1e62ae7741db757c
 ms.translationtype: HT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 11/03/2020
-ms.locfileid: "93243615"
+ms.lasthandoff: 12/14/2020
+ms.locfileid: "97484495"
 ---
 # <a name="manage-retention-of-historical-data-in-system-versioned-temporal-tables"></a>시스템 버전 관리된 temporal 테이블에서 기록 데이터의 보존 관리
 
@@ -72,7 +72,7 @@ Stretch Database 접근 방식을 사용하면 기록 데이터 일부 또는 �
 
 초보자를 위한 가장 쉬운 방법은 스트레치 마법사를 사용하여 전체 데이터베이스에 대해 스트레치를 사용하도록 설정한 다음 스트레치 마법사 내에서 temporal 기록 테이블을 선택 하는 것입니다(이 예에서는 다른 빈 데이터베이스에서 Department 테이블을 시스템 버전 관리된 temporal 테이블로 구성했다고 가정). [!INCLUDE[ssSQL15](../../includes/sssql15-md.md)]에서는 임시 기록 테이블 자체를 마우스 오른쪽 단추로 클릭하고 스트레치를 클릭할 수 없습니다.
 
-1. 데이터베이스를 마우스 오른쪽 단추로 클릭하고 **태스크** , **스트레치** 를 차례로 클릭하고 **사용** 을 클릭하여 마법사를 시작합니다.
+1. 데이터베이스를 마우스 오른쪽 단추로 클릭하고 **태스크**, **스트레치** 를 차례로 클릭하고 **사용** 을 클릭하여 마법사를 시작합니다.
 2. **테이블 선택** 창에서 임시 기록 테이블에 대한 확인란을 선택하고 다음을 클릭합니다.
 
     ![테이블 선택 페이지에서 기록 테이블 선택](../../relational-databases/tables/media/stretch-wizard-2-for-temporal.png "테이블 선택 페이지에서 기록 테이블 선택")
@@ -332,7 +332,7 @@ COMMIT TRANSACTION
 - RANGE LEFT 사례: RANGE LEFT의 경우, 가장 낮은 파티션 경계가 파티션 전환 후 비어 있는 파티션 1에 속하여 MERGE RANGE로 데이터 이동이 발생되지 않습니다.
 - RANGE RIGHT 사례: RANGE RIGHT의 경우, 전환을 통해 파티션 1이 비었다고 가정하므로 가장 낮은 파티션 경계가 비어 있지 않은 파티션 2에 속합니다. 이 경우 MERGE RANGE에서 데이터 이동이 발생합니다. 즉 파티션 2의 데이터가 파티션 1로 이동합니다. 이 문제를 방지하려면 슬라이딩 윈도우 시나리오에서 RANGE RIGHT에는 항상 빈 상태인 파티션 1이 있어야 합니다. 다시 말하면 RANGE RIGHT를 사용할 경우 RANGE LEFT 경우와 비교되는 추가 파티션을 하나 만들어 유지 관리해야 합니다.
 
-**결론** : 슬라이딩 파티션에서 RANGE LEFT를 사용하면 파티션 관리가 훨씬 간단해지고 데이터 이동이 발생하지 않습니다. 하지만 RANGE RIGHT를 사용하여 파티션 경계를 정의하는 것이 datetime 시간 틱 문제를 처리하지 않아도 되므로 좀 더 간단합니다.
+**결론**: 슬라이딩 파티션에서 RANGE LEFT를 사용하면 파티션 관리가 훨씬 간단해지고 데이터 이동이 발생하지 않습니다. 하지만 RANGE RIGHT를 사용하여 파티션 경계를 정의하는 것이 datetime 시간 틱 문제를 처리하지 않아도 되므로 좀 더 간단합니다.
 
 ## <a name="using-custom-cleanup-script-approach"></a>사용자 지정 정리 스크립트 방식 사용
 

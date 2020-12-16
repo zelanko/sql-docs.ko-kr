@@ -14,13 +14,13 @@ helpviewer_keywords:
 ms.assetid: 2addc9be-67d0-423d-a457-192fe9d7d058
 author: MikeRayMSFT
 ms.author: mikeray
-monikerRange: '>=aps-pdw-2016||=azuresqldb-current||=azure-sqldw-latest||>=sql-server-2016||=sqlallproducts-allversions||>=sql-server-linux-2017||=azuresqldb-mi-current'
-ms.openlocfilehash: 9058445789197a3ddcf8b2412028f0bfc5fc85f4
-ms.sourcegitcommit: 22dacedeb6e8721e7cdb6279a946d4002cfb5da3
+monikerRange: '>=aps-pdw-2016||=azuresqldb-current||=azure-sqldw-latest||>=sql-server-2016||>=sql-server-linux-2017||=azuresqldb-mi-current'
+ms.openlocfilehash: 1f2f4ddc1c090e7a7f8497f419590f906584a7f9
+ms.sourcegitcommit: 1a544cf4dd2720b124c3697d1e62ae7741db757c
 ms.translationtype: HT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 10/14/2020
-ms.locfileid: "92036836"
+ms.lasthandoff: 12/14/2020
+ms.locfileid: "97483825"
 ---
 # <a name="tutorial-writing-transact-sql-statements"></a>자습서: Transact-SQL 문 작성
 [!INCLUDE[tsql-appliesto-ss2008-all-md](../includes/tsql-appliesto-ss2008-all-md.md)]
@@ -29,7 +29,7 @@ ms.locfileid: "92036836"
 >**참고:** 초보자라면 [!INCLUDE[ssManStudioFull](../includes/ssmanstudiofull-md.md)] 문을 작성하는 대신 [!INCLUDE[tsql](../includes/tsql-md.md)] 를 사용하는 것이 더 쉬울 수 있습니다.  
   
 ## <a name="finding-more-information"></a>추가 정보 찾기  
-특정 문에 대한 자세한 내용을 보려면 SQL Server 온라인 설명서에 이름으로 해당 문을 검색하거나 목차를 사용하여 [Transact-SQL 참조&#40;데이터베이스 엔진&#41;](./language-reference.md) 아래에 사전순으로 나열된 1,800개의 언어 요소를 찾아봅니다. 또한 관심이 있는 주제와 관련된 키워드를 검색하는 것도 좋은 방법이 될 수 있습니다. 예를 들어 월과 같은 날짜의 일부를 반환하는 방법을 보려면 **dates [SQL Server]** 의 색인을 검색한 다음 **dateparts**를 선택합니다. 이렇게 하면 [DATEPART&#40;Transact-SQL&#41;](../t-sql/functions/datepart-transact-sql.md) 항목이 제공됩니다. 마찬가지로 문자열을 사용하는 방법을 보려면 **문자열 함수**를 검색합니다. 이렇게 하면 [문자열 함수&#40;Transact-SQL&#41;](../t-sql/functions/string-functions-transact-sql.md) 항목이 제공됩니다.  
+특정 문에 대한 자세한 내용을 보려면 SQL Server 온라인 설명서에 이름으로 해당 문을 검색하거나 목차를 사용하여 [Transact-SQL 참조&#40;데이터베이스 엔진&#41;](./language-reference.md) 아래에 사전순으로 나열된 1,800개의 언어 요소를 찾아봅니다. 또한 관심이 있는 주제와 관련된 키워드를 검색하는 것도 좋은 방법이 될 수 있습니다. 예를 들어 월과 같은 날짜의 일부를 반환하는 방법을 보려면 **dates [SQL Server]** 의 색인을 검색한 다음 **dateparts** 를 선택합니다. 이렇게 하면 [DATEPART&#40;Transact-SQL&#41;](../t-sql/functions/datepart-transact-sql.md) 항목이 제공됩니다. 마찬가지로 문자열을 사용하는 방법을 보려면 **문자열 함수** 를 검색합니다. 이렇게 하면 [문자열 함수&#40;Transact-SQL&#41;](../t-sql/functions/string-functions-transact-sql.md) 항목이 제공됩니다.  
   
 ## <a name="what-you-will-learn"></a>학습 내용  
 이 자습서에서는 데이터베이스 작성, 데이터베이스에서 테이블 작성, 테이블에 데이터 삽입, 데이터 업데이트, 데이터 읽기, 데이터 삭제, 테이블 삭제 등을 수행하는 방법을 보여 줍니다. 뷰와 저장 프로시저를 만들고 데이터베이스 및 데이터에 대해 사용자를 구성합니다.  

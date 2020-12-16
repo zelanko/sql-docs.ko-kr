@@ -18,12 +18,12 @@ helpviewer_keywords:
 ms.assetid: 27a032ef-1cf6-4959-8e67-03d28c4b3465
 author: markingmyname
 ms.author: maghan
-ms.openlocfilehash: 05d2abb4b471722b035fda1b0101b8111285f1f1
-ms.sourcegitcommit: dd36d1cbe32cd5a65c6638e8f252b0bd8145e165
+ms.openlocfilehash: 3d7fae3f87700a97faa898d839288a8392ef5364
+ms.sourcegitcommit: 3bd188e652102f3703812af53ba877cce94b44a9
 ms.translationtype: HT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 09/08/2020
-ms.locfileid: "89541460"
+ms.lasthandoff: 12/15/2020
+ms.locfileid: "97489435"
 ---
 # <a name="alter-database-transact-sql-database-mirroring"></a>ALTER DATABASE(Transact-SQL) 데이터베이스 미러링
 
@@ -92,7 +92,7 @@ SELECT role_desc, state_desc FROM sys.database_mirroring_endpoints
 
 이 옵션은 각 파트너에서 세션당 한 번 지정합니다. 데이터베이스 미러링 세션을 시작하려면 두 개의 ALTER DATABASE *database* SET PARTNER **='** _partner_server_ **'** 문이 필요합니다. 순서가 중요합니다. 먼저 미러 서버에 연결하고 주 서버 인스턴스를 *partner_server*(SET PARTNER **='** _principal_server_ **'** )로 지정합니다. 두 번째로 주 서버에 연결하고 미러 서버 인스턴스를 *partner_server*(SET PARTNER **='** _mirror_server_ **'** )로 지정합니다. 이렇게 하면 두 파트너 간에 데이터베이스 미러링 세션이 시작됩니다. 자세한 내용은 이 항목의 뒷부분에 나오는 [데이터베이스 미러링 설정](../../database-engine/database-mirroring/setting-up-database-mirroring-sql-server.md)을 참조하세요.
 
-*partner_server*의 값은 서버 네트워크 주소입니다. 구문은 다음과 같습니다.
+*partner_server* 의 값은 서버 네트워크 주소입니다. 구문은 다음과 같습니다.
 
 TCP **://** _\<system-address>_ **:** _\<port>_
 
@@ -114,7 +114,7 @@ TCP **://** _\<system-address>_ **:** _\<port>_
 
 FAILOVER 수동으로 주 서버에서 미러 서버로 장애 조치(failover)를 수행합니다. FAILOVER는 주 서버에서만 지정할 수 있습니다. 이 옵션은 SAFETY가 기본값인 FULL로 설정되어 있는 경우에만 유효합니다.
 
-FAILOVER 옵션은 **master**를 데이터베이스 컨텍스트로 사용해야 합니다.
+FAILOVER 옵션은 **master** 를 데이터베이스 컨텍스트로 사용해야 합니다.
 
 FORCE_SERVICE_ALLOW_DATA_LOSS 주 서버에서 동기화되지 않은 상태 또는 자동 장애 조치(failover)가 수행되지 않는 경우 동기화된 상태의 데이터베이스에 대해 오류가 발생한 경우 데이터베이스 서비스를 미러 데이터베이스에 강제 실행합니다.
 
@@ -184,7 +184,7 @@ SELECT role_desc, state_desc FROM sys.database_mirroring_endpoints
 
  **‘** _witness_server_ **’** 데이터베이스 미러링 세션의 미러링 모니터 서버로 사용할 [!INCLUDE[ssDE](../../includes/ssde-md.md)] 인스턴스를 지정합니다. SET WITNESS 문은 주 서버에서만 지정할 수 있습니다.
 
-SET WITNESS **='** _witness_server_ **'** 문에서 *witness_server* 구문은 *partner_server*의 구문과 동일합니다.
+SET WITNESS **='** _witness_server_ **'** 문에서 *witness_server* 구문은 *partner_server* 의 구문과 동일합니다.
 
 OFF 데이터베이스 미러링 세션에서 미러링 모니터를 제거합니다. 미러링 모니터를 OFF로 설정하면 자동 장애 조치가 해제됩니다. 데이터베이스가 FULL SAFETY로 설정되어 있고 미러링 모니터가 OFF인 경우 미러 서버에 오류가 발생하면 주 서버는 데이터베이스를 사용할 수 없도록 합니다.
 
@@ -234,6 +234,6 @@ GO
 
 ## <a name="see-also"></a>참고 항목
 
-- [CREATE DATABASE](../../t-sql/statements/create-database-transact-sql.md?view=sql-server-2017)
+- [CREATE DATABASE](../../t-sql/statements/create-database-transact-sql.md)
 - [DATABASEPROPERTYEX](../../t-sql/functions/databasepropertyex-transact-sql.md)
 - [sys.database_mirroring_witnesses](../../relational-databases/system-catalog-views/database-mirroring-witness-catalog-views-sys-database-mirroring-witnesses.md)

@@ -11,13 +11,13 @@ ms.topic: conceptual
 ms.assetid: 041b428f-781d-4628-9f34-4d697894e61e
 author: MightyPen
 ms.author: genemi
-monikerRange: =azuresqldb-current||>=sql-server-2016||=sqlallproducts-allversions||>=sql-server-linux-2017||=azuresqldb-mi-current
-ms.openlocfilehash: 8eabca1300e3937d4b1a1f48531c9cc09b1978dd
-ms.sourcegitcommit: 4d370399f6f142e25075b3714e5c2ce056b1bfd0
+monikerRange: =azuresqldb-current||>=sql-server-2016||>=sql-server-linux-2017||=azuresqldb-mi-current
+ms.openlocfilehash: 078dc8fd820e5b93830964933c2641e677134f4a
+ms.sourcegitcommit: 1a544cf4dd2720b124c3697d1e62ae7741db757c
 ms.translationtype: HT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 10/09/2020
-ms.locfileid: "91867097"
+ms.lasthandoff: 12/14/2020
+ms.locfileid: "97485255"
 ---
 # <a name="plan-your-adoption-of-in-memory-oltp-features-in-sql-server"></a>SQL Server에 메모리 내 OLTP 기능 채택 계획
 [!INCLUDE [SQL Server Azure SQL Database](../../includes/applies-to-version/sql-asdb.md)]
@@ -104,7 +104,7 @@ Azure SQL Database 클라우드 서비스에 호스트된 데이터베이스의 
 
 SSDT에서 관리하는 .dacpac 파일을 사용하여 데이터베이스를 현재 위치에서 업데이트할 수 있습니다. SSDT에서 .dacpac 파일로 인코딩된 스키마의 변경 내용을 지정할 수 있습니다.
 
-*데이터베이스*형식의 Visual Studio 프로젝트 컨텍스트에서 .dacpac 파일을 사용합니다.
+*데이터베이스* 형식의 Visual Studio 프로젝트 컨텍스트에서 .dacpac 파일을 사용합니다.
 
 - [데이터 계층 애플리케이션](../../relational-databases/data-tier-applications/data-tier-applications.md) 및 .dacpac 파일
 
@@ -226,7 +226,7 @@ READPAST 힌트는 여러 세션이 각각 큐 처리 등 같은 작은 행 집�
 
 #### <a name="nonclustered-columnstore-indexes"></a>비클러스터형 columnstore 인덱스
 
-메모리 액세스에 최적화된 테이블은 *온라인 트랜잭션 처리* 또는 *OLTP*라고 하는 패러다임에서 일반적인 비즈니스 트랜잭션 데이터의 많은 처리량을 제공합니다. columnstore 인덱스는 *분석*이라고 하는 집계 및 유사한 처리의 많은 처리량을 제공합니다. 지난 수년간 OLTP와 분석 둘 다의 요구 사항을 만족하는 데 사용할 수 있는 최고의 접근 방식은 데이터 이동이 많고 어느 정도의 데이터 중복도가 있는 별도의 테이블을 사용하는 것이었습니다. 현재는 더 단순한 **하이브리드 솔루션** 을 사용할 수 있으므로 메모리 최적화 테이블에 columnstore 인덱스를 사용하세요.
+메모리 액세스에 최적화된 테이블은 *온라인 트랜잭션 처리* 또는 *OLTP* 라고 하는 패러다임에서 일반적인 비즈니스 트랜잭션 데이터의 많은 처리량을 제공합니다. columnstore 인덱스는 *분석* 이라고 하는 집계 및 유사한 처리의 많은 처리량을 제공합니다. 지난 수년간 OLTP와 분석 둘 다의 요구 사항을 만족하는 데 사용할 수 있는 최고의 접근 방식은 데이터 이동이 많고 어느 정도의 데이터 중복도가 있는 별도의 테이블을 사용하는 것이었습니다. 현재는 더 단순한 **하이브리드 솔루션** 을 사용할 수 있으므로 메모리 최적화 테이블에 columnstore 인덱스를 사용하세요.
 
 
 - 디스크 기반 테이블을 기반으로 하여 [columnstore 인덱스](../../relational-databases/indexes/columnstore-indexes-overview.md) 를 클러스터형 인덱스로도 작성할 수 있습니다. 그러나 메모리 최적화 테이블에서는 columnstore 인덱스를 클러스터화할 수 없습니다.

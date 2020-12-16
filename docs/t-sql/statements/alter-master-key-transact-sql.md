@@ -27,13 +27,13 @@ helpviewer_keywords:
 ms.assetid: 8ac501c3-4280-4d5b-b58a-1524fa715b50
 author: VanMSFT
 ms.author: vanto
-monikerRange: '>=aps-pdw-2016||=azuresqldb-current||=azure-sqldw-latest||>=sql-server-2016||=sqlallproducts-allversions||>=sql-server-linux-2017||=azuresqldb-mi-current'
-ms.openlocfilehash: 8c59acf58ce6816ebdcb7bf04fcb81df7c125693
-ms.sourcegitcommit: 3efd8bbf91f4f78dce3a4ac03348037d8c720e6a
+monikerRange: '>=aps-pdw-2016||=azuresqldb-current||=azure-sqldw-latest||>=sql-server-2016||>=sql-server-linux-2017||=azuresqldb-mi-current'
+ms.openlocfilehash: 344580a5c85898666c1450a0bc00d7a12fa20341
+ms.sourcegitcommit: 3bd188e652102f3703812af53ba877cce94b44a9
 ms.translationtype: HT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 09/23/2020
-ms.locfileid: "91024427"
+ms.lasthandoff: 12/15/2020
+ms.locfileid: "97489963"
 ---
 # <a name="alter-master-key-transact-sql"></a>ALTER MASTER KEY(Transact-SQL)
 
@@ -101,7 +101,7 @@ ALTER MASTER KEY <alter_option>
 
 ## <a name="arguments"></a>인수
 
-PASSWORD ='*password*' 데이터베이스 마스터 키를 암호화하거나 암호 해독할 때 사용할 암호를 지정합니다. *password*는 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 인스턴스를 실행하는 컴퓨터의 Windows 암호 정책 요구 사항을 충족해야 합니다.
+PASSWORD ='*password*' 데이터베이스 마스터 키를 암호화하거나 암호 해독할 때 사용할 암호를 지정합니다. *password* 는 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 인스턴스를 실행하는 컴퓨터의 Windows 암호 정책 요구 사항을 충족해야 합니다.
 
 ## <a name="remarks"></a>설명
 
@@ -148,5 +148,5 @@ GO
 - [RESTORE MASTER KEY](../../t-sql/statements/restore-master-key-transact-sql.md)
 - [DROP MASTER KEY](../../t-sql/statements/drop-master-key-transact-sql.md)
 - [암호화 계층](../../relational-databases/security/encryption/encryption-hierarchy.md)
-- [CREATE DATABASE](../../t-sql/statements/create-database-transact-sql.md?view=sql-server-2017)
+- [CREATE DATABASE](../../t-sql/statements/create-database-transact-sql.md)
 - [데이터베이스 분리 및 연결](../../relational-databases/databases/database-detach-and-attach-sql-server.md)

@@ -16,13 +16,13 @@ helpviewer_keywords:
 ms.assetid: a54f7373-b247-4d61-8fb8-7f2ec7a8d0a4
 author: MikeRayMSFT
 ms.author: mikeray
-monikerRange: '>=aps-pdw-2016||=azuresqldb-current||=azure-sqldw-latest||>=sql-server-2016||=sqlallproducts-allversions||>=sql-server-linux-2017||=azuresqldb-mi-current'
-ms.openlocfilehash: 33374865afeda8b6aac3c1f0423574a4fa1ac593
-ms.sourcegitcommit: 216f377451e53874718ae1645a2611cdb198808a
+monikerRange: '>=aps-pdw-2016||=azuresqldb-current||=azure-sqldw-latest||>=sql-server-2016||>=sql-server-linux-2017||=azuresqldb-mi-current'
+ms.openlocfilehash: 5039e7ea667c80b051413b93fbb34d2f4adc1038
+ms.sourcegitcommit: 1a544cf4dd2720b124c3697d1e62ae7741db757c
 ms.translationtype: HT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 07/28/2020
-ms.locfileid: "87248584"
+ms.lasthandoff: 12/14/2020
+ms.locfileid: "97484335"
 ---
 # <a name="data-types-transact-sql"></a>Data types(Transact-SQL)
 [!INCLUDE [sql-asdb-asdbmi-asa-pdw](../../includes/applies-to-version/sql-asdb-asdbmi-asa-pdw.md)]
@@ -33,7 +33,7 @@ ms.locfileid: "87248584"
   
 데이터 형식, 데이터 정렬, 전체 자릿수, 소수 자릿수 또는 길이가 다른 두 식이 연산자에 의해 결합된 경우 그 특징은 다음 규칙에 따라 결정됩니다.
 -   결합 결과의 데이터 형식은 입력 식의 데이터 형식에 데이터 형식 우선 순위 규칙을 적용하여 결정됩니다. 자세한 내용은 [데이터 형식 우선 순위&#40;Transact-SQL&#41;](../../t-sql/data-types/data-type-precedence-transact-sql.md)를 참조하세요.  
--   결과 데이터 형식이 **char**, **varchar**, **text**, **nchar**, **nvarchar** 또는 **ntext**인 경우 결과의 데이터 정렬은 데이터 정렬 우선 순위 규칙에 따라 결정됩니다. 자세한 내용은 [데이터 정렬 선행 규칙&#40;Transact-SQL&#41;](../../t-sql/statements/collation-precedence-transact-sql.md)을 참조하세요.  
+-   결과 데이터 형식이 **char**, **varchar**, **text**, **nchar**, **nvarchar** 또는 **ntext** 인 경우 결과의 데이터 정렬은 데이터 정렬 우선 순위 규칙에 따라 결정됩니다. 자세한 내용은 [데이터 정렬 선행 규칙&#40;Transact-SQL&#41;](../../t-sql/statements/collation-precedence-transact-sql.md)을 참조하세요.  
 -   결과의 전체 자릿수, 소수 자릿수 및 길이는 입력 식의 전체 자릿수, 소수 자릿수, 길이에 따라 달라집니다. 자세한 내용은 [전체 자릿수, 소수 자릿수 및 길이&#40;Transact-SQL&#41;](../../t-sql/data-types/precision-scale-and-length-transact-sql.md)를 참조하세요.  
   
 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]는 ISO 호환성을 위해 데이터 형식 동의어를 제공합니다. 자세한 내용은 [데이터 형식 동의어&#40;Transact-SQL&#41;](../../t-sql/data-types/data-type-synonyms-transact-sql.md)를 참조하세요.

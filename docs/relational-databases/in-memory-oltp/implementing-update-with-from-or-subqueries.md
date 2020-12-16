@@ -11,13 +11,13 @@ ms.topic: conceptual
 ms.assetid: 138f5b0e-f8a4-400f-b581-8062aebc62b6
 author: MightyPen
 ms.author: genemi
-monikerRange: =azuresqldb-current||>=sql-server-2016||=sqlallproducts-allversions||>=sql-server-linux-2017||=azuresqldb-mi-current
-ms.openlocfilehash: 95e55e1519ab61eee3bed031d0d80565e56b0a69
-ms.sourcegitcommit: da88320c474c1c9124574f90d549c50ee3387b4c
+monikerRange: =azuresqldb-current||>=sql-server-2016||>=sql-server-linux-2017||=azuresqldb-mi-current
+ms.openlocfilehash: c6c6cd475585f5c23f400471d4ce0b33636c8900
+ms.sourcegitcommit: 1a544cf4dd2720b124c3697d1e62ae7741db757c
 ms.translationtype: HT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 07/01/2020
-ms.locfileid: "85723148"
+ms.lasthandoff: 12/14/2020
+ms.locfileid: "97485305"
 ---
 # <a name="implementing-update-with-from-or-subqueries"></a>FROM 또는 하위 쿼리를 사용하여 UPDATE 구현
 
@@ -30,7 +30,7 @@ Transact-SQL UPDATE 문에서 기본적으로 컴파일된 T-SQL 모듈에서는
 - FROM 절
 - 하위 쿼리
 
-대조적으로 선행 요소는 SELECT 문에서 기본적으로 컴파일된 모듈에서 지원*됩니다*.
+대조적으로 선행 요소는 SELECT 문에서 기본적으로 컴파일된 모듈에서 지원 *됩니다*.
 
 FROM 절이 있는 UPDATE 문은 종종 TVP(테이블 반환 매개 변수)에 따라 테이블의 정보를 업데이트하거나 AFTER 트리거에서 테이블의 열을 업데이트하는 데 사용됩니다.
 

@@ -10,12 +10,12 @@ ms.technology: integration-services
 ms.topic: conceptual
 author: chugugrace
 ms.author: chugu
-ms.openlocfilehash: 5919aa313147b54e52289aa0c1d530a5f0064aab
-ms.sourcegitcommit: cfa04a73b26312bf18d8f6296891679166e2754d
+ms.openlocfilehash: fe89a97c1fb13d9446b0fe07f04c7399b42a439e
+ms.sourcegitcommit: 3bd188e652102f3703812af53ba877cce94b44a9
 ms.translationtype: HT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 10/19/2020
-ms.locfileid: "92195355"
+ms.lasthandoff: 12/15/2020
+ms.locfileid: "97489773"
 ---
 # <a name="oracle-source"></a>Oracle 원본
 
@@ -44,7 +44,7 @@ Oracle 원본은 로드 및 추출 프로세스 동안 발생한 오류를 오�
 
 ## <a name="troubleshooting-the-oracle-source"></a>Oracle 원본 문제 해결
 
-Oracle 원본이 Oracle 데이터 원본에 대해 수행하는 ODBC 호출을 기록하여 데이터 내보내기 문제를 해결할 수 있습니다. Oracle 원본이 Oracle 데이터 원본에 대해 수행하는 ODBC 호출을 기록하려면 ODBC 드라이버 관리자 추적을 사용하도록 설정합니다. 자세한 내용은 *ODBC 데이터 원본 관리자를 사용하여 ODBC 추적을 생성하는 방법*에 대한 Microsoft 설명서를 참조하십시오.
+Oracle 원본이 Oracle 데이터 원본에 대해 수행하는 ODBC 호출을 기록하여 데이터 내보내기 문제를 해결할 수 있습니다. Oracle 원본이 Oracle 데이터 원본에 대해 수행하는 ODBC 호출을 기록하려면 ODBC 드라이버 관리자 추적을 사용하도록 설정합니다. 자세한 내용은 *ODBC 데이터 원본 관리자를 사용하여 ODBC 추적을 생성하는 방법* 에 대한 Microsoft 설명서를 참조하십시오.
 
 ## <a name="oracle-source-custom-properties"></a>Oracle 원본 사용자 지정 속성
 
@@ -52,10 +52,10 @@ Oracle 원본의 사용자 지정 속성은 다음과 같습니다. 모든 속�
 
 |속성 이름|데이터 형식|Description|
 |:-|:-|:-|
-|AccessMode|Integer(열거형)|데이터베이스에 액세스하는 데 사용되는 모드입니다. 가능한 값은 **테이블 이름** 및 **SQL 명령**입니다. 기본값은 **테이블 이름**입니다.|
-|BatchSize|정수|대량 로드에 대한 일괄 처리 크기입니다. 배열로 추출되는 레코드의 수입니다. <br>이 속성은 **고급 편집기**에서만 설정됩니다.|
-|DefaultCodePage|정수|데이터 원본에 코드 페이지 정보가 없을 때 사용할 코드 페이지입니다. <br>이 속성은 **고급 편집기**에서만 설정됩니다.|
-|PreFetchCount|정수|미리 가져온 행의 수입니다. <br>이 속성은 **고급 편집기**에서만 설정됩니다.|
+|AccessMode|Integer(열거형)|데이터베이스에 액세스하는 데 사용되는 모드입니다. 가능한 값은 **테이블 이름** 및 **SQL 명령** 입니다. 기본값은 **테이블 이름** 입니다.|
+|BatchSize|정수|대량 로드에 대한 일괄 처리 크기입니다. 배열로 추출되는 레코드의 수입니다. <br>이 속성은 **고급 편집기** 에서만 설정됩니다.|
+|DefaultCodePage|정수|데이터 원본에 코드 페이지 정보가 없을 때 사용할 코드 페이지입니다. <br>이 속성은 **고급 편집기** 에서만 설정됩니다.|
+|PreFetchCount|정수|미리 가져온 행의 수입니다. <br>이 속성은 **고급 편집기** 에서만 설정됩니다.|
 |SqlCommand|String|AccessMode가 SQL 명령으로 설정될 때 실행할 SQL 명령입니다.|
 |TableName|String|AccessMode가 테이블 이름으로 설정될 때 사용되는 데이터가 포함된 테이블의 이름입니다.|
 
@@ -77,7 +77,7 @@ Oracle 원본 편집기는 아래 그림에 나와 있습니다. 여기에는 �
 
 **고급 편집기** 대화 상자를 열려면
 
-- Integration Services 프로젝트의**데이터 흐름** 화면에서 Oracle 원본을 마우스 오른쪽 단추로 클릭하고 **고급 편집기 표시**를 선택합니다.
+- Integration Services 프로젝트의 **데이터 흐름** 화면에서 Oracle 원본을 마우스 오른쪽 단추로 클릭하고 **고급 편집기 표시** 를 선택합니다.
 
 **고급 편집기** 대화 상자에서 설정할 수 있는 속성에 대한 자세한 내용은 [Oracle 원본 사용자 지정 속성](#oracle-source-custom-properties)을 참조하세요.
 
@@ -94,11 +94,11 @@ Oracle 원본 편집기는 아래 그림에 나와 있습니다. 여기에는 �
 
 **Connection manager**
 
-목록에서 기존 연결 관리자를 선택하거나 **새로 만들기**를 클릭하여 새 Oracle 연결 관리자를 만듭니다.
+목록에서 기존 연결 관리자를 선택하거나 **새로 만들기** 를 클릭하여 새 Oracle 연결 관리자를 만듭니다.
 
 **새로 만들기**
 
-**새로 만들기**를 클릭합니다. 새 연결 관리자를 만들 수 있는 **Oracle 연결 관리자 편집기** 대화 상자가 열립니다.
+**새로 만들기** 를 클릭합니다. 새 연결 관리자를 만들 수 있는 **Oracle 연결 관리자 편집기** 대화 상자가 열립니다.
 
 **데이터 액세스 모드**
 
@@ -162,7 +162,7 @@ Oracle 원본 편집기는 아래 그림에 나와 있습니다. 여기에는 �
 **오류 동작**
 
 Oracle 원본에서 흐름의 오류를 처리하는 방법을 선택합니다. 오류 무시, 행 리디렉션 또는 구성 요소 실패를 지정할 수 있습니다.
-**관련 섹션**: [데이터 오류 처리](./error-handling-in-data.md?view=sql-server-2017)
+**관련 섹션**: [데이터 오류 처리](./error-handling-in-data.md)
 
 **잘림**
 

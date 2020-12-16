@@ -21,13 +21,13 @@ helpviewer_keywords:
 ms.assetid: 919158f2-38d0-4f68-82ab-e1633bd0d308
 author: markingmyname
 ms.author: maghan
-monikerRange: '>=aps-pdw-2016||=azuresqldb-current||=azure-sqldw-latest||>=sql-server-2016||=sqlallproducts-allversions||>=sql-server-linux-2017||=azuresqldb-mi-current'
-ms.openlocfilehash: 3225978926ade62bd932e41f9d46d8a5bdd8720b
-ms.sourcegitcommit: 22dacedeb6e8721e7cdb6279a946d4002cfb5da3
+monikerRange: '>=aps-pdw-2016||=azuresqldb-current||=azure-sqldw-latest||>=sql-server-2016||>=sql-server-linux-2017||=azuresqldb-mi-current'
+ms.openlocfilehash: 1992b8112bdb4d179f1b25471e9e34c42f2a4770
+ms.sourcegitcommit: 1a544cf4dd2720b124c3697d1e62ae7741db757c
 ms.translationtype: HT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 10/14/2020
-ms.locfileid: "92036876"
+ms.lasthandoff: 12/14/2020
+ms.locfileid: "97483965"
 ---
 # <a name="update-statistics-transact-sql"></a>UPDATE STATISTICS(Transact-SQL)
 [!INCLUDE [sql-asdb-asdbmi-asa-pdw](../../includes/applies-to-version/sql-asdb-asdbmi-asa-pdw.md)]
@@ -96,7 +96,7 @@ UPDATE STATISTICS [ schema_name . ] table_name
  통계 개체를 포함하는 테이블 또는 인덱싱된 뷰의 이름입니다.  
   
  *index_or_statistics_name*  
- 통계를 업데이트할 인덱스 이름 또는 업데이트할 통계의 이름입니다. *index_or_statistics_name*을 지정하지 않으면 쿼리 최적화 프로그램에서 테이블 또는 인덱싱된 뷰에 대한 모든 통계를 업데이트합니다. 여기에는 CREATE STATISTICS 문을 사용하여 생성된 통계, AUTO_CREATE_STATISTICS가 설정되어 생성된 단일 열 통계 및 인덱스에 대해 생성된 통계 등이 포함됩니다.  
+ 통계를 업데이트할 인덱스 이름 또는 업데이트할 통계의 이름입니다. *index_or_statistics_name* 을 지정하지 않으면 쿼리 최적화 프로그램에서 테이블 또는 인덱싱된 뷰에 대한 모든 통계를 업데이트합니다. 여기에는 CREATE STATISTICS 문을 사용하여 생성된 통계, AUTO_CREATE_STATISTICS가 설정되어 생성된 단일 열 통계 및 인덱스에 대해 생성된 통계 등이 포함됩니다.  
   
  AUTO_CREATE_STATISTICS에 대한 자세한 내용은 [ALTER DATABASE SET 옵션 &#40;Transact-SQL&#41;](../../t-sql/statements/alter-database-transact-sql-set-options.md)을 참조하세요. 테이블 또는 뷰에 대한 모든 인덱스를 보려면 [sp_helpindex](../../relational-databases/system-stored-procedures/sp-helpindex-transact-sql.md)를 사용하면 됩니다.  
   
@@ -104,7 +104,7 @@ UPDATE STATISTICS [ schema_name . ] table_name
  테이블 또는 인덱싱된 뷰에 있는 모든 행을 검색하여 통계를 컴퓨팅합니다. FULLSCAN과 SAMPLE 100 PERCENT의 결과는 같습니다. FULLSCAN은 SAMPLE 옵션과 함께 사용할 수 없습니다.  
   
  SAMPLE *number* { PERCENT | ROWS }  
- 쿼리 최적화 프로그램에서 통계를 업데이트할 때 사용할 테이블이나 인덱싱된 뷰에 있는 행의 비율이나 개수를 대략적으로 지정합니다. PERCENT의 경우 *number*가 0부터 100까지일 수 있고, ROWS의 경우 *number*가 0부터 총 행 수까지일 수 있습니다. 쿼리 최적화 프로그램에서 샘플링하는 실제 행의 비율이나 개수는 지정된 비율이나 개수와 일치하지 않을 수 있습니다. 예를 들어, 쿼리 최적화 프로그램에서는 데이터 페이지의 모든 행을 검색합니다.  
+ 쿼리 최적화 프로그램에서 통계를 업데이트할 때 사용할 테이블이나 인덱싱된 뷰에 있는 행의 비율이나 개수를 대략적으로 지정합니다. PERCENT의 경우 *number* 가 0부터 100까지일 수 있고, ROWS의 경우 *number* 가 0부터 총 행 수까지일 수 있습니다. 쿼리 최적화 프로그램에서 샘플링하는 실제 행의 비율이나 개수는 지정된 비율이나 개수와 일치하지 않을 수 있습니다. 예를 들어, 쿼리 최적화 프로그램에서는 데이터 페이지의 모든 행을 검색합니다.  
   
  SAMPLE은 기본 샘플링을 기반으로 하는 쿼리 계획이 만족스럽지 못한 특별한 경우에 유용합니다. 대부분의 경우에는 기본적으로 쿼리 최적화 프로그램에서 고품질의 쿼리 계획을 만들기 위해 필요에 따라 샘플링을 사용하고 통계적으로 중요한 샘플 크기를 결정하기 때문에 SAMPLE을 지정할 필요가 없습니다. 
  
@@ -124,7 +124,7 @@ UPDATE STATISTICS [ schema_name . ] table_name
  RESAMPLE을 사용하면 전체 테이블 검색이 수행될 수 있습니다. 예를 들어 인덱스에 대한 통계에서는 샘플링 주기에 전체 테이블 검색을 사용합니다. 샘플 옵션(SAMPLE, FULLSCAN, RESAMPLE)을 지정하지 않으면 기본적으로 쿼리 최적화 프로그램에서 데이터를 샘플링하여 샘플 크기를 계산합니다.  
 
 PERSIST_SAMPLE_PERCENT = { ON | OFF }  
-**ON**을 선택한 경우 통계는 샘플링 비율을 명시적으로 지정하지 않은 이후 업데이트에 대해 설정된 샘플링 비율을 유지합니다. **OFF**를 선택한 경우 샘플링 비율을 명시적으로 지정하지 않은 이후 업데이트의 통계 샘플링 비율은 기본 샘플링으로 재설정됩니다. 기본값은 **OFF**입니다. 
+**ON** 을 선택한 경우 통계는 샘플링 비율을 명시적으로 지정하지 않은 이후 업데이트에 대해 설정된 샘플링 비율을 유지합니다. **OFF** 를 선택한 경우 샘플링 비율을 명시적으로 지정하지 않은 이후 업데이트의 통계 샘플링 비율은 기본 샘플링으로 재설정됩니다. 기본값은 **OFF** 입니다. 
  
  > [!NOTE]
  > AUTO_UPDATE_STATISTICS가 실행된 경우 유지된 샘플링 비율(사용 가능한 경우)을 사용하거나 사용 가능하지 않은 경우 기본 샘플링 비율을 사용합니다.
@@ -148,7 +148,7 @@ PERSIST_SAMPLE_PERCENT = { ON | OFF }
  NORECOMPUTE  
  지정된 통계에 대해 자동 통계 업데이트 옵션인 AUTO_UPDATE_STATISTICS를 비활성화합니다. 이 옵션을 지정하지 않으면 쿼리 최적화 프로그램에서 이 통계 업데이트를 완료하고 이후 업데이트부터 비활성화합니다.  
   
- AUTO_UPDATE_STATISTICS 옵션 동작을 다시 활성화하려면 UPDATE STATISTICS를 NORECOMPUTE 옵션 없이 다시 실행하거나 **sp_autostats**를 실행합니다.  
+ AUTO_UPDATE_STATISTICS 옵션 동작을 다시 활성화하려면 UPDATE STATISTICS를 NORECOMPUTE 옵션 없이 다시 실행하거나 **sp_autostats** 를 실행합니다.  
   
 > [!WARNING]  
 > 이 옵션을 사용하면 최적이 아닌 쿼리 계획이 생성될 수 있습니다. 이 옵션은 자격 있는 시스템 관리자가 꼭 필요한 경우에만 사용하는 것이 좋습니다.  
@@ -156,7 +156,7 @@ PERSIST_SAMPLE_PERCENT = { ON | OFF }
  AUTO_STATISTICS_UPDATE 옵션에 대한 자세한 내용은 [ALTER DATABASE SET 옵션 &#40;Transact-SQL&#41;](../../t-sql/statements/alter-database-transact-sql-set-options.md)을 참조하세요.  
   
  INCREMENTAL = {ON | OFF}  
- **ON**으로 설정된 경우 파티션 통계별로 통계가 다시 작성됩니다. **OFF**로 설정된 경우 통계 트리가 삭제되고 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]에서 통계를 다시 계산합니다. 기본값은 **OFF**입니다.  
+ **ON** 으로 설정된 경우 파티션 통계별로 통계가 다시 작성됩니다. **OFF** 로 설정된 경우 통계 트리가 삭제되고 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]에서 통계를 다시 계산합니다. 기본값은 **OFF** 입니다.  
   
  파티션별 통계가 지원되지 않을 경우 오류가 생성됩니다. 다음 통계 유형에 대해서는 증분 통계가 지원되지 않습니다.  
   
@@ -175,7 +175,7 @@ MAXDOP = *max_degree_of_parallelism*
   
  통계 작업 기간 동안 **최대 병렬 처리 수준** 구성 옵션을 재정의합니다. 자세한 내용은 [max degree of parallelism 서버 구성 옵션 구성](../../database-engine/configure-windows/configure-the-max-degree-of-parallelism-server-configuration-option.md)을 참조하세요. MAXDOP를 사용하여 병렬 계획 실행에 사용되는 프로세서 수를 제한할 수 있습니다. 최대값은 64개입니다.  
   
- *max_degree_of_parallelism*은 다음 중 하나일 수 있습니다.  
+ *max_degree_of_parallelism* 은 다음 중 하나일 수 있습니다.  
   
  1  
  병렬 계획이 생성되지 않습니다.  

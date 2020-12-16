@@ -20,13 +20,13 @@ helpviewer_keywords:
 ms.assetid: d1635ebb-f751-4de1-8bbc-cae161f90821
 author: rothja
 ms.author: jroth
-monikerRange: '>=aps-pdw-2016||=azuresqldb-current||=azure-sqldw-latest||>=sql-server-2016||=sqlallproducts-allversions||>=sql-server-linux-2017||=azuresqldb-mi-current'
-ms.openlocfilehash: e58213e5098a1565dc25d702aef5f68589a55475
-ms.sourcegitcommit: 22e97435c8b692f7612c4a6d3fe9e9baeaecbb94
+monikerRange: '>=aps-pdw-2016||=azuresqldb-current||=azure-sqldw-latest||>=sql-server-2016||>=sql-server-linux-2017||=azuresqldb-mi-current'
+ms.openlocfilehash: dea62262cf7a9d5f8965dd4eeff6f412776fbc32
+ms.sourcegitcommit: 1a544cf4dd2720b124c3697d1e62ae7741db757c
 ms.translationtype: HT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 10/27/2020
-ms.locfileid: "92679175"
+ms.lasthandoff: 12/14/2020
+ms.locfileid: "97484095"
 ---
 # <a name="declare-local_variable-transact-sql"></a>DECLARE @local_variable(Transact-SQL)
 [!INCLUDE [sql-asdb-asdbmi-asa-pdw](../../includes/applies-to-version/sql-asdb-asdbmi-asa-pdw.md)]
@@ -89,7 +89,7 @@ DECLARE
  변수의 이름입니다. 변수 이름은 @ 기호로 시작해야 합니다. 지역 변수 이름은 [식별자](../../relational-databases/databases/database-identifiers.md) 규칙을 따라야 합니다.  
   
 *data_type*  
- 시스템 제공 데이터 형식, CLR(공용 언어 런타임) 사용자 정의 테이블 형식 또는 별칭 데이터 형식입니다. 변수는 **text** , **ntext** 또는 **image** 데이터 형식일 수 없습니다.  
+ 시스템 제공 데이터 형식, CLR(공용 언어 런타임) 사용자 정의 테이블 형식 또는 별칭 데이터 형식입니다. 변수는 **text**, **ntext** 또는 **image** 데이터 형식일 수 없습니다.  
   
  시스템 데이터 형식에 대한 자세한 내용은 [데이터 형식&#40;Transact-SQL&#41;](../../t-sql/data-types/data-types-transact-sql.md)을 참조하세요. CLR 사용자 정의 형식에 대한 자세한 내용은 [CREATE TYPE &#40;Transact-SQL&#41;](../../t-sql/statements/create-type-transact-sql.md)을 참조하세요.  
   
@@ -122,8 +122,8 @@ CURSOR
  *computed_column_expression*  
  계산 열의 값을 정의하는 식입니다. 동일한 테이블의 다른 열을 사용하는 식에서 계산됩니다. 예를 들어 계산 열은 **cost** AS **price \* qty** 정의를 가질 수 있습니다. 식은 계산되지 않은 열 이름, 상수, 기본 제공 함수, 변수 또는 이러한 요소를 하나 이상의 연산자로 연결한 조합이 될 수 있습니다. 식은 하위 쿼리 또는 사용자 정의 함수가 될 수 없습니다. 식은 CLR 사용자 정의 데이터 형식을 참조할 수 없습니다.  
   
- [ COLLATE *collation_name* ]  
- 열에 대한 데이터 정렬을 지정합니다. *collation_name* 은 Windows 데이터 정렬 이름이나 SQL 데이터 정렬 이름이 될 수 있으며, **char** , **varchar** , **text** , **nchar** , **nvarchar** 및 **ntext** 데이터 형식의 열에만 적용할 수 있습니다. 지정하지 않은 경우 열이 사용자 정의 데이터 형식이면 사용자 정의 데이터 형식의 데이터 정렬에 열이 할당되고 그렇지 않은 경우에는 현재 데이터베이스의 데이터 정렬에 할당됩니다.  
+ [ COLLATE *collation_name*]  
+ 열에 대한 데이터 정렬을 지정합니다. *collation_name* 은 Windows 데이터 정렬 이름이나 SQL 데이터 정렬 이름이 될 수 있으며, **char**, **varchar**, **text**, **nchar**, **nvarchar** 및 **ntext** 데이터 형식의 열에만 적용할 수 있습니다. 지정하지 않은 경우 열이 사용자 정의 데이터 형식이면 사용자 정의 데이터 형식의 데이터 정렬에 열이 할당되고 그렇지 않은 경우에는 현재 데이터베이스의 데이터 정렬에 할당됩니다.  
   
  Windows 및 SQL 데이터 정렬 이름에 대한 자세한 내용은 [COLLATE &#40;Transact-SQL&#41;](~/t-sql/statements/collations.md)를 참조하세요.  
   
@@ -134,7 +134,7 @@ CURSOR
  열의 기본값으로 사용되는 상수, NULL 또는 시스템 함수입니다.  
   
  IDENTITY  
- 새 열이 ID 열임을 나타냅니다. 테이블에 새 행이 추가되면 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]는 열에 사용할 고유한 증가값을 제공합니다. ID 열은 일반적으로 PRIMARY KEY 제약 조건과 함께 사용되어 테이블의 고유한 행 식별자 역할을 합니다. IDENTITY 속성은 **tinyint** , **smallint** , **int** , **decimal(p,0)** 또는 **numeric(p,0)** 열에 할당할 수 있습니다. ID 열은 테이블당 하나만 만들 수 있습니다. ID 열에는 바인딩된 기본값 및 DEFAULT 제약 조건을 사용할 수 없습니다. 초기값과 증가값을 모두 지정하거나 모두 지정하지 않아야 합니다. 둘 다 지정하지 않은 경우에는 기본값 (1,1)이 사용됩니다.  
+ 새 열이 ID 열임을 나타냅니다. 테이블에 새 행이 추가되면 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]는 열에 사용할 고유한 증가값을 제공합니다. ID 열은 일반적으로 PRIMARY KEY 제약 조건과 함께 사용되어 테이블의 고유한 행 식별자 역할을 합니다. IDENTITY 속성은 **tinyint**, **smallint**, **int**, **decimal(p,0)** 또는 **numeric(p,0)** 열에 할당할 수 있습니다. ID 열은 테이블당 하나만 만들 수 있습니다. ID 열에는 바인딩된 기본값 및 DEFAULT 제약 조건을 사용할 수 없습니다. 초기값과 증가값을 모두 지정하거나 모두 지정하지 않아야 합니다. 둘 다 지정하지 않은 경우에는 기본값 (1,1)이 사용됩니다.  
   
  *seed*  
  테이블에 로드되는 첫 번째 행에 사용하는 값입니다.  
@@ -193,7 +193,7 @@ CURSOR
   
 -   커서에 대한 포인터로 간주됩니다.  
   
-## <a name="examples"></a>예  
+## <a name="examples"></a>예제  
   
 ### <a name="a-using-declare"></a>A. DECLARE 사용  
  다음 예에서는 `@find`라는 지역 변수를 사용하여 성이 `Man`으로 시작하는 모든 연락처 정보를 검색합니다.  

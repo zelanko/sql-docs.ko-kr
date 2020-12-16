@@ -15,13 +15,13 @@ f1_keywords:
 ms.assetid: f643c7c3-f238-4835-b81e-2c2b3b53b23f
 author: MashaMSFT
 ms.author: mathoma
-monikerRange: =azuresqldb-mi-current||>=sql-server-2016||=sqlallproducts-allversions
-ms.openlocfilehash: 10cb78d3804ed022619ed6c19a69e4722c518562
-ms.sourcegitcommit: da88320c474c1c9124574f90d549c50ee3387b4c
+monikerRange: =azuresqldb-mi-current||>=sql-server-2016
+ms.openlocfilehash: 51e617c26aad4261d0d337ff2fd2a3dcd19c79b8
+ms.sourcegitcommit: 1a544cf4dd2720b124c3697d1e62ae7741db757c
 ms.translationtype: HT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 07/01/2020
-ms.locfileid: "85653290"
+ms.lasthandoff: 12/14/2020
+ms.locfileid: "97484865"
 ---
 # <a name="sql-server-replication-distributor-properties-dialog-box"></a>SQL Server 복제 배포자 속성 대화 상자 
 [!INCLUDE [SQL Server SQL MI](../../includes/applies-to-version/sql-asdbmi.md)]
@@ -36,7 +36,7 @@ ms.locfileid: "85653290"
  **데이터베이스**  
  **데이터베이스** 속성 표는 배포자에 있는 배포 데이터베이스의 이름 및 보존 속성을 표시합니다. **트랜잭션 보존** 은 트랜잭션 복제에 대해 트랜잭션을 저장하는 시간입니다. 트랜잭션 보존을 배포 보존이라고도 합니다. **기록 보존** 은 모든 유형의 복제에 대해 기록 메타데이터를 저장하는 시간입니다. 배포 기간에 대한 자세한 내용은 [구독 만료 및 비활성화](../../relational-databases/replication/subscription-expiration-and-deactivation.md)를 참조하세요.  
   
- **배포 데이터베이스 속성**대화 상자를 시작하려면 **데이터베이스** 속성 표의 속성 단추 ( **...** )를 클릭합니다.  
+ **배포 데이터베이스 속성** 대화 상자를 시작하려면 **데이터베이스** 속성 표의 속성 단추 ( **...** )를 클릭합니다.  
   
  **새로 만들기**  
  새 배포 데이터베이스를 만들려면 클릭합니다.  
@@ -54,7 +54,7 @@ ms.locfileid: "85653290"
  이 배포자를 사용하도록 허용할 서버를 선택합니다. 게시자 옆의 속성 단추 ( **...** )를 클릭하여 추가 속성을 보고 설정할 수 있습니다.  
   
  **추가**  
- 허용할 서버가 나열되지 않으면 **추가**를 클릭하여 사용 가능한 게시자 목록에 [!INCLUDE[msCoName](../../includes/msconame-md.md)] [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 게시자 또는 Oracle 게시자를 추가합니다. 추가한 서버가 이 배포자를 원격 배포자로 사용하는 첫 번째 서버이면 관리 연결 암호를 입력하라는 메시지가 표시됩니다.  
+ 허용할 서버가 나열되지 않으면 **추가** 를 클릭하여 사용 가능한 게시자 목록에 [!INCLUDE[msCoName](../../includes/msconame-md.md)] [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 게시자 또는 Oracle 게시자를 추가합니다. 추가한 서버가 이 배포자를 원격 배포자로 사용하는 첫 번째 서버이면 관리 연결 암호를 입력하라는 메시지가 표시됩니다.  
   
  **관리 연결 암호**  
  복제에서 **distributor_admin** 로그인을 사용하여 게시자와 원격 배포자 간에 구성하는 연결의 암호를 지정하거나 업데이트하려면 사용합니다.  

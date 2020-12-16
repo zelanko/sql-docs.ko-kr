@@ -15,13 +15,13 @@ helpviewer_keywords:
 ms.assetid: 410e2812-4ebe-48b2-b95f-c7784f1c4336
 author: stevestein
 ms.author: sstein
-monikerRange: '>=aps-pdw-2016||=azuresqldb-current||=azure-sqldw-latest||>=sql-server-2016||=sqlallproducts-allversions||>=sql-server-linux-2017||=azuresqldb-mi-current'
-ms.openlocfilehash: 5ffc0703257542807d88f011a8522b18e3b5e48e
-ms.sourcegitcommit: e700497f962e4c2274df16d9e651059b42ff1a10
+monikerRange: '>=aps-pdw-2016||=azuresqldb-current||=azure-sqldw-latest||>=sql-server-2016||>=sql-server-linux-2017||=azuresqldb-mi-current'
+ms.openlocfilehash: d606d4a6cad0668f3692af38a1ec7d2f2a1f1db6
+ms.sourcegitcommit: 1a544cf4dd2720b124c3697d1e62ae7741db757c
 ms.translationtype: HT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 08/17/2020
-ms.locfileid: "88485356"
+ms.lasthandoff: 12/14/2020
+ms.locfileid: "97484405"
 ---
 # <a name="modify-data-through-a-view"></a>뷰를 통해 데이터 수정
 [!INCLUDE [sql-asdb-asdbmi-asa-pdw](../../includes/applies-to-version/sql-asdb-asdbmi-asa-pdw.md)]
@@ -42,13 +42,13 @@ ms.locfileid: "88485356"
   
 #### <a name="to-modify-table-data-through-a-view"></a>뷰를 통해 테이블 데이터를 수정하려면  
   
-1.  **개체 탐색기**에서 뷰가 포함된 데이터베이스를 확장한 다음 **뷰**를 확장합니다.  
+1.  **개체 탐색기** 에서 뷰가 포함된 데이터베이스를 확장한 다음 **뷰** 를 확장합니다.  
   
-2.  뷰를 마우스 오른쪽 단추로 클릭하고 **상위 200개의 행 편집**을 선택합니다.  
+2.  뷰를 마우스 오른쪽 단추로 클릭하고 **상위 200개의 행 편집** 을 선택합니다.  
   
 3.  수정될 행을 반환하기 위해 **SQL** 창에서 SELECT 문을 수정해야 할 수도 있습니다.  
   
-4.  **결과** 창에서 변경하거나 삭제할 행을 찾습니다. 행을 삭제하려면 행을 마우스 오른쪽 단추로 클릭하고 **삭제**를 선택합니다. 하나 이상의 열에서 데이터를 변경하려면 열에서 데이터를 수정합니다.  
+4.  **결과** 창에서 변경하거나 삭제할 행을 찾습니다. 행을 삭제하려면 행을 마우스 오른쪽 단추로 클릭하고 **삭제** 를 선택합니다. 하나 이상의 열에서 데이터를 변경하려면 열에서 데이터를 수정합니다.  
   
     > **중요!!** 뷰가 여러 개의 기본 테이블을 참조하는 경우 행을 삭제할 수 없습니다. 단일 기본 테이블에 속하는 열만 업데이트할 수 있습니다.  
   
@@ -60,11 +60,11 @@ ms.locfileid: "88485356"
   
 #### <a name="to-update-table-data-through-a-view"></a>뷰를 통해 테이블 데이터를 업데이트하려면  
   
-1.  **개체 탐색기**에서 [!INCLUDE[ssDE](../../includes/ssde-md.md)]인스턴스에 연결합니다.  
+1.  **개체 탐색기** 에서 [!INCLUDE[ssDE](../../includes/ssde-md.md)]인스턴스에 연결합니다.  
   
-2.  표준 도구 모음에서 **새 쿼리**를 클릭합니다.  
+2.  표준 도구 모음에서 **새 쿼리** 를 클릭합니다.  
   
-3.  다음 예를 복사하여 쿼리 창에 붙여 넣고 **실행**을 클릭합니다. 다음 예에서는 뷰 `StartDate` 의 열을 참조하여 특정 직원의 `EndDate` 및 `HumanResources.vEmployeeDepartmentHistory`열 값을 변경합니다. 이 뷰는 두 테이블에서 값을 반환합니다. 수정할 열이 하나의 기본 테이블에만 속해 있기 때문에 다음 문은 성공합니다.  
+3.  다음 예를 복사하여 쿼리 창에 붙여 넣고 **실행** 을 클릭합니다. 다음 예에서는 뷰 `StartDate` 의 열을 참조하여 특정 직원의 `EndDate` 및 `HumanResources.vEmployeeDepartmentHistory`열 값을 변경합니다. 이 뷰는 두 테이블에서 값을 반환합니다. 수정할 열이 하나의 기본 테이블에만 속해 있기 때문에 다음 문은 성공합니다.  
   
     ```  
     USE AdventureWorks2012 ;   
@@ -79,11 +79,11 @@ ms.locfileid: "88485356"
   
 #### <a name="to-insert-table-data-through-a-view"></a>뷰를 통해 테이블 데이터를 삽입하려면  
   
-1.  **개체 탐색기**에서 [!INCLUDE[ssDE](../../includes/ssde-md.md)]인스턴스에 연결합니다.  
+1.  **개체 탐색기** 에서 [!INCLUDE[ssDE](../../includes/ssde-md.md)]인스턴스에 연결합니다.  
   
-2.  표준 도구 모음에서 **새 쿼리**를 클릭합니다.  
+2.  표준 도구 모음에서 **새 쿼리** 를 클릭합니다.  
   
-3.  다음 예를 복사하여 쿼리 창에 붙여 넣고 **실행**을 클릭합니다. 다음 예에서는 뷰 `HumanResouces.Department` 의 관련 열을 지정하여 기본 테이블 `HumanResources.vEmployeeDepartmentHistory`에 새 행을 삽입합니다. 단일 기본 테이블의 열만 지정되고 기본 테이블의 다른 열에 기본값이 들어 있으므로 이 문은 성공합니다.  
+3.  다음 예를 복사하여 쿼리 창에 붙여 넣고 **실행** 을 클릭합니다. 다음 예에서는 뷰 `HumanResouces.Department` 의 관련 열을 지정하여 기본 테이블 `HumanResources.vEmployeeDepartmentHistory`에 새 행을 삽입합니다. 단일 기본 테이블의 열만 지정되고 기본 테이블의 다른 열에 기본값이 들어 있으므로 이 문은 성공합니다.  
   
     ```  
     USE AdventureWorks2012 ;  
