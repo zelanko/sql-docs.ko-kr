@@ -10,19 +10,19 @@ ms.topic: conceptual
 ms.assetid: 3f867763-a8e6-413a-b015-20e9672cc4d1
 author: MightyPen
 ms.author: genemi
-monikerRange: =azuresqldb-current||>=sql-server-2016||=sqlallproducts-allversions||>=sql-server-linux-2017||=azuresqldb-mi-current
-ms.openlocfilehash: 57c6a851f192e9166fef872a9531a73339177238
-ms.sourcegitcommit: 4d370399f6f142e25075b3714e5c2ce056b1bfd0
+monikerRange: =azuresqldb-current||>=sql-server-2016||>=sql-server-linux-2017||=azuresqldb-mi-current
+ms.openlocfilehash: 8ff253b9164ca12d8d24dd5f7b362f4dfb47d548
+ms.sourcegitcommit: 1a544cf4dd2720b124c3697d1e62ae7741db757c
 ms.translationtype: HT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 10/09/2020
-ms.locfileid: "91867366"
+ms.lasthandoff: 12/14/2020
+ms.locfileid: "97465444"
 ---
 # <a name="application-pattern-for-partitioning-memory-optimized-tables"></a>메모리 액세스에 최적화된 테이블 분할을 위한 애플리케이션 패턴
 
 [!INCLUDE [SQL Server Azure SQL Database](../../includes/applies-to-version/sql-asdb.md)]
 
-[!INCLUDE[hek_2](../../includes/hek-2-md.md)]는 상대적으로 최신 데이터에 대한 성능 리소스를 많이 사용하는 애플리케이션 디자인 패턴을 지원합니다. 이 패턴은 최신 데이터를 이전 데이터보다 훨씬 자주 읽거나 업데이트할 때 적용할 수 있습니다. 이 경우 최신 데이터가 *활성* 또는 *핫*하다고 말하며 오래된 데이터는 *콜드*하다고 합니다.
+[!INCLUDE[hek_2](../../includes/hek-2-md.md)]는 상대적으로 최신 데이터에 대한 성능 리소스를 많이 사용하는 애플리케이션 디자인 패턴을 지원합니다. 이 패턴은 최신 데이터를 이전 데이터보다 훨씬 자주 읽거나 업데이트할 때 적용할 수 있습니다. 이 경우 최신 데이터가 *활성* 또는 *핫* 하다고 말하며 오래된 데이터는 *콜드* 하다고 합니다.
 
 주요 개념은 메모리 최적화 테이블에 *핫* 데이터를 저장하는 것입니다. 매주 또는 매월 *콜드* 상태가 된 오래된 데이터는 분할된 테이블로 이동됩니다. 분할된 테이블은 메모리가 아닌 디스크 또는 다른 하드 드라이브에 저장된 데이터가 있습니다.
 

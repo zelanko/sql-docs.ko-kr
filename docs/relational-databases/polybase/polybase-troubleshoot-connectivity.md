@@ -10,13 +10,13 @@ ms.topic: conceptual
 ms.date: 10/02/2019
 ms.prod: sql
 ms.prod_service: polybase, sql-data-warehouse, pdw
-monikerRange: '>= sql-server-2016 || =sqlallproducts-allversions'
-ms.openlocfilehash: d037abd54cc0014289b949d7e00a2bf585d3a9e4
-ms.sourcegitcommit: 783b35f6478006d654491cb52f6edf108acf2482
+monikerRange: '>= sql-server-2016'
+ms.openlocfilehash: edf0b261b6046d63e037e601ab9e92dd13d8728e
+ms.sourcegitcommit: 1a544cf4dd2720b124c3697d1e62ae7741db757c
 ms.translationtype: HT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 10/09/2020
-ms.locfileid: "91891333"
+ms.lasthandoff: 12/14/2020
+ms.locfileid: "97464784"
 ---
 # <a name="troubleshoot-polybase-kerberos-connectivity"></a>PolyBase Kerberos 연결 문제 해결
 
@@ -73,7 +73,7 @@ PolyBase에는 Hadoop 클러스터의 속성이 포함된 다음과 같은 구�
 
 예를 들어 [!INCLUDE[ssSQL15](../../includes/sssql15-md.md)]의 기본값은 `C:\Program Files\Microsoft SQL Server\MSSQL13.MSSQLSERVER\MSSQL\Binn\PolyBase\Hadoop\conf`입니다.
 
-**core-site.xml**을 업데이트하고 아래 세 가지 속성을 추가합니다. 환경에 따라 값을 설정합니다.
+**core-site.xml** 을 업데이트하고 아래 세 가지 속성을 추가합니다. 환경에 따라 값을 설정합니다.
 
 ```xml
 <property>
@@ -213,10 +213,10 @@ PolyBase가 HDFS에 액세스하려고 시도하며 요청에 필요한 서비�
 ## <a name="debugging-tips"></a>디버깅 팁
 
 ### <a name="mit-kdc"></a>MIT KDC  
-관리자를 포함하여 KDC에 등록된 모든 SPN은 KDC 호스트나 구성된 KDC 클라이언트에서 **kadmin.local** > (관리자 로그인) > **listprincs**를 실행하여 확인할 수 있습니다. Kerberos가 Hadoop 클러스터에서 제대로 구성되면 클러스터에서 사용 가능한 각 서비스(예: `nn`, `dn`, `rm`, `yarn`, `spnego` 등)에 SPN이 하나씩 있어야 합니다. 해당 keytab 파일(암호 대체)은 기본적으로 **/etc/security/keytabs**에서 볼 수 있습니다. 이 파일은 KDC 프라이빗 키를 사용하여 암호화됩니다.  
+관리자를 포함하여 KDC에 등록된 모든 SPN은 KDC 호스트나 구성된 KDC 클라이언트에서 **kadmin.local** > (관리자 로그인) > **listprincs** 를 실행하여 확인할 수 있습니다. Kerberos가 Hadoop 클러스터에서 제대로 구성되면 클러스터에서 사용 가능한 각 서비스(예: `nn`, `dn`, `rm`, `yarn`, `spnego` 등)에 SPN이 하나씩 있어야 합니다. 해당 keytab 파일(암호 대체)은 기본적으로 **/etc/security/keytabs** 에서 볼 수 있습니다. 이 파일은 KDC 프라이빗 키를 사용하여 암호화됩니다.  
 
 [`kinit`](https://web.mit.edu/kerberos/krb5-1.12/doc/user/user_commands/kinit.html)를 사용하여 KDC에서 로컬로 관리자 자격 증명을 확인하는 것도 좋습니다. 예제 사용량은 `kinit identity@MYREALM.COM`입니다. 암호를 묻는 메시지가 표시되면 ID가 있는 것입니다.  
-KDC 로그는 기본적으로 **/var/log/krb5kdc.log**에서 확인할 수 있으며, 이 로그에는 모든 티켓 요청과 요청한 클라이언트 IP가 포함되어 있습니다. 도구가 실행된 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 머신 IP에서 보낸 요청이 두 개 있어야 합니다. 먼저 인증 서버에서 보낸 TGT 요청이 **AS\_REQ**로 표시되고, 그다음에 허용 티켓 서버에서 보낸 ST 요청이 **TGS\_REQ**로 표시됩니다.
+KDC 로그는 기본적으로 **/var/log/krb5kdc.log** 에서 확인할 수 있으며, 이 로그에는 모든 티켓 요청과 요청한 클라이언트 IP가 포함되어 있습니다. 도구가 실행된 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 머신 IP에서 보낸 요청이 두 개 있어야 합니다. 먼저 인증 서버에서 보낸 TGT 요청이 **AS\_REQ** 로 표시되고, 그다음에 허용 티켓 서버에서 보낸 ST 요청이 **TGS\_REQ** 로 표시됩니다.
 
 ```bash
  [root@MY-KDC log]# tail -2 /var/log/krb5kdc.log 
@@ -225,7 +225,7 @@ KDC 로그는 기본적으로 **/var/log/krb5kdc.log**에서 확인할 수 있�
 ```
 
 ### <a name="active-directory"></a>Active Directory 
-Active Directory에서는 [제어판] > [Active Directory 사용자 및 컴퓨터] > *MyRealm* > *MyOrganizationalUnit*으로 이동하여 SPN을 확인할 수 있습니다. Kerberos가 Hadoop 클러스터에서 제대로 구성되면 각각의 서비스(예: `nn`, `dn`, `rm`, `yarn`, `spnego` 등)에 사용할 수 있는 SPN이 하나씩 있습니다.
+Active Directory에서는 [제어판] > [Active Directory 사용자 및 컴퓨터] > *MyRealm* > *MyOrganizationalUnit* 으로 이동하여 SPN을 확인할 수 있습니다. Kerberos가 Hadoop 클러스터에서 제대로 구성되면 각각의 서비스(예: `nn`, `dn`, `rm`, `yarn`, `spnego` 등)에 사용할 수 있는 SPN이 하나씩 있습니다.
 
 ### <a name="general-debugging-tips"></a>일반 디버깅 팁
 SQL Server PolyBase 기능과 독립적으로 Java 환경을 통해 로그를 살펴보고 Kerberos 문제를 디버그하는 데 유용합니다.

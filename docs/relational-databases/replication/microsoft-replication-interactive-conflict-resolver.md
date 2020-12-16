@@ -14,13 +14,13 @@ f1_keywords:
 ms.assetid: d3d4a480-782b-4b1d-b839-565c8cf6cb24
 author: MashaMSFT
 ms.author: mathoma
-monikerRange: =azuresqldb-current||>=sql-server-2016||=sqlallproducts-allversions
-ms.openlocfilehash: c0ecc10fd8155a0f18e216458d2dcd47132d35d4
-ms.sourcegitcommit: 4d370399f6f142e25075b3714e5c2ce056b1bfd0
+monikerRange: =azuresqldb-current||>=sql-server-2016
+ms.openlocfilehash: a0cbd836bc0a7676128067f44e4079d4901de962
+ms.sourcegitcommit: 1a544cf4dd2720b124c3697d1e62ae7741db757c
 ms.translationtype: HT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 10/09/2020
-ms.locfileid: "91868085"
+ms.lasthandoff: 12/14/2020
+ms.locfileid: "97464724"
 ---
 # <a name="microsoft-replication-interactive-conflict-resolver"></a>Microsoft 복제 상호 충돌 해결 프로그램
 [!INCLUDE [SQL Server Azure SQL Database](../../includes/applies-to-version/sql-asdb.md)]
@@ -42,7 +42,7 @@ ms.locfileid: "91868085"
  **구독자**  
  구독자의 데이터 값입니다.  
   
- **제안 허용**, **게시자 허용**및 **구독자 허용**  
+ **제안 허용**, **게시자 허용** 및 **구독자 허용**  
  충돌 시 게시자와 구독자 중 어떤 것을 무시하는지에 따라 게시자 또는 구독자에 적용되는 행을 허용하려면 클릭합니다. 충돌 시 게시자를 무시할 경우 다른 모든 구독자는 다음에 게시자와 동기화할 때 적용되는 행을 받습니다.  
   
  **남아 있는 충돌 자동 해결**  

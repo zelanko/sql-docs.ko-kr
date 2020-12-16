@@ -11,13 +11,13 @@ ms.topic: conceptual
 ms.assetid: 40e0e749-260c-4cfc-a848-444d30c09d85
 author: markingmyname
 ms.author: maghan
-monikerRange: =azuresqldb-current||>=sql-server-2016||=sqlallproducts-allversions||>=sql-server-linux-2017||=azuresqldb-mi-current
-ms.openlocfilehash: 84adfac47c755bccee6603a632dfa44aa2c151b2
-ms.sourcegitcommit: 4d370399f6f142e25075b3714e5c2ce056b1bfd0
+monikerRange: =azuresqldb-current||>=sql-server-2016||>=sql-server-linux-2017||=azuresqldb-mi-current
+ms.openlocfilehash: 7e5de0ea599650792feef01508c1eed54aed68c6
+ms.sourcegitcommit: 1a544cf4dd2720b124c3697d1e62ae7741db757c
 ms.translationtype: HT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 10/09/2020
-ms.locfileid: "91867358"
+ms.lasthandoff: 12/14/2020
+ms.locfileid: "97465434"
 ---
 # <a name="atomic-blocks-in-native-procedures"></a>기본 프로시저의 Atomic 블록
 [!INCLUDE [SQL Server Azure SQL Database](../../includes/applies-to-version/sql-asdb.md)]
@@ -35,7 +35,7 @@ ms.locfileid: "91867358"
   
  세션에 활성 트랜잭션이 없는 경우 **BEGIN ATOMIC** 은 새 트랜잭션을 시작합니다. 블록 범위 밖에서 예외가 발생하지 않는다면 트랜잭션은 블록 끝에서 커밋됩니다. 블록에서 예외가 발생하면(예외가 catch되지 않고 블록 내에서 처리됨) 트랜잭션이 롤백됩니다. 단일 ATOMIC 블록에 걸쳐 있는 트랜잭션(고유하게 컴파일된 단일 저장 프로시저)의 경우 **BEGIN TRANSACTION** 및 **COMMIT** 또는 **ROLLBACK** 문을 명시적으로 작성할 필요가 없습니다.  
   
- 고유하게 컴파일된 저장 프로시저는 오류 처리를 위해 **TRY**, **CATCH**및 **THROW** 구문을 지원합니다. **RAISERROR** 은 지원되지 않습니다.  
+ 고유하게 컴파일된 저장 프로시저는 오류 처리를 위해 **TRY**, **CATCH** 및 **THROW** 구문을 지원합니다. **RAISERROR** 은 지원되지 않습니다.  
   
  다음 예에서는 ATOMIC 블록 및 고유하게 컴파일된 저장 프로시저에 대한 오류 처리 동작을 설명합니다.  
   
@@ -132,20 +132,20 @@ GO
 ## <a name="session-settings"></a>세션 설정  
  저장 프로시저가 컴파일되면 ATOMIC 블록의 세션 설정은 고정됩니다. 설정은 **BEGIN ATOMIC** 으로 지정할 수도 있고 같은 값으로 항상 고정할 수도 있습니다.  
   
- **BEGIN ATOMIC**에는 다음 옵션이 필요합니다.  
+ **BEGIN ATOMIC** 에는 다음 옵션이 필요합니다.  
   
 |필요한 설정|Description|  
 |----------------------|-----------------|  
-|**TRANSACTION ISOLATION LEVEL**|지원되는 값은 **SNAPSHOT**, **REPEATABLEREAD**및 **SERIALIZABLE**입니다.|  
+|**TRANSACTION ISOLATION LEVEL**|지원되는 값은 **SNAPSHOT**, **REPEATABLEREAD** 및 **SERIALIZABLE** 입니다.|  
 |**LANGUAGE**|날짜 및 시간 형식과 시스템 메시지를 결정합니다. [sys.syslanguages&#40;Transact-SQL&#41;](../../relational-databases/system-compatibility-views/sys-syslanguages-transact-sql.md)의 모든 언어와 별칭이 지원됩니다.|  
   
  다음 설정은 선택 사항입니다.  
   
 |선택적 설정|Description|  
 |----------------------|-----------------|  
-|**DATEFORMAT**|모든 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 날짜 형식이 지원됩니다. 지정되면 **DATEFORMAT** 에서 **LANGUAGE**와 관련된 기본 날짜 형식을 재정의합니다.|  
-|**DATEFIRST**|지정되면 **DATEFIRST** 에서 **LANGUAGE**와 관련된 기본값을 재정의합니다.|  
-|**DELAYED_DURABILITY**|지원되는 값은 **OFF** 및 **ON**입니다.<br /><br /> [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 트랜잭션은 완전 내구성이 있는(기본값) 커밋 또는 지연된 내구성이 있는 커밋을 수행할 수 있습니다. 자세한 내용은 [트랜잭션 내구성 제어](../../relational-databases/logs/control-transaction-durability.md)를 참조하세요.|  
+|**DATEFORMAT**|모든 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 날짜 형식이 지원됩니다. 지정되면 **DATEFORMAT** 에서 **LANGUAGE** 와 관련된 기본 날짜 형식을 재정의합니다.|  
+|**DATEFIRST**|지정되면 **DATEFIRST** 에서 **LANGUAGE** 와 관련된 기본값을 재정의합니다.|  
+|**DELAYED_DURABILITY**|지원되는 값은 **OFF** 및 **ON** 입니다.<br /><br /> [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 트랜잭션은 완전 내구성이 있는(기본값) 커밋 또는 지연된 내구성이 있는 커밋을 수행할 수 있습니다. 자세한 내용은 [트랜잭션 내구성 제어](../../relational-databases/logs/control-transaction-durability.md)를 참조하세요.|  
   
  다음 SET 옵션은 고유하게 컴파일된 모든 저장 프로시저의 모든 ATOMIC 블록에 대해 동일한 시스템 기본값을 가집니다.  
   

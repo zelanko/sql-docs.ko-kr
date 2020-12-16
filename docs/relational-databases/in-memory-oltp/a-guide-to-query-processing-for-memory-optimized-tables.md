@@ -11,13 +11,13 @@ ms.topic: conceptual
 ms.assetid: 065296fe-6711-4837-965e-252ef6c13a0f
 author: MightyPen
 ms.author: genemi
-monikerRange: =azuresqldb-current||>=sql-server-2016||=sqlallproducts-allversions||>=sql-server-linux-2017||=azuresqldb-mi-current
-ms.openlocfilehash: 2bd48189958a95a54efa128a7b0a9887b4e04b4c
-ms.sourcegitcommit: 4d370399f6f142e25075b3714e5c2ce056b1bfd0
+monikerRange: =azuresqldb-current||>=sql-server-2016||>=sql-server-linux-2017||=azuresqldb-mi-current
+ms.openlocfilehash: eed83fcd8a8b861f102c90fbc73d28d51bd5fa56
+ms.sourcegitcommit: 1a544cf4dd2720b124c3697d1e62ae7741db757c
 ms.translationtype: HT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 10/09/2020
-ms.locfileid: "91867414"
+ms.lasthandoff: 12/14/2020
+ms.locfileid: "97465484"
 ---
 # <a name="a-guide-to-query-processing-for-memory-optimized-tables"></a>메모리 액세스에 최적화된 테이블에 대한 쿼리 처리 가이드
 [!INCLUDE [SQL Server Azure SQL Database](../../includes/applies-to-version/sql-asdb.md)]
@@ -83,7 +83,7 @@ SELECT o.OrderID, c.* FROM dbo.[Customer] c INNER JOIN dbo.[Order] o ON c.Custom
   
 -   Order 테이블의 데이터는 CustomerID 열에 있는 비클러스터형 인덱스를 사용해서 검색됩니다. 이 인덱스에는 조인에 사용되는 CustomerID 열과 사용자에게 반환되는 기본 키 열인 OrderID가 모두 포함됩니다. Order 테이블에서 추가 열을 반환하려면 Order 테이블에 대한 클러스터형 인덱스에서 조회가 필요합니다.  
   
--   논리 연산자 **Inner Join** 은 물리 연산자 **Merge Join**에 의해 구현됩니다. 다른 물리적 조인 유형은 **Nested Loops** 및 **Hash Join**입니다. **Merge Join** 연산자는 두 인덱스가 모두 조인 열 CustomerID에 정렬되어 있다는 사실을 활용합니다.  
+-   논리 연산자 **Inner Join** 은 물리 연산자 **Merge Join** 에 의해 구현됩니다. 다른 물리적 조인 유형은 **Nested Loops** 및 **Hash Join** 입니다. **Merge Join** 연산자는 두 인덱스가 모두 조인 열 CustomerID에 정렬되어 있다는 사실을 활용합니다.  
   
  이제 이 쿼리를 약간 변형하여 OrderID만 아니라 Order 테이블의 모든 행을 반환합니다.  
   
@@ -96,7 +96,7 @@ SELECT o.*, c.* FROM dbo.[Customer] c INNER JOIN dbo.[Order] o ON c.CustomerID =
  ![디스크 기반 테이블의 해시 조인을 위한 쿼리 계획.](../../relational-databases/in-memory-oltp/media/hekaton-query-plan-2.png "디스크 기반 테이블의 해시 조인을 위한 쿼리 계획.")  
 디스크 기반 테이블의 해시 조인을 위한 쿼리 계획.  
   
- 이 쿼리에서 Order 테이블의 행은 클러스터형 인덱스를 사용해서 검색됩니다. **Hash Match** 물리 연산자는 이제 **Inner Join**에 사용됩니다. Order에 대한 클러스터형 인덱스가 CustomerID로 정렬되지 않았으므로 **Merge Join** 을 위해 sort 연산자가 필요하지만, 이는 성능에 영향을 줄 수 있습니다. 이전 예제에서 **Merge Join** 연산자의 비용(46%)에 대비해서 **Hash Match** 연산자의 상대적 비용(75%)에 주의하세요. 이전 예에서 최적화 프로그램에는 **Hash Match** 연산자도 고려되었겠지만 **Merge Join** 연산자가 더 나은 성능을 제공하는 것으로 결정되었습니다.  
+ 이 쿼리에서 Order 테이블의 행은 클러스터형 인덱스를 사용해서 검색됩니다. **Hash Match** 물리 연산자는 이제 **Inner Join** 에 사용됩니다. Order에 대한 클러스터형 인덱스가 CustomerID로 정렬되지 않았으므로 **Merge Join** 을 위해 sort 연산자가 필요하지만, 이는 성능에 영향을 줄 수 있습니다. 이전 예제에서 **Merge Join** 연산자의 비용(46%)에 대비해서 **Hash Match** 연산자의 상대적 비용(75%)에 주의하세요. 이전 예에서 최적화 프로그램에는 **Hash Match** 연산자도 고려되었겠지만 **Merge Join** 연산자가 더 나은 성능을 제공하는 것으로 결정되었습니다.  
   
 ## <a name="ssnoversion-query-processing-for-disk-based-tables"></a>[!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 디스크 기반 테이블에 대한 쿼리 처리  
  다음 다이어그램에서는 임시 쿼리를 위한 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 의 쿼리 처리 흐름을 간단히 보여줍니다.  
@@ -174,7 +174,7 @@ SELECT o.OrderID, c.* FROM dbo.[Customer] c INNER JOIN dbo.[Order] o ON c.Custom
   
     -   클러스터형 인덱스는 메모리 최적화 테이블에서 지원되지 않습니다. 대신 메모리 최적화 모든 테이블에 적어도 하나 이상의 비클러스터형 인덱스가 있어야 하고 메모리 최적화 테이블의 모든 인덱스는 인덱스에 행을 저장하거나 클러스터형 인덱스를 참조할 필요 없이 테이블의 모든 열에 효율적으로 액세스할 수 있습니다.  
   
--   이 계획에는 **Hash Match** 이 아니라 **Merge Join**가 포함됩니다. Order 및 Customer 테이블에 모두 있는 인덱스는 해시 인덱스이므로 정렬되지 않습니다. **Merge Join** 을 사용하기 위해서는 성능 저하가 발생하는 sort 연산자가 필요합니다.  
+-   이 계획에는 **Hash Match** 이 아니라 **Merge Join** 가 포함됩니다. Order 및 Customer 테이블에 모두 있는 인덱스는 해시 인덱스이므로 정렬되지 않습니다. **Merge Join** 을 사용하기 위해서는 성능 저하가 발생하는 sort 연산자가 필요합니다.  
   
 ## <a name="natively-compiled-stored-procedures"></a>Natively Compiled Stored Procedures  
  고유하게 컴파일된 저장 프로시저는 쿼리 실행 엔진에서 해석되지 않고 기계어 코드로 컴파일된 [!INCLUDE[tsql](../../includes/tsql-md.md)] 저장 프로시저입니다. 다음 스크립트는 예제 쿼리(예제 쿼리 섹션 참조)를 실행하는 기본적으로 컴파일되는 저장 프로시저를 만듭니다.  
@@ -199,7 +199,7 @@ END
 |-|-----------------------|-----------------|  
 |초기 컴파일|생성 시|처음 실행 시|  
 |자동 다시 컴파일|데이터베이스나 서버를 다시 시작한 후 프로시저를 처음 실행할 때|서버를 다시 시작할 때 또는 일반적으로 스키마 또는 통계 변경이나 메모리 압력에 따라 계획 캐시에서 계획이 제거될 때|  
-|수동 다시 컴파일|**sp_recompile**을 사용합니다.|**sp_recompile**을 사용합니다. 캐시에서 계획을 수동으로 제거할 수 있습니다(예: DBCC FREEPROCCACHE 사용). 또한 WITH RECOMPILE로 저장 프로시저를 만들면 실행할 때마다 저장 프로시저가 다시 컴파일됩니다.|  
+|수동 다시 컴파일|**sp_recompile** 을 사용합니다.|**sp_recompile** 을 사용합니다. 캐시에서 계획을 수동으로 제거할 수 있습니다(예: DBCC FREEPROCCACHE 사용). 또한 WITH RECOMPILE로 저장 프로시저를 만들면 실행할 때마다 저장 프로시저가 다시 컴파일됩니다.|  
   
 ### <a name="compilation-and-query-processing"></a>컴파일 및 쿼리 처리  
  다음 다이어그램은 고유하게 컴파일된 저장 프로시저의 컴파일 프로세스를 보여줍니다.  
@@ -230,7 +230,7 @@ END
   
 2.  파서가 이름 및 저장 프로시저 매개 변수를 추출합니다.  
   
-     **sp_prep_exec**등을 사용해서 문이 준비되었으면 파서가 실행 시에 프로시저 이름과 매개 변수를 추출할 필요가 없습니다.  
+     **sp_prep_exec** 등을 사용해서 문이 준비되었으면 파서가 실행 시에 프로시저 이름과 매개 변수를 추출할 필요가 없습니다.  
   
 3.  메모리 내 OLTP 런타임이 저장 프로시저에 대한 DLL 진입점을 찾습니다.  
   

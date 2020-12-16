@@ -13,13 +13,13 @@ f1_keywords:
 ms.assetid: 1b401d7d-db8a-4ba1-acb1-b8dec14e3311
 author: MashaMSFT
 ms.author: mathoma
-monikerRange: =azuresqldb-mi-current||>=sql-server-2016||=sqlallproducts-allversions
-ms.openlocfilehash: 74ddf2a67970c290d427e777184eba74af28a3d1
-ms.sourcegitcommit: e700497f962e4c2274df16d9e651059b42ff1a10
+monikerRange: =azuresqldb-mi-current||>=sql-server-2016
+ms.openlocfilehash: f6b00d51fab28b9d4b4c66e8deff0194e01e8d41
+ms.sourcegitcommit: 1a544cf4dd2720b124c3697d1e62ae7741db757c
 ms.translationtype: HT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 08/17/2020
-ms.locfileid: "88486684"
+ms.lasthandoff: 12/14/2020
+ms.locfileid: "97464754"
 ---
 # <a name="filter-settings"></a>필터 설정
 [!INCLUDE [SQL Server SQL MI](../../includes/applies-to-version/sql-asdbmi.md)]
@@ -30,7 +30,7 @@ ms.locfileid: "88486684"
  필터링할 열의 이름을 선택합니다. 하나 이상의 열을 필터 기준으로 사용할 수 있습니다.  
   
  **연산자**  
- **작거나 같음**등의 필터에 대한 연산자를 선택합니다.  
+ **작거나 같음** 등의 필터에 대한 연산자를 선택합니다.  
   
  **값1** 및 **값2**  
  필터 값을 입력하거나 선택합니다. 대부분의 연산자는 **값1** 열에만 값을 입력하면 되지만 **사이** 및 **사이에 있지 않음** 연산자는 **값2** 열에도 값을 입력해야 합니다.  

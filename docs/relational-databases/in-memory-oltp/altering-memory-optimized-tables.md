@@ -11,13 +11,13 @@ ms.topic: conceptual
 ms.assetid: 690b70b7-5be1-4014-af97-54e531997839
 author: MightyPen
 ms.author: genemi
-monikerRange: =azuresqldb-current||>=sql-server-2016||=sqlallproducts-allversions||>=sql-server-linux-2017||=azuresqldb-mi-current
-ms.openlocfilehash: eed3fa25e6c9378d7996260f25c611f8c4e7d025
-ms.sourcegitcommit: 4d370399f6f142e25075b3714e5c2ce056b1bfd0
+monikerRange: =azuresqldb-current||>=sql-server-2016||>=sql-server-linux-2017||=azuresqldb-mi-current
+ms.openlocfilehash: da12d83efd43c7ca6113348adee8e3bde14d9472
+ms.sourcegitcommit: 1a544cf4dd2720b124c3697d1e62ae7741db757c
 ms.translationtype: HT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 10/09/2020
-ms.locfileid: "91867407"
+ms.lasthandoff: 12/14/2020
+ms.locfileid: "97465474"
 ---
 # <a name="altering-memory-optimized-tables"></a>메모리 액세스에 최적화된 테이블 변경
 
@@ -52,7 +52,7 @@ ALTER TABLE 구문은 테이블 스키마를 변경하거나 인덱스를 추가
 
  고유하게 컴파일된 저장 프로시저는 스키마 바운드 형식이어야 합니다. 즉, 액세스하는 메모리 액세스에 최적화된 테이블과 참조하는 열에서 스키마 바운드 종속성을 가져야 합니다. 스키마 바운드 종속성은 참조 엔터티가 존재하는 한 참조된 엔터티가 삭제되거나 호환되지 않는 방식으로 수정되지 않도록 방지하는 두 엔터티 간 관계입니다.  
   
- 예를 들어 고유하게 컴파일된 스키마 바운드 저장 프로시저가 *mytable* 테이블의 *c1*열을 참조하는 경우 *c1* 열을 삭제할 수 없습니다. 마찬가지로, 열 목록 없이 INSERT 문(예: `INSERT INTO dbo.mytable VALUES (...)`)을 사용하는 프로시저가 있는 경우 테이블에서 열을 삭제할 수 없습니다.  
+ 예를 들어 고유하게 컴파일된 스키마 바운드 저장 프로시저가 *mytable* 테이블의 *c1* 열을 참조하는 경우 *c1* 열을 삭제할 수 없습니다. 마찬가지로, 열 목록 없이 INSERT 문(예: `INSERT INTO dbo.mytable VALUES (...)`)을 사용하는 프로시저가 있는 경우 테이블에서 열을 삭제할 수 없습니다.  
 
 ## <a name="logging-of-alter-table-on-memory-optimized-tables"></a>메모리 최적화 테이블에 대한 ALTER TABLE 로깅
 

@@ -17,13 +17,13 @@ helpviewer_keywords:
 ms.assetid: df5c4dfb-d372-4d0f-859a-a2d2533ee0d7
 author: MikeRayMSFT
 ms.author: mikeray
-monikerRange: =azuresqldb-current||>=sql-server-2016||=sqlallproducts-allversions||>=sql-server-linux-2017||=azuresqldb-mi-current
-ms.openlocfilehash: ac59dabc8cba303ab0b4e8e8c63811772461d216
-ms.sourcegitcommit: e700497f962e4c2274df16d9e651059b42ff1a10
+monikerRange: =azuresqldb-current||>=sql-server-2016||>=sql-server-linux-2017||=azuresqldb-mi-current
+ms.openlocfilehash: be2a84e21cc55340d675041cdd353dab887531c2
+ms.sourcegitcommit: 1a544cf4dd2720b124c3697d1e62ae7741db757c
 ms.translationtype: HT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 08/17/2020
-ms.locfileid: "88490973"
+ms.lasthandoff: 12/14/2020
+ms.locfileid: "97465294"
 ---
 # <a name="heaps-tables-without-clustered-indexes"></a>힙(클러스터형 인덱스가 없는 테이블)
 [!INCLUDE [SQL Server Azure SQL Database](../../includes/applies-to-version/sql-asdb.md)]
@@ -54,7 +54,7 @@ ms.locfileid: "88490973"
   
  전체 테이블 내용을 정해진 순서 없이 반환하려는 경우가 아닌 이상, 비클러스터형 인덱스가 없고 테이블이 큰 경우 힙을 사용하지 않습니다. 힙에서 행을 찾으려면 힙의 모든 행을 읽어야 합니다.  
  
- 데이터를 자주 업데이트하는 경우 힙을 사용하지 않습니다. 레코드를 업데이트했는데 업데이트가 데이터 페이지에서 현재 사용 중인 것보다 많은 공간을 사용하는 경우, 이 레코드는 충분한 공간이 있는 데이터 페이지로 이동되어야 합니다. 이렇게 하면 데이터의 새 위치를 가리키는 **전달된 레코드**가 생성되고, 새 물리적 위치를 나타내도록 이전에 데이터가 있었던 페이지에 **전달하는 포인터**가 작성되어야 합니다. 이로 인해 힙이 조각화됩니다. 힙을 검색할 때 이러한 포인터가 뒤에 와야 하는데, 이로 인해 미리 읽기 성능이 제한되며 검색 성능을 저하시키는 추가 I/O가 유발될 수 있습니다. 
+ 데이터를 자주 업데이트하는 경우 힙을 사용하지 않습니다. 레코드를 업데이트했는데 업데이트가 데이터 페이지에서 현재 사용 중인 것보다 많은 공간을 사용하는 경우, 이 레코드는 충분한 공간이 있는 데이터 페이지로 이동되어야 합니다. 이렇게 하면 데이터의 새 위치를 가리키는 **전달된 레코드** 가 생성되고, 새 물리적 위치를 나타내도록 이전에 데이터가 있었던 페이지에 **전달하는 포인터** 가 작성되어야 합니다. 이로 인해 힙이 조각화됩니다. 힙을 검색할 때 이러한 포인터가 뒤에 와야 하는데, 이로 인해 미리 읽기 성능이 제한되며 검색 성능을 저하시키는 추가 I/O가 유발될 수 있습니다. 
   
 ## <a name="managing-heaps"></a>힙 관리  
  힙을 만들려면 클러스터형 인덱스가 없는 테이블을 만듭니다. 테이블에 이미 클러스터형 인덱스가 포함되어 있는 경우 클러스터형 인덱스를 삭제하여 테이블을 힙에 반환합니다.  

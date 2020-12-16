@@ -31,13 +31,13 @@ helpviewer_keywords:
 ms.assetid: bc806b71-cc55-470a-913e-c5f761d5c4b7
 author: rothja
 ms.author: jroth
-monikerRange: '>=aps-pdw-2016||=azuresqldb-current||=azure-sqldw-latest||>=sql-server-2016||=sqlallproducts-allversions||>=sql-server-linux-2017||=azuresqldb-mi-current'
-ms.openlocfilehash: ec45204c6144ce51b809c84e5339af6cff9b292f
-ms.sourcegitcommit: 192f6a99e19e66f0f817fdb1977f564b2aaa133b
+monikerRange: '>=aps-pdw-2016||=azuresqldb-current||=azure-sqldw-latest||>=sql-server-2016||>=sql-server-linux-2017||=azuresqldb-mi-current'
+ms.openlocfilehash: ccb8d84d5e10bd39e4f1c0270b6dc353d3556ade
+ms.sourcegitcommit: 1a544cf4dd2720b124c3697d1e62ae7741db757c
 ms.translationtype: HT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 11/25/2020
-ms.locfileid: "96124462"
+ms.lasthandoff: 12/14/2020
+ms.locfileid: "97464294"
 ---
 # <a name="execute-transact-sql"></a>EXECUTE(Transact-SQL)
 [!INCLUDE [sql-asdb-asdbmi-asa-pdw](../../includes/applies-to-version/sql-asdb-asdbmi-asa-pdw.md)]
@@ -51,7 +51,7 @@ ms.locfileid: "96124462"
   
 ## <a name="syntax"></a>구문  
 
-::: moniker range=">=sql-server-ver15||=sqlallproducts-allversions" 
+::: moniker range=">=sql-server-ver15"
 다음 코드 블록은 SQL Server 2019에서의 구문을 보여줍니다. 대신 [SQL Server 2017 이하에서의 구문](execute-transact-sql.md?view=sql-server-2017&preserve-view=true)을 참조하셔도 됩니다. 
 
 ```syntaxsql
@@ -114,7 +114,7 @@ Execute a pass-through command against a linked server
 ```  
 ::: moniker-end
 
-::: monikerRange=">=sql-server-2016 ||=sqlallproducts-allversions"
+::: moniker range=">=sql-server-2016"
 
 다음 코드 블록은 SQL Server 2017 이하에서의 구문을 보여줍니다. 대신 [SQL Server 2019에서의 구문](execute-transact-sql.md?view=sql-server-ver15&preserve-view=true)을 참조하셔도 됩니다.
 

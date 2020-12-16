@@ -11,13 +11,13 @@ ms.topic: conceptual
 ms.assetid: f39fc1c7-cfec-4a95-97f6-6b95954694b
 author: markingmyname
 ms.author: maghan
-monikerRange: =azuresqldb-current||>=sql-server-2016||=sqlallproducts-allversions||>=sql-server-linux-2017||=azuresqldb-mi-current
-ms.openlocfilehash: cb8f9d6d75250660e5f2cd38c5054ef40726c310
-ms.sourcegitcommit: 4d370399f6f142e25075b3714e5c2ce056b1bfd0
+monikerRange: =azuresqldb-current||>=sql-server-2016||>=sql-server-linux-2017||=azuresqldb-mi-current
+ms.openlocfilehash: 04035aa7d1a94050e8b4f1d248fb1313a2ac17f0
+ms.sourcegitcommit: 1a544cf4dd2720b124c3697d1e62ae7741db757c
 ms.translationtype: HT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 10/09/2020
-ms.locfileid: "91867313"
+ms.lasthandoff: 12/14/2020
+ms.locfileid: "97465404"
 ---
 # <a name="best-practices-for-calling-natively-compiled-stored-procedures"></a>고유하게 컴파일된 저장 프로시저를 호출하는 최선의 구현 방법
 [!INCLUDE [SQL Server Azure SQL Database](../../includes/applies-to-version/sql-asdb.md)]
@@ -49,7 +49,7 @@ ms.locfileid: "91867313"
   
 -   고유하게 컴파일된 저장 프로시저를 호출하는 경우 이름이 없는 서수 매개 변수를 사용합니다. 가장 효율적으로 실행하려면 명명된 매개 변수를 사용하지 마세요.  
   
- XEvent **natively_compiled_proc_slow_parameter_passing**을 사용하여 고유하게 컴파일된 저장 프로시저에서 비효율적인 매개 변수를 감지할 수 있습니다.
+ XEvent **natively_compiled_proc_slow_parameter_passing** 을 사용하여 고유하게 컴파일된 저장 프로시저에서 비효율적인 매개 변수를 감지할 수 있습니다.
  - 일치하지 않는 형식: **reason=parameter_conversion**
  - 명명된 매개 변수: **reason=named_parameters**
  - DEFAULT 값: **reason=default** 

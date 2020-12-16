@@ -15,13 +15,13 @@ helpviewer_keywords:
 ms.assetid: 69024aad-eeea-4187-8fea-b49bc2359849
 author: MashaMSFT
 ms.author: mathoma
-monikerRange: '>=aps-pdw-2016||=azuresqldb-current||=azure-sqldw-latest||>=sql-server-2016||=sqlallproducts-allversions||>=sql-server-linux-2017||=azuresqldb-mi-current'
-ms.openlocfilehash: f336e026d95db0de5ad40a9fb4ebc90d8165f609
-ms.sourcegitcommit: f3321ed29d6d8725ba6378d207277a57cb5fe8c2
+monikerRange: '>=aps-pdw-2016||=azuresqldb-current||=azure-sqldw-latest||>=sql-server-2016||>=sql-server-linux-2017||=azuresqldb-mi-current'
+ms.openlocfilehash: 630b6a3c00d3bd4fccdb13acaadad64279a460c1
+ms.sourcegitcommit: 1a544cf4dd2720b124c3697d1e62ae7741db757c
 ms.translationtype: HT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 07/06/2020
-ms.locfileid: "85998991"
+ms.lasthandoff: 12/14/2020
+ms.locfileid: "97465524"
 ---
 # <a name="xml-format-files-sql-server"></a>XML 서식 파일(SQL Server)
 [!INCLUDE[SQL Server Azure SQL Database Synapse Analytics PDW ](../../includes/applies-to-version/sql-asdb-asdbmi-asa-pdw.md)]
@@ -30,7 +30,7 @@ ms.locfileid: "85998991"
  XML 서식 파일은 **bcp** 명령, BULK INSERT 문 또는 INSERT ... SELECT \* FROM OPENROWSET(BULK...)과 함께 사용할 수 있습니다. **bcp** 명령을 사용하면 테이블에 대해 XML 형식 파일을 자동으로 생성할 수 있습니다. 자세한 내용은 [bcp Utility](../../tools/bcp-utility.md)를 참조하세요.  
   
 > [!NOTE]  
->  *비 XML 서식 파일* 및 *XML 서식 파일*의 두 가지 서식 파일 유형을 대량으로 내보내고 가져올 수 있습니다. XML 서식 파일은 비 XML 서식 파일 대신 사용할 수 있는 보다 융통성 있고 강력한 파일 유형입니다. 비 XML 서식 파일에 대한 자세한 내용은 [비 XML 서식 파일&#40;SQL Server&#41;](../../relational-databases/import-export/non-xml-format-files-sql-server.md)를 참조하세요.  
+>  *비 XML 서식 파일* 및 *XML 서식 파일* 의 두 가지 서식 파일 유형을 대량으로 내보내고 가져올 수 있습니다. XML 서식 파일은 비 XML 서식 파일 대신 사용할 수 있는 보다 융통성 있고 강력한 파일 유형입니다. 비 XML 서식 파일에 대한 자세한 내용은 [비 XML 서식 파일&#40;SQL Server&#41;](../../relational-databases/import-export/non-xml-format-files-sql-server.md)를 참조하세요.  
   
  **항목 내용:**  
   
@@ -205,7 +205,7 @@ ms.locfileid: "85998991"
 |ID **="** _fieldID_ **"**|데이터 파일에서 필드의 논리적 이름을 지정합니다. 필드의 ID는 필드를 참조하는 데 사용되는 키입니다.<br /><br /> \<FIELD ID**="**_fieldID_**"**/>는 \<COLUMN SOURCE**="**_fieldID_**"**/>에 매핑됩니다.|필수|  
 |xsi:type **="** _fieldType_ **"**|요소의 인스턴스 유형을 식별하는 XML 구문(특성처럼 사용)입니다. *fieldType* 값은 지정한 인스턴스에서 필요한 옵션 특성(아래)을 결정합니다.|필수(데이터 형식에 따라 다름)|  
 |LENGTH **="** _n_ **"**|이 특성은 고정 길이 데이터 형식의 인스턴스 길이를 정의합니다.<br /><br /> *n* 값은 양의 정수여야 합니다.|선택(xsi:type 값에서 필요로 하지 않는 경우)|  
-|PREFIX_LENGTH **="** _p_ **"**|이 특성은 이진 데이터 표현의 접두사 길이를 정의합니다. PREFIX_LENGTH 값인 *p*는 1, 2, 4 또는 8 중 하나를 사용해야 합니다.|선택(xsi:type 값에서 필요로 하지 않는 경우)|  
+|PREFIX_LENGTH **="** _p_ **"**|이 특성은 이진 데이터 표현의 접두사 길이를 정의합니다. PREFIX_LENGTH 값인 *p* 는 1, 2, 4 또는 8 중 하나를 사용해야 합니다.|선택(xsi:type 값에서 필요로 하지 않는 경우)|  
 |MAX_LENGTH **="** _m_ **"**|이 특성은 지정된 필드에 저장할 수 있는 최대 바이트 수입니다. 대상 테이블이 없는 경우 열의 최대 길이를 알 수 없습니다. MAX_LENGTH 특성은 출력 문자 열의 최대 길이를 제한하여 열 값에 할당된 스토리지를 제한합니다. 특히 SELECT FROM 절에서 OPENROWSET 함수의 BULK 옵션을 사용할 때 편리합니다.<br /><br /> *m* 값은 양의 정수여야 합니다. 기본적으로 최대 길이는 **char** 열의 경우 8000자, **nchar** 열의 경우 4000자입니다.|옵션|  
 |COLLATION **="** _collationName_ **"**|COLLATION은 문자 필드에서만 사용할 수 있습니다. SQL 데이터 정렬 이름 목록은 [SQL Server 데이터 정렬 이름&#40;Transact-SQL&#41;](../../t-sql/statements/sql-server-collation-name-transact-sql.md)을 참조하세요.|옵션|  
 |TERMINATOR **= "** _terminator_ **"**|이 특성은 데이터 필드의 종결자를 지정합니다. 종결자는 어떠한 문자도 가능합니다. 종결자는 데이터의 일부가 아닌 고유 문자여야 합니다.<br /><br /> 기본적으로 필드 종결자는 탭 문자(\t로 표시)입니다. 단락 기호를 표시하려면 \r\n을 사용하세요.|이 특성이 필요한 문자 데이터의 xsi:type에만 사용됩니다.|  
@@ -257,7 +257,7 @@ ms.locfileid: "85998991"
 |----------------------|-----------------|------------------------------|  
 |SOURCE **="** _fieldID_ **"**|열에 매핑되는 필드의 ID를 지정합니다.<br /><br /> \<COLUMN SOURCE**="**_fieldID_**"**/>는 \<FIELD ID**="**_fieldID_**"**/>에 매핑됩니다.|필수|  
 |NAME = "*columnName*"|서식 파일에 의해 표현된 행 집합의 열 이름을 지정합니다. 이 열 이름은 결과 집합에서 열을 식별하는 데 사용되며 대상 테이블에서 사용되는 열 이름과 일치할 필요는 없습니다.|필수|  
-|xsi **:** type **="** _ColumnType_ **"**|요소의 인스턴스 데이터 형식을 식별하는 XML 구문(특성처럼 사용)입니다. *ColumnType* 값은 지정한 인스턴스에서 필요한 옵션 특성(아래)을 결정합니다.<br /><br /> 참고: *ColumnType*의 가능한 값 및 연결된 특성은 [&lt;COLUMN&gt; 요소의 Xsi:type 값](#XsiTypeValuesOfCOLUMN) 섹션의 \<COLUMN> 요소 테이블에 나와 있습니다.|옵션|  
+|xsi **:** type **="** _ColumnType_ **"**|요소의 인스턴스 데이터 형식을 식별하는 XML 구문(특성처럼 사용)입니다. *ColumnType* 값은 지정한 인스턴스에서 필요한 옵션 특성(아래)을 결정합니다.<br /><br /> 참고: *ColumnType* 의 가능한 값 및 연결된 특성은 [&lt;COLUMN&gt; 요소의 Xsi:type 값](#XsiTypeValuesOfCOLUMN) 섹션의 \<COLUMN> 요소 테이블에 나와 있습니다.|옵션|  
 |LENGTH **="** _n_ **"**|고정 길이 데이터 형식의 인스턴스 길이를 정의합니다. LENGTH는 xsi:type이 문자열 데이터 형식인 경우에만 사용됩니다.<br /><br /> *n* 값은 양의 정수여야 합니다.|선택(xsi:type이 문자열 데이터 형식인 경우에만 사용 가능)|  
 |PRECISION **="** _n_ **"**|숫자의 전체 자릿수를 나타냅니다. 예를 들어 123.45의 전체 자릿수는 5입니다.<br /><br /> 값은 양의 정수여야 합니다.|선택(xsi:type이 가변 숫자 데이터 형식인 경우에만 사용 가능)|  
 |SCALE **="** _int_ **"**|숫자에서 소수점 이하 자릿수를 나타냅니다. 예를 들어 123.45의 소수 자릿수는 2입니다.<br /><br /> 값은 정수여야 합니다.|선택(xsi:type이 가변 숫자 데이터 형식인 경우에만 사용 가능)|  
@@ -270,12 +270,12 @@ ms.locfileid: "85998991"
   
 |형식 범주|\<COLUMN> 데이터 형식|데이터 형식의<br /><br /> 선택적 XML 특성|데이터 형식의<br /><br /> 선택적 XML 특성|  
 |-------------------|---------------------------|---------------------------------------------------|---------------------------------------------------|  
-|수정됨|**SQLBIT**, **SQLTINYINT**, **SQLSMALLINT**, **SQLINT**, **SQLBIGINT**, **SQLFLT4**, **SQLFLT8**, **SQLDATETIME**, **SQLDATETIM4**, **SQLDATETIM8**, **SQLMONEY**, **SQLMONEY4**, **SQLVARIANT**및 **SQLUNIQUEID**|없음|NULLABLE|  
+|수정됨|**SQLBIT**, **SQLTINYINT**, **SQLSMALLINT**, **SQLINT**, **SQLBIGINT**, **SQLFLT4**, **SQLFLT8**, **SQLDATETIME**, **SQLDATETIM4**, **SQLDATETIM8**, **SQLMONEY**, **SQLMONEY4**, **SQLVARIANT** 및 **SQLUNIQUEID**|없음|NULLABLE|  
 |가변 숫자|**SQLDECIMAL** 및 **SQLNUMERIC**|없음|NULLABLE, PRECISION, SCALE|  
-|LOB|**SQLIMAGE**, **CharLOB**, **SQLTEXT**및 **SQLUDT**|없음|NULLABLE|  
+|LOB|**SQLIMAGE**, **CharLOB**, **SQLTEXT** 및 **SQLUDT**|없음|NULLABLE|  
 |문자 LOB|**SQLNTEXT**|없음|NULLABLE|  
 |이진 문자열|**SQLBINARY** 및 **SQLVARYBIN**|없음|NULLABLE, LENGTH|  
-|문자열|**SQLCHAR**, **SQLVARYCHAR**, **SQLNCHAR**및 **SQLNVARCHAR**|없음|NULLABLE, LENGTH|  
+|문자열|**SQLCHAR**, **SQLVARYCHAR**, **SQLNCHAR** 및 **SQLNVARCHAR**|없음|NULLABLE, LENGTH|  
   
 > [!IMPORTANT]  
 >  SQLXML 데이터를 대량으로 내보내거나 가져오려면 서식 파일에서 다음 데이터 형식 중 하나를 사용합니다. SQLCHAR 또는 SQLVARYCHAR(데이터 정렬에 의해 포함된 코드 페이지나 클라이언트 코드 페이지로 데이터가 전송됨), SQLNCHAR 또는 SQLNVARCHAR(데이터가 유니코드로 전송됨), SQLBINARY 또는 SQLVARYBIN(데이터가 변환되지 않고 전송됨) 데이터 형식 중 하나를 사용합니다.  
@@ -287,11 +287,11 @@ ms.locfileid: "85998991"
   
 -   **bcp** 명령  
   
-     데이터가 대상 테이블에 로드되면 **bcp**는 \<ROW> 구성 요소를 무시합니다. 대신 **bcp** 는 대상 테이블의 열 유형을 기반으로 하는 데이터를 로드합니다.  
+     데이터가 대상 테이블에 로드되면 **bcp** 는 \<ROW> 구성 요소를 무시합니다. 대신 **bcp** 는 대상 테이블의 열 유형을 기반으로 하는 데이터를 로드합니다.  
   
 -   [!INCLUDE[tsql](../../includes/tsql-md.md)] 문(BULK INSERT 및 OPENROWSET의 대량 행 집합 공급자)  
   
-     대량의 데이터를 테이블로 가져오는 경우 [!INCLUDE[tsql](../../includes/tsql-md.md)] 문은 \<ROW> 구성 요소를 사용하여 입력 행 집합을 생성합니다. 또한 [!INCLUDE[tsql](../../includes/tsql-md.md)] 문은 \<ROW>에서 지정된 열 유형과 대상 테이블에 있는 해당 열에 따라 적절한 형식 변환을 수행합니다. 서식 파일에서 지정된 열 유형과 대상 테이블에서 지정된 열 유형이 일치하지 않는 경우 추가 형식 변환이 수행됩니다. **bcp**와 비교할 때 이 추가 형식 변환으로 인해 BULK INSERT 또는 OPENROWSET의 대량 행 집합 공급자 동작에서 다소 불일치(전체 자릿수 손실)가 발생할 수 있습니다.  
+     대량의 데이터를 테이블로 가져오는 경우 [!INCLUDE[tsql](../../includes/tsql-md.md)] 문은 \<ROW> 구성 요소를 사용하여 입력 행 집합을 생성합니다. 또한 [!INCLUDE[tsql](../../includes/tsql-md.md)] 문은 \<ROW>에서 지정된 열 유형과 대상 테이블에 있는 해당 열에 따라 적절한 형식 변환을 수행합니다. 서식 파일에서 지정된 열 유형과 대상 테이블에서 지정된 열 유형이 일치하지 않는 경우 추가 형식 변환이 수행됩니다. **bcp** 와 비교할 때 이 추가 형식 변환으로 인해 BULK INSERT 또는 OPENROWSET의 대량 행 집합 공급자 동작에서 다소 불일치(전체 자릿수 손실)가 발생할 수 있습니다.  
   
      \<ROW> 요소의 정보를 사용하면 추가 정보 없이 행을 생성할 수 있습니다. 따라서 SELECT 문(SELECT \* FROM OPENROWSET(BULK *datafile* FORMATFILE=*xmlformatfile*)을 사용하여 행 집합을 생성할 수 있습니다.  
   

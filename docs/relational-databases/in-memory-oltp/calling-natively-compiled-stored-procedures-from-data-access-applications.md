@@ -11,13 +11,13 @@ ms.topic: conceptual
 ms.assetid: 9cf6c5ff-4548-401a-b3ec-084f47ff0eb8
 author: markingmyname
 ms.author: maghan
-monikerRange: =azuresqldb-current||>=sql-server-2016||=sqlallproducts-allversions||>=sql-server-linux-2017||=azuresqldb-mi-current
-ms.openlocfilehash: b63ebe7f73561408e464d73b29101c42ac111480
-ms.sourcegitcommit: 4d370399f6f142e25075b3714e5c2ce056b1bfd0
+monikerRange: =azuresqldb-current||>=sql-server-2016||>=sql-server-linux-2017||=azuresqldb-mi-current
+ms.openlocfilehash: 77c9d57563fb926a777a20edc89e8dbde7bf204d
+ms.sourcegitcommit: 1a544cf4dd2720b124c3697d1e62ae7741db757c
 ms.translationtype: HT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 10/09/2020
-ms.locfileid: "91867294"
+ms.lasthandoff: 12/14/2020
+ms.locfileid: "97465414"
 ---
 # <a name="calling-natively-compiled-stored-procedures-from-data-access-applications"></a>데이터 액세스 애플리케이션에서 고유하게 컴파일된 저장 프로시저 호출
 
@@ -54,13 +54,13 @@ ms.locfileid: "91867294"
 *여러 번 호출:* [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 저장 프로시저를 두 번 이상 호출하는 가장 효율적인 방법은 준비된 RPC 프로시저 호출을 사용하는 것입니다. 다음은 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] Native Client에서 ODBC 드라이버를 사용하여 준비된 RPC 호출을 수행하는 방법입니다.
 
 1. 데이터베이스에 대한 연결을 엽니다.
-2. **SQLBindParameter**를 사용하여 매개 변수를 바인딩합니다.
-3. **SQLPrepare**를 사용하여 프로시저 호출을 준비합니다.
-4. **SQLExecute**를 사용하여 저장 프로시저를 여러 번 실행합니다.
+2. **SQLBindParameter** 를 사용하여 매개 변수를 바인딩합니다.
+3. **SQLPrepare** 를 사용하여 프로시저 호출을 준비합니다.
+4. **SQLExecute** 를 사용하여 저장 프로시저를 여러 번 실행합니다.
 
 #### <a name="c-code-for-odbc"></a>ODBC용 C 코드
 
-다음 C 코드 조각에서는 주문에 품목을 추가하는 저장 프로시저의 준비된 실행을 보여 줍니다. **SQLPrepare**는 한 번만 호출됩니다. **SQLExecute**는 각 프로시저 실행마다 한 번씩, 여러 번 실행됩니다.
+다음 C 코드 조각에서는 주문에 품목을 추가하는 저장 프로시저의 준비된 실행을 보여 줍니다. **SQLPrepare** 는 한 번만 호출됩니다. **SQLExecute** 는 각 프로시저 실행마다 한 번씩, 여러 번 실행됩니다.
 
 ```cpp
 // Bind parameters

@@ -15,13 +15,13 @@ helpviewer_keywords:
 ms.assetid: 7c71ec9f-0180-4398-b32a-4bfb7592e75d
 author: stevestein
 ms.author: sstein
-monikerRange: =azuresqldb-current||>=sql-server-2016||=sqlallproducts-allversions||>=sql-server-linux-2017||=azuresqldb-mi-current
-ms.openlocfilehash: 18ed629f6a9d02c0068a20fc1da3e8d5c4375dc2
-ms.sourcegitcommit: 331b8495e4ab37266945c81ff5b93d250bdaa6da
+monikerRange: =azuresqldb-current||>=sql-server-2016||>=sql-server-linux-2017||=azuresqldb-mi-current
+ms.openlocfilehash: 70df620a283ac7f49c8ec854884a25843adc3e1c
+ms.sourcegitcommit: 1a544cf4dd2720b124c3697d1e62ae7741db757c
 ms.translationtype: HT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 08/20/2020
-ms.locfileid: "88645805"
+ms.lasthandoff: 12/14/2020
+ms.locfileid: "97464514"
 ---
 # <a name="rename-columns-database-engine"></a>열 이름 바꾸기(데이터베이스 엔진)
 
@@ -60,18 +60,18 @@ ms.locfileid: "88645805"
 
 ### <a name="to-rename-a-column-using-object-explorer"></a>개체 탐색기를 사용하여 열 이름을 바꾸려면
 
-1. **개체 탐색기**에서 [!INCLUDE[ssDE](../../includes/ssde-md.md)]인스턴스에 연결합니다.
-2. **개체 탐색기**에서 열 이름을 바꾸려는 테이블을 마우스 오른쪽 단추로 클릭하고 **이름 바꾸기**를 선택합니다.
+1. **개체 탐색기** 에서 [!INCLUDE[ssDE](../../includes/ssde-md.md)]인스턴스에 연결합니다.
+2. **개체 탐색기** 에서 열 이름을 바꾸려는 테이블을 마우스 오른쪽 단추로 클릭하고 **이름 바꾸기** 를 선택합니다.
 3. 새 열 이름을 입력합니다.
 
 ### <a name="to-rename-a-column-using-table-designer"></a>테이블 디자이너를 사용하여 열 이름을 바꾸려면
 
-1. **개체 탐색기**에서 열 이름을 바꾸려는 테이블을 마우스 오른쪽 단추로 클릭하고 **디자인**을 선택합니다.
-2. **열 이름**아래에서 변경하려는 이름을 선택하고 새 이름을 입력합니다.
-3. **파일** 메뉴에서 ‘테이블 이름’ **저장을 클릭합니다.** __
+1. **개체 탐색기** 에서 열 이름을 바꾸려는 테이블을 마우스 오른쪽 단추로 클릭하고 **디자인** 을 선택합니다.
+2. **열 이름** 아래에서 변경하려는 이름을 선택하고 새 이름을 입력합니다.
+3. **파일** 메뉴에서 ‘테이블 이름’ **저장을 클릭합니다.** 
 
 > [!NOTE]
-> **열 속성** 탭에서 열 이름을 변경할 수도 있습니다. 이름을 변경하려는 열을 선택하고 **이름**에 새 이름을 입력합니다.
+> **열 속성** 탭에서 열 이름을 변경할 수도 있습니다. 이름을 변경하려는 열을 선택하고 **이름** 에 새 이름을 입력합니다.
 
 ## <a name="using-transact-sql"></a><a name="TsqlProcedure"></a> Transact-SQL 사용
 
