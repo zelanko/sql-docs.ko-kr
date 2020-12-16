@@ -11,13 +11,13 @@ ms.topic: conceptual
 ms.assetid: 827e509e-3c4f-4820-aa37-cebf0f7bbf80
 author: jaszymas
 ms.author: jaszymas
-monikerRange: =azuresqldb-current||>=sql-server-2016||=sqlallproducts-allversions||>=sql-server-linux-2017||=azuresqldb-mi-current
-ms.openlocfilehash: d2bf769680bfc19180b03cf30235e6abbc8dd77b
-ms.sourcegitcommit: 4d370399f6f142e25075b3714e5c2ce056b1bfd0
+monikerRange: =azuresqldb-current||>=sql-server-2016||>=sql-server-linux-2017||=azuresqldb-mi-current
+ms.openlocfilehash: 4e3bd7a6481f677de9355a892eb78b3b5aeaaa15
+ms.sourcegitcommit: 1a544cf4dd2720b124c3697d1e62ae7741db757c
 ms.translationtype: HT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 10/09/2020
-ms.locfileid: "91867956"
+ms.lasthandoff: 12/14/2020
+ms.locfileid: "97477584"
 ---
 # <a name="using-always-encrypted-with-the-net-framework-data-provider-for-sql-server"></a>.NET Framework Data Provider for SQL Server와 Always Encrypted 사용
 [!INCLUDE [SQL Server Azure SQL Database](../../../includes/applies-to-version/sql-asdb.md)]
@@ -35,7 +35,7 @@ Always Encrypted를 사용하면 클라이언트 애플리케이션이 중요한
 > 특히 .NET Framework의 버전에 따라 상시 암호화에 대한 지원 수준이 달라집니다. 자세한 내용은 아래의 상시 암호화 API 참조 섹션을 참조하세요.
 
 ## <a name="enabling-always-encrypted-for-application-queries"></a>애플리케이션 쿼리에 대해 Always Encrypted 사용
-매개 변수 암호화를 설정하고 암호화된 열을 대상으로 하는 쿼리 결과의 암호를 해독하는 가장 쉬운 방법은 열 암호화 설정 연결 문자열 키워드 값을 **enabled**로 설정하는 것입니다.
+매개 변수 암호화를 설정하고 암호화된 열을 대상으로 하는 쿼리 결과의 암호를 해독하는 가장 쉬운 방법은 열 암호화 설정 연결 문자열 키워드 값을 **enabled** 로 설정하는 것입니다.
 
 다음은 상시 암호화를 사용하는 연결 문자열의 예제입니다.
 
@@ -111,7 +111,7 @@ CREATE TABLE [dbo].[Patients]([PatientId] [int] IDENTITY(1,1),
 
 이 예제에서는 Patients 테이블에 행을 삽입합니다. 다음 사항에 유의하세요.
 - 샘플 코드에는 암호화에 대한 내용이 없습니다. .NET Framework Data Provider for SQL Server에서는 암호화된 열을 대상으로 하는 *paramSSN* 및 *paramBirthdate* 매개 변수를 자동으로 검색하고 암호화합니다. 이렇게 하면 애플리케이션에 투명하게 암호화할 수 있습니다. 
-- 암호화된 열을 포함하여 데이터베이스 열에 삽입된 값은 [SqlParameter](/dotnet/api/system.data.sqlclient.sqlparameter) 개체로 전달됩니다. **SqlParameter**를 사용하여 암호화되지 않은 열에 값을 전달하는 것은 선택 사항이지만(그러나 SQL 삽입을 방지할 수 있으므로 매우 권장됨) 암호화된 열을 대상으로 하는 값에 필요합니다. SSN 또는 BirthDate 열에 삽입된 값이 쿼리 문에 포함된 리터럴로 전달된 경우 .NET Framework Data Provider for SQL Server에서 암호화된 대상 열의 값을 확인할 수 없어 값을 암호화하지 않으므로 쿼리가 실패합니다. 결과적으로, 암호화된 열과 호환 불가능한 것으로 간주하여 서버에서 거부합니다.
+- 암호화된 열을 포함하여 데이터베이스 열에 삽입된 값은 [SqlParameter](/dotnet/api/system.data.sqlclient.sqlparameter) 개체로 전달됩니다. **SqlParameter** 를 사용하여 암호화되지 않은 열에 값을 전달하는 것은 선택 사항이지만(그러나 SQL 삽입을 방지할 수 있으므로 매우 권장됨) 암호화된 열을 대상으로 하는 값에 필요합니다. SSN 또는 BirthDate 열에 삽입된 값이 쿼리 문에 포함된 리터럴로 전달된 경우 .NET Framework Data Provider for SQL Server에서 암호화된 대상 열의 값을 확인할 수 없어 값을 암호화하지 않으므로 쿼리가 실패합니다. 결과적으로, 암호화된 열과 호환 불가능한 것으로 간주하여 서버에서 거부합니다.
 - SSN 열을 대상으로 하는 매개 변수의 데이터 형식은 ANSI(비 유니코드) 문자열이며 char/varchar SQL Server 데이터 형식에 매핑됩니다. 매개 변수 형식이 유니코드 문자열(String)로 설정되어 nchar/nvarchar에 매핑되는 경우 Always Encrypted가 암호화된 nchar/nvarchar 값을 암호화된 char/varchar 값으로 변환하는 것을 지원하지 않으므로 쿼리가 실패합니다. 데이터 형식 매핑에 대한 자세한 내용은 [SQL Server 데이터 형식 매핑](/dotnet/framework/data/adonet/sql-server-data-type-mappings) 을 참조하세요.
 - BirthDate 열에 삽입되는 매개 변수의 데이터 형식은 [SqlParameter.DbType 속성](/dotnet/api/system.data.sqlclient.sqlparameter.sqldbtype)을 사용할 때 적용되는 SQL Server 데이터 형식으로 .NET 형식을 암시적으로 매핑하지 않고 [SqlParameter.SqlDbType 속성](/dotnet/api/system.data.sqlclient.sqlparameter.dbtype)을 사용하여 명시적으로 대상 SQL Server 데이터 형식으로 설정됩니다. 기본적으로 [DateTime 구조체](/dotnet/api/system.datetime) 는 SQL Server 데이터 형식 datetime에 매핑됩니다. BirthDate 열의 데이터 형식이 date이고 상시 암호화는 암호화된 datetime 값을 암호화된 date 값으로 변환하는 것을 지원하지 않으므로 기본 매핑 시 오류가 발생합니다. 
 
@@ -408,11 +408,11 @@ static byte[]  GetEncryptedColumnEncryptonKey()
 
 개별 쿼리의 Always Encrypted 동작을 제어하려면 [SqlCommand](/dotnet/api/system.data.sqlclient.sqlcommand) 및 [SqlCommandColumnEncryptionSetting](/dotnet/api/system.data.sqlclient.sqlcommandcolumnencryptionsetting)의 이 생성자를 사용해야 합니다. 다음은 몇 가지 유용한 지침입니다.
 - 대부분이 데이터베이스 연결 액세스 암호화된 열을 통해 전송하는 클라이언트 애플리케이션을 쿼리하는 경우:
-    - **열 암호화 설정** 연결 문자열 키워드를 *사용*으로 설정합니다.
+    - **열 암호화 설정** 연결 문자열 키워드를 *사용* 으로 설정합니다.
     - 암호화된 모든 열을 액세스하지 않는 개별 쿼리에 대해 **SqlCommandColumnEncryptionSetting.Disabled** 를 설정합니다. 이렇게 하면 sys.sp_describe_parameter_encryption이 호출되지 않고 결과 집합 값의 암호 해독도 시도되지 않습니다.
     - 암호화를 요구하는 매개 변수가 없지만 암호화된 열에서 데이터를 검색하는 개별 쿼리에 대해 **SqlCommandColumnEncryptionSetting.ResultSet** 을 설정합니다. sys.sp_describe_parameter_encryption 호출 및 매개 변수 암호화가 사용되지 않습니다. 쿼리가 암호화 열에서 결과를 해독할 수 없습니다.
 - 대부분이 암호화된 열에 액세스하지 않는 데이터베이스 연결을 통해 보내는 클라이언트 애플리케이션을 쿼리하는 경우:
-    - **열 암호화 설정** 연결 문자열 키워드를 **사용 안 함**으로 설정합니다.
+    - **열 암호화 설정** 연결 문자열 키워드를 **사용 안 함** 으로 설정합니다.
     - 암호화해야 하는 모든 매개 변수가 있는 개별 쿼리에 대해 **SqlCommandColumnEncryptionSetting.Enabled** 를 설정합니다. 이렇게 하면 sys.sp_describe_parameter_encryption이 호출될 뿐만 아니라 암호화된 열에서 검색된 모든 쿼리 결과의 암호가 해독됩니다.
     - 암호화를 요구하는 매개 변수가 없지만 암호화된 열에서 데이터를 검색하는 쿼리에 대해 **SqlCommandColumnEncryptionSetting.ResultSet** 을 설정합니다. sys.sp_describe_parameter_encryption 호출 및 매개 변수 암호화가 사용되지 않습니다. 쿼리가 암호화 열에서 결과를 해독할 수 없습니다.
 
@@ -470,7 +470,7 @@ connection, null, SqlCommandColumnEncryptionSetting.ResultSetOnly))
 
 이러한 공격을 방지하기 위해 애플리케이션은 매개 변수에 대한 [SqlParameter.ForceColumnEncryption 속성](/dotnet/api/system.data.sqlclient.sqlparameter.forcecolumnencryption) 을 true로 설정할 수 있습니다. 이렇게 하면 서버에서 수신한 메타데이터에서 매개 변수를 암호화하지 않아도 된다고 나타낼 경우 .NET Framework Data Provider for SQL Server에서는 예외를 throw합니다.
 
-**SqlParameter.ForceColumnEncryption 속성**을 사용하면 보안이 강화되지만 클라이언트 애플리케이션에 대한 암호화 투명도는 줄어듭니다. 데이터베이스 스키마를 업데이트하여 암호화된 열 집합을 변경하려면 애플리케이션도 변경해야 할 수 있습니다.
+**SqlParameter.ForceColumnEncryption 속성** 을 사용하면 보안이 강화되지만 클라이언트 애플리케이션에 대한 암호화 투명도는 줄어듭니다. 데이터베이스 스키마를 업데이트하여 암호화된 열 집합을 변경하려면 애플리케이션도 변경해야 할 수 있습니다.
 
 다음 코드 예제에서는 **SqlParameter.ForceColumnEncryption 속성** 을 사용하여 주민 등록 번호를 데이터베이스에 일반 텍스트로 보내지 않도록 하는 방법을 보여 줍니다. 
 

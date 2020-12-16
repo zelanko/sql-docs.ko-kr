@@ -15,13 +15,13 @@ helpviewer_keywords:
 ms.assetid: 6dd601a4-1233-43d9-a9f0-bc8d84e5d188
 author: MashaMSFT
 ms.author: mathoma
-monikerRange: =azuresqldb-mi-current||>=sql-server-2016||=sqlallproducts-allversions
-ms.openlocfilehash: 6a0703042862d995d8890c01fee519915b513e3a
-ms.sourcegitcommit: e700497f962e4c2274df16d9e651059b42ff1a10
+monikerRange: =azuresqldb-mi-current||>=sql-server-2016
+ms.openlocfilehash: 03b08fa667f8b0753c315a7cf66123618cb493f7
+ms.sourcegitcommit: 1a544cf4dd2720b124c3697d1e62ae7741db757c
 ms.translationtype: HT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 08/17/2020
-ms.locfileid: "88482463"
+ms.lasthandoff: 12/14/2020
+ms.locfileid: "97475864"
 ---
 # <a name="article-properties---ltarticlegt"></a>아티클 속성 - &lt;Article&gt;
 [!INCLUDE [SQL Server SQL MI](../../includes/applies-to-version/sql-asdbmi.md)]
@@ -52,11 +52,11 @@ ms.locfileid: "88482463"
   
  데이터를 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 이전 버전의 [!INCLUDE[ssVersion2005](../../includes/ssversion2005-md.md)]로 복제하려면 다음을 수행하십시오.  
   
--   이전 버전에서는 CREATE SCHEMA 문을 지원하지 않으므로 이 옵션을 **False**로 설정합니다.  
+-   이전 버전에서는 CREATE SCHEMA 문을 지원하지 않으므로 이 옵션을 **False** 로 설정합니다.  
   
 -   각 스키마에 대해 해당 스키마와 이름이 같은 구독 데이터베이스에 사용자를 추가합니다.  
   
- **XML을 NTEXT로 변환**, **MAX 데이터 형식을 NTEXT 및 IMAGE로 변환**, **새 datetime을 NVARCHAR로 변환**, **filestream을 MAX 데이터 형식으로 변환**, **large CLR을 MAX 데이터 형식으로 변환**, **hierarchyId를 MAX 데이터 형식으로 변환**및 **spatial을 MAX 데이터 형식으로 변환**  
+ **XML을 NTEXT로 변환**, **MAX 데이터 형식을 NTEXT 및 IMAGE로 변환**, **새 datetime을 NVARCHAR로 변환**, **filestream을 MAX 데이터 형식으로 변환**, **large CLR을 MAX 데이터 형식으로 변환**, **hierarchyId를 MAX 데이터 형식으로 변환** 및 **spatial을 MAX 데이터 형식으로 변환**  
  설명한 대로 데이터 형식과 특성을 변환할지 여부를 결정합니다. 이러한 데이터 형식을 이전 버전의 **로 복제하려면** True [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]를 지정합니다. 이렇게 하면 해당 데이터 형식이 구독자에서 올바르게 처리됩니다.  
   
  **대상 개체 이름**  
@@ -67,7 +67,7 @@ ms.locfileid: "88482463"
   
 -   호환성 수준이 90 이하인 병합 게시의 아티클에 대해 기본적으로 소유자는 빈 상태였다가 구독자에서 개체를 생성하는 중에 **dbo** 로 지정됩니다.  
   
--   Oracle 게시의 아티클에 대해 기본적으로 소유자는 **dbo**로 지정됩니다.  
+-   Oracle 게시의 아티클에 대해 기본적으로 소유자는 **dbo** 로 지정됩니다.  
   
 -   문자 모드 스냅샷([!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 이외 구독자 및 [!INCLUDE[ssEW](../../includes/ssew-md.md)] 구독자에 사용됨)을 사용하는 게시의 아티클에 대해 기본적으로 소유자는 빈 상태입니다. 소유자는 기본적으로 배포 에이전트 또는 병합 에이전트를 구독자에 연결하는 데 사용하는 계정과 연결된 소유자입니다.  
   
@@ -78,7 +78,7 @@ ms.locfileid: "88482463"
   
 ## <a name="options-for-transactional-publications"></a>트랜잭션 게시에 대한 옵션  
  **INSERT, UPDATE 및 DELETE 저장 프로시저 복사**  
- 이 대화 상자의 **문 배달** 섹션에서 저장 프로시저를 사용하여 변경 내용을 구독자(기본값)로 전파하도록 선택한 경우 해당 프로시저를 각 구독자에 복사할지 여부를 선택합니다. **False**를 선택할 경우 수동으로 프로시저를 복사해야 하며, 수동으로 복사하지 않을 경우 배포 에이전트에서 변경 내용을 배달하려고 하면 오류가 발생합니다.  
+ 이 대화 상자의 **문 배달** 섹션에서 저장 프로시저를 사용하여 변경 내용을 구독자(기본값)로 전파하도록 선택한 경우 해당 프로시저를 각 구독자에 복사할지 여부를 선택합니다. **False** 를 선택할 경우 수동으로 프로시저를 복사해야 하며, 수동으로 복사하지 않을 경우 배포 에이전트에서 변경 내용을 배달하려고 하면 오류가 발생합니다.  
   
  **Statement delivery**  
  이 섹션의 옵션은 테이블로 복제된 인덱싱된 뷰를 포함하여 모든 테이블에 적용됩니다. [!INCLUDE[msCoName](../../includes/msconame-md.md)] 는 애플리케이션에 다른 기능이 필요 하지 않는 한 기본 옵션을 사용할 것을 권장합니다. 기본적으로 트랜잭션 복제는 각 구독자에 설치된 저장 프로시저 집합를 통하여 변경 내용을 구독자로 전파합니다. 게시자에서 테이블에 삽입, 업데이트 또는 삭제 작업을 수행하면 구독자에서 저장 프로시저 호출로 변환됩니다.  
@@ -91,7 +91,7 @@ ms.locfileid: "88482463"
  이 옵션은 저장 프로시저에만 적용됩니다. 저장 프로시저의 정의(CREATE PROCEDURE 문)를 복제할 것인지 아니면 저장 프로시저의 실행을 복제할 것인지를 결정합니다. 저장 프로시저의 실행을 복제하면 구독이 초기화될 때 프로시저 정의가 구독자로 복제됩니다. 게시자에서 이 프로시저를 실행하면 이러한 복제의 결과로 구독자에서 해당 프로시저가 실행됩니다. 이렇게 하면 대규모 일괄 처리 작업이 수행되는 경우 성능을 크게 향상시킬 수 있습니다. 자세한 내용은 [Publishing Stored Procedure Execution in Transactional Replication](../../relational-databases/replication/transactional/publishing-stored-procedure-execution-in-transactional-replication.md)를 참조하세요.  
   
 ## <a name="options-for-merge-publications"></a>병합 게시에 대한 옵션  
- 병합 게시의 **문서 속성** 대화 상자에는 **속성**과 **해결 프로그램**의 두 가지 탭이 있습니다.  
+ 병합 게시의 **문서 속성** 대화 상자에는 **속성** 과 **해결 프로그램** 의 두 가지 탭이 있습니다.  
   
 ### <a name="properties-tab"></a>속성 탭  
  **동기화 방향**  
@@ -111,10 +111,10 @@ ms.locfileid: "88482463"
  **추적 수준**  
  같은 행 또는 같은 열의 변경을 충돌로 처리할지 여부를 결정합니다.  
   
- **INSERT 권한 확인**, **UPDATE 권한 확인**및 **DELETE 권한 확인**  
+ **INSERT 권한 확인**, **UPDATE 권한 확인** 및 **DELETE 권한 확인**  
  동기화 중 구독자 로그인이 게시 데이터베이스에 게시된 테이블에 대해 INSERT, UPDATE 또는 DELETE 권한을 가지고 있는지를 확인할 것인지 결정합니다. 병합 복제에서는 이러한 권한을 부여할 필요가 없으므로 기본값은 **False** 입니다. 게시된 테이블에 대한 액세스는 PAL(게시 액세스 목록)을 통해 제어합니다. PAL에 대한 자세한 내용은 [게시자 보안 설정](../../relational-databases/replication/security/secure-the-publisher.md)을 참조하세요.  
   
- 사용 권한을 확인하면 하나 이상의 구독자가 일부 변경 내용을 게시된 데이터에 업로드할 수는 있지만 다른 작업은 수행하지 못하게 할 수 있습니다. 예를 들어 PAL에 구독자를 추가하지만 추가된 구독자에게 게시 데이터베이스의 테이블에 대한 권한은 부여하지 않을 수 있습니다. 그런 다음 DELETE 권한 확인을 **True**로 설정하면 구독자는 삽입 및 업데이트는 업로드할 수 있지만 삭제는 업로드할 수 없습니다.  
+ 사용 권한을 확인하면 하나 이상의 구독자가 일부 변경 내용을 게시된 데이터에 업로드할 수는 있지만 다른 작업은 수행하지 못하게 할 수 있습니다. 예를 들어 PAL에 구독자를 추가하지만 추가된 구독자에게 게시 데이터베이스의 테이블에 대한 권한은 부여하지 않을 수 있습니다. 그런 다음 DELETE 권한 확인을 **True** 로 설정하면 구독자는 삽입 및 업데이트는 업로드할 수 있지만 삭제는 업로드할 수 없습니다.  
   
  **여러 열 UPDATE**  
  병합 복제는 업데이트 수행 시 하나의 UPDATE 문으로 변경된 모든 열을 업데이트하고 변경되지 않은 열은 원래 값으로 다시 설정합니다. 이러한 경우 변경된 각 열에 UPDATE 문을 하나씩 사용하여 여러 UPDATE 문을 실행해도 됩니다. 일반적으로 여러 열 UPDATE 문이 보다 효율적입니다. 그러나 테이블의 트리거가 특정 열의 업데이트에 응답하도록 설정되어 있는데 업데이트를 수행할 때마다 이러한 열이 다시 설정되어 이 트리거가 올바르게 응답하지 않는 경우에는 이 옵션을 **False** 로 설정해야 합니다.  
@@ -138,14 +138,14 @@ ms.locfileid: "88482463"
  [!INCLUDE[msCoName](../../includes/msconame-md.md)] 에서 제공하는 모든 COM 기반 해결 프로그램이 서명됩니다. 동기화할 때 해결 프로그램이 유효한지 확인하려면 이 옵션을 선택합니다.  
   
 ## <a name="options-for-oracle-publications"></a>Oracle 게시에 대한 옵션  
- Oracle 게시의 **문서 속성** 대화 상자에는 **속성**과 **데이터 매핑**의 두 가지 탭이 있습니다. Oracle 게시는 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 게시에서 지원하는 속성 중 일부만 지원합니다. 자세한 내용은 [Design Considerations and Limitations for Oracle Publishers](../../relational-databases/replication/non-sql/design-considerations-and-limitations-for-oracle-publishers.md)을 참조하세요.  
+ Oracle 게시의 **문서 속성** 대화 상자에는 **속성** 과 **데이터 매핑** 의 두 가지 탭이 있습니다. Oracle 게시는 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 게시에서 지원하는 속성 중 일부만 지원합니다. 자세한 내용은 [Design Considerations and Limitations for Oracle Publishers](../../relational-databases/replication/non-sql/design-considerations-and-limitations-for-oracle-publishers.md)을 참조하세요.  
   
 ### <a name="properties-tab"></a>속성 탭  
  **INSERT, UPDATE 및 DELETE 저장 프로시저 복사**  
- 아티클이 트랜잭션 게시에 있고 이 대화 상자의 **문 배달** 섹션에서 저장 프로시저를 사용하여 변경 내용을 구독자(기본값)로 전파하기로 선택한 경우 해당 프로시저를 각 구독자에 복사할지 여부를 선택합니다. **False**를 선택할 경우 수동으로 프로시저를 복사해야 하며, 수동으로 복사하지 않을 경우 배포 에이전트에서 변경 내용을 배달하려고 하면 오류가 발생합니다.  
+ 아티클이 트랜잭션 게시에 있고 이 대화 상자의 **문 배달** 섹션에서 저장 프로시저를 사용하여 변경 내용을 구독자(기본값)로 전파하기로 선택한 경우 해당 프로시저를 각 구독자에 복사할지 여부를 선택합니다. **False** 를 선택할 경우 수동으로 프로시저를 복사해야 하며, 수동으로 복사하지 않을 경우 배포 에이전트에서 변경 내용을 배달하려고 하면 오류가 발생합니다.  
   
  **대상 개체 소유자**  
- **dbo**이외의 값을 입력한 경우  
+ **dbo** 이외의 값을 입력한 경우  
   
 -   [!INCLUDE[ssVersion2005](../../includes/ssversion2005-md.md)] 이상 버전을 실행하는 구독자의 경우 입력한 값과 이름이 같은 구독자에서 스키마가 생성되었는지 확인해야 합니다. 자세한 내용은 [CREATE SCHEMA&#40;Transact-SQL&#41;](../../t-sql/statements/create-schema-transact-sql.md)를 참조하세요.  
   

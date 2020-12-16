@@ -8,13 +8,13 @@ ms.topic: tutorial
 author: MikeRayMSFT
 ms.author: mikeray
 ms.reviewer: ''
-monikerRange: '>= sql-server-2016 || =sqlallproducts-allversions'
-ms.openlocfilehash: ddf0fe7b4f3f14963291d8ae930d7d680c374cb2
-ms.sourcegitcommit: 783b35f6478006d654491cb52f6edf108acf2482
+monikerRange: '>= sql-server-2016'
+ms.openlocfilehash: 1592632bdeca9f8c3cdceeb61b06c1bd92550f53
+ms.sourcegitcommit: 1a544cf4dd2720b124c3697d1e62ae7741db757c
 ms.translationtype: HT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 10/09/2020
-ms.locfileid: "91892143"
+ms.lasthandoff: 12/14/2020
+ms.locfileid: "97477924"
 ---
 # <a name="configure-polybase-scale-out-groups-on-windows"></a>Windows에서 PolyBase 스케일 아웃 그룹 구성
 
@@ -52,19 +52,19 @@ ms.locfileid: "91892143"
   
    - PQTH4A-CMP02  
   
-2. 도메인 계정: *PQTH4A\PolyBaseUse*r  
+2. 도메인 계정: *PQTH4A\PolyBaseUse* r  
 
 ## <a name="install-sql-server-with-polybase-on-all-machines"></a>모든 시스템에 PolyBase 사용하는 SQL Server 설치
 
 1. setup.exe를 실행합니다.
   
-2. 기능 선택 페이지에서 **외부 데이터용 PolyBase 쿼리 서비스**를 선택합니다.
+2. 기능 선택 페이지에서 **외부 데이터용 PolyBase 쿼리 서비스** 를 선택합니다.
   
-3. 서버 구성 페이지에서 SQL Server PolyBase 엔진 및 SQL Server PolyBase 데이터 이동 서비스에 대해 PQTH4A\PolyBaseUser **도메인 계정**을 사용합니다.
+3. 서버 구성 페이지에서 SQL Server PolyBase 엔진 및 SQL Server PolyBase 데이터 이동 서비스에 대해 PQTH4A\PolyBaseUser **도메인 계정** 을 사용합니다.
   
-4. PolyBase 구성 페이지에서 **PolyBase 스케일 아웃 그룹의 일부로 SQL Server 인스턴스 사용**옵션을 선택합니다. 이 옵션은 PolyBase 서비스로 들어오는 연결을 허용하도록 방화벽을 엽니다. 헤드 노드가 명명된 인스턴스인 경우 헤드 노드의 Windows 방화벽에 SQL Server 포트를 수동으로 추가하고 헤드 노드에서 SQL Browser를 시작해야 합니다.
+4. PolyBase 구성 페이지에서 **PolyBase 스케일 아웃 그룹의 일부로 SQL Server 인스턴스 사용** 옵션을 선택합니다. 이 옵션은 PolyBase 서비스로 들어오는 연결을 허용하도록 방화벽을 엽니다. 헤드 노드가 명명된 인스턴스인 경우 헤드 노드의 Windows 방화벽에 SQL Server 포트를 수동으로 추가하고 헤드 노드에서 SQL Browser를 시작해야 합니다.
   
-5. 설치가 완료된 후 **services.msc**를 실행합니다. SQL Server, PolyBase 엔진 및 PolyBase 데이터 이동 서비스가 실행 중인지 확인합니다.
+5. 설치가 완료된 후 **services.msc** 를 실행합니다. SQL Server, PolyBase 엔진 및 PolyBase 데이터 이동 서비스가 실행 중인지 확인합니다.
   
    ![PolyBase 서비스](../../relational-databases/polybase/media/polybase-services.png "PolyBase 서비스")  
   

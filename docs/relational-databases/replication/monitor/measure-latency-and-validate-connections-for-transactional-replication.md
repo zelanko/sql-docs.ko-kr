@@ -17,13 +17,13 @@ helpviewer_keywords:
 ms.assetid: 4addd426-7523-4067-8d7d-ca6bae4c9e34
 author: MashaMSFT
 ms.author: mathoma
-monikerRange: =azuresqldb-mi-current||>=sql-server-2016||=sqlallproducts-allversions
-ms.openlocfilehash: 4ff1261ef4b1cfed1b36c8d14dde6810e6c27ef8
-ms.sourcegitcommit: c8e1553ff3fdf295e8dc6ce30d1c454d6fde8088
+monikerRange: =azuresqldb-mi-current||>=sql-server-2016
+ms.openlocfilehash: 558363289f212544d71eee6ad2a4d40a9d5716c8
+ms.sourcegitcommit: 1a544cf4dd2720b124c3697d1e62ae7741db757c
 ms.translationtype: HT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 07/22/2020
-ms.locfileid: "86918729"
+ms.lasthandoff: 12/14/2020
+ms.locfileid: "97477874"
 ---
 # <a name="measure-latency-and-validate-connections-for-transactional-replication"></a>트랜잭션 복제에 대한 대기 시간 측정 및 연결 유효성 검사
 [!INCLUDE[sql-asdbmi](../../../includes/applies-to-version/sql-asdbmi.md)]
@@ -89,7 +89,7 @@ ms.locfileid: "86918729"
   
 2.  **추적 프로그램 토큰** 탭을 클릭합니다.  
   
-3.  **추적 프로그램 삽입**을 클릭합니다.  
+3.  **추적 프로그램 삽입** 을 클릭합니다.  
   
 4.  다음 열에서 추적 프로그램 토큰에 대한 경과된 시간을 확인합니다. **게시자에서 배포자로 연결 시 대기 시간**, **배포자에서 구독자로 연결 시 대기 시간** 및 **총 대기 시간**. 값 **보류 중** 은 토큰이 지정된 지점에 아직 도달하지 않았음을 나타냅니다.  
   
@@ -114,21 +114,21 @@ ms.locfileid: "86918729"
   
 2.  (옵션) 게시 데이터베이스의 게시자에서 [sp_helpsubscription&#40;Transact-SQL&#41;](../../../relational-databases/system-stored-procedures/sp-helpsubscription-transact-sql.md)을 실행합니다. 해당 구독이 있는지 그리고 상태가 활성 상태인지 확인합니다.  
   
-3.  게시 데이터베이스의 게시자에서 [sp_posttracertoken &#40;Transact-SQL&#41;](../../../relational-databases/system-stored-procedures/sp-posttracertoken-transact-sql.md)을 실행하여 **\@publication**을 지정합니다. **\@tracer_token_id** 출력 매개 변수의 값을 확인합니다.  
+3.  게시 데이터베이스의 게시자에서 [sp_posttracertoken &#40;Transact-SQL&#41;](../../../relational-databases/system-stored-procedures/sp-posttracertoken-transact-sql.md)을 실행하여 **\@publication** 을 지정합니다. **\@tracer_token_id** 출력 매개 변수의 값을 확인합니다.  
   
 #### <a name="to-determine-latency-and-validate-connections-for-a-transactional-publication"></a>트랜잭션 복제에 대한 대기 시간을 확인하고 연결 유효성을 검사하려면  
   
 1.  이전 절차를 따라 게시에 추적 프로그램 토큰을 게시합니다.  
   
-2.  게시 데이터베이스의 게시자에서 [sp_helptracertokens &#40;Transact-SQL&#41;](../../../relational-databases/system-stored-procedures/sp-helptracertokens-transact-sql.md)를 실행하여 **\@publication**을 지정합니다. 그러면 해당 게시에 게시된 모든 추적 프로그램 토큰의 목록이 반환됩니다. 결과 집합에서 원하는 **tracer_id** 를 확인합니다.  
+2.  게시 데이터베이스의 게시자에서 [sp_helptracertokens &#40;Transact-SQL&#41;](../../../relational-databases/system-stored-procedures/sp-helptracertokens-transact-sql.md)를 실행하여 **\@publication** 을 지정합니다. 그러면 해당 게시에 게시된 모든 추적 프로그램 토큰의 목록이 반환됩니다. 결과 집합에서 원하는 **tracer_id** 를 확인합니다.  
   
-3.  게시 데이터베이스의 게시자에서 [sp_helptracertokenhistory &#40;Transact-SQL&#41;](../../../relational-databases/system-stored-procedures/sp-helptracertokenhistory-transact-sql.md)를 실행하여 **\@publication**을 지정하고 **\@tracer_id**에 대해 2단계에서 얻은 추적 프로그램 토큰 ID를 지정합니다. 그러면 선택한 추적 프로그램 토큰에 대한 대기 시간 정보가 반환됩니다.  
+3.  게시 데이터베이스의 게시자에서 [sp_helptracertokenhistory &#40;Transact-SQL&#41;](../../../relational-databases/system-stored-procedures/sp-helptracertokenhistory-transact-sql.md)를 실행하여 **\@publication** 을 지정하고 **\@tracer_id** 에 대해 2단계에서 얻은 추적 프로그램 토큰 ID를 지정합니다. 그러면 선택한 추적 프로그램 토큰에 대한 대기 시간 정보가 반환됩니다.  
   
 #### <a name="to-remove-tracer-tokens"></a>추적 프로그램 토큰을 제거하려면  
   
-1.  게시 데이터베이스의 게시자에서 [sp_helptracertokens &#40;Transact-SQL&#41;](../../../relational-databases/system-stored-procedures/sp-helptracertokens-transact-sql.md)를 실행하여 **\@publication**을 지정합니다. 그러면 해당 게시에 게시된 모든 추적 프로그램 토큰의 목록이 반환됩니다. 결과 집합에서 삭제할 추적 프로그램 토큰의 **tracer_id** 를 확인합니다.  
+1.  게시 데이터베이스의 게시자에서 [sp_helptracertokens &#40;Transact-SQL&#41;](../../../relational-databases/system-stored-procedures/sp-helptracertokens-transact-sql.md)를 실행하여 **\@publication** 을 지정합니다. 그러면 해당 게시에 게시된 모든 추적 프로그램 토큰의 목록이 반환됩니다. 결과 집합에서 삭제할 추적 프로그램 토큰의 **tracer_id** 를 확인합니다.  
   
-2.  게시 데이터베이스의 게시자에서 **\@publication**을 지정한 다음 `@tracer_id`에 2단계에서 얻은 삭제할 추적 프로그램의 ID를 지정하고 [sp_deletetracertokenhistory&#40;Transact-SQL&#41;](../../../relational-databases/system-stored-procedures/sp-deletetracertokenhistory-transact-sql.md)를 실행합니다.  
+2.  게시 데이터베이스의 게시자에서 **\@publication** 을 지정한 다음 `@tracer_id`에 2단계에서 얻은 삭제할 추적 프로그램의 ID를 지정하고 [sp_deletetracertokenhistory&#40;Transact-SQL&#41;](../../../relational-databases/system-stored-procedures/sp-deletetracertokenhistory-transact-sql.md)를 실행합니다.  
   
 ###  <a name="example-transact-sql"></a><a name="TsqlExample"></a> 예(Transact-SQL)  
  이 예제에서는 추적 프로그램 토큰 레코드를 게시하고 게시된 추적 프로그램 토큰의 반환된 ID를 사용하여 대기 시간 정보를 봅니다.  
@@ -145,7 +145,7 @@ ms.locfileid: "86918729"
   
 3.  게시에 대해 <xref:Microsoft.SqlServer.Replication.Publication.Name%2A> 및 <xref:Microsoft.SqlServer.Replication.Publication.DatabaseName%2A> 속성을 설정하고 <xref:Microsoft.SqlServer.Replication.ReplicationObject.ConnectionContext%2A> 속성을 1단계에서 만든 연결로 설정합니다.  
   
-4.  <xref:Microsoft.SqlServer.Replication.ReplicationObject.LoadProperties%2A> 메서드를 호출하여 개체 속성을 가져옵니다. 이 메서드가 **false**를 반환하는 경우 3단계에서 게시 속성이 올바르게 정의되지 않았거나 게시가 없습니다.  
+4.  <xref:Microsoft.SqlServer.Replication.ReplicationObject.LoadProperties%2A> 메서드를 호출하여 개체 속성을 가져옵니다. 이 메서드가 **false** 를 반환하는 경우 3단계에서 게시 속성이 올바르게 정의되지 않았거나 게시가 없습니다.  
   
 5.  <xref:Microsoft.SqlServer.Replication.TransPublication.PostTracerToken%2A> 메서드를 호출합니다. 이 메서드는 게시의 트랜잭션 로그에 추적 프로그램 토큰을 삽입합니다.  
   
@@ -157,7 +157,7 @@ ms.locfileid: "86918729"
   
 3.  <xref:Microsoft.SqlServer.Replication.PublicationMonitor.Name%2A>, <xref:Microsoft.SqlServer.Replication.PublicationMonitor.DistributionDBName%2A>, <xref:Microsoft.SqlServer.Replication.PublicationMonitor.PublisherName%2A>및 <xref:Microsoft.SqlServer.Replication.PublicationMonitor.PublicationDBName%2A> 속성을 설정하고 <xref:Microsoft.SqlServer.Replication.ReplicationObject.ConnectionContext%2A> 속성을 1단계에서 만든 연결로 설정합니다.  
   
-4.  <xref:Microsoft.SqlServer.Replication.ReplicationObject.LoadProperties%2A> 메서드를 호출하여 개체 속성을 가져옵니다. 이 메서드가 **false**를 반환하는 경우 3단계에서 게시 모니터 속성이 올바르게 정의되지 않았거나 해당 게시가 없는 것입니다.  
+4.  <xref:Microsoft.SqlServer.Replication.ReplicationObject.LoadProperties%2A> 메서드를 호출하여 개체 속성을 가져옵니다. 이 메서드가 **false** 를 반환하는 경우 3단계에서 게시 모니터 속성이 올바르게 정의되지 않았거나 해당 게시가 없는 것입니다.  
   
 5.  <xref:Microsoft.SqlServer.Replication.PublicationMonitor.EnumTracerTokens%2A> 메서드를 호출합니다. 반환된 <xref:System.Collections.ArrayList> 개체를 <xref:Microsoft.SqlServer.Replication.TracerToken> 개체의 배열로 캐스팅합니다.  
   
@@ -171,7 +171,7 @@ ms.locfileid: "86918729"
   
 3.  <xref:Microsoft.SqlServer.Replication.PublicationMonitor.Name%2A>, <xref:Microsoft.SqlServer.Replication.PublicationMonitor.DistributionDBName%2A>, <xref:Microsoft.SqlServer.Replication.PublicationMonitor.PublisherName%2A>및 <xref:Microsoft.SqlServer.Replication.PublicationMonitor.PublicationDBName%2A> 속성을 설정하고 <xref:Microsoft.SqlServer.Replication.ReplicationObject.ConnectionContext%2A> 속성을 1단계에서 만든 연결로 설정합니다.  
   
-4.  <xref:Microsoft.SqlServer.Replication.ReplicationObject.LoadProperties%2A> 메서드를 호출하여 개체 속성을 가져옵니다. 이 메서드가 **false**를 반환하는 경우 3단계에서 게시 모니터 속성이 올바르게 정의되지 않았거나 해당 게시가 없는 것입니다.  
+4.  <xref:Microsoft.SqlServer.Replication.ReplicationObject.LoadProperties%2A> 메서드를 호출하여 개체 속성을 가져옵니다. 이 메서드가 **false** 를 반환하는 경우 3단계에서 게시 모니터 속성이 올바르게 정의되지 않았거나 해당 게시가 없는 것입니다.  
   
 5.  <xref:Microsoft.SqlServer.Replication.PublicationMonitor.EnumTracerTokens%2A> 메서드를 호출합니다. 반환된 <xref:System.Collections.ArrayList> 개체를 <xref:Microsoft.SqlServer.Replication.TracerToken> 개체의 배열로 캐스팅합니다.  
   

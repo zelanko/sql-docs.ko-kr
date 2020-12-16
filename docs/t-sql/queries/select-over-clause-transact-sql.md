@@ -24,13 +24,13 @@ helpviewer_keywords:
 ms.assetid: ddcef3a6-0341-43e0-ae73-630484b7b398
 author: VanMSFT
 ms.author: vanto
-monikerRange: '>=aps-pdw-2016||=azuresqldb-current||=azure-sqldw-latest||>=sql-server-2016||=sqlallproducts-allversions||>=sql-server-linux-2017||=azuresqldb-mi-current'
-ms.openlocfilehash: b0ab0d7c79568ad1343f08a367b6ee7dcf293c82
-ms.sourcegitcommit: 8f062015c2a033f5a0d805ee4adabbe15e7c8f94
+monikerRange: '>=aps-pdw-2016||=azuresqldb-current||=azure-sqldw-latest||>=sql-server-2016||>=sql-server-linux-2017||=azuresqldb-mi-current'
+ms.openlocfilehash: c07ce738ea3364cba27cd2872894ff4701f41dfe
+ms.sourcegitcommit: 1a544cf4dd2720b124c3697d1e62ae7741db757c
 ms.translationtype: HT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 09/25/2020
-ms.locfileid: "91226927"
+ms.lasthandoff: 12/14/2020
+ms.locfileid: "97476684"
 ---
 # <a name="select---over-clause-transact-sql"></a>SELECT - OVER 절(Transact-SQL)
 [!INCLUDE [sql-asdb-asdbmi-asa-pdw](../../includes/applies-to-version/sql-asdb-asdbmi-asa-pdw.md)]
@@ -114,16 +114,16 @@ OVER ( [ PARTITION BY value_expression ] [ order_by_clause ] )
  쿼리 결과 집합을 파티션으로 분할합니다. 창 함수는 각 파티션에 별도로 적용되므로 각 파티션에 대해 계산이 다시 시작됩니다.  
   
  *value_expression*  
- 행 집합을 분할하는 데 사용하는 열을 지정합니다. *value_expression*은 FROM 절을 통해 사용 가능한 열만 참조할 수 있습니다. *value_expression*은 SELECT 목록의 식이나 별칭은 참조할 수 없습니다. *value_expression*은 열 식, 스칼라 하위 쿼리, 스칼라 함수 또는 사용자 정의 변수일 수 있습니다.  
+ 행 집합을 분할하는 데 사용하는 열을 지정합니다. *value_expression* 은 FROM 절을 통해 사용 가능한 열만 참조할 수 있습니다. *value_expression* 은 SELECT 목록의 식이나 별칭은 참조할 수 없습니다. *value_expression* 은 열 식, 스칼라 하위 쿼리, 스칼라 함수 또는 사용자 정의 변수일 수 있습니다.  
   
  \<ORDER BY clause>  
  결과 집합의 각 파티션 내에서 행의 논리적 순서를 정의합니다. 즉, 창 functioncalculation이 수행되는 논리적 순서를 지정합니다.  
   
  *order_by_expression*  
- 정렬할 열 또는 식을 지정합니다. *order_by_expression*은 FROM 절을 통해 사용 가능한 열만 참조할 수 있습니다. 열 이름이나 별칭을 나타내기 위해 정수를 지정할 수는 없습니다.  
+ 정렬할 열 또는 식을 지정합니다. *order_by_expression* 은 FROM 절을 통해 사용 가능한 열만 참조할 수 있습니다. 열 이름이나 별칭을 나타내기 위해 정수를 지정할 수는 없습니다.  
   
  COLLATE *collation_name*  
- ORDER BY 작업이 *collation_name*에서 지정된 데이터 정렬에 따라 수행되도록 지정합니다. *collation_name*으로는 Windows 데이터 정렬 이름 또는 SQL 데이터 정렬 이름을 사용할 수 있습니다. 자세한 내용은 [Collation and Unicode Support](../../relational-databases/collations/collation-and-unicode-support.md)을 참조하세요. COLLATE는 **char**, **varchar**, **nchar** 및 **nvarchar** 형식의 열에만 적용할 수 있습니다.  
+ ORDER BY 작업이 *collation_name* 에서 지정된 데이터 정렬에 따라 수행되도록 지정합니다. *collation_name* 으로는 Windows 데이터 정렬 이름 또는 SQL 데이터 정렬 이름을 사용할 수 있습니다. 자세한 내용은 [Collation and Unicode Support](../../relational-databases/collations/collation-and-unicode-support.md)을 참조하세요. COLLATE는 **char**, **varchar**, **nchar** 및 **nvarchar** 형식의 열에만 적용할 수 있습니다.  
   
  **ASC** | DESC  
  지정된 열의 값이 오름차순으로 정렬되는지 내림차순으로 정렬되는지를 지정합니다. ASC가 기본 정렬 순서입니다. Null 값은 가능한 가장 작은 값으로 취급됩니다.  

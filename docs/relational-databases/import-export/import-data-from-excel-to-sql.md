@@ -10,13 +10,13 @@ ms.technology: data-movement
 ms.topic: conceptual
 author: MashaMSFT
 ms.author: mathoma
-monikerRange: =azuresqldb-current||>=sql-server-2016||=sqlallproducts-allversions||>=sql-server-linux-2017||=azuresqldb-mi-current
-ms.openlocfilehash: 6b299248e1bd953109d72e4536a4d520ccd942d7
-ms.sourcegitcommit: 4d370399f6f142e25075b3714e5c2ce056b1bfd0
+monikerRange: =azuresqldb-current||>=sql-server-2016||>=sql-server-linux-2017||=azuresqldb-mi-current
+ms.openlocfilehash: 4028d7fb2054a5f60d978fc0f3bdd6acbf293c37
+ms.sourcegitcommit: 1a544cf4dd2720b124c3697d1e62ae7741db757c
 ms.translationtype: HT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 10/09/2020
-ms.locfileid: "91868760"
+ms.lasthandoff: 12/14/2020
+ms.locfileid: "97473964"
 ---
 # <a name="import-data-from-excel-to-sql-server-or-azure-sql-database"></a>Excel에서 SQL Server 또는 Azure SQL Database로 데이터 가져오기
 
@@ -52,9 +52,9 @@ SQL Server 가져오기 및 내보내기 마법사의 페이지를 단계별로 
 
 1. [!INCLUDE[ssManStudioFull](../../includes/ssmanstudiofull-md.md)]에서 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] [!INCLUDE[ssDE](../../includes/ssde-md.md)] 인스턴스에 연결합니다.
 
-2. **데이터베이스**를 확장합니다.
+2. **데이터베이스** 를 확장합니다.
 3. 데이터베이스를 마우스 오른쪽 단추로 클릭합니다.
-4. **태스크**를 가리킵니다.
+4. **태스크** 를 가리킵니다.
 5. 다음 옵션 중 하나를 클릭합니다.
 
   - **데이터 가져오기**
@@ -91,7 +91,7 @@ SSIS 패키지를 작성하는 방법을 알아보려면 [ETL 패키지를 만�
 
 ### <a name="distributed-queries"></a>분산 쿼리
 
-Transact-SQL `OPENROWSET` 또는 `OPENDATASOURCE` 함수를 사용하여 Excel 파일에서 SQL Server로 데이터를 직접 가져옵니다. 이 사용법을 *분산 쿼리*라고 합니다.
+Transact-SQL `OPENROWSET` 또는 `OPENDATASOURCE` 함수를 사용하여 Excel 파일에서 SQL Server로 데이터를 직접 가져옵니다. 이 사용법을 *분산 쿼리* 라고 합니다.
 
 > [!IMPORTANT]
 > Azure SQL Database에서는 Excel에서 직접 가져올 수 없습니다. 먼저 데이터를 테스트(CSV) 파일로 내보내야 합니다. 예제는 [예제](import-bulk-data-by-using-bulk-insert-or-openrowset-bulk-sql-server.md)를 참조하세요.
@@ -129,7 +129,7 @@ FROM OPENDATASOURCE('Microsoft.ACE.OLEDB.12.0',
 GO
 ```
 
-가져온 데이터를 새 테이블을 만들지 않고 *기존* 테이블에 *추가*하려면 앞의 예제에서 사용된 `SELECT ... INTO ... FROM ...` 구문 대신에 `INSERT INTO ... SELECT ... FROM ...` 구문을 사용합니다.
+가져온 데이터를 새 테이블을 만들지 않고 *기존* 테이블에 *추가* 하려면 앞의 예제에서 사용된 `SELECT ... INTO ... FROM ...` 구문 대신에 `INSERT INTO ... SELECT ... FROM ...` 구문을 사용합니다.
 
 Excel 데이터를 가져오지 않고 쿼리를 사용하려면 표준 `SELECT ... FROM ...` 구문을 사용하면 됩니다.
 
@@ -188,7 +188,7 @@ EXEC @RC = [master].[dbo].[sp_addlinkedserver] @server, @srvproduct, @provider,
 
 이 페이지에 설명된 나머지 방법(BULK INSERT 문, BCP 도구 또는 Azure Data Factory 등)을 사용하려면 먼저 Excel 데이터를 텍스트 파일로 내보내야 합니다.
 
-Excel에서 **파일 | 다른 이름으로 저장**을 선택한 다음, **텍스트(탭으로 구분)(\*.txt)** 또는 **CSV(쉼표로 구분)(\*.csv)** 를 대상 파일 형식으로 선택합니다.
+Excel에서 **파일 | 다른 이름으로 저장** 을 선택한 다음, **텍스트(탭으로 구분)(\*.txt)** 또는 **CSV(쉼표로 구분)(\*.csv)** 를 대상 파일 형식으로 선택합니다.
 
 통합 문서에서 여러 워크시트를 가져오려는 경우 각 시트를 선택한 다음, 이 프로시저를 반복합니다. **다른 이름으로 저장** 명령은 활성 시트만을 내보냅니다.
 

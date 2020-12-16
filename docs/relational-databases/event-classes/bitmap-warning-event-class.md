@@ -12,13 +12,13 @@ helpviewer_keywords:
 ms.assetid: 5bf9b4e3-0eba-4e67-8ba9-30ca4b48e1d4
 author: stevestein
 ms.author: sstein
-monikerRange: =azuresqldb-current||>=sql-server-2016||=sqlallproducts-allversions||>=sql-server-linux-2017||=azuresqldb-mi-current
-ms.openlocfilehash: 7efa6d8eb2d8927ef4e46f34dc2e968d687c57e7
-ms.sourcegitcommit: e700497f962e4c2274df16d9e651059b42ff1a10
+monikerRange: =azuresqldb-current||>=sql-server-2016||>=sql-server-linux-2017||=azuresqldb-mi-current
+ms.openlocfilehash: 4e53b9636295185b95281aacdfc417e597f86a00
+ms.sourcegitcommit: 1a544cf4dd2720b124c3697d1e62ae7741db757c
 ms.translationtype: HT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 08/17/2020
-ms.locfileid: "88410439"
+ms.lasthandoff: 12/14/2020
+ms.locfileid: "97474034"
 ---
 # <a name="bitmap-warning-event-class"></a>Bitmap Warning 이벤트 클래스
 [!INCLUDE [SQL Server - ASDB](../../includes/applies-to-version/sql-asdb.md)]
@@ -37,7 +37,7 @@ ms.locfileid: "88410439"
 |**EventSubClass**|**int**|이벤트 하위 클래스의 유형입니다. 0 = 비트맵 필터가 해제되었습니다.|21|예|  
 |**HostName**|**nvarchar**|클라이언트를 실행 중인 컴퓨터 이름입니다. 클라이언트가 호스트 이름을 제공하면 이 데이터 열이 채워집니다. 호스트 이름을 확인하려면 HOST_NAME 함수를 사용합니다.|8|예|  
 |**IsSystem**|**int**|이벤트가 시스템 프로세스에서 발생했는지 아니면 사용자 프로세스에서 발생했는지를 나타냅니다. 1 = 시스템, 0 = 사용자|60|예|  
-|**LoginName**|**nvarchar**|사용자 로그인 이름이며 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] DOMAIN\username *형식의 Windows 로그인 자격 증명 또는*보안 로그인입니다.|11|예|  
+|**LoginName**|**nvarchar**|사용자 로그인 이름이며 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] DOMAIN\username *형식의 Windows 로그인 자격 증명 또는* 보안 로그인입니다.|11|예|  
 |**LoginSid**|**image**|로그인한 사용자의 SID(보안 ID)입니다. 이 정보는 **sys.server_principals** 카탈로그 뷰에 있습니다. 각 SID는 서버의 각 로그인마다 고유합니다.|41|예|  
 |**NTDomainName**|**nvarchar**|사용자가 속한 Windows 도메인입니다.|7|예|  
 |**NTUserName**|**nvarchar**|Windows 사용자 이름입니다.|6|예|  

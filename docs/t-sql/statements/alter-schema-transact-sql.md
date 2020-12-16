@@ -22,13 +22,13 @@ helpviewer_keywords:
 ms.assetid: 0a760138-460e-410a-a3c1-d60af03bf2ed
 author: markingmyname
 ms.author: maghan
-monikerRange: '>=aps-pdw-2016||=azuresqldb-current||=azure-sqldw-latest||>=sql-server-2016||=sqlallproducts-allversions||>=sql-server-linux-2017||=azuresqldb-mi-current'
-ms.openlocfilehash: 8c5f444c3866c9660cea1d1396357e276d434a84
-ms.sourcegitcommit: 3efd8bbf91f4f78dce3a4ac03348037d8c720e6a
+monikerRange: '>=aps-pdw-2016||=azuresqldb-current||=azure-sqldw-latest||>=sql-server-2016||>=sql-server-linux-2017||=azuresqldb-mi-current'
+ms.openlocfilehash: 02ba4172348ec740986e0d09c2d0296ce399160d
+ms.sourcegitcommit: 1a544cf4dd2720b124c3697d1e62ae7741db757c
 ms.translationtype: HT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 09/23/2020
-ms.locfileid: "91024437"
+ms.lasthandoff: 12/14/2020
+ms.locfileid: "97474174"
 ---
 # <a name="alter-schema-transact-sql"></a>ALTER SCHEMA(Transact-SQL)
 [!INCLUDE [sql-asdb-asdbmi-asa-pdw](../../includes/applies-to-version/sql-asdb-asdbmi-asa-pdw.md)]
@@ -78,7 +78,7 @@ ALTER SCHEMA schema_name
   
  ALTER SCHEMA는 같은 데이터베이스에서 스키마 간에 보안 개체를 이동할 때만 사용할 수 있습니다. 스키마 내에서 보안 개체를 변경하거나 삭제하려면 해당 보안 개체와 관련된 ALTER 또는 DROP 문을 사용합니다.  
   
- 한 부분으로 구성된 이름이 *securable_name*에 사용되면 현재 적용 중인 이름 확인 규칙이 보안 개체를 찾는 데 사용됩니다.  
+ 한 부분으로 구성된 이름이 *securable_name* 에 사용되면 현재 적용 중인 이름 확인 규칙이 보안 개체를 찾는 데 사용됩니다.  
   
  보안 개체를 새 스키마로 이동하면 해당 보안 개체와 연결된 사용 권한이 모두 삭제됩니다. 보안 개체 소유자가 명시적으로 설정된 경우 소유자는 그대로 유지됩니다. 보안 개체 소유자가 SCHEMA OWNER로 설정된 경우에는 소유자가 SCHEMA OWNER로 유지되지만 이동 후 SCHEMA OWNER는 새 스키마의 소유자로 확인됩니다. 새 소유자의 principal_id는 NULL이 됩니다.  
   
@@ -86,7 +86,7 @@ ALTER SCHEMA schema_name
   
  테이블이나 동의어와 같은 개체를 이동할 경우 이 개체를 참조하는 개체는 자동으로 업데이트되지 않습니다. 이동된 개체를 참조하는 개체는 수동으로 수정해야 합니다. 예를 들어 테이블 이름을 바꿨고 해당 테이블이 트리거에서 참조되는 경우 트리거를 수정하여 새로운 스키마 이름을 적용해야 합니다. [sys.sql_expression_dependencies](../../relational-databases/system-catalog-views/sys-sql-expression-dependencies-transact-sql.md)를 사용하여 이 개체에 종속된 개체를 나열한 다음, 개체를 이동할 수 있습니다.  
 
- [!INCLUDE[ssManStudioFull](../../includes/ssmanstudiofull-md.md)]를 사용하여 테이블의 스키마를 변경하려면 개체 탐색기에서 테이블이나 뷰를 마우스 오른쪽 단추로 클릭한 다음, **디자인**을 클릭합니다. **F4** 키를 눌러 속성 창을 엽니다. **스키마** 상자에서 새 스키마를 선택합니다.  
+ [!INCLUDE[ssManStudioFull](../../includes/ssmanstudiofull-md.md)]를 사용하여 테이블의 스키마를 변경하려면 개체 탐색기에서 테이블이나 뷰를 마우스 오른쪽 단추로 클릭한 다음, **디자인** 을 클릭합니다. **F4** 키를 눌러 속성 창을 엽니다. **스키마** 상자에서 새 스키마를 선택합니다.  
  
  ALTER SCHEMA는 스키마 수준 잠금을 사용합니다.
   

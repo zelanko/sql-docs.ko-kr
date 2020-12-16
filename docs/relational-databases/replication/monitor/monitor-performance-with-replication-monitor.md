@@ -20,13 +20,13 @@ helpviewer_keywords:
 ms.assetid: f212397d-1bfd-496b-a246-668952891d09
 author: MashaMSFT
 ms.author: mathoma
-monikerRange: =azuresqldb-mi-current||>=sql-server-2016||=sqlallproducts-allversions
-ms.openlocfilehash: a881bfd928d8a8d1c84d85ea8d226bc2751126a1
-ms.sourcegitcommit: e700497f962e4c2274df16d9e651059b42ff1a10
+monikerRange: =azuresqldb-mi-current||>=sql-server-2016
+ms.openlocfilehash: 909670345c94444ba4883422f5d02f13757106c5
+ms.sourcegitcommit: 1a544cf4dd2720b124c3697d1e62ae7741db757c
 ms.translationtype: HT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 08/17/2020
-ms.locfileid: "88498747"
+ms.lasthandoff: 12/14/2020
+ms.locfileid: "97477864"
 ---
 # <a name="monitor-performance-with-replication-monitor"></a>복제 모니터로 성능 모니터링
 [!INCLUDE[sql-asdbmi](../../../includes/applies-to-version/sql-asdbmi.md)]
@@ -47,15 +47,15 @@ ms.locfileid: "88498747"
   
 -   지정한 대기 시간(게시자에서 트랜잭션이 커밋되는 시점과 구독자에서 해당 트랜잭션이 커밋되는 시점 간의 시간 간격)이 초과된 경우  
   
-     이 조건은 트랜잭션 복제에 적용됩니다. 지정한 임계값에 도달하거나 임계값을 초과하면 상태가 **성능 심각**으로 표시됩니다.  
+     이 조건은 트랜잭션 복제에 적용됩니다. 지정한 임계값에 도달하거나 임계값을 초과하면 상태가 **성능 심각** 으로 표시됩니다.  
   
 -   지정된 동기화 시간이 초과된 경우  
   
-     이 조건은 병합 복제에 적용됩니다. 지정한 임계값에 도달하거나 임계값을 초과하면 상태가 **장기 실행 트랜잭션 병합**으로 표시됩니다. 전화 접속과 LAN 연결에 대해 서로 다른 임계값을 지정할 수 있습니다.  
+     이 조건은 병합 복제에 적용됩니다. 지정한 임계값에 도달하거나 임계값을 초과하면 상태가 **장기 실행 트랜잭션 병합** 으로 표시됩니다. 전화 접속과 LAN 연결에 대해 서로 다른 임계값을 지정할 수 있습니다.  
   
 -   지정된 시간 내에 지정된 수의 행을 처리하지 못한 경우  
   
-     이 조건은 병합 복제에 적용됩니다. 지정한 임계값에 도달하거나 임계값을 초과하면 상태가 **성능 심각**으로 표시됩니다. 전화 접속과 LAN 연결에 대해 서로 다른 임계값을 지정할 수 있습니다.  
+     이 조건은 병합 복제에 적용됩니다. 지정한 임계값에 도달하거나 임계값을 초과하면 상태가 **성능 심각** 으로 표시됩니다. 전화 접속과 LAN 연결에 대해 서로 다른 임계값을 지정할 수 있습니다.  
   
  자세한 내용은 [Set Thresholds and Warnings in Replication Monitor](../../../relational-databases/replication/monitor/set-thresholds-and-warnings-in-replication-monitor.md)를 참조하세요.  
   

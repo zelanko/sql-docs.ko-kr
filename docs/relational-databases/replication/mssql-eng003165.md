@@ -13,13 +13,13 @@ helpviewer_keywords:
 ms.assetid: 707d33dd-644e-4cc9-ac51-dddd49031530
 author: MashaMSFT
 ms.author: mathoma
-monikerRange: =azuresqldb-mi-current||>=sql-server-2016||=sqlallproducts-allversions
-ms.openlocfilehash: e0ac70ecaddb16dd22f1e97ed56ff7ca47488019
-ms.sourcegitcommit: e700497f962e4c2274df16d9e651059b42ff1a10
+monikerRange: =azuresqldb-mi-current||>=sql-server-2016
+ms.openlocfilehash: 778661a1ff29f8813a000606d4d49be3c7105643
+ms.sourcegitcommit: 1a544cf4dd2720b124c3697d1e62ae7741db757c
 ms.translationtype: HT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 08/17/2020
-ms.locfileid: "88379849"
+ms.lasthandoff: 12/14/2020
+ms.locfileid: "97475834"
 ---
 # <a name="mssql_eng003165"></a>MSSQL_ENG003165
 [!INCLUDE [SQL Server SQL MI](../../includes/applies-to-version/sql-asdbmi.md)]
@@ -42,7 +42,7 @@ ms.locfileid: "88379849"
   
 -   백업을 다른 데이터베이스나 서버로 복원하는 경우 이 오류는 복제 설정을 제대로 제거하지 못했음을 나타냅니다. 데이터베이스나 서버가 다른 경우에는 기본적으로 복제 설정이 제거됩니다.  
   
- 이 오류의 원인은 복원된 데이터베이스와 복제 메타데이터 **msdb**, **master**또는 배포 데이터베이스가 포함된 하나 이상의 시스템 데이터베이스의 상태가 일치하지 않기 때문일 수 있습니다.  
+ 이 오류의 원인은 복원된 데이터베이스와 복제 메타데이터 **msdb**, **master** 또는 배포 데이터베이스가 포함된 하나 이상의 시스템 데이터베이스의 상태가 일치하지 않기 때문일 수 있습니다.  
   
 ## <a name="user-action"></a>사용자 동작  
  이 문제를 해결하려면:  

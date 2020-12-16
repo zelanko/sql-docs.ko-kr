@@ -23,13 +23,13 @@ helpviewer_keywords:
 ms.assetid: 7adf2ad7-015d-4cbe-9e29-abaefd779008
 author: VanMSFT
 ms.author: vanto
-monikerRange: '>=aps-pdw-2016||>=sql-server-2016||=sqlallproducts-allversions||>=sql-server-linux-2017||=azuresqldb-mi-current'
-ms.openlocfilehash: 976bfdb47aae7037e3a7636299ff98e4a1424944
-ms.sourcegitcommit: a5398f107599102af7c8cda815d8e5e9a367ce7e
+monikerRange: '>=aps-pdw-2016||>=sql-server-2016||>=sql-server-linux-2017||=azuresqldb-mi-current'
+ms.openlocfilehash: 60a5fb875bf2ae69a4f87c543476b91844738276
+ms.sourcegitcommit: 1a544cf4dd2720b124c3697d1e62ae7741db757c
 ms.translationtype: HT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 10/13/2020
-ms.locfileid: "92004274"
+ms.lasthandoff: 12/14/2020
+ms.locfileid: "97475584"
 ---
 # <a name="server-level-roles"></a>서버 수준 역할
 [!INCLUDE[appliesto-ss-xxxx-xxxx-pdw-md](../../../includes/appliesto-ss-xxxx-xxxx-pdw-md.md)]
@@ -57,17 +57,17 @@ ms.locfileid: "92004274"
 |**bulkadmin**|**bulkadmin** 고정 서버 역할의 멤버는 `BULK INSERT` 문을 실행할 수 있습니다.|  
 |**diskadmin**|**diskadmin** 고정 서버 역할은 디스크 파일을 관리하는 데 사용됩니다.|  
 |**dbcreator**|**dbcreator** 고정 서버 역할의 멤버는 데이터베이스를 생성, 변경, 삭제, 복원할 수 있습니다.|  
-|**public**|모든 [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] 로그인은 **public** 서버 역할에 속합니다. 서버 보안 주체에게 보안 개체에 대한 특정 사용 권한이 부여되지 않았거나 거부된 경우 사용자는 해당 개체에 대해 public으로 부여된 사용 권한을 상속 받습니다. 모든 사용자가 개체를 사용할 수 있도록 하려는 경우에만 개체에 public 권한을 할당해야 합니다. public의 멤버 자격은 변경할 수 없습니다.<br /><br /> **참고:** **public**은 다른 역할과 다른 방식으로 구현되며 public 고정 서버 역할에서 사용 권한이 부여, 거부 또는 취소될 수 있습니다.|  
+|**public**|모든 [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] 로그인은 **public** 서버 역할에 속합니다. 서버 보안 주체에게 보안 개체에 대한 특정 사용 권한이 부여되지 않았거나 거부된 경우 사용자는 해당 개체에 대해 public으로 부여된 사용 권한을 상속 받습니다. 모든 사용자가 개체를 사용할 수 있도록 하려는 경우에만 개체에 public 권한을 할당해야 합니다. public의 멤버 자격은 변경할 수 없습니다.<br /><br /> **참고:** **public** 은 다른 역할과 다른 방식으로 구현되며 public 고정 서버 역할에서 사용 권한이 부여, 거부 또는 취소될 수 있습니다.|  
   
 > [!IMPORTANT] 
-> 다음 서버 역할에서 제공하는 대부분의 권한은 Synapse SQL - **processadmin**, **serveradmin**, **setupadmin** 및 **diskadmin**에는 적용되지 않습니다.
+> 다음 서버 역할에서 제공하는 대부분의 권한은 Synapse SQL - **processadmin**, **serveradmin**, **setupadmin** 및 **diskadmin** 에는 적용되지 않습니다.
   
 ## <a name="permissions-of-fixed-server-roles"></a>고정 서버 역할에 대한 사용 권한  
  각 고정 서버 역할에는 관련된 특정 사용 권한이 있습니다. 다음 그림에서는 서버 역할에 할당된 사용 권한을 보여 줍니다.   
 ![fixed_server_role_permissions](../../../relational-databases/security/authentication-access/media/permissions-of-server-roles.png)   
   
 > [!IMPORTANT]  
->  **CONTROL SERVER** 권한은 **sysadmin** 고정 서버 역할과 유사하지만 동일하지는 않습니다. 권한이 역할 멤버 자격을 의미하지 않으며 역할 멤버 자격이 있다고 해서 사용 권한이 부여되는 것도 아닙니다. (예: **CONTROL SERVER**가 **sysadmin** 고정 서버 역할의 멤버 자격을 의미하지는 않습니다. 그러나 때로 역할과 해당 권한 간에 가장하는 것이 가능할 수 있습니다. 대부분의 **DBCC** 명령 및 많은 시스템 절차를 수행하려면 **sysadmin** 고정 서버 역할의 멤버 자격이 필요합니다. **sysadmin** 멤버 자격이 필요한 171개의 시스템 저장 프로시저 목록의 경우 Andreas Wolter가 작성한 [CONTROL SERVER vs. sysadmin/sa: permissions, system procedures, DBCC, automatic schema creation and privilege escalation - caveats](http://andreas-wolter.com/en/control-server-vs-sysadmin-sa/)(제어 서버 및 sysadmin/sa: 사용 권한, 시스템 프로시저, DBCC, 자동 스키마 생성 및 권한 에스컬레이션 - 주의할 사항) 블로그 게시물을 참조하세요.  
+>  **CONTROL SERVER** 권한은 **sysadmin** 고정 서버 역할과 유사하지만 동일하지는 않습니다. 권한이 역할 멤버 자격을 의미하지 않으며 역할 멤버 자격이 있다고 해서 사용 권한이 부여되는 것도 아닙니다. (예: **CONTROL SERVER** 가 **sysadmin** 고정 서버 역할의 멤버 자격을 의미하지는 않습니다. 그러나 때로 역할과 해당 권한 간에 가장하는 것이 가능할 수 있습니다. 대부분의 **DBCC** 명령 및 많은 시스템 절차를 수행하려면 **sysadmin** 고정 서버 역할의 멤버 자격이 필요합니다. **sysadmin** 멤버 자격이 필요한 171개의 시스템 저장 프로시저 목록의 경우 Andreas Wolter가 작성한 [CONTROL SERVER vs. sysadmin/sa: permissions, system procedures, DBCC, automatic schema creation and privilege escalation - caveats](http://andreas-wolter.com/en/control-server-vs-sysadmin-sa/)(제어 서버 및 sysadmin/sa: 사용 권한, 시스템 프로시저, DBCC, 자동 스키마 생성 및 권한 에스컬레이션 - 주의할 사항) 블로그 게시물을 참조하세요.  
   
 ## <a name="server-level-permissions"></a>서버 수준 사용 권한  
  사용자 정의 서버 역할에는 서버 수준 사용 권한만 추가할 수 있습니다. 서버 수준 사용 권한을 나열하려면 다음 문을 실행하세요. 서버 수준 사용 권한은 다음과 같습니다.  

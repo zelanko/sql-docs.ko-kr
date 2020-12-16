@@ -14,14 +14,14 @@ helpviewer_keywords:
 ms.assetid: b7b97d68-4336-4091-aee4-1941fab568e3
 author: MashaMSFT
 ms.author: mathoma
-monikerRange: '>=aps-pdw-2016||=azuresqldb-current||=azure-sqldw-latest||>=sql-server-2016||=sqlallproducts-allversions||>=sql-server-linux-2017||=azuresqldb-mi-current'
+monikerRange: '>=aps-pdw-2016||=azuresqldb-current||=azure-sqldw-latest||>=sql-server-2016||>=sql-server-linux-2017||=azuresqldb-mi-current'
 ms.custom: seo-lt-2019
-ms.openlocfilehash: f441380805e443cc13617a5477d3083ee1dc62d5
-ms.sourcegitcommit: f3321ed29d6d8725ba6378d207277a57cb5fe8c2
+ms.openlocfilehash: 8584c274304757724d0eceb88a91257112ef694a
+ms.sourcegitcommit: 1a544cf4dd2720b124c3697d1e62ae7741db757c
 ms.translationtype: HT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 07/06/2020
-ms.locfileid: "86006253"
+ms.lasthandoff: 12/14/2020
+ms.locfileid: "97474004"
 ---
 # <a name="format-files-to-import-or-export-data-sql-server"></a>데이터를 가져오거나 내보내기 위한 서식 파일(SQL Server)
 
@@ -106,7 +106,7 @@ bcp AdventureWorks.HumanResources.myTeam format nul -f myTeam.Xml -x -n -T
 - 데이터 파일의 열 간에 종결 문자나 접두사 길이가 다른 경우
 
 > [!NOTE]
-> 서식 파일이 없는 경우 **bcp** 명령이 지정한 데이터 형식 스위치( **-n**, **-c**, **-w**또는 **-N**) 또는 BULK INSERT 연산에 지정된 DATAFILETYPE 옵션의 데이터 형식을 데이터 파일의 필드를 해석하는 기본 방법으로 사용합니다.
+> 서식 파일이 없는 경우 **bcp** 명령이 지정한 데이터 형식 스위치( **-n**, **-c**, **-w** 또는 **-N**) 또는 BULK INSERT 연산에 지정된 DATAFILETYPE 옵션의 데이터 형식을 데이터 파일의 필드를 해석하는 기본 방법으로 사용합니다.
 
 ## <a name="related-tasks"></a><a name="RelatedTasks"></a> 관련 작업
 

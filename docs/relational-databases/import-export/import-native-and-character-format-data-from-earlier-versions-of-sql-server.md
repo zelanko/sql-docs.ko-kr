@@ -15,14 +15,14 @@ helpviewer_keywords:
 ms.assetid: e644696f-9017-428e-a5b3-d445d1c630b3
 author: MashaMSFT
 ms.author: mathoma
-monikerRange: '>=aps-pdw-2016||=azuresqldb-current||=azure-sqldw-latest||>=sql-server-2016||=sqlallproducts-allversions||>=sql-server-linux-2017||=azuresqldb-mi-current'
+monikerRange: '>=aps-pdw-2016||=azuresqldb-current||=azure-sqldw-latest||>=sql-server-2016||>=sql-server-linux-2017||=azuresqldb-mi-current'
 ms.custom: seo-lt-2019
-ms.openlocfilehash: a433735d5989a9708c9ca59ba92051634e1c2eed
-ms.sourcegitcommit: 4d370399f6f142e25075b3714e5c2ce056b1bfd0
+ms.openlocfilehash: e89b0fb2445901ec981a5bdfa238cbd31704a039
+ms.sourcegitcommit: 1a544cf4dd2720b124c3697d1e62ae7741db757c
 ms.translationtype: HT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 10/09/2020
-ms.locfileid: "91868739"
+ms.lasthandoff: 12/14/2020
+ms.locfileid: "97473954"
 ---
 # <a name="import-native-and-character-format-data-from-earlier-versions-of-sql-server"></a>SQL Server 이전 버전으로부터 기본 및 문자 형식 데이터 가져오기
 [!INCLUDE[SQL Server Azure SQL Database Synapse Analytics PDW ](../../includes/applies-to-version/sql-asdb-asdbmi-asa-pdw.md)]
@@ -40,7 +40,7 @@ ms.locfileid: "91868739"
 ## <a name="interpretation-of-data-types"></a>데이터 형식 해석  
  [!INCLUDE[ssVersion2005](../../includes/ssversion2005-md.md)] 이후 버전에서는 몇 가지 새로운 형식을 지원합니다. 새 데이터 형식을 이전 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 버전으로 가져오려면 이전 **bcp** 클라이언트에서 읽을 수 있는 형식으로 저장되어야 합니다. 다음 표에서는 새 데이터 형식을 이전 버전의 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]와 호환되도록 변환하는 방법을 요약합니다.  
   
-|SQL Server 2005의 새로운 데이터 형식|6*x*버전의 호환 데이터 형식|70 버전의 호환 데이터 형식|80 버전의 호환 데이터 형식|  
+|SQL Server 2005의 새로운 데이터 형식|6 *x* 버전의 호환 데이터 형식|70 버전의 호환 데이터 형식|80 버전의 호환 데이터 형식|  
 |---------------------------------------|-------------------------------------------|-----------------------------------------|-----------------------------------------|  
 |**bigint**|**decimal**|**decimal**|*|  
 |**sql_variant**|**text**|**nvarchar(4000)**|*|  
@@ -63,7 +63,7 @@ ms.locfileid: "91868739"
  **bcp** 명령은 **datetime** 및 **smalldatetime** 값에 대해 ODBC 기본 형식을 사용하여 문자 형식 데이터 파일을 내보냅니다. 예를 들어 **이라는 날짜가 포함된** datetime `12 Aug 1998` 열은 `1998-08-12 00:00:00.000`문자열로 데이터 파일에 대량 복사됩니다.  
   
 > [!IMPORTANT]  
->  **bcp** 를 사용하여 **smalldatetime**필드로 데이터를 가져올 때 초 값이 00.000인지 확인하세요. 그렇지 않으면 작업이 실패합니다. **smalldatetime** 데이터 형식은 가장 근접한 분 값만 갖습니다. 이 경우 BULK INSERT 및 INSERT ... SELECT * FROM OPENROWSET(BULK...)는 이 경우 실패하지 않지만 초 값이 잘립니다.  
+>  **bcp** 를 사용하여 **smalldatetime** 필드로 데이터를 가져올 때 초 값이 00.000인지 확인하세요. 그렇지 않으면 작업이 실패합니다. **smalldatetime** 데이터 형식은 가장 근접한 분 값만 갖습니다. 이 경우 BULK INSERT 및 INSERT ... SELECT * FROM OPENROWSET(BULK...)는 이 경우 실패하지 않지만 초 값이 잘립니다.  
   
 ##  <a name="related-tasks"></a><a name="RelatedTasks"></a> 관련 작업  
  **대량 가져오기 또는 대량 내보내기를 위한 데이터 형식을 사용하려면**  

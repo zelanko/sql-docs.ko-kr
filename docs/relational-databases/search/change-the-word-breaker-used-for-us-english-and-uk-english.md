@@ -10,13 +10,13 @@ ms.assetid: 6b5d2177-db98-47f5-b32e-4b80a2f74ffe
 author: pmasl
 ms.author: pelopes
 ms.reviewer: mikeray
-monikerRange: =azuresqldb-current||>=sql-server-2016||=sqlallproducts-allversions||>=sql-server-linux-2017||=azuresqldb-mi-current
-ms.openlocfilehash: 9aea3dff9973d75c71eb27a60859c99d4385b617
-ms.sourcegitcommit: 4d370399f6f142e25075b3714e5c2ce056b1bfd0
+monikerRange: =azuresqldb-current||>=sql-server-2016||>=sql-server-linux-2017||=azuresqldb-mi-current
+ms.openlocfilehash: 843773990f5e7e669ed16fcc698a6ae88a56c9ac
+ms.sourcegitcommit: 1a544cf4dd2720b124c3697d1e62ae7741db757c
 ms.translationtype: HT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 10/09/2020
-ms.locfileid: "91866935"
+ms.lasthandoff: 12/14/2020
+ms.locfileid: "97475624"
 ---
 # <a name="change-the-word-breaker-used-for-us-english-and-uk-english"></a>미국 영어 및 영국 영어에 사용되는 단어 분리기 변경
 [!INCLUDE [SQL Server Azure SQL Database](../../includes/applies-to-version/sql-asdb.md)]
@@ -43,11 +43,11 @@ ms.locfileid: "91866935"
   
     1.  이전 단어 분리기의 **{188D6CC5-CB03-4C01-912E-47D21295D77E}** 값을 사용하여 새 키를 추가합니다.  
   
-    2.  해당 키 값의 (기본값) 데이터를 **langwrbk.dll**로 업데이트합니다.  
+    2.  해당 키 값의 (기본값) 데이터를 **langwrbk.dll** 로 업데이트합니다.  
   
     3.  이전 형태소 분석기의 **{EEED4C20-7F1B-11CE-BE57-00AA0051FE20}** 값을 사용하여 새 키를 추가합니다.  
   
-    4.  해당 키 값의 (기본값) 데이터를 **infosoft.dll**로 업데이트합니다.  
+    4.  해당 키 값의 (기본값) 데이터를 **infosoft.dll** 로 업데이트합니다.  
   
 3.  레지스트리에서 **HKEY_LOCAL_MACHINE\SOFTWARE\Microsoft\Microsoft SQL Server\\<InstanceRoot\>\MSSearch\Language\enu** 노드로 이동합니다.  
   
@@ -65,11 +65,11 @@ ms.locfileid: "91866935"
   
     1.  이전 단어 분리기의 **{173C97E2-AEBE-437C-9445-01B237ABF2F6}** 값을 사용하여 새 키를 추가합니다.  
   
-    2.  해당 키 값의 (기본값) 데이터를 **langwrbk.dll**로 업데이트합니다.  
+    2.  해당 키 값의 (기본값) 데이터를 **langwrbk.dll** 로 업데이트합니다.  
   
     3.  이전 형태소 분석기의 **{D99F7670-7F1A-11CE-BE57-00AA0051FE20}** 값을 사용하여 새 키를 추가합니다.  
   
-    4.  해당 키 값의 (기본값) 데이터를 **infosoft.dll**로 업데이트합니다.  
+    4.  해당 키 값의 (기본값) 데이터를 **infosoft.dll** 로 업데이트합니다.  
   
 3.  레지스트리에서 **HKEY_LOCAL_MACHINE\SOFTWARE\Microsoft\Microsoft SQL Server\\<InstanceRoot\>\MSSearch\Language\eng** 노드로 이동합니다.  
   
@@ -89,11 +89,11 @@ ms.locfileid: "91866935"
   
     1.  현재 단어 분리기의 **{9faed859-0b30-4434-ae65-412e14a16fb8}** 값을 사용하여 새 키를 추가합니다.  
   
-    2.  해당 키 값의 (기본값) 데이터를 **MsWb7.dll**로 업데이트합니다.  
+    2.  해당 키 값의 (기본값) 데이터를 **MsWb7.dll** 로 업데이트합니다.  
   
     3.  현재 형태소 분석기의 **{e1e5ef84-c4a6-4e50-8188-99aef3de2659}** 값을 사용하여 새 키를 추가합니다.  
   
-    4.  해당 키 값의 (기본값) 데이터를 **MsWb7.dll**로 업데이트합니다.  
+    4.  해당 키 값의 (기본값) 데이터를 **MsWb7.dll** 로 업데이트합니다.  
   
 3.  레지스트리에서 **HKEY_LOCAL_MACHINE\SOFTWARE\Microsoft\Microsoft SQL Server\\<InstanceRoot\>\MSSearch\Language\eng** 노드로 이동합니다.  
   
@@ -111,11 +111,11 @@ ms.locfileid: "91866935"
   
     1.  현재 단어 분리기의 **{9faed859-0b30-4434-ae65-412e14a16fb8}** 값을 사용하여 새 키를 추가합니다.  
   
-    2.  해당 키 값의 (기본값) 데이터를 **MsWb7.dll**로 업데이트합니다.  
+    2.  해당 키 값의 (기본값) 데이터를 **MsWb7.dll** 로 업데이트합니다.  
   
     3.  현재 형태소 분석기의 **{e1e5ef84-c4a6-4e50-8188-99aef3de2659}** 값을 사용하여 새 키를 추가합니다.  
   
-    4.  해당 키 값의 (기본값) 데이터를 **MsWb7.dll**로 업데이트합니다.  
+    4.  해당 키 값의 (기본값) 데이터를 **MsWb7.dll** 로 업데이트합니다.  
   
 3.  레지스트리에서 **HKEY_LOCAL_MACHINE\SOFTWARE\Microsoft\Microsoft SQL Server\\<InstanceRoot\>\MSSearch\Language\eng** 노드로 이동합니다.  
   

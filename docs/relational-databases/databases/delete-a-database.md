@@ -18,13 +18,13 @@ helpviewer_keywords:
 ms.assetid: 1fd8c0f5-03e1-449a-af45-b8cacb479d9c
 author: stevestein
 ms.author: sstein
-monikerRange: =azuresqldb-current||>=sql-server-2016||=sqlallproducts-allversions||>=sql-server-linux-2017||=azuresqldb-mi-current
-ms.openlocfilehash: e33c98e664c794477b913fc1b7826f43f8e9a09c
-ms.sourcegitcommit: cfa04a73b26312bf18d8f6296891679166e2754d
+monikerRange: =azuresqldb-current||>=sql-server-2016||>=sql-server-linux-2017||=azuresqldb-mi-current
+ms.openlocfilehash: 4459b28768763f6e49a6cf5ed778f5ae893300d0
+ms.sourcegitcommit: 1a544cf4dd2720b124c3697d1e62ae7741db757c
 ms.translationtype: HT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 10/19/2020
-ms.locfileid: "92192944"
+ms.lasthandoff: 12/14/2020
+ms.locfileid: "97474144"
 ---
 # <a name="delete-a-database"></a>데이터베이스 삭제
 [!INCLUDE [SQL Server Azure SQL Database](../../includes/applies-to-version/sql-asdb.md)]
@@ -77,11 +77,11 @@ ms.locfileid: "92192944"
   
 #### <a name="to-delete-a-database"></a>데이터베이스를 삭제하려면  
   
-1.  **개체 탐색기**에서 [!INCLUDE[ssDEnoversion](../../includes/ssdenoversion-md.md)]의 인스턴스에 연결한 다음 해당 인스턴스를 확장합니다.  
+1.  **개체 탐색기** 에서 [!INCLUDE[ssDEnoversion](../../includes/ssdenoversion-md.md)]의 인스턴스에 연결한 다음 해당 인스턴스를 확장합니다.  
   
-2.  **데이터베이스**를 확장하고 삭제할 데이터베이스를 마우스 오른쪽 단추로 클릭한 다음 **삭제**를 클릭합니다.  
+2.  **데이터베이스** 를 확장하고 삭제할 데이터베이스를 마우스 오른쪽 단추로 클릭한 다음 **삭제** 를 클릭합니다.  
   
-3.  올바른 데이터베이스가 선택되었는지 확인하고 **확인**을 클릭합니다.  
+3.  올바른 데이터베이스가 선택되었는지 확인하고 **확인** 을 클릭합니다.  
   
 ##  <a name="using-transact-sql"></a><a name="TsqlProcedure"></a> Transact-SQL 사용  
   
@@ -89,9 +89,9 @@ ms.locfileid: "92192944"
   
 1.  [!INCLUDE[ssDE](../../includes/ssde-md.md)]에 연결합니다.  
   
-2.  표준 도구 모음에서 **새 쿼리**를 클릭합니다.  
+2.  표준 도구 모음에서 **새 쿼리** 를 클릭합니다.  
   
-3.  다음 예를 복사하여 쿼리 창에 붙여 넣고 **실행**을 클릭합니다. 다음 예에서는 `Sales` 및 `NewSales` 데이터베이스를 제거합니다.  
+3.  다음 예를 복사하여 쿼리 창에 붙여 넣고 **실행** 을 클릭합니다. 다음 예에서는 `Sales` 및 `NewSales` 데이터베이스를 제거합니다.  
   
 ```sql  
 USE master ;  

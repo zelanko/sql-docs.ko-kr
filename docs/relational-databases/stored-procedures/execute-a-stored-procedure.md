@@ -19,13 +19,13 @@ helpviewer_keywords:
 ms.assetid: a0b1337d-2059-4872-8c62-3f967d8b170f
 author: stevestein
 ms.author: sstein
-monikerRange: '>=aps-pdw-2016||=azuresqldb-current||=azure-sqldw-latest||>=sql-server-2016||=sqlallproducts-allversions||>=sql-server-linux-2017||=azuresqldb-mi-current'
-ms.openlocfilehash: 0dc360ab3faf724830f61b4572cff93425203ec4
-ms.sourcegitcommit: 75f767c7b1ead31f33a870fddab6bef52f99906b
+monikerRange: '>=aps-pdw-2016||=azuresqldb-current||=azure-sqldw-latest||>=sql-server-2016||>=sql-server-linux-2017||=azuresqldb-mi-current'
+ms.openlocfilehash: f7cff43378cdffd2015040d9de4d8ffb7b014291
+ms.sourcegitcommit: 1a544cf4dd2720b124c3697d1e62ae7741db757c
 ms.translationtype: HT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 07/28/2020
-ms.locfileid: "87332617"
+ms.lasthandoff: 12/14/2020
+ms.locfileid: "97475304"
 ---
 # <a name="execute-a-stored-procedure"></a>저장 프로시저 실행
 [!INCLUDE[SQL Server Azure SQL Database Synapse Analytics PDW ](../../includes/applies-to-version/sql-asdb-asdbmi-asa-pdw.md)]
@@ -103,7 +103,7 @@ ms.locfileid: "87332617"
   
 -   저장 프로시저 자동 실행  
   
-     자동 실행되도록 표시된 프로시저는 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 가 시작될 때마다 실행되며 **master** 데이터베이스는 이 시작 프로세스 중에 복구됩니다. 자동 실행되도록 프로시저를 설정하면 데이터베이스 유지 관리 작업을 수행하거나 프로시저가 백그라운드 프로세스로 계속 실행되도록 하는 데 유용할 수 있습니다. 또는 프로시저가 전역 임시 테이블을 만드는 작업처럼 **tempdb**에서 시스템 또는 유지 관리 태스크를 수행하도록 하는 것이 자동 실행을 사용하는 또 다른 방법입니다. 이렇게 하면 **시작 중에** tempdb [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 가 다시 만들어질 때 이러한 임시 테이블이 항상 존재합니다.  
+     자동 실행되도록 표시된 프로시저는 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 가 시작될 때마다 실행되며 **master** 데이터베이스는 이 시작 프로세스 중에 복구됩니다. 자동 실행되도록 프로시저를 설정하면 데이터베이스 유지 관리 작업을 수행하거나 프로시저가 백그라운드 프로세스로 계속 실행되도록 하는 데 유용할 수 있습니다. 또는 프로시저가 전역 임시 테이블을 만드는 작업처럼 **tempdb** 에서 시스템 또는 유지 관리 태스크를 수행하도록 하는 것이 자동 실행을 사용하는 또 다른 방법입니다. 이렇게 하면 **시작 중에** tempdb [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 가 다시 만들어질 때 이러한 임시 테이블이 항상 존재합니다.  
   
      자동 실행되는 프로시저는 **sysadmin** 고정 서버 역할의 멤버와 같은 권한을 사용하여 작동합니다. 프로시저에서 생성되는 오류 메시지는 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 오류 로그에 기록됩니다.  
   
@@ -114,7 +114,7 @@ ms.locfileid: "87332617"
   
 -   자동 실행 설정, 해제 및 제어  
   
-     시스템 관리자(**sa**)만 프로시저가 자동 실행되도록 표시할 수 있습니다. 또한 프로시저는 **master** 데이터베이스에 있고 **sa**에 의해 소유되어야 하며 입력 또는 출력 매개 변수를 가질 수 없습니다.  
+     시스템 관리자(**sa**)만 프로시저가 자동 실행되도록 표시할 수 있습니다. 또한 프로시저는 **master** 데이터베이스에 있고 **sa** 에 의해 소유되어야 하며 입력 또는 출력 매개 변수를 가질 수 없습니다.  
   
      [sp_procoption](../../relational-databases/system-stored-procedures/sp-procoption-transact-sql.md) 을 사용하여 다음을 수행할 수 있습니다.  
   
@@ -132,11 +132,11 @@ ms.locfileid: "87332617"
   
 #### <a name="to-execute-a-stored-procedure"></a>저장 프로시저를 실행하려면  
   
-1.  **개체 탐색기**에서 [!INCLUDE[ssDEnoversion](../../includes/ssdenoversion-md.md)]의 인스턴스에 연결하고 해당 인스턴스를 확장한 다음 **데이터베이스**를 확장합니다.  
+1.  **개체 탐색기** 에서 [!INCLUDE[ssDEnoversion](../../includes/ssdenoversion-md.md)]의 인스턴스에 연결하고 해당 인스턴스를 확장한 다음 **데이터베이스** 를 확장합니다.  
   
-2.  원하는 데이터베이스를 확장하고 **프로그래밍 기능**을 확장한 다음 **저장 프로시저**를 확장합니다.  
+2.  원하는 데이터베이스를 확장하고 **프로그래밍 기능** 을 확장한 다음 **저장 프로시저** 를 확장합니다.  
   
-3.  원하는 사용자 정의 저장 프로시저를 마우스 오른쪽 단추로 클릭하고 **저장 프로시저 실행**을 클릭합니다.  
+3.  원하는 사용자 정의 저장 프로시저를 마우스 오른쪽 단추로 클릭하고 **저장 프로시저 실행** 을 클릭합니다.  
   
 4.  **프로시저 실행** 대화 상자에서 각 매개 변수의 값과 null 값을 전달해야 하는지 여부를 지정합니다.  
   
@@ -155,7 +155,7 @@ ms.locfileid: "87332617"
      **값**  
      프로시저를 호출할 때 매개 변수의 값을 입력합니다.  
   
-5.  저장 프로시저를 실행하려면 **확인**을 클릭합니다.  
+5.  저장 프로시저를 실행하려면 **확인** 을 클릭합니다.  
   
 ##  <a name="using-transact-sql"></a><a name="TsqlProcedure"></a> Transact-SQL 사용  
   
@@ -163,9 +163,9 @@ ms.locfileid: "87332617"
   
 1.  [!INCLUDE[ssDE](../../includes/ssde-md.md)]에 연결합니다.  
   
-2.  표준 도구 모음에서 **새 쿼리**를 클릭합니다.  
+2.  표준 도구 모음에서 **새 쿼리** 를 클릭합니다.  
   
-3.  다음 예를 복사하여 쿼리 창에 붙여 넣고 **실행**을 클릭합니다. 이 예에서는 하나의 매개 변수를 예상하는 저장 프로시저를 실행하는 방법을 보여 줍니다. 또한 `uspGetEmployeeManagers` 매개 변수로 지정된 값인  `6` 을 사용하여 `@EmployeeID` 저장 프로시저를 실행합니다.  
+3.  다음 예를 복사하여 쿼리 창에 붙여 넣고 **실행** 을 클릭합니다. 이 예에서는 하나의 매개 변수를 예상하는 저장 프로시저를 실행하는 방법을 보여 줍니다. 또한 `uspGetEmployeeManagers` 매개 변수로 지정된 값인  `6` 을 사용하여 `@EmployeeID` 저장 프로시저를 실행합니다.  
   
 ```sql  
 USE AdventureWorks2012;  
@@ -178,9 +178,9 @@ GO
   
 1.  [!INCLUDE[ssDE](../../includes/ssde-md.md)]에 연결합니다.  
   
-2.  표준 도구 모음에서 **새 쿼리**를 클릭합니다.  
+2.  표준 도구 모음에서 **새 쿼리** 를 클릭합니다.  
   
-3.  다음 예를 복사하여 쿼리 창에 붙여 넣고 **실행**을 클릭합니다. 이 예에서는 [sp_procoption](../../relational-databases/system-stored-procedures/sp-procoption-transact-sql.md) 을 사용하여 자동 실행되도록 프로시저를 설정하는 방법을 보여 줍니다.  
+3.  다음 예를 복사하여 쿼리 창에 붙여 넣고 **실행** 을 클릭합니다. 이 예에서는 [sp_procoption](../../relational-databases/system-stored-procedures/sp-procoption-transact-sql.md) 을 사용하여 자동 실행되도록 프로시저를 설정하는 방법을 보여 줍니다.  
   
 ```sql  
 USE AdventureWorks2012;  
@@ -194,9 +194,9 @@ EXEC sp_procoption @ProcName = '<procedure name>'
   
 1.  [!INCLUDE[ssDE](../../includes/ssde-md.md)]에 연결합니다.  
   
-2.  표준 도구 모음에서 **새 쿼리**를 클릭합니다.  
+2.  표준 도구 모음에서 **새 쿼리** 를 클릭합니다.  
   
-3.  다음 예를 복사하여 쿼리 창에 붙여 넣고 **실행**을 클릭합니다. 이 예에서는 [sp_procoption](../../relational-databases/system-stored-procedures/sp-procoption-transact-sql.md) 을 사용하여 프로시저가 자동 실행되는 것을 중지하는 방법을 보여 줍니다.  
+3.  다음 예를 복사하여 쿼리 창에 붙여 넣고 **실행** 을 클릭합니다. 이 예에서는 [sp_procoption](../../relational-databases/system-stored-procedures/sp-procoption-transact-sql.md) 을 사용하여 프로시저가 자동 실행되는 것을 중지하는 방법을 보여 줍니다.  
   
 ```sql  
 USE AdventureWorks2012;  

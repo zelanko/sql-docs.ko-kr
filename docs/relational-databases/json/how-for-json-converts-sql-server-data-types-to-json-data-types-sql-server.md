@@ -12,23 +12,23 @@ author: jovanpop-msft
 ms.author: jovanpop
 ms.reviewer: jroth
 ms.custom: seo-dt-2019
-monikerRange: =azuresqldb-current||>=sql-server-2016||=sqlallproducts-allversions||>=sql-server-linux-2017||=azuresqldb-mi-current
-ms.openlocfilehash: 7a9b6cb32af496b70a48ef4d32f3692b7b863b28
-ms.sourcegitcommit: 28fecbf61ae7b53405ca378e2f5f90badb1a296a
+monikerRange: =azuresqldb-current||>=sql-server-2016||>=sql-server-linux-2017||=azuresqldb-mi-current
+ms.openlocfilehash: ff06a77af1592bf9bf2386742a53033ade76aecd
+ms.sourcegitcommit: 1a544cf4dd2720b124c3697d1e62ae7741db757c
 ms.translationtype: HT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 12/04/2020
-ms.locfileid: "96595124"
+ms.lasthandoff: 12/14/2020
+ms.locfileid: "97478124"
 ---
 # <a name="how-for-json-converts-sql-server-data-types-to-json-data-types-sql-server"></a>FOR JSON을 통해 SQL Server 데이터 형식을 JSON 데이터 형식으로 변환하는 방법(SQL Server)
 [!INCLUDE [SQL Server Azure SQL Database](../../includes/applies-to-version/sqlserver2016-asdb.md)]
 
   **FOR JSON** 절은 다음 규칙을 사용하여 JSON 출력에서 SQL Server 데이터 형식을 JSON 형식으로 변환합니다.  
   
-|범주|SQL Server 데이터 형식|JSON 데이터 형식|  
+|Category|SQL Server 데이터 형식|JSON 데이터 형식|  
 |--------------|--------------|---------------|  
 |문자 및 문자열 유형|char, nchar, varchar, nvarchar|문자열|  
-|숫자 유형|int, bigint, float, decimal, numeric|숫자|  
+|숫자 유형|int, bigint, float, decimal, numeric|number|  
 |비트 유형|bit|부울(true 또는 false)|  
 |날짜 및 시간 유형|date, datetime, datetime2, time, datetimeoffset|문자열|  
 |이진 유형|varbinary, binary, image, timestamp, rowversion|Base64로 인코딩된 문자열|  

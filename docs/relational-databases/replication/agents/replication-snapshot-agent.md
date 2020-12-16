@@ -16,13 +16,13 @@ helpviewer_keywords:
 ms.assetid: 2028ba45-4436-47ed-bf79-7c957766ea04
 author: MashaMSFT
 ms.author: mathoma
-monikerRange: =azuresqldb-current||>=sql-server-2016||=sqlallproducts-allversions
-ms.openlocfilehash: 9fd89016895d2e106e6c9ff9dcab4873824c7515
-ms.sourcegitcommit: 63aef5a96905f0b026322abc9ccb862ee497eebe
+monikerRange: =azuresqldb-current||>=sql-server-2016
+ms.openlocfilehash: 867f902376778b298ff6f099747c9344f8a055e5
+ms.sourcegitcommit: 1a544cf4dd2720b124c3697d1e62ae7741db757c
 ms.translationtype: HT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 09/25/2020
-ms.locfileid: "91364240"
+ms.lasthandoff: 12/14/2020
+ms.locfileid: "97475884"
 ---
 # <a name="replication-snapshot-agent"></a>Replication Snapshot Agent
 [!INCLUDE[sql-asdb](../../../includes/applies-to-version/sql-asdb.md)]
@@ -84,7 +84,7 @@ snapshot [ -?]
  사용 가능한 모든 매개 변수를 출력합니다.  
   
  **-Publisher**  _server_name_[ **\\** _instance\_name_]  
- 게시자의 이름입니다. 해당 서버에 있는 [!INCLUDE[msCoName](../../../includes/msconame-md.md)] [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)]의 기본 인스턴스에 대해 server_name을 지정합니다. 해당 서버에 있는 [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)]의 명명된 인스턴스에 대해 _server\_name_ **\\** _instance\_name_을 지정합니다.  
+ 게시자의 이름입니다. 해당 서버에 있는 [!INCLUDE[msCoName](../../../includes/msconame-md.md)] [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)]의 기본 인스턴스에 대해 server_name을 지정합니다. 해당 서버에 있는 [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)]의 명명된 인스턴스에 대해 _server\_name_ **\\** _instance\_name_ 을 지정합니다.  
   
  **-Publication** _publication_  
  게시의 이름입니다. 이 매개 변수는 게시가 새 구독이나 다시 초기화된 구독에 대해 항상 스냅샷을 사용할 수 있도록 설정된 경우에만 유효합니다.  
@@ -99,7 +99,7 @@ snapshot [ -?]
  에이전트 정의 파일의 경로입니다. 에이전트 정의 파일에는 에이전트의 명령줄 인수가 들어 있습니다. 파일 내용은 실행 파일로 구문 분석됩니다. 임의 문자가 있는 인수 값을 지정하려면 큰따옴표(")를 사용합니다.  
   
  **-Distributor** _server_name_[ **\\** _instance\_name_]  
- 배포자 이름입니다. 해당 서버에 있는 기본 *server_name* 인스턴스에 대해 [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] 을 지정합니다. 해당 서버에 있는 [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)]의 명명된 인스턴스에 대해 _server\_name_ **\\** _instance\_name_을 지정합니다.  
+ 배포자 이름입니다. 해당 서버에 있는 기본 *server_name* 인스턴스에 대해 [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] 을 지정합니다. 해당 서버에 있는 [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)]의 명명된 인스턴스에 대해 _server\_name_ **\\** _instance\_name_ 을 지정합니다.  
   
  **-DistributorDeadlockPriority** [ **-1**|**0**|**1**]  
  교착 상태가 발생할 경우 배포자에 대한 스냅샷 에이전트 연결의 우선 순위입니다. 이 매개 변수는 스냅샷을 생성하는 동안 스냅샷 에이전트와 사용자 애플리케이션 사이에서 발생할 수 있는 교착 상태를 해결하기 위해 지정됩니다.  
@@ -146,7 +146,7 @@ snapshot [ -?]
  [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] 대량 복사 데이터 파일에서 필드 끝을 표시하는 문자 또는 문자 시퀀스입니다. 기본값은 \n\<x$3>\n입니다.  
   
  **-HistoryVerboseLevel** [ **1**| **2**| **3**]  
- 스냅샷 작업을 수행하는 동안 기록에 추가되는 양을 지정합니다. **1**을 선택하여 성능에서 기록 로깅의 영향을 최소화할 수 있습니다.  
+ 스냅샷 작업을 수행하는 동안 기록에 추가되는 양을 지정합니다. **1** 을 선택하여 성능에서 기록 로깅의 영향을 최소화할 수 있습니다.  
   
 |HistoryVerboseLevel 값|Description|  
 |-------------------------------|-----------------|  
@@ -186,10 +186,10 @@ snapshot [ -?]
  > 복제된 개체에 필터가 있는 경우 스냅샷 에이전트는 여러 BCP 파일을 생성하는 대신 해당 아티클에 대해 하나의 BCP 파일만 생성합니다. 
   
  \- **MaxNetworkOptimization** [ **0**| **1**]  
- 관련이 없는 삭제 작업을 구독자에 보낼지 여부를 나타냅니다. 관련이 없는 삭제 작업은 구독자의 파티션에 속하지 않는 행에 대해 구독자에게 보내지는 DELETE 명령입니다. 관련이 없는 삭제 작업은 데이터 무결성 또는 일치성에 영향을 주지 않지만 불필요한 네트워크 트래픽을 초래할 수 있습니다. **MaxNetworkOptimization** 의 기본값은 **0**입니다. **MaxNetworkOptimization** 을 **1** 로 설정하면 관련이 없는 삭제 작업이 최소화되므로 네트워크 트래픽이 줄어들고 네트워크 성능은 최대화됩니다. 이 매개 변수를 **1** 로 설정하면 메타데이터 스토리지 공간이 늘어나며 여러 수준의 조인 필터와 복잡한 하위 집합 필터가 있는 경우 성능이 저하됩니다. 복제 토폴로지를 신중하게 평가한 후 관련이 없는 삭제 작업으로 인해 네트워크 트래픽이 허용 불가능한 수준으로 높아지는 경우에만 **MaxNetworkOptimization** 을 **1** 로 설정해야 합니다.  
+ 관련이 없는 삭제 작업을 구독자에 보낼지 여부를 나타냅니다. 관련이 없는 삭제 작업은 구독자의 파티션에 속하지 않는 행에 대해 구독자에게 보내지는 DELETE 명령입니다. 관련이 없는 삭제 작업은 데이터 무결성 또는 일치성에 영향을 주지 않지만 불필요한 네트워크 트래픽을 초래할 수 있습니다. **MaxNetworkOptimization** 의 기본값은 **0** 입니다. **MaxNetworkOptimization** 을 **1** 로 설정하면 관련이 없는 삭제 작업이 최소화되므로 네트워크 트래픽이 줄어들고 네트워크 성능은 최대화됩니다. 이 매개 변수를 **1** 로 설정하면 메타데이터 스토리지 공간이 늘어나며 여러 수준의 조인 필터와 복잡한 하위 집합 필터가 있는 경우 성능이 저하됩니다. 복제 토폴로지를 신중하게 평가한 후 관련이 없는 삭제 작업으로 인해 네트워크 트래픽이 허용 불가능한 수준으로 높아지는 경우에만 **MaxNetworkOptimization** 을 **1** 로 설정해야 합니다.  
   
 > [!NOTE]
->  이 매개 변수를 **1**로 설정하는 것은 병합 게시의 동기화 최적화 옵션이 **true**([sp_addmergepublication&#40;Transact-SQL&#41;](../../../relational-databases/system-stored-procedures/sp-addmergepublication-transact-sql.md)의 `@keep_partition_changes**` 매개 변수)로 설정된 경우에만 유용합니다.  
+>  이 매개 변수를 **1** 로 설정하는 것은 병합 게시의 동기화 최적화 옵션이 **true**([sp_addmergepublication&#40;Transact-SQL&#41;](../../../relational-databases/system-stored-procedures/sp-addmergepublication-transact-sql.md)의 `@keep_partition_changes**` 매개 변수)로 설정된 경우에만 유용합니다.  
   
  **-Output** _output_path_and_file_name_  
  에이전트 출력 파일의 경로입니다. 파일 이름을 지정하지 않으면 출력이 콘솔로 전달됩니다. 지정된 파일 이름이 존재하면 출력이 파일에 추가됩니다.  

@@ -9,13 +9,13 @@ ms.technology: security
 ms.topic: conceptual
 author: jaszymas
 ms.author: jaszymas
-monikerRange: =azuresqldb-current||>=sql-server-2016||=sqlallproducts-allversions||>=sql-server-linux-2017||=azuresqldb-mi-current
-ms.openlocfilehash: 82315c744073fa5f497f0aaf78eb6dedc04126a9
-ms.sourcegitcommit: 22e97435c8b692f7612c4a6d3fe9e9baeaecbb94
+monikerRange: =azuresqldb-current||>=sql-server-2016||>=sql-server-linux-2017||=azuresqldb-mi-current
+ms.openlocfilehash: 7ac5e42497a0167a0e935c116a1efd9cc466300c
+ms.sourcegitcommit: 1a544cf4dd2720b124c3697d1e62ae7741db757c
 ms.translationtype: HT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 10/27/2020
-ms.locfileid: "92679047"
+ms.lasthandoff: 12/14/2020
+ms.locfileid: "97477614"
 ---
 # <a name="query-columns-using-always-encrypted-with-azure-data-studio"></a>Azure Data Studio를 사용하여 Always Encrypted를 이용하는 열 쿼리
 [!INCLUDE [SQL Server Azure SQL Database](../../../includes/applies-to-version/sql-asdb.md)]
@@ -80,7 +80,7 @@ SSN이 `Patients` 테이블의 암호화된 열이라고 가정할 경우 아래
 위 권한 외에도 쿼리 결과의 암호를 해독하거나 쿼리 매개 변수(Transact-SQL 변수를 매개 변수화하여 생성된)를 암호화하려면 대상 열을 보호하는 열 마스터 키에 대한 액세스 권한도 필요합니다.
 
 - **인증서 저장소: 로컬 컴퓨터:** 열 마스터 키로 사용되는 인증서에 대한 **읽기** 권한이 있거나 컴퓨터의 관리자여야 합니다.   
-- **Azure Key Vault:** 열 마스터 키를 포함하는 키 자격 증명 모음에 대한 **get** , **unwrapKey** 및 **verify** 권한이 필요합니다.
+- **Azure Key Vault:** 열 마스터 키를 포함하는 키 자격 증명 모음에 대한 **get**, **unwrapKey** 및 **verify** 권한이 필요합니다.
 
 자세한 내용은 [열 마스터 키 만들기 및 저장(상시 암호화)](../../../relational-databases/security/encryption/create-and-store-column-master-keys-always-encrypted.md)를 참조하세요.
 
@@ -129,7 +129,7 @@ Always Encrypted에 대한 매개 변수화를 기본적으로 사용하지 않�
 
 Always Encrypted에 대한 매개 변수화를 사용하거나 사용하지 않는 방법:
 
-1. **파일** > **기본 설정** > **설정** (Mac에서는 **코드** > **기본 설정** > **설정** )을 선택합니다.
+1. **파일** > **기본 설정** > **설정**(Mac에서는 **코드** > **기본 설정** > **설정**)을 선택합니다.
 2. **데이터** > **Microsoft SQL Server** 로 이동합니다.
 3. **Always Encrypted에 대해 매개 변수화 사용** 을 선택하거나 선택 취소합니다.
 4. **설정** 창을 닫습니다.

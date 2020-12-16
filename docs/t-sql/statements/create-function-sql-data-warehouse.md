@@ -13,13 +13,13 @@ dev_langs:
 ms.assetid: 8cad1b2c-5ea0-4001-9060-2f6832ccd057
 author: juliemsft
 ms.author: jrasnick
-monikerRange: '>= aps-pdw-2016 || = azure-sqldw-latest || = sqlallproducts-allversions'
-ms.openlocfilehash: 47073d130f6a3881c7765d74f40fa06658b02f78
-ms.sourcegitcommit: 894c1a23e922dc29b82c1d2c34c7b0ff28b38654
+monikerRange: '>= aps-pdw-2016 || = azure-sqldw-latest'
+ms.openlocfilehash: 5d969da45ab53a82d71cea4d852a69f4bbc10999
+ms.sourcegitcommit: 1a544cf4dd2720b124c3697d1e62ae7741db757c
 ms.translationtype: HT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 10/30/2020
-ms.locfileid: "93067387"
+ms.lasthandoff: 12/14/2020
+ms.locfileid: "97476624"
 ---
 # <a name="create-function-azure-synapse-analytics"></a>CREATE FUNCTION(Azure Synapse Analytics)
 [!INCLUDE[applies-to-version/asa-pdw](../../includes/applies-to-version/asa-pdw.md)]
@@ -106,7 +106,7 @@ RETURNS TABLE
  *parameter_data_type*  
  매개 변수 데이터 형식입니다. [!INCLUDE[tsql](../../includes/tsql-md.md)] 함수의 경우 [!INCLUDE[ssSDW](../../includes/sssdw-md.md)]에서 지원되는 모든 스칼라 데이터 형식이 허용됩니다. 타임스탬프(rowversion) 데이터 형식은 지원되는 형식이 아닙니다.  
   
- [ = *default* ]  
+ [ =*default* ]  
  매개 변수의 기본값입니다. *기본* 값이 정의되어 있으면 해당 매개 변수 값을 지정하지 않아도 함수를 실행할 수 있습니다.  
   
  함수의 매개 변수에 기본값을 지정한 경우 기본값을 가져오는 함수를 호출할 때 DEFAULT 키워드를 지정해야 합니다. 이 동작은 매개 변수를 생략할 경우 자동으로 기본값이 사용되는 저장 프로시저에서 기본값이 있는 매개 변수를 사용하는 것과는 다릅니다.  
@@ -122,11 +122,11 @@ RETURNS TABLE
  *scalar_expression*  
  스칼라 함수가 반환하는 스칼라 값을 지정합니다.  
 
- *select_stmt* **적용 대상** : Azure Synapse Analytics  
+ *select_stmt* **적용 대상**: Azure Synapse Analytics  
  인라인 테이블 반환 함수(미리 보기)의 반환 값을 정의하는 단일 SELECT 문입니다.
 
- TABLE **적용 대상** : Azure Synapse Analytics  
- TVF(테이블 반환 함수)의 반환 값이 테이블임을 지정합니다. 상수 및 @ *local_variables* 만 TVF에 전달할 수 있습니다.
+ TABLE **적용 대상**: Azure Synapse Analytics  
+ TVF(테이블 반환 함수)의 반환 값이 테이블임을 지정합니다. 상수 및 @*local_variables* 만 TVF에 전달할 수 있습니다.
 
  인라인 TVF(미리 보기)에서 TABLE 반환 값은 단일 SELECT 문을 통해 정의됩니다. 인라인 함수에는 연관된 반환 변수가 없습니다.
   
@@ -244,7 +244,7 @@ RETURN
 );
 GO
 ```
-그러면 다음을 사용하여 함수를 호출해 모든 뷰( **V** ) 개체를 반환할 수 있습니다.
+그러면 다음을 사용하여 함수를 호출해 모든 뷰(**V**) 개체를 반환할 수 있습니다.
 ```sql
 select * from dbo.ModulesByType('V');
 ```

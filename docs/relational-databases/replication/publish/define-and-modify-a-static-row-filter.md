@@ -15,13 +15,13 @@ helpviewer_keywords:
 ms.assetid: a6ebb026-026f-4c39-b6a9-b9998c3babab
 author: MashaMSFT
 ms.author: mathoma
-monikerRange: =azuresqldb-mi-current||>=sql-server-2016||=sqlallproducts-allversions
-ms.openlocfilehash: f88007fbb409004bc01d7b909dfa520cb7b8a051
-ms.sourcegitcommit: e700497f962e4c2274df16d9e651059b42ff1a10
+monikerRange: =azuresqldb-mi-current||>=sql-server-2016
+ms.openlocfilehash: 626665bff61cd6f0c1799ef52134c50688d962b6
+ms.sourcegitcommit: 1a544cf4dd2720b124c3697d1e62ae7741db757c
 ms.translationtype: HT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 08/17/2020
-ms.locfileid: "88490647"
+ms.lasthandoff: 12/14/2020
+ms.locfileid: "97477734"
 ---
 # <a name="define-and-modify-a-static-row-filter"></a>정적 행 필터 정의 및 수정
 [!INCLUDE[sql-asdbmi](../../../includes/applies-to-version/sql-asdbmi.md)]
@@ -60,9 +60,9 @@ ms.locfileid: "88490647"
   
 1.  새 게시 마법사의 **테이블 행 필터** 페이지 또는 **게시 속성 - \<Publication>** 대화 상자의 **행 필터** 페이지에서 수행하는 작업은 게시 유형에 따라 달라집니다.  
   
-    -   스냅샷 또는 트랜잭션 게시의 경우 **추가**를 클릭합니다.  
+    -   스냅샷 또는 트랜잭션 게시의 경우 **추가** 를 클릭합니다.  
   
-    -   병합 게시의 경우 **추가**를 클릭한 다음 **필터 추가**를 클릭합니다.  
+    -   병합 게시의 경우 **추가** 를 클릭한 다음 **필터 추가** 를 클릭합니다.  
   
 2.  **필터 추가** 대화 상자의 드롭다운 목록 상자에서 필터링할 테이블을 선택합니다.  
   
@@ -91,11 +91,11 @@ ms.locfileid: "88490647"
   
 4.  [!INCLUDE[clickOK](../../../includes/clickok-md.md)]  
   
-5.  **게시 속성 - \<Publication>** 대화 상자에서 **확인**을 클릭하여 저장하고 대화 상자를 닫습니다.  
+5.  **게시 속성 - \<Publication>** 대화 상자에서 **확인** 을 클릭하여 저장하고 대화 상자를 닫습니다.  
 
 #### <a name="to-modify-a-static-row-filter"></a>정적 행 필터를 수정하려면  
   
-1.  새 게시 마법사의 **테이블 행 필터** 페이지 또는 **게시 속성 - \<Publication>** 대화 상자의 **행 필터** 페이지에 있는 **필터링된 테이블** 창에서 필터를 선택하고 **편집**을 클릭합니다.  
+1.  새 게시 마법사의 **테이블 행 필터** 페이지 또는 **게시 속성 - \<Publication>** 대화 상자의 **행 필터** 페이지에 있는 **필터링된 테이블** 창에서 필터를 선택하고 **편집** 을 클릭합니다.  
   
 2.  **필터 편집** 대화 상자에서 필터를 수정합니다.  
   
@@ -103,7 +103,7 @@ ms.locfileid: "88490647"
   
 #### <a name="to-delete-a-static-row-filter"></a>정적 행 필터를 삭제하려면  
   
-1.  새 게시 마법사의 **테이블 행 필터** 페이지 또는 **게시 속성 - \<Publication>** 대화 상자의 **행 필터** 페이지에 있는 **필터링된 테이블** 창에서 필터를 선택하고 **삭제**를 클릭합니다.  
+1.  새 게시 마법사의 **테이블 행 필터** 페이지 또는 **게시 속성 - \<Publication>** 대화 상자의 **행 필터** 페이지에 있는 **필터링된 테이블** 창에서 필터를 선택하고 **삭제** 를 클릭합니다.  
   
 ##  <a name="using-transact-sql"></a><a name="TsqlProcedure"></a> Transact-SQL 사용  
  테이블 아티클을 만들 때 WHERE 절을 정의하여 아티클에서 행을 필터링할 수 있습니다. 정의한 행 필터를 변경할 수도 있습니다. 복제 저장 프로시저를 사용하면 정적 행 필터를 프로그래밍 방식으로 만들거나 수정할 수 있습니다.  
@@ -112,15 +112,15 @@ ms.locfileid: "88490647"
   
 1.  필터링할 아티클을 정의합니다. 자세한 내용은 [아티클을 정의](../../../relational-databases/replication/publish/define-an-article.md)을 참조하세요.  
   
-2.  게시 데이터베이스의 게시자에서 [sp_articlefilter&#40;Transact-SQL&#41;](../../../relational-databases/system-stored-procedures/sp-articlefilter-transact-sql.md)를 실행합니다. 이때 **\@article**에 아티클 이름, **\@publication**에 게시 이름, **\@filter_name**에 필터 이름, **\@filter_clause**에 필터링 절(`WHERE`를 포함하지 않음)을 지정합니다.  
+2.  게시 데이터베이스의 게시자에서 [sp_articlefilter&#40;Transact-SQL&#41;](../../../relational-databases/system-stored-procedures/sp-articlefilter-transact-sql.md)를 실행합니다. 이때 **\@article** 에 아티클 이름, **\@publication** 에 게시 이름, **\@filter_name** 에 필터 이름, **\@filter_clause** 에 필터링 절(`WHERE`를 포함하지 않음)을 지정합니다.  
   
-3.  계속 열 필터를 정의하려면 [열 필터 정의 및 수정](../../../relational-databases/replication/publish/define-and-modify-a-column-filter.md)을 참조하세요. 그러지 않으면 [sp_articleview&#40;Transact-SQL&#41;](../../../relational-databases/system-stored-procedures/sp-articleview-transact-sql.md)를 실행합니다. 이때 **\@publication**에 게시 이름, **\@article**에 필터링된 아티클 이름, **\@filter_clause**에 2단계에서 지정한 필터 절을 지정합니다. 이렇게 하면 필터링된 아티클에 대한 동기화 개체가 만들어집니다.  
+3.  계속 열 필터를 정의하려면 [열 필터 정의 및 수정](../../../relational-databases/replication/publish/define-and-modify-a-column-filter.md)을 참조하세요. 그러지 않으면 [sp_articleview&#40;Transact-SQL&#41;](../../../relational-databases/system-stored-procedures/sp-articleview-transact-sql.md)를 실행합니다. 이때 **\@publication** 에 게시 이름, **\@article** 에 필터링된 아티클 이름, **\@filter_clause** 에 2단계에서 지정한 필터 절을 지정합니다. 이렇게 하면 필터링된 아티클에 대한 동기화 개체가 만들어집니다.  
   
 #### <a name="to-modify-a-static-row-filter-for-a-snapshot-or-transactional-publication"></a>스냅샷 또는 트랜잭션 게시에 대한 정적 행 필터를 수정하려면  
   
-1.  게시 데이터베이스의 게시자에서 [sp_articlefilter&#40;Transact-SQL&#41;](../../../relational-databases/system-stored-procedures/sp-articlefilter-transact-sql.md)를 실행합니다. 이때 **\@article**에 아티클 이름, **\@publication**에 게시 이름, **\@filter_name**에 새 필터 이름, **\@filter_clause**에 새 필터링 절(`WHERE`를 포함하지 않음)을 지정합니다. 이와 같이 변경하면 기존 구독의 데이터가 무효화되므로 **\@force_reinit_subscription**에 **1** 값을 지정합니다.  
+1.  게시 데이터베이스의 게시자에서 [sp_articlefilter&#40;Transact-SQL&#41;](../../../relational-databases/system-stored-procedures/sp-articlefilter-transact-sql.md)를 실행합니다. 이때 **\@article** 에 아티클 이름, **\@publication** 에 게시 이름, **\@filter_name** 에 새 필터 이름, **\@filter_clause** 에 새 필터링 절(`WHERE`를 포함하지 않음)을 지정합니다. 이와 같이 변경하면 기존 구독의 데이터가 무효화되므로 **\@force_reinit_subscription** 에 **1** 값을 지정합니다.  
   
-2.  게시 데이터베이스의 게시자에서 [sp_articleview&#40;Transact-SQL&#41;](../../../relational-databases/system-stored-procedures/sp-articleview-transact-sql.md)를 실행합니다. 이때 **\@publication**에 게시 이름, **\@article**에 필터링된 아티클 이름, **\@filter_clause**에 1단계에서 지정한 필터 절을 지정합니다. 이렇게 하면 필터링된 아티클을 정의하는 뷰가 다시 만들어집니다.  
+2.  게시 데이터베이스의 게시자에서 [sp_articleview&#40;Transact-SQL&#41;](../../../relational-databases/system-stored-procedures/sp-articleview-transact-sql.md)를 실행합니다. 이때 **\@publication** 에 게시 이름, **\@article** 에 필터링된 아티클 이름, **\@filter_clause** 에 1단계에서 지정한 필터 절을 지정합니다. 이렇게 하면 필터링된 아티클을 정의하는 뷰가 다시 만들어집니다.  
   
 3.  게시에 대해 스냅샷 에이전트 작업을 다시 실행하여 업데이트된 스냅샷을 생성합니다. 자세한 내용은 [Create and Apply the Initial Snapshot](../../../relational-databases/replication/create-and-apply-the-initial-snapshot.md)을 참조하세요.  
   
@@ -128,7 +128,7 @@ ms.locfileid: "88490647"
   
 #### <a name="to-delete-a-static-row-filter-for-a-snapshot-or-transactional-publication"></a>스냅샷 또는 트랜잭션 게시에 대한 정적 행 필터를 삭제하려면  
   
-1.  게시 데이터베이스의 게시자에서 [sp_articlefilter&#40;Transact-SQL&#41;](../../../relational-databases/system-stored-procedures/sp-articlefilter-transact-sql.md)를 실행합니다. 이때 **\@article**에 아티클 이름, **\@publication**에 게시 이름, **\@filter_name**에 NULL 값, **\@filter_clause**에 NULL 값을 지정합니다. 이와 같이 변경하면 기존 구독의 데이터가 무효화되므로 **\@force_reinit_subscription**에 **1** 값을 지정합니다.  
+1.  게시 데이터베이스의 게시자에서 [sp_articlefilter&#40;Transact-SQL&#41;](../../../relational-databases/system-stored-procedures/sp-articlefilter-transact-sql.md)를 실행합니다. 이때 **\@article** 에 아티클 이름, **\@publication** 에 게시 이름, **\@filter_name** 에 NULL 값, **\@filter_clause** 에 NULL 값을 지정합니다. 이와 같이 변경하면 기존 구독의 데이터가 무효화되므로 **\@force_reinit_subscription** 에 **1** 값을 지정합니다.  
   
 2.  게시에 대해 스냅샷 에이전트 작업을 다시 실행하여 업데이트된 스냅샷을 생성합니다. 자세한 내용은 [Create and Apply the Initial Snapshot](../../../relational-databases/replication/create-and-apply-the-initial-snapshot.md)을 참조하세요.  
   
@@ -142,7 +142,7 @@ ms.locfileid: "88490647"
   
 #### <a name="to-modify-a-static-row-filter-for-a-merge-publication"></a>병합 게시에 대한 정적 행 필터를 수정하려면  
   
-1.  게시 데이터베이스의 게시자에서 [sp_changemergearticle&#40;Transact-SQL&#41;](../../../relational-databases/system-stored-procedures/sp-changemergearticle-transact-sql.md)을 실행합니다. 이때 **\@publication**에 게시 이름, **\@article**에 필터링된 아티클 이름, **\@property**에 **subset_filterclause** 값, **\@value**에 새 필터링 절(`WHERE`를 포함하지 않음)을 지정합니다. 이와 같이 변경하면 기존 구독의 데이터가 무효화되므로 **\@force_reinit_subscription**에 1 값을 지정합니다.  
+1.  게시 데이터베이스의 게시자에서 [sp_changemergearticle&#40;Transact-SQL&#41;](../../../relational-databases/system-stored-procedures/sp-changemergearticle-transact-sql.md)을 실행합니다. 이때 **\@publication** 에 게시 이름, **\@article** 에 필터링된 아티클 이름, **\@property** 에 **subset_filterclause** 값, **\@value** 에 새 필터링 절(`WHERE`를 포함하지 않음)을 지정합니다. 이와 같이 변경하면 기존 구독의 데이터가 무효화되므로 **\@force_reinit_subscription** 에 1 값을 지정합니다.  
   
 2.  게시에 대해 스냅샷 에이전트 작업을 다시 실행하여 업데이트된 스냅샷을 생성합니다. 자세한 내용은 [Create and Apply the Initial Snapshot](../../../relational-databases/replication/create-and-apply-the-initial-snapshot.md)을 참조하세요.  
   

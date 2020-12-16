@@ -13,13 +13,13 @@ helpviewer_keywords:
 ms.assetid: f680b4a0-630f-4052-9c79-d348c1076f7b
 author: MashaMSFT
 ms.author: mathoma
-monikerRange: '>=aps-pdw-2016||=azuresqldb-current||=azure-sqldw-latest||>=sql-server-2016||=sqlallproducts-allversions||>=sql-server-linux-2017||=azuresqldb-mi-current'
-ms.openlocfilehash: 4b3cffe95dcdd41cc904aed95de0d91c97314670
-ms.sourcegitcommit: f3321ed29d6d8725ba6378d207277a57cb5fe8c2
+monikerRange: '>=aps-pdw-2016||=azuresqldb-current||=azure-sqldw-latest||>=sql-server-2016||>=sql-server-linux-2017||=azuresqldb-mi-current'
+ms.openlocfilehash: f878144b8b7ff86636ff778ec586a0382ca801cf
+ms.sourcegitcommit: 1a544cf4dd2720b124c3697d1e62ae7741db757c
 ms.translationtype: HT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 07/06/2020
-ms.locfileid: "86009926"
+ms.lasthandoff: 12/14/2020
+ms.locfileid: "97474064"
 ---
 # <a name="create-a-format-file-sql-server"></a>서식 파일 만들기
 [!INCLUDE[SQL Server Azure SQL Database Synapse Analytics PDW ](../../includes/applies-to-version/sql-asdb-asdbmi-asa-pdw.md)]
@@ -30,9 +30,9 @@ ms.locfileid: "86009926"
  일반적으로 XML 서식 파일과 비 XML 서식 파일은 서로 전환이 가능하지만 새 서식 파일에는 비 XML 서식 파일에 비해 여러 가지 장점이 있는 XML 구문을 사용하는 것이 좋습니다.  
   
 > [!NOTE]  
->  서식 파일을 읽는 데 사용되는 **bcp** 유틸리티(Bcp.exe)의 버전은 서식 파일을 만드는 데 사용되는 버전 이상이어야 합니다. 예를 들어 [!INCLUDE[ssSQL11](../../includes/sssql11-md.md)] **bcp**는 [!INCLUDE[ssKatmai](../../includes/sskatmai-md.md)] **bcp**에서 생성된 버전 10.0 서식 파일을 읽을 수 있지만 [!INCLUDE[ssKatmai](../../includes/sskatmai-md.md)] **bcp**는 [!INCLUDE[ssSQL11](../../includes/sssql11-md.md)] **bcp**에서 생성된 버전 11.0 서식 파일을 읽을 수 없습니다.  
+>  서식 파일을 읽는 데 사용되는 **bcp** 유틸리티(Bcp.exe)의 버전은 서식 파일을 만드는 데 사용되는 버전 이상이어야 합니다. 예를 들어 [!INCLUDE[ssSQL11](../../includes/sssql11-md.md)] **bcp** 는 [!INCLUDE[ssKatmai](../../includes/sskatmai-md.md)] **bcp** 에서 생성된 버전 10.0 서식 파일을 읽을 수 있지만 [!INCLUDE[ssKatmai](../../includes/sskatmai-md.md)] **bcp** 는 [!INCLUDE[ssSQL11](../../includes/sssql11-md.md)] **bcp** 에서 생성된 버전 11.0 서식 파일을 읽을 수 없습니다.  
   
- 이 항목에서는 [bcp 유틸리티](../../tools/bcp-utility.md) 를 사용하여 특정 테이블에 대한 서식 파일을 만드는 방법에 대해 설명합니다. 서식 파일은 지정된 데이터 형식 옵션( **-n**, **-c**, **-w**또는 **-N**)과 테이블 또는 뷰 구분 기호를 기반으로 합니다.  
+ 이 항목에서는 [bcp 유틸리티](../../tools/bcp-utility.md) 를 사용하여 특정 테이블에 대한 서식 파일을 만드는 방법에 대해 설명합니다. 서식 파일은 지정된 데이터 형식 옵션( **-n**, **-c**, **-w** 또는 **-N**)과 테이블 또는 뷰 구분 기호를 기반으로 합니다.  
   
 ## <a name="creating-a-non-xml-format-file"></a>비 XML 서식 파일 만들기  
  **bcp** 명령을 사용하여 서식 파일을 만들려면 데이터 파일 경로 대신 **format** 인수를 지정하고 **NUL** 을 사용합니다. **format** 옵션에는 다음과 같이 **-f** 옵션도 필요합니다.  
@@ -267,7 +267,7 @@ bcp AdventureWorks2012.HumanResources.Department format nul -x -f Department-n.x
  이 서식 파일의 구문에 대한 자세한 내용은 [XML 서식 파일&#40;SQL Server&#41;](../../relational-databases/import-export/xml-format-files-sql-server.md)을 참조하세요. 네이티브 데이터를 사용하는 방법에 대한 자세한 내용은 [네이티브 형식을 사용하여 데이터 가져오기 및 내보내기&#40;SQL Server&#41;](../../relational-databases/import-export/use-native-format-to-import-or-export-data-sql-server.md)을 참조하세요.  
   
 ## <a name="mapping-data-fields-to-table-columns"></a>테이블 열에 데이터 필드 매핑  
- **bcp**에서 만든 서식 파일은 모든 테이블 열에 대한 설명을 순서대로 제공합니다. 서식 파일을 수정하여 테이블 행을 다시 정렬하거나 생략할 수 있습니다. 이렇게 하면 테이블 열에 직접 매핑하지 않는 필드가 있는 데이터 파일에 대해 서식 파일을 사용자 지정할 수 있습니다. 자세한 내용은 아래 항목을 참조하세요.  
+ **bcp** 에서 만든 서식 파일은 모든 테이블 열에 대한 설명을 순서대로 제공합니다. 서식 파일을 수정하여 테이블 행을 다시 정렬하거나 생략할 수 있습니다. 이렇게 하면 테이블 열에 직접 매핑하지 않는 필드가 있는 데이터 파일에 대해 서식 파일을 사용자 지정할 수 있습니다. 자세한 내용은 아래 항목을 참조하세요.  
   
 -   [서식 파일을 사용하여 테이블 열 건너뛰기&#40;SQL Server&#41;](../../relational-databases/import-export/use-a-format-file-to-skip-a-table-column-sql-server.md)  
   

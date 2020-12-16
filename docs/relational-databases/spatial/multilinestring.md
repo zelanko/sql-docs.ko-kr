@@ -13,13 +13,13 @@ helpviewer_keywords:
 ms.assetid: 95deeefe-d6c5-4a11-b347-379e4486e7b7
 author: MladjoA
 ms.author: mlandzic
-monikerRange: =azuresqldb-current||>=sql-server-2016||=sqlallproducts-allversions||>=sql-server-linux-2017||=azuresqldb-mi-current
-ms.openlocfilehash: 6caab752b3edc7c56d127fb3a378a9a5a69a18b7
-ms.sourcegitcommit: a5398f107599102af7c8cda815d8e5e9a367ce7e
+monikerRange: =azuresqldb-current||>=sql-server-2016||>=sql-server-linux-2017||=azuresqldb-mi-current
+ms.openlocfilehash: 14b742786f8b031e1c9c80f9c058f57d96cf240a
+ms.sourcegitcommit: 1a544cf4dd2720b124c3697d1e62ae7741db757c
 ms.translationtype: HT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 10/13/2020
-ms.locfileid: "92006293"
+ms.lasthandoff: 12/14/2020
+ms.locfileid: "97475384"
 ---
 # <a name="multilinestring"></a>MultiLineString
 [!INCLUDE [SQL Server Azure SQL Database Azure SQL Managed Instance](../../includes/applies-to-version/sql-asdb-asdbmi.md)]
@@ -40,7 +40,7 @@ ms.locfileid: "92006293"
   
 -   그림 4는 단순하지 않고 닫혀 있지 않은 **MultiLineString** 인스턴스입니다.  
   
--   그림 5는 단순하고 닫혀 있지 않은 **MultiLineString**인스턴스입니다. 이 인스턴스는 해당 **LineStrings** 요소가 닫혀 있지 않으므로 닫혀 있지 않고, **LineStrings** 인스턴스의 내부에 교차하는 것이 없으므로 단순합니다.  
+-   그림 5는 단순하고 닫혀 있지 않은 **MultiLineString** 인스턴스입니다. 이 인스턴스는 해당 **LineStrings** 요소가 닫혀 있지 않으므로 닫혀 있지 않고, **LineStrings** 인스턴스의 내부에 교차하는 것이 없으므로 단순합니다.  
   
 -   그림 6은 단순하고 닫혀 있는 **MultiLineString** 인스턴스입니다. 이 인스턴스는 해당 요소가 모두 닫혀 있으므로 닫혀 있고, 해당 요소 중 교차하는 것이 없으므로 단순합니다.  
   

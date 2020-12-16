@@ -14,13 +14,13 @@ helpviewer_keywords:
 ms.assetid: 232dbf4d-392a-406f-af3a-579518cd8e46
 author: stevestein
 ms.author: sstein
-monikerRange: '>=aps-pdw-2016||=azuresqldb-current||=azure-sqldw-latest||>=sql-server-2016||=sqlallproducts-allversions||>=sql-server-linux-2017||=azuresqldb-mi-current'
-ms.openlocfilehash: 58b042c3d8f2ddac50789419f0d5e5d76ebb5fc8
-ms.sourcegitcommit: 75f767c7b1ead31f33a870fddab6bef52f99906b
+monikerRange: '>=aps-pdw-2016||=azuresqldb-current||=azure-sqldw-latest||>=sql-server-2016||>=sql-server-linux-2017||=azuresqldb-mi-current'
+ms.openlocfilehash: 742b0e7f3631f5cf262ff6e20bdc64f1ba7bea7f
+ms.sourcegitcommit: 1a544cf4dd2720b124c3697d1e62ae7741db757c
 ms.translationtype: HT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 07/28/2020
-ms.locfileid: "87332630"
+ms.lasthandoff: 12/14/2020
+ms.locfileid: "97475314"
 ---
 # <a name="delete-a-stored-procedure"></a>저장 프로시저 삭제
 [!INCLUDE[SQL Server Azure SQL Database Synapse Analytics PDW ](../../includes/applies-to-version/sql-asdb-asdbmi-asa-pdw.md)]
@@ -53,26 +53,26 @@ ms.locfileid: "87332630"
   
 1.  개체 탐색기에서 [!INCLUDE[ssDE](../../includes/ssde-md.md)] 의 인스턴스에 연결한 다음 해당 인스턴스를 확장합니다.  
   
-2.  **데이터베이스**를 확장하고 해당 프로시저가 속한 데이터베이스를 확장한 다음 **프로그래밍 기능**을 확장합니다.  
+2.  **데이터베이스** 를 확장하고 해당 프로시저가 속한 데이터베이스를 확장한 다음 **프로그래밍 기능** 을 확장합니다.  
   
-3.  **저장 프로시저**를 확장하고 제거할 프로시저를 마우스 오른쪽 단추로 클릭한 다음 **삭제**를 클릭합니다.  
+3.  **저장 프로시저** 를 확장하고 제거할 프로시저를 마우스 오른쪽 단추로 클릭한 다음 **삭제** 를 클릭합니다.  
   
-4.  프로시저에 종속된 개체를 보려면 **종속성 표시**를 클릭합니다.  
+4.  프로시저에 종속된 개체를 보려면 **종속성 표시** 를 클릭합니다.  
   
-5.  올바른 프로시저가 선택되었는지 확인하고 **확인**을 클릭합니다.  
+5.  올바른 프로시저가 선택되었는지 확인하고 **확인** 을 클릭합니다.  
   
 6.  모든 종속 개체와 스크립트에서 참조 프로시저를 제거합니다.  
 
 ###  <a name="using-transact-sql"></a><a name="TsqlProcedure"></a> Transact-SQL 사용  
  **쿼리 편집기에서 프로시저를 제거하려면**  
   
-1.  **개체 탐색기**에서 [!INCLUDE[ssDE](../../includes/ssde-md.md)] 의 인스턴스에 연결한 다음 해당 인스턴스를 확장합니다.  
+1.  **개체 탐색기** 에서 [!INCLUDE[ssDE](../../includes/ssde-md.md)] 의 인스턴스에 연결한 다음 해당 인스턴스를 확장합니다.  
   
-2.  **데이터베이스**를 확장하고 프로시저가 속한 데이터베이스를 확장하거나 도구 모음의 사용 가능한 데이터베이스 목록에서 데이터베이스를 선택합니다.  
+2.  **데이터베이스** 를 확장하고 프로시저가 속한 데이터베이스를 확장하거나 도구 모음의 사용 가능한 데이터베이스 목록에서 데이터베이스를 선택합니다.  
   
-3.  파일 메뉴에서 **새 쿼리**를 클릭합니다.  
+3.  파일 메뉴에서 **새 쿼리** 를 클릭합니다.  
   
-4.  현재 데이터베이스의 저장 프로시저 이름을 확인합니다. 개체 탐색기에서 **프로그래밍 기능** 을 확장한 다음 **저장 프로시저**를 확장합니다. 또는 쿼리 편집기에서 다음 문을 실행합니다.  
+4.  현재 데이터베이스의 저장 프로시저 이름을 확인합니다. 개체 탐색기에서 **프로그래밍 기능** 을 확장한 다음 **저장 프로시저** 를 확장합니다. 또는 쿼리 편집기에서 다음 문을 실행합니다.  
   
     ```sql  
     SELECT name AS procedure_name   

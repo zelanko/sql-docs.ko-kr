@@ -20,13 +20,13 @@ helpviewer_keywords:
 ms.assetid: d06ed24f-82d7-4b9e-9e40-cc9780476a71
 author: MashaMSFT
 ms.author: mathoma
-monikerRange: =azuresqldb-mi-current||>=sql-server-2016||=sqlallproducts-allversions
-ms.openlocfilehash: 67710fa8ef1a0e3e79797140abd1f4f2ec751287
-ms.sourcegitcommit: c8e1553ff3fdf295e8dc6ce30d1c454d6fde8088
+monikerRange: =azuresqldb-mi-current||>=sql-server-2016
+ms.openlocfilehash: ddaa4698033f06db589ca550f39d434173e012e7
+ms.sourcegitcommit: 1a544cf4dd2720b124c3697d1e62ae7741db757c
 ms.translationtype: HT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 07/22/2020
-ms.locfileid: "86918711"
+ms.lasthandoff: 12/14/2020
+ms.locfileid: "97477844"
 ---
 # <a name="monitor-replication-agents"></a>복제 에이전트 모니터링
 [!INCLUDE[sql-asdbmi](../../../includes/applies-to-version/sql-asdbmi.md)]
@@ -67,7 +67,7 @@ ms.locfileid: "86918711"
   
 2.  **복제** 폴더를 확장한 다음 **로컬 게시** 폴더를 확장합니다.  
   
-3.  게시를 마우스 오른쪽 단추로 클릭한 다음 **로그 판독기 에이전트 상태 보기** 또는 **스냅샷 에이전트 상태 보기**를 클릭합니다.  
+3.  게시를 마우스 오른쪽 단추로 클릭한 다음 **로그 판독기 에이전트 상태 보기** 또는 **스냅샷 에이전트 상태 보기** 를 클릭합니다.  
   
 4.  **로그 판독기 에이전트 상태 보기** 또는 **스냅샷 에이전트 상태 보기** 대화 상자에서 다음을 수행하십시오.  
   
@@ -75,9 +75,9 @@ ms.locfileid: "86918711"
   
     -   필요에 맞게 에이전트를 시작 또는 중지합니다.  
   
-    -   **모니터** 를 클릭하여 **복제 모니터**를 시작합니다.  
+    -   **모니터** 를 클릭하여 **복제 모니터** 를 시작합니다.  
   
-5.  **닫기**를 클릭합니다.  
+5.  **닫기** 를 클릭합니다.  
   
 #### <a name="to-monitor-the-distribution-agent-and-merge-agent-from-the-publisher"></a>게시자에서 배포 에이전트 및 병합 에이전트를 모니터링하려면  
   
@@ -87,7 +87,7 @@ ms.locfileid: "86918711"
   
 3.  모니터링할 구독에 대한 게시를 확장합니다.  
   
-4.  해당 구독을 마우스 오른쪽 단추로 클릭한 다음 **동기화 상태 보기**를 클릭합니다.  
+4.  해당 구독을 마우스 오른쪽 단추로 클릭한 다음 **동기화 상태 보기** 를 클릭합니다.  
   
 5.  **동기화 상태 보기** 대화 상자에서 다음을 수행하십시오.  
   
@@ -95,11 +95,11 @@ ms.locfileid: "86918711"
   
     -   필요에 맞게 에이전트를 시작 또는 중지합니다.  
   
-    -   밀어넣기 구독의 경우 **모니터** 를 클릭하여 **복제 모니터**를 시작합니다.  
+    -   밀어넣기 구독의 경우 **모니터** 를 클릭하여 **복제 모니터** 를 시작합니다.  
   
-    -   끌어오기 구독의 경우 **작업 기록 보기** 를 클릭하여 에이전트 로그의 출력을 표시하는 **로그 파일 뷰어**를 시작합니다.  
+    -   끌어오기 구독의 경우 **작업 기록 보기** 를 클릭하여 에이전트 로그의 출력을 표시하는 **로그 파일 뷰어** 를 시작합니다.  
   
-6.  **닫기**를 클릭합니다.  
+6.  **닫기** 를 클릭합니다.  
   
 #### <a name="to-monitor-the-distribution-agent-and-merge-agent-from-the-subscriber"></a>구독자에서 배포 에이전트 및 병합 에이전트를 모니터링하려면  
   
@@ -107,7 +107,7 @@ ms.locfileid: "86918711"
   
 2.  **복제** 폴더를 확장한 다음 **로컬 구독** 폴더를 확장합니다.  
   
-3.  모니터링할 구독을 마우스 오른쪽 단추로 클릭한 다음 **동기화 상태 보기**를 클릭합니다.  
+3.  모니터링할 구독을 마우스 오른쪽 단추로 클릭한 다음 **동기화 상태 보기** 를 클릭합니다.  
   
 4.  **동기화 상태 보기** 대화 상자에서 다음을 수행하십시오.  
   
@@ -115,9 +115,9 @@ ms.locfileid: "86918711"
   
     -   필요에 맞게 에이전트를 시작 또는 중지합니다.  
   
-    -   **작업 기록 보기** 를 클릭하여 에이전트 로그의 출력을 표시하는 **로그 파일 뷰어**를 시작합니다.  
+    -   **작업 기록 보기** 를 클릭하여 에이전트 로그의 출력을 표시하는 **로그 파일 뷰어** 를 시작합니다.  
   
-5.  **닫기**를 클릭합니다.  
+5.  **닫기** 를 클릭합니다.  
   
 ## <a name="see-also"></a>참고 항목  
  [복제 에이전트 개요](../../../relational-databases/replication/agents/replication-agents-overview.md)  

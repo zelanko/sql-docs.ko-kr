@@ -11,13 +11,13 @@ ms.topic: conceptual
 ms.assetid: 23274522-e5cf-4095-bed8-bf986d6342e0
 author: markingmyname
 ms.author: maghan
-monikerRange: =azuresqldb-current||>=sql-server-2016||=sqlallproducts-allversions||>=sql-server-linux-2017||=azuresqldb-mi-current
-ms.openlocfilehash: 8ddfdf4456f3195d2d9d15c2a7f63fffc5b574fa
-ms.sourcegitcommit: 04cf7905fa32e0a9a44575a6f9641d9a2e5ac0f8
+monikerRange: =azuresqldb-current||>=sql-server-2016||>=sql-server-linux-2017||=azuresqldb-mi-current
+ms.openlocfilehash: b93b419e4678b84684c524011ed4df4feb6fcb14
+ms.sourcegitcommit: 1a544cf4dd2720b124c3697d1e62ae7741db757c
 ms.translationtype: HT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 10/07/2020
-ms.locfileid: "91810464"
+ms.lasthandoff: 12/14/2020
+ms.locfileid: "97474574"
 ---
 # <a name="system-versioned-temporal-tables-with-memory-optimized-tables"></a>메모리 액세스에 최적화된 테이블을 포함한 시스템 버전 임시 테이블
 
@@ -44,12 +44,12 @@ ms.locfileid: "91810464"
 - 내구성 있는 메모리 최적화 테이블만이 시스템 버전 관리가 가능합니다(**DURABILITY = SCHEMA_AND_DATA**).
 - 메모리 최적화 시스템 버전 관리 테이블에 대한 기록 테이블은 만든 주체가 최종 사용자이든 또는 시스템이든 상관없이 디스크 기반이어야 합니다.
 - 현재 테이블(메모리 내)에만 영향을 주는 쿼리를 [고유하게 컴파일된 T-SQL 모듈](../in-memory-oltp/a-guide-to-query-processing-for-memory-optimized-tables.md)에서 사용할 수 있습니다. FOR SYSTEM TIME 절을 사용하는 임시 쿼리는 고유하게 컴파일된 모듈에서 지원되지 않습니다. 임시 쿼리 및 비네이티브 모듈에서 메모리 최적화 테이블이 포함된 FOR SYSTEM TIME 절을 사용할 수 있습니다.
-- **SYSTEM_VERSIONING = ON**의 경우, 메모리 최적화 현재 테이블에 대한 업데이트 및 삭제 연산의 결과인 최근 시스템 버전 관리 변경 내용을 수용하기 위해 메모리 최적화 준비 테이블이 자동으로 생성됩니다.
+- **SYSTEM_VERSIONING = ON** 의 경우, 메모리 최적화 현재 테이블에 대한 업데이트 및 삭제 연산의 결과인 최근 시스템 버전 관리 변경 내용을 수용하기 위해 메모리 최적화 준비 테이블이 자동으로 생성됩니다.
 - 내부 메모리 최적화 준비 테이블의 데이터는 비동기 데이터 플러시 태스크에 의해 정기적으로 디스크 기반 기록 테이블로 이동됩니다. 이 데이터 플러시 메커니즘의 목표는 내부 메모리 버퍼를 상위 개체의 메모리 소비량의 10% 미만으로 유지하는 것입니다. [sys.dm_db_xtp_memory_consumers&#40;Transact-SQL&#41;](../../relational-databases/system-dynamic-management-views/sys-dm-db-xtp-memory-consumers-transact-sql.md)를 쿼리하고 메모리 최적화 준비 테이블 및 현재 temporal 테이블에 대한 데이터를 요약하면 메모리 최적화 시스템 버전 관리 temporal 테이블의 총 메모리 소비량을 추적할 수 있습니다.
 - [sp_xtp_flush_temporal_history](../../relational-databases/system-stored-procedures/temporal-table-sp-xtp-flush-temporal-history.md)를 호출하면 데이터 플러시를 적용할 수 있습니다.
 - **SYSTEM_VERSIONING = OFF** 의 경우 또는 시스템 버전 관리 테이블의 스키마가 열 추가, 삭제 또는 변경에 의해 수정된 경우 내부 준비 버퍼의 전체 내용이 디스크 기반 기록 테이블로 이동됩니다.
 - 기록 데이터 쿼리는 결과적으로 스냅샷 격리 수준 아래에 있으며 언제나 메모리 내 준비 버퍼와 디스크 기반 테이블 사이의 합집합을 중복 없이 반환합니다.
-- 내부적으로 테이블 스키마를 변경하는**ALTER TABLE** 작업은 작업 기간이 오래 걸릴 수 있는 데이터 플래시를 수행해야 합니다.
+- 내부적으로 테이블 스키마를 변경하는 **ALTER TABLE** 작업은 작업 기간이 오래 걸릴 수 있는 데이터 플래시를 수행해야 합니다.
 
 ## <a name="the-internal-memory-optimized-staging-table"></a>내부 메모리 액세스에 최적화된 준비 테이블
 

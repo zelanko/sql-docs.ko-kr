@@ -9,13 +9,13 @@ ms.topic: conceptual
 author: MikeRayMSFT
 ms.author: mikeray
 ms.reviewer: mikeray
-monikerRange: '>= sql-server-linux-ver15 || >= sql-server-ver15 || =sqlallproducts-allversions'
-ms.openlocfilehash: 51dbde0144f26171994638d50659192ca31400ee
-ms.sourcegitcommit: bf8cf755896a8c964774a438f2bd461a2a648c22
+monikerRange: '>= sql-server-linux-ver15 || >= sql-server-ver15'
+ms.openlocfilehash: ac4fa22e2d0aea57f25aaa9ef2d8c570f8bb130b
+ms.sourcegitcommit: 1a544cf4dd2720b124c3697d1e62ae7741db757c
 ms.translationtype: HT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 08/14/2020
-ms.locfileid: "88216691"
+ms.lasthandoff: 12/14/2020
+ms.locfileid: "97475934"
 ---
 # <a name="configure-polybase-to-access-external-data-with-odbc-generic-types"></a>ODBC 제네릭 형식의 외부 데이터를 액세스하도록 PolyBase 구성
 
@@ -36,14 +36,14 @@ SQL Server 2019의 PolyBase를 사용하면 ODBC 커넥터를 통해 ODBC 호환
 
 ## <a name="install-the-odbc-driver"></a>ODBC 드라이버 설치
 
-각 PolyBase 노드에서 연결할 데이터 원본의 ODBC 드라이버를 다운로드하여 설치합니다. 드라이버가 제대로 설치되면 **ODBC 데이터 원본 관리자**에서 드라이버를 보고 테스트할 수 있습니다.
+각 PolyBase 노드에서 연결할 데이터 원본의 ODBC 드라이버를 다운로드하여 설치합니다. 드라이버가 제대로 설치되면 **ODBC 데이터 원본 관리자** 에서 드라이버를 보고 테스트할 수 있습니다.
 
 ![PolyBase 스케일 아웃 그룹](../../relational-databases/polybase/media/polybase-odbc-admin.png) 
 
 위의 예제에서 드라이버의 이름은 빨간색 원으로 되어 있습니다. 외부 데이터 원본을 만들 때 이 이름을 사용합니다.
 
 > [!IMPORTANT]
-> 쿼리 성능을 향상하기 위해 연결 풀링을 사용하도록 설정합니다. **ODBC 데이터 원본 관리자**에서 이를 수행할 수 있습니다.
+> 쿼리 성능을 향상하기 위해 연결 풀링을 사용하도록 설정합니다. **ODBC 데이터 원본 관리자** 에서 이를 수행할 수 있습니다.
 
 ## <a name="create-dependent-objects-in-sql-server"></a>SQL Server에서 종속 개체 만들기
 

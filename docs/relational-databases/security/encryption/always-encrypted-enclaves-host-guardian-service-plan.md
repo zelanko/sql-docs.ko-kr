@@ -9,13 +9,13 @@ ms.technology: security
 ms.topic: conceptual
 author: rpsqrd
 ms.author: ryanpu
-monikerRange: =azuresqldb-current||>=sql-server-2016||=sqlallproducts-allversions||>=sql-server-linux-2017||=azuresqldb-mi-current
-ms.openlocfilehash: b2fcf4a523331260cea82a8537d83c891ea4a1c4
-ms.sourcegitcommit: 4d370399f6f142e25075b3714e5c2ce056b1bfd0
+monikerRange: =azuresqldb-current||>=sql-server-2016||>=sql-server-linux-2017||=azuresqldb-mi-current
+ms.openlocfilehash: ed376fd4fe0f3c38d9996157c30722c24b27e8aa
+ms.sourcegitcommit: 1a544cf4dd2720b124c3697d1e62ae7741db757c
 ms.translationtype: HT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 10/09/2020
-ms.locfileid: "91869162"
+ms.lasthandoff: 12/14/2020
+ms.locfileid: "97477644"
 ---
 # <a name="plan-for-host-guardian-service-attestation"></a>호스트 보호자 서비스 증명 계획
 
@@ -66,9 +66,9 @@ HGS는 [!INCLUDE [ssnoversion-md](../../../includes/ssnoversion-md.md)]와 함�
 
 일반적으로 권장 사항은 다음과 같습니다.
 
-- **물리적 프로덕션 서버**의 경우 제공되는 추가 보증을 위해 TPM 증명을 사용하는 것이 좋습니다.
-- **가상 프로덕션 서버**의 경우 대부분의 가상 머신에는 가상 TPM 또는 보안 부팅이 없으므로 호스트 키 증명을 권장합니다. [온-프레미스 보호된 VM](/windows-server/security/guarded-fabric-shielded-vm/guarded-fabric-and-shielded-vms-top-node) 같이 보안이 강화된 VM을 사용하는 경우 TPM 모드를 사용하도록 선택할 수 있습니다. 모든 가상화된 배포에서 증명 프로세스는 VM 아래 가상화 플랫폼이 아닌 VM 환경만 분석합니다.
-- **개발/테스트 시나리오**의 경우 버전을 더 쉽게 업그레이드할 수 있으므로 호스트 키 증명을 권장합니다.
+- **물리적 프로덕션 서버** 의 경우 제공되는 추가 보증을 위해 TPM 증명을 사용하는 것이 좋습니다.
+- **가상 프로덕션 서버** 의 경우 대부분의 가상 머신에는 가상 TPM 또는 보안 부팅이 없으므로 호스트 키 증명을 권장합니다. [온-프레미스 보호된 VM](/windows-server/security/guarded-fabric-shielded-vm/guarded-fabric-and-shielded-vms-top-node) 같이 보안이 강화된 VM을 사용하는 경우 TPM 모드를 사용하도록 선택할 수 있습니다. 모든 가상화된 배포에서 증명 프로세스는 VM 아래 가상화 플랫폼이 아닌 VM 환경만 분석합니다.
+- **개발/테스트 시나리오** 의 경우 버전을 더 쉽게 업그레이드할 수 있으므로 호스트 키 증명을 권장합니다.
 
 ### <a name="trust-model"></a>신뢰 모델
 

@@ -16,13 +16,13 @@ helpviewer_keywords:
 ms.assetid: b1dd8413-0cd0-411b-a79b-1bb043ccc62d
 author: stevestein
 ms.author: sstein
-monikerRange: =azuresqldb-current||>=sql-server-2016||=sqlallproducts-allversions||>=sql-server-linux-2017||=azuresqldb-mi-current
-ms.openlocfilehash: 7e2bc61b8c69f3e52fc5149a1c3313ee4f0dc8d1
-ms.sourcegitcommit: 99f61724de5edf6640efd99916d464172eb23f92
+monikerRange: =azuresqldb-current||>=sql-server-2016||>=sql-server-linux-2017||=azuresqldb-mi-current
+ms.openlocfilehash: 85c93be3f041e470a7c4d1838467a997ff7dd56f
+ms.sourcegitcommit: 1a544cf4dd2720b124c3697d1e62ae7741db757c
 ms.translationtype: HT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 07/28/2020
-ms.locfileid: "87363161"
+ms.lasthandoff: 12/14/2020
+ms.locfileid: "97476504"
 ---
 # <a name="create-a-user-defined-data-type-alias"></a>사용자 정의 데이터 형식 별칭 만들기
 [!INCLUDE [SQL Server Azure SQL Database](../../includes/applies-to-version/sql-asdb.md)]
@@ -51,13 +51,13 @@ ms.locfileid: "87363161"
 ###  <a name="security"></a><a name="Security"></a> 보안  
   
 ####  <a name="permissions"></a><a name="Permissions"></a> 권한  
- 현재 데이터베이스에 대한 CREATE TYPE 권한 및 *schema_name*에 대한 ALTER 권한이 필요합니다. *schema_name* 을 지정하지 않으면 현재 사용자에 대한 스키마를 결정하는 기본 이름 확인 규칙이 적용됩니다.  
+ 현재 데이터베이스에 대한 CREATE TYPE 권한 및 *schema_name* 에 대한 ALTER 권한이 필요합니다. *schema_name* 을 지정하지 않으면 현재 사용자에 대한 스키마를 결정하는 기본 이름 확인 규칙이 적용됩니다.  
   
 ##  <a name="using-sql-server-management-studio"></a><a name="SSMSProcedure"></a> SQL Server Management Studio 사용  
   
 #### <a name="to-create-a-user-defined-data-type"></a>사용자 정의 데이터 형식을 만들려면  
   
-1.  개체 탐색기에서 **데이터베이스**를 확장하고 목록에서 원하는 데이터베이스를 확장한 다음, **프로그래밍 기능**과 **유형**을 차례로 확장하고 **사용자 정의 데이터 형식**을 마우스 오른쪽 단추로 클릭한 다음 **새 사용자 정의 데이터 형식**을 클릭합니다.  
+1.  개체 탐색기에서 **데이터베이스** 를 확장하고 목록에서 원하는 데이터베이스를 확장한 다음, **프로그래밍 기능** 과 **유형** 을 차례로 확장하고 **사용자 정의 데이터 형식** 을 마우스 오른쪽 단추로 클릭한 다음 **새 사용자 정의 데이터 형식** 을 클릭합니다.  
   
      **NULL 허용**  
      사용자 정의 데이터 형식에 NULL 값이 허용되는지 여부를 지정합니다. 기존 사용자 정의 데이터 형식의 Null 허용 여부는 편집할 수 없습니다.  
@@ -95,7 +95,7 @@ ms.locfileid: "87363161"
     |20 - 28|13|  
     |29 - 38|17|  
   
-     **nchar** 및 **nvarchar** 데이터 형식의 경우 스토리지 값이 항상 **길이**값의 두 배입니다.  
+     **nchar** 및 **nvarchar** 데이터 형식의 경우 스토리지 값이 항상 **길이** 값의 두 배입니다.  
   
      **nvarchar(max)** , **varchar(max)** 또는 **varbinary(max)** 데이터 형식에 대해서는 스토리지가 표시되지 않습니다.  
   
@@ -105,7 +105,7 @@ ms.locfileid: "87363161"
   
 4.  **데이터 형식** 상자에서 어떤 데이터 형식을 기반으로 새 데이터 형식 별칭을 만들 것인지 선택합니다.  
   
-5.  해당 데이터 형식에 맞게 적절히 **길이**, **전체 자릿수**및 **소수 자릿수** 상자를 채웁니다.  
+5.  해당 데이터 형식에 맞게 적절히 **길이**, **전체 자릿수** 및 **소수 자릿수** 상자를 채웁니다.  
   
 6.  새 데이터 형식 별칭에 NULL 값을 허용하려면 **NULL 허용** 확인란을 선택합니다.  
   
@@ -117,9 +117,9 @@ ms.locfileid: "87363161"
   
 1.  [!INCLUDE[ssDE](../../includes/ssde-md.md)]에 연결합니다.  
   
-2.  표준 도구 모음에서 **새 쿼리**를 클릭합니다.  
+2.  표준 도구 모음에서 **새 쿼리** 를 클릭합니다.  
   
-3.  다음 예를 복사하여 쿼리 창에 붙여 넣고 **실행**을 클릭합니다. 이 예에서는 시스템이 제공하는 `varchar` 데이터 형식을 기반으로 데이터 형식 별칭을 만듭니다. `ssn` 데이터 형식 별칭은 11자리의 주민 등록 번호(999-99-9999)를 보유하는 열에 사용됩니다. 이 열은 NULL이 될 수 없습니다.  
+3.  다음 예를 복사하여 쿼리 창에 붙여 넣고 **실행** 을 클릭합니다. 이 예에서는 시스템이 제공하는 `varchar` 데이터 형식을 기반으로 데이터 형식 별칭을 만듭니다. `ssn` 데이터 형식 별칭은 11자리의 주민 등록 번호(999-99-9999)를 보유하는 열에 사용됩니다. 이 열은 NULL이 될 수 없습니다.  
   
 ```sql  
 CREATE TYPE ssn  

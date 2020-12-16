@@ -17,13 +17,13 @@ helpviewer_keywords:
 ms.assetid: 0f97f953-33c5-4b26-afeb-db2a26ce38b4
 author: rothja
 ms.author: jroth
-monikerRange: =azuresqldb-current||>=sql-server-2016||=sqlallproducts-allversions||>=sql-server-linux-2017||=azuresqldb-mi-current
-ms.openlocfilehash: ec282485aec37e07684de2430c2379bf584b4b05
-ms.sourcegitcommit: e700497f962e4c2274df16d9e651059b42ff1a10
+monikerRange: =azuresqldb-current||>=sql-server-2016||>=sql-server-linux-2017||=azuresqldb-mi-current
+ms.openlocfilehash: 1c3e022c0c284fa1c2b4ef6824c94cec609e8222
+ms.sourcegitcommit: 1a544cf4dd2720b124c3697d1e62ae7741db757c
 ms.translationtype: HT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 08/17/2020
-ms.locfileid: "88485444"
+ms.lasthandoff: 12/14/2020
+ms.locfileid: "97477204"
 ---
 # <a name="delete-or-disable-dml-triggers"></a>DML 트리거 삭제 또는 해제
 [!INCLUDE [SQL Server SQL Database](../../includes/applies-to-version/sql-asdb.md)]
@@ -64,23 +64,23 @@ ms.locfileid: "88485444"
   
 #### <a name="to-delete-a-dml-trigger"></a>DML 트리거를 삭제하려면  
   
-1.  **개체 탐색기**에서 [!INCLUDE[ssDE](../../includes/ssde-md.md)] 의 인스턴스에 연결한 다음 해당 인스턴스를 확장합니다.  
+1.  **개체 탐색기** 에서 [!INCLUDE[ssDE](../../includes/ssde-md.md)] 의 인스턴스에 연결한 다음 해당 인스턴스를 확장합니다.  
   
-2.  원하는 데이터베이스를 확장하고 **테이블**을 확장한 다음 삭제할 트리거가 포함된 테이블을 확장합니다.  
+2.  원하는 데이터베이스를 확장하고 **테이블** 을 확장한 다음 삭제할 트리거가 포함된 테이블을 확장합니다.  
   
-3.  **트리거**를 확장하고 삭제할 트리거를 마우스 오른쪽 단추로 클릭한 다음 **삭제**를 클릭합니다.  
+3.  **트리거** 를 확장하고 삭제할 트리거를 마우스 오른쪽 단추로 클릭한 다음 **삭제** 를 클릭합니다.  
   
-4.  **개체 삭제** 대화 상자에서 삭제할 트리거를 확인한 다음 **확인**을 클릭합니다.  
+4.  **개체 삭제** 대화 상자에서 삭제할 트리거를 확인한 다음 **확인** 을 클릭합니다.  
   
 #### <a name="to-disable-and-enable-a-dml-trigger"></a>DML 트리거를 비활성화하거나 활성화하려면  
   
-1.  **개체 탐색기**에서 [!INCLUDE[ssDE](../../includes/ssde-md.md)] 의 인스턴스에 연결한 다음 해당 인스턴스를 확장합니다.  
+1.  **개체 탐색기** 에서 [!INCLUDE[ssDE](../../includes/ssde-md.md)] 의 인스턴스에 연결한 다음 해당 인스턴스를 확장합니다.  
   
-2.  원하는 데이터베이스를 확장하고 **테이블**을 확장한 다음 비활성화할 트리거가 포함된 테이블을 확장합니다.  
+2.  원하는 데이터베이스를 확장하고 **테이블** 을 확장한 다음 비활성화할 트리거가 포함된 테이블을 확장합니다.  
   
-3.  **트리거**를 확장하고 비활성화할 트리거를 마우스 오른쪽 단추로 클릭한 다음 **사용 안 함**을 클릭합니다.  
+3.  **트리거** 를 확장하고 비활성화할 트리거를 마우스 오른쪽 단추로 클릭한 다음 **사용 안 함** 을 클릭합니다.  
   
-4.  트리거를 활성화하려면 **사용**을 클릭합니다.  
+4.  트리거를 활성화하려면 **사용** 을 클릭합니다.  
   
 ##  <a name="using-transact-sql"></a><a name="TsqlProcedure"></a> Transact-SQL 사용  
   
@@ -88,7 +88,7 @@ ms.locfileid: "88485444"
   
 1.  [!INCLUDE[ssDE](../../includes/ssde-md.md)]에 연결합니다.  
   
-2.  표준 도구 모음에서 **새 쿼리**를 클릭합니다.  
+2.  표준 도구 모음에서 **새 쿼리** 를 클릭합니다.  
   
 3.  다음 예를 복사하여 쿼리 창에 붙여 넣습니다. [트리거를 만들려면](../../t-sql/statements/create-trigger-transact-sql.md) CREATE TRIGGER `Sales.bonus_reminder` 문을 실행합니다. 트리거를 삭제하려면 [DROP TRIGGER](../../t-sql/statements/drop-trigger-transact-sql.md) 문을 실행합니다.  
   
@@ -122,7 +122,7 @@ GO
   
 1.  [!INCLUDE[ssDE](../../includes/ssde-md.md)]에 연결합니다.  
   
-2.  표준 도구 모음에서 **새 쿼리**를 클릭합니다.  
+2.  표준 도구 모음에서 **새 쿼리** 를 클릭합니다.  
   
 3.  다음 예를 복사하여 쿼리 창에 붙여 넣습니다. [트리거를 만들려면](../../t-sql/statements/create-trigger-transact-sql.md) CREATE TRIGGER `Sales.bonus_reminder` 문을 실행합니다. 트리거를 비활성화하거나 활성화려면 [DISABLE TRIGGER](../../t-sql/statements/disable-trigger-transact-sql.md) 및 [ENABLE TRIGGER](../../t-sql/statements/enable-trigger-transact-sql.md) 문을 각각 실행합니다.  
   

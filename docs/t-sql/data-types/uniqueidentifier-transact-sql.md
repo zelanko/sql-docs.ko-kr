@@ -20,13 +20,13 @@ helpviewer_keywords:
 ms.assetid: b026035b-f3d2-4d70-989d-3884b4ca0233
 author: MikeRayMSFT
 ms.author: mikeray
-monikerRange: '>=aps-pdw-2016||=azuresqldb-current||=azure-sqldw-latest||>=sql-server-2016||=sqlallproducts-allversions||>=sql-server-linux-2017||=azuresqldb-mi-current'
-ms.openlocfilehash: 1e91b310355bf42e465989e84d93f6f292fa853d
-ms.sourcegitcommit: 22dacedeb6e8721e7cdb6279a946d4002cfb5da3
+monikerRange: '>=aps-pdw-2016||=azuresqldb-current||=azure-sqldw-latest||>=sql-server-2016||>=sql-server-linux-2017||=azuresqldb-mi-current'
+ms.openlocfilehash: 7a651f065f8f230e80d8e2ae2fa32aa0f1e4659e
+ms.sourcegitcommit: 1a544cf4dd2720b124c3697d1e62ae7741db757c
 ms.translationtype: HT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 10/14/2020
-ms.locfileid: "92037476"
+ms.lasthandoff: 12/14/2020
+ms.locfileid: "97474214"
 ---
 # <a name="uniqueidentifier-transact-sql"></a>uniqueidentifier(Transact-SQL)
 [!INCLUDE [sql-asdb-asdbmi-asa-pdw](../../includes/applies-to-version/sql-asdb-asdbmi-asa-pdw.md)]
@@ -36,7 +36,7 @@ ms.locfileid: "92037476"
 ## <a name="remarks"></a>설명  
 **uniqueidentifier** 데이터 형식의 열이나 지역 변수는 다음 방법에 따라 값으로 초기화됩니다.
 -   [NEWID](../../t-sql/functions/newid-transact-sql.md) 또는 [NEWSEQUENTIALID](../../t-sql/functions/newsequentialid-transact-sql.md) 함수를 사용합니다.    
--   문자열 상수에서 *xxxxxxxx*-*xxxx*-*xxxx*-*xxxx*-*xxxxxxxxxxxx* 형식으로 변환합니다. 여기서 *x*는 0-9 또는 a-f 범위의 16진수입니다. 예를 들어 6F9619FF-8B86-D011-B42D-00C04FC964FF는 유효한 **uniqueidentifier** 값입니다.  
+-   문자열 상수에서 *xxxxxxxx*-*xxxx*-*xxxx*-*xxxx*-*xxxxxxxxxxxx* 형식으로 변환합니다. 여기서 *x* 는 0-9 또는 a-f 범위의 16진수입니다. 예를 들어 6F9619FF-8B86-D011-B42D-00C04FC964FF는 유효한 **uniqueidentifier** 값입니다.  
   
 비교 연산자는 **uniqueidentifier** 값으로 사용할 수 있습니다. 그러나 순서는 두 값의 비트 패턴을 비교하여 구현되지 않습니다. **uniqueidentifier** 값에 대해서는 비교(=, <>, \<, >, \<=, >=) 및 NULL에 대한 확인(IS NULL 및 IS NOT NULL) 연산만 수행할 수 있습니다. 다른 산술 연산자는 사용할 수 없습니다. IDENTITY를 제외한 모든 열 제약 조건과 속성은 **uniqueidentifier** 데이터 형식에서 사용할 수 있습니다.
   

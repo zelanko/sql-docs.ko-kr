@@ -12,13 +12,13 @@ helpviewer_keywords:
 ms.assetid: a7d15816-a788-4099-ad91-dc4b26618299
 author: stevestein
 ms.author: sstein
-monikerRange: '>=aps-pdw-2016||=azuresqldb-current||=azure-sqldw-latest||>=sql-server-2016||=sqlallproducts-allversions||>=sql-server-linux-2017||=azuresqldb-mi-current'
-ms.openlocfilehash: 343ad174485697864a4f253f0c4d6352b8b12abb
-ms.sourcegitcommit: 75f767c7b1ead31f33a870fddab6bef52f99906b
+monikerRange: '>=aps-pdw-2016||=azuresqldb-current||=azure-sqldw-latest||>=sql-server-2016||>=sql-server-linux-2017||=azuresqldb-mi-current'
+ms.openlocfilehash: b7a5b7631a2c3122bc97a2c93c9d6c0ae202bb04
+ms.sourcegitcommit: 1a544cf4dd2720b124c3697d1e62ae7741db757c
 ms.translationtype: HT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 07/28/2020
-ms.locfileid: "87332600"
+ms.lasthandoff: 12/14/2020
+ms.locfileid: "97475284"
 ---
 # <a name="grant-permissions-on-a-stored-procedure"></a>저장 프로시저에 대한 사용 권한 부여
 [!INCLUDE[SQL Server Azure SQL Database Synapse Analytics PDW ](../../includes/applies-to-version/sql-asdb-asdbmi-asa-pdw.md)]
@@ -55,15 +55,15 @@ ms.locfileid: "87332600"
   
 1.  개체 탐색기에서 [!INCLUDE[ssDE](../../includes/ssde-md.md)] 의 인스턴스에 연결한 다음 해당 인스턴스를 확장합니다.  
   
-2.  **데이터베이스**를 확장하고 해당 프로시저가 속한 데이터베이스를 확장한 다음 **프로그래밍 기능**을 확장합니다.  
+2.  **데이터베이스** 를 확장하고 해당 프로시저가 속한 데이터베이스를 확장한 다음 **프로그래밍 기능** 을 확장합니다.  
   
-3.  **저장 프로시저**를 확장하고 사용 권한을 부여할 프로시저를 마우스 오른쪽 단추로 클릭한 다음 **속성**을 클릭합니다.  
+3.  **저장 프로시저** 를 확장하고 사용 권한을 부여할 프로시저를 마우스 오른쪽 단추로 클릭한 다음 **속성** 을 클릭합니다.  
   
-4.  **저장 프로시저 속성**에서 **사용 권한** 페이지를 선택합니다.  
+4.  **저장 프로시저 속성** 에서 **사용 권한** 페이지를 선택합니다.  
   
-5.  사용자, 데이터베이스 역할 또는 애플리케이션 역할에 사용 권한을 부여하려면 **검색**을 클릭합니다.  
+5.  사용자, 데이터베이스 역할 또는 애플리케이션 역할에 사용 권한을 부여하려면 **검색** 을 클릭합니다.  
   
-6.  **사용자 또는 역할 선택**에서 **개체 유형** 을 클릭하여 원하는 사용자 및 역할을 추가하거나 지웁니다.  
+6.  **사용자 또는 역할 선택** 에서 **개체 유형** 을 클릭하여 원하는 사용자 및 역할을 추가하거나 지웁니다.  
   
 7.  **찾아보기** 를 클릭하여 사용자 또는 역할의 목록을 표시합니다. 사용 권한을 부여할 사용자 또는 역할을 선택합니다.  
   
@@ -77,9 +77,9 @@ ms.locfileid: "87332600"
   
 1.  [!INCLUDE[ssDE](../../includes/ssde-md.md)]에 연결합니다.  
   
-2.  표준 도구 모음에서 **새 쿼리**를 클릭합니다.  
+2.  표준 도구 모음에서 **새 쿼리** 를 클릭합니다.  
   
-3.  다음 예를 복사하여 쿼리 창에 붙여 넣고 **실행**을 클릭합니다. 이 예에서는 `EXECUTE` 이라는 애플리케이션 역할에 대해 저장 프로시저 `HumanResources.uspUpdateEmployeeHireInfo` 에 대한 `Recruiting11`권한을 부여합니다.  
+3.  다음 예를 복사하여 쿼리 창에 붙여 넣고 **실행** 을 클릭합니다. 이 예에서는 `EXECUTE` 이라는 애플리케이션 역할에 대해 저장 프로시저 `HumanResources.uspUpdateEmployeeHireInfo` 에 대한 `Recruiting11`권한을 부여합니다.  
   
 ```sql  
 USE AdventureWorks2012;   

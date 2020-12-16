@@ -16,13 +16,13 @@ helpviewer_keywords:
 ms.assetid: 7b4fd480-9eaf-40dd-9a07-77301e44e2ac
 author: MashaMSFT
 ms.author: mathoma
-monikerRange: =azuresqldb-current||>=sql-server-2016||=sqlallproducts-allversions
-ms.openlocfilehash: c9e762060e3afdc5df7802249e99075de66ef751
-ms.sourcegitcommit: df1f0f2dfb9452f16471e740273cd1478ff3100c
+monikerRange: =azuresqldb-current||>=sql-server-2016
+ms.openlocfilehash: 71782c95201c224bdd40624e23f529b01d892f22
+ms.sourcegitcommit: 1a544cf4dd2720b124c3697d1e62ae7741db757c
 ms.translationtype: HT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 07/29/2020
-ms.locfileid: "87395028"
+ms.lasthandoff: 12/14/2020
+ms.locfileid: "97475944"
 ---
 # <a name="replication-distribution-agent"></a>복제 배포 에이전트
 [!INCLUDE[sql-asdb](../../../includes/applies-to-version/sql-asdb.md)]
@@ -95,7 +95,7 @@ distrib [-?]
  사용 가능한 모든 매개 변수를 출력합니다.  
   
  **-Publisher** _server_name_[ **\\** _instance_name_]  
- 게시자의 이름입니다. 해당 서버에 있는 [!INCLUDE[msCoName](../../../includes/msconame-md.md)] [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)]의 기본 인스턴스에 대해 *server_name*을 지정합니다. 해당 서버에 있는 명명된 _server_name_ **\\** _instance_name_ instance_name [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] 인스턴스에 대해 server_name을 지정하고,  
+ 게시자의 이름입니다. 해당 서버에 있는 [!INCLUDE[msCoName](../../../includes/msconame-md.md)] [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)]의 기본 인스턴스에 대해 *server_name* 을 지정합니다. 해당 서버에 있는 명명된 _server_name_ **\\** _instance_name_ instance_name [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] 인스턴스에 대해 server_name을 지정하고,  
   
  **-PublisherDB** _publisher_database_  
  게시자 데이터베이스의 이름입니다.  
@@ -172,7 +172,7 @@ distrib [-?]
  FTP 서비스에 연결할 때 사용할 사용자 이름입니다. 지정되지 않은 경우, **anonymous** 가 사용됩니다.  
   
  **-HistoryVerboseLevel** [ **0** \| **1** \| **2** \| **3** ]  
- 배포 작업을 수행하는 동안 기록에 추가되는 양을 지정합니다. **1**을 선택하여 기록 로깅이 성능에 주는 영향을 최소화할 수 있습니다.  
+ 배포 작업을 수행하는 동안 기록에 추가되는 양을 지정합니다. **1** 을 선택하여 기록 로깅이 성능에 주는 영향을 최소화할 수 있습니다.  
   
 |HistoryVerboseLevel 값|Description|  
 |-------------------------------|-----------------|  
@@ -191,7 +191,7 @@ distrib [-?]
  로그인 시간이 초과될 때까지 걸리는 시간(초)입니다. 기본값은 **15** 초입니다.  
   
  **-MaxBcpThreads** _number_of_threads_  
- 병렬로 수행할 수 있는 대량 복사 작업 수를 지정합니다. 동시에 존재하는 스레드 및 ODBC 연결의 최대 개수는 **MaxBcpThreads** 와 배포 데이터베이스의 동기화 트랜잭션에 나타나는 대량 복사 요청 수 중 더 작은 값입니다. **MaxBcpThreads** 값은 **0** 보다 크고 하드 코딩된 상한값이 없어야 합니다. 기본값은 최대값이 **8** 인 프로세서 수의 **2**배입니다. 게시자에서 동시 스냅샷 옵션을 사용하여 생성된 스냅샷을 적용할 경우 **MaxBcpThreads**에 지정한 숫자에 관계없이 하나의 스레드가 사용됩니다.  
+ 병렬로 수행할 수 있는 대량 복사 작업 수를 지정합니다. 동시에 존재하는 스레드 및 ODBC 연결의 최대 개수는 **MaxBcpThreads** 와 배포 데이터베이스의 동기화 트랜잭션에 나타나는 대량 복사 요청 수 중 더 작은 값입니다. **MaxBcpThreads** 값은 **0** 보다 크고 하드 코딩된 상한값이 없어야 합니다. 기본값은 최대값이 **8** 인 프로세서 수의 **2** 배입니다. 게시자에서 동시 스냅샷 옵션을 사용하여 생성된 스냅샷을 적용할 경우 **MaxBcpThreads** 에 지정한 숫자에 관계없이 하나의 스레드가 사용됩니다.  
   
  **-MaxDeliveredTransactions** _number_of_transactions_  
  한 번의 동기화에서 구독자에 적용되는 밀어넣기 또는 끌어오기 트랜잭션의 최대 개수입니다. 값 **0** 은 최대값이 무한개의 트랜잭션임을 나타냅니다. 다른 값은 구독자가 게시자에서 끌어오는 동기화의 기간을 줄이는 데 사용할 수 있습니다.  
@@ -211,18 +211,18 @@ distrib [-?]
 **-MultiSubnetFailover** MultiSubnetFailover 속성이 사용되는지 여부를 지정합니다. 애플리케이션이 다른 서브넷의 AG(AlwaysOn 가용성 그룹)에 연결 중인 경우 MultiSubnetFailover=true을 설정하면 (현재) 활성 서버를 더 신속하게 검색하여 연결할 수 있습니다.
   
  **-OledbStreamThreshold** _oledb_stream_threshold_  
- BLOB(Binary Large Object)의 최소 크기(바이트)를 지정합니다. 이 크기를 넘으면 데이터가 스트림으로 바인딩됩니다. 이 매개 변수를 사용하려면 **–UseOledbStreaming**을 지정해야 합니다. 값은 400바이트에서 1048576바이트 사이일 수 있으며 기본값은 16384바이트입니다.  
+ BLOB(Binary Large Object)의 최소 크기(바이트)를 지정합니다. 이 크기를 넘으면 데이터가 스트림으로 바인딩됩니다. 이 매개 변수를 사용하려면 **–UseOledbStreaming** 을 지정해야 합니다. 값은 400바이트에서 1048576바이트 사이일 수 있으며 기본값은 16384바이트입니다.  
   
  **-Output** _output_path_and_file_name_  
  에이전트 출력 파일의 경로입니다. 파일 이름을 지정하지 않으면 출력이 콘솔로 전달됩니다. 지정된 파일 이름이 존재하면 출력이 파일에 추가됩니다.  
   
  **-OutputVerboseLevel** [ **0**| **1**| **2**]  
- 출력이 자세해야 하는지 여부를 지정합니다. 정보 표시 수준이 **0**이면 오류 메시지만 출력됩니다. 정보 표시 수준이 **1**이면 모든 진행률 보고 메시지가 출력됩니다. 정보 표시 수준이 **2** (기본값)이면 디버깅에 유용한 오류 메시지와 진행률 보고 메시지가 모두 출력됩니다.  
+ 출력이 자세해야 하는지 여부를 지정합니다. 정보 표시 수준이 **0** 이면 오류 메시지만 출력됩니다. 정보 표시 수준이 **1** 이면 모든 진행률 보고 메시지가 출력됩니다. 정보 표시 수준이 **2** (기본값)이면 디버깅에 유용한 오류 메시지와 진행률 보고 메시지가 모두 출력됩니다.  
   
  **-PacketSize** _packet_size_  
  패킷 크기(바이트)입니다. 기본값은 4096바이트입니다.  
   
- **-PollingInterval** _polling_interval__  
+ **-PollingInterval** _polling_interval_ _  
  배포 데이터베이스에서 복제된 트랜잭션을 쿼리하는 빈도(초)입니다. 기본값은 5초입니다.  
   
  **-ProfileName** _profile_name_  
@@ -268,7 +268,7 @@ distrib [-?]
 >  여러 연결 중 하나가 실행 또는 커밋되지 않으면 모든 연결에서 현재 일괄 처리를 중지하고 에이전트가 단일 스트림을 사용하여 실패한 일괄 처리를 다시 시도합니다. 이러한 재시도 단계가 완료되기 전에는 구독자에 임시 트랜잭션 불일치가 발생할 수 있으며 실패한 일괄 처리가 성공적으로 커밋되면 구독자의 트랜잭션 일관성이 다시 유지됩니다.  
   
 > [!IMPORTANT]  
->  **-SubscriptionStreams**의 값으로 2 이상을 지정할 경우 구독자에서 트랜잭션을 받는 순서가 게시자에서 트랜잭션을 만든 순서와 다를 수 있습니다. 이 동작으로 인해 동기화 중 제약 조건 위반이 발생할 경우에는 동기화할 때 NOT FOR REPLICATION 옵션을 사용하여 제약 조건이 적용되지 않도록 해야 합니다. 자세한 내용은 [동기화하는 동안 트리거 및 제약 조건 동작 제어&#40;복제 Transact-SQL 프로그래밍&#41;](../../../relational-databases/replication/control-behavior-of-triggers-and-constraints-in-synchronization.md)를 참조하세요.  
+>  **-SubscriptionStreams** 의 값으로 2 이상을 지정할 경우 구독자에서 트랜잭션을 받는 순서가 게시자에서 트랜잭션을 만든 순서와 다를 수 있습니다. 이 동작으로 인해 동기화 중 제약 조건 위반이 발생할 경우에는 동기화할 때 NOT FOR REPLICATION 옵션을 사용하여 제약 조건이 적용되지 않도록 해야 합니다. 자세한 내용은 [동기화하는 동안 트리거 및 제약 조건 동작 제어&#40;복제 Transact-SQL 프로그래밍&#41;](../../../relational-databases/replication/control-behavior-of-triggers-and-constraints-in-synchronization.md)를 참조하세요.  
   
 > [!NOTE]  
 >  Subscriptionstreams는 [!INCLUDE[tsql](../../../includes/tsql-md.md)]을 제공하도록 구성된 아티클에 대해서는 작동하지 않습니다. subscriptionstreams를 사용하려면 대신 저장 프로시저 호출을 제공하도록 아티클을 구성하십시오.  
@@ -280,7 +280,7 @@ distrib [-?]
  배포의 구독 유형을 지정합니다. 값 **0** 은 밀어넣기 구독을, 값 **1** 은 끌어오기 구독을, 값 **2** 는 익명 구독을 나타냅니다.  
   
  **-TransactionsPerHistory** [ **0**| **1**|... **10000**]  
- 기록 로깅의 트랜잭션 간격을 지정합니다. 기록 로깅의 마지막 인스턴스 후 커밋된 트랜잭션의 수가 이 옵션보다 클 경우 기록 메시지가 기록됩니다. 기본값은 100입니다. 값이 **0** 이면 **TransactionsPerHistory**에는 제한이 없습니다. See the preceding **–MessageInterval**parameter.  
+ 기록 로깅의 트랜잭션 간격을 지정합니다. 기록 로깅의 마지막 인스턴스 후 커밋된 트랜잭션의 수가 이 옵션보다 클 경우 기록 메시지가 기록됩니다. 기본값은 100입니다. 값이 **0** 이면 **TransactionsPerHistory** 에는 제한이 없습니다. See the preceding **–MessageInterval** parameter.  
   
  **-UseDTS**  
  데이터 변환을 허용하는 게시의 매개 변수로 지정해야 합니다.  
@@ -289,7 +289,7 @@ distrib [-?]
  배포 에이전트에서 구독자에 스냅샷 파일을 적용할 때 BULK INSERT 명령을 사용하도록 지정하여 초기 스냅샷의 성능을 향상시킵니다. 이 매개 변수는 XML 데이터 형식과 호환되지 않으므로 이후에는 지원되지 않습니다. XML 데이터를 복제하지 않을 계획이라면 이 매개 변수를 사용할 수 있습니다. 이 매개 변수는 문자 모드 스냅샷 또는 [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] 이외 구독자와 함께 사용할 수 없습니다. 이 매개 변수를 사용하려면 구독자의 [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] 서비스 계정에 스냅샷 .bcp 데이터 파일이 있는 디렉터리에 대한 읽기 권한이 있어야 합니다. 이 매개 변수를 사용하지 않으면 에이전트([!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] 이외 구독자의 경우) 또는 에이전트에서 로드한 ODBC 드라이버([!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] 구독자의 경우)가 파일 내용을 읽으므로 [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] 서비스 계정의 보안 컨텍스트가 사용되지 않습니다.  
   
  **-UseOledbStreaming**  
- 이 인수를 지정하면 BLOB(Binary Large Object) 데이터를 스트림으로 바인딩할 수 있습니다. 크기(바이트)가 얼마 이상일 때 스트림을 사용할지를 지정하려면 **-OledbStreamThreshold** 를 사용합니다. **UseOledbStreaming** 은 기본적으로 사용하도록 설정됩니다. **UseOledbStreaming**은 **C:\Program Files\Microsoft SQL Server\\<version\>\COM** 폴더에 데이터를 씁니다.  
+ 이 인수를 지정하면 BLOB(Binary Large Object) 데이터를 스트림으로 바인딩할 수 있습니다. 크기(바이트)가 얼마 이상일 때 스트림을 사용할지를 지정하려면 **-OledbStreamThreshold** 를 사용합니다. **UseOledbStreaming** 은 기본적으로 사용하도록 설정됩니다. **UseOledbStreaming** 은 **C:\Program Files\Microsoft SQL Server\\<version\>\COM** 폴더에 데이터를 씁니다.  
   
 ## <a name="remarks"></a>설명  
   

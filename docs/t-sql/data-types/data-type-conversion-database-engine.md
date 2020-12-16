@@ -21,13 +21,13 @@ helpviewer_keywords:
 ms.assetid: ffacf45e-a488-48d0-9bb0-dcc7fd365299
 author: MikeRayMSFT
 ms.author: mikeray
-monikerRange: '>=aps-pdw-2016||=azuresqldb-current||=azure-sqldw-latest||>=sql-server-2016||=sqlallproducts-allversions||>=sql-server-linux-2017||=azuresqldb-mi-current'
-ms.openlocfilehash: 38ffa83b86097e8789c61b26f161d6021f5ee79b
-ms.sourcegitcommit: 22dacedeb6e8721e7cdb6279a946d4002cfb5da3
+monikerRange: '>=aps-pdw-2016||=azuresqldb-current||=azure-sqldw-latest||>=sql-server-2016||>=sql-server-linux-2017||=azuresqldb-mi-current'
+ms.openlocfilehash: f879b6e749f3797a51970708be59b3b68920cb26
+ms.sourcegitcommit: 1a544cf4dd2720b124c3697d1e62ae7741db757c
 ms.translationtype: HT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 10/14/2020
-ms.locfileid: "92036886"
+ms.lasthandoff: 12/14/2020
+ms.locfileid: "97474244"
 ---
 # <a name="data-type-conversion-database-engine"></a>데이터 형식 변환(데이터베이스 엔진)
 [!INCLUDE [sql-asdb-asdbmi-asa-pdw](../../includes/applies-to-version/sql-asdb-asdbmi-asa-pdw.md)]
@@ -41,7 +41,7 @@ ms.locfileid: "92036886"
 ## <a name="implicit-and-explicit-conversion"></a>암시적 및 명시적 변환
 데이터 형식은 암시적으로 또는 명시적으로 변환할 수 있습니다.
   
-암시적 변환은 사용자에게 보이지 않습니다. [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]는 데이터 형식을 자동으로 변환합니다. 예를 들어 **smallint**를 **int**와 비교하는 경우 **smallint**는 비교가 진행되기 전에 암시적으로 **int**로 변환됩니다.
+암시적 변환은 사용자에게 보이지 않습니다. [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]는 데이터 형식을 자동으로 변환합니다. 예를 들어 **smallint** 를 **int** 와 비교하는 경우 **smallint** 는 비교가 진행되기 전에 암시적으로 **int** 로 변환됩니다.
   
 **GETDATE()** 는 암시적으로 날짜 스타일 0으로 변환합니다. **SYSDATETIME()** 은 암시적으로 날짜 스타일 21로 변환합니다.
   
@@ -55,7 +55,7 @@ CAST ( $157.27 AS VARCHAR(10) )
   
 [!INCLUDE[tsql](../../includes/tsql-md.md)] 프로그램 코드를 ISO에 맞추려면 CONVERT 대신 CAT를 사용하고, CONVERT의 스타일 기능을 사용하려면 CAST 대신 CONVERT를 사용합니다.
   
-다음 그림에서는 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 시스템 제공 데이터 형식에 허용된 모든 명시적 및 암시적 데이터 형식 변환을 보여 줍니다. 여기에는 **xml**, **bigint** 및 **sql_variant**가 포함됩니다. 할당 시 **sql_variant** 데이터 형식에서 암시적으로 변환되지는 않지만 **sql_variant**로는 암시적으로 변환됩니다.
+다음 그림에서는 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 시스템 제공 데이터 형식에 허용된 모든 명시적 및 암시적 데이터 형식 변환을 보여 줍니다. 여기에는 **xml**, **bigint** 및 **sql_variant** 가 포함됩니다. 할당 시 **sql_variant** 데이터 형식에서 암시적으로 변환되지는 않지만 **sql_variant** 로는 암시적으로 변환됩니다.
   
 ![데이터 형식 변환 테이블](../../t-sql/data-types/media/lrdatahd.png "데이터 형식 변환 테이블")
 
@@ -96,7 +96,7 @@ SELECT @notastring + '1'
 
 ## <a name="data-type-conversion-behaviors"></a>데이터 형식 변환 동작
 
-[!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 개체의 데이터 형식을 변환할 때 일부 암시적 및 명시적 데이터 형식 변환은 지원되지 않습니다. 예를 들면 **nchar** 값은 **이미지** 값으로 변환할 수 없습니다. **nchar**는 명시적 변환을 사용하여 **이진**으로만 변환할 수 있고, **이진**으로의 암시적 변환은 지원되지 않습니다. 그러나 **nchar**는 암시적으로나 명시적으로 **nvarchar**로 변환할 수 있습니다.
+[!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 개체의 데이터 형식을 변환할 때 일부 암시적 및 명시적 데이터 형식 변환은 지원되지 않습니다. 예를 들면 **nchar** 값은 **이미지** 값으로 변환할 수 없습니다. **nchar** 는 명시적 변환을 사용하여 **이진** 으로만 변환할 수 있고, **이진** 으로의 암시적 변환은 지원되지 않습니다. 그러나 **nchar** 는 암시적으로나 명시적으로 **nvarchar** 로 변환할 수 있습니다.
   
 다음 항목에서는 해당 데이터 형식이 나타내는 변환 동작에 대해 설명합니다.
   
@@ -134,9 +134,9 @@ SELECT @notastring + '1'
 |**real**|**Single**|  
 |**money**, **smallmoney**|**통화**|  
 |**datetime**, **smalldatetime**|**날짜**|  
-|NULL로 설정된 모든 것|**Variant**가 null로 설정되었습니다|  
+|NULL로 설정된 모든 것|**Variant** 가 null로 설정되었습니다|  
   
-단일 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 값은 **binary**, **varbinary** 및 **이미지** 값을 제외하고 모두 단일 [!INCLUDE[vbprvb](../../includes/vbprvb-md.md)] 값으로 변환됩니다. 이러한 값은 [!INCLUDE[vbprvb](../../includes/vbprvb-md.md)]의 1차원 **Byte()** 배열로 변환됩니다. 이 배열에는 **Byte(** 0에서 _length_ 1까지 **)** 의 범위가 포함됩니다. 여기서 *length*는 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] **binary**, **varbinary** 또는 **image** 값의 바이트 수입니다.
+단일 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 값은 **binary**, **varbinary** 및 **이미지** 값을 제외하고 모두 단일 [!INCLUDE[vbprvb](../../includes/vbprvb-md.md)] 값으로 변환됩니다. 이러한 값은 [!INCLUDE[vbprvb](../../includes/vbprvb-md.md)]의 1차원 **Byte()** 배열로 변환됩니다. 이 배열에는 **Byte(** 0에서 _length_ 1까지 **)** 의 범위가 포함됩니다. 여기서 *length* 는 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] **binary**, **varbinary** 또는 **image** 값의 바이트 수입니다.
   
 이들은 [!INCLUDE[vbprvb](../../includes/vbprvb-md.md)] 데이터 형식에서 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 데이터 형식으로 변환한 것입니다.
   

@@ -29,13 +29,13 @@ helpviewer_keywords:
 ms.assetid: 2c00ee51-2062-4e47-8b19-d90f524c6427
 author: pmasl
 ms.author: umajay
-monikerRange: = azuresqldb-current || >= sql-server-2016 || >= sql-server-linux-2017 || = azure-sqldw-latest||= sqlallproducts-allversions
-ms.openlocfilehash: a630e9d8d1622d10015c3c23024fa643f858bde0
-ms.sourcegitcommit: 1126792200d3b26ad4c29be1f561cf36f2e82e13
+monikerRange: = azuresqldb-current || >= sql-server-2016 || >= sql-server-linux-2017 || = azure-sqldw-latest
+ms.openlocfilehash: a9d7992469339a429478d8aee79d01c8f71dd3dd
+ms.sourcegitcommit: 1a544cf4dd2720b124c3697d1e62ae7741db757c
 ms.translationtype: HT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 09/14/2020
-ms.locfileid: "90076680"
+ms.lasthandoff: 12/14/2020
+ms.locfileid: "97476794"
 ---
 # <a name="dbcc-checkident-transact-sql"></a>DBCC CHECKIDENT(Transact-SQL)
 
@@ -95,7 +95,7 @@ DBCC CHECKIDENT
 |-----------------------------|---------------------------------------------|  
 |DBCC CHECKIDENT(*table_name*, NORESEED)|현재 ID 값을 다시 설정하지 않습니다. DBCC CHECKIDENT는 ID 열의 현재 ID 값과 현재 최대값을 반환합니다. 두 값이 같지 않으면 ID 값을 다시 설정하여 잠재적 오류를 방지하고 값이 간격 없이 순서대로 지정되도록 해야 합니다.|  
 |DBCC CHECKIDENT(*table_name*)<br /><br /> 또는<br /><br /> DBCC CHECKIDENT( *table_name*, RESEED )|테이블의 현재 ID 값이 ID 열에 저장된 최대 ID 값보다 작을 경우 ID 열의 최대값을 사용하여 다시 설정됩니다. 뒷부분에 나오는 '예외' 섹션을 참조하십시오.|  
-|DBCC CHECKIDENT(*table_name*, RESEED, *new_reseed_value*)|현재 ID 값이 *new_reseed_value*로 설정됩니다. 테이블이 생성된 후 삽입된 행이 없거나 TRUNCATE TABLE 문을 사용하여 모든 행을 제거한 경우에는 DBCC CHECKIDENT를 실행한 후에 처음 삽입되는 행이 *new_reseed_value*를 ID로 사용하게 됩니다. 테이블에 행이 있거나 DELETE 문을 사용하여 모든 행을 제거한 경우 삽입된 다음 행은 *new_reseed_value* + [현재 증분](../../t-sql/functions/ident-incr-transact-sql.md) 값을 사용합니다. 트랜잭션이 행을 삽입하고 나중에 롤백되는 경우 삽입된 다음 행은 행이 삭제된 것처럼 *new_reseed_value* + [현재 증분](../../t-sql/functions/ident-incr-transact-sql.md) 값을 사용합니다. 테이블이 비어 있지 않은 경우 ID 값을 ID 열의 최대값보다 작은 숫자로 설정하면 다음 조건 중 하나가 발생할 수 있습니다.<br /><br /> \- ID 열에 PRIMARY KEY 또는 UNIQUE 제약 조건이 있으면 생성된 ID 값이 기존값과 충돌하므로 나중에 테이블에 삽입 작업을 수행할 때 오류 메세지 2627이 생성됩니다.<br /><br /> \- PRIMARY KEY 또는 UNIQUE 제약 조건이 없으면 나중에 삽입 작업을 수행할 때 중복 ID 값이 생성됩니다.|  
+|DBCC CHECKIDENT(*table_name*, RESEED, *new_reseed_value*)|현재 ID 값이 *new_reseed_value* 로 설정됩니다. 테이블이 생성된 후 삽입된 행이 없거나 TRUNCATE TABLE 문을 사용하여 모든 행을 제거한 경우에는 DBCC CHECKIDENT를 실행한 후에 처음 삽입되는 행이 *new_reseed_value* 를 ID로 사용하게 됩니다. 테이블에 행이 있거나 DELETE 문을 사용하여 모든 행을 제거한 경우 삽입된 다음 행은 *new_reseed_value* + [현재 증분](../../t-sql/functions/ident-incr-transact-sql.md) 값을 사용합니다. 트랜잭션이 행을 삽입하고 나중에 롤백되는 경우 삽입된 다음 행은 행이 삭제된 것처럼 *new_reseed_value* + [현재 증분](../../t-sql/functions/ident-incr-transact-sql.md) 값을 사용합니다. 테이블이 비어 있지 않은 경우 ID 값을 ID 열의 최대값보다 작은 숫자로 설정하면 다음 조건 중 하나가 발생할 수 있습니다.<br /><br /> \- ID 열에 PRIMARY KEY 또는 UNIQUE 제약 조건이 있으면 생성된 ID 값이 기존값과 충돌하므로 나중에 테이블에 삽입 작업을 수행할 때 오류 메세지 2627이 생성됩니다.<br /><br /> \- PRIMARY KEY 또는 UNIQUE 제약 조건이 없으면 나중에 삽입 작업을 수행할 때 중복 ID 값이 생성됩니다.|  
   
 ## <a name="exceptions"></a>예외
 
@@ -103,8 +103,8 @@ DBCC CHECKIDENT
   
 |조건|다시 설정 방법|  
 |---------------|-------------------|  
-|현재 ID 값이 테이블의 최대값보다 큰 경우|DBCC CHECKIDENT(*table_name*, NORESEED)를 실행하여 열의 현재 최댓값을 확인합니다. 그런 다음, DBCC CHECKIDENT(*table_name*, RESEED,*new_reseed_value*) 명령에서 해당 값을 *new_reseed_value*로 지정합니다.<br /><br /> 또는<br /><br /> *new_reseed_value*를 매우 낮은 값으로 설정하여 DBCC CHECKIDENT(*table-name*, RESEED,*new_reseed_value*)를 실행한 다음, DBCC CHECKIDENT(*table_name*, RESEED)를 실행하여 값을 수정합니다.|  
-|모든 행이 테이블에서 삭제되는 경우|*new_reseed_value*를 새 시작 값으로 설정하여 DBCC CHECKIDENT(*table_name*, RESEED,*new_reseed_value*)를 실행합니다.|  
+|현재 ID 값이 테이블의 최대값보다 큰 경우|DBCC CHECKIDENT(*table_name*, NORESEED)를 실행하여 열의 현재 최댓값을 확인합니다. 그런 다음, DBCC CHECKIDENT(*table_name*, RESEED,*new_reseed_value*) 명령에서 해당 값을 *new_reseed_value* 로 지정합니다.<br /><br /> 또는<br /><br /> *new_reseed_value* 를 매우 낮은 값으로 설정하여 DBCC CHECKIDENT(*table-name*, RESEED,*new_reseed_value*)를 실행한 다음, DBCC CHECKIDENT(*table_name*, RESEED)를 실행하여 값을 수정합니다.|  
+|모든 행이 테이블에서 삭제되는 경우|*new_reseed_value* 를 새 시작 값으로 설정하여 DBCC CHECKIDENT(*table_name*, RESEED,*new_reseed_value*)를 실행합니다.|  
   
 ## <a name="changing-the-seed-value"></a>초기값 변경
 
@@ -124,7 +124,7 @@ DBCC CHECKIDENT
   
 `Checking identity information: current identity value '\<current identity value>', current column value '\<current column value>'. DBCC execution completed. If DBCC printed error messages, contact your system administrator.`
   
- RESEED *new_reseed_value*를 사용하여 새 시드 값을 지정하는 데 DBCC CHECKIDENT가 사용될 경우에는 다음 메시지가 반환됩니다.  
+ RESEED *new_reseed_value* 를 사용하여 새 시드 값을 지정하는 데 DBCC CHECKIDENT가 사용될 경우에는 다음 메시지가 반환됩니다.  
   
 `Checking identity information: current identity value '\<current identity value>'. DBCC execution completed. If DBCC printed error messages, contact your system administrator.`
   
