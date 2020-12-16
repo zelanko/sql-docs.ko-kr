@@ -7,13 +7,13 @@ ms.date: 03/12/2020
 ms.topic: conceptual
 ms.prod: sql
 ms.technology: linux
-moniker: '>= sql-server-linux-2017 || >= sql-server-2017 || =sqlallproducts-allversions'
-ms.openlocfilehash: 0e35acbb3bd331117170a41eb3665ddc2fb9f9ab
-ms.sourcegitcommit: 22102f25db5ccca39aebf96bc861c92f2367c77a
+moniker: '>= sql-server-linux-2017 || >= sql-server-2017 '
+ms.openlocfilehash: b5fcfbf30028c904be96ca17be1ebb7feeb6f91d
+ms.sourcegitcommit: 1a544cf4dd2720b124c3697d1e62ae7741db757c
 ms.translationtype: HT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 10/16/2020
-ms.locfileid: "92115866"
+ms.lasthandoff: 12/14/2020
+ms.locfileid: "97471424"
 ---
 # <a name="restore-a-sql-server-database-in-a-linux-docker-container"></a>Linux Docker 컨테이너에서 SQL Server 데이터베이스 복원
 
@@ -26,7 +26,7 @@ ms.locfileid: "92115866"
 
 ::: moniker-end
 <!--SQL Server 2019 on Linux-->
-::: moniker range=">= sql-server-linux-ver15 || >= sql-server-ver15 || =sqlallproducts-allversions"
+::: moniker range=">= sql-server-linux-ver15 || >= sql-server-ver15 "
 
 이 자습서에서는 SQL Server 백업 파일을 Docker에서 실행되는 SQL Server 2019 Linux 컨테이너 이미지로 이동하고 복원하는 방법을 보여 줍니다.
 
@@ -82,7 +82,7 @@ ms.locfileid: "92115866"
       -d mcr.microsoft.com/mssql/server:2017-latest
    ```
 
-   이 명령은 Developer Edition(기본값)을 사용하여 SQL Server 2017 컨테이너를 만듭니다. SQL Server 포트 **1433**은 호스트에서 포트 **1401**로 공개됩니다. 선택적 `-v sql1data:/var/opt/mssql` 매개 변수는 **sql1ddata**라는 데이터 볼륨 컨테이너를 만듭니다. 이 컨테이너는 SQL Server에서 생성된 데이터를 유지하는 데 사용됩니다.
+   이 명령은 Developer Edition(기본값)을 사용하여 SQL Server 2017 컨테이너를 만듭니다. SQL Server 포트 **1433** 은 호스트에서 포트 **1401** 로 공개됩니다. 선택적 `-v sql1data:/var/opt/mssql` 매개 변수는 **sql1ddata** 라는 데이터 볼륨 컨테이너를 만듭니다. 이 컨테이너는 SQL Server에서 생성된 데이터를 유지하는 데 사용됩니다.
 
    > [!IMPORTANT]
    > 이 예제에서는 Docker 내의 데이터 볼륨 컨테이너를 사용합니다. 대신 호스트 디렉터리를 매핑하도록 선택한 경우, Mac 및 Windows용 Docker에서는 이 방법에 제한 사항이 있습니다. 자세한 내용은 [Docker에서 SQL Server 컨테이너 이미지 구성](./sql-server-linux-docker-container-configure.md#persist)을 참조하세요.
@@ -97,7 +97,7 @@ ms.locfileid: "92115866"
    docker ps -a
    ```
 
-1. **상태** 열이 **Up**의 상태를 표시하는 경우, SQL Server는 컨테이너에서 실행되며 **포트** 열의 지정된 포트에서 수신 대기합니다. SQL Server 컨테이너의 **상태** 열이 **Exited**를 표시하는 경우, [구성 가이드의 문제 해결 섹션](./sql-server-linux-docker-container-troubleshooting.md)을 참조하세요.
+1. **상태** 열이 **Up** 의 상태를 표시하는 경우, SQL Server는 컨테이너에서 실행되며 **포트** 열의 지정된 포트에서 수신 대기합니다. SQL Server 컨테이너의 **상태** 열이 **Exited** 를 표시하는 경우, [구성 가이드의 문제 해결 섹션](./sql-server-linux-docker-container-troubleshooting.md)을 참조하세요.
 
   ```bash
   $ sudo docker ps -a
@@ -108,7 +108,7 @@ ms.locfileid: "92115866"
 
 ::: moniker-end
 <!--SQL Server 2019 on Linux-->
-::: moniker range=">= sql-server-linux-ver15 || >= sql-server-ver15 || =sqlallproducts-allversions"
+::: moniker range=">= sql-server-linux-ver15 || >= sql-server-ver15 "
 
 1. Linux/Mac에서 Bash 터미널을 열거나 Windows에서 관리자 권한 PowerShell 세션을 엽니다.
 
@@ -141,7 +141,7 @@ ms.locfileid: "92115866"
       -d mcr.microsoft.com/mssql/server:2019-CU3-ubuntu-18.04
    ```
 
-   이 명령은 Developer Edition(기본값)을 사용하여 SQL Server 2019 컨테이너를 만듭니다. SQL Server 포트 **1433**은 호스트에서 포트 **1401**로 공개됩니다. 선택적 `-v sql1data:/var/opt/mssql` 매개 변수는 **sql1ddata**라는 데이터 볼륨 컨테이너를 만듭니다. 이 컨테이너는 SQL Server에서 생성된 데이터를 유지하는 데 사용됩니다.
+   이 명령은 Developer Edition(기본값)을 사용하여 SQL Server 2019 컨테이너를 만듭니다. SQL Server 포트 **1433** 은 호스트에서 포트 **1401** 로 공개됩니다. 선택적 `-v sql1data:/var/opt/mssql` 매개 변수는 **sql1ddata** 라는 데이터 볼륨 컨테이너를 만듭니다. 이 컨테이너는 SQL Server에서 생성된 데이터를 유지하는 데 사용됩니다.
 
 1. Docker 컨테이너를 보려면 `docker ps` 명령을 사용합니다.
 
@@ -153,7 +153,7 @@ ms.locfileid: "92115866"
    docker ps -a
    ```
 
-1. **상태** 열이 **Up**의 상태를 표시하는 경우, SQL Server는 컨테이너에서 실행되며 **포트** 열의 지정된 포트에서 수신 대기합니다. SQL Server 컨테이너의 **상태** 열이 **Exited**를 표시하는 경우, [구성 가이드의 문제 해결 섹션](./sql-server-linux-docker-container-troubleshooting.md)을 참조하세요.
+1. **상태** 열이 **Up** 의 상태를 표시하는 경우, SQL Server는 컨테이너에서 실행되며 **포트** 열의 지정된 포트에서 수신 대기합니다. SQL Server 컨테이너의 **상태** 열이 **Exited** 를 표시하는 경우, [구성 가이드의 문제 해결 섹션](./sql-server-linux-docker-container-troubleshooting.md)을 참조하세요.
 
    ```bash
    $ sudo docker ps -a
@@ -172,7 +172,7 @@ ms.locfileid: "92115866"
 
 이 자습서에서는 [Wide World Importers 샘플 데이터베이스](../samples/wide-world-importers-what-is.md)를 사용합니다. 다음 단계를 사용하여 Wide World Importers 데이터베이스 백업 파일을 다운로드하고 SQL Server 컨테이너에 복사합니다.
 
-1. 먼저 **docker exec**를 사용하여 백업 폴더를 만듭니다. 다음 명령은 SQL Server 컨테이너 내부에 **/var/opt/mssql/backup** 디렉터리를 만듭니다.
+1. 먼저 **docker exec** 를 사용하여 백업 폴더를 만듭니다. 다음 명령은 SQL Server 컨테이너 내부에 **/var/opt/mssql/backup** 디렉터리를 만듭니다.
 
    ```bash
    sudo docker exec -it sql1 mkdir /var/opt/mssql/backup
@@ -182,7 +182,7 @@ ms.locfileid: "92115866"
    docker exec -it sql1 mkdir /var/opt/mssql/backup
    ```
 
-1. 그런 다음, 호스트 컴퓨터에 [WideWorldImporters-Full.bak](https://github.com/Microsoft/sql-server-samples/releases/tag/wide-world-importers-v1.0) 파일을 다운로드합니다. 다음 명령을 사용하여 home/user 디렉터리로 이동하고 백업 파일을 **wwi.bak**로 다운로드합니다.
+1. 그런 다음, 호스트 컴퓨터에 [WideWorldImporters-Full.bak](https://github.com/Microsoft/sql-server-samples/releases/tag/wide-world-importers-v1.0) 파일을 다운로드합니다. 다음 명령을 사용하여 home/user 디렉터리로 이동하고 백업 파일을 **wwi.bak** 로 다운로드합니다.
 
    ```bash
    cd ~
@@ -193,7 +193,7 @@ ms.locfileid: "92115866"
    curl -OutFile "wwi.bak" "https://github.com/Microsoft/sql-server-samples/releases/download/wide-world-importers-v1.0/WideWorldImporters-Full.bak"
    ```
 
-1. **docker cp**를 사용하여 백업 파일을 **/var/opt/mssql/backup** 디렉터리의 컨테이너로 복사합니다.
+1. **docker cp** 를 사용하여 백업 파일을 **/var/opt/mssql/backup** 디렉터리의 컨테이너로 복사합니다.
 
    ```bash
    sudo docker cp wwi.bak sql1:/var/opt/mssql/backup
@@ -205,12 +205,12 @@ ms.locfileid: "92115866"
 
 ## <a name="restore-the-database"></a>데이터베이스 복원
 
-이제 백업 파일이 컨테이너 내부에 있습니다. 백업을 복원하기 전에 백업 내의 논리적 파일 이름 및 파일 형식을 알고 있어야 합니다. 다음 Transact-SQL 명령은 백업을 검사하고 컨테이너에서 **sqlcmd**를 사용하여 복원을 수행합니다.
+이제 백업 파일이 컨테이너 내부에 있습니다. 백업을 복원하기 전에 백업 내의 논리적 파일 이름 및 파일 형식을 알고 있어야 합니다. 다음 Transact-SQL 명령은 백업을 검사하고 컨테이너에서 **sqlcmd** 를 사용하여 복원을 수행합니다.
 
 > [!TIP]
-> 컨테이너에 이 도구가 미리 설치되어 제공되므로 이 자습서에서는 컨테이너 내부에서 **sqlcmd**를 사용합니다. 그러나 컨테이너 외부에서 [Visual Studio Code](../tools/visual-studio-code/sql-server-develop-use-vscode.md) 또는 [SQL Server Management Studio](sql-server-linux-manage-ssms.md)와 같은 다른 클라이언트 도구를 사용하여 Transact-SQL 문을 실행할 수도 있습니다. 연결하려면 컨테이너에서 포트 1433에 매핑된 호스트 포트를 사용합니다. 이 예제에서 해당 호스트 포트는 호스트 머신의 **localhost,1401** 및 원격으로 **Host_IP_Address,1401**입니다.
+> 컨테이너에 이 도구가 미리 설치되어 제공되므로 이 자습서에서는 컨테이너 내부에서 **sqlcmd** 를 사용합니다. 그러나 컨테이너 외부에서 [Visual Studio Code](../tools/visual-studio-code/sql-server-develop-use-vscode.md) 또는 [SQL Server Management Studio](sql-server-linux-manage-ssms.md)와 같은 다른 클라이언트 도구를 사용하여 Transact-SQL 문을 실행할 수도 있습니다. 연결하려면 컨테이너에서 포트 1433에 매핑된 호스트 포트를 사용합니다. 이 예제에서 해당 호스트 포트는 호스트 머신의 **localhost,1401** 및 원격으로 **Host_IP_Address,1401** 입니다.
 
-1. 컨테이너 내에서 **sqlcmd**를 실행하여 백업 내부 논리적 파일 이름 및 경로를 나열합니다. 이 작업에는 **RESTORE FILELISTONLY** Transact-SQL 문을 사용합니다.
+1. 컨테이너 내에서 **sqlcmd** 를 실행하여 백업 내부 논리적 파일 이름 및 경로를 나열합니다. 이 작업에는 **RESTORE FILELISTONLY** Transact-SQL 문을 사용합니다.
 
    ```bash
    sudo docker exec -it sql1 /opt/mssql-tools/bin/sqlcmd -S localhost \
@@ -294,7 +294,7 @@ docker exec -it sql1 /opt/mssql-tools/bin/sqlcmd `
    -Q "SELECT Name FROM sys.Databases"
 ```
 
-데이터베이스 목록에 **WideWorldImporters**가 표시됩니다.
+데이터베이스 목록에 **WideWorldImporters** 가 표시됩니다.
 
 ## <a name="make-a-change"></a>변경
 
@@ -358,7 +358,7 @@ docker exec -it sql1 /opt/mssql-tools/bin/sqlcmd `
 
 데이터베이스를 컨테이너로 복원한 후 실행 중인 컨테이너 내에서 정기적으로 데이터베이스 백업을 만들 수도 있습니다. 해당 단계는 이전 단계와 비슷한 패턴을 따르지만 방향은 반대입니다.
 
-1. **BACKUP DATABASE** Transact-SQL 명령을 사용하여 컨테이너에서 데이터베이스 백업을 만듭니다. 이 자습서에서는 이전에 만든 **/var/opt/mssql/backup** 디렉터리에 새 백업 파일인 **wwi_2.bak**를 만듭니다.
+1. **BACKUP DATABASE** Transact-SQL 명령을 사용하여 컨테이너에서 데이터베이스 백업을 만듭니다. 이 자습서에서는 이전에 만든 **/var/opt/mssql/backup** 디렉터리에 새 백업 파일인 **wwi_2.bak** 를 만듭니다.
 
    ```bash
    sudo docker exec -it sql1 /opt/mssql-tools/bin/sqlcmd \
@@ -407,7 +407,7 @@ docker exec -it sql1 /opt/mssql-tools/bin/sqlcmd `
 
 ## <a name="use-the-persisted-data"></a>지속형 데이터 사용
 
-데이터를 보호하기 위해 데이터베이스 백업을 수행할 뿐 아니라 데이터 볼륨 컨테이너를 사용할 수도 있습니다. 이 자습서의 시작 부분에서는 `-v sql1data:/var/opt/mssql` 매개 변수를 사용하여 **sql1** 컨테이너를 만들었습니다. **sql1data** 데이터 볼륨 컨테이너는 컨테이너가 제거된 후에도 **/var/opt/mssql** 데이터를 유지합니다. 다음 단계에서는 **sql1** 컨테이너를 완전히 제거한 후 지속형 데이터를 사용하여 새 컨테이너인 **sql2**를 만듭니다.
+데이터를 보호하기 위해 데이터베이스 백업을 수행할 뿐 아니라 데이터 볼륨 컨테이너를 사용할 수도 있습니다. 이 자습서의 시작 부분에서는 `-v sql1data:/var/opt/mssql` 매개 변수를 사용하여 **sql1** 컨테이너를 만들었습니다. **sql1data** 데이터 볼륨 컨테이너는 컨테이너가 제거된 후에도 **/var/opt/mssql** 데이터를 유지합니다. 다음 단계에서는 **sql1** 컨테이너를 완전히 제거한 후 지속형 데이터를 사용하여 새 컨테이너인 **sql2** 를 만듭니다.
 
 <!--SQL Server 2017 on Linux -->
 ::: moniker range="= sql-server-linux-2017 || = sql-server-2017"
@@ -432,7 +432,7 @@ docker exec -it sql1 /opt/mssql-tools/bin/sqlcmd `
    docker rm sql1
    ```
 
-1. 새 컨테이너인 **sql2**를 만들고 **sql1data** 데이터 볼륨 컨테이너를 다시 사용합니다.
+1. 새 컨테이너인 **sql2** 를 만들고 **sql1data** 데이터 볼륨 컨테이너를 다시 사용합니다.
 
    ```bash
    sudo docker run -e 'ACCEPT_EULA=Y' -e 'MSSQL_SA_PASSWORD=<YourStrong!Passw0rd>' \
@@ -461,11 +461,11 @@ docker exec -it sql1 /opt/mssql-tools/bin/sqlcmd `
    ```
 
    > [!NOTE]
-   > SA 암호는 **sql2** 컨테이너인 `MSSQL_SA_PASSWORD=<YourStrong!Passw0rd>`에 대해 지정한 암호가 아닙니다. 자습서의 앞부분에서 변경된 암호를 포함하여 모든 SQL Server 데이터가 **sql1**에서 복원되었습니다. 실제로 /var/opt/mssql의 데이터를 복원하기 때문에 이와 같은 일부 옵션은 무시됩니다. 이런 이유로 암호는 여기 표시된 대로 `<YourNewStrong!Passw0rd>`입니다.
+   > SA 암호는 **sql2** 컨테이너인 `MSSQL_SA_PASSWORD=<YourStrong!Passw0rd>`에 대해 지정한 암호가 아닙니다. 자습서의 앞부분에서 변경된 암호를 포함하여 모든 SQL Server 데이터가 **sql1** 에서 복원되었습니다. 실제로 /var/opt/mssql의 데이터를 복원하기 때문에 이와 같은 일부 옵션은 무시됩니다. 이런 이유로 암호는 여기 표시된 대로 `<YourNewStrong!Passw0rd>`입니다.
 
 ::: moniker-end
 <!--SQL Server 2019 on Linux-->
-::: moniker range=">= sql-server-linux-ver15 || >= sql-server-ver15 || =sqlallproducts-allversions"
+::: moniker range=">= sql-server-linux-ver15 || >= sql-server-ver15 "
 
 1. **sql1** 컨테이너를 중지합니다.
 
@@ -487,7 +487,7 @@ docker exec -it sql1 /opt/mssql-tools/bin/sqlcmd `
    docker rm sql1
    ```
 
-1. 새 컨테이너인 **sql2**를 만들고 **sql1data** 데이터 볼륨 컨테이너를 다시 사용합니다.
+1. 새 컨테이너인 **sql2** 를 만들고 **sql1data** 데이터 볼륨 컨테이너를 다시 사용합니다.
 
     ```bash
     sudo docker run -e 'ACCEPT_EULA=Y' -e 'MSSQL_SA_PASSWORD=<YourStrong!Passw0rd>' \
@@ -516,7 +516,7 @@ docker exec -it sql1 /opt/mssql-tools/bin/sqlcmd `
    ```
 
    > [!NOTE]
-   > SA 암호는 **sql2** 컨테이너인 `MSSQL_SA_PASSWORD=<YourStrong!Passw0rd>`에 대해 지정한 암호가 아닙니다. 자습서의 앞부분에서 변경된 암호를 포함하여 모든 SQL Server 데이터가 **sql1**에서 복원되었습니다. 실제로 /var/opt/mssql의 데이터를 복원하기 때문에 이와 같은 일부 옵션은 무시됩니다. 이런 이유로 암호는 여기 표시된 대로 `<YourNewStrong!Passw0rd>`입니다.
+   > SA 암호는 **sql2** 컨테이너인 `MSSQL_SA_PASSWORD=<YourStrong!Passw0rd>`에 대해 지정한 암호가 아닙니다. 자습서의 앞부분에서 변경된 암호를 포함하여 모든 SQL Server 데이터가 **sql1** 에서 복원되었습니다. 실제로 /var/opt/mssql의 데이터를 복원하기 때문에 이와 같은 일부 옵션은 무시됩니다. 이런 이유로 암호는 여기 표시된 대로 `<YourNewStrong!Passw0rd>`입니다.
 
 ::: moniker-end
 
@@ -529,7 +529,7 @@ docker exec -it sql1 /opt/mssql-tools/bin/sqlcmd `
 
 ::: moniker-end
 <!--SQL Server 2019 on Linux-->
-::: moniker range=">= sql-server-linux-ver15 || >= sql-server-ver15 || =sqlallproducts-allversions"
+::: moniker range=">= sql-server-linux-ver15 || >= sql-server-ver15 "
 
 이 자습서에서는 Windows에서 데이터베이스를 백업하고 SQL Server 2019를 실행하는 Linux 서버로 이동하는 방법을 알아보았습니다. 구체적으로 다음 작업 방법을 알아보았습니다.
 
@@ -538,7 +538,7 @@ docker exec -it sql1 /opt/mssql-tools/bin/sqlcmd `
 > [!div class="checklist"]
 > * SQL Server Linux 컨테이너 이미지를 만듭니다.
 > * SQL Server 데이터베이스 백업을 컨테이너에 복사합니다.
-> * **sqlcmd**를 사용하여 컨테이너 내에서 Transact-SQL 문을 실행합니다.
+> * **sqlcmd** 를 사용하여 컨테이너 내에서 Transact-SQL 문을 실행합니다.
 > * 컨테이너에서 백업 파일을 만들고 추출합니다.
 > * Docker의 데이터 볼륨 컨테이너를 사용하여 SQL Server 데이터를 유지합니다.
 

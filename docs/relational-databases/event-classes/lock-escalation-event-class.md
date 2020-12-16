@@ -13,13 +13,13 @@ helpviewer_keywords:
 ms.assetid: d253b44c-7600-4afa-a3a7-03cc937c6a4b
 author: stevestein
 ms.author: sstein
-monikerRange: =azuresqldb-current||>=sql-server-2016||=sqlallproducts-allversions||>=sql-server-linux-2017||=azuresqldb-mi-current
-ms.openlocfilehash: c1a4185e9234d9ee0a19acc0dfba0879c31ccfc3
-ms.sourcegitcommit: e700497f962e4c2274df16d9e651059b42ff1a10
+monikerRange: =azuresqldb-current||>=sql-server-2016||>=sql-server-linux-2017||=azuresqldb-mi-current
+ms.openlocfilehash: 507fde1100c35ecff2d637c9aeb57f3888f8df9d
+ms.sourcegitcommit: 1a544cf4dd2720b124c3697d1e62ae7741db757c
 ms.translationtype: HT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 08/17/2020
-ms.locfileid: "88448675"
+ms.lasthandoff: 12/14/2020
+ms.locfileid: "97469624"
 ---
 # <a name="lockescalation-event-class"></a>Lock:Escalation 이벤트 클래스
  [!INCLUDE [SQL Server](../../includes/applies-to-version/sqlserver.md)]
@@ -58,7 +58,7 @@ ms.locfileid: "88448675"
 |**StartTime**|**datetime**|이벤트가 시작된 시간입니다(사용 가능한 경우).|14|예|  
 |**TextData**|**ntext**|잠금 에스컬레이션을 발생시킨 [!INCLUDE[tsql](../../includes/tsql-md.md)] 문의 텍스트입니다.|1|예|  
 |**TransactionID**|**bigint**|시스템이 할당한 트랜잭션의 ID입니다.|4|예|  
-|**유형**|**int**|잠금 에스컬레이션 세분성:<br /><br /> 1=NULL_RESOURCE<br /><br /> 2=DATABASE<br /><br /> 3=FILE<br /><br /> 5=OBJECT(테이블 수준)<br /><br /> 6=PAGE<br /><br /> 7=KEY<br /><br /> 8=EXTENT<br /><br /> 9=RID<br /><br /> 10=APPLICATION<br /><br /> 11=METADATA<br /><br /> 12=HOBT<br /><br /> 13=ALLOCATION_UNIT|57|예|  
+|**형식**|**int**|잠금 에스컬레이션 세분성:<br /><br /> 1=NULL_RESOURCE<br /><br /> 2=DATABASE<br /><br /> 3=FILE<br /><br /> 5=OBJECT(테이블 수준)<br /><br /> 6=PAGE<br /><br /> 7=KEY<br /><br /> 8=EXTENT<br /><br /> 9=RID<br /><br /> 10=APPLICATION<br /><br /> 11=METADATA<br /><br /> 12=HOBT<br /><br /> 13=ALLOCATION_UNIT|57|예|  
   
 ## <a name="examples"></a>예제  
  다음 예에서는 `sp_trace_create` 프로시저를 사용하여 추적을 만들고 `sp_trace_setevent` 를 사용하여 추적에 잠금 에스컬레이션 열을 추가한 다음 `sp_trace_setstatus` 를 추적을 시작합니다. `EXEC sp_trace_setevent @TraceID, 60, 22, 1`과 같은 문에서 숫자 `60` 은 에스컬레이션 이벤트 클래스를 나타내고, `22` 는 **ObjectID** 열을 나타내며, `1` 은 추적 이벤트를 ON으로 설정합니다.  

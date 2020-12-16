@@ -8,12 +8,12 @@ ms.date: 11/04/2019
 ms.topic: conceptual
 ms.prod: sql
 ms.technology: linux
-ms.openlocfilehash: 5529412dd1c575f25fb372aba3428edcce55431a
-ms.sourcegitcommit: f7ac1976d4bfa224332edd9ef2f4377a4d55a2c9
+ms.openlocfilehash: 8f8487b4246a349169891f68e4068ad233f78d21
+ms.sourcegitcommit: 1a544cf4dd2720b124c3697d1e62ae7741db757c
 ms.translationtype: HT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 07/02/2020
-ms.locfileid: "85900085"
+ms.lasthandoff: 12/14/2020
+ms.locfileid: "97471634"
 ---
 # <a name="how-to-use-distributed-transactions-with-sql-server-on-docker"></a>Docker의 SQL Server에서 분산 트랜잭션을 사용하는 방법
 
@@ -55,7 +55,7 @@ docker run `
 
 ::: moniker-end
 <!--SQL Server 2019 on Linux-->
-::: moniker range=">= sql-server-linux-ver15 || >= sql-server-ver15 || =sqlallproducts-allversions"
+::: moniker range=">= sql-server-linux-ver15 || >= sql-server-ver15 "
 
 다음 예제에서는 이 환경 변수를 사용하여 MSDTC에 대해 구성된 단일 SQL Server 2019 컨테이너를 풀하고 실행하는 방법을 보여 줍니다. 이를 통해 호스트의 모든 애플리케이션과 통신할 수 있습니다.
 

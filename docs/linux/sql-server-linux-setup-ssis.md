@@ -8,12 +8,12 @@ ms.date: 01/09/2018
 ms.topic: conceptual
 ms.prod: sql
 ms.technology: linux
-ms.openlocfilehash: a8ec33ad6d3c2bfc9c8f3adab2acad2fdb74ce0d
-ms.sourcegitcommit: 3ea082c778f6771b17d90fb597680ed334d3e0ec
+ms.openlocfilehash: e34fd6c218950b86a46f43842c06408feefedfc9
+ms.sourcegitcommit: 1a544cf4dd2720b124c3697d1e62ae7741db757c
 ms.translationtype: HT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 08/11/2020
-ms.locfileid: "88088774"
+ms.lasthandoff: 12/14/2020
+ms.locfileid: "97471444"
 ---
 # <a name="install-sql-server-integration-services-ssis-on-linux"></a>Linux에서 SSIS(SQL Server Integration Services) 설치
 
@@ -52,7 +52,7 @@ Ubuntu에 **mssql-server-is** 패키지를 설치하려면 다음 단계를 수�
    sudo apt-get install -y mssql-server-is
    ```
 
-1. Integration Services를 설치한 후에 **ssis-conf**를 실행합니다. 자세한 내용은 [ssis-conf를 사용하여 Linux에서 SSIS 구성](sql-server-linux-configure-ssis.md)을 참조하세요.
+1. Integration Services를 설치한 후에 **ssis-conf** 를 실행합니다. 자세한 내용은 [ssis-conf를 사용하여 Linux에서 SSIS 구성](sql-server-linux-configure-ssis.md)을 참조하세요.
 
    ```bash
    sudo /opt/ssis/bin/ssis-conf setup
@@ -67,7 +67,7 @@ Ubuntu에 **mssql-server-is** 패키지를 설치하려면 다음 단계를 수�
 ::: moniker-end
 
 <!--SQL Server 2019 on Linux-->
-::: moniker range=">= sql-server-linux-ver15 || >= sql-server-ver15 || =sqlallproducts-allversions"
+::: moniker range=">= sql-server-linux-ver15 || >= sql-server-ver15 "
 
 1. 공용 리포지토리 GPG 키를 가져옵니다.
 
@@ -88,7 +88,7 @@ Ubuntu에 **mssql-server-is** 패키지를 설치하려면 다음 단계를 수�
    sudo apt-get install -y mssql-server-is
    ```
 
-1. Integration Services를 설치한 후에 **ssis-conf**를 실행합니다. 자세한 내용은 [ssis-conf를 사용하여 Linux에서 SSIS 구성](sql-server-linux-configure-ssis.md)을 참조하세요.
+1. Integration Services를 설치한 후에 **ssis-conf** 를 실행합니다. 자세한 내용은 [ssis-conf를 사용하여 Linux에서 SSIS 구성](sql-server-linux-configure-ssis.md)을 참조하세요.
 
    ```bash
    sudo /opt/ssis/bin/ssis-conf setup
@@ -104,7 +104,7 @@ Ubuntu에 **mssql-server-is** 패키지를 설치하려면 다음 단계를 수�
 
 ### <a name="update-ssis"></a>SSIS 업데이트
 
-**mssql-server-is**가 이미 설치된 경우 다음 명령을 통해 최신 버전으로 업데이트합니다.
+**mssql-server-is** 가 이미 설치된 경우 다음 명령을 통해 최신 버전으로 업데이트합니다.
 
 ```bash
 sudo apt-get install mssql-server-is
@@ -112,7 +112,7 @@ sudo apt-get install mssql-server-is
 
 ### <a name="remove-ssis"></a>SSIS 제거
 
-**mssql-server-is**를 제거하려면 다음 명령을 실행합니다.
+**mssql-server-is** 를 제거하려면 다음 명령을 실행합니다.
 
 ```bash
 sudo apt-get remove mssql-server-is
@@ -136,7 +136,7 @@ RHEL에 **mssql-server-is** 패키지를 설치하려면 다음 단계를 수행
    sudo yum install -y mssql-server-is
    ```
 
-1. 설치 후에 **ssis-conf**를 실행합니다. 자세한 내용은 [ssis-conf를 사용하여 Linux에서 SSIS 구성](sql-server-linux-configure-ssis.md)을 참조하세요.
+1. 설치 후에 **ssis-conf** 를 실행합니다. 자세한 내용은 [ssis-conf를 사용하여 Linux에서 SSIS 구성](sql-server-linux-configure-ssis.md)을 참조하세요.
 
    ```bash
    sudo /opt/ssis/bin/ssis-conf setup
@@ -151,7 +151,7 @@ RHEL에 **mssql-server-is** 패키지를 설치하려면 다음 단계를 수행
 ::: moniker-end
 
 <!--SQL Server 2019 on Linux-->
-::: moniker range=">= sql-server-linux-ver15 || >= sql-server-ver15 || =sqlallproducts-allversions"
+::: moniker range=">= sql-server-linux-ver15 || >= sql-server-ver15 "
 
 1. SQL Server Red Hat 리포지토리 구성 파일을 다운로드합니다.
 
@@ -165,7 +165,7 @@ RHEL에 **mssql-server-is** 패키지를 설치하려면 다음 단계를 수행
    sudo yum install -y mssql-server-is
    ```
 
-1. 설치 후에 **ssis-conf**를 실행합니다. 자세한 내용은 [ssis-conf를 사용하여 Linux에서 SSIS 구성](sql-server-linux-configure-ssis.md)을 참조하세요.
+1. 설치 후에 **ssis-conf** 를 실행합니다. 자세한 내용은 [ssis-conf를 사용하여 Linux에서 SSIS 구성](sql-server-linux-configure-ssis.md)을 참조하세요.
 
    ```bash
    sudo /opt/ssis/bin/ssis-conf setup
@@ -181,14 +181,14 @@ RHEL에 **mssql-server-is** 패키지를 설치하려면 다음 단계를 수행
 
 ### <a name="update-ssis"></a>SSIS 업데이트
 
-**mssql-server-is**가 이미 설치된 경우 다음 명령을 사용하여 최신 버전으로 업데이트합니다.
+**mssql-server-is** 가 이미 설치된 경우 다음 명령을 사용하여 최신 버전으로 업데이트합니다.
 
 ```bash
 sudo yum update mssql-server-is
 ```
 
 ### <a name="remove-ssis"></a>SSIS 제거
-**mssql-server-is**를 제거하려면 다음 명령을 실행합니다.
+**mssql-server-is** 를 제거하려면 다음 명령을 실행합니다.
 
 ```bash
 sudo yum remove mssql-server-is
@@ -196,7 +196,7 @@ sudo yum remove mssql-server-is
 
 ## <a name="unattended-installation"></a>무인 설치
 
-무인 설치로 **ssis-conf setup**을 실행하려면 다음 단계를 수행합니다.
+무인 설치로 **ssis-conf setup** 을 실행하려면 다음 단계를 수행합니다.
 
 1. **-n**(프롬프트 없음) 옵션을 지정합니다.
 1. 환경 변수를 설정하여 필요한 값을 제공합니다.

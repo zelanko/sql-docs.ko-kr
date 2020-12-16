@@ -10,13 +10,13 @@ ms.topic: conceptual
 ms.assetid: 7af4ad5d-484e-45b4-aa16-83c33b358bb6
 author: MladjoA
 ms.author: mlandzic
-monikerRange: =azuresqldb-current||>=sql-server-2016||=sqlallproducts-allversions||>=sql-server-linux-2017||=azuresqldb-mi-current
-ms.openlocfilehash: 675ff1891d8bcb459ba21d330176eae44a629fe3
-ms.sourcegitcommit: a5398f107599102af7c8cda815d8e5e9a367ce7e
+monikerRange: =azuresqldb-current||>=sql-server-2016||>=sql-server-linux-2017||=azuresqldb-mi-current
+ms.openlocfilehash: dd7654036e8ac2efb787a44f8f5cf7849854c570
+ms.sourcegitcommit: 1a544cf4dd2720b124c3697d1e62ae7741db757c
 ms.translationtype: HT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 10/13/2020
-ms.locfileid: "92006609"
+ms.lasthandoff: 12/14/2020
+ms.locfileid: "97473164"
 ---
 # <a name="query-spatial-data-for-nearest-neighbor"></a>가장 인접한 항목의 공간 데이터 쿼리
 [!INCLUDE [SQL Server Azure SQL Database Azure SQL Managed Instance](../../includes/applies-to-version/sql-asdb-asdbmi.md)]
@@ -24,7 +24,7 @@ ms.locfileid: "92006609"
   
  가장 인접한 항목 쿼리는 여러 가지의 유효한 쿼리 형식으로 작성할 수 있지만 가장 인접한 항목 쿼리에서 공간 인덱스를 사용하는 경우 다음 구문을 사용해야 합니다.  
   
-## <a name="syntax"></a>구문  
+## <a name="syntax"></a>Syntax  
   
 ```  
 SELECT TOP ( number )  
@@ -67,7 +67,7 @@ SELECT TOP ( number )
   
 5.  **ORDER BY** 절의 첫 번째 식은 `STDistance()` 메서드를 사용해야 합니다.  
   
-6.  `STDistance()` ORDER BY **절의 첫 번째** 식에 대한 정렬 순서는 **ASC**여야 합니다.  
+6.  `STDistance()` ORDER BY **절의 첫 번째** 식에 대한 정렬 순서는 **ASC** 여야 합니다.  
   
 7.  `STDistance` 에서 **NULL** 을 반환하는 모든 행은 필터링되어야 합니다.  
   

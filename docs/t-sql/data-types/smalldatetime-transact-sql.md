@@ -22,13 +22,13 @@ helpviewer_keywords:
 ms.assetid: 68b74610-d54c-4c8e-b4b2-7e3747546ee0
 author: MikeRayMSFT
 ms.author: mikeray
-monikerRange: '>=aps-pdw-2016||=azuresqldb-current||=azure-sqldw-latest||>=sql-server-2016||=sqlallproducts-allversions||>=sql-server-linux-2017||=azuresqldb-mi-current'
-ms.openlocfilehash: cacdda83982be9a622e9110b432d0d9b296d3396
-ms.sourcegitcommit: e700497f962e4c2274df16d9e651059b42ff1a10
+monikerRange: '>=aps-pdw-2016||=azuresqldb-current||=azure-sqldw-latest||>=sql-server-2016||>=sql-server-linux-2017||=azuresqldb-mi-current'
+ms.openlocfilehash: 4f96bb94cc58a7b36a294c493f7c0f6e6d8a06b5
+ms.sourcegitcommit: 1a544cf4dd2720b124c3697d1e62ae7741db757c
 ms.translationtype: HT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 08/17/2020
-ms.locfileid: "88422917"
+ms.lasthandoff: 12/14/2020
+ms.locfileid: "97472204"
 ---
 # <a name="smalldatetime-transact-sql"></a>smalldatetime(Transact-SQL)
 
@@ -37,7 +37,7 @@ ms.locfileid: "88422917"
 날짜와 시간을 정의합니다. 시간은 하루 24시간을 기준으로 하며 초는 항상 소수 자릿수 없이 0(:00)으로 표시됩니다.
   
 > [!NOTE]  
->  새 작업에 대해 **time**, **date**, **datetime2** 및 **datetimeoffset** 데이터 형식을 사용합니다. 이러한 데이터 형식은 SQL 표준에 맞는 형식으로, 이식성이 높습니다. **time**, **datetime2** 및 **datetimeoffset**은 초의 정밀도를 높여줍니다. **datetimeoffset**은 전 세계에 배포되는 애플리케이션에 대해 표준 시간대를 지원합니다.  
+>  새 작업에 대해 **time**, **date**, **datetime2** 및 **datetimeoffset** 데이터 형식을 사용합니다. 이러한 데이터 형식은 SQL 표준에 맞는 형식으로, 이식성이 높습니다. **time**, **datetime2** 및 **datetimeoffset** 은 초의 정밀도를 높여줍니다. **datetimeoffset** 은 전 세계에 배포되는 애플리케이션에 대해 표준 시간대를 지원합니다.  
   
 ## <a name="smalldatetime-description"></a>smalldatetime 설명
   
@@ -59,7 +59,7 @@ ms.locfileid: "88422917"
 |일광 절약 시간제 인식|예|  
   
 ## <a name="ansi-and-iso-8601-compliance"></a>ANSI 및 ISO 8601 호환성  
-**smalldatetime**은 ANSI 또는 ISO 8601 규격이 아닙니다.
+**smalldatetime** 은 ANSI 또는 ISO 8601 규격이 아닙니다.
   
 ## <a name="converting-date-and-time-data"></a>date 및 time 데이터 변환
 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]에서 날짜 및 시간 데이터 형식을 변환할 때 날짜나 시간으로 인식되지 않는 값은 모두 무시됩니다. 날짜 및 시간 데이터에 CAST 및 CONVERT 함수를 사용하는 방법은 [CAST 및 CONVERT&#40;Transact-SQL&#41;](../../t-sql/functions/cast-and-convert-transact-sql.md)를 참조하세요.
@@ -67,7 +67,7 @@ ms.locfileid: "88422917"
 ### <a name="converting-smalldatetime-to-other-date-and-time-types"></a>smalldatetime을 다른 날짜 및 시간 형식으로 변환
 이 섹션에서는 **smalldatetime** 데이터 형식이 다른 날짜 및 시간 데이터 형식으로 변환될 때 어떤 일이 발생하는지를 설명합니다.
   
-**date**로 변환하는 경우 년, 월, 일이 복사됩니다. 다음 코드에서는 `smalldatetime` 값을 `date` 값으로 변환한 결과를 보여 줍니다.
+**date** 로 변환하는 경우 년, 월, 일이 복사됩니다. 다음 코드에서는 `smalldatetime` 값을 `date` 값으로 변환한 결과를 보여 줍니다.
   
 ```sql
 DECLARE @smalldatetime smalldatetime = '1955-12-13 12:43:10';  
@@ -99,7 +99,7 @@ SELECT @smalldatetime AS '@smalldatetime', @time AS 'time';
 --(1 row(s) affected)  
 ```  
   
-**datetime**으로 변환되는 경우 **smalldatetime** 값이 **datetime** 값으로 복사됩니다. 소수 자릿수 초는 0으로 설정됩니다. 다음 코드에서는 `smalldatetime` 값을 `datetime` 값으로 변환한 결과를 보여 줍니다.
+**datetime** 으로 변환되는 경우 **smalldatetime** 값이 **datetime** 값으로 복사됩니다. 소수 자릿수 초는 0으로 설정됩니다. 다음 코드에서는 `smalldatetime` 값을 `datetime` 값으로 변환한 결과를 보여 줍니다.
   
 ```sql
 DECLARE @smalldatetime smalldatetime = '1955-12-13 12:43:10';  

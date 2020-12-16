@@ -14,13 +14,13 @@ helpviewer_keywords:
 ms.assetid: 30e0e7b9-d131-46c7-90a4-6ccf77e3d4f3
 author: MashaMSFT
 ms.author: mathoma
-monikerRange: '>=aps-pdw-2016||=azuresqldb-current||=azure-sqldw-latest||>=sql-server-2016||=sqlallproducts-allversions||>=sql-server-linux-2017||=azuresqldb-mi-current'
-ms.openlocfilehash: 5a83155dd566812248e37d509e34600a1beeb677
-ms.sourcegitcommit: f3321ed29d6d8725ba6378d207277a57cb5fe8c2
+monikerRange: '>=aps-pdw-2016||=azuresqldb-current||=azure-sqldw-latest||>=sql-server-2016||>=sql-server-linux-2017||=azuresqldb-mi-current'
+ms.openlocfilehash: d7dc4905411b6673d0e4a2127e3885918d509bbb
+ms.sourcegitcommit: 1a544cf4dd2720b124c3697d1e62ae7741db757c
 ms.translationtype: HT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 07/06/2020
-ms.locfileid: "86007195"
+ms.lasthandoff: 12/14/2020
+ms.locfileid: "97473914"
 ---
 # <a name="use-a-format-file-to-skip-a-table-column-sql-server"></a>서식 파일을 사용하여 테이블 열 건너뛰기(SQL Server)
 [!INCLUDE[SQL Server Azure SQL Database Synapse Analytics PDW ](../../includes/applies-to-version/sql-asdb-asdbmi-asa-pdw.md)]
@@ -30,7 +30,7 @@ ms.locfileid: "86007195"
 -   건넌뛴 열에 기본값이 있습니다.  
   
 ## <a name="sample-table-and-data-file"></a>예제 테이블 및 데이터 파일  
- 이 아티클의 예에서는 **dbo** 스키마에서 `myTestSkipCol`이라는 테이블을 기대합니다. *WideWorldImporters* 또는 *AdventureWorks*와 같은 샘플 데이터베이스 또는 다른 데이터베이스에서 이 테이블을 만들 수 있습니다. 이 테이블을 다음과 같이 만듭니다.  
+ 이 아티클의 예에서는 **dbo** 스키마에서 `myTestSkipCol`이라는 테이블을 기대합니다. *WideWorldImporters* 또는 *AdventureWorks* 와 같은 샘플 데이터베이스 또는 다른 데이터베이스에서 이 테이블을 만들 수 있습니다. 이 테이블을 다음과 같이 만듭니다.  
   
 ```sql
 USE WideWorldImporters;  
@@ -76,7 +76,7 @@ bcp WideWorldImporters..myTestSkipCol format nul -f myTestSkipCol_Default.fmt -c
 > [!IMPORTANT]  
 >  `-S` 인수로 연결할 서버 인스턴스의 이름을 지정해야 합니다. 또한 `-U` 및 `-P` 인수를 사용하여 사용자 이름과 암호를 지정해야 할 수도 있습니다. 자세한 내용은 [bcp Utility](../../tools/bcp-utility.md)를 참조하세요.  
 
-위 명령은 `myTestSkipCol_Default.fmt`라는 비 XML 서식 파일을 만듭니다. 이 서식 파일은 *bcp* 에서 생성되는 형식이므로 **기본 서식 파일**이라고 합니다. 기본 서식 파일은 데이터 파일 필드와 테이블 열 간의 일 대 일 대응을 나타냅니다.  
+위 명령은 `myTestSkipCol_Default.fmt`라는 비 XML 서식 파일을 만듭니다. 이 서식 파일은 *bcp* 에서 생성되는 형식이므로 **기본 서식 파일** 이라고 합니다. 기본 서식 파일은 데이터 파일 필드와 테이블 열 간의 일 대 일 대응을 나타냅니다.  
   
  다음 스크린샷에서는 이 샘플 기본 서식 파일의 값을 보여줍니다. 
   
@@ -94,7 +94,7 @@ bcp WideWorldImporters..myTestSkipCol format nul -f myTestSkipCol_Default.fmt -c
 열을 건너뛰는 데 기본적으로 사용되는 방법에는 다음 세 가지 단계가 포함됩니다.
 
 1.   먼저 원본 데이터 파일에서 누락된 필드를 나타내는 모든 서식 파일 행을 삭제합니다.
-2.   그런 다음 삭제된 행 뒤에 오는 각 서식 파일 행의 "호스트 파일 필드 순서" 값을 줄입니다. 목표는 데이터 파일에서 각 데이터 필드의 실제 위치를 반영하는 1부터 *n*까지의 순차적인 "호스트 파일 필드 순서" 값을 얻는 것입니다.
+2.   그런 다음 삭제된 행 뒤에 오는 각 서식 파일 행의 "호스트 파일 필드 순서" 값을 줄입니다. 목표는 데이터 파일에서 각 데이터 필드의 실제 위치를 반영하는 1부터 *n* 까지의 순차적인 "호스트 파일 필드 순서" 값을 얻는 것입니다.
 3.   마지막으로 데이터 파일의 실제 필드 수를 반영하도록 "열 수" 필드의 값을 줄입니다.  
   
 다음 예는 `myTestSkipCol` 테이블에 대한 기본 서식 파일을 기반으로 합니다. 수정된 이 서식 파일은 첫 번째 데이터 필드를 `Col1`에 매핑하고 `Col2`를 건너뛴 다음 두 번째 데이터 필드를 `Col3`에 매핑합니다. `Col2` 의 행은 삭제되었습니다. 첫 번째 필드 뒤의 구분 기호도 `\t`에서 `,`로 변경되었습니다.
@@ -150,7 +150,7 @@ bcp WideWorldImporters..myTestSkipCol format nul -f myTestSkipCol_Default.xml -c
 > [!IMPORTANT]  
 >  `-S` 인수로 연결할 서버 인스턴스의 이름을 지정해야 합니다. 또한 `-U` 및 `-P` 인수를 사용하여 사용자 이름과 암호를 지정해야 할 수도 있습니다. 자세한 내용은 [bcp Utility](../../tools/bcp-utility.md)를 참조하세요.  
  
-위 명령은 `myTestSkipCol_Default.xml`이라는 XML 서식 파일을 만듭니다. 이 서식 파일은 *bcp* 에서 생성되는 형식이므로 **기본 서식 파일**이라고 합니다. 기본 서식 파일은 데이터 파일 필드와 테이블 열 간의 일 대 일 대응을 나타냅니다.  
+위 명령은 `myTestSkipCol_Default.xml`이라는 XML 서식 파일을 만듭니다. 이 서식 파일은 *bcp* 에서 생성되는 형식이므로 **기본 서식 파일** 이라고 합니다. 기본 서식 파일은 데이터 파일 필드와 테이블 열 간의 일 대 일 대응을 나타냅니다.  
   
 ```xml
 <?xml version="1.0"?>  

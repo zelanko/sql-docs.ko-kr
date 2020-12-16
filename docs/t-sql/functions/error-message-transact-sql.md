@@ -22,13 +22,13 @@ helpviewer_keywords:
 ms.assetid: f32877a6-5f17-418c-a32c-5a1a344b3c45
 author: markingmyname
 ms.author: maghan
-monikerRange: '>=aps-pdw-2016||=azuresqldb-current||=azure-sqldw-latest||>=sql-server-2016||=sqlallproducts-allversions||>=sql-server-linux-2017||=azuresqldb-mi-current'
-ms.openlocfilehash: 283ed2043029ad89934079df96b81ac1bc11e040
-ms.sourcegitcommit: cc23d8646041336d119b74bf239a6ac305ff3d31
+monikerRange: '>=aps-pdw-2016||=azuresqldb-current||=azure-sqldw-latest||>=sql-server-2016||>=sql-server-linux-2017||=azuresqldb-mi-current'
+ms.openlocfilehash: e0b88119bf8f49ea7ab880423555c10f2fa116d9
+ms.sourcegitcommit: 1a544cf4dd2720b124c3697d1e62ae7741db757c
 ms.translationtype: HT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 09/23/2020
-ms.locfileid: "91116754"
+ms.lasthandoff: 12/14/2020
+ms.locfileid: "97472114"
 ---
 # <a name="error_message-transact-sql"></a>ERROR_MESSAGE(Transact-SQL)
 [!INCLUDE [sql-asdb-asdbmi-asa-pdw](../../includes/applies-to-version/sql-asdb-asdbmi-asa-pdw.md)]
@@ -48,7 +48,7 @@ ERROR_MESSAGE ( )
 ## <a name="return-types"></a>반환 형식
  **nvarchar(4000)**  
   
-## <a name="return-value"></a>Return Value  
+## <a name="return-value"></a>반환 값  
 CATCH 블록에서 호출된 경우 `ERROR_MESSAGE`는 `CATCH` 블록을 실행시키는 오류 메시지의 전체 텍스트를 반환합니다. 이 텍스트는 대체 가능한 매개 변수(예를 들어 길이, 개체 이름 또는 시간)에 제공된 값을 포함합니다.  
   
 `ERROR_MESSAGE`는 CATCH 블록 범위 밖에서 호출된 경우 NULL을 반환합니다.  

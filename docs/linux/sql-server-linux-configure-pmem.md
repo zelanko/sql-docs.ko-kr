@@ -8,13 +8,13 @@ ms.date: 10/31/2019
 ms.topic: conceptual
 ms.prod: sql
 ms.technology: linux
-monikerRange: '>= sql-server-linux-ver15  || >= sql-server-ver15 || = sqlallproducts-allversions'
-ms.openlocfilehash: c6f791cf96520f46c37bb061f30ac7df962695e5
-ms.sourcegitcommit: 22102f25db5ccca39aebf96bc861c92f2367c77a
+monikerRange: '>= sql-server-linux-ver15  || >= sql-server-ver15'
+ms.openlocfilehash: 4630a96f1abf961174ece179aabfd160a5784ad9
+ms.sourcegitcommit: 1a544cf4dd2720b124c3697d1e62ae7741db757c
 ms.translationtype: HT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 10/16/2020
-ms.locfileid: "92115692"
+ms.lasthandoff: 12/14/2020
+ms.locfileid: "97471614"
 ---
 # <a name="configure-persistent-memory-pmem-for-sql-server-on-linux"></a>SQL Server on Linux의 PMEM(영구적 메모리) 구성
 

@@ -9,12 +9,12 @@ ms.topic: conceptual
 ms.prod: sql
 ms.technology: linux
 ms.assetid: ''
-ms.openlocfilehash: 66a40af981670fd30f8ff6d20c34364ba084e3dd
-ms.sourcegitcommit: 22102f25db5ccca39aebf96bc861c92f2367c77a
+ms.openlocfilehash: 737004c651ff7cb335557cbbfe61e9df516e2f48
+ms.sourcegitcommit: 1a544cf4dd2720b124c3697d1e62ae7741db757c
 ms.translationtype: HT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 10/16/2020
-ms.locfileid: "92115541"
+ms.lasthandoff: 12/14/2020
+ms.locfileid: "97471624"
 ---
 # <a name="configure-sql-server-settings-with-environment-variables-on-linux"></a>Linux에서 환경 변수를 사용하여 SQL Server 설정 구성
 
@@ -27,7 +27,7 @@ ms.locfileid: "92115541"
 
 ::: moniker-end
 <!--SQL Server 2019 on Linux-->
-::: moniker range=">= sql-server-linux-ver15 || >= sql-server-ver15 || =sqlallproducts-allversions"
+::: moniker range=">= sql-server-linux-ver15 || >= sql-server-ver15 "
 
 여러 다른 환경 변수를 사용하여 Linux에서 SQL Server 2019를 구성할 수 있습니다. 이 변수는 다음과 같은 두 가지 시나리오에서 사용됩니다.
 
@@ -60,13 +60,13 @@ ms.locfileid: "92115541"
 | **MSSQL_DUMP_DIR** | 기본적으로 SQL Server가 메모리 덤프 및 기타 문제 해결 파일을 보관할 디렉터리를 변경합니다. |
 | **MSSQL_ENABLE_HADR** | 가용성 그룹을 사용하도록 설정합니다. 예를 들어 '1'은 사용이고 '0'은 사용 안 함입니다. |
 | **MSSQL_AGENT_ENABLED** | SQL Server 에이전트를 사용하도록 설정합니다. 예를 들어 'true'는 사용이고 'false'는 사용 안 함입니다. 기본적으로 에이전트는 사용하지 않도록 설정됩니다.  |
-| **MSSQL_MASTER_DATA_FILE** | master 데이터베이스 데이터 파일의 위치를 설정합니다. SQL Server를 처음 실행할 때까지 이름은 **master.mdf**여야 합니다. |
-| **MSSQL_MASTER_LOG_FILE** | master 데이터베이스 로그 파일의 위치를 설정합니다. SQL Server를 처음 실행할 때까지 이름은 **master.ldf**여야 합니다. |
+| **MSSQL_MASTER_DATA_FILE** | master 데이터베이스 데이터 파일의 위치를 설정합니다. SQL Server를 처음 실행할 때까지 이름은 **master.mdf** 여야 합니다. |
+| **MSSQL_MASTER_LOG_FILE** | master 데이터베이스 로그 파일의 위치를 설정합니다. SQL Server를 처음 실행할 때까지 이름은 **master.ldf** 여야 합니다. |
 | **MSSQL_ERROR_LOG_FILE** | 오류 로그 파일의 위치를 설정합니다. |
 
 ::: moniker-end
 <!--SQL Server 2019 on Linux-->
-::: moniker range=">= sql-server-linux-ver15 || >= sql-server-ver15 || =sqlallproducts-allversions"
+::: moniker range=">= sql-server-linux-ver15 || >= sql-server-ver15 "
 
 | 환경 변수 | Description |
 |-----|-----|
@@ -84,8 +84,8 @@ ms.locfileid: "92115541"
 | **MSSQL_DUMP_DIR** | 기본적으로 SQL Server가 메모리 덤프 및 기타 문제 해결 파일을 보관할 디렉터리를 변경합니다. |
 | **MSSQL_ENABLE_HADR** | 가용성 그룹을 사용하도록 설정합니다. 예를 들어 '1'은 사용이고 '0'은 사용 안 함입니다. |
 | **MSSQL_AGENT_ENABLED** | SQL Server 에이전트를 사용하도록 설정합니다. 예를 들어 'true'는 사용이고 'false'는 사용 안 함입니다. 기본적으로 에이전트는 사용하지 않도록 설정됩니다.  |
-| **MSSQL_MASTER_DATA_FILE** | master 데이터베이스 데이터 파일의 위치를 설정합니다. SQL Server를 처음 실행할 때까지 이름은 **master.mdf**여야 합니다. |
-| **MSSQL_MASTER_LOG_FILE** | master 데이터베이스 로그 파일의 위치를 설정합니다. SQL Server를 처음 실행할 때까지 이름은 **master.ldf**여야 합니다. |
+| **MSSQL_MASTER_DATA_FILE** | master 데이터베이스 데이터 파일의 위치를 설정합니다. SQL Server를 처음 실행할 때까지 이름은 **master.mdf** 여야 합니다. |
+| **MSSQL_MASTER_LOG_FILE** | master 데이터베이스 로그 파일의 위치를 설정합니다. SQL Server를 처음 실행할 때까지 이름은 **master.ldf** 여야 합니다. |
 | **MSSQL_ERROR_LOG_FILE** | 오류 로그 파일의 위치를 설정합니다. |
 
 ::: moniker-end
@@ -94,10 +94,10 @@ ms.locfileid: "92115541"
 
 이 예제에서는 구성된 환경 변수를 사용하여 `mssql-conf setup`을 실행합니다. 다음 환경 변수를 지정합니다.
 
-- **ACCEPT_EULA**는 최종 사용자 사용권 계약에 동의합니다.
-- **MSSQL_PID**는 비프로덕션 사용을 위해 SQL Server의 체험용 라이선스 디벨로퍼 버전을 지정합니다.
-- **MSSQL_SA_PASSWORD**는 강력한 암호를 설정합니다.
-- **MSSQL_TCP_PORT**는 SQL Server가 수신 대기하는 TCP 포트를 1234로 설정합니다.
+- **ACCEPT_EULA** 는 최종 사용자 사용권 계약에 동의합니다.
+- **MSSQL_PID** 는 비프로덕션 사용을 위해 SQL Server의 체험용 라이선스 디벨로퍼 버전을 지정합니다.
+- **MSSQL_SA_PASSWORD** 는 강력한 암호를 설정합니다.
+- **MSSQL_TCP_PORT** 는 SQL Server가 수신 대기하는 TCP 포트를 1234로 설정합니다.
 
 ```bash
 sudo ACCEPT_EULA='Y' MSSQL_PID='Developer' MSSQL_SA_PASSWORD='<YourStrong!Passw0rd>' MSSQL_TCP_PORT=1234 /opt/mssql/bin/mssql-conf setup
@@ -107,10 +107,10 @@ sudo ACCEPT_EULA='Y' MSSQL_PID='Developer' MSSQL_SA_PASSWORD='<YourStrong!Passw0
 
 이 예제 docker 명령은 다음 환경 변수를 사용하여 새 SQL Server 컨테이너를 만듭니다.
 
-- **ACCEPT_EULA**는 최종 사용자 사용권 계약에 동의합니다.
-- **MSSQL_PID**는 비프로덕션 사용을 위해 SQL Server의 체험용 라이선스 디벨로퍼 버전을 지정합니다.
-- **MSSQL_SA_PASSWORD**는 강력한 암호를 설정합니다.
-- **MSSQL_TCP_PORT**는 SQL Server가 수신 대기하는 TCP 포트를 1234로 설정합니다. 즉, 포트 1433(기본값)을 호스트 포트에 매핑하는 대신 이 예제에서는 `-p 1234:1234` 명령을 사용하여 사용자 지정 TCP 포트를 매핑해야 합니다.
+- **ACCEPT_EULA** 는 최종 사용자 사용권 계약에 동의합니다.
+- **MSSQL_PID** 는 비프로덕션 사용을 위해 SQL Server의 체험용 라이선스 디벨로퍼 버전을 지정합니다.
+- **MSSQL_SA_PASSWORD** 는 강력한 암호를 설정합니다.
+- **MSSQL_TCP_PORT** 는 SQL Server가 수신 대기하는 TCP 포트를 1234로 설정합니다. 즉, 포트 1433(기본값)을 호스트 포트에 매핑하는 대신 이 예제에서는 `-p 1234:1234` 명령을 사용하여 사용자 지정 TCP 포트를 매핑해야 합니다.
 
 <!--SQL Server 2017 on Linux -->
 ::: moniker range="= sql-server-linux-2017 || = sql-server-2017"
@@ -132,7 +132,7 @@ docker run -e ACCEPT_EULA=Y -e MSSQL_PID="Developer" -e MSSQL_SA_PASSWORD="<Your
 
 ::: moniker-end
 <!--SQL Server 2019 on Linux-->
-::: moniker range=">= sql-server-linux-ver15 || >= sql-server-ver15 || =sqlallproducts-allversions"
+::: moniker range=">= sql-server-linux-ver15 || >= sql-server-ver15 "
 
 Linux/macOS에서 Docker를 실행하는 경우 작은따옴표와 함께 다음 구문을 사용합니다.
 

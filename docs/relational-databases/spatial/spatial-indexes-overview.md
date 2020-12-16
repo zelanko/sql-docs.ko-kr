@@ -12,17 +12,17 @@ helpviewer_keywords:
 ms.assetid: b1ae7b78-182a-459e-ab28-f743e43f8293
 author: MladjoA
 ms.author: mlandzic
-monikerRange: =azuresqldb-current||>=sql-server-2016||=sqlallproducts-allversions||>=sql-server-linux-2017||=azuresqldb-mi-current
-ms.openlocfilehash: fb5375afc7e8a115c9398f7ab567c06cb731eb62
-ms.sourcegitcommit: a5398f107599102af7c8cda815d8e5e9a367ce7e
+monikerRange: =azuresqldb-current||>=sql-server-2016||>=sql-server-linux-2017||=azuresqldb-mi-current
+ms.openlocfilehash: b9d004ce88bba442dc17ff17c3d8a26e75bffd1a
+ms.sourcegitcommit: 1a544cf4dd2720b124c3697d1e62ae7741db757c
 ms.translationtype: HT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 10/13/2020
-ms.locfileid: "92006282"
+ms.lasthandoff: 12/14/2020
+ms.locfileid: "97473144"
 ---
 # <a name="spatial-indexes-overview"></a>공간 인덱스 개요
 [!INCLUDE [SQL Server Azure SQL Database Azure SQL Managed Instance](../../includes/applies-to-version/sql-asdb-asdbmi.md)]
-  [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 에서는 공간 데이터 및 공간 인덱스를 지원합니다. *공간 인덱스* 는 공간 열을 인덱싱할 수 있는 확장된 인덱스의 유형입니다. 공간 열은 **기하 도형** 또는 **지리**와 같은 공간 데이터 형식의 데이터를 포함하는 테이블 열입니다.  
+  [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 에서는 공간 데이터 및 공간 인덱스를 지원합니다. *공간 인덱스* 는 공간 열을 인덱싱할 수 있는 확장된 인덱스의 유형입니다. 공간 열은 **기하 도형** 또는 **지리** 와 같은 공간 데이터 형식의 데이터를 포함하는 테이블 열입니다.  
   
 > [!IMPORTANT]  
 >  [!INCLUDE[ssSQL11](../../includes/sssql11-md.md)]에서 도입된 공간 기능에 대한 자세한 설명 및 예와 공간 인덱스에 영향을 주는 기능에 대한 정보를 보려면 [SQL Server 2012의 새로운 공간 기능](https://go.microsoft.com/fwlink/?LinkId=226407)백서를 다운로드하세요.  
@@ -30,7 +30,7 @@ ms.locfileid: "92006282"
 ##  <a name="about-spatial-indexes"></a><a name="about"></a> 공간 인덱스 정보  
   
 ###  <a name="decomposing-indexed-space-into-a-grid-hierarchy"></a><a name="decompose"></a> 인덱싱된 공간을 표 계층 구조로 분해  
- [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]에서 공간 인덱스는 B-트리를 사용하여 구성됩니다. 즉, 인덱스가 2차원 공간 데이터를 B-트리의 선형 순서로 나타내야 한다는 뜻입니다. 따라서 데이터를 공간 인덱스로 읽기 전에 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 에서는 공간을 계층적으로 균일하게 분해하는 작업을 구현해야 합니다. 인덱스 생성 프로세스에서는 공간을 4-수준 *표 계층 구조* 로 *분해*합니다. 이러한 수준은 *수준 1* (최상위 수준), *수준 2*, *수준 3*및 *수준 4*라고 합니다.  
+ [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]에서 공간 인덱스는 B-트리를 사용하여 구성됩니다. 즉, 인덱스가 2차원 공간 데이터를 B-트리의 선형 순서로 나타내야 한다는 뜻입니다. 따라서 데이터를 공간 인덱스로 읽기 전에 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 에서는 공간을 계층적으로 균일하게 분해하는 작업을 구현해야 합니다. 인덱스 생성 프로세스에서는 공간을 4-수준 *표 계층 구조* 로 *분해* 합니다. 이러한 수준은 *수준 1* (최상위 수준), *수준 2*, *수준 3* 및 *수준 4* 라고 합니다.  
   
  각각의 연속되는 수준이 이전 수준을 더 분해하므로 각 상위 수준의 셀은 다음 수준에서 완전한 표를 포함하게 됩니다. 지정된 수준에서 모든 표에는 양쪽 축(예: 4x4 또는 8x8)을 따라 동일한 셀 개수가 있으며 셀의 크기는 모두 같습니다.  
   
@@ -46,7 +46,7 @@ ms.locfileid: "92006282"
  ![4x4 수준 1 표에 배치된 다각형 및 선](../../relational-databases/spatial/media/spndx-level-1-objects.gif "4x4 수준 1 표에 배치된 다각형 및 선")  
   
 #### <a name="grid-density"></a>표 밀도  
- 표의 축에 따른 셀 수로 표의 *밀도*가 결정되며 셀 수가 많을수록 표의 밀도가 높습니다. 예를 들어 8x8 표(64개의 셀을 생성함)는 4x4 표(16개의 셀을 생성함)보다 밀도가 높습니다. 표 밀도는 수준별 기준으로 정의됩니다.  
+ 표의 축에 따른 셀 수로 표의 *밀도* 가 결정되며 셀 수가 많을수록 표의 밀도가 높습니다. 예를 들어 8x8 표(64개의 셀을 생성함)는 4x4 표(16개의 셀을 생성함)보다 밀도가 높습니다. 표 밀도는 수준별 기준으로 정의됩니다.  
   
  공간 인덱스의 [CREATE SPATIAL INDEX](../../t-sql/statements/create-spatial-index-transact-sql.md)[!INCLUDE[tsql](../../includes/tsql-md.md)] 문은 각 수준별로 다른 표 밀도를 지정할 수 있는 GRIDS 절을 지원합니다. 다음 키워드 중 하나를 사용하여 지정된 수준의 표 밀도를 지정합니다.  
   
@@ -79,7 +79,7 @@ ms.locfileid: "92006282"
   
 -   개체당 셀 수 규칙  
   
-     이 규칙은 *개체당 셀 수 제한*을 적용하여 각 개체에 대해 계산될 수 있는 최대 셀 수를 결정합니다(수준 1은 제외). 하위 수준에서 개체당 셀 수 규칙은 개체에 대해 기록될 수 있는 정보량을 제어합니다.  
+     이 규칙은 *개체당 셀 수 제한* 을 적용하여 각 개체에 대해 계산될 수 있는 최대 셀 수를 결정합니다(수준 1은 제외). 하위 수준에서 개체당 셀 수 규칙은 개체에 대해 기록될 수 있는 정보량을 제어합니다.  
   
 -   최하위 셀 규칙  
   
@@ -114,11 +114,11 @@ ms.locfileid: "92006282"
  ![최하위 셀 최적화](../../relational-databases/spatial/media/spndx-opt-deepest-cell.gif "최하위 셀 최적화")  
   
 ###  <a name="tessellation-schemes"></a><a name="schemes"></a> 공간 분할(Tessellation) 구성표  
- 공간 인덱스의 동작은 부분적으로 해당 *공간 분할(tessellation) 구성표*의 영향을 받습니다. 공간 분할(tessellation) 구성표는 데이터 형식에 따라 달라집니다. [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]에서 공간 인덱스는 두 가지 공간 분할(tessellation) 구성표를 지원합니다.  
+ 공간 인덱스의 동작은 부분적으로 해당 *공간 분할(tessellation) 구성표* 의 영향을 받습니다. 공간 분할(tessellation) 구성표는 데이터 형식에 따라 달라집니다. [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]에서 공간 인덱스는 두 가지 공간 분할(tessellation) 구성표를 지원합니다.  
   
--   *기하 도형 표 공간 분할*은 **geometry** 데이터 형식에 대한 구성표입니다.  
+-   *기하 도형 표 공간 분할* 은 **geometry** 데이터 형식에 대한 구성표입니다.  
   
--   *지리 표 공간 분할*은 **geography** 데이터 형식의 열에 적용합니다.  
+-   *지리 표 공간 분할* 은 **geography** 데이터 형식의 열에 적용합니다.  
   
 > [!NOTE]  
 >  공간 인덱스의 **tessellation_scheme** 설정은 [sys.spatial_index_tessellations](../../relational-databases/system-catalog-views/sys-spatial-index-tessellations-transact-sql.md) 카탈로그 뷰에서 볼 수 있습니다.  
@@ -130,7 +130,7 @@ ms.locfileid: "92006282"
 >  [CREATE SPATIAL INDEX](../../t-sql/statements/create-spatial-index-transact-sql.md) [!INCLUDE[tsql](../../includes/tsql-md.md)] 문의 USING (GEOMETRY_AUTO_GRID/GEOMETRY_GRID) 절을 사용하여 이 공간 분할(tessellation) 구성표를 명시적으로 지정할 수 있습니다.  
   
 ##### <a name="the-bounding-box"></a>경계 상자  
- 기하학적 데이터는 무한할 수 있는 평면을 차지합니다. 그러나 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]에서 공간 인덱스는 제한된 공간을 필요로 합니다. 분해를 위한 제한된 공간을 설정하려면 기하 도형 표 공간 분할 구성표에는 사각형 *경계 상자*가 필요합니다. 경계 상자는 **(**_x-min_**,**_y-min_**)** 및 **(**_x-max_**,**_y-max_**)** 라는 4개의 좌표로 정의되며 공간 인덱스의 속성으로 저장됩니다. 이러한 좌표는 다음을 나타냅니다.  
+ 기하학적 데이터는 무한할 수 있는 평면을 차지합니다. 그러나 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]에서 공간 인덱스는 제한된 공간을 필요로 합니다. 분해를 위한 제한된 공간을 설정하려면 기하 도형 표 공간 분할 구성표에는 사각형 *경계 상자* 가 필요합니다. 경계 상자는 **(**_x-min_**,**_y-min_**)** 및 **(**_x-max_**,**_y-max_**)** 라는 4개의 좌표로 정의되며 공간 인덱스의 속성으로 저장됩니다. 이러한 좌표는 다음을 나타냅니다.  
   
 -   *x-min* 은 경계 상자의 왼쪽 아래 모퉁이의 X 좌표입니다.  
   

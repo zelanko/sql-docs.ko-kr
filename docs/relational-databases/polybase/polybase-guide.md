@@ -18,13 +18,13 @@ helpviewer_keywords:
 author: MikeRayMSFT
 ms.author: mikeray
 ms.reviewer: ''
-monikerRange: '>=sql-server-2016||>=sql-server-linux-2017||=sqlallproducts-allversions||>=aps-pdw-2016||=azure-sqldw-latest'
-ms.openlocfilehash: fa517d2ee19d4adc5a6d9acff56ed6f240acc1ee
-ms.sourcegitcommit: a5398f107599102af7c8cda815d8e5e9a367ce7e
+monikerRange: '>=sql-server-2016||>=sql-server-linux-2017||>=aps-pdw-2016||=azure-sqldw-latest'
+ms.openlocfilehash: 43d5d214f1720513955c27c45349da74afe3888e
+ms.sourcegitcommit: 1a544cf4dd2720b124c3697d1e62ae7741db757c
 ms.translationtype: HT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 10/13/2020
-ms.locfileid: "92005778"
+ms.lasthandoff: 12/14/2020
+ms.locfileid: "97473364"
 ---
 # <a name="what-is-polybase"></a>PolyBase란?
 
@@ -44,7 +44,7 @@ PolyBase는 Hadoop 노드로 몇몇 계산을 푸시하여 전체 쿼리를 최�
 
 ::: moniker-end
 <!--SQL Server 2019-->
-::: moniker range=">= sql-server-linux-ver15 || >= sql-server-ver15 || =sqlallproducts-allversions"
+::: moniker range=">= sql-server-linux-ver15 || >= sql-server-ver15 "
 
 PolyBase를 통해 SQL Server 인스턴스는 외부 데이터 원본에서 데이터를 읽는 Transact-SQL 쿼리를 처리할 수 있습니다. SQL Server 2016 이상에서는 Hadoop 및 Azure Blob Storage의 외부 데이터에 액세스할 수 있습니다. SQL Server 2019부터 이제 PolyBase를 사용하여 [SQL Server](polybase-configure-sql-server.md), [Oracle](polybase-configure-oracle.md), [Teradata](polybase-configure-teradata.md) 및 [MongoDB](polybase-configure-mongodb.md)의 외부 데이터에 액세스할 수 있습니다.
 
@@ -109,7 +109,7 @@ PolyBase를 사용하기 전에 [PolyBase 기능을 설치](polybase-installatio
 
 ::: moniker-end
 <!--SQL Server 2019-->
-::: moniker range=">= sql-server-linux-ver15||>= sql-server-ver15||=sqlallproducts-allversions"
+::: moniker range=">= sql-server-linux-ver15||>= sql-server-ver15"
 
 ## <a name="next-steps"></a>다음 단계
 

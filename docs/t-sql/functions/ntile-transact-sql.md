@@ -21,13 +21,13 @@ helpviewer_keywords:
 ms.assetid: 1c364511-d72a-4789-8efa-3cf2a1f6b791
 author: julieMSFT
 ms.author: jrasnick
-monikerRange: '>=aps-pdw-2016||=azuresqldb-current||=azure-sqldw-latest||>=sql-server-2016||=sqlallproducts-allversions||>=sql-server-linux-2017||=azuresqldb-mi-current'
-ms.openlocfilehash: b5193c024a12af667e1765abc24a4ffb8961edbc
-ms.sourcegitcommit: cc23d8646041336d119b74bf239a6ac305ff3d31
+monikerRange: '>=aps-pdw-2016||=azuresqldb-current||=azure-sqldw-latest||>=sql-server-2016||>=sql-server-linux-2017||=azuresqldb-mi-current'
+ms.openlocfilehash: 140ec1e1d023612cc7f5e8812c55f6d6b0916fee
+ms.sourcegitcommit: 1a544cf4dd2720b124c3697d1e62ae7741db757c
 ms.translationtype: HT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 09/23/2020
-ms.locfileid: "91115978"
+ms.lasthandoff: 12/14/2020
+ms.locfileid: "97472054"
 ---
 # <a name="ntile-transact-sql"></a>NTILE(Transact-SQL)
 [!INCLUDE [sql-asdb-asdbmi-asa-pdw](../../includes/applies-to-version/sql-asdb-asdbmi-asa-pdw.md)]
@@ -46,7 +46,7 @@ NTILE (integer_expression) OVER ( [ <partition_by_clause> ] < order_by_clause > 
 
 ## <a name="arguments"></a>인수
  *integer_expression*  
- 각 파티션을 분할해야 하는 그룹 수를 지정하는 양의 정수 식입니다. *integer_expression*은 **int** 또는 **bigint** 형식일 수 있습니다.  
+ 각 파티션을 분할해야 하는 그룹 수를 지정하는 양의 정수 식입니다. *integer_expression* 은 **int** 또는 **bigint** 형식일 수 있습니다.  
   
  \<partition_by_clause>  
  [FROM](../../t-sql/queries/from-transact-sql.md) 절이 생성한 결과 집합을 함수가 적용되는 파티션으로 나눕니다. PARTITION BY 구문은 [OVER 절&#40;Transact-SQL& #41;](../../t-sql/queries/select-over-clause-transact-sql.md)을 참조하세요.  
@@ -58,7 +58,7 @@ NTILE (integer_expression) OVER ( [ <partition_by_clause> ] < order_by_clause > 
  **bigint**  
   
 ## <a name="remarks"></a>설명  
- 파티션의 행 수를 *integer_expression*으로 나눌 수 없는 경우 멤버 수 하나의 차이가 있는 두 가지 크기의 그룹이 생성됩니다. OVER 절이 지정한 순서에서 큰 그룹이 작은 그룹 앞에 옵니다. 예를 들어 행의 총 수가 53개이고 그룹 수가 5개이면 처음 3개 그룹은 11개의 행을 포함하고 나머지 두 개 그룹은 10개의 행을 포함합니다. 반면에 행의 총 수를 그룹 수로 나눌 수 있으면 각 그룹에 행이 똑같이 분산됩니다. 예를 들어 행의 총 수가 50개이고 그룹이 5개 있으면 각 그룹이 10개의 행을 포함합니다.  
+ 파티션의 행 수를 *integer_expression* 으로 나눌 수 없는 경우 멤버 수 하나의 차이가 있는 두 가지 크기의 그룹이 생성됩니다. OVER 절이 지정한 순서에서 큰 그룹이 작은 그룹 앞에 옵니다. 예를 들어 행의 총 수가 53개이고 그룹 수가 5개이면 처음 3개 그룹은 11개의 행을 포함하고 나머지 두 개 그룹은 10개의 행을 포함합니다. 반면에 행의 총 수를 그룹 수로 나눌 수 있으면 각 그룹에 행이 똑같이 분산됩니다. 예를 들어 행의 총 수가 50개이고 그룹이 5개 있으면 각 그룹이 10개의 행을 포함합니다.  
   
  NTILE은 비결정적입니다. 자세한 내용은 [Deterministic and Nondeterministic Functions](../../relational-databases/user-defined-functions/deterministic-and-nondeterministic-functions.md)을 참조하세요.  
   

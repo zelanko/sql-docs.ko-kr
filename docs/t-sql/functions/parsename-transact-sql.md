@@ -22,13 +22,13 @@ helpviewer_keywords:
 ms.assetid: abf34f99-9ee9-460b-85b2-930ca5c4b5ae
 author: julieMSFT
 ms.author: jrasnick
-monikerRange: '>=aps-pdw-2016||=azuresqldb-current||=azure-sqldw-latest||>=sql-server-2016||=sqlallproducts-allversions||>=sql-server-linux-2017||=azuresqldb-mi-current'
-ms.openlocfilehash: 047b760e2b3e7101cd471a4e1a8c65cbc970c023
-ms.sourcegitcommit: e700497f962e4c2274df16d9e651059b42ff1a10
+monikerRange: '>=aps-pdw-2016||=azuresqldb-current||=azure-sqldw-latest||>=sql-server-2016||>=sql-server-linux-2017||=azuresqldb-mi-current'
+ms.openlocfilehash: 02227b388b7c2a50d96aa329fa49c796434f8680
+ms.sourcegitcommit: 1a544cf4dd2720b124c3697d1e62ae7741db757c
 ms.translationtype: HT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 08/17/2020
-ms.locfileid: "88459672"
+ms.lasthandoff: 12/14/2020
+ms.locfileid: "97472024"
 ---
 # <a name="parsename-transact-sql"></a>PARSENAME(Transact-SQL)
 [!INCLUDE [sql-asdb-asdbmi-asa-pdw](../../includes/applies-to-version/sql-asdb-asdbmi-asa-pdw.md)]
@@ -53,7 +53,7 @@ PARSENAME ('object_name' , object_piece )
 *'object_name'* 지정된 개체 부분을 검색할 개체의 이름을 보관하는 매개 변수입니다. 이 매개 변수는 선택적으로 한정된 개체 이름입니다. 개체 이름의 모든 부분이 정규화된 경우 이 이름은 서버 이름, 데이터베이스 이름, 스키마 이름, 개체 이름의 네 부분으로 이루어질 수 있습니다.  'object_name' 문자열의 각 부분은 nvarchar(128) 또는 256 바이트와 동일한 *sysname* 형식입니다. 문자열에 256바이트를 초과하는 부분이 있는 경우 유효한 sysname이 아니므로 PARSENAME은 해당 부분에 대해 NULL을 반환합니다.
   
 *object_piece*  
-반환할 개체 부분입니다. *object_piece*는 **int** 형식이며 다음과 같은 값을 가질 수 있습니다.  
+반환할 개체 부분입니다. *object_piece* 는 **int** 형식이며 다음과 같은 값을 가질 수 있습니다.  
     1 = 개체 이름  
     2 = 스키마 이름  
     3 = 데이터베이스 이름  
@@ -67,7 +67,7 @@ PARSENAME ('object_name' , object_piece )
 
  다음 조건 중 하나가 만족되면 PARSENAME이 NULL을 반환합니다.  
   
--   *object_name* 또는 *object_piece*가 NULL입니다.  
+-   *object_name* 또는 *object_piece* 가 NULL입니다.  
   
 -   구문 오류가 발생합니다.  
   

@@ -9,12 +9,12 @@ ms.prod: sql
 ms.custom: seo-lt-2019
 ms.technology: linux
 ms.assetid: 31c8c92e-12fe-4728-9b95-4bc028250d85
-ms.openlocfilehash: 95581e7cfd8fbddd80aff1f4086d7f44e5812159
-ms.sourcegitcommit: 22102f25db5ccca39aebf96bc861c92f2367c77a
+ms.openlocfilehash: fd314ea1723786e514b6eb8320b373216de70aa8
+ms.sourcegitcommit: 1a544cf4dd2720b124c3697d1e62ae7741db757c
 ms.translationtype: HT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 10/16/2020
-ms.locfileid: "92115966"
+ms.lasthandoff: 12/14/2020
+ms.locfileid: "97471664"
 ---
 # <a name="quickstart-install-sql-server-and-create-a-database-on-ubuntu"></a>빠른 시작: Ubuntu에 SQL Server 설치 및 데이터베이스 만들기
 [!INCLUDE [SQL Server - Linux](../includes/applies-to-version/sql-linux.md)]
@@ -23,7 +23,7 @@ ms.locfileid: "92115966"
 <!--SQL Server 2017 on Linux-->
 ::: moniker range="= sql-server-linux-2017 || = sql-server-2017"
 
-이 빠른 시작에서는 Ubuntu 18.04에 SQL Server 2017을 설치합니다. 그런 다음, **sqlcmd**를 통해 연결하여 첫 번째 데이터베이스를 만들고 쿼리를 실행합니다.
+이 빠른 시작에서는 Ubuntu 18.04에 SQL Server 2017을 설치합니다. 그런 다음, **sqlcmd** 를 통해 연결하여 첫 번째 데이터베이스를 만들고 쿼리를 실행합니다.
 
 > [!TIP]
 > 이 자습서를 사용하려면 사용자 입력과 인터넷 연결이 필요합니다. 무인 또는 오프라인 설치 절차에 관심이 있는 경우 [SQL Server on Linux 설치 지침](sql-server-linux-setup.md)을 참조하세요. 지원되는 플랫폼 목록은 [릴리스 정보](sql-server-linux-release-notes.md)를 참조하세요.
@@ -31,9 +31,9 @@ ms.locfileid: "92115966"
 ::: moniker-end
 
 <!--SQL Server 2019 on Linux-->
-::: moniker range=">= sql-server-linux-ver15 || >= sql-server-ver15 || =sqlallproducts-allversions"
+::: moniker range=">= sql-server-linux-ver15 || >= sql-server-ver15 "
 
-이 빠른 시작에서는 Ubuntu 18.04에 SQL Server 2019를 설치합니다. 그런 다음, **sqlcmd**를 통해 연결하여 첫 번째 데이터베이스를 만들고 쿼리를 실행합니다.
+이 빠른 시작에서는 Ubuntu 18.04에 SQL Server 2019를 설치합니다. 그런 다음, **sqlcmd** 를 통해 연결하여 첫 번째 데이터베이스를 만들고 쿼리를 실행합니다.
 
 > [!TIP]
 > 이 자습서를 사용하려면 사용자 입력과 인터넷 연결이 필요합니다. 무인 또는 오프라인 설치 절차에 관심이 있는 경우 [SQL Server on Linux 설치 지침](sql-server-linux-setup.md)을 참조하세요. 지원되는 플랫폼 목록은 [릴리스 정보](sql-server-linux-release-notes-2019.md)를 참조하세요.
@@ -45,7 +45,7 @@ ms.locfileid: "92115966"
 <!--SQL Server 2017 on Linux-->
 ::: moniker range="= sql-server-linux-2017 || = sql-server-2017"
 
-**최소 2GB**의 메모리를 포함하는 Ubuntu 16.04 또는 18.04 머신이 있어야 합니다.
+**최소 2GB** 의 메모리를 포함하는 Ubuntu 16.04 또는 18.04 머신이 있어야 합니다.
 
 고유한 머신에 Ubuntu 18.04를 설치하려면 <http://releases.ubuntu.com/bionic/>으로 이동합니다. Azure에서 Ubuntu 가상 머신을 만들 수도 있습니다. [Azure CLI를 사용하여 Linux VM 만들기 및 관리](/azure/virtual-machines/linux/tutorial-manage-vm)를 참조하세요.
 
@@ -62,9 +62,9 @@ ms.locfileid: "92115966"
 ::: moniker-end
 
 <!--SQL Server 2019 on Linux-->
-::: moniker range=">= sql-server-linux-ver15 || >= sql-server-ver15 || =sqlallproducts-allversions"
+::: moniker range=">= sql-server-linux-ver15 || >= sql-server-ver15 "
 
-**최소 2GB**의 메모리를 포함하는 Ubuntu 16.04 또는 18.04 머신이 있어야 합니다.
+**최소 2GB** 의 메모리를 포함하는 Ubuntu 16.04 또는 18.04 머신이 있어야 합니다.
 
 고유한 머신에 Ubuntu 18.04를 설치하려면 <http://releases.ubuntu.com/bionic/>으로 이동합니다. Azure에서 Ubuntu 가상 머신을 만들 수도 있습니다. [Azure CLI를 사용하여 Linux VM 만들기 및 관리](/azure/virtual-machines/linux/tutorial-manage-vm)를 참조하세요.
 
@@ -111,7 +111,7 @@ Ubuntu에서 SQL Server을 구성하려면 터미널에서 다음 명령을 실�
    sudo apt-get install -y mssql-server
    ```
 
-4. 패키지 설치가 완료되면 **mssql-conf setup**을 실행하고, 프롬프트에 따라 SA 암호를 설정하고, 버전을 선택합니다.
+4. 패키지 설치가 완료되면 **mssql-conf setup** 을 실행하고, 프롬프트에 따라 SA 암호를 설정하고, 버전을 선택합니다.
 
    ```bash
    sudo /opt/mssql/bin/mssql-conf setup
@@ -136,7 +136,7 @@ Ubuntu에서 SQL Server을 구성하려면 터미널에서 다음 명령을 실�
 ::: moniker-end
 
 <!--SQL Server 2019 on Linux-->
-::: moniker range=">= sql-server-linux-ver15 || >= sql-server-ver15 || =sqlallproducts-allversions"
+::: moniker range=">= sql-server-linux-ver15 || >= sql-server-ver15 "
 
 ## <a name="install-sql-server"></a><a id="install"></a>SQL Server 설치
 
@@ -164,7 +164,7 @@ Ubuntu에서 SQL Server을 구성하려면 터미널에서 다음 명령을 실�
    sudo apt-get install -y mssql-server
    ```
 
-4. 패키지 설치가 완료되면 **mssql-conf setup**을 실행하고, 프롬프트에 따라 SA 암호를 설정하고, 버전을 선택합니다.
+4. 패키지 설치가 완료되면 **mssql-conf setup** 을 실행하고, 프롬프트에 따라 SA 암호를 설정하고, 버전을 선택합니다.
 
    ```bash
    sudo /opt/mssql/bin/mssql-conf setup
@@ -189,7 +189,7 @@ Ubuntu에서 SQL Server을 구성하려면 터미널에서 다음 명령을 실�
 
 데이터베이스를 만들려면 SQL Server에서 Transact-SQL 문을 실행할 수 있는 도구와 연결해야 합니다. 다음 단계에서는 SQL Server 명령줄 도구인 [sqlcmd](../tools/sqlcmd-utility.md) 및 [bcp](../tools/bcp-utility.md)를 설치합니다.
 
-다음 단계에 따라 Ubuntu에 **mssql-tools**를 설치합니다. 
+다음 단계에 따라 Ubuntu에 **mssql-tools** 를 설치합니다. 
 
 1. 공용 리포지토리 GPG 키를 가져옵니다.
 
@@ -211,7 +211,7 @@ Ubuntu에서 SQL Server을 구성하려면 터미널에서 다음 명령을 실�
    ```
 
    > [!Note] 
-   > 최신 버전의 **mssql-tools**로 업데이트하려면 다음 명령을 실행합니다.
+   > 최신 버전의 **mssql-tools** 로 업데이트하려면 다음 명령을 실행합니다.
    >    ```bash
    >   sudo apt-get update 
    >   sudo apt-get install mssql-tools 
@@ -219,13 +219,13 @@ Ubuntu에서 SQL Server을 구성하려면 터미널에서 다음 명령을 실�
 
 1. **선택 사항**: Bash 셸에서 **PATH** 환경 변수에 `/opt/mssql-tools/bin/`를 추가합니다.
 
-   로그인 세션을 위해 bash 셸에서 **sqlcmd/bcp**에 액세스할 수 있도록 설정하려면 다음 명령을 사용하여 **~/.bash_profile** 파일에서 **PATH**를 수정합니다.
+   로그인 세션을 위해 bash 셸에서 **sqlcmd/bcp** 에 액세스할 수 있도록 설정하려면 다음 명령을 사용하여 **~/.bash_profile** 파일에서 **PATH** 를 수정합니다.
 
    ```bash
    echo 'export PATH="$PATH:/opt/mssql-tools/bin"' >> ~/.bash_profile
    ```
 
-   대화형/비로그인 세션을 위해 bash 셸에서 **sqlcmd/bcp**에 액세스할 수 있도록 설정하려면 다음 명령을 사용하여 **~/.bashrc** 파일에서 **PATH**를 수정합니다.
+   대화형/비로그인 세션을 위해 bash 셸에서 **sqlcmd/bcp** 에 액세스할 수 있도록 설정하려면 다음 명령을 사용하여 **~/.bashrc** 파일에서 **PATH** 를 수정합니다.
 
    ```bash
    echo 'export PATH="$PATH:/opt/mssql-tools/bin"' >> ~/.bashrc

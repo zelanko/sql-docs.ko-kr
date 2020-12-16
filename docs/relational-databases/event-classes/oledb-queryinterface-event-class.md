@@ -12,17 +12,17 @@ helpviewer_keywords:
 ms.assetid: f54c9ef9-3add-497c-a09b-42c4ce3c623d
 author: stevestein
 ms.author: sstein
-monikerRange: =azuresqldb-current||>=sql-server-2016||=sqlallproducts-allversions||>=sql-server-linux-2017||=azuresqldb-mi-current
-ms.openlocfilehash: c9332af1ac716b9112686de7232f48c2b8347994
-ms.sourcegitcommit: e700497f962e4c2274df16d9e651059b42ff1a10
+monikerRange: =azuresqldb-current||>=sql-server-2016||>=sql-server-linux-2017||=azuresqldb-mi-current
+ms.openlocfilehash: 980e3ec16bf49a6e1ab068b2114304073dcceb25
+ms.sourcegitcommit: 1a544cf4dd2720b124c3697d1e62ae7741db757c
 ms.translationtype: HT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 08/17/2020
-ms.locfileid: "88428465"
+ms.lasthandoff: 12/14/2020
+ms.locfileid: "97469664"
 ---
 # <a name="oledb-queryinterface-event-class"></a>OLEDB QueryInterface 이벤트 클래스
 [!INCLUDE [SQL Server - ASDB](../../includes/applies-to-version/sql-asdb.md)]
-  **OLEDB QueryInterface** 이벤트 클래스는 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]가 분산 쿼리 및 원격 저장 프로시저를 위해 OLE DB **QueryInterface**를 호출할 때 발생합니다. 분산 쿼리 및 원격 저장 프로시저와 관련된 문제를 모니터링하는 추적에 이 이벤트 클래스를 포함시킵니다.  
+  **OLEDB QueryInterface** 이벤트 클래스는 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]가 분산 쿼리 및 원격 저장 프로시저를 위해 OLE DB **QueryInterface** 를 호출할 때 발생합니다. 분산 쿼리 및 원격 저장 프로시저와 관련된 문제를 모니터링하는 추적에 이 이벤트 클래스를 포함시킵니다.  
   
  **OLEDB QueryInterface** 이벤트 클래스가 포함되면 오버헤드 양이 많아집니다. 이런 이벤트가 자주 발생할 경우 추적으로 인해 성능이 심각하게 저하될 수도 있습니다. 오버헤드 발생을 최소화하려면 단기간 동안 특정 문제를 모니터링하는 추적에서만 이 이벤트 클래스를 사용하십시오.  
   
@@ -46,7 +46,7 @@ ms.locfileid: "88428465"
 |LinkedServerName|**nvarchar**|연결된 서버의 이름입니다.|45|예|  
 |LoginName|**nvarchar**|사용자 로그인 이름이며 DOMAIN\username 형식의 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] Windows 로그인 자격 증명 또는 [!INCLUDE[msCoName](../../includes/msconame-md.md)] 보안 로그인입니다.|11|예|  
 |LoginSid|**image**|로그인한 사용자의 SID(보안 ID)입니다. 이 정보는 sys.server_principals 카탈로그 뷰에 있습니다. 각 SID는 서버의 각 로그인마다 고유합니다.|41|예|  
-|MethodName|**nvarchar**|호출 메서드의 이름입니다.|47|예|  
+|MethodName|**nvarchar**|호출 메서드의 이름입니다.|47|아니요|  
 |NTDomainName|**nvarchar**|사용자가 속한 Windows 도메인입니다.|7|예|  
 |NTUserName|**nvarchar**|Windows 사용자 이름입니다.|6|예|  
 |ProviderName|**nvarchar**|OLE DB Provider의 이름입니다.|46|예|  

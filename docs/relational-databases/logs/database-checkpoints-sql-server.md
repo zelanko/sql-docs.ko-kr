@@ -27,22 +27,22 @@ helpviewer_keywords:
 ms.assetid: 98a80238-7409-4708-8a7d-5defd9957185
 author: MashaMSFT
 ms.author: mathoma
-monikerRange: =azuresqldb-current||>=sql-server-2016||=sqlallproducts-allversions||>=sql-server-linux-2017||=azuresqldb-mi-current
-ms.openlocfilehash: 156668084a475f71cea6c18ac050bf45eead6f06
-ms.sourcegitcommit: da88320c474c1c9124574f90d549c50ee3387b4c
+monikerRange: =azuresqldb-current||>=sql-server-2016||>=sql-server-linux-2017||=azuresqldb-mi-current
+ms.openlocfilehash: 3583f0f780df284dc16e54eda6b2406ff8737911
+ms.sourcegitcommit: 1a544cf4dd2720b124c3697d1e62ae7741db757c
 ms.translationtype: HT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 07/01/2020
-ms.locfileid: "85754555"
+ms.lasthandoff: 12/14/2020
+ms.locfileid: "97473854"
 ---
 # <a name="database-checkpoints-sql-server"></a>데이터베이스 검사점(SQL Server)
 [!INCLUDE [SQL Server Azure SQL Database](../../includes/applies-to-version/sql-asdb.md)]
  *검사점* 은 [!INCLUDE[ssDEnoversion](../../includes/ssdenoversion-md.md)] 이 예기치 않은 종료 또는 충돌 후 복구하는 과정에서 로그에 포함된 변경 내용의 적용을 시작할 수 있는 알려진 올바른 지점을 만듭니다.
 
 ##  <a name="overview"></a><a name="Overview"></a> 개요   
-성능상의 이유로 [!INCLUDE[ssDE](../../includes/ssde-md.md)]은 변경 내용이 있을 때마다 메모리(버퍼 캐시)에서 데이터베이스 페이지를 수정하며 이러한 페이지를 디스크에 기록하지는 않습니다. 대신 [!INCLUDE[ssDE](../../includes/ssde-md.md)] 은 각 데이터베이스에서 정기적으로 검사점을 실행합니다. *검사점* 은 현재 메모리 내의 수정된 페이지( *더티 페이지*라고 함)와 메모리의 트랜잭션 로그 정보를 디스크에 쓰고 트랜잭션 로그에 대한 정보도 기록합니다.  
+성능상의 이유로 [!INCLUDE[ssDE](../../includes/ssde-md.md)]은 변경 내용이 있을 때마다 메모리(버퍼 캐시)에서 데이터베이스 페이지를 수정하며 이러한 페이지를 디스크에 기록하지는 않습니다. 대신 [!INCLUDE[ssDE](../../includes/ssde-md.md)] 은 각 데이터베이스에서 정기적으로 검사점을 실행합니다. *검사점* 은 현재 메모리 내의 수정된 페이지( *더티 페이지* 라고 함)와 메모리의 트랜잭션 로그 정보를 디스크에 쓰고 트랜잭션 로그에 대한 정보도 기록합니다.  
   
- [!INCLUDE[ssDE](../../includes/ssde-md.md)] 에서는 자동, 간접, 수동 및 내부와 같은 여러 가지 유형의 검사점이 지원됩니다. 다음 표에는 **검사점**의 유형이 요약되어 있습니다.
+ [!INCLUDE[ssDE](../../includes/ssde-md.md)] 에서는 자동, 간접, 수동 및 내부와 같은 여러 가지 유형의 검사점이 지원됩니다. 다음 표에는 **검사점** 의 유형이 요약되어 있습니다.
   
 |Name|[!INCLUDE[tsql](../../includes/tsql-md.md)] 인터페이스|Description|  
 |----------|----------------------------------|-----------------|  
@@ -98,7 +98,7 @@ ms.locfileid: "85754555"
   
 -   간접 검사점이 구성된 데이터베이스의 온라인 트랜잭션 작업으로 인해 성능이 저하될 수 있습니다. 간접 검사점은 데이터베이스 복구가 대상 복구 시간 내에 완료되도록 더티 페이지 수가 특정 임계값보다 적어야 합니다. 
 
-  **복구 간격** 구성 옵션은 더티 페이지 수를 사용하는 **간접 검사점**과 달리 트랜잭션 수를 사용하여 복구 시간을 결정합니다. 많은 수의 DML 작업을 수신하는 데이터베이스에서 간접 검사점을 사용하도록 설정하는 경우 복구 수행에 필요한 시간이 데이터베이스의 대상 복구 시간 설정 내로 유지되도록 백그라운드 기록기가 더티 버퍼를 디스크로 적극적으로 플러시하기 시작할 수 있습니다. 이로 인해 특정 시스템에서 추가 I/O 작업이 발생할 수 있으므로 디스크 하위 시스템이 I/O 임계값 위에서 또는 근처에서 작동하는 경우 성능 병목 현상에 영향을 줄 수 있습니다.  
+  **복구 간격** 구성 옵션은 더티 페이지 수를 사용하는 **간접 검사점** 과 달리 트랜잭션 수를 사용하여 복구 시간을 결정합니다. 많은 수의 DML 작업을 수신하는 데이터베이스에서 간접 검사점을 사용하도록 설정하는 경우 복구 수행에 필요한 시간이 데이터베이스의 대상 복구 시간 설정 내로 유지되도록 백그라운드 기록기가 더티 버퍼를 디스크로 적극적으로 플러시하기 시작할 수 있습니다. 이로 인해 특정 시스템에서 추가 I/O 작업이 발생할 수 있으므로 디스크 하위 시스템이 I/O 임계값 위에서 또는 근처에서 작동하는 경우 성능 병목 현상에 영향을 줄 수 있습니다.  
   
 -   간접 검사점을 사용하면 REDO 동안의 임의 I/O 비용을 줄여 데이터베이스 복구 시간을 안정적으로 제어할 수 있습니다. 이를 통해 서버 인스턴스를 특정 데이터베이스의 복구 시간 상한 내로 유지할 수 있습니다. 장기 실행 트랜잭션으로 인해 UNDO 시간이 과도하게 길어지는 경우에는 예외입니다.  
   

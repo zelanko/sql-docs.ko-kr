@@ -12,13 +12,13 @@ f1_keywords:
 author: yualan
 ms.author: alayu
 ms.reviewer: maghan
-monikerRange: =azuresqldb-current||>=sql-server-2016||=sqlallproducts-allversions||>=sql-server-linux-2017||=azuresqldb-mi-current
-ms.openlocfilehash: 68144fbcffdc2535471c279b5771963fcfb05fec
-ms.sourcegitcommit: 4d370399f6f142e25075b3714e5c2ce056b1bfd0
+monikerRange: =azuresqldb-current||>=sql-server-2016||>=sql-server-linux-2017||=azuresqldb-mi-current
+ms.openlocfilehash: 74c52322158826787cbb467b70a5c48dd8c845f0
+ms.sourcegitcommit: 1a544cf4dd2720b124c3697d1e62ae7741db757c
 ms.translationtype: HT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 10/09/2020
-ms.locfileid: "91868735"
+ms.lasthandoff: 12/14/2020
+ms.locfileid: "97473934"
 ---
 # <a name="import-flat-file-to-sql-wizard"></a>SQL 마법사로 플랫 파일 가져오기
 [!INCLUDE [SQL Server Azure SQL Database](../../includes/applies-to-version/sql-asdb.md)]
@@ -41,16 +41,16 @@ PROSE는 입력 파일의 데이터 패턴을 분석하여 열 이름, 형식, �
 ## <a name="getting-started"></a><a id="started"></a>시작
 플랫 파일 가져오기 마법사에 액세스하려면 다음 단계를 수행합니다.
 
-1. **SQL Server Management Studio**를 엽니다.
+1. **SQL Server Management Studio** 를 엽니다.
 2. SQL Server 데이터베이스 엔진의 인스턴스 또는 localhost에 연결합니다.
-3. **데이터베이스**를 확장하고, 데이터베이스(아래 예제에서는 테스트)를 마우스 오른쪽 단추로 클릭하고, **작업**을 가리킨 다음, 데이터 가져오기 위에 있는 **플랫 파일 가져오기**를 클릭합니다.
+3. **데이터베이스** 를 확장하고, 데이터베이스(아래 예제에서는 테스트)를 마우스 오른쪽 단추로 클릭하고, **작업** 을 가리킨 다음, 데이터 가져오기 위에 있는 **플랫 파일 가져오기** 를 클릭합니다.
 
 ![마법사 메뉴](media/import-flat-file-wizard/import-flat-file-menu.png)
 
 마법사의 다른 기능에 대해 자세히 알아보려면 다음 자습서를 참조하세요.
 
 ## <a name="tutorial"></a>자습서
-이 자습서의 목적을 위해 사용자 고유의 플랫 파일을 자유롭게 사용할 수 있어야 합니다. 그렇지 않으면 이 자습서는 사용자가 복사할 수 있는 Excel에서 다음 CSV를 사용합니다. 이 CSV를 사용하는 경우 제목을 **example.csv**로 지정하고 바탕 화면처럼 쉬운 위치에 csv로 저장해야 합니다.
+이 자습서의 목적을 위해 사용자 고유의 플랫 파일을 자유롭게 사용할 수 있어야 합니다. 그렇지 않으면 이 자습서는 사용자가 복사할 수 있는 Excel에서 다음 CSV를 사용합니다. 이 CSV를 사용하는 경우 제목을 **example.csv** 로 지정하고 바탕 화면처럼 쉬운 위치에 csv로 저장해야 합니다.
 
 ![마법사 Excel](media/import-flat-file-wizard/import-flat-file-example.png)
 
@@ -65,7 +65,7 @@ PROSE는 입력 파일의 데이터 패턴을 분석하여 열 이름, 형식, �
 ### <a name="step-1-access-wizard-and-intro-page"></a>1단계: 마법사 액세스 및 소개 페이지
 [여기](#started) 설명된 대로 마법사에 액세스합니다.
 
-마법사의 첫 페이지는 시작 페이지입니다. 이 페이지를 다시 표시하지 않으려면 **이 시작 페이지를 다시 표시 안 함**을 클릭하면 됩니다.
+마법사의 첫 페이지는 시작 페이지입니다. 이 페이지를 다시 표시하지 않으려면 **이 시작 페이지를 다시 표시 안 함** 을 클릭하면 됩니다.
 
 ![마법사 소개](media/import-flat-file-wizard/import-flat-file-intro.png)
 

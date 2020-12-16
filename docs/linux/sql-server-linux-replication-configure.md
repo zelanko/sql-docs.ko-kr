@@ -11,13 +11,13 @@ ms.prod: sql
 ms.prod_service: database-engine
 ms.technology: linux
 titleSuffix: SQL Server on Linux
-monikerRange: '>=sql-server-ver15||>=sql-server-linux-ver15||=sqlallproducts-allversions'
-ms.openlocfilehash: 0c4a22b43650292055a7b1c48b9408b4d8e85f6c
-ms.sourcegitcommit: 610e3ebe21ac6575850a29641a32f275e71557e3
+monikerRange: '>=sql-server-ver15||>=sql-server-linux-ver15'
+ms.openlocfilehash: 54eb732e45515176f7fd1e8b258310e7de2b535c
+ms.sourcegitcommit: 1a544cf4dd2720b124c3697d1e62ae7741db757c
 ms.translationtype: HT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 10/07/2020
-ms.locfileid: "91785057"
+ms.lasthandoff: 12/14/2020
+ms.locfileid: "97471514"
 ---
 # <a name="configure-sql-server-replication-on-linux"></a>Linux의 SQL Server 복제 구성
 
@@ -73,9 +73,9 @@ SSMS(SQL Server Management Studio) 또는 Transact-SQL 저장 프로시저를 �
 
 1. SSMS의 개체 탐색기에서 SQL Server의 인스턴스에 연결합니다.
 
-1. **복제**를 마우스 오른쪽 단추로 클릭하고 **배포 구성...** 을 클릭합니다.
+1. **복제** 를 마우스 오른쪽 단추로 클릭하고 **배포 구성...** 을 클릭합니다.
 
-1. **배포 구성 마법사**의 지침을 따릅니다.
+1. **배포 구성 마법사** 의 지침을 따릅니다.
 
 ### <a name="create-publication-and-articles"></a>게시 및 아티클 만들기
 
@@ -83,7 +83,7 @@ SSMS(SQL Server Management Studio) 또는 Transact-SQL 저장 프로시저를 �
 
 1. 개체 탐색기에서 **복제** > **로컬 게시**> **새 게시...** 를 클릭합니다.
 
-1. **새 게시 마법사**의 지침에 따라 복제 유형 및 게시에 속하는 아티클을 구성합니다.
+1. **새 게시 마법사** 의 지침에 따라 복제 유형 및 게시에 속하는 아티클을 구성합니다.
 
 ### <a name="configure-the-subscription"></a>구독 구성
 
@@ -93,7 +93,7 @@ SSMS(SQL Server Management Studio) 또는 Transact-SQL 저장 프로시저를 �
 
 복제 모니터를 사용하여 복제 작업을 모니터링합니다.
 
-개체 탐색기에서 **복제**를 마우스 오른쪽 단추로 클릭하고 **복제 모니터 시작**을 클릭합니다.
+개체 탐색기에서 **복제** 를 마우스 오른쪽 단추로 클릭하고 **복제 모니터 시작** 을 클릭합니다.
 
 ## <a name="next-steps"></a>다음 단계
 

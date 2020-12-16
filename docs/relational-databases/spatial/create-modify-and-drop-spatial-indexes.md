@@ -17,13 +17,13 @@ helpviewer_keywords:
 ms.assetid: 00c1b927-8ec5-44cf-87c2-c8de59745735
 author: MladjoA
 ms.author: mlandzic
-monikerRange: =azuresqldb-current||>=sql-server-2016||=sqlallproducts-allversions||>=sql-server-linux-2017||=azuresqldb-mi-current
-ms.openlocfilehash: bb02f98fbfad4dbad81983afd09daf04ed1e0176
-ms.sourcegitcommit: a5398f107599102af7c8cda815d8e5e9a367ce7e
+monikerRange: =azuresqldb-current||>=sql-server-2016||>=sql-server-linux-2017||=azuresqldb-mi-current
+ms.openlocfilehash: 03187f310687792ebb07d4fd3d67e7a58ce83323
+ms.sourcegitcommit: 1a544cf4dd2720b124c3697d1e62ae7741db757c
 ms.translationtype: HT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 10/13/2020
-ms.locfileid: "92006356"
+ms.lasthandoff: 12/14/2020
+ms.locfileid: "97473184"
 ---
 # <a name="create-modify-and-drop-spatial-indexes"></a>공간 인덱스 만들기, 수정 및 삭제
 [!INCLUDE [SQL Server Azure SQL Database Azure SQL Managed Instance](../../includes/applies-to-version/sql-asdb-asdbmi.md)]
@@ -45,23 +45,23 @@ ms.locfileid: "92006356"
   
 1.  개체 탐색기에서 [!INCLUDE[ssDEnoversion](../../includes/ssdenoversion-md.md)] 의 인스턴스에 연결한 다음 해당 인스턴스를 확장합니다.  
   
-2.  **데이터베이스**를 확장하고 지정한 인덱스가 있는 테이블이 포함된 데이터베이스를 확장한 다음 **테이블**을 확장합니다.  
+2.  **데이터베이스** 를 확장하고 지정한 인덱스가 있는 테이블이 포함된 데이터베이스를 확장한 다음 **테이블** 을 확장합니다.  
   
 3.  인덱스를 만들 테이블을 확장합니다.  
   
-4.  **인덱스** 를 마우스 오른쪽 단추로 클릭하고 **새 인덱스**를 선택합니다.  
+4.  **인덱스** 를 마우스 오른쪽 단추로 클릭하고 **새 인덱스** 를 선택합니다.  
   
 5.  **인덱스 이름** 필드에 인덱스의 이름을 입력합니다.  
   
-6.  **인덱스 유형** 드롭다운 목록에서 **공간**을 선택합니다.  
+6.  **인덱스 유형** 드롭다운 목록에서 **공간** 을 선택합니다.  
   
-7.  인덱싱하려는 공간 열을 지정하려면 **추가**를 클릭합니다.  
+7.  인덱싱하려는 공간 열을 지정하려면 **추가** 를 클릭합니다.  
   
-8.  **열 선택** *\<table name>* 대화 상자에서 해당 상자를 선택하여 **geometry** 또는 **geography** 형식의 열을 선택합니다. 그러면 다른 공간 열이 편집할 수 없게 됩니다. 다른 공간 열을 선택하려면 먼저 현재 선택된 열의 선택을 취소해야 합니다. 완료되었으면 **확인**을 클릭합니다.  
+8.  **열 선택** *\<table name>* 대화 상자에서 해당 상자를 선택하여 **geometry** 또는 **geography** 형식의 열을 선택합니다. 그러면 다른 공간 열이 편집할 수 없게 됩니다. 다른 공간 열을 선택하려면 먼저 현재 선택된 열의 선택을 취소해야 합니다. 완료되었으면 **확인** 을 클릭합니다.  
   
 9. **인덱스 키 열** 표에서 열 선택 사항을 확인합니다.  
   
-10. **인덱스 속성** 대화 상자의 **페이지 선택** 창에서 **공간**을 클릭합니다.  
+10. **인덱스 속성** 대화 상자의 **페이지 선택** 창에서 **공간** 을 클릭합니다.  
   
 11. **공간** 페이지에서 인덱스의 공간 속성에 사용할 값을 지정합니다.  
   
@@ -73,7 +73,7 @@ ms.locfileid: "92006356"
   
      이러한 속성에 대한 자세한 내용은 [Index Properties F1 Help](../../relational-databases/indexes/index-properties-f1-help.md)을 참조하십시오.  
   
-12. **확인**을 클릭합니다.  
+12. **확인** 을 클릭합니다.  
   
 > [!NOTE]  
 >  같은 공간 열 또는 다른 공간 열에 공간 인덱스를 더 만들려면 위 단계를 반복하십시오.  
@@ -82,15 +82,15 @@ ms.locfileid: "92006356"
  **Management Studio의 테이블 디자이너를 사용하여 공간 인덱스를 만들려면**  
  ##### <a name="to-create-a-spatial-index-in-table-designer"></a>테이블 디자이너에서 공간 인덱스를 만들려면  
   
-1.  개체 탐색기에서 공간 인덱스를 만들려는 테이블을 마우스 오른쪽 단추로 클릭하고 **디자인**을 클릭합니다.  
+1.  개체 탐색기에서 공간 인덱스를 만들려는 테이블을 마우스 오른쪽 단추로 클릭하고 **디자인** 을 클릭합니다.  
   
      테이블 디자이너에서 테이블이 열립니다.  
   
 2.  인덱스에 대해 **geometry** 또는 **geography** 열을 선택합니다.  
   
-3.  **테이블 디자이너** 메뉴에서 **공간 인덱스**를 클릭합니다.  
+3.  **테이블 디자이너** 메뉴에서 **공간 인덱스** 를 클릭합니다.  
   
-4.  **공간 인덱스** 대화 상자에서 **추가**를 클릭합니다.  
+4.  **공간 인덱스** 대화 상자에서 **추가** 를 클릭합니다.  
   
 5.  **선택한 공간 인덱스** 목록에서 새 인덱스를 선택하고 오른쪽에 있는 표에서 공간 인덱스의 속성을 설정합니다. 속성에 대한 자세한 내용은 [공간 인덱스 대화 상자&#40;Visual Database Tools&#41;](../../ssms/visual-db-tools/spatial-indexes-dialog-box-visual-database-tools.md)를 참조하세요.  
   
@@ -117,21 +117,21 @@ ms.locfileid: "92006356"
  **Management Studio의 테이블 디자이너를 사용하여 공간 인덱스를 삭제하려면**  
  ##### <a name="to-drop-a-spatial-index-in-table-designer"></a>테이블 디자이너에서 공간 인덱스를 삭제하려면  
   
-1.  개체 탐색기에서 삭제하려는 공간 인덱스가 포함된 테이블을 마우스 오른쪽 단추로 클릭하고 **디자인**을 클릭합니다.  
+1.  개체 탐색기에서 삭제하려는 공간 인덱스가 포함된 테이블을 마우스 오른쪽 단추로 클릭하고 **디자인** 을 클릭합니다.  
   
      테이블 디자이너에서 테이블이 열립니다.  
   
-2.  **테이블 디자이너** 메뉴에서 **공간 인덱스**를 클릭합니다.  
+2.  **테이블 디자이너** 메뉴에서 **공간 인덱스** 를 클릭합니다.  
   
      **공간 인덱스** 대화 상자가 나타납니다.  
   
 3.  **선택한 공간 인덱스** 열에서 삭제하려는 인덱스를 클릭합니다.  
   
-4.  **삭제**를 클릭합니다.  
+4.  **삭제** 를 클릭합니다.  
   
   
 ##  <a name="restrictions-on-spatial-indexes"></a><a name="restrictions"></a> 공간 인덱스의 제한 사항  
- 공간 인덱스는 **기하학** 또는 **지리**유형의 열에서만 만들 수 있습니다.  
+ 공간 인덱스는 **기하학** 또는 **지리** 유형의 열에서만 만들 수 있습니다.  
   
 ### <a name="table-and-view-restrictions"></a>테이블 및 뷰 제한 사항  
  공간 인덱스는 기본 키가 있는 테이블에서만 정의할 수 있습니다. 테이블의 최대 기본 키 열 수는 15개입니다.  

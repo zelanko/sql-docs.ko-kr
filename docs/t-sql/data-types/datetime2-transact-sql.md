@@ -22,19 +22,19 @@ helpviewer_keywords:
 ms.assetid: 868017f3-214f-43ef-8536-cc1632a2288f
 author: MikeRayMSFT
 ms.author: mikeray
-monikerRange: '>=aps-pdw-2016||=azuresqldb-current||=azure-sqldw-latest||>=sql-server-2016||=sqlallproducts-allversions||>=sql-server-linux-2017||=azuresqldb-mi-current'
-ms.openlocfilehash: a64acd93b34a1d919ec271f7a11a3d9edd199d44
-ms.sourcegitcommit: c4d564435c008e2c92035efd2658172f20f07b2b
+monikerRange: '>=aps-pdw-2016||=azuresqldb-current||=azure-sqldw-latest||>=sql-server-2016||>=sql-server-linux-2017||=azuresqldb-mi-current'
+ms.openlocfilehash: 02b3ff30a15e642fec7afb3a2646037d081a651f
+ms.sourcegitcommit: 1a544cf4dd2720b124c3697d1e62ae7741db757c
 ms.translationtype: HT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 08/24/2020
-ms.locfileid: "88760333"
+ms.lasthandoff: 12/14/2020
+ms.locfileid: "97472214"
 ---
 # <a name="datetime2-transact-sql"></a>datetime2(Transact-SQL)
 
 [!INCLUDE [sql-asdb-asdbmi-asa-pdw](../../includes/applies-to-version/sql-asdb-asdbmi-asa-pdw.md)]
 
-24시간제 기준의 시간과 결합된 날짜를 정의합니다. **datetime2**는 더 큰 날짜 범위, 더 많은 기본 소수 자릿수, 선택 항목인 사용자 지정 전체 자릿수를 갖는 기존 **datetime** 형식의 확장으로 볼 수 있습니다.
+24시간제 기준의 시간과 결합된 날짜를 정의합니다. **datetime2** 는 더 큰 날짜 범위, 더 많은 기본 소수 자릿수, 선택 항목인 사용자 지정 전체 자릿수를 갖는 기존 **datetime** 형식의 확장으로 볼 수 있습니다.
   
 ## <a name="datetime2-description"></a>datetime2 설명
   
@@ -64,7 +64,7 @@ ms.locfileid: "88760333"
 데이터 형식 메타데이터에 대한 자세한 내용은 [sys.systypes&#40;Transact-SQL&#41;](../../relational-databases/system-compatibility-views/sys-systypes-transact-sql.md) 또는 [TYPEPROPERTY&#40;Transact-SQL&#41;](../../t-sql/functions/typeproperty-transact-sql.md)를 참조하십시오. 일부 날짜 및 시간 데이터 형식의 경우 전체 자릿수와 소수 자릿수는 변할 수 있습니다. 열의 전체 자릿수와 소수 자릿수를 얻으려면 [COLUMNPROPERTY&#40;Transact-SQL&#41;](../../t-sql/functions/columnproperty-transact-sql.md), [COL_LENGTH&#40;Transact-SQL&#41;](../../t-sql/functions/col-length-transact-sql.md) 또는 [sys.columns&#40;Transact-SQL&#41;](../../relational-databases/system-catalog-views/sys-columns-transact-sql.md)를 참조하십시오.
   
 ## <a name="supported-string-literal-formats-for-datetime2"></a>datetime2에 대해 지원되는 문자열 리터럴 형식
-다음 표에는 **datetime2**에 대해 지원되는 ISO 8601 및 ODBC 문자열 리터럴 형식이 나와 있습니다. **datetime2**의 날짜 및 시간 부분에 대한 영문자, 숫자, 시간 및 구분되지 않은 시간 형식에 대한 내용은 [date&#40;Transact-SQL&#41;](../../t-sql/data-types/date-transact-sql.md) 및 [time&#40;Transact-SQL&#41;](../../t-sql/data-types/time-transact-sql.md)을 참조하세요.
+다음 표에는 **datetime2** 에 대해 지원되는 ISO 8601 및 ODBC 문자열 리터럴 형식이 나와 있습니다. **datetime2** 의 날짜 및 시간 부분에 대한 영문자, 숫자, 시간 및 구분되지 않은 시간 형식에 대한 내용은 [date&#40;Transact-SQL&#41;](../../t-sql/data-types/date-transact-sql.md) 및 [time&#40;Transact-SQL&#41;](../../t-sql/data-types/time-transact-sql.md)을 참조하세요.
   
 |ISO 8601|설명|  
 |---|---|
@@ -75,7 +75,7 @@ ms.locfileid: "88760333"
 |{ ts 'yyyy-mm-dd hh:mm:ss[.소수 자릿수 초]' }|ODBC API 사양:<br /><br /> 소수 자릿수 초를 나타내는 소수점 오른쪽 자릿수는 0에서 최대 7(100나노초)까지 지정할 수 있습니다.|  
   
 ## <a name="ansi-and-iso-8601-compliance"></a>ANSI 및 ISO 8601 호환성  
-[date](../../t-sql/data-types/date-transact-sql.md)와 [time](../../t-sql/data-types/time-transact-sql.md)의 ANSI 및 ISO 8601 호환성은 **datetime2**에 적용됩니다.
+[date](../../t-sql/data-types/date-transact-sql.md)와 [time](../../t-sql/data-types/time-transact-sql.md)의 ANSI 및 ISO 8601 호환성은 **datetime2** 에 적용됩니다.
   
 ##  <a name="backward-compatibility-for-down-level-clients"></a>하위 클라이언트에 대한 이전 버전과의 호환성  
 일부 하위 클라이언트는 **time**, **date**, **datetime2** 및 **datetimeoffset** 데이터 형식을 지원하지 않습니다. 다음 표에서는 상위 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 인스턴스와 하위 클라이언트 간 형식 매핑을 보여 줍니다.
@@ -93,7 +93,7 @@ ms.locfileid: "88760333"
 ### <a name="converting-other-date-and-time-types-to-the-datetime2-data-type"></a>다른 날짜 및 시간 형식을 datetime2 데이터 형식으로 변환
 이 섹션에서는 다른 날짜/시간 데이터 형식이 **datetime2** 데이터 형식으로 변환하면 어떤 일이 발생하는지를 설명합니다.  
   
-**date**에서 변환되는 경우 년, 월, 일이 복사됩니다.  시간 구성 요소는 00:00:00.0000000으로 설정됩니다.  다음 코드에서는 `date` 값을 `datetime2` 값으로 변환한 결과를 보여 줍니다.  
+**date** 에서 변환되는 경우 년, 월, 일이 복사됩니다.  시간 구성 요소는 00:00:00.0000000으로 설정됩니다.  다음 코드에서는 `date` 값을 `datetime2` 값으로 변환한 결과를 보여 줍니다.  
   
 ```sql
 DECLARE @date date = '12-21-16';
@@ -121,7 +121,7 @@ SELECT @datetime2 AS '@datetime2', @time AS '@time';
 --1900-01-01 12:10:16.1234567 12:10:16.1234567
 ```  
   
-**smalldatetime**에서 변환되는 경우 시간과 분이 복사됩니다. 초 및 소수 자릿수 초는 0으로 설정됩니다. 다음 코드에서는 `smalldatetime` 값을 `datetime2` 값으로 변환한 결과를 보여 줍니다.  
+**smalldatetime** 에서 변환되는 경우 시간과 분이 복사됩니다. 초 및 소수 자릿수 초는 0으로 설정됩니다. 다음 코드에서는 `smalldatetime` 값을 `datetime2` 값으로 변환한 결과를 보여 줍니다.  
   
 ```sql
 DECLARE @smalldatetime smalldatetime = '12-01-16 12:32';
@@ -149,7 +149,7 @@ SELECT @datetime2 AS '@datetime2', @datetimeoffset AS '@datetimeoffset';
 --2016-10-23 12:45:37.1234567 2016-10-23 12:45:37.1234567 +10:00
 ```  
 
-**datetime**에서 변환되는 경우 날짜 및 시간이 복사됩니다. 소수 부분 자릿수는 7자리로 확장됩니다. 다음 예에서는 `datetime` 값을 `datetime2` 값으로 변환한 결과를 보여 줍니다.
+**datetime** 에서 변환되는 경우 날짜 및 시간이 복사됩니다. 소수 부분 자릿수는 7자리로 확장됩니다. 다음 예에서는 `datetime` 값을 `datetime2` 값으로 변환한 결과를 보여 줍니다.
 
 ```sql
 DECLARE @datetime datetime = '2016-10-23 12:45:37.333';
@@ -171,7 +171,7 @@ SELECT @datetime2 AS '@datetime2', @datetime AS '@datetime';
   
 |입력 문자열 리터럴|**datetime2(n)**|  
 |---|---|
-|ODBC DATE|ODBC 문자열 리터럴은 **datetime** 데이터 형식으로 매핑됩니다. ODBC DATETIME 리터럴에서 **datetime2** 형식으로 할당하면 변환 규칙으로 정의된 대로 **datetime**과 이러한 형식 간에 암시적 변환이 발생합니다.|  
+|ODBC DATE|ODBC 문자열 리터럴은 **datetime** 데이터 형식으로 매핑됩니다. ODBC DATETIME 리터럴에서 **datetime2** 형식으로 할당하면 변환 규칙으로 정의된 대로 **datetime** 과 이러한 형식 간에 암시적 변환이 발생합니다.|  
 |ODBC TIME|이전 ODBC DATE 규칙을 참조하세요.|  
 |ODBC DATETIME|이전 ODBC DATE 규칙을 참조하세요.|  
 |DATE만|TIME 부분의 기본값은 00:00:00입니다.|  

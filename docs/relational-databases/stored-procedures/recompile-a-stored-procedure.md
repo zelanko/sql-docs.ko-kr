@@ -15,13 +15,13 @@ helpviewer_keywords:
 ms.assetid: b90deb27-0099-4fe7-ba60-726af78f7c18
 author: stevestein
 ms.author: sstein
-monikerRange: '>=aps-pdw-2016||=azuresqldb-current||=azure-sqldw-latest||>=sql-server-2016||=sqlallproducts-allversions||>=sql-server-linux-2017||=azuresqldb-mi-current'
-ms.openlocfilehash: ec11628388263463bbb7ca3f00f8611768380fd3
-ms.sourcegitcommit: 75f767c7b1ead31f33a870fddab6bef52f99906b
+monikerRange: '>=aps-pdw-2016||=azuresqldb-current||=azure-sqldw-latest||>=sql-server-2016||>=sql-server-linux-2017||=azuresqldb-mi-current'
+ms.openlocfilehash: f421e3a0e07b73037e9b789bd29778791f699561
+ms.sourcegitcommit: 1a544cf4dd2720b124c3697d1e62ae7741db757c
 ms.translationtype: HT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 07/28/2020
-ms.locfileid: "87332563"
+ms.lasthandoff: 12/14/2020
+ms.locfileid: "97473074"
 ---
 # <a name="recompile-a-stored-procedure"></a>저장 프로시저 다시 컴파일
 [!INCLUDE[SQL Server Azure SQL Database Synapse Analytics PDW ](../../includes/applies-to-version/sql-asdb-asdbmi-asa-pdw.md)]
@@ -71,9 +71,9 @@ ms.locfileid: "87332563"
 
 1. [!INCLUDE[ssDE](../../includes/ssde-md.md)]에 연결합니다.  
   
-1. 표준 도구 모음에서 **새 쿼리**를 클릭합니다.  
+1. 표준 도구 모음에서 **새 쿼리** 를 클릭합니다.  
   
-1. 다음 예를 복사하여 쿼리 창에 붙여 넣고 **실행**을 클릭합니다. 이 예에서는 프로시저 정의를 만듭니다.  
+1. 다음 예를 복사하여 쿼리 창에 붙여 넣고 **실행** 을 클릭합니다. 이 예에서는 프로시저 정의를 만듭니다.  
 
    ```sql
    USE AdventureWorks2012;  
@@ -96,7 +96,7 @@ ms.locfileid: "87332563"
   
 ### <a name="to-recompile-a-stored-procedure-by-using-the-with-recompile-option"></a>WITH RECOMPILE 옵션을 사용하여 저장 프로시저를 다시 컴파일하려면   
   
-**새 쿼리**를 선택한 후, 다음 코드 예제를 복사하여 쿼리 창에 붙여넣고, **실행**을 클릭합니다. 프로시저가 실행되고 프로시저의 쿼리 계획이 다시 컴파일됩니다.  
+**새 쿼리** 를 선택한 후, 다음 코드 예제를 복사하여 쿼리 창에 붙여넣고, **실행** 을 클릭합니다. 프로시저가 실행되고 프로시저의 쿼리 계획이 다시 컴파일됩니다.  
   
 ```sql  
 USE AdventureWorks2012;  
@@ -107,7 +107,7 @@ GO
   
 ### <a name="to-recompile-a-stored-procedure-by-using-sp_recompile"></a>sp_recompile을 사용하여 저장 프로시저를 다시 컴파일하려면  
 
-**새 쿼리**를 선택한 후, 다음 예제를 복사하여 쿼리 창에 붙여넣고, **실행**을 클릭합니다. 프로시저가 실행되지는 않지만 다음에 프로시저가 실행될 때 쿼리 계획이 업데이트될 수 있게 프로시저가 다시 컴파일되도록 표시됩니다.  
+**새 쿼리** 를 선택한 후, 다음 예제를 복사하여 쿼리 창에 붙여넣고, **실행** 을 클릭합니다. 프로시저가 실행되지는 않지만 다음에 프로시저가 실행될 때 쿼리 계획이 업데이트될 수 있게 프로시저가 다시 컴파일되도록 표시됩니다.  
 
 ```sql  
 USE AdventureWorks2012;  

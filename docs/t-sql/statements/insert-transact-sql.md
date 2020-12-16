@@ -32,13 +32,13 @@ helpviewer_keywords:
 ms.assetid: 1054c76e-0fd5-4131-8c07-a6c5d024af50
 author: markingmyname
 ms.author: maghan
-monikerRange: '>=aps-pdw-2016||=azuresqldb-current||=azure-sqldw-latest||>=sql-server-2016||=sqlallproducts-allversions||>=sql-server-linux-2017||=azuresqldb-mi-current'
-ms.openlocfilehash: b44d9306d08d1e75f1d0f0477e0c58c207bd70e8
-ms.sourcegitcommit: bd3a135f061e4a49183bbebc7add41ab11872bae
+monikerRange: '>=aps-pdw-2016||=azuresqldb-current||=azure-sqldw-latest||>=sql-server-2016||>=sql-server-linux-2017||=azuresqldb-mi-current'
+ms.openlocfilehash: a3c1a21e36d379bca1875ee96865f9affe2151ad
+ms.sourcegitcommit: 1a544cf4dd2720b124c3697d1e62ae7741db757c
 ms.translationtype: HT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 10/21/2020
-ms.locfileid: "92300866"
+ms.lasthandoff: 12/14/2020
+ms.locfileid: "97471924"
 ---
 # <a name="insert-transact-sql"></a>INSERT(Transact-SQL)
 [!INCLUDE [sql-asdb-asdbmi-asa-pdw](../../includes/applies-to-version/sql-asdb-asdbmi-asa-pdw.md)]
@@ -139,21 +139,21 @@ INSERT INTO { database_name.schema_name.table_name | schema_name.table_name | ta
  WITH \<common_table_expression>  
  INSERT 문의 범위 내에 정의되는 임시로 명명된 결과 집합(공통 테이블 식이라고도 함)을 지정합니다. 결과 집합은 SELECT 문에서 파생됩니다. 자세한 내용은 [WITH common_table_expression&#40;Transact-SQL&#41;](../../t-sql/queries/with-common-table-expression-transact-sql.md)을 참조하세요.  
   
- TOP ( *expression* ) [ PERCENT ]  
+ TOP (*expression*) [ PERCENT ]  
  삽입할 임의 행의 수 또는 비율을 지정합니다. *expression* 은 행의 수 또는 비율일 수 있습니다. 자세한 내용은 [TOP&#40;Transact-SQL&#41;](../../t-sql/queries/top-transact-sql.md)을 참조하세요.  
   
  INTO  
  INSERT와 대상 테이블 사이에 사용할 수 있는 선택적 키워드입니다.  
   
  *server_name*  
- **적용 대상** : [!INCLUDE[ssKatmai](../../includes/sskatmai-md.md)] 이상  
+ **적용 대상**: [!INCLUDE[ssKatmai](../../includes/sskatmai-md.md)] 이상  
   
  테이블 또는 뷰가 있는 연결된 서버의 이름입니다. *server_name* 은 [연결된 서버](../../relational-databases/system-stored-procedures/sp-addlinkedserver-transact-sql.md) 이름으로 지정하거나 [OPENDATASOURCE](../../t-sql/functions/opendatasource-transact-sql.md) 함수를 사용하여 지정할 수 있습니다.  
   
  *server_name* 이 연결된 서버로 지정되면 *database_name* 과 *schema_name* 이 필요합니다. OPENDATASOURCE를 사용하여 *server_name* 을 지정할 경우 *database_name* 과 *schema_name* 은 일부 데이터 원본에 적용되지 않을 수도 있으며 원격 개체에 액세스하는 OLE DB 공급자 기능에 따라 달라집니다.  
   
  *database_name*  
- **적용 대상** : [!INCLUDE[ssKatmai](../../includes/sskatmai-md.md)] 이상  
+ **적용 대상**: [!INCLUDE[ssKatmai](../../includes/sskatmai-md.md)] 이상  
   
  데이터베이스의 이름입니다.  
   
@@ -168,7 +168,7 @@ INSERT INTO { database_name.schema_name.table_name | schema_name.table_name | ta
  *table_or_view_name* 에서 참조되는 뷰는 업데이트가 가능해야 하며 해당 뷰의 FROM 절에서 정확히 하나의 기본 테이블을 참조해야 합니다. 예를 들어 여러 테이블 뷰에 대한 INSERT에는 하나의 기본 테이블에서만 열을 참조하는 *column_list* 를 사용해야 합니다. 업데이트할 수 있는 뷰에 대한 자세한 내용은 [CREATE VIEW&#40;Transact-SQL&#41;](../../t-sql/statements/create-view-transact-sql.md)를 참조하세요.  
   
  *rowset_function_limited*  
- **적용 대상** : [!INCLUDE[ssKatmai](../../includes/sskatmai-md.md)] 이상  
+ **적용 대상**: [!INCLUDE[ssKatmai](../../includes/sskatmai-md.md)] 이상  
   
  [OPENQUERY](../../t-sql/functions/openquery-transact-sql.md) 또는 [OPENROWSET](../../t-sql/functions/openrowset-transact-sql.md) 함수입니다. 이러한 함수의 사용은 원격 개체에 액세스하는 OLE DB 공급자의 기능에 영향을 받습니다.  
   
@@ -182,7 +182,7 @@ INSERT INTO { database_name.schema_name.table_name | schema_name.table_name | ta
   
  INSERT 문의 대상 테이블에 TABLOCK 힌트를 지정하는 것은 TABLOCKX 힌트를 지정하는 것과 결과가 같습니다. 두 경우 모두 테이블이 배타적으로 잠깁니다.  
   
- ( *column_list* )  
+ (*column_list*)  
  데이터를 삽입할 하나 이상의 열 목록입니다. *column_list* 는 괄호로 묶고 쉼표로 구분해야 합니다.  
   
  열이 *column_list* 에 없는 경우 [!INCLUDE[ssDE](../../includes/ssde-md.md)]에서는 열 정의에 따라 값을 제공할 수 있어야 합니다. 그렇지 않으면 행을 로드할 수 없습니다. 열이 다음과 같은 경우에는 [!INCLUDE[ssDE](../../includes/ssde-md.md)]에서 자동으로 열의 값을 제공합니다.  
@@ -205,7 +205,7 @@ OUTPUT Clause
  로컬 분할 뷰, 분산형 분할 뷰 또는 원격 테이블을 참조하는 DML 문이나 *execute_statement* 를 포함하는 INSERT 문에서는 OUTPUT 절이 지원되지 않습니다. OUTPUT INTO 절은 \<dml_table_source> 절이 포함된 INSERT 문에서 지원되지 않습니다. 이 절의 인수 및 동작에 대한 자세한 내용은 [OUTPUT Clause &#40;Transact-SQL&#41;](../../t-sql/queries/output-clause-transact-sql.md)을 참조하세요.
   
  VALUES  
- 삽입할 데이터 값의 목록을 표시합니다. *column_list* (지정된 경우) 또는 테이블의 각 열에 대해 하나의 데이터 값이 있어야 합니다. 값 목록은 괄호로 묶어야 합니다.  
+ 삽입할 데이터 값의 목록을 표시합니다. *column_list*(지정된 경우) 또는 테이블의 각 열에 대해 하나의 데이터 값이 있어야 합니다. 값 목록은 괄호로 묶어야 합니다.  
   
  값 목록의 값이 테이블의 열 순서와 다르거나 테이블의 각 열에 상응하는 값이 목록에 없으면 *column_list* 를 사용하여 각각의 들어오는 값을 저장하는 열을 명시적으로 지정해야 합니다.  
   
@@ -217,7 +217,7 @@ OUTPUT Clause
  *expression*  
  상수,  변수 또는 식입니다. 식은 EXECUTE  문을 포함할 수 없습니다.  
   
- **nchar** , **nvarchar** 및 **ntext** 유니코드 문자 데이터 형식을 참조할 때는 ' *expression* ' 앞에 대문자 'N'이 접두사로 와야 합니다. 'N'을 지정하지 않으면 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]에서 데이터베이스 또는 열의 기본 데이터 정렬에 해당하는 코드 페이지로 문자열을 변환합니다. 이 코드 페이지에 없는 문자는 모두 손실됩니다.  
+ **nchar**, **nvarchar** 및 **ntext** 유니코드 문자 데이터 형식을 참조할 때는 '*expression*' 앞에 대문자 'N'이 접두사로 와야 합니다. 'N'을 지정하지 않으면 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]에서 데이터베이스 또는 열의 기본 데이터 정렬에 해당하는 코드 페이지로 문자열을 변환합니다. 이 코드 페이지에 없는 문자는 모두 손실됩니다.  
   
  *derived_table*  
  테이블에 로드할 데이터 행을 반환하는 유효한 SELECT 문입니다. SELECT 문은 CTE(공통 테이블 식)를 포함할 수 없습니다.  
@@ -263,35 +263,35 @@ OUTPUT Clause
  \<dml_statement_with_output_clause>에서 반환된 행을 필터링하는 유효한 \<search_condition>을 포함하는 WHERE 절입니다. 자세한 내용은 [검색 조건&#40;Transact-SQL&#41;](../../t-sql/queries/search-condition-transact-sql.md)을 참조하세요. 이 컨텍스트에서 사용할 경우 \<search_condition>은 하위 쿼리, 데이터 액세스를 수행하는 스칼라 사용자 정의 함수, 집계 함수, TEXTPTR 또는 전체 텍스트 검색 조건자를 포함할 수 없습니다. 
   
  DEFAULT VALUES  
- **적용 대상** : [!INCLUDE[ssKatmai](../../includes/sskatmai-md.md)] 이상  
+ **적용 대상**: [!INCLUDE[ssKatmai](../../includes/sskatmai-md.md)] 이상  
   
  새 행이 각 열에 대해 정의된 기본값을 포함하도록 설정합니다.  
   
  BULK  
-**적용 대상** : [!INCLUDE[ssKatmai](../../includes/sskatmai-md.md)] 이상  
+**적용 대상**: [!INCLUDE[ssKatmai](../../includes/sskatmai-md.md)] 이상  
   
  이진 데이터 스트림을 업로드하기 위해 외부 도구에서 사용됩니다. 이 옵션은 [!INCLUDE[ssManStudioFull](../../includes/ssmanstudiofull-md.md)], SQLCMD, OSQL과 같은 도구나 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] Native Client와 같은 데이터 액세스 애플리케이션 프로그래밍 인터페이스에 사용할 수 없습니다.  
   
  FIRE_TRIGGERS  
- **적용 대상** : [!INCLUDE[ssKatmai](../../includes/sskatmai-md.md)] 이상  
+ **적용 대상**: [!INCLUDE[ssKatmai](../../includes/sskatmai-md.md)] 이상  
   
  이진 데이터 스트림 업로드 작업 중에 대상 테이블에 정의된 삽입 트리거가 실행되도록 지정합니다. 자세한 내용은 [BULK INSERT&#40;Transact-SQL&#41;](../../t-sql/statements/bulk-insert-transact-sql.md)를 참조하세요.  
   
  CHECK_CONSTRAINTS  
- **적용 대상** : [!INCLUDE[ssKatmai](../../includes/sskatmai-md.md)] 이상  
+ **적용 대상**: [!INCLUDE[ssKatmai](../../includes/sskatmai-md.md)] 이상  
   
  이진 데이터 스트림 업로드 작업 중에 대상 테이블 또는 뷰의 모든 제약 조건을 검사하도록 지정합니다. 자세한 내용은 [BULK INSERT&#40;Transact-SQL&#41;](../../t-sql/statements/bulk-insert-transact-sql.md)를 참조하세요.  
   
  KEEPNULLS  
- **적용 대상** : [!INCLUDE[ssKatmai](../../includes/sskatmai-md.md)] 이상  
+ **적용 대상**: [!INCLUDE[ssKatmai](../../includes/sskatmai-md.md)] 이상  
   
  이진 데이터 스트림 업로드 작업 중에 빈 열이 Null 값을 유지하도록 지정합니다. 자세한 내용은 [대량 가져오기 수행 중 Null 유지 또는 기본값 사용&#40;SQL Server&#41;](../../relational-databases/import-export/keep-nulls-or-use-default-values-during-bulk-import-sql-server.md)을 참조하세요.  
   
  KILOBYTES_PER_BATCH = kilobytes_per_batch  
  일괄 처리당 데이터의 근사치 크기(KB)를 *kilobytes_per_batch* 로 지정합니다. 자세한 내용은 [BULK INSERT&#40;Transact-SQL&#41;](../../t-sql/statements/bulk-insert-transact-sql.md)를 참조하세요.  
   
- ROWS_PER_BATCH = *rows_per_batch*  
- **적용 대상** : [!INCLUDE[ssKatmai](../../includes/sskatmai-md.md)] 이상  
+ ROWS_PER_BATCH =*rows_per_batch*  
+ **적용 대상**: [!INCLUDE[ssKatmai](../../includes/sskatmai-md.md)] 이상  
   
  이진 데이터 스트림의 데이터 행 수를 대략적으로 나타냅니다. 자세한 내용은 [BULK INSERT&#40;Transact-SQL&#41;](../../t-sql/statements/bulk-insert-transact-sql.md)를 참조하세요.  
   
@@ -347,7 +347,7 @@ MERGE 문의 삽입 동작 결과로 힙에 삽입되는 행도 최소 로깅이
 ## <a name="data-types"></a>데이터 형식  
  행을 삽입할 때는 다음과 같은 데이터 형식 동작을 고려해야 합니다.  
   
--   **char** , **varchar** 또는 **varbinary** 데이터 형식을 사용하는 열에 값을 로드하는 경우 후행 공백( **char** 및 **varchar** 의 경우 공백, **varbinary** 의 경우 0)의 잘라내기 또는 채우기는 테이블을 만들 때 열에 정의된 SET ANSI_PADDING 설정에 따라 결정됩니다. 자세한 내용은 [SET ANSI_PADDING&#40;Transact-SQL&#41;](../../t-sql/statements/set-ansi-padding-transact-sql.md)을 참조하세요.  
+-   **char**, **varchar** 또는 **varbinary** 데이터 형식을 사용하는 열에 값을 로드하는 경우 후행 공백(**char** 및 **varchar** 의 경우 공백, **varbinary** 의 경우 0)의 잘라내기 또는 채우기는 테이블을 만들 때 열에 정의된 SET ANSI_PADDING 설정에 따라 결정됩니다. 자세한 내용은 [SET ANSI_PADDING&#40;Transact-SQL&#41;](../../t-sql/statements/set-ansi-padding-transact-sql.md)을 참조하세요.  
   
      다음 표에서는 SET ANSI_PADDING이 OFF일 때의 기본 작업을 보여 줍니다.  
   
@@ -361,7 +361,7 @@ MERGE 문의 삽입 동작 결과로 힙에 삽입되는 행도 최소 로깅이
   
 -   **text** 또는 **image** 열에 Null 값을 삽입하면 유효한 텍스트 포인터가 생성되지 않고 8KB 텍스트 페이지도 사전 할당되지 않습니다.  
   
--   **uniqueidentifier** 데이터 형식으로 만든 열은 특별한 형식이 지정된 16바이트 이진 값을 저장합니다. ID 열과 달리 **uniqueidentifier** 데이터 형식을 사용하는 열에 대해 [!INCLUDE[ssDE](../../includes/ssde-md.md)]에서 자동으로 값을 생성하지 않습니다. 삽입 작업 중에는 **uniqueidentifier** 열에 **uniqueidentifier** 데이터 형식의 변수 및 *xxxxxxxx-xxxx-xxxx-xxxx-xxxxxxxxxxxx* (하이픈을 포함하여 36자, *x* 는 0-9 또는 a-f 범위의 16진수) 형식의 문자열 상수를 사용할 수 있습니다. 예를 들어 6F9619FF-8B86-D011-B42D-00C04FC964FF는 **uniqueidentifier** 변수 또는 열의 유효한 값입니다. GUID(Globally Unique Identifier)를 가져오려면 [NEWID()](../../t-sql/functions/newid-transact-sql.md) 함수를 사용하세요.  
+-   **uniqueidentifier** 데이터 형식으로 만든 열은 특별한 형식이 지정된 16바이트 이진 값을 저장합니다. ID 열과 달리 **uniqueidentifier** 데이터 형식을 사용하는 열에 대해 [!INCLUDE[ssDE](../../includes/ssde-md.md)]에서 자동으로 값을 생성하지 않습니다. 삽입 작업 중에는 **uniqueidentifier** 열에 **uniqueidentifier** 데이터 형식의 변수 및 *xxxxxxxx-xxxx-xxxx-xxxx-xxxxxxxxxxxx*(하이픈을 포함하여 36자, *x* 는 0-9 또는 a-f 범위의 16진수) 형식의 문자열 상수를 사용할 수 있습니다. 예를 들어 6F9619FF-8B86-D011-B42D-00C04FC964FF는 **uniqueidentifier** 변수 또는 열의 유효한 값입니다. GUID(Globally Unique Identifier)를 가져오려면 [NEWID()](../../t-sql/functions/newid-transact-sql.md) 함수를 사용하세요.  
   
 ### <a name="inserting-values-into-user-defined-type-columns"></a>사용자 정의 형식 열에 값 삽입  
  다음과 같은 방법으로 사용자 정의 형식 열에 값을 삽입할 수 있습니다.  
@@ -726,7 +726,7 @@ GO
 #### <a name="m-inserting-data-into-a-remote-table-by-using-a-linked-server"></a>13. 연결된 서버를 사용하여 원격 테이블에 데이터 삽입  
  다음 예에서는 원격 테이블에 행을 삽입합니다. 먼저 [sp_addlinkedserver](../../relational-databases/system-stored-procedures/sp-addlinkedserver-transact-sql.md)를 사용하여 원격 데이터 원본에 대한 링크를 만듭니다. 그런 다음, 연결된 서버 이름 `MyLinkServer`가 *server.catalog.schema.object* 와 같이 네 부분으로 구성된 개체 이름의 일부로 지정됩니다.  
   
-**적용 대상** : [!INCLUDE[ssKatmai](../../includes/sskatmai-md.md)] 이상  
+**적용 대상**: [!INCLUDE[ssKatmai](../../includes/sskatmai-md.md)] 이상  
   
 ```sql
 USE master;  
@@ -755,7 +755,7 @@ GO
 #### <a name="n-inserting-data-into-a-remote-table-by-using-the-openquery-function"></a>14. OPENQUERY 함수를 사용하여 원격 테이블에 데이터 삽입  
  다음 예에서는 [OPENQUERY](../../t-sql/functions/openquery-transact-sql.md) 행 집합 함수를 지정하여 원격 테이블에 행을 삽입합니다. 이 예에서는 이전 예에서 만든 연결된 서버 이름이 사용됩니다.  
   
-**적용 대상** : [!INCLUDE[ssKatmai](../../includes/sskatmai-md.md)] 이상  
+**적용 대상**: [!INCLUDE[ssKatmai](../../includes/sskatmai-md.md)] 이상  
   
 ```sql
 INSERT OPENQUERY (MyLinkServer, 
@@ -768,7 +768,7 @@ GO
 #### <a name="o-inserting-data-into-a-remote-table-by-using-the-opendatasource-function"></a>15. OPENDATASOURCE 함수를 사용하여 원격 테이블에 데이터 삽입  
  다음 예에서는 [OPENDATASOURCE](../../t-sql/functions/opendatasource-transact-sql.md) 행 집합 함수를 지정하여 원격 테이블에 행을 삽입합니다. *server_name* 또는 *server_name\instance_name* 형식을 사용하여 데이터 원본에 대해 유효한 서버 이름을 지정해야 합니다.  
   
-**적용 대상** : [!INCLUDE[ssKatmai](../../includes/sskatmai-md.md)] 이상  
+**적용 대상**: [!INCLUDE[ssKatmai](../../includes/sskatmai-md.md)] 이상  
   
 ```sql
 -- Use the OPENDATASOURCE function to specify the remote data source.  
@@ -785,7 +785,7 @@ GO
 #### <a name="p-inserting-into-an-external-table-created-using-polybase"></a>16. PolyBase를 사용하여 만든 외부 테이블에 삽입  
  SQL Server에서 Hadoop 또는 Azure 스토리지로 데이터를 내보냅니다. 먼저 대상 파일이나 디렉터리를 가리키는 외부 테이블을 만듭니다. 그런 다음 INSERT INTO를 사용하여 로컬 SQL Server 테이블에서 외부 데이터 원본으로 데이터를 내보냅니다. INSERT INTO 문은 대상 파일이나 디렉터리가 없으면 만듭니다. SELECT 문의 결과는 지정된 파일 형식으로 생성되어 지정한 위치로 내보내집니다.  자세한 내용은 [PolyBase 시작](../../relational-databases/polybase/polybase-guide.md)을 참조하세요.  
   
-**적용 대상** : [!INCLUDE[ssCurrent](../../includes/sscurrent-md.md)].  
+**적용 대상**: [!INCLUDE[ssCurrent](../../includes/sscurrent-md.md)].  
   
 ```sql
 -- Create an external table.   
@@ -861,7 +861,7 @@ GO
 #### <a name="r-using-the-openrowset-function-with-bulk-to-bulk-load-data-into-a-table"></a>18. OPENROWSET 함수를 BULK와 함께 사용하여 테이블에 데이터 대량 로드  
  다음 예에서는 OPENROWSET 함수를 지정하여 데이터 파일의 행을 테이블에 삽입합니다. 성능 최적화를 위해 IGNORE_TRIGGERS 테이블 힌트가 지정됩니다. 더 많은 예제를 보려면 [BULK INSERT 또는 OPENROWSET&#40;BULK...&#41;를 사용하여 데이터 대량 가져오기&#40;SQL Server&#41;](../../relational-databases/import-export/import-bulk-data-by-using-bulk-insert-or-openrowset-bulk-sql-server.md)를 참조하세요.  
   
-**적용 대상** : [!INCLUDE[ssKatmai](../../includes/sskatmai-md.md)] 이상  
+**적용 대상**: [!INCLUDE[ssKatmai](../../includes/sskatmai-md.md)] 이상  
   
 ```sql
 INSERT INTO HumanResources.Department WITH (IGNORE_TRIGGERS) (Name, GroupName)  
@@ -881,7 +881,7 @@ FROM OPENROWSET (
 #### <a name="s-using-the-tablock-hint-to-specify-a-locking-method"></a>S.는 TABLOCK 힌트를 사용하여 잠금 방법 지정  
  다음 예에서는 Production.Location 테이블에 배타적(X) 잠금을 적용하고 INSERT 문이 끝날 때까지 유지하도록 지정합니다.  
   
-**적용 대상** : [!INCLUDE[ssNoVersion_md](../../includes/ssnoversion-md.md)], [!INCLUDE[ssSDS_md](../../includes/sssds-md.md)]  
+**적용 대상**: [!INCLUDE[ssNoVersion_md](../../includes/ssnoversion-md.md)], [!INCLUDE[ssSDS_md](../../includes/sssds-md.md)]  
   
 ```sql
 INSERT INTO Production.Location WITH (XLOCK)  

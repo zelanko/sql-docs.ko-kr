@@ -8,12 +8,12 @@ ms.date: 11/04/2019
 ms.topic: conceptual
 ms.prod: sql
 ms.technology: linux
-ms.openlocfilehash: 96c58159a020ba11708b12a4e5732438044b3291
-ms.sourcegitcommit: 22102f25db5ccca39aebf96bc861c92f2367c77a
+ms.openlocfilehash: bfc63894d7e2ada81ca230c1a66d32bd49d6d91d
+ms.sourcegitcommit: 1a544cf4dd2720b124c3697d1e62ae7741db757c
 ms.translationtype: HT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 10/16/2020
-ms.locfileid: "92115739"
+ms.lasthandoff: 12/14/2020
+ms.locfileid: "97471404"
 ---
 # <a name="configure-usage--diagnostic-data-collection-for-sql-server-on-linux"></a>SQL Server on Linux의 사용량 및 진단 데이터 수집 구성
 
@@ -29,7 +29,7 @@ ms.locfileid: "92115739"
 - 로그온 자격 증명 또는 기타 인증 정보
 - PII(개인 식별 정보)
 
-SQL Server 2017은 고객이 경험하는 설치 문제를 빠르게 찾아 해결할 수 있도록 하기 위해 항상 설치 프로세스에서 설치 환경에 대한 정보를 수집하고 전송합니다. **mssql-conf**를 통해 Microsoft에 정보를 보내지 않도록 SQL Server 2017을 구성할 수 있습니다(서버 인스턴스 기준). mssql-conf는 Red Hat Enterprise Linux, SUSE Linux Enterprise Server 및 Ubuntu용 SQL Server 2017과 함께 설치되는 구성 스크립트입니다.
+SQL Server 2017은 고객이 경험하는 설치 문제를 빠르게 찾아 해결할 수 있도록 하기 위해 항상 설치 프로세스에서 설치 환경에 대한 정보를 수집하고 전송합니다. **mssql-conf** 를 통해 Microsoft에 정보를 보내지 않도록 SQL Server 2017을 구성할 수 있습니다(서버 인스턴스 기준). mssql-conf는 Red Hat Enterprise Linux, SUSE Linux Enterprise Server 및 Ubuntu용 SQL Server 2017과 함께 설치되는 구성 스크립트입니다.
 
 > [!NOTE]
 > 유료 버전의 SQL Server에서만 Microsoft로 정보를 보내지 못하게 설정할 수 있습니다.
@@ -43,7 +43,7 @@ SQL Server 2017은 고객이 경험하는 설치 문제를 빠르게 찾아 해�
 
 ### <a name="on-red-hat-suse-and-ubuntu"></a>Red Hat, SUSE 및 Ubuntu
 
-1. **telemetry.customerfeedback**에 대해 **set** 명령을 사용하여 mssql-conf 스크립트를 루트 권한으로 실행합니다. 다음 예제에서는 **false**를 지정하여 사용량 및 진단 데이터 수집을 끕니다.
+1. **telemetry.customerfeedback** 에 대해 **set** 명령을 사용하여 mssql-conf 스크립트를 루트 권한으로 실행합니다. 다음 예제에서는 **false** 를 지정하여 사용량 및 진단 데이터 수집을 끕니다.
 
    ```bash
    sudo /opt/mssql/bin/mssql-conf set telemetry.customerfeedback false
@@ -83,7 +83,7 @@ docker에서 사용량 및 진단 데이터 수집을 사용하지 않도록 설
 
 ::: moniker-end
 <!--SQL Server 2019 on Linux-->
-::: moniker range=">= sql-server-linux-ver15 || >= sql-server-ver15 || =sqlallproducts-allversions"
+::: moniker range=">= sql-server-linux-ver15 || >= sql-server-ver15 "
 
 1. 호스트 디렉터리에 `[telemetry]` 및 `customerfeedback = false` 줄이 포함된 `mssql.conf` 파일을 추가합니다.
 
@@ -130,7 +130,7 @@ SQL Server on Linux에서 로컬 감사는 SQL Server 데이터베이스 엔진�
    sudo chgrp mssql /tmp/audit
    ```
 
-3. **telemetry.userrequestedlocalauditdirectory**에 대해 **set** 명령을 사용하여 mssql-conf 스크립트를 루트 권한으로 실행합니다.
+3. **telemetry.userrequestedlocalauditdirectory** 에 대해 **set** 명령을 사용하여 mssql-conf 스크립트를 루트 권한으로 실행합니다.
 
    ```bash
    sudo /opt/mssql/bin/mssql-conf set telemetry.userrequestedlocalauditdirectory /tmp/audit
@@ -176,7 +176,7 @@ docker에서 로컬 감사를 사용하도록 설정하려면 Docker를 통해 [
 
 ::: moniker-end
 <!--SQL Server 2019 on Linux-->
-::: moniker range=">= sql-server-linux-ver15 || >= sql-server-ver15 || =sqlallproducts-allversions"
+::: moniker range=">= sql-server-linux-ver15 || >= sql-server-ver15 "
 
 1. 새 로컬 감사 로그의 대상 디렉터리는 컨테이너에 있습니다. 머신의 호스트 디렉터리에 새 로컬 감사 로그의 대상 디렉터리를 만듭니다. 다음 예제에서는 새 **/audit** 디렉터리를 만듭니다.
 

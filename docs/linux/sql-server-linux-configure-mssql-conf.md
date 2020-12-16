@@ -8,12 +8,12 @@ ms.topic: conceptual
 ms.prod: sql
 ms.technology: linux
 ms.assetid: 06798dff-65c7-43e0-9ab3-ffb23374b322
-ms.openlocfilehash: b30229e584cce79d73018aa0540c9bdaf328830d
-ms.sourcegitcommit: 22102f25db5ccca39aebf96bc861c92f2367c77a
+ms.openlocfilehash: 0274f6f2a0acccb20f9a9682d16b35ef5009d1b5
+ms.sourcegitcommit: 1a544cf4dd2720b124c3697d1e62ae7741db757c
 ms.translationtype: HT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 10/16/2020
-ms.locfileid: "92115706"
+ms.lasthandoff: 12/14/2020
+ms.locfileid: "97471604"
 ---
 # <a name="configure-sql-server-on-linux-with-the-mssql-conf-tool"></a>mssql-conf 도구를 사용하여 SQL Server on Linux 구성
 
@@ -22,7 +22,7 @@ ms.locfileid: "92115706"
 <!--SQL Server 2017 on Linux-->
 ::: moniker range="= sql-server-linux-2017 || = sql-server-2017"
 
-**mssql-conf**는 Red Hat Enterprise Linux, SUSE Linux Enterprise Server 및 Ubuntu용 SQL Server 2017과 함께 설치되는 구성 스크립트입니다. 구성 값이 저장되는 [**mssql.conf 파일**](#mssql-conf-format)을 수정합니다. **mssql-conf** 유틸리티를 사용하여 다음 매개 변수를 설정할 수 있습니다.
+**mssql-conf** 는 Red Hat Enterprise Linux, SUSE Linux Enterprise Server 및 Ubuntu용 SQL Server 2017과 함께 설치되는 구성 스크립트입니다. 구성 값이 저장되는 [**mssql.conf 파일**](#mssql-conf-format)을 수정합니다. **mssql-conf** 유틸리티를 사용하여 다음 매개 변수를 설정할 수 있습니다.
 
 |매개 변수|설명|
 |---|---|
@@ -50,9 +50,9 @@ ms.locfileid: "92115706"
 
 ::: moniker-end
 <!--SQL Server 2019 on Linux-->
-::: moniker range=">= sql-server-linux-ver15 || >= sql-server-ver15 || =sqlallproducts-allversions"
+::: moniker range=">= sql-server-linux-ver15 || >= sql-server-ver15 "
 
-**mssql-conf**는 Red Hat Enterprise Linux, SUSE Linux Enterprise Server 및 Ubuntu용 [!INCLUDE[SQL Server 2019](../includes/sssqlv15-md.md)]와 함께 설치되는 구성 스크립트입니다. 이 유틸리티를 사용하여 다음 매개 변수를 설정할 수 있습니다.
+**mssql-conf** 는 Red Hat Enterprise Linux, SUSE Linux Enterprise Server 및 Ubuntu용 [!INCLUDE[SQL Server 2019](../includes/sssqlv15-md.md)]와 함께 설치되는 구성 스크립트입니다. 이 유틸리티를 사용하여 다음 매개 변수를 설정할 수 있습니다.
 
 |매개 변수|설명|
 |---|---|
@@ -91,11 +91,11 @@ ms.locfileid: "92115706"
 
 * 공유 디스크 클러스터 시나리오의 경우 변경 내용을 적용하려면 **mssql-server** 서비스를 다시 시작하지 마세요. SQL Server가 애플리케이션으로 실행되고 있습니다. 대신, 리소스를 오프라인으로 전환한 후 다시 온라인으로 전환합니다.
 
-* 이 예제에서는 전체 경로: **/opt/mssql/bin/mssql-conf**를 지정하여 mssql-conf를 실행합니다. 해당 경로로 이동하려면 현재 디렉터리 **./mssql-conf**의 컨텍스트에서 mssql-conf를 실행합니다.
+* 이 예제에서는 전체 경로: **/opt/mssql/bin/mssql-conf** 를 지정하여 mssql-conf를 실행합니다. 해당 경로로 이동하려면 현재 디렉터리 **./mssql-conf** 의 컨텍스트에서 mssql-conf를 실행합니다.
 
 ## <a name="enable-sql-server-agent"></a><a id="agent"></a> SQL Server 에이전트 사용
 
-**sqlagent.enabled** 설정은 [SQL Server 에이전트](sql-server-linux-run-sql-server-agent-job.md)를 사용하도록 설정합니다. 기본적으로 SQL Server 에이전트는 사용하지 않도록 설정됩니다. **sqlagent.enabled**가 mssql.conf 설정 파일에 있는 경우 SQL Server는 내부적으로 SQL Server 에이전트가 사용하지 않도록 설정되었다고 간주합니다.
+**sqlagent.enabled** 설정은 [SQL Server 에이전트](sql-server-linux-run-sql-server-agent-job.md)를 사용하도록 설정합니다. 기본적으로 SQL Server 에이전트는 사용하지 않도록 설정됩니다. **sqlagent.enabled** 가 mssql.conf 설정 파일에 있는 경우 SQL Server는 내부적으로 SQL Server 에이전트가 사용하지 않도록 설정되었다고 간주합니다.
 
 이 설정을 변경하려면 다음 단계를 사용합니다.
 
@@ -113,7 +113,7 @@ ms.locfileid: "92115706"
 
 ### <a name="set-the-default-database-mail-profile-for-sql-server-on-linux"></a><a id="dbmail"></a> SQL Server on Linux의 기본 데이터베이스 메일 프로필 설정
 
-**sqlpagent.databasemailprofile**을 사용하여 메일 경고의 기본 DB 메일 프로필을 설정할 수 있습니다.
+**sqlpagent.databasemailprofile** 을 사용하여 메일 경고의 기본 DB 메일 프로필을 설정할 수 있습니다.
 
 ```bash
 sudo /opt/mssql/bin/mssql-conf set sqlagent.databasemailprofile <profile_name>
@@ -161,12 +161,12 @@ sudo /opt/mssql/bin/mssql-conf set sqlagent.errorlogginglevel <level>
 
 ## <a name="configure-customer-feedback"></a><a id="customerfeedback"></a> 고객 의견 구성
 
-**telemetry.customerfeedback** 설정은 SQL Server에서 사용자 의견을 Microsoft에 보낼지 여부를 변경합니다. 기본적으로 이 값은 모든 버전에 대해 **true**로 설정됩니다. 값을 변경하려면 다음 명령을 실행합니다.
+**telemetry.customerfeedback** 설정은 SQL Server에서 사용자 의견을 Microsoft에 보낼지 여부를 변경합니다. 기본적으로 이 값은 모든 버전에 대해 **true** 로 설정됩니다. 값을 변경하려면 다음 명령을 실행합니다.
 
 > [!IMPORTANT]
 > SQL Server, Express 및 Developer의 체험 버전에 대한 고객 의견은 끌 수 없습니다.
 
-1. **telemetry.customerfeedback**에 대해 **set** 명령을 사용하여 mssql-conf 스크립트를 루트 권한으로 실행합니다. 다음 예제에서는 **false**를 지정하여 고객 의견을 끕니다.
+1. **telemetry.customerfeedback** 에 대해 **set** 명령을 사용하여 mssql-conf 스크립트를 루트 권한으로 실행합니다. 다음 예제에서는 **false** 를 지정하여 고객 의견을 끕니다.
 
    ```bash
    sudo /opt/mssql/bin/mssql-conf set telemetry.customerfeedback false
@@ -215,7 +215,7 @@ sudo /opt/mssql/bin/mssql-conf set sqlagent.errorlogginglevel <level>
    sudo /opt/mssql/bin/mssql-conf set filelocation.defaultlogdir /tmp/log
    ```
 
-1. 또한 이 명령은 /tmp/log 디렉터리가 존재하고 사용자 및 그룹 **mssql**이 사용하고 있다고 간주합니다.
+1. 또한 이 명령은 /tmp/log 디렉터리가 존재하고 사용자 및 그룹 **mssql** 이 사용하고 있다고 간주합니다.
 
 
 ## <a name="change-the-default-master-database-file-directory-location"></a><a id="masterdatabasedir"></a> 기본 master 데이터베이스 파일 디렉터리 위치 변경
@@ -403,9 +403,9 @@ sudo /opt/mssql/bin/mssql-conf set sqlagent.errorlogginglevel <level>
 
 SQL Server 프로세스 중 하나에서 예외가 발생하면 SQL Server는 메모리 덤프를 만듭니다.
 
-SQL Server가 수집하는 메모리 덤프 유형을 제어하는 두 가지 옵션인 **coredump.coredumptype** 및 **coredump.captureminiandfull**이 있습니다. 이 옵션은 코어 덤프 캡처의 두 단계와 관련이 있습니다. 
+SQL Server가 수집하는 메모리 덤프 유형을 제어하는 두 가지 옵션인 **coredump.coredumptype** 및 **coredump.captureminiandfull** 이 있습니다. 이 옵션은 코어 덤프 캡처의 두 단계와 관련이 있습니다. 
 
-첫 번째 단계 캡처는 예외 발생 시 생성된 덤프 파일의 형식을 결정하는 **coredump.coredumptype** 설정을 통해 제어됩니다. **coredump.captureminiandfull** 설정을 사용하여 두 번째 단계를 사용하도록 설정합니다. **coredump.captureminiandfull**가 true로 설정하면 **coredump.coredumptype**을 통해 지정된 덤프 파일이 생성되고 두 번째 미니 덤프도 생성됩니다. **coredump.captureminiandfull**을 false로 설정하면 두 번째 캡처 시도가 사용하지 않도록 설정됩니다.
+첫 번째 단계 캡처는 예외 발생 시 생성된 덤프 파일의 형식을 결정하는 **coredump.coredumptype** 설정을 통해 제어됩니다. **coredump.captureminiandfull** 설정을 사용하여 두 번째 단계를 사용하도록 설정합니다. **coredump.captureminiandfull** 가 true로 설정하면 **coredump.coredumptype** 을 통해 지정된 덤프 파일이 생성되고 두 번째 미니 덤프도 생성됩니다. **coredump.captureminiandfull** 을 false로 설정하면 두 번째 캡처 시도가 사용하지 않도록 설정됩니다.
 
 1. **coredump.captureminiandfull** 설정을 사용하여 미니 및 전체 덤프를 둘 다 캡처할지 여부를 결정합니다.
 
@@ -428,13 +428,13 @@ SQL Server가 수집하는 메모리 덤프 유형을 제어하는 두 가지 �
     | Type | Description |
     |-----|-----|
     | **mini** | Mini는 가장 작은 덤프 파일 형식입니다. Linux 시스템 정보를 사용하여 프로세스의 스레드 및 모듈을 결정합니다. 덤프에는 호스트 환경 스레드 스택 및 모듈만 포함됩니다. 간접 메모리 참조 또는 전역은 포함되지 않습니다. |
-    | **miniplus** | MiniPlus는 mini와 비슷하지만 추가 메모리를 포함합니다. 다음 메모리 영역을 덤프에 추가하여 SQLPAL 및 호스트 환경의 내부를 이해합니다.</br></br> - 다양한 전역</br> - 64TB를 초과하는 모든 메모리</br> - **/proc/$pid/maps**에 있는 모든 명명된 영역</br> - 스레드 및 스택의 간접 메모리</br> - 스레드 정보</br> - 연결된 Teb 및 Peb</br> - 모듈 정보</br> - VMM 및 VAD 트리 |
+    | **miniplus** | MiniPlus는 mini와 비슷하지만 추가 메모리를 포함합니다. 다음 메모리 영역을 덤프에 추가하여 SQLPAL 및 호스트 환경의 내부를 이해합니다.</br></br> - 다양한 전역</br> - 64TB를 초과하는 모든 메모리</br> - **/proc/$pid/maps** 에 있는 모든 명명된 영역</br> - 스레드 및 스택의 간접 메모리</br> - 스레드 정보</br> - 연결된 Teb 및 Peb</br> - 모듈 정보</br> - VMM 및 VAD 트리 |
     | **filtered** | Filtered는 별도로 제외하는 경우가 아니면 프로세스의 모든 메모리가 포함되는 빼기 기반 디자인을 사용합니다. 이 디자인은 덤프에서 특정 영역을 제외하고 SQLPAL 및 호스트 환경의 내부를 이해합니다.
-    | **full** | Full은 **/proc/$pid/maps**에 있는 모든 영역을 포함하는 전체 프로세스 덤프입니다. **coredump.captureminiandfull** 설정을 통해 제어되지 않습니다. |
+    | **full** | Full은 **/proc/$pid/maps** 에 있는 모든 영역을 포함하는 전체 프로세스 덤프입니다. **coredump.captureminiandfull** 설정을 통해 제어되지 않습니다. |
 
 ## <a name="high-availability"></a><a id="hadr"></a> 고가용성
 
-**hadr.hadrenabled** 옵션은 SQL Server 인스턴스에서 가용성 그룹을 사용하도록 설정합니다. 다음 명령은 **hadr.hadrenabled**를 1로 설정하여 가용성 그룹을 사용하도록 설정합니다. 설정을 적용하려면 SQL Server를 다시 시작해야 합니다.
+**hadr.hadrenabled** 옵션은 SQL Server 인스턴스에서 가용성 그룹을 사용하도록 설정합니다. 다음 명령은 **hadr.hadrenabled** 를 1로 설정하여 가용성 그룹을 사용하도록 설정합니다. 설정을 적용하려면 SQL Server를 다시 시작해야 합니다.
 
 ```bash
 sudo /opt/mssql/bin/mssql-conf set hadr.hadrenabled  1
@@ -464,7 +464,7 @@ sudo systemctl restart mssql-server
    sudo chgrp mssql /tmp/audit
    ```
 
-1. **telemetry.userrequestedlocalauditdirectory**에 대해 **set** 명령을 사용하여 mssql-conf 스크립트를 루트 권한으로 실행합니다.
+1. **telemetry.userrequestedlocalauditdirectory** 에 대해 **set** 명령을 사용하여 mssql-conf 스크립트를 루트 권한으로 실행합니다.
 
    ```bash
    sudo /opt/mssql/bin/mssql-conf set telemetry.userrequestedlocalauditdirectory /tmp/audit
@@ -498,7 +498,7 @@ sudo systemctl restart mssql-server
 
 **memory.memorylimitmb** 설정은 SQL Server에 사용 가능한 실제 메모리 크기(MB)를 제어합니다. 기본값은 실제 메모리의 80%입니다.
 
-1. **memory.memorylimitmb**에 대해 **set** 명령을 사용하여 mssql-conf 스크립트를 루트 권한으로 실행합니다. 다음 예제에서는 SQL Server에 사용할 수 있는 메모리를 3.25GB(3328MB)로 변경합니다.
+1. **memory.memorylimitmb** 에 대해 **set** 명령을 사용하여 mssql-conf 스크립트를 루트 권한으로 실행합니다. 다음 예제에서는 SQL Server에 사용할 수 있는 메모리를 3.25GB(3328MB)로 변경합니다.
 
    ```bash
    sudo /opt/mssql/bin/mssql-conf set memory.memorylimitmb 3328
@@ -559,7 +559,7 @@ MSDTC를 모니터링하고 문제 해결하는 데 사용할 수 있는 mssql-c
 | distributedtransaction.tracefilepath | 추적 파일을 저장해야 하는 폴더 |
 | distributedtransaction.turnoffrpcsecurity | 분산 트랜잭션에 대한 RPC 보안 사용 또는 사용 안 함 |
 
-::: moniker range=">= sql-server-linux-ver15 || >= sql-server-ver15 || =sqlallproducts-allversions"
+::: moniker range=">= sql-server-linux-ver15 || >= sql-server-ver15 "
 
 ## <a name="accept-mlservices-eulas"></a><a id="mlservices-eula"></a> MLServices EULA 동의
 
@@ -589,7 +589,7 @@ accepteula = Y
 accepteulaml = Y
 ```
 :::moniker-end
-::: moniker range=">= sql-server-linux-ver15 || >= sql-server-ver15 || =sqlallproducts-allversions"
+::: moniker range=">= sql-server-linux-ver15 || >= sql-server-ver15 "
 
 ## <a name="enable-outbound-network-access"></a><a id="mlservices-outbound-access"></a> 아웃바운드 네트워크 액세스 사용
 
@@ -701,7 +701,7 @@ TLS 설정 사용에 대한 예제는 [SQL Server on Linux에 대한 연결 암�
 
 ## <a name="remove-a-setting"></a>설정 제거
 
-`mssql-conf set`를 사용하여 지정된 설정을 해제하려면 **mssql-conf**를 `unset` 옵션 및 설정 이름과 함께 호출합니다. 이렇게 하면 설정이 삭제되고 효과적으로 기본값으로 돌아갑니다.
+`mssql-conf set`를 사용하여 지정된 설정을 해제하려면 **mssql-conf** 를 `unset` 옵션 및 설정 이름과 함께 호출합니다. 이렇게 하면 설정이 삭제되고 효과적으로 기본값으로 돌아갑니다.
 
 1. 다음 예제에서는 **network.tcpport** 옵션을 삭제합니다.
 
@@ -783,7 +783,7 @@ traceflag = 3456
 
 ::: moniker-end
 <!--SQL Server 2019 on Linux-->
-::: moniker range=">= sql-server-linux-ver15 || >= sql-server-ver15 || =sqlallproducts-allversions"
+::: moniker range=">= sql-server-linux-ver15 || >= sql-server-ver15 "
 
 ```ini
 [EULA]

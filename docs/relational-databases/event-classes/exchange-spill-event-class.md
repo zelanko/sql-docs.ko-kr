@@ -12,13 +12,13 @@ helpviewer_keywords:
 ms.assetid: fb876cec-f88d-4975-b3fd-0fb85dc0a7ff
 author: stevestein
 ms.author: sstein
-monikerRange: =azuresqldb-current||>=sql-server-2016||=sqlallproducts-allversions||>=sql-server-linux-2017||=azuresqldb-mi-current
-ms.openlocfilehash: 330e45c8ae007f4f2a2caeb5ba906561fe3d456f
-ms.sourcegitcommit: e700497f962e4c2274df16d9e651059b42ff1a10
+monikerRange: =azuresqldb-current||>=sql-server-2016||>=sql-server-linux-2017||=azuresqldb-mi-current
+ms.openlocfilehash: 53b60d5be7c76e68de10f799100f3ccf3b2d6894
+ms.sourcegitcommit: 1a544cf4dd2720b124c3697d1e62ae7741db757c
 ms.translationtype: HT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 08/17/2020
-ms.locfileid: "88494401"
+ms.lasthandoff: 12/14/2020
+ms.locfileid: "97469674"
 ---
 # <a name="exchange-spill-event-class"></a>Exchange Spill 이벤트 클래스
 [!INCLUDE [SQL Server - ASDB](../../includes/applies-to-version/sql-asdb.md)]
@@ -26,7 +26,7 @@ ms.locfileid: "88494401"
   
  일반적으로 이러한 다중 범위 검색은 [!INCLUDE[tsql](../../includes/tsql-md.md)] 쿼리에 BETWEEN 연산자가 많이 사용되었을 때 발생하며 각 BETWEEN 연산자는 테이블 또는 인덱스에서 행 범위를 선택합니다. 또는 (T.a > 10 AND T.a < 20) OR (T.a > 100 AND T.a < 120)과 같은 식을 사용하여 다중 범위를 가져올 수도 있습니다. 또한 T.a에 ORDER BY 절이 있거나 계획 내의 반복자가 정렬된 튜플을 소비해야 하는 경우 쿼리 계획에서 이러한 범위가 순서대로 검색되어야 합니다.  
   
- 이러한 쿼리의 쿼리 계획에 여러 **Parallelism** 연산자가 있는 경우 **Parallelism** 연산자가 사용하는 메모리 통신 버퍼는 꽉 차게 되고 쿼리 실행 진행이 중지되는 상황이 발생할 수 있습니다. 이런 경우에는 **Parallelism** 연산자 중 하나가 자신의 출력 버퍼를 **tempdb** 에 기록하여(이 연산을 *exchange spill*이라고 함) 일부 입력 버퍼에서 행을 사용할 수 있습니다. 결국 소비자가 이러한 행을 사용할 준비가 되면 기록된 행이 소비자에게 반환됩니다.  
+ 이러한 쿼리의 쿼리 계획에 여러 **Parallelism** 연산자가 있는 경우 **Parallelism** 연산자가 사용하는 메모리 통신 버퍼는 꽉 차게 되고 쿼리 실행 진행이 중지되는 상황이 발생할 수 있습니다. 이런 경우에는 **Parallelism** 연산자 중 하나가 자신의 출력 버퍼를 **tempdb** 에 기록하여(이 연산을 *exchange spill* 이라고 함) 일부 입력 버퍼에서 행을 사용할 수 있습니다. 결국 소비자가 이러한 행을 사용할 준비가 되면 기록된 행이 소비자에게 반환됩니다.  
   
  드문 경우지만 여러 exchange spill이 동일한 실행 계획 내에서 발생하여 쿼리 실행이 느려질 수 있습니다. 동일한 쿼리 계획 실행 내에서 6개 이상의 spill을 발견하면 기술 지원 전문가에게 문의하십시오.  
   

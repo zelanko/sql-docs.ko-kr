@@ -16,13 +16,13 @@ helpviewer_keywords:
 ms.assetid: c4351ef5-e7d0-46e7-8367-88695e9974f8
 author: stevestein
 ms.author: sstein
-monikerRange: '>=aps-pdw-2016||=azuresqldb-current||=azure-sqldw-latest||>=sql-server-2016||=sqlallproducts-allversions||>=sql-server-linux-2017||=azuresqldb-mi-current'
-ms.openlocfilehash: 927ee009c554e17bb33b1a4061e8016dae11335c
-ms.sourcegitcommit: e700497f962e4c2274df16d9e651059b42ff1a10
+monikerRange: '>=aps-pdw-2016||=azuresqldb-current||=azure-sqldw-latest||>=sql-server-2016||>=sql-server-linux-2017||=azuresqldb-mi-current'
+ms.openlocfilehash: 2e6ad29f59ae893efbe60955a1b3ebfad703e48e
+ms.sourcegitcommit: 1a544cf4dd2720b124c3697d1e62ae7741db757c
 ms.translationtype: HT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 08/17/2020
-ms.locfileid: "88463766"
+ms.lasthandoff: 12/14/2020
+ms.locfileid: "97472614"
 ---
 # <a name="view-the-dependencies-of-a-table"></a>테이블의 종속성 보기
 [!INCLUDE [sqlserver2016-asdb-asdbmi-asa-pdw](../../includes/applies-to-version/sqlserver2016-asdb-asdbmi-asa-pdw.md)]
@@ -52,11 +52,11 @@ ms.locfileid: "88463766"
   
 #### <a name="to-view-the-objects-on-which-a-table-depends"></a>테이블이 종속된 개체를 보려면  
   
-1.  **개체 탐색기**에서 **데이터베이스**를 확장하고, 특정 데이터베이스를 확장한 후 **테이블**을 확장합니다.  
+1.  **개체 탐색기** 에서 **데이터베이스** 를 확장하고, 특정 데이터베이스를 확장한 후 **테이블** 을 확장합니다.  
   
-2.  테이블을 마우스 오른쪽 단추로 클릭한 다음 **종속성 보기**를 클릭합니다.  
+2.  테이블을 마우스 오른쪽 단추로 클릭한 다음 **종속성 보기** 를 클릭합니다.  
   
-3.  **개체 종속성** _\<object name\>_ 대화 상자에서 **에 종속된 개체** _\<object name\>_ 또는 _\<object name\>_ **이(가) 종속된** **개체**를 선택합니다.  
+3.  **개체 종속성** _\<object name\>_ 대화 상자에서 **에 종속된 개체** _\<object name\>_ 또는 _\<object name\>_ **이(가) 종속된** **개체** 를 선택합니다.  
   
 4.  **종속성** 표에서 개체를 선택합니다. 개체 유형(예: "트리거" 또는 "저장 프로시저")이 **유형** 상자에 표시됩니다.  
   
@@ -64,11 +64,11 @@ ms.locfileid: "88463766"
   
 #### <a name="to-view-the-objects-that-depend-on-a-table"></a>테이블에 종속된 개체를 보려면  
   
-1.  **개체 탐색기**에서 [!INCLUDE[ssDE](../../includes/ssde-md.md)]인스턴스에 연결합니다.  
+1.  **개체 탐색기** 에서 [!INCLUDE[ssDE](../../includes/ssde-md.md)]인스턴스에 연결합니다.  
   
-2.  표준 도구 모음에서 **새 쿼리**를 클릭합니다.  
+2.  표준 도구 모음에서 **새 쿼리** 를 클릭합니다.  
   
-3.  다음 예를 복사하여 쿼리 창에 붙여 넣고 **실행**을 클릭합니다.  
+3.  다음 예를 복사하여 쿼리 창에 붙여 넣고 **실행** 을 클릭합니다.  
   
     ```  
     USE AdventureWorks2012;  
@@ -81,11 +81,11 @@ ms.locfileid: "88463766"
   
 #### <a name="to-view-the-dependencies-of-a-table"></a>테이블의 종속성을 보려면  
   
-1.  **개체 탐색기**에서 [!INCLUDE[ssDE](../../includes/ssde-md.md)]인스턴스에 연결합니다.  
+1.  **개체 탐색기** 에서 [!INCLUDE[ssDE](../../includes/ssde-md.md)]인스턴스에 연결합니다.  
   
-2.  표준 도구 모음에서 **새 쿼리**를 클릭합니다.  
+2.  표준 도구 모음에서 **새 쿼리** 를 클릭합니다.  
   
-3.  다음 예에서는 `Production.Product`테이블에 종속된 개체를 반환합니다. 다음 예를 복사하여 쿼리 창에 붙여 넣고 **실행**을 클릭합니다.  
+3.  다음 예에서는 `Production.Product`테이블에 종속된 개체를 반환합니다. 다음 예를 복사하여 쿼리 창에 붙여 넣고 **실행** 을 클릭합니다.  
   
     ```  
     USE AdventureWorks2012;   

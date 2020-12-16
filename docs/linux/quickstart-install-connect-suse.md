@@ -8,12 +8,12 @@ ms.topic: conceptual
 ms.prod: sql
 ms.technology: linux
 ms.assetid: 31ddfb80-f75c-4f51-8540-de6213cb68b8
-ms.openlocfilehash: c9ac655959814370058059e86814d4ae1abcbc9a
-ms.sourcegitcommit: d35d0901296580bfceda6e0ab2e14cf2b7e99a0f
+ms.openlocfilehash: bd721eb2dc71fe768edfb21da5c94881fc879a07
+ms.sourcegitcommit: 1a544cf4dd2720b124c3697d1e62ae7741db757c
 ms.translationtype: HT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 10/24/2020
-ms.locfileid: "92496992"
+ms.lasthandoff: 12/14/2020
+ms.locfileid: "97471644"
 ---
 # <a name="quickstart-install-sql-server-and-create-a-database-on-suse-linux-enterprise-server"></a>빠른 시작: SQL Server 설치 및 SUSE Linux Enterprise Server에 데이터베이스 만들기
 
@@ -26,7 +26,7 @@ ms.locfileid: "92496992"
 
 ::: moniker-end
 <!--SQL Server 2019 on Linux-->
-::: moniker range=">= sql-server-linux-ver15 || >= sql-server-ver15 || =sqlallproducts-allversions"
+::: moniker range=">= sql-server-linux-ver15 || >= sql-server-ver15 "
 
 이 빠른 시작에서는 SLES(SUSE Linux Enterprise Server) v12에 SQL Server 2019를 설치합니다. 그런 다음, **sqlcmd** 를 통해 연결하여 첫 번째 데이터베이스를 만들고 쿼리를 실행합니다.
 
@@ -48,7 +48,7 @@ ms.locfileid: "92496992"
 ::: moniker-end
 
 <!--SQL Server 2019 on Linux-->
-::: moniker range=">= sql-server-linux-ver15 || >= sql-server-ver15 || =sqlallproducts-allversions"
+::: moniker range=">= sql-server-linux-ver15 || >= sql-server-ver15 "
 
 **최소 2GB** 의 메모리를 사용하는 SLES v12 SP2, SP3, SP4 또는 SP5 머신이 있어야 합니다. 파일 시스템은 **XFS** 또는 **EXT4** 여야 합니다. **BTRFS** 등의 다른 파일 시스템은 지원되지 않습니다.
 
@@ -129,7 +129,7 @@ SLES에서 SQL Server 2017을 구성하려면 터미널에서 다음 명령을 �
 
 ::: moniker-end
 <!--SQL Server 2019 on Linux-->
-::: moniker range=">= sql-server-linux-ver15 || >= sql-server-ver15 || =sqlallproducts-allversions"
+::: moniker range=">= sql-server-linux-ver15 || >= sql-server-ver15 "
 
 ## <a name="install-sql-server-2019"></a><a id="install"></a>SQL Server 2019 설치
 

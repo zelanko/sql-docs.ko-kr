@@ -10,13 +10,13 @@ ms.assetid: 16ef8191-7587-45a3-9ee9-7d99b7088de3
 author: ronortloff
 ms.author: rortloff
 ms.reviewer: jrasnick
-monikerRange: '>= aps-pdw-2016 || = sqlallproducts-allversions'
-ms.openlocfilehash: a45d59e3891e08f2ae5c5b5d64258b5ebcc371a8
-ms.sourcegitcommit: ac9feb0b10847b369b77f3c03f8200c86ee4f4e0
+monikerRange: '>= aps-pdw-2016'
+ms.openlocfilehash: dc97f307022a28bcb2df00da4335c8676d32342f
+ms.sourcegitcommit: 1a544cf4dd2720b124c3697d1e62ae7741db757c
 ms.translationtype: HT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 09/16/2020
-ms.locfileid: "90688330"
+ms.lasthandoff: 12/14/2020
+ms.locfileid: "97471954"
 ---
 # <a name="create-remote-table-as-select-parallel-data-warehouse"></a>CREATE REMOTE TABLE AS SELECT(병렬 데이터 웨어하우스)
 [!INCLUDE [pdw](../../includes/applies-to-version/pdw.md)]
@@ -45,7 +45,7 @@ CREATE REMOTE TABLE { database_name.schema_name.table_name | schema_name.table_n
   
 ## <a name="arguments"></a>인수  
  *database_name*  
- 원격 테이블을 만들 데이터베이스입니다. *database_name*은 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 데이터베이스입니다. 기본값은 대상 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 인스턴스에서 사용자 로그인에 대한 기본 데이터베이스입니다.  
+ 원격 테이블을 만들 데이터베이스입니다. *database_name* 은 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 데이터베이스입니다. 기본값은 대상 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 인스턴스에서 사용자 로그인에 대한 기본 데이터베이스입니다.  
   
  *schema_name*  
  새 테이블의 스키마입니다. 기본값은 대상 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 인스턴스에서 사용자 로그인에 대한 기본 스키마입니다.  
@@ -79,7 +79,7 @@ CREATE REMOTE TABLE { database_name.schema_name.table_name | schema_name.table_n
  로그인 암호입니다. 최대 문자 수는 128자입니다.  
   
  *batch_size*  
- 일괄 처리당 최대 행 수입니다. [!INCLUDE[ssPDW](../../includes/sspdw-md.md)]는 대상 서버에 일괄 처리의 행을 보냅니다. *Batch_size*는 0보다 크거나 같은 양의 정수입니다. 기본값은 0입니다.  
+ 일괄 처리당 최대 행 수입니다. [!INCLUDE[ssPDW](../../includes/sspdw-md.md)]는 대상 서버에 일괄 처리의 행을 보냅니다. *Batch_size* 는 0보다 크거나 같은 양의 정수입니다. 기본값은 0입니다.  
   
  WITH *common_table_expression*  
  CTE(공통 테이블 식)라고도 하는 임시로 이름이 지정된 결과 집합을 지정합니다. 자세한 내용은 [WITH common_table_expression&#40;Transact-SQL&#41;](../../t-sql/queries/with-common-table-expression-transact-sql.md)을 참조하세요.  
