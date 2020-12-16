@@ -14,12 +14,12 @@ helpviewer_keywords:
 ms.assetid: 1a4e2ce5-f627-4c81-8960-6a9968cefda2
 author: rothja
 ms.author: jroth
-ms.openlocfilehash: c82c4e4f5b1f1af6194ff409a684ca239881487a
-ms.sourcegitcommit: da88320c474c1c9124574f90d549c50ee3387b4c
+ms.openlocfilehash: b9220519a926ca75a00843dba54dfad797064aee
+ms.sourcegitcommit: 52252e8b4c9b50d3915aecd3135e8901d345e7e2
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 07/01/2020
-ms.locfileid: "85765407"
+ms.lasthandoff: 12/16/2020
+ms.locfileid: "97599850"
 ---
 # <a name="accessing-the-current-transaction"></a>현재 트랜잭션 액세스
  [!INCLUDE [SQL Server](../../includes/applies-to-version/sqlserver.md)]
@@ -42,13 +42,13 @@ ms.locfileid: "85765407"
 ## <a name="canceling-an-external-transaction"></a>외부 트랜잭션 취소  
  관리되는 프로시저나 함수에서 다음과 같은 방법으로 외부 트랜잭션을 취소할 수 있습니다.  
   
--   관리되는 프로시저나 함수에서 출력 매개 변수를 사용하여 값을 반환할 수 있습니다. 호출 하는 [!INCLUDE[tsql](../../includes/tsql-md.md)] 프로시저는 반환 된 값을 확인 하 고, 해당 하는 경우 **ROLLBACK TRANSACTION**을 실행할 수 있습니다.  
+-   관리되는 프로시저나 함수에서 출력 매개 변수를 사용하여 값을 반환할 수 있습니다. 호출 하는 [!INCLUDE[tsql](../../includes/tsql-md.md)] 프로시저는 반환 된 값을 확인 하 고, 해당 하는 경우 **ROLLBACK TRANSACTION** 을 실행할 수 있습니다.  
   
--   관리되는 프로시저나 함수에서 사용자 지정 예외를 throw할 수 있습니다. 호출 하는 [!INCLUDE[tsql](../../includes/tsql-md.md)] 프로시저는 try/catch 블록의 관리 되는 프로시저 또는 함수에서 throw 된 예외를 catch 하 고 **ROLLBACK TRANSACTION**을 실행할 수 있습니다.  
+-   관리되는 프로시저나 함수에서 사용자 지정 예외를 throw할 수 있습니다. 호출 하는 [!INCLUDE[tsql](../../includes/tsql-md.md)] 프로시저는 try/catch 블록의 관리 되는 프로시저 또는 함수에서 throw 된 예외를 catch 하 고 **ROLLBACK TRANSACTION** 을 실행할 수 있습니다.  
   
 -   관리되는 프로시저나 함수에서 특정 조건에 맞는 경우 **Transaction.Rollback** 메서드를 호출하여 현재 트랜잭션을 취소할 수 있습니다.  
   
- 관리되는 프로시저나 함수 내에서 호출할 경우 **Transaction.Rollback** 메서드는 모호한 오류 메시지와 함께 예외를 throw하고 try/catch 블록에 래핑될 수 있습니다. 오류 메시지는 다음과 유사합니다.  
+ 관리되는 프로시저나 함수 내에서 호출할 경우 **Transaction.Rollback** 메서드는 모호한 오류 메시지와 함께 예외를 throw하고 try/catch 블록에 래핑될 수 있습니다. 오류 메시지는 다음과 유사 합니다.  
   
 ```  
 Msg 3994, Level 16, State 1, Procedure uspRollbackFromProc, Line 0  
