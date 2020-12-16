@@ -15,13 +15,13 @@ helpviewer_keywords:
 ms.assetid: 9a5a8166-bcbe-4680-916c-26276253eafa
 author: MikeRayMSFT
 ms.author: mikeray
-monikerRange: '>=sql-server-2016||=sqlallproducts-allversions||=azuresqldb-mi-current'
-ms.openlocfilehash: fe0e101311bf8fc1b790be423322b4deaca3923e
-ms.sourcegitcommit: 591bbf4c7e4e2092f8abda6a2ffed263cb61c585
+monikerRange: '>=sql-server-2016||=azuresqldb-mi-current'
+ms.openlocfilehash: 58b68bdf2996446ed08a37297e0c9776c2274832
+ms.sourcegitcommit: 1a544cf4dd2720b124c3697d1e62ae7741db757c
 ms.translationtype: HT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 07/22/2020
-ms.locfileid: "86942416"
+ms.lasthandoff: 12/14/2020
+ms.locfileid: "97483665"
 ---
 # <a name="filestream-sql-server"></a>FILESTREAM(SQL Server)
 [!INCLUDE [SQL Server Windows Only - ASDBMI ](../../includes/applies-to-version/sql-windows-only.md)]
@@ -50,7 +50,7 @@ FILESTREAM 스토리지는 데이터가 파일 시스템에 BLOB으로 저장된
   
 파일 시스템에 열의 데이터를 저장하도록 지정하려면 **varbinary(max)** 열에 FILESTREAM 특성을 지정합니다. 이렇게 하면 [!INCLUDE[ssDE](../../includes/ssde-md.md)] 에서 해당 열의 모든 데이터를 데이터베이스 파일이 아닌 파일 시스템에 저장하게 됩니다.  
   
-FILESTREAM 데이터는 FILESTREAM 파일 그룹에 저장되어야 합니다. FILESTREAM 파일 그룹은 파일 자체가 아닌 파일 시스템 디렉터리를 포함하는 특수한 파일 그룹입니다. 이러한 파일 시스템 디렉터리를 *데이터 컨테이너*라고 합니다. 데이터 컨테이너는 [!INCLUDE[ssDE](../../includes/ssde-md.md)] 스토리지와 파일 시스템 스토리지 사이의 인터페이스입니다. 
+FILESTREAM 데이터는 FILESTREAM 파일 그룹에 저장되어야 합니다. FILESTREAM 파일 그룹은 파일 자체가 아닌 파일 시스템 디렉터리를 포함하는 특수한 파일 그룹입니다. 이러한 파일 시스템 디렉터리를 *데이터 컨테이너* 라고 합니다. 데이터 컨테이너는 [!INCLUDE[ssDE](../../includes/ssde-md.md)] 스토리지와 파일 시스템 스토리지 사이의 인터페이스입니다. 
 
 FILESTREAM 스토리지를 사용할 때 다음 사항을 고려하십시오.  
 
@@ -85,7 +85,7 @@ FILESTREAM 열에 데이터를 저장한 후 [!INCLUDE[tsql](../../includes/tsql
 [!INCLUDE[tsql](../../includes/tsql-md.md)]을 사용하여 FILESTREAM 데이터를 삽입, 업데이트 및 삭제할 수 있습니다.  
 
 - 삽입 작업을 통해 FILESTREAM 필드를 Null 값, 비어 있는 값 또는 상대적으로 짧은 인라인 데이터로 미리 채울 수 있습니다. 그러나 크기가 큰 데이터는 Win32 인터페이스를 사용하는 파일로 좀 더 효율적으로 스트리밍됩니다.  
-- FILESTREAM 필드를 업데이트할 때 파일 시스템의 기본 BLOB 데이터를 수정합니다. FILESTREAM 필드를 NULL로 설정하면 이 필드와 연결된 BLOB 데이터가 삭제됩니다. 데이터의 부분 업데이트를 수행하기 위해 UPDATE [!INCLUDE[tsql](../../includes/tsql-md.md)] .**Write()로 구현된**청크 업데이트를 사용할 수 없습니다. 
+- FILESTREAM 필드를 업데이트할 때 파일 시스템의 기본 BLOB 데이터를 수정합니다. FILESTREAM 필드를 NULL로 설정하면 이 필드와 연결된 BLOB 데이터가 삭제됩니다. 데이터의 부분 업데이트를 수행하기 위해 UPDATE [!INCLUDE[tsql](../../includes/tsql-md.md)] .**Write()로 구현된** 청크 업데이트를 사용할 수 없습니다. 
 - 행을 삭제하거나 FILESTREAM 데이터가 들어 있는 테이블을 삭제하거나 잘라내면 파일 시스템의 기본 BLOB 데이터가 삭제됩니다.
 
 ### <a name="file-system-streaming-access"></a>파일 시스템 스트리밍 액세스
