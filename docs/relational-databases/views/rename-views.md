@@ -14,13 +14,13 @@ helpviewer_keywords:
 ms.assetid: 5eed0488-81d2-40e8-8fdf-b0a640a591d0
 author: stevestein
 ms.author: sstein
-monikerRange: '>=aps-pdw-2016||=azuresqldb-current||>=sql-server-2016||=sqlallproducts-allversions||>=sql-server-linux-2017||=azuresqldb-mi-current'
-ms.openlocfilehash: 135bccd7ff94a88f7f1036b4bce4e55451eab4e6
-ms.sourcegitcommit: e700497f962e4c2274df16d9e651059b42ff1a10
+monikerRange: '>=aps-pdw-2016||=azuresqldb-current||>=sql-server-2016||>=sql-server-linux-2017||=azuresqldb-mi-current'
+ms.openlocfilehash: 14936117fe2e9267a2ebb818a102d1245548e073
+ms.sourcegitcommit: 1a544cf4dd2720b124c3697d1e62ae7741db757c
 ms.translationtype: HT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 08/17/2020
-ms.locfileid: "88463670"
+ms.lasthandoff: 12/14/2020
+ms.locfileid: "97425484"
 ---
 # <a name="rename-views"></a>뷰 이름 바꾸기
 [!INCLUDE[tsql-appliesto-ss2008-asdb-xxxx-pdw-md](../../includes/tsql-appliesto-ss2008-asdb-xxxx-pdw-md.md)]
@@ -59,9 +59,9 @@ ms.locfileid: "88463670"
   
 #### <a name="to-rename-a-view"></a>뷰 이름을 바꾸려면  
   
-1.  **개체 탐색기**에서 이름을 바꿀 뷰가 포함된 데이터베이스를 확장한 다음 **뷰** 폴더를 확장합니다.  
+1.  **개체 탐색기** 에서 이름을 바꿀 뷰가 포함된 데이터베이스를 확장한 다음 **뷰** 폴더를 확장합니다.  
   
-2.  이름을 바꿀 뷰를 마우스 오른쪽 단추로 클릭하고 **이름 바꾸기**를 선택합니다.  
+2.  이름을 바꿀 뷰를 마우스 오른쪽 단추로 클릭하고 **이름 바꾸기** 를 선택합니다.  
   
 3.  뷰의 새 이름을 입력합니다.  
 

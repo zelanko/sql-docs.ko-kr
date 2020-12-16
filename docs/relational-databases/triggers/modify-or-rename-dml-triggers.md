@@ -14,13 +14,13 @@ helpviewer_keywords:
 ms.assetid: c7317eec-c0e9-479e-a4a7-83b6b6c58d59
 author: rothja
 ms.author: jroth
-monikerRange: =azuresqldb-current||>=sql-server-2016||=sqlallproducts-allversions||>=sql-server-linux-2017||=azuresqldb-mi-current
-ms.openlocfilehash: d63f91b0442d0346abbbd79868dc42a6e7881587
-ms.sourcegitcommit: e700497f962e4c2274df16d9e651059b42ff1a10
+monikerRange: =azuresqldb-current||>=sql-server-2016||>=sql-server-linux-2017||=azuresqldb-mi-current
+ms.openlocfilehash: 827327524cd818d830ba10d0e93ccec6ab7743bb
+ms.sourcegitcommit: 1a544cf4dd2720b124c3697d1e62ae7741db757c
 ms.translationtype: HT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 08/17/2020
-ms.locfileid: "88427425"
+ms.lasthandoff: 12/14/2020
+ms.locfileid: "97426429"
 ---
 # <a name="modify-or-rename-dml-triggers"></a>DML 트리거 수정 또는 이름 바꾸기
 [!INCLUDE [SQL Server SQL Database](../../includes/applies-to-version/sql-asdb.md)]
@@ -73,13 +73,13 @@ ms.locfileid: "88427425"
   
 #### <a name="to-modify-a-dml-trigger"></a>DML 트리거를 수정하려면  
   
-1.  **개체 탐색기**에서 [!INCLUDE[ssDE](../../includes/ssde-md.md)] 의 인스턴스에 연결한 다음 해당 인스턴스를 확장합니다.  
+1.  **개체 탐색기** 에서 [!INCLUDE[ssDE](../../includes/ssde-md.md)] 의 인스턴스에 연결한 다음 해당 인스턴스를 확장합니다.  
   
-2.  원하는 데이터베이스를 확장하고 **테이블**을 확장한 다음 수정할 트리거가 포함된 테이블을 확장합니다.  
+2.  원하는 데이터베이스를 확장하고 **테이블** 을 확장한 다음 수정할 트리거가 포함된 테이블을 확장합니다.  
   
-3.  **트리거**를 확장하고 수정할 트리거를 마우스 오른쪽 단추로 클릭한 다음 **수정**을 클릭합니다.  
+3.  **트리거** 를 확장하고 수정할 트리거를 마우스 오른쪽 단추로 클릭한 다음 **수정** 을 클릭합니다.  
   
-4.  트리거를 수정한 다음 **실행**을 클릭합니다.  
+4.  트리거를 수정한 다음 **실행** 을 클릭합니다.  
   
 #### <a name="to-rename-a-dml-trigger"></a>DML 트리거의 이름을 바꾸려면  
   
@@ -93,7 +93,7 @@ ms.locfileid: "88427425"
   
 1.  [!INCLUDE[ssDE](../../includes/ssde-md.md)]에 연결합니다.  
   
-2.  표준 도구 모음에서 **새 쿼리**를 클릭합니다.  
+2.  표준 도구 모음에서 **새 쿼리** 를 클릭합니다.  
   
 3.  다음 예를 복사하여 쿼리에 붙여 넣습니다. 첫 번째 예를 실행하여 사용자가 `SalesPersonQuotaHistory` 테이블에 데이터를 추가 또는 변경하려고 시도하면 클라이언트로 사용자 정의 메시지를 인쇄하는 DML 트리거를 만듭니다. [ALTER TRIGGER](../../t-sql/statements/alter-trigger-transact-sql.md) 문을 실행하여 `INSERT` 작업에 대해서만 발생하도록 트리거를 수정합니다. 이 트리거는 테이블에 행을 삽입하거나 업데이트하는 사용자에게 `Compensation` 부서에도 해당 사실을 통지하도록 알려 줍니다.  
   
@@ -127,9 +127,9 @@ GO
   
 1.  [!INCLUDE[ssDE](../../includes/ssde-md.md)]에 연결합니다.  
   
-2.  표준 도구 모음에서 **새 쿼리**를 클릭합니다.  
+2.  표준 도구 모음에서 **새 쿼리** 를 클릭합니다.  
   
-3.  다음 예를 복사하여 쿼리 창에 붙여 넣고 **실행**을 클릭합니다. 이 예에서는 [DROP TRIGGER](../../t-sql/statements/drop-trigger-transact-sql.md) 및 [ALTER TRIGGER](../../t-sql/statements/alter-trigger-transact-sql.md) 문을 사용하여 `Sales.bonus_reminder` 트리거의 이름을 `Sales.bonus_reminder_2`로 바꿉니다.  
+3.  다음 예를 복사하여 쿼리 창에 붙여 넣고 **실행** 을 클릭합니다. 이 예에서는 [DROP TRIGGER](../../t-sql/statements/drop-trigger-transact-sql.md) 및 [ALTER TRIGGER](../../t-sql/statements/alter-trigger-transact-sql.md) 문을 사용하여 `Sales.bonus_reminder` 트리거의 이름을 `Sales.bonus_reminder_2`로 바꿉니다.  
   
 ```sql  
 USE AdventureWorks2012;  

@@ -11,13 +11,13 @@ ms.topic: conceptual
 ms.assetid: ec081d42-57e4-43c7-9e1c-317ba8f23437
 author: markingmyname
 ms.author: maghan
-monikerRange: =azuresqldb-current||>=sql-server-2016||=sqlallproducts-allversions||>=sql-server-linux-2017||=azuresqldb-mi-current
-ms.openlocfilehash: 8df54961057d12191e732fc4f3ec287f9bd32ef9
-ms.sourcegitcommit: dd36d1cbe32cd5a65c6638e8f252b0bd8145e165
+monikerRange: =azuresqldb-current||>=sql-server-2016||>=sql-server-linux-2017||=azuresqldb-mi-current
+ms.openlocfilehash: 31aaceb646bf735731317177f579df638da1b5c9
+ms.sourcegitcommit: 1a544cf4dd2720b124c3697d1e62ae7741db757c
 ms.translationtype: HT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 09/08/2020
-ms.locfileid: "89523746"
+ms.lasthandoff: 12/14/2020
+ms.locfileid: "97426621"
 ---
 # <a name="temporal-table-system-consistency-checks"></a>Temporal 테이블 시스템 일관성 확인
 
@@ -29,7 +29,7 @@ temporal 테이블을 사용하는 경우 시스템은 다양한 일관성 검�
 
 ## <a name="system-consistency-checks"></a>시스템 일관성 확인
 
-**SYSTEM_VERSIONING** 을 **ON**으로 설정하기 전에 기록 테이블 및 현재 테이블에서 일련의 검사가 수행됩니다. 이러한 검사는 스키마 검사 및 데이터 검사로 그룹화됩니다(기록 테이블이 비어 있지 않은 경우). 또한, 시스템은 런타임 일관성 검사를 수행합니다.
+**SYSTEM_VERSIONING** 을 **ON** 으로 설정하기 전에 기록 테이블 및 현재 테이블에서 일련의 검사가 수행됩니다. 이러한 검사는 스키마 검사 및 데이터 검사로 그룹화됩니다(기록 테이블이 비어 있지 않은 경우). 또한, 시스템은 런타임 일관성 검사를 수행합니다.
 
 ### <a name="schema-check"></a>스키마 검사
 
@@ -48,7 +48,7 @@ temporal 테이블을 만들거나 테이블을 변경하여 temporal 테이블�
 
 ### <a name="data-consistency-check"></a>데이터 일관성 확인
 
-**SYSTEM_VERSIONING** 을 **ON** 으로 설정하고 DML 작업의 일부로 설정하기 전에 시스템은 **SysEndTime** ≥**SysStartTime**검사를 수행합니다.
+**SYSTEM_VERSIONING** 을 **ON** 으로 설정하고 DML 작업의 일부로 설정하기 전에 시스템은 **SysEndTime** ≥**SysStartTime** 검사를 수행합니다.
 
 기존 기록 테이블에 대한 링크를 만드는 경우 데이터 일관성 검사를 수행하도록 선택할 수 있습니다. 이 데이터 일관성 검사는 기존 레코드가 겹치지 않고 모든 개별 레코드에서 임시 요구 사항이 충족되는지 확인합니다. 기본값은 데이터 일관성 검사를 수행하는 것입니다. 일반적으로 기록 데이터로 채워지는 기존 기록 테이블을 통합하는 경우와 같이 현재 테이블과 기록 테이블 사이에서 데이터 동기화가 이루어지지 않을 때마다 데이터 일관성을 검사하는 것이 좋습니다.
 

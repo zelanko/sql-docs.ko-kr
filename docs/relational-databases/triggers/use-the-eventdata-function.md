@@ -13,13 +13,13 @@ helpviewer_keywords:
 ms.assetid: 675b8320-9c73-4526-bd2f-91ba42c1b604
 author: rothja
 ms.author: jroth
-monikerRange: =azuresqldb-current||>=sql-server-2016||=sqlallproducts-allversions||>=sql-server-linux-2017||=azuresqldb-mi-current
-ms.openlocfilehash: 3f6ac5ff7b83d3fb119e55cb6b86e5ac0cb4c1ff
-ms.sourcegitcommit: e700497f962e4c2274df16d9e651059b42ff1a10
+monikerRange: =azuresqldb-current||>=sql-server-2016||>=sql-server-linux-2017||=azuresqldb-mi-current
+ms.openlocfilehash: 5b12fb3c0f29d4f9ef4137c277760593225b5e2e
+ms.sourcegitcommit: 1a544cf4dd2720b124c3697d1e62ae7741db757c
 ms.translationtype: HT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 08/17/2020
-ms.locfileid: "88427345"
+ms.lasthandoff: 12/14/2020
+ms.locfileid: "97426426"
 ---
 # <a name="use-the-eventdata-function"></a>EVENTDATA 함수 사용
 [!INCLUDE [SQL Server SQL Database](../../includes/applies-to-version/sql-asdb.md)]
@@ -129,7 +129,7 @@ GO
 > [!NOTE]  
 >  이벤트 데이터를 반환하려면 **query()** 메서드보다 XQuery의 **value()** 메서드를 사용하는 것이 좋습니다. **query()** 메서드는 XML 및 출력에서 앰퍼샌드로 이스케이프된 CR/LF(캐리지 리턴 및 줄 바꿈) 인스턴스를 반환하지만 **value()** 메서드는 출력에서는 볼 수 없는 CR/LF 인스턴스를 표시합니다.  
   
- 이와 유사한 DDL 트리거 예가 [!INCLUDE[ssSampleDBobject](../../includes/sssampledbobject-md.md)] 예제 데이터베이스와 함께 제공됩니다. 이 예를 사용하려면 [!INCLUDE[ssManStudioFull](../../includes/ssmanstudiofull-md.md)]를 사용하여 데이터베이스 트리거 폴더를 찾으십시오. 이 폴더는 **데이터베이스의** 프로그래밍 기능 [!INCLUDE[ssSampleDBnormal](../../includes/sssampledbnormal-md.md)] 폴더 아래에 있습니다. **ddlDatabaseTriggerLog**를 마우스 오른쪽 단추로 클릭한 다음 **데이터베이스 트리거 스크립팅**을 선택합니다. DDL 트리거 **ddlDatabaseTriggerLog**는 기본적으로 해제되어 있습니다.  
+ 이와 유사한 DDL 트리거 예가 [!INCLUDE[ssSampleDBobject](../../includes/sssampledbobject-md.md)] 예제 데이터베이스와 함께 제공됩니다. 이 예를 사용하려면 [!INCLUDE[ssManStudioFull](../../includes/ssmanstudiofull-md.md)]를 사용하여 데이터베이스 트리거 폴더를 찾으십시오. 이 폴더는 **데이터베이스의** 프로그래밍 기능 [!INCLUDE[ssSampleDBnormal](../../includes/sssampledbnormal-md.md)] 폴더 아래에 있습니다. **ddlDatabaseTriggerLog** 를 마우스 오른쪽 단추로 클릭한 다음 **데이터베이스 트리거 스크립팅** 을 선택합니다. DDL 트리거 **ddlDatabaseTriggerLog** 는 기본적으로 해제되어 있습니다.  
   
 ## <a name="see-also"></a>참고 항목  
  [DDL 이벤트](../../relational-databases/triggers/ddl-events.md)   
