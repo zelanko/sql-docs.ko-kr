@@ -10,13 +10,13 @@ ms.topic: conceptual
 ms.assetid: e000a1d8-a049-4542-bfeb-943fd6ab3969
 author: MladjoA
 ms.author: mlandzic
-monikerRange: =azuresqldb-current||>=sql-server-2016||=sqlallproducts-allversions||>=sql-server-linux-2017||=azuresqldb-mi-current
-ms.openlocfilehash: f117b284799ba4849131254b90a018a397824e7b
-ms.sourcegitcommit: a5398f107599102af7c8cda815d8e5e9a367ce7e
+monikerRange: =azuresqldb-current||>=sql-server-2016||>=sql-server-linux-2017||=azuresqldb-mi-current
+ms.openlocfilehash: 24be57e6e964fea4ddb0f050480dbe79353ddcd2
+ms.sourcegitcommit: 1a544cf4dd2720b124c3697d1e62ae7741db757c
 ms.translationtype: HT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 10/13/2020
-ms.locfileid: "92006332"
+ms.lasthandoff: 12/14/2020
+ms.locfileid: "97459988"
 ---
 # <a name="curvepolygon"></a>CurvePolygon
 [!INCLUDE [SQL Server Azure SQL Database Azure SQL Managed Instance](../../includes/applies-to-version/sql-asdb-asdbmi.md)]
@@ -31,7 +31,7 @@ ms.locfileid: "92006332"
   
 -   **CurvePolygon** 인스턴스의 내부는 외부 링과 모든 내부 링 사이의 공간입니다.  
   
- **CurvePolygon** 인스턴스는 **Polygon** 인스턴스와 다릅니다. **CurvePolygon** 인스턴스에는 원호 세그먼트인 **CircularString** 및 **CompoundCurve**가 포함될 수 있습니다.  
+ **CurvePolygon** 인스턴스는 **Polygon** 인스턴스와 다릅니다. **CurvePolygon** 인스턴스에는 원호 세그먼트인 **CircularString** 및 **CompoundCurve** 가 포함될 수 있습니다.  
   
 ## <a name="compoundcurve-instances"></a>CompoundCurve 인스턴스  
  다음 그림에서는 유효한 **CurvePolygon** 그림을 보여 줍니다.  
@@ -39,7 +39,7 @@ ms.locfileid: "92006332"
 ### <a name="accepted-instances"></a>허용되는 인스턴스  
  **CurvePolygon** 인스턴스가 허용되려면 해당 인스턴스가 비어 있거나 허용된 원호 링만 포함해야 합니다. 허용되는 원호 링은 다음 요구 사항을 충족합니다.  
   
-1.  허용되는 **LineString**, **CircularString**또는 **CompoundCurve** 인스턴스여야 합니다. 허용되는 인스턴스에 대한 자세한 내용은 [LineString](../../relational-databases/spatial/linestring.md), [CircularString](../../relational-databases/spatial/circularstring.md)및 [CompoundCurve](../../relational-databases/spatial/compoundcurve.md)를 참조하십시오.  
+1.  허용되는 **LineString**, **CircularString** 또는 **CompoundCurve** 인스턴스여야 합니다. 허용되는 인스턴스에 대한 자세한 내용은 [LineString](../../relational-databases/spatial/linestring.md), [CircularString](../../relational-databases/spatial/circularstring.md)및 [CompoundCurve](../../relational-databases/spatial/compoundcurve.md)를 참조하십시오.  
   
 2.  4개 이상의 점이 있어야 합니다.  
   
@@ -77,7 +77,7 @@ DECLARE @g2 geometry = 'CURVEPOLYGON((0 0, 0 0, 0 0))';
 3.  각 링에 4개 이상의 점이 있어야 합니다.  
 4.  각 링이 허용 가능한 곡선 유형이어야 합니다.  
   
-또한**CurvePolygon** 인스턴스는 **geometry** 또는 **geography** 데이터 형식인지에 따라 특정 조건을 충족해야 합니다.  
+또한 **CurvePolygon** 인스턴스는 **geometry** 또는 **geography** 데이터 형식인지에 따라 특정 조건을 충족해야 합니다.  
   
 #### <a name="geometry-data-type"></a>Geometry 데이터 형식  
 유효한 **geometryCurvePolygon** 인스턴스는 다음 특성을 포함해야 합니다.  
@@ -131,7 +131,7 @@ DECLARE @g geometry = 'CURVEPOLYGON(CIRCULARSTRING(2 4, 4 2, 6 4, 4 6, 2 4))'
 ```  
   
 ### <a name="c-instantiating-a-geography-instance-with-a-curvepolygon"></a>C. CurvePolygon을 사용하여 Geography 인스턴스 인스턴스화  
- 이 코드 조각은 **geography** 을 사용하여 **CurvePolygon**인스턴스를 선언하고 초기화하는 방법을 보여 줍니다.  
+ 이 코드 조각은 **geography** 을 사용하여 **CurvePolygon** 인스턴스를 선언하고 초기화하는 방법을 보여 줍니다.  
   
 ```sql  
 DECLARE @g geography = 'CURVEPOLYGON(CIRCULARSTRING(-122.358 47.653, -122.348 47.649, -122.348 47.658, -122.358 47.658, -122.358 47.653))';  

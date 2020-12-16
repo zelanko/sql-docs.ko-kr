@@ -13,20 +13,20 @@ ms.assetid: 7db79165-8bcc-4be6-8d40-12d44deda79f
 author: pmasl
 ms.author: pelopes
 ms.reviewer: mikeray
-monikerRange: =azuresqldb-current||>=sql-server-2016||=sqlallproducts-allversions||>=sql-server-linux-2017||=azuresqldb-mi-current
+monikerRange: =azuresqldb-current||>=sql-server-2016||>=sql-server-linux-2017||=azuresqldb-mi-current
 ms.custom: seo-lt-2019
-ms.openlocfilehash: c916bcaa0ff0a3fb294038df30e65e7f53f367aa
-ms.sourcegitcommit: 4d370399f6f142e25075b3714e5c2ce056b1bfd0
+ms.openlocfilehash: 518d5479b1b07c13ab0613aaf2dc68f1431cb16b
+ms.sourcegitcommit: 1a544cf4dd2720b124c3697d1e62ae7741db757c
 ms.translationtype: HT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 10/09/2020
-ms.locfileid: "91867453"
+ms.lasthandoff: 12/14/2020
+ms.locfileid: "97460056"
 ---
 # <a name="find-property-set-guids-and-property-integer-ids-for-search-properties"></a>검색 속성의 속성 세트 GUID 및 속성 정수 ID 찾기
 [!INCLUDE [SQL Server Azure SQL Database](../../includes/applies-to-version/sql-asdb.md)]
   이 항목에서는 검색 속성 목록에 속성을 추가하고 전체 텍스트 검색으로 검색할 수 있도록 설정하기 전에 필요한 값을 가져오는 방법에 대해 설명합니다. 이러한 값에는 문서 속성의 속성 집합 GUID와 속성 정수 식별자가 포함됩니다.  
   
- 이진 데이터에서 즉, **varbinary**, **varbinary(max)** (**FILESTREAM**포함) 또는 **image** 데이터 형식 열에 저장된 데이터에서 IFilter를 통해 추출된 문서 속성은 전체 텍스트 검색에 사용할 수 있습니다. 추출된 속성을 검색할 수 있도록 설정하려면 속성을 검색 속성 목록에 수동으로 추가해야 합니다. 또한 검색 속성 목록은 하나 이상의 전체 텍스트 인덱스와 연결되어야 합니다. 자세한 내용은 [검색 속성 목록을 사용하여 문서 속성 검색](../../relational-databases/search/search-document-properties-with-search-property-lists.md)을 참조하세요.  
+ 이진 데이터에서 즉, **varbinary**, **varbinary(max)** (**FILESTREAM** 포함) 또는 **image** 데이터 형식 열에 저장된 데이터에서 IFilter를 통해 추출된 문서 속성은 전체 텍스트 검색에 사용할 수 있습니다. 추출된 속성을 검색할 수 있도록 설정하려면 속성을 검색 속성 목록에 수동으로 추가해야 합니다. 또한 검색 속성 목록은 하나 이상의 전체 텍스트 인덱스와 연결되어야 합니다. 자세한 내용은 [검색 속성 목록을 사용하여 문서 속성 검색](../../relational-databases/search/search-document-properties-with-search-property-lists.md)을 참조하세요.  
   
  사용 가능한 속성을 속성 목록에 추가하려면 먼저 속성에 대한 다음 두 가지 정보를 찾아야 합니다.  
   
@@ -70,7 +70,7 @@ ms.locfileid: "91867453"
 -   32비트 버전의 경우 `C:\Program Files\Microsoft SDKs\Windows\v7.1\Bin`을 찾아봅니다.  
   
 ##  <a name="finding-values-for-a-search-property-from-a-windows-property-description"></a><a name="propdesc"></a> Windows 속성 설명에서 검색 속성 값 찾기  
- 잘 알려진 Windows Search 속성의 경우 속성 설명( **propertyDescription** )의 **formatID** 및**propID**특성에서 필요한 정보를 가져올 수 있습니다.  
+ 잘 알려진 Windows Search 속성의 경우 속성 설명( **propertyDescription** )의 **formatID** 및 **propID** 특성에서 필요한 정보를 가져올 수 있습니다.  
   
  다음 예에서는 일반적인 Microsoft 속성(이 경우 `System.Author` 속성) 설명의 관련 부분을 보여 줍니다. `formatID` 특성은 속성 집합 GUID로 `F29F85E0-4FF9-1068-AB91-08002B27B3D9`를 지정하고, `propID` 특성은 속성 정수 ID로 `4.` 를 지정합니다. `name` 특성은 Windows 정식 속성 이름으로 `System.Author`를 지정합니다. 이 예에서는 관련되지 않은 속성 설명의 부분을 생략합니다.  
   

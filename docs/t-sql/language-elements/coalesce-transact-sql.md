@@ -20,13 +20,13 @@ helpviewer_keywords:
 ms.assetid: fafc0dba-f8a8-4aad-9b7f-908e34b74d88
 author: rothja
 ms.author: jroth
-monikerRange: '>=aps-pdw-2016||=azuresqldb-current||=azure-sqldw-latest||>=sql-server-2016||=sqlallproducts-allversions||>=sql-server-linux-2017||=azuresqldb-mi-current'
-ms.openlocfilehash: 7b88a8e08fbf031d2b4847206e1bfdf4550bf86c
-ms.sourcegitcommit: c8e1553ff3fdf295e8dc6ce30d1c454d6fde8088
+monikerRange: '>=aps-pdw-2016||=azuresqldb-current||=azure-sqldw-latest||>=sql-server-2016||>=sql-server-linux-2017||=azuresqldb-mi-current'
+ms.openlocfilehash: 9af0697af3d751382d9beea576e97ec59a09fd18
+ms.sourcegitcommit: 1a544cf4dd2720b124c3697d1e62ae7741db757c
 ms.translationtype: HT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 07/22/2020
-ms.locfileid: "86923012"
+ms.lasthandoff: 12/14/2020
+ms.locfileid: "97439183"
 ---
 # <a name="coalesce-transact-sql"></a>COALESCE(Transact-SQL)
 [!INCLUDE [sql-asdb-asdbmi-asa-pdw](../../includes/applies-to-version/sql-asdb-asdbmi-asa-pdw.md)]
@@ -48,7 +48,7 @@ _expression_
 [!INCLUDE[sql-server-tsql-previous-offline-documentation](../../includes/sql-server-tsql-previous-offline-documentation.md)]
 
 ## <a name="return-types"></a>반환 형식
-데이터 형식 우선 순위가 가장 높은 _식_의 데이터 형식을 반환합니다. 모든 식에서 Null을 허용하지 않으면 결과가 Null을 허용하지 않는 형식으로 처리됩니다.  
+데이터 형식 우선 순위가 가장 높은 _식_ 의 데이터 형식을 반환합니다. 모든 식에서 Null을 허용하지 않으면 결과가 Null을 허용하지 않는 형식으로 처리됩니다.  
   
 ## <a name="remarks"></a>설명  
 모든 인수가 `NULL`인 경우 `COALESCE`가 `NULL`를 반환합니다. Null 값 중 하나 이상이 `NULL` 형식이어야 합니다.  
@@ -111,7 +111,7 @@ SELECT (SELECT Nullable FROM Demo WHERE SomeCol = 1) AS x
     );  
     ```  
   
-4.  `ISNULL` 및 `COALESCE`에 대한 유효성 검사도 다릅니다. 예를 들어 `COALESCE`의 경우 데이터 형식을 직접 제공해야 하지만 `ISNULL`에 대한 `NULL` 값은 **int**로 변환됩니다.  
+4.  `ISNULL` 및 `COALESCE`에 대한 유효성 검사도 다릅니다. 예를 들어 `COALESCE`의 경우 데이터 형식을 직접 제공해야 하지만 `ISNULL`에 대한 `NULL` 값은 **int** 로 변환됩니다.  
   
 5.  `ISNULL`에는 다음 두 개의 매개 변수만 사용됩니다. 반대로, `COALESCE`가 사용하는 매개 변수의 수는 가변적입니다.  
   

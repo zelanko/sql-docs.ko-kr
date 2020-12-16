@@ -11,13 +11,13 @@ ms.topic: conceptual
 ms.assetid: b1cc7c30-1747-4c21-88ac-e95a5e58baac
 author: MightyPen
 ms.author: genemi
-monikerRange: =azuresqldb-current||>=sql-server-2016||=sqlallproducts-allversions||>=sql-server-linux-2017||=azuresqldb-mi-current
-ms.openlocfilehash: dda00961f4d8aa7a5b220e2794105adbac74793b
-ms.sourcegitcommit: 4d370399f6f142e25075b3714e5c2ce056b1bfd0
+monikerRange: =azuresqldb-current||>=sql-server-2016||>=sql-server-linux-2017||=azuresqldb-mi-current
+ms.openlocfilehash: 7dc86572c8a1ee4b8d63e9705a9a5295565c3808
+ms.sourcegitcommit: 1a544cf4dd2720b124c3697d1e62ae7741db757c
 ms.translationtype: HT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 10/09/2020
-ms.locfileid: "91868251"
+ms.lasthandoff: 12/14/2020
+ms.locfileid: "97438726"
 ---
 # <a name="transact-sql-support-for-in-memory-oltp"></a>메모리 내 OLTP에 대한 Transact-SQL 지원
 [!INCLUDE [SQL Server Azure SQL Database](../../includes/applies-to-version/sql-asdb.md)]
@@ -39,7 +39,7 @@ ms.locfileid: "91868251"
 -   [CREATE TYPE&#40;Transact-SQL&#41;](../../t-sql/statements/create-type-transact-sql.md)  
   
 -   [DECLARE @local_variable&#40;Transact-SQL&#41;](../../t-sql/language-elements/declare-local-variable-transact-sql.md)   
-    고유하게 컴파일된 저장 프로시저에서 변수를 **NOT NULL**로 선언할 수 있습니다. 일반적인 저장 프로시저에서 수행할 수 없습니다.  
+    고유하게 컴파일된 저장 프로시저에서 변수를 **NOT NULL** 로 선언할 수 있습니다. 일반적인 저장 프로시저에서 수행할 수 없습니다.  
   
  **AUTO_UPDATE_STATISTICS** 는 SQL Server 2016으로 시작하여 메모리 최적화 테이블의 경우 **ON** 일 수 있습니다. 자세한 내용은 [sp_autostats&#40;Transact-SQL&#41;](../../relational-databases/system-stored-procedures/sp-autostats-transact-sql.md)를 참조하세요.  
   

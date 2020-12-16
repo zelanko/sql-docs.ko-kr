@@ -9,14 +9,14 @@ ms.technology: data-movement
 ms.topic: conceptual
 author: MashaMSFT
 ms.author: mathoma
-monikerRange: '>=aps-pdw-2016||=azuresqldb-current||=azure-sqldw-latest||>=sql-server-2016||=sqlallproducts-allversions||>=sql-server-linux-2017||=azuresqldb-mi-current'
+monikerRange: '>=aps-pdw-2016||=azuresqldb-current||=azure-sqldw-latest||>=sql-server-2016||>=sql-server-linux-2017||=azuresqldb-mi-current'
 ms.custom: seo-lt-2019
-ms.openlocfilehash: e8e0c926a81d97561a16928dc33af406c69469ae
-ms.sourcegitcommit: 4d370399f6f142e25075b3714e5c2ce056b1bfd0
+ms.openlocfilehash: d934e6f1c5457297e385fbe8d42c2709ed2c0f88
+ms.sourcegitcommit: 1a544cf4dd2720b124c3697d1e62ae7741db757c
 ms.translationtype: HT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 10/09/2020
-ms.locfileid: "91868808"
+ms.lasthandoff: 12/14/2020
+ms.locfileid: "97438793"
 ---
 # <a name="import-and-export-data-from-sql-server-and-azure-sql-database"></a>SQL Server 및 Azure SQL Database에서 데이터 가져오기 및 내보내기
 [!INCLUDE[SQL Server Azure SQL Database Synapse Analytics PDW ](../../includes/applies-to-version/sql-asdb-asdbmi-asa-pdw.md)]
@@ -33,7 +33,7 @@ ms.locfileid: "91868808"
 BCP 명령줄 유틸리티를 사용하여 데이터를 가져오고 내보낼 수 있습니다. 자세한 내용은 [bcp 유틸리티를 사용하여 대량 데이터 가져오기 및 내보내기](import-and-export-bulk-data-by-using-the-bcp-utility-sql-server.md)를 참조하세요.
 
 ### <a name="use-the-import-flat-file-wizard"></a>플랫 파일 가져오기 마법사 사용
-가져오기 및 내보내기 마법사와 기타 도구에서 사용 가능한 모든 구성 옵션이 필요하지 않은 경우 SSMS(SQL Server Management Studio)의 **플랫 파일 가져오기 마법사**를 사용하여 텍스트 파일을 SQL Server로 가져올 수 있습니다. 자세한 내용은 다음 문서를 참조하세요.
+가져오기 및 내보내기 마법사와 기타 도구에서 사용 가능한 모든 구성 옵션이 필요하지 않은 경우 SSMS(SQL Server Management Studio)의 **플랫 파일 가져오기 마법사** 를 사용하여 텍스트 파일을 SQL Server로 가져올 수 있습니다. 자세한 내용은 다음 문서를 참조하세요.
 - [SQL 마법사로 플랫 파일 가져오기](import-flat-file-wizard.md)
 - [SQL Server Management Studio 17.3의 새로운 기능](https://blogs.technet.microsoft.com/dataplatforminsider/2017/10/10/whats-new-in-sql-server-management-studio-17-3/)
 - [SSMS 17.3의 새로운 플랫 파일 가져오기 마법사 소개](https://channel9.msdn.com/Shows/Data-Exposed/Introducing-the-new-Import-Flat-File-Wizard-in-SSMS-173)

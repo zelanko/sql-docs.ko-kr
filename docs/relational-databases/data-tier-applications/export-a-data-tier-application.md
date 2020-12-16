@@ -23,13 +23,13 @@ helpviewer_keywords:
 ms.assetid: 61915bc5-0f5f-45ac-8cfe-3452bc185558
 author: stevestein
 ms.author: sstein
-monikerRange: =azuresqldb-current||>=sql-server-2016||=sqlallproducts-allversions||>=sql-server-linux-2017||=azuresqldb-mi-current
-ms.openlocfilehash: 62166f813bee655bda939c1f230d02a1a5b0afbc
-ms.sourcegitcommit: cfa04a73b26312bf18d8f6296891679166e2754d
+monikerRange: =azuresqldb-current||>=sql-server-2016||>=sql-server-linux-2017||=azuresqldb-mi-current
+ms.openlocfilehash: 2e4ad904176abdc4f714980cf1e242bd620632a6
+ms.sourcegitcommit: 1a544cf4dd2720b124c3697d1e62ae7741db757c
 ms.translationtype: HT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 10/19/2020
-ms.locfileid: "92195668"
+ms.lasthandoff: 12/14/2020
+ms.locfileid: "97440224"
 ---
 # <a name="export-a-data-tier-application"></a>데이터 계층 애플리케이션 내보내기
 [!INCLUDE [SQL Server Azure SQL Database](../../includes/applies-to-version/sql-asdb.md)]
@@ -51,7 +51,7 @@ ms.locfileid: "92195668"
  DAC 또는 포함된 사용자가 지원하지 않는 개체가 있는 데이터베이스를 내보낼 수 없습니다. DAC에서 지원되는 개체 유형에 대한 자세한 내용은 [DAC Support For SQL Server Objects and Versions](/previous-versions/sql/sql-server-2012/ee210549(v=sql.110))을 참조하세요.  
   
 ###  <a name="permissions"></a><a name="Permissions"></a> 권한  
- DAC를 내보내려면 **sys.sql_expression_dependencies**에 대한 SELECT 권한뿐만 아니라 최소한 ALTER ANY LOGIN 및 데이터베이스 범위 VIEW DEFINITION 권한이 있어야 합니다. DAC를 내보내려면 securityadmin 고정 서버 역할의 멤버이면서 DAC를 내보내는 데이터베이스의 database_owner 고정 데이터베이스 역할의 멤버여야 합니다. sysadmin 고정 서버 역할의 멤버 또는 기본 제공 SQL Server 시스템 관리자 계정인 **sa** 는 DAC를 내보낼 수 있습니다.
+ DAC를 내보내려면 **sys.sql_expression_dependencies** 에 대한 SELECT 권한뿐만 아니라 최소한 ALTER ANY LOGIN 및 데이터베이스 범위 VIEW DEFINITION 권한이 있어야 합니다. DAC를 내보내려면 securityadmin 고정 서버 역할의 멤버이면서 DAC를 내보내는 데이터베이스의 database_owner 고정 데이터베이스 역할의 멤버여야 합니다. sysadmin 고정 서버 역할의 멤버 또는 기본 제공 SQL Server 시스템 관리자 계정인 **sa** 는 DAC를 내보낼 수 있습니다.
  
 Azure SQL Database에서는 **각 데이터베이스에서** 모든 테이블 또는 특정 테이블에 대한 VIEW DEFINITION 및 SELECT 권한을 부여해야 합니다.
 
@@ -61,11 +61,11 @@ Azure SQL Database에서는 **각 데이터베이스에서** 모든 테이블 �
   
 1.  온-프레미스 또는 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]의 [!INCLUDE[ssSDS](../../includes/sssds-md.md)]인스턴스에 연결합니다.  
   
-2.  **개체 탐색기**에서 DAC를 내보내려는 인스턴스에 대한 노드를 확장합니다.  
+2.  **개체 탐색기** 에서 DAC를 내보내려는 인스턴스에 대한 노드를 확장합니다.  
   
 3.  데이터베이스 이름을 마우스 오른쪽 단추로 클릭합니다.  
   
-4.  **태스크**를 클릭한 다음, **데이터 계층 애플리케이션 내보내기...** 를 선택합니다.  
+4.  **태스크** 를 클릭한 다음, **데이터 계층 애플리케이션 내보내기...** 를 선택합니다.  
   
 5.  마법사 대화 상자를 완료합니다.  
   
@@ -104,10 +104,10 @@ Azure SQL Database에서는 **각 데이터베이스에서** 모든 테이블 �
 ##  <a name="validation-page"></a><a name="Validation"></a> 유효성 검사 페이지  
  유효성 검사 페이지에서 작업을 차단한 문제를 검토할 수 있습니다. 계속하려면 차단 문제를 해결하고 **유효성 검사 다시 실행** 을 클릭하여 유효성 검사에 성공했는지 확인합니다.  
   
- 계속하려면 **다음**을 클릭합니다.  
+ 계속하려면 **다음** 을 클릭합니다.  
   
 ##  <a name="summary-page"></a><a name="Summary"></a> 요약 페이지  
- 이 페이지에서 작업에 대해 지정한 원본 및 대상 설정을 검토할 수 있습니다. 지정한 설정을 사용하여 내보내기 작업을 완료하려면 **마침**을 클릭합니다. 내보내기 작업을 취소하고 마법사를 종료하려면 **취소**를 클릭합니다.  
+ 이 페이지에서 작업에 대해 지정한 원본 및 대상 설정을 검토할 수 있습니다. 지정한 설정을 사용하여 내보내기 작업을 완료하려면 **마침** 을 클릭합니다. 내보내기 작업을 취소하고 마법사를 종료하려면 **취소** 를 클릭합니다.  
   
 ##  <a name="progress-page"></a><a name="Progress"></a> 진행률 페이지  
  이 페이지에는 작업 상태를 나타내는 진행률 표시줄이 표시됩니다. 자세한 상태를 보려면 **자세히 보기** 옵션을 클릭합니다.  

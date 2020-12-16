@@ -12,13 +12,13 @@ helpviewer_keywords:
 ms.assetid: af9b1153-2791-40ef-a95c-50923cd0cc97
 author: stevestein
 ms.author: sstein
-monikerRange: =azuresqldb-current||>=sql-server-2016||=sqlallproducts-allversions||>=sql-server-linux-2017||=azuresqldb-mi-current
-ms.openlocfilehash: d6c94dd09b37a0648f65f1d74d0b95abbb518a96
-ms.sourcegitcommit: e700497f962e4c2274df16d9e651059b42ff1a10
+monikerRange: =azuresqldb-current||>=sql-server-2016||>=sql-server-linux-2017||=azuresqldb-mi-current
+ms.openlocfilehash: 7e66774aca955e7282716a83a4b37949df40f6a4
+ms.sourcegitcommit: 1a544cf4dd2720b124c3697d1e62ae7741db757c
 ms.translationtype: HT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 08/17/2020
-ms.locfileid: "88448694"
+ms.lasthandoff: 12/14/2020
+ms.locfileid: "97440114"
 ---
 # <a name="audit-broker-login-event-class"></a>Audit Broker Login 이벤트 클래스
 [!INCLUDE [SQL Server - ASDB](../../includes/applies-to-version/sql-asdb.md)]
@@ -31,7 +31,7 @@ ms.locfileid: "88448694"
 |**ApplicationName**|**nvarchar**|이 이벤트 클래스에서는 사용되지 않습니다.|10|예|  
 |**ClientProcessID**|**int**|이 이벤트 클래스에서는 사용되지 않습니다.|9|예|  
 |**DatabaseID**|**int**|[!INCLUDE[ssSqlProfiler](../../includes/sssqlprofiler-md.md)] ServerName **데이터 열이 추적에서 캡처되고 서버를 사용할 수 있으면** 에 데이터베이스 이름이 표시됩니다. DB_ID 함수를 사용하여 데이터베이스의 값을 확인할 수 있습니다.|3|예|  
-|**EventClass**|**int**|캡처된 이벤트 클래스 유형입니다. **Audit Broker Login** 에 대해서는 항상 **159**입니다.|27|예|  
+|**EventClass**|**int**|캡처된 이벤트 클래스 유형입니다. **Audit Broker Login** 에 대해서는 항상 **159** 입니다.|27|예|  
 |**EventSequence**|**int**|이 이벤트의 시퀀스 번호입니다.|51|예|  
 |**EventSubClass**|**int**|각 이벤트 클래스에 대한 자세한 정보를 제공하는 이벤트 하위 클래스 유형입니다. 다음 표에서는 이 이벤트에 대한 이벤트 하위 클래스 값을 나열합니다.|21|예|  
 |**FileName**|**nvarchar**|원격 Broker 인증 수준입니다. 원격 Broker 엔드포인트에서 구성된 지원되는 인증 방법입니다. 둘 이상의 메서드를 사용할 수 있는 경우 수락하는(대상) 엔드포인트에서 먼저 시도할 메서드를 결정합니다. 가능한 값은 다음과 같습니다.<br /><br /> **없음**. 인증 방법이 구성되어 있지 않습니다.<br /><br /> **NTLM**. NTLM 인증이 필요합니다.<br /><br /> **KERBEROS**- Kerberos 인증이 필요합니다.<br /><br /> **NEGOTIATE**- Windows에서 인증 방법을 협상합니다.<br /><br /> **CERTIFICATE**- 엔드포인트에 대해 구성된 인증서가 필요합니다. 이 인증서는 **master** 데이터베이스에 저장되어 있습니다.<br /><br /> **NTLM, CERTIFICATE**- NTLM 또는 TLS/SSL 인증서 인증을 적용합니다.<br /><br /> **KERBEROS, CERTIFICATE**- Kerberos 또는 엔드포인트 인증서 인증을 적용합니다.<br /><br /> **NEGOTIATE, CERTIFICATE**- Windows에서 인증 방법을 협상하거나 엔드포인트 인증서 인증을 사용합니다.<br /><br /> **CERTIFICATE, NTLM**- 엔드포인트 인증서 또는 NTLM 인증을 적용합니다.<br /><br /> **CERTIFICATE, KERBEROS**- 엔드포인트 인증서 또는 Kerberos 인증을 적용합니다.<br /><br /> **CERTIFICATE, NEGOTIATE**- 엔드포인트 인증서 인증을 적용하거나 Windows에서 인증 방법을 협상합니다.|36|예|  
@@ -43,7 +43,7 @@ ms.locfileid: "88448694"
 |**ObjectName**|**nvarchar**|이 연결에 사용된 연결 문자열입니다.|34|예|  
 |**OwnerName**|**nvarchar**|로컬 Broker 엔드포인트에서 구성된 지원되는 인증 방법입니다. 둘 이상의 메서드를 사용할 수 있는 경우 수락하는(대상) 엔드포인트에서 먼저 시도할 메서드를 결정합니다. 가능한 값은 다음과 같습니다.<br /><br /> **없음**. 인증 방법이 구성되어 있지 않습니다.<br /><br /> **NTLM**. NTLM 인증이 필요합니다.<br /><br /> **KERBEROS**- Kerberos 인증이 필요합니다.<br /><br /> **NEGOTIATE**- Windows에서 인증 방법을 협상합니다.<br /><br /> **CERTIFICATE**- 엔드포인트에 대해 구성된 인증서가 필요합니다. 이 인증서는 **master** 데이터베이스에 저장되어 있습니다.<br /><br /> **NTLM, CERTIFICATE**- NTLM 또는 TLS/SSL 인증서 인증을 적용합니다.<br /><br /> **KERBEROS, CERTIFICATE**- Kerberos 또는 엔드포인트 인증서 인증을 적용합니다.<br /><br /> **NEGOTIATE, CERTIFICATE**- Windows에서 인증 방법을 협상하거나 엔드포인트 인증서 인증을 사용합니다.<br /><br /> **CERTIFICATE, NTLM**- 엔드포인트 인증서 또는 NTLM 인증을 적용합니다.<br /><br /> **CERTIFICATE, KERBEROS**- 엔드포인트 인증서 또는 Kerberos 인증을 적용합니다.<br /><br /> **CERTIFICATE, NEGOTIATE**- 엔드포인트 인증서 인증을 적용하거나 Windows에서 인증 방법을 협상합니다.|37|예|  
 |**ProviderName**|**nvarchar**|이 연결에 사용된 인증 방법입니다.|46|예|  
-|**RoleName**|**nvarchar**|연결의 역할입니다. 이 역할은 **시작자** 또는 **대상**입니다.|38|예|  
+|**RoleName**|**nvarchar**|연결의 역할입니다. 이 역할은 **시작자** 또는 **대상** 입니다.|38|예|  
 |**데이터 열이 추적에서 캡처되고 서버를 사용할 수 있으면**|**nvarchar**|추적 중인 SQL Server 인스턴스의 이름입니다.|26|예|  
 |**SPID**|**int**|SQL Server가 클라이언트와 관련된 프로세스에 할당한 서버 프로세스 ID입니다.|12|예|  
 |**StartTime**|**datetime**|이벤트가 시작된 시간입니다(사용 가능한 경우).|14|예|  

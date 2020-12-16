@@ -14,13 +14,13 @@ helpviewer_keywords:
 ms.assetid: 5f5e70dc-69f9-44b8-bc48-b5d51ac20d77
 author: stevestein
 ms.author: sstein
-monikerRange: '>=aps-pdw-2016||=azuresqldb-current||=azure-sqldw-latest||>=sql-server-2016||=sqlallproducts-allversions||>=sql-server-linux-2017||=azuresqldb-mi-current'
-ms.openlocfilehash: f1952dc72148ee9e8d0d68b375f39f5fc3bedfc3
-ms.sourcegitcommit: e700497f962e4c2274df16d9e651059b42ff1a10
+monikerRange: '>=aps-pdw-2016||=azuresqldb-current||=azure-sqldw-latest||>=sql-server-2016||>=sql-server-linux-2017||=azuresqldb-mi-current'
+ms.openlocfilehash: 2b8b8dd930fa6fff0b5be86ed0c83ad485326996
+ms.sourcegitcommit: 1a544cf4dd2720b124c3697d1e62ae7741db757c
 ms.translationtype: HT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 08/17/2020
-ms.locfileid: "88488636"
+ms.lasthandoff: 12/14/2020
+ms.locfileid: "97439423"
 ---
 # <a name="copy-columns-from-one-table-to-another-database-engine"></a>한 테이블에서 다른 테이블로 열 복사(데이터베이스 엔진)
 [!INCLUDE [sqlserver2016-asdb-asdbmi-asa-pdw](../../includes/applies-to-version/sqlserver2016-asdb-asdbmi-asa-pdw.md)]
@@ -55,15 +55,15 @@ ms.locfileid: "88488636"
   
 #### <a name="to-copy-column-definitions-from-one-table-to-another"></a>한 테이블에서 다른 테이블로 열 정의를 복사하려면  
   
-1.  테이블을 마우스 오른쪽 단추로 클릭한 다음 **디자인**을 클릭하여 복사할 열이 있는 테이블과 이 열을 붙여 넣을 대상 테이블을 엽니다.  
+1.  테이블을 마우스 오른쪽 단추로 클릭한 다음 **디자인** 을 클릭하여 복사할 열이 있는 테이블과 이 열을 붙여 넣을 대상 테이블을 엽니다.  
   
 2.  복사하려는 열이 포함된 테이블에 해당하는 탭을 클릭하고 복사할 열을 선택합니다.  
   
-3.  **편집** 메뉴에서 **복사**를 클릭합니다.  
+3.  **편집** 메뉴에서 **복사** 를 클릭합니다.  
   
 4.  열을 복사하여 넣으려는 대상 테이블에 해당하는 탭을 클릭합니다.  
   
-5.  열을 삽입하려는 위치 바로 앞의 열을 선택하고 **편집** 메뉴에서 **붙여넣기**를 클릭합니다.  
+5.  열을 삽입하려는 위치 바로 앞의 열을 선택하고 **편집** 메뉴에서 **붙여넣기** 를 클릭합니다.  
 
 #### <a name="to-copy-data-from-one-table-to-another"></a>테이블 간에 데이터를 복사하려면  
   
@@ -74,11 +74,11 @@ ms.locfileid: "88488636"
   
 2.  새 쿼리 편집기 창을 엽니다. 
 
-3.  쿼리 편집기를 마우스 오른쪽 단추로 누른 다음 **편집기에서 쿼리 디자인**을 클릭합니다. 
+3.  쿼리 편집기를 마우스 오른쪽 단추로 누른 다음 **편집기에서 쿼리 디자인** 을 클릭합니다. 
 
-4.  **테이블 추가** 대화 상자에서 원본 및 대상 테이블을 선택하고, **추가**를 클릭한 다음 **테이블 추가** 대화 상자를 닫습니다. 
+4.  **테이블 추가** 대화 상자에서 원본 및 대상 테이블을 선택하고, **추가** 를 클릭한 다음 **테이블 추가** 대화 상자를 닫습니다. 
 
-5.  쿼리 편집기에서 열린 영역을 마우스 오른쪽 단추로 클릭하고 **형식 변경**을 가리킨 다음 **결과 삽입**을 클릭합니다.  
+5.  쿼리 편집기에서 열린 영역을 마우스 오른쪽 단추로 클릭하고 **형식 변경** 을 가리킨 다음 **결과 삽입** 을 클릭합니다.  
 
 6.  **결과 삽입의 대상 테이블 선택** 대화 상자에서 대상 테이블을 선택합니다. 
 
@@ -97,11 +97,11 @@ ms.locfileid: "88488636"
   
 #### <a name="to-copy-data-from-one-table-to-another"></a>테이블 간에 데이터를 복사하려면  
   
-1.  **개체 탐색기**에서 [!INCLUDE[ssDE](../../includes/ssde-md.md)]인스턴스에 연결합니다.  
+1.  **개체 탐색기** 에서 [!INCLUDE[ssDE](../../includes/ssde-md.md)]인스턴스에 연결합니다.  
   
-2.  표준 도구 모음에서 **새 쿼리**를 클릭합니다.  
+2.  표준 도구 모음에서 **새 쿼리** 를 클릭합니다.  
   
-3.  다음 예를 복사하여 쿼리 창에 붙여 넣고 **실행**을 클릭합니다.  
+3.  다음 예를 복사하여 쿼리 창에 붙여 넣고 **실행** 을 클릭합니다.  
   
     ```  
     USE AdventureWorks2012;  

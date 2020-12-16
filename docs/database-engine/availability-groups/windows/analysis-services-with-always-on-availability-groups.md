@@ -11,13 +11,13 @@ ms.assetid: 14d16bfd-228c-4870-b463-a283facda965
 author: cawrites
 ms.author: chadam
 manager: erikre
-monikerRange: '>=sql-server-2016||=sqlallproducts-allversions'
-ms.openlocfilehash: febd24b17458a37a6ff12c8b17f55527311a0aee
-ms.sourcegitcommit: 54cd97a33f417432aa26b948b3fc4b71a5e9162b
+monikerRange: '>=sql-server-2016'
+ms.openlocfilehash: c0e02d7491d9afce4611e0d22c488b438c858ed5
+ms.sourcegitcommit: 1a544cf4dd2720b124c3697d1e62ae7741db757c
 ms.translationtype: HT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 11/13/2020
-ms.locfileid: "94584790"
+ms.lasthandoff: 12/14/2020
+ms.locfileid: "97438886"
 ---
 # <a name="analysis-services-with-always-on-availability-groups"></a>Always On 가용성 그룹이 포함된 Analysis Services
 

@@ -11,13 +11,13 @@ ms.topic: conceptual
 ms.assetid: 1c25a164-547d-43c4-8484-6b5ee3cbaf3a
 author: MightyPen
 ms.author: genemi
-monikerRange: =azuresqldb-current||>=sql-server-2016||=sqlallproducts-allversions||>=sql-server-linux-2017||=azuresqldb-mi-current
-ms.openlocfilehash: 4ed52b1ddfe0a55a4a443dd865f980367b90f973
-ms.sourcegitcommit: a5398f107599102af7c8cda815d8e5e9a367ce7e
+monikerRange: =azuresqldb-current||>=sql-server-2016||>=sql-server-linux-2017||=azuresqldb-mi-current
+ms.openlocfilehash: 5287bb37b779775edb3375d545c1745c6ed63e93
+ms.sourcegitcommit: 1a544cf4dd2720b124c3697d1e62ae7741db757c
 ms.translationtype: HT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 10/13/2020
-ms.locfileid: "92005674"
+ms.lasthandoff: 12/14/2020
+ms.locfileid: "97438753"
 ---
 # <a name="survey-of-initial-areas-in-in-memory-oltp"></a>메모리 내 OLTP에서 초기 영역 설문 조사
 
@@ -35,7 +35,7 @@ ms.locfileid: "92005674"
 사소한 점을 제외하고 메모리 내 기술 지원과 관련된 SQL Server와 SQL 데이터베이스의 차이는 거의 없습니다.  
   
   
-일부 블로거들은 비공식적으로 메모리 내 OLTP를 *Hekaton*이라고도 합니다.  
+일부 블로거들은 비공식적으로 메모리 내 OLTP를 *Hekaton* 이라고도 합니다.  
   
   
 <a name="benefits-of-in-memory-features-21a"></a>  
@@ -188,7 +188,7 @@ ALTER DATABASE CURRENT
 ## <a name="2-elevate-to-snapshot"></a>2. SNAPSHOT으로 권한 상승  
   
   
-트랜잭션에 디스크 기반 테이블과 메모리 최적화 테이블이 모두 포함되어 있을 경우 *컨테이너 간 트랜잭션*이라고 합니다. 이러한 트랜잭션에서 메모리 최적화 트랜잭션 부분은 SNAPSHOT이라고 하는 트랜잭션 격리 수준에서 작동해야 합니다.  
+트랜잭션에 디스크 기반 테이블과 메모리 최적화 테이블이 모두 포함되어 있을 경우 *컨테이너 간 트랜잭션* 이라고 합니다. 이러한 트랜잭션에서 메모리 최적화 트랜잭션 부분은 SNAPSHOT이라고 하는 트랜잭션 격리 수준에서 작동해야 합니다.  
   
 컨테이너 간 트랜잭션에서 메모리 최적화 테이블에 대해 이 수준을 안정적으로 적용하려면 다음 T-SQL을 실행하여 [데이터베이스 설정을 변경](../../t-sql/statements/alter-database-transact-sql-set-options.md)합니다.  
   
@@ -365,7 +365,7 @@ PRINT @mesg;
 **이중 특성:** 메모리 최적화 테이블은 활성 메모리에서 표현되고, 하드 디스크에도 표현되는 이중 특성이 있습니다. 각 트랜잭션은 테이블의 두 표현 방식으로 모두 커밋됩니다. 트랜잭션은 그중 더 빠른 활성 메모리 표현에 대해 작동합니다. 메모리 액세스에 최적화된 테이블은 디스크와 비교할 때 더 빨라진 활성 메모리 속도를 활용합니다. 또한 더 빨라진 활성 메모리로 인해 실제로 속도에 최적화된 고급 테이블 구조가 구현됩니다. 고급 구조는 또한 페이징되지 않아 래치 및 스핀 잠금의 오버헤드와 경합을 방지합니다.  
   
   
-**잠금 없음:** 메모리 최적화 테이블은 데이터 무결성과 동시성 및 높은 처리량 간 경쟁하는 목표에 대한 *최적*의 접근 방법을 사용합니다. 트랜잭션 중 테이블은 업데이트된 데이터 행의 어떤 버전에도 잠금을 설정하지 않습니다. 이렇게 하면 일부 고용량 시스템의 경합을 크게 줄일 수 있습니다.  
+**잠금 없음:** 메모리 최적화 테이블은 데이터 무결성과 동시성 및 높은 처리량 간 경쟁하는 목표에 대한 *최적* 의 접근 방법을 사용합니다. 트랜잭션 중 테이블은 업데이트된 데이터 행의 어떤 버전에도 잠금을 설정하지 않습니다. 이렇게 하면 일부 고용량 시스템의 경합을 크게 줄일 수 있습니다.  
   
   
 **행 버전:** 잠금 대신 메모리 최적화 테이블은 tempdb가 아닌 테이블 자체에 업데이트된 행의 새로운 버전을 추가합니다. 원래 행은 트랜잭션이 커밋될 때까지 유지됩니다. 트랜잭션 중 다른 프로세스에서는 원래 버전의 행을 읽을 수 있습니다.  

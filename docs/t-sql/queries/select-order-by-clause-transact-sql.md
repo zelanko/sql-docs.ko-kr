@@ -39,13 +39,13 @@ helpviewer_keywords:
 ms.assetid: bb394abe-cae6-4905-b5c6-8daaded77742
 author: VanMSFT
 ms.author: vanto
-monikerRange: '>=aps-pdw-2016||=azuresqldb-current||=azure-sqldw-latest||>=sql-server-2016||=sqlallproducts-allversions||>=sql-server-linux-2017||=azuresqldb-mi-current'
-ms.openlocfilehash: 0b6910a57f137a6463f235bb64db2b6bef4274d4
-ms.sourcegitcommit: 8f062015c2a033f5a0d805ee4adabbe15e7c8f94
+monikerRange: '>=aps-pdw-2016||=azuresqldb-current||=azure-sqldw-latest||>=sql-server-2016||>=sql-server-linux-2017||=azuresqldb-mi-current'
+ms.openlocfilehash: 12bb0423ad450ef94df8767ba8aae10a5c47cade
+ms.sourcegitcommit: 1a544cf4dd2720b124c3697d1e62ae7741db757c
 ms.translationtype: HT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 09/25/2020
-ms.locfileid: "91226929"
+ms.lasthandoff: 12/14/2020
+ms.locfileid: "97439088"
 ---
 # <a name="select---order-by-clause-transact-sql"></a>SELECT - ORDER BY 절(Transact-SQL)
 
@@ -111,7 +111,7 @@ ORDER BY SchemaName + ''; -- wrong
 ```
   
  COLLATE *collation_name*  
- 테이블이나 뷰에 정의된 열의 데이터 정렬이 아니라 *collation_name*에 지정된 데이터 정렬에 따라 ORDER BY 작업을 수행하도록 지정합니다. *collation_name*으로는 Windows 데이터 정렬 이름 또는 SQL 데이터 정렬 이름을 사용할 수 있습니다. 자세한 내용은 [Collation and Unicode Support](../../relational-databases/collations/collation-and-unicode-support.md)을 참조하세요. COLLATE는 **char**, **varchar**, **nchar** 및 **nvarchar** 형식의 열에만 적용할 수 있습니다.  
+ 테이블이나 뷰에 정의된 열의 데이터 정렬이 아니라 *collation_name* 에 지정된 데이터 정렬에 따라 ORDER BY 작업을 수행하도록 지정합니다. *collation_name* 으로는 Windows 데이터 정렬 이름 또는 SQL 데이터 정렬 이름을 사용할 수 있습니다. 자세한 내용은 [Collation and Unicode Support](../../relational-databases/collations/collation-and-unicode-support.md)을 참조하세요. COLLATE는 **char**, **varchar**, **nchar** 및 **nvarchar** 형식의 열에만 적용할 수 있습니다.  
   
  **ASC** | DESC  
  지정된 열의 값이 오름차순으로 정렬되는지 내림차순으로 정렬되는지를 지정합니다. ASC는 오름차순으로 정렬하고, DESC는 내림차순으로 정렬합니다. ASC가 기본 정렬 순서입니다. Null 값은 가능한 가장 작은 값으로 취급됩니다.  
@@ -121,7 +121,7 @@ ORDER BY SchemaName + ''; -- wrong
   
 **적용 대상**: [!INCLUDE[ssSQL11](../../includes/sssql11-md.md)] 이상 및 [!INCLUDE[ssSDSfull](../../includes/sssdsfull-md.md)]  
   
- *offset_row_count_expression*은 변수, 매개 변수 또는 상수 스칼라 하위 쿼리일 수 있습니다. 하위 쿼리를 사용하는 경우 외부 쿼리 범위에 정의된 열을 참조할 수 없습니다. 즉, 외부 쿼리와 상관 관계를 만들 수 없습니다.  
+ *offset_row_count_expression* 은 변수, 매개 변수 또는 상수 스칼라 하위 쿼리일 수 있습니다. 하위 쿼리를 사용하는 경우 외부 쿼리 범위에 정의된 열을 참조할 수 없습니다. 즉, 외부 쿼리와 상관 관계를 만들 수 없습니다.  
   
  ROW와 ROWS는 ANSI 호환성을 위해 제공되는 동의어입니다.  
   
@@ -132,7 +132,7 @@ ORDER BY SchemaName + ''; -- wrong
   
 **적용 대상**: [!INCLUDE[ssSQL11](../../includes/sssql11-md.md)] 이상 및 [!INCLUDE[ssSDSfull](../../includes/sssdsfull-md.md)]  
   
- *fetch_row_count_expression*은 변수, 매개 변수 또는 상수 스칼라 하위 쿼리일 수 있습니다. 하위 쿼리를 사용하는 경우 외부 쿼리 범위에 정의된 열을 참조할 수 없습니다. 즉, 외부 쿼리와 상관 관계를 만들 수 없습니다.  
+ *fetch_row_count_expression* 은 변수, 매개 변수 또는 상수 스칼라 하위 쿼리일 수 있습니다. 하위 쿼리를 사용하는 경우 외부 쿼리 범위에 정의된 열을 참조할 수 없습니다. 즉, 외부 쿼리와 상관 관계를 만들 수 없습니다.  
   
  FIRST와 NEXT는 ANSI 호환성을 위해 제공되는 동의어입니다.  
   
@@ -155,7 +155,7 @@ ORDER BY SchemaName + ''; -- wrong
   
  **ntext**, **text**, **image**, **geography**, **geometry** 및 **xml** 형식의 열은 ORDER BY 절에서 사용할 수 없습니다.  
   
- *order_by_expression*이 순위 함수에 나타나는 경우 정수 또는 상수를 지정할 수 없습니다. 자세한 내용은 [OVER 절&#40;Transact-SQL&#41;](../../t-sql/queries/select-over-clause-transact-sql.md)을 참조하세요.  
+ *order_by_expression* 이 순위 함수에 나타나는 경우 정수 또는 상수를 지정할 수 없습니다. 자세한 내용은 [OVER 절&#40;Transact-SQL&#41;](../../t-sql/queries/select-over-clause-transact-sql.md)을 참조하세요.  
   
  FROM 절에 테이블 이름이 별칭으로 지정되어 있는 경우에는 ORDER BY 절에서 별칭 이름만 사용하여 해당 열을 정규화할 수 있습니다.  
   

@@ -15,13 +15,13 @@ helpviewer_keywords:
 ms.assetid: c472e465-7bdd-4d74-8fc9-e47fca007ccb
 author: stevestein
 ms.author: sstein
-monikerRange: =azuresqldb-current||>=sql-server-2016||=sqlallproducts-allversions||>=sql-server-linux-2017||=azuresqldb-mi-current
-ms.openlocfilehash: cf44e0ef836763dd4515fb410f2a73577b4fed05
-ms.sourcegitcommit: 331b8495e4ab37266945c81ff5b93d250bdaa6da
+monikerRange: =azuresqldb-current||>=sql-server-2016||>=sql-server-linux-2017||=azuresqldb-mi-current
+ms.openlocfilehash: 2113e0bf6ceb8a27b53a6853235152a1dbf8f425
+ms.sourcegitcommit: 1a544cf4dd2720b124c3697d1e62ae7741db757c
 ms.translationtype: HT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 08/20/2020
-ms.locfileid: "88646013"
+ms.lasthandoff: 12/14/2020
+ms.locfileid: "97439394"
 ---
 # <a name="delete-primary-keys"></a>기본 키 삭제
 
@@ -52,32 +52,32 @@ ms.locfileid: "88646013"
   
 #### <a name="to-delete-a-primary-key-constraint-using-object-explorer"></a>개체 탐색기를 사용하여 PRIMARY KEY 제약 조건을 삭제하려면  
   
-1.  개체 탐색기에서 기본 키가 포함된 테이블을 확장한 후 **키**를 확장합니다.  
+1.  개체 탐색기에서 기본 키가 포함된 테이블을 확장한 후 **키** 를 확장합니다.  
   
-2.  키를 마우스 오른쪽 단추로 클릭하고 **삭제**를 선택합니다.  
+2.  키를 마우스 오른쪽 단추로 클릭하고 **삭제** 를 선택합니다.  
   
-3.  **개체 삭제** 대화 상자에서 올바른 키가 지정되었는지 확인하고 **확인**을 클릭합니다.  
+3.  **개체 삭제** 대화 상자에서 올바른 키가 지정되었는지 확인하고 **확인** 을 클릭합니다.  
   
 #### <a name="to-delete-a-primary-key-constraint-using-table-designer"></a>테이블 디자이너를 사용하여 PRIMARY KEY 제약 조건을 삭제하려면  
   
-1.  개체 탐색기에서 기본 키가 있는 테이블을 마우스 오른쪽 단추로 클릭한 다음 **디자인**을 클릭합니다.  
+1.  개체 탐색기에서 기본 키가 있는 테이블을 마우스 오른쪽 단추로 클릭한 다음 **디자인** 을 클릭합니다.  
   
 2.  테이블 표에서 기본 키가 있는 행을 마우스 오른쪽 단추로 클릭하고 **기본 키 제거** 를 선택하여 기본 키 설정 또는 해제 여부를 전환할 수 있습니다.  
   
     > [!NOTE]  
     >  이 동작을 실행 취소하려면 변경 내용을 저장하지 않은 상태로 테이블을 닫습니다. 기본 키 삭제 작업을 취소하면 테이블에 대한 다른 모든 변경 내용이 손실됩니다.  
   
-3.  **파일** 메뉴에서 ‘테이블 이름’ **저장**을 클릭합니다.__  
+3.  **파일** 메뉴에서 ‘테이블 이름’ **저장** 을 클릭합니다.  
   
 ##  <a name="using-transact-sql"></a><a name="TsqlProcedure"></a> Transact-SQL 사용  
   
 #### <a name="to-delete-a-primary-key-constraint"></a>PRIMARY KEY 제약 조건을 삭제하려면  
   
-1.  **개체 탐색기**에서 [!INCLUDE[ssDE](../../includes/ssde-md.md)]인스턴스에 연결합니다.  
+1.  **개체 탐색기** 에서 [!INCLUDE[ssDE](../../includes/ssde-md.md)]인스턴스에 연결합니다.  
   
-2.  표준 도구 모음에서 **새 쿼리**를 클릭합니다.  
+2.  표준 도구 모음에서 **새 쿼리** 를 클릭합니다.  
   
-3.  다음 예를 복사하여 쿼리 창에 붙여 넣고 **실행**을 클릭합니다. 이 예에서는 먼저 PRIMARY KEY 제약 조건의 이름을 식별한 후 해당 제약 조건을 삭제합니다.  
+3.  다음 예를 복사하여 쿼리 창에 붙여 넣고 **실행** 을 클릭합니다. 이 예에서는 먼저 PRIMARY KEY 제약 조건의 이름을 식별한 후 해당 제약 조건을 삭제합니다.  
   
     ```  
     USE AdventureWorks2012;  

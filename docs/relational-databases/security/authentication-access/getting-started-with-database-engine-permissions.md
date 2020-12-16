@@ -13,13 +13,13 @@ helpviewer_keywords:
 ms.assetid: 051af34e-bb5b-403e-bd33-007dc02eef7b
 author: VanMSFT
 ms.author: vanto
-monikerRange: '>=aps-pdw-2016||=azuresqldb-current||=azure-sqldw-latest||>=sql-server-2016||=sqlallproducts-allversions||>=sql-server-linux-2017||=azuresqldb-mi-current'
-ms.openlocfilehash: 2c5d2d1f0af5abdf24fce8be780c15a73f2a778a
-ms.sourcegitcommit: 4d370399f6f142e25075b3714e5c2ce056b1bfd0
+monikerRange: '>=aps-pdw-2016||=azuresqldb-current||=azure-sqldw-latest||>=sql-server-2016||>=sql-server-linux-2017||=azuresqldb-mi-current'
+ms.openlocfilehash: 81bb8dd3acae7fda65af0ada009b065c909506b3
+ms.sourcegitcommit: 1a544cf4dd2720b124c3697d1e62ae7741db757c
 ms.translationtype: HT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 10/09/2020
-ms.locfileid: "91864479"
+ms.lasthandoff: 12/14/2020
+ms.locfileid: "97460068"
 ---
 # <a name="getting-started-with-database-engine-permissions"></a>데이터베이스 엔진 권한 시작
 [!INCLUDE [SQL Server](../../../includes/applies-to-version/sql-asdb-asdbmi-asa-pdw.md)]
@@ -41,7 +41,7 @@ ms.locfileid: "91864479"
 ##### <a name="database-users"></a>데이터베이스 사용자  
  데이터베이스에서 데이터베이스 사용자를 만들고 해당 데이터베이스 사용자를 로그인에 매핑하여 데이터베이스에 대한 액세스 권한을 로그인에 부여할 수 있습니다. 일반적으로 데이터베이스 사용자 이름은 로그인 이름과 동일하지만 반드시 그래야 하는 것은 아닙니다. 각 데이터베이스 사용자는 단일 로그인에 매핑됩니다. 하나의 로그인을 데이터베이스의 한 사용자에만 매핑할 수 있지만 여러 데이터베이스에서 데이터베이스 사용자로 매핑할 수 있습니다.  
   
- 해당 로그인이 없는 데이터베이스 사용자를 만들 수도 있습니다. 이를 *포함된 데이터베이스 사용자*라고 합니다. [!INCLUDE[msCoName](../../../includes/msconame-md.md)] 에서는 포함된 데이터베이스 사용자를 사용하도록 권장합니다. 데이터베이스를 다른 서버로 보다 쉽게 이동할 수 있기 때문입니다. 로그인과 마찬가지로 포함된 데이터베이스 사용자는 Windows 인증 또는 [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] 인증을 사용할 수 있습니다. 자세한 내용은 [포함된 데이터베이스 사용자 - 이식 가능한 데이터베이스 만들기](../../../relational-databases/security/contained-database-users-making-your-database-portable.md)를 참조하세요.  
+ 해당 로그인이 없는 데이터베이스 사용자를 만들 수도 있습니다. 이를 *포함된 데이터베이스 사용자* 라고 합니다. [!INCLUDE[msCoName](../../../includes/msconame-md.md)] 에서는 포함된 데이터베이스 사용자를 사용하도록 권장합니다. 데이터베이스를 다른 서버로 보다 쉽게 이동할 수 있기 때문입니다. 로그인과 마찬가지로 포함된 데이터베이스 사용자는 Windows 인증 또는 [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] 인증을 사용할 수 있습니다. 자세한 내용은 [포함된 데이터베이스 사용자 - 이식 가능한 데이터베이스 만들기](../../../relational-databases/security/contained-database-users-making-your-database-portable.md)를 참조하세요.  
   
  인증 방법 및 나타내는 사람이 약간 다른 12가지 유형의 사용자가 있습니다. 사용자 목록을 보려면 [CREATE USER&#40;Transact-SQL&#41;](../../../t-sql/statements/create-user-transact-sql.md)를 참조하세요.  
   
@@ -81,15 +81,13 @@ ms.locfileid: "91864479"
   
 #### <a name="if-the-person-connecting-will-be-connecting-to-only-one-database"></a>연결하는 사용자를 하나의 데이터베이스에만 연결하는 경우  
   
-1.  Windows 그룹에 대한 로그인을 만듭니다. [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] 인증을 사용하는 경우 Active Directory 단계를 건너뛰고 여기에서 [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] 인증 로그인을 만듭니다.  
+1.  사용자 데이터베이스에서 Windows 그룹에 대한 포함된 데이터베이스 사용자를 만듭니다. [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] 인증을 사용하는 경우 Active Directory 단계를 건너뛰고 여기에서 포함된 데이터베이스 사용자 [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] 인증을 만듭니다.  
   
-2.  사용자 데이터베이스에서 Windows 그룹에 대한 포함된 데이터베이스 사용자를 만듭니다. [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] 인증을 사용하는 경우 Active Directory 단계를 건너뛰고 여기에서 포함된 데이터베이스 사용자 [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] 인증을 만듭니다.  
+1.  사용자 데이터베이스에서 각각 유사한 기능을 나타내는 하나 이상의 사용자 정의 데이터베이스 역할을 만듭니다. 예를 들어 재무 분석가 및 판매 분석가를 만듭니다.  
   
-3.  사용자 데이터베이스에서 각각 유사한 기능을 나타내는 하나 이상의 사용자 정의 데이터베이스 역할을 만듭니다. 예를 들어 재무 분석가 및 판매 분석가를 만듭니다.  
+1.  하나 이상의 사용자 정의 데이터베이스 역할에 데이터베이스 사용자를 추가합니다.  
   
-4.  하나 이상의 사용자 정의 데이터베이스 역할에 데이터베이스 사용자를 추가합니다.  
-  
-5.  사용자 정의 데이터베이스 역할에 권한을 부여합니다.  
+1.  사용자 정의 데이터베이스 역할에 권한을 부여합니다.  
   
  이 시점에서 Windows 사용자는 일반적으로 Windows 그룹의 멤버입니다. Windows 그룹에는 [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] 또는 [!INCLUDE[ssSDS](../../../includes/sssds-md.md)]의 로그인이 있습니다. 로그인은 사용자 데이터베이스에서 사용자 ID에 매핑됩니다. 사용자는 데이터베이스 역할의 멤버입니다. 이제 역할에 권한을 추가해야 합니다.  
   
@@ -126,7 +124,7 @@ GRANT UPDATE ON OBJECT::Production.Parts TO PartsTeam;
 -   관리자가 `DENY SELECT ON OBJECT::OrderStatus TO Sales;` 를 잘못 실행한 경우 Sales 역할의 멤버인 Ted는 Sales에 대한 `SELECT` 가 자신의 개인적인 `DENY` 를 재정의하므로  `GRANT`권한이 거부됩니다.  
   
 > [!NOTE]  
->  [!INCLUDE[ssManStudio](../../../includes/ssmanstudio-md.md)]를 사용하여 권한을 구성할 수 있습니다. 개체 탐색기에서 보안 개체를 찾아서 마우스 오른쪽 단추로 클릭한 다음 **속성**을 클릭합니다. **사용 권한** 페이지를 선택합니다. 사용 권한 페이지 사용에 대한 도움말은 [Permissions or Securables Page](../../../relational-databases/security/permissions-or-securables-page.md)를 참조하세요.  
+>  [!INCLUDE[ssManStudio](../../../includes/ssmanstudio-md.md)]를 사용하여 권한을 구성할 수 있습니다. 개체 탐색기에서 보안 개체를 찾아서 마우스 오른쪽 단추로 클릭한 다음 **속성** 을 클릭합니다. **사용 권한** 페이지를 선택합니다. 사용 권한 페이지 사용에 대한 도움말은 [Permissions or Securables Page](../../../relational-databases/security/permissions-or-securables-page.md)를 참조하세요.  
   
 ## <a name="permission-hierarchy"></a>권한 계층  
  권한에는 부모/자식 계층이 있습니다. 즉, 데이터베이스에 대한 `SELECT` 권한을 부여하는 경우 이 권한에는 데이터베이스의 모든 자식 스키마에 대한 `SELECT` 권한이 포함됩니다. 스키마에 대한 `SELECT` 권한을 부여하는 경우 이 권한에는 스키마의 모든 자식 테이블과 뷰에 대한 `SELECT` 권한이 포함됩니다. 권한은 전이적입니다. 즉, 데이터베이스에 대한 `SELECT` 권한을 부여하는 경우 이 권한에는 모든 자식 스키마와 모든 손자 테이블 및 뷰에 대한 `SELECT` 권한이 포함됩니다.  

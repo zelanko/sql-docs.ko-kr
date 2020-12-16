@@ -11,13 +11,13 @@ ms.topic: conceptual
 ms.assetid: e3f8009c-319d-4d7b-8993-828e55ccde11
 author: MightyPen
 ms.author: genemi
-monikerRange: =azuresqldb-current||>=sql-server-2016||=sqlallproducts-allversions||>=sql-server-linux-2017||=azuresqldb-mi-current
-ms.openlocfilehash: 04bc3b16152307b5d5ed4a3437934e5c7ce6a45a
-ms.sourcegitcommit: 4d370399f6f142e25075b3714e5c2ce056b1bfd0
+monikerRange: =azuresqldb-current||>=sql-server-2016||>=sql-server-linux-2017||=azuresqldb-mi-current
+ms.openlocfilehash: f28ea2b3ce9520eca770b0808738a53073d70316
+ms.sourcegitcommit: 1a544cf4dd2720b124c3697d1e62ae7741db757c
 ms.translationtype: HT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 10/09/2020
-ms.locfileid: "91868786"
+ms.lasthandoff: 12/14/2020
+ms.locfileid: "97438736"
 ---
 # <a name="transact-sql-constructs-not-supported-by-in-memory-oltp"></a>메모리 내 OLTP에서 지원되지 않는 Transact-SQL 구문
 [!INCLUDE [SQL Server Azure SQL Database](../../includes/applies-to-version/sql-asdb.md)]
@@ -60,7 +60,7 @@ ms.locfileid: "91868786"
 |기능|SPARSE|메모리 최적화 테이블의 열을 SPARSE로 정의할 수 없습니다. 열 정의에서 **SPARSE** 키워드를 제거합니다.|  
 |기능|ROWGUIDCOL|ROWGUIDCOL 옵션은 메모리 최적화 테이블의 열에서 지원되지 않습니다. 열 정의에서 **ROWGUIDCOL** 키워드를 제거합니다.|  
 |기능|FOREIGN KEY|**적용 대상:** [!INCLUDE[ssSDSFull_md](../../includes/ssSDSFull-md.md)] 및 SQL Server [!INCLUDE[ssSQL15-md](../../includes/sssql15-md.md)] 이상<br/>메모리 최적화 테이블에의 경우 외래 키 제약 조건은 다른 메모리 최적화 테이블의 기본 키를 참조하는 외래 키에서만 지원됩니다. 외래 키가 고유 제약 조건을 참조하는 경우 테이블 정의에서 제약 조건을 제거합니다.<br/><br/>[!INCLUDE[ssSQL14-md](../../includes/sssql14-md.md)]에서 외래 키 제약 조건은 메모리 최적화 테이블에 지원되지 않습니다.|  
-|기능|클러스터형 인덱스|비클러스터형 인덱스를 지정합니다. 기본 키 인덱스의 경우 **PRIMARY KEY NONCLUSTERED**를 지정해야 합니다.|  
+|기능|클러스터형 인덱스|비클러스터형 인덱스를 지정합니다. 기본 키 인덱스의 경우 **PRIMARY KEY NONCLUSTERED** 를 지정해야 합니다.|  
 |기능|트랜잭션 내부 DDL|사용자 트랜잭션의 컨텍스트에서는 메모리 액세스에 최적화된 테이블과 고유하게 컴파일된 저장 프로시저를 만들거나 삭제할 수 없습니다. 트랜잭션을 시작하지 말고 CREATE 또는 DROP 문을 실행하기 전에 세션 설정 IMPLICIT_다TRANSACTIONS가 OFF인지 확인합니다.|  
 |기능|DDL 트리거|해당 DLL 작업에 대한 서버 또는 데이터베이스 트리거가 있는 경우 메모리 액세스에 최적화된 테이블과 고유하게 컴파일된 저장 프로시저를 만들거나 삭제할 수 없습니다. CREATE/DROP TABLE 및 CREATE/DROP PROCEDURE에 대한 서버 및 데이터베이스 트리거를 제거합니다.|  
 |기능|EVENT NOTIFICATION|해당 DLL 작업에 대한 서버 또는 데이터베이스 이벤트 알림이 있는 경우 메모리 액세스에 최적화된 테이블 및 고유하게 컴파일된 저장 프로시저를 만들거나 삭제할 수 없습니다. CREATE TABLE 또는 DROP TABLE과 CREATE PROCEDURE 또는 DROP PROCEDURE에 대한 서버 및 데이터베이스 이벤트 알림을 제거합니다.|  
@@ -101,14 +101,14 @@ ms.locfileid: "91868786"
 |Type|기능|해결 방법|  
 |----------|-------------|----------------|  
 |기능|인라인 테이블 변수|변수 선언을 사용하여 테이블 형식을 인라인으로 선언할 수 없습니다. **CREATE TYPE** 문을 사용하여 테이블 형식을 명시적으로 선언해야 합니다.|  
-|기능|커서|커서는 고유하게 컴파일된 저장 프로시저 위나 안에서 지원되지 않습니다.<br /><br /> 클라이언트에서 프로시저를 실행할 때는 커서 API 대신 RPC를 사용합니다. ODBC가 있는 경우 [!INCLUDE[tsql](../../includes/tsql-md.md)] 인수를 제거합니다. **EXECUTE**를 사용하지 말고 그 대신 프로시저 이름을 직접 지정합니다.<br /><br /> [!INCLUDE[tsql](../../includes/tsql-md.md)] 일괄 처리 또는 다른 저장 프로시저에서 프로시저를 실행할 때는 고유하게 컴파일된 저장 프로시저와 함께 커서를 사용하지 마십시오.<br /><br /> 고유하게 컴파일된 저장 프로시저를 만들 때는 커서를 사용하는 대신 집합 기반 논리 또는 **WHILE** 루프를 사용합니다.|  
+|기능|커서|커서는 고유하게 컴파일된 저장 프로시저 위나 안에서 지원되지 않습니다.<br /><br /> 클라이언트에서 프로시저를 실행할 때는 커서 API 대신 RPC를 사용합니다. ODBC가 있는 경우 [!INCLUDE[tsql](../../includes/tsql-md.md)] 인수를 제거합니다. **EXECUTE** 를 사용하지 말고 그 대신 프로시저 이름을 직접 지정합니다.<br /><br /> [!INCLUDE[tsql](../../includes/tsql-md.md)] 일괄 처리 또는 다른 저장 프로시저에서 프로시저를 실행할 때는 고유하게 컴파일된 저장 프로시저와 함께 커서를 사용하지 마십시오.<br /><br /> 고유하게 컴파일된 저장 프로시저를 만들 때는 커서를 사용하는 대신 집합 기반 논리 또는 **WHILE** 루프를 사용합니다.|  
 |기능|비 상수 매개 변수 기본값|고유하게 컴파일된 저장 프로시저에서 매개 변수와 함께 기본값을 사용할 때는 값이 상수여야 합니다. 매개 변수 선언에서 와일드카드를 제거 합니다.|  
 |기능|EXTERNAL|CLR 저장 프로시저는 고유하게 컴파일될 수 없습니다. CREATE PROCEDURE 문에서 AS EXTERNAL 절이나 NATIVE_COMPILATION 옵션을 제거합니다.|  
 |기능|번호가 매겨진 저장 프로시저|고유하게 컴파일된 저장 프로시저에 번호를 매길 수 없습니다. **CREATE PROCEDURE**_문에서_ ; **number** 를 제거합니다.|  
 |기능|다중 행 INSERT... VALUES 문|고유하게 컴파일된 저장 프로시저에서 동일한 **INSERT** 문을 사용하여 여러 행을 삽입할 수 없습니다. 각 행에 대해 **INSERT** 문을 만듭니다.|  
 |기능|CTE(공통 테이블 식)|CTE(공통 테이블 식)은 고유하게 컴파일된 저장 프로시저에서 지원되지 않습니다. 쿼리를 다시 작성합니다.|  
 |기능|COMPUTE|**COMPUTE** 절은 지원되지 않습니다. 쿼리에서 이 절을 제거합니다.|  
-|기능|SELECT INTO|**INTO** 절은 **SELECT** 문에 지원되지 않습니다. **INSERT INTO** _Table_ **SELECT**로 쿼리를 다시 작성합니다.|  
+|기능|SELECT INTO|**INTO** 절은 **SELECT** 문에 지원되지 않습니다. **INSERT INTO** _Table_ **SELECT** 로 쿼리를 다시 작성합니다.|  
 |기능|불완전한 삽입 열 목록|일반적으로, INSERT 문에서는 테이블에 잇는 모든 열에 대해 값을 지정해야 합니다.<br /><br /> 그러나 메모리 최적화된 테이블에서는 기본 제약 조건 및 IDENTITY(1,1) 열이 지원됩니다. 이러한 열이 될 수 있고 IDENTITY 열이 반드시 있어야 하는 경우 INSERT 열 목록에서 생략합니다.|  
 |기능|*Function*|일부 기본 함수는 고유하게 컴파일된 저장 프로시저에서 지원되지 않습니다. 저장 프로시저에서 거부된 함수를 제거합니다. 지원되는 기본 제공 함수에 대한 자세한 내용은<br />[고유하게 컴파일된 T-SQL 모듈에 대해 지원되는 기능](../../relational-databases/in-memory-oltp/supported-features-for-natively-compiled-t-sql-modules.md)또는<br />[고유하게 컴파일된 저장 프로시저](./a-guide-to-query-processing-for-memory-optimized-tables.md)를 참조하세요.|  
 |기능|CASE|**적용 대상:** [!INCLUDE[ssSQL14-md](../../includes/sssql14-md.md)] 및 SQL Server [!INCLUDE[ssSQL15-md](../../includes/sssql15-md.md)] 이상<br/>**CASE** 식은 고유하게 컴파일된 저장 프로시저 내의 쿼리에서 지원되지 않습니다. 각 사례에 대해 쿼리를 만듭니다. 자세한 내용은 [고유하게 컴파일된 저장 프로시저에서 CASE 식 구현](../../relational-databases/in-memory-oltp/implementing-a-case-expression-in-a-natively-compiled-stored-procedure.md)을 참조하세요.<br/><br/>[!INCLUDE[ssSDSFull_md](../../includes/ssSDSFull-md.md)] 및 SQL Server [!INCLUDE[ssSQLv14_md](../../includes/sssqlv14-md.md)] 이상에서는 CASE 식이 지원되지 않습니다.|  
@@ -157,7 +157,7 @@ ms.locfileid: "91868786"
 |조인 힌트|HASH, MERGE|고유하게 컴파일된 저장 프로시저는 중첩 루프 조인만 지원합니다. 해시 및 병합 조인은 지원되지 않습니다. 조인 힌트를 제거합니다.|  
 |쿼리 힌트|*쿼리 힌트*|이 쿼리 힌트는 고유하게 컴파일된 저장 프로시저 내부에 없습니다. 지원되는 쿼리 힌트는 [쿼리 힌트&#40;Transact-SQL&#41;](../../t-sql/queries/hints-transact-sql-query.md)를 참조하세요.|  
 |옵션|PERCENT|이 옵션은 **TOP** 절에 지원되지 않습니다. 고유하게 컴파일된 저장 프로시저의 쿼리에서 **PERCENT** 를 제거합니다.|  
-|옵션|WITH  TIES|**적용 대상:** [!INCLUDE[ssSDS14_md](../../includes/sssql14-md.md)] 및 [!INCLUDE[ssSQL15-md](../../includes/sssql15-md.md)]<br/>이 옵션은 **TOP** 절에 지원되지 않습니다. 고유하게 컴파일된 저장 프로시저의 쿼리에서 **WITH TIES** 를 제거합니다.<br/><br/>[!INCLUDE[ssSDSFull_md](../../includes/ssSDSFull-md.md)] 및 SQL Server [!INCLUDE[ssSQLv14_md](../../includes/sssqlv14-md.md)] 이상에서는 **TOP WITH TIES**가 지원됩니다.|  
+|옵션|WITH  TIES|**적용 대상:** [!INCLUDE[ssSDS14_md](../../includes/sssql14-md.md)] 및 [!INCLUDE[ssSQL15-md](../../includes/sssql15-md.md)]<br/>이 옵션은 **TOP** 절에 지원되지 않습니다. 고유하게 컴파일된 저장 프로시저의 쿼리에서 **WITH TIES** 를 제거합니다.<br/><br/>[!INCLUDE[ssSDSFull_md](../../includes/ssSDSFull-md.md)] 및 SQL Server [!INCLUDE[ssSQLv14_md](../../includes/sssqlv14-md.md)] 이상에서는 **TOP WITH TIES** 가 지원됩니다.|  
 |집계 함수|*Aggregate 함수*|일부 집계 함수만 지원됩니다. 고유하게 컴파일된 T-SQL 모듈에서 지원되는 집계 함수에 대한 자세한 내용은 [고유하게 컴파일된 T-SQL 모듈에 대해 지원되는 기능](../../relational-databases/in-memory-oltp/supported-features-for-natively-compiled-t-sql-modules.md)을 참조하세요.|  
 |순위 함수|*순위 함수*|순위 함수는 고유하게 컴파일된 저장 프로시저에서 지원되지 않습니다. 프로시저 정의에서 해당 함수를 제거합니다.|  
 |함수|*Function*|이 함수는 지원되지 않습니다. 고유하게 컴파일된 T-SQL 모듈에서 지원되는 함수에 대한 자세한 내용은 [고유하게 컴파일된 T-SQL 모듈에 대해 지원되는 기능](../../relational-databases/in-memory-oltp/supported-features-for-natively-compiled-t-sql-modules.md)을 참조하세요.|  

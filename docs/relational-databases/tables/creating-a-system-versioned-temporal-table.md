@@ -11,13 +11,13 @@ ms.topic: conceptual
 ms.assetid: 21e6d74f-711f-40e6-a8b7-85f832c5d4b3
 author: markingmyname
 ms.author: maghan
-monikerRange: =azuresqldb-current||>=sql-server-2016||=sqlallproducts-allversions||>=sql-server-linux-2017||=azuresqldb-mi-current
-ms.openlocfilehash: 3c2be314863112cfb7d0a22e9000fc71d7991454
-ms.sourcegitcommit: 04cf7905fa32e0a9a44575a6f9641d9a2e5ac0f8
+monikerRange: =azuresqldb-current||>=sql-server-2016||>=sql-server-linux-2017||=azuresqldb-mi-current
+ms.openlocfilehash: 2b795f2fc65cade53dac533795d41ae8013e90cb
+ms.sourcegitcommit: 1a544cf4dd2720b124c3697d1e62ae7741db757c
 ms.translationtype: HT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 10/07/2020
-ms.locfileid: "91809301"
+ms.lasthandoff: 12/14/2020
+ms.locfileid: "97439398"
 ---
 # <a name="creating-a-system-versioned-temporal-table"></a>시스템 버전 관리 temporal 테이블 만들기
 
@@ -51,7 +51,7 @@ WITH (SYSTEM_VERSIONING = ON);
 
 ### <a name="important-remarks"></a>중요한 주의 사항
 
-- 시스템 버전 temporal 테이블에는 기본 키가 정의되어 있어야 하며 **PERIOD FOR SYSTEM_TIME** 로 선언된 datetime2 열 두 개를 사용하여 정확히 한 개의 **PERIOD FOR SYSTEM_TIME**을 정의해야 합니다.
+- 시스템 버전 temporal 테이블에는 기본 키가 정의되어 있어야 하며 **PERIOD FOR SYSTEM_TIME** 로 선언된 datetime2 열 두 개를 사용하여 정확히 한 개의 **PERIOD FOR SYSTEM_TIME** 을 정의해야 합니다.
 - **PERIOD** 열은 null 허용 여부를 지정하지 않은 경우에도 언제나 null을 허용하지 않는다고 가정합니다. **PERIOD** 열을 명시적으로 null 허용으로 정의한 경우 **CREATE TABLE** 문이 실패합니다.
 - 기록 테이블은 언제나 열 수, 열 이름, 순서 및 데이터 형식에서 현재 또는 temporal 테이블과 스키마를 맞춰야 합니다.
 - 익명 기록 테이블은 자동으로 현재 또는 temporal 테이블과 같은 스키마에 생성됩니다.
@@ -170,7 +170,7 @@ ALTER TABLE InsurancePolicy
   - 시작 열에 대한 기본값은 기존 행이 유효하다고 생각하는 시점을 지정합니다. 미래의 datetime 포인트로 지정할 수 없습니다.
   - 종료 시간은 지정된 datetime2 정밀도의 최댓값으로 지정해야 합니다(예: `9999-12-31 23:59:59` 또는 `9999-12-31 23:59:59.9999999`).
 - 기간을 추가하면 기간 열에 대한 기본값이 유효한지 확인하기 위해 현재 테이블에 대해 데이터 일관성 검사를 수행합니다.
-- **SYSTEM_VERSIONING**을 사용하도록 설정할 때 기존 기록 테이블을 지정하는 경우 현재 테이블과 기록 테이블 둘 다에 대해 데이터 일관성 검사가 수행됩니다. **DATA_CONSISTENCY_CHECK = OFF**를 추가 매개 변수로 지정하는 경우 이 과정을 건너뛸 수 있습니다.
+- **SYSTEM_VERSIONING** 을 사용하도록 설정할 때 기존 기록 테이블을 지정하는 경우 현재 테이블과 기록 테이블 둘 다에 대해 데이터 일관성 검사가 수행됩니다. **DATA_CONSISTENCY_CHECK = OFF** 를 추가 매개 변수로 지정하는 경우 이 과정을 건너뛸 수 있습니다.
 
 ### <a name="migrate-existing-tables-to-built-in-support"></a>기본 제공 지원으로 기존 테이블 마이그레이션
 

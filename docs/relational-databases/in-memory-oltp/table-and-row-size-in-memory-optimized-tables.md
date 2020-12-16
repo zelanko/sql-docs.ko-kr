@@ -11,13 +11,13 @@ ms.topic: conceptual
 ms.assetid: b0a248a4-4488-4cc8-89fc-46906a8c24a1
 author: MightyPen
 ms.author: genemi
-monikerRange: =azuresqldb-current||>=sql-server-2016||=sqlallproducts-allversions||>=sql-server-linux-2017||=azuresqldb-mi-current
-ms.openlocfilehash: 975e14a1a17422949f5ef848b0b0a69d71e58593
-ms.sourcegitcommit: 4d370399f6f142e25075b3714e5c2ce056b1bfd0
+monikerRange: =azuresqldb-current||>=sql-server-2016||>=sql-server-linux-2017||=azuresqldb-mi-current
+ms.openlocfilehash: 2e16ef746dd970926e61098eb66e8f8ddf6a98b1
+ms.sourcegitcommit: 1a544cf4dd2720b124c3697d1e62ae7741db757c
 ms.translationtype: HT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 10/09/2020
-ms.locfileid: "91866627"
+ms.lasthandoff: 12/14/2020
+ms.locfileid: "97438754"
 ---
 # <a name="table-and-row-size-in-memory-optimized-tables"></a>메모리 액세스에 최적화된 테이블의 테이블 및 행 크기
 [!INCLUDE [SQL Server Azure SQL Database](../../includes/applies-to-version/sql-asdb.md)]
@@ -50,7 +50,7 @@ ms.locfileid: "91866627"
 [table size] = [size of index 1] + ... + [size of index n] + ([row size] * [row count])  
 ```  
   
-해시 인덱스의 크기는 테이블을 만들 때 고정되며 실제 버킷 수에 따라 달라집니다. 인덱스 정의로 지정된 `bucket_count`는 *실제 버킷 수*를 얻기 위해 가장 가까운 2의 제곱으로 반올림됩니다. 예를 들어 지정된 bucket_count가 100000인 경우 인덱스의 *실제 버킷 수*는 131072입니다.  
+해시 인덱스의 크기는 테이블을 만들 때 고정되며 실제 버킷 수에 따라 달라집니다. 인덱스 정의로 지정된 `bucket_count`는 *실제 버킷 수* 를 얻기 위해 가장 가까운 2의 제곱으로 반올림됩니다. 예를 들어 지정된 bucket_count가 100000인 경우 인덱스의 *실제 버킷 수* 는 131072입니다.  
   
 ```  
 [hash index size] = 8 * [actual bucket count]  
@@ -117,13 +117,13 @@ ms.locfileid: "91866627"
   
 행 본문 크기는 계산된 크기 및 실제 크기의 두 가지 방식으로 계산할 수 있습니다.  
   
--   *computed row body size*로 표시되는 계산 크기는 행 크기 제한인 8,060바이트를 초과하는지 여부를 확인하기 위해 사용됩니다.  
+-   *computed row body size* 로 표시되는 계산 크기는 행 크기 제한인 8,060바이트를 초과하는지 여부를 확인하기 위해 사용됩니다.  
   
--   *actual row body size*로 표시되는 실제 크기는 메모리 및 검사점 파일에서 행 본문의 실제 스토리지 크기입니다.  
+-   *actual row body size* 로 표시되는 실제 크기는 메모리 및 검사점 파일에서 행 본문의 실제 스토리지 크기입니다.  
   
-*computed row body size* 및 *actual row body size*는 모두 비슷하게 계산됩니다. 유일한 차이점은 다음 표의 하단에 표시된 것처럼 (n)varchar(i) 및 varbinary(i) 열의 크기에 대한 계산입니다. 계산된 행 본문 크기는 선언된 크기인 *i* 를 열 크기로 사용하고, 실제 행 본문 크기는 데이터의 실제 크기를 사용합니다.  
+*computed row body size* 및 *actual row body size* 는 모두 비슷하게 계산됩니다. 유일한 차이점은 다음 표의 하단에 표시된 것처럼 (n)varchar(i) 및 varbinary(i) 열의 크기에 대한 계산입니다. 계산된 행 본문 크기는 선언된 크기인 *i* 를 열 크기로 사용하고, 실제 행 본문 크기는 데이터의 실제 크기를 사용합니다.  
   
-다음 표에서는 *actual row body size* = SUM(*size of shallow types*) + 2 + 2 * *number of deep type columns*와 같이 행 본문 크기의 계산에 대해 설명합니다.  
+다음 표에서는 *actual row body size* = SUM(*size of shallow types*) + 2 + 2 * *number of deep type columns* 와 같이 행 본문 크기의 계산에 대해 설명합니다.  
   
 |섹션|크기|주석|  
 |-------------|----------|--------------|  
@@ -134,8 +134,8 @@ ms.locfileid: "91866627"
 |NULL 배열 패딩|가능한 값은 다음과 같습니다.<br /><br /> 전체 형식 열이 있고 NULL 배열의 크기가 홀수 바이트인 경우 1입니다.<br /><br /> 그렇지 않으면 0입니다.|전체 형식은 (var)binary 및 (n)(var)char 형식입니다.|  
 |안쪽 여백|전체 형식 열이 없으면 0<br /><br /> 전체 형식 열이 있는 경우, 단순 열에 필요한 최대 맞춤에 따라 0-7바이트의 패딩이 추가됩니다. 각 단순 열에는 위에 설명한 대로 해당 크기와 동일한 맞춤이 필요하지만, GUID 열은 16바이트가 아니라 1바이트의 맞춤이 필요하고, 숫자 열에는 항상 16이 아닌 8바이트의 맞춤이 필요합니다. 모든 단순 열 사이에 가장 높은 맞춤 요구 사항이 사용되며, 지금까지의 총 크기(전체 형식 열 없음)가 필요한 맞춤의 배수가 되도록 0-7바이트의 패딩이 추가됩니다.|전체 형식은 (var)binary 및 (n)(var)char 형식입니다.|  
 |고정 길이 전체 형식 열|SUM(*size of fixed length deep type columns*)<br /><br /> 각 열의 크기는 다음과 같습니다.<br /><br /> char(i) 및 binary(i)의 경우 i<br /><br /> nchar(i)의 경우 2 * i|고정 길이 전체 형식 열은 char(i), nchar(i) 또는 binary(i) 유형의 열입니다.|  
-|가변 길이 전체 형식 열 *computed size*|SUM(*computed size of variable length deep type columns*)<br /><br /> 각 열에 대해 계산된 크기는 다음과 같습니다.<br /><br /> varchar(i) 및 varbinary(i)의 경우 i<br /><br /> nvarchar(i)의 경우 2 * i|이 행은 *computed row body size*에만 적용되었습니다.<br /><br /> 가변 길이 전체 형식 열은 varchar(i), nvarchar(i) 또는 varbinary(i) 유형의 열입니다. 계산된 크기는 열의 최대 길이(i)에 의해 결정됩니다.|  
-|가변 길이 전체 형식 열 *actual size*|SUM(*actual size of variable length deep type columns*)<br /><br /> 각 열의 실제 크기는 다음과 같습니다.<br /><br /> n, 여기서 n은 varchar(i)에 대해 열에 저장된 문자 수입니다.<br /><br /> 2 * n, 여기서 n은 nvarchar(i)에 대해 열에 저장된 문자 수입니다.<br /><br /> n, 여기서 n은 varbinary(i)에 대해 열에 저장된 바이트 수입니다.|이 행은 *actual row body size*에만 적용되었습니다.<br /><br /> 실제 크기는 행의 열에 저장된 데이터에 의해 결정됩니다.|   
+|가변 길이 전체 형식 열 *computed size*|SUM(*computed size of variable length deep type columns*)<br /><br /> 각 열에 대해 계산된 크기는 다음과 같습니다.<br /><br /> varchar(i) 및 varbinary(i)의 경우 i<br /><br /> nvarchar(i)의 경우 2 * i|이 행은 *computed row body size* 에만 적용되었습니다.<br /><br /> 가변 길이 전체 형식 열은 varchar(i), nvarchar(i) 또는 varbinary(i) 유형의 열입니다. 계산된 크기는 열의 최대 길이(i)에 의해 결정됩니다.|  
+|가변 길이 전체 형식 열 *actual size*|SUM(*actual size of variable length deep type columns*)<br /><br /> 각 열의 실제 크기는 다음과 같습니다.<br /><br /> n, 여기서 n은 varchar(i)에 대해 열에 저장된 문자 수입니다.<br /><br /> 2 * n, 여기서 n은 nvarchar(i)에 대해 열에 저장된 문자 수입니다.<br /><br /> n, 여기서 n은 varbinary(i)에 대해 열에 저장된 바이트 수입니다.|이 행은 *actual row body size* 에만 적용되었습니다.<br /><br /> 실제 크기는 행의 열에 저장된 데이터에 의해 결정됩니다.|   
   
 ##  <a name="example-table-and-row-size-computation"></a><a name="bkmk_ExampleComputation"></a> 예제: 테이블 및 행 크기 계산  
  해시 인덱스의 경우 실제 버킷 수는 가장 가까운 2의 제곱으로 반올림됩니다. 예를 들어 지정된 `bucket_count`가 100000인 경우 인덱스의 실제 버킷 수는 131072입니다.  

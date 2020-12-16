@@ -35,13 +35,13 @@ helpviewer_keywords:
 ms.assetid: d686cdf0-d11d-4dba-9ec8-de1a5f189f25
 author: MikeRayMSFT
 ms.author: mikeray
-monikerRange: '>= sql-server-linux-2017  || >= sql-server-2016 || = sqlallproducts-allversions'
-ms.openlocfilehash: 0aada5da9da6b0eadb1c190690f98c4a3d3cb3b8
-ms.sourcegitcommit: 768f046107642f72693514f51bf2cbd00f58f58a
+monikerRange: '>= sql-server-linux-2017  || >= sql-server-2016'
+ms.openlocfilehash: 73ebe8f968cb3cf91c909ca404c5475f983e2ca6
+ms.sourcegitcommit: 1a544cf4dd2720b124c3697d1e62ae7741db757c
 ms.translationtype: HT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 07/23/2020
-ms.locfileid: "87110247"
+ms.lasthandoff: 12/14/2020
+ms.locfileid: "97438820"
 ---
 # <a name="discontinued-database-engine-functionality-in-sql-server"></a>SQL Server에서 중단된 데이터베이스 엔진 기능
 [!INCLUDE[sqlserver](../includes/applies-to-version/sqlserver.md)]

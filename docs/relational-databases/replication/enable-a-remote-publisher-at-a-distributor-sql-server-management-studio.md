@@ -14,13 +14,13 @@ helpviewer_keywords:
 ms.assetid: 6f8e2831-5c45-4e39-8e51-d37e2813cf3d
 author: MashaMSFT
 ms.author: mathoma
-monikerRange: =azuresqldb-mi-current||>=sql-server-2016||=sqlallproducts-allversions
-ms.openlocfilehash: f5fa7595160176ec24f8106e5de71e59ea89eef3
-ms.sourcegitcommit: da88320c474c1c9124574f90d549c50ee3387b4c
+monikerRange: =azuresqldb-mi-current||>=sql-server-2016
+ms.openlocfilehash: 3633ff588a8d7252b78f5a2510eaad96f7c1eb64
+ms.sourcegitcommit: 1a544cf4dd2720b124c3697d1e62ae7741db757c
 ms.translationtype: HT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 07/01/2020
-ms.locfileid: "85653275"
+ms.lasthandoff: 12/14/2020
+ms.locfileid: "97460256"
 ---
 # <a name="enable-a-remote-publisher-at-a-distributor-sql-server-management-studio"></a>배포자에서 원격 게시자 설정(SQL Server Management Studio)
 [!INCLUDE [SQL Server SQL MI](../../includes/applies-to-version/sql-asdbmi.md)]
@@ -28,11 +28,11 @@ ms.locfileid: "85653275"
   
 ### <a name="to-enable-a-publisher-in-the-configure-distribution-wizard"></a>배포 구성 마법사에서 게시자를 설정하려면  
   
-1.  배포 구성 마법사의 **게시자** 페이지에서 **추가**를 클릭합니다.  
+1.  배포 구성 마법사의 **게시자** 페이지에서 **추가** 를 클릭합니다.  
   
-2.  **SQL Server 게시자 추가**를 클릭합니다. 배포자를 사용하도록 Oracle 게시자를 설정하는 방법은 [Create a Publication from an Oracle Database](../../relational-databases/replication/publish/create-a-publication-from-an-oracle-database.md)를 참조하십시오.  
+2.  **SQL Server 게시자 추가** 를 클릭합니다. 배포자를 사용하도록 Oracle 게시자를 설정하는 방법은 [Create a Publication from an Oracle Database](../../relational-databases/replication/publish/create-a-publication-from-an-oracle-database.md)를 참조하십시오.  
   
-3.  **서버에 연결** 대화 상자에서 원격 배포자를 사용할 게시자에 대한 연결 정보를 지정한 다음 **연결**을 클릭합니다.  
+3.  **서버에 연결** 대화 상자에서 원격 배포자를 사용할 게시자에 대한 연결 정보를 지정한 다음 **연결** 을 클릭합니다.  
   
 4.  **배포자 암호** 페이지에서 **암호** 및 **암호 확인** 입력란에 관리 태스크를 수행하기 위해 게시자에서 배포자로 연결할 때 복제에서 사용하는 **distributor_admin** 계정에 대한 강력한 암호를 지정합니다.  
   
@@ -42,11 +42,11 @@ ms.locfileid: "85653275"
 
 ### <a name="to-enable-a-publisher-in-the-distributor-properties-dialog-box"></a>배포자 속성 대화 상자에서 게시자를 설정하려면  
   
-1.  **배포자 속성 - \<Distributor>** 대화 상자의 **게시자** 페이지에서 **추가**를 클릭합니다.  
+1.  **배포자 속성 - \<Distributor>** 대화 상자의 **게시자** 페이지에서 **추가** 를 클릭합니다.  
   
-2.  **SQL Server 게시자 추가**를 클릭합니다. 배포자를 사용하도록 Oracle 게시자를 설정하는 방법은 [Create a Publication from an Oracle Database](../../relational-databases/replication/publish/create-a-publication-from-an-oracle-database.md)를 참조하십시오.  
+2.  **SQL Server 게시자 추가** 를 클릭합니다. 배포자를 사용하도록 Oracle 게시자를 설정하는 방법은 [Create a Publication from an Oracle Database](../../relational-databases/replication/publish/create-a-publication-from-an-oracle-database.md)를 참조하십시오.  
   
-3.  **서버에 연결** 대화 상자에서 원격 배포자를 사용할 게시자에 대한 연결 정보를 지정한 다음 **연결**을 클릭합니다.  
+3.  **서버에 연결** 대화 상자에서 원격 배포자를 사용할 게시자에 대한 연결 정보를 지정한 다음 **연결** 을 클릭합니다.  
   
 4.  **게시자** 페이지에서 **암호** 및 **암호 확인** 입력란에 관리 태스크를 수행하기 위해 게시자에서 배포자로 연결할 때 복제에서 사용하는 **distributor_admin** 계정에 대한 강력한 암호를 지정합니다.  
   

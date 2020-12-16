@@ -16,13 +16,13 @@ helpviewer_keywords:
 ms.assetid: ''
 author: MikeRayMSFT
 ms.author: mikeray
-monikerRange: '>=sql-server-2017||=sqlallproducts-allversions||>=sql-server-linux-2017'
-ms.openlocfilehash: 5285873c9fc81849d8da8b48140dfbb71281e1aa
-ms.sourcegitcommit: 2f868a77903c1f1c4cecf4ea1c181deee12d5b15
+monikerRange: '>=sql-server-2017||>=sql-server-linux-2017'
+ms.openlocfilehash: 16f81a4ac6265d37cb9e5d50a6500ca68740e394
+ms.sourcegitcommit: 1a544cf4dd2720b124c3697d1e62ae7741db757c
 ms.translationtype: HT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 10/02/2020
-ms.locfileid: "91670526"
+ms.lasthandoff: 12/14/2020
+ms.locfileid: "97438846"
 ---
 # <a name="deprecated-database-engine-features-in-sql-server-2017"></a>SQL Server 2017에서 사용되지 않는 데이터베이스 엔진 기능
 
@@ -89,7 +89,7 @@ WHERE object_name = 'SQLServer:Deprecated Features';
 
 | 사용되지 않는 기능 | 대체 기능 | 기능 이름 | 기능 ID |
 |--------------------|-------------|--------------|------------|
-| **SET ROWCOUNT** , **INSERT**및 **UPDATE**문에 대한 **DELETE** | TOP 키워드 | SET ROWCOUNT | 109 |
+| **SET ROWCOUNT** , **INSERT** 및 **UPDATE** 문에 대한 **DELETE** | TOP 키워드 | SET ROWCOUNT | 109 |
 | 괄호가 없는 HOLDLOCK 테이블 힌트 | HOLDLOCK에 괄호를 사용합니다. | 괄호가 없는 HOLDLOCK 테이블 힌트 | 167 |
 
 ## <a name="features-deprecated-in-a-future-version-of-sql-server"></a>향후 버전의 SQL Server에서 사용되지 않는 기능
@@ -329,7 +329,7 @@ WHERE object_name = 'SQLServer:Deprecated Features';
 | 세 부분 및 네 부분으로 구성된 열 참조입니다. | 두 부분으로 구성된 이름이 표준 규격 동작입니다.|세 부분 이상으로 구성된 열 이름 |
 | SELECT 목록에서 식에 대한 열 별칭으로 사용되는 따옴표로 묶인 문자열<br /><br />'*string_alias*' = *expression* | *expression* [AS] *column_alias*<br /><br />*expression* [AS] [*column_alias*]<br /><br />*expression* [AS] "*column_alias*"<br /><br />*expression* [AS] '*column_alias*'<br /><br />*column_alias* = *expression* | 열 별칭으로 사용되는 문자열 리터럴 |
 | 번호를 매긴 프로시저 | 없음 사용하지 마십시오. | ProcNums |
-| DROP INDEX의*table_name.index_name* 구문|DROP INDEX의*index_name* ON *table_name* 구문|두 부분으로 구성된 이름을 사용하는 DROP INDEX |
+| DROP INDEX의 *table_name.index_name* 구문|DROP INDEX의 *index_name* ON *table_name* 구문|두 부분으로 구성된 이름을 사용하는 DROP INDEX |
 | 세미콜론으로 Transact-SQL 문을 종료하지 않는 경우|세미콜론(;)을 사용하여 Transact-SQL 문을 종료합니다. | None |
 | GROUP BY ALL|UNION 또는 파생 테이블과 함께 사용자 지정 사례별 솔루션을 사용합니다. | GROUP BY ALL |
 | DML 문의 열 이름으로서 ROWGUIDCOL|$rowguid를 사용합니다.|ROWGUIDCOL |

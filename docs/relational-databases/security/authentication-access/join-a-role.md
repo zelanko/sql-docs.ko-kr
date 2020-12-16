@@ -16,13 +16,13 @@ helpviewer_keywords:
 ms.assetid: 05c8d10d-5823-46c6-8b1a-81722da6a42b
 author: VanMSFT
 ms.author: vanto
-monikerRange: '>=aps-pdw-2016||=azuresqldb-current||=azure-sqldw-latest||>=sql-server-2016||=sqlallproducts-allversions||>=sql-server-linux-2017||=azuresqldb-mi-current'
-ms.openlocfilehash: 4cea30d4694ae9c89d69ca6d36330ecc623a015a
-ms.sourcegitcommit: f3321ed29d6d8725ba6378d207277a57cb5fe8c2
+monikerRange: '>=aps-pdw-2016||=azuresqldb-current||=azure-sqldw-latest||>=sql-server-2016||>=sql-server-linux-2017||=azuresqldb-mi-current'
+ms.openlocfilehash: 46d97f8d8e8313bc3fe63a83c4d2187704be802b
+ms.sourcegitcommit: 1a544cf4dd2720b124c3697d1e62ae7741db757c
 ms.translationtype: HT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 07/06/2020
-ms.locfileid: "86005641"
+ms.lasthandoff: 12/14/2020
+ms.locfileid: "97460000"
 ---
 # <a name="join-a-role"></a>역할 조인
 [!INCLUDE [SQL Server](../../../includes/applies-to-version/sql-asdb-asdbmi-asa-pdw.md)]
@@ -65,7 +65,7 @@ ms.locfileid: "86005641"
 ###  <a name="security"></a><a name="Security"></a> 보안  
   
 ####  <a name="permissions"></a><a name="Permissions"></a> 권한  
- 데이터베이스에 대한 **ALTER ANY ROLE** 권한, 역할에 대한 **ALTER** 권한 또는 **db_securityadmin**의 멤버 자격이 필요합니다.  
+ 데이터베이스에 대한 **ALTER ANY ROLE** 권한, 역할에 대한 **ALTER** 권한 또는 **db_securityadmin** 의 멤버 자격이 필요합니다.  
   
 ##  <a name="using-sql-server-management-studio"></a><a name="SSMSProcedure"></a> SQL Server Management Studio 사용  
   
@@ -77,11 +77,11 @@ ms.locfileid: "86005641"
   
 3.  **서버 역할** 폴더를 확장합니다.  
   
-4.  편집할 역할을 마우스 오른쪽 단추로 클릭한 다음 **속성**을 선택합니다.  
+4.  편집할 역할을 마우스 오른쪽 단추로 클릭한 다음 **속성** 을 선택합니다.  
   
-5.  **서버 역할 속성 –** _server\_role\_name_ 대화 상자의 **멤버** 페이지에서 **추가**를 클릭합니다.  
+5.  **서버 역할 속성 –** _server\_role\_name_ 대화 상자의 **멤버** 페이지에서 **추가** 를 클릭합니다.  
   
-6.  **서버 로그인 또는 역할 선택** 대화 상자의 **선택할 개체 이름을 입력하십시오. (예)** 에 이 서버 역할에 추가할 로그인 또는 서버 역할을 입력합니다. 또는 **찾아보기…** 를 클릭하고 **개체 찾아보기** 대화 상자에서 사용 가능한 모든 개체를 선택합니다. **확인**을 클릭하여 **서버 역할 속성 –** _server\_role\_name_ 대화 상자로 돌아갑니다.  
+6.  **서버 로그인 또는 역할 선택** 대화 상자의 **선택할 개체 이름을 입력하십시오. (예)** 에 이 서버 역할에 추가할 로그인 또는 서버 역할을 입력합니다. 또는 **찾아보기…** 를 클릭하고 **개체 찾아보기** 대화 상자에서 사용 가능한 모든 개체를 선택합니다. **확인** 을 클릭하여 **서버 역할 속성 –** _server\_role\_name_ 대화 상자로 돌아갑니다.  
   
 7.  [!INCLUDE[clickOK](../../../includes/clickok-md.md)]  
   
@@ -99,11 +99,11 @@ ms.locfileid: "86005641"
   
 6.  **서버 역할** 폴더를 확장합니다.  
   
-7.  편집할 역할을 마우스 오른쪽 단추로 클릭한 다음 **속성**을 선택합니다.  
+7.  편집할 역할을 마우스 오른쪽 단추로 클릭한 다음 **속성** 을 선택합니다.  
   
-8.  **데이터베이스 역할 속성 –** _database\_role\_name_ 대화 상자의 **일반** 페이지에서 **추가**를 클릭합니다.  
+8.  **데이터베이스 역할 속성 –** _database\_role\_name_ 대화 상자의 **일반** 페이지에서 **추가** 를 클릭합니다.  
   
-9. **데이터베이스 사용자 또는 역할 선택** 대화 상자의 **선택할 개체 이름을 입력하십시오. (예)** 에 이 데이터베이스 역할에 추가할 로그인 또는 데이터베이스 역할을 입력합니다. 또는 **찾아보기…** 를 클릭하고 **개체 찾아보기** 대화 상자에서 사용 가능한 모든 개체를 선택합니다. **확인**을 클릭하여 **데이터베이스 역할 속성 –** _database\_role\_name_ 대화 상자로 돌아갑니다.  
+9. **데이터베이스 사용자 또는 역할 선택** 대화 상자의 **선택할 개체 이름을 입력하십시오. (예)** 에 이 데이터베이스 역할에 추가할 로그인 또는 데이터베이스 역할을 입력합니다. 또는 **찾아보기…** 를 클릭하고 **개체 찾아보기** 대화 상자에서 사용 가능한 모든 개체를 선택합니다. **확인** 을 클릭하여 **데이터베이스 역할 속성 –** _database\_role\_name_ 대화 상자로 돌아갑니다.  
   
 10. [!INCLUDE[clickOK](../../../includes/clickok-md.md)]  
   
@@ -111,11 +111,11 @@ ms.locfileid: "86005641"
   
 #### <a name="to-add-a-member-to-a-fixed-server-role"></a>고정 서버 역할에 멤버를 추가하려면  
   
-1.  **개체 탐색기**에서 [!INCLUDE[ssDE](../../../includes/ssde-md.md)]인스턴스에 연결합니다.  
+1.  **개체 탐색기** 에서 [!INCLUDE[ssDE](../../../includes/ssde-md.md)]인스턴스에 연결합니다.  
   
-2.  표준 도구 모음에서 **새 쿼리**를 클릭합니다.  
+2.  표준 도구 모음에서 **새 쿼리** 를 클릭합니다.  
   
-3.  다음 예를 복사하여 쿼리 창에 붙여 넣고 **실행**을 클릭합니다.  
+3.  다음 예를 복사하여 쿼리 창에 붙여 넣고 **실행** 을 클릭합니다.  
   
     ```  
     ALTER SERVER ROLE diskadmin ADD MEMBER [Domain\Juan] ;  
@@ -126,11 +126,11 @@ ms.locfileid: "86005641"
   
 #### <a name="to-add-a-member-to-a-user-defined-database-role"></a>사용자 정의 데이터베이스 역할에 멤버를 추가하려면  
   
-1.  **개체 탐색기**에서 [!INCLUDE[ssDE](../../../includes/ssde-md.md)]인스턴스에 연결합니다.  
+1.  **개체 탐색기** 에서 [!INCLUDE[ssDE](../../../includes/ssde-md.md)]인스턴스에 연결합니다.  
   
-2.  표준 도구 모음에서 **새 쿼리**를 클릭합니다.  
+2.  표준 도구 모음에서 **새 쿼리** 를 클릭합니다.  
   
-3.  다음 예를 복사하여 쿼리 창에 붙여 넣고 **실행**을 클릭합니다.  
+3.  다음 예를 복사하여 쿼리 창에 붙여 넣고 **실행** 을 클릭합니다.  
   
     ```  
     ALTER ROLE Marketing ADD MEMBER [Domain\Juan] ;  

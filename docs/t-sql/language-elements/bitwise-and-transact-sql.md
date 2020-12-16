@@ -21,13 +21,13 @@ helpviewer_keywords:
 ms.assetid: 20275755-4fa7-47b1-a9be-ac85606d63b0
 author: rothja
 ms.author: jroth
-monikerRange: '>=aps-pdw-2016||=azuresqldb-current||=azure-sqldw-latest||>=sql-server-2016||=sqlallproducts-allversions||>=sql-server-linux-2017||=azuresqldb-mi-current'
-ms.openlocfilehash: 9590b5be5abbc2414674f552c4f8c6675b5dc935
-ms.sourcegitcommit: cfa04a73b26312bf18d8f6296891679166e2754d
+monikerRange: '>=aps-pdw-2016||=azuresqldb-current||=azure-sqldw-latest||>=sql-server-2016||>=sql-server-linux-2017||=azuresqldb-mi-current'
+ms.openlocfilehash: 06b82d0789044206003c69bd2a6399b43e4718bf
+ms.sourcegitcommit: 1a544cf4dd2720b124c3697d1e62ae7741db757c
 ms.translationtype: HT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 10/19/2020
-ms.locfileid: "92189266"
+ms.lasthandoff: 12/14/2020
+ms.locfileid: "97439208"
 ---
 # <a name="amp-bitwise-and-transact-sql"></a>&amp;(비트 AND)(Transact-SQL)
 [!INCLUDE [sql-asdb-asdbmi-asa-pdw](../../includes/applies-to-version/sql-asdb-asdbmi-asa-pdw.md)]
@@ -46,22 +46,22 @@ expression & expression
 
 ## <a name="arguments"></a>인수
  *expression*  
- 정수 데이터 형식 범주에 속하는 데이터 형식, **bit**, **binary** 또는 **varbinary** 데이터 형식 중 하나인 유효한 [식](../../t-sql/language-elements/expressions-transact-sql.md)입니다. *expression*은 비트 연산의 이진 숫자로 처리됩니다.  
+ 정수 데이터 형식 범주에 속하는 데이터 형식, **bit**, **binary** 또는 **varbinary** 데이터 형식 중 하나인 유효한 [식](../../t-sql/language-elements/expressions-transact-sql.md)입니다. *expression* 은 비트 연산의 이진 숫자로 처리됩니다.  
   
 > [!NOTE]  
->  비트 연산에서는 하나의 *식*이 **binary** 또는 **varbinary** 데이터 형식이 될 수 있습니다.  
+>  비트 연산에서는 하나의 *식* 이 **binary** 또는 **varbinary** 데이터 형식이 될 수 있습니다.  
   
 ## <a name="result-types"></a>결과 형식  
- 입력 값이 **int**이면 **int**입니다.  
+ 입력 값이 **int** 이면 **int** 입니다.  
   
- 입력 값이 **smallint**이면 **smallint**입니다.  
+ 입력 값이 **smallint** 이면 **smallint** 입니다.  
   
- 입력된 값이 **tinyint** 또는 **bit**인 경우 **tinyint**입니다.  
+ 입력된 값이 **tinyint** 또는 **bit** 인 경우 **tinyint** 입니다.  
   
 ## <a name="remarks"></a>설명  
  **&** 비트 연산자는 두 식 간에 비트 논리 AND를 수행하고 양쪽 식에서 해당 비트를 취합니다. 결과의 비트는 입력 식에 있는 양쪽 비트(확인 중인 현재 비트)의 값이 1이면 1로 설정되고 그렇지 않으면 0으로 설정됩니다.  
   
- 왼쪽과 오른쪽 식의 정수 데이터 형식이 서로 다르면(예: 왼쪽 *식*은 **smallint**이고 오른쪽 *식*은 **int**임) 더 작은 데이터 형식의 인수가 더 큰 데이터 형식으로 변환됩니다. 이 경우에 **smallint** 식이 **int**로 변환됩니다.  
+ 왼쪽과 오른쪽 식의 정수 데이터 형식이 서로 다르면(예: 왼쪽 *식* 은 **smallint** 이고 오른쪽 *식* 은 **int** 임) 더 작은 데이터 형식의 인수가 더 큰 데이터 형식으로 변환됩니다. 이 경우에 **smallint** 식이 **int** 로 변환됩니다.  
   
 ## <a name="examples"></a>예제  
  다음 예에서는 값을 저장하기 위해 **int** 데이터 형식을 사용하여 테이블을 만들고 두 값을 한 행에 삽입하는 방법을 보여 줍니다.  

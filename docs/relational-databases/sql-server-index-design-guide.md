@@ -22,13 +22,13 @@ helpviewer_keywords:
 ms.assetid: 11f8017e-5bc3-4bab-8060-c16282cfbac1
 author: rothja
 ms.author: jroth
-monikerRange: '>=aps-pdw-2016||=azuresqldb-current||=azure-sqldw-latest||>=sql-server-2016||=sqlallproducts-allversions||>=sql-server-linux-2017||=azuresqldb-mi-current'
-ms.openlocfilehash: e982f8a8a2ee42c1ac2d84529a29842f8c4b4577
-ms.sourcegitcommit: 442fbe1655d629ecef273b02fae1beb2455a762e
+monikerRange: '>=aps-pdw-2016||=azuresqldb-current||=azure-sqldw-latest||>=sql-server-2016||>=sql-server-linux-2017||=azuresqldb-mi-current'
+ms.openlocfilehash: fe0c23f3cd5b087b4e5a14d50d681b983aeac496
+ms.sourcegitcommit: 1a544cf4dd2720b124c3697d1e62ae7741db757c
 ms.translationtype: HT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 11/03/2020
-ms.locfileid: "93235570"
+ms.lasthandoff: 12/14/2020
+ms.locfileid: "97459971"
 ---
 # <a name="sql-server-index-architecture-and-design-guide"></a>SQL Server 인덱스 아키텍처 및 디자인 가이드
 [!INCLUDE[SQL Server Azure SQL Database Synapse Analytics PDW ](../includes/applies-to-version/sql-asdb-asdbmi-asa-pdw.md)]
@@ -118,14 +118,14 @@ XML 인덱스에 대한 자세한 내용은 [XML 인덱스 개요](../relational
   
 -   쿼리 유형 및 쿼리에서 열이 사용되는 방법을 평가합니다. 예를 들어 정확히 일치하는 쿼리 유형에서 사용되는 열은 비클러스터형 또는 클러스터형 인덱스로 만들면 좋습니다.
 
-<a name="sargable"></a><sup>1</sup> 관계형 데이터베이스에서 SARGable은 인덱스를 이용하여 쿼리 실행 속도를 높일 수 있는 **S** earch **ARG** ument- **able** 조건자를 나타냅니다.
+<a name="sargable"></a><sup>1</sup> 관계형 데이터베이스에서 SARGable은 인덱스를 이용하여 쿼리 실행 속도를 높일 수 있는 **S** earch **ARG** ument-**able** 조건자를 나타냅니다.
   
 ### <a name="column-considerations"></a>열 고려 사항  
  인덱스를 디자인할 때 다음과 같은 열 지침을 고려합니다.  
   
 -   클러스터형 인덱스의 인덱스 키 길이는 짧게 유지합니다. 또한 클러스터형 인덱스는 고유하거나 Null이 아닌 열에 만들어지는 이점이 있습니다.  
   
--   **ntext** , **text** , **image** , **varchar(max)** , **nvarchar(max)** 및 **varbinary(max)** 데이터 형식의 열은 인덱스 키 열로 지정할 수 없습니다. 그러나 **varchar(max)** , **nvarchar(max)** , **varbinary(max)** 및 **xml** 데이터 형식은 비클러스터형 인덱스에 키가 아닌 인덱스 열로 참여할 수 있습니다. 자세한 내용은 이 지침에서 ['포괄 열이 있는 인덱스](#Included_Columns)' 섹션을 참조하십시오.  
+-   **ntext**, **text**, **image**, **varchar(max)** , **nvarchar(max)** 및 **varbinary(max)** 데이터 형식의 열은 인덱스 키 열로 지정할 수 없습니다. 그러나 **varchar(max)** , **nvarchar(max)** , **varbinary(max)** 및 **xml** 데이터 형식은 비클러스터형 인덱스에 키가 아닌 인덱스 열로 참여할 수 있습니다. 자세한 내용은 이 지침에서 ['포괄 열이 있는 인덱스](#Included_Columns)' 섹션을 참조하십시오.  
   
 -   **xml** 데이터 형식은 XML 인덱스의 키 열만 될 수 있습니다. 자세한 내용은 [XML 인덱스&#40;SQL Server&#41;](../relational-databases/xml/xml-indexes-sql-server.md)를 참조하세요. SQL Server 2012 SP1에서는 선택적 XML 인덱스라고 하는 새로운 유형의 XML 인덱스를 제공합니다. 이 새 인덱스를 통해 SQL Server에서 XML로 저장된 데이터에 대해 쿼리 성능을 향상시킬 수 있어 대량의 XML 데이터 작업의 인덱싱을 훨씬 빠르게 하고 인덱스 자체의 스토리지 비용을 감소시켜 확장성을 향상할 수 있습니다. 자세한 내용은 [SXI&#40;선택적 XML 인덱스&#41;](../relational-databases/xml/selective-xml-indexes-sxi.md)를 참조하세요.  
   
@@ -476,11 +476,11 @@ INCLUDE (FileName);
   
 -   키가 아닌 열은 테이블 또는 인덱싱된 뷰의 비클러스터형 인덱스에서만 정의될 수 있습니다.  
   
--   **text** , **ntext** 및 **image** 를 제외한 모든 데이터 형식을 사용할 수 있습니다.  
+-   **text**, **ntext** 및 **image** 를 제외한 모든 데이터 형식을 사용할 수 있습니다.  
   
 -   결정적이면서 정확하거나 정확하지 않은 계산 열은 포괄 열이 될 수 있습니다. 자세한 내용은 [Indexes on Computed Columns](../relational-databases/indexes/indexes-on-computed-columns.md)을 참조하세요.  
   
--   키 열과 마찬가지로 **image** , **ntext** 및 **text** 데이터 형식에서 파생된 계산 열은 계산 열 데이터 형식이 키가 아닌 인덱스 열로 허용되는 동안 키가 아닌 포괄 열이 될 수 있습니다.  
+-   키 열과 마찬가지로 **image**, **ntext** 및 **text** 데이터 형식에서 파생된 계산 열은 계산 열 데이터 형식이 키가 아닌 인덱스 열로 허용되는 동안 키가 아닌 포괄 열이 될 수 있습니다.  
   
 -   열 이름은 INCLUDE 목록 및 키 열 목록 모두에서 지정될 수 없습니다.  
   
@@ -503,7 +503,7 @@ INCLUDE (FileName);
   
     -   열의 Null 허용 여부를 NOT NULL에서 NULL로 변경합니다.  
   
-    -   **varchar** , **nvarchar** 또는 **varbinary** 열의 길이를 늘립니다.  
+    -   **varchar**, **nvarchar** 또는 **varbinary** 열의 길이를 늘립니다.  
   
         > [!NOTE]  
         >  이러한 열 수정 제한도 인덱스 키 열에 적용됩니다.  
@@ -567,7 +567,7 @@ INCLUDE (AddressLine1, AddressLine2, City, StateProvinceID);
 ##  <a name="filtered-index-design-guidelines"></a><a name="Filtered"></a> 필터링된 인덱스 디자인 지침  
  필터링된 인덱스는 특히 데이터의 잘 정의된 하위 집합에서 선택하는 쿼리를 처리하는 데 적합한 최적화된 비클러스터형 인덱스입니다. 이 인덱스에서는 필터 조건자를 사용하여 테이블의 일부 행을 인덱싱합니다. 잘 디자인된 필터링된 인덱스는 전체 테이블 인덱스에 비해 쿼리 성능을 개선하고 인덱스 유지 관리 비용과 인덱스 스토리지 비용을 줄일 수 있습니다.  
   
-**적용 대상** : [!INCLUDE[ssKatmai](../includes/sskatmai-md.md)] 부터 [!INCLUDE[ssCurrent](../includes/sscurrent-md.md)]까지  
+**적용 대상**: [!INCLUDE[ssKatmai](../includes/sskatmai-md.md)] 부터 [!INCLUDE[ssCurrent](../includes/sscurrent-md.md)]까지  
   
  필터링된 인덱스는 전체 테이블 인덱스에 비해 다음과 같은 이점이 있습니다.  
   
@@ -742,7 +742,7 @@ columnstore 인덱스는 행을 관리할 수 있는 단위로 그룹화합니�
 * `ALTER INDEX ... REBUILD` 작업 동안 새 행그룹을 만듭니다.
 * DMV(동적 관리 뷰)에서 행 그룹 상태 및 조각화를 보고합니다.
 
-deltastore는 **델타 행 그룹** 이라는 하나 이상의 행 그룹으로 구성됩니다. 각 델타 행 그룹은 행 그룹에 1,048,576개의 행이 포함될 때( **튜플 이동기** 라는 프로세스가 닫힌 행 그룹을 columnstore로 자동 압축함)까지 작은 대량 로드와 삽입을 저장하는 클러스터형 B-트리 인덱스입니다. 
+deltastore는 **델타 행 그룹** 이라는 하나 이상의 행 그룹으로 구성됩니다. 각 델타 행 그룹은 행 그룹에 1,048,576개의 행이 포함될 때(**튜플 이동기** 라는 프로세스가 닫힌 행 그룹을 columnstore로 자동 압축함)까지 작은 대량 로드와 삽입을 저장하는 클러스터형 B-트리 인덱스입니다. 
 
 행 그룹 상태에 대한 자세한 내용은 [sys.dm_db_column_store_row_group_physical_stats(Transact-SQL)](../relational-databases/system-dynamic-management-views/sys-dm-db-column-store-row-group-physical-stats-transact-sql.md)를 참조하세요. 
 
@@ -821,7 +821,7 @@ columnstore 용어 및 개념에 대한 자세한 내용은 [columnstore 인덱�
 
 행을 함께 연결하는 인덱스이므로 모든 메모리 최적화 테이블에는 하나 이상의 인덱스가 있어야 합니다. 메모리 최적화 테이블에서는 모든 인덱스 또한 메모리 최적화되어 있습니다. 해시 인덱스는 메모리 최적화 테이블에 사용할 수 있는 인덱스 유형 중 하나입니다. 자세한 내용은 [메모리 최적화 테이블에 대한 인덱스](../relational-databases/in-memory-oltp/indexes-for-memory-optimized-tables.md)를 참조하세요.
 
-**적용 대상** : [!INCLUDE[ssSQL14](../includes/sssql14-md.md)] 부터 [!INCLUDE[ssCurrent](../includes/sscurrent-md.md)]까지  
+**적용 대상**: [!INCLUDE[ssSQL14](../includes/sssql14-md.md)] 부터 [!INCLUDE[ssCurrent](../includes/sscurrent-md.md)]까지  
 
 ### <a name="hash-index-architecture"></a>해시 인덱스 아키텍처
 해시 인덱스는 포인터 배열로 구성되며, 각 배열 요소를 해시 버킷이라고 합니다.
@@ -913,7 +913,7 @@ HASH (Column2) WITH (BUCKET_COUNT = 64);
 
 비클러스터형 인덱스는 메모리 최적화 테이블에 사용할 수 있는 인덱스 유형 중 하나입니다. 자세한 내용은 [메모리 최적화 테이블에 대한 인덱스](../relational-databases/in-memory-oltp/indexes-for-memory-optimized-tables.md)를 참조하세요.
 
-**적용 대상** : [!INCLUDE[ssSQL14](../includes/sssql14-md.md)] 부터 [!INCLUDE[ssCurrent](../includes/sscurrent-md.md)]까지  
+**적용 대상**: [!INCLUDE[ssSQL14](../includes/sssql14-md.md)] 부터 [!INCLUDE[ssCurrent](../includes/sscurrent-md.md)]까지  
 
 ### <a name="in-memory-nonclustered-index-architecture"></a>메모리 내 비클러스터형 인덱스 아키텍처
 

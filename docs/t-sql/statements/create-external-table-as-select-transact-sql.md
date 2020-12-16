@@ -20,13 +20,13 @@ helpviewer_keywords:
 ms.assetid: 32dfe254-6df7-4437-bfd6-ca7d37557b0a
 author: ronortloff
 ms.author: rortloff
-monikerRange: '>= aps-pdw-2016 || = azure-sqldw-latest || = sqlallproducts-allversions'
-ms.openlocfilehash: 1085686f4c83198a043855e701ec2ef38d17541f
-ms.sourcegitcommit: d35d0901296580bfceda6e0ab2e14cf2b7e99a0f
+monikerRange: '>= aps-pdw-2016 || = azure-sqldw-latest'
+ms.openlocfilehash: 9c97ee3e1f268553a828e035498b203c8fa1e747
+ms.sourcegitcommit: 1a544cf4dd2720b124c3697d1e62ae7741db757c
 ms.translationtype: HT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 10/24/2020
-ms.locfileid: "92496939"
+ms.lasthandoff: 12/14/2020
+ms.locfileid: "97438948"
 ---
 # <a name="create-external-table-as-select-transact-sql"></a>CREATE EXTERNAL TABLE AS SELECT(Transact-SQL)
 [!INCLUDE[applies-to-version/asa-pdw](../../includes/applies-to-version/asa-pdw.md)]
@@ -63,7 +63,7 @@ CREATE EXTERNAL TABLE [ [database_name  . [ schema_name ] . ] | schema_name . ] 
 ## <a name="arguments"></a>인수
  **[ [ *database_name* . [ *schema_name* ] . ] | *schema_name* . ] *table_name*** 은 데이터베이스에서 만들어지는 하나에서 세 부분으로 된 테이블 이름입니다. 외부 테이블의 경우 테이블 메타데이터만 관계형 데이터베이스에 저장됩니다. 
 
- **LOCATION =  ' *hdfs_folder* '** 는 SELECT 문의 결과를 외부 데이터 원본에 기록할 위치를 지정합니다. 위치는 폴더 이름이며 Hadoop 클러스터 또는 Blob Storage의 루트 폴더에 대한 상대 경로를 포함할 수 있습니다(선택 사항). PolyBase는 아직 존재하지 않는 경우 경로 및 폴더를 만듭니다.
+ **LOCATION =  '*hdfs_folder*'** 는 SELECT 문의 결과를 외부 데이터 원본에 기록할 위치를 지정합니다. 위치는 폴더 이름이며 Hadoop 클러스터 또는 Blob Storage의 루트 폴더에 대한 상대 경로를 포함할 수 있습니다(선택 사항). PolyBase는 아직 존재하지 않는 경우 경로 및 폴더를 만듭니다.
 
 외부 파일은 *hdfs_folder* 에 기록되고 *QueryID_date_time_ID.format* 로 명명되며, 여기서 *ID* 는 증분 식별자이고 *format* 은 내보낸 데이터 형식입니다. 예를 들면 QID776_20160130_182739_0.orc입니다.
 

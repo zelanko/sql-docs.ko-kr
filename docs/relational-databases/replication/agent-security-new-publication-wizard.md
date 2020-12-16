@@ -13,13 +13,13 @@ f1_keywords:
 ms.assetid: 05ae44df-8e9f-46ea-95f6-972ad109c6c0
 author: MashaMSFT
 ms.author: mathoma
-monikerRange: =azuresqldb-mi-current||>=sql-server-2016||=sqlallproducts-allversions
-ms.openlocfilehash: 92534143e42446ef3a1427c6dd6f6f2c110153aa
-ms.sourcegitcommit: e700497f962e4c2274df16d9e651059b42ff1a10
+monikerRange: =azuresqldb-mi-current||>=sql-server-2016
+ms.openlocfilehash: 8a33a8a17aea4bddadb1c2ed99a4e5b1bcf1966b
+ms.sourcegitcommit: 1a544cf4dd2720b124c3697d1e62ae7741db757c
 ms.translationtype: HT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 08/17/2020
-ms.locfileid: "88428015"
+ms.lasthandoff: 12/14/2020
+ms.locfileid: "97460316"
 ---
 # <a name="agent-security-new-publication-wizard"></a>에이전트 보안(새 게시 마법사)
 [!INCLUDE [SQL Server SQL MI](../../includes/applies-to-version/sql-asdbmi.md)]
@@ -29,7 +29,7 @@ ms.locfileid: "88428015"
   
 -   모든 트랜잭션 게시에 대한 로그 판독기 에이전트입니다.  
   
--   업데이트할 수 있는 구독을 허용하는 트랜잭션 게시에 대한 큐 판독기 에이전트입니다. **게시 유형** 페이지에서 **업데이트할 수 있는 구독이 있는 트랜잭션 게시**를 지정하면 사용하는 업데이트할 수 있는 구독 유형과 관계없이 이 에이전트에 대해 [!INCLUDE[msCoName](../../includes/msconame-md.md)] [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 에이전트 작업이 생성됩니다. 업데이트할 수 있는 구독에 대한 자세한 내용은 [Updatable Subscriptions for Transactional Replication](../../relational-databases/replication/transactional/updatable-subscriptions-for-transactional-replication.md)을 참조하십시오.  
+-   업데이트할 수 있는 구독을 허용하는 트랜잭션 게시에 대한 큐 판독기 에이전트입니다. **게시 유형** 페이지에서 **업데이트할 수 있는 구독이 있는 트랜잭션 게시** 를 지정하면 사용하는 업데이트할 수 있는 구독 유형과 관계없이 이 에이전트에 대해 [!INCLUDE[msCoName](../../includes/msconame-md.md)] [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 에이전트 작업이 생성됩니다. 업데이트할 수 있는 구독에 대한 자세한 내용은 [Updatable Subscriptions for Transactional Replication](../../relational-databases/replication/transactional/updatable-subscriptions-for-transactional-replication.md)을 참조하십시오.  
   
  에이전트에 필요한 사용 권한 및 복제 보안을 위한 최선의 구현 방법은 [Replication Agent Security Model](../../relational-databases/replication/security/replication-agent-security-model.md) 및 [Replication Security Best Practices](../../relational-databases/replication/security/replication-security-best-practices.md)을 참조하십시오.  
   
@@ -48,7 +48,7 @@ ms.locfileid: "88428015"
 >  트랜잭션 복제를 사용하여 게시된 각 데이터베이스에 대해 하나의 로그 판독기 에이전트가 있습니다. 데이터베이스에 트랜잭션 게시가 이미 있으면 보안 설정은 읽기 전용입니다. **게시 속성** 대화 상자에서 설정을 변경할 수 있지만 이 변경 내용은 데이터베이스의 모든 트랜잭션 게시에 적용됩니다.  
   
  **큐 판독기 에이전트**  
- 업데이트할 수 있는 구독을 허용하는 트랜잭션 게시에 대해 표시됩니다. **보안 설정** 을 클릭하여 **큐 판독기 에이전트 보안** 대화 상자에서 보안 설정을 지정할 수 있습니다. 이 마법사를 완료하면 큐 판독기 에이전트 작업이 생성됩니다. 지연 업데이트 구독의 생성 여부와는 관계가 없습니다. 지연 업데이트 구독을 만들지 않으려면 이 작업을 해제할 수 있습니다. [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 에이전트 **Jobs** 폴더에서 작업( *[\<Publisher>].\<integer>* . 형식의 이름)을 마우스 오른쪽 단추로 클릭한 다음 **사용 안 함**을 클릭합니다.  
+ 업데이트할 수 있는 구독을 허용하는 트랜잭션 게시에 대해 표시됩니다. **보안 설정** 을 클릭하여 **큐 판독기 에이전트 보안** 대화 상자에서 보안 설정을 지정할 수 있습니다. 이 마법사를 완료하면 큐 판독기 에이전트 작업이 생성됩니다. 지연 업데이트 구독의 생성 여부와는 관계가 없습니다. 지연 업데이트 구독을 만들지 않으려면 이 작업을 해제할 수 있습니다. [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 에이전트 **Jobs** 폴더에서 작업( *[\<Publisher>].\<integer>* . 형식의 이름)을 마우스 오른쪽 단추로 클릭한 다음 **사용 안 함** 을 클릭합니다.  
   
  큐 판독기 에이전트에서 사용하는 계정에 필요한 사용 권한을 보려면 **큐 판독기 에이전트 보안** 대화 상자에서 **도움말** 을 클릭합니다.  
   

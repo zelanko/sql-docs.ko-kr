@@ -22,13 +22,13 @@ helpviewer_keywords:
 ms.assetid: 8dfb7b16-3dac-4e1e-8c97-adf2aad07830
 author: markingmyname
 ms.author: maghan
-monikerRange: =azuresqldb-mi-current||>=sql-server-2016||=sqlallproducts-allversions||>=sql-server-linux-2017
-ms.openlocfilehash: 6aa1bf54d0d21ea05c16dc4808c6e7ff4191236d
-ms.sourcegitcommit: ac9feb0b10847b369b77f3c03f8200c86ee4f4e0
+monikerRange: =azuresqldb-mi-current||>=sql-server-2016||>=sql-server-linux-2017
+ms.openlocfilehash: a0d455bc9feca7aa03bc70a91a563612717f9f59
+ms.sourcegitcommit: 1a544cf4dd2720b124c3697d1e62ae7741db757c
 ms.translationtype: HT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 09/16/2020
-ms.locfileid: "90688214"
+ms.lasthandoff: 12/14/2020
+ms.locfileid: "97439058"
 ---
 # <a name="alter-route-transact-sql"></a>ALTER ROUTE(Transact-SQL)
 [!INCLUDE [SQL Server - ASDBMI](../../includes/applies-to-version/sql-asdbmi.md)]
@@ -63,7 +63,7 @@ WITH
  변경되는 경로를 정의하는 절을 지정합니다.  
   
  SERVICE_NAME **=‘** _service\_name_ **’**  
- 이 경로가 가리키는 원격 서비스 이름을 지정합니다. *service_name*은 원격 서비스에서 사용되는 이름과 정확히 일치해야 합니다. [!INCLUDE[ssSB](../../includes/sssb-md.md)]에서는 바이트 단위로 비교하여 일치하는 *service_name*을 찾습니다. 즉, 비교 시 대/소문자가 구분되고 현재 데이터 정렬은 고려되지 않습니다. 서비스 이름이 **‘SQL/ServiceBroker/BrokerConfiguration’** 인 경로는 Broker Configuration Notice 서비스에 대한 경로입니다. 이 서비스에 대한 경로에서 broker 인스턴스를 지정하지 않을 수 있습니다.  
+ 이 경로가 가리키는 원격 서비스 이름을 지정합니다. *service_name* 은 원격 서비스에서 사용되는 이름과 정확히 일치해야 합니다. [!INCLUDE[ssSB](../../includes/sssb-md.md)]에서는 바이트 단위로 비교하여 일치하는 *service_name* 을 찾습니다. 즉, 비교 시 대/소문자가 구분되고 현재 데이터 정렬은 고려되지 않습니다. 서비스 이름이 **‘SQL/ServiceBroker/BrokerConfiguration’** 인 경로는 Broker Configuration Notice 서비스에 대한 경로입니다. 이 서비스에 대한 경로에서 broker 인스턴스를 지정하지 않을 수 있습니다.  
   
  SERVICE_NAME 절이 생략되면 경로의 서비스 이름이 변경되지 않습니다.  
   
@@ -88,11 +88,11 @@ WHERE database_id = DB_ID();
 
  Azure SQL Managed Instance의 경우 `ADDRESS`는 로컬이어야 합니다.
 
- 이 경로에 대한 네트워크 주소를 지정합니다. *next_hop_address*는 다음과 같은 형식으로 TCP/IP 주소를 지정합니다.  
+ 이 경로에 대한 네트워크 주소를 지정합니다. *next_hop_address* 는 다음과 같은 형식으로 TCP/IP 주소를 지정합니다.  
   
  **TCP://** { *dns_name* | *netbios_name* |*ip_address* } **:** *port_number*  
   
- 지정된 *port_number*는 지정된 컴퓨터에서 [!INCLUDE[ssSB](../../includes/sssb-md.md)] 인스턴스의 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 엔드포인트의 포트 번호와 일치해야 합니다. 선택한 데이터베이스에서 다음 쿼리를 실행하여 얻을 수 있습니다.  
+ 지정된 *port_number* 는 지정된 컴퓨터에서 [!INCLUDE[ssSB](../../includes/sssb-md.md)] 인스턴스의 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 엔드포인트의 포트 번호와 일치해야 합니다. 선택한 데이터베이스에서 다음 쿼리를 실행하여 얻을 수 있습니다.  
   
 ```sql  
 SELECT tcpe.port  
@@ -102,21 +102,21 @@ INNER JOIN sys.service_broker_endpoints AS ssbe
 WHERE ssbe.name = N'MyServiceBrokerEndpoint';  
 ```  
   
- 경로에 **next_hop_address**가 *‘LOCAL’* 로 지정되어 있으면 메시지는 현재 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 인스턴스 내의 서비스로 배달됩니다.  
+ 경로에 **next_hop_address** 가 *‘LOCAL’* 로 지정되어 있으면 메시지는 현재 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 인스턴스 내의 서비스로 배달됩니다.  
   
- 경로에 **next_hop_address**가 *‘TRANSPORT’* 로 지정되어 있으면 네트워크 주소는 서비스 이름의 네트워크 주소를 기준으로 결정됩니다. **'TRANSPORT'** 를 지정하는 경로는 서비스 이름이나 broker 인스턴스를 지정할 수 있습니다.  
+ 경로에 **next_hop_address** 가 *‘TRANSPORT’* 로 지정되어 있으면 네트워크 주소는 서비스 이름의 네트워크 주소를 기준으로 결정됩니다. **'TRANSPORT'** 를 지정하는 경로는 서비스 이름이나 broker 인스턴스를 지정할 수 있습니다.  
   
- *next_hop_address*가 데이터베이스 미러의 주 서버인 경우에는 미러 서버에 대해 MIRROR_ADDRESS도 지정해야 합니다. 그렇지 않으면 이 경로는 미러 서버에 대해 자동으로 장애 조치(Failover)하지 않습니다.  
+ *next_hop_address* 가 데이터베이스 미러의 주 서버인 경우에는 미러 서버에 대해 MIRROR_ADDRESS도 지정해야 합니다. 그렇지 않으면 이 경로는 미러 서버에 대해 자동으로 장애 조치(Failover)하지 않습니다.  
   
 > [!NOTE]  
 >  포함된 데이터베이스에서는 이 옵션을 사용할 수 없습니다.  
   
  MIRROR_ADDRESS **='** _next\_hop\_mirror\_address_ **'**  
- 주 서버가 *next_hop_address*에 있는 미러링된 쌍의 미러 서버에 대해 네트워크 주소를 지정합니다. *next_hop_mirror_address*는 다음과 같은 형식으로 TCP/IP 주소를 지정합니다.  
+ 주 서버가 *next_hop_address* 에 있는 미러링된 쌍의 미러 서버에 대해 네트워크 주소를 지정합니다. *next_hop_mirror_address* 는 다음과 같은 형식으로 TCP/IP 주소를 지정합니다.  
   
  **TCP://** { *dns_name* | *netbios_name* | *ip_address* } **:** *port_number*  
   
- 지정된 *port_number*는 지정된 컴퓨터에서 [!INCLUDE[ssSB](../../includes/sssb-md.md)] 인스턴스의 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 엔드포인트의 포트 번호와 일치해야 합니다. 선택한 데이터베이스에서 다음 쿼리를 실행하여 얻을 수 있습니다.  
+ 지정된 *port_number* 는 지정된 컴퓨터에서 [!INCLUDE[ssSB](../../includes/sssb-md.md)] 인스턴스의 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 엔드포인트의 포트 번호와 일치해야 합니다. 선택한 데이터베이스에서 다음 쿼리를 실행하여 얻을 수 있습니다.  
   
 ```sql  
 SELECT tcpe.port  
@@ -126,7 +126,7 @@ INNER JOIN sys.service_broker_endpoints AS ssbe
 WHERE ssbe.name = N'MyServiceBrokerEndpoint';  
 ```  
   
- MIRROR_ADDRESS가 지정된 경로에는 SERVICE_NAME 절 및 BROKER_INSTANCE 절을 지정해야 합니다. **next_hop_address**가 **‘LOCAL’** 또는 *‘TRANSPORT’* 로 지정된 경로에는 미러 주소가 지정되지 않을 수 있습니다.  
+ MIRROR_ADDRESS가 지정된 경로에는 SERVICE_NAME 절 및 BROKER_INSTANCE 절을 지정해야 합니다. **next_hop_address** 가 **‘LOCAL’** 또는 *‘TRANSPORT’* 로 지정된 경로에는 미러 주소가 지정되지 않을 수 있습니다.  
   
 > [!NOTE]  
 >  포함된 데이터베이스에서는 이 옵션을 사용할 수 없습니다.  
@@ -136,7 +136,7 @@ WHERE ssbe.name = N'MyServiceBrokerEndpoint';
   
  ALTER ROUTE 명령에서 지정하지 않은 절은 변경되지 않은 상태로 유지됩니다. 따라서 경로를 변경하여 경로의 제한 시간이 초과되지 않거나, 경로가 서비스 이름과 일치하거나, 경로가 모든 broker 인스턴스와 일치하도록 지정할 수는 없습니다. 이러한 경로의 특성을 변경하려면 기존 경로를 삭제하고 새 정보로 새 경로를 만들어야 합니다.  
   
- 경로에 **next_hop_address**가 *‘TRANSPORT’* 로 지정되어 있으면 네트워크 주소는 서비스 이름의 네트워크 주소를 기준으로 결정됩니다. [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]는 *next_hop_address*에 유효한 형식의 네트워크 주소로 시작하는 서비스 이름을 처리할 수 있습니다. 유효한 네트워크 경로를 포함하는 이름의 서비스는 서비스 이름에 있는 네트워크 경로로 라우팅됩니다.  
+ 경로에 **next_hop_address** 가 *‘TRANSPORT’* 로 지정되어 있으면 네트워크 주소는 서비스 이름의 네트워크 주소를 기준으로 결정됩니다. [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]는 *next_hop_address* 에 유효한 형식의 네트워크 주소로 시작하는 서비스 이름을 처리할 수 있습니다. 유효한 네트워크 경로를 포함하는 이름의 서비스는 서비스 이름에 있는 네트워크 경로로 라우팅됩니다.  
   
  라우팅 테이블에는 동일한 서비스, 네트워크 주소 및 broker 인스턴스 식별자를 지정하는 경로가 여러 개일 수 있습니다. 이 경우 [!INCLUDE[ssSB](../../includes/sssb-md.md)]는 라우팅 테이블의 정보 중 대화에 지정된 정보와 가장 정확하게 일치하는 정보를 찾을 수 있도록 개발된 프로시저를 사용하여 경로를 선택합니다.  
   

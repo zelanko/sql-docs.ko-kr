@@ -16,13 +16,13 @@ helpviewer_keywords:
 ms.assetid: c001c2e7-d092-43d4-8fa6-693b3ec4c3ea
 author: VanMSFT
 ms.author: vanto
-monikerRange: '>=aps-pdw-2016||=azuresqldb-current||=azure-sqldw-latest||>=sql-server-2016||=sqlallproducts-allversions||>=sql-server-linux-2017||=azuresqldb-mi-current'
-ms.openlocfilehash: 1282bdd6c1bfb103a42336fc62289d1949bda07c
-ms.sourcegitcommit: 76d31f456982dabb226239b424eaa7139d8cc6c1
+monikerRange: '>=aps-pdw-2016||=azuresqldb-current||=azure-sqldw-latest||>=sql-server-2016||>=sql-server-linux-2017||=azuresqldb-mi-current'
+ms.openlocfilehash: 79ab625394abbc3d92a26a0a25093df4eadeaacd
+ms.sourcegitcommit: 1a544cf4dd2720b124c3697d1e62ae7741db757c
 ms.translationtype: HT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 09/15/2020
-ms.locfileid: "90570582"
+ms.lasthandoff: 12/14/2020
+ms.locfileid: "97438984"
 ---
 # <a name="grant-object-permissions-transact-sql"></a>GRANT 개체 사용 권한(Transact-SQL)
 [!INCLUDE [sql-asdb-asdbmi-asa-pdw](../../includes/applies-to-version/sql-asdb-asdbmi-asa-pdw.md)]
@@ -75,13 +75,13 @@ PRIVILEGES
  [!INCLUDE[vcpransi](../../includes/vcpransi-md.md)]-92 호환성을 위해 포함되었습니다. ALL의 동작을 변경하지 않습니다.  
   
 *column*  
- 사용 권한을 부여할 테이블, 뷰 또는 테이블 반환 함수의 열 이름을 지정합니다. 괄호 ( )가 필요합니다. SELECT, REFERENCES 및 UPDATE 사용 권한만 열에 대해 부여할 수 있습니다. *column*은 권한 절에 지정하거나 보안 이름 뒤에 지정할 수 있습니다.  
+ 사용 권한을 부여할 테이블, 뷰 또는 테이블 반환 함수의 열 이름을 지정합니다. 괄호 ( )가 필요합니다. SELECT, REFERENCES 및 UPDATE 사용 권한만 열에 대해 부여할 수 있습니다. *column* 은 권한 절에 지정하거나 보안 이름 뒤에 지정할 수 있습니다.  
   
 > [!CAUTION]  
 >  테이블 수준의 DENY는 열 수준의 GRANT보다 우선하지 않습니다. 사용 권한 계층에서의 이러한 불일치는 이전 버전과의 호환성을 위해 유지되었습니다.  
   
  ON [ OBJECT :: ] [ *schema_name* ] . *object_name*  
- 사용 권한을 거부할 개체를 지정합니다. *schema_name*을 지정한 경우 OBJECT 구는 선택 사항입니다. OBJECT 구가 사용된 경우 범위 한정자(::)가 필요합니다. *schema_name*을 지정하지 않은 경우 기본 스키마가 사용됩니다. *schema_name*을 지정하지 않은 경우 기본 스키마 범위 한정자(.)가 사용됩니다.  
+ 사용 권한을 거부할 개체를 지정합니다. *schema_name* 을 지정한 경우 OBJECT 구는 선택 사항입니다. OBJECT 구가 사용된 경우 범위 한정자(::)가 필요합니다. *schema_name* 을 지정하지 않은 경우 기본 스키마가 사용됩니다. *schema_name* 을 지정하지 않은 경우 기본 스키마 범위 한정자(.)가 사용됩니다.  
   
  TO \<database_principal>  
  사용 권한을 부여할 보안 주체를 지정합니다.  

@@ -13,13 +13,13 @@ ms.assetid: f8a98486-5438-44a8-b454-9e6ecbc74f83
 author: pmasl
 ms.author: pelopes
 ms.reviewer: mikeray
-monikerRange: =azuresqldb-current||>=sql-server-2016||=sqlallproducts-allversions||>=sql-server-linux-2017||=azuresqldb-mi-current
-ms.openlocfilehash: 347f59a7498e34ac1b99956990507559363813c0
-ms.sourcegitcommit: e700497f962e4c2274df16d9e651059b42ff1a10
+monikerRange: =azuresqldb-current||>=sql-server-2016||>=sql-server-linux-2017||=azuresqldb-mi-current
+ms.openlocfilehash: 501be7ed93ec7be0edd55d95bf7bd0b5bce229d8
+ms.sourcegitcommit: 1a544cf4dd2720b124c3697d1e62ae7741db757c
 ms.translationtype: HT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 08/17/2020
-ms.locfileid: "88493859"
+ms.lasthandoff: 12/14/2020
+ms.locfileid: "97460096"
 ---
 # <a name="create-and-manage-full-text-indexes"></a>전체 텍스트 인덱스 만들기 및 관리
 [!INCLUDE [SQL Server Azure SQL Database](../../includes/applies-to-version/sql-asdb.md)]
@@ -65,11 +65,11 @@ ms.locfileid: "88493859"
 ### <a name="view-the-properties-of-a-full-text-index-with-management-studio"></a>Management Studio를 사용하여 전체 텍스트 인덱스의 속성 보기 
 1.  Management Studio의 개체 탐색기에서 서버를 확장합니다.  
   
-2.  **데이터베이스**를 확장한 다음 전체 텍스트 인덱스가 포함된 데이터베이스를 확장합니다.  
+2.  **데이터베이스** 를 확장한 다음 전체 텍스트 인덱스가 포함된 데이터베이스를 확장합니다.  
   
-3.  **테이블**을 확장합니다.  
+3.  **테이블** 을 확장합니다.  
   
-4.  전체 텍스트 인덱스가 정의된 테이블을 마우스 오른쪽 단추로 클릭하고 **전체 텍스트 인덱스**를 선택한 다음 **전체 텍스트 인덱스** 상황에 맞는 메뉴에서 **속성**을 클릭합니다. 그러면 **전체 텍스트 인덱스 속성** 대화 상자가 열립니다.  
+4.  전체 텍스트 인덱스가 정의된 테이블을 마우스 오른쪽 단추로 클릭하고 **전체 텍스트 인덱스** 를 선택한 다음 **전체 텍스트 인덱스** 상황에 맞는 메뉴에서 **속성** 을 클릭합니다. 그러면 **전체 텍스트 인덱스 속성** 대화 상자가 열립니다.  
   
 5.  **페이지 선택** 창에서 다음 페이지 중 하나를 선택할 수 있습니다.  
   
@@ -77,7 +77,7 @@ ms.locfileid: "88493859"
     |----------|-----------------|  
     |**일반**|전체 텍스트 인덱스의 기본 속성을 표시합니다. 이러한 속성으로는 데이터베이스 이름, 테이블 이름 및 전체 텍스트 키 열의 이름과 같이 변경할 수 없는 많은 속성과 여러 가지 수정 가능한 속성이 있습니다. 수정 가능한 속성은 다음과 같습니다.<br /><br /> **전체 텍스트 인덱스 중지 목록**<br /><br /> **전체 텍스트 인덱싱 설정**<br /><br /> **변경 내용 추적**<br /><br /> **검색 속성 목록**|  
     |**열**|전체 텍스트 인덱싱에 사용할 수 있는 테이블 열을 표시합니다. 열을 선택하면 선택한 열이 전체 텍스트 인덱싱됩니다. 이때 전체 텍스트 인덱스에 포함하려는 만큼 사용 가능한 열을 선택할 수 있습니다. 자세한 내용은 [전체 텍스트 인덱스 채우기](populate-full-text-indexes.md)를 참조하세요.|
-    |**일정**|이 페이지를 사용하여 전체 텍스트 인덱스 채우기에 대한 증분 테이블 채우기를 시작하는 SQL Server 에이전트 작업의 일정을 만들거나 관리할 수 있습니다. 자세한 내용은 [전체 텍스트 인덱스 채우기](../../relational-databases/search/populate-full-text-indexes.md)를 참조하세요.<br /><br /> 참고: **전체 텍스트 인덱스 속성** 대화 상자를 닫으면 새로 만든 일정이 SQL Server 에이전트 작업에 연결됩니다(*database_name*.*table_name*에 대한 증분 테이블 채우기 시작).|  
+    |**일정**|이 페이지를 사용하여 전체 텍스트 인덱스 채우기에 대한 증분 테이블 채우기를 시작하는 SQL Server 에이전트 작업의 일정을 만들거나 관리할 수 있습니다. 자세한 내용은 [전체 텍스트 인덱스 채우기](../../relational-databases/search/populate-full-text-indexes.md)를 참조하세요.<br /><br /> 참고: **전체 텍스트 인덱스 속성** 대화 상자를 닫으면 새로 만든 일정이 SQL Server 에이전트 작업에 연결됩니다(*database_name*.*table_name* 에 대한 증분 테이블 채우기 시작).|  
   
 6.  변경 내용을 저장하고 **전체 텍스트 인덱스 속성** 대화 상자를 닫으려면 [!INCLUDE[clickOK](../../includes/clickok-md.md)]  
   
@@ -166,7 +166,7 @@ GO
  이 예에서는 Document 테이블의 고유 키 열 이름인 DocumentNode가 포함된 단일 행을 표시하는 `Unique Key Column`이라는 결과 집합 열을 반환합니다. 이 쿼리에 잘못된 인덱스 이름이 포함되어 있거나, 인덱스 이름이 테이블과 일치하지 않거나, 테이블이 존재하지 않는 경우에는 NULL이 반환됩니다.  
 
 ## <a name="index-varbinarymax-and-xml-columns"></a>varbinary(max) 및 xml 열 인덱싱  
- **varbinary(max)** , **varbinary**또는 **xml** 열이 전체 텍스트 인덱싱된 경우 다른 전체 텍스트 인덱싱된 열과 마찬가지로 전체 텍스트 조건자(CONTAINS 및 FREETEXT) 및 함수(CONTAINSTABLE 및 FREETEXTTABLE)를 사용하여 이러한 열을 쿼리할 수 있습니다.
+ **varbinary(max)** , **varbinary** 또는 **xml** 열이 전체 텍스트 인덱싱된 경우 다른 전체 텍스트 인덱싱된 열과 마찬가지로 전체 텍스트 조건자(CONTAINS 및 FREETEXT) 및 함수(CONTAINSTABLE 및 FREETEXTTABLE)를 사용하여 이러한 열을 쿼리할 수 있습니다.
    
 ### <a name="index-varbinarymax-or-varbinary-data"></a>varbinary(max) 또는 varbinary 데이터 인덱싱  
  단일 **varbinary(max)** 또는 **varbinary** 열에 많은 문서 유형을 저장할 수 있습니다. [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]에서는 필터가 설치되어 있고 운영 체제에서 사용할 수 있는 문서 유형을 지원합니다. 각 문서의 문서 유형은 문서의 파일 확장명으로 식별됩니다. 예를 들어 .doc 파일 확장명의 경우 전체 텍스트 검색은 Microsoft Word 문서를 지원하는 필터를 사용합니다. 사용 가능한 문서 유형의 목록을 보려면 [sys.fulltext_document_types](../../relational-databases/system-catalog-views/sys-fulltext-document-types-transact-sql.md) 카탈로그 뷰를 쿼리하세요.  
@@ -189,17 +189,17 @@ EXEC sp_fulltext_service @action='load_os_resources', @value=1
   
  전체 텍스트 인덱스가 있는 테이블에서 [!INCLUDE[ssManStudioFull](../../includes/ssmanstudiofull-md.md)]를 사용하여 테이블에서의 전체 텍스트 인덱싱을 수동으로 해제하거나 다시 설정할 수 있습니다.  
 
-1.  서버 그룹, **데이터베이스**를 차례로 확장한 다음 전체 텍스트 인덱싱을 설정할 테이블이 포함된 데이터베이스를 확장합니다.  
+1.  서버 그룹, **데이터베이스** 를 차례로 확장한 다음 전체 텍스트 인덱싱을 설정할 테이블이 포함된 데이터베이스를 확장합니다.  
   
-2.  **테이블**을 확장하고 전체 텍스트 인덱싱을 해제하거나 다시 설정할 테이블을 마우스 오른쪽 단추로 클릭합니다.  
+2.  **테이블** 을 확장하고 전체 텍스트 인덱싱을 해제하거나 다시 설정할 테이블을 마우스 오른쪽 단추로 클릭합니다.  
   
-3.  **전체 텍스트 인덱스**를 선택한 다음 **전체 텍스트 인덱스 사용 안 함** 또는 **전체 텍스트 인덱스 사용**을 클릭합니다.  
+3.  **전체 텍스트 인덱스** 를 선택한 다음 **전체 텍스트 인덱스 사용 안 함** 또는 **전체 텍스트 인덱스 사용** 을 클릭합니다.  
   
 ##  <a name="remove-a-full-text-index-from-a-table"></a><a name="remove"></a> 테이블에서 전체 텍스트 인덱스 제거  
   
 1.  개체 탐색기에서 삭제할 전체 텍스트 인덱스가 포함된 테이블을 마우스 오른쪽 단추로 클릭합니다.  
   
-2.  **전체 텍스트 인덱스 삭제**를 선택합니다.  
+2.  **전체 텍스트 인덱스 삭제** 를 선택합니다.  
   
 3.  전체 텍스트 인덱스를 삭제할 것인지 확인하는 메시지가 표시되면 **확인** 을 클릭합니다.  
   

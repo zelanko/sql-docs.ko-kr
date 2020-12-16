@@ -14,14 +14,14 @@ ms.assetid: ab0d799c-ba79-4459-837b-c4862730dafd
 author: pmasl
 ms.author: pelopes
 ms.reviewer: mikeray
-monikerRange: =azuresqldb-current||>=sql-server-2016||=sqlallproducts-allversions||>=sql-server-linux-2017||=azuresqldb-mi-current
+monikerRange: =azuresqldb-current||>=sql-server-2016||>=sql-server-linux-2017||=azuresqldb-mi-current
 ms.custom: seo-lt-2019
-ms.openlocfilehash: edfea50f0970f9d868ec36fe80d5ecc18c0e4a8d
-ms.sourcegitcommit: e700497f962e4c2274df16d9e651059b42ff1a10
+ms.openlocfilehash: 509a3fccabcacaf6429ed324756d2a6f13f06867
+ms.sourcegitcommit: 1a544cf4dd2720b124c3697d1e62ae7741db757c
 ms.translationtype: HT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 08/17/2020
-ms.locfileid: "88493830"
+ms.lasthandoff: 12/14/2020
+ms.locfileid: "97460076"
 ---
 # <a name="deprecated-full-text-search-features-in-sql-server-2016"></a>SQL Server 2016에서 사용되지 않는 전체 텍스트 검색 기능
 [!INCLUDE [SQL Server Azure SQL Database](../../includes/applies-to-version/sql-asdb.md)]
@@ -57,6 +57,6 @@ ms.locfileid: "88493830"
 |sp_detach_db 옵션:<br /><br /> [ @keepfulltextindexfile = ] '*KeepFulltextIndexFile*'|없음|sp_detach_db @keepfulltextindexfile|226|  
 |sp_fulltext_service 동작 값: resource_usage는 아무 기능도 수행하지 않습니다.|None|sp_fulltext_service @action=resource_usage|200|  
   
- &#42;**SQL Server:Deprecated Features** 개체는 CREATE FULLTEXT CATLOG ON FILEGROUP *filegroup*의 발생을 모니터링하지 않습니다.  
+ &#42;**SQL Server:Deprecated Features** 개체는 CREATE FULLTEXT CATLOG ON FILEGROUP *filegroup* 의 발생을 모니터링하지 않습니다.  
   
   

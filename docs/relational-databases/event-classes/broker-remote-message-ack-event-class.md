@@ -12,13 +12,13 @@ helpviewer_keywords:
 ms.assetid: 3d67efe1-74b4-4633-b029-c6e05b19f4dc
 author: stevestein
 ms.author: sstein
-monikerRange: '>=sql-server-2016||=sqlallproducts-allversions||>=sql-server-linux-2017||=azuresqldb-mi-current'
-ms.openlocfilehash: 101aa4fd73e3481be1f98f4951561a3bf455dfe6
-ms.sourcegitcommit: e700497f962e4c2274df16d9e651059b42ff1a10
+monikerRange: '>=sql-server-2016||>=sql-server-linux-2017||=azuresqldb-mi-current'
+ms.openlocfilehash: 267a6d69aef5b9ea9c43593561254b840d453047
+ms.sourcegitcommit: 1a544cf4dd2720b124c3697d1e62ae7741db757c
 ms.translationtype: HT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 08/17/2020
-ms.locfileid: "88330749"
+ms.lasthandoff: 12/14/2020
+ms.locfileid: "97440065"
 ---
 # <a name="brokerremote-message-ack-event-class"></a>Broker:Remote Message Ack 이벤트 클래스
 
@@ -35,7 +35,7 @@ ms.locfileid: "88330749"
 |**BigintData2**|**bigint**|메시지의 시퀀스 번호를 인식하고 있습니다.|53|아니요|  
 |**ClientProcessID**|**int**|클라이언트 애플리케이션이 실행 중인 프로세스에 대해 호스트 컴퓨터가 할당한 ID입니다. 클라이언트가 클라이언트 프로세스 ID를 제공하면 이 데이터 열이 채워집니다.|9|예|  
 |**DatabaseID**|**int**|USE *database* 문에서 지정된 데이터베이스의 ID입니다. 지정된 인스턴스에 대해 USE *database* 문이 실행되지 않은 경우 기본 데이터베이스의 ID입니다. [!INCLUDE[ssSqlProfiler](../../includes/sssqlprofiler-md.md)] ServerName **데이터 열이 추적에서 캡처되고 서버를 사용할 수 있으면** 에 데이터베이스 이름이 표시됩니다. DB_ID 함수를 사용하여 데이터베이스의 값을 확인할 수 있습니다.|3|예|  
-|**EventClass**|**int**|캡처된 이벤트 클래스 유형입니다. **Broker:Message Ack** 의 경우 항상 **149**입니다.|27|예|  
+|**EventClass**|**int**|캡처된 이벤트 클래스 유형입니다. **Broker:Message Ack** 의 경우 항상 **149** 입니다.|27|예|  
 |**EventSequence**|**int**|이 이벤트의 시퀀스 번호입니다.|51|예|  
 |**EventSubClass**|**nvarchar**|각 이벤트 클래스에 대한 자세한 정보를 제공하는 이벤트 하위 클래스 유형입니다. 이 열에는 다음 값이 포함될 수 있습니다.<br /><br /> **승인 포함 메시지 전송**:<br />                    [!INCLUDE[ssSB](../../includes/sssb-md.md)] 가 일반 시퀀스 메시지의 일부로 승인을 보냈습니다.<br /><br /> **승인 전송**:<br />                    [!INCLUDE[ssSB](../../includes/sssb-md.md)] 가 일반 시퀀스 메시지의 외부로 승인을 보냈습니다.<br /><br /> **승인 포함 메시지 수신**:<br />                  [!INCLUDE[ssSB](../../includes/sssb-md.md)] 가 일반 시퀀스 메시지의 일부로 승인을 받았습니다.<br /><br /> **승인 수신**:<br />                  [!INCLUDE[ssSB](../../includes/sssb-md.md)] 가 시퀀스 메시지의 외부로 승인을 받았습니다.|21|예|  
 |**GUID**|**uniqueidentifier**|대화 상자의 대화 ID입니다. 이 식별자는 메시지의 일부로 전송되며 양쪽 대화 상대 간에 공유합니다.|54|예|  
@@ -48,7 +48,7 @@ ms.locfileid: "88330749"
 |**NTDomainName**|**nvarchar**|사용자가 속한 Windows 도메인입니다.|7|예|  
 |**NTUserName**|**nvarchar**|이 이벤트를 생성한 연결을 소유하고 있는 사용자의 이름입니다.|6|예|  
 |**우선 순위**|**int**|대화의 우선 순위 수준입니다.|5|예|  
-|**RoleName**|**nvarchar**|메시지를 승인하는 인스턴스의 역할입니다. 이 역할은 **시작자** 또는 **대상**입니다.|38|예|  
+|**RoleName**|**nvarchar**|메시지를 승인하는 인스턴스의 역할입니다. 이 역할은 **시작자** 또는 **대상** 입니다.|38|예|  
 |**데이터 열이 추적에서 캡처되고 서버를 사용할 수 있으면**|**nvarchar**|추적되는 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 인스턴스의 이름입니다.|26|예|  
 |**SPID**|**int**|[!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 가 클라이언트와 관련된 프로세스에 할당한 서버 프로세스 ID입니다.|12|예|  
 |**StartTime**|**datetime**|이벤트가 시작된 시간입니다(사용 가능한 경우).|14|예|  
