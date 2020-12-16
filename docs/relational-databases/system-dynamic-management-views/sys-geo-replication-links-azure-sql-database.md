@@ -18,12 +18,12 @@ ms.assetid: 58911798-1d60-4f28-87ab-2def2bfc3de7
 author: markingmyname
 ms.author: maghan
 monikerRange: = azuresqldb-current
-ms.openlocfilehash: 12adf94f84fbe9c1b47093cf8ab6b106fb9d5249
-ms.sourcegitcommit: 1a544cf4dd2720b124c3697d1e62ae7741db757c
+ms.openlocfilehash: c69b375ae55f8d7a4d76c4c619f9c9afe1d50def
+ms.sourcegitcommit: 86534989f7827f1c36ed1333ad9c4557dfd77f3d
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 12/14/2020
-ms.locfileid: "97440668"
+ms.lasthandoff: 12/15/2020
+ms.locfileid: "97515368"
 ---
 # <a name="sysgeo_replication_links-azure-sql-database"></a>sys.geo_replication_links(Azure SQL Database)
 
@@ -34,8 +34,8 @@ ms.locfileid: "97440668"
 |열 이름|데이터 형식|Description|  
 |-----------------|---------------|-----------------|  
 |database_id|**int**|현재 데이터베이스의 ID입니다.|  
-|start_date|**datetimeoffset**|데이터베이스 복제가 시작 된 경우 지역 SQL Database 데이터 센터의 UTC 시간|  
-|modify_date|**datetimeoffset**|데이터베이스 지역에서 복제가 완료 된 경우 지역 SQL Database 데이터 센터의 UTC 시간입니다. 새 데이터베이스는이 시간 동안 주 데이터베이스와 동기화 됩니다. .|  
+|start_date|**datetimeoffset**|데이터베이스 복제가 시작 된 경우 지역 SQL Database 데이터 센터의 UTC 시간입니다.|  
+|modify_date|**datetimeoffset**|데이터베이스 지역에서 복제가 완료 된 경우 지역 SQL Database 데이터 센터의 UTC 시간입니다. 새 데이터베이스는이 시간 동안 주 데이터베이스와 동기화 됩니다.|  
 |link_guid|**uniqueidentifier**|지역에서 복제 링크의 고유 ID입니다.|  
 |partner_server|**sysname**|지역에서 복제 된 데이터베이스를 포함 하는 SQL Database 서버의 이름입니다.|  
 |partner_database|**sysname**|연결 된 SQL Database 서버에서 지역에서 복제 된 데이터베이스의 이름입니다.|  
@@ -50,7 +50,7 @@ ms.locfileid: "97440668"
 
 이 뷰는 **master** 데이터베이스에서 서버 수준 보안 주체 로그인에 대해서만 사용할 수 있습니다.  
   
-## <a name="example"></a>예
+## <a name="example"></a>예제
 
 지역에서 복제 링크를 사용 하 여 모든 데이터베이스를 표시 합니다.  
 

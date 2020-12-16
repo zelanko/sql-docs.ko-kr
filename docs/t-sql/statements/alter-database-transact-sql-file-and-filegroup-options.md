@@ -43,13 +43,13 @@ helpviewer_keywords:
 ms.assetid: 1f635762-f7aa-4241-9b7a-b51b22292b07
 author: markingmyname
 ms.author: maghan
-monikerRange: =azuresqldb-mi-current||>=sql-server-2016||=sqlallproducts-allversions||>=sql-server-linux-2017
-ms.openlocfilehash: d749835aa5a71aa99cd0f8f417b7e0ace68b467f
-ms.sourcegitcommit: d35d0901296580bfceda6e0ab2e14cf2b7e99a0f
+monikerRange: =azuresqldb-mi-current||>=sql-server-2016||>=sql-server-linux-2017
+ms.openlocfilehash: ec951a21f6d228fad6104faadb767e379e4efcec
+ms.sourcegitcommit: 3bd188e652102f3703812af53ba877cce94b44a9
 ms.translationtype: HT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 10/24/2020
-ms.locfileid: "92496867"
+ms.lasthandoff: 12/15/2020
+ms.locfileid: "97490023"
 ---
 # <a name="alter-database-transact-sql-file-and-filegroup-options"></a>ALTER DATABASE(Transact-SQL) 파일 및 파일 그룹 옵션
 
@@ -59,7 +59,7 @@ ms.locfileid: "92496867"
 
 [!INCLUDE[select-product](../../includes/select-product.md)]
 
-::: moniker range=">=sql-server-2016||>=sql-server-linux-2017||=sqlallproducts-allversions"
+::: moniker range=">=sql-server-2016||>=sql-server-linux-2017"
 
 :::row:::
     :::column:::
@@ -139,7 +139,7 @@ REMOVE FILE *logical_file_name*[!INCLUDE[ssNoVersion](../../includes/ssnoversion
 *logical_file_name* 파일 참조 시 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]에서 사용하는 논리적 이름입니다.
 
 > [!WARNING]
-> `FILE_SNAPSHOT` 백업과 연결된 데이터베이스 파일을 제거하는 것은 성공하지만 연결된 스냅샷은 데이터베이스 파일을 참조하는 백업이 무효화되는 것을 방지하기 위해 삭제되지 않습니다. 파일은 잘라지지만 FILE_SNAPSHOT 백업을 그대로 유지하기 위해 물리적으로 삭제되지는 않습니다. 자세한 내용은 [Microsoft Azure Blob Storage 서비스로 SQL Server 백업 및 복원](../../relational-databases/backup-restore/sql-server-backup-and-restore-with-microsoft-azure-blob-storage-service.md)을 참조하세요. **적용 대상** : [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]( [!INCLUDE[ssSQL15](../../includes/sssql15-md.md)] 이상).
+> `FILE_SNAPSHOT` 백업과 연결된 데이터베이스 파일을 제거하는 것은 성공하지만 연결된 스냅샷은 데이터베이스 파일을 참조하는 백업이 무효화되는 것을 방지하기 위해 삭제되지 않습니다. 파일은 잘라지지만 FILE_SNAPSHOT 백업을 그대로 유지하기 위해 물리적으로 삭제되지는 않습니다. 자세한 내용은 [Microsoft Azure Blob Storage 서비스로 SQL Server 백업 및 복원](../../relational-databases/backup-restore/sql-server-backup-and-restore-with-microsoft-azure-blob-storage-service.md)을 참조하세요. **적용 대상**: [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]( [!INCLUDE[ssSQL15](../../includes/sssql15-md.md)] 이상).
 
 MODIFY FILE 수정할 파일을 지정합니다. \<filespec> 속성은 한 번에 한 개씩만 변경할 수 있습니다. 수정할 파일을 식별하려면 \<filespec>에 항상 NAME을 지정해야 합니다. SIZE를 지정할 경우 새 크기가 현재 파일 크기보다 커야 합니다.
 
@@ -221,7 +221,7 @@ KB, MB, GB 및 TB 접미사를 사용하여 각각 킬로바이트, 메가바이
 > - 파일에 대해 UNC 경로가 지정된 경우
 > - `FILESTREAM` 및 `MEMORY_OPTIMIZED_DATA` 파일 그룹의 경우
 
-MAXSIZE { *max_size* | UNLIMITED } 파일을 확장할 수 있는 최대 파일 크기를 지정합니다.
+MAXSIZE { *max_size*| UNLIMITED } 파일을 확장할 수 있는 최대 파일 크기를 지정합니다.
 
 *max_size* 최대 파일 크기입니다. KB, MB, GB 및 TB 접미사를 사용하여 각각 킬로바이트, 메가바이트, 기가바이트, 테라바이트를 지정할 수 있습니다. 기본값은 MB입니다. 소수점을 포함하지 않은 정수를 지정합니다. *max_size* 를 지정하지 않으면 디스크가 꽉 찰 때까지 파일 크기가 늘어납니다.
 
@@ -269,11 +269,11 @@ CONTAINS FILESTREAM 파일 그룹이 FILESTREAM BLOB(Binary Large Object)을 파
 
 CONTAINS MEMORY_OPTIMIZED_DATA
 
-**적용 대상** : [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]( [!INCLUDE[ssSQL14](../../includes/sssql14-md.md)] 이상)
+**적용 대상**: [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]( [!INCLUDE[ssSQL14](../../includes/sssql14-md.md)] 이상)
 
 파일 그룹이 메모리 액세스에 최적화된 데이터를 파일 시스템에 저장하도록 지정합니다. 자세한 내용은 [메모리 내 OLTP - 메모리 내 최적화](../../relational-databases/in-memory-oltp/in-memory-oltp-in-memory-optimization.md)를 참조하세요. 데이터베이스당 하나의 `MEMORY_OPTIMIZED_DATA` 파일 그룹만 허용됩니다. 메모리 액세스에 최적화된 테이블을 만들기 위해서는 파일 그룹을 비워 둘 수 없습니다. 적어도 한 개의 파일이 있어야 합니다. *filegroup_name* 은 경로를 참조합니다. 따라서 마지막 폴더 바로 위의 경로까지 있어야 하고 마지막 폴더 자체는 있으면 안 됩니다.
 
-REMOVE FILEGROUP *filegroup_name* 데이터베이스에서 파일 그룹을 제거합니다. 파일 그룹은 비어 있어야 제거할 수 있습니다. 먼저 파일 그룹에서 모든 파일을 제거합니다. 자세한 내용은 이 토픽의 앞부분에 나오는 "REMOVE FILE *logical_file_name* "을 참조하세요.
+REMOVE FILEGROUP *filegroup_name* 데이터베이스에서 파일 그룹을 제거합니다. 파일 그룹은 비어 있어야 제거할 수 있습니다. 먼저 파일 그룹에서 모든 파일을 제거합니다. 자세한 내용은 이 토픽의 앞부분에 나오는 "REMOVE FILE *logical_file_name*"을 참조하세요.
 
 > [!NOTE]
 > FILESTREAM 가비지 수집기가 FILESTREAM 컨테이너에서 모든 파일을 제거하지 않은 경우 FILESTREAM 컨테이너를 제거하기 위한 `ALTER DATABASE REMOVE FILE` 작업이 실패하고 오류를 반환합니다. 이 항목의 뒷부분에 나오는 [FILESTREAM 컨테이너 제거](#removing-a-filestream-container) 섹션을 참조하세요.
@@ -286,13 +286,13 @@ DEFAULT 기본 데이터베이스 파일 그룹을 *filegroup_name* 으로 변�
 
 NAME = *new_filegroup_name* 파일 그룹 이름을 *new_filegroup_name* 으로 변경합니다.
 
-AUTOGROW_SINGLE_FILE **적용 대상** : [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]([!INCLUDE[ssSQL15](../../includes/sssql15-md.md)] 이상)
+AUTOGROW_SINGLE_FILE **적용 대상**: [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]([!INCLUDE[ssSQL15](../../includes/sssql15-md.md)] 이상)
 
 파일 그룹의 파일이 자동 증가 임계값을 충족하면 해당 파일만이 증가합니다. 이것이 기본값입니다.
 
 AUTOGROW_ALL_FILES
 
-**적용 대상** : [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]( [!INCLUDE[ssSQL15](../../includes/sssql15-md.md)] 이상)
+**적용 대상**: [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]( [!INCLUDE[ssSQL15](../../includes/sssql15-md.md)] 이상)
 
 파일 그룹의 파일이 자동 증가 임계값을 충족하면 파일 그룹의 모든 파일이 커집니다.
 
@@ -664,7 +664,7 @@ GO
 
 ## <a name="see-also"></a>참고 항목
 
-- [CREATE DATABASE](../../t-sql/statements/create-database-transact-sql.md?view=sql-server-2017)
+- [CREATE DATABASE](../../t-sql/statements/create-database-transact-sql.md)
 - [DATABASEPROPERTYEX](../../t-sql/functions/databasepropertyex-transact-sql.md)
 - [DROP DATABASE](../../t-sql/statements/drop-database-transact-sql.md)
 - [sp_spaceused](../../relational-databases/system-stored-procedures/sp-spaceused-transact-sql.md)
@@ -679,11 +679,11 @@ GO
 - [데이터베이스 파일 초기화](../../relational-databases/databases/database-instant-file-initialization.md)
 
 ::: moniker-end
-::: moniker range="=azuresqldb-mi-current||=sqlallproducts-allversions"
+::: moniker range="=azuresqldb-mi-current"
 
 :::row:::
     :::column:::
-        [SQL Server](alter-database-transact-sql-file-and-filegroup-options.md?view=sql-server-2017)
+        [SQL Server](alter-database-transact-sql-file-and-filegroup-options.md?view=sql-server-ver15&preserve-view=true)
     :::column-end:::
     :::column:::
         **_\* SQL Managed Instance \*_**<br />&nbsp;
@@ -780,7 +780,7 @@ ADD FILE과 함께 지정할 경우 *size* 는 파일의 초기 크기입니다.
 
 KB, MB, GB 및 TB 접미사를 사용하여 각각 킬로바이트, 메가바이트, 기가바이트, 테라바이트를 지정할 수 있습니다. 기본값은 MB입니다. 소수점을 포함하지 않은 정수를 지정합니다. 소수로 된 MB 값을 지정하려면 1024를 곱하여 값을 KB로 변환합니다. 예를 들어 1.5MB인 경우 1536KB(1.5 x 1024 = 1536)를 지정합니다.
 
-MAXSIZE { *max_size* | UNLIMITED } 파일을 확장할 수 있는 최대 파일 크기를 지정합니다.
+MAXSIZE { *max_size*| UNLIMITED } 파일을 확장할 수 있는 최대 파일 크기를 지정합니다.
 
 *max_size* 최대 파일 크기입니다. KB, MB, GB 및 TB 접미사를 사용하여 각각 킬로바이트, 메가바이트, 기가바이트, 테라바이트를 지정할 수 있습니다. 기본값은 MB입니다. 소수점을 포함하지 않은 정수를 지정합니다. *max_size* 를 지정하지 않으면 디스크가 꽉 찰 때까지 파일 크기가 늘어납니다.
 
@@ -813,7 +813,7 @@ GO
 ALTER DATABASE sql_db_mi ADD FILE (NAME='sql_db_mi_mod') TO FILEGROUP sql_db_mi_fg;
 ```
 
-REMOVE FILEGROUP *filegroup_name* 데이터베이스에서 파일 그룹을 제거합니다. 파일 그룹은 비어 있어야 제거할 수 있습니다. 먼저 파일 그룹에서 모든 파일을 제거합니다. 자세한 내용은 이 토픽의 앞부분에 나오는 "REMOVE FILE *logical_file_name* "을 참조하세요.
+REMOVE FILEGROUP *filegroup_name* 데이터베이스에서 파일 그룹을 제거합니다. 파일 그룹은 비어 있어야 제거할 수 있습니다. 먼저 파일 그룹에서 모든 파일을 제거합니다. 자세한 내용은 이 토픽의 앞부분에 나오는 "REMOVE FILE *logical_file_name*"을 참조하세요.
 
 MODIFY FILEGROUP _filegroup\_name_ { \<filegroup_updatability_option> | DEFAULT | NAME **=** _new\_filegroup\_name_ } 파일 그룹 상태를 READ_ONLY 또는 READ_WRITE로 설정하고 파일 그룹을 데이터베이스에 대한 기본 파일 그룹으로 설정하거나 파일 그룹 이름을 바꿔 파일 그룹을 수정합니다.
 

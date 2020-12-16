@@ -48,12 +48,12 @@ helpviewer_keywords:
 ms.assetid: 1e068443-b9ea-486a-804f-ce7b6e048e8b
 author: markingmyname
 ms.author: maghan
-ms.openlocfilehash: a6b0e958439025019e51bac7edb103febfe6409a
-ms.sourcegitcommit: 36fe62a3ccf34979bfde3e192cfa778505add465
+ms.openlocfilehash: 9fb4195047df5e996cbef4a3fbceb1367172df6b
+ms.sourcegitcommit: 3bd188e652102f3703812af53ba877cce94b44a9
 ms.translationtype: HT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 11/11/2020
-ms.locfileid: "94521172"
+ms.lasthandoff: 12/15/2020
+ms.locfileid: "97490083"
 ---
 # <a name="create-table-transact-sql"></a>CREATE TABLE(Transact-SQL)
 
@@ -420,7 +420,7 @@ ON 및 `TEXTIMAGE_ON`과 마찬가지로 `FILESTREAM_ON`에 대해 `CREATE TABLE
 - [CREATE INDEX](../../t-sql/statements/create-index-transact-sql.md) 문은 힙을 클러스터형 인덱스로 변환합니다. 이 경우 다른 FILESTREAM 파일 그룹, 파티션 구성표 또는 NULL을 지정할 수 있습니다.
 - [DROP INDEX](../../t-sql/statements/drop-index-transact-sql.md) 문은 클러스터형 인덱스를 힙으로 변환합니다. 이 경우 다른 FILESTREAM 파일 그룹, 파티션 구성표 또는 **"default"** 를 지정할 수 있습니다.
 
-`FILESTREAM_ON <filegroup>` 절의 파일 그룹이나 파티션 구성표에 명명되어 있는 각 FILESTREAM 파일 그룹에는 파일 그룹에 대해 정의된 파일이 하나 포함되어 있어야 합니다. 이 파일은 [CREATE DATABASE](../../t-sql/statements/create-database-transact-sql.md?view=sql-server-2017) 또는 [ALTER DATABASE](../../t-sql/statements/alter-database-transact-sql.md) 문을 사용하여 정의해야 합니다. 그러지 않으면 오류가 발생합니다.
+`FILESTREAM_ON <filegroup>` 절의 파일 그룹이나 파티션 구성표에 명명되어 있는 각 FILESTREAM 파일 그룹에는 파일 그룹에 대해 정의된 파일이 하나 포함되어 있어야 합니다. 이 파일은 [CREATE DATABASE](../../t-sql/statements/create-database-transact-sql.md) 또는 [ALTER DATABASE](../../t-sql/statements/alter-database-transact-sql.md) 문을 사용하여 정의해야 합니다. 그러지 않으면 오류가 발생합니다.
 
 관련 FILESTREAM 항목은 [BLOB(Binary Large Object) - Blob 데이터](../../relational-databases/blob/binary-large-object-blob-data-sql-server.md)를 참조하세요.
 

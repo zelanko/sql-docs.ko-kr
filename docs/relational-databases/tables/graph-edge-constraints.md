@@ -16,13 +16,13 @@ helpviewer_keywords:
 - SQL Graph
 author: shkale-msft
 ms.author: shkale
-monikerRange: '>=sql-server-2017||=sqlallproducts-allversions||>=sql-server-linux-2017||=azuresqldb-mi-current||=azuresqldb-current'
-ms.openlocfilehash: 6f1075c6128ae040b3f2b0cb80c167d77aca89e0
-ms.sourcegitcommit: e700497f962e4c2274df16d9e651059b42ff1a10
+monikerRange: '>=sql-server-2017||>=sql-server-linux-2017||=azuresqldb-mi-current||=azuresqldb-current'
+ms.openlocfilehash: c74b5d0f91e1a6bdcf54df1bf00e60d4ff7a72cd
+ms.sourcegitcommit: 3bd188e652102f3703812af53ba877cce94b44a9
 ms.translationtype: HT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 08/17/2020
-ms.locfileid: "88419027"
+ms.lasthandoff: 12/15/2020
+ms.locfileid: "97490103"
 ---
 # <a name="edge-constraints"></a>에지 제약 조건
 
@@ -190,7 +190,7 @@ GO
 ALTER TABLE bought ADD CONSTRAINT EC_BOUGHT1 CONNECTION (Customer TO Product, Supplier TO Product);
 ```  
 
-앞의 예제에서 *EC_BOUGHT1* 제약 조건에는 2개의 에지 제약 조건 절이 있습니다. 하나는 **Customer**를 **Product**에 연결하는 절이고 다른 하나는 **Supplier**를 **Product**에 연결하는 절입니다. 이러한 두 절은 따로 적용됩니다. 즉, 지정된 에지가 에지 테이블에서 허용되려면 이러한 두 절 중 하나를 만족해야 합니다.
+앞의 예제에서 *EC_BOUGHT1* 제약 조건에는 2개의 에지 제약 조건 절이 있습니다. 하나는 **Customer** 를 **Product** 에 연결하는 절이고 다른 하나는 **Supplier** 를 **Product** 에 연결하는 절입니다. 이러한 두 절은 따로 적용됩니다. 즉, 지정된 에지가 에지 테이블에서 허용되려면 이러한 두 절 중 하나를 만족해야 합니다.
 
 #### <a name="creating-a-new-edge-constraint-on-existing-edge-table-with-new-edge-constraint-clause"></a>새 에지 제약 조건 절을 사용하여 기존 에지 테이블에 새 에지 제약 조건 만들기
 
@@ -229,7 +229,7 @@ GO
 ALTER TABLE bought ADD CONSTRAINT EC_BOUGHT1 CONNECTION (Supplier TO Product);
  ```  
 
-앞의 예제에서는 **bought** 에지 테이블에 별도의 두 에지 제약 조건 *EC_BOUGHT* 및 *EC_BOUGHT1*을 만들었습니다. 이러한 두 에지 제약 조건은 서로 다른 에지 제약 조건 절을 포함합니다. 에지 테이블에 둘 이상의 에지 제약 조건이 지정될 경우 지정된 에지가 에지 테이블에서 허용되려면 **모든** 에지 테이블을 만족해야 합니다. 에지가 *EC_BOUGHT* 및 *EC_BOUGHT1*을 둘 다 만족할 수는 없으므로 **bought** 에지 테이블은 비어 있어야 합니다.
+앞의 예제에서는 **bought** 에지 테이블에 별도의 두 에지 제약 조건 *EC_BOUGHT* 및 *EC_BOUGHT1* 을 만들었습니다. 이러한 두 에지 제약 조건은 서로 다른 에지 제약 조건 절을 포함합니다. 에지 테이블에 둘 이상의 에지 제약 조건이 지정될 경우 지정된 에지가 에지 테이블에서 허용되려면 **모든** 에지 테이블을 만족해야 합니다. 에지가 *EC_BOUGHT* 및 *EC_BOUGHT1* 을 둘 다 만족할 수는 없으므로 **bought** 에지 테이블은 비어 있어야 합니다.
 
 이 에지 테이블에 성공적으로 삽입하려면 에지 제약 조건 중 하나를 삭제하거나 두 조건을 모두 삭제한 후 두 에지 제약 조건 절이 있는 새 에지 제약 조건을 만들어야 합니다.
 
@@ -243,7 +243,7 @@ ALTER TABLE bought ADD CONSTRAINT EC_BOUGHT_NEW CONNECTION (Customer TO Product,
 GO
 ```  
 
-지정된 에지가 **bought** 에지에서 허용되려면 *EC_BOUGHT_NEW* 제약 조건의 에지 제약 조건 절 중 하나를 만족하면 됩니다. 따라서 유효한 **Customer**를 **Product**에 연결하거나 **Supplier**를 **Product**에 연결하려고 하는 모든 에지가 허용됩니다.
+지정된 에지가 **bought** 에지에서 허용되려면 *EC_BOUGHT_NEW* 제약 조건의 에지 제약 조건 절 중 하나를 만족하면 됩니다. 따라서 유효한 **Customer** 를 **Product** 에 연결하거나 **Supplier** 를 **Product** 에 연결하려고 하는 모든 에지가 허용됩니다.
 
 ### <a name="delete-edge-constraints"></a>에지 제약 조건 삭제
 
@@ -343,5 +343,4 @@ WHERE EC.parent_object_id = object_id('bought');
 [CREATE TABLE(SQL 그래프)](../../t-sql/statements/create-table-sql-graph.md)  
 [ALTER TABLE table_constraint](../../t-sql/statements/alter-table-table-constraint-transact-sql.md)  
 
-SQL Server의 그래프 기술에 대한 자세한 내용은 [SQL Server 및 Azure SQL Database를 사용한 Graph 처리](../graphs/sql-graph-overview.md?view=sql-server-2017)를 참조하세요.
-
+SQL Server의 그래프 기술에 대한 자세한 내용은 [SQL Server 및 Azure SQL Database를 사용한 Graph 처리](../graphs/sql-graph-overview.md)를 참조하세요.
