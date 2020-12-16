@@ -14,13 +14,13 @@ helpviewer_keywords:
 ms.assetid: 1d3a3525-0bc5-466f-b097-5359dc74432d
 author: MashaMSFT
 ms.author: mathoma
-monikerRange: =azuresqldb-mi-current||>=sql-server-2016||=sqlallproducts-allversions
-ms.openlocfilehash: 58d5393e95c1ab12d2815799a25267ea4c84958c
-ms.sourcegitcommit: c8e1553ff3fdf295e8dc6ce30d1c454d6fde8088
+monikerRange: =azuresqldb-mi-current||>=sql-server-2016
+ms.openlocfilehash: 060b584629a93e1cc56091ee565f8f9a0ae26d93
+ms.sourcegitcommit: 1a544cf4dd2720b124c3697d1e62ae7741db757c
 ms.translationtype: HT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 07/22/2020
-ms.locfileid: "86914607"
+ms.lasthandoff: 12/14/2020
+ms.locfileid: "97468964"
 ---
 # <a name="publish-execution-of-stored-procedure-in-transactional-publication"></a>트랜잭션 게시에서 저장 프로시저 실행 게시
 [!INCLUDE[sql-asdbmi](../../../includes/applies-to-version/sql-asdbmi.md)]
@@ -32,7 +32,7 @@ ms.locfileid: "86914607"
   
 1.  새 게시 마법사의 **아티클** 페이지 또는 **게시 속성 - \<Publication>** 대화 상자에서 저장 프로시저를 선택합니다.  
   
-2.  **아티클 속성**을 클릭한 다음 **선택한 저장 프로시저 아티클 속성 설정**을 클릭합니다.  
+2.  **아티클 속성** 을 클릭한 다음 **선택한 저장 프로시저 아티클 속성 설정** 을 클릭합니다.  
   
 3.  **아티클 속성 - \<Article>** 대화 상자의 **복제** 옵션에 다음 값 중 하나를 지정합니다.  
   
@@ -44,7 +44,7 @@ ms.locfileid: "86914607"
   
 4.  [!INCLUDE[clickOK](../../../includes/clickok-md.md)]  
   
-5.  **게시 속성 - \<Publication>** 대화 상자에서 **확인**을 클릭하여 저장하고 대화 상자를 닫습니다.  
+5.  **게시 속성 - \<Publication>** 대화 상자에서 **확인** 을 클릭하여 저장하고 대화 상자를 닫습니다.  
   
 ## <a name="see-also"></a>참고 항목  
  [트랜잭션 복제에서 저장 프로시저 실행 게시](../../../relational-databases/replication/transactional/publishing-stored-procedure-execution-in-transactional-replication.md)  

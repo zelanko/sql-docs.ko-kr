@@ -14,13 +14,13 @@ helpviewer_keywords:
 ms.assetid: cd99ef56-9085-431a-a0fc-58e7add5399f
 author: stevestein
 ms.author: sstein
-monikerRange: '>=aps-pdw-2016||=azuresqldb-current||=azure-sqldw-latest||>=sql-server-2016||=sqlallproducts-allversions||>=sql-server-linux-2017||=azuresqldb-mi-current'
-ms.openlocfilehash: 78da6d646d810462b01718523c4917705f533229
-ms.sourcegitcommit: 331b8495e4ab37266945c81ff5b93d250bdaa6da
+monikerRange: '>=aps-pdw-2016||=azuresqldb-current||=azure-sqldw-latest||>=sql-server-2016||>=sql-server-linux-2017||=azuresqldb-mi-current'
+ms.openlocfilehash: e9ab885eb9d908ff0094916a03266d696d7e60f0
+ms.sourcegitcommit: 1a544cf4dd2720b124c3697d1e62ae7741db757c
 ms.translationtype: HT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 08/20/2020
-ms.locfileid: "88646693"
+ms.lasthandoff: 12/14/2020
+ms.locfileid: "97466774"
 ---
 # <a name="change-column-order-in-a-table"></a>테이블에서 열 순서 변경
 
@@ -43,7 +43,7 @@ ms.locfileid: "88646693"
   
 #### <a name="to-change-the-column-order"></a>열 순서를 변경하려면  
   
-1.  **개체 탐색기**에서 순서를 바꾸려는 열이 있는 테이블을 마우스 오른쪽 단추로 클릭하고 **디자인**을 선택합니다.  
+1.  **개체 탐색기** 에서 순서를 바꾸려는 열이 있는 테이블을 마우스 오른쪽 단추로 클릭하고 **디자인** 을 선택합니다.  
   
 2.  순서를 바꾸려는 열 이름의 왼쪽에 있는 상자를 선택합니다.  
   

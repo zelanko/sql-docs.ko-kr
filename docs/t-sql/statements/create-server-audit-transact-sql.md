@@ -22,13 +22,13 @@ helpviewer_keywords:
 ms.assetid: 1c321680-562e-41f1-8eb1-e7fa5ae45cc5
 author: VanMSFT
 ms.author: vanto
-monikerRange: =azuresqldb-mi-current||>=sql-server-2016||=sqlallproducts-allversions||>=sql-server-linux-2017
-ms.openlocfilehash: 91a5db47e45b1776aabec9bdb59e3eb50644bca8
-ms.sourcegitcommit: e700497f962e4c2274df16d9e651059b42ff1a10
+monikerRange: =azuresqldb-mi-current||>=sql-server-2016||>=sql-server-linux-2017
+ms.openlocfilehash: b7edd6aea6c00386cf34af1c5b266e08b91321ff
+ms.sourcegitcommit: 1a544cf4dd2720b124c3697d1e62ae7741db757c
 ms.translationtype: HT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 08/17/2020
-ms.locfileid: "88359419"
+ms.lasthandoff: 12/14/2020
+ms.locfileid: "97466024"
 ---
 # <a name="create-server-audit-transact-sql"></a>CREATE SERVER AUDIT(Transact-SQL)
 
@@ -87,10 +87,10 @@ CREATE SERVER AUDIT audit_name
  감사 로그의 경로입니다. 파일 이름은 감사 이름과 감사 GUID를 기준으로 생성됩니다.  
   
  MAXSIZE = { *max_size }*  
- 감사 파일이 증가할 수 있는 최대 크기를 지정합니다. *max_size* 값은 뒤에 MB, GB, TB가 나오는 정수이거나 UNLIMITED여야 합니다. *max_size*에 대해 지정할 수 있는 최소 크기는 2MB이고 최대 크기는 2,147,483,647 TB입니다. UNLIMITED를 지정하는 경우 디스크가 꽉 찰 때까지 파일이 증가합니다. 0도 UNLIMITED를 나타냅니다. 2MB보다 작은 값을 지정하면 MSG_MAXSIZE_TOO_SMALL 오류가 발생합니다. 기본값은 UNLIMITED입니다.  
+ 감사 파일이 증가할 수 있는 최대 크기를 지정합니다. *max_size* 값은 뒤에 MB, GB, TB가 나오는 정수이거나 UNLIMITED여야 합니다. *max_size* 에 대해 지정할 수 있는 최소 크기는 2MB이고 최대 크기는 2,147,483,647 TB입니다. UNLIMITED를 지정하는 경우 디스크가 꽉 찰 때까지 파일이 증가합니다. 0도 UNLIMITED를 나타냅니다. 2MB보다 작은 값을 지정하면 MSG_MAXSIZE_TOO_SMALL 오류가 발생합니다. 기본값은 UNLIMITED입니다.  
   
  MAX_ROLLOVER_FILES = *{ integer* | UNLIMITED }  
- 현재 파일 외에 파일 시스템에 보관할 최대 파일 수를 지정합니다. *MAX_ROLLOVER_FILES* 값은 정수 또는 UNLIMITED여야 합니다. 기본값은 UNLIMITED입니다. 이 매개 변수는 [!INCLUDE[ssDE](../../includes/ssde-md.md)] 인스턴스가 다시 시작되거나 감사가 해제된 후 다시 활성화되어 감사가 다시 시작될 때마다 평가되거나 MAXSIZE에 도달하여 새 파일이 필요할 때 평가됩니다. *MAX_ROLLOVER_FILES*가 평가될 때 파일 수가 *MAX_ROLLOVER_FILES* 설정을 초과하면 가장 오래된 파일부터 삭제됩니다. 따라서 *MAX_ROLLOVER_FILES* 설정이 0이면 *MAX_ROLLOVER_FILES* 설정이 평가될 때마다 새 파일이 만들어집니다. *MAX_ROLLOVER_FILES* 설정이 평가될 때 파일이 한 개만 자동으로 삭제되므로 *MAX_ROLLOVER_FILES*의 값이 감소될 때 파일 수는 오래된 파일을 수동으로 삭제하지 않는 한 줄어들지 않습니다. 지정할 수 있는 최대 파일 수는 2,147,483,647입니다.  
+ 현재 파일 외에 파일 시스템에 보관할 최대 파일 수를 지정합니다. *MAX_ROLLOVER_FILES* 값은 정수 또는 UNLIMITED여야 합니다. 기본값은 UNLIMITED입니다. 이 매개 변수는 [!INCLUDE[ssDE](../../includes/ssde-md.md)] 인스턴스가 다시 시작되거나 감사가 해제된 후 다시 활성화되어 감사가 다시 시작될 때마다 평가되거나 MAXSIZE에 도달하여 새 파일이 필요할 때 평가됩니다. *MAX_ROLLOVER_FILES* 가 평가될 때 파일 수가 *MAX_ROLLOVER_FILES* 설정을 초과하면 가장 오래된 파일부터 삭제됩니다. 따라서 *MAX_ROLLOVER_FILES* 설정이 0이면 *MAX_ROLLOVER_FILES* 설정이 평가될 때마다 새 파일이 만들어집니다. *MAX_ROLLOVER_FILES* 설정이 평가될 때 파일이 한 개만 자동으로 삭제되므로 *MAX_ROLLOVER_FILES* 의 값이 감소될 때 파일 수는 오래된 파일을 수동으로 삭제하지 않는 한 줄어들지 않습니다. 지정할 수 있는 최대 파일 수는 2,147,483,647입니다.  
   
  MAX_FILES =*integer*  
  **적용 대상**: [!INCLUDE[ssSQL11](../../includes/sssql11-md.md)] 이상  
@@ -130,7 +130,7 @@ SHUTDOWN
  조건자 원본을 식별하는 이벤트 필드의 이름입니다. 감사 필드는 [sys.fn_get_audit_file&#40;Transact-SQL&#41;](../../relational-databases/system-functions/sys-fn-get-audit-file-transact-sql.md)에 설명되어 있습니다. `file_name`, `audit_file_offset` 및 `event_time`을 제외한 모든 필드를 필터링할 수 있습니다.  
 
 > [!NOTE]  
->  in sys.fn_get_audit_file에서 `action_id` 및 `class_type` 필드의 형식이 **varchar**인 경우에는 필터링에 대한 조건자 원본인 경우 숫자와 함께만 사용할 수 있습니다. `class_type`과 함께 사용할 값의 목록을 얻으려면 다음 쿼리를 실행합니다.  
+>  in sys.fn_get_audit_file에서 `action_id` 및 `class_type` 필드의 형식이 **varchar** 인 경우에는 필터링에 대한 조건자 원본인 경우 숫자와 함께만 사용할 수 있습니다. `class_type`과 함께 사용할 값의 목록을 얻으려면 다음 쿼리를 실행합니다.  
 > ```sql
 > SELECT spt.[name], spt.[number]
 > FROM   [master].[dbo].[spt_values] spt
@@ -142,7 +142,7 @@ SHUTDOWN
  number  
  **적용 대상**: [!INCLUDE[ssSQL11](../../includes/sssql11-md.md)] 이상  
   
- **decimal**을 포함한 모든 숫자 유형입니다. 단, 사용 가능한 실제 메모리가 부족한 경우나 값이 너무 커서 64비트 정수로 표현할 수 없는 숫자는 제외됩니다.  
+ **decimal** 을 포함한 모든 숫자 유형입니다. 단, 사용 가능한 실제 메모리가 부족한 경우나 값이 너무 커서 64비트 정수로 표현할 수 없는 숫자는 제외됩니다.  
   
  ' string '  
  **적용 대상**: [!INCLUDE[ssSQL11](../../includes/sssql11-md.md)] 이상  

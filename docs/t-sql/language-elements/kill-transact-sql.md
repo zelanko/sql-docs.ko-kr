@@ -34,13 +34,13 @@ helpviewer_keywords:
 ms.assetid: 071cf260-c794-4b45-adc0-0e64097938c0
 author: rothja
 ms.author: jroth
-monikerRange: '>=aps-pdw-2016||=azuresqldb-current||=azure-sqldw-latest||>=sql-server-2016||=sqlallproducts-allversions||>=sql-server-linux-2017||=azuresqldb-mi-current'
-ms.openlocfilehash: 7484fb48a77edaaaf7f231a487307faaf1f7aadd
-ms.sourcegitcommit: 8f062015c2a033f5a0d805ee4adabbe15e7c8f94
+monikerRange: '>=aps-pdw-2016||=azuresqldb-current||=azure-sqldw-latest||>=sql-server-2016||>=sql-server-linux-2017||=azuresqldb-mi-current'
+ms.openlocfilehash: a42d01bead1a5d3882dcce0df67cda7785724b5e
+ms.sourcegitcommit: 1a544cf4dd2720b124c3697d1e62ae7741db757c
 ms.translationtype: HT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 09/25/2020
-ms.locfileid: "91227387"
+ms.lasthandoff: 12/14/2020
+ms.locfileid: "97466154"
 ---
 # <a name="kill-transact-sql"></a>KILL(Transact-SQL)
 [!INCLUDE [sql-asdb-asdbmi-asa-pdw](../../includes/applies-to-version/sql-asdb-asdbmi-asa-pdw.md)]
@@ -70,7 +70,7 @@ KILL 'session_id'
 
 ## <a name="arguments"></a>인수
 _session ID_  
-종료할 프로세스의 세션 ID입니다. _session ID_는 사용자가 연결할 때 각 연결에 할당된 고유한 정수(**int**)입니다. 세션 ID 값은 연결되어 있는 동안 해당 연결에 대해 유지됩니다. 연결이 종료되면 이 정수 값은 해제되어 새 연결에 다시 할당될 수 있습니다.  
+종료할 프로세스의 세션 ID입니다. _session ID_ 는 사용자가 연결할 때 각 연결에 할당된 고유한 정수(**int**)입니다. 세션 ID 값은 연결되어 있는 동안 해당 연결에 대해 유지됩니다. 연결이 종료되면 이 정수 값은 해제되어 새 연결에 다시 할당될 수 있습니다.  
 다음 쿼리는 중지하려는 `session_id`를 식별하는 데 유용할 수 있습니다.  
  ```sql  
  SELECT conn.session_id, host_name, program_name,
@@ -83,12 +83,12 @@ JOIN sys.dm_exec_connections AS conn
 _UOW_  
 **적용 대상**: [!INCLUDE[ssKatmai](../../includes/sskatmai-md.md)] 이상
   
-분산 트랜잭션의 UOW(작업 단위) ID를 식별합니다. _UOW_는 sys.dm_tran_locks 동적 관리 뷰의 request_owner_guid 열에서 구할 수 있는 GUID입니다. _UOW_는 오류 로그나 MS DTC 모니터를 통해 가져올 수도 있습니다. 분산 트랜잭션 모니터링 방법은 MS DTC 설명서를 참조하세요.  
+분산 트랜잭션의 UOW(작업 단위) ID를 식별합니다. _UOW_ 는 sys.dm_tran_locks 동적 관리 뷰의 request_owner_guid 열에서 구할 수 있는 GUID입니다. _UOW_ 는 오류 로그나 MS DTC 모니터를 통해 가져올 수도 있습니다. 분산 트랜잭션 모니터링 방법은 MS DTC 설명서를 참조하세요.  
   
-KILL _UOW_를 사용하여 분리된 분산 트랜잭션을 종료합니다. 이 트랜잭션은 실제 세션 ID에 연결되어 있지 않고 대신 세션 ID='-2'에 인위적으로 연결되어 있습니다. 이 세션 ID를 사용하면 sys.dm_tran_locks, sys.dm_exec_sessions 또는 sys.dm_exec_requests 동적 관리 뷰의 세션 ID 열을 쿼리하여 분리된 트랜잭션을 쉽게 식별할 수 있습니다.  
+KILL _UOW_ 를 사용하여 분리된 분산 트랜잭션을 종료합니다. 이 트랜잭션은 실제 세션 ID에 연결되어 있지 않고 대신 세션 ID='-2'에 인위적으로 연결되어 있습니다. 이 세션 ID를 사용하면 sys.dm_tran_locks, sys.dm_exec_sessions 또는 sys.dm_exec_requests 동적 관리 뷰의 세션 ID 열을 쿼리하여 분리된 트랜잭션을 쉽게 식별할 수 있습니다.  
   
 WITH STATUSONLY  
-이전 KILL 문으로 인해 롤백되고 있는 지정한 _session ID_ 또는 _UOW_에 대한 진행률 보고서를 생성합니다. KILL WITH STATUSONLY는 _session ID_ 또는 _UOW_를 종료하거나 롤백하지 않습니다. 이 명령은 롤백의 현재 진행률만 표시합니다.  
+이전 KILL 문으로 인해 롤백되고 있는 지정한 _session ID_ 또는 _UOW_ 에 대한 진행률 보고서를 생성합니다. KILL WITH STATUSONLY는 _session ID_ 또는 _UOW_ 를 종료하거나 롤백하지 않습니다. 이 명령은 롤백의 현재 진행률만 표시합니다.  
   
 ## <a name="remarks"></a>설명  
 KILL은 일반적으로 잠금으로 다른 중요한 프로세스를 차단하는 프로세스를 종료하는 데 사용됩니다. 필요한 시스템 리소스를 사용하는 쿼리를 실행하는 프로세스를 중지하는 데도 사용할 수 있습니다. 시스템 프로세스와 확장 저장 프로시저를 실행하는 프로세스는 종료될 수 없습니다.  
@@ -153,7 +153,7 @@ spid 54: Transaction rollback in progress. Estimated rollback completion: 80% Es
 ```  
   
 ### <a name="c-using-kill-to-stop-an-orphaned-distributed-transaction"></a>C. KILL을 사용하여 분리된 분산 트랜잭션 종료  
-다음 예에서는 `D5499C66-E398-45CA-BF7E-DC9C194B48CF`의 *UOW*를 사용하여 분리된 분산 트랜잭션(세션 ID = -2)을 종료하는 방법을 보여 줍니다.  
+다음 예에서는 `D5499C66-E398-45CA-BF7E-DC9C194B48CF`의 *UOW* 를 사용하여 분리된 분산 트랜잭션(세션 ID = -2)을 종료하는 방법을 보여 줍니다.  
   
 ```sql  
 KILL 'D5499C66-E398-45CA-BF7E-DC9C194B48CF';  

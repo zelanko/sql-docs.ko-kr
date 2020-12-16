@@ -16,13 +16,13 @@ helpviewer_keywords:
 ms.assetid: bdfce092-3cf1-4b5e-99d5-fd8c6f9ad560
 author: MightyPen
 ms.author: genemi
-monikerRange: =azuresqldb-current||>=sql-server-2016||=sqlallproducts-allversions||>=sql-server-linux-2017||=azuresqldb-mi-current
-ms.openlocfilehash: 20e75befe723beebec26ea819811ae0183ba4aa3
-ms.sourcegitcommit: da88320c474c1c9124574f90d549c50ee3387b4c
+monikerRange: =azuresqldb-current||>=sql-server-2016||>=sql-server-linux-2017||=azuresqldb-mi-current
+ms.openlocfilehash: e1e24e408df936fc2a651263218896e4c96826e7
+ms.sourcegitcommit: 1a544cf4dd2720b124c3697d1e62ae7741db757c
 ms.translationtype: HT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 07/01/2020
-ms.locfileid: "85780137"
+ms.lasthandoff: 12/14/2020
+ms.locfileid: "97465614"
 ---
 # <a name="determine-which-queries-are-holding-locks"></a>잠금을 보유한 쿼리 파악
 

@@ -12,13 +12,13 @@ helpviewer_keywords:
 ms.assetid: e8acb408-938d-4b36-81dd-04f087410cc5
 author: stevestein
 ms.author: sstein
-monikerRange: =azuresqldb-current||>=sql-server-2016||=sqlallproducts-allversions||>=sql-server-linux-2017||=azuresqldb-mi-current
-ms.openlocfilehash: 677e19c19ce569af91af282ef2a280c69161c9f6
-ms.sourcegitcommit: da88320c474c1c9124574f90d549c50ee3387b4c
+monikerRange: =azuresqldb-current||>=sql-server-2016||>=sql-server-linux-2017||=azuresqldb-mi-current
+ms.openlocfilehash: 5bd315448e0c00f9fc628ee7d7c3d56a977f4423
+ms.sourcegitcommit: 1a544cf4dd2720b124c3697d1e62ae7741db757c
 ms.translationtype: HT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 07/01/2020
-ms.locfileid: "85763048"
+ms.lasthandoff: 12/14/2020
+ms.locfileid: "97468084"
 ---
 # <a name="blocked-process-report-event-class"></a>Blocked Process Report 이벤트 클래스
 [!INCLUDE [SQL Server - ASDB](../../includes/applies-to-version/sql-asdb.md)]
@@ -34,7 +34,7 @@ ms.locfileid: "85763048"
 |----------------------|---------------|-----------------|---------------|----------------|  
 |**DatabaseID**|**int**|잠금을 획득한 데이터베이스의 ID입니다. [!INCLUDE[ssSqlProfiler](../../includes/sssqlprofiler-md.md)] ServerName **데이터 열이 추적에서 캡처되고 서버를 사용할 수 있으면** 에 데이터베이스 이름이 표시됩니다. DB_ID 함수를 사용하여 데이터베이스의 값을 확인할 수 있습니다.|3|예|  
 |**Duration**|**bigint**|프로세스가 차단된 시간(밀리초)입니다.|13|예|  
-|**EndTime**|**datetime**|이벤트가 종료된 시간입니다. 이 열은 **SQL:BatchStarting** 또는 **SP:Starting**과 같은 시작하는 이벤트 클래스의 경우 채워지지 않습니다.|15|예|  
+|**EndTime**|**datetime**|이벤트가 종료된 시간입니다. 이 열은 **SQL:BatchStarting** 또는 **SP:Starting** 과 같은 시작하는 이벤트 클래스의 경우 채워지지 않습니다.|15|예|  
 |**EventClass**|**int**|이벤트 유형 = 137|27|예|  
 |**EventSequence**|**int**|요청 내의 지정된 이벤트 시퀀스입니다.|51|예|  
 |**IndexID**|**int**|이벤트에 의해 영향 받는 개체의 인덱스 ID입니다. 개체의 인덱스 ID를 확인하려면 **sysindexes** 시스템 테이블의 **indid** 열을 사용하십시오.|24|예|  

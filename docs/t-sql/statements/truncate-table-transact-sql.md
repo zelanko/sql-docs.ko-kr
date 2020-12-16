@@ -25,13 +25,13 @@ helpviewer_keywords:
 ms.assetid: 3d544eed-3993-4055-983d-ea334f8c5c58
 author: markingmyname
 ms.author: maghan
-monikerRange: '>=aps-pdw-2016||=azuresqldb-current||=azure-sqldw-latest||>=sql-server-2016||=sqlallproducts-allversions||>=sql-server-linux-2017||=azuresqldb-mi-current'
-ms.openlocfilehash: 3a4e4aa7795ad7ddb4a8c321afd5eb8f33b49db5
-ms.sourcegitcommit: 8f062015c2a033f5a0d805ee4adabbe15e7c8f94
+monikerRange: '>=aps-pdw-2016||=azuresqldb-current||=azure-sqldw-latest||>=sql-server-2016||>=sql-server-linux-2017||=azuresqldb-mi-current'
+ms.openlocfilehash: bbc919848acf3031771bd83b43f94c48fe58883d
+ms.sourcegitcommit: 1a544cf4dd2720b124c3697d1e62ae7741db757c
 ms.translationtype: HT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 09/25/2020
-ms.locfileid: "91227038"
+ms.lasthandoff: 12/14/2020
+ms.locfileid: "97465884"
 ---
 # <a name="truncate-table-transact-sql"></a>TRUNCATE TABLE(Transact-SQL)
 [!INCLUDE [sql-asdb-asdbmi-asa-pdw](../../includes/applies-to-version/sql-asdb-asdbmi-asa-pdw.md)]
@@ -72,7 +72,7 @@ TRUNCATE TABLE { database_name.schema_name.table_name | schema_name.table_name |
  테이블이 속한 스키마의 이름입니다.  
   
  *table_name*  
- 잘라내거나 모든 행을 제거할 테이블의 이름입니다. *table_name*은 리터럴이어야 합니다. *table_name*은 **OBJECT_ID()** 함수 또는 변수일 수 없습니다.  
+ 잘라내거나 모든 행을 제거할 테이블의 이름입니다. *table_name* 은 리터럴이어야 합니다. *table_name* 은 **OBJECT_ID()** 함수 또는 변수일 수 없습니다.  
   
  WITH ( PARTITIONS ( { \<*partition_number_expression*> | \<*range*> } [ , ...n ] ) )    
 **적용 대상**: [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] ([!INCLUDE[ssSQL15](../../includes/sssql15-md.md)] ~ [현재 버전](https://go.microsoft.com/fwlink/p/?LinkId=299658))
@@ -87,7 +87,7 @@ TRUNCATE TABLE { database_name.schema_name.table_name | schema_name.table_name |
   
 -   범위와 개별 파티션을 모두 지정합니다. 예: `WITH (PARTITIONS (2, 4, 6 TO 8))`  
   
--   *\<range>* 는 **TO**라는 단어로 구분된 파티션 번호로 지정할 수 있습니다. 예: `WITH (PARTITIONS (6 TO 8))`  
+-   *\<range>* 는 **TO** 라는 단어로 구분된 파티션 번호로 지정할 수 있습니다. 예: `WITH (PARTITIONS (6 TO 8))`  
   
  분할된 테이블을 자르려면 테이블과 인덱스를 정렬해야 합니다(동일한 파티션 함수에 분할).  
   
@@ -140,7 +140,7 @@ TRUNCATE TABLE { database_name.schema_name.table_name | schema_name.table_name |
  [!INCLUDE[msCoName](../../includes/msconame-md.md)] [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]에는 삭제할 모든 익스텐트에 대한 동시 잠금이 없는 한 128개를 초과하는 익스텐트를 갖고 있는 테이블을 삭제하거나 잘라내는 기능이 추가되었습니다.  
   
 ## <a name="permissions"></a>사용 권한  
- 최소한 *table_name*에 대한 `ALTER` 권한이 필요합니다. `TRUNCATE TABLE` 권한은 기본적으로 테이블 소유자, `sysadmin` 고정 서버 역할의 멤버와 `db_owner` 및 `db_ddladmin` 고정 데이터베이스 역할에 할당되며 이전할 수 없습니다. 하지만 저장 프로시저와 같은 모듈 내에 `TRUNCATE TABLE` 문을 통합한 뒤 `EXECUTE AS` 절을 사용하여 적절한 권한을 모듈에 허용할 수 있습니다.  
+ 최소한 *table_name* 에 대한 `ALTER` 권한이 필요합니다. `TRUNCATE TABLE` 권한은 기본적으로 테이블 소유자, `sysadmin` 고정 서버 역할의 멤버와 `db_owner` 및 `db_ddladmin` 고정 데이터베이스 역할에 할당되며 이전할 수 없습니다. 하지만 저장 프로시저와 같은 모듈 내에 `TRUNCATE TABLE` 문을 통합한 뒤 `EXECUTE AS` 절을 사용하여 적절한 권한을 모듈에 허용할 수 있습니다.  
   
 ## <a name="examples"></a>예제  
   

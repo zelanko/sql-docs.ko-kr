@@ -32,13 +32,13 @@ helpviewer_keywords:
 ms.assetid: 2b1464c8-934c-405f-8ef7-2949346b5372
 author: markingmyname
 ms.author: maghan
-monikerRange: '>=aps-pdw-2016||=azuresqldb-current||=azure-sqldw-latest||>=sql-server-2016||=sqlallproducts-allversions||>=sql-server-linux-2017||=azuresqldb-mi-current'
-ms.openlocfilehash: 3294204f42537dbaabcce17d230c894e71e4435f
-ms.sourcegitcommit: c74bb5944994e34b102615b592fdaabe54713047
+monikerRange: '>=aps-pdw-2016||=azuresqldb-current||=azure-sqldw-latest||>=sql-server-2016||>=sql-server-linux-2017||=azuresqldb-mi-current'
+ms.openlocfilehash: 56b60757878fb14b48c4c89218296000113d7f1d
+ms.sourcegitcommit: 1a544cf4dd2720b124c3697d1e62ae7741db757c
 ms.translationtype: HT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 09/22/2020
-ms.locfileid: "90990214"
+ms.lasthandoff: 12/14/2020
+ms.locfileid: "97465974"
 ---
 # <a name="drop-index-transact-sql"></a>DROP INDEX(Transact-SQL)
 [!INCLUDE [sql-asdb-asdbmi-asa-pdw](../../includes/applies-to-version/sql-asdb-asdbmi-asa-pdw.md)]
@@ -144,7 +144,7 @@ DROP INDEX index_name ON { database_name.schema_name.table_name | schema_name.ta
 > [!IMPORTANT]  
 >  공간 인덱스 또는 XML 인덱스에서는 MAXDOP를 사용할 수 없습니다.  
   
- *max_degree_of_parallelism*은 다음 중 하나일 수 있습니다.  
+ *max_degree_of_parallelism* 은 다음 중 하나일 수 있습니다.  
   
  1  
  병렬 계획이 생성되지 않습니다.  
@@ -244,7 +244,7 @@ DROP INDEX index_name ON { database_name.schema_name.table_name | schema_name.ta
   
  ONLINE = ON 및 MOVE TO 옵션을 사용하려면 임시 디스크 공간이 더 필요합니다.  
   
- 인덱스가 삭제된 후 결과 힙은 **sys.indexes** 카탈로그 뷰에 표시되며 **name** 열에 NULL이 포함됩니다. 테이블 이름을 보려면 **object_id**에서 **sys.indexes**와 **sys.tables**을 조인합니다. 쿼리 예는 예 1을 참조하세요.  
+ 인덱스가 삭제된 후 결과 힙은 **sys.indexes** 카탈로그 뷰에 표시되며 **name** 열에 NULL이 포함됩니다. 테이블 이름을 보려면 **object_id** 에서 **sys.indexes** 와 **sys.tables** 을 조인합니다. 쿼리 예는 예 1을 참조하세요.  
   
  다중 프로세서 컴퓨터에서 [!INCLUDE[ssEnterpriseEd2005](../../includes/ssenterpriseed2005-md.md)] 이상을 실행하는 경우 DROP INDEX는 다른 쿼리와 마찬가지로 클러스터형 인덱스 삭제와 관련된 검색 및 정렬 작업을 수행하기 위해 더 많은 프로세서를 사용할 수 있습니다. MAXDOP 인덱스 옵션을 지정하여 DROP INDEX 문을 실행하기 위해 사용되는 프로세서 개수를 수동으로 구성할 수 있습니다. 자세한 내용은 [병렬 인덱스 작업 구성](../../relational-databases/indexes/configure-parallel-index-operations.md)을 참조하세요.  
   
@@ -260,7 +260,7 @@ DROP INDEX index_name ON { database_name.schema_name.table_name | schema_name.ta
  XML 인덱스를 삭제할 때는 옵션을 지정할 수 없습니다. 또한 _table\_or\_view\_name_ **.** _index\_name_ 구문을 사용할 수 없습니다. 기본 XML 인덱스가 삭제되면 연결된 모든 보조 XML 인덱스는 자동으로 삭제됩니다. 자세한 내용은 [XML 인덱스&#40;SQL Server&#41;](../../relational-databases/xml/xml-indexes-sql-server.md)를 참조하세요.  
   
 ## <a name="spatial-indexes"></a>공간 인덱스  
- 공간 인덱스는 테이블에서만 지원됩니다. 공간 인덱스를 삭제하는 경우 옵션을 지정하거나 **.** _index\_name_을 사용할 수 없습니다. 올바른 구문은 다음과 같습니다.  
+ 공간 인덱스는 테이블에서만 지원됩니다. 공간 인덱스를 삭제하는 경우 옵션을 지정하거나 **.** _index\_name_ 을 사용할 수 없습니다. 올바른 구문은 다음과 같습니다.  
   
  DROP INDEX *spatial_index_name* ON *spatial_table_name*;  
   

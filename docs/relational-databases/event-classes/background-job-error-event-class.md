@@ -12,13 +12,13 @@ helpviewer_keywords:
 ms.assetid: 9e6d2a0e-919d-4fe2-a306-b20b8d41c197
 author: stevestein
 ms.author: sstein
-monikerRange: =azuresqldb-current||>=sql-server-2016||=sqlallproducts-allversions||>=sql-server-linux-2017||=azuresqldb-mi-current
-ms.openlocfilehash: 532a24d0cb2b3e30a5e513b4feab522ef45e34d5
-ms.sourcegitcommit: e700497f962e4c2274df16d9e651059b42ff1a10
+monikerRange: =azuresqldb-current||>=sql-server-2016||>=sql-server-linux-2017||=azuresqldb-mi-current
+ms.openlocfilehash: 0625642c875d936407033785316bb9c742e831a4
+ms.sourcegitcommit: 1a544cf4dd2720b124c3697d1e62ae7741db757c
 ms.translationtype: HT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 08/17/2020
-ms.locfileid: "88410429"
+ms.lasthandoff: 12/14/2020
+ms.locfileid: "97468054"
 ---
 # <a name="background-job-error-event-class"></a>Background Job Error 이벤트 클래스
 [!INCLUDE [SQL Server - ASDB](../../includes/applies-to-version/sql-asdb.md)]
@@ -43,7 +43,7 @@ ms.locfileid: "88410429"
 |**StartTime**|**datetime**|이 작업이 만들어진 시간입니다.|14|예|  
 |**State**|**int**|마지막 시도에서 발생한 오류의 상태입니다(**EventSubClass** 1에만 해당).|30|예|  
 |**TextData**|**ntext**|이벤트 하위 클래스 값의 텍스트 설명입니다.|1|예|  
-|**유형**|**int**|작업 유형입니다.|57|예|  
+|**형식**|**int**|작업 유형입니다.|57|예|  
   
 ## <a name="see-also"></a>참고 항목  
  [확장 이벤트](../../relational-databases/extended-events/extended-events.md)   

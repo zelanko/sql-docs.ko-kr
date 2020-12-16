@@ -12,13 +12,13 @@ helpviewer_keywords:
 ms.assetid: d755833a-d7eb-4973-9352-67a2fba2442a
 author: stevestein
 ms.author: sstein
-monikerRange: =azuresqldb-current||>=sql-server-2016||=sqlallproducts-allversions||>=sql-server-linux-2017||=azuresqldb-mi-current
-ms.openlocfilehash: 1219ff15ea4aa2f5836c6adb792884c557d9e698
-ms.sourcegitcommit: e700497f962e4c2274df16d9e651059b42ff1a10
+monikerRange: =azuresqldb-current||>=sql-server-2016||>=sql-server-linux-2017||=azuresqldb-mi-current
+ms.openlocfilehash: 2b1c63e6e7ef97f4a9936d623b26950b0a0040f4
+ms.sourcegitcommit: 1a544cf4dd2720b124c3697d1e62ae7741db757c
 ms.translationtype: HT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 08/17/2020
-ms.locfileid: "88448645"
+ms.lasthandoff: 12/14/2020
+ms.locfileid: "97467984"
 ---
 # <a name="locktimeout-timeout-gt-0-event-class"></a>Lock:Timeout(timeout &gt; 0) 이벤트 클래스
  [!INCLUDE [SQL Server](../../includes/applies-to-version/sqlserver.md)]
@@ -36,7 +36,7 @@ ms.locfileid: "88448645"
 |DatabaseID|**int**|시간 초과가 발생한 데이터베이스의 ID입니다. [!INCLUDE[ssSqlProfiler](../../includes/sssqlprofiler-md.md)] ServerName **데이터 열이 추적에서 캡처되고 서버를 사용할 수 있으면** 에 데이터베이스 이름이 표시됩니다. DB_ID 함수를 사용하여 데이터베이스의 값을 확인할 수 있습니다.|3|예|  
 |DatabaseName|**nvarchar**|시간 초과가 발생한 데이터베이스의 이름입니다.|35|예|  
 |Duration|**bigint**|이벤트에 의해 사용된 시간(마이크로초)입니다.|13|예|  
-|EndTime|**datetime**|이벤트가 종료된 시간입니다. 이 열은 **SQL:BatchStarting** 또는 **SP:Starting**과 같은 시작하는 이벤트 클래스의 경우 채워지지 않습니다.|15|예|  
+|EndTime|**datetime**|이벤트가 종료된 시간입니다. 이 열은 **SQL:BatchStarting** 또는 **SP:Starting** 과 같은 시작하는 이벤트 클래스의 경우 채워지지 않습니다.|15|예|  
 |EventClass|**int**|이벤트 유형 = 189|27|예|  
 |EventSequence|**int**|요청 내에 지정된 이벤트 시퀀스입니다.|51|예|  
 |GroupID|**int**|SQL 추적 이벤트가 발생한 작업 그룹의 ID입니다.|66|예|  

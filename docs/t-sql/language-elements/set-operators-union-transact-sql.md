@@ -20,13 +20,13 @@ helpviewer_keywords:
 ms.assetid: 607c296f-8a6a-49bc-975a-b8d0c0914df7
 author: rothja
 ms.author: jroth
-monikerRange: '>=aps-pdw-2016||=azuresqldb-current||=azure-sqldw-latest||>=sql-server-2016||=sqlallproducts-allversions||>=sql-server-linux-2017||=azuresqldb-mi-current'
-ms.openlocfilehash: 40bf24d7e1a5bcbc32307b5d5731907fb5f8463d
-ms.sourcegitcommit: e700497f962e4c2274df16d9e651059b42ff1a10
+monikerRange: '>=aps-pdw-2016||=azuresqldb-current||=azure-sqldw-latest||>=sql-server-2016||>=sql-server-linux-2017||=azuresqldb-mi-current'
+ms.openlocfilehash: eee4538e96bdc4452091daf1a78302d56aedc09d
+ms.sourcegitcommit: 1a544cf4dd2720b124c3697d1e62ae7741db757c
 ms.translationtype: HT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 08/17/2020
-ms.locfileid: "88459350"
+ms.lasthandoff: 12/14/2020
+ms.locfileid: "97466074"
 ---
 # <a name="set-operators---union-transact-sql"></a>집합 연산자 - UNION(Transact-SQL)
 
@@ -39,10 +39,10 @@ ms.locfileid: "88459350"
 
 **UNION** 연산은 **[JOIN](../queries/from-transact-sql.md)** 과 다릅니다.
 
-- **UNION**은 두 쿼리의 결과 세트를 연결합니다. 그러나 **UNION**은 두 테이블에서 수집한 열에서 개별 행을 만들지 않습니다.
-- **JOIN**은 두 테이블의 열을 비교하여 두 테이블의 열로 구성된 결과 행을 만듭니다.
+- **UNION** 은 두 쿼리의 결과 세트를 연결합니다. 그러나 **UNION** 은 두 테이블에서 수집한 열에서 개별 행을 만들지 않습니다.
+- **JOIN** 은 두 테이블의 열을 비교하여 두 테이블의 열로 구성된 결과 행을 만듭니다.
   
-다음은 **UNION**을 사용하여 두 쿼리의 결과 집합을 결합하기 위한 기본 규칙입니다.  
+다음은 **UNION** 을 사용하여 두 쿼리의 결과 집합을 결합하기 위한 기본 규칙입니다.  
   
 -   열의 개수와 순서가 모든 쿼리에서 동일해야 합니다.  
   
@@ -320,7 +320,7 @@ ORDER BY CustomerKey;
 ```  
   
 ### <a name="h-using-union-of-three-select-statements-to-show-effects-of-all-and-parentheses"></a>H. ALL 및 괄호의 효과를 나타내기 위해 세 개의 SELECT 문의 UNION 사용  
-다음 예제에서는 `UNION`를 이용할 때 ALL 및 괄호의 효과를 보여 주기 위해 `UNION`을 사용하여 **같은 테이블**의 결과를 결합합니다.  
+다음 예제에서는 `UNION`를 이용할 때 ALL 및 괄호의 효과를 보여 주기 위해 `UNION`을 사용하여 **같은 테이블** 의 결과를 결합합니다.  
   
 첫 번째 예제에서는 `UNION ALL`을 사용하여 중복된 레코드를 표시하고 원본 테이블의 각 행을 세 번 반환합니다. 두 번째 예제에서는 `ALL` 없이 `UNION`을 사용하여 세 `SELECT` 문의 결합된 결과에서 중복 행을 제거하고 원본 테이블에서 중복되지 않은 행만 반환합니다.  
   

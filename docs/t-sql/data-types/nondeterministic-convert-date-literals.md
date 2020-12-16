@@ -12,13 +12,13 @@ dev_langs:
 author: MikeRayMSFT
 ms.author: mikeray
 ms.reviewer: genemi
-monikerRange: '>=aps-pdw-2016||=azuresqldb-current||=azure-sqldw-latest||>=sql-server-2016||=sqlallproducts-allversions||>=sql-server-linux-2017||=azuresqldb-mi-current'
-ms.openlocfilehash: 4c1d50cc58995479aa61b4c62639f9d13de6f400
-ms.sourcegitcommit: c5078791a07330a87a92abb19b791e950672e198
+monikerRange: '>=aps-pdw-2016||=azuresqldb-current||=azure-sqldw-latest||>=sql-server-2016||>=sql-server-linux-2017||=azuresqldb-mi-current'
+ms.openlocfilehash: aeb2953d2e955a8094e17ac64040662ff3e7804f
+ms.sourcegitcommit: 1a544cf4dd2720b124c3697d1e62ae7741db757c
 ms.translationtype: HT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 11/26/2020
-ms.locfileid: "88445871"
+ms.lasthandoff: 12/14/2020
+ms.locfileid: "97466104"
 ---
 # <a name="nondeterministic-conversion-of-literal-date-strings-into-date-values"></a>날짜 값으로 리터럴 날짜 문자열의 비결정적 변환
 

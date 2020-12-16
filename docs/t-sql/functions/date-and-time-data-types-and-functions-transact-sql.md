@@ -22,13 +22,13 @@ helpviewer_keywords:
 ms.assetid: 83e378a2-6e89-4c80-bc4f-644958d9e0a9
 author: markingmyname
 ms.author: maghan
-monikerRange: = azure-sqldw-latest||= azuresqldb-current || >= sql-server-2016 || >= sql-server-linux-2017 || = sqlallproducts-allversions
-ms.openlocfilehash: 4bb178639b262320a0292a25b3535a9f969972f0
-ms.sourcegitcommit: 7035d9471876c70b99c58bf9b46af5cce6e9c66c
+monikerRange: = azure-sqldw-latest||= azuresqldb-current || >= sql-server-2016 || >= sql-server-linux-2017
+ms.openlocfilehash: 4f31dcfc576e4808d12482c4605e5f10d70e684b
+ms.sourcegitcommit: 1a544cf4dd2720b124c3697d1e62ae7741db757c
 ms.translationtype: HT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 08/03/2020
-ms.locfileid: "87523225"
+ms.lasthandoff: 12/14/2020
+ms.locfileid: "97468194"
 ---
 # <a name="date-and-time-data-types-and-functions-transact-sql"></a>날짜 및 시간 데이터 형식 및 함수(Transact-SQL)
 
@@ -61,7 +61,7 @@ ms.locfileid: "87523225"
 |[datetimeoffset](../../t-sql/data-types/datetimeoffset-transact-sql.md)|YYYY-MM-DD hh:mm:ss[.nnnnnnn] [+&#124;-]hh:mm|0001-01-01 00:00:00.0000000부터 9999-12-31 23:59:59.9999999까지(UTC)|100나노초|8 ~ 10|예|예|
 
 > [!NOTE]
-> [!INCLUDE[tsql](../../includes/tsql-md.md)] [rowversion](../../t-sql/data-types/rowversion-transact-sql.md) 데이터 형식은 날짜 또는 시간 데이터 형식이 아닙니다. **timestamp**는 **rowversion**에 사용되지 않는 동의어입니다.
+> [!INCLUDE[tsql](../../includes/tsql-md.md)] [rowversion](../../t-sql/data-types/rowversion-transact-sql.md) 데이터 형식은 날짜 또는 시간 데이터 형식이 아닙니다. **timestamp** 는 **rowversion** 에 사용되지 않는 동의어입니다.
 
 ## <a name="date-and-time-functions"></a><a name="DateandTimeFunctions"></a> 날짜 및 시간 함수
 
@@ -93,11 +93,11 @@ ms.locfileid: "87523225"
 
 |함수|구문|반환 값|반환 데이터 형식|결정성|
 |--------------|------------|------------------|----------------------|-----------------|
-|[DATENAME](../../t-sql/functions/datename-transact-sql.md)|DATENAME ( *datepart* , *date* )|지정한 날짜에서 특정 *datepart*를 나타내는 문자열을 반환합니다.|**nvarchar**|비결정적|
-|[DATEPART](../../t-sql/functions/datepart-transact-sql.md)|DATEPART ( *datepart* , *date* )|지정한 *date*에서 특정 *datepart*를 나타내는 정수를 반환합니다.|**int**|비결정적|
-|[DAY](../../t-sql/functions/day-transact-sql.md)|DAY ( *date* )|지정한 *date*에서 일 부분을 나타내는 정수를 반환합니다.|**int**|결정적|
-|[MONTH](../../t-sql/functions/month-transact-sql.md)|MONTH ( *date* )|지정한 *date*에서 월 부분을 나타내는 정수를 반환합니다.|**int**|결정적|
-|[YEAR](../../t-sql/functions/year-transact-sql.md)|YEAR ( *date* )|지정한 *date*에서 연도 부분을 나타내는 정수를 반환합니다.|**int**|결정적|
+|[DATENAME](../../t-sql/functions/datename-transact-sql.md)|DATENAME ( *datepart* , *date* )|지정한 날짜에서 특정 *datepart* 를 나타내는 문자열을 반환합니다.|**nvarchar**|비결정적|
+|[DATEPART](../../t-sql/functions/datepart-transact-sql.md)|DATEPART ( *datepart* , *date* )|지정한 *date* 에서 특정 *datepart* 를 나타내는 정수를 반환합니다.|**int**|비결정적|
+|[DAY](../../t-sql/functions/day-transact-sql.md)|DAY ( *date* )|지정한 *date* 에서 일 부분을 나타내는 정수를 반환합니다.|**int**|결정적|
+|[MONTH](../../t-sql/functions/month-transact-sql.md)|MONTH ( *date* )|지정한 *date* 에서 월 부분을 나타내는 정수를 반환합니다.|**int**|결정적|
+|[YEAR](../../t-sql/functions/year-transact-sql.md)|YEAR ( *date* )|지정한 *date* 에서 연도 부분을 나타내는 정수를 반환합니다.|**int**|결정적|
 
 ### <a name="functions-that-return-date-and-time-values-from-their-parts"></a><a name="fromParts"></a> 해당 부분에서 날짜 및 시간 값을 반환하는 함수
 
@@ -121,10 +121,10 @@ ms.locfileid: "87523225"
 
 |함수|구문|반환 값|반환 데이터 형식|결정성|
 |---|---|---|---|---|
-|[DATEADD](../../t-sql/functions/dateadd-transact-sql.md)|DATEADD (*datepart* , *number* , *date* )|지정된 *date*의 지정된 *datepart*에 간격을 더하여 새 **datetime** 값을 반환합니다.|*date* 인수의 데이터 형식|결정적|
+|[DATEADD](../../t-sql/functions/dateadd-transact-sql.md)|DATEADD (*datepart* , *number* , *date* )|지정된 *date* 의 지정된 *datepart* 에 간격을 더하여 새 **datetime** 값을 반환합니다.|*date* 인수의 데이터 형식|결정적|
 |[EOMONTH](../../t-sql/functions/eomonth-transact-sql.md)|EOMONTH ( *start_date* [, *month_to_add* ] )|선택 사항인 오프셋 옵션을 사용하여 지정한 날짜가 포함된 달의 마지막 날을 반환합니다.|반환 유형은 *start_date* 인수 형식이거나 **date** 데이터 형식입니다.|결정적|
-|[SWITCHOFFSET](../../t-sql/functions/switchoffset-transact-sql.md)|SWITCHOFFSET (*DATETIMEOFFSET* , *time_zone*)|SWITCHOFFSET은 DATETIMEOFFSET 값의 표준 시간대 오프셋을 변경하고 UTC 값을 유지합니다.|**datetimeoffset**을 *DATETIMEOFFSET*의 소수 자릿수로 표시|결정적|
-|[TODATETIMEOFFSET](../../t-sql/functions/todatetimeoffset-transact-sql.md)|TODATETIMEOFFSET (*expression* , *time_zone*)|TODATETIMEOFFSET은 datetime2 값을 datetimeoffset 값으로 변환합니다. *TODATETIMEOFFSET*은 datetime2 값을 지정된 time_zone의 현지 시간으로 해석합니다.|**datetimeoffset**을 *datetime* 인수의 소수 자릿수로 표시|결정적|
+|[SWITCHOFFSET](../../t-sql/functions/switchoffset-transact-sql.md)|SWITCHOFFSET (*DATETIMEOFFSET* , *time_zone*)|SWITCHOFFSET은 DATETIMEOFFSET 값의 표준 시간대 오프셋을 변경하고 UTC 값을 유지합니다.|**datetimeoffset** 을 *DATETIMEOFFSET* 의 소수 자릿수로 표시|결정적|
+|[TODATETIMEOFFSET](../../t-sql/functions/todatetimeoffset-transact-sql.md)|TODATETIMEOFFSET (*expression* , *time_zone*)|TODATETIMEOFFSET은 datetime2 값을 datetimeoffset 값으로 변환합니다. *TODATETIMEOFFSET* 은 datetime2 값을 지정된 time_zone의 현지 시간으로 해석합니다.|**datetimeoffset** 을 *datetime* 인수의 소수 자릿수로 표시|결정적|
 
 ### <a name="functions-that-set-or-return-session-format-functions"></a><a name="SetorGetSessionFormatFunctions"></a> 세션 형식 함수를 설정 또는 반환하는 함수
 
@@ -135,7 +135,7 @@ ms.locfileid: "87523225"
 |[SET DATEFORMAT](../../t-sql/statements/set-dateformat-transact-sql.md)|SET DATEFORMAT { *format* &#124; **@** _format_var_ }|**datetime** 또는 **smalldatetime** 데이터를 입력할 때 날짜 부분의 순서(월/일/년도)를 설정합니다.|해당 없음|해당 없음|
 |[@@LANGUAGE](../../t-sql/functions/language-transact-sql.md)|@@LANGUAGE|현재 사용 중인 언어의 이름을 반환합니다. @@LANGUAGE는 날짜 또는 시간 함수가 아닙니다. 하지만 언어 설정은 날짜 함수의 출력에 영향을 줄 수 있습니다.|해당 없음|해당 없음|
 |[SET LANGUAGE](../../t-sql/statements/set-language-transact-sql.md)|SET LANGUAGE { [ N ] **'** _language_ **'** &#124; **\@** _language_var_ }|세션 및 시스템 메시지에 대한 언어 환경을 설정합니다. SET LANGUAGE는 날짜 또는 시간 함수가 아닙니다. 하지만 언어 설정은 날짜 함수의 출력에 영향을 줍니다.|해당 없음|해당 없음|
-|[sp_helplanguage](../../relational-databases/system-stored-procedures/sp-helplanguage-transact-sql.md)|**sp_helplanguage** [ [ **@language =** ] **'** _language_ **'** ]|지원되는 모든 언어의 날짜 형식에 대한 정보를 반환합니다. **sp_helplanguage**는 날짜 또는 시간 저장 프로시저가 아닙니다. 하지만 언어 설정은 날짜 함수의 출력에 영향을 줍니다.|해당 없음|해당 없음|
+|[sp_helplanguage](../../relational-databases/system-stored-procedures/sp-helplanguage-transact-sql.md)|**sp_helplanguage** [ [ **@language =** ] **'** _language_ **'** ]|지원되는 모든 언어의 날짜 형식에 대한 정보를 반환합니다. **sp_helplanguage** 는 날짜 또는 시간 저장 프로시저가 아닙니다. 하지만 언어 설정은 날짜 함수의 출력에 영향을 줍니다.|해당 없음|해당 없음|
 
 ### <a name="functions-that-validate-date-and-time-values"></a><a name="ValidateDateandTimeValues"></a> 날짜 및 시간 값 유효성 검사 함수
 

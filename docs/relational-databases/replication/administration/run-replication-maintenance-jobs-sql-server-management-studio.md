@@ -13,13 +13,13 @@ helpviewer_keywords:
 ms.assetid: 0dc485a0-5a50-41eb-a29d-f2b2fb920174
 author: MashaMSFT
 ms.author: mathoma
-monikerRange: =azuresqldb-mi-current||>=sql-server-2016||=sqlallproducts-allversions
-ms.openlocfilehash: da73e8c2585bc3d7c25a6d9ea9aa6673f521b3df
-ms.sourcegitcommit: c8e1553ff3fdf295e8dc6ce30d1c454d6fde8088
+monikerRange: =azuresqldb-mi-current||>=sql-server-2016
+ms.openlocfilehash: f1ec276bbb288adf069e6f4913a648395a932d1d
+ms.sourcegitcommit: 1a544cf4dd2720b124c3697d1e62ae7741db757c
 ms.translationtype: HT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 07/22/2020
-ms.locfileid: "86918972"
+ms.lasthandoff: 12/14/2020
+ms.locfileid: "97467464"
 ---
 # <a name="run-replication-maintenance-jobs-sql-server-management-studio"></a>복제 유지 관리 작업 실행(SQL Server Management Studio)
 [!INCLUDE[sql-asdbmi](../../../includes/applies-to-version/sql-asdbmi.md)]
@@ -45,7 +45,7 @@ ms.locfileid: "86918972"
   
 2.  **SQL Server 에이전트** 폴더를 확장한 다음 **작업** 폴더를 확장합니다.  
   
-3.  작업을 마우스 오른쪽 단추로 클릭한 다음 **작업 시작** 또는 **작업 중지**를 클릭합니다.  
+3.  작업을 마우스 오른쪽 단추로 클릭한 다음 **작업 시작** 또는 **작업 중지** 를 클릭합니다.  
   
 ### <a name="to-start-or-stop-a-replication-maintenance-job-in-replication-monitor"></a>복제 모니터에서 복제 유지 관리 작업을 시작하거나 중지하려면  
   
@@ -53,7 +53,7 @@ ms.locfileid: "86918972"
   
 2.  **에이전트** 탭을 클릭합니다.  
   
-3.  표에서 작업을 마우스 오른쪽 단추로 클릭한 다음 **작업 시작** 또는 **작업 중지**를 클릭합니다.  
+3.  표에서 작업을 마우스 오른쪽 단추로 클릭한 다음 **작업 시작** 또는 **작업 중지** 를 클릭합니다.  
   
 ### <a name="to-view-and-modify-properties-for-a-replication-maintenance-job-in-management-studio"></a>Management Studio에서 복제 유지 관리 작업의 속성을 보고 수정하려면  
   
@@ -61,9 +61,9 @@ ms.locfileid: "86918972"
   
 2.  **SQL Server 에이전트** 폴더를 확장한 다음 **작업** 폴더를 확장합니다.  
   
-3.  작업을 마우스 오른쪽 단추로 클릭한 다음 **속성**을 클릭합니다.  
+3.  작업을 마우스 오른쪽 단추로 클릭한 다음 **속성** 을 클릭합니다.  
   
-4.  **작업 속성 - \<Job>** 대화 상자에서 필요한 경우 속성을 수정한 다음, **확인**을 클릭합니다.  
+4.  **작업 속성 - \<Job>** 대화 상자에서 필요한 경우 속성을 수정한 다음, **확인** 을 클릭합니다.  
   
 ### <a name="to-view-and-modify-properties-for-a-replication-maintenance-job-in-replication-monitor"></a>복제 모니터에서 복제 유지 관리 작업의 속성을 보고 수정하려면  
   
@@ -71,9 +71,9 @@ ms.locfileid: "86918972"
   
 2.  **에이전트** 탭을 클릭합니다.  
   
-3.  표에서 작업을 마우스 오른쪽 단추로 클릭한 다음 **속성**을 클릭합니다.  
+3.  표에서 작업을 마우스 오른쪽 단추로 클릭한 다음 **속성** 을 클릭합니다.  
   
-4.  **작업 속성 - \<Job>** 대화 상자에서 필요한 경우 속성을 수정한 다음, **확인**을 클릭합니다.  
+4.  **작업 속성 - \<Job>** 대화 상자에서 필요한 경우 속성을 수정한 다음, **확인** 을 클릭합니다.  
   
 ## <a name="see-also"></a>참고 항목  
  [복제 에이전트 시작 및 중지&#40;SQL Server Management Studio&#41;](../../../relational-databases/replication/agents/start-and-stop-a-replication-agent-sql-server-management-studio.md)   

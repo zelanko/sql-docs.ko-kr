@@ -19,13 +19,13 @@ helpviewer_keywords:
 ms.assetid: 27d72ea4-bcb6-48f2-b4aa-eb1410da7efc
 author: MashaMSFT
 ms.author: mathoma
-monikerRange: =azuresqldb-mi-current||>=sql-server-2016||=sqlallproducts-allversions
-ms.openlocfilehash: a3b117495e9b9ae6886b8f99345923217d46a32e
-ms.sourcegitcommit: c8e1553ff3fdf295e8dc6ce30d1c454d6fde8088
+monikerRange: =azuresqldb-mi-current||>=sql-server-2016
+ms.openlocfilehash: 83b1d20afdc123359f3b34de90875e7977d7b541
+ms.sourcegitcommit: 1a544cf4dd2720b124c3697d1e62ae7741db757c
 ms.translationtype: HT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 07/22/2020
-ms.locfileid: "86923646"
+ms.lasthandoff: 12/14/2020
+ms.locfileid: "97468894"
 ---
 # <a name="view-and-modify-publication-properties"></a>게시 속성 보기 및 수정
 [!INCLUDE[sql-asdbmi](../../../includes/applies-to-version/sql-asdbmi.md)]
@@ -88,17 +88,17 @@ ms.locfileid: "86923646"
   
 2.  **복제** 폴더를 확장한 다음 **로컬 게시** 폴더를 확장합니다.  
   
-3.  게시를 마우스 오른쪽 단추로 클릭한 다음 **속성**을 클릭합니다.  
+3.  게시를 마우스 오른쪽 단추로 클릭한 다음 **속성** 을 클릭합니다.  
   
-4.  필요한 경우 속성을 수정한 다음 **확인**을 클릭합니다.  
+4.  필요한 경우 속성을 수정한 다음 **확인** 을 클릭합니다.  
 
 #### <a name="to-view-and-modify-publication-properties-in-replication-monitor"></a>복제 모니터에서 게시 속성을 보고 수정하려면  
   
 1.  복제 모니터의 왼쪽 창에서 게시자 그룹을 확장한 다음 게시자를 확장합니다.  
   
-2.  게시를 마우스 오른쪽 단추로 클릭한 다음 **속성**을 클릭합니다.  
+2.  게시를 마우스 오른쪽 단추로 클릭한 다음 **속성** 을 클릭합니다.  
   
-3.  필요한 경우 속성을 수정한 다음 **확인**을 클릭합니다.  
+3.  필요한 경우 속성을 수정한 다음 **확인** 을 클릭합니다.  
   
 ##  <a name="using-transact-sql"></a><a name="TsqlProcedure"></a> Transact-SQL 사용  
  게시는 수정할 수 있으며 게시 속성은 복제 저장 프로시저를 사용하여 프로그래밍 방식으로 반환할 수 있습니다. 사용하는 저장 프로시저는 게시 유형에 따라 달라집니다.  
@@ -112,7 +112,7 @@ ms.locfileid: "86923646"
 1.  **\@property** 매개 변수에 변경할 게시 속성, **\@value** 매개 변수에 이 속성의 새 값을 지정하여 [sp_changepublication](../../../relational-databases/system-stored-procedures/sp-changepublication-transact-sql.md)을 실행합니다.  
   
     > [!NOTE]  
-    >  변경 시 새 스냅샷을 생성해야 하는 경우 **\@force_invalidate_snapshot** 값도 **1**로 지정해야 합니다. 변경 시 구독자를 초기화해야 하는 경우 **\@force_reinit_subscription**에 값 **1**을 지정해야 합니다. 변경된 경우 새 스냅샷 또는 다시 초기화가 필요한 속성에 대한 자세한 내용은 [게시 및 아티클 속성 변경](../../../relational-databases/replication/publish/change-publication-and-article-properties.md)을 참조하세요.  
+    >  변경 시 새 스냅샷을 생성해야 하는 경우 **\@force_invalidate_snapshot** 값도 **1** 로 지정해야 합니다. 변경 시 구독자를 초기화해야 하는 경우 **\@force_reinit_subscription** 에 값 **1** 을 지정해야 합니다. 변경된 경우 새 스냅샷 또는 다시 초기화가 필요한 속성에 대한 자세한 내용은 [게시 및 아티클 속성 변경](../../../relational-databases/replication/publish/change-publication-and-article-properties.md)을 참조하세요.  
   
 #### <a name="to-view-the-properties-of-a-merge-publication"></a>병합 게시의 속성을 확인하려면  
   
@@ -123,7 +123,7 @@ ms.locfileid: "86923646"
 1.  **\@property** 매개 변수에 변경할 게시 속성, **\@value** 매개 변수에 이 속성의 새 값을 지정하여 [sp_changemergepublication](../../../relational-databases/system-stored-procedures/sp-changemergepublication-transact-sql.md)을 실행합니다.  
   
     > [!NOTE]  
-    >  변경 시 새 스냅샷을 생성해야 하는 경우 **\@force_invalidate_snapshot** 값도 **1**로 지정해야 합니다. 변경 시 구독자를 초기화해야 하는 경우 **\@force_reinit_subscription**에 값 **1**을 지정해야 합니다. 변경 시 새 스냅샷 또는 재초기화가 필요한 속성에 관한 자세한 내용은 [게시 및 아티클 속성 변경](../../../relational-databases/replication/publish/change-publication-and-article-properties.md)을 참조하세요.  
+    >  변경 시 새 스냅샷을 생성해야 하는 경우 **\@force_invalidate_snapshot** 값도 **1** 로 지정해야 합니다. 변경 시 구독자를 초기화해야 하는 경우 **\@force_reinit_subscription** 에 값 **1** 을 지정해야 합니다. 변경 시 새 스냅샷 또는 재초기화가 필요한 속성에 관한 자세한 내용은 [게시 및 아티클 속성 변경](../../../relational-databases/replication/publish/change-publication-and-article-properties.md)을 참조하세요.  
   
 #### <a name="to-view-the-properties-of-a-snapshot"></a>스냅샷의 속성을 확인하려면  
   
@@ -159,7 +159,7 @@ ms.locfileid: "86923646"
   
 2.  <xref:Microsoft.SqlServer.Replication.TransPublication> 클래스의 인스턴스를 만들고 게시에 대한 <xref:Microsoft.SqlServer.Replication.Publication.Name%2A> 및 <xref:Microsoft.SqlServer.Replication.Publication.DatabaseName%2A> 속성을 설정한 다음, 1단계에서 만든 연결에 <xref:Microsoft.SqlServer.Replication.ReplicationObject.ConnectionContext%2A> 속성을 설정합니다.  
   
-3.  <xref:Microsoft.SqlServer.Replication.ReplicationObject.LoadProperties%2A> 메서드를 호출하여 개체 속성을 가져옵니다. 이 메서드가 **false**를 반환하는 경우 2단계에서 게시 속성이 올바르게 정의되지 않았거나 게시가 없습니다.  
+3.  <xref:Microsoft.SqlServer.Replication.ReplicationObject.LoadProperties%2A> 메서드를 호출하여 개체 속성을 가져옵니다. 이 메서드가 **false** 를 반환하는 경우 2단계에서 게시 속성이 올바르게 정의되지 않았거나 게시가 없습니다.  
   
 4.  (옵션) 속성을 변경하려면 설정할 수 있는 한 개 이상의 속성에 대해 새 값을 설정합니다. 논리 AND 연산자(Microsoft Visual C#에서는 **&** , Microsoft Visual Basic에서는 **And** )를 사용하여 지정된 <xref:Microsoft.SqlServer.Replication.PublicationAttributes> 값이 <xref:Microsoft.SqlServer.Replication.Publication.Attributes%2A> 속성에 대해 설정되어 있는지 확인할 수 있습니다. 포함 논리 OR 연산자(Visual C#에서는 **|** , Visual Basic에서는 **Or** ) 및 배타적 논리 OR 연산자(Visual C#에서는 **^** , Visual Basic에서는 **Xor** )를 사용하여 <xref:Microsoft.SqlServer.Replication.PublicationAttributes> 속성에 대한 <xref:Microsoft.SqlServer.Replication.Publication.Attributes%2A> 속성에 대해 설정되어 있는지 확인할 수 있습니다.  
   
@@ -171,7 +171,7 @@ ms.locfileid: "86923646"
   
 2.  <xref:Microsoft.SqlServer.Replication.MergePublication> 클래스의 인스턴스를 만들고 게시에 대한 <xref:Microsoft.SqlServer.Replication.Publication.Name%2A> 및 <xref:Microsoft.SqlServer.Replication.Publication.DatabaseName%2A> 속성을 설정한 다음, 1단계에서 만든 연결에 <xref:Microsoft.SqlServer.Replication.ReplicationObject.ConnectionContext%2A> 속성을 설정합니다.  
   
-3.  <xref:Microsoft.SqlServer.Replication.ReplicationObject.LoadProperties%2A> 메서드를 호출하여 개체 속성을 가져옵니다. 이 메서드가 **false**를 반환하는 경우 2단계에서 게시 속성이 올바르게 정의되지 않았거나 게시가 없습니다.  
+3.  <xref:Microsoft.SqlServer.Replication.ReplicationObject.LoadProperties%2A> 메서드를 호출하여 개체 속성을 가져옵니다. 이 메서드가 **false** 를 반환하는 경우 2단계에서 게시 속성이 올바르게 정의되지 않았거나 게시가 없습니다.  
   
 4.  (옵션) 속성을 변경하려면 설정할 수 있는 한 개 이상의 속성에 대해 새 값을 설정합니다. 논리 AND 연산자(Microsoft Visual C#에서는 **&** , Visual Basic에서는 **And** )를 사용하여 지정된 <xref:Microsoft.SqlServer.Replication.PublicationAttributes> 값이 <xref:Microsoft.SqlServer.Replication.Publication.Attributes%2A> 속성에 대해 설정되어 있는지 확인할 수 있습니다. 포함 논리 OR 연산자(Visual C#에서는 **|** , Visual Basic에서는 **Or** ) 및 배타적 논리 OR 연산자(Visual C#에서는 **^** , Visual Basic에서는 **Xor** )를 사용하여 <xref:Microsoft.SqlServer.Replication.PublicationAttributes> 속성에 대한 <xref:Microsoft.SqlServer.Replication.Publication.Attributes%2A> 속성에 대해 설정되어 있는지 확인할 수 있습니다.  
   

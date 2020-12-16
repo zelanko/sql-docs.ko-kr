@@ -17,13 +17,13 @@ helpviewer_keywords:
 ms.assetid: 2f3ce5f5-c81c-4470-8141-8144d4f218dd
 author: rothja
 ms.author: jroth
-monikerRange: =azuresqldb-current||>=sql-server-2016||=sqlallproducts-allversions||>=sql-server-linux-2017||=azuresqldb-mi-current
-ms.openlocfilehash: f2665ab9b5a30209a123056664921334ce3c8367
-ms.sourcegitcommit: e700497f962e4c2274df16d9e651059b42ff1a10
+monikerRange: =azuresqldb-current||>=sql-server-2016||>=sql-server-linux-2017||=azuresqldb-mi-current
+ms.openlocfilehash: eebd2896dc1931e03dd121867ee09c1940d02d36
+ms.sourcegitcommit: 1a544cf4dd2720b124c3697d1e62ae7741db757c
 ms.translationtype: HT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 08/17/2020
-ms.locfileid: "88485312"
+ms.lasthandoff: 12/14/2020
+ms.locfileid: "97466714"
 ---
 # <a name="deterministic-and-nondeterministic-functions"></a>결정적 함수 및 비결정적 함수
 [!INCLUDE [SQL Server SQL Database](../../includes/applies-to-version/sql-asdb.md)]
@@ -165,8 +165,8 @@ ms.locfileid: "88485312"
 |함수|주석|  
 |--------------|--------------|  
 |모든 집계 함수|모든 집계 함수는 OVER 및 ORDER BY 절로 지정되지 않는 한 결정적입니다. 이러한 함수 목록은 [집계 함수&#40;Transact-SQL&#41;](../../t-sql/functions/aggregate-functions-transact-sql.md)를 참조하세요.|  
-|CAST|**datetime**, **smalldatetime**또는 **sql_variant**와 함께 사용하지 않을 경우 결정적입니다.|  
-|CONVERT|다음과 같은 경우를 제외하고 결정적입니다.<br /><br /> <br /><br /> 원본 유형이 **sql_variant**인 경우<br /><br /> 대상 유형이 **sql_variant** 이고 해당 원본 유형이 비결정적인 경우<br /><br /> 원본 또는 대상 유형이 **datetime** 이거나 **smalldatetime**이고 다른 원본 또는 대상 유형이 문자열이며 비결정적 스타일을 지정한 경우 결정적이려면 스타일 매개 변수가 상수여야 합니다. 또한 100 이하의 스타일(스타일 20 및 21 제외)은 비결정적입니다. 100보다 큰 스타일(스타일 106, 107, 109, 113 제외)은 결정적입니다.|  
+|CAST|**datetime**, **smalldatetime** 또는 **sql_variant** 와 함께 사용하지 않을 경우 결정적입니다.|  
+|CONVERT|다음과 같은 경우를 제외하고 결정적입니다.<br /><br /> <br /><br /> 원본 유형이 **sql_variant** 인 경우<br /><br /> 대상 유형이 **sql_variant** 이고 해당 원본 유형이 비결정적인 경우<br /><br /> 원본 또는 대상 유형이 **datetime** 이거나 **smalldatetime** 이고 다른 원본 또는 대상 유형이 문자열이며 비결정적 스타일을 지정한 경우 결정적이려면 스타일 매개 변수가 상수여야 합니다. 또한 100 이하의 스타일(스타일 20 및 21 제외)은 비결정적입니다. 100보다 큰 스타일(스타일 106, 107, 109, 113 제외)은 결정적입니다.|  
 |CHECKSUM|CHECKSUM(*)을 제외하고 모두 결정적입니다.|  
 |ISDATE|CONVERT 함수와 함께 사용하고 CONVERT 스타일 매개 변수가 지정되고 스타일이 0, 100, 9 또는 109가 아닌 경우에만 결정적입니다.|  
 |RAND|RAND는 *seed* 매개 변수가 지정된 경우에만 결정적입니다.|  

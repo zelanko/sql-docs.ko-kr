@@ -13,14 +13,14 @@ ms.assetid: 3ab1d101-7ae0-488f-9b57-468e2517b737
 author: pmasl
 ms.author: pelopes
 ms.reviewer: mikeray
-monikerRange: =azuresqldb-current||>=sql-server-2016||=sqlallproducts-allversions||>=sql-server-linux-2017||=azuresqldb-mi-current
+monikerRange: =azuresqldb-current||>=sql-server-2016||>=sql-server-linux-2017||=azuresqldb-mi-current
 ms.custom: seo-lt-2019
-ms.openlocfilehash: 36e196d2778407207ece407ddbb72c3b8788b510
-ms.sourcegitcommit: 4d370399f6f142e25075b3714e5c2ce056b1bfd0
+ms.openlocfilehash: 4904a5e907a026f0cd8a6b5a0936b9f9395c2453
+ms.sourcegitcommit: 1a544cf4dd2720b124c3697d1e62ae7741db757c
 ms.translationtype: HT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 10/09/2020
-ms.locfileid: "91869205"
+ms.lasthandoff: 12/14/2020
+ms.locfileid: "97468624"
 ---
 # <a name="set-the-service-account-for-the-full-text-filter-daemon-launcher"></a>전체 텍스트 필터 데몬 시작 관리자 서비스 계정 설정
 [!INCLUDE [SQL Server Azure SQL Database](../../includes/applies-to-version/sql-asdb.md)]
@@ -34,9 +34,9 @@ SQL 전체 텍스트 필터 데몬 시작 관리자 서비스는 [!INCLUDE[ssNoV
 
 ##  <a name="set-the-service-account"></a><a name="setting"></a> 서비스 계정 설정  
   
-1.  **시작** 메뉴에서 **모든 프로그램**을 가리키고 [!INCLUDE[ssCurrentUI](../../includes/sscurrentui-md.md)]를 확장한 다음 **SQL Server 2016 구성 관리자**를 클릭합니다.  
+1.  **시작** 메뉴에서 **모든 프로그램** 을 가리키고 [!INCLUDE[ssCurrentUI](../../includes/sscurrentui-md.md)]를 확장한 다음 **SQL Server 2016 구성 관리자** 를 클릭합니다.  
   
-2.  **SQL Server 구성 관리자**에서 **SQL Server 서비스**를 클릭하고 **SQL 전체 텍스트 필터 데몬 시작 관리자(**_인스턴스 이름_**)** 를 마우스 오른쪽 단추로 클릭한 다음 **속성**을 클릭합니다.  
+2.  **SQL Server 구성 관리자** 에서 **SQL Server 서비스** 를 클릭하고 **SQL 전체 텍스트 필터 데몬 시작 관리자(**_인스턴스 이름_**)** 를 마우스 오른쪽 단추로 클릭한 다음 **속성** 을 클릭합니다.  
   
 3.  대화 상자의 **로그온** 탭을 클릭한 다음 SQL 전체 텍스트 필터 데몬 시작 관리자 서비스에서 시작한 프로세스를 실행할 계정을 선택하거나 입력합니다.  
   

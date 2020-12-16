@@ -15,13 +15,13 @@ helpviewer_keywords:
 ms.assetid: 902314fe-5f9c-4d0d-a0b7-27e67c9c70ec
 author: stevestein
 ms.author: sstein
-monikerRange: '>=aps-pdw-2016||=azuresqldb-current||=azure-sqldw-latest||>=sql-server-2016||=sqlallproducts-allversions||>=sql-server-linux-2017||=azuresqldb-mi-current'
-ms.openlocfilehash: 1e101fe01c421dbd75b7d0426f13539fb0688e3d
-ms.sourcegitcommit: a5398f107599102af7c8cda815d8e5e9a367ce7e
+monikerRange: '>=aps-pdw-2016||=azuresqldb-current||=azure-sqldw-latest||>=sql-server-2016||>=sql-server-linux-2017||=azuresqldb-mi-current'
+ms.openlocfilehash: 476741da7da2e0e463a5a5a0abf4ebf0a8e70d40
+ms.sourcegitcommit: 1a544cf4dd2720b124c3697d1e62ae7741db757c
 ms.translationtype: HT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 10/13/2020
-ms.locfileid: "92005857"
+ms.lasthandoff: 12/14/2020
+ms.locfileid: "97467084"
 ---
 # <a name="specify-parameters"></a>매개 변수 지정
 [!INCLUDE[SQL Server Azure SQL Database Synapse Analytics PDW ](../../includes/applies-to-version/sql-asdb-asdbmi-asa-pdw.md)]
@@ -62,7 +62,7 @@ GO
 ## <a name="specifying-parameter-names"></a>매개 변수 이름 지정  
  프로시저를 생성하고 매개 변수를 선언할 때 매개 변수 이름은 하나의 \@ 문자로 시작해야 하며 프로시저 범위 내에서 고유해야 합니다.  
   
- 매개 변수 이름을 명시적으로 지정하고 프로시저 호출 시 적절한 값을 각 매개 변수에 할당하면 매개 변수를 임의의 순서로 제공할 수 있습니다. 예를 들어, 프로시저 **my_proc**에서 **\@first**, **\@second** 및 **\@third**라는 세 개의 매개 변수를 사용하는 경우 `EXECUTE my_proc @second = 2, @first = 1, @third = 3;`과 같이 프로시저에 전달된 값을 매개 변수 이름에 할당할 수 있습니다.  
+ 매개 변수 이름을 명시적으로 지정하고 프로시저 호출 시 적절한 값을 각 매개 변수에 할당하면 매개 변수를 임의의 순서로 제공할 수 있습니다. 예를 들어, 프로시저 **my_proc** 에서 **\@first**, **\@second** 및 **\@third** 라는 세 개의 매개 변수를 사용하는 경우 `EXECUTE my_proc @second = 2, @first = 1, @third = 3;`과 같이 프로시저에 전달된 값을 매개 변수 이름에 할당할 수 있습니다.  
   
 > [!NOTE]  
 >  **\@parameter =** _value_ 형식에 하나의 매개 변수 값이 입력되는 경우 모든 후속 매개 변수도 이러한 방식으로 입력되어야 합니다. **\@parameter =** _value_ 형식에 매개 변수 값이 전달되지 않은 경우 해당 값은 CREATE PROCEDURE 문에 나열된 매개 변수를 따라 동일한 순서(왼쪽에서 오른쪽)로 제공되어야 합니다.  
@@ -169,10 +169,10 @@ GO
   
 ```  
   
- `usp_GetList` 를 실행하여 가격이 $700 미만인 [!INCLUDE[ssSampleDBCoShort](../../includes/sssampledbcoshort-md.md)] 제품(자전거) 목록을 반환합니다. OUTPUT 매개 변수인 **\@cost**와 **\@compareprices**는 **메시지** 창의 메시지를 반환하기 위해 흐름 제어 언어와 함께 사용됩니다.  
+ `usp_GetList` 를 실행하여 가격이 $700 미만인 [!INCLUDE[ssSampleDBCoShort](../../includes/sssampledbcoshort-md.md)] 제품(자전거) 목록을 반환합니다. OUTPUT 매개 변수인 **\@cost** 와 **\@compareprices** 는 **메시지** 창의 메시지를 반환하기 위해 흐름 제어 언어와 함께 사용됩니다.  
   
 > [!NOTE]  
->  OUTPUT 변수는 프로시저를 만들 때와 변수를 사용할 때 정의되어야 합니다. 매개 변수 이름과 변수 이름은 일치하지 않아도 되지만 **\@listprice=** _variable_을 사용하지 않는 경우 데이터 형식과 매개 변수 위치는 일치해야 합니다.  
+>  OUTPUT 변수는 프로시저를 만들 때와 변수를 사용할 때 정의되어야 합니다. 매개 변수 이름과 변수 이름은 일치하지 않아도 되지만 **\@listprice=** _variable_ 을 사용하지 않는 경우 데이터 형식과 매개 변수 위치는 일치해야 합니다.  
   
 ```  
 DECLARE @ComparePrice money, @Cost money ;  

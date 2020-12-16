@@ -9,13 +9,13 @@ ms.topic: conceptual
 author: MikeRayMSFT
 ms.author: mikeray
 ms.reviewer: mikeray
-monikerRange: '>= sql-server-linux-ver15 || >= sql-server-ver15 || =sqlallproducts-allversions'
-ms.openlocfilehash: 5ab1ef128b86f3426193b648c41f6cac6b324e71
-ms.sourcegitcommit: 32135463a8494d9ed1600a58f51819359e3c09dc
+monikerRange: '>= sql-server-linux-ver15 || >= sql-server-ver15'
+ms.openlocfilehash: fdbc2112467cadc2aaec390a667e3d189786b3ef
+ms.sourcegitcommit: 1a544cf4dd2720b124c3697d1e62ae7741db757c
 ms.translationtype: HT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 10/08/2020
-ms.locfileid: "91834043"
+ms.lasthandoff: 12/14/2020
+ms.locfileid: "97467494"
 ---
 # <a name="configure-polybase-to-access-external-data-in-mongodb"></a>MongoDB의 외부 데이터에 액세스하도록 PolyBase 구성
 
@@ -128,7 +128,7 @@ MongoDB 데이터 원본의 데이터를 쿼리하려면 외부 데이터를 참
 
 ## <a name="cosmos-db-connection"></a>Cosmos DB 연결
 
-Cosmos DB mongo api 및 Mongo DB PolyBase 커넥터를 사용하여 **Cosmos DB 인스턴스**의 외부 테이블을 생성할 수 있습니다. 위에 나열된 동일한 단계를 따라 수행하면 됩니다. 데이터베이스 범위 자격 증명, 서버 주소, 포트 및 위치 문자열이 Cosmos DB 서버의 자격 증명을 반영하는지 확인합니다. 
+Cosmos DB mongo api 및 Mongo DB PolyBase 커넥터를 사용하여 **Cosmos DB 인스턴스** 의 외부 테이블을 생성할 수 있습니다. 위에 나열된 동일한 단계를 따라 수행하면 됩니다. 데이터베이스 범위 자격 증명, 서버 주소, 포트 및 위치 문자열이 Cosmos DB 서버의 자격 증명을 반영하는지 확인합니다. 
 
 ## <a name="next-steps"></a>다음 단계
 

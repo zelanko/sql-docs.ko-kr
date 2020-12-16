@@ -15,13 +15,13 @@ helpviewer_keywords:
 ms.assetid: 6b8da1f5-3d8e-4f88-b111-b915788b06f1
 author: VanMSFT
 ms.author: vanto
-monikerRange: =azuresqldb-current||>=sql-server-2016||=sqlallproducts-allversions||>=sql-server-linux-2017||=azuresqldb-mi-current
-ms.openlocfilehash: 0f76734e5c640e7044c9b6ddc2eed5d62ce50e4c
-ms.sourcegitcommit: da88320c474c1c9124574f90d549c50ee3387b4c
+monikerRange: =azuresqldb-current||>=sql-server-2016||>=sql-server-linux-2017||=azuresqldb-mi-current
+ms.openlocfilehash: df42c1651d460b0be7b0e2900338982168ebd597
+ms.sourcegitcommit: 1a544cf4dd2720b124c3697d1e62ae7741db757c
 ms.translationtype: HT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 07/01/2020
-ms.locfileid: "85628122"
+ms.lasthandoff: 12/14/2020
+ms.locfileid: "97468564"
 ---
 # <a name="create-an-application-role"></a>애플리케이션 역할 만들기
 [!INCLUDE [SQL Server Azure SQL Database](../../../includes/applies-to-version/sql-asdb.md)]
@@ -61,18 +61,18 @@ ms.locfileid: "85628122"
   
 4.  **애플리케이션 역할** 폴더를 마우스 오른쪽 단추로 클릭한 다음, **새 애플리케이션 역할...** 을 선택합니다.  
   
-5.  **애플리케이션 역할 – 신규** 대화 상자의 **일반 페이지**에서 **역할 이름** 상자에 새 애플리케이션 역할의 새 이름을 입력합니다.  
+5.  **애플리케이션 역할 – 신규** 대화 상자의 **일반 페이지** 에서 **역할 이름** 상자에 새 애플리케이션 역할의 새 이름을 입력합니다.  
   
 6.  **기본 스키마** 상자에 개체 이름을 입력하여 이 역할로 만든 개체를 소유할 스키마를 지정합니다. 또는 줄임표 **(…)** 를 클릭하여 **스키마 찾기** 대화 상자를 엽니다.  
   
 7.  **암호** 상자에 새 역할의 암호를 입력합니다. **암호 확인** 상자에 암호를 다시 입력합니다.  
   
-8.  **이 역할에서 소유한 스키마**에서 이 역할이 소유할 스키마를 선택하거나 봅니다. 각 스키마는 한 개의 스키마 또는 역할에서만 소유할 수 있습니다.  
+8.  **이 역할에서 소유한 스키마** 에서 이 역할이 소유할 스키마를 선택하거나 봅니다. 각 스키마는 한 개의 스키마 또는 역할에서만 소유할 수 있습니다.  
   
 9. [!INCLUDE[clickOK](../../../includes/clickok-md.md)]  
 
 ### <a name="additional-options"></a>추가 옵션  
- **애플리케이션 역할 - 신규** 대화 상자는 또한 **보안 개체** 및 **확장 속성**의 두 추가 페이지에 옵션을 제공합니다.  
+ **애플리케이션 역할 - 신규** 대화 상자는 또한 **보안 개체** 및 **확장 속성** 의 두 추가 페이지에 옵션을 제공합니다.  
   
 -   **보안 개체** 페이지에는 사용 가능한 모든 보안 개체와 이러한 보안 개체에서 로그인에 부여할 수 있는 권한이 나열됩니다.  
   
@@ -82,11 +82,11 @@ ms.locfileid: "85628122"
   
 #### <a name="to-create-an-application-role"></a>애플리케이션 역할을 만들려면  
   
-1.  **개체 탐색기**에서 [!INCLUDE[ssDE](../../../includes/ssde-md.md)]인스턴스에 연결합니다.  
+1.  **개체 탐색기** 에서 [!INCLUDE[ssDE](../../../includes/ssde-md.md)]인스턴스에 연결합니다.  
   
-2.  표준 도구 모음에서 **새 쿼리**를 클릭합니다.  
+2.  표준 도구 모음에서 **새 쿼리** 를 클릭합니다.  
   
-3.  다음 예를 복사하여 쿼리 창에 붙여 넣고 **실행**을 클릭합니다.  
+3.  다음 예를 복사하여 쿼리 창에 붙여 넣고 **실행** 을 클릭합니다.  
   
     ```  
     -- Creates an application role called "weekly_receipts" that has the password "987Gbv876sPYY5m23" and "Sales" as its default schema.  

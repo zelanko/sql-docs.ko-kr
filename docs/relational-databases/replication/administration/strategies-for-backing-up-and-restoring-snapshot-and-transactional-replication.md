@@ -21,13 +21,13 @@ helpviewer_keywords:
 ms.assetid: a8afcdbc-55db-4916-a219-19454f561f9e
 author: MashaMSFT
 ms.author: mathoma
-monikerRange: =azuresqldb-current||>=sql-server-2016||=sqlallproducts-allversions
-ms.openlocfilehash: 5da2a080ef20bd98b27873796a64b433268ae06f
-ms.sourcegitcommit: 768f046107642f72693514f51bf2cbd00f58f58a
+monikerRange: =azuresqldb-current||>=sql-server-2016
+ms.openlocfilehash: 1d395bebae8b009f4e91d8df074401f8659e1748
+ms.sourcegitcommit: 1a544cf4dd2720b124c3697d1e62ae7741db757c
 ms.translationtype: HT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 07/23/2020
-ms.locfileid: "87108420"
+ms.lasthandoff: 12/14/2020
+ms.locfileid: "97467404"
 ---
 # <a name="strategies-for-backing-up-and-restoring-snapshot-and-transactional-replication"></a>스냅샷 및 트랜잭션 복제의 백업 및 복원을 위한 전략
 [!INCLUDE[sql-asdb](../../../includes/applies-to-version/sql-asdb.md)]
@@ -186,15 +186,15 @@ ms.locfileid: "87108420"
          구독자에 이미 데이터가 있다고 지정하는 방법은 [Initialize a Subscription Manually](../../../relational-databases/replication/initialize-a-subscription-manually.md)를 참조하십시오.  
   
 #### <a name="publication-database-peer-to-peer-transactional-replication"></a>게시 데이터베이스: @loopback_detection  
- 다음 단계에서 게시 데이터베이스 **A**, **B**및 **C** 는 피어 투 피어 트랜잭션 복제 토폴로지에 있습니다. **A** 및 **C** 데이터베이스는 온라인 상태이며 제대로 작동하고 있습니다. **B** 데이터베이스는 복원될 데이터베이스입니다. 여기에서 설명하는 절차, 특히 7, 10 및 11단계는 피어 투 피어 토폴로지에 노드를 추가하는 데 필요한 절차와 매우 비슷합니다. 이러한 단계를 가장 간단하게 수행하려면 피어 투 피어 토폴로지 구성 마법사를 사용하면 되지만, 저장 프로시저를 사용할 수도 있습니다.  
+ 다음 단계에서 게시 데이터베이스 **A**, **B** 및 **C** 는 피어 투 피어 트랜잭션 복제 토폴로지에 있습니다. **A** 및 **C** 데이터베이스는 온라인 상태이며 제대로 작동하고 있습니다. **B** 데이터베이스는 복원될 데이터베이스입니다. 여기에서 설명하는 절차, 특히 7, 10 및 11단계는 피어 투 피어 토폴로지에 노드를 추가하는 데 필요한 절차와 매우 비슷합니다. 이러한 단계를 가장 간단하게 수행하려면 피어 투 피어 토폴로지 구성 마법사를 사용하면 되지만, 저장 프로시저를 사용할 수도 있습니다.  
   
 1.  배포 에이전트를 실행하여 **A** 및 **C** 데이터베이스의 구독을 동기화합니다. 2단계로 이동합니다.  
   
      배포 에이전트를 실행하는 방법은 [복제 에이전트 시작 및 중지&#40;SQL Server Management Studio&#41;](../../../relational-databases/replication/agents/start-and-stop-a-replication-agent-sql-server-management-studio.md) 및 [복제 에이전트 실행 파일 개념](../../../relational-databases/replication/concepts/replication-agent-executables-concepts.md)을 참조하세요.  
   
-2.  **B**에서 사용하는 배포 데이터베이스를 아직 사용할 수 있는 경우 배포 에이전트를 실행하여 **B** 데이터베이스와 **A** 데이터베이스 간의 구독과 B 데이터베이스와 **C** 데이터베이스 간의 구독을 동기화합니다. 3단계로 이동합니다.  
+2.  **B** 에서 사용하는 배포 데이터베이스를 아직 사용할 수 있는 경우 배포 에이전트를 실행하여 **B** 데이터베이스와 **A** 데이터베이스 간의 구독과 B 데이터베이스와 **C** 데이터베이스 간의 구독을 동기화합니다. 3단계로 이동합니다.  
   
-3.  **B**에 대한 배포 데이터베이스에서 [sp_removedistpublisherdbreplication](../../../relational-databases/system-stored-procedures/sp-removedistpublisherdbreplication-transact-sql.md)을 실행하여 **B**에서 사용하는 배포 데이터베이스의 메타데이터를 제거합니다. 4단계로 이동합니다.  
+3.  **B** 에 대한 배포 데이터베이스에서 [sp_removedistpublisherdbreplication](../../../relational-databases/system-stored-procedures/sp-removedistpublisherdbreplication-transact-sql.md)을 실행하여 **B** 에서 사용하는 배포 데이터베이스의 메타데이터를 제거합니다. 4단계로 이동합니다.  
   
 4.  **A** 및 **C** 데이터베이스에서 **B** 데이터베이스의 게시에 대한 구독을 삭제합니다. 5단계로 이동합니다.  
   
@@ -210,7 +210,7 @@ ms.locfileid: "87108420"
   
     2.  **B** 데이터베이스에서 **A** 데이터베이스의 게시에 대한 구독을 다시 만들고 해당 구독이 백업으로 초기화되도록 지정합니다. 즉, [sp_addsubscription](../../../relational-databases/system-stored-procedures/sp-addsubscription-transact-sql.md)의 `@sync_type` 매개 변수에 **initialize with backup** 값을 지정합니다. c 단계로 이동합니다.  
   
-    3.  **A** 데이터베이스에서 **B**데이터베이스의 게시에 대한 구독을 다시 만들고 해당 구독자에 이미 데이터가 있다고 지정합니다. 즉, [sp_addsubscription](../../../relational-databases/system-stored-procedures/sp-addsubscription-transact-sql.md)의 `@sync_type` 매개 변수에 **replication support only** 값을 지정합니다. 8단계로 이동합니다.  
+    3.  **A** 데이터베이스에서 **B** 데이터베이스의 게시에 대한 구독을 다시 만들고 해당 구독자에 이미 데이터가 있다고 지정합니다. 즉, [sp_addsubscription](../../../relational-databases/system-stored-procedures/sp-addsubscription-transact-sql.md)의 `@sync_type` 매개 변수에 **replication support only** 값을 지정합니다. 8단계로 이동합니다.  
   
 8.  배포 에이전트를 실행하여 **A** 및 **B** 데이터베이스의 구독을 동기화합니다. 게시된 테이블에 ID 열이 있으면 9단계로 이동합니다. 그렇지 않은 경우에는 10단계로 이동합니다.  
   
@@ -238,17 +238,17 @@ ms.locfileid: "87108420"
   
     4.  b 단계에서 검색한 `@request_id` 값을 지정하고 [sp_helppeerresponses](../../../relational-databases/system-stored-procedures/sp-helppeerresponses-transact-sql.md)를 실행합니다. 모든 노드가 피어 요청을 받았음을 표시할 때까지 기다립니다. e 단계로 이동합니다.  
   
-    5.  구독자에 이미 데이터가 있음을 지정하여 **B** 데이터베이스에서 **C**데이터베이스의 게시에 대한 구독을 다시 만듭니다. b 단계로 이동합니다.  
+    5.  구독자에 이미 데이터가 있음을 지정하여 **B** 데이터베이스에서 **C** 데이터베이스의 게시에 대한 구독을 다시 만듭니다. b 단계로 이동합니다.  
   
-    6.  구독자에게 이미 데이터가 있음을 지정하여 **C** 데이터베이스에서 **B**데이터베이스의 게시에 대한 구독을 다시 만듭니다. 13단계로 이동합니다.  
+    6.  구독자에게 이미 데이터가 있음을 지정하여 **C** 데이터베이스에서 **B** 데이터베이스의 게시에 대한 구독을 다시 만듭니다. 13단계로 이동합니다.  
   
-12. **B** 데이터베이스와 **C**데이터베이스 간에 구독을 다시 만듭니다.  
+12. **B** 데이터베이스와 **C** 데이터베이스 간에 구독을 다시 만듭니다.  
   
-    1.  **B**데이터베이스에서 [MSpeer_lsns](../../../relational-databases/system-tables/mspeer-lsns-transact-sql.md) 테이블을 쿼리하여 **B** 데이터베이스에서 **C**데이터베이스로부터 받은 최신 트랜잭션의 LSN(로그 시퀀스 번호)을 검색합니다.  
+    1.  **B** 데이터베이스에서 [MSpeer_lsns](../../../relational-databases/system-tables/mspeer-lsns-transact-sql.md) 테이블을 쿼리하여 **B** 데이터베이스에서 **C** 데이터베이스로부터 받은 최신 트랜잭션의 LSN(로그 시퀀스 번호)을 검색합니다.  
   
-    2.  **B** 데이터베이스에서 **C**데이터베이스의 게시에 대한 구독을 다시 만들고 LSN을 기준으로 구독이 초기화되도록 지정합니다. 즉, [sp_addsubscription](../../../relational-databases/system-stored-procedures/sp-addsubscription-transact-sql.md)의 `@sync_type` 매개 변수에 **initialize from lsn** 값을 지정합니다. b 단계로 이동합니다.  
+    2.  **B** 데이터베이스에서 **C** 데이터베이스의 게시에 대한 구독을 다시 만들고 LSN을 기준으로 구독이 초기화되도록 지정합니다. 즉, [sp_addsubscription](../../../relational-databases/system-stored-procedures/sp-addsubscription-transact-sql.md)의 `@sync_type` 매개 변수에 **initialize from lsn** 값을 지정합니다. b 단계로 이동합니다.  
   
-    3.  구독자에게 이미 데이터가 있음을 지정하여 **C** 데이터베이스에서 **B**데이터베이스의 게시에 대한 구독을 다시 만듭니다. 13단계로 이동합니다.  
+    3.  구독자에게 이미 데이터가 있음을 지정하여 **C** 데이터베이스에서 **B** 데이터베이스의 게시에 대한 구독을 다시 만듭니다. 13단계로 이동합니다.  
   
 13. 배포 에이전트를 실행하여 **B** 및 **C** 데이터베이스의 구독을 동기화합니다. 이로써 복원이 완료됩니다.  
   

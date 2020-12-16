@@ -26,13 +26,13 @@ helpviewer_keywords:
 ms.assetid: b23e2f6b-076c-4e6d-9281-764bdb616ad2
 author: markingmyname
 ms.author: maghan
-monikerRange: '>=aps-pdw-2016||=azuresqldb-current||=azure-sqldw-latest||>=sql-server-2016||=sqlallproducts-allversions||>=sql-server-linux-2017||=azuresqldb-mi-current'
-ms.openlocfilehash: 578d639eb80bd85e56d282dbae1495e2abd3ff42
-ms.sourcegitcommit: c74bb5944994e34b102615b592fdaabe54713047
+monikerRange: '>=aps-pdw-2016||=azuresqldb-current||=azure-sqldw-latest||>=sql-server-2016||>=sql-server-linux-2017||=azuresqldb-mi-current'
+ms.openlocfilehash: 721917607310b918fb436d6970b4bcd2117a8db0
+ms.sourcegitcommit: 1a544cf4dd2720b124c3697d1e62ae7741db757c
 ms.translationtype: HT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 09/22/2020
-ms.locfileid: "90990213"
+ms.lasthandoff: 12/14/2020
+ms.locfileid: "97466044"
 ---
 # <a name="create-statistics-transact-sql"></a>CREATE STATISTICS(Transact-SQL)
 [!INCLUDE [sql-asdb-asdbmi-asa-pdw](../../includes/applies-to-version/sql-asdb-asdbmi-asa-pdw.md)]
@@ -61,7 +61,7 @@ ON { table_or_indexed_view_name } ( column [ ,...n ] )
         [ [ FULLSCAN   
             [ [ , ] PERSIST_SAMPLE_PERCENT = { ON | OFF } ]    
           | SAMPLE number { PERCENT | ROWS }   
-            [ [ , ] PERSIST_SAMPLE_PERCENT = { ON | OFF } ]    
+            [ [ , ] PERSIST_SAMPLE_PERCENT = { ON | OFF } ]    
           | <update_stats_stream_option> [ ,...n ]    
         [ [ , ] NORECOMPUTE ]   
         [ [ , ] INCREMENTAL = { ON | OFF } ] 
@@ -157,7 +157,7 @@ CREATE STATISTICS statistics_name
  생략하면 SQL Server는 샘플링을 사용하여 통계를 만들고 고품질의 쿼리 계획을 만드는 데 필요한 샘플 크기를 결정합니다.  
   
  SAMPLE *number* { PERCENT | ROWS }  
- 쿼리 최적화 프로그램에서 통계를 만들 때 사용할 테이블이나 인덱싱된 뷰에 있는 행의 비율이나 개수를 대략적으로 지정합니다. PERCENT의 경우 *number*가 0부터 100까지일 수 있고, ROWS의 경우 *number*가 0부터 총 행 수까지일 수 있습니다. 쿼리 최적화 프로그램에서 샘플링하는 실제 행의 비율이나 개수는 지정된 비율이나 개수와 일치하지 않을 수 있습니다. 예를 들어, 쿼리 최적화 프로그램에서는 데이터 페이지의 모든 행을 검색합니다.  
+ 쿼리 최적화 프로그램에서 통계를 만들 때 사용할 테이블이나 인덱싱된 뷰에 있는 행의 비율이나 개수를 대략적으로 지정합니다. PERCENT의 경우 *number* 가 0부터 100까지일 수 있고, ROWS의 경우 *number* 가 0부터 총 행 수까지일 수 있습니다. 쿼리 최적화 프로그램에서 샘플링하는 실제 행의 비율이나 개수는 지정된 비율이나 개수와 일치하지 않을 수 있습니다. 예를 들어, 쿼리 최적화 프로그램에서는 데이터 페이지의 모든 행을 검색합니다.  
   
  SAMPLE은 기본 샘플링을 기반으로 하는 쿼리 계획이 만족스럽지 못한 특별한 경우에 유용합니다. 대부분의 경우 쿼리 최적화 프로그램은 기본적으로 고품질의 쿼리 계획을 만들기 위해 필요에 따라 샘플링을 사용하고 통계적으로 중요한 샘플 크기를 결정하기 때문에 SAMPLE을 지정할 필요가 없습니다.  
   
@@ -166,7 +166,7 @@ CREATE STATISTICS statistics_name
  0 PERCENT 또는 0 ROWS로 지정하지 않는 것이 좋습니다. 0 PERCENT 또는 0 ROWS로 지정하면 통계 데이터가 포함되지 않은 빈 통계 개체가 만들어집니다.  
  
  PERSIST_SAMPLE_PERCENT = { ON | OFF }  
- **ON**을 선택한 경우 통계는 샘플링 비율을 명시적으로 지정하지 않은 이후 업데이트에 대해 생성 샘플링 비율을 유지합니다. **OFF**를 선택한 경우 샘플링 비율을 명시적으로 지정하지 않은 이후 업데이트의 통계 샘플링 비율은 기본 샘플링으로 재설정됩니다. 기본값은 **OFF**입니다. 
+ **ON** 을 선택한 경우 통계는 샘플링 비율을 명시적으로 지정하지 않은 이후 업데이트에 대해 생성 샘플링 비율을 유지합니다. **OFF** 를 선택한 경우 샘플링 비율을 명시적으로 지정하지 않은 이후 업데이트의 통계 샘플링 비율은 기본 샘플링으로 재설정됩니다. 기본값은 **OFF** 입니다. 
  
  > [!NOTE]
  > 테이블이 잘린 경우 잘린 HoBT에서 작성된 모든 통계가 기본 샘플링 비율을 사용하도록 되돌아갑니다.
@@ -177,7 +177,7 @@ CREATE STATISTICS statistics_name
  [!INCLUDE[ssInternalOnly](../../includes/ssinternalonly-md.md)]  
   
  NORECOMPUTE  
- *statistics_name*에 대해 자동 통계 업데이트 옵션인 AUTO_STATISTICS_UPDATE를 비활성화합니다. 이 옵션을 지정하면 쿼리 최적화 프로그램에서 *statistics_name*에 대해 진행 중인 모든 통계 업데이트를 완료하고 이후의 업데이트를 비활성화합니다.  
+ *statistics_name* 에 대해 자동 통계 업데이트 옵션인 AUTO_STATISTICS_UPDATE를 비활성화합니다. 이 옵션을 지정하면 쿼리 최적화 프로그램에서 *statistics_name* 에 대해 진행 중인 모든 통계 업데이트를 완료하고 이후의 업데이트를 비활성화합니다.  
   
  통계 업데이트를 다시 활성화하려면 [DROP STATISTICS](../../t-sql/statements/drop-statistics-transact-sql.md)를 사용하여 통계를 제거한 다음, NORECOMPUTE 옵션 없이 CREATE STATISTICS를 실행합니다.  
   
@@ -187,7 +187,7 @@ CREATE STATISTICS statistics_name
  AUTO_STATISTICS_UPDATE 옵션에 대한 자세한 내용은 [ALTER DATABASE SET 옵션 &#40;Transact-SQL&#41;](../../t-sql/statements/alter-database-transact-sql-set-options.md)을 참조하세요. 통계 업데이트를 비활성화하고 다시 활성화하는 방법은 [통계](../../relational-databases/statistics/statistics.md)를 참조하세요.  
   
  INCREMENTAL = {ON | OFF}  
- **ON**으로 설정된 경우 파티션 통계별로 통계가 작성됩니다. **OFF**로 설정된 경우 통계는 모든 파티션에 대해 결합됩니다. 기본값은 **OFF**입니다.  
+ **ON** 으로 설정된 경우 파티션 통계별로 통계가 작성됩니다. **OFF** 로 설정된 경우 통계는 모든 파티션에 대해 결합됩니다. 기본값은 **OFF** 입니다.  
   
  파티션별 통계가 지원되지 않을 경우 오류가 생성됩니다. 다음 통계 유형에 대해서는 증분 통계가 지원되지 않습니다.  
   
@@ -206,7 +206,7 @@ MAXDOP = *max_degree_of_parallelism*
   
  통계 작업 기간 동안 **최대 병렬 처리 수준** 구성 옵션을 재정의합니다. 자세한 내용은 [max degree of parallelism 서버 구성 옵션 구성](../../database-engine/configure-windows/configure-the-max-degree-of-parallelism-server-configuration-option.md)을 참조하세요. MAXDOP를 사용하여 병렬 계획 실행에 사용되는 프로세서 수를 제한할 수 있습니다. 최대값은 64개입니다.  
   
- *max_degree_of_parallelism*은 다음 중 하나일 수 있습니다.  
+ *max_degree_of_parallelism* 은 다음 중 하나일 수 있습니다.  
   
  1  
  병렬 계획이 생성되지 않습니다.  
@@ -294,13 +294,13 @@ CREATE STATISTICS CustomerStats1 ON DimCustomer (CustomerKey, EmailAddress);
 CREATE STATISTICS CustomerStats1 ON DimCustomer (CustomerKey, EmailAddress) WITH FULLSCAN;  
 ```  
 
-### <a name="e-using-create-statistics-with-fullscan-and-persist_sample_percent"></a>E. FULLSCAN 및 PERSIST_SAMPLE_PERCENT와 함께 CREATE STATISTICS 사용  
- 다음 예제에서는 `Person` 테이블의 `BusinessEntityID` 및 `EmailPromotion` 열에 있는 모든 행에 대한 `NamePurchase` 통계를 만들고 샘플링 비율을 명시적으로 지정하지 않은 모든 이후 업데이트에 대해 100% 샘플링 비율을 설정합니다.  
+### <a name="e-using-create-statistics-with-fullscan-and-persist_sample_percent"></a>E. FULLSCAN 및 PERSIST_SAMPLE_PERCENT와 함께 CREATE STATISTICS 사용  
+ 다음 예제에서는 `Person` 테이블의 `BusinessEntityID` 및 `EmailPromotion` 열에 있는 모든 행에 대한 `NamePurchase` 통계를 만들고 샘플링 비율을 명시적으로 지정하지 않은 모든 이후 업데이트에 대해 100% 샘플링 비율을 설정합니다.  
   
-```sql  
-CREATE STATISTICS NamePurchase  
-    ON AdventureWorks2012.Person.Person (BusinessEntityID, EmailPromotion)  
-    WITH FULLSCAN, PERSIST_SAMPLE_PERCENT = ON;  
+```sql  
+CREATE STATISTICS NamePurchase  
+    ON AdventureWorks2012.Person.Person (BusinessEntityID, EmailPromotion)  
+    WITH FULLSCAN, PERSIST_SAMPLE_PERCENT = ON;  
 ```  
   
 ### <a name="examples-using-adventureworksdw-database"></a>AdventureWorksDW 데이터베이스를 사용하는 예제입니다. 

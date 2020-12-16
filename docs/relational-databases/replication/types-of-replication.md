@@ -13,13 +13,13 @@ helpviewer_keywords:
 ms.assetid: c1655e8d-d14c-455a-a7f9-9d2f43e88ab4
 author: MashaMSFT
 ms.author: mathoma
-monikerRange: =azuresqldb-current||>=sql-server-2016||=sqlallproducts-allversions
-ms.openlocfilehash: c7483eca0f573e901908d3fb5b2eb72f8317ef7c
-ms.sourcegitcommit: 768f046107642f72693514f51bf2cbd00f58f58a
+monikerRange: =azuresqldb-current||>=sql-server-2016
+ms.openlocfilehash: a1f72eeaa2ffff2db3e536eec6f1aa317a2cb45c
+ms.sourcegitcommit: 1a544cf4dd2720b124c3697d1e62ae7741db757c
 ms.translationtype: HT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 07/23/2020
-ms.locfileid: "87111162"
+ms.lasthandoff: 12/14/2020
+ms.locfileid: "97468704"
 ---
 # <a name="types-of-replication"></a>복제 유형
 [!INCLUDE[sql-asdb](../../includes/applies-to-version/sql-asdb.md)]
@@ -37,7 +37,7 @@ ms.locfileid: "87111162"
  
 애플리케이션에 대한 복제 유형 선택은 물리적 복제 환경, 복제할 데이터 형식 및 양, 데이터가 구독자에서 업데이트되는지 여부를 포함한 여러 요인에 따라 달라집니다. 물리적 환경에는 복제와 관련된 컴퓨터 수 및 위치와 이러한 컴퓨터가 클라이언트(워크스테이션, 랩톱 또는 핸드헬드 디바이스)인지 또는 서버인지 여부가 포함됩니다.  
   
-일반적으로 각 복제 유형은 게시자와 구독자 간에 게시된 개체의 초기 동기화로 시작합니다. 이러한 초기 동기화는 게시에 의해 지정된 모든 개체 및 데이터의 복사본인 *스냅샷*이 있는 복제로 수행할 수 있습니다. 스냅샷은 생성된 후 구독자로 배달됩니다. 스냅샷 복제만 필요한 애플리케이션도 있고, 시간에 따라 증분 방식으로 후속 데이터 변경 내용을 구독자로 보내야 하는 애플리케이션도 있습니다. 또한 일부 애플리케이션에서는 변경 내용을 구독자에서 게시자로 다시 보내야 합니다. 트랜잭션 복제 및 병합 복제는 이러한 유형의 애플리케이션에 대한 옵션을 제공합니다.  
+일반적으로 각 복제 유형은 게시자와 구독자 간에 게시된 개체의 초기 동기화로 시작합니다. 이러한 초기 동기화는 게시에 의해 지정된 모든 개체 및 데이터의 복사본인 *스냅샷* 이 있는 복제로 수행할 수 있습니다. 스냅샷은 생성된 후 구독자로 배달됩니다. 스냅샷 복제만 필요한 애플리케이션도 있고, 시간에 따라 증분 방식으로 후속 데이터 변경 내용을 구독자로 보내야 하는 애플리케이션도 있습니다. 또한 일부 애플리케이션에서는 변경 내용을 구독자에서 게시자로 다시 보내야 합니다. 트랜잭션 복제 및 병합 복제는 이러한 유형의 애플리케이션에 대한 옵션을 제공합니다.  
   
  
 ## <a name="see-also"></a>참고 항목  

@@ -13,14 +13,14 @@ helpviewer_keywords:
 ms.assetid: 74342a11-c1c0-4746-b482-7f3537744a70
 author: MashaMSFT
 ms.author: mathoma
-monikerRange: '>=aps-pdw-2016||=azuresqldb-current||=azure-sqldw-latest||>=sql-server-2016||=sqlallproducts-allversions||>=sql-server-linux-2017||=azuresqldb-mi-current'
+monikerRange: '>=aps-pdw-2016||=azuresqldb-current||=azure-sqldw-latest||>=sql-server-2016||>=sql-server-linux-2017||=azuresqldb-mi-current'
 ms.custom: seo-lt-2019
-ms.openlocfilehash: 4cada27e8e73013667c69c82c9306426eef685f3
-ms.sourcegitcommit: f3321ed29d6d8725ba6378d207277a57cb5fe8c2
+ms.openlocfilehash: 8999c3a94d65ee29d496f891068e158f5f178814
+ms.sourcegitcommit: 1a544cf4dd2720b124c3697d1e62ae7741db757c
 ms.translationtype: HT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 07/06/2020
-ms.locfileid: "86010141"
+ms.lasthandoff: 12/14/2020
+ms.locfileid: "97465574"
 ---
 # <a name="use-unicode-character-format-to-import-or-export-data-sql-server"></a>유니코드 문자 형식을 사용하여 데이터 가져오기 또는 내보내기(SQL Server)
 [!INCLUDE[SQL Server Azure SQL Database Synapse Analytics PDW ](../../includes/applies-to-version/sql-asdb-asdbmi-asa-pdw.md)]
@@ -64,7 +64,7 @@ Error = [Microsoft][ODBC Driver 13 for SQL Server]Invalid character value for ca
 해당하는 *특정* 상황에 다음 해결 방법을 사용할 수 있는지 고려하세요.
 * 서식 파일을 사용하지 마세요.  이 해결 방법의 예제가 아래에 제공됩니다. [bcp 및 유니코드 문자 형식을 사용하여 서식 파일 없이 데이터 가져오기](#bcp_widechar_import)를 참조하세요.
 
-* **-w** 대신 **-c**스위치를 사용합니다.
+* **-w** 대신 **-c** 스위치를 사용합니다.
 
 * 원시 형식을 사용하여 데이터를 다시 내보냅니다.
 

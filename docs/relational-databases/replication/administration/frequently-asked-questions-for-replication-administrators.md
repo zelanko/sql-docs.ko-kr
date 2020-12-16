@@ -14,13 +14,13 @@ helpviewer_keywords:
 ms.assetid: 5a9e4ddf-3cb1-4baf-94d6-b80acca24f64
 author: MashaMSFT
 ms.author: mathoma
-monikerRange: =azuresqldb-mi-current||>=sql-server-2016||=sqlallproducts-allversions
-ms.openlocfilehash: 9e6746847d202448b9953cbb9b65e769375645ba
-ms.sourcegitcommit: c8e1553ff3fdf295e8dc6ce30d1c454d6fde8088
+monikerRange: =azuresqldb-mi-current||>=sql-server-2016
+ms.openlocfilehash: bd6ae5ed3072af96c64ba69e7346e8e2b2f03cbe
+ms.sourcegitcommit: 1a544cf4dd2720b124c3697d1e62ae7741db757c
 ms.translationtype: HT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 07/22/2020
-ms.locfileid: "86918269"
+ms.lasthandoff: 12/14/2020
+ms.locfileid: "97467484"
 ---
 # <a name="frequently-asked-questions-for-replication-administrators"></a>복제 관리자를 위한 질문과 대답
 [!INCLUDE[sql-asdbmi](../../../includes/applies-to-version/sql-asdbmi.md)]
@@ -69,7 +69,7 @@ ms.locfileid: "86918269"
   
 -   트랜잭션 게시가 지연 업데이트 구독을 지원하는 경우 복제가 모든 테이블에 **msrepl_tran_version** 열을 추가합니다. 게시에서 테이블을 삭제해도 **msrepl_tran_version** 열은 제거되지 않습니다.  
   
--   필터는 행 식별을 위해 복제에 사용된 **rowguidcol** 을 포함하지 않아야 합니다. 기본적으로 이 열은 병합 복제를 설정할 때 추가된 열이며 이름은 **rowguid**입니다.  
+-   필터는 행 식별을 위해 복제에 사용된 **rowguidcol** 을 포함하지 않아야 합니다. 기본적으로 이 열은 병합 복제를 설정할 때 추가된 열이며 이름은 **rowguid** 입니다.  
   
 ### <a name="how-do-i-manage-constraints-on-published-tables"></a>게시된 테이블에서 제약 조건을 어떻게 관리합니까?  
  게시된 테이블의 제약 조건에 대해 다음과 같은 사항에 유의하십시오.  
@@ -123,7 +123,7 @@ ms.locfileid: "86918269"
  아니요. SSIS 패키지를 만들어 한 게시자에서 하나 이상의 구독자로 로그인과 암호를 전송할 수 있습니다.  
   
 ### <a name="what-are-schemas-and-how-are-they-replicated"></a>스키마란 무엇이며 어떻게 복제됩니까?  
- [!INCLUDE[msCoName](../../../includes/msconame-md.md)] [!INCLUDE[ssVersion2005](../../../includes/ssversion2005-md.md)]부터 *스키마*는 다음 두 가지 의미를 갖습니다.  
+ [!INCLUDE[msCoName](../../../includes/msconame-md.md)] [!INCLUDE[ssVersion2005](../../../includes/ssversion2005-md.md)]부터 *스키마* 는 다음 두 가지 의미를 갖습니다.  
   
 -   `CREATE TABLE` 문과 같은 개체의 정의입니다. 기본적으로 복제는 복제된 모든 개체의 정의를 구독자로 복사합니다.  
   
@@ -135,11 +135,11 @@ ms.locfileid: "86918269"
   
 -   호환성 수준이 90 이하인 병합 게시의 아티클에 대해 기본적으로 소유자는 빈 상태였다가 구독자에서 개체를 생성하는 중에 **dbo** 로 지정됩니다.  
   
--   Oracle 게시의 아티클에 대해 기본적으로 소유자는 **dbo**로 지정됩니다.  
+-   Oracle 게시의 아티클에 대해 기본적으로 소유자는 **dbo** 로 지정됩니다.  
   
 -   문자 모드 스냅샷([!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] 이외 구독자 및 [!INCLUDE[ssEW](../../../includes/ssew-md.md)] 구독자에 사용됨)을 사용하는 게시의 아티클에 대해 기본적으로 소유자는 빈 상태입니다. 소유자는 기본적으로 배포 에이전트 또는 병합 에이전트를 구독자에 연결하는 데 사용하는 계정과 연결된 소유자입니다.  
   
- 개체 소유자는 **아티클 속성 - \<**_Article_**>** 대화 상자와 **sp_addarticle**, **sp_addmergearticle**, **sp_changearticle** 및 **sp_changemergearticle**의 저장 프로시저를 통해 변경할 수 있습니다. 자세한 내용은 [게시 속성 보기 및 수정](../../../relational-databases/replication/publish/view-and-modify-publication-properties.md), [아티클 정의](../../../relational-databases/replication/publish/define-an-article.md) 및 [아티클 속성 보기 및 수정](../../../relational-databases/replication/publish/view-and-modify-article-properties.md)을 참조하세요.  
+ 개체 소유자는 **아티클 속성 - \<**_Article_**>** 대화 상자와 **sp_addarticle**, **sp_addmergearticle**, **sp_changearticle** 및 **sp_changemergearticle** 의 저장 프로시저를 통해 변경할 수 있습니다. 자세한 내용은 [게시 속성 보기 및 수정](../../../relational-databases/replication/publish/view-and-modify-publication-properties.md), [아티클 정의](../../../relational-databases/replication/publish/define-an-article.md) 및 [아티클 속성 보기 및 수정](../../../relational-databases/replication/publish/view-and-modify-article-properties.md)을 참조하세요.  
   
 ### <a name="how-can-grants-on-the-subscription-database-be-configured-to-match-grants-on-the-publication-database"></a>구독 데이터베이스에 부여된 권한을 게시 데이터베이스에 부여된 권한과 일치시키려면 어떻게 해야 합니까?  
  기본적으로 복제는 구독 데이터베이스에서 GRANT 문을 실행하지 않습니다. 구독 데이터베이스에 대한 사용 권한을 게시 데이터베이스의 사용 권한과 일치시키려면 다음 방법 중 하나를 사용하십시오.  
@@ -216,7 +216,7 @@ ms.locfileid: "86918269"
 ### <a name="how-do-i-determine-whether-there-are-transactions-or-rows-to-be-replicated"></a>복제할 트랜잭션이나 행이 있는지 여부를 어떻게 확인합니까?  
  트랜잭션 복제의 경우 저장 프로시저를 사용하거나 복제 모니터에서 **배포되지 않은 명령** 탭을 사용합니다. 자세한 내용은 [배포 데이터베이스의 복제된 명령 및 기타 정보 보기&#40;복제 Transact-SQL 프로그래밍&#41;](../../../relational-databases/replication/monitor/view-replicated-commands-and-information-in-distribution-database.md) 및 [복제 모니터를 사용하여 정보 보기 및 태스크 수행](../../../relational-databases/replication/monitor/view-information-and-perform-tasks-replication-monitor.md)을 참조하세요.  
   
- 병합 복제의 경우 **sp_showpendingchanges**저장 프로시저를 사용합니다. 자세한 내용은 [sp_showpendingchanges&#40;Transact-SQL&#41;](../../../relational-databases/system-stored-procedures/sp-showpendingchanges-transact-sql.md)를 참조하세요.  
+ 병합 복제의 경우 **sp_showpendingchanges** 저장 프로시저를 사용합니다. 자세한 내용은 [sp_showpendingchanges&#40;Transact-SQL&#41;](../../../relational-databases/system-stored-procedures/sp-showpendingchanges-transact-sql.md)를 참조하세요.  
   
 ### <a name="how-far-behind-is-the-distribution-agent-should-i-reinitialize"></a>배포 에이전트가 얼마나 오래 되었는지 어떻게 확인합니까? 다시 초기화해야 합니까?  
  **sp_replmonitorsubscriptionpendingcmds** 저장 프로시저를 사용하거나 복제 모니터에서 **배포되지 않은 명령** 탭을 사용합니다. 저장 프로시저와 탭에는 다음 내용이 표시됩니다.  

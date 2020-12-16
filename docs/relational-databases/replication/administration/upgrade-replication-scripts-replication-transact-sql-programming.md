@@ -20,13 +20,13 @@ helpviewer_keywords:
 ms.assetid: 0b8720bd-f339-4842-bc8f-b35a46f6d3ee
 author: MashaMSFT
 ms.author: mathoma
-monikerRange: =azuresqldb-mi-current||>=sql-server-2016||=sqlallproducts-allversions
-ms.openlocfilehash: 31850fe7f9ecf78af666faced53f552646de672a
-ms.sourcegitcommit: b3a711a673baebb2ff10d7142b209982b46973ae
+monikerRange: =azuresqldb-mi-current||>=sql-server-2016
+ms.openlocfilehash: 2a75dec86a197a5a0c4f4029a947ad801b1f2271
+ms.sourcegitcommit: 1a544cf4dd2720b124c3697d1e62ae7741db757c
 ms.translationtype: HT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 11/05/2020
-ms.locfileid: "93364698"
+ms.lasthandoff: 12/14/2020
+ms.locfileid: "97467394"
 ---
 # <a name="upgrade-replication-scripts-replication-transact-sql-programming"></a>복제 스크립트 업그레이드(복제 Transact-SQL 프로그래밍)
 [!INCLUDE[sql-asdbmi](../../../includes/applies-to-version/sql-asdbmi.md)]
@@ -37,31 +37,31 @@ ms.locfileid: "93364698"
   
  이러한 향상된 보안 기능은 복제 에이전트 작업이 실행되는 [!INCLUDE[msCoName](../../../includes/msconame-md.md)] Windows 계정을 명시적으로 지정할 수 있도록 함으로써 사용 권한을 보다 잘 제어할 수 있게 해 주며, 기존 스크립트의 다음 저장 프로시저에 영향을 줍니다.  
   
--   **sp_addpublication_snapshot** :  
+-   **sp_addpublication_snapshot**:  
   
      이제 [sp_addpublication_snapshot&#40;Transact-SQL&#41;](../../../relational-databases/system-stored-procedures/sp-addpublication-snapshot-transact-sql.md)을 실행하여 배포자에서 스냅샷 에이전트가 실행되는 작업을 만들 때 Windows 자격 증명을 `@job_login` 및 `@job_password`로 제공해야 합니다.  
   
--   **sp_addpushsubscription_agent** :  
+-   **sp_addpushsubscription_agent**:  
   
      이제 [sp_addpushsubscription_agent&#40;Transact-SQL&#41;](../../../relational-databases/system-stored-procedures/sp-addpushsubscription-agent-transact-sql.md)를 실행하여 명시적으로 작업을 추가하고 배포자에서 배포 에이전트 작업 실행에 사용되는 Windows 자격 증명(`@job_login` 및 `@job_password`)을 제공해야 합니다. [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] 이전 버전의 [!INCLUDE[ssVersion2005](../../../includes/ssversion2005-md.md)]에서 이 작업은 밀어넣기 구독이 만들어질 때 자동으로 수행되었습니다.  
   
--   **sp_addmergepushsubscription_agent** :  
+-   **sp_addmergepushsubscription_agent**:  
   
      이제 [sp_addmergepushsubscription_agent&#40;Transact-SQL&#41;](../../../relational-databases/system-stored-procedures/sp-addmergepushsubscription-agent-transact-sql.md)를 실행하여 명시적으로 작업을 추가하고 배포자에서 병합 에이전트 작업 실행에 사용되는 Windows 자격 증명(`@job_login` 및 `@job_password`)을 제공해야 합니다. [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] 이전 버전의 [!INCLUDE[ssVersion2005](../../../includes/ssversion2005-md.md)]에서 이 작업은 밀어넣기 구독이 만들어질 때 자동으로 수행되었습니다.  
   
--   **sp_addpullsubscription_agent** :  
+-   **sp_addpullsubscription_agent**:  
   
      이제 [sp_addpullsubscription_agent&#40;Transact-SQL&#41;](../../../relational-databases/system-stored-procedures/sp-addpullsubscription-agent-transact-sql.md)를 실행하여 구독자에서 배포 에이전트가 실행되는 작업을 만들 때 Windows 자격 증명을 `@job_login` 및 `@job_password`로 제공해야 합니다.  
   
--   **sp_addmergepullsubscription_agent** :  
+-   **sp_addmergepullsubscription_agent**:  
   
      이제 [sp_addmergepullsubscription_agent&#40;Transact-SQL&#41;](../../../relational-databases/system-stored-procedures/sp-addmergepullsubscription-agent-transact-sql.md)를 실행하여 구독자에서 병합 에이전트가 실행되는 작업을 만들 때 Windows 자격 증명을 `@job_login` 및 `@job_password`로 제공해야 합니다.  
   
--   **sp_addlogreader_agent** :  
+-   **sp_addlogreader_agent**:  
   
      이제 [sp_addlogreader_agent&#40;Transact-SQL&#41;](../../../relational-databases/system-stored-procedures/sp-addlogreader-agent-transact-sql.md)를 실행하여 수동으로 작업을 추가하고 배포자에서 로그 판독기 에이전트가 실행되는 Windows 자격 증명을 지정해야 합니다. [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] 이전 버전의 [!INCLUDE[ssVersion2005](../../../includes/ssversion2005-md.md)]에서 이 작업은 트랜잭션 게시가 만들어질 때 자동으로 수행되었습니다.  
   
--   **sp_addqreader_agent** :  
+-   **sp_addqreader_agent**:  
   
      이제 [sp_addqreader_agent&#40;Transact-SQL&#41;](../../../relational-databases/system-stored-procedures/sp-addqreader-agent-transact-sql.md)를 실행하여 수동으로 작업을 추가하고 배포자에서 큐 판독기 에이전트가 실행되는 Windows 자격 증명을 지정해야 합니다. [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] 이전 버전의 [!INCLUDE[ssVersion2005](../../../includes/ssversion2005-md.md)]에서 이 작업은 지연 업데이트를 지원하는 트랜잭션 게시가 만들어질 때 자동으로 수행되었습니다.  
   
@@ -72,7 +72,7 @@ ms.locfileid: "93364698"
   
 ### <a name="to-upgrade-scripts-that-configure-a-snapshot-or-transactional-publication"></a>스냅샷 또는 트랜잭션 게시를 구성하는 스크립트를 업그레이드하려면  
   
-1.  기존 스크립트의 [sp_addpublication&#40;Transact-SQL&#41;](../../../relational-databases/system-stored-procedures/sp-addpublication-transact-sql.md) 전에 게시 데이터베이스의 게시자에서 [sp_addlogreader_agent&#40;Transact-SQL&#41;](../../../relational-databases/system-stored-procedures/sp-addlogreader-agent-transact-sql.md)를 실행합니다. `@job_name` 및 `@job_password`에 로그 판독기 에이전트 실행에 사용되는 Windows 자격 증명을 지정합니다. 게시자에 연결할 때 에이전트가 [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] 인증을 사용하는 경우, `@publisher_security_mode`에 **0** , `@publisher_login` 및 `@publisher_password`에 [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] 로그인 정보도 지정해야 합니다. 이렇게 하면 게시 데이터베이스에 대한 로그 판독기 에이전트가 만들어집니다.  
+1.  기존 스크립트의 [sp_addpublication&#40;Transact-SQL&#41;](../../../relational-databases/system-stored-procedures/sp-addpublication-transact-sql.md) 전에 게시 데이터베이스의 게시자에서 [sp_addlogreader_agent&#40;Transact-SQL&#41;](../../../relational-databases/system-stored-procedures/sp-addlogreader-agent-transact-sql.md)를 실행합니다. `@job_name` 및 `@job_password`에 로그 판독기 에이전트 실행에 사용되는 Windows 자격 증명을 지정합니다. 게시자에 연결할 때 에이전트가 [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] 인증을 사용하는 경우, `@publisher_security_mode`에 **0**, `@publisher_login` 및 `@publisher_password`에 [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] 로그인 정보도 지정해야 합니다. 이렇게 하면 게시 데이터베이스에 대한 로그 판독기 에이전트가 만들어집니다.  
   
     > [!NOTE]  
     >  이 단계는 트랜잭션 게시 전용이며 스냅샷 게시에는 필요하지 않습니다.  
@@ -84,7 +84,7 @@ ms.locfileid: "93364698"
   
 3.  (옵션) 새 복제 기능을 구현하는 매개 변수에 대해 기본값이 아닌 값을 설정하려면 [sp_addpublication&#40;Transact-SQL&#41;](../../../relational-databases/system-stored-procedures/sp-addpublication-transact-sql.md) 실행을 업데이트합니다.  
   
-4.  [sp_addpublication&#40;Transact-SQL&#41;](../../../relational-databases/system-stored-procedures/sp-addpublication-transact-sql.md) 다음에 게시 데이터베이스의 게시자에서 [sp_addpublication_snapshot&#40;Transact-SQL&#41;](../../../relational-databases/system-stored-procedures/sp-addpublication-snapshot-transact-sql.md)을 실행합니다. `@publication`을 지정하고 `@job_name` 및 `@job_password`에 스냅샷 에이전트 실행에 사용되는 Windows 자격 증명을 지정합니다. 게시자에 연결할 때 에이전트가 [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] 인증을 사용하는 경우, `@publisher_security_mode`에 **0** , `@publisher_login` 및 `@publisher_password`에 [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] 로그인 정보도 지정해야 합니다. 이렇게 하면 게시에 대해 스냅샷 에이전트 작업이 만들어집니다.  
+4.  [sp_addpublication&#40;Transact-SQL&#41;](../../../relational-databases/system-stored-procedures/sp-addpublication-transact-sql.md) 다음에 게시 데이터베이스의 게시자에서 [sp_addpublication_snapshot&#40;Transact-SQL&#41;](../../../relational-databases/system-stored-procedures/sp-addpublication-snapshot-transact-sql.md)을 실행합니다. `@publication`을 지정하고 `@job_name` 및 `@job_password`에 스냅샷 에이전트 실행에 사용되는 Windows 자격 증명을 지정합니다. 게시자에 연결할 때 에이전트가 [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] 인증을 사용하는 경우, `@publisher_security_mode`에 **0**, `@publisher_login` 및 `@publisher_password`에 [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] 로그인 정보도 지정해야 합니다. 이렇게 하면 게시에 대해 스냅샷 에이전트 작업이 만들어집니다.  
   
 5.  (옵션) 새 복제 기능을 구현하는 매개 변수에 대해 기본값이 아닌 값을 설정하려면 [sp_addarticle&#40;Transact-SQL&#41;](../../../relational-databases/system-stored-procedures/sp-addarticle-transact-sql.md) 실행을 업데이트합니다.  
   
@@ -100,7 +100,7 @@ ms.locfileid: "93364698"
   
 1.  (옵션) 기존 스크립트에서 새 복제 기능을 구현하는 매개 변수에 대해 기본값이 아닌 값을 설정하려면 [sp_addmergepublication&#40;Transact-SQL&#41;](../../../relational-databases/system-stored-procedures/sp-addmergepublication-transact-sql.md) 실행을 업데이트합니다.  
   
-2.  [sp_addmergepublication&#40;Transact-SQL&#41;](../../../relational-databases/system-stored-procedures/sp-addmergepublication-transact-sql.md) 다음에 게시 데이터베이스의 게시자에서 [sp_addpublication_snapshot&#40;Transact-SQL&#41;](../../../relational-databases/system-stored-procedures/sp-addpublication-snapshot-transact-sql.md)을 실행합니다. `@publication`을 지정하고 `@job_name` 및 `@job_password`에 스냅샷 에이전트 실행에 사용되는 Windows 자격 증명을 지정합니다. 게시자에 연결할 때 에이전트가 [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] 인증을 사용하는 경우, `@publisher_security_mode`에 **0** , `@publisher_login` 및 `@publisher_password`에 [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] 로그인 정보도 지정해야 합니다. 이렇게 하면 게시에 대해 스냅샷 에이전트 작업이 만들어집니다.  
+2.  [sp_addmergepublication&#40;Transact-SQL&#41;](../../../relational-databases/system-stored-procedures/sp-addmergepublication-transact-sql.md) 다음에 게시 데이터베이스의 게시자에서 [sp_addpublication_snapshot&#40;Transact-SQL&#41;](../../../relational-databases/system-stored-procedures/sp-addpublication-snapshot-transact-sql.md)을 실행합니다. `@publication`을 지정하고 `@job_name` 및 `@job_password`에 스냅샷 에이전트 실행에 사용되는 Windows 자격 증명을 지정합니다. 게시자에 연결할 때 에이전트가 [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] 인증을 사용하는 경우, `@publisher_security_mode`에 **0**, `@publisher_login` 및 `@publisher_password`에 [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] 로그인 정보도 지정해야 합니다. 이렇게 하면 게시에 대해 스냅샷 에이전트 작업이 만들어집니다.  
   
 3.  (옵션) 새 복제 기능을 구현하는 매개 변수에 대해 기본값이 아닌 값을 설정하려면 [sp_addmergearticle&#40;Transact-SQL&#41;](../../../relational-databases/system-stored-procedures/sp-addmergearticle-transact-sql.md) 실행을 업데이트합니다.  
   

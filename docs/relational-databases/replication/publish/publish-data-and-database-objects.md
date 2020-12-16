@@ -42,13 +42,13 @@ helpviewer_keywords:
 ms.assetid: d986032c-3387-4de1-a435-3ec5e82185a2
 author: MashaMSFT
 ms.author: mathoma
-monikerRange: =azuresqldb-mi-current||>=sql-server-2016||=sqlallproducts-allversions
-ms.openlocfilehash: 674cbddc59ae95fcf51276acebf5e6868e0c760b
-ms.sourcegitcommit: c8e1553ff3fdf295e8dc6ce30d1c454d6fde8088
+monikerRange: =azuresqldb-mi-current||>=sql-server-2016
+ms.openlocfilehash: 6f0302c5807a93fdac826bb67a85c8e4e3e4abb5
+ms.sourcegitcommit: 1a544cf4dd2720b124c3697d1e62ae7741db757c
 ms.translationtype: HT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 07/22/2020
-ms.locfileid: "86915830"
+ms.lasthandoff: 12/14/2020
+ms.locfileid: "97468974"
 ---
 # <a name="publish-data-and-database-objects"></a>데이터 및 데이터베이스 개체 게시
 [!INCLUDE[sql-asdbmi](../../../includes/applies-to-version/sql-asdbmi.md)]
@@ -116,7 +116,7 @@ ms.locfileid: "86915830"
 ## <a name="publishing-views"></a>뷰 게시  
  모든 복제 유형을 사용하여 뷰를 복제할 수 있습니다. 뷰 및 해당 인덱스(인덱싱된 뷰의 경우)를 구독자로 복사할 수 있지만 이때 기본 테이블도 복제해야 합니다.  
   
- 인덱싱된 뷰의 경우 트랜잭션 복제를 사용하면 인덱싱된 뷰를 뷰가 아닌 테이블로 복제하므로 기본 테이블을 함께 복제할 필요가 없습니다. 이렇게 하려면 [sp_addarticle&#40;Transact-SQL&#41;](../../../relational-databases/system-stored-procedures/sp-addarticle-transact-sql.md)의 *\@type* 매개 변수에 대해 "indexed view logbased" 옵션 중 하나를 지정합니다. **sp_addarticle**의 사용 방법은 [아티클 정의](../../../relational-databases/replication/publish/define-an-article.md)를 참조하세요.  
+ 인덱싱된 뷰의 경우 트랜잭션 복제를 사용하면 인덱싱된 뷰를 뷰가 아닌 테이블로 복제하므로 기본 테이블을 함께 복제할 필요가 없습니다. 이렇게 하려면 [sp_addarticle&#40;Transact-SQL&#41;](../../../relational-databases/system-stored-procedures/sp-addarticle-transact-sql.md)의 *\@type* 매개 변수에 대해 "indexed view logbased" 옵션 중 하나를 지정합니다. **sp_addarticle** 의 사용 방법은 [아티클 정의](../../../relational-databases/replication/publish/define-an-article.md)를 참조하세요.  
   
 ## <a name="publishing-user-defined-functions"></a>사용자 정의 함수 게시  
  CLR 함수 및 [!INCLUDE[tsql](../../../includes/tsql-md.md)] 함수의 CREATE FUNCTION 문이 각 구독자에 복사됩니다. CLR 함수의 경우 연결된 어셈블리도 복사됩니다. 함수에 대한 변경 내용은 구독자에 복제되지만 연결된 어셈블리에 대한 변경 내용은 복제되지 않습니다.  
@@ -154,7 +154,7 @@ ms.locfileid: "86915830"
 -   하나 이상의 다른 데이터베이스 개체에 종속된 데이터베이스 개체를 게시하는 경우 참조된 개체를 모두 게시해야 합니다. 예를 들어 테이블에 종속된 뷰를 게시하는 경우 테이블도 게시해야 합니다.  
   
     > [!NOTE]  
-    >  병합 게시에 아티클을 추가하고 기존 아티클이 새 아티클에 종속된 경우 [sp_addmergearticle](../../../relational-databases/system-stored-procedures/sp-addmergearticle-transact-sql.md) 및 [sp_changemergearticle](../../../relational-databases/system-stored-procedures/sp-changemergearticle-transact-sql.md)의 **\@processing_order** 매개 변수를 사용하여 두 아티클의 처리 순서를 지정해야 합니다. 다음과 같은 시나리오를 고려해 보십시오. 테이블을 게시하지만 테이블이 참조하는 함수는 게시하지 않는 경우가 있습니다. 함수를 게시하지 않을 경우 구독자에서 테이블을 만들 수 없습니다. 게시에 함수를 추가할 경우에는 **sp_addmergearticle**의 **\@processing_order** 매개 변수에 값 **1**을 지정하고 **sp_changemergearticle**의 **\@processing_order** 매개 변수에 값 **2**를 지정하며 **\@article** 매개 변수에는 테이블 이름을 지정합니다. 이 처리 순서를 사용하면 함수에 종속된 테이블이 생성되기 전에 해당 함수가 구독자에서 생성됩니다. 함수 번호가 테이블 번호보다 낮은 경우 각 아티클에 다른 번호를 사용할 수 있습니다.  
+    >  병합 게시에 아티클을 추가하고 기존 아티클이 새 아티클에 종속된 경우 [sp_addmergearticle](../../../relational-databases/system-stored-procedures/sp-addmergearticle-transact-sql.md) 및 [sp_changemergearticle](../../../relational-databases/system-stored-procedures/sp-changemergearticle-transact-sql.md)의 **\@processing_order** 매개 변수를 사용하여 두 아티클의 처리 순서를 지정해야 합니다. 다음과 같은 시나리오를 고려해 보십시오. 테이블을 게시하지만 테이블이 참조하는 함수는 게시하지 않는 경우가 있습니다. 함수를 게시하지 않을 경우 구독자에서 테이블을 만들 수 없습니다. 게시에 함수를 추가할 경우에는 **sp_addmergearticle** 의 **\@processing_order** 매개 변수에 값 **1** 을 지정하고 **sp_changemergearticle** 의 **\@processing_order** 매개 변수에 값 **2** 를 지정하며 **\@article** 매개 변수에는 테이블 이름을 지정합니다. 이 처리 순서를 사용하면 함수에 종속된 테이블이 생성되기 전에 해당 함수가 구독자에서 생성됩니다. 함수 번호가 테이블 번호보다 낮은 경우 각 아티클에 다른 번호를 사용할 수 있습니다.  
   
 -   게시 이름은 % * [ ] | : " ?와 같은 문자를 포함할 수 없습니다. \ / < >.  
   
@@ -170,7 +170,7 @@ ms.locfileid: "86915830"
   
 -   [sp_bindefault&#40;Transact-SQL&#41;](../../../relational-databases/system-stored-procedures/sp-bindefault-transact-sql.md)로 생성된 바인딩된 기본값은 복제되지 않습니다. 바인딩된 기본값은 ALTER TABLE 또는 CREATE TABLE의 DEFAULT 키워드로 생성된 기본값으로 대체되었습니다.  
   
--   인덱싱된 뷰에 대한 **NOEXPAND** 힌트를 포함하는 함수는 배포 에이전트가 전달하는 순서 때문에 참조된 테이블 및 인덱싱된 뷰와 같은 게시로 게시할 수 없습니다. 이 문제를 해결하려면 첫 번째 게시에 테이블 및 인덱싱된 뷰 만들기를 배치하고 첫 번째 게시가 완료된 후 게시하는 두 번째 게시에 인덱싱된 뷰에 대한 **NOEXPAND** 힌트를 포함하는 함수를 추가합니다. 또는 이러한 함수에 대한 스크립트를 만들고 **sp_addpublication**의 *\@post_snapshot_script* 매개 변수를 사용하여 스크립트를 전달합니다.  
+-   인덱싱된 뷰에 대한 **NOEXPAND** 힌트를 포함하는 함수는 배포 에이전트가 전달하는 순서 때문에 참조된 테이블 및 인덱싱된 뷰와 같은 게시로 게시할 수 없습니다. 이 문제를 해결하려면 첫 번째 게시에 테이블 및 인덱싱된 뷰 만들기를 배치하고 첫 번째 게시가 완료된 후 게시하는 두 번째 게시에 인덱싱된 뷰에 대한 **NOEXPAND** 힌트를 포함하는 함수를 추가합니다. 또는 이러한 함수에 대한 스크립트를 만들고 **sp_addpublication** 의 *\@post_snapshot_script* 매개 변수를 사용하여 스크립트를 전달합니다.  
   
 ### <a name="schemas-and-object-ownership"></a>스키마 및 개체 소유권  
  복제는 새 게시 마법사에서 스키마 및 개체 소유권에 대해 기본적으로 다음과 같이 작동합니다.  
@@ -179,11 +179,11 @@ ms.locfileid: "86915830"
   
 -   호환성 수준이 90 이하인 병합 게시의 아티클에 대해 기본적으로 소유자는 빈 상태였다가 구독자에서 개체를 생성하는 중에 **dbo** 로 지정됩니다.  
   
--   Oracle 게시의 아티클에 대해 기본적으로 소유자는 **dbo**로 지정됩니다.  
+-   Oracle 게시의 아티클에 대해 기본적으로 소유자는 **dbo** 로 지정됩니다.  
   
 -   문자 모드 스냅샷([!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] 이외 구독자 및 [!INCLUDE[ssEW](../../../includes/ssew-md.md)] 구독자에 사용됨)을 사용하는 게시의 아티클에 대해 기본적으로 소유자는 빈 상태입니다. 소유자는 기본적으로 배포 에이전트 또는 병합 에이전트를 구독자에 연결하는 데 사용하는 계정과 연결된 소유자입니다.  
   
- 개체 소유자는 **아티클 속성 - \<**_Article_**>** 대화 상자와 **sp_addarticle**, **sp_addmergearticle**, **sp_changearticle** 및 **sp_changemergearticle**의 저장 프로시저를 통해 변경할 수 있습니다. 자세한 내용은 [게시 속성 보기 및 수정](../../../relational-databases/replication/publish/view-and-modify-publication-properties.md), [아티클 정의](../../../relational-databases/replication/publish/define-an-article.md) 및 [아티클 속성 보기 및 수정](../../../relational-databases/replication/publish/view-and-modify-article-properties.md)을 참조하세요.  
+ 개체 소유자는 **아티클 속성 - \<**_Article_**>** 대화 상자와 **sp_addarticle**, **sp_addmergearticle**, **sp_changearticle** 및 **sp_changemergearticle** 의 저장 프로시저를 통해 변경할 수 있습니다. 자세한 내용은 [게시 속성 보기 및 수정](../../../relational-databases/replication/publish/view-and-modify-publication-properties.md), [아티클 정의](../../../relational-databases/replication/publish/define-an-article.md) 및 [아티클 속성 보기 및 수정](../../../relational-databases/replication/publish/view-and-modify-article-properties.md)을 참조하세요.  
   
 ### <a name="publishing-data-to-subscribers-running-previous-versions-of-sql-server"></a>이전 버전의 SQL Server를 실행하는 구독자에 데이터 게시  
   
@@ -229,7 +229,7 @@ ms.locfileid: "86915830"
     |ID 범위 임계값|**\@threshold**|  
     |파티션 옵션|**\@partition_options**|  
     |BLOB 열 스트리밍|**\@stream_blob_columns**|  
-    |필터 형식|**\@filter_type**(**sp_addmergefilter**의 매개 변수)|  
+    |필터 형식|**\@filter_type**(**sp_addmergefilter** 의 매개 변수)|  
   
      이러한 매개 변수에 대한 자세한 내용은 [sp_addmergearticle&#40;Transact-SQL&#41;](../../../relational-databases/system-stored-procedures/sp-addmergearticle-transact-sql.md) 및 [sp_addmergefilter&#40;Transact-SQL&#41;](../../../relational-databases/system-stored-procedures/sp-addmergefilter-transact-sql.md)를 참조하세요.  
   

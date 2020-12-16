@@ -15,13 +15,13 @@ helpviewer_keywords:
 ms.assetid: 0cfa7ae5-91d3-4a4f-9edf-a852d45783b5
 author: MashaMSFT
 ms.author: mathoma
-monikerRange: =azuresqldb-current||>=sql-server-2016||=sqlallproducts-allversions
-ms.openlocfilehash: 89a63fd6fcf51a3ad30923e05e41e599fc7e0413
-ms.sourcegitcommit: 768f046107642f72693514f51bf2cbd00f58f58a
+monikerRange: =azuresqldb-current||>=sql-server-2016
+ms.openlocfilehash: 9f20f527694fd0ed33de68fbcbabd93e0ef96683
+ms.sourcegitcommit: 1a544cf4dd2720b124c3697d1e62ae7741db757c
 ms.translationtype: HT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 07/23/2020
-ms.locfileid: "87111754"
+ms.lasthandoff: 12/14/2020
+ms.locfileid: "97468754"
 ---
 # <a name="synchronize-a-push-subscription"></a>밀어넣기 구독 동기화
 [!INCLUDE[sql-asdb](../../includes/applies-to-version/sql-asdb.md)]
@@ -42,11 +42,11 @@ ms.locfileid: "87111754"
   
 3.  구독을 동기화할 게시를 확장합니다.  
   
-4.  동기화할 구독을 마우스 오른쪽 단추로 클릭한 다음 **동기화 상태 보기**를 클릭합니다.  
+4.  동기화할 구독을 마우스 오른쪽 단추로 클릭한 다음 **동기화 상태 보기** 를 클릭합니다.  
   
-5.  **동기화 상태 보기 - \<Subscriber>:\<SubscriptionDatabase>** 대화 상자에서 **시작**을 클릭합니다. 동기화가 완료되면 **동기화 완료** 라는 메시지가 표시됩니다.  
+5.  **동기화 상태 보기 - \<Subscriber>:\<SubscriptionDatabase>** 대화 상자에서 **시작** 을 클릭합니다. 동기화가 완료되면 **동기화 완료** 라는 메시지가 표시됩니다.  
   
-6.  **닫기**를 클릭합니다.  
+6.  **닫기** 를 클릭합니다.  
 
 #### <a name="to-synchronize-a-push-subscription-on-demand-in-management-studio-at-the-subscriber"></a>Management Studio에서 요청 시 밀어넣기 구독을 동기화하려면(구독자)  
   
@@ -54,13 +54,13 @@ ms.locfileid: "87111754"
   
 2.  **복제** 폴더를 확장한 다음 **로컬 구독** 폴더를 확장합니다.  
   
-3.  동기화할 구독을 마우스 오른쪽 단추로 클릭한 다음 **동기화 상태 보기**를 클릭합니다.  
+3.  동기화할 구독을 마우스 오른쪽 단추로 클릭한 다음 **동기화 상태 보기** 를 클릭합니다.  
   
-4.  배포자 연결 설정에 대한 메시지가 표시됩니다. **확인**을 클릭합니다.  
+4.  배포자 연결 설정에 대한 메시지가 표시됩니다. **확인** 을 클릭합니다.  
   
-5.  **동기화 상태 보기 - \<Subscriber>:\<SubscriptionDatabase>** 대화 상자에서 **시작**을 클릭합니다. 동기화가 완료되면 **동기화 완료** 라는 메시지가 표시됩니다.  
+5.  **동기화 상태 보기 - \<Subscriber>:\<SubscriptionDatabase>** 대화 상자에서 **시작** 을 클릭합니다. 동기화가 완료되면 **동기화 완료** 라는 메시지가 표시됩니다.  
   
-6.  **닫기**를 클릭합니다.  
+6.  **닫기** 를 클릭합니다.  
   
 #### <a name="to-synchronize-a-push-subscription-on-demand-in-replication-monitor"></a>복제 모니터에서 요청 시 밀어넣기 구독을 동기화하려면  
   
@@ -68,16 +68,16 @@ ms.locfileid: "87111754"
   
 2.  **모든 구독** 탭을 클릭합니다.  
   
-3.  동기화할 구독을 마우스 오른쪽 단추로 클릭한 다음 **동기화 시작**을 클릭합니다.  
+3.  동기화할 구독을 마우스 오른쪽 단추로 클릭한 다음 **동기화 시작** 을 클릭합니다.  
   
-4.  동기화 진행률을 보려면 해당 구독을 마우스 오른쪽 단추로 클릭한 다음 **자세히 보기**를 클릭합니다.  
+4.  동기화 진행률을 보려면 해당 구독을 마우스 오른쪽 단추로 클릭한 다음 **자세히 보기** 를 클릭합니다.  
   
 ##  <a name="using-replication-agents"></a><a name="ReplProg"></a> 복제 에이전트 사용  
  밀어넣기 구독은 명령 프롬프트에서 적합한 복제 에이전트 실행 파일을 호출하여 프로그래밍 방식으로 요청 시 동기화할 수 있습니다. 호출한 복제 에이전트 실행 파일은 밀어넣기 구독이 속한 게시 유형에 따라 달라집니다.  
   
 #### <a name="to-start-the-distribution-agent-to-synchronize-a-push-subscription-to-a-transactional-publication"></a>배포 에이전트를 시작하여 트랜잭션 게시에 밀어넣기 구독을 동기화하려면  
   
-1.  배포자의 명령 프롬프트나 배치 파일에서 **distrib.exe**를 실행하고 다음 명령줄 인수를 지정합니다.  
+1.  배포자의 명령 프롬프트나 배치 파일에서 **distrib.exe** 를 실행하고 다음 명령줄 인수를 지정합니다.  
   
     -   **-Publisher**  
   
@@ -116,7 +116,7 @@ ms.locfileid: "87111754"
   
 #### <a name="to-start-the-merge-agent-to-synchronize-a-push-subscription-to-a-merge-publication"></a>병합 에이전트를 시작하여 병합 게시에 밀어넣기 구독을 동기화하려면  
   
-1.  배포자의 명령 프롬프트나 배치 파일에서 **replmerg.exe**를 실행하고 다음 명령줄 인수를 지정합니다.  
+1.  배포자의 명령 프롬프트나 배치 파일에서 **replmerg.exe** 를 실행하고 다음 명령줄 인수를 지정합니다.  
   
     -   **-Publisher**  
   
@@ -219,7 +219,7 @@ REM -- The following command must be supplied without line breaks.
   
     -   <xref:Microsoft.SqlServer.Replication.ReplicationObject.ConnectionContext%2A>에 대해 1단계에서 만든 연결  
   
-3.  <xref:Microsoft.SqlServer.Replication.ReplicationObject.LoadProperties%2A> 메서드를 호출하여 나머지 구독 속성을 얻습니다. 이 메서드가 **false**를 반환하는 경우 구독이 있는지 확인합니다.  
+3.  <xref:Microsoft.SqlServer.Replication.ReplicationObject.LoadProperties%2A> 메서드를 호출하여 나머지 구독 속성을 얻습니다. 이 메서드가 **false** 를 반환하는 경우 구독이 있는지 확인합니다.  
   
 4.  다음 방법 중 하나로 배포자에서 배포 에이전트를 시작합니다.  
   
@@ -243,7 +243,7 @@ REM -- The following command must be supplied without line breaks.
   
     -   <xref:Microsoft.SqlServer.Replication.ReplicationObject.ConnectionContext%2A>에 대해 1단계에서 만든 연결  
   
-3.  <xref:Microsoft.SqlServer.Replication.ReplicationObject.LoadProperties%2A> 메서드를 호출하여 나머지 구독 속성을 얻습니다. 이 메서드가 **false**를 반환하는 경우 구독이 있는지 확인합니다.  
+3.  <xref:Microsoft.SqlServer.Replication.ReplicationObject.LoadProperties%2A> 메서드를 호출하여 나머지 구독 속성을 얻습니다. 이 메서드가 **false** 를 반환하는 경우 구독이 있는지 확인합니다.  
   
 4.  다음 방법 중 하나로 배포자에서 병합 에이전트를 시작합니다.  
   

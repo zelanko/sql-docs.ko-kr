@@ -12,13 +12,13 @@ ms.tgt_pltfrm: ''
 ms.topic: tutorial
 author: jaszymas
 ms.author: jaszymas
-monikerRange: '>= sql-server-ver15 || = sqlallproducts-allversions'
-ms.openlocfilehash: 9ddfb9836650028c0f6aae150a2f70e4758b6ca2
-ms.sourcegitcommit: dacd9b6f90e6772a778a3235fb69412662572d02
+monikerRange: '>= sql-server-ver15'
+ms.openlocfilehash: d8d3b67a8909867760b7ab01ebf860dd2f8dfe48
+ms.sourcegitcommit: 1a544cf4dd2720b124c3697d1e62ae7741db757c
 ms.translationtype: HT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 07/11/2020
-ms.locfileid: "86279293"
+ms.lasthandoff: 12/14/2020
+ms.locfileid: "97467224"
 ---
 # <a name="tutorial-create-and-use-indexes-on-enclave-enabled-columns-using-randomized-encryption"></a>자습서: 임의 암호화를 사용하는 enclave 사용 열에 인덱스 만들기 및 사용
 [!INCLUDE [sqlserver2019-windows-only](../../includes/applies-to-version/sqlserver2019-windows-only.md)]
@@ -42,7 +42,7 @@ ms.locfileid: "86279293"
     1. **서버에 연결** 대화 상자에서 서버 이름을 지정하고 인증 방법을 선택한 다음, 자격 증명을 지정합니다.
     1. **옵션 >>** 을 클릭하고 **Always Encrypted** 탭을 선택합니다.
     1. **Always Encrypted 사용(열 암호화)** 확인란이 선택되어 있지 **않은지** 확인합니다.
-    1. **연결**을 선택합니다.
+    1. **연결** 을 선택합니다.
 1. 새 쿼리 창을 열고 아래 문을 실행하여 ADR을 사용하도록 설정합니다.
 
    ```sql
@@ -53,19 +53,19 @@ ms.locfileid: "86279293"
 
 이 단계에서는 암호화된 열에 인덱스를 만들고 테스트합니다. 데이터베이스를 관리하는 DBA와 데이터를 보호하는 키에 액세스할 수 있는 데이터 소유자의 역할을 모두 담당하는 단일 사용자로 작업하겠습니다.
 
-1. 새 SSMS 인스턴스를 연 다음, 데이터베이스 연결에 Always Encrypted를 **사용**하여, SQL Server 인스턴스에 연결합니다.
+1. 새 SSMS 인스턴스를 연 다음, 데이터베이스 연결에 Always Encrypted를 **사용** 하여, SQL Server 인스턴스에 연결합니다.
    1. SSMS의 새 인스턴스를 시작합니다.
    1. **서버에 연결** 대화 상자에서 서버 이름을 지정하고 인증 방법을 선택한 다음, 자격 증명을 지정합니다.
    1. **옵션 >>** 을 클릭하고 **Always Encrypted** 탭을 선택합니다.
    1. **Always Encrypted 사용(열 암호화)** 확인란을 선택하고 enclave 증명 URL(예: ht<span>tp://<   span>hgs.bastion.local/Attestation)을 지정합니다.
-   1. **연결**을 선택합니다.
-   1. Always Encrypted 쿼리에 대한 매개 변수화를 사용할 것인지 묻는 메시지가 표시되면 **사용**을 클릭합니다.
+   1. **연결** 을 선택합니다.
+   1. Always Encrypted 쿼리에 대한 매개 변수화를 사용할 것인지 묻는 메시지가 표시되면 **사용** 을 클릭합니다.
 1. Always Encrypted에 대해 매개 변수화를 사용하라는 메시지가 표시되지 않으면 사용되는지 확인합니다.
    1. SSMS의 주 메뉴에서 **도구** 를 선택합니다.
    2. **옵션...** 을 선택합니다.
-   3. **쿼리 실행** > **SQL Server** > **고급**으로 이동합니다.
-   4. **Always Encrypted에 대해 매개 변수화 사용**이 선택되었는지 확인합니다.
-   5. **확인**을 선택합니다.
+   3. **쿼리 실행** > **SQL Server** > **고급** 으로 이동합니다.
+   4. **Always Encrypted에 대해 매개 변수화 사용** 이 선택되었는지 확인합니다.
+   5. **확인** 을 선택합니다.
 1. 쿼리 창을 열고 아래 문을 실행하여 **Employees** 테이블의 **LastName** 열을 암호화합니다. 이후 단계에서 해당 열에 인덱스를 만들고 사용하겠습니다.
 
    ```sql
@@ -119,12 +119,12 @@ ms.locfileid: "86279293"
    GO
    ```
 
-1. 데이터 소유자(또는 키에 액세스할 수 있는 애플리케이션)로, enclave 내부 캐시에 **CEK1**을 채웁니다.
+1. 데이터 소유자(또는 키에 액세스할 수 있는 애플리케이션)로, enclave 내부 캐시에 **CEK1** 을 채웁니다.
 
    > [!NOTE]
-   > **2단계: 역할 구분 없이 인덱스 만들기 및 테스트** 후에 SQL Server 인스턴스를 다시 시작하지 않은 경우, **CEK1**이 캐시에 이미 있기 때문에 이 단계는 중복됩니다. 여기서는 enclave에 키가 없는 경우 데이터 소유자가 enclave에 키를 제공할 수 있는 방법을 보여 주기 위해 추가되었습니다.
+   > **2단계: 역할 구분 없이 인덱스 만들기 및 테스트** 후에 SQL Server 인스턴스를 다시 시작하지 않은 경우, **CEK1** 이 캐시에 이미 있기 때문에 이 단계는 중복됩니다. 여기서는 enclave에 키가 없는 경우 데이터 소유자가 enclave에 키를 제공할 수 있는 방법을 보여 주기 위해 추가되었습니다.
 
-   1. Always Encrypted를 **사용**하는 SSMS 인스턴스의 쿼리 창에서 아래 문을 실행합니다. 이 문은 모든 enclave 사용 열 암호화 키를 enclave로 보냅니다. 자세한 내용은 [sp_enclave_send_keys](../system-stored-procedures/sp-enclave-send-keys-sql.md)를 참조하세요.
+   1. Always Encrypted를 **사용** 하는 SSMS 인스턴스의 쿼리 창에서 아래 문을 실행합니다. 이 문은 모든 enclave 사용 열 암호화 키를 enclave로 보냅니다. 자세한 내용은 [sp_enclave_send_keys](../system-stored-procedures/sp-enclave-send-keys-sql.md)를 참조하세요.
 
         ```sql
         USE [ContosoHR];
@@ -134,7 +134,7 @@ ms.locfileid: "86279293"
         GO
         ```
 
-   1. 위의 저장 프로시저를 실행하는 대신, **LastName** 열에 대해 enclave를 사용하는 DML 쿼리를 실행할 수 있습니다. 그러면 enclave에 **CEK1**만 채워집니다.
+   1. 위의 저장 프로시저를 실행하는 대신, **LastName** 열에 대해 enclave를 사용하는 DML 쿼리를 실행할 수 있습니다. 그러면 enclave에 **CEK1** 만 채워집니다.
 
         ```sql
         USE [ContosoHR];
@@ -158,7 +158,7 @@ ms.locfileid: "86279293"
         ```
 
 1. 데이터 소유자로 **LastName** 열에 대해 풍부한 쿼리를 실행하고, SQL Server에서 쿼리를 실행할 때 인덱스를 사용하는지 확인합니다.
-   1. Always Encrypted를 **사용**하는 SSMS 인스턴스에서 기존 쿼리 창을 선택하거나 새 쿼리 창을 열고, 도구 모음의 **활성 쿼리 통계 포함** 단추가 켜져 있는지 확인합니다.
+   1. Always Encrypted를 **사용** 하는 SSMS 인스턴스에서 기존 쿼리 창을 선택하거나 새 쿼리 창을 열고, 도구 모음의 **활성 쿼리 통계 포함** 단추가 켜져 있는지 확인합니다.
    1. 아래 쿼리를 실행합니다. 
 
         ```sql

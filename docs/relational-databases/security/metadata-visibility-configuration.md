@@ -20,13 +20,13 @@ helpviewer_keywords:
 ms.assetid: 50d2e015-05ae-4014-a1cd-4de7866ad651
 author: VanMSFT
 ms.author: vanto
-monikerRange: '>=aps-pdw-2016||=azuresqldb-current||=azure-sqldw-latest||>=sql-server-2016||=sqlallproducts-allversions||>=sql-server-linux-2017||=azuresqldb-mi-current'
-ms.openlocfilehash: 80b0606f38f50b067f706bc5dad4d094ea49a4b2
-ms.sourcegitcommit: 75f767c7b1ead31f33a870fddab6bef52f99906b
+monikerRange: '>=aps-pdw-2016||=azuresqldb-current||=azure-sqldw-latest||>=sql-server-2016||>=sql-server-linux-2017||=azuresqldb-mi-current'
+ms.openlocfilehash: f5317580647f0d8795277722e44382c2a77cdafe
+ms.sourcegitcommit: 1a544cf4dd2720b124c3697d1e62ae7741db757c
 ms.translationtype: HT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 07/28/2020
-ms.locfileid: "87332042"
+ms.lasthandoff: 12/14/2020
+ms.locfileid: "97467294"
 ---
 # <a name="metadata-visibility-configuration"></a>메타데이터 표시 유형 구성
 [!INCLUDE[SQL Server Azure SQL Database Synapse Analytics PDW ](../../includes/applies-to-version/sql-asdb-asdbmi-asa-pdw.md)]
@@ -131,7 +131,7 @@ GO
   
  다음과 같은 메타데이터는 공개되지 않습니다.  
   
--   **sys.servers** 의 **provider_string**열에 저장된 값. ALTER ANY LINKED SERVER 권한이 없는 사용자에게는 이 열에 NULL 값이 표시됩니다.  
+-   **sys.servers** 의 **provider_string** 열에 저장된 값. ALTER ANY LINKED SERVER 권한이 없는 사용자에게는 이 열에 NULL 값이 표시됩니다.  
   
 -   저장 프로시저 또는 트리거와 같은 사용자 정의 개체에 대한 원본 정의. 원본 코드는 다음 조건 중 하나에 부합하는 경우에만 표시됩니다.  
   
@@ -164,7 +164,7 @@ GO
 
 -   OBJECT_DEFINITION() 함수  
   
--   **sys.sql_logins**의 password_hash 열에 저장된 값.  CONTROL SERVER 권한이 없는 사용자에게는 이 열에 NULL 값이 표시됩니다.  
+-   **sys.sql_logins** 의 password_hash 열에 저장된 값.  CONTROL SERVER 권한이 없는 사용자에게는 이 열에 NULL 값이 표시됩니다.  
   
 > [!NOTE]  
 >  기본 제공 시스템 프로시저 및 함수에 대한 SQL 정의는 **sys.system_sql_modules** 카탈로그 뷰, **sp_helptext** 저장 프로시저 및 OBJECT_DEFINITION() 함수를 통해 공개적으로 표시됩니다.  

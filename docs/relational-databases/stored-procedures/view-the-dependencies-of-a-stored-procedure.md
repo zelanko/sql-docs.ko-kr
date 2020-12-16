@@ -14,13 +14,13 @@ helpviewer_keywords:
 ms.assetid: 6ae0a369-1bc7-4ae4-be89-2b483697cd1f
 author: stevestein
 ms.author: sstein
-monikerRange: '>=aps-pdw-2016||=azuresqldb-current||>=sql-server-2016||=sqlallproducts-allversions||>=sql-server-linux-2017||=azuresqldb-mi-current'
-ms.openlocfilehash: 7b59fe000bb72cdfb7286c5efba0de009439c555
-ms.sourcegitcommit: 75f767c7b1ead31f33a870fddab6bef52f99906b
+monikerRange: '>=aps-pdw-2016||=azuresqldb-current||>=sql-server-2016||>=sql-server-linux-2017||=azuresqldb-mi-current'
+ms.openlocfilehash: 2d0a64ac9fd8ed3f9ac09f269a4026ed797b5af2
+ms.sourcegitcommit: 1a544cf4dd2720b124c3697d1e62ae7741db757c
 ms.translationtype: HT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 07/28/2020
-ms.locfileid: "87332202"
+ms.lasthandoff: 12/14/2020
+ms.locfileid: "97466984"
 ---
 # <a name="view-the-dependencies-of-a-stored-procedure"></a>저장 프로시저의 종속성 보기
 [!INCLUDE[appliesto-ss-asdb-xxxx-pdw-md](../../includes/appliesto-ss-asdb-xxxx-pdw-md.md)]
@@ -59,15 +59,15 @@ ms.locfileid: "87332202"
   
 1.  개체 탐색기에서 [!INCLUDE[ssDE](../../includes/ssde-md.md)] 의 인스턴스에 연결한 다음 해당 인스턴스를 확장합니다.  
   
-2.  **데이터베이스**를 확장하고 해당 프로시저가 속한 데이터베이스를 확장한 다음 **프로그래밍 기능**을 확장합니다.  
+2.  **데이터베이스** 를 확장하고 해당 프로시저가 속한 데이터베이스를 확장한 다음 **프로그래밍 기능** 을 확장합니다.  
   
-3.  **저장 프로시저**를 확장하고 프로시저를 마우스 오른쪽 단추로 클릭한 다음 **종속성 보기**를 클릭합니다.  
+3.  **저장 프로시저** 를 확장하고 프로시저를 마우스 오른쪽 단추로 클릭한 다음 **종속성 보기** 를 클릭합니다.  
   
 4.  프로시저에 종속된 개체 목록을 확인합니다.  
   
 5.  프로시저가 종속된 개체 목록을 확인합니다.  
   
-6.  **확인**을 클릭합니다.  
+6.  **확인** 을 클릭합니다.  
   
 ###  <a name="using-transact-sql"></a><a name="TsqlProcedure"></a> Transact-SQL 사용  
  **쿼리 편집기에서 프로시저의 종속성을 보려면**  
@@ -75,9 +75,9 @@ ms.locfileid: "87332202"
  시스템 함수: **sys.dm_sql_referencing_entities**  
  이 함수는 프로시저에 종속된 개체를 표시합니다.  
   
-1.  **개체 탐색기**에서 [!INCLUDE[ssDE](../../includes/ssde-md.md)] 의 인스턴스에 연결한 다음 해당 인스턴스를 확장합니다.  
+1.  **개체 탐색기** 에서 [!INCLUDE[ssDE](../../includes/ssde-md.md)] 의 인스턴스에 연결한 다음 해당 인스턴스를 확장합니다.  
   
-2.  **데이터베이스**를 확장하고 프로시저가 속한 데이터베이스를 확장합니다.  
+2.  **데이터베이스** 를 확장하고 프로시저가 속한 데이터베이스를 확장합니다.  
   
 3.  **파일** 메뉴에서 **새 쿼리** 를 클릭합니다.  
   
@@ -119,9 +119,9 @@ ms.locfileid: "87332202"
  시스템 함수: **sys.dm_sql_referenced_entities**  
  이 함수는 프로시저에 종속된 개체를 표시합니다.  
   
-1.  **개체 탐색기**에서 [!INCLUDE[ssDE](../../includes/ssde-md.md)] 의 인스턴스에 연결한 다음 해당 인스턴스를 확장합니다.  
+1.  **개체 탐색기** 에서 [!INCLUDE[ssDE](../../includes/ssde-md.md)] 의 인스턴스에 연결한 다음 해당 인스턴스를 확장합니다.  
   
-2.  **데이터베이스**를 확장하고 프로시저가 속한 데이터베이스를 확장합니다.  
+2.  **데이터베이스** 를 확장하고 프로시저가 속한 데이터베이스를 확장합니다.  
   
 3.  **파일** 메뉴에서 **새 쿼리** 를 클릭합니다.  
   
@@ -165,9 +165,9 @@ ms.locfileid: "87332202"
  이 뷰는 프로시저가 종속된 개체 또는 프로시저에 종속된 개체를 표시합니다.  
   
  프로시저에 종속된 개체를 표시  
- 1.  **개체 탐색기**에서 [!INCLUDE[ssDE](../../includes/ssde-md.md)] 의 인스턴스에 연결한 다음 해당 인스턴스를 확장합니다.  
+ 1.  **개체 탐색기** 에서 [!INCLUDE[ssDE](../../includes/ssde-md.md)] 의 인스턴스에 연결한 다음 해당 인스턴스를 확장합니다.  
   
-2.  **데이터베이스**를 확장하고 프로시저가 속한 데이터베이스를 확장합니다.  
+2.  **데이터베이스** 를 확장하고 프로시저가 속한 데이터베이스를 확장합니다.  
   
 3.  **파일** 메뉴에서 **새 쿼리** 를 클릭합니다.  
   
@@ -216,9 +216,9 @@ ms.locfileid: "87332202"
     ```  
   
  프로시저가 종속된 개체 목록을 표시  
- 1.  **개체 탐색기**에서 [!INCLUDE[ssDE](../../includes/ssde-md.md)] 의 인스턴스에 연결한 다음 해당 인스턴스를 확장합니다.  
+ 1.  **개체 탐색기** 에서 [!INCLUDE[ssDE](../../includes/ssde-md.md)] 의 인스턴스에 연결한 다음 해당 인스턴스를 확장합니다.  
   
-2.  **데이터베이스**를 확장하고 프로시저가 속한 데이터베이스를 확장합니다.  
+2.  **데이터베이스** 를 확장하고 프로시저가 속한 데이터베이스를 확장합니다.  
   
 3.  **파일** 메뉴에서 **새 쿼리** 를 클릭합니다.  
   

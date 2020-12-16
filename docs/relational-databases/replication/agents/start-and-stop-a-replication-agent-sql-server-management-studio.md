@@ -14,13 +14,13 @@ helpviewer_keywords:
 ms.assetid: 97977c4a-8c7c-4a22-9480-69aa812bd1e5
 author: MashaMSFT
 ms.author: mathoma
-monikerRange: =azuresqldb-mi-current||>=sql-server-2016||=sqlallproducts-allversions
-ms.openlocfilehash: 01d44e823ef11a1e4bb481d7a7c710ffb95f76fb
-ms.sourcegitcommit: c8e1553ff3fdf295e8dc6ce30d1c454d6fde8088
+monikerRange: =azuresqldb-mi-current||>=sql-server-2016
+ms.openlocfilehash: 1cddb10655acce42c621a8032edd5e75226c1c5e
+ms.sourcegitcommit: 1a544cf4dd2720b124c3697d1e62ae7741db757c
 ms.translationtype: HT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 07/22/2020
-ms.locfileid: "86920628"
+ms.lasthandoff: 12/14/2020
+ms.locfileid: "97467314"
 ---
 # <a name="start-and-stop-a-replication-agent-sql-server-management-studio"></a>복제 에이전트 시작 및 중지(SQL Server Management Studio)
 [!INCLUDE[sql-asdbmi](../../../includes/applies-to-version/sql-asdbmi.md)]
@@ -48,9 +48,9 @@ ms.locfileid: "86920628"
   
 2.  **로컬 게시** 폴더를 확장한 다음 게시를 마우스 오른쪽 단추로 클릭합니다.  
   
-3.  **스냅샷 에이전트 상태 보기** 또는 **로그 판독기 에이전트 상태 보기**를 클릭합니다.  
+3.  **스냅샷 에이전트 상태 보기** 또는 **로그 판독기 에이전트 상태 보기** 를 클릭합니다.  
   
-4.  **시작** 또는 **중지**를 클릭합니다.  
+4.  **시작** 또는 **중지** 를 클릭합니다.  
   
 ### <a name="to-start-and-stop-a-queue-reader-agent-from-management-studio"></a>Management Studio에서 큐 판독기 에이전트를 시작하고 중지하려면  
   
@@ -58,7 +58,7 @@ ms.locfileid: "86920628"
   
 2.  **SQL Server 에이전트** 폴더를 확장한 다음 **작업** 폴더를 확장합니다.  
   
-3.  에이전트에 대한 작업을 마우스 오른쪽 단추로 클릭한 다음 **작업 시작** 또는 **작업 중지**를 클릭합니다. 큐 판독기 에이전트에 대한 작업 이름의 형식은 **[\<Distributor>].\<integer>** 입니다.  
+3.  에이전트에 대한 작업을 마우스 오른쪽 단추로 클릭한 다음 **작업 시작** 또는 **작업 중지** 를 클릭합니다. 큐 판독기 에이전트에 대한 작업 이름의 형식은 **[\<Distributor>].\<integer>** 입니다.  
   
 ### <a name="to-start-and-stop-a-snapshot-agent-log-reader-agent-or-queue-reader-agent-from-replication-monitor"></a>복제 모니터에서 스냅샷 에이전트, 로그 판독기 에이전트 또는 큐 판독기 에이전트를 시작하고 중지하려면  
   
@@ -66,7 +66,7 @@ ms.locfileid: "86920628"
   
 2.  **에이전트** 탭을 클릭합니다.  
   
-3.  에이전트를 마우스 오른쪽 단추로 클릭한 다음 **에이전트 시작** 또는 **에이전트 중지**를 클릭합니다.  
+3.  에이전트를 마우스 오른쪽 단추로 클릭한 다음 **에이전트 시작** 또는 **에이전트 중지** 를 클릭합니다.  
   
 ## <a name="see-also"></a>참고 항목  
  [복제 모니터링](../../../relational-databases/replication/monitor/monitoring-replication.md)   

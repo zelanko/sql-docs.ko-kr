@@ -14,13 +14,13 @@ ms.assetid: 4c8f29e6-0a37-490f-88b3-33493871b3f9
 author: MightyPen
 ms.author: genemi
 ms.custom: seo-lt-2019
-monikerRange: =azuresqldb-current||>=sql-server-2016||=sqlallproducts-allversions||>=sql-server-linux-2017||=azuresqldb-mi-current
-ms.openlocfilehash: f0585bd23f552e3bd2447962cccd61e0bb5cd385
-ms.sourcegitcommit: da88320c474c1c9124574f90d549c50ee3387b4c
+monikerRange: =azuresqldb-current||>=sql-server-2016||>=sql-server-linux-2017||=azuresqldb-mi-current
+ms.openlocfilehash: fe788a0764f3d3d93159dd1e9782aa788d337973
+ms.sourcegitcommit: 1a544cf4dd2720b124c3697d1e62ae7741db757c
 ms.translationtype: HT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 07/01/2020
-ms.locfileid: "85778483"
+ms.lasthandoff: 12/14/2020
+ms.locfileid: "97465594"
 ---
 # <a name="convert-an-existing-sql-trace-script-to-an-extended-events-session"></a>기존 SQL 추적 스크립트를 확장 이벤트 세션으로 변환
 
@@ -105,7 +105,7 @@ ms.locfileid: "85778483"
 ## <a name="to-create-the-extended-events-session"></a>확장 이벤트 세션을 만들려면  
  쿼리 편집기를 사용하여 확장 이벤트 세션을 만들고 출력을 파일 대상에 씁니다. 다음 단계에서는 단일 쿼리를 설명하고 쿼리 작성 방법을 보여 줍니다. 전체 쿼리 예를 보려면 이 항목의 "예" 섹션을 참조하십시오.  
   
-1.  다음과 같이 이벤트 세션을 만드는 문을 추가합니다. *session_name*을 확장 이벤트 세션에 사용할 이름으로 바꿉니다.  
+1.  다음과 같이 이벤트 세션을 만드는 문을 추가합니다. *session_name* 을 확장 이벤트 세션에 사용할 이름으로 바꿉니다.  
   
     ```sql
     IF EXISTS(SELECT * FROM sys.server_event_sessions WHERE name='session_name')  

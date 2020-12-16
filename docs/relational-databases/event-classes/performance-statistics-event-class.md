@@ -12,13 +12,13 @@ helpviewer_keywords:
 ms.assetid: da9cd2c4-6fdd-4ada-b74f-105e3541393c
 author: stevestein
 ms.author: sstein
-monikerRange: =azuresqldb-current||>=sql-server-2016||=sqlallproducts-allversions||>=sql-server-linux-2017||=azuresqldb-mi-current
-ms.openlocfilehash: 88c0c8d1365d91489a7485e6eabed759b0515716
-ms.sourcegitcommit: e700497f962e4c2274df16d9e651059b42ff1a10
+monikerRange: =azuresqldb-current||>=sql-server-2016||>=sql-server-linux-2017||=azuresqldb-mi-current
+ms.openlocfilehash: 41f86301a0520201fb0316de6d4d3379d27c37d1
+ms.sourcegitcommit: 1a544cf4dd2720b124c3697d1e62ae7741db757c
 ms.translationtype: HT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 08/17/2020
-ms.locfileid: "88428445"
+ms.lasthandoff: 12/14/2020
+ms.locfileid: "97467874"
 ---
 # <a name="performance-statistics-event-class"></a>Performance Statistics 이벤트 클래스
 [!INCLUDE [SQL Server - ASDB](../../includes/applies-to-version/sql-asdb.md)]
@@ -55,7 +55,7 @@ ms.locfileid: "88428445"
 |DatabaseID|**int**|USE *database* 문에서 지정한 데이터베이스 ID이거나, 지정한 인스턴스에 대해 USE *database* 문을 실행하지 않은 경우 기본 데이터베이스입니다. [!INCLUDE[ssSqlProfiler](../../includes/sssqlprofiler-md.md)] 에 ServerName 데이터 열이 추적에서 캡처되고 서버를 사용할 수 있으면 데이터베이스 이름이 표시됩니다. DB_ID 함수를 사용하여 데이터베이스의 값을 확인할 수 있습니다.|3|예|  
 |EventSequence|**int**|요청 내에 지정된 이벤트 시퀀스입니다.|51|예|  
 |SessionLoginName|**nvarchar**|세션을 시작한 사용자의 로그인 이름입니다. 예를 들어 Login1을 사용하여 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 에 연결하고 Login2로 문을 실행할 경우 SessionLoginName은 Login1을 표시하고 LoginName은 Login2를 표시합니다. 이 열은 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 및 Windows 로그인을 모두 표시합니다.|64|예|  
-|EventSubClass|**int**|이벤트 하위 클래스의 유형입니다.<br /><br /> 1 = 컴파일된 저장 프로시저 내의 쿼리입니다.<br /><br /> 저장 프로시저에 대한 추적에서 다음 EventSubClass 유형이 생성됩니다.<br /><br /> 쿼리 수가 *n* 인 저장 프로시저<br /><br /> 유형 1인 쿼리*n* 개|21|예|  
+|EventSubClass|**int**|이벤트 하위 클래스의 유형입니다.<br /><br /> 1 = 컴파일된 저장 프로시저 내의 쿼리입니다.<br /><br /> 저장 프로시저에 대한 추적에서 다음 EventSubClass 유형이 생성됩니다.<br /><br /> 쿼리 수가 *n* 인 저장 프로시저<br /><br /> 유형 1인 쿼리 *n* 개|21|예|  
 |IntegerData2|**int**|저장 프로시저 내에 있는 문의 끝입니다.<br /><br /> -1은 저장 프로시저의 끝입니다.|55|예|  
 |ObjectID|**int**|시스템이 할당한 개체의 ID입니다.|22|예|  
 |Offset|**int**|저장 프로시저나 일괄 처리 내에 있는 문의 시작 오프셋입니다.|61|예|  
@@ -79,7 +79,7 @@ ms.locfileid: "88428445"
 |DatabaseID|**int**|USE *database* 문에서 지정한 데이터베이스 ID이거나, 지정한 인스턴스에 대해 USE *database* 문을 실행하지 않은 경우 기본 데이터베이스입니다. [!INCLUDE[ssSqlProfiler](../../includes/sssqlprofiler-md.md)] 에 ServerName 데이터 열이 추적에서 캡처되고 서버를 사용할 수 있으면 데이터베이스 이름이 표시됩니다. DB_ID 함수를 사용하여 데이터베이스의 값을 확인할 수 있습니다.|3|예|  
 |EventSequence|**int**|요청 내에 지정된 이벤트 시퀀스입니다.|51|예|  
 |SessionLoginName|**nvarchar**|세션을 시작한 사용자의 로그인 이름입니다. 예를 들어 Login1을 사용하여 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 에 연결하고 Login2로 문을 실행할 경우 SessionLoginName은 Login1을 표시하고 LoginName은 Login2를 표시합니다. 이 열은 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 및 Windows 로그인을 모두 표시합니다.|64|예|  
-|EventSubClass|**int**|이벤트 하위 클래스의 유형입니다.<br /><br /> 2 = 컴파일된 임의 SQL 문 내의 쿼리입니다.<br /><br /> 임시 일괄 처리에 대한 추적에서 다음 EventSubClass 유형이 생성됩니다.<br /><br /> 쿼리 수가 *n* 인 임시 일괄 처리<br /><br /> 유형 2인 쿼리*n* 개|21|예|  
+|EventSubClass|**int**|이벤트 하위 클래스의 유형입니다.<br /><br /> 2 = 컴파일된 임의 SQL 문 내의 쿼리입니다.<br /><br /> 임시 일괄 처리에 대한 추적에서 다음 EventSubClass 유형이 생성됩니다.<br /><br /> 쿼리 수가 *n* 인 임시 일괄 처리<br /><br /> 유형 2인 쿼리 *n* 개|21|예|  
 |IntegerData2|**int**|일괄 처리 내에 있는 문의 끝입니다.<br /><br /> -1은 일괄 처리의 끝입니다.|55|예|  
 |ObjectID|**int**|해당 없음|22|예|  
 |Offset|**int**|일괄 처리 내에 있는 문의 시작 오프셋입니다.<br /><br /> 0은 일괄 처리의 시작입니다.|61|예|  

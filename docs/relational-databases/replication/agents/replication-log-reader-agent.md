@@ -16,13 +16,13 @@ helpviewer_keywords:
 ms.assetid: 5487b645-d99b-454c-8bd2-aff470709a0e
 author: MashaMSFT
 ms.author: mathoma
-monikerRange: =azuresqldb-mi-current||>=sql-server-2016||=sqlallproducts-allversions
-ms.openlocfilehash: 09334d8eedab294de3015cdcaf0ac5b1c61c9239
-ms.sourcegitcommit: df1f0f2dfb9452f16471e740273cd1478ff3100c
+monikerRange: =azuresqldb-mi-current||>=sql-server-2016
+ms.openlocfilehash: f5e716be586d7fb152a3c229cc016e349d57c99b
+ms.sourcegitcommit: 1a544cf4dd2720b124c3697d1e62ae7741db757c
 ms.translationtype: HT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 07/29/2020
-ms.locfileid: "87395013"
+ms.lasthandoff: 12/14/2020
+ms.locfileid: "97467354"
 ---
 # <a name="replication-log-reader-agent"></a>복제 로그 판독기 에이전트
 [!INCLUDE[sql-asdbmi](../../../includes/applies-to-version/sql-asdbmi.md)]
@@ -73,7 +73,7 @@ logread [-?]
  사용 정보를 표시합니다.  
   
  **-Publisher** _server_name_[ **\\** _instance_name_]  
- 게시자의 이름입니다. 해당 서버에 있는 [!INCLUDE[msCoName](../../../includes/msconame-md.md)] [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)]의 기본 인스턴스에 대해 *server_name*을 지정합니다. 해당 서버에 있는 명명된 _server_name_ **\\** _instance_name_ instance_name [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] 인스턴스에 대해 server_name을 지정하고,  
+ 게시자의 이름입니다. 해당 서버에 있는 [!INCLUDE[msCoName](../../../includes/msconame-md.md)] [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)]의 기본 인스턴스에 대해 *server_name* 을 지정합니다. 해당 서버에 있는 명명된 _server_name_ **\\** _instance_name_ instance_name [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] 인스턴스에 대해 server_name을 지정하고,  
   
  **-PublisherDB** _publisher_database_  
  게시자 데이터베이스의 이름입니다.  
@@ -114,7 +114,7 @@ logread [-?]
  확장 이벤트 XML 구성 파일의 경로 및 파일 이름을 지정합니다. 확장 이벤트 구성 파일에서는 세션을 구성하고 추적 이벤트를 사용하도록 설정할 수 있습니다.  
   
  **-HistoryVerboseLevel** [ **0**\| **1**\| **2**]  
- 로그 판독기 작업을 수행하는 동안 기록에 추가되는 양을 지정합니다. **1**을 선택하여 기록 로깅이 성능에 주는 영향을 최소화할 수 있습니다.  
+ 로그 판독기 작업을 수행하는 동안 기록에 추가되는 양을 지정합니다. **1** 을 선택하여 기록 로깅이 성능에 주는 영향을 최소화할 수 있습니다.  
   
 |HistoryVerboseLevel 값|Description|  
 |-------------------------------|-----------------|  
@@ -132,7 +132,7 @@ logread [-?]
  내부적으로만 사용됩니다.  
   
  **-MaxCmdsInTran** _number_of_commands_  
- 로그 판독기가 배포 데이터베이스에 명령을 쓸 때 하나의 트랜잭션으로 그룹화되는 문의 최대 개수를 지정합니다. 이 매개 변수를 사용하면 로그 판독기 에이전트와 배포 에이전트가 게시자에서 여러 명령으로 구성된 큰 트랜잭션을 구독자에 적용할 때 여러 개의 작은 트랜잭션으로 나눌 수 있습니다. 이 매개 변수를 지정하면 배포자에서 경합을 줄일 수 있고 게시자와 구독자 간 대기 시간을 줄일 수 있습니다. 원래 트랜잭션이 작은 단위로 적용되므로 구독자는 엄격한 트랜잭션 원자성을 깨고 원래 트랜잭션이 끝나기 전에 큰 논리적 게시자 트랜잭션의 행에 액세스할 수 있습니다. 기본값은 **0**으로 게시자의 트랜잭션 경계를 유지합니다.  
+ 로그 판독기가 배포 데이터베이스에 명령을 쓸 때 하나의 트랜잭션으로 그룹화되는 문의 최대 개수를 지정합니다. 이 매개 변수를 사용하면 로그 판독기 에이전트와 배포 에이전트가 게시자에서 여러 명령으로 구성된 큰 트랜잭션을 구독자에 적용할 때 여러 개의 작은 트랜잭션으로 나눌 수 있습니다. 이 매개 변수를 지정하면 배포자에서 경합을 줄일 수 있고 게시자와 구독자 간 대기 시간을 줄일 수 있습니다. 원래 트랜잭션이 작은 단위로 적용되므로 구독자는 엄격한 트랜잭션 원자성을 깨고 원래 트랜잭션이 끝나기 전에 큰 논리적 게시자 트랜잭션의 행에 액세스할 수 있습니다. 기본값은 **0** 으로 게시자의 트랜잭션 경계를 유지합니다.  
   
 > [!NOTE]
 >  이 매개 변수는 [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] 이외의 게시에 대해서는 무시됩니다. 자세한 내용은 [Performance Tuning for Oracle Publishers](../../../relational-databases/replication/non-sql/performance-tuning-for-oracle-publishers.md)의 "트랜잭션 세트 작업 구성" 섹션을 참조하십시오.  
@@ -191,7 +191,7 @@ logread [-?]
  배포 에이전트에서 구독자에 대해 실행하기 전에 트랜잭션 로그에서 읽을 복제 명령의 수입니다. 기본값은 0입니다. 이 매개 변수가 지정되어 있지 않으면 로그 판독기 에이전트에서는 로그의 끝까지 또는 **-ReadBatchSize** (트랜잭션 수)에 지정된 개수까지 읽습니다.  
   
  **-RecoverFromDataErrors**  
- SQL Server 이외의 게시자에서 게시된 열 데이터에 오류가 발생할 경우에도 로그 판독기 에이전트가 계속 실행되도록 지정합니다. 기본적으로는 이러한 오류가 발생하면 로그 판독기 에이전트가 실패합니다. **-RecoverFromDataErrors**를 사용하면 잘못된 열 데이터가 NULL 또는 null이 아닌 적절한 값으로 복제되며 [MSlogreader_history](../../../relational-databases/system-tables/mslogreader-history-transact-sql.md) 테이블에 경고 메시지가 기록됩니다. 이 매개 변수는 Oracle 게시자에 대해서만 지원됩니다.  
+ SQL Server 이외의 게시자에서 게시된 열 데이터에 오류가 발생할 경우에도 로그 판독기 에이전트가 계속 실행되도록 지정합니다. 기본적으로는 이러한 오류가 발생하면 로그 판독기 에이전트가 실패합니다. **-RecoverFromDataErrors** 를 사용하면 잘못된 열 데이터가 NULL 또는 null이 아닌 적절한 값으로 복제되며 [MSlogreader_history](../../../relational-databases/system-tables/mslogreader-history-transact-sql.md) 테이블에 경고 메시지가 기록됩니다. 이 매개 변수는 Oracle 게시자에 대해서만 지원됩니다.  
   
 ## <a name="remarks"></a>설명  
   

@@ -19,13 +19,13 @@ helpviewer_keywords:
 ms.assetid: d019419e-5297-4994-97d5-e9c8fc61bbf4
 author: julieMSFT
 ms.author: jrasnick
-monikerRange: '>=aps-pdw-2016||=azuresqldb-current||=azure-sqldw-latest||>=sql-server-2016||=sqlallproducts-allversions||>=sql-server-linux-2017||=azuresqldb-mi-current'
-ms.openlocfilehash: 5d32b6d0c737df791022f0bc7814a627a2ba1b78
-ms.sourcegitcommit: 197a6ffb643f93592edf9e90b04810a18be61133
+monikerRange: '>=aps-pdw-2016||=azuresqldb-current||=azure-sqldw-latest||>=sql-server-2016||>=sql-server-linux-2017||=azuresqldb-mi-current'
+ms.openlocfilehash: 77aafeec16256a6e05b48034f86c0a193cfecbf9
+ms.sourcegitcommit: 1a544cf4dd2720b124c3697d1e62ae7741db757c
 ms.translationtype: HT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 09/26/2020
-ms.locfileid: "91380768"
+ms.lasthandoff: 12/14/2020
+ms.locfileid: "97468154"
 ---
 # <a name="percentile_cont-transact-sql"></a>PERCENTILE_CONT(Transact-SQL)
 [!INCLUDE [sql-asdb-asdbmi-asa-pdw](../../includes/applies-to-version/sql-asdb-asdbmi-asa-pdw.md)]
@@ -49,7 +49,7 @@ PERCENTILE_CONT ( numeric_literal )
  계산할 백분위수입니다. 값은 0.0에서 1.0 사이여야 합니다.  
   
  WITHIN GROUP **(** ORDER BY *order_by_expression* [ **ASC** | DESC ] **)**  
- 정렬할 숫자 값 목록을 지정하고 백분위수를 컴퓨팅합니다. *order_by_expression*은 하나만 허용됩니다. 식은 정확하거나 근사치 숫자 형식으로 계산되어야 하며, 다른 데이터 유형은 허용되지 않습니다. 정확한 숫자 형식은 **int**, **bigint**, **smallint**, **tinyint**, **numeric**, **bit**, **decimal**, **smallmoney** 및 **money**입니다. 근사치 숫자 형식은 **float** 및 **real**입니다. 기본 정렬 순서는 오름차순입니다.  
+ 정렬할 숫자 값 목록을 지정하고 백분위수를 컴퓨팅합니다. *order_by_expression* 은 하나만 허용됩니다. 식은 정확하거나 근사치 숫자 형식으로 계산되어야 하며, 다른 데이터 유형은 허용되지 않습니다. 정확한 숫자 형식은 **int**, **bigint**, **smallint**, **tinyint**, **numeric**, **bit**, **decimal**, **smallmoney** 및 **money** 입니다. 근사치 숫자 형식은 **float** 및 **real** 입니다. 기본 정렬 순서는 오름차순입니다.  
   
  OVER **(** \<partition_by_clause> **)**  
  FROM 절이 생성한 결과 집합을 백분위수 함수가 적용되는 파티션으로 나눕니다. 자세한 내용은 [OVER 절&#40;Transact-SQL&#41;](../../t-sql/queries/select-over-clause-transact-sql.md)을 참조하세요. OVER 구문의 \<ORDER BY clause> 및 \<rows or range clause>은 PERCENTILE_CONT 함수에 지정할 수 없습니다.  

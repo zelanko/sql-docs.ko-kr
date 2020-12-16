@@ -11,13 +11,13 @@ ms.assetid: b2e839d7-1872-46d9-b7b7-6dcb3984829f
 author: MightyPen
 ms.author: genemi
 ms.custom: seo-lt-2019
-monikerRange: =azuresqldb-current||>=sql-server-2016||=sqlallproducts-allversions||>=sql-server-linux-2017||=azuresqldb-mi-current
-ms.openlocfilehash: 174873d62a2c90ba6309f9063294a27517326d62
-ms.sourcegitcommit: 67befbf7435f256e766bbce6c1de57799e1db9ad
+monikerRange: =azuresqldb-current||>=sql-server-2016||>=sql-server-linux-2017||=azuresqldb-mi-current
+ms.openlocfilehash: f6bfcd07a238c94938793d3c25769057eb058fde
+ms.sourcegitcommit: 1a544cf4dd2720b124c3697d1e62ae7741db757c
 ms.translationtype: HT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 10/24/2020
-ms.locfileid: "92523992"
+ms.lasthandoff: 12/14/2020
+ms.locfileid: "97465634"
 ---
 # <a name="advanced-viewing-of-target-data-from-extended-events-in-sql-server"></a>SQL Server 확장 이벤트의 대상 데이터 고급 보기
 
@@ -271,7 +271,7 @@ SSMS 표시 필터는 다음과 같습니다.
 - *열 값* 필터
 
 
-시간 필터와 열 필터 간의 관계는 부울 ' *AND* '입니다.
+시간 필터와 열 필터 간의 관계는 부울 '*AND*'입니다.
 
 
 ![필터 대화 상자의 시간 범위 및 열 필터](../../relational-databases/extended-events/media/xevents-ssms-ui45-filters.png)

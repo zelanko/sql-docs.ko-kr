@@ -14,18 +14,18 @@ dev_langs:
 ms.assetid: 5a3b7424-408e-4cb0-8957-667ebf4596fc
 author: VanMSFT
 ms.author: vanto
-monikerRange: '>= aps-pdw-2016 || = azure-sqldw-latest || = sqlallproducts-allversions'
-ms.openlocfilehash: e384304e5e3e67b0768c0cd145a0427877c4ce89
-ms.sourcegitcommit: bd3a135f061e4a49183bbebc7add41ab11872bae
+monikerRange: '>= aps-pdw-2016 || = azure-sqldw-latest'
+ms.openlocfilehash: 14eb63bde72a10be3c58af17510030ad6610e33b
+ms.sourcegitcommit: 1a544cf4dd2720b124c3697d1e62ae7741db757c
 ms.translationtype: HT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 10/21/2020
-ms.locfileid: "92300344"
+ms.lasthandoff: 12/14/2020
+ms.locfileid: "97465874"
 ---
 # <a name="permissions-grant-deny-revoke-azure-synapse-analytics-parallel-data-warehouse"></a>사용 권한: GRANT, DENY, REVOKE(Azure Synapse Analytics, 병렬 데이터 웨어하우스)
 [!INCLUDE[applies-to-version/asa-pdw](../../includes/applies-to-version/asa-pdw.md)]
 
-  보안 개체(예: 데이터베이스, 테이블, 뷰)에 보안 주체(로그인, 데이터베이스 사용자 또는 데이터베이스 역할)에 대한 사용 권한(예: **UPDATE** )을 부여 또는 거부하려면 [!INCLUDE[ssSDW](../../includes/sssdw-md.md)] 또는 [!INCLUDE[ssPDW](../../includes/sspdw-md.md)]**GRANT** 및 **DENY** 문을 사용합니다. **REVOKE** 를 사용하여 권한 부여 또는 거부를 제거합니다.  
+  보안 개체(예: 데이터베이스, 테이블, 뷰)에 보안 주체(로그인, 데이터베이스 사용자 또는 데이터베이스 역할)에 대한 사용 권한(예: **UPDATE**)을 부여 또는 거부하려면 [!INCLUDE[ssSDW](../../includes/sssdw-md.md)] 또는 [!INCLUDE[ssPDW](../../includes/sspdw-md.md)]**GRANT** 및 **DENY** 문을 사용합니다. **REVOKE** 를 사용하여 권한 부여 또는 거부를 제거합니다.  
   
  서버 수준 사용 권한은 로그인에 적용됩니다. 데이터베이스 수준 사용 권한은 데이터베이스 사용자 및 데이터베이스 역할에 적용됩니다.  
   
@@ -79,21 +79,21 @@ REVOKE
 ```  
   
 ## <a name="arguments"></a>인수  
- \<permission>[ **,** ... *n* ]  
+ \<permission>[ **,** ...*n* ]  
  부여, 거부 또는 취소할 수있는 하나 이상의 사용 권한.  
   
  ON [ \<class_type> :: ] *securable* **ON** 절은 사용 권한을 부여, 거부 또는 취소하는 보안 개체 매개 변수를 설명합니다.  
   
- \<class_type> 보안 개체의 클래스 형식입니다. 이 형식으로는 **LOGIN** , **DATABASE** , **OBJECT** , **SCHEMA** , **ROLE** , 또는 **USER** 가 될 수 있습니다. 사용 권한은 **SERVER**_class\_type_ 에도 부여될 수 있지만, 해당 사용 권한에는 **SERVER** 가 지정되지 않습니다. 사용 권한에 **DATABASE** (예: **ALTER ANY DATABASE** )와 같은 단어가 포함되어 있으면 **DATABASE** 는 지정되지 않습니다. *class_type* 이 지정되지 권한 유형이 서버 또는 데이터베이스 클래스에 제한되지 않는 경우 클래스는 **OBJECT** 로 간주됩니다.  
+ \<class_type> 보안 개체의 클래스 형식입니다. 이 형식으로는 **LOGIN**, **DATABASE**, **OBJECT**, **SCHEMA**, **ROLE**, 또는 **USER** 가 될 수 있습니다. 사용 권한은 **SERVER**_class\_type_ 에도 부여될 수 있지만, 해당 사용 권한에는 **SERVER** 가 지정되지 않습니다. 사용 권한에 **DATABASE**(예: **ALTER ANY DATABASE**)와 같은 단어가 포함되어 있으면 **DATABASE** 는 지정되지 않습니다. *class_type* 이 지정되지 권한 유형이 서버 또는 데이터베이스 클래스에 제한되지 않는 경우 클래스는 **OBJECT** 로 간주됩니다.  
   
  *securable*  
  사용 권한을 부여, 거부 또는 취소 할 로그인, 데이터베이스, 테이블, 뷰, 스키마, 프로시저, 역할 또는 사용자의 이름입니다. 개체 이름은 [Transact-SQL 구문 규칙&#40;Transact-SQL&#41;](../../t-sql/language-elements/transact-sql-syntax-conventions-transact-sql.md)에서 설명된 세 부분 명명 규칙을 사용하여 지정할 수 있습니다.  
   
- TO *principal* [ **,** ... *n* ]  
+ TO *principal* [ **,** ...*n* ]  
  사용 권한이 부여, 거부 또는 취소된 하나 이상의 보안 주체입니다. 보안 주체는 로그인, 데이터베이스 사용자 또는 데이터베이스 역할의 이름입니다.  
   
- FROM *principal* [ **,** ... *n* ]  
- 사용 권한을 해지할 하나 이상의 보안 주체입니다.  보안 주체는 로그인, 데이터베이스 사용자 또는 데이터베이스 역할의 이름입니다. **FROM** 은 오직 **REVOKE** 문과 함께 사용할 수 있습니다. **TO** 는 **GRANT** , **DENY** 또한 **REVOKE** 와 함께 사용할 수 있습니다.  
+ FROM *principal* [ **,** ...*n* ]  
+ 사용 권한을 해지할 하나 이상의 보안 주체입니다.  보안 주체는 로그인, 데이터베이스 사용자 또는 데이터베이스 역할의 이름입니다. **FROM** 은 오직 **REVOKE** 문과 함께 사용할 수 있습니다. **TO** 는 **GRANT**, **DENY** 또한 **REVOKE** 와 함께 사용할 수 있습니다.  
   
  WITH GRANT OPTION  
  지정된 사용 권한을 다른 보안 주체에게 부여할 수 있는 권한도 피부여자에게 제공됨을 나타냅니다.  
@@ -258,9 +258,9 @@ REVOKE
   
 -   **public** 역할을 포함하여 모든 보안 주체는 기본적으로 명시적 또는 암시적 사용 권한이 없습니다.  
   
--   로그인 또는 사용자가 데이터베이스 또는 개체의 소유자가 되면 로그인 또는 사용자는 항상 데이터베이스 또는 개체에 대한 모든 사용 권한을 가집니다. 소유권 사용 권한은 변경할 수 없으며 명시적 사용 권한으로 표시되지 않습니다. **GRANT** , **DENY** 및 **REVOKE** 문은 소유자에게 아무런 영향을 미치지 않습니다.  
+-   로그인 또는 사용자가 데이터베이스 또는 개체의 소유자가 되면 로그인 또는 사용자는 항상 데이터베이스 또는 개체에 대한 모든 사용 권한을 가집니다. 소유권 사용 권한은 변경할 수 없으며 명시적 사용 권한으로 표시되지 않습니다. **GRANT**, **DENY** 및 **REVOKE** 문은 소유자에게 아무런 영향을 미치지 않습니다.  
   
--   **sa** 로그인은 어플라이언스에 대한 모든 사용 권한을 가집니다. 소유권 사용 권한과 마찬가지로 **sa** 사용 권한도 변경할 수 없으며 명시적 사용 권한으로 표시되지 않습니다. **GRANT** , **DENY** 및 **REVOKE** 문은 **sa** 로그인에 아무런 영향을 미치지 않습니다. **sa** 로그인은 이름을 바꿀 수 없습니다.  
+-   **sa** 로그인은 어플라이언스에 대한 모든 사용 권한을 가집니다. 소유권 사용 권한과 마찬가지로 **sa** 사용 권한도 변경할 수 없으며 명시적 사용 권한으로 표시되지 않습니다. **GRANT**, **DENY** 및 **REVOKE** 문은 **sa** 로그인에 아무런 영향을 미치지 않습니다. **sa** 로그인은 이름을 바꿀 수 없습니다.  
   
 -   **USE** 문은 사용 권한이 필요하지 않습니다. 모든 보안 주체는 모든 데이터베이스에서 **USE** 문을 실행할 수 있습니다.  
   

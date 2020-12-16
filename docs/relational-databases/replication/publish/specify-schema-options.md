@@ -16,13 +16,13 @@ helpviewer_keywords:
 ms.assetid: 1f85a479-bd6e-4023-abf7-7435a7e5b567
 author: MashaMSFT
 ms.author: mathoma
-monikerRange: =azuresqldb-mi-current||>=sql-server-2016||=sqlallproducts-allversions
-ms.openlocfilehash: 2f160e1c9014e6b54590c50726c9b3bbae0e64f7
-ms.sourcegitcommit: e700497f962e4c2274df16d9e651059b42ff1a10
+monikerRange: =azuresqldb-mi-current||>=sql-server-2016
+ms.openlocfilehash: 91de6a53c6caf9e0bfd0339ea3c1354ce8984f4b
+ms.sourcegitcommit: 1a544cf4dd2720b124c3697d1e62ae7741db757c
 ms.translationtype: HT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 08/17/2020
-ms.locfileid: "88405889"
+ms.lasthandoff: 12/14/2020
+ms.locfileid: "97468904"
 ---
 # <a name="specify-schema-options-for-sql-server-replication"></a>SQL Server 복제의 스키마 옵션 지정
 [!INCLUDE[sql-asdbmi](../../../includes/applies-to-version/sql-asdbmi.md)]
@@ -60,22 +60,22 @@ ms.locfileid: "88405889"
   
 #### <a name="to-specify-schema-options"></a>스키마 옵션을 지정하려면  
   
-1.  새 게시 마법사의 **아티클** 페이지 또는 **게시 속성 - \<Publication>** 대화 상자에서 아티클을 선택하고 **아티클 속성**을 클릭합니다.  
+1.  새 게시 마법사의 **아티클** 페이지 또는 **게시 속성 - \<Publication>** 대화 상자에서 아티클을 선택하고 **아티클 속성** 을 클릭합니다.  
   
 2.  스키마 옵션 변경 내용을 적용할 아티클을 선택합니다.  
   
-    -   **선택한 \<ObjectType> 아티클 속성 설정**을 클릭하여 **아티클 속성 - \<ObjectName>** 대화 상자를 엽니다. 이 대화 상자에서 변경한 속성은 **아티클** 페이지의 개체 창에 강조 표시된 개체에만 적용됩니다.  
+    -   **선택한 \<ObjectType> 아티클 속성 설정** 을 클릭하여 **아티클 속성 - \<ObjectName>** 대화 상자를 엽니다. 이 대화 상자에서 변경한 속성은 **아티클** 페이지의 개체 창에 강조 표시된 개체에만 적용됩니다.  
   
-    -   **모든 \<ObjectType> 아티클 속성 설정**을 클릭하여 **모든 \<ObjectType> 아티클 속성** 대화 상자를 엽니다. 이 대화 상자에서 변경한 속성은 **아티클** 페이지의 개체 창에서 해당 형식을 갖는 모든 개체(아직 게시용으로 선택하지 않은 개체 포함)에 적용됩니다.  
+    -   **모든 \<ObjectType> 아티클 속성 설정** 을 클릭하여 **모든 \<ObjectType> 아티클 속성** 대화 상자를 엽니다. 이 대화 상자에서 변경한 속성은 **아티클** 페이지의 개체 창에서 해당 형식을 갖는 모든 개체(아직 게시용으로 선택하지 않은 개체 포함)에 적용됩니다.  
   
         > [!NOTE]  
         >  **모든 \<ObjectType> 아티클의 속성** 대화 상자에서 변경한 속성은 이전에 **아티클 속성 - \<ObjectName>** 대화 상자에서 지정한 내용을 재정의합니다. 예를 들어 특정 개체 유형의 모든 아티클에 대해 여러 기본값을 설정하고 개별 개체에 대해 일부 속성도 설정하려면 먼저 모든 아티클의 기본값을 설정합니다. 그런 다음 개별 개체에 대해 속성을 설정합니다.  
   
 3.  **아티클 속성 - \<Article>** 대화 상자의 **속성** 탭에 있는 **구독자에 개체 및 설정 복사** 및 **대상 개체** 섹션에서 옵션에 대한 값을 지정합니다.  
   
-4.  필요한 경우 속성을 수정한 다음 **확인**을 클릭합니다.  
+4.  필요한 경우 속성을 수정한 다음 **확인** 을 클릭합니다.  
   
-5.  **게시 속성 - \<Publication>** 대화 상자에서 **확인**을 클릭하여 저장하고 대화 상자를 닫습니다.  
+5.  **게시 속성 - \<Publication>** 대화 상자에서 **확인** 을 클릭하여 저장하고 대화 상자를 닫습니다.  
 
 ##  <a name="using-transact-sql"></a><a name="TsqlProcedure"></a> Transact-SQL 사용  
  스키마 옵션은 하나 이상의 옵션에 대한 [|(비트 OR)](../../../t-sql/language-elements/bitwise-or-transact-sql.md) 결과인 16진수 값으로 지정됩니다. 자세한 내용은 [sp_addarticle](../../../relational-databases/system-stored-procedures/sp-addarticle-transact-sql.md) 및 [sp_addmergearticle](../../../relational-databases/system-stored-procedures/sp-addmergearticle-transact-sql.md)을 참조하세요.  
@@ -97,7 +97,7 @@ ms.locfileid: "88405889"
   
 2.  옵션이 설정되었는지 판단하기 위해 1단계의 값과 원하는 스키마 옵션 값을 사용하여 [&(비트 AND)](../../../t-sql/language-elements/bitwise-and-transact-sql.md) 연산을 실행합니다.  
   
-    -   결과가 **0**이면 옵션이 설정되지 않은 것입니다.  
+    -   결과가 **0** 이면 옵션이 설정되지 않은 것입니다.  
   
     -   결과가 옵션 값이면 옵션이 이미 설정된 것입니다.  
   
@@ -113,7 +113,7 @@ ms.locfileid: "88405889"
   
 2.  옵션이 설정되었는지 판단하기 위해 1단계의 값과 원하는 스키마 옵션 값을 사용하여 [&(비트 AND)](../../../t-sql/language-elements/bitwise-and-transact-sql.md) 연산을 실행합니다.  
   
-    -   결과가 **0**이면 옵션이 설정되지 않은 것입니다.  
+    -   결과가 **0** 이면 옵션이 설정되지 않은 것입니다.  
   
     -   결과가 옵션 값이면 옵션이 이미 설정된 것입니다.  
   

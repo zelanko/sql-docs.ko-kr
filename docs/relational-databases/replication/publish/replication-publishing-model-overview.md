@@ -23,13 +23,13 @@ helpviewer_keywords:
 ms.assetid: b9567832-e6a8-45b2-a3ed-ea12aa002f4b
 author: MashaMSFT
 ms.author: mathoma
-monikerRange: =azuresqldb-mi-current||>=sql-server-2016||=sqlallproducts-allversions
-ms.openlocfilehash: cc3135ac119c7a3db5771731f68ee84116a649ae
-ms.sourcegitcommit: c8e1553ff3fdf295e8dc6ce30d1c454d6fde8088
+monikerRange: =azuresqldb-mi-current||>=sql-server-2016
+ms.openlocfilehash: 13e23c8ff9c1d81c42fb08c659e16beb2c97221b
+ms.sourcegitcommit: 1a544cf4dd2720b124c3697d1e62ae7741db757c
 ms.translationtype: HT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 07/22/2020
-ms.locfileid: "86921779"
+ms.lasthandoff: 12/14/2020
+ms.locfileid: "97468934"
 ---
 # <a name="replication-publishing-model-overview"></a>복제 게시 모델 개요
 [!INCLUDE[sql-asdbmi](../../../includes/applies-to-version/sql-asdbmi.md)]
@@ -53,7 +53,7 @@ ms.locfileid: "86921779"
  게시자는 복제를 통해 데이터를 다른 위치에서 사용할 수 있도록 만드는 데이터베이스 인스턴스입니다. 게시자는 각각 논리적으로 관련된 개체 집합 및 복제할 데이터를 정의하는 게시를 하나 이상 가질 수 있습니다.  
   
 ## <a name="distributor"></a>배포자  
- 배포자는 하나 이상의 게시자와 연결된 복제별 데이터에 대한 저장소 역할을 하는 데이터베이스 인스턴스입니다. 각 게시자는 배포자에서 단일 데이터베이스(배포 데이터베이스)와 연결되어 있습니다. 배포 데이터베이스는 복제 상태 데이터와 게시에 대한 메타데이터를 저장하고 경우에 따라서는 게시자에서 구독자로 이동하는 데이터에 대한 큐 역할을 합니다. 대부분의 경우 단일 데이터베이스 서버 인스턴스는 게시자와 배포자 역할을 모두 합니다. 이를 *로컬 배포자*라고 합니다. 게시자 및 배포자가 서로 다른 데이터베이스 서버 인스턴스에 구성되어 있는 경우에는 배포자를 *원격 배포자*라고 합니다.  
+ 배포자는 하나 이상의 게시자와 연결된 복제별 데이터에 대한 저장소 역할을 하는 데이터베이스 인스턴스입니다. 각 게시자는 배포자에서 단일 데이터베이스(배포 데이터베이스)와 연결되어 있습니다. 배포 데이터베이스는 복제 상태 데이터와 게시에 대한 메타데이터를 저장하고 경우에 따라서는 게시자에서 구독자로 이동하는 데이터에 대한 큐 역할을 합니다. 대부분의 경우 단일 데이터베이스 서버 인스턴스는 게시자와 배포자 역할을 모두 합니다. 이를 *로컬 배포자* 라고 합니다. 게시자 및 배포자가 서로 다른 데이터베이스 서버 인스턴스에 구성되어 있는 경우에는 배포자를 *원격 배포자* 라고 합니다.  
   
 ## <a name="subscribers"></a>게시자 속성  
  구독자는 복제된 데이터를 수신하는 데이터베이스 인스턴스입니다. 구독자는 여러 게시자 및 게시로부터 데이터를 수신할 수 있습니다. 선택한 복제 유형에 따라 구독자는 데이터 변경 내용을 게시자에 다시 전달하거나 데이터를 다른 구독자로 다시 게시할 수도 있습니다.  

@@ -20,13 +20,13 @@ helpviewer_keywords:
 ms.assetid: 658039ec-8dc2-4251-bc82-30ea23708cee
 author: rothja
 ms.author: jroth
-monikerRange: '>=aps-pdw-2016||=azuresqldb-current||=azure-sqldw-latest||>=sql-server-2016||=sqlallproducts-allversions||>=sql-server-linux-2017||=azuresqldb-mi-current'
-ms.openlocfilehash: e3662722ae800aa078fe5ba58567d2c55efbb613
-ms.sourcegitcommit: cfa04a73b26312bf18d8f6296891679166e2754d
+monikerRange: '>=aps-pdw-2016||=azuresqldb-current||=azure-sqldw-latest||>=sql-server-2016||>=sql-server-linux-2017||=azuresqldb-mi-current'
+ms.openlocfilehash: 16477e0e469ef67b0dbbceb04d5760b7edc6730a
+ms.sourcegitcommit: 1a544cf4dd2720b124c3697d1e62ae7741db757c
 ms.translationtype: HT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 10/19/2020
-ms.locfileid: "92187652"
+ms.lasthandoff: 12/14/2020
+ms.locfileid: "97468094"
 ---
 # <a name="case-transact-sql"></a>CASE(Transact-SQL)
 
@@ -77,24 +77,24 @@ END
 
 ## <a name="arguments"></a>인수  
  *input_expression*  
- 단순 CASE 형식을 사용할 때 평가되는 식입니다. *input_expression*은 유효한 [식](../../t-sql/language-elements/expressions-transact-sql.md)입니다.  
+ 단순 CASE 형식을 사용할 때 평가되는 식입니다. *input_expression* 은 유효한 [식](../../t-sql/language-elements/expressions-transact-sql.md)입니다.  
   
  WHEN *when_expression*  
- 단순 CASE 형식을 사용할 때 *input_expression*과 비교되는 단순 식입니다. *when_expression*은 유효한 식입니다. *input_expression* 및 각 *when_expression*의 데이터 형식은 동일하거나 암시적으로 변환되어야 합니다.  
+ 단순 CASE 형식을 사용할 때 *input_expression* 과 비교되는 단순 식입니다. *when_expression* 은 유효한 식입니다. *input_expression* 및 각 *when_expression* 의 데이터 형식은 동일하거나 암시적으로 변환되어야 합니다.  
   
  THEN *result_expression*  
- *input_expression*과 *when_expression*이 같다는 것이 TRUE로 평가되거나 *Boolean_expression*이 TRUE로 평가될 때 반환되는 식입니다. *result_expression*은 유효한 [식](../../t-sql/language-elements/expressions-transact-sql.md)입니다.  
+ *input_expression* 과 *when_expression* 이 같다는 것이 TRUE로 평가되거나 *Boolean_expression* 이 TRUE로 평가될 때 반환되는 식입니다. *result_expression* 은 유효한 [식](../../t-sql/language-elements/expressions-transact-sql.md)입니다.  
   
  ELSE *else_result_expression*  
- TRUE로 평가된 비교 연산이 없을 때 반환되는 식입니다. 이 인수가 생략되고 TRUE로 평가된 비교 연산이 없는 경우 CASE는 NULL을 반환합니다. *else_result_expression*은 유효한 식입니다. *else_result_expression* 및 임의의 *result_expression*의 데이터 형식은 동일하거나 암시적으로 변환되어야 합니다.  
+ TRUE로 평가된 비교 연산이 없을 때 반환되는 식입니다. 이 인수가 생략되고 TRUE로 평가된 비교 연산이 없는 경우 CASE는 NULL을 반환합니다. *else_result_expression* 은 유효한 식입니다. *else_result_expression* 및 임의의 *result_expression* 의 데이터 형식은 동일하거나 암시적으로 변환되어야 합니다.  
   
  WHEN *Boolean_expression*  
- 검색된 CASE 형식을 사용할 때 평가되는 부울 식입니다. *Boolean_expression*는 유효한 부울 식입니다.  
+ 검색된 CASE 형식을 사용할 때 평가되는 부울 식입니다. *Boolean_expression* 는 유효한 부울 식입니다.  
   
 [!INCLUDE[sql-server-tsql-previous-offline-documentation](../../includes/sql-server-tsql-previous-offline-documentation.md)]
 
 ## <a name="return-types"></a>반환 형식
- *result_expressions* 및 선택적 *else_result_expression*의 형식 집합에서 우선 순위가 가장 높은 형식을 반환합니다. 자세한 내용은 [데이터 형식 우선 순위&#40;Transact-SQL&#41;](../../t-sql/data-types/data-type-precedence-transact-sql.md)를 참조하세요.  
+ *result_expressions* 및 선택적 *else_result_expression* 의 형식 집합에서 우선 순위가 가장 높은 형식을 반환합니다. 자세한 내용은 [데이터 형식 우선 순위&#40;Transact-SQL&#41;](../../t-sql/data-types/data-type-precedence-transact-sql.md)를 참조하세요.  
   
 ### <a name="return-values"></a>반환 값  
  **단순 CASE 식:**  
@@ -105,17 +105,17 @@ END
   
 -   지정된 순서대로 각 WHEN 절에 대해 input_expression = when_expression을 평가합니다.  
   
--   TRUE로 평가되는 첫 번째 *input_expression* = *when_expression*의 *result_expression*을 반환합니다.  
+-   TRUE로 평가되는 첫 번째 *input_expression* = *when_expression* 의 *result_expression* 을 반환합니다.  
   
--   *input_expression* = *when_expression*이 TRUE로 평가되지 않은 경우, [!INCLUDE[ssDEnoversion](../../includes/ssdenoversion-md.md)]에서는 ELSE 절이 지정되어 있으면 *else_result_expression*을 반환하고, ELSE 절이 지정되어 있지 않으면 NULL 값을 반환합니다.  
+-   *input_expression* = *when_expression* 이 TRUE로 평가되지 않은 경우, [!INCLUDE[ssDEnoversion](../../includes/ssdenoversion-md.md)]에서는 ELSE 절이 지정되어 있으면 *else_result_expression* 을 반환하고, ELSE 절이 지정되어 있지 않으면 NULL 값을 반환합니다.  
   
  **검색된 CASE 식:**  
   
--   지정된 순서대로 각 WHEN 절에 대해 *Boolean_expression*을 평가합니다.  
+-   지정된 순서대로 각 WHEN 절에 대해 *Boolean_expression* 을 평가합니다.  
   
--   TRUE로 평가되는 첫 번째 *Boolean_expression*의 *result_expression*을 반환합니다.  
+-   TRUE로 평가되는 첫 번째 *Boolean_expression* 의 *result_expression* 을 반환합니다.  
   
--   *Boolean_expression*이 TRUE로 평가되지 않은 경우, [!INCLUDE[ssDE](../../includes/ssde-md.md)]에서는 ELSE 절이 지정되어 있으면 *else_result_expression*을 반환하고, ELSE 절이 지정되어 있지 않으면 NULL 값을 반환합니다.  
+-   *Boolean_expression* 이 TRUE로 평가되지 않은 경우, [!INCLUDE[ssDE](../../includes/ssde-md.md)]에서는 ELSE 절이 지정되어 있으면 *else_result_expression* 을 반환하고, ELSE 절이 지정되어 있지 않으면 NULL 값을 반환합니다.  
   
 ## <a name="remarks"></a>설명  
  [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]에서는 CASE 식의 중첩을 10개 수준까지만 허용합니다.  

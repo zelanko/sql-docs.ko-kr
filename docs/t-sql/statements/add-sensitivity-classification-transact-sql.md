@@ -22,13 +22,13 @@ helpviewer_keywords:
 - rank
 ms.custom: ''
 ms.date: 06/10/2020
-monikerRange: " >= sql-server-linux-ver15 || >= sql-server-ver15 || = azuresqldb-current || = sqlallproducts-allversions"
-ms.openlocfilehash: cc5f77d8590434d8d8d03e5ef8ab68365be3c4ca
-ms.sourcegitcommit: 610e3ebe21ac6575850a29641a32f275e71557e3
+monikerRange: " >= sql-server-linux-ver15 || >= sql-server-ver15 || = azuresqldb-current"
+ms.openlocfilehash: a9654a26ff748afa039ac5b0d2088135eea6a796
+ms.sourcegitcommit: 1a544cf4dd2720b124c3697d1e62ae7741db757c
 ms.translationtype: HT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 10/07/2020
-ms.locfileid: "91784782"
+ms.lasthandoff: 12/14/2020
+ms.locfileid: "97466034"
 ---
 # <a name="add-sensitivity-classification-transact-sql"></a>ADD SENSITIVITY CLASSIFICATION(Transact-SQL)
 
@@ -36,7 +36,7 @@ ms.locfileid: "91784782"
 
 하나 이상의 데이터베이스 열에 민감도 분류 메타데이터를 추가합니다. 분류에는 민감도 레이블과 정보 유형이 포함될 수 있습니다.
 
-SQL Server의 경우 SQL Server 2012에서 도입되었습니다.
+SQL Server의 경우 SQL Server 2019에서 도입되었습니다.
 
 데이터베이스 환경에서 중요한 데이터를 분류하면 표시 영역을 확장하고 보호를 강화할 수 있습니다. 자세한 내용은 [SQL Information Protection 시작](https://aka.ms/sqlip)을 참조하세요.
 
@@ -107,7 +107,7 @@ ALTER ANY SENSITIVITY CLASSIFICATION 권한이 필요합니다. ALTER ANY SENSIT
 
 ### <a name="a-classifying-two-columns"></a>A. 두 개의 열 분류
 
-다음 예제에서는 민감도 레이블 **Highly Confidential**, 순위 **Critical**, 정보 유형 **Financial**을 사용하여 **dbo.sales.price** 및 **dbo.sales.discount** 열을 분류합니다.
+다음 예제에서는 민감도 레이블 **Highly Confidential**, 순위 **Critical**, 정보 유형 **Financial** 을 사용하여 **dbo.sales.price** 및 **dbo.sales.discount** 열을 분류합니다.
 
 ```sql
 ADD SENSITIVITY CLASSIFICATION TO
@@ -117,7 +117,7 @@ ADD SENSITIVITY CLASSIFICATION TO
 
 ### <a name="b-classifying-only-a-label"></a>B. 레이블만 분류
 
-다음 예제에서는 레이블 **Confidential** 및 레이블 ID **643f7acd-776a-438d-890c-79c3f2a520d6**을 사용하여 **dbo.customer.comments** 열을 분류합니다. 이 열의 정보 유형은 분류되지 않았습니다.
+다음 예제에서는 레이블 **Confidential** 및 레이블 ID **643f7acd-776a-438d-890c-79c3f2a520d6** 을 사용하여 **dbo.customer.comments** 열을 분류합니다. 이 열의 정보 유형은 분류되지 않았습니다.
 
 ```sql
 ADD SENSITIVITY CLASSIFICATION TO

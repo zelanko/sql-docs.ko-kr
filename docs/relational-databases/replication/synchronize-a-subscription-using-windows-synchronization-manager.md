@@ -14,13 +14,13 @@ helpviewer_keywords:
 ms.assetid: 80f15dd6-e84d-4f96-9866-5b34ea531f1e
 author: MashaMSFT
 ms.author: mathoma
-monikerRange: =azuresqldb-mi-current||>=sql-server-2016||=sqlallproducts-allversions
-ms.openlocfilehash: 591b33a5ad44a242fde2377c86002ea1f5b5931a
-ms.sourcegitcommit: da88320c474c1c9124574f90d549c50ee3387b4c
+monikerRange: =azuresqldb-mi-current||>=sql-server-2016
+ms.openlocfilehash: 3b29f98ad39d34935d65530841f8e81063233791
+ms.sourcegitcommit: 1a544cf4dd2720b124c3697d1e62ae7741db757c
 ms.translationtype: HT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 07/01/2020
-ms.locfileid: "85719514"
+ms.lasthandoff: 12/14/2020
+ms.locfileid: "97468724"
 ---
 # <a name="synchronize-a-subscription-using-windows-synchronization-manager"></a>Windows 동기화 관리자를 사용하여 구독 동기화
 [!INCLUDE [SQL Server SQL MI](../../includes/applies-to-version/sql-asdbmi.md)]
@@ -45,23 +45,23 @@ ms.locfileid: "85719514"
   
 1.  다음 중 한 가지 방법을 사용하여 동기화 관리자를 시작합니다.  
   
-    -   Internet Explorer에서 **도구**, **동기화**를 차례로 클릭합니다.  
+    -   Internet Explorer에서 **도구**, **동기화** 를 차례로 클릭합니다.  
   
-    -   **시작**을 클릭하고 **프로그램** 또는 **모든 프로그램**, **보조프로그램**을 차례로 가리킨 다음 **동기화**를 클릭합니다.  
+    -   **시작** 을 클릭하고 **프로그램** 또는 **모든 프로그램**, **보조프로그램** 을 차례로 가리킨 다음 **동기화** 를 클릭합니다.  
   
-    -   **시작**, **실행** 을 차례로 클릭합니다. **실행** 대화 상자에서 **열기** in the **필드에** 를 입력한 다음 **확인**을 참조하십시오.  
+    -   **시작**, **실행** 을 차례로 클릭합니다. **실행** 대화 상자에서 **열기** in the **필드에** 를 입력한 다음 **확인** 을 참조하십시오.  
   
 2.  **동기화할 항목** 대화 상자에서 동기화할 구독을 선택합니다. 구독은 컴퓨터에 설치된 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 인스턴스 아래에 나열되어 있습니다.  
   
-3.  **동기화**를 클릭합니다.  
+3.  **동기화** 를 클릭합니다.  
   
 ### <a name="to-reinitialize-a-pull-subscription-with-synchronization-manager"></a>동기화 관리자로 끌어오기 구독을 다시 초기화하려면  
   
-1.  **동기화할 항목** 대화 상자에서 구독을 선택한 다음 **속성**을 클릭합니다.  
+1.  **동기화할 항목** 대화 상자에서 구독을 선택한 다음 **속성** 을 클릭합니다.  
   
-2.  **SQL Server 구독 속성** 대화 상자에서 **구독 다시 초기화**를 클릭합니다.  
+2.  **SQL Server 구독 속성** 대화 상자에서 **구독 다시 초기화** 를 클릭합니다.  
   
-3.  **예**를 클릭합니다.  
+3.  **예** 를 클릭합니다.  
   
 4.  [!INCLUDE[clickOK](../../includes/clickok-md.md)]  
   
@@ -72,13 +72,13 @@ ms.locfileid: "85719514"
   
 ### <a name="to-set-properties-for-a-pull-subscription-in-synchronization-manager"></a>동기화 관리자에서 끌어오기 구독에 대한 속성을 설정하려면  
   
-1.  **동기화할 항목** 대화 상자에서 구독을 선택한 다음 **속성**을 클릭합니다.  
+1.  **동기화할 항목** 대화 상자에서 구독을 선택한 다음 **속성** 을 클릭합니다.  
   
 2.  다음 탭에서 속성을 보고 수정합니다.  
   
     -   **ID**  
   
-    -   **구독자 로그인**, **배포자 로그인**및 **게시자 로그인** (병합 복제의 경우만 해당)  
+    -   **구독자 로그인**, **배포자 로그인** 및 **게시자 로그인** (병합 복제의 경우만 해당)  
   
     -   **웹 서버 정보** (SQL Server 2005 이상을 실행하는 구독자에서 병합 구독의 경우)  
   
@@ -90,9 +90,9 @@ ms.locfileid: "85719514"
   
 ### <a name="to-remove-a-pull-subscription-from-synchronization-manager"></a>동기화 관리자에서 끌어오기 구독을 제거하려면  
   
-1.  **동기화할 항목** 대화 상자에서 구독을 선택한 다음 **속성**을 클릭합니다.  
+1.  **동기화할 항목** 대화 상자에서 구독을 선택한 다음 **속성** 을 클릭합니다.  
   
-2.  **SQL Server 구독 속성** 대화 상자에서 **구독 제거**를 클릭합니다.  
+2.  **SQL Server 구독 속성** 대화 상자에서 **구독 제거** 를 클릭합니다.  
   
 3.  **구독 제거** 대화 상자에서 옵션을 선택합니다.  
   
@@ -117,7 +117,7 @@ ms.locfileid: "85719514"
      그러면 선택한 행이 게시자 및/또는 구독자에 적용되고 후속 동기화 중에 토폴로지에 있는 다른 노드로 전파됩니다.  
   
 > [!NOTE]  
->  편집을 수행한 경우에는 편집 내용이 해결을 위해 선택한 행의 일부인 경우에만 적용됩니다. 예를 들어 **게시자**에서 편집을 수행한 다음 **구독자 허용**을 클릭하면 편집 내용이 무시됩니다.  
+>  편집을 수행한 경우에는 편집 내용이 해결을 위해 선택한 행의 일부인 경우에만 적용됩니다. 예를 들어 **게시자** 에서 편집을 수행한 다음 **구독자 허용** 을 클릭하면 편집 내용이 무시됩니다.  
   
 ## <a name="see-also"></a>참고 항목  
  [Interactive Conflict Resolution](../../relational-databases/replication/merge/advanced-merge-replication-conflict-interactive-resolution.md)  

@@ -25,13 +25,13 @@ helpviewer_keywords:
 ms.assetid: 8e1a9387-2c5d-4e51-a1fd-a2a95f026d6f
 author: rothja
 ms.author: jroth
-monikerRange: = azuresqldb-current ||>= sql-server-2016 ||= azure-sqldw-latest||>= sql-server-linux-2017||= sqlallproducts-allversions
-ms.openlocfilehash: 4c39bea9bb6899caeb0e86e8a911bdf36cfb10b7
-ms.sourcegitcommit: cfa04a73b26312bf18d8f6296891679166e2754d
+monikerRange: = azuresqldb-current ||>= sql-server-2016 ||= azure-sqldw-latest||>= sql-server-linux-2017
+ms.openlocfilehash: ac6f06ade090c6027251e5c9d1e8072119bddb76
+ms.sourcegitcommit: 1a544cf4dd2720b124c3697d1e62ae7741db757c
 ms.translationtype: HT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 10/19/2020
-ms.locfileid: "92195484"
+ms.lasthandoff: 12/14/2020
+ms.locfileid: "97466094"
 ---
 # <a name="select-local_variable-transact-sql"></a>SELECT @local_variable(Transact-SQL)
 
@@ -79,9 +79,9 @@ SELECT { @local_variable { = | += | -= | *= | /= | %= | &= | ^= | |= } expressio
 
 ## <a name="remarks"></a>설명
 
-SELECT @*local_variable*은 일반적으로 변수에 하나의 값을 반환하는 데 사용됩니다. 그러나 *expression*이 열의 이름인 경우 여러 값을 반환할 수 있습니다. SELECT 문에서 둘 이상의 값을 반환하면 반환된 값 중 마지막 값이 변수에 할당됩니다.  
+SELECT @*local_variable* 은 일반적으로 변수에 하나의 값을 반환하는 데 사용됩니다. 그러나 *expression* 이 열의 이름인 경우 여러 값을 반환할 수 있습니다. SELECT 문에서 둘 이상의 값을 반환하면 반환된 값 중 마지막 값이 변수에 할당됩니다.  
 
-SELECT 문에서 행을 반환하지 않으면 변수는 현재 값을 그대로 유지합니다. *expression*이 값을 반환하지 않는 스칼라 하위 쿼리일 경우에는 변수가 NULL로 설정됩니다.  
+SELECT 문에서 행을 반환하지 않으면 변수는 현재 값을 그대로 유지합니다. *expression* 이 값을 반환하지 않는 스칼라 하위 쿼리일 경우에는 변수가 NULL로 설정됩니다.  
 
 하나의 SELECT 문으로 여러 개의 지역 변수를 초기화할 수 있습니다.  
 

@@ -18,13 +18,13 @@ helpviewer_keywords:
 ms.assetid: 926c88d7-a844-402f-bcb9-db49e5013b69
 author: MashaMSFT
 ms.author: mathoma
-monikerRange: =azuresqldb-mi-current||>=sql-server-2016||=sqlallproducts-allversions
-ms.openlocfilehash: 1dfa866c6c03234a28fbccb14a2c45cea2571090
-ms.sourcegitcommit: c8e1553ff3fdf295e8dc6ce30d1c454d6fde8088
+monikerRange: =azuresqldb-mi-current||>=sql-server-2016
+ms.openlocfilehash: 81929c8da672e9294d276b5b562e55886a1c3515
+ms.sourcegitcommit: 1a544cf4dd2720b124c3697d1e62ae7741db757c
 ms.translationtype: HT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 07/22/2020
-ms.locfileid: "86918500"
+ms.lasthandoff: 12/14/2020
+ms.locfileid: "97469004"
 ---
 # <a name="make-schema-changes-on-publication-databases"></a>게시 데이터베이스의 스키마 변경
 [!INCLUDE[sql-asdbmi](../../../includes/applies-to-version/sql-asdbmi.md)]
@@ -151,7 +151,7 @@ ms.locfileid: "86918500"
         |**hierarchyid**|변경 허용|변경 차단|변경 차단|  
         |**geography** 및 **geometry**|변경 허용|변경 허용*|변경 차단|  
         |**filestream**|변경 허용|변경 차단|변경 차단|  
-        |**date**, **time**, **datetime2**및 **datetimeoffset**|변경 허용|변경 허용*|변경 차단|  
+        |**date**, **time**, **datetime2** 및 **datetimeoffset**|변경 허용|변경 허용*|변경 차단|  
   
          *SQL Server Compact 구독자는 구독자에서의 이러한 데이터 형식을 변환합니다.  
   

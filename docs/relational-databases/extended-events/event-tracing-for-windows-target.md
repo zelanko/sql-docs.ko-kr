@@ -14,13 +14,13 @@ helpviewer_keywords:
 ms.assetid: ca2bb295-b7f6-49c3-91ed-0ad4c39f89d5
 author: MightyPen
 ms.author: genemi
-monikerRange: =azuresqldb-current||>=sql-server-2016||=sqlallproducts-allversions||>=sql-server-linux-2017||=azuresqldb-mi-current
-ms.openlocfilehash: 28658f7f420976efe51d84a86123fe037965ab48
-ms.sourcegitcommit: 4d370399f6f142e25075b3714e5c2ce056b1bfd0
+monikerRange: =azuresqldb-current||>=sql-server-2016||>=sql-server-linux-2017||=azuresqldb-mi-current
+ms.openlocfilehash: 6e458356777d9dfb6784491ae4dbdca6482b943f
+ms.sourcegitcommit: 1a544cf4dd2720b124c3697d1e62ae7741db757c
 ms.translationtype: HT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 10/09/2020
-ms.locfileid: "91868014"
+ms.lasthandoff: 12/14/2020
+ms.locfileid: "97465584"
 ---
 # <a name="event-tracing-for-windows-target"></a>Windows용 이벤트 추적 대상
 
@@ -48,7 +48,7 @@ ms.locfileid: "91868014"
  ETW 대상은 Logman.exe와 같은 외부 ETW 컨트롤러를 제어하지 않습니다. ETW 추적을 생성하려면 ETW 대상으로 이벤트 세션을 만들어야 합니다. 자세한 내용은 [CREATE EVENT SESSION&#40;Transact-SQL&#41;](../../t-sql/statements/create-event-session-transact-sql.md)을 참조하세요.  
   
 > [!NOTE]  
->  ETW 대상을 활성화하면 이름이 XE_DEFAULT_ETW_SESSION인 ETW 세션이 생성됩니다. XE_DEFAULT_ETW_SESSION이라는 세션이 이미 있는 경우에는 기존 세션이 속성 수정 없이 그대로 사용됩니다. XE_DEFAULT_ETW_SESSION은 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]의 모든 인스턴스 간에 공유됩니다. XE_DEFAULT_ETW_SESSION을 시작한 후에는 ETW 컨트롤러(예: Logman 도구)를 사용하여 중지해야 합니다. 예를 들어 명령 프롬프트에서 **logman stop XE_DEFAULT_ETW_SESSION -ets**명령을 실행할 수 있습니다.  
+>  ETW 대상을 활성화하면 이름이 XE_DEFAULT_ETW_SESSION인 ETW 세션이 생성됩니다. XE_DEFAULT_ETW_SESSION이라는 세션이 이미 있는 경우에는 기존 세션이 속성 수정 없이 그대로 사용됩니다. XE_DEFAULT_ETW_SESSION은 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]의 모든 인스턴스 간에 공유됩니다. XE_DEFAULT_ETW_SESSION을 시작한 후에는 ETW 컨트롤러(예: Logman 도구)를 사용하여 중지해야 합니다. 예를 들어 명령 프롬프트에서 **logman stop XE_DEFAULT_ETW_SESSION -ets** 명령을 실행할 수 있습니다.  
   
  다음 표에서는 ETW 대상을 구성하는 데 사용할 수 있는 옵션에 대해 설명합니다.  
   
