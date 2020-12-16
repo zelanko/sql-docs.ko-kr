@@ -10,17 +10,17 @@ helpviewer_keywords:
 author: MikeRayMSFT
 ms.author: mikeray
 ms.reviewer: ''
-monikerRange: '>= sql-server-2016 || =sqlallproducts-allversions'
-ms.openlocfilehash: cb70f4f5746bace6f4f7ad097a852853fea6c3ca
-ms.sourcegitcommit: f7ac1976d4bfa224332edd9ef2f4377a4d55a2c9
+monikerRange: '>= sql-server-2016'
+ms.openlocfilehash: 4fcac0794148135138194a07bce8b3ad70c0ee0e
+ms.sourcegitcommit: 1a544cf4dd2720b124c3697d1e62ae7741db757c
 ms.translationtype: HT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 07/02/2020
-ms.locfileid: "85901286"
+ms.lasthandoff: 12/14/2020
+ms.locfileid: "97417082"
 ---
 # <a name="install-polybase-on-windows"></a>Windows에 PolyBase 설치
 
-[!INCLUDE [SQL Server Windows Only - ASDBMI ](../../includes/applies-to-version/sql-windows-only-asdbmi.md)]
+[!INCLUDE [SQL Server Windows Only ](../../includes/applies-to-version/sql-windows-only.md)]
 
 SQL Server 평가판을 설치하려면 [SQL Server 평가](https://www.microsoft.com/evalcenter/evaluate-sql-server-2016)로 이동합니다. 
    
@@ -66,16 +66,16 @@ PolyBase를 독립 실행형 또는 스케일 아웃 그룹에 설치한 후에�
    
 1. SQL Server setup.exe를 실행합니다.   
    
-2. **설치**를 선택한 다음, **새 SQL Server 독립 실행형 설치 또는 기존 설치에 기능 추가**를 선택합니다.  
+2. **설치** 를 선택한 다음, **새 SQL Server 독립 실행형 설치 또는 기존 설치에 기능 추가** 를 선택합니다.  
    
-3. 기능 선택 페이지에서 **외부 데이터용 PolyBase 쿼리 서비스**를 선택합니다.  
+3. 기능 선택 페이지에서 **외부 데이터용 PolyBase 쿼리 서비스** 를 선택합니다.  
 
    ![PolyBase 서비스](../../relational-databases/polybase/media/install-wizard.png "PolyBase 서비스")  
    
    >[!NOTE]
    >SQL Server 2019 PolyBase에는 추가적인 **HDFS 데이터 원본용 Java 커넥터** 옵션이 포함되어 있습니다. 이 기능에 대한 자세한 내용은 [SQL Server 미리 보기 기능](https://cloudblogs.microsoft.com/sqlserver/2019/04/24/sql-server-2019-community-technology-preview-2-5-is-now-available/)을 참조하세요.
    
-4. 서버 구성 페이지에서 **SQL Server PolyBase 엔진 서비스** 및 **SQL Server PolyBase 데이터 이동 서비스**를 구성하여 동일한 도메인 계정 하에서 실행합니다.  
+4. 서버 구성 페이지에서 **SQL Server PolyBase 엔진 서비스** 및 **SQL Server PolyBase 데이터 이동 서비스** 를 구성하여 동일한 도메인 계정 하에서 실행합니다.  
 
    >[!IMPORTANT]
    >PolyBase 스케일 아웃 그룹에서 모든 노드의 PolyBase 엔진 및 PolyBase 데이터 이동 서비스는 동일한 도메인 계정으로 실행되어야 합니다. [PolyBase 스케일 아웃 그룹](#enable)을 참조하세요
@@ -106,10 +106,10 @@ PolyBase를 독립 실행형 또는 스케일 아웃 그룹에 설치한 후에�
 |SQL Server 구성 요소(SQL Server component)|매개 변수 및 값|Description|  
 |--------------------------|--------------------------|-----------------|  
 |SQL Server 설치 컨트롤|**필수**<br /><br /> /FEATURES=PolyBase|PolyBase 기능을 선택합니다.|  
-|SQL Server PolyBase 엔진|**선택 사항**<br /><br /> /PBENGSVCACCOUNT|엔진 서비스의 계정을 지정합니다. 기본값은 **NT Authority\NETWORK SERVICE**입니다.|  
+|SQL Server PolyBase 엔진|**선택 사항**<br /><br /> /PBENGSVCACCOUNT|엔진 서비스의 계정을 지정합니다. 기본값은 **NT Authority\NETWORK SERVICE** 입니다.|  
 |SQL Server PolyBase 엔진|**선택 사항**<br /><br /> /PBENGSVCPASSWORD|엔진 서비스 계정의 암호를 지정합니다.|  
 |SQL Server PolyBase 엔진|**선택 사항**<br /><br /> /PBENGSVCSTARTUPTYPE|PolyBase 엔진의 시작 모드를 지정합니다. 자동(기본값), 비활성화 및 수동.|  
-|SQL Server PolyBase 데이터 이동 |**선택 사항**<br /><br /> /PBDMSSVCACCOUNT|데이터 이동 서비스의 계정을 지정합니다. 기본값은 **NT Authority\NETWORK SERVICE**입니다.|  
+|SQL Server PolyBase 데이터 이동 |**선택 사항**<br /><br /> /PBDMSSVCACCOUNT|데이터 이동 서비스의 계정을 지정합니다. 기본값은 **NT Authority\NETWORK SERVICE** 입니다.|  
 |SQL Server PolyBase 데이터 이동 |**선택 사항**<br /><br /> /PBDMSSVCPASSWORD|데이터 이동 계정의 암호를 지정합니다.|  
 |SQL Server PolyBase 데이터 이동 |**선택 사항**<br /><br /> /PBDMSSVCSTARTUPTYPE|데이터 이동 서비스의 시작 모드를 지정합니다. 자동(기본값), 비활성화 및 수동.|  
 |PolyBase|**선택 사항**<br /><br /> /PBSCALEOUT|SQL Server 인스턴스가 PolyBase 스케일 아웃 계산 그룹의 일부로 사용되는지 여부를 지정합니다. <br />지원되는 값: True, False).|  
@@ -117,15 +117,15 @@ PolyBase를 독립 실행형 또는 스케일 아웃 그룹에 설치한 후에�
 
 ::: moniker-end
 <!--SQL Server 2019-->
-::: moniker range=">= sql-server-ver15 || =sqlallproducts-allversions"
+::: moniker range=">= sql-server-ver15 "
 
 |SQL Server 구성 요소(SQL Server component)|매개 변수 및 값|Description|  
 |--------------------------|--------------------------|-----------------|  
 |SQL Server 설치 컨트롤|**필수**<br /><br /> /FEATURES=PolyBaseCore, PolyBaseJava, PolyBase | PolyBaseCore는 Hadoop 연결을 제외한 모든 PolyBase 기능에 대한 지원을 설치합니다. PolyBaseJava는 Hadoop 연결을 지원합니다. PolyBase는 두 기능을 모두 설치합니다. |  
-|SQL Server PolyBase 엔진|**선택 사항**<br /><br /> /PBENGSVCACCOUNT|엔진 서비스의 계정을 지정합니다. 기본값은 **NT Authority\NETWORK SERVICE**입니다.|  
+|SQL Server PolyBase 엔진|**선택 사항**<br /><br /> /PBENGSVCACCOUNT|엔진 서비스의 계정을 지정합니다. 기본값은 **NT Authority\NETWORK SERVICE** 입니다.|  
 |SQL Server PolyBase 엔진|**선택 사항**<br /><br /> /PBENGSVCPASSWORD|엔진 서비스 계정의 암호를 지정합니다.|  
 |SQL Server PolyBase 엔진|**선택 사항**<br /><br /> /PBENGSVCSTARTUPTYPE|PolyBase 엔진의 시작 모드를 지정합니다. 자동(기본값), 비활성화 및 수동.|  
-|SQL Server PolyBase 데이터 이동 |**선택 사항**<br /><br /> /PBDMSSVCACCOUNT|데이터 이동 서비스의 계정을 지정합니다. 기본값은 **NT Authority\NETWORK SERVICE**입니다.|  
+|SQL Server PolyBase 데이터 이동 |**선택 사항**<br /><br /> /PBDMSSVCACCOUNT|데이터 이동 서비스의 계정을 지정합니다. 기본값은 **NT Authority\NETWORK SERVICE** 입니다.|  
 |SQL Server PolyBase 데이터 이동 |**선택 사항**<br /><br /> /PBDMSSVCPASSWORD|데이터 이동 계정의 암호를 지정합니다.|  
 |SQL Server PolyBase 데이터 이동 |**선택 사항**<br /><br /> /PBDMSSVCSTARTUPTYPE|데이터 이동 서비스의 시작 모드를 지정합니다. 자동(기본값), 비활성화 및 수동.|  
 |PolyBase|**선택 사항**<br /><br /> /PBSCALEOUT|SQL Server 인스턴스가 PolyBase 스케일 아웃 계산 그룹의 일부로 사용되는지 여부를 지정합니다. <br />지원되는 값: True, False).|  
@@ -189,13 +189,13 @@ SQL Server PolyBase 설치는 머신에 다음과 같은 방화벽 규칙을 만
    
 #### <a name="to-enable-the-firewall-rules"></a>방화벽 규칙을 사용하려면  
 
-1. **제어판**을 엽니다.  
+1. **제어판** 을 엽니다.  
 
-2. **시스템 및 보안**을 선택하고 **Windows 방화벽**을 선택합니다.  
+2. **시스템 및 보안** 을 선택하고 **Windows 방화벽** 을 선택합니다.  
    
-3. **고급 설정**을 선택하고 **인바운드 규칙**을 선택합니다.  
+3. **고급 설정** 을 선택하고 **인바운드 규칙** 을 선택합니다.  
    
-4. 비활성화된 규칙을 마우스 오른쪽 단추로 클릭한 다음, **규칙 활성화**를 선택합니다.  
+4. 비활성화된 규칙을 마우스 오른쪽 단추로 클릭한 다음, **규칙 활성화** 를 선택합니다.  
    
 ### <a name="polybase-service-accounts"></a>PolyBase 서비스 계정
 
