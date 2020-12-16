@@ -13,13 +13,13 @@ helpviewer_keywords:
 ms.assetid: e5906a76-9511-4c47-8826-8c765b58a39d
 author: MashaMSFT
 ms.author: mathoma
-monikerRange: =azuresqldb-mi-current||>=sql-server-2016||=sqlallproducts-allversions
-ms.openlocfilehash: 83c9ffd0daca07588bc1b559c7fa3a16acb115e8
-ms.sourcegitcommit: e700497f962e4c2274df16d9e651059b42ff1a10
+monikerRange: =azuresqldb-mi-current||>=sql-server-2016
+ms.openlocfilehash: b8eab851e7bde95fa0ab6aaf2ee75ae0ffc6d0a1
+ms.sourcegitcommit: 1a544cf4dd2720b124c3697d1e62ae7741db757c
 ms.translationtype: HT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 08/17/2020
-ms.locfileid: "88498728"
+ms.lasthandoff: 12/14/2020
+ms.locfileid: "97481014"
 ---
 # <a name="mssql_eng014117"></a>MSSQL_ENG014117
 [!INCLUDE [SQL Server SQL MI](../../includes/applies-to-version/sql-asdbmi.md)]
@@ -38,7 +38,7 @@ ms.locfileid: "88498728"
 ## <a name="explanation"></a>설명  
  이 오류는 다음 상황 중 하나 또는 둘 다에 해당되는 경우 발생할 수 있습니다.  
   
--   지정된 배포 데이터베이스에 대한 항목이 **msdb..MSdistributiondbs**에 없습니다.  
+-   지정된 배포 데이터베이스에 대한 항목이 **msdb..MSdistributiondbs** 에 없습니다.  
   
 -   **master** 데이터베이스에 로컬 서버에 대한 항목이 없거나 올바르지 않은 항목이 있습니다.  
   
@@ -68,7 +68,7 @@ ms.locfileid: "88498728"
   
      클러스터형 인스턴스에 대해 @@SERVERNAME 값이 올바르지 않으면 클러스터 관리자를 사용하여 해당 이름을 변경해야 합니다. 자세한 내용은 [Always On 장애 조치(failover) 클러스터 인스턴스(SQL Server)](../../sql-server/failover-clusters/windows/always-on-failover-cluster-instances-sql-server.md)를 참조하세요.  
   
- 배포자 인스턴스가 제대로 등록되었는지 확인한 후 배포 데이터베이스가 **msdb..MSdistributiondbs**에 나열되어 있는지 확인합니다. 배포 데이터베이스가 목록에 없는 경우 다음을 수행하십시오.  
+ 배포자 인스턴스가 제대로 등록되었는지 확인한 후 배포 데이터베이스가 **msdb..MSdistributiondbs** 에 나열되어 있는지 확인합니다. 배포 데이터베이스가 목록에 없는 경우 다음을 수행하십시오.  
   
 1.  배포 구성을 스크립팅합니다. 자세한 내용은 [Scripting Replication](../../relational-databases/replication/scripting-replication.md)을 참조하세요.  
   

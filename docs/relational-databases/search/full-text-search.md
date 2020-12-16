@@ -12,13 +12,13 @@ ms.assetid: a0ce315d-f96d-4e5d-b4eb-ff76811cab75
 author: pmasl
 ms.author: pelopes
 ms.reviewer: mikeray
-monikerRange: =azuresqldb-current||>=sql-server-2016||=sqlallproducts-allversions||>=sql-server-linux-2017||=azuresqldb-mi-current
-ms.openlocfilehash: 5d90234f6a433604e492e3824cd7585de2babfce
-ms.sourcegitcommit: e700497f962e4c2274df16d9e651059b42ff1a10
+monikerRange: =azuresqldb-current||>=sql-server-2016||>=sql-server-linux-2017||=azuresqldb-mi-current
+ms.openlocfilehash: 90670f75be6e54b92309c460b315c77a3056008c
+ms.sourcegitcommit: 1a544cf4dd2720b124c3697d1e62ae7741db757c
 ms.translationtype: HT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 08/17/2020
-ms.locfileid: "88465041"
+ms.lasthandoff: 12/14/2020
+ms.locfileid: "97479514"
 ---
 # <a name="full-text-search"></a>전체 텍스트 검색
 [!INCLUDE [SQL Server Azure SQL Database](../../includes/applies-to-version/sql-asdb.md)]
@@ -39,7 +39,7 @@ ms.locfileid: "88465041"
 ## <a name="overview"></a>개요
 전체 텍스트 인덱스에는 테이블에 있는 하나 이상의 문자 기반 열이 포함됩니다. 이러한 열의 데이터 형식은 **char**, **varchar**, **nchar**, **nvarchar**, **text**, **ntext**, **image**, **xml** 또는 **varbinary(max)** 및 **FILESTREAM** 중 하나일 수 있습니다. 각 전체 텍스트 인덱스는 테이블의 열을 하나 이상 인덱싱하며, 각 열은 특정 언어를 사용할 수 있습니다.  
   
- 전체 텍스트 쿼리는 영어와 일본어 같은 특정 언어의 규칙을 기준으로 단어와 구에 적용되어 전체 텍스트 인덱스의 텍스트 데이터에 대해 언어 검색을 수행합니다. 전체 텍스트 쿼리에는 간단한 단어와 구 또는 여러 형식의 단어나 구가 포함될 수 있습니다. 전체 텍스트 쿼리는 일치 항목( *적중*이라고도 함)이 하나 이상 있는 문서를 모두 반환합니다. 대상 문서가 전체 텍스트 쿼리에 지정된 모든 용어를 포함하며 일치하는 용어 사이의 거리와 같이 다른 모든 검색 조건과 일치할 때 일치 항목이 발생합니다.    
+ 전체 텍스트 쿼리는 영어와 일본어 같은 특정 언어의 규칙을 기준으로 단어와 구에 적용되어 전체 텍스트 인덱스의 텍스트 데이터에 대해 언어 검색을 수행합니다. 전체 텍스트 쿼리에는 간단한 단어와 구 또는 여러 형식의 단어나 구가 포함될 수 있습니다. 전체 텍스트 쿼리는 일치 항목( *적중* 이라고도 함)이 하나 이상 있는 문서를 모두 반환합니다. 대상 문서가 전체 텍스트 쿼리에 지정된 모든 용어를 포함하며 일치하는 용어 사이의 거리와 같이 다른 모든 검색 조건과 일치할 때 일치 항목이 발생합니다.    
   
 ##  <a name="full-text-search-queries"></a><a name="queries"></a> 전체 텍스트 검색 쿼리  
  전체 텍스트 인덱스에 열을 추가한 후에는 사용자와 애플리케이션이 해당 열의 텍스트에 대해 전체 텍스트 쿼리를 실행할 수 있습니다. 이러한 쿼리는 다음 중 하나를 검색할 수 있습니다.  
@@ -124,7 +124,7 @@ ms.locfileid: "88465041"
   
 -   **프로토콜 처리기.** 이 구성 요소는 부가적인 처리를 위해 메모리에서 데이터를 가져오며 지정된 데이터베이스의 사용자 테이블에 있는 데이터에 액세스합니다. 프로토콜 처리기가 수행해야 하는 기능 중 하나는 전체 텍스트 인덱싱되는 열에서 데이터를 수집하고 필요에 따라 필터링과 단어 분리기를 적용하는 필터 데몬 호스트에 이 데이터를 전달하는 것입니다.  
   
--   **필터.** 일부 데이터 형식은 필터링을 적용해야 **varbinary**, **varbinary(max)** , **image**또는 **xml** 열의 데이터를 포함하여 문서의 데이터를 전체 텍스트 인덱싱할 수 있습니다. 지정된 문서에 사용되는 필터는 해당 문서 유형에 따라 다릅니다. 예를 들어 Microsoft Word(.doc) 문서, Microsoft Excel(.xls) 문서 및 XML(.xml) 문서에는 서로 다른 필터가 사용됩니다. 그러면 필터는 포함된 서식을 제거하고 텍스트와 텍스트 위치에 대한 정보를 유지하여 문서에서 텍스트 청크를 추출합니다. 결과는 텍스트 정보의 스트림입니다. 자세한 내용은 [고급 분석 확장 구성 및 관리](../../relational-databases/search/configure-and-manage-filters-for-search.md)를 참조하세요.  
+-   **필터.** 일부 데이터 형식은 필터링을 적용해야 **varbinary**, **varbinary(max)** , **image** 또는 **xml** 열의 데이터를 포함하여 문서의 데이터를 전체 텍스트 인덱싱할 수 있습니다. 지정된 문서에 사용되는 필터는 해당 문서 유형에 따라 다릅니다. 예를 들어 Microsoft Word(.doc) 문서, Microsoft Excel(.xls) 문서 및 XML(.xml) 문서에는 서로 다른 필터가 사용됩니다. 그러면 필터는 포함된 서식을 제거하고 텍스트와 텍스트 위치에 대한 정보를 유지하여 문서에서 텍스트 청크를 추출합니다. 결과는 텍스트 정보의 스트림입니다. 자세한 내용은 [고급 분석 확장 구성 및 관리](../../relational-databases/search/configure-and-manage-filters-for-search.md)를 참조하세요.  
   
 -   **단어 분리기 및 형태소 분석기.** 단어 분리기는 지정된 언어의 어휘 규칙을 기준으로 단어 경계(*단어 분리*)를 찾는 언어별 구성 요소입니다. 각 단어 분리기는 동사를 변화시키고 활용 형태상의 확장을 수행하는 언어별 형태소 분석기 구성 요소와 연결됩니다. 인덱싱할 때 필터 데몬 호스트는 단어 분리기와 형태소 분석기를 사용하여 지정된 테이블 열의 텍스트 데이터에 대해 언어 분석을 수행합니다. 전체 텍스트 인덱스의 테이블 열과 연결된 언어에 따라 열을 인덱싱하는 데 사용되는 단어 분리기와 형태소 분석기가 결정됩니다. 자세한 내용은 [검색을 위해 단어 분리기와 형태소 분석기 구성 및 관리](../../relational-databases/search/configure-and-manage-word-breakers-and-stemmers-for-search.md)를 참조하세요.  
   
@@ -136,7 +136,7 @@ ms.locfileid: "88465041"
   
  인덱싱 데이터가 **varbinary(max)** 또는 **image** 열에 저장되어 있으면 **IFilter** 인터페이스를 구현하는 필터는 해당 데이터에 지정된 파일 형식(예: [!INCLUDE[msCoName](../../includes/msconame-md.md)] Word)을 기준으로 텍스트를 추출합니다. 필터 구성 요소에서 **varbinary(max)** 또는 **image** 데이터를 메모리에 밀어넣는 대신 filterdata 폴더에 기록해야 하는 경우도 있습니다.  
   
- 수집된 텍스트 데이터는 처리 중에 단어 분리기를 통과하여 텍스트가 개별 토큰 또는 키워드로 분리됩니다. 토큰화에 사용되는 언어는 열 수준에서 지정되거나 필터 구성 요소로 **varbinary(max)** , **image**또는 **xml** 데이터 내에서 식별할 수 있습니다.  
+ 수집된 텍스트 데이터는 처리 중에 단어 분리기를 통과하여 텍스트가 개별 토큰 또는 키워드로 분리됩니다. 토큰화에 사용되는 언어는 열 수준에서 지정되거나 필터 구성 요소로 **varbinary(max)** , **image** 또는 **xml** 데이터 내에서 식별할 수 있습니다.  
   
  추가 처리를 수행하여 중지 단어를 제거하고 전체 텍스트 인덱스나 인덱스 조각에 저장되기 전에 토큰을 정규화할 수도 있습니다.  
   
@@ -150,7 +150,7 @@ ms.locfileid: "88465041"
   
  전체 텍스트 인덱스는 이전 버전의 [!INCLUDE[ssKatmai](../../includes/sskatmai-md.md)]에서 파일 시스템에 있었던 것과는 달리 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]부터는 데이터베이스 엔진과 통합됩니다. 새 데이터베이스에서 전체 텍스트 카탈로그는 어떤 파일 그룹에도 속하지 않는 가상 개체이며, 전체 텍스트 인덱스의 그룹을 나타내는 논리적인 개념일 뿐입니다. 그러나 데이터 파일이 들어 있는 전체 텍스트 카탈로그인 [!INCLUDE[ssVersion2005](../../includes/ssversion2005-md.md)] 데이터베이스를 업그레이드하는 동안에는 새 파일 그룹이 만들어집니다. 자세한 내용은 [전체 텍스트 검색 업그레이드](../../relational-databases/search/upgrade-full-text-search.md)를 참조하세요.  
   
-테이블당 한 개의 전체 텍스트 인덱스만 허용합니다. 테이블에 대한 전체 텍스트 인덱스를 만들려면 해당 테이블에 Null이 아닌 고유한 단일 열이 있어야 합니다. **char**, **varchar**, **nchar**, **nvarchar**, **text**, **ntext**, **image**, **xml**, **varbinary**형식의 열에 대해 전체 텍스트 인덱스를 만들 수 있으며 **varbinary(max)** 를 전체 텍스트 검색의 인덱스로 사용할 수도 있습니다. 데이터 형식이  **varbinary**, **varbinary(max)** , **image**또는 **xml** 인 열에 대한 전체 텍스트 인덱스를 만들려면 유형 열을 지정해야 합니다. *유형 열* 은 각 행에 있는 문서의 파일 확장명(.doc, .pdf, .xls 등)이 저장되는 테이블 열입니다.  
+테이블당 한 개의 전체 텍스트 인덱스만 허용합니다. 테이블에 대한 전체 텍스트 인덱스를 만들려면 해당 테이블에 Null이 아닌 고유한 단일 열이 있어야 합니다. **char**, **varchar**, **nchar**, **nvarchar**, **text**, **ntext**, **image**, **xml**, **varbinary** 형식의 열에 대해 전체 텍스트 인덱스를 만들 수 있으며 **varbinary(max)** 를 전체 텍스트 검색의 인덱스로 사용할 수도 있습니다. 데이터 형식이  **varbinary**, **varbinary(max)** , **image** 또는 **xml** 인 열에 대한 전체 텍스트 인덱스를 만들려면 유형 열을 지정해야 합니다. *유형 열* 은 각 행에 있는 문서의 파일 확장명(.doc, .pdf, .xls 등)이 저장되는 테이블 열입니다.  
 
 ###  <a name="full-text-index-structure"></a><a name="structure"></a> 전체 텍스트 인덱스 구조  
  전체 텍스트 인덱스의 구조를 잘 알게 되면 전체 텍스트 엔진의 작동 원리를 이해하는 데 도움이 됩니다. 이 항목에서 예제 테이블로 사용하는 테이블은 **의** Document [!INCLUDE[ssSampleDBCoShort](../../includes/sssampledbcoshort-md.md)] 테이블에서 발췌한 것입니다. 이 테이블에는 **DocumentID** 열 및 **Title** 열의 2개 열과 테이블의 3개 행만 표시됩니다.  
@@ -212,7 +212,7 @@ ms.locfileid: "88465041"
 |Rear|1|3|1|  
 |Reflector|1|3|2|  
   
- 조각 2에서 볼 수 있듯이 전체 텍스트 쿼리에서는 각 조각을 내부적으로 쿼리하고 이전 항목을 무시해야 합니다. 따라서 전체 텍스트 인덱스에 전체 텍스트 인덱스 조각이 너무 많으면 쿼리 성능이 크게 저하될 수 있습니다. 조각 수를 줄이려면 [ALTER FULLTEXT CATALOG](../../t-sql/statements/alter-fulltext-catalog-transact-sql.md)[!INCLUDE[tsql](../../includes/tsql-md.md)] 문의 REORGANIZE 옵션을 사용하여 전체 텍스트 카탈로그를 다시 구성합니다. 이 문은 *마스터 병합*을 수행하고 이 병합에서는 여러 조각을 하나의 큰 조각으로 병합하고 전체 텍스트 인덱스에서 사용되지 않는 항목을 모두 제거합니다.  
+ 조각 2에서 볼 수 있듯이 전체 텍스트 쿼리에서는 각 조각을 내부적으로 쿼리하고 이전 항목을 무시해야 합니다. 따라서 전체 텍스트 인덱스에 전체 텍스트 인덱스 조각이 너무 많으면 쿼리 성능이 크게 저하될 수 있습니다. 조각 수를 줄이려면 [ALTER FULLTEXT CATALOG](../../t-sql/statements/alter-fulltext-catalog-transact-sql.md)[!INCLUDE[tsql](../../includes/tsql-md.md)] 문의 REORGANIZE 옵션을 사용하여 전체 텍스트 카탈로그를 다시 구성합니다. 이 문은 *마스터 병합* 을 수행하고 이 병합에서는 여러 조각을 하나의 큰 조각으로 병합하고 전체 텍스트 인덱스에서 사용되지 않는 항목을 모두 제거합니다.  
   
  다시 구성 작업 후 예제 인덱스에는 다음과 같은 행이 포함됩니다.  
   
@@ -236,7 +236,7 @@ ms.locfileid: "88465041"
 |전체 텍스트 인덱스|일반 SQL Server 인덱스|  
 |------------------------|--------------------------------|  
 |테이블당 한 개의 전체 텍스트 인덱스만 허용합니다.|테이블당 여러 개의 일반 인덱스를 허용합니다.|  
-|전체 텍스트 인덱스에 데이터를 추가하는 *채우기*는 일정 예약 또는 특정 요청을 통해 수행할 수 있으며 새 데이터를 추가하면 자동으로 수행됩니다.|인덱스의 기초가 되는 데이터가 삽입, 업데이트 또는 삭제되면 인덱스도 자동으로 업데이트됩니다.|  
+|전체 텍스트 인덱스에 데이터를 추가하는 *채우기* 는 일정 예약 또는 특정 요청을 통해 수행할 수 있으며 새 데이터를 추가하면 자동으로 수행됩니다.|인덱스의 기초가 되는 데이터가 삽입, 업데이트 또는 삭제되면 인덱스도 자동으로 업데이트됩니다.|  
 |같은 데이터베이스 내에서 하나 이상의 전체 텍스트 카탈로그로 그룹화됩니다.|그룹화되지 않습니다.|  
 
 ##  <a name="full-text-search-linguistic-components-and-language-support"></a><a name="components"></a> 전체 텍스트 검색의 언어 구성 요소 및 언어 지원
@@ -250,7 +250,7 @@ ms.locfileid: "88465041"
   
 -   **동의어 사전 파일.** [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 는 또한 각 전체 텍스트 언어에 대한 동의어 사전 파일뿐 아니라 전역 동의어 사전 파일도 설치합니다. 설치된 동의어 사전 파일은 기본적으로 비어 있지만 이러한 동의어 사전 파일을 편집하여 특정 언어 또는 비즈니스 시나리오에 대한 동의어를 정의할 수 있습니다. 전체 텍스트 데이터에 맞게 동의어 사전을 개발하면 해당 데이터에 대한 전체 텍스트 쿼리의 범위를 효과적으로 넓힐 수 있습니다. 자세한 내용은 [전체 텍스트 검색에 사용할 동의어 사전 파일 구성 및 관리](../../relational-databases/search/configure-and-manage-thesaurus-files-for-full-text-search.md)를 참조하세요.  
   
--   **필터(iFilters).**  **varbinary(max)** , **image**또는 **xml** 데이터 형식 열의 문서를 인덱싱하려면 추가 처리를 수행하는 필터가 필요합니다. 필터는 문서 유형(.doc, .pdf, .xls, .xml 등)에 따라 달라야 합니다. 자세한 내용은 [고급 분석 확장 구성 및 관리](../../relational-databases/search/configure-and-manage-filters-for-search.md)를 참조하세요.  
+-   **필터(iFilters).**  **varbinary(max)** , **image** 또는 **xml** 데이터 형식 열의 문서를 인덱싱하려면 추가 처리를 수행하는 필터가 필요합니다. 필터는 문서 유형(.doc, .pdf, .xls, .xml 등)에 따라 달라야 합니다. 자세한 내용은 [고급 분석 확장 구성 및 관리](../../relational-databases/search/configure-and-manage-filters-for-search.md)를 참조하세요.  
   
  단어 분리기(및 형태소 분석기)와 필터는 필터 데몬 호스트 프로세스(fdhost.exe)에서 실행됩니다.  
 

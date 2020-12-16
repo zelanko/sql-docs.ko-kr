@@ -28,13 +28,13 @@ helpviewer_keywords:
 ms.assetid: fc976afd-1edb-4341-bf41-c4a42a69772b
 author: pmasl
 ms.author: umajay
-monikerRange: = azuresqldb-current ||>= sql-server-2016 ||>= sql-server-linux-2017||=azure-sqldw-latest||= sqlallproducts-allversions
-ms.openlocfilehash: 82a558d445d93e007b9402425426815922c7043b
-ms.sourcegitcommit: cc23d8646041336d119b74bf239a6ac305ff3d31
+monikerRange: = azuresqldb-current ||>= sql-server-2016 ||>= sql-server-linux-2017||=azure-sqldw-latest
+ms.openlocfilehash: 38deaa198679545b3b67a9d93e9a01b12851abd0
+ms.sourcegitcommit: 1a544cf4dd2720b124c3697d1e62ae7741db757c
 ms.translationtype: HT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 09/23/2020
-ms.locfileid: "91115590"
+ms.lasthandoff: 12/14/2020
+ms.locfileid: "97480504"
 ---
 # <a name="dbcc-shrinkdatabase-transact-sql"></a>DBCC SHRINKDATABASE(Transact-SQL)
 [!INCLUDE [sql-asdb-asa.md](../../includes/applies-to-version/sql-asdb-asa.md)]
@@ -55,7 +55,7 @@ DBCC SHRINKDATABASE
 ```  
 
 ```syntaxsql
--- Azure Synapse Analytics (formerly SQL DW)
+-- Azure Synapse Analytics
 
 DBCC SHRINKDATABASE   
 ( database_name   
@@ -75,14 +75,14 @@ _대상\_백분율_
 데이터베이스를 축소한 후 데이터베이스에 남겨둘 여유 공간의 비율입니다.  
   
 NOTRUNCATE  
-할당된 페이지를 파일 끝에서 파일 앞의 할당되지 않은 페이지로 이동합니다. 이 작업은 파일 내의 데이터를 압축합니다. _대상\_백분율_은 선택 사항입니다. [!INCLUDE[ssSDW](../../includes/sssdwfull-md.md)]에서는 이 옵션을 지원하지 않습니다. 
+할당된 페이지를 파일 끝에서 파일 앞의 할당되지 않은 페이지로 이동합니다. 이 작업은 파일 내의 데이터를 압축합니다. _대상\_백분율_ 은 선택 사항입니다. [!INCLUDE[ssSDW](../../includes/sssdwfull-md.md)]에서는 이 옵션을 지원하지 않습니다. 
   
 파일 끝의 여유 공간이 운영 체제로 반환되지 않고, 파일의 실제 크기가 변경되지 않습니다. 따라서 NOTRUNCATE를 지정할 때 데이터베이스는 축소되지 않는 것으로 나타납니다.  
   
 NOTRUNCATE는 데이터 파일에만 적용되며 NOTRUNCATE는 로그 파일에 영향을 주지 않습니다.  
   
 TRUNCATEONLY  
-파일 끝의 모든 여유 공간을 운영 체제로 릴리스합니다. 파일 내의 어떤 페이지도 이동하지 않습니다. 데이터 파일은 마지막으로 할당된 익스텐트까지 축소됩니다. TRUNCATEONLY로 지정된 경우 _대상\_백분율_은 무시됩니다. [!INCLUDE[ssSDW](../../includes/sssdwfull-md.md)]에서는 이 옵션을 지원하지 않습니다.
+파일 끝의 모든 여유 공간을 운영 체제로 릴리스합니다. 파일 내의 어떤 페이지도 이동하지 않습니다. 데이터 파일은 마지막으로 할당된 익스텐트까지 축소됩니다. TRUNCATEONLY로 지정된 경우 _대상\_백분율_ 은 무시됩니다. [!INCLUDE[ssSDW](../../includes/sssdwfull-md.md)]에서는 이 옵션을 지원하지 않습니다.
   
 TRUNCATEONLY는 로그 파일에 영향을 줍니다. 데이터 파일만 자르려면 DBCC SHRINKFILE을 사용합니다.  
   
@@ -128,15 +128,15 @@ DBCC SHRINKDATABASE를 실행할 때 NOTRUNCATE 옵션이나 TRUNCATEONLY 옵션
 ## <a name="how-dbcc-shrinkdatabase-works"></a>DBCC SHRINKDATABASE 작동 방법  
 DBCC SHRINKDATABASE는 파일 단위로 데이터 파일을 축소하지만 로그 파일이 모두 한 연속 로그 풀에 있는 것처럼 로그 파일을 축소합니다. 항상 파일은 끝부터 축소됩니다.
   
-두 개의 로그 파일, 데이터 파일 및 **mydb**라는 데이터베이스가 있다고 가정합니다. 데이터 파일과 로그 파일은 각각 10MB이고 데이터 파일에는 6MB의 데이터가 포함됩니다. [!INCLUDE[ssDE](../../includes/ssde-md.md)]는 각 파일의 대상 크기를 계산합니다. 이 값은 파일을 축소할 크기입니다. DBCC SHRINKDATABASE에 _대상\_백분율_을 지정하면 [!INCLUDE[ssDE](../../includes/ssde-md.md)]에서는 축소 후 파일에 _대상\_백분율_ 만큼의 여유 공간이 남도록 대상 크기를 계산합니다. 
+두 개의 로그 파일, 데이터 파일 및 **mydb** 라는 데이터베이스가 있다고 가정합니다. 데이터 파일과 로그 파일은 각각 10MB이고 데이터 파일에는 6MB의 데이터가 포함됩니다. [!INCLUDE[ssDE](../../includes/ssde-md.md)]는 각 파일의 대상 크기를 계산합니다. 이 값은 파일을 축소할 크기입니다. DBCC SHRINKDATABASE에 _대상\_백분율_ 을 지정하면 [!INCLUDE[ssDE](../../includes/ssde-md.md)]에서는 축소 후 파일에 _대상\_백분율_ 만큼의 여유 공간이 남도록 대상 크기를 계산합니다. 
 
-예를 들어 **mydb**를 축소하기 위해 _대상\_백분율_을 25로 지정하면 [!INCLUDE[ssDE](../../includes/ssde-md.md)]에서는 데이터 파일의 대상 크기를 8MB(6MB의 데이터 + 2MB의 여유 공간)로 계산합니다. 따라서 [!INCLUDE[ssDE](../../includes/ssde-md.md)]는 데이터 파일의 마지막 2MB에서 데이터 파일의 처음 8MB에 포함된 여유 공간으로 데이터를 이동한 다음, 파일을 축소합니다.
+예를 들어 **mydb** 를 축소하기 위해 _대상\_백분율_ 을 25로 지정하면 [!INCLUDE[ssDE](../../includes/ssde-md.md)]에서는 데이터 파일의 대상 크기를 8MB(6MB의 데이터 + 2MB의 여유 공간)로 계산합니다. 따라서 [!INCLUDE[ssDE](../../includes/ssde-md.md)]는 데이터 파일의 마지막 2MB에서 데이터 파일의 처음 8MB에 포함된 여유 공간으로 데이터를 이동한 다음, 파일을 축소합니다.
   
-**mydb**의 데이터 파일에 7MB의 데이터가 있다고 가정합니다. _대상\_백분율_을 30으로 지정하면 여유 공간이 30%만 남도록 이 데이터 파일이 축소됩니다. 그러나 _대상\_백분율_을 40으로 지정하면 [!INCLUDE[ssDE](../../includes/ssde-md.md)]에서는 현재 데이터가 차지하는 용량보다 작은 크기로 파일을 축소할 수 없으므로 데이터 파일을 축소하지 않습니다. 
+**mydb** 의 데이터 파일에 7MB의 데이터가 있다고 가정합니다. _대상\_백분율_ 을 30으로 지정하면 여유 공간이 30%만 남도록 이 데이터 파일이 축소됩니다. 그러나 _대상\_백분율_ 을 40으로 지정하면 [!INCLUDE[ssDE](../../includes/ssde-md.md)]에서는 현재 데이터가 차지하는 용량보다 작은 크기로 파일을 축소할 수 없으므로 데이터 파일을 축소하지 않습니다. 
 
-이 문제를 다른 방법으로 생각해 볼 수도 있습니다. 원하는 여유 공간 40% + 전체 데이터 파일 70%(10MB 중 7MB)는 100%보다 큽니다. 30보다 큰 모든 _대상\_크기_에는 데이터 파일이 축소되지 않습니다. 원하는 여유 백분율에 데이터 파일이 차지하는 현재 백분율을 더한 값이 100%를 초과하기 때문에 축소되지 않습니다.
+이 문제를 다른 방법으로 생각해 볼 수도 있습니다. 원하는 여유 공간 40% + 전체 데이터 파일 70%(10MB 중 7MB)는 100%보다 큽니다. 30보다 큰 모든 _대상\_크기_ 에는 데이터 파일이 축소되지 않습니다. 원하는 여유 백분율에 데이터 파일이 차지하는 현재 백분율을 더한 값이 100%를 초과하기 때문에 축소되지 않습니다.
   
-로그 파일의 경우 [!INCLUDE[ssDE](../../includes/ssde-md.md)]에서는 _대상\_백분율_을 사용하여 전체 로그의 대상 크기를 계산합니다. 따라서 _대상\_백분율_이 축소 작업 후 로그의 여유 공간 크기입니다. 그런 다음 전체 로그의 대상 크기가 각 로그 파일의 대상 크기로 변환됩니다.
+로그 파일의 경우 [!INCLUDE[ssDE](../../includes/ssde-md.md)]에서는 _대상\_백분율_ 을 사용하여 전체 로그의 대상 크기를 계산합니다. 따라서 _대상\_백분율_ 이 축소 작업 후 로그의 여유 공간 크기입니다. 그런 다음 전체 로그의 대상 크기가 각 로그 파일의 대상 크기로 변환됩니다.
   
 DBCC SHRINKDATABASE는 즉시 각 물리적 로그 파일을 대상 크기로 축소하려고 합니다. 논리 로그의 어떤 부분도 로그 파일의 대상 크기를 초과하여 가상 로그에 남아 있지 않다고 가정해 봅니다. 그런 다음, 파일이 성공적으로 잘리고 DBCC SHRINKDATABASE가 메시지 없이 완료됩니다. 그러나 가상 로그에 대상 크기보다 큰 논리 로그 부분이 있는 경우 [!INCLUDE[ssDE](../../includes/ssde-md.md)]는 가능한 한 많은 공간을 해제하고 정보용 메시지를 표시합니다. 이 메시지는 파일 끝의 가상 로그에서 논리 로그를 이동하기 위해 수행해야 하는 동작을 설명합니다. 작업이 실행된 후 DBCC SHRINKDATABASE를 사용하여 나머지 공간을 해제할 수 있습니다.
   

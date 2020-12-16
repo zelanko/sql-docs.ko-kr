@@ -16,13 +16,13 @@ helpviewer_keywords:
 ms.assetid: af98fc70-24dd-4bd3-a0a3-f701dfa67b2c
 author: stevestein
 ms.author: sstein
-monikerRange: '>=aps-pdw-2016||=azuresqldb-current||=azure-sqldw-latest||>=sql-server-2016||=sqlallproducts-allversions||>=sql-server-linux-2017||=azuresqldb-mi-current'
-ms.openlocfilehash: f5a231db58bca07596f63698d5e02a07638c3b02
-ms.sourcegitcommit: e700497f962e4c2274df16d9e651059b42ff1a10
+monikerRange: '>=aps-pdw-2016||=azuresqldb-current||=azure-sqldw-latest||>=sql-server-2016||>=sql-server-linux-2017||=azuresqldb-mi-current'
+ms.openlocfilehash: 148c3fc7d46972fcd6d4769471edd16954cc449d
+ms.sourcegitcommit: 1a544cf4dd2720b124c3697d1e62ae7741db757c
 ms.translationtype: HT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 08/17/2020
-ms.locfileid: "88446492"
+ms.lasthandoff: 12/14/2020
+ms.locfileid: "97480864"
 ---
 # <a name="disable-check-constraints-for-replication"></a>복제할 때 CHECK 제약 조건 해제
 [!INCLUDE [sqlserver2016-asdb-asdbmi-asa-pdw](../../includes/applies-to-version/sqlserver2016-asdb-asdbmi-asa-pdw.md)]
@@ -43,23 +43,23 @@ ms.locfileid: "88446492"
   
 #### <a name="to-disable-a-check-constraint-for-replication"></a>복제할 때 CHECK 제약 조건을 비활성화하려면  
   
-1.  **개체 탐색기**에서 수정하려는 CHECK 제약 조건을 포함하는 테이블을 확장하고 **제약 조건** 폴더를 확장합니다.  
+1.  **개체 탐색기** 에서 수정하려는 CHECK 제약 조건을 포함하는 테이블을 확장하고 **제약 조건** 폴더를 확장합니다.  
   
-2.  수정할 CHECK 제약 조건을 마우스 오른쪽 단추로 클릭한 다음 **수정**을 클릭합니다.  
+2.  수정할 CHECK 제약 조건을 마우스 오른쪽 단추로 클릭한 다음 **수정** 을 클릭합니다.  
   
-3.  **CHECK 제약 조건** 대화 상자의 **테이블 디자이너**에서 **복제에 적용** 에 대해 **아니요**를 선택합니다.  
+3.  **CHECK 제약 조건** 대화 상자의 **테이블 디자이너** 에서 **복제에 적용** 에 대해 **아니요** 를 선택합니다.  
   
-4.  **닫기**를 클릭합니다.  
+4.  **닫기** 를 클릭합니다.  
 
 ##  <a name="using-transact-sql"></a><a name="TsqlProcedure"></a> Transact-SQL 사용  
   
 #### <a name="to-disable-a-check-constraint-for-replication"></a>복제할 때 CHECK 제약 조건을 비활성화하려면  
   
-1.  **개체 탐색기**에서 [!INCLUDE[ssDE](../../includes/ssde-md.md)]인스턴스에 연결합니다.  
+1.  **개체 탐색기** 에서 [!INCLUDE[ssDE](../../includes/ssde-md.md)]인스턴스에 연결합니다.  
   
-2.  표준 도구 모음에서 **새 쿼리**를 클릭합니다.  
+2.  표준 도구 모음에서 **새 쿼리** 를 클릭합니다.  
   
-3.  다음 예를 복사하여 쿼리 창에 붙여 넣고 **실행**을 클릭합니다. 이 예에서는 IDENTITY 열이 있는 테이블과 테이블에 대한 CHECK 제약 조건을 만듭니다. 그런 다음 제약 조건을 삭제하고 NOT FOR REPLICATION 절을 지정하여 다시 만듭니다.  
+3.  다음 예를 복사하여 쿼리 창에 붙여 넣고 **실행** 을 클릭합니다. 이 예에서는 IDENTITY 열이 있는 테이블과 테이블에 대한 CHECK 제약 조건을 만듭니다. 그런 다음 제약 조건을 삭제하고 NOT FOR REPLICATION 절을 지정하여 다시 만듭니다.  
   
     ```  
     USE AdventureWorks2012;  

@@ -15,13 +15,13 @@ helpviewer_keywords:
 ms.assetid: f4686f6f-c224-4f07-a7cb-92f4dd483158
 author: MashaMSFT
 ms.author: mathoma
-monikerRange: =azuresqldb-mi-current||>=sql-server-2016||=sqlallproducts-allversions
-ms.openlocfilehash: ee448df6c962596b146c3c933406a23063873d96
-ms.sourcegitcommit: c8e1553ff3fdf295e8dc6ce30d1c454d6fde8088
+monikerRange: =azuresqldb-mi-current||>=sql-server-2016
+ms.openlocfilehash: 0f339c2be8c7424134ba76fabbed1105d447a621
+ms.sourcegitcommit: 1a544cf4dd2720b124c3697d1e62ae7741db757c
 ms.translationtype: HT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 07/22/2020
-ms.locfileid: "86919949"
+ms.lasthandoff: 12/14/2020
+ms.locfileid: "97479594"
 ---
 # <a name="publishing-stored-procedure-execution-in-transactional-replication"></a>트랜잭션 복제에서 저장 프로시저 실행 게시
 [!INCLUDE[sql-asdbmi](../../../includes/applies-to-version/sql-asdbmi.md)]
@@ -58,7 +58,7 @@ EXEC give_raise
 -   복제 Transact-SQL 프로그래밍: `@type` 매개 변수에 ‘serializable proc exec’(권장) 또는 ‘proc exec’ 값을 지정하고 [sp_addarticle&#40;Transact-SQL&#41;](../../../relational-databases/system-stored-procedures/sp-addarticle-transact-sql.md)을 실행합니다. 아티클을 정의하는 방법은 [아티클 정의](../../../relational-databases/replication/publish/define-an-article.md)를 참조하세요.  
   
 ## <a name="modifying-the-procedure-at-the-subscriber"></a>구독자에서 프로시저 수정  
- 기본적으로 게시자의 저장 프로시저 정의는 각 구독자로 전파됩니다. 그러나 구독자에서 저장 프로시저를 수정할 수도 있습니다. 이는 게시자와 구독자에서 다른 논리를 실행하려고 할 때 유용합니다. 예를 들어 구독자의 저장 프로시저 **sp_big_delete**에는 두 가지 기능이 있습니다. 복제된 테이블 **big_table1** 에서 1,000,000개의 행을 삭제하고 복제되지 않은 테이블 **big_table2**를 업데이트합니다. 네트워크 리소스에 대한 수요를 줄이려면 **sp_big_delete**를 게시하여 100만 개의 행 삭제를 저장 프로시저로 전파해야 합니다. 구독자에서 100만 개의 행만 삭제하고 **big_table2** 에 대한 후속 업데이트를 수행하지 않도록 **sp_big_delete**를 정의할 수 있습니다.  
+ 기본적으로 게시자의 저장 프로시저 정의는 각 구독자로 전파됩니다. 그러나 구독자에서 저장 프로시저를 수정할 수도 있습니다. 이는 게시자와 구독자에서 다른 논리를 실행하려고 할 때 유용합니다. 예를 들어 구독자의 저장 프로시저 **sp_big_delete** 에는 두 가지 기능이 있습니다. 복제된 테이블 **big_table1** 에서 1,000,000개의 행을 삭제하고 복제되지 않은 테이블 **big_table2** 를 업데이트합니다. 네트워크 리소스에 대한 수요를 줄이려면 **sp_big_delete** 를 게시하여 100만 개의 행 삭제를 저장 프로시저로 전파해야 합니다. 구독자에서 100만 개의 행만 삭제하고 **big_table2** 에 대한 후속 업데이트를 수행하지 않도록 **sp_big_delete** 를 정의할 수 있습니다.  
   
 > [!NOTE]  
 >  기본적으로 게시자에서 ALTER PROCEDURE를 사용하여 적용한 변경 내용은 구독자로 전파됩니다. 이를 방지하려면 ALTER PROCEDURE를 실행하기 전에 스키마 변경 내용을 전파하는 설정을 해제합니다. 스키마 변경에 대한 자세한 내용은 [게시 데이터베이스의 스키마 변경](../../../relational-databases/replication/publish/make-schema-changes-on-publication-databases.md)을 참조하세요.  

@@ -16,13 +16,13 @@ helpviewer_keywords:
 ms.assetid: 5dae1d59-c377-4c6e-adc9-b68c5b328f79
 author: MashaMSFT
 ms.author: mathoma
-monikerRange: =azuresqldb-mi-current||>=sql-server-2016||=sqlallproducts-allversions
-ms.openlocfilehash: 88321dc6030b76869c55039f04dea39728342751
-ms.sourcegitcommit: 4d370399f6f142e25075b3714e5c2ce056b1bfd0
+monikerRange: =azuresqldb-mi-current||>=sql-server-2016
+ms.openlocfilehash: 7cd44046d1c21fc365adc0608592b5139270f97b
+ms.sourcegitcommit: 1a544cf4dd2720b124c3697d1e62ae7741db757c
 ms.translationtype: HT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 10/09/2020
-ms.locfileid: "91868128"
+ms.lasthandoff: 12/14/2020
+ms.locfileid: "97479534"
 ---
 # <a name="view-and-modify-distributor-and-publisher-properties"></a>게시자 및 배포자 속성 보기 및 수정
 [!INCLUDE [SQL Server SQL MI](../../includes/applies-to-version/sql-asdbmi.md)]
@@ -59,31 +59,31 @@ ms.locfileid: "91868128"
   
 1.  [!INCLUDE[ssManStudioFull](../../includes/ssmanstudiofull-md.md)]에서 배포자에 연결한 다음 해당 서버 노드를 확장합니다.  
   
-2.  **복제** 폴더를 마우스 오른쪽 단추로 클릭한 다음 **배포자 속성**을 클릭합니다.  
+2.  **복제** 폴더를 마우스 오른쪽 단추로 클릭한 다음 **배포자 속성** 을 클릭합니다.  
   
 3.  **배포자 속성 - \<Distributor>** 대화 상자에서 속성을 보고 수정합니다.  
   
     -   배포 데이터베이스의 속성을 보고 수정하려면 대화 상자의 **일반** 페이지에서 해당 데이터베이스에 대한 속성 단추( **...** )를 클릭합니다.  
   
-    -   배포자와 관련된 게시자 속성을 보고 수정하려면 대화 상자의**게시자**페이지에서 해당 게시자에 대한 속성 단추 ( **...** )를 클릭합니다.  
+    -   배포자와 관련된 게시자 속성을 보고 수정하려면 대화 상자의 **게시자** 페이지에서 해당 게시자에 대한 속성 단추 ( **...** )를 클릭합니다.  
   
     -   복제 에이전트에 대한 프로필에 액세스하려면 대화 상자의 **일반** 페이지에서 **프로필 기본값** 단추를 클릭합니다. 자세한 내용은 [Replication Agent Profiles](../../relational-databases/replication/agents/replication-agent-profiles.md)을 참조하세요.  
   
     -   관리 저장 프로시저가 게시자에서 실행되고 배포자에서 정보를 업데이트할 때 사용되는 계정의 암호를 변경하려면 대화 상자의 **게시자** 페이지에서 **암호** 및 **암호 확인** 상자에 새 암호를 입력합니다. 자세한 내용은 [배포자 보안 설정](../../relational-databases/replication/security/secure-the-distributor.md)을 참조하세요.  
   
-4.  필요한 경우 속성을 수정한 다음 **확인**을 클릭합니다.  
+4.  필요한 경우 속성을 수정한 다음 **확인** 을 클릭합니다.  
   
 #### <a name="to-view-and-modify-publisher-properties"></a>게시자 속성을 보고 수정하려면  
   
 1.  [!INCLUDE[ssManStudioFull](../../includes/ssmanstudiofull-md.md)]에서 게시자에 연결한 다음 해당 서버 노드를 확장합니다.  
   
-2.  **복제** 폴더를 마우스 오른쪽 단추로 클릭한 다음 **게시자 속성**을 클릭합니다.  
+2.  **복제** 폴더를 마우스 오른쪽 단추로 클릭한 다음 **게시자 속성** 을 클릭합니다.  
   
 3.  **게시자 속성 - < Publisher >** 대화 상자에서 속성을 보고 수정합니다.  
   
     -   **sysadmin** 고정 서버 역할의 사용자는 **게시 데이터베이스** 페이지에서 복제에 사용할 데이터베이스를 설정할 수 있습니다. 데이터베이스를 설정한다고 해서 그 데이터베이스가 게시되는 것은 아닙니다. 데이터베이스를 설정하면 설정된 데이터베이스에 대한 **db_owner** 고정 데이터베이스 역할의 사용자가 그 데이터베이스에 하나 이상의 게시를 만들 수 있습니다.  
   
-4.  필요한 경우 속성을 수정한 다음 **확인**을 클릭합니다.  
+4.  필요한 경우 속성을 수정한 다음 **확인** 을 클릭합니다.  
   
 ##  <a name="using-transact-sql"></a><a name="TsqlProcedure"></a> Transact-SQL 사용  
  복제 저장 프로시저를 사용하여 프로그래밍 방식으로 게시자와 배포자 속성을 볼 수 있습니다.  
@@ -139,7 +139,7 @@ ms.locfileid: "91868128"
   
 5.  (옵션) 속성을 변경하려면 <xref:Microsoft.SqlServer.Replication.ReplicationServer> 개체에 설정할 수 있는 하나 이상의 배포자 속성에 새 값을 설정합니다.  
   
-6.  (옵션) <xref:Microsoft.SqlServer.Replication.ReplicationObject.CachePropertyChanges%2A> 개체의 <xref:Microsoft.SqlServer.Replication.ReplicationServer> 속성이 **true**로 설정되면 <xref:Microsoft.SqlServer.Replication.ReplicationObject.CommitPropertyChanges%2A> 메서드를 호출하여 서버의 변경 내용을 커밋합니다.  
+6.  (옵션) <xref:Microsoft.SqlServer.Replication.ReplicationObject.CachePropertyChanges%2A> 개체의 <xref:Microsoft.SqlServer.Replication.ReplicationServer> 속성이 **true** 로 설정되면 <xref:Microsoft.SqlServer.Replication.ReplicationObject.CommitPropertyChanges%2A> 메서드를 호출하여 서버의 변경 내용을 커밋합니다.  
   
 #### <a name="to-view-and-modify-distribution-database-properties"></a>배포 데이터베이스 속성을 보고 수정하려면  
   
@@ -147,11 +147,11 @@ ms.locfileid: "91868128"
   
 2.  <xref:Microsoft.SqlServer.Replication.DistributionDatabase> 클래스의 인스턴스를 만듭니다. 이름 속성을 지정하고 1단계에서 만든 <xref:Microsoft.SqlServer.Management.Common.ServerConnection> 개체를 전달합니다.  
   
-3.  <xref:Microsoft.SqlServer.Replication.ReplicationObject.LoadProperties%2A> 메서드를 호출하여 서버에서 속성을 가져옵니다. 이 메서드가 **false**를 반환하는 경우 지정된 이름의 데이터베이스가 서버에 없는 것입니다.  
+3.  <xref:Microsoft.SqlServer.Replication.ReplicationObject.LoadProperties%2A> 메서드를 호출하여 서버에서 속성을 가져옵니다. 이 메서드가 **false** 를 반환하는 경우 지정된 이름의 데이터베이스가 서버에 없는 것입니다.  
   
 4.  (옵션) 속성을 변경하려면 설정할 수 있는 <xref:Microsoft.SqlServer.Replication.DistributionDatabase> 속성 중 하나에 대해 새 값을 설정합니다.  
   
-5.  (옵션) <xref:Microsoft.SqlServer.Replication.ReplicationObject.CachePropertyChanges%2A> 개체의 <xref:Microsoft.SqlServer.Replication.DistributionDatabase> 속성이 **true**로 설정되면 <xref:Microsoft.SqlServer.Replication.ReplicationObject.CommitPropertyChanges%2A> 메서드를 호출하여 서버의 변경 내용을 커밋합니다.  
+5.  (옵션) <xref:Microsoft.SqlServer.Replication.ReplicationObject.CachePropertyChanges%2A> 개체의 <xref:Microsoft.SqlServer.Replication.DistributionDatabase> 속성이 **true** 로 설정되면 <xref:Microsoft.SqlServer.Replication.ReplicationObject.CommitPropertyChanges%2A> 메서드를 호출하여 서버의 변경 내용을 커밋합니다.  
   
 #### <a name="to-view-and-modify-publisher-properties"></a>게시자 속성을 보고 수정하려면  
   
@@ -161,7 +161,7 @@ ms.locfileid: "91868128"
   
 3.  (옵션) 속성을 변경하려면 설정할 수 있는 <xref:Microsoft.SqlServer.Replication.DistributionPublisher> 속성 중 하나에 대해 새 값을 설정합니다.  
   
-4.  (옵션) <xref:Microsoft.SqlServer.Replication.ReplicationObject.CachePropertyChanges%2A> 개체의 <xref:Microsoft.SqlServer.Replication.DistributionPublisher> 속성이 **true**로 설정되면 <xref:Microsoft.SqlServer.Replication.ReplicationObject.CommitPropertyChanges%2A> 메서드를 호출하여 서버의 변경 내용을 커밋합니다.  
+4.  (옵션) <xref:Microsoft.SqlServer.Replication.ReplicationObject.CachePropertyChanges%2A> 개체의 <xref:Microsoft.SqlServer.Replication.DistributionPublisher> 속성이 **true** 로 설정되면 <xref:Microsoft.SqlServer.Replication.ReplicationObject.CommitPropertyChanges%2A> 메서드를 호출하여 서버의 변경 내용을 커밋합니다.  
   
 #### <a name="to-change-the-password-for-the-administrative-connection-from-the-publisher-to-the-distributor"></a>관리 연결의 암호를 게시자에서 배포자로 변경하려면  
   

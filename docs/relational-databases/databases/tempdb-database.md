@@ -15,13 +15,13 @@ helpviewer_keywords:
 ms.assetid: ce4053fb-e37a-4851-b711-8e504059a780
 author: stevestein
 ms.author: sstein
-monikerRange: =azuresqldb-current||>=sql-server-2016||=sqlallproducts-allversions||>=sql-server-linux-2017||=azuresqldb-mi-current
-ms.openlocfilehash: c49e89d9ed81950d0c8781d39c57eef3e408482b
-ms.sourcegitcommit: cfa04a73b26312bf18d8f6296891679166e2754d
+monikerRange: =azuresqldb-current||>=sql-server-2016||>=sql-server-linux-2017||=azuresqldb-mi-current
+ms.openlocfilehash: 345c02a175643967a509900ab415b90708a3d9e7
+ms.sourcegitcommit: 1a544cf4dd2720b124c3697d1e62ae7741db757c
 ms.translationtype: HT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 10/19/2020
-ms.locfileid: "92195561"
+ms.lasthandoff: 12/14/2020
+ms.locfileid: "97478304"
 ---
 # <a name="tempdb-database"></a>tempdb 데이터베이스
 
@@ -158,7 +158,7 @@ ms.locfileid: "92195561"
 - 파일 그룹 추가
 - 데이터베이스 백업 또는 복원
 - 데이터 정렬 변경. 기본 데이터 정렬은 서버 데이터 정렬입니다.
-- 데이터베이스 소유자 변경. `tempdb`는 *sa*가 소유합니다.
+- 데이터베이스 소유자 변경. `tempdb`는 *sa* 가 소유합니다.
 - 데이터베이스 스냅샷 만들기
 - 데이터베이스 삭제
 - 데이터베이스에서 *guest* 사용자 삭제

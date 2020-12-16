@@ -14,13 +14,13 @@ helpviewer_keywords:
 ms.assetid: 5d745f22-9c6b-4e11-8c62-bc50e9a8bf38
 author: MashaMSFT
 ms.author: mathoma
-monikerRange: =azuresqldb-mi-current||>=sql-server-2016||=sqlallproducts-allversions
-ms.openlocfilehash: 2b3e66bbfa13af7c6f06e39346c68273c9f7a58a
-ms.sourcegitcommit: da88320c474c1c9124574f90d549c50ee3387b4c
+monikerRange: =azuresqldb-mi-current||>=sql-server-2016
+ms.openlocfilehash: f4c10ff531c0a687bebb270c118c451ce489786a
+ms.sourcegitcommit: 1a544cf4dd2720b124c3697d1e62ae7741db757c
 ms.translationtype: HT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 07/01/2020
-ms.locfileid: "85783127"
+ms.lasthandoff: 12/14/2020
+ms.locfileid: "97480974"
 ---
 # <a name="snapshot-replication"></a>Snapshot Replication
 [!INCLUDE [SQL Server SQL MI](../../includes/applies-to-version/sql-asdbmi.md)]
@@ -63,7 +63,7 @@ ms.locfileid: "85783127"
  ![스냅샷 복제 구성 요소 및 데이터 흐름](../../relational-databases/replication/media/snapshot.gif "스냅샷 복제 구성 요소 및 데이터 흐름")  
   
 ##  <a name="snapshot-agent"></a><a name="SnapshotAgent"></a> 스냅샷 에이전트  
- 병합 복제의 경우 스냅샷 에이전트가 실행될 때마다 스냅샷이 생성됩니다. 트랜잭션 복제의 경우 게시 속성 **immediate_sync**의 설정에 따라 스냅샷 생성이 달라집니다. 이 속성을 TRUE(새 게시 마법사 사용 시 기본 설정)로 설정하면 스냅샷 에이전트가 실행될 때마다 스냅샷이 생성되고 언제든지 스냅샷을 구독자에 적용할 수 있습니다. 이 속성을 FALSE( **sp_addpublication**사용 시 기본 설정)로 설정하면 스냅샷 에이전트가 마지막으로 실행된 후에 새 구독이 추가된 경우에만 스냅샷이 생성됩니다. 구독자는 동기화하기 위해 스냅샷 에이전트가 완료될 때까지 기다려야 합니다.  
+ 병합 복제의 경우 스냅샷 에이전트가 실행될 때마다 스냅샷이 생성됩니다. 트랜잭션 복제의 경우 게시 속성 **immediate_sync** 의 설정에 따라 스냅샷 생성이 달라집니다. 이 속성을 TRUE(새 게시 마법사 사용 시 기본 설정)로 설정하면 스냅샷 에이전트가 실행될 때마다 스냅샷이 생성되고 언제든지 스냅샷을 구독자에 적용할 수 있습니다. 이 속성을 FALSE( **sp_addpublication** 사용 시 기본 설정)로 설정하면 스냅샷 에이전트가 마지막으로 실행된 후에 새 구독이 추가된 경우에만 스냅샷이 생성됩니다. 구독자는 동기화하기 위해 스냅샷 에이전트가 완료될 때까지 기다려야 합니다.  
   
  스냅샷 에이전트는 다음 단계를 수행하세요.  
   
@@ -104,6 +104,6 @@ ms.locfileid: "85783127"
   
 2.  게시자의 **sysmergeschemachange** 테이블을 검사하고 구독자에 적용해야 하는 새 스냅샷이 있는지 여부를 확인합니다.  
   
-3.  새 스냅샷이 있는 경우 병합 에이전트는 **sysmergeschemachange**에 지정된 위치에 있는 스냅샷 파일을 구독 데이터베이스에 적용합니다.  
+3.  새 스냅샷이 있는 경우 병합 에이전트는 **sysmergeschemachange** 에 지정된 위치에 있는 스냅샷 파일을 구독 데이터베이스에 적용합니다.  
   
   

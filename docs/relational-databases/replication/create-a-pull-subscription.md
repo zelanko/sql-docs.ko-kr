@@ -17,13 +17,13 @@ helpviewer_keywords:
 ms.assetid: 41d1886d-59c9-41fc-9bd6-a59b40e0af6e
 author: MashaMSFT
 ms.author: mathoma
-monikerRange: =azuresqldb-mi-current||>=sql-server-2016||=sqlallproducts-allversions
-ms.openlocfilehash: ca2d2b650e8691e34445a4b239fb6eff71b25557
-ms.sourcegitcommit: 4d370399f6f142e25075b3714e5c2ce056b1bfd0
+monikerRange: =azuresqldb-mi-current||>=sql-server-2016
+ms.openlocfilehash: a84517056baaf5cf4738add3e85a9297b82ec408
+ms.sourcegitcommit: 1a544cf4dd2720b124c3697d1e62ae7741db757c
 ms.translationtype: HT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 10/09/2020
-ms.locfileid: "91869102"
+ms.lasthandoff: 12/14/2020
+ms.locfileid: "97480034"
 ---
 # <a name="create-a-pull-subscription"></a>끌어오기 구독 만들기
 
@@ -70,7 +70,7 @@ Presently 'sql-server-2014' moniker is on this 'monikerRange'. This situation de
   
 2.  **복제** 폴더를 확장한 다음 **로컬 게시** 폴더를 확장합니다.  
   
-3.  하나 이상의 구독을 만들 게시를 마우스 오른쪽 단추로 클릭한 다음 **새 구독**을 클릭합니다.  
+3.  하나 이상의 구독을 만들 게시를 마우스 오른쪽 단추로 클릭한 다음 **새 구독** 을 클릭합니다.  
   
 4.  새 구독 마법사의 페이지를 완료합니다.  
 
@@ -80,7 +80,7 @@ Presently 'sql-server-2014' moniker is on this 'monikerRange'. This situation de
   
 2.  **복제** 폴더를 확장합니다.  
   
-3.  **로컬 구독** 폴더를 마우스 오른쪽 단추로 클릭한 다음 **새 구독**을 클릭합니다.  
+3.  **로컬 구독** 폴더를 마우스 오른쪽 단추로 클릭한 다음 **새 구독** 을 클릭합니다.  
   
 4.  새 구독 마법사의 **게시** 페이지에 있는 **게시자** 드롭다운 목록에서 **\<Find SQL Server Publisher>** 또는 **\<Find Oracle Publisher>** 를 선택합니다.  
   
@@ -97,38 +97,38 @@ Presently 'sql-server-2014' moniker is on this 'monikerRange'. This situation de
   
 1.  게시자에서 [sp_helppublication&#40;Transact-SQL&#41;](../../relational-databases/system-stored-procedures/sp-helppublication-transact-sql.md)을 실행하여 게시에서 끌어오기 구독을 지원하는지 확인합니다.  
   
-    -   결과 집합의 **allow_pull** 값이 **1**이면 게시에서 끌어오기 구독을 지원합니다.  
+    -   결과 집합의 **allow_pull** 값이 **1** 이면 게시에서 끌어오기 구독을 지원합니다.  
   
-    -   **allow_pull**의 값이 **0**이면 **\@property**에 **allow_pull**과 **\@value**에 **true**를 지정하여 [sp_changepublication&#40;Transact-SQL&#41;](../../relational-databases/system-stored-procedures/sp-changepublication-transact-sql.md)을 실행합니다.  
+    -   **allow_pull** 의 값이 **0** 이면 **\@property** 에 **allow_pull** 과 **\@value** 에 **true** 를 지정하여 [sp_changepublication&#40;Transact-SQL&#41;](../../relational-databases/system-stored-procedures/sp-changepublication-transact-sql.md)을 실행합니다.  
   
-2.  구독자에서 [sp_addpullsubscription&#40;Transact-SQL&#41;](../../relational-databases/system-stored-procedures/sp-addpullsubscription-transact-sql.md)을 실행합니다. **\@publisher** 및 **\@publication**을 지정합니다. 구독 업데이트에 대한 자세한 내용은 [트랜잭션 게시에 대해 업데이트할 수 있는 구독 만들기](publish/create-an-updatable-subscription-to-a-transactional-publication.md)을 참조하세요.   
+2.  구독자에서 [sp_addpullsubscription&#40;Transact-SQL&#41;](../../relational-databases/system-stored-procedures/sp-addpullsubscription-transact-sql.md)을 실행합니다. **\@publisher** 및 **\@publication** 을 지정합니다. 구독 업데이트에 대한 자세한 내용은 [트랜잭션 게시에 대해 업데이트할 수 있는 구독 만들기](publish/create-an-updatable-subscription-to-a-transactional-publication.md)을 참조하세요.   
   
 3.  구독자에서 [sp_addpullsubscription_agent &#40;Transact-SQL&#41;](../../relational-databases/system-stored-procedures/sp-addpullsubscription-agent-transact-sql.md)를 실행합니다. 다음을 지정합니다.  
   
     -   **\@publisher**, **\@publisher_db** 및 **\@publication** 매개 변수.  
   
-    -   **\@job_login** 및 **\@job_password**에 대해 구독자에서 배포 에이전트가 실행되는 [!INCLUDE[msCoName](../../includes/msconame-md.md)] Windows 자격 증명.  
+    -   **\@job_login** 및 **\@job_password** 에 대해 구독자에서 배포 에이전트가 실행되는 [!INCLUDE[msCoName](../../includes/msconame-md.md)] Windows 자격 증명.  
   
         > [!NOTE]  
-        >  Windows 통합 인증을 사용하여 만든 연결은 항상 **\@job_login** 및 **\@job_password**로 지정한 Windows 자격 증명만 사용합니다. 배포 에이전트는 항상 Windows 통합 인증을 사용하여 구독자에 대한 로컬 연결을 만듭니다. 기본적으로 에이전트는 Windows 통합 인증을 사용하여 배포자에 연결합니다.  
+        >  Windows 통합 인증을 사용하여 만든 연결은 항상 **\@job_login** 및 **\@job_password** 로 지정한 Windows 자격 증명만 사용합니다. 배포 에이전트는 항상 Windows 통합 인증을 사용하여 구독자에 대한 로컬 연결을 만듭니다. 기본적으로 에이전트는 Windows 통합 인증을 사용하여 배포자에 연결합니다.  
   
-    -   (옵션) SQL Server 인증을 사용하여 배포자에 연결해야 하는 경우 **\@distributor_security_mode**에 **0** 값과 **\@distributor_login** 및 **\@distributor_password**에 SQL Server 로그인 정보 지정.  
+    -   (옵션) SQL Server 인증을 사용하여 배포자에 연결해야 하는 경우 **\@distributor_security_mode** 에 **0** 값과 **\@distributor_login** 및 **\@distributor_password** 에 SQL Server 로그인 정보 지정.  
   
     -   이 구독에 대한 배포 에이전트 작업 일정. 자세한 내용은 [Specify Synchronization Schedules](../../relational-databases/replication/specify-synchronization-schedules.md)을 참조하세요.  
   
-4.  게시자에서 [sp_addsubscription&#40;Transact-SQL&#41;](../../relational-databases/system-stored-procedures/sp-addsubscription-transact-sql.md)을 실행하여 끌어오기 구독을 등록합니다. **\@publication**, **\@subscriber** 및 **\@destination_db**를 지정합니다. **\@subscription_type**의 값을 **pull**로 지정합니다.  
+4.  게시자에서 [sp_addsubscription&#40;Transact-SQL&#41;](../../relational-databases/system-stored-procedures/sp-addsubscription-transact-sql.md)을 실행하여 끌어오기 구독을 등록합니다. **\@publication**, **\@subscriber** 및 **\@destination_db** 를 지정합니다. **\@subscription_type** 의 값을 **pull** 로 지정합니다.  
   
 #### <a name="to-create-a-pull-subscription-to-a-merge-publication"></a>병합 게시에 끌어오기 구독을 만들려면  
   
 1.  게시자에서 [sp_helpmergepublication&#40;Transact-SQL&#41;](../../relational-databases/system-stored-procedures/sp-helpmergepublication-transact-sql.md)을 실행하여 게시에서 끌어오기 구독을 지원하는지 확인합니다.  
   
-    -   결과 집합의 **allow_pull** 값이 **1**이면 게시에서 끌어오기 구독을 지원합니다.  
+    -   결과 집합의 **allow_pull** 값이 **1** 이면 게시에서 끌어오기 구독을 지원합니다.  
   
-    -   **allow_pull**의 값이 **0**이면 **\@property**에 **allow_pull**과 **\@value**에 **true**를 지정하여 [sp_changemergepublication &#40;Transact-SQL&#41;](../../relational-databases/system-stored-procedures/sp-changemergepublication-transact-sql.md)을 실행합니다.  
+    -   **allow_pull** 의 값이 **0** 이면 **\@property** 에 **allow_pull** 과 **\@value** 에 **true** 를 지정하여 [sp_changemergepublication &#40;Transact-SQL&#41;](../../relational-databases/system-stored-procedures/sp-changemergepublication-transact-sql.md)을 실행합니다.  
   
 2.  구독자에서 [sp_addmergepullsubscription&#40;Transact-SQL&#41;](../../relational-databases/system-stored-procedures/sp-addmergepullsubscription-transact-sql.md)을 실행합니다. **\@publisher**, **\@publisher_db**, **\@publication** 및 다음 매개 변수를 지정합니다.  
   
-    -   **\@subscriber_type** - 클라이언트 구독에 **local**을 지정하고 서버 구독에 **global**을 지정합니다.  
+    -   **\@subscriber_type** - 클라이언트 구독에 **local** 을 지정하고 서버 구독에 **global** 을 지정합니다.  
   
     -   **\@subscription_priority** - 구독의 우선 순위를 지정합니다(**0.00** ~ **99.99**). 이 지정은 서버 구독에만 필요합니다.  
   
@@ -138,18 +138,18 @@ Presently 'sql-server-2014' moniker is on this 'monikerRange'. This situation de
   
     -   **\@publisher**, **\@publisher_db**, **\@publication**.  
   
-    -   **\@job_login** 및 **\@job_password**에 대해 구독자에서 병합 에이전트가 실행되는 Windows 자격 증명.  
+    -   **\@job_login** 및 **\@job_password** 에 대해 구독자에서 병합 에이전트가 실행되는 Windows 자격 증명.  
   
         > [!NOTE]  
-        >  Windows 통합 인증을 사용하여 만든 연결은 항상 **\@job_login** 및 **\@job_password**로 지정한 Windows 자격 증명만 사용합니다. 병합 에이전트는 항상 Windows 통합 인증을 사용하여 구독자에 대한 로컬 연결을 만듭니다. 기본적으로 에이전트는 Windows 통합 인증을 사용하여 배포자 및 게시자에 연결합니다.  
+        >  Windows 통합 인증을 사용하여 만든 연결은 항상 **\@job_login** 및 **\@job_password** 로 지정한 Windows 자격 증명만 사용합니다. 병합 에이전트는 항상 Windows 통합 인증을 사용하여 구독자에 대한 로컬 연결을 만듭니다. 기본적으로 에이전트는 Windows 통합 인증을 사용하여 배포자 및 게시자에 연결합니다.  
   
-    -   (옵션) 배포자에 연결할 때 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 인증을 사용해야 하는 경우 **\@distributor_security_mode**에 **0** 값과 **\@distributor_login** 및 **\@distributor_password**에 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 로그인 정보 지정.  
+    -   (옵션) 배포자에 연결할 때 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 인증을 사용해야 하는 경우 **\@distributor_security_mode** 에 **0** 값과 **\@distributor_login** 및 **\@distributor_password** 에 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 로그인 정보 지정.  
   
-    -   (옵션) 게시자에 연결할 때 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 인증을 사용해야 하는 경우 **\@publisher_security_mode**에 **0** 값과 **\@publisher_login** 및 **\@publisher_password**에 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 로그인 정보 지정.  
+    -   (옵션) 게시자에 연결할 때 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 인증을 사용해야 하는 경우 **\@publisher_security_mode** 에 **0** 값과 **\@publisher_login** 및 **\@publisher_password** 에 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 로그인 정보 지정.  
   
     -   이 구독에 대한 병합 에이전트 작업 일정. 자세한 내용은 [트랜잭션 게시에 대해 업데이트할 수 있는 구독 만들기](publish/create-an-updatable-subscription-to-a-transactional-publication.md)을 참조하세요.  
   
-4.  게시자에서 [sp_addmergesubscription&#40;Transact-SQL&#41;](../../relational-databases/system-stored-procedures/sp-addmergesubscription-transact-sql.md)을 실행합니다. **\@publication**, **\@subscriber**, **\@subscriber_db**와 **\@subscription_type**에 대해 **pull** 값을 지정합니다. 끌어오기 구독이 등록됩니다.  
+4.  게시자에서 [sp_addmergesubscription&#40;Transact-SQL&#41;](../../relational-databases/system-stored-procedures/sp-addmergesubscription-transact-sql.md)을 실행합니다. **\@publication**, **\@subscriber**, **\@subscriber_db** 와 **\@subscription_type** 에 대해 **pull** 값을 지정합니다. 끌어오기 구독이 등록됩니다.  
   
 ###  <a name="examples-transact-sql"></a><a name="TsqlExample"></a> 예(Transact-SQL)  
  다음은 트랜잭션 게시에 끌어오기 구독을 만드는 예입니다. 구독자에서 첫 번째 일괄 처리가 실행되고 두 번째 일괄 처리는 게시자에서 실행됩니다. 로그인 및 암호 값은 sqlcmd 스크립팅 변수를 사용하여 런타임에 제공됩니다.  
@@ -280,7 +280,7 @@ GO
   
 2.  1단계에서 만든 게시자 연결을 사용하여 <xref:Microsoft.SqlServer.Replication.TransPublication> 클래스의 인스턴스를 만듭니다. <xref:Microsoft.SqlServer.Replication.Publication.Name%2A>, <xref:Microsoft.SqlServer.Replication.Publication.DatabaseName%2A> 및 <xref:Microsoft.SqlServer.Replication.ReplicationObject.ConnectionContext%2A>를 지정합니다.  
   
-3.  <xref:Microsoft.SqlServer.Replication.ReplicationObject.LoadProperties%2A> 메서드를 호출합니다. 이 메서드가 **false**를 반환하는 경우 2단계에서 지정한 속성이 올바르지 않거나 서버에 게시가 없는 것입니다.  
+3.  <xref:Microsoft.SqlServer.Replication.ReplicationObject.LoadProperties%2A> 메서드를 호출합니다. 이 메서드가 **false** 를 반환하는 경우 2단계에서 지정한 속성이 올바르지 않거나 서버에 게시가 없는 것입니다.  
   
 4.  <xref:Microsoft.SqlServer.Replication.Publication.Attributes%2A> 속성과 <xref:Microsoft.SqlServer.Replication.PublicationAttributes.AllowPull> 사이에서 비트 논리 AND(Visual C#의 **&** 및 Visual Basic의 **And**)를 수행합니다. 결과가 <xref:Microsoft.SqlServer.Replication.PublicationAttributes.None>이면 <xref:Microsoft.SqlServer.Replication.Publication.Attributes%2A> 와 **|** 속성과 **Or** 및 Visual Basic의 <xref:Microsoft.SqlServer.Replication.Publication.Attributes%2A> 를 지정하고 <xref:Microsoft.SqlServer.Replication.PublicationAttributes.AllowPull>를 참조하세요. 그런 다음 <xref:Microsoft.SqlServer.Replication.ReplicationObject.CommitPropertyChanges%2A> 를 호출하여 끌어오기 구독을 설정합니다.  
   
@@ -322,7 +322,7 @@ GO
   
 2.  1단계에서 만든 게시자 연결을 사용하여 <xref:Microsoft.SqlServer.Replication.MergePublication> 클래스의 인스턴스를 만듭니다. <xref:Microsoft.SqlServer.Replication.Publication.Name%2A>, <xref:Microsoft.SqlServer.Replication.Publication.DatabaseName%2A>및 <xref:Microsoft.SqlServer.Replication.ReplicationObject.ConnectionContext%2A>를 지정합니다.  
   
-3.  <xref:Microsoft.SqlServer.Replication.ReplicationObject.LoadProperties%2A> 메서드를 호출합니다. 이 메서드가 **false**를 반환하는 경우 2단계에서 지정한 속성이 올바르지 않거나 서버에 게시가 없는 것입니다.  
+3.  <xref:Microsoft.SqlServer.Replication.ReplicationObject.LoadProperties%2A> 메서드를 호출합니다. 이 메서드가 **false** 를 반환하는 경우 2단계에서 지정한 속성이 올바르지 않거나 서버에 게시가 없는 것입니다.  
   
 4.  <xref:Microsoft.SqlServer.Replication.Publication.Attributes%2A> 속성과 <xref:Microsoft.SqlServer.Replication.PublicationAttributes.AllowPull> 사이에서 비트 논리 AND(Visual C#의 **&** 및 Visual Basic의 **And**)를 수행합니다. 결과가 <xref:Microsoft.SqlServer.Replication.PublicationAttributes.None>이면 <xref:Microsoft.SqlServer.Replication.Publication.Attributes%2A> 와 **|** 속성과 **Or** 및 Visual Basic의 <xref:Microsoft.SqlServer.Replication.Publication.Attributes%2A> 를 지정하고 <xref:Microsoft.SqlServer.Replication.PublicationAttributes.AllowPull>를 참조하세요. 그런 다음 <xref:Microsoft.SqlServer.Replication.ReplicationObject.CommitPropertyChanges%2A> 를 호출하여 끌어오기 구독을 설정합니다.  
   

@@ -33,13 +33,13 @@ helpviewer_keywords:
 ms.assetid: 12be2923-7289-4150-b497-f17e76a50b2e
 author: pmasl
 ms.author: umajay
-monikerRange: '>=aps-pdw-2016||=azuresqldb-current||=azure-sqldw-latest||>=sql-server-2016||=sqlallproducts-allversions||>=sql-server-linux-2017||=azuresqldb-mi-current'
-ms.openlocfilehash: ce8d8e4d5eee23d1bfc4530a76553598e79efd54
-ms.sourcegitcommit: 2f868a77903c1f1c4cecf4ea1c181deee12d5b15
+monikerRange: '>=aps-pdw-2016||=azuresqldb-current||=azure-sqldw-latest||>=sql-server-2016||>=sql-server-linux-2017||=azuresqldb-mi-current'
+ms.openlocfilehash: c0d83ada5889c27e960c8ab798c3784d2095a818
+ms.sourcegitcommit: 1a544cf4dd2720b124c3697d1e62ae7741db757c
 ms.translationtype: HT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 10/02/2020
-ms.locfileid: "91670435"
+ms.lasthandoff: 12/14/2020
+ms.locfileid: "97480524"
 ---
 # <a name="dbcc-show_statistics-transact-sql"></a>DBCC SHOW_STATISTICS(Transact-SQL)
 
@@ -94,8 +94,8 @@ DBCC SHOW_STATISTICS ( table_name , target )
  표시할 통계가 들어 있는 테이블의 이름입니다. 테이블은 외부 테이블일 수 없습니다.  
   
  *대상*  
- 통계 정보를 표시할 인덱스, 통계 또는 열의 이름입니다. *대상*은 대괄호, 작은 따옴표, 큰 따옴표 또는 따옴표 없음으로 묶입니다. *target*이 테이블 또는 인덱싱된 뷰의 기존 인덱스 또는 통계 이름인 경우 이 대상에 대한 통계 정보가 반환됩니다. *target*이 기존 열의 이름이고 이 열에 자동으로 생성된 통계가 있는 경우 자동 생성된 통계에 대한 정보가 반환되며, 열 대상에 자동으로 생성된 통계가 없는 경우에는 오류 메시지 2767이 반환됩니다.  
- [!INCLUDE[ssSDW](../../includes/sssdw-md.md)] 및 [!INCLUDE[ssPDW](../../includes/sspdw-md.md)]에서 *target*은 열 이름이 될 수 없습니다.  
+ 통계 정보를 표시할 인덱스, 통계 또는 열의 이름입니다. *대상* 은 대괄호, 작은 따옴표, 큰 따옴표 또는 따옴표 없음으로 묶입니다. *target* 이 테이블 또는 인덱싱된 뷰의 기존 인덱스 또는 통계 이름인 경우 이 대상에 대한 통계 정보가 반환됩니다. *target* 이 기존 열의 이름이고 이 열에 자동으로 생성된 통계가 있는 경우 자동 생성된 통계에 대한 정보가 반환되며, 열 대상에 자동으로 생성된 통계가 없는 경우에는 오류 메시지 2767이 반환됩니다.  
+ [!INCLUDE[ssSDW](../../includes/sssdw-md.md)] 및 [!INCLUDE[ssPDW](../../includes/sspdw-md.md)]에서 *target* 은 열 이름이 될 수 없습니다.  
   
  NO_INFOMSGS  
  심각도가 0에서 10 사이인 모든 정보 메시지를 표시하지 않습니다.  
@@ -117,7 +117,7 @@ DBCC SHOW_STATISTICS ( table_name , target )
 |단계|히스토그램의 총 단계 수입니다. 각 단계의 범위는 열 값에서 상한 열 값까지입니다. 히스토그램 단계는 통계의 첫 번째 키 열에 정의됩니다. 최대 단계 수는 200개입니다.|  
 |밀도|히스토그램 경계 값을 제외하고 통계 개체의 첫 번째 키 열에 있는 모든 값에 대해 1/ *고유 값* 으로 계산됩니다. 이 밀도 값은 쿼리 최적화 프로그램에서 사용되지 않으며 [!INCLUDE[ssKatmai](../../includes/sskatmai-md.md)] 이전 버전과의 호환성을 위해 표시됩니다.|  
 |평균 키 길이|통계 개체의 키 열에 있는 모든 값에 대한 값당 평균 바이트 수입니다.|  
-|문자열 인덱스|'예'는 통계 개체에 LIKE 연산자를 사용하는 쿼리 조건자(예: `WHERE ProductName LIKE '%Bike'`)의 카디널리티 예상치 정확도를 높이기 위한 문자열 요약 통계가 있음을 나타냅니다. 문자열 요약 통계는 히스토그램과는 별도로 저장되며 통계 개체에서 **char**, **varchar**, **nchar**, **nvarchar**, **varchar(max)** , **nvarchar(max)** , **text**또는 **ntext**형식인 첫 번째 키 열에 생성됩니다.|  
+|문자열 인덱스|'예'는 통계 개체에 LIKE 연산자를 사용하는 쿼리 조건자(예: `WHERE ProductName LIKE '%Bike'`)의 카디널리티 예상치 정확도를 높이기 위한 문자열 요약 통계가 있음을 나타냅니다. 문자열 요약 통계는 히스토그램과는 별도로 저장되며 통계 개체에서 **char**, **varchar**, **nchar**, **nvarchar**, **varchar(max)** , **nvarchar(max)** , **text** 또는 **ntext** 형식인 첫 번째 키 열에 생성됩니다.|  
 |필터 식|통계 개체에 포함된 테이블 행의 하위 집합에 대한 조건자입니다. NULL = 필터링되지 않은 통계입니다. 필터링된 조건자에 대한 자세한 내용은 [필터링된 인덱스 만들기](../../relational-databases/indexes/create-filtered-indexes.md)를 참조하세요. 필터링된 통계에 대한 자세한 내용은 [통계](../../relational-databases/statistics/statistics.md)를 참조하세요.|  
 |필터링되지 않은 행|필터 식을 적용하기 전 테이블에 있는 전체 행 수입니다. 필터 식이 NULL이면 필터링되지 않은 행과 행이 동일합니다.|  
 |지속된 샘플 비율|샘플링 비율을 명시적으로 지정하지 않은 통계 업데이트에 사용되는 샘플 비율을 유지합니다. 값이 0이면 이 통계에 대해 지속 된 샘플 백분율이 설정되지 않습니다.<br /><br /> **적용 대상:** [!INCLUDE[ssSQL15](../../includes/sssql15-md.md)] SP1 CU4| 
@@ -126,7 +126,7 @@ DBCC SHOW_STATISTICS ( table_name , target )
   
 |열 이름|Description|  
 |-----------------|-----------------|  
-|모든 밀도|밀도는 1/ *고유 값*입니다. 결과에는 통계 개체에 있는 각 열 접두사의 밀도가 한 행씩 표시됩니다. 고유 값은 행별 및 열 접두사별 열 값의 고유한 목록입니다. 예를 들어 통계 개체가 키 열 (A, B, C)를 포함하는 경우 결과에서 밀도는 이러한 각 열 접두사의 고유 값 목록인 (A), (A,B) 및 (A, B, C)로 보고됩니다. 접두사 (A, B, C)를 사용하면 이러한 각 목록은 다음과 같은 고유 값 목록입니다. (3, 5, 6), (4, 4, 6), (4, 5, 6), (4, 5, 7). 접두사 (A, B)를 사용하면 동일한 열 값은 고유 값 목록 (3, 5), (4, 4) 및 (4, 5)를 가집니다.|  
+|모든 밀도|밀도는 1/ *고유 값* 입니다. 결과에는 통계 개체에 있는 각 열 접두사의 밀도가 한 행씩 표시됩니다. 고유 값은 행별 및 열 접두사별 열 값의 고유한 목록입니다. 예를 들어 통계 개체가 키 열 (A, B, C)를 포함하는 경우 결과에서 밀도는 이러한 각 열 접두사의 고유 값 목록인 (A), (A,B) 및 (A, B, C)로 보고됩니다. 접두사 (A, B, C)를 사용하면 이러한 각 목록은 다음과 같은 고유 값 목록입니다. (3, 5, 6), (4, 4, 6), (4, 5, 6), (4, 5, 7). 접두사 (A, B)를 사용하면 동일한 열 값은 고유 값 목록 (3, 5), (4, 4) 및 (4, 5)를 가집니다.|  
 |평균 길이|열 접두사의 열 값 목록을 저장하기 위한 평균 길이(바이트)입니다. 예를 들어 목록 (3, 5, 6)의 각 값에 4바이트가 필요한 경우 길이는 12바이트입니다.|  
 |열|모든 밀도 및 평균 길이가 표시되는 접두사의 열 이름입니다.|  
   

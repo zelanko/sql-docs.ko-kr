@@ -11,13 +11,13 @@ ms.topic: conceptual
 ms.assetid: c39f03a7-e223-4fd7-bd30-142e28f51654
 author: MightyPen
 ms.author: genemi
-monikerRange: =azuresqldb-current||>=sql-server-2016||=sqlallproducts-allversions||>=sql-server-linux-2017||=azuresqldb-mi-current
-ms.openlocfilehash: f5617201ce5cfb5dd5f341bcb1264ed250109a64
-ms.sourcegitcommit: 4d370399f6f142e25075b3714e5c2ce056b1bfd0
+monikerRange: =azuresqldb-current||>=sql-server-2016||>=sql-server-linux-2017||=azuresqldb-mi-current
+ms.openlocfilehash: 608419ef77ab11f18274bb3c00ebb66b365448e4
+ms.sourcegitcommit: 1a544cf4dd2720b124c3697d1e62ae7741db757c
 ms.translationtype: HT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 10/09/2020
-ms.locfileid: "91867730"
+ms.lasthandoff: 12/14/2020
+ms.locfileid: "97480094"
 ---
 # <a name="unsupported-sql-server-features-for-in-memory-oltp"></a>메모리 내 OLTP에 대해 지원되지 않는 SQL Server 기능
 [!INCLUDE [SQL Server Azure SQL Database](../../includes/applies-to-version/sql-asdb.md)]
@@ -54,7 +54,7 @@ ms.locfileid: "91867730"
 
 |데이터베이스|허용됨|Description|  
 |---------------|-------------|-----------------|  
-| 사용자 데이터베이스, **모델** 및 **msdb**. | 예 | 대부분의 경우 데이터베이스 간 쿼리 및 트랜잭션은 지원되지 *않습니다*.<br /><br />메모리 최적화 테이블이나 고유하게 컴파일된 저장 프로시저를 사용하는 쿼리는 다른 데이터베이스에 액세스할 수 없습니다. 이 제한 사항은 쿼리뿐 아니라 트랜잭션에도 적용됩니다.<br /><br />예외적으로 시스템 데이터베이스인 **tempdb** 및 **master**에는 액세스할 수 있습니다. 단, **master** 데이터베이스는 읽기 전용으로만 액세스할 수 있습니다. |
+| 사용자 데이터베이스, **모델** 및 **msdb**. | 예 | 대부분의 경우 데이터베이스 간 쿼리 및 트랜잭션은 지원되지 *않습니다*.<br /><br />메모리 최적화 테이블이나 고유하게 컴파일된 저장 프로시저를 사용하는 쿼리는 다른 데이터베이스에 액세스할 수 없습니다. 이 제한 사항은 쿼리뿐 아니라 트랜잭션에도 적용됩니다.<br /><br />예외적으로 시스템 데이터베이스인 **tempdb** 및 **master** 에는 액세스할 수 있습니다. 단, **master** 데이터베이스는 읽기 전용으로만 액세스할 수 있습니다. |
 | **리소스** 데이터베이스, **tempdb** | 예 | 메모리 내 OLTP 개체와 관련된 트랜잭션에서는 **리소스** 및 **tempdb** 시스템 데이터베이스를 추가 제한 없이 사용할 수 있습니다.
 ||||
 
@@ -64,8 +64,8 @@ ms.locfileid: "91867730"
   
 - 메모리 최적화 테이블에 액세스하는 쿼리의 키 집합 및 동적 커서. 이러한 커서는 정적 및 읽기 전용으로 성능이 저하됩니다.  
   
-- **MERGE INTO** _target_(여기서 *target*은 메모리 최적화 테이블)은 사용할 수 없습니다.
-    - **MERGE USING** _source_는 메모리 최적화 테이블에서 지원됩니다.  
+- **MERGE INTO** _target_(여기서 *target* 은 메모리 최적화 테이블)은 사용할 수 없습니다.
+    - **MERGE USING** _source_ 는 메모리 최적화 테이블에서 지원됩니다.  
   
 - ROWVERSION(TIMESTAMP) 데이터 형식은 지원되지 않습니다. 자세한 내용은 [FROM&#40;Transact-SQL&#41;](../../t-sql/queries/from-transact-sql.md)을 참조하세요.
   
@@ -79,7 +79,7 @@ ms.locfileid: "91867730"
     - PBM의 방지 및 로그 전용 모드는 지원되지 않습니다. 서버에 이러한 정책이 있으면 메모리 내 OLTP DDL이 성공적으로 실행되지 않을 수 있습니다. 요청 시 및 예약 시 모드는 지원됩니다.  
 
 - 메모리 내 OLTP에서는 데이터베이스 포함([포함된 데이터베이스](../../relational-databases/databases/contained-databases.md))이 지원되지 않습니다.
-    - 포함된 데이터베이스 인증이 지원됩니다. 그러나 모든 메모리 내 OLTP 개체는 DMV(동적 관리 뷰) **dm_db_uncontained_entities**에 포함 위반으로 표시됩니다.
+    - 포함된 데이터베이스 인증이 지원됩니다. 그러나 모든 메모리 내 OLTP 개체는 DMV(동적 관리 뷰) **dm_db_uncontained_entities** 에 포함 위반으로 표시됩니다.
 
 ## <a name="recently-added-supports"></a>최근 추가된 지원
 

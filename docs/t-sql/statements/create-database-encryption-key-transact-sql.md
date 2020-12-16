@@ -28,17 +28,17 @@ helpviewer_keywords:
 ms.assetid: 2ee95a32-5140-41bd-9ab3-a947b9990688
 author: VanMSFT
 ms.author: vanto
-monikerRange: '>=aps-pdw-2016||>=sql-server-2016||=sqlallproducts-allversions||>=sql-server-linux-2017||=azuresqldb-mi-current||=azure-sqldw-latest'
-ms.openlocfilehash: e3ed7051503f4e4242cf75d22cca2fd5017f5c55
-ms.sourcegitcommit: 894c1a23e922dc29b82c1d2c34c7b0ff28b38654
+monikerRange: '>=aps-pdw-2016||>=sql-server-2016||>=sql-server-linux-2017||=azuresqldb-mi-current'
+ms.openlocfilehash: c6fa73ff61c166bed70b941c944a85d24cce8ec5
+ms.sourcegitcommit: 1a544cf4dd2720b124c3697d1e62ae7741db757c
 ms.translationtype: HT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 10/30/2020
-ms.locfileid: "93067417"
+ms.lasthandoff: 12/14/2020
+ms.locfileid: "97478554"
 ---
 # <a name="create-database-encryption-key-transact-sql"></a>CREATE DATABASE ENCRYPTION KEY(Transact-SQL)
 
-[!INCLUDE [sql-asdbmi-asa-pdw](../../includes/applies-to-version/sql-asdbmi-asa-pdw.md)]
+[!INCLUDE [sql-asdbmi-pdw](../../includes/applies-to-version/sql-asdbmi-pdw.md)]
 
  데이터베이스를 명시적으로 암호화하는 데 사용되는 암호화 키를 만듭니다. TDE(투명한 데이터 암호화)에 대한 자세한 내용은 [Transparent Data Encryption &#40;TDE&#41;](../../relational-databases/security/encryption/transparent-data-encryption.md)를 참조하십시오.  
   
@@ -59,18 +59,15 @@ CREATE DATABASE ENCRYPTION KEY
 [ ; ]  
 ```  
   
-> [!Note]
-> [!INCLUDE [Synapse preview note](../../includes/synapse-preview-note.md)]
-   
+  
 ```syntaxsql
--- Syntax for Azure Synapse Analytics and Parallel Data Warehouse  
+-- Syntax for Parallel Data Warehouse  
 
 CREATE DATABASE ENCRYPTION KEY  
        WITH ALGORITHM = { AES_128 | AES_192 | AES_256 | TRIPLE_DES_3KEY }  
    ENCRYPTION BY SERVER CERTIFICATE Encryptor_Name   
 [ ; ]  
 ```  
-[!INCLUDE[synapse-analytics-od-unsupported-syntax](../../includes/synapse-analytics-od-unsupported-syntax.md)]
 
 [!INCLUDE[sql-server-tsql-previous-offline-documentation](../../includes/sql-server-tsql-previous-offline-documentation.md)]
 
@@ -79,7 +76,7 @@ CREATE DATABASE ENCRYPTION KEY
 WITH ALGORITHM = { AES_128 \| AES_192 \| AES_256 \| TRIPLE_DES_3KEY  }  
 암호화 키에 사용되는 암호화 알고리즘을 지정합니다.
 
-> [!NOTE]
+> [!WARNING]
 > SQL Server 2016부터는 AES_128, AES_192 및 AES_256 이외의 모든 알고리즘을 지원하지 않습니다. 오래된 알고리즘을 사용하려면(권장하지 않음) 데이터베이스 호환성 수준을 120 이하로 설정해야 합니다.  
   
 ENCRYPTION BY SERVER CERTIFICATE Encryptor_Name  
@@ -89,7 +86,7 @@ ENCRYPTION BY SERVER ASYMMETRIC KEY Encryptor_Name
 데이터베이스 암호화 키를 암호화하는 데 사용되는 비대칭 키의 이름을 지정합니다. 비대칭 키로 데이터베이스 암호화 키를 암호화하려면 비대칭 키가 확장 가능 키 관리 공급자에 있어야 합니다.  
   
 ## <a name="remarks"></a>설명  
-데이터베이스 암호화 키가 있어야 TDE( *Transparent Database Encryption* )를 사용하여 데이터베이스를 암호화할 수 있습니다. 데이터베이스가 명시적으로 암호화되면 특수 코드의 수정 없이 전체 데이터베이스가 파일 수준에서 암호화됩니다. 데이터베이스 암호화 키를 암호화하는 데 사용되는 인증서 또는 비대칭 키는 master 시스템 데이터베이스에 있어야 합니다.  
+데이터베이스 암호화 키가 있어야 TDE(*Transparent Database Encryption*)를 사용하여 데이터베이스를 암호화할 수 있습니다. 데이터베이스가 명시적으로 암호화되면 특수 코드의 수정 없이 전체 데이터베이스가 파일 수준에서 암호화됩니다. 데이터베이스 암호화 키를 암호화하는 데 사용되는 인증서 또는 비대칭 키는 master 시스템 데이터베이스에 있어야 합니다.  
   
 데이터베이스 암호화 문은 사용자 데이터베이스에서만 사용할 수 있습니다.  
   

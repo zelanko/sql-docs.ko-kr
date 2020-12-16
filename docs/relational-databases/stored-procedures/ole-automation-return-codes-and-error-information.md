@@ -14,17 +14,17 @@ helpviewer_keywords:
 ms.assetid: 9696fb05-e9e8-4836-b359-d4de0be0eeb2
 author: stevestein
 ms.author: sstein
-monikerRange: '>=aps-pdw-2016||=azuresqldb-current||=azure-sqldw-latest||>=sql-server-2016||=sqlallproducts-allversions||>=sql-server-linux-2017||=azuresqldb-mi-current'
-ms.openlocfilehash: a810d032a2668e217d6776bb3fbab7fe40b79e91
-ms.sourcegitcommit: 75f767c7b1ead31f33a870fddab6bef52f99906b
+monikerRange: '>=aps-pdw-2016||=azuresqldb-current||=azure-sqldw-latest||>=sql-server-2016||>=sql-server-linux-2017||=azuresqldb-mi-current'
+ms.openlocfilehash: ef7b62123195fbc514350e2e600c3e5c1e5f88b1
+ms.sourcegitcommit: 1a544cf4dd2720b124c3697d1e62ae7741db757c
 ms.translationtype: HT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 07/28/2020
-ms.locfileid: "87332575"
+ms.lasthandoff: 12/14/2020
+ms.locfileid: "97479144"
 ---
 # <a name="ole-automation-return-codes-and-error-information"></a>OLE Automation 반환 코드 및 오류 정보
 [!INCLUDE[SQL Server Azure SQL Database Synapse Analytics PDW ](../../includes/applies-to-version/sql-asdb-asdbmi-asa-pdw.md)]
-  OLE 자동화 시스템 저장 프로시저는 기본 OLE 자동화 작업에 의해 반환되는 HRESULT를 **int** 반환 코드로 반환합니다. HRESULT 값이 0이면 성공을 나타냅니다. 0이 아닌 HRESULT는 0x800*nnnnn*과 같은 16진수 형태의 OLE 오류 코드이고, 저장 프로시저 반환 코드에서 **int** 값으로 반환된 경우에는 HRESULT의 형태가 214*nnnnnnn*입니다.  
+  OLE 자동화 시스템 저장 프로시저는 기본 OLE 자동화 작업에 의해 반환되는 HRESULT를 **int** 반환 코드로 반환합니다. HRESULT 값이 0이면 성공을 나타냅니다. 0이 아닌 HRESULT는 0x800 *nnnnn* 과 같은 16진수 형태의 OLE 오류 코드이고, 저장 프로시저 반환 코드에서 **int** 값으로 반환된 경우에는 HRESULT의 형태가 214 *nnnnnnn* 입니다.  
   
  예를 들어 잘못된 개체 이름(SQLDMO.Xyzzy)을 sp_OACreate에 전달하면 프로시저는 16진수로 0x800401f3인 2147221005의 **int** HRESULT를 반환합니다.  
   
@@ -78,7 +78,7 @@ SELECT @BinVariable AS BinaryValue,
 GO  
 ```  
   
- 다음 예제 **sp_displayoaerrorinfo** 저장 프로시저를 사용하면 OLE Automation 프로시저 중 하나가 0이 아닌 HRESULT 반환 코드를 반환할 때 OLE Automation 오류 정보를 표시할 수 있습니다. 다음 예제 저장 프로시저는 **HexToChar**를 사용합니다.  
+ 다음 예제 **sp_displayoaerrorinfo** 저장 프로시저를 사용하면 OLE Automation 프로시저 중 하나가 0이 아닌 HRESULT 반환 코드를 반환할 때 OLE Automation 오류 정보를 표시할 수 있습니다. 다음 예제 저장 프로시저는 **HexToChar** 를 사용합니다.  
   
 ```  
 CREATE PROCEDURE dbo.sp_DisplayOAErrorInfo  

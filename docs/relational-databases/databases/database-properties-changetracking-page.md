@@ -13,13 +13,13 @@ f1_keywords:
 ms.assetid: 9b929640-bc62-449b-9b06-b5a77b8cf372
 author: stevestein
 ms.author: sstein
-monikerRange: =azuresqldb-current||>=sql-server-2016||=sqlallproducts-allversions||>=sql-server-linux-2017||=azuresqldb-mi-current
-ms.openlocfilehash: 7129094815add7f3f49aaa5e99b353b3f656a848
-ms.sourcegitcommit: cfa04a73b26312bf18d8f6296891679166e2754d
+monikerRange: =azuresqldb-current||>=sql-server-2016||>=sql-server-linux-2017||=azuresqldb-mi-current
+ms.openlocfilehash: cfe6b46da2124235f4f2e62e70e13ec486f1b6c0
+ms.sourcegitcommit: 1a544cf4dd2720b124c3697d1e62ae7741db757c
 ms.translationtype: HT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 10/19/2020
-ms.locfileid: "92193023"
+ms.lasthandoff: 12/14/2020
+ms.locfileid: "97480304"
 ---
 # <a name="database-properties-changetracking-page"></a>데이터베이스 속성(변경 내용 추적 페이지)
 [!INCLUDE [SQL Server Azure SQL Database](../../includes/applies-to-version/sql-asdb.md)]
@@ -36,12 +36,12 @@ ms.locfileid: "92193023"
  [ALTER DATABASE](../../t-sql/statements/alter-database-transact-sql.md)를 사용하여 변경 내용 추적을 구성할 수도 있습니다.  
   
  **보존 기간**  
- 데이터베이스에 변경 내용 추적 정보를 보존하는 최소 기간을 지정합니다. 데이터는 **자동 정리** 값이 **True**인 경우에만 제거됩니다.  
+ 데이터베이스에 변경 내용 추적 정보를 보존하는 최소 기간을 지정합니다. 데이터는 **자동 정리** 값이 **True** 인 경우에만 제거됩니다.  
   
  기본값은 2입니다.  
   
  **보존 기간 단위**  
- 보존 기간 값의 단위를 지정합니다. **일**, **시간**또는 **분**을 선택할 수 있습니다. 기본값은 **일**입니다.  
+ 보존 기간 값의 단위를 지정합니다. **일**, **시간** 또는 **분** 을 선택할 수 있습니다. 기본값은 **일** 입니다.  
   
  최소 보존 기간은 1분입니다. 최대 보존 기간은 없습니다.  
   

@@ -14,13 +14,13 @@ helpviewer_keywords:
 ms.assetid: 759fab42-66c7-4541-a7a3-bb6fb868493c
 author: MashaMSFT
 ms.author: mathoma
-monikerRange: =azuresqldb-mi-current||>=sql-server-2016||=sqlallproducts-allversions
-ms.openlocfilehash: 3117e274c146413dcf8b973f054c7d0b1865e7de
-ms.sourcegitcommit: da88320c474c1c9124574f90d549c50ee3387b4c
+monikerRange: =azuresqldb-mi-current||>=sql-server-2016
+ms.openlocfilehash: 4a51a126cb16aed9159177b60472c4e5262eb2ad
+ms.sourcegitcommit: 1a544cf4dd2720b124c3697d1e62ae7741db757c
 ms.translationtype: HT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 07/01/2020
-ms.locfileid: "85767603"
+ms.lasthandoff: 12/14/2020
+ms.locfileid: "97479714"
 ---
 # <a name="modify-snapshot-initialization-options-for-sql-replication"></a>SQL 복제에 대한 스냅샷 초기화 옵션 수정 
 [!INCLUDE [SQL Server SQL MI](../../includes/applies-to-version/sql-asdbmi.md)]
@@ -32,12 +32,12 @@ ms.locfileid: "85767603"
   
 ### <a name="to-specify-snapshot-format"></a>스냅샷 형식을 지정하려면  
   
-1.  **게시 속성 - \<Publication>** 대화 상자의 **스냅샷** 페이지에서 **네이티브 SQL Server - 모든 구독자는 SQL Server를 실행하는 서버여야 합니다** 또는 **문자 - 게시자 또는 구독자가 SQL Server를 실행하지 않는 경우 필요합니다**를 선택합니다.  
+1.  **게시 속성 - \<Publication>** 대화 상자의 **스냅샷** 페이지에서 **네이티브 SQL Server - 모든 구독자는 SQL Server를 실행하는 서버여야 합니다** 또는 **문자 - 게시자 또는 구독자가 SQL Server를 실행하지 않는 경우 필요합니다** 를 선택합니다.  
   
     > [!NOTE]  
     >  이 게시가 SQL Server Compact 데이터베이스 또는 SQL Server 이외의 데이터베이스에 대한 구독을 지원해야 하는 경우가 아니면 네이티브 형식을 선택하는 것이 좋습니다.  
   
-2.  **확인**을 선택합니다.   
+2.  **확인** 을 선택합니다.   
 
 ## <a name="snapshot-folder-locations"></a>스냅샷 폴더 위치
 
@@ -49,7 +49,7 @@ ms.locfileid: "85767603"
 ### <a name="to-modify-the-default-snapshot-location"></a>기본 스냅샷 위치를 수정하려면  
   
 1.  **배포자 속성 - \<Distributor>** 대화 상자의 **게시자** 페이지에서 기본 스냅샷 위치를 변경하려는 게시자의 속성 단추( **...** )를 클릭합니다.    
-2.  **게시자 속성 - \<Publisher>** 대화 상자에서 **기본 스냅샷 폴더 속성**에 대한 값을 입력합니다.  
+2.  **게시자 속성 - \<Publisher>** 대화 상자에서 **기본 스냅샷 폴더 속성** 에 대한 값을 입력합니다.  
   
     > [!NOTE]  
     >  스냅샷 에이전트는 지정한 디렉터리에 대해 쓰기 권한이 있어야 하며 배포 에이전트 또는 병합 에이전트는 읽기 권한이 있어야 합니다. 끌어오기 구독을 사용하는 경우 공유 디렉터리를 \\\computername\snapshot과 같이 UNC(범용 명명 규칙) 경로로 지정해야 합니다. 자세한 내용은 [스냅샷 폴더 보안 설정](../../relational-databases/replication/security/secure-the-snapshot-folder.md)을 참조하세요.    
@@ -72,20 +72,20 @@ ms.locfileid: "85767603"
 #### <a name="use-sql-server-management-studio"></a>SQL Server Management Studio 사용
 1.  **게시 속성 - \<Publication>** 대화 상자의 **스냅샷** 페이지에서 다음을 수행합니다.  
   
-    1.  **다음 폴더에 파일 보관**을 선택한 다음 **찾아보기** 를 클릭하여 디렉터리로 이동하거나 스냅샷 파일을 저장할 디렉터리 경로를 입력합니다.  
+    1.  **다음 폴더에 파일 보관** 을 선택한 다음 **찾아보기** 를 클릭하여 디렉터리로 이동하거나 스냅샷 파일을 저장할 디렉터리 경로를 입력합니다.  
   
         > [!NOTE]  
         >  스냅샷 에이전트는 지정한 디렉터리에 대해 쓰기 권한이 있어야 하며 배포 에이전트 또는 병합 에이전트는 읽기 권한이 있어야 합니다. 끌어오기 구독을 사용하는 경우 공유 디렉터리를 \\\computername\snapshot과 같이 UNC(범용 명명 규칙) 경로로 지정해야 합니다. 자세한 내용은 [스냅샷 폴더 보안 설정](../../relational-databases/replication/security/secure-the-snapshot-folder.md)을 참조하세요.  
   
     2.  두 위치 모두에 스냅샷 파일을 쓸 필요가 없으면 **기본 폴더에 파일 보관** 의 선택을 취소합니다.  
   
-     스냅샷 파일을 압축하려면 **이 폴더에 있는 스냅샷 파일 압축**을 선택합니다. 압축은 일반적으로 느린 대역폭 연결에 사용되며 CD-ROM 등의 이동식 미디어와 같은 대체 스냅샷 위치로 사용됩니다.  
+     스냅샷 파일을 압축하려면 **이 폴더에 있는 스냅샷 파일 압축** 을 선택합니다. 압축은 일반적으로 느린 대역폭 연결에 사용되며 CD-ROM 등의 이동식 미디어와 같은 대체 스냅샷 위치로 사용됩니다.  
   
-2.  **확인**을 선택합니다.  
+2.  **확인** 을 선택합니다.  
   
 #### <a name="use-transact-sql"></a>Transact-SQL 사용 
 
-[스냅샷 속성 구성&#40;복제 Transact-SQL 프로그래밍&#41;](../../relational-databases/replication/publish/configure-snapshot-properties-replication-transact-sql-programming.md) 시 **snapshot_in_defaultfolder**의 값을 false로 지정합니다. 
+[스냅샷 속성 구성&#40;복제 Transact-SQL 프로그래밍&#41;](../../relational-databases/replication/publish/configure-snapshot-properties-replication-transact-sql-programming.md) 시 **snapshot_in_defaultfolder** 의 값을 false로 지정합니다. 
 
 ## <a name="compressed-snapshots"></a>압축 스냅샷
   스냅샷을 느린 네트워크를 통해 전송하거나 이동식 미디어에 저장할 때 압축하지 않은 스냅샷이 너무 커서 해당 미디어에 모두 저장할 수 없는 경우 스냅샷 파일을 압축하는 것이 좋습니다. 위와 같은 상황에서는 스냅샷 파일을 압축하는 것이 유용하지만 압축으로 인해 스냅샷 생성과 적용에 더 많은 시간이 걸립니다.  
@@ -100,7 +100,7 @@ ms.locfileid: "85767603"
 ### <a name="use-sql-server-management-studio"></a>SQL Server Management Studio 사용
 1.  **게시 속성 - \<Publication>** 대화 상자의 **스냅샷** 페이지에서 다음을 수행합니다.  
   
-    1.  **다음 폴더에 파일 보관**을 선택한 다음 **찾아보기** 를 클릭하여 디렉터리로 이동하거나 스냅샷 파일을 저장할 디렉터리 경로를 입력합니다.  
+    1.  **다음 폴더에 파일 보관** 을 선택한 다음 **찾아보기** 를 클릭하여 디렉터리로 이동하거나 스냅샷 파일을 저장할 디렉터리 경로를 입력합니다.  
   
         > [!NOTE]  
         >  스냅샷 에이전트는 지정한 디렉터리에 대해 쓰기 권한이 있어야 하며 배포 에이전트 또는 병합 에이전트는 읽기 권한이 있어야 합니다. 끌어오기 구독을 사용하는 경우 공유 디렉터리를 \\\computername\snapshot과 같이 UNC(범용 명명 규칙) 경로로 지정해야 합니다. 자세한 내용은 [스냅샷 폴더 보안 설정](security/secure-the-snapshot-folder.md)을 참조하세요.  
@@ -110,12 +110,12 @@ ms.locfileid: "85767603"
         > [!NOTE]  
         >  이 확인란을 선택하면 기본 폴더에 저장된 파일은 압축되지 않습니다. 압축 파일은 이전 단계에서 지정한 대체 위치에만 저장할 수 있습니다.  
   
-2.  **이 폴더에 있는 스냅샷 파일 압축**을 선택합니다.    
-3.  **확인**을 선택합니다.   
+2.  **이 폴더에 있는 스냅샷 파일 압축** 을 선택합니다.    
+3.  **확인** 을 선택합니다.   
 
 ### <a name="use-transact-sql"></a>Transact-SQL 사용
 
-[스냅샷 속성 구성](../../relational-databases/replication/publish/configure-snapshot-properties-replication-transact-sql-programming.md) 시 **compress_snapshot** 값을 **True**로 지정합니다. 
+[스냅샷 속성 구성](../../relational-databases/replication/publish/configure-snapshot-properties-replication-transact-sql-programming.md) 시 **compress_snapshot** 값을 **True** 로 지정합니다. 
 
 ## <a name="execute-scripts-before-and-after-snapshot-is-applied"></a>스냅샷 적용 전후에 스크립트 실행
 스냅샷 적용 전후에 구독자에서 스크립트가 실행되도록 지정할 수 있습니다. 각 구독자에서 로그인과 스키마(개체 소유자)를 만드는 작업 등 다양한 작업에 스크립트를 사용할 수 있습니다.  

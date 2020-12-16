@@ -19,13 +19,13 @@ helpviewer_keywords:
 ms.assetid: 83afbf74-fd50-4c39-831c-b1f473a50620
 author: stevestein
 ms.author: sstein
-monikerRange: =azuresqldb-current||>=sql-server-2016||=sqlallproducts-allversions||>=sql-server-linux-2017||=azuresqldb-mi-current
-ms.openlocfilehash: 5761ee136c23cd82296f154e7e87d4756410c55a
-ms.sourcegitcommit: 6f49804b863fed44968ea5829e2c26edc5988468
+monikerRange: =azuresqldb-current||>=sql-server-2016||>=sql-server-linux-2017||=azuresqldb-mi-current
+ms.openlocfilehash: 60c06966368720b4d996c32be221cf37d805a381
+ms.sourcegitcommit: 1a544cf4dd2720b124c3697d1e62ae7741db757c
 ms.translationtype: HT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 08/05/2020
-ms.locfileid: "87807516"
+ms.lasthandoff: 12/14/2020
+ms.locfileid: "97478354"
 ---
 # <a name="shrink-a-database"></a>데이터베이스 축소
 [!INCLUDE [SQL Server Azure SQL Database](../../includes/applies-to-version/sql-asdb.md)]
@@ -82,11 +82,11 @@ ms.locfileid: "87807516"
   
 #### <a name="to-shrink-a-database"></a>데이터베이스를 축소하려면  
   
-1.  **개체 탐색기**에서 [!INCLUDE[ssDEnoversion](../../includes/ssdenoversion-md.md)]의 인스턴스에 연결한 다음 해당 인스턴스를 확장합니다.  
+1.  **개체 탐색기** 에서 [!INCLUDE[ssDEnoversion](../../includes/ssdenoversion-md.md)]의 인스턴스에 연결한 다음 해당 인스턴스를 확장합니다.  
   
-2.  **데이터베이스**를 확장한 다음 축소할 데이터베이스를 마우스 오른쪽 단추로 클릭합니다.  
+2.  **데이터베이스** 를 확장한 다음 축소할 데이터베이스를 마우스 오른쪽 단추로 클릭합니다.  
   
-3.  **태스크**, **축소**를 차례로 가리킨 다음 **데이터베이스**를 클릭합니다.  
+3.  **태스크**, **축소** 를 차례로 가리킨 다음 **데이터베이스** 를 클릭합니다.  
   
      **Database**  
      선택한 데이터베이스의 이름을 표시합니다.  
@@ -103,7 +103,7 @@ ms.locfileid: "87807516"
      **축소 후 파일에 남는 최대 여유 공간**  
      데이터베이스를 축소한 후 데이터베이스 파일에 남겨둘 여유 공간의 최대 비율을 입력합니다. 허용되는 값은 0에서 99까지입니다.  
   
-4.  **확인**을 클릭합니다.  
+4.  **확인** 을 클릭합니다.  
 
 ##  <a name="using-transact-sql"></a><a name="TsqlProcedure"></a> Transact-SQL 사용  
   
@@ -111,9 +111,9 @@ ms.locfileid: "87807516"
   
 1.  [!INCLUDE[ssDE](../../includes/ssde-md.md)]에 연결합니다.  
   
-2.  표준 도구 모음에서 **새 쿼리**를 클릭합니다.  
+2.  표준 도구 모음에서 **새 쿼리** 를 클릭합니다.  
   
-3.  다음 예를 복사하여 쿼리 창에 붙여 넣고 **실행**을 클릭합니다. 이 예에서는 [DBCC SHRINKDATABASE](../../t-sql/database-console-commands/dbcc-shrinkdatabase-transact-sql.md) 를 사용하여 `UserDB` 데이터베이스의 데이터 및 로그 파일 크기를 줄이고 데이터베이스에 `10` 의 여유 공간이 남도록 합니다.  
+3.  다음 예를 복사하여 쿼리 창에 붙여 넣고 **실행** 을 클릭합니다. 이 예에서는 [DBCC SHRINKDATABASE](../../t-sql/database-console-commands/dbcc-shrinkdatabase-transact-sql.md) 를 사용하여 `UserDB` 데이터베이스의 데이터 및 로그 파일 크기를 줄이고 데이터베이스에 `10` 의 여유 공간이 남도록 합니다.  
   
  [!code-sql[DBCC#DBCC_SHRINKDB1](../../relational-databases/databases/codesnippet/tsql/shrink-a-database_1.sql)]  
   

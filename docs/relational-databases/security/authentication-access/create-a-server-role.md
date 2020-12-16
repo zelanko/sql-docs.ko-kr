@@ -17,13 +17,13 @@ helpviewer_keywords:
 ms.assetid: 74f19992-8082-4ed7-92a1-04fe676ee82d
 author: VanMSFT
 ms.author: vanto
-monikerRange: '>=aps-pdw-2016||>=sql-server-2016||=sqlallproducts-allversions||>=sql-server-linux-2017||=azuresqldb-mi-current'
-ms.openlocfilehash: 5f90781fd5e293c4de5821fc89588b9b1e38ac0b
-ms.sourcegitcommit: 22f687e9e8b4f37b877b2d19c5090dade8fa26d0
+monikerRange: '>=aps-pdw-2016||>=sql-server-2016||>=sql-server-linux-2017||=azuresqldb-mi-current'
+ms.openlocfilehash: 5de0726185f6ba294c1527fbb709ba3f883b70d5
+ms.sourcegitcommit: 1a544cf4dd2720b124c3697d1e62ae7741db757c
 ms.translationtype: HT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 06/24/2020
-ms.locfileid: "85334269"
+ms.lasthandoff: 12/14/2020
+ms.locfileid: "97479354"
 ---
 # <a name="create-a-server-role"></a>서버 역할 만들기
 [!INCLUDE[appliesto-ss-xxxx-xxxx-pdw-md](../../../includes/appliesto-ss-xxxx-xxxx-pdw-md.md)]
@@ -54,7 +54,7 @@ ms.locfileid: "85334269"
   
 -   CREATE SERVER ROLE 권한 또는 sysadmin 고정 서버 역할의 멤버 자격이 필요합니다.  
   
--   로그인의 경우 *server_principal* 에 대한 IMPERSONATE이 필요하고 *server_principal*로 사용되는 서버 역할의 경우 ALTER 권한이 필요합니다. 또는 server_principal로 사용되는 Windows 그룹의 멤버 자격이 필요합니다.  
+-   로그인의 경우 *server_principal* 에 대한 IMPERSONATE이 필요하고 *server_principal* 로 사용되는 서버 역할의 경우 ALTER 권한이 필요합니다. 또는 server_principal로 사용되는 Windows 그룹의 멤버 자격이 필요합니다.  
   
 -   AUTHORIZATION 옵션을 사용하여 서버 역할 소유권을 할당할 경우 다음 사용 권한도 필요합니다.  
   
@@ -76,7 +76,7 @@ ms.locfileid: "85334269"
   
 5.  **소유자** 상자에 새 역할을 소유할 서버 보안 주체의 이름을 입력합니다. 또는 줄임표 **(...)** 를 클릭하여 **서버 로그인 또는 역할 선택** 대화 상자를 엽니다.  
   
-6.  **보안 개체**에서 서버 수준 보안 개체를 하나 이상 선택합니다. 보안 개체를 선택하면 해당 보안 개체에 대한 사용 권한을 이 서버 역할에 부여하거나 거부할 수 있습니다.  
+6.  **보안 개체** 에서 서버 수준 보안 개체를 하나 이상 선택합니다. 보안 개체를 선택하면 해당 보안 개체에 대한 사용 권한을 이 서버 역할에 부여하거나 거부할 수 있습니다.  
   
 7.  **사용 권한: 명시적** 상자에서 이 서버 역할에 선택한 보안 개체에 대한 부여 권한, 권한 부여 권한 또는 거부 권한을 부여하는 확인란을 선택합니다. 선택한 보안 개체 중 일부에 대해 사용 권한을 부여하거나 거부할 수 없는 경우 해당 사용 권한은 부분적으로 선택된 것으로 표시됩니다.  
   
@@ -90,11 +90,11 @@ ms.locfileid: "85334269"
   
 #### <a name="to-create-a-new-server-role"></a>새 서버 역할을 만들려면  
   
-1.  **개체 탐색기**에서 [!INCLUDE[ssDE](../../../includes/ssde-md.md)]인스턴스에 연결합니다.  
+1.  **개체 탐색기** 에서 [!INCLUDE[ssDE](../../../includes/ssde-md.md)]인스턴스에 연결합니다.  
   
-2.  표준 도구 모음에서 **새 쿼리**를 클릭합니다.  
+2.  표준 도구 모음에서 **새 쿼리** 를 클릭합니다.  
   
-3.  다음 예를 복사하여 쿼리 창에 붙여 넣고 **실행**을 클릭합니다.  
+3.  다음 예를 복사하여 쿼리 창에 붙여 넣고 **실행** 을 클릭합니다.  
   
     ```  
     --Creates the server role auditors that is owned the securityadmin fixed server role.  

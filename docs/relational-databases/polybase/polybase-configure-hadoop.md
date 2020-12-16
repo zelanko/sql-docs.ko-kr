@@ -8,14 +8,14 @@ ms.topic: conceptual
 author: MikeRayMSFT
 ms.author: mikeray
 ms.reviewer: ''
-monikerRange: '>= sql-server-2016 || =sqlallproducts-allversions'
+monikerRange: '>= sql-server-2016'
 ms.custom: seo-dt-2019
-ms.openlocfilehash: b51b896610ae74b5d3e30cc2a9e078611202fe17
-ms.sourcegitcommit: f7ac1976d4bfa224332edd9ef2f4377a4d55a2c9
+ms.openlocfilehash: c42f763957fd7245bff60293b790ab11a833c3ce
+ms.sourcegitcommit: 1a544cf4dd2720b124c3697d1e62ae7741db757c
 ms.translationtype: HT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 07/02/2020
-ms.locfileid: "85882612"
+ms.lasthandoff: 12/14/2020
+ms.locfileid: "97480014"
 ---
 # <a name="configure-polybase-to-access-external-data-in-hadoop"></a>Hadoop의 외부 데이터에 액세스하도록 PolyBase 구성
 
@@ -28,7 +28,7 @@ ms.locfileid: "85882612"
 - PolyBase를 설치하지 않은 경우 [PolyBase 설치](polybase-installation.md)를 참조하세요. 설치 문서에서는 필수 구성 요소를 설명합니다.
 
 <!--SQL Server 2019-->
-::: moniker range=">= sql-server-ver15 || =sqlallproducts-allversions"
+::: moniker range=">= sql-server-ver15 "
 
 - SQL Server 2019부터 [PolyBase 기능도 사용하도록 설정](polybase-installation.md#enable)해야 합니다.
 
@@ -60,7 +60,7 @@ ms.locfileid: "85882612"
    GO
    ```  
 
-2. **services.msc**를 사용하여 SQL Server를 다시 시작해야 합니다. SQL Server를 다시 시작하면 다음 서비스도 다시 시작됩니다.  
+2. **services.msc** 를 사용하여 SQL Server를 다시 시작해야 합니다. SQL Server를 다시 시작하면 다음 서비스도 다시 시작됩니다.  
 
    - SQL Server PolyBase 데이터 이동 서비스  
    - SQL Server PolyBase 엔진  
@@ -79,7 +79,7 @@ ms.locfileid: "85882612"
 
 1. Hadoop 컴퓨터의 Hadoop 구성 디렉터리에서 동일한 파일을 찾습니다. 이 파일에서 구성 키 yarn.application.classpath의 값을 찾아서 복사합니다.  
   
-1. SQL Server 머신의 **yarn-site.xml 파일**에서 **yarn.application.classpath** 속성을 찾습니다. Hadoop 컴퓨터의 값을 value 요소에 붙여넣습니다.  
+1. SQL Server 머신의 **yarn-site.xml 파일** 에서 **yarn.application.classpath** 속성을 찾습니다. Hadoop 컴퓨터의 값을 value 요소에 붙여넣습니다.  
   
 1. 모든 CDH 5.X 버전에서 mapreduce.application.classpath 구성 매개 변수를 yarn-site.xml 파일의 끝이나 mapred-site.xml 파일에 추가해야 합니다. HortonWorks는 yarn.application.classpath 구성 내에 이러한 구성을 포함하고 있습니다. 예제는 [PolyBase 구성](../../relational-databases/polybase/polybase-configuration.md)을 참조하세요.
 
@@ -226,7 +226,7 @@ WHERE T2.YearMeasured = 2009 and T2.Speed > 40;
 
 ## <a name="view-polybase-objects-in-ssms"></a>SSMS에서 PolyBase 개체 보기  
 
-SSMS에서 외부 테이블은 별도 폴더인 **외부 테이블**에 표시됩니다. 외부 데이터 원본 및 외부 파일 형식은 **외부 리소스**의 하위 폴더에 있습니다.  
+SSMS에서 외부 테이블은 별도 폴더인 **외부 테이블** 에 표시됩니다. 외부 데이터 원본 및 외부 파일 형식은 **외부 리소스** 의 하위 폴더에 있습니다.  
   
 ![SSMS의 PolyBase 개체](media/polybase-management.png)  
 

@@ -22,13 +22,13 @@ helpviewer_keywords:
 ms.assetid: 0ec0e5cf-e115-4be9-a0db-e65837d6fa45
 author: markingmyname
 ms.author: maghan
-monikerRange: =azuresqldb-current||=azure-sqldw-latest||>=sql-server-2016||=sqlallproducts-allversions||>=sql-server-linux-2017||=azuresqldb-mi-current
-ms.openlocfilehash: d16268b8843bd8b6d52e004f5e5334cd7f81d70f
-ms.sourcegitcommit: dd36d1cbe32cd5a65c6638e8f252b0bd8145e165
+monikerRange: =azuresqldb-current||=azure-sqldw-latest||>=sql-server-2016||>=sql-server-linux-2017||=azuresqldb-mi-current
+ms.openlocfilehash: cb4128e5eb962956dbfa0ecab28e943eedeff5b7
+ms.sourcegitcommit: 1a544cf4dd2720b124c3697d1e62ae7741db757c
 ms.translationtype: HT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 09/08/2020
-ms.locfileid: "89548949"
+ms.lasthandoff: 12/14/2020
+ms.locfileid: "97478514"
 ---
 # <a name="set-language-transact-sql"></a>SET LANGUAGE(Transact-SQL)
 [!INCLUDE [sql-asdb-asdbmi-asa-pdw](../../includes/applies-to-version/sql-asdb-asdbmi-asa.md)]
@@ -49,7 +49,7 @@ SET LANGUAGE { [ N ] 'language' | @language_var }
 
 ## <a name="arguments"></a>인수
  [**N**] **'** _language_ **'**  |  **@** _language\_var_  
- [sys.syslanguages](../../relational-databases/system-compatibility-views/sys-syslanguages-transact-sql.md)에 저장된 언어의 이름입니다. 유니코드나 유니코드로 변환된 DBCS 중 하나가 될 수 있습니다. 유니코드로 언어를 지정하려면 **N'** _language_ **'** 를 사용합니다. 변수로 지정할 경우 변수는 **sysname**이어야 합니다.  
+ [sys.syslanguages](../../relational-databases/system-compatibility-views/sys-syslanguages-transact-sql.md)에 저장된 언어의 이름입니다. 유니코드나 유니코드로 변환된 DBCS 중 하나가 될 수 있습니다. 유니코드로 언어를 지정하려면 **N'** _language_ **'** 를 사용합니다. 변수로 지정할 경우 변수는 **sysname** 이어야 합니다.  
   
 ## <a name="remarks"></a>설명  
  SET LANGUAGE 옵션은 실행 시나 런타임에 설정되며, 구문 분석 시에는 설정되지 않습니다.  

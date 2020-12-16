@@ -13,13 +13,13 @@ f1_keywords:
 ms.assetid: 0b2e3d4e-03b7-4c31-8f96-48648d750010
 author: MashaMSFT
 ms.author: mathoma
-monikerRange: =azuresqldb-mi-current||>=sql-server-2016||=sqlallproducts-allversions
-ms.openlocfilehash: 8d321f41871469284b3ce8dd3402cc16eee385d1
-ms.sourcegitcommit: e700497f962e4c2274df16d9e651059b42ff1a10
+monikerRange: =azuresqldb-mi-current||>=sql-server-2016
+ms.openlocfilehash: fb42b1c8f14880c0831d153d4507adc4da80065d
+ms.sourcegitcommit: 1a544cf4dd2720b124c3697d1e62ae7741db757c
 ms.translationtype: HT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 08/17/2020
-ms.locfileid: "88493887"
+ms.lasthandoff: 12/14/2020
+ms.locfileid: "97479864"
 ---
 # <a name="publisher-information-publications"></a>게시자 정보, 게시
 [!INCLUDE [SQL Server SQL MI](../../includes/applies-to-version/sql-asdbmi.md)]
@@ -47,12 +47,12 @@ ms.locfileid: "88493887"
   
 -   실패한 명령 다시 시도 중  
   
--   확인  
+-   정상  
   
  상태 값 **성능 심각** 은 트랜잭션 구독과 병합 구독에 적용되며 트랜잭션 구독의 경우 임계값이 설정된 경우에만 표시할 수 있습니다. 성능 측정 및 임계값 설정에 대한 자세한 내용은 [복제 모니터로 성능 모니터링](../../relational-databases/replication/monitor/monitor-performance-with-replication-monitor.md) 및 [복제 모니터에 임계값 및 경고 설정](../../relational-databases/replication/monitor/set-thresholds-and-warnings-in-replication-monitor.md)을 참조하세요.  
   
  **게시**  
- *PublicationDatabaseName: PublicationName*형식의 각 게시의 이름입니다.  
+ *PublicationDatabaseName: PublicationName* 형식의 각 게시의 이름입니다.  
   
  **구독**  
  각 게시에 대한 구독 수입니다.  
@@ -69,7 +69,7 @@ ms.locfileid: "88493887"
  **현재 평균 성능** 및 **현재 가장 낮은 성능**  
  [!INCLUDE[msCoName](../../includes/msconame-md.md)] [!INCLUDE[ssVersion2005](../../includes/ssversion2005-md.md)] 이상 버전에만 해당됩니다. 게시에 대한 모든 구독의 평균 성능 등급과 가장 낮은 성능 등급입니다. 등급은 복제 모니터에서 측정한 가장 최근 측정값을 기반으로 하며 이전 구독 성능을 반영하지 않습니다.  
   
- 트랜잭션 복제의 경우 복제 모니터는 성능 임계값이 정의된 게시에 대해서만 값을 표시합니다. 게시에 대해 성능 임계값을 정의하지 않으면 이 열에 **사용 안 함**이 표시됩니다. 병합 복제의 경우 복제 모니터는 같은 유형의 연결(전화 접속 또는 LAN)별로 50개 이상의 변경 사항을 5번 동기화한 후에 값을 표시합니다. 50개 이상의 변경 사항에 대해 동기화가 5번 미만으로 수행되었거나 가장 최근에 동기화가 수행된 변경 사항이 50개 미만인 경우에는 이 열이 비어 있습니다.  
+ 트랜잭션 복제의 경우 복제 모니터는 성능 임계값이 정의된 게시에 대해서만 값을 표시합니다. 게시에 대해 성능 임계값을 정의하지 않으면 이 열에 **사용 안 함** 이 표시됩니다. 병합 복제의 경우 복제 모니터는 같은 유형의 연결(전화 접속 또는 LAN)별로 50개 이상의 변경 사항을 5번 동기화한 후에 값을 표시합니다. 50개 이상의 변경 사항에 대해 동기화가 5번 미만으로 수행되었거나 가장 최근에 동기화가 수행된 변경 사항이 50개 미만인 경우에는 이 열이 비어 있습니다.  
   
  성능 등급은 다음 값 중 하나입니다.  
   

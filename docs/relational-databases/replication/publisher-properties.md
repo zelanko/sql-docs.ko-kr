@@ -16,13 +16,13 @@ f1_keywords:
 ms.assetid: 98df1aea-0406-40bf-a917-4bd80464125c
 author: MashaMSFT
 ms.author: mathoma
-monikerRange: =azuresqldb-mi-current||>=sql-server-2016||=sqlallproducts-allversions
-ms.openlocfilehash: 2af128ab6de902aa7e757cf9d7464c9b743c290b
-ms.sourcegitcommit: da88320c474c1c9124574f90d549c50ee3387b4c
+monikerRange: =azuresqldb-mi-current||>=sql-server-2016
+ms.openlocfilehash: e4de9c722875465bbacfdeda6889955bdc8e063c
+ms.sourcegitcommit: 1a544cf4dd2720b124c3697d1e62ae7741db757c
 ms.translationtype: HT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 07/01/2020
-ms.locfileid: "85717638"
+ms.lasthandoff: 12/14/2020
+ms.locfileid: "97479844"
 ---
 # <a name="sql-server-replication-publisher-properties-dialog-box"></a>SQL Server 복제 게시자 속성 대화 상자 |
 [!INCLUDE [SQL Server SQL MI](../../includes/applies-to-version/sql-asdbmi.md)]
@@ -45,7 +45,7 @@ ms.locfileid: "85717638"
 -   지연 업데이트 구독을 허용하는 트랜잭션 게시에 대한 큐 판독기 에이전트    
 -   Oracle 게시에 대한 스냅샷 에이전트 및 로그 판독기 에이전트  
   
- 이러한 에이전트가 실행되는 **Windows 계정의 컨텍스트를 사용하여 게시자에 연결하거나** SQL Server 인증 [!INCLUDE[msCoName](../../includes/msconame-md.md)] 을 지정한 다음 **로그인**및 **암호** 에 값을 입력하려면 **에이전트 프로세스 계정 가장**을 선택합니다. **에이전트 프로세스 계정 가장**을 선택하는 것이 좋습니다. 에이전트 보안에 대한 자세한 내용은 [복제 에이전트 보안 모델](../../relational-databases/replication/security/replication-agent-security-model.md)을 참조하세요.  
+ 이러한 에이전트가 실행되는 **Windows 계정의 컨텍스트를 사용하여 게시자에 연결하거나** SQL Server 인증 [!INCLUDE[msCoName](../../includes/msconame-md.md)] 을 지정한 다음 **로그인** 및 **암호** 에 값을 입력하려면 **에이전트 프로세스 계정 가장** 을 선택합니다. **에이전트 프로세스 계정 가장** 을 선택하는 것이 좋습니다. 에이전트 보안에 대한 자세한 내용은 [복제 에이전트 보안 모델](../../relational-databases/replication/security/replication-agent-security-model.md)을 참조하세요.  
   
  이러한 에이전트가 실행되는 Windows 계정은 새 게시 마법사에서 지정합니다. 이 계정은 다음 대화 상자에서 변경할 수 있습니다.  
   
@@ -74,7 +74,7 @@ ms.locfileid: "85717638"
  **구독자** 속성 표에서는 이 게시자의 게시에서 데이터를 받도록 설정된 구독자를 표시합니다. 추가 속성을 보고 설정하려면 구독자 옆에 있는 속성 단추 ( **...** )를 클릭합니다.  
   
  **추가**  
- 구독자를 추가하려면 **추가** 를 클릭한 다음 **SQL Server 구독자 추가** 또는 **SQL Server 이외 구독자 추가**를 클릭합니다.  
+ 구독자를 추가하려면 **추가** 를 클릭한 다음 **SQL Server 구독자 추가** 또는 **SQL Server 이외 구독자 추가** 를 클릭합니다.  
   
 ## <a name="see-also"></a>참고 항목  
  [배포자 및 게시자 속성 보기 및 수정](../../relational-databases/replication/view-and-modify-distributor-and-publisher-properties.md)   

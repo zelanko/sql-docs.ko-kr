@@ -22,13 +22,13 @@ helpviewer_keywords:
 ms.assetid: 9d862a90-e6b7-4692-8605-92358dccccdf
 author: MikeRayMSFT
 ms.author: mikeray
-monikerRange: '>=aps-pdw-2016||=azuresqldb-current||=azure-sqldw-latest||>=sql-server-2016||=sqlallproducts-allversions||>=sql-server-linux-2017||=azuresqldb-mi-current'
-ms.openlocfilehash: 05c7ee73b7f37cdc96847f546db11f351b5edd68
-ms.sourcegitcommit: cc23d8646041336d119b74bf239a6ac305ff3d31
+monikerRange: '>=aps-pdw-2016||=azuresqldb-current||=azure-sqldw-latest||>=sql-server-2016||>=sql-server-linux-2017||=azuresqldb-mi-current'
+ms.openlocfilehash: b9b05261fe92be3c7f9805f05ada280ced5a66a0
+ms.sourcegitcommit: 1a544cf4dd2720b124c3697d1e62ae7741db757c
 ms.translationtype: HT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 09/23/2020
-ms.locfileid: "91116163"
+ms.lasthandoff: 12/14/2020
+ms.locfileid: "97478734"
 ---
 # <a name="decimal-and-numeric-transact-sql"></a>decimal 및 numeric(Transact-SQL)
 [!INCLUDE [sql-asdb-asdbmi-asa-pdw](../../includes/applies-to-version/sql-asdb-asdbmi-asa-pdw.md)]
@@ -37,7 +37,7 @@ ms.locfileid: "91116163"
   
 ## <a name="arguments"></a>인수
 **decimal**[ **(** _p_[ **,** _s_] **)** ] 및 **numeric**[ **(** _p_[ **,** _s_] **)** ]  
-고정 전체 자릿수 및 소수 자릿수 값입니다. 최대 전체 자릿수를 사용하는 경우 유효한 값은 - 10^38 + 1부터 10^38 - 1까지입니다. 국제 표준화 기구에서 정한 **decimal**의 동의어는 **dec** 및 **dec(** _p_, _s_ **)** 입니다. **numeric**은 **decimal**과 기능적으로 동일합니다.
+고정 전체 자릿수 및 소수 자릿수 값입니다. 최대 전체 자릿수를 사용하는 경우 유효한 값은 - 10^38 + 1부터 10^38 - 1까지입니다. 국제 표준화 기구에서 정한 **decimal** 의 동의어는 **dec** 및 **dec(** _p_, _s_ **)** 입니다. **numeric** 은 **decimal** 과 기능적으로 동일합니다.
   
 p(전체 자릿수)  
 저장할 최대 총 10진 숫자 수입니다. 이 수에는 소수점 왼쪽과 오른쪽이 둘 다 포함됩니다. 전체 자릿수 값은 1에서 최대 전체 자릿수인 38 사이여야 합니다. 기본 전체 자릿수는 18입니다.
@@ -46,7 +46,7 @@ p(전체 자릿수)
 >  Informatica는 지정된 전체 자릿수 및 소수 자릿수와 상관없이 16 유효 자릿수만 지원합니다.  
   
 *s* (소수 자릿수)  
-소수점 오른쪽에 저장되는 10진 숫자 수입니다. *p*에서 이 숫자를 빼서 소수점 왼쪽의 최대 자릿수가 결정됩니다. 소수 자릿수 값은 0에서 *p* 사이여야 하고 전체 자릿수가 지정된 경우에만 지정합니다. 기본 소수 자릿수는 0이므로, 0 <= *s*\<= *p*입니다. 전체 자릿수에 따라 최대 스토리지 크기가 달라집니다.
+소수점 오른쪽에 저장되는 10진 숫자 수입니다. *p* 에서 이 숫자를 빼서 소수점 왼쪽의 최대 자릿수가 결정됩니다. 소수 자릿수 값은 0에서 *p* 사이여야 하고 전체 자릿수가 지정된 경우에만 지정합니다. 기본 소수 자릿수는 0이므로, 0 <= *s*\<= *p* 입니다. 전체 자릿수에 따라 최대 스토리지 크기가 달라집니다.
   
 |자릿수|스토리지 크기(바이트)|  
 |---|---|
@@ -63,11 +63,11 @@ p(전체 자릿수)
   
 [!INCLUDE[tsql](../../includes/tsql-md.md)] 문에서 소수점이 있는 상수는 필요한 최소 전체 자릿수 및 소수 자릿수를 사용하여 **numeric** 데이터 값으로 자동 변환됩니다. 예를 들어 상수 12.345는 전체 자릿수가 5이고 소수 자릿수가 3인 **numeric** 값으로 변환됩니다.
   
-**decimal** 또는 **numeric**에서 **float** 또는 **real**로 변환할 경우 전체 자릿수가 일부 손실될 수 있습니다. **int**, **smallint**, **tinyint**, **float**, **real**, **money** 또는 **smallmoney**에서 **decimal** 또는 **numeric**으로 변환할 경우 오버플로가 발생할 수 있습니다.
+**decimal** 또는 **numeric** 에서 **float** 또는 **real** 로 변환할 경우 전체 자릿수가 일부 손실될 수 있습니다. **int**, **smallint**, **tinyint**, **float**, **real**, **money** 또는 **smallmoney** 에서 **decimal** 또는 **numeric** 으로 변환할 경우 오버플로가 발생할 수 있습니다.
   
 기본적으로 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]는 숫자를 전체 자릿수 및 소수 자릿수가 낮은 **decimal** 또는 **numeric** 값으로 변환할 때 반올림을 사용합니다. 반대로, SET ARITHABORT 옵션이 ON이면 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]는 오버플로가 발생할 때 오류를 일으킵니다. 전체 자릿수 및 소수 자릿수의 손실만으로는 오류가 발생하지 않습니다.
   
-[!INCLUDE[ssSQL16](../../includes/sssql16-md.md)] 이전에는 **float** 값을 **decimal** 또는 **numeric**로 변환하는 경우 정밀도 값이 17자리로 제한됩니다. 5E-18(과학적 표기법 5E-18 또는 10진 표기법 0.0000000000000000050000000000000005를 사용하여 설정된 경우) 미만의 **float** 값은 0으로 버림됩니다. [!INCLUDE[ssSQL16](../../includes/sssql16-md.md)]부터 더 이상 제한되지 않습니다.
+[!INCLUDE[ssSQL16](../../includes/sssql16-md.md)] 이전에는 **float** 값을 **decimal** 또는 **numeric** 로 변환하는 경우 정밀도 값이 17자리로 제한됩니다. 5E-18(과학적 표기법 5E-18 또는 10진 표기법 0.0000000000000000050000000000000005를 사용하여 설정된 경우) 미만의 **float** 값은 0으로 버림됩니다. [!INCLUDE[ssSQL16](../../includes/sssql16-md.md)]부터 더 이상 제한되지 않습니다.
   
 ## <a name="examples"></a>예  
 다음 예에서는 **decimal** 및 **numeric** 데이터 형식을 사용하여 테이블을 만듭니다.  값은 각 열에 삽입됩니다. 결과는 SELECT 문을 사용하여 반환됩니다.

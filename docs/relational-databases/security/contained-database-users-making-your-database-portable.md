@@ -14,13 +14,13 @@ helpviewer_keywords:
 ms.assetid: e57519bb-e7f4-459b-ba2f-fd42865ca91d
 author: VanMSFT
 ms.author: vanto
-monikerRange: =azuresqldb-current||>=sql-server-2016||=azure-sqldw-latest||=sqlallproducts-allversions||>=sql-server-linux-2017||=azuresqldb-mi-current
-ms.openlocfilehash: decbd12174f6000a44a3cfd95b145c70de10740c
-ms.sourcegitcommit: a5398f107599102af7c8cda815d8e5e9a367ce7e
+monikerRange: =azuresqldb-current||>=sql-server-2016||=azure-sqldw-latest||>=sql-server-linux-2017||=azuresqldb-mi-current
+ms.openlocfilehash: 9215ac429ff45d80a2ba1ea7d913a63ab49e34e7
+ms.sourcegitcommit: 1a544cf4dd2720b124c3697d1e62ae7741db757c
 ms.translationtype: HT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 10/13/2020
-ms.locfileid: "92004664"
+ms.lasthandoff: 12/14/2020
+ms.locfileid: "97480954"
 ---
 # <a name="contained-database-users---making-your-database-portable"></a>포함된 데이터베이스 사용자 - 이식 가능한 데이터베이스 만들기
 
@@ -114,7 +114,7 @@ WHERE name='Test'
   
 - [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]에서 포함된 데이터베이스 사용자는 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]인스턴스에 대해 설정되어야 합니다. 자세한 내용은 [contained database authentication Server Configuration Option](../../database-engine/configure-windows/contained-database-authentication-server-configuration-option.md)을 참조하세요.  
 - 겹치지 않는 이름을 가진 포함된 데이터베이스 사용자와 로그인은 애플리케이션에서 공존할 수 있습니다.  
-- **name1** 이라는 이름으로 마스터 데이터베이스에 로그인하고 **name1**이라는 이름으로 포함된 데이터베이스 사용자를 만들면, 데이터베이스 이름이 연결 문자열에 제공되는 경우, 데이터베이스에 연결할 때 데이터베이스 사용자의 컨텍스트는 로그인 컨텍스트보다 우선하여 선택됩니다. 즉, 포함된 데이터베이스 사용자가 동일한 이름의 로그인보다 우선합니다.  
+- **name1** 이라는 이름으로 마스터 데이터베이스에 로그인하고 **name1** 이라는 이름으로 포함된 데이터베이스 사용자를 만들면, 데이터베이스 이름이 연결 문자열에 제공되는 경우, 데이터베이스에 연결할 때 데이터베이스 사용자의 컨텍스트는 로그인 컨텍스트보다 우선하여 선택됩니다. 즉, 포함된 데이터베이스 사용자가 동일한 이름의 로그인보다 우선합니다.  
 - [!INCLUDE[ssSDS](../../includes/sssds-md.md)] 에서 포함된 데이터베이스 사용자의 이름은 서버 관리자 계정의 이름과 같을 수 없습니다.  
 - [!INCLUDE[ssSDS](../../includes/sssds-md.md)] 서버 관리자 계정은 포함된 데이터베이스 사용자일 수 없습니다. 서버 관리자에는 포함된 데이터베이스 사용자를 만들고 관리하는 데 충분한 권한이 있습니다. 서버 관리자는 사용자 데이터베이스의 포함된 데이터베이스 사용자에게 권한을 부여할 수 있습니다.  
 - 포함된 데이터베이스 사용자가 데이터베이스 수준의 주체이기 때문에, 사용하려는 모든 데이터베이스에 포함된 데이터베이스 사용자를 만들어야 합니다. ID는 데이터베이스에만 한정되며 동일한 서버에 있는 다른 데이터베이스의 동일한 이름과 동일한 암호를 가진 사용자와는 모든 면에서 관련이 없습니다.  

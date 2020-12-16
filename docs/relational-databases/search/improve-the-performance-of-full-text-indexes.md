@@ -17,13 +17,13 @@ ms.assetid: ef39ef1f-f0b7-4582-8e9c-31d4bd0ad35d
 author: pmasl
 ms.author: pelopes
 ms.reviewer: mikeray
-monikerRange: =azuresqldb-current||>=sql-server-2016||=sqlallproducts-allversions||>=sql-server-linux-2017||=azuresqldb-mi-current
-ms.openlocfilehash: 77e6942702594d7c33e3e88ca0d695dda3a59caa
-ms.sourcegitcommit: 4d370399f6f142e25075b3714e5c2ce056b1bfd0
+monikerRange: =azuresqldb-current||>=sql-server-2016||>=sql-server-linux-2017||=azuresqldb-mi-current
+ms.openlocfilehash: 79368864ef41860d725772ee9136bb1e66e82790
+ms.sourcegitcommit: 1a544cf4dd2720b124c3697d1e62ae7741db757c
 ms.translationtype: HT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 10/09/2020
-ms.locfileid: "91868069"
+ms.lasthandoff: 12/14/2020
+ms.locfileid: "97479504"
 ---
 # <a name="improve-the-performance-of-full-text-indexes"></a>전체 텍스트 인덱스 성능 향상
 [!INCLUDE [SQL Server Azure SQL Database](../../includes/applies-to-version/sql-asdb.md)]
@@ -123,9 +123,9 @@ ms.locfileid: "91868069"
   
  다음 표에서는 fdhost.exe의 메모리 요구 사항을 계산하는 방법에 대한 지침을 제공합니다. 이 표의 수식에 사용되는 값은 다음과 같습니다.  
   
--   *F*는 fdhost.exe에 필요한 예상 메모리(MB)입니다.  
+-   *F* 는 fdhost.exe에 필요한 예상 메모리(MB)입니다.  
   
--   *T*는 시스템에서 사용 가능한 실제 총 메모리(MB)입니다.  
+-   *T* 는 시스템에서 사용 가능한 실제 총 메모리(MB)입니다.  
   
 -   *M*,(최적의 **max server memory** 설정)  
   
@@ -137,23 +137,23 @@ ms.locfileid: "91868069"
 |x64|*F* = ‘크롤링 범위 수’ \* 10 \* 8|*M* = *T* - *F* - 500|  
 
 **수식 관련 참고 사항**
-1.  여러 전체 채우기가 진행 중인 경우 *F1*, *F2*와 같이 각 채우기 작업에 대한 fdhost.exe 메모리 요구 사항을 개별적으로 계산합니다. 그런 다음, *M*을 _T_ **-** sigma **(** _F_i **)** 로 계산합니다.  
+1.  여러 전체 채우기가 진행 중인 경우 *F1*, *F2* 와 같이 각 채우기 작업에 대한 fdhost.exe 메모리 요구 사항을 개별적으로 계산합니다. 그런 다음, *M* 을 _T_ **-** sigma **(** _F_i **)** 로 계산합니다.  
 2.  500MB는 시스템의 다른 프로세스에 필요한 예상 메모리 양입니다. 시스템이 추가 작업을 수행 중인 경우 그에 따라 이 값을 늘리십시오.  
 3.  를 참조하세요.*ism_size* 는 x64 플랫폼의 경우 8MB로 가정합니다.  
   
  #### <a name="example-estimate-the-memory-requirements-of-fdhostexe"></a>예제: fdhost.exe에 필요한 예상 메모리  
   
- 이 예제는 8GB RAM과 4개의 듀얼 코어 프로세서가 장착된 64비트 컴퓨터에 해당합니다. 첫 번째 계산에서는 fdhost.exe에 필요한 메모리인*F*를 예측합니다. 탐색 범위 수는 `8`입니다.  
+ 이 예제는 8GB RAM과 4개의 듀얼 코어 프로세서가 장착된 64비트 컴퓨터에 해당합니다. 첫 번째 계산에서는 fdhost.exe에 필요한 메모리인 *F* 를 예측합니다. 탐색 범위 수는 `8`입니다.  
   
  `F = 8*10*8=640`  
   
- 다음 계산에서는 **max server memory**의 최적 값-*M*을 구합니다. 이 시스템에서 사용 가능한 실제 총 메모리(MB)(*T*)는 `8192`입니다.  
+ 다음 계산에서는 **max server memory** 의 최적 값-*M* 을 구합니다. 이 시스템에서 사용 가능한 실제 총 메모리(MB)(*T*)는 `8192`입니다.  
   
  `M = 8192-640-500=7052`  
   
  #### <a name="example-setting-max-server-memory"></a>예제: 최대 서버 메모리 설정  
   
- 이 예제에서는 [sp_configure](../../relational-databases/system-stored-procedures/sp-configure-transact-sql.md) 및 [RECONFIGURE](../../t-sql/language-elements/reconfigure-transact-sql.md) [!INCLUDE[tsql](../../includes/tsql-md.md)] 문을 사용하여 위 예제 `7052`에서 계산된 *M* 값으로 **max server memory**를 설정합니다.  
+ 이 예제에서는 [sp_configure](../../relational-databases/system-stored-procedures/sp-configure-transact-sql.md) 및 [RECONFIGURE](../../t-sql/language-elements/reconfigure-transact-sql.md) [!INCLUDE[tsql](../../includes/tsql-md.md)] 문을 사용하여 위 예제 `7052`에서 계산된 *M* 값으로 **max server memory** 를 설정합니다.  
   
 ```  
 USE master;  
@@ -207,7 +207,7 @@ GO
   
  보안상의 이유로 필터는 필터 데몬 호스트 프로세스에 의해 로드됩니다. 서버 인스턴스는 모든 다중 스레드 필터에 대해 다중 스레드 프로세스를 사용하고 모든 단일 스레드 필터에 대해 단일 스레드 프로세스를 사용합니다. 다중 스레드 필터를 사용하는 문서에 단일 스레드 필터를 사용하는 포함 문서가 있을 경우 전체 텍스트 엔진은 해당 포함 문서에 대해 단일 스레드 프로세스를 시작합니다. 예를 들어 PDF 문서가 포함된 Word 문서가 있을 경우 전체 텍스트 엔진은 Word 콘텐츠에 대해 다중 스레드 프로세스를 사용하고 PDF 콘텐츠에 대해 단일 스레드 프로세스를 시작합니다. 그러나 이러한 환경에서는 단일 스레드 필터가 제대로 작동하지 않을 수 있으며 이로 인해 필터링 프로세스가 불안정해질 수 있습니다. 이러한 포함 작업이 자주 수행되는 특정 환경에서는 불안정화로 인해 해당 프로세스가 충돌할 수 있습니다. 충돌이 발생하면 전체 텍스트 엔진은 실패한 문서(예: 포함된 PDF 콘텐츠가 있는 Word 문서)를 단일 스레드 필터링 프로세스로 모두 다시 라우트합니다. 다시 라우팅 작업이 자주 발생하면 전체 텍스트 인덱싱 프로세스의 성능이 저하됩니다.  
   
-이 문제를 해결하려면 컨테이너 문서(이 예제의 경우 Word 문서)의 필터를 단일 스레드 필터로 표시합니다. 필터를 단일 스레드 필터로 표시하려면 필터의 **ThreadingModel** 레지스트리 값을 **Apartment Threaded**로 설정합니다. 단일 스레드 아파트에 대한 자세한 내용은 [COM 스레딩 모델 이해 및 사용](/previous-versions/ms809971(v=msdn.10))백서를 참조하세요.  
+이 문제를 해결하려면 컨테이너 문서(이 예제의 경우 Word 문서)의 필터를 단일 스레드 필터로 표시합니다. 필터를 단일 스레드 필터로 표시하려면 필터의 **ThreadingModel** 레지스트리 값을 **Apartment Threaded** 로 설정합니다. 단일 스레드 아파트에 대한 자세한 내용은 [COM 스레딩 모델 이해 및 사용](/previous-versions/ms809971(v=msdn.10))백서를 참조하세요.  
   
 ## <a name="see-also"></a>참고 항목  
  [서버 메모리 서버 구성 옵션](../../database-engine/configure-windows/server-memory-server-configuration-options.md)   

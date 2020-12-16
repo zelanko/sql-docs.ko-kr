@@ -17,19 +17,19 @@ helpviewer_keywords:
 ms.assetid: ''
 author: MikeRayMSFT
 ms.author: mikeray
-monikerRange: '>=sql-server-ver15||>=sql-server-linux-ver15||=sqlallproducts-allversions'
-ms.openlocfilehash: 691b3c495db0280b2ae1f50b2d877677c66dc768
-ms.sourcegitcommit: 4d370399f6f142e25075b3714e5c2ce056b1bfd0
+monikerRange: '>=sql-server-ver15||>=sql-server-linux-ver15'
+ms.openlocfilehash: 05a4e96b263c2849e793ccc0056f17893cf00ba0
+ms.sourcegitcommit: 1a544cf4dd2720b124c3697d1e62ae7741db757c
 ms.translationtype: HT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 10/09/2020
-ms.locfileid: "91866561"
+ms.lasthandoff: 12/14/2020
+ms.locfileid: "97480344"
 ---
 # <a name="secondary-to-primary-replica-readwrite-connection-redirection-always-on-availability-groups"></a>보조-주 복제본 읽기/쓰기 연결 리디렉션(Always On 가용성 그룹)
 
 [!INCLUDE[appliesto](../../../includes/applies-to-version/sqlserver2019.md)]
 
-[!INCLUDE[sssqlv15-md](../../../includes/sssqlv15-md.md)] CTP 2.0은 Always On 가용성 그룹에 대해 *보조-주 복제본 읽기/쓰기 연결 리디렉션*을 도입했습니다. 읽기/쓰기 연결 리디렉션은 모든 운영 체제 플랫폼에서 사용할 수 있습니다. 이 기능은 연결 문자열에 지정된 대상 서버에 관계없이, 클라이언트 애플리케이션 연결이 주 복제본으로 전송되도록 합니다. 
+[!INCLUDE[sssqlv15-md](../../../includes/sssqlv15-md.md)] CTP 2.0은 Always On 가용성 그룹에 대해 *보조-주 복제본 읽기/쓰기 연결 리디렉션* 을 도입했습니다. 읽기/쓰기 연결 리디렉션은 모든 운영 체제 플랫폼에서 사용할 수 있습니다. 이 기능은 연결 문자열에 지정된 대상 서버에 관계없이, 클라이언트 애플리케이션 연결이 주 복제본으로 전송되도록 합니다. 
 
 예를 들어 연결 문자열은 보조 복제본을 대상으로 지정할 수 있습니다. AG(가용성 그룹) 복제본 구성 및 연결 문자열의 설정에 따라 연결이 주 복제본으로 자동으로 리디렉션될 수 있습니다. 
 

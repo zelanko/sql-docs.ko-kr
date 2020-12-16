@@ -19,13 +19,13 @@ helpviewer_keywords:
 ms.assetid: 1601e54f-86f0-49e8-b023-87a5d1def033
 author: MashaMSFT
 ms.author: mathoma
-monikerRange: =azuresqldb-mi-current||>=sql-server-2016||=sqlallproducts-allversions
-ms.openlocfilehash: 54cbed8e77fc84e9a54046d925382c774f36110d
-ms.sourcegitcommit: e700497f962e4c2274df16d9e651059b42ff1a10
+monikerRange: =azuresqldb-mi-current||>=sql-server-2016
+ms.openlocfilehash: 12afd6aa70a98ab24008ebe191645c79825692c6
+ms.sourcegitcommit: 1a544cf4dd2720b124c3697d1e62ae7741db757c
 ms.translationtype: HT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 08/17/2020
-ms.locfileid: "88482269"
+ms.lasthandoff: 12/14/2020
+ms.locfileid: "97479544"
 ---
 # <a name="view-and-modify-pull-subscription-properties"></a>끌어오기 구독 속성 보기 및 수정
 [!INCLUDE [SQL Server SQL MI](../../includes/applies-to-version/sql-asdbmi.md)]
@@ -50,9 +50,9 @@ ms.locfileid: "88482269"
   
 2.  **복제** 폴더를 확장한 다음 **로컬 게시** 폴더를 확장합니다.  
   
-3.  해당 게시를 확장하고 구독을 마우스 오른쪽 단추로 클릭한 다음 **속성**을 클릭합니다.  
+3.  해당 게시를 확장하고 구독을 마우스 오른쪽 단추로 클릭한 다음 **속성** 을 클릭합니다.  
   
-4.  속성을 점검한 다음 **확인**을 클릭합니다.  
+4.  속성을 점검한 다음 **확인** 을 클릭합니다.  
 
 #### <a name="to-view-and-modify-pull-subscription-properties-from-the-subscriber-in-management-studio"></a>Management Studio의 구독자에서 끌어오기 구독 속성을 보고 수정하려면  
   
@@ -60,9 +60,9 @@ ms.locfileid: "88482269"
   
 2.  **복제** 폴더를 확장한 다음 **로컬 구독** 폴더를 확장합니다.  
   
-3.  해당 구독을 마우스 오른쪽 단추로 클릭한 다음 **속성**을 클릭합니다.  
+3.  해당 구독을 마우스 오른쪽 단추로 클릭한 다음 **속성** 을 클릭합니다.  
   
-4.  필요한 경우 속성을 수정한 다음 **확인**을 클릭합니다.  
+4.  필요한 경우 속성을 수정한 다음 **확인** 을 클릭합니다.  
   
 #### <a name="to-view-pull-subscription-properties-from-the-publisher-in-replication-monitor"></a>복제 모니터의 게시자에서 끌어오기 구독 속성을 보려면  
   
@@ -70,9 +70,9 @@ ms.locfileid: "88482269"
   
 2.  **모든 구독** 탭을 클릭합니다.  
   
-3.  해당 구독을 마우스 오른쪽 단추로 클릭한 다음 **속성**을 클릭합니다.  
+3.  해당 구독을 마우스 오른쪽 단추로 클릭한 다음 **속성** 을 클릭합니다.  
   
-4.  속성을 점검한 다음 **확인**을 클릭합니다.  
+4.  속성을 점검한 다음 **확인** 을 클릭합니다.  
   
 ##  <a name="using-transact-sql"></a><a name="TsqlProcedure"></a> Transact-SQL 사용  
  끌어오기 구독은 수정할 수 있으며 속성은 복제 저장 프로시저를 사용하여 프로그래밍 방식으로 액세스할 수 있습니다. 사용되는 저장 프로시저는 구독이 속한 게시 유형에 따라 달라집니다.  
@@ -114,7 +114,7 @@ ms.locfileid: "88482269"
   
 2.  게시자에서 [sp_helpsubscription_properties](../../relational-databases/system-stored-procedures/sp-helpsubscription-properties-transact-sql.md)를 실행합니다. 이때 `@publisher`, `@publisher_db`, `@publication`을 지정하고 `@publication_type`에 2 값을 지정합니다.  
   
-3.  게시자에서 [sp_helpmergesubscription](../../relational-databases/system-stored-procedures/sp-helpmergesubscription-transact-sql.md) 을 실행하여 구독 정보를 표시합니다. 특정 구독에 대한 정보를 반환하려면 `@publication`, `@subscriber`을 지정하고 @subscription_type에 **pull**에서 지정해야 합니다.  
+3.  게시자에서 [sp_helpmergesubscription](../../relational-databases/system-stored-procedures/sp-helpmergesubscription-transact-sql.md) 을 실행하여 구독 정보를 표시합니다. 특정 구독에 대한 정보를 반환하려면 `@publication`, `@subscriber`을 지정하고 @subscription_type에 **pull** 에서 지정해야 합니다.  
   
 4.  게시자에서 `@subscriber`를 지정하고 [sp_helpsubscriberinfo](../../relational-databases/system-stored-procedures/sp-helpsubscriberinfo-transact-sql.md)를 실행합니다. 이렇게 하면 구독자에 대한 정보가 표시됩니다.  
   
@@ -135,7 +135,7 @@ ms.locfileid: "88482269"
   
 4.  <xref:Microsoft.SqlServer.Replication.ReplicationObject.ConnectionContext%2A> 속성에 대해 1단계에서 만든 연결을 설정합니다.  
   
-5.  <xref:Microsoft.SqlServer.Replication.ReplicationObject.LoadProperties%2A> 메서드를 호출하여 개체 속성을 가져옵니다. 이 메서드가 **false**를 반환하는 경우 3단계에서 구독 속성이 잘못 정의되었거나 서버에 구독이 없는 것입니다.  
+5.  <xref:Microsoft.SqlServer.Replication.ReplicationObject.LoadProperties%2A> 메서드를 호출하여 개체 속성을 가져옵니다. 이 메서드가 **false** 를 반환하는 경우 3단계에서 구독 속성이 잘못 정의되었거나 서버에 구독이 없는 것입니다.  
   
 6.  (옵션) 속성을 변경하려면 설정할 수 있는 <xref:Microsoft.SqlServer.Replication.TransPullSubscription> 속성 중 하나에 대해 새 값을 설정한 다음 <xref:Microsoft.SqlServer.Replication.ReplicationObject.CommitPropertyChanges%2A> 메서드를 호출합니다.  
   
@@ -153,7 +153,7 @@ ms.locfileid: "88482269"
   
 4.  <xref:Microsoft.SqlServer.Replication.ReplicationObject.ConnectionContext%2A> 속성에 대해 1단계에서 만든 연결을 설정합니다.  
   
-5.  <xref:Microsoft.SqlServer.Replication.ReplicationObject.LoadProperties%2A> 메서드를 호출하여 개체 속성을 가져옵니다. 이 메서드가 **false**를 반환하는 경우 3단계에서 구독 속성이 잘못 정의되었거나 서버에 구독이 없는 것입니다.  
+5.  <xref:Microsoft.SqlServer.Replication.ReplicationObject.LoadProperties%2A> 메서드를 호출하여 개체 속성을 가져옵니다. 이 메서드가 **false** 를 반환하는 경우 3단계에서 구독 속성이 잘못 정의되었거나 서버에 구독이 없는 것입니다.  
   
 6.  (옵션) 속성을 변경하려면 설정할 수 있는 <xref:Microsoft.SqlServer.Replication.MergePullSubscription> 속성 중 하나에 대해 새 값을 설정한 다음 <xref:Microsoft.SqlServer.Replication.ReplicationObject.CommitPropertyChanges%2A> 메서드를 호출합니다.  
   

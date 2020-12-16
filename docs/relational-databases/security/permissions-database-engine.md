@@ -19,13 +19,13 @@ helpviewer_keywords:
 ms.assetid: f28e3dea-24e6-4a81-877b-02ec4c7e36b9
 author: AndreasWolter
 ms.author: anwolter
-monikerRange: '>=aps-pdw-2016||=azuresqldb-current||=azure-sqldw-latest||>=sql-server-2016||=sqlallproducts-allversions||>=sql-server-linux-2017||=azuresqldb-mi-current'
-ms.openlocfilehash: 5da1bad65cf04093be339e1f2e55bddd30efffbf
-ms.sourcegitcommit: 80701484b8f404316d934ad2a85fd773e26ca30c
+monikerRange: '>=aps-pdw-2016||=azuresqldb-current||=azure-sqldw-latest||>=sql-server-2016||>=sql-server-linux-2017||=azuresqldb-mi-current'
+ms.openlocfilehash: 0b7839615ed830f91ced84f1c565d9c2d32bf3a3
+ms.sourcegitcommit: 1a544cf4dd2720b124c3697d1e62ae7741db757c
 ms.translationtype: HT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 11/03/2020
-ms.locfileid: "93243647"
+ms.lasthandoff: 12/14/2020
+ms.locfileid: "97479424"
 ---
 # <a name="permissions-database-engine"></a>사용 권한(데이터베이스 엔진)
 [!INCLUDE[SQL Server Azure SQL Database Synapse Analytics PDW ](../../includes/applies-to-version/sql-asdb-asdbmi-asa-pdw.md)]
@@ -364,7 +364,7 @@ REVOKE SELECT ON OBJECT::HumanResources.Employee TO Larry;
 |XML SCHEMA COLLECTION|VIEW DEFINITION|VW|SCHEMA|VIEW DEFINITION|  
   
 ##  <a name="summary-of-the-permission-check-algorithm"></a><a name="_algorithm"></a> 사용 권한 검사 알고리즘 요약  
- 사용 권한 검사는 복잡할 수 있습니다. 사용 권한 검사 알고리즘에는 겹치는 그룹 멤버 자격과 소유권 체인이 포함됩니다. 둘 다 명시적 및 암시적 사용 권한이며 보안 가능한 엔터티가 포함된 보안 개체 클래스에 대한 사용 권한의 영향을 받을 수 있습니다. 알고리즘의 일반적인 프로세스는 관련된 사용 권한을 모두 수집하는 것입니다. DENY 차단이 발견되지 않는 경우 알고리즘에서는 충분한 액세스 권한을 제공하는 GRANT를 검색합니다. 알고리즘에는 세 가지 필수 요소인 **보안 컨텍스트** , **사용 권한 공간** 및 **필요한 사용 권한** 이 포함되어 있습니다.  
+ 사용 권한 검사는 복잡할 수 있습니다. 사용 권한 검사 알고리즘에는 겹치는 그룹 멤버 자격과 소유권 체인이 포함됩니다. 둘 다 명시적 및 암시적 사용 권한이며 보안 가능한 엔터티가 포함된 보안 개체 클래스에 대한 사용 권한의 영향을 받을 수 있습니다. 알고리즘의 일반적인 프로세스는 관련된 사용 권한을 모두 수집하는 것입니다. DENY 차단이 발견되지 않는 경우 알고리즘에서는 충분한 액세스 권한을 제공하는 GRANT를 검색합니다. 알고리즘에는 세 가지 필수 요소인 **보안 컨텍스트**, **사용 권한 공간** 및 **필요한 사용 권한** 이 포함되어 있습니다.  
   
 > [!NOTE]  
 >  sa, dbo, 엔터티 소유자, information_schema, sys 또는 사용자 자신에 대한 권한을 부여, 거부 또는 취소할 수 없습니다.  

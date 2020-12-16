@@ -14,13 +14,13 @@ helpviewer_keywords:
 ms.assetid: 742727a1-5189-44ec-b3ae-6fd7aa1f5347
 author: MashaMSFT
 ms.author: mathoma
-monikerRange: =azuresqldb-mi-current||>=sql-server-2016||=sqlallproducts-allversions
-ms.openlocfilehash: 40b77254e3c9dfd6640d1649b1e2236a34cd644d
-ms.sourcegitcommit: 4d370399f6f142e25075b3714e5c2ce056b1bfd0
+monikerRange: =azuresqldb-mi-current||>=sql-server-2016
+ms.openlocfilehash: e297a985ef1a6ffb0eb3c407f089cbd9a360c42b
+ms.sourcegitcommit: 1a544cf4dd2720b124c3697d1e62ae7741db757c
 ms.translationtype: HT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 10/09/2020
-ms.locfileid: "91868294"
+ms.lasthandoff: 12/14/2020
+ms.locfileid: "97479994"
 ---
 # <a name="create-and-apply-the-initial-snapshot"></a>Create and Apply the Initial Snapshot
 [!INCLUDE [SQL Server SQL MI](../../includes/applies-to-version/sql-asdbmi.md)]
@@ -31,7 +31,7 @@ ms.locfileid: "91868294"
 -   예약된 시간. 새 게시 마법사의 **스냅샷 에이전트** 페이지에서 또는 저장 프로시저나 RMO(복제 관리 개체) 사용 시 일정을 지정합니다.    
 -   수동. 명령 프롬프트 또는 [!INCLUDE[ssManStudioFull](../../includes/ssmanstudiofull-md.md)]에서 스냅샷 에이전트를 실행합니다. 에이전트 실행에 대한 자세한 내용은 [복제 에이전트 실행 파일 개념](../../relational-databases/replication/concepts/replication-agent-executables-concepts.md) 및 [복제 에이전트 시작 및 중지&#40;SQL Server Management Studio&#41;](../../relational-databases/replication/agents/start-and-stop-a-replication-agent-sql-server-management-studio.md)를 참조하세요.  
   
-병합 복제의 경우 스냅샷 에이전트가 실행될 때마다 스냅샷이 생성됩니다. 트랜잭션 복제의 경우 게시 속성 **immediate_sync**의 설정에 따라 스냅샷 생성이 달라집니다. 이 속성을 TRUE(새 게시 마법사 사용 시 기본 설정)로 설정하면 스냅샷 에이전트가 실행될 때마다 스냅샷이 생성되고 언제든지 스냅샷을 구독자에 적용할 수 있습니다. 이 속성을 FALSE( **sp_addpublication**사용 시 기본 설정)로 설정하면 스냅샷 에이전트가 마지막으로 실행된 후에 새 구독이 추가된 경우에만 스냅샷이 생성됩니다. 구독자는 동기화하기 위해 스냅샷 에이전트가 완료될 때까지 기다려야 합니다.  
+병합 복제의 경우 스냅샷 에이전트가 실행될 때마다 스냅샷이 생성됩니다. 트랜잭션 복제의 경우 게시 속성 **immediate_sync** 의 설정에 따라 스냅샷 생성이 달라집니다. 이 속성을 TRUE(새 게시 마법사 사용 시 기본 설정)로 설정하면 스냅샷 에이전트가 실행될 때마다 스냅샷이 생성되고 언제든지 스냅샷을 구독자에 적용할 수 있습니다. 이 속성을 FALSE( **sp_addpublication** 사용 시 기본 설정)로 설정하면 스냅샷 에이전트가 마지막으로 실행된 후에 새 구독이 추가된 경우에만 스냅샷이 생성됩니다. 구독자는 동기화하기 위해 스냅샷 에이전트가 완료될 때까지 기다려야 합니다.  
   
 기본적으로 스냅샷이 생성되면 그 스냅샷은 배포자에 위치한 기본 스냅샷 폴더에 저장됩니다. 이동식 디스크나 CD-ROM과 같은 이동식 미디어 또는 기본 스냅샷 폴더 이외의 위치에 스냅샷 파일을 저장할 수도 있습니다. 또한 저장과 전송이 간단하도록 파일을 압축할 수 있고 스냅샷이 구독자에 적용되기 전 또는 적용된 후 스크립트를 실행할 수 있습니다. 이러한 옵션에 대한 자세한 내용은 [Snapshot Options](../../relational-databases/replication/snapshot-options.md)를 참조하세요.  
   
@@ -57,7 +57,7 @@ ms.locfileid: "91868294"
   
 1.  **배포자 속성 - \<Distributor>** 대화 상자의 **게시자** 페이지에서 기본 스냅샷 위치를 변경하려는 게시자의 속성 단추( **...** )를 클릭합니다.  
   
-2.  **게시자 속성 - \<Publisher>** 대화 상자에서 **기본 스냅샷 폴더 속성**에 대한 값을 입력합니다.  
+2.  **게시자 속성 - \<Publisher>** 대화 상자에서 **기본 스냅샷 폴더 속성** 에 대한 값을 입력합니다.  
   
     > [!NOTE]  
     >  스냅샷 에이전트는 지정한 디렉터리에 대해 쓰기 권한이 있어야 하며 배포 에이전트 또는 병합 에이전트는 읽기 권한이 있어야 합니다. 끌어오기 구독을 사용하는 경우 공유 디렉터리를 \\\computername\snapshot과 같이 UNC(범용 명명 규칙) 경로로 지정해야 합니다. 자세한 내용은 [스냅샷 폴더 보안 설정](../../relational-databases/replication/security/secure-the-snapshot-folder.md)을 참조하세요.  
@@ -71,15 +71,15 @@ ms.locfileid: "91868294"
 
 1.  [!INCLUDE[ssManStudio](../../includes/ssmanstudio-md.md)]에서 게시자에 연결한 다음 해당 서버 노드를 확장합니다.    
 2.  **복제** 폴더를 확장한 다음 **로컬 게시** 폴더를 확장합니다.    
-3.  스냅샷을 생성할 게시를 마우스 오른쪽 단추로 클릭한 다음 **스냅샷 에이전트 상태 보기**를 클릭합니다.    
-4.  **스냅샷 에이전트 상태 보기 - \<Publication>** 대화 상자에서 **시작**을 클릭합니다.    
+3.  스냅샷을 생성할 게시를 마우스 오른쪽 단추로 클릭한 다음 **스냅샷 에이전트 상태 보기** 를 클릭합니다.    
+4.  **스냅샷 에이전트 상태 보기 - \<Publication>** 대화 상자에서 **시작** 을 클릭합니다.    
  스냅샷 에이전트에서 스냅샷 생성을 마치면 "[100%] 17개 아티클의 스냅샷이 생성되었습니다"라는 메시지가 표시됩니다.  
   
 ### <a name="in-replication-monitor"></a>복제 모니터에서  
   
 1.  복제 모니터에서 왼쪽 창의 게시자 그룹을 확장한 다음 게시자를 확장합니다.    
-2.  스냅샷을 생성할 게시를 마우스 오른쪽 단추로 클릭한 다음 **스냅샷 생성**을 클릭합니다.    
-3.  스냅샷 에이전트 상태를 보려면 **에이전트** 탭을 클릭합니다. 자세한 내용을 보려면 표에서 스냅샷 에이전트를 마우스 오른쪽 단추로 클릭한 다음 **자세히 보기**를 클릭합니다.  
+2.  스냅샷을 생성할 게시를 마우스 오른쪽 단추로 클릭한 다음 **스냅샷 생성** 을 클릭합니다.    
+3.  스냅샷 에이전트 상태를 보려면 **에이전트** 탭을 클릭합니다. 자세한 내용을 보려면 표에서 스냅샷 에이전트를 마우스 오른쪽 단추로 클릭한 다음 **자세히 보기** 를 클릭합니다.  
 
 ## <a name="using-transact-sql"></a>Transact-SQL 사용
 초기 스냅샷은 스냅샷 에이전트 작업을 만들고 실행하거나 배치 파일에서 스냅샷 에이전트 실행 파일을 실행하여 프로그래밍 방식으로 작성할 수 있습니다. 초기 스냅샷이 생성되면 구독이 처음으로 동기화될 때 구독자로 전송되고 적용됩니다. 명령 프롬프트 또는 배치 파일에서 스냅샷 에이전트를 실행하는 경우 기존 스냅샷이 무효화될 때마다 에이전트를 다시 실행해야 합니다.  
@@ -95,12 +95,12 @@ ms.locfileid: "91868294"
   
     -   **\@job_password** - 제공된 Windows 자격 증명의 암호  
   
-    -   (옵션) 게시자에 연결할 때 에이전트가 SQL Server 인증을 사용하면 **\@publisher_security_mode**에 값 **0** . 이 경우 **\@publisher_login** 및 **\@publisher_password**에 SQL Server 인증 로그인 정보도 지정해야 합니다.  
+    -   (옵션) 게시자에 연결할 때 에이전트가 SQL Server 인증을 사용하면 **\@publisher_security_mode** 에 값 **0** . 이 경우 **\@publisher_login** 및 **\@publisher_password** 에 SQL Server 인증 로그인 정보도 지정해야 합니다.  
   
     -   (옵션) 스냅샷 에이전트 작업에 대한 동기화 일정. 자세한 내용은 [Specify Synchronization Schedules](../../relational-databases/replication/specify-synchronization-schedules.md)을 참조하세요.  
   
     > [!IMPORTANT]  
-    >  게시자를 원격 배포자로 구성할 경우 *job_login* 및 *job_password*를 비롯한 모든 매개 변수에 제공된 값이 일반 텍스트로 배포자에게 전송됩니다. 이 저장 프로시저를 실행하기 전에 게시자와 해당 원격 배포자 간 연결을 암호화해야 합니다. 자세한 내용은 [데이터베이스 엔진에 암호화 연결 사용&#40;SQL Server 구성 관리자&#41;](../../database-engine/configure-windows/enable-encrypted-connections-to-the-database-engine.md)을 참조하세요.  
+    >  게시자를 원격 배포자로 구성할 경우 *job_login* 및 *job_password* 를 비롯한 모든 매개 변수에 제공된 값이 일반 텍스트로 배포자에게 전송됩니다. 이 저장 프로시저를 실행하기 전에 게시자와 해당 원격 배포자 간 연결을 암호화해야 합니다. 자세한 내용은 [데이터베이스 엔진에 암호화 연결 사용&#40;SQL Server 구성 관리자&#41;](../../database-engine/configure-windows/enable-encrypted-connections-to-the-database-engine.md)을 참조하세요.  
   
 3.  아티클을 게시에 추가합니다. 자세한 내용은 [아티클을 정의](../../relational-databases/replication/publish/define-an-article.md)을 참조하세요.  
   
@@ -123,7 +123,7 @@ ms.locfileid: "91868294"
   
 2.  아티클을 게시에 추가합니다. 자세한 내용은 [아티클을 정의](../../relational-databases/replication/publish/define-an-article.md)을 참조하세요.  
   
-3.  명령 프롬프트 또는 배치 파일에서 [snapshot.exe](../../relational-databases/replication/agents/replication-snapshot-agent.md) 를 실행하여 **Replication Snapshot Agent**를 시작하고 다음 명령줄 인수를 지정합니다.  
+3.  명령 프롬프트 또는 배치 파일에서 [snapshot.exe](../../relational-databases/replication/agents/replication-snapshot-agent.md) 를 실행하여 **Replication Snapshot Agent** 를 시작하고 다음 명령줄 인수를 지정합니다.  
   
     -   **-Publication**  
     -   **-Publisher**  
@@ -180,13 +180,13 @@ REM --Start the Snapshot Agent to generate the snapshot for AdvWorksSalesOrdersM
   
 2.  <xref:Microsoft.SqlServer.Replication.TransPublication> 클래스의 인스턴스를 만듭니다. 게시에 대해 <xref:Microsoft.SqlServer.Replication.Publication.Name%2A> 및 <xref:Microsoft.SqlServer.Replication.Publication.DatabaseName%2A> 속성을 설정하고 <xref:Microsoft.SqlServer.Replication.ReplicationObject.ConnectionContext%2A> 속성을 1단계에서 만든 연결로 설정합니다.  
   
-3.  <xref:Microsoft.SqlServer.Replication.ReplicationObject.LoadProperties%2A> 메서드를 호출하여 개체의 나머지 속성을 로드합니다. 이 메서드가 **false**를 반환하는 경우 2단계에서 게시 속성이 올바르게 정의되지 않았거나 게시가 없습니다.  
+3.  <xref:Microsoft.SqlServer.Replication.ReplicationObject.LoadProperties%2A> 메서드를 호출하여 개체의 나머지 속성을 로드합니다. 이 메서드가 **false** 를 반환하는 경우 2단계에서 게시 속성이 올바르게 정의되지 않았거나 게시가 없습니다.  
   
-4.  <xref:Microsoft.SqlServer.Replication.Publication.SnapshotAgentExists%2A>의 값이 **false**이면 <xref:Microsoft.SqlServer.Replication.Publication.CreateSnapshotAgent%2A>를 호출하여 이 게시에 대한 스냅샷 에이전트 작업을 만듭니다.  
+4.  <xref:Microsoft.SqlServer.Replication.Publication.SnapshotAgentExists%2A>의 값이 **false** 이면 <xref:Microsoft.SqlServer.Replication.Publication.CreateSnapshotAgent%2A>를 호출하여 이 게시에 대한 스냅샷 에이전트 작업을 만듭니다.  
   
 5.  <xref:Microsoft.SqlServer.Replication.Publication.StartSnapshotGenerationAgentJob%2A> 메서드를 호출하여 이 게시에 대한 스냅샷을 생성하는 에이전트 작업을 시작합니다.  
   
-6.  (옵션) <xref:Microsoft.SqlServer.Replication.TransPublication.SnapshotAvailable%2A> 의 값이 **true**이면 구독자에서 스냅샷을 사용할 수 있습니다.  
+6.  (옵션) <xref:Microsoft.SqlServer.Replication.TransPublication.SnapshotAvailable%2A> 의 값이 **true** 이면 구독자에서 스냅샷을 사용할 수 있습니다.  
   
 #### <a name="to-generate-the-initial-snapshot-for-a-snapshot-or-transactional-publication-by-running-the-snapshot-agent-synchronous"></a>스냅샷 에이전트를 실행하여 스냅샷 또는 트랜잭션 게시에 대한 초기 스냅샷을 생성하려면(동기)  
   
@@ -214,13 +214,13 @@ REM --Start the Snapshot Agent to generate the snapshot for AdvWorksSalesOrdersM
   
 2.  <xref:Microsoft.SqlServer.Replication.MergePublication> 클래스의 인스턴스를 만듭니다. 게시에 대해 <xref:Microsoft.SqlServer.Replication.Publication.Name%2A> 및 <xref:Microsoft.SqlServer.Replication.Publication.DatabaseName%2A> 속성을 설정하고 <xref:Microsoft.SqlServer.Replication.ReplicationObject.ConnectionContext%2A> 속성을 1단계에서 만든 연결로 설정합니다.  
   
-3.  <xref:Microsoft.SqlServer.Replication.ReplicationObject.LoadProperties%2A> 메서드를 호출하여 개체의 나머지 속성을 로드합니다. 이 메서드가 **false**를 반환하는 경우 2단계에서 게시 속성이 올바르게 정의되지 않았거나 게시가 없습니다.  
+3.  <xref:Microsoft.SqlServer.Replication.ReplicationObject.LoadProperties%2A> 메서드를 호출하여 개체의 나머지 속성을 로드합니다. 이 메서드가 **false** 를 반환하는 경우 2단계에서 게시 속성이 올바르게 정의되지 않았거나 게시가 없습니다.  
   
-4.  <xref:Microsoft.SqlServer.Replication.Publication.SnapshotAgentExists%2A>의 값이 **false**이면 <xref:Microsoft.SqlServer.Replication.Publication.CreateSnapshotAgent%2A>를 호출하여 이 게시에 대한 스냅샷 에이전트 작업을 만듭니다.  
+4.  <xref:Microsoft.SqlServer.Replication.Publication.SnapshotAgentExists%2A>의 값이 **false** 이면 <xref:Microsoft.SqlServer.Replication.Publication.CreateSnapshotAgent%2A>를 호출하여 이 게시에 대한 스냅샷 에이전트 작업을 만듭니다.  
   
 5.  <xref:Microsoft.SqlServer.Replication.Publication.StartSnapshotGenerationAgentJob%2A> 메서드를 호출하여 이 게시에 대한 스냅샷을 생성하는 에이전트 작업을 시작합니다.  
   
-6.  (옵션) <xref:Microsoft.SqlServer.Replication.MergePublication.SnapshotAvailable%2A> 의 값이 **true**이면 구독자에서 스냅샷을 사용할 수 있습니다.  
+6.  (옵션) <xref:Microsoft.SqlServer.Replication.MergePublication.SnapshotAvailable%2A> 의 값이 **true** 이면 구독자에서 스냅샷을 사용할 수 있습니다.  
   
 #### <a name="to-generate-the-initial-snapshot-for-a-merge-publication-by-running-the-snapshot-agent-synchronous"></a>스냅샷 에이전트를 실행하여 병합 게시에 대한 초기 스냅샷을 생성하려면(동기)  
   

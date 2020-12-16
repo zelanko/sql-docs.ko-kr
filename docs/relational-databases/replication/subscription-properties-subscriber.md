@@ -14,13 +14,13 @@ f1_keywords:
 ms.assetid: db2be511-c76e-4f21-8be4-6a8c60a50d30
 author: MashaMSFT
 ms.author: mathoma
-monikerRange: =azuresqldb-current||>=sql-server-2016||=sqlallproducts-allversions
-ms.openlocfilehash: 7b1338f4e935a2c7e8662a09aacff1cc4b7df9d3
-ms.sourcegitcommit: 822d4b3cfa53269535500a3db5877a82b5076728
+monikerRange: =azuresqldb-current||>=sql-server-2016
+ms.openlocfilehash: 773162660a1d64f37ee225a14b7a260640104594
+ms.sourcegitcommit: 1a544cf4dd2720b124c3697d1e62ae7741db757c
 ms.translationtype: HT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 08/07/2020
-ms.locfileid: "87988812"
+ms.lasthandoff: 12/14/2020
+ms.locfileid: "97479604"
 ---
 # <a name="sql-server-replication-subscription-properties-dialog-box"></a>SQL Server 복제 구독 속성 대화 상자 
 [!INCLUDE[sql-asdb](../../includes/applies-to-version/sql-asdb.md)]
@@ -52,7 +52,7 @@ ms.locfileid: "87988812"
   
 ## <a name="publisher-options-for-all-subscriptions"></a>모든 구독에 대한 게시자 옵션  
  **보안**  
- **에이전트 프로세스 계정** 행을 클릭한 다음 속성 단추 ( **...** )를 클릭하여 배포자에서 배포 에이전트 또는 병합 에이전트가 실행되는 계정을 변경합니다. 배포 에이전트 또는 병합 에이전트가 구독자로 연결하는 계정을 변경하려면 **구독자 연결**을 클릭한 다음 속성 단추 ( **...** )를 클릭합니다.  
+ **에이전트 프로세스 계정** 행을 클릭한 다음 속성 단추 ( **...** )를 클릭하여 배포자에서 배포 에이전트 또는 병합 에이전트가 실행되는 계정을 변경합니다. 배포 에이전트 또는 병합 에이전트가 구독자로 연결하는 계정을 변경하려면 **구독자 연결** 을 클릭한 다음 속성 단추 ( **...** )를 클릭합니다.  
   
  각 에이전트에 필요한 사용 권한에 대한 자세한 내용은 [Replication Agent Security Model](../../relational-databases/replication/security/replication-agent-security-model.md)을 참조하십시오.  
   
@@ -73,7 +73,7 @@ ms.locfileid: "87988812"
  새 구독 마법사에서 서버 구독 유형을 선택한 경우 구독자에는 충돌을 해결하는 동안 사용되는 우선 순위가 지정됩니다.  
   
  **대화형으로 충돌 해결**  
- 병합 동기화를 수행하는 동안 충돌을 해결하기 위해 대화형 해결 프로그램 사용자 인터페이스를 사용할지 여부를 결정합니다. 이 인터페이스를 사용하려면 **Windows 동기화 관리자 사용** 값을 **사용**으로 설정해야 합니다. 자세한 내용은 [Interactive Conflict Resolution](../../relational-databases/replication/merge/advanced-merge-replication-conflict-interactive-resolution.md)을 참조하세요.  
+ 병합 동기화를 수행하는 동안 충돌을 해결하기 위해 대화형 해결 프로그램 사용자 인터페이스를 사용할지 여부를 결정합니다. 이 인터페이스를 사용하려면 **Windows 동기화 관리자 사용** 값을 **사용** 으로 설정해야 합니다. 자세한 내용은 [Interactive Conflict Resolution](../../relational-databases/replication/merge/advanced-merge-replication-conflict-interactive-resolution.md)을 참조하세요.  
 
   
 ## <a name="subscriber-options-for-all-subscriptions"></a>모든 구독에 대한 구독자 옵션  
@@ -100,11 +100,11 @@ ms.locfileid: "87988812"
  **보안**  
  **에이전트 프로세스 계정** 행을 클릭한 다음 속성 단추 ( **...** )를 클릭하여 구독자에서 배포 에이전트 또는 병합 에이전트를 실행하는 계정을 변경합니다. 연결과 관련된 보안 옵션은 구독 유형에 따라 달라집니다.  
   
--   트랜잭션 게시에 대한 구독의 경우: 배포 에이전트를 배포자에 연결하는 계정을 변경하려면 **배포자 연결**을 클릭한 다음 속성 단추( **...** )를 클릭합니다.  
+-   트랜잭션 게시에 대한 구독의 경우: 배포 에이전트를 배포자에 연결하는 계정을 변경하려면 **배포자 연결** 을 클릭한 다음 속성 단추( **...** )를 클릭합니다.  
   
--   트랜잭션 게시에 대한 즉시 업데이트 구독의 경우: 위에서 설명한 배포자 연결 외에도 구독자에서 게시자로 변경 내용을 전파하는 데 사용하는 방법을 변경할 수 있습니다. **게시자 연결**을 클릭한 다음 속성 단추( **...** )를 클릭합니다.  
+-   트랜잭션 게시에 대한 즉시 업데이트 구독의 경우: 위에서 설명한 배포자 연결 외에도 구독자에서 게시자로 변경 내용을 전파하는 데 사용하는 방법을 변경할 수 있습니다. **게시자 연결** 을 클릭한 다음 속성 단추( **...** )를 클릭합니다.  
   
--   병합 게시에 대한 구독: **게시자 연결**을 클릭한 다음 속성 단추 ( **...** )를 클릭합니다.  
+-   병합 게시에 대한 구독: **게시자 연결** 을 클릭한 다음 속성 단추 ( **...** )를 클릭합니다.  
   
  각 에이전트에 필요한 사용 권한에 대한 자세한 내용은 [Replication Agent Security Model](../../relational-databases/replication/security/replication-agent-security-model.md)을 참조하십시오.  
   
@@ -122,14 +122,14 @@ ms.locfileid: "87988812"
  새 구독 마법사에서 서버 구독 유형을 선택한 경우 구독자에는 충돌을 해결하는 동안 사용되는 우선 순위가 지정됩니다.  
   
  **대화형으로 충돌 해결**  
- 병합 동기화를 수행하는 동안 충돌을 해결하기 위해 대화형 해결 프로그램 사용자 인터페이스를 사용할지 여부를 결정합니다. 이 인터페이스를 사용하려면 **Windows 동기화 관리자 사용** 값을 **사용**으로 설정해야 합니다. 자세한 내용은 [Interactive Conflict Resolution](../../relational-databases/replication/merge/advanced-merge-replication-conflict-interactive-resolution.md)을 참조하세요.  
+ 병합 동기화를 수행하는 동안 충돌을 해결하기 위해 대화형 해결 프로그램 사용자 인터페이스를 사용할지 여부를 결정합니다. 이 인터페이스를 사용하려면 **Windows 동기화 관리자 사용** 값을 **사용** 으로 설정해야 합니다. 자세한 내용은 [Interactive Conflict Resolution](../../relational-databases/replication/merge/advanced-merge-replication-conflict-interactive-resolution.md)을 참조하세요.  
   
  **웹 동기화**  
  **웹 동기화 사용** 은 [!INCLUDE[msCoName](../../includes/msconame-md.md)] 인터넷 정보 서비스(IIS) 서버에 연결하여 구독을 동기화할지 여부를 결정합니다. 이 옵션은 게시가 웹 동기화용으로 설정되어 있는 경우에만 사용할 수 있습니다. 자세한 내용은 [Web Synchronization for Merge Replication](../../relational-databases/replication/web-synchronization-for-merge-replication.md)를 참조하세요.  
   
- **웹 동기화 사용** 에 대해 **True**를 선택한 경우 다음을 수행하십시오.  
+ **웹 동기화 사용** 에 대해 **True** 를 선택한 경우 다음을 수행하십시오.  
   
--   **웹 서버 주소**에 IIS 서버의 전체 주소를 입력합니다.    
+-   **웹 서버 주소** 에 IIS 서버의 전체 주소를 입력합니다.    
 -   **웹 서버 연결** 행을 클릭한 다음 속성 단추 ( **...** )를 클릭하여 구독자를 IIS 서버에 연결하는 계정을 설정 또는 변경합니다.    
 -   필요한 경우 **웹 서버 제한 시간** 을 변경합니다. 제한 시간은 웹 동기화 요청이 만료되기 전까지의 시간(초)입니다. 
 

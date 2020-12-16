@@ -11,13 +11,13 @@ ms.topic: conceptual
 ms.assetid: 856e8061-c604-4ce4-b89f-a11876dd6c88
 author: jaszymas
 ms.author: jaszymas
-monikerRange: =azuresqldb-current||>=sql-server-2016||=sqlallproducts-allversions||>=sql-server-linux-2017||=azuresqldb-mi-current
-ms.openlocfilehash: c08fb0c0fc82d252e87847562957705e03e30512
-ms.sourcegitcommit: 4d370399f6f142e25075b3714e5c2ce056b1bfd0
+monikerRange: =azuresqldb-current||>=sql-server-2016||>=sql-server-linux-2017||=azuresqldb-mi-current
+ms.openlocfilehash: c9a0dfad97e37325c0990bb8c1786a63a5bf897a
+ms.sourcegitcommit: 1a544cf4dd2720b124c3697d1e62ae7741db757c
 ms.translationtype: HT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 10/09/2020
-ms.locfileid: "91867822"
+ms.lasthandoff: 12/14/2020
+ms.locfileid: "97479364"
 ---
 # <a name="create-and-store-column-master-keys-for-always-encrypted"></a>Always Encrypted용 열 마스터 키 만들기 및 저장
 [!INCLUDE [SQL Server Azure SQL Database](../../../includes/applies-to-version/sql-asdb.md)]
@@ -30,7 +30,7 @@ ms.locfileid: "91867822"
 
 상시 암호화는 여러 키 저장소를 지원하여 상시 암호화 열 마스터 키를 저장할 수 있습니다. 지원되는 키 저장소는 사용 중인 드라이버 및 버전에 따라 달라집니다.
 
-키 저장소는 크게 두 가지 범주( *로컬 키 저장소*및 *중앙 집중식 키 저장소*)로 나뉩니다.
+키 저장소는 크게 두 가지 범주( *로컬 키 저장소* 및 *중앙 집중식 키 저장소*)로 나뉩니다.
 
 ###  <a name="local-or-centralized-key-store"></a>로컬 또는 중앙 집중식 키 저장소
 
@@ -53,7 +53,7 @@ SQL Server Management Studio 및 SqlServer PowerShell 모듈은 CNG(Cryptography
 
 올바른 열 마스터 키가 되려면 인증서가 다음 조건을 만족해야 합니다.
 * X.509 인증서여야 합니다.
-* 두 인증서 저장 위치인 *로컬 컴퓨터* 또는 *현재 사용자*중 하나에 저장되어야 합니다. 로컬 컴퓨터 인증서 저장소 위치에 인증서를 만들려면 대상 컴퓨터의 관리자여야 합니다.
+* 두 인증서 저장 위치인 *로컬 컴퓨터* 또는 *현재 사용자* 중 하나에 저장되어야 합니다. 로컬 컴퓨터 인증서 저장소 위치에 인증서를 만들려면 대상 컴퓨터의 관리자여야 합니다.
 * 프라이빗 키를 포함해야 합니다. 인증서의 권장되는 키 길이는 2048비트 이상입니다.
 * 키 교환을 위해 만들어져야 합니다.
 
@@ -92,14 +92,14 @@ SSMS를 사용하고 Windows 인증서 저장소에 상시 암호화 키를 저�
 
 사용자에게 로컬 컴퓨터 인증서 저장소 위치에 저장된 인증서에 대한 *읽기* 권한을 부여하려면 다음 단계를 따릅니다.
 
-1.  명령 프롬프트를 열고 **mmc**를 입력합니다.
-2.  MMC 콘솔의 **파일** 메뉴에서 **스냅인 추가/제거**를 클릭합니다.
-3.  **스냅인 추가/제거** 대화 상자에서 **추가**를 클릭합니다.
-4.  **독립 실행형 스냅인 추가** 대화 상자에서 **인증서**를 클릭하고 **추가**를 클릭합니다.
-5.  **인증서 스냅인** 대화 상자에서 **컴퓨터 계정**을 클릭한 다음 **마침**을 클릭합니다.
-6.  **독립 실행형 스냅인 추가** 대화 상자에서 **닫기**를 클릭합니다.
-7.  **스냅인 추가/제거** 대화 상자에서 **확인**을 클릭합니다.
-8.  **인증서** 스냅인의 **인증서 &gt; 개인** 폴더에서 인증서를 찾은 다음 인증서를 마우스 오른쪽 단추로 클릭하고 **모든 태스크**를 가리킨 다음 **프라이빗 키 관리**를 클릭합니다.
+1.  명령 프롬프트를 열고 **mmc** 를 입력합니다.
+2.  MMC 콘솔의 **파일** 메뉴에서 **스냅인 추가/제거** 를 클릭합니다.
+3.  **스냅인 추가/제거** 대화 상자에서 **추가** 를 클릭합니다.
+4.  **독립 실행형 스냅인 추가** 대화 상자에서 **인증서** 를 클릭하고 **추가** 를 클릭합니다.
+5.  **인증서 스냅인** 대화 상자에서 **컴퓨터 계정** 을 클릭한 다음 **마침** 을 클릭합니다.
+6.  **독립 실행형 스냅인 추가** 대화 상자에서 **닫기** 를 클릭합니다.
+7.  **스냅인 추가/제거** 대화 상자에서 **확인** 을 클릭합니다.
+8.  **인증서** 스냅인의 **인증서 &gt; 개인** 폴더에서 인증서를 찾은 다음 인증서를 마우스 오른쪽 단추로 클릭하고 **모든 태스크** 를 가리킨 다음 **프라이빗 키 관리** 를 클릭합니다.
 9.  필요한 경우 **보안** 대화 상자에서 사용자 계정에 대한 읽기 권한을 추가합니다.
 
 ## <a name="creating-column-master-keys-in-azure-key-vault"></a>Azure 주요 자격 증명 모음에서 열 마스터 키 만들기
@@ -134,7 +134,7 @@ SSMS를 사용하고 Azure 주요 자격 증명 모음에 상시 암호화 키�
 
 Azure Key Vault 키를 열 마스터 키로 사용하는 경우 애플리케이션에서 Azure를 인증해야 하며 애플리케이션 ID에는 주요 자격 증명 모음에 대한 *get*, *unwrapKey* 및 *verify* 권한이 있어야 합니다. 
 
-Azure 주요 자격 증명 모음에 저장된 열 마스터 키를 사용하여 보호된 열 암호화 키를 프로비전하려면 *get*, *unwrapKey*, *wrapKey*, *sign*및 *verify* 권한이 필요합니다. 또한 Azure 주요 자격 증명 모음에서 새 키를 생성하려면 *create* 권한이 필요하고, 주요 자격 증명 모음 콘텐츠를 나열하려면 *list* 권한이 필요합니다.
+Azure 주요 자격 증명 모음에 저장된 열 마스터 키를 사용하여 보호된 열 암호화 키를 프로비전하려면 *get*, *unwrapKey*, *wrapKey*, *sign* 및 *verify* 권한이 필요합니다. 또한 Azure 주요 자격 증명 모음에서 새 키를 생성하려면 *create* 권한이 필요하고, 주요 자격 증명 모음 콘텐츠를 나열하려면 *list* 권한이 필요합니다.
 
 #### <a name="using-powershell"></a>PowerShell 사용
 

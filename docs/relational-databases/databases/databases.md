@@ -15,13 +15,13 @@ helpviewer_keywords:
 ms.assetid: 316eea58-81b8-4bf3-a1fc-801946740e94
 author: stevestein
 ms.author: sstein
-monikerRange: =azuresqldb-current||>=sql-server-2016||=sqlallproducts-allversions||>=sql-server-linux-2017||=azuresqldb-mi-current
-ms.openlocfilehash: 4d69fbd48f7d7f713d9a10806c65c144fff84d6d
-ms.sourcegitcommit: 99f61724de5edf6640efd99916d464172eb23f92
+monikerRange: =azuresqldb-current||>=sql-server-2016||>=sql-server-linux-2017||=azuresqldb-mi-current
+ms.openlocfilehash: d1550e59cfa9579cf2c7bf38cdbc8c688b447b69
+ms.sourcegitcommit: 1a544cf4dd2720b124c3697d1e62ae7741db757c
 ms.translationtype: HT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 07/28/2020
-ms.locfileid: "87361593"
+ms.lasthandoff: 12/14/2020
+ms.locfileid: "97478374"
 ---
 # <a name="databases"></a>데이터베이스
 [!INCLUDE [SQL Server Azure SQL Database](../../includes/applies-to-version/sql-asdb.md)]
@@ -53,7 +53,7 @@ ms.locfileid: "87361593"
         [데이터베이스를 다른 서버로 복사](../../relational-databases/databases/copy-databases-to-other-servers.md)  
         [데이터베이스 분리 및 연결&#40;SQL Server&#41;](../../relational-databases/databases/database-detach-and-attach-sql-server.md)  
         [데이터베이스에 데이터 또는 로그 파일 추가](../../relational-databases/databases/add-data-or-log-files-to-a-database.md)  
-        [데이터베이스의 구성 설정 변경](../../relational-databases/databases/change-the-configuration-settings-for-a-database.md)  
+        [데이터베이스 메일의 구성 설정 변경](../../relational-databases/databases/change-the-configuration-settings-for-a-database.md)  
         [데이터베이스 만들기](../../relational-databases/databases/create-a-database.md)  
         [데이터베이스 삭제](../../relational-databases/databases/delete-a-database.md)  
     :::column-end:::

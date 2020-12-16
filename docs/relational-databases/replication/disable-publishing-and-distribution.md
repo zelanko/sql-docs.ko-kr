@@ -19,13 +19,13 @@ helpviewer_keywords:
 ms.assetid: 6d4a1474-4d13-4826-8be2-80050fafa8a5
 author: MashaMSFT
 ms.author: mathoma
-monikerRange: =azuresqldb-mi-current||>=sql-server-2016||=sqlallproducts-allversions
-ms.openlocfilehash: 3b8c2e87e15f1ed30940f33953a339fc711305b1
-ms.sourcegitcommit: da88320c474c1c9124574f90d549c50ee3387b4c
+monikerRange: =azuresqldb-mi-current||>=sql-server-2016
+ms.openlocfilehash: 1aac8019e53e2b3fd8cb7fcf4c76518a4bfe11c9
+ms.sourcegitcommit: 1a544cf4dd2720b124c3697d1e62ae7741db757c
 ms.translationtype: HT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 07/01/2020
-ms.locfileid: "85653860"
+ms.lasthandoff: 12/14/2020
+ms.locfileid: "97479954"
 ---
 # <a name="disable-publishing-and-distribution"></a>게시 및 배포 해제
 [!INCLUDE [SQL Server SQL MI](../../includes/applies-to-version/sql-asdbmi.md)]
@@ -66,7 +66,7 @@ ms.locfileid: "85653860"
   
 1.  [!INCLUDE[msCoName](../../includes/msconame-md.md)] [!INCLUDE[ssManStudioFull](../../includes/ssmanstudiofull-md.md)]에서 해제할 게시자나 배포자에 연결한 다음 해당 서버 노드를 확장합니다.  
   
-2.  **복제** 폴더를 마우스 오른쪽 단추로 클릭한 다음, **게시 및 배포 해제**를 클릭합니다.  
+2.  **복제** 폴더를 마우스 오른쪽 단추로 클릭한 다음, **게시 및 배포 해제** 를 클릭합니다.  
   
 3.  게시 및 배포 해제 마법사의 단계를 완료합니다.  
 
@@ -90,7 +90,7 @@ ms.locfileid: "85653860"
 7.  배포자에서 [sp_dropdistributor](../../relational-databases/system-stored-procedures/sp-dropdistributor-transact-sql.md) 를 실행하여 서버에서 배포자 지정을 제거합니다.  
   
     > [!NOTE]  
-    > 모든 복제 게시 및 배포 개체가 삭제되지 않은 상태로 [sp_dropdistpublisher](../../relational-databases/system-stored-procedures/sp-dropdistpublisher-transact-sql.md) 및 [sp_dropdistributor](../../relational-databases/system-stored-procedures/sp-dropdistributor-transact-sql.md)를 실행하면 오류가 반환됩니다. 게시자 또는 배포자를 삭제할 때 모든 복제 관련 개체를 삭제하려면 `@no_checks` 매개 변수를 **1**로 설정해야 합니다. 게시자 또는 배포자가 오프라인이거나 연결할 수 없는 경우에는 `@ignore_distributor` 매개 변수를 **1**로 설정하여 삭제할 수 있습니다. 그러나 삭제되지 않고 남은 모든 게시 및 배포 개체는 수동으로 제거해야 합니다.  
+    > 모든 복제 게시 및 배포 개체가 삭제되지 않은 상태로 [sp_dropdistpublisher](../../relational-databases/system-stored-procedures/sp-dropdistpublisher-transact-sql.md) 및 [sp_dropdistributor](../../relational-databases/system-stored-procedures/sp-dropdistributor-transact-sql.md)를 실행하면 오류가 반환됩니다. 게시자 또는 배포자를 삭제할 때 모든 복제 관련 개체를 삭제하려면 `@no_checks` 매개 변수를 **1** 로 설정해야 합니다. 게시자 또는 배포자가 오프라인이거나 연결할 수 없는 경우에는 `@ignore_distributor` 매개 변수를 **1** 로 설정하여 삭제할 수 있습니다. 그러나 삭제되지 않고 남은 모든 게시 및 배포 개체는 수동으로 제거해야 합니다.  
   
 ###  <a name="examples-transact-sql"></a><a name="TsqlExample"></a> 예(Transact-SQL)  
  다음 스크립트 예에서는 구독 데이터베이스에서 복제 개체를 제거합니다.  
@@ -113,7 +113,7 @@ ms.locfileid: "85653860"
   
 4.  <xref:Microsoft.SqlServer.Replication.DistributionPublisher> 클래스의 인스턴스를 만듭니다. <xref:Microsoft.SqlServer.Replication.DistributionPublisher.Name%2A> 속성을 지정하고 3단계에서 만든 <xref:Microsoft.SqlServer.Management.Common.ServerConnection> 개체를 전달합니다.  
   
-5.  필요에 따라 <xref:Microsoft.SqlServer.Replication.ReplicationObject.LoadProperties%2A> 메서드를 호출하여 개체의 속성을 얻고 게시자가 있는지 확인합니다. 이 메서드가 **false**를 반환하면 4단계에서 지정한 게시자 이름이 올바르지 않거나 이 배포자에서 게시자를 사용하지 않는 것입니다.  
+5.  필요에 따라 <xref:Microsoft.SqlServer.Replication.ReplicationObject.LoadProperties%2A> 메서드를 호출하여 개체의 속성을 얻고 게시자가 있는지 확인합니다. 이 메서드가 **false** 를 반환하면 4단계에서 지정한 게시자 이름이 올바르지 않거나 이 배포자에서 게시자를 사용하지 않는 것입니다.  
   
 6.  <xref:Microsoft.SqlServer.Replication.DistributionPublisher.Remove%2A> 메서드를 호출합니다. 게시자와 배포자가 다른 서버에 있으며 게시자에 게시가 더 이상 존재하지 않는지 먼저 확인하지 않고 배포자에서 게시자를 제거해야 하는 경우 **force** 에 *true* 값을 전달합니다.  
   

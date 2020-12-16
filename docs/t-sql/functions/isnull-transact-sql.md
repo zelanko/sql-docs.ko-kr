@@ -22,13 +22,13 @@ helpviewer_keywords:
 ms.assetid: 6f3e5802-864b-4e77-9862-657bb5430b68
 author: markingmyname
 ms.author: maghan
-monikerRange: '>=aps-pdw-2016||=azuresqldb-current||=azure-sqldw-latest||>=sql-server-2016||=sqlallproducts-allversions||>=sql-server-linux-2017||=azuresqldb-mi-current'
-ms.openlocfilehash: 67d21c6d51a90015fe78833d572ff4740d64bd81
-ms.sourcegitcommit: cc23d8646041336d119b74bf239a6ac305ff3d31
+monikerRange: '>=aps-pdw-2016||=azuresqldb-current||=azure-sqldw-latest||>=sql-server-2016||>=sql-server-linux-2017||=azuresqldb-mi-current'
+ms.openlocfilehash: 5275acd28786f984a7a3855108019c29783ee54d
+ms.sourcegitcommit: 1a544cf4dd2720b124c3697d1e62ae7741db757c
 ms.translationtype: HT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 09/23/2020
-ms.locfileid: "91116032"
+ms.lasthandoff: 12/14/2020
+ms.locfileid: "97478634"
 ---
 # <a name="isnull-transact-sql"></a>ISNULL(Transact-SQL) 
 
@@ -48,16 +48,16 @@ ISNULL ( check_expression , replacement_value )
 
 ## <a name="arguments"></a>인수
  *check_expression*  
- NULL 여부를 검사할 [식](../../t-sql/language-elements/expressions-transact-sql.md)입니다. *check_expression*은 임의 형식이 될 수 있습니다.  
+ NULL 여부를 검사할 [식](../../t-sql/language-elements/expressions-transact-sql.md)입니다. *check_expression* 은 임의 형식이 될 수 있습니다.  
   
  *replacement_value*  
- *check_expression*이 NULL인 경우 반환할 식입니다. *replacement_value*는 암시적으로 *check_expression* 형식으로 변환되는 형식이어야 합니다.  
+ *check_expression* 이 NULL인 경우 반환할 식입니다. *replacement_value* 는 암시적으로 *check_expression* 형식으로 변환되는 형식이어야 합니다.  
   
 ## <a name="return-types"></a>반환 형식  
- *check_expression* 식과 같은 유형을 반환합니다. 리터럴 NULL이 *check_expression*으로 제공된 경우 *replacement_value* 데이터 형식을 반환합니다. 리터럴 NULL이 *check_expression*으로 제공되고 *replacement_value*가 제공되지 않은 경우 **int**를 반환합니다.  
+ *check_expression* 식과 같은 유형을 반환합니다. 리터럴 NULL이 *check_expression* 으로 제공된 경우 *replacement_value* 데이터 형식을 반환합니다. 리터럴 NULL이 *check_expression* 으로 제공되고 *replacement_value* 가 제공되지 않은 경우 **int** 를 반환합니다.  
   
 ## <a name="remarks"></a>설명  
- NULL이 아닐 경우 *check_expression* 값이 반환되고, 그렇지 않고 형식이 다른 경우는 *check_expression* 형식으로 암시적으로 변환된 후 *replacement_value*가 반환됩니다. *replacement_value*는 *replacement_value*가 *check_expression*보다 긴 경우 잘릴 수 있습니다.  
+ NULL이 아닐 경우 *check_expression* 값이 반환되고, 그렇지 않고 형식이 다른 경우는 *check_expression* 형식으로 암시적으로 변환된 후 *replacement_value* 가 반환됩니다. *replacement_value* 는 *replacement_value* 가 *check_expression* 보다 긴 경우 잘릴 수 있습니다.  
   
 > [!NOTE]  
 >  첫 번째 Null이 아닌 값을 반환하려면 [COALESCE&#40;Transact-SQL&#41;](../../t-sql/language-elements/coalesce-transact-sql.md)를 사용합니다.  

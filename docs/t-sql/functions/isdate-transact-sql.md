@@ -31,21 +31,21 @@ ms.author: maghan
 ms.reviewer: ''
 ms.custom: ''
 ms.date: 03/14/2017
-monikerRange: '>=aps-pdw-2016||=azuresqldb-current||=azure-sqldw-latest||>=sql-server-2016||=sqlallproducts-allversions||>=sql-server-linux-2017||=azuresqldb-mi-current'
-ms.openlocfilehash: 898fd741dfdcb2a4ababb855a33eaee856a2dd4e
-ms.sourcegitcommit: cc23d8646041336d119b74bf239a6ac305ff3d31
+monikerRange: '>=aps-pdw-2016||=azuresqldb-current||=azure-sqldw-latest||>=sql-server-2016||>=sql-server-linux-2017||=azuresqldb-mi-current'
+ms.openlocfilehash: ffb074adf1c9af9ac48fad0f0762349190a5c254
+ms.sourcegitcommit: 1a544cf4dd2720b124c3697d1e62ae7741db757c
 ms.translationtype: HT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 09/23/2020
-ms.locfileid: "91115464"
+ms.lasthandoff: 12/14/2020
+ms.locfileid: "97480464"
 ---
 # <a name="isdate-transact-sql"></a>ISDATE(Transact-SQL)
 
 [!INCLUDE [sql-asdb-asdbmi-asa-pdw](../../includes/applies-to-version/sql-asdb-asdbmi-asa-pdw.md)]
 
-  *expression*이 유효한 **date**, **time** 또는 **datetime** 값인 경우 1을 반환합니다. 그렇지 않을 경우 0을 반환합니다.  
+  *expression* 이 유효한 **date**, **time** 또는 **datetime** 값인 경우 1을 반환합니다. 그렇지 않을 경우 0을 반환합니다.  
   
- *expression*이 **datetime2** 값인 경우 ISDATE에서 0을 반환합니다.  
+ *expression* 이 **datetime2** 값인 경우 ISDATE에서 0을 반환합니다.  
   
  모든 [!INCLUDE[tsql](../../includes/tsql-md.md)]의 날짜 및 시간 데이터 형식 및 함수에 대한 개요는 [날짜 및 시간 데이터 형식 및 함수&#40;Transact-SQL&#41;](../../t-sql/functions/date-and-time-data-types-and-functions-transact-sql.md)을 참조하세요. datetime 데이터의 범위는 1753-01-01부터 9999-12-31까지이지만 date 데이터의 범위는 0001-01-01부터 9999-12-31까지입니다.  
   
@@ -81,13 +81,13 @@ ISDATE ( expression )
 |NULL|0|  
 |[데이터 형식](../../t-sql/data-types/data-types-transact-sql.md)에서 문자열, 유니코드 문자열, 또는 날짜 및 시간을 제외한 모든 데이터 형식 범주에 속한 데이터 형식의 값|0|  
 |**text**, **ntext** 또는 **image** 데이터 형식의 값|0|  
-|초의 소수 자릿수가 세 자리를 초과하는 모든 값(.0000부터 .0000000...n까지) ISDATE는 *식*이 **datetime2** 값일 경우 0을 반환하지만 *식*이 유효한 **datetime** 값일 경우에는 1을 반환합니다.|0|  
+|초의 소수 자릿수가 세 자리를 초과하는 모든 값(.0000부터 .0000000...n까지) ISDATE는 *식* 이 **datetime2** 값일 경우 0을 반환하지만 *식* 이 유효한 **datetime** 값일 경우에는 1을 반환합니다.|0|  
 |1995-10-1a와 같이 유효한 날짜에 잘못된 값이 섞여 있는 경우|0|  
   
 ## <a name="examples"></a>예  
   
 ### <a name="a-using-isdate-to-test-for-a-valid-datetime-expression"></a>A. ISDATE를 사용하여 올바른 datetime 식 테스트  
- 다음 예에서는 `ISDATE`를 사용하여 문자열이 올바른 **datetime**인지 테스트하는 방법을 보여 줍니다.  
+ 다음 예에서는 `ISDATE`를 사용하여 문자열이 올바른 **datetime** 인지 테스트하는 방법을 보여 줍니다.  
   
 ```sql  
 IF ISDATE('2009-05-12 10:19:41.177') = 1  
@@ -147,7 +147,7 @@ SET DATEFORMAT mdy;
 ## <a name="examples-sssdwfull-and-sspdw"></a>예: [!INCLUDE[ssSDWfull](../../includes/sssdwfull-md.md)] 및 [!INCLUDE[ssPDW](../../includes/sspdw-md.md)]  
   
 ### <a name="c-using-isdate-to-test-for-a-valid-datetime-expression"></a>C. ISDATE를 사용하여 올바른 datetime 식 테스트  
- 다음 예에서는 `ISDATE`를 사용하여 문자열이 올바른 **datetime**인지 테스트하는 방법을 보여 줍니다.  
+ 다음 예에서는 `ISDATE`를 사용하여 문자열이 올바른 **datetime** 인지 테스트하는 방법을 보여 줍니다.  
   
 ```sql  
 IF ISDATE('2009-05-12 10:19:41.177') = 1  

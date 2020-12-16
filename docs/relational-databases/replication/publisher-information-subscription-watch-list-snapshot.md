@@ -13,13 +13,13 @@ f1_keywords:
 ms.assetid: 2ebeee62-7f54-4c77-9d37-15708bc5cc23
 author: MashaMSFT
 ms.author: mathoma
-monikerRange: =azuresqldb-mi-current||>=sql-server-2016||=sqlallproducts-allversions
-ms.openlocfilehash: 39fb4a3b5e993d7cb640216ace0cc06600da3ae9
-ms.sourcegitcommit: da88320c474c1c9124574f90d549c50ee3387b4c
+monikerRange: =azuresqldb-mi-current||>=sql-server-2016
+ms.openlocfilehash: 29bca1be6066d0de79d8612c052f718b98b0d180
+ms.sourcegitcommit: 1a544cf4dd2720b124c3697d1e62ae7741db757c
 ms.translationtype: HT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 07/01/2020
-ms.locfileid: "85783151"
+ms.lasthandoff: 12/14/2020
+ms.locfileid: "97479854"
 ---
 # <a name="publisher-information-subscription-watch-list-snapshot"></a>게시자 정보, 구독 조사 목록(스냅샷)
 [!INCLUDE [SQL Server SQL MI](../../includes/applies-to-version/sql-asdbmi.md)]
@@ -61,17 +61,17 @@ ms.locfileid: "85783151"
   
 -   비동기화 중  
   
- 정렬 순서는 지정한 구독의 상태가 두 가지 이상일 경우에 표시할 값도 결정합니다. 예를 들어 구독에 오류가 있고 곧 만료될 예정이면 **상태** 열에 **오류**가 표시됩니다.  
+ 정렬 순서는 지정한 구독의 상태가 두 가지 이상일 경우에 표시할 값도 결정합니다. 예를 들어 구독에 오류가 있고 곧 만료될 예정이면 **상태** 열에 **오류** 가 표시됩니다.  
   
- **곧 만료됨/만료됨** 및 **초기화되지 않은 구독** 상태 값은 경고입니다. 경고를 표시할 때 **상태** 열은 에이전트가 실행 중인지 여부도 표시합니다. 예를 들어 상태가 **실행 중, 곧 만료됨/만료됨**과 같이 표시될 수 있습니다.  
+ **곧 만료됨/만료됨** 및 **초기화되지 않은 구독** 상태 값은 경고입니다. 경고를 표시할 때 **상태** 열은 에이전트가 실행 중인지 여부도 표시합니다. 예를 들어 상태가 **실행 중, 곧 만료됨/만료됨** 과 같이 표시될 수 있습니다.  
   
  **곧 만료됨/만료됨** 상태 값은 임계값을 설정한 경우에만 표시됩니다. 임계값 설정에 대한 자세한 내용은 [복제 모니터에 임계값 및 경고 설정](../../relational-databases/replication/monitor/set-thresholds-and-warnings-in-replication-monitor.md)을 참조하세요.  
   
  **구독**  
- 각 구독의 이름으로 *SubscriberName: SubscriptionDatabaseName*형식입니다.  
+ 각 구독의 이름으로 *SubscriberName: SubscriptionDatabaseName* 형식입니다.  
   
  **게시**  
- 구독을 동기화할 게시의 이름이며 *PublicationDatabaseName: PublicationName*형식입니다.  
+ 구독을 동기화할 게시의 이름이며 *PublicationDatabaseName: PublicationName* 형식입니다.  
   
  **마지막 동기화**  
  배포 에이전트가 마지막으로 실행된 시간입니다. 동기화가 진행 중인 경우 **진행 중** 이 표시됩니다.  

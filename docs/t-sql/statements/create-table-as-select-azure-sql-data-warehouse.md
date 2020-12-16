@@ -11,13 +11,13 @@ dev_langs:
 ms.assetid: d1e08f88-64ef-4001-8a66-372249df2533
 author: julieMSFT
 ms.author: jrasnick
-monikerRange: '>= aps-pdw-2016 || = azure-sqldw-latest || = sqlallproducts-allversions'
-ms.openlocfilehash: 0ab6f4ff4d5681d0dfeb30ded57447ddbb8b24a0
-ms.sourcegitcommit: bd3a135f061e4a49183bbebc7add41ab11872bae
+monikerRange: '>= aps-pdw-2016 || = azure-sqldw-latest'
+ms.openlocfilehash: 906e475bb5234d4bb007f1bfaa3577382c9c4037
+ms.sourcegitcommit: 1a544cf4dd2720b124c3697d1e62ae7741db757c
 ms.translationtype: HT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 10/21/2020
-ms.locfileid: "92300543"
+ms.lasthandoff: 12/14/2020
+ms.locfileid: "97478534"
 ---
 # <a name="create-table-as-select-azure-synapse-analytics"></a>CREATE TABLE AS SELECT(Azure Synapse Analytics)
 [!INCLUDE[applies-to-version/asa-pdw](../../includes/applies-to-version/asa-pdw.md)]
@@ -95,7 +95,7 @@ CREATE TABLE { database_name.schema_name.table_name | schema_name.table_name | t
 
 ### <a name="table-distribution-options"></a>테이블 분포 옵션
 
-`DISTRIBUTION` = `HASH`( *distribution_column_name* ) | ROUND_ROBIN | REPLICATE      
+`DISTRIBUTION` = `HASH`(*distribution_column_name*) | ROUND_ROBIN | REPLICATE      
 CTAS 문은 분포 옵션을 요구하며 기본값을 갖지 않습니다. 이 점이 기본값을 갖는 CREATE TABLE과 다릅니다. 
 
 세부 정보 및 최선의 분포 열을 선택하는 방법을 이해하려면 CREATE TABLE의 [테이블 분포 옵션](./create-table-azure-sql-data-warehouse.md#TableDistributionOptions) 섹션을 참조하세요. 

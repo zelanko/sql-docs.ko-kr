@@ -24,17 +24,17 @@ ms.assetid: 76767b20-ef55-49ce-8dc4-e77cb8ff618a
 author: pmasl
 ms.author: pelopes
 ms.reviewer: mikeray
-monikerRange: =azuresqldb-current||>=sql-server-2016||=sqlallproducts-allversions||>=sql-server-linux-2017||=azuresqldb-mi-current
-ms.openlocfilehash: 77e6331623da6672b0b39ec7ca432201cd9a482b
-ms.sourcegitcommit: e700497f962e4c2274df16d9e651059b42ff1a10
+monikerRange: =azuresqldb-current||>=sql-server-2016||>=sql-server-linux-2017||=azuresqldb-mi-current
+ms.openlocfilehash: ac09b96cf93144ebf2b615bbd73db36c673eb5ca
+ms.sourcegitcommit: 1a544cf4dd2720b124c3697d1e62ae7741db757c
 ms.translationtype: HT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 08/17/2020
-ms.locfileid: "88404139"
+ms.lasthandoff: 12/14/2020
+ms.locfileid: "97479464"
 ---
 # <a name="populate-full-text-indexes"></a>전체 텍스트 인덱스 채우기
 [!INCLUDE [SQL Server Azure SQL Database](../../includes/applies-to-version/sql-asdb.md)]
-  전체 텍스트 인덱스를 만들고 유지 관리하려면 *채우기* ( *탐색*이라고도 함)라는 프로세스를 사용하여 인덱스를 채워야 합니다.  
+  전체 텍스트 인덱스를 만들고 유지 관리하려면 *채우기* ( *탐색* 이라고도 함)라는 프로세스를 사용하여 인덱스를 채워야 합니다.  
   
 ##  <a name="types-of-population"></a><a name="types"></a> Types of population  
 전체 텍스트 인덱스는 다음 유형의 채우기를 지원합니다.
@@ -176,36 +176,36 @@ ALTER FULLTEXT INDEX ON Production.Document
   
 1.  Management Studio의 개체 탐색기에서 서버를 확장합니다.  
   
-2.  **데이터베이스**를 확장한 다음 전체 텍스트 인덱스가 포함된 데이터베이스를 확장합니다.  
+2.  **데이터베이스** 를 확장한 다음 전체 텍스트 인덱스가 포함된 데이터베이스를 확장합니다.  
   
-3.  **테이블**을 확장합니다.  
+3.  **테이블** 을 확장합니다.  
   
-    전체 텍스트 인덱스가 정의된 테이블을 마우스 오른쪽 단추로 클릭하고 **전체 텍스트 인덱스**를 선택한 다음 **전체 텍스트 인덱스** 상황에 맞는 메뉴에서 **속성**을 클릭합니다. 그러면 **전체 텍스트 인덱스 속성** 대화 상자가 열립니다.  
+    전체 텍스트 인덱스가 정의된 테이블을 마우스 오른쪽 단추로 클릭하고 **전체 텍스트 인덱스** 를 선택한 다음 **전체 텍스트 인덱스** 상황에 맞는 메뉴에서 **속성** 을 클릭합니다. 그러면 **전체 텍스트 인덱스 속성** 대화 상자가 열립니다.  
 
     > [!IMPORTANT]  
     >  기본 테이블이나 뷰에 **timestamp** 데이터 형식의 열이 포함되어 있지 않으면 증분 채우기를 수행할 수 없습니다.
       
-1.  **페이지 선택** 창에서 **일정**을 선택합니다.  
+1.  **페이지 선택** 창에서 **일정** 을 선택합니다.  
   
      이 페이지를 사용하여 전체 텍스트 인덱스의 기본 테이블 또는 인덱싱된 뷰에 대한 증분 테이블 채우기를 시작하는 SQL Server 에이전트 작업의 일정을 만들거나 관리할 수 있습니다.  
 
      옵션은 다음과 같습니다.  
   
-    -   새 일정을 **만들려면** **새로 만들기**를 클릭합니다.  
+    -   새 일정을 **만들려면** **새로 만들기** 를 클릭합니다.  
   
-        그러면 일정을 만들 수 있는 **새 전체 텍스트 인덱싱 테이블 일정** 대화 상자가 열립니다. 일정을 저장하려면 **확인**을 클릭합니다.  
+        그러면 일정을 만들 수 있는 **새 전체 텍스트 인덱싱 테이블 일정** 대화 상자가 열립니다. 일정을 저장하려면 **확인** 을 클릭합니다.  
   
         > [!IMPORTANT]  
-        >  *전체 텍스트 인덱스 속성*대화 상자를 닫으면 SQL Server 에이전트 작업(*database_name*. **table_name** 에 대한 증분 테이블 채우기 시작)이 새 일정에 연결됩니다. 동일한 전체 텍스트 인덱스에 대해 일정을 여러 개 만들 경우 모두 동일한 작업을 사용합니다.  
+        >  *전체 텍스트 인덱스 속성* 대화 상자를 닫으면 SQL Server 에이전트 작업(*database_name*. **table_name** 에 대한 증분 테이블 채우기 시작)이 새 일정에 연결됩니다. 동일한 전체 텍스트 인덱스에 대해 일정을 여러 개 만들 경우 모두 동일한 작업을 사용합니다.  
   
-    -   기존 일정을 **변경**하려면 기존 일정을 선택하고 **편집**을 클릭합니다.  
+    -   기존 일정을 **변경** 하려면 기존 일정을 선택하고 **편집** 을 클릭합니다.  
   
          그러면 일정을 수정할 수 있는 **새 전체 텍스트 인덱싱 테이블 일정** 대화 상자가 열립니다.  
   
         > [!NOTE]  
         >  SQL Server 에이전트 작업 수정에 대한 자세한 내용은 [작업 수정](../../ssms/agent/modify-a-job.md)을 참조하세요.  
   
-    -   기존 일정을 **제거**하려면 기존 일정을 선택하고 **삭제**를 클릭합니다.  
+    -   기존 일정을 **제거** 하려면 기존 일정을 선택하고 **삭제** 를 클릭합니다.  
   
 2.  [!INCLUDE[clickOK](../../includes/clickok-md.md)]   
 

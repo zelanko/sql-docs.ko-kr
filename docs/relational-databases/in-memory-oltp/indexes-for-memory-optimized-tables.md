@@ -11,13 +11,13 @@ ms.topic: conceptual
 ms.assetid: eecc5821-152b-4ed5-888f-7c0e6beffed9
 author: MightyPen
 ms.author: genemi
-monikerRange: =azuresqldb-current||>=sql-server-2016||=sqlallproducts-allversions||>=sql-server-linux-2017||=azuresqldb-mi-current
-ms.openlocfilehash: 817e126cfcd6bd4f825cb8e3158cc96d0a78e30c
-ms.sourcegitcommit: 4d370399f6f142e25075b3714e5c2ce056b1bfd0
+monikerRange: =azuresqldb-current||>=sql-server-2016||>=sql-server-linux-2017||=azuresqldb-mi-current
+ms.openlocfilehash: 7f43554f4b14b1afa5eee8a2cf3600c7b9ae2fab
+ms.sourcegitcommit: 1a544cf4dd2720b124c3697d1e62ae7741db757c
 ms.translationtype: HT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 10/09/2020
-ms.locfileid: "91866620"
+ms.lasthandoff: 12/14/2020
+ms.locfileid: "97480114"
 ---
 # <a name="indexes-on-memory-optimized-tables"></a>메모리 액세스에 최적화된 테이블의 인덱스
 
@@ -214,7 +214,7 @@ WHERE col1 = 'dn';
 
 ## <a name="summary-table-to-compare-index-use-scenarios"></a>인덱스 사용 시나리오를 비교하기 위한 요약 테이블  
   
-다음 표에서 다른 인덱스 유형에서 지원 되는 모든 작업을 나열 합니다. *예*는 인덱스가 요청을 효율적으로 처리할 수 있음을 의미하며 *아니요*는 인덱스를 사용하여 요청을 효과적으로 충족할 수 없음을 의미합니다. 
+다음 표에서 다른 인덱스 유형에서 지원 되는 모든 작업을 나열 합니다. *예* 는 인덱스가 요청을 효율적으로 처리할 수 있음을 의미하며 *아니요* 는 인덱스를 사용하여 요청을 효과적으로 충족할 수 없음을 의미합니다. 
   
 | 작업(Operation) | 메모리 액세스에 최적화됨, <br/> hash | 메모리 액세스에 최적화됨, <br/> 비클러스터형 | 디스크 기반, <br/> (비)클러스터형 |  
 | :-------- | :--------------------------- | :----------------------------------- | :------------------------------------ |  

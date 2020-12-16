@@ -11,19 +11,19 @@ dev_langs:
 - TSQL
 author: pmasl
 ms.author: umajay
-monikerRange: '>= aps-pdw-2016 || = sqlallproducts-allversions'
-ms.openlocfilehash: 5d6830452d32de9a1b3ca954cbaf94d7d883f1b5
-ms.sourcegitcommit: 22dacedeb6e8721e7cdb6279a946d4002cfb5da3
+monikerRange: '>= aps-pdw-2016'
+ms.openlocfilehash: 58bda1e035c25ae373fef14bfb574a6f2c139835
+ms.sourcegitcommit: 1a544cf4dd2720b124c3697d1e62ae7741db757c
 ms.translationtype: HT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 10/14/2020
-ms.locfileid: "92038354"
+ms.lasthandoff: 12/14/2020
+ms.locfileid: "97480424"
 ---
 # <a name="dbcc-shrinklog-parallel-data-warehouse"></a>DBCC SHRINKLOG(병렬 데이터 웨어하우스)
 
 [!INCLUDE [pdw](../../includes/applies-to-version/pdw.md)]
 
-현재 *데이터베이스에 대한*어플라이언스에서[!INCLUDE[ssPDW](../../includes/sspdw-md.md)] 트랜잭션 로그의 크기를 줄입니다. 트랜잭션 로그를 축소하기 위해 데이터를 조각 모음합니다. 시간이 지남에 따라 데이터베이스 트랜잭션 로그가 조각화되고 비효율적일 수 있습니다. DBCC SHRINKLOG를 사용하여 조각화를 줄이고 로그 크기를 줄입니다.
+현재 *데이터베이스에 대한* 어플라이언스에서[!INCLUDE[ssPDW](../../includes/sspdw-md.md)] 트랜잭션 로그의 크기를 줄입니다. 트랜잭션 로그를 축소하기 위해 데이터를 조각 모음합니다. 시간이 지남에 따라 데이터베이스 트랜잭션 로그가 조각화되고 비효율적일 수 있습니다. DBCC SHRINKLOG를 사용하여 조각화를 줄이고 로그 크기를 줄입니다.
   
 ![항목 링크 아이콘](../../database-engine/configure-windows/media/topic-link.gif "항목 링크 아이콘") [Transact-SQL 구문 표기 규칙&#40;Transact-SQL&#41;](../../t-sql/language-elements/transact-sql-syntax-conventions-transact-sql.md)
   
@@ -39,7 +39,7 @@ DBCC SHRINKLOG
 ## <a name="arguments"></a>인수
 
 SIZE = { *target_size* [ MB \| **GB** \| TB ]  } \| **DEFAULT**.  
-*target_size*는 DBCC SHRINKLOG 완료 후 모든 컴퓨팅 노드에 있는 트랜잭션 로그에 대해 원하는 크기입니다. 0보다 큰 정수여야 합니다.  
+*target_size* 는 DBCC SHRINKLOG 완료 후 모든 컴퓨팅 노드에 있는 트랜잭션 로그에 대해 원하는 크기입니다. 0보다 큰 정수여야 합니다.  
 로그 크기는 MB(메가바이트), GB(기가바이트) 또는 TB(테라바이트) 단위로 측정됩니다. 모든 컴퓨팅 노드의 트랜잭션 노드에 대한 결합된 크기입니다.  
 기본적으로 DBCC SHRINKLOG는 트랜잭션 로그를 데이터베이스에 대한 메타데이터에 저장된 로그 크기로 줄입니다. 메타데이터의 로그 크기는 [CREATE DATABASE &#40;Azure Synapse Analytics&#41;](../statements/create-database-transact-sql.md) 또는 [ALTER DATABASE &#40;Azure Synapse Analytics&#41;](../statements/alter-database-transact-sql.md)의 LOG_SIZE 매개 변수에 의해 결정됩니다. `SIZE=DEFAULT`가 지정되거나 `SIZE` 절이 생략된 경우, DBCC SHRINKLOG는 트랜잭션 로그 크기를 기본 크기로 줄입니다.
   
