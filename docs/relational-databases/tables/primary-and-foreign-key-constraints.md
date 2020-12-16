@@ -16,13 +16,13 @@ helpviewer_keywords:
 ms.assetid: 31fbcc9f-2dc5-4bf9-aa50-ed70ec7b5bcd
 author: stevestein
 ms.author: sstein
-monikerRange: =azuresqldb-current||>=sql-server-2016||=sqlallproducts-allversions||>=sql-server-linux-2017||=azuresqldb-mi-current
-ms.openlocfilehash: d4a31936649bb145701b915bb8c23bd0ff06fe5a
-ms.sourcegitcommit: 331b8495e4ab37266945c81ff5b93d250bdaa6da
+monikerRange: =azuresqldb-current||>=sql-server-2016||>=sql-server-linux-2017||=azuresqldb-mi-current
+ms.openlocfilehash: 7c16f1f430f0291d30d56faadee9e2779543ef61
+ms.sourcegitcommit: 1a544cf4dd2720b124c3697d1e62ae7741db757c
 ms.translationtype: HT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 08/20/2020
-ms.locfileid: "88646451"
+ms.lasthandoff: 12/14/2020
+ms.locfileid: "97427211"
 ---
 # <a name="primary-and-foreign-key-constraints"></a>PRIMARY KEY 및 FOREIGN KEY 제약 조건
 
@@ -43,7 +43,7 @@ ms.locfileid: "88646451"
   
  테이블에 대해 기본 키 제약 조건을 지정하면 [!INCLUDE[ssDE](../../includes/ssde-md.md)] 은 기본 키 열에 대해 고유 인덱스를 자동으로 만들어 데이터 고유성을 적용합니다. 또한 쿼리에서 기본 키가 사용되는 경우 이 인덱스를 사용하여 데이터에 빠르게 액세스할 수 있습니다. 기본 키 제약 조건이 두 개 이상의 열에 정의되는 경우 한 열에 중복된 값이 있을 수 있지만 기본 키 제약 조건 정의에 있는 모든 열의 값 조합은 각각 고유해야 합니다.  
   
- 다음 그림에서와 같이 **Purchasing.ProductVendor** 테이블의 **ProductID** 및 **VendorID** 열은 이 테이블에 대한 복합 기본 키 제약 조건을 구성합니다. 그 결과 **ProductVendor** 테이블의 모든 열에서 **ProductID**와 **VendorID**의 조합은 고유합니다. 따라서 중복 행을 삽입할 수 없습니다.  
+ 다음 그림에서와 같이 **Purchasing.ProductVendor** 테이블의 **ProductID** 및 **VendorID** 열은 이 테이블에 대한 복합 기본 키 제약 조건을 구성합니다. 그 결과 **ProductVendor** 테이블의 모든 열에서 **ProductID** 와 **VendorID** 의 조합은 고유합니다. 따라서 중복 행을 삽입할 수 없습니다.  
   
  ![복합 PRIMARY KEY 제약 조건](../../relational-databases/tables/media/fund04.gif "복합 PRIMARY KEY 제약 조건")  
   
